@@ -1,50 +1,33 @@
+
 # Redhat and Centos Linux 快速指南：Linux 快速指南
-
-
-
-
-
-
-
 
 ![](img/387d28290ba77003b955874e67d1b946_1_0.png)
 
-
-
-# 前言
+## 前言
 
 本书的编写初衷是考虑到了 Linux 系统管理员，他们想要学习 Redhat/Centos 但没有时间阅读大量的书籍。这本书是准备面试的极佳选择。
-
 我尽力保持文字尽可能精确。
 本书专门为 Redhat 的实际实施而准备。我希望它能帮助管理员们在生产环境中部署 Redhat。
-
 此致，
 
-
-
-
-# 第一章
-
-# 
+## 第一章
 
 Linux 是一种类 Unix 操作系统。Linux 是由 Linus Torvalds 在 1991 年启动的开源项目。市场上有成千上万种 Linux 发行版，但大致可以根据其根发行版进行分类，例如：基于 Redhat 的 Centos、Oracle 和 Scientific Linux，以及基于 Debian 的发行版如 Ubuntu、Mint 等。免费 Linux 领域的主要参与者有 Ubuntu、Debian、Fedora、Opensuse 等。Redhat 和 SUSE 是非免费企业 Linux 发行版的主要参与者。Redhat 和 SUSE 是基于 RPM 包的发行版，而基于 Debian 的发行版采用 DEB 包格式。
 
-## Fedora 与 Redhat
+### Fedora 与 Redhat
 
 Fedora 是一个由 Redhat 赞助的免费发行版社区项目。Fedora 是 Redhat Enterprise Linux 的上游。Fedora 是新功能的测试场，这些功能可能会被整合到未来的 Redhat Linux 版本中。Fedora Linux 和 Redhat Enterprise Linux 之间的主要区别在于支持生命周期。Redhat 是商业支持的产品，而 Fedora 是社区支持。Redhat Enterprise Linux 的生命周期为几年，并支持最多 10 年，但 Fedora 每 6 个月发布新版本，且仅更新 13 个月。Redhat 提供服务水平协议、硬件和软件认证，这对于企业组织非常重要。
-
 Oracle Linux、Centos Linux 和 Scientific Linux 发行版源自 Red Hat Enterprise Linux 源码。
 
-# 第二章
+## 第二章
 
 ### 安装
 
 安装 Redhat 的常见方法：
-1. 交互式 (Interactive)
+1. 交互式 (`Interactive`)
 2. Kickstart
 
 交互方法可以是文本模式或 GUI。对于 Kickstart，你需要一个包含答案的 Kickstart 文件。安装期间不需要干预。
-
 从 redhat 下载镜像。使用 DVD 启动。出现安装菜单后，选择现有媒体。
 
 ![](img/387d28290ba77003b955874e67d1b946_25.png)
@@ -64,7 +47,6 @@ Oracle Linux、Centos Linux 和 Scientific Linux 发行版源自 Red Hat Enterpr
 配置网络。
 
 ![](img/387d28290ba77003b955874e67d1b946_29.png) 对于静态 IP，选择手动并提供 IP 地址、子网掩码、网关和 DNS 服务器。点击应用。然后下一步。
-
 在下一个屏幕上选择时区。由于时区具有地区性，请根据情况选择时区。
 
 ![](img/387d28290ba77003b955874e67d1b946_31.png) 提供 root 密码。
@@ -74,7 +56,6 @@ Oracle Linux、Centos Linux 和 Scientific Linux 发行版源自 Red Hat Enterpr
 ![](img/387d28290ba77003b955874e67d1b946_33.png) 在这里编辑布局。
 
 ![](img/387d28290ba77003b955874e67d1b946_34.png) 确认写入磁盘。在下一个屏幕上将要求你确认启动加载程序，点击下一步。
-
 接下来是软件包选择菜单。如果你希望安装后使用命令行界面，请带默认设置点击下一步。如果你想要图形桌面，请点击“现在自定义”。
 
 ![](img/387d28290ba77003b955874e67d1b946_36.png) 在下一个屏幕上，在左侧面板选择桌面，在右侧面板选择桌面环境和字体。
@@ -82,33 +63,26 @@ Oracle Linux、Centos Linux 和 Scientific Linux 发行版源自 Red Hat Enterpr
 ![](img/387d28290ba77003b955874e67d1b946_37.png) 1. 它将开始安装软件包。
 
 ![](img/387d28290ba77003b955874e67d1b946_38.png) 安装完成后，按下重启。
-
-
-
-
-
 重启后你将看到登录提示
 
-## 将Windows电脑连接到Linux机器
+### 将Windows电脑连接到Linux机器
 
-- 1. 从 http://www.chiark.greenend.org.uk/~/ 下载 putty
-2. 在Windows电脑上安装 putty
-
-### 3. 安装后启动 putty
+- 1. 从 http://www.chiark.greenend.org.uk/~/ 下载 `putty`
+- 2. 在Windows电脑上安装 `putty`
+- 3. 安装后启动 `putty`
 
 ![](img/387d28290ba77003b955874e67d1b946_40_0.png)
 
 4. 输入Linux机器的IP地址和会话名称并
-
 - 5. 双击会话名称连接到Linux机器。
 
-# 第 3 章
+## 第 3 章
 
-## 网络
+### 网络
 
-网络允许不同的机器互连。你需要在电脑上网卡才能连接。每个网卡都有一个物理地址，称为媒体访问控制地址（MAC地址）。MAC地址工作在 OSI 模型的第二层。网络接口卡的制造商分配 MAC 地址。为了访问网卡，我们为网卡分配 IP 地址，它工作在 OSI 模型的第三层。不同网络上的主机可以通过第三层进行连接。由于 IP 地址仍然是数值，因此很难记忆，而且存在 IP 地址可能会发生。为了方便起见，我们使用**主机名 (hostname)**。
+网络允许不同的机器互连。你需要在电脑上网卡才能连接。每个网卡都有一个物理地址，称为媒体访问控制地址（MAC地址）。MAC地址工作在 OSI 模型的第二层。网络接口卡的制造商分配 MAC 地址。为了访问网卡，我们为网卡分配 IP 地址，它工作在 OSI 模型的第三层。不同网络上的主机可以通过第三层进行连接。由于 IP 地址仍然是数值，因此很难记忆，而且存在 IP 地址可能会发生。为了方便起见，我们使用`hostname`。
 
-### OSI 七层与 TCP 映射
+#### OSI 七层与 TCP 映射
 
 | OSI 模型 | TCP 模型 | 应用程序 | 地址 |
 |---|---|---|--|
@@ -123,7 +97,7 @@ Oracle Linux、Centos Linux 和 Scientific Linux 发行版源自 Red Hat Enterpr
 
 ### 检查 IP 地址和路由表
 
-### 显示 IP 地址
+#### 显示 IP 地址
 
 ```
 ### ip addr show
@@ -135,13 +109,13 @@ Oracle Linux、Centos Linux 和 Scientific Linux 发行版源自 Red Hat Enterpr
 ### ifconfig -a
 ```
 
-### 显示链路状态
+#### 显示链路状态
 
 ```
 ### ip link show
 ```
 
-### 显示路由表
+#### 显示路由表
 
 ```
 ### ip route
@@ -157,7 +131,7 @@ Oracle Linux、Centos Linux 和 Scientific Linux 发行版源自 Red Hat Enterpr
 ### hostname
 ```
 
-首先修改 /etc/sysconfig/network 文件，并将 hostname更改为你的新主机名，在本例中为 redhat1。
+首先修改 `/etc/sysconfig/network` 文件，并将 `hostname`更改为你的新主机名，在本例中为 `redhat1`。
 
 ```
 ### vi /etc/sysconfig/network
@@ -168,7 +142,7 @@ NETWORKING=yes
 HOSTNAME=redhat1
 ```
 
-下一步是修改 /etc/hosts 文件
+下一步是修改 `/etc/hosts` 文件
 
 | 127.0.0.1 redhat1 localhost.localdomain |
 | localhost |
@@ -176,21 +150,19 @@ HOSTNAME=redhat1
 ### 设置 DNS 名称解析
 
 每当你使用主机名而不是 IP 地址来 ping 或连接 Linux 主机时，你有多种选项将主机名解析为 IP 地址。
-
-- 本地文件，即 /etc/hosts
+- 本地文件，即 `/etc/hosts`
 - DNS 服务器
 - NIS
 
-### /etc/hosts
+#### /etc/hosts
 
-使用本地文件 /etc/hosts 进行主机名到 IP 地址的映射，可以存储主机名及其对应 IP 地址的列表，你不需要查找 DNS 服务器。如果你因为范围或安全原因连接到有限的服务器，不依赖 DNS 服务器也非常有用。
+使用本地文件 `/etc/hosts` 进行主机名到 IP 地址的映射，可以存储主机名及其对应 IP 地址的列表，你不需要查找 DNS 服务器。如果你因为范围或安全原因连接到有限的服务器，不依赖 DNS 服务器也非常有用。
 
-### 格式
+#### 格式
 
 | IP_地址 | 主机名别名 |
 |---|---|
-
-### 示例
+#### 示例
 
 | 127.0.0.1 | redhat1 |
 | localhost | |
@@ -199,13 +171,14 @@ HOSTNAME=redhat1
 
 ### 使用域名服务器进行名称解析
 
-### /etc/resolv.conf
+#### /etc/resolv.conf
 
-为了将主机名解析为 IP 地址，系统会读取名为 resolv.conf 的文件。你需要将 DNS 服务器的 IP 地址放入此文件中。通常情况下，你需要一个名称服务器，但如果你想要冗余，可以包含最多三个。
-
+为了将主机名解析为 IP 地址，系统会读取名为 `resolv.conf` 的文件。你需要将 DNS 服务器的 IP 地址放入此文件中。通常情况下，你需要一个名称服务器，但如果你想要冗余，可以包含最多三个。
 如果列表中的第一个没有响应，系统将尝试使用列表中的下一个进行解析，依此类推。
 
-编辑 /etc/resolv.conf 以添加名称服务器列表，如下：
+
+
+编辑 `/etc/resolv.conf` 以添加名称服务器列表，如下：
 
 ```
 nameserver 8.8.8.8
@@ -215,9 +188,9 @@ nameserver 1.2.3.6
 
 ### 修改主机名解析顺序
 
-/etc/nsswitch.conf
+`/etc/nsswitch.conf`
 
-如果你的服务器中有 hosts 文件且 resolv.conf 中有 DNS 配置，每当你进行主机名解析时，系统都会查找本地文件 (/etc/hosts) 寻找主机名及其相应的 IP 地址条目。如果没有条目，它将查找 /etc/resolv.conf 文件中的 DNS 配置。如果没有 DNS 配置，它将检查 NIS 配置。然而，你可以通过更改 /etc/nsswitch.conf 来改变这种行为。
+如果你的服务器中有 `hosts` 文件且 `resolv.conf` 中有 DNS 配置，每当你进行主机名解析时，系统都会查找本地文件 (`/etc/hosts`) 寻找主机名及其相应的 IP 地址条目。如果没有条目，它将查找 `/etc/resolv.conf` 文件中的 DNS 配置。如果没有 DNS 配置，它将检查 NIS 配置。然而，你可以通过更改 `/etc/nsswitch.conf` 来改变这种行为。
 
 ```
 vi /etc/nsswitch.conf
@@ -225,7 +198,7 @@ vi /etc/nsswitch.conf
 hosts:      files dns
 ```
 
-在本例中，搜索顺序是 files（即 /etc/hosts），然后是 DNS 服务器。
+在本例中，搜索顺序是 `files`（即 `/etc/hosts`），然后是 DNS 服务器。
 
 ### 使用 GUI 修改网络
 
@@ -234,14 +207,18 @@ hosts:      files dns
 右键点击网络 > 编辑 > 选择有线选项卡 > 编辑 IPv4 设置![](img/387d28290ba77003b955874e67d1b946_40_0.png) 改为手动添加地址、子掩码、网关、DNS 服务器。
 
 | DEVICE=eth0 |
+
 BOOTPROTO=static |
+
 IPADDR=192.168.1.1 |
+
 NETMASK=255.255.255.0 |
+
 GATEWAY=192.168.1.254 |
+
 DNS=8.8.8.8,8.8.4.4 |
+
 ONBOOT=yes |
-
-
 
 ```
 ### chage -l username
@@ -276,9 +253,13 @@ ONBOOT=yes |
 唯一用户标识（称为 UID）是系统中存在的每个用户的固定标识，对于 root 用户和普通用户，它都是固定的。
 
 | 用户 | UID |
+
 | :--- | :--- |
+
 | root | 0 |
+
 | 系统用户 | 1 – 499 |
+
 | 普通用户 | 500 + |
 
 ### 组 (Groups)
@@ -286,6 +267,7 @@ ONBOOT=yes |
 我们创建的每个用户都属于一个组，所有组都有组 ID（GID）。可以在 `/etc/groups` 中找到所有可用组的列表，那里记录了这些组的所有用户成员。组共有两种类型：
 
 - 主组 (primary group)
+
 - 辅助组 (secondary group)
 
 ### 主组 (Primary group)
@@ -385,8 +367,11 @@ root:$6$YtTXd..cW9GYuWT9sNwX07B3i..11
 NFS 是一种基于服务器/客户端模式的文件共享文件系统。服务器共享的文件系统被挂载在客户端上。NFS 有四个版本：
 
 - 1. NFS V1
+
 - 2. NFS V2
+
 - 3. NFS V3
+
 - 4. NFS V4
 
 其中 NFS V3 和 NFS V4 是较新的版本，V3 更安全且基于 UDP 协议工作，而 V4 增加了通过防火墙工作的优势，并基于 TCP 协议工作。
@@ -437,10 +422,12 @@ NFS 是一种基于服务器/客户端模式的文件共享文件系统。服务
 ### chconfig rpcbind on
 ```
 
-编辑 /etc/exports 文件以添加你想共享给客户端的文件系统，格式如下：
+编辑 `/etc/exports` 文件以添加你想共享给客户端的文件系统，格式如下：
 
 | 挂载点 (mountpoint) | 主机 (host) | 权限选项 |
+
 | :--- | :--- | :--- |
+
 | **mountpoint** 是你想导出的文件系统 | **host** 是可选的，你想赋予访问权的客户端 | **permissions** 是可选的，可以是 **ro** 只读，**rw** 读写，**sync** 在命令完成前写入。 |
 
 ### 导出系统
@@ -459,14 +446,17 @@ NFS 是一种基于服务器/客户端模式的文件共享文件系统。服务
 
 ```bash
 ### mount -t nfs 192.168.0.1:/user /mnt
+```
 
 ### 挂载 DVD
 
 ```bash
+
 ### mkdir /mnt
+
 ```
 
-编辑 /etc/fstab 添加要挂载的 DVD 文件系统，格式如下：
+编辑 `/etc/fstab` 添加要挂载的 DVD 文件系统，格式如下：
 
 | /cdrom | ro | 0 0 |
 | :--- | :--- | :--- |
@@ -474,12 +464,15 @@ NFS 是一种基于服务器/客户端模式的文件共享文件系统。服务
 ### 重启
 
 ```bash
+
 ### reboot
 ```
 
-### 虚拟终端 (Virtual Console)
 
-使用 Alt + F 切换切换控制台。
+
+## 虚拟终端 (Virtual Console)
+
+使用 `Alt + F` 切换切换控制台。
 
 # 第 6 章
 
@@ -487,12 +480,12 @@ NFS 是一种基于服务器/客户端模式的文件共享文件系统。服务
 
 当你安装 Linux 发行版时，图形界面管理变得简单。许多界面可用：
 
-- GNOME
-- KDE
-- XFCE
-- LXDE
+- `GNOME`
+- `KDE`
+- `XFCE`
+- `LXDE`
 
-GNOME 是默认的。
+`GNOME` 是默认的。
 
 ### 图形登录
 
@@ -500,27 +493,28 @@ GNOME 是默认的。
 
 ### 终端 (Terminal)
 
-GNOME 终端是一个终端模拟器，允许你在图形界面下执行命令。对于 root 用户来说：
+`GNOME` 终端是一个终端模拟器，允许你在图形界面下执行命令。对于 root 用户来说：
 
 ```
 root:x:0:0:root:/root:/bin/bash
 ```
 
-```redhat: _
+```
+redhat: _
 ```
 
 ### 命令 (Commands)
 
 | 快捷键 | 功能 |
 | :--- | :--- |
-| Ctrl+a | 将光标移动到行首 |
-| Ctrl+e | 将光标移动到行尾 |
-| Ctrl+u | 清空当前行 |
+| `Ctrl+a` | 将光标移动到行首 |
+| `Ctrl+e` | 将光标移动到行尾 |
+| `Ctrl+u` | 清空当前行 |
 | 鼠标中键点击 | 粘贴选中的文本 |
-| Tab | 自动补全命令 |
+| `Tab` | 自动补全命令 |
 | 上/下方向键 | 显示命令历史 |
-| Ctrl+c | 终止当前进程 |
-| Ctrl+z | 挂起当前进程 |
+| `Ctrl+c` | 终止当前进程 |
+| `Ctrl+z` | 挂起当前进程 |
 
 ### 磁盘工具 (Disk Utility)
 
@@ -540,8 +534,8 @@ root:x:0:0:root:/root:/bin/bash
 ### 存储设备 (Storage Devices)
 
 - 本地存储
-- SATA 适配器 (0x837225e0004, PCI-E)
-- SCSI 适配器 (533053 PCI-X, Dual U320 SCM)
+- SATA 适配器 (`0x837225e0004`, PCI-E)
+- SCSI 适配器 (`533053 PCI-X`, Dual U320 SCM)
 - SATA 适配器 (通用)
 - CD 驱动器
 - NVMe 驱动器 (VMware, Virtual SCM)
@@ -556,28 +550,24 @@ root:x:0:0:root:/root:/bin/bash
 | :--- | :--- |
 | 型: - | 序列号: - |
 | 固件版本: - | 全局名称: - |
-| 位置: - | dev/disk-0 |
+| 位置: - | `dev/disk-0` |
 | 写入缓存: | 转速: - |
 | 容量: 1.3 GB (1,283,457,624 bytes) | 连接: 未知 |
 | 分区: 未分区 | SMART 状态: 不支持 |
 
 ### 卷 (Volumes)
 
-| 使用情况: 文件系统 | 设备: dev/disk-0 |
+| 使用情况: 文件系统 | 设备: `dev/disk-0` |
 | :--- | :--- |
 | 分区类型: - | 容量: 1.3 GB (1,283,457,624 bytes) |
 | 类型: Ext4 (版本 1.0) | 可用: - |
 | 标签: - | 挂载点: 未挂载 |
 
-挂载卷 (Mount Volume)
+挂载卷 (`Mount Volume`)
 挂载卷
 
-格式化卷 (Format Volume)
+格式化卷 (`Format Volume`)
 擦除或格式化卷
-
-
-
-
 
 # 第 7 章
 
@@ -595,24 +585,24 @@ Linux 操作系统执行的每一个任务都与其相关的进程。进程的�
 
 | 命令 | 说明 |
 | --- | --- |
-| bg | 将作业发送到后台 |
-| fg | 将作业带到前台 |
-| jobs | 显示当前作业 |
-| kill | 停止进程 |
-| ps | 显示进程信息 |
-| & | 如果命令以 & 结尾，shell 将在后台执行该命令并返回 |
+| `bg` | 将作业发送到后台 |
+| `fg` | 将作业带到前台 |
+| `jobs` | 显示当前作业 |
+| `kill` | 停止进程 |
+| `ps` | 显示进程信息 |
+| `&` | 如果命令以 `&` 结尾，shell 将在后台执行该命令并返回 |
 
 ### 将命令带回前台
 
 ```
-### fg
+fg
 ctrl + c
 ```
 
 ### 检查运行中的作业
 
 ```
-### jobs
+jobs
 ```
 
 ### 列出当前运行的进程
@@ -622,51 +612,51 @@ ctrl + c
 ```
 
 ```
-### ps aux
+ps aux
 ```
 
 ### 强制杀死进程
 
-首先使用 ps -ef 命令检查进程 ID，然后：
+首先使用 `ps -ef` 命令检查进程 ID，然后：
 
 ```
-### kill -9 <process -id>
+kill -9 <process -id>
 ```
 
 ### 使用 ps 命令监控进程
 
-ps 命令显示进程的 CPU 和内存占用百分比，如果你的机器性能不佳，这个工具非常有用。**ps** 命令可以告诉你哪个进程正在占用内存/CPU。
+`ps` 命令显示进程的 CPU 和内存占用百分比，如果你的机器性能不佳，这个工具非常有用。`ps` 命令可以告诉你哪个进程正在占用内存/CPU。
 
 ### 进程调度
 
-调度器是内核的一部分，负责选择下一个要运行的进程。其目的是根据优先级运行进程。使用 nice 和 renice 命令设置运行进程的优先级，这些命令决定了赋予进程多长的 CPU 时间。
+调度器是内核的一部分，负责选择下一个要运行的进程。其目的是根据优先级运行进程。使用 `nice` 和 `renice` 命令设置运行进程的优先级，这些命令决定了赋予进程多长的 CPU 时间。
 
-**nice** 设置新进程的优先级或 nice 值。
+`nice` 设置新进程的优先级或 nice 值。
 
-**renice** 调整运行进程的 nice 值，-20 为最高优先级，19 为最低优先级。默认优先级为 0。
+`renice` 调整运行进程的 nice 值，`-20` 为最高优先级，`19` 为最低优先级。默认优先级为 `0`。
 
 ### 示例
 
 ```
-### nice –n 19 cp–r /as /map
+nice –n 19 cp–r /as /map
 ```
 
 ### 显示运行进程优先级的命令
 
 ```
-### ps –al
+ps –al
 ```
 
 或者
 
 ```
-### top
+top
 ```
 
 ### 修改优先级
 
 ```
-### renice –n 10 <pid>
+renice –n 10 <pid>
 ```
 
 **注意：** 更改更高的优先级需要 root 权限。
@@ -677,25 +667,25 @@ ps 命令显示进程的 CPU 和内存占用百分比，如果你的机器性能
 
 Redhat 提供了实用工具来自动化系统管理员定期执行或在指定时间执行的任务。以下是主要的工具：
 
-- cron
-- at
-- batch
+- `cron`
+- `at`
+- `batch`
 
 ### Cron
 
-cron 是一个守护进程，可以根据时间、日期、星期来调度周期性任务的执行。
+`cron` 是一个守护进程，可以根据时间、日期、星期来调度周期性任务的执行。
 
 ### 配置文件
 
-/etc/crontab
+`/etc/crontab`
 
 ### 命令
 
 | 命令 | 说明 |
-| --- | --- |
-| crontab -l | 列出 crontab 条目 |
-| crontab -e | 编辑 crontab |
-| crontab -r | 删除 crontab |
+| --- | :--- |
+| `crontab -l` | 列出 crontab 条目 |
+| `crontab -e` | 编辑 crontab |
+| `crontab -r` | 删除 crontab |
 
 ### 格式
 
@@ -703,15 +693,15 @@ cron 是一个守护进程，可以根据时间、日期、星期来调度周期
 
 ### 参数说明
 
-**分钟** (从 0 到 59)
+`分钟` (从 0 到 59)
 
-**小时** (从 0 到 23)
+`小时` (从 0 到 23)
 
-**日期** (从 1 到 31)
+`日期` (从 1 到 31)
 
-**月份** (从 1 到 12)
+`月份` (从 1 到 12)
 
-**星期** (从 0 到 6) (0=星期日)
+`星期` (从 0 到 6) (0=星期日)
 
 ### 调度周期性任务
 
@@ -721,7 +711,7 @@ cron 是一个守护进程，可以根据时间、日期、星期来调度周期
 crontab -e
 ```
 
-在文件底部添加条目，按 **i** 进入插入模式
+在文件底部添加条目，按 `i` 进入插入模式
 
 假设你想在每晚 11:30 运行备份脚本
 
@@ -729,44 +719,44 @@ crontab -e
 30 23 * * * /myscripts/backup.sh
 ```
 
-按 [escape] 键，输入 : 写入 **x**，然后按 [enter] 保存条目
+按 `[escape]` 键，输入 `:` 写入 `x`，然后按 `[enter]` 保存条目
 
 ### at 和 batch
 
-crontab 用于周期性任务，但对于指定时间执行的一次性任务，使用了 at 和 batch 命令。
+`crontab` 用于周期性任务，但对于指定时间执行的一次性任务，使用了 `at` 和 `batch` 命令。
 
-要运行 at 命令，必须安装 rpm 且 atd 服务必须运行。
+要运行 `at` 命令，必须安装 `rpm` 且 `atd` 服务必须运行。
 
 ### 检查安装
 
 ```
-### rpm -q at
+rpm -q at
 ```
 
 ### 安装 at 包
 
 ```
-### yum install at
+yum install at
 ```
 
 ### 启动服务
 
 ```
-### service start atd
+service start atd
 ```
 
 ### 启动命令
 
 ```
-### at 4:00
+at 4:00
 at > ls
 ctrl + d
 ```
 
-**Batch** 命令在系统平均负载下降到 0.8 以下时执行一次性任务。
+`Batch` 命令在系统平均负载下降到 0.8 以下时执行一次性任务。
 
 ```
-### at
+at
 at > ls
 ctrl + d
 ```
@@ -781,13 +771,13 @@ atq
 
 ## 日志管理
 
-日志文件在故障排除和授权系统访问审计中非常有用。在 Redhat 6 中，某些日志由 rsyslog 守护进程控制。它是 syslogd 的增强版。它提供了高性能、出色的安全特性、模块化设计以及支持通过 TCP 或 UDP 协议传输。
+日志文件在故障排除和授权系统访问审计中非常有用。在 Redhat 6 中，某些日志由 `rsyslog` 守护进程控制。它是 `syslogd` 的增强版。它提供了高性能、出色的安全特性、模块化设计以及支持通过 TCP 或 UDP 协议传输。
 
-rsyslog 读取文件 /etc/rsyslog.conf。可以通过 rsyslog.conf 文件配置 rsyslogd。rsyslog 维护的日志列表可以在 rsyslog.conf 配置文件中找到。日志文件通常位于 /var/log/ 目录。
+`rsyslog` 读取文件 `/etc/rsyslog.conf`。可以通过 `rsyslog.conf` 文件配置 `rsyslogd`。`rsyslog` 维护的日志列表可以在 `rsyslog.conf` 配置文件中找到。日志文件通常位于 `/var/log/` 目录。
 
 ### 配置文件
 
-/etc/rsyslog.conf
+`/etc/rsyslog.conf`
 
 ### rsyslog 示例
 
@@ -797,7 +787,7 @@ rsyslog 读取文件 /etc/rsyslog.conf。可以通过 rsyslog.conf 文件配置 
 
 ### 更多信息
 
-/etc/rsyslog.conf
+`/etc/rsyslog.conf`
 
 ### rsyslog 示例
 
@@ -812,91 +802,88 @@ rsyslog 读取文件 /etc/rsyslog.conf。可以通过 rsyslog.conf 文件配置 
 etc/rsyslog
 ```
 
-# ####模块
+#### 模块
 
 ```
 $ModLoad imuxsock # 提供本地系统日志
 ```
 
-```
-$ModLoad imudp # 提供 UDP 接收
-```
 
-```
-$ModLoad imtcp # 提供 TCP 接收
-```
 
-# #### 全局指令
+$ModLoad `imudp` # 提供 UDP 接收
 
-$ActionFileDefaultTemplate
-$ActionFileFormat
+$ModLoad `imtcp` # 提供 TCP 接收
 
-### 包含 /etc/rsyslog.d/ 中的所有配置。
-$IncludeConfig /etc/rsyslog.d/
+# 全局指令
 
-# #### 规则
+`$ActionFileDefaultTemplate`
+`$ActionFileFormat`
+
+### 包含 `/etc/rsyslog.d/` 中的所有配置。
+`$IncludeConfig /etc/rsyslog.d/`
+
+# 规则
 
 ### 将所有内核消息记录到控制台。
-* /dev/console
+`*` `/dev/console`
 
 ### 记录除邮件以外的所有 info 或更级别的日志。
-*.info;mail.none;cron.none;authpriv.none;daemon.none;user.none /var/log/messages
+`*.info;mail.none;cron.none;authpriv.none;daemon.none;user.none` `/var/log/messages`
 
 ### 将所有邮件消息记录在一个处。
-mail* /var/log/secure
-authpriv.* /var/log/secure
+`mail*` `/var/log/secure`
+`authpriv.*` `/var/log/secure`
 
 ### 记录 cron 相关内容
-cron* /var/log/cron
+`cron*` `/var/log/cron`
 
 ### 将 crit 及更高级别的新闻错误保存在特殊文件中。
-news.crit /var/log/spooler
+`news.crit` `/var/log/spooler`
 
 ### 将启动消息也保存到 boot.log
-local7.* /var/log/boot
+`local7.*` `/var/log/boot`
 
 ### 日志过滤
 
-如果不对进行过滤，系统中的日志会太多，导致日志无法使用。为了过滤日志，我们使用 /etc/rsyslog.conf。它包含两个参数：facility（设施）和 priority（优先级），用点号隔开。facility 是你想要记录的进程名称，priority 指定日志级别，如 debug, info, notice, warning, alert, emerg。
+如果不对进行过滤，系统中的日志会太多，导致日志无法使用。为了过滤日志，我们使用 `/etc/rsyslog.conf`。它包含两个参数：`facility`（设施）和 `priority`（优先级），用点号隔开。`facility` 是你想要记录的进程名称，`priority` 指定日志级别，如 `debug`, `info`, `notice`, `warning`, `alert`, `emerg`。
 
 ### 示例
 
-```
-### authpriv 文件有访问限制。
-authpriv.* /var/log/secure
-```
+`authpriv` 文件有访问限制。
 
-在示例中，**authpriv** 和 **mail** 是 facility，* 表示所有日志。
+`authpriv.*` `/var/log/secure`
+
+在示例中，`authpriv` 和 `mail` 是 `facility`，`*` 表示所有日志。
 
 ### 日志轮转
 
 日志需要轮转以防止填充文件系统并使其更于管理。一旦日志文件轮转，它将被重命名为新文件名。轮转一段时间后，旧的日志文件将被删除以节省空间。
 
-**logrotate** 包根据 /etc/logrotate.conf 中的配置自动管理日志轮转。
+`logrotate` 包根据 `/etc/logrotate.conf` 中的配置自动管理日志轮转。
 
 ### logwatch
 
-**logwatch** 是一个通过邮件发送分析简报报告的程序。可以通过 /usr/share/logwatch/default.conf/logwa 配置文件进行配置。
+`logwatch` 是一个通过邮件发送分析简报报告的程序。可以通过 `/usr/share/logwatch/default.conf/logwa` 配置文件进行配置。
 
 ### 安装
 
-```
-### yum install -y logwatch
+```bash
+yum install -y logwatch
 ```
 
 ### 配置
 
-设置配置文件 /usr/share/logwatch/default.conf/logwa 发送每日摘要的电子邮件地址
+设置配置文件 `/usr/share/logwatch/default.conf/logwa` 发送每日摘要的电子邮件地址
 
-### mailto =root
+`mailto =root`
 
 ### 示例
 
-```
-### 默认发送报告的人。可以是本地账户或完整的电子邮件地址。
-### 变量 Print 应设置为 No 以启用邮件功能。
-MailTo = root
-```
+默认发送报告的人。可以是本地账户或完整的电子邮件地址。
+
+变量 `Print` 应设置为 `No` 以启用邮件功能。
+
+`MailTo = root`
 
 # 第 10 章
 
@@ -909,18 +896,14 @@ Red Hat Network 是一种集中化管理的服务，提供了向 Red Hat Enterpr
 要向 RHN 注册你的系统：--
 访问 Redhat 客户门户并创建用户
 
-
-
-
-
 ### 添加您的订阅
 
 连接服务器到互联网
 
-执行命令 **subscription-manager register**
+执行命令 `subscription-manager register`
 
 ```bash
-### subscription-manager register
+subscription-manager register
 Username: abc74
 Password:
 系统已注册，ID为: bb304a30-c30e-4bb7-9d41-xxxxxx
@@ -947,7 +930,7 @@ Subscription Name: 30 Day Self-Supported Red Hat Enterprise Linux Developer Work
 将您的系统附加到所需的订阅
 
 ```bash
-### subscription-manager attach --pool=pool_id
+subscription-manager attach --pool=pool_id
 ```
 
 现在列出消耗了多少订阅
@@ -958,23 +941,23 @@ subscription-manager list --consumed
 
 ### 仓库 (Repository)
 
-仓库是 Linux 软件的集合，可以存在于本地或远程。。仓库可用于安装额外软件或更新当前软件。当您订阅 RHN 时，在 /etc/yum.repos.d/ 目录下会创建一个仓库文件。
+仓库是 Linux 软件的集合，可以存在于本地或远程。。仓库可用于安装额外软件或更新当前软件。当您订阅 RHN 时，在 `/etc/yum.repos.d/` 目录下会创建一个仓库文件。
 
 ### 显示所有启用的仓库
 
 ```bash
-### yum repolist
+yum repolist
 ```
 
 ### 显示所有已启用和禁用的仓库
 
 ```bash
-### yum repolist all
+yum repolist all
 ```
 
 ### yum
 
-Yellow dog updater modifier (yum) 是一个用于软件包管理的命令行工具。yum 使用仓库来获取与您的系统兼容的特定软件包的正确版本。yum 允许软件包的自动更新和依赖关系管理。它允许从 RHN 仓库或定义的本地仓库（如 CD-ROM 或目录）自动下载软件包并安装它们。您也可以使用第三方仓库来安装如 OpenOffice、VLC 等额外软件包。
+Yellow dog updater modifier (`yum`) 是一个用于软件包管理的命令行工具。`yum` 使用仓库来获取与您的系统兼容的特定软件包的正确版本。`yum` 允许软件包的自动更新和依赖关系管理。它允许从 RHN 仓库或定义的本地仓库（如 CD-ROM 或目录）自动下载软件包并安装它们。您也可以使用第三方仓库来安装如 OpenOffice、VLC 等额外软件包。
 
 ### 命令
 
@@ -985,13 +968,13 @@ Yellow dog updater modifier (yum) 是一个用于软件包管理的命令行工�
 ### 语法
 
 ```bash
-### yum install -y package_name
+yum install -y package_name
 ```
 
 ### 示例
 
 ```bash
-### yum install -y firefox
+yum install -y firefox
 ```
 
 ### 移除软件包
@@ -999,49 +982,49 @@ Yellow dog updater modifier (yum) 是一个用于软件包管理的命令行工�
 ### 语法
 
 ```bash
-### yum remove package_name
+yum remove package_name
 ```
 
 ### 示例
 
 ```bash
-### yum remove firefox
+yum remove firefox
 ```
 
 ### 检查可用更新
 
 ```bash
-### yum check-update
+yum check-update
 ```
 
 ### 使用 yum 更新系统
 
 ```bash
-### yum update
+yum update
 ```
 
 ### 检查哪个软件包提供了文件
 
 ```bash
-### yum provides file-name
+yum provides file-name
 ```
 
 ### 获取帮助
 
 ```bash
-### yum help
+yum help
 ```
 
 ### 列出已安装和可用的软件
 
 ```bash
-### yum list
+yum list
 ```
 
 ### 使用关键字搜索包名
 
 ```bash
-### yum search keyword
+yum search keyword
 ```
 
 ### 显示有关软件包的信息
@@ -1049,47 +1032,47 @@ Yellow dog updater modifier (yum) 是一个用于软件包管理的命令行工�
 ### 语法
 
 ```bash
-### yum info package_name
+yum info package_name
 ```
 
 ### 示例
 
 ```bash
-### yum info zip
+yum info zip
 ```
 
 ### 更新仓库提供的所有软件
 
 ```bash
-### yum update
+yum update
 ```
 
 ### 清理 yum 缓存
 
 ```bash
-### yum clean all
+yum clean all
 ```
 
 ### 交互式 shell
 
 ```bash
-### yum shell
+yum shell
 ```
 
 ### 列出 yum 历史
 
 ```bash
-### yum history list
+yum history list
 ```
 
 ### 软件包组 (Package group)
 
-软件包组是具有相同安装目的软件组。它通过自动安装和下载依赖软件简化了管理员的工作。例如，您想安装 KDE 桌面环境，只需运行命令 yum groupinstall 'Backup Client'。
+软件包组是具有相同安装目的软件组。它通过自动安装和下载依赖软件简化了管理员的工作。例如，您想安装 KDE 桌面环境，只需运行命令 `yum groupinstall 'Backup Client'`。
 
 ### 列出所有可用的软件包组
 
 ```bash
-### yum grouplist
+yum grouplist
 ```
 
 ### 安装组包
@@ -1103,7 +1086,7 @@ yum groupinstall package_name
 ### 示例
 
 ```bash
-### yum groupinstall 'Backup Client'
+yum groupinstall 'Backup Client'
 ```
 
 ### 移除组包
@@ -1117,7 +1100,12 @@ yum groupremove package_name
 ### 示例
 
 ```bash
+
+
+
 ### yum groupremove 'Backup Client'
+
+```
 ```
 
 ### 关于组包的信息
@@ -1131,118 +1119,114 @@ yum groupinfo package_name
 ### 示例
 
 ```bash
-### yum groupinfo 'Backup Client'
+yum groupinfo 'Backup Client'
 ```
 
 ### 使用 RPM 命令安装软件包
 
 ## RPM
 
-RPM 代表 Red Hat Package Manager。软件包以 .rpm 结尾。rpm 命令用于管理本地安装、更新和删除的软件。
+RPM 代表 Red Hat Package Manager。软件包以 `.rpm` 结尾。`rpm` 命令用于管理本地安装、更新和删除的软件。
 
 ### Commands
 
 ### 安装
 
-### 语法
+#### 语法
 
 ```bash
-### rpm -ivh package_name
+rpm -ivh package_name
 ```
 
-### 示例
+#### 示例
 
 ```bash
-### rpm -ivh package.rpm
+rpm -ivh package.rpm
 ```
 
 ### 更新
 
-### 语法
+#### 语法
 
 ```bash
-### rpm -Uvh package_name
+rpm -Uvh package_name
 ```
 
-### 示例
+#### 示例
 
 ```bash
-### rpm -Uvh package.rpm
+rpm -Uvh package.rpm
 ```
 
 ### 移除
 
-### 语法
+#### 语法
 
 ```bash
-### rpm -e package_name
+rpm -e package_name
 ```
 
-### 示例
+#### 示例
 
 ```bash
-### rpm -e package.rpm
+rpm -e package.rpm
 ```
 
 ### 查询已安装的软件包
 
-### 语法
+#### 语法
 
 ```bash
-### rpm -q
+rpm -q
 ```
 
-### 示例
+#### 示例
 
 ```bash
-### rpm -q package
+rpm -q package
 ```
 
 ### 显示软件包的详细信息
 
-### 语法
+#### 语法
 
 ```bash
-### rpm -qi package_name
+rpm -qi package_name
 ```
 
-### 示例
+#### 示例
 
 ```bash
-### rpm -qi package
+rpm -qi package
 ```
 
 ### 列出软件包包含的文件
 
-### 语法
+#### 语法
 
 ```bash
-### rpm -ql package_name
+rpm -ql package_name
 ```
 
-### 示例
+#### 示例
 
 ```bash
-### rpm -ql package
+rpm -ql package
 ```
 
 ### 查询文件所属包
 
-### 语法
+#### 语法
 
 ```bash
-### rpm -qf file_name
+rpm -qf file_name
 ```
 
-### 示例
+#### 示例
 
 ```bash
-### rpm -qf /usr/bin/ls
+rpm -qf /usr/bin/ls
 ```
-
-
-
-
 
 ### 工具类
 
@@ -1250,23 +1234,23 @@ RPM 代表 Red Hat Package Manager。软件包以 .rpm 结尾。rpm 命令用于
 
 用于将多个文件创建一个归档文件，用于磁带或其他介质备份。在创建归档文件时，也可以添加选项创建压缩文件。
 
-### 创建 tar
+#### 创建 tar
 
-### 语法
+##### 语法
 
-```
+```bash
 tar cvf name_of_archive_file files_or_directory_to_archive
 ```
 
 其中
 
-- c 创建
-- v 详细模式
-- f 归档文件类型类型
+- `c` 创建
+- `v` 详细模式
+- `f` 归档文件类型类型
 
-### 示例
+##### 示例
 
-```
+```bash
 [root@redhat1 share]# tar cvf abc.tar *
 applications/
 applications/preferred-mail-reader.desktop
@@ -1280,153 +1264,167 @@ drwxr-xr-x. 3 root root 4096 Feb 4 12:46 ..
 abc.tar
 ```
 
-### 创建压缩 tar 文件
+#### 创建压缩 tar 文件
 
-### 创建 gzip 格式 tar 文件
+##### 创建 gzip 格式 tar 文件
 
-```
-### tar cvfz abc.tar.gz name_of_files
-```
-
-### 创建 bzip 格式
-
-```
-### tar cvfj abc.tar.bz2 name_of_files
+```bash
+tar cvfz abc.tar.gz name_of_files
 ```
 
-### untar
+##### 创建 bzip 格式
 
+```bash
+tar cvfj abc.tar.bz2 name_of_files
 ```
-### tar xvf abc.tar
+
+#### untar
+
+```bash
+tar xvf abc.tar
 ```
 
 其中
 
-- x 提取
-- v 详细模式
-- f 归档文件类型类型
+- `x` 提取
+- `v` 详细模式
+- `f` 归档文件类型类型
 
-### 解压缩
+#### 解压缩
 
-### 解压缩 gzip 格式
+##### 解压缩 gzip 格式
 
-### 语法
+###### 语法
 
+```bash
 tar xvfz filename
-
-### 示例
-
-```
-### tar xvfz abc.tar.gz
 ```
 
-### 创建 bzip 格式
+###### 示例
 
-### 语法
+```bash
+tar xvfz abc.tar.gz
+```
 
+##### 创建 bzip 格式
+
+###### 语法
+
+```bash
 tar xvfj filename
-
-### 示例
-
-```
-### tar xvfj abc.tar.bz2
 ```
 
-### 列出归档 tar 文件
+###### 示例
 
-### 语法
+```bash
+tar xvfj abc.tar.bz2
+```
 
+#### 列出归档 tar 文件
+
+##### 语法
+
+```bash
 tar tvf filename
-
-### 示例
-
-```
-### tar tvf abc.tar
 ```
 
-### 列出 gzip 压缩 tar 文件
+##### 示例
 
-### 语法
+```bash
+tar tvf abc.tar
+```
 
+#### 列出 gzip 压缩 tar 文件
+
+##### 语法
+
+```bash
 tar tzvf filename
-
-### 示例
-
-```
-### tar tzvf abc.tar.gz
 ```
 
-### 列出 bzip 压缩 tar 文件
+##### 示例
 
-### 语法
+```bash
+tar tzvf abc.tar.gz
+```
 
+#### 列出 bzip 压缩 tar 文件
+
+##### 语法
+
+```bash
 tar tjvf filename
-
-### 示例
-
 ```
-### tar tjvf abc.tar.bz2
+
+##### 示例
+
+```bash
+tar tjvf abc.tar.bz2
 ```
 
 ### cp
 
 复制文件的命令
 
-### 语法
+#### 语法
 
+```bash
 cp <options> source destination
-
-### 示例
-
 ```
+
+#### 示例
+
+```bash
 cp /home/abc.txt /home1/
 ```
 
-# 递归复制目录下的所有文件
+#### 递归复制目录下的所有文件
 
-```
+```bash
 cp -R /home/* /home1/
 ```
 
-# 在任何覆盖前提示
+#### 在任何覆盖前提示
 
-```
-### cp -i /home /home1
-```
-
-# 将所有新文件复制到目标
-
-```
-# cp -u * /tmp
+```bash
+cp -i /home /home1
 ```
 
-### 强制复制文件
+#### 将所有新文件复制到目标
 
-```
-# cp -f /tmp/abc.txt /backup/.
+```bash
+cp -u * /tmp
 ```
 
-# 不经提示直接覆盖
+#### 强制复制文件
 
+```bash
+cp -f /tmp/abc.txt /backup/.
 ```
-# cp -n* t
+
+#### 不经提示直接覆盖
+
+```bash
+cp -n* t
 ```
 
 ### scp
 
-scp 命令用于以安全的方式从一个主机复制文件到另一个主机。
+`scp` 命令用于以安全的方式从一个主机复制文件到另一个主机。
 
-### 从本地机器复制到远程机器
+#### 从本地机器复制到远程机器
 
-### 语法
+##### 语法
 
+```bash
 scp filename remote_user@remote.host:/some/remote_dir
-
-# 从远程主机复制 xyz 文件到本地主机
-
-### 语法
-
 ```
+
+#### 从远程主机复制 xyz 文件到本地主机
+
+##### 语法
+
+```bash
 scp remote_user@remote.host:some/remote_dir
 ```
 
@@ -1434,113 +1432,112 @@ scp remote_user@remote.host:some/remote_dir
 
 从归档内部和外部复制文件。用于创建和提取归档，以及将文件从一个地方复制到另一个地方。
 
-# 从目录 abc 创建归档到 /directory backup
+#### 从目录 abc 创建归档到 /directory backup
 
-```
-### cd abc
-# ls|cpio -ov> /backup/abc.cpio
-```
-
-### 提取
-
-```
-### mkdir newbackup
+```bash
+cd abc
+ls|cpio -ov> /backup/abc.cpio
 ```
 
-```
-# cd newbackup
-# cpio -idv < /backup/abc.cpio
+#### 提取
+
+```bash
+mkdir newbackup
+cd newbackup
+cpio -idv < /backup/abc.cpio
 ```
 
-### 创建特定文件列表的归档
+#### 创建特定文件列表的归档
 
 示例 :- 备份所有日志文件
 
-```
-# find . -iname *.log -print|cpio -ov> backup/selog.cpio
-```
-
-### 使用 cpio 创建 tar 文件
-
-```
-### ls|cpio -ovH - abc.tar
+```bash
+find . -iname *.log -print|cpio -ov> backup/selog.cpio
 ```
 
-### 使用 cpio 提取 tar 文件
+#### 使用 cpio 创建 tar 文件
 
+```bash
+ls|cpio -ovH - abc.tar
 ```
-### cpio -idv -F abc.tar
+
+#### 使用 cpio 提取 tar 文件
+
+```bash
+cpio -idv -F abc.tar
 ```
 
 ### Dump 和还原
 
-# dump
+#### dump
 
-dump 工具用于备份整个文件系统或自上次 dump 以来更改的文件。
+`dump` 工具用于备份整个文件系统或自上次 dump 以来更改的文件。
 
-### 语法
+##### 语法
 
-```
+```bash
 dump <options> target_device filesystem_to_be_up
 ```
 
-### 示例：
+##### 示例：
 
 备份整个文件系统到设备
 
-```
-### dump -uf /dev/st0
+```bash
+dump -uf /dev/st0
 ```
 
 其中
 
-0 是 dump 级别。从 0 到 9
-- -0 自上次 dump 以来完整
-- -1 自上次 dump 以来更新
-- -2 自上次 dump 以来更改
-- -3 自上次 dump 以来类似
-- -9 自上次 dump 以来更新
-- u 显示备份信息
-- f 指定设备名称
+`0` 是 dump 级别。从 0 到 9
+- `-0` 自上次 dump 以来完整
+- `-1` 自上次 dump 以来更新
+- `-2` 自上次 dump 以来更改
+- `-3` 自上次 dump 以来类似
+- `-9` 自上次 dump 以来更新
+- `u` 显示备份信息
+- `f` 指定设备名称
 
-### restore
+#### restore
 
-restore 命令用于还原 dump 命令存储的备份。
+`restore` 命令用于还原 dump 命令存储的备份。
 
-### 语法
+##### 语法
 
-```
+```bash
 restore <options> backupdevice
 ```
 
-### 示例：
+##### 示例：
 
-从 /dev/st0 还原备份
+从 `/dev/st0` 还原备份
 
+```bash
+restore -if/0
 ```
-# restore -if/0
-```
 
-其中选项 i 触发交互模式，允许选择文件和目录
+其中选项 `i` 触发交互模式，允许选择文件和目录
 
-### 还原特定文件
+#### 还原特定文件
 
-```
-### restore -xf /etc/hosts
+```bash
+restore -xf /etc/hosts
 ```
 
 ### ls
 
 列出文件名
 
-### 语法
+#### 语法
 
+```bash
 ls <options>
-
-### 示例
-
 ```
-### ls -al
+
+#### 示例
+
+```bash
+ls -al
 ```
 
 列出目录和文件
@@ -1549,92 +1546,84 @@ ls <options>
 
 显示文本文件
 
-### 语法
+#### 语法
 
+```bash
 cat filename
-
-### 示例
-
 ```
-### cat abc.conf
+
+#### 示例
+
+```bash
+cat abc.conf
 ```
 
 ### rm
 
 删除文件、文件或目录
 
-### 语法
+#### 语法
 
-```
+```bash
 rm filename
 ```
 
-### 示例
+#### 示例
 
 ```
-# rm abc
 ```
 
-递归删除 abc
 
-```
-### rm -r abc
-```
+
+# rm
+
+递归删除 `abc`
+
+### `rm -r abc`
 
 ### More
 
-当你想查看大于一屏的文件时，可以使用 more 工具。它每次显示一屏文本。
+当你想查看大于一屏的文件时，可以使用 `more` 工具。它每次显示一屏文本。
 
-### 语法
+#### 语法
+`more filename`
 
-more filename
-
-### 示例
-
+#### 示例
 ```
-### more /etc/hosts
+more /etc/hosts
 ```
 
 ### less
 
-Less 程序与 more 类似，但允许在文件中后向和向前移动。
+`Less` 程序与 `more` 类似，但允许在文件中后向和向前移动。
 
-### 语法
+#### 语法
+`less filename`
 
-less filename
-
-### 示例
-
+#### 示例
 ```
-### less /etc/hosts
+less /etc/hosts
 ```
 
 ### mv
 
-mv 命令用于将文件从一个位置移动到另一个位置。它也可以重命名文件。
+`mv` 命令用于将文件从一个位置移动到另一个位置。它也可以重命名文件。
 
-# 移动文件
+#### 移动文件
+##### 语法
+`mv filename destination_directory`
 
-### 语法
-
-mv filename destination_directory
-
-### 示例
-
+##### 示例
 ```
 mv a.txt /tmp/
 ```
+将 `a.txt` 从当前目录移动到 `/tmp`
 
-将 a.txt 从当前目录移动到 /tmp
+#### 重命名
+##### 语法
+`mv filename newfilename`
 
-### 重命名
-
-### 语法
-
-mv filename newfilename
-
-### 示例
-
+##### 示例
 ```
 mv a.txt b.txt
 ```
@@ -1643,145 +1632,126 @@ mv a.txt b.txt
 
 在一个或多个文件中搜索字符串。显示包含字符串的每一行。
 
-### 语法
+#### 语法
+`grep string file`
 
-grep string file
-
-### 示例
-
+#### 示例
 ```
-### grep '127.0.0.1' /etc/hosts
+grep '127.0.0.1' /etc/hosts
 ```
 
 ### head
 
 将文件的前 10 行打印到标准输出。你可以指定显示多少行。
 
-### 语法
+#### 语法
+`head file`
 
-head file
-
-### 示例
-
+#### 示例
 ```
-# head -20 /etc/mime.types
+head -20 /etc/mime.types
 ```
-
-显示 mime.types 的前 20 行
+显示 `mime.types` 的前 20 行
 
 ### tail
 
 将文件的最后 10 行打印到标准输出。你可以指定显示多少行。
 
-### 语法
+#### 语法
+`tail file`
 
-tail file
-
-### 示例
-
+#### 示例
 ```
-# tail -20 /var/log/logfile
+tail -20 /var/log/logfile
 ```
-
 显示最后 20 行
 
-# 使用 tail 持续监控文件
-
+#### 使用 tail 持续监控文件
 ```
-### tail -f /var/log/logfile
+tail -f /var/log/logfile
 ```
-
-显示增长的文件末。按 Ctrl + c 中断
+显示增长的文件末。按 `Ctrl + c` 中断
 
 ### Diff
 
 比较两个文件。
 
-### 语法
+#### 语法
+`diff First_file Second_file`
 
-diff First_file Second_file
-
-### 示例
-
+#### 示例
 ```
-### diff abc.txt bbc.txt
+diff abc.txt bbc.txt
 ```
 
 ### file
 
 确定文件类型
 
-### 语法
+#### 语法
+`file file_name`
 
-file file_name
-
-### 示例
-
+#### 示例
 ```
-# file bbc.txt
+file bbc.txt
 ```
 
 ### Echo
 
 显示文本
 
-### 语法
+#### 语法
+`echo text`
 
-echo text
-
-### 示例
-
+#### 示例
 ```
-### echo hello
+echo hello
 ```
 
 ### Date
 
 打印或更改系统日期时间。
 
-### 语法
+#### 语法
+`date`
 
+#### 示例
+```
 date
-
-### 示例
-
 ```
-# date
-```
-
 检查日期
-# date -s "24 feb 2017 19:00"
+```
+date -s "24 feb 2017 19:00"
+```
 
 # 第 12 章
 
 ## 管道和重定向
 
-# 输出输出到文件 (>)
+### 输出输出到文件 (`>`)
 
-通常我们会在屏幕上看到输出，但如果我们希望将其保存到文件中，则使用大于符号 ( > ) 将标准输出发送到文件。
+通常我们会在屏幕上看到输出，但如果我们希望将其保存到文件中，则使用大于符号 (`>`) 将标准输出发送到文件。
 
-### 示例
-
+#### 示例
 ```
-### ls > abc.txt
-```
-
-# 从文件发送输入 (<)
-
-如果我们使用小于符号 ( < )，我们就可以从文件中读取数据并通过程序的 STDIN 流将其输入给程序。
-
-### 示例
-
-```
-# wc -l < abc.txt
+ls > abc.txt
 ```
 
-### 管道 (|)
+### 从文件发送输入 (`<`)
 
-为了将数据从一个程序发送到另一个程序，我们使用管道 (|)
+如果我们使用小于符号 (`<`)，我们就可以从文件中读取数据并通过程序的 STDIN 流将其输入给程序。
+
+#### 示例
+```
+wc -l < abc.txt
+```
+
+### 管道 (`|`)
+
+为了将数据从一个程序发送到另一个程序，我们使用管道 (`|`)
 
 ```
-### ls | head -10
+ls | head -10
 ```
 
 # 第 13 章
@@ -1796,96 +1766,75 @@ date
 | Gzip | gz | gunzip |
 | Zip | zip | unzip |
 
-# 压缩
+### 压缩
 
-# Bzip2 格式
+#### Bzip2 格式
+##### 语法
+`bzip2 file_to_backups filename`
 
-### 语法
-
-bzip2 file_to_backups filename
-
-### 示例
-
+##### 示例
 ```
-### bzip2 * abc
+bzip2 * abc
 ```
 
-# gzip 格式
+#### gzip 格式
+##### 语法
+`gzip file_to_backups filename`
 
-### 语法
-
-gzip file_to_backups filename
-
-### 示例
-
+##### 示例
 ```
-### gzip * abc
+gzip * abc
 ```
 
-# zip 格式
+#### zip 格式
+`zip file_to_backups filename`
 
-zip file_to_backups filename
-
-### 示例
-
+##### 示例
 ```
-# zip * abc
+zip * abc
 ```
 
 ### 解压缩
 
-# Bzip2 格式
+#### Bzip2 格式
+##### 语法
+`bzip2 filename`
 
-### 语法
-
-bzip2 filename
-
-### 示例
-
+##### 示例
 ```
-# bunzip2 abc.bz
+bunzip2 abc.bz
 ```
 
-# gzip 格式
+#### gzip 格式
+##### 语法
+`gunzip filename`
 
-### 语法
-
-gunzip filename
-
-### 示例
-
+##### 示例
 ```
-### gunzip abc.gz
+gunzip abc.gz
 ```
 
-# zip 格式
+#### zip 格式
+##### 语法
+`unzip filename`
 
-### 语法
-
-unzip filename
-
-### 示例
-
+##### 示例
 ```
-# unzip abc.zip
+unzip abc.zip
 ```
 
 # 第 14 章
-
-
-
-
 
 # 管理服务和守护进程
 
 ### 守护进程 (Daemons)
 
-守护进程是在后台运行且不进行交互的进程。守护进程会在预定的时间执行预定义的操作。通常守护进程在启动时运行并持续到关机。大多数守护进程的名字以 **d.** 结尾。
+守护进程是在后台运行且不进行交互的进程。守护进程会在预定的时间执行预定义的操作。通常守护进程在启动时运行并持续到关机。大多数守护进程的名字以 `d.` 结尾。
 
 ### 服务 (Services)
 
-服务是位于 /etc/rc.d/init.d 目录下的初始化脚本。这些脚本用于管理守护进程。可以使用 start、stop、restart、status 和 reload（重载）等参数调用服务脚本来管理守护进程。
-可以使用 **chkconfig service_name on** 命令在系统启动时启动服务。
+服务是位于 `/etc/rc.d/init.d` 目录下的初始化脚本。这些脚本用于管理守护进程。可以使用 `start`、`stop`、`restart`、`status` 和 `reload`（重载）等参数调用服务脚本来管理守护进程。
+可以使用 `chkconfig service_name on` 命令在系统启动时启动服务。
 
 ### 运行级别 (Run level)
 
@@ -1900,15 +1849,14 @@ unzip filename
 
 ### 命令
 
-### 检查当前运行级别
-
+#### 检查当前运行级别
 ```
-### runlevel
+runlevel
 ```
 
-### 更改默认运行级别
+#### 更改默认运行级别
 
-在此示例中编辑 /etc/inittab 文件以更改命令行运行级别 3
+在此示例中编辑 `/etc/inittab` 文件以更改命令行运行级别 3
 
 ```
 Id:3:default:
@@ -1916,140 +1864,134 @@ Id:3:default:
 
 # 管理服务启动
 
-### 列出所有服务及其在每个运行级别下的状态
-
+#### 列出所有服务及其在每个运行级别下的状态
 ```
-# chkconfig --list
-```
-
-### 列出特定服务的当前设置
-
-### 语法
-
-```
-# chkconfig --list service_name
+chkconfig --list
 ```
 
-### 示例
-
+#### 列出特定服务的当前设置
+##### 语法
 ```
-# chkconfig --list vsftpd
+chkconfig --list service_name
 ```
-
-### 在运行级别 2, 3, 4, 5 中启用服务
-
-### 语法
+##### 示例
 ```
-# chkconfig Service_name on
+chkconfig --list vsftpd
 ```
 
-### 示例
+#### 在运行级别 2, 3, 4, 5 中启用服务
+##### 语法
 ```
-# chkconfig httpd on
+chkconfig Service_name on
 ```
-
-### 在特定运行级别启用
-
+##### 示例
 ```
-# chkconfig service_name --level 35
-```
-
-### 在 2, 3, 4, 5 运行级别中禁用服务
-
-### 语法
-```
-# chkconfig service_name off
+chkconfig httpd on
 ```
 
-### 示例
+#### 在特定运行级别启用
+```
+chkconfig service_name --level 35
+```
+
+#### 在 2, 3, 4, 5 运行级别中禁用服务
+##### 语法
+```
+chkconfig service_name off
+```
+##### 示例
 ```
 chkconfig httpd off
 ```
 
-### 在特定运行级别禁用
-
-### 语法
+#### 在特定运行级别禁用
+##### 语法
 ```
-# chkconfig service_name off --level 3
+chkconfig service_name off --level 3
 ```
-
-### 示例
+##### 示例
 ```
-# chkconfig service_name off --level levelno
+chkconfig service_name off --level levelno
 ```
 
 # 管理服务状态
 
-### 确定服务是否正在运行
-
-### 语法
+#### 确定服务是否正在运行
+##### 语法
 ```
-# service service_name status
+service service_name status
 ```
-
-### 示例
+##### 示例
 ```
-# service vsftpd status
+service vsftpd status
 ```
 
-### 显示所有服务的状态
-
+#### 显示所有服务的状态
 ```
-# service --status-all
-```
-
-### 启动服务
-
-### 语法
-```
-# service service_name start
+service --status-all
 ```
 
-### 示例
+#### 启动服务
+##### 语法
 ```
-### service httpd start
+service service_name start
 ```
-
-# 停止服务
-
-### 语法
+##### 示例
 ```
-# service service_name stop
+service httpd start
 ```
 
-### 示例
+#### 停止服务
+##### 语法
 ```
-# service httpd stop
+service service_name stop
 ```
-
-# 重启服务
-
-### 语法
+##### 示例
 ```
-# service service_name restart
+service httpd stop
 ```
 
-### 示例
+#### 重启服务
+##### 语法
 ```
-# service httpd restart
+service service_name restart
 ```
+##### 示例
+```
+service httpd restart
+```
+
+
 
 # 安装新服务
 
 安装新服务的步骤：
 
 - 1. 安装新服务包
-   # yum install service_name
+  ```bash
+  # yum install service_name
+  ```
 - 2. 配置服务在启动机时自动启动
-   # chkconfig service_name on
+  ```bash
+  # chkconfig service_name on
+  ```
 - 3. 启动服务
-   # service service_name start
+  ```bash
+  # service service_name start
+  ```
 
 ### 示例
+
+```bash
+yum install vsftpd
 ```
-### yum install vsftpd
-# chkconfig vsftpd on
-### service vsftpd start
+
+```bash
+chkconfig vsftpd on
+```
+
+```bash
+service vsftpd start
 ```
 
 # 第 15 章
@@ -2058,44 +2000,55 @@ chkconfig httpd off
 
 SSH 在客户端/服务器架构中通过不安全的网络提供安全通道。SSH 是 telnet 的替代品，telnet 是不安全的协议。它允许安全地登录并执行命令，因为客户端和服务器之间的所有通信都是加密的。
 
-```
+```bash
 ssh -x user@hostname
 ```
 
 当首次对系统建立 ssh 连接时，远程系统的公钥将存储在本地，以便下次验证其身份。
 
-**Ctrl + d** 或执行 exit 命令将终止 ssh 会话。
+`Ctrl + d` 或执行 `exit` 命令将终止 ssh 会话。
 
-如果你从 MS windows 客户端连接到 Linux 服务器，您需要如 **putty** 这样的第三方软件。
+如果你从 MS windows 客户端连接到 Linux 服务器，您需要如 `putty` 这样的第三方软件。
 
 # ssh 密钥
 
-SSH 密钥有助于使用公钥加密和身份验证向服务器识别您的身份。SSH 密钥成公钥和私钥对生成。公钥用于共享，私钥必须妥善保存。持有公钥的服务器可以发送挑战，只有持有私钥的服务器才能回答。这允许在本示例中从 redhat1 到 redhat2 的无密码登录。
+SSH 密钥有助于使用公钥加密和身份验证向服务器识别您的身份。SSH 密钥成公钥和私钥对生成。公钥用于共享，私钥必须妥善保存。持有公钥的服务器可以发送挑战，只有持有私钥的服务器才能回答。这允许在本示例中从 `redhat1` 到 `redhat2` 的无密码登录。
 
 # 在 redhat1 上创建密钥
-```
+
+```bash
 root@redhat1 ~]# ssh-keygen
 ```
 
 # 将公钥从 redhat1 复制到第二个服务器 redhat2
-```
+
+```bash
 root@redhat1 ~]# scp ~/.ssh/id_rsa.pub
 ```
 
-在第二个服务器 redhat2 的家目录下创建 .ssh 目录（在本例中用户是 root，其家目录是 /root）并更改权限。
-```
+在第二个服务器 `redhat2` 的家目录下创建 `.ssh` 目录（在本例中用户是 root，其家目录是 `/root`）并更改权限。
+
+```bash
 root@redhat2 ~]# mkdir .ssh
+```
+
+```bash
 root@redhat2 ~]# chmod 700 .ssh
 ```
 
-将公钥文件追加到 authorized_keys 文件并更改权限。
-```
+将公钥文件追加到 `authorized_keys` 文件并更改权限。
+
+```bash
 root@redhat2 ~]# cat id_rsa.pub >> .ssh/authorized_keys
+```
+
+```bash
 root@redhat2 ~]# chmod 644 .ssh/authorized_keys
 ```
 
-现在尝试从服务器（即 redhat1）登录到第二个服务器（即 redhat2），它不会提示密码。
-```
+现在尝试从服务器（即 `redhat1`）登录到第二个服务器（即 `redhat2`），它不会提示密码。
+
+```bash
 root@redhat1 ~]# ssh root@redhat2
 ```
 
@@ -2105,38 +2058,46 @@ root@redhat1 ~]# ssh root@redhat2
 
 VNC（虚拟网络计算）是图形化桌面共享。用于远程获取 Linux 服务器的 GUI 桌面。在 VNC 中，VNC 客户端安装在本地机器，用于连接到安装在远程服务器上的 VNC 服务器。要在想要共享桌面的服务器上配置 VNC：
 
-```
-### yum install tigervnc-server
+```bash
+yum install tigervnc-server
 ```
 
 ### 添加用户
 
-编辑 /etc/sysconfig/vncserver，首先将 root 更改为您想要配置的其他用户。其次，移除 -localhost 选项以防止 VNC 通过 ssh 远程连接。
+编辑 `/etc/sysconfig/vncserver`，首先将 root 更改为您想要配置的其他用户。其次，移除 `-localhost` 选项以防止 VNC 通过 ssh 远程连接。
+
 ```
 VNCSERVERS=":1"
 VNCARGS="-geometry 800x600"
 ```
 
 ### 设置 VNC 密码
-```
+
+```bash
 vncpasswd
 ```
 
 ### 启动并启用 VNC 服务
+
+```bash
+service vncserver start
 ```
-### service vncserver start
-# chkconfig vncserver on
+
+```bash
+chkconfig vncserver on
 ```
 
 # 在远程机器上安装 vncviewer
-```
+
+```bash
 yum install tigervnc
 ```
 
 # 在远程机器上连接
 
 进入 Linux 机器的桌面打开终端
-```
+
+```bash
 vncviewer username@servername:1
 ```
 
@@ -2152,28 +2113,32 @@ FTP 是文件传输协议。用于在网络上的计算机之间传输文件。�
 - 2. 浏览器
 - 3. 命令行
 
-在 Redhat 衍生版中使用 vsftp（非常安全的 FTP）守护进程作为 FTP 服务器。
+在 Redhat 衍生版中使用 `vsftp`（非常安全的 FTP）守护进程作为 FTP 服务器。
 
 ### 部署 vsftp
 
 ### 安装包
-```
-### yum install vsftpd
+
+```bash
+yum install vsftpd
 ```
 
 ### 启动服务器
-```
-### service vsftpd start
+
+```bash
+service vsftpd start
 ```
 
 ### 设置自启动
-```
-# chkconfig vsftpd on
+
+```bash
+chkconfig vsftpd on
 ```
 
 ### 打开防火墙
-```
-### system-config-firewall
+
+```bash
+system-config-firewall
 ```
 
 选择自定义启用 ftp > 完成
@@ -2181,18 +2146,20 @@ FTP 是文件传输协议。用于在网络上的计算机之间传输文件。�
 # 从远程机器测试
 
 ### 语法
-```
-# sftp IP 地址或主机
+
+```bash
+sftp IP 地址或主机
 ```
 
 它会提示用户名和密码，使用 Linux 用户名和密码
 
 # 在 ftp 提示符上上传文件
-```
+
+```bash
 sftp>put file_name
 ```
 
-```
+```bash
 root@redhat2 ~]# sftp redhat1
 Connecting to redhat1...
 root@redhat1's password:
@@ -2207,10 +2174,11 @@ Fetching /etc/hosts to hosts
 /etc/hosts
 100% 84 0.1KB/s 00:00
 sftp> bye
-```
 
-**注意** 您可以匿名连接到 ftp 服务器。您可以下载和上传文件到 /var/ftp 目录。
-要配置服务器允许匿名用户，请编辑 /etc/vsftpd/vsftpd.conf
+```
+**注意** 您可以匿名连接到 ftp 服务器。您可以下载和上传文件到 `/var/ftp` 目录。
+
+要配置服务器允许匿名用户，请编辑 `/etc/vsftpd/vsftpd.conf`
 
 ## Web 服务器
 
@@ -2219,41 +2187,42 @@ Web 服务器是一种允许浏览器客户端访问网页的程序。它使用 
 ### 部署 http 服务器
 
 ### 安装 http 服务器
-```
-### yum install httpd
+
+```bash
+yum install httpd
 ```
 
 ### 启动服务
-```
-### service httpd start
+
+```bash
+service httpd start
 ```
 
 ### 设置启动机启动
-```
-# chkconfig httpd on
+
+```bash
+chkconfig httpd on
 ```
 
 # http 保存内容的默认目录
-/var/www/html
+
+`/var/www/html`
 
 ### 配置文件
-/etc/httpd/conf/http.conf
+
+`/etc/httpd/conf/http.conf`
 
 ### 测试
 
-在目录 /var/www/html/ 中创建 index.html 文件并写入
+在目录 `/var/www/html/` 中创建 `index.html` 文件并写入
 
 # Hello
 
 保存文件并退出
 
-在 firefox 地址栏输入 http://localhost
+在 firefox 地址栏输入 `http://localhost`
 
 你应该看到 hello
-
-
-
-
 
 # 第19 章
 
@@ -2268,7 +2237,7 @@ Redhat Linux 内核内置了防火墙，用于允许或拒绝入站和出站的�
 ### 在 GUI 模式下
 
 ```bash
-### system-config-firewall
+system-config-firewall
 ```
 
 在这里你可以启用或禁用防火墙。你也可以允许或拒绝入站和出站的网络。配置的主要区域分为两个部分：左侧是类别，右侧是服务和端口号。
@@ -2278,7 +2247,7 @@ Redhat Linux 内核内置了防火墙，用于允许或拒绝入站和出站的�
 ### 在文本模式下
 
 ```bash
-#system-config-firewall-tui
+system-config-firewall-tui
 ```
 
 ![](img/387d28290ba77003b955874e67d1b946_244_0.png)
@@ -2291,35 +2260,37 @@ Redhat Linux 内核内置了防火墙，用于允许或拒绝入站和出站的�
 
 ### 手动配置
 
-防火墙配置工具仅配置基础防火墙，如果你需要更细粒度的配置，iptables 和 ip6table 服务提供了配置防火墙的能力。
+防火墙配置工具仅配置基础防火墙，如果你需要更细粒度的配置，`iptables` 和 `ip6table` 服务提供了配置防火墙的能力。
 
 ### 配置文件
 
-/etc/sysconfig/iptables
+`/etc/sysconfig/iptables`
 
 ### 显示当前规则
 
 ```bash
-### iptables -L
+iptables -L
 ```
 
 ### 开启防火墙
 
 ```bash
-### service iptables start
+service iptables start
 ```
 
 ### 关闭防火墙
 
 ```bash
-### service iptables stop
+service iptables stop
 ```
 
 ### 保存配置
 
 ```bash
-### service iptables save
+service iptables save
 ```
+
+
 
 ### 开放端口
 
@@ -2337,8 +2308,8 @@ iptables -A INPUT -p tcp --dport 22 -m conntrack --ctstate NEW,ESTABLISHED -j AC
 iptables -A OUTPUT -p tcp --sport 22 -m conntrack --ctstate ESTABLISHED -j ACCEPT
 ```
 
-- - dport 定义了打开的端口，因为 ssh 使用 22 端口
-- - p tcp 定义了使用的协议
+- `-dport` 定义了打开的端口，因为 ssh 使用 22 端口
+- `-p tcp` 定义了使用的协议
 
 同样，如果你想打开 http 连接，你必须打开 80 端口
 
@@ -2347,76 +2318,79 @@ iptables -A INPUT -p tcp --dport 80 -m conntrack --ctstate NEW,ESTABLISHED -j AC
 iptables -A OUTPUT -p tcp --sport 80 -m conntrack --ctstate ESTABLISHED -j ACCEPT
 ```
 
-使用 iptables 命令创建的规则存储在内存中，系统重启后不会持久化。要保存规则：
+使用 `iptables` 命令创建的规则存储在内存中，系统重启后不会持久化。要保存规则：
 
 ```bash
-### service iptables save
+service iptables save
 ```
 
 或者你可以手动添加到
 
-### /etc/sysconfig/iptables 文件中
+`/etc/sysconfig/iptables` 文件中
 
 ### 防火墙使用的术语
 
-1. iptables
-2. tables（表）
-3. chains（链）
-4. rules（规则）
+1. `iptables`
+2. `tables`（表）
+3. `chains`（链）
+4. `rules`（规则）
 
-结构是 iptables > Tables > chains > Rules
+结构是 `iptables` > `Tables` > `chains` > `Rules`
 
-# 第20 章
+# 第20章
 
 ## Selinux
 
-Selinux 是 **Security Enhanced Linux**（增强型 Linux）。Selinux 是一个改进 Linux 服务器安全性的内核模块。这是在 Linux 中实现访问控制的解决方案之一。
+`Selinux` 是 **Security Enhanced Linux**（增强型 Linux）。`Selinux` 是一个改进 Linux 服务器安全性的内核模块。这是在 Linux 中实现访问控制的解决方案之一。
 
-Selinux 实现了所谓的 **MAC** 强制性访问控制。Selinux 是一组安全规则，决定了哪个进程可以访问哪个文件、目录或端口等。Selinux 访问进程、目录、文件的策略被称为上下文（context）。Selinux 的目标之一是保护数据和系统。
+`Selinux` 实现了所谓的 **MAC** 强制性访问控制。`Selinux` 是一组安全规则，决定了哪个进程可以访问哪个文件、目录或端口等。`Selinux` 访问进程、目录、文件的策略被称为上下文（context）。`Selinux` 的目标之一是保护数据和系统。
 
-Selin 有三种访问控制形式：
+`Selin` 有三种访问控制形式：
 
-1. Enforcing（强制）
-2. Permissive（宽容）
-3. Disabled（禁用）
+1. `Enforcing`（强制）
+2. `Permissive`（宽容）
+3. `Disabled`（禁用）
 
 ### Enforcing
 
-Selinux 根据 selinux 策略规则拒绝访问。
+`Selinux` 根据 `selinux` 策略规则拒绝访问。
 
 ### Permissive
 
-Selinux 不拒绝访问，但会记录如果在 enforcing 模式下运行会被拒绝的操作。
+`Selinux` 不拒绝访问，但会记录如果在 `enforcing` 模式下运行会被拒绝的操作。
 
 ### Disabled
 
-Selinux 完全禁用
+`Selinux` 完全禁用
 
 ### 检查安装情况
+
 ```bash
-### rpm -q | grep selinux
+rpm -q | grep selinux
 ```
 
 ### 检查当前模式
+
 ```bash
-### getenforce
+getenforce
 ```
 
 ### 检查状态
+
 ```bash
-### sestatus
+sestatus
 ```
 
 ### 主配置文件
 
-/etc/selinux/config
+`/etc/selinux/config`
 
 ### 更改模式
 
-编辑 `/etc/selinux/config` 文件并将 **selinux=enforcing** 更改为所需的模式，如 **selinux=permissive**。保存文件后重启服务器。如果你将模式设置为 **permissive**，你可以检查 Selinux 正在做什么：
+编辑 `/etc/selinux/config` 文件并将 `selinux=enforcing` 更改为所需的模式，如 `selinux=permissive`。保存文件后重启服务器。如果你将模式设置为 `permissive`，你可以检查 `Selinux` 正在做什么：
 
 ```bash
-### cat /var/log/messages | grep selinux
+cat /var/log/messages | grep selinux
 ```
 
 或者
@@ -2429,62 +2403,63 @@ tail -f /var/log/audit/audit.log
 
 | 描述 | 命令 |
 | :--- | :--- |
-| 列出进程上下文 | ps aux |
-| 显示用户上下文 | ls |
-| 显示带上下文的文件 | cp |
-| 带有上下文的复制 | mkdir |
+| 列出进程上下文 | `ps aux` |
+| 显示用户上下文 | `ls` |
+| 显示带上下文的文件 | `cp` |
+| 带有上下文的复制 | `mkdir` |
 
 ### 安装 selinux
+
 ```bash
-### yum install policycoreutils
+yum install policycoreutils
 ```
 
 ### 更改上下文的工具
+
 ```bash
-### semanage
+semanage
 ```
 
 ### 显示上下文
+
 ```bash
-### semanage fcontext -l
+semanage fcontext -l
 ```
 
-类型 SELinux targeted 策略中用于提供进程隔离的主要权限控制方法是类型强制（Type Enforcement）。所有文件和进程都被标记为一种类型。Selinux 访问进程、目录、文件的策略被称为上下文。Selinux 的目标之一是保护数据和系统。
+类型 `SELinux` `targeted` 策略中用于提供进程隔离的主要权限控制方法是类型强制（Type Enforcement）。所有文件和进程都被标记为一种类型。`Selinux` 访问进程、目录、文件的策略被称为上下文。`Selinux` 的目标之一是保护数据和系统。
 
-Selinux 有三种访问控制形式：
+`Selinux` 有三种访问控制形式：
 
-1. Enforcing
-2. Permissive
-3. Disabled
+1. `Enforcing`
+2. `Permissive`
+3. `Disabled`
 
 ### Enforcing
 
-Selinux 根据 selinux 策略规则拒绝访问。
+`Selinux` 根据 `selinux` 策略规则拒绝访问。
 
 ### Permissive
 
-Selinux 不拒绝访问，但会记录如果在 enforcing 模式下运行会被拒绝的操作。
+`Selinux` 不拒绝访问，但会记录如果在 `enforcing` 模式下运行会被拒绝的操作。
 
 ### Disabled
 
-Selinux 完全禁用
+`Selinux` 完全禁用
 
+- `ext3`
+- `ext4`
 
+`ext2`, `ext3` 在 RHEL 5 之前出现，文件系统大小限制为 8TB / 16TB，文件大小限制为 2TB。
 
-
-
-- ext3
-- ext4
-
-ext2, ext3 在 RHEL 5 之前出现，文件系统大小限制为 8TB / 16TB，文件大小限制为 2TB。
-Ext4 在 RHEL 5.6 中引入，文件系统大小支持为 16TB。它高效、可靠且健壮。
+`Ext4` 在 RHEL 5.6 中引入，文件系统大小支持为 16TB。它高效、可靠且健壮。
 
 ### 创建文件系统
 
-使用 fdisk 创建分区
+使用 `fdisk` 创建分区
 
-fdisk -l 检查设备名称
-mkfs -t ext4 /dev/sdb1 其中 sdb1 是设备名称，ext4 是文件系统类型。
+`fdisk -l` 检查设备名称
+
+`mkfs -t ext4 /dev/sdb1` 其中 `sdb1` 是设备名称，`ext4` 是文件系统类型。
 
 ```
 [root@redhat1 ~]# mkmfs -t ext4 /dev/sdb1
@@ -2538,9 +2513,9 @@ ro 0 0
 default 0 2
 ```
 
-其中 /dev/sdb1 是设备，/test1 是挂载点，ext4 是分区类型，0 为 dump，2 为 fsck 顺序。
+其中 `/dev/sdb1` 是设备，`/test1` 是挂载点，`ext4` 是分区类型，0 为 dump，2 为 fsck 顺序。
 
-# 第 22 章
+# 第22章
 
 ## 交换空间 (Swap space)
 
@@ -2549,6 +2524,8 @@ default 0 2
 ### 添加交换空间
 
 创建分区
+
+
 
 ```
 [root@redhat1 ~]# fdisk /dev/sdb
@@ -2568,7 +2545,7 @@ Last cylinder, +cylinders or +size{K,M,G}
 (307-6132, default 6132): +1G
 ```
 
-通过对选定的分区按下 t 将类型更改为 82，即 linux swap
+通过对选定的分区按下 `t` 将类型更改为 82，即 linux swap
 
 ```
 Command (m for help): t
@@ -2592,31 +2569,37 @@ Disk identifier: 0xdec2ee90
 
 | Device Id | Boot System | Start | End | Blocks |
 |---|---|---|---|---|
+
 | /dev/sdb1 | 83 Linux | 1 | 307 | 1048576 |
 | /dev/sdb2 | 82 Linux swap / Solaris | 307 | 614 | 1050280 |
 
-按下 w 将分区表写入磁盘
+按下 `w` 将分区表写入磁盘
 
 Command (m for help): w
+
 The partition table has been altered!
 
 Calling ioctl() to re-read partition table.
+
 Syncing disks.
 
 ```
 
-**mkswap /sdb2** 其中 sdb2 是将作为交换的分区的名称。
+`mkswap /sdb2` 其中 `sdb2` 是将作为交换的分区的名称。
 
 ```
 [root@redhat1 ~]# mkswap /sdb2
+
 Setting up swap version 1, size = 1050276 KiB
+
 no label, UUID=c1f98067-843-5f09dba6
 ```
 
-在 /etc/fstab 中添加条目
+在 `/etc/fstab` 中添加条目
 
 ```
 [root@redhat1 ~]# cat /etc/fstab
+
 sysfs /sys sysfs
 defaults 0 0
 proc /proc proc
@@ -2627,7 +2610,7 @@ ro 0 0
 default 0 2
 ```
 
-使用 swapon -a 激活交换
+使用 `swapon -a` 激活交换
 
 ```
 [root@redhat1 ~]# swapon -s
@@ -2646,7 +2629,7 @@ default 0 2
 
 # 第 23 章
 
-### 逻辑卷 (Logical Volume)
+## 逻辑卷 (Logical Volume)
 
 在前面的节中我们学习了如何创建分区，但也可以创建 LVM（逻辑卷管理器）。LVM 管理分配的空间比普通分区更高级。LVM 具有以下优点：
 - 动态扩展文件系统
@@ -2657,62 +2640,83 @@ default 0 2
 
 ### LVM 中的术语
 
-### 物理卷 (Physical Volume)
+#### 物理卷 (Physical Volume)
 
-物理卷 (PV) 是块设备或整个硬盘。使用 fdisk 创建 LVM 类型分区。
+物理卷 (`PV`) 是块设备或整个硬盘。使用 `fdisk` 创建 LVM 类型分区。
 
-### 卷组 (Volume Groups)
+#### 卷组 (Volume Groups)
 
-将一个或多个物理卷组合成卷组 (VG)。
+将一个或多个物理卷组合成卷组 (`VG`)。
 
-### 物理区 (Physical Extent)
+#### 物理区 (Physical Extent)
 
-物理卷空间被划分为固定大小的单位称为物理区（PE），它是同一 VG 中所有物理卷的单位。
+物理卷空间被划分为固定大小的单位称为物理区（`PE`），它是同一 `VG` 中所有物理卷的单位。
 
-### 逻辑区 (Logical extent)
+#### 逻辑区 (Logical extent)
 
-PE 的映射形成逻辑区（LE）。默认情况下一个 PE 映射到一个 LE。在镜像情况下，可以将多个 PE 映射到一个 LE。
+`PE` 的映射形成逻辑区（`LE`）。默认情况下一个 `PE` 映射到一个 `LE`。在镜像情况下，可以将多个 `PE` 映射到一个 `LE`。
 
-### 逻辑卷 (Logical Volume)
+#### 逻辑卷 (Logical Volume)
 
 逻辑卷是逻辑区的组。逻辑卷不受限于磁盘大小。此外，硬件存储层是隔离。
 
 ### 使用新磁盘创建文件系统
 
-创建物理卷 (PV)
+创建物理卷 (`PV`)
 
-使用命令 **pvcreate device_name** 其中 *device_name* 是用 fdisk 创建的设备
+使用命令 `pvcreate device_name` 其中 `device_name` 是用 `fdisk` 创建的设备
 
 ```
 [root@redhat1 ~]# fdisk /dev/sdb
+
 WARNING: DOS 兼容模式已弃用。强烈建议
+
 关闭该模式（command 'c'）并将显示单位更改为扇区（command 'u'）。
 
 Command (m for help): n
+
 Command action
+
   e extended
+
   p primary partition (1-4)
+
 p
+
 Partition number (1-4): 3
+
 First cylinder (615-6132, default 615):
+
 Using default value 615
+
 Last cylinder, +cylinders or +size{K,M,G}
+
 (615-6132, default 6132): +5G
 
 Command (m for help): t
+
 Partition number (1-4): 3
+
 Hex code (type L to list codes): 8e
+
 Changed system type of partition 3 to 8e
+
 (Linux LVM)
 ```
 
 ```
 Command (m for help): p
+
 Disk /dev/sdb: 21.5 GB, 21474836480 bytes
+
 171 heads, 40 sectors/track, 6132 cylinders
+
 Units = cylinders of 6840 * 512 = 3502080 bytes
+
 Sector size (logical/physical): 512 bytes / 512 bytes
+
 I/O size (minimum/optimal): 512 bytes / 512 bytes
+
 Disk identifier: 0xdec2ee90
 ```
 
@@ -2731,20 +2735,30 @@ WARNING: Re-reading the partition table failed with error 16: Device or busy.
 
 ### 重启服务器
 
-使用命令 **pvcreate device_name** 创建 PV 其中 *device_name* 是用 fdisk 创建的设备
+使用命令 `pvcreate device_name` 创建 `PV` 其中 `device_name` 是用 `fdisk` 创建的设备
 
 ```
 [root@redhat1 ~]# pvcreate /dev/sdb3
+
 Physical volume "/dev/sdb3" successfully created
+
 [root@redhat1 ~]# pvsdisplay /dev/sdb3
+
 "/dev/sdb3" 是一个大小为 "5.00 GiB" 的新物理卷
+
 --- NEW Physical volume ---
+
 PV Name       /sdb3
+
 VG Name
+
 PV Size       5.00 GiB
+
 Allocatable   NO
+
 PE Size       0
-```
+
+
 
 | Total PE | 0 |
 | Free PE | 0 |
@@ -2753,28 +2767,25 @@ PE Size       0
 
 ### 创建卷组 (VG)
 
-```
-**vgcreate VG_name PV_name**
-```
+`vgcreate VG_name PV_name`
 
+```
 [root@redhat1 ~]# vgcreate vg01 /dev/sdb3
 Volume group "vg01" successfully created
+```
 
 ### 创建新的逻辑卷(LV)
 
-```
-**lvcreate -n LV_name -L size VG_name**
-```
+`lvcreate -n LV_name -L size VG_name`
 
+```
 [root@redhat1 ~]# lvcreate -n lv01 -L 1G vg01
 Logical volume "lv01" created
-
-
-
-
+```
 
 ### 在 LV 上创建文件系统
-mkfs -t ext4 /dev/VG_name/LV_name
+
+`mkfs -t ext4 /dev/VG_name/LV_name`
 
 ```
 [root@redhat1 ~]# mkfs -t ext4 /dev/vg01/lv01
@@ -2787,35 +2798,35 @@ UUID=6acaa400-0cd3-4708-ba05-5541139ee830e /newfs ext4 defaults 1 2
 ```
 
 挂载文件系统
-mount -a
+`mount -a`
 
 ### PV 命令
 
 | 说明 | 命令 |
 | :--- | :--- |
-| 显示 PV 属性 | pvdisplay |
-| 显示所有 LVM 块设备 | pvscan |
-| 防止在 PV 上分配 PE | pvchange -xn /dev/PV_name |
-| 移除 PV | pvremove /dev/PV_name |
+| 显示 PV 属性 | `pvdisplay` |
+| 显示所有 LVM 块设备 | `pvscan` |
+| 防止在 PV 上分配 PE | `pvchange -xn /dev/PV_name` |
+| 移除 PV | `pvremove /dev/PV_name` |
 
 ### 卷组 (VG) 命令
 
 | 说明 | 命令 |
 | :--- | :--- |
-| 显示 VG 属性 | vgdisplay |
-| 显示 VG 列表 | vgs |
-| 将 PV 添加到 VG | vgextend vgname /dev/PV_name |
-| **示例** | # vgextend vg01 /dev/sdb5 |
-| 从 VG 移除 PV | vgreduce vg1 /dev/PV_name |
-| **示例** | # vgreduce vg01 /dev/sdb5 |
-| 激活 VG | vgchange -ay VG_name |
-| 取消 VG | vgchange -an VG_name |
-| 移除 VG | vgremove VG_name |
+| 显示 VG 属性 | `vgdisplay` |
+| 显示 VG 列表 | `vgs` |
+| 将 PV 添加到 VG | `vgextend vgname /dev/PV_name` |
+| 示例 | `# vgextend vg01 /dev/sdb5` |
+| 从 VG 移除 PV | `vgreduce vg1 /dev/PV_name` |
+| 示例 | `# vgreduce vg01 /dev/sdb5` |
+| 激活 VG | `vgchange -ay VG_name` |
+| 取消 VG | `vgchange -an VG_name` |
+| 移除 VG | `vgremove VG_name` |
 
-| | 示例 |
+|  | 示例 |
 | :--- | :--- |
-| | vgremove /dev/vg02 |
-| 重建 VG 目录 | vgmknodes |
+|  | `vgremove /dev/vg02` |
+| 重建 VG 目录 | `vgmknodes` |
 
 ### 将卷组从一个系统移动到另一个系统
 
@@ -2837,13 +2848,13 @@ umount /newfs
 [root@redhat1 /]# vgexport sharedvg
 ```
 
-将硬盘连接到新系统后，使用 **vgimport VG_name** 命令导入 VG
+将硬盘连接到新系统后，使用 `vgimport VG_name` 命令导入 VG
 
 ```
 [root@redhat2 ~]# vgimport sharedvg
 ```
 
-使用 **vgchange -ay VG_name** 激活 VG
+使用 `vgchange -ay VG_name` 激活 VG
 
 ```
 [root@redhat2 ~]# vgchange -ay sharedvg
@@ -2853,6 +2864,7 @@ umount /newfs
 
 ```
 [root@redhat2 ~]# mount
+
 /dev/sharedvg/sharedlv/mnt
 ```
 
@@ -2877,10 +2889,15 @@ df -h /fsname
 
 ```
 [root@redhat1 ~]# vgdisplay vg01
+
 --- Volume group ---
+
 VG Name vg01
+
 System ID  
+
 Format lvm2
+
 Metadata Areas 1
 ```
 
@@ -2898,24 +2915,32 @@ Metadata Areas 1
 | PE Size | 4.00 MiB |
 | Total PE | 1280 |
 | Alloc PE / Size | 256 / 1.00 GiB |
-| **Free PE / Size** | **1024 / 4.00 GiB** |
+| Free PE / Size | 1024 / 4.00 GiB |
 | VG UUID | EXKfhW-MfE4-4ZtU-uQuM-v9e4-AJ9k-Uo6z4B |
 
-### 扩展逻辑卷 lvextend -L size /dev/vgname/lvname
+### 扩展逻辑卷
+
+`lvextend -L size /dev/vgname/lvname`
 
 ```
 [root@redhat1 ~]# lvextend -L+200M /dev/vg01/lv01
+
 Extending logical volume lv01 to 1.20 GiB
+
 Logical volume lv01 successfully resized
 ```
 
-### 使用 resize2fs -p /dev/vgname/lvname 扩展文件系统
+### 使用 resize2fs 扩展文件系统
+
+`resize2fs -p /dev/vgname/lvname`
 
 ```
 [root@redhat1 ~]# resize2fs -p /dev/mapper/vg01-lv01
 ```
 
-### 检查 FS 大小 df -h /fsname
+### 检查 FS 大小
+
+`df -h /fsname`
 
 | /dev/mapper/vg01-lv01 | 1.2G 34M 1.1G 3% | /newfs |
 
@@ -2927,8 +2952,8 @@ Logical volume lv01 successfully resized
 df -h /fs_name
 ```
 
-/dev/mapper/vg01-lv01  1.2G 34M 1.1G
-3% /newfs
+`/dev/mapper/vg01-lv01  1.2G 34M 1.1G`
+`3% /newfs`
 
 卸载文件系统
 
@@ -2946,13 +2971,13 @@ umount /fs_name
 [root@redhat1 ~]# e2fsck -f /dev/mapper/vg01-lv1
 ```
 
-使用 resize2fs -p /dev/vgname/lvname 调整 FS
+使用 `resize2fs -p /dev/vgname/lvname` 调整 FS
 
 ```
 [root@redhat1 ~]# resize2fs -p /dev/mapper/vg01-lv01 1G
 ```
 
-在此示例中，将 FS 大小设为 GB，现在缩小 LV 大小，留出一些额外空间使用 lvreduce -L size /dev/vgname/lvname
+在此示例中，将 FS 大小设为 GB，现在缩小 LV 大小，留出一些额外空间使用 `lvreduce -L size /dev/vgname/lvname`
 
 ```
 [root@redhat1 ~]# lvreduce -L 1G /dev/mapper/vg01-lv01
@@ -2974,7 +2999,9 @@ LVM 快照是逻辑卷的时间点拷贝。快照提供了原始卷的静态视�
 
 ```
 [root@redhat1 /]# df -hT /newfs
+
 Filesystem      Type Size Avail Use% Mounted on
+
 /dev/mapper/vg01-lv01 ext4 1.2G 34M 1.1G 3% /newfs
 ```
 
@@ -2990,84 +3017,72 @@ Filesystem      Type Size Avail Use% Mounted on
 [root@redhat1 /]# vgexport sharedvg
 ```
 
-在将硬盘连接到新系统后，使用 **vgimport VG_name** 命令导入 VG
+在将硬盘连接到新系统后，使用 `vgimport VG_name` 命令导入 VG
 
 ```
 [root@redhat2 ~]# vgimport sharedvg
 ```
 
-使用 **vgchange -ay VG_name** 激活 VG
+使用 `vgchange -ay VG_name` 激活 VG
 
-```
-[root@redhat2 ~]# vgchange -ay sharedvg
-```
+
+
+[root@redhat2 ~]# `vgchange -ay sharedvg`
 
 挂载 VG 上的文件系统
 
-```
-[root@redhat2 ~]# mount
-/dev/sharedvg/sharedlv/mnt
-```
+[root@redhat2 ~]# `mount`
+
+`/dev/sharedvg/sharedlv/mnt`
 
 检查文件系统内容
 
-```
-[root@redhat2 ~]# cd /mnt
-```
+[root@redhat2 ~]# `cd /mnt`
 
 ### 创建快照 LV
 
 检查想要创建快照的文件系统名称和大小
 
+[root@redhat1 /]# `df -hT /newfs`
+
 ```
-[root@redhat1 /]# df -hT /newfs
 Filesystem      Type Size Avail Use% Mounted on
 /dev/mapper/vg01-lv01 ext4 1.2G 34M 1.1G 3% /newfs
 ```
 
 使用 `vgchange -an VG_name` 命令停用 VG
 
-```
-[root@redhat1 /]# vgchange -an sharedvg
-```
+[root@redhat1 /]# `vgchange -an sharedvg`
 
 使用 `vgexport VG_name` 命令导出 VG
 
-```
-[root@redhat1 /]# vgexport sharedvg
-```
+[root@redhat1 /]# `vgexport sharedvg`
 
-在将硬盘连接到新系统后，使用 **vgimport VG_name** 命令导入 VG
+在将硬盘连接到新系统后，使用 `vgimport VG_name` 命令导入 VG
 
-```
-[root@redhat2 ~]# vgimport sharedvg
-```
+[root@redhat2 ~]# `vgimport sharedvg`
 
-使用 **vgchange -ay VG_name** 激活 VG
+使用 `vgchange -ay VG_name` 激活 VG
 
-```
-[root@redhat2 ~]# vgchange -ay sharedvg
-```
+[root@redhat2 ~]# `vgchange -ay sharedvg`
 
 挂载 VG 上的文件系统
 
-```
-[root@redhat2 ~]# mount
-/dev/sharedvg/sharedlv/mnt
-```
+[root@redhat2 ~]# `mount`
+
+`/dev/sharedvg/sharedlv/mnt`
 
 检查文件系统内容
 
-```
-[root@redhat2 ~]# cd /mnt
-```
+[root@redhat2 ~]# `cd /mnt`
 
 ### 创建快照 LV
 
 检查想要创建快照的文件系统名称和大小
 
+[root@redhat1 /]# `df -hT /newfs`
+
 ```
-[root@redhat1 /]# df -hT /newfs
 Filesystem      Type Size Avail Use% Mounted on
 /dev/mapper/vg01-lv01 ext4 1.2G 34M 1.1G 3% /newfs
 ```
@@ -3077,16 +3092,16 @@ Filesystem      Type Size Avail Use% Mounted on
 1. BIOS
 2. Master Boot Record
 3. GRUB
-使用 /boot/grub.conf 选择内核镜像
+使用 `/boot/grub.conf` 选择内核镜像
 
 4. Kernel
-挂载由 grub.conf 中 “root=” 指定的根系统
-内核执行 /sbin/init 程序，这是第一个执行的程序
+挂载由 `grub.conf` 中 `root=` 指定的根系统
+内核执行 `/sbin/init` 程序，这是第一个执行的程序
 
 5. Init
-initrd 代表初始内存磁盘。initrd 被内核作为临时根系统，直到真正的根系统挂载。它还包含了访问硬盘和其他所需的驱动程序。
+`initrd` 代表初始内存磁盘。`initrd` 被内核作为临时根系统，直到真正的根系统挂载。它还包含了访问硬盘和其他所需的驱动程序。
 
-6. Init 读取 /etc/inittab 文件来决定 Linux 运行级别以下是可用的运行级别
+6. Init 读取 `/etc/inittab` 文件来决定 Linux 运行级别以下是可用的运行级别
 
 - 0 – 关机
 - 1 – 单用户模式
@@ -3100,49 +3115,43 @@ initrd 代表初始内存磁盘。initrd 被内核作为临时根系统，直到
 
 ## 6. 运行级别
 
-根据 inittab 选择的运行级别，某些服务将启动，某些将停止，系统将从以下目录之一执行程序。
+根据 `inittab` 选择的运行级别，某些服务将启动，某些将停止，系统将从以下目录之一执行程序。
 
 | 运行级别 | 目录 |
 | :--- | :--- |
-| 0 | /etc/rc.d/rc0.d |
-| 1 | /etc/rc.d/rc1.d |
-| 2 | /etc/rc.d/rc2.d |
-| 3 | /etc/rc.d/rc3.d |
-| 4 | /etc/rc.d/rc4.d |
-| 5 | /etc/rc.d/rc5.d |
-| 6 | /etc/rc.d/rc6.d |
+| 0 | `/etc/rc.d/rc0.d` |
+| 1 | `/etc/rc.d/rc1.d` |
+| 2 | `/etc/rc.d/rc2.d` |
+| 3 | `/etc/rc.d/rc3.d` |
+| 4 | `/etc/rc.d/rc4.d` |
+| 5 | `/etc/rc.d/rc5.d` |
+| 6 | `/etc/rc.d/rc6.d` |
 
-在 /etc/rc.d/rc*.d 目录下，你会看到以 S 和 K 开头的程序，它们是 /etc/rc.d/init.d/ 目录中实际脚本的符号链接。程序名称中 S 和 K 后面跟着数字。这些数字是程序启动或关闭的顺序号。
+在 `/etc/rc.d/rc*.d` 目录下，你会看到以 S 和 K 开头的程序，它们是 `/etc/rc.d/init.d/` 目录中实际脚本的符号链接。程序名称中 S 和 K 后面跟着数字。这些数字是程序启动或关闭的顺序号。
 
 # 第 26 章
 
-# # 重置根密码
+# 重置根密码
 
 1. 在菜单处按任意键进入 GRUB 菜单
 
 ![](img/387d28290ba77003b955874e67d1b946_322_0.png)
 
-2. 在 GRUB 菜单按 **a**
+2. 在 GRUB 菜单按 `a`
 
-3. 在行尾添加 single
+3. 在行尾添加 `single`
 
 ```
 GRUB version 0.97 (16384 lower / 2684376 upper memory)
-
 Red Hat Enterprise Linux 6.2.32-431.x86_64
-
 使用箭头键、< 和 > 键选择选中的项。
 按回车启动选定的 OS，按 'e' 编辑启动前的命令，按 'a' 修改启动前的内核参数，或按 'c' 进入命令行。
-
 < crashkernel=auto KEYBOARDTYPE=pc us=rd_NO_UM high quiet single
 ```
 
 4. 按回车
 
-
-
-
-5. 在 # prompt 下输入 write passwd 设置新密码并重启系统
+5. 在 `#` prompt 下输入 `write passwd` 设置新密码并重启系统
 
 ![](img/387d28290ba77003b955874e67d1b946_324_0.png)
 
@@ -3154,109 +3163,76 @@ Red Hat Enterprise Linux 6.2.32-431.x86_64
 
 ### 了解 Redhat 版本
 
-```
-### /etc/redhat-release
-```
+`/etc/redhat-release`
 
 或者
 
-```
-### lsb-release
-```
+`lsb-release`
 
 ### 了解运行内核版本
 
-```
-### uname -r
-```
+`uname -r`
 
 或者
 
-```
-### cat /proc/version
-```
+`cat /proc/version`
 
 ### 列出所有已安装内核版本
 
-```
-### yum list installed kernel\*
-```
+`yum list installed kernel\*`
 
 ### 显示 CPU 信息
 
-```
-### lscpu
-```
+`lscpu`
 
 或者
 
-```
-### cat /proc/cpuinfo
-```
+`cat /proc/cpuinfo`
 
 ### 列出所有 PCI 设备
 
-```
-### lspci
-```
+`lspci`
 
 ### 系统硬件详细描述
 
-```
-### dmidecode
-```
+`dmidecode`
 
 ### 显示内存信息
 
-```
-### cat /proc/meminfo
-```
+`cat /proc/meminfo`
 
 或者
 
-```
-### free -m 以 MB 为单位显示内存
-```
+`free -m` 以 MB 为单位显示内存
 
 ### 列出块设备
 
-```
-### lsblk
-```
+`lsblk`
 
 ### 列出所有分区
 
-```
-### fdisk -l
-```
+`fdisk -l`
 
 ### 列出 CPU、内存、进程
 
-```
-### top
-```
+`top`
 
 ### 显示主机名
 
-```
-### hostname
-```
+`hostname`
 
 ### sosreport
 
-“sosreport” 是一个用于收集 RHEL/CentOS 系统上故障排除数据的工具。它会生成 Linux 系统配置报告以及最重要的日志，并以 tarball 压缩格式输出，可以发送给 Redhat 以寻求针对任何问题或性能问题的支持。
+`sosreport` 是一个用于收集 RHEL/CentOS 系统上故障排除数据的工具。它会生成 Linux 系统配置报告以及最重要的日志，并以 tarball 压缩格式输出，可以发送给 Redhat 以寻求针对任何问题或性能问题的支持。
 
 ### 安装包
 
-```
-### yum install sos
-### yum install abrt-cli
-```
+`yum install sos`
+
+`yum install abrt-cli`
 
 ### 生成报告
 
-```
-### sosreport
-```
+`sosreport`
 
 它会提示输入文件名以及你生成报告时所对应的案例号。如果你没有案例号。

@@ -1,16 +1,17 @@
+
 # 在 Windows 10 上安装 Ubuntu 的教程 RDP - Eldernode 博客
 
 > 原文：<https://blog.eldernode.com/install-ubuntu-on-windows-10/>
 
 ![Tutorial Install Ubuntu on Windows 10 RDP](img/de3a29159106b1a7aba98339614fad5f.png)
 
-Ubuntu 是一个流行的开源操作系统，易于安装。由于无限制的定制选项，它非常灵活，并且本质上非常安全。对于许多开发者来说，Linux 之旅始于 Ubuntu。大多数时候我们除了使用 Windows 10 还需要使用 Ubuntu，反之亦然。这就是为什么在这篇文章中，我们将教你一步一步教程**在 Windows 10 RDP** 上安装 Ubuntu。还需要注意的是，如果你想买一个 [Ubuntu VPS](https://eldernode.com/ubuntu-vps/) 服务器，你可以使用 [Eldernode](https://eldernode.com/) 中提供的软件包。
+Ubuntu 是一个流行的开源操作系统，易于安装。由于无限制的定制选项，它非常灵活，并且本质上非常安全。对于许多开发者来说，Linux 之旅始于 Ubuntu。大多数时候我们除了使用 Windows 10 还需要使用 Ubuntu，反之亦然。这就是为什么在这篇文章中，我们将教你一步一步教程**在 Windows 10 RDP**上安装 Ubuntu。还需要注意的是，如果你想买一个 [Ubuntu VPS](https://eldernode.com/ubuntu-vps/) 服务器，你可以使用 [Eldernode](https://eldernode.com/) 中提供的软件包。
 
-## **如何在 Windows 10 上安装 Ubuntu RDP**
+## 如何在 Windows 10 上安装 Ubuntu RDP
 
 在这篇文章中，我们想教你第一步如何在 Windows 10 RDP 上安装 Ubuntu。然后我们将解释如何配置它。最后，在最后一节，我们将教你如何安装 Ubuntu 软件包。请加入我们。
 
-### **如何在 Windows 10 RDP 上启用 WSL**
+### 如何在 Windows 10 RDP 上启用 WSL
 
 在 Windows 10 上开始安装 [Ubuntu](https://blog.eldernode.com/tag/ubuntu/) 之前，必须先启用 WSL。第一步，从**开始菜单**点击**设置**。
 
@@ -32,7 +33,7 @@ Ubuntu 是一个流行的开源操作系统，易于安装。由于无限制的�
 
 ![Windows Subsystem for the Linux](img/9519e167f5a2946a94ef697c37df30a2.png)
 
-## **在 Windows 10 上安装 Ubuntu RDP**
+## 在 Windows 10 上安装 Ubuntu RDP
 
 在这一节，我们想教你如何在 Windows 10 RDP 上安装 Ubuntu。按照下面的步骤一步一步来就可以了。你必须首先通过**开始菜单**打开**微软商店**。
 
@@ -50,7 +51,7 @@ Ubuntu 是一个流行的开源操作系统，易于安装。由于无限制的�
 
 ![how to launch ubuntu on windows 10](img/6cf80d2d06688c9a21d832d73a1d9e58.png)
 
-### **如何在 Windows 10 上配置 Ubuntu RDP**
+### 如何在 Windows 10 上配置 Ubuntu RDP
 
 在上一节成功地在 [Windows 10 RDP](https://eldernode.com/windows-10-rdp/) 上安装了 Ubuntu 之后，我们现在想要配置它。注意，在 Windows 10 上运行 Ubuntu 的时候一定要尽快配置。按照以下步骤配置 Ubuntu。你必须先按下< **回车** >。
 
@@ -66,21 +67,21 @@ Ubuntu 是一个流行的开源操作系统，易于安装。由于无限制的�
 
 ![how to create account](img/46c19dada520dd89a9eab90fc47fb5ca.png)
 
-### **如何安装 Ubuntu 软件包**
+### 如何安装 Ubuntu 软件包
 
-在这一节，我们将向你展示如何安装 Ubuntu 软件包。在本教程中，我们想教你，例如，如何安装 **htop** 包。第一步是使用以下命令更新 APT 包存储库缓存:
+在这一节，我们将向你展示如何安装 Ubuntu 软件包。在本教程中，我们想教你，例如，如何安装**htop**包。第一步是使用以下命令更新 APT 包存储库缓存:
 
 ```
 sudo apt update
 ```
 
-更新完成后，您现在可以通过运行以下命令轻松地**安装 htop** :
+更新完成后，您现在可以通过运行以下命令轻松地**安装 htop**:
 
 ```
 sudo apt install htop
 ```
 
-最后，您可以通过运行 **htop** 命令来**运行**:
+最后，您可以通过运行`htop`命令来**运行**:
 
 ```
 htop

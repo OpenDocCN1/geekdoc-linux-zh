@@ -1,8 +1,5 @@
-# Linux 上安装 Joomla 和 drupal
 
-
-
-
+# Linux 上安装 Joomla 和 Drupal
 
 现在我们正准备在 Linux 电脑上安装 Joomla 和 Drupal，以下是所需的软件。
 
@@ -16,13 +13,13 @@
 
 将以下三个文件保存到桌面上。
 
-- 1. xampp-linux-1.7.1.tar.gz
-- 2. drupal-6.13.tar.gz
-- 3. Joomla_1.5.13-Stable-Full_Package.tar.gz
+- 1. `xampp-linux-1.7.1.tar.gz`
+- 2. `drupal-6.13.tar.gz`
+- 3. `Joomla_1.5.13-Stable-Full_Package.tar.gz`
 
 首先，通过命令行界面（CLI）在电脑上安装 XAMPP。
 
-通过从一个名为 "opt" 的文件夹中解压内容来安装 XAMPP，该文件夹位于文件系统的根目录下。
+通过从一个名为 "`opt`" 的文件夹中解压内容来安装 XAMPP，该文件夹位于文件系统的根目录下。
 
 - 1. 打开终端，输入以下命令：
 
@@ -30,39 +27,43 @@
 jesse@Punjabzim ~ $ sudo tar -xvf /home/jesse/Desktop/xampp-linux-1.7.1.tar.gz -C /opt/
 ```
 
-（请注意，这里的 jesse 是我的用户名，你必须输入当前登录用户的用户名。）
+（请注意，这里的 `jesse` 是我的用户名，你必须输入当前登录用户的用户名。）
 
 ![](img/4a38974b8034a42576d180572f120df8_1_0.png)
 
 输入此命令后按回车，现在会提示你输入密码，输入你的用户登录密码并按回车。
 
-此命令将 Xampp 的所有文件解压到你的 /opt/ 目录中。
+此命令将 Xampp 的所有文件解压到你的 `/opt/` 目录中。
 
 ![](img/4a38974b8034a42576d180572f120df8_2_0.png)
 
-# CHE GEVARA
+## CHE GEVARA
 
 ★★★★★
 
-Joomla_1.5.13-Stable-full-Package.tar.gz
+`Joomla_1.5.13-Stable-full-Package.tar.gz`
 
 Joomla
+
 安装 Drupal
 
 现在所有文件都已解压。因此，我们可以启动 XAMPP
 
 - 1. 打开终端，输入以下命令：
 
-sudo /opt/lampp/lampp start
+`sudo /opt/lampp/lampp start`
 
 如果一切正常，你的终端上将出现以下行：
 
 XAMPP: Starting Apache with SSL (for PHP5)...
+
 XAMPP: Starting MySQL...
+
 XAMPP: Starting ProFTPD...
+
 XAMPP for Linux started.
 
-# CHE GUEVARA
+## CHE GUEVARA
 
 ```
 lampp/var/mysql/phpmyadmin/pma designer coords.MYD
@@ -87,7 +88,7 @@ $user@punjabim ~#
 - 1. 打开浏览器。
 - 2. 输入以下地址：
 
-http://localhost
+`http://localhost`
 
 它应该显示以下页面：
 
@@ -97,9 +98,10 @@ http://localhost
 
 点击 Status 链接查看正在运行的内容：
 
-# XAMPP for Linux 1.7.1 - Mozilla Firefox
+### XAMPP for Linux 1.7.1 - Mozilla Firefox
 
-## XAMPP Status
+#### XAMPP Status
+
 此页面显示了关于所有运行和未运行项目的信息。
 
 | 组件 | 状态 | 提示 |
@@ -114,15 +116,20 @@ http://localhost
 对配置的更改可能会导致错误报告。
 
 如果显示像这样，说明你走在正确的道路上。
-现在点击 Tools 下的 phpadmin。在这里创建一个名为 joomla 的数据库。
+
+现在点击 Tools 下的 phpadmin。在这里创建一个名为 `joomla` 的数据库。
 
 ![](img/4a38974b8034a42576d180572f120df8_7_0.png)
 
 不要动其他任何地方，点击 home 返回上一个界面。
-现在同样的方法创建一个名为 drupal 的数据库。
+
+现在同样的方法创建一个名为 `drupal` 的数据库。
+
 你的 XAMPP 安装完成。
+
 现在安装 Joomla。
-首先在 /opt/lampp/htdocs/ 中创建一个名为 "jooomla" 的文件夹；你可以通过终端输入以下命令完成：
+
+首先在 `/opt/lampp/htdocs/` 中创建一个名为 "`jooomla`" 的文件夹；你可以通过终端输入以下命令完成：
 
 ```
 sudo mkdir /opt/lampp/htdocs/jooomla
@@ -131,13 +138,14 @@ sudo mkdir /opt/lampp/htdocs/jooomla
 ![](img/4a38974b8034a42576d180572f120df8_8_0.png)
 
 如果提示，提供密码！
+
 Joomla 目录已创建，现在在终端输入以下命令。
 
 ```
 sudo tar -xvf /home/jesse/Desktop/Joomla_1.5.13-Stable-Full-Package.tar.gz -C /opt/lampp/htdocs/jooomla
 ```
 
-这将 joomla 的所有文件解压到 htdocs/jooomla。
+这将 joomla 的所有文件解压到 `htdocs/jooomla`。
 
 ```
 lampp/var/mysql/frees.old
@@ -157,17 +165,17 @@ XAMPP for Linux started.
 [jesse@machine]$ tar -xvf /home/jesse/Desktop/Joomla_3.5.13-Stable-Full-Package.tar.gz -C /opt/lampp/htdocs/jooomla
 ```
 
-# CHE GEVARA
+## CHE GEVARA
 
 ![](img/4a38974b8034a42576d180572f120df8_9_0.png)
 
-完成后打开你的浏览器并输入 http://localhost/jooomla，将显示如下界面。
+完成后打开你的浏览器并输入 `http://localhost/jooomla`，将显示如下界面。
 
-# Joomla! 安装程序 - Mozilla Firefox
+### Joomla! 安装程序 - Mozilla Firefox
 
-## Joomla! 安装
+#### Joomla! 安装
 
-## 步骤
+##### 步骤
 
 - 1: 语言
 - 2: 安装前检查
@@ -177,7 +185,7 @@ XAMPP for Linux started.
 - 6: 配置
 - 7: 完成
 
-### 选择语言
+###### 选择语言
 
 请选择 Joomla! 安装期间使用的语言。
 
@@ -201,6 +209,8 @@ XAMPP for Linux started.
 - gu-IN - 古吉拉语 (ગુજરાતી)
 - hr-HR - 克罗地亚语 (rvatski)
 - h-HU - 匈牙利语 (Magyar)
+
+
 
 ![](img/4a38974b8034a42576d180572f120df8_10_0.png)
 
@@ -229,11 +239,13 @@ Joomla! 1.5.3 Stable [Wojmammi Ama Bai] 2009年7月23日 04:00 GMT:
 | 语言 = 默认 | 是 |
 
 字符串负载
-如果配置设置不符合预期，你仍然可以安装。你必须手动更新代码文件。点击下方链接下载示例配置。将此文件重命名为 'configuration.php' 并将其上传到你的根目录。
+
+如果配置设置不符合预期，你仍然可以安装。你必须手动更新代码文件。点击下方链接下载示例配置。将此文件重命名为 `configuration.php` 并将其上传到你的根目录。
 
 ![](img/4a38974b8034a42576d180572f120df8_11_0.png)
 
 推荐设置：
+
 确保 PHP 的推荐设置以确保与 Joomla 完全兼容。
 
 | 指令 | 推荐 | 实际 |
@@ -270,7 +282,6 @@ GNU 通用许可许可证
 
 版本 2，1991 年
 
-
 前言
 
 允许复制和分发本许可证的逐字副本，只要不是这样。
@@ -280,10 +291,6 @@ GNU 通用许可许可证
 为了保护权利，我们需要制定限制，禁止任何人剥夺你的权利或要求你放弃这些权利。这些限制对于确保软件对所有用户都是免费的必要的，即使他们对其进行了修改。
 
 例如，如果你分发此类程序的副本（无论是免费还是收费），你都将向接收者提供你拥有的所有权利。
-
-
-
-
 
 # Joomla! Web 安装程序 - Mozilla Firefox 浏览器
 
@@ -296,14 +303,14 @@ http://localhost/joomla/installation/index.php
 ## Joomla! 安装
 
 | 步骤 | | |
-| :--- | :--- |
-| 1: 语言 | |
-| 2: 安装前检查 | |
-| 3: 许可协议 | |
-| 4: 数据库 | |
-| 5: FTP 配置 | |
-| 6: 配置 | |
-| 7: 完成 | |
+| :--- | :--- | |
+| 1: 语言 | | |
+| 2: 安装前检查 | | |
+| 3: 许可协议 | | |
+| 4: 数据库 | | |
+| 5: FTP 配置 | | |
+| 6: 配置 | | |
+| 7: 完成 | | |
 
 连接设置：
 
@@ -312,21 +319,21 @@ http://localhost/joomla/installation/index.php
 第一步是数据库配置。请选择您偏好的设置。
 
 | 基础设置 | | |
-| :--- | :--- |
-| 数据库类型 | mysql |
-| | 这通常是 localhost 或托管提供商提供的主机名。 |
-| localhost | 这是数据库名称，由您的托管提供商提供的用户名。您可以将其更改为数据库名。 |
-| 用户名 | root |
-| | 在输入 MySQL 账户密码时，出于安全考虑是必须的。这可能是由托管提供商提供的密码。 |
-| 密码 | |
-| | 如果您的设置如此，请留空密码，可以使用表前缀选项来区分多个 Joomla 站点。 |
-| 数据库名称 | joomla |
-| 表前缀 | JO_ |
-| | 不要使用前缀 'bak'。它被用于备份表。 |
+| :--- | :--- | |
+| 数据库类型 | `mysql` | |
+| | 这通常是 localhost 或托管提供商提供的主机名。 | |
+| `localhost` | 这是数据库名称，由您的托管提供商提供的用户名。您可以将其更改为数据库名。 | |
+| 用户名 | `root` | |
+| | 在输入 MySQL 账户密码时，出于安全考虑是必须的。这可能是由托管提供商提供的密码。 | |
+| 密码 | | |
+| | 如果您的设置如此，请留空密码，可以使用表前缀选项来区分多个 Joomla 站点。 | |
+| 数据库名称 | `joomla` | |
+| 表前缀 | `JO_` | |
+| | 不要使用前缀 'bak'。它被用于备份表。 | |
 
 ### 基础设置
 
-输入数据库服务器的主机。Joomla 将安装在您选择的数据库中。如果您没有托管提供商，请使用 localhost 服务器。
+输入数据库服务器的主机。Joomla 将安装在您选择的数据库中。如果您没有托管提供商，请使用 `localhost` 服务器。
 
 输入您希望使用的 MySQL 用户名、密码和数据库名称。除了您要使用的数据库外，这些都是必须的。
 
@@ -345,10 +352,11 @@ Drupal joomla! Web 安装程序菜单
 
 1月 25日 星期一 上午 1:31
 
-这是主窗口，选择数据库类型 "mysql"，填入用户名 "root"。
+这是主窗口，选择数据库类型 "`mysql`"，填入用户名 "`root`"。
 
-留空密码（因为您在 XAMPP 中创建数据库 joomla 时没有设置任何密码。）
-填好数据库名称 joomla。保持其余设置不变并继续。
+留空密码（因为您在 XAMPP 中创建数据库 `joomla` 时没有设置任何密码。）
+
+填好数据库名称 `joomla`。保持其余设置不变并继续。
 
 # Joomla! Web 安装程序 - Mozilla Firefox 浏览器
 
@@ -359,6 +367,7 @@ Drupal joomla! Web 安装程序菜单
 ### FTP 配置
 
 FTP 权限：
+
 由于 Linux 和其他操作系统的系统限制，使用了 FTP 层来处理文件系统操作和安装。当 Joomla! 需要访问服务器时，Joomla! FTP 会处理所有文件系统操作。
 
 输入具有目录访问权限的 FTP 用户名和密码。当 Joomla 需要访问服务器时，FTP 层将处理所有文件系统操作。
@@ -374,15 +383,15 @@ FTP 权限：
 - 7: 完成
 
 | 基础设置 | | |
-| :--- | :--- |
-| 启用 FTP 文件层 [ ] 是 | |
+| :--- | :--- | |
+| 启用 FTP 文件层 [ ] 是 | | |
 | FTP 用户 | | |
 | FTP 密码 | | |
 | FTP 根路径 | | |
 | 高级设置 | | |
-| FTP主机 127.0.0.1 | | |
-| FTP 端口 21 | | |
-| 保存 FTP 密码 [ ] 是 | |
+| FTP主机 `127.0.0.1` | | |
+| FTP 端口 `21` | | |
+| 保存 FTP 密码 [ ] 是 | | |
 
 ![](img/4a38974b8034a42576d180572f120df8_14_0.png)
 
@@ -394,7 +403,7 @@ Drupal Joomla-Web-Installer 安装 1月 25日 星期一 上午 1:30
 
 文件 编辑 查看 历史 书签 帮助
 
-http://localhost/joomla/installation/index.php
+`http://localhost/joomla/installation/index.php`
 
 Joomla! Web 安装程序
 
@@ -418,14 +427,17 @@ Joomla! Web 安装程序
 输入您的 Joomla 站点名称。
 
 站点名称：
-jessewood
+
+`jessewood`
 
 ### 确认管理员和电子邮件密码。
 
 您的电子邮件：
-esse@email.ru
+
+`esse@email.ru`
 
 管理员密码：
+
 ******
 
 确认管理员密码
@@ -444,7 +456,7 @@ esse@email.ru
 
 ### 加载迁移脚本
 
-需要在旧站点上创建迁移脚本，通过提供新站点路径并输入 URL 中使用的编码。如果文件长度超过服务器设置的限制，请查看 Joomla! 文档 (encoding/sources) 获取迁移大型示例数据的帮助。
+需要在旧站点上创建迁移脚本，通过提供新站点路径并输入 URL 中使用的编码。如果文件长度超过服务器设置的限制，请查看 Joomla! 文档 (`encoding/sources`) 获取迁移大型示例数据的帮助。
 
 加载示例数据，恢复或迁移数据
 
@@ -452,28 +464,27 @@ esse@email.ru
 
 （此处省略重复的配置步骤说明）
 
-
-
-
-
 ![](img/4a38974b8034a42576d180572f120df8_19_0.png)
 
 ## 完成了..!!
 
-现在我们通过将 Drupal 的内容解压到 "opt/lampp/htdocs" 来安装它：
+现在我们通过将 Drupal 的内容解压到 "`opt/lampp/htdocs`" 来安装它：
+
 你知道你的 drupal tar.gz 文件在桌面上，准备解压它
 
 - 1. 打开终端，输入以下命令：
+
+
 
 ```bash
 sudo tar -xvf /home/jesse/Desktop/drupal-6.13.tar.gz -C /opt/lampp/htdocs/
 ```
 
-（请注意，这里的 jesse 是我的用户名，你必须在此输入你登录的用户名）
+（请注意，这里的 `jesse` 是我的用户名，你必须在此输入你登录的用户名）
 
 ![](img/4a38974b8034a42576d180572f120df8_20_0.png)
 
-它将在你的 /opt/lampp/htdocs/ 目录下创建一个名为 drupal 的文件夹。但我们需要将此文件夹重命名为 drupal。
+它将在你的 `/opt/lampp/htdocs/` 目录下创建一个名为 `drupal` 的文件夹。但我们需要将此文件夹重命名为 `drupal`。
 
 - 1. 输入以下命令：
 
@@ -481,7 +492,7 @@ sudo tar -xvf /home/jesse/Desktop/drupal-6.13.tar.gz -C /opt/lampp/htdocs/
 jesse@Punjabizm ~ $ sudo mv /opt/lampp/htdocs/drupal-6.13 /opt/lampp/htdocs/drupal
 ```
 
-（drupal-6.13 是我使用的文件版本，你必须输入你下载的 drupal 版本名称）
+（`drupal-6.13` 是我使用的文件版本，你必须输入你下载的 `drupal` 版本名称）
 
 ### 终端
 
@@ -519,7 +530,7 @@ jesse@drupal~$ $
 - 1. 打开你的网络浏览器。
 - 2. 输入以下地址：
 
-http://localhost/drupal
+`http://localhost/drupal`
 
 你应该能看到这个页面：
 
@@ -541,9 +552,9 @@ http://localhost/drupal
 jesse@Punjabjab ~ sudo cp /opt/lampp/htdocs/drupal/sites/default/default.settings.php /opt/lampp/htdocs/drupal/sites/default/settings.php
 ```
 
-这将创建 "default.settings.php" 的副本并将其重命名为 "settings.php"。
+这将创建 "`default.settings.php`" 的副本并将其重命名为 "`settings.php`"。
 
-接下来，需要授予 settings.php 文件权限使其可写：
+接下来，需要授予 `settings.php` 文件权限使其可写：
 
 - 输入以下命令（每个命令后按回车）：
 
@@ -568,7 +579,7 @@ sudo nano /opt/lampp/etc/php.ini
 
 ### 终端
 
-编辑文件：/opt/lampp/etc/php.ini
+编辑文件：`/opt/lampp/etc/php.ini`
 
 ```ini
 output_buffering 允许你在发送正文内容后发送头部（包括 cookies），通过将 PHP 的输出存储在内存中来节省内存。你可以通过设置特定的字节数来为所有文件启用缓冲区，而不是使用 'on'（例如 output_buffering=4096），如果你希望压缩整个输出页面。设置 output_handler 会自动开启输出缓冲区。output_handler 将被调用（带有实例化的类名，如果函数未定义则会发生序列化错误）。使用 zlib 库进行透明输出压缩，有效的输出方法：deflate 或缓冲区大小（默认为 0）。注意：如果设置为 '0'，则输出必须为空。
@@ -577,35 +588,41 @@ zlib.output_compression = off
 
 ![](img/4a38974b8034a42576d180572f120df8_25_0.png)
 
-更改后，按 Ctrl+X 退出窗口。
+更改后，按 `Ctrl+X` 退出窗口。
 
 屏幕上将出现选项：“保存修改的缓冲区？”
 
-按 "Y" 并按回车，在下一个屏幕再次按回车。完成。现在你可以关闭终端窗口了。
+按 "`Y`" 并按回车，在下一个屏幕再次按回车。完成。现在你可以关闭终端窗口了。
 
-按 "F5" 刷新你的浏览器窗口。它将显示你需要将 Drupal 连接到数据库的屏幕。
+按 "`F5`" 刷新你的浏览器窗口。它将显示你需要将 Drupal 连接到数据库的屏幕。
 
 # 数据库配置 | Drupal - Mozilla Firefox
 
 数据库配置
-考虑将 PHP 内存限制增加到 16M 以防止安装过程中出错。通过编辑 php.ini 文件增加内存限制并重启 Web 服务器（或联系系统管理员或托管提供商寻求帮助）。欲更多信息请查看 Drupal 要求。（当前使用的 PHP 内存限制：8M）
+
+考虑将 PHP 内存限制增加到 16M 以防止安装过程中出错。通过编辑 `php.ini` 文件增加内存限制并重启 Web 服务器（或联系系统管理员或托管提供商寻求帮助）。欲更多信息请查看 Drupal 要求。（当前使用的 PHP 内存限制：8M）
 
 基础选项：
 
 设置你的 Drupal 数据库，输入以下信息：
 
 数据库类型：
-- mysql
-- pgsql
+
+- `mysql`
+- `pgsql`
 
 你的数据库数据将存储在：
+
 数据库名称：存储 Drupal 数据的数据库名称。在 Drupal 创建数据库之前，它必须在你的服务器上存在。
 
 数据库用户名：
+
 数据库密码：
 
-填写数据库名称 "drupal"
-填写数据库用户 "root"
+填写数据库名称 "`drupal`"
+
+填写数据库用户 "`root`"
+
 留空密码。
 
 点击保存并继续
@@ -614,14 +631,15 @@ zlib.output_compression = off
 
 # Drupal # 配置站点
 
-对 /opt/lampp/htdocs/drupal/sites/default/settings.php 的所有更改已完成，因此现在应该移除写入权限以避免安全风险。如果你不确定如何操作，请咨询在线手册。
+对 `/opt/lampp/htdocs/drupal/sites/default/settings.php` 的所有更改已完成，因此现在应该移除写入权限以避免安全风险。如果你不确定如何操作，请咨询在线手册。
 
 配置你的网站，请提供以下信息：
 
 ### 站点信息
 
-站点名称：website.com
-站点电子邮件地址：admin@example.com
+站点名称：`website.com`
+
+站点电子邮件地址：`admin@example.com`
 
 管理员电子邮件将在注册、新密码请求和其他通知期间发送。使用以站点域名结尾的地址有助于防止此电子邮件被标记为垃圾邮件。
 
@@ -640,7 +658,7 @@ zlib.output_compression = off
 
 点击保存并继续
 
-如果没有出现类似 "Fatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 453 bytes) in /opt/lampp/htdocs/drupal/includes/database.mysql-common.inc on line 35" 的对话，不要生气，我们还有一次机会使用它....
+如果没有出现类似 "`Fatal error: Allowed memory size of 8388608 bytes exhausted (tried to allocate 453 bytes) in /opt/lampp/htdocs/drupal/includes/database.mysql-common.inc on line 35`" 的对话，不要生气，我们还有一次机会使用它....
 
 打开终端，通过一个一个以下命令重启 XAMPP：
 
@@ -648,6 +666,8 @@ zlib.output_compression = off
 jesse@Punjabism ~ $ sudo /opt/lampp/lampp stop
 jesse@Punjabism ~ $ sudo /opt/lampp/lampp start
 ```
+
+
 
 ```
 jesse@Punjabism ~ $ sudo /opt/lampp/lampp stop
@@ -672,15 +692,13 @@ XAMP for Linux started.
 
 刷新你的浏览器页面
 
-出于安全考虑，它将要求你移除 settings.php 文件的写入权限。让我们这样做：
+出于安全考虑，它将要求你移除 `settings.php` 文件的写入权限。让我们这样做：
 
 打开终端，输入以下命令：
 
+```
 jesse@Punjabism ~ $ sudo chmod a-w /opt/lampp/htdocs/drupal/sites/default/settings.php
-
-
-
-
+```
 
 ### 终端
 
@@ -726,7 +744,7 @@ jesse@Punjabizm / $ egrep :initdefault:/etc/init.d/
 
 你不应该看到包含两个冒号之间的数字的行。
 
-大多数情况下是 3 或 5（如果你使用的是 Debian）。在这里我选择 rc3.d 文件夹，因为我的电脑从那里加载启动配置。
+大多数情况下是 3 或 5（如果你使用的是 Debian）。在这里我选择 `rc3.d` 文件夹，因为我的电脑从那里加载启动配置。
 
 - 2. 通过终端窗口输入命令进入配置启动项的目录
 
@@ -734,7 +752,7 @@ jesse@Punjabizm / $ egrep :initdefault:/etc/init.d/
 jesse@Punjabizm / $ cd /etc/rc2.d/
 ```
 
-如果你的系统没有提供 /etc/rc2.d，请也尝试 /etc/init.d/rc2.d 和 /etc/rc2.d。现在在命令模式下输入以下命令。
+如果你的系统没有提供 `/etc/rc2.d`，请也尝试 `/etc/init.d/rc2.d` 和 `/etc/rc2.d`。现在在命令模式下输入以下命令。
 
 ```
 jesse@Punjabizm /etc/rc2.d $ sudo ln -s /opt/lampp S99lampp
@@ -743,7 +761,7 @@ jesse@Punjabizm /etc/rc2.d $ sudo ln -s /opt/lampp K01lampp
 
 ![](img/4a38974b8034a42576d180572f120df8_32_0.png)
 
-此命令将 Xampp 启动服务的快捷方式 "S99lampp" 和 "K01lampp" 放入 /etc/rc2.d 文件夹中。你也可以在 rc2.d 文件夹中看到它们。
+此命令将 Xampp 启动服务的快捷方式 `S99lampp` 和 `K01lampp` 放入 `/etc/rc2.d` 文件夹中。你也可以在 `rc2.d` 文件夹中看到它们。
 
 ![](img/4a38974b8034a42576d180572f120df8_33_0.png)
 
@@ -752,6 +770,7 @@ jesse@Punjabizm /etc/rc2.d $ sudo ln -s /opt/lampp K01lampp
 （这两个 CMS 的安装仅适用于 GNOME Linux 平台）
 
 Rupinder singh Dhammu
-HIIAS | Shimla
-jesse@email.ru
 
+HIIAS | Shimla
+
+jesse@email.ru

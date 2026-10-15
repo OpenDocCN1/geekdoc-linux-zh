@@ -1,3 +1,4 @@
+
 # RDP 管理员 2016 比特币挖矿教程终极指南
 
 > 原文：<https://blog.eldernode.com/mining-on-rdp-admin-2016/>

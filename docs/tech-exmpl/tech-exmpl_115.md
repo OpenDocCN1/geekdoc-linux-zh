@@ -1,18 +1,19 @@
+
 # 求二叉树高度的程序
 
 > 原文：[`techbyexample.com/height-binary-tree/`](https://techbyexample.com/height-binary-tree/)
 
-## **概述**
+## 概述
 
-目标是获取二叉树的高度。例如，假设我们有如下二叉树
+目标是获取二叉树的高度。例如，假设我们有如下二叉树：
 
 ![](img/9a87d6b2a88fc41ddf4f755bc080acdf.png)
 
 那么这个二叉树的高度是 3。
 
-## **程序**
+## 程序
 
-以下是相应的程序
+以下是相应的程序：
 
 ```go
 package main
@@ -59,7 +60,7 @@ func main() {
 }
 ```
 
-**输出**
+## 输出
 
 ```go
 3

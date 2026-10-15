@@ -1,8 +1,9 @@
+
 # 删除链表元素程序
 
 > 原文：[`techbyexample.com/remove-linked-list-elements-program/`](https://techbyexample.com/remove-linked-list-elements-program/)
 
-# **概述**
+## 概述
 
 给定一个链表和一个值，删除链表中所有值等于给定值的节点。
 
@@ -20,7 +21,7 @@ Input: [2, 2, 3], 2
 Output: [3]
 ```
 
-# **程序**
+## 程序
 
 以下是相同程序的代码
 

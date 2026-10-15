@@ -1,3 +1,4 @@
+
 # 文件属性
 
 > 原文：[`learnbyexample.github.io/cli-computing/file-properties.html`](https://learnbyexample.github.io/cli-computing/file-properties.html)
@@ -6,7 +7,7 @@
 
 > ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) [example_files](https://github.com/learnbyexample/cli-computing/tree/master/example_files) 目录包含本章中使用的脚本和示例输入文件。
 
-## wc
+## `wc`
 
 `wc` 命令通常用于计算给定输入的行数、单词数和字符数。以下是一些基本示例：
 
@@ -34,7 +35,7 @@ $ wc -wc greeting.txt
 对于 stdin 数据，不会打印文件名。这对于将结果保存到变量中以供脚本使用很有帮助。
 
 ```sh
-$ wc -l &LTgreeting.txt
+$ wc -l <greeting.txt
 2 
 ```
 
@@ -71,7 +72,7 @@ $ echo 'apple' | wc -L
 $ echo 'αλεπού cag̈e' | wc -L
 11
 
-$ wc -L &LTgreeting.txt
+$ wc -L <greeting.txt
 15 
 ```
 
@@ -85,7 +86,7 @@ $ printf 'αλεπού' | wc -m
 6 
 ```
 
-## du
+## `du`
 
 `du` 命令帮助您估计文件和目录的大小。
 
@@ -146,7 +147,7 @@ $ du -sh * | sort -h
 7.4M    report.log 
 ```
 
-## df
+## `df`
 
 `df` 命令为您提供文件系统的空间使用情况。没有路径参数的 `df` 将提供有关所有当前挂载的文件系统的信息。
 
@@ -156,7 +157,7 @@ Filesystem     1K-blocks     Used Available Use% Mounted on
 /dev/sda1       98298500 58563816  34734748  63% / 
 ```
 
-使用`-h`选项以人类可读的尺寸显示。`-B`选项允许您按指定量缩放尺寸。使用`--si`以 1000 的幂次表示尺寸，而不是 1024。
+使用 `-h` 选项以人类可读的尺寸显示。`-B` 选项允许您按指定量缩放尺寸。使用 `--si` 以 1000 的幂次表示尺寸，而不是 1024。
 
 ```sh
 $ df -h .
@@ -164,7 +165,7 @@ Filesystem      Size  Used Avail Use% Mounted on
 /dev/sda1        94G   56G   34G  63% / 
 ```
 
-使用`--output`选项仅报告感兴趣的特定字段：
+使用 `--output` 选项仅报告感兴趣的特定字段：
 
 ```sh
 $ df -h --output=size,used,file / /media/learnbyexample/projs
@@ -179,9 +180,9 @@ $ df -h --output=pcent,fstype,target | awk 'NR>1 && $1>=30'
  51% ext4     /media/learnbyexample/backups 
 ```
 
-## stat
+## `stat`
 
-`stat`命令非常有用，可以获取诸如文件类型、大小、inode、权限、最后访问和修改时间戳等详细信息。默认情况下，您将获得所有这些详细信息。可以使用`-c`和`--printf`选项仅以特定格式显示所需详细信息。
+`stat` 命令非常有用，可以获取诸如文件类型、大小、inode、权限、最后访问和修改时间戳等详细信息。默认情况下，您将获得所有这些详细信息。可以使用 `-c` 和 `--printf` 选项仅以特定格式显示所需详细信息。
 
 ```sh
 # change to the 'scripts' directory and source the 'stat.sh' script
@@ -219,13 +220,13 @@ $ stat -c '%s %n' ip.txt hi.sh
 21 hi.sh 
 ```
 
-> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) ![warning](img/b5314b4a0acf0f436c4bf59486793342.png) 应优先使用`stat`命令，而不是解析`ls -l`输出的文件详细信息。请参阅[mywiki.wooledge: 避免解析 ls 输出](https://mywiki.wooledge.org/ParsingLs)和[unix.stackexchange: 为什么不解析 ls?](https://unix.stackexchange.com/q/128985/109046)以获取解释和其他替代方案。
+> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) ![warning](img/b5314b4a0acf0f436c4bf59486793342.png) 应优先使用 `stat` 命令，而不是解析 `ls -l` 输出的文件详细信息。请参阅[mywiki.wooledge: 避免解析 ls 输出](https://mywiki.wooledge.org/ParsingLs)和[unix.stackexchange: 为什么不解析 ls?](https://unix.stackexchange.com/q/128985/109046)以获取解释和其他替代方案。
 
-## touch
+## `touch`
 
-如前所述，`touch`命令可以帮助您更改文件的时间戳。您可以根据当前时间戳、传递参数、从另一个文件复制值等方式进行操作。
+如前所述，`touch` 命令可以帮助您更改文件的时间戳。您可以根据当前时间戳、传递参数、从另一个文件复制值等方式进行操作。
 
-默认情况下，`touch`更新访问和修改时间戳到当前时间。您可以使用`-a`选项仅更改访问时间戳，使用`-m`仅更改修改时间戳。
+默认情况下，`touch` 更新访问和修改时间戳到当前时间。您可以使用 `-a` 选项仅更改访问时间戳，使用 `-m` 仅更改修改时间戳。
 
 ```sh
 # change to the 'scripts' directory and source the 'touch.sh' script
@@ -243,7 +244,7 @@ $ stat -c $'%x\n%y' fruits.txt
 2024-05-14 13:01:25.921205889 +0530 
 ```
 
-您可以使用`-r`选项将时间戳信息从一个文件复制到另一个文件。`-d`和`-t`选项将允许您直接在命令中指定时间戳。
+您可以使用 `-r` 选项将时间戳信息从一个文件复制到另一个文件。`-d` 和 `-t` 选项将允许您直接在命令中指定时间戳。
 
 ```sh
 $ stat -c '%y' hi.sh
@@ -260,7 +261,7 @@ $ stat -c '%y' hi.sh
 2000-01-01 00:00:01.000000000 +0530 
 ```
 
-如管理文件和目录章节中所述，`touch`命令在目标文件不存在时创建新文件。您可以使用`-c`选项防止此行为。
+如管理文件和目录章节中所述，`touch` 命令在目标文件不存在时创建新文件。您可以使用 `-c` 选项防止此行为。
 
 ```sh
 $ ls report.txt
@@ -274,11 +275,11 @@ $ ls xyz.txt
 ls: cannot access 'xyz.txt': No such file or directory 
 ```
 
-## file
+## `file`
 
-`file`命令可以帮助您识别文本编码（ASCII、UTF-8 等），文件是否可执行等。
+`file` 命令可以帮助您识别文本编码（ASCII、UTF-8 等），文件是否可执行等。
 
-下面是一些示例，说明`file`命令对不同类型的处理方式：
+下面是一些示例，说明 `file` 命令对不同类型的处理方式：
 
 ```sh
 # change to the 'scripts' directory and source the 'file.sh' script
@@ -307,7 +308,7 @@ sunrise.jpg: JPEG image data, JFIF standard 1.01, resolution (DPI), density
 moon.png:    PNG image data, 76 x 76, 8-bit colormap, non-interlaced 
 ```
 
-您可以使用`-b`选项避免在输出中包含文件名：
+您可以使用 `-b` 选项避免在输出中包含文件名：
 
 ```sh
 $ file -b ip.txt
@@ -324,11 +325,11 @@ $ find -type f -exec file {} + | awk -F: '/\&LTimage data\>/{print $1}'
 ./moon.png 
 ```
 
-> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 还可参阅`identify`命令，该命令“描述一个或多个图像文件的格式和特性”。
+> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 还可参阅 `identify` 命令，该命令“描述一个或多个图像文件的格式和特性”。
 
-## basename
+## `basename`
 
-默认情况下，`basename`命令将从给定的路径参数中删除前导目录组件。在确定要提取的部分之前，任何尾随斜杠都将被删除。
+默认情况下，`basename` 命令将从给定的路径参数中删除前导目录组件。在确定要提取的部分之前，任何尾随斜杠都将被删除。
 
 ```sh
 $ basename /home/learnbyexample/example_files/scores.csv
@@ -339,7 +340,7 @@ $ basename 'path with spaces/report.log'
 report.log 
 ```
 
-您可以使用`-s`选项从文件名中删除后缀。通常用于删除文件扩展名。
+您可以使用 `-s` 选项从文件名中删除后缀。通常用于删除文件扩展名。
 
 ```sh
 $ basename -s'.csv' /home/learnbyexample/example_files/scores.csv
@@ -350,43 +351,49 @@ $ basename -s'.txt' purchases.txt.txt
 purchases.txt 
 ```
 
-`basename`命令需要`-a`或`-s`（这隐含了`-a`）才能与多个参数一起使用。
+`basename` 命令需要 `-a` 或 `-s`（这隐含了 `-a`）才能与多个参数一起使用。
+
+
+
+## basename
+
+`basename` 命令用于从文件路径中提取文件名部分。使用 `-a` 选项可以处理多个参数：
 
 ```sh
 $ basename -a /backups/jan_2021.tar.gz /home/learnbyexample/report.log
 jan_2021.tar.gz
 report.log
 
-# -a is implied when -s is used
+# 使用 -s 选项时会默认启用 -a
 $ basename -s'.txt' logs/purchases.txt logs/report.txt
 purchases
-report 
+report
 ```
 
 ## dirname
 
-默认情况下，`dirname`命令将删除尾随路径组件（在删除任何尾随斜杠之后）。
+默认情况下，`dirname` 命令将删除尾随路径组件（在删除任何尾随斜杠之后）。
 
 ```sh
 $ dirname /home/learnbyexample/example_files/scores.csv
 /home/learnbyexample/example_files
 
-# one or more trailing slashes will not affect the output
+# 一个或多个尾随斜杠不会影响输出
 $ dirname /home/learnbyexample/example_files/
 /home/learnbyexample
 
-# unlike basename, multiple arguments are accepted by default
+# 与 basename 不同，dirname 默认接受多个参数
 $ dirname /home/learnbyexample/example_files/scores.csv ../report/backups/
 /home/learnbyexample/example_files
-../report 
+../report
 ```
 
-您可以使用 shell 功能，如命令替换，来组合 `basename` 和 `dirname` 命令的效果。
+您可以使用 shell 功能（如命令替换）来组合 `basename` 和 `dirname` 命令的效果。
 
 ```sh
-# extract the second last path component
+# 提取倒数第二个路径组件
 $ basename $(dirname /home/learnbyexample/example_files/scores.csv)
-example_files 
+example_files
 ```
 
 ## chmod
@@ -398,28 +405,24 @@ $ mkdir practice_chmod
 $ cd practice_chmod
 $ echo 'learnbyexample' > ip.txt
 
-# this info can also be seen in the first column of the 'ls -l' output
+# 此信息也可以在 'ls -l' 输出的第一列中看到
 $ stat -c '%A' ip.txt
--rw-rw-r-- 
+-rw-rw-r--
 ```
 
-在上述输出中，最后一行显示的 10 个字符与文件类型和权限相关。第一个字符表示 **文件类型**。下面列出了最常见的类型：
+在上述输出中，最后一行显示的 10 个字符与文件类型和权限相关。第一个字符表示**文件类型**。下面列出了最常见的类型：
 
 +   `-` 普通文件
-
 +   `d` 目录
-
 +   `l` 符号链接
 
-其他九个字符代表三组 **文件权限**，分别对应于 *用户* (`u`)、*组* (`g`) 和 *其他人* (`o`)，顺序如下。
+其他九个字符代表三组**文件权限**，分别对应于*用户*（`u`）、*组*（`g`）和*其他人*（`o`），顺序如下。
 
 +   *用户* — 文件所有者
-
 +   *组* — 作为组的一部分具有文件访问权限的用户
-
 +   *其他人* — 除了所有者、组和其他人之外的所有人
 
-本节只讨论 `rwx` 文件属性。对于其他类型的属性，请参阅 [coreutils 手册：文件权限](https://www.gnu.org/software/coreutils/manual/coreutils.html#File-permissions)。
+本节只讨论 `rwx` 文件属性。对于其他类型的属性，请参阅[coreutils 手册：文件权限](https://www.gnu.org/software/coreutils/manual/coreutils.html#File-permissions)。
 
 **文件权限参考表：**
 
@@ -439,14 +442,12 @@ $ stat -c '%A' ip.txt
 # r(4) + w(2) + 0 = 6
 # r(4) + 0 + 0 = 4
 $ stat -c '%a' ip.txt
-664 
+664
 ```
 
-> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 注意，目录的权限并不容易理解。如果一个目录只有 `x` 权限，您可以使用 `cd` 进入它，但不能读取内容（例如使用 `ls`）。如果一个目录只有 `r` 权限，您不能进入它，但您将能够读取内容（包括“无法访问”错误）。因此，`rx` 权限几乎总是同时启用/禁用。`w` 权限允许您添加或删除内容，前提是 `x` 是激活的。
+> **注意**：目录的权限并不容易理解。如果一个目录只有 `x` 权限，您可以使用 `cd` 进入它，但不能读取内容（例如使用 `ls`）。如果一个目录只有 `r` 权限，您不能进入它，但您将能够读取内容（包括"无法访问"错误）。因此，`rx` 权限几乎总是同时启用/禁用。`w` 权限允许您添加或删除内容，前提是 `x` 是激活的。
 
-**为所有三个类别更改权限**
-
-您可以为 `ugo` 提供数字（按此顺序）以更改权限。以下是一些示例，以更好地理解：
+**为所有三个类别更改权限**：您可以为 `ugo` 提供数字（按此顺序）以更改权限。以下是一些示例，以更好地理解：
 
 ```sh
 $ printf '#!/bin/bash\n\necho hi\n' > hi.sh
@@ -457,7 +458,7 @@ $ stat -c '%a %A' hi.sh
 # r(4) + 0 + x(1) = 5
 $ chmod 755 hi.sh
 $ stat -c '%a %A' hi.sh
-755 -rwxr-xr-x 
+755 -rwxr-xr-x
 ```
 
 下面是一个目录的示例：
@@ -469,7 +470,7 @@ $ stat -c '%a %A' dot_files
 
 $ chmod 700 dot_files
 $ stat -c '%a %A' dot_files
-700 drwx------ 
+700 drwx------
 ```
 
 您也可以使用 `mkdir -m` 而不是上面看到的 `mkdir+chmod` 组合。`-m` 选项的参数接受与 `chmod` 相同的语法（包括将要讨论的格式）。
@@ -477,95 +478,91 @@ $ stat -c '%a %A' dot_files
 ```sh
 $ mkdir -m 750 backups
 $ stat -c '%a %A' backups
-750 drwxr-x--- 
+750 drwxr-x---
 ```
 
-> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 您可以使用 `chmod -R` 递归地更改权限。如果您只想对满足某些条件的文件应用更改，请使用 `find+exec`。
+> **注意**：您可以使用 `chmod -R` 递归地更改权限。如果您只想对满足某些条件的文件应用更改，请使用 `find+exec`。
 
-**为特定类别更改权限**
-
-您可以通过使用这些符号后跟一个或多个 `rwx` 权限来分配（`=`）、添加（`+`）或删除（`-`）权限。这取决于 `umask` 的值：
+**为特定类别更改权限**：您可以通过使用这些符号后跟一个或多个 `rwx` 权限来分配（`=`）、添加（`+`）或删除（`-`）权限。这取决于 `umask` 的值：
 
 ```sh
 $ umask
-0002 
+0002
 ```
 
 `umask` 值为 `0002` 表示：
 
-+   read and execute permissions without `ugo` prefix affects all three categories
-
-+   write permissions without `ugo` prefix affects only the `user` and `group` categories
++   不带 `ugo` 前缀的读和执行权限影响所有三个类别
++   不带 `ugo` 前缀的写权限仅影响 `user` 和 `group` 类别
 
 下面是一些不带 `ugo` 前缀的例子：
 
 ```sh
-# remove execute permission for all three categories
+# 删除所有三个类别的执行权限
 $ chmod -x hi.sh
 
-# add write permission only for 'user' and 'group'
+# 仅为 'user' 和 'group' 添加写权限
 $ chmod +w ip.txt
 
 $ touch sample.txt
 $ chmod 702 sample.txt
-# give only read permission for all three categories
-# write/execute permissions, if any, will be removed
+# 仅为所有三个类别赋予只读权限
+# 写/执行权限（如果有）将被移除
 $ chmod =r sample.txt
 $ stat -c '%a %A' sample.txt
 444 -r--r--r--
 
-# give read and write permissions for 'user' and 'group'
-# and read permission for 'others'
-# execute permissions, if any, will be removed
-$ chmod =rw hi.sh 
+# 为 'user' 和 'group' 赋予读写权限
+# 为 'others' 赋予读权限
+# 执行权限（如果有）将被移除
+$ chmod =rw hi.sh
 ```
 
 下面是一些带有 `ugo` 前缀的例子。您可以使用 `a` 来指代所有三个类别。例如，`a+w` 与 `ugo+w` 相同。
 
 ```sh
-# remove read and write permissions only for 'others'
+# 仅为 'others' 移除读写权限
 $ chmod o-rw sample.txt
 
-# add execute permission for 'group' and 'others'
+# 为 'group' 和 'others' 添加执行权限
 $ chmod go+x hi.sh
 
-# give read and write permissions for all three categories
-# execute permissions, if any, will be removed
-$ chmod a=rw hi.sh 
+# 为所有三个类别赋予读写权限
+# 执行权限（如果有）将被移除
+$ chmod a=rw hi.sh
 ```
 
-您可以使用`,`分隔多个权限：
+您可以使用 `,` 分隔多个权限：
 
 ```sh
-# remove execute permission for 'group' and 'others'
-# remove write permission for 'others'
-$ chmod go-x,o-w hi.sh 
+# 移除 'group' 和 'others' 的执行权限
+# 移除 'others' 的写权限
+$ chmod go-x,o-w hi.sh
 ```
 
 **进一步阅读**
 
 +   [Linux 权限入门](https://web.archive.org/web/20220930214830/https://danielmiessler.com/study/unixlinux_permissions/)
-
 +   [unix.stackexchange: why chmod +w filename not giving write permission to other](https://unix.stackexchange.com/q/429421/109046)
 
 ## 练习
 
-> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 使用[example_files/text_files](https://github.com/learnbyexample/cli-computing/tree/master/example_files/text_files)目录中的输入文件，除非另有说明。
+> 使用 [example_files/text_files](https://github.com/learnbyexample/cli-computing/tree/master/example_files/text_files) 目录中的输入文件，除非另有说明。
 > 
-> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 为可能需要创建一些文件和目录的练习创建一个临时目录。之后您可以删除这样的练习目录。
+> 为可能需要创建一些文件和目录的练习创建一个临时目录。之后您可以删除这样的练习目录。
 
-**1)** 将`greeting.txt`输入文件的行数保存到`lines`shell 变量中。
+**1)** 将 `greeting.txt` 输入文件的行数保存到 `lines` shell 变量中。
 
 ```sh
 # ???
 $ echo "$lines"
-2 
+2
 ```
 
 **2)** 您认为以下命令的输出会是什么？
 
 ```sh
-$ echo 'dragons:2 ; unicorns:10' | wc -w 
+$ echo 'dragons:2 ; unicorns:10' | wc -w
 ```
 
 **3)** 使用适当的选项和参数来获取以下输出。
@@ -574,24 +571,24 @@ $ echo 'dragons:2 ; unicorns:10' | wc -w
 $ printf 'apple\nbanana\ncherry' | wc # ???
      15     183 sample.txt
       2      19 -
-     17     202 total 
+     17     202 total
 ```
 
-**4)** 阅读`wc`手册，并使用适当的选项和参数来获取以下输出。
+**4)** 阅读 `wc` 手册，并使用适当的选项和参数来获取以下输出。
 
 ```sh
 $ printf 'greeting.txt\0scores.csv' | wc # ???
 2 6 25 greeting.txt
 4 4 70 scores.csv
-6 10 95 total 
+6 10 95 total
 ```
 
-**5)** `wc -c`和`wc -m`选项之间的区别是什么？您会使用哪个选项来获取最长行长度？
+**5)** `wc -c` 和 `wc -m` 选项之间的区别是什么？您会使用哪个选项来获取最长行长度？
 
-**6)** 查找以`.log`结尾的文件名，并以可读格式报告它们的大小。对于第一种情况，使用`find+du`组合，对于第二种情况，使用`ls`命令（带有适当的 shell 功能）。
+**6)** 查找以 `.log` 结尾的文件名，并以可读格式报告它们的大小。对于第一种情况，使用 `find+du` 组合，对于第二种情况，使用 `ls` 命令（带有适当的 shell 功能）。
 
 ```sh
-# change to the 'scripts' directory and source the 'du.sh' script
+# 切换到 'scripts' 目录并 source  'du.sh' 脚本
 $ source du.sh
 
 # ??? find+du
@@ -600,48 +597,48 @@ $ source du.sh
 
 # ??? ls and shell features
  16K projects/errors.log
-7.4M report.log 
+7.4M report.log
 ```
 
-**7)** 在当前路径中报告文件/目录的大小，以`1000`的幂次表示，不进入子目录。最后显示总数。
+**7)** 在当前路径中报告文件/目录的大小，以 `1000` 的幂次表示，不进入子目录。最后显示总数。
 
 ```sh
-# change to the 'scripts' directory and source the 'du.sh' script
+# 切换到 'scripts' 目录并 source  'du.sh' 脚本
 $ source du.sh
 
 # ???
 50k     projects
 7.7M    report.log
 8.2k    todos
-7.8M    total 
+7.8M    total
 ```
 
-**8)** `du --apparent-size`选项的作用是什么？
+**8)** `du --apparent-size` 选项的作用是什么？
 
-**9)** 在什么情况下您会使用`df`命令而不是`du`？哪个`df`命令选项将帮助您仅报告感兴趣的特定字段？
+**9)** 在什么情况下您会使用 `df` 命令而不是 `du`？哪个 `df` 命令选项将帮助您仅报告感兴趣的特定字段？
 
-**10)** 按以下格式显示`scores.csv`和`timings.txt`文件的大小。
+**10)** 按以下格式显示 `scores.csv` 和 `timings.txt` 文件的大小。
 
 ```sh
 $ stat # ???
 scores.csv: 70
-timings.txt: 49 
+timings.txt: 49
 ```
 
-**11)** 哪个`touch`选项可以帮助您防止文件不存在时创建文件？
+**11)** 哪个 `touch` 选项可以帮助您防止文件不存在时创建文件？
 
-**12)** 假设`new_file.txt`在当前工作目录中不存在。下面显示的`stat`命令的输出会是什么？
+**12)** 假设 `new_file.txt` 在当前工作目录中不存在。下面显示的 `stat` 命令的输出会是什么？
 
 ```sh
 $ touch -t '202010052010.05' new_file.txt
 $ stat -c '%y' new_file.txt
-# ??? 
+# ???
 ```
 
-**13)** 以下`touch`命令是否有效？如果是，随后的`stat`命令的输出会是什么？
+**13)** 以下 `touch` 命令是否有效？如果是，随后的 `stat` 命令的输出会是什么？
 
 ```sh
-# change to the 'scripts' directory and source the 'touch.sh' script
+# 切换到 'scripts' 目录并 source  'touch.sh' 脚本
 $ source touch.sh
 
 $ stat -c '%n: %y' fruits.txt
@@ -649,7 +646,7 @@ fruits.txt: 2017-07-13 13:54:03.576055933 +0530
 
 $ touch -r fruits.txt f{1..3}.txt
 $ stat -c '%n: %y' f*.txt
-# ??? 
+# ???
 ```
 
 **14)** 使用适当的选项来获取以下输出。
@@ -659,32 +656,32 @@ $ printf 'αλεπού\n' | file -
 /dev/stdin: UTF-8 Unicode text
 
 $ printf 'αλεπού\n' | file # ???
-UTF-8 Unicode text 
+UTF-8 Unicode text
 ```
 
 **15)** 以下命令是否有效？如果是，输出会是什么？
 
 ```sh
 $ basename -s.txt ~///test.txt///
-# ??? 
+# ???
 ```
 
-**16)** 给定 shell 变量`p`中的文件路径，您如何获得以下输出？
+**16)** 给定 shell 变量 `p` 中的文件路径，您如何获得以下输出？
 
 ```sh
 $ p='~/projects/square_tictactoe/python/game.py'
 $ dirname # ???
-~/projects/square_tictactoe 
+~/projects/square_tictactoe
 ```
 
-**17)** 解释以下`stat`命令输出中的每个字符的含义。
+**17)** 解释以下 `stat` 命令输出中的每个字符的含义。
 
 ```sh
 $ stat -c '%A' ../scripts/
-drwxrwxr-x 
+drwxrwxr-x
 ```
 
-**18)** 下面的第二个`stat`命令的输出会是什么？
+**18)** 下面的第二个 `stat` 命令的输出会是什么？
 
 ```sh
 $ touch new_file.txt
@@ -693,26 +690,26 @@ $ stat -c '%a %A' new_file.txt
 
 $ chmod 546 new_file.txt
 $ stat -c '%a %A' new_file.txt
-# ??? 
+# ???
 ```
 
-**19)** 您将如何使用`mkdir`命令指定目录权限？
+**19)** 您将如何使用 `mkdir` 命令指定目录权限？
 
 ```sh
-# instead of this
+# 而不是这样
 $ mkdir back_up
 $ chmod 750 back_up
 $ stat -c '%a %A' back_up
 750 drwxr-x---
 $ rm -r back_up
 
-# do this
+# 这样做
 $ mkdir # ???
 $ stat -c '%a %A' back_up
-750 drwxr-x--- 
+750 drwxr-x---
 ```
 
-**20)** 将`book_list.txt`的文件权限更改为与下面显示的第二个`stat`命令的输出相匹配。不要使用数字`220`，用`rwx`字符指定更改。
+**20)** 将 `book_list.txt` 的文件权限更改为与下面显示的第二个 `stat` 命令的输出相匹配。不要使用数字 `220`，用 `rwx` 字符指定更改。
 
 ```sh
 $ touch book_list.txt
@@ -721,10 +718,10 @@ $ stat -c '%a %A' book_list.txt
 
 # ???
 $ stat -c '%a %A' book_list.txt
-220 --w--w---- 
+220 --w--w----
 ```
 
-**21)** 将`test_dir`的权限更改为与下面显示的第二个`stat`命令的输出相匹配。不要使用数字`757`，而要用`rwx`字符来指定更改。
+**21)** 将 `test_dir` 的权限更改为与下面显示的第二个 `stat` 命令的输出相匹配。不要使用数字 `757`，而要用 `rwx` 字符来指定更改。
 
 ```sh
 $ mkdir test_dir
@@ -733,5 +730,6 @@ $ stat -c '%a %A' test_dir
 
 # ???
 $ stat -c '%a %A' test_dir
-757 drwxr-xrwx 
+757 drwxr-xrwx
 ```
+

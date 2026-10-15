@@ -1,121 +1,25 @@
+
 # Linux 系统管理员 systemd 指南
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 献 Alice
 
-
-
-
-
-
-
-## 区域（几乎）一切
-
-## 外层坚固
-
-## firewalld
-
-## firewalld 区域
-
-## 使用 --reload
-
 ## 目录
 
-## Zone 文件
-
-## 恐模式
-
-## firewall-config GUI
-
-## nftables
-
-## 出站拦截
-
-## Fail2Ban
-
-## 清理
-
-## 总结
-
-## 练习
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### 区域（几乎）一切
+### 外层坚固
+### firewalld
+### firewalld 区域
+### 使用 --reload
+### 目录
+### Zone 文件
+### 恐模式
+### firewall-config GUI
+### nftables
+### 出站拦截
+### Fail2Ban
+### 清理
+### 总结
+### 练习
 - 确定问题
 - 更好的解决方案
 - 练习
@@ -124,49 +28,27 @@
 - 责任归属游戏
 - 系统状态
 - 条件判断
-
-## 列出配置文件
-
-## 单元验证
-
-## 安全
-
-## 总结
-
-## 练习
-
-## 第16 章：为什么我支持 systemd 接管世界的计划
-
-## 引言
-
-## 为管理员提供更多数据
-
-## systemd 标准化配置
-
-## 有时的痛苦
-
-
-## 系统管理员喜欢 systemd 的五个原因
-
-## 启动管理
-
-## 日志审查
-
-## 服务管理
-
-## 定器
-
-## Target
-
-## 使用 systemd 控制
-
-## 最终练习
-
-## 附录 A：systemd 资源
-
-## 索引
-
-## 关于作者
+### 列出配置文件
+### 单元验证
+### 安全
+### 总结
+### 练习
+### 第16 章：为什么我支持 systemd 接管世界的计划
+### 引言
+### 为管理员提供更多数据
+### systemd 标准化配置
+### 有时的痛苦
+### 系统管理员喜欢 systemd 的五个原因
+### 启动管理
+### 日志审查
+### 服务管理
+### 定器
+### Target
+### 使用 systemd 控制
+### 最终练习
+### 附录 A：systemd 资源
+### 索引
+### 关于作者
 
 David Both, SCSA, RHCT, RHCE 是一位开源软件和 Linux 倡导者、培训师、作家和演讲者。他自1996年起一直致力于 Linux 和开源软件，接触计算机已有50多年。他是“面向系统管理员的 Linux 哲学”的坚实支持者和推广者。
 
@@ -180,7 +62,7 @@ David 曾在 Apress 出版过八本书，包括2018年8月发布的《面向系�
 
 ## 关于评审者
 
-Seth Kenlon 是一位 UNIX 和 Linux 极客、开源爱好者，也是桌面游戏玩家。访问 sethkenlon.com 了解更多信息。
+Seth Kenlon 是一位 UNIX 和 Linux 极客、开源爱好者，也是桌面游戏玩家。访问 `sethkenlon.com` 了解更多信息。
 
 ## 感谢
 
@@ -206,16 +88,11 @@ Seth Kenlon 是一位 UNIX 和 Linux 极客、开源爱好者，也是桌面游�
 
 本书不适合任何不是系统管理员的人。如果你只想完成工作，而对内部发生了什么不感兴趣，如果你依靠他人来修理你的电脑。
 
-
 当事情出现意外时，这本书并不适合你。
 
 xxii
 
-# 第 1 章
-
-# 爱上
-
-## systemd
+# 第 1 章 爱上 systemd
 
 ## 章节目标
 
@@ -231,87 +108,68 @@ xxii
 - 列出 systemd 目标的依赖关系
 - 为第 2 章开始的实验做准备
 
-
 1
 
 D. Booth, systemd for Linux Sysadmins, https://doi.org/10.1007/979-8-8668-1328-3_1
 
-第 1 章 爱上 systemd
-
 ## 概述
 
-systemd——是的，全小写，即使在句首也是如此——是 init 和 SystemV init 脚本的现代替代者。它远不止于此。
+`systemd`——是的，全小写，即使在句首也是如此——是 `init` 和 SystemV `init` 脚本的现代替代者。它远不止于此。
 
-和大多数系统管理员（SysAdmin）一样，当我想到 init 程序和 SystemV 时，想到的是 Linux 的启动和关机，而没有怎么想到其他，例如在系统运行后管理服务。与 init 一样，systemd 是所有进程之父，它负责将 Linux 主机引导到可以进行高效工作的状态。systemd 承担的功能比旧的 init 程序要广泛得多，负责管理运行的 Linux 主机的许多方面，包括挂载文件系统、管理硬件、处理定时器，以及启动和管理运行高效 Linux 主机所需的系统服务。
+和大多数系统管理员（SysAdmin）一样，当我想到 `init` 程序和 SystemV 时，想到的是 Linux 的启动和关机，而没有怎么想到其他，例如在系统运行后管理服务。与 `init` 一样，`systemd` 是所有进程之父，它负责将 Linux 主机引导到可以进行高效工作的状态。`systemd` 承担的功能比旧的 `init` 程序要广泛得多，负责管理运行的 Linux 主机的许多方面，包括挂载文件系统、管理硬件、处理定时器，以及启动和管理运行高效 Linux 主机所需的系统服务。
 
-本章将简要介绍 systemd 及其特性和功能。
+本章将简要介绍 `systemd` 及其特性和功能。
 
 ## Linux 启动
 
 将 Linux 主机从关闭状态变为运行状态的完整过程是复杂的，但它是开放且可知的。在进入细节之前，我将简要概述从硬件开启到系统准备好供用户登录的过程。在大多数情况下，“启动过程”被描述为一个单一实体，但这并不准确。事实上，完整的引导和启动过程实际上包含三个主要部分：
 
 - **硬件启动**：UEFI 初始化系统硬件。
-- **Linux 启动**：加载 Linux 内核，然后加载 systemd。
+- **Linux 启动**：加载 Linux 内核，然后加载 `systemd`。
 
 1 UEFI 是统一扩展固件接口。它负责初始化系统硬件、定位并加载引导记录，并将控制权交给引导记录。
 
 2
 
-第 1 章 爱上 system
+- **Linux 启动**：`systemd` 为主机的生产性工作做好准备。
 
-- **Linux 启动**：systemd 为主机的生产性工作做好准备。
-
-Linux 启动序列在内核加载了 init 或 systemd 后开始，这取决于发行版使用的是 SystemV 还是 systemd 程序。这两个程序都会启动并管理所有其他进程，并且在各自的系统中都被称为“所有进程之父”。
-
-# 第 1 章 爱上 systemd
+Linux 启动序列在内核加载了 `init` 或 `systemd` 后开始，这取决于发行版使用的是 SystemV 还是 `systemd` 程序。这两个程序都会启动并管理所有其他进程，并且在各自的系统中都被称为“所有进程之父”。
 
 将硬件（BIOS/UEFI）启动、Linux 启动与 Linux 启动离开来，并显式地定义它们之间的界限是非常重要的。理解这些差异以及每个部分在让 Linux 系统达到可工作状态方面所起的作用，使得管理这些过程成为可能，并能更好地判断在大多数人所说的“启动”期间问题发生在哪里。
 
-启动过程遵循三步启动流程，并将 Linux 计算机带入可以用于高效作业的运行状态。启动过程在内核将主机的控制权转移给 systemd 时开始。
+启动过程遵循三步启动流程，并将 Linux 计算机带入可以用于高效作业的运行状态。启动过程在内核将主机的控制权转移给 `systemd` 时开始。
 
 ## systemd 争议
 
-systemd 会引起系统管理员和其他负责维护 Linux 系统正常运行的人员的广泛反应。systemd 接管了许多 Linux 系统中的众多任务，这一事实导致了某些开发者和系统管理员群体之间的反弹和不和。
+`systemd` 会引起系统管理员和其他负责维护 Linux 系统正常运行的人员的广泛反应。`systemd` 接管了许多 Linux 系统中的众多任务，这一事实导致了某些开发者和系统管理员群体之间的反弹和不和。
 
-SystemV 和 systemd 是执行 Linux 启动序列的两种方法。虽然大多数现代 Linux 发行版使用较新的 systemd 进行启动、关机和进程管理，但仍有一些发行版没有使用。原因之一是发行版维护者某些系统管理员倾向于旧的 SystemV 方法而不是新的 systemd。我认为两者都有优点。
-
-3
-
-第 1 章 爱上 systemd
+SystemV 和 `systemd` 是执行 Linux 启动序列的两种方法。虽然大多数现代 Linux 发行版使用较新的 `systemd` 进行启动、关机和进程管理，但仍有一些发行版没有使用。原因之一是发行版维护者某些系统管理员倾向于旧的 SystemV 方法而不是新的 `systemd`。我认为两者都有优点。
 
 ## 为什么我更偏于 SystemV
 
-我更偏于 SystemV 是因为它更传统。启动是通过 Bash 脚本完成的。在内核启动编译后的二进制文件 init 程序后，init 程序启动 rc.sysinit 脚本，该脚本执行了许多系统初始化任务。在 rc.sysinit 完成后，它启动 /etc/rc.d 脚本，该脚本转而启动 /etc/rc.d/rcX 中由 SystemV 启动脚本定义的各种服务，其中“X”是正在启动的运行级别数字。
+我更偏于 SystemV 是因为它更传统。启动是通过 Bash 脚本完成的。在内核启动编译后的二进制文件 `init` 程序后，`init` 程序启动 `rc.sysinit` 脚本，该脚本执行了许多系统初始化任务。在 `rc.sysinit` 完成后，它启动 `/etc/rc.d` 脚本，该脚本转而启动 `/etc/rc.d/rcX` 中由 SystemV 启动脚本定义的各种服务，其中“X”是正在启动的运行级别数字。
 
-除了 init 程序本身，所有这些程序都是纯文本且易于阅读的脚本。可以通过阅读这些脚本来确切地了解整个启动过程中发生了什么，但我认为许多系统管理员实际上并没有那样做。每个脚本都有编号，以便它们按特定顺序启动预定的服务。服务是串行启动的，一次只启动一个服务。
+除了 `init` 程序本身，所有这些程序都是纯文本且易于阅读的脚本。可以通过阅读这些脚本来确切地了解整个启动过程中发生了什么，但我认为许多系统管理员实际上并没有那样做。每个脚本都有编号，以便它们按特定顺序启动预定的服务。服务是串行启动的，一次只启动一个服务。
 
-systemd 由红帽的 Lennart Poettering 和 Kay Sievers 开发，它是一个复杂的系统，由大型编译的可执行文件组成，如果没有源代码访问权限就无法理解它。因此，“访问源代码”并不难，只是不那么方便。systemd 的出现似乎代表了对 Linux 哲学中多条原则的重大反驳。
-
-4
-
-# 第 1 章 爱上 systemd
+`systemd` 由红帽的 Lennart Poettering 和 Kay Sievers 开发，它是一个复杂的系统，由大型编译的可执行文件组成，如果没有源代码访问权限就无法理解它。因此，“访问源代码”并不难，只是不那么方便。`systemd` 的出现似乎代表了对 Linux 哲学中多条原则的重大反驳。
 
 ## 为什么我更偏于 systemd
 
-我更喜欢将 systemd 作为我的启动机制，因为它根据当前的启动状态尽可能地并行启动服务。这加快了整体速度，并比 SystemV 更快进入登录界面。例如，我的主工作站
+我更喜欢将 `systemd` 作为我的启动机制，因为它根据当前的启动状态尽可能地并行启动服务。这加快了整体速度，并比 SystemV 更快进入登录界面。例如，我的主工作站
 
 24
 
 拥有 32 个 3.5GHz 的 CPU，加载比一些 CPU 更少但频率更高的系统更快。
 
-systemd 管理运行 Linux 系统的几乎每个方面。它可以在管理运行服务的同时提供比 SystemV 多得多的信息。它还管理硬件、进程和进程组、文件系统挂载等更多内容。systemd 存在于现代 Linux 系统的几乎每个方面，使其成为系统管理的一站工具。
+`systemd` 管理运行 Linux 系统的几乎每个方面。它可以在管理运行服务的同时提供比 SystemV 多得多的信息。它还管理硬件、进程和进程组、文件系统挂载等更多内容。`systemd` 存在于现代 Linux 系统的几乎每个方面，使其成为系统管理的一站工具。
 
-systemd 工具是编译后的二进制文件，但代码是开源的。工具套是开放，因为所有的配置文件都是 ASCII 文本文件。启动配置可以通过各种 GUI 和命令行工具进行修改，也可以添加或修改配置文件以适应特定计算环境的需求。
+`systemd` 工具是编译后的二进制文件，但代码是开源的。工具套是开放，因为所有的配置文件都是 ASCII 文本文件。启动配置可以通过各种 GUI 和命令行工具进行修改，也可以添加或修改配置文件以适应特定计算环境的需求。
 
 ## 真正的问题
 
 你认为我不喜欢这两种启动系统吗？我喜欢，我可以处理任何一种，尽管我很少遇到 SystemV 发行版了。
 
-在我看来，SystemV 和 systemd 之间争议的真正问题和根源在于，系统管理员层面没有选择。使用 SystemV 还是 systemd 的选择是由发行版的开发者、维护者和软件包决定的——但是有理由的。挖空并替换一个系统，由于其极具侵入性的本质，会带来在发行版设计之外难以应对的变化。
-
-5
-
-# 第 1 章 爱上 systemd
+在我看来，SystemV 和 `systemd` 之间争议的真正问题和根源在于，系统管理员层面没有选择。使用 SystemV 还是 `systemd` 的选择是由发行版的开发者、维护者和软件包决定的——但是有理由的。挖空并替换一个系统，由于其极具侵入性的本质，会带来在发行版设计之外难以应对的变化。
 
 尽管这个选择是别人为我做的，但我的 Linux 主机能够启动并工作，这通常是我最关心的。作为最终用户，甚至作为系统管理员，我主要关心的是我能否
 
@@ -321,11 +179,11 @@ systemd 工具是编译后的二进制文件，但代码是开源的。工具套
 
 ## 替换 SystemV
 
-之前曾尝试过用更现代的东西来替换 SystemV。在过去的约两个版本中，Fedora 使用了一项名为 Upstart 的产物来取代老旧的 SystemV，但它并没有替换 `init`，也没有提供任何明显的变化。由于 Upstart 对围绕 SystemV 的问题没有提供重大的改进，这一方向的努力迅速减少，转而转向了 systemd。
+之前曾尝试过用更现代的东西来替换 SystemV。在过去的约两个版本中，Fedora 使用了一项名为 Upstart 的产物来取代老旧的 SystemV，但它并没有替换 `init`，也没有提供任何明显的变化。由于 Upstart 对围绕 SystemV 的问题没有提供重大的改进，这一方向的努力迅速减少，转而转向了 `systemd`。
 
-尽管大多数 Linux 开发者认为替换旧的 SystemV 启动是一个好主意，但许多开发者和系统管理员（SysAdmins）因为这一点而不喜欢 systemd。我并不打算严厉批评人们对（或过去对）systemd 的所谓“问题”，我将向你推荐两篇很好的（尽管有些老旧）的文章，它们应该涵盖几乎所有内容。Linux 内核的创建者 Linus Torvalds 似乎并不感兴趣。在 2014 年的一篇 ZDNet 文章《Linus Torvalds 及其他对 Linux 系统的看法》中，明确表达了他的感受。
+尽管大多数 Linux 开发者认为替换旧的 SystemV 启动是一个好主意，但许多开发者和系统管理员（SysAdmin）因为这一点而不喜欢 `systemd`。我并不打算严厉批评人们对（或过去对）`systemd` 的所谓“问题”，我将向你推荐两篇很好的（尽管有些老旧）的文章，它们应该涵盖几乎所有内容。Linux 内核的创建者 Linus Torvalds 似乎并不感兴趣。在 2014 年的一篇 ZDNet 文章《Linus Torvalds 及其他对 Linux 系统的看法》中，明确表达了他的感受。
 
-我对于 systemd 本身并没有特别强烈的观点。我对某些核心开发者有意见，他们
+我对于 `systemd` 本身并没有特别强烈的观点。我对某些核心开发者有意见，他们
 
 > 我认为他们对 bug 和兼容性的态度太轻率了，而且我认为某些设计细节是疯狂的（例如，我不喜欢二进制日志），但那些是细节，不是大问题。
 > —Linus Torvalds, ZDNet, 2014
@@ -334,20 +192,20 @@ systemd 工具是编译后的二进制文件，但代码是开源的。工具套
 
 如果你对 Linus 并不了解，我可以告诉你，如果他不喜欢某件东西，他会非常直率、明确且非常清晰地表达这种厌恶。他在表达对事物的厌恶方式上变得更加符合社会接受度。
 
-2013 年，Poettering 写了一篇长博客文章，在其中揭穿了关于 systemd 的神话，同时提供了对创建它的某些原因的见解。这是一篇非常好的读物，我强烈推荐。
+2013 年，Poettering 写了一篇长博客文章，在其中揭穿了关于 `systemd` 的神话，同时提供了对创建它的某些原因的见解。这是一篇非常好的读物，我强烈推荐。
 
 ## systemd 任务
 
-取决于编译过程中使用的选项（本系列未考虑这些选项），systemd 可以拥有多达 69 个二进制执行文件，执行以下任务等：
+取决于编译过程中使用的选项（本系列未考虑这些选项），`systemd` 可以拥有多达 69 个二进制执行文件，执行以下任务等：
 
-- 1. systemd 程序作为 PID 1 运行，并尽可能并行地提供许多服务的系统启动，这作为副作用加快了启动速度。它还管理关机序列。
+- 1. `systemd` 程序作为 PID 1 运行，并尽可能并行地提供许多服务的系统启动，这作为副作用加快了启动速度。它还管理关机序列。
 - 2. `systemctl` 程序为服务管理提供用户界面。
 - 3. 提供对 SystemV 和 LSB 启动脚本的向下兼容。
 - 4. 服务管理和报告提供了比 SystemV 更多的服务状态数据。
-- 5. systemd 标准了系统服务的配置和管理。
+- 5. `systemd` 标准了系统服务的配置和管理。
 - 6. 它包含了基本的系统配置工具，如主机名、日期、语言区域、登录用户列表、运行中的容器和虚拟机、系统账户、运行时目录和设置、管理简单网络配置的守护进程、网络时间同步、日志转发和名称解析。
 - 7. 它提供了套接字（socket）管理。当数据流导向该服务的套接字时，许多服务会被启动。
-- 8. systemd 定器（timers）提供了类似 cron 的高级功能，包括相对于系统启动、systemd 启动和定时器启动时间运行脚本等。
+- 8. `systemd` 定器（timers）提供了类似 cron 的高级功能，包括相对于系统启动、`systemd` 启动和定时器启动时间运行脚本等。
 - 9. 它提供了一个工具来分析定时器规范中使用的日期和时间。
 - 10. 具有层次结构感知的文件系统挂载和卸载允许更安全地对挂载的文件系统进行联动。
 - 11. 它实现了临时文件的积极创建和管理，包括删除。
@@ -355,7 +213,7 @@ systemd 工具是编译后的二进制文件，但代码是开源的。工具套
 - 13. 它提供了一个工具来分析定时器中使用的日期和时间。它的工具可以用于分析系统服务的启动序列。
 - 14. 它包含了用于存储系统日志的工具。
 
-多年来，我阅读了许多关于 systemd 如何接管一切的文章和帖子，我从系统管理员的共同经验了解到，systemd 旨在完全接管一切。我同意；它接管了绝大部分内容。在最近之前，init 系统和服务的管理还没有显著的增强。
+多年来，我阅读了许多关于 `systemd` 如何接管一切的文章和帖子，我从系统管理员的共同经验了解到，`systemd` 旨在完全接管一切。我同意；它接管了绝大部分内容。在最近之前，init 系统和服务的管理还没有显著的增强。
 
 Lennart Poettering 为系统服务所做的，正如 Linus Torvalds 为内核本身所做的那样。正如 Torvalds 和 Linux 内核一样，Poettering 成为了这中间系统服务的领导者和仲裁。我很喜欢我所看到的。
 
@@ -363,34 +221,31 @@ Lennart Poettering 为系统服务所做的，正如 Linus Torvalds 为内核本
 
 **图 1-1 systemd 及其所管理的服务的简单示意图，系统管理员使用的工具**
 
-从图 1-1 以及多年来系统管理员的共同经验可以看出，systemd 旨在完全替换旧的 SystemV。我也知道它显著扩展了 init 系统的能力。
+从图 1-1 以及多年来系统管理员的共同经验可以看出，`systemd` 旨在完全替换旧的 SystemV。我也知道它显著扩展了 init 系统的能力。
 
 同样重要的是，尽管 Linus Torvalds 重写了 Unix 内核是作为一种爱好，但他并没有改变中间服务层，只是重新编译了 SystemV init 以适应他的全新内核。SystemV 比 Linux 本身老得多，在几十年来一直缺乏彻底的改变。
 
 因此，内核是新的，并且通过 Torvalds 的领导和全球成千上万开发者的工作保持新鲜。在 1-1 的顶部还有成千上万强大的应用程序。但在最近之前，init 系统和服务的管理还没有重大的改进。
 
-
 关于此特定服务的运行情况。
-
-第 1 章 爱上 systemd
 
 ## systemd 标准化配置
 
 多年来我遇到的问题之一是，尽管“Linux 还是 Linux”，但并不是所有的发行版都将它们的配置文件存储在相同的位置，或者使用相同的名称甚至格式。考虑到如今世界上庞大的 Linux 主机数量，这种缺乏标准化的做法就是一个问题。我曾遇到过非常糟糕的配置文件和 SystemV 启动文件，它们是由那些试图追赶 Linux 热潮的开发者创建的，他们完全不知道如何为 Linux 编写软件，特别是对于那些需要包含在 Linux 启动序列中的服务。
 
-systemd 单元（unit files）标准化了配置，并强制了一种启动方法和组织方式，这为防止糟糕的 SystemV 启动脚本提供了一定程度的安全。它们还提供了系统管理员（SysAdmin）用于监控和管理服务的工具。
+`systemd` 单元（unit files）标准化了配置，并强制了一种启动方法和组织方式，这为防止糟糕的 SystemV 启动脚本提供了一定程度的安全。它们还提供了系统管理员（SysAdmin）用于监控和管理服务的工具。
 
-Lennart Poettering 写了一篇短博客，描述了 systemd 对常用配置文件的标准名称和位置。2 这种标准化使得管理员的工作变得更加简单，也使得在拥有多个 Linux 发行版的环境中自动化管理任务变得容易。开发者也从这种标准化中获益。
+Lennart Poettering 写了一篇短博客，描述了 `systemd` 对常用配置文件的标准名称和位置。2 这种标准化使得管理员的工作变得更加简单，也使得在拥有多个 Linux 发行版的环境中自动化管理任务变得容易。开发者也从这种标准化中获益。
 
 ## 架构
 
-这些任务以及更多功能由许多守护进程、控制程序和配置文件支持。1-3 显示了许多属于 systemd 的组件。这是一个简化的图表，旨在提供高层概览，因此它不包含所有的单独程序或文件。它没有提供关于数据流的任何见解，因为数据流极其复杂，在本书的背景下将是一个无意义的尝试。
+这些任务以及更多功能由许多守护进程、控制程序和配置文件支持。1-3 显示了许多属于 `systemd` 的组件。这是一个简化的图表，旨在提供高层概览，因此它不包含所有的单独程序或文件。它没有提供关于数据流的任何见解，因为数据流极其复杂，在本书的背景下将是一个无意义的尝试。
 
 2 Poettering, Lennart, http://0pointer.de/blog/projects/the-new-configuration-files
 
 ![](img/fa1192e302965f6d42496424b8070124_31_0.png)
 
-第 1 章 爱上 systemd
+
 
 **图 1-3.** systemd 架构，由 Shmuel Csaba Otto Traian 提供（CC BY-SA 3.0）
 
@@ -398,136 +253,46 @@ Lennart Poettering 写了一篇短博客，描述了 systemd 对常用配置文�
 
 ## systemd 作为 PID 1
 
-systemd 作为 PID 1。它的某些功能比旧的 SystemV3 init 程序要广泛得多，用于管理一个运行的 Linux 主机的许多方面，包括挂载文件系统和管理运行高效 Linux 主机所需的系统服务。systemd 的任何与启动序列无关的任务都不在本章的范围之内（但某些任务将在本书后后部分进行探讨）。
+`systemd` 作为 PID 1。它的某些功能比旧的 SystemV3 `init` 程序要广泛得多，用于管理一个运行的 Linux 主机的许多方面，包括挂载文件系统和管理运行高效 Linux 主机所需的系统服务。`systemd` 的任何与启动序列无关的任务都不在本章的范围之内（但某些任务将在本书后后部分进行探讨）。
 
-第 1 章 爱上 systemd
+# 第 1 章 爱上 systemd
 
-首先，systemd 通过 `/etc/fstab` 挂载文件系统，包括任何交换文件或分区。此时，它可以访问位于 `/etc` 中的配置文件，包括它自己的。它使用其配置链接 `/etc/systemd/default.target` 来决定应该将主机引导到哪种状态或目标。`default.target` 文件指向真实目标文件的符号链接。对于桌面工作站，这通常是图形目标（graphical target），等同于 SystemV 中的运行级别 5。对于服务器，默认很可能是多用户目标（multi-user.target），类似于 SystemV 中的运行级别 3。`emergency.target` 类似于单用户模式。目标（Targets）和服务都是 systemd 单元。
+首先，`systemd` 通过 `/etc/fstab` 挂载文件系统，包括任何交换文件或分区。此时，它可以访问位于 `/etc` 中的配置文件，包括它自己的。它使用其配置链接 `/etc/systemd/default.target` 来决定应该将主机引导到哪种状态或目标。`default.target` 文件指向真实目标文件的符号链接。对于桌面工作站，这通常是图形目标（`graphical.target`），等同于 SystemV 中的运行级别 5。对于服务器，默认很可能是多用户目标（`multi-user.target`），类似于 SystemV 中的运行级别 3。`emergency.target` 类似于单用户模式。目标（Targets）和服务都是 `systemd` 单元。
 
-表 1-1 将 systemd 目标与旧的 SystemV 运行级别进行了比较。systemd 提供了 systemd 目标别名以兼容旧系统。别名允许脚本——许多管理员——使用 `init 3` 等 SystemV 命令来更改运行级别。当然，SystemV 命令会被转发到 systemd 进行解释和执行。
+表 1-1 将 `systemd` 目标与旧的 SystemV 运行级别进行了比较。`systemd` 提供了 `systemd` 目标别名以兼容旧系统。别名允许脚本——许多管理员——使用 `init 3` 等 SystemV 命令来更改运行级别。当然，SystemV 命令会被转发到 `systemd` 进行解释和执行。
 
 表 1-1. SystemV 运行级别与 systemd 目标的对比
 
 | SystemV 运行级别 | systemd 目标 | 描述 | 别名 |
 | :--- | :--- | :--- | :--- |
-| 0 | poweroff.target | 关机 | |
-| 1 | emergency.target | 紧急模式 | |
-| 2 | rescue.target | 救援模式 | |
-| 3 | multi-user.target | 多用户模式 | |
+| 0 | `poweroff.target` | 关机 | |
+| 1 | `emergency.target` | 紧急模式 | |
+| 2 | `rescue.target` | 救援模式 | |
+| 3 | `multi-user.target` | 多用户模式 | |
 | 4 | | (未定义/未使用) | |
-| 5 | graphical.target | 图形模式 | |
-| 6 | reboot.target | 重启 | |
-| | default.target | 默认目标 | |
+| 5 | `graphical.target` | 图形模式 | |
+| 6 | `reboot.target` | 重启 | |
+| | `default.target` | 默认目标 | |
 
-*(注：根据原文逻辑结构，表格内容已按对应关系翻译，保留了 Markdown 格式)*
-
-*(修正：原文表格 1-1 文本内容在源中似乎较为错乱，翻译时根据语义对齐)*
-表 1-1. SystemV 运行级别与 systemd 目标的对比
-表格内容对应：
-- 0: poweroff.target (关机)
-- 1: emergency.target (紧急模式)
-- 2: rescue.target (救援模式)
-- 3: multi-user.target (多用户模式)
-- 5: graphical.target (图形模式)
-- 6: reboot.target (重启)
-- 默认: default.target (默认)
-
-目标和服务都是 systemd 单元。systemd 为了向后兼容提供了 systemd 目标别名。这些别名允许脚本以及许多管理员使用 `init 3` 等 SystemV 命令来更改运行级别。当然，SystemV 命令会被转发到 systemd 进行解释和执行。
-
-*(注：原文提供的表格 1-1 文本在源文件中存在排版错乱，此处已根据技术常识进行翻译并对齐对应关系)*
-
-表 1-1. SystemV 运行级别与 systemd 目标的对比
-| SystemV 运行级别 | systemd 目标 | 描述 | 别名 |
-| :--- | :--- | :--- | :--- |
-| 0 | poweroff.target | 关机 | |
-| 1 | emergency.target | 紧急模式 | |
-| 2 | rescue.target | 救援模式 | |
-| 3 | multi-user.target | 多用户模式 | |
-| 4 | | | |
-| 5 | graphical.target | 图形模式 | |
-| 6 | reboot.target | 重启 | |
-| | default.target | 默认目标 | |
-
-*(重新根据原文错乱文本进行字面翻译)*：
-表 1-1. SystemV 运行级别与 systemd 目标的对比
-| SystemV 运行级别 | systemd 目标 | 描述 | 别名 |
-| :--- | :--- | :--- | :--- |
-| 0 | poweroff.target | 关机 | |
-| 1 | emergency.target | 紧急模式 | |
-| 2 | rescue.target | 救援模式 | |
-| 3 | multi-user.target | 多用户模式 | |
-| 4 | | | |
-| 5 | graphical.target | 图形模式 | |
-| 6 | reboot.target | 重启 | |
-| | default.target | 默认目标 | |
-
-*(由于原文表格内容极度混乱，以下按原文逐行对应翻译)*：
-表 1-1. SystemV 运行级别与 systemd 目标的对比
-| SystemV 运行级别 | systemd 目标 | 描述 | 别名 |
-| :--- | :--- | :--- | :--- |
-| 0 | poweroff.target | 关机 | |
-| 1 | emergency.target | 紧急模式 | |
-| 2 | rescue.target | 救援模式 | |
-| 3 | multi-user.target | 多用户模式 | |
-| 4 | | | |
-| 5 | graphical.target | 图形模式 | |
-| 6 | reboot.target | 重启 | |
-| | default.target | 默认目标 | |
-
-目标和服务都是 systemd 单元。systemd 为了向后兼容提供了 systemd 目标别名。这些别名允许脚本以及许多管理员——使用 `init 3` 等 SystemV 命令来更改运行级别。当然， SystemV 命令会被转发到 systemd 进行解释和执行。
-
-*(注：此处跳过重复的表格描述，进入后续正文)*
+目标和服务都是 `systemd` 单元。`systemd` 为了向后兼容提供了 `systemd` 目标别名。这些别名允许脚本以及许多管理员使用 `init 3` 等 SystemV 命令来更改运行级别。当然，SystemV 命令会被转发到 `systemd` 进行解释和执行。
 
 每个目标都有一组依赖项，描述在它们自身的配置文件中。
 
-systemd 作为 PID 1。它的某些功能比旧的 SystemV3 init 程序要广泛得多，用于管理一个运行的 Linux 主机的许多方面，包括挂载文件系统和管理运行高效 Linux 主机所需的服务。systemd 的任何与启动序列无关的任务都不在本章的范围之内（但某些任务将在本书后后部分进行探讨）。
+`systemd` 作为 PID 1。它的某些功能比旧的 SystemV3 `init` 程序要广泛得多，用于管理一个运行的 Linux 主机的许多方面，包括挂载文件系统和管理运行高效 Linux 主机所需的服务。`systemd` 的任何与启动序列无关的任务都不在本章的范围之内（但某些任务将在本书后后部分进行探讨）。
 
-第 1 章 爱上 systemd
+# 第 1 章 爱上 systemd
 
-首先，systemd 通过 `/etc/fstab` 挂载文件系统，包括任何交换文件或分区。此时，它可以访问位于 `/etc` 中的配置文件，包括它自己的。它使用其配置链接 `/etc/systemd/default.target` 来决定应该将主机引导到哪种状态或目标。`default.target` 文件指向真实目标文件的符号链接。对于桌面工作站，这通常是图形目标，等同于 SystemV 中的运行级别 5。对于服务器，默认很可能是多用户目标，类似于 SystemV 中的运行级别 3。`emergency.target` 类似于单用户模式。目标和服务都是 systemd 单元。
+首先，`systemd` 通过 `/etc/fstab` 挂载文件系统，包括任何交换文件或分区。此时，它可以访问位于 `/etc` 中的配置文件，包括它自己的。它使用其配置链接 `/etc/systemd/default.target` 来决定应该将主机引导到哪种状态或目标。`default.target` 文件指向真实目标文件的符号链接。对于桌面工作站，这通常是图形目标，等同于 SystemV 中的运行级别 5。对于服务器，默认很可能是多用户目标，类似于 SystemV 中的运行级别 3。`emergency.target` 类似于单用户模式。目标和服务都是 `systemd` 单元。
 
 每个目标都有一组依赖项，描述在它们自身的配置文件中。
 
-*(注：由于原文文本存在大量重复和格式混乱，已根据高级工程师逻辑进行了去重和整理，确保不重复且不漏译)*
-
-*(重新提供清晰的完整翻译版本)*：
-
-抱歉，由于您提供的原文文本存在大量重复和格式错乱，我已按照您的“不要重复输出原文”和“不要漏掉任何一行”原则进行了逻辑去重和高质量翻译。
-
-*(由于长度限制，以下为核心翻译内容)*
-
-[content]
-
-2 Poettering, Lennart, http://0pointer.de/blog/projects/the-new-configuration-files
-
-![](img/fa1192e302965f6d42496424b8070124_31_0.png)
-
-第 1 章 爱上 systemd
-
-**图 1-3.** systemd 架构，由 Shmuel Csaba Otto Traian 提供（CC BY-SA 3.0）
-
-对 systemd 的完整阐述需要专门写一本书。你不需要理解 1-3 中 systemd 组件是如何组合在一起的细节；了解那些能够管理各种 Linux 服务并处理日志文件和日志程序的组件就足够了。但显而易见，systemd 并不是某些批评者所声称的那种庞然巨兽。
-
-## systemd 作为 PID 1
-
-systemd PID 1。它的某些功能比旧的 SystemV3 init 程序要广泛得多，用于管理一个运行的 Linux 主机的许多方面，包括挂载文件系统和管理运行高效 Linux 主机所需的系统服务。systemd 的任何与启动序列无关的任务都不在本章的范围之内（但某些任务将在本书后后部分进行探讨）。
-
-第 1 章 爱上 systemd
-
-首先，systemd 通过 `/etc/fstab` 挂载文件系统，包括任何交换文件或分区。此时，它可以访问位于 `/etc` 中的配置文件，包括它自己的。它使用其配置链接 `/etc/systemd/default.target` 来决定应该将主机引导到哪种状态或目标。`default.target` 文件指向真实目标文件的符号链接。对于桌面工作站，这通常是图形目标，等同于 SystemV 中的运行级别 5。对于服务器，默认很可能是多用户目标（multi-user.target），类似于 SystemV 中的运行级别 3。`emergency.target` 类似于单用户模式。目标和服务都是 systemd 单元。
-
-表 1-1 将 systemd 目标与旧的 SystemV 运行级别进行了比较。systemd 提供了 systemd 目标别名以兼容旧系统。这些别名允许脚本以及许多管理员——使用 `init 3` 等 SystemV 命令来更改运行级别。当然，SystemV 命令会被转发到 systemd 进行解释和执行。
-
-*(表格部分因原文错乱已在翻译逻辑中处理)*
-
-
-启动帮助页（man page）还描述并提供了进入初始 RAM 磁盘以及 systemd 关机过程的映射。systemd 还提供了一个工具，可以列出完整启动或指定单元的依赖项。单元（unit）是一个可控制的系统资源实体，其范围从特定服务（如 httpd 或 sshd）到定时器、挂载点、套接字等。请尝试以非 root 用户运行以下命令并滚动查看结果：
+启动帮助页（man page）还描述并提供了进入初始 RAM 磁盘以及 `systemd` 关机过程的映射。`systemd` 还提供了一个工具，可以列出完整启动或指定单元的依赖项。单元（unit）是一个可控制的系统资源实体，其范围从特定服务（如 `httpd` 或 `sshd`）到定时器、挂载点、套接字等。请尝试以非 root 用户运行以下命令并滚动查看结果：
 
 ```
 $ systemctl list-dependencies graphical.target
 ```
 
-请注意，这完全展开了将系统提升到图形运行模式（graphical target run mode）所需的顶层目标单元列表。使用 -all 选项也可以展开所有其他单元：
+请注意，这完全展开了将系统提升到图形运行模式（`graphical.target` run mode）所需的顶层目标单元列表。使用 `-all` 选项也可以展开所有其他单元：
 
 ```
 $ systemctl list-dependencies --all graphical.target
@@ -559,29 +324,29 @@ $ systemctl list-dependencies dbus.service
 
 我学习新知识最好的方法是实践。我认为大多数系统管理员（SysAdmin）也是如此。我们喜欢做我们正在学习的东西。
 
-在本书的其余部分中，你将遇到旨在帮助你获得 systemd 及其命令实操经验的实验。其中许多实验将具有破坏性，并且不利于功能系统的正常运行。
+在本书的其余部分中，你将遇到旨在帮助你获得 `systemd` 及其命令实操经验的实验。其中许多实验将具有破坏性，并且不利于功能系统的正常运行。
 
-我建议你使用带有你最喜欢的 Linux 版本的虚拟机——当然是带有 systemd 的——这样如果你不小心把系统完全搞崩溃（我似乎经常这样做），你可以在安全的环境中重新探索它。你的测试系统需要安装 GUI 桌面环境（如 Xfce、LXDE、GNOME、KDE 或你其他喜欢的）。
+我建议你使用带有你最喜欢的 Linux 版本的虚拟机——当然是带有 `systemd` 的——这样如果你不小心把系统完全搞崩溃（我似乎经常这样做），你可以在安全的环境中重新探索它。你的测试系统需要安装 GUI 桌面环境（如 Xfce、LXDE、GNOME、KDE 或你其他喜欢的）。
 
 当你按照喜欢的方式配置好虚拟机后，对其拍摄快照（snapshot），然后在每个章节结束时拍摄快照。这样，你就可以追溯到任何需要的深度。
 
 ## 总结
 
-甚至在深入研究 systemd 之前，显而易见它既强大又复杂。同样明显，systemd 并不是一个单一、巨大的、单体且不可知的二进制文件。相反，它由许多较小的组件和子命令组成，这些组件旨在执行特定任务。由于它是开源的，如果你感兴趣，可以查阅源代码。
+甚至在深入研究 `systemd` 之前，显而易见它既强大又复杂。同样明显，`systemd` 并不是一个单一、巨大的、单体且不可知的二进制文件。相反，它由许多较小的组件和子命令组成，这些组件旨在执行特定任务。由于它是开源的，如果你感兴趣，可以查阅源代码。
 
-systemd 一直以来在各种 Linux 开发者和系统管理员之间引发争议。我们探讨了产生分歧的一些原因。然而，我发现 systemd 和 SystemV 都有我喜欢的地方。尽管有某些 Linux 发行版继续使用 SystemV init，但任何 init 服务的复杂性都大到无法接受。
+`systemd` 一直以来在各种 Linux 开发者和系统管理员之间引发争议。我们探讨了产生分歧的一些原因。然而，我发现 `systemd` 和 SystemV 都有我喜欢的地方。尽管有某些 Linux 发行版继续使用 SystemV `init`，但任何 `init` 服务的复杂性都大到无法接受。
 
-我们查看了 systemd 的功能以及它在范围上与 SystemV 的不同。我们还查看了 systemd 比 SystemV 为系统管理员提供了更多的信息，以及 systemd 对服务施加了更高标准的标准化。
+我们查看了 `systemd` 的功能以及它在范围上与 SystemV 的不同。我们还查看了 `systemd` 比 SystemV 为系统管理员提供了更多的信息，以及 `systemd` 对服务施加了更高标准的标准化。
 
 ## 练习
 
 执行以下练习以完成本章：
 
-- 1. 你喜欢 systemd 的哪些功能？为什么？
-- 2. 你讨厌 systemd 的哪些功能？为什么？
-- 3. systemd 作为 PID 1 的功能是什么？
-- 4. 列出 systemd 执行的至少五个任务。
-- 5. systemd 目标与 SystemV 运行级别（runlevels）有什么关系？
+- 1. 你喜欢 `systemd` 的哪些功能？为什么？
+- 2. 你讨厌 `systemd` 的哪些功能？为什么？
+- 3. `systemd` 作为 PID 1 的功能是什么？
+- 4. 列出 `systemd` 执行的至少五个任务。
+- 5. `systemd` 目标与 SystemV 运行级别（runlevels）有什么关系？
 
 # 第 2 章 引导与启动
 
@@ -590,6 +355,7 @@ systemd 一直以来在各种 Linux 开发者和系统管理员之间引发争�
 在本章中，你将学习：
 
 字体 引导与启动之间的区别
+
 - 在硬件启动过程中发生了什么
 - MBR 与 GPT 的区别
 - 在硬件启动过程中发生了什么
@@ -601,11 +367,11 @@ systemd 一直以来在各种 Linux 开发者和系统管理员之间引发争�
 
 ## 概述
 
-本章探讨了硬件启动、通过 GRUB 加载的 Linux 启动，以及 systemd 在启动过程中的作用。在深入进入 Linux 启动细节之前，了解硬件启动的差异是至关重要的。当电源首次作用于计算机时，启动过程是复杂的，实际上包含以下三个部分：
+本章探讨了硬件启动、通过 GRUB 加载的 Linux 启动，以及 `systemd` 在启动过程中的作用。在深入进入 Linux 启动细节之前，了解硬件启动的差异是至关重要的。当电源首次作用于计算机时，启动过程是复杂的，实际上包含以下三个部分：
 
-- 硬件启动：systemd 负责初始化硬件
-- Linux 启动：systemd 负责加载引导程序
-- Linux 启动：systemd 负责从外部设备启动
+- 硬件启动：`systemd` 负责初始化硬件
+- Linux 启动：`systemd` 负责加载引导程序
+- Linux 启动：`systemd` 负责从外部设备启动
 
 ## 硬件引导
 
@@ -625,14 +391,13 @@ BIOS/UEFI 用户界面可用于配置系统硬件，例如超频、指定 CPU �
 
 在本节中，我们将非常简地查看 MBR 和 GPT。
 
-
-
-
 2 维基百科，“GUID 分区表，”https://en.wikipedia.org/wiki/GUID_Partition_Table。该条目对 MBR、其存在的问题以及 GPT 的功能进行了极佳的描述。
 
 26
 
 # 第 2 章 Linux 启动与引导
+
+
 
 ## MBR
 
@@ -668,15 +433,13 @@ GPT 在磁盘的第一个扇区使用 MBR，尽管它被用作保护结构提供
 
 GRUB 引导程序的主要功能是将 Linux 内核加载到内存中运行。
 
-GRUB2 代表“大统一引导程序 2 版”（Grand Unified Bootloader, version 2），它现在是大多数 Linux 发行版的主要引导程序。GRUB2 是让计算机足够找到操作系统内核并将其加载到内存中的程序。由于编写和使用 GRUB 比 GRUB2 更容易，我在本文中使用 GRUB 术语，除非另有说明，否则我指的是 GRUB2。GRUB2 提供与 GRUB Legacy 相同的启动功能，但 GRUB2 还提供了一个类似于主机的基于命令的预 OS 环境，并在预启动阶段允许更大的灵活性。GRUB2 通过 /boot/grub2/grub.cfg 配置。
+GRUB2 代表“大统一引导程序 2 版”（Grand Unified Bootloader, version 2），它现在是大多数 Linux 发行版的主要引导程序。GRUB2 是让计算机足够找到操作系统内核并将其加载到内存中的程序。由于编写和使用 GRUB 比 GRUB2 更容易，我在本文中使用 GRUB 术语，除非另有说明，否则我指的是 GRUB2。GRUB2 提供与 GRUB Legacy 相同的启动功能，但 GRUB2 还提供了一个类似于主机的基于命令的预 OS 环境，并在预启动阶段允许更大的灵活性。GRUB2 通过 `/boot/grub2/grub.cfg` 配置。
 
 4 GNU, GRUB,https://www.gnu.org/software/grub/manual/grub
 
-# 第 2 章 Linux 启动与引导
-
 GRUB 的设计旨在兼容多引导规范，这允许 GRUB 引导多个版本的 Linux 和其他自由操作系统；它还可以链式加载专有操作系统的引导记录。GRUB 允许用户为任何给定的 Linux 发行版选择从几个不同的内核启动。这使得在更新某种原因失败或与重要软件不兼容时，能够引导到之前的内核版本。多年来我多次使用了此功能。
 
-GRUB 可以使用 /boot/grub/grub.conf 文件进行配置。GRUB 的配置或 GRUB2 的使用超出了本文范围。如文所述，在 POST 结束时，BIOS/UEFI 会搜索连接的磁盘以查找位于 GPT 中的引导记录。BIOS/UEFI 将找到的记录加载到内存中并开始执行。
+GRUB 可以使用 `/boot/grub/grub.conf` 文件进行配置。GRUB 的配置或 GRUB2 的使用超出了本文范围。如文所述，在 POST 结束时，BIOS/UEFI 会搜索连接的磁盘以查找位于 GPT 中的引导记录。BIOS/UEFI 将找到的记录加载到内存中并开始执行。
 
 ## GUID 分区表
 
@@ -689,9 +452,9 @@ GRUB 可以使用 /boot/grub/grub.conf 文件进行配置。GRUB 的配置或 GR
 
 **图 2-1:** 分区表占据了磁盘的第一个扇区，尽管它被设计为保护结构以提供一个标识符，以便仅识别 MBR 分区的工具不会将驱动器识别为空存储设备。MBR——或 GPT 版本——是 Linux 启动的起点。
 
-你可以使用 **gdisk 命令**判断一个存储设备是使用传统 MBR 还是 GPT 创建的。
+你可以使用 `gdisk` 命令判断一个存储设备是使用传统 MBR 还是 GPT 创建的。
 
-**实验 2-1：我的存储设备是 GPT 吗？
+**实验 2-1：我的存储设备是 GPT 吗？**
 
 查看存储设备以判断它是 MBR 还是 GPT。此实验必须以 root 身份执行。首先，识别你的存储设备。
 
@@ -726,8 +489,6 @@ GRUB 可以使用 /boot/grub/grub.conf 文件进行配置。GRUB 的配置或 GR
 | ├vg01-tmp | 253:5 | 0 | 15G | lvm | /tmp |
 | └vg01-ansible | 253:6 | 0 | 15G | lvm | /ansible |
 
-# 第 2 章 Linux 启动与引导
-
 注意扫描显示没有已知分区表，这是因为该存储设备使用了逻辑卷管理（LVM）。这意味着它没有传统的分区。
 
 ```
@@ -752,8 +513,6 @@ Command (? for help):
 
 31
 
-# 第 2 章 Linux 启动与引导
-
 我在我的主工作站扫描的这个存储设备具有 GPT 分区表。你可以看到保护 MBR，GPT 指出存在 GPT 分区。
 
 ```
@@ -765,19 +524,20 @@ GPT fdisk (gdisk) 版本 1.10
 分区表扫描:
 
 +   - MBR: 保护
+
 - BSD: 不存在
+
 - APM: 不存在
+
 - GPT: 存在
 
 找到带有保护 MBR 的有效 GPT；使用 GPT。
 
 Command (? for help):
 
-在使用 gdisk 扫描磁盘时需要注意的情况是，所有分区表格式都显示“不存在”。如果发生这种情况，最可能是因为存储设备是 LVM 物理卷（pV）。你的设备名称与我的不同。
+在使用 `gdisk` 扫描磁盘时需要注意的情况是，所有分区表格式都显示“不存在”。如果发生这种情况，最可能是因为存储设备是 LVM 物理卷（pV）。你的设备名称与我的不同。
 
-core.img 程序足够智能，可以定位并加载文件的
-
-
+`core.img` 程序足够智能，可以定位并加载文件的
 
 GRUB 的最后阶段。GRUB 2 阶段的所有文件都位于 `/boot/grub2` 目录及其若干子目录下。GRUB2 并没有镜像文件。相反，它主要由运行时内核模块组成，这些模块根据需要从 `/boot/efi/EFI` 目录加载。
 
@@ -789,9 +549,9 @@ GRUB 支持从选定的 Linux 内核中启动。红帽包管理器 DNF 支持多
 
 所有 Linux 内核都采用自解压压缩格式以节省空间。内核位于 `/boot` 目录，同时还有一个初始 RAM 磁盘镜像（initrd）以及硬盘的设备映射。
 
-当选定的内核加载到内存并开始执行后，它必须先从压缩文件中提取自身，才能执行任何有用工作。内核提取完自身后，它会启动 systemd并将控制权交给它。
+当选定的内核加载到内存并开始执行后，它必须先从压缩文件中提取自身，才能执行任何有用工作。内核提取完自身后，它会启动 `systemd`并将控制权交给它。
 
-这就是引导过程的结束。此时，Linux 内核和 systemd 正在运行，但无法为最终用户执行任何生产性任务，因为没有其他程序在运行。
+这就是引导过程的结束。此时，Linux 内核和 `systemd` 正在运行，但无法为最终用户执行任何生产性任务，因为没有其他程序在运行。
 
 第 2 章 Linux 引导与启动
 
@@ -801,7 +561,11 @@ GRUB 支持从选定的 Linux 内核中启动。红帽包管理器 DNF 支持多
 
 ## 实验 2-2：探索文本模式启动
 
-由于 Linux 启动速度极快，且向数据流输出了大量的信息消息，我们无法阅读其中的大部分内容。然而，Linux 内核开发者为我们提供了一个名为 `dmesg` 的极佳替代方案。`dmesg` 命令列出了所有显示在屏幕上的启动消息，让我们能够探索启动期间发生了什么。这包括所有的内核消息，例如定位内存和设备，以及由 systemd 执行的系统启动。请以 root 用户身份执行此实验。
+由于 Linux 启动速度极快，且向数据流输出了大量的信息消息，我们无法阅读其中的大部分内容。然而，Linux 内核开发者为我们提供了一个名为 `dmesg` 的极佳替代方案。`dmesg` 命令列出了所有显示在屏幕上的启动消息，让我们能够探索启动期间发生了什么。这包括所有的内核消息，例如定位内存和设备，以及由 `systemd` 执行的系统启动。请以 root 用户身份执行此实验。
+
+
+
+# 第 2 章 Linux 引导与启动
 
 ```
 [root@testvm1 ~]# dmesg | less
@@ -855,16 +619,17 @@ max_cycles: 0x1cd42ffb, max_idle_ns: 88150948 ns
 [ 002705 ] last_pfn = 0x022000 max_arch_pfn = 0x040000
 [ 0.019740 ] found SMP MP-table in [mem 0x0009fbf0-0x0009fbf
 [ 0.020703 ] RAMDISK: [mem 0x33f0e00-0x35f7eff]
+```
 
-类似 [0.002696] 这样的数字是自内核运行以来的纳秒（百万分之一）。翻阅数据并寻找内存初始化、CPU 发现、文件系统挂载、网络接口卡 (NIC) 配置以及其他事件。
+类似 `[0.002696]` 这样的数字是自内核运行以来的纳秒（百万分之一）。翻阅数据并寻找内存初始化、CPU 发现、文件系统挂载、网络接口卡 (`NIC`) 配置以及其他事件。
 
 ## systemd
 
-systemd 是所有进程之母。它的进程 ID (PID) 始终为 1。它负责将 Linux 主机带到可以执行生产性工作的状态。它的某些功能比旧的 SystemV init 程序广泛得多，用于管理运行 Linux 主机的许多方面，包括挂载文件系统和启动生产性 Linux 主机所需的系统服务。任何与启动序列无关的 systemd 任务在本章的范围内，但我们将在后面的章节中探索它们。
+`systemd` 是所有进程之母。它的进程 ID (`PID`) 始终为 1。它负责将 Linux 主机带到可以执行生产性工作的状态。它的某些功能比旧的 `SystemV init` 程序广泛得多，用于管理运行 Linux 主机的许多方面，包括挂载文件系统和启动生产性 Linux 主机所需的系统服务。任何与启动序列无关的 `systemd` 任务在本章的范围内，但我们将在后面的章节中探索它们。
 
-systemd 根据 `/etc/fstab` 文件（文件系统表）挂载文件系统，包括任何交换文件或分区。此时，它可以访问 `/etc` 中的配置文件，包括它自己的配置。它使用配置链接 `/etc/systemd/system/default.target` 来决定它应该引导主机到何种状态或目标。`default.target` 文件是一个符号链接——指向真实文件的指针。对于桌面工作站，这通常是 `graphical.target`，它等于 SystemV 中的运行级别 5。对于服务器，默认值可能是 `multi-user.target`，类似于 SystemV 中的运行级别 3。`emergency.target` 类似于单用户模式。目标和服务是系统单元。
+`systemd` 根据 `/etc/fstab` 文件（文件系统表）挂载文件系统，包括任何交换文件或分区。此时，它可以访问 `/etc` 中的配置文件，包括它自己的配置。它使用配置链接 `/etc/systemd/system/default.target` 来决定它应该引导主机到何种状态或目标。`default.target` 文件是一个符号链接——指向真实文件的指针。对于桌面工作站，这通常是 `graphical.target`，它等于 `SystemV` 中的运行级别 5。对于服务器，默认值可能是 `multi-user.target`，类似于 `SystemV` 中的运行级别 3。`emergency.target` 类似于单用户模式。目标和服务是系统单元。
 
-2-1 是 systemd 目标与旧 SystemV 启动运行级别的比较。systemd 目标别名允许脚本（以及像我这样的许多管理员）使用 `init 3` 等 SystemV 命令来更改目标。当然，SystemV 命令会被转发给 systemd 进行解释和执行。
+2-1 是 `systemd` 目标与旧 `SystemV` 启动运行级别的比较。`systemd` 目标别名允许脚本（以及像我这样的许多管理员）使用 `init 3` 等 `SystemV` 命令来更改目标。当然，`SystemV` 命令会被转发给 `systemd` 进行解释和执行。
 
 表 2-1. SystemV 运行级别与 systemd 目标及某些目标别名的比较
 
@@ -880,8 +645,6 @@ systemd 根据 `/etc/fstab` 文件（文件系统表）挂载文件系统，包�
 36
 第 2 章 Linux 引导与启动
 
-
-
 halt.target
 停止系统但不关闭电源。
 reboot.target 6
@@ -891,43 +654,41 @@ poweroff.0
 runlevel0
 停止系统并关闭目标电源。
 
-# 第 2 章 Linux 引导与启动
-
-每个目标（target）在其配置文件中都描述了一组依赖项。systemd 会启动所需的依赖项。这些依赖项是使 Linux 宿主机在特定功能级别上运行所需的的服务。
+每个目标（target）在其配置文件中都描述了一组依赖项。`systemd` 会启动所需的依赖项。这些依赖项是使 Linux 宿主机在特定功能级别上运行所需的的服务。
 
 当目标文件中列出的所有依赖项都加载并运行后，系统即视为运行在该目标级别上。
 
-systemd 还会查看旧的 SystemV 目录以检查是否存在启动文件。如果是，systemd 将使用它们作为配置文件来启动由文件描述的服务。已弃用的网络服务是 Fedora 中仍然在使用 SystemV 启动文件的一个良好示例。
+`systemd` 还会查看旧的 `SystemV` 目录以检查是否存在启动文件。如果是，`systemd` 将使用它们作为配置文件来启动由文件描述的服务。已弃用的网络服务是 Fedora 中仍然在使用 `SystemV` 启动文件的一个良好示例。
 
-图 2-2 直接复制自 bootop 手页第 6 页。它展示了 systemd 启动期间通用事件的映射，以及确保成功启动的基本排序要求。
+图 2-2 直接复制自 `bootop` 手页第 6 页。它展示了 `systemd` 启动期间通用事件的映射，以及确保成功启动的基本排序要求。
 
-sysinit.target 和 basic.target 目标可以认为是启动过程中的检查点。虽然 systemd 的设计目标之一是并行启动系统服务，但某些服务和服务功能性目标必须在其他服务和其他目标之前启动。在满足该检查点所需的所有和服务目标之前，这些检查点是无法通过的。
+`sysinit.target` 和 `basic.target` 目标可以认为是启动过程中的检查点。虽然 `systemd` 的设计目标之一是并行启动系统服务，但某些服务和服务功能性目标必须在其他服务和其他目标之前启动。在满足该检查点所需的所有和服务目标之前，这些检查点是无法通过的。
 
-当 sysinit.target 依赖的所有单元完成后完成后，就会到达该目标。所有这些单元（挂载文件系统、设置交换文件、启动 udev、设置随机生成器种子、启动低级服务，以及如果一个或多个文件系统加密则设置加密服务）都必须完成，但在 sysinit.target 内部，这些任务可以并行执行。
+当 `sysinit.target` 依赖的所有单元完成后完成后，就会到达该目标。所有这些单元（挂载文件系统、设置交换文件、启动 `udev`、设置随机生成器种子、启动低级服务，以及如果一个或多个文件系统加密则设置加密服务）都必须完成，但在 `sysinit.target` 内部，这些任务可以并行执行。
 
-sysinit.target 启动系统功能完整所需的所有低级和服务和单元，以及进入 basic.target 所需的单元。
+`sysinit.target` 启动系统功能完整所需的所有低级和服务和单元，以及进入 `basic.target` 所需的单元。
 
 6 使用 `man bootop` 命令。(39)
 
-# 第 2 章 Linux 引导与启动
+第 2 章 Linux 引导与启动
 
-在满足 sysinit.target 之后，systemd 开始启动 basic.target，并启动所有满足它所需的单元。基本目标通过启动所有后续目标所需的单元来提供额外的功能。这些包括设置各种可执行目录的路径、通信套接字和定时器。
+在满足 `sysinit.target` 之后，`systemd` 开始启动 `basic.target`，并启动所有满足它所需的单元。基本目标通过启动所有后续目标所需的单元来提供额外的功能。这些包括设置各种可执行目录的路径、通信套接字和定时器。
 
-最后，初始化用户级目标 multi-user.target 和 graphical.target。在满足图形目标依赖项之前，必须到达 multi-user.target。图 2-2 中下划线的目标是通常的启动目标。当到达其中一个目标时，启动即完成。如果 multi-user.target 是默认目标，你应该在控制台上看到文本模式登录。如果 graphical.target 是默认目标，你应该看到图形化登录；你将看到的特定 GUI 登录界面将取决于默认显示管理器。
+最后，初始化用户级目标 `multi-user.target` 和 `graphical.target`。在满足图形目标依赖项之前，必须到达 `multi-user.target`。图 2-2 中下划线的目标是通常的启动目标。当到达其中一个目标时，启动即完成。如果 `multi-user.target` 是默认目标，你应该在控制台上看到文本模式登录。如果 `graphical.target` 是默认目标，你应该看到图形化登录；你将看到的特定 GUI 登录界面将取决于默认显示管理器。
 
-bootup 手页还描述并提供了引导到初始内存磁盘（RAM disk）以及 systemd 关机的映射。
+`bootup` 手页还描述并提供了引导到初始内存磁盘（RAM disk）以及 `systemd` 关机的映射。
 
 ![](img/fa1192e302965f6d42496424b8070124_60_0.png)
 
-图 2-2. 来自 bootup 手页的 systemd 启动映射 (41)
+图 2-2. 来自 `bootup` 手页的 `systemd` 启动映射 (41)
 
 第 2 章 Linux 引导与启动
 
 ## 实验 2-3：更改默认目标
 
-到目前为止，我们只启动到了 graphical.target，因此让我们将默认目标改为 multi-user.target，以便进入控制台界面而不是图形界面。
+到目前为止，我们只启动到了 `graphical.target`，因此让我们将默认目标改为 `multi-user.target`，以便进入控制台界面而不是图形界面。
 
-在 testvm1 上以 root 用户身份，切换到维护 systemd 配置的目录并进行列出。
+在 `testvm1` 上以 `root` 用户身份，切换到维护 `systemd` 配置的目录并进行列出。
 
 ```
 [root@testvm1 ~]# cd /etc/systemd/system/ ; ll
@@ -936,26 +697,41 @@ total 56
 
 ```
 drwxr-xr-x. 2 root 4096 Nov 5 04:17 basic.target.wants
+
 drwxr-xr-x. 2 root 4096 Nov 5 04:17 bluetooth.target.wants
+
 lrwxrwxrwx.x. 1 root 37 Nov 5 04:17 ctrl-alt-del.target -> /usr/lib/systemd/system/reboot.target
+
 <SNIP>
+
 rwxrwxrw.x. 1 root 40 Jan 17 07:39 default.target -> /usr/lib/systemd/system/graphical.target
+
 drwxr-xr-x. 2 root 4096 Nov 5 04:18 'dev-virtio\x2dports-org.qemu.guest_agent.0.device.wants
+
 lrwxrwxrwx.x. 1 root 39 Feb 7 16:18 display-manager.service ->/usr/lib/systemd/system/lightdm.service
+
 drwxr-xr-x. 2 root 4096 Nov 5 04:17 getty.target.wants
+
 drwxr-xr-x. 2 root 4096 Jan 17 07:54 graphical.target.wants
+
 drwxr-xr-x. 2 root 4096 Nov 5 04:18 local-fs.target.wants
+
 drwxr-xr-x. 2 root 4096 Jan 25 13:52 multi-user.target.wants
+
 drwxr-xr-x. 2 root 4096 Nov 5 04:18 default.target.wants
+
 drwxr-xr-x. 2 root 4096 Nov 5 04:18 network.target.wants
+
 drwxr-xr-x. 2 root 4096 Nov 5 04:18 remote.target.wants
+
 drwxr-xr-x. 2 root 4096 Nov 5 04:18 session.target.wants
+
 drwxr-xr-x. 2 root 4096 Nov 5 04:18 swap.target.wants
+
 drwxr-xr-x. 2 root 4096 Nov 5 04:18 sysinit.target.wants
+
 drwxr-xr-x. 2 root 4096 Nov 5 04:18 system.target.wants
 ```
-
-
 
 在使用 `systemctl` 命令时发生发生了细节。了解这些细节可以帮助你在尝试定位问题的真实根源。
 
@@ -965,15 +741,17 @@ drwxr-xr-x. 2 root 4096 Nov 5 04:18 system.target.wants
 ## systemctl isolate default.target
 ```
 
+
+
 # 第 2 章 Linux 引导与启动
 
-我不确定 systemd 的开发者们为何为这个子命令选择“isolate”（隔离）一词，它的作用是将目标（target）从一个目标切换到另一个目标，例如从紧急目标切换到图形目标。
+我不确定 `systemd` 的开发者们为何为这个子命令选择“isolate”（隔离）一词，它的作用是将目标（target）从一个目标切换到另一个目标，例如从紧急目标切换到图形目标。
 
 上面的命令等同于 SystemV 脚本和 `init` 程序时代旧的 `init 5` 命令。
 
-GRUB 和 `systemd` 初始化系统是大多数现代 Linux 发行版在引导和启动阶段的关键组件。这两个组件紧密合作，首先加载内核，然后启动所有系统服务，从而产生一个功能完整的 GNU/Linux 系统。
+`GRUB` 和 `systemd` 初始化系统是大多数现代 Linux 发行版在引导和启动阶段的关键组件。这两个组件紧密合作，首先加载内核，然后启动所有系统服务，从而产生一个功能完整的 GNU/Linux 系统。
 
-尽管我觉得 GRUB 和 systemd 比它们的前身更复杂，但它们也同样容易学习和管理。手册页（man pages）包含了大量关于 systemd 的信息，而且 freesktop.7 和完整的系统页面8 也可以网上找到。
+尽管我觉得 `GRUB` 和 `systemd` 比它们的前身更复杂，但它们也同样容易学习和管理。手册页（man pages）包含了大量关于 `systemd` 的信息，而且 `freesktop.7` 和完整的系统页面8 也可以网上找到。
 
 ## 图形化登录
 
@@ -1032,17 +810,13 @@ GRUB 和 `systemd` 初始化系统是大多数现代 Linux 发行版在引导和
 
 在现代发行版中，这些选择是在安装时为你做出的，并取决于你选择的桌面以及发行版打包者的偏好。桌面、窗口管理器和显示管理器可以轻松更改。
 
-现在 systemd 已成为许多发行版的标准启动系统，你可以在 `/etc/systemd/system` 中设置首选显示管理器，那里是基本系统配置的位置。有一个名为 `display-manager.service` 的符号链接指向 `/usr/lib/systemd/system` 中的某个显示管理器单元。每个安装的显示管理器在那里都有服务单元。要更改激活的显示管理器，删除现有的链接并替换为你想用的。
+现在 `systemd` 已成为许多发行版的标准启动系统，你可以在 `/etc/systemd/system` 中设置首选显示管理器，那里是基本系统配置的位置。有一个名为 `display-manager.service` 的符号链接指向 `/usr/lib/systemd/system` 中的某个显示管理器单元。每个安装的显示管理器在那里都有服务单元。要更改激活的显示管理器，删除现有的链接并替换为你想用的。
 
 ## 实验 2-4：显示与窗口
 
 以 root 身份执行此实验。我们将安装额外的显示管理器和独立窗口管理器，并在它们之间切换。
 
 检查已安装了哪些窗口管理器。封装窗口器的 rpms 包命名不一致，因此除非你已经知道它们的 rpM 包名，否则很难通过简单的 `dnf search` 找到它们，经过一番研究后，我知道了。
-
-
-
-
 
 lightdm.x86_64 1.32.0-fc37 @anaconda
 
@@ -1055,7 +829,7 @@ lightdm.x86_64 1.32.0-fc37 @anaconda
 - sddm.i686 0.19.0^git20220125.fc24321-1.fc37 fedora
 - sddm.x86_64 0.19.0^git20220125.fc24321-1.fc37 fedora
 
-每个显示管理器都作为 systemd 服务启动，因此确定安装了哪些显示器的另一种方法是检查 `/usr/lib/systemd/system/` 目录。lightdm 显示器显示为已安装两次。
+每个显示管理器都作为 `systemd` 服务启动，因此确定安装了哪些显示器的另一种方法是检查 `/usr/lib/systemd/system/` 目录。lightdm 显示器显示为已安装两次。
 
 ```bash
 # cd /usr/lib/systemd/system/ // ll dm.service
@@ -1177,9 +951,6 @@ lrwxrwxwx. 1 root 39 Nov 5 04:18 display-manager.service -> /usr/lib/systemd/sys
 
 Thompson 坐在用作控制台与计算机交互的打字终端前。
 
-
-
-
 运行 Linux 的现代个人计算机和服务器并没有可以作为控制台使用的哑终端终端（dumb terminals）。Linux 通常提供多个虚拟控制台的能力，允许通过单个标准 PC 键盘和显示器进行多次登录。大多数 Linux 发行版通常会提供六或七个用于文本模式登录的虚拟控制台。如果使用了图形界面，第一个虚拟控制台 vc1 在 X 窗口系统 (X) 启动后变为第一个图形界面 (GUI) 会话，而 vc7 变为第二个 GUI 会话。
 
 每个虚拟控制台都分配有一个与控制台编号对应的功能键。因此，vc1 会被分配到物理计算机上的功能键 F1，并且可以从这些会话轻松切换过去。你可以按住 **Ctrl+Alt** 键并按下 **F2** 切换到 vc2，如图 2-7 所示。然后按住 **Ctrl+Alt** 键并按下 **F1** 回到 vc1。
@@ -1215,9 +986,9 @@ Thompson 坐在用作控制台与计算机交互的打字终端前。
 
 Linux 主机启动后，它会引导并经过启动过程。启动过程完成后，我们会看到一个图形或命令行登录界面。没有登录提示，就无法登录 Linux 主机。
 
-systemd 使用 systemd-logind.service 管理登录。该服务跟踪用户登录、进程和空闲状态。登录提示是如何显示的，以及在用户注销后如何显示新提示的，是理解 Linux 启动的最后阶段。
+`systemd` 使用 `systemd-logind.service` 管理登录。该服务跟踪用户登录、进程和空闲状态。登录提示是如何显示的，以及在用户注销后如何显示新提示的，是理解 Linux 启动的最后阶段。
 
-让我们快速查看 systemd-logind.service。
+让我们快速查看 `systemd-logind.service`。
 
 61
 
@@ -1225,12 +996,15 @@ systemd 使用 systemd-logind.service 管理登录。该服务跟踪用户登录
 
 ## 实验 2-6：探索 systemd-logind.service
 
-在 root 终端会话中，查看 systemd-logind.service 的状态。
+在 root 终端会话中，查看 `systemd-logind.service` 的状态。
 
-```
+```bash
 ## systemctl status systemd-logind.service
 ```
 
+
+
+```
 - * systemd-logind.service - 用户登录管理
 
 Loaded: loaded (/usr/lib/systemd/system/systemd-logind.service; static)
@@ -1262,6 +1036,7 @@ systemd-logind.service - User Login Management...
 Oct 24 10:55:38 testv1.both.org systemd-logind[1060]: New seat0.
 
 62
+```
 
 # 第 2 章 Linux 引导与启动
 
@@ -1274,43 +1049,41 @@ Oct 24 11:20:14 testv1.both.org systemd-logind[1060]: New session 2 of user root
 
 ## CLI 登录界面
 
-CLI 登录由程序 getty 启动，它代表 TTY。getty 的历史功能是等待远程连接。现代版本的 getty 结合 systemd 处理虚拟控制台以及输入行。以下步骤显示了现代 Linux 中的事件顺序：
+CLI 登录由程序 `getty` 启动，它代表 TTY。`getty` 的历史功能是等待远程连接。现代版本的 `getty` 结合 `systemd` 处理虚拟控制台以及输入行。以下步骤显示了现代 Linux 中的事件顺序：
 
-- 1. systemd 启动 systemd-getty-generator。
-- 2. systemd-getty-generator 使用 systemd-getty@.service 在每个虚拟控制台上启动 getty。
-- 3. getty 等待连接。
-- 4. getty 在显示器上显示文本登录界面。
+- 1. `systemd` 启动 `systemd-getty-generator`。
+- 2. `systemd-getty-generator` 使用 `systemd-getty@.service` 在每个虚拟控制台上启动 `getty`。
+- 3. `getty` 等待连接。
+- 4. `getty` 在显示器上显示文本登录界面。
 - 5. 用户登录。
-- 6. 启动 /etc/passwd 中指定的 shell。
+- 6. 启动 `/etc/passwd` 中指定的 shell。
 - 7. 执行 shell 配置。
 - 8. 用户在会话中工作。
 - 9. 用户注销。
-- 10. 如果存在，运行用户的注销脚本。对于 Bash 来说，就是 .bash_logout。
-- 11. systemd-getty-generator 在注销的虚拟控制台上启动一个 getty。
+- 10. 如果存在，运行用户的注销脚本。对于 Bash 来说，就是 `.bash_logout`。
+- 11. `systemd-getty-generator` 在注销的虚拟控制台上启动一个 `getty`。
 - 12. 回到步骤 3。
 
 从步骤 3 开始，只要主机处于运行，这是一个循环过程。在用户注销旧会话后，虚拟控制台上会立即显示新的登录界面。
 
 ## GUI 登录界面
 
-由显示管理器管理的 GUI 登录界面的处理方式与 systemd-getty 处理文本登录的方式相似：
+由显示管理器管理的 GUI 登录界面的处理方式与 `systemd-getty` 处理文本登录的方式相似：
 
-- 1. systemd 在启动序列结束时启动显示管理器 (dm)。
+- 1. `systemd` 在启动序列结束时启动显示管理器 (`dm`)。
 - 2. 显示管理器在通常是虚拟控制台 1 上显示图形登录界面。
-- 3. dm 等待登录。
+- 3. `dm` 等待登录。
 - 4. 用户登录。
 - 5. 启动指定的窗口管理器。
 - 6. 如果有桌面，则启动桌面 GUI。
 - 7. 用户在窗口管理器/桌面中工作。
 - 8. 用户注销。
-- 9. systemd 重新启动显示管理器。
+- 9. `systemd` 重新启动显示管理器。
 - 10. 回到步骤 2。
-
-
 
 它们在提供底层图形功能的同时，也提供了有用、必要且有时有趣的功能。我们还学习了如何更改默认显示管理器以提供不同的 GUI 登录界面，以及 GUI 和命令行登录是如何运作的。
 
-本章还介绍了一些 systemd 工具，用于执行基本任务，如查看和更改默认目标以及重启服务。
+本章还介绍了一些 `systemd` 工具，用于执行基本任务，如查看和更改默认目标以及重启服务。
 
 65
 
@@ -1322,11 +1095,11 @@ CLI 登录由程序 getty 启动，它代表 TTY。getty 的历史功能是等�
 
 - 1. 描述 Linux 引导过程。
 - 2. 描述 Linux 启动过程。
-- 3. GRUB 的作用是什么？
-- 4. GRUB 的第一阶段位于硬盘的什么位置？
-- 5. systemd 在启动期间的作用是什么？
-- 6. systemd 启动目标文件和链接位于哪里？
-- 7. getty 的作用是什么？
+- 3. `GRUB` 的作用是什么？
+- 4. `GRUB` 的第一阶段位于硬盘的什么位置？
+- 5. `systemd` 在启动期间的作用是什么？
+- 6. `systemd` 启动目标文件和链接位于哪里？
+- 7. `getty` 的作用是什么？
 - 8. 描述显示管理器（display manager）的功能。
 - 9. 哪个 Linux 组件连接到虚拟控制台并显示文本模式登录界面？
 - 10. 列出并描述用户登录虚拟控制台直到注销期间涉及的 Linux 组件及发生发生的事件序列。
@@ -1345,8 +1118,8 @@ CLI 登录由程序 getty 启动，它代表 TTY。getty 的历史功能是等�
 - 管理 Linux 启动序列的文件和工具
 - 如何更改默认启动目标（SystemV 术语中的运行级别）
 - 如何在不重启系统的情况下手动切换到不同的目标
-- 使用 `systemctl` 命令，它是与 systemd 交互和发送命令的主要手段
-- 使用 `journalctl`，它可以访问 systemd 日志，这些日志中包含了大量的系统历史数据，如内核和服务的消息（包括信息消息和错误消息）
+- 使用 `systemctl` 命令，它是与 `systemd` 交互和发送命令的主要手段
+- 使用 `journalctl`，它可以访问 `systemd` 日志，这些日志中包含了大量的系统历史数据，如内核和服务的消息（包括信息消息和错误消息）
 
 > © David Both 2025
 
@@ -1356,9 +1129,9 @@ D. Both, systemd for Linux Sysadmins, https://doi.org/10.1007/979-8-8688-1328-3_
 
 ## 概述
 
-systemd 的启动为问题发生时帮助你解决问题提供了重要线索。在本章中，我们将开始探索管理 Linux 启动序列的文件和工具。我们将探索 systemd 序列、如何更改默认启动目标（SystemV 术语中的运行级别），以及如何在不重启的情况下手动切换到不同的目标。
+`systemd` 的启动为问题发生时帮助你解决问题提供了重要线索。在本章中，我们将开始探索管理 Linux 启动序列的文件和工具。我们将探索 `systemd` 序列、如何更改默认启动目标（SystemV 术语中的运行级别），以及如何在不重启的情况下手动切换到不同的目标。
 
-我们还将查看两个重要的 systemd 工具。第一个是 `systemctl` 命令，它是与 systemd 交互和发送命令的主要手段。第二个是 `journalctl`，它可以访问 systemd 日志，这些日志中包含了大量的系统历史数据，如内核和服务的消息（包括信息消息和错误消息）。
+我们还将查看两个重要的 `systemd` 工具。第一个是 `systemctl` 命令，它是与 `systemd` 交互和发送命令的主要手段。第二个是 `journalctl`，它可以访问 `systemd` 日志，这些日志中包含了大量的系统历史数据，如内核和服务的消息（包括信息消息和错误消息）。
 
 务必使用非生产环境系统或虚拟机进行测试和实验。你的测试系统需要安装 GUI 桌面（如 Xfce、LXDE、GNOME、KDE 或其他）。
 
@@ -1382,11 +1155,17 @@ systemd 的启动为问题发生时帮助你解决问题提供了重要线索。
 
 ```bash
 GRUB_TIMEOUT=5
+
 GRUB_DISTRIBUTOR="$(sed 's, release .*$,.g' /etc/system-release)"
+
 GRUB_DEFAULT=saved
+
 GRUB_DISABLE_SUBMENU=true
+
 GRUB_CMDLINE_LINUX="resume=/dev/mapper/fedora_testvm1-swap\n. rd.lvm.lv=fedora_testvm1/root rd.lvm.lv=fedora_testvm1/swap rd.lvm.lv=fedora_testvm1/usr rhgb quiet"
+
 GRUB_DISABLE_RECOVERY="true"
+
 [root@testvm1 default]#
 ```
 
@@ -1433,9 +1212,9 @@ journalctl -b -k
 journalctl -b -u service_name
 ```
 
+
+
 通过这些工具，你可以排除启动过程中发生的问题并理解系统是如何初始化的。
-
-
 
 Oct 20 18:13:45 david.both.org kernel: extended physical RAM map:
 Oct 20 18:13:45 david.both.org kernel: reserve setup_data:
@@ -1450,46 +1229,40 @@ Oct 20 18:13:45 david.both.org kernel: Hash tables configured (established 52428
 
 我截断了这个数据流，因为它可能长达数十万甚至数百万行（在我主工作站上的日志列表就长达 1,399,459 行）。请在你的测试系统上探索这些日志数据，因为它包含了大量信息，这些对于正常引导和启动非常有用，并帮助在问题发生时定位问题。
 
-随着本书的进行，我们将探索更多 systemd 单元、journalctl 命令，并对数据流进行详细筛选，以更深入地找到你想要的内容。
-
-72
+随着本书的进行，我们将探索更多 `systemd` 单元、`journalctl` 命令，并对数据流进行详细筛选，以更深入地找到你想要的内容。
 
 # 第 3 章 使用 systemd 理解 Linux 启动
 
-在 GRUB 将内核加载到内存后，它必须首先从压缩版本的文件中提取自己，才能执行任何有用工作。在内核提取自己并开始运行后，它加载 systemd 并将控制权交给它。
+在 `GRUB` 将内核加载到内存后，它必须首先从压缩版本的文件中提取自己，才能执行任何有用工作。在内核提取自己并开始运行后，它加载 `systemd` 并将控制权交给它。
 
-这是引导过程的结束。此时，Linux 内核和 systemd 正在运行，但无法为用户执行任何生产性任务，因为没有其他程序在运行，没有提供命令行的 shell，没有管理网络或其他通信链路的后台进程，也没有让计算机执行任何生产功能的东西。
+这是引导过程的结束。此时，Linux 内核和 `systemd` 正在运行，但无法为用户执行任何生产性任务，因为没有其他程序在运行，没有提供命令行的 `shell`，没有管理网络或其他通信链路的后台进程，也没有让计算机执行任何生产功能的东西。
 
-systemd 现在可以加载所需的各种单元，将系统提升到选的目标状态。
+`systemd` 现在可以加载所需的各种单元，将系统提升到选的目标状态。
 
 ## 目标 (Targets)
 
-系统目标代表 Linux 系统的当前或期望运行状态。它使系统在该状态下运行并活跃。表 3-1 显示了 Linux 系统使用的可能状态目标。如第 2 章所示以及系统启动页面（man bootup）所示，还有其他所需的中间目标，以启用各种必要的服务。这些目标可能包括 swap.target、timers.target、local-fs.target 等。某些目标（如 basic.target）用作检查点，确保在移动到下一级目标之前，所有所需的服务都已运行。
+系统目标代表 Linux 系统的当前或期望运行状态。它使系统在该状态下运行并活跃。表 3-1 显示了 Linux 系统使用的可能状态目标。如第 2 章所示以及系统启动页面（`man bootup`）所示，还有其他所需的中间目标，以启用各种必要的服务。这些目标可能包括 `swap.target`、`timers.target`、`local-fs.target` 等。某些目标（如 `basic.target`）用作检查点，确保在移动到下一级目标之前，所有所需的服务都已运行。
 
-除非在 GRUB 菜单中启动时另有更改，否则 systemd 总是启动 default.target。默认文件是真实目标文件的符号链接。对于桌面工作站，这通常是 graphical.target，它等于 SystemV 中的运行级别 5。对于服务器，默认很可能是 multi-user.target，类似于 SystemV 中的运行级别 3。emergency.target 文件类似于单用户模式。目标和服务都是系统单元。
-
-73
+除非在 `GRUB` 菜单中启动时另有更改，否则 `systemd` 总是启动 `default.target`。默认文件是真实目标文件的符号链接。对于桌面工作站，这通常是 `graphical.target`，它等于 SystemV 中的运行级别 5。对于服务器，默认很可能是 `multi-user.target`，类似于 SystemV 中的运行级别 3。`emergency.target` 文件类似于单用户模式。目标和服务都是系统单元。
 
 第 3 章 使用 systemd 理解理 Linux 启动
 
-表 3-1 比较了 systemd 目标与旧的 SystemV 运行级别（runlevels）。systemd 提供了目标别名以保持向后兼容。目标别名允许脚本以及系统管理员使用诸如 init 3 等 SystemV 命令来更改运行级别。SystemV 命令被转发到 systemd 进行解释和执行。
+表 3-1 比较了 `systemd` 目标与旧的 SystemV 运行级别（runlevels）。`systemd` 提供了目标别名以保持向后兼容。目标别名允许脚本以及系统管理员使用诸如 `init 3` 等 SystemV 命令来更改运行级别。SystemV 命令被转发到 `systemd` 进行解释和执行。
 
 **表 3-1. SystemV 运行级别与 systemd 目标及别名的比较。在此处复制便于参考。**
 
 | systemd | SystemV Target | 说明 | 目标 |
 | :--- | :--- | :--- | :--- |
-| default | 此目标始终通过符号链接别名指向 multi-user.target 或 graphical.target。 | | |
-| graphical | systemd 始终使用 default.target 启动系统。默认目标绝不应别名为 halt.target、poweroff.target 或 reboot.target。 | | |
+| default | 此目标始终通过符号链接别名指向 `multi-user.target` 或 `graphical.target`。 | | |
+| graphical | `systemd` 始终使用 `default.target` 启动系统。默认目标绝不应别名为 `halt.target`、`poweroff.target` 或 `reboot.target`。 | | |
 | multi-user | 带有 GUI 的运行级别 5。 | | |
-| | 未使用。在 SystemV 世界中，运行级别 4 与运行级别 3 相同。可以创建并自定义此目标以便在不更改默认 multi-user.target 的情况下启动本地服务。 | | |
+| | 未使用。在 SystemV 世界中，运行级别 4 与运行级别 3 相同。可以创建并自定义此目标以便在不更改默认 `multi-user.target` 的情况下启动本地服务。 | | |
 | multi-user | | 仅带有命令行界面 (CLI) 的多用户，但所有其他非 GUI 服务都在运行。 | | |
 | rescue | | 基础系统，包括挂载文件系统，仅运行最基本的服务，并在主控制台上有一个救援 shell。 | | |
 | emergency | | 没有服务在运行；文件系统未挂载。这是最基础的操作级别，主控制台上仅有一个紧急 shell 供用户与系统交互。单用户模式。 | | |
 | halt | | 停止系统。 | | |
 | poweroff | | 停止并关机。 | | |
 | reboot | | 重启系统。 | | |
-
-74
 
 第 3 章 使用 systemd 理解 Linux 启动
 
@@ -1502,48 +1275,40 @@ systemd 现在可以加载所需的各种单元，将系统提升到选的目标
 | | 运行级别 1。 | | |
 | | 运行级别 0。 | | |
 
-每个目标都有组描述其依赖项。当目标配置文件加载后，systemd 在该级别运行系统。
-
-75
-
-第 3 章 使用 systemd 理解 Linux 启动
+每个目标都有组描述其依赖项。当目标配置文件加载后，`systemd` 在该级别运行系统。
 
 ## 探索当前目标 (The Current Target)
 
-许多 Linux 发行版默认到 graphical.target，以便可以使用工作站。由于具有 GUI 界面并不意味着必须使用它来访问我的主机。与 graphical.target 相比，multi-user.target 使用了更少的系统资源。
+许多 Linux 发行版默认到 `graphical.target`，以便可以使用工作站。由于具有 GUI 界面并不意味着必须使用它来访问我的主机。与 `graphical.target` 相比，`multi-user.target` 使用了更少的系统资源。
 
-## 实验 3-2：探索当前目标
+### 实验 3-2：探索当前目标
 
-首先，检查默认目标以确认它是 graphical.target。
+首先，检查默认目标以确认它是 `graphical.target`。
 
 ```bash
 systemctl get-default
 ```
-graphical.target
+`graphical.target`
 
-现在验证正在运行的目标。它与默认目标相同。你仍然可以使用旧方法显示旧的 SystemV 运行级别。前一个运行级别是 n（表示无），表示自系统启动以来运行级别未更改。
+现在验证正在运行的目标。它与默认目标相同。你仍然可以使用旧方法显示旧的 SystemV 运行级别。前一个运行级别是 `n`（表示无），表示自系统启动以来运行级别未更改。
 
 数字 5 表示旧 SystemV 术语中的当前目标：
-
-76
 
 第 3 章 使用 systemd 理解 Linux 启动
 
 ```bash
 runlevel
 ```
-N 5
+`N 5`
 
-77
-
-注意 runlevel 手页指示运行级别已过时并提供了转换表。你也可以使用 systemd 方法。这里没有单行答案，但它提供了 systemd 术语的答案：
+注意 `runlevel` 手页指示运行级别已过时并提供了转换表。你也可以使用 `systemd` 方法。这里没有单行答案，但它提供了 `systemd` 术语的答案：
 
 ```bash
 systemctl list-units --type target
 ```
 
 | UNIT | LOAD | ACTIVE | SUB | DESCRIPTION |
-| :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- | :--- |
 | basic.target | loaded | active | active | 基础系统 |
 | cryptsetup.target | loaded | active | active | 加密卷 |
 | getty.target | loaded | active | active | 登录提示 |
@@ -1559,26 +1324,806 @@ systemctl list-units --type target
 | remote-fs-pre.target | loaded | active | active | 远程文件系统（预置） |
 | remote-fs.target | loaded | active | active | 远程文件系统 |
 
+`rpc_pipefs.target` loaded active rpc_pipefs.target
+`slices.target` loaded active active Slices
+`sockets.target` loaded active active Sockets
+`sshd-keygen.target` loaded active active sshd-keygen.target
+`swap.target` loaded active active Swap
+`sysinit.target` loaded active active System Initialization
+`timers.target` loaded active active Timers
+
+`LOAD` = 反映单元定义是否已正确加载。
+`ACTIVE` = 高级单元激活状态，即 `SUB` 的泛化。
+`SUB` = 低级单元激活状态，值取决于单元类型。
+
+列出了 21 个已加载的单元。使用 `--all` 也可以查看已加载但未激活的单元。
+
+使用 '`systemctl list-unit-files`' 显示所有已安装的单元文件。
+
+这显示了所有当前加载并激活的 target。你也可以看到 `graphical.target` 和 `multi-user.target`。在加载 `graphical.target` 之前，需要先加载 `multi-user.target`。在本示例中，`graphical.target` 处于激活状态。
+
+## 切换到不同的 target
+
+有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
+
+第 3 章 使用 systemd 理解 Linux 启动
+
+### 实验 3-3：更改 target
+
+使用 `isolate` 命令可以轻松切换到 `multi-user.target`。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
+
+```bash
+# systemctl isolate multi-user.target
+```
+
+显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 `graphical.target` 已不再运行：
+
+```bash
+# systemctl list-units --type target
+```
+
+确保使用 `runlevel` 命令来验证它是否同时显示了之前和当前的“运行级别（runlevels）”:
+
+```bash
+# runlevel
+```
+`5 3`
+
+你仍然可以使用 `init` 命令来更改“运行级别”。
+
+## 更改默认 target
+
+现在，将默认 target 更改为 `multi-user.target`，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
+
+第 3 章 使用 systemd 理解 Linux 启动
+
+### 实验 3-4：更改默认 target
+
+作为测试主机的 root 用户，切换到维护 `systemd` 配置的目录并快速列出：
+
+```bash
+# cd /etc/systemd/system/ ; ll
+```
+
+```bash
+total 60
+lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service -> /dev/null
+<SNIP>
+lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
+lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
+drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
+drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
+drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
+drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
+drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
+```
+
+现在将默认 target 更改为 `multi-user.target`，这样它将始终启动到控制台命令行界面，而不是 GUI 桌面界面。
+
+切换到维护的 `systemd` 配置目录，作为测试主机的 root 用户，并进行快速列出：
+
+```bash
+# cd /etc/systemd/system/ ; ll
+```
+
+```bash
+total 60
+lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service -> /dev/null
+<SNIP>
+lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
+lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
+drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
+```
 
 
 
-rpc_pipefs.target loaded active rpc_pipefs.target
-slices.target loaded active active Slices
-sockets.target loaded active active Sockets
-sshd-keygen.target loaded active active sshd-keygen.target
-swap.target loaded active active Swap
-sysinit.target loaded active active System Initialization
-timers.target loaded active active Timers
+# 第 3 章 使用 systemd 理解 Linux 启动
 
-LOAD = 反映单元定义是否已正确加载。
-ACTIVE = 高级单元激活状态，即 SUB 的泛化。
-SUB = 低级单元激活状态，值取决于单元类型。
+```
+drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
 
-列出了 21 个已加载的单元。使用 --all 也可以查看已加载但未激活的单元。
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
 
-使用 'systemctl list-unit-files' 显示所有已安装的单元文件。
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
 
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
+
+drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
+
+drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
+
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
+
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
+
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
+
+drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
+```
+
+这显示了所有当前加载并激活的 `target`。你也可以看到 `graphical.target` 和 `multi-user.target`。在加载 `graphical.target` 之前，需要先加载 `multi-user.target`。在本示例中，`graphical.target` 处于激活状态。
+
+## 切换到不同的 target
+
+有时，我需要在主机运行期间更改正在运行的 `target`。这并不会改变默认的 `target`，系统在下次重启时仍将启动默认 `target`。
+
+### 实验 3-3：更改 target
+
+使用 `isolate` 命令可以轻松切换到 `multi-user.target`。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
+
+```
+# systemctl isolate multi-user.target
+```
+
+显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 `graphical.target` 已不再运行：
+
+```
+# systemctl list-units --type target
+```
+
+确保使用 `runlevel` 命令来验证它是否同时显示了之前和当前的“运行级别”:
+
+```
+# runlevel
+```
+
+`5 3`
+
+你仍然可以使用 `init` 命令来更改“运行级别”。
+
+## 更改默认 target
+
+现在，将默认 `target` 更改为 `multi-user.target`，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
+
+### 实验 3-4：更改默认 target
+
+作为测试主机的 `root` 用户，切换到维护 `systemd` 配置的目录并进行快速列出：
+
+```
+# cd /etc/systemd/system/ ; ll
+```
+
+```
+total 60
+
+lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
+
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
+
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
+
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service -> /dev/null
+
+<SNIP>
+
+lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
+
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
+
+lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
+
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
+
+drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
+
+drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
+
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
+
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
+
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
+
+drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
+
+drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
+
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
+
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
+
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
+
+drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
+```
+
+`LOAD` = 反映单元定义是否已正确加载。
+`ACTIVE` = 高级单元激活状态，即 `SUB` 的泛化。
+`SUB` = 低级单元激活状态，值取决于单元类型。
+
+列出了 21 个已加载的单元。使用 `--all` 也可以查看已加载但未激活的单元。
+
+使用 `systemctl list-unit-files` 显示所有已安装的单元文件。
+
+
+
+`drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants`
+
+这显示了所有当前加载并激活的 target。你也可以看到 `graphical.target` 和 `multi-user.target`。在加载 `graphical.target` 之前，需要先加载 `multi-user.target`。在本示例中，`graphical.target` 处于激活状态。
+
+`LOAD` = 反映单元定义是否已正确加载。
+`ACTIVE` = 高级单元激活状态，即 `SUB` 的泛化。
+`SUB` = 低级单元激活状态，值取决于单元类型。
+
+列出了 21 个已加载的单元。使用 `--all` 也可以查看已加载但未激活的单元。
+
+使用 `systemctl list-unit-files` 显示所有已安装的单元文件。
+
+# 第 3 章 使用 systemd 理解 Linux 启动
+
+## 切换到不同的 target
+
+有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
+
+## 实验 3-3：更改 target
+
+使用 `isolate` 命令可以轻松切换到 `multi-user.target`。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
+
+```
+# systemctl isolate multi-user.target
+```
+
+显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 `graphical.target` 已不再运行：
+
+```
+# systemctl list-units --type target
+```
+
+确保使用 `runlevel` 命令来验证它是否同时显示了之前和当前的“运行级别”:
+
+```
+# runlevel
+```
+
+`5 3`
+
+你仍然可以使用 `init` 命令来更改“运行级别”。
+
+## 更改默认 target
+
+现在，将默认 target 更改为 `multi-user.target`，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
+
+## 实验 3-4：更改默认 target
+
+作为测试主机的 root 用户，切换到维护 systemd 配置的目录并进行快速列出：
+
+```
+# cd /etc/systemd/system/ ; ll
+```
+
+```
+total 60
+lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
+-> /dev/null
+<SNIP>
+lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
+lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
+drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
+drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
+drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
+drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
+drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
+```
+
+
+
+# 第 3 章 使用 systemd 理解 Linux 启动
+
+这显示了所有当前加载并激活的 `target`。你也可以看到 `graphical.target` 和 `multi-user.target`。在加载 `graphical.target` 之前，需要先加载 `multi-user.target`。在本示例中，`graphical.target` 处于激活状态。
+
+`LOAD` = 反映单元定义是否已正确加载。
+`ACTIVE` = 高级单元激活状态，即 `SUB` 的泛化。
+`SUB` = 低级单元激活状态，值取决于单元类型。
+
+列出了 21 个已加载的单元。使用 `--all` 也可以查看已加载但未激活的单元。
+
+使用 `systemctl list-unit-files` 显示所有已安装的单元文件。
+
+## 切换到不同的 target
+
+有时，我需要在主机运行期间更改正在运行的 `target`。这并不会改变默认的 `target`，系统在下次重启时仍将启动默认 `target`。
+
+## 实验 3-3：更改 target
+
+使用 `isolate` 命令可以轻松切换到 `multi-user.target`。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
+
+```
+# systemctl isolate multi-user.target
+```
+
+显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 `graphical.target` 已不再运行：
+
+```
+# systemctl list-units --type target
+```
+
+确保使用 `runlevel` 命令来验证它是否同时显示了之前和当前的“运行级别”:
+
+```
+# runlevel
+5 3
+```
+
+你仍然可以使用 `init` 命令来更改“运行级别”。
+
+## 更改默认 target
+
+现在，将默认 `target` 更改为 `multi-user.target`，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
+
+## 实验 3-4：更改默认 target
+
+作为测试主机的 `root` 用户，切换到维护 `systemd` 配置的目录并进行快速列出：
+
+```
+# cd /etc/systemd/system/ ; ll
+```
+
+```
+total 60
+lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
+-> /dev/null
+<SNIP>
+lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
+lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
+drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
+drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
+drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
+drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
+drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
+```
+
+
+
+这显示了所有当前加载并激活的 target。你也可以看到 `graphical.target` 和 `multi-user.target`。在加载 `graphical.target` 之前，需要先加载 `multi-user.target`。在本示例中，`graphical.target` 处于激活状态。
+
+`LOAD` = 反映单元定义是否已正确加载。
+`ACTIVE` = 高级单元激活状态，即 `SUB` 的泛化。
+`SUB` = 低级单元激活状态，值取决于单元类型。
+
+列出了 21 个已加载的单元。使用 `--all` 也可以查看已加载但未激活的单元。
+
+使用 `systemctl list-unit-files` 显示所有已安装的单元文件。
+
+## 切换到不同的 target
+
+有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
+
+### 第 3 章 使用 systemd 理解 Linux 启动
+
+### 实验 3-3：更改 target
+
+使用 `isolate` 命令可以轻松切换到 `multi-user.target`。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
+
+```
+# systemctl isolate multi-user.target
+```
+
+显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 `graphical.target` 已不再运行：
+
+```
+# systemctl list-units --type target
+```
+
+确保使用 `runlevel` 命令来验证它是否同时显示了之前和当前的“运行级别”:
+
+```
+# runlevel
+```
+
+`5 3`
+
+你仍然可以使用 `init` 命令来更改“运行级别”。
+
+## 更改默认 target
+
+现在，将默认 target 更改为 `multi-user.target`，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
+
+### 第 3 章 使用 systemd 理解 Linux 启动
+
+### 实验 3-4：更改默认 target
+
+作为测试主机的 root 用户，切换到维护 systemd 配置的目录并进行快速列出：
+
+```
+# cd /etc/systemd/system/ ; ll
+```
+
+```
+total 60
+lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
+-> /dev/null
+<SNIP>
+lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
+lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
+drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
+drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
+drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
+drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
+drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
+```
+
+
+
+# 第 3 章 使用 systemd 理解 Linux 启动
+
+这显示了所有当前加载并激活的 `target`。你也可以看到 `graphical.target` 和 `multi-user.target`。在加载 `graphical.target` 之前，需要先加载 `multi-user.target`。在本示例中，`graphical.target` 处于激活状态。
+
+`LOAD` = 反映单元定义是否已正确加载。
+`ACTIVE` = 高级单元激活状态，即 `SUB` 的泛化。
+`SUB` = 低级单元激活状态，值取决于单元类型。
+
+列出了 21 个已加载的单元。使用 `--all` 也可以查看已加载但未激活的单元。
+
+使用 `systemctl list-unit-files` 显示所有已安装的单元文件。
+
+## 切换到不同的 target
+
+有时，我需要在主机运行期间更改正在运行的 `target`。这并不会改变默认的 `target`，系统在下次重启时仍将启动默认 `target`。
+
+## 实验 3-3：更改 target
+
+使用 `isolate` 命令可以轻松切换到 `multi-user.target`。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
+
+```
+# systemctl isolate multi-user.target
+```
+
+显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 `graphical.target` 已不再运行：
+
+```
+# systemctl list-units --type target
+```
+
+确保使用 `runlevel` 命令来验证它是否同时显示了之前和当前的“运行级别”:
+
+```
+# runlevel
+```
+
+`5 3`
+
+你仍然可以使用 `init` 命令来更改“运行级别”。
+
+## 更改默认 target
+
+现在，将默认 `target` 更改为 `multi-user.target`，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
+
+## 实验 3-4：更改默认 target
+
+作为测试主机的 `root` 用户，切换到维护 `systemd` 配置的目录并进行快速列出：
+
+```
+# cd /etc/systemd/system/ ; ll
+```
+
+```
+total 60
+lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service -> /dev/null
+<SNIP>
+lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
+lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
+drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
+drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
+drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
+drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
+drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
+```
+
+
+
+# 第 3 章 使用 systemd 理解 Linux 启动
+
+这显示了所有当前加载并激活的 `target`。你也可以看到 `graphical.target` 和 `multi-user.target`。在加载 `graphical.target` 之前，需要先加载 `multi-user.target`。在本示例中，`graphical.target` 处于激活状态。
+
+`LOAD` = 反映单元定义是否已正确加载。
+`ACTIVE` = 高级单元激活状态，即 `SUB` 的泛化。
+`SUB` = 低级单元激活状态，值取决于单元类型。
+
+列出了 21 个已加载的单元。使用 `--all` 也可以查看已加载但未激活的单元。
+
+使用 `systemctl list-unit-files` 显示所有已安装的单元文件。
+
+## 切换到不同的 target
+
+有时，我需要在主机运行期间更改正在运行的 `target`。这并不会改变默认的 `target`，系统在下次重启时仍将启动默认 `target`。
+
+## 实验 3-3：更改 target
+
+使用 `isolate` 命令可以轻松切换到 `multi-user.target`。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
+
+```
+# systemctl isolate multi-user.target
+```
+
+显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 `graphical.target` 已不再运行：
+
+```
+# systemctl list-units --type target
+```
+
+确保使用 `runlevel` 命令来验证它是否同时显示了之前和当前的“运行级别”:
+
+```
+# runlevel
+5 3
+```
+
+你仍然可以使用 `init` 命令来更改“运行级别”。
+
+## 更改默认 target
+
+现在，将默认 `target` 更改为 `multi-user.target`，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
+
+## 实验 3-4：更改默认 target
+
+作为测试主机的 `root` 用户，切换到维护 `systemd` 配置的目录并进行快速列出：
+
+```
+# cd /etc/systemd/system/ ; ll
+```
+
+```
+total 60
+lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
+-> /dev/null
+<SNIP>
+lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
+lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
+drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
+drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
+drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
+drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
+drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
+```
+
+
+
+# 第 3 章 使用 systemd 理解 Linux 启动
+
+这显示了所有当前加载并激活的 `target`。你也可以看到 `graphical.target` 和 `multi-user.target`。在加载 `graphical.target` 之前，需要先加载 `multi-user.target`。在本示例中，`graphical.target` 处于激活状态。
+
+`LOAD` = 反映单元定义是否已正确加载。
+`ACTIVE` = 高级单元激活状态，即 `SUB` 的泛化。
+`SUB` = 低级单元激活状态，值取决于单元类型。
+
+列出了 21 个已加载的单元。使用 `--all` 也可以查看已加载但未激活的单元。
+
+使用 `systemctl list-unit-files` 显示所有已安装的单元文件。
+
+## 切换到不同的 target
+
+有时，我需要在主机运行期间更改正在运行的 `target`。这并不会改变默认的 `target`，系统在下次重启时仍将启动默认 `target`。
+
+## 实验 3-3：更改 target
+
+使用 `isolate` 命令可以轻松切换到 `multi-user.target`。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
+
+```
+# systemctl isolate multi-user.target
+```
+
+显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 `graphical.target` 已不再运行：
+
+```
+# systemctl list-units --type target
+```
+
+确保使用 `runlevel` 命令来验证它是否同时显示了之前和当前的“运行级别”:
+
+```
+# runlevel
+5 3
+```
+
+你仍然可以使用 `init` 命令来更改“运行级别”。
+
+## 更改默认 target
+
+现在，将默认 `target` 更改为 `multi-user.target`，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
+
+## 实验 3-4：更改默认 target
+
+作为测试主机的 `root` 用户，切换到维护 `systemd` 配置的目录并进行快速列出：
+
+```
+# cd /etc/systemd/system/ ; ll
+```
+
+```
+total 60
+lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
+-> /dev/null
+<SNIP>
+lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
+lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
+drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
+drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
+drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
+drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
+drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
+```
+
+
+
+这显示了所有当前加载并激活的 target。你也可以看到 `graphical.target` 和 `multi-user.target`。在加载 `graphical.target` 之前，需要先加载 `multi-user.target`。在本示例中，`graphical.target` 处于激活状态。
+
+`LOAD` = 反映单元定义是否已正确加载。
+`ACTIVE` = 高级单元激活状态，即 `SUB` 的泛化。
+`SUB` = 低级单元激活状态，值取决于单元类型。
+
+列出了 21 个已加载的单元。使用 `--all` 也可以查看已加载但未激活的单元。
+
+使用 `systemctl list-unit-files` 显示所有已安装的单元文件。
+
+# 第 3 章 使用 systemd 理解 Linux 启动
+
+## 切换到不同的 target
+
+有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
+
+## 实验 3-3：更改 target
+
+使用 `isolate` 命令可以轻松切换到 `multi-user.target`。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
+
+```
+# systemctl isolate multi-user.target
+```
+
+显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 `graphical.target` 已不再运行：
+
+```
+# systemctl list-units --type target
+```
+
+确保使用 `runlevel` 命令来验证它是否同时显示了之前和当前的“运行级别”:
+
+```
+# runlevel
+```
+
+`5 3`
+
+你仍然可以使用 `init` 命令来更改“运行级别”。
+
+## 更改默认 target
+
+现在，将默认 target 更改为 `multi-user.target`，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
+
+## 实验 3-4：更改默认 target
+
+作为测试主机的 root 用户，切换到维护 systemd 配置的目录并进行快速列出：
+
+```
+# cd /etc/systemd/system/ ; ll
+```
+
+```
+total 60
+lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
+lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
+-> /dev/null
+<SNIP>
+lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
+lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
+drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
+drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
+drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
+drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
+drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
+drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
+```
+
+
+
+这显示了所有当前加载并激活的 target。你也可以看到 `graphical.target` 和 `multi-user.target`。在加载 `graphical.target` 之前，需要先加载 `multi-user.target`。在本示例中，`graphical.target` 处于激活状态。
+
+`rpc_pipefs.target` loaded active `rpc_pipefs.target`
+`slices.target` loaded active active Slices
+`sockets.target` loaded active active Sockets
+`sshd-keygen.target` loaded active active `sshd-keygen.target`
+`swap.target` loaded active active Swap
+`sysinit.target` loaded active active System Initialization
+`timers.target` loaded active active Timers
+
+`LOAD` = 反映单元定义是否已正确加载。
+`ACTIVE` = 高级单元激活状态，即 `SUB` 的泛化。
+`SUB` = 低级单元激活状态，值取决于单元类型。
+
+列出了 21 个已加载的单元。使用 `--all` 也可以查看已加载但未激活的单元。
+
+使用 `systemctl list-unit-files` 显示所有已安装的单元文件。
+
+这显示了所有当前加载并激活的 target。你也可以看到 `graphical.target` 和 `multi-user.target`。在加载 `graphical.target` 之前，需要先加载 `multi-user.target`。在本示例中，`graphical.target` 处于激活状态。
 
 ## 切换到不同的 target
 
@@ -1588,17 +2133,23 @@ SUB = 低级单元激活状态，值取决于单元类型。
 
 ## 实验 3-3：更改 target
 
-使用 `isolate` 命令可以轻松切换到 multi-user.target。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
+使用 `isolate` 命令可以轻松切换到 `multi-user.target`。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
 
-# # systemctl isolate multi-user.target
+```
+# systemctl isolate multi-user.target
+```
 
-显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 graphical.target 已不再运行：
+显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 `graphical.target` 已不再运行：
 
-# # systemctl list-units --type target
+```
+# systemctl list-units --type target
+```
 
-确保使用 `runlevel` 命令来验证它是否同时显示了之前和当前的“运行级别（runlevels）”:
+确保使用 `runlevel` 命令来验证它是否同时显示了之前和当前的“运行级别”:
 
-# # runlevel
+```
+# runlevel
+```
 
 5 3
 
@@ -1606,113 +2157,7 @@ SUB = 低级单元激活状态，值取决于单元类型。
 
 ## 更改默认 target
 
-现在，将默认 target 更改为 multi-user.target，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-4：更改默认 target
-
-作为测试主机的 root 用户，切换到维护 systemd 配置的目录并快速列出：
-
-```
-# cd /etc/systemd/system/ ; ll
-```
-
-```
-total 60
-lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
-```
-
-```
--> /dev/null
-<SNIP>
-lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
-lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
-第 3 章 使用 systemd 理解 Linux 启动
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
-```
-
-现在将默认 target 更改为 multi-user.target，这样它将始终启动到控制台命令行界面，而不是 GUI 桌面界面。
-
-切换到维护的 systemd 配置目录，作为测试主机的 root 用户，并进行快速列出：
-
-```
-# cd /etc/systemd/system/ ; ll
-```
-
-```
-total 60
-lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
-```
-
-```
--> /dev/null
-<SNIP>
-lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
-lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
-第 3 章 使用 systemd 理解 Linux 启动
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
-```
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-## 切换到不同的 target
-
-有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-3：更改 target
-
-使用 `isolate` 命令可以轻松切换到 multi-user.target。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
-
-# # systemctl isolate multi-user.target
-
-显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 graphical.target 已不再运行：
-
-# # systemctl list-units --type target
-
-确保使用 runlevel 命令来验证它是否同时显示了之前和当前的“运行级别”:
-
-# # runlevel
-
-5 3
-
-你仍然可以使用 init 命令来更改“运行级别”。
-
-## 更改默认 target
-
-现在，将默认 target 更改为 multi-user.target，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
+现在，将默认 target 更改为 `multi-user.target`，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
 
 第 3 章 使用 systemd 理解 Linux 启动
 
@@ -1726,1945 +2171,55 @@ drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
 
 ```
 total 60
+
 lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
+
 lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
+
 lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
+
 lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
+
 ```
 
 ```
 -> /dev/null
 <SNIP>
+
 lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
+
 drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
+
 lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
+
 drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
+
 drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
+
 drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
+
 drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
+
 drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
+
 第 3 章 使用 systemd 理解 Linux 启动
+
 drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
-```
 
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-LOAD = 反映单元定义是否已正确加载。
-ACTIVE = 高级单元激活状态，即 SUB 的泛化。
-SUB = 低级单元激活状态，值取决于单元类型。
-
-列出了 21 个已加载的单元。使用 --all 也可以查看已加载但未激活的单元。
-
-all 也可以查看已加载但未激活的单元。
-
-使用 'systemctl list-unit-files' 显示所有已安装的单元文件。
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-## 切换到不同的 target
-
-有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-3：更改 target
-
-使用 isolate 命令可以轻松切换到 multi-user.target。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
-
-# # systemctl isolate multi-user.target
-
-显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 graphical.target 已不再运行：
-
-# # systemctl list-units --type target
-
-确保使用 runlevel 命令来验证它是否同时显示了之前和当前的“运行级别”:
-
-# # runlevel
-
-5 3
-
-你仍然可以使用 init 命令来更改“运行级别”。
-
-## 更改默认 target
-
-现在，将默认 target 更改为 multi-user.target，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-4：更改默认 target
-
-作为测试主机的 root 用户，切换到维护 systemd 配置的目录并进行快速列出：
-
-```
-# cd /etc/systemd/system/ ; ll
-```
-
-```
-total 60
-lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
-```
-
-```
--> /dev/null
-<SNIP>
-lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
-lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
-第 3 章 使用 systemd 理解 Linux 启动
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
-```
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-LOAD = 反映单元定义是否已正确加载。
-ACTIVE = 高级单元激活状态，即 SUB 的泛化。
-SUB = 低级单元激活状态，值取决于单元类型。
-
-列出了 21 个已加载的单元。使用 --all 也可以查看已加载但未激活的单元。
-
-使用 'systemctl list-unit-files' 显示所有已安装的单元文件。
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-## 切换到不同的 target
-
-有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-3：更改 target
-
-使用 isolate 命令可以轻松切换到 multi-user.target。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
-
-# # systemctl isolate multi-user.target
-
-显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 graphical.target 已不再运行：
-
-# # systemctl list-units --type target
-
-确保使用 runlevel 命令来验证它是否同时显示了之前和当前的“运行级别”:
-
-# # runlevel
-
-5 3
-
-你仍然可以使用 init 命令来更改“运行级别”。
-
-## 更改默认 target
-
-现在，将默认 target 更改为 multi-user.target，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-4：更改默认 target
-
-作为测试主机的 root 用户，切换到维护 systemd 配置的目录并进行快速列出：
-
-```
-# cd /etc/systemd/system/ ; ll
-```
-
-```
-total 60
-lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
-```
-
-```
--> /dev/null
-<SNIP>
-lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
-lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
-第 3 章 使用 systemd 理解 Linux 启动
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
-```
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-LOAD = 反映单元定义是否已正确加载。
-ACTIVE = 高级单元激活状态，即 SUB 的泛化。
-SUB = 低级单元激活状态，值取决于单元类型。
-
-列出了 21 个已加载的单元。使用 --all 也可以查看已加载但未激活的单元。
-
-使用 'systemctl list-unit-files' 显示所有已安装的单元文件。
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-## 切换到不同的 target
-
-有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-3：更改 target
-
-使用 isolate 命令可以轻松切换到 multi-user.target。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
-
-# # systemctl isolate multi-user.target
-
-显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 graphical.target 已不再运行：
-
-# # systemctl list-units --type target
-
-确保使用 runlevel 命令来验证它是否同时显示了之前和当前的“运行级别”:
-
-# # runlevel
-
-5 3
-
-你仍然可以使用 init 命令来更改“运行级别”。
-
-## 更改默认 target
-
-现在，将默认 target 更改为 multi-user.target，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-4：更改默认 target
-
-作为测试主机的 root 用户，切换到维护 systemd 配置的目录并进行快速列出：
-
-```
-# cd /etc/systemd/system/ ; ll
-```
-
-```
-total 60
-lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
-```
-
-```
--> /dev/null
-<SNIP>
-lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
-lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
-第 3 章 使用 systemd 理解 Linux 启动
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
-```
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-LOAD = 反映单元定义是否已正确加载。
-ACTIVE = 高级单元激活状态，即 SUB 的泛化。
-SUB = 低级单元激活状态，值取决于单元类型。
-
-列出了 21 个已加载的单元。使用 --all 也可以查看已加载但未激活的单元。
-
-使用 'systemctl list-unit-files' 显示所有已安装的单元文件。
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-## 切换到不同的 target
-
-有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-3：更改 target
-
-使用 isolate 命令可以轻松切换到 multi-user.target。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
-
-# # systemctl isolate multi-user.target
-
-显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 graphical.target 已不再运行：
-
-# # systemctl list-units --type target
-
-确保使用 runlevel 命令来验证它是否同时显示了之前和当前的“运行级别”:
-
-# # runlevel
-
-5 3
-
-你仍然可以使用 init 命令来更改“运行级别”。
-
-## 更改默认 target
-
-现在，将默认 target 更改为 multi-user.target，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-4：更改默认 target
-
-作为测试主机的 root 用户，切换到维护 systemd 配置的目录并进行快速列出：
-
-```
-# cd /etc/systemd/system/ ; ll
-```
-
-```
-total 60
-lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
-```
-
-```
--> /dev/null
-<SNIP>
-lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
-lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
-第 3 章 使用 systemd 理解 Linux 启动
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
-```
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-LOAD = 反映单元定义是否已正确加载。
-ACTIVE = 高级单元激活状态，即 SUB 的泛化。
-SUB = 低级单元激活状态，值取决于单元类型。
-
-列出了 21 个已加载的单元。使用 --all 也可以查看已加载但未激活的单元。
-
-使用 'systemctl list-unit-files' 显示所有已安装的单元文件。
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-## 切换到不同的 target
-
-有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-3：更改 target
-
-使用 isolate 命令可以轻松切换到 multi-user.target。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
-
-# # systemctl isolate multi-user.target
-
-显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 graphical.target 已不再运行：
-
-# # systemctl list-units --type target
-
-确保使用 runlevel 命令来验证它是否同时显示了之前和当前的“运行级别”:
-
-# # runlevel
-
-5 3
-
-你仍然可以使用 init 命令来更改“运行级别”。
-
-## 更改默认 target
-
-现在，将默认 target 更改为 multi-user.target，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-4：更改默认 target
-
-作为测试主机的 root 用户，切换到维护 systemd 配置的目录并进行快速列出：
-
-```
-# cd /etc/systemd/system/ ; ll
-```
-
-```
-total 60
-lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
-```
-
-```
--> /dev/null
-<SNIP>
-lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
-lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
-第 3 章 使用 systemd 理解 Linux 启动
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
-```
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-LOAD = 反映单元定义是否已正确加载。
-ACTIVE = 高级单元激活状态，即 SUB 的泛化。
-SUB = 低级单元激活状态，值取决于单元类型。
-
-列出了 21 个已加载的单元。使用 --all 也可以查看已加载但未激活的单元。
-
-使用 'systemctl list-unit-files' 显示所有已安装的单元文件。
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-## 切换到不同的 target
-
-有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-3：更改 target
-
-使用 isolate 命令可以轻松切换到 multi-user.target。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
-
-# # systemctl isolate multi-user.target
-
-显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 graphical.target 已不再运行：
-
-# # systemctl list-units --type target
-
-确保使用 runlevel 命令来验证它是否同时显示了之前和当前的“运行级别”:
-
-# # runlevel
-
-5 3
-
-你仍然可以使用 init 命令来更改“运行级别”。
-
-## 更改默认 target
-
-现在，将默认 target 更改为 multi-user.target，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-4：更改默认 target
-
-作为测试主机的 root 用户，切换到维护 systemd 配置的目录并进行快速列出：
-
-```
-# cd /etc/systemd/system/ ; ll
-```
-
-```
-total 60
-lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
-```
-
-```
--> /dev/null
-<SNIP>
-lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
-lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
-第 3 章 使用 systemd 理解 Linux 启动
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
-```
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-LOAD = 反映单元定义是否已正确加载。
-ACTIVE = 高级单元激活状态，即 SUB 的泛化。
-SUB = 低级单元激活状态，值取决于单元类型。
-
-列出了 21 个已加载的单元。使用 --all 也可以查看已加载但未激活的单元。
-
-使用 'systemctl list-unit-files' 显示所有已安装的单元文件。
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-## 切换到不同的 target
-
-有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-3：更改 target
-
-使用 isolate 命令可以轻松切换到 multi-user.target。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
-
-# # systemctl isolate multi-user.target
-
-显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 graphical.target 已不再运行：
-
-# # systemctl list-units --type target
-
-确保使用 runlevel 命令来验证它是否同时显示了之前和当前的“运行级别”:
-
-# # runlevel
-
-5 3
-
-你仍然可以使用 init 命令来更改“运行级别”。
-
-## 更改默认 target
-
-现在，将默认 target 更改为 multi-user.target，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-4：更改默认 target
-
-作为测试主机的 root 用户，切换到维护 systemd 配置的目录并进行快速列出：
-
-```
-# cd /etc/systemd/system/ ; ll
-```
-
-```
-total 60
-lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
-```
-
-```
--> /dev/null
-<SNIP>
-lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
-lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
-第 3 章 使用 systemd 理解 Linux 启动
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
-```
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-LOAD = 反映单元定义是否已正确加载。
-ACTIVE = 高级单元激活状态，即 SUB 的泛化。
-SUB = 低级单元激活状态，值取决于单元类型。
-
-列出了 21 个已加载的单元。使用 --all 也可以查看已加载但未激活的单元。
-
-使用 'systemctl list-unit-files' 显示所有已安装的单元文件。
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-## 切换到不同的 target
-
-有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-3：更改 target
-
-使用 isolate 命令可以轻松切换到 multi-user.target。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
-
-# # systemctl isolate multi-user.target
-
-显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 graphical.target 已不再运行：
-
-# # systemctl list-units --type target
-
-确保使用 runlevel 命令来验证它是否同时显示了之前和当前的“运行级别”:
-
-# # runlevel
-
-5 3
-
-你仍然可以使用 init 命令来更改“运行级别”。
-
-## 更改默认 target
-
-现在，将默认 target 更改为 multi-user.target，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-4：更改默认 target
-
-作为测试主机的 root 用户，切换到维护 systemd 配置的目录并进行快速列出：
-
-```
-# cd /etc/systemd/system/ ; ll
-```
-
-```
-total 60
-lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
-```
-
-```
--> /dev/null
-<SNIP>
-lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
-lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
-第 3 章 使用 systemd 理解 Linux 启动
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
-```
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-LOAD = 反映单元定义是否已正确加载。
-ACTIVE = 高级单元激活状态，即 SUB 的泛化。
-SUB = 低级单元激活状态，值取决于单元类型。
-
-列出了 21 个已加载的单元。使用 --all 也可以查看已加载但未激活的单元。
-
-使用 'systemctl list-unit-files' 显示所有已安装的单元文件。
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-## 切换到不同的 target
-
-有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-3：更改 target
-
-使用 isolate 命令可以轻松切换到 multi-user.target。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
-
-# # systemctl isolate multi-user.target
-
-显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 graphical.target 已不再运行：
-
-# # systemctl list-units --type target
-
-确保使用 runlevel 命令来验证它是否同时显示了之前和当前的“运行级别”:
-
-# # runlevel
-
-5 3
-
-你仍然可以使用 init 命令来更改“运行级别”。
-
-## 更改默认 target
-
-现在，将默认 target 更改为 multi-user.target，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-4：更改默认 target
-
-作为测试主机的 root 用户，切换到维护 systemd 配置的目录并进行快速列出：
-
-```
-# cd /etc/systemd/system/ ; ll
-```
-
-```
-total 60
-lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
-```
-
-```
--> /dev/null
-<SNIP>
-lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
-lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
-第 3 章 使用 systemd 理解 Linux 启动
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
-```
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-LOAD = 反映单元定义是否已正确加载。
-ACTIVE = 高级单元激活状态，即 SUB 的泛化。
-SUB = 低级单元激活状态，值取决于单元类型。
-
-列出了 21 个已加载的单元。使用 --all 也可以查看已加载但未激活的单元。
-
-使用 'systemctl list-unit-files' 显示所有已安装的单元文件。
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-## 切换到不同的 target
-
-有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-3：更改 target
-
-使用 isolate 命令可以轻松切换到 multi-user.target。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
-
-# # systemctl isolate multi-user.target
-
-显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 graphical.target 已不再运行：
-
-# # systemctl list-units --type target
-
-确保使用 runlevel 命令来验证它是否同时显示了之前和当前的“运行级别”:
-
-# # runlevel
-
-5 3
-
-你仍然可以使用 init 命令来更改“运行级别”。
-
-## 更改默认 target
-
-现在，将默认 target 更改为 multi-user.target，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-4：更改默认 target
-
-作为测试主机的 root 用户，切换到维护 systemd 配置的目录并进行快速列出：
-
-```
-# cd /etc/systemd/system/ ; ll
-```
-
-```
-total 60
-lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
-```
-
-```
--> /dev/null
-<SNIP>
-lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
-lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
-第 3 章 使用 systemd 理解 Linux 启动
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
-```
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-LOAD = 反映单元定义是否已正确加载。
-ACTIVE = 高级单元激活状态，即 SUB 的泛化。
-SUB = 低级单元激活状态，值取决于单元类型。
-
-列出了 21 个已加载的单元。使用 --all 也可以查看已加载但未激活的单元。
-
-使用 'systemctl list-unit-files' 显示所有已安装的单元文件。
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-## 切换到不同的 target
-
-有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-3：更改 target
-
-使用 isolate 命令可以轻松切换到 multi-user.target。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
-
-# # systemctl isolate multi-user.target
-
-显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 graphical.target 已不再运行：
-
-# # systemctl list-units --type target
-
-确保使用 runlevel 命令来验证它是否同时显示了之前和当前的“运行级别”:
-
-# # runlevel
-
-5 3
-
-你仍然可以使用 init 命令来更改“运行级别”。
-
-## 更改默认 target
-
-现在，将默认 target 更改为 multi-user.target，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-4：更改默认 target
-
-作为测试主机的 root 用户，切换到维护 systemd 配置的目录并进行快速列出：
-
-```
-# cd /etc/systemd/system/ ; ll
-```
-
-```
-total 60
-lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
-```
-
-```
--> /dev/null
-<SNIP>
-lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
-lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
-第 3 章 使用 systemd 理解 Linux 启动
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
-```
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-LOAD = 反映单元定义是否已正确加载。
-ACTIVE = 高级单元激活状态，即 SUB 的泛化。
-SUB = 低级单元激活状态，值取决于单元类型。
-
-列出了 21 个已加载的单元。使用 --all 也可以查看已加载但未激活的单元。
-
-使用 'systemctl list-unit-files' 显示所有已安装的单元文件。
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-## 切换到不同的 target
-
-有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-3：更改 target
-
-使用 isolate 命令可以轻松切换到 multi-user.target。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
-
-# # systemctl isolate multi-user.target
-
-显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 graphical.target 已不再运行：
-
-# # systemctl list-units --type target
-
-确保使用 runlevel 命令来验证它是否同时显示了之前和当前的“运行级别”:
-
-# # runlevel
-
-5 3
-
-你仍然可以使用 init 命令来更改“运行级别”。
-
-## 更改默认 target
-
-现在，将默认 target 更改为 multi-user.target，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-4：更改默认 target
-
-作为测试主机的 root 用户，切换到维护 systemd 配置的目录并进行快速列出：
-
-```
-# cd /etc/systemd/system/ ; ll
-```
-
-```
-total 60
-lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null evenlrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
-```
-
-```
--> /dev/null
-<SNIP>
-lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
-lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
-第 3 章 使用 systemd 理解 Linux 启动
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
-```
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-LOAD = 反映单元定义是否已正确加载。
-ACTIVE = 高级单元激活状态，即 SUB 的泛化。
-SUB = 低级单元激活状态，值取决于单元类型。
-
-列出了 21 个已加载的单元。使用 --all 也可以查看已加载但未激活的单元。
-
-使用 'systemctl list-unit-files' 显示所有已安装的单元文件。
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-## 切换到不同的 target
-
-有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-3：更改 target
-
-使用 isolate 命令可以轻松切换到 multi-user.target。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
-
-# # systemctl isolate multi-user.target
-
-显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 graphical.target 已不再运行：
-
-# # systemctl list-units --type target
-
-确保使用 runlevel 命令来验证它是否同时显示了之前和当前的“运行级别”:
-
-# # runlevel
-
-5 3
-
-你仍然可以使用 init 命令来更改“运行级别”。
-
-## 更改默认 target
-
-现在，将默认 target 更改为 multi-user.target，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-4：更改默认 target
-
-作为测试主机的 root 用户，切换到维护 systemd 配置的目录并进行快速列出：
-
-```
-# cd /etc/systemd/system/ ; ll
-```
-
-```
-total 60
-lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
-```
-
-```
--> /dev/null
-<SNIP>
-lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
-lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
-第 3 章 使用 systemd 理解 Linux 启动
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
-```
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-LOAD = 反映单元定义是否已正确加载。
-ACTIVE = 高级单元激活状态，即 SUB 的泛化。
-SUB = 低级单元激活状态，值取决于单元类型。
-
-列出了 21 个已加载的单元。使用 --all 也可以查看已加载但未激活的单元。
-
-使用 'systemctl list-unit-files' 显示所有已安装的单元文件。
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-## 切换到不同的 target
-
-有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-3：更改 target
-
-使用 isolate 命令可以轻松切换到 multi-user.target。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
-
-# # systemctl isolate multi-user.target
-
-显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 graphical.target 已不再运行：
-
-# # systemctl list-units --type target
-
-确保使用 runlevel 命令来验证它是否同时显示了之前和当前的“运行级别”:
-
-# # runlevel
-
-5 3
-
-你仍然可以使用 init 命令来更改“运行级别”。
-
-## 更改默认 target
-
-现在，将默认 target 更改为 multi-user.target，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-4：更改默认 target
-
-作为测试主机的 root 用户，切换到维护 systemd 配置的目录并进行快速列出：
-
-```
-# cd /etc/systemd/system/ ; ll
-```
-
-```
-total 60
-lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
-```
-
-```
--> /dev/null
-<SNIP>
-lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
-lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
-第 3 章 使用 systemd 理解 Linux 启动
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
-```
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-LOAD = 反映单元定义是否已正确加载。
-ACTIVE = 高级单元激活状态，即 SUB 的泛化。
-SUB = 低级单元激活状态，值取决于单元类型。
-
-列出了 21 个已加载的单元。使用 --all 也可以查看已加载但未激活的单元。
-
-使用 'systemctl list-unit-files' 显示所有已安装的单元文件。
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-## 切换到不同的 target
-
-有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-3：更改 target
-
-使用 isolate 命令可以轻松切换到 multi-user.target。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
-
-# # systemctl isolate multi-user.target
-
-显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 graphical.target 已不再运行：
-
-# # systemctl list-units --type target
-
-确保使用 runlevel 命令来验证它是否同时显示了之前和当前的“运行级别”:
-
-# # runlevel
-
-5 3
-
-你仍然可以使用 init 命令来更改“运行级别”。
-
-## 更改默认 target
-
-现在，将默认 target 更改为 multi-user.target，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-4：更改默认 target
-
-作为测试主机的 root 用户，切换到维护 systemd 配置的目录并进行快速列出：
-
-```
-# cd /etc/systemd/system/ ; ll
-```
-
-```
-total 60
-lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
-```
-
-```
--> /dev/null
-<SNIP>
-lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
-lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
-第 3 章 使用 systemd 理解 Linux 启动
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
-```
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-LOAD = 反映单元定义是否已正确加载。
-ACTIVE = 高级单元激活状态，即 SUB 的泛化。
-SUB = 低级单元激活状态，值取决于单元类型。
-
-列出了 21 个已加载的单元。使用 --all 也可以查看已加载但未激活的单元。
-
-使用 'systemctl list-unit-files' 显示所有已安装的单元文件。
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-## 切换到不同的 target
-
-有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-3：更改 target
-
-使用 isolate 命令可以轻松切换到 multi-user.target。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
-
-# # systemctl isolate multi-user.target
-
-显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 graphical.target 已不再运行：
-
-# # systemctl list-units --type target
-
-确保使用 runlevel 命令来验证它是否同时显示了之前和当前的“运行级别”:
-
-# # runlevel
-
-5 3
-
-你仍然可以使用 init 命令来更改“运行级别”。
-
-## 更改默认 target
-
-现在，将默认 target 更改为 multi-user.target，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-4：更改默认 target
-
-作为测试主机的 root 用户，切换到维护 systemd 配置的目录并进行快速列出：
-
-```
-# cd /etc/systemd/system/ ; ll
-```
-
-```
-total 60
-lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
-```
-
-```
--> /dev/null
-<SNIP>
-lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
-lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
-第 3 章 使用 systemd 理解 Linux 启动
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
-```
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-LOAD = 反映单元定义是否已正确加载。
-ACTIVE = 高级单元激活状态，即 SUB 的泛化。
-SUB = 低级单元激活状态，值取决于单元类型。
-
-列出了 21 个已加载的单元。使用 --all 也可以查看已加载但未激活的单元。
-
-使用 'systemctl list-unit-files' 显示所有已安装的单元文件。
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-## 切换到不同的 target
-
-有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-3：更改 target
-
-使用 isolate 命令可以轻松切换到 multi-user.target。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
-
-# # systemctl isolate multi-user.target
-
-显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 graphical.target 已不再运行：
-
-# # systemctl list-units --type target
-
-确保使用 runlevel 命令来验证它是否同时显示了之前和当前的“运行级别”:
-
-# # runlevel
-
-5 3
-
-你仍然可以使用 init 命令来更改“运行级别”。
-
-## 更改默认 target
-
-现在，将默认 target 更改为 multi-user.target，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-4：更改默认 target
-
-作为测试主机的 root 用户，切换到维护 systemd 配置的目录并进行快速列出：
-
-```
-# cd /etc/systemd/system/ ; ll
-```
-
-```
-total 60
-lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
-```
-
-```
--> /dev/null
-<SNIP>
-lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
-lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
-第 3 章 使用 systemd 理解 Linux 启动
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
-```
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-LOAD = 反映单元定义是否已正确加载。
-ACTIVE = 高级单元激活状态，即 SUB 的泛化。
-SUB = 低级单元激活状态，值取决于单元类型。
-
-列出了 21 个已加载的单元。使用 --all 也可以查看已加载但未激活的单元。
-
-使用 'systemctl list-unit-files' 显示所有已安装的单元文件。
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-## 切换到不同的 target
-
-有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-3：更改 target
-
-使用 isolate 命令可以轻松切换到 multi-user.target。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
-
-# # systemctl isolate multi-user.target
-
-显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 graphical.target 已不再运行：
-
-# # systemctl list-units --type target
-
-确保使用 runlevel 命令来验证它是否同时显示了之前和当前的“运行级别”:
-
-# # runlevel
-
-5 3
-
-你仍然可以使用 init 命令来更改“运行级别”。
-
-## 更改默认 target
-
-现在，将默认 target 更改为 multi-user.target，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-4：更改默认 target
-
-作为测试主机的 root 用户，切换到维护 systemd 配置的目录并进行快速列出：
-
-```
-# cd /etc/systemd/system/ ; ll
-```
-
-```
-total 60
-lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
-```
-
-```
--> /dev/null
-<SNIP>
-lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
-lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
-第 3 章 使用 systemd 理解 Linux 启动
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
-```
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-LOAD = 反映单元定义是否已正确加载。
-ACTIVE = 高级单元激活状态，即 SUB 的泛化。
-SUB = 低级单元激活状态，值取决于单元类型。
-
-列出了 21 个已加载的单元。使用 --all 也可以查看已加载但未激活的单元。
-
-使用 'systemctl list-unit-files' 显示所有已安装的单元文件。
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-## 切换到不同的 target
-
-有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-3：更改 target
-
-使用 isolate 命令可以轻松切换到 multi-user.target。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
-
-# # systemctl isolate multi-user.target
-
-显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 graphical.target 已不再运行：
-
-# # systemctl list-units --type target
-
-确保使用 runlevel 命令来验证它是否同时显示了之前和当前的“运行级别”:
-
-# # runlevel
-
-5 3
-
-你仍然可以使用 init 命令来更改“运行级别”。
-
-## 更改默认 target
-
-现在，将默认 target 更改为 multi-user.target，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-4：更改默认 target
-
-作为测试主机的 root 用户，切换到维护 systemd 配置的目录并进行快速列出：
-
-```
-# cd /etc/systemd/system/ ; ll
-```
-
-```
-total 60
-lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
-```
-
-```
--> /dev/null
-<SNIP>
-lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
-lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
-第 3 章 使用 systemd 理解 Linux 启动
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
-```
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-LOAD = 反映单元定义是否已正确加载。
-ACTIVE = 高级单元激活状态，即 SUB 的泛化。
-SUB = 低级单元激活状态，值取决于单元类型。
-
-列出了 21 个已加载的单元。使用 --all 也可以查看已加载但未激活的单元。
-
-使用 'systemctl list-unit-files' 显示所有已安装的单元文件。
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-## 切换到不同的 target
-
-有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-3：更改 target
-
-使用 isolate 命令可以轻松切换到 multi-user.target。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
-
-# # systemctl isolate multi-user.target
-
-显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 graphical.target 已不再运行：
-
-# # systemctl list-units --type target
-
-确保使用 runlevel 命令来验证它是否同时显示了之前和当前的“运行级别”:
-
-# # runlevel
-
-5 3
-
-你仍然可以使用 init 命令来更改“运行级别”。
-
-## 更改默认 target
-
-现在，将默认 target 更改为 multi-user.target，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-4：更改默认 target
-
-作为测试主机的 root 用户，切换到维护 systemd 配置的目录并进行快速列出：
-
-```
-# cd /etc/systemd/system/ ; ll
-```
-
-```
-total 60
-lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
-```
-
-```
--> /dev/null
-<SNIP>
-lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
-lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
-第 3 章 使用 systemd 理解 Linux 启动
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
-```
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-LOAD = 反映单元定义是否已正确加载。
-ACTIVE = 高级单元激活状态，即 SUB 的泛化。
-SUB = 低级单元激活状态，值取决于单元类型。
-
-列出了 21 个已加载的单元。使用 --all 也可以查看已加载但未激活的单元。
-
-使用 'systemctl list-unit-files' 显示所有已安装的单元文件。
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-## 切换到不同的 target
-
-有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-3：更改 target
-
-使用 isolate 命令可以轻松切换到 multi-user.target。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
-
-# # systemctl isolate multi-user.target
-
-显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 graphical.target 已不再运行：
-
-# # systemctl list-units --type target
-
-确保使用 runlevel 命令来验证它是否同时显示了之前和当前的“运行级别”:
-
-# # runlevel
-
-5 3
-
-你仍然可以使用 init 命令来更改“运行级别”。
-
-## 更改默认 target
-
-现在，将默认 target 更改为 multi-user.target，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-4：更改默认 target
-
-作为测试主机的 root 用户，切换到维护 systemd 配置的目录并进行快速列出：
-
-```
-# cd /etc/systemd/system/ ; ll
-```
-
-```
-total 60
-lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
-```
-
-```
--> /dev/null
-<SNIP>
-lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
-lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants evendrwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
-第 3 章 使用 systemd 理解 Linux 启动
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
-```
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-LOAD = 反映单元定义是否已正确加载。
-ACTIVE = 高级单元激活状态，即 SUB 的泛化。
-SUB = 低级单元激活状态，值取决于单元类型。
-
-列出了 21 个已加载的单元。使用 --all 也可以查看已加载但未激活的单元。
-
-使用 'systemctl list-unit-files' 显示所有已安装的单元文件。
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-## 切换到不同的 target
-
-有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-3：更改 target
-
-使用 isolate 命令可以轻松切换到 multi-user.target。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
-
-# # systemctl isolate multi-user.target
-
-显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 graphical.target 已不再运行：
-
-# # systemctl list-units --type target
-
-确保使用 runlevel 命令来验证它是否同时显示了之前和当前的“运行级别”:
-
-# # runlevel
-
-5 3
-
-你仍然可以使用 init 命令来更改“运行级别”。
-
-## 更改默认 target
-
-现在，将默认 target 更改为 multi-user.target，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-4：更改默认 target
-
-作为测试主机的 root 用户，切换到维护 systemd 配置的目录并进行快速列出：
-
-```
-# cd /etc/systemd/system/ ; ll
-```
-
-```
-total 60
-lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
-```
-
-```
--> /dev/null
-<SNIP>
-lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
-lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
-第 3 章 使用 systemd 理解 Linux 启动
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
-```
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-LOAD = 反映单元定义是否已正确加载。
-ACTIVE = 高级单元激活状态，即 SUB 的泛化。
-SUB = 低级单元激活状态，值取决于单元类型。
-
-列出了 21 个已加载的单元。使用 --all 也可以查看已加载但未激活的单元。
-
-使用 'systemctl list-unit-files' 显示所有已安装的单元文件。
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-## 切换到不同的 target
-
-有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-3：更改 target
-
-使用 isolate 命令可以轻松切换到 multi-user.target。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
-
-# # systemctl isolate multi-user.target
-
-显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 graphical.target 已不再运行：
-
-# # systemctl list-units --type target
-
-确保使用 runlevel 命令来验证它是否同时显示了之前和当前的“运行级别”:
-
-# # runlevel
-
-5 3
-
-你仍然可以使用 init 命令来更改“运行级别”。
-
-## 更改默认 target
-
-现在，将默认 target 更改为 multi-user.target，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-4：更改默认 target
-
-作为测试主机的 root 用户，切换到维护 systemd 配置的目录并进行快速列出：
-
-```
-# cd /etc/systemd/system/ ; ll
-```
-
-```
-total 60
-lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
-```
-
-```
--> /dev/null
-<SNIP>
-lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
-lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
-第 3 章 使用 systemd 理解 Linux 启动
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants
-drwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
-```
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。 (wait, I发现原文中包含了一些重复的文本)
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。 (Wait, let me re-evaluate the source text provided by the user. The source text has many repetitions of paragraphs. I must translate exactly what is provided in the source.)
-
-[content]
-rpc_pipefs.target loaded active rpc_pipefs.target
-slices.target loaded active active Slices
-sockets.target loaded active active Sockets
-sshd-keygen.target loaded active active sshd-keygen.target
-swap.target loaded active active Swap
-sysinit.target loaded active active System Initialization
-timers.target loaded active active Timers
-
-LOAD = 反映单元定义是否已正确加载。
-ACTIVE = 高级单元激活状态，即 SUB 的泛化。
-SUB = 低级单元激活状态，值取决于单元类型。
-
-列出了 21 个已加载的单元。使用 --all 也可以查看已加载但未激活的单元。
-
-使用 'systemctl list-unit-files' 显示所有已安装的单元文件。
-
-这显示了所有当前加载并激活的 target。你也可以看到 graphical.target 和 multi-user.target。在加载 graphical.target 之前，需要先加载 multi-user.target。在本示例中，graphical.target 处于激活状态。
-
-## 切换到不同的 target
-
-有时，我需要在主机运行期间更改正在运行的 target。这并不会改变默认的 target，系统在下次重启时仍将启动默认 target。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-3：更改 target
-
-使用 isolate 命令可以轻松切换到 multi-user.target。对于这个子命令来说，这个词似乎很奇怪，但我们就是这么用的。
-
-# # systemctl isolate multi-user.target
-
-显示内容现在应该从 GUI 桌面或登录屏幕变为虚拟控制台。登录并列出当前激活的系统单元，以验证 graphical.target 已不再运行：
-
-# # systemctl list-units --type target
-
-确保使用 runlevel 命令来验证它是否同时显示了之前和当前的“运行级别”:
-
-# # runlevel
-
-5 3
-
-你仍然可以使用 init 命令来更改“运行级别”。
-
-## 更改默认 target
-
-现在，将默认 target 更改为 multi-user.target，这样它将始终进入控制台命令行界面，而不是 GUI 桌面界面。
-
-第 3 章 使用 systemd 理解 Linux 启动
-
-## 实验 3-4：更改默认 target
-
-作为测试主机的 root 用户，切换到维护 systemd 配置的目录并进行快速列出：
-
-```
-# cd /etc/systemd/system/ ; ll
-```
-
-```
-total 60
-lrwx-rwx. 1 root 9 Jun 10 13:58 abtrd.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-journal-core.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-oops.service -> /dev/null
-lrwx-rwx. 1 root 9 Jun 10 13:58 abrt-xorg.service
-```
-
-```
--> /dev/null
-<SNIP>
-lrwx-rwx. 1 root root 400 Jun 10 11:26 default.target -> /usr/lib/systemd/graphical.target
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 'dev-virtio%2dports-org.qemu.guest_agent.0.device.wants'
-lrwx-rwx. 1 root root 390 Jun 19 14:00 display-manager.service -> /usr/lib/systemd/lightdm.service
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 getty.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 24 09:20 graphical.target.wants
-drwxr-xr-x. 2 root root 4096 Aug 27 08:13 multi-user.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 network-online.target.wants
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 remote-fs.target.wants
-第 3 章 使用 systemd 理解 Linux 启动
-drwxr-xr-x. 2 root root 4096 Apr 14 2024 sockets.target.wants
 drwxr-xr-x. 2 root root 4096 Jun 10 13:46 sysinit.target.wants evendrwxr-xr-x. 2 root root 4096 Jun 10 13:57 sysstat.service.wants
+
 drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-homed.service.wants
+
 drwxr-xr-x. 2 root root 4096 Apr 14 2024 systemd-journald.service.wants
+
 drwxr-xr-x. 2 root root 4096 Apr 14 2024 timers.target.wants
+
 drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
 ```
 
+7. 为什么你可能在 `rescue.target` 中使用计算机？
 
-
-
-7. 为什么你可能在 rescue.target 中使用计算机？
-
-8. 为什么你可能在 multi-user.target 中运行计算机？
+8. 为什么你可能在 `multi-user.target` 中运行计算机？
 
 85
 
@@ -3673,11 +2228,11 @@ drwxr-xr-x. 2 root root 4096 Aug 24 09:21 user.service.wants
 
 ## 目标
 在本章中，你将学习：
-- systemd 如何确定服务的启动顺序，尽管它是一个高度并行的系统
-- 使用 systemd 工具创建一个新的 systemd 单元（unit），以便在启动时运行一个简单的程序
+- `systemd` 如何确定服务的启动顺序，尽管它是一个高度并行的系统
+- 使用 `systemd` 工具创建一个新的 `systemd` 单元（unit），以便在启动时运行一个简单的程序
 - 使用启动消息查看程序和服务单元所添加的文本
 - 使用 `journalctl` 查看新服务单元启动和结束时创建的消息以及程序的输出
-- 配置服务单元，使其在 Linux systemd 启动的特定阶段启动
+- 配置服务单元，使其在 Linux `systemd` 启动的特定阶段启动
 
 > © 版所有 David Booth 2025
 
@@ -3687,11 +2242,11 @@ D. Both, systemd for Linux SysAdmins, https://doi.org/10.1007/979-8-8688-1328-3_
 第 4 章 如何使用 systemd 管理启动
 
 ## 概述
-在最近设置一个新 Linux 系统时，我想知道如何确保服务和其他单元的依赖项在这些依赖服务和服务单元启动之前已经运行。具体而言，我需要更多关于 systemd 如何管理启动序列的知识，特别是在一个本质上并行的系统中确定服务启动顺序的方法。
+在最近设置一个新 Linux 系统时，我想知道如何确保服务和其他单元的依赖项在这些依赖服务和服务单元启动之前已经运行。具体而言，我需要更多关于 `systemd` 如何管理启动序列的知识，特别是在一个本质上并行的系统中确定服务启动顺序的方法。
 
 你可能知道 SystemV 通过为脚本命名 `SX` 前缀来排列启动顺序，其中 XX 是 00 到 99 之间的数字。然后 SystemV 使用按名称排序的 Linux 排序，为所需的运行级别按字母数字顺序运行每个启动脚本。
 
-但 systemd 单元文件可以由系统管理员创建或修改，用于定义不仅用于初始化而且还用于常规操作的子程序。我们将创建一个服务单元文件，该文件将在启动时运行一个简单的测试程序。你还可以更改单元文件中的某些配置设置，并使用系统日志（journal）查看你的更改在启动序列中的位置。
+但 `systemd` 单元文件可以由系统管理员创建或修改，用于定义不仅用于初始化而且还用于常规操作的子程序。我们将创建一个服务单元文件，该文件将在启动时运行一个简单的测试程序。你还可以更改单元文件中的某些配置设置，并使用系统日志（journal）查看你的更改在启动序列中的位置。
 
 ## 准备
 确保你已从 `/etc/default/grub` 文件的 `GRUB_CMDLINE_LINUX=` 行中删除了 `rhgb` 和 `quiet`，我们在实验 3-1 中做的那样。这将使你能够观察 Linux 启动消息流，你在本章的一些实验中将需要它。
@@ -3702,11 +2257,18 @@ D. Both, systemd for Linux SysAdmins, https://doi.org/10.1007/979-8-8688-1328-3_
 ## sestatus
 SELinux status: enabled
 SELinux mount: /sys/fs/selinux
+```
+
 88
+
 第 4 章 如何使用 systemd 管理启动
-SELinux root directory: /etc/selinux
+
+SELinux root directory: `/etc/selinux`
+
 Loaded policy name: targeted
+
 Current mode: enforcing
+
 ```
 
 来自配置文件的模式: enforcing
@@ -3729,15 +2291,16 @@ Max kernel policy version: 33
 
 ```bash
 #!/usr/bin/bash
-
 # 用于测试带有 systemd 启动配置的简单程序。
-
 # 版权所有 David Both, 2025
+```
 
 89
+
 ```
 第 4 章 如何使用 systemd 管理启动
 # GNU 全局许可许可证：
+```
 
 ```bash
 # 允许在任何介质中复制和分发此文件，
@@ -3767,17 +2330,17 @@ echo "#######################################"
 ###### Hello World! #######
 ################################
 ```
-此程序可以使用任何脚本语言创建。将其放置在 /usr/local/bin 中，这样当你输入它时就可以从命令行轻松运行。
+此程序可以使用任何脚本语言创建。将其放置在 `/usr/local/bin` 中，这样当你输入它时就可以从命令行轻松运行。
 
 ## 服务单元
 在我们创建服务单元之前，让我们探索什么是服务单元以及它如何与获取（getting）相关。
 90
 第 4 章 如何使用 systemd 管理启动
-一个单元是“服务、设备、挂载点、目标、套接字、定时器、资源管理切（slice）或进程组”——systemd.unit 页面。
+一个单元是“服务、设备、挂载点、目标、套接字、定时器、资源管理切（slice）或进程组”——`systemd.unit` 页面。
 
 单元文件是一个纯文本的 ini 格式文件，包含定义单元的数据。它定义了正在创建的单元类型、如何使用它、它运行的程序以及它所属的 systemd 目标。
 
-共有八种服务类型，你可以在 systemd-service(5) 手册页中找到每种类型（以及单元文件的其他部分）的解释。系统管理员在创建用于本地使用的新服务单元时通常使用这些类型。我最常用的类型是 simple、oneshot 和 dbus。我们将在书中探讨每种类型。我们已经在第 3 章看过了 oneshot 类型。
+共有八种服务类型，你可以在 `systemd-service(5)` 手册页中找到每种类型（以及单元文件的其他部分）的解释。系统管理员在创建用于本地使用的新服务单元时通常使用这些类型。我最常用的类型是 `simple`、`oneshot` 和 `dbus`。我们将在书中探讨每种类型。我们已经在第 3 章看过了 `oneshot` 类型。
 
 表 4-1 列出了所有服务类型及其要说明。
 
@@ -3789,7 +2352,7 @@ echo "#######################################"
 | 服务类型 | 说明 |
 | :--- | :--- |
 | simple | 这是默认类型。systemd 假设在程序开始执行后立即启动。这通常是程序的主进程。 |
-| exec | 与 simple 类似，systemd 在主二进制文件执行后立即认为单元已启动。它会将后续单元的启动推迟到该点。注意，这意味着当服务的二进制文件无法成功调用时，systemctl start 命令会报告失败。 |
+| exec | 与 simple 类似，systemd 在主二进制文件执行后立即认为单元已启动。它会将后续单元的启动推迟到该点。注意，这意味着当服务的二进制文件无法成功调用时，`systemctl start` 命令会报告失败。 |
 | forking | systemd 在由派生的二进制文件退出后立即认为单元已启动。不建议使用这种类型；请改用 notify-reload 或 dbus。 |
 | oneshot | 与 simple 类似；但服务管理器在主进程退出后会认为单元已就绪。然后它会启动后续单元。 |
 | dbus | 与 simple 类似；但此类类型的单元必须指定 `Busname=`，并且服务管理器在获取指定的总线名称后认为单元已就绪。 |
@@ -3805,18 +2368,15 @@ echo "#######################################"
 
 ## 表 4-1. (继续)
 
-
-
-
 在控制台上。请注意，这种类型仅用于改进控制台输出；作为通用的单元排序工具它并不有用。你可以在章末的资源中找到更多信息。
 
 ## 创建服务单元 (Service Unit)
 
-服务单元文件使用标准 ini 文件的格式和结构。命令以井号 (#) 开头，节名称包含在方括号 [] 中。我们的单元文件是最简单的形式，包含三个部分：
+服务单元文件使用标准 ini 文件的格式和结构。命令以井号 (`#`) 开头，节名称包含在方括号 `[]` 中。我们的单元文件是最简单的形式，包含三个部分：
 
-- [Unit]: 这是单元的简短描述，作为系统管理员（SysAdmins）的标识符。它将出现在该服务的 systemd 状态报告中。
-- [Service]: 定义单元类型为服务，并提供服务类型（在本例中为 `oneshot`）以及要运行程序的完全限定路径。
-- [Install]: 指定将触发服务单元的目标单元。`oneshot` 用于此类服务：由单元文件启动的程序是主进程，且必须在 systemd 启动任何依赖进程之前完成。我们没有任何需要等待此单元完成的依赖进程。
+- `[Unit]`: 这是单元的简短描述，作为系统管理员（SysAdmins）的标识符。它将出现在该服务的 systemd 状态报告中。
+- `[Service]`: 定义单元类型为服务，并提供服务类型（在本例中为 `oneshot`）以及要运行程序的完全限定路径。
+- `[Install]`: 指定将触发服务单元的目标单元。`oneshot` 用于此类服务：由单元文件启动的程序是主进程，且必须在 systemd 启动任何依赖进程之前完成。我们没有任何需要等待此单元完成的依赖进程。
 
 ## 实验 4-2：创建服务单元
 
@@ -3826,63 +2386,68 @@ echo "#######################################"
 
 ```
 # 用于测试的简单服务单元文件
-
 # 使用 systemd 的启动配置。
-
 # Copyright David Both, 2025
-
 # GNU All-Permissive License:
-
 # 允许在任何媒介上复制和分发此文件，无论经过何修改，均无需支付特许费，前提是必须保留版权声明和本通知。
-
 # 本文件按原样提供，不作任何保证。
-
 #
-
 # 1 Both, David, The Linux Philosophy for SysAdmins, Tenet 04 — Use the Linux FHS,
 https://www.both.org/?p=6982
-
 [Unit]
 Description=My hello shell script
-
 [Service]
 Type=oneshot
 ExecStart=/usr/local/bin/hello.sh
-
 [Install]
 WantedBy=multi-user.target
 ```
 
+
+
 你可以验证服务单元的逻辑和语法。
 
-# systemd-analyze verify /etc/systemd/system/hello.service
+```bash
+systemd-analyze verify /etc/systemd/system/hello.service
+```
 
 遵循 Linux 哲学的原则，“沉默是金”，如果没有输出消息，则说明扫描文件中没有错误。
 
 你也可以通过查看服务状态来验证服务单元是否按预期运行。任何语法错误也会显示在这里。
 
-## systemctl status hello.service
+```bash
+systemctl status hello.service
+```
 
 ```
 + - hello.service - My hello shell script
 
 Loaded: loaded (/etc/systemd/system/hello.service; enabled; preset: disabled)
+
 drop-In: /usr/lib/systemd/system/service.d/10-timeout-abort.conf
+
 Active: inactive (dead)
+
 [root@testvm1 ~]#
 ```
 
 出于好奇，我想看看错误看起来会像什么样。于是，我删除了 `type=oneshot` 那一行中的 "o"，让它看起来像 `type=neshot`，然后再次运行了命令：
 
 ```bash
-## systemctl status hello.service
+systemctl status hello.service
+```
 
+```
 + - hello.service - My hello shell script
+
 Loaded: loaded (/usr/local/lib/systemd/system/hello.service; disabled; preset: disabled)
+
 drop-In: /usr/lib/systemd/system/service.d/10-timeout-abort.conf
+
 Active: inactive (dead)
 
 Oct 28 06:51:44 testvm1[1]: /usr/local/lib/systemd/system/hello.service:11: Failed to parse service type, ignoring: neshot
+
 root@testvm1:~#
 ```
 
@@ -3898,182 +2463,161 @@ root@testvm1:~#
 
 现在你准备好启动新服务并检查状态以查看结果。你可以根据需要多次启动或重启 `oneshot` 服务，因为它运行一次后就会退出。
 
-## 实验 4-3：启动服务
+### 实验 4-3：启动服务
 
 我们现在不会启用该服务，只是启动它，使其在每次我们启动时都运行一次。你可以多次运行这种 `oneshot` 类型的服务而没有问题。
 
 启动服务（如下所示），然后检查状态。根据你对错误的实验程度，你的结果可能与我的不同，时间戳也会不同。
 
 ```bash
-## systemctl start hello.service
-## systemctl status hello.service
+systemctl start hello.service
+systemctl status hello.service
+```
 
+```
 + - hello.service - My hello shell script
+
 Loaded: loaded (/usr/local/lib/systemd/system/hello.service; disabled; preset: disabled)
+
 drop-In: /usr/lib/systemd/system/service.d/10-timeout-abort.conf
+
 Active: inactive (dead)
+
 Oct 29 06:33:09 testvm1[1]: Starting hello.service...
+
 Oct 29 06:33:09 testvm1[1]: hello.service: deactivated successfully.
+
 Oct 29 06:33:09 testvm1[1]: Finished hello.service - My hello shell script.
 ```
 
 状态命令输出中的消息显示服务已完成。此显示是从最近几次调用服务的日志中生成的。通过多次启动服务然后再次运行状态命令就可以我的我的意思。你也可以直接查看日志。有多种方法可以这样做。一种是指定记录标识符，在本例中是脚本名称。它在编写此章节时重启过，所以它显示了之前的以及当前会话的日志。
 
-# journalctl -t hello.sh
+```bash
+journalctl -t hello.sh
+```
 
 ```
 Oct 27 17:58:11 testvm1[1]: hello.sh[128976]: Hello World!
+
 Oct 27 17:58:12 testvm1[1]: hello.sh[128980]: Hello World!
+
 -- Boot e257de59e2430ca25873e18ad628b
+
 Oct 28 06:53:33 testvm1[1]: hello.sh[16322]: Hello World!
+
 Oct 28 06:54:31 testvm1[1]: hello.sh[16386]: Hello World!
+
 Oct 28 06:54:31 testvm1[1]: hello.sh[16422]: Hello World!
+
 Oct 28 06:54:33 testvm1[1]: hello.sh[16466]: Hello World!
+
 -- Boot d04572266a83472a2902730b9ae756
+
 Oct 28 07:03:21 testvm1[1]: hello.sh[15096]: Hello World!
+
 Oct 28 07:03:22 testvm1[1]: hello.sh[15136]: Hello World!
+
 Oct 29 06:31:45 testvm1[1]: hello.sh[130958]: Hello World!
 ```
 
-
-
-
 Oct 29 06:31:45 testvm1.both.org hello.sh[130958]: #######
-
 Hello World! #######
-
 Oct 29 06:31:45 testvm1.both.org hello.sh[130958]:
-
 ################################
-
 Oct 29 06:33:09 testvm1.both.org hello.sh[130983]:
-
 ################################################
-
 Oct 29 06:33:09 testvm1.both.org hello.sh[130983]: #######
-
 Hello World! #######
-
 Oct 29 06:33:09 testvm1.both.org hello.sh[130983]:
-
 ################################
 
-要找到 hello.service 的 systemd 记录，你可以在 systemd 中进行搜索。你可以使用 Shift+g 跳到日志条目的末尾，然后向上滚动以找到你感兴趣的内容。使用 -b 选项仅显示最近一次启动的条目。
+要找到 `hello.service` 的 systemd 记录，你可以在 systemd 中进行搜索。你可以使用 Shift+g 跳到日志条目的末尾，然后向上滚动以找到你感兴趣的内容。使用 `-b` 选项仅显示最近一次启动的条目。
 
 ```bash
-# journalctl -b -t systemd
+journalctl -b -t systemd
 ```
 
+```
 <snip>
 ```
 
 Oct 29 06:31:45 testvm1.both.org systemd[1]: Starting hello.service - My hello shell script...
-
 Oct 29 06:31:45 testvm1.both.org systemd[1]: hello.service: Deactivated successfully.
-
 Oct 29 06:31:45 testvm1.both.org systemd[1]: Finished hello.service - My hello shell script.
-
 Oct 29 06:32:44 testvm1.both.org systemd[1]: Starting packagekit.service - PackageKit Daemon...
-
 Oct 29 06:32:44 testvm1.both.org systemd[1]: Started packagekit.service - PackageKit Daemon.
-
 Oct 29 06:33:09 testvm1.both.org systemd[1]: Starting hello.service - My hello shell script...
-
 Oct 29 06:33:09 testvm1.both.org systemd[1]: hello.service: Deactivated successfully.
+```
 
 # 第4章 如何使用 Systemd 管理启动项
 
 Oct 29 06:03:09 testvm1.both is systemd[1]: Finished hello.service - My hello shell script.
 
-我保留了其他的日志条目，让你了解一下你可能会发现的内容。这条命令列出了所有与 systemd 相关的日志行——在我写这部分内容时有 109,183 行。幸运的是，我们新服务的条目位于数据流的末尾。使用大写的 "g" 可以让分页器跳转到数据流的末尾。你可以使用分页器的搜索功能（通常结果会更少），或者使用内置的 grep 功能。-g（或 --grep=）选项使用 Perl 兼容的正则表达式：
+我保留了其他的日志条目，让你了解一下你可能会发现的内容。这条命令列出了所有与 systemd 相关的日志行——在我写这部分内容时有 109,183 行。幸运的是，我们新服务的条目位于数据流的末尾。使用大写的 "g" 可以让分页器跳转到数据流的末尾。你可以使用分页器的搜索功能（通常结果会更少），或者使用内置的 grep 功能。`-g`（或 `--grep=`）选项使用 Perl 兼容的正则表达式：
 
 ```bash
-# journalctl -b -t systemd -g "hello"
+journalctl -b -t systemd -g "hello"
 ```
 
 Oct 28 07:03:14 testvm1.both is systemd[1]: Configuration file=/usr/local/lib/systemd/system/hello.service is marked executable. Please remove ex>
-
 Oct 28 07:03:14 testvm1.both systemd[1]: Configuration file=/usr/local/lib/systemd/system/hello.service is marked executable. Please remove ex>
-
 Oct 28 07:03:21 testvm1.both systemd[1]: Configuration file=/usr/local/lib/systemd/system/hello.service is marked executable. Please remove ex>
-
 Oct 28 07:03:21 testvm1.both systemd[1]: Starting hello.service - My hello shell script...
-
 Oct 28 07:03:21 testvm1.both systemd[1]: hello.service: Deactivated successfully.
-
 Oct 28 07:03:21 testvm1.both systemd[1]: Finished hello.service - My hello shell script.
-
 Oct 28 07:03:22 testvm1.both systemd[1]: Configuration file=/usr/local/lib/systemd/system/hello.service is marked executable. Please remove ex>
-
 Oct 28 07:03:22 testvm1.both systemd[1]: Starting hello.service - My hello script...
 
 # 第4章 如何使用 Systemd 管理启动项
 
 Oct 28 07:03:22 testvm1.both.org systemd[1]: hello.service: Deactivated successfully.
-
 Oct 28 07:03:22 testvm1.both.org systemd[1]: Finished hello.service - My hello script.
-
 Oct 28 07:03:24 testvm1.both.org systemd[1]: Configuration file /usr/local/lib/systemd/system/hello.service is marked executable. Please remove ex>
-
 Oct 28 07:03:24 testvm1.both.org systemd[1]: Configuration file /usr/local/lib/systemd/system/hello.service is marked executable. Please remove ex>
-
 Oct 29 06:31:45 testvm1.both.org systemd[1]: Starting hello.service - My hello script...
-
 Oct 29 06:31:45 testvm1.both.org systemd[1]: hello.service: Deactivated successfully.
-
 Oct 29 06:31:45 testvm1.both.org systemd[1]: Finished hello.service - My hello script.
-
 Oct 29 06:33:09 testvm1.both.org systemd[1]: Starting hello.service - My hello script...
-
 Oct 29 06:33:09 testvm1.both.org systemd[1]: hello.service: Deactivated successfully.
-
 Oct 29 06:33:09 testvm1.both.org systemd[1]: Finished hello.service - My hello script.
 
-你可以使用标准的 grep 命令，但它不会显示元数据。注意 10 月 28 日行中的错误信息显示 hello.service 被标记为可执行。我修复了这个问题，所以 10 月 29 日的行不再包含这些错误信息。这是一个很好的说明，我们应该检查日志，因为它们包含了许多帮助我们确保配置正确的信息。
+你可以使用标准的 `grep` 命令，但它不会显示元数据。注意 10 月 28 日行中的错误信息显示 `hello.service` 被标记为可执行。我修复了这个问题，所以 10 月 29 日的行不再包含这些错误信息。这是一个很好的说明，我们应该检查日志，因为它们包含了许多帮助我们确保配置正确的信息。
 
-你可以通过指定时间范围来缩小范围。例如，我将从上面的时间开始。注意 --since= 选项必须用引号括起来，该选项也可以表示为 -S。日期和时间在你的主机上是不同的，所以请使用你日志中的时间。
+你可以通过指定时间范围来缩小范围。例如，我将从上面的时间开始。注意 `--since=` 选项必须用引号括起来，该选项也可以表示为 `-S`。日期和时间在你的主机上是不同的，所以请使用你日志中的时间。
 
 ```bash
-# journalctl --since="2024-10-29 06:30:00"
+journalctl --since="2024-10-29 06:30:00"
 ```
 
-since 跳过了该时间之前的所有条目，但该之后可能有很多你需要的条目。你也可以使用 until 来过滤掉感兴趣时间之后的的条目。我想要事件发生时尽可能少的条目。
+`since` 跳过了该时间之前的所有条目，但该之后可能有很多你需要的条目。你也可以使用 `until` 来过滤掉感兴趣时间之后的的条目。我想要事件发生时尽可能少的条目。
 
-如果在这个时间段内有很多活动，你可以结合 -u 选项来进一步缩小结果数据流。
+如果在这个时间段内有很多活动，你可以结合 `-u` 选项来进一步缩小结果数据流。
 
 ```bash
-# journalctl --since="2024-10-29 06:30:00" --until="2024-10-29 06:33:10" -u hello
+journalctl --since="2024-10-29 06:30:00" --until="2024-10-29 06:33:10" -u hello
 ```
 
 Oct 29 06:31:45 testvm1.both.org systemd[1]: Starting hello.service - My hello shell script...
-
 Oct 29 06:31:45 testvm1.both.org hello.sh[130958]: #################################
-
 Oct 29 06:31:45 testvm1.both.org hello.sh[130958]: ############
 Hello World! #######
-
 Oct 29 06:31:45 testvm1.both.org hello.sh[130958]: #################################
-
 Oct 29 06:31:45 testvm1.both.org systemd[1]: hello.service: Deactivated successfully.
-
 Oct 29 06:31:45 testvm1.both.org systemd[1]: Finished hello.service - My hello shell script.
-
 Oct 29 06:33:09 testvm1.both.org systemd[1]: Starting hello.service - My hello shell script...
-
 Oct 29 06:33:09 testvm1.both.org hello.sh[130983]: ####################################
-
 Oct 29 06:33:09 testvm1.both.org hello.sh[130983]: ######
 Hello World! #######
-
 Oct 29 06:33:09 testvm1.both.org hello.sh[130983]: ####################################
-
 Oct 29 06:33:09 testvm1.both.org systemd[1]: hello.service: Deactivated successfully.
-
 Oct 29 06:33:09 testvm1.both.org systemd[1]: Finished hello.service - My hello shell script.
 
 你的结果应该和我的相似，你可以从这一系列实验中看到服务运行正常。
 
 ## 重启——最后
+
+
 
 到目前为止，你还没有重启安装服务的主机。所以我们现在执行此操作，毕竟这关于在启动时运行程序。
 
@@ -4085,18 +2629,15 @@ Oct 29 06:33:09 testvm1.both.org systemd[1]: Finished hello.service - My hello s
 # systemctl --now hello.service
 ```
 
-创建软链接 /etc/systemd/system/multi-user.target.wants/hello.service -> /usr/local/lib/systemd/system/hello.service。
+创建软链接 `/etc/systemd/system/multi-user.target.wants/hello.service` -> `/usr/local/lib/systemd/system/hello.service`。
 
-注意链接是在 /etc/systemd/system/multi-user.target.wants 目录中创建的，这是因为服务单元指定了该服务被 multi-user.target “需要”。
+注意链接是在 `/etc/systemd/system/multi-user.target.wants` 目录中创建的，这是因为服务单元指定了该服务被 `multi-user.target` “需要”。
 
-重启，并确保在启动期间观察数据流以查看“hello world”消息。等等……你没看到吗？嗯，我也没有看到。虽然它过去得很快，但我看到了 systemd 正在启动 hello.service 的消息。查看自上次系统启动的日志。你可以使用 less 分页器的搜索工具查找 "hello" 或 "hello"，以直观感受相关你服务的条目。
+重启，并确保在启动期间观察数据流以查看“hello world”消息。等等……你没看到吗？嗯，我也没有看到。虽然它过去得很快，但我看到了 systemd 正在启动 `hello.service` 的消息。查看自上次系统启动的日志。你可以使用 `less` 分页器的搜索工具查找 "`hello`" 或 "`hello`"，以直观感受相关你服务的条目。
 
 ```bash
 # journalctl -b
 ```
-
-
-
 
 # 由 David Both 编写
 
@@ -4119,37 +2660,37 @@ WantedBy=multi-user.target
 
 ## 更改顺序
 
-现在你的服务已经运行了，你可以查看它在启动顺序中的启动位置，并尝试更改它。需要记住的是，systemd 的意图是在每个主要目标（basic.target、multi-user.target 和 graphical.target）内并行启动尽可能的服务和其他单元类型。你刚刚查看了最近一次启动的日志条目，它们看起来应该和我上面输出中的日志相似。
+现在你的服务已经运行了，你可以查看它在启动顺序中的启动位置，并尝试更改它。需要记住的是，systemd 的意图是在每个主要目标（`basic.target`、`multi-user.target` 和 `graphical.target`）内并行启动尽可能的服务和其他单元类型。你刚刚查看了最近一次启动的日志条目，它们看起来应该和我上面输出中的日志相似。
 
 ### 第 4 章 如何使用 systemd 管理启动项
 
-systemd 在你的测试服务达到基础基本系统目标后很快启动了该服务。这就是你在服务单元文件的 WantedBy 行中指定的，所以它是是正确的。
+`systemd` 在你的测试服务达到基础基本系统目标后很快启动了该服务。这就是你在服务单元文件的 `WantedBy` 行中指定的，所以它是是正确的。
 
 ## 实验 4-5：更改 HELLO.SERVICE 的启动顺序
 
-在更改任何内容之前，列出 /etc/systemd/system/multi-user.target.wants 目录的内容，你会看到一个指向服务单元文件的符号链接（软链接）。服务单元文件的 [install] 部分指定了由哪个目标来启动该服务，而运行 `systemctl enable hello.service` 命令会在相应的“target wants”目录中创建该链接。
+在更改任何内容之前，列出 `/etc/systemd/system/multi-user.target.wants` 目录的内容，你会看到一个指向服务单元文件的符号链接（软链接）。服务单元文件的 `[Install]` 部分指定了由哪个目标来启动该服务，而运行 `systemctl enable hello.service` 命令会在相应的“target wants”目录中创建该链接。
 
-- hello.service -> /usr/local/lib/systemd/system/hello.service
+- `hello.service` -> `/usr/local/lib/systemd/system/hello.service`
 
-某些服务需要在基础目标（basic target）期间期间启动，而其他服务除非系统启动 graphical.target，否则不需要启动。让我们假设我们不需要服务在 graphical.target 之后才启动。
+某些服务需要在基础目标（basic target）期间期间启动，而其他服务除非系统启动 `graphical.target`，否则不需要启动。让我们假设我们不需要服务在 `graphical.target` 之后才启动。
 
-禁用 `hello.service` 以从 multi-user.target.wants 目录中删除旧链接，然后将 WantedBy 行更改为：
+禁用 `hello.service` 以从 `multi-user.target.wants` 目录中删除旧链接，然后将 `WantedBy` 行更改为：
 
-WantedBy=graphical.target
+`WantedBy=graphical.target`
 
-重新启用该服务以在 graphical.targets.wants 目录中添加新链接。我注意到，如果我忘记在更改 target wants 之前先禁用服务，我可以运行 `systemctl disable` 命令，链接将从“target wants”目录中移除。然后，我只需要重新启用服务并重启。
+重新启用该服务以在 `graphical.targets.wants` 目录中添加新链接。我注意到，如果我忘记在更改 target wants 之前先禁用服务，我可以运行 `systemctl disable` 命令，链接将从“target wants”目录中移除。然后，我只需要重新启用服务并重启。
 
-在 graphical.target 中启动服务的一个问题是，如果主机启动到 multi-user.target，该服务将不会自动启动。这可能正是服务需要 GUI 桌面界面的需要的，但也可能不是你想要的。
+在 `graphical.target` 中启动服务的一个问题是，如果主机启动到 `multi-user.target`，该服务将不会自动启动。这可能正是服务需要 GUI 桌面界面的需要的，但也可能不是你想要的。
 
 ### 第 4 章 如何使用 systemd 管理启动项
 
-使用 `-o short-monotonic` 查看 graphical.target 和 multi-user.target 的日志条目，该选项会以微秒精度显示内核启动后的秒数。
+使用 `-o short-monotonic` 查看 `graphical.target` 和 `multi-user.target` 的日志条目，该选项会以微秒精度显示内核启动后的秒数。
 
 ```
 # journalctl -b o short-monotonic
 ```
 
-这是 multi-user.target 的部分结果，你测试系统上的时间将与我的不同。
+这是 `multi-user.target` 的部分结果，你测试系统上的时间将与我的不同。
 
 ```
 [ 17.264730] testvm1.both.org systemd[1]: Starting My hello shell script...
@@ -4197,7 +2738,7 @@ WantedBy=graphical.target
 
 ### 第 4 章 如何使用 systemd 管理启动项
 
-以及 graphical.target 的部分结果：
+以及 `graphical.target` 的部分结果：
 
 ```
 [ 19.436815] testvm1.both.org systemd[1]: Starting My hello shell script...
@@ -4220,6 +2761,7 @@ WantedBy=graphical.target
 ```
 [ 19.612614] testvm1.both.org hello.sh[841]: ############################
 ```
+
 （注：此处原文中存在部分重复或混乱，翻译已按原文逻辑处理）
 
 ```
@@ -4233,18 +2775,18 @@ WantedBy=graphical.target
 ```
 [ 21.482605] testvm1.both.org systemd[1]: Finished My hello shell script.
 ```
+
 （注：原文后半部分 graphical.target 结果与前文高度重复，此处已根据原文内容呈现）
 
 （注：原文后半部分..target 存在存在存在重复或逻辑混乱，翻译已按原文逻辑处理）
 
-
-
-
 在进行任何其他更改之前，请务必检查日志（journal）并验证 `hello.service` 单元是否在网络之前启动。你可以通过查找日志中的 `network-online.target` 来检查。
 
-在 `hello.service` 单元文件的 `[unit]` 部分添加以下行：
-After=network-online.target
-Wants=network-online.target
+在 `hello.service` 单元文件的 `[Unit]` 部分添加以下行：
+
+`After=network-online.target`
+
+`Wants=network-online.target`
 
 为了使此功能生效，这两个条目都是必须的。重启你的测试主机，并在日志中查找你服务的条目。我包含了一些 NetworkManager 的条目，以验证 `hello.service` 在它之后启动。
 
@@ -4328,154 +2870,206 @@ Hello World! ######
 - 如何获取 systemd 服务单元的信息
 - 如何创建一个在启动时挂载文件系统的单元
 
-
-
-.scope 单元定义并管理一组系统进程。该单元不是使用单元文件配置的，而是通过程序创建的。根据 systemd.scope 手页，“scope 单元的主要用途是将系统服务的的工作进程分组，以便进行组织和资源管理。”
+`.scope` 单元定义并管理一组系统进程。该单元不是使用单元文件配置的，而是通过程序创建的。根据 `systemd.scope` 手页，“scope 单元的主要用途是将系统服务的的工作进程分组，以便进行组织和资源管理。”
 
 ## .service
 
-.service 单元定义了由 systemd 管理的进程。这些包括服务如 cron、cups（通用 Unix 打印系统）、iptables、多个逻辑卷管理 (LVM) 服务、networkManager 等。
+`.service` 单元定义了由 systemd 管理的进程。这些包括服务如 `cron`、`cups`（通用 Unix 打印系统）、`iptables`、多个逻辑卷管理 (`LVM`) 服务、`networkManager` 等。
 
 ## .slice
 
-.slice 单元定义了一个“切片（slice）”，它是系统资源的一种概念性划分，与一组进程相关。你可以将所有系统资源想象成一块饼，而这部分资源子集就是从饼上切出来的一个“切片”。
+`.slice` 单元定义了一个“切片（slice）”，它是系统资源的一种概念性划分，与一组进程相关。你可以将所有系统资源想象成一块饼，而这部分资源子集就是从饼上切出来的一个“切片”。
 
 ## .socket
 
-.socket 单元定义进程间通信套接字，例如网络套接字。
+`.socket` 单元定义进程间通信套接字，例如网络套接字。
 
 ## .swap
 
-.swap 单元定义交换设备或文件。
+`.swap` 单元定义交换设备或文件。
 
 ## .target
 
-.target 单元定义的单元文件组，用于定义启动同步点、运行级别（runlevels）和服务。target 单元定义了为了成功启动而必须处于激活的服务和其他单元。
+`.target` 单元定义的单元文件组，用于定义启动同步点、运行级别（runlevels）和服务。target 单元定义了为了成功启动而必须处于激活的服务和其他单元。
 
 ## .timer
 
-.timer 单元定义了定时器，可以在指定时间启动程序执行。
+`.timer` 单元定义了定时器，可以在指定时间启动程序执行。
 
 # 第 5 章使用系统管理 systemd 单元
 
 ## systemctl
 
-systemd 提供了 systemctl 命令，用于启动和停止服务、配置它们在系统启动时启动（或不启动），以及监控运行服务的状态。
+`systemd` 提供了 `systemctl` 命令，用于启动和停止服务、配置它们在系统启动时启动（或不启动），以及监控运行服务的状态。
 
 ## 实验 5-2：管理 systemd 服务
 
-在作为 root 用户的终端会话中，确保 root 的主目录 (~ ) 是工作目录 (pwd)。要开始以各种方式查看单元，请列出所有已加载和激活的单元。systemctl 会自动将其 stdout 数据流通过 less 分页器处理，因此你不需要自己那样做。我大幅删减了输出流，但保留了足够的内容让你看到广泛的系统单元。你自己的系统将显示一个长长的单元列表。
+在作为 root 用户的终端会话中，确保 root 的主目录 (`~`) 是工作目录 (`pwd`)。要开始以各种方式查看单元，请列出所有已加载和激活的单元。`systemctl` 会自动将其 stdout 数据流通过 `less` 分页器处理，因此你不需要自己那样做。我大幅删减了输出流，但保留了足够的内容让你看到广泛的系统单元。你自己的系统将显示一个长长的单元列表。
 
 ### systemctl
 
 | 单元 | LOAD | ACTIVE | STATUS | 描述 |
 | :--- | :--- | :--- | :--- | :--- |
+
+
+
 | lightdm.service | loaded | active | running | Light 显示管理器 |
+
 | lm_sensors.service | loaded | active | exited | 硬件监控 |
+
 | NetworkManager.service | loaded | active | running | 网络管理器 |
+
 | sshd.service | loaded | active | running | OpenSSH 服务器 |
+
 | dev-zram0.swap | loaded | active | active | 压缩交换 |
+
 | basic.target | loaded | active | active | 基础系统 |
+
 | cryptsetup.target | loaded | active | active | 本地加密卷 |
+
 | getty.target | loaded | active | active | 登录提示 |
+
 | graphical.target | loaded | active | active | 图形界面 |
+
 | integritysetup.target | loaded | active | active | 本地完整性保护 |
+
 | local-fs-pre.target | loaded | active | active | 本地准备 |
+
 | local-fs.target | loaded | active | active | 本地文件系统 |
+
 | multi-user.target | loaded | active | active | 多用户系统 |
+
 | network-online.target | loaded | active | active | 网络已在线 |
+
 | sysstat-collect.timer | loaded | active | waiting | 运行系统活动 |
+
 | sysstat-summary.timer | loaded | active | waiting | 生成摘要 |
+
 | systemd-tmpfiles-clean.timer | loaded | active | waiting | 每日清理 |
+
 | unbound-anchor.timer | loaded | active | waiting | 每日更新 |
 
-LOAD = 反映单元定义是否已正确加载。
-ACTIVE = 高层单元激活状态，即 SUB 的泛化。
-SUB = 低层单元激活状态，其值取决于单元类型。
+`LOAD` = 反映单元定义是否已正确加载。
 
-200 个已加载的单元。通过 --all 也可以查看已加载但未激活的单元。
+`ACTIVE` = 高层单元激活状态，即 `SUB` 的泛化。
 
-当你可以在终端会话中滚动数据时，寻找某些特定类型。第一部分列出了设备，如硬盘、声卡、网络接口卡和 TTY 设备。另一部分显示了文件系统挂载点。其他部分包括各种服务以及所有加载和激活的 target 列表。
+`SUB` = 低层单元激活状态，其值取决于单元类型。
 
-输出底部的 sysstat 用于收集并生成 SAR 的每日系统活动摘要。[^]
+200 个已加载的单元。通过 `--all` 也可以查看已加载但未激活的单元。
 
-使用以下命令（如上面输出最后一行所建议的）查看所有已安装的单元，无论它们是否已加载。我不会在这里重现输出，因为你可以自行滚动查看。systemctl 程序具有极佳的 Tab 补全功能，让你可以轻松地输入复杂的命令，而无需记忆所有选项：
+当你可以在终端会话中滚动数据时，寻找某些特定类型。第一部分列出了设备，如硬盘、声卡、网络接口卡和 TTY 设备。另一部分显示了文件系统挂载点。其他部分包括各种服务以及所有加载和激活的 `target` 列表。
 
-### systemctl list-unit-files
+输出底部的 `sysstat` 用于收集并生成 SAR 的每日系统活动摘要。[^]
 
-# 第 5 章使用系统管理 systemd 单元
+使用以下命令（如上面输出最后一行所建议的）查看所有已安装的单元，无论它们是否已加载。我不会在这里重现输出，因为你可以自行滚动查看。`systemctl` 程序具有极佳的 Tab 补全功能，让你可以轻松地输入复杂的命令，而无需记忆所有选项：
 
-你可以看到某些单元是被禁用的。systemctl 手页中的表 1 列出了并提供了你可能在此列表中看到的条目的的简短描述。使用 -t (type) 选项仅查看定时器单元：
+### `systemctl list-unit-files`
 
-### systemctl list-unit-files -t timer
+# 第 5 章 使用系统管理 systemd 单元
+
+你可以看到某些单元是被禁用的。`systemctl` 手页中的表 1 列出了并提供了你可能在此列表中看到的条目的的简短描述。使用 `-t` (type) 选项仅查看定时器单元：
+
+### `systemctl list-unit-files -t timer`
 
 | 单元 | 文件 | 状态 |
+
 | :--- | :--- | :--- |
+
 | systemd-tmpfiles-clean.timer | static | enabled |
+
 | unbound-anchor.timer | enabled | active |
 
-## systemctl list-timers
+## `systemctl list-timers`
 
 | 单元 | 文件 | 状态 |
+
 | :--- | :--- | :--- |
+
 | chrony-dhcp@timer | disabled | | |
+
 | dnf-makecache.timer | enabled | | |
+
 | fstrim.timer | disabled | | |
+
 | logrotate.timer | disabled | | |
+
 | logwatch.timer | disabled | | |
+
 | mdadm-monitor@timer | static | enabled |
+
 | mlocate-updateddb.timer | enabled | | |
+
 | sysstat-collect.timer | enabled | active |
+
 | sysstat-summary.timer | enabled | active |
+
 | systemd-tmpfiles-clean.timer | static | active |
+
 | unbound-anchor.timer | enabled | active |
 
-通过 --all 查看已加载但未激活的单元。使用以下命令查看所有已安装的单元，无论它们是否已加载。我不会在这里重现输出，因为你可以自行滚动查看。systemd 会列出挂载点：
+通过 `--all` 查看已加载但未激活的单元。使用以下命令查看所有已安装的单元，无论它们是否已加载。我不会在这里重现输出，因为你可以自行滚动查看。`systemd` 会列出挂载点：
 
-### systemctl list-unit-files -t mount
+### `systemctl list-unit-files -t mount`
 
 | 单元 | 文件 | 状态 |
+
 | :--- | :--- | :--- |
+
 | boot.mount | generated | |
+
 | dev-hugepages.mount | static | |
+
 | dev-mqueue.mount | static | |
+
 | home.mount | generated | |
+
 | proc-nfsd.mount | static | |
+
 | proc-binfmt_misc.mount | disabled | |
+
 | run-fuse.mount | disabled | |
+
 | sys-fuse.mount | static | |
+
 | sys-fs-nfs_connections.mount | static | |
+
 | sys-kernel-config.mount | static | |
+
 | sys-kernel-debug.mount | static | |
+
 | tmp.mount | generated | |
+
 | usr.mount | generated | |
+
 | var.mount | generated | |
+
 | var-lib-nfs_rpc_pipe.mount | static | |
+
 | var.mount | generated | |
 
-# 第 5 章使用系统管理 systemd 单元
+# 第 5 章 使用系统管理 systemd 单元
 
-数据流中的 State 列很有趣，需要解释。“generated”状态表示挂载是在启动期间使用 /etc/fstab 中的信息生成的。这些生成挂载单元的是 /lib/systemd/system-systemd-fstab-generator 以及生成其他类型单元的工具。“static”状态挂载单元用于 /proc 和 /sys 等文件系统，这些文件位于 /usr/lib/system 目录。
+数据流中的 State 列很有趣，需要解释。“generated”状态表示挂载是在启动期间使用 `/etc/fstab` 中的信息生成的。这些生成挂载单元的是 `/lib/systemd/system-systemd-fstab-generator` 以及生成其他类型单元的工具。“static”状态挂载单元用于 `/proc` 和 `/sys` 等文件系统，这些文件位于 `/usr/lib/system` 目录。
 
 现在查看服务单元。此命令将显示所有安装的服务，无论它们是否处于激活状态：
 
-### systemctl --all service
+### `systemctl --all service`
 
 服务列表的底部显示主机上有 166 个已加载单元。你的数量可能会不同。
 
-单元文件没有扩展后缀（例如 .unit）来帮助识别它们，因此你可以泛化绝大多数属于系统单元的配置。剩余的文件大多是位于 /etc/systemd 的 .conf 文件。单元文件存储在 /usr/lib/systemd 目录中，其子目录包含本地配置所需的单元文件的符号链接。
+单元文件没有扩展后缀（例如 `.unit`）来帮助识别它们，因此你可以泛化绝大多数属于系统单元的配置。剩余的文件大多是位于 `/etc/systemd` 的 `.conf` 文件。单元文件存储在 `/usr/lib/systemd` 目录中，其子目录包含本地配置所需的单元文件的符号链接。
 
-要探索这些，请进入 /etc/systemd 并列出内容，然后列出当前目录至少两个子目录的内容。查看默认 /etc/systemd/system 并列出 target 文件，它决定了将启动到哪个目标。在系列第二篇文章中，我解释了如何将默认目标从 gUI (graphical.target) 更改为纯命令行 (multi-user.target)。我的测试虚拟机上的 default.target 文件仅仅是指向 /usr/lib 的符号链接。
+要探索这些，请进入 `/etc/systemd` 并列出内容，然后列出当前目录至少两个子目录的内容。查看默认 `/etc/systemd/system` 并列出 `target` 文件，它决定了将启动到哪个目标。在系列第二篇文章中，我解释了如何将默认目标从 `gUI` (`graphical.target`) 更改为纯命令行 (`multi-user.target`)。我的测试虚拟机上的 `default.target` 文件仅仅是指向 `/usr/lib` 的符号链接。
 
-State 列很有趣，需要解释。“generated”状态表示挂载是在启动期间使用 /etc/fstab 中的信息生成的。这些生成挂载单元的是 /lib/systemd/system-systemd-fstab-generator 以及生成其他类型单元的工具。“static”状态挂载单元用于 /proc 和 /sys 等文件系统，这些文件位于 /usr/lib/system 目录。
+State 列很有趣，需要解释。“generated”状态表示挂载是在启动期间使用 `/etc/fstab` 中的信息生成的。这些生成挂载单元的是 `/lib/systemd/system-systemd-fstab-generator` 以及生成其他类型单元的工具。“static”状态挂载单元用于 `/proc` 和 `/sys` 等文件系统，这些文件位于 `/usr/lib/system` 目录。
 
-systemd/system/graphical.target.
+`systemd/system/graphical.target.`
 
 126
 
 第 X 章 使用 system 管理 systemd 单元
 
-花几分钟检查 /etc/systemd/system/default.target 文件的内容：
+花几分钟检查 `/etc/systemd/system/default.target` 文件的内容：
 
 ```
 # cat default.target
@@ -4514,25 +3108,32 @@ systemd/system/graphical.target.
 ```
 
 [Unit]
+
 Description=图形化界面
+
 Documentation=man:systemd.user.target(7)
+
 Requires=multi-user.target
+
 Wants=display-manager.service
+
 Conflicts=rescue.service rescue.target
+
 After=multi-user.target rescue.service rescue.target
 
 display-manager.service
+
 AllowIsolate=yes
 
-注意，这需要 multi-user.target；如果 multi-user.target 尚未运行，graphical.target 将无法启动。它还表示“想要”（wants）display-manager.service 单元。“wants”并不需要被满足，单元即可成功启动。如果“wants”无法满足，systemd 将忽略它，target 的其余部分将仍会启动。
+注意，这需要 `multi-user.target`；如果 `multi-user.target` 尚未运行，`graphical.target` 将无法启动。它还表示“想要”（wants）`display-manager.service` 单元。“wants”并不需要被满足，单元即可成功启动。如果“wants”无法满足，`systemd` 将忽略它，`target` 的其余部分将仍会启动。
 
 127
 
 # 第 5 章 使用 system 管理 systemd 单元
 
-/etc/systemd/system 下的子目录是各种 target 的想要（wants）列表。花几分钟探索 /etc/systemd/system/graphical.target.wants 目录下的文件及其内容。
+`/etc/systemd/system` 下的子目录是各种 `target` 的想要（wants）列表。花几分钟探索 `/etc/systemd/system/graphical.target.wants` 目录下的文件及其内容。
 
-systemd.unit 的 man 页面包含了许多关于单元文件、其结构、可以划分的章节以及可以使用的选项的有用信息。它还列出了许多单元类型，所有这些类型都有自己的 man 页面。如果你想解释单元文件，这是一个很好的开始点。
+`systemd.unit` 的 man 页面包含了许多关于单元文件、其结构、可以划分的章节以及可以使用的选项的有用信息。它还列出了许多单元类型，所有这些类型都有自己的 man 页面。如果你想解释单元文件，这是一个很好的开始点。
 
 ## 服务单元 (Service Units)
 
@@ -4540,43 +3141,51 @@ Fedora 的安装通常会安装并启用特定主机在正常运行不需要的�
 
 # 实验 5-3：管理服务单元
 
-systemctl 命令用于管理 systemd 单元，包括服务、target、挂载（mounts）等。仔细查看服务列表，以识别永远不会使用的服务。
+`systemctl` 命令用于管理 `systemd` 单元，包括服务、`target`、挂载（mounts）等。仔细查看服务列表，以识别永远不会使用的服务。
 
 ```
 # systemctl --all -t service
 ```
 
 | UNIT | LOAD | ACTIVE | SUB | DESCRIPTION |
+
 | :--- | :--- | :--- | :--- | :--- |
+
 | <snip> | | | | |
+
 | chronyd.service | loaded | active | running | NTP 客户端/服务器 |
 
 128
 
 # 第 5 章 使用 system 管理 systemd 单元
 
-crond.service | loaded | active | running | 命令调度器
-cups.service | loaded | active | running | CUPS 调度器
-dbus-daemon.service | loaded | active | running | D-Bus 系统消息总线
+`crond.service` | loaded | active | running | 命令调度器
+
+`cups.service` | loaded | active | running | CUPS 调度器
+
+`dbus-daemon.service` | loaded | active | running | D-Bus 系统消息总线
 
 <SNIP>
 
-- ip6tables.service | not-found | inactive | dead | ip6tables.service |
-- ipset.service | not-found | inactive | dead | ipset.service |
-- iptables.service | not-found | inactive | dead | iptables.service |
+- `ip6tables.service` | not-found | inactive | dead | ip6tables.service |
+
+- `ipset.service` | not-found | inactive | dead | ipset.service |
+
+- `iptables.service` | not-found | inactive | dead | iptables.service |
 
 <SNIP>
 
-firewalld.service | loaded | active | running | 动态防火墙守护进程 |
+`firewalld.service` | loaded | active | running | 动态防火墙守护进程 |
 
 <SNIP>
 
-- ntpd.service | not-found | inactive | dead | tppd.service |
-- ntpdate.service | not-found | inactive | dead | tpdate.service |
+- `ntpd.service` | not-found | inactive | dead | tppd.service |
 
-pcscd.service | loaded | active | running | PC/SC 卡守护进程
+- `ntpdate.service` | not-found | inactive | dead | tpdate.service |
 
-为了节省空间，我删除了命令的大部分输出。显示“loaded active running”的服务是显而易见的。“not-found”的服务是 systemd 能够感知但未安装在 Linux 宿主机上的服务。如果你想运行这些服务，必须安装包含它们的包。
+`pcscd.service` | loaded | active | running | PC/SC 卡守护进程
+
+为了节省空间，我删除了命令的大部分输出。显示“loaded active running”的服务是显而易见的。“not-found”的服务是 `systemd` 能够感知但未安装在 Linux 宿主机上的服务。如果你想运行这些服务，必须安装包含它们的包。
 
 129
 
@@ -4584,9 +3193,9 @@ pcscd.service | loaded | active | running | PC/SC 卡守护进程
 
 此数据流被传递到 `less` 分页器中，因此你可以翻页并在流中搜索文本字符串。像在 `less` 中中那样开始搜索，使用 `/`（斜杠），然后输入搜索字符串。
 
-找到 pcscd.service 单元。这是 PC/SC 智能卡守护进程。它的功能是与智能卡读器通信。许多 Linux 主机（包括虚拟机）没有此类读器的 CPU 资源，该服务也没有加载占用内存和 CPU 资源。你可以停止并禁用此服务，这样它在未来的重启中就不会重启。首先，检查它的状态：
+找到 `pcscd.service` 单元。这是 PC/SC 智能卡守护进程。它的功能是与智能卡读器通信。许多 Linux 主机（包括虚拟机）没有此类读器的 CPU 资源，该服务也没有加载占用内存和 CPU 资源。你可以停止并禁用此服务，这样它在未来的重启中就不会重启。首先，检查它的状态：
 
-# # systemctl status pcscd.service
+# # `systemctl status pcscd.service`
 
 ```
 * pcscd.service - PC/SC Smart Card Daemon
@@ -4610,17 +3219,19 @@ Nov 21 12:14:01 systemd[1]: Started pcscd.service - PC/SC Smart Card Daemon.
 
 130
 
-这些数据说明了 systemd 与 SystemV 提供的额外信息，后者只报告服务是否运行。注意在命令中指定 .service 单元类型是可选的。现在停止并禁用服务，然后其状态：
+这些数据说明了 `systemd` 与 SystemV 提供的额外信息，后者只报告服务是否运行。注意在命令中指定 `.service` 单元类型是可选的。现在停止并禁用服务，然后其状态：
 
-# # systemctl disable --now pcscd
+# # `systemctl disable --now pcscd`
 
 Removed '/etc/systemd/system/sockets.target.units/pcscd.socket'.
 
 正在禁用 'pcscd.service', 但触发它的单元仍然激活：
 
-pcscd.socket
+`pcscd.socket`
 
-# # systemctl status pcscd
+# # `systemctl status pcscd`
+
+
 
 ```
 + * pcscd.service - PC/SC Smart Card Daemon
@@ -4638,33 +3249,45 @@ Nov 21 12:14:01 testvm1.both (pcscd)[265754]: pcscd.service: Referenced unset en
 
 lines 1-17/17 (END)
 
-
-
 在一个卷组上有可用空间以创建新逻辑卷的虚拟机（VM）：
 
 ## lsblk
 
 | NAME | MAJ:MIN | SIZE | TYPE | MOUNTS |
+
 | :--- | :--- | :--- | :--- | :--- |
+
 | sda | 8:0 | 120G | disk | |
+
 | └─sda1 | 8:1 | 2M | part | |
+
 | └─sda2 | 8:2 | 5G | part | /boot |
+
 | └─sda3 | 8:3 | 115G | part | |
+
 | └─vg01-root | 253:0 | 5G | lvm | / |
+
 | └─vg01-usr | 253:1 | 30G | lvm | /usr |
+
 | └─vg01-var | 253:2 | 30G | lvm | /var |
+
 | └─vg01-home | 253:3 | 5G | lvm | /home |
+
 | └─vg01-tmp | 253:4 | 10G | lvm | /tmp |
+
 | sr0 | 11:0 | 1024M | rom | |
+
 | zram0 | 252:0 | 7.7G | disk | [SWAP] |
 
-root@testvm1:~# vgs
+root@testvm1:~# `vgs`
 
 | VG | #PV | #LV | #SN | Attr | VSize | Free |
+
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
 | vg01 | 1 | 5 | | | 114.9G | 34.9G |
 
-接着在 vg01 上创建一个名为 TestFS 的新卷。它不需要很大；1GB 是空闲空间。然后创建一个文件系统，添加文件系统标签，并创建挂载点。
+接着在 `vg01` 上创建一个名为 `TestFS` 的新卷。它不需要很大；1GB 是空闲空间。然后创建一个文件系统，添加文件系统标签，并创建挂载点。
 
 ```bash
 # lvcreate -L 1G -n TestFS vg01
@@ -4677,14 +3300,17 @@ root@testvm1:~# vgs
 ```
 
 mk2fs 1.45.3 (14-Jul-2019)
+
 正在创建带有 262144 个 4k 块和 65536 个节点的文件系统
 
 134
 
 第 5 章 使用 Systemd 管理系统单元
+
 文件系统 UUID: 8718fba9-419f-4915-ab2d-8edf811b5d23
 
 超级块备份存储在块：
+
 32768, 98304, 163840, 229376
 
 分配组表：完成
@@ -4714,18 +3340,31 @@ mount: /TestFS/: 在 /etc/fstab 中未找到条目。我之前这样做这样做
 ```
 
 | NAME | MAJ:MIN | SIZE | TYPE | MOUNTPOINT |
+
 | :--- | :--- | :--- | :--- | :--- |
+
 | sda | 8:0 | 120G | disk | |
+
 | └─sda1 | 8:1 | 2M | part | |
+
 | └─sda2 | 8:2 | 5G | part | /boot |
+
 | └─sda3 | 8:3 | 115G | part | |
+
 | └─vg01-root | 253:0 | 5G | lvm | / |
+
 | └─vg01-usr | 253:1 | 30G | lvm | /usr |
+
 | └─vg01-var | 253:2 | 30G | lvm | /var |
+
 | └─vg01-home | 253:3 | 5G | lvm | /home |
+
 | └─vg01-tmp | 253:4 | 10G | lvm | /tmp |
+
 | └─vg01-TestFS | 253:6 | 1G | lvm | /TestFS |
+
 | sr0 | 11:0 | 1024M | rom | |
+
 | zram0 | 252:0 | 7.7G | disk | [SWAP] |
 
 现在新文件系统已挂载在正确的位置。列出挂载单元文件。
@@ -4741,37 +3380,61 @@ mount: /TestFS/: 在 /etc/fstab 中未找到条目。我之前这样做这样做
 ```
 
 - usr.mount - /usr
+
 Loaded (/etc/fstab; generated)
+
 Active: active (mounted)
+
 Where: /usr
+
 What: /dev/mapper/vg01-usr
+
 Docs: man:fstab
+
 man:systemd-fstab-generator()
 
 - TestFS.mount - /TestFS
+
 Loaded (/proc/self/mountinfo)
+
 Active: active (mounted) since 2020-04-17 16:02:26 EDT 1min ago
+
 Where: /TestFS
+
 What: /dev/mapper/vg01-TestFS
 
 136
 
 - run-user-0.mount - /run/user/0
+
 Loaded (/proc/self/mountinfo)
+
 Active: active (mounted) since 2020-04-16 08:52:29 EDT 5h ago
+
 Where: /run/user/0
+
 What: tmpfs
 
 - var.mount - /var
+
 Loaded (/etc/fstab; generated)
+
 Active: active (mounted) since 2020-04-16 12:51:34 EDT 1day ago
+
 Where: /var
+
 What: /dev/mapper/vg01-var
+
 Docs: man:fstab(5)
+
 man:systemd-fstab-generator(8)
+
 Tasks: 0 (limit: 19166)
+
 Memory: 12K
+
 CPU: 5ms
+
 CGroup: /system.slice/mount
 
 此命令提供了关于系统挂载的一些非常有用的信息，你的新文件系统被识别为从 /etc/fstab 生成，它简单显示已加载并提供了 /proc/self/mountinfo 文件中的位置。下一步，自动化此挂载。首先通过在 /etc/fstab 中添加条目的旧方法，稍后我将向你展示新方法，这将教你如何创建单元并将其到启动序列。
@@ -4803,11 +3466,17 @@ CGroup: /system.slice/mount
 ```
 
 - TestFS.mount - /TestFS
+
 Loaded (/etc/fstab; generated)
+
 Active: active (mounted) since 2024-04-17 16:02:26 EDT 1min ago
+
 Where: /TestFS
+
 What: /dev/mapper/vg01-TestFS
+
 Docs: man:fstab
+
 man:systemd-fstab-generator()
 
 命令现在足够智能可以检测文件系统类型并相应挂载。再次尝试。
@@ -4845,8 +3514,11 @@ WantedBy=multi-user.target
 139
 
 # 此挂载单元用于 TestFS
+
 # 版权所有 David Both, 2025
+
 # 只要保留版权声明和此声明，允许在任何媒介上复制和分发此文件（无论是否修改）。
+
 # 本文件按现状提供，不提供任何保证。
 
 140
@@ -4862,6 +3534,7 @@ WantedBy=multi-user.target
 ```
 
 创建了符号链接 /etc/systemd/system/multi-user.target.wants/
+
 TestFS.mount → /etc/systemd/system/TestFS.mount。
 
 这在 /etc/systemd/system 目录中创建了符号链接，会导致挂载单元在所有后续启动时被挂载。文件系统尚未挂载，所以你必须“启动”它：
@@ -4876,8 +3549,6 @@ TestFS.mount → /etc/systemd/system/TestFS.mount。
 # systemctl enable --now TestFS.mount
 ```
 
-
-
 验证文件系统是否已挂载：
 
 ```
@@ -4887,15 +3558,23 @@ TestFS.mount → /etc/systemd/system/TestFS.mount。
 - • TestFS.mount - TestFS 挂载
 
 Loaded: loaded (/etc/systemd/system/TestFS.mount; enabled; vendor preset: disabled)
+
 Active: active (mounted) since Sat 2020-04-18 09:59:53 EDT; 14s ago
+
 Where: /TestFS
+
 What: /dev/mapper/VG01TestFS
+
 Tasks: 0 (limit: 19166)
+
 Memory: 76.0K
+
 CPU: 3ms
+
 CGroup: /system.slice/TestFS.mount
 
 Apr 18 09:59:53 testvm1 systemd[1]: Mounting TestFS Mount...
+
 Apr 18 09:59:53 testvm1 systemd[1]: Mounted TestFS Mount.
 
 # 第 5 章 使用系统概念管理单元
@@ -4911,13 +3590,17 @@ Apr 18 09:59:53 testvm1 systemd[1]: Mounted TestFS Mount.
 执行以下练习以完成本章：
 
 - 1. 定义适用于 systemd 的“单元（Unit）”术语。
+
 - 2. 描述 systemd 挂载没有挂载单元的文件系统时使用的过程。
+
 - 3. 当挂载生成器（mount generator）同样有效时，使用挂载单元来挂载新文件系统的意义是什么？
 
 # 第 5 章 使用系统概念管理单元
 
 - 4. 为什么我们把本地创建的 systemd 单元文件放在 `/usr/local/lib/systemd/` 目录下？
+
 - 5. 在你的测试主机上创建一个小的新的分区或逻辑卷，配置它使用 systemd 挂载单元进行挂载。
+
 - 6. 验证在 `/etc/fstab` 中添加一行对于文件系统是必要的，还是使用 systemd 挂载单元。
 
 # 第 6 章 使用 systemd 控制计算机时间和日期
@@ -4927,11 +3610,17 @@ Apr 18 09:59:53 testvm1 systemd[1]: Mounted TestFS Mount.
 在本章中，你将学习：
 
 - 列出时间对计算机重要的典型原因
+
 - 列出并描述现代 Linux 主机维护的两种不同时间
+
 - 定义网络时间协议（NTP）
+
 - 描述 NTP 服务器分层结构
+
 - 如何让你的 Linux 计算机与 NTP 服务器同步
+
 - 使用 `chrony` 和 `systemd-timesyncd` 管理时间服务
+
 - 使用你的 Linux 主机作为内部网络的时间服务器
 
 © David 2025 Both, systemd for Linux SysAdmins,[第 6 章 使用 systemd 控制计算机时间和日期](#)
@@ -4939,6 +3628,7 @@ Apr 18 09:59:53 testvm1 systemd[1]: Mounted TestFS Mount.
 ## 概述
 
 > 有人真的知道现在几点吗？有人在意时间吗？
+
 > Chicago, 1969
 
 也许人们并不在乎时间，但我们的计算机和设备确实需要精确的时间。我们中的一些甚至对时间非常痴迷。我的手表是太阳能驱动的，通过位于科罗拉多州福特科林的美国标准技术研究院（NIST）的 WWVB 无电台获取精确时间信号。时间同步到那里的原子钟。我的手机同步到网络时间协议（NTP）服务器，而该服务器最终同步到原子钟。而且，在我的家庭网络中有一个 NTP 时间服务器，我的所有其他主机都从那里获取时间。
@@ -4948,6 +3638,7 @@ Apr 18 09:59:53 testvm1 systemd[1]: Mounted TestFS Mount.
 Linux 提供了多种工具和方法让我们可以使用这些工具在未来的指定时间运行任务，需要时重复。然而，保持准确的时间对于确保调度任务在正确的时间运行至关重要。
 
 第 6 章 使用 systemd 控制计算机时间和日期
+
 本章通过查看计算机时间、NTP 以及使用 `chrony` 同步与标准时间参考（如原子钟）开始。随后我们将转向使用 `systemd-timesyncd`。
 
 # 为什么时间对计算机很重要
@@ -4964,6 +3655,8 @@ Linux 主机有两个需要考虑的时间：系统时间和 RTC。RTC 代表实
 
 NTP 是网络时间协议，全球计算机都通过 NTP 服务器分层结构与互联网标准钟同步时间。
 
+
+
 有多个工具可用于 NTP 时间同步。我们查看其中两个：`chrony` 和 `systemd-timesyncd`。
 
 # NTP 服务器分层结构
@@ -4976,37 +3669,37 @@ NTP 服务器构建在称为“层（strata）”之上。每一层都是一组 
 
 原始的 NTP 实现是 `ntpd`，即 NTP 守护进程，它具有
 
-此外还有两个新的工具：chronyd 和 systemd-timesyncd。这三者都能将本地主机的时间与 NTP 时间服务器保持同步。systemd-timesyncd 服务没有 chronyd 那么健壮，但对于大多数用途来说，它已经足够了。如果 RTC（实时时钟）偏差过大，它可以执行大跨度的时间跳跃；如果本地时间发生轻微漂移，它可以逐渐调整系统时间以与 NTP 服务器保持同步。systemd-timesyncd 服务不能作为时间服务器使用。
+此外还有两个新的工具：`chronyd` 和 `systemd-timesyncd`。这三者都能将本地主机的时间与 NTP 时间服务器保持同步。`systemd-timesyncd` 服务没有 `chronyd` 那么健壮，但对于大多数用途来说，它已经足够了。如果 RTC（实时时钟）偏差过大，它可以执行大跨度的时间跳跃；如果本地时间发生轻微漂移，它可以逐渐调整系统时间以与 NTP 服务器保持同步。`systemd-timesyncd` 服务不能作为时间服务器使用。
 
 # 第 6 章使用 systemd 控制计算机的时间和日期
 
-Chrony 是一个 NTP 实现，包含两个程序：`chronyd` 守护进程和一个名为 `chronyc` 的命令行界面。Chrony 具有一些特性使其成为许多环境下的最佳选择，主要包括：
+`Chrony` 是一个 NTP 实现，包含两个程序：`chronyd` 守护进程和一个名为 `chronyc` 的命令行界面。`Chrony` 具有一些特性使其成为许多环境下的最佳选择，主要包括：
 
-- Chrony 同步时间服务器的速度比旧的 `ntpd` 服务更快。这对于并非持续运行的笔记本电脑或桌面电脑非常有益。
+- `Chrony` 同步时间服务器的速度比旧的 `ntpd` 服务更快。这对于并非持续运行的笔记本电脑或桌面电脑非常有益。
 - 它可以补偿波动的时钟频率，例如主机休眠或进入睡眠模式时，或者时速由于频率步进（在负载低时减慢钟速）而变化时。
 - 它能处理间歇性网络连接和带宽饱和。
 - 它会根据网络延迟和抖进行调整。
-- 在初始时间同步后，chrony 永远不会停止计时。这确保了许多系统服务和应用程序拥有稳定且一致的时间间隔。
-- Chrony 可以在没有连接的情况下工作。在这种情况下，可以使用 `date` 命令手动更新本地主机或服务器。
-- Chrony 可以作为 NTP 服务器运行。
+- 在初始时间同步后，`chrony` 永远不会停止计时。这确保了许多系统服务和应用程序拥有稳定且一致的时间间隔。
+- `Chrony` 可以在没有连接的情况下工作。在这种情况下，可以使用 `date` 命令手动更新本地主机或服务器。
+- `Chrony` 可以作为 NTP 服务器运行。
 
 说明一下，NTP 是一种在 Linux 主机上使用 `chrony` 或 `systemd-timesyncd.service` 实现的协议。
 
-NTP、chrony 和 systemd-timesyncd 的 RPM 包在标准 Linux 发行版仓库中可用。`systemd-udev` RPM 是一个基于规则的设备节点和内核管理器，Fedora 默认安装了它但未启用。
+NTP、`chrony` 和 `systemd-timesyncd` 的 RPM 包在标准 Linux 发行版仓库中可用。`systemd-udev` RPM 是一个基于规则的设备节点和内核管理器，Fedora 默认安装了它但未启用。
 
-你可以安装这三者并在它们之间切换，但工作量很大且不值得当。Fedora 和 RHEL 的现代版本已将 NTP 切换为 chrony 作为其默认的时间记录实现。它们也安装了 systemd-timesyncd。我发现 chrony 运行良好，提供了比 NTP 服务更好的界面，展示了更多信息，并增强了控制力，这些对于系统管理员（SysAdmin）来说都是优势。
+你可以安装这三者并在它们之间切换，但工作量很大且不值得当。Fedora 和 RHEL 的现代版本已将 NTP 切换为 `chrony` 作为其默认的时间记录实现。它们也安装了 `systemd-timesyncd`。我发现 `chrony` 运行良好，提供了比 NTP 服务更好的界面，展示了更多信息，并增强了控制力，这些对于系统管理员（SysAdmin）来说都是优势。
 
 ## NTP 客户端配置
 
 NTP 客户端配置非常简单，几乎不需要更改。
 
-系统管理员可以在 Linux 安装期间定义 NTP 服务器，也可以在启动时由 DHCP 服务器提供。图 6-1 所示的默认 `/etc/chrony.conf` 文件不需要修改即可正常工作。对于 Fedora，chrony 使用 NTP 池。与基于 RedHat 的发行版一样，该配置文件有详细的注释。
+系统管理员可以在 Linux 安装期间定义 NTP 服务器，也可以在启动时由 DHCP 服务器提供。图 6-1 所示的默认 `/etc/chrony.conf` 文件不需要修改即可正常工作。对于 Fedora，`chrony` 使用 NTP 池。与基于 RedHat 的发行版一样，该配置文件有详细的注释。
 
-图 6-1 默认的 chrony.conf 配置文件
+图 6-1 默认的 `chrony.conf` 配置文件
 
 如果在安装期间定义了 NTP 服务器，它将是 `chrony.conf` 中的第一个条目。它前面有一个注释，说明该设备是在安装期间定义的，如图 6-2 所示。如果 DHCP 服务提供了时间服务器的 IP 地址，也是如此。
 
-**图 6-2.** 如果在安装期间指定了时间服务器，这两行将添加到 chrony.conf 配置文件的开头
+**图 6-2.** 如果在安装期间指定了时间服务器，这两行将添加到 `chrony.conf` 配置文件的开头
 
 ## NTP 服务器池
 
@@ -5019,21 +3712,21 @@ NTP 客户端配置非常简单，几乎不需要更改。
 
 ## Chrony
 
-Chrony 守护进程 `chronyd` 在后台运行，监控 `chrony.conf` 中指定的时间服务器的时间和状态。如果本地时间需要调整，`chronyd` 会平滑地进行，而不会像瞬时重置到新时间那样产生程序上的“创伤”。
+`Chrony` 守护进程 `chronyd` 在后台运行，监控 `chrony.conf` 中指定的时间服务器的时间和状态。如果本地时间需要调整，`chronyd` 会平滑地进行，而不会像瞬时重置到新时间那样产生程序上的“创伤”。
 
-Chrony 还提供了 `chronyc` 工具，允许我们监控 chrony 的当前状态并在时进行更改。`chronyc` 实用程序可以作为接受子命令的命令使用，也可以作为交互式文本模式程序使用。我们将两种方式都使用。
+`Chrony` 还提供了 `chronyc` 工具，允许我们监控 `chrony` 的当前状态并在时进行更改。`chronyc` 实用程序可以作为接受子命令的命令使用，也可以作为交互式文本模式程序使用。我们将两种方式都使用。
 
-是的，这本书是关于 systemd 的，chrony 并不是它的一部分。为什么要探索 chrony 时间和日期服务？
+是的，这本书是关于 `systemd` 的，`chrony` 并不是它的一部分。为什么要探索 `chrony` 时间和日期服务？
 
-至少目前，chrony 是 Fedora 和其他发行版的默认时间记录服务，学习使用它既可以让你深入了解当前的服务，又可以为考虑 systemd-timesyncd 提供一个基准。理解 systemd 的很大一部分在于知道如何使用它与其他服务进行交互。systemd 的主要用途是运行不是 systemd 的服务。systemd 定时器是 systemd 的重要方面，它们的正确运行依赖于准确的时间记录。systemd journal 依赖于准确的时钟。我们用于与 chrony 交互的命令是 **chronyc**，它可以直接在命令行或脚本中使用。它还可以在字符用户界面 (CUI) 中交互式地使用。字符用户界面 (CUI) 是程序接管终端的界面，所有用户输入都通过该界面进行；在这种情况下，无法访问 shell。
+至少目前，`chrony` 是 Fedora 和其他发行版的默认时间记录服务，学习使用它既可以让你深入了解当前的服务，又可以为考虑 `systemd-timesyncd` 提供一个基准。理解 `systemd` 的很大一部分在于知道如何使用它与其他服务进行交互。`systemd` 的主要用途是运行不是 `systemd` 的服务。`systemd` 定时器是 `systemd` 的重要方面，它们的正确运行依赖于准确的时间记录。`systemd` journal 依赖于准确的时钟。我们用于与 `chrony` 交互的命令是 `chronyc`，它可以直接在命令行或脚本中使用。它还可以在字符用户界面 (CUI) 中交互式地使用。字符用户界面 (CUI) 是程序接管终端的界面，所有用户输入都通过该界面进行；在这种情况下，无法访问 shell。
 
 ## 命令行使用 chronyc
 
-chronyc 在命令行中使用带有许多子命令，它也可以直接在脚本中使用。我发现这种方法是常用的方法，让我们先尝试这种方法。
+`chronyc` 在命令行中使用带有许多子命令，它也可以直接在脚本中使用。我发现这种方法是常用的方法，让我们先尝试这种方法。
 
 ### 实验 6-1: 启动 CHRONY
 
-让我们通过以下验证 chrony 服务正在运行。
+让我们通过以下验证 `chrony` 服务正在运行。
 
 ```
 # systemctl status chronyd
@@ -5060,19 +3753,21 @@ Nov 12 13:00:17 chronyd[1180]: Selected source 192.168.52
 Nov 12 13:00:17 chronyd[1180]: System clock TAI offset set to 37 seconds
 ```
 
-然而，这是 systemd 对 chronyd.service 的视图，关于 chrony 的计时状态信息较少。
+然而，这是 `systemd` 对 `chronyd.service` 的视图，关于 `chrony` 的计时状态信息较少。
 
-chrony 服务提供了一个既可以交互式使用也可以直接在命令行使用的命令。这个命令 `chronyc` 为我们提供了对主机时间的更深入的观察。让我们使用 **chronyc** 命令查看主机 NTP 的当前状态。
+`chrony` 服务提供了一个既可以交互式使用也可以直接在命令行使用的命令。这个命令 `chronyc` 为我们提供了对主机时间的更深入的观察。让我们使用 `chronyc` 命令查看主机 NTP 的当前状态。
 
 ### 实验 6-2: CHRONYC 状态和信息
 
 作为 root 用户执行此实验。
 
-当配合 tracking 命令使用时，chronyc 命令提供的统计数据显示我们本地系统与参考服务器之间的偏差。
+当配合 `tracking` 命令使用时，`chronyc` 命令提供的统计数据显示我们本地系统与参考服务器之间的偏差。
 
 ```
 # chronyc tracking
+```
 
+```
 Reference ID : CO80034 (yorktown.both.org)
 Stratum : 3
 Ref time (UTC) : Tue Nov 12 18:29:26 2024
@@ -5084,8 +3779,6 @@ Residual freq : -0.001 ppm
 Skew : 0.087 ppm
 ```
 
-
-
 根延迟：0.030009745 秒
 
 根抖散：0.002015243 秒
@@ -5094,7 +3787,7 @@ Skew : 0.087 ppm
 
 跳跃状态：正常
 
-结果第一行中的引用 ID 是我们的主机同步的服务器。其余这些行的描述在 `chronyc(1)` 手页中。`stratum`（层级）行指示了我们本地虚拟机所处的层级，因此 yorktown.both.org 主机——我自己的 NTP 服务器——处于层 3。
+结果第一行中的引用 ID 是我们的主机同步的服务器。其余这些行的描述在 `chronyc(1)` 手页中。`stratum`（层级）行指示了我们本地虚拟机所处的层级，因此 `yorktown.both.org` 主机——我自己的 NTP 服务器——处于层 3。
 
 我发现的另一个有趣实用的子命令是 `sources`，它提供了关于 `chrony.conf` 中配置的时间源的信息。
 
@@ -5125,7 +3818,7 @@ option ntp-servers 192.168.0.52;
 
 现在，让我们修改我们主机上的 `chrony.conf`。我们将从 Fedora 池 NTP 服务器中添加一些服务器。我们需要查找这些服务器。
 
-5 `chrony.conf` 文件曾用于提供 Fedora 池服务器的列表，但现在已不再如此。
+`chrony.conf` 文件曾用于提供 Fedora 池服务器的列表，但现在已不再如此。
 
 修订后的 `chrony.conf` 文件看起来如下：
 
@@ -5142,9 +3835,9 @@ server 192.168.0.52 iburst
 <SNIP>
 ```
 
-这显示了两个很有意思的地方。首先，我网络上的 NTP 服务器显示了两次，一次是在第 2 行使用完全限定域名 (FQDN)，另一次是通过 IP 地址 192.168.0.52。这两种形式都是接受的。
+这显示了两个很有意思的地方。首先，我网络上的 NTP 服务器显示了两次，一次是在第 2 行使用完全限定域名 (FQDN)，另一次是通过 IP 地址 `192.168.0.52`。这两种形式都是接受的。
 
-`iburst` 参数用于加速本地系统时与指定服务器的同步。`prefer` 参数告诉 chrony 如果该服务器可用，则使用它，即使其他服务器的响应时间更快。
+`iburst` 参数用于加速本地系统时与指定服务器的同步。`prefer` 参数告诉 `chrony` 如果该服务器可用，则使用它，即使其他服务器的响应时间更快。
 
 重启 `chronyd` 服务以激活额外的 NTP 服务器。
 
@@ -5164,29 +3857,44 @@ server 192.168.0.52 iburst
 | + - 23.155.40.38 | 1 | 10 | 377 | 41m +1198us[+989us] +/- 21ms |
 | + * yorktown.both.org | 2 | 6 | 377 | 34 +109us[+110us] +/- 16ms |
 
-尽管我将我的本地 NTP 服务器 yorktown 设置为“prefer”（优选），但由于它的响应时间最快，它仍然被选中。
+尽管我将我的本地 NTP 服务器 `yorktown` 设置为“prefer”（优选），但由于它的响应时间最快，它仍然被选中。
 
 这四个服务器是由 NTP 池提供的。`s` 列——源状态——表示该行中带有星号 (*) 的服务器是我们的主机持续同步的服务器。这与 `tracking` 子命令的数据是一致的。
 
 ## chronyc tracking
 
 引用 ID : C0A80034 (yorktown.both.org)
+
 层级 (Stratum) : 3
+
 参考时间 (UTC) : 11月12日 星期二 22:06
+
 系统时间 : 2024年11月13日 星期三 12:37
+
 最后偏移 : -0.000007458 秒
+
 均方根误差 (RMS) : 0.000018563 秒
+
 频率 : 18714.7 ppm
+
 残留频率 : -0.041 ppm
+
 时偏 (Skew) : 0.122 ppm
+
 根延迟：0.028430695 秒
+
 根抖散：0.001395065 秒
+
 更新间隔：64.4 秒
+
 跳跃状态：正常
 
 注意，`-v` 命令提供了源字段的良好描述。
+
 源状态：`^` 表示服务器，`=` 表示对等，`#` 表示本地时钟，`+` 表示组合，`-` 表示未组合，`?` 表示不可用。
+
 可达性 (Reach)：`xxxx` 表示偏移量。
+
 轮询间隔 (Poll)：`yyyy` 表示测量值。
 
 | MS 名称/IP 地址 | 层级 (Stratum) | 轮询间隔 (Poll) | 可达性 (Reach) | 上次接收 (LastRx) |
@@ -5199,6 +3907,8 @@ server 192.168.0.52 iburst
 
 这显示了服务器列表、它们的层级以及响应时间。`quit` 使 `chronyc` 退出。
 
+
+
 当我们希望某个特定的服务器作为优选源时，即使它的响应时间可能较慢，也可以在行末尾添加 `prefer` 参数。此配置文件对顺序不敏感，因此服务器可以放在任何地方。在大多数环境中，使用主机名可以确保时间源可访问。因此，使用默认值是可以的。
 
 # Chronyc 作为交互式工具
@@ -5209,7 +3919,7 @@ server 192.168.0.52 iburst
 
 以 root 身份执行此实验。让我们详细查看 `chronyc` 命令。只需运行不带子命令的命令，就会得到 chronyc 命令提示符。
 
-## chronyc
+### chronyc
 
 ```
 chronyc version 4.6.1
@@ -5217,11 +3927,10 @@ Copyright (C) 1997-2003, 2007, 2009-2024 Richard P. Cummins and others chronyc w
 chronyc>
 ```
 
-
-
 在 Fedora 和 Ubuntu 中，它在 Ubuntu 及相关发行版中默认启动，但在 Fedora 中不是。
 
 164
+
 第 6 章 使用 Systemd 控制控制计算机的时间和日期
 
 ## 实验 6-4：准备工作
@@ -5241,8 +3950,11 @@ chronyc>
 ```
 
 - chronyd.service - NTP 客户端/服务器
+
 Loaded: loaded (/usr/lib/systemd/system/chronyd)service; disabled; vendor preset: enabled
+
 Active: inactive (dead)
+
 Docs: man:chronyd(8) man:chrony.conf(5)
 
 现在 `chronyd` 守护进程已经禁用，我们可以开始使用 `systemd-timesync`。在本次实验中，我们将开始使用 `timedatectl` 命令。
@@ -5256,9 +3968,11 @@ Docs: man:chronyd(8) man:chrony.conf(5)
 ```
 
 查询服务器失败：无法激活远程对端 'org.freedesktop.timesyncd1'：激活请求失败：
+
 未知单元
 
 165
+
 但更简单的状态请求提供了一些重要信息。例如，不带参数或选项的 `timedatectl` 命令意味着默认执行 `status` 子命令。
 
 ```bash
@@ -5266,6 +3980,7 @@ Docs: man:chronyd(8) man:chrony.conf(5)
 ```
 
 查询服务器失败：无法激活远程对端 'org.freedesktop.timesyncd1'：激活请求失败。
+
 未知单元
 
 ```bash
@@ -5273,12 +3988,17 @@ Docs: man:chronyd(8) man:chrony.conf(5)
 ```
 
 本地时间: Wed 2024-11-13 13:25:41 EST
+
 通用时间: Wed 2024-11-13 18:25:41 UTC
+
 RTC 时间: Wed 2024-11-13 13:25:41
+
 时区: America/New_York (EST, -0500)
 
 系统时钟同步: no
+
 NTP 服务: active
+
 RTC 在本地时区: yes
 
 警告：系统配置为读取本地时区的 RTC 时间。此模式无法完全支持。它会导致时区更改和夏令时调整产生各种问题。RTC 时间永远不会更新，它依赖外部设施来维护。如果可能，通过调用 'timedatectl local-rtc 0' 使用 UTC 下的 RTC。
@@ -5286,6 +4006,7 @@ RTC 在本地时区: yes
 此命令返回你主机的本地时间、UTC 时间和 RTC 时间。它显示系统被设置为 `america/new_York` 时区 (TZ)，RTC 设置为本地时区，且 ntp 服务未激活。RTC 时间可能会开始与系统时间产生轻微偏移。这对于时钟未同步的系统来说是正常的。主机上的漂移量取决于系统上次同步以来的时间以及每单位时间的漂移速度。
 
 166
+
 还有一条关于在 RTC 上使用本地时间的警告信息——这涉及到时间更改和夏令时调整。如果在需要更改时计算机处于关闭状态，RTC 时间将不会改变。对于 24/7 运行的服务器或其他主机来说，这不是问题。此外，任何提供 ntp 时间同步的服务都会确保主机在启动过程早期被设到正确的时间，这样它在完全启动并运行之前时间就是准确的。启动 `systemd-timesyncd` 守护进程。
 
 ```bash
@@ -5293,6 +4014,7 @@ RTC 在本地时区: yes
 ```
 
 创建了符号链接 'system.service' -> '/usr/lib/systemd/system/systemd-timesyncd.service'。
+
 创建了符号链接 /etc/systemd/system/system.target.wants/systemd-timesyncd.service' -> '/usr/lib/systemd/system/systemd-timesyncd.service'。
 
 为计算机设置时间。通常，你在安装过程中设置计算机的时区，永远不需要更改它。然而，有时必须更改时区，有一些工具可以提供帮助。Linux 使用时区文件来定义主机使用的本地时间。这些二进制文件位于 `/usr/share/zoneinfo` 目录。你的时区默认值由链接 `/etc/localtime -> ../usr/share/zoneinfo/america/new_York` 定义。但你不需要知道如何更改时区。
@@ -5300,6 +4022,7 @@ RTC 在本地时区: yes
 你需要知道你所在位置的官方时区名称。假设你想将时区更改为 america/los_angeles，你可以列出所有时区。然后你可以在数据流中搜索你想要的那个。
 
 167
+
 ```bash
 # timedatectl list-timezones | column
 ```
@@ -5307,14 +4030,23 @@ RTC 在本地时区: yes
 <SNIP>
 
 America/La_Paz Atlantic/St_Helena
+
 Pacific/Guam
+
 America/Lima Atlantic/Stanley
+
 Pacific/Honolulu
+
 America/Los_Angeles Australia/ACT
+
 Pacific/Johnston
+
 America/Louisville Australia/Adelaide
+
 Pacific/Kanton
+
 America/Lower_Princes Australia/Brisbane
+
 Pacific/
 
 注意“america”指的是北美和南美洲。如果你大致知道时区的名称，可以这样缩小范围：
@@ -5334,6 +4066,7 @@ Pacific/
 ```
 
 168
+
 现在检查设置的结果。
 
 ```bash
@@ -5341,6 +4074,7 @@ Pacific/
 ```
 
 169
+
 启动 `systemd-timesyncd` 守护进程。
 
 ```bash
@@ -5354,6 +4088,7 @@ Pacific/
 ```
 
 170
+
 实验 6-6：配置 systemd-timesync
 
 编辑 `/etc/systemd/timesyncd.conf` 配置文件。
@@ -5372,8 +4107,6 @@ Pacific/
 #MinInterval=
 #Interval=
 #
-
-
 ```
 
 如果你没有定义特定的 NTP 服务器，`NTP=` 行将回退到 Fedora 的默认池。如果你有特定的 NTP 服务器，可以取消 `NTP=` 行的注释并添加。
@@ -5385,6 +4118,7 @@ NTP=mypserver
 ```
 
 171
+
 保存并退出编辑器。重启 `systemd-timesyncd` 服务以应用更改。
 
 ```bash
@@ -5397,9 +4131,6 @@ NTP=mypserver
 # timedatectl timesyncd-status
 ```
 
-
-
-
 CPU: 93ms
 
 CGroup: /system.slice/systemd-timesyncd.service
@@ -5409,12 +4140,15 @@ service练习 Head
 L1774 /usr/lib/systemd/timesyncd
 
 Nov 18 16:12:23 f41vm.both.org systemd[1]: Starting
+
 systemd-timesyncd.service - 网络时间同步...
 
 Nov 18 16:12:23 f41vm.both.org systemd-timesyncd[1774]:
+
 系统配置为在本地时区内读取 RTC（实时时钟）时间。
 
 Nov 18 16:12:23 f41vm.both.org systemd[1]: Starting systemd-
+
 timesyncd.service - 网络时间同步。
 
 # 设置硬件时钟
@@ -5438,18 +4172,27 @@ timesyncd.service - 网络时间同步。
 # timedatectl
 
 本地时间: Mon 2024-11-18 16:36:44 EST
+
 通用时间: Mon 2024-11-18 21:36:44 UTC
+
 RTC 时间: Mon 2024-11-18 16:36:43
+
 时区: America/New_York (EST, -0500)
+
 系统时钟同步: yes
+
 NTP 服务: active
+
 RTC 在本地时区: yes
 
 警告：系统配置为在本地时区内读取 RTC 时间。此模式无法获得完全支持。
+
 这将在时区更改和夏令时调整时产生各种问题。RTC 时间永远不会更新，它依赖于外部设施来维护。
+
 如果可能，请通过 'timedatectl set-local-rtc 0' 使用 UTC 模式的 RTC。
 
 RTC 时间与本地时间 (edt) 大约差了一秒，并且这种差异在接下来的几天里又增加了几秒。差异不断扩大的原因是我没有建立任何同步 RTC 的机制。
+
 由于 RTC 不具备时区概念，`timedatectl` 命令必须进行比较以确定哪个时区匹配。RTC 时间与本地时间并不完全匹配，因此不被认为位于本地时区内。
 
 173
@@ -5463,18 +4206,29 @@ RTC 时间与本地时间 (edt) 大约差了一秒，并且这种差异在接下
 • systemd-timesyncd.service - 网络时间同步
 
 加载: loaded (/usr/lib/systemd/system/systemd-timesyncd.service; enabled; 厂商预设: disabled)
+
 激活: active (running) 自 Sat 2020-05-16 13:56:53 EDT 以来，18小时前
+
 文档: man:systemd-timesyncd.service(8)
+
 主 PID: 822 (systemd-timesyn)
+
 状态: "正在同步到时间服务器 163.237.218.19:123 (2.fedora.pool.ntp.org)。"
+
 任务: 2 (限制: 10365)
+
 内存: 2.8M
+
 CPU: 476ms
+
 CGroup: /system.slice/systemd-timesyncd.service—/usr/lib/systemd/system/systemd-timesyncd
 
 5月16日 09:57:24 testvm2.both.org-systemd[1]: 启动网络时间同步:
+
 5月16日 09:57:24 testvm2.both.org-systemd-timesyncd[822]: 系统时钟时间未设置或回跳，恢复记录的时间戳: Sat 2020-05-16 13:56:53 EDT
+
 5月16日 13:56:53 testvm2.both.org-systemd[1]: 已启动网络时间同步。
+
 5月16日 13:57:56 testvm2.both.org-systemd-timesyncd[822]: 正在同步到时间服务器 163.237.218.19:123 (2.fedora.pool.ntp.org)。
 
 7 注意，我无法重现这个问题。
@@ -5492,7 +4246,9 @@ CGroup: /system.slice/systemd-timesyncd.service—/usr/lib/systemd/system/system
 # 你真的需要 RTC 吗？
 
 系统配置为在本地时区内读取 RTC 时间。此模式无法获得完全支持。
+
 这将在时区更改和夏令时调整时产生各种问题。RTC 时间永远不会更新，它依赖于外部设施来维护。
+
 如果可能，请通过 'timedatectl set-local-rtc 0' 使用 UTC 模式的 RTC。
 
 RTC 时间与本地时间 (edt) 大约差了一秒，并且这种差异在接下来的几天里又增加了几秒。差异不断扩大的原因是我没有建立任何同步 RTC 的机制。由于 RTC 不具备时区概念，`timedatectl` 命令必须进行比较以确定哪个时区匹配。RTC 时间与本地时间并不完全匹配，因此不被认为位于本地时区内。
@@ -5551,7 +4307,6 @@ D. Both, systemd for Linux SysAdmins, https://doi.org/10.1007/978-8-8688-1328-3_
 
 在之前与 systemd 的接触中，我们已经看到它使用日历
 
-
 时间，指定一个或多个时间点以触发如备份程序之类的事件，以及日志条目标记时间戳的方式。systemd 也可以使用时间跨度，它定义了两个事件之间的持续时间，但并不直接绑定到特定的日历时间。
 
 在本章中，我们将更详细地查看时间和日期的使用和指定方式。由于可以使用两种略有不同且不兼容的格式，识别这些格式如何以及何时可以使用它们至关重要。我们还将使用时间和 systemd 日志来探索和管理 Linux 启动细节。这一切在很大程度上取决于时间，以及我们对如何在命令中使用读取和指定时间的理解。因此，我们将从这里开始。
@@ -5560,57 +4315,55 @@ D. Both, systemd for Linux SysAdmins, https://doi.org/10.1007/978-8-8688-1328-3_
 
 systemd 中时间相关的命令使用了一些我们需要更充分理解的术语，让我们从一些定义开始。systemd.time(7) 页面对可以用于定时器和其他 systemd 工具的时间和日期表达式有完整的描述。
 
+
+
 ## 绝对时间戳
 
-绝对时间戳是以 YYYY-MM-DD HH:MM:SS 格式定义的单一、明确且唯一的时间点。该时间戳格式用于指定定时器触发事件的时间点。
+绝对时间戳是以 `YYYY-MM-DD HH:MM:SS` 格式定义的单一、明确且唯一的时间点。该时间戳格式用于指定定时器触发事件的时间点。
 
-绝对时间戳只能表示单一的时间点，例如 2025-04-15 13:21:05。
-
-第 7 章 分析 systemd 日历和时间跨度
+绝对时间戳只能表示单一的时间点，例如 `2025-04-15 13:21:05`。
 
 ## 准确性
 
-准确性是指接近真实时间的程度。它指的是定时器触发事件的时间与指定的日历时间有多接近。systemd 定时器的默认准确性被定义为从定义的日历时间开始的一分钟时间跨度。指定在 OnCalendar 时间 09:52:17 发生的事件，实际上可能在从该时间到 09:53:17 之间的任何时间被触发。
+准确性是指接近真实时间的程度。它指的是定时器触发事件的时间与指定的日历时间有多接近。`systemd` 定时器的默认准确性被定义为从定义的日历时间开始的一分钟时间跨度。指定在 `OnCalendar` 时间 `09:52:17` 发生的事件，实际上可能在从该时间到 `09:53:17` 之间的任何时间被触发。
 
 ## 日历事件
 
-日历事件是由系统时间戳格式 YYYY-MM-DD HH:MM:SS 指定的一个或多个特定时间。这些可以是单一时间点，也可以是一系列定义良好且可以计算出精确时间的一系列点。systemd 日志也使用时间戳来标记每个事件发生的精确时间。
+日历事件是由系统时间戳格式 `YYYY-MM-DD HH:MM:SS` 指定的一个或多个特定时间。这些可以是单一时间点，也可以是一系列定义良好且可以计算出精确时间的一系列点。`systemd` 日志也使用时间戳来标记每个事件发生的精确时间。
 
-（此处翻译为）按照 systemd 格式 YYYY-MM-DD HH:MM:SS 指定的精确时刻。当仅指定 YYYY-MM-DD 部分时，时间默认为 00:00:00。当仅指定 HH:MM:SS 部分时，日期被任意定义为下一次日历时间实例。如果指定的时间在今天当前时间之前，则下一个实例是明天；如果晚于当前时间，则下一个实例是今天。这是 systemd 定时器中 OnCalendar 时间表达式所使用的格式。循环循环日历事件可以使用特殊字符和格式指定，用以表示具有多个值匹配的字段。例如，2026-08-15..25 12:15:00 代表 2026 年 8 月 15 日至 25 日的下午 12:15，并将触发事件匹配。日历事件也可以用绝对时间戳来指定。
-
-第 7 章 分析 systemd 日历和时间跨度
+按照 `systemd` 格式 `YYYY-MM-DD HH:MM:SS` 指定的精确时刻。当仅指定 `YYYY-MM-DD` 部分时，时间默认为 `00:00:00`。当仅指定 `HH:MM:SS` 部分时，日期被任意定义为下一次日历时间实例。如果指定的时间在今天当前时间之前，则下一个实例是明天；如果晚于当前时间，则下一个实例是今天。这是 `systemd` 定时器中 `OnCalendar` 时间表达式所使用的格式。循环日历事件可以使用特殊字符和格式指定，用以表示具有多个值匹配的字段。例如，`2026-08-15..25 12:15:00` 代表 `2026` 年 `8` 月 `15` 日至 `25` 日的下午 `12:15`，并将触发事件匹配。日历事件也可以用绝对时间戳来指定。
 
 ## 时间跨度
 
 时间跨度是两个事件之间的时间量；它是某个物的持续时间（如事件）或两个事件之间的时间。时间跨度可以用于指定定时器触发事件所需的准确度，也可以用于事件之间的流逝时间。以下是识别的单位：
 
-- usec, us, μs
-- msec, ms
-- seconds, second, sec, s
-- minutes, minute, min, m
-- hours, hour, hr, h
-- days, day, d
-- weeks, week, w
-- months, month, M（定义为 30.44 天）
-- years, year, y（定义为 365.25 天）
+- `usec`, `us`, `μs`
+- `msec`, `ms`
+- `seconds`, `second`, `sec`, `s`
+- `minutes`, `minute`, `min`, `m`
+- `hours`, `hour`, `hr`, `h`
+- `days`, `day`, `d`
+- `weeks`, `week`, `w`
+- `months`, `month`, `M`（定义为 `30.44` 天）
+- `years`, `year`, `y`（定义为 `365.25` 天）
 
 ## 日历事件表达式
 
-日历事件表达式是任务的关键组件，如指定日志搜索的时间范围以及在所需的重复时间触发定时器。systemd 本身及其定时器在时间和日期表达式上使用的样式与 crontab 使用的格式不同。它比 crontab 更灵活，并允许以命令的方式使用模糊日期时间。它也应该足够熟悉，便于理解。使用 OnCalendar= 的格式为 DOW YYYY-MM-DD HH:MM:SS。DOW（星期几）是可选的，其他字段可以使用星号 (*) 来匹配该位置的任何值。如果未指定时间，则假设为 00:00:00。如果未指定日期但指定了时间，则下次匹配可能是今天或明天，取决于所有转换为归一化形式以供使用的各种日历时间表达式格式。systemd-analyze calendar 命令显示时间表达式的规范化形式。systemd 为我们提供了一个验证和检查用于表达式的日历事件的极佳工具。systemd-analyze calendar 工具将解析日历时间表达式，并提供规范化形式以及其他有用的信息，例如下次“经过”（即匹配）的日期和时间，以及到达触发时间之前的大致时间。
+日历事件表达式是任务的关键组件，如指定日志搜索的时间范围以及在所需的重复时间触发定时器。`systemd` 本身及其定时器在时间和日期表达式上使用的样式与 `crontab` 使用的格式不同。它比 `crontab` 更灵活，并允许以命令的方式使用模糊日期时间。它也应该足够熟悉，便于理解。使用 `OnCalendar=` 的格式为 `DOW YYYY-MM-DD HH:MM:SS`。`DOW`（星期几）是可选的，其他字段可以使用星号 `*` 来匹配该位置的任何值。如果未指定时间，则假设为 `00:00:00`。如果未指定日期但指定了时间，则下次匹配可能是今天或明天，取决于所有转换为归一化形式以供使用的各种日历时间表达式格式。`systemd-analyze calendar` 命令显示时间表达式的规范化形式。`systemd` 为我们提供了一个验证和检查用于表达式的日历事件的极佳工具。`systemd-analyze calendar` 工具将解析日历时间表达式，并提供规范化形式以及其他有用的信息，例如下次“经过”（即匹配）的日期和时间，以及到达触发时间之前的大致时间。
 
-本节使用的命令可以由非 root 用户执行，但某些命令显示的数据将不如 root 用户完整。因此，我建议你以 root 用户身份执行本章中的所有实验。
+本节使用的命令可以由非 root 用户执行，但某些命令显示的数据将不如 root 用户完整。因此，建议以 root 用户身份执行本章中的所有实验。
 
 ## 探索 systemd 语法
 
-有两种不同的时间语法模式。起初看起来可能很困惑，但这两种模式的使用方式不同。systemd 使用日历语法来指定触发事件的时间，并描述事件之间的时间跨度。第二种模式用于 systemd 日志中的时间戳。
+有两种不同的时间语法模式。起初看起来可能很困惑，但这两种模式的使用方式不同。`systemd` 使用日历语法来指定触发事件的时间，并描述事件之间的时间跨度。第二种模式用于 `systemd` 日志中的时间戳。
 
-## 日历事件
+### 日历事件
 
-在使用定时器触发事件时，正确的 systemd 时间语法非常重要。它与 crontab 语法有显著不同，因此需要一些解释。systemd-analyze calendar 命令提供了一个探索 systemd 语法并验证我们指定的时间是否正确的工具。
+在使用定时器触发事件时，正确的 `systemd` 时间语法非常重要。它与 `crontab` 语法有显著不同，因此需要一些解释。`systemd-analyze calendar` 命令提供了一个探索 `systemd` 语法并验证我们指定的时间是否正确的工具。
 
-### 实验 1：Systemd 日历语法
+#### 实验 1：Systemd 日历语法
 
-这个实验引入了日历语法。虽然起初看起来很复杂，当你尝试过它后，它就变得有意义了。让我们从一个没有时间的未来日期开始。因为所有日期字段都显式指定，所以它是一个单次事件。在这种情况下，没有指定时间，因此事件将在指定的日期 00:00 触发。
+这个实验引入了日历语法。虽然起初看起来很复杂，当你尝试过它后，它就变得有意义了。让我们从一个没有时间的未来日期开始。因为所有日期字段都显式指定，所以它是一个单次事件。在这种情况下，没有指定时间，因此事件将在指定的日期 `00:00` 触发。
 
 ```
 $ systemd-analyze calendar 2030-06-17
@@ -5620,7 +4373,7 @@ Next elapse: 2030-06-17 00:00:00 (in UTC): 2030-06-17 04:00:00
 From now: 5 years 6 months
 ```
 
-（此处翻译为）“下次经过”和“UTC”将根据时区而不同。现在让我们为日期添加一个时间，在这个例子中日期和时间是作为独立的实体分析的。
+“下次经过”和“UTC”将根据时区而不同。现在让我们为日期添加一个时间，在这个例子中日期和时间是作为独立的实体分析的。
 
 ```
 $ systemd-analyze calendar 2030-06-17 15:26
@@ -5629,6 +4382,7 @@ Normalized form: 2030-06-17 15:26:00
 Next elapse: 2030-06-17 15:26:00 (in UTC): 2030-06-17 19:26:00
 From now: 5 years 6 months
 ```
+
 要将日期和时间视为单个实体，请将它们括起来。
 
 ```
@@ -5638,7 +4392,7 @@ Next elapse: 2030-06-17 15:26:00 (in UTC): 2030-06-17 19:26:00
 From now: 5 years 6 months
 ```
 
-现在指定一个比当前时间早的时间和一个晚一点的时间。在这种情况下，当前时间大约是 2024-11-25 的 13:50。
+现在指定一个比当前时间早的时间和一个晚一点的时间。在这种情况下，当前时间大约是 `2024-11-25` 的 `13:50`。
 
 ```
 $ systemd-analyze calendar 05:21:16 22:15
@@ -5653,7 +4407,7 @@ Next elapse: 2024-11-25 22:15:00 (in UTC): 2024-11-26 03:15:00
 From now: 8h
 ```
 
-systemd-analyze calendar 工具不适用于时间戳，因此在配合 calendar 命令时使用“tomorrow”或“today”会导致错误，因为它们是时间戳而不是 OnCalendar 时间格式。
+`systemd-analyze calendar` 工具不适用于时间戳，因此在配合 `calendar` 命令时使用“tomorrow”或“today”会导致错误，因为它们是时间戳而不是 `OnCalendar` 时间格式。
 
 ```
 $ systemd-analyze calendar "tomorrow"
@@ -5661,141 +4415,135 @@ Failed to parse expression 'tomorrow': Invalid argument
 Hint: this expression is a valid timestamp. Use 'systemd-timestamp "tomorrow"' instead
 ```
 
-当作为时间戳使用时，“tomorrow”术将始终解析为明天的日期和 00:00:00 时间。你必须使用规范表达式格式“yyyy-mm-dd hh:mm:ss”以便该工具在日历模式下工作。尽管如此，systemd-analyze calendar 工具仍然可以帮助你理解用于表达式的日历时间表达式的结构
+当作为时间戳使用时，“tomorrow”将始终解析为明天的日期和 `00:00:00` 时间。你必须使用规范表达式格式“yyyy-mm-dd hh:mm:ss”以便该工具在日历模式下工作。尽管如此，`systemd-analyze calendar` 工具仍然可以帮助你理解用于表达式的日历时间表达式的结构。
 
-
-systemd 定时器。我建议阅读 `systemd.time(7)` 手页，以更完整地理解 systemd 定时器可以使用的时间格式。
+我建议阅读 `systemd.time(7)` 手页，以更完整地理解 `systemd` 定时器可以使用的时间格式。
 
 ## 时间戳
 
-日历时间（calendar times）可以匹配单个或多个时间点，而时间戳（timestamps）则明确地表示单个时间点。例如，systemd journal 中的时间戳指的是每个日志事件发生的精确时刻。
+日历时间可以匹配单个或多个时间点，而时间戳则明确地表示单个时间点。例如，`systemd journal` 中的时间戳指的是每个日志事件发生的精确时刻。
 
-第 7 章 分析 systemd 日历和时间跨度
+### 实验 7-2：探索系统时间戳
 
-## 实验 7-2：探索系统时间戳
-
-systemd journal 使用时间戳，因此在我写这些内容时，让我们来看看其中的几个时间戳。`journalctl` 命令的 `-s` 选项指定了我们想要开始的时间。“s”正式代表“since”（自……）术语，它也可以用于
-
-# # journalctl -S today
+`systemd journal` 使用时间戳，因此让我们来看看其中的几个时间戳。`journalctl` 命令的 `-s` 选项指定了我们想要开始的时间。“s”正式代表“since”术语，它也可以用于
 
 ```
-Dec 03 00:00:37 testvm1.both.org systemd[1]: Starting
-sysstat-collect.service - system activity accounting tool...
-Dec 03 00:00:37 testvm1.both.org systemd[1]: Starting
-sysstat-rotate.service - system activity accounting tool...
-Dec 03 00:00:37 testvm1.both.org systemd[1]: Starting
-unbound-anchor.service - update of the root trust anchor
-for DNS>
-Dec 03 00:00:37 testvm1.both.org systemd[1]: sysstat-collect.
-service: Deactivated successfully.
-Dec 03 00:00:37 testvm1.both.org systemd[1]: Finished
-sysstat-collect.service - system activity accounting tool.
-Dec 03 00:00:37 testvm1.both.org audit[1]: SERVICE_START pid=1 uid=0 aud=429496295 ses=429496295
-msg='unit=sysstat-co>
+# journalctl -S today
+```
+
+```
+Dec 03 00:00:37 testvm1.both.org systemd[1]: Starting sysstat-collect.service - system activity accounting tool...
+Dec 03 00:00:37 testvm1.both.org systemd[1]: Starting sysstat-rotate.service - system activity accounting tool...
+Dec 03 00:00:37 testvm1.both.org systemd[1]: Starting unbound-anchor.service - update of the root trust anchor for DNS>
+Dec 03 00:00:37 testvm1.both.org systemd[1]: sysstat-collect.service: Deactivated successfully.
+Dec 03 00:00:37 testvm1.both.org systemd[1]: Finished sysstat-collect.service - system activity accounting tool.
+Dec 03 00:00:37 testvm1.both.org audit[1]: SERVICE_START pid=1 uid=0 aud=429496295 ses=429496295 msg='unit=sysstat-co>
 Dec 03 00:00:37 testvm1.both.org audit[1]: SERVICE_STOP pid=1 uid=0 aid=429496295 ses=429496295 msg='unit=sysstat-col>
-Dec 03 00:00:37 testvm1.both.org systemd[1]: sysstat-rotate.
-service: Deactivated successfully.
-Dec 03 00:00:37 testvm1.both.org systemd[1]: Finished
-sysstat-rotate.service - system activity accounting tool.
+Dec 03 00:00:37 testvm1.both.org systemd[1]: sysstat-rotate.service: Deactivated successfully.
+Dec 03 00:00:37 testvm1.both.org systemd[1]: Finished sysstat-rotate.service - system activity accounting tool.
 Dec 03 00:00:37 testvm1.both.org audit[1]: SERVICE_START pid=1 uid=0 aid=429496295 ses=429496295 msg='unit=sysstat-ro>
-第 7 章 分析 systemd 日历和时间跨度
 Dec 03 00:00:37 testvm1.both.org audit[1]: SERVICE_STOP pid=1 uid=0 aid=429496295 ses=429496295 msg='unit=sysstat-rot>
 <SNIP>
 Dec 03 00:01:00 testvm1.both.org CROND[13334]: (root) CMDEND
-Dec 03 00:07:37 testvm1.both.org systemd[1]: Starting
-sysstat-summary.service - Generate a daily summary of
-process
-Dec 03 00:07:37 testvm1.both.org systemd[1]: sysstat-summary.
-service: Deactivated successfully.
-Dec 03 00:07:37 testvm1.both.org systemd[1]: Finished
-sysstat-summary.service - Generate a daily summary of
-Dec 03 00:00:37 testvm1.both.org systemd[1]: Starting
-sysstat-collect.service - system activity accounting tool...
-Dec 03 00:00:37 testvm1.both.org systemd[1]: Starting
-sysstat-rotate.service - system activity accounting tool...
-Dec 03 00:00:37 testvm1.both.org systemd[1]: Starting
-unbound-anchor.service - update of the root trust anchor
-for DNS>
-Dec 03 00:00:37 testvm1.both.org systemd[1]: sysstat-collect.
-service: Deactivated successfully.
-Dec 03 00:00:37 testvm1.both.org systemd[1]: Finished
-sysstat-collect.service - system activity accounting tool.
-Dec 03 00:00:37 testvm1.both.org audit[1]: SERVICE_START pid=1 uid=0 aid=429496295 ses=429496295
-msg='unit=sysstat-co-
-Dec 03 00:00:37 testvm1.both.org audit[1]: SERVICE_STOP pid=1 uid=0 aid=429496295 ses=429496295 msg='unit=sysstat-col-
-Dec 03 00:00:37 testvm1.both.org systemd[1]: sysstat-rotate.
-service: Deactivated successfully.
-Dec 03 00:00:37 testvm1.both.org systemd[1]: Finished
-sysstat-rotate.service - system activity accounting tool.
+Dec 03 00:07:37 testvm1.both.org systemd[1]: Starting sysstat-summary.service - Generate a daily summary of process
+Dec 03 00:07:37 testvm1.both.org systemd[1]: sysstat-summary.service: Deactivated successfully.
+Dec 03 00:07:37 testvm1.both.org systemd[1]: Finished sysstat-summary.service - Generate a daily summary of
 <SNIP>
+```
 
-systemd-analyze timestamp 命令可以以分析日历表达式的方式来分析时间戳。让我们看看 journal 数据中的其中一个时间，以及几年前的一个时间。
+`systemd-analyze timestamp` 命令可以以分析日历表达式的方式来分析时间戳。让我们看看 journal 数据中的其中一个时间，以及几年前的一个时间。
 
-**systemd-analyze timestamp "Dec 03 11:28:07"**
+```
+systemd-analyze timestamp "Dec 03 11:28:07"
 Original form: Dec 03 11:28:07
 Normalized form: 2024-12-03 11:28:07 EST(in UTC): 2024-12-03 16:28:07 UTC
 unix seconds: @173343287
 From now: 9min ago
+```
 
-**systemd-analyze timestamp "Wed 2020-06-17 10:08:41"**
+```
+systemd-analyze timestamp "Wed 2020-06-17 10:08:41"
 Original form: Wed 2020-06-17 10:08:41
 Normalized form: 2020-06-17 10:08:41 EDT(in UTC): 2020-06-17 14:08:41 UTC
 UNIX seconds: @1592402921
 From now: 4 years 5 months
+```
 
-这两个时间戳格式不同，但任何明确表示的时间（如“2020-06-17 10:08:41”）都是时间戳，因为它只会发生一次；未来的时间戳也可以用于 systemd 定时器，且该定时器将触发其定义的操作。较为模糊的时间（如“2025-* 22:15:00”）只能作为定时器文件中的 OnCalendar 语句。该表达式将在 2025 年的每天 22:15（晚上 10:15）触发事件。
+这两个时间戳格式不同，但任何明确表示的时间（如“2020-06-17 10:08:41”）都是时间戳，因为它只会发生一次；未来的时间戳也可以用于 `systemd` 定时器，且该定时器将触发其定义的操作。较为模糊的时间（如“2025-* 22:15:00”）只能作为定时器文件中的 `OnCalendar` 语句。该表达式将在 `2025` 年的每天 `22:15`（晚上 `10:15`）触发事件。
 
-`journalctl` 命令的选项可以显示时间戳，我们可以轻松地与 systemd-analyze 工具配合使用。
+`journalctl` 命令的选项可以显示时间戳，我们可以轻松地与 `systemd-analyze` 工具配合使用。
 
+```
 $ journalctl -o short-full
 ```
-Tue 2024-12-03 10:20:06 EST testvm1.both.org systemd[1]: Starting
-sysstat-collect.service - system activity accounting
-Tue 2024-12-03 10:20:06 EST testvm1.both.org systemd[1]:
-sysstat-collect.service: Deactivated successfully.
-Tue 2024-12-03 10:20:06 EST testvm1.both.org systemd[1]: Finished
-sysstat-collect.service - system activity accounting
+
+```
+Tue 2024-12-03 10:20:06 EST testvm1.both.org systemd[1]: Starting sysstat-collect.service - system activity accounting
+Tue 2024-12-03 10:20:06 EST testvm1.both.org systemd[1]: sysstat-collect.service: Deactivated successfully.
+Tue 2024-12-03 10:20:06 EST testvm1.both.org systemd[1]: Finished sysstat-collect.service - system activity accounting
 Tue 2024-12-03 10:20:06 EST testvm1.both.org audit[1]: SERVICE_START pid=1 uid=0 aid=429496295 ses=429496295 msg='unit=sysstat-col>
-Tue 2024-12-03 10:20:06 EST testvm1.both.org audit[1]: SERVICE_STOP pid=1 uid=0 aid=429496295 ses=429496295 msg='unit=sysstat-col-
-Tue 2024-12-03 10:30:06 EST testvm1.both.org systemd[1]: Starting
-sysstat-collect.service - system activity accounting
-Tue 2024-12-03 10:30:06 EST testvm1.both.org systemd[1]:
-sysstat-collect.service: Deactivated successfully.
-Tue 2024-12-03 10:30:06 EST testvm1.both.org systemd[1]: Finished
-sysstat-collect.service - system activity accounting
-<SNIP>
 ```
 
+
+
+Tue 2024-12-03 10:20:06 EST testvm1.both.org audit[1]: SERVICE_STOP pid=1 uid=0 aid=429496295 ses=429496295 msg='unit=sysstat-col-
+
+Tue 2024-12-03 10:30:06 EST testvm1.both.org systemd[1]: Starting
+
+sysstat-collect.service - system activity accounting
+
+Tue 2024-12-03 10:30:06 EST testvm1.both.org systemd[1]:
+
+sysstat-collect.service: Deactivated successfully.
+
+Tue 2024-12-03 10:30:06 EST testvm1.both.org systemd[1]: Finished
+
+sysstat-collect.service - system activity accounting
+
+<SNIP>
+
+```
 我们也可以以单调（monotonic）格式显示 journal 时间戳，显示自启动以来的秒数。
 
 $ journalctl -S today -short-monotonic
 ```
-+ [6269.874404] testvm1.both.org systemd[1]: Finished
-sysstat-collect.service - system activity accounting tool.
-+ [6269.846450] testvm1.both.org audit[1]: SERVICE_START pid=1 uid=0 aid=429496295 ses=429496295 msg='unit=sysstat-col>
-+ [6269.847449] testvm1.both.org audit[1]: SERVICE_STOP pid=1 uid=0 aid=429496295 ses=429496295 msg='unit=sysstat-col>
-+ [6869.775575] testvm1.both.org systemd[1]: Starting
-sysstat-collect.service - system activity accounting tool...
-+ [6869.871332] testvm1.both.org systemd[1]: sysstat-collect.
-service: Deactivated successfully.
-+ [6869.871678] testvm1.both.org systemd[1]: Finished
-sysstat-collect.service - system activity accounting tool.
-<SNIP>
-```
 
++ [6269.874404] testvm1.both.org systemd[1]: Finished
+
+sysstat-collect.service - system activity accounting tool.
+
++ [6269.846450] testvm1.both.org audit[1]: SERVICE_START pid=1 uid=0 aid=429496295 ses=429496295 msg='unit=sysstat-col>
+
++ [6269.847449] testvm1.both.org audit[1]: SERVICE_STOP pid=1 uid=0 aid=429496295 ses=429496295 msg='unit=sysstat-col>
+
++ [6869.775575] testvm1.both.org systemd[1]: Starting
+
+sysstat-collect.service - system activity accounting tool...
+
++ [6869.871332] testvm1.both.org systemd[1]: sysstat-collect.
+
+service: Deactivated successfully.
+
++ [6869.871678] testvm1.both.org systemd[1]: Finished
+
+sysstat-collect.service - system activity accounting tool.
+
+<SNIP>
+
+```
 请务必阅读 `journalctl` 手页，以获取完整的时间戳选项列表。
 
 ## 时间跨度（Time Spans）
 
 时间跨度主要用于 systemd 定时器，定义事件之间的特定时间跨度。这可以触发事件，使其在系统启动或上一个相同事件后的指定时间发生。一个在系统启动 32 分钟后触发事件的示例表达式在定时器单元所示：
-OnStartupSec=32m
+`OnStartupSec=32m`
 
 systemd 定时器的默认触发精度是从指定时间开始持续一分钟的时间窗口。通过在定时器文件的 `Timer` 部分添加类似下面的语句，可以将定时器跨度精度缩小到微秒：
-AccuracySec=1us
+`AccuracySec=1us`
 
 第 7 章 分析 systemd 日历和时间跨度
 
-## 实验 7-3：探索时间跨度
+### 实验 7-3：探索时间跨度
 
 `systemd-analyze timespan` 命令可以帮助确保你在单元文件中使用了有效的时间跨度。以下示例将帮助你入门：
 
@@ -5816,10 +4564,6 @@ Original: 15days 6h 32m
 Human: 2w 1d 6h 32min
 
 尝试这些示例以及你自己的示例：
-
-
-
-
 
 - "255days 6h 31m"
 - "255days 6h 31m 24.568ms"
@@ -5881,7 +4625,7 @@ D. Both, systemd for Linux Sysadmins, https://doi.org/10.1007/979-8-8668-1328-3_
 
 第 8 章 使用 systemd 定时器
 
-## 实验 8-1：查看 systemd 定时器
+### 实验 8-1：查看 systemd 定时器
 
 让我们检查一下定时器。此实验应由非 root 用户执行。
 
@@ -5917,61 +4661,92 @@ SUB → 低级单元激活状态，值取决于单元类型。
 
 ```
 $ systemctl --all timer
-<SNIP>```
 
+<SNIP>```
 在这种情况下，没有未激活的单元，但仍然显示了激活的单元。现在让我们显示更多关于激活定时器的细节。星号的作用与 glob ，所以此命令列出了所有系统单元。为了简洁，我截断了这段数据流，并再次使用了较小的字体，但没有上次那么小。
 
 ```
 $ systemctl status *timer
+```
+
 <SNIP>
 
 +* sysstat-summary.timer - 生成昨天的进程统计摘要
+
   Loaded: loaded (/usr/lib/systemd/system/systemd-summary.timer; enabled; preset: enabled)
+
   Active: active (waiting) since Tue 2024-12-03 21:14:13; 18h ago
 
 第 8 章 使用 systemd 定时器
+
 Invocation: f446503972c5420b9da5689b404f
+
 Trigger: Thu 2024-12-05 00:07:00 EST; 7h left
+
 +Triggers: • sysstat-summary.service
+
 Dec 03 21:14:13 testvm1.org systemd[1]: Started
+
 sysstat-summary.timer - 生成昨天的进程统计摘要。
 
 +* systemd-tmpfiles-clean.timer - 每日清理目录
+
   Loaded: loaded (/usr/lib/systemd/system/systemd-tmpfiles-clean.timer; static)
+
   Active: active (waiting) since Tue 2024-12-03 21:14:13; 18h ago
+
 Invocation: c82023d1e0844d488965dae7f2c1
+
 Trigger: Wed 2024-12-04 21:29:44 EST; 5h 18min left
+
 +Triggers: systemd-tmpfiles-clean.service
+
 Docs: man:tmpfiles.d(5) man:
+
 Dec 03 21:14:13 testvm1.org systemd[1]: Started
+
 systemd-tmpfiles-clean.timer - 每日清理目录。
 
 +* fstrim.timer - 每周丢弃未使用的文件系统块
+
   Loaded: loaded (/usr/lib/systemd/system/systemd-summary.timer; preset: enabled)
+
   Active: active (waiting) since Tue 2024-12-03 21:14:13; 18h ago
 
 第 8 章 使用 systemd 定时器
+
 Invocation: 45c67bf52dc64dd889a54ce59d56ba2
+
 Trigger: 2024-12-09 00:21:50 EST; 4 days left
+
 +Triggers: fstrim
+
 Docs: man:
+
 Dec 03 21:14:13 testvm1.org systemd[1]: Started
+
 fstrim.timer - 丢弃未使用的文件系统块。
 
 +* sysstat-collect.timer - 每 10 分钟运行系统活动统计工具
+
   Loaded: loaded (/usr/lib/systemd/system/sysstat-collect.timer; enabled; preset: enabled)
+
   Active: active (waiting) since Tue 2024-12-03 21:14:13; 18h ago
+
 Invocation: 2b38695d2d3f44e4ba4c5d6d069144
+
 Trigger: Wed 2024-12-04 16:20:00 EST; 8min left
+
 Triggers: • sysstat-collect.service
+
 Dec 03 21:14:13 testvm1.org systemd[1]: Started
+
 sysstat-collect.timer - 每 10 分钟运行系统活动统计工具。
+
 <SNIP>
 
-
-
-
 激活、自那以后经过的时间、定时器单元，以及
+
 由定时器激活的服务单元。
 
 ## systemctl list-timers
@@ -5990,7 +4765,7 @@ sysstat-collect.timer - 每 10 分钟运行系统活动统计工具。
 
 尽管我们可以构建现有的一个或多个定时器来学习它们是如何工作的，但让我们自己创建一个服务单元和一个定时器单元来触发它吧。我们将使用一个非常简单的示例来保持简单。在我们完成此任务后，将更容易理解其他定时器是如何工作的，并确定它们在做什么。
 
-## 实验 8-2：创建定时器
+### 实验 8-2：创建定时器
 
 请以 root 用户执行此实验。
 
@@ -6029,11 +4804,18 @@ WantedBy=multi-user.target
 ## systemctl status myMonitor.service
 
 + - myMonitor.service - 将系统统计日志到 systemd 日志
+
 Loaded: loaded (/usr/local/lib/systemd/system/myMonitor.service; disabled; preset: disabled)
+
 Drop-In: /usr/lib/systemd/system/service.d/L 10-timeout-out-abort.conf, 50-keep-warm.conf
+
 Active: inactive (dead)
 
 现在通过启动它来测试新服务。注意，服务在我们启动它或被定时器触发时只会运行一次，而且它不会在重启时运行，因为我们还没有启用它。
+
+
+
+# 第 8 章 使用 systemd 定时器
 
 ```bash
 # systemctl start myMonitor.service
@@ -6041,9 +4823,7 @@ Active: inactive (dead)
 
 但输出在哪里？
 
-第 8 章 使用 systemd 定时器
-
-默认情况下，由 systemd 服务单元运行程序的标准输出 (STDOUT) 输出到系统日志，这留下了一条你现在或以后可以查看的记录——但限于一定范围。专门查看你的服务单元和今天的日志：使用 `-S` 选项（它是 `journalctl` 工具的短版本）应该搜索到条目。这并不是因为你不在乎之前的结果——在这种情况下将没有任何任何结果——而是为了在你的主机已运行了很并积累了大量条目时缩短搜索时间。`-u` 选项允许我们指定想要查看的 systemd 单元，排除所有我们不关心的其他内容。
+默认情况下，由 `systemd` 服务单元运行程序的标准输出 (`STDOUT`) 输出到系统日志，这留下了一条你现在或以后可以查看的记录——但限于一定范围。专门查看你的服务单元和今天的日志：使用 `-S` 选项（它是 `journalctl` 工具的短版本）应该搜索到条目。这并不是因为你不在乎之前的结果——在这种情况下将没有任何任何结果——而是为了在你的主机已运行了很并积累了大量条目时缩短搜索时间。`-u` 选项允许我们指定想要查看的 `systemd` 单元，排除所有我们不关心的其他内容。
 
 ```bash
 # journalctl -S today -u myMonitor.service
@@ -6135,26 +4915,21 @@ OnCalendar=*-.*.* *:.*:00
 WantedBy=timers.target
 ```
 
-第 8 章 使用 systemd定时器
-
 `OnCalendar` 定时表达式 `*-.*.* *:.*:00` 应该触发定时器每分钟执行一次 `myMonitor.service` 单元。尽管我们在上一章中查看过它们，但我们将在本章稍后探索 `OnCalendar` 设置。
 
 现在，观察定时器触发时运行你的服务的任何日志条目。你也可以跟踪定时器，但跟踪服务允许你近乎实时地看到结果。运行带有 `-f` (follow) 选项的 `journalctl`：
 
-## journalctl -S today -f -u myMonitor.service
+## `journalctl -S today -f -u myMonitor.service`
 
 在另一个终端会话中，启动但不启用定时器，看看在运行一段时间后发生了什么。
 
-## systemctl myMonitor.service
+## `systemctl myMonitor.service`
 
 一个结果立即显示，接下来的结果以大约一分钟的间隔出现。观察日志几分钟，看看你是否注意到相同的情况。
 
 务必检查定时器和服务的状态。
 
 ## 定时器准确性
-
-
-
 
 日志条目，定时器在启动时立即触发，随后在每分钟过后的大约 46 或 47 秒再次触发。
 
@@ -6166,21 +4941,17 @@ WantedBy=timers.target
 AccuracySec=1us
 ```
 
-208
-
-第 8 章 使用 systemd 定器
-
 时间跨（Time spans）可用于指定所需的精度，也可以为重复或单次事件定义时间范围。它识别以下单位：
 
-- use, us, μs
-- msec, ms
-- seconds, second, sec, s
-- minutes, minute, min, m
-- hours, hour, hr, h
-- days, day, d
-- weeks, week, w
-- months, month, M (定义为 30.44 天)
-- years, year, y (定义为 365.25 天)
+- `use`, `us`, `μs`
+- `msec`, `ms`
+- `seconds`, `second`, `sec`, `s`
+- `minutes`, `minute`, `min`, `m`
+- `hours`, `hour`, `hr`, `h`
+- `days`, `day`, `d`
+- `weeks`, `week`, `w`
+- `months`, `month`, `M` (定义为 30.44 天)
+- `years`, `year`, `y` (定义为 365.25 天)
 
 `/usr/lib/systemd/system` 中的所有的默认定时器都指定了大得多的精度范围，因为精确时间并不是关键的。
 
@@ -6198,8 +4969,6 @@ AccuracySec=1us
 /usr/lib/systemd/system/unbound-anchor.timer:AccuracySec=24h
 ```
 
-209
-
 你可以看到这些定时器的精度范围从一小时到 24 小时不等。
 
 查看 `/usr/lib/systemd/system` 目录中某些定时器单元文件的完整内容，了解它们是如何构建的。
@@ -6216,40 +4985,30 @@ AccuracySec=1us
 
 ## 定时器类型
 
-systemd 定器具有 cron 不具备的其他功能，cron 仅在特定的、重复的实时日期和时间触发。systemd 定器可以配置为根据其他系统单元的状态变化进行触发。例如，定时器可以在系统启动后经过特定的持续时间、启动后或定义的服务单元激活后触发。这些被称为单调定时器（monotonic timers）。单调是指一个不断增加的计数或序列。这些定时器不是持久的，因为它们在每次启动后都会被重置。
+`systemd` 定器具有 `cron` 不具备的其他功能，`cron` 仅在特定的、重复的实时日期和时间触发。`systemd` 定器可以配置为根据其他系统单元的状态变化进行触发。例如，定时器可以在系统启动后经过特定的持续时间、启动后或定义的服务单元激活后触发。这些被称为单调定时器（monotonic timers）。单调是指一个不断增加的计数或序列。这些定时器不是持久的，因为它们在每次启动后都会被重置。
 
 表 8-1 列出了所有单调定时器及其简短定义，以及 `OnCalendar` 定器，后者不是单调的，用于指定未来或可能重复的时刻。这些信息包含了 `OnCalendar` 的非单调性。
 
 表 8-1 列出了单调定时器及其简短定义，以及 OnCalendar 定器。
 
-210
-
 8-1. 使用 systemd
 
 | 定时器 | 单调定义 |
 | :--- | :--- |
-| OnCalendar= | 指定未来的时间，这些时间可能是未来或重复的。 |
-| OnCalendarSec=X | 相对于日历时间的时间。 |
-| OnBootSec=X | 相对于系统启动的时间。 |
-| OnStartupSec=X | 相对于系统启动的时间。 |
-| OnUnitActiveSec=X | 相对于服务单元激活的时间。 |
-| OnUnitInactiveSec=X | 相对于服务单元非激活的时间。 |
+| `OnCalendar=` | 指定未来的时间，这些时间可能是未来或重复的。 |
+| `OnCalendarSec=X` | 相对于日历时间的时间。 |
+| `OnBootSec=X` | 相对于系统启动的时间。 |
+| `OnStartupSec=X` | 相对于系统启动的时间。 |
+| `OnUnitActiveSec=X` | 相对于服务单元激活的时间。 |
+| `OnUnitInactiveSec=X` | 相对于服务单元非激活的时间。 |
 
-211
-
-第 8 章 使用 systemd
-
-systemd 定器具有 cron 不具备的其他功能，cron 仅在特定的、重复的实时日期和时间触发。systemd 定器可以配置为根据其他系统单元的状态变化进行触发。例如，定时器可以在系统启动后经过特定的持续时间、启动后或定义的服务单元激活后触发。这些被称为单调定时器。单调是指一个不断增加的计数或序列。这些定时器不是持久的，因为它们在每次启动后都会被重置。
+`systemd` 定器具有 `cron` 不具备的其他功能，`cron` 仅在特定的、重复的实时日期和时间触发。`systemd` 定器可以配置为根据其他系统单元的状态变化进行触发。例如，定时器可以在系统启动后经过特定的持续时间、启动后或定义的服务单元激活后触发。这些被称为单调定时器。单调是指一个不断增加的计数或序列。这些定时器不是持久的，因为它们在每次启动后都会被重置。
 
 表 8-1 列出了所有单调定时器及其简短定义，以及 `OnCalendar` 定器，后者不是单调的，用于指定未来或可能重复的时刻。这些信息包含了 `OnCalendar` 的非单调性。
 
 ## `OnCalendar` 表达式
 
-`OnCalendar` 表达式比 cron 灵活得多，允许模糊的日期时间。`OnCalendar=` 的基本格式为 `YYYY-MM-DD HH:MM:SS`。`D`（星期）是可选的。
-
-212
-
-第 8 章 使用 systemd
+`OnCalendar` 表达式比 `cron` 灵活得多，允许模糊的日期时间。`OnCalendar=` 的基本格式为 `YYYY-MM-DD HH:MM:SS`。`D`（星期）是可选的。
 
 表 8-2 展示了 `OnCalendar` 表达式的一些示例。
 
@@ -6257,28 +5016,25 @@ systemd 定器具有 cron 不具备的其他功能，cron 仅在特定的、重�
 
 | 日历表达式 | 描述 |
 | :--- | :--- |
-| *-*-* 00:15:30 | 每年每月的每天凌晨 0:15:30。 |
-| Weekly | 每周一。 |
-| mon | 同 weekly。 |
-| Wed 2020*-* | 2020 年的所有周三。 |
-| mon..* 2021*-* | 2021 年的所有 weekdays。 |
-| 2022-6,7,8-1,15 01:15:00 | 2022 年6、7、8 月的 1 号和 15 号凌晨 1:15。 |
-| mon *-05-03 | 每年 5 月最后三天之的周一。 |
-| mon.Fri *-08-04 | 每年 8 月最后四天内的周一和周五。 |
-| *-05-03/2 | 从 5 月第三天开始，每隔两天一次。 |
-| *-05-03/2 | 从 5 月第三天开始，在 5 月剩余时间内每隔两天一次。 |
+| `*-*-* 00:15:30` | 每年每月的每天凌晨 0:15:30。 |
+| `Weekly` | 每周一。 |
+| `mon` | 同 weekly。 |
+| `Wed 2020*-*` | 2020 年的所有周三。 |
+| `mon..* 2021*-*` | 2021 年的所有 weekdays。 |
+| `2022-6,7,8-1,15 01:15:00` | 2022 年6、7、8 月的 1 号和 15 号凌晨 1:15。 |
+| `mon *-05-03` | 每年 5 月最后三天之的周一。 |
+| `mon.Fri *-08-04` | 每年 8 月最后四天内的周一和周五。 |
+| `*-05-03/2` | 从 5 月第三天开始，每隔两天一次。 |
+| `*-05-03/2` | 从 5 月第三天开始，在 5 月剩余时间内每隔两天一次。 |
 
-
-
-
-- logrotate.timer: 日期轮转日志
-- plocate-updatedb.timer: 每日更新 plocate 数据库
-- raid-check.timer: 每周一次 RAID 配置健康检查
-- sysstat-collect.timer: 每 10 分钟运行一次系统活动统计
-- sysstat-rotate.timer: 午夜轮转每日系统活动数据文件
-- sysstat-summary.timer: 生成昨天的进程计数摘要
-- systemd-tmpfiles-clean.timer: 日期清理临时目录
-- unbound-anchor.timer: 日期更新 DNSSEC 的根信任锚点
+- `logrotate.timer`: 日期轮转日志
+- `plocate-updatedb.timer`: 每日更新 plocate 数据库
+- `raid-check.timer`: 每周一次 RAID 配置健康检查
+- `sysstat-collect.timer`: 每 10 分钟运行一次系统活动统计
+- `sysstat-rotate.timer`: 午夜轮转每日系统活动数据文件
+- `sysstat-summary.timer`: 生成昨天的进程计数摘要
+- `systemd-tmpfiles-clean.timer`: 日期清理临时目录
+- `unbound-anchor.timer`: 日期更新 DNSSEC 的根信任锚点
 
 ## 8 使用 systemd 定器
 
@@ -6289,6 +5045,7 @@ systemd 定器具有 cron 不具备的其他功能，cron 仅在特定的、重�
 ```bash
 # systemctl disable --now fstrim
 ```
+
 Removed '/etc/systemd/system/timers.target.wants/fstrim.timer.'
 
 我们不想触碰 `logrotate.timer`，它可以防止日志文件变得过大。我们也不想禁用 `plocate-updateddb.timer`，因为它会导致 plocate 数据库进行更新。plocate 数据库供 `locate` 命令使用，允许你对 Linux 主机上的文件进行非常快速搜索。
@@ -6297,17 +5054,17 @@ Removed '/etc/systemd/system/timers.target.wants/fstrim.timer.'
 
 ## 总结
 
-systemd 可用于执行与 `cron` 工具相同的任务，但在触发事件的日历表达式和单调时间表达式方面提供了更大的灵活性。
+`systemd` 可用于执行与 `cron` 工具相同的任务，但在触发事件的日历表达式和单调时间表达式方面提供了更大的灵活性。
 
 尽管你为这次实验创建的服务单元（service units）旨在由定时器触发，但你也可以使用 `systemctl start <ServiceName>.service` 命令随时触发它们。多个维护任务可以写在一个定时器中进行脚本化；你可以运行由定时器触发的服务来执行所有脚本，也可以根据需要运行单个脚本。我还没有看到任何迹象表明 `cron` 将被弃。
 
-我希望这种情况不会发生，因为至少使用 systemd 定器进行一次性任务调度要容易得多。
+我希望这种情况不会发生，因为至少使用 `systemd` 定器进行一次性任务调度要容易得多。
 
 ## 练习
 
 执行以下练习以完成本章：
 
-- 1. 创建一个模拟备份程序的 shell 脚本。它只需要向 STDOUT 打印它正在启动，等待五秒钟，然后向 STDOUT 打印备份已完成。
+- 1. 创建一个模拟备份程序的 shell 脚本。它只需要向 `STDOUT` 打印它正在启动，等待五秒钟，然后向 `STDOUT` 打印备份已完成。
 - 2. 创建一个运行备份脚本的服务。使用 journal 验证它是否按预期运行。
 - 3. 创建一个每五分钟运行一次备份脚本的定时器。启用该定时器并跟踪 journal 条目，以验证定时器是否按预期工作。
 - 4. 你在练习 3 中使用了哪种定时器？为什么？
@@ -6323,15 +5080,17 @@ systemd 可用于执行与 `cron` 工具相同的任务，但在触发事件的�
 
 在本章中，你将学习：
 
-- 什么是 systemd journal 以及以及它为什么比旧的日志文件优越
-- 如何使用 dmesg 查看覆盖 journal 启动间隙的日志条目
-- 如何使用 systemd journal 进行探索和解决问题
-- 如何配置 systemd journal 服务
+- 什么是 `systemd` journal 以及以及它为什么比旧的日志文件优越
+- 如何使用 `dmesg` 查看覆盖 journal 启动间隙的日志条目
+- 如何使用 `systemd` journal 进行探索和解决问题
+- 如何配置 `systemd` journal 服务
 - 如何从脚本和命令行添加 journal 条目
 
 ## 概述
 
 计算机系统故障的故障确定可以像是一门艺术，也可以是一门科学。有时，即使是一点魔法似乎也很有用。我们都遇到过报告的故障无法复现的情况，这对于用户和管理员来说都是令人沮丧的。即使是家电器和汽车在维修人员出现时也可能非常固执并拒绝故障。
+
+
 
 拟人化的，系统管理员拥有一些工具，可以以不同的粒度向我们展示 Linux 计算机中发生了什么。我们拥有像 `top`、`bhtop`、`glances`、`sar`、`iotop`、`tcpdump`、`traceroute`、`mtr`、`ifptraf-ng`、`df` 等工具，它们都可以显示主机的当前状态，其中几个可以产生不同详细程度的日志。
 
@@ -6365,236 +5124,55 @@ systemd journal 设计用于将所有消息收集到统一数据库中，可以�
 
 ```bash
 journalctl -b -o short-monotonic
+```
+
+```
 [ 0.023826] testvm1.both.org kernel: Linux version 6.11.8-300.fc41.x86_64 (mockbuild@6a5de21fe85b42584ad846216415107) (gcc G))
 [ 0.023878] testvm1.both.org kernel: Command line:
-```
-
-
-
-
-
 BOOT_IMAGE=(hd0,gpt2)/vmlinux-6.11.8-300.fc41.x86_64
 root=/dev/mapper/vg01-
-
 [ 4.023909] testvm1.both kernel: BIOS提供的物理 RAM 映射:
-
 [ 4.023931] testvm1.both kernel: BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
-
 [ 4.023951] testvm1.both kernel: BIOS-e820: [mem 0x0000000000000009ffc00-...] reserved
-
 [ 4.023973] testvm1.both kernel: BIOS-e820: [mem 0x0000000000000000ffff] reserved
-
 [ 4.024000] testvm1.both kernel: BIOS-e820: [mem 0x0000000000000000dffeff] usable
-
 [ 4.024021] testvm1.both kernel: BIOS-e820: [mem 0x00000000dfffff000-0xffffff] ACPI data
+[ 4.024042] testvm1.both kernel: BIOS-e820: [mem 0x000000000000000ec0ff] reserved
+[ 4.024062] testvm1.both kernel: BIOS-e820: [mem 0x000000000000000fee0ff] reserved
+```
 
 第9章 使用 systemd Journal
 
-[ 4.024042] testvm1.both kernel: BIOS-e820: [mem 0x000000000000000ec0ff] reserved
-
-[ 4.024062] testvm1.both kernel: BIOS-e820: [mem 0x000000000000000fee0ff] reserved
-
 在你的虚拟机上，第一条目是在启动几秒钟之后的。非 root 用户可以使用 `dmesg` 命令，因此我们将以 root 身份执行该操作。
 
-# # dmesg | less
+```bash
+dmesg | less
+```
 
 ```
 [ 0.000000) Linux kernel 6.11.8-300.fc41.x86_64 (mock build@6a5de21fe85b4b25dad84621641507) gcc (GCC) 14.2.1 20240912 (Red Hat 14.2.1-2.fc41)
 #1 SMP PREEMPT_DYNAMIC Nov 14 20:37:39 UTC 2024
 [ 0.000000] Command line: BOOT_IMAGE=(hd0,gpt2) vmlinux-6.11.8-300.fc41.x86_64 root=/dev/mapper/vg01 rd.lv=vg01/root rd.lv=vg01 selinux=0
-```
-
 [ 0.000000 ] BIOS 提供的物理 RAM 映射:
-
 [ 0.000000 ] BIOS-e820: [mem 0x0000000000000000-0x00000000000009fbf] usable
-
 [ 0.000000 ] NX (执行禁用) 保护：激活
-
 [ 0.000000 ] APIC: 静态调用已
-
 [ 0.000000 ] SMBIOS 2.5 存在
-
 [ 0.000000 ] DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
-
 [ 0.000000 ] DMI: 内存插槽占用: 0/0
-
 [ 0.000000 ] 检测到虚拟机管理程序: KVM
+```
 
 内核缓冲区是内存中一段用于存储内核消息的空间。这些数据不是持久化的，因此无法显示之前启动时的内核日志。在过去，直到最近，之前启动的数据一直与当前启动的数据一起存储在 `/var/log/dmesg` 文件中。
 
 第9章 使用 systemd Journal
 
-[ 0.000000 ] kvm-clock: 使用 msrs 4b564d01 和 4b564d00
-
-[ 0.000003 ] kvm-clock: 使用调度偏移量 5815639627 周期
-
-<SNIP>
-
-我预计你已经注意到了这里的异常。我们将在本章的稍后部分进一步探讨这个问题。
-
-作为系统管理员，我通常使用 `dmesg` 的唯一时刻是发现新插入的 USB 存储设备的设备文件名。只有当我正在编写某个章节或书籍，并且需要绝对确定我使用的是正确的设备且不会删除根目录下的所有内容时，才会这样做。在进行系统维护和故障排除时，我更依赖于 systemd journal。
-
-## systemd Journal 服务
-
-systemd 日志服务由 `systemd-journald` 实现。根据帮助页（man page）说明：
-
-systemd-journal 是一个收集和存储日志数据的系统服务。它根据从各种来源接收的日志信息，创建并维护结构化的、索引的日志：
-
-- 内核日志消息
-- 结构化日志
-- 错误输出
-- 审计记录
-
-内核子系统
-
-[ 0.000000 ] kvm-clock: 使用 msrs 4b564d01 和 4b564d00
-
-[ 0.000003 ] kvm-clock: 使用调度偏移量 5815639627 周期
-
-<SNIP>
-
-我预计你已经注意到了这里的异常。我们将在本章的稍后部分进一步探讨这个问题。
-
-作为系统管理员，我通常使用 `dmesg` 的唯一时刻是发现新插入的 USB 存储设备的设备文件名。只有当我正在编写某个章节或书籍，并且需要绝对确定我使用的是正确的设备且不会删除根目录下的所有内容时，才会这样做。在进行系统维护和故障排除时，我更依赖于 systemd journal。
-
-## systemd Journal 服务
-
-systemd 日志服务由 `systemd-journald` 实现。根据帮助页（man page）说明：
-
-systemd-journal 是一个收集和存储日志数据的系统服务。它根据从各种来源接收的日志信息，创建并维护结构化的、索引的日志：
-
-- 内核日志消息
-- 结构化日志
-- 错误输出
-- 审计记录
-内核子系统
-
-[ 0.000000 ] kvm-clock: 使用 msrs 4b564d01 和 4b564d00
-
-[ 0.000003 ] kvm-clock: 使用调度偏移量 5815639627 周期
-
-<SNIP>
-
-我预计你已经注意到了这里的异常。我们将在本章的稍后部分进一步探讨这个问题。
-
-作为系统管理员，我通常使用 `dmesg` 的唯一时刻是发现新插入的 USB 存储设备的设备文件名。只有当我正在编写某个章节或书籍，并且需要绝对确定我使用的是正确的设备且不会删除根目录下的所有内容时，才会这样做。在进行系统维护和故障排除时，我更依赖于 systemd journal。
-
-## systemd Journal 服务
-
-systemd 日志服务由 `systemd-journald` 实现。根据帮助页（man page）说明：
-
-systemd-journal 是一个收集和存储日志数据的系统服务。它根据从各种来源接收的日志信息，创建并维护结构化的、索引的日志：
-
-- 内核日志消息
-- 结构化日志
-- 错误输出
-- 审计记录
-内核子系统
-
-[ 0.000000 ] kvm-clock: 使用 msrs 4b564d01 和 4b564d00
-
-[ 0.000003 ] kvm-clock: 使用调度偏移量 5815639627 周期
-
-<SNIP>
-
-我预计你已经注意到了这里的异常。我们将在本章的稍后部分进一步探讨这个问题。
-
-作为系统管理员，我通常使用 `dmesg` 的唯一时刻是发现新插入的 USB 存储设备的设备文件名。只有当我正在编写某个章节或书籍，并且需要绝对确定我使用的是正确的设备且不会删除根目录下的所有内容时，才会这样做。在进行系统维护和故障排除时，我更依赖于 systemd journal。
-
-## systemd Journal 服务
-
-systemd 日志服务由 `systemd-journald` 实现。根据帮助页（man page）说明：
-
-systemd-journal 是一个收集和存储日志数据的系统服务。它根据从各种来源接收的日志信息，创建并维护结构化的、索引的日志：
-
-- 内核日志消息
-- 结构化日志
-- 错误输出
-- 审计记录
-内核子系统
-
-[ 0.000000 ] kvm-clock: 使用 msrs 4b564d01 和 4b564d00
-
-[ 0.000003 ] kvm-clock: 使用调度偏移量 5815639627 周期
-
-<SNIP>
-
-我预计你已经注意到了这里的异常。我们将在本章的稍后部分进一步探讨这个问题。
-
-作为系统管理员，我通常使用 `dmesg` 的唯一时刻是发现新插入的 USB 存储设备的设备文件名。只有当我正在编写某个章节或书籍，并且需要绝对确定我使用的是正确的设备且不会删除根目录下的所有内容时，才会这样做。在进行系统维护和故障排除时，我更依赖于 systemd journal。
-
-## systemd Journal 服务
-
-systemd 日志服务由 `systemd-journald` 实现。根据帮助页（man page）说明：
-
-systemd-journal 是一个收集和存储日志数据的系统服务。它根据从各种来源接收的日志信息，创建并维护结构化的、索引的日志：
-
-- 内核日志消息
-- 结构化日志
-- 错误输出
-- 审计记录
-[/content]
-
-*(注：由于提供的原始文本中存在大量重复内容，我已根据指令“不要重复输出原文”的逻辑对逻辑进行了去重翻译。)*
-
-[content]
-BOOT_IMAGE=(hd0,gpt2)/vmlinux-6.11.8-300.fc41.x86_64
-root=/dev/mapper/vg01-
-
-[ 4.023909] testvm1.both kernel: BIOS提供的物理 RAM 映射:
-
-[ 4.023931] testvm1.both kernel: BIOS-e820: [mem 0x0000000000000000-0x000000000009fbff] usable
-
-[ 4.023951] testvm1.both kernel: BIOS-e820: [mem 0x0000000000000009ffc00-...] reserved
-
-[ 4.023973] testvm1.both kernel: BIOS-e820: [mem 0x0000000000000000ffff] reserved
-
-[ 4.024000] testvm1.both kernel: BIOS-e820: [mem 0x0000000000000000dffeff] usable
-
-[ 4.024021] testvm1.both kernel: BIOS-e820: [mem 0x00000000dfffff000-0xffffff] ACPI data
-
-第9章 使用 systemd Journals
-
-[ 4.024042] testvm1.both kernel: BIOS-e820: [mem 0x000000000000000ec0ff] reserved
-
-[ 4.024062] testvm1.both kernel: BIOS-e820: [mem 0x000000000000000fee0ff] reserved
-
-在你的虚拟机上，第一条目是在启动几秒钟之后的。非 root 用户可以使用 `dmesg` 命令，因此我们将以 root 身份执行该操作。
-
-# # dmesg | less
-
 ```
-[ 0.000000) Linux kernel 6.11.8-300.fc41.x86_64 (mock build@6a5de21fe85b4b25dad84621641507) gcc (GCC) 14.2.1 20240912 (Red Hat 14.2.1-2.fc41)
-#1 SMP PREEMPT_DYNAMIC Nov 14 20:37:39 UTC 2024
-[ 0.000000] Command line: BOOT_IMAGE=(hd0,gpt2) vmlinux-6.11.8-300.fc41.x86_64 root=/dev/mapper/vg01 rd.lv=vg01/root rd.lv=vg01 selinux=0
+[ 0.000000 ] kvm-clock: 使用 msrs 4b564d01 和 4b564d00
+[ 0.000003 ] kvm-clock: 使用调度偏移量 5815639627 周期
+<SNIP>
 ```
 
-[ 0.000000 ] BIOS 提供的物理 RAM 映射:
-
-[ 0.000000 ] BIOS-e820: [mem 0x0000000000000000-0x00000000000009fbf] usable
-
-[ 0.000000 ] NX (执行禁用) 保护：激活
-
-[ 0.000000 ] APIC: 静态调用已初始化
-
-[ 0.000000 ] SMBIOS 2.5 存在
-
-[ 0.000000 ] DMI: innotek GmbH VirtualBox/VirtualBox, BIOS VirtualBox 12/01/2006
-
-[ 0.000000 ] DMI: 内存插槽占用: 0/0
-
-[ 0.000000 ] 检测到虚拟机管理程序: KVM
-
-内核缓冲区是内存中一段用于存储内核消息的空间。这些数据不是持久化的，因此无法显示之前启动时的内核日志。在过去，直到最近，之前启动的数据一直与当前启动的数据一起存储在 `/var/log/dmesg` 文件中。
-
-第9章 使用 systemd Journals
-
-[ 0.000000 ] kvm-clock: 使用 msrs 4b564d01 和 4b564d00
-
-[ 0.000003 ] kvm-clock: 使用调度偏移量 5815639627 周期
-
-<SNIP>
-
 我预计你已经注意到了这里的异常。我们将在本章的稍后部分进一步探讨这个问题。
 
 作为系统管理员，我通常使用 `dmesg` 的唯一时刻是发现新插入的 USB 存储设备的设备文件名。只有当我正在编写某个章节或书籍，并且需要绝对确定我使用的是正确的设备且不会删除根目录下的所有内容时，才会这样做。在进行系统维护和故障排除时，我更依赖于 systemd journal。
@@ -6603,7 +5181,7 @@ root=/dev/mapper/vg01-
 
 systemd 日志服务由 `systemd-journald` 实现。根据帮助页（man page）说明：
 
-systemd-journal 是一个收集和存储日志数据的系统服务。它根据从各种来源接收的日志信息，创建并维护结构化的、索引的日志：
+`systemd-journal` 是一个收集和存储日志数据的系统服务。它根据从各种来源接收的日志信息，创建并维护结构化的、索引的日志：
 
 - 内核日志消息
 - 结构化日志
@@ -6611,22 +5189,30 @@ systemd-journal 是一个收集和存储日志数据的系统服务。它根据�
 - 审计记录
 
 
+
+- 内核日志消息
+
+- 结构化日志
+
+- 错误输出
+
+- 审计记录
 
 与 `dmesg` 命令的输出数据流非常相似。这为你留下了进一步探索的空间，但我的结论是日志文件显然是二进制和 ASCII 文本的混合体。这种混合使得使用传统的基于文本的 Linux 工具提取可用数据变得非常繁琐。系统的 `journalctl` 命令为我们提供了更好的方法，在提取和查看日志数据方面有很多可能性。
 
-## 第 9 章：使用 systemdJournals
+# 第 9 章：使用 systemdJournals
 
 ## journalctl 命令
 
-systemd 日志系统收集并存储海量数据，最旧的可能是几周前或几个月前的。对于我的主工作站来说，这相当于三个月的数据。
+`systemd` 日志系统收集并存储海量数据，最旧的可能是几周前或几个月前的。对于我的主工作站来说，这相当于三个月的数据。
 
-`journalctl` 命令设计用于使用强大且灵活的准则从 systemd 日志中提取可用的信息。这是我们用于探索系统日志内容的工具。
+`journalctl` 命令设计用于使用强大且灵活的准则从 `systemd` 日志中提取可用的信息。这是我们用于探索系统日志内容的工具。
 
 让我们更详细地探索这个强大的命令。
 
-## 实验 9-3：使用 JOURNALCTL
+### 实验 9-3：使用 JOURNALCTL
 
-你可以在不带任何选项或参数的情况下使用 `journalctl` 命令来查看整个 systemd 日志，其中包含了所有的日志和记录信息。随着实验的进行，我将向你展示选择感兴趣的数据的各种方法。
+你可以在不带任何选项或参数的情况下使用 `journalctl` 命令来查看整个 `systemd` 日志，其中包含了所有的日志和记录信息。随着实验的进行，我将向你展示选择感兴趣的数据的各种方法。
 
 ```
 # journalctl
@@ -6646,7 +5232,7 @@ systemd 日志系统收集并存储海量数据，最旧的可能是几周前或
 
 `journalctl` 命令有许多选项，包括 `-o`（输出）选项及其多个子选项，这些选项允许你从几种满足不同需求的时间和日期格式中进行选择。表 9-1 列出了大部分这些选项。在对每个选项进行简短描述的同时，我在 `journalctl` 手页的基础上进行了一些扩展或修改。请注意，这些大多数选项的主要区别在于日期和时间的格式，而其他信息保持不变。
 
-### 表 9-1. journalctl 时间和日期格式
+#### 表 9-1. journalctl 时间和日期格式
 
 | 格式 | 描述 | 示例 |
 | :--- | :--- | :--- |
@@ -6666,15 +5252,15 @@ systemd 日志系统收集并存储海量数据，最旧的可能是几周前或
 # journalctl
 ```
 
-## 缩小范围
+### 缩小范围
 
 大多数情况下，你不需要手动遍历所有日志来寻找你感兴趣的内容。`journalctl` 提供了强大的选项，让你只看到你感兴趣的数据。
 
 **提示**：确保使用特定的时间或 ID 来缩小范围。
 
-为了缩小范围，你可以使用特定的时间或 ID。`journalctl` 提供了选项可以 选项可以满足。。`--boots` 选项列列出所有的启动。注意注意日志存储存储存储设备（//ssd）的空间。
+为了缩小范围，你可以使用特定的时间或 ID。`journalctl` 提供了选项可以 选项可以满足。。`--boots` 选项列列出所有的启动。注意注意日志存储存储存储设备（`/ssd`）的空间。
 
-### journalctl --boots
+#### journalctl --boots
 
 | IDX | 启动 ID | 第一条条目 |
 | :--- | :--- | :--- |
@@ -6718,13 +5304,13 @@ systemd 日志系统收集并存储海量数据，最旧的可能是几周前或
 
 通过组合这些选项，你可以非常有效地从海量日志中找到你所需的信息。
 
-
-
 最近的启动 ID（boot id）显示在底部，是一个长的随机十六进制数字，现在我们可以使用这些数据来查看特定启动的日志，可以使用最左侧列的启动偏移量数字或第二列的 UUID 来进行指定。此命令显示偏移量为 -2 的启动实例日志——即当前启动的上上一次启动。
 
 ```bash
 # journalctl -b -2
+```
 
+```
 Apr 25 10:28:28 studentvm1 kernel: Linux version 6.1.18-200.fc37.x86_64 (mockbuild@bkernel01.iad2.fedoraproject.org) (gcc) 12.2.20221121 (Red Hat 1)
 Apr 25 10:28:28 studentvm1 kernel: Command line: BOOT_IMAGE=(hd0.gpt2)/vmlinuz-6.1.18-200.fc37.x86_64 root=/dev/mapper/fedora_studentvm1-root ro rd.lvm>
 Apr 25 10:28:28 studentvm1 kernel: x86/fpu: Supporting XSAVE feature 0001: 'x87 floating point registers'
@@ -6738,11 +5324,13 @@ Apr 25 10:28:28 studentvm1 kernel: x86/fpu: Supporting XSAVE feature 0002: 'SSE 
 # journalctl -b 6b9ba620bfa4e39ba1151ea877022360
 ```
 
-- -u 选项允许选择要检查的特定单元（units），可以使用单元名称或模式进行匹配，并可以多次使用此选项来匹配多个单元或模式。在示例中，我将其与 -b 结合使用，显示当前启动的 chronyd 日志条。
+`-u` 选项允许选择要检查的特定单元（units），可以使用单元名称或模式进行匹配，并可以多次使用此选项来匹配多个单元或模式。在示例中，我将其与 `-b` 结合使用，显示当前启动的 `chronyd` 日志条。
 
 ```bash
 # journalctl -u chronyd -b
+```
 
+```
 Apr 28 10:20:41 studentvm1[1]: Starting chronyd.service - NTP client/server/...
 Apr 28 10:20:43 studentvm1 chronyd[1045]: chronyd version 4.3 starting (+CMDMON +NTP +REFCLOCK +RTC +PRIVDROV +SCFILTER +SIGND +ASYNNDNS +NTS +SECHASH +IP>
 Apr 28 10:20:43 studentvm1 chronyd[1045]: Frequency 15369.953 +- 0.034 ppm read from /var/lib/chronyd/drift
@@ -6755,7 +5343,7 @@ Apr 28 14:21:16 studentvm1 chronyd[1045]: System clock TAI offset set to 37 seco
 Apr 28 14:24:32 studentvm1 chronyd[1045]: Selected source 138.236.128.36 (2.fedora.pool.ntp.org)
 ```
 
-假设我们想查看两个任意时间之间记录的事件。我们可以使用 -s (-since) 和 -U (--until) 来指定开始和结束时间。以下命令显示从 2023 年 3 月 24 日 15:36:00 开始直到当前时间的日志条目：
+假设我们想查看两个任意时间之间记录的事件。我们可以使用 `-s` (`-since`) 和 `-U` (`--until`) 来指定开始和结束时间。以下命令显示从 2023 年 3 月 24 日 15:36:00 开始直到当前时间的日志条目：
 
 ```bash
 # journalctl -S "2023-03-24 15:36:00"
@@ -6767,38 +5355,37 @@ Apr 28 14:24:32 studentvm1 chronyd[1045]: Selected source 138.236.128.36 (2.fedo
 # journalctl -S "2023-03-24 15:36:00" -U "2023-03-30 16:00:00"
 ```
 
-下一个命令结合了 -s、U 和 -u，为我们提供了 networkmanager 单元从 7 月 24 日 15:36:00 开始到 7 月 20 日 16:00:00 的日志条目。
+下一个命令结合了 `-s`、`U` 和 `-u`，为我们提供了 `networkmanager` 单元从 7 月 24 日 15:36:00 开始到 7 月 20 日 16:00:00 的日志条目。
 
 ```bash
 # journalctl -S "2023-07-24 15:36:00" -U "2023-07-20 16:00:00"
 ```
+
 （注：原文此处日期逻辑似乎有误，但已按原文翻译）
 
-
-
-
-
---flush
+`--flush`
 
 存储在虚拟文件系统 `/run/log/journal/` 中的日志数据（这是 volatile性存储）会被写入 `/var/log/journal/`（这是持久性存储）。
 
---sync
+`--sync`
 
 将所有未写入的日志条目（仍在内存中，但显然不在 `/run/log/journal/` 中）写入持久性文件系统。在输入命令时，日志系统已知的所有日志条目都会移动到持久性存储。
 
---vacuum-size=
---vacuum-time=
---vacuum-files=
+`--vacuum-size=`
+
+`--vacuum-time=`
+
+`--vacuum-files=`
 
 这些可以单独使用或结合使用，删除最旧的归档日志文件，直到满足指定的条件。这些选项仅考虑归档文件而非活动文件，因此结果可能与指定的并不完全一致。
 
 更多选项可以在 `journalctl` 的帮助页中找到。我们将在接下来的章节中探索表 9-3 中的某些条目。
 
-第 9 章 使用 systemd-Journals
+# 第 9 章 使用 systemd-Journals
 
-# 日志文件
+## 日志文件
 
-## 实验 9-4：探索日志文件
+### 实验 9-4：探索日志文件
 
 如果你还没有这样做，请务必列出宿主机上日志目录中的文件。记住，包含日志文件的目录名称是一个很长的随机数。该目录包含多个活动和归档日志文件，其中一些是针对用户的。
 
@@ -6807,14 +5394,18 @@ Apr 28 14:24:32 studentvm1 chronyd[1045]: Selected source 138.236.128.36 (2.fedo
 # ls
 ```
 
+```
 total 8
 
 drwxr-sr-x+ 2 root systemd-journal 4096 Apr 25 13:40
+
 d1fbbbe41229942289e5ed31a256200fb
+```
 
+```
 # cd d1fbbbe41229942289e5ed31a256200fb
-
 # ls
+```
 
 ```
 <SNIP>
@@ -6826,21 +5417,24 @@ d1fbbbe41229942289e5ed31a256200fb
 
 你可以在此列表中看到针对 Uid 1000 的用户文件，这是我们的 Linux 登录账户。`--files` 选项允许我们查看指定文件的内容，包括用户文件。
 
+```
 # 第 9 章 使用 systemctl --user-1000.journal
-
 # journalctl --user-1000.journal
+```
 
 此输出显示了（其他内容外）针对 Uid 1000 的临时文件清理。与单个用户相关对于定位源自用户空间的问题根源可能很有帮助。我在这里发现了一些有趣的条目。在你的虚拟机上试一下，看看你会发现什么。
 
 在实验一段时间后，将 root 的主目录设置为当前目录（pwd）。
 
+```
 # 添加你自己的日志条目
+```
 
 将你的条目添加到日志可能是很有用的。例如，你可能想在日志中记录程序到达的检查点（checkpoint）。
 
 这有助于解决问题。向日志中添加条目可以通过 `systemd-cat` 程序实现，它允许我们将命令或程序的标准输出（STDOUT）管道到日志中。
 
-## 实验 9-5：向日志添加条目
+### 实验 9-5：向日志添加条目
 
 此命令可以作为命令行管道的一部分或在脚本中使用。
 
@@ -6848,13 +5442,16 @@ d1fbbbe41229942289e5ed31a256200fb
 # echo "Hello world" | systemd-cat -p info -t myprog
 ```
 
-`-p` 选项指定优先级，包括 "emerg"（紧急）、"alert"（警报）、"crit"（严重）、"err"（错误）、"warning"（警告）、"notice"（通知）、"info"（信息）、"debug"（调试）或代表每个命名级别的 0 到 7 之间的值。这些优先级值与 syslog(3) 定义相同。默认为 "info"。`-t` 选项是一个标识符，可以是任意字符串作为程序或脚本名称。此字符串可以使用 `journalctl` 命令进行搜索。
+
+
+`-p` 选项指定优先级，包括 "emerg"（紧急）、"alert"（警报）、"crit"（严重）、"err"（错误）、"warning"（警告）、"notice"（通知）、"info"（信息）、"debug"（调试）或代表每个命名级别的 0 到 7 之间的值。这些优先级值与 `syslog(3)` 定义相同。默认为 "info"。`-t` 选项是一个标识符，可以是任意字符串作为程序或脚本名称。此字符串可以使用 `journalctl` 命令进行搜索。
 
 列出日志中最近的五个条目。
 
 ```
 # journalctl -n 5
 ```
+
 Jan 06 07:20:58 testv1.both.org systemd[1]: sysstat-collect.service: Deactivated successfully
 
 Jan 06 07:20:58 testv1.both.org systemd[1]: Finished sysstat-collect.service. activity accounting tool.
@@ -7045,7 +5642,7 @@ Jan 06 07:20:58 testv1.both.org systemd[1]: SERVICE_START pid=1 uid=0 audit=42
 
 Jan 06 07:20:58 testv1.both.org systemd[1]: SERVICE_START pid=1 uid=0 audit=42
 
-Jan 06 07:20:58 testv1.both.org systemd[1]: SERVICE_START pid=1 uid=0 audit=42
+
 
 Jan 06 07:20:58 testv1.both.org systemd[1]: SERVICE_START pid=1 uid=0 audit=42
 
@@ -7115,9 +5712,9 @@ Jan 06 07:20:58 testv1.both.org systemd[1]: sysstat-collect.service: Deactivated
 
 Jan 06 07:20:58 testv1.both.org systemd[1]: Finished sysstat-collect.service. activity accounting tool.
 
-此输出显示了（其他内容外）针对 Uid 1000 的临时文件清理。与单个用户相关对于定位源自用户空间的问题根源可能很有帮助。我在这里发现了一些有趣的条目。在你的虚拟机上试一下，看看你会发现什么。
+此输出显示了（其他内容外）针对 `Uid 1000` 的临时文件清理。与单个用户相关对于定位源自用户空间的问题根源可能很有帮助。我在这里发现了一些有趣的条目。在你的虚拟机上试一下，看看你会发现什么。
 
-在实验一段时间后，将 root 的主目录设置为当前目录（pwd）。
+在实验一段时间后，将 root 的主目录设置为当前目录（`pwd`）。
 
 # 添加你自己的日志条目
 
@@ -7135,22 +5732,19 @@ Jan 06 07:20:58 testv1.both.org systemd[1]: Finished sysstat-collect.service. ac
 # echo "Hello world" | systemd-cat -p info -t myprog
 ```
 
-`-p` 选项指定优先级，"emerg"、"alert"、"crit"、"err"、"warning"、"notice"、"info"、"debug" 或代表每个命名级别的 0 到 7 之间的值。这些优先级值与 syslog(3) 定义相同。默认为 "info"。`-t` 选项是一个标识符，可以是任意字符串或脚本名称。此字符串可以使用 `journalctl` 命令进行搜索。
+`-p` 选项指定优先级，"emerg"、"alert"、"crit"、"err"、"warning"、"notice"、"info"、"debug" 或代表每个命名级别的 0 到 7 之间的值。这些优先级值与 `syslog(3)` 定义相同。默认为 "info"。`-t` 选项是一个标识符，可以是任意字符串或脚本名称。此字符串可以使用 `journalctl` 命令进行搜索。
 
 列出日志中最近的五个条目。
 
 ```
 # journalctl -n 5
 ```
+
 Jan 06 07:20:58 testv1.both.org systemd[1]: sysstat-collect.service: Deactivated successfully
 
 Jan 06 07:20:58 testv1.both.org systemd[1]: Finished sysstat-collect.service. activity accounting tool.
 
 Jan 06 07:20:58 testv1.both.org systemd[1]: SERVICE_START pid=1 uid=0 audit=42 ...（此处省略重复的日志输出，仅保留格式）
-
-
-
-
 
 打开终端并将权限提升到 root。将 `/var/log/journal/<Your-Journal-directory>` 设置为当前目录，并查看 journal 目录下的文件。我的虚拟机上只有一个 journal 目录，但其中包含的文件可以追溯到三个月前。
 
@@ -7196,18 +5790,22 @@ system@0005f3a336b92c29473851e3687ea888-00000000000-0005f69c1adc2.journal
 system@0005f4a3f3f82e284a5b215fe84a1bb0-0000000000-0005fc6a24003fb.journal
 system@0005f4e3e32982e45bd6572e1b692e-0000000000-0005f80712541.journal
 user-1000@0005f43566e0a41-96c8a31073bc54.journal
-user-1000@81e2499c0df450b25113e2d8800000000000008aa3566e84c.journal
+user-1000@81e2499c0df450b25113e2d8800000000008aa3566e84c.journal
 user-1000@81e2499c0df450b251bf3e2d88-0000000000006a0055f6b55da2.journal
 user-1000@81e2499c0df450b251bf3e2d88-000000000000f1480005f73a7664013.journal
 user-1000@1c165b49f11f4239380c5d447e7e-0000000000-151-0fc613990.journal
+```
 
 ## 第 9 章 使用 system
 
 归档日志和活动日志占用了 496.8M 空间。
 
 ```bash
+
 # journalctl --disk-usage
+
 [root@studentvm1 d1fbbe4122942289e5ed31a25620fb]# ls -l
+
 ```
 
 对目录下的文件进行详细列出，以便与实验结果进行对比。
@@ -7217,17 +5815,21 @@ user-1000@1c165b49f11f4239380c5d447e7e-0000000000-151-0fc613990.journal
 简单的日志管理方法是轮转。
 
 ```bash
+
 # journalctl --rotate
+
 ```
 
-列出 journal 目录下的文件。它们并没有发生太大变化——完全没有变。我不知道为什么，journalctl 说明。
+列出 journal 目录下的文件。它们并没有发生太大变化——完全没有变。我不知道为什么，`journalctl` 说明。
 
 ## 第 9 章 使用 systemd 管理日志
 
 由于操作没有像说明的那样生效，我在 Red Hat 的 Bugzilla 页面上报告了该问题。以下命令有效，它可以清理旧归档文件，只保留小于一个月的文件。可以使用“s”、“m”、“h”、“days”、“months”和“years”后缀。
 
 ```bash
+
 # journalctl --vacuum-time=1month
+
 ```
 
 已删除归档日志：`/var/log/journal/d1fbbe4122942289e5ed31a256200fb/system/0005f2b035b5ec5c-a8d2bbd3f7b880.journal` (16.0M)。
@@ -7240,14 +5842,13 @@ user-1000@1c165b49f11f4239380c5d447e7e-0000000000-151-0fc613990.journal
 检查磁盘占用情况。关闭虚拟机并恢复最后的快照。验证预期的文件是否存在。如果文件少于四个，将不会执行任何操作，文件数量保持不变。
 
 ```bash
+
 # journalctl --vacuum-files=4
 ```
 
+
+
 已删除归档日志：`/var/log/journal/79c9dac7c5844781964dc86243884/system@0f3bbac9bd4559a61f708eb3fd4da-00000000002b80c-0027bf01a84c9.journal` (11.2M)。已删除归档日志：`/var/log/journal/79c9dac7c5844781964dc86243884/user-1000@0f3bbac9bd4559a61f708eb3fd.journal` (3.9M)。已删除归档日志：`/var/log/journal/79c9dac7c5844781964dc86243884/system@f3b8ac9bd4559a61f083fd4-00000000000d59-0006ac2.journal` (5.9M)。清理完成，从 `/var/log/journal/79c9dac7c5844781964dc86243884` 释放了 163.1MB 的归档日志。
-
-
-
-
 
 ## 总结
 
@@ -7275,6 +5876,7 @@ systemd 日志提供了 Linux 系统活动的完整且按时间排序的记录�
 - 6. 如果有，探索它们并查看是否能确定原因。
 
 # 第10 章
+
 # 使用 firewalld 管理防火墙
 
 ## 目标
@@ -7322,16 +5924,25 @@ D. Both, systemd for Linux Sysadmins, https://doi.org/10.1007/979-8-8668-1328-3_
 
 ```
 [root@testvm1:~]$ curl --connect-timeout 3 "http://example.com:80" | head -n4
+
 % Total % Received % Transferred Average Speed Time Time Current
+
 Download Upload Total Left Speed
+
 100 1256 100 1256 0 12337 0 --:-- --:-- --::-- --:-- 12435
 ```
 
 ```
 <!doctype html>
+
 <html>
+
 <head>
+
 <title>Example Domain</title>
+```
+
+```
 [root@testvm1:~]#
 ```
 
@@ -7339,6 +5950,7 @@ Download Upload Total Left Speed
 
 ```
 [root@testvm1:~]$ curl --connect-timeout 3 "http://example.com:79"
+
 curl: (28) Failed to connect to example.com port 79
 ```
 
@@ -7357,7 +5969,6 @@ curl: (28) Failed to connect to example.com port 79
 - **丢弃（Drop）**：数据包被丢弃且不再继续通过规则。不会向发送者返回任何消息。此操作会在发送端指定的超时时间内保持连接。这在阻止已知垃圾邮件发送者的 IP 地址时有用，因为当他们尝试连接时，其主机必须等待超时才能重试，从而显著减慢他们的攻击速度。
 
 所有 Linux 防火墙都基于内核协议 netfilter，它解释并执行规则。Netfilterorg 是负责 netfilter 及其功能的组织。我们使用的管理工具，
-
 
 类似于 firewalld 和 IPTables，它们简单允许我们添加、修改和删除 netfilter 规则，这些规则会检查每个数据包并决定如何处理它们。
 
@@ -7485,15 +6096,18 @@ firewalld 有九个预定义区域，可以作为预设或经过修改以满足�
 [root@testvm1:~] # systemctl enable firewalld
 ```
 
-此命令启动了 firewalld 守护进程并将其设置为在启动时自动加载。
 
-查看 firewalld.service 的状态。这不会显示 firewalld 的配置，例如哪些端口已开放或使用了哪些区域。
+
+此命令启动了 `firewalld` 守护进程并将其设置为在启动时自动加载。
+
+查看 `firewalld.service` 的状态。这不会显示 `firewalld` 的配置，例如哪些端口已开放或使用了哪些区域。
 
 ```
 [root@testvm1:~] # systemctl status firewalld.service
 ```
 
-+   ● firewall.service - firewalld - 动态防火墙守护进程
+```
+● firewall.service - firewalld - 动态防火墙守护进程
 Loaded: loaded (/usr/lib/systemd/system/firewalld.service);
 enabled: preset
 Drop-In: /usr/lib/systemd/system/service.d
@@ -7523,6 +6137,7 @@ firewall.service - firewal - 动态防火墙守护进程。
 Jan 13 09:29:59 testvm1.both.org systemd[1]: Started
 
 firewall.service - firewal - 动态防火墙守护进程。
+```
 
 防火墙的命令行工具可以显示它是否正在运行，但仅于此，因此并没有特别帮助。该命令在用于自动化防火墙和网络操作的脚本中非常有用。
 
@@ -7530,7 +6145,9 @@ firewall.service - firewal - 动态防火墙守护进程。
 [root@testvm1:~#]# firewall-cmd --state
 ```
 
+```
 running
+```
 
 下一个命令显示所有支持的区域，按大写字母优先的顺序排序。
 
@@ -7538,11 +6155,13 @@ running
 [root@testvm1:~#]# firewall-cmd --get-zones
 ```
 
+```
 FedoraWorkstation block dmz drop external home
 internal nm-shared public trusted
+```
 
 267
-第 10 章 使用 Firewalld 管理防火墙 
+第 10 章 使用 Firewalld 管理防火墙
 
 需要知道的一个重要数据点是运行中的系统的默认区域是什么。
 
@@ -7550,7 +6169,9 @@ internal nm-shared public trusted
 [root@testvm1:~#]# firewall-cmd --get-default-zone
 ```
 
+```
 public
+```
 
 这显示默认设置是最受限制的区域之一。
 
@@ -7560,17 +6181,20 @@ public
 [root@testvm1:~#]# firewall-cmd --get-active-zones
 ```
 
+```
 public (default)
 interfaces: enp03 enp08
+```
 
-我们现在知道虚拟机上的两个接口都在 public 区域。你的虚拟机可能只有一个接口 enp03。如果你正在使用物理 Linux 宿主机，接口将取决于物理硬件以及它在 PC 或 USB 总线上的安装位置。
+我们现在知道虚拟机上的两个接口都在 `public` 区域。你的虚拟机可能只有一个接口 `enp03`。如果你正在使用物理 Linux 宿主机，接口将取决于物理硬件以及它在 PC 或 USB 总线上的安装位置。
 
-这引导我们去确定 public 区域的实际配置。此命令部署了活动区域的配置。只有 public 区域是激活的。它还显示了分配给该区域的接口。
+这引导我们去确定 `public` 区域的实际配置。此命令部署了活动区域的配置。只有 `public` 区域是激活的。它还显示了分配给该区域的接口。
 
 ```
 [root@testvm1:~]## firewall-cmd --zone=public --list-all
 ```
 
+```
 public (default, active)
 target: default
 ingress-priority: 0
@@ -7589,13 +6213,15 @@ forward-ports:
 source-ports:
 icmp-blocks:
 rich rules:
+```
 
-你可以看到 public 区域 Services 字段中列出的服务。查看 public 区域的永久设置。
+你可以看到 `public` 区域 Services 字段中列出的服务。查看 `public` 区域的永久设置。
 
 ```
 [root@testvm1:~]## firewall-cmd --zone=public --list-all --permanent
 ```
 
+```
 public
 target: default
 icmp-block-inversion: no
@@ -7608,6 +6234,7 @@ masquerade: no
 forward-ports:
 source-ports:
 icmp-blocks:
+```
 
 你看到区别了吗？没有分配接口，因为这只是配置，实际分配是在防火墙启动或重启时执行的。
 
@@ -7622,7 +6249,9 @@ icmp-blocks:
 [root@testvm1:~#]# firewall-cmd --get-default-zone
 ```
 
+```
 public
+```
 
 这显示默认设置是最受限制的区域之一。
 
@@ -7632,17 +6261,20 @@ public
 [root@testvm1:~#]# firewall-cmd --get-active-zones
 ```
 
+```
 public (default)
 interfaces: enp03 enp08
+```
 
-我们现在知道虚拟机上的两个接口都在 public 区域。你的虚拟机可能只有一个接口 enp03。如果你正在使用物理 Linux 宿主机，接口将取决于物理硬件以及它在 PC 或 USB 总线上的安装位置。
+我们现在知道虚拟机上的两个接口都在 `public` 区域。你的虚拟机可能只有一个接口 `enp03`。如果你正在使用物理 Linux 宿主机，接口将取决于物理硬件以及它在 PC 或 USB 总线上的安装位置。
 
-这引导我们去确定 public 区域的实际配置。此命令部署了活动区域的配置。只有 public 区域是激活的。它还显示了分配给该区域的接口。
+这引导我们去确定 `public` 区域的实际配置。此命令部署了活动区域的配置。只有 `public` 区域是激活的。它还显示了分配给该区域的接口。
 
 ```
 [root@testvm1:~]## firewall-cmd --zone=public --list-all
 ```
 
+```
 public (default, active)
 target: default
 ingress-priority: 0
@@ -7659,13 +6291,15 @@ forward-ports:
 source-ports:
 icmp-blocks:
 rich rules:
+```
 
-你可以看到 public 区域 Services 字段中列出的服务。查看 public 区域的永久设置。
+你可以看到 `public` 区域 Services 字段中列出的服务。查看 `public` 区域的永久设置。
 
 ```
 [root@testvm1:~]## firewall-cmd --zone=public --list-all --permanent
 ```
 
+```
 public
 target: default
 icmp-block-inversion: no
@@ -7678,10 +6312,9 @@ masquerade: no
 forward-ports:
 source-ports:
 icmp-blocks:
+```
 
 你看到区别了吗？没有分配接口，因为这只是配置，实际分配是在防火墙启动或重启时执行的。
-
-
 
 其实很简单。真正的问题在于我读过的东西似乎都把这个过程复杂化了。
 
@@ -7695,68 +6328,88 @@ icmp-blocks:
 [root@testvm1:~~]# firewall-cmd --get-zone-of-interface=enp0s3
 ```
 
+```
 corp
+```
 
 ```
 [root@testvm1:~~]# firewall-cmd --get-active-zones
 ```
 
+```
 interfaces: enp0s3
 public (default)
 interfaces: enp0s8
+```
 
-你可以通过从当前区域中移除 `enp0s3` 接口，将其重新分配到 dmz 区域。此操作会将该接口恢复到默认区域。
+你可以通过从当前区域中移除 `enp0s3` 接口，将其重新分配到 `dmz` 区域。此操作会将该接口恢复到默认区域。
 
 ```
 [root@testvm1:~~]# firewall-cmd --remove-interface=enp0s3
 --zone=corp --permanent
 ```
+```
 success
+```
 
 ```
 [root@testvm1:~~]# firewall-cmd --remove-interface=enp0s3
 --zone=corp
 ```
+```
 success
+```
 
 ```
 [root@testvm1:~~]# firewall-cmd --get-active-zones
 ```
 
+```
 public
 interfaces: enp0s8 enp0s3
+```
 
-这是我们起初困惑的部分。现在将接口分配到 dmz 区域并验证更改。
+这是我们起初困惑的部分。现在将接口分配到 `dmz` 区域并验证更改。
 
 ```
 [root@testvm1:~]# firewall-cmd --change-interface=enp0s3
 --zone=dmz --permanent
 ```
+```
 success
+```
 
 ```
 [root@testvm1:~]# firewall-cmd --change-interface=enp0s3
 --zone=dmz
+```
+```
 success
 ```
 
 ```
 @testvm1:~]# firewall-cmd --get-active-zones
+```
+```
 dmz
 interfaces: enp0s3
 public
 interfaces: enp0s8
 ```
 
-再次重启并再次验证 `enp0s3` 是否已分配到 dmz 区域。dmz 区域允许哪些服务？
+再次重启并再次验证 `enp0s3` 是否已分配到 `dmz` 区域。`dmz` 区域允许哪些服务？
 
 ```
 [root@testvm1:~]# firewall-cmd --list-services --zone=dmz
+```
+
+```
 ssh
 ```
 
 ```
 [root@testvm1:~]# firewall-cmd --info-zone=dmz
+```
 ```
 dmz (active)
 target: default
@@ -7770,22 +6423,24 @@ forward: yes
 masquerade: no
 ```
 
+```
 forward-ports:
 source-ports:
 icmp-blocks:
 rich rules:
+```
 
-dmz 区域是任何允许入站连接的区域中信任度最低的。它只允许 SSH 作为入站连接。完全没有信任的两个区域是 drop 和 block。你可以在表 10-1 中查看差异。
+`dmz` 区域是任何允许入站连接的区域中信任度最低的。它只允许 SSH 作为入站连接。完全没有信任的两个区域是 `drop` 和 `block`。你可以在表 10-1 中查看差异。
 
 注意，更改运行时区域（runtime zone）并非必要的，无需重新加载（reload）或使用 runtime-to-permanent 子命令。我们重启并不是完成任务所需的；它们只是为了让我们验证更改是可验证的，并且在重启后是持久的。
 
 我们已经看到，准确了解向区域添加服务（端口）是如何工作的是非常重要的。这组指南基于我的实验，并描述了它们预期的工作方式：
 
-- 1. public 区域是默认——嗯——默认的。默认区域是可以更改的。可以指定不同的区域作为默认区域，或者更改默认区域的配置以允许不同的服务和端口集。
+- 1. `public` 区域是默认——嗯——默认的。默认区域是可以更改的。可以指定不同的区域作为默认区域，或者更改默认区域的配置以允许不同的服务和端口集。
 
-- 2. 所有未专门分配到任何区域的接口都使用默认区域。在这种情况下，所有接口（无论是在虚拟机中只有一个，还是在复杂的路由器环境中十个或五个）无论如何都使用默认区域。通常在 Fedora 中，那是 public 区域。
+- 2. 所有未专门分配到任何区域的接口都使用默认区域。在这种情况下，所有接口（无论是在虚拟机中只有一个，还是在复杂的路由器环境中十个或五个）无论如何都使用默认区域。通常在 Fedora 中，那是 `public` 区域。
 
-如果更改了默认区域（例如从 public 区域更改为 work 区域），所有这些接口将立即开始使用 work 区域。
+如果更改了默认区域（例如从 `public` 区域更改为 `work` 区域），所有这些接口将立即开始使用 `work` 区域。
 
 - 3. **所有接口都显式地分配了一个区域。** 这种情况最不容易引起意外的问题和混乱。更改默认区域不会以任何方式影响任何接口。接口可以重新分配到不同的区域，并且更改区域配置。
 
@@ -7797,16 +6452,19 @@ dmz 区域是任何允许入站连接的区域中信任度最低的。它只允�
 
 ## 添加和删除服务
 
-作为一个老——嗯，成熟的系统管理员，我倾向于从端口配合防火墙和网络服务的角度来思考。有时我需要查找与特定服务相关的端口号，但这并不大，因为它们都定义在 /etc/services 中，该文件在 firewalld 出现之前就已经存在。
+作为一个老——嗯，成熟的系统管理员，我倾向于从端口配合防火墙和网络服务的角度来思考。有时我需要查找与特定服务相关的端口号，但这并不大，因为它们都定义在 `/etc/services` 中，该文件在 `firewalld` 出现之前就已经存在。
 
 ## 实验 10-5：列出服务
 
-查看 /etc/services 文件中的服务列表。
+查看 `/etc/services` 文件中的服务列表。
 
 ```
 [root@testvm1 ~]# less /etc/services
 ```
-/etc/services:
+
+`/etc/services`:
+
+```
 # Network services, Internet service
 # IANA services: last updated 2021-01-19
 # 注意目前 IANA 的策略是为 TCP 和 UDP 分配单个常用端口号；因此，大多数条目有两个条目
@@ -7839,33 +6497,38 @@ ssh/tcp
 ssh/udp
 telnet/tcp
 telnet/udp
+```
 
 此命令消除了注释行并计算剩余行数。
+
 ```
 [root@testvm1]# grep -v ^# /etc/services | wc -l
 ```
-1472
 
-services 文件包含 1472 个条目。许多端口列出了 TCP 和 UDP 协议。我们也可以列出防火墙识别的服务。
+```
+1472
+```
+
+`services` 文件包含 1472 个条目。许多端口列出了 TCP 和 UDP 协议。我们也可以列出防火墙识别的服务。
 
 ```
 [root@testvm1]# firewall-cmd --get-services
 ```
+
 此命令的输出是 209 个空格分隔的服务列表。这些是可以按名称添加到区域的服务。
 
 防火墙与服务工作得完美，但对于没有定义的，它也支持使用端口号。在实验 10-6 中，我们首先向区域添加端口然后将其删除。像这样操作端口需要同时端口号和协议规范（TCP 或 UDP）。
 
-
-
-
+```
 masquerade: no
 forward-ports:
 source-ports:
 icmp-blocks:
 rich rules:
-
 [root@testvml1 zones]#
-让我们进行测试以确保 telnet 服务按预期工作。
+```
+
+让我们进行测试以确保 `telnet` 服务按预期工作。
 
 ```
 [root@testvml1:~] # telnet testvm1
@@ -7880,7 +6543,8 @@ Last login: Sun May 21 15:41:47 on :0
 ```
 
 第 10 章 使用 Firewalld 管理防火墙
-退出 telnet 连接。
+
+退出 `telnet` 连接。
 
 ```
 [tuser@testvml1:~] $ exit
@@ -7889,13 +6553,22 @@ Connection closed by foreign host.
 [root@testvml1:~]#
 ```
 
-从 dmz 区域中移除 telnet 服务并验证结果。
+从 `dmz` 区域中移除 `telnet` 服务并验证结果。
+
+```
 [root@testvml1 zones]# firewall-cmd --remove-service=telnet --zone=dmz
-
+```
+```
 success
+```
+```
 [root@testvml1 zones]# firewall-cmd --info-zone=dmz
-
+```
+```
 dmz (active)
+```
+
+
 
 ```
 target: default
@@ -7921,7 +6594,7 @@ rich rules:
 success
 ```
 
-第 10 章 使用 Firewalld 管理防火墙
+# 第 10 章 使用 Firewalld 管理防火墙
 
 ```
 [root@testvml1 zones]# firewall-cmd --info-zone=dmz
@@ -7949,17 +6622,18 @@ rich rules:
 ```
 
 success
-验证已移除。在使用 firewalld 服务时，始终建议使用服务名称而不是端口号来添加新规则。对于某些预定义的服务，可能需要使用端口号，但也可以在 `/etc/firewalld/services` 中添加名为 `<servicename>` 的新服务文件。这些文件都是 XML 格式，易于理解。大多数情况下我们不需要修改这些文件，除非你正在运行 Linux 路由器并且需要进行网络配置。
 
-第 10 章 使用 Firewalld 管理防火墙
+验证已移除。在使用 `firewalld` 服务时，始终建议使用服务名称而不是端口号来添加新规则。对于某些预定义的服务，可能需要使用端口号，但也可以在 `/etc/firewalld/services` 中添加名为 `<servicename>` 的新服务文件。这些文件都是 XML 格式，易于理解。大多数情况下我们不需要修改这些文件，除非你正在运行 Linux 路由器并且需要进行网络配置。
+
+# 第 10 章 使用 Firewalld 管理防火墙
 
 ## 为特定时间段添加服务
 
-有时由于某种原因需要在防火墙中限一段时间内打开端口。这可以通过 firewalld 的 `--timeout` 选项轻松实现。这是 firewalld 最有趣的功能之一。
+有时由于某种原因需要在防火墙中限一段时间内打开端口。这可以通过 `firewalld` 的 `--timeout` 选项轻松实现。这是 `firewalld` 最有趣的功能之一。
 
-## 实验 10-7：在有限时间内添加服务
+### 实验 10-7：在有限时间内添加服务
 
-我们将再次使用 telnet 进行此实验。添加服务，时间设为十分钟。验证 telnet 已添加到 dmz 区域。
+我们将再次使用 `telnet` 进行此实验。添加服务，时间设为十分钟。验证 `telnet` 已添加到 `dmz` 区域。
 
 ```
 [root@testvm1 zones]# firewall-cmd --add-service=telnet --zone=dmz --timeout=10m
@@ -7985,7 +6659,7 @@ rich rules:
 [root@testvm1 zones]#
 ```
 
-像上面一样测试 telnet 是否正在监听。十分分钟后，再次检查信息以验证 telnet 服务已移除。
+像上面一样测试 `telnet` 是否正在监听。十分分钟后，再次检查信息以验证 `telnet` 服务已移除。
 
 ```
 [testvm1:~]# firewall-cmd --info-zone=dmz
@@ -7993,67 +6667,96 @@ dmz (active)
 ```
 
 target: default
+
 icmp-block-inversion: no
+
 interfaces: enp0s3
+
 sources:
+
 services: ssh
+
 ports:
+
 protocols:
+
 forward: yes
+
 masquerade: no
+
 forward-ports:
+
 source-ports:
+
 icmp-blocks:
+
 rich rules:
+
 [root@testvm1:~]#
-```
 
-`timeout=` 选项接受纯数字作为参数，解释为秒。它还识别末尾字符：m 表示分钟，h 表示小时。因此 `timeout=3m` 将时间设置为三分钟，`4h` 设置为四小时。Timeout 与 `--permanent` 选项不兼容。使用 permanent 会适得其反。
+`timeout=` 选项接受纯数字作为参数，解释为秒。它还识别末尾字符：`m` 表示分钟，`h` 表示小时。因此 `timeout=3m` 将时间设置为三分钟，`4h` 设置为四小时。`Timeout` 与 `--permanent` 选项不兼容。使用 `permanent` 会适得其反。
 
-第 10 章 使用 Firewalld 管理防火墙
+# 第 10 章 使用 Firewalld 管理防火墙
 
 ## 无线
 
-对系统的快速实验表明，除非分配到特定区域，否则默认区域适用于无线连接。由于许多公共无线连接不受保护，我强烈建议分配 drop 区域，它只会忽略入站尝试。这不会阻止网页、VPN 或其他出口连接。即使是那些具有某种加密的公共网络很容易破解。许多破解者使用自己的设备伪造公共网络，使用户登录到破解者的设备。一旦登录，除非你的无线接口应用良好的防火墙，否则电脑将完全脆弱。在下一个实验中，我们将看到从 iptables 迁移到 firewall 的完整过程，并将无线接口分配到 drop 区域。
+对系统的快速实验表明，除非分配到特定区域，否则默认区域适用于无线连接。由于许多公共无线连接不受保护，我强烈建议分配 `drop` 区域，它只会忽略入站尝试。这不会阻止网页、VPN 或其他出口连接。即使是那些具有某种加密的公共网络很容易破解。许多破解者使用自己的设备伪造公共网络，使用户登录到破解者的设备。一旦登录，除非你的无线接口应用良好的防火墙，否则电脑将完全脆弱。在下一个实验中，我们将看到从 `iptables` 迁移到 `firewall` 的完整过程，并将无线接口分配到 `drop` 区域。
 
 **提示** 如果你没有正在运行的笔记本电脑，你仍然可以这样做。有很多 USB 适配器可用。要在你的虚拟机上执行此实验，可以将 USB 适配器插入物理主机，然后将适配器连接到虚拟机。它的工作方式与物理笔记本上完全一样。
 
-## 实验 10-8：将无线接口分配到 drop 区域
+### 实验 10-8：将无线接口分配到 drop 区域
 
 首先，检查无线接口的名称。在我的笔记本上，所有的接口名称都以字母 "w" 开头。
 
 ```
 [root@voyager zones]# nmcli
+
 enp113s0: connected to Wired (Realtek RTL8168)
+
 wlp113s0: connected to WiFi (Intel 8265), mtu 1500
+
 inet4 192.168.25.99/24
+
 route4 192.168.25.0/24 metric 600
+
 route4 default 192.168.25.1 metric 600
+
 inet6 fe80::44e5:e270:db20/64
+
 route6 fe80::64 metric 1024
 ```
 
-查看 drop 区域的配置。所有数据包都直接发送到 drop 目标。这意味着它们被忽略，且不会向源主机发送任何响应。
+查看 `drop` 区域的配置。所有数据包都直接发送到 `drop` 目标。这意味着它们被忽略，且不会向源主机发送任何响应。
 
 ```
 [root@voyager zones]# firewall-cmd --info-zone=drop
+
 drop
+
 target: DROP
+
 icmp-block-inversion: no
+
 interfaces:
+
 sources:
+
 ports:
+
 protocols:
+
 forward: yes
+
 masquerade: no
+
 forward-ports:
+
 source-ports:
+
 icmp-blocks:
+
 rich rules:
 ```
-
-
-
 
 interfaces: enp111s0
 
@@ -8083,7 +6786,7 @@ interfaces: wlp113s0
 
 让我们来看几个区域文件，看看它们是如何构建的。
 
-## 实验 10-9：区域配置文件
+### 实验 10-9：区域配置文件
 
 因为它是最常用的，我们将从检查默认的 `public` 区域文件开始。它包含了足够我们理解的信息。
 
@@ -8091,15 +6794,25 @@ interfaces: wlp113s0
 
 ```
 [root@testvm1 zones]# cat public.xml
+
 <?xml version="1.0" encoding="utf-8"?>
+
 <zone>
+
 Chapter 10 Managing the Firewall with Firewall
+
 <short>Public</short>
+
 <description>用于公共区域。你不信任网络上的其他计算机不会伤害你的电脑。只接受选定的入站连接。</description>
+
 <service name="ssh"/>
+
 <service name="mdns"/>
+
 <service name="dhcpv6-client"/>
+
 <forward/>
+
 </zone>
 ```
 
@@ -8127,14 +6840,23 @@ FedoraServerWorkstation block dm drop external home internal nm-shared public tr
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
+
 <zone>
+
 Chapter 10 Managing the Firewall with Firewalld
+
 <short>Internal</short>
+
 <description>用于内部网络。你大部分信任网络上的其他计算机不会伤害你的电脑。只接受选定的入站连接。</description>
+
 <service name="ssh"/>
+
 <service name="mdns"/>
+
 <service name="dhcpv6-client"/>
+
 <forward/>
+
 </zone>
 ```
 
@@ -8157,15 +6879,25 @@ FedoraServerWorkstation block dm drop external home internal nm-shared public tr
 ```
 
 ```xml
+
 <?xml version="1.0" encoding="utf-8"?>
+
 <zone>
+
 Chapter 10 Managing the Firewall with Firewalld
+
 <short>Internal</short>
+
 <description>用于内部网络。你大部分信任网络上的其他计算机不会伤害你的电脑。只接受选定的入站连接。</description>
+
 <service name="ssh"/>
+
 <service name="mdns"/>
+
 <service name="dhcpv6-client"/>
+
 <forward/>
+
 </zone>
 ```
 
@@ -8176,15 +6908,25 @@ Chapter 10 Managing the Firewall with Firewalld
 ```
 
 ```xml
+
 <?xml version="1.0" encoding="utf-8"?>
+
 <zone>
+
 Chapter 10 Managing the Firewall with Firewalld
+
 <short>Internal</short>
+
 <description>用于内部网络。你大部分信任网络上的其他计算机不会伤害你的电脑。只接受选定的入站连接。</description>
+
 <service name="ssh"/>
+
 <service name="mdns"/>
+
 <service name="dhcpv6-client"/>
+
 <forward/>
+
 </zone>
 ```
 
@@ -8207,16 +6949,24 @@ FedoraServerWorkstation block corp dm drop external home internal nm-shared publ
 ```
 
 -
-
 ```xml
+
 <?xml version="1.0" encoding="utf-8"?>
+
 <zone>
+
 <short>Internal</short>
+
 <description>用于内部网络。你大部分信任网络上的其他计算机不会伤害你的电脑。只接受选定的入站连接。</description>
+
 <service name="ssh"/>
+
 <service name="mdns"/>
+
 <service name="dhcpv6-client"/>
+
 <forward/>
+
 </zone>
 ```
 
@@ -8235,23 +6985,31 @@ FedoraServerWorkstation block corp dm drop external home internal nm-shared publ
 接三行列出了允许连接到此主机的服务，在本例中为 `ssh`、`mdns` 和 `dhcpv6-client`。这似乎是 `home`、`internal`、`public` 和 `work` 区域文件中常见的服务set。`internal` 区域还有一个额外的服务。
 
 -
-
 ```xml
+
 <?xml version="1.0" encoding="utf-8"?>
+
 <zone>
+
 <short>Internal</short>
+
 <description>用于内部网络。你大部分信任网络上的其他计算机不会伤害你的电脑。只接受选定的入站连接。</description>
+
+
+
 <service name="ssh"/>
+
 <service name="mdns"/>
+
 <service name="dhcpv6-client"/>
+
 <forward/>
+
 </zone>
+
 ```
-
-
-
-
 ping 一个主机以验证你是否无法访问外部世界。稍等后，使用 Ctrl+C 退出 ping。
+```
 
 ```
 [root@testvm1:~~]# ping -c3 example.com
@@ -8261,15 +7019,19 @@ ping 一个主机以验证你是否无法访问外部世界。稍等后，使用
 ^C
 ```
 
+```
 PING 10.0.2.1 (10.0.2.1) 56(84) 字节数据。
+```
 
 ```
 ^C
 ```
 
+```
 --- 10.0.2.1 ping 统计 ---
 发送了 3 个数据包，接收 0 个，100% 包丢失，
 时间 2120ms
+```
 
 ```
 [root@testvm1:~~]# firewall-cmd --panic-cmd success
@@ -8279,6 +7041,7 @@ PING 10.0.2.1 (10.0.2.1) 56(84) 字节数据。
 [root@testvm1:~~]# ping -c3 example.com
 ```
 
+```
 PING example.com (93.184.216.34) 56(84) 字节数据。
 64 bytes来自 93.184.216.34 (93.184.216.34): icmp_seq=1
 ttl=50 time=13.7ms
@@ -8294,6 +7057,7 @@ ttl=50 time=13.7ms
 时间 2012ms
 
 rtt min/max/mdev = 13.642/13.711/13.748/0.049
+```
 
 ```
 [root@testvm1:~~]#
@@ -8308,98 +7072,156 @@ rtt min/max/mdev = 13.642/13.711/13.748/0.049
 
 ## nftables
 
-nftables 规则和 nftables.service 以及同 nft 命令行工具构成了一个完整的防火墙解决方案。然而，在使用 firewalld 时，nftables 服务是被禁用的。
+`nftables` 规则和 `nftables.service` 以及同 `nft` 命令行工具构成了一个完整的防火墙解决方案。然而，在使用 firewalld 时，`nftables` 服务是被禁用的。
 
 295
 第 10 章 使用 Firewalld 管理防火墙
 
-我们用于定义网络接口防火墙特性的区域文件将结合 `/etc/firewalld` 中的其他配置文件，使用 nftables 文件格式创建规则集。firewalld 被用于创建 nftables 规则，这些规则由相应的内核模块用于检查每个网络数据包并确定它们的去去。
+我们用于定义网络接口防火墙特性的区域文件将结合 `/etc/firewalld` 中的其他配置文件，使用 `nftables` 文件格式创建规则集。`firewalld` 被用于创建 `nftables` 规则，这些规则由相应的内核模块用于检查每个网络数据包并确定它们的去去。
 
-你可以查看所有当前的 nftables 规则，但尽管它们是可读的，却并不易于理解。
+你可以查看所有当前的 `nftables` 规则，但尽管它们是可读的，却并不易于理解。
 
 ## 实验 10-11：查看 nftables 规则
 
 ```
 此命令显示当前激活区域的所有 nftables 规则。
+
 [root@testvm1:~]# nft list rules | less
+
 table inet firewalld {
+
 chain mangle_PREROUTING {
+
 ```
 
 ```
 type filter hook prerouting priority mangle
+
 priority 10; policy accept;
+
     }
+
 }
+
 chain PREROUTING {
+
     type filter hook prerouting priority mangle
+
     priority 10; policy accept;
+
 }
+
 chain mangle_OUTPUT {
+
     type filter hook output priority mangle
+
     priority 10; policy accept;
-    
+
 }
-}
+
 chain OUTPUT {
+
     type filter hook output priority mangle
+
     priority 10; policy accept;
+
 }
+
 chain mangle_INPUT {
+
     type filter hook input priority mangle
+
     priority 10; policy accept;
+
 }
+
 chain INPUT {
+
     type filter hook input priority mangle
+
     priority 10; policy accept;
+
 }
+
 chain FORWARD {
+
     type filter hook forward priority mangle
+
     priority 10; policy accept;
+
 }
+
 ```
 
 无论你使用防火墙还是 iptables 作为防火墙前端，你都可以列出 nftables 规则并翻到底部，找到以下由 Fail2Ban 添加的条目：
 
 ```
 [root@testvm1~]# nft list ruleset | less
+
 table ip6 filter {
+
 chain INPUT {
+
 type filter hook input priority filter;
+
 policy accept;
+
 meta l4proto tcp tcp dport 22 counter
+
 packets 68 bytes 11059 jump f2b-sshd
+
 300
+
 }
+
 chain f2b-sshd {
+
 ip6 saddr ::1 counter packets 4 bytes
+
 320 reject
+
 counter packets 54 bytes 9939 return
+
 }
+
 }
+
 ```
 
 ```
 table filter {
+
 chain INPUT {
+
 type filter hook input priority filter;
+
 policy accept;
+
 meta l4proto tcp tcp dport 22 counter
+
 packets 62 bytes 9339 jump f2b-sshd
+
 }
+
 chain f2b-sshd {
+
 ip saddr 127.0.0.1 counter packets 2 bytes
+
 120 reject
+
 counter packets 54 bytes 8859 return
+
 }
+
 }
+
 ```
 
 现在来看几个日志文件。在 `/var/log` 中，首先查看 `/var/log/secure`。你应该看到许多指示密码失败的条目。这些是 Fail2Ban 用于检查失败情况的日志条目。
 
 查看 `/var/log/fail2ban.log` 文件。此日志显示了在 secure 日志中发现触发条目的时间，以及为了保护系统而采取的封禁和解封操作。
 
-请注意，在触发首次封禁之前，f2b-sshd 链的条目不会出现在 iptables 规则集中。一旦触发首次封禁，该链的第一行和最后一行不会被删除，但拒绝特定 IP 地址的行会随着超时被移除。弄清楚这一点花了一点功夫。
+请注意，在触发首次封禁之前，`f2b-sshd` 链的条目不会出现在 iptables 规则集中。一旦触发首次封禁，该链的第一行和最后一行不会被删除，但拒绝特定 IP 地址的行会随着超时被移除。弄清楚这一点花了一点功夫。
 
 # 301
 
@@ -8491,7 +7313,7 @@ SystemV 环境中的其他资源管理工具通过 `/etc/security/limits.conf` �
 
 ## 使用 cgroups 管理进程
 
-systemd 和 SystemV 的一个主要区别在于它们处理进程的方式。SystemV 将每个进程视为独立的实体。systemd 将资源收集到称为 cgroups 的控制组中，并作为一个整体管理系统资源。这意味着可以按应用程序进行资源管理，而不是组成应用程序的单个进程。
+`systemd` 和 SystemV 的一个主要区别在于它们处理进程的方式。SystemV 将每个进程视为独立的实体。`systemd` 将资源收集到称为 cgroups 的控制组中，并作为一个整体管理系统资源。这意味着可以按应用程序进行资源管理，而不是组成应用程序的单个进程。
 
 306
 
@@ -8500,7 +7322,6 @@ systemd 和 SystemV 的一个主要区别在于它们处理进程的方式。Sys
 cgroups 的控制单元是 slice 。Slice 是一种概念化，允许 systemd 以树状格式排列进程以便于管理。我在 Red Hat Steve Owens 的一文中发现了下面的描述，它为系统本身如何使用 cgroups 提供了一个很好的示例：
 
 > 你可能知道或不知道，Linux 内核负责系统中所有的硬件交互。这意味着，除了让操作系统 (OS) 理解硬件的代码（驱动程序）之外，它还限制了特定程序可以向系统要求的资源。这在讨论系统内存 (RAM) 容量时最容易理解
-
 
 将资源分配给计算机可能执行的所有应用程序。在最基本的形式下，Linux 系统允许无限制地运行大多数应用程序。如果所有应用程序都能良好地协同工作，这对通用计算是非常有利。但如果程序出现错误并开始消耗所有可用内存会发生什么？内核有一个名为内存溢出杀手（OOM Killer）的机制。它的工作是停止应用程序以释放内存，以便操作系统能够在不崩溃的情况下继续运行。
 
@@ -8550,6 +7371,8 @@ systemctl 命令允许我们看到多个 cgroup 条目。`--all` 选项显示所
 [root@studentvm1 ~]# systemctl -t slice --all
 ```
 
+
+
 | UNIT | LOAD | ACTIVE | SUB |
 | :--- | :--- | :--- | :--- |
 | .slice | loaded | active | Root Slice |
@@ -8566,10 +7389,10 @@ systemctl 命令允许我们看到多个 cgroup 条目。`--all` 选项显示所
 | user-983.slice | loaded | active | User Slice of UID 983 |
 | user.slice | loaded | active | User and Session Slice |
 
-图例：LOAD → 反映单元定义是否已正确加载。
-ACTIVE → 高级单元激活状态，即 SUB 的泛化。
-SUB → 低级激活状态，值取决于单元类型。
-列出已加载单元文件使用 'systemctl list-unit-files'。
+图例：`LOAD` → 反映单元定义是否已正确加载。
+`ACTIVE` → 高级单元激活状态，即 `SUB` 的泛化。
+`SUB` → 低级激活状态，值取决于单元类型。
+列出已加载单元文件使用 `systemctl list-unit-files`。
 
 关于上述数据首先要注意的一点是，它显示了 0 (root) 和 1000 的用户 slice，这只显示了 slice 而不是属于每个 slice 的服务，因此从这些数据中显而易见的是，每当用户登录时都会创建一个 slice。这可以提供将该用户的所有任务作为一个单一 cgroup 实体进行管理的手段。
 
@@ -8577,11 +7400,12 @@ SUB → 低级激活状态，值取决于单元类型。
 
 ## 实验 11-2：CGROUPS
 
-ps 命令可以用于映射进程及其在 cgroup 层级结构中的位置。注意，必须使用 ps 命令指定所需的列。我大幅减少了此命令的输出量，但尽量保留了足够的内容，以便你可以获取在你的系统中可能发现的内容。
+`ps` 命令可以用于映射进程及其在 cgroup 层级结构中的位置。注意，必须使用 `ps` 命令指定所需的列。我大幅减少了此命令的输出量，但尽量保留了足够的内容，以便你可以获取在你的系统中可能发现的内容。
 
 ```
 [root@studentvm1 ~] ps -eo pid,user,cgroup,args
 ```
+
 | PID | USER | CGRO | COMMAND |
 | :--- | :--- | :--- | :--- |
 | 1154 | root | /system.slice/dbus | /usr/sbin/dbus |
@@ -8602,19 +7426,21 @@ ps 命令可以用于映射进程及其在 cgroup 层级结构中的位置。注
 | 3028 | root | /user.slice/user-1000.slice | -bash |
 | 1195 | root | /system.slice/colord | /usr/libexec/colord |
 
-我们可以使用 systemd-cgls 命令查看整个层级结构，它更简单，因为不需要复杂的选项。我也缩短了这个树形视图。这是在 studentVM1 上完成的，大约 230 行；我的主工作站的数据量大约有 400 行。
+我们可以使用 `systemd-cgls` 命令查看整个层级结构，它更简单，因为不需要复杂的选项。我也缩短了这个树形视图。这是在 studentVM1 上完成的，大约 230 行；我的主工作站的数据量大约有 400 行。
 
 ```
 [root@studentvm1 ~] systemd-cgls
-Control group /:
- -.slice
-  |-user.slice (#1323)
-    |-user-0.slice (#6141)
-      |-session-2.scope (#6421)
 ```
 
+Control group `/`:
 
+ -.slice
 
+  |-user.slice (#1323)
+
+    |-user-0.slice (#6141)
+
+      |-session-2.scope (#6421)
 
 | | | |
 | :--- | :--- | :--- |
@@ -8663,10 +7489,6 @@ scope 内的所有进程都是平等的，没有内部层级结构，scope 的�
 
 `systemd-cgroups` 命令比我找到过的任何其他命令都能对 cgroup 层级结构和构成它的单元提供最完整的表示。我更倾向于它对树结构的清晰整洁的表示。
 
-
-
-
-
 3. 操作系统首先检查 `/etc/hosts` 文件以查看主机名是否存在其中。如果是，则将该条目的的 IP 地址返回给浏览器。如果没有，我们则进入下一步。在这种情况下，我们假设主机名不在 `/etc/hosts` 中。
 
 4. 随后将主机名发送到 `/etc/resolv.conf` 中指定的第一个名称服务器。在这种情况下，第一个名称服务器的 IP 地址是我自己的内部名称服务器。对于本示例，我的名称服务器没有缓存 `www.example.net` 的 IP 地址，因此必须去更远的地方查找。因此，我们继续下一步。
@@ -8714,6 +7536,7 @@ options timeout:2 ndots:5
 search example.com
 ```
 
+```
 [root@testvml1 /etc]# cat /run/systemd/resolve/stub-resolv.conf
 nameserver 127.0.0.53
 options timeout:2 ndots:5
@@ -8727,9 +7550,11 @@ options timeout:2 ndots:5
 
 ## /etc/hosts 文件
 
-`/etc/hosts` 文件是一个 ASCII 纯文本文件，可以列出本地所有主机的 IP 地址，它是本地名称解析第一个工具。在小型网络中，每个主机的 `/etc/hosts` 文件可以作为简单的本地解析器。管理员可以在 hosts 文件中添加和管理条目。
 
-默认 hosts 文件总是存在的，但通常只包含启用本地服务和命令所需的行。
+
+`/etc/hosts` 文件是一个 ASCII 纯文本文件，可以列出本地所有主机的 IP 地址，它是本地名称解析第一个工具。在小型网络中，每个主机的 `/etc/hosts` 文件可以作为简单的本地解析器。管理员可以在 `hosts` 文件中添加和管理条目。
+
+默认 `hosts` 文件总是存在的，但通常只包含启用本地服务和命令所需的行。
 
 ```
 # 回环条目；不要更改。
@@ -8746,9 +7571,9 @@ localhost6.localdomain6
 
 `/etc/hosts` 文件也可以通过手动将 IP 地址映射到域名来用于非本地主机。
 
-### 实验 12-2: 使用 /ETC/HOSTS
+### 实验 12-2: 使用 `/ETC/HOSTS`
 
-在你的测试系统上以 root 执行此实验。在实验中，你将看到虚拟机上简单的 `/etc/hosts` 文件，并为本地网络添加一些条目，以便与其他本地主机通信。
+在你的测试系统上以 `root` 执行此实验。在实验中，你将看到虚拟机上简单的 `/etc/hosts` 文件，并为本地网络添加一些条目，以便与其他本地主机通信。
 
 用编辑器打开 `/etc/hosts` 文件。它看起来像这样，只有一组默认条目。
 
@@ -8765,25 +7590,22 @@ localhost4.localdomain4
 localhost6.localdomain6
 ```
 
-# 参 hosts(5) 获取正确的格式和其他示例：
+## 参 `hosts(5)` 获取正确的格式和其他示例：
 
 ```
 # 192.168.1.10 foo.mydomain.org foo
 # 192.168.1.13 bar.mydomain.org bar
 ```
 
-
-
-
-
-对 `/etc/hosts` 文件创建备份副本并存储在 `/root` 中。在我们修改任何内容之前，尝试 ping 一个虚假的远程主机。我知道，但请耐心等待。我们正在模拟一种情况：远程主机存在，但在 DNS 数据库中没有 DNS 条目。example.com 域名存在，并用于我们在这里正在进行的测试。
+对 `/etc/hosts` 文件创建备份副本并存储在 `/root` 中。在我们修改任何内容之前，尝试 `ping` 一个虚假的远程主机。我知道，但请耐心等待。我们正在模拟一种情况：远程主机存在，但在 DNS 数据库中没有 DNS 条目。`example.com` 域名存在，并用于我们在这里正在进行的测试。
 
 ```
 {root@testv1 ~} ping -c2 badname.example.com
 ```
 
-ping: badname.example.com: Name or service not known
-此结果显示没有从给定的主机名到 IP 地址的解析。现在编辑 testv1 上的 `/etc/hosts` 文件，在末尾添加一行，如下所示：
+`ping: badname.example.com: Name or service not known`
+
+此结果显示没有从给定的主机名到 IP 地址的解析。现在编辑 `testv1` 上的 `/etc/hosts` 文件，在末尾添加一行，如下所示：
 
 ```
 +   # 回环条目；请勿。
@@ -8805,7 +7627,9 @@ localhost6.localdomain
 ```
 
 保存修改后的文件，不需要重启
+
 注意，IP 地址可以与多个主机名关联，但特定地址只能分配给单个主机，因此主机名是别名，并且都指向同一个主机。这可以作为与之前的命名策略保持后兼容的方法，例如。
+
 让我们测试 `/etc/hosts` 文件。
 
 ```bash
@@ -8822,27 +7646,27 @@ rtt min/avg/max/mdev = 62.088/62.112/62.136/0.024
 
 注释掉删除你向 `/etc/hosts` 中添加的行并再次保存文件。
 
-几年前，我使用 `/etc/hosts` 文件来管理我的网络名称服务。最终，即使只有 8-12 台物理计算机和数量数量的虚拟机，维护起来也太麻烦了。因此，我转为运行自己的 BIND 名称服务器来同时解析内部和外部主机名。
+几年前，我使用 `/etc/hosts` 文件来管理我的网络名称服务。最终，即使只有 8-12 台物理计算机和数量数量的虚拟机，维护起来也太麻烦了。因此，我转为运行自己的 `BIND` 名称服务器来同时解析内部和外部主机名。
 
-任何规模的网络通常都需要 BIND 等名称服务软件进行集中化管理。然而，较小的本地网络可以使用 mDNS 进行无干预解析求解。
+任何规模的网络通常都需要 `BIND` 等名称服务软件进行集中化管理。然而，较小的本地网络可以使用 `mDNS` 进行无干预解析求解。
 
 ## mDNS
 
-多播 DNS (mDNS) 是名称服务解析中一个较新的新增。这种名称服务策略由 systemd-resolved 使用。
+多播 DNS (`mDNS`) 是名称服务解析中一个较新的新增。这种名称服务策略由 `systemd-resolved` 使用。
 
-mDNS 旨在为没有内部中心解析器的本地网络提供无名称解析，它不需要用户干预。除了自动发现本地主机外，它还使用更传统的名称服务来访问互联网。
+`mDNS` 旨在为没有内部中心解析器的本地网络提供无名称解析，它不需要用户干预。除了自动发现本地主机外，它还使用更传统的名称服务来访问互联网。
 
-像 mDNS 这样的多播服务发送广播（多播）包，网络上的每个主机都会接收并检查这些包。数据包是向想要通信的主机名发送的请求，要求其响应其 IP 地址，因为请求计算机可以直接向该主机发送更多数据包。由于只有一个计算机（希望）拥有主机名，因此只有该计算机会响应其 IP 地址，请求主机会将主机名/IP 地址输入其本地数据库。网络上使用 mDNS 的其他计算机也可以向自己的 mDNS 数据库添加数据。通过 mDNS，每个主机都保留自己的数据库。数据库中的条目有一个 TTL（生存时间），因此条目将在 TTL 结束时过期。这意味着主机向网络发送另一个 mDNS 广播请求以获取该 IP 地址。这种全自动的方法意味着即使是对于中等数量主机的内部网络，用户也不需要干预。它是通过 Avahi 包实现的，该包在初始 Fedora 安装时安装。
+像 `mDNS` 这样的多播服务发送广播（多播）包，网络上的每个主机都会接收并检查这些包。数据包是向想要通信的主机名发送的请求，要求其响应其 IP 地址，因为请求计算机可以直接向该主机发送更多数据包。由于只有一个计算机（希望）拥有主机名，因此只有该计算机会响应其 IP 地址，请求主机会将主机名/IP 地址输入其本地数据库。网络上使用 `mDNS` 的其他计算机也可以向自己的 `mDNS` 数据库添加数据。通过 `mDNS`，每个主机都保留自己的数据库。数据库中的条目有一个 TTL（生存时间），因此条目将在 TTL 结束时过期。这意味着主机向网络发送另一个 `mDNS` 广播请求以获取该 IP 地址。这种全自动的方法意味着即使是对于中等数量主机的内部网络，用户也不需要干预。它是通过 `Avahi` 包实现的，该包在初始 Fedora 安装时安装。
 
-这种本地主机发现自动化代价是每个主机为了发现网络上的其他主机而产生大量的网络流量。这种“话多”的协议会占用网络带宽，消耗主机系统资源，而且与更传统的 nss-dns 协议相比并不快。
+这种本地主机发现自动化代价是每个主机为了发现网络上的其他主机而产生大量的网络流量。这种“话多”的协议会占用网络带宽，消耗主机系统资源，而且与更传统的 `nss-dns` 协议相比并不快。
 
 ## 工作原理
 
-mDNS 协议要求 systemd-resolved.service 在所有主机上运行。可以使用 `resolvectl` 命令查看并轻量化管理 systemd-resolved.service 的状态。
+`mDNS` 协议要求 `systemd-resolved.service` 在所有主机上运行。可以使用 `resolvectl` 命令查看并轻量化管理 `systemd-resolved.service` 的状态。
 
-## 实验：RESOLCTL 命令
+## 实验：`RESOLCTL` 命令
 
-以 root 身份执行此实验：禁用 systemd-resolved，这样你就可以看到它启动的样子。
+以 `root` 身份执行此实验：禁用 `systemd-resolved`，这样你就可以看到它启动的样子。
 
 ```
 root@testvm1# systemctl status systemd-resolved
@@ -8892,7 +7716,7 @@ Protocols: -DefaultRoute LLMNR=resolve -mDNS -DNSTLS
 DNSSEC=no/unsupported
 ```
 
-此命令可将完全限定域名 (FQDN) 解析为 IP 地址。这与 dig 和 nslookup 命令类似，但它还显示了发现它的接口。
+此命令可将完全限定域名 (`FQDN`) 解析为 IP 地址。这与 `dig` 和 `nslookup` 命令类似，但它还显示了发现它的接口。
 
 ```
 +[root@testvm1# resolve query www@.example.net
@@ -8903,20 +7727,19 @@ www.example.net: 93.184.216.34 -- link: enp0s3
 -- 来自：网络
 ```
 
-# 详情
+## 详情
 
-/etc/resolv.conf 和 /etc/nsswitch.conf 文件是符号链接（软链接）
-
+`/etc/resolv.conf` 和 `/etc/nsswitch.conf` 文件是符号链接（软链接）
 
 到创建的文件。让我们来看看这些文件。
 
 ## 实验 12-4：检查 NSSWITCH 和 RESOLV.CONF 文件
 
-由于 nsswitch.conf 和 resolv.conf 文件包含了名称服务解析的配置，让我们详细查看一下它们。
+由于 `nsswitch.conf` 和 `resolv.conf` 文件包含了名称服务解析的配置，让我们详细查看一下它们。
 
-尽管这些文件现在是指向实际内容的链接，但它们之前是普通文件而不是链接。systemd-resolved 使用链接目标来确定如何处理名称解析。
+尽管这些文件现在是指向实际内容的链接，但它们之前是普通文件而不是链接。`systemd-resolved` 使用链接目标来确定如何处理名称解析。
 
-这些链接保留了它们最初包含在安装包中的原始日期和时间。/etc/authselect/nsswitch.conf 文件是在系统安装期间创建的。../run/systemd/stub-resolv.conf 是最近启动时创建的。
+这些链接保留了它们最初包含在安装包中的原始日期和时间。`/etc/authselect/nsswitch.conf` 文件是在系统安装期间创建的。`../run/systemd/stub-resolv.conf` 是最近启动时创建的。
 
 ```
 # cd /etc/; ll resolv.conf nsswitch.conf
@@ -8927,8 +7750,9 @@ lrwxrwxr-x. 1 root root 29 Jan 10:16 nsswitch.conf -> /etc/authselect/nsswitch.c
 lrwxrwxr-x. 1 root root 39 Oct 24 10:53 resolv.conf -> ../run/systemd/resolve-resolv.conf
 ```
 
-第 12 章 使用 systemd-resolved 名称服务
-实际上，每当主机启动时，/run/systemd/resolve/ 目录下都会创建两个版本的 resolv.conf 文件。
+第 12 章 使用 `systemd-resolved` 名称服务
+
+实际上，每当主机启动时，`/run/systemd/resolve/` 目录下都会创建两个版本的 `resolv.conf` 文件。
 
 ```
 # cat resolv.conf
@@ -8961,51 +7785,72 @@ search both.org
 # cat /run/systemd/resolve/stub-resolv.conf
 
 # 此文件 /run-systemd/resolve/stub-resolv.conf 由 man:systemd-resolved(8) 管理。
+
 # 不要编辑。
+
 cat stub-resolv.conf
+
 #
+
 # 此文件可能被软符号链接为 /etc/resolv.conf。如果你正在查看
+
 # /etc/resolv.conf 并看到此文本，说明你已经跟随了符号链接。
+
 #
+
 # 这是一个动态 resolv.conf 文件，用于将本地客户端连接到
+
 # systemd-resolved 的内部 DNS 存根解析器。此文件列出了所有
+
 # 配置的搜索域。
+
 # # 运行 "resolctl status" 查看有关正在使用的上行 DNS 服务器的详情。
+
 #
+
 # 第三方程序通常不应直接访问此文件，而应仅通过
+
 # /etc/resolv.conf 的符号链接访问。要以不同的方式管理 man:resolv.conf(5)，
+
 # 请用静态文件或不同的符号链接替换此符号链接。
+
 #
+
 # 请参阅 man:systemd-resolved.service(8) 获取有关 /etc/resolv.conf 支持
+
 # 操作模式的详情。
+
 nameserver 127.0.0.53
+
 options edns0 trust-ad
+
 search both.org
+
 ```
 
-第一个文件是一个更传统的 resolv.conf 文件，但它并没有被使用。它定义了三个用于名称解析的外部服务器。这些信息可以从网络的 DHCP 服务器获取，也可以从静态配置的 networkmanager 网络连接文件中获取。
+第一个文件是一个更传统的 `resolv.conf` 文件，但它并没有被使用。它定义了三个用于名称解析的外部服务器。这些信息可以从网络的 DHCP 服务器获取，也可以从静态配置的 `networkmanager` 网络连接文件中获取。
 
-第二个文件是 systemd-resolved 版本，stub-resolv.conf，它是 /etc/resolv.conf 符号链接的目标。此文件将本地主机定义为该客户端主机的名称服务器。
+第二个文件是 `systemd-resolved` 版本，`stub-resolv.conf`，它是 `/etc/resolv.conf` 符号链接的目标。此文件将本地主机定义为该客户端主机的名称服务器。
 
 ## mDNS 性能
 
-在进行了几次涉及 `time` 命令的并不十分科学的实验后，我发现 mDNS 的速度明显比使用历史性的 DNS 服务要慢，特别是与提供提供自己的名称服务器的网络相比时。我的实验表明，mDNS 消耗的时间可能比传统的名称服务长五倍。当然，我们讨论的只是几百秒的差异，但在某些情况下这可能是重要的。
+在进行了几次涉及 `time` 命令的并不十分科学的实验后，我发现 `mDNS` 的速度明显比使用历史性的 DNS 服务要慢，特别是与提供提供自己的名称服务器的网络相比时。我的实验表明，`mDNS` 消耗的时间可能比传统的名称服务长五倍。当然，我们讨论的只是几百秒的差异，但在某些情况下这可能是重要的。
 
 ## nss-DNS
 
-这是历史性的名称服务和解析器组合。名称服务切换（NSS）解析器负责执行从全局域名服务分布式数据库中请求 IP 地址的任务。它具有快速、易用、成熟和众为人知的属性。它最初由太阳微系统公司作为其 Solaris 操作系统的一部分开发，后为 GNU 工具和程序进行了重写。它的代码嵌入在 GNU glibc 库中，因此仍然可用。
+这是历史性的名称服务和解析器组合。名称服务切换（NSS）解析器负责执行从全局域名服务分布式数据库中请求 IP 地址的任务。它具有快速、易用、成熟和众为人知的属性。它最初由太阳微系统公司作为其 Solaris 操作系统的一部分开发，后为 GNU 工具和程序进行了重写。它的代码嵌入在 GNU `glibc` 库中，因此仍然可用。
 
 ## 高级配置
 
-使用两个 ASCII 纯文本文件提供名称服务的主要配置。这些文件（nsswitch.conf 和 resolv.conf）具有历史起源，可以追溯到名称服务解析器的最早版本。systemd-resolved 仍在使用它们，但正如我们看到的，它们的用法已经承担了额外的功能。
+使用两个 ASCII 纯文本文件提供名称服务的主要配置。这些文件（`nsswitch.conf` 和 `resolv.conf`）具有历史起源，可以追溯到名称服务解析器的最早版本。`systemd-resolved` 仍在使用它们，但正如我们看到的，它们的用法已经承担了额外的功能。
 
 ## NS 和 NSSwitch
 
-正如其名，nsswitch——Name Service Switch 的缩写——用于定义数据库源以及从何处获取名称服务信息。
+正如其名，`nsswitch`——Name Service Switch 的缩写——用于定义数据库源以及从何处获取名称服务信息。
 
-像 nss-DNS 这样的单播服务使用维护整个数据库的单一服务器。如果主机需要网络上另一个服务器主机的 IP 地址，它将只向请求 IP 地址的名称服务器发送一个单播包。名称服务器仅向请求的主机响应一个包含该 IP 地址的数据包。
+像 `nss-DNS` 这样的单播服务使用维护整个数据库的单一服务器。如果主机需要网络上另一个服务器主机的 IP 地址，它将只向请求 IP 地址的名称服务器发送一个单播包。名称服务器仅向请求的主机响应一个包含该 IP 地址的数据包。
 
-NSS 功能是许多需要名称解析器数据的服务使用的工具。通过基于 /etc/nsswitch.conf 配置中的数据使用 NSS，它可以帮助它们在指定的顺序中定位适当配置和名称解析源。
+NSS 功能是许多需要名称解析器数据的服务使用的工具。通过基于 `/etc/nsswitch.conf` 配置中的数据使用 NSS，它可以帮助它们在指定的顺序中定位适当配置和名称解析源。
 
 文件中为每个服务列出的顺序可以更改，并且在不同的发行版之间可能不同。它们也可以被修改以满足本地需求。我从未需要更改此文件的任何内容，但如果名称解析出现无法通过其他方式解释的问题，这里是确定问题的良好起点。
 
@@ -9013,36 +7858,55 @@ NSS 功能是许多需要名称解析器数据的服务使用的工具。通过�
 
 ## 实验 12-5：NSSSWITCH.CONF 文件
 
-在你的测试主机上以 root 身份显示 nsswitch.conf 文件。注意下面的数据流中某些行被包裹起来：
+在你的测试主机上以 `root` 身份显示 `nsswitch.conf` 文件。注意下面的数据流中某些行被包裹起来：
 
 ```
+
 [root@testvml1 ~]# cat nsswitch.conf
+
 ```
 
 ```
 # 由 authselect 生成于 2 Jan 17 21:33:15 2023
-# 不要修改此文件，请使用 authselect 代替。
-# 更多详情请参阅 authselect(8)。
-# 按使用的可能性排序：
-passwd: sss
-shadow: sss
-group: sss
-hosts: myhostname
-services: sss
-user: sss
-automount: sss
-netgroup: sss
-networks: sss
-protocols: sss
-publickey: sss
-rpc: sss
 ```
 
-查看数据流中的 hosts 条目。第一条是 hosts，这意味着解析器首先搜索本地数据库，虽然没有显式指定，但它是 /etc/ 文件。如果没有找到匹配，解析器将移动到下一个条目 myhostname。myhostname 提供了 localhost 和 localhost.domain 的安全解析。这不依赖于文件中的条目。
 
-由于所有这些条目对顺序敏感，如果在 /etc/数据库中找到了条目，其优先级高于任何后续条目。nsswitch.conf 中的条目决定了系统搜索各种信息的顺序。例如，passwd 条目 `passwd: sss` 意味着系统首先在 sss（系统切换服务）数据库中查找用户信息。如果未找到用户，它将移动到下一个列出的条目，如果有的话。
 
-如何找到系统主机名？有多种方法可以，但 $hostname 环境变量包含主机名并可以在系统管理脚本中使用。
+# 不要修改此文件，请使用 authselect 代替。
+
+# 更多详情请参阅 authselect(8)。
+
+# 按使用的可能性排序：
+
+passwd: sss
+
+shadow: sss
+
+group: sss
+
+hosts: myhostname
+
+services: sss
+
+user: sss
+
+automount: sss
+
+netgroup: sss
+
+networks: sss
+
+protocols: sss
+
+publickey: sss
+
+rpc: sss
+
+查看数据流中的 hosts 条目。第一条是 hosts，这意味着解析器首先搜索本地数据库，虽然没有显式指定，但它是 `/etc/` 文件。如果没有找到匹配，解析器将移动到下一个条目 `myhostname`。`myhostname` 提供了 localhost 和 localhost.domain 的安全解析。这不依赖于文件中的条目。
+
+由于所有这些条目对顺序敏感，如果在 `/etc/` 数据库中找到了条目，其优先级高于任何后续条目。`nsswitch.conf` 中的条目决定了系统搜索各种信息的顺序。例如，passwd 条目 `passwd: sss` 意味着系统首先在 `sss`（系统切换服务）数据库中查找用户信息。如果未找到用户，它将移动到下一个列出的条目，如果有的话。
+
+如何找到系统主机名？有多种方法可以，但 `$hostname` 环境变量包含主机名并可以在系统管理脚本中使用。
 
 ```
 [root@testvml1 etc]# echo $HOSTNAME
@@ -9054,7 +7918,7 @@ testvm1.both.org
 
 许多工具和应用程序需要本地主机名才能正常工作，因此如果实际主机名不在 hosts 文件中，可以通过变量找到。你记得安装 Fedora 或你喜欢的发行版时的主机名吗？这就是变量中主机名的来源。它非常重要。
 
-hostnamectl 工具可以更改主机名并显示有关主机的信息。我在我的主工作站上执行了操作，但你也可以在虚拟机执行，遗憾的是那没那么意思。
+`hostnamectl` 工具可以更改主机名并显示有关主机的信息。我在我的主工作站上执行了操作，但你也可以在虚拟机执行，遗憾的是那没那么意思。
 
 ```
 [root@david ~]# hostnamectl status
@@ -9067,9 +7931,6 @@ Chassis: vm
 Machine ID: 679fb335f6e94d87b55e8ad39932455f8
 Boot ID: ab3fa56413c8470e86da7ff376c4b5c
 ```
-
-
-
 
 产品 UUID: a7b3a47e-d756-6c41-91f5-8ce11f20b152
 虚拟化: oracle
@@ -9087,9 +7948,9 @@ OS 支持剩余时间: 10month 2w 5d
 固件年龄: 18y 1month 3d
 
 8 除非它在启动时由 DHCPD 服务器设置。
-9 使用命令 **man 8 nss-hostname.**。
+9 使用命令 `man 8 nss-hostname.`。
 
-第 12 章 使用 systemd-resolved 名称解析服务
+## 第 12 章 使用 systemd-resolved 名称解析服务
 
 那是很多有趣且重要的信息。在“Chassis”（机箱）行使用的小键盘在视觉上比我的终端会话解析得好一点。我们已经在可读性较差的格式中见过很多此类信息，但这里也有我从未在其他地方看到过的信息，比如操作系统支持信息。
 
@@ -9125,13 +7986,13 @@ OS 支持剩余时间: 10month 2w 5d
 [root@testvm1]# hostnamectl newhostname
 ```
 
-nsswitch.conf 中的下一个条目是最小的。你在这个列表中发现的后续内容是所有主机必须运行 `avahi-daemon` 才能参与 mdns。这一部分指示 `nss-resolve` 使用 `systemd-resolved`。
+`nsswitch.conf` 中的下一个条目是最小的。你在这个列表中发现的后续内容是所有主机必须运行 `avahi-daemon` 才能参与 mdns。这一部分指示 `nss-resolve` 使用 `systemd-resolved`。
 
 我们终于来到 `systemd-resolved` 了。`systemd-resolved.service` 为名称解析提供服务。`systemd-resolved` 为 Fedora、Red Hat 以及其他发行版提供解析服务，并且是多播 DNS (mDNS) 的要求。我们在本章中将探索 mDNS，但现在让我们查看一下 systemd-resolved 本身。
 
 `systemd-resolved` 可以启动、停止，并可以使用 `systemctl` 命令检查其状态；它应该处于运行状态。
 
-实验 12-6: SYSTEMD-RESOLVED.SERVICE
+## 实验 12-6: SYSTEMD-RESOLVED.SERVICE
 
 ```
 systemctl status systemd.service
@@ -9152,6 +8013,7 @@ Jan 2025-01-24 12:21:30 systemd[1]: Processing requests...
 ```
 [root@testvm1 ~]# systemctl status systemd-resolved
 ```
+
 ● systemd-resolved.service - Network Resolution
 Loaded: loaded (/lib/systemd/system/systemd-resolved.service; enabled; preset: enabled)
      Active: active (running) since Fri 2025-01-24 12:21:30; 13h ago
@@ -9162,10 +8024,8 @@ Loaded: loaded (/lib/systemd/system/systemd-resolved.service; enabled; preset: e
       CGroup: system.slice/systemd-resolved
 ```
 
-
 ```bash
 ; global options: +cmd
-
 ;; no servers could be reached
 ```
 
@@ -9181,7 +8041,7 @@ lrwxrwxr-x 1 root root 39 Apr 14 18:58 resolv.conf -> ../run/systemd/resolve/stu
 
 ## 第 12 章：使用 systemd-resolved 名称服务
 
-**图 12-2.** /run/systemd/resolve/stub-resolv.conf 文件指向 localhost 作为名称服务器
+**图 12-2.** `/run/systemd/resolve/stub-resolv.conf` 文件指向 localhost 作为名称服务器
 
 `/etc/resolv.conf` 文件用于确定访问各种服务（包括主机名解析）时各种资源的顺序。该文件也发生了变化，并在 `hosts` 行中包含了一些奇怪的逻辑。根据我的实验，是这种逻辑似乎降低了速度，连同 `mdns4-minimal` 和 resolve 源的使用。还有一个名为 `authselect` 的新东西，它现在会生成 `switch.conf` 文件。
 
@@ -9217,9 +8077,9 @@ Avahi 进程 socket 是 Avahi 服务的一部分。当程序请求 Avahi 服务�
 
 - 3. 停止并禁用 systemd-resolved 服务
 
-systemd-resolved 服务是我们所遇到问题的根源，因此我们禁用它。systemd-resolved 的 man 页简洁地阐述了它的目的。
+`systemd-resolved` 服务是我们所遇到问题的根源，因此我们禁用它。`systemd-resolved` 的 man 页简洁地阐述了它的目的。
 
-> systemd-resolved 是一个为本地应用程序提供网络名称解析的系统服务。它实现了一个缓存和验证 DNS/DNSSEC 解析器，以及一个 LLMNR 和 MulticastDNS 解析器和响应程序。
+> `systemd-resolved` 是一个为本地应用程序提供网络名称解析的系统服务。它实现了一个缓存和验证 DNS/DNSSEC 解析器，以及一个 LLMNR 和 MulticastDNS 解析器和响应程序。
 
 man 页随后描述了它向程序暴露的接口，以及关于如何作为解析器访问它的层级说明。该服务是问题的根源，我们禁用了它。
 
@@ -9227,71 +8087,39 @@ man 页随后描述了它向程序暴露的接口，以及关于如何作为解�
 # systemctl disable --now systemd-resolved.service
 ```
 
-- 4. 删除 /etc/resolv.conf 链接
 
-NetworkManager 服务检查 `/etc/resolv.conf` 文件以确定使用哪些服务器进行名称解析。在简单的列表格式下最多支持三个服务器。该文件还定义了当提供简单主机名（即 `host`）而不是 FQDN（完全限定域名名，即 `host.example.com`）时，在哪个域中搜索主机名。
 
-（注：该文件中只指定了一个名称服务器，即 localhost。systemd-resolved 服务和 Avahi 使用 systemd-resolved 在本地网络搜索其他本地主机，并可以配置名称解析以便主机之间能够相互通信。如果发现了名称服务器（例如有线或无线路由器提供的），可以使用它来对 `www.both.org` 等外部主机进行名称解析。
+### 4. 删除 `/etc/resolv.conf` 链接
 
-如果没有本地可访问的名称服务器，就无法进行外部名称解析。这就是在海滩发生的情况。酒店的本地名称服务器断断续续的，因此无法进行名称解析。不过，我仍然可以使用 IP 地址 ping `www.both.org` 等远程主机。是的——这是一种边缘情况。但它确实发生了。所以我们删除了现有的 `/etc/resolv.conf` 链接。我们不会创建一个新的 `resolv.conf` 文件，因为会让 NetworkManager 处理剩下的这堆乱子。）
+`NetworkManager` 服务检查 `/etc/resolv.conf` 文件以确定使用哪些服务器进行名称解析。在简单的列表格式下最多支持三个服务器。该文件还定义了当提供简单主机名（即 `host`）而不是 FQDN（完全限定域名名，即 `host.example.com`）时，在哪个域中搜索主机名。
 
-NetworkManager 服务检查 `/etc/resolv.conf` 文件以确定使用哪些服务器进行名称解析。在简单的列表格式下最多支持三个服务器。该文件还定义了当提供简单主机名（即 `host`）而不是 FQDN（完全限定域名名，即 `host.example.com`）时，在哪个域中搜索主机名。
+（注：该文件中只指定了一个名称服务器，即 `localhost`。`systemd-resolved` 服务和 `Avahi` 使用 `systemd-resolved` 在本地网络搜索其他本地主机，并可以配置名称解析以便主机之间能够相互通信。如果发现了名称服务器（例如有线或无线路由器提供的），可以使用它来对 `www.both.org` 等外部主机进行名称解析。
 
-（注：该文件中只指定了一个名称服务器，即 localhost。systemd-resolved 服务和 Avahi 使用 systemd-resolved 在本地网络搜索其他本地主机，并可以配置名称解析以便主机之间能够相互通信。如果发现了名称服务器（例如有线或无线路由器提供的），可以使用它来对 `www.both.org` 等外部主机进行名称解析。
+如果没有本地可访问的名称服务器，就无法进行外部名称解析。这就是在海滩发生的情况。酒店的本地名称服务器断断续续的，因此无法进行名称解析。不过，我仍然可以使用 IP 地址 `ping` `www.both.org` 等远程主机。是的——这是一种边缘情况。但它确实发生了。所以我们删除了现有的 `/etc/resolv.conf` 链接。我们不会创建一个新的 `resolv.conf` 文件，因为会让 `NetworkManager` 处理剩下的这堆乱子。）
 
-如果没有本地可访问的名称服务器，就无法进行外部名称解析。这就是在海滩发生的情况。酒店的本地名称服务器断断续续的，因此无法进行名称解析。不过，我仍然可以使用 IP 地址 ping `www.both.org` 等远程主机。是的——这是一种边缘情况。但它确实发生了。所以我们删除了现有的 `/etc/resolv.conf` 链接。我们不会创建一个新的 `resolv.conf` 文件，因为会让 NetworkManager 处理剩下的这堆乱子。）
+### 5. 删除 `/etc/nswitch.conf`
 
-NetworkManager 服务检查 `/etc/resolv.conf` 文件以确定使用哪些服务器进行名称解析。在简单的列表格式下最多支持三个服务器。该文件还定义了当提供简单主机名（即 `host`）而不是 FQDN（完全限定域名名，即 `host.example.com`）时，在哪个域中搜索主机名。
-
-（注：该文件中只指定了一个名称服务器，即 localhost。systemd-resolved 服务和 Avahi 使用 systemd-resolved 在本地网络搜索其他本地主机，并可以配置名称解析以便主机之间能够相互通信。如果发现了名称服务器（例如有线或无线路由器提供的），可以使用它来对 `www.both.org` 等外部主机进行名称解析。
-
-如果没有本地可访问的名称服务器，就无法进行外部名称解析。这就是在海滩发生的情况。酒店的本地名称服务器断断续续的，因此无法进行名称解析。不过，我仍然可以使用 IP 地址 ping `www.both.org` 等远程主机。是的——这是一种边缘情况。但它确实发生了。所以我们删除了现有的 `/etc/resolv.conf` 链接。我们不会创建一个新的 `resolv.conf` 文件，因为会让 NetworkManager 处理剩下的这堆乱子。）
-
-NetworkManager 服务检查 `/etc/resolv.conf` 文件以确定使用哪些服务器进行名称解析。在简单的列表格式下最多支持三个服务器。该文件还定义了当提供简单主机名（即 `host`）而不是 FQDN（完全限定域名名，即 `host.example.com`）时，在哪个域中搜索主机名。
-
-（注：该文件中只指定了一个名称服务器，即 localhost。systemd-resolved 服务和 Avahi 使用 systemd-resolved 在本地网络搜索其他本地主机，并可以配置名称解析以便主机之间能够相互通信。如果发现了名称服务器（例如有线或无线路由器提供的），可以使用它来对 `www.both.org` 等外部主机进行名称解析。
-
-如果没有本地可访问的名称服务器，就无法进行外部名称解析。这就是在海滩发生的情况。酒店的本地名称服务器断断续续的，因此无法进行名称解析。不过，我仍然可以使用 IP 地址 ping `www.both.org` 等远程主机。是的——这是一种边缘情况。但它确实发生了。所以我们删除了现有的 `/etc/resolv.conf` 链接。我们不会创建一个新的 `resolv.conf` 文件，因为会让 NetworkManager 处理剩下的这堆乱子。）
-
-NetworkManager 服务检查 `/etc/resolv.conf` 文件以确定使用哪些服务器进行名称解析。在简单的列表格式下最多支持三个服务器。该文件还定义了当提供简单主机名（即 `host`）而不是 FQDN（完全限定域名名，即 `host.example.com`）时，在哪个域中搜索主机名。
-
-（注：该文件中只指定了一个名称服务器，即 localhost。systemd-resolved 服务和 Avahi 使用 systemd-resolved 在本地网络搜索其他本地主机，并可以配置名称解析以便主机之间能够相互通信。如果发现了名称服务器（例如有线或无线路由器提供的），可以使用它来对 `www.both.org` 等外部主机进行名称解析。
-
-如果没有本地可访问的名称服务器，就无法进行外部名称解析。这就是在海滩发生的情况。酒店的本地名称服务器断断续续的，因此无法进行名称解析。不过，我仍然可以使用 IP 地址 ping `www.both.org` 等远程主机。是的——这是一种边缘情况。但它确实发生了。所以我们删除了现有的 `/etc/resolv.conf` 链接。我们不会创建一个新的 `resolv.conf` 文件，因为会让 NetworkManager 处理剩下的这堆乱子。）
-
-- 4. 删除 /etc/resolv.conf 链接
-
-NetworkManager 服务检查 `/etc/resolv.conf` 文件以确定使用哪些服务器进行名称解析。在简单的列表格式下最多支持三个服务器。该文件还定义了当提供简单主机名（即 `host`）而不是 FQDN（完全限定域名名，即 `host.example.com`）时，在哪个域中搜索主机名。
-
-（注：该文件中只指定了一个名称服务器，即 localhost。systemd-resolved 服务和 Avahi 使用 systemd-resolved 在本地网络搜索其他本地主机，并可以配置名称解析以便主机之间能够相互通信。如果发现了名称服务器（例如有线或无线路由器提供的），可以使用它来对 `www.both.org` 等外部主机进行名称解析。
-
-如果没有本地可访问的名称服务器，就无法进行外部名称解析。这就是在海滩发生的情况。酒店的本地名称服务器断断续续的，因此无法进行名称解析。不过，我仍然可以使用 IP 地址 ping `www.both.org` 等远程主机。是的——这是一种边缘情况。但它确实发生了。所以我们删除了现有的 `/etc/resolv.conf` 链接。我们不会创建一个新的 `resolv.conf` 文件，因为会让 NetworkManager 处理剩下的这堆乱子。）
-
-- 5. 删除 /etc/nswitch.conf
-
-`/etc/resolv.conf` 文件用于确定访问各种服务（包括主机名解析）时各种资源的顺序。该文件也发生了变化，并在 `hosts` 行中包含了一些奇怪的逻辑。根据我的实验，是这种逻辑似乎降低了速度，连同 `mdns4-minimal` 和 resolve 源的使用。还有一个名为 `authselect` 的新东西，它现在会生成 `switch.conf` 文件。
+`/etc/resolv.conf` 文件用于确定访问各种服务（包括主机名解析）时各种资源的顺序。该文件也发生了变化，并在 `hosts` 行中包含了一些奇怪的逻辑。根据我的实验，是这种逻辑似乎降低了速度，连同 `mdns4-minimal` 和 `resolve` 源的使用。还有一个名为 `authselect` 的新东西，它现在会生成 `switch.conf` 文件。
 
 原始文件位于 `/etc/authselect/nswitch.conf` 路径，而 `/etc/nswitch.conf` 是该文件的符号链接。
 
-- 6. 创建修订后的 nswitch.conf
+### 6. 创建修订后的 nswitch.conf
 
 为了防止 `authselect` 修改 `/etc/nswitch.conf`，我们选择 opt出。
 
-- 7. 重启 NetworkManager
+### 7. 重启 NetworkManager
 
-最后一步是重启 NetworkManager 服务。这将创建一个新的 `/etc/resolv.conf`。
+最后一步是重启 `NetworkManager` 服务。这将创建一个新的 `/etc/resolv.conf`。
 
 ```bash
 # systemctl restart NetworkManager
 ```
 
-
-
 在之前修复解析器问题的尝试中，我能够解决眼下的问题，但在经历了最后一轮极端症状后，
 
-我终于意识到多个根源的严重性。问题部分在于，随着时间的推移加入了各种 systemd 名称服务工具，并不是一次性添加的。
+我终于意识到多个根源的严重性。问题部分在于，随着时间的推移加入了各种 `systemd` 名称服务工具，并不是一次性添加的。
 
-本章的这一节考虑了所有与 systemd-resolved 相关的域名解析问题的所有已知根源，并解释了如何解决它们。
+本章的这一节考虑了所有与 `systemd-resolved` 相关的域名解析问题的所有已知根源，并解释了如何解决它们。
 
 我建议阅读本文提到的每个文件的 man 手页（帮助文档），因为关于每个文件都有额外的重要信息，这非常有帮助。
 
@@ -9301,17 +8129,17 @@ NetworkManager 服务检查 `/etc/resolv.conf` 文件以确定使用哪些服务
 
 ## 总结
 
-域名解析对于连接到互联网的主机来说是一个关键服务，而 systemd-resolved 是许多 Linux 发行版中解析器的最新实现。它的预期用例适用于没有内部名称服务服务器的小型网络，通常是因为没有管理员可以创建 DNS 或 DHCP 服务器。
+域名解析对于连接到互联网的主机来说是一个关键服务，而 `systemd-resolved` 是许多 Linux 发行版中解析器的最新实现。它的预期用例适用于没有内部名称服务服务器的小型网络，通常是因为没有管理员可以创建 DNS 或 DHCP 服务器。
 
 虽然它在那个有限的用例中工作得良好，但在我的用例中（即内部服务器上同时运行 DNS 和 DHCP 服务），它失败得非常惨惨。
 
-切回 nss-DNS 解析器解决了我的域名解析问题。别误会我，我不是说我讨厌 systemd。
+切回 `nss-DNS` 解析器解决了我的域名解析问题。别误会我，我不是说我讨厌 `systemd`。
 
 完全不是。我想说的是，这些决策的非预期后果会让管理员感到痛苦，因为他们试图确定发生了什么变化以及如何修复它。在这种情况下，仅仅是因为对一组用户好的东西并不一定对另一组用户好。
 
 我的一些主机的用例与非技术用户的用例显著不同。
 
-任何规模的具有 DHCP 或静态网络配置的网络都更适合 nss-DNS 域名解析服务。
+任何规模的具有 DHCP 或静态网络配置的网络都更适合 `nss-DNS` 域名解析服务。
 
 360
 
@@ -9319,10 +8147,10 @@ NetworkManager 服务检查 `/etc/resolv.conf` 文件以确定使用哪些服务
 
 完成以下练习以结束本章：
 
-- 1. systemd-resolved 的功能是什么？
+- 1. `systemd-resolved` 的功能是什么？
 - 2. 它的最佳用例是什么？
-- 3. 比较并对比 mDNS 和 nss-DNS 的功能。我上学时很讨厌这类类型的问题。
-- 4. 描述 nss-DNS 解析器比 systemd-resolved 更好的选择用例。
+- 3. 比较并对比 `mDNS` 和 `nss-DNS` 的功能。我上学时很讨厌这类类型的问题。
+- 4. 描述 `nss-DNS` 解析器比 `systemd-resolved` 更好的选择用例。
 
 356
 
@@ -9332,15 +8160,15 @@ NetworkManager 服务检查 `/etc/resolv.conf` 文件以确定使用哪些服务
 
 读完本章后，你将能够：
 
-- 描述 rc.local 的功能
-- 说明需要将 rc.local 替换为 systemd 服务单元的原因
+- 描述 `rc.local` 的功能
+- 说明需要将 `rc.local` 替换为 `systemd` 服务单元的原因
 - 创建一个可以在 Linux 启动期间启动一个或多个程序的服务单元
 - 从命令行测试该服务
 - 启用该服务在启动时运行
 
 ## 引言
 
-你在 systemd 系统中怀念可以使用 rc.local 来添加启动时运行的命令吗？这里是如何使用当今的 systemd 设置类似的功能。
+你在 `systemd` 系统中怀念可以使用 `rc.local` 来添加启动时运行的命令吗？这里是如何使用当今的 `systemd` 设置类似的功能。
 
 > © David Both 2025
 
@@ -9352,20 +8180,20 @@ D. Both, systemd for Linux SysAdmins, https://doi.org/10.1007/979-8-8688-1328-3_
 
 几年前，我在两个不同的 Linux 主机上遇到了两个不同的问题。每个问题都需要一个独特的规避方法，因为我还没有找到真正的解决方案。然而，交付每种规避方法的方法是相同的：在 Linux 启动期间或启动后不久运行命令。
 
-rc.local 文件过去是（在某些情况下现在仍然是）Linux 管理员放置需要在启动时运行的命令的地方。使用 rc.local 文件不仅被废弃了，而且在几个小时的尝试后，在任何情况下都无法工作。尽管 systemd 文档提到了使用“生成器”，如果存在 rc.local 文件，将从 rc.local 文件生成 systemd 服务。这似乎是强制废弃的一种好方法——让它无法工作。
+`rc.local` 文件过去是（在某些情况下现在仍然是）Linux 管理员放置需要在启动时运行的命令的地方。使用 `rc.local` 文件不仅被废弃了，而且在几个小时的尝试后，在任何情况下都无法工作。尽管 `systemd` 文档提到了使用“生成器”，如果存在 `rc.local` 文件，将从 `rc.local` 文件生成 `systemd` 服务。这似乎是强制废弃的一种好方法——让它无法工作。
 
 我具体问题的细节与此讨论并不特别，因此我将使用一个简单且易于追踪的命令到我们的本地启动文件内容。我们将向本地日志文件添加带有带日期戳的行，以验证我们在启动时需要运行的 Bash 程序实际上可以工作。
 
-## 引导 (Boot) 与 启动 (Startup)
+## 引导 与 启动
 
-理解 Linux 的引导和启动过程对于配置 Linux 和解决启动问题非常重要。事实上，有两个事件序列是启动 Linux 计算机并使其所需的：引导（boot）和启动（startup）。引导序列在计算机开启时开始，在内核初始化和 systemd 启动时结束。启动过程随后接管并完成将 Linux 计算机进入运行状态的任务。
+理解 Linux 的引导和启动过程对于配置 Linux 和解决启动问题非常重要。事实上，有两个事件序列是启动 Linux 计算机并使其所需的：引导（`boot`）和启动（`startup`）。引导序列在计算机开启时开始，在内核初始化和 `systemd` 启动时结束。启动过程随后接管并完成将 Linux 计算机进入运行状态的任务。
 
 总体而言，Linux 的引导和启动过程相当容易理解。它由以下步骤组成：
 
-- 1. BIOS 开机自检 (POST)
-- 2. 引导加载程序 (GRUB2)
+- 1. BIOS 开机自检 `POST`
+- 2. 引导加载程序 `GRUB2`
 - 3. 内核
-- 4. systemd
+- 4. `systemd`
 
 362
 
@@ -9375,10 +8203,7 @@ rc.local 文件过去是（在某些情况下现在仍然是）Linux 管理员�
 
 ## 本地启动
 
-系统管理员有时会在启动序列中添加本地有命令。这些添加可能旨在启动或运行不是标准 systemd 启动部分的本地进程。可以添加新的系统单元来启动启动时所需的每个程序，但旧的 rc.local 方法为任何和所有本地启动需求提供单个可执行的 Bash 脚本。我们也可以在 systemd 中使用这种单文件方法。这种解决方案的优雅之处在于，它使得以后添加更多启动命令变得容易，除非 systemd 有特定原因，否则无需添加更多服务单元。我们的解决方案是让 systemd 使用这种单文件方法。
-
-
-
+系统管理员有时会在启动序列中添加本地有命令。这些添加可能旨在启动或运行不是标准 `systemd` 启动部分的本地进程。可以添加新的系统单元来启动启动时所需的每个程序，但旧的 `rc.local` 方法为任何和所有本地启动需求提供单个可执行的 Bash 脚本。我们也可以在 `systemd` 中使用这种单文件方法。这种解决方案的优雅之处在于，它使得以后添加更多启动命令变得容易，除非 `systemd` 有特定原因，否则无需添加更多服务单元。我们的解决方案是让 `systemd` 使用这种单文件方法。
 
 # 此程序应该放在
 # /usr/local/lib/systemd/system/ 目录下。
@@ -9397,30 +8222,34 @@ WantedBy=multi-user.target
 
 此文件不需要具有执行权限。此文件也可以放在
 /etc/systemd/system 中，但作为一个本地文件，它最好放在 /usr/
-local/lib/systemd/system/ 目录下，以符合 Linux 文件系统层次结构标准 (Fhs)。
+local/lib/systemd/system/ 目录下，以符合 Linux 文件系统层次结构标准 `Fhs`。
 
 在最终重启 Linux 宿主机之前，我们应该测试一下最终的服务单元。
-首先，让我们验证 systemd 是否能了该服务：
+首先，让我们验证 `systemd` 是否能了该服务：
 
 362
 
 第 13 章在 systemd 中替换 RC.local
 
-+ # systemctl status startup
+```bash
+# systemctl status startup
 * startup - 运行 /usr/local/bin/startup.sh
 
 Loaded: loaded (/usr/local/lib/systemd/system/startup.sh)
 service; linked; vendor preset: disabled)
 Active: inactive (dead)
+```
 
 ```
 [root@testvm1 ~]#
 ```
 
-此结果告诉我们 systemd 识别了该服务。现在，让我们启动服务。
+此结果告诉我们 `systemd` 识别了该服务。现在，让我们启动服务。
 这样做将运行脚本，但不会配置新服务在启动时自动运行。
 
+```bash
 # systemctl start startup
+```
 
 检查日志文件内容以验证新行已添加。
 
@@ -9432,12 +8261,10 @@ Active: inactive (dead)
 
 此命令启启用该服务，使其在每次启动序列期间激活，并立即激活。
 
-```
+```bash
 [root@testv1 ~]# systemctl enable --now startup
 ```
-创建符号链接 /etc/systemd/system/multi-user.target.wants/
-mystartup.service ► usr/local/lib/systemd/system/mystartup.
-service。
+创建符号链接 `/etc/systemd/system/multi-user.target.wants/mystartup.service ► usr/local/lib/systemd/system/mystartup.service`。
 
 ```
 [root@testv1 ~]#
@@ -9450,27 +8277,33 @@ service。
 
 # 修改 startup.sh
 
-启动文件的初始版本 /root/mystartup.log，以便我们能够在开发阶段轻松地验证其功能。现在是时候完成可执行文件了，因为我们不再需要一直在使用的临时日志文件了。
+启动文件的初始版本 `/root/mystartup.log`，以便我们能够在开发阶段轻松地验证其功能。现在是时候完成可执行文件了，因为我们不再需要一直在使用的临时日志文件了。
 
 # 实验 13-4：完成执行文件
 
-在进行任何更改之前，让我们查看 systemd 日志中与我们新服务相关的条目。
+在进行任何更改之前，让我们查看 `systemd` 日志中与我们新服务相关的条目。
 
-```
+```bash
 # journalctl -u startup
+```
+
+
+
 ```
 Jan 25 15:55:00 testvm1.bot.org systemd[1]: Started mystartup.service - Runs /usr/local/bin/mystartup.sh.
 Jan 25 15:55:00 testvm1.bot.org systemd[1]: mystartup.service: Deactivated successfully.
 Jan 26 07:58:16 testvm1.bot.org systemd[1]: Started mystartup.service - Runs /usr/local/bin/mystartup.sh.
 Jan 26 07:58:16 testvm1.bot.org systemd[1]: mystartup.service: Deactivated successfully.
+```
 
 这显示 systemd 正在日志中记录服务每次完成的情况。
 367
 
-我们需要做的只是检查日志。修改 startup.sh 文件的最后一行，删除到我们日志文件的重定向，修改后的行仍然会打印消息，相反，它将出现在日志中。这是在需要时向日志添加条目的的一种良好且简单的方法。修改后的行看起来所示：
+我们需要做的只是检查日志。修改 `startup.sh` 文件的最后一行，删除到我们日志文件的重定向，修改后的行仍然会打印消息，相反，它将出现在日志中。这是在需要时向日志添加条目的的一种良好且简单的方法。修改后的行看起来所示：
 
 ```
 # journalctl -u mystartup
+```
 ```
 Jan 25 15:55:00 testvm1.bot.org systemd[1]: Started mystartup.service - Runs /usr/local/bin/mystartup.sh.
 Jan 25 15:55:00 testvm1.bot.org systemd[1]: mystartup.service: Deactivated successfully.
@@ -9479,6 +8312,7 @@ Jan 26 07:58:16 testvm1.bot.org systemd[1]: mystartup.service: Deactivated succe
 Jan 26 08:31:07 testvm1.bot.org systemd[1]: Started mystartup.service - Runs /usr/local/bin/mystartup.sh.
 Jan 26 08:31:07 testvm1.bot.org startup.sh[8933]:2025-01-26 08:31:07 Startup worked
 Jan 26 08:31:07 testvm1.bot.org systemd[1]: mystartup.service: Deactivated successfully.
+```
 
 # 最终测试
 
@@ -9491,25 +8325,39 @@ Jan 26 08:31:07 testvm1.bot.org systemd[1]: mystartup.service: Deactivated succe
 ```
 # systemctl status startup
 + - startup - 运行 /usr/local/bin/startup.sh
+
 Loaded: loaded (/usr/local/lib/systemd/system/startup.sh)
+
 service; linked; vendor preset: disabled)
+
 365
 
 第 13 章在 systemd 中替换 rc.local
+
 Active: inactive (dead) since Sun 2025-01-26 07:58:16 UTC; 1min ago
+
 Duration: 0s
+
 Drop-In: /etc/systemd/system/startup.service.d/override.conf
+
 Main PID: 1050 (code=exited, status=0)
+
 Memory: 1.2M
+
 CPU: 10ms
+
 Kernel: Linux 5.x.0-generic
+
 Tasks: 86_64 1
+
 369
 
 条目显示启动已发生。
-
 ```
-# journalctl -u startup```
+```
+# journalctl -u startup
+```
+```
 Jan 25 15:55:00 testvm1.bot.org systemd[1]: Started mystartup.service - Runs /usr/local/bin/mystartup.sh.
 Jan 25 15:55:00 testvm1.bot.org systemd[1]: mystartup.service: Deactivated successfully.
 Jan 26 07:58:16 testvm1.bot.org systemd[1]: Started mystartup.service - Runs /usr/local/bin/mystartup.sh.
@@ -9517,15 +8365,17 @@ Jan 26 07:58:16 testvm1.bot.org systemd[1]: mystartup.service: Deactivated succe
 Jan 26 08:31:07 testvm1.bot.org systemd[1]: Started mystartup.service - Runs /usr/local/bin/mystartup.sh.
 Jan 26 08:31:07 testvm1.bot.org startup.sh[8933]:2025-01-26 08:31:07 Startup worked
 Jan 26 08:31:07 testvm1.bot.org systemd[1]: mystartup.service: Deactivated successfully.
+```
 
 注意日志中的条目。
 
 # 临时选项
 
-systemd 有一个选项可以让你继续一段时间使用 rc.local，即 rc-local 服务。通过 **systemctl enable rc-local** 命令启用该服务，将在下次启动时运行。当然，可以使用 **systemctl enable --now rc-local** 立即运行，而无需重启。
+systemd 有一个选项可以让你继续一段时间使用 rc.local，即 rc-local 服务。通过 `systemctl enable rc-local` 命令启用该服务，将在下次启动时运行。当然，可以使用 `systemctl enable --now rc-local` 立即运行，而无需重启。
+
 然而，rc.local 仍然是过时的。systemd-local-generator 的手册页明确说明了这一点：
 
-对 /etc/rc.local 的支持仅为特定系统提供。但是强烈建议现在不要使用此脚本，而是为在启动过程中运行的任何脚本提供适当的单元文件。
+对 `/etc/rc.local` 的支持仅为特定系统提供。但是强烈建议现在不要使用此脚本，而是为在启动过程中运行的任何脚本提供适当的单元文件。
 
 因此，将此选项作为临时解决方案，并将 rc.local 的内容迁移到一个或多个 systemd。
 
@@ -9539,7 +8389,7 @@ systemd 有一个选项可以让你继续一段时间使用 rc.local，即 rc-lo
 
 ## 总结
 
-rc.local 文件已经过时，其所有的临时支持很快将被完全取消。我们创建的 Bash 脚本和 systemd 服务在启动时运行一次然后退出。它不会作为守护进程保留在内存中，因为它没有设计为这样做。创建本地启动服务的程序也可以用于创建 systemd 的任何新服务。一旦知道如何做，这并不难。我们还看到设计用于启动时运行的服务也可以通过 systemctl 在命令行触发，这提供了一种侵入性的测试方法。
+rc.local 文件已经过时，其所有的临时支持很快将被完全取消。我们创建的 Bash 脚本和 systemd 服务在启动时运行一次然后退出。它不会作为守护进程保留在内存中，因为它没有设计为这样做。创建本地启动服务的程序也可以用于创建 systemd 的任何新服务。一旦知道如何做，这并不难。我们还看到设计用于启动时运行的服务也可以通过 `systemctl` 在命令行触发，这提供了一种侵入性的测试方法。
 
 ## 练习
 
@@ -9547,12 +8397,12 @@ rc.local 文件已经过时，其所有的临时支持很快将被完全取消�
 
 - 1. 你在系统启动期间运行程序的用场景是什么？如果你没有，也没关系
 
-
 现在，但你可能会考虑到之后的一些内容。
 
 - 2. 描述并解释在本章中创建的服务单元文件的内容。
 
 368
+
 第 13 章在 systemd 中替换 rc.local
 
 - 3. 为什么我们将服务单元文件放置在那个目录下？
@@ -9560,7 +8410,9 @@ rc.local 文件已经过时，其所有的临时支持很快将被完全取消�
 - 4. 设计并执行一个实验，确定你在本章中创建的服务单元是否执行了两个或多个命令以及外部执行文件（例如本地创建的脚本）。
 
 369
+
 # 第 14 章
+
 # 深入挖掘日志的价值
 
 ## 目标
@@ -9568,6 +8420,7 @@ rc.local 文件已经过时，其所有的临时支持很快将被完全取消�
 读完本章后，你将能够：
 
 - 使用 `journalctl` 命令的各种选项缩小日志搜索范围
+
 - 从 systemd 日志中提取相关数据用于解决问题
 
 ## 引言
@@ -9597,6 +8450,7 @@ D. Both, *systemd for Linux SysAdmins*, https://doi.org/10.1007/979-8-8688-1328-
 | -U, --until | 显示直到指定 [timestamp] 时间（之前）的所有日志条目。它们可以与 --since 配合使用以显示任意时间范围。也允许带引号的模糊时间，如“yesterday”和“2 hours ago”。 |
 
 372
+
 第 14 章 从日志中获取更多
 
 `journalctl` 命令的设计旨在通过强大且灵活的标准来识别所需数据，从 systemd 日志中提取可用的信息。
@@ -9633,23 +8487,18 @@ D. Both, *systemd for Linux SysAdmins*, https://doi.org/10.1007/979-8-8688-1328-
 ```bash
 # journalctl -b -2
 ```
-
 ```
 Jan 31 21:21:53 testvm1.both.org kernel: Linux version 6.12.111-200.fc41.x86_64 (mockbuild@8c05b948e2e66460390f7ce4d0dd4f64) (gcc) (GCC) 14.2.1 20250110 (Red Hat
 ```
-
 ```
 Jan 31 21:21:53 testvm1.both.org kernel: Command line: BOOT_IMAGE=(hd0,gpt2)/vmlinuz-6.12.111-200.fc41.x86_64 root=/dev/mapper/vg01-root ro rd.lvm.lv=vg01/root
 ```
-
 ```
 Jan 31 21:21:53 testvm1.both.org kernel: BIOS-e820: [mem 0x0000000000000000-0x00000000000009fbff] usable physical RAM map:
 ```
-
 ```
 Jan 31 21:21:53 testvm1.both.org kernel: BIOS-e820: [mem 0x0000000000000009fc00-
 ```
-
 ```
 <省略>
 ```
@@ -9660,46 +8509,44 @@ Jan 31 21:21:53 testvm1.both.org kernel: BIOS-e820: [mem 0x0000000000000009fc00-
 # journalctl -b 0dc99b59d8e9467d97552d8e451a12b
 ```
 
--u 选项允许你选择特定的单元进行检查。你可以使用单元名称或模式进行匹配，并多次使用此选项以匹配多个单元或模式。在示例中，我将其与 -b 结合使用，显示当前启动的 chronyd 日志条目：
+`-u` 选项允许你选择特定的单元进行检查。你可以使用单元名称或模式进行匹配，并多次使用此选项以匹配多个单元或模式。在示例中，我将其与 `-b` 结合使用，显示当前启动的 chronyd 日志条目：
 
 ```bash
 # journalctl -u chronyd -b
 ```
 
 376
+
 第 14 章 从日志中获取更多
 
 ```
 Jan 31 16:33:22 testvm1.both.org systemd[1]: Starting
 chronyd.service...
 ```
-
 ```
 Jan 31 21:33:25 testvm1.both.org chronyd[1166]: chronyd
 version 4.6 starting (+CMON +NTP +REFCLOCK +PRIVDROP +ASYNCD +NTS
 Jan 31 21:33:25 testvm1.both.org chronyd[1166]: Using
 leap second list. /usr/share/zoneinfo/leap-seconds.list
 ```
-
 ```
 Jan 31 21:33:25 testvm1.both.org chronyd[1166]: Frequency
 -0.417 +/- 0.545 ppm read from /var/lib/chronyd/drift
 ```
-
 ```
 Jan 31 21:33:25 testvm1.both.org chronyd[1166]: Loaded
 seccomp filter (level 2)
 ```
-
 ```
 Jan 31 21:33:25 testvm1.both.org systemd[1]: Started
 chronyd.service - NTP client/server.
 ```
-
 ```
 Jan 31 21:33:28 testvm1.both.org chronyd[1166]: Could not
 add source 192.168.0.52 : Already in use
 ```
+
+
 
 ```
 Jan 31 21:33:33 testvm1.both.org chronyd[1166]: Selected
@@ -9716,7 +8563,7 @@ Feb 01 08:07:25 testvm1.both.org chronyd[1166]: Could not
 add source 192.168.0.52 : Already in use
 ```
 
-假设你想查看在任意时间之间记录的事件。你也可以使用 -S 或 -since 以及 -U 或 --until 来指定开始和结束时间。以下命令显示从 2020 年 7 月 24 日 15:36:00 开始到现在的日志条目：
+假设你想查看在任意时间之间记录的事件。你也可以使用 `-S` 或 `-since` 以及 `-U` 或 `--until` 来指定开始和结束时间。以下命令显示从 2020 年 7 月 24 日 15:36:00 开始到现在的日志条目：
 
 ```bash
 # journalctl - "2025-01-24 15:36:00"
@@ -9724,20 +8571,19 @@ add source 192.168.0.52 : Already in use
 
 而此命令显示从 1 月 15:36:00 开始的所有日志条目
 
-
 2025年1月25日 16:00:00之前：
 
 ```bash
 # journalctl -S "2025-01-24 15:36:00" -U "2020-01-25 16:00:00"
 ```
 
-此命令结合了 -S、-U 和 -u 参数，提供了从2020年7月24日15:36:00开始到2020年7月25日16:00:00的Manager服务单元的日志条目：
+此命令结合了 `-S`、`-U` 和 `-u` 参数，提供了从2020年7月24日15:36:00开始到2020年7月25日16:00:00的`Manager`服务单元的日志条目：
 
 ```bash
 # journalctl -S "2020-07-24 15:36:00" -U "2020-07-25 16:00:00"-u NetworkManager
 ```
 
-可以使用 --facility 选项查看某些 syslog 设施，例如 cron、auth、mail、daemon、user 等。你可以使用 --facility=help 来列出可用的设施。在本例中，mail 设施并非用于电子邮件服务的 Sendmail 服务，而是 Linux 用于向 root 发送事件通知的本地客户端。Sendmail 实际上包含两个部分：服务器（在 Fedora 及相关发行版中默认不安装）和客户端（始终总是安装的，以便将系统邮件投送给本地接收者，特别是 root）：
+可以使用 `--facility` 选项查看某些 syslog 设施，例如 cron、auth、mail、daemon、user 等。你可以使用 `--facility=help` 来列出可用的设施。在本例中，mail 设施并非用于电子邮件服务的 Sendmail 服务，而是 Linux 用于向 root 发送事件通知的本地客户端。Sendmail 实际上包含两个部分：服务器（在 Fedora 及相关发行版中默认不安装）和客户端（始终总是安装的，以便将系统邮件投送给本地接收者，特别是 root）：
 
 ```bash
 # journalctl --facility=mail
@@ -9745,22 +8591,23 @@ add source 192.168.0.52 : Already in use
 
 ## 第 14 章 充分利用日志
 
-## 故障排除示例
+### 故障排除示例
 
 我最初并没有将 systemd 视为一个故障排除工具，但当我的 Web 服务器遇到问题时，我对 systemd 及其某些特性的不断了解帮助我定位并规避了该问题。
 
 你们中有些人会说 systemd 本身就是问题所在，根据我现在的了解，我可能会同意你们的。然而，我在 SystemV 中也遇到过类似的问题。没有任何软件是完美的，systemd 或 SystemV 也例外，但 systemd 提供的问题解决信息比 SystemV 要多得多。这一点很重要，也是我发现 systemd 优于 SystemV 的主要因素之一。让我们来看看我是如何处理几年前遇到的一个问题的。
 
-## 确定问题
+#### 确定问题
 
 问题在于我的服务器 yorktown（它为家庭办公网络提供 DNS、DHCP、NTP、HTTPD 和 Sendmail 邮件服务）在正常启动时未能启动 Apache HTTPD。在发现它没有运行后，我必须手动启动它。这个问题已经持续了一段时间，我终于抽出时间尝试修复它。
+
 寻找此问题源的第一步是确定 HTTPD 服务的状态。
 
 ```bash
 # systemctl status httpd
 ```
 
-- httpd.service - The Apache HTTP Server
+- `httpd.service` - The Apache HTTP Server
 
 ```
 Loaded: loaded (/usr/lib/systemd/system/httpd.service;
@@ -9790,11 +8637,12 @@ The Apache HTTP Server.
 ```
 
 这些状态信息是 systemd 的特性之一，比 SystemV 提供的任何内容都有用得多。
-大量的有用信息让我很容易地得出一个逻辑结论，引导我走向正确的方向。我从旧的 `chkconfig` 命令中得到的唯一信息就是服务是否在运行，以及在在运行时的进程 ID (PID)。这并没有什么帮助。
+
+大量的有用信息让我很容易地得出一个逻辑结论，引导我走向正确的方向。我从旧的 `chkconfig` 命令中得到的唯一信息就是服务是否在运行，以及在在运行时的进程 ID (`PID`)。这并没有什么帮助。
 
 此状态报告中的关键条目显示 HTTPD 无法绑定到 IP 地址，这意味着它无法接受请求。这表明网络速度不够快，导致 HTTPD 无法绑定到 IP 地址。为了解决这个问题，我想可以延迟 httpd 的启动时间。
 
-幸运的是，我发现可以使用 `systemctl edit` 命令创建一个覆盖文件。如果你不熟悉 Nano，请确保查看界面底部的提示。要自定义行为，请运行 `systemctl edit httpd`，它会自动创建一个文件（/etc/systemd/system/httpd.service.d/override.conf）并打开 Nano。我在文件中添加了以下内容并保存：
+幸运的是，我发现可以使用 `systemctl edit` 命令创建一个覆盖文件。如果你不熟悉 Nano，请确保查看界面底部的提示。要自定义行为，请运行 `systemctl edit httpd`，它会自动创建一个文件（`/etc/systemd/system/httpd.service.d/override.conf`）并打开 Nano。我在文件中添加了以下内容并保存：
 
 ```
 [Service]
@@ -9820,27 +8668,38 @@ CGroup: /system.slice/httpd.service
        └1102 /bin/sleep 30
 ```
 
-
-
 此命令显示了 30 秒延迟过期后 HTTPD 服务的状态。该服务正在正常运行。
 
 ```bash
 systemctl status httpd
 ```
 
-+   • httpd.service - The Apache HTTP service
++   • `httpd.service` - The Apache HTTP service
+
 Loaded: loaded (/usr/lib/systemd/system/httpd.service; enabled; vendor preset: disabled)
+
 Drop-In: /etc/systemd/system/httpd.d/override.conf
+
 /usr/lib/systemd/system/httpd.service.d/php-fpm.conf
+
 Active: active (running) since Thu 2020-04-16 12:15:01 EDT; 1min 18s ago
+
 Docs: man:httpd.service(8)
+
 Process: 1102 ExecStart+=/bin/sleep 30 (code=exited, status=0/SUCCESS)
+
 Main PID: 1567 (httpd)
+
 Status: "Total requests: 0; Idle/Busy workers 100/0:Requests/sec: 0; Bytes served/sec: 0 B/sec"
+
 Tasks: 213 (limit: 38363)
+
 Memory: 21.8M
+
 CPU: 82ms
+
 CGroup:/system/systemd/slice/httpd.service
+
 ```
 |-1567 /usr/sbin/httpd -DFOREGROUND
 |-1569 /usr/sbin/httpd -DFOREGROUND
@@ -9848,6 +8707,7 @@ CGroup:/system/systemd/slice/httpd.service
 ```
 
 382
+
 第 14 章 从日志中获取更多
 
 ```
@@ -9856,26 +8716,29 @@ CGroup:/system/systemd/slice/httpd.service
 ```
 
 Apr 16 12:14:29 yorktown.both.org systemd[1]: Starting The Apache HTTP Server...
+
 Apr 16 12:15:01 yorktown.both.org systemd[1]: Started The Apache HTTP Server.
 
 我本可以尝试一下更短的延迟是否同样有效，但我的系统并不关键，所以我决定不这样做。它目前这样运行很可靠，我很我很满意。因为我收集了所有这些信息，我将其提交到了 Red Hat Bugzilla，编号为 Bug 1825554。我认为报告 Bug 比抱怨 Bug 效率高得多。这也是贡献开源社区的一种极佳方式。
 
-## 更好的解决方案
+### 更好的解决方案
 
-在报告了此 Bug 几天后，我收到了一个回复，表示 systemd 只是一个管理器，如果 HTTPD 需要在满足某些条件后启动，则需要在单元文件（unit file）中进行指定。回复指向了 httpd.service 页面。我希望自己能早点发现这一点，因为它比我想出的方案要好。这个解决方案明确针对先决目标单元，而不是针对某种随机的延迟。
+在报告了此 Bug 几天后，我收到了一个回复，表示 systemd 只是一个管理器，如果 HTTPD 需要在满足某些条件后启动，则需要在单元文件（unit file）中进行指定。回复指向了 `httpd.service` 页面。我希望自己能早点发现这一点，因为它比我想出的方案要好。这个解决方案明确针对先决目标单元，而不是针对某种随机的延迟。
 
-以下是 httpd.service 手页中的相关摘录：
+以下是 `httpd.service` 手页中的相关摘录：
 
-### 在启动时启动服务
+#### 在启动时启动服务
 
-httpd.service 和 httpd.socket 单元默认是禁用的。要在启动时启动 httpd.service，请运行：
+`httpd.service` 和 `httpd.socket` 单元默认是禁用的。要在启动时启动 `httpd.service`，请运行：
 
 ```bash
 systemctl enable httpd.service
 ```
+
 2. https://www.mankier.com/8/httpd.service#Description-Starting_the_service_at_boot_time
 
 383 第 14 章 从日志中获取更多
+
 在默认配置下，httpd 守护进程将被安装，并在配置的 IPv4 或 IPv6 地址上监听端口 80（如果安装了 mod_ssl，则监听端口 443 的 TLS 连接）。
 
 如果 httpd 配置为依赖任何特定的 IP 地址（例如使用 "Listen" 指令），而该地址可能在启动期间才可用，或者 httpd 依赖于其他服务（例如数据库守护进程），则必须配置该服务以确保正确的启动顺序。
@@ -9888,23 +8751,21 @@ After=network-online.target
 Wants=network-online.target
 ```
 
-我仍然认为这是一个 Bug，因为这非常常见——至少在我的经验中，在 httpd.conf 文件中使用 Listen 指令是常态。我一直使用 Listen 指令，即使在只有一个 IP 地址的主机上也是如此，而且在具有多个网络接口卡（NIC）和互联网协议（IP）地址的主机上，这显然是必要的。在 httpd.service 默认文件中添加上述行不会对不使用 Listen 指令的配置产生问题，并能防止使用该指令的配置出现此问题。
+我仍然认为这是一个 Bug，因为这非常常见——至少在我的经验中，在 `httpd.conf` 文件中使用 `Listen` 指令是常态。我一直使用 `Listen` 指令，即使在只有一个 IP 地址的主机上也是如此，而且在具有多个网络接口卡（NIC）和互联网协议（IP）地址的主机上，这显然是必要的。在 `httpd.service` 默认文件中添加上述行不会对不使用 `Listen` 指令的配置产生问题，并能防止使用该指令的配置出现此问题。
 
 在此我使用了建议的解决方案。
 
 注意，尽管我报告的 Bug 被关闭为“不是 Bug”（notabug），但问题似乎已经解决。
 
 384
+
 第 14 章 从日志中获取更多
 
-## 总结
+### 总结
 
 在本章中，我们学习了使用 `journalctl` 命令以不同的格式从 systemd journal 中提取各种类型的数据。它还探讨了管理日志文件，以及如何从命令和脚本向日志添加记录。
 
-与旧的 syslogd 程序相比，systemd journal 系统为条目提供了大量的元数据和上下文。这些额外数据以及事件发生时其他日志条目提供的上下文可以帮助系统管理员定位并
-
-
-
+与旧的 `syslogd` 程序相比，systemd journal 系统为条目提供了大量的元数据和上下文。这些额外数据以及事件发生时其他日志条目提供的上下文可以帮助系统管理员定位并
 
 ## 各主要阶段耗时概览
 
@@ -9912,15 +8773,15 @@ Wants=network-online.target
 
 ## 第 15 章：分析 systemd 启动与配置
 
-## 基础分析
+### 基础分析
 
 如上所述，我在我的主工作站上进行了此实验，这可以提供关于物理主机更真实的视角。然而，你应该在虚拟机上进行此实验。除非另有说明，本章中的所有命令都可以由非 root 用户执行。
 
-## 实验 15-1：使用 systemd-analyze
+#### 实验 15-1：使用 systemd-analyze
 
 此命令执行一个非常基础的分析，查看启动和启动每个阶段的总耗时。这可以通过非 root 用户身份进行。
 
-### $ systemd-analyze
+##### $ systemd-analyze
 
 启动耗时 53.951s (firmware) + 6.606s (loader) + 2.061s (kernel) + 5.956s (initrd) + 8.883s (userspace) = 1min 17.458s
 
@@ -9932,22 +8793,28 @@ Wants=network-online.target
 
 这个对启动过程的概览非常有趣，并提供了良好但有限的信息，但启动过程本身还有更多信息可用。
 
-## 追责游戏 (The Blame Game)
+### 追责游戏 (The Blame Game)
 
 作为系统管理员，我总是想确定问题的真正罪祸首，即根源。只有这样，我们才能真正确保未来不再发生相同的问题。
 
-## 实验 15-2：分配责任
+#### 实验 15-2：分配责任
 
 我们可以使用 `systemd-analyze blame` 来发现哪些 systemd 单元初始化耗时最。这提供了许多详细信息，并使我们能够看到启动过程中哪些部分花费了最长时间。结果按照初始化时间从高到低排序显示。你可以以非 root 用户身份执行此操作。
 
-### $ systemd-analyze blame
+##### $ systemd-analyze blame
 
 | 服务名称 | 耗 |
+
 | :--- | :--- |
+
 | ftrim.service | 2min 30.408s |
+
 | vboxdrv.service | 33.971s |
+
 | dev-disk-by-partuid-4212eea1-96d0-x2dc341-a698-18a0752f034f.device | 5.832s |
+
 | dev-disk-by-diskseq-1-part1.device | 5.832s |
+
 | dev-sda1.device name | 5.83s |
 
 <SNIP - 删除了大量时间逐渐减小的条目>
@@ -9956,7 +8823,9 @@ Wants=network-online.target
 
 ## 关键链 (Critical Chain)
 
-就像项目管理中的关键路径一样，关键链显示了启动期间发生的关键敏感型事件链。如果启动缓慢，这些就是你想要关注的 systemd 单元——它们是导致延迟的原因。此工具不会显示所有已启动的单元，仅显示此关键事件链中的单元。
+
+
+就像项目管理中的关键路径一样，关键链显示了启动期间发生的关键敏感型事件链。如果启动缓慢，这些就是你想要关注的 `systemd` 单元——它们是导致延迟的原因。此工具不会显示所有已启动的单元，仅显示此关键事件链中的单元。
 
 在支持颜色的终端上（今天大多数终端模拟器都支持），导致延迟的单元将用红色高亮。
 
@@ -9970,26 +8839,35 @@ $ systemd-analyze critical-chain
 
 单元变为活动或启动的时间在 `@` 字符之后打印。单元启动所需在 `+` 字符之后打印。
 
-graphical.user.target @8.850s
-multi-user.target @8.849s
-vboxweb-user.service @8.799s
-network-online.target @8.776s
-NetworkManager-wait-online.service @8.732s
-NetworkManager.service @8.468s
-network-pre.target @8.438s
-systemd-journal-service.service @8.409s
-basic.target @8.367s
-dbus-broker.service @8.348s
-systemd-binfmt.service @8.314s
-systemd-tmpfiles-setup.service @8.290s
-systemd-fck.service @8.071s
-var.mount @7.960s
+`graphical.user.target` @8.850s
+
+`multi-user.target` @8.849s
+
+`vboxweb-user.service` @8.799s
+
+`network-online.target` @8.776s
+
+`NetworkManager-wait-online.service` @8.732s
+
+`NetworkManager.service` @8.468s
+
+`network-pre.target` @8.438s
+
+`systemd-journal-service.service` @8.409s
+
+`basic.target` @8.367s
+
+`dbus-broker.service` @8.348s
+
+`systemd-binfmt.service` @8.314s
+
+`systemd-tmpfiles-setup.service` @8.290s
+
+`systemd-fck.service` @8.071s
+
+`var.mount` @7.960s
 
 在这个例子中，`vboxdrv.service` 和 `vboxweb-service` 都花费了相当长的启动时间。下一个例子是另一个虚拟机。将此输出与你自己的进行对比，看看差异有多大。
-
-
-
-
 
 ```
 service @16.265s +272ms
@@ -10010,56 +8888,85 @@ service @16.265s +272ms
 
 我对这里长长的依赖链感到惊讶，但这可能可能是因为没有某个像 VirtualBox 那样耗费大量时间的单一服务并隐藏了其他服务，从而将它们从关键链中移除了。
 
-## 第 15 章：分析 systemd 启动与配置
+# 第 15 章：分析 systemd 启动与配置
 
-### 系统状态
+## 系统状态
 
 你有时可能需要确定系统的当前状态。`systemd-analyze dump` 命令会输出大量关于当前系统状态的数据。
 
 ### 实验 15-4：分析系统状态
 
-该命令从主启动时间戳列表以及每个 systemd 单元列表以及每个单元状态的完整描述开始。
+该命令从主启动时间戳列表以及每个 `systemd` 单元列表以及每个单元状态的完整描述开始。
 
 ```bash
 $ systemd-analyze dump
 ```
 
-Manager: systemd 253 (253.2-1-fc38)
-Features: +PAM +AUDIT +SELINUX -APPARMOR +IMA +SMACK +SECCOMP
--GCRYPT +GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO
-+ID2 -IDN ->
+`Manager: systemd 253 (253.2-1-fc38)`
 
-Timestamp firmware: 1min 557.292ms
-Timestamp loader: 6.606226s
-Timestamp kernel: Sun 2023-04-30 17:09:49 EDT
-Timestamp initrd: Sun 2023-04-30 17:09:51 EDT
-Timestamp userspace: Sun 2023-04-30 17:09:57 EDT
-Timestamp finish: Sun 2023-04-30 21:10:06 EDT
-Timestamp security-start: Sun 2023-04-30 17:09:57 EDT
-Timestamp security-finish: Sun 2023-04-30 17:09:57 EDT
-Timestamp generators-start: Sun 2023-04-30 21:09:57 EDT
-Timestamp generators-finish: Sun 2023-04-30 21:09:57 EDT
-Timestamp units-load-start: Sun 2023-04-30 21:09:57 EDT
-Timestamp units-load-finish: Sun 2023-04-30 21:09:58 EDT
-Timestamp units-load: Tue 2023-05-02 13:30:41 EDT
-Timestamp initrd-security-start: Sun 2023-04-30 17:09:51 EDT
-Timestamp initrd-security-finish: Sun 2023-04-30 17:09:51 EDT
-Timestamp initrd-generators-start: Sun 2023-04-30 17:09:51 EDT
-Timestamp initrd-generators-finish: Sun 2023-04-30 17:09:51 EDT
-Timestamp initrd-units-load-start: Sun 2023-04-30 17:09:51 EDT
-Timestamp initrd-units-load-finish: Sun 2023-04-30 17:09:51 EDT
+`Features: +PAM +AUDIT +SELINUX -APPARMOR +IMA +SMACK +SECCOMP`
 
--> Unit logwatch.service:
-Description: Log分析和报告器
-Instance: n/a
-Unit Load State: loaded
-Unit Active State: inactive
-State Change Timestamp: Wed 2023-05-03 00:00:20 EDT
-Inactive Exit Timestamp: Wed 2023-05-03 00:00:05 EDT
-Active Enter Timestamp: n/a
-Active Exit Timestamp: n/a
+`-GCRYPT +GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO`
 
-<SNIP - 除了数百万行输出>
+`+ID2 -IDN ->`
+
+`Timestamp firmware: 1min 557.292ms`
+
+`Timestamp loader: 6.606226s`
+
+`Timestamp kernel: Sun 2023-04-30 17:09:49 EDT`
+
+`Timestamp initrd: Sun 2023-04-30 17:09:51 EDT`
+
+`Timestamp userspace: Sun 2023-04-30 17:09:57 EDT`
+
+`Timestamp finish: Sun 2023-04-30 21:10:06 EDT`
+
+`Timestamp security-start: Sun 2023-04-30 17:09:57 EDT`
+
+`Timestamp security-finish: Sun 2023-04-30 17:09:57 EDT`
+
+`Timestamp generators-start: Sun 2023-04-30 21:09:57 EDT`
+
+`Timestamp generators-finish: Sun 2023-04-30 21:09:57 EDT`
+
+`Timestamp units-load-start: Sun 2023-04-30 21:09:57 EDT`
+
+`Timestamp units-load-finish: Sun 2023-04-30 21:09:58 EDT`
+
+`Timestamp units-load: Tue 2023-05-02 13:30:41 EDT`
+
+`Timestamp initrd-security-start: Sun 2023-04-30 17:09:51 EDT`
+
+`Timestamp initrd-security-finish: Sun 2023-04-30 17:09:51 EDT`
+
+`Timestamp initrd-generators-start: Sun 2023-04-30 17:09:51 EDT`
+
+`Timestamp initrd-generators-finish: Sun 2023-04-30 17:09:51 EDT`
+
+`Timestamp initrd-units-load-start: Sun 2023-04-30 17:09:51 EDT`
+
+`Timestamp initrd-units-load-finish: Sun 2023-04-30 17:09:51 EDT`
+
+`-> Unit logwatch.service:`
+
+`Description: Log分析和报告器`
+
+`Instance: n/a`
+
+`Unit Load State: loaded`
+
+`Unit Active State: inactive`
+
+`State Change Timestamp: Wed 2023-05-03 00:00:20 EDT`
+
+`Inactive Exit Timestamp: Wed 2023-05-03 00:00:05 EDT`
+
+`Active Enter Timestamp: n/a`
+
+`Active Exit Timestamp: n/a`
+
+`<SNIP - 除了数百万行输出>`
 
 在我的主工作站上，这个命令生成了 59,859 行内容和约 1.75MB 数据。这个命令运行非常快，所以你不需要等待。
 
@@ -10067,53 +8974,85 @@ Active Exit Timestamp: n/a
 $ systemd-analyze --dump
 ```
 
-Manager systemd 256.12 (256.12-1-fc41)
-Features: +PAM+AUDIT+SELINUX -APARMOR +IMA +SMACK +SECCMP
--GCRYPT+GNUTLS+OPENSSL +ACL+BLKID+CURL +ELFUTILS+FIDO>
+`Manager systemd 256.12 (256.12-1-fc41)`
 
-Timestamp uspace: Fri 2025-03-14 09:48:17 EDT
-Timestamp finish: Fri 2025-03-14 09:48:17 EDT
-Timestamp generators-start: Fri 2025-03-14 09:48:17 EDT
-Timestamp generators-finish: Fri 2025-03-14 09:48:17 EDT
-Timestamp units-load-start: Fri 2025-03-14 09:48:17 EDT
-Timestamp units-load-finish: Fri 2025-03-14 09:48:17 EDT
-Timestamp units-load: Sat 2025-03-15 14:37:50 EDT
+`Features: +PAM+AUDIT+SELINUX -APARMOR +IMA +SMACK +SECCMP`
 
--> Unit blockdev@dev-mapper-vg01-usr.target:
-Description: blockdev@dev-mapper-vg01-usr.target
-Instance: dev-mapper-vg01-usr.target
-Unit Load State: not-found
-Unit Active State: inactive
-State Change Timestamp: Fri 2025-03-14 09:48:22 EDT
-Inactive Exit Timestamp: n/a
-Active Enter Timestamp: n/a
-Active Exit Timestamp: n/a
-Inactive Enter Timestamp: n/a
-GC: yes
-Daemon Reload: no
-Transient: no
-Garbage Collection Mode: inactive
-Before: usr.mount (target)
-ReferencedBy: usr.mount (target)
+`-GCRYPT+GNUTLS+OPENSSL +ACL+BLKID+CURL +ELFUTILS+FIDO>`
 
--> Unit background.slice:
-Description: 用户后台切片
-Instance: n/a
-Unit Load State: loaded
-Unit Active State: active
-State Change Timestamp: Fri 2025-03-14 09:48:22 EDT
-Inactive Exit Timestamp: Fri 2025-03-14 09:48:22 EDT
-Active Enter Timestamp: Fri 2025-03-14 09:48:22 EDT
-Active Exit Timestamp: n/a
-Inactive Enter Timestamp: n/a
+`Timestamp uspace: Fri 2025-03-14 09:48:17 EDT`
 
-<SNIP>
+`Timestamp finish: Fri 2025-03-14 09:48:17 EDT`
+
+`Timestamp generators-start: Fri 2025-03-14 09:48:17 EDT`
+
+`Timestamp generators-finish: Fri 2025-03-14 09:48:17 EDT`
+
+`Timestamp units-load-start: Fri 2025-03-14 09:48:17 EDT`
+
+`Timestamp units-load-finish: Fri 2025-03-14 09:48:17 EDT`
+
+`Timestamp units-load: Sat 2025-03-15 14:37:50 EDT`
+
+`-> Unit blockdev@dev-mapper-vg01-usr.target:`
+
+`Description: blockdev@dev-mapper-vg01-usr.target`
+
+`Instance: dev-mapper-vg01-usr.target`
+
+`Unit Load State: not-found`
+
+`Unit Active State: inactive`
+
+`State Change Timestamp: Fri 2025-03-14 09:48:22 EDT`
+
+`Inactive Exit Timestamp: n/a`
+
+`Active Enter Timestamp: n/a`
+
+`Active Exit Timestamp: n/a`
+
+`Inactive Enter Timestamp: n/a`
+
+`GC: yes`
+
+`Daemon Reload: no`
+
+`Transient: no`
+
+`Garbage Collection Mode: inactive`
+
+`Before: usr.mount (target)`
+
+`ReferencedBy: usr.mount (target)`
+
+`-> Unit background.slice:`
+
+`Description: 用户后台切片`
+
+`Instance: n/a`
+
+`Unit Load State: loaded`
+
+`Unit Active State: active`
+
+`State Change Timestamp: Fri 2025-03-14 09:48:22 EDT`
+
+`Inactive Exit Timestamp: Fri 2025-03-14 09:48:22 EDT`
+
+`Active Enter Timestamp: Fri 2025-03-14 09:48:22 EDT`
+
+`Active Exit Timestamp: n/a`
+
+`Inactive Enter Timestamp: n/a`
+
+`<SNIP>`
 
 花点时间探索一下这些命令提供的数据。我在这里发现了很多有趣的信息。
 
 ## 分析图表
 
-大多数人认为精美的图表易于阅读，并且比基于文本的性能数据更容易理解。systemd-analyze 提供了以 *.svg 矢量图表显示启动和启动数据的能力。
+大多数人认为精美的图表易于阅读，并且比基于文本的性能数据更容易理解。`systemd-analyze` 提供了以 `*.svg` 矢量图表显示启动和启动数据的能力。
 
 ### 实验 15-5：创建分析图表
 
@@ -10125,13 +9064,13 @@ $ systemd-analyze plot > /tmp/bootup.svg
 
 该命令生成的矢量图形文件显示了启动和启动期间的位置。生成该文件需要几秒钟。
 
-上述命令生成的 svg 文件是一个文本文件，定义了一系列可以使用许多应用程序（如 image Viewer、ristretto、okular、libreoffice draw 等）生成图形的矢量。我使用了 libreoffice draw 来渲染这张图。图表很大，你需要大幅放大才能看清细节。图 15-1 显示了图表的一小部分。
+上述命令生成的 `svg` 文件是一个文本文件，定义了一系列可以使用许多应用程序（如 `image Viewer`、`ristretto`、`okular`、`libreoffice draw` 等）生成图形的矢量。我使用了 `libreoffice draw` 来渲染这张图。图表很大，你需要大幅放大才能看清细节。图 15-1 显示了图表的一小部分。
 
 #### 图 15-1 在 LibreOffice Draw 中显示的 bootop.svg
 
-bootop 序列位于图中零 (0) 点左侧，而启动序列位于右侧。这小部分显示了由 initrd 启动的内核和 initrd 进程。这张图一眼就能启动了什么、花了多久以及主要的依赖关系，关键路径用红色突出。
+`bootop` 序列位于图中零 `0` 点左侧，而启动序列位于右侧。这小部分显示了由 `initrd` 启动的内核和 `initrd` 进程。这张图一眼就能启动了什么、花了多久以及主要的依赖关系，关键路径用红色突出。
 
-另一个生成图形输出的命令是 systemd-analyze plot，它以 dot 格式生成文本密度图。生成的数据流通过 **dot** 工具处理，该工具是一系列从各种类型数据生成矢量图形程序的一部分。生成的 svg 文件可以使用之前提到的 svg 工具查看。
+另一个生成图形输出的命令是 `systemd-analyze plot`，它以 `dot` 格式生成文本密度图。生成的数据流通过 `dot` 工具处理，该工具是一系列从各种类型数据生成矢量图形程序的一部分。生成的 `svg` 文件可以使用之前提到的 `svg` 工具查看。
 
 首先，生成文件。这在我的主工作站上花费了近九分钟。
 
@@ -10147,21 +9086,21 @@ $ time systemd-analyze dot | dot -Tsvg > /tmp/test.svg
 | 红色 | Conflicts |
 | 绿色 | After |
 
-real 8m37.544s
-user 8m35.375s
-sys 0m0.070s
-[root@david ~]# 我不会在这里重现生成的图表，因为看起来就像一团乱麻。但你绝对应该尝试尝试并查看结果以理解我的意思。
+`real 8m37.544s`
+
+`user 8m35.375s`
+
+`sys 0m0.070s`
+
+`[root@david ~]#` 我不会在这里重现生成的图表，因为看起来就像一团乱麻。但你绝对应该尝试尝试并查看结果以理解我的意思。
 
 ### 条件判断
 
-在阅读 systemd-analyze(1) 的手册页时，我发现的一个非常有趣且通用的功能之一是 condition 子命令。这个 condition 子命令可以用于测试 systemd 单元文件中使用的各种条件和断言。
+在阅读 `systemd-analyze(1)` 的手册页时，我发现的一个非常有趣且通用的功能之一是 `condition` 子命令。这个 `condition` 子命令可以用于测试 `systemd` 单元文件中使用的各种条件和断言。
 
 ### 列出配置文件
 
-我经常发现查看 systemd 单元和配置的内容很有用。systemd-analyze 工具为我们提供了一种将各种配置文件的内容发送到 STDOUT 的方法。
-
-
-
+我经常发现查看 `systemd` 单元和配置的内容很有用。`systemd-analyze` 工具为我们提供了一种将各种配置文件的内容发送到 `STDOUT` 的方法。
 
 让我们开始查看显示管理器服务。可以使用 `cat-config` 子命令执行此操作。该命令的基础目录是 `/etc/`。
 
@@ -10196,13 +9135,14 @@ Alias=display-manager.service
 ```
 
 我发现，为了实现比标准 `cat` 命令多一点点的功能，需要输入大量的字符。
+
 然而，它确实能够带有语法颜色地渲染数据流，使得文件更易读。`cat` 命令并做不到这一点。
 
-我发现另一个有用的语法命令是这一个。它至少可以在标准的 systemd 目录下搜索符合指定模式的文件。
+我发现另一个有用的语法命令是这一个。它至少可以在标准的 `systemd` 目录下搜索符合指定模式的文件。
 
 ## 第 15 章：分析 systemd 启动与配置
 
-```
+```bash
 $ systemctl cat basic*
 # /usr/lib/systemd/system/basic.target
 # SPDX-License-Identifier: LGPL-2.1-or-later
@@ -10238,7 +9178,8 @@ RequiresMountsFor=/var /var/tmp
 Wants=tmp.mount
 ```
 
-第 15 章：分析 systemd 启动与配置。
+第 15 章：分析 `systemd` 启动与配置。
+
 这两个命令都会在每个文件的内容前加上注释行，其中包含文件的完整路径和名称。
 
 ### 单元文件验证
@@ -10258,9 +9199,12 @@ Wants=tmp.mount
 ### 安全性
 
 `security` 子命令检查指定服务的安全级别。
+
 它只作用于服务单元，而不作用于其他类型的单元文件。让我们检查 `NetworkManager` 服务单元吧。
 
 ### 实验 15-9：安全检查
+
+
 
 ```
 [root@david ~]# systemd-analyze security NetworkManager.service
@@ -10269,18 +9213,18 @@ Wants=tmp.mount
 | NAME | Description | Score |
 | :--- | :--- | :--- |
 | × Directory=/RootImage= | 服务在主机的根目录下运行 | 0.1 |
-| SupplementaryGroups= | 服务以 root 运行，该选项不适用 | |
-| RemovePC= | 服务以 root 运行，该选项不适用 | |
+| SupplementaryGroups= | 服务以 root 运行，该选项不适用 |  |
+| RemovePC= | 服务以 root 运行，该选项不适用 |  |
 | × User=/DynamicUser= | 服务以 root 用户运行 | 0.4 |
 | + ✓ NoNewPrivileges= | 服务进程可能会获得新权限 | 0.2 |
-| + - CapabilityBoundingSet=~CAP_SYS_TIME | 服务进程不能更改系统时 | |
-| + - AmbientCapabilities= | 服务进程未接收环境能力 | |
+| + - CapabilityBoundingSet=~CAP_SYS_TIME | 服务进程不能更改系统时 |  |
+| + - AmbientCapabilities= | 服务进程未接收环境能力 |  |
 | + - PrivateDevices= | 服务可能访问硬件设备 | 0.2 |
 | + - ProtectClock= | 服务可能写入硬件时钟或系统时钟 | 0.2 |
 | + - CapabilityBoundingSet=~CAP_KILL | 服务可能向任意进程发送 UNIX 信号 | 0.1 |
 | + - ProtectKernelLogs= | 服务可能从内核日志环缓冲区读取或写入 | 0.2 |
-| <SNIP> | | |
-| + - Overall exposure level for NetworkManager.service: 7.8 | |
+| <SNIP> |  |  |
+| + - Overall exposure level for NetworkManager.service: 7.8 |  |  |
 
 EXPOSED lines 40-83/83 (END)
 
@@ -10307,10 +9251,7 @@ EXPOSED lines 40-83/83 (END)
 
 重要的是，尽管 Linus Torvalds 是作为练习编写了 Unix 内核，但他没有对中间层做任何更改。但我也知道它显著扩展了初始化系统的功能。
 
-
-
-
-## 第 16 章为什么我支持 systemd 计划
+# 第 16 章 为什么我支持 systemd 计划
 
 systemd 计划接管系统服务世界。他简单地重新编译了 SystemV init，使其与他全新的内核配合。SystemV 比 Linux 老得多，几十年来它一直需要彻底转变为完全全新的事物。
 
@@ -10333,19 +9274,27 @@ systemd 的新功能包含了更多关于服务的信息，无论它们是否正
 - * dhcpd.service - DHCP4 Server Daemon
 
 Loaded: loaded (/usr/lib/system/system/dhcpd.service; enabled; vendor preset: disabled)
+
 Active: active (running) since Fri 2021-04-09 21:43:41
+
 EDT: 4 days ago
 
 1 Wikipedia, "Lennart Poettering," https://en.wikipedia.org/wiki/Lennart_Poettering
 
 Docs: man:dhcpd(8)
+
 man:dhcpd.conf(5)
 
 Main PID: 1385 (dhcpd)
+
 Status: "Dispatching packets..."
+
 Tasks: 1 (limit: 9382)
+
 Memory: 3.6M
+
 CPU: 240ms
+
 CGroup: /system.slice/dhcpd.service
 
 ```
@@ -10353,17 +9302,26 @@ CGroup: /system.slice/dhcpd.service
 ```
 
 Apr 14 20:51:01 yorktown.bot.org dhcpd[1385]: DHCPREQUEST for 192.168.0.7 from e0:d5:ae2:de:a4 via enol
+
 Apr 14 20:51:01 yorktown.bot.org dhcpd[1385]: DHCPACK on 192.168.0.7 to e0:d5:ae2:de:a4 via enol
+
 Apr 14 20:51:14 yorktown.bot.org dhcpd[1385]: DHCPREQUEST for 192.168.0.8 from e80:f2:f3:3d:0ae8 via enol
+
 Apr 14 20:51:24 yorktown.bot.org dhcpd[1385]: DHCPACK on 192.168.0.8 to e80:f2:f3:3d:0ae8 via enol
+
 Apr 14 20:51:21 yorktown.bot.org dhcpd[1385]: DHCPREQUEST for 192.168.0.201 from 80:fa:5b:63:37:88 via enol
+
 Apr 14 20:51:14 yorktown.bot.org dhcpd[1385]: DHCPACK on 192.168.0.201 to 80:fa:5b:63:37:88 via enol
+
 Apr 14 20:51:24 yorktown.bot.org dhcpd[1385]: DHCPREQUEST for 192.168.0.6 from e0:69:95:a4:cd via enol
+
 Apr 14 20:51:24 yorktown.bot.org dhcpd[1385]: DHCPACK on 192.168.0.6 to e0:69:95:a4:cd via enol
+
 Apr 14 20:52:41 yorktown.bot.org dhcpd[1385]: DHCPREQUEST for 192.168.0.5 from 00:1e:4df:3a:d7 via enol
+
 Apr 14 20:52:41 yorktown.bot.org dhcpd[1385]: DHCPACK on 192.168.0.5 to 00:1e:4f:df:3a:d7 via en0
 
-[root@yorktown ~]#]
+[root@yorktown ~]#
 
 在单个命令中获取所有信息是令人权能的，并为我简化了问题的确定。我从一开始就能获得更多信息。我不仅能看到服务正在运行，还能从最近的日志中看到情况。
 
@@ -10380,29 +9338,35 @@ BOINC，即伯克利开放基础设施网络计算客户端，用于利用全球
 - * boinc-client.service - Berkeley Open Infrastructure Network Computing Client
 
 Loaded: loaded (/usr/lib/system/system/boinc-client.service; enabled; vendor preset: disabled)
+
 Active: active (running) since Fri 2021-04-09 21:43:41
+
 EDT: 4 days ago
+
 Docs: man:boinc(1)
+
 Main PID: 1385 (boinc)
+
 Tasks: 18 (limit: 9382)
+
 Memory: 1.1G
+
 CPU: 1month 1w 2h 47min
 
 2 Berkeley BOINC, https://boinc.edu/
+
 World Community Grid, https://www.communitygrid.org/
 
 CGroup: /system.slice/boinc-client.service
 
 关键在于 BOINC 客户端作为守护进程运行，并应该由初始化系统管理。所有作为守护进程运行的软件都应该由 systemd 管理。事实上，即使是仍提供 SystemV 启动脚本的软件也由 systemd 管理。
 
-
-
-
 de/blog/projects/the-new-configuration-files
 
 416
 
 第 16 章 为什么我支持 systemd 统治世界 新配置文件
+
 子系统内部的变化
 
 以及管理它们起初看起来也同样令人令畏。更不用说有时像 systemd-resolved 这样的新工具可能会破坏运行已久的方法，正如我在文章《使用 Ansible 解决 systemd-resolved 命名服务失败》中指出的那样。5
@@ -10454,7 +9418,7 @@ $ journalctl --pager-end
 
 `--pager-end`（或简写 `-e`）选项从 `journalctl` 输出的末尾开始查看日志，你必须向上滚动才能看到早些发生的事件。
 
-systemd 维护了一个错误和消息的“目录”，其中充满了错误记录、可能的解决方案、指向支持论坛的链接以及开发者文档。这可以为日志事件提供重要的上下文，否则它在消息海洋中可能只是一个令人困惑的闪现，甚至可能不被注意到。要进一步排查问题，可以使用 `--catalog`（或简写 `-e` [注：此处原文似有误，应为 --catalog]）选项：
+systemd 维护了一个错误和消息的“目录”，其中充满了错误记录、可能的解决方案、指向支持论坛的链接以及开发者文档。这可以为日志事件提供重要的上下文，否则它在消息海洋中可能只是一个令人困惑的闪现，甚至可能不被注意到。要进一步排查问题，可以使用 `--catalog`（或简写 `-e`）选项：
 
 ```
 $ journalctl --pager-end
@@ -10493,6 +9457,8 @@ $ journalctl --pager-end
 
 在很有可能记得上次启动电脑的情况下，你可以使用 systemd 的日志工具列出启动会话：
 
+
+
 ```
 $ journalctl --list-boots
 -42 7fe7c3... Fri 2020-12-04 05:13:59 - Wed 2020-12-16 16:01:23
@@ -10502,13 +9468,13 @@ $ journalctl --list-boots
 0 37fbe4a... Tue 2021-03-30 04:46:13 - Tue 2021-03-30 10:42:08
 ```
 
-## 服务管理
+# 服务管理
 
-systemd 的第一个任务是管理服务。对于许多用户，拥有统一的管理方法是用户的期望，也是忙碌的系统管理员来说的一项实用的奢侈。对于这项非凡的任务，系统守护进程（即 systemd）被开发并迅速被所有主要的 Linux 发行版采纳。
+systemd 的第一个任务是管理服务。对于许多用户，拥有统一的管理方法是用户的期望，也是忙碌的系统管理员来说的一项实用的奢侈。对于这项非凡的任务，系统守护进程（即 `systemd`）被开发并迅速被所有主要的 Linux 发行版采纳。
 
-当然，systemd 并不是管理 Linux 系统的唯一方法。有很多替代 init 系统，包括 sysvinit、OpenRC、runit、s6 甚至 BusyBox，但 systemd 将 Linux 视为一个统一的数据集，旨在通过强大的工具进行一致的操作和查询。对于忙碌的系统管理员和许多用户来说，systemd 的速度和易用性是一个重要的特性。以下是五个理由。
+当然，`systemd` 并不是管理 Linux 系统的唯一方法。有很多替代 init 系统，包括 `sysvinit`、`OpenRC`、`runit`、`s6` 甚至 `BusyBox`，但 `systemd` 将 Linux 视为一个统一的数据集，旨在通过强大的工具进行一致的操作和查询。对于忙碌的系统管理员和许多用户来说，`systemd` 的速度和易用性是一个重要的特性。以下是五个理由。
 
-## 启动管理
+# 启动管理
 
 启动 Linux 计算机可以是一个出人意料的罕见事件，如果你愿意的话。在服务器世界，运行时间通常按年而不是月来计算。笔记本电脑和台式机倾向于频繁地关机和启动，尽管它们更有可能被挂起或休眠而不是直接关机。无论何种方式，自最近启动事件以来的时间可以作为计算机健康检查的某种会话管理器。这是在监控系统或诊断问题时限制你查看的数据范围的有用方法。
 
@@ -10527,7 +9493,7 @@ $ journalctl --list-boots
 
 左侧的数字（在此示例中 42、41、1 和 0）是每个启动会话的索引号。换句话说，为了查看特定启动会话，可以使用它的索引作为参考。
 
-## 日志审查
+# 日志审查
 
 查看日志是推断系统信息的重要方法。日志提供了你的计算机在你直接监督下进行的许多活动历史。你可以看到服务何时启动、定时任务何时运行、后台运行哪些服务、哪些活动失败了等。最常见的初始排障步骤之一是查看日志，使用 `journalctl` 很容易完成。
 
@@ -10554,11 +9520,11 @@ $ journalctl --list-boots
 0 37fbe4a... Tue 2021-03-30 04:46:13 - Tue 2021-03-30 10:42:08
 ```
 
-## 服务管理
+# 服务管理
 
-systemd 的第一个任务是管理服务。对于许多用户，拥有统一的管理方法是用户的期望，也是忙碌的系统管理员来说的一项实用的奢侈。对于这项非凡的任务，系统守护进程（即 systemd）被开发并迅速被所有主要的 Linux 发行版采纳。
+systemd 的第一个任务是管理服务。对于许多用户，拥有统一的管理方法是用户的期望，也是忙碌的系统管理员来说的一项实用的奢侈。对于这项非凡的任务，系统守护进程（即 `systemd`）被开发并迅速被所有主要的 Linux 发行版采纳。
 
-当然，systemd 并不是管理 Linux 系统的唯一方法。有很多替代 init 系统，包括 sysvinit、OpenRC、runit、s6 甚至 BusyBox，但 systemd 将 Linux 视为一个统一的数据集，旨在通过强大的工具进行一致的操作和查询。对于忙碌的系统管理员和许多用户来说，systemd 的速度和易用性是一个重要的特性。以下是五个理由。
+当然，`systemd` 并不是管理 Linux 系统的唯一方法。有很多替代 init 系统，包括 `sysvinit`、`OpenRC`、`runit`、`s6` 甚至 `BusyBox`，但 `systemd` 将 Linux 视为一个统一的数据集，旨在通过强大的工具进行一致的操作和查询。对于忙碌的系统管理员和许多用户来说，`systemd` 的速度和易用性是一个重要的特性。以下是五个理由。
 
 ```ini
 [Unit]
@@ -10578,6 +9544,7 @@ WantedBy=multi-user.target
 ```
 
 你可以查看服务是否处于激活状态：
+
 ```
 $ systemctl is-active sshd
 active
@@ -10589,17 +9556,20 @@ inactive
 ```
 
 同样，你可以查看服务是否已失败：
+
 ```
 $ systemctl is-failed sshd
 ```
 
 启动和停止服务非常直观：
+
 ```
 $ systemctl stop sshd
 $ systemctl start sshd
 ```
 
 以及启用服务在启动时运行非常简单：
+
 ```
 $ systemctl enable sshd
 ```
@@ -10619,22 +9589,20 @@ Wed 2021-03-31 06:02:00 UTC  6h        6h      daily.timer
 ```
 
 通过 `--all` 也可以查看已加载的非激活定时器。
+
 你可以启用你想服务的定时器：
 
 ```
-$systemctl enable myMonitor.timer
+$ systemctl enable myMonitor.timer
 ```
 
-## 目标
+# 目标
 
-目标是 systemd 矩阵的最后一个主要组件。目标由单元文件定义，就像服务和定时器一样。目标也可以被启动和启用。目标的独特之处在于它们以任意重要的方式对其他单元文件分组。例如，你可能希望启动到文本控制台而不是图形桌面，此时 multi-user target 就存在。然而，multi-user target 只是去掉了桌面单元依赖的图形 target。
+目标是 systemd 矩阵的最后一个主要组件。目标由单元文件定义，就像服务和定时器一样。目标也可以被启动和启用。目标的独特之处在于它们以任意重要的方式对其他单元文件分组。例如，你可能希望启动到文本控制台而不是图形桌面，此时 `multi-user.target` 就存在。然而，`multi-user.target` 只是去掉了桌面单元依赖的图形 `target`。
 
-简而言之，目标是一种收集服务、定时器甚至是其他目标在一起的简单方法，以代表你预期的状态
+简而言之，目标是一种收集服务、定时器甚至是其他目标在一起的简单方法，以代表你预期的状态机器。
 
-
-机器。
-
-事实上，在 systemd 中，重启、关机或停止操作只是另一个目标（target）。
+事实上，在 systemd 中，重启、关机或停止操作只是另一个目标（`target`）。
 
 你可以使用 `list-unit-files` 列出所有可用目标，并通过 `--type` 选项设置为 `target` 来进行限制：
 
@@ -10642,21 +9610,21 @@ $systemctl enable myMonitor.timer
 $ systemctl list-unit-files --type target
 ```
 
-## 使用 systemd 掌握控制
+# 使用 systemd 掌握控制
 
-现代 Linux 使用 systemd 进行服务管理和日志检查。它为从个人 Linux 系统到企业级服务器的一切提供了一种现代化的监控和易于维护机制。你越使用它，systemd 就会变得越容易预测和直观，你也会越发发现系统中不同部分是如何相互连接的。
+现代 Linux 使用 `systemd` 进行服务管理和日志检查。它为从个人 Linux 系统到企业级服务器的一切提供了一种现代化的监控和易于维护机制。你越使用它，`systemd` 就会变得越容易预测和直观，你也会越发发现系统中不同部分是如何相互连接的。
 
-为了更好地熟悉 systemd，你必须亲自使用它。为了熟练使用它，请下载我们的备忘录（cheat sheet）并经常参考。
+为了更好地熟悉 `systemd`，你必须亲自使用它。为了熟练使用它，请下载我们的备忘录（cheat sheet）并经常参考。
 
 9 Kenlon, Seth, Linux systemd cheat sheet, https://opensource.com/downloads/linux-systemd-cheat-sheet
 
-## 第16 章 为什么我支持 systemd 统治世界计划——最终练习
+# 第16 章 为什么我支持 systemd 统治世界计划——最终练习
 
-这是本书的最后一个练习，它有点不同，因为没有任务列表或问题列表。这只是一个简单的建议，让你花时间探索 systemd 及其许多方面，并尽可能多地学习关于它的知识。
+这是本书的最后一个练习，它有点不同，因为没有任务列表或问题列表。这只是一个简单的建议，让你花时间探索 `systemd` 及其许多方面，并尽可能多地学习关于它的知识。
 
 随你的好奇心引导哪里就去哪里。创建你自己的实验，并用它们来引导你的探索。
 
-## 文档目录
+# 文档目录
 
 - 目录
 - 关于作者
@@ -10879,23 +9847,33 @@ $ systemctl list-unit-files --type target
     - 缩小搜索结果的选项
         - 故障排除示例
         - 确定问题
-        -  {解决方案
+        - {解决方案
     - 更好的解决方案
     - 总结
     - 练习
 - 第15章：分析 systemd 启动与配置
     - 目标
-    - 概述
-    - Linux 启动
-        - 基础分析
-        - 责任溯源
-        - 关键链
-        - 系统状态
-        - 分析图表
-        - 条件
-    - 列出配置文件
-    - 单元文件验证
-    - 安全
-    - 总结
-    - 练习
-- 第16 章 为什么我支持 systemd 统治世界计划——最终练习
+
+
+
+# 概述
+
+# Linux 启动
+## 基础分析
+## 责任溯源
+## 关键链
+## 系统状态
+## 分析图表
+## 条件
+
+# 列出配置文件
+
+# 单元文件验证
+
+# 安全
+
+# 总结
+
+# 练习
+
+# 第16章 为什么我支持 systemd 统治世界计划——最终练习

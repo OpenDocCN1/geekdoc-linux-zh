@@ -1,3 +1,5 @@
+
+
 # 前言
 
 > 原文：[`learnbyexample.github.io/cli-computing/preface.html`](https://learnbyexample.github.io/cli-computing/preface.html)
@@ -16,39 +18,25 @@
 
 ## 约定
 
-+   展示的代码片段是从`bash`外壳（版本**5.0.17**）复制粘贴的，并为了展示目的进行了修改。一些命令前面有注释，以提供上下文和解释，添加了空行以提高可读性等。
-
-+   本书提供了外部链接，供您深入了解某些主题。
-
-+   [cli-computing 仓库](https://github.com/learnbyexample/cli-computing)包含了书中使用的所有[示例文件和脚本](https://github.com/learnbyexample/cli-computing/tree/master/example_files)。仓库还包括所有[练习](https://github.com/learnbyexample/cli-computing/blob/master/exercises/exercises.md)作为一个单独的文件，以及一个单独的[解决方案](https://github.com/learnbyexample/cli-computing/blob/master/exercises/exercise-solutions.md)文件。如果您不熟悉`git`命令，请点击网页上的**代码**按钮以获取文件。
-
-+   请参阅设置部分，了解创建用于跟随本书内容的操作环境的说明。
+- 展示的代码片段是从`bash`外壳（版本`5.0.17`）复制粘贴的，并为了展示目的进行了修改。一些命令前面有注释，以提供上下文和解释，添加了空行以提高可读性等。
+- 本书提供了外部链接，供您深入了解某些主题。
+- [cli-computing 仓库](https://github.com/learnbyexample/cli-computing)包含了书中使用的所有[示例文件和脚本](https://github.com/learnbyexample/cli-computing/tree/master/example_files)。仓库还包括所有[练习](https://github.com/learnbyexample/cli-computing/blob/master/exercises/exercises.md)作为一个单独的文件，以及一个单独的[解决方案](https://github.com/learnbyexample/cli-computing/blob/master/exercises/exercise-solutions.md)文件。如果您不熟悉`git`命令，请点击网页上的`代码`按钮以获取文件。
+- 请参阅设置部分，了解创建用于跟随本书内容的操作环境的说明。
 
 ## 致谢
 
-+   [GNU 手册](https://www.gnu.org/manual/manual.html) — 命令行工具和`bash`外壳的文档
-
-+   [Stack Overflow](https://stackoverflow.com/) 和 [Unix Stack Exchange](https://unix.stackexchange.com/) — 用于获取有关 CLI 工具的相关问题的答案
-
-+   [tex.stackexchange](https://tex.stackexchange.com/) — 用于帮助解决[pandoc](https://github.com/jgm/pandoc/)和`tex`相关问题的网站
-
-+   [/r/commandline/](https://old.reddit.com/r/commandline), [/r/linux4noobs/](https://old.reddit.com/r/linux4noobs/), [/r/linuxquestions/](https://old.reddit.com/r/linuxquestions/)和[/r/linux/](https://old.reddit.com/r/linux/) — 有用的论坛
-
-+   [canva](https://www.canva.com/) — 封面图片
-
-+   [警告](https://commons.wikimedia.org/wiki/File:Warning_icon.svg)和[信息](https://commons.wikimedia.org/wiki/File:Info_icon_002.svg)图标由[Amada44](https://commons.wikimedia.org/wiki/User:Amada44)在公共领域下提供
-
-+   [carbon](https://carbon.now.sh/) — 用于创建带有高亮文本的终端截图
-
-+   [oxipng](https://github.com/shssoichiro/oxipng), [pngquant](https://pngquant.org/)和[svgcleaner](https://github.com/RazrFalcon/svgcleaner) — 优化图片
-
-+   [Inkscape](https://inkscape.org/) — 网站图标
-
-+   [mdBook](https://github.com/rust-lang/mdBook) — 用于您目前正在阅读的书的网络版本
-
-    +   [mdBook-pagetoc](https://github.com/JorelAli/mdBook-pagetoc) — 用于为每一页添加目录
-
-    +   [minify-html](https://github.com/wilsonzlin/minify-html) — 用于压缩 html 文件
+- [GNU 手册](https://www.gnu.org/manual/manual.html) — 命令行工具和`bash`外壳的文档
+- [Stack Overflow](https://stackoverflow.com/) 和 [Unix Stack Exchange](https://unix.stackexchange.com/) — 用于获取有关 CLI 工具的相关问题的答案
+- [tex.stackexchange](https://tex.stackexchange.com/) — 用于帮助解决[pandoc](https://github.com/jgm/pandoc/)和`tex`相关问题的网站
+- [/r/commandline/](https://old.reddit.com/r/commandline), [/r/linux4noobs/](https://old.reddit.com/r/linux4noobs/), [/r/linuxquestions/](https://old.reddit.com/r/linuxquestions/)和[/r/linux/](https://old.reddit.com/r/linux/) — 有用的论坛
+- [canva](https://www.canva.com/) — 封面图片
+- [警告](https://commons.wikimedia.org/wiki/File:Warning_icon.svg)和[信息](https://commons.wikimedia.org/wiki/File:Info_icon_002.svg)图标由[Amada44](https://commons.wikimedia.org/wiki/User:Amada44)在公共领域下提供
+- [carbon](https://carbon.now.sh/) — 用于创建带有高亮文本的终端截图
+- [oxipng](https://github.com/shssoichiro/oxipng), [pngquant](https://pngquant.org/)和[svgcleaner](https://github.com/RazrFalcon/svgcleaner) — 优化图片
+- [Inkscape](https://inkscape.org/) — 网站图标
+- [mdBook](https://github.com/rust-lang/mdBook) — 用于您目前正在阅读的书的网络版本
+  - [mdBook-pagetoc](https://github.com/JorelAli/mdBook-pagetoc) — 用于为每一页添加目录
+  - [minify-html](https://github.com/wilsonzlin/minify-html) — 用于压缩 html 文件
 
 ## 反馈和勘误
 
@@ -56,11 +44,9 @@
 
 您可以通过以下方式联系我：
 
-+   问题管理器：[`github.com/learnbyexample/cli-computing/issues`](https://github.com/learnbyexample/cli-computing/issues)
-
-+   电子邮件：learnbyexample.net@gmail.com
-
-+   Twitter: [`twitter.com/learn_byexample`](https://twitter.com/learn_byexample)
+- 问题管理器：[`github.com/learnbyexample/cli-computing/issues`](https://github.com/learnbyexample/cli-computing/issues)
+- 电子邮件：learnbyexample.net@gmail.com
+- Twitter：[`twitter.com/learn_byexample`](https://twitter.com/learn_byexample)
 
 ## 作者信息
 
@@ -83,3 +69,4 @@
 1.1
 
 查看以跟踪书籍版本之间的变更[Version_changes.md](https://github.com/learnbyexample/cli-computing/blob/master/Version_changes.md)。
+

@@ -1,231 +1,126 @@
+
 # DB2 9 for Linux, UNIX and Windows：DBA 指南、参考与备考指南（第6版）
 
-
-
-
-
-
-
-
 序：Michael Agostino
+
 IBM 数据服务器教育与认证执行官
 
 George Baklarz 和 Paul C. Zikopoulos
-
-
-
-
 
 Meltz, Harrington, Harrington, and Nicholls — IBM 013185715
 
 Bieberstein, Boase, Fiammette, Jones, and Shah — IBM 0131870025
 
-
-
 Yip, Cheung, Gartner, Lee, and O'Connell — IBM 0131463977
-
-
 
 Brown, Craig, Hester, Pitt, Stinehauer, Weitzsel, Amsden, Jakob, and Berg — IBM 013218597
 
 Lawson — IBM 014191202
 
-
-
 Yusuf — IBM 0131468634
 
 Jammohamed, Liu, Bradford, Chong, Gao, McArthur, and Yip — IBM 013177005
-
-
 
 Barcia, Haies, Alcott, and Botzum — IBM 0131468266
 
 Eaton and Cialini — IBM 013448307
 
-
-
 Black, Everett, Miller, Iyer, Guernes, Patel, Herescu, Gissel, Bencassel, Casile, Tang, and JavaBeans — IBM 013185575
 
 Sloan — IBM 013147501
-
-
 
 Bond, See, and Wan — IBM 0131345907
 
 Williamson, Can, Cundiff, Lawson, and Mitchell — IBM 0131446045
 
-
-
 Chong, Liu, Qi, and Snow — IBM 0131859161
-
 
 Lamb, Lesky, and Indukry — IBM 0131443035
 
-
 Elliott — IBM 013221482
-
-
 
 IBM® Rational ClearCase、艺术与控制 Universe
 
 Lee — IBM 013256993
 
-
 Zikopoulos, Bakartz, and Shah — IBM 0131855255
-
-
 
 Buckley, PowerShell, and Scott — IBM 0132334688
 
 Linux Standard Base Team — IBM 0131456994
 
-
-
 Barnes — IBM 0133269459
 
 Johnson, Huffman, and Pulavarta — IBM 0131447533
 
-
-
 Kessler and Switzer — IBM 013175511
-
-
 
 Moulton Regan — IBM 0131723943
 
 Gibbs — IBM 0132336939
 
-
-
 Hargy, Carver, Hernandez, Huges, Longo, and Wilde
+
 IBM 0131747497
 
 Belligan and Mulligan — IBM 0132201995
-
-
 
 Moran — IBM 0132255960
 
 Quadrani and Principal — IBM 0131428087
 
-
-
 Balney and Weiss — IBM 0131987585
 
-
-
 Murch — IBM 013144025X
-
-
 
 Biere — IBM 0131413031
 
 Ricketts — IBM 0132339536
 
-
-
 Joseph and Feellen — IBM 0131456601
 
 Morgan and Hunt — IBM 0131852922
 
-
 Stakutis and Webster — IBM 0131852159
-
-
 
 Fellenstein — IBM 0131440241
 
 Carter — IBM 013195654
 
-
 Lahiri — IBM 013185137
-
-
-
 
 # George Baklarz 和 Paul C. Zikopoulos
 
 Pearson plc
+
 纽约 • 多伦多 • 蒙特利尔 • 伦敦 • 慕尼黑
+
 开普敦 • 上海 • 上海 • 墨西哥城
 
 出版社在准备本书时已尽力，但不任何形式的明示或暗示保证，并对使用书中包含的信息或程序引起的任何间接或后果性损害不承担责任。
 
-
-
 IBM Press 经理：Tara Woodman, Ellice Uffer
+
 副主编辑：Greg Wiiegand
+
 营销经理：Nortayne Sturgeon
+
 公关：Heather Fox
+
 策划编辑：Bernard Goodwin
+
 制作编辑：John Fuller
+
 封面设计师：Alan Clements
+
 校对：Diane Freed
+
 制造采购：Anna Popick
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 - 使用多条件限制行.................................................. 334
 - 集合运算符...................................................................................................... 362
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - 表重组 ............................................................................ 773
-
-
-
-
 - DB2 应用开发环境............................................... 978
-
-
-
-
-
-
-
-
 
 ## 前言
 
@@ -235,9 +130,10 @@ IBM Press 经理：Tara Woodman, Ellice Uffer
 
 对 DB2 技能的需求持续增长。全球已有 60 多国颁发了认证，全球有超过 1000 家机构正在教授与 DB2 相关的课程。2006 年，来自 DBA 和开发者的下载请求超过 35,000 次，他们的技能从 Microsoft®、Sybase® 和 Oracle® 扩展到了 DB2。同时，DB2 认证的价值从未如此巨大。2006 年 11 月，在“十大”IT 专长认证中，DB2 是唯一入榜的数据库（《认证杂志，《重新审视十大十大认证列表》，Ed Tittel，2006 年 11 月，第 25 页）。此外，2006 年的薪资报告显示，认证的 DB2 专业人士的增长速度超过了竞争性的数据库认证。（《认证杂志，《CerMag 2006 年资调查》，Tegan Jones, Daniel Margolis, Brian Summerfield, Kelleye Whitney 和 Sarah Stone Wunder，2006 年 12 月）。
 
-
 Michael Agostino
+
 业务部门执行官
+
 IBM 软件集团
 
 ## 前言
@@ -246,17 +142,9 @@ IBM 软件集团
 
 本书分为四个部分：
 
-
 有意成为 IBM 认证专业人士的人可以参考书末的附录 A 中的信息。
 
 本书可以作为自学指南，帮助你准备 DB2 认证考试，也可以作为 Linux、UNIX 和 Windows 平台上 DB2 的指南。拥有 DB2 实践经验是准备任何 DB2 认证考试的最佳方式！
-
-
-
-
-
-
-
 
 书中涵盖了许多 SQL 语句、DB2 命令和操作系统命令的示例。SQL 语句通常显示在一组细线内，语句的任何强制性部分都用大大写字母显示。以下是一个 SQL 语句的示例：
 
@@ -268,9 +156,9 @@ LNAME = 'BAKLARZ'
 
 SQL 不是一种不区分大小写的语言，因此，无论 SQL 关键字或数据库对象（表名或列名）的大小写如何，上述查询都会产生相同的结果。当然，数据库中的数据是完全按照输入时的状态存储的（包括大小写）。因此，上述查询将只会找到姓氏为 'ZIKPOULOS' 或 'BAKLARZ' 的候选人。如果数据存储为 'Zikopoulos'，它将不会出现在结果中。
 
-如果在书中正文部分提到 SQL 关键字，它们将以等宽字体显示。例如，SELECT 语句用于从 DB2 数据库中检索数据。
+如果在书中正文部分提到 SQL 关键字，它们将以等宽字体显示。例如，`SELECT` 语句用于从 DB2 数据库中检索数据。
 
-DB2 命令将使用与 SQL 关键字相同的方法显示。例如，CREATE DATABASE 命令允许您创建数据库。DB2 命令通过命令行处理器 (CLP) 工具发布。该工具接受大写字母和小写字母的命令。CLP 程序本身是一个名为 db2 的可执行文件。在某些操作系统中（如 AIX*），程序名对大小写敏感。因此，请务必使用正确的大小写输入程序名。
+DB2 命令将使用与 SQL 关键字相同的方法显示。例如，`CREATE DATABASE` 命令允许您创建数据库。DB2 命令通过命令行处理器 (CLP) 工具发布。该工具接受大写字母和小写字母的命令。CLP 程序本身是一个名为 `db2` 的可执行文件。在某些操作系统中（如 AIX*），程序名对大小写敏感。因此，请务必使用正确的大小写输入程序名。
 
 书中包含了一些特定操作系统的命令。如果命令必须是小写，它们将显示为小写。例如，创建用户的 UNIX 命令是 `mkuser`。
 
@@ -298,7 +186,6 @@ DB2 命令将使用与 SQL 关键字相同的方法显示。例如，CREATE DATA
 - DB2 开发团队，他们对本书的持续支持。
 - 最后，特别感谢 Denis Vasconcelos，他管理的格式故障比我们想象中可能的还要多。他还测试了许多示例，并在整书中提出了宝贵的建议。
 
-
 我一直非常感谢我有一个理解我的家庭（包括狗和猫！），他们能够处理我在更新这本书时的那些深夜和忙碌的周末。当猫最终放弃你并去睡觉时，你就知道某些事情进展得太久了。
 
 Katrina 在这本书的创作期间表现了无限的耐心。尽管我会说（重复了无数次！）快写完了，但她会以一种表示理解的方式点头，这实际上意味着她并不相信我。但是，她支持我的努力，并确保我有时间完成这些工作。
@@ -309,14 +196,9 @@ Katrina 在这本书的创作期间表现了无限的耐心。尽管我会说（
 
 我必须对我妈妈表示额外的感谢。她的一生很艰辛，在德国长大并在二战期间曾是一名战俘。她必须面对许多挑战，从未有机会接受深层次教育。搬到加拿大后，妈妈为她的孩子们构想了更好的生活，她鼓励我去上大学并尽我所学。虽然妈妈从未学过计算机，但她仍然读我的书，并向我指出其中的问题。
 
-
-
-
-
 ## xxviii 前言
 
 当我回顾我在 IBM 的的成就时，这是帮助我在这家伟大公司取得成就的核心支柱之一。最棒的部分是，今年早些时候我在打高尔夫时遇到了 Ken，那是我人生中打得最好的球赛之一。在洞洞的中间与他聊天后（随后我在那个洞打了双抓——多谢你了，Ken），我意识到 Ken 依然健康如初。过去的奉献是给那些已经不在的人——在他们还在世时告诉他们如何影响了你的生活，这种感觉太棒了。谢谢你，Ken。我不知道现在的学生是否有这么幸运。
-
 
 ## 关于作者
 
@@ -324,17 +206,14 @@ George Baklarz（B. Math, M.Sc., Ph.D.）在 IBM 工作了 22 年，涉及数据
 
 Paul C. Zikopopoulos（B.A., M.B.A.）是 IBM 竞争技术团队的屡获奖项的作家和演讲者。他拥有超过13年的 DB2 经验，写了150多篇杂志文章，目前正在编写第12本书。Zikopopoulos 编写了《Information on Demand: Introduction to DB2 9.5 New Features》、《DB2 9 New Features》、《Information on Demand: Introduction to DB2 9 New Features》、《Off to the Races with Apache Derby》、《DB2 Version 8: The Official Guide》、《DB2: The Complete Reference》、《DB2 Fundamentals Certification for Dummies》以及《A DBA's Guide to Databases on Linux》。Zikopopoulos 是 DB2 认证高级技术专家（DRDA 和 Cluster/EEE）以及 DB2 认证解决方案专家（商业智能和数据库管理）。在空闲时间，他喜欢各种活动，包括带他的狗 Archie 散步、在 MMA 课上躲拳，以及试图理解女儿 Chloë 周围的世界。你可以通过 paulz_ibm@msn.com 联系他。
 
-
-
-
 DB2 具有存储各种电子信息的能力。这包括传统的关系型数据、XML 编码的数据以及结构化和非结构化的二进制信息、多种语言的数据和文本、图形、图像（音频和视频）、特定于操作的信息（如工程图、地图、保险理赔表单、数控流），或任何类型的电子信息。本章将说明使用 DB2 家族提供的某些接口访问 DB2 数据库数据的某些方法。书中提供了对每个 DB2 产品的描述，以说明 DB2 的一些特性和功能。
-
 
 ### 信息即服务
 
 DB2 数据服务器是 IBM “信息即服务”软件组合的重要部分，作为更广泛的 IBM 按需架构的原子级基础。
 
 | 通过实时业务信息促进更好的决策 | | | | |
+| --- | --- | --- | --- | --- |
 | 交互服务 | 流程服务 | 信息服务 | IT 服务管理 |
 | 实现人、流程与信息之间的协作 | 编排和自动化业务流程 | 以统一的方式管理多样化数据和内容 | 管理和保护服务、应用程序和资源 |
 | 促进服务之间的通信 | | | |
@@ -342,74 +221,55 @@ DB2 数据服务器是 IBM “信息即服务”软件组合的重要部分，�
 
 1–1 用于按需业务的 IBM 服务框架
 
-
-
 可以使用这些支柱的服务来共同管理你的整个 IT 框架。例如，Tivoli 资源管理器服务可以在企业范围内对异构资源进行监控和报告，以提高服务利用率，识别并解决潜在问题，并通过基于策略的自动化确保应用程序可用性。
 
 ### 信息即服务
 
-
-
-最后是信息服务，它们代表了你将在书中学习的功能的子集。通常在 IBM 参考架构这部分的特定服务如图 1–2 所示。
-
-
-
-
-
+最后是信息服务，它们代表了将在书中学习的功能的子集。通常在 IBM 参考架构这部分的特定服务如图 1–2 所示。
 
 本书书专门介绍此服务层级中的 DB2。具体而言，你将学习 DB2 如何提供图 1–3 所示的任意数量的高价值以数据为中心的服务。
 
 
 
+这意味着，一旦你学会了如何管理 `DB2 for AIX` 系统，在大多数情况下你将知道如何管理 `DB2 for Linux` 或 `DB2 for Windows`；这就是为什么所有分布式平台都有单一的 `DB2` 认证的原因。
 
+`DB2 for i5/OS` 和 `DB2 for z/OS` 针对其各自的环境进行了优化。例如，`DB2 for z/OS` 基于全共享磁盘架构，使用硬件辅助的耦合设施（`Coupling Facility`）来对共享磁盘的访问进行序列化。`Linux`、`UNIX` 和 `Windows` 上不存在这样的硬件，因此由于原因，这些平台上的 `DB2` 使用无共享（`shared-nothing`）架构。管理任务在这些平台之间有所不同（尽管许多概念和功能是类似的）。然而，`SQL API` 在所有运行 `DB2` 的平台上是 98% 通用的，这允许在一个平台上编写的应用程序轻松地迁移到另一个平台。这意味着你可以在 `DB2 for Windows` 上构建应用程序，并毫不力地迁移到 `DB2 for z/OS`。如果你根据《跨平台开发 SQL 参考》手册构建应用程序，那么你的应用程序在整个 `DB2` 家族中将是 100% 可移植的。
 
+运行在 `Linux`、`UNIX` 和 `Windows` 上的 `DB2` 以及其他 `DB2` 家族成员之间存在其他协同效应。例如，用于 `DB2 for z/OS` 的 `JDBC` 驱动程序与用于 `DB2 for Linux`、`UNIX` 和 `Windows` 的代码完全相同。虽然在特定的数据定义语言（`DDL`）任务上可能存在差异，但数据操纵语言（`DML`）和客户端 `API` 是相似的。
 
-
-这意味着，一旦你学会了如何管理 DB2 for AIX 系统，在大多数情况下你将知道如何管理 DB2 for Linux 或 DB2 for Windows；这就是为什么所有分布式平台都有单一的 DB2 认证的原因。
-
-
-
-DB2 for i5/OS 和 DB2 for z/OS 针对其各自的环境进行了优化。例如，DB2 for z/OS 基于全共享磁盘架构，使用硬件辅助的耦合设施（Coupling Facility）来对共享磁盘的访问进行序列化。Linux、UNIX 和 Windows 上不存在这样的硬件，因此由于原因，这些平台上的 DB2 使用无共享（shared-nothing）架构。管理任务在这些平台之间有所不同（尽管许多概念和功能是类似的）。然而，SQL API 在所有运行 DB2 的平台上是 98% 通用的，这允许在一个平台上编写的应用程序轻松地迁移到另一个平台。这意味着你可以在 DB2 for Windows 上构建应用程序，并毫不力地迁移到 DB2 for z/OS。如果你根据《跨平台开发 SQL 参考》手册构建应用程序，那么你的应用程序在整个 DB2 家族中将是 100% 可移植的。
-
-运行在 Linux、UNIX 和 Windows 上的 DB2 以及其他 DB2 家族成员之间存在其他协同效应。例如，用于 DB2 for z/OS 的 JDBC 驱动程序与用于 DB2 for Linux、UNIX 和 Windows 的代码完全相同。虽然在特定的数据定义语言（DDL）任务上可能存在差异，但数据操纵语言（DML）和客户端 API 是相似的。
 ## DB2 for Linux, UNIX 和 Windows 数据服务器
 
-在分布式环境中，DB2 提供多种不同的打包选项，称为版本（editions）。此外，DB2 还可以其他包的一部分提供，这些包包含额外的功能和工具，而不仅仅是提供的基础数据服务。
+在分布式环境中，`DB2` 提供多种不同的打包选项，称为版本（`editions`）。此外，`DB2` 还可以其他包的一部分提供，这些包包含额外的功能和工具，而不仅仅是提供的基础数据服务。
 
+对于大多数平台，`DB2 for i5/OS` 和 `DB2 for z/OS` 针对其各自的环境进行了优化。例如，`DB2 for z/OS` 基于全共享磁盘架构，使用硬件辅助的耦合设施来对共享磁盘的访问进行序列化。`Linux`、`UNIX` 和 `Windows` 上不存在这样的硬件，因此由于原因，这些平台上的 `DB2` 使用无共享架构。管理任务在这些平台之间有所不同（尽管许多概念和功能是类似的）。然而，`SQL API` 在所有运行 `DB2` 的平台上是 98% 通用的，允许在一个平台上编写的应用程序轻松地迁移到另一个平台。这意味着你可以在 `DB2 for Windows` 上构建应用程序，并毫不力地迁移到 `DB2 for z/OS`。如果你根据《跨平台开发 SQL 参考》手册构建应用程序，那么你的应用程序在整个 `DB2` 家族中将是 100% 可移植的。
 
+在分布式环境中，`DB2` 提供多种不同的打包选项，称为版本（`editions`）。此外，`DB2` 还可以其他包的一部分提供，这些包包含额外的功能和工具，而不仅仅是提供的基础数据服务。
 
+`DB2` 的打包和许可是非常动态的。本章详细介绍了 `DB2` 在本书编写时如何许可和打包的。
 
-对于大多数平台，DB2 for i5/OS 和 DB2 for z/OS 针对其各自的环境进行了优化。例如，DB2 for z/OS 基于全共享磁盘架构，使用硬件辅助的耦合设施来对共享磁盘的访问进行序列化。Linux、UNIX 和 Windows 上不存在这样的硬件，因此由于原因，这些平台上的 DB2 使用无共享架构。管理任务在这些平台之间有所不同（尽管许多概念和功能是类似的）。然而，SQL API 在所有运行 DB2 的平台上是 98% 通用的，允许在一个平台上编写的应用程序轻松地迁移到另一个平台。这意味着你可以在 DB2 for Windows 上构建应用程序，并毫不力地迁移到 DB2 for z/OS。如果你根据《跨平台开发 SQL 参考》手册构建应用程序，那么你的应用程序在整个 DB2 家族中将是 100% 可移植的。
-
-
-
-在分布式环境中，DB2 提供多种不同的打包选项，称为版本（editions）。此外，DB2 还可以其他包的一部分提供，这些包包含额外的功能和工具，而不仅仅是提供的基础数据服务。
-
-DB2 的打包和许可是非常动态的。本章详细介绍了 DB2 在本书编写时如何许可和打包的。
 ## DB2 Everyplace
-DB2 Everyplace (DB2e) 是一种轻量级数据库，专为低成本、低功耗设计，运行在各种设备上，如数字助器 (PDAs)、手持电脑 (HPCs)。
+
+`DB2 Everyplace` (`DB2e`) 是一种轻量级数据库，专为低成本、低功耗设计，运行在各种设备上，如数字助器 (`PDAs`)、手持电脑 (`HPCs`)。
 
 ### DB2 注意事项
 
-DB2 EE 与 DB2e 的区别在于，它带有一个名为 DB2 同步服务器 (DB2e Sync Server) 的数据同步组件。DB2 Sync Server 允许你管理分发到你的手持设备的数据的订阅和安全控制，并管理数据中心客户端设备的数据变化。
-用于开发 DB2e 应用程序的 SQL API 是 DB2 技能的子集。更重要的是，DB2 应用程序可以轻松扩展到包含 DB2 应用程序。
-DB2e Sync 服务器支持的并发同步数量取决于该服务器的硬件配置、相关负载和数据变化率。如果你需要扩展以处理大量的并发同步，可以安装任何 Java 应用程序服务器（如 IBM WebSphere Application Server）。DB2e 还通过其对 DB2e Sync Server 集群配置的支持提供了增强的可扩展性和高可用性，这允许你对多个 DB2e Sync 服务器进行集群负载均衡和高可用性服务。
+`DB2 EE` 与 `DB2e` 的区别在于，它带有一个名为 `DB2` 同步服务器 (`DB2e Sync Server`) 的数据同步组件。`DB2 Sync Server` 允许你管理分发到你的手持设备的数据的订阅和安全控制，并管理数据中心客户端设备的数据变化。
 
+用于开发 `DB2e` 应用程序的 `SQL API` 是 `DB2` 技能的子集。更重要的是，`DB2` 应用程序可以轻松扩展到包含 `DB2` 应用程序。
 
-
-
+`DB2e Sync` 服务器支持的并发同步数量取决于该服务器的硬件配置、相关负载和数据变化率。如果你需要扩展以处理大量的并发同步，可以安装任何 `Java` 应用程序服务器（如 `IBM WebSphere Application Server`）。`DB2e` 还通过其对 `DB2e Sync Server` 集群配置的支持提供了增强的可扩展性和高可用性，这允许你对多个 `DB2e Sync` 服务器进行集群负载均衡和高可用性服务。
 
 ## DB2 个人版
 
-DB2 个人版（DB2 PE）是一个全功能数据库，允许用户在工作站上创建数据库。由于它仅限于单用户（不支持代码的入站客户端请求），因此通常不被称为数据服务器（尽管 DB2 PE 后面的 DB2 引擎是图 1–5 中所有版本所使用的 DB2 引擎）。该产品仅适用于 Linux 和 Windows 系统。
+`DB2` 个人版（`DB2 PE`）是一个全功能数据库，允许用户在工作站上创建数据库。由于它仅限于单用户（不支持代码的入站客户端请求），因此通常不被称为数据服务器（尽管 `DB2 PE` 后面的 `DB2` 引擎是图 1–5 中所有版本所使用的 `DB2` 引擎）。该产品仅适用于 `Linux` 和 `Windows` 系统。
 
-DB2 PE 也可以作为 DB2 数据服务器的远程客户端。编写并在 DB2 PE 上执行的应用程序可以完全迁移到图 1–5 中 DB2 家族更高版本。
+`DB2 PE` 也可以作为 `DB2` 数据服务器的远程客户端。编写并在 `DB2 PE` 上执行的应用程序可以完全迁移到图 1–5 中 `DB2` 家族更高版本。
 
-DB2 PE 经常被需要访问本地和远程 DB2 数据库的终端用户，或正在为将访问其他 DB2 数据库的应用原型使用。此外，它还免费包含了 pureXML™ 技术，对于那些想要获取 DB2 pureXML 技能的人来说，DB2 PE 也是一个很好的选择。在许多情况下，由于它包含了复制功能，DB2 PE 被用于连接型应用（如现场调研、销售自动化等），这些应用需要比 DB2e 或 Apache Derby/IBM Cloudscape 提供更丰富的功能。
+`DB2 PE` 经常被需要访问本地和远程 `DB2` 数据库的终端用户，或正在为将访问其他 `DB2` 数据库的应用原型使用。此外，它还免费包含了 `pureXML™` 技术，对于那些想要获取 `DB2 pureXML` 技能的人来说，`DB2 PE` 也是一个很好的选择。在许多情况下，由于它包含了复制功能，`DB2 PE` 被用于连接型应用（如现场调研、销售自动化等），这些应用需要比 `DB2e` 或 `Apache Derby/IBM Cloudscape` 提供更丰富的功能。
 
 ## DB2 Express 版和 DB2 工作组版
 
-DB2 Express 版（DB2 Express）和 DB2 工作组版（DB2 Workgroup）提供相同的功能、特性和优势；它们之间的区别仅在于许可限制，这直接影响了从每个版本中获得的扩展性和性能水平。
+`DB2 Express` 版（`DB2 Express`）和 `DB2` 工作组版（`DB2 Workgroup`）提供相同的功能、特性和优势；它们之间的区别仅在于许可限制，这直接影响了从每个版本中获得的扩展性和性能水平。
 
 # 第1章 产品概述
 
@@ -417,190 +277,180 @@ DB2 Express 版（DB2 Express）和 DB2 工作组版（DB2 Workgroup）提供相
 
 ## DB2 Express 版
 
-DB2 Express 是一个全功能、支持 Web 的客户端/服务器型 RDBMS。DB2 Express 仅适用于 Windows 和 Linux 运行站（与 DB2 工作组版不同）。DB2 Express 提供了一个低成本的入门级服务器，主要用于小型企业和部门计算。如前所述，它与 DB2 工作组具有相同的功能和特性，但与 DB2 工作组的主要区别在于服务器可用内存的大小，以及安装其上的服务器的价值单元（VU）评级（等同于服务器处理器核心的能力）。
+`DB2 Express` 是一个全功能、支持 `Web` 的客户端/服务器型 `RDBMS`。`DB2 Express` 仅适用于 `Windows` 和 `Linux` 运行站（与 `DB2` 工作组版不同）。`DB2 Express` 提供了一个低成本的入门级服务器，主要用于小型企业和部门计算。如前所述，它与 `DB2` 工作组具有相同的功能和特性，但与 `DB2` 工作组的主要区别在于服务器可用内存的大小，以及安装其上的服务器的价值单元（`VU`）评级（等同于服务器处理器核心的能力）。
 
-DB2 Express 可以使用 VU 方法进行许可，即根据服务器的 VU 评级收取每 VU 费用，或者通过授权用户（Authorized User）指标进行许可。DB2 Express 服务器在安装的服务器上使用的内存不能超过 4 GB。授权用户代表注册以访问环境中单个 DB2 数据服务器服务和数据的个人用户。例如，如果你有一个用户需要访问两个不同的 DB2 Express 9 服务器，并想用授权用户对该环境进行许可，那么这一个用户需要两个 DB2 Express 授权许可（每个服务器一个）。
+`DB2 Express` 可以使用 `VU` 方法进行许可，即根据服务器的 `VU` 评级收取每 `VU` 费用，或者通过授权用户（`Authorized User`）指标进行许可。`DB2 Express` 服务器在安装的服务器上使用的内存不能超过 4 GB。授权用户代表注册以访问环境中单个 `DB2` 数据服务器服务和数据的个人用户。例如，如果你有一个用户需要访问两个不同的 `DB2 Express 9` 服务器，并想用授权用户对该环境进行许可，那么这一个用户需要两个 `DB2 Express` 授权许可（每个服务器一个）。
 
-你也可以使用 VU 模型对 DB2 Express 进行许可。
+你也可以使用 `VU` 模型对 `DB2 Express` 进行许可。
 
 注意
 
-在 2006 年 9 月，IBM 软件集团（MSG）宣布了一种名为价值单元（VU）的新许可机制，该机制根据服务器的 VU 评级收取每 VU 费用，或者通过授权用户指标进行许可。DB2 Express 服务器在安装的服务器上使用的内存不能超过 4 GB。由于授权用户代表注册以访问环境中单个 DB2 数据服务器服务和数据的个人用户。例如，如果你有一个用户需要访问两个不同的 DB2 Express 9 服务器，并想用授权用户对该环境进行许可，那么该一个用户需要两个 DB2 Express 授权许可（每个服务器一个）。
+在 2006 年 9 月，`IBM` 软件集团（`MSG`）宣布了一种名为价值单元（`VU`）的新许可机制，该机制根据服务器的 `VU` 评级收取每 `VU` 费用，或者通过授权用户指标进行许可。`DB2 Express` 服务器在安装的服务器上使用的内存不能超过 4 GB。由于授权用户代表注册以访问环境中单个 `DB2` 数据服务器服务和数据的个人用户。例如，如果你有一个用户需要访问两个不同的 `DB2 Express 9` 服务器，并想用授权用户对该环境进行许可，那么该一个用户需要两个 `DB2 Express` 授权许可（每个服务器一个）。
 
-你也可以使用 VU 模型对 DB2 Express 进行许可。无论你选择哪种许可模型，DB2 Express 无法在安装的服务器上使用超过 4 GB 的内存。
+你也可以使用 `VU` 模型对 `DB2 Express` 进行许可。无论你选择哪种许可模型，`DB2 Express` 无法在安装的服务器上使用超过 4 GB 的内存。
 
 ## DB2 for Linux、Unix 和 Windows 数据服务器
 
-DB2 Express 可以扮演许多角色。DB2 Express 适用于需要全功能数据服务器的小型企业。正如所提到的，为任何 DB2 版本编写的应用程序都可以完美迁移到任何分布式平台。
+`DB2 Express` 可以扮演许多角色。`DB2 Express` 适用于需要全功能数据服务器的小型企业。正如所提到的，为任何 `DB2` 版本编写的应用程序都可以完美迁移到任何分布式平台。
 
 ## DB2 Express-C：大不凡的小服务器
 
-DB2 Express-C 并不被认为是“真正的” DB2 版本。
+`DB2 Express-C` 并不被认为是“真正的” `DB2` 版本。
 
-DB2 Express-C 是 IBM 提供的一个免费数据服务器，你可以从 [www.ibm.com/software/data/db2/uddb2express/] 下载，或者作为 DB2 9 开发包的一部分免费。DB2 Express-C 的核心是我们在本章节中介绍的版本的可扩展且健壮的数据引擎。DB2 Express-C 针对具有超过 4GB 内存的双路服务器进行了优化。由于针对该架构的特定代码优化，许多人认为这些是“许可限制”。
+`DB2 Express-C` 是 `IBM` 提供的一个免费数据服务器，你可以从 [www.ibm.com/software/data/db2/uddb2express/] 下载，或者作为 `DB2 9` 开发包的一部分免费。`DB2 Express-C` 的核心是我们在本章节中介绍的版本的可扩展且健壮的数据引擎。`DB2 Express-C` 针对具有超过 4GB 内存的双路服务器进行了优化。由于针对该架构的特定代码优化，许多人认为这些是“许可限制”。
 
-DB2 Express-C 是为合作伙伴和开发社区设计的，但当你了解这个版本后，你会发现它几乎适用于任何地方：试图学习或获得 DB2 认证的学生、爱好者，甚至大型企业也会在其环境中发现此产品很有用。
+`DB2 Express-C` 是为合作伙伴和开发社区设计的，但当你了解这个版本后，你会发现它几乎适用于任何地方：试图学习或获得 `DB2` 认证的学生、爱好者，甚至大型企业也会在其环境中发现此产品很有用。
 
-DB2 Express-C 的一个定义性特征是它通常被认为是无限制的数据服务器。DB2 Express-C 不具有通常与其他竞争对手免费产品相关的限制（讽刺的是，它们通常也带有“Express（快速）”名称）。例如，DB2 Express-C 没有数据库大小限制，你可以处理 64 位内存架构，对并发量或内置自管理功能没有限制，而且在存在限制的地方，这些限制对于 DB2 Express-C 优化的工作负载来说更为慷慨。
+`DB2 Express-C` 的一个定义性特征是它通常被认为是无限制的数据服务器。`DB2 Express-C` 不具有通常与其他竞争对手免费产品相关的限制（讽刺的是，它们通常也带有“Express（快速）”名称）。例如，`DB2 Express-C` 没有数据库大小限制，你可以处理 64 位内存架构，对并发量或内置自管理功能没有限制，而且在存在限制的地方，这些限制对于 `DB2 Express-C` 优化的工作负载来说更为慷慨。
 
-与 DB2 Express 相比，DB2 Express-C 不包含的主要功能有：
+与 `DB2 Express` 相比，`DB2 Express-C` 不包含的主要功能有：
 
 - 高可用性集群支持
 - 使用附加功能增强核心数据服务器的能力（稍后将详细介绍）
-- 复制数据捕获（CDC）
-- 24x7 IBM Passport Advantage® 支持模型（DB2 Express-C 的特殊封装，称为 DB2 Express-C 固定期限许可，提供此类支持）
-
-
-
-
+- 复制数据捕获（`CDC`）
+- 24x7 `IBM Passport Advantage®` 支持模型（`DB2 Express-C` 的特殊封装，称为 `DB2 Express-C` 固定期限许可，提供此类支持）
 
 ## 第 1 章 产品概述
 
-DB2 Express-C 服务器的详细信息不在本书的涵盖范围内。
+`DB2 Express-C` 服务器的详细信息不在本书的涵盖范围内。
 
-如果你想在你的环境中使用任何这些功能，你至少需要购买 DB2 Express。
+如果你想在你的环境中使用任何这些功能，你至少需要购买 `DB2 Express`。
 
-在大多数情况下，DB2 Express-C 中找到的所有功能在图 1–5 所示的更高版本中也可用。该产品的例外是 pureXML 功能。为了在整个数据库社区中普及和培养 XML 技能，IBM 慷慨地决定在 DB2 Express-C 数据服务器中免费提供此功能。你在阅读本章时会注意到，此功能对于所有其他 DB2 数据服务器都是收费的附加功能。
+在大多数情况下，`DB2 Express-C` 中找到的所有功能在图 1–5 所示的更高版本中也可用。该产品的例外是 `pureXML` 功能。为了在整个数据库社区中普及和培养 `XML` 技能，`IBM` 慷慨地决定在 `DB2 Express-C` 数据服务器中免费提供此功能。你在阅读本章时会注意到，此功能对于所有其他 `DB2` 数据服务器都是收费的附加功能。
 
 ## DB2 工作组版
 
-DB2 Workgroup 也是一个全功能、支持 Web 的客户端/服务器数据库。与 DB2 Express-C 和 DB2 Express 不同，它适用于所有支持的 UNIX 变体（AIX、HP-UX 和 Solaris）、Linux 以及 Windows —— 这是 DB2 Workgroup 与 DB2 Express 之间的主要区别。
+`DB2 Workgroup` 也是一个全功能、支持 `Web` 的客户端/服务器数据库。与 `DB2 Express-C` 和 `DB2 Express` 不同，它适用于所有支持的 `UNIX` 变体（`AIX`、`HP-UX` 和 `Solaris`）、`Linux` 以及 `Windows` —— 这是 `DB2 Workgroup` 与 `DB2 Express` 之间的主要区别。
 
-DB2 Workgroup 提供了一个低成本的入门级服务器，主要用于小型企业和开发性计算。DB2 Workgroup 支持与 DB2 Express 相同的所有功能。还可以通过功能包（feature packs）添加额外的功能和能力，而无需购买 DB2 Enterprise。
+`DB2 Workgroup` 提供了一个低成本的入门级服务器，主要用于小型企业和开发性计算。`DB2 Workgroup` 支持与 `DB2 Express` 相同的所有功能。还可以通过功能包（`feature packs`）添加额外的功能和能力，而无需购买 `DB2 Enterprise`。
 
-DB2 Workgroup 可以使用 DB2 Express 相同的选项进行许可 —— 区别在于架构限制，这反过来针对特定的工作负载进行了优化。例如，DB2 Workgroup 的 RAM 限制为 16 GB，是 DB2 Express 服务器允许使用量的四倍（通常意味着更好的性能或更多的支持用户）。DB2 Workgroup 不能安装在评分超过 400 VU 的服务器上，而 DB2 Express 的限制为 200 VU。DB2 Workgroup 还可以通过授权用户（Authorized User）模型进行许可，并与 DB2 Express 共享相同的最小数量（五个授权用户许可）。
+`DB2 Workgroup` 可以使用 `DB2 Express` 相同的选项进行许可 —— 区别在于架构限制，这反过来针对特定的工作负载进行了优化。例如，`DB2 Workgroup` 的 `RAM` 限制为 16 GB，是 `DB2 Express` 服务器允许使用量的四倍（通常意味着更好的性能或更多的支持用户）。`DB2 Workgroup` 不能安装在评分超过 400 `VU` 的服务器上，而 `DB2 Express` 的限制为 200 `VU`。`DB2 Workgroup` 还可以通过授权用户（`Authorized User`）模型进行许可，并与 `DB2 Express` 共享相同的最小数量（五个授权用户许可）。
 
 ## DB2set
 
-在 DB 8 中，DB2 产品线中有两种工作组版：DB2 Workgroup 服务器版 (DB2 WSE) 和 DB2 Workgroup 无限制版 (DB2 WSUE)。DB2 BSE 除了基础服务器许可外，还通过并发许可或命名用户许可进行许可。DB2 WSUE 通过处理器指标进行许可。在 DB 9 中，这些版本合并为一个版本：DB2 Workgroup。命名用户许可和服务器许可已被简化的授权用户模型和使用 VU 指标的处理器许可取代。
+在 `DB 8` 中，`DB2` 产品线中有两种工作组版：`DB2 Workgroup` 服务器版 (`DB2 WSE`) 和 `DB2 Workgroup` 无限制版 (`DB2 WSUE`)。`DB2 BSE` 除了基础服务器许可外，还通过并发许可或命名用户许可进行许可。`DB2 WSUE` 通过处理器指标进行许可。在 `DB 9` 中，这些版本合并为一个版本：`DB2 Workgroup`。命名用户许可和服务器许可已被简化的授权用户模型和使用 `VU` 指标的处理器许可取代。
 
 ## Linux、Unix 和 Windows 版 DB2 数据服务器
 
-DB2 Workgroup 在业务中可以扮演许多角色。它适合中小型企业 (SMB)，这些企业需要一个可扩展且可通过广域网 (WAN) 或局域网 (LAN) 访问的全功能关系数据服务器。DB2 Workgroup 对于需要为业务线提供孤立服务器的企业环境，或未来需要扩展能力的部门也有用。如前所述，为任何版本的 DB2 编写的应用程序都可以透明地移植到任何分布式平台上的另一个版本。
+`DB2 Workgroup` 在业务中可以扮演许多角色。它适合中小型企业 (`SMB`)，这些企业需要一个可扩展且可通过广域网 (`WAN`) 或局域网 (`LAN`) 访问的全功能关系数据服务器。`DB2 Workgroup` 对于需要为业务线提供孤立服务器的企业环境，或未来需要扩展能力的部门也有用。如前所述，为任何版本的 `DB2` 编写的应用程序都可以透明地移植到任何分布式平台上的另一个版本。
 
 ## DB2 Express 和 DB2 工作组版的附加功能包
 
-DB2 Express 和 DB2 Workgroup 能够灵活添加企业级服务（通常在 DB2 Enterprise 中找到），而无需购买更贵的 DB2 版本。通常，这些功能包的定价使得如果你只需要一或两个特定功能，可以通过购买适当的功能包而不是购买 DB2 Enterprise 来节省费用（只要你仍处于所实施的 DB2 版本的架构限制之内）。在其他竞争性数据服务器产品中并非如此。
+`DB2 Express` 和 `DB2 Workgroup` 能够灵活添加企业级服务（通常在 `DB2 Enterprise` 中找到），而无需购买更贵的 `DB2` 版本。通常，这些功能包的定价使得如果你只需要一或两个特定功能，可以通过购买适当的功能包而不是购买 `DB2 Enterprise` 来节省费用（只要你仍处于所实施的 `DB2` 版本的架构限制之内）。在其他竞争性数据服务器产品中并非如此。
 
-DB2 Express 和 DB2 Workgroup 功能包的许可方式与底层数据服务器相同。也就是说，如果你使用 VU 指标许可了你的 DB2 数据服务器，你必须也使用 VU 指标许可任何附加功能包。
+`DB2 Express` 和 `DB2 Workgroup` 功能包的许可方式与底层数据服务器相同。也就是说，如果你使用 `VU` 指标许可了你的 `DB2` 数据服务器，你必须也使用 `VU` 指标许可任何附加功能包。
 
-以下功能包适用于 DB2 Express 和 DB2 工作组数据服务器：
+以下功能包适用于 `DB2 Express` 和 `DB2` 工作组数据服务器：
 
-- 工作负载管理功能包 (Workload Management Pack)
+- 工作负载管理功能包 (`Workload Management Pack`)
 
-允许你在 DB2 Express 或 DB2 工作组数据服务器上使用连接集中器 (Connection Concentrator) 和 DB2 控制器 (DB2 Governor)，以及安装 DB2 Query Patrol。
+允许你在 `DB2 Express` 或 `DB2` 工作组数据服务器上使用连接集中器 (`Connection Concentrator`) 和 `DB2` 控制器 (`DB2 Governor`)，以及安装 `DB2 Query Patrol`。
 
-连接集中器对于多个瞬时连接在间隔内执行有限工作的应用程序非常有用。例如，考虑一个基于 Web 的应用程序，你在其中浏览并选择性地挑选商品购买。在你浏览想要购买的项目时，你登录系统的时间可能较长，但你并没有让数据服务器一直工作，因为你可能在读取页面而不是不断点击。集中服务器连接通过允许更高效地处理更多客户端连接来提高性能，并减少每个连接使用的内存。此能力是基础 DB2 Enterprise 安装的一部分。
+连接集中器对于多个瞬时连接在间隔内执行有限工作的应用程序非常有用。例如，考虑一个基于 `Web` 的应用程序，你在其中浏览并选择性地挑选商品购买。在你浏览想要购买的项目时，你登录系统的时间可能较长，但你并没有让数据服务器一直工作，因为你可能在读取页面而不是不断点击。集中服务器连接通过允许更高效地处理更多客户端连接来提高性能，并减少每个连接使用的内存。此能力是基础 `DB2 Enterprise` 安装的一部分。
 
-DB2 Governor 默认也包含在 DB2 Enterprise 中，用于响应式监控在 DB2 数据服务器上运行的应用程序的行为。使用 DB2 Governor，你可以通过对配置文件中定义的阈值采取纠正措施，改变应用程序或数据服务器的行为。例如，如果应用程序正在使用过多的 CPU，你可以设置一条规则，当突破此阈值时，终止应用程序或赋予其较低的 CPU 优先级。
+`DB2 Governor` 默认也包含在 `DB2 Enterprise` 中，用于响应式监控在 `DB2` 数据服务器上运行的应用程序的行为。使用 `DB2 Governor`，你可以通过对配置文件中定义的阈值采取纠正措施，改变应用程序或数据服务器的行为。例如，如果应用程序正在使用过多的 `CPU`，你可以设置一条规则，当突破此阈值时，终止应用程序或赋予其较低的 `CPU` 优先级。
 
-DB2 Query Patrol (DB2 QP) 用于主动管理数据服务器的工作负载，与响应式的 DB2 Governor 相反。通过 DB2 QP，你可以定义一组主动监控的用户和组业务策略。例如，如果用户提交了一个优化器估估成本为 1,000,000 时的查询，而你设置了一项业务规则规定查询不能超过 100,000 时，那么 DB2 QP 将停止该查询在数据服务器上的执行。你还可以使用 DB2 QP 进行计费会计，因为它跟踪价值信息并可用于性能调优。DB2 QP 详见本章后面的“DB2 Query Patrol”部分。
+`DB2 Query Patrol` (`DB2 QP`) 用于主动管理数据服务器的工作负载，与响应式的 `DB2 Governor` 相反。通过 `DB2 QP`，你可以定义一组主动监控的用户和组业务策略。例如，如果用户提交了一个优化器估估成本为 1,000,000 时的查询，而你设置了一项业务规则规定查询不能超过 100,000 时，那么 `DB2 QP` 将停止该查询在数据服务器上的执行。你还可以使用 `DB2 QP` 进行计费会计，因为它跟踪价值信息并可用于性能调优。`DB2 QP` 详见本章后面的“`DB2 Query Patrol`”部分。
 
-- 性能优化功能包 (Performance Optimization Feature Pack)
+- 性能优化功能包 (`Performance Optimization Feature Pack`)
 
-使 DB2 Express 和 DB2 工作组可以使用物化查询表 (MQT)、多维聚集 (MDC) 表以及查询并行。所有这些功能都用于提供卓越性能，并且是基础 DB2 Enterprise 安装的一部分。
+使 `DB2 Express` 和 `DB2` 工作组可以使用物化查询表 (`MQT`)、多维聚集 (`MDC`) 表以及查询并行。所有这些功能都用于提供卓越性能，并且是基础 `DB2 Enterprise` 安装的一部分。
 
-DB2 具有许多高性能对象和能力，使其能够扩展到数十万用户和每分钟数百万的交易或查询。此功能包提供了在 DB2 Express 和 DB2 工作组服务器上创建 MDC 表和 MQT 的能力。事实上，我们认为任何高性能应用程序最重要的组件都是此功能包的一部分。
+`DB2` 具有许多高性能对象和能力，使其能够扩展到数十万用户和每分钟数百万的交易或查询。此功能包提供了在 `DB2 Express` 和 `DB2` 工作组服务器上创建 `MDC` 表和 `MQT` 的能力。事实上，我们认为任何高性能应用程序最重要的组件都是此功能包的一部分。
 
-- 高可用性功能包 (High-Availability Feature Pack)
+- 高可用性功能包 (`High-Availability Feature Pack`)
 
-为 DBA 提供免费的 Tivoli 系统自动化 (TSA) 高可用性、服务器集群功能以及 HADR 功能。此功能包中的所有功能都是基础 DB2 Enterprise 安装的一部分。
+为 `DBA` 提供免费的 `Tivoli` 系统自动化 (`TSA`) 高可用性、服务器集群功能以及 `HADR` 功能。此功能包中的所有功能都是基础 `DB2 Enterprise` 安装的一部分。
 
-HADR 是一种易设置的高可用性功能。在线表重组功能如其名所示，允许你在线重组表。
+`HADR` 是一种易设置的高可用性功能。在线表重组功能如其名所示，允许你在线重组表。
 
-- pureXML 功能包 (pureXML Feature Pack)
+- pureXML 功能包 (`pureXML Feature Pack`)
 
-提供在 DB2 Express 或 DB2 工作组数据服务器上创建 pureXML 列，并在处理数据时使用一组 XML 服务。
-
-
-
-
+提供在 `DB2 Express` 或 `DB2` 工作组数据服务器上创建 `pureXML` 列，并在处理数据时使用一组 `XML` 服务。
 
 # 第1章 产品概述
 
--   同构联邦功能包 (Homogeneous Federation Feature Pack)
+- 同构联邦功能包 (`Homogeneous Federation Feature Pack`)
 
-提供了跨 DB2 系列数据服务器创建别名的能力。此功能允许开发者构建访问位于不同平台的 DB2 表格的应用程序，而无需考虑其位置。例如，你可以使用此功能轻松地创建一个应用程序，对运行在 DB2 for i/OS 数据服务器上的数据与运行在 DB2 for Windows 上的数据进行连接操作。如果你在集成开发环境（IDE）如 IBM Rational Application Developer 或 Microsoft Visual Studio 2005 中工作，你将无法判断哪一个表实际存储在何处——这正是该功能的意义所在。此功能包的能力在本章稍后介绍的 WebSphere Federated 产品的一个子集。
+提供了跨 `DB2` 系列数据服务器创建别名的能力。此功能允许开发者构建访问位于不同平台的 `DB2` 表格的应用程序，而无需考虑其位置。例如，你可以使用此功能轻松地创建一个应用程序，对运行在 `DB2 for i/OS` 数据服务器上的数据与运行在 `DB2 for Windows` 上的数据进行连接操作。如果你在集成开发环境（`IDE`）如 `IBM Rational Application Developer` 或 `Microsoft Visual Studio 2005` 中工作，你将无法判断哪一个表实际存储在何处——这正是该功能的意义所在。此功能包的能力在本章稍后介绍的 `WebSphere Federated` 产品的一个子集。
 
 ## DB2 企业版
 
-DB2 企业版 (DB2 Enterprise) 是 IBM 提供的顶级数据服务器产品，是许多关键任务系统的基础，也是本书的关注重点。它完全支持 Web，可从单核服务器扩展到多核服务器，再到大规模并行系统。
+`DB2` 企业版 (`DB2 Enterprise`) 是 `IBM` 提供的顶级数据服务器产品，是许多关键任务系统的基础，也是本书的关注重点。它完全支持 `Web`，可从单核服务器扩展到多核服务器，再到大规模并行系统。
+
+
 
 DB2 的这个版本被认为是 IBM 提供的功能完整的产品（例如，它是唯一包含表分区的 DB2 版本）。它支持与 DB2 Workgroup 相同的 Linux、UNIX 和 Windows 支持版本。为 DB2 Enterprise 构建的应用程序可以向上扩展，并在大规模并行系统或较小的服务器上执行。
 
 DB2 Enterprise 适用于中大型部门服务器。DB2 Enterprise 包含了 DB2 Express 和 DB2 Workgroup 版的所有功能以及更多。此外，还有一组该版本独有的功能包，例如提供深度压缩的 DB2 9 存储优化功能包等。
 
-> DB2 注意事项
+> **DB2 注意事项**
+>
 > 某些功能包（如数据库分区和存储优化功能）无法通过“授权用户”（authorized user）指标进行使用。
 
 DB2 Enterprise 可以使用 DB2 Express 和 DB2 Workgroup 相同的 VU（价值单元）指标进行许可；然而，对于 DB2 Enterprise 而言，对安装该产品的服务器没有 RAM 或 VU 服务器额定限制。DB2 Enterprise 也可以通过“授权用户”指标进行许可。与 DB2 和 DB2 Workgroup 不同，在使用授权用户指标对 DB2 Enterprise 进行许可时，对于服务器上的每 100 个 VU，必须许可的最小授权用户数量为 25 个授权用户。例如，如果你在一台 8 核 System p 服务器（额定为 800 VU）上安装了 DB2 Enterprise，即使你打算让该数据服务器支持少于 200 个用户，也必须购买 200 个授权用户许可才能使用此许可选项。
 
-## DB2 Linux, UNIX 和 Windows 数据服务器
+## DB2 Linux、UNIX 和 Windows 数据服务器
 
 ## DB2 企业版附加功能包
 
-DB2 Enterprise 同样像 DB2 Express 和 DB2 Workgroup 一样配备了一套附加功能包。在大多数情况下（pureXML 功能包除外），为 DB2 Enterprise 购买的扩展功能是 DB2 家族中该版本独有的，并为数据运行时环境提供了更丰富的企业能力。
+DB2 Enterprise 同样像 DB2 Express 和 DB2 Workgroup 一样配备了一套附加功能包。在大多数情况下（`pureXML` 功能包除外），为 DB2 Enterprise 购买的扩展功能是 DB2 家族中该版本独有的，并为数据运行时环境提供了更丰富的企业能力。
 
 许可 DB2 Enterprise 功能包的方式必须与 DB2 Enterprise 数据服务器的许可方式完全。这是 DBA 在决定如何对 DB2 Enterprise 服务器进行许可时特别注意的一个领域，因为某些功能包无法通过 DB2 授权用户许可使用。
 
 通过授权用户或价值单元（VU）许可在 DB2 Enterprise 中提供的功能包包括：
 
--   性能优化功能包 (Performance Optimization Feature Pack)
+- 性能优化功能包（Performance Optimization Feature Pack）
 
-DBA 通过此功能包获得安装 DB2 Query Patroller 和 DB2 Performance Expert 工具的许可。此功能包中的 DB2 Query Patroller 组件与 DB2 Express 和 DB2 Workgroup 可用的负载管理功能包中的组件相同。
+DBA 通过此功能包获得安装 `DB2 Query Patroller` 和 `DB2 Performance Expert` 工具的许可。此功能包中的 `DB2 Query Patroller` 组件与 DB2 Express 和 DB2 Workgroup 可用的负载管理功能包中的组件相同。
 
-DB2 Performance Expert 是一个单独购买的工具，用于简化性能管理和调优。它为 DBA 提供了跨整个 DB2 家族的实例、子系统、数据库和应用程序的一致视图。它包含了一组预配置的报告，用于识别 DB2 中的资源短缺和异常，包括锁定冲突、死锁以及导致高负载的应用程序和 SQL 语句。DB2 Performance Expert 还包含了一组关于 SQL、数据库和缓冲池活动的详细报告，并带有趋势分析和用于性能评估的“如果会怎样”（what-if）假设测试。
+`DB2 Performance Expert` 是一个单独购买的工具，用于简化性能管理和调优。它为 DBA 提供了跨整个 DB2 家族的实例、子系统、数据库和应用程序的一致视图。它包含了一组预配置的报告，用于识别 DB2 中的资源短缺和异常，包括锁定冲突、死锁以及导致高负载的应用程序和 SQL 语句。`DB2 Performance Expert` 还包含了一组关于 SQL、数据库和缓冲池活动的详细报告，并带有趋势分析和用于性能评估的“如果会怎样”（what-if）假设测试。
 
 ### 注意
-此功能包包含的 DB2 Performance Expert 版本仅可用于运行在 Linux、UNIX 和 Windows 上的 DB2 数据服务器。在功能包之外购买的 DB2 Performance Expert 工具可用于整个 DB2 家族。
 
-# 第1章 产品概述
+此功能包包含的 `DB2 Performance Expert` 版本仅可用于运行在 Linux、UNIX 和 Windows 上的 DB2 数据服务器。在功能包之外购买的 `DB2 Performance Expert` 工具可用于整个 DB2 家族。
 
--   pureXML 功能包
+- `pureXML` 功能包
 
 此功能包提供的能力与本节之前介绍的 DB2 Express 和 DB2 工作负载提供的功能相同。
 
--   高级访问控制功能包 (Advanced Access Control Feature Pack)
+- 高级访问控制功能包（Advanced Access Control Feature Pack）
 
-为存储在 DB2 Enterprise 数据服务器中的数据提供基于标签的访问控制 (LBAC) 保护服务。使用此功能，数据管理员可以在表列和行级上控制用户的读取和写入访问。LBAC 通过创建列之间的亲和关系以及生成的保护安全标签来对数据访问进行控制。当用户尝试从表中获取数据时，他们必须具有匹配的标签凭据（或父标签）。当匹配成功时，允许访问；如果不匹配，则拒绝访问。
+为存储在 DB2 Enterprise 数据服务器中的数据提供基于标签的访问控制（LBAC）保护服务。使用此功能，数据管理员可以在表列和行级上控制用户的读取和写入访问。LBAC 通过创建列之间的亲和关系以及生成的保护安全标签来对数据访问进行控制。当用户尝试从表中获取数据时，他们必须具有匹配的标签凭据（或父标签）。当匹配成功时，允许访问；如果不匹配，则拒绝访问。
 
 你可以使用此功能包创建一个安全框架，其架构构建在分层表示之上，该分层表示匹配数据访问层级、业务实体数组或两者的混合。LBAC 还可以限制对列中 XML 文档的访问（尽管在本文写作时，尚无法为文档内部的片段附加标签）。
 
--   地理数据管理功能包 (Geodetic Data Management Feature Pack)
+- 地理数据管理功能包（Geodetic Data Management Feature Pack）
 
-此功能包包含了 DB2 Spatial Extender，可用于提供空间分析。此功能与 DB2 Spatial Extender 的区别在于，DB2 地理数据管理功能包包含了内置算法，这些算法考虑了对象的曲率，例如地球表面。例如，地图通常与投影有关。当你使用此投影生成的地图时，你会发现格陵兰的大小竟然相当于非洲，这通常令人惊讶。对于尝试定位地址或城市划分的应用程序，投影引起的失真可能并不显著；对于天气模式分析或防御程序，它可能是重要的。如果你无法由于投影而丢失精度，则此功能包可能适用于你的应用程序。
+此功能包包含了 `DB2 Spatial Extender`，可用于提供空间分析。此功能与 `DB2 Spatial Extender` 的区别在于，DB2 地理数据管理功能包包含了内置算法，这些算法考虑了对象的曲率，例如地球表面。例如，地图通常与投影有关。当你使用此投影生成的地图时，你会发现格陵兰的大小竟然相当于非洲，这通常令人惊讶。对于尝试定位地址或城市划分的应用程序，投影引起的失真可能并不显著；对于天气模式分析或防御程序，它可能是重要的。如果你无法由于投影而丢失精度，则此功能包可能适用于你的应用程序。
 
--   实时洞察功能包 (Real-Time Insight Feature Pack)
+- 实时洞察功能包（Real-Time Insight Feature Pack）
 
 适用于管理大量数据流。现有基础设施在尝试管理大量数据时很容易过载。每秒数万到数十万条消息的输入数据会导致分析这些大量数据变得困难。
 
-DB2 实时洞察功能包由 DB2 Data Stream Engine 驱动（超出本书范围，不讨论），它允许组织存储和转发来自多个数据流的大量数据。数据消息在存储或转发之前可以实时进行聚合、过滤和增强。
+DB2 实时洞察功能包由 `DB2 Data Stream Engine` 驱动（超出本书范围，不讨论），它允许组织存储和转发来自多个数据流的大量数据。数据消息在存储或转发之前可以实时进行聚合、过滤和增强。
 
-DB2 Data Stream Engine 可以将大量数据加载到 DB2 数据服务器中，并通过 SQL 使这些数据实时可用。一个例子是提供金融交易信息（如股票交易和报价）的金融市场数据流。
+`DB2 Data Stream Engine` 可以将大量数据加载到 DB2 数据服务器中，并通过 SQL 使这些数据实时可用。一个例子是提供金融交易信息（如股票交易和报价）的金融市场数据流。
 
 实时洞察功能的优势包括：
 
--   解决方案以高吞吐量低延迟加载大量数据
--   同时存储和发布来自多个源的数据
--   在存储和发布之前通过对数据进行过滤和聚合来获取洞察
--   对从馈处理的实体维护元数据（如当前状态）
--   将数据同时持久化到多个主机上的多个数据库
--   通过共享内存存储实现实时访问
--   通过标准 SQL、C-API 和 Java API 接口访问实时和历史数据
+- 解决方案以高吞吐量低延迟加载大量数据。
+- 同时存储和发布来自多个源的数据。
+- 在存储和发布之前通过对数据进行过滤和聚合来获取洞察。
+- 对从馈处理的实体维护元数据（如当前状态）。
+- 将数据同时持久化到多个主机上的多个数据库。
+- 通过共享内存存储实现实时访问。
+- 通过标准 SQL、C-API 和 Java API 接口访问实时和历史数据。
 
--   按需移动功能包 (Mobility on Demand Feature Pack)
+- 按需移动功能包（Mobility on Demand Feature Pack）
 
-此功能包提供了本文之前介绍的 DB2Everyplace Enterprise 组件。在使用功能包中的 DB2 时，你需要确保 DB2 SyncServer 与 DB2 Enterprise 数据服务器共同地部署（这就是与完整许可 DB2 Everyplace Enterprise 版相比成本较低的原因）。
+此功能包提供了本文之前介绍的 `DB2Everyplace Enterprise` 组件。在使用功能包中的 DB2 时，你需要确保 `DB2 SyncServer` 与 DB2 Enterprise 数据服务器共同地部署（这就是与完整许可 `DB2 Everyplace Enterprise` 版相比成本较低的原因）。
 
-
-
-
-
-## 第 1 章 产品概述
+# 第 1 章 产品概述
 
 DB2 Enterprise 仅通过“价值单元”（Value Unit）许可提供两个功能包（换句话说，你无法通过带有授权用户许可的 DB2 Enterprise 服务器来购买这些功能包）：
 
-## 1. 数据库分区功能 (DPF)
+## 1. 数据库分区功能（DPF）
 
 DB2 Enterprise 提供了使 DB2 跨集群或大规模并行服务器进行数据分区的能力。对于终端用户或应用程序开发人员来说，分区数据库似乎位于单个系统上，但 SQL 语句会在所有服务器上并行处理，从而提高了任何给定查询的执行速度。
 
@@ -664,24 +514,20 @@ DB2 企业版支持大型数据库，但大型数据库通常受益于 DPF。
 
 DB2 为连接到其他 DB2 和非 DB2 数据服务器提供了多种选项：
 
-- DB2 客户端 — 远程用户访问 DB2 数据库需要在工作站安装 DB2 客户端代码。
-- DB2 驱动程序 — DB2 客户端的一些 API 是独立打包的，不依赖客户端安装。DB2 驱动程序为特定的 API 连接提供了更轻量的部署选项。
-- DB2 Connect™ — 此附加产品支持运行在 Linux、UNIX、VM/SE 和 z/OS 环境下的应用程序。DB2 Connect 不仅仅是连接；详情将在本文后面介绍。
+- **DB2 客户端** — 远程用户访问 DB2 数据库需要在工作站安装 DB2 客户端代码。
+- **DB2 驱动程序** — DB2 客户端的一些 API 是独立打包的，不依赖客户端安装。DB2 驱动程序为特定的 API 连接提供了更轻量的部署选项。
+- **DB2 Connect™** — 此附加产品支持运行在 Linux、UNIX、VM/SE 和 z/OS 环境下的应用程序。DB2 Connect 不仅仅是连接；详情将在本文后面介绍。
 
 在任何 LUW 平台上访问 DB2 都不需要：
 
-- DB2 复制 — 此功能为 DB2 数据服务器提供复制能力。有两种复制：基于 SQL 的复制和基于队列的复制（也称为 Q 复制）。两者有时被称为数据传播（DPROP）。
+- **DB2 复制** — 此功能为 DB2 数据服务器提供复制能力。有两种复制：基于 SQL 的复制和基于队列的复制（也称为 Q 复制）。两者有时被称为数据传播（DPROP）。
 
 SQL 复制包含在所有运行在 Linux、Unix 和 Windows 的 DB2 主流版本中。它由捕捉 和 APPLY 组成，使用 SQL 在目标服务器上重放数据。
 
 Q 复制基于 IBM WebSphere MQSeries® 技术，通常认为是一种更可用且强大的复制技术。你可以通过 WebSphere Information Integrator 产品之一为 DB2 环境添加此功能。
 
-- WebSphere Information Server 或 WebSphere Federation Server — WebSphere 品牌系列产品可以帮助你跨异构数据源发布、清洗、转换、富化和访问数据。
-- WebSphere Application Server — 该应用程序服务器的一部分随 DB2 一起发布。它允许开发人员在事务处理环境中使用 Java 作为平台。
-
-
-
-
+- **WebSphere Information Server** 或 **WebSphere Federation Server** — WebSphere 品牌系列产品可以帮助你跨异构数据源发布、清洗、转换、富化和访问数据。
+- **WebSphere Application Server** — 该应用程序服务器的一部分随 DB2 一起发布。它允许开发人员在事务处理环境中使用 Java 作为平台。
 
 ## DB2 客户端
 
@@ -689,27 +535,27 @@ Q 复制基于 IBM WebSphere MQSeries® 技术，通常认为是一种更可用�
 
 DB2 运行时客户端提供了最小的客户端占用空间（约 20–30 MB），以支持与 DB2 9 数据服务器的连接（例外是你选择通过 API 驱动程序进行通信，这在本节稍后部分介绍）。当你安装 DB2 运行时客户端时，你安装的是一个驱动程序，支持所有常见的编程方法，包括 ADO.NET、OLE DB、ODBC、JDBC、SQLJ、静态 SQL 等。
 
-## DB2 注意
+> **DB2 注意**
+>
+> 在本章中，小写 c 的 client 一词泛指一般的 DB2 客户端软件，而大写 C 则指一个特定的 DB2 客户端包。
 
-在本章中，小写 c 的 client 一词泛指一般的 DB2 客户端软件，而大写 C 则指一个特定的 DB2 客户端包。
+使用 DB2 运行时客户端，你可以执行基本功能，例如从 DB2 CLP 或会话中运行任何 DB2 命令或 SQL 语句；然而，大多数情况下，此客户端除了支持数据连接外没有其他其他功能。例如，它没有基于图形的管理工具、文档等。你可以在 `www/14.software.ibm.com/webapp/iwm/web/prelogin.do?lang=en_US&source=swg-dm-db2rtcl` 下载 DB2 运行时客户端。
 
-使用 DB2 运行时客户端，你可以执行基本功能，例如从 DB2 CLP 或会话中运行任何 DB2 命令或 SQL 语句；然而，大多数情况下，此客户端除了支持数据连接外没有其他其他功能。例如，它没有基于图形的管理工具、文档等。你可以在 www/14.software.ibm.com/webapp/iwm/web/prelogin.do?lang=en_US&source=swg-dm-db2rtcl 下载 DB2 运行时客户端。
-
-## DB2 注意
-
-DB 8 运行时客户端与 DB2 9 运行时客户端非常不同。在 DB2 8 中，有一个仅适用于 Windows 的特殊客户端，称为 DB2 运行时 Lite。该客户端与 DB2 9 运行时客户端相比，占用空间更小，并且不包含工具、文档等。DB2 9 运行时客户端类似于 DB2 8 运行时客户端 Lite，但现在适用于所有支持的平台。
-
-提供 Windows 模块（.msi 文件）的特殊 DB2 运行时客户端，这使得在 Windows 应用程序中安装该软件更加自然。你可以在 http://www-304.ibm.com/jct03002c/software/data/db2/runtime.html 下载这些文件。
-
-## 第 1 章 产品概述
+> **DB2 注意**
+>
+> DB 8 运行时客户端与 DB2 9 运行时客户端非常不同。在 DB2 8 中，有一个仅适用于 Windows 的特殊客户端，称为 DB2 运行时 Lite。该客户端与 DB2 9 运行时客户端相比，占用空间更小，并且不包含工具、文档等。DB2 9 运行时客户端类似于 DB2 8 运行时客户端 Lite，但现在适用于所有支持的平台。
+>
+> 提供 Windows 模块（`.msi` 文件）的特殊 DB2 运行时客户端，这使得在 Windows 应用程序中安装该软件更加自然。你可以在 `http://www-304.ibm.com/jct03002c/software/data/db2/runtime.html` 下载这些文件。
 
 相比之下，DB2 客户端包含了 DB2 运行时客户端的所有功能，外加客户端-服务器配置功能、数据库管理和开发工具、示例等。例如，此客户端包含了配置助手（Configuration Assistant），它提供了图形化管理和连接工具，以及大量的编程示例等。DB2 9 客户端替换了 DB2 8 应用开发客户端和 DB2 8 管理客户端中存在的功能。
 
-DB2 客户端的占用空间与你选择安装的组件直接相关，取决于你选择的选项，可能在 200 MB 到 800 MB 之间。安装 DB2 客户端的过程与 DB2 数据服务器非常相似。你可以在 http://www-304.ibm/jct0302c/soft-ware/db2/runtime.html 下载 DB2 客户端。
+DB2 客户端的占用空间与你选择安装的组件直接相关，取决于你选择的选项，可能在 200 MB 到 800 MB 之间。安装 DB2 客户端的过程与 DB2 数据服务器非常相似。你可以在 `http://www-304.ibm/jct0302c/soft-ware/db2/runtime.html` 下载 DB2 客户端。
 
 安装哪种 DB2 客户端的选择取决于客户端机器上应用程序的需求。例如，如果你有一个为 Linux、UNIX 或 Windows 开发的数据库，并且你不需要从 Windows 工作站使用 DB2 管理或应用开发工具，但又想支持用 .NET 和 Java 等多种编程语言编写的应用程序，那么你应该在该工作站上安装 DB2 运行时客户端。
 
-某些专家偏于在专用服务器上远程部署 DB2 运行时客户端。在这些环境中，远程工作站需要在访问 DB2 之前从代码服务器远程访问 DB2 运行时客户端代码。这种配置被称为瘦客户端（thin client）。瘦客户端配置可以提供许多优势，例如拥有所有数据库连接的中心目录目录和一个用于管理的单一代码副本。权衡是，客户端在访问远程数据服务器之前必须从代码服务器加载代码 .dll 文件。需要注意的是，这种性能仅在初始连接时被“感知”到。一旦客户端代码加载到客户端工作站上，后续就不需要再次调用代码服务器。
+
+
+某些专家偏于在专用服务器上远程部署 DB2 运行时客户端。在这些环境中，远程工作站需要在访问 DB2 之前从代码服务器远程访问 DB2 运行时客户端代码。这种配置被称为瘦客户端（thin client）。瘦客户端配置可以提供许多优势，例如拥有所有数据库连接的中心目录目录和一个用于管理的单一代码副本。权衡是，客户端在访问远程数据服务器之前必须从代码服务器加载代码 `.dll` 文件。需要注意的是，这种性能仅在初始连接时被“感知”到。一旦客户端代码加载到客户端工作站上，后续就不需要再次调用代码服务器。
 
 当你想要部署 DB2 应用程序时，你只需要确保每个执行应用程序的工作站上都安装了 DB2 运行时客户端。图 1-10 显示了应用程序、DB2 运行时客户端与 DB2 数据服务器之间的关系。如果应用程序和数据库安装在同一台服务器上，则连接被认为来自本地客户端。如果应用程序安装在 DB2 数据服务器以外的系统上，则其连接被认为来自远程客户端。
 
@@ -732,11 +578,11 @@ IBM JDBC 和 SQLJ 驱动程序可以部署以支持基于 Java 的 DB2 数据服
 
 你应该注意，尽管该驱动程序可以连接到 DB2 for i/OS、VM/SE 或 z/OS，你需要通过 DB2 Connect（下一节介绍）对此类连接进行授权以确保合规。
 
-重要的是，JDBC 和 SQLJ 驱动程序仅支持 Java 应用程序。除了包含工具和文档外，该驱动程序不支持使用其他 API 的数据服务器连接。例如，你无法使用该驱动程序支持 .NET 应用程序。你可以在 www14.software.ibm.com/webapp/download/ 下载该驱动程序。
+重要的是，JDBC 和 SQLJ 驱动程序仅支持 Java 应用程序。除了包含工具和文档外，该驱动程序不支持使用其他 API 的数据服务器连接。例如，你无法使用该驱动程序支持 .NET 应用程序。你可以在 `www14.software.ibm.com/webapp/download/` 下载该驱动程序。
 
 ## 第 1 章 产品概述
 
-DB2 9 包含了一种用于 CLI 和 ODBC 应用程序的新独立驱动程序，称为 IBM DB2 ODBC 驱动。该驱动程序为你的 DB2 环境提供了与 JDBC 和 SQLJ 驱动程序相同的优势和限制，只是它支持 CLI/ODBC 连接。你可以在 www4.software.ibm.com/webapp/download/ 下载它。
+DB2 9 包含了一种用于 CLI 和 ODBC 应用程序的新独立驱动程序，称为 IBM DB2 ODBC 驱动。该驱动程序为你的 DB2 环境提供了与 JDBC 和 SQLJ 驱动程序相同的优势和限制，只是它支持 CLI/ODBC 连接。你可以在 `www4.software.ibm.com/webapp/download/` 下载它。
 
 IBM DB2 ODBC 驱动的主要优势是：
 
@@ -751,19 +597,15 @@ DB2 Connect 是一个独立的产品家族，授权从分布式平台连接到�
 
 访问运行在主机上的 DB 的客户端通常被称为 DRDA 请求程序 (DRDA AR)，管理客户端连接的 DB2 服务器被称为 DRDA 服务器 (DRDA AS)。DB2 Connect 仅在 DRDA AR 和 DRDA AS 之间使用 TCP/IP 作为传输协议。
 
-> DB2 注意
-
-如果你从主机连接到 DB2 for Linux、UNIX 和 Windows，则不需要 DB2 Connect。DRDA 功能内置在运行分布式平台上的 DB2 数据服务器中。
+> **DB2 注意**
+>
+> 如果你从主机连接到 DB2 for Linux、UNIX 和 Windows，则不需要 DB2 Connect。DRDA 功能内置在运行分布式平台上的 DB2 数据服务器中。
 
 DB2 Connect 提供的一些主要功能包括：
 
 - 支持运行在主机上的 DB 的编程 API（如 ADO、ODBC、OLE DB、CLI、DB2、SQL、ADO.NET 等）。
 - 跨 DB2 和 Informix 数据服务器的联邦。你可以通过添加 WebSphere Federation Server 或 WebSphere Information Server 来扩展这种联邦能力的范围。
 - 连接池和更强大的连接集中服务
-
-
-
-
 
 ## DB2 连接性
 
@@ -799,6 +641,7 @@ DB2 产品的内容远比本节详述的要多。事实上，DB2 Connect 这个�
 DB2 复制允许数据从一个位置传播到另一个位置。基于 SQL 的复制（也称为数据传播器 DPTPR 复制）是 DB2 for Linux、UNIX 和 Windows 数据服务器的免费组件（它是大型机上的一个功能）。您还可以扩展此复制能力以支持多种数据服务器，包括 DB2、Oracle、Microsoft、Sybase、Informix、IMS、Lotus Notes 以及通过 WebSphere Replication Server 支持平面文件。
 
 > **DB2 注意**
+>
 > SQL 复制也是 DB2e SyncServer 的核心技术，它使移动用户能够与企业数据保持同步。
 
 图 1–12 显示了基于 SQL 的复制的一个示例。基于 SQL 的复制已经存在多年，并证明了其极大的活性、韧性、易用性和可扩展性。
@@ -808,10 +651,6 @@ DB2 复制允许数据从一个位置传播到另一个位置。基于 SQL 的�
 在图 1–12 中，您可以看到通过 WebSphere Replication Server 扩展后 DB2 的广泛范围。数据服务器相对于复制的核心能力如图 1–12 所示。在基于 Q 的复制中，每条消息代表一个放置在 WebSphere MQ 队列上的事务。
 
 **图 1–13** 基于 Q 的复制的威力
-
-
-
-
 
 ## 第 1 章产品概述
 
@@ -840,7 +679,7 @@ IBM 提供了一套特别折扣的信息管理产品套件，你可以以折扣�
 - DB2 Express 9
 - DB2 Workgroup 9
 - DB2 Enterprise 9
-- DB2 Runtime Client（包括 Windows 上的 .msi 合并模块）
+- DB2 Runtime Client（包括 Windows 上的 `.msi` 合并模块）
 - DB2 Client
 - IBM 用于 ODBC 和 CLI 的驱动程序
 - IBM 用于 JDBC 和 SQLJ 的驱动程序
@@ -879,13 +718,15 @@ DEDE 还包含了所有支持的编程语言所需的编程库、头文件、代
 
 DB2 9 开发者工作台 (DB2 DWB) 取代了 DB2 8 开发中心。DB2 DWB 是一个基于 Eclipse 的图形环境，支持快速开发 DB2 SQL 和 Java 存储过程、DB2 标量和表用户定义函数 (UDFs)、SQL 语句、XQuery 语句和 Web 服务。然而，列表中还有很多内容。例如，DB2 DWB 包含一个增强了语法高亮和代码助的 SQL 编辑器，以及团队支持、比较工具等。
 
-DB2 DWB 是一个独立的工具，并与 DB2 数据服务器分开维护。你可以从 www-304.ibm.com/jct03001c/software/db2/ad/dwb.html 下载它。
+DB2 DWB 是一个独立的工具，并与 DB2 数据服务器分开维护。你可以从 `www-304.ibm.com/jct03001c/software/db2/ad/dwb.html` 下载它。
 
 DB2 DWB 实际上是为不是编码专家但需要为其数据服务器构建逻辑提供快速开发协助的 DBA 设计的。根据你的环境，你可能会选择其他工具如 Toad for DB2 或 Visual Studio。纯开发者可能会选择将 DB2 9 提供的插件集成到各自的 IDE 中，尽管可以免费使用 DB2 DWB。
 
 图 1–16 显示了开发者工作台的快照。
 
-![](img/2fc7488b6558d6b99bbc7356ac4116b1_68_0.png)图 1–16 开发者工作台
+![](img/2fc7488b6558d6b99bbc7356ac4116b1_68_0.png)
+
+图 1–16 开发者工作台
 
 ## DB2 Extenders
 
@@ -899,9 +740,11 @@ DB2 空间扩展 (DB2 SE) 提供了创建空间感知对象并将其存储在 DB
 
 DB2 SE 的价值在于，视觉化表示的数据比行和列报告的数据更容易排序。
 
+
+
 当你为 DB2 数据库启用 DB2 SE 时，可以使用 SQL 或其他供应商的专用工具与数据进行交互。关键在于，有了 DB2 SE，DB2 理解空间“方言”以及你想要执行的操作。
 
-例如，PDA 上的车载应用可能会根据用户的动态请求，为其用户提供附近中餐馆列表。在这种情况下，客户端的 PDA 使用全球定位系统 (GPS) 坐标创建一个位置框，它可能会生成类似下面的 SQL 语句：
+例如，PDA 上的车载应用可能会根据用户的动态请求，为其用户提供附近中餐馆列表。在这种情况下，客户端的 PDA 使用全球定位系统（GPS）坐标创建一个位置框，它可能会生成类似下面的 SQL 语句：
 
 ```sql
 SELECT NAME, DESCRIPTION, ADDRESS FROM RESTAURANTS
@@ -911,73 +754,69 @@ AND CATEGORY = 'CHINESE'
 AND DOC CONTAINS(MENU,'PEKING DUCK')
 ```
 
-OVERLAPS 是一个空间函数，根据 OVERLAPS 边界规范显示感兴趣的数据；还有许多其他空间函数，包括 INTERSECTS、WITHIN、BUFFERS 等。
-
-
-
-
+`OVERLAPS` 是一个空间函数，根据 `OVERLAPS` 边界规范显示感兴趣的数据；还有许多其他空间函数，包括 `INTERSECTS`、`WITHIN`、`BUFFERS` 等。
 
 ## DB2 连接性
 
-## DB2 地理扩展器 (Geodetic Extender)
+### DB2 地理扩展器（Geodetic Extender）
 
 DB2 地理扩展器基于 DB2 空间扩展器的功能构建，并对地球表面曲率等现实对象进行了补偿。该扩展器中的算法旨在消除投影等引起的不准确性。此扩展器仅作为数据地理管理（Data Geodetic Management）功能的一部分适用于 DB2 Enterprise。
 
-## DB2 网络搜索扩展器 (Net Search Extender)
+### DB2 网络搜索扩展器（Net Search Extender）
 
-DB2 网络扩展器 (DB2 NSE) 将内存数据库技术与文本搜索语义相结合，用于在 DB2 数据库中高速搜索。在性能是重要因素的互联网应用程序中，使用它具有特别的优势。DB2 NSE 可以为您的 DB2 应用添加全文检索功能。其特性允许您在数据库中存储高达 2 GB 的非结构化文本。它为开发者提供了一种快速、通用且智能的方法来搜索此类文档。
+DB2 网络扩展器（DB2 NSE）将内存数据库技术与文本搜索语义相结合，用于在 DB2 数据库中高速搜索。在性能是重要因素的互联网应用程序中，使用它具有特别的优势。DB2 NSE 可以为您的 DB2 应用添加全文检索功能。其特性允许您在数据库中存储高达 2 GB 的非结构化文本。它为开发者提供了一种快速、通用且智能的方法来搜索此类文档。
 
-此外，DB2 NSE 提供了丰富的 XML 搜索能力，并具有诸如音似（sounds-like）、词干提取（stemming）等高级搜索功能。在 DB2 9 中它是免费的（在 DB2 8 中是付费扩展器），旨在便于对存储在 pureXML 列中的 XML 数据进行非 XML 搜索。
+此外，DB2 NSE 提供了丰富的 XML 搜索能力，并具有诸如音似（sounds-like）、词干提取（stemming）等高级搜索功能。在 DB2 9 中它是免费的（在 DB2 8 中是付费扩展器），旨在便于对存储在 `pureXML` 列中的 XML 数据进行非 XML 搜索。
 
-## DB2 XML 扩展器
+### DB2 XML 扩展器
 
 DB2 XML 扩展器由 DB2 提供，允许您在 DB2 中存储 XML 文档；它让您能够将 XML 拆分并将其组件作为列存储在多个表中。无论何种情况，都可以在 XML 文档的元素或属性上定义索引以实现快速检索。此外，可以通过 DB2 网络搜索扩展器在 XML 列或分解部分启用文本片段搜索。DB2 XML 扩展器还可以帮助您从现有 DB2 表格制定 XML 文档，用于企业对企业（B2B）环境中的数据交换。
 
-您可能记得，pureXML 附加功能包适用于所有 DB2 9 服务器。事实上，这可能会导致困惑，因为 DB2 XML 扩展器在 DB2 9 中是免费分发的。您应该将 DB2 XML 扩展器视为一项稳定技术。换句话说，它不再被增强，对于大多数 XML 应用不应考虑它。DB2 XML 扩展器存储 XML 的方法是将 XML 拆分为关系型表或大大对象（LOB）。当您使用此技术持久化 XML 数据时，您必须在性能、灵活性等方面做出严肃的权衡。此外，您必须使用专门的函数来实现空间搜索，并且数据类型是从基础 DB2 数据类型中抽象出来的。简单来说，与 DB2 XML 扩展器交互的方式对于 XML 程序员和 DBA 来说都不太符合习惯。
+您可能记得，`pureXML` 附加功能包适用于所有 DB2 9 服务器。事实上，这可能会导致困惑，因为 DB2 XML 扩展器在 DB2 9 中是免费分发的。您应该将 DB2 XML 扩展器视为一项稳定技术。换句话说，它不再被增强，对于大多数 XML 应用不应考虑它。DB2 XML 扩展器存储 XML 的方法是将 XML 拆分为关系型表或大大对象（LOB）。当您使用此技术持久化 XML 数据时，您必须在性能、灵活性等方面做出严肃的权衡。此外，您必须使用专门的函数来实现空间搜索，并且数据类型是从基础 DB2 数据类型中抽象出来的。简单来说，与 DB2 XML 扩展器交互的方式对于 XML 程序员和 DBA 来说都不太符合习惯。
 
-相比之下，DB2 9 中的 pureXML 功能提供的服务使得在存储您的 XML 数据时，无需在灵活性（XML 设计初衷）和性能（您希望数据服务器存储 XML 的原因之一）之间做出妥协。例如，要从关系型表生成 XML 文档，您只需使用 SQL/XML API，而不是繁琐的 DB2 XML 扩展器函数。您可以根据 XSD 验证 XML 文档，而不仅仅是像 DB2 XML 扩展器那样仅验证文档类型定义（DTDss）。我们强烈建议在大多数基于 XML 的应用程序中使用此功能。
+相比之下，DB2 9 中的 `pureXML` 功能提供的服务使得在存储您的 XML 数据时，无需在灵活性（XML 设计初衷）和性能（您希望数据服务器存储 XML 的原因之一）之间做出妥协。例如，要从关系型表生成 XML 文档，您只需使用 SQL/XML API，而不是繁琐的 DB2 XML 扩展器函数。您可以根据 XSD 验证 XML 文档，而不仅仅是像 DB2 XML 扩展器那样仅验证文档类型定义（DTDss）。我们强烈建议在大多数基于 XML 的应用程序中使用此功能。
 
 ## DB2 管理
 
 DB2 DBA 拥有许多基于图形的工具可以管理和管理 DB2 数据服务器。或者，DBA 也可以使用基于脚本的方法，利用 DB2 工具创建和调度脚本来管理数据环境。本节简要介绍了 DB2 提供的主要图形化工具。
 
-## 控制中心 (Control Center)
+### 控制中心（Control Center）
 
-控制中心是 DB2 管理的中心点。控制中心为 DBA 执行执行典型数据库管理任务所需的工具。它提供了整个系统的清晰概述，启用了远程数据库管理，并为复杂任务提供分步协助。
+控制中心是 DB2 管理的中心点。控制中心为 DBA 执行典型数据库管理任务提供所需的工具。它提供了整个系统的清晰概述，启用了远程数据库管理，并为复杂任务提供分步协助。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_72_0.png)
 
 图 1–17 DB2 控制中心
 
-## 第 1 章产品概述
+### 第 1 章 产品概述
 
-所有系统（All Systems）对象代表本地和远程服务器。要显示您的系统所知的所有 DB2 系统，点击 All Systems 旁加号 (+) 展开对象树。在图 1–17 中，您可以看到一个名为 PAULZ 的 DB2 数据服务器包含一个名为 DB2 的 DB2 实例，数据库 TEST 就位于其中。
+所有系统（All Systems）对象代表本地和远程服务器。要显示您的系统所知的所有 DB2 系统，点击 All Systems 旁加号（`+`）展开对象树。在图 1–17 中，您可以看到一个名为 PAULZ 的 DB2 数据服务器包含一个名为 DB2 的 DB2 实例，数据库 TEST 就位于其中。
 
 当您高亮一个对象时，内容窗（Contents Pane）会显示该对象的详细信息。
 
 控制中心的主要组件有：
 
-- 菜单栏（Menu Bar）—— 用于访问控制中心功能和在线帮助。
-- 工具栏（Tool Bar）—— 用于访问其他 DB2 管理工具，例如命令编辑器、任务中心等。
-- 对象窗格（Objects Pane）—— 显示在控制中心窗口左侧。它包含所有可以从控制中心管理的对象以及它们之间的关系。
-- 内容窗格（Contents Pane）—— 位于控制中心窗口右侧，包含与对象窗格中选中对象属于或对应的对象。
-- 内容窗格工具栏（Contents Pane Toolbar）—— 这些图标用于定制内容窗格中对象和信息的视图。这些功能也可以在“视图”（View）菜单中选择。
-- 任务窗口（Task Window）—— 列出与对象窗格中选中对象相关的常用任务。在图 1–17 中，您可以看到一个数据库被高亮，与其相关的常用任务和管理功能都在此窗口中。
-- 悬停帮助（Hover Help）—— 当您将鼠标移动到图标上时，为工具栏上的每个图标提供短描述。
+- 菜单栏（Menu Bar）——用于访问控制中心功能和在线帮助。
+- 工具栏（Tool Bar）——用于访问其他 DB2 管理工具，例如命令编辑器、任务中心等。
+- 对象窗格（Objects Pane）——显示在控制中心窗口左侧。它包含所有可以从控制中心管理的对象以及它们之间的关系。
+- 内容窗格（Contents Pane）——位于控制中心窗口右侧，包含与对象窗格中选中对象属于或对应的对象。
+- 内容窗格工具栏（Contents Pane Toolbar）——这些图标用于定制内容窗格中对象和信息的视图。这些功能也可以在“视图”（View）菜单中选择。
+- 任务窗口（Task Window）——列出与对象窗格中选中对象相关的常用任务。在图 1–17 中，您可以看到一个数据库被高亮，与其相关的常用任务和管理功能都在此窗口中。
+- 悬停帮助（Hover Help）——当您将鼠标移动到图标上时，为工具栏上的每个图标提供短描述。
 
 控制中心还带有个性化控制（personality control），您可以使用它来调整控制中心对数据服务器的视图和功能。例如，您可以限制对象窗格仅显示表或视图，还可以限制您从上下文敏感的右键菜单选项中可以执行的操作。您可以使用“工具（Tools）→ 工具设置（Tools Settings）→ 自定义控制中心（Customize Control Center）”自定义您的控制中心个性化。
 
-## DB2 注意
+### DB2 注意
 
 默认定义控制中心个性化的功能在每次启动控制中心时都会弹出。您可以通过取消勾选“启动时显示此窗口”（Show this window at startup time）复选框关闭此选项。
 
-## DB2 复制中心 (Replication Center)
+### DB2 复制中心（Replication Center）
 
 DB2 复制中心是一个图形工具，允许 DBA 快速设置和管理所有形式的复制，包括 WebSphere Replication 提供的选项。可以使用此工具执行环境设置，包括：
 
 - 注册复制源
 - 监控复制过程
-- 运行 CAPTURE 和 APPLY 程序
+- 运行 `CAPTURE` 和 `APPLY` 程序
 - 定义告警
 
 您可以使用复制中心设置各种复制，如图 1–18 所示。
@@ -986,18 +825,18 @@ DB2 复制中心是一个图形工具，允许 DBA 快速设置和管理所有�
 
 图 1–18 DB2 复制中心
 
-## 从控制中心提供的其他工具
+### 从控制中心提供的其他工具
 
 通过使用控制中心工具栏，您可以访问许多其他图形工具来帮助管理和管理数据库：
 
-- 卫星管理中心（Satellite Administration Center）—— 用于通过推送/拉脚本等管理组。
-- 命令编辑器（Command Editor）—— 提供一个交互式窗口，便于构建 SQL 语句或 DB2 命令、查看执行结果和解释信息。此图形实用程序通常是处理命令的首选方法。
-- 任务中心（Task Center）—— 用于创建、调度和管理包含 SQL 语句、DB2 命令或操作系统命令的脚本。
-- 日志（Journal）—— 记录所有脚本调用、DB2 消息以及数据库恢复历史。用于显示作业结果、脚本内容以及启用禁用调度作业。
-- 许可证中心（License Center）—— 用于管理许可证并检查连接数。
+- 卫星管理中心（Satellite Administration Center）——用于通过推送/拉脚本等管理组。
+- 命令编辑器（Command Editor）——提供一个交互式窗口，便于构建 SQL 语句或 DB2 命令、查看执行结果和解释信息。此图形实用程序通常是处理命令的首选方法。
+- 任务中心（Task Center）——用于创建、调度和管理包含 SQL 语句、DB2 命令或操作系统命令的脚本。
+- 日志（Journal）——记录所有脚本调用、DB2 消息以及数据库恢复历史。用于显示作业结果、脚本内容以及启用禁用调度作业。
+- 许可证中心（License Center）——用于管理许可证并检查连接数。
 - DB2 Web 工具（DB2 Web Tools）——允许 DBA 使用 HTTP 客户端对 DB2 服务器远程执行 SQL 语句、DB2 命令或操作系统命令。基本上，健康中心和命令编辑器都包含在该工具套集中。
 
-## DB2 健康中心 (Health Center)
+### DB2 健康中心（Health Center）
 
 DB2 健康中心（图 1–19）是管理 DB2 系统健康状况信息的中心点。当您安装 DB2 9 数据服务器时，默认会自动监控 27 个（并不断增加中）健康指标，主动监控您的数据服务器健康状况。DB2 健康中心实现了“例外管理”模型，当突破警告（Warning）或警报（Alarm）阈值时会告警。尽管 DB2 默认配置了这些阈值，但您也可以自行配置，并在告警发生时指定脚本操作。
 
@@ -1006,13 +845,6 @@ DB2 健康中心（图 1–19）是管理 DB2 系统健康状况信息的中心�
 DB2 健康中心可以监控以下健康类别的指标：
 
 - 应用程序并发性（例如：死锁率）
-
-
-
-
-
-# DB2 管理 49
-
 - DBMS（例如：实例运行状态）
 - 数据库（例如：数据库运行状态）
 - 日志（例如：日志利用率）
@@ -1030,11 +862,11 @@ DB2 健康中心可以监控以下健康类别的指标：
 
 DB2 健康中心的图形化用户界面允许 DBA 选择数据库对象并深入查看其详细信息、当前警报以及建议的操作。DB2 健康中心还包含 DB2 建议顾问（DB2 Recommendation Advisor），可用于逐步解决该设施提出的潜在问题、警报和报警。
 
-## 第 1 章 产品概览
+### 第 1 章 产品概览
 
-## DB2 配置助手
+#### DB2 配置助手
 
-**DB2 配置助手**（DB2 CA）允许您维护应用程序可以连接的数据库列表，并管理和管理这些连接。它主要用于客户端连接性配置。您可以通过在操作系统的命令行外壳中输入 `db2ca` 命令，或通过“**开始**菜单中的 DB2 文件夹来启动 DB2 CA。DB2 CA 中提供的某些功能如图 1–20 所示。
+DB2 配置助手（DB2 CA）允许您维护应用程序可以连接的数据库列表，并管理和管理这些连接。它主要用于客户端连接性配置。您可以通过在操作系统的命令行外壳中输入 `db2ca` 命令，或通过“开始”菜单中的 DB2 文件夹来启动 DB2 CA。DB2 CA 中提供的某些功能如图 1–20 所示。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_77_0.png)
 
@@ -1049,8 +881,6 @@ DB2 CA 的图形化界面通过以下方式使这些复杂任务变得更加简�
 - 帮助您做出配置决策的提示
 - 发现（Discovery）功能，它可以检索有关网络上数据库的已知信息
 
-# DB2 管理 51
-
 DB2 CA 的发现功能非常有用，因为它允许您添加数据库连接，而无需了解 `DB2 CATALOG NODE` 和 `DB2 CATALOG DATABASE` 命令的语法，甚至不需要远程数据服务器的位置信息。
 
 如图 1–20 所示，DB2 CA 显示了从启动工作站可以连接的数据库列表。每个数据库都通过其数据库别名识别，然后通过名称识别。您可以使用“更改数据库向导”来更改列表中与数据库关联的信息。DB2 CA 有一个高级视图，它使用笔记本通过以下对象组织连接信息：
@@ -1058,62 +888,54 @@ DB2 CA 的发现功能非常有用，因为它允许您添加数据库连接，�
 - 系统
 - 实例节点
 - 数据库
-- 用于 System i 和 System z 数据库的数据库连接服务 (DCS)
+- 用于 System i 和 System z 数据库的数据库连接服务（DCS）
 - 数据源
 
-## 顾问和向导
+#### 顾问和向导
 
 DB2 自带一套向导和顾问来帮助您处理日常任务。向导对于新手和专家 DB2 用户来说都非常有用。向导通过引导您逐步完成每项任务并在适用时建议设置，帮助您完成特定任务。向导可以通过控制中心和配置助手访问。
 
-提供了向系统添加数据库、创建数据库、备份和恢复数据库、创建表空间、配置两阶段提交环境、配置数据库日志、更新您的文档、设置高可用灾难恢复 (HADR) 节点、调优性能等的向导。
-
-# 第 1 章 产品概览
+提供了向系统添加数据库、创建数据库、备份和恢复数据库、创建表空间、配置两阶段提交环境、配置数据库日志、更新您的文档、设置高可用灾难恢复（HADR）节点、调优性能等的向导。
 
 图 1–21 显示了 DB2 9 中数据库向导的一部分。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_79_0.png)
 
-# 图 1–21 数据库向导
+图 1–21 数据库向导
 
 顾问是特殊类型的向导，其功能比提供完成任务的帮助更多。传统的向导引导您逐步完成任务，通过提问重要问题或为您想要执行的操作生成复杂的命令语法来简化体验。当一个向导提供的不仅仅是完成任务，还能提供建议类型的功能时，DB2 将其称为“顾问”。它们的运行方式与向导相似，但足够智能（具有一些复杂的算法），可以根据负载或统计信息等输入因素提供建议。顾问通过收集信息并推荐您可能没有考虑过的选项，帮助您处理更复杂的活动（如调优任务）。然后，您可以接受或拒绝顾问的建议。您可以从 DB2 管理工具的右键菜单、API 以及命令行界面调用顾问。
 
-顾问是 IBM 原子计算努力的一部分，该努力旨在让软件和硬件更加智能（自管理和资源调优）。DB2 9 中三个三个顾问：DB2 配置顾问、DB2 建议顾问和 DB2 设计顾问。
+顾问是 IBM 原子计算努力的一部分，该努力旨在让软件和硬件更加智能（自管理和资源调优）。DB2 9 中三个顾问：DB2 配置顾问、DB2 建议顾问和 DB2 设计顾问。
 
 每当您在 DB2 9 中创建新数据库时，DB2 配置顾问都会自动运行。它可以根据您对描述数据服务器环境和您计划支持的应用程序类型的高级问题进行回答，为您配置多达 35 个实例级和数据库级参数。
 
 如前所述，DB2 建议顾问与 DB2 健康中心密切相关，并用于提供解决方案。
 
-DB2 设计顾问用于识别诸如物化表 (MQT)、多维聚类表 (MDC)、索引和分区等对象。DB2 设计顾问还可以识别键（如图 1–22 所示）。
+DB2 设计顾问用于识别诸如物化表（MQT）、多维聚类表（MDC）、索引和分区等对象。DB2 设计顾问还可以识别键（如图 1–22 所示）。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_80.png)
 
-# 图 1–22 顾问
+图 1–22 顾问
 
 在使用顾问时，请注意它提供的建议将产生影响。此外，DB2 设计顾问让您能够根据估计查询成本权衡负载。
 
-# DB2 81
-
-# 第 1 章 产品概览
-
 ## DB2 命令行处理器
 
-DB2 命令行处理器 (CLP) 是所有 DB2 通用组件。它是一个基于文本的应用程序，用于执行 SQL 语句。例如，您可以从 CLP 创建数据库、目录数据库。
+DB2 命令行处理器（CLP）是所有 DB2 通用组件。它是一个基于文本的应用程序，用于执行 SQL 语句。例如，您可以从 CLP 创建数据库、目录数据库。
 
 ### DB2 注意事项
 
 从 CLP 发出的命令也可以从编辑器或大多数操作系统的原生 CLI 执行。
 
-1–23 显示了使用 DB2 CLP 输入命令的示例。DB2 CLP 以交互模式运行，因此不需要 DB2 前缀。
+图 1–23 显示了使用 DB2 CLP 输入命令的示例。DB2 CLP 以交互模式运行，因此不需要 DB2 前缀。
 
 DB2 CLP 随所有 DB2 产品提供。从 CLP 执行的所有 SQL 语句都会在服务器上进行动态准备并执行。SQL 查询的结果默认显示在屏幕上。您可以在 CLP 中输入的所有 DB2 命令都记录在《DB2 命令参考》中。在第 2 章了解更多关于 CLP 以及如何输入 DB2 命令的知识。
 
 ## DB2 管理
 
-55
+### 可视化解释
 
-## 可视化解释
-
-其他图形化工具可用于调优或监控性能。可视化解释是一种图形化实用，提供了 DB2 执行 SQL 语句时使用的访问路径的可视化表示。
+其他图形化工具可用于调优或监控性能。可视化解释是一种图形化实用工具，提供了 DB2 执行 SQL 语句时使用的访问路径的可视化表示。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_82_0.png)
 
@@ -1123,12 +945,11 @@ DB2 CLP 随所有 DB2 产品提供。从 CLP 执行的所有 SQL 语句都会在
 
 图 1–24 显示了显示的信息类型。您可以看到查询正在访问两个表，可视化解释输出中提供了该查询每个步骤的近似成本。估计查询成本代表了给定 SQL 查询的复杂性和资源使用情况。可视化解释的“状态”菜单下提供了更多细节和功能。
 
-# DB2 查询调度
+## DB2 查询调度
 
-DB2 查询调度 (DB2 QP) 是一个附加产品，可用于控制和监控查询执行，还可以根据用户配置文件和对每个查询进行的成本分析对用户查询进行优先级和调度。大型查询可以暂停并计划在非高峰期执行。
+DB2 查询调度（DB2 QP）是一个附加产品，可用于控制和监控查询执行，还可以根据用户配置文件和对每个查询进行的成本分析对用户查询进行优先级和调度。大型查询可以暂停并计划在非高峰期执行。
 
-
-小时。高优先级（基于用户配置）的查询会被提升到调度表的顶端。
+高优先级（基于用户配置）的查询会被提升到调度表的顶端。
 
 此外，DB2 QP 监控资源利用统计信息。DB2 QP 可以利用这些信息确定系统的负载分布，从而允许在任何时间平衡提交查询的用户数量。
 
@@ -1144,9 +965,11 @@ DB2 QP 还可以用于设置单个和用户类优先级以及用户查询限制�
 
 *快照监控器（Snapshot Monitor）*在特定间隔捕获数据库信息。性能图中的间隔时间和所代表的数据可以配置。快照监控器可以根据限制或阈值分析性能问题、调优 SQL 语句并识别异常状况。
 
-*事件监控器（Event Monitor）*根据事件监控器定义捕捉数据库活动事件。事件监控器记录通常存储在磁盘上，并在数据捕获后进行分析。DB2 提供的*事件分析器（Event Analyzer）* 图形工具可用于分析采集的数据。
+*事件监控器（Event Monitor）*根据事件监控器定义捕捉数据库活动事件。事件监控器记录通常存储在磁盘上，并在数据捕获后进行分析。DB2 提供的*事件分析器（Event Analyzer）*图形工具可用于分析采集的数据。
 
-*活动监控器（Activity Monitor）*帮助你提高数据库性能监控、问题确定和解决的效率。通过跟踪一组预定义的监控数据，活动监控器允许你快速定位问题原因。然后你可以采取直接行动解决问题或调用另一个工具进行进一步调查。活动监控器可以帮助你监控应用程序性能、资源并发性、资源消耗和 SQL 语句使用。它还可以协助你诊断性能问题，如锁等待情况（如图 1–26 所示），并调优查询以优化利用数据服务器资源。
+
+
+活动监控器（Activity Monitor）帮助你提高数据库性能监控、问题确定和解决的效率。通过跟踪一组预定义的监控数据，活动监控器允许你快速定位问题原因。然后你可以采取直接行动解决问题或调用另一个工具进行进一步调查。活动监控器可以帮助你监控应用程序性能、资源并发性、资源消耗和 SQL 语句使用。它还可以协助你诊断性能问题，如锁等待情况（如图 1–26 所示），并调优查询以优化利用数据服务器资源。
 
 **图 1–26** 使用活动监控器诊断锁等待问题
 
@@ -1158,17 +981,16 @@ DB2 存储管理工具可监控数据库或表空间的存储状态。你可以�
 
 **图 1–27** 使用 DB2 工具管理存储活动
 
-你从图 1–27 可以看到 SYSCPACE 表空间正在耗尽空间，其使用率已达到 98%。
+你从图 1–27 可以看到 `SYSCPACE` 表空间正在耗尽空间，其使用率已达到 98%。
 
 ## DB2 后期工具
 
-DB2 有两种工具：免费工具和可以单独购买的附加工具。免费工具作为 DB2 安装的一部分提供，可以从控制中心、配置助手或独立启动。另外有一组可购买的独立工具，可帮助减轻 DBA 管理和恢复数据、调优性能等任务。DB2 的这些工具套包括（www-306.ibm.com/software/data/tools/mptools.html）：
+DB2 有两种工具：免费工具和可以单独购买的附加工具。免费工具作为 DB2 安装的一部分提供，可以从控制中心、配置助手或独立启动。另外有一组可购买的独立工具，可帮助减轻 DBA 管理和恢复数据、调优性能等任务。DB2 的这些工具套包括（`www-306.ibm.com/software/data/tools/mptools.html`）：
 
 - **DB2 变更管理专家（DB2 Change Management Expert）** —— 通过自动化和管理复杂的 DB2 结构来提高 DBA 效率并减少人为错误。
 - **数据归档专家（Data Archive Expert）** —— 通过帮助 DBA 将很少使用的数据移动到成本较低的存储媒介而无需额外编程，来响应如《萨班斯-奥克斯利法案》之类的法律要求。
 - **DB2 高性能卸载（DB2 High Performance Unload）** —— 通过减少数据上传和重新分区的维护窗口，最大限度地提高 DBA 效率。
 - **DB2 性能专家（DB2 Performance Expert）** —— 让 DBA 在性能管理中更加主动，以最大化提高数据库性能。（此工具在第 1 章产品概述中讨论过）。
-
 - **DB2 恢复专家（DB2 Recovery Expert）** —— 通过提供快速准确的恢复（包括本章讨论的操作）来保护你的数据。
 - **DB2 表编辑器（DB2 Table Editor）** —— 让终端用户轻松创建、更新和删除（CRUD）数据。
 - **DB2 测试生成器（DB2 Test Generator）** —— 快速创建测试数据并避免与隐私相关的责任。
@@ -1193,23 +1015,21 @@ DB2 有两种工具：免费工具和可以单独购买的附加工具。免费�
 
 DB2 9 包含许多应用程序开发增强，包括 DB2 开发者工作站以及与最流行的 IDE 集成，如 Rational Application Developer、Zend Core 和 Microsoft Visual Studio 2005。本章还介绍了 DB2 中可用的某些图形和命令行工具。命令行处理器（CLP）是一种基于文本的应用程序，允许你输入 DB2 命令和 SQL 语句，适用于所有 DB2 产品。从桌面开始，管理员可以使用控制中心或配置助手图形化地配置远程和本地系统、管理实例和数据库并创建数据库对象。DB2 健康中心和 DB2 活动监控器等工具也有助于管理 DB2 环境，而向导和顾问提供了支持。在剩余章节中，将探讨其他 DB2 功能和工具如何帮助终端用户、应用程序开发人员和管理员。
 
-
-
-
 ## 第 2 章
+
 ## 入门
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_90_0.png)
 
 - 安装 DB2 软件
 - 使用 DB2 命令行处理器
-- 创建实例 (INSTANCES)
+- 创建实例（INSTANCES）
 - 设置 DB2 环境
 - 实例管理
 
-本章概述了启动 DB2 数据服务器的初步步骤。首先，本章涵盖了适用于 Linux、UNIX 和 Windows 的 DB2 (DB2) 数据服务器的整体安装过程，并针对 Windows 操作系统提供了具体的细节说明。
+本章概述了启动 DB2 数据服务器的初步步骤。首先，本章涵盖了适用于 Linux、UNIX 和 Windows 的 DB2 数据服务器的整体安装过程，并针对 Windows 操作系统提供了具体的细节说明。
 
-本章还将介绍批量部署安装。如果您计划在整个网络中安装 DB2 产品，那么基于响应文件的安装将为您为您提供许多益处，例如部署速度快、简化部署流程等。使用安装响应文件架构，还可以实现 DB2 产品相同副本和配置的统一分发。
+本章还将介绍批量部署安装。如果您计划在整个网络中安装 DB2 产品，那么基于响应文件的安装将为您提供许多益处，例如部署速度快、简化部署流程等。使用安装响应文件架构，还可以实现 DB2 产品相同副本和配置的统一分发。
 
 一旦您成功安装了 DB2 数据服务器，将检查由安装过程创建的环境。这需要您从全局、实例和用户角度理解管理 DB2 环境的不同层级。DB2 数据库创建在 DB2 数据服务器的实例内部。本章还将介绍对多个实例的管理，包括管理命令和工具。
 
@@ -1217,20 +1037,21 @@ DB2 9 包含许多应用程序开发增强，包括 DB2 开发者工作站以及
 
 本节讨论了在 Linux、UNIX 和 Windows 上安装 DB2。虽然不同支持平台之间的安装过程存在差异（尽管概念是相同的），但 DB2 数据服务器的安装方法和管理技能集几乎是相同的。
 
-DB2 安装过程将检查系统上是否运行着 TCP/IP 或命名命名管道 (Named Pipes)，并在创建 DB2 安装的一部分时自动配置默认 DB2 实例。
+DB2 安装过程将检查系统上是否运行着 TCP/IP 或命名管道（Named Pipes），并在创建 DB2 安装的一部分时自动配置默认 DB2 实例。
 
 ## Windows 安装
 
 本节演示了在 Windows XP 工作站上安装 DB2。
+
 在 Windows 机器上开始安装之前，请确保执行安装的用户账户满足：
 
 - 定义在本地机器上
-- 属于“本地管理员 (LOCAL ADMINISTRATORS)” 组的成员
-- 被授予了“作为操作系统的一部分 (ACT AS PART OF THE OPERATING SYSTEM)”高级用户权限
-- 确保您满足 DB2 9 安装的系统、内存和磁盘要求。DB2 9 服务器安装的最新操作系统要求可以在网上查看：306.ibm.com/software/data/db2/udb/sysreqs.html
+- 属于“本地管理员（LOCAL ADMINISTRATORS）”组的成员
+- 被授予了“作为操作系统的一部分（ACT AS PART OF THE OPERATING SYSTEM）”高级用户权限
+- 确保您满足 DB2 9 安装的系统、内存和磁盘要求。DB2 9 服务器安装的最新操作系统要求可以在网上查看：`306.ibm.com/software/data/db2/udb/sysreqs.html`
 - 虽然不是强制性的，但建议关闭所有程序，以便安装过程可以在更新计算机上的任何文件而无需重启。
 
-通常，DB2 数据服务器的安装以及 DB2 Fix Packs（维护）的应用需要访问 Windows 注册表和 Windows 系统——因此要求用户账户属于“管理员 (ADMINISTRATORS)”组以完成安装。在 DB2 9 中，对用户账户必须是管理员的限制已被取消。属于 POWER USERS 或 US 组的用户可以使用 Windows 提权功能执行安装。要使用此功能，具有管理员权限的用户在启用提升功能之前需要设置其计算机并授予用户账户特殊权限。您可以使用 Windows 组策略编辑器 (GPEDIT.msc) 提升用户账户权限。有关此过程的更多信息，请参阅您的 DB2 9文档。
+通常，DB2 数据服务器的安装以及 DB2 Fix Packs（维护）的应用需要访问 Windows 注册表和 Windows 系统——因此要求用户账户属于“管理员（ADMINISTRATORS）”组以完成安装。在 DB2 9 中，对用户账户必须是管理员的限制已被取消。属于 POWER USERS 或 US 组的用户可以使用 Windows 提权功能执行安装。要使用此功能，具有管理员权限的用户在启用提升功能之前需要设置其计算机并授予用户账户特殊权限。您可以使用 Windows 组策略编辑器（`GPEDIT.msc`）提升用户账户权限。有关此过程的更多信息，请参阅您的 DB2 9 文档。
 
 ## DB2 注意
 
@@ -1240,21 +1061,21 @@ DB2 安装过程将检查系统上是否运行着 TCP/IP 或命名命名管道 (
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_92_0.png)
 
-**图 2–1** DB2 启动台 (Launchpad)
+**图 2–1** DB2 启动台（Launchpad）
 
-如果 DB2 安装程序未能自动启动（或您想从网络中部署的软件镜像启动），请在操作系统窗口中定位并执行以下命令：X: SETUP（其中 x: 是 CD-ROM 或 DVD 驱动器的位置）。
+如果 DB2 安装程序未能自动启动（或您想从网络中部署的软件镜像启动），请在操作系统窗口中定位并执行以下命令：`X: SETUP`（其中 `x:` 是 CD-ROM 或 DVD 驱动器的位置）。
 
 ## 第 2 章 入门
 
-您可以使用启动台查找安装前提条件、迁移信息、查看发行说明并安装产品。要安装 DB2，点击**安装产品 (Install a Product)**。将打开“安装 DB2 产品”窗口（图 2–2）。
+您可以使用启动台查找安装前提条件、迁移信息、查看发行说明并安装产品。要安装 DB2，点击**安装产品（Install a Product）**。将打开“安装 DB2 产品”窗口（图 2–2）。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_93_0.png)
 
 **图 2–2** 安装产品窗口
 
-您可以使用此窗口选择选择介质上可用的 DB2 产品。此 CD-ROM 恰好包含 DB2 企业服务器版 (DB2 Enterprise) 代码，以及 DB2 客户端代码和适用于 Visual Studio 2005 的 IBM Database 插件。
+您可以使用此窗口选择介质上可用的 DB2 产品。此 CD-ROM 恰好包含 DB2 企业服务器版（DB2 Enterprise）代码，以及 DB2 客户端代码和适用于 Visual Studio 2005 的 IBM Database 插件。
 
-要安装产品，点击相应的**安装新 (Install New)** 按钮，相应的欢迎窗口将如图 2–3 所示。点击**下一步 (Next)**。
+要安装产品，点击相应的**安装新（Install New）**按钮，相应的欢迎窗口将如图 2–3 所示。点击**下一步（Next）**。
 
 适用于 Visual Studio 2005 的 IBM Database 插件会将若干 DB2 功能安装到 Visual Studio 2005 的本地副本中，允许在 .NET 环境中进行快速应用开发。
 
@@ -1282,9 +1103,9 @@ DB2 安装过程将检查系统上是否运行着 TCP/IP 或命名命名管道 (
 
 DB2 9 提供了三种安装类型，允许您控制作为安装过程一部分的组件：
 
-- **典型 (Typical)**：包括基本数据服务器功能、数据库管理工具以及大部分产品特性功能。典型安装还会创建并配置默认 DB2 实例（命名为 DB2）。此类类型的安装需要 350 到 560 MB 的磁盘空间。
-- **紧凑 (Compact)**：安装基本数据服务器功能和有限的工具。此安装类型在安装过程中执行最少配置。如果您是 DB2 初学者，我们不建议选择此选项。根据平台的不同，此安装类型可能需要 260 到 400 MB 的磁盘空间。
-- **自定义 (Custom)**：让您能够选择性地选择作为 DB2 数据服务器安装一部分的组件。默认情况下，自定义安装与典型安装相同，除非您通过添加或删除默认安装中不包含的组件对其进行自定义。对于此，所需的磁盘空间量取决于您的选择。自定义安装最少可能需要约 260 MB，最多可能需要 600 MB 的磁盘空间。
+- **典型（Typical）**：包括基本数据服务器功能、数据库管理工具以及大部分产品特性功能。典型安装还会创建并配置默认 DB2 实例（命名为 DB2）。此类类型的安装需要 350 到 560 MB 的磁盘空间。
+- **紧凑（Compact）**：安装基本数据服务器功能和有限的工具。此安装类型在安装过程中执行最少配置。如果您是 DB2 初学者，我们不建议选择此选项。根据平台的不同，此安装类型可能需要 260 到 400 MB 的磁盘空间。
+- **自定义（Custom）**：让您能够选择性地选择作为 DB2 数据服务器安装一部分的组件。默认情况下，自定义安装与典型安装相同，除非您通过添加或删除默认安装中不包含的组件对其进行自定义。对于此，所需的磁盘空间量取决于您的选择。自定义安装最少可能需要约 260 MB，最多可能需要 600 MB 的磁盘空间。
 
 您可以使用自定义安装控制的组件和特性如图 2–6 所示。
 
@@ -1294,13 +1115,9 @@ DB2 9 提供了三种安装类型，允许您控制作为安装过程一部分�
 
 图 2–6 显示了典型安装包含的所有默认组件和特性。这些默认值作为自定义安装的起点。
 
-
-
-
-
 ## 第 2 章 入门
 
-通过此处你可以添加或删除组件。例如，你可以看到 DB2 Enterprise 的卫星同步功能不属于“典型（Typical）”或“自定义（Custom）”安装的一部分，因为它旁边有一个 x。
+通过此处你可以添加或删除组件。例如，你可以看到 DB2 Enterprise 的卫星同步功能不属于“典型（Typical）”或“自定义（Custom）”安装的一部分，因为它旁边有一个 `x`。
 
 ### DB2 注意事项
 
@@ -1312,11 +1129,11 @@ DB2 9 提供了三种安装类型，允许您控制作为安装过程一部分�
 
 图 2–7 选择安装 DB2、创建响应文件或两者兼顾
 
-响应文件生成实用程序在安装期间显示，如图 2-17 所示（你也可以在 DB2 安装程序之外访问它）。你可以使用此界面创建一个与你在安装过程中选择的选项相对应的响应文件（包括你在自定义安装中包含或排除的组件），或者在此窗口背后，DB2 使用 DB2RSPGN（DB2 响应文件生成器）实用程序来创建响应文件。如果你在现有的 DB2 数据服务器上运行 DB2RSPGN，它可以生成响应文件，不仅可以安装相同的 DB2 数据服务器（及其组件等），还可以模拟 DB2 注册表、数据库管理器配置设置、数据库设置、数据库连接等。
+响应文件生成实用程序在安装期间显示，如图 2-17 所示（你也可以在 DB2 安装程序之外访问它）。你可以使用此界面创建一个与你在安装过程中选择的选项相对应的响应文件（包括你在自定义安装中包含或排除的组件），或者在此窗口背后，DB2 使用 `DB2RSPGN`（DB2 响应文件生成器）实用程序来创建响应文件。如果你在现有的 DB2 数据服务器上运行 `DB2RSPGN`，它可以生成响应文件，不仅可以安装相同的 DB2 数据服务器（及其组件等），还可以模拟 DB2 注册表、数据库管理器配置设置、数据库设置、数据库连接等。
 
 ## 产品安装
 
-DB2RSPGN 实用程序（无论是在现有安装上使用，还是作为本节所述的新服务器安装的一部分）都是为你所有所有的 DB2 数据服务器和客户端安装创建安装脚本的极佳方法。它是任何经验丰富的数据库管理员（DBA）工具箱的一部分。
+`DB2RSPGN` 实用程序（无论是在现有安装上使用，还是作为本节所述的新服务器安装的一部分）都是为你所有的 DB2 数据服务器和客户端安装创建安装脚本的极佳方法。它是任何经验丰富的数据库管理员（DBA）工具箱的一部分。
 
 为了完成本章其余部分的示例，请选择“在本计算机上安装 DB2 企业服务器版”，并在“响应文件”单选按钮中保存你的设置，在“响应文件名称”中输入响应文件的路径，并点击“下一步（Next）”。打开安装文件夹（图 2–8）。
 
@@ -1324,7 +1141,7 @@ DB2RSPGN 实用程序（无论是在现有安装上使用，还是作为本节�
 
 **图 2–8** 安装 DB2 数据服务器的安装目录
 
-在**目录（Directory）** 字段中输入你想安装 DB2 的目录并点击**下一步（Next）**。点击**更改（Change）**来更改默认安装目录（**C:\Program Files\IBM\SQLLIB**），并点击**磁盘空间（Disk Space）**检查目标目录的可用空间。
+在**目录（Directory）**字段中输入你想安装 DB2 的目录并点击**下一步（Next）**。点击**更改（Change）**来更改默认安装目录（`C:\Program Files\IBM\SQLLIB`），并点击**磁盘空间（Disk Space）**检查目标目录的可用空间。
 
 选择目标安装目录后，你应该配置 DB2 管理服务器（DAS）（图 2–9）。DAS 是一个仅用于协助你的 DB2 数据服务器管理任务的行政控制点。如果你想使用 DB2 9 中的配置助手（Configuration Assistant）、控制中心或其他管理功能，则必须有一个正在运行的 DAS。基本上，DAS 在处理以下管理任务时会协助控制中心和配置助手：
 
@@ -1335,7 +1152,7 @@ DB2RSPGN 实用程序（无论是在现有安装上使用，还是作为本节�
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_99_0.png)
 
-**图 2–9**为 DB2 管理服务器设置用户信息
+**图 2–9** 为 DB2 管理服务器设置用户信息
 
 DB2 安装程序允许你将现有用户账户与 DAS 服务关联或创建一个新账户。要为 DAS 创建新用户账户，你必须登录到你的域，并具有管理组和用户的权限。
 
@@ -1351,15 +1168,17 @@ DB2 安装程序允许你将现有用户账户与 DAS 服务关联或创建一�
 
 在“典型”安装中，DB2 安装程序将创建一个名为 DB2 的默认实例。在创建 DB2 实例期间，它会自动检测服务器上配置的任何支持的通信协议，选择使用它们，并为每个检测到的协议生成 DB2 实例默认值。你可以通过选择**配置（Configure.）**来找回选择和生成的值。
 
-如所述，DB2 安装程序检查你的系统以查看了哪些协议并配置到 DB2 实例。如果 DB2 安装程序没有检测到协议，则勾选**在此刻不配置（Do not configure at this time）**按钮（图 2–11）。
+如所述，DB2 安装程序检查你的系统以查看哪些协议已配置到 DB2 实例。如果 DB2 安装程序没有检测到协议，则勾选**在此刻不配置（Do not configure at this time）**按钮（图 2–11）。
 
 DB2 安装程序生成 TCP/IP 名称和端口的默认值。端口号指定了服务器监听请求的特定 TCP/IP 端口。除非与你计划支持的服务冲突，否则建议使用默认值。
 
-你还可以指定 DB2 实例的启动特性，以便在服务器启动时启动它，或者使用 db2start 命令手动启动。
+你还可以指定 DB2 实例的启动特性，以便在服务器启动时启动它，或者使用 `db2start` 命令手动启动。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_101_0.png)
 
 图 2–11 为 DB2 实例设置启动
+
+
 
 DB2 任务中心及其内置调度服务使用数据库来存储元数据（其调度计划、保存的调度等）。这些元数据统称为 DB2 工具目录（DB2 tools catalog）。为了利用 DB2 管理的丰富功能，我们强烈建议通过创建 DB2 工具目录来启用调度（图 2–12）。
 
@@ -1369,7 +1188,7 @@ DB2 任务中心及其内置调度服务使用数据库来存储元数据（其�
 
 图 2–12 准备 DB2 工具目录
 
-## 产品安装 75
+## 产品安装
 
 在安装过程中准备 DB2 工具目录以创建该目录，然后点击**下一步（Next）**。你可以选择一个现有数据库来存放 DB2 工具目录，或者指定一个由 DB2 安装程序为你创建的新数据库（你也可以指定创建此数据库的模式）。
 
@@ -1384,9 +1203,6 @@ DAS 可以存储一个联系列表，用于在情况发生时（例如违反健�
 选择**发送通知的 DB2 服务器（DB2 server to send notifications）**以指定你想让 SMTP 服务器向管理联系人发送电子邮件和传真机通知（你稍后会定义）。在**通知 SMTP 服务器（Notification SMTP server）**字段中输入你使用的 SMTP 服务器的 TCP/IP 主机名。
 
 就本书，我们建议你选择**本地——在本计算机上创建联系列表（Local — Create a contact list on this computer）**并将管理联系列表存储在本地系统中。此列表将被所有实例使用。如之前提到的，此列表可以其他服务器使用。要配置远程通知列表，选择**远程——另一个 DB2 服务器上的现有联系列表（Remote — an existing contact list on another DB2 server）**，并在**远程 DB2 服务器（Remote DB2 server）**字段中输入远程服务器的主机名，并点击**下一步（Next）**。
-
-
-
 
 ## 第 2 章 入门
 
@@ -1432,16 +1248,13 @@ DAS 可以存储一个联系列表，用于在情况发生时（例如违反健�
 
 使用“第一步”您可以：
 
-- 创建 SAMPLE 数据库
+- 创建 `SAMPLE` 数据库
 - 创建您自己的数据库
 - 使用各种开发环境（包括 IBM Rational 开发工具、Microsoft Visual Studio .NET、Eclipse 和 DB2 开发工作台）创建应用程序
 - 从广泛来源获取 DB2 信息
 - 检查产品更新以查找可用的 DB2 产品更新并安装它们
 - 执行基础数据库管理任务
 - 从广泛来源查找 DB2 信息
-
-
-
 
 在 Linux 或 UNIX 上开始安装 DB2 之前，您应该确保已具备以下条件：
 
@@ -1452,17 +1265,17 @@ DAS 可以存储一个联系列表，用于在情况发生时（例如违反健�
 使用 `db2setup` 工具安装 DB2 9，请执行以下步骤：
 
 3. 以具有 root 权限的用户身份登录。
-4. 挂载 CD-ROM 文件系统并通过输入 `cd /cdrom/disk1` 进入挂载 CD-ROM 的 disk1 目录（其中 cdrom 是您的产品 CD-ROM 的挂载点）。
+4. 挂载 CD-ROM 文件系统并通过输入 `cd /cdrom/disk1` 进入挂载 CD-ROM 的 disk1 目录（其中 `cdrom` 是您的产品 CD-ROM 的挂载点）。
 
 如果您在挂载点上有一个 DB2 的镜像，您可能需要在继续操作之前解压并解包产品文件。您可以使用 ZIP 解压产品文件。例如：
 
-```
+```bash
 gzip -d <product_name>.tar.gz
 ```
 
 然后，您必须使用 TAR 命令提取文件。例如：
 
-```
+```bash
 tar -xvf <product_name>.tar
 ```
 
@@ -1496,37 +1309,37 @@ DB2 9 让您能够能够在同一台服务器上安装并运行多个 DB2 副本
 
 在在您的服务器上安装了第二个 DB2 副本后，您会发现它有自己的 DB2 副本名称以及相应的链接（例如，在“开始”菜单中）。这些链接中的每一个都将默认绑定到启动它们的 DB2 副本的工具和实用程序。
 
-例如，如果您从 DB2COPY2 文件夹启动 CLP 会话，则相应的窗口将与该副本协作。从图 2–22 中可以看到，DB2COPY1（在本章开始时安装的副本）已经安装了示例数据库，但 DB2COPY2 没有。
+例如，如果您从 `DB2COPY2` 文件夹启动 CLP 会话，则相应的窗口将与该副本协作。从图 2–22 中可以看到，`DB2COPY1`（在本章开始时安装的副本）已经安装了示例数据库，但 `DB2COPY2` 没有。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_113_0.png)
 
 图 2–22 使用适当的“开始”菜单处理 DB2 副本
 
-注意图 2–22，每个安装了一个或多个 DB2 副本的服务器都必须有一个默认的 DB2 副本。在 Windows 上，可以使用 DB2SWITCH 命令切换默认 DB2 副本。当您执行此命令时，会启动 DB2 副本向导（如图 2–23 所示）。
+注意图 2–22，每个安装了一个或多个 DB2 副本的服务器都必须有一个默认的 DB2 副本。在 Windows 上，可以使用 `DB2SWITCH` 命令切换默认 DB2 副本。当您执行此命令时，会启动 DB2 副本向导（如图 2–23 所示）。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_114_0.png)
 
 图 2–23 更改 DB2 副本
 
-DB2SWITCH 命令有两个可选标志，可以作为启动系统的替代方案。您可以使用 -l 标志列出所有 DB2 副本，并使用 -d 标志设置默认副本。以下显示如何切换默认 DB2 副本：
+`DB2SWITCH` 命令有两个可选标志，可以作为启动系统的替代方案。您可以使用 `-l` 标志列出所有 DB2 副本，并使用 `-d` 标志设置默认副本。以下显示如何切换默认 DB2 副本：
 
-```
+```text
 DB2SWITCH -l
 DB2COPY2: C:\Program Files\IBM\SQLLIB
 DB2COPY1: C:\Program Files\IBM\SQLLIB_01 (default)
 ```
 
-```
+```text
 DB2SWITCH -d
 DB2COPY2: C:\Program Files\IBM\SQLLIB
 DB2COPY1: C:\Program Files\IBM\SQLLIB_01 (default)
 ```
 
-在 UNIX 和 Linux 上，您使用 db2ck 查看。
+在 UNIX 和 Linux 上，您使用 `db2ck` 查看。
 
-当存在多个副本时，您可能需要考虑 DB2 管理服务器 (DAS)。DAS 是 DB2 中的一个独特组件，无论安装了多少个 DB2 副本，它只能运行一个版本。这意味着您任何时候只能附加到一个副本。要切换 DAS 所附加的副本，请使用 DASUPDT 命令。
+当存在多个副本时，您可能需要考虑 DB2 管理服务器 (DAS)。DAS 是 DB2 中的一个独特组件，无论安装了多少个 DB2 副本，它只能运行一个版本。这意味着您任何时候只能附加到一个副本。要切换 DAS 所附加的副本，请使用 `DASUPDT` 命令。
 
-> **DB2 注意：** 如果您在已存在 DB2 8 副本的服务器上安装了 DB2 9，则需要将 DAS 迁移到版本9。版本9 DAS 实例可以管理 DB2 8 和 DB2 9 实例，而 DB2 8 DAS 只能管理 DB2 8 实例。可以使用 DASIGR 命令迁移 DAS。
+> **DB2 注意：** 如果您在已存在 DB2 8 副本的服务器上安装了 DB2 9，则需要将 DAS 迁移到版本9。版本9 DAS 实例可以管理 DB2 8 和 DB2 9 实例，而 DB2 8 DAS 只能管理 DB2 8 实例。可以使用 `DASIGR` 命令迁移 DAS。
 
 ## 响应文件安装
 
@@ -1540,16 +1353,13 @@ DB2COPY1: C:\Program Files\IBM\SQLLIB_01 (default)
 - 实例变量
 - 实例数据库管理器配置设置
 
-
-
-
 DB Enterprise 9 带有两个额外的响应文件，用于数据分区的特性（DPF）。`db2eseio.rsp` 文件用于 DPF 环境中的实例所有者节点，而 `db2esenn.rsp` 文件则用于新节点。由于这些响应文件仅在在分区式数据库环境中部署 DB2 时使用，因此它们不在本书的涵盖范围之内。
 
 ## 第 2 章 快速上手
 
 如果你还记得图 2–7，根据安装过程中所选的选项，我们选中了生成名为 `DB2ESESampleResponseFile` 响应文件的选项。从 Windows 安装示例中创建的响应文件的一部分（在本章中称为（下文（) 所示）如图 2–24 所示。
 
-```
+```text
 PROD=ENTERPRISE_SERVER_EDITION
 LICENSE_AGEMENT=ACCEPT
 FILE=C:\Program Files\IBM\SQLLIB\nINSTALL_TYPE=TYPICAL\nLANG=EN
@@ -1605,13 +1415,15 @@ DEFAULT_COPY=YES
 
 若要生成响应文件，请执行以下命令：
 
-```
+```bash
 db2rspgn -d x:\path
 ```
 
 响应文件将在你通过 `-d` 选项指定的路径中生成。文件名取决于安装了哪个产品。例如，DB2 Enterprise 9 安装将始终将此响应文件命名为 `DB2ESE.RSP`。
 
 除了生成的响应文件外，同一路径下还会为配置服务器上的所有实例生成实例配置文件（你可以使用 `-1` 选项指示响应文件生成器仅为特定实例创建配置文件）。每个实例配置文件包含 DB2 注册表的所有设置、数据库管理器配置参数、节点目录、数据库目录等。实例配置文件的命名格式为 `<name>.ins`。实例配置文件的示例如图 2–25 所示。
+
+
 
 ```
 [FILE_DESCRIPTION]
@@ -1664,34 +1476,6 @@ db2rspgn -d x:\path
 
 除了生成的响应文件外，同一路径下还会为配置服务器上的所有实例生成实例配置文件（你可以使用 `-1` 选项指示响应文件生成器仅为特定实例创建配置文件）。每个实例配置文件包含 DB2 注册表的所有设置、数据库管理器配置参数、节点目录、数据库目录等。实例配置文件的命名格式为 `<name>.ins`。实例配置文件的示例如图 2–25 所示。
 
-虽然你的系统上可以安装多个 DB2 副本，但响应文件生成器会从已安装并配置的 DB2 产品创建响应文件和实例配置文件。你可以使用生成的响应文件在其他机器上重新创建完全相同的设置。这对于分发已根据你的规格设置并配置的 DB2 代码来说，目前是最好的方法。
-
-例如，你可以安装并配置一个 DB2 客户端来通过网络连接到各种数据库。一旦安装并配置以访问你的用户必须访问的所有数据库，你就可以运行响应文件生成器，为每个实例创建一个响应文件以及一个配置配置文件。
-
-若要生成响应文件，请执行以下命令：
-
-```
-db2rspgn -d x:\path
-```
-
-响应文件将在你通过 `-d` 选项指定的路径中生成。文件名取决于安装了哪个产品。例如，DB2 Enterprise 9 安装将始终将此响应文件命名为 `DB2ESE.RSP`。
-
-除了生成的响应文件外，同一路径下还会为配置服务器上的所有实例生成实例配置文件（你可以使用 `-1` 选项指示响应文件生成器仅为特定实例创建配置文件）。每个实例配置文件包含 DB2 注册表的所有设置、数据库管理器配置参数、节点目录、数据库目录等。实例配置文件的命名格式为 `<name>.ins`。实例配置文件的示例如图 2–25 所示。
-
-虽然你的系统上可以安装多个 DB2 副本，但响应文件生成器会从已安装并配置的 DB2 产品创建响应文件和实例配置文件。你可以使用生成的响应文件在其他机器上重新创建完全相同的设置。这对于分发已根据你的规格设置并配置的 DB2 代码来说，目前是最好的方法。
-
-例如，你可以安装并配置一个 DB2 客户端来通过网络连接到各种数据库。一旦安装并配置以访问你的用户必须访问的所有数据库，你就可以运行响应文件生成器，为每个实例创建一个响应文件以及一个配置配置文件。
-
-若要生成响应文件，请执行以下命令：
-
-```
-db2rspgn -d x:\path
-```
-
-响应文件将在你通过 `-d` 选项指定的路径中生成。文件名取决于安装了哪个产品。例如，DB2 Enterprise 9 安装将始终将此响应文件命名为 `DB2ESE.RSP`。
-
-除了生成的响应文件外，同一路径下还会为配置服务器上的所有实例生成实例配置文件（你可以使用 `-1` 选项指示响应文件生成器仅为特定实例创建配置文件）。每个实例配置文件包含 DB2 注册表的所有设置、数据库管理器配置参数、节点目录、数据库目录等。实例配置文件的命名格式为 `<name>.ins`。实例配置文件的示例如图 2–25 所示。
-
 ## 使用响应文件进行分布式安装
 
 虽然你的系统上可以安装多个 DB2 副本，但响应文件生成器会从已安装并配置的 DB2 产品创建响应文件和实例配置文件。你可以使用生成的响应文件在其他机器上重新创建完全相同的设置。这对于分发已根据你的规格设置并配置的 DB2 代码来说，目前是最好的方法。
@@ -1712,7 +1496,7 @@ db2rspgn -d x:\path
 
 DB2 命令行处理器 (DB2 CLP) 在第 1 章中介绍。本节讨论了 DB2 CLP 和你操作系统的命令行处理器 (CLP) —— 后者要求手动为每个命令添加 `db2` 前缀 —— 如何与 DB2 工作。你还应该注意到，大多数命令也可以从 DB2 命令行编辑器发布，你在第 1 章中记得这个编辑器，它是 DB2 CLP 的图形化前端。
 
-如果你计划使用你操作系统的 CLP 与 DB2 交互（在安装时也称为 DB2 命令行窗口），你需要小心确保操作系统不会解析你的 SQL 语句部分并进行错误的解释，通过将你的任何 SQL 语句或 DB2 命令包含在双引号 ("...") 内，它将确保它们不会被解析。
+如果你计划使用你操作系统的 CLP 与 DB2 交互（在安装时也称为 DB2 命令行窗口），你需要小心确保操作系统不会解析你的 SQL 语句部分并进行错误的解释，通过将你的任何 SQL 语句或 DB2 命令包含在双引号 (`"..."`) 内，它将确保它们不会被解析。
 
 例如，以下命令将无法返回结果。第一个将返回 STAFF 表中的所有行并将其存储在名为的文件文件中，而另一个会将 STAFF 表中 DEPT=20 的所有行输出到你机器的标准输出中。
 
@@ -1721,23 +1505,21 @@ db2 SELECT * FROM STAFF WHERE DEPT > 20
 db2 "SELECT * FROM STAFF WHERE DEPT > 20"
 ```
 
-
-
-
-
 ## 产品安装
 
 # 95
 
 ## DB2 注意
 
-你可以在此处下载 PDF 格式的 DB2 库：www.ibm.com/software/data/db2/udb/support/manual/v9.html，或者通过在线信息中心 publib.boulder.com/infocenter/db2luw/v9/index.jsp 直接访问这些信息。
+你可以在此处下载 PDF 格式的 DB2 库：`www.ibm.com/software/data/db2/udb/support/manual/v9.html`，或者通过在线信息中心 `publib.boulder.com/infocenter/db2luw/v9/index.jsp` 直接访问这些信息。
 
 你可以通过命令行处理器（CLP）使用 `DB2 ?` 命令来获取所有 DB2 命令的语法和信息：
 
-- DB2 ? 命令显示特定命令的信息
-- DB2 ? SQLnnnn 显示特定 SQLCODE 的信息
-- DB2 ? DB2nnnn 显示 DB2 错误信息
+- `DB2 ?` 命令显示特定命令的信息
+
+- `DB2 ? SQLnnnn` 显示特定 SQLCODE 的信息
+
+- `DB2 ? DB2nnnn` 显示 DB2 错误信息
 
 要检查输入 DB2 命令的当前设置（这些设置适用于 DB2 CLP 和 CLP），请执行以下命令：
 
@@ -1753,7 +1535,7 @@ db2 => LIST COMMAND OPTIONS
 
 你可以永久更新这些设置，也可以为每个会话更新。
 
-使用 `DB2OPTIONS` 环境变量来自定义默认值。在选项字母后加减号 (-) 可关闭该选项。你可以使用 `?` 标志获取更多帮助；例如，`DB2 ? OPTIONS` 会给出所有选项。
+使用 `DB2OPTIONS` 环境变量来自定义默认值。在选项字母后加减号 (`-`) 可关闭该选项。你可以使用 `?` 标志获取更多帮助；例如，`DB2 ? OPTIONS` 会给出所有选项。
 
 # 第 2 章入门
 
@@ -1792,12 +1574,15 @@ DB2 CLP 与操作系统 CLP 之间最大的区别在于，DB2 CLP 需要在你�
 在创建和操作数据库之前，你需要了解相关环境。DB2 环境由以下项控制：
 
 - 当前 DB2 实例启用了哪些协议监听器
+
 - 使用了哪些数据库
+
 - 为缓冲区分配多少内存
 
 DB2 环境由以下项控制：
 
 - DB2 注册表
+
 - 配置参数
 
 本节将讨论 DB2 注册表。
@@ -1811,72 +1596,87 @@ DB2 环境由以下项控制：
 DB2 注册表分为四个区域，即：
 
 - 实例级配置注册表（Instance Level Profile Registry）：大多数变量放置在此注册表中。特定实例的设置也保存在此注册表中。在此级别定义的值将覆盖其在全局层级的设置。
+
 - 全局级配置注册表（Global Level Profile Registry）：如果特定实例未设置变量，则使用此注册表。此注册表包含机器范围的设置。
+
 - 实例节点级配置注册表（Instance Node Level Profile Registry）：此注册表包含分片数据库环境中特定分区的设置（如果你在使用数据库分区功能，则需要关注此注册表）。在此级别定义的值将覆盖其在实例和全局级别的设置。
+
 - 实例配置注册表（Instance Profile Registry）：此注册表包含系统识别的所有实例名称列表。你可以运行 `DB2LIST` 查看系统上可用实例完整列表。你不需要使用此注册表来更改行为，它更多是为了信息目的。
 
 DB2 注册表中有几十个可以设置的注册表值，日常操作没有必要记住所有的值。然而，从根本上理解如何使用此架构更改 DB2 的行为是非常重要的。
 
 以下列表列出了在注册表中可能设置的一些参数示例：
 
-- DB2_SKIPINSERTED：控制在使用游标稳定性 (CS) 或读取稳定性 (RS) 隔离级别的游标是否可以忽略未提交的插入。
-- DB2_MDC_ROLLOUT：指示 DB2 为 MDC 表使用特殊的删除算法，使其记录最少，从而速度极快。当 DB2 使用该算法时，与 MDC 表及其相应块索引删除行相关的日志和处理将大幅减少。
-- DB2COMM：指定为当前 DB2 实例启用的通信协议监听器。如果此注册表变量未定义或设置为 NULL，则数据库管理器启动时不会启动任何协议连接监听器。
+- `DB2_SKIPINSERTED`：控制在使用游标稳定性 (CS) 或读取稳定性 (RS) 隔离级别的游标是否可以忽略未提交的插入。
 
+- `DB2_MDC_ROLLOUT`：指示 DB2 为 MDC 表使用特殊的删除算法，使其记录最少，从而速度极快。当 DB2 使用该算法时，与 MDC 表及其相应块索引删除行相关的日志和处理将大幅减少。
 
-
-
+- `DB2COMM`：指定为当前 DB2 实例启用的通信协议监听器。如果此注册表变量未定义或设置为 NULL，则数据库管理器启动时不会启动任何协议连接监听器。
 
 ## 第 2 章 入门
 
 某些 DB2 注册表配置（Registry Profile）变量是特定平台的。例如，以下注册变量是只能在 Windows 平台上设置的示例：
 
-- DB2NOCACHE — 指定 DB2 数据库系统使用 NOCACHE 选项打开数据库文件，以避免在服务器软件和文件系统都参与缓存时产生双重缓存效应。
-- DB2PRITCLASS — 指定 DB2 实例的优先级类别（正常（默认值）、实时和高优先级）。你将此注册变量与单个线程优先级（使用 DB2PRIORITIES 注册变量）结合使用，以确定 DB2 线程相对于操作系统上其他线程的优先级。
+- `DB2NOCACHE` — 指定 DB2 数据库系统使用 NOCACHE 选项打开数据库文件，以避免在服务器软件和文件系统都参与缓存时产生双重缓存效应。
+
+- `DB2PRITCLASS` — 指定 DB2 实例的优先级类别（正常（默认值）、实时和高优先级）。你将此注册变量与单个线程优先级（使用 `DB2PRIORITIES` 注册变量）结合使用，以确定 DB2 线程相对于操作系统上其他线程的优先级。
 
 以下是仅在 AIX 上可用的注册变量示例：
 
-- DB2_EXTENDED_TO_FEATURES — 启用通过提高内存缓存命中率以及减少高优先级 I/O 操作相关的延迟来增强 I/O 性能的功能。
+- `DB2_EXTENDED_TO_FEATURES` — 启用通过提高内存缓存命中率以及减少高优先级 I/O 操作相关的延迟来增强 I/O 性能的功能。
 
 以下注册变量适用于 Windows 和 AIX，但不适用于 Linux、Solaris 或 HP-UX：
+
 - 使用大页内存。你也可以选择特定的内存区域使用大页内存。大页内存主要用于为高性能计算应用提供性能改进。
 
 ## 环境变量
 
 在 DB2 配置文件注册表（Profile Registry）中，你可以选择指定或不指定某些环境变量（取决于操作系统）。它们也是 DB2 使用的系统环境变量，且必须存储在操作系统存储其自身系统变量的位置。以下是 DB2 系统环境变量的示例：
 
-- DB2_INSTANCE — 指定 DB2 实例
-- DB2_PATH — 指定 DB2 可执行文件的路径
+- `DB2_INSTANCE` — 指定 DB2 实例
 
-在 Windows 上，环境变量由 Windows 环境变量定义（点击系统属性视图中“高级”选项卡中的“环境变量”按钮）。在 UNIX 和 Linux 上，你根据平台在所谓的 .profile（Bourne shell）或 .cshrc（C shell）中定义它们。通常的最佳实践是将其与用户的初始化文件（.profile 或 .login）结合使用。关于环境变量以及哪些操作系统可以查看或需要它们（环境变量）的更多详细信息，请参阅《DB2 管理指南》。
+- `DB2_PATH` — 指定 DB2 可执行文件的路径
+
+在 Windows 上，环境变量由 Windows 环境变量定义（点击系统属性视图中“高级”选项卡中的“环境变量”按钮）。在 UNIX 和 Linux 上，你根据平台在所谓的 `.profile`（Bourne shell）或 `.cshrc`（C shell）中定义它们。通常的最佳实践是将其与用户的初始化文件（`.profile` 或 `.login`）结合使用。关于环境变量以及哪些操作系统可以查看或需要它们（环境变量）的更多详细信息，请参阅《DB2 管理指南》。
 
 ## 声明注册表和环境变量
 
 注册表信息存储在包含变量名和设置值的文件中。然而，不应直接编辑或操作这些文件。要更新注册表和环境变量值，请使用 `db2set` 命令。对注册表中值的任何更改都是动态应用的，你不需要重启系统即可使更改生效。
 
-使用带有 `-all` 选项的 `db2set` 命令可以查看环境设置的所有配置列表（图 2–28）。带有 `-all` 选项的 `db2set` 命令输出如图 2–28 所示。在分区数据库环境中，特定的节点设置以 n 开头。如果你单独输入 `db2set` 命令，它将返回所有实例级设置的列表。以下是 `db2set` 命令的一些用法示例：
+使用带有 `-all` 选项的 `db2set` 命令可以查看环境设置的所有配置列表（图 2–28）。带有 `-all` 选项的 `db2set` 命令输出如图 2–28 所示。在分区数据库环境中，特定的节点设置以 `n` 开头。如果你单独输入 `db2set` 命令，它将返回所有实例级设置的列表。以下是 `db2set` 命令的一些用法示例：
 
 - 为当前实例设置参数：
+
 ```
 db2set parameter=value
 ```
+
 - 为特定实例设置参数值：
+
 ```
 db2set parameter=value -i instance_name
 ```
+
 - 在全局级别设置参数：
+
 ```
 db2set parameter=value -g
 ```
+
 - 查看配置注册表中所有可以设置的变量列表：
+
 ```
 db2set -all
 ```
-- 删除注册表设置，省略 =（等号）右侧任何值：
+
+- 删除注册表设置，省略 `=`（等号）右侧任何值：
+
 ```
 db2set parameter=
 ```
+
 - 将注册表变量设置为 NULL（不同于删除），在变量名后列出变量名：
+
 ```
 db2set parameter -null
 ```
@@ -1886,13 +1686,18 @@ db2set parameter -null
 由于变量可以在多个地方进行设置，DB2 使用分级结构来确定去哪里查找变量值。它采用以下搜索顺序：
 
 1. 使用 `db2set` 命令设置的环境变量（或在 UNIX 和 Linux 平台上使用 `export` 命令）
+
 2. 在分区数据库环境中使用 DB2 时在节点配置中设置的注册值（使用 `db2set -n <INSTANCE_NAME><NODE_NUM>` 命令）
+
 3. 使用实例级配置设置的注册值（使用 `db2set -i` 命令）
+
 4. 使用全局级别配置设置的注册值（使用 `db2set -g` 命令）
 
 尽管大多数 DB2 环境设置可以位于 DB2 注册表，也可以位于操作系统的环境变量设置中，但强烈建议尽可能使用 DB2 配置文件。如果 DB2 变量位于 DB2 注册表之外，则无法对这些变量进行远程管理，任何更改通常意味着必须重启系统才能生效。
 
 ## DB2 实例
+
+
 
 DB2 实例被定义为逻辑数据服务器环境。DB2 数据库创建在数据服务器的 DB2 实例内部。在同一物理服务器上创建多个实例可以为每个实例提供唯一的数据库环境。例如，你可以在同一台机器上使用相同的代码路径维护测试环境和生产环境（当然，在 DB2 9 中，你也可以通过 DB2 副本使用不同的代码级别分离这些环境）。
 
@@ -1905,14 +1710,14 @@ DB2 实例被定义为逻辑数据服务器环境。DB2 数据库创建在数据
 - 数据库管理器配置文件
 - 系统数据库目录
 - 节点目录
-- 节点配置文件 (db2nodes.cfg)
+- 节点配置文件（`db2nodes.cfg`）
 - 其他包含调试信息的文件，例如异常转储或 DB2 进程的堆栈调用
 
-## Windows  DB2 实例
+## Windows DB2 实例
 
 在 Windows 上安装 DB2 时创建的默认实例名为 DB2。安装时会设置某些 DB2 环境变量。如果你想创建另一个实例，可以使用 `db2create <name_of_instance>` 命令。例如，除了安装期间创建的默认 DB2 实例外，按如下命令创建一个实例：
 
-```
+```bash
 db2icrt db2cert
 ```
 
@@ -1920,13 +1725,9 @@ db2icrt db2cert
 
 ## Windows DB 实例注意事项
 
-在 Windows 上安装 DB2 时，DB2 实例定义为 Windows 服务。因此，DB2 实例名称必须符合 Windows 服务的命名规则。DB2 管理服务器 (DAS) 也定义为 Windows 服务（本章稍后将详细介绍）。你可以在安装过程中配置这些服务自动启动，或者通过 Windows 操作系统的服务界面进行配置。
+在 Windows 上安装 DB2 时，DB2 实例定义为 Windows 服务。因此，DB2 实例名称必须符合 Windows 服务的命名规则。DB2 管理服务器（DAS）也定义为 Windows 服务（本章稍后将详细介绍）。你可以在安装过程中配置这些服务自动启动，或者通过 Windows 操作系统的服务界面进行配置。
 
 你可以使用服务图标（位于 Windows 控制面板中）查看 DB2 使用了哪些服务（图 2–29）。
-
-
-
-
 
 ## Linux 和 UNIX 上的 DB2 实例
 
@@ -1934,23 +1735,24 @@ db2icrt db2cert
 
 如果是手动安装 DB2，或者你特意选择让安装程序不创建实例，在服务器上创建实例之前，必须完成以下任务：
 
-- 1. 为 DB2 实例创建支持组和用户 ID。
+1. 为 DB2 实例创建支持组和用户 ID。
 
 操作 DB2 需要三个用户和组（表 2–2）。
 
 **表 2–2：所需的用户和组**
+
 | 需要的用户 | 示例用户名 | 示例组名 |
 | :--- | :--- | :--- |
-| 实例所有者 | db2inst1 | db2adm1 |
-| 隔离所有者 (Fenced owner) | db2fenc1 | db2fad1 |
-| DB2 管理服务器 | db2as | db2asgrp |
+| 实例所有者 | `db2inst1` | `db2adm1` |
+| 隔离所有者（Fenced owner） | `db2fenc1` | `db2fad1` |
+| DB2 管理服务器 | `db2as` | `db2asgrp` |
 
 - 实例所有者的主目录是创建 DB2 实例的地方。
-- 隔离所有者（Fenced owner）用于在 DB2 数据库使用的地址空间之外运行定义的函数 (UDF) 和存储过程。
+- 隔离所有者（Fenced owner）用于在 DB2 数据库使用的地址空间之外运行定义的函数（UDF）和存储过程。
 - DB2 管理服务器的用户 ID 用于在你的系统上运行 DAS 服务。
 - 创建 DB2 所需组和用户 ID 的命令取决于操作系统。以下是在 AIX 上执行这些任务的示例示例：
 
-```
+```bash
 mkgroup id=999 db2adm1
 mkgroup id=998 db2adm1
 mkgroup id=997 db2asgrp
@@ -1958,7 +1760,7 @@ mkgroup id=997 db2asgrp
 
 为每个组创建用户：
 
-```
+```bash
 mkuser id=1004 pgrp=db2adm1 groups=db2adm1 home=/home/db2inst
 db2inst passsw mypassword
 mkuser id=1003 pgrp=db2fad1 groups=db2fad1 home=/home/db2fenc1
@@ -1971,143 +1773,149 @@ db2as passsw mypassword
 
 在大多数操作系统上，你必须 root root 权限创建用户和组。此外，你指定的名称和密码不仅必须符合操作系统的命名规则，还必须符合 DB2 的命名规则。你可以在 DB2 快速入门手册中找到相关信息。
 
-- 2. 如下使用 DAScrt -u <DAS_user_name> 命令创建 DAS：
+2. 如下使用 `DAScrt -u <DAS_user_name>` 命令创建 DAS：
 
-```
+```bash
 /usr/opt/db2_08001/instance/dascrt -u DASUser
 ```
 
-- 3. 使用 DB2ICRT 创建实例。
+3. 使用 `DB2ICRT` 创建实例。
 
-DB2DIR/instance/db2icrt -a AuthType -u FencedID InstName；例如，在 AIX 上，路径为 /usr/opt/db2_09_01。
-
-- DB2DIR 是 DB2 安装目录；
-- -AuthType 是实例的身份验证类型；支持如 SERVER（默认值）、CLIENT、SERVER_ENCRYPT 等值。此参数是可选的。
-- -u FencedID 代表运行用户定义函数 (UDFs) 和隔离存储过程的用户名称。
-- InstName 是 DB2 实例的名称。实例名称与实例所有者用户的名称相同。实例将在实例所有用户的用户目录中创建。
-
-- 4. 为实例设置通信。
-
-DB2COMM 注册表变量允许你为 DB2 实例设置通信协议。该变量可以设置为以下关键字的任意组合，用逗号分隔（尽管某些设置在操作系统不支持该通信协议的平台上无效）：
-
-- NETBIOS 启动 NETBIOS 支持
-- NPIP 启动 NAMED PIPE 支持
-- TCPIP 启动 TCP/IP 支持
-
-例如，要设置数据库管理器和 DAS 服务为 TCP/IP 启动连接管理器，请在下一页输入命令。
-
+```text
+DB2DIR/instance/db2icrt -a AuthType -u FencedID InstName
 ```
+
+例如，在 AIX 上，路径为 `/usr/opt/db2_09_01`。
+
+- `DB2DIR` 是 DB2 安装目录。
+- `-a AuthType` 是实例的身份验证类型；支持如 SERVER（默认值）、CLIENT、SERVER_ENCRYPT 等值。此参数是可选的。
+- `-u FencedID` 代表运行用户定义函数（UDFs）和隔离存储过程的用户名称。
+- `InstName` 是 DB2 实例的名称。实例名称与实例所有者用户的名称相同。实例将在实例所有用户的用户目录中创建。
+
+4. 为实例设置通信。
+
+`DB2COMM` 注册表变量允许你为 DB2 实例设置通信协议。该变量可以设置为以下关键字的任意组合，用逗号分隔（尽管某些设置在操作系统不支持该通信协议的平台上无效）：
+
+- `NETBIOS` 启动 NETBIOS 支持
+- `NPIP` 启动 NAMED PIPE 支持
+- `TCPIP` 启动 TCP/IP 支持
+
+例如，要设置数据库管理器和 DAS 服务为 TCP/IP 启动连接管理器，请在下一页输入命令：
+
+```bash
 db2set DB2COMM=tcpip
 db2set DB2AS00 DB2COMM=tcpip
 db2stop
 db2start DBM CFG USING svcename db2c_DB2
 ```
 
-数据库管理器配置文件包含一个参数 SVCENAME，它被分配为实例的主端口名称，并定义在 /etc/services 文件中。例如，如果服务文件中定义的名称为 db2c_db，更新数据库管理器配置文件的命令为：
+数据库管理器配置文件包含一个参数 `SVCENAME`，它被分配为实例的主端口名称，并定义在 `/etc/services` 文件中。例如，如果服务文件中定义的名称为 `db2c_db`，更新数据库管理器配置文件的命令为：
 
-```
+```sql
 UPDATE DB2 CFG USING svcename db2c_DB2
 ```
 
-/etc/services 文件中对应的条目为：
+`/etc/services` 文件中对应的条目为：
 
-| db2c_DB2 5000/tcp |
-| db2i_DB2 5001/tcp |
+| 服务名称 | 端口 |
+| :--- | :--- |
+| `db2c_DB2` | `5000/tcp` |
+| `db2i_DB2` | `5001/tcp` |
 
-- 5. 更新产品许可密钥。
+5. 更新产品许可密钥。
 
-> 请参考 DB2 命令参考手册中的 db2l1cm 命令。
-
-### 启动 DB2 实例
-
-现在 DB2 实例已经创建，必须对其进行初始化或启动。启动实例的过程类似于启动网络文件服务器；在实例启动之前，DB2 客户端将无法访问服务器上的数据库。
-
-启动 DB2 实例的 DB2 特定命令是 DB2START。该命令将在服务器上分配所有所需的 DB2 资源。这些资源包括内存和通信支持。
-
-```
-DB2START
-SQL1063N DB2START processing was successful.
-```
-
-如前所述，在 Windows 上，你也可以使用 DB2START 启动实例。
-
-```
-SQL1063N DB2START processing was successful.
-```
-
-## 第2 章：入门
+> 请参考 DB2 命令参考手册中的 `db2l1cm` 命令。
 
 ### 启动 DB2 实例
 
 现在 DB2 实例已经创建，必须对其进行初始化或启动。启动实例的过程类似于启动网络文件服务器；在实例启动之前，DB2 客户端将无法访问服务器上的数据库。
 
-启动 DB2 实例的 DB2 特定命令称为 DB2START。该命令将在服务器上分配所有所需的 DB2 资源。这些资源包括内存和通信支持。
+启动 DB2 实例的 DB2 特定命令是 `DB2START`。该命令将在服务器上分配所有所需的 DB2 资源。这些资源包括内存和通信支持。
 
-```
+```text
 DB2START
 SQL1063N DB2START processing was successful.
 ```
 
-如前所述，在 Windows 上，你也可以使用 DB2START 启动实例。
+如前所述，在 Windows 上，你也可以使用 `DB2START` 启动实例。
 
-```
+```text
 SQL1063N DB2START processing was successful.
 ```
 
-### 停止 DB2 实例
+# 第 2 章：入门
 
-停止实例的命令是 DB2STOP。该命令将释放服务器上所有所需的 DB2 资源。
+## 启动 DB2 实例
 
+现在 DB2 实例已经创建，必须对其进行初始化或启动。启动实例的过程类似于启动网络文件服务器；在实例启动之前，DB2 客户端将无法访问服务器上的数据库。
+
+启动 DB2 实例的 DB2 特定命令称为 `DB2START`。该命令将在服务器上分配所有所需的 DB2 资源。这些资源包括内存和通信支持。
+
+```text
+DB2START
+SQL1063N DB2START processing was successful.
 ```
+
+如前所述，在 Windows 上，你也可以使用 `DB2START` 启动实例。
+
+```text
+SQL1063N DB2START processing was successful.
+```
+
+## 停止 DB2 实例
+
+停止实例的命令是 `DB2STOP`。该命令将释放服务器上所有所需的 DB2 资源。
+
+```text
 DB2STOP
 ```
 
-在 Windows 上，你也可以使用 DB2STOP 停止实例。
+在 Windows 上，你也可以使用 `DB2STOP` 停止实例。
 
-```
+```text
 DB2STOP
 ```
 
-### DB2 注意事项
+## DB2 注意事项
 
-可以使用 GET INSTANCE 命令识别活动实例。
+可以使用 `GET INSTANCE` 命令识别活动实例。
 
-```
+```text
 GET INSTANCE
 ```
 
-### 实例注意事项
+## 实例注意事项
 
-可以使用 GET INSTANCE 命令识别活动实例。
+可以使用 `GET INSTANCE` 命令识别活动实例。
 
-```
+```text
 GET INSTANCE
 ```
 
-### 实例管理
+## 实例管理
 
 本节讨论了如何在本地和远程管理实例。某些任务只能在实例级别执行，例如创建数据库或更新配置。其他任务需要数据库连接，例如 LOAD 工具或 BIND。
 
-通过 ATTACH 命令进行远程和本地实例管理可以使用 CLP 进行。例如，当单台机器上有多个实例时，可以使用 ATTACH：
+通过 `ATTACH` 命令进行远程和本地实例管理可以使用 CLP 进行。例如，当单台机器上有多个实例时，可以使用 `ATTACH`：
 
-```
+```text
 ATTACH TO nodename USER username USING password
 ```
 
-如果在执行 ATTACH 命令时不带参数，将返回你当前连接的节点名称。如果你在连接时尝试连接到实例，将断开当前连接并尝试新连接。
+如果在执行 `ATTACH` 命令时不带参数，将返回你当前连接的节点名称。如果你在连接时尝试连接到实例，将断开当前连接并尝试新连接。
 
 ### 本地实例管理
 
 在 DB2 安装到服务器上并创建实例后，用户可以通过两种方式之一访问此实例：
 
-- 将 DB2INSTANCE 环境变量设置为实例名称。DB2PATH 环境变量必须设置为 DB2 可执行文件的位置。
-- 通过对本地实例建立目录并执行 ATTACH 命令。这被称为*隐式连接*。
+- 将 `DB2INSTANCE` 环境变量设置为实例名称。`DB2PATH` 环境变量必须设置为 DB2 可执行文件的位置。
+- 通过对本地实例建立目录并执行 `ATTACH` 命令。这被称为*隐式连接*。
 
 ### DB2 注意事项
 
-可以使用 GET INSTANCE 命令识别活动实例。
+可以使用 `GET INSTANCE` 命令识别活动实例。
 
-```
+```text
 GET INSTANCE
 ```
 
@@ -2115,99 +1923,101 @@ GET INSTANCE
 
 数据库连接独立于实例连接。单个应用程序可以同时维护多个数据库连接，但在任何时候只能维护一个实例连接。
 
-数据库连接可以是隐式的或显式的。隐式数据库连接将连接到 DB2DFT 注册表变量指定的数据库。显式数据库连接可以使用 CONNECT TO 语句进行。
+数据库连接可以是隐式的或显式的。隐式数据库连接将连接到 `DB2DFT` 注册表变量指定的数据库。显式数据库连接可以使用 `CONNECT TO` 语句进行。
 
 ### 实例连接场景
 
 此场景研究了这样一种情况：用户想要访问同一台服务器上的两个实例，而无需在登录系统时更改环境。
 
-这两个本地实例分别称为 DB2CERT 和 DB2。用户 Tasha 是数据库服务器上的本地用户。Tasha 有
+这两个本地实例分别称为 `DB2CERT` 和 `DB2`。用户 Tasha 是数据库服务器上的本地用户。Tasha 有
 
+# 第 2 章：入门
 
+设置 `DB2INSTANCE` 和 `DB2PATH` 变量以允许访问 DB2CERT 实例。在 AIX 中，Tasha 将编辑她的配置文件以包含以下条目：
 
-
-
-## 第 2 章 入门
-
-设置 DB2INSTANCE 和 DB2PATH 变量以允许访问 DB2CERT 实例。在 AIX 中，Tasha 将编辑她的配置文件以包含以下条目：
-
-```
+```text
 /home/db2test/sqllib/db2profile
 ```
 
 Tasha 还想要访问同一服务器上的 DB2 实例。为了实现这一点，她使用以下命令将 DB2 实例编目录为本地节点：
 
-```
+```text
 CATALOG LOCAL NODE MYDB2 INSTANCE DB2
 ```
 
 在此示例中：
 
-- LOCAL 标识出这是一个本地实例。
-- MYDB2 是要编目录节点的本地别名。你可以将其命名为任何你想要报告此连接的名称。
-- DB2 是要访问的本地实例名称。
+- `LOCAL` 标识出这是一个本地实例。
+- `MYDB2` 是要编目录节点的本地别名。你可以将其命名为任何你想要报告此连接的名称。
+- `DB2` 是要访问的本地实例名称。
 
-可以使用图 2–30 所示的 LIST NODE DIRECTORY 命令检查节点目录的 la。
+可以使用图 2–30 所示的 `LIST NODE DIRECTORY` 命令检查节点目录的 la。
 
 **节点目录**
+
 目录中的条目数 = 2
 
 **节点 1 条目：**
+
 节点名称 = MYDB2
-注释 = 
+
+注释 =
+
 协议 = LOCAL
+
 实例名称 = db2
 
 图 2–30 节点目录输出
 
 要访问名为 db2 的实例中的数据库，Tasha 必须使用以下命令对本地数据库编目录：
 
-```
+```text
 CATALOG DB DB2CERT AS MYCERT AT NODE MYDB2
 ```
 
 在此示例中：
 
-- DB2CERT 是在数据库服务器的实例中存在的数据库名称。
-- MYCERT 是用户 Tasha 在连接时将使用的数据库别名。
-- MYDB2 是 Tasha 在 CATALOG NODE 命令中为实例提供的本地别名。
+- `DB2CERT` 是在数据库服务器的实例中存在的数据库名称。
+- `MYCERT` 是用户 Tasha 在连接时将使用的数据库别名。
+- `MYDB2` 是 Tasha 在 `CATALOG NODE` 命令中为实例提供的本地别名。
 
-如果 Tasha 发出 LIST DATABASE DIRECTORY 命令，输出与图 2–31 所示类似。
+如果 Tasha 发出 `LIST DATABASE DIRECTORY` 命令，输出与图 2–31 所示类似。
 
 **系统数据库目录**
+
 目录中的条目数 = 1
 
 **数据库 1 条目：**
 
-```
+```text
 数据库别名 = MYCERT
 数据库名称 = DB2CERT
 节点名称 = MYDB2
 数据库发布级别 = b.00
-注释 = 
+注释 =
 目录条目类型 = Remote
 编目录数据库分区数 = -1
-备用服务器主机名 = 
-备用服务器端口号 = 
+备用服务器主机名 =
+备用服务器端口号 =
 ```
 
- 图 2–31 数据库目录输出
+图 2–31 数据库目录输出
 
 从图 2–31 可以看到 DB2CERT 数据库已 MYDB2 节点处编目录。此外，你并不是直接连接到此数据库，而是连接到它的别名 MYCERT。
 
-备用服务器主机名和备用服务器端口号条目由自动客户端重路由 (ACR) 功能使用。ACR 可用于将故障 DB2 服务器透明故障转移到其备用伙伴。当带有数据库结构的客户端成功连接到 MYCERT（DB2CERT 的别名）数据库，且此服务器已设置为故障转移伙伴对（例如，通过高可用性灾难恢复 — HADR），成功连接将自动填充这两个条目。如果发生故障，ACR 功能将自动重路由故障服务器，以确保它不会在主数据库未宕机的情况下意外判断其宕机。如果主数据库仍响应，HADR 将启动数据库的所有权转移到备用服务器（它还会执行更多操作，例如确保其一致性），客户端（通过 ACR）将自动使用这些信息尝试连接到客户端上的数据库。
+备用服务器主机名和备用服务器端口号条目由自动客户端重路由（ACR）功能使用。ACR 可用于将故障 DB2 服务器透明故障转移到其备用伙伴。当带有数据库结构的客户端成功连接到 MYCERT（DB2CERT 的别名）数据库，且此服务器已设置为故障转移伙伴对（例如，通过高可用性灾难恢复 — HADR），成功连接将自动填充这两个条目。如果发生故障，ACR 功能将自动重路由故障服务器，以确保它不会在主数据库未宕机的情况下意外判断其宕机。如果主数据库仍响应，HADR 将启动数据库的所有权转移到备用服务器（它还会执行更多操作，例如确保其一致性），客户端（通过 ACR）将自动使用这些信息尝试连接到客户端上的数据库。
 
 ## 与多个实例一起工作 — 快捷方式
 
-如前所述，你可以使用 DB2INSTANCE 环境变量与不同的实例进行工作。由于此变量可以在会话级别设置，它让你具备了从 CLP 会话在不同实例之间快速移动的能力。
+如前所述，你可以使用 `DB2INSTANCE` 环境变量与不同的实例进行工作。由于此变量可以在会话级别设置，它让你具备了从 CLP 会话在不同实例之间快速移动的能力。
 
-图 2–32 显示了使用 SET DB2INSTANCE 和 GET INSTANCE 命令来在同一服务器上切换不同实例的示例。
+图 2–32 显示了使用 `SET DB2INSTANCE` 和 `GET INSTANCE` 命令来在同一服务器上切换不同实例的示例。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_139_0.png)
 
 图 2–32 使用 DB2INSTANCE 与多个实例工作
 
-你从图 2–32 可以看到默认实例是 DB2CERT。假设此实例已启动，并连接到 SAMPLE 数据库。由于此数据在该实例中不存在，因此会返回错误。使用 SET DB2INSTANCE 命令，此会话的默认挂载从 DB2CERT 实例更改为 DB2 实例（默认值所在处）。此时，到 SAMPLE 数据库的连接是成功的，且此会话剩余部分的默认挂载为 DB2。请注意，一旦你退出了进行此更改的 CLP 会话，操作系统对 DB2INSTANCE 的设置（在本例中为 DB2INSTANCE=DB2CERT）将恢复为默认挂载。通过在会话级别设置 DB2INSTANCE=DB2，我们临时覆盖了示例中默认实例。
+你从图 2–32 可以看到默认实例是 DB2CERT。假设此实例已启动，并连接到 SAMPLE 数据库。由于此数据在该实例中不存在，因此会返回错误。使用 `SET DB2INSTANCE` 命令，此会话的默认挂载从 DB2CERT 实例更改为 DB2 实例（默认值所在处）。此时，到 SAMPLE 数据库的连接是成功的，且此会话剩余部分的默认挂载为 DB2。请注意，一旦你退出了进行此更改的 CLP 会话，操作系统对 `DB2INSTANCE` 的设置（在本例中为 `DB2INSTANCE=DB2CERT`）将恢复为默认挂载。通过在会话级别设置 `DB2INSTANCE=DB2`，我们临时覆盖了示例中默认实例。
 
 ## 使用控制中心挂载到实例
 
@@ -2215,24 +2025,21 @@ CATALOG DB DB2CERT AS MYCERT AT NODE MYDB2
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_140_0.png)
 
- 图 2–3 使用控制中心挂载到实例
+图 2–3 使用控制中心挂载到实例
 
-## DB2 管理服务器 (DAS)
+## DB2 管理服务器（DAS）
 
-DB2 管理服务器 (DAS) 用于在单服务器上管理多个 DB2 实例。DAS 为监控和配置这些实例提供了一个集中点。
-
-
-
+DB2 管理服务器（DAS）用于在单服务器上管理多个 DB2 实例。DAS 为监控和配置这些实例提供了一个集中点。
 
 # 第 3 章
 
 ## 获取连接
 
--   DB2 客户端概述
--   安装 DB2 客户端
--   自动化配置
--   手动配置
--   数据库绑定工具
+- DB2 客户端概述
+- 安装 DB2 客户端
+- 自动化配置
+- 手动配置
+- 数据库绑定工具
 
 DB2 数据库可以由运行在数据库同一机器上的应用程序访问，也可以通过分布式连接从远程客户端访问。除了为运行在服务器上的集中数据库提供客户端访问外，数据库管理员（DBA）还可以使用分布式连接通过控制中心（Control Center）或 DB2 命令行处理器（DB2 CLP）执行远程管理任务。
 
@@ -2240,14 +2047,16 @@ DB2 数据库可以由运行在数据库同一机器上的应用程序访问，�
 
 在第 2 章中，我们介绍了 DB2 数据服务器的安装。具体而言，我们详细介绍了如何在 Windows 上安装 DB2 Enterprise 9 的过程，并对 UNIX 和 Linux 提供了一些补充。
 
-相比之下，DB2 客户端为 DB2 应用程序访问数据服务器资源提供了运行时环境。例如，DB2 客户端包含了与远程数据服务器通信的通信基础设施。你还可以使用 DB2 客户端执行 SQL、绑定包、使用数据操作工具（IMPORT、LOAD、EXPORTS 等）、注册远程节点和数据库等。事实上，DBA 执行的大多数数据库管理任务通常都在 DB2 客户端工作站上完成。
+相比之下，DB2 客户端为 DB2 应用程序访问数据服务器资源提供了运行时环境。例如，DB2 客户端包含了与远程数据服务器通信的通信基础设施。你还可以使用 DB2 客户端执行 SQL、绑定包、使用数据操作工具（`IMPORT`、`LOAD`、`EXPORTS` 等）、注册远程节点和数据库等。事实上，DBA 执行的大多数数据库管理任务通常都在 DB2 客户端工作站上完成。
 
 ### 注意
 
 在本章中，小写 c 的 client 一词泛泛指 DB2 软件，而大写 C 则指特定的 DB2 客户端包。
 
--   **DB2 运行时客户端 (DB2 Runtime Client)** — 提供最小的客户端占用（约 20-30 MB），以支持与 DB2 9 数据服务器的连接（例外是你选择支持通过特定的 API 驱动程序进行通信，这在本节稍后会介绍）。当你安装 DB2 客户端时，你安装了一组支持 DB2 9 支持的所有编程语言的驱动程序，其中包括 ADO.NET、OLE DB、ODBC、JDBC、SQLJ、静态 SQL 等。
--   **DB2 客户端 (DB2 Client)** — 包含 DB2 运行时客户端中的所有功能，外用于客户端服务器配置和数据库管理的工具，以及加速应用程序开发的应用程序文件（如头文件、示例等）。例如，此客户端包含了配置助手（Configuration Assistant），它为客户端管理和连接提供了图形化工具。DB2 客户端的占用空间与你选择安装的组件直接相关，根据你选择的选项，可以在 200 MB 到 800 MB 之间。安装 DB2 客户端的过程与安装 DB2 数据服务器类似。
+- **DB2 运行时客户端（DB2 Runtime Client）** — 提供最小的客户端占用（约 20–30 MB），以支持与 DB2 9 数据服务器的连接（例外是你选择支持通过特定的 API 驱动程序进行通信，这在本节稍后会介绍）。当你安装 DB2 客户端时，你安装了一组支持 DB2 9 支持的所有编程语言的驱动程序，其中包括 ADO.NET、OLE DB、ODBC、JDBC、SQLJ、静态 SQL 等。
+- **DB2 客户端（DB2 Client）** — 包含 DB2 运行时客户端中的所有功能，外用于客户端服务器配置和数据库管理的工具，以及加速应用程序开发的应用程序文件（如头文件、示例等）。例如，此客户端包含了配置助手（Configuration Assistant），它为客户端管理和连接提供了图形化工具。DB2 客户端的占用空间与你选择安装的组件直接相关，根据你选择的选项，可以在 200 MB 到 800 MB 之间。安装 DB2 客户端的过程与安装 DB2 数据服务器类似。
+
+
 
 对于独立软件供应商（ISV）和希望以最小的占用空间建立客户端工作站与 DB2 数据服务器之间连接的企业，他们也可以选择使用独立驱动程序。驱动程序可以使用特定的 API 设置连接；例如，有一个用于 JDBC/SQL 连接的驱动程序，另一个用于 ODBC/CLI 连接的驱动程序。
 
@@ -2261,8 +2070,8 @@ DB2 运行时客户端与驱动程序的主要区别在于，DB2 运行时客户
 
 DB2 9 中可用的驱动程序有：
 
--   **IBM JDBC 和 SQL 驱动程序** — 用于支持基于 Java 的到 DB2 数据服务器的连接。该驱动程序大小约为 2 MB，可以轻松嵌入你的应用程序中。该驱动程序在运行在分布式平台上的 DB2 版本与 DB2 for z/OS 之间通用；换句话说，它是相同的代码。DB2 Connect 许可允许该驱动程序连接到 DB2 for i/5 和 DB2 for z/OS 数据源。
--   **IBM ODBC 和 CLI 驱动程序** — 用于支持到 DB2 9 数据服务器的开放连接（ODBC）或调用级接口（CLI）（本质上与 Java 的 JDBC 和 SQLJ 相同，只是此驱动程序用于 ODBC 和 CLI 连接）。该驱动程序大小约为 2 MB，可以轻松嵌入你的应用程序中。如果你想使用此驱动程序连接到 DB2 for z/OS 或 DB2 i/OS 数据服务器，你还需要 DB2 Connect 软件。
+- **IBM JDBC 和 SQL 驱动程序** — 用于支持基于 Java 的到 DB2 数据服务器的连接。该驱动程序大小约为 2 MB，可以轻松嵌入你的应用程序中。该驱动程序在运行在分布式平台上的 DB2 版本与 DB2 for z/OS 之间通用；换句话说，它是相同的代码。DB2 Connect 许可允许该驱动程序连接到 DB2 for i/5 和 DB2 for z/OS 数据源。
+- **IBM ODBC 和 CLI 驱动程序** — 用于支持到 DB2 9 数据服务器的开放连接（ODBC）或调用级接口（CLI）（本质上与 Java 的 JDBC 和 SQLJ 相同，只是此驱动程序用于 ODBC 和 CLI 连接）。该驱动程序大小约为 2 MB，可以轻松嵌入你的应用程序中。如果你想使用此驱动程序连接到 DB2 for z/OS 或 DB2 i/OS 数据服务器，你还需要 DB2 Connect 软件。
 
 ### 注意
 
@@ -2306,11 +2115,11 @@ DB2 安装程序允许你对 DB2 客户端软件进行图形化辅助安装。�
 | DB2 客户端代码服务器 | |
 | 开发工具 | |
 | 基础应用程序开发工具 | |
-| 标准框架示例 |
-| IBM Java 开发包 (SDK) |
-| CLI 示例程序 |
-| SQL3 应用程序开发工具 |
-| SQL3 示例 |
+| 标准框架示例 | |
+| IBM Java 开发包 (SDK) | |
+| CLI 示例程序 | |
+| SQL3 应用程序开发工具 | |
+| SQL3 示例 | |
 
 图 3–1 DB2 客户端安装的默认组件
 
@@ -2319,10 +2128,6 @@ DB2 安装程序允许你对 DB2 客户端软件进行图形化辅助安装。�
 Windows 上有一种特殊方法实现 DB2 客户端代码（以及 DB2 Connect 个人版）：一台机器作为多个客户端的代码服务器，这些客户端下载一组所需的动态链接库 (DLL)，以为它们提供连接功能。在这种环境中，需要安装 DB2 客户端（或驱动程序）。
 
 你通过首先自定义 DB2 客户端安装以轻量客户端代码服务器（服务器支持组中的一个子命令）来设置 DB2 轻量客户端架构（图 3–2）。一旦该组件在目标工作站上安装，它将被称为 DB2 轻量客户端代码服务器，而加载代码的目标机器将被称为 DB2 轻量客户端。
-
-
-
-
 
 ## 第3 章 连接
 
@@ -2368,7 +2173,7 @@ DB2 提供了多种方法供你配置想要访问 DB2 数据服务器的远程�
 你可以使用四种基本方法将 DB2 客户端连接到 DB2 数据服务器：
 
 - 使用 DB2 Discovery 进行自动配置
- 使用 使用访问配置（（Access Profiles）进行自动配置
+- 使用访问配置（Access Profiles）进行自动配置
 - 使用配置助手进行手动配置
 - 使用命令行处理器（Command Line Processor）进行手动配置
 
@@ -2376,7 +2181,7 @@ DB2 提供了多种方法供你配置想要访问 DB2 数据服务器的远程�
 
 在尝试设置任何 DB2 客户端连接之前，理解 DB2 Discovery 是一个非常有用的概念和功能。DB2 Discovery 功能允许你自动配置连接到 DB2 数据库的远程客户端。DB2 Discovery 允许你轻松地从工作站编目录远程数据库，而无需知道详细的通信信息或在命令行处理器上操作。由于其交互性质，这种方法适用于配置数量有限的客户端。对于规模较大的解决方案，你应该考虑使用访问配置文件或某种脚本中的 CATALOG 命令。
 
-DB2 Discovery 的工作非常简单。安装了配置助手的 DB2 客户端使用 DB2 Discovery 功能发布获取数据 服务器连接信息的请求。配置为响应这些请求的 DB2 服务器随后向发布请求的配置助手返回所需信息。
+DB2 Discovery 的工作非常简单。安装了配置助手的 DB2 客户端使用 DB2 Discovery 功能发布获取数据服务器连接信息的请求。配置为响应这些请求的 DB2 服务器随后向发布请求的配置助手返回所需信息。
 
 返回的数据包括：
 
@@ -2405,23 +2210,19 @@ DB2 Discovery 可以以图 3–4 所示的两种模式之一运行。
 
 如前所述，DB2 Discovery 提供了细粒度的控制，允许 DBA 选择性地要求特定的 DB2 数据服务器、其实例或数据库响应这些广播。
 
-发现配置参数是最参数，因为它控制了 DB2 Discovery 功能的工作方式。该参数设置在 DB2 管理服务器 (DAS) 配置文件中，并指示 DB2 如何发出 DB2 Discovery 请求。如果 DISCOVER=SEARCH（默认设置），客户端可以发布搜索请求查找网络上的 DB2 数据服务器系统。如果 DISCOVER=KNOWN，客户端仅可以发布已知发现请求。当 DISCOVER=DISABLE 时，客户端禁用发现功能。SEARCH 发现
-
-
-
-
+发现配置参数是最参数，因为它控制了 DB2 Discovery 功能的工作方式。该参数设置在 DB2 管理服务器 (DAS) 配置文件中，并指示 DB2 如何发出 DB2 Discovery 请求。如果 `DISCOVER=SEARCH`（默认设置），客户端可以发布搜索请求查找网络上的 DB2 数据服务器系统。如果 `DISCOVER=KNOWN`，客户端仅可以发布已知发现请求。当 `DISCOVER=DISABLE` 时，客户端禁用发现功能。SEARCH 发现
 
 ## 分布式通信路线图
 
-提供了 KNOWN 发现功能的超集。如果设置 DISCOVER=SEARCH，客户端可以发出搜索和已知发现请求。
+提供了 KNOWN 发现功能的超集。如果设置 `DISCOVER=SEARCH`，客户端可以发出搜索和已知发现请求。
 
 ### DB2 注意事项
 
 除了需要运行已安装并配置的 TCP/IP 或命名管道（Named Pipes）通信外，还需要正确配置各种参数以使 DB2 Discovery 能够正常工作。如前所述，只要在操作系统上安装并配置了通信协议后才安装 DB2，DB2 通信（以及 DB2 Discovery 相关的参数）将自动设置。然而，如果您在安装 DB2 之后添加了新协议，或者 DB2 Discovery 无法工作，则可能需要检查这些参数设置。
 
-DB2 Discovery 配置的下一级控制着可以被发现的实例。通过设置 DISCOVER_INST 数据库管理器配置参数，您可以配置某个实例不响应这些请求，从而限制其数据库的发现性。
+DB2 Discovery 配置的下一级控制着可以被发现的实例。通过设置 `DISCOVER_INST` 数据库管理器配置参数，您可以配置某个实例不响应这些请求，从而限制其数据库的发现性。
 
-最后，在数据库级别提供了一级安全控制。您使用 DISCOVER_DB 数据库配置参数在数据库级别限制发现响应。例如，您可以让一个拥有四个数据库的实例中的只有某个特定数据库响应 DB2 Discovery 请求。
+最后，在数据库级别提供了一级安全控制。您使用 `DISCOVER_DB` 数据库配置参数在数据库级别限制发现响应。例如，您可以让一个拥有四个数据库的实例中的只有某个特定数据库响应 DB2 Discovery 请求。
 
 对于位于 DB2 for z/OS 或 DB2 for i5/OS 数据服务器上的数据库，不支持 DB2 Discovery。然而，如果您已经配置了连接到任一服务器的 DB2 Connect 服务器，DB2 Discovery 将发现相关的 DB2 Connect 服务器。然后您可以选择通过 DB2 Connect 服务器连接，或使用其信息配置到远程数据库的直接连接（假设您在本地客户端机器上安装了适当的 DB2 Connect 软件）。
 
@@ -2444,7 +2245,7 @@ GET ADMIN CFG
 
 ### DB2 注意事项
 
-在之前的命令中，使用了 cfg 关键字：这是 CONFIGURATION（配置）的缩写。在输入需要此关键字的 DB2 命令时，可以使用其中任何一个。
+在之前的命令中，使用了 `cfg` 关键字：这是 `CONFIGURATION`（配置）的缩写。在输入需要此关键字的 DB2 命令时，可以使用其中任何一个。
 
 要配置实例或数据库的发现，您可以使用 CLP（命令行界面）与数据库管理器配置文件和数据库配置文件进行交互，或者使用图形化工具之一。
 
@@ -2458,14 +2259,14 @@ GET ADMIN CFG
 
 ### DB2 注意事项
 
-在您希望通过这种方式定位的每个 DB2 数据服务器上，必须配置并运行 DAS 服务。如果您使用 DB2 安装程序安装了 DB2 数据服务器，这应该是默认设置。您可以通过在 CLP 会话中输入 DB2ADMIN START 命令来启动 DAS。
+在您希望通过这种方式定位的每个 DB2 数据服务器上，必须配置并运行 DAS 服务。如果您使用 DB2 安装程序安装了 DB2 数据服务器，这应该是默认设置。您可以通过在 CLP 会话中输入 `DB2ADMIN START` 命令来启动 DAS。
 
 ## 使用自动配置方法
 
 您可以通过配置助手（Configuration Assistant）或控制中心（Control Center）使用 DB2 Discovery 功能自动添加远程 DB2 数据库。这可以通过两种方式实现：
 
-- 1. 使用 Known 发现方法，输入目标数据服务器的主机名，此时 DB2 将自动返回该机器上启用了发现的实例和数据库。
-- 2. 使用 Search 发现方法搜索网络中的数据服务器，此时 DB2 将自动返回每个启用了发现的数据服务器的实例和数据库。
+1. 使用 Known 发现方法，输入目标数据服务器的主机名，此时 DB2 将自动返回该机器上启用了发现的实例和数据库。
+2. 使用 Search 发现方法搜索网络中的数据服务器，此时 DB2 将自动返回每个启用了发现的数据服务器的实例和数据库。
 
 本节中的示例详细说明了如何使用配置助手利用 DB2 Discovery 功能执行添加数据库连接的任务。
 
@@ -2473,9 +2274,8 @@ GET ADMIN CFG
 
 要使用配置助手添加数据库连接，请执行以下步骤：
 
-- 1. 从 CLP 会话中输入 db2ca 命令启动配置助手，或从操作系统的图标菜单中选择它（例如，在 Windows 中，即开始菜单）。
-
-- 2. 点击“已选择（Selected）→使用向导添加数据库（Add Database Using Wizard）”。添加数据库向导将打开图3–7。
+1. 从 CLP 会话中输入 `db2ca` 命令启动配置助手，或从操作系统的图标菜单中选择它（例如，在 Windows 中，即开始菜单）。
+2. 点击“已选择（Selected）→使用向导添加数据库（Add Database Using Wizard）”。添加数据库向导将打开图3–7。
 
 ## 分布式通信路线图
 
@@ -2483,72 +2283,69 @@ GET ADMIN CFG
 
 图3–7 使用配置助手添加数据库
 
+
+
 如果客户端上没有注册数据库，则显示欢迎窗口；否则，将显示在客户端工作站上注册的数据库。
 
-> DB2 注意事项
+> **DB2 注意事项**
+>
 > 如果在服务器上启动此实用程序并创建了 SAMPLE 数据库，您将自动看到该数据库的条目，因为它在客户端上，您无需向配置助手添加本地数据库。
 
-- 3. 选择网络以与您的客户端工作站建立连接并点击“下一步”（图3–8）。
+3. 选择网络以与您的客户端工作站建立连接并点击“下一步”（图 3–8）。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_158_1.png)
 
-图3–8 选择您如何查找或指定数据库连接
+图 3–8 选择您如何查找或指定数据库连接
 
-- 4. 双击“已知系统（Known systems）”并展开数据服务器列表。
+4. 双击“已知系统（Known systems）”并展开数据服务器列表。
 
-## 132 第3章 连接
+## 连接
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_159_0.png)
 
-图3–9 使用发现查找数据库
+图 3–9 使用发现查找数据库
 
 ### DB2 注意事项
 
-在图3–9中，在工作站上启动了配置助手，可以看到数据服务器、实例和数据库。
+在图 3–9 中，在工作站上启动了配置助手，可以看到数据服务器、实例和数据库。
 
-- 5. 点击将数据服务器添加到 Known。添加系统窗口将打开（图3–10）。
+5. 点击将数据服务器添加到 Known。添加系统窗口将打开（图 3–10）。
 
-- 6. 在配置助手输入要添加的数据服务器所需的信息并点击“确定”。新的数据服务器已添加到 Known。
+6. 在配置助手输入要添加的数据服务器所需的信息并点击“确定”。新的数据服务器已添加到 Known。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_159_1.png)
 
-图3–10 将数据服务器添加到 Known
+图 3–10 将数据服务器添加到 Known
 
-## 分布式通信路线图 133
+## 分布式通信路线图
 
-您还可以使用图3–10中的“发现（Discover）”和“查看详细信息（View Details）”按钮查找数据服务器的信息。
+您还可以使用图 3–10 中的“发现（Discover）”和“查看详细信息（View Details）”按钮查找数据服务器的信息。
 
-- 7. 选择您要添加的数据库并点击“下一步”（图3–11）。
+7. 选择您要添加的数据库并点击“下一步”（图 3–11）。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_160_0.png)
 
-图3–11 添加数据库连接
+图 3–11 添加数据库连接
 
-- 8. 在“数据库别名（Database alias）”字段中为要添加的连接输入数据库别名，并在“注释（Comment）”字段中输入可选注释，然后点击“下一步”（图3–12）。
+8. 在“数据库别名（Database alias）”字段中为要添加的连接输入数据库别名，并在“注释（Comment）”字段中输入可选注释，然后点击“下一步”（图 3–12）。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_160_1.png)
 
-图3–12 为新数据库连接指定数据库别名
+图 3–12 为新数据库连接指定数据库别名
 
-- 9. 可选择“为 CLI/ODBC 注册此数据库（Register this database for CLI/ODBC）”通过本地 ODBC 驱动管理器注册数据服务器，并点击“完成”（图3–13）。添加数据库窗口打开。
-
-## 134 第3章 连接
+9. 可选择“为 CLI/ODBC 注册此数据库（Register this database for CLI/ODBC）”通过本地 ODBC 驱动管理器注册数据服务器，并点击“完成”（图 3–13）。添加数据库窗口打开。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_161_0.png)
 
-图3–13 通过 ODBC 驱动管理器注册数据库连接
+图 3–13 通过 ODBC 驱动管理器注册数据库连接
 
-默认界面允许您通过图3–13所示的相应按钮将数据库注册为用户或文件 CLI/ODBC 数据源。此外，您可以使用“针对应用程序优化（Optimize for application）”下拉框为特定的 Windows应用程序优化 ODBC 连接。
+默认界面允许您通过图 3–13 所示的相应按钮将数据库注册为用户或文件 CLI/ODBC 数据源。此外，您可以使用“针对应用程序优化（Optimize for application）”下拉框为特定的 Windows 应用程序优化 ODBC 连接。
 
-注册完成后，ODBC 驱动程序将显示已注册的数据库。图3–14 显示 Windows 数据源管理器显示 TESTME 数据库已成功注册。
+注册完成后，ODBC 驱动程序将显示已注册的数据库。图 3–14 显示 Windows 数据源管理器显示 TESTME 数据库已成功注册。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_161_1.png)
 
-图3–14 自动注册为 ODBC 数据源的数据库
-
-
-
-
+图 3–14 自动注册为 ODBC 数据源的数据库
 
 ## 分布式通信路线图
 
@@ -2556,7 +2353,7 @@ GET ADMIN CFG
 
 图 3–15 测试新的数据库连接
 
-如果连接成功，你将在“结果”选项卡中收到一条指示明此结果的消息。在图 3–15 中，你可以看到我们故意通过不提供正确的用户帐户和密码导致了初始连接失败。根据 DB2 数据服务器的授权设置，你必须确保定义在服务器上的用户账户支持数据库连接。DB2 数据服务器的默认身份验证类型为 SERVER，所指定的用户账户必须存在于服务器上，而不是 DB2 客户端。你可以在第 4 章学习更多关于安全性的知识。
+如果连接成功，你将在“结果”选项卡中收到一条指示此结果的消息。在图 3–15 中，你可以看到我们故意通过不提供正确的用户帐户和密码导致了初始连接失败。根据 DB2 数据服务器的授权设置，你必须确保定义在服务器上的用户账户支持数据库连接。DB2 数据服务器的默认身份验证类型为 SERVER，所指定的用户账户必须存在于服务器上，而不是 DB2 客户端。你可以在第 4 章学习更多关于安全性的知识。
 
 11. 点击“取消”直到“关闭”。如果你想添加另一个数据库连接，选择“添加”。你可以通过点击“更改”修改任何设置。
 
@@ -2564,29 +2361,27 @@ GET ADMIN CFG
 
 使用搜索（Search）发现方法添加数据库连接与使用已知（Known）发现方法添加连接的步骤非常相似。要使用此方法添加数据库连接，请执行以下步骤：
 
-- 1. 从 CLP 会话中输入 `db2ca` 命令或从操作系统的图标菜单中选择它（例如，在 Windows 中，这是开始菜单）来启动配置助手。配置助手打开。
+1. 从 CLP 会话中输入 `db2ca` 命令或从操作系统的图标菜单中选择它（例如，在 Windows 中，这是开始菜单）来启动配置助手。配置助手打开。
 
-- 2. 点击“选择→使用向导添加数据库”。添加数据库向导打开（图 3–16）。
+2. 点击“选择→使用向导添加数据库”。添加数据库向导打开（图 3–16）。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_163_0.png)
 
-**图 3–16** 具有已存在的 TESTME 数据库连接的配置助手
+图 3–16 具有已存在的 TESTME 数据库连接的配置助手
 
 在图 3–16 中，你可以看到上一节添加的 TESTME 数据库连接。
 
-- 3. 选择“**搜索网络**”使用 DB2 发现功能为你的客户端工作站添加数据库连接，并像上一节中那样点击“**下一步**”（详情请参见图 3–8）。
+3. 选择“搜索网络”使用 DB2 发现功能为你的客户端工作站添加数据库连接，并像上一节中那样点击“下一步”（详情请参见图 3–8）。
 
-- 4. 双击“**其他系统（搜索网络）**”，这将导致 DB2 客户端启动 DB2 发现请求，以定位网络上的任何远程数据服务器及其相应的实例和数据库（图 3–17）。
-
-# 分布式通信路线图 137
+4. 双击“其他系统（搜索网络）”，这将导致 DB2 客户端启动 DB2 发现请求，以定位网络上的任何远程数据服务器及其相应的实例和数据库（图 3–17）。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_164_0.png)
 
-**图 3–17** 使用搜索发现添加新的数据库连接
+图 3–17 使用搜索发现添加新的数据库连接
 
-## DB2 注意
+### DB2 注意
 
-为了避免网络开销，我们建议你首先检查**已知系统**（Known Systems）文件夹，以确保你尝试添加的数据库的数据服务器已被客户端已知。
+为了避免网络开销，我们建议你首先检查“已知系统”（Known Systems）文件夹，以确保你尝试添加的数据库的数据服务器已被客户端已知。
 
 在图 3–17 中，你可以看到 DB2PAUL 数据服务器（以及其他几个）被 DB2 发现过程自动发现，而上一节中是提供了配置详细，以便配置助手能够找到它。
 
@@ -2602,13 +2397,15 @@ GET ADMIN CFG
 
 访问配置有两种类型：
 
-- 客户端访问 — 用于复制目录化的数据库，以及可选的客户端配置设置（例如，CLI/ODBC 设置或本地配置设置）
-- 服务器访问 — 用于复制服务器已目录的所有实例和数据库的 DB2 服务器配置和基本连接信息
+- 客户端访问 — 用于复制目录化的数据库，以及可选的客户端配置设置（例如，CLI/ODBC 设置或本地配置设置）。
+
+- 服务器访问 — 用于复制服务器已目录的所有实例和数据库的 DB2 服务器配置和基本连接信息。
 
 这两种类型的配置都可以使用配置助手、控制中心（Control Center）或 CLP 命令导出，然后导入到另一个 DB2 系统。
 
-> DB2 注意
-如果你有大量的客户端需要配置，你还应该考虑利用轻量级目录访问协议（LDAP）。这允许你在一个中心位置存储目录信息。每个客户端只需要知道如何连接到网络中提供的任何数据库。DB2 9 带有一个预构建的 LDAP 插件，支持身份验证以及目录查找操作。由于这超出了本书的范围，请参阅《DB2 管理指南》获取有关此主题的更多信息。
+> **DB2 注意**
+>
+> 如果你有大量的客户端需要配置，你还应该考虑利用轻量级目录访问协议（LDAP）。这允许你在一个中心位置存储目录信息。每个客户端只需要知道如何连接到网络中提供的任何数据库。DB2 9 带有一个预构建的 LDAP 插件，支持身份验证以及目录查找操作。由于这超出了本书的范围，请参阅《DB2 管理指南》获取有关此主题的更多信息。
 
 生成访问配置需要将 DAS 服务的 DISCOVER 配置参数设置为 SEARCH 或 KNOWN。当生成访问配置时，它包含了所有在 `DISCOVER_INST` 数据库管理器配置参数中 `ENABLE` 的实例以及所有
 
@@ -2624,38 +2421,39 @@ GET ADMIN CFG
 
 要使用配置助手创建客户端配置，请执行以下步骤：
 
-- 从 CLP 会话中输入 `db2ca` 命令或从操作系统的图标菜单中选择它（例如，在 Windows 中，这是开始菜单）来启动配置助手。
+1. 从 CLP 会话中输入 `db2ca` 命令或从操作系统的图标菜单中选择它（例如，在 Windows 中，这是开始菜单）来启动配置助手。
 
-- 点击“配置→导出配置”并选择“全部”、“数据库连接”或“自定义”。在本例中，选择“自定义”。导出配置窗口打开（图 3–18）。
+2. 点击“配置→导出配置”并选择“全部”、“数据库连接”或“自定义”。在本例中，选择“自定义”。导出配置窗口打开（图 3–18）。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_166_0.png)
 
-**图 3–18** 使用配置助手创建自定义客户端配置
+图 3–18 使用配置助手创建自定义客户端配置
 
 # 第 3 章 连接
 
 你可以在图 3–18 中看到创建客户端配置时可以从三个选项中选择：
 
-- 全部创建一个包含工作站上目录的所有数据库以及所有客户端配置信息的配置
-- 数据库连接信息创建一个包含工作站上目录的所有数据库但不包含任何配置信息的配置
-- 自定义允许你创建一个包含特定数据库和/或配置信息的配置
+- 全部创建一个包含工作站上目录的所有数据库以及所有客户端配置信息的配置。
 
--3. 在文件名字段中为客户端配置输入路径和名称，选择你想要包含的组件，然后点击“导出”。焦点将转移到“结果”选项卡，指示操作是否成功完成。
+- 数据库连接信息创建一个包含工作站上目录的所有数据库但不包含任何配置信息的配置。
+
+- 自定义允许你创建一个包含特定数据库和/或配置信息的配置。
+
+3. 在文件名字段中为客户端配置输入路径和名称，选择你想要包含的组件，然后点击“导出”。焦点将转移到“结果”选项卡，指示操作是否成功完成。
 
 你可以在图 3–19 中看到你有许多选项可以从客户端配置中包含或排除。要包含数据库连接信息，你必须选择“数据库连接”并将你需要的数据库移动到“选定的数据库别名”框；注意单个客户端配置可以包含多个数据库。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_167_0.png)
 
-**图 3–19** 使用配置助手创建自定义客户端配置
+图 3–19 使用配置助手创建自定义客户端配置
 
 此外，你还可以可选地包含注册表和配置参数等配置信息。事实上，你甚至可以通过点击“自定义 DBM 配置”来覆盖被配置客户端上的配置设置。
-
 
 参数。对这些配置参数的更改仅对部署了此配置文件的客户端生效；正在进行分析的客户端的配置保持不变。
 
 图 3–20 显示了客户端配置的一部分。
 
-```
+```ini
 ;Use BINARY file transfer
 
 [FILE_DESCRIPTION]
@@ -2699,8 +2497,9 @@ DIR_CACHE=1
 
 要使用配置助手创建客户端配置文件，请执行以下步骤：
 
-- 1. 从 CLP 会话中输入 `db2ca` 命令启动配置助手，或从操作系统的图标菜单中选择它（例如，在 Windows 中，这是开始菜单）。打开配置助手。
-- 2. 点击 配置 (Configuration) $\rightarrow$ 导入配置文件 (Import Profile) 并选择“全部 (All)”或“自定义 (Customize)”选项。在本例中，选择“自定义”。将打开“自定义导入配置文件”的窗口（图 3–21）。
+1. 从 CLP 会话中输入 `db2ca` 命令启动配置助手，或从操作系统的图标菜单中选择它（例如，在 Windows 中，这是开始菜单）。打开配置助手。
+
+2. 点击配置（Configuration）→导入配置文件（Import Profile）并选择“全部（All）”或“自定义（Customize）”选项。在本例中，选择“自定义”。将打开“自定义导入配置文件”的窗口（图 3–21）。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_169_0.png)
 
@@ -2708,9 +2507,7 @@ DIR_CACHE=1
 
 就像你可以自定义客户端配置文件的创建一样，在导入时，你可以选择导入配置文件的所有信息（数据库连接和配置）或其子集。
 
-- 3. 使用省略号 (...) 选择客户端配置文件，或直接在“文件名”字段中输入客户端配置文件的名称并点击加载 (Load)。可用的导入字段将填充来自客户端配置文件的信息（图 3–22）。
-
-## 分布式通信路线图
+3. 使用省略号（...）选择客户端配置文件，或直接在“文件名”字段中输入客户端配置文件的名称并点击加载（Load）。可用的导入字段将填充来自客户端配置文件的信息（图 3–22）。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_170_0.png)
 
@@ -2718,7 +2515,7 @@ DIR_CACHE=1
 
 注意图 3–21，尽管配置文件包含了两个独立数据库的连接信息，但我们选择只从该文件中导入单个数据库连接。此外，此特定的客户端配置文件恰好包含 DB2 注册表和配置信息（你可以在图 3–20 中看到这些选项已启用可选），但我们选择只导入 DB2 注册表设置。
 
-- 4. 从此客户端配置文件选择你想要导入的组件并点击导入 (Import)。如果成功，你将收到以下消息。现在点击取消 (Cancel)(图 3–23）。
+4. 从此客户端配置文件选择你想要导入的组件并点击导入（Import）。如果成功，你将收到以下消息。现在点击取消（Cancel）（图 3–23）。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_170_1.png)
 
@@ -2730,20 +2527,21 @@ DIR_CACHE=1
 
 要创建服务器配置文件，请执行以下步骤：
 
-- 1. 从 CLP 会话中输入 `db2cc` 命令启动控制中心，或从操作系统的图标菜单中选择它（例如，在 Windows 中开始菜单）。
-- 2. 右键点击要分析的系统，选择导出配置文件 (Export Profile)，为配置文件输入名称并点击确定 (OK)。将出现提示服务器配置文件已生成的消息（图 3–24）。
+1. 从 CLP 会话中输入 `db2cc` 命令启动控制中心，或从操作系统的图标菜单中选择它（例如，在 Windows 中开始菜单）。
 
-![](img/2fc7488b6558d6b99bbc7356ac416b1_171_0.png)
+2. 右键点击要分析的系统，选择导出配置文件（Export Profile），为配置文件输入名称并点击确定（OK）。将出现提示服务器配置文件已生成的消息（图 3–24）。
+
+![](img/2fc7488b6558d6b99bbc7356ac4116b1_171_0.png)
 
 图 3–24 创建服务器配置文件
 
 图 3–25 显示了服务器配置文件的一些内容：
 
-DB2 服务器访问配置文件；使用 BINARY 文件传输；注释行开头
+DB2 服务器访问配置文件；使用 BINARY 文件传输；注释行开头。
 
-其他行必须是以下类型之一：类型 A：[section_name] 或 类型 B：keyword=value
+其他行必须是以下类型之一：类型 A：`[section_name]` 或类型 B：`keyword=value`。
 
-```
+```ini
 [File_Description]
 Application=DB2/NT 9.1.2
 Platform=5
@@ -2754,7 +2552,7 @@ DB2System=DB2PAUL
 ServerType=DB2NT
 ```
 
-```
+```ini
 [admin>DB2DAS]
 NodeType=1
 DB2Comm=TCPIP
@@ -2764,7 +2562,7 @@ PortNumber=5235
 IPaddress=192.123.121
 ```
 
-```
+```ini
 [inst>DB2]
 NodeType=4
 NodeNumber=0
@@ -2779,7 +2577,7 @@ SPName=DB2PAUL
 TMDabase=ST_CONN
 ```
 
-```
+```ini
 [db>DB2:DB2CERT]
 DBAlias=DB2CERT
 DBName=DB2CERT
@@ -2788,7 +2586,7 @@ Dir_entry_type=INDIRECT
 Authentication=NOTSPEC
 ```
 
-```
+```ini
 [db>DB2:SAMPLE]
 DBAlias=SAMPLE
 DBName=SAMPLE
@@ -2801,23 +2599,27 @@ Authentication=NOTSPEC
 
 你可以看到此服务器配置文件有一个名为 DB2 的实例（另注意配置文件中包含的 DAS 实例）。该实例有两个数据库：DB2CERT 和 SAMPLE。
 
-- 3. 通过右键点击 Instance 文件夹中的第一个实例，选择导入配置文件 (Import Server Profile)，选择服务器配置文件并点击确定 (OK)，如图 3–26 所示。
+3. 通过右键点击 Instance 文件夹中的第一个实例，选择导入配置文件（Import Server Profile），选择服务器配置文件并点击确定（OK），如图 3–26 所示。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_173_0.png)
 
 图 3–26 导入服务器配置文件
 
-你可以从图 3–26看到 DB2 自动为远程系统生成了节点名称并在括号内引用了它连接的实例。此数据服务器现在可以访问另一个 DB2 数据服务器上的 DB2CERT 和 SAMPLE 数据库并进行远程管理。
+你可以从图 3–26 看到 DB2 自动为远程系统生成了节点名称并在括号内引用了它连接的实例。此数据服务器现在可以访问另一个 DB2 数据服务器上的 DB2CERT 和 SAMPLE 数据库并进行远程管理。
 
-> DB2 注意尽管图 3–26 未显示，远程服务器名称也被添加到所有系统文件夹。图 3–26 显示了现有数据服务器内的关联实例。
+> **DB2 注意**
+>
+> 尽管图 3–26 未显示，远程服务器名称也被添加到所有系统文件夹。图 3–26 显示了现有数据服务器内的关联实例。
 
 ## 使用配置助手导入服务器配置文件
 
 你可以使用配置助手导入服务器配置文件以便从中提取数据库连接信息。导入服务器配置文件的步骤与导入客户端配置文件相同（见图 3–19）；然而，对于服务器配置文件，你无法像客户端配置文件那样导入连接信息。
 
-此外，你可以通过选择图 3–8 中的使用配置文件按钮，选择要导入的适当数据库连接并为其分配数据库别名，使用添加数据库向变为从服务器配置文件添加数据库连接。本章未涵盖该过程的细节，因为它们是之前讨论过的搜索和配置选项的结合，并且目前来说浅于自明。
+此外，你可以通过选择图 3–8 中的使用配置文件按钮，选择要导入的适当数据库连接并为其分配数据库别名，使用添加数据库向导从服务器配置文件添加数据库连接。本章未涵盖该过程的细节，因为它们是之前讨论过的搜索和配置选项的结合，并且目前来说浅于自明。
 
 ## 使用配置助手进行手动配置
+
+
 
 如果你知道配置 DB2 客户端和服务器之间通信所需的连接信息，仍然可以使用配置助手添加连接来简化此过程，而无需记忆命令语法（如下一节介绍的“使用命令行处理器进行手动配置”方法）。
 
@@ -2831,24 +2633,20 @@ Authentication=NOTSPEC
 
 要使用配置助手手动配置连接，请执行以下步骤：
 
-- 1. 从 CLP 会话中输入 `db2ca` 命令启动配置助手，或从操作系统的图标菜单中选择它（例如，在 Windows 中，这是开始菜单）。
-- 2. 点击 已选 (Selected) $\rightarrow$ 使用向导添加数据库 (Add Database Using Wizard)。打开添加数据库向导。（此窗口与图 3–7 所示窗口相同。）
-- 3. 选择 手动配置到数据库连接 (manually configure a connection to a database) 并点击下一步 (Next)。此窗口与图 3–8 所示窗口相同。）
-- 4. 选择要连接到远程数据服务器的协议（大多数情况下为 TCP/IP）并点击下一步（图 3–27）。
-
-
-
-
+1. 从 CLP 会话中输入`db2ca`命令启动配置助手，或从操作系统的图标菜单中选择它（例如，在 Windows 中，这是开始菜单）。
+2. 点击“已选 (Selected)” $\rightarrow$ “使用向导添加数据库 (Add Database Using Wizard)”。打开添加数据库向导。（此窗口与图 3–7 所示窗口相同。）
+3. 选择“手动配置到数据库连接 (manually configure a connection to a database)”并点击“下一步 (Next)”。此窗口与图 3–8 所示窗口相同。）
+4. 选择要连接到远程数据服务器的协议（大多数情况下为 TCP/IP）并点击“下一步”（图 3–27）。
 
 ## 第 3 章 连接
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_175_0.png)
 
-**3–27 使用配置向导手动为远程数据库添加基于 TCP/IP 的连接
+**3–27 使用配置向导手动为远程数据库添加基于 TCP/IP 的连接**
 
-如果您想连接到 DB2 for i5/OS（曾称为 OS/400®）或 DB2 for z/OS（曾称为 S/390®）服务器，请选择**数据库物理位于主机或 OS/400 系统上**。如果您选择了此选项，您**必须选择直接连接到服务器 (Connect directly to the server)**选项，这将建立从客户端到远程主机或主机数据服务器的直接连接；或者选择**通过网关连接到服务器 (Connect to the server via the gateway)**。网关选项将连接到 DB2 Connect 服务器，然后由其处理客户端与主机或主机数据服务器之间的通信。如果您没有上述任何一种工具，但必须拥有有效的 DB2 Connect 许可证并选择直接连接到远程主机或主机数据服务器，配置向导将会失败。
+如果您想连接到 DB2 for i5/OS（曾称为 OS/400®）或 DB2 for z/OS（曾称为 S/390®）服务器，请选择“数据库物理位于主机或 OS/400 系统上”。如果您选择了此选项，您**必须选择直接连接到服务器 (Connect directly to the server)**选项，这将建立从客户端到远程主机或主机数据服务器的直接连接；或者选择**通过网关连接到服务器 (Connect to the server via the gateway)**。网关选项将连接到 DB2 Connect 服务器，然后由其处理客户端与主机或主机数据服务器之间的通信。如果您没有上述任何一种工具，但必须拥有有效的 DB2 Connect 许可证并选择直接连接到远程主机或主机数据服务器，配置向导将会失败。
 
-### DB2 *注意*
+### DB2 注意
 
 在图 3–27 中，您可以看到了除了支持的 TCP/IP 和命名管道（Named Pipes）协议以外的协议。这是为了向后兼容。
 
@@ -2870,9 +2668,9 @@ Authentication=NOTSPEC
 
 在图 3–29 中，您可以看到尽管我们正在连接的数据库名为 SAP，但其别名 R3 将用于所有连接。
 
-可选地将此数据库连接注册为 ODBC 数据源并点击“下一步”。（更多信息请参考图 3–13。）
+7. 可选地将此数据库连接注册为 ODBC 数据源并点击“下一步”。（更多信息请参考图 3–13。）
 
-使用“数据源”窗口输入与远程服务器相关的选项。您应该填写这些值，因为它们会影响控制中心（Control Center）的行为。系统和实例名称由服务器上 `DB2SYSTEM` 和 `DB2INSTANCE` 的值提供。您还需要选择远程服务器的操作系统。完成后，点击“下一步”（图 3–30）。
+8. 使用“数据源”窗口输入与远程服务器相关的选项。您应该填写这些值，因为它们会影响控制中心（Control Center）的行为。系统和实例名称由服务器上`DB2SYSTEM`和`DB2INSTANCE`的值提供。您还需要选择远程服务器的操作系统。完成后，点击“下一步”（图 3–30）。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_177_0.png)
 
@@ -2886,7 +2684,7 @@ Authentication=NOTSPEC
 
 图 3–31 自定义节点名称
 
-“系统选项”窗口（未显示）应根据根据您之前提供的信息为您预填充。点击“下一步”。
+9. “系统选项”窗口（未显示）应根据根据您之前提供的信息为您预填充。点击“下一步”。
 
 10. 为此连接指定一种安全选项并点击“完成”（图 3–32）。
 
@@ -2902,7 +2700,7 @@ Authentication=NOTSPEC
 
 ## 使用命令行处理器进行手动配置
 
-您可以使用 `CATALOG DATABASE` 命令来配置本地和远程连接。这种方法需要更多工作；然而，它让您具有生成连接详细信息的能力。在本章详细介绍之前的方法中，您没有这种灵活性。
+您可以使用`CATALOG DATABASE`命令来配置本地和远程连接。这种方法需要更多工作；然而，它让您具有生成连接详细信息的能力。在本章详细介绍之前的方法中，您没有这种灵活性。
 
 ### 系统数据库目录
 
@@ -2926,7 +2724,7 @@ DB2 for z/OS 和 DB2 for i5/OS 的连接信息与运行在 Linux、UNIX 和 Wind
 
 ## 检查 DB2 目录
 
-考虑一个具有两个系统的场景：数据服务器和远程客户端。从数据服务器执行 `LIST DATABASE DIRECTORY` 命令查看系统数据库目录的内容，如图 3–33 所示。
+考虑一个具有两个系统的场景：数据服务器和远程客户端。从数据服务器执行`LIST DATABASE DIRECTORY`命令查看系统数据库目录的内容，如图 3–33 所示。
 
 系统数据库目录
 
@@ -2938,19 +2736,15 @@ DB2 for z/OS 和 DB2 for i5/OS 的连接信息与运行在 Linux、UNIX 和 Wind
 | 2 | TOOLSDB | TOOLSDB | C: | b.00 | | Indirect | 0 | |
 | 3 | SAMPLE | SAMPLE | C: | b.00 | | Indirect | 0 | |
 
-
-
-
-
 ## 第 3 章 连接
 
 ## DB2 备注
 
-从 CLP 中输入 DB2 命令时，可以使用短命令 `db` 来表示数据库关键字。
+从 CLP 中输入 DB2 命令时，可以使用短命令`db`来表示数据库关键字。
 
-图 3–33 显示此服务器上注册了三个数据库。第一个数据库是 `DB2CERT` 数据库。创建数据库时，系统会在系统数据库目录和服务器上的本地数据库目录中自动放置条目。请注意备用服务器主机名（Alternative server hostname）和备用服务器端口号（Alternate server port number）项，因为这些项用于配置客户端重定向到备用服务器，并在数据库连接时自动填充（假设数据服务器已配置了故障转移）。
+图 3–33 显示此服务器上注册了三个数据库。第一个数据库是`DB2CERT`数据库。创建数据库时，系统会在系统数据库目录和服务器上的本地数据库目录中自动放置条目。请注意备用服务器主机名（Alternative server hostname）和备用服务器端口号（Alternate server port number）项，因为这些项用于配置客户端重定向到备用服务器，并在数据库连接时自动填充（假设数据服务器已配置了故障转移）。
 
-如果需要更多细节，可以执行图 3–34 所示的 `LIST DB DIRECTORY ON <PATH>` 命令。
+如果需要更多细节，可以执行图 3–34 所示的`LIST DB DIRECTORY ON <PATH>`命令。
 
 C:\上的本地数据库目录
 
@@ -3001,72 +2795,75 @@ Database partition =
 数据库 6 条目：
 
 - Database alias = TOR
-Database name = TOR
-Node name = TPCE379
-Database release level = b.00
-Comment = SAP database
-Directory entry type = Remote
-Catalog database partition number = -1
-Alternate server hostname =
-Alternate server port number =
+- Database name = TOR
+- Node name = TPCE379
+- Database release level = b.00
+- Comment = SAP database
+- Directory entry type = Remote
+- Catalog database partition number = -1
+- Alternate server hostname =
+- Alternate server port number =
 
 图 3–35 从客户端执行的 LIST DB DIRECTORY 命令
 
-图 3–35 显示了在仅安装了 DB2 客户端机器上执行 `LIST DB DIRECTORY` 命令的部分输出。你可以看到 TOR 数据库位于一个该客户端识别为 `TPCE379` 的服务器上，并且还有一个描述该服务器功能的可选注释（因为从数据库名称或数据库别名无法直接看出）。另请注意，对于远程连接，`DIRECTORY ENTRY TYPE` 为 `REMOTE`；对于服务器上的本地连接，则为 `INDIRECT`。
+图 3–35 显示了在仅安装了 DB2 客户端机器上执行`LIST DB DIRECTORY`命令的部分输出。你可以看到 TOR 数据库位于一个该客户端识别为`TPCE379`的服务器上，并且还有一个描述该服务器功能的可选注释（因为从数据库名称或数据库别名无法直接看出）。另请注意，对于远程连接，`DIRECTORY ENTRY TYPE`为`REMOTE`；对于服务器上的本地连接，则为`INDIRECT`。
 
-在客户端上注册远程数据库时，客户端上指定的数据库名称必须与服务器上的数据库别名匹配。客户端工作站上的数据库别名用于 `CONNECT` 语句。因此，如果图 3–35 中用于连接 TOR 数据库的名称是 `TOR`，那么在定义图 3–29 中的数据库连接时，你必须使用 `CONNECT TO R3`。
+在客户端上注册远程数据库时，客户端上指定的数据库名称必须与服务器上的数据库别名匹配。客户端工作站上的数据库别名用于`CONNECT`语句。因此，如果图 3–35 中用于连接 TOR 数据库的名称是`TOR`，那么在定义图 3–29 中的数据库连接时，你必须使用`CONNECT TO R3`。
 
-客户端系统数据库目录条目始终有一个关联的节点名称。节点名称（在本例中为 `TPCE379`）定义了远程 DB2 服务器在网络上的位置。
+客户端系统数据库目录条目始终有一个关联的节点名称。节点名称（在本例中为`TPCE379`）定义了远程 DB2 服务器在网络上的位置。
 
-要发现更多关于数据库服务器位置的信息，你可以使用图 3–36 所示的 `LIST NODE DIRECTORY` 命令检查该节点的目录信息。
+要发现更多关于数据库服务器位置的信息，你可以使用图 3–36 所示的`LIST NODE DIRECTORY`命令检查该节点的目录信息。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_182_0.png)
 
 节点目录
+
 目录条目数 = 2
 
 节点 1 条目：
-Node name = TPCE379
-Comment = =
-Directory entry type = LOCAL
-Protocol = TCIP
-Hostname = saptech
-Service name = 5912
+
+- Node name = TPCE379
+- Comment = =
+- Directory entry type = LOCAL
+- Protocol = TCIP
+- Hostname = saptech
+- Service name = 5912
 
 节点 2 条目：
-Node name = Test
-Comment = =
-Directory entry type = LOCAL
-Protocol = LOCAL
-Instance name = TEST
+
+- Node name = Test
+- Comment = =
+- Directory entry type = LOCAL
+- Protocol = LOCAL
+- Instance name = TEST
 
 图 3–36 查看节点目录
 
-图 3–36 所示节点目录中的第一个条目对应于 TCP/IP 连接的工作站。DB2 服务器的 TCP/IP 主机名为 `SAPTECH`，服务名称为 `5912`。客户端节点目录中的 TCP/IP 信息必须与服务器数据库管理器配置文件中的信息匹配。
+图 3–36 所示节点目录中的第一个条目对应于 TCP/IP 连接的工作站。DB2 服务器的 TCP/IP 主机名为`SAPTECH`，服务名称为`5912`。客户端节点目录中的 TCP/IP 信息必须与服务器数据库管理器配置文件中的信息匹配。
 
 在此例中，使用了端口号代替了服务名称。你可以使用此快捷方式了解远程数据服务器的细节。在注册数据库和节点时还有其他可用选项，例如身份验证发生的位置等。这些选项在第 4 章中进行了说明。再次，由于这种配置方法适用于高级用户，因此在本章范围之外不再详细介绍该方法的细节，仅为你介绍与之相关的高级概念。
 
 ## 使用 CATALOG 命令
 
-你可以从 DB2 CLP、脚本文件或 DB2 命令中心使用 `CATALOG NODE` 和 `CATALOG DATABASE` 命令手动添加远程数据库连接。在注册远程数据库之前，你应该检查客户端机器是否可以与远程 DB2 服务器通信。然后，客户端必须注册远程节点和远程数据库。
+你可以从 DB2 CLP、脚本文件或 DB2 命令中心使用`CATALOG NODE`和`CATALOG DATABASE`命令手动添加远程数据库连接。在注册远程数据库之前，你应该检查客户端机器是否可以与远程 DB2 服务器通信。然后，客户端必须注册远程节点和远程数据库。
 
 ## DB2 备注
 
-`CATALOG` 命令支持高级选项，例如从服务器检索信息以及使用 IPv6 地址的能力。有关这些注册选项的详细信息，请参阅《DB2 参考》。
+`CATALOG`命令支持高级选项，例如从服务器检索信息以及使用 IPv6 地址的能力。有关这些注册选项的详细信息，请参阅《DB2 参考》。
 
 ## 注册 TCP/IP 节点
 
-在客户端上注册使用 TCP/IP 与数据服务器通信时，必须将节点类型标记为 `TC`。要注册图 3–36 中使用的 TCP/IP 节点，你将输入类似的命令：
+在客户端上注册使用 TCP/IP 与数据服务器通信时，必须将节点类型标记为`TC`。要注册图 3–36 中使用的 TCP/IP 节点，你将输入类似的命令：
 
 ```
 CATALOG TCPIP NODE TPCE379 SERVER 5912
 ```
 
-在上例中，`TPCE379` 是你分配给节点的名称。`SERVER` 关键字提供了主机名的条目，尽管你也可以使用 IP 地址。此例中的 `SERVER` 关键字表示数据服务器监听的端口号。节点注册完成后，你可以注册远程数据库。
+在上例中，`TPCE379`是你分配给节点的名称。`SERVER`关键字提供了主机名的条目，尽管你也可以使用 IP 地址。此例中的`SERVER`关键字表示数据服务器监听的端口号。节点注册完成后，你可以注册远程数据库。
 
 ## 注册命名管道节点
 
-命名管道是一种通信协议，其在 DB2 中的支持仅适用于 Windows。在注册命名管道节点与数据服务器通信时，你必须指定相关参数，以便 DB2 能够定位计算机名和目标所在的实例。以类似于 TCP/IP 连接的方式在节点目录中注册这些信息，只需使用 `NPIPE` 命令。此节点名称也将用于 `CATALOG DATABASE` 命令，并且在客户端节点目录中必须唯一。
+命名管道是一种通信协议，其在 DB2 中的支持仅适用于 Windows。在注册命名管道节点与数据服务器通信时，你必须指定相关参数，以便 DB2 能够定位计算机名和目标所在的实例。以类似于 TCP/IP 连接的方式在节点目录中注册这些信息，只需使用`NPIPE`命令。此节点名称也将用于`CATALOG DATABASE`命令，并且在客户端节点目录中必须唯一。
 
 例如，注册命名管道节点，你将输入类似的命令：
 
@@ -3074,29 +2871,25 @@ CATALOG TCPIP NODE TPCE379 SERVER 5912
 CATALOG NPIPE NODE MYNODE REMOTE LITTLECHOE INSTANCE DB2
 ```
 
-在上例中，`MYNODE` 是你分配给节点的名称。`REMOTE` 关键字提供了指定的 Windows 计算机名（在 Windows XP“我的计算机”属性的“计算机名”选项卡中指定），`INSTANCE` 表示你所需的数据库所在的实例。
+在上例中，`MYNODE`是你分配给节点的名称。`REMOTE`关键字提供了指定的 Windows 计算机名（在 Windows XP“我的计算机”属性的“计算机名”选项卡中指定），`INSTANCE`表示你所需的数据库所在的实例。
 
 ## 注册数据库
 
 一旦为远程服务器注册了节点条目，你实际上已经告诉了 DB2 客户端软件如何在网络上找到远程数据服务器。要连接数据库，你需要告诉 DB2 你想要连接的数据库（其在本地应用程序中的别名称）以及该数据库在网络上的位置（节点名称）。
 
-使用 `CATALOG DATABASE` 命令注册数据库：
+使用`CATALOG DATABASE`命令注册数据库：
 
 ```
 CATALOG DATABASE DATBASENAME AS DATABASE_ALIAS AT NODE_NAME
 ```
 
-例如，要注册图 3–35 中位于节点 `TPCE379` 的 DB2 数据库，你将输入以下命令：
+例如，要注册图 3–35 中位于节点`TPCE379`的 DB2 数据库，你将输入以下命令：
 
 ```
 CATALOG DATABASE TOR TOR AT TPCE379
 ```
 
-如果你计划使用与数据库名称相同的数据库别名，则可以省略 `AS` 子句，因为默认的数据库别名就是数据库名称。例如，在上例中，你可以输入：`CATALOG DATABASE TOR AT TPCE379`。
-
-
-
-
+如果你计划使用与数据库名称相同的数据库别名，则可以省略`AS`子句，因为默认的数据库别名就是数据库名称。例如，在上例中，你可以输入：`CATALOG DATABASE TOR AT TPCE379`。
 
 ## 分布式通信路线图
 
@@ -3133,6 +2926,10 @@ connect to sampothr;
 ```
 
 SQL1013 找不到数据库别名或数据库名称 "SAMPLE"。SQLSTATE=42705
+
+
+
+连接到`SAMPOTHR`数据库：
 
 ```
 connect to sampothr;
@@ -3174,9 +2971,9 @@ connect to sampothr;
 - DB2 命令行处理器 (CLP)
 - 数据导入/导出工具
 
-如果您在服务器上创建了新数据库，则必须在系统目录表中也创建数据库工具的包。所有的客户端工具包都包含在一个名为 DB2UBIND.LST 的文件中。调用级接口 (CLI) 和 ODBC 包组组在 DB2CLI.LST 文件中。这些包可以在连接到数据服务器后，通过在客户端工作站上执行 BIND 命令来创建。
+如果您在服务器上创建了新数据库，则必须在系统目录表中也创建数据库工具的包。所有的客户端工具包都包含在一个名为`DB2UBIND.LST`的文件中。调用级接口 (CLI) 和 ODBC 包组组在`DB2CLI.LST`文件中。这些包可以在连接到数据服务器后，通过在客户端工作站上执行`BIND`命令来创建。
 
-必须为您想要访问的每个数据库单独运行 BIND 命令。一旦包被成功绑定到数据库，所有 DB2 客户端都将访问它。如果您在网络上有不同类型或版本的客户端，您必须从每个类型和版本的客户端绑定工具。
+必须为您想要访问的每个数据库单独运行`BIND`命令。一旦包被成功绑定到数据库，所有 DB2 客户端都将访问它。如果您在网络上有不同类型或版本的客户端，您必须从每个类型和版本的客户端绑定工具。
 
 ## DB2 注意
 
@@ -3207,24 +3004,22 @@ SQL0091N 绑定结束，有 "0" 个错误和 "2" 个警告。
 
 图 3–38 将客户端工具绑定到远程数据库
 
-如您所见，BIND 命令的输出默认到您的显示终端；但您可以使用 MESSAGES 参数将内容重定向到文件。此外，您想要绑定的文件必须位于运行 BIND 命令的相同目录中（或显式指向该命令）。例如，如果
-
-您想要运行图 3–38 中的相同命令，但当前处于 D:\Program Files\IBM\SQLLIB 目录，则您必须输入此命令：
+如您所见，`BIND`命令的输出默认到您的显示终端；但您可以使用`MESSAGES`参数将内容重定向到文件。此外，您想要绑定的文件必须位于运行`BIND`命令的相同目录中（或显式指向该命令）。例如，如果您想要运行图 3–38 中的相同命令，但当前处于`D:\Program Files\IBM\SQLLIB`目录，则您必须输入此命令：
 
 ```
 DB2 BIND BIND\@DB2UBIND.LST BLOCKING ALL GRANT PUBLIC
 ```
 
-您可以在图 3–38 中看到，使用了 PUBLIC 选项。该选项为所有用户提供执行 权限。您应该注意到，DB2 for OS 有不同的绑定选项，请参考参考手册获取更多信息。图 38 中的 @ 符号用于指定 DB2UBIND.LIST 是一个列表而不是文件本身。您可以通过查看图 39 的内容进行验证。
+您可以在图 3–38 中看到，使用了`PUBLIC`选项。该选项为所有用户提供执行权限。您应该注意到，DB2 for OS 有不同的绑定选项，请参考参考手册获取更多信息。图 38 中的`@`符号用于指定`DB2UBIND.LIST`是一个列表而不是文件本身。您可以通过查看图 39 的内容进行验证。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_189_0.png)
 
 图 3–39 将客户端工具绑定到远程数据库
 
-图 3–39 显示的绑定文件列表工具包括 IMPORT、EXPORT、LOAD、CLIP、BACKUP 和 REORG 等。本质上，DB2UBIND.LIST 包含了创建这些工具所需的包。
+图 3–39 显示的绑定文件列表工具包括`IMPORT`、`EXPORT`、`LOAD`、`CLIP`、`BACKUP`和`REORG`等。本质上，`DB2UBIND.LIST`包含了创建这些工具所需的包。
 
 > 注意
-> 您必须有权限来创建包。如果包已存在，您只需要 BIND 权限即可更新它。
+> 您必须有权限来创建包。如果包已存在，您只需要`BIND`权限即可更新它。
 
 ## 使用配置助手绑定工具
 
@@ -3232,15 +3027,14 @@ DB2 BIND BIND\@DB2UBIND.LST BLOCKING ALL GRANT PUBLIC
 
 使用配置助手绑定工具，请执行以下步骤：
 
-1. 在 CLP 会话中输入 db2ca 命令或从操作系统的菜单中选择它来启动配置助手（例如，在 Windows 中）。配置助手启动。
-
-2. 选择您想要绑定的数据库并点击 Bind。绑定对话框打开（图 3–40）。
+1. 在 CLP 会话中输入`db2ca`命令或从操作系统的菜单中选择它来启动配置助手（例如，在 Windows 中）。配置助手启动。
+2. 选择您想要绑定的数据库并点击`Bind`。绑定对话框打开（图 3–40）。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_190_0.png)
 
 **图 3–40** 使用配置助手绑定工具
 
-3. 选择要绑定的工具或文件以及任何选项，输入正确的连接信息并点击 Bind（图 3–41）。
+3. 选择要绑定的工具或文件以及任何选项，输入正确的连接信息并点击`Bind`（图 3–41）。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_190_1.png)
 
@@ -3248,7 +3042,7 @@ DB2 BIND BIND\@DB2UBIND.LST BLOCKING ALL GRANT PUBLIC
 
 # 第3章 连接
 
-您可以在图 3–41 中看到有很多选项。在绑定任何内容之前，您必须选择一个工具。注意，您可以使用 Load 按钮从本地工作站加载绑定文件（绑定文件列表）。此外，您可以使用 Add 按钮为即将执行的绑定过程添加绑定选项。
+您可以在图 3–41 中看到有很多选项。在绑定任何内容之前，您必须选择一个工具。注意，您可以使用`Load`按钮从本地工作站加载绑定文件（绑定文件列表）。此外，您可以使用`Add`按钮为即将执行的绑定过程添加绑定选项。
 
 ## 总结
 
@@ -3265,10 +3059,7 @@ DB2 BIND BIND\@DB2UBIND.LST BLOCKING ALL GRANT PUBLIC
 > DB2 注意
 > 本章没有涵盖可以使用配置助手完成的所有操作。我们建议您通过自己探索其功能来熟悉整个功能集。
 
-已知发现允许您发现客户端工作站已知系统上的实例和数据库，并添加其实例的新系统
-
-
-并且可以发现数据库。搜索发现（Search Discovery）提供了已知发现（Known Discovery）的所有功能，并增加了允许搜索本地网络中其他 DB2 服务器的选项。对于具有大量客户端的环境，另一种方案是使用如 LDAP 等目录服务。DB2 还支持 IPv6 地址。
+已知发现允许您发现客户端工作站已知系统上的实例和数据库，并添加其实例的新系统并且可以发现数据库。搜索发现（Search Discovery）提供了已知发现（Known Discovery）的所有功能，并增加了允许搜索本地网络中其他 DB2 服务器的选项。对于具有大量客户端的环境，另一种方案是使用如 LDAP 等目录服务。DB2 还支持 IPv6 地址。
 
 本文介绍了服务器和客户端配置文件，并详细说明了它们在大规模部署中的用处。对于经验更丰富的 DBA 或倾向于使用脚本命令的人员，本文涵盖了如何使用配置向程序（Configuration Assistant）和命令行界面（CLP）手动配置连接的能力。
 
@@ -3295,7 +3086,7 @@ DB2 BIND BIND\@DB2UBIND.LST BLOCKING ALL GRANT PUBLIC
 - 上一点中确定的访问用户身份验证将在何处进行？例如，用户是否由服务器上的操作系统授权？客户端？还是由所使用的中央授权方案，如轻量级目录访问协议（LDAP）？
 - 一旦用户被识别并连接到数据库，该人员对什么拥有什么权限？例如，DBA 应该比需要查看数据的业务分析师具有更高的权限，但 DBA 可能被允许访问敏感数据详情，如信用卡号等。
 
-权限级别还可以包括用户被允许运行的命令类型。例如，提取、转换和加载（ETL）程序员可能只被允许运行 `LOAD` 命令来填充数据仓库的原子层，而负责系统系统的个人可能不被允许运行表，但有权对其运行维护活动，例如备份或统计收集作业。
+权限级别还可以包括用户被允许运行的命令类型。例如，提取、转换和加载（ETL）程序员可能只被允许运行`LOAD`命令来填充数据仓库的原子层，而负责系统系统的个人可能不被允许运行表，但有权对其运行维护活动，例如备份或统计收集作业。
 
 - 将访问什么？简单来说，就是哪些用户或用户组，以及允许访问或创建的哪些数据（和对象）。例如，许多用户可能被允许读取生产线的次品数据，但只有经过认证的控制工程师才有权通过他们的前端应用程序进行填充。
 - 允许创建或修改哪些数据对象？在考虑数据服务器的访问模式时，您考虑的不仅是数据。用户和管理员可以访问、更改、创建或删除各种对象，例如实例、配置、表、视图、联邦封装（federated wrappers）等。例如，允许某些用户组更改数据表以反映其代表的业务模型，而其他人员只能读取其中的数据。
@@ -3314,7 +3105,7 @@ DB2 BIND BIND\@DB2UBIND.LST BLOCKING ALL GRANT PUBLIC
 
 **图 4–2** 实现安全框架的 DB2 设施
 
-重要的是理解图 4–2 中的设施可以由多个 DB2 功能组成。例如，为了控制查看数据的能力，DBA 可以分配运行 `SELECT` 语句的权利。为了进一步控制返回数据的查看能力，DBA 将使用第 1 章中讨论的高级访问控制功能。此插件包提供了基于标签的访问控制，使得某些用户可以查看同一表中的特定数据，它甚至控制系统管理员可以看到的内容（在本章稍后部分将讨论）。
+重要的是理解图 4–2 中的设施可以由多个 DB2 功能组成。例如，为了控制查看数据的能力，DBA 可以分配运行`SELECT`语句的权利。为了进一步控制返回数据的查看能力，DBA 将使用第 1 章中讨论的高级访问控制功能。此插件包提供了基于标签的访问控制，使得某些用户可以查看同一表中的特定数据，它甚至控制系统管理员可以看到的内容（在本章稍后部分将讨论）。
 
 ## 身份验证
 
@@ -3324,32 +3115,29 @@ DB2 BIND BIND\@DB2UBIND.LST BLOCKING ALL GRANT PUBLIC
 
 Windows 操作系统使用用户名（username）来标识分配给特定用户账户的个人。其他操作系统以及 DB2 使用用户 ID（user ID）。本章使用更通用的用户 ID 术语；除非另有说明，否则如果您是 Windows DBA，可以使用用户名作为该术语和概念的同义词。
 
-
-
-
 ## 安全概述
 
 每当用户尝试连接本地或远程数据库，或者进行身份验证时，DB2 都会与主机操作系统的安全设施紧密配合以处理身份验证需求，但也可以与标准安全协议（如 Kerberos™、Active Directory 甚至使用 GSS-API 标准安全模型开发的自定义身份验证机制配合）。当用户尝试连接到数据服务器时，DB2 会将用户 ID 和密码传递给操作系统或外部安全设施进行验证。
 
-当针对目标服务器发出 `CONNECT` 或 `ATTACH` 语句时，DBA 的 DB2 身份验证配置解决了本章前面提到的两个安全考量：
+当针对目标服务器发出`CONNECT`或`ATTACH`语句时，DBA 的 DB2 身份验证配置解决了本章前面提到的两个安全考量：
 
 - 谁被允许访问数据服务器或数据库？
 - 尝试访问数据服务器或数据库的用户身份验证应该在何处进行，验证如何进行？
 
 ## 使用用户 ID 和密码进行身份验证
 
-用户可以在客户端与实例之间建立连接，也可以在客户端与数据库之间建立连接。DB2 有两个命令可以建立这些连接。对于实例连接，使用 `ATTACH` 命令。对于数据库连接，使用 `CONNECT` 语句。
+用户可以在客户端与实例之间建立连接，也可以在客户端与数据库之间建立连接。DB2 有两个命令可以建立这些连接。对于实例连接，使用`ATTACH`命令。对于数据库连接，使用`CONNECT`语句。
 
 ### 使用上述任种方法，用户都可能提供也可能不用户 ID 和密码。如果未提供用户 ID 且身份验证类型为 CLIENT（本章稍后将讨论 DB2 中所有身份验证类型的细节），DB2 将使用用户登录时的用户 ID 和密码。根据操作系统和配置，DB2 可能会提示用户提供用户 ID 和密码。
 
-如果在执行 `ATTACH` 或 `CONNECT` 语句时提供了用户 ID 和密码，DB2 将使用它们来验证用户身份。指定的用户 ID 和密码可能与登录客户端时使用的不同。
+如果在执行`ATTACH`或`CONNECT`语句时提供了用户 ID 和密码，DB2 将使用它们来验证用户身份。指定的用户 ID 和密码可能与登录客户端时使用的不同。
 
-在使用这些语句之一时，用户或应用程序可以通过通过在 `ATTACH` 或 `CONNECT` 语句中提供用户 ID、新密码以及新密码的确认来请求更改密码。在这种情况下，DB2 将在向安全设施请求更改密码之前，先验证用户身份。
+在使用这些语句之一时，用户或应用程序可以通过通过在`ATTACH`或`CONNECT`语句中提供用户 ID、新密码以及新密码的确认来请求更改密码。在这种情况下，DB2 将在向安全设施请求更改密码之前，先验证用户身份。
 
 > **DB2 注意**
-在嵌入式 SQL 程序中连接到数据库不需要用户提供新密码的确认。
+> 在嵌入式 SQL 程序中连接到数据库不需要用户提供新密码的确认。
 
-以下示例通过通过指定连接中的特定用户部分来使用 `CONNECT` 语句。
+以下示例通过通过指定连接中的特定用户部分来使用`CONNECT`语句。
 
 ## 示例 1
 
@@ -3368,11 +3156,11 @@ CONNECT TO SAMPLE USER MLEKEY USING BOGGARTS
 NEW BIRDIES CONFIRM BIRDIES
 ```
 
-如果你在运行此示例后使用密码 BOGGARTS 重新发出 `CONNECT` 语句，则尝试连接将失败。请注意，如果你通过这种方法更改了用户 ID 的密码，无论是否使用 DB2，随后登录操作系统时必须使用此密码。
+如果你在运行此示例后使用密码 BOGGARTS 重新发出`CONNECT`语句，则尝试连接将失败。请注意，如果你通过这种方法更改了用户 ID 的密码，无论是否使用 DB2，随后登录操作系统时必须使用此密码。
 
 ## 示例 3
 
-使用嵌入式 SQL 模块编写的应用程序需要连接到名为 SAMPLE 的数据库。应用程序可以将使用的用户 ID 分配给 `USER` 主机变量。如果应用程序提供了用户在登录时更改密码的功能，它还将向他们显示一个对话框来执行此操作。该对话框后的代码将进一步为旧密码（OLPWD）、新密码（NEWPWD）和新密码确认（CONFIRMNEWPWD）分配主机变量。例如，嵌入式 SQL 状态可能如下：
+使用嵌入式 SQL 模块编写的应用程序需要连接到名为 SAMPLE 的数据库。应用程序可以将使用的用户 ID 分配给`USER`主机变量。如果应用程序提供了用户在登录时更改密码的功能，它还将向他们显示一个对话框来执行此操作。该对话框后的代码将进一步为旧密码（OLPWD）、新密码（NEWPWD）和新密码确认（CONFIRMNEWPWD）分配主机变量。例如，嵌入式 SQL 状态可能如下：
 
 ```
 EXEC SQL CONNECT TO SAMPLE USER:USERID USING:OLPWD
@@ -3389,11 +3177,13 @@ DB2 ATTACH TO DB2CERT USER MKELLY USING BIRDIES
 
 ## 控制身份验证发生的地点
 
-身份验证类型定义了身份验证将在何处以及如何进行。在数据服务器上进行身份验证的位置取决于 DB2 数据服务器上实例数据库管理器文件中 `AUTHENTICATION` 参数的值。
+身份验证类型定义了身份验证将在何处以及如何进行。在数据服务器上进行身份验证的位置取决于 DB2 数据服务器上实例数据库管理器文件中`AUTHENTICATION`参数的值。
 
-你可能还从第 3 章中记得，当为远程客户端建立目录以连接到 DB2 服务器时，你可以可选地使用 `CATALOG DATABASE` 命令指定身份验证参数，以指定客户端将尝试使用的身份验证类型。在大多数情况下，此设置必须与数据库管理器配置中使用相同参数名称的实例身份验证设置匹配，以定义如何对该实例的连接请求进行身份验证。
+你可能还从第 3 章中记得，当为远程客户端建立目录以连接到 DB2 服务器时，你可以可选地使用`CATALOG DATABASE`命令指定身份验证参数，以指定客户端将尝试使用的身份验证类型。在大多数情况下，此设置必须与数据库管理器配置中使用相同参数名称的实例身份验证设置匹配，以定义如何对该实例的连接请求进行身份验证。
 
 DB2 还允许你指定每个客户端自有的设施是否可以代表数据服务器处理身份验证过程。如果你配置数据服务器使用客户端身份验证（这在许多情况下是推荐的），你必须依赖于每个客户端的集成安全设施，这些设施的健壮性和丰富程度在不同平台之间可能有所不同。
+
+
 
 默认情况下，实例被设置为对所有实例级（ATTACH）和连接级（CONNECT）请求使用身份验证机制。DB2 为数据库连接引入了一种新的身份验证设置，称为 `SRVCON_AUTH`。默认情况下，未设置此参数，这意味着身份验证行为如本章所述的那样。当你设置此参数时，其效果是指示 DB2 处理本地身份验证与外部 `ATTACH` 或 `CONNECT` 请求。
 
@@ -3405,20 +3195,13 @@ DB2 还允许你指定每个客户端自有的设施是否可以代表数据服�
 
 DB2 可用的身份验证类型：
 
-- SERVER：强制在服务器处进行身份验证；因此在附加实例或连接数据库时必须提供用户 ID 和密码。使用此设置时，数据和密码在 DB2 客户端与数据服务器之间传输时均不加密。这是新建实例的默认授权类型。
+- `SERVER`：强制在服务器处进行身份验证；因此在附加实例或连接数据库时必须提供用户 ID 和密码。使用此设置时，数据和密码在 DB2 客户端与数据服务器之间传输时均不加密。这是新建实例的默认授权类型。
+- `SERVER_ENCRYPT`：其运行方式与 `SERVER` 相同，即所有身份验证将在服务器处进行。然而，所有密码在发送到远程数据服务器之前都在客户端由 DB2 进行加密。在数据服务器上，这些密码将被解密并随后对用户 ID 进行验证。如果数据服务器使用此身份验证方案，从 DB2 9 开始，它不再接受使用 `SERVER` 身份验证的客户端。
 
-- SERVER_ENCRYPT：其运行方式与 SERVER 相同，即所有身份验证将在服务器处进行。然而，所有密码在发送到远程数据服务器之前都在客户端由 DB2 进行加密。在数据服务器上，这些密码将被解密并随后对用户 ID 进行验证。如果数据服务器使用此身份验证方案，从 DB2 9 开始，它不再接受使用 SERVER 身份验证的客户端。
+> 注意：如果在连接或附加时请求更改密码，且目标数据服务器使用 `SERVER_ENCRYPT` 身份验证类型，则在请求更改密码的初始连接中，密码在发送到服务器之前不会加密。然而，后续连接将加密密码。
 
-> 注意
-如果在连接或附加时请求更改密码，且目标数据服务器使用 SERVER_ENCRYPT 身份验证类型，则在请求更改密码的初始连接中，密码在发送到服务器之前不会加密。然而，后续连接将加密密码。
-
-- CLIENT：将身份验证责任交给客户端操作系统。你应该特别考虑这种身份验证模型，由于不受信任客户端的概念（本章稍后讨论），此设置不能保证身份验证将在客户端进行。在大多数情况下，我们通常不推荐这种身份验证方法，因为各种客户端操作系统的密码强度、保护和设施存在差异；但取决于你的环境。
-
-- KERBEROS：此设置指定由基于 Kerberos 的安全处理身份验证。只有当 DB2 客户端和数据服务器都位于支持 Kerberos 安全协议的操作系统上时，可以使用此设置。Kerberos 安全协议作为第三方身份验证执行身份验证。
-
-
-
-
+- `CLIENT`：将身份验证责任交给客户端操作系统。你应该特别考虑这种身份验证模型，由于不受信任客户端的概念（本章稍后讨论），此设置不能保证身份验证将在客户端进行。在大多数情况下，我们通常不推荐这种身份验证方法，因为各种客户端操作系统的密码强度、保护和设施存在差异；但取决于你的环境。
+- `KERBEROS`：此设置指定由基于 Kerberos 的安全处理身份验证。只有当 DB2 客户端和数据服务器都位于支持 Kerberos 安全协议的操作系统上时，可以使用此设置。Kerberos 安全协议作为第三方身份验证执行身份验证。
 
 ## 安全概述
 
@@ -3428,46 +3211,46 @@ DB2 可用的身份验证类型：
 
 DB2 9 不在 HP-UX 上支持任何 Kerberos 身份验证方案。
 
--   KRB_SERVER_ENCRYPT
+- `KRB_SERVER_ENCRYPT`
 
-此设置指明远程数据服务器已启用 Kerberos 连接，前提是连接客户端在其编目目录中的身份验证设置也设置为使用 Kerberos。然而，此设置兼顾了不支持 Kerberos 的客户端，因为它也会接受带有 `SERVER_ENCRYPT` 身份验证设置的客户端连接。简单来说，如果客户端认证为 `KERBEROS`，则使用 Kerberos 安全系统对客户端进行验证。如果客户端认证不是 `KERBEROS`，则系统认证必须是 `SERVER_ENCRYPT`。
+  此设置指明远程数据服务器已启用 Kerberos 连接，前提是连接客户端在其编目目录中的身份验证设置也设置为使用 Kerberos。然而，此设置兼顾了不支持 Kerberos 的客户端，因为它也会接受带有 `SERVER_ENCRYPT` 身份验证设置的客户端连接。简单来说，如果客户端认证为 `KERBEROS`，则使用 Kerberos 安全系统对客户端进行验证。如果客户端认证不是 `KERBEROS`，则系统认证必须是 `SERVER_ENCRYPT`。
 
-在 DB2 9 正式发布时，此身份验证设置不支持数据流加密。对于连接 Kerberos 的客户端，密码不会在传输中传递，因为此设置也支持带有 `SERVER_ENCRYPT` 身份验证的客户端（密码受保护）。如果您想使用此身份验证设置并加密数据，需要转向其他技术，例如网卡上的 IPSec 加密、SSL 隧道等。
+  在 DB2 9 正式发布时，此身份验证设置不支持数据流加密。对于连接 Kerberos 的客户端，密码不会在传输中传递，因为此设置也支持带有 `SERVER_ENCRYPT` 身份验证的客户端（密码受保护）。如果您想使用此身份验证设置并加密数据，需要转向其他技术，例如网卡上的 IPSec 加密、SSL 隧道等。
 
 ### DB2 注意事项
 
 将加密任务从数据服务器上卸载的技术通常被认为是高性能数据库的理想选择。例如，IPSec 是任何身份验证方案下任何数据服务器极佳的数据流加密选项。
 
--   DATA_ENCRYPT
+- `DATA_ENCRYPT`
 
-身份验证在数据服务器上进行。当使用 `DATA_ENCRYPT` 进行身份验证时，其身份验证行为与 `SERVER_ENCRYPT` 类似；除了加密跨线路传输的密码外，所有数据流都会加密。
+  身份验证在数据服务器上进行。当使用 `DATA_ENCRYPT` 进行身份验证时，其身份验证行为与 `SERVER_ENCRYPT` 类似；除了加密跨线路传输的密码外，所有数据流都会加密。
 
-通过此设置，以下数据流将被加密：
+  通过此设置，以下数据流将被加密：
 
--   SQL 和 XQuery 语句
--   SQL 程序变量数据
--   服务器处理 SQL 或 XQuery 语句的输出数据（包括数据的描述）
--   查询返回的结果集的部分或全部
--   大对象 (LOB) 数据流
--   SQLDA 描述符
+  - SQL 和 XQuery 语句
+  - SQL 程序变量数据
+  - 服务器处理 SQL 或 XQuery 语句的输出数据（包括数据的描述）
+  - 查询返回的结果集的部分或全部
+  - 大对象（LOB）数据流
+  - SQLDA 描述符
 
-在使用此身份验证方法时，您应该注意，不支持加密的旧版客户端（DB2 V8.2 之前的任何 DB2 客户端或应用了 FixPack 7 的 DB2 V8.1）将无法连接远程数据服务器。如果您有连接到 DB2 9 服务器的混合 DB2 客户端，并且支持数据加密，应使用 `DATA_ENCRYPT_CMP` 身份验证类型。
+  在使用此身份验证方法时，您应该注意，不支持加密的旧版客户端（DB2 V8.2 之前的任何 DB2 客户端或应用了 FixPack 7 的 DB2 V8.1）将无法连接远程数据服务器。如果您有连接到 DB2 9 服务器的混合 DB2 客户端，并且支持数据加密，应使用 `DATA_ENCRYPT_CMP` 身份验证类型。
 
--   DATA_ENCRYPT_CMP
+- `DATA_ENCRYPT_CMP`
 
-此身份验证设置的行为与 `DATA_ENCRYPT` 相同。区别在于，此设置补偿了不支持数据流加密的回退客户端，使其可以使用 `SERVER_ENCRYPT` 选项进行验证。不支持 DB2 数据加密的客户端包括旧版本的 Java Common Client (JCC) 和 V8.2 之前的 DB2 客户端代码。
+  此身份验证设置的行为与 `DATA_ENCRYPT` 相同。区别在于，此设置补偿了不支持数据流加密的回退客户端，使其可以使用 `SERVER_ENCRYPT` 选项进行验证。不支持 DB2 数据加密的客户端包括旧版本的 Java Common Client（JCC）和 V8.2 之前的 DB2 客户端代码。
 
--   GSSPLUG-IN
+- `GSSPLUG-IN`
 
-此设置指明数据服务器的身份验证由使用 GSS-API 插件开发的外部设施（而非操作系统）控制。
+  此设置指明数据服务器的身份验证由使用 GSS-API 插件开发的外部设施（而非操作系统）控制。
 
-如果未指定客户端认证，远程数据服务器将返回服务器支持的插件列表，包括在 `svrconv_gssplug-in_list` 数据库配置参数中列出的任何 Kerberos 插件。然后客户端从列表中选择客户端插件目录中的第一个插件。如果客户端不支持列表中的任何插件，则使用 `KERBEROS` 身份验证方案对客户端进行验证。
+  如果未指定客户端认证，远程数据服务器将返回服务器支持的插件列表，包括在 `svrconv_gssplug-in_list` 数据库配置参数中列出的任何 Kerberos 插件。然后客户端从列表中选择客户端插件目录中的第一个插件。如果客户端不支持列表中的任何插件，则使用 `KERBEROS` 身份验证方案对客户端进行验证。
 
--   GSS_SERVER_ENCRYPT
+- `GSS_SERVER_ENCRYPT`
 
-此设置指明数据服务器的身份验证由使用 GSS-API 插件开发的外部设施（而非操作系统）控制。如果客户端通过插件进行认证，则使用服务器支持的插件列表中第一个客户端支持的插件对客户端进行验证。
+  此设置指明数据服务器的身份验证由使用 GSS-API 插件开发的外部设施（而非操作系统）控制。如果客户端通过插件进行认证，则使用服务器支持的插件列表中第一个客户端支持的插件对客户端进行验证。
 
-如果连接的客户端不支持服务器的 GSS-API 插件之一，将使用 `SERVER_ENCRYPT` 身份验证类型。如果客户端没有使用 GSS-API，只要数据服务器在使用 `KERBEROS`（GSS-API 的子集）或 `SERVER_ENCRYPT` 身份验证方案，它将接受其请求；它将拒绝所有其他授权设置，包括 `DATA_ENCRYPT_CMP`。
+  如果连接的客户端不支持服务器的 GSS-API 插件之一，将使用 `SERVER_ENCRYPT` 身份验证类型。如果客户端没有使用 GSS-API，只要数据服务器在使用 `KERBEROS`（GSS-API 的子集）或 `SERVER_ENCRYPT` 身份验证方案，它将接受其请求；它将拒绝所有其他授权设置，包括 `DATA_ENCRYPT_CMP`。
 
 DB2 的开放安全插件体系允许使用自定义符合 GSS-API 标准的插件，接管用户 ID 验证工作并将其交给外部安全程序。有关 GSS-API 安全机制或 Kerberos 的更多信息，请参阅 DB2 文档。
 
@@ -3489,17 +3272,13 @@ DB2 GET CF AUTHENTICATION
 DB2 UPDATE CF AUTHENTICATION = <type>
 ```
 
-可可用的身份验证类型有 `KERBEROS`、`KRB_SERVER_ENCRYPT`、`SERVER_ENCRYPT`、`DATA_ENCRYPT`、`DATA_ENCRYPT_CMP`、`GSSPLUG-IN` 和 `GSS_SERVER_ENCRYPT`。
+可用的身份验证类型有 `KERBEROS`、`KRB_SERVER_ENCRYPT`、`SERVER_ENCRYPT`、`DATA_ENCRYPT`、`DATA_ENCRYPT_CMP`、`GSSPLUG-IN` 和 `GSS_SERVER_ENCRYPT`。
 
 ### DB2 注意事项
 
 新实例的默认身份验证类型为 `SERVER_ENCRYPT`。如果您更改了身份验证类型，必须重启实例才能更改生效。
 
-
-
-
-
-# 第 4 章控制数据访问
+# 第 4 章 控制数据访问
 
 身份验证能力和安全级别的混合。换句话说，DBA 可以指定是否所有客户端都可以对用户进行身份验证。
 
@@ -3507,21 +3286,25 @@ DB2 UPDATE CF AUTHENTICATION = <type>
 
 `TRUST_ALLCLIENTTS` 参数可以设置为：
 
-- YES
-  将此参数设置为 YES 将强制所有客户端（无论是否受信任）均在客户端端进行身份验证。这是默认设置。
+- `YES`
 
-- NO
-  这指定所有不可信的客户端都必须在数据服务器上进行身份验证，这意味着必须从客户端提供用户 ID 和密码。如果客户端是受信任的，它将在本地进行身份验证。如果是不受信任的，则必须在服务器上进行身份验证。如果你使用客户端 身份验证，我们强烈建议设置 `TRUST_ALLCLIENTTS=NO`，以防止不安全的客户端在不提供有效密码的情况下连接。由于 `TRUST_ALLCLIENTTS` 是实例级参数，实例中的所有数据库都将使用此设置（就像 `AUTHENTICATION` 参数一样）。
+  将此参数设置为 `YES` 将强制所有客户端（无论是否受信任）均在客户端端进行身份验证。这是默认设置。
 
-`TRUST_CLINTAUTH` 参数允许你指定当在使用 `CONNECT` 或 `ATTACH` 语句提供用户 ID 和密码时，身份验证发生的位置。它与 `TRUST_ALLCLIENTTS` 参数配合使用。此参数仅在身份验证类型为 `CLIENT` 时使用，并影响代表服务器对用户进行身份验证的客户端；换句话说，如果 `TRUST_ALLCLIENTTS` 设置为 YES，它将影响所有客户端。
+- `NO`
+
+  这指定所有不可信的客户端都必须在数据服务器上进行身份验证，这意味着必须从客户端提供用户 ID 和密码。如果客户端是受信任的，它将在本地进行身份验证。如果是不受信任的，则必须在服务器上进行身份验证。如果你使用客户端身份验证，我们强烈建议设置 `TRUST_ALLCLIENTTS=NO`，以防止不安全的客户端在不提供有效密码的情况下连接。由于 `TRUST_ALLCLIENTTS` 是实例级参数，实例中的所有数据库都将使用此设置（就像 `AUTHENTICATION` 参数一样）。
+
+`TRUST_CLINTAUTH` 参数允许你指定当在使用 `CONNECT` 或 `ATTACH` 语句提供用户 ID 和密码时，身份验证发生的位置。它与 `TRUST_ALLCLIENTTS` 参数配合使用。此参数仅在身份验证类型为 `CLIENT` 时使用，并影响代表服务器对用户进行身份验证的客户端；换句话说，如果 `TRUST_ALLCLIENTTS` 设置为 `YES`，它将影响所有客户端。
 
 此参数的有效值为：
 
-- CLIENT（默认值）
-  身份验证由客户端执行。不需要用户 ID 和密码。如果未提供用户 ID 和密码，将在将在客户端进行，并使用用户登录客户端时使用的用户 ID 和密码。
+- `CLIENT`（默认值）
 
-- SERVER
-  如果指定了 SERVER，则身份验证在数据服务器上完成。
+  身份验证由客户端执行。不需要用户 ID 和密码。如果未提供用户 ID 和密码，将在客户端进行，并使用用户登录客户端时使用的用户 ID 和密码。
+
+- `SERVER`
+
+  如果指定了 `SERVER`，则身份验证在数据服务器上完成。
 
 表 4–1 总结了当使用每种类型的客户端基于客户端的身份验证到数据服务器执行数据库连接或实例挂载时，身份验证发生的位置。
 
@@ -3542,13 +3325,15 @@ DB2 UPDATE CF AUTHENTICATION = <type>
 
 正如你在第 3 章中学习的，DB2 有多个目录，用于将应用程序引导到数据库的位置。这些目录允许 DB2 无论服务器是在本地实例还是远程实例上都能找到它们及其数据库。系统数据库目录包含已知数据库所在位置的列表和指针。节点目录包含有关如何以及何处可以找到远程系统或实例的信息。要在这些任何一个目录中输入条目，可以使用 `CATALOG` 命令。要删除条目，要使用 `UNCAT` 命令。
 
-在设置服务器时，你可以选择谁应该能够对数据库进行 `CATALOG` 和 `UNCAT`。这可以通过设置数据库管理器配置文件中的 `CATALOG_AUTH` 参数来实现。两个可用值为 YES 和 NO。NO 是 DB2 数据服务器的默认值，其作用是防止没有 SYSADM 或 SYSCTL 权限的用户使用 `CATALOG` 或 `UNCAT` 命令。设置为 YES 允许所有用户使用这些命令。YES 是 DB2 客户端和带有本地客户端的 DB2 数据服务器的默认值。
+在设置服务器时，你可以选择谁应该能够对数据库进行 `CATALOG` 和 `UNCAT`。这可以通过设置数据库管理器配置文件中的 `CATALOG_AUTH` 参数来实现。两个可用值为 `YES` 和 `NO`。`NO` 是 DB2 数据服务器的默认值，其作用是防止没有 SYSADM 或 SYSCTL 权限的用户使用 `CATALOG` 或 `UNCAT` 命令。设置为 `YES` 允许所有用户使用这些命令。`YES` 是 DB2 客户端和带有本地客户端的 DB2 数据服务器的默认值。
 
 连接的客户端身份验证类型存储在系统数据库目录中。这是系统已知数据库的列表。
 
 要查看系统已知数据库列表，请使用以下命令：
 
+```bash
 LIST DATABASE DIRECTORY
+```
 
 所有远程目录的数据库将显示客户端尝试连接到数据服务器的身份验证类型。要更改连接的身份验证类型，需要从数据库目录使用新的身份验证类型重新对数据库建模。
 
@@ -3556,7 +3341,7 @@ LIST DATABASE DIRECTORY
 
 以下是一个使用基于服务器的身份验证建模数据库连接的命令示例：
 
-```
+```bash
 CATALOG DATABASE SAMPLE AT NODE MYNODE AUTHENTICATION SERVER
 ```
 
@@ -3570,8 +3355,9 @@ CATALOG DATABASE SAMPLE AT NODE MYNODE AUTHENTICATION SERVER
 
 ## 安全概述
 
-## DB2 客户端
+### DB2 客户端
 
+```bash
 catalog database sample at node mynode authentication data_encrypt
 
 connect to sample user mkelly using bogeyman
@@ -3579,10 +3365,13 @@ connect to sample user mkelly using bogeyman
 catalog database sample at node mynode authentication server_encrypt
 
 connect to sample user mowens using onlypars
+```
 
 ![](img/2fc748b6558d6b9bbc7356ac4116b1_210.png)
 
+```bash
 update dbm cfg using authentication data_encrypt
+```
 
 图 4–4
 
@@ -3592,13 +3381,11 @@ update dbm cfg using authentication data_encrypt
 
 在此示例中，决定在认为安全的客户端上进行身份验证，如图 4-5 所示。你从该图中看到数据服务器被配置为 `AUTHENTICATION=CLIENT`，并且还指定了特定的客户端身份验证设置（`TRUST_ALLCNTS=YES` 和 `TRUST_CLNTAUTH=SERVER`），这意味着如果未指定用户 ID 和密码，身份验证将在客户端进行（如果可能）。如果这些
 
-
-
-## 第 4 章 控制数据访问
+# 第 4 章 控制数据访问
 
 当明确指定凭据时，身份验证将在服务器上进行，如图 4–5 所示。
 
-```
+```bash
 catalog database sample at node mynode authentication client
 connect to sample
 
@@ -3606,20 +3393,20 @@ catalog database sample at node mynode authentication client
 connect to sample user mowens using onlypars
 ```
 
-## DB2 客户端
+### DB2 客户端
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_211_0.png)
 
-```
+```bash
 update dbm cfg using authentication client
 update dbm cfg using trust_allclients yes
 update dbm cfg using trust_clintauth server
 ```
 
 | DB2 | DB2 | DB2 |
-|---|---|---|
+| :--- | :--- | :--- |
 | AUTHORIZATION | D | D |
-| D | D | | D |
+| D | D | D |
 | D | D | D |
 | D | D | D |
 | D | D | D |
@@ -3629,9 +3416,11 @@ update dbm cfg using trust_clintauth server
 
 ## 授权
 
+
+
 身份验证成功后，DB2 通过进程授权控制对数据库对象的访问。某些访问控制还通过将用户和组与特定权限关联来实现，具体取决于用户或组尝试执行的访问类型。这种类型的访问控制将在下一节中介绍。如果授予组某些权限，则该组的每个成员都拥有相同的 DB2 权限，除非该权限被显式撤销。
 
-### DB2 注意事项
+## DB2 注意事项
 
 请记住，用户和组是在操作系统层级定义的，因此本节中对组成员的引用意味着该组已经在操作系统上定义。
 
@@ -3650,11 +3439,11 @@ DB2 9 权限可用于控制：
 
 维护数据库和实例通常需要权限，因此 DB2 自带了许多内置授权级别，这些级别决定了在数据库或实例内可以执行的操作。简单来说，用户或组执行高级数据库和实例操作操作取决于他们被分配的内置 DB2 权限。DB2 提供了六种内置权限级别：
 
-- SYSADM — 系统管理权限
-- SYSCTRL — 系统控制权限
-- SYSMAJNT — 系统维护权限
-- DBADM — 数据库管理权限
-- LOAD — 表格加载权限
+- `SYSADM` — 系统管理权限
+- `SYSCTRL` — 系统控制权限
+- `SYSMAJNT` — 系统维护权限
+- `DBADM` — 数据库管理权限
+- `LOAD` — 表格加载权限
 
 DB2 中的权限为数据服务器管理能力提供了一个层次结构，如图 4–6 所示。
 
@@ -3664,39 +3453,17 @@ DB2 中的权限为数据服务器管理能力提供了一个层次结构，如�
 
 在大多数情况下，DB2 中的内置权限可以被认为是预设的角色，这些角色包含一组权限，以及高级的数据库管理器、数据库维护和实用程序操作，这些操作可以管理和控制其数据服务器和数据库。
 
-某些权限（SYSADM、SYSCTRL 和 SYSMAINT）是实例级权限，其固有的权限包括可以针对实例或位于其中的数据库运行的命令和操作。正如我们所看到的，这些权限是通过数据库管理器配置（在实例级别）授予的，并且只能分配给组级别。这意味着即使你只想向单个用户授予这些权限中的任何一个，也必须创建一个组。
+某些权限（`SYSADM`、`SYSCTRL` 和 `SYSMAINT`）是实例级权限，其固有的权限包括可以针对实例或位于其中的数据库运行的命令和操作。正如我们所看到的，这些权限是通过数据库管理器配置（在实例级别）授予的，并且只能分配给组级别。这意味着即使你只想向单个用户授予这些权限中的任何一个，也必须创建一个组。
 
-相比之下，如 LOAD、DBADM、SECADM 等权限被认为是数据库级权限，可以使用 `GRANT` 语句授予用户和组。
+相比之下，如 `LOAD`、`DBADM`、`SECADM` 等权限被认为是数据库级权限，可以使用 `GRANT` 语句授予用户和组。
 
-### SYSADM 权限
+## SYSADM 权限
 
-DB2 安全层次结构的顶端是 DB2 系统管理员或 SYSADM 权限。图 4-6 显示，SECADM 权限级别可以访问 SYSADM 无法访问的数据，但它无法执行与 SYSADM 相同的操作。SYSADM 组的任何成员都能执行任何 DB2 管理操作，并访问所有数据库对象——但通过 SECADM 实现的 LBAC 控制特定限制的数据除外。SYSADM 组成员是唯一允许配置 DB2 实例的用户。
+DB2 安全层次结构的顶端是 DB2 系统管理员或 `SYSADM` 权限。图 4-6 显示，`SECADM` 权限级别可以访问 `SYSADM` 无法访问的数据，但它无法执行与 `SYSADM` 相同的操作。`SYSADM` 组的任何成员都能执行任何 DB2 管理操作，并访问所有数据库对象——但通过 `SECADM` 实现的 LBAC 控制特定限制的数据除外。`SYSADM` 组成员是唯一允许配置 DB2 实例的用户。
 
-默认情况下，在 UNIX 系统上，SYSADM 组被设置为实例所有者的主组，因此属于该组的任何用户都对数据服务器拥有 SYSADM 权限。在 Windows 上，本地 Administrators 组的成员都被授予了 SYSADM 权限。
+默认情况下，在 UNIX 系统上，`SYSADM` 组被设置为实例所有者的主组，因此属于该组的任何用户都对数据服务器拥有 `SYSADM` 权限。在 Windows 上，本地 Administrators 组的成员都被授予了 `SYSADM` 权限。
 
-要更改分配 SYSADM 权限的默认组，你需要使用类似下面的命令更改 `SYSADM_GROUP` 数据库管理器配置参数：
-
-```
-UPDATE DBM CFG USING SYSADM_GROUP TOPADMININGGROUP
-```
-
-`SYSADM_GROUP` 参数不是动态的，因此如果你更改了它，必须重启实例才能生效（注：原文此处描述不完整，根据语境理解为重启或重新加载）。`SYSADM_GROUP` 参数不是动态的，因此如果你更改了它，必须重启实例才能生效。
-
-（注：原文此处似乎存在重复或逻辑断层，翻译已根据原文内容进行对齐）
-
-由于原文文本中存在部分重复和断层，以下是基于原文内容的完整翻译：
-
----
-
-## 第 4 章 控制数据访问
-
-### SYSADM 权限
-
-DB2 安全层次结构的顶端是 DB2 系统管理员或 SYSADM 权限。图 4-6 显示，SECADM 权限级别可以访问 SYSADM 无法访问的数据，但它无法执行与 SYSADM 相同的操作。SYSADM 组的任何成员都能执行任何 DB2 管理操作，并访问所有数据库对象——但通过 SECADM 实现的 LBAC 控制特定限制的数据除外。SYSADM 组成员是唯一允许配置 DB2 实例的用户。
-
-默认情况下，在 UNIX 系统上，SYSADM 组被设置为实例所有者的主组，因此属于该组的任何用户都对数据服务器拥有 SYSADM 权限。在 Windows 上，本地 Administrators 组的成员都被授予了 SYSADM 权限。
-
-要更改分配 SYSADM 权限的默认组，你需要使用类似下面的命令更改 `SYSADM_GROUP` 数据库管理器配置参数：
+要更改分配 `SYSADM` 权限的默认组，你需要使用类似下面的命令更改 `SYSADM_GROUP` 数据库管理器配置参数：
 
 ```
 UPDATE DBM CFG USING SYSADM_GROUP TOPADMININGGROUP
@@ -3704,9 +3471,9 @@ UPDATE DBM CFG USING SYSADM_GROUP TOPADMININGGROUP
 
 `SYSADM_GROUP` 参数不是动态的，因此如果你更改了它，必须重启实例才能生效。
 
-### SYSCTRL 权限
+## SYSCTRL 权限
 
-系统控制（SYSCTRL）提供了执行大多数管理任务的能力。类似于 SYSADM 权限，该权限侧重于维护操作。具有 SYSCTRL 的用户可以执行的一些任务包括：
+系统控制（`SYSCTRL`）提供了执行大多数管理任务的能力。类似于 `SYSADM` 权限，该权限侧重于维护操作。具有 `SYSCTRL` 的用户可以执行的一些任务包括：
 
 - 创建或停止数据库
 - 强制停止数据库
@@ -3714,7 +3481,7 @@ UPDATE DBM CFG USING SYSADM_GROUP TOPADMININGGROUP
 - 创建、修改或删除表空间
 - 组织表
 
-只有具有 SYSADM 权限的用户才能授予 SYSCTRL 权限。以授予 SYSADM 权限的方式授予 SYSCTRL 权限，在这种情况下你需要更新 `SYSCTRL_GROUP` 参数。例如：
+只有具有 `SYSADM` 权限的用户才能授予 `SYSCTRL` 权限。以授予 `SYSADM` 权限的方式授予 `SYSCTRL` 权限，在这种情况下你需要更新 `SYSCTRL_GROUP` 参数。例如：
 
 ```
 UPDATE DBM CFG USING SYSCTRL_GROUP SYSADM
@@ -3722,21 +3489,21 @@ UPDATE DBM CFG USING SYSCTRL_GROUP SYSADM
 
 `SYSCTRL_GROUP` 参数不是动态的，因此如果你更改了它，必须重启实例才能生效。
 
-### SYSMAINT 权限
+## SYSMAINT 权限
 
-系统维护权限（SYSMAINT）赋予用户执行 SYSCTRL 可以执行的操作集。该权限不允许访问数据。SYSMAINT 权限提供了执行以下操作的权限：
+系统维护权限（`SYSMAINT`）赋予用户执行 `SYSCTRL` 可以执行的操作集。该权限不允许访问数据。`SYSMAINT` 权限提供了执行以下操作的权限：
 
 - 更新日志历史
 - 静止表空间
 - 组织表
-- 执行 RUNSTATS 工具
+- 执行 `RUNSTATS` 工具
 - 备份数据库和表空间
 - 执行滚动恢复
 - 启动和停止 DB2 实例
 - 运行数据库监控
 - 启动和停止跟踪
 
-只有具有 SYSADM 权限的用户才能授予 SYSMAINT 权限。以授予 SYSADM 权限的方式授予 SYSMAINT 权限，在这种情况下你需要更新 `SYSMAINT_GROUP` 参数。例如：
+只有具有 `SYSADM` 权限的用户才能授予 `SYSMAINT` 权限。以授予 `SYSADM` 权限的方式授予 `SYSMAINT` 权限，在这种情况下你需要更新 `SYSMAINT_GROUP` 参数。例如：
 
 ```
 UPDATE DBM CFG USING SYSMAINT_GROUP SYSADM
@@ -3744,27 +3511,19 @@ UPDATE DBM CFG USING SYSMAINT_GROUP SYSADM
 
 `SYSMAINT_GROUP` 参数不是动态的，因此如果你更改了它，必须重启实例才能生效。
 
-### SECADM 权限
+## SECADM 权限
 
-安全管理员（SECADM）将多个安全权限汇到一个权限中。授予 SECADM 的能力没有授予任何其他权限，甚至是 SYSADM。
+安全管理员（`SECADM`）将多个安全权限汇到一个权限中。授予 `SECADM` 的能力没有授予任何其他权限，甚至是 `SYSADM`。
 
-在 DB2 9.1 版本中，SECADM 权限用于通过 DB2 企业版提供的基于标签访问控制（LBAC）设施管理基于标签的安全控制。DB2 的未来版本将在此权限的基础上为数据服务器内部的数据提供更多的安全控制，例如使用相对于 DB2 9 中内置静态角色的自定义安全机制。
+在 DB2 9.1 版本中，`SECADM` 权限用于通过 DB2 企业版提供的基于标签访问控制（LBAC）设施管理基于标签的安全控制。DB2 的未来版本将在此权限的基础上为数据服务器内部的数据提供更多的安全控制，例如使用相对于 DB2 9 中内置静态角色的自定义安全机制。
 
-SECADM 权限允许你执行以下操作：
+`SECADM` 权限允许你执行以下操作：
 
 - 创建、删除或授予/撤销访问部分标签访问控制（LBAC）的对象
 - 对非所有的对象使用 `TRANSFER OWNERSHIP` 语句
 - 授予或撤销 `SETSESSIONUSER` 权限
 
-SECADM 权限只能由具有 SYSADM 权限的用户授予特定用户。与 DB2 中的其他权限不同，SECADM 只能分配给单个用户，不能分配给组。绕过此限制的唯一方法是将会话授权更改为没有 SECADM 权限的用户。为此，SYSADM 用户必须具有
-
-
-
-
-
-## 第 4 章 控制数据访问
-
-SETSESSIONUSER 权限；然而，SYSADM 用户也无法将此权限授予自己！
+`SECADM` 权限只能由具有 `SYSADM` 权限的用户授予特定用户。与 DB2 中的其他权限不同，`SECADM` 只能分配给单个用户，不能分配给组。绕过此限制的唯一方法是将会话授权更改为没有 `SECADM` 权限的用户。为此，`SYSADM` 用户必须具有 `SETSESSIONUSER` 权限；然而，`SYSADM` 用户也无法将此权限授予自己！
 
 如果用户尝试将权限授予自己，他们将收到以下错误消息：
 
@@ -3773,28 +3532,28 @@ SQL0554 An authorization ID cannot grant a privilege to itself.
 SQLSTATE=42502
 ```
 
-为了让 SYSADM 用户能够执行与 SECADM 权限相关的操作，需要采取以下步骤：
+为了让 `SYSADM` 用户能够执行与 `SECADM` 权限相关的操作，需要采取以下步骤：
 
-- 1. 使用操作系统创建一个 SECADM 用户。可以使用任何用户 ID，但我们建议使用名为 SECADM 的用户账户，因为这是一个易于记忆的用户 ID。
-- 2. SYSADM 在连接到目标数据库后，通过执行以下命令向新用户授予 SECADM 权限，因为他们（SYSADM）无法无法通过输入该权限来使用该权限：
+1. 使用操作系统创建一个 `SECADM` 用户。可以使用任何用户 ID，但我们建议使用名为 `SECADM` 的用户账户，因为这是一个易于记忆的用户 ID。
+2. `SYSADM` 在连接到目标数据库后，通过执行以下命令向新用户授予 `SECADM` 权限，因为他们（`SYSADM`）无法无法通过输入该权限来使用该权限：
 
 ```
 GRANT SECADM ON DATABASE TO USER SECADM
 ```
 
-- 3. 以 SECADM 身份登录，并执行以下命令（假设 PAULZ 是一个具有 SYSADM 权限的用户）：
+3. 以 `SECADM` 身份登录，并执行以下命令（假设 `PAULZ` 是一个具有 `SYSADM` 权限的用户）：
 
 ```
 GRANT SETSESSIONUSER ON PUBLIC TO USER PAULZ
 ```
 
-此命令赋予 SYSADM 冒用任何用户身份的能力：
+此命令赋予 `SYSADM` 冒用任何用户身份的能力：
 
 ```
 GRANT SECADM ON DATABASE TO USER PAULZ
 ```
 
-随后，SECADM 用户需要将 SECADM 权限重新授予 SYSADM 用户 PAULZ。
+随后，`SECADM` 用户需要将 `SECADM` 权限重新授予 `SYSADM` 用户 `PAULZ`。
 
 ## DB2 注意
 
@@ -3806,9 +3565,9 @@ GRANT SECADM ON DATABASE TO USER PAULZ
 
 在许多安装中，安全管理员是一个独立的角色，该用户不应具有任何管理权限。在规模较小的机构中，这些角色可以合并，或者作为独立用户保留但由同一个人进行管理。
 
-### DBADM 权限
+## DBADM 权限
 
-DBADM 是数据库级权限，而不是实例级权限。具有 DBADM 权限的用户可以对数据库执行任何管理任务。例如，此权限赋予了用户加载数据、在数据库中创建对象、监控数据库活动等等能力。具有 DBADM 权限的用户基本上对特定数据库具有完全控制权；用户可以查询或创建任何表；向数据库内的用户授予或撤销权限；通过 RUNSTATS 命令收集统计信息等。单个用户或用户组可能对多个数据库拥有 DBADM 权限。
+`DBADM` 是数据库级权限，而不是实例级权限。具有 `DBADM` 权限的用户可以对数据库执行任何管理任务。例如，此权限赋予了用户加载数据、在数据库中创建对象、监控数据库活动等等能力。具有 `DBADM` 权限的用户基本上对特定数据库具有完全控制权；用户可以查询或创建任何表；向数据库内的用户授予或撤销权限；通过 `RUNSTATS` 命令收集统计信息等。单个用户或用户组可能对多个数据库拥有 `DBADM` 权限。
 
 然而，拥有此权限的用户无法执行维护和管理任务，例如删除数据库、删除或创建表空间、备份或恢复数据库等。
 
@@ -3818,7 +3577,7 @@ DBADM 是数据库级权限，而不是实例级权限。具有 DBADM 权限的�
 CREATE DATABASE DB2CERT
 ```
 
-该语句隐式地向执行命令的用户授予了名为 DB2CERT 数据库的 DBADM 权限（当然，我们假设用于登录系统的用户账户具有创建数据库的权限）。
+该语句隐式地向执行命令的用户授予了名为 `DB2CERT` 数据库的 `DBADM` 权限（当然，我们假设用于登录系统的用户账户具有创建数据库的权限）。
 
 现在考虑以下语句：
 
@@ -3826,7 +3585,7 @@ CREATE DATABASE DB2CERT
 GRANT DBADM ON DATABASE TO USER MOWENS
 ```
 
-该语句将 DBADM 权限授予了 DB2CERT 数据库上的用户 MOWENS。该语句只有在建立起连接到 DB2CERT 数据库后才能发布，且只能由具有 SYSADM 权限的用户颁发。
+该语句将 `DBADM` 权限授予了 `DB2CERT` 数据库上的用户 `MOWENS`。该语句只有在建立起连接到 `DB2CERT` 数据库后才能发布，且只能由具有 `SYSADM` 权限的用户颁发。
 
 最后，考虑此语句：
 
@@ -3834,29 +3593,27 @@ GRANT DBADM ON DATABASE TO USER MOWENS
 GRANT DBADM on DATABASE TO GROUP DBAS
 ```
 
-## 第 4 章 控制数据访问
-
-该语句向属于 DBAS 组的所有用户授予 DBADM 权限。该语句只有在连接到 DB2CERT 数据库后并由具有相应权限的用户才能发布。
+该语句向属于 `DBAS` 组的所有用户授予 `DBADM` 权限。该语句只有在连接到 `DB2CERT` 数据库后并由具有相应权限的用户才能发布。
 
 ## LOAD 权限
 
-被授予 LOAD 权限的用户可以在不需要 SYSADM 或 DBADM 权限的情况下运行 LOAD 工具程序。LOAD 命令通常在向表中填充大量数据时，作为 INSERT 或 IMPORT 命令的更快的替代方案。
+被授予 `LOAD` 权限的用户可以在不需要 `SYSADM` 或 `DBADM` 权限的情况下运行 `LOAD` 工具程序。`LOAD` 命令通常在向表中填充大量数据时，作为 `INSERT` 或 `IMPORT` 命令的更快的替代方案。
 
-LOAD 权限是在 DB2 的之前的版本中引入的，以解决对工作仅为加载数据库的用户授予过多的权限（这违反了本章前面概述的最小特权原则）的需求，这种角色在数据仓库环境中特别常见。例如，SYSADM 权限提供了启动和启动实例的能力，而唯一职责是加载数据的员工不应具有此权限的访问权限。
+`LOAD` 权限是在 DB2 的之前的版本中引入的，以解决对工作仅为加载数据库的用户授予过多的权限（这违反了本章前面概述的最小特权原则）的需求，这种角色在数据仓库环境中特别常见。例如，`SYSADM` 权限提供了启动和启动实例的能力，而唯一职责是加载数据的员工不应具有此权限的访问权限。
 
-被授予 LOAD 权限的用户可以执行以下任务：
+被授予 `LOAD` 权限的用户可以执行以下任务：
 
-- 如果他们拥有某表的 INSERT 权限，可以使用 LOAD INSERT 命令将数据加载到表中。
-- 如果他们拥有某表的 INSERT 权限，如果之前的加载操作是插入数据的加载，则可以执行 LOAD RESTART 或 LOAD TERMINATE 命令。
-- 如果之前的操作是 LOAD REPLACE，则在执行 LOAD RESTART TERMINATE 之前，必须已授予该用户 DELETE 权限。
-- 使用异常表（用户必须对异常表具有 INSERT 权限才能执行此操作）。
-- 执行 QUIESCE TABLESPACES FOR TABLE、RUNSTATS 和 LIST TABLESPACES 命令。
+- 如果他们拥有某表的 `INSERT` 权限，可以使用 `LOAD INSERT` 命令将数据加载到表中。
+- 如果他们拥有某表的 `INSERT` 权限，如果之前的加载操作是插入数据的加载，则可以执行 `LOAD RESTART` 或 `LOAD TERMINATE` 命令。
+- 如果之前的操作是 `LOAD REPLACE`，则在执行 `LOAD RESTART TERMINATE` 之前，必须已授予该用户 `DELETE` 权限。
+- 使用异常表（用户必须对异常表具有 `INSERT` 权限才能执行此操作）。
+- 执行 `QUIESCE TABLESPACES FOR TABLE`、`RUNSTATS` 和 `LIST TABLESPACES` 命令。
 
-根据你想要执行的 LOAD 类型，仅有 LOAD 权限可能并不足够。还需要对表的特定权限。
+根据你想要执行的 `LOAD` 类型，仅有 `LOAD` 权限可能并不足够。还需要对表的特定权限。
 
-由于 LOAD 权限被认为是数据库级权限，它可以授予用户或组。只有具有 SYSADM 或 DBADM 权限的用户才能向用户或组授予 LOAD 权限。
+由于 `LOAD` 权限被认为是数据库级权限，它可以授予用户或组。只有具有 `SYSADM` 或 `DBADM` 权限的用户才能向用户或组授予 `LOAD` 权限。
 
-例如，为了用户 MKELLY 执行 LOAD INSERT、LOAD RESTART 或在 LOAD INSERT 之后终止加载，你需要在连接到数据库后执行类似下方的命令：
+例如，为了用户 `MKELLY` 执行 `LOAD INSERT`、`LOAD RESTART` 或在 `LOAD INSERT` 之后终止加载，你需要在连接到数据库后执行类似下方的命令：
 
 ```
 GRANT LOAD ON DATABASE TO USER MKELLY
@@ -3865,7 +3622,7 @@ GRANT INSERT ON TABLE ATOMICLAYER TO USER MKELLY
 
 ## DB2 注意
 
-由于 LOAD 权限可以授予用户或组，只需将 USER 替换为 GROUP 即可分配这些权限。
+由于 `LOAD` 权限可以授予用户或组，只需将 `USER` 替换为 `GROUP` 即可分配这些权限。
 
 表 4-2 展示了通过内置权限可以执行的一些任务。
 
@@ -3888,9 +3645,7 @@ GRANT INSERT ON TABLE ATOMICLAYER TO USER MKELLY
 | RESTORE TABLE SPACE | YES | YES | YES | | |
 | RUN TRACE | YES | YES | YES | | |
 
-## 第 4 章 控制数据访问
-
-表 4-2 常见数据库任务所需的权限
+**表 4-2 常见数据库任务所需的权限（续）**
 
 | 功能 | SYSADM | SYSCTRL | SYSMAINT | DBADM | LOAD |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -3918,23 +3673,21 @@ DBA 使用权限来帮助定义用户或组可以创建、更改或删除的对�
 
 DB2 基本上两类权限：数据库范围权限和数据库对象权限。这些类别可以包含三种类型的权限：所有权、个人权限和隐式权限。
 
-
-
-
-
 ## 所有权权限（在 DB2 命令语法中称为 CONTROL 权限）
 
-对于大多数对象，创建对象的用户对该对象具有完全访问权限，因此，CONTROL 权限会自动授予给对象的创建者。某些数据库对象（例如视图）是这一规则的例外。
+对于大多数对象，创建对象的用户对该对象具有完全访问权限，因此，`CONTROL` 权限会自动授予给对象的创建者。某些数据库对象（例如视图）是这一规则的例外。
 
-当你拥有某个对象的 CONTROL 权限时，你即拥有该对象的所有权。这意味着你有权访问该对象、授权他人访问该对象，并允许他人向其他用户或组授予该对象上的权限。权限由拥有所有权或管理权限的用户控制。这些用户可以使用 SQL 语句授予或撤销权限。
+当你拥有某个对象的 `CONTROL` 权限时，你即拥有该对象的所有权。这意味着你有权访问该对象、授权他人访问该对象，并允许他人向其他用户或组授予该对象上的权限。权限由拥有所有权或管理权限的用户控制。这些用户可以使用 SQL 语句授予或撤销权限。
 
 ## 个人级权限
 
-这些权限允许你执行特定的功能，有时是针对特定对象的执行。这些权限包括 SELECT、DELETE、INSERT 和 UPDATE。
+这些权限允许你执行特定的功能，有时是针对特定对象的执行。这些权限包括 `SELECT`、`DELETE`、`INSERT` 和 `UPDATE`。
 
 ## 隐式权限
 
 隐式权限是指当用户被显式授予高级别的权限时，自动授予该用户的权限。当高级别的权限被显式撤销时，这些隐式权限并不会被撤销。
+
+
 
 此外，隐式权限也可以与包（package）相关。例如，当用户执行一个涉及其他权限的包时，该用户在执行包时获得那些权限。这些用户并不一定需要对包内访问的数据对象具有显式权限。这些权限有时被称为间接权限。
 
@@ -3946,20 +3699,20 @@ DB2 基本上两类权限：数据库范围权限和数据库对象权限。这�
 
 ## 安全概述
 
-## 数据库权限
+### 数据库权限
 
 数据库权限涉及对整个数据库的操作，只有具有 SYSADM 或 DBADM 权限的用户才能授予和撤销这些权限。DB2 的数据库权限列表包括：
 
 - CONNECT 允许用户连接数据库。
 - BINDALL 允许用户使用 BIND 命令在数据库中创建新包。
 - CREATAB 允许用户在数据库中创建新表。
-- CREATE_NOT_FENCED 允许用户创建未隔离（not fenced）的用户定义函数 (UDF) 或存储过程（统称为常规）。未隔离的常规经过了充分测试，因为数据库管理器不会保护其存储或控制块不受其影响；因此，允许在未隔离地址空间中运行的编写糟糕且测试不足的常规可能会给你的系统带来严重问题！我们建议不要允许用户创建未隔离的常规，因为如果实现常规的代码包含错误代码，它们与隔离常规相比所获得的性能提升并不值得冒风险。
-- IMPLICIT_SCHEMA 允许任何用户通过使用不存在模式名的 CREATE 语句创建对象来隐式创建模式。SYSBM 成为任何隐式创建模式的所有者，并且 PUBLIC 被授予在该类模式中创建对象的权限。例如，如果 MOWENS 创建了一个名为 MYOLFSCORES 的表而没有指定模式（且该模式不存在），DB2 将以 MOWENS.MYOLFSCORES 的形式创建该表。
+- CREATE_NOT_FENCED 允许用户创建未隔离（not fenced）的用户定义函数（UDF）或存储过程（统称为常规）。未隔离的常规经过了充分测试，因为数据库管理器不会保护其存储或控制块不受其影响；因此，允许在未隔离地址空间中运行的编写糟糕且测试不足的常规可能会给你的系统带来严重问题！我们建议不要允许用户创建未隔离的常规，因为如果实现常规的代码包含错误代码，它们与隔离常规相比所获得的性能提升并不值得冒风险。
+- IMPLICIT_SCHEMA 允许任何用户通过使用不存在模式名的 CREATE 语句创建对象来隐式创建模式。SYSBM 成为任何隐式创建模式的所有者，并且 PUBLIC 被授予在该类模式中创建对象的权限。例如，如果 MOWENS 创建了一个名为 MYOLFSCORES 的表而没有指定模式（且该模式不存在），DB2 将以 `MOWENS.MYOLFSCORES` 的形式创建该表。
 - LOAD 允许用户向表加载数据。
 - QUIESCE_CONNECT 允许用户在数据库静止（quiesced）时访问数据库。数据库可以置于静止状态以便进行独立维护，或允许单个用户或用户组独占数据库。
 - CREATE_EXTERNAL_ROUTINE 允许用户创建供应用程序和数据库其他用户使用的外部常规。创建在此模式下运行的常规由于减少了数据库管理器与常规之间的调用开销，可以获得快得多的性能。然而，在开发此类常规时必须小心，因为任何错误的内存分配都会影响数据服务器的运行。
 
-## 数据库对象权限
+### 数据库对象权限
 
 对于每个 DB2 对象，都需要特定的权威或权限来创建它，并且需要特定的权威或权限来对其进行控制。
 
@@ -3967,7 +3720,7 @@ DB2 基本上两类权限：数据库范围权限和数据库对象权限。这�
 
 - **数据库权威（Database authorities）** — 这些包括创建和访问数据库的能力。任何数据库的创建者自动获得 DBADM 权限。具有 DBADM 权限的用户可以授予 CONNECT 权限、在数据库中创建表或新包的能力、隐式创建模式的能力以及创建未隔离常规的能力。
 
-在创建数据库时，某些权限会自动授予给 PUBLIC 组。如果你想控制谁能对数据库进行什么操作，则必须由 DBADM 或 SYSADM 用户从 PUBLIC 中撤销这些权限（这些包括 CREATETABLE 和 BINDADD 权限）。
+  在创建数据库时，某些权限会自动授予给 PUBLIC 组。如果你想控制谁能对数据库进行什么操作，则必须由 DBADM 或 SYSADM 用户从 PUBLIC 中撤销这些权限（这些包括 CREATETABLE 和 BINDADD 权限）。
 
 - **模式权限（Schema privileges）** — 这些包括在模式内创建、修改或删除对象的权限。模式所有者拥有所有这些权限，并有权将它们授予他人。属于模式的对象包括表、视图、索引、包、用户定义类型、用户定义函数、触发器、过程、联邦对象、XML Schema 文和别名。
 
@@ -3982,23 +3735,19 @@ DB2 基本上两类权限：数据库范围权限和数据库对象权限。这�
 - **序列权限（Sequence privileges）** — 序列的创建者自动获得使用（usage）权限。使用 NEXTVAL 和 PREVVAL 表达式需要使用权限。为了允许其他用户使用 NEXTVAL 和 PREVVAL 表达式，必须将序列权限授予 PUBLIC。
 
 - **别名权限（Nickname privileges）** — 别名指向另一个系统中的表。DB2 联邦系统是一种特殊的分布式数据库管理系统。联邦系统的能力在于：
-  - 连接本地表和远程源的数据，就像数据在本地一样
-  - 通过将请求分配到联邦数据源进行处理，利用数据源的处理优势
-  - 通过在联邦服务器上处理分布式请求的部分，补偿数据源 SQL 的局限性
+  - 连接本地表和远程源的数据，就像数据在本地一样。
+  - 通过将请求分配到联邦数据源进行处理，利用数据源的处理优势。
+  - 通过在联邦服务器上处理分布式请求的部分，补偿数据源 SQL 的局限性。
 
-通过联邦系统，你可以从单个 SQL 语句向多个数据源发送分布式请求。例如，你可以连接位于 DB2 表、Oracle 表和 Sybase 表中的数据。要为联邦应用程序定义数据源，必须先使用别名定义表。
+  通过联邦系统，你可以从单个 SQL 语句向多个数据源发送分布式请求。例如，你可以连接位于 DB2 表、Oracle 表和 Sybase 表中的数据。要为联邦应用程序定义数据源，必须先使用别名定义表。
 
 - **包权限（Package privileges）** — 包的创建者自动获得包的 CONTROL 权限。该用户可以授予他人 REBIND 和 EXECUTE 该包的能力。然而，重新绑定包的用户必须拥有访问嵌入静态 SQL 语句中引用对象的必要权限。所需的权限必须在重新绑定之前获得。
 
-包的 CONTROL 权限还允许你删除该包。任何拥有包 EXECUTE 权限的用户都可以执行该包，无需持有所需的权限。要将新包绑定到数据库，你必须具有 BINDADM 数据库权威、是 DBADM 权限的用户或属于 SYSADM 组。
-
-
-
-
+  包的 CONTROL 权限还允许你删除该包。任何拥有包 EXECUTE 权限的用户都可以执行该包，无需持有所需的权限。要将新包绑定到数据库，你必须具有 BINDADM 数据库权威、是 DBADM 权限的用户或属于 SYSADM 组。
 
 ## 第 4 章 控制数据访问
 
-## 表 4–3 权限参考指南
+### 表 4–3 权限参考指南
 
 | 权限名称 | 所属对象 | 详情 |
 |---|---|---|
@@ -4020,16 +3769,16 @@ DB2 基本上两类权限：数据库范围权限和数据库对象权限。这�
 
 DB2 在其系统目录视图中存储授予数据库内对象的权限信息。具体而言，你可以在以下表中找到此类信息：
 
-- SYSCAT.TABAUTH（用于表和视图权限）
-- SYSCAT.COAUTH（用于列权限）
-- SYSCAT.INDEXAUTH（用于索引权限）
-- SYSCAT.SCHEMAAUTH（用于模式权限）
-- SYSCAT.ROUTINEAUTH（用于程序权限）
-- SYSCAT.PACKAGEAUTH（用于包权限）
+- `SYSCAT.TABAUTH`（用于表和视图权限）
+- `SYSCAT.COAUTH`（用于列权限）
+- `SYSCAT.INDEXAUTH`（用于索引权限）
+- `SYSCAT.SCHEMAAUTH`（用于模式权限）
+- `SYSCAT.ROUTINEAUTH`（用于程序权限）
+- `SYSCAT.PACKAGEAUTH`（用于包权限）
 
-要检查为 SYSADM、SYSCTRL 和 SYSMAINT指定的组，请查看数据库管理器（DBM）配置文件。对于所有其他权限许可，请检查本节列出的目录视图，以确定具有访问权限的用户和组（或使用控制中心进行图形化操作）。
+要检查为 SYSADM、SYSCTRL 和 SYSMAINT 指定的组，请查看数据库管理器（DBM）配置文件。对于所有其他权限许可，请检查本节列出的目录视图，以确定具有访问权限的用户和组（或使用控制中心进行图形化操作）。
 
-## 分配权限
+### 分配权限
 
 使用两个 SQL 语句来管理权限：
 
@@ -4038,7 +3787,7 @@ DB2 在其系统目录视图中存储授予数据库内对象的权限信息。�
 
 例如，假设你希望用户 ANDREW 能够删除 DB2CERT 数据库中的 CANDIDATE 表。DBA 可以发布如下所示的语句来启用此操作：
 
-```
+```sql
 GRANT CONTROL ON TABLE CANDIDATE TO ANDREW
 ```
 
@@ -4052,26 +3801,24 @@ GRANT CONTROL ON TABLE CANDIDATE TO ANDREW
 
 表 4–4 总结了 DB2 中数据库对象在创建资源（数据库、模式、表、视图、索引或包）或控制对象时所需的某些权限。
 
-## 表 4–4 与数据库对象相关的权限和许可
+### 表 4–4 与数据库对象相关的权限和许可
 
 | 对象 | 创建所需的权限/许可 | 控制所需的权限/许可 | 对象上的其他权限 |
-| :--- | :--- | :--- | :--- |
+|:---|:---|:---|:---|
 | DATABASE | SYSADM | DBADM | CONNECT BINDADD CREATETAB CREATE_NOT_FENCED IMPLICIT_SCHEMA CONNECT |
 | SCHEMA | DBADM 或 IMPLICIT_SCHEMA | IMPLICIT_SCHEMA 的所有权 | CREATEIN ALTERIN DROPIN |
 | PACKAGE | BINDADD | CONTROL | BIND EXECUTE |
 
-## 安全概述
-
-## 表 4–4 与数据库对象相关的权限和许可
+### 表 4–4 与数据库对象相关的权限和许可
 
 | 对象 | 创建所需的权限/许可 | 控制所需的权限/许可 | 对象上的其他权限 |
-| --- | --- | --- | --- |
-| TABLE 或 VIEW | CREATAB (表) CONTROL 或 SELECT (视图) | CONTROL | SELECT (表/视图) INSERT (表/视图) DELETE (表/视图) UPDATE (表/视图) ALTER (表) INDEX (表) REFERENCES (表) |
+|---|---|---|---|
+| TABLE 或 VIEW | CREATAB（表）CONTROL 或 SELECT（视图） | CONTROL | SELECT（表/视图）INSERT（表/视图）DELETE（表/视图）UPDATE（表/视图）ALTER（表）INDEX（表）REFERENCES（表） |
 | INDEX | INDEX | CONTROL | 无 |
 | ALIAS | 如果模式与当前 authid 不同，需要 DBADM 或 IMPLICIT_SCHEMA。如果模式与现有模式相同，可能需要 CREATEIN 权限。 | CONTROL | 无 |
-| 类型 (UDT) | 如果模式与当前 authid 不同，需要 DBADM 或 IMPLICIT_SCHEMA。如果模式与现有模式相同，可能需要 CREATEIN 权限。 | CONTROL | 无 |
-| 定义函数 (UDF) | 如果模式与当前 authid 不同，需要 DBADM 或 IMPLICIT_SCHEMA。如果模式与现有模式相同，可能需要 CREATEIN。 | CONTROL | 无 |
-| SEQUENCE | 对于隐式或显式指定的模式需要 DBADM、SYSADM 或 CREATEIN 权限。 | DBADM, SYSADM, 所有权或 IMPLICIT_SCHEMA | 无 |
+| 类型（UDT） | 如果模式与当前 authid 不同，需要 DBADM 或 IMPLICIT_SCHEMA。如果模式与现有模式相同，可能需要 CREATEIN 权限。 | CONTROL | 无 |
+| 定义函数（UDF） | 如果模式与当前 authid 不同，需要 DBADM 或 IMPLICIT_SCHEMA。如果模式与现有模式相同，可能需要 CREATEIN。 | CONTROL | 无 |
+| SEQUENCE | 对于隐式或显式指定的模式需要 DBADM、SYSADM 或 CREATEIN 权限。 | DBADM、SYSADM、所有权或 IMPLICIT_SCHEMA | 无 |
 
 ## 应用开发权限
 
@@ -4079,10 +3826,10 @@ GRANT CONTROL ON TABLE CANDIDATE TO ANDREW
 
 这种方法以及所需的权限总结在表 4–5 中。
 
-## 表 4–5 应用开发所需的权限
+### 表 4–5 应用开发所需的权限
 
 | 操作 | 所需权限 |
-| --- | --- |
+|---|---|
 | 编译为构建文件 | 数据库的 CONNECT |
 | 创建新包 | 数据库的 CONNECT；数据库的 BINDADD；显式执行每个静态 SQL 语句或授予 PUBLIC 的所需权限 |
 | 修改现有包 | 数据库的 CONNECT；包的 BIND；显式执行每个静态 SQL 语句或授予 PUBLIC 的所需权限 |
@@ -4096,13 +3843,9 @@ GRANT CONTROL ON TABLE CANDIDATE TO ANDREW
 
 考虑一个简单的场景，授予 PUBLIC 组的 CONNECT 之外的所有权限都已被删除。在这种情况下，让我们根据用户将执行的功能确定所需的数据库对象和权限。在我们的场景中，我们有一个数据库，其中一个名为 APP1 的应用程序用于处理名称和地址。用户 George 想要运行一个名为 APP1 的程序。他还希望能够有一个自己的名字 GEORGE 来存储其他数据。因此，我们授予 George APP1 包的 EXECUTE 权限。我们还授予 George
 
-
-
-
-
 ## 安全概述
 
-对于位于 GEORGE 模式下的 PERSONAL 表，授予 `CONTROL` 权限。我们本可以授予他数据库 `CREATAB` 权限，让他自己创建 GEORGE.PERSONAL 表；然而，这将允许他创建许多表，而我们并不足够信任他执行此类操作。请记住，在授予 `EXECUTE` 权限之前，APP1 程序包必须先存在于数据库中。
+对于位于 GEORGE 模式下的 PERSONAL 表，授予 `CONTROL` 权限。我们本可以授予他数据库 `CREATAB` 权限，让他自己创建 `GEORGE.PERSONAL` 表；然而，这将允许他创建许多表，而我们并不足够信任他执行此类操作。请记住，在授予 `EXECUTE` 权限之前，APP1 程序包必须先存在于数据库中。
 
 Katrina 是一个正在编写 APP1 程序的应用程序开发人员。她需要对数据库中的各种表具有 `SELECT`、`INSERT`、`UPDATE` 和 `DELETE` 访问。我们需要向 Katrina 授予这些必要的权限，以便她构建应用程序逻辑。她还需要能够向数据库中添加新包并执行应用程序以进行测试；因此，需要向她授予 `BINDALL` 权限。
 
@@ -4124,9 +3867,7 @@ Chloë 需要能够创建一个数据库来存储个人信息。Chloë 被授予
 
 DB2 内部的权限授权可以通过显式、隐式或间接的方式授予用户或组。作为数据库管理员，你应该意识到用户获取数据库对象访问权限的方法。本节将检查获取或撤销权限授权的各种方法。
 
-如果拥有 `SYSADM` 或 `SYSCTL` 权限的用户创建数据库，该用户将隐式获得该数据库的 `DBADM` 权限。如果删除该用户的 `SYSADM` 或 `SYSCTL` 权限，该用户仍保留其创建的每个数据库的 `DBADM` 权限。移除 `DBADM` 权限必须使用 `REVOKE` 语句对每个数据库显式执行
-
-## 安全概述
+如果拥有 `SYSADM` 或 `SYSCTL` 权限的用户创建数据库，该用户将隐式获得该数据库的 `DBADM` 权限。如果删除该用户的 `SYSADM` 或 `SYSCTL` 权限，该用户仍保留其创建的每个数据库的 `DBADM` 权限。移除 `DBADM` 权限必须使用 `REVOKE` 语句对每个数据库显式执行。
 
 ### DB2 注意事项
 
@@ -4140,30 +3881,28 @@ DB2 内部的权限授权可以通过显式、隐式或间接的方式授予用�
 
 你可以使用 `REVOKE ALL` 语句快速移除此类场景下的所有剩余权限。例如：
 
-```
-REVOKE ALL ON <tablename> FROM <username/groupname>
-```
 
-撤销通过使用 `WITH GRANT` 选项授予的权限，需要表或视图上的 `SYSADM`、`DBADM` 权限或 `CONTROL` 权限。然而，你应该注意，在我们的示例中，如果授予了 Paul 权限并指定了 `WITH GRANT` 选项，Paul 随后也可以向其他用户授予权限。Paul 和他在该授权下授予新权限的用户都被视为被显式授予的权限。
 
-如果 Paul 的权限被撤销，他可能授予他人的权限将不受影响。换句话说，使用 `WITH GRANT` 选项时没有级联效应。
+撤销通过使用`WITH GRANT`选项授予的权限，需要表或视图上的`SYSADM`、`DBADM`权限或`CONTROL`权限。然而，你应该注意，在我们的示例中，如果授予了 Paul 权限并指定了`WITH GRANT`选项，Paul 随后也可以向其他用户授予权限。Paul 和他在该授权下授予新权限的用户都被视为被显式授予的权限。
 
-当用户尝试执行其不具备必要权限的操作时，DB2 将返回错误。例如，在我们的场景中，George 对 GEORGE.PERSONAL 表拥有 `CONTROL` 权限。这意味着 George 可以对该表进行几乎任何操作。
+如果 Paul 的权限被撤销，他可能授予他人的权限将不受影响。换句话说，使用`WITH GRANT`选项时没有级联效应。
 
-然而，假设 PAULZ 模式中存在一个同名的表。如果 George 尝试访问此数据，由于 George 对 PAULZ.PERSONAL 表没有任何任何权限，DB2 将返回类似的错误：
+当用户尝试执行其不具备必要权限的操作时，DB2 将返回错误。例如，在我们的场景中，George 对`GEORGE.PERSONAL`表拥有`CONTROL`权限。这意味着 George 可以对该表进行几乎任何操作。
+
+然而，假设`PAULZ`模式中存在一个同名的表。如果 George 尝试访问此数据，由于 George 对`PAULZ.PERSONAL`表没有任何权限，DB2 将返回类似的错误：
 
 ```
 SQL0551N "GEORG" does not have the privilege to perform operations
 "SELECT" on object "PAULZ.PERSONAL".
 ```
 
-如果你想让 George 只能从 PAULZ.PERSONAL 表以及自己的表中查询数据，你会如何解决这个问题？你可以发布以下语句：
+如果你想让 George 只能从`PAULZ.PERSONAL`表以及自己的表中查询数据，你会如何解决这个问题？你可以发布以下语句：
 
 ```
 GRANT SELECT ON TABLE PAULZ.PERSONAL TO USER GEORGE
 ```
 
-然而，George 现在也需要向 PAULZ.PERSONAL 表中插入数据。事实上，DBA 可以授予他权限；但是，许多其他用户需要在 PAULZ.PERSONAL 表上执行此任务。事实上，向组授予 `INSERT` 权限是一个好主意。例如，以下语句向 INSERTERS 组授予了 `INSERT` 权限：
+然而，George 现在也需要向`PAULZ.PERSONAL`表中插入数据。事实上，DBA 可以授予他权限；但是，许多其他用户需要在`PAULZ.PERSONAL`表上执行此任务。事实上，向组授予`INSERT`权限是一个好主意。例如，以下语句向`INSERTERS`组授予了`INSERT`权限：
 
 ```
 GRANT INSERT TO GROUP INSERTERS
@@ -4178,32 +3917,28 @@ REVOKE SELECT ON TABLE Paulz.PERSONAL FROM USER GEORGE
 REVOKE INSERT ON TABLE Paulz.PERSONAL FROM GROUP INSERTERS
 ```
 
-如果你担心授予 INSERTERS 组的权限，可以使用单个语句撤销（除了已授予的 CONTROL 权限）：
+如果你担心授予`INSERTERS`组的权限，可以使用单个语句撤销（除了已授予的`CONTROL`权限）：
 
 ```
 REVOKE ALL ON TABLE Paulz.PERSONAL FROM GROUP INSERTERS
 ```
 
-如前所述，DB2 也可以隐式授予权限。作为 DBA，你希望理解这一点，以确保用户不会因为执行（或允许执行）某些操作而获得权限。与本节之前详细的显式权限不同，隐式权限不需要使用 `GRANT` 语句来分配。
+如前所述，DB2 也可以隐式授予权限。作为 DBA，你希望理解这一点，以确保用户不会因为执行（或允许执行）某些操作而获得权限。与本节之前详细的显式权限不同，隐式权限不需要使用`GRANT`语句来分配。
 
 如果分配了隐式权限创建的对象随后被删除，则隐式权限也会被删除。然而，如果授予了更高级权限且未撤销，则隐式权限不会。
 
-你还应该意识到 DB2 还有一个特殊的组定义：PUBLIC 组。该组包含所有用户，并自动授予该组 `CONNECT` 权限。向 PUBLIC 授予权限将为所有用户提供该权限。某些权限默认授予 PUBLIC。例如，PUBLIC 对目录表拥有 `SELECT` 权限。为了遵循数据安全的最小权限原则，我们建议在创建数据库后使用 `REVOKE` 语句移除 `SELECT` 权限。
+你还应该意识到 DB2 还有一个特殊的组定义：`PUBLIC`组。该组包含所有用户，并自动授予该组`CONNECT`权限。向`PUBLIC`授予权限将为所有用户提供该权限。某些权限默认授予`PUBLIC`。例如，`PUBLIC`对目录表拥有`SELECT`权限。为了遵循数据安全的最小权限原则，我们建议在创建数据库后使用`REVOKE`语句移除`SELECT`权限。
 
 ### 表 4-6 隐式权限
 
 | 命令 | 授予的权限 | 授予对象 |
 | --- | --- | --- |
-| CREATE TABLE <table> | <table> CONTROL | 使用命令的用户 |
-| CREATE TABLE <schema> | <schema> 的 CREATEATIN, ALTERNIN 以及 GRANT 授权 | 使用命令的用户 |
-| CREATE VIEW <view> | <view> CONTROL（如果对视图定义中引用的表具有控制权） | 使用命令的用户 |
-| CREATE VIEW <database> | 对 <database> 系统目录表的 SELECT 以及对 <database> 的 IMPLICIT_SCHEMA | PUBLIC |
+| `CREATE TABLE <table>` | `<table>` `CONTROL` | 使用命令的用户 |
+| `CREATE TABLE <schema>` | `<schema>` 的 `CREATEATIN`, `ALTERNIN` 以及 `GRANT` 授权 | 使用命令的用户 |
+| `CREATE VIEW <view>` | `<view>` `CONTROL`（如果对视图定义中引用的表具有控制权） | 使用命令的用户 |
+| `CREATE VIEW <database>` | 对 `<database>` 系统目录表的 `SELECT` 以及对 `<database>` 的 `IMPLICIT_SCHEMA` | `PUBLIC` |
 
-你已经注意到在我们的工作应用程序开发场景中，一个包正在被创建，我们必须分配正确的权限，以便不仅可以执行，还能创建该包。
-
-
-
-
+你已经注意到在我们的工作应用程序开发场景中，一个包正在被创建，我们必须分配正确的权限，以便不仅能执行，还能创建该包。
 
 # 第 4 章 控制数据访问
 
@@ -4214,20 +3949,20 @@ SELECT * FROM ORG
 INSERT INTO TEST VALUES (1,2,3)
 ```
 
-Katrina 需要 ORG 表的 `SELECT` 权限以及 TEST 表的 `INSERT` 权限来构建并绑定该包。George 将间接拥有对 ORG 表的 `SELECT` 权限和 TEST 表的 `INSERT` 权限，因为他被授予了该包的 `EXECUTE` 权限。然而，如果 George 直接从 ORG 表查询数据，他将收到本节之前提到的 SQL0551N 错误。
+Katrina 需要`ORG`表的`SELECT`权限以及`TEST`表的`INSERT`权限来构建并绑定该包。George 将间接拥有对`ORG`表的`SELECT`权限和`TEST`表的`INSERT`权限，因为他被授予了该包的`EXECUTE`权限。然而，如果 George 直接从`ORG`表查询数据，他将收到本节之前提到的`SQL0551N`错误。
 
 ## 当用户和组同名时
 
 某些操作系统允许用户和组具有相同的名称，这会导致 DB2 内部的授权和权限检查产生混淆。在 UNIX 操作系统（AIX、HP-UX、Solaris 和 Linux）上管理 DB2 时，这是您应该关注的问题。Windows 操作系统不允许用户和组具有相同的名称。
 
-再次，为了理解 DB2 如何处理这种情况，最好通过一个场景来演示。假设我们有一个名为 CHLOE 的用户和组，并且我们允许她对 CANDIDATE 表执行 `SELECT` 操作。我们可以执行以下任一命令：
+再次，为了理解 DB2 如何处理这种情况，最好通过一个场景来演示。假设我们有一个名为`CHLOE`的用户和组，并且我们允许她对`CANDIDATE`表执行`SELECT`操作。我们可以执行以下任一命令：
 
 ```
 GRANT SELECT ON CANDIDATE TO CHLOE
 GRANT SELECT ON CANDIDATE TO USER CHLOE
 ```
 
-如果操作系统中也有一个名为 CHLOE 的组会发生什么？上一个示例中的第一个命令是歧义的。如果操作系统中有一个名为 Chloe 的用户和组，您可能不确定权限将授予哪个实体。事实上，如果上一个示例中的用户 CHLOE 不存在，DB2 将把 CANDIDATE 表的 `SELECT` 权限授予 CHLOE 组中的所有用户（假设该组存在）。正因此原因，我们强烈建议使用 `GROUP` 或 `USER` 关键字来明确指定您的 `GRANT` 或 `REVOKE` 语句针对的目标实体类型。例如，您将使用以下命令之一：
+如果操作系统中也有一个名为`CHLOE`的组会发生什么？上一个示例中的第一个命令是歧义的。如果操作系统中有一个名为`Chloe`的用户和组，您可能不确定权限将授予哪个实体。事实上，如果上一个示例中的用户`CHLOE`不存在，DB2 将把`CANDIDATE`表的`SELECT`权限授予`CHLOE`组中的所有用户（假设该组存在）。正因此原因，我们强烈建议使用`GROUP`或`USER`关键字来明确指定您的`GRANT`或`REVOKE`语句针对的目标实体类型。例如，您将使用以下命令之一：
 
 ```
 GRANT SELECT ON CANDIDATE TO USER CHLOE
@@ -4236,23 +3971,23 @@ GRANT SELECT ON CANDIDATE TO GROUP CHLOE
 
 ## 设置会话 (Set Session)
 
-DB2 中的这种新会话权限对谁有有权切换会话用户身份提供了更多控制。在 DB2 8 中，具有 DBADM 或 SYSADM 权限的用户可以使用 `SESSION AUTHORIZATION` 语句假用另一个用户的身份。在 DB2 9 中，新的 `SESSIONUSER` 权限只能由安全管理员 (SECADM) 权限授予。
+DB2 中的这种新会话权限对谁有有权切换会话用户身份提供了更多控制。在 DB2 8 中，具有`DBADM`或`SYSADM`权限的用户可以使用`SESSION AUTHORIZATION`语句假用另一个用户的身份。在 DB2 9 中，新的`SESSIONUSER`权限只能由安全管理员 (`SECADM`) 权限授予。
 
-为了向后兼容，在迁移到 DB2 9 后，任何具有 DBADM 权限的 ID 都会自动授予对 `PUBLIC` 的 `SESSIONUSER` 权限。在迁移到 DB2 9 之后获得 DBADM 权限的用户，除非显式授予 `SESSIONUSER` 权限，否则无法更改会话授权 ID。
+为了向后兼容，在迁移到 DB2 9 后，任何具有`DBADM`权限的 ID 都会自动授予对`PUBLIC`的`SESSIONUSER`权限。在迁移到 DB2 9 之后获得`DBADM`权限的用户，除非显式授予`SESSIONUSER`权限，否则无法更改会话授权 ID。
 
-您可以将新的 `SESSIONUSER` 权限授予用户或组。此权限允许持有者将身份切换到您授予该权限的任何授权 ID。身份切换是使用 `SESSION AUTHORIZATION` SQL 语句完成的。例如：
+您可以将新的`SESSIONUSER`权限授予用户或组。此权限允许持有者将身份切换到您授予该权限的任何授权 ID。身份切换是使用`SESSION AUTHORIZATION` SQL 语句完成的。例如：
 
 ```
 SET SESSION AUTHORIZATION NAME ALLOW ADMINISTRATION
 ```
 
-此语句只能作为新工作单元中的第一条语句发布，且只能在没有打开的游标的情况下执行。如果指定了 `ADMINISTRATION` 子句，则以下类型的语句或操作可以在 `SET SESSION AUTHORIZATION` 语句之前执行
+此语句只能作为新工作单元中的第一条语句发布，且只能在没有打开的游标的情况下执行。如果指定了`ADMINISTRATION`子句，则以下类型的语句或操作可以在`SET SESSION AUTHORIZATION`语句之前执行：
 
-- 数据定义语言 (DDL)，包括保存点的定义和全局临时表的声明，但不包括 `SET INTEGRITY`
-- `GRANT` 和 `REVOKE` 语句
-- `LOCK TABLE` 语句
-- `COMMIT` 和 `ROLLBACK` 语句
-- 特殊寄存器的 `SET`
+- 数据定义语言 (DDL)，包括保存点的定义和全局临时表的声明，但不包括`SET INTEGRITY`
+- `GRANT`和`REVOKE`语句
+- `LOCK TABLE`语句
+- `COMMIT`和`ROLLBACK`语句
+- 特殊寄存器的`SET`
 
 ## 转移所有 (Transfer Ownership)
 
@@ -4266,34 +4001,34 @@ TRANSFER OWNERSHIP OF <objects> TO <new owner> PRESERVE PRIVILEGES
 
 新所有者可以是以下值之一：
 
-- USER：指定使用 `USER` 特殊寄存器的值作为转移对象所有权的授权 ID。
-- SESSION_USER：指定使用 `SESSION_USER` 特殊寄存器的值作为转移对象所有权的授权 ID。
-- SYSTEM_USER：指定使用 `SYSTEM_USER` 特殊寄存器的值作为转移对象所有权的授权 ID。
+- `USER`：指定使用`USER`特殊寄存器的值作为转移对象所有权的授权 ID。
+- `SESSION_USER`：指定使用`SESSION_USER`特殊寄存器的值作为转移对象所有权的授权 ID。
+- `SYSTEM_USER`：指定使用`SYSTEM_USER`特殊寄存器的值作为转移对象所有权的授权 ID。
 
-该命令中的 `PRESERVE PRIVILEGES` 选项指定，所有权转移的对象当前所有者在转移后将继续持有该对象上的任何现有权限。如果没有指定此子句，对象的创建者（或原始所有者）将不再拥有与这些对象相关的任何权限。
+该命令中的`PRESERVE PRIVILEGES`选项指定，所有权转移的对象当前所有者在转移后将继续持有该对象上的任何现有权限。如果没有指定此子句，对象的创建者（或原始所有者）将不再拥有与这些对象相关的任何权限。
 
 这些对象可以是以下任一类型：
 
-- ALIAS
-- CONSTRAINT
-- DATABASE PARTITION GROUP
-- EVENT MONITOR
-- FUNCTION, SPECIFIC FUNCTION, FUNCTION MAPPING
-- INDEX, INDEX EXTENSION
-- METHOD, SPECIFIC METHOD
-- NICKNAME
-- PACKAGE
-- PROCEDURE, SPECIFIC PROCEDURE
-- SCHEMA
-- SEQUENCE
-- TABLE, TABLE HIERARCHY
-- TABLESSPACE
-- TRIGGER
-- TYPE, TYPE MAPPING
-- VIEW, VIEW HIERARCHY
-- XSROJECT
+- `ALIAS`
+- `CONSTRAINT`
+- `DATABASE PARTITION GROUP`
+- `EVENT MONITOR`
+- `FUNCTION`, `SPECIFIC FUNCTION`, `FUNCTION MAPPING`
+- `INDEX`, `INDEX EXTENSION`
+- `METHOD`, `SPECIFIC METHOD`
+- `NICKNAME`
+- `PACKAGE`
+- `PROCEDURE`, `SPECIFIC PROCEDURE`
+- `SCHEMA`
+- `SEQUENCE`
+- `TABLE`, `TABLE HIERARCHY`
+- `TABLESSPACE`
+- `TRIGGER`
+- `TYPE`, `TYPE MAPPING`
+- `VIEW`, `VIEW HIERARCHY`
+- `XSROJECT`
 
-注意，所有需要转移的对象都需要指定。虽然可以多次指定 LBAC 命令，但没有将“所有”对象转移给用户的等效方法。例如，以下命令将 BAKLAZ.EMPLOYEE 转移给 PAULZ：
+注意，所有需要转移的对象都需要指定。虽然可以多次指定 LBAC 命令，但没有将“所有”对象转移给用户的等效方法。例如，以下命令将`BAKLAZ.EMPLOYEE`转移给`PAULZ`：
 
 ## 基于标签的访问控制 (Label-Based Access Control)
 
@@ -4301,7 +4036,7 @@ TRANSFER OWNERSHIP OF <objects> TO <new owner> PRESERVE PRIVILEGES
 
 - 有效凭据：用户必须被验证为有效用户。
 - 访问数据库：用户必须被识别为可以“连接”数据库的人。
-- SELECT 权限：必须授予访问表的权限。
+- `SELECT`权限：必须授予访问表的权限。
 
 虽然这三个认证级别对于大多数应用程序已经足够，但敏感数据需要额外的安全级别。
 
@@ -4323,7 +4058,7 @@ LBAC 需要在设计标签、组件和安全策略时进行细致规划，但最
 - 列级
 - 表级（通过列标记模拟）
 
-行级和列级保护可以单独使用也可以结合使用。LBAC 补充了传统的 DB2 访问控制（后者通过 `GRANT` 命令实现）。除了之前讨论的三个认证级别外，当 LBAC 与表关联时，DB2 将执行额外的规则：
+行级和列级保护可以单独使用也可以结合使用。LBAC 补充了传统的 DB2 访问控制（后者通过`GRANT`命令实现）。除了之前讨论的三个认证级别外，当 LBAC 与表关联时，DB2 将执行额外的规则：
 
 - 表级访问控制：用户是否拥有在表上执行请求操作所需的权限？
 - 基于标签的访问控制
@@ -4337,10 +4072,6 @@ LBAC 需要在设计标签、组件和安全策略时进行细致规划，但最
 2. 创建受保护表，包含一个持有安全标签的列并将安全策略附加到表。
 3. 为用户创建适当的安全标签。
 
-
-
-
-
 # 安全概览
 
 图 4–10 显示了这些不同的安全组件之间的关系。
@@ -4349,13 +4080,13 @@ LBAC 需要在设计标签、组件和安全策略时进行细致规划，但最
 
 图 4–10 安全标签与用户之间的关系
 
-所有的 LBAC 定义以及向用户授予安全标签的操作都受安全管理员 (SECADM) 的控制。新的安全管理员在一个权限下授权了若干与安全相关的权限。引入这种新的安全管理员的主要原因是将数据管理与对数据的安全控制隔离开。在许多客户实例中，数据的管理员不应能够查看或操纵数据。通过实施 SECADM 权限并使用 LBAC，可以防止 DBA 操作其所管理的数据。
+所有的 LBAC 定义以及向用户授予安全标签的操作都受安全管理员 (`SECADM`) 的控制。新的安全管理员在一个权限下授权了若干与安全相关的权限。引入这种新的安全管理员的主要原因是将数据管理与对数据的安全控制隔离开。在许多客户实例中，数据的管理员不应能够查看或操纵数据。通过实施`SECADM`权限并使用 LBAC，可以防止 DBA 操作其所管理的数据。
 
 # LBAC 无法防止的事情
 
 LBAC 有许多无法做到的事情：
 
-- LBAC 永远不会允许用户访问其从一开始就没有权限读取（SELECT）的数据数据。
+- LBAC 永远不会允许用户访问其从一开始就没有权限读取 (`SELECT`) 的数据。
 - 用户的 LBAC 凭据仅限制对受保护数据的访问。表中任何未受保护的数据，无论 LBAC 设置如何，都可以访问。
 - 在删除表或数据库时，不会检查 LBAC 凭据，即使该表或数据库包含受保护的数据。
 - 在备份数据时，不会检查 LBAC 凭据。备份的行不受数据 LBAC 保护的任何方式限制。此外，备份介质上的数据不受 LBAC 保护。只有数据库中的数据受保护。
@@ -4365,37 +4096,37 @@ LBAC 有许多无法做到的事情：
 
 # 审计
 
-DB2 审计功能与实例相关。它记录与该实例及其内部数据库相关的审计事件。即使其监控的实例未处于活动状态，它也可以处于活动状态。只有具有 SYSADM 权限的用户才能使用审计功能。审计功能使用位于实例目录下安全目录中的二进制配置文件。
+DB2 审计功能与实例相关。它记录与该实例及其内部数据库相关的审计事件。即使其监控的实例未处于活动状态，它也可以处于活动状态。只有具有`SYSADM`权限的用户才能使用审计功能。审计功能使用位于实例目录下安全目录中的二进制配置文件。
 
-对于用户在 DB2 数据服务器上执行的每项操作（如 SELECT 语句），可能会生成一条或多条审计记录。这些审计记录分为以下几组：
+对于用户在 DB2 数据服务器上执行的每项操作（如`SELECT`语句），可能会生成一条或多条审计记录。这些审计记录分为以下几组：
 
-- AUDIT：使用审计功能记录的所有记录。
-- CHECKING：访问 DB2 对象时因权限问题而记录的事件。
-- OBJMAINT：由于删除或创建对象引起的记录。
-- SECMAINT：由于更改 SYSADM_GROUP、SYSCTRL_GROUP、SYSMAINT_GROUP、授予/撤销 DBADMIN 或对任何数据库对象的任何权限而记录的记录。
-- SYSADMIN：为需要 SYSADM、SYSCTRL 和 SYSADMIN 权限的操作而记录的记录。
-- VALIDATE：在验证用户身份或检索系统信息时生成的记录。
-- CONTEXT：此类审计记录显示了有关操作的详细信息。该操作可能导致审计日志中记录多条记录。此类记录可以使用事件关联器字段（event correlator field）与 CONTEXT 记录关联。
+- `AUDIT`：使用审计功能记录的所有记录。
+- `CHECKING`：访问 DB2 对象时因权限问题而记录的事件。
+- `OBJMAINT`：由于删除或创建对象引起的记录。
+- `SECMAINT`：由于更改`SYSADM_GROUP`、`SYSCTRL_GROUP`、`SYSMAINT_GROUP`、授予/撤销`DBADMIN`或对任何数据库对象的任何权限而记录的记录。
+- `SYSADMIN`：为需要`SYSADM`、`SYSCTRL`和`SYSADMIN`权限的操作而记录的记录。
+- `VALIDATE`：在验证用户身份或检索系统信息时生成的记录。
+- `CONTEXT`：此类审计记录显示了有关操作的详细信息。该操作可能导致审计日志中记录多条记录。此类记录可以使用事件关联器字段（event correlator field）与`CONTEXT`记录关联。
 
 审计功能可能会为一个操作生成多条审计记录，每条记录可能属于不同的记录类别。
 
 # 日志写入缓冲
 
-配置审计功能时，SYSADM 用户可以指定审计功能是以同步模式将审计记录直接写入磁盘，还是将记录在审计缓冲区中进行异步写入。此缓冲区可以使用数据库管理器配置文件中的 `AUDIT_BUFF_SZ` 参数指定。如果 `AUDIT_BUFF_SZ` 设置为 0，则所有审计记录写入将同步同步进行；任何大于 0 的数字表示缓冲区大小为 4KB 的倍数。
+配置审计功能时，`SYSADM`用户可以指定审计功能是以同步模式将审计记录直接写入磁盘，还是将记录在审计缓冲区中进行异步写入。此缓冲区可以使用数据库管理器配置文件中的`AUDIT_BUFF_SZ`参数指定。如果`AUDIT_BUFF_SZ`设置为 0，则所有审计记录写入将同步进行；任何大于 0 的数字表示缓冲区大小为 4KB 的倍数。
 
-如果指定了缓冲区大小，缓冲区将按照固定间隔写入磁盘，或在缓冲区满时写入。SYSADM 用户还可以强制审计缓冲区刷新到磁盘。
+如果指定了缓冲区大小，缓冲区将按照固定间隔写入磁盘，或在缓冲区满时写入。`SYSADM`用户还可以强制审计缓冲区刷新到磁盘。
 
 # 配置审计功能
 
-在启动审计功能之前，您可以使用 `db2AUDIT CONFIGURE` 命令对其进行配置。该命令的语法为：
+在启动审计功能之前，您可以使用`db2AUDIT CONFIGURE`命令对其进行配置。该命令的语法为：
 
 ```
 db2audit CONFIGURE SCOPE STATUS status ERRORTYPE error
 ```
 
-- SCOPE 指应该记录哪组审计记录类别。如果将 ALL 指定为类别，它包含了除 CONTEXT 类别以外的所有类别。
-- STATUS 指如果事件返回成功、失败或二者兼有，则是否应该记录该事件。可用值为 SUCCESS、FAILURE 或 BOTH。
-- ERRORTYPE 范围有 AUDIT 或 NORMAL。通过将 ERRORTYPE 设置为 audit，审计功能中发生的任何错误将返回在故障发生期间记录该审计记录的应用程序的 SQLCODE。这将导致应用程序尝试的操作失败。如果将 ERRORTYPE 设置为 NORMAL，则执行的任何应用程序都不会受到尝试生成审计记录失败的影响。
+- `SCOPE`指应该记录哪组审计记录类别。如果将`ALL`指定为类别，它包含了除`CONTEXT`类别以外的所有类别。
+- `STATUS`指如果事件返回成功、失败或二者兼有，则是否应该记录该事件。可用值为`SUCCESS`、`FAILURE`或`BOTH`。
+- `ERRORTYPE`范围有`AUDIT`或`NORMAL`。通过将`ERRORTYPE`设置为`audit`，审计功能中发生的任何错误将返回在故障发生期间记录该审计记录的应用程序的`SQLCODE`。这将导致应用程序尝试的操作失败。如果将`ERRORTYPE`设置为`NORMAL`，则执行的任何应用程序都不会受到尝试生成审计记录失败的影响。
 
 例如，以下命令配置了审计，以捕获所有失败的事件，并且在发生审计错误时不会影响正在运行的事务。
 
@@ -4405,7 +4136,9 @@ db2audit CONFIGURE SCOPE ALL STATUS FAILURE ERRORTYPE NORMAL
 
 # 查看当前配置
 
-要查看当前的审计配置，使用 `db2audit` 命令的 DESCRIBE 选项，如下所示。
+要查看当前的审计配置，使用`db2audit`命令的`DESCRIBE`选项，如下所示。
+
+
 
 ```
 db2audit DESCRIBE
@@ -4433,7 +4166,7 @@ db2audit START
 
 # 刷新缓冲区
 
-在提取审计日志之前，SYSADM 可能希望使用以下命令确保审计缓冲区刷新到磁盘：
+在提取审计日志之前，`SYSADM` 可能希望使用以下命令确保审计缓冲区刷新到磁盘：
 
 ```
 db2audit FLUSH
@@ -4441,21 +4174,21 @@ db2audit FLUSH
 
 # 提取审计日志
 
-当审计功能启动时，它开始生成二进制审计日志。SYSADM 可以将审计日志提取到两种格式之一：文本文件或 ASCII 分隔文件 (DELASC)。
+当审计功能启动时，它开始生成二进制审计日志。`SYSADM` 可以将审计日志提取到两种格式之一：文本文件或 ASCII 分隔文件 (`DELASC`)。
 
-审计日志的文件名对应类别的名称。当选择审计日志输出类型时，用户也可以通过指定分隔符来覆盖默认值。例如，如果 SYSADM 用户想使用 "!" 将数据库的 validate 和 checking 类别提取到 ASCII 分隔文件：
+审计日志的文件名对应类别的名称。当选择审计日志输出类型时，用户也可以通过指定分隔符来覆盖默认值。例如，如果 `SYSADM` 用户想使用 `!` 将数据库的 `validate` 和 `checking` 类别提取到 ASCII 分隔文件：
 
 ```
 db2audit extract delasc DELIMITER ! CATEGORY checking
 ```
 
-输出将命名为 VALIDATE。默认分隔符被 DELIMITER 选项覆盖。如果 SYSADM 用户想将所有验证记录提取到文本文件，命令如下：
+输出将命名为 `VALIDATE`。默认分隔符被 `DELIMITER` 选项覆盖。如果 `SYSADM` 用户想将所有验证记录提取到文本文件，命令如下：
 
 ```
 db2audit extract file.txt CATEGORY validate
 ```
 
-在这种情况下，输出将为 MYFILE.TXT。如果文件在执行命令之前存在，则命令将失败。以下显示审计日志的示例：
+在这种情况下，输出将为 `MYFILE.TXT`。如果文件在执行命令之前存在，则命令将失败。以下显示审计日志的示例：
 
 ```
 timestamp=2007-04-12-15.03.131001;category=VALIDATE;audit event=AUTHENTICATION;
@@ -4466,7 +4199,7 @@ application id=LOCAL;DB2.07417j3019;application name=db2demo.exe;
 autype=SERVER;plugin=IBMOSAuthserver;
 ```
 
-通过示例的前缀可以看到用户 BAKLARS 使用 db2demo 程序连接到 SAMPLE 数据库。
+通过示例的前缀可以看到用户 `BAKLARS` 使用 `db2demo` 程序连接到 `SAMPLE` 数据库。
 
 # 清理审计日志
 
@@ -4476,17 +4209,13 @@ autype=SERVER;plugin=IBMOSAuthserver;
 db2audit prune all
 ```
 
-如果审计功能设置为清理分类为 AUDIT 事件的记录事件，则在清理后会在审计日志中生成条目。另一种清理方法是指定清理审计日志中所有条目之前的日期/时间。例如：
+如果审计功能设置为清理分类为 `AUDIT` 事件的记录事件，则在清理后会在审计日志中生成条目。另一种清理方法是指定清理审计日志中所有条目之前的日期/时间。例如：
 
 ```
 db2audit prune DATE <yyyymddhh> PATHNAME <pathname>
 ```
 
-添加可选的 pathname 参数允许具有 SYSADM 权限的用户在记录审计日志的驱动器或文件系统满时清理审计日志。
-
-
-
-
+添加可选的 `pathname` 参数允许具有 `SYSADM` 权限的用户在记录审计日志的驱动器或文件系统满时清理审计日志。
 
 ## 220 第 4 章 控制数据访问
 
@@ -4494,7 +4223,7 @@ db2audit prune DATE <yyyymddhh> PATHNAME <pathname>
 
 图 4–11 审计功能
 
-从图 4–11 可以看出，审计功能在启动之前会先进行配置和检查。如果 SYSADM 用户想要查看审计日志，可以刷新审计缓冲区，并将审计日志以文本文件或分隔符文件的格式提取出来。管理员使用此输出文件来填充审计表。在某个时刻，用户可以停止审计功能，并根据需要清除全部或部分审计日志记录。
+从图 4–11 可以看出，审计功能在启动之前会先进行配置和检查。如果 `SYSADM` 用户想要查看审计日志，可以刷新审计缓冲区，并将审计日志以文本文件或分隔符文件的格式提取出来。管理员使用此输出文件来填充审计表。在某个时刻，用户可以停止审计功能，并根据需要清除全部或部分审计日志记录。
 
 ## 总结
 
@@ -4502,15 +4231,15 @@ db2audit prune DATE <yyyymddhh> PATHNAME <pathname>
 
 该服务器的授权方法定义在实例的数据库管理器配置文件中。连接到这些服务器的客户端在它们的客户端目录中必须具有兼容的身份验证设置，才能连接到远程数据服务器。实例中的所有数据库共享相同的身份验证类型。
 
-本章还讨论了 DB2 内置的几种授权级别：SYADSM、SYSCRL、SYMAINT、LOAD、DBADM 和 SECADM。SYADSM 拥有实例系统管理权限，能够执行任何管理操作，并访问该实例内任何数据库的任何信息（存在例外，例如如果由 LBAC 控制）。
+本章还讨论了 DB2 内置的几种授权级别：`SYADSM`、`SYSCRL`、`SYMAINT`、`LOAD`、`DBADM` 和 `SECADM`。`SYADSM` 拥有实例系统管理权限，能够执行任何管理操作，并访问该实例内任何数据库的任何信息（存在例外，例如如果由 `LBAC` 控制）。
 
-SYSCRL 没有访问数据库的权限（除非显式授予），SYSCRL 也无法修改数据库管理器配置；但 SYSCRL 可以执行许多管理功能。
+`SYSCRL` 没有访问数据库的权限（除非显式授予），`SYSCRL` 也无法修改数据库管理器配置；但 `SYSCRL` 可以执行许多管理功能。
 
-SYMAINT 也无法访问用户数据，但允许你执行 SYSCRL 可以执行的部分维护功能，例如备份或恢复数据库和表空间等。
+`SYMAINT` 也无法访问用户数据，但允许你执行 `SYSCRL` 可以执行的部分维护功能，例如备份或恢复数据库和表空间等。
 
-在数据库级别上，DBADM 对数据库对象具有完全权限。该权限包括创建或删除表、运行查询以及为数据库的其他部分设置权限。其他数据库级权限还包括 LOAD（自证其义）和用于管理 LBAC 环境的 SECADM。
+在数据库级别上，`DBADM` 对数据库对象具有完全权限。该权限包括创建或删除表、运行查询以及为数据库的其他部分设置权限。其他数据库级权限还包括 `LOAD`（自证其义）和用于管理 `LBAC` 环境的 `SECADM`。
 
-本章还研究了使用 GRANT 和 REVOKE 语句授予和撤销权限和权利，并提供了工作示例来说明它们的用法。它还涵盖了不同类型的权限以及它们允许用户做什么。示例包括 CONTROL、INSERT、DELETE、CREATEIN、DROPIN、REFERENCES 和 SELECT。此外，还对隐式、显式和间接（仅针对包）权限进行了区分。
+本章还研究了使用 `GRANT` 和 `REVOKE` 语句授予和撤销权限和权利，并提供了工作示例来说明它们的用法。它还涵盖了不同类型的权限以及它们允许用户做什么。示例包括 `CONTROL`、`INSERT`、`DELETE`、`CREATEIN`、`DROPIN`、`REFERENCES` 和 `SELECT`。此外，还对隐式、显式和间接（仅针对包）权限进行了区分。
 
 最后，我们讨论了 DB2 审计功能。它允许你监控安全相关的事件和可能的系统滥用。
 
@@ -4519,10 +4248,15 @@ SYMAINT 也无法访问用户数据，但允许你执行 SYSCRL 可以执行的�
 ## 使用 SQL
 
 - 5 数据库对象 ................................................... 225
+
 - 6 操作数据库对象.................................. 327
+
 - 7 高级 SQL ........................................................ 397
+
 - 8 pureXML 存储引擎............................................... 489
+
 - 9 开发性 SQL ..................................................... 539
+
 - 10 并发 ....................................................... 599
 
 ## 第 5 章
@@ -4532,22 +4266,29 @@ SYMAINT 也无法访问用户数据，但允许你执行 SYSCRL 可以执行的�
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_252_0.png)
 
 - 创建数据库对象
+
 - 数据类型
+
 - 表
+
 - 约束
+
 - 视图
+
 - 索引
 
-关系型数据库访问的标准语言是 SQL（结构化查询语言）。SQL 不是一种传统的编程语言。它是为了访问表格化数据而设计的。每个关系型数据库管理系统（RDBMS）都实现略有不同的 SQL 版本。
+关系型数据库访问的标准语言是 SQL（结构化查询语言）。SQL 不是一种传统的编程语言。它是为了访问表格化数据而设计的。每个关系型数据库管理系统 (`RDBMS`) 都实现略有不同的 SQL 版本。
 
-在本章中，我们将研究 SQL 语言的 DB 实现。如果你熟悉其他 RDBMS 产品，由于业界对 ISO/ANSI® SQL 标准的认可，你已经理解了 DB2 实现 SQL 的许多方面。
+在本章中，我们将研究 SQL 语言的 DB 实现。如果你熟悉其他 `RDBMS` 产品，由于业界对 ISO/ANSI® SQL 标准的认可，你已经理解了 DB2 实现 SQL 的许多方面。
 
 我们首先检查在 SQL 语句中可以引用的 DB2 数据库对象；然后检查 SQL 语言元素。对于本书而言，数据库对象是指 DB2 数据库的任何组件，例如表空间、表、视图、索引、包、日志文件和锁。需要注意的是，其中某些数据库对象无法使用 SQL 语言直接引用。
 
 SQL 分为三大类：
 
 - DDL（数据定义语言）—— 用于创建、修改或删除数据库对象
+
 - DML（数据操纵语言）—— 用于选择、插入、更新或删除数据（记录）
+
 - DCL（数据控制语言）—— 用于提供数据对象的访问控制
 
 随着 SQL 的演进，添加了许多新语句以提供更完整的数据管理方法。我们探索了这些特性中的一些，包括约束、触发器、外连接、大对象数据访问和通用表表达式。
@@ -4563,14 +4304,23 @@ DCL 在第 4 章中讨论。
 SQL 贯穿整个数据库行业作为发布数据查询的常用方法。SQL 是一种语言，由语句、函数和类型组成。在研究 SQL 语言之前，我们需要了解一些 DB2 对象。这些包括：
 
 - 表
+
 - 模式 (Schemas)
+
 - 表空间
+
 - 视图
+
 - 索引
+
 - 包
+
 - 锁
+
 - 触发器
+
 - 存储过程
+
 - 日志文件
 
 ## 数据类型
@@ -4578,43 +4328,44 @@ SQL 贯穿整个数据库行业作为发布数据查询的常用方法。SQL 是
 表中的每一列必须与数据类型关联。数据类型指示了列的有效类型。DB2 中大类数据类型：
 
 - 内置数据类型
+
 - 用户定义数据类型
 
 内置数据类型由 DB2 定义，将在本章后文中描述。DB2 还支持用户定义类型。用户定义类型分为以下三种：
 
 - 用户定义区分类型
+
 - 用户定义结构类型
+
 - 用户定义引用类型
 
-用户定义区分类型（UDT）允许你创建一个基于现有内置类型语义的新数据类型。用户定义结构类型允许你创建一个包含命名属性的结构，每个属性都有数据类型。这是 DB2 对象扩展之一。用户定义引用类型是用户定义结构类型的辅助类型，它是与内置数据类型共享表示的标量类型。用户定义引用类型可引用使用用户定义结构类型的表的行。用户定义区分类型（UDT）将在本章讨论；用户定义类型和用户定义引用类型将在第 7 章讨论。
+用户定义区分类型 (`UDT`) 允许你创建一个基于现有内置类型语义的新数据类型。用户定义结构类型允许你创建一个包含命名属性的结构，每个属性都有数据类型。这是 DB2 对象扩展之一。用户定义引用类型是用户定义结构类型的辅助类型，它是与内置数据类型共享表示的标量类型。用户定义引用类型可引用使用用户定义结构类型的表的行。用户定义区分类型 (`UDT`) 将在本章讨论；用户定义类型和用户定义引用类型将在第 7 章讨论。
 
 ## 表
 
-表是无序集。行由列组成。每列都基于一种数据类型。表一旦创建并填充数据，就会 DML 语句的 FROM 和 INTO 子句中引用。表有三种：
+表是无序集。行由列组成。每列都基于一种数据类型。表一旦创建并填充数据，就会 DML 语句的 `FROM` 和 `INTO` 子句中引用。表有三种：
 
 - 永久（基本）表
+
 - 临时（声明）表
+
 - 临时（派生）表
 
-我们在本章只讨论永久表。这些表使用 CREATE TABLE 语句创建，是磁盘物理存储数据的逻辑表示。我们在第 7 章讨论临时表。
+我们在本章只讨论永久表。这些表使用 `CREATE TABLE` 语句创建，是磁盘物理存储数据的逻辑表示。我们在第 7 章讨论临时表。
 
 ## 模式 (Schemas)
 
-模式是 DB2 中用于逻辑分组其他数据库对象的对象。大多数数据库对象使用双部分命名法（SCHEMA_NAME.OBJECT_NAME）。名称的第一部分称为模式（也称为数据库对象的限定符）。第二部分是对象名称。
+模式是 DB2 中用于逻辑分组其他数据库对象的对象。大多数数据库对象使用双部分命名法（`SCHEMA_NAME.OBJECT_NAME`）。名称的第一部分称为模式（也称为数据库对象的限定符）。第二部分是对象名称。
 
 当你创建一个对象且未指定模式时，该对象将与你的授权 ID 的隐式模式关联。当对象被引-
-
-
-
-
 
 # 理解数据库对象
 
 当在 SQL 语句中引用对象时，如果 SQL 语句未指定模式名称（schema name），该对象也将隐式使用发行者的授权 ID（动态 SQL）进行限定。
 
-特殊寄存 `CURRENT SCHEMA` 包含了从特定 DB2 连接发出的动态 SQL 语句中引用的未限定对象的默认限定符。用户可以使用 `SET CURRENT SCHEMA` 语句对其进行修改。静态 SQL 语句（默认情况下）使用绑定应用程序的人员 ID 进行限定。例如，如果 KATRINA 连接到数据库并创建了一个表 TASKS，则存储在数据库中的表完整名称将为：KATRINA.TASKS。你可以使用 `BIND` 命令的 `QUALIFIER` 选项在绑定时定义默认限定符。
+特殊寄存 `CURRENT SCHEMA` 包含了从特定 DB2 连接发出的动态 SQL 语句中引用的未限定对象的默认限定符。用户可以使用 `SET CURRENT SCHEMA` 语句对其进行修改。静态 SQL 语句（默认情况下）使用绑定应用程序的人员 ID 进行限定。例如，如果 `KATRINA` 连接到数据库并创建了一个表 `TASKS`，则存储在数据库中的表完整名称将为：`KATRINA.TASKS`。你可以使用 `BIND` 命令的 `QUALIFIER` 选项在绑定时定义默认限定符。
 
-额外的模式限定符是 `SESSION` 关键字。该关键字用于在连接期间创建和使用的临时表。`SESSION` 限定符将在将在后文第 236 页的“DECLARE 语句”节中进行讨论。
+额外的模式限定符是 `SESSION` 关键字。该关键字用于在连接期间创建和使用的临时表。`SESSION` 限定符将在将在后文第 236 页的“`DECLARE` 语句”节中进行讨论。
 
 ## DB2 注意
 
@@ -4624,8 +4375,9 @@ SQL 贯穿整个数据库行业作为发布数据查询的常用方法。SQL 是
 
 表空间是数据库与存储在该数据库中的表之间的逻辑层。表空间创建在数据库内部，而表创建在表空间内部。DB2 支持两种表空间：
 
-- 系统管理空间 (SMS) —— 由操作系统的文件系统管理器分配并管理存储表所需的空间。SMS 是默认的表空间类型。
-- 数据库管理空间 (DMS) —— 由数据库管理器控制存储空间。这本质上是一种为满足数据库管理器需求而设计的特殊文件系统。
+- 系统管理空间 (`SMS`) —— 由操作系统的文件系统管理器分配并管理存储表所需的空间。`SMS` 是默认的表空间类型。
+
+- 数据库管理空间 (`DMS`) —— 由数据库管理器控制存储空间。这本质上是一种为满足数据库管理器需求而设计的特殊文件系统。
 
 当使用 `CREATE TABLE` 语句定义表时，你可以显式指定表将位于哪个空间。默认情况下，所有表都将在 `USERSPACE1` 表空间创建。表空间为数据库管理员提供了控制表、索引和大型对象的位置的能力。你可以在单个数据库内定义任意数量的表空间，并在表空间内定义任意数量的表。
 
@@ -4638,11 +4390,13 @@ SQL 贯穿整个数据库行业作为发布数据查询的常用方法。SQL 是
 索引与单个表关联的物理对象。任何永久表或声明的临时表都可以定义索引。你不能在视图上定义索引。你可以为单个表定义多个索引。索引的主要作用是：
 
 - 确保数据值的唯一性
+
 - 提高 SQL 查询性能
 
 索引可以更快速地按排序访问数据，并避免使用临时存储对数据进行排序的耗时任务。也可以在计算列上创建索引，以便优化器通过使用索引而不是进行计算来节省计算时间。随着数据的插入、更新和删除，DB2 会自动维护索引。
 
 > DB2 注意
+
 > 索引创建中的一个重要特性是能够向索引中添加额外值，这些值可以被优化器用于获取非键数据。这还可以提高查询性能，因为查询可以从索引而不是数据页获取其结果集。
 
 索引的维护开销可能会负面影响 `INSERT`、`UPDATE` 和 `DELETE` 语句的性能。
@@ -4679,7 +4433,7 @@ DB2 8 在数据库中引入了新的索引结构。这些新索引被称为“�
 
 每个 DB2 数据库必须有一个缓冲区池。对于每个新数据库，DB2 都定义了 `IBMDEULTS` 缓冲区池。
 
-`CREATE BUFFERPOOL` 语句用于定义默认 IBMDEULTS 以外的缓冲区池。一旦创建了缓冲区池，可以使用 `CREATE TABLESPACE` 语句或 `ALTER TABLESPACE` 语句将其分配给表空间。
+`CREATE BUFFERPOOL` 语句用于定义默认 `IBMDEULTS` 以外的缓冲区池。一旦创建了缓冲区池，可以使用 `CREATE TABLESPACE` 语句或 `ALTER TABLESPACE` 语句将其分配给表空间。
 
 `SYSCAT.BUFFERPOOLS` 视图访问数据库定义的缓冲区池信息。
 
@@ -4697,19 +4451,16 @@ DB2 在事务中还支持 `SAVEPOINT`。这允许选择性回滚，而不撤销�
 
 在终止 DB2 应用程序之前，显式 `COMMIT` 或 `ROLLBACK` 未处理的 SQL 事务是最好的做法。DB2 是否隐式执行 `COMMIT` 或 `ROLLBACK` 取决于操作系统环境。
 
-
-
-
-
 # 理解数据库对象
 
 ## 锁
 
-DB2 是一个多用户数据库产品。当用户请求数据时，DB2 锁定机制可以避免资源冲突，同时提供完整的数据完整性。在处理 SQL 语句时，事务可能会获取锁。当事务结束资源不再被需要时，锁会被释放。锁存储在数据库服务器的内存中（存储在名为 locklist 的结构中）。DB2 支持两种类型的锁：表锁和行锁。
+DB2 是一个多用户数据库产品。当用户请求数据时，DB2 锁定机制可以避免资源冲突，同时提供完整的数据完整性。在处理 SQL 语句时，事务可能会获取锁。当事务结束资源不再被需要时，锁会被释放。锁存储在数据库服务器的内存中（存储在名为 `locklist` 的结构中）。DB2 支持两种类型的锁：表锁和行锁。
 
 DB2 在事务过程中使用的锁定策略由绑定应用程序时定义的隔离级别（isolation level）指定。
 
 > DB2 备注
+
 > 锁级别可以在 DB2 中动态设置。作为 SQL 语句的一部分，开发者可以指定在该条语句执行期间他们希望采用的锁定级别类型。这允许开发者在语句级别上持有的锁类型上具有更高的灵活性，而不是对整个应用程序使用同一种锁定类型。
 
 ## 日志文件
@@ -4718,27 +4469,32 @@ DB2 在事务过程中使用的锁定策略由绑定应用程序时定义的隔�
 
 DB2 使用预写日志（write-ahead logging）进行数据库恢复。更改首先写入日志文件，稍后再应用到物理数据库表上。
 
-> DB2 备注
-> 单个日志文件的增长大小有物理限制，因此 DB2 会将日志文件“链”在一起，使用用户永远不会耗尽空间。这应该允许长时间运行的事务完成而不会填满单个日志文件。然而，应用程序应定期提交其工作，以避免发生此类日志链链！
+
+
+> **DB2 备注**
+>
+> 单个日志文件的增长大小有物理限制，因此 DB2 会将日志文件“链”在一起，使用户永远不会耗尽空间。这应该允许长时间运行的事务完成而不会填满单个日志文件。然而，应用程序应定期提交其工作，以避免发生此类日志链链！
 
 ## 创建 DB2 数据库
 
 在创建任何数据库对象之前，必须存在一个 DB2 数据库。数据库必须赋予一个名称。（数据库没有关联模式/schema）。一旦创建了数据库，下一个逻辑步骤是创建用于存储用户表空间（table spaces）。
 
-> DB2 备注
-> CREATE DATABASE 命令不是 SQL 语句，而是一个 DB2 CLP 命令。数据库名称长度为 1–8 个字符。
+> **DB2 备注**
+>
+> `CREATE DATABASE` 命令不是 SQL 语句，而是一个 DB2 CLP 命令。数据库名称长度为 1–8 个字符。
 
 当你在不带任何表空间选项的情况下创建数据库时，默认创建三个表空间：
 
-- SYSCSPACE — 包含系统目录表
-- TEMSPACE1 — 包含 DB2 使用的临时表
-- USSPACE1 — 除非创建了其他用户表空间，否则它包含用户表
+- `SYSCSPACE` — 包含系统目录表
+- `TEMSPACE1` — 包含 DB2 使用的临时表
+- `USSPACE1` — 除非创建了其他用户表空间，否则它包含用户表
 
-在 CREATE DATABASE 命令中，可以将这些表空间指定为 SMS 或 DMS 表空间。在 DB2 9 之前，默认表空间格式是 SMS。从 DB2 9 开始，默认表空间格式使用自动存储。如果应用程序需要临时表存储，则需要定义额外的表空间类型：USER 表空间。
+在 `CREATE DATABASE` 命令中，可以将这些表空间指定为 SMS 或 DMS 表空间。在 DB2 9 之前，默认表空间格式是 SMS。从 DB2 9 开始，默认表空间格式使用自动存储。如果应用程序需要临时表存储，则需要定义额外的表空间类型：USER 表空间。
 
 请参考第 11 章获取有关数据库和表空间的更多信息。
 
-> DB2 备注
+> **DB2 备注**
+>
 > 在事务中声明的临时表需要使用 USER 临时表空间。在使用临时表之前，必须创建该空间并授予用户访问权限。
 
 ## 管理数据库对象
@@ -4749,12 +4505,12 @@ DB2 使用预写日志（write-ahead logging）进行数据库恢复。更改首
 
 DDL 有四种基本的 SQL 语句：
 
-- CREATE
-- ALTER
-- DROP
-- DECLARE
+- `CREATE`
+- `ALTER`
+- `DROP`
+- `DECLARE`
 
-DECLARE 语句用于应用程序中的临时表。它只能用于临时表，并且需要使用 USER 临时表。
+`DECLARE` 语句用于应用程序中的临时表。它只能用于临时表，并且需要使用 USER 临时表。
 
 ## CREATE 语句
 
@@ -4762,7 +4518,7 @@ DECLARE 语句用于应用程序中的临时表。它只能用于临时表，并
 CREATE <database object>....
 ```
 
-CREATE 语句用于创建数据库对象。可以创建的数据库对象列表如下：
+`CREATE` 语句用于创建数据库对象。可以创建的数据库对象列表如下：
 
 - 表 (Table)
 - 索引 (Index)
@@ -4790,11 +4546,11 @@ CREATE 语句用于创建数据库对象。可以创建的数据库对象列表�
 DECLARE <database object>....
 ```
 
-DECLARE 语句与 CREATE 语句非常相似，用于创建仅在会话期间使用的临时表。唯一可以 DECLARE 的对象是表，且必须放在已有的 USER 临时表中。
+`DECLARE` 语句与 `CREATE` 语句非常相似，用于创建仅在会话期间使用的临时表。唯一可以 `DECLARE` 的对象是表，且必须放在已有的 USER 临时表中。
 
 创建临时表不会更新目录，因此可以避免该对象产生锁定、日志和其他形式的竞争。
 
-声明的表可以被 DROP 和 ALTER，但不能创建其他数据库对象（其他索引）来作用于它们。临时表允许指定分区键并创建索引以提高性能。
+声明的表可以被 `DROP` 和 `ALTER`，但不能创建其他数据库对象（其他索引）来作用于它们。临时表允许指定分区键并创建索引以提高性能。
 
 一旦声明了表，它就可以像任何其他表一样被引用。以下示例显示了声明临时表并在随后的 SQL 语句中使用该表。
 
@@ -4807,6 +4563,7 @@ INSERT INTO SESSION.T1
 SELECT * FROM TRANSACTIONS WHERE SALES < 3000;
 SELECT * FROM SESSION.T1;
 ```
+
 示例 5–1 使用临时表
 
 ## DROP 语句
@@ -4815,15 +4572,15 @@ SELECT * FROM SESSION.T1;
 DROP <database object>....
 ```
 
-DROP 语句用于从数据库中删除对象。由于数据库对象可能依赖于其他对象，删除对象可能会导致相关对象失效。你可以删除任何通过 CREATE <database object> 和 DECLARE table 语句创建的对象。
+`DROP` 语句用于从数据库中删除对象。由于数据库对象可能依赖于其他对象，删除对象可能会导致相关对象失效。你可以删除任何通过 `CREATE <database object>` 和 `DECLARE table` 语句创建的对象。
 
-## ALTER 语句 
+## ALTER 语句
 
 ```
 ALTER <database object>....
 ```
 
-ALTER 语句允许你更改现有数据库对象的某些特性。可以修改的数据库对象类型包括：
+`ALTER` 语句允许你更改现有数据库对象的某些特性。可以修改的数据库对象类型包括：
 
 - 表
 - 表空间
@@ -4842,15 +4599,17 @@ ALTER 语句允许你更改现有数据库对象的某些特性。可以修改�
 
 第 5 章 数据库对象
 
-> DB2 备注
+> **DB2 备注**
+>
 > 你不能修改索引。你必须删除并重新创建索引。
 
-每当你发布 DDL 语句时（DECLARE 语句除外），目录都会更新。更新包含了创建或修改时间戳以及发布语句的授权 ID。
+每当你发布 DDL 语句时（`DECLARE` 语句除外），目录都会更新。更新包含了创建或修改时间戳以及发布语句的授权 ID。
 
 让我们详细查看数据库中可以创建的一些对象。我们将涵盖数据类型、表、视图和索引。
 
-> DB2 备注
-> 将数据库的所有 DDL 语句存储在脚本文件中是有用的，以便更容易创建数据库对象。该脚本可以从 DB2 CLP 或 DB2 控制中心运行。如果你没有保留数据库创建命令的副本，可以使用 DB2LOOK 工具提取对象的 DDL。
+> **DB2 备注**
+>
+> 将数据库的所有 DDL 语句存储在脚本文件中是有用的，以便更容易创建数据库对象。该脚本可以从 DB2 CLP 或 DB2 控制中心运行。如果你没有保留数据库创建命令的副本，可以使用 `DB2LOOK` 工具提取对象的 DDL。
 
 ## 数据类型
 
@@ -4868,8 +4627,6 @@ DB2 提供的数据类型属于以下三个大类之一：
 
 DB2 内置数据类型如图 5–1 所示。
 
-
-
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_266_0.png)
 
 图 5–1 DB2 内置数据类型
@@ -4878,131 +4635,130 @@ DB2 内置数据类型如图 5–1 所示。
 
 用于存储数值数据的六种 DB2 数据类型：
 
-- SMALLINT
-- INTEGER
-- BIGINT
-- DECIMAL/NUMERIC
-- REAL
-- DOUBLE
+- `SMALLINT`
+- `INTEGER`
+- `BIGINT`
+- `DECIMAL/NUMERIC`
+- `REAL`
+- `DOUBLE`
 
 这些数据类型用于存储不同的数值类型和精度。数字的精度（precision）是指表示其值时使用的位数。在 DB2 数据库中，所有数值数据类型都使用固定数量的存储空间进行存储。所需的空间随着数字精度的增加而增加。
 
 在操作这些数值字段时，你还必须意识到数据类型的范围限制以及相应的应用程序语言的限制。
 
-某些数据值在本质上是整数类型，例如考生的人数。无法表示包含小数数据（小数点右侧的数字）的人数。另一方面，某些值需要小数位来准确反映其数值，例如考试成绩。这两个示例应该使用不同的 DB2 数据类型来存储其值（分别使用 SMALLINT 和 DECIMAL）。
+某些数据值在本质上是整数类型，例如考生的人数。无法表示包含小数数据（小数点右侧的数字）的人数。另一方面，某些值需要小数位来准确反映其数值，例如考试成绩。这两个示例应该使用不同的 DB2 数据类型来存储其值（分别使用 `SMALLINT` 和 `DECIMAL`）。
 
 数值不应包含在引号中。如果包含在引号中，该值将被视为字符字符串。如果字段的表示中包含数字，只有在允许算术操作的情况下，才应使用 DB2 数值数据类型来表示数据。
 
 ## 小整数 (SMALLINT)
 
-小整数每个值使用的数据库空间最少。整数不允许小数点右有任何数字。
+`SMALLINT` 每个值使用的数据库空间最少。整数不允许小数点右有任何数字。
 
-SMALLINT 的数据范围为 -32768 到 32767。SMALLINT 的精度为 5 位（小数点左）。每个 SMALLINT 列值使用两个字节数据库存储空间。
+`SMALLINT` 的数据范围为 -32768 到 32767。`SMALLINT` 的精度为 5 位（小数点左）。每个 `SMALLINT` 列值使用两个字节数据库存储空间。
 
-示例：AGE SMALLINT
+示例：`AGE SMALLINT`
 
 ## 整数 (INTEGER)
 
-INTEGER 占空间是 SMALLINT 的两倍，但值范围更大。
+`INTEGER` 占空间是 `SMALLINT` 的两倍，但值范围更大。
 
-INTEGER 数据类型的范围为 -2,147,483,648 到 2,147,483,647。INTEGER 的精度为小数点左十位。每个 INTEGER 列值使用四个字节数据库存储空间。
+`INTEGER` 数据类型的范围为 -2,147,483,648 到 2,147,483,647。`INTEGER` 的精度为小数点左十位。每个 `INTEGER` 列值使用四个字节数据库存储空间。
 
-示例：STREET_NO_INT
+示例：`STREET_NO_INT`
 
 ## 大整数 (BIGINT)
 
-BIGINT 数据类型用于支持 64 位整数。BIGINT 的范围为 -9,223,372,036,854,775,808 到 +9,223,372,036,854,775,807。由于平台对 64 位整数有原生支持，使用 BIGINT 处理大数比处理 DECIMAL 更高效，且比 DOUBLE 或 REAL 更精确。每个 BIGINT 列值使用八字节数据库存储空间。
+`BIGINT` 数据类型用于支持 64 位整数。`BIGINT` 的范围为 -9,223,372,036,854,775,808 到 +9,223,372,036,854,775,807。由于平台对 64 位整数有原生支持，使用 `BIGINT` 处理大数比处理 `DECIMAL` 更高效，且比 `DOUBLE` 或 `REAL` 更精确。每个 `BIGINT` 列值使用八字节数据库存储空间。
 
-示例：TRANSACTION_NO_BIGINT
+示例：`TRANSACTION_NO_BIGINT`
 
 ## 小数 (DECIMAL/NUMERIC)
 
-DECIMAL 或 NUMERIC 数据类型用于带有小数部分和整数部分的数字。DECIMAL 数据以压缩格式存储。
+`DECIMAL` 或 `NUMERIC` 数据类型用于带有小数部分和整数部分的数字。`DECIMAL` 数据以压缩格式存储。
 
-使用小数数据类型时必须提供精度和标度（scale）。精度是总位数（范围从 1 到 31），标度是数字小数部分的位数。例如，存储高达 100 万美元货币值的数值数据类型需要定义为 DECIMAL(9,2)。NUMERIC、NUM、DECIMAL 和 DEC 均可声明小数/数值列。如果在 C 程序中使用该数据类型，则主机变量必须声明为 double。一个DECIMAL 数字占用 p/2+1 字节的存储空间，其中 p 是所使用的精度。例如，DEC(8,2) 将占用 5 字节存储空间（8/2+1），而 DEC(7,2) 将占用 4 字节（p/2 除法取整）。
+使用小数数据类型时必须提供精度和标度（scale）。精度是总位数（范围从 1 到 31），标度是数字小数部分的位数。例如，存储高达 100 万美元货币值的数值数据类型需要定义为 `DECIMAL(9,2)`。`NUMERIC`、`NUM`、`DECIMAL` 和 `DEC` 均可声明小数/数值列。如果在 C 程序中使用该数据类型，则主机变量必须声明为 `double`。一个 `DECIMAL` 数字占用 `p/2+1` 字节的存储空间，其中 `p` 是所使用的精度。例如，`DEC(8,2)` 将占用 5 字节存储空间（8/2+1），而 `DEC(7,2)` 将占用 4 字节（`p/2` 除法取整）。
 
-示例：SALARY_DEC(13,2)
+示例：`SALARY_DEC(13,2)`
 
-注意：
-如果 DECIMAL 列定义未提供精度和标度值，则使用默认值 (5,0)。该列将占用行 3 字节空间。
+**注意：**
+
+如果 `DECIMAL` 列定义未提供精度和标度值，则使用默认值 (5,0)。该列将占用行 3 字节空间。
 
 ## 单精度浮点数 (REAL/FLOAT)
 
-REAL 数据类型是数字的近似。该近似需要 32 位或 4 字节的存储。使用 REAL 数据类型指定单精度数字时，长度必须定义在 1 到 24 之间（特别是当使用 FLOAT 数据类型时，它可以同时表示单精度和双精度，由指定的整数值决定）。
+`REAL` 数据类型是数字的近似。该近似需要 32 位或 4 字节的存储。使用 `REAL` 数据类型指定单精度数字时，长度必须定义在 1 到 24 之间（特别是当使用 `FLOAT` 数据类型时，它可以同时表示单精度和双精度，由指定的整数值决定）。
 
-示例：LATITUDE REAL 或 LATITUDE FLOAT(20)
+示例：`LATITUDE REAL` 或 `LATITUDE FLOAT(20)`
 
 ## 双精度浮点数 (DOUBLE/FLOAT)
 
-DOUBLE 或 FLOAT 数据类型是数字的近似。该近似需要 64 位或 8 字节的存储。使用 FLOAT 数据类型指定双精度数字时，长度必须定义在 25 到 53 之间。
+`DOUBLE` 或 `FLOAT` 数据类型是数字的近似。该近似需要 64 位或 8 字节的存储。使用 `FLOAT` 数据类型指定双精度数字时，长度必须定义在 25 到 53 之间。
 
-示例：DISTANCE DOUBLE 或 DISTANCE FLOAT(50)
+示例：`DISTANCE DOUBLE` 或 `DISTANCE FLOAT(50)`
 
-> DB2 注意：
-使用科学计数法来表示 REAL、DOUBLE 和 FLOAT 数值。
+> **DB2 注意：**
+>
+> 使用科学计数法来表示 `REAL`、`DOUBLE` 和 `FLOAT` 数值。
 
 ## 字符串数据类型
 
-本节讨论包含 CHAR、VARCHAR 和 LONG VARCHAR 的字符串数据类型。
+本节讨论包含 `CHAR`、`VARCHAR` 和 `LONG VARCHAR` 的字符串数据类型。
 
 ## 固定长度字符字符串 (CHAR)
 
-固定长度字符字符串使用定义的整个存储空间存储在数据库中。如果存储的数据长度始终相同，应使用 CHAR 数据类型。如果数据较短，固定长度字符串可能会浪费空间。CHAR 的长度必须在 1 到 255 之间。
+固定长度字符字符串使用定义的整个存储空间存储在数据库中。如果存储的数据长度始终相同，应使用 `CHAR` 数据类型。如果数据较短，固定长度字符串可能会浪费空间。`CHAR` 的长度必须在 1 到 255 之间。
 
-示例：LASTNAME CHAR(20)
+示例：`LASTNAME CHAR(20)`
 
 ## 变长度字符字符串 (VARCHAR)
 
-变长度字符串使用所需的存储空间存储在数据库中。当数据长度变化时使用 VARCHAR。VARCHAR 的长度在 1 到 32767 之间。
+变长度字符串使用所需的存储空间存储在数据库中。当数据长度变化时使用 `VARCHAR`。`VARCHAR` 的长度在 1 到 32767 之间。
 
-示例：ADDRESS VARCHAR(128)
+示例：`ADDRESS VARCHAR(128)`
 
 ## 变长度字符字符串 (LONG VARCHAR)
 
-此数据类型用于大于单页的字符串。LONG VARCHAR 存储存储单独的页中。如果使用过多会导致性能下降。LONG VARCHAR 的最大长度为 32700。
+此数据类型用于大于单页的字符串。`LONG VARCHAR` 存储存储在单独的页中。如果使用过多会导致性能下降。`LONG VARCHAR` 的最大长度为 32700。
 
-示例：RESUME LONG VARCHAR
+示例：`RESUME LONG VARCHAR`
 
-## 第 5 章数据库对象
+## 第 5 章 数据库对象
 
-> DB2 注意：
-LONG VARCHAR 数据类型与 CLOB 类型类似（两种类型都有使用限制）。
+> **DB2 注意：**
+>
+> `LONG VARCHAR` 数据类型与 `CLOB` 类型类似（两种类型都有使用限制）。
 
-在字符列定义后可以使用 FOR BIT 子句。在数据交换期间不进行分页转换。相反，数据被视为二进制（位）数据。
+在字符列定义后可以使用 `FOR BIT` 子句。在数据交换期间不进行分页转换。相反，数据被视为二进制（位）数据。
 
 ## 字符大对象 (CLOB)
 
-字符大对象是存储在数据库中的变长度 SBCS（单字节字符集）或 MBCS（多字节字符集）字符字符串。每个 CLOB 关联一个分页。有关 DB2 的更多详细信息，请参见第 259 页的“分页考虑”。CLOB 列用于存储大于 32KB 的文本。由于此数据类型是变长度的，分配的空间由记录中的数据决定。因此，你应该根据最长字符串创建列。
+字符大对象是存储在数据库中的变长度 SBCS（单字节字符集）或 MBCS（多字节字符集）字符字符串。每个 `CLOB` 关联一个分页。有关 DB2 的更多详细信息，请参见第 259 页的“分页考虑”。`CLOB` 列用于存储大于 32KB 的文本。由于此数据类型是变长度的，分配的空间由记录中的数据决定。因此，你应该根据最长字符串创建列。
 
-示例：COURSE_ABSTRACT CLOB(50K)
+示例：`COURSE_ABSTRACT CLOB(50K)`
 
 ## 双字节字符字符串 (GRAPHIC)
 
-GRAPHIC 数据类型使用两个字节存储表示单个字符。GRAPHIC 数据类型包括：
+`GRAPHIC` 数据类型使用两个字节存储表示单个字符。`GRAPHIC` 数据类型包括：
 
-- GRAPHIC（固定长度——最大 127 个字符）
-- VARGRAPH（变长度——最大 16336 个字符）
-- LONG VARGRAPH（变长度——最大 16350 个字符）
+- `GRAPHIC`（固定长度——最大 127 个字符）
+- `VARGRAPH`（变长度——最大 16336 个字符）
+- `LONG VARGRAPH`（变长度——最大 16350 个字符）
 
 ## 双字节字符大对象 (DBCLOB)
 
-双字节字符大对象是变长度字符字符串，使用 2 个字节表示每个字符。每个列都关联一个分页。DBCLOB 列用于存储大量（大于 32KB）的双字节文本，如日语文本。
+双字节字符大对象是变长度字符字符串，使用 2 个字节表示每个字符。每个列都关联一个分页。`DBCLOB` 列用于存储大量（大于 32KB）的双字节文本，如日语文本。
 
-示例：MENU_ITEMS DBCLOB(1M)
-
-
-
-
+示例：`MENU_ITEMS DBCLOB(1M)`
 
 ## 管理数据库对象
 
 ### 二进制大对象 (BLOB)
 
-二进制大对象是变长度的二进制字符串。数据以二进制格式存储在数据库中。使用此数据类型时存在一些限制，包括无法对该类型的列进行排序。BLOB 数据类型适用于存储非关系型数据库信息，例如图像、音频和大型文档。
+二进制大对象是变长度的二进制字符串。数据以二进制格式存储在数据库中。使用此数据类型时存在一些限制，包括无法对该类型的列进行排序。`BLOB` 数据类型适用于存储非关系型数据库信息，例如图像、音频和大型文档。
 
-每个 BLOB 列的最大大小为 2GB（千字节）。由于此数据类型的长度是可变的，分配的磁盘空间取决于记录中的数据量，而不是表定义中列的最大大小。
+每个 `BLOB` 列的最大大小为 2GB（千字节）。由于此数据类型的长度是可变的，分配的磁盘空间取决于记录中的数据量，而不是表定义中列的最大大小。
 
-示例：LOCATION_MAP BLOB (2 M)
+示例：`LOCATION_MAP BLOB (2 M)`
 
 ## 大对象考虑因素
 
@@ -5010,7 +4766,7 @@ DB2 为处理这些大对象提供了特殊的考虑因素。你可以选择不�
 
 此外，在 `CREATE TABLE` 语句中还可以指定 `COMPACT` 选项。该选项用于在存储这些大对象时避免分配额外的磁盘空间，而不是对这些对象进行压缩！
 
-在数据库中，你可以选择使用 BLOB 存储图片、图像、音频或视频对象以及大型文档。BLOB 列会接受任何二进制字符串，而不考虑其内容。
+在数据库中，你可以选择使用 `BLOB` 存储图片、图像、音频或视频对象以及大型文档。`BLOB` 列会接受任何二进制字符串，而不考虑其内容。
 
 如果你想处理长度大于 32 KB 的文本数据，将使用 `CLOB` 或字符大对象数据类型。例如，潜在员工可以向公司提交简历，并将该信息作为 `CLOB` 列与其他其余信息一起存储在数据库中。有许多 SQL 函数可以用于处理大字符数据列。
 
@@ -5018,11 +4774,9 @@ DB2 为处理这些大对象提供了特殊的考虑因素。你可以选择不�
 
 有三种 DB2 数据类型专门用于表示日期和时间：
 
-- DATE — 该数据类型在内部存储为 4 字节的（压缩）字符串。在外部，该字符串的长度为 10 字节（MM-DD-YYYY）——这种表示可能会变化，并取决于国家代码。
-
-- TIME — 该数据类型在内部存储为 3 字节的（压缩）字符串。在外部，该字符串的长度为 8 字节（HH-MM-SS）——这种表示可能会变化。
-
-- TIMESTAMP — 该数据类型在内部存储为 10 字节的（压缩）字符串。在外部，该字符串的长度为 26 字节（YYYY-MM-DD-HH-MM-SS-NNNNN）。
+- `DATE` — 该数据类型在内部存储为 4 字节的（压缩）字符串。在外部，该字符串的长度为 10 字节（MM-DD-YYYY）——这种表示可能会变化，并取决于国家代码。
+- `TIME` — 该数据类型在内部存储为 3 字节的（压缩）字符串。在外部，该字符串的长度为 8 字节（HH-MM-SS）——这种表示可能会变化。
+- `TIMESTAMP` — 该数据类型在内部存储为 10 字节的（压缩）字符串。在外部，该字符串的长度为 26 字节（YYYY-MM-DD-HH-MM-SS-NNNNN）。
 
 从用户的角度来看，这些数据类型可以被字符或字符串数据类型。每当你需要使用日期时间属性时，都需要将其包含在引号中。然而，日期时间数据类型并不是以固定长度字符字符串存储在数据库中的。
 
@@ -5054,7 +4808,7 @@ DB2 提供了特殊函数允许你处理这些数据类型。这些函数允许�
 
 表 5–1 中所示的任何字符串格式都可以用于在 DB2 数据库中存储日期。当检索数据时（使用 `SELECT` 语句），输出字符串将处于这些格式之一。`BIND` 命令有一个名为 `DATETIME` 的选项，它允许你定义日期和时间值的外部格式。表 5–1 中的缩写列包含了 `DATETIME` 选项的一些可能值。
 
-示例：HIRE_DATE DATE
+示例：`HIRE_DATE DATE`
 
 ### 时间字符串 (TIME)
 
@@ -5078,9 +4832,11 @@ DB2 提供了特殊函数允许你处理这些数据类型。这些函数允许�
 
 ### 注意
 
-时间戳的外部表示为 YYYY-MM-DD-HH:MM:SS.NNNNN。
 
-示例：TRANSACTION_RECORD TIMESTAMP
+
+时间戳的外部表示为 `YYYY-MM-DD-HH:MM:SS.NNNNN`。
+
+示例：`TRANSACTION_RECORD TIMESTAMP`
 
 ### 外部数据类型 (DATALINK)
 
@@ -5090,21 +4846,20 @@ DB2 提供了特殊函数允许你处理这些数据类型。这些函数允许�
 - 方案 — 对于 URL，这是一个像 HTTP 这样的值。该值无论大小如何，都以大写字母存储在数据库中。如果未指定值，则 `DATINK` 值中包含 `FILE`。
 - 文件服务器名称 — 文件的完整地址。该值无论大小如何，都以大写字母存储在数据库中。如果未指定值，则选择数据库的文件服务器名称并包含 `DATINK` 值中。
 - 文件路径 — 服务器中的文件标识。该值对大小写敏感，因此在存储在数据库时不会转换为大写字母。
-
-- 访问令牌 — 在适当的情况下，访问令牌嵌入文件路径中。它在提取 `DATINK` 值时动态生成，因此在插入 `DATINK` 值时不需要提供它。换句话说，它不是存储在数据库中的 DATINK 值的永久性部分。
+- 访问令牌 — 在适当的情况下，访问令牌嵌入文件路径中。它在提取 `DATINK` 值时动态生成，因此在插入 `DATINK` 值时不需要提供它。换句话说，它不是存储在数据库中的 `DATINK` 值的永久性部分。
 - 注释 — 最多 254 字节的描述性信息。适用于应用程序特定的用途，例如数据的进一步或替代标识。
 
 ## 插入和提取 DATINK 值
 
-当你向具有 DATINK 列的表插入行时，应使用内置内置函数 `DLVALUE` 来提供 DATINK 值的每个属性。
+当你向具有 `DATINK` 列的表插入行时，应使用内置内置函数 `DLVALUE` 来提供 `DATINK` 值的每个属性。
 
-为了提取 DATINK 值的封装属性，DB2 提供了内置标量函数，例如 `DLLTYPE`、`DLURLSCHEME`、`DLURLSERVER`、`DLURLCOMPLETE`、`DLURLPATH`、`DLURLPATHONLY` 和 `DLCOMMENT`。
+为了提取 `DATINK` 值的封装属性，DB2 提供了内置标量函数，例如 `DLLTYPE`、`DLURLSCHEME`、`DLURLSERVER`、`DLURLCOMPLETE`、`DLURLPATH`、`DLURLPATHONLY` 和 `DLCOMMENT`。
 
 参考 DB2 SQL 参考获取有关这些内置函数的更多详细信息。
 
 ### 注意
 
-包含 DATINK 类型是为了历史目的。该数据类型在 DB2 9 中不再支持，但在之前的版本中仍然可用。在 DB2 9 之前的编写的应用程序如果在未来的 DB2 版本上运行，不应使用此功能。
+包含 `DATINK` 类型是为了历史目的。该数据类型在 DB2 9 中不再支持，但在之前的版本中仍然可用。在 DB2 9 之前的编写的应用程序如果在未来的 DB2 版本上运行，不应使用此功能。
 
 ## XML (可扩展标记语言)
 
@@ -5113,15 +4868,7 @@ XML 代表可扩展标记语言，是 DB2 9 引入的一种新数据类型。XML
 XML 有时被描述为“自描述数据结构”，因为 XML 标签描述了每个元素及其属性。XML 的一些优点包括：
 
 - 可扩展性
-
 - 无固定格式或语法
-
-
-
-
-
-## 第 5 章 数据库对象
-
 - 结构可以轻松更改
 - 平台无关
 - 不依赖于任何平台、操作系统、语言或软件供应商
@@ -5134,28 +4881,29 @@ XML 数据类型为 SQL 引入了许多新概念和语言扩展（包括一种�
 
 用户定义的 UDT 允许用户扩展 DB2 理解的数据类型。UDT 有三种类型：
 
--   **用户定义区分类型（User-defined distinct type）**：可以在现有的数据类型上创建用户定义数据类型 (UDTs)。UDT 用于定义数据库中表示进一步类型的数据。如果基于相同的基类型使用不同的 UDT 定义列，则这些 UDT 无法直接进行比较。这被称为强类型。DB2 提供这种强类型是为了避免最终用户在赋值或比较不同类型的真实世界数据时出错。
--   **用户定义引用类型（User-defined reference type）**：UDT 也可以是用户定义的引用类型，用于引用另一个使用了用户定义结构化类型的行。结构化类型可以是另一个结构化类型（称为父类型）的子类型，从而定义类型层次。用户定义结构化类型（用于类型层次）将在第 7 章中讨论。
--   **用户定义结构化数据类型（User-defined structured data type）**：结构化类型已扩展到提供创建具有结构化类型列表。此外，结构化类型可以嵌套在结构化类型内部。这意味着结构化类型的属性不再局限于基础 SQL 类型，它们现在可以是另一种结构化类型。用户定义结构化类型将在第 7 章中讨论。
+- **用户定义区分类型（User-defined distinct type）**：可以在现有的数据类型上创建用户定义数据类型 (UDTs)。UDT 用于定义数据库中表示进一步类型的数据。如果基于相同的基类型使用不同的 UDT 定义列，则这些 UDT 无法直接进行比较。这被称为强类型。DB2 提供这种强类型是为了避免最终用户在赋值或比较不同类型的真实世界数据时出错。
+- **用户定义引用类型（User-defined reference type）**：UDT 也可以是用户定义的引用类型，用于引用另一个使用了用户定义结构化类型的行。结构化类型可以是另一个结构化类型（称为父类型）的子类型，从而定义类型层次。用户定义结构化类型（用于类型层次）将在第 7 章中讨论。
+- **用户定义结构化数据类型（User-defined structured data type）**：结构化类型已扩展到提供创建具有结构化类型列表。此外，结构化类型可以嵌套在结构化类型内部。这意味着结构化类型的属性不再局限于基础 SQL 类型，它们现在可以是另一种结构化类型。用户定义结构化类型将在第 7 章中讨论。
 
 ## DB2 注意
 
 用户定义结构化数据类型允许 DBA 或开发人员创建由结构组成的列。这是 DB2 内部对象-关系支持的一部分。
 
-SYSCAT.DATATYPES 目录视图允许您查看数据库中定义的 UDT。
+`SYSCAT.DATATYPES` 目录视图允许您查看数据库中定义的 UDT。
 
 ## 创建用户定义区分类型 (UDTs)
 
-假设我们有一个表，用于存储不同的重量衡单位，例如磅和千克。除非适合算术运算，否则我们应该对这些列使用数值数据类型。我们将使用 `INTEGER` 类型作为 UDT KILOGRAM 和 POUND 的 DB2 数据类型。这些值代表不同的单位，因此不应直接比较。
+假设我们有一个表，用于存储不同的重量衡单位，例如磅和千克。除非适合算术运算，否则我们应该对这些列使用数值数据类型。我们将使用 `INTEGER` 类型作为 UDT `KILOGRAM` 和 `POUND` 的 DB2 数据类型。这些值代表不同的单位，因此不应直接比较。
 
 > **DB2 注意**
+>
 > 用户定义数据类型 (UDTs) 只能基于现有的 DB2 数据类型。
 
-在这里我们定义了新的数据类型：KILOGRAM 和 POUND。这些数据类型将基于整数 (`INTEGER`) 数据类型。一旦定义了 KILOGRAM 和 POUND UDT，就可以在 `CREATE` 语句中引用它们。
+在这里我们定义了新的数据类型：`KILOGRAM` 和 `POUND`。这些数据类型将基于整数 (`INTEGER`) 数据类型。一旦定义了 `KILOGRAM` 和 `POUND` UDT，就可以在 `CREATE` 语句中引用它们。
 
 定义 UDT 时，会创建系统生成的 SQL 函数。这些函数被称为转换函数（casting functions）。转换函数允许 UDT 与其基类型之间进行比较。在现实世界中，如果不转换其中一个值，无法直接比较磅和千克。在 DB2 中，需要用户定义函数。
 
-以下 SQL 创建了 POUND 和 KILOGRAM 的用户定义数据类型。
+以下 SQL 创建了 `POUND` 和 `KILOGRAM` 的用户定义数据类型。
 
 ```sql
 CREATE DISTINCT TYPE POUND
@@ -5166,7 +4914,7 @@ AS INTEGER WITH COMPARISONS;
 
 ### 示例 5–2 创建 DISTINCT 类型
 
-在上面的示例中，我们正在创建名为 POUND 和 KILOGRAM 的新数据类型。
+在上面的示例中，我们正在创建名为 `POUND` 和 `KILOGRAM` 的新数据类型。
 
 关键字 `DISTINCT` 对于所有用户定义数据类型都是强制性的。`WITH COMPARISON` 子句也是强制性的（LOB、LONG 和 DATALINK 数据类型除外）。下表使用了磅和千克数据类型（示例 5–3）。
 
@@ -5181,19 +4929,20 @@ WEIGHT_K KILOGRAM
 
 ### 示例 5–3 使用用户定义类型创建表
 
-新数据类型在表定义中的用法就像 DB2 内置数据类型一样。DB2 不允许你直接对 POUND 和 KILOGRAM 类型的列进行比较或执行算术运算。需要使用转换函数来对使用这些类型定义的列执行算术运算。换句话说，对于定义为 POUND 或 KILOGRAM 的列，你可以使用内置函数（例如平均值函数 `AVG`），除非你使用了适当的转换函数，或者创建了一个可以将 UDT 用作输入参数的新用户定义函数。
+新数据类型在表定义中的用法就像 DB2 内置数据类型一样。DB2 不允许你直接对 `POUND` 和 `KILOGRAM` 类型的列进行比较或执行算术运算。需要使用转换函数来对使用这些类型定义的列执行算术运算。换句话说，对于定义为 `POUND` 或 `KILOGRAM` 的列，你可以使用内置函数（例如平均值函数 `AVG`），除非你使用了适当的转换函数，或者创建了一个可以将 UDT 用作输入参数的新用户定义函数。
 
-以下 SQL 将导致错误（示例 5–4）。常量值 30 的数据类型为 `INTEGER` 类型，且 `INTEGER` 类型不能直接与 POUND 类型进行比较。
+以下 SQL 将导致错误（示例 5–4）。常量值 30 的数据类型为 `INTEGER` 类型，且 `INTEGER` 类型不能直接与 `POUND` 类型进行比较。
 
 ```sql
 SELECT F_NAME, WEIGHT_P FROM HEALTH
 WHERE WEIGHT_P > 30;
 ```
-SQL0401N 操作 ">" 的操作数类型不兼容。SQLSTATE42818
+
+`SQL0401N` 操作 ">" 的操作数类型不兼容。`SQLSTATE42818`
 
 ### 示例 5–4 用户定义类型的无效比较
 
-要解决此错误，需要对常量值 30 进行转换。通过转换，值 30 被视为 `POUND` 数据类型。在示例 5–5 中，正在使用 `POUND(INTEGER)` 转换函数将值 30 转换为 POUND 数据类型。
+要解决此错误，需要对常量值 30 进行转换。通过转换，值 30 被视为 `POUND` 数据类型。在示例 5–5 中，正在使用 `POUND(INTEGER)` 转换函数将值 30 转换为 `POUND` 数据类型。
 
 ```sql
 SELECT F_NAME, WEIGHT_P FROM HEALTH
@@ -5204,15 +4953,15 @@ WHERE WEIGHT_P > POUND(30);
 
 让我们来看简单的示例。（注意：OCR 文本在此部分似乎变得重复/混乱，但遵循转换函数的逻辑流）。
 
-文本讨论了使用转换函数来解决类型不匹配的问题。通过将值 30 转换为 POUND 类型，比较变得有效了。
+文本讨论了使用转换函数来解决类型不匹配的问题。通过将值 30 转换为 `POUND` 类型，比较变得有效了。
 
 ## 管理数据库对象
 
 用户定义结构化数据类型允许 DBA 或开发人员创建由结构组成的列。这是 DB2 内部对象-关系支持的一部分。
 
-SYSCAT.DATATYPES 目录视图允许您查看数据库中定义的 UDT。
+`SYSCAT.DATATYPES` 目录视图允许您查看数据库中定义的 UDT。
 
-（注：提供的 OCR 文本在转换函数和 POUND(INTEGER) 方面存在大量重复。下表根据之前提供的 SQL 代码表示表结构。）
+（注：提供的 OCR 文本在转换函数和 `POUND(INTEGER)` 方面存在大量重复。下表根据之前提供的 SQL 代码表示表结构。）
 
 | 列名 | 数据类型 |
 | :--- | :--- |
@@ -5227,31 +4976,28 @@ SYSCAT.DATATYPES 目录视图允许您查看数据库中定义的 UDT。
 在编写 DB2 应用程序时，需要特殊考虑来处理空值。
 
 > **DB2 注意**
+>
 > 关系型数据库允许空值。请记住，它们对于你的数据库设计可能是合适的。
-
-
-
-
 
 要定义一个不接受空值的列，请在列定义的末尾添加 `NOT NULL` 短语，例如：
 
-```
+```sql
 CREATE TABLE T1 (C1 CHAR(3) NOT NULL);
 ```
 
-**示例 5–8** 列上的 NOT NULL 规范
+**示例 5–8** 列上的 `NOT NULL` 规范
 
-从上面的示例可以看出，DB2 不允许在 C1 列中存储任何 NULL。通常情况下，除非实现数据库设计所必需，否则请避免使用可空列。此外还必须考虑额外的存储开销。如果允许为空，则每个可空列都需要额外的1字节。
+从上面的示例可以看出，DB2 不允许在 `C1` 列中存储任何 NULL。通常情况下，除非实现数据库设计所必需，否则请避免使用可空列。此外还必须考虑额外的存储开销。如果允许为空，则每个可空列都需要额外的1字节。
 
 ## 带有默认值的 NULL
 
-当向表中插入行并并省略一个或多个列的值时，这些列可能被设置为 NULL（如果该列被定义为可空）或被赋予一个默认值。如果该列被定义为非空，除非为该列提供了值，否则插入将失败。DB2 为每种 DB2 数据类型都定义了默认值，但你可以显式地为任何列提供默认值。默认值在 CREATE TABLE 语句中指定。通过定义你的默认值，可以确保该列被填充了所需要的值。
+当向表中插入行并并省略一个或多个列的值时，这些列可能被设置为 NULL（如果该列被定义为可空）或被赋予一个默认值。如果该列被定义为非空，除非为该列提供了值，否则插入将失败。DB2 为每种 DB2 数据类型都定义了默认值，但你可以显式地为任何列提供默认值。默认值在 `CREATE TABLE` 语句中指定。通过定义你的默认值，可以确保该列被填充了所需要的值。
 
-DB2 的默认值可能不是你想要的！请在 CREATE TABLE 语句中显式定义默认值。
+DB2 的默认值可能不是你想要的！请在 `CREATE TABLE` 语句中显式定义默认值。
 
-**示例 5–9** 展示了如何在 CREATE TABLE 语句中指定默认值。
+**示例 5–9** 展示了如何在 `CREATE TABLE` 语句中指定默认值。
 
-```
+```sql
 CREATE TABLE STAFF (
   ID SMALLINT NOT NULL,
   NAME VARCHAR(9),
@@ -5266,11 +5012,11 @@ CREATE TABLE STAFF (
 
 # 第5章 数据库对象
 
-现在，所有省略 DEPT 列的 INSERT 语句都将该列填充为默认值 10。COMM 列被定义为 WITH DEFAULT，但允许 NULLS。在这种情况下，你可以在插入时在 NULL 或默认值 15 之间进行选择。
+现在，所有省略 `DEPT` 列的 `INSERT` 语句都将该列填充为默认值 10。`COMM` 列被定义为 `WITH DEFAULT`，但允许 NULLS。在这种情况下，你可以在插入时在 NULL 或默认值 15 之间进行选择。
 
-为了确保在 INSERT 操作期间使用默认值，应在 INSERT 语句的 VALUES 部分指定关键字 `DEFAULT`。示例 5–10 展示了两个使用用户定义默认值插入记录的示例。在这种情况下，两种方式产生相同的结果。
+为了确保在 `INSERT` 操作期间使用默认值，应在 `INSERT` 语句的 `VALUES` 部分指定关键字 `DEFAULT`。示例 5–10 展示了两个使用用户定义默认值插入记录的示例。在这种情况下，两种方式产生相同的结果。
 
-```
+```sql
 INSERT INTO STAFF
 VALUES(360,'Baklarz',DEFAULT,'SE',8,20000,DEFAULT);
 
@@ -5297,11 +5043,11 @@ VALUES(360,'Baklarz','SE',8,20000);
 
 通常，表中的单列代表该行的唯一标识符。该标识符通常是一个数字，随着新记录的添加而顺序更新。
 
-DB2 可以自动生成顺序值。示例 5–11 展示了一个带有 EMP_NO 列自动生成的表定义。
+DB2 可以自动生成顺序值。示例 5–11 展示了一个带有 `EMP_NO` 列自动生成的表定义。
 
 ## 管理数据库对象
 
-```
+```sql
 CREATE TABLE EMPLOYEE (
 EMPNO INT GENERATED ALWAYS AS IDENTITY,
 NAME CHAR(10));
@@ -5316,9 +5062,9 @@ NO NAME
 
 示例 5–11 插入带有生成值的行
 
-如果列被定义为 GENERATED ALWAYS，则 INSERT 语句无法为 EMPNO 字段指定值。默认情况下，编号将从 1 开始并每次增加 1。范围和增量可以作为列定义的一部分（示例 5–12）：
+如果列被定义为 `GENERATED ALWAYS`，则 `INSERT` 语句无法为 `EMPNO` 字段指定值。默认情况下，编号将从 1 开始并每次增加 1。范围和增量可以作为列定义的一部分（示例 5–12）：
 
-```
+```sql
 CREATE TABLE EMPLOYEE (
 EMPNO INT GENERATED ALWAYS AS
 IDENTITY(START WITH 100, INCREMENT BY 10),
@@ -5334,17 +5080,17 @@ EMPNO NAME
 
 示例 5–12 插入带有生成值的记录
 
-> DB2 注意
+> **DB2 注意**
+>
+> 序列不保证列中的值是唯一的。用户必须在该列上指定唯一索引或主键，以确保值不重复。
 
-序列不保证列中的值是唯一的。用户必须在该列上指定唯一索引或主键，以确保值不重复。
-
-此外，默认值可以是 GENERATED BY DEFAULT，这意味着用户可以选择为该字段提供值。如果没有提供值（用 DB2 关键字表示），则 DB2 将生成序列中的下一个数字。
+此外，默认值可以是 `GENERATED BY DEFAULT`，这意味着用户可以选择为该字段提供值。如果没有提供值（用 DB2 关键字表示），则 DB2 将生成序列中的下一个数字。
 
 作为标识列的一部分，还有一个额外的关键字可用。作为数据库管理员（DBA），你可以决定 DB2 应该“预生成”多少个数字。这有助于减少目录争用，因为 DB2 会在内存中缓存许多数字，而不是返回目录表来确定下一个生成哪个数字。
 
-标识列仅限于数值（整数或小数），且只能用于一列。`GENERATE` 关键字可以用于其他列，但它们不能是标识列。`GENERATE` 关键字应用于其他列。例如，EMPLOYEE 可以包含两个列。
+标识列仅限于数值（整数或小数），且只能用于一列。`GENERATE` 关键字可以用于其他列，但它们不能是标识列。`GENERATE` 关键字应用于其他列。例如，`EMPLOYEE` 可以包含两个列。
 
-```
+```sql
 CREATE TABLE EMPLOYEE (
 EMPNO INT GENERATED ALWAYS AS,
 NAME CHAR(10),
@@ -5353,7 +5099,7 @@ BONUS INT
 );
 ```
 
-```
+```sql
 INSERT INTO EMPLOYEE(NAME,SALARY) VALUES ('George',20000),('Paul',15000);
 ```
 
@@ -5370,13 +5116,13 @@ SELECT * FROM EMPLOYEE;
 
 ## DB2 注意
 
-关于此强大功能的更多信息，请参考 SEQUENCE。
+关于此强大功能的更多信息，请参考 `SEQUENCE`。
 
 ## 管理数据库对象
 
 # 代码页考虑
 
-代码页与所有数据类型（CHAR, VARCHAR, CLOB）关联。代码页设置在数据库级别。代码页是字符与其“编码”之间的映射。
+代码页与所有数据类型（`CHAR`, `VARCHAR`, `CLOB`）关联。代码页设置在数据库级别。代码页是字符与其“编码”之间的映射。
 
 英语等语言的字符较少；单字节代码页即可。日语等语言需要超过 256 个元素；因此需要多字节代码页。
 
@@ -5385,8 +5131,8 @@ SELECT * FROM EMPLOYEE;
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | A | B | C | D | E | F |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
 | | | | | | | | | | | | @ | P | p | | |
-| | | | | | | ! | 1 | A | Q | a | q | | | | |
-| 2 | | | | | | | | | | B | r | r | | | |
+| | | | | | | | ! | 1 | A | Q | a | q | | | |
+| 2 | | | | | | | | | | | B | r | r | | |
 | 3 | | | | | # | | | | | | s | c | | | |
 | 4 | | | | | $ | | | | | D | t | t | | | |
 | 5 | | | | | | % | | | | E | u | u | | | |
@@ -5405,14 +5151,13 @@ SELECT * FROM EMPLOYEE;
 
 图 5–2 展示了一个代码页示例。该示例代表了 ASCII 字符集（例如，十六进制代码点 41 代表字符 A）。
 
-
-
-
 ## 第 5 章数据库对象
 
 ## DB2 注意
 
 二进制数据（例如指定为 `FOR BIT DATA` 的列和 BLOB 列）不需要字母数字转换，且不与数据库代码页关联。
+
+
 
 当 DB2 应用程序绑定到 DB2 数据库时，会比较应用程序和数据库的代码页。如果代码页不同，则将对每个 SQL 语句尝试进行代码页转换。如果您使用的代码页不是所访问数据库的代码页，务必确保代码页是兼容的并且可以完成转换。
 
@@ -5422,7 +5167,7 @@ SELECT * FROM EMPLOYEE;
 
 ## DB2 中的 Unicode 支持
 
-Unicode 编码标准是一种固定长度字符编码方案，包含了世界上几乎所有语言的字符。Unicode 字符通常显示为 U+xxxx，其中 xxxx 是该字符的十六进制代码。无论是哪种语言，每个字符都是 16 位（2 字节）。虽然生成的 65,536 个代码元素足以编码世界上大多数主要语言的字符，但 Unicode 标准还提供了一种扩展机制，允许编码多达百万个字符。该扩展预留了一个范围的代码值（`U+D800` 到 `U+D8FF`，称为代理项surrogates），用于将某些 32 位字符编码为两个连续的代码单元。
+Unicode 编码标准是一种固定长度字符编码方案，包含了世界上几乎所有语言的字符。Unicode 字符通常显示为 `U+xxxx`，其中 `xxxx` 是该字符的十六进制代码。无论是哪种语言，每个字符都是 16 位（2 字节）。虽然生成的 65,536 个代码元素足以编码世界上大多数主要语言的字符，但 Unicode 标准还提供了一种扩展机制，允许编码多达百万个字符。该扩展预留了一个范围的代码值（`U+D800` 到 `U+D8FF`，称为代理项 surrogates），用于将某些 32 位字符编码为两个连续的代码单元。
 
 DB2 支持 ISO/IEC 10646 UCS-2，即不带代理项的 Unicode。UCS-2 通过 UTF-8（UCS 转换格式 8）算法转换实现。
 
@@ -5441,9 +5186,9 @@ UTF-8 已注册为 CCSID 1208，用于 DB2 对 UCS-2/UTF-8 支持的多字节（
 
 用 UCS-2/UTF-8 创建数据库时，`CHAR`、`VARCHAR`、`LONG VARCHAR` 和 `CLOB` 数据存储在 UTF-8 中，而 `GRAPHIC`、`VARGRAPHIC`、`LONG VARGRAPHIC` 和 `DBCLOB` 数据存储在 UCS-2 中。我们简单地称为 UCS-2 数据库。
 
-如果您处理 UTF-8 中的字符字符串数据，应该意识到 ASCII 字符被编码为 1 字节长度；但在多字节字符集（MBCS）中，长度为 2 或 3 字节。因此，如果您定义了一个 n 字节长度的字符列，根据 ASCII 与非 ASCII 字符的比例，您可以存储从 n/3 到 n 个字符的字符串。
+如果您处理 UTF-8 中的字符字符串数据，应该意识到 ASCII 字符被编码为 1 字节长度；但在多字节字符集（MBCS）中，长度为 2 或 3 字节。因此，如果您定义了一个 `n` 字节长度的字符列，根据 ASCII 与非 ASCII 字符的比例，您可以存储从 `n/3` 到 `n` 个字符的字符串。
 
-以下是创建一个名为 UCS2DB 且区域代码为美国（ UCS-2 数据库的示例（示例 5–14）。
+以下是创建一个名为 `UCS2DB` 且区域代码为美国（UCS-2 数据库的示例（示例 5–14）。
 
 ```
 CREATE DATABASE UCS2DB USING CODESET UTF-8 TERRITORY US
@@ -5466,6 +5211,7 @@ CREATE DATABASE UCS2DB USING CODESET UTF-8 TERRITORY US
 表 5–4 显示了数据类型选择的小清单。
 
 **表 5–4** 数据类型清单
+
 | 问题 | 数据类型 |
 | :--- | --- |
 | 数据长度是变长的吗？ | VARCHAR |
@@ -5477,9 +5223,6 @@ CREATE DATABASE UCS2DB USING CODESET UTF-8 TERRITORY US
 | 数据包含 XML 吗？ | XML 或 CLOB, BLOB |
 | 数据是否有特定含义（除 DB2 基础数据类型外）？ | 用户定义类型 |
 | 数据是否大于字符字符串能存储的范围，或您需要存储非方向性数据？ | CLOB, BLOB, DBCLOB |
-
-
-
 
 ## 表 265
 
@@ -5599,9 +5342,6 @@ CHECK (JOB IN ('Mgr','Sales','clerk','Admin'));
 
 如果应用程序在将记录插入 DB2 之前已经验证了信息，那么使用信息性约束可能比普通约束更高效。这些约束告诉 DB2 数据应该是怎样的，但在插入或更新处理过程中不会强制执行。然而，这些信息可以被 DB2 优化器使用，并可能提高 SQL 查询的性能。
 
-
-
-
 下表将说明信息约束（information constraints）的使用及其工作原理。这个简单的表包含了一些员工薪资和性别的信息（示例 5–18）：
 
 ```sql
@@ -5710,18 +5450,17 @@ DB2 使用的某些特殊表包含有关数据库中所有对象的信息，并�
 - 对象依赖
 - 对象权限
 
-当发布 SQL 数据定义语言（DDL）语句时，系统目录表可能会为您更新。DB2 数据库中有许多基础系统表和视图，它们始终位于名为 SYSCAT 的特殊表中。
+当发布 SQL 数据定义语言（DDL）语句时，系统目录表可能会为您更新。DB2 数据库中有许多基础系统表和视图，它们始终位于名为 `SYSCAT` 的特殊表中。
 
 ## DB2 注意
+
+
 
 要显示系统目录表和视图的名称及其创建时间，请输入命令 `LIST TABLES FOR SYSTEM` 或 `LIST TABLES FOR SCHEMA SYIBM, SYCAT, 或 SYSSTAT`。
 
 系统目录数据表无法使用 `INSERT` 或 `DELETE` SQL 语句进行修改。但某些表数据是可以修改的。例如，`COMMENT` 语句或 `ALTER` 语句将更新存储的信息。有关使用 `ALTER` 语句的更多详细信息，请参考第 237 页的“Alter 语句”。
 
 系统目录表包含数据库中表的统计信息。统计信息通过 `RUNSTATS` 命令计算并更新。数据库对象权限（如 `INSERT`、`SELECT` 和 `CONTROL`）也维护在系统目录表中。这些权限通过特殊的数据控制语言（DCL）语句建立。主要的 DCL 语句是 `GRANT` 和 `REVOKE`。这些语句在第 4 章中讨论过。
-
-
-
 
 ## 表 5–5 系统目录表和视图
 
@@ -5835,9 +5574,6 @@ DB2 的普通格式包含每个列的信息，包括它是否可以包含空值�
 
 所有这些数据类型无论长度或精度如何，每列都会压缩为三个字节。节省取决于数据类型。`SMALLINT` 字段仅两个字节，因此将其压缩为三个字节是不划算的。
 
-
-
-
 确实可以节省任何空间！然而，像 `NUMERIC(31,0)` 这样的大数值列可以从 16 字节的存储压缩到仅 3 字节。
 
 TIME、TIMESTAMP 和 DATE 数据类型不支持值压缩。这些字段的系统默认值不断变化，因此系统无法知道默认值应该是什么。
@@ -5850,9 +5586,9 @@ DB2 中的行级压缩与值压缩不同，它通过检查表中所有数据来�
 
 在表内压缩数据需要三个步骤：
 
-- 1. 创建或修改表以符合压缩条件
-- 2. 生成压缩字典
-- 3. 重新组织现有数据
+1. 创建或修改表以符合压缩条件
+2. 生成压缩字典
+3. 重新组织现有数据
 
 ## 启用表压缩
 
@@ -5878,13 +5614,13 @@ ALTER TABLE PRODUCTS
 COMPRESS YES;
 ```
 
-# 示例 5–26 修改表以启用压缩
+示例 5–26 修改表以启用压缩
 
 这两个命令都会更新 `SYSCAT.TABLE` 目录表。要确定表是否启用了压缩，可以检索 `COMPRESSION` 列来确定生效的压缩类型。
 
 在 DB2 9 中，`COMPRESSION` 列将具有表 5–7 所示四个值之一。
 
-# 表 5–7 SYSCAT.TABLES 中的压缩设置
+## 表 5–7 SYSCAT.TABLES 中的压缩设置
 
 | Value | 定义 |
 | --- | --- |
@@ -5897,7 +5633,7 @@ COMPRESS YES;
 
 在 DB2 9 之前的版本中，如果开启了值压缩，`COMPRESSION` 列的值为 `Y`；如果没有值压缩，则为 `N`。在迁移到 DB2 9 时，此值将从 `Y` 变为 `v`。
 
-# 表 281
+## 表 281
 
 一旦表符合压缩条件，DB2 就需要为表生成压缩字典。行压缩功能通过跨越整个行来查找模式，而不是像值压缩那样在列级别进行。例如，图 5–5 显示了员工表的一些示例数据。
 
@@ -5916,7 +5652,7 @@ COMPRESS YES;
 
 注意，压缩可以跨多个列，如 `CITY`、`STATE` 和 `ZIPCODE` 字段所示。除了识别列内部的模式，DB2 行压缩还能发现列与列之间的模式。`DEPARTMENT` 列有一个模式，可以与 `SALARY` 列的一部分结合。跨列和列内查找模式的能力增强了压缩算法的有效性。
 
-# 使用 INSPECT 生成压缩字典
+## 使用 INSPECT 生成压缩字典
 
 DB2 在压缩单个行之前必须生成压缩字典。创建压缩字典有两种方法。第一种方法是使用 `INSPECT` 命令确定表上可以实现的压缩程度（示例 5–27）。
 
@@ -5931,9 +5667,6 @@ RESULTS KEEP TRANSACTIONS_OUTPUT;
 
 `INSPECT` 命令必须从 DB2 命令行或控制中心运行。`INSPECT` 命令对现有表中的所有数据进行采样，并根据这些信息构建压缩字典。结果将写入名为 `TRANSACTIONS_OUTPUT` 的文件中。
 
-
-
-
 ## 第 5 章 数据库对象
 
 - LONG VARCHAR
@@ -5942,11 +5675,11 @@ RESULTS KEEP TRANSACTIONS_OUTPUT;
 
 ## 重组数据和创建压缩字典
 
-压缩表的另一种技术是通过使用 REORG 命令。REORG 命令是压缩数据库中现有表的唯一方法。INSPECT 命令会为表生成压缩字典，但它不会压缩行。插入或更新到表中的任何新数据都将进行压缩，但未更新的行将始终以未压缩的格式存在。
+压缩表的另一种技术是通过使用 `REORG` 命令。`REORG` 命令是压缩数据库中现有表的唯一方法。`INSPECT` 命令会为表生成压缩字典，但它不会压缩行。插入或更新到表中的任何新数据都将进行压缩，但未更新的行将始终以未压缩的格式存在。
 
-REORG 命令有两个额外的参数，用于告诉 DB2 如何创建或更新压缩字典。这两个参数是 KEEPDDICTIONARY 和 RESETDICTIONARY。
+`REORG` 命令有两个额外的参数，用于告诉 DB2 如何创建或更新压缩字典。这两个参数是 `KEEPDDICTIONARY` 和 `RESETDICTIONARY`。
 
-KEEPDDICTIONARY 选项的效果总结在表 5–8 中，RESETDICTIONARY 的效果总结在表 5–9 中。
+`KEEPDDICTIONARY` 选项的效果总结在表 5–8 中，`RESETDICTIONARY` 的效果总结在表 5–9 中。
 
 ### 表 5–8 KEEPDDICTIONARY 行为
 
@@ -5968,17 +5701,14 @@ KEEPDDICTIONARY 选项的效果总结在表 5–8 中，RESETDICTIONARY 的效�
 
 ### 表 285
 
-当第一次对表进行压缩重组时，可以使用 KEEPDICTIONARY 或 RESETDICTIONARY 选项。一旦创建了字典，使用哪个选项取决于现有字典是否需要更新：
+当第一次对表进行压缩重组时，可以使用 `KEEPDICTIONARY` 或 `RESETDICTIONARY` 选项。一旦创建了字典，使用哪个选项取决于现有字典是否需要更新：
 
-- 压缩表中的现有数据：使用 ALTER 表开启压缩，然后使用 REORG 命令配合 RESETDICTIONARY 或 RESETDICTIONARY。
+- 压缩表中的现有数据：使用 `ALTER` 表开启压缩，然后使用 `REORG` 命令配合 `RESETDICTIONARY` 或 `RESETDICTIONARY`。
+- 解消所有数据的压缩：使用 `ALTER` 表关闭压缩并在 `REORG` 命令中使用 `RESETDICTIONARY`。你需要确保有足够的空间来存放未压缩的表。
+- 重组现有行但不更改压缩字典：使用 `REORG` 命令配合 `KEEPDICTIONARY`。
+- 重组现有行但更新压缩字典：使用 `REORG` 命令配合 `RESETDICTIONARY`。注意，`REORG` 在用新字典重新压缩现有行之前，需要扩展现有的行。
 
-- 解消所有数据的压缩：使用 ALTER 表关闭压缩并在 reorg 命令中使用 RESETDICTIONARY。你需要确保有足够的空间来存放未压缩的表。
-
-- 重组现有行但不更改压缩字典：使用 REORG 命令配合 KEEPDICTIONARY。
-
-- 重组现有行但更新压缩字典：使用 REORG 命令配合 RESETDICTIONARY。注意，REORG 在用新字典重新压缩现有行之前，需要扩展现有的行。
-
-关于使用 REORG 压缩数据的一些特殊说明。REORG 必须是离线的，不能是在线的。这意味着你必须为表留出某些时间进行正确的重组。其次，压缩格式与复制不兼容。如果你有在 DB2 服务器之间复制表的需求，目前无法压缩正在复制的表。
+关于使用 `REORG` 压缩数据的一些特殊说明。`REORG` 必须是离线的，不能是在线的。这意味着你必须为表留出某些时间进行正确的重组。其次，压缩格式与复制不兼容。如果你有在 DB2 服务器之间复制表的需求，目前无法压缩正在复制的表。
 
 另一方面，在 DB2 中压缩表具有某些显著优势：
 
@@ -5991,21 +5721,21 @@ KEEPDDICTIONARY 选项的效果总结在表 5–8 中，RESETDICTIONARY 的效�
 
 ## 修改表
 
-创建表后，ALTER TABLE 语句允许你修改现有表。ALTER TABLE 语句通过以下方式修改现有表：
+创建表后，`ALTER TABLE` 语句允许你修改现有表。`ALTER TABLE` 语句通过以下方式修改现有表：
 
 - 向表添加或删除一个或多个列
 - 添加或删除主键
 - 添加或删除一个或多个唯一或引用约束
 - 添加或删除一个或多个检查约束定义
-- 修改 VARCHAR 列的长度
+- 修改 `VARCHAR` 列的长度
 - 修改引用类型列以添加范围（scope）
 - 添加或删除分区键
-- 修改表属性，例如 DATA CAPURE、PCTFREE、LOCKSIZE 或 APPEND 模式选项
+- 修改表属性，例如 `DATA CAPURE`、`PCTFREE`、`LOCKSIZE` 或 `APPEND` 模式选项
 - 激活表的初始不记录日志（not logged initially）属性
 
-在本章中，讨论了所有操作。ALTER TABLE 语句的每个选项，请参阅《DB2 SQL 参考》。
+在本章中，讨论了所有操作。`ALTER TABLE` 语句的每个选项，请参阅《DB2 SQL 参考》。
 
-表的某些属性只能在表创建后才能更改。例如，如果用户想要更改表的默认锁定级别或以追加模式进行插入，则应对表发布 ALTER TABLE 语句。示例 5–30 显示了使用了这些选项的 ALTER TABLE 语句。
+表的某些属性只能在表创建后才能更改。例如，如果用户想要更改表的默认锁定级别或以追加模式进行插入，则应对表发布 `ALTER TABLE` 语句。示例 5–30 显示了使用了这些选项的 `ALTER TABLE` 语句。
 
 ```
 ALTER TABLE EMPLOYEE
@@ -6014,41 +5744,41 @@ LOCKSIZE TABLE
 APPEND ON
 VOLATILE;
 ```
+
 示例 5–30 Alter table 语句
 
-LOCKSIZE 选项指示访问表时使用的锁粒度；在此处，使用的是表级锁。默认情况下，访问表时使用行级锁。ALTER TABLE 语句的此选项允许锁定提升到表级。使用表级锁可能通过减少获取和释放的锁的数量来提高查询性能。然而，由于所有锁都覆盖整个表，并发性可能会降低。
 
-APPEND 选项指示数据是追加到表的末尾还是在有空空间的地方追加。指定 APPEND ON 可以允许更快的插入并消除对空空间的维护来提高性能。注意，在指定此选项时，表不能具有聚集索引。
+
+`LOCKSIZE` 选项指示访问表时使用的锁粒度；在此处，使用的是表级锁。默认情况下，访问表时使用行级锁。`ALTER TABLE` 语句的此选项允许锁定提升到表级。使用表级锁可能通过减少获取和释放的锁的数量来提高查询性能。然而，由于所有锁都覆盖整个表，并发性可能会降低。
+
+`APPEND` 选项指示数据是追加到表的末尾还是在有空空间的地方追加。指定 `APPEND ON` 可以允许更快的插入并消除对空空间的维护来提高性能。注意，在指定此选项时，表不能具有聚集索引。
 
 ### 表 287
 
-如果你想为当前事务激活表的不记录日志属性，ACTIVATE LOGGED INITIALLY 选项允许你这样做。但请注意，如果你想指定此选项，该表在最初创建时必须带有 LOGGED INITIALLY 属性。
+如果你想为当前事务激活表的不记录日志属性，`ACTIVATE LOGGED INITIALLY` 选项允许你这样做。但请注意，如果你想指定此选项，该表在最初创建时必须带有 `LOGGED INITIALLY` 属性。
 
-VOLATILE 参数告诉优化器表的基数可能会发生变化，如果仅访问索引（索引引用的所有列）或对索引扫描应用谓词，优化器将使用索引扫描而不是表扫描。可选关键字 CARDINALITY 用于指示是表的行数发生了波动，而不是表本身。
+`VOLATILE` 参数告诉优化器表的基数可能会发生变化，如果仅访问索引（索引引用的所有列）或对索引扫描应用谓词，优化器将使用索引扫描而不是表扫描。可选关键字 `CARDINALITY` 用于指示是表的行数发生了波动，而不是表本身。
 
 ## 在表中删除列
 
-在 DB2 之前，ALTER 命令不允许你删除列。为了从表中删除列，DBA 需要执行以下步骤：
+在 DB2 之前，`ALTER` 命令不允许你删除列。为了从表中删除列，DBA 需要执行以下步骤：
 
 - 卸载所有表数据
 - 删除表
 - 重新创建表及其先前的权限、索引和相关对象
 - 重新加载表数据
 
-这项任务是维护表时最高管理成本之一。在生产表中删除列是一个相对罕见的事件（考虑到它对系统的影响），但在开发环境中非常常见。为了方便删除列、更改列类型或更改列的空值，ALTER 命令已修改以允许这些更改。
+这项任务是维护表时最高管理成本之一。在生产表中删除列是一个相对罕见的事件（考虑到它对系统的影响），但在开发环境中非常常见。为了方便删除列、更改列类型或更改列的空值，`ALTER` 命令已修改以允许这些更改。
 
-ALTER 命令现在允许：
+`ALTER` 命令现在允许：
 
-- ALTER TABLE DROP COLUMN
-- ALTER TABLE ALTER COLUMN TYPE
-- ALTER TABLE ALTER COLUMN NULLABILITY
+- `ALTER TABLE DROP COLUMN`
+- `ALTER TABLE ALTER COLUMN TYPE`
+- `ALTER TABLE ALTER COLUMN NULLABILITY`
 
-当执行这些类型的任何更改时，表将更新为新设计，但在完成 REORG 之前仅允许 SELECT 扫描（不允许插入或更新）。DB2 将跟踪已所做的架构更改，并在对表执行 SELECT 命令时实现这些更改。然而，在执行重组之前，行的物理结构不会发生变化（即列不会被删除）。
+当执行这些类型的任何更改时，表将更新为新设计，但在完成 `REORG` 之前仅允许 `SELECT` 扫描（不允许插入或更新）。DB2 将跟踪已做的架构更改，并在对表执行 `SELECT` 命令时实现这些更改。然而，在执行重组之前，行的物理结构不会发生变化（即列不会被删除）。
 
-
-
-
-示例 5–31 中的表将用于说明新的 ALTER 命令在处理 SQL 语句时的行为。
+示例 5–31 中的表将用于说明新的 `ALTER` 命令在处理 SQL 语句时的行为。
 
 ```sql
 CREATE TABLE EMPLOYEE_DET
@@ -6066,9 +5796,9 @@ INSERT INTO EMPLOYEE_DET VALUES
 ('MARK WRIGHT', 'ENGINEER', 745.40, 35.00, '2006-02-02');
 ```
 
-## 示例 5–31 用于 ALTER示例的表
+### 示例 5–31 用于 ALTER 示例的表
 
-对表的首次修改是删除 EMP_POSITION 列（示例 5–32）：
+对表的首次修改是删除 `EMP_POSITION` 列（示例 5–32）：
 
 ```sql
 ALTER TABLE EMPLOYEE_DET
@@ -6085,21 +5815,22 @@ SELECT * FROM EMPLOYEE_DET;
 
 选中了 1 条记录。
 
-## 示例 5–32 删除 EMP_POSITION 列
+### 示例 5–32 删除 EMP_POSITION 列
 
-虽然 SELECT 语句可以在修改后的表上运行，但任何 INSERT 或 UPDATE 语句将失败（示例 5–33）：
+虽然 `SELECT` 语句可以在修改后的表上运行，但任何 `INSERT` 或 `UPDATE` 语句将失败（示例 5–33）：
 
 ```sql
 INSERT INTO EMPLOYEE_DET VALUES
 ('PAUL RIVOT', 500.00, 45.00, '2006-07-31');
 ```
 
-SQL0668 Operation not allowed for reason code "7" on table
-BAKLARZ.EMPLOYEE_DET SQLSTATE=57016（注：根据常见上下文修正了 SQLSTATE）
+`SQL0668 Operation not allowed for reason code "7" on table`
 
-## 示例 5–33 INSERT 失败
+`BAKLARZ.EMPLOYEE_DET SQLSTATE=57016`（注：根据常见上下文修正了 `SQLSTATE`）
 
-原因代码 “7” 表示表处于重组等待（reorg pending）状态。该表最多可以再执行三次 ALTER 命令。在执行三次 ALTER 命令后，DB2 将要求对表进行完全重组。一个 ALTER 命令可以包含对表的多个更改，并且仍被被视为一次 ALTER 命令调用（示例 5–34）。
+### 示例 5–33 INSERT 失败
+
+原因代码 “7” 表示表处于重组等待（reorg pending）状态。该表最多可以再执行三次 `ALTER` 命令。在执行三次 `ALTER` 命令后，DB2 将要求对表进行完全重组。一个 `ALTER` 命令可以包含对表的多个更改，并且仍被视为一次 `ALTER` 命令调用（示例 5–34）。
 
 ```sql
 ALTER TABLE EMPLOYEE_DET
@@ -6107,9 +5838,9 @@ ALTER COLUMN SALARY SET DATA DECIMAL (6, 2)
 ALTER COLUMN PROMOTION_DATE DROP NOT NULL;
 ```
 
-## 示例 5–34 带有多个更改的 ALTER
+### 示例 5–34 带有多个更改的 ALTER
 
-从开发的角度来看，这将使表设计的更改变得非常简单。从生产的角度来看，它将消除许多更改表所需的步骤，但在表用于 SELECT 语句以外的用途之前，需要进行完全重组。
+从开发的角度来看，这将使表设计的更改变得非常简单。从生产的角度来看，它将消除许多更改表所需的步骤，但在表用于 `SELECT` 语句以外的用途之前，需要进行完全重组。
 
 ## 删除表
 
@@ -6123,13 +5854,13 @@ DROP TABLE EMPLOYEE;
 
 ## DB2 事项
 
-要删除表中的所有行而不实际删除表，可以使用 ALTER TABLE 语句：
+要删除表中的所有行而不实际删除表，可以使用 `ALTER TABLE` 语句：
 
 ```sql
 ALTER TABLE NAME ACTIVATE NOT LOGGED INITIALLY WITH EMPTY TABLE
 ```
 
-使用这种格式相比 DROP 表的优点是，所有的安全定义、索引和其他数据库对象都会被保留。
+使用这种格式相比 `DROP` 表的优点是，所有的安全定义、索引和其他数据库对象都会被保留。
 
 ## 多维聚类
 
@@ -6160,21 +5891,19 @@ MDC 允许表在物理上同时在多个维度上聚类，而不是仅通过聚�
 
 ## 第 5 章 数据库对象
 
+维度。在这种情况下，`STORE` 和 `SKU` 列将是 DB2 跟踪的维度。对于两个维度，DB2 将创建三个块索引：
 
+- 一个用于唯一 `STORE` 值的块索引
+- 一个用于唯一 `SKU` 值的块索引
+- 一个用于 `STORE/SKU` 组合的复合块索引
 
-维度。在这种情况下，STORE 和 SKU 列将是 DB2 跟踪的维度。对于两个维度，DB2 将创建三个块索引：
+DB2 使用复合索引来查找插入新记录的块，以及查找用于选择处理的块。此索引将包含所有已插入表的 `STORE/SKU` 组合（而不是所有可能的组合）。这有时被称为稀疏索引，因为 department 和 division 值的笛卡尔积连接（cartes join）中的每一个可能值都体现在索引中。
 
-- 一个用于唯一 STORE 值的块索引
-- 一个用于唯一 SKU 值的块索引
-- 一个用于 STORE/SKU 组合的复合块索引
-
-DB2 使用复合索引来查找插入新记录的块，以及查找用于选择处理的块。此索引将包含所有已插入表的 STORE/SKU 组合（而不是所有可能的组合）。这有时被称为稀疏索引，因为 department 和 division 值的笛卡尔积连接（cartes join）中的每一个可能值都体现在索引中。
-
-单独的维度块用于快速定位该特定维度中的记录块。存储（store）示例的块索引在在图所示（图 5–9）：
+单独的维度块用于快速定位该特定维度中的记录块。存储（store）示例的块索引在图所示（图 5–9）：
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_320_0.png)
 
-## 图 5–9 块索引
+### 图 5–9 块索引
 
 这些块索引通常很小，因为它们只包含维度值的条目，而不包含每个可能的记录。由于这些索引相对较小，可以快速遍历它们以找到需要将记录放入哪个块中，而不是使用复杂的聚集逻辑。这种短的搜索时间有助于 OLTP 工作负载，特别是当大多数维度值已经插入表中时。
 
@@ -6182,35 +5911,35 @@ DB2 使用复合索引来查找插入新记录的块，以及查找用于选择�
 
 如果某个维度不存在，DB2 需要获取另一个区（extent）来插入此记录，这将增加该特定情况的事务。然而，这也可能发生在未定义为 MDC 的表中。
 
-## 块映射 (Block Map)
+## 块映射（Block Map）
 
-除了为 MDC 表创建的新块索引外，DB2 还会创建一个新结构，用于存储表中每个块的状态。此块映射作为独立的 BMP 文件存储在 SMS 表空间中，并作为 DMS 表空间中表中的新对象进行存储。
+除了为 MDC 表创建的新块索引外，DB2 还会创建一个新结构，用于存储表中每个块的状态。此块映射作为独立的 BMP 文件存储在 SMS 表空间中，并作为 DMS 表空间中表的新对象进行存储。
 
 该文件包含一个包含表中每个块条目的数组，其中每个条目是块的一组状态位。这些状态位表示：
 
-- In-use（在使用）：当前包含数据且该块已分配给单元（cell）
-- Load（加载）：最近加载；扫描时不可见
-- Constraint（约束）：最近加载；仍需进行约束检查
-- Refresh（刷新）：最近加载；MQQs 仍需刷新
+- `In-use`（在使用）：当前包含数据且该块已分配给单元（cell）
+- `Load`（加载）：最近加载；扫描时不可见
+- `Constraint`（约束）：最近加载；仍需进行约束检查
+- `Refresh`（刷新）：最近加载；MQQs 仍需刷新
 
 通常，DBA 不会关注 DB2 生成的这些内部对象。然而，他们会在文件系统中看到生成的对象，因此他们应该意识到它们的存在。
 
-## 候选维度 (Candidate Dimensions)
+## 候选维度（Candidate Dimensions）
 
 为表选择维度可能需要一些尝试。在许多情况下，所选的维度与用户提交给数据库的典型查询模式匹配。还应注意选择具有以下特征的列：
 
 - 用于典型查询的列，包括：
-    - 等值查询或范围查询中的列
-    - 粒度粗的列
-    - 事实表中的外键列
-    - 任何生成的列应该是单调（持续地）增加或减少的
+  - 等值查询或范围查询中的列
+  - 粒度粗的列
+  - 事实表中的外键列
+  - 任何生成的列应该是单调（持续地）增加或减少的
 - 基数（cardinality）低或值数量唯一的列
 
 选择高基数的列可能会导致空间浪费。例如，薪资字段可能不是维度的合适候选，因为任何两个薪资相同的概率极低。
 
-如果数据倾斜导致某些单元是稀疏的而另一些单元是满的，你可能希望使用较小的块大小，这样稀疏单元就不会占用那么多浪费的空间。由于原因，DBA 可能想要用较小的区大小（2）创建表，以避免浪费每个区的空间。要重要的是，每个唯一单元（所有维度的组合）将至少占据一个区，而不是一个页（page）。
+如果数据倾斜导致某些单元是稀疏的而另一些单元是满的，你可能希望使用较小的块大小，这样稀疏单元就不会占用那么多浪费的空间。由于这个原因，DBA 可能想要用较小的区大小（2）创建表，以避免浪费每个区的空间。重要的是，每个唯一单元（所有维度的组合）将至少占据一个区，而不是一个页（page）。
 
-如果某些维度没有足够的值，则可以将它们与另一列结合以创建一个复合维度。在销售表中，DBA 可能会确定 store 和 division 在查询中被一起使用。由于可能有很多维度，仅根据 division 创建维度可能没有用处。创建表的命令将更改为示例 5–36 中的所示：
+如果某些维度没有足够的值，则可以将它们与另一列结合以创建一个复合维度。在销售表中，DBA 可能会确定 `store` 和 `division` 在查询中被一起使用。由于可能有很多维度，仅根据 `division` 创建维度可能没有用处。创建表的命令将更改为示例 5–36 中所示：
 
 ```sql
 CREATE TABLE SALES
@@ -6221,11 +5950,11 @@ CREATE TABLE SALES
   TXDATE NOT NULL,ORGANIZE BY DIMENSIONS((STORE,DIVISION), SKU);
 ```
 
-示例 5–36 带复合维度的 MDC 表
+### 示例 5–36 带复合维度的 MDC 表
 
-注意 STORE 和 DIVISION 是如何组合为一个维度的。这种设计允许用户访问 store 和 division 范围，这也可以用于 store 查找。
+注意 `STORE` 和 `DIVISION` 是如何组合为一个维度的。这种设计允许用户访问 `store` 和 `division` 范围，这也可以用于 `store` 查找。
 
-值过多的维度可以通过函数进行修改以降低其基数。一个典型的例子是薪资，将此列作为维度之一可能是不实际的，但薪资/1000 的整数部分可能会产生数量数量的值。要实现这种维度，用户必须在表中创建一个包含此值的列。实现此目标最简单的方法是使用生成列。如果销售表的使用表明数量字段被许多查询使用（示例 5–37）。
+值过多的维度可以通过函数进行修改以降低其基数。一个典型的例子是薪资，将此列作为维度之一可能是不实际的，但薪资/1000 的整数部分可能会产生数量的值。要实现这种维度，用户必须在表中创建一个包含此值的列。实现此目标最简单的方法是使用生成列。如果销售表的使用表明数量字段被许多查询使用（示例 5–37）。
 
 ```sql
 CREATE TABLE SALES
@@ -6239,13 +5968,13 @@ CREATE TABLE SALES
 ORGANIZE BY DIMENSIONS(SKU, QTY_1k);
 ```
 
-示例 5–37 带生成列的 MDC 表
+### 示例 5–37 带生成列的 MDC 表
 
 ## 第 5 章 数据库对象
 
-如果数据倾斜导致某些单元是稀疏的而另一些单元是满的，你可能希望使用较小的块大小，这样稀疏单元就不会占用那么多浪费的空间。由于原因，DBA 可能想要用较小的区大小（2）创建表，以避免浪费每个区的空间。要重要的是，每个唯一单元（所有维度的组合）将至少占据一个区，而不是一个页。
+如果数据倾斜导致某些单元是稀疏的而另一些单元是满的，你可能希望使用较小的块大小，这样稀疏单元就不会占用那么多浪费的空间。由于这个原因，DBA 可能想要用较小的区大小（2）创建表，以避免浪费每个区的空间。重要的是，每个唯一单元（所有维度的组合）将至少占据一个区，而不是一个页。
 
-如果某些维度没有足够的值，可以将它们与另一列结合以创建一个复合维度。在销售表中，DBA 可能会确定 store 和 division 在查询中被一起使用。由于可能有很多维度，仅根据 division 创建维度可能没有用处。创建表的命令将更改为示例 5–36 中的所示：
+如果某些维度没有足够的值，可以将它们与另一列结合以创建一个复合维度。在销售表中，DBA 可能会确定 `store` 和 `division` 在查询中被一起使用。由于可能有很多维度，仅根据 `division` 创建维度可能没有用处。创建表的命令将更改为示例 5–36 中所示：
 
 ```sql
 CREATE TABLE SALES
@@ -6257,9 +5986,9 @@ CREATE TABLE SALES
 ORGANIZE BY DIMENSIONS((STORE,DIVISION), SKU);
 ```
 
-示例 5–36 带复合维度的 MDC 表
+### 示例 5–36 带复合维度的 MDC 表
 
-注意 STORE 和 DIVISION 是如何组合为一个维度的。这种设计允许用户访问 store 和 division 范围，这也可以用于 store 查找。
+注意 `STORE` 和 `DIVISION` 是如何组合为一个维度的。这种设计允许用户访问 `store` 和 `division` 范围，这也可以用于 `store` 查找。
 
 （注：此处原文中存在大量重复，翻译已根据逻辑流进行了整合。）值过多的维度可以通过函数进行修改以降低其基数。一个典型的例子是薪资，将此列作为维度之一可能是不实际的，但薪资/1000 的整数部分可能会产生数量的值。要实现这种维度，用户必须在表中创建一个包含此值的列。实现此目标最简单的方法是使用生成列。如果销售表的使用表明数量字段被许多查询使用（示例 5–37）。
 
@@ -6275,23 +6004,21 @@ CREATE TABLE SALES
 ORGANIZE BY DIMENSIONS(SKU, QTY_1k);
 ```
 
-示例 5–37 带生成列的 MDC 表
+### 示例 5–37 带生成列的 MDC 表
 
-
-
-MDC 表为维护表中的数据顺序提供了传统聚类索引的替代方案。数据库管理员 (DBA) 应该检查其表设计，查看是否可以利用这项存在于 DB2 中的关键技术。在许多情况下，这可以显著提升性能并减少维护工作。
+MDC 表为维护表中的数据顺序提供了传统聚类索引的替代方案。数据库管理员（DBA）应该检查其表设计，查看是否可以利用这项存在于 DB2 中的关键技术。在许多情况下，这可以显著提升性能并减少维护工作。
 
 ## 范围聚类表
 
 范围聚类表（Range Clustered Tables，RCT）是一种行为类似于索引的特殊表。在 RCT 表中，记录按键值顺序排列。
 
 | ID | First Name | LastName | Value |
-| :--- | :--- | :--- | :--- |
+|---|---|---|---|
 | 1 | George | Rockwood | 156 |
 | 2 | Paul | Oshawa | 264 |
 | 3 | Kelly | Oshawa | 143 |
 | 4 | Katrina | Rockwood | 644 |
-| ... | | | | |
+| ... |  |  |  |
 | 100 | Chloe | Oshawa | 913 |
 
 图 5–10 RCT 表格
@@ -6310,23 +6037,27 @@ RCT 可能理想的原因有几点：
 
 然而，尽管 RCT 有许多优点，但使用它们也有一些缺点：
 
-- 不支持垂直分区
+- **不支持垂直分区**
+
   你无法对使用 RCT 定义的表使用表分区。
 
-- 为未使用的记录预留空间
+- **为未使用的记录预留空间**
+
   如果你在表中需要百万行数据，它将立即占据这百万行所需的全部空间。RCT 表必须预分配表的所有存储空间，无论行是否实际存在。换句话说，行的大小将基于行中列可能的最大大小。行的大小将假设列处于其最大尺寸。
 
-- 溢出会导致性能下降
+- **溢出会导致性能下降**
+
   RCT 允许溢出记录。这些记录不包含在原始表定义中。这些记录被附加到现有表的末尾且不进行排序。换句话说，任何需要搜索 RCT 原始限制之外记录的查询都将扫描表末尾的所有记录。这会减慢性能，特别是当溢出记录较多时。
 
-- 无法 ALTER RCT 定义
+- **无法 ALTER RCT 定义**
+
   一旦确定了 RCT 的大小，就无法更改。要更改槽的数量，需要卸载（unload）并重建表。
 
 RCT 的最佳应用场景是查找表，或者在应用程序中频繁但大小不会增长的表。
 
 示例 5–38 显示了使用 `STUDENT_ID` 列作为序列值创建表。
 
-```
+```sql
 CREATE TABLE STUDENTS (
   STUDENT_ID INT NOT NULL,
   FIRST_NAME CHAR(10) NOT NULL,
@@ -6338,11 +6069,15 @@ ORGANIZE BY KEY SEQUENCE
 DISALLOW OVERFLOW;
 ```
 
-示例 5–38 范围聚类表样本
+### 示例 5–38 范围聚类表样本
 
 ## 第 5 章 数据库对象
 
-ORGANIZE BY SEQUENCE 子句指示 DB2 该表将是 RCT 类型，并且 `STUDENT_ID` 将用作进入表的直接键。START 选项告诉 DB2 为此特定表分配多少个槽。在这种情况下，定义了 100 个槽，且无法在表末尾添加额外的记录（DISALLOW OVERFLOW）。
+
+
+# ORGANIZE BY SEQUENCE 子句
+
+`ORGANIZE BY SEQUENCE` 子句指示 DB2 该表将是 RCT 类型，并且 `STUDENT_ID` 将用作进入表的直接键。`START` 选项告诉 DB2 为此特定表分配多少个槽。在这种情况下，定义了 100 个槽，且无法在表末尾添加额外的记录（`DISALLOW OVERFLOW`）。
 
 如果尝试在表定义范围之外进行插入，DB2 将发出错误消息且插入将失败（示例 5–39）。
 
@@ -6354,7 +6089,7 @@ SQL1870 A row could not be inserted into a range-clustered table because a key s
 
 **示例 5–39** 在 RCT 范围外插入错误
 
-如果使用了 ALLOW OVERFLOW 关键字，插入将成功，但该行将被放在表的末尾。注意，表末尾并不会生成 900 个额外的槽来容纳 1001 记录！在初始范围之后插入的记录简单地放在表的末尾，无论键值如何。
+如果使用了 `ALLOW OVERFLOW` 关键字，插入将成功，但该行将被放在表的末尾。注意，表末尾并不会生成 900 个额外的槽来容纳 1001 记录！在初始范围之后插入的记录简单地放在表的末尾，无论键值如何。
 
 在 RCT 定义中还可以指定多个范围。示例 5–40 显示了一个使用三个维度的 RCT 表：`SCHOOL_ID`、`CLASS_ID` 和 `STUDENT_NUM`。该表的总行数等于这些键的基数（值）的乘积。在这种情况下，它将是 5×10×20 或 1000 行。
 
@@ -6376,9 +6111,9 @@ ALLOW OVERFLOW;
 
 示例 5–40 多个维度的 RCT
 
-## 视图
+# 视图
 
-视图是使用 `CREATE VIEW` 语句创建的虚拟表。一旦定义了视图，就可以使用 SELECT、INSERT、UPDATE 和 DELETE 等 DML 语句进行访问。我们将在第 7 章讨论类型视图。通过视图可以创建表的子集。视图如下所示（示例 5–41）。
+视图是使用 `CREATE VIEW` 语句创建的虚拟表。一旦定义了视图，就可以使用 `SELECT`、`INSERT`、`UPDATE` 和 `DELETE` 等 DML 语句进行访问。我们将在第 7 章讨论类型视图。通过视图可以创建表的子集。视图如下所示（示例 5–41）。
 
 ```
 CREATE VIEW VIEW1
@@ -6402,27 +6137,25 @@ WHERE DEPT=10;
 
 ## 带有检查的视图
 
-如果视图定义包含条件（例如 `WHERE` 子句）并且使用了 CHECK OPTION，以确保任何引用视图的 INSERT 或 UPDATE 语句都符合这些条件。此选项可以确保数据的完整性。如果在插入或操作期间违反了条件，将返回 SQL 错误。
+如果视图定义包含条件（例如 `WHERE` 子句）并且使用了 `CHECK OPTION`，以确保任何引用视图的 `INSERT` 或 `UPDATE` 语句都符合这些条件。此选项可以确保数据的完整性。如果在插入或操作期间违反了条件，将返回 SQL 错误。
 
 (img/328)
 
 ## 嵌套视图定义
 
-如果视图基于另一个视图，则根据 CHECK OPTION 规范需要评估的谓词数量。
+如果视图基于另一个视图，则根据 `CHECK OPTION` 规范需要评估的谓词数量。
 
 如果使用 `WITHOUT CHECK OPTION` 定义视图，则视图的定义将不会用于插入或更新操作。然而，如果视图直接或间接地依赖于另一个带有 `WITH CHECK OPTION` 的视图，则父视图的定义将用于插入或更新操作检查。
 
-如果使用 `CASCED CHECK OPTION` 或 `WITH CHECKOPTION`（WITH CHECK OPTION 的默认值）定义视图，则视图的定义将用于插入或更新操作检查。此外，视图还将继承其所依据的可更新视图的搜索条件。
-
-
+如果使用 `CASCED CHECK OPTION` 或 `WITH CHECKOPTION`（`WITH CHECK OPTION` 的默认值）定义视图，则视图的定义将用于插入或更新操作检查。此外，视图还将继承其所依据的可更新视图的搜索条件。
 
 依赖关系。即使这些视图没有包含 `WITH CHECK OPTION`，这些条件也会被继承。然后，继承的条件将相乘，以符合适用于该视图或依赖于该视图的任何视图的任何插入或更新操作的约束。
 
-例如，如果视图 v2 基于视图 v1，且 v2 的检查选项定义为 `WITH CASCED CHECK OPTION` 定义，那么在对视图 v2 执行 `INSERT` 和 `UPDATE` 语句时，将评估这两个视图的谓词。图 5–43 显示了一个使用 `WITH CASCED CHECK OPTION` 的 `CREATE VIEW` 语句。视图 EMP_VIEW3 是基于视图 EMP_VIEW2 创建的，而 EMP_VIEW2 在创建时使用了 `WITH CHECK OPTION`（示例 5–42）。如果你想插入或更新 EMP_VIEW3 的记录，该记录的值必须为 `DEPTNO=10` 且 `EMPNO>20`。
+例如，如果视图 `v2` 基于视图 `v1`，且 `v2` 的检查选项定义为 `WITH CASCED CHECK OPTION` 定义，那么在对视图 `v2` 执行 `INSERT` 和 `UPDATE` 语句时，将评估这两个视图的谓词。图 5–43 显示了一个使用 `WITH CASCED CHECK OPTION` 的 `CREATE VIEW` 语句。视图 `EMP_VIEW3` 是基于视图 `EMP_VIEW2` 创建的，而 `EMP_VIEW2` 在创建时使用了 `WITH CHECK OPTION`（示例 5–42）。如果你想插入或更新 `EMP_VIEW3` 的记录，该记录的值必须为 `DEPTNO=10` 且 `EMPNO>20`。
 
 ## DB2 注意
 
-请注意，即使 EMP_VIEW2 不包含 `WITH CHECK OPTION`，在对 EMP_VIEW3 执行插入和更新操作时，也会强制执行 `DEPTNO=10` 条件。
+请注意，即使 `EMP_VIEW2` 不包含 `WITH CHECK OPTION`，在对 `EMP_VIEW3` 执行插入和更新操作时，也会强制执行 `DEPTNO=10` 条件。
 
 ```sql
 CREATE VIEW EMP_VIEW3 AS
@@ -6446,55 +6179,74 @@ CREATE VIEW V5 AS SELECT * FROM V4 WHERE C5=1;
 
 ## 示例 5–44 嵌套视图表和创建语句
 
-我们创建了一个表和五个视图。v2 依赖于 v1，v3 依赖于 v2，v4 依赖 v3，v5 依赖于 v4。v4 包含 `LOCAL CHECK OPTION`，v4 包含 `CASCED CHECK OPTION`。让我们对这些视图测试一些插入语句。
+我们创建了一个表和五个视图。`v2` 依赖于 `v1`，`v3` 依赖于 `v2`，`v4` 依赖 `v3`，`v5` 依赖于 `v4`。`v4` 包含 `LOCAL CHECK OPTION`，`v4` 包含 `CASCED CHECK OPTION`。让我们对这些视图测试一些插入语句。
 
-- 1. 这条插入语句成功，因为视图 v1 不包含 `CHECK OPTION`。
+1. 这条插入语句成功，因为视图 `v1` 不包含 `CHECK OPTION`。
+
 ```sql
 INSERT INTO v1 VALUES (2,1,1,1);
 ```
-- 2. 下一个插入语句将导致错误，因为 v2 包含 `CHECK OPTION`，且该值不符合 v2 的定义。
+
+2. 下一个插入语句将导致错误，因为 `v2` 包含 `CHECK OPTION`，且该值不符合 `v2` 的定义。
+
 ```sql
 INSERT INTO v2 VALUES (1,2,1,1);
 ```
-- 3. 下一个插入语句成功，因为 v2 包含 `CHECK OPTION`，这意味着使用 v2 的定义进行检查，但没有使用 v1 的值。因此，无论列 C1 的值是什么，都能成功。
+
+3. 下一个插入语句成功，因为 `v2` 包含 `CHECK OPTION`，这意味着使用 `v2` 的定义进行检查，但没有使用 `v1` 的值。因此，无论列 `C1` 的值是什么，都能成功。
+
 ```sql
 INSERT INTO v2 VALUES (2,1,1,1);
 ```
-- 4. 下一个插入返回错误，尽管 v3 不包含 `CHECK OPTION`，因为 v3 会从其直接或间接依赖的视图继承条件（如果这些视图具有 `CHECK OPTION`）。因此，v2 的搜索条件 `c2=1` 被继承并用于此插入插入的检查。
+
+4. 下一个插入返回错误，尽管 `v3` 不包含 `CHECK OPTION`，因为 `v3` 会从其直接或间接依赖的视图继承条件（如果这些视图具有 `CHECK OPTION`）。因此，`v2` 的搜索条件 `c2=1` 被继承并用于此插入插入的检查。
+
 ```sql
 INSERT INTO v3 VALUES (1,2,1,1);
 ```
-- 5. 下一个插入成功，因为 v3 没有继承 v1 的定义。
+
+5. 下一个插入成功，因为 `v3` 没有继承 `v1` 的定义。
+
 ```sql
 INSERT INTO v3 VALUES (2,1,1,1);
 ```
-- 6. 下一个插入应该返回错误，因为 v4 包含 `CASCED CHECK OPTION`，但该值不符合 v4 的定义。
+
+6. 下一个插入应该返回错误，因为 `v4` 包含 `CASCED CHECK OPTION`，但该值不符合 `v4` 的定义。
+
 ```sql
 INSERT INTO v4 VALUES (1,1,1,2,1);
 ```
-- 7. 这些插入语句返回错误，因为 v4 继承了 v4、v3、v2 和 v1 的所有搜索条件。这些语句中的每一个都不符合 v3 或 v1 的定义。
+
+7. 这些插入语句返回错误，因为 `v4` 继承了 `v4`、`v3`、`v2` 和 `v1` 的所有搜索条件。这些语句中的每一个都不符合 `v3` 或 `v1` 的定义。
+
 ```sql
 INSERT INTO V4 VALUES (1,1,2,1,1);
 INSERT INTO V4 VALUES (2,1,1,1,1);
 ```
-- 8. 这一执行成功，因为 v5 不包含 `CHECK OPTION`，这意味着条件 `C5=1` 不被使用。
+
+8. 这一执行成功，因为 `v5` 不包含 `CHECK OPTION`，这意味着条件 `C5=1` 不被使用。
+
 ```sql
 INSERT INTO V5 VALUES (1,1,1,1,1,2);
 ```
-- 9. 此插入返回错误，原因与第四个示例相同：v5 继承了 v4 的定义，即 `c4=4`。此插入不符合该条件。
+
+9. 此插入返回错误，原因与第四个示例相同：`v5` 继承了 `v4` 的定义，即 `c4=4`。此插入不符合该条件。
+
 ```sql
 INSERT INTO V5 VALUES (1,1,1,2,1);
 ```
-- 10. 最后一个示例返回错误，因为插入的行使用 v4 进行了检查，而 v4 继承了 v3 的定义。
+
+10. 最后一个示例返回错误，因为插入的行使用 `v4` 进行了检查，而 `v4` 继承了 `v3` 的定义。
+
 ```sql
 INSERT INTO V5 VALUES (1,1,2,1,1);
 ```
 
-向 v5 插入行必须符合 v1、v2、v3 和 v4 的搜索条件。如果为 v4 指定了 `WITH CHECK OPTION`，则必须满足 v4 的搜索条件。
+向 `v5` 插入行必须符合 `v1`、`v2`、`v3` 和 `v4` 的搜索条件。如果为 `v4` 指定了 `WITH CHECK OPTION`，则必须满足 `v4` 的搜索条件。
 
 # 修改视图
 
-视图是逻辑表定义。视图定义存储在字典中。如果需要更改视图，必须删除并重新创建（注意在 DB2 中可以使用 `ALTER VIEW` 语句来更改视图）。如果任何基础表被删除，视图将失效。视图定义包含在系统目录 SYSCAT.VIEWS 中。
+视图是逻辑表定义。视图定义存储在字典中。如果需要更改视图，必须删除并重新创建（注意在 DB2 中可以使用 `ALTER VIEW` 语句来更改视图）。如果任何基础表被删除，视图将失效。视图定义包含在系统目录 `SYSCAT.VIEWS` 中。
 
 | VIEWNAME | VIEWCHECK | READONLY | VALID |
 | :--- | :--- | :--- | :--- |
@@ -6531,24 +6283,19 @@ DB2 产品包含包含所有 DB2 成员之间联邦 SQL 请求的支持。对其
 
 设置联邦服务器的基本步骤为：
 
-- 1. 安装并配置客户端配置软件。
-- 2. 在作为联邦服务器的服务器上安装 DB2 服务器软件。这包括：
-  - 在联邦服务器上创建 DB2 实例。
-  - 指定该实例的用户权限信息。
-- 3. 在联邦服务器上安装并配置任何其他所需的软件。
-
-
-
+1. 安装并配置客户端配置软件。
+2. 在作为联邦服务器的服务器上安装 DB2 服务器软件。这包括：
+   - 在联邦服务器上创建 DB2 实例。
+   - 指定该实例的用户权限信息。
+3. 在联邦服务器上安装并配置任何其他所需的软件。
 
 # 第5章 数据库对象
 
 4. 检查服务器设置。这包括：
-
-- 确认客户端库与 DB2 之间的链接。
-- 确保封装库文件具有正确的权限。
-- 检查数据源环境变量。
-- 验证 FEDERATED 参数已设置为 YES。
-
+   - 确认客户端库与 DB2 之间的链接。
+   - 确保封装库文件具有正确的权限。
+   - 检查数据源环境变量。
+   - 验证 `FEDERATED` 参数已设置为 `YES`。
 5. 在联邦服务器实例上创建一个 DB2 数据库，该数据库将作为联邦数据库使用。
 
 一旦建立了联邦服务器和别名（nicknames），这些表就可以在 SQL 语句中与其他表一起使用。从用户的角度来看，这些表与本地数据库中的表没有区别。书中描述的大多数 DML（数据操纵语言）都可用于对联邦对象进行操作。
@@ -6569,7 +6316,7 @@ CREATE WRAPPER DRDA;
 
 ## 示例 5–48 创建 DB2 封装器
 
-定义服务器后，必须定义远程数据库。这些服务器定义将用于别名定义。例如，下面的服务器定义将 SAMPLE 数据库重新定义为远程服务器（示例 5–49）：
+定义服务器后，必须定义远程数据库。这些服务器定义将用于别名定义。例如，下面的服务器定义将 `SAMPLE` 数据库重新定义为远程服务器（示例 5–49）：
 
 ```
 CREATE SERVER V95SAMPLE
@@ -6584,7 +6331,7 @@ OPTIONS ( DBNAME 'SAMPLE' );
 
 # 表 309
 
-CREATE SERVER 命令必须指定具有 SYSADM 或 DBADM 权限连接远程源的用户和密码。该语句告诉 DB2 本地服务器名称 V9SAMPLE 映射到名为 SAMPLE 的实际数据库。对于所有后续命令，V9SAMPLE 将是我们引用的数据库名称。
+`CREATE SERVER` 命令必须指定具有 `SYSADM` 或 `DBADM` 权限连接远程源的用户和密码。该语句告诉 DB2 本地服务器名称 `V9SAMPLE` 映射到名为 `SAMPLE` 的实际数据库。对于所有后续命令，`V9SAMPLE` 将是我们引用的数据库名称。
 
 现在服务器定义完成，需要创建一个用户映射（示例 5–50），以便发布 SQL 的用户可以在远程站点通过身份验证。
 
@@ -6605,14 +6352,14 @@ CREATE NICKNAME R_DEPT FOR V9SAMPLE.BAKLARZ.DEPARTMENT;
 
 ## 示例 5–51 表别名
 
-此简单示例在 V9SAMPLE 数据库（实际上是 SAMPLE 数据库）的 DEPARTMENT 表上创建了一个别名。这意味着 R_DEPT 表与 DEPARTMENT 表完全相同，但 DB2 仍然认为它们是两个不同的对象。别名创建后，可以像使用另一个本地表一样相同的方式使用此表。例如，下面的 select 语句将访问此远程表，但这一事实对用户是隐藏的（示例 5–52）：
+此简单示例在 `V9SAMPLE` 数据库（实际上是 `SAMPLE` 数据库）的 `DEPARTMENT` 表上创建了一个别名。这意味着 `R_DEPT` 表与 `DEPARTMENT` 表完全相同，但 DB2 仍然认为它们是两个不同的对象。别名创建后，可以像使用另一个本地表一样相同的方式使用此表。例如，下面的 `SELECT` 语句将访问此远程表，但这一事实对用户是隐藏的（示例 5–52）：
 
 ```
 SELECT * FROM R_DEPT;
 ```
 
 | DEPTNAME | MGRNO | ADMRDEPT | LOCATION |
-|---|---|---|--|
+|---|---|---|---|
 | A00 SPIFFY COMPUTER SERVICE DIV. | 000010 | A00 | - |
 | B01 PLANNING | 000020 | A00 | - |
 | C01 INFORMATION CENTER | 000030 | A00 | - |
@@ -6645,6 +6392,9 @@ WHERE R.MGRNO = E.EMPNO ;
 ```
 
 | MGRNO | LASTNAME | DEPTNAME |
+
+
+
 |---|---|---|
 | 000010 HAAS | SPIFFY COMPUTER SERVICE DIV. | |
 | 000020 KWAN | PLANNING | |
@@ -6659,11 +6409,11 @@ WHERE R.MGRNO = E.EMPNO ;
 
 ## 示例 5–53 联邦表连接
 
-对联邦表的 EXPLAIN 功能如图 5–11 所示：
+对联邦表的 `EXPLAIN` 功能如图 5–11 所示：
 
 ![](img/2fc748b6558d6b9bbc7356ac411338_0)
 
-**图 5–11 联邦连接的可视化**
+**图 5–11** 联邦连接的可视化
 
 有关联邦数据库和表的更多信息，请参考 *DB2 参考*。
 
@@ -6674,13 +6424,13 @@ WHERE R.MGRNO = E.EMPNO ;
 - 确保唯一性
 - 提高性能
 
-# 第5章 数据库对象
+# 第 5 章 数据库对象
 
 特定的表上可以定义多个索引，这会对查询产生有益。然而，索引越多，数据库管理器在更新、删除和插入期间需要的工作就越多。
 
-# 唯一索引和非唯一索引
+## 唯一索引和非唯一索引
 
-唯一索引保证一个或多个列数据的唯一性。唯一索引可以在查询处理期间执行更快的检索。唯一性在更新行或插入新行的 SQL 语句结束时强制。执行 CREATE 语句时也会检查唯一性。如果表已包含重复键值，则不会创建索引。
+唯一索引保证一个或多个列数据的唯一性。唯一索引可以在查询处理期间执行更快的检索。唯一性在更新行或插入新行的 SQL 语句结束时强制。执行 `CREATE` 语句时也会检查唯一性。如果表已包含重复键值，则不会创建索引。
 
 非唯一索引也可以通过维护排序来提高性能。
 
@@ -6688,29 +6438,28 @@ WHERE R.MGRNO = E.EMPNO ;
 
 - 标量键是单列。
 - 复合键由两个或多个列组成。
-- 以下是用于实现约束的键：
+
+以下是用于实现约束的键：
 
 - 唯一键用于实现唯一约束。唯一约束不允许不同的行在键上具有相同的值。
-- 主键用于实现实体完整性约束。每个表只能有一个主键。主键列必须定义为 NOT 属性。
-- 外键用于实现引用完整性约束。外键只能引用主键或唯一约束中的定义，或为 NULL（外键不是索引。）
+- 主键用于实现实体完整性约束。每个表只能有一个主键。主键列必须定义为 `NOT` 属性。
+- 外键用于实现引用完整性约束。外键只能引用主键或唯一约束中的定义，或为 `NULL`（外键不是索引。）
 
-# 引用完整性和索引
+## 引用完整性和索引
 
-我们讨论了定义主键如何确保行的唯一性，并使用索引维护主键。支持主键或唯一键约束的索引可以显式删除。要删除主键或唯一键索引，需要使用 ALTER TABLE 语句。主键索引通过 DROP PRIMARY KEY 删除。
+我们讨论了定义主键如何确保行的唯一性，并使用索引维护主键。支持主键或唯一键约束的索引可以显式删除。要删除主键或唯一键索引，需要使用 `ALTER TABLE` 语句。主键索引通过 `DROP PRIMARY KEY` 删除。
 
+使用 `DROP UNIQUE (CONSTRAINT NAME)` 删除唯一索引。
 
+## DB2
 
-option. 使用 DROP UNIQUE (CONSTRAINT NAME) 删除唯一索引。
+DB2 使用唯一索引和 `NOT NULL` 选项来维护主键和唯一键约束。
 
-# DB2 
+## 空值与索引
 
-DB2 使用唯一索引和 NOT NULL 选项来维护主键和唯一键约束。
+理解主键（或键）约束与唯一索引之间的区别至关重要。DB2 使用两个元素来实现关系型数据库中的主键和唯一键概念：唯一索引和 `NOT NULL` 约束。因此，唯一索引本身并不强制键约束，因为它们允许空值。在处理索引时，空值被视为与所有其他空值相等。如果某列是唯一索引的键，你不能插入两次空值，因为这违反了索引的唯一性规则。
 
-# 空值与索引
-
-理解主键（或键）约束与唯一索引之间的区别至关重要。DB2 使用两个元素来实现关系型数据库中的主键和唯一键概念：唯一索引和 NOT NULL 约束。因此，唯一索引本身并不强制键约束，因为它们允许空值。在处理索引时，空值被视为与所有其他空值相等。如果某列是唯一索引的键，你不能插入两次空值，因为这违反了索引的唯一性规则。
-
-# 通用索引指南
+## 通用索引指南
 
 索引会占用磁盘空间。磁盘空间的大小取决于键列的长度和被索引的行数。随着更多数据插入到表中，索引的大小将会增加。因此，在规划数据库大小时，请考虑索引所需的磁盘空间。某些索引的考虑因素包括：
 
@@ -6719,15 +6468,15 @@ DB2 使用唯一索引和 NOT NULL 选项来维护主键和唯一键约束。
 
 你可以使用 Control Center（控制中心）估计索引消耗的磁盘空间。如果你在使用 Control Center 创建索引，你可以看到“Estimate Size”（估计大小）按钮。点击此按钮会弹出“Estimate Size”面板。你可以从该面板提供总行数等信息，并获取估计的大小。
 
-# DB2 
+## DB2
 
 索引键的最大列数为 64，表中允许的最大索引数为 32,767。最长的索引键（包括开销）为 8096 字节。注意，最大索引大小为所用页大小的 1/4。对于 4K 页，最大索引大小为 1024 字节。
 
 # 第 5 章数据库对象
 
-# 仅索引访问（唯一索引包含）
+## 仅索引访问（唯一索引包含）
 
-INCLUDE 子句指定附加到索引键列集的额外列。此此类包含的任何列都不用于强制唯一性。这些包含的列可以通过仅索引访问提高某些查询的性能。此选项可能会：
+`INCLUDE` 子句指定附加到索引键列集的额外列。此此类包含的任何列都不用于强制唯一性。这些包含的列可以通过仅索引访问提高某些查询的性能。此选项可能会：
 
 - 消除某些查询访问数据页的需求
 - 消除冗余索引
@@ -6735,7 +6484,7 @@ INCLUDE 子句指定附加到索引键列集的额外列。此此类包含的任
 
 参见下例。如果对该索引所在的表发布了 `IF EMPNO, FIRSTNAME, JOB FROM EMPNO`，则可以从索引中检索所有所需数据，而无需读取数据页。这可能会提高性能。
 
-```
+```sql
 CREATE UNIQUE INDEX EMP_IX
 ON EMPLOYEE(EMPNO)
 INCLUDE(FIRSTNAME, JOB);
@@ -6743,18 +6492,18 @@ INCLUDE(FIRSTNAME, JOB);
 
 示例 5–54 创建唯一索引
 
-# 双向索引
+## 双向索引
 
-ALLOW REVERSE SCAN 子句启用了正向和反向索引扫描，即按照索引创建时定义的顺序进行，以及以相反（反向）顺序进行。此选项允许你：
+`ALLOW REVERSE SCAN` 子句启用了正向和反向索引扫描，即按照索引创建时定义的顺序进行，以及以相反（反向）顺序进行。此选项允许你：
 
-- 方便 MIN 和 MAX 函数的使用
+- 方便 `MIN` 和 `MAX` 函数的使用
 - 获取之前的键
 - 消除 DB2 为反向扫描创建临时表的需求
 - 消除冗余的反向顺序索引
 
 如果索引跨越其叶页从左到右按升序排序，则双向索引包含指向两个方向的叶节点指针，即左和右相邻的叶页。因此，双向索引可以从左到右（升序）或从右到左（降序）扫描或遍历叶节点。例如：
 
-```
+```sql
 CREATE UNIQUE INDEX EMP_IDX
 ON EMPLOYEE(EMPNO)
 INCLUDE(FIRSTNAME, JOB)
@@ -6765,7 +6514,7 @@ ALLOW REVERSE SCANS;
 
 如果用户发布了以下选择语句：
 
-```
+```sql
 SELECT * FROM EMPLOYEE
 ORDER BY EMPNO DESC;
 ```
@@ -6774,21 +6523,21 @@ ORDER BY EMPNO DESC;
 
 DB2 不需要对结果进行排序，因为索引已经按照正确的顺序存储了数据。
 
-# DB2 
+## DB2
 
-DB2 9 默认创建双向索引。DB2 之前的版本要求在创建索引时显显式地定义反向扫描。
+DB2 9 默认创建双向索引。DB2 之前的版本要求在创建索引时显式地定义反向扫描。
 
-# 修改索引
+## 修改索引
 
-在不重新创建索引定义的情况下，无法更改索引属性。例如，你无法在删除删除定义并创建新索引的情况下向键列列表中添加列。你可以使用 COMMENT ON 语句添加注释来描述索引的用途。
+在不重新创建索引定义的情况下，无法更改索引属性。例如，你无法在删除定义并创建新索引的情况下向键列列表中添加列。你可以使用 `COMMENT ON` 语句添加注释来描述索引的用途。
 
-如果你想修改索引，必须先删除索引然后重新创建索引。没有 ALTER INDEX 语句。
+如果你想修改索引，必须先删除索引然后重新创建索引。没有 `ALTER INDEX` 语句。
 
-## 索引
+### 索引
 
 当你想要删除索引时，发布以下语句（示例 5–57）：
 
-```
+```sql
 DROP INDEX EMP_IX;
 ```
 
@@ -6796,7 +6545,7 @@ DROP INDEX EMP_IX;
 
 注意，依赖已删除索引的包（packages）将失效。
 
-# 索引顾问
+## 索引顾问
 
 DB2 Design Advisor（设计顾问）是一个用于自动为用户推荐创建索引的实用程序。Design Advisor 可以帮助你：
 
@@ -6809,10 +6558,10 @@ DB2 Design Advisor（设计顾问）是一个用于自动为用户推荐创建�
 可以使用以下任一方式调用 Design Advisor：
 
 - Control Center（控制中心）
-- 命令 db2advis
+- 命令 `db2advis`
 - 有关索引顾问的信息，请参阅《DB2 Administration Guide: Performance》。
 
-# 数据库设计与实现
+## 数据库设计与实现
 
 理解数据类型选择的最佳方法是设计应用程序并使用 DB2 实现该设计。我们将在 SAMPLE 数据库中创建若干表。
 
@@ -6829,41 +6578,34 @@ SAMPLE 数据库通常作为安装的一部分创建。如果你没有访问 SAM
 7. 确定候选人符合资格
 8. 生成各种报告
 
-如果将此应用程序放在自己的数据库中，则需要发布 CREATE DATABASE 命令，并且书中的后续示例都可以在该数据库上使用。DBCERT 应用程序的数据可以轻松地分为三个引用表和一个用于关联其他表的表。主关系可以定义为候选人在特定中心参加测试。
+如果将此应用程序放在自己的数据库中，则需要发布 `CREATE DATABASE` 命令，并且书中的后续示例都可以在该数据库上使用。DBCERT 应用程序的数据可以轻松地分为三个引用表和一个用于关联其他表的表。主关系可以定义为候选人在特定中心参加测试。
 
 # 认证测试表描述
 
 以下是认证测试应用程序表列表：
 
-- TEST_CANDIDATE 表存储 DB2 认证计划中每个候选人的信息。候选人姓名、地址、ID 和电话号码将存储在此表中。每行代表一个唯一的测试候选人（人员）。
+- `TEST_CANDIDATE` 表存储 DB2 认证计划中每个候选人的信息。候选人姓名、地址、ID 和电话号码将存储在此表中。每行代表一个唯一的测试候选人（人员）。
+- `TEST_CENTER` 表存储候选人参加 DB2 认证考试的测试中心信息。测试中心名称、地址、座位数和电话号码将存储在此表中。每行代表一个唯一的测试中心位置。
+- `TEST` 表存储每项 DB2 认证考试的信息。测试名称、类型、测试 ID、分数线（通过百分比）和长度将存储在此表中。每行代表一个唯一的测试。对于我们的示例，DB2 认证计划中有三个测试；因此该表中只有三行。
+- `TEST_TAKEN` 表关联其他三个表。它具有调度测试和跟踪每个测试结果的双重目的。数据如下。
 
-- TEST_CENTER 表存储候选人参加 DB2 认证考试的测试中心信息。测试中心名称、地址、座位数和电话号码将存储在此表中。每行代表一个唯一的测试中心位置。
-
-- TEST 表存储每项 DB2 认证考试的信息。测试名称、类型、测试 ID、分数线（通过百分比）和长度将存储在此表中。每行代表一个唯一的测试。对于我们的示例，DB2 认证计划中有三个测试；因此该表中只有三行。
-
-- TEST_TAKEN 表关联其他三个表。它具有调度测试和跟踪每个测试结果的双重目的。数据如下
-
-
-
-
-
-# 318 第5章 数据库对象
+# 318 第 5 章 数据库对象
 
 候选者的测试成绩、考试日期、开始时间和座位号将存储在此张表中。这将是四个表中最活跃的一个表，因为每个候选人必须参加多次考试才能获得认证，而每次参加的测试在该表中有一行对应的记录。
 
 一旦你定义了表及其关系，接下来应该定义以下内容：
 
-- 1. 用户定义数据类型
-- 2. 列
-- 3. (可选) 主键 (PK)
-- 4. (可选) 唯一键 (unique keys)
-- 5. (可选) 外键（引用约束）
-- 6. (可选) 表检查约束
-- 7. (可选) 触发器
+1. 用户定义数据类型
+2. 列
+3. （可选）主键（PK）
+4. （可选）唯一键（unique keys）
+5. （可选）外键（引用约束）
+6. （可选）表检查约束
+7. （可选）触发器
 
 在图 5–13 中展示了 DBACERT 的设计。矩形表示实体（表）。椭圆表示属性（列）。注意，某些列是派生（虚拟）列。派生列代表一个概念而非对象的物理属性的列。派生列包含在模型中，因为它们的值将由数据库使用约束机制进行填充。
 
-我们必须将图 5–13 中的属性映射到 DB2 内内置或用户定义的数据类型。为了演示 DB2 的一些强大功能，我们决定为许多属性创建不同的类型。
+我们必须将图 5–13 中的属性映射到 DB2 内置或用户定义的数据类型。为了演示 DB2 的一些强大功能，我们决定为许多属性创建不同的类型。
 
 为每个表设置主键是有益的，因为这可以确保行的唯一性。带有下划线的属性被用作主键。我们还将创建一些键来演示它们的用法。唯一键属性用双下划线表示。
 
@@ -6877,10 +6619,11 @@ SAMPLE 数据库通常作为安装的一部分创建。如果你没有访问 SAM
 
 图 5–14 显示了四个主表之间的引用关系。
 
-# 第5章 数据库对象
+# 第 5 章数据库对象
 
-PK 主键
-FK 外键
+`PK` 主键
+
+`FK` 外键
 
 | Test_Center |
 | :--- |
@@ -6892,7 +6635,7 @@ FK 外键
 | Test_Taken |
 | :--- |
 | Cid |
-| Tcid < |
+| Tcid |
 | Number |
 | Date_Taken |
 | Score |
@@ -6922,7 +6665,7 @@ FK 外键
 
 我们决定创建了一些用户定义数据类型，如示例 5–58 所示。`CANDIDATE_ID`、`TEST_ID`、`CENTER_ID` 和 `PHONE` 数据类型都是基于 `CHAR` 数据类型的固定长度字符串。选择这些属性被定义为用户定义，是因为它们在结构上具有意义，并且不应在与其他字符数据类型混合的表达式中使用它们。例如，可以定义一个电话号码数据类型，并创建一个用户定义函数来提取区号。该函数将仅用于电话数据类型。
 
-```
+```sql
 CREATE DISTINCT TYPE CANDIDATE_ID AS CHAR(8)
 WITH COMPARISONS;
 CREATE DISTINCT TYPE TEST_ID AS CHAR(6)
@@ -6951,11 +6694,11 @@ WITH COMPARISONS;
 
 每个 DB2 表都包含一个或多个列。表及其列都有名称。在之前的节中，我们讨论了所有可用于列定义的数据类型。
 
-数据使用 `INSERT OR UPDATE` SQL 语句存储在 DB2 表中。（`LOAD` 和 `IMPORT` 实用程序是其他选项。）通常，每列有一个值是有的。有时在 `INSERT` 语句中没有为某列提供值。如果列被定义为 `NOT NULL`，则 `INSERT` 语句将失败。
+数据使用 `INSERT OR UPDATE` SQL 语句存储在 DB2 表中。(`LOAD` 和 `IMPORT` 实用程序是其他选项。）通常，每列有一个值是有的。有时在 `INSERT` 语句中没有为某列提供值。如果列被定义为 `NOT NULL`，则 `INSERT` 语句将失败。
 
 示例 5–59 中的表包含 14 列。每个列都有一个名称和一个数据类型。`TEST_CANDIDATE` 表使用了两个用户定义数据类型。这些数据类型是 `CANDIDATE_ID` 和 `PHONE`。某些列还有约束。例如，除了 `HPHONE`、`INITIAL` 和 `PHOTO` 之外，所有列都指定了 `NOT NULL` 约束。
 
-```
+```sql
 CREATE TABLE TEST_CANDIDATE (
 CID CANDIDATE_ID NOT NULL,
 LNAME VARCHAR(30) NOT NULL,
@@ -6976,13 +6719,13 @@ CONSTRAINT UNIQUE_CANDIDATE PRIMARY KEY (CID));
 
 > 示例 5–59 创建 CANDIDATE 表
 
-# 键
+## 键
 
 键是列的集合。它们用于唯一标识一行。键可以根据它们组成的列或它们支持的数据库约束进行分类。
 
-# 定义主键
+## 定义主键
 
-为每个表设置主键是有益的，因为这可以确保行的唯一性。在示例 5–59 中，CANDIDATE 表的主键被定义为 CID。我们还将创建一些键来演示它们的用法。唯一键属性用双下划线表示。
+为每个表设置主键是有益的，因为这可以确保行的唯一性。在示例 5–59 中，CANDIDATE 表的主键被定义为 `CID`。我们还将创建一些键来演示它们的用法。唯一键属性用双下划线表示。
 
 在节一节中，我们提到 DBACERT 应用中使用了四个表。然而，图 5–13 所示的设计只定义了三个表。在“候选人参加测试”这一关系中定义了一个隐式表。该表用于存储候选人每次参加认证测试的记录。
 
@@ -7001,6 +6744,8 @@ CONSTRAINT UNIQUE_CANDIDATE PRIMARY KEY (CID));
 # 定义用户定义数据类型
 
 如果你希望利用用户定义数据类型，则必须在 `TABLE` 语句中引用它们之前对其进行定义。
+
+
 
 我们决定创建了一些用户定义数据类型，如示例 5–58 所示。`CANDIDATE_ID`、`TEST_ID`、`CENTER_ID` 和 `PHONE` 数据类型都是基于 `CHAR` 数据类型的固定长度字符串。选择这些属性被定义为用户定义，是因为它们在结构上具有意义，并且不应在与其他字符数据类型混合的表达式中使用它们。例如，可以定义一个电话号码数据类型，并创建一个用户定义函数来提取区号。该函数将仅用于电话数据类型。
 
@@ -7120,10 +6865,6 @@ CREATE TABLE TEST_CENTER (
 
 对于主键（如果尚不存在）或唯一键约束，总是创建一个唯一索引。如果你定义了约束名称，它将用于命名索引；否则，将使用系统生成的名称命名索引。
 
-
-
-
-
 ## 第 5 章 数据库对象
 
 ## 定义外键
@@ -7132,7 +6873,7 @@ CREATE TABLE TEST_CENTER (
 
 主键定义为列 CID、TCID 和 NUMBER。外键约束将执行以下操作：
 
-- * 如果候选表中的某条记录被删除，test_table 中所有匹配的记录将被删除（DELETE CASCADE）。
+- 如果候选表中的某条记录被删除，test_table 中所有匹配的记录将被删除（DELETE CASCADE）。
 - 如果 center 表中的某个考中心被删除，test_table 中所有匹配的记录将被删除（DELETE CASCADE）。
 - 如果 test 表中的某项考试被删除且 test_table 中存在匹配的记录，则 DELETE 语句将导致错误（DELETE RESTRICT）。
 - 如果 test 表中的某项考试被更新且 test_table 中存在匹配的记录，则 UPDATE 语句将导致错误（UPDATE RESTRICT）。
@@ -7220,9 +6961,6 @@ SQL 是一种集合语言，它的许多语言元素直接与关系代数术语�
 | 333 | 103 | 501 | 2023-01-02 | 10:00 | 11:00 | FAIL | H08 |
 | 333 | 103 | 502 | 2023-01-03 | 11:00 | 12:00 | PASS | I09 |
 
-
-
-
 即使表中添加了新列，此 SQL 也会提供相同的结果表。
 
 ## DB2 注意
@@ -7266,14 +7004,23 @@ SELECT CID,TCID,NUMBER FROM TEST_TAKEN;
 ```
 SELECT TCID,CID,NUMBER FROM TEST_TAKEN;
 ```
+
 TX01 111 500
+
 TX01 111 501
+
 TX01 111 502
+
 TR01 222 500
+
 TR01 222 502
+
 TR01 222 502
+
 TX01 333 500
+
 TX01 333 501
+
 TX01 333 502
 
 选择了 9 条记录。
@@ -7294,61 +7041,21 @@ TX01 333 502
 
 谓词是施在数据上的条件。条件的值可以是 TRUE（真）、FALSE（假）或 UNKNOWN（未知）。
 
-为了限制结果集，我们需要添加 `WHERE`。`WHERE` 子句指定了 DB2 在返回结果表之前评估的条件（谓词）。谓词有许多类型。在以下，等号 (=) 谓词用于限制行仅为在 TR01 测试中心参加过 DB2 认证考试的候选人（示例 6–5）。
 
-```
-SELECT TCID, CID FROM TEST_TAKEN
-WHERE TCID = 'TR01';
-```
 
-### 示例 6–5 限制行
-
-其他比较运算符，例如大于 (>)、小于 (<)、大于或等于 (>=)、小于或等于 (<=) 和不等于 (! !=) 可以在 `WHERE` 子句中使用。该语句是基础谓词的示例。基础谓词比较两个值。
-
-![](img/2fc7488b6558d6b99bbc7356ac4116b1_359_0.png)
-
-尝试执行 `SELECT TCID` 将导致数据类型兼容性错误，因为列 `TCID` 被定义为用户可定义数据类型 (UDT)。
-
-## 限制结果表大小
-
-DB2 不限制 `SELECT` 返回的行数。有时用户可能只需要前 100 行而不是整个列表。为了指示 `SELECT` 返回行的子集，必须在 SQL 末尾附加 `FETCH FIRST ... ROWS`（示例 6–6）：
-
-```
-SELECT * FROM TEST_TAKEN
-FETCH FIRST 5 ROWS;
-```
-
-| CID | TCID | NUMBER | DATE_TAKEN | START_TIME | FINISH_TIME | SCORE | FAIL | SEAT_NO |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 111 | TCID501 | 03/01/2003 | 11:30:00 | 12:30:00 | 65 | Y | 1 |
-| 111 | TCID501 | 02/02/2003 | 12:00:00 | 13:00:00 | 73 | Y | 1 |
-| 111 | TCID501 | 03/03/2003 | 12:30:00 | 13:30:00 | 67 | Y | 1 |
-| 222 | TR0501 | 01/01/2003 | ... | ... | ... | ... |
-
-（注：根据 OCR 清晰度截断了表中的行）选择了 5 条记录。结果表中列的顺序将始终与选择列表匹配。当提供了选择列表时，忽略 `CREATE TABLE` 或 `CREATE VIEW` 语句中定义的列顺序。
-
-> 示例 6–6 限制投影的结果表
-
-`SELECT` 关键字后面的列表被称为选择列表。
-
-等，我注意到提供的 OCR 文本包含了一些重复且格式混乱导致输出混乱。我将根据你的指令重新处理文本以确保输出整洁。
-
-**修正后的输出：**
-
-[content]
 即使表中添加了新列，此 SQL 也会提供相同的结果表。
 
 ## DB2 注意
 
-星号 (*) 用于引用表中的所有列。在这种情况下，结果表中列的顺序与 `CREATE TABLE` 或 `CREATE VIEW` 语句中指定的顺序相同。
+星号（`*`）用于引用表中的所有列。在这种情况下，结果表中列的顺序与`CREATE TABLE`或`CREATE VIEW`语句中指定的顺序相同。
 
-每个 `SELECT` 语句都包含 `FROM` 子句；它描述了数据源。我们的示例引用了一个名为 `TEST_TAKEN` 的表。`SELECT` 关键字后面的列列表被称为选择列表。
+每个`SELECT`语句都包含`FROM`子句；它描述了数据源。我们的示例引用了一个名为`TEST_TAKEN`的表。`SELECT`关键字后面的列列表被称为选择列表。
 
 ## 从表中投影列
 
-投影（Projection）是一种关系操作，允许你从表中检索列的子集。下一个示例限制了 `SELECT` 的输出，仅显示 `TEST_TAKEN` 表中的候选人 ID、测试中心和数字列（示例 6–3）。
+投影（Projection）是一种关系操作，允许你从表中检索列的子集。下一个示例限制了`SELECT`的输出，仅显示`TEST_TAKEN`表中的候选人 ID、测试中心和数字列（示例 6–3）。
 
-```
+```sql
 SELECT CID,TCID,NUMBER FROM TEST_TAKEN;
 ```
 
@@ -7368,16 +7075,18 @@ SELECT CID,TCID,NUMBER FROM TEST_TAKEN;
 
 > 示例 6–3 投影的结果表
 
-结果表中列的顺序将始终与选择列表中的匹配。当提供了选择列表时，忽略 `CREATE TABLE` 或 `CREATE VIEW` 语句中定义的列顺序。
+结果表中列的顺序将始终与选择列表中的匹配。当提供了选择列表时，忽略`CREATE TABLE`或`CREATE VIEW`语句中定义的列顺序。
 
 ## 修改列的顺序
 
-重排（Permutation）是一种关系操作，允许你更改结果表中列的顺序。当你以不同于 `CREATE TABLE` 语句中的顺序选择列时，就会使用重排。
+重排（Permutation）是一种关系操作，允许你更改结果表中列的顺序。当你以不同于`CREATE TABLE`语句中的顺序选择列时，就会使用重排。
 
 例如，为了在候选人 ID 和测试数字之前显示测试中心 ID，你可以执行以下操作（示例 6–4）：
 
-```
+```sql
 SELECT TCID,CID,NUMBER FROM TEST_TAKEN;
+```
+
 ```
 TX01 111 500
 TX01 111 501
@@ -7388,45 +7097,46 @@ TR01 222 502
 TX01 333 500
 TX01 333 501
 TX01 333 502
+```
 
 选择了 9 条记录。
 
 示例 6–4 重排的结果表
 
-此 `SELECT` 以不同于表中定义的顺序检索列，如示例 6–3 所示。
+此`SELECT`以不同于表中定义的顺序检索列，如示例 6–3 所示。
 
 > DB2 注意
 
-我们把 `SELECT` 的结果称为“结果表”，因为所有 `SELECT` 语句的结果看起来都像表，但并没有永久地存储在数据库中。
+我们把`SELECT`的结果称为“结果表”，因为所有`SELECT`语句的结果看起来都像表，但并没有永久地存储在数据库中。
 
 ## 从表中限制行
 
-限制（Restriction）是一种过滤表结果行的关系操作。限制通过使用 SQL `WHERE` 子句中指定的谓词来实现。
+限制（Restriction）是一种过滤表结果行的关系操作。限制通过使用 SQL `WHERE`子句中指定的谓词来实现。
 
 > DB2 注意
 
 谓词是施在数据上的条件。条件的值可以是 TRUE（真）、FALSE（假）或 UNKNOWN（未知）。
 
-为了限制结果集，我们需要添加 `WHERE`。`WHERE` 子句指定了 DB2 在返回结果表之前评估的条件（谓词）。谓词有许多类型。在以下，等号 (=) 谓词用于限制行仅为在 TR01 测试中心参加过 DB2 认证考试的候选人（示例 6–5）。
+为了限制结果集，我们需要添加`WHERE`。`WHERE`子句指定了 DB2 在返回结果表之前评估的条件（谓词）。谓词有许多类型。在以下，等号（`=`）谓词用于限制行仅为在 TR01 测试中心参加过 DB2 认证考试的候选人（示例 6–5）。
 
-```
+```sql
 SELECT TCID, CID FROM TEST_TAKEN
 WHERE TCID = 'TR01';
 ```
 
 ### 示例 6–5 限制行
 
-其他比较运算符，例如大于 (>)、小于 (<)、大于或等于 (>=)、小于或等于 (<=) 和不等于 (! !=) 可以在 `WHERE` 子句中使用。该语句是基础谓词的示例。基础谓词比较两个值。
+其他比较运算符，例如大于（`>`）、小于（`<`）、大于或等于（`>=`）、小于或等于（`<=`）和不等于（`!=`）可以在`WHERE`子句中使用。该语句是基础谓词的示例。基础谓词比较两个值。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_359_0.png)
 
-尝试执行 `SELECT TCID` 将导致数据类型兼容性错误，因为列 `TCID` 被定义为用户可定义数据类型 (UDT)。
+尝试执行`SELECT TCID`将导致数据类型兼容性错误，因为列`TCID`被定义为用户可定义数据类型（UDT）。
 
 ## 限制结果表大小
 
-DB2 不限制 `SELECT` 返回的行数。有时用户可能只需要前 100 行而不是整个列表。为了指示 `SELECT` 返回行的子集，必须在 SQL 末尾附加 `FETCH FIRST ... ROWS`（示例 6–6）：
+DB2 不限制`SELECT`返回的行数。有时用户可能只需要前 100 行而不是整个列表。为了指示`SELECT`返回行的子集，必须在 SQL 末尾附加`FETCH FIRST ... ROWS`（示例 6–6）：
 
-```
+```sql
 SELECT * FROM TEST_TAKEN
 FETCH FIRST 5 ROWS;
 ```
@@ -7438,136 +7148,22 @@ FETCH FIRST 5 ROWS;
 | 111 | TCID501 | 03/03/2003 | 12:30:00 | 13:30:00 | 67 | Y | 1 |
 | 222 | TR0501 | 01/01/2003 | ... | ... | ... | ... | ... |
 
-（注：根据 OCR 清晰度截断了表中的行）选择了 5 条记录。结果表中列的顺序将始终与选择列表匹配。当提供了选择列表时，忽略 `CREATE TABLE` 或 `CREATE VIEW` 语句中定义的列顺序。
+（注：根据 OCR 清晰度截断了表中的行）选择了 5 条记录。结果表中列的顺序将始终与选择列表匹配。当提供了选择列表时，忽略`CREATE TABLE`或`CREATE VIEW`语句中定义的列顺序。
 
 > 示例 6–6 限制投影的结果表
 
-`SELECT` 关键字后面的列表被称为选择列表。
-
-[/content]
-```
-
-等，提供的提示词文本在末尾包含了一些混乱的重复。我将根据文档的逻辑流提供一个**整洁的、合并版本**。
-
-***
-
-[content]
-即使表中添加了新列，此 SQL 也会提供相同的结果表。
-
-## DB2 注意
-
-星号 (*) 用于引用表中的所有列。在这种情况下，结果表中列的顺序与 `CREATE TABLE` 或 `CREATE VIEW` 语句中指定的顺序相同。
-
-每个 `SELECT` 语句都包含 `FROM` 子句；它描述了数据源。我们的示例引用了一个名为 `TEST_TAKEN` 的表。`SELECT` 关键字后面的列列表被称为选择列表。
-
-## 从表中投影列
-
-投影（Projection）是一种关系操作，允许你从表中检索列的子集。下一个示例限制了 `SELECT` 的输出，仅显示 `TEST_TAKEN` 表中的候选人 ID、测试中心和数字列（示例 6–3）。
-
-```
-SELECT CID,TCID,NUMBER FROM TEST_TAKEN;
-```
-
-| CID | TCID | NUMBER |
-| :--- | :--- | :--- |
-| 111 | TX01 | 500 |
-| 111 | TX01 | 501 |
-| 111 | TX01 | 502 |
-| 222 | TR01 | 500 |
-| 222 | TR01 | 502 |
-| 222 | TR01 | 502 |
-| 333 | TX01 | 500 |
-| 333 | TX01 | 501 |
-| 333 | TX01 | 502 |
-
-选择了 9 条记录。
-
-> 示例 6–3 投影的结果表
-
-结果表中列的顺序将始终与选择列表中的匹配。当提供了选择列表时，忽略 `CREATE TABLE` 或 `CREATE VIEW` 语句中定义的列顺序。
-
-## 修改列的顺序
-
-重排（Permutation）是一种关系操作，允许你更改结果表中列的顺序。当你以不同于 `CREATE TABLE` 语句中的顺序选择列时，就会使用重排。
-
-例如，为了在候选人 ID 和测试数字之前显示测试中心 ID，你可以执行以下操作（示例 6–4）：
-
-```
-SELECT TCID,CID,NUMBER FROM TEST_TAKEN;
-```
-TX01 111 500
-TX01 111 501
-TX01 111 502
-TR01 222 500
-TR01 222 502
-TR01 222 502
-TX01 333 500
-TX01 333 501
-TX01 333 502
-
-选择了 9 条记录。
-
-示例 6–4 重排的结果表
-
-此 `SELECT` 以不同于表中定义的顺序检索列，如示例 6–3 所示。
-
-> DB2 注意
-
-我们把 `SELECT` 的结果称为“结果表”，因为所有 `SELECT` 语句的结果看起来都像表，但并没有永久地存储在数据库中。
-
-## 从表中限制行
-
-限制（Restriction）是一种过滤表结果行的关系操作。限制通过使用 SQL `WHERE` 子句中指定的谓词来实现。
-
-> DB2 注意
-
-谓词是施在数据上的条件。条件的值可以是 TRUE（真）、FALSE（假）或 UNKNOWN（未知）。
-
-为了限制结果集，我们需要添加 `WHERE`。`WHERE` 子句指定了 DB2 在返回结果表之前评估的条件（谓词）。谓词有许多类型。在以下，等号 (=) 谓词用于限制行仅为在 TR01 测试中心参加过 DB2 认证考试的候选人（示例 6–5）。
-
-```
-SELECT TCID, CID FROM TEST_TAKEN
-WHERE TCID = 'TR01';
-```
-
-### 示例 6–5 限制行
-
-其他比较运算符，例如大于 (>)、小于 (<)、大于或等于 (>=)、小于或等于 (<=) 和不等于 (! !=) 可以在 `WHERE` 子句中使用。该语句是基础谓词的示例。基础谓词比较两个值。
-
-![](img/2fc7488b6558d6b99bbc7356ac4116b1_359_0.png)
-
-尝试执行 `SELECT TCID` 将导致数据类型兼容性错误，因为列 `TCID` 被定义为用户可定义数据类型 (UDT)。
-
-## 限制结果表大小
-
-DB2 不限制 `SELECT` 返回的行数。有时用户可能只需要前 100 行而不是整个列表。为了指示 `SELECT` 返回行的子集，必须在 SQL 末尾附加 `FETCH FIRST ... ROWS`（示例 6–6）：
-
-```
-SELECT * FROM TEST_TAKEN
-FETCH FIRST 5 ROWS;
-```
-
-| CID | TCID | NUMBER | DATE_TAKEN | START_TIME | FINISH_TIME | SCORE | FAIL | SEAT_NO |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 111 | TCID501 | 03/01/2003 | 11:30:00 | 12:30:00 | 65 | Y | 1 |
-| 111 | TCID501 | 02/02/2003 | 12:00:00 | 13:00:00 | 73 | Y | 1 |
-| 111 | TCID501 | 03/03/2003 | 12:30:00 | 13:30:00 | 67 | Y | 1 |
-| 222 | TR0501 | 01/01/2003 | ... | ... | ... | ... | ... |
-
-选择了 5 条记录。
-
-
+`SELECT`关键字后面的列表被称为选择列表。
 
 结果表的行数始终等于所访问的每个表中符合条件的行数之乘积。
 
-以下示例从 TEST 表中检索所有的测试编号和测试名称（示例 6–11）。
+以下示例从`TEST`表中检索所有的测试编号和测试名称（示例 6–11）。
 
 ```sql
 SELECT NUMBER,NAME FROM TEST;
 ```
 
 | NUMBER | NAME |
-||||
+| :--- | :--- |
 | 500 | DB2 Fundamentals |
 | 501 | DB2 Administration |
 | 502 | DB2 Application Development |
@@ -7576,14 +7172,14 @@ SELECT NUMBER,NAME FROM TEST;
 
 ## 示例 6–11 简单查询 (1)
 
-以下示例从 TEST_TAKEN 表检索所有的候选人 ID 和测试中心 ID（示例 6–12）。
+以下示例从`TEST_TAKEN`表检索所有的候选人 ID 和测试中心 ID（示例 6–12）。
 
 ```sql
 SELECT CID,TCID FROM TEST_TAKEN;
 ```
 
 | CID | TCID |
-||||
+| :--- | :--- |
 | 222 | TR01 |
 | 222 | TR01 |
 | 222 | TR01 |
@@ -7605,7 +7201,7 @@ SELECT TEST_TAKEN.NUMBER,CID,TCID FROM TEST_TAKEN,TEST;
 ```
 
 | NUMBER | CID | TCID |
-|||||
+| :--- | :--- | :--- |
 | 500 | 111 | TX01 |
 | 501 | 111 | TX01 |
 | 502 | 222 | TR01 |
@@ -7628,9 +7224,9 @@ SELECT TEST_TAKEN.NUMBER,CID,TCID FROM TEST_TAKEN,TEST;
 
 ## 示例 6–13 笛卡尔积查询（续）
 
-此 SELECT 语句的 FROM 子句中引用了两个表。表之间用逗号分隔。没有限制要检索行的谓词（predicate）。这种类型的 SELECT会导致笛卡尔积。
+此`SELECT`语句的`FROM`子句中引用了两个表。表之间用逗号分隔。没有限制要检索行的谓词（predicate）。这种类型的`SELECT`会导致笛卡尔积。
 
-结果表是输入表所有可能组合的表示。TEST 表有三行，TEST_TAKEN 表有九行。因此，示例 6–13 所示的 SELECT 返回了 27 行。注意示例 6–13 中的第一个列名。由于该列同时存在于 TEST 和 TEST_TAKEN 表中，因此必须使用模式和表名对列名进行完全限定。在这种情况下，我们需要添加一个谓词，以便 NUMBER 列是从 TEST_TAKEN 表而不是 TEST 表中检索的。
+结果表是输入表所有可能组合的表示。`TEST`表有三行，`TEST_TAKEN`表有九行。因此，示例 6–13 所示的`SELECT`返回了 27 行。注意示例 6–13 中的第一个列名。由于该列同时存在于`TEST`和`TEST_TAKEN`表中，因此必须使用模式和表名对列名进行完全限定。在这种情况下，我们需要添加一个谓词，以便`NUMBER`列是从`TEST_TAKEN`表而不是`TEST`表中检索的。
 
 通过在原始语句中添加谓词，结果表可以代表更有用的数据表示。在示例 6–14 中，该查询表示了 ID 为 111 的候选人所参加的所有测试。
 
@@ -7640,8 +7236,10 @@ FROM TEST_TAKEN,TEST
 WHERE CID=CANDIDATE_ID('111')
 ```
 
+
+
 | | |
-|---|--|
+|---|---|
 | 500 | 111 Tx01 |
 | 500 | 111 Tx01 |
 | 500 | 111 Tx01 |
@@ -7656,7 +7254,7 @@ WHERE CID=CANDIDATE_ID('111')
 
 ## 示例 6–14 在 SELECT 中添加额外的谓词
 
-在查询中添加 WHERE 子句并不总是能提供结果。在示例 6–14 所示示例中，你想知道 ID 为 111 的候选人参加的所有测试，而查询返回了新行。然而，正如示例 6–15 的结果所示，该候选人只参加了三次测试。示例 6–14 中的查询使用 WHERE 子句从 TEST_TAKEN 表中过滤出 ID 为 111 的候选人，但对 TEST_CENTER 表没有进行过滤。因此，查询结果将始终是中心数量的倍数。通常，当引用多个表时，你应该像示例 6–15 所示，使用表连接（table join）包含跨表关系。
+在查询中添加 `WHERE` 子句并不总是能提供结果。在示例 6–14 所示示例中，你想知道 ID 为 111 的候选人参加的所有测试，而查询返回了新行。然而，正如示例 6–15 的结果所示，该候选人只参加了三次测试。示例 6–14 中的查询使用 `WHERE` 子句从 `TEST_TAKEN` 表中过滤出 ID 为 111 的候选人，但对 `TEST_CENTER` 表没有进行过滤。因此，查询结果将始终是中心数量的倍数。通常，当引用多个表时，你应该像示例 6–15 所示，使用表连接（table join）包含跨表关系。
 
 ```sql
 SELECT TEST_TAKEN.NUMBER,CID,TCID
@@ -7666,7 +7264,7 @@ AND TEST_TAKEN.NUMBER=TEST.NUMBER;
 ```
 
 | NUMBER | CID | TCID |
-||||
+|---|---|---|
 | 500 | 111 | TX01 |
 | 501 | 111 | TX01 |
 | 502 | 111 | TX01 |
@@ -7677,16 +7275,16 @@ AND TEST_TAKEN.NUMBER=TEST.NUMBER;
 
 为了避免数据冗余，建议对数据库表进行规范一化。遵循规范一化过程后将存在多个相关表。为了满足某些所需的查询，必须重建这些表。通过表连接临时重建表以生成单个结果表。
 
-之前示例中的结果通常提供候选人编号而不是测试的完整名称。候选人 ID 存储在 TEST_TAKEN 表中，全名存储在 TEST_CANDIDATE 表中。要获取候选人的姓名，必须使用连接策略从 TEST_CANDIDATE 表中检索数据。
+之前示例中的结果通常提供候选人编号而不是测试的完整名称。候选人 ID 存储在 `TEST_TAKEN` 表中，全名存储在 `TEST_CANDIDATE` 表中。要获取候选人的姓名，必须使用连接策略从 `TEST_CANDIDATE` 表中检索数据。
 
 考虑一个示例，列出在 2007 年参加 DB2 认证测试的候选人的姓名和电话。为了实现这一点，我们需要从不同的表中选择数据：
 
-- TEST_CANDIDATE
-- TEST_TAKEN
+- `TEST_CANDIDATE`
+- `TEST_TAKEN`
 
 ## 第 6 章操作数据库对象
 
-让我们从 TEST_CANDIDATE 表中检索候选人姓名、电话和 ID 列表。候选人姓名存储在多个列中，以便按名称检索（示例 6–16）。
+让我们从 `TEST_CANDIDATE` 表中检索候选人姓名、电话和 ID 列表。候选人姓名存储在多个列中，以便按名称检索（示例 6–16）。
 
 ```sql
 SELECT FNAME, INITIAL, LNAME, HPHONE, CID
@@ -7694,7 +7292,7 @@ FROM TEST_CANDIDATE;
 ```
 
 | FNAME | INITIAL | LNAME | HPHONE | CID |
-||||||
+|---|---|---|---|---|
 | Bill | W | wong | 111 | 555 |
 | George | W | Baklarz | 444 | 222 |
 | Susan | M | visser | 222 | 333 |
@@ -7708,7 +7306,7 @@ FROM TEST_CANDIDATE;
 
 ## 示例 6–16 示例查询结果
 
-注意 CID 列中的值。它将作为下一个示例中的连接列。现在，让我们检索在 2007 年参加测试的候选人的 ID。
+注意 `CID` 列中的值。它将作为下一个示例中的连接列。现在，让我们检索在 2007 年参加测试的候选人的 ID。
 
 ```sql
 SELECT DISTINCT CID FROM TEST_TAKEN
@@ -7725,7 +7323,7 @@ WHERE YEAR(DATE_TAKEN) = 2007;
 
 ## 示例 6–17 获取 ID
 
-TEST_TAKEN 表中的候选 ID 必须对应 TEST_CANDIDATE 表中的候选 ID，由于引用完整性约束。关系中的父表是 TEST_CANDIDATE 表，子表（依赖表）是 TEST_TAKEN 表。
+`TEST_TAKEN` 表中的候选 ID 必须对应 `TEST_CANDIDATE` 表中的候选 ID，由于引用完整性约束。关系中的父表是 `TEST_CANDIDATE` 表，子表（依赖表）是 `TEST_TAKEN` 表。
 
 示例 6–17 中的第二个查询结果不包含候选人 444，因为该候选人在2007 年没有测试。我们需要根据候选人 ID 连接两个结果表。该列被称为连接列。
 
@@ -7741,25 +7339,23 @@ AND TEST_TAKEN.CID = TEST_CANDIDATE.CID;
 
 ## 示例 6–18 选择 2007 年参加测试的候选人
 
-表连接需要一个包含 FROM 子句引用表的列的谓词。这被称为连接谓词。FROM 子句与笛卡尔积示例没有变化。区别在于连接谓词（TEST_TAKEN.CID = TEST_CANDIDATE.CID）。
+表连接需要一个包含 `FROM` 子句引用表的列的谓词。这被称为连接谓词。`FROM` 子句与笛卡尔积示例没有变化。区别在于连接谓词（`TEST_TAKEN.CID = TEST_CANDIDATE.CID`）。
 
 ### DB2 Note
-这种连接操作也称为内连接（INNER JOIN）。内连接仅显示两个连接表中都存在的行。由于引用的表中都存在名为 CID 的列，因此需要显式说明表名。
+这种连接操作也称为内连接（`INNER JOIN`）。内连接仅显示两个连接表中都存在的行。由于引用的表中都存在名为 `CID` 的列，因此需要显式说明表名。
 
 ### DB2 Note
-如果引用的列存在歧义（未正确限定），将发生错误。除了存储外，单个 SQL 语句中引用的表数量没有定义限制。但是，SELECT 列表中有一个 1012 个列的限制。（如果页面大小为 4K，选择列表中的最大列数为 500。）
-
-
-
+如果引用的列存在歧义（未正确限定），将发生错误。除了存储外，单个 SQL 语句中引用的表数量没有定义限制。但是，`SELECT` 列表中有一个 1012 个列的限制。（如果页面大小为 4K，选择列表中的最大列数为 500。）
 
 ## 第 6 章 操作数据库对象
+
 ### 使用关联名
 
-如果每个需要的列都必须使用表名进行完全限定（例如 `tableschema.tablename.columnname`），那么查询将变得非常庞大且难以处理。坦率地说，在多表 SELECT 语句中，消除列歧义有更简单的方法。
+如果每个需要的列都必须使用表名进行完全限定（例如 `tableschema.tablename.columnname`），那么查询将变得非常庞大且难以处理。坦率地说，在多表 `SELECT` 语句中，消除列歧义有更简单的方法。
 
 可以使用关联名来限定列。关联名是 SQL 语句中表的别名。我们可以使用关联名来重写之前的查询（如示例 6–19）：
 
-```
+```sql
 SELECT DISTINCT FNAME, INITIAL, LNAME, HPHONE
 FROM TEST TT, TEST_CANDIDATE AS C
 WHERE (DATE_TAKEN) = 2007
@@ -7780,7 +7376,7 @@ AND TT.CID = CID;
 
 以下示例生成了在 TR01 测试中心参加过 DB2 认证考试的候选人列表，并按姓（last name）的字母升序排列（示例 6–20）。
 
-```
+```sql
 SELECT LNAME, INITIAL, FNAME
 FROM TEST_CANDIDATE C, TEST_TAKEN TT
 WHERE C.CID = TT.CID AND
@@ -7788,13 +7384,13 @@ TCID = CENTER_ID('TR01')
 ORDER BY LNAME;
 ```
 
-### ### 示例 6–20 结果排序
+### 示例 6–20 结果排序
 
 此示例包含一个新子句 `ORDER BY`。在 `ORDER BY` 子句之后，你列出指定排序顺序和排序方向的列。
 
 上述 SQL 语句可以修改为姓氏降序、名字升序（示例 6–21）。
 
-```
+```sql
 SELECT LNAME, FNAME, HPHONE
 FROM TEST_CANDIDATE C, TEST_TAKEN TT
 WHERE C.CID=TT.CID
@@ -7802,13 +7398,13 @@ AND TCID=CENTER_ID('TR01')
 ORDER BY LNAME DESC, FNAME ASC;
 ```
 
-### ### 示例 6–21 多个排序列
+### 示例 6–21 多个排序列
 
-在此示例中，`LNAME` 列后的 `DESC` 关键字表示结果表应根据姓氏进行降序排列。多个记录可能具有相同的名称，这种情况非常常见。`ORDER BY` 子句中指定了第二个列 `FNAME ASC`。`ASC` 关键字指定值按升序序列排列。对于是是默认排序方式的列指定，可以省略 `ASC` 关键字。
+在此示例中，`LNAME` 列后的 `DESC` 关键字表示结果表应根据姓氏进行降序排列。多个记录可能具有相同的名称，这种情况非常常见。`ORDER BY` 子句中指定了第二个列 `FNAME ASC`。`ASC` 关键字指定值按升序序列排列。对于是默认排序方式的列指定，可以省略 `ASC` 关键字。
 
 下一个示例包含三列：`LNAME`、`FNAME` 和 `HPHONE`。你可以使用列名或指定其在 select 列表中的位置来引用应用于排序数据的列。当 select 列表中的列是由没有显式名称的派生列（计算列）组成时，使用列的位置非常有用。
 
-```
+```sql
 SELECT LNAME, FNAME, HPHONE
 FROM TEST_CANDIDATE C, TEST_TAKEN TT
 WHERE C.CID = TT.CID
@@ -7816,7 +7412,7 @@ AND TCID=CENTER_ID('TR01')
 ORDER BY 1 DESC, 2;
 ```
 
-### ### 示例 6–22 按列位置排序
+### 示例 6–22 按列位置排序
 
 在此示例中，排序顺序是使用列位置指定的。然而，查询结果与上一个示例完全相同。
 
@@ -7829,7 +7425,7 @@ ORDER BY 1 DESC, 2;
 
 `SELECT` 的结果集可以通过使用 `FETCH FIRST ... ROWS` 子句进行限制。该子句也可以应用于 `ORDER BY` 子句，以缩小排序结果表的大小。示例 6–23 返回所有候选人的最高分，并将排序结果限制为 5 行：
 
-```
+```sql
 SELECT CID, TCID, NUMBER, SCORE FROM TEST_TAKEN
 WHERE SCORE IS NOT NULL
 ORDER BY SCORE DESC FETCH FIRST 5 ROWS ONLY;
@@ -7845,13 +7441,13 @@ ORDER BY SCORE DESC FETCH FIRST 5 ROWS ONLY;
 
 选取了 5 条记录。
 
-示例 6–23 限制为 5 行的 ORDER BY 结果表
+示例 6–23 限制为 5 行的 `ORDER BY` 结果表
 
 ## 通过子查询排序
 
 `ORDER BY OF` 子句指定将之前的表标识符中的排序顺序应用于子查询的结果表。以下示例说明了如何使用它（示例 6–24）：
 
-```
+```sql
 SELECT E.EMPNO, E.LASTNAME, PAY FROM EMPLOYEE E,
 (SELECT EMPNO, SALARY+BONUS AS PAY FROM EMPLOYEE
 WHERE (SALARY+BONUS)>400
@@ -7859,18 +7455,15 @@ ORDER BY PAY DESC)
 WHERE E.EMPNO = ...
 ```
 
-示例 6–24 来自 ORDER BY 的结果表
+示例 6–24 来自 `ORDER BY` 的结果表
 
 （注：示例 6-24 的 OCR 文本在源文件中碎片化/损坏；已根据标准 SQL 模式和提供的上下文进行重构）。
 
-
-
-
 该字段。如果没有 `AS` 子句，读取 SQL 的人可能会将其误认为列名。
 
-计算结果也可以出现在排序列中，且不需要在 `select` 列表中。示例 6–29 实现了与上一个示例相同的结果，但使用的是计算而不是列名。
+计算结果也可以出现在排序列中，且不需要在 select 列表中。示例 6–29 实现了与上一个示例相同的结果，但使用的是计算而不是列名。
 
-```
+```sql
 SELECT NUMBER,TOTALPASSED*100/TOTALTAKEN AS PASSEDRATE
 FROM TEST
 ORDER BY TOTALPASSED*100/TOTALTAKEN DESC;
@@ -7900,7 +7493,7 @@ ORDER BY TOTALPASSED*100/TOTALTAKEN DESC;
 
 以下示例从 `WPHONE` 列中提取电话区码（示例 6–30）。
 
-```
+```sql
 SELECT LNAME, SUBSTR(WPHONE, 1, 3)
 FROM TEST_CANDIDATE;
 ```
@@ -7915,7 +7508,7 @@ FROM TEST_CANDIDATE;
 
 以下查询将提供考试时的月份。该函数的输入是 `DATE`，输出是字符字符串（示例 6–31）。
 
-```
+```sql
 SELECT FNAME, MONTHNAME(DATE_TAKEN)
 FROM TEST_CANDIDATE C, TEST_TAKEN TT
 WHERE C.CID=TT.CID;
@@ -7929,7 +7522,7 @@ WHERE C.CID=TT.CID;
 
 让我们获取任何 DB2 认证考试的最长持续时间（示例 6–32）：
 
-```
+```sql
 SELECT MAX(SMALLINT(LENGTH)) FROM TEST;
 ```
 
@@ -7941,7 +7534,7 @@ SELECT MAX(SMALLINT(LENGTH)) FROM TEST;
 
 下一个示例计算所有测试中心座数的平均值。注意在本示例中使用了列函数 `AVG`（示例 6–33）：
 
-```
+```sql
 SELECT AVG(NOSEATS) FROM TEST_CENTER;
 ```
 
@@ -7966,9 +7559,6 @@ GROUP BY COUNTRY;
 
 （注：OCR 文本包含重复短语/伪影；已根据逻辑流继续。）
 
-
-
-
 # 第 6 章 操作数据库对象
 
 ```sql
@@ -7977,7 +7567,7 @@ FROM TEST_CANDIDATE C,TEST_TAKEN TT
 WHERE C.CID=TT.CID;
 ```
 
-示例 6–38 DISTINCT 关键字
+示例 6–38 `DISTINCT` 关键字
 
 `DISTINCT` 关键字也可以与 `COUNT` 函数一起使用。在 `COUNT` 函数内部使用 `DISTINCT` 时，它不会统计特定列的重复条目。
 
@@ -8001,133 +7591,140 @@ SQL 拥有一个强大的谓词，允许你可以在字符字符串列中搜索�
 
 ```sql
 SELECT FNAME,LNAME,WPHONE,HPHONE FROM TEST_CANDIDATE
+```
+
+
+
+```sql
 WHERE FNAME LIKE 'G%' ORDER BY LNAME, FNAME;
 ```
 
-示例 6–40 字符串搜索
+### 示例 6–40 字符串搜索
 
-在此查询中，我们在 `LIKE` 谓词中使用了通配字符。
+在此查询中，我们在`LIKE`谓词中使用了通配字符。
 
-在 SQL 中，百分号字符 (`%`) 表示零或多个字符。搜索字符串 (`G%`) 可以与如 George、Geoffrey、Ginger 等名字匹配（因为百分号可以匹配零或多个字符，所以搜索字符串也可以匹配单个字母 G）。
+在 SQL 中，百分号字符（`%`）表示零或多个字符。搜索字符串（`G%`）可以与如 George、Geoffrey、Ginger 等名字匹配（因为百分号可以匹配零或多个字符，所以搜索字符串也可以匹配单个字母 G）。
 
-百分号可以用于搜索字符串中的任何位置。它也可以根据需要使用多次。百分号是不区分大小写写的，因此它可以代替大写或小写字母。然而，你的搜索字符串中包含的常量字符是区分大小写的。
+百分号可以用于搜索字符串中的任何位置。它也可以根据需要使用多次。百分号是不区分大小写的，因此它可以代替大写或小写字母。然而，你的搜索字符串中包含的常量字符是区分大小写的。
 
-另一个与 `LIKE` 谓词配合使用的通配符是下划线 (`_`)。该字符代表仅有的一个字符。下划线可以代表任何字符。但是，下划线不代表也不匹配任何空字符。
+另一个与`LIKE`谓词配合使用的通配符是下划线（`_`）。该字符代表仅有的一个字符。下划线可以代表任何字符。但是，下划线不代表也不匹配任何空字符。
 
-可以修改之前的 SQL 以包含所有考生的名字，以及名字第二个字母为小写字母 “a”的考生的电话（示例 6–41）。
+可以修改之前的 SQL，以包含所有考生的名字，以及名字第二个字母为小写字母“a”的考生的电话（示例 6–41）。
 
 ```sql
-SELECT FNAME,LNAME,WPHONE,HPHONE FROM TEST_CANDIDATE
-WHERE FNAME LIKE '_A%' ORDER BY LNAME,FNAME;
+SELECT FNAME, LNAME, WPHONE, HPHONE
+FROM TEST_CANDIDATE
+WHERE FNAME LIKE '_A%'
+ORDER BY LNAME, FNAME;
 ```
 
-# 示例 6–41 Like 函数
+### 示例 6–41 LIKE 函数
 
-此示例使用了两个与 `LIKE` 谓词配合工作的通配字符。在此示例中，搜索字符串可以包含如 Paul、Gabriel 或 Natalie 等名字。（第一个字符可以是任何字符，小写字母 “a” 是字符串中的第二个字符，字符串以任意数量的字符结束。）
+此示例使用了两个与`LIKE`谓词配合工作的通配字符。在此示例中，搜索字符串可以包含如 Paul、Gabriel 或 Natalie 等名字。（第一个字符可以是任何字符，小写字母“a”是字符串中的第二个字符，字符串以任意数量的字符结束。）
 
-# 范围范围数据
+## 范围数据
 
 SQL 还为我们提供了一个范围操作符。该运算符用于限制处于特定值范围内的行。
 
 考虑列出那些 DB2 认证考试分数在 60 到 75 之间的考生（示例 6–42）。
 
 ```sql
-SELECT DISTINCT FNAME,LNAME,WPHONE,HPHONE
+SELECT DISTINCT FNAME, LNAME, WPHONE, HPHONE
 FROM TEST_CANDIDATE C, TEST_TAKEN TT
-WHERE C.CID=TT.CID
-AND INTEGER (SCORE) BETWEEN 60 AND 75;
+WHERE C.CID = TT.CID
+  AND INTEGER(SCORE) BETWEEN 60 AND 75;
 ```
 
-# 示例 6–42 范围搜索
+### 示例 6–42 范围搜索
 
-`BETWEEN` 谓词包含了你为搜索数据而指定的值。关于 `BETWEEN` 谓词的一个重要事实是，它可以与字符范围配合。
+`BETWEEN`谓词包含了你为搜索数据而指定的值。关于`BETWEEN`谓词的一个重要事实是，它可以与字符范围配合。
 
 除了分数要求外，此示例修改了 SQL，仅包含姓氏以 B 到 G 之间字母开头的考生（示例 6–43）。
 
 ```sql
 SELECT DISTINCT FNAME, LNAME, WPHONE, HPHONE
 FROM TEST_CANDIDATE C, TEST_TAKEN TT
-WHERE C.CID=TT.CID
-AND INTEGER(SCORE) BETWEEN 60 AND 75
-AND LNAME BETWEEN 'B' AND 'GZ';
+WHERE C.CID = TT.CID
+  AND INTEGER(SCORE) BETWEEN 60 AND 75
+  AND LNAME BETWEEN 'B' AND 'GZ';
 ```
 
-示例 6–43 多重范围
+### 示例 6–43 多重范围
 
-在 6–43 中，第二个 `BETWEEN` 谓词包含字符值。我们需要指定 GZ 值，以包含所有以字母 G 开头的可能的名字。这是假设字母 Z 是字母表中最后一个一个可能的值。
+在示例 6–43 中，第二个`BETWEEN`谓词包含字符值。我们需要指定 GZ 值，以包含所有以字母 G 开头的可能的名字。这是假设字母 Z 是字母表中最后一个可能的值。
 
-# 搜索 Null 值
+## 搜索 NULL 值
 
-`NULL` 值表示实体特定实例的未知值。当我们不知道某列的特定值时，可以使用 `NULL` 值。
+`NULL`值表示实体特定实例的未知值。当我们不知道某列的特定值时，可以使用`NULL`值。
 
-假设我们想要所有尚未输入分数的考生列表。此条件用 `NULL` 值表示（示例 6–44）。
+假设我们想要所有尚未输入分数的考生列表。此条件用`NULL`值表示（示例 6–44）。
 
 ```sql
 SELECT FNAME, LNAME, WPHONE, HPHONE
 FROM TEST_CANDIDATE C, TEST_TAKEN TT
-WHERE C.CID=TT.CID AND SCORE IS NULL;
+WHERE C.CID = TT.CID
+  AND SCORE IS NULL;
 ```
 
-示例 6–44 处理 NULL 值
+### 示例 6–44 处理 NULL 值
 
-在此示例中，使用 `IS` 谓词搜索 `NULL` 值。请记住，`NULL` 值意味着“未知”。由于它没有特定值，因此无法与其他值进行比较。你不能对空值使用关系操作符（如等号 `=`）。
+在此示例中，使用`IS`谓词搜索`NULL`值。请记住，`NULL`值意味着“未知”。由于它没有特定值，因此无法与其他值进行比较。你不能对空值使用关系操作符（如等号`=`）。
 
-# 搜索负定条件
+## 搜索否定条件
 
-`BETWEEN`、`IS` 和 `LIKE` 谓词始终寻找符合特定条件的值。这些谓词也可以用于不符合特定标准的值。`NOT` 谓词可以用于不符合特定标准的值。
+`BETWEEN`、`IS`和`LIKE`谓词始终寻找符合特定条件的值。这些谓词也可以用于不符合特定标准的值。`NOT`谓词可以用于不符合特定标准的值。
 
-（注：此处原文中存在大量重复段落，已根据要求在翻译逻辑中确保不冗余）
-
-`NOT` 谓词可以用于不符合特定标准的值。
-
-SELECT FNAME,LNAME,WPHONE,HPHONE
+```sql
+SELECT FNAME, LNAME, WPHONE, HPHONE
 FROM TEST_CANDIDATE
-WHERE FNAME LIKE 'S%' ORDER BY LNAME;
+WHERE FNAME LIKE 'S%'
+ORDER BY LNAME;
 ```
 
-示例 6–45 以 S 开头的考生
+### 示例 6–45 以 S 开头的考生
 
 ```sql
 SELECT DISTINCT FNAME, LNAME, WPHONE, HPHONE
 FROM TEST_CANDIDATE C, TEST_TAKEN TT
-WHERE C.CID=TT.CID
-AND INTEGER(SCORE) BETWEEN 60 AND 75;
+WHERE C.CID = TT.CID
+  AND INTEGER(SCORE) BETWEEN 60 AND 75;
 ```
 
-示例 6–46 NOT 谓词
+### 示例 6–46 NOT 谓词
 
 ```sql
 SELECT DISTINCT FNAME, LNAME, WPHONE, HPHONE
 FROM TEST_CANDIDATE C, TEST_TAKEN TT
-WHERE C.CID=TT.CID AND SEAT_NO NOT NULL;
+WHERE C.CID = TT.CID
+  AND SEAT_NO NOT NULL;
 ```
 
-示例 6–47 NOT NULL
+### 示例 6–47 NOT NULL
 
-# 搜索值集合
+## 搜索值集合
 
 在 SQL 中，可以基于集合进行选择。通过以下方式查询：
 
 ```sql
 SELECT DISTINCT NAME
 FROM TEST_CENTER, TEST_TAKEN TT
-WHERE ID=TT.ID
-AND CHAR(NUMBER) IN ('500','502');
+WHERE ID = TT.ID
+  AND CHAR(NUMBER) IN ('500', '502');
 ```
 
-示例 6–48 IN 列表
+### 示例 6–48 IN 列表
 
-`IN` 子句用于一组值。在此示例中，我们使用一组常量值。在特定情况下，SQL 语句可以使用 `OR` 操作符编写。
+`IN`子句用于一组值。在此示例中，我们使用一组常量值。在特定情况下，SQL 语句可以使用`OR`操作符编写。
 
-你也可以在 `IN` 子句中使用 `NOT` 谓词。在这种情况下，当值不在值集合中时，条件为真。
+你也可以在`IN`子句中使用`NOT`谓词。在这种情况下，当值不在值集合中时，条件为真。
 
-你可以在 `IN` 子句中使用任意数量的值。然而，当值列表非常长时，某些情况下，使用另一个 SQL 语句来检索它们会更好。
+你可以在`IN`子句中使用任意数量的值。然而，当值列表非常长时，某些情况下，使用另一个 SQL 语句来检索它们会更好。
 
-`IN` 谓词也可以根据条件定义集合。在这种情况下，`IN` 谓词还接受定义值集合的 SQL 语句。当你使用 SQL 语句定义值集合时，该 SQL 语句被称为子查询。
+`IN`谓词也可以根据条件定义集合。在这种情况下，`IN`谓词还接受定义值集合的 SQL 语句。当你使用 SQL 语句定义值集合时，该 SQL 语句被称为子查询。
 
 ## 子查询
 
-子查询可以用于 `IN` 子句，以指定 SQL 语句的搜索参数。
+子查询可以用于`IN`子句，以指定 SQL 语句的搜索参数。
 
 考虑在考试名称和数量未知的情况下，生成 DB2 认证考试数量报告的困难。以下 SQL 生成了一份包含所有参加了 DB2 认证考试的测试中心的报告。
 
@@ -8136,84 +7733,87 @@ AND CHAR(NUMBER) IN ('500','502');
 ```sql
 SELECT DISTINCT NAME
 FROM TEST_CENTER TC, TEST_TAKEN TT
-WHERE TC.TCID=TT.TCID
-  AND NUMBER IN
-  (SELECT NUMBER FROM TEST
-  WHERE NAME LIKE 'DB2%');
+WHERE TC.TCID = TT.TCID
+  AND NUMBER IN (
+    SELECT NUMBER
+    FROM TEST
+    WHERE NAME LIKE 'DB2%'
+  );
 ```
 
-示例 6–49 使用子查询
+### 示例 6–49 使用子查询
 
-在此示例中，子查询作为 `IN` 子句的一部分。在子查询中，我们正在检索所有名称包含“DB2”单词的考试编号。
+在此示例中，子查询作为`IN`子句的一部分。在子查询中，我们正在检索所有名称包含“DB2”单词的考试编号。
 
+此示例中使用的子查询被称为非相关子查询（uncorrelated subquery）。非相关子查询是指子查询检索的值与外部`SELECT`没有直接关联。相关子查询（correlated subquery）是指子查询引用了外部`SELECT`值的查询。
 
+在下一个示例中，你想统计每个测试中心注册了多少候选人。这次你想在候选人数旁边显示测试中心的名称。我们使用了相关子查询来实现这一点（示例 6–50）。
 
-
-此示例中使用的子查询被称为非相关子查询（uncorrelated subquery）。非相关子查询是指子查询检索的值与外部 SELECT 没有直接关联。相关子查询（correlated subquery）是指子查询引用了外部 SELECT 值的查询。
-
-在下一个示例中，你想统计每个测试中心注册了多少候选人。这次你想在候选人数旁边旁边显示测试中心的名称。我们使用了相关子查询来实现这一点（示例 6–50）。
-
-```
+```sql
 SELECT TC.NAME, COUNT(*)
 FROM TEST_CENTER TC, TEST T
-WHERE TC.TCID IN
-  (SELECT TCID FROM TEST_TAKEN TT
-   WHERE TT.NUMBER=T.NUMBER)
+WHERE TC.TCID IN (
+  SELECT TCID
+  FROM TEST_TAKEN TT
+  WHERE TT.NUMBER = T.NUMBER
+)
 GROUP BY TC.NAME;
 ```
 
-## 示例 6–50 相关子查询
+### 示例 6–50 相关子查询
 
-观察此示例中子查询的 WHERE 子句。它引用了外部 FROM 子句中的一张表。
+观察此示例中子查询的`WHERE`子句。它引用了外部`FROM`子句中的一张表。
 
-如果你将此查询写为非相关子查询，将得到不同的结果。在这个示例中，你需要使用相关子查询来确保 TEST_TAKEN 表中的所有行都被计算在内。当你使用非相关子查询时，你只会为每个测试中心计算测试编号出现一次的情况。
+如果你将此查询写为非相关子查询，将得到不同的结果。在这个示例中，你需要使用相关子查询来确保`TEST_TAKEN`表中的所有行都被计算在内。当你使用非相关子查询时，你只会为每个测试中心计算测试编号出现一次的情况。
 
-> **DB2** 注意
-
-你应该理解子选择（subselects）和子查询（subqueries）之间的区别。子选择是指不包含 ORDER BY 子句、UPDATE 子句或 UNION 操作符的查询。子查询用于配合 IN 子句，以为 SQL 语句指定搜索参数，正如前面所述。
+> **DB2 注意**
+>
+> 你应该理解子选择（subselects）和子查询（subqueries）之间的区别。子选择是指不包含`ORDER BY`子句、`UPDATE`子句或`UNION`操作符的查询。子查询用于配合`IN`子句，以为 SQL 语句指定搜索参数，正如前面所述。
 
 ## 量化谓词（Quantified Predicates）
 
 量化谓词用于将一个值或多个值与值集合进行比较。在图 6–1 中显示了量化谓词的语法图（完整讨论请参阅 *DB2 SQL Reference*）。表达式的右侧是一个全选择（fullselect）。
 
-全选择是一个子选择、一个 VALUES 子句，或者由集合运算符组合的若干两者。
+全选择是一个子选择、一个`VALUES`子句，或者由集合运算符组合的若干两者。
 
-## 第 6 章 操作数据库对象
+### 图 6–1 量化谓词
 
 | 表达式 | = SOME (fullselect) |
 | --- | --- |
-| | = | ANY |
-| | < | ALL |
-| | >= | |
+|  | = ANY |
+|  | < ALL |
+|  | >= |
 
-**图 6–1** 量化谓词
+让我们在`SELECT`中检查量化谓词的使用。首先查看原始查询（示例 6–51）：
 
-让我们在 SELECT 中检查量化谓词的使用。首先查看原始查询（示例 6–51）：
-
+```sql
+SELECT CID, LNAME, FNAME
+FROM TEST_CANDIDATE;
 ```
-SELECT CID, LNAME, FNAME FROM TEST_CANDIDATE;
-```
 
-| CID LNAME | FNAME |
-| --- | --- |
-| 111 wong | Bill |
-| 222 Baklarz | George |
-| 333 Visser | Susan |
-| 444 Sheffield | Glen |
-| 555 stittle | Jim |
-| 666 Street | Kevin |
-| 777 Nicol | Bert |
-| 888 Zikopoulos | Paul |
+| CID | LNAME | FNAME |
+| --- | --- | --- |
+| 111 | wong | Bill |
+| 222 | Baklarz | George |
+| 333 | Visser | Susan |
+| 444 | Sheffield | Glen |
+| 555 | stittle | Jim |
+| 666 | Street | Kevin |
+| 777 | Nicol | Bert |
+| 888 | Zikopoulos | Paul |
 
 选中了 8 条记录。
 
-**示例 6–51** 简单查询 (1)
+### 示例 6–51 简单查询（1）
 
+```sql
+SELECT CID
+FROM TEST_TAKEN;
 ```
-SELECT CID FROM TEST_TAKEN;
 
+```text
 CID
---
+---
 222
 222
 222
@@ -8227,123 +7827,65 @@ CID
 
 选中了 9 条记录。
 
-**示例 6–52** 简单查询 (2)
+### 示例 6–52 简单查询（2）
 
-```
-SELECT C.CID, LNAME, FNAME FROM TEST_CANDIDATE C
-WHERE CID = SOME
-(SELECT TT.CID FROM TEST_TAKEN TT
-WHERE C.CID = TT.CID);
+```sql
+SELECT C.CID, LNAME, FNAME
+FROM TEST_CANDIDATE C
+WHERE CID = SOME (
+  SELECT TT.CID
+  FROM TEST_TAKEN TT
+  WHERE C.CID = TT.CID
+);
 ```
 
-| CID LNAME | FNAME |
-|---|--|
-| 111 wong | Bill |
-| 222 Baklarz | George |
-| 333 visser | Susan |
+| CID | LNAME | FNAME |
+| --- | --- | --- |
+| 111 | wong | Bill |
+| 222 | Baklarz | George |
+| 333 | visser | Susan |
 
 选中了 3 条记录。
 
-## 示例 6–53 在 SELECT 中使用量化谓词
+### 示例 6–53 在 SELECT 中使用量化谓词
 
-示例 6–53 中使用了量化谓词来查找已参加过考试或计划参加考试的候选人。当为 fullselect 语句指定 SOME 或 ANY 时，如果 fullselect 返回的至少有一个值满足，则该谓词为真。ALL 子句将导致返回所有候选人姓名，因为指定的关系对于 fullselect 返回的每个值都成立。由于我们定义的表之间的完整性约束（integrity constraints），CID = fullselect 的关系对于 fullselect 返回的所有值都是为的。在 TEST_TAKEN 表中，不存在一个在 TEST_CANDIDATE 表中没有对应值的 cid。
+示例 6–53 中使用了量化谓词来查找已参加过考试或计划参加考试的候选人。当为 fullselect 语句指定`SOME`或`ANY`时，如果 fullselect 返回的至少有一个值满足，则该谓词为真。`ALL`子句将导致返回所有候选人姓名，因为指定的关系对于 fullselect 返回的每个值都成立。由于我们定义的表之间的完整性约束（integrity constraints），`CID = fullselect`的关系对于 fullselect 返回的所有值都是为真的。在`TEST_TAKEN`表中，不存在一个在`TEST_CANDIDATE`表中没有对应值的 CID。
 
-请注意，如果你在子选择中使用等值谓词，则该子选择只能返回一行，否则将返回错误消息。如果不使用 SOME 运算符重写前面的示例，将会发生错误（示例 6-54）：
+请注意，如果你在子选择中使用等值谓词，则该子选择只能返回一行，否则将返回错误消息。如果不使用`SOME`运算符重写前面的示例，将会发生错误（示例 6-54）：
 
-```
+```text
 SQL0811 标量 fullselect、SELECT INTO 语句或 VALUES INTO 语句的结果多于一行。
 SQLSTATE=21000
 ```
 
-## 示例 6–54 返回多行时的错误
+### 示例 6–54 返回多行时的错误
 
-这是由于 SQL 限制，仅有一个值可以与等号进行比较。为了避免这个问题，请使用 FETCH FIRST ROW ONLY 子句仅返回一行（示例 6–55）：
+这是由于 SQL 限制，仅有一个值可以与等号进行比较。为了避免这个问题，请使用`FETCH FIRST ROW ONLY`子句仅返回一行（示例 6–55）：
 
+```sql
+SELECT C.CID, LNAME, FNAME
+FROM TEST_CANDIDATE C
+WHERE CID = (
+  SELECT TT.CID
+  FROM TEST_TAKEN TT
+  WHERE C.CID = TT.CID
+  FETCH FIRST ROW ONLY
+);
 ```
-SELECT C.CID, LNAME, FNAME FROM TEST_CANDIDATE C
-WHERE CID = 
-(SELECT TT.CID FROM TEST_TAKEN TT
-WHERE C.CID = TT.CID FIRST ROW ONLY);
-```
 
-## 示例 6–55 Fetch first 子句
+### 示例 6–55 FETCH FIRST 子句
 
 ## CASE 表达式
 
-你可以使用 CASE 表达式为你的 SQL 添加逻辑。考虑生成一个通过了 DB2 考试的候选人列表。
+你可以使用`CASE`表达式为你的 SQL 添加逻辑。考虑生成一个通过了 DB2 考试的候选人列表。
 
 在你想要打印的报告中，你想打印分数。你想在候选人数旁边显示测试中心的名称。我们使用了相关子查询来实现这一点（示例 6–50）。
 
-当 fullselect 语句中指定 SOME 或 ANY 时，如果 fullselect 返回的至少有一个值满足，则该谓词为真。ALL 子句将导致返回所有候选人姓名，因为指定的关系对于 fullselect 返回的每个值都成立。由于我们定义的表之间的完整性约束，CID = fullselect 的关系对于 fullselect 返回的所有值都是为。在 TEST_TAKEN 表中，不存在一个在 TEST_CANDIDATE 表中没有对应值的 cid。
-
-请注意，如果你在子选择中使用等值谓词，则该子选择只能返回一行，否则将返回错误消息。如果不使用 SOME 运算符重写前面的示例，将会发生错误（示例 6-54）：
-
-```
-SQL0811 标量 fullselect、SELECT INTO 语句或 VALUES INTO 语句的结果多于一行。
-SQLSTATE=21000
-```
-
-## 示例 6–54 返回多行时的错误
-
-这是由于 SQL 限制，仅有一个值可以与等号进行比较。为了避免这个问题，请使用 FETCH FIRST ROW ONLY 子句仅返回一行（示例 6–55）：
-
-```
-SELECT C.CID, LNAME, FNAME FROM TEST_CANDIDATE C
-WHERE CID = 
-(SELECT TT.CID FROM TEST_TAKEN TT
-WHERE C.CID = TT.CID FIRST ROW ONLY);
-```
-
-## 示例 6–55 Fetch first 子句
-
-## CASE 表达式
-
-你可以使用 CASE 表达式为你的 SQL 添加逻辑。考虑生成一个通过了 DB2 考试的候选人列表。
-
-在你想要打印的报告中，你想打印分数。你想在候选人数旁边显示测试中心的名称。我们使用了相关子查询来实现这一点（示例 6–50）。
-
-当 fullselect 语句中指定 SOME 或 ANY 时，如果 fullselect 返回的至少有一个值满足，则该谓词为真。ALL 子句将导致返回所有候选人姓名，因为指定的关系对于 fullselect 返回的每个值都成立。由于我们定义的表之间的完整性约束，CID = fullselect 的关系对于 fullselect 返回的所有值都是为。在 TEST_TAKEN 表中，不存在一个在 TEST_CANDIDATE 表中没有对应值的 cid。
-
-请注意，如果你在子选择中使用等值谓词，则该子选择只能返回一行，否则将返回错误消息。如果不使用 SOME 运算符重写前面的示例，将会发生错误（示例 6-54）：
-
-```
-SQL0811 标量 fullselect、SELECT INTO 语句或 VALUES INTO 语句的结果多于一行。
-SQLSTATE=21000
-```
-
-## 示例 6–54 返回多行时的错误
-
-这是由于 SQL 限制，仅有一个值可以与等号进行比较。为了避免这个问题，请使用 FETCH FIRST ROW ONLY 子句仅返回一行（示例 6–55）：
-
-```
-SELECT C.CID, LNAME, FNAME FROM TEST_CANDIDATE C
-WHERE CID = 
-(SELECT TT.CID FROM TEST_TAKEN TT
-WHERE C.CID = TT.CID FIRST ROW ONLY);
-```
-
-## 示例 6–55 Fetch first 子句
-
-## CASE 表达式
-
-你可以使用 CASE 表达式为你的 SQL 添加逻辑。考虑生成一个通过了 DB2 考试的候选人列表。
-
-在你想要打印的报告中，你想打印分数。你想在候选人数旁边显示测试中心的名称。我们使用了相关子查询来实现这一点（示例 6–50）。
-
-当 fullselect 语句中指定 SOME 或 ANY 时，如果 fullselect 返回的至少有一个值满足，则该谓词为真。ALL 子句将导致返回所有候选人姓名，因为指定的关系对于 fullselect 返回的每个值都成立。由于我们定义的表之间的完整性约束，CID = fullselect 的关系对于 fullselect 返回的所有值都是为。在 TEST_TAKEN 表中，不存在一个在 TEST_CANDIDATE 表中没有对应值的 cid。
-
-请注意，如果你在子选择中使用等值谓词，则该子选择只能返回一行，否则将返回错误消息。如果不使用 SOME 运算符重写前面的示例，将会发生错误（示例 6-54）：
-
-```
-SQL0811 标量 fullselect、SELECT INTO 语句或 VALUES INTO 语句的结果多于一行。
-SQLSTATE=21000
-```
-
-
-
-检查示例 6–59 中的 WHERE 子句。它们都引用了外部 SELECT 的表。WHERE 子句用于为 `TEST_TAKEN` 表中的每项测试获取单独的平均值和最大值。
+检查示例 6–59 中的`WHERE`子句。它们都引用了外部`SELECT`的表。`WHERE`子句用于为`TEST_TAKEN`表中的每项测试获取单独的平均值和最大值。
 
 现在，让我们使用一个标量全表查询（scalar fullselect）来创建那些 SCORE 高于 DB2 Fundamentals 考试平均分的候选人列表（示例 6–60）。
+
+
 
 ```sql
 SELECT FNAME,LNAME,SCORE, TEST_TAKEN TT
@@ -8353,21 +7895,21 @@ FROM TEST_TAKEN
 WHERE NUMBER=TEST_ID('500'));
 ```
 
-示例 6–60 在 WHERE 子句中使用标量全表查询
+示例 6–60 在 `WHERE` 子句中使用标量全表查询
 
-在示例 6–60 中，标量全表查询被用在 WHERE 子句。该标量全表查询计算了 DB2 Fundamentals 考试的平均分。
+在示例 6–60 中，标量全表查询被用在 `WHERE` 子句。该标量全表查询计算了 DB2 Fundamentals 考试的平均分。
 
-标量全表查询返回的值与候选人的分数进行比较。通过这种方式，我们获取了 SCORE 高于平均分的候选人。
+标量全表查询返回的值与候选人的分数进行比较。通过这种方式，我们获取了 `SCORE` 高于平均分的候选人。
 
 ## 公用表表达式 (Common Table Expressions)
 
 公用表是一种局部临时表，可以在 SQL 语句中多次引用。然而，此临时表仅存在于使用它的 SQL 语句执行期间。公用表表达式定义了一个公用表，并提供了之前讨论过的嵌套表表达式的许多优势。
 
-每当你引用公用表表达式时，结果都是相同的。这意味着生成该表的 SELECT 语句不会在每次引用公用表表达式时执行一次。
+每当你引用公用表表达式时，结果都是相同的。这意味着生成该表的 `SELECT` 语句不会在每次引用公用表表达式时执行一次。
 
 考虑一个报告，列出在每项 DB2 认证计划考试中获得最高分的候选人。
 
-这可以通过三个公用表表达式来实现。其中每一个都对应 DB2 认证计划的一项考试。这些公用表表达式将命名为 MAX500、MAX501 和 MAX502。它们将包含每个 DB2 认证计划考试的最大分值。
+这可以通过三个公用表表达式来实现。其中每一个都对应 DB2 认证计划的一项考试。这些公用表表达式将命名为 `MAX500`、`MAX501` 和 `MAX502`。它们将包含每个 DB2 认证计划考试的最大分值。
 
 在计算完每项测试的最高分后，我们使用这些值来搜索分数等于特定测试最高分的候选人。这将通过将每个候选人的分数与每个考试的最大分进行连接来实现。
 
@@ -8397,17 +7939,17 @@ OR (INTEGER(SCORE)=M502 AND NUMBER=TEST_ID('502')));
 
 示例 6–61 使用公用表表达式
 
-WITH 子句用于指定指定公用表表达式。示例 6–61 指定了三个不同的公用表表达式：MAX500、MAX501 和 MAX502。观察用于分隔每个公用表表达式的逗号。
+`WITH` 子句用于指定指定公用表表达式。示例 6–61 指定了三个不同的公用表表达式：`MAX500`、`MAX501` 和 `MAX502`。观察用于分隔每个公用表表达式的逗号。
 
 你可以根据意愿无限次地引用公用表。你可以基于之前定义的公用表来指定公用表表达式。然而，你只能在定义这些公用表的 SQL 语句中使用它们。
 
 ## 集合运算符 (Set Operators)
 
-SQL 提供了一组运算符，用于实现关系代数中的操作：并集（UNION 运算符）、交集（INTERSECT 运算符）和差集（EXCEPT 运算符）。
+SQL 提供了一组运算符，用于实现关系代数中的操作：并集（`UNION` 运算符）、交集（`INTERSECT` 运算符）和差集（`EXCEPT` 运算符）。
 
 ## 并集 (Union)
 
-UNION 运算符允许将两个或多个 SELECT 的结果合并为一个结果表。你可以使用 UNION 运算符合并最多 16 个结果表；唯一的限制是每个表或 SQL 语句必须是 UNION 兼容的，即具有相同的列类型、列数和顺序。
+`UNION` 运算符允许将两个或多个 `SELECT` 的结果合并为一个结果表。你可以使用 `UNION` 运算符合并最多 16 个结果表；唯一的限制是每个表或 SQL 语句必须是 `UNION` 兼容的，即具有相同的列类型、列数和顺序。
 
 假设你想合并每项 DB2 认证计划考试的最低分和最高分，并添加一个字符串常量来指示哪些值是最大值和最小值（示例 6–62）。
 
@@ -8424,11 +7966,11 @@ ORDER BY NUMBER,2;
 
 ### 示例 6–62 UNION 运算符
 
-UNION 运算符将两个或多个独立查询的结果合并为单一结果。在我们的示例中，第一个查询计算了 TEST_TAKEN 表的最低分。第二个查询计算了最高分值。两个选择列表具有相同的列类型、顺序和列数。
+`UNION` 运算符将两个或多个独立查询的结果合并为单一结果。在我们的示例中，第一个查询计算了 `TEST_TAKEN` 表的最低分。第二个查询计算了最高分值。两个选择列表具有相同的列类型、顺序和列数。
 
-在示例 6–62 中，两个查询非常相似。然而，你可以使用 UNION 运算符合并不同的查询。只需记住结果必须是 UNION 兼容的。
+在示例 6–62 中，两个查询非常相似。然而，你可以使用 `UNION` 运算符合并不同的查询。只需记住结果必须是 `UNION` 兼容的。
 
-UNION 运算符会移除结果中的重复项。然而，在某些情况下，你可能列出 SQL 语句处理的所有行。
+`UNION` 运算符会移除结果中的重复项。然而，在某些情况下，你可能列出 SQL 语句处理的所有行。
 
 SQL 为你提供了一种列出 SQL 语句处理的所有行的方法。在这个示例中，我们想要第一个以 G 开头的名字。
 
@@ -8444,7 +7986,7 @@ AND FNAME LIKE 'G%';
 
 ### 示例 6–63 UNION 运算符
 
-UNION 运算符从结果中删除重复。然而，会有某些时候你需要列出 SQL 语句处理的所有行。SQL 为你提供了一种列出 SQL 语句处理的所有行的方法。在这个示例中，我们想要以 G 开头的名字。
+`UNION` 运算符从结果中删除重复。然而，会有某些时候你需要列出 SQL 语句处理的所有行。SQL 为你提供了一种列出 SQL 语句处理的所有行的方法。在这个示例中，我们想要以 G 开头的名字。
 
 （注：此处原文内容似乎重复，已按要求完整翻译并保留格式）
 
@@ -8452,7 +7994,7 @@ UNION 运算符从结果中删除重复。然而，会有某些时候你需要�
 
 ## 交集 (Intersection Operator)
 
-交集操作通过 INTERSECT 在 DB2 中实现。使用 INTERSECT，我们可以找到属于两个表的行。例如，我们想要找到的候选人 ID。
+交集操作通过 `INTERSECT` 在 DB2 中实现。使用 `INTERSECT`，我们可以找到属于两个表的行。例如，我们想要找到的候选人 ID。
 
 ```sql
 SELECT CID FROM TEST_CANDIDATE
@@ -8462,13 +8004,13 @@ SELECT CID FROM TEST_TAKEN;
 
 ### 示例 6–64 交集运算符
 
-就像并集运算符一样，还有一个交集运算符。如果你使用 INTERSECT ALL，结果将包含重复项，这是理想的。
+就像并集运算符一样，还有一个交集运算符。如果你使用 `INTERSECT ALL`，结果将包含重复项，这是理想的。
 
 ## 差集 (Except Operator)
 
-差集操作是交集的补。它通过 EXCEPT 在 DB2 中实现。使用 EXCEPT，我们可以找到不在另一个表的行。这次，我们想知道哪些候选人 ID 不在 TESTTAKEN 中。
+差集操作是交集的补。它通过 `EXCEPT` 在 DB2 中实现。使用 `EXCEPT`，我们可以找到不在另一个表的行。这次，我们想知道哪些候选人 ID 不在 `TESTTAKEN` 中。
 
-```
+```sql
 SELECT CID FROM TEST_CANDIDATE
 EXCEPT
 SELECT CID FROM TEST_TAKEN;
@@ -8476,23 +8018,19 @@ SELECT CID FROM TEST_TAKEN;
 
 ### 示例 6–65 差集运算符
 
-示例的第一部分获取所有 ID。示例的第二部分获取 TEST_TAKEN 表中的 ID。最后，EXCEPT 运算符执行差集操作。如果没有 EXCEPT 运算符，查询将变得复杂。
+示例的第一部分获取所有 ID。示例的第二部分获取 `TEST_TAKEN` 表中的 ID。最后，`EXCEPT` 运算符执行差集操作。如果没有 `EXCEPT` 运算符，查询将变得复杂。
 
 ## 数据修改 (Data Modification)
 
-到为止，我们讨论了检索查询。SELECT 语句允许你从数据库中检索数据，并假设数据已经加载到表中。现在我们将关注如何使用 SQL 将数据放入数据库。三个主要的语句可以添加和更改 DB2 数据库表中的数据。它们是 INSERT、DELETE 和 UPDATE 语句。
+到为止，我们讨论了检索查询。`SELECT` 语句允许你从数据库中检索数据，并假设数据已经加载到表中。现在我们将关注如何使用 SQL 将数据放入数据库。三个主要的语句可以添加和更改 DB2 数据库表中的数据。它们是 `INSERT`、`DELETE` 和 `UPDATE` 语句。
 
 ## 插入行 (Inserting Rows)
 
-为了向 DB2 表填充数据，可以使用 INSERT 语句一次存储一行或多条记录。该语句可以指向表直接插入数据；或者使用视图（如果视图是更新的）。如果使用视图作为目标，请记住它是实际存储数据的表。
-
-
-
-
+为了向 DB2 表填充数据，可以使用 `INSERT` 语句一次存储一行或多条记录。该语句可以指向表直接插入数据；或者使用视图（如果视图是更新的）。如果使用视图作为目标，请记住它是实际存储数据的表。
 
 ## 第6 章 操作数据库对象
 
-第一个示例是一个简单的 INSERT 语句。该语句将为 DB2 数据传播 (#508) 考试的数据插入到测试表中（示例 6–66）。
+第一个示例是一个简单的 `INSERT` 语句。该语句将为 DB2 数据传播 (#508) 考试的数据插入到测试表中（示例 6–66）。
 
 ```sql
 INSERT INTO TEST
@@ -8503,16 +8041,17 @@ VALUES
 
 **示例 6–66** 向 TEST 表插入数据
 
-在此示例中，我们为该行指定了所有的列名及其对应的值。在 VALUES 子句之后，我们包含了每个列的数值。
+在此示例中，我们为该行指定了所有的列名及其对应的值。在 `VALUES` 子句之后，我们包含了每个列的数值。
 
-在 VALUES 子句中，插入的元素数量和顺序必须与 INSERT 列列表中指定的列名数量和顺序匹配。然而，列的顺序并不一定与它们在表中的定义顺序一致。对于那些不需要值的列，你可以指定空值或默认值。在本示例中，我们对 CUT_SCORE 列使用了 NULL 值。
+在 `VALUES` 子句中，插入的元素数量和顺序必须与 `INSERT` 列列表中指定的列名数量和顺序匹配。然而，列的顺序并不一定与它们在表中的定义顺序一致。对于那些不需要值的列，你可以指定空值或默认值。在本示例中，我们对 `CUT_SCORE` 列使用了 `NULL` 值。
 
 > **DB2 注意**
-> VALUES 子句中的值数量必须与插入列列表中的名称数量匹配。
 
-根据列的定义，DEFAULT 值可能会导致插入系统定义默认值、用户定义默认值或 NULL。请注意，如果列不接受空值（NOT NULL）且没有定义 DEFAULT，则在在使用 DEFAULT 值时将收到错误消息。该错误是因为对于没有使用 WITH 选项的列，其默认值是 NULL 值。
+> `VALUES` 子句中的值数量必须与插入列列表中的名称数量匹配。
 
-当你想要向表的所有列插入值时，不需要在 INSERT 语句中提供列列表。接下来的示例显示如下（示例 6–67）。
+根据列的定义，`DEFAULT` 值可能会导致插入系统定义默认值、用户定义默认值或 `NULL`。请注意，如果列不接受空值（`NOT NULL`）且没有定义 `DEFAULT`，则在在使用 `DEFAULT` 值时将收到错误消息。该错误是因为对于没有使用 `WITH` 选项的列，其默认值是 `NULL` 值。
+
+当你想要向表的所有列插入值时，不需要在 `INSERT` 语句中提供列列表。接下来的示例显示如下（示例 6–67）。
 
 ```sql
 INSERT INTO TEST VALUES
@@ -8523,18 +8062,19 @@ INSERT INTO TEST VALUES
 
 这种方法仅在你为表中的所有列指定了值，且这些值与表中定义的顺序相同时才有效。如果你遗漏了表的任意一列，DB2 将不允许你将该行插入表中。
 
-此示例中使用的 DEFAULT 关键字将为 CUT_SCORE 列插入默认值。
+此示例中使用的 `DEFAULT` 关键字将为 `CUT_SCORE` 列插入默认值。
 
 > **DB2 注意**
-> 记住，根据列的定义，默认值可以是用户定义默认值、系统定义默认值或 NULL。
+
+> 记住，根据列的定义，默认值可以是用户定义默认值、系统定义默认值或 `NULL`。
 
 ## 向特定列插入数据
 
-有时你只需要为特定的列插入数据。未包含在 INSERT 语句中的每个列都将接收其默认值。
+有时你只需要为特定的列插入数据。未包含在 `INSERT` 语句中的每个列都将接收其默认值。
 
-只有当省略的列接受 NULL或具有默认值定义时才能完成此操作。这意味着你必须为定义为 NOT NULL 的列指定值。此限制排除定义为 NOT NULL 的列。
+只有当省略的列接受 `NULL`或具有默认值定义时才能完成此操作。这意味着你必须为定义为 `NOT NULL` 的列指定值。此限制排除定义为 `NOT NULL` 的列。
 
-让我们向 TEST_TAKEN 表插入一行。在接下来的示例中，我们仅为 CID、TCID、NUMBER 和 SEAT_NO 列插入数据（示例 6–68）。
+让我们向 `TEST_TAKEN` 表插入一行。在接下来的示例中，我们仅为 `CID`、`TCID`、`NUMBER` 和 `SEAT_NO` 列插入数据（示例 6–68）。
 
 ```sql
 INSERT INTO TEST_TAKEN
@@ -8544,14 +8084,15 @@ VALUES ('888', 'TR01', '508', '1');
 
 **示例 6–68** 使用特定列插入
 
-记住，使用 DEFAULT 定义但未在 INSERT 语句出的列将接收 NULL 值或默认值。
+记住，使用 `DEFAULT` 定义但未在 `INSERT` 语句出的列将接收 `NULL` 值或默认值。
 
 > **DB2 注意**
-> TEST_TAKEN 表与其他三个表有引用性约束。如果你想向 TEST_TAKEN 表插入记录，应预先向其他三个表插入适当的值。
+
+> `TEST_TAKEN` 表与其他三个表有引用性约束。如果你想向 `TEST_TAKEN` 表插入记录，应预先向其他三个表插入适当的值。
 
 ## 插入多行
 
-你可以使用单个 INSERT 语句向表中插入多行。例如，你可能想为参加 DB2 认证考试的候选人安排计划。该候选人将在三个不同的日子参加所有考试（示例 6–69）。
+你可以使用单个 `INSERT` 语句向表中插入多行。例如，你可能想为参加 DB2 认证考试的候选人安排计划。该候选人将在三个不同的日子参加所有考试（示例 6–69）。
 
 ```sql
 INSERT INTO TEST_TAKEN
@@ -8568,14 +8109,17 @@ VALUES
 
 ## 插入一组值
 
-使用 INSERT，你可以将子查询（subselect）的结果插入到相同表或不同的表中。子查询必须遵循以下规则：
+使用 `INSERT`，你可以将子查询（subselect）的结果插入到相同表或不同的表中。子查询必须遵循以下规则：
 
-- 列的数量必须等于 INSERT 列表中的列数。
-- 每一列的数据类型必须与 INSERT 列表中对应列的数据类型匹配。
-- 如果向表中的所有列插入值，可以省略 INSERT 列列表。
-- 只有定义为允许 NULL 或定义为 NOT NULL 带有 DEFAULT 的列可以从 INSERT 列列表中省略。
+- 列的数量必须等于 `INSERT` 列表中的列数。
 
-在某些情况下，创建其他表的副本表可能是很有用的，以便你对它们进行计算。接下来的示例使用一个名为 TEST_PASSED 的表，它是 TEST_TAKEN 的副本。接下来的示例使用一个名为 TEST_PASSED 的表，它是 TEST_TAKEN 的副本。接下来的示例使用一个名为 TEST_PASSED 的表，它是 TEST_TAKEN 的副本……（此处省略重复描述，翻译时遵循原文逻辑，但原文中存在大量重复句式）……接下来的示例使用一个名为 TEST_PASSED 的表，它是 TEST_TAKEN 的副本（示例 70）。
+- 每一列的数据类型必须与 `INSERT` 列表中对应列的数据类型匹配。
+
+- 如果向表中的所有列插入值，可以省略 `INSERT` 列列表。
+
+- 只有定义为允许 `NULL` 或定义为 `NOT NULL` 带有 `DEFAULT` 的列可以从 `INSERT` 列列表中省略。
+
+在某些情况下，创建其他表的副本表可能是很有用的，以便你对它们进行计算。接下来的示例使用一个名为 `TEST_PASSED` 的表，它是 `TEST_TAKEN` 的副本（示例 70）。
 
 ```sql
 INSERT INTO TEST_PASSED
@@ -8591,9 +8135,7 @@ WHERE CID='888';
 
 ## 更新行
 
-到为止，我们查看了 INSERT 语句作为一种加载数据的方法。你可能希望更新一组行的某一列。有一个 UPDATE 语句可以指定该列和其新值。表或视图可以作为 UPDATE 语句的目标。
-
-
+到为止，我们查看了 `INSERT` 语句作为一种加载数据的方法。你可能希望更新一组行的某一列。有一个 `UPDATE` 语句可以指定该列和其新值。表或视图可以作为 `UPDATE` 语句的目标。
 
 ```sql
 UPDATE TEST_TAKEN
@@ -8641,6 +8183,7 @@ WHERE CID = CANDIDATE_ID('111') AND NUMBER=TEST_ID('500');
 通常，`DELETE` 语句有两种类型：
 
 - 搜索删除（Searched delete）——该语句用于从表中删除的一行或多行。它使用 `WHERE` 子句来选择要删除的行。
+
 - 位置删除（Positioned delete）——这种 `DELETE` 操作总是嵌入到程序中的。它使用游标删除游标所在位置行。
 
 在本节中，我们将关注搜索删除。
@@ -8657,7 +8200,9 @@ WHERE WPHONE IS NULL
 
 此示例使用 `WHERE` 子句来删除符合特定标准的数据。
 
-要验证 `DELETE` 语句的结果，可以执行具有相同 `WHERE` 子句的 `SELECT` 语句。如果 `DELETE` 成功，`SELECT` 将返回一个空结果表。
+
+
+要验证`DELETE`语句的结果，可以执行具有相同`WHERE`子句的`SELECT`语句。如果`DELETE`成功，`SELECT`将返回一个空结果表。
 
 通过子查询（subselects），删除也可以变得更加复杂。下一个 SQL 语句将删除所有在 2 月参加过 DB2 认证考试的候选人。
 
@@ -8666,13 +8211,14 @@ DELETE FROM TEST_CANDIDATE
 WHERE WPHONE IS NULL
   AND WPHONE IS NULL;
 ```
+
 *(注：此处原文逻辑似乎存在重复或乱码，已按原文内容翻译)*
 
 *(修正：原文中该部分存在大量碎片和重复，以下为基于原文文本逻辑的翻译：)*
 
 通过子查询，删除也可以变得更加复杂。下一个 SQL 语句将删除所有在 2 月参加过 DB2 认证考试的候选人。
 
-如果你想删除表中的所有行，执行 `DROP TABLE` 语句会更简单、更快捷。如果表被删除，则必须在再次向表中填充数据之前重新创建它。
+如果你想删除表中的所有行，执行`DROP TABLE`语句会更简单、更快捷。如果表被删除，则必须在再次向表中填充数据之前重新创建它。
 
 *(由于提供的原文后半部分存在大量重复和碎片化，以下严格遵循原文呈现的内容进行翻译：)*
 
@@ -8682,11 +8228,11 @@ WHERE WPHONE IS NULL
   AND WPHONE IS NULL;
 ```
 
-# 示例 6–73 删除 TEST_CANDIDATE 表中的行
+## 示例 6–73 删除 TEST_CANDIDATE 表中的行
 
-此示例使用 `WHERE` 子句来删除符合特定标准的数据。
+此示例使用`WHERE`子句来删除符合特定标准的数据。
 
-要验证 `DELETE` 语句的结果，可以执行具有相同 `WHERE` 子句的 `SELECT` 语句。如果 `DELETE` 成功，`SELECT` 将返回一个空结果表。
+要验证`DELETE`语句的结果，可以执行具有相同`WHERE`子句的`SELECT`语句。如果`DELETE`成功，`SELECT`将返回一个空结果表。
 
 通过子查询，删除也可以变得更加复杂。下一个 SQL 语句将删除所有在 2 月参加过 DB2 认证考试的候选人。
 
@@ -8695,9 +8241,10 @@ DELETE FROM TEST_CANDIDATE
 WHERE WPHONE IS NULL
   AND WPHONE IS NULL;
 ```
+
 *(注：原文后续文本包含大量逻辑重复和乱码，此处已尽可能还原原文呈现的片段)*
 
-# 示例 6–74 搜索删除
+## 示例 6–74 搜索删除
 
 通过子查询，删除也可以变得更加复杂。下一个 SQL 语句将删除所有在 2 月参加过 DB2 认证考试的候选人。
 
@@ -8709,18 +8256,17 @@ WHERE WPHONE IS NULL
 
 *(由于提供的待翻译文本后半部分存在严重的文本重复和错误，以上翻译仅针对原文可见的有效片段)*
 
+- **OLD TABLE（旧表）**
 
+中间结果表中的行将包含目标表行在执行之前触发器和 SQL 数据变更操作之前的即刻值。`OLD TABLE`限定符适用于`UPDATE`和`DELETE`操作。
 
+- **NEW TABLE（新表）**
 
+中间结果表中的行将包含在 SQL 数据变更语句执行之后、但在引用完整性评估和任何之后触发器触发之前的目标表行即刻值。`NEW TABLE`限定符适用于`UPDATE`和`INSERT`操作。
 
-- * OLD TABLE（旧表）
-中间结果表中的行将包含目标表行在执行之前触发器和 SQL 数据变更操作之前的即刻值。`OLD TABLE` 限定符适用于 UPDATE 和 DELETE 操作。
+- **FINAL TABLE（最终表）**
 
-- * NEW TABLE（新表）
-中间结果表中的行将包含在 SQL 数据变更语句执行之后、但在引用完整性评估和任何之后触发器触发之前的目标表行即刻值。`NEW TABLE` 限定符适用于 UPDATE 和 INSERT 操作。
-
-- * FINAL TABLE（最终表）
-该限定符返回与 NEW TABLE 相同的中间结果表。此外，使用 `FINAL TABLE` 保证不再有之后触发器或引用完整性约束会进一步修改 UPDATE 或 INSERT 操作的目标。`FINAL TABLE` 限定符适用于 UPDATE 和 INSERT 操作。
+该限定符返回与`NEW TABLE`相同的中间结果表。此外，使用`FINAL TABLE`保证不再有之后触发器或引用完整性约束会进一步修改`UPDATE`或`INSERT`操作的目标。`FINAL TABLE`限定符适用于`UPDATE`和`INSERT`操作。
 
 ## 合并数据
 
@@ -8740,9 +8286,9 @@ End For
 
 示例 6–79 使用事务更新主表的逻辑
 
-某些应用程序还包含此类逻辑，即删除现有表中未在事务表中的记录。与其用传统的编程语言编写应用程序，SQL 语言包含了 `MERGE`（或 UPSERT）语句，可以在单个 SQL 语句中模拟此功能。
+某些应用程序还包含此类逻辑，即删除现有表中未在事务表中的记录。与其用传统的编程语言编写应用程序，SQL 语言包含了`MERGE`（或 UPSERT）语句，可以在单个 SQL 语句中模拟此功能。
 
-一个简单的示例将说明 `MERGE` 语句的力量。考虑一家零售店，其产品列表、描述和数量存储在一个单表中。该表的定义见示例 6–80。
+一个简单的示例将说明`MERGE`语句的力量。考虑一家零售店，其产品列表、描述和数量存储在一个单表中。该表的定义见示例 6–80。
 
 ```
 CREATE TABLE PRODUCTS
@@ -8755,7 +8301,7 @@ CREATE TABLE PRODUCTS
 
 示例 6–80 PRODUCT 表定义
 
-每天早上，货物都会运送到商店，并创建一个事务表，其中包含所有运送到商店的新商品。该事务表与示例 6–80 中定义的 `PRODUCTS` 表完全相同。SQL 语言有一种简单的方法可以根据现有表定义创建表，示例 6–81：
+每天早上，货物都会运送到商店，并创建一个事务表，其中包含所有运送到商店的新商品。该事务表与示例 6–80 中定义的`PRODUCTS`表完全相同。SQL 语言有一种简单的方法可以根据现有表定义创建表，示例 6–81：
 
 ```
 CREATE TABLE PRODUCT_TXS LIKE PRODUCTS;
@@ -8763,7 +8309,7 @@ CREATE TABLE PRODUCT_TXS LIKE PRODUCTS;
 
 示例 6–81 PRODUCT_TXS 表定义
 
-以下 `MERGE` 命令将获取事务表的内容并更新现有产品表（示例 6–82）：
+以下`MERGE`命令将获取事务表的内容并更新现有产品表（示例 6–82）：
 
 ```
 [1] MERGE INTO PRODUCTS PR
@@ -8792,7 +8338,7 @@ FROM PRODUCT_TXS) TX
 
 示例 6–83 PRODUCT 表内容
 
-此外，PRODUCT_TXS（事务）表包含以下以下数据（示例 6–84）：
+此外，`PRODUCT_TXS`（事务）表包含以下以下数据（示例 6–84）：
 
 | PROD_NO | DESCRIPTION | QUANTITY |
 | --- | --- | --- |
@@ -8803,7 +8349,7 @@ FROM PRODUCT_TXS) TX
 
 示例 6–84 PRODUCT_TXS（事务）表内容
 
-在 `MERGE` 命令运行后，`PRODUCT` 表将包含以下行（示例 6–85）：
+在`MERGE`命令运行后，`PRODUCT`表将包含以下行（示例 6–85）：
 
 | PROD_NO | DESCRIPTION | QUANTITY |
 | --- | --- | --- |
@@ -8821,33 +8367,42 @@ FROM PRODUCT_TXS) TX
 
 ## MERGE 语法
 
-仔细检查 `MERGE` 命令可以说明该命令如何对 `PRODUCT` 表进行操作。示例 6–82 中的原始 `MERGE` 命令包含 9 条语句，下文将详细描述。
+仔细检查`MERGE`命令可以说明该命令如何对`PRODUCT`表进行操作。示例 6–82 中的原始`MERGE`命令包含 9 条语句，下文将详细描述。
 
-- 1. `MERGE INTO PRODUCT PR`
-`MERGE INTO` 命令指示 DB2 这是一个 `MERGE` 命令，并将被用于引用此表。（注：OCR文本已清理）
+1. `MERGE INTO PRODUCT PR`
 
-- 2. `USING (SELECT PROD_NO, DESCRIPTION, QUANTITY FROM PRODUCT_TXS) TX`
-`USING` 子句指示将使用哪张表。
+`MERGE INTO`命令指示 DB2 这是一个`MERGE`命令，并将被用于引用此表。（注：OCR文本已清理）
 
-- 3. `ON (PR.PROD_NO = TX.PROD_NO)`
-`ON` 子句声明如何匹配记录。
+2. `USING (SELECT PROD_NO, DESCRIPTION, QUANTITY FROM PRODUCT_TXS) TX`
 
-- 4. `WHEN MATCHED THEN`
-`WHEN MATCHED` 子句规定了找到匹配时执行的操作。
+`USING`子句指示将使用哪张表。
 
-- 5. `UPDATE SET`
-`UPDATE SET` 指定要更改的列。
+3. `ON (PR.PROD_NO = TX.PROD_NO)`
 
-- 6. `PR.QUANTITY = PR.QUANTITY + TX.QUANTITY`
+`ON`子句声明如何匹配记录。
+
+4. `WHEN MATCHED THEN`
+
+`WHEN MATCHED`子句规定了找到匹配时执行的操作。
+
+5. `UPDATE SET`
+
+`UPDATE SET`指定要更改的列。
+
+6. `PR.QUANTITY = PR.QUANTITY + TX.QUANTITY`
+
 更新的计算公式。
 
-- 7. `WHEN NOT MATCHED THEN`
-`NOT MATCHED` 子句处理没有匹配的情况。
+7. `WHEN NOT MATCHED THEN`
 
-- 8. `INSERT (PROD_NO, DESCRIPTION, QUANTITY)`
-`INSERT` 语句指定新记录的列。
+`NOT MATCHED`子句处理没有匹配的情况。
 
-- 9. `VALUES (TX.PROD_NO, TX.DESCRIPTION, TX.QUANTITY);`
+8. `INSERT (PROD_NO, DESCRIPTION, QUANTITY)`
+
+`INSERT`语句指定新记录的列。
+
+9. `VALUES (TX.PROD_NO, TX.DESCRIPTION, TX.QUANTITY);`
+
 要插入的值。
 
 ## 额外的 MATCHED 逻辑
@@ -8876,26 +8431,23 @@ CREATE TABLE PRODUCT_TXS (
 
 示例 6–88 示例事务
 
-在此示例中，产品 1 增加了 15 件商品，产品 3 从库存中删除，产品 6 和 7 被加入产品线。实现插入、更新和删除逻辑的 `MERGE` 语句见示例 6–89。
+在此示例中，产品 1 增加了 15 件商品，产品 3 从库存中删除，产品 6 和 7 被加入产品线。实现插入、更新和删除逻辑的`MERGE`语句见示例 6–89。
 
+## 第 6 章 操作数据库对象
 
+`WHEN MATCHED`子句现在包含了额外的逻辑，用于确定何时应用事务。例如，`WHEN MATCHED AND TX_TYPE='D'`指示 DB2 任何与事务类型为“d”的事务记录匹配的基记录都应该从表中删除。
 
+## 忽略记录
 
-# 第 6 章 操作数据库对象
+当记录不匹配`MERGE`命令中的任何标准时会发生什么？在所有情况下，DB2 都会忽略该事务记录并继续处理下一条。您可以在`MERGE`语句中添加`ELSE IGNORE`子句来显式地编写此行为。您不能在`ELSE`子句中包含任何逻辑，因此必须使用通用的`WHEN MATCHED`或`NOT MATCH`子句来处理不符合任何其他标准的记录。
 
-`WHEN MATCHED` 子句现在包含了额外的逻辑，用于确定何时应用事务。例如，`WHEN MATCHED AND TX_TYPE='D'`指示 DB2 任何与事务类型为“d”的事务记录匹配的基记录都应该从表中删除。
+`MERGE`命令按顺序执行，这意味着`MERGE`语句的每个`WHEN`子句都会执行，直到满足其中一个条件。一旦满足条件，就会执行与该语句关联的逻辑，并继续处理下一个事务记录。仅有一个`WHEN`子句会被匹配，其余的将被忽略。这防止了对同一条记录发生多个操作。
 
-# 忽略记录
+## 抛出错误条件
 
-当记录不匹配 MERGE 命令中的任何标准时会发生什么？在所有情况下，DB2 都会忽略该事务记录并继续处理下一条。您可以在 MERGE 语句中添加 `ELSE IGNORE` 子句来显式地编写此行为。您不能在 `ELSE` 子句中包含任何逻辑，因此必须使用通用的 `WHEN MATCHED` 或 `NOT MATCH` 子句来处理不符合任何其他标准的记录。
+在某些情况下，事务记录未被匹配，且您希望停止`MERGE`命令的处理过程。为了实现这一点，可以使用`SIGNAL`命令。
 
-MERGE 命令按顺序执行，这意味着 MERGE 语句的每个 `WHEN` 子句都会执行，直到满足其中一个条件。一旦满足条件，就会执行与该语句关联的逻辑，并继续处理下一个事务记录。仅有一个 `WHEN` 子句会被匹配，其余的将被忽略。这防止了对同一条记录发生多个操作。
-
-# 抛出错误条件
-
-在某些情况下，事务记录未被匹配，且您希望停止 MERGE 命令的处理过程。为了实现这一点，可以使用 `SIGNAL` 命令。
-
-以下 MERGE 命令扩展了示例 6–89 中的内容，并增加了两个额外的错误条件（示例 6–90）。
+以下`MERGE`命令扩展了示例 6–89 中的内容，并增加了两个额外的错误条件（示例 6–90）。
 
 ```
 MERGE INTO PRODUCTS PR
@@ -8919,28 +8471,29 @@ ELSE IGNORE;
 
 示例 6–90 带有 SIGNAL 的 MERGE 语句
 
-# 视图分类
+## 视图分类
 
-当处理插入且事务表中已存在记录时，会抛出第一个错误条件。`SIGNAL` 语句抛出错误代码 70001 以及关联错误信息：记录已存在。例如，以下事务记录将导致 MERGE 失败（示例 6–91）：
+当处理插入且事务表中已存在记录时，会抛出第一个错误条件。`SIGNAL`语句抛出错误代码 70001 以及关联错误信息：记录已存在。例如，以下事务记录将导致`MERGE`失败（示例 6–91）：
 
 | TX_TYPE | PRO_NO | DESCRIPTION | QUANTITY |
 | --- | --- | --- | --- |
 | D | 10 | - | |
 
-MERGE ... SQL0438N 抛出带有诊断信息的错误：“Record already exists for an INSERT”。SQLSTATE=70001
+`MERGE ... SQL0438N`抛出带有诊断信息的错误：“Record already exists for an INSERT”。SQLSTATE=70001
 
 **示例 6–91** MERGE 处理过程中的错误
 
-当执行 `SIGNAL` 语句时，到目前为止完成的所有处理将失败。换句话说，整个语句将被回滚。
+当执行`SIGNAL`语句时，到目前为止完成的所有处理将失败。换句话说，整个语句将被回滚。
 
-任何有效的 `SQLSTATE` 值均可用于 `SIGNAL` 语句。建议程序员根据应用程序保留的范围定义新的 `SQLSTATE`。这可以防止意外使用数据库管理器在未来版本中可能定义的 `SQLSTATE` 值。
+任何有效的`SQLSTATE`值均可用于`SIGNAL`语句。建议程序员根据应用程序保留的范围定义新的`SQLSTATE`。这可以防止意外使用数据库管理器在未来版本中可能定义的`SQLSTATE`值。
 
-`SQLSTATES` 应遵循以下规则：
+`SQLSTATES`应遵循以下规则：
 
 - 可以定义以 '7' 到 '9' 或 'I' 到 'Z' 字符开头的 SQLSTATE 类。在这些类中，可以定义任何子类。
+
 - 以 '0' 到 '6' 或 'A' 到 'H' 字符开头的 SQLSTATE 类留给数据库管理器。在这些类中，以 '0' 到 'H' 字符开头的子类留给数据库管理器。可以定义以 'I' 到 'Z' 字符开头的子类。
 
-# 视图分类
+## 视图分类
 
 现在我们检查了各种 SQL D语句，让我们详细观察视图。已经讨论过创建视图。现在我们将检查不同类型的视图。
 
@@ -8959,49 +8512,48 @@ MERGE ... SQL0438N 抛出带有诊断信息的错误：“Record already exists 
 
 例如，您可能因为引用约束而无法向表中插入值。如果您使用该表创建视图，您也无法通过该视图插入该值。然而，如果视图满足可插入视图的所有规则，它仍然被视为可插入视图。这是因为插入限制是在基表上，而不是在视图定义上。
 
-# 可删除视图
+## 可删除视图
 
-根据视图的定义方式，视图可以是可删除的。可删除视图是对您可以成功执行 `DELETE` 语句的视图。要使视图被可删除，需要遵循以下规则：
+根据视图的定义方式，视图可以是可删除的。可删除视图是对您可以成功执行`DELETE`语句的视图。要使视图被可删除，需要遵循以下规则：
 
 - 外部全选择的每个子句仅标识一个基表（无外部连接连接）。
-- 外部全选择不使用 `GROUP BY`。
-- 外部全选择不使用 `HAVING`。
+- 外部全选择不使用`GROUP BY`。
+- 外部全选择不使用`HAVING`。
 - 外部全选择不包含聚合函数。
 - 外部全选择不使用集合操作（`UNION`, `EXCEPT`, `INTERSECT`）。
-- 外部全选择不使用 `DISTINCT`。
-- 外部全选择不使用 `WHERE` 子句。
+- 外部全选择不使用`DISTINCT`。
+- 外部全选择不使用`WHERE`子句。
 - 视图不使用子查询。
 - 视图不使用窗口函数。
-- 视图不使用 `UNION ALL`。
-- 视图不使用 `OFFSET` 子句。
-- 视图不使用 `LIMIT` 子句。
-- 视图不使用 `FETCH` 子句。
-- 视图不使用 `ORDER` 子句。
-- 视图不使用 `DISTINCT` 子句。
-- 视图不使用 `JOIN` 子句。
-- 视图不使用 `VALUES` 子句。
-- 视图不使用 `EXCEPT` 子句。
-- 视图不使用 `UNION` 子句。
-- 视图不使用 `ON` 子句。
-- 视图不使用 `WITH` 子句。
+- 视图不使用`UNION ALL`。
+- 视图不使用`OFFSET`子句。
+- 视图不使用`LIMIT`子句。
+- 视图不使用`FETCH`子句。
+- 视图不使用`ORDER`子句。
+- 视图不使用`DISTINCT`子句。
+- 视图不使用`JOIN`子句。
+- 视图不使用`VALUES`子句。
+- 视图不使用`EXCEPT`子句。
+- 视图不使用`UNION`子句。
+- 视图不使用`ON`子句。
+- 视图不使用`WITH`子句。
 
 （注：由于原始 OCR 文本存在重复和格式问题，已根据提供的逻辑进行了清理。）
 
+在 DB2 中，`INSERT`运算符可以用于包含`UNION ALL`的视图，前提是满足以下条件：
 
+1. 表达式具有相同的数据类型。
+2. 至少有一列存在一个约束，该约束用于唯一标识插入行的位置，且约束范围不重叠。
 
-
-在 DB2 中，`INSERT` 运算符可以用于包含 `UNION ALL` 的视图，前提是满足以下条件：
-
-- 1. 表达式具有相同的数据类型。
-- 2. 至少有一列存在一个约束，该约束用于唯一标识插入行的位置，且约束范围不重叠。
-
-以这种方式定义的视图也支持 `UPDATE` 操作，只要所更改的列没有违反该列的约束。在这种情况下，用户必须先 `DELETE` 然后 `INSERT` 该记录。
+以这种方式定义的视图也支持`UPDATE`操作，只要所更改的列没有违反该列的约束。在这种情况下，用户必须先`DELETE`然后`INSERT`该记录。
 
 几个示例将阐明其工作原理。
 
 考虑已创建的四个表，用于表示每年每个季度的销售情况。这些表的定义与示例 6–96 所示。
 
-```
+
+
+```sql
 CREATE TABLE Q1SALES (
   STORE INT NOT NULL,
   TX_DATE DATE NOT NULL,
@@ -9013,11 +8565,11 @@ CREATE TABLE Q3SALES LIKE Q1SALES;
 CREATE TABLE Q4SALES LIKE Q1SALES;
 ```
 
-**示例 6–96** 代表全年销售额的多个表
+**示例 6–96** 代表全年销售额的多个表。
 
-这些表可以通过 `UNIONED` 在一起，创建示例 6–97 所示的整个年度视图。
+这些表可以通过`UNIONED`在一起，创建示例 6–97 所示的整个年度视图。
 
-```
+```sql
 CREATE VIEW ALLQ AS (
   SELECT * FROM Q1SALES
 UNION ALL
@@ -9031,94 +8583,97 @@ UNION ALL
 
 **示例 6–97** 全年销售额视图
 
-尽管 DB2 可以对此视图进行 `SELECT`，但它无法用于 `UPDATE`、`INSERT` 或 `DELETE`，因为 DB2 无法知道记录需要存放在哪个表中。对此视图尝试 `INSERT` 语句将失败（示例 6–98）。
+尽管 DB2 可以对此视图进行`SELECT`，但它无法用于`UPDATE`、`INSERT`或`DELETE`，因为 DB2 无法知道记录需要存放在哪个表中。对此视图尝试`INSERT`语句将失败（示例 6–98）。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_414_0.png)
 
-# 第 6 章操作数据库对象
+# 第 6 章 操作数据库对象
 
+```sql
 INSERT INTO ALLQ
 VALUES ('2006-05-01', 25, 100);
-
-SQL20154N 不允许向视图 "BAKLARZ.ALLQ" 执行请求的插入或更新操作，因为无法为行确定目标表。原因代码 = "2"。SQLSTATE=23513
-
-# 示例 6–98 无效的 INSERT
-
-原始表需要创建约束来标识哪些记录允许存储在其中。此外，创建约束为 DB 提供了更多关于如何处理此视图 `SELECT` 语句的信息。
-
-例如，考虑示例 6–99 中的 `SELECT`。
-
 ```
+
+`SQL20154N`不允许向视图`"BAKLARZ.ALLQ"`执行请求的插入或更新操作，因为无法为行确定目标表。原因代码 = `"2"`。`SQLSTATE=23513`
+
+**示例 6–98** 无效的`INSERT`
+
+原始表需要创建约束来标识哪些记录允许存储在其中。此外，创建约束为 DB 提供了更多关于如何处理此视图`SELECT`语句的信息。
+
+例如，考虑示例 6–99 中的`SELECT`。
+
+```sql
 SELECT * FROM ALLQ WHERE
 ITEM = 142 AND '2006-05-14' AND '2006-07-21';
 ```
 
-# 示例 6–99 视图 ALLQ 的 SELECT
+**示例 6–99** 视图`ALLQ`的`SELECT`
 
-DB2 优化了此语句，它没有关于数据可能存在于四个表中的信息。此 `SELECT` 的视觉解释（Visual Explain）显示了 DB2 为了满足该请求必须执行的工作（图 6–2）。
+DB2 优化了此语句，它没有关于数据可能存在于四个表中的信息。此`SELECT`的视觉解释（Visual Explain）显示了 DB2 为了满足该请求必须执行的工作（图 6–2）。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_415_0.png)
 
-图 6–2 跨 UNION ALL 的 SELECT EXPLAIN 语句
+**图 6–2** 跨`UNION ALL`的`SELECT EXPLAIN`语句
 
-为了给 DB2 提供更多关于如何处理这些行，需要在原始表定义中添加检查约束（check constraint）。这可以在创建表时或通过 `ALTER TABLE` 命令完成。对于上述定义的现有表，`ALTER TABLE` 命令类似于示例 6–100 所示。
+为了给 DB2 提供更多关于如何处理这些行，需要在原始表定义中添加检查约束（check constraint）。这可以在创建表时或通过`ALTER TABLE`命令完成。对于上述定义的现有表，`ALTER TABLE`命令类似于示例 6–100 所示。
 
-```
+```sql
 ALTER TABLE Q1SALES
 ADD CONSTRAINT Q1_DATES
 CHECK (TX_DATE BETWEEN '2006-01-01' AND '2006-03-31');
 ```
 
-# 示例 6–100 向表定义中添加约束
+**示例 6–100** 向表定义中添加约束
 
-每个表在 `TX_DATE` 字段中都有自己的日期范围。添加额外的约束后，查询将使用以下计划执行（图 6–3）：
+每个表在`TX_DATE`字段中都有自己的日期范围。添加额外的约束后，查询将使用以下计划执行（图 6–3）。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_416_0.png)
 
-图 6–3 添加检查约束后的执行计划
+**图 6–3** 添加检查约束后的执行计划
 
-注意 DB2 如何能够从访问逻辑中消除两个表（Q1SALES 和 Q4SALES），因为约束告诉 DB2 只有 Q2SALES 和 Q3SALES 具有我们感兴趣的日期范围。
+注意 DB2 如何能够从访问逻辑中消除两个表（`Q1SALES`和`Q4SALES`），因为约束告诉 DB2 只有`Q2SALES`和`Q3SALES`具有我们感兴趣的日期范围。
 
-当用户对 ALLQ 视图发出 `INSERT`、`DELETE`、`UPDATE` 或 `SELECT` 时，DB2 可以使用这些新的约束信息将事务引导到正确的表中。这对于可以从搜索中消除不适合查询的表的情况尤为重要。注意，为了正确处理此视图，检查约束（范围）不能重叠。此外，对检查约束定义列的修改不能在范围外更新。例如，考虑示例 6–101 中的 `UPDATE` 语句。
+当用户对`ALLQ`视图发出`INSERT`、`DELETE`、`UPDATE`或`SELECT`时，DB2 可以使用这些新的约束信息将事务引导到正确的表中。这对于可以从搜索中消除不适合查询的表的情况尤为重要。注意，为了正确处理此视图，检查约束（范围）不能重叠。此外，对检查约束定义列的修改不能在范围外更新。例如，考虑示例 6–101 中的`UPDATE`语句。
 
-```
+```sql
 UPDATE ALLQ
 SET STORE = 4
 WHERE STORE = 1;
 ```
 
-```
+```sql
 UPDATE ALLQ
 SET TX_DATE = '2006-02-26'
 WHERE TX_DATE = '2006-02-27';
 ```
 
-```
+```sql
 UPDATE ALLQ
 SET TX_DATE = '2006-04-01'
 WHERE TX_DATE = '2006-03-30';
 ```
 
-# 示例 6–101 针对 UNION 视图的更新
+**示例 6–101** 针对`UNION`视图的更新
 
-第一个更新没有更改检查约束中的任何值，将成功执行。注意，由于没有定义日期范围，所有表会将 store 4 更改为 1。第二个更新运行成功，因为我们将日期从 27 号更改为 26 号，且日期仍在检查约束范围内（'2006-01-01' 到 '2006-03-31'）。最后一次更新由于更新值在范围之外未能完成。为了更新该记录，用户必须先删除该记录再插入。
+第一个更新没有更改检查约束中的任何值，将成功执行。注意，由于没有定义日期范围，所有表会将 store 4 更改为 1。第二个更新运行成功，因为我们将日期从 27 号更改为 26 号，且日期仍在检查约束范围内（`'2006-01-01'`到`'2006-03-31'`）。最后一次更新由于更新值在范围之外未能完成。为了更新该记录，用户必须先删除该记录再插入。
 
-# 行迁移
+## 行迁移
 
-处理表联合时出现的问题之一是处理从一个表移动到另一个表的记录更新。如果应用程序知道移动记录，它可以简单地从一个表中删除并重新插入到另一个表中。但这种方法并不理想，因为当多条记录受更新影响时，应用程序无法控制。例如，某些记录可能因为错误需要更改日期。这种更改无法使用示例 6–102 所示的 `UPDATE` 语句完成。
+处理表联合时出现的问题之一是处理从一个表移动到另一个表的记录更新。如果应用程序知道移动记录，它可以简单地从一个表中删除并重新插入到另一个表中。但这种方法并不理想，因为当多条记录受更新影响时，应用程序无法控制。例如，某些记录可能因为错误需要更改日期。这种更改无法使用示例 6–102 所示的`UPDATE`语句完成。
 
-```
+```sql
 UPDATE ALLQ
 SET TX_DATE = '2006-04-01'
 WHERE TX_DATE = '2006-03-30';
 ```
-SQL45N 不允许该操作，因为行不满足 BAKLARZ.Q1SALES.Q1_DATES。SQLSTATE=23513
 
-# 示例 6–102 更新命令失败
+`SQL45N`不允许该操作，因为行不满足`BAKLARZ.Q1SALES.Q1_DATES`。`SQLSTATE=23513`
 
-更新的问题是记录的新日期不符合其来源表的允许范围。可以通过编写 `DELETE` 然后 `INSERT` 语句来修复，视图定义上的附加选项可以让 DB2 为你完成（示例 6–103）。
+**示例 6–102** 更新命令失败
 
-```
+更新的问题是记录的新日期不符合其来源表的允许范围。可以通过编写`DELETE`然后`INSERT`语句来修复，视图定义上的附加选项可以让 DB2 为你完成（示例 6–103）。
+
+```sql
 CREATE VIEW ALLQ AS (
   SELECT * FROM Q1SALES WHERE
   TX_DATE BETWEEN '2006-01-01' AND '2006-03-31'
@@ -9135,25 +8690,23 @@ UNION ALL
 WITH ROW MOVEMENT;
 ```
 
-# 示例 6–103 ROW MOVEMENT 选项
+**示例 6–103** `ROW MOVEMENT`选项
 
-`WITH ROW MOVEMENT` 子句允许记录在约束值变化在表之间移动。此选项避免了应用程序在表之间物理移动记录。注意，如果约束值的更改不符合现有表的范围，仍可能发生错误。
+`WITH ROW MOVEMENT`子句允许记录在约束值变化在表之间移动。此选项避免了应用程序在表之间物理移动记录。注意，如果约束值的更改不符合现有表的范围，仍可能发生错误。
 
-# 使用 UNION ALL 表空间
+## 使用 UNION ALL 表空间
 
-视图中的 `UNION ALL` 可以绕过 DB2 的某些限制，并允许对序列数据进行更灵活的维护。
+视图中的`UNION ALL`可以绕过 DB2 的某些限制，并允许对序列数据进行更灵活的维护。
 
 如果指定 4K 数据页，DB2 中的表只能占用 64GB 存储。将页大小增大 8K、16K 或 32K 可能会产生更大的表，但每页 255 行的限制可能仍限制存储的数据量。
 
-# 第 6 章操作数据库对象
+### DB2 注意
 
-## DB2 注意
-
-根据你使用的 DB2 版本，4K 页的表空间可以大于 64GB。在 DB2 9 中引入了新的行标识符 (RID)，允许 DMS 表空间增长到 2TB。此外，使用这种新 RID 格式的每页可以超过 2000 行。然而，如果你使用的是系统管理存储 (SMS)，每个表空间 64GB 和每页 256 行的限制仍然存在。
+根据你使用的 DB2 版本，4K 页的表空间可以大于 64GB。在 DB2 9 中引入了新的行标识符（RID），允许 DMS 表空间增长到 2TB。此外，使用这种新 RID 格式的每页可以超过 2000 行。然而，如果你使用的是系统管理存储（SMS），每个表空间 64GB 和每页 256 行的限制仍然存在。
 
 用户可以通过将表分成较小的单元并将每个单元放入单独的表空间来解决此大小限制。考虑图 6–96 中的季度销售数据表，每个表被限于 64GB 数据。用户不再使用这些表的默认表空间，而是为每个单独表创建一个单独的空间（示例 6–105）。
 
-```
+```sql
 CREATE REGULAR TABLESPACE Q1_2006
 PAGESIZE 4 K MANAGED BY SYSTEM
 USING('Q1_2006') EXTSIZE 2;
@@ -9168,11 +8721,11 @@ PAGESIZE 4 K MANAGED BY SYSTEM
 USING('Q4_2006') EXTSIZE 2;
 ```
 
-# 示例 6–104 创建表空间
+**示例 6–104** 创建表空间
 
 一旦创建了这些表，每个表都可以放入自己的表空间中。示例 6–105 显示了一个表定义。
 
-```
+```sql
 CREATE TABLE Q1SALES
 (
   STORE INT    NOT NULL,
@@ -9182,12 +8735,9 @@ CREATE TABLE Q1SALES
 ) IN Q1_2007;
 ```
 
-# 示例 6–105 在单独的表空间中创建 Q1SALES
+**示例 6–105** 在单独的表空间中创建`Q1SALES`
 
-此时，每个季度销售表可以使用 4K 页占用高达 64GB 的空间。针对此视图的所有事务（包括 `INSERT`）都将被引导到
-
-
-仍然可以编写适当的表将事务重定向到相应的季度销售表，但视图（view）使得查询处理变得更加简单。此外，通过将 `UNION ALL` 的四个独立的表设计为视图，用户可以在不影响当前工作负载的情况下向系统加载新数据，然后以极少的管理开销使这些新数据“生效（live）”。
+此时，每个季度销售表可以使用 4K 页占用高达 64GB 的空间。针对此视图的所有事务（包括`INSERT`）都将被引导到仍然可以编写适当的表将事务重定向到相应的季度销售表，但视图（view）使得查询处理变得更加简单。此外，通过将`UNION ALL`的四个独立的表设计为视图，用户可以在不影响当前工作负载的情况下向系统加载新数据，然后以极少的管理开销使这些新数据“生效（live）”。
 
 如果数据按月或按季度持续刷新，用户可以创建一个单独的表和表空间，并将信息加载到其中。加载完成后，只需执行几条命令即可让这些数据对所有用户“生效”。以季度数据为例，假设 2007 年第一季度来了一组新数据，而你希望将其作为四个季度信息中的一部分，而不是 2006 年第一季度的数据。必须创建一个针对 2007 年第一季度的新表，其表设计与之前四个季度的信息表设计相同（示例 6–106）。
 
@@ -9206,9 +8756,9 @@ QUANTITY INT NOT NULL
 ) IN Q1_2007;
 ```
 
-## 示例 6–106 新季度销售信息
+**示例 6–106** 新季度销售信息
 
-我们需要更改表名，因为 `Q1SALES` 在我们的数据库中已经存在。一旦表加载了来自第一季度的数据，就需要删除现有的 `Q1SALES` 表并重新创建视图以包含新的 `Q1SALES_2007` 表（示例 6–107）。
+我们需要更改表名，因为`Q1SALES`在我们的数据库中已经存在。一旦表加载了来自第一季度的数据，就需要删除现有的`Q1SALES`表并重新创建视图以包含新的`Q1SALES_2007`表（示例 6–107）。
 
 ```sql
 DROP TABLESPACE Q1_2006;
@@ -9224,18 +8774,17 @@ SELECT * FROM Q4SALES_ALL
 );
 ```
 
-## 示例 6–107 新季度销售信息
+**示例 6–107** 新季度销售信息
 
-## 第 6 章 操作数据库对象
+当对表空间执行`DROP`语句时，通常不会发生记录。这意味着用户可以从数据库中删除这些行，而无需承担与记录删除操作相关的开销。分离表的额外益处是可以管理新季度的记录和其他活动，而不会影响生产数据。
 
-当对表空间执行 `DROP` 语句时，通常不会发生记录。这意味着用户可以从数据库中删除这些行，而无需承担与记录删除操作相关的开销。分离表的额外益处是可以管理新季度的记录和其他活动，而不会影响生产数据。
-
-在将表分离到不同的表空间时，用户必须注意某些维护方面。虽然 `SELECT` 处理可以相对高效，但针对这些表运行的 `INSERT` 语句将需要一些额外的开销来确定事务需要被重定向到哪个表。这可能仅增加几毫秒的额外优化时间，但在负载密集的系统上可能会产生影响。
+在将表分离到不同的表空间时，用户必须注意某些维护方面。虽然`SELECT`处理可以相对高效，但针对这些表运行的`INSERT`语句将需要一些额外的开销来确定事务需要被重定向到哪个表。这可能仅增加几毫秒的额外优化时间，但在负载密集的系统上可能会产生影响。
 
 最后，从恢复的角度来看，DB2 不识别组成视图的表之间的关系。正常的记录和事务回滚处理方式与任何其他 SQL 语句相同。然而，组成各种表的表空间需要同时备份（如果对单个表空间进行备份），以便它们能作为一个完整的单元进行恢复。如果空间没有在同一个单元上恢复，可能导致跨表事务无法同步。
 
 > **DB2 注意事项**
-> `UNION ALL` 视图的替代方案是使用范围分区（Range Partitioning）。范围分区在第 11 章中有详细描述。
+>
+> `UNION ALL`视图的替代方案是使用范围分区（Range Partitioning）。范围分区在第 11 章中有详细描述。
 
 ## 失效视图（Inoperative Views）
 
@@ -9248,88 +8797,87 @@ SELECT * FROM Q4SALES_ALL
 
 ## 总结
 
-在本章中，我们讨论了 SQL 的数据操语言（DML）。DML 有四条主要语句：`SELECT`、`UPDATE`、`INSERT` 和 `DELETE`。这些语句实现了所有数据库对象的数据操纵。
+在本章中，我们讨论了 SQL 的数据操语言（DML）。DML 有四条主要语句：`SELECT`、`UPDATE`、`INSERT`和`DELETE`。这些语句实现了所有数据库对象的数据操纵。
 
-`SELECT` 语句拥有一丰富的功能，允许用户指定应该检索哪些行以及如何格式化这些行。从表中检索的列在 `select` 列表中指定。这些列可以包含对值范围内的行进行聚合的计算和函数。从表中检索的行必须匹配 `WHERE` 子句中的标准。结果集返回给用户，并可以根据列值进行排序。
+`SELECT`语句拥有一丰富的功能，允许用户指定应该检索哪些行以及如何格式化这些行。从表中检索的列在`select`列表中指定。这些列可以包含对值范围内的行进行聚合的计算和函数。从表中检索的行必须匹配`WHERE`子句中的标准。结果集返回给用户，并可以根据列值进行排序。
 
-在 `SELECT` 语句中可以将多个表连接在一起。结果集可以使用 `UNION`、`INTERSECT` 和 `EXCEPT` 操作符进行进一步处理。这些操作符为 `SELECT` 语句增加了额外的灵活性。可以使用 `WITH` 运算符创建临时结果集，并随后在定义它的 `SELECT` 语句中使用。
+在`SELECT`语句中可以将多个表连接在一起。结果集可以使用`UNION`、`INTERSECT`和`EXCEPT`操作符进行进一步处理。这些操作符为`SELECT`语句增加了额外的灵活性。可以使用`WITH`运算符创建临时结果集，并随后在定义它的`SELECT`语句中使用。
 
-`INSERT`、`UPDATE`、`DELETE` 和 `MERGE` 语句修改表的内容。这些语句允许使用 `SELECT` 逻辑来限制受数据修改影响的行数。视图是虚拟表。在执行需要其内容的查询之前，视图并不存在。视图可以分类为可删除、可更新、可插入和只读。在设计需要访问这些视图的应用程序或查询时，这种分类非常重要。
+`INSERT`、`UPDATE`、`DELETE`和`MERGE`语句修改表的内容。这些语句允许使用`SELECT`逻辑来限制受数据修改影响的行数。视图是虚拟表。在执行需要其内容的查询之前，视图并不存在。视图可以分类为可删除、可更新、可插入和只读。在设计需要访问这些视图的应用程序或查询时，这种分类非常重要。
 
 DB2 支持更多强大的 SQL 功能，这些将在下一章中讨论。
 
-本页特意留空
+本页特意留空。
 
-## 高级 SQL
+# 高级 SQL
 
-- 触发器 (TRIGGERS)
-- 递归 SQL (RECURSIVE SQL)
-- 外连接 (OUTER JOIN)
-- OLAP 
-- CASE 表达式 (CASE EXPRESSIONS)
-- 强类型表 (TYPED TABLES)
-- 摘要表 (SUMMARY TABLES)
-- 序列 (SEQUENCES)
-- 高级函数 (ADVANCED FUNCTIONS)
+- 触发器（TRIGGERS）
+- 递归 SQL（RECURSIVE SQL）
+- 外连接（OUTER JOIN）
+- OLAP
+- `CASE`表达式（CASE EXPRESSIONS）
+- 强类型表（TYPED TABLES）
+- 摘要表（SUMMARY TABLES）
+- 序列（SEQUENCES）
+- 高级函数（ADVANCED FUNCTIONS）
 
-本章将涵盖 DB2 中某些非常强大的功能。我们将讨论触发器、递归、外连接、OLAP 功能以及 CASE 表达式的使用。此外，我们还将讨论结构类型、强类型表、用户定义函数、摘要表和序列。
+本章将涵盖 DB2 中某些非常强大的功能。我们将讨论触发器、递归、外连接、OLAP 功能以及`CASE`表达式的使用。此外，我们还将讨论结构类型、强类型表、用户定义函数、摘要表和序列。
 
 ## 触发器（Triggers）
 
-*触发器*是在定义事件发生时执行的一组操作。触发事件可以是以下 SQL 语句：
+触发器是在定义事件发生时执行的一组操作。触发事件可以是以下 SQL 语句：
 
-- INSERT
-- UPDATE
-- DELETE
+- `INSERT`
+- `UPDATE`
+- `DELETE`
 
-触发器针对特定表定义的，一旦定义，触发器就会激活。一个表可以为其定义多个触发器，如果为给表定义了多个触发器，触发顺序基于触发器创建的时间戳（创建顺序）。触发器定义存储在系统目录中。可以通过这些目录视图查看：
+触发器针对特定表定义，一旦定义，触发器就会激活。一个表可以为其定义多个触发器，如果为给表定义了多个触发器，触发顺序基于触发器创建的时间戳（创建顺序）。触发器定义存储在系统目录中。可以通过这些目录视图查看：
 
-- SYSCAT.TRIGGERS 包含触发器定义信息，每个触发器一行
-- SYSCAT.TRIGDEP 为触发器对其他对象的每个依赖包含一行
+- `SYSCAT.TRIGGERS`包含触发器定义信息，每个触发器一行。
+- `SYSCAT.TRIGDEP`为触发器对其他对象的每个依赖包含一行。
 
-触发器也可以定义在视图上。当需要管理 `INSERT`、`DELETE` 或 `UPDATE` 时，就会创建此类触发器。在某些情况下，DB2 并不总是确定如何将更新应用于视图，因此可以使用 `INSTEAD OF` 触发器将更新重定向到正确的表。
+触发器也可以定义在视图上。当需要管理`INSERT`、`DELETE`或`UPDATE`时，就会创建此类触发器。在某些情况下，DB2 并不总是确定如何将更新应用于视图，因此可以使用`INSTEAD OF`触发器将更新重定向到正确的表。
 
 ## 触发器的用途
 
 触发器的一些用途包括：
 
-- 数据验证确保新的数据值在正确的范围内。这类似于表检查约束，但它是一种更灵活的数据验证机制。
+- 数据验证——确保新的数据值在正确的范围内。这类似于表检查约束，但它是一种更灵活的数据验证机制。
 - 数据处理——使用在数据记录修改之前触发的触发器。这允许对新数据值进行修改或处理为预定义值。
 - 数据完整性——用于维护跨表依赖。触发的操作可能涉及更新相关表中的数据记录。这类似于引用完整性，但它是更灵活的替代方案。
-- 视图处理——DB2 并不总是确定如何将更新应用于视图。`INSTEAD OF` 触发器允许用户控制如何处理视图的修改。
+- 视图处理——DB2 并不总是确定如何将更新应用于视图。`INSTEAD OF`触发器允许用户控制如何处理视图的修改。
 
+## 触发器激活（Trigger Activation）
 
+触发器可以通过两种方式之一被定义为触发（激活）：
 
-
-
-## 触发器激活 (Trigger Activation)
-
-触发器可以通过两种方式之一定义为触发（激活）：
-
--   **前触发器**（before trigger）将在执行触发 SQL 语句之前，针对受影响行集中的每一行触发一次。因此，触发器体会在新数据被插入或更新到表之前看到这些新数据值。
--   **后触发器**（after trigger）将在语句成功完成后，针对受影响行集中的每一行触发一次（取决于定义的粒度）。因此，触发器体看到的表处于一致状态。（所有事务均已完成。）
+- **前触发器**（before trigger）将在执行触发 SQL 语句之前，针对受影响行集中的每一行触发一次。因此，触发器体会在新数据被插入或更新到表之前看到这些新数据值。
+- **后触发器**（after trigger）将在语句成功完成后，针对受影响行集中的每一行触发一次（取决于定义的粒度）。因此，触发器体看到的表处于一致状态。（所有事务均已完成。）
 
 关于触发器的另一个重要特性是，它们可以触发其他触发器（或同一个触发器）或其他约束。这些被称为级联触发器。
 
 在触发器执行期间，根据触发器的性质（前或后），触发器可以访问新的和旧的数据值。通过使用触发器，你可以：
 
--   减少应用程序开发量并加快开发速度。由于触发器存储在 DB2 内部并由 DB2 处理，你不需要在应用程序中编写触发器或其操作的代码。
--   为你的业务规则提供全局环境。由于触发器只需要定义一次并存储在数据库中，它们对所有执行数据库操作的应用程序可用。
--   减少应用程序的维护工作。同样，由于触发器由 DB2 处理并存储在数据库本身中，由于环境变化导致触发器发生任何更改只需要在一个应用程序中发生，而不是多个应用程序中。
+- 减少应用程序开发量并加快开发速度。由于触发器存储在 DB2 内部并由 DB2 处理，你不需要在应用程序中编写触发器或其操作的代码。
+- 为你的业务规则提供全局环境。由于触发器只需要定义一次并存储在数据库中，它们对所有执行数据库操作的应用程序可用。
 
-理解触发器用法的最佳方法是查看一些运行示例。DB2CERT 应用程序包含许多可以使用触发器维护的关系。
 
-## 触发器示例（后触发器） (Trigger Example (After Trigger))
 
-在示例 7–1 中，定义了一个触发器，用于为候选人的每项测试设置 PASS_FAIL 列的值。（注意，我们在该场景中添加了此列）。该触发器被命名为 PASSFAIL（与名为 PASS_FAIL 的列没有关系）。一旦创建触发器，它就会处于激活状态。
+- 减少应用程序的维护工作。同样，由于触发器由`DB2`处理并存储在数据库本身中，由于环境变化导致触发器发生任何更改只需要在一个应用程序中发生，而不是多个应用程序中。
 
-PASSFAIL 触发器是一个 AFTER、INSERT 且 FOR EACH ROW 的触发器。每当向 TEST_TAKEN 表插入一行数据时，此触发器就会触发。触发器体部分将执行一个 `UPDATE` 语句，为新插入的行设置 PASS_FAIL 列的值。该列将填充为值 P（代表通过）或值 F（代表不通过）。
+理解触发器用法的最佳方法是查看一些运行示例。`DB2CERT`应用程序包含许多可以使用触发器维护的关系。
+
+## 触发器示例（后触发器）（Trigger Example (After Trigger)）
+
+在示例 7–1 中，定义了一个触发器，用于为候选人的每项测试设置`PASS_FAIL`列的值。（注意，我们在该场景中添加了此列）。该触发器被命名为`PASSFAIL`（与名为`PASS_FAIL`的列没有关系）。一旦创建触发器，它就会处于激活状态。
+
+`PASSFAIL`触发器是一个`AFTER`、`INSERT`且`FOR EACH ROW`的触发器。每当向`TEST_TAKEN`表插入一行数据时，此触发器就会触发。触发器体部分将执行一个`UPDATE`语句，为新插入的行设置`PASS_FAIL`列的值。该列将填充为值`P`（代表通过）或值`F`（代表不通过）。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_426_0.png)
 
-## 400 第 7 章 高级 SQL
+## 第 7 章 高级 SQL
 
-## DB2 注意
+### DB2 注意
 
 请记住，针对一个表定义的触发器可以在触发器体中修改其他表。
 
@@ -9355,13 +8903,13 @@ AND N.NUMBER = NUMBER
 AND N.DATE_TAKEN = DATE_TAKEN;
 ```
 
-示例 7–1 创建一个 后触发器
+示例 7–1 创建一个后触发器
 
-## 触发器示例（前触发器） (Trigger Example (Before Trigger))
+## 触发器示例（前触发器）（Trigger Example (Before Trigger)）
 
-触发器将在触发器操作完成之前激活。触发的操作可以是 INSERT、UPDATE 或 DELETE 语句。这种类型的触发器对于三个用途非常有用：条件化数据、提供默认值或动态强制执行数据约束。
+触发器将在触发器操作完成之前激活。触发的操作可以是`INSERT`、`UPDATE`或`DELETE`语句。这种类型的触发器对于三个用途非常有用：条件化数据、提供默认值或动态强制执行数据约束。
 
-示例 7–2 到 7–4 显示了三个前触发器示例，它们用于 DB2 认证应用程序中。
+示例 7–2 到 7–4 显示了三个前触发器示例，它们用于`DB2`认证应用程序中。
 
 所有这些触发器的实现都是为了避免测试考生的座位冲突。触发器将在为每个测试插入每个新候选人数据时触发。
 
@@ -9377,14 +8925,14 @@ SIGNAL SQLSTATE '70003'
 
 示例 7–2 前触发器示例 (1)
 
-## 触发器 (Triggers)
+## 触发器（Triggers）
 
 ```sql
 CREATE TRIGGER AFT5 NO CASCADE BEFORE
 INSERT TEST_TAKEN
 REFERENCING NEW AS N
 FOR EACH ROW MODE DB2SQL
-WHEN (N.START_TIME + 
+WHEN (N.START_TIME +
 (SELECT SMALLINT(LENGTH) FROM TEST
 WHERE NUMBER = N.NUMBER) > '17:00:00')
 SIGNAL SQLSTATE '70004'
@@ -9411,15 +8959,15 @@ SIGNAL SQLSTATE '70001'
 
 示例 7–4 前触发器示例 (3)
 
-如果遇到这些条件，将使用名为 `SIGNAL` 的 SQL 函数标记 SQL 错误。当条件满足时，将提供不同的 SQLSTATE 值。
+如果遇到这些条件，将使用名为`SIGNAL`的`SQL`函数标记`SQL`错误。当条件满足时，将提供不同的`SQLSTATE`值。
 
-## 替代用触发器 (Instead of Triggers)
+## 替代用触发器（Instead of Triggers）
 
 在许多安装中，视图被用作限制访问表的方法。通过视图，DBA 可以限制用户可以看到的列。然而，在应用数据修改时视图会导致某些困难。例如，用户可能创建视图（示例 7–5）：
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_426_0.png)
 
-## 402 第 7 章 高级 SQL
+## 第 7 章 高级 SQL
 
 ```sql
 CREATE TABLE CUSTOMERS
@@ -9450,11 +8998,11 @@ INSERT INTO CUSTOM_SERVICE VALUES
 (1234, 'WONGS DONUTS', '887-555-1212');
 ```
 
-示例 7–7 插入 Customer_Service
+示例 7–7 插入`Customer_Service`
 
-不幸的是，DB2 将发出错误（示例 7–8），因为此插入违反了基表的约束。在这种情况下，SALES 列未包含在 INSERT 语句中，根据原始定义（NOT NULL），它是必要的。
+不幸的是，`DB2`将发出错误（示例 7–8），因为此插入违反了基表的约束。在这种情况下，`SALES`列未包含在`INSERT`语句中，根据原始定义（`NOT NULL`），它是必要的。
 
-```
+```text
 SQL040N Assignment of a NULL value to NOT NULL column
 "TBSPACEID=5, TABLEID=61, COLNO=4" is not allowed.
 SQLSTATE=Z302
@@ -9465,19 +9013,19 @@ SQLSTATE=Z302
 为了避免这个问题，DBA 可以采取以下步骤之一：
 
 - 创建更好的数据库设计以避免此错误
-- 允许 YTD_SALES 字段 NULL 值或设置为零
-- 创建 INSTEAD OF 触发器
+- 允许`YTD_SALES`字段`NULL`值或设置为零
+- 创建`INSTEAD OF`触发器
 
-有人认为应该重新设计系统以避免这个问题，但如果我们受限于目前的表定义，INSTEAD OF 触发器将有助于解决问题。
+有人认为应该重新设计系统以避免这个问题，但如果我们受限于目前的表定义，`INSTEAD OF`触发器将有助于解决问题。
 
-INSTEAD OF 触发器仅用于视图，而不是基表。它与普通触发器具有类似的特征，但有以下限制：
+`INSTEAD OF`触发器仅用于视图，而不是基表。它与普通触发器具有类似的特征，但有以下限制：
 
 - 仅允许视图
-- 始终 FOR EACH ROW
-- 默认值将作为 NULL 传递
-- 在带有 INSTEAD UPDATE/DELETE 触发器的视图上不支持定位 UPDATE/DELETE
+- 始终`FOR EACH ROW`
+- 默认值将作为`NULL`传递
+- 在带有`INSTEAD UPDATE/DELETE`触发器的视图上不支持定位`UPDATE/DELETE`
 
-对于 CUSTOM_SERVICE 视图，我们可以创建一个 INSTEAD OF 触发器，用于处理插入操作期间的缺失字段（示例 7–9）：
+对于`CUSTOM_SERVICE`视图，我们可以创建一个`INSTEAD OF`触发器，用于处理插入操作期间的缺失字段（示例 7–9）：
 
 ```sql
 CREATE TRIGGER I_CUSTOMER_SERVICE
@@ -9496,13 +9044,9 @@ END;
 
 示例 7–9 插入替代触发器
 
-
-
-
-
 ## 第 7 章 高级 SQL
 
-当对此视图执行 `INSERT` 操作时，DB2 将调用此 `INSTEAD OF` 触发器，记录将成功插入到表中。虽然这是一个简单的示例，但 `INSTEAD OF` 触发器可以用于多种目的，包括加密和解密表中的字段。例如，出于安全考虑，此表中的 `CREDIT_CARD` 信息可以加密。如果我们决定使用固定密码进行加解密，可以创建如下视图来选择解密后的记录（示例 7–10）：
+当对此视图执行`INSERT`操作时，`DB2`将调用此`INSTEAD OF`触发器，记录将成功插入到表中。虽然这是一个简单的示例，但`INSTEAD OF`触发器可以用于多种目的，包括加密和解密表中的字段。例如，出于安全考虑，此表中的`CREDIT_CARD`信息可以加密。如果我们决定使用固定密码进行加解密，可以创建如下视图来选择解密后的记录（示例 7–10）：
 
 ```sql
 CREATE VIEW CUSTOMER_SERVICE AS
@@ -9514,7 +9058,7 @@ FROM CUSTOMERS
 
 ### 示例 7–10 带有解密功能的视图
 
-`INSTEAD OF` 触发器也需要修改，以对值加密并插入当年的零销售额（示例 7–11）：
+`INSTEAD OF`触发器也需要修改，以对值加密并插入当年的零销售额（示例 7–11）：
 
 ```sql
 CREATE TRIGGER I_CUSTOMER_SERVICE
@@ -9533,13 +9077,13 @@ ENCRYPT(CUST.CREDIT_CARD, 'SECRET'),
 
 ### 示例 7–11 带有加密的 Instead 触发器
 
-当用户从 `CUSTOMER_SERVICE` 视图进行查询时，他们将看到以下结果（示例 7–12）：
+当用户从`CUSTOMER_SERVICE`视图进行查询时，他们将看到以下结果（示例 7–12）：
 
 | CUSTNO | CUSTOMNAME | PHONE | CREDIT_CARD |
 | :--- | :--- | :--- | :--- |
 | 1234 | WONGS | DONUTS | 887-555-1212 3922 1111 2222 |
 
-### 示例 7–12 从 Customer_Service 视图查询
+### 示例 7–12 从`Customer_Service`视图查询
 
 注意如果另一个用户直接从基表进行查询会发生什么（示例 7–13）：
 
@@ -9549,15 +9093,15 @@ ENCRYPT(CUST.CREDIT_CARD, 'SECRET'),
 
 由于解密并未在基表上进行，任何访问此字段的其他用户都无法看到结果。
 
-总之，`INSTEAD OF` 触发器可以让你在使用视图时具有更大的灵活性，并允许你处理 DB2 无法自行处理的 `INSERT`、`UPDATE` 和 `DELETE` 情况。
+总之，`INSTEAD OF`触发器可以让你在使用视图时具有更大的灵活性，并允许你处理`DB2`无法自行处理的`INSERT`、`UPDATE`和`DELETE`情况。
 
 ## 递归 SQL
 
-递归 SQL 语句是指一种通过重复使用结果集来确定进一步结果的 SQL 语句。这种 SQL 语句是使用公共表表达式（common table expression）构建的，该表达式引用了自身（即使用了它自己的定义）。
+递归`SQL`语句是指一种通过重复使用结果集来确定进一步结果的`SQL`语句。这种`SQL`语句是使用公共表表达式（common table expression）构建的，该表达式引用了自身（即使用了它自己的定义）。
 
 此类语句用于解决查询，例如层级树、航空公司路线或物料清单（bill-of-material）类型的查询。
 
-假设我们有一个指示两个城市之间距离的表。在这个示例中，我们使用 `FLIGHTS` 表。它包含了关于地、目的地以及城市之间距离的信息。
+假设我们有一个指示两个城市之间距离的表。在这个示例中，我们使用`FLIGHTS`表。它包含了关于地、目的地以及城市之间距离的信息。
 
 表如示例 7–14 所示。
 
@@ -9576,13 +9120,13 @@ ENCRYPT(CUST.CREDIT_CARD, 'SECRET'),
 | New York | Toronto | 350 |
 | Mexico | Houston | 770 |
 
-### 示例 7–14 递归 SQL：flights 表的内容
+### 示例 7–14 递归 SQL：`flights`表的内容
 
-我们的目标是获取一个列表，包含从德国出发可以到达的所有目的地距离和中转次数。我们将创建一个递归 SQL 语句来检索这些信息。
+我们的目标是获取一个列表，包含从德国出发可以到达的所有目的地距离和中转次数。我们将创建一个递归`SQL`语句来检索这些信息。
 
-让我们先解释这种查询是如何使用递归 SQL 解决的。表包含了关于目的地和起点的信息。在到达一个特定的目的地后，该目的地可以被视为起点。这就是递归出现的地方：目的地变成了起点，下一个目的地可以变成新的起点，以此此类推。
+让我们先解释这种查询是如何使用递归`SQL`解决的。表包含了关于目的地和起点的信息。在到达一个特定的目的地后，该目的地可以被视为起点。这就是递归出现的地方：目的地变成了起点，下一个目的地可以变成新的起点，以此此类推。
 
-解决此查询的方法是编写一个 SQL 语句，给定一个起点，将检索其目的地，然后将它们作为起点，获取新的目的地，以此此类推。
+解决此查询的方法是编写一个`SQL`语句，给定一个起点，将检索其目的地，然后将它们作为起点，获取新的目的地，以此此类推。
 
 ```sql
 WITH PATH (ORIGIN,DESTINATION,DISTANCE,STOPS) AS (
@@ -9599,13 +9143,13 @@ WHERE P.DESTINATION=F.ORIGIN
 
 ### 示例 7–15 递归 SQL：获取从德国的所有目的地
 
-我们之前提到，递归是构建在公共表表达式上的。在示例 7–15 所示的递归 SQL 示例中，公共表表达式被称为 `PATH`。
+我们之前提到，递归是构建在公共表表达式上的。在示例 7–15 所示的递归`SQL`示例中，公共表表达式被称为`PATH`。
 
-在 [1] 中，我们获取从德国可以直接到达的目的地。在这种情况下，`STOPS` 列被设置为 0。然后，在 [2] 中，我们将每个访问的中间城市连接起来。这里目的地变成了起点。最后，在 [3] 中，我们将最终目的地连接到路径。
+在 [1] 中，我们获取从德国可以直接到达的目的地。在这种情况下，`STOPS`列被设置为 0。然后，在 [2] 中，我们将每个访问的中间城市连接起来。这里目的地变成了起点。最后，在 [3] 中，我们将最终目的地连接到路径。
 
 ## 递归 SQL
 
-SQL 语句的输出如示例 7–16 所示。
+`SQL`语句的输出如示例 7–16 所示。
 
 | ORIGIN | DESTINATION | DISTANCE |
 | :--- | :--- | :--- |
@@ -9624,7 +9168,7 @@ SQL 语句的输出如示例 7–16 所示。
 
 ### 示例 7–16 递归 SQL：德国的目的
 
-示例 7–18 中 SQL 语句的基础与上一个示例相同。不同在于现在我们要创建 `ROUTE` 列。该列通过提取从德国到奥斯汀途中每个访问的机场的前两个字符来创建。使用 `||`（连接符）运算符将访问的每个城市连接到另一个。
+示例 7–18 中`SQL`语句的基础与上一个示例相同。不同在于现在我们要创建`ROUTE`列。该列通过提取从德国到奥斯汀途中每个访问的机场的前两个字符来创建。使用`||`（连接符）运算符将访问的每个城市连接到另一个。
 
 ```sql
 WITH DETAIL_PATH (ORIGIN,DESTINATION,ROUTE,DISTANCE,STOPS) AS (
@@ -9646,21 +9190,19 @@ ORDER BY DISTANCE;
 
 ### 示例 7–17 限制递归
 
-假设你只对中转次数少于五次的路线感兴趣。为了避免无限循环，你可以在 SQL 语句中添加以下条件：
+假设你只对中转次数少于五次的路线感兴趣。为了避免无限循环，你可以在`SQL`语句中添加以下条件：
 
 ```sql
 WHERE STOPS < 5
 ```
 
+## 外连接（Outer Join）
+
+最常用的连接操作是我们在书中练习中一直在使用的那种，它被称为内连接（`INNER JOIN`）。现在，我们将讨论另一种类型的连接操作。
 
 
 
-
-## 外连接 (Outer Join)
-
-最常用的连接操作是我们在书中练习中一直在使用的那种，它被称为内连接（INNER JOIN）。现在，我们将讨论另一种类型的连接操作。
-
-内连接的结果仅包含两个表中都存在的匹配行。当我们我们需要包含那些存在于其中一个连接表但不存在于两个表中的值时，会发生什么？这就是我们需要使用外连接（OUTER JOIN）操作的情况。外连接旨在生成一个结果集，其中包含表中存在的值以及不存在的值。正如我们将看到的，外连接有不同的类型。
+内连接的结果仅包含两个表中都存在的匹配行。当我们需要包含那些存在于其中一个连接表但不存在于两个表中的值时，会发生什么？这就是我们需要使用外连接（`OUTER JOIN`）操作的情况。外连接旨在生成一个结果集，其中包含表中存在的值以及不存在的值。正如我们将看到的，外连接有不同的类型。
 
 在深入了解外连接的细节之前，我们将检查用于编写表与表之间连接的显式语法。让我们从使用这种语法编写的内连接开始。接下来的连接示例生成了一个包含 `TEST_TAKEN` 表中每个候选者的名字、电话号码和最高分数的答案集（示例 7–20）。
 
@@ -9681,9 +9223,10 @@ GROUP BY FNAME, WPHONE;
 
 ## 左外连接 (Left Outer Join)
 
-左外连接（LEFT OUTER JOIN）操作也称为左连接（left join），它产生的结果集包含了两个连接表的匹配值以及仅存在于左连接表的值。在编写连接操作时，左连接表是 `LEFT OUTER JOIN` 操作符左侧部分使用的表。
+左外连接（`LEFT OUTER JOIN`）操作也称为左连接（`left join`），它产生的结果集包含了两个连接表的匹配值以及仅存在于左连接表的值。在编写连接操作时，左连接表是 `LEFT OUTER JOIN` 操作符左侧部分使用的表。
 
-## DB2 注意
+### DB2 注意
+
 你也可以使用 `LEFT JOIN` 来指示左外连接操作。
 
 我们被要求生成一份报告，包含 `TEST_CANDIDATE` 表中所有候选者的名字、电话号码和最高分。如果使用内连接（如上一个示例所示），报告将仅包含存在 `TEST_TAKEN` 表中的候选人的数据。
@@ -9703,7 +9246,7 @@ GROUP BY FNAME, WPHONE;
 
 ## 右外连接 (Right Outer Join)
 
-右外连接（RIGHT OUTER JOIN）操作也称为右连接（right join），它产生的结果包含了两个连接表的匹配值以及存在于右连接表的值。在编写连接操作时，右连接表是 `RIGHT OUTER JOIN` 操作右侧部分使用的表。
+右外连接（`RIGHT OUTER JOIN`）操作也称为右连接（`right join`），它产生的结果包含了两个连接表的匹配值以及存在于右连接表的值。在编写连接操作时，右连接表是 `RIGHT OUTER JOIN` 操作右侧部分使用的表。
 
 使用右外连接的示例如下所示（示例 7–22）：
 
@@ -9737,7 +9280,7 @@ GROUP BY NAME;
 | Vienna | Austria |
 | Hannover | Germany |
 
-**示例 7–23** 用于外连接的 city 表
+**示例 7–23** 用于外连接的 `city` 表
 
 | COUNTRY_NAME | CONTINENT |
 | :--- | :--- |
@@ -9750,7 +9293,7 @@ GROUP BY NAME;
 | South Africa | African Continent |
 | Spain | European Continent |
 
-**示例 7–24** 用于外连接的 country 表
+**示例 7–24** 用于外连接的 `country` 表
 
 ## 高级 SQL (Advanced SQL)
 
@@ -9765,7 +9308,7 @@ GROUP BY NAME;
 | European Continent | Austria | Vienna |
 | European Continent | England | London |
 | European Continent | Ireland | Dublin |
-| European Continent | Italy | Firenze
+| European Continent | Italy | Firenze |
 
 示例 7–25 全外连接
 
@@ -9773,7 +9316,7 @@ GROUP BY NAME;
 
 到目前为止，我们分别讨论了每个连接操作。现在，我们将展示一个结合两个连接的复杂示例。要创建此查询，我们需要两个外连接。第一个连接将获取所有没有安排测试的候选者。第二个连接将在如果没有候选者参加这些测试时，检索 `test` 表中存在的所有测试（示例 7–26）。
 
-我们希望展示一个全外连接，以便在一个查询中显示所有候选者及其分数。因此，我们使用如下所示所示全外连接（示例 7–26）：
+我们希望展示一个全外连接，以便在一个查询中显示所有候选者及其分数。因此，我们使用如下所示全外连接（示例 7–26）：
 
 ```
 SELECT C.CID, T.NAME, SCORE
@@ -9793,7 +9336,7 @@ ORDER BY C.CID;
 
 该 SQL 语句的输出如示例 7–27 所示。
 
-| CID NAME | SCORE |
+| CID | NAME | SCORE |
 | :--- | :--- | :--- |
 | 111 | DB2 Fundamentals | 65 |
 | 111 | DB2 Administration | 73 |
@@ -9812,10 +9355,6 @@ ORDER BY C.CID;
 
 14 记录(s) 已选中。
 
-
-
-
-
 # 第 7 章 高级 SQL
 
 ## OLAP 特性
@@ -9832,15 +9371,17 @@ ORDER BY C.CID;
 
 ## OLAP 特性
 
-以下点是星型模型设计的特征：
+以下是星型模型设计的特征：
 
-- 有一个大的事实表 (Fact table)，包含与维度表 (Dimension tables) 相关的数据。在图 7–1 中，事实表是 test_taken 表。它包含了每次考试的详细信息，准确是参加了哪项考试、在哪个中心参加考试以及谁参加了考试。
-- 有少量维度表，通常持有关于行数较少的实体的描述信息。在图 7–1 中，维度表是 test（考试）、candidate（候选人）和 test_center（考中心）。
-- 维度表的主键在星型模型中用于为事实表提供外键。维度表外键的连接通常形成事实表的一个小子集。在图 7–1 中，外键是 Candidate ID、Center ID 和 Test ID。
+- 有一个大的事实表 (Fact table)，包含与维度表 (Dimension tables) 相关的数据。在图 7–1 中，事实表是 `test_taken` 表。它包含了每次考试的详细信息，准确是参加了哪项考试、在哪个中心参加考试以及谁参加了考试。
 
-这种方法允许事实表中只存储尽可能少的属性。这样做的好处是事实表非常大，因此该表中的任何数据重复在存储和访问时间上都是非常昂贵的。例如，如果使用 DB2CERT 数据库存储大学入学考试的信息，那么 test 表可能会变得巨大。
+- 有少量维度表，通常持有关于行数较少的实体的描述信息。在图 7–1 中，维度表是 `test`（考试）、`candidate`（候选人）和 `test_center`（考中心）。
 
-OLAP 模型（如星型模型）经常用于大型数据库。这些模型使得以优化方式访问这些数据库中的数据变得非常重要。否则，模型涉及的连接可能会导致性能低下的。
+- 维度表的主键在星型模型中用于为事实表提供外键。维度表外键的连接通常形成事实表的一个小子集。在图 7–1 中，外键是 `Candidate ID`、`Center ID` 和 `Test ID`。
+
+这种方法允许事实表中只存储尽可能少的属性。这样做的好处是事实表非常大，因此该表中的任何数据重复在存储和访问时间上都是非常昂贵的。例如，如果使用 `DB2CERT` 数据库存储大学入学考试的信息，那么 `test` 表可能会变得巨大。
+
+OLAP 模型（如星型模型）经常用于大型数据库。这些模型使得以优化方式访问这些数据库中的数据变得非常重要。否则，模型涉及的连接可能会导致性能低下。
 
 ## OLAP 索引
 
@@ -9871,6 +9412,7 @@ C.COUNTRY='CANADA' AND
 TC.NOSEATS < 10
 GROUP BY T.NAME, YEAR(TT.DATE_TAKEN);
 ```
+
 示例 7–28 星型连接
 
 ## 超分组 (Super Grouping)
@@ -9886,6 +9428,7 @@ GROUP BY T.NAME, YEAR(TT.DATE_TAKEN);
 假设我们知道以下信息：
 
 - 每个考中心参加了多少次考试？
+
 - 每个考中心每种类型的考试参加了多少？
 
 为了收集这些信息，我们首先需要按考中心统计考试，然后按考中心和考试名称统计考试。此需求需要两个分组集合，一个按考中心分组，另一个按考中心和考试名称分组。参见下面的示例和结果（示例 7–29）：
@@ -9898,7 +9441,7 @@ GROUP BY
 GROUPING SETS (TT.TCID, (TT.TCID, T.NAME));
 ```
 
-| TCID | NAME | |
+| TCID | NAME | COUNT(*) |
 |---|---|---|
 | TR01 | | 3 |
 | TX01 | | 3 |
@@ -9909,6 +9452,7 @@ GROUPING SETS (TT.TCID, (TT.TCID, T.NAME));
 | TX01 | DB2 Fundamentals | 2 |
 
 选了 7 条记录。
+
 示例 7–29 SQL 语句中使用的分组集合
 
 ## 添加总计
@@ -9916,10 +9460,6 @@ GROUPING SETS (TT.TCID, (TT.TCID, T.NAME));
 使用 `GROUPING sets` 规范，你可以为查询添加总计。示例 7–29 中显示的示例没有显示在所有考中心参加的考试总数。这可以通过向分组集合添加总计组来计算。
 
 在创建这些组时，空值会被添加到在特定组中没有值的列中。这样，总计行除总计本身外，所有列都将显示空值。
-
-
-
-
 
 # 第7章 高级 SQL
 
@@ -9936,20 +9476,23 @@ GROUPING SETS
 (CHAR(TT.TCID),CHAR(T.NAME));
 ```
 
-| | | GROUPED_TCID | GROUPED_NAME |
-|---|---|---|---|
-| All All Tests | 1 | 9 |
-| TR01 All Tests | 1 | 3 |
-| TX01 All Tests | 1 | 6 |
-| TR01 DB2 Application Development | 0 | 2 |
-| TR02 DB2 Fundamentals | 0 | 1 |
-| TX02 Administration | 0 | 2 |
-| TX01 DB2 Application Development | 0 | 2 |
+| GROUPED_TCID | GROUPED_NAME | COUNT(*) |
+|---|---|---|
+| All | All Tests | 9 |
+| TR01 | All Tests | 3 |
+| TX01 | All Tests | 6 |
+| TR01 | DB2 Application Development | 2 |
+| TR02 | DB2 Fundamentals | 1 |
+| TX02 | Administration | 2 |
+| TX01 | DB2 Application Development | 2 |
+
+
+
 | TX01 DB2 Fundamentals | 0 | 2 |
 
 选择了 8 条记录。
 
-### 示例 7–30 带有总计的分组集
+### 示例 7–30：带有总计的分组集
 
 总计组通过分组集列表中的一对空括号 `()` 指定。
 
@@ -9957,11 +9500,11 @@ GROUPING SETS
 
 在某些情况下，用于分组函数中的数据可能包含空值。在这种情况下，能够区分空值和分组生成的空值非常重要。
 
-DB2 提供了 `GROUPING` 函数，通过为这些生成的空值赋值 1 来标识它们。
+DB2 提供了 `GROUPING` 函数，通过为这些生成的空值赋值 `1` 来标识它们。
 
 ### DB2 注意事项
 
-`GROUPING` 函数只返回值 1 或 0。1 (1) 表示该空值是由 DB2 生成的，而 0 表示该值不是由 DB2 生成的。
+`GROUPING` 函数只返回值 `1` 或 `0`。`1` 表示该空值是由 DB2 生成的，而 `0` 表示该值不是由 DB2 生成的。
 
 现在，让我们在 `CASE` 表达式中使用 `GROUPING` 函数来区分带有添加空值的组和普通空值。为了保持查询简洁，示例将仅对 `TT.TCID` 列使用 `CASE` 表达式。
 
@@ -9996,11 +9539,11 @@ SELECT
 
 选择了 8 条（记录）。
 
-### 示例 7–31 在分组添加的空值上使用分组函数
+### 示例 7–31：在分组添加的空值上使用分组函数
 
-表达式 [1] 在 TCID 列上使用了 `GROUPING` 函数。如果返回值为 1，则将打印 ALL。在我们的示例中，ALL 表示该行包含一个分组添加的空值。生成的空值代表所有测试中心。如果 `GROUPING` 函数返回 0，则意味着该行的 TCID 列的值是由 DB2 生成的。
+表达式 [1] 在 `TCID` 列上使用了 `GROUPING` 函数。如果返回值为 `1`，则将打印 `ALL`。在我们的示例中，`ALL` 表示该行包含一个分组添加的空值。生成的空值代表所有测试中心。如果 `GROUPING` 函数返回 `0`，则意味着该行的 `TCID` 列的值是由 DB2 生成的。
 
-[2] 中所示的分组函数根据特定行 `TT.TCID` 和 `T.NAME` 列的值显示值 1 或 0。`GROUPING(TT.TCID)` 中的值 1 意味着该行是 TCID 列的总计。
+[2] 中所示的分组函数根据特定行 `TT.TCID` 和 `T.NAME` 列的值显示值 `1` 或 `0`。`GROUPING(TT.TCID)` 中的值 `1` 意味着该行是 `TCID` 列的总计。
 
 ### ROLLUP
 
@@ -10041,7 +9584,7 @@ GROUP BY ROLLUP (C.COUNTRY,TT.TCID,T.NAME);
 
 选择了 8 条记录。
 
-### 示例 7–32 使用 ROLLUP 操作
+### 示例 7–32：使用 ROLLUP 操作
 
 `ROLLUP` 操作生成的报告允许你对信息进行汇总。你可以分析到国家、测试中心和测试名称。
 
@@ -10077,7 +9620,7 @@ GROUP BY CUBE (C.COUNTRY,TT.TCID,T.NAME)
 ORDER BY C.COUNTRY,TT.TCID,T.NAME;
 ```
 
-### 示例 7–33 CUBE 操作的结果
+### 示例 7–33：CUBE 操作的结果
 
 | COUNTRY | TCID | TEST_NAME | TESTS_TAKEN |
 |---|---|---|---|
@@ -10092,7 +9635,7 @@ ORDER BY C.COUNTRY,TT.TCID,T.NAME;
 
 选择了 22 条记录。
 
-### 示例 7–34 CUBE 操作的结果
+### 示例 7–34：CUBE 操作的结果
 
 示例 7–33 所示的 `CUBE` 操作生成了八个不同的组，包括总计组（示例 7–34）。`CUBE` 操作生成的组的数量是分组列表中不同组可以生成的排列组合的结果。
 
@@ -10111,15 +9654,11 @@ GROUPING SETS ((COUNTRY,TCID,NAME),
   ())
 ```
 
-### 示例 7–35 由 CUBE (COUNTRY, TCID, NAME) 生成的分组集
-
-
-
-
+### 示例 7–35：由 CUBE (COUNTRY, TCID, NAME) 生成的分组集
 
 ## 移动函数
 
-DB2 包含许多内置函数，可以帮助分析数据。在关系模型中很难实现的一种计算类型是基于数据“窗口”的计算。例如，你可能想知道某特定时间点连续三天销售额的平均值。DB2 中的列函数（以及 CUBE 和 ROLLUP）仅处理完整集合，而不处理部分值。
+DB2 包含许多内置函数，可以帮助分析数据。在关系模型中很难实现的一种计算类型是基于数据“窗口”的计算。例如，你可能想知道某特定时间点连续三天销售额的平均值。DB2 中的列函数（以及 `CUBE` 和 `ROLLUP`）仅处理完整集合，而不处理部分值。
 
 移动函数有助于克服列函数中的这一局限性。通过列函数的定义，用户现在可以向 DB2 提供“窗口”规格说明，用以定义应包含多少数据作为计算的一部分。例如，示例 7–36 显示了一张包含 10 个值的表。对这些数据应用 `AVG` 函数将得到这 10 天所有日期的平均销售额。
 
@@ -10130,13 +9669,13 @@ INSERT INTO SALES VALUES (1,10), (2,14), (3,13), (4,15),
 SELECT AVG(SALES) FROM SALES;
 ```
 
-```
+```text
 1
 ------
 14
 ```
 
-## 示例 7–36 简单平均值计算
+## 示例 7–36：简单平均值计算
 
 可以使用移动窗口对此 `AVG` 函数进行修改。这是通过使用 `OVER` 规格实现的。示例 7–37 显示了使用该函数计算 3 天平均销售额（前 1 天后 1 天）。
 
@@ -10159,7 +9698,7 @@ AS SMOOTH_VALUE FROM SALES;
 | 9 | 14 |
 | 10 | 13 |
 
-## 示例 7–37 移动平均值计算
+## 示例 7–37：移动平均值计算
 
 ## 第 7 章 高级 SQL
 
@@ -10171,14 +9710,14 @@ AS SMOOTH_VALUE FROM SALES;
 
 DB2 另一种 SQL 优化的形式是在语句执行期间对数据进行采样。数据库变得越来越庞大，访问与查询相关的所有数据往往是不现实的。例如，请求大型部门每月平均销售额的查询可能需要读取数百万记录。在这个示例中，对表的一部分进行采样以得出平均值可能是同样有效的。节省的时间可能比结果的轻微不准确更有价值。当人们试图分析趋势，且精确金额不如数字的数量级重要时，这一点尤为真实。
 
-DB2 通过 `SELECT` 语句上的 `TABLESAMPLE` 子句实现了这种采样。此额外的规格说明被添加到选择语句中的表名 之后（示例 7–38）：
+DB2 通过 `SELECT` 语句上的 `TABLESAMPLE` 子句实现了这种采样。此额外的规格说明被添加到选择语句中的表名之后（示例 7–38）：
 
 ```sql
-SELECT ... FROM <TABLE> TABLESAMPLE (BERNOULLI | SYSTEM) 
+SELECT ... FROM <TABLE> TABLESAMPLE (BERNOULLI | SYSTEM)
 REPEATABLE
 ```
 
-## 示例 7–38 移动平均值计算
+## 示例 7–38：移动平均值计算
 
 `TABLESAMPLE` 子句包含两个部分。第一个是对数据进行采样类型，第二个是用于确定选择哪些行的“种子”（seed）或随机数。这些参数及其用法在下文节中描述。
 
@@ -10194,11 +9733,11 @@ REPEATABLE
 SELECT COUNT(*) FROM TRANSACTIONS TABLESAMPLE BERNOULLI(10);
 ```
 
-## 示例 7–39 BERNOULLI 采样
+## 示例 7–39：BERNOULLI 采样
 
 括号中的数字必须大于零，且最高可达 100。当然，值 100 等同于检索整张表！
 
-使用 `BERNOULLI` 算法采样将单独考虑每一行。行被包含在集合中的概率为 P/100（其中 $P$ 是与 `BERNOULLI` 关键字使用的百分比），被排除的概率为 $1 – P/100$。使用 `BERNOULLI(10)` 采样执行 5 次的 SQL `count` 语句从具有 10,000 行的表中检索以下值（示例 7–40）：
+使用 `BERNOULLI` 算法采样将单独考虑每一行。行被包含在集合中的概率为 `P/100`（其中 `P` 是与 `BERNOULLI` 关键字使用的百分比），被排除的概率为 `1 – P/100`。使用 `BERNOULLI(10)` 采样执行 5 次的 SQL `count` 语句从具有 10,000 行的表中检索以下值（示例 7–40）：
 
 ```sql
 VALUES (1, SELECT COUNT(*) FROM TRANSACTIONS
@@ -10227,13 +9766,13 @@ SAMPLE BERNOULLI(10));
 
 选择了 5 条记录。
 
-## 示例 7–40 10% 采样
+## 示例 7–40：10% 采样
 
 SQL 语句的结果对于每一行似乎完全相同。考虑到 `BERNOULLI` 函数的定义，人们预期结果是随机的。然而，`BERNOULLI` 采样是在 SQL 语句开始时进行的，因此对同一行集的后续引用将返回相同的结果集。示例 7–40 中的每个语句都是相同的。
 
 ## SYSTEM 采样
 
-`SYSTEM` 采样允许数据库管理器确定执行采样的有效方式。大多数情况下，对表的 `SYSTEM` 采样意味着表的每页以 P/100 的概率包含在样本中，以 $1 – P/100$ 的概率排除。
+`SYSTEM` 采样允许数据库管理器确定执行采样的有效方式。大多数情况下，对表的 `SYSTEM` 采样意味着表的每页以 `P/100` 的概率包含在样本中，以 `1 – P/100` 的概率排除。
 
 `SYSTEM` 采样的执行速度比 `BERNOULLI` 采样快得多，因为需要检索的数据页较少。使用 `BERNOULLI` 采样需要读取所有页面以确定哪些行是集合的一部分。以下 SQL 查询（示例 7–42）在具有 100,000 行的表上运行：
 
@@ -10243,14 +9782,11 @@ TABLESAMPLE BERNOULLI(10)
 GROUP BY TX_ITEM;
 ```
 
-## 示例 7–42 使用 BERNOULLI 采样从表获取平均值
+## 示例 7–42：使用 BERNOULLI 采样从表获取平均值
 
 该 SQL 对应的视觉解释语句如图 7–2 所示：
 
 此 SQL 语句的成本为 718 个单位。将此语句转换为使用 `SYSTEM` 级采样将得到如下视觉解释（图 7–3）：
-
-
-
 
 这两条 SQL 语句在下图（图 7–4）中进行了对比：
 
@@ -10266,12 +9802,12 @@ GROUP BY TX_ITEM;
 
 # 第 7 章 高级 SQL
 
-```
+```sql
 SELECT AVG(TX_QUANTITY) FROM STORE_TXS TABLESAMPLE SYSTEM(10)
 WHERE TX_ITEM='A40';
 ```
 
-```
+```text
 | 1 |
 |---|
 | 49 |
@@ -10279,12 +9815,12 @@ WHERE TX_ITEM='A40';
 
 选中 1 条记录。
 
-```
+```sql
 SELECT AVG(TX_QUANTITY) FROM STORE_TXS TABLESAMPLE SYSTEM(10)
 WHERE TX_ITEM='A40';
 ```
 
-```
+```text
 | 1 |
 |---|
 | 48 |
@@ -10292,17 +9828,17 @@ WHERE TX_ITEM='A40';
 
 选中 1 条记录。
 
-## 示例 7–43 不带 REPEATABLE 子句的 SELECT
+## 示例 7–43：不带 REPEATABLE 子句的 SELECT
 
 使用带有 `REPEATABLE` 子句执行相同的 SELECT 语句会产生相同的结果（示例 7–44）：
 
-```
+```sql
 SELECT AVG(TX_QUANTITY) FROM STORE_TXS
 TABLESAMPLE SYSTEM(10) REPEATABLE(12345)
 WHERE TX_ITEM='A40';
 ```
 
-```
+```text
 | 1 |
 |---|
 | 49 |
@@ -10310,13 +9846,13 @@ WHERE TX_ITEM='A40';
 
 选中 1 条记录。
 
-```
+```sql
 SELECT AVG(TX_QUANTITY) FROM STORE_TXS
 TABLESAMPLE SYSTEM(10) REPEATABLE(12345)
 WHERE TX_ITEM='A40';
 ```
 
-```
+```text
 | 1 |
 |---|
 | 49 |
@@ -10324,9 +9860,11 @@ WHERE TX_ITEM='A40';
 
 选中 1 条记录。
 
-## 示例 7–44 带有 REPEATABLE 子句的 SELECT
+## 示例 7–44：带有 REPEATABLE 子句的 SELECT
 
-如果结果结果在大量 SQL 语句中保持一致，则应该使用临时表。创建临时表并使用使用 `TABLESAMPLE` 子句的 SELECT 语句填充数据，以生成子集。SQL 的其余部分可以引用临时表。当 SQL 进入生产环境时，可以消除 `TABLESAMPLE` 子句，或修改 SQL 指向原始表。
+
+
+如果结果在大量 SQL 语句中保持一致，则应该使用临时表。创建临时表并使用使用 `TABLESAMPLE` 子句的 `SELECT` 语句填充数据，以生成子集。SQL 的其余部分可以引用临时表。当 SQL 进入生产环境时，可以消除 `TABLESAMPLE` 子句，或修改 SQL 指向原始表。
 
 `REPEATABLE` 子句可以使用任何数字值。该值被用于为选择行的随机数生成器提供种子。为了获得相同的采样，该表的每个 `TABLESAMPLE` 子句中必须使用相同的数字。否则，将产生不同的结果。
 
@@ -10334,33 +9872,35 @@ WHERE TX_ITEM='A40';
 
 在利用 `TABLESAMPLE` 子句时，有几个额外的考虑。
 
-- 1. 采样只能在基表和物化查询表上进行。
-- 2. 采样发生在任何谓词（`WHERE` 子句）应用之前。可以在同一个 SQL 语句中对多个表进行采样，以测试连接条件和其他复杂的 SQL，而无需使用整个表。
-- 3. SELECT 列表中的任何计算都必须考虑已完成的采样百分比。例如，平均值计算（AVG）在处理表的 10% 数据或 50% 数据时不应该有区别。但是，通过除以采样百分比来获得正确的结果。例如，`SUM` 或 `COUNT` 计算必须通过将结果乘以 100 并除以采样百分比（采样了 20% 数据则除以 5 (100/20)）来获得正确的结果，因为只采样了 7–45 的数据。
+1. 采样只能在基表和物化查询表上进行。
 
-```
+2. 采样发生在任何谓词（`WHERE` 子句）应用之前。可以在同一个 SQL 语句中对多个表进行采样，以测试连接条件和其他复杂的 SQL，而无需使用整个表。
+
+3. `SELECT` 列表中的任何计算都必须考虑已完成的采样百分比。例如，平均值计算（`AVG`）在处理表的 10% 数据或 50% 数据时不应该有区别。但是，通过除以采样百分比来获得正确的结果。例如，`SUM` 或 `COUNT` 计算必须通过将结果乘以 100 并除以采样百分比（采样了 20% 数据则除以 5 (100/20)）来获得正确的结果，因为只采样了 7–45 的数据。
+
+```sql
 SELECT SUM(TX_QUANTITY) * 5 FROM STORE_TXS
 TABLESAMPLE(20)
 WHERE TX_ITEM='A40';
 ```
 
-示例 7–45 使用 TABLESAMPLE 子句缩放结果
+示例 7–45 使用 `TABLESAMPLE` 子句缩放结果
 
-- 4. SYSTEM 采样几乎总是比 BERNOULL 采样快，但结果通常准确性较低。这对于测试和快速报告可能足够，但使用结果时应带有相应的说明。
+4. `SYSTEM` 采样几乎总是比 `BERNOULL` 采样快，但结果通常准确性较低。这对于测试和快速报告可能足够，但使用结果时应带有相应的说明。
 
 通常情况下，`TABLESAMPLE` 子句在对大表进行 SQL 原型设计以及为“如果怎样”的问题提供快速答案时非常有用。
 
 ## 高级 CASE 表达式
 
-到目前，我们一直在 select 语句的 select 列表中使用 `CASE` 表达式。`CASE` 也可以用于其他 SQL 语句，例如分组列表、`WHERE` 谓词、函数等。我们将在本节中回顾其中一些。
+到目前，我们一直在 `SELECT` 语句的 `SELECT` 列表中使用 `CASE` 表达式。`CASE` 也可以用于其他 SQL 语句，例如分组列表、`WHERE` 谓词、函数等。我们将在本节中回顾其中一些。
 
 ## 使用 CASE 表达式对值分组
 
 如前所述，`CASE` 表达式可以是分组列表的一部分。作为分组列表的一部分可以对数据进行排序。
 
-假设我们想知道有多少人没有通过考试，有多少人通过了，以及其中有多少人的分数优异，以及每个分类的平均分。为了解决这个问题，我们将在 select 列表中使用 `case` 表达式，并在分组列表中使用另一个。分组列表中的 `CASE` 表达式用于根据其中定义的排名创建组（示例 7–46）。
+假设我们想知道有多少人没有通过考试，有多少人通过了，以及其中有多少人的分数优异，以及每个分类的平均分。为了解决这个问题，我们将在 `SELECT` 列表中使用 `CASE` 表达式，并在分组列表中使用另一个。分组列表中的 `CASE` 表达式用于根据其中定义的排名创建组（示例 7–46）。
 
-```
+```sql
 SELECT NUMBER,
 CASE
   WHEN INTEGER(SCORE) < 65 THEN 'Not Passed'
@@ -10378,11 +9918,6 @@ GROUP BY NUMBER, CASE
 END;
 ```
 
-（注：由于原始文本存在大量重复和噪声，此处译文已根据逻辑流进行了清理并提取核心内容。）
-
-
-
-
 # 结构化类型与类型表
 
 ```sql
@@ -10393,9 +9928,9 @@ CREATE TYPE Person_t AS (
 ) MODE DB2SQL;
 ```
 
-### 结构化类型
+## 结构化类型
 
-### 类型表
+## 类型表
 
 ```sql
 CREATE TABLE Person Of Person_t
@@ -10407,7 +9942,7 @@ VALUES
 (Person_t(1),'Petra',1968);
 ```
 
-#### Person
+### Person
 
 | OID | 名称 | 出生年份 |
 | --- | :--- | :--- |
@@ -10415,11 +9950,11 @@ VALUES
 
 图 7–5 用户定义的结构化类型
 
-在例示例中，定义了一个具有两个属性 NAME 和 BIRTHYEAR 的结构化类型 PERSON_T，然后使用该结构化类型定义了表 PERSON。注意，该表具有 PERSON_T 类型。另一列被称为对象标识符 (OID)。任何类型表都必须将 OID 列作为其第一列，且 OID 列的值的值在整个表层次结构中必须是唯一的。OID 列的数据类型必须是 REFERENCE。注意在我们的示例中，使用了转换函数 PERSON_T 来为 OID 列提供值。OID 列将在稍后进行详细讨论。
+在示例中，定义了一个具有两个属性 `NAME` 和 `BIRTHYEAR` 的结构化类型 `PERSON_T`，然后使用该结构化类型定义了表 `PERSON`。注意，该表具有 `PERSON_T` 类型。另一列被称为对象标识符 (`OID`)。任何类型表都必须将 `OID` 列作为其第一列，且 `OID` 列的值的值在整个表层次结构中必须是唯一的。`OID` 列的数据类型必须是 `REFERENCE`。注意在我们的示例中，使用了转换函数 `PERSON_T` 来为 `OID` 列提供值。`OID` 列将在稍后进行详细讨论。
 
 # 创建结构化类型
 
-结构化类型支持层次结构。因此，一个结构化类型可以被创建为另一个结构化类型的子类型（从而继承该类型的属性）。图 7–6 显示了一个简单的类型层次结构。PERSON_T 被定义为根类型（不依赖于其他类型），具有 NAME 和 BIRTHYEAR 两个属性。EMP_T 和 STUDENT_T 被定义为 PERSON_T 的子类型。因此，EMP_T 和 STUDENT_T 继承了 PERSON_T 的所有属性。此外，结构化类型 EMP_T 和 STUDENT_T 还有若干个特定于其特定类型的额外属性。
+结构化类型支持层次结构。因此，一个结构化类型可以被创建为另一个结构化类型的子类型（从而继承该类型的属性）。图 7–6 显示了一个简单的类型层次结构。`PERSON_T` 被定义为根类型（不依赖于其他类型），具有 `NAME` 和 `BIRTHYEAR` 两个属性。`EMP_T` 和 `STUDENT_T` 被定义为 `PERSON_T` 的子类型。因此，`EMP_T` 和 `STUDENT_T` 继承了 `PERSON_T` 的所有属性。此外，结构化类型 `EMP_T` 和 `STUDENT_T` 还有若干个特定于其特定类型的额外属性。
 
 图 7–6 结构化类型的层次结构
 
@@ -10443,19 +9978,19 @@ MODE DB2SQL;
 
 示例 7–48 创建结构化类型和结构化类型层次结构
 
-AS 子句提供了与类型关联的属性定义。UNDER 子句指定该结构化类型被定义为指定类型的子类型。在我们的示例中，EMP_T 类型具有 SALARY 作为其属性。STUDENT_T 类型具有 Major 和 Archivm 作为其属性。此外，NAME 和 BIRTHYEAR 两个属性是从 PERSON_T 类型继承的。
+`AS` 子句提供了与类型关联的属性定义。`UNDER` 子句指定该结构化类型被定义为指定类型的子类型。在我们的示例中，`EMP_T` 类型具有 `SALARY` 作为其属性。`STUDENT_T` 类型具有 `Major` 和 `Archivm` 作为其属性。此外，`NAME` 和 `BIRTHYEAR` 两个属性是从 `PERSON_T` 类型继承的。
 
-REF USING 子句在定义根类型时使用，并指定了内的数据类型，用作该结构化类型及其所有子类型的 REFERENCE 类型的表示。如示例 7–48 所示，类型表必须具有 OID 列，并且在为 OID 列提供值时使用转换函数。该转换函数根据根类型定义中 REF USING 子句指定的数据类型进行转换。你可以为 REFERENCE 类型指定以下内容：INTEGER、SMALLINT、BIGINT、DECIMAL、CHAR、VARCHAR、GRAPHIC 或 VARGRAPHIC。对于 BIT DATA，默认类型为 VARCHAR(16)。
+`REF USING` 子句在定义根类型时使用，并指定了内的数据类型，用作该结构化类型及其所有子类型的 `REFERENCE` 类型的表示。如示例 7–48 所示，类型表必须具有 `OID` 列，并且在为 `OID` 列提供值时使用转换函数。该转换函数根据根类型定义中 `REF USING` 子句指定的数据类型进行转换。你可以为 `REFERENCE` 类型指定以下内容：`INTEGER`、`SMALLINT`、`BIGINT`、`DECIMAL`、`CHAR`、`VARCHAR`、`GRAPHIC` 或 `VARGRAPHIC`。对于 `BIT DATA`，默认类型为 `VARCHAR(16)`。
 
 ### DB2 注意事项
 
-**注意：**成功执行 CREATE TYPE 语句还会生成用于在 REFERENCE 类型与其表示（由 REF USING 子句指定的内置类型）之间转换的函数，并为具有 REFERENCE 类型的用户生成比较运算符（=, <>, !=, <=, <, >=）的支持。
+**注意：** 成功执行 `CREATE TYPE` 语句还会生成用于在 `REFERENCE` 类型与其表示（由 `REF USING` 子句指定的内置类型）之间转换的函数，并为具有 `REFERENCE` 类型的用户生成比较运算符（`=`、`<>`、`!=`、`<=`、`<`、`>=`）的支持。
 
-MODE 子句用于选择类型的模式。目前仅支持 MODE DB2SQL 模式。
+`MODE` 子句用于选择类型的模式。目前仅支持 `MODE DB2SQL` 模式。
 
 # 修改结构化类型
 
-ALTER TYPE 语句允许你添加或删除现有结构化类型的属性。以下示例显示了 ALTER TYPE 语句向 PERSON_T 类型添加属性 TEL 并删除该属性（示例 7–49）。 
+`ALTER TYPE` 语句允许你添加或删除现有结构化类型的属性。以下示例显示了 `ALTER TYPE` 语句向 `PERSON_T` 类型添加属性 `TEL` 并删除该属性（示例 7–49）。
 
 ```sql
 ALTER TYPE PERSON_T ADD ATTRIBUTE TEL CHAR(12);
@@ -10466,17 +10001,17 @@ ALTER TYPE PERSON_T DROP ATTRIBUTE TEL;
 
 ### DB2 注意事项
 
-**注意：** 如果类型或其一个子类型是现有表的类型，则无法对该类型执行 ALTER TYPE 语句。
+**注意：** 如果类型或其一个子类型是现有表的类型，则无法对该类型执行 `ALTER TYPE` 语句。
 
 # 创建类型表
 
 类型表是使用结构化数据类型定义的表（参见图 7–7）。类型表可以具有结构化类型的层次结构。子表继承其父类型的所有属性。处于继承关系中的所有表形成一个表层次结构。在层次结构中没有父表的表被称为根表。换句话说，根表是使用类型层次结构的根类型定义的表。
 
-图 7–7 类型表的简单层次结构。你可以看到 PERSON 表的两个列被 STUDENT 表和 EMP 表继承。
+图 7–7 类型表的简单层次结构。你可以看到 `PERSON` 表的两个列被 `STUDENT` 表和 `EMP` 表继承。
 
 图 7–7 类型表的层次结构
 
-类型表是使用 CREATE TABLE 语句创建的。
+类型表是使用 `CREATE TABLE` 语句创建的。
 
 ```sql
 CREATE TABLE PERSON OF PERSON_T
@@ -10489,29 +10024,17 @@ CREATE TABLE STUDENT OF STUDENT_T UNDER PERSON
 INHERIT SELECT PRIVILEGES;
 ```
 
-在我们的示例中，PERSON 表是根表，EMP 表和 STUDENT 表是子表。PERSON 表是根表，EMP 表和 STUDENT 表是子表。PERSON 表是使用根类型定义的表。EMP 表和 STUDENT 表是使用子类型定义的表。如示例 7–48 所示，类型表必须具有 OID 列，并且在为 OID 列提供值时使用转换函数。该转换函数根据根类型定义中 REF USING 子句指定的数据类型进行转换。你可以为 REFERENCE 类型指定以下内容：INTEGER、SMALLINT、BIGINT、DECIMAL、CHAR、VARCHAR、GRAPHIC 或 VARGRAPHIC。对于 BIT DATA，默认类型为 VARCHAR(16)。
-
-在我们的示例中，PERSON 表是根表，EMP 表和 STUDENT 表是子表。PERSON 表是使用根类型定义的表。EMP 表和 STUDENT 表是使用子类型定义的表。如示例 7–48 所示，类型表必须具有 OID 列，并且在为 OID 列提供值时使用转换函数。该转换函数根据根类型定义中 REF USING 子句指定的数据类型进行转换。你可以为 REFERENCE 类型指定以下内容：INTEGER、SMALLINT、BIGINT、DECIMAL、CHAR、VARCHAR、GRAPHIC 或 VARGRAPHIC。对于 BIT DATA，默认类型为 VARCHAR(16)。
-
-在我们的示例中，PERSON 表是根表，EMP 表和 STUDENT 表是子表。PERSON 表是使用根类型定义的表。EMP 表和 STUDENT 表是使用子类型定义的表。如示例 7–48 所示，类型表必须具有 OID 列，并且在为 OID 列提供值时使用转换函数。该转换函数根据根类型定义中 REF USING 子句指定的数据类型进行转换。你可以为 REFERENCE 类型指定以下内容：INTEGER、SMALLINT、BIGINT、DECIMAL、CHAR、VARCHAR、GRAPHIC 或 VARGRAPHIC。对于 BIT DATA，默认类型为 VARCHAR(16)。
-
-在我们的示例中，PERSON 表是根表，EMP 表和 STUDENT 表是子表。PERSON 表是使用根类型定义的表。EMP 表和 STUDENT 表是使用子类型定义的表。如示例 7–48 所示，类型表必须具有 OID 列，并且在为 OID 列提供值时使用转换函数。该转换函数根据根类型定义中 REF USING 子句指定的数据类型进行转换。你可以为 REFERENCE 类型指定以下内容：INTEGER、SMALLINT、BIGINT、DECIMAL、CHAR、VARCHAR、GRAPHIC 或 VARGRAPHIC。对于 BIT DATA，默认类型为 VARCHAR(16)。
-
-在我们的示例中，PERSON 表是根表，EMP 表和 STUDENT 表是子表。PERSON 表是使用根类型定义的表。EMP 表和 STUDENT 表是使用子类型定义的表。如示例 7–48 所示，类型表必须具有 OID 列，并且在为 OID 列提供值时使用转换函数。该转换函数根据根类型定义中 REF USING 子句指定的数据类型进行转换。你可以为 REFERENCE 类型指定以下内容：INTEGER、SMALLINT、BIGINT、DECIMAL、CHAR、VARCHAR、GRAPHIC 或 VARGRAPHIC。对于 BIT DATA，默认类型为 VARCHAR(16)。
-
-在我们的示例中，PERSON 表是根表，EMP 表和 STUDENT 表是子表。PERSON 表是使用根类型定义的表。EMP 表和 STUDENT 表是使用子类型定义的表。如示例 7–48 所示，类型表必须具有 OID 列，并且在为 OID 列提供值时使用转换函数。该转换函数根据根类型定义中 REF USING 子句指定的数据类型进行转换。你可以为 REFERENCE 类型指定以下内容：INTEGER、SMALLINT、BIGINT、DECIMAL、CHAR、VARCHAR、GRAPHIC 或 VARGRAPHIC。对于 BIT DATA，默认类型为 VARCHAR(16)。
-
-在我们的示例中，PERSON 表是根表，EMP 表和 STUDENT 表是子表。PERSON 表是使用根类型定义的表。EMP 表和 STUDENT 表是使用子类型定义的表。如示例 7–48 所示，类型表必须具有 OID 列，并且在为 OID 列提供值时使用转换函数。该转换函数根据根类型定义中 REF USING 子句指定的数据类型进行转换。你可以为 REFERENCE 类型指定以下内容：INTEGER、SMALLINT、BIGINT、DECIMAL、CHAR、VARCHAR、GRAPHIC 或 VARGRAPHIC。对于 BIT DATA，默认类型为 VARCHAR(16)。
+在我们的示例中，`PERSON` 表是根表，`EMP` 表和 `STUDENT` 表是子表。`PERSON` 表是使用根类型定义的表。`EMP` 表和 `STUDENT` 表是使用子类型定义的表。如示例 7–48 所示，类型表必须具有 `OID` 列，并且在为 `OID` 列提供值时使用转换函数。该转换函数根据根类型定义中 `REF USING` 子句指定的数据类型进行转换。你可以为 `REFERENCE` 类型指定以下内容：`INTEGER`、`SMALLINT`、`BIGINT`、`DECIMAL`、`CHAR`、`VARCHAR`、`GRAPHIC` 或 `VARGRAPHIC`。对于 `BIT DATA`，默认类型为 `VARCHAR(16)`。
 
 # 删除类型表
 
 类型表是使用结构化数据类型定义的表（参见图 7–7）。类型表可以具有结构化类型的层次结构。子表继承其父类型的所有属性。处于继承关系中的所有表形成一个表层次结构。在层次结构中没有父表的表被称为根表。换句话说，根表是使用类型层次结构的根类型定义的表。
 
-图 7–7 显示了类型表的简单层次结构。你可以看到 PERSON 表的两个列列被 STUDENT 表和 EMP 表继承。
+图 7–7 显示了类型表的简单层次结构。你可以看到 `PERSON` 表的两个列列被 `STUDENT` 表和 `EMP` 表继承。
 
 图 7–7 类型表的层次结构
 
-类型表是使用 CREATE TABLE 语句创建的。
+类型表是使用 `CREATE TABLE` 语句创建的。
 
 ```sql
 CREATE TABLE PERSON OF PERSON_T
@@ -10524,23 +10047,19 @@ CREATE TABLE STUDENT OF STUDENT_T UNDER PERSON
 INHERIT SELECT PRIVILEGES;
 ```
 
-在我们的示例中，PERSON 表是根表，EMP 表和 STUDENT 表是子表。PERSON 表是使用根类型定义的表。EMP 表和 STUDENT 表是使用子类型定义的表。如示例 7–48 所示，类型表必须具有 OID 列，并且在为 OID 列提供值时使用转换函数。该转换函数根据根类型定义中 REF USING 子句指定的数据类型进行转换。你可以为 REFERENCE 类型指定以下内容：INTEGER、SMALLINT、BIGINT、DECIMAL、CHAR、VARCHAR、GRAPHIC 或 VARGRAPHIC。对于 BIT DATA，默认类型为 VARCHAR(16)。
+在我们的示例中，`PERSON` 表是根表，`EMP` 表和 `STUDENT` 表是子表。`PERSON` 表是使用根类型定义的表。`EMP` 表和 `STUDENT` 表是使用子类型定义的表。如示例 7–48 所示，类型表必须具有 `OID` 列，并且在为 `OID` 列提供值时使用转换函数。该转换函数根据根类型定义中 `REF USING` 子句指定的数据类型进行转换。你可以为 `REFERENCE` 类型指定以下内容：`INTEGER`、`SMALLINT`、`BIGINT`、`DECIMAL`、`CHAR`、`VARCHAR`、`GRAPHIC` 或 `VARGRAPHIC`。对于 `BIT DATA`，默认类型为 `VARCHAR(16)`。
 
-在我们的示例中，PERSON 表是根表，EMP 表和 STUDENT 表是子表。PERSON 表是使用根类型定义的表。EMP 表和 STUDENT 表是使用子类型定义的表。如示例 7–48 所示，类型表必须具有 OID 列，并且在为 OID 列提供值时使用转换函数。该转换函数根据根类型定义中 REF USING 子句指定的数据类型进行转换。你可以为 REFERENCE 类型指定以下内容：INTEGER、SMALLINT、BIGINT、DECIMAL、CHAR、VARCHAR、GRAPHIC 或 VARGRAPHIC。对于 BIT DATA，默认类型为 VARCHAR(16)。
 
-在我们的示例中，PERSON 表是根表，EMP 表和 STUDENT 表是子表。PERSON 表是使用根类型定义的表。EMP 表和 STUDENT 表是使用子类型定义的表。如示例 7–48 所示，类型表必须具有 OID 列，并且在为 OID 列提供值时使用转换函数。该转换函数根据根类型定义中 REF USING 子句指定的数据类型进行转换。你可以为 REFERENCE 类型指定以下内容：INTEGER、SMALLINT、BIGINT、DECIMAL、CHAR、VARCHAR、GRAPHIC 或 VARGRAPHIC。对于 BIT DATA，默认类型为 VARCHAR(16)。
 
-在我们的示例中，PERSON 表是根表，EMP 表和 STUDENT 表是子表。PERSON 表是使用根类型定义的表。EMP 表和 STUDENT 表是使用子类型定义的表。如示例 7–48 所示，类型表必须具有 OID 列，并且在为 OID 列提供值时使用转换函数。该转换函数根据根类型定义中 REF USING 子句指定的数据类型进行转换。你可以为 REFERENCE 类型指定以下内容：INTEGER、SMALLINT、BIGINT、DECIMAL、CHAR、VARCHAR、GRAPHIC 或 VARGRAPHIC。对于 BIT DATA，默认类型为 VARCHAR(16)。
-
-# 删除类型表
+## 创建类型表
 
 类型表是使用结构化数据类型定义的表（参见图 7–7）。类型表可以具有结构化类型的层次结构。子表继承其父类型的所有属性。处于继承关系中的所有表形成一个表层次结构。在层次结构中没有父表的表被称为根表。换句话说，根表是使用类型层次结构的根类型定义的表。
 
-图 7–7 显示了类型表的简单层次结构。你可以看到 PERSON 表的两个列列被 STUDENT 表和 EMP 表继承。
+图 7–7 显示了类型表的简单层次结构。你可以看到`PERSON`表的两个列被`STUDENT`表和`EMP`表继承。
 
-图 7–7 类型表的层次结构
+**图 7–7** 类型表的层次结构
 
-类型表是使用 CREATE TABLE 语句创建的。
+类型表是使用`CREATE TABLE`语句创建的。
 
 ```sql
 CREATE TABLE PERSON OF PERSON_T
@@ -10553,199 +10072,9 @@ CREATE TABLE STUDENT OF STUDENT_T UNDER PERSON
 INHERIT SELECT PRIVILEGES;
 ```
 
-在我们的示例中，PERSON 表是根表，EMP 表和 STUDENT 表是子表。PERSON 表是使用根类型定义的表。EMP 表和 STUDENT 表是使用子类型定义的表。如示例 7–48 所示，类型表必须具有 OID 列，并且在为 OID 列提供值时使用转换函数。该转换函数根据根类型定义中 REF USING 子句指定的数据类型进行转换。你可以为 REFERENCE 类型指定以下内容：INTEGER、SMALLINT、BIGINT、DECIMAL、CHAR、VARCHAR、GRAPHIC 或 VARGRAPHIC。对于 BIT DATA，默认类型为 VARCHAR(16)。
+在我们的示例中，`PERSON`表是根表，`EMP`表和`STUDENT`表是子表。`PERSON`表是使用根类型定义的表。`EMP`表和`STUDENT`表是使用子类型定义的表。如示例 7–48 所示，类型表必须具有`OID`列，并且在为`OID`列提供值时使用转换函数。该转换函数根据根类型定义中`REF USING`子句指定的数据类型进行转换。你可以为`REFERENCE`类型指定以下内容：`INTEGER`、`SMALLINT`、`BIGINT`、`DECIMAL`、`CHAR`、`VARCHAR`、`GRAPHIC`或`VARGRAPHIC`。对于`BIT DATA`，默认类型为`VARCHAR(16)`。
 
-# 删除类型表
-
-类型表是使用结构化数据类型定义的表（参见图 7–7）。类型表可以具有结构化类型的层次结构。子表继承其父类型的所有属性。处于继承关系中的所有表形成一个表层次结构。在层次结构中没有父表的表被称为根表。换句话说，根表是使用类型层次结构的根类型定义的表。
-
-图 7–7 显示了类型表的简单层次结构。你可以看到 PERSON 表的两个列列被 STUDENT 表和 EMP 表继承。
-
-图 7–7 类型表的层次结构
-
-类型表是使用 CREATE TABLE 语句创建的。
-
-```sql
-CREATE TABLE PERSON OF PERSON_T
-(REF IS OID USER GENERATED);
-
-CREATE TABLE EMP OF EMP_T UNDER PERSON
-INHERIT SELECT PRIVILEGES;
-
-CREATE TABLE STUDENT OF STUDENT_T UNDER PERSON
-INHERIT SELECT PRIVILEGES;
-```
-
-在我们的示例中，PERSON 表是根表，EMP 表和 STUDENT 表是子表。PERSON 表是使用根类型定义的表。EMP 表和 STUDENT 表是使用子类型定义的表。如示例 7–48 所示，类型表必须具有 OID 列，并且在为 OID 列提供值时使用转换函数。该转换函数根据根类型定义中 REF USING 子句指定的数据类型进行转换。你可以为 REFERENCE 类型指定以下内容：INTEGER、SMALLINT、BIGINT、DECIMAL、CHAR、VARCHAR、GRAPHIC 或 VARGRAPHIC。对于 BIT DATA，默认类型为 VARCHAR(16)。
-
-# 删除类型表
-
-类型表是使用结构化数据类型定义的表（参见图 7–7）。类型表可以具有结构化类型的层次结构。子表继承其父类型的所有属性。处于继承关系中的所有表形成一个表层次结构。在层次结构中没有父表的表被称为根表。换句话说，根表是使用类型层次结构的根类型定义的表。
-
-图 7–7 显示了类型表的简单层次结构。你可以看到 PERSON 表的两个列列被 STUDENT 表和 EMP 表继承。
-
-图 7–7 类型表的层次结构
-
-类型表是使用 CREATE TABLE 语句创建的。
-
-```sql
-CREATE TABLE PERSON OF PERSON_T
-(REF IS OID USER GENERATED);
-
-CREATE TABLE EMP OF EMP_T UNDER PERSON
-INHERIT SELECT PRIVILEGES;
-
-CREATE TABLE STUDENT OF STUDENT_T UNDER PERSON
-INHERIT SELECT PRIVILEGES;
-```
-
-在我们的示例中，PERSON 表是根表，EMP 表和 STUDENT 表是子表。PERSON 表是使用根类型定义的表。EMP 表和 STUDENT 表是使用子类型定义的表。如示例 7–48 所示，类型表必须具有 OID 列，并且在为 OID 列提供值时使用转换函数。
-
-(抱歉，由于处理过程中出现了逻辑重复，我将重新为您提供完整的翻译内容)
-
-# 创建类型表
-
-类型表是使用结构化数据类型定义的表（参见图 7–7）。类型表可以具有结构化类型的层次结构。子表继承其父类型的所有属性。处于继承关系中的所有表形成一个表层次结构。在层次结构中没有父表的表被称为根表。换句话说，根表是使用类型层次结构的根类型定义的表。
-
-图 7–7 显示了类型表的简单层次结构。你可以看到 PERSON 表的两个列列被 STUDENT 表和 EMP 表继承。
-
-图 7–7 类型表的层次结构
-
-类型表是使用 CREATE TABLE 语句创建的。
-
-```sql
-CREATE TABLE PERSON OF PERSON_T
-(REF IS OID USER GENERATED);
-
-CREATE TABLE EMP OF EMP_T UNDER PERSON
-INHERIT SELECT PRIVILEGES;
-
-CREATE TABLE STUDENT OF STUDENT_T UNDER PERSON
-INHERIT SELECT PRIVILEGES;
-```
-
-在我们的示例中，PERSON 表是根表，EMP 表和 STUDENT 表是子表。PERSON 表是使用根类型定义的表。EMP 表和 STUDENT 表是使用子类型定义的表。如示例 7–48 所示，类型表必须具有 OID 列，并且在为 OID 列提供值时使用转换函数。该转换函数根据根类型定义中 REF USING 子句指定的数据类型进行转换。你可以为 REFERENCE 类型指定以下内容：INTEGER、SMALLINT、BIGINT、DECIMAL、CHAR、VARCHAR、GRAPHIC 或 VARGRAPHIC。对于 BIT DATA，默认类型为 VARCHAR(16)。
-
-# 删除类型表
-
-类型表是使用结构化数据类型定义的表（参见图 7–7）。类型表可以具有结构化类型的层次结构。子表继承其父类型的所有属性。处于继承关系中的所有表形成一个表层次结构。在层次结构中没有父表的表被称为根表。换句话说，根表是使用类型层次结构的根类型定义的表。
-
-(由于输入文本中存在大量重复内容，以下是根据您提供的原始逻辑进行精简、准确的翻译)
-
-[content]
-# 结构化类型与类型表
-
-```sql
-CREATE TYPE Person_t AS (
-  name VARCHAR(40)
-  birthyear INTEGER
-  REF USING INTEGER
-) MODE DB2SQL;
-```
-
-### 结构化类型
-
-### 类型表
-
-```sql
-CREATE TABLE Person Of Person_t
-(REF IS oid USER GENERATED);
-
-INSERT INTO Person
-(oid,birthyear)
-VALUES
-(Person_t(1),'Petra',1968);
-```
-
-#### Person
-
-| OID | 名称 | 出生年份 |
-| --- | :--- | :--- |
-| 1 | Petra | 1968 |
-
-图 7–5 用户定义的结构化类型
-
-在例示例中，定义了一个具有两个属性 NAME 和 BIRTHYEAR 的结构化类型 PERSON_T，然后使用该结构化类型定义了表 PERSON。注意，该表具有 PERSON_T 类型。另一列被称为对象标识符 (OID)。任何类型表都必须将 OID 列作为其第一列，且 OID 列的值在整个表层次结构中必须是唯一的。OID 列的数据类型必须是 REFERENCE。注意在我们的示例中，使用了转换函数 PERSON_T 来为 OID 列提供值。OID 列将在稍后进行详细讨论。
-
-# 创建结构化类型
-
-结构化类型支持层次结构。因此，一个结构化类型可以被创建为另一个结构化类型的子类型（从而继承该类型的属性）。图 7–6 显示了一个简单的类型层次结构。PERSON_T 被定义为根类型（不依赖于其他类型），具有 NAME 和 BIRTHYEAR 两个属性。EMP_T 和 STUDENT_T 被定义为 PERSON_T 的子类型。因此，EMP_T 和 STUDENT_T 继承了 PERSON_T 的所有属性。此外，结构化类型 EMP_T 和 STUDENT_T 还有若干个特定于其特定类型的额外属性。
-
-图 7–6 结构化类型的层次结构
-
-让我们看看如何定义这种结构化类型层次结构。请查看示例 7–48 所示的示例。
-
-```sql
-CREATE TYPE PERSON_T AS
-(NAME VARCHAR(20),BIRTHYEAR SMALLINT)
-REF USING INTEGER
-MODE DB2SQL;
-
-CREATE TYPE EMP_T UNDER PERSON_T
-AS (SALARY INT)
-MODE DB2SQL;
-
-CREATE TYPE STUDENT_T UNDER PERSON_T
-AS (MAJOR VARCHAR(10),
-ARCHIVM DECIMAL(5,2))
-MODE DB2SQL;
-```
-
-示例 7–48 创建结构化类型和结构化类型层次结构
-
-AS 子句提供了与类型关联的属性定义。UNDER 子句指定该结构化类型被定义为指定类型的子类型。在我们的示例中，EMP_T 类型具有 SALARY 作为其属性。STUDENT_T 类型具有 Major 和 Archivm 作为其属性。此外，NAME 和 BIRTHYEAR 两个属性是从 PERSON_T 类型继承的。
-
-REF USING 子句在定义根类型时使用，并指定了内的数据类型，用作该结构化类型及其所有子类型的 REFERENCE 类型的表示。如示例 7–48 所示，类型表必须具有 OID 列，并且在为 OID 列提供值时使用转换函数。该转换函数根据根类型定义中 REF USING 子句指定的数据类型进行转换。你可以为 REFERENCE 类型指定以下内容：INTEGER、SMALLINT、BIGINT、DECIMAL、CHAR、VARCHAR、GRAPHIC 或 VARGRAPHIC。对于 BIT DATA，默认类型为 VARCHAR(16)。
-
-### DB2 注意事项
-
-**注意：**成功执行 CREATE TYPE 语句还会生成用于在 REFERENCE 类型与其表示（由 REF USING 子句指定的内置类型）之间转换的函数，并为具有 REFERENCE 类型的用户生成比较运算符（=, <>, !=, <=, <, >=）的支持。
-
-MODE 子句用于选择类型的模式。目前仅支持 MODE DB2SQL 模式。
-
-# 修改结构化类型
-
-ALTER TYPE 语句允许你添加或删除现有结构化类型的属性。以下示例显示了 ALTER TYPE 语句向 PERSON_T 类型添加属性 TEL 并删除该属性（示例 7–49）。
-
-```sql
-ALTER TYPE PERSON_T ADD ATTRIBUTE TEL CHAR(12);
-ALTER TYPE PERSON_T DROP ATTRIBUTE TEL;
-```
-
-示例 7–49 修改类型
-
-### DB2 注意事项
-
-**注意：** 如果类型或其一个子类型是现有表的类型，则无法对该类型执行 ALTER TYPE 语句。
-
-# 创建类型表
-
-类型表是使用结构化数据类型定义的表（参见图 7–7）。类型表可以具有结构化类型的层次结构。子表继承其父类型的所有属性。处于继承关系中的所有表形成一个表层次结构。在层次结构中没有父表的表被称为根表。换句话说，根表是使用类型层次结构的根类型定义的表。
-
-图 7–7 显示了类型表的简单层次结构。你可以看到 PERSON 表的两个列列被 STUDENT 表和 EMP 表继承。
-
-图 7–7 类型表的层次结构
-
-类型表是使用 CREATE TABLE 语句创建的。
-
-```sql
-CREATE TABLE PERSON OF PERSON_T
-(REF IS OID USER GENERATED);
-
-CREATE TABLE EMP OF EMP_T UNDER PERSON
-INHERIT SELECT PRIVILEGES;
-
-CREATE TABLE STUDENT OF STUDENT_T UNDER PERSON
-INHERIT SELECT PRIVILEGES;
-```
-
-在我们的示例中，PERSON 表是根表，EMP 表和 STUDENT 表是子表。PERSON 表是使用根类型定义的表。EMP 表和 STUDENT 表是使用子类型定义的表。如示例 7–48 所示，类型表必须具有 OID 列，并且在为 OID 列提供值时使用转换函数。
-
-(由于原文存在大量重复段落，已按核心逻辑完成翻译)
-
-
-
-## 结构化类型与类型表 441
+### 查询类型表
 
 ```sql
 SELECT * FROM PERSON;
@@ -10773,17 +10102,17 @@ SELECT * FROM STUDENT;
 |---|---|---|---|---|
 | 50 | FRANZ | 1975 | POL | 2.5 |
 
-示例 7–52 对类型表执行 SELECT 语句
+**示例 7–52** 对类型表执行`SELECT`语句
 
-如果你只想检索 PERSON 表的行，可以在 select 语句中使用 `ONLY` 子句，如下所示（示例 7–53）：
+如果你只想检索`PERSON`表的行，可以在`SELECT`语句中使用`ONLY`子句，如下所示（示例 7–53）：
 
 ```sql
 SELECT * FROM ONLY(PERSON);
 ```
 
-示例 7–53 ONLY 限定符
+**示例 7–53** `ONLY`限定符
 
-如果你不仅检索指定表的列，还检索其子表的列，可以在 select 语句中使用 `OUTER` 子句，如下所示（示例 7–54）。
+如果你不仅检索指定表的列，还检索其子表的列，可以在`SELECT`语句中使用`OUTER`子句，如下所示（示例 7–54）：
 
 ```sql
 SELECT * FROM OUTER(PERSON);
@@ -10791,70 +10120,69 @@ SELECT * FROM OUTER(PERSON);
 
 | OID | NAME | BIRTHYEAR | SALARY | MAJOR | ARCH |
 |---|---|---|---|---|---|
-| 10 | John | 1968 | | | |
-| 30 | Pat | 1970 | 60000 | | |
-| 50 | FRANZ | 1975 | | POL | 2.5 |
+| 10 | John | 1968 |  |  |  |
+| 30 | Pat | 1970 | 60000 |  |  |
+| 50 | FRANZ | 1975 |  | POL | 2.5 |
 
-示例 7–54 对类型表使用 OUTER 子句
+**示例 7–54** 对类型表使用`OUTER`子句
 
 ## 更新和删除类型表行
 
-与普通表一样，你可以使用 `UPDATE` 和 `DELETE` 语句来更新或删除类型表的行。请注意，更新和删除语句对目标表及其子表的影响方式类似于 select 语句。让我们来看一些示例。
+与普通表一样，你可以使用`UPDATE`和`DELETE`语句来更新或删除类型表的行。请注意，更新和删除语句对目标表及其子表的影响方式类似于`SELECT`语句。让我们来看一些示例。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_468_0.png)
 
-## 第 7 章 高级 SQL
+### 使用 OID 更新类型表
 
-第一个示例将 OID 为 10 的人的出生年份更改为 1969。该语句将影响 PERSON 及其子表（EMP 和 STUDENT）。注意，这里使用转换函数 `EMP_T` 将 `INTEGER` 类型转换为 `REFERENCE` 类型（示例 7–55）。
+第一个示例将`OID`为 10 的人的出生年份更改为 1969。该语句将影响`PERSON`及其子表（`EMP`和`STUDENT`）。注意，这里使用转换函数`EMP_T`将`INTEGER`类型转换为`REFERENCE`类型（示例 7–55）。
 
 ```sql
 UPDATE PERSON SET BIRTHYEAR=1969 WHERE OID=EMP_T(10);
 ```
 
-## 示例 7–55 使用 OID 进行更新
+**示例 7–55** 使用`OID`进行更新
 
-下一个示例删除了 PERSON 表及其子表（EMP 和 STUDENT）中的所有行（示例 7–56）。
+下一个示例删除了`PERSON`表及其子表（`EMP`和`STUDENT`）中的所有行（示例 7–56）。
 
 ```sql
 DELETE FROM PERSON;
 ```
 
-## 示例 7–56 删除包括子表在记录
+**示例 7–56** 删除包括子表在内的记录
 
-如果你只想更新或删除特定类型表的行（而不是其子表），可以在 `update` 或 `delete` 语句中使用 `ONLY` 子句，如下所示（示例 7–57）：
+如果你只想更新或删除特定类型表的行（而不是其子表），可以在`UPDATE`或`DELETE`语句中使用`ONLY`子句，如下所示（示例 7–57）：
 
 ```sql
 DELETE FROM ONLY(PERSON);
 ```
 
-## 示例 7–57 仅删除表而不删除子表
+**示例 7–57** 仅删除表而不删除子表
 
 ## 类型表的物理实现
 
-类型表层级的物理实现是一个包含表层级中所有表属性的表。这被称为层次表（H-Table）。当创建一个根表时，系统会自动创建一个 H-Table。每当创建一个具有根表其他列的子表时，H-Table 就会被修改并添加新列。你可以使用 `create` 语句中的 `HIERARCHY` 选项来指定 H-Table 的名称，但默认名称是根表加上后缀 `_HIERARCHY`。这种物理实现在性能上具有优势，你可以将类型表视为为 H-Table 定义的视图。图 7–9 显示了类型表层级和 H-Table 的逻辑视图。
+类型表层级的物理实现是一个包含表层级中所有表属性的表。这被称为层次表（H-Table）。当创建一个根表时，系统会自动创建一个 H-Table。每当创建一个具有根表其他列的子表时，H-Table 就会被修改并添加新列。你可以使用`CREATE`语句中的`HIERARCHY`选项来指定 H-Table 的名称，但默认名称是根表加上后缀`_HIERARCHY`。这种物理实现在性能上具有优势，你可以将类型表视为为 H-Table 定义的视图。图 7–9 显示了类型表层级和 H-Table 的逻辑视图。
 
-> 注意
+> **注意**
+>
 > H-Table 无法通过 SQL 语句进行操作。
-
-## 结构化类型与类型表
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_470_0.png)
 
 | TYPE_ID | OID | NAME | BIRTHYEAR | SALARY | MAJOR | ARCH |
 |---|---|---|---|---|---|---|
-| 1035 | 10 | John | 1968 | | | - |
+| 1035 | 10 | John | 1968 |  |  | - |
 | 1037 | 30 | Pat | 1970 | 60000 | - | - |
 | 1039 | 50 | Franz | 1975 | - | pol | 2.5 |
 
 **图 7–9** 层次表（H-Table）的逻辑视图
 
-H-Table 的第一列是 `TYPE_ID` 列。该列的每个值指定了插入该行的类型表的结构化类型。
+H-Table 的第一列是`TYPE_ID`列。该列的每个值指定了插入该行的类型表的结构化类型。
 
 一旦定义了结构化类型和类型表，DB2 系统目录表就会存储它们的信息。让我们通过一些系统目录值查看系统目录表。
 
-你可以从 `SYSCAT.TABLES` 视图看到 `ROWTYPESSCHEMA` 和 `ROWTYENAME` 列。这些列包含维护类型表的信息。你可以通过 `SYSCAT.DATATYPES` 视图查看每个结构化类型，如图 7–58 所示。`SYSCAT.DATATYPES` 目录视图中的 `SOURCEENAME` 列是在创建根类型时通过 `REF USING` 子句指定的内置类型名称。
 
 
+你可以从`SYSCAT.TABLES`视图看到`ROWTYPESSCHEMA`和`ROWTYENAME`列。这些列包含维护类型表的信息。你可以通过`SYSCAT.DATATYPES`视图查看每个结构化类型，如图7–58所示。`SYSCAT.DATATYPES`目录视图中的`SOURCEENAME`列是在创建根类型时通过`REF USING`子句指定的内置类型名称。
 
 # 第7章 高级 SQL
 
@@ -10868,11 +10196,11 @@ INHERIT SELECT OPTIONS PRIVILEGES
 
 **示例 7–61** 创建带有引用列的表
 
-在 CREATE TABLE 语句中，DEPREF WITH OPTIONS SCOPE DEPT 意味着 DEPREF 列中的值指向 DEPT 表中的行，或者 DEPT 表中任何子表的值。
+在`CREATE TABLE`语句中，`DEPREF WITH OPTIONS SCOPE DEPT`意味着`DEPREF`列中的值指向`DEPT`表中的行，或者`DEPT`表中任何子表的值。
 
 ## 解引用操作符
 
-解引用操作符 (->) 从具有匹配 OID 的行返回目标表或其子表中具名列的值。接下来的示例显示了一个使用解引用操作符的 SELECT 语句。
+解引用操作符（`->`）从具有匹配`OID`的行返回目标表或其子表中具名列的值。接下来的示例显示了一个使用解引用操作符的`SELECT`语句。
 
 ```sql
 SELECT E.NAME FROM EMP E
@@ -10881,9 +10209,9 @@ WHERE E.DEPREF->LOCATION ='AUSTIN';
 
 **示例 7–62** 使用解引用操作符
 
-在这个示例中，每个 DEPREF 值都经过了查询和检查。我们检查目标表（DEPT 表）或其子表是否存在 OID 相同的行。如果找到了这样的行，则从该行获取 LOCATION 列的值并返回。这就是 DEPREF->LOCATION 的工作原理。如果返回的值是 AUSTIN，则该谓词为真。
+在这个示例中，每个`DEPREF`值都经过了查询和检查。我们检查目标表（`DEPT`表）或其子表是否存在`OID`相同的行。如果找到了这样的行，则从该行获取`LOCATION`列的值并返回。这就是`DEPREF->LOCATION`的工作原理。如果返回的值是`AUSTIN`，则该谓词为真。
 
-上述使用解引用操作符 (->) 的 SELECT 语句可以使用 JOIN 操作进行重写。下一个示例显示了使用 JOIN 操作的等效 SQL 语句（示例 7–63）。
+上述使用解引用操作符（`->`）的`SELECT`语句可以使用`JOIN`操作进行重写。下一个示例显示了使用`JOIN`操作的等效`SQL`语句（示例 7–63）。
 
 ```sql
 SELECT E.NAME FROM EMP E, DEPT D
@@ -10891,13 +10219,13 @@ WHERE E.DEPREF = D.OID
 AND D.LOCATION ='AUSTIN';
 ```
 
-**示例 7–63** 使用 Join 代替解引用操作符
+**示例 7–63** 使用`Join`代替解引用操作符
 
 ## 视图层次结构
 
-类型视图（Typed views）是指其定义基于结构化类型的视图。你可以像创建类型表层次结构一样，使用视图创建一个层次结构。示例 7–64 显示了定义类型视图的 CREATE VIEW 语句。在我们的示例中，使用 PERSON_T 类型和 EMP_T 类型创建了两个类型视图 PERSON_V 和 EMP_V。PERSON_V 视图被定义为视图层次结构的根视图，并引用 PERSON 表的所有列和行。EMP_V 视图被定义为 PERSON_V 视图的子视图，并引用 EMP 表的所有列和行。注意，PERSON_V 定义使用了 ONLY 子句，因此只从 PERSON 表中选择行。这是必要的，因为 PERSON_V 视图有一个子视图（EMP_V），而 PERSON_V 视图不应包含分配给 EMP_V 视图的行。记住，在同一个视图层次结构不允许存在相同的 OID 值。
+类型视图（Typed views）是指其定义基于结构化类型的视图。你可以像创建类型表层次结构一样，使用视图创建一个层次结构。示例 7–64显示了定义类型视图的`CREATE VIEW`语句。在我们的示例中，使用`PERSON_T`类型和`EMP_T`类型创建了两个类型视图`PERSON_V`和`EMP_V`。`PERSON_V`视图被定义为视图层次结构的根视图，并引用`PERSON`表的所有列和行。`EMP_V`视图被定义为`PERSON_V`视图的子视图，并引用`EMP`表的所有列和行。注意，`PERSON_V`定义使用了`ONLY`子句，因此只从`PERSON`表中选择行。这是必要的，因为`PERSON_V`视图有一个子视图（`EMP_V`），而`PERSON_V`视图不应包含分配给`EMP_V`视图的行。记住，在同一个视图层次结构不允许存在相同的`OID`值。
 
-第一个 CREATE 语句即使使用 FROM PERSON 代替 FROM ONLY(PERSON) 也会成功；但在创建 EMP_V 视图时，你会遇到错误，因为所有符合 EMP_V 定义完整集的行都被 PERSON_V 视图引用（示例 7–64）。你不需要为 EMP_V 视图使用 ONLY 子句，因为 EMP_V 视图没有子视图。
+第一个`CREATE`语句即使使用`FROM PERSON`代替`FROM ONLY(PERSON)`也会成功；但在创建`EMP_V`视图时，你会遇到错误，因为所有符合`EMP_V`定义完整集的行都被`PERSON_V`视图引用（示例 7–64）。你不需要为`EMP_V`视图使用`ONLY`子句，因为`EMP_V`视图没有子视图。
 
 ```sql
 CREATE VIEW PERSON_V OF PERSON_T MODE DB2SQL
@@ -10916,16 +10244,16 @@ FROM EMP;
 
 ## 类型表和类型视图的 SQL 函数
 
-你可以对类型表或类型视图使用以下 SQL 函数：
+你可以对类型表或类型视图使用以下`SQL`函数：
 
-- DEREF（函数）
-- TYPE_ID（表达式）
-- TYPE_NAME（表达式）
-- TYPE_SCHEMA（表达式）
+- `DEREF`（函数）
+- `TYPE_ID`（表达式）
+- `TYPE_NAME`（表达式）
+- `TYPE_SCHEMA`（表达式）
 
-DEREF 函数返回参数的结构化类型。参数是 OID 列或引用值。DEREF 返回值称为动态类型。此函数只能用于 TYPE 谓词（稍后解释）的左侧，或者用于 TYPE_ID、TYPE_NAME 或 TYPE_SCHEMA 函数的参数中。让我们来看每个函数。
+`DEREF`函数返回参数的结构化类型。参数是`OID`列或引用值。`DEREF`返回值称为动态类型。此函数只能用于`TYPE`谓词（稍后解释）的左侧，或者用于`TYPE_ID`、`TYPE_NAME`或`TYPE_SCHEMA`函数的参数中。让我们来看每个函数。
 
-TYPE_ID 函数返回动态数据类型的内部类型。参数必须是结构化类型。该函数结果的数据类型是 INTEGER。下一个示例（示例 7–65）显示了一个使用 TYPE_ID 函数的 SQL 语句。它从 PERSON 表中检索每行的类型标识符和人的姓名。
+`TYPE_ID`函数返回动态数据类型的内部类型。参数必须是结构化类型。该函数结果的数据类型是`INTEGER`。下一个示例（示例 7–65）显示了一个使用`TYPE_ID`函数的`SQL`语句。它从`PERSON`表中检索每行的类型标识符和人的姓名。
 
 ```sql
 SELECT TYPE_ID(DEREF(OID)),NAME FROM PERSON;
@@ -10933,35 +10261,44 @@ SELECT TYPE_ID(DEREF(OID)),NAME FROM PERSON;
 1065 JON
 1 record(s) selected.
 ```
-示例 7–65 TYPE_ID 函数
 
-> 注意：TYPE_ID 函数返回的值在不同数据库之间不可移植。即使类型方案和类型名称相同，每个数据库中的类型标识符也可能不同。
+示例 7–65 `TYPE_ID`函数
 
-TYPE_NAME 函数返回动态数据类型的未限定名称。参数必须是结构化类型。函数的结果类型是 VARCHAR(18)。下一个示例显示了一个使用 TYPE_NAME 函数的 SQL 语句（示例 7–66）。它从 EMP 表中检索每行（由 OID 值表示）、NAME、BIRTHYEAR 和 SALARY。
+> 注意：`TYPE_ID`函数返回的值在不同数据库之间不可移植。即使类型方案和类型名称相同，每个数据库中的类型标识符也可能不同。
+
+`TYPE_NAME`函数返回动态数据类型的未限定名称。参数必须是结构化类型。函数的结果类型是`VARCHAR(18)`。下一个示例显示了一个使用`TYPE_NAME`函数的`SQL`语句（示例 7–66）。它从`EMP`表中检索每行（由`OID`值表示）、`NAME`、`BIRTHYEAR`和`SALARY`。
 
 ```sql
 SELECT TYPE_NAME(DEREF(OID)),NAME,BIRTHYEAR,SALARY
 FROM EMP;
 ```
+
+```text
 1         NAME        BIRTHYEAR      SALARY
+
 EMP      JON             1980         45000
+
 1 record(s) selected.
 ```
-示例 7–66 TYPE_NAME 函数
 
-TYPE_SCHEMA 函数返回动态类型的未限定名称。参数必须是结构化类型。函数的结果类型是 VARCHAR(18)。下一个示例显示了一个使用 TYPE_SCHEMA 函数的 SQL 语句（示例 7–67）。它从 PERSON 表中检索每行（由 OID 值表示）的名称。
+示例 7–66 `TYPE_NAME`函数
+
+`TYPE_SCHEMA`函数返回动态类型的未限定名称。参数必须是结构化类型。函数的结果类型是`VARCHAR(18)`。下一个示例显示了一个使用`TYPE_SCHEMA`函数的`SQL`语句（示例 7–67）。它从`PERSON`表中检索每行（由`OID`值表示）的名称。
 
 ```sql
 SELECT TYPE_SCHEMA(DEREF(OID)),NAME FROM PERSON;
 ```
+
+```text
 1 NAME
 JON
 ```
-示例 7–67 TYPE_SCHEMA 函数
+
+示例 7–67 `TYPE_SCHEMA`函数
 
 ## 类型谓词
 
-解引用操作符 (->) 从具有匹配 OID 的行返回目标表或其子表中具名列的值。下面的示例显示了一个使用解引用操作符的 SELECT 语句。
+解引用操作符（`->`）从具有匹配`OID`的行返回目标表或其子表中具名列的值。下面的示例显示了一个使用解引用操作符的`SELECT`语句。
 
 ```sql
 SELECT E.NAME FROM EMP E
@@ -10970,9 +10307,9 @@ WHERE E.DEPREF->LOCATION ='AUSTIN';
 
 **示例 7–62** 使用解引用操作符
 
-在这个示例中，每个 DEPREF 值都经过了查询和检查。我们检查目标表（DEPT 表）或其子表是否存在 OID 相同的行。如果找到了这样的行，则从该行获取 LOCATION 列的值并返回。这就是 DEPREF->LOCATION 的工作原理。如果返回的值是 AUSTIN，则该谓词为真。
+在这个示例中，每个`DEPREF`值都经过了查询和检查。我们检查目标表（`DEPT`表）或其子表是否存在`OID`相同的行。如果找到了这样的行，则从该行获取`LOCATION`列的值并返回。这就是`DEPREF->LOCATION`的工作原理。如果返回的值是`AUSTIN`，则该谓词为真。
 
-上述使用解引用操作符 (->) 的 SELECT 语句可以使用 JOIN 操作进行重写。下一个示例显示了使用 JOIN 操作的等效 SQL 语句（示例 7–63）。
+上述使用解引用操作符（`->`）的`SELECT`语句可以使用`JOIN`操作进行重写。下一个示例显示了使用`JOIN`操作的等效`SQL`语句（示例 7–63）。
 
 ```sql
 SELECT E.NAME FROM EMP E, DEPT D
@@ -10980,16 +10317,13 @@ WHERE E.DEPREF = D.OID
 AND D.LOCATION ='AUSTIN';
 ```
 
-**示例 7–63** 使用 Join 代替解引用操作符
-
-
-
+**示例 7–63** 使用`Join`代替解引用操作符
 
 ## 结构化类型与类型表 451
 
-DEPT_T 和 EMP_T 相互引用。当你定义两个相互引用的结构化类型（互定义）时，必须先创建其中一个不包含引用定义的类型，然后在另一个类型创建后，使用 `ALTER` 语句添加引用属性。这是因为在创建一个带有引用的结构化类型时，被引用的类型应该提前定义。
+`DEPT_T`和`EMP_T`相互引用。当你定义两个相互引用的结构化类型（互定义）时，必须先创建其中一个不包含引用定义的类型，然后在另一个类型创建后，使用`ALTER`语句添加引用属性。这是因为在创建一个带有引用的结构化类型时，被引用的类型应该提前定义。
 
-在我们的示例中，首先创建不带引用属性的 EMP_t，然后创建带有引用属性 `MGR` 的 DEPT_t，该 `MGR` 引用 EMP_t 类型。最后，使用 `ALTER TYPE` 语句在 EMP_t 类型中添加引用属性 `DEPT`。SQL 语句如示例 7–70 所示。
+在我们的示例中，首先创建不带引用属性的`EMP_t`，然后创建带有引用属性`MGR`的`DEPT_t`，该`MGR`引用`EMP_t`类型。最后，使用`ALTER TYPE`语句在`EMP_t`类型中添加引用属性`DEPT`。`SQL`语句如示例 7–70所示。
 
 ```sql
 CREATE TYPE PERSON_T AS
@@ -11015,7 +10349,7 @@ AS (SPECIALITY VARCHAR(20)) MODE DB2SQL;
 
 ## 示例 7–70 示例：创建结构化类型
 
-现在让我们创建表层次结构。基于 `PERSON_t` 类型创建的表 PERSON 是根表，有两个子表：EMP 和 STUDENT。PROF 是 EMP 的子表。dept 的范围是引用列 `MGR`，该列指向 EMP 表中的行。EMP 的范围是引用列 `DEPT`，该列指向 dept 表中的行。因此，你应该先创建一个不带引用列的 EMP 表，然后在 DEPT 表创建后添加引用列。请参阅示例 7–71 所示的 SQL 语句。
+现在让我们创建表层次结构。基于`PERSON_t`类型创建的表`PERSON`是根表，有两个子表：`EMP`和`STUDENT`。`PROF`是`EMP`的子表。`dept`的范围是引用列`MGR`，该列指向`EMP`表中的行。`EMP`的范围是引用列`DEPT`，该列指向`dept`表中的行。因此，你应该先创建一个不带引用列的`EMP`表，然后在`DEPT`表创建后添加引用列。请参阅示例 7–71所示的`SQL`语句。
 
 ```sql
 CREATE TABLE PERSON OF PERSON_T (REF IS OID GENERATED);
@@ -11030,14 +10364,16 @@ CREATE TABLE DEPT OF DEPT_T
 (REF IS OID GENERATED, MGR WITH OPTIONS SCOPE EMP);
 ```
 
+```sql
 ALTER TABLE EMP ALTER COLUMN DEPT ADD SCOPE;
 
 CREATE TABLE PROF OF PROF_T UNDER EMP
 INHERIT SELECT PRIVILEGES;
+```
 
 ## 示例 7–71：创建类型表（续）
 
-所有表的内容如图 7–12 所示（假设这些行之前已经插入）。
+所有表的内容如图 7–12所示（假设这些行之前已经插入）。
 
 | Person OID | NAME | BIRTHYEAR | Dept OID | NAME | BUDGET | MGR |
 |---|---|---|---|---|---|---|
@@ -11049,7 +10385,7 @@ INHERIT SELECT PRIVILEGES;
 ### Emp
 
 | OID | NAME | BIRTHYEAR | SALARY | DEPT |
-|---|---|---|---|---||
+|---|---|---|---|---|
 | 10 | Pat | 1970 | 60000 | 10 |
 | 40 | Hitomi | 1977 | 65000 | 20 |
 | 90 | Lou | | | |
@@ -11059,20 +10395,20 @@ INHERIT SELECT PRIVILEGES;
 ### Student
 
 | OID | NAME | BIRTHYEAR | MAJOR | ARCHIV |
-|---|---|---|---|---||
+|---|---|---|---|---|
 | 100 | Franzis | 1975 | pol | 2.50 |
 | 110 | Herb | 1980 | math | 1.70 |
 
 ### Prof
 
 | OID | NAME | BIRTHYEAR | SALARY | DEPT | SPECIALITY |
-|---|---|---|---|---|---||
+|---|---|---|---|---|---|
 | 70 | Rich | 1941 | 90000 | 30 | oec |
 | 80 | Herb | 1962 | 120000 | 30 | math |
 
 ## 图 7–12：每个类型表包含的记录
 
-如前所述，一个表层次结构会创建一个层次结构表（H-Table）。表层次结构中类型表的所有列和行都存储在一个层次结构表中。让我们看看示例中的 `PERSON_HIERARCHY` 表，以及我们针对类型表的 `SELECT` 语句是如何处理的。注意，层次结构表无法通过 SQL 语句直接操作。参见以下三个示例。每个示例都是来自类型表的简单查询（示例 7–72）。
+如前所述，一个表层次结构会创建一个层次结构表（H-Table）。表层次结构中类型表的所有列和行都存储在一个层次结构表中。让我们看看示例中的`PERSON_HIERARCHY`表，以及我们针对类型表的`SELECT`语句是如何处理的。注意，层次结构表无法通过`SQL`语句直接操作。参见以下三个示例。每个示例都是来自类型表的简单查询（示例 7–72）。
 
 ```sql
 SELECT * FROM PERSON;
@@ -11082,7 +10418,7 @@ SELECT * FROM OUTER(EMP);
 
 ## 示例 7–72 创建结构化类型和结构化类型层次结构
 
-结果集如图 7–13 所示。该图展示了我们示例的层次表以及之前查询的结果集。
+结果集如图 7–13所示。该图展示了我们示例的层次表以及之前查询的结果集。
 
 ### Person_Hierarchy Select * from Person Select * from Emp
 
@@ -11100,15 +10436,11 @@ SELECT * FROM OUTER(EMP);
 | Student | 100 Franzis | 1975 | pol | 2.50 | | | |
 | | 110 Herb | 1980 | math | 1.70 | | | |
 
-
-
-
-
 ## 创建摘要表
 
-可以通过 `CREATE TABLE` 语句创建摘要表。示例 7–77 显示了创建摘要表的 `CREATE TABLE` 语句。
+可以通过`CREATE TABLE`语句创建摘要表。示例 7–77显示了创建摘要表的`CREATE TABLE`语句。
 
-```
+```sql
 CREATE SUMMARY TABLE DEPT_GROUP
 AS (SELECT WORKDEPT,
       SUM(SALARY) AS SALARY,
@@ -11120,19 +10452,19 @@ REFRESH DEFERRED;
 
 示例 7–77 创建摘要表
 
-在此示例中，使用了关键字 `SUMMARY` 来表示这是一个摘要表；但是，如果你愿意，也可以省略它。该关键字后紧跟一个全表查询（fullselect）即表示这是一个摘要表。摘要表的列属性由该全表查询定义。
+在此示例中，使用了关键字`SUMMARY`来表示这是一个摘要表；但是，如果你愿意，也可以省略它。该关键字后紧跟一个全表查询（fullselect）即表示这是一个摘要表。摘要表的列属性由该全表查询定义。
 
-更新摘要表中的数据有两种方式：延迟刷新（deferred refresh）和即时刷新（immediate refresh）。这在 `CREATE TABLE` 语句中通过 `REFRESH DEFERRED` 或 `REFRESH IMMEDIATE` 来指定。上一个示例使用了 `REFRESH DEFERRED`，这意味着摘要表中的数据反映执行 `REFRESH TABLE` 语句时的查询结果。`REFRESH IMMEDIATE` 则意味着作为 `DELETE`、`INSERT` 或 `UPDATE` 语句一部分对底层表进行的更改会立即同步到摘要表。
+更新摘要表中的数据有两种方式：延迟刷新（deferred refresh）和即时刷新（immediate refresh）。这在`CREATE TABLE`语句中通过`REFRESH DEFERRED`或`REFRESH IMMEDIATE`来指定。上一个示例使用了`REFRESH DEFERRED`，这意味着摘要表中的数据反映执行`REFRESH TABLE`语句时的查询结果。`REFRESH IMMEDIATE`则意味着作为`DELETE`、`INSERT`或`UPDATE`语句一部分对底层表进行的更改会立即同步到摘要表。
 
-`DATA INITIALLY DEFERRED` 子句表示数据不会在 `CREATE TABLE` 语句执行时插入表中，`REFRESH TABLE` 语句是填充表的唯一方法。
+`DATA INITIALLY DEFERRED`子句表示数据不会在`CREATE TABLE`语句执行时插入表中，`REFRESH TABLE`语句是填充表的唯一方法。
 
 ## DB2 注意
 
-创建摘要表后，该表处于检查等待（check-pending）状态。使用 `REFRESH TABLE` 语句或带有 `IMMEDIATE CHECKED` 选项的 `SET INTEGRITY` 语句可以退出此检查等待状态。
+创建摘要表后，该表处于检查等待（check-pending）状态。使用`REFRESH TABLE`语句或带有`IMMEDIATE CHECKED`选项的`SET INTEGRITY`语句可以退出此检查等待状态。
 
-示例 7–78 显示了一个使用 `REFRESH IMMEDIATE` 选项创建摘要表的 `CREATE TABLE` 语句。
+示例 7–78显示了一个使用`REFRESH IMMEDIATE`选项创建摘要表的`CREATE TABLE`语句。
 
-```
+```sql
 CREATE SUMMARY DEPT_GROUP2
 AS (SELECT COUNT(*) AS RECOUNT,
 SUM(SALARY) AS SALARY,
@@ -11142,40 +10474,42 @@ DATA INITIALLY DEFERRED
 REFRESH IMMEDIATE;
 ```
 
-示例 7–78 使用 REFRESH IMMEDIATE 选项创建摘要表
+
+
+# 示例 7–78 使用 `REFRESH IMMEDIATE` 选项创建摘要表
 
 ## DB2 注意
 
 摘要表不能通过 `INSERT`、`UPDATE` 或 `DELETE` 语句直接修改。
 
-## CURRENT REFRESH AGE 特殊寄存
+## `CURRENT REFRESH AGE` 特殊寄存器
 
-`CURRENT REFRESH AGE` 特殊寄存指定了一个数据类型为 `DECIMAL (20, 6)` 的时间戳值。该时长是自对延迟刷新摘要表处理 `refresh table` 语句以来的时长。它决定了摘要表是否可以用于优化查询的处理。`SET CURRENT REFRESH AGE` 语句允许你更改 `CURRENT REFRESH AGE` 特殊寄存的值。该值必须为 `0` 或 `9999999999999999`（999 年、99 个月、99 天、99 小时、99 分钟和 99 秒）。
+`CURRENT REFRESH AGE` 特殊寄存器指定了一个数据类型为 `DECIMAL (20, 6)` 的时间戳值。该时长是自对延迟刷新摘要表处理 `refresh table` 语句以来的时长。它决定了摘要表是否可以用于优化查询的处理。`SET CURRENT REFRESH AGE` 语句允许你更改 `CURRENT REFRESH AGE` 特殊寄存器的值。该值必须为 `0` 或 `9999999999999999`（999 年、99 个月、99 天、99 小时、99 分钟和 99 秒）。
 
-- 零 (0) 表示只有定义为 `REFRESH IMMEDIATE` 的摘要表可用于优化查询的处理。
-- 9999999999999999 表示任何定义为 `DEFERRED` 或 `REFRESH IMMEDIATE` 的摘要表均可用于优化查询的处理。
+- 零（`0`）表示只有定义为 `REFRESH IMMEDIATE` 的摘要表可用于优化查询的处理。
+- `9999999999999999` 表示任何定义为 `DEFERRED` 或 `REFRESH IMMEDIATE` 的摘要表均可用于优化查询的处理。
 
 ## DB2 注意
 
-**注意：** 关键字 `ANY` 是 `9999999999999999` 的简写。
+**注意：**关键字 `ANY` 是 `9999999999999999` 的简写。
 
 `CURRENT REFRESH AGE` 的初始值为 `0`。如果你希望 DB2 优化器考虑使用延迟刷新摘要表，你必须按照示例 7–79 所示将 `CURRENT REFRESH AGE` 特殊寄存器设置为 `ANY` 或 `9999999999999999`：
 
-```
+```sql
 SET CURRENT REFRESH AGE ANY;
 ```
 
-示例 7–79 REFRESH AGE
+### 示例 7–79 `REFRESH AGE`
 
 ## 使用摘要表的注意事项
 
 创建摘要表时会有一些注意事项。摘要表定义中的全表查询不能包含以下内容：
 
-- 在任何 `FROM` 子句中引用视图（详情请参阅 *DB2 SQL Reference* *SQL Reference*）、摘要表或类型化表（typed table）
-- 引用类型或 `DATALINK` 类型的表达式（或基于这些类型的唯一类型）
-- 具有外部操作（external action）的函数
-- 依赖于物理特性的函数（例如 `NODENNUMBER`、`PARTITION`）
-- 对系统对象的表或视图引用（也不应指定解释表）
+- 在任何 `FROM` 子句中引用视图（详情请参阅 *DB2 SQL Reference* *SQL Reference*）、摘要表或类型化表（typed table）。
+- 引用类型或 `DATALINK` 类型的表达式（或基于这些类型的唯一类型）。
+- 具有外部操作（external action）的函数。
+- 依赖于物理特性的函数（例如 `NODENNUMBER`、`PARTITION`）。
+- 对系统对象的表或视图引用（也不应指定解释表）。
 
 你应该注意的其他考虑因素：
 
@@ -11186,12 +10520,12 @@ SET CURRENT REFRESH AGE ANY;
 此外，如果你使用 `REFRESH IMMEDIATE` 选项创建摘要表，还存在以下考虑：
 
 - 摘要表定义中的全表查询必须是一个子查询（sub-select），且不能包含：
-- 非确定性函数
-- 标量全表查询（Scalar full selects）
-- 带有全表查询的谓词
-- 特殊寄存器
+  - 非确定性函数。
+  - 标量全表查询（Scalar full selects）。
+  - 带有全表查询的谓词。
+  - 特殊寄存器。
 - `GROUP` 子句必须包含 `COUNT(*)` 函数（或 `COUNT_BIG(*)`）且不能有 `DISTINCT`。
-- select 列表中仅允许非空列的 `SUM`、`COUNT` 或 `COUNT_BIG` 列函数（不带 `DISTINCT`），其他 select 列表项必须包含在 `GROUP` 子句中。
+- `select` 列表中仅允许非空列的 `SUM`、`COUNT` 或 `COUNT_BIG` 列函数（不带 `DISTINCT`），其他 `select` 列表项必须包含在 `GROUP` 子句中。
 - 不支持如 `CUBE` 或 `ROLLUP` 等分组集。
 - 不允许使用 `HAVING` 子句。
 
@@ -11206,11 +10540,13 @@ SET CURRENT REFRESH AGE ANY;
 
 ## 用户维护的摘要表
 
-在某些情况下，用户生成表。由于数据是由用户生成的，DB2 不会刷新这些信息，因此用户必须定期更新表。示例 7–80 LIST TABLES 输出
+在某些情况下，用户生成表。由于数据是由用户生成的，DB2 不会刷新这些信息，因此用户必须定期更新表。
+
+### 示例 7–80 `LIST TABLES` 输出
 
 要创建用户维护的摘要表，必须在 `CREATE TABLE` 命令的末尾添加 `MAINTAINED BY USER` 选项。示例 77 中的示例在示例 7–81 中更改为用户维护表：
 
-```
+```sql
 CREATE SUMMARY TABLE UMST_EMPLOYEE
 AS (SELECT WORKDEPT,
 SUM(SALARY) AS SALARY,
@@ -11221,19 +10557,19 @@ REFRESH DEFERRED
 MAINTAINED BY USER;
 ```
 
-示例 7–81 创建用户维护的摘要表
+### 示例 7–81 创建用户维护的摘要表
 
 一旦创建了表，用户就可以向其加载数据并让 DB2 根据此信息优化查询。在加载数据之前，必须将摘要表从检查等待状态取出（示例 7–82）：
 
-```
+```sql
 SET INTEGRITY FOR UMST_EMPLOYEE IMMEDIATE CHECKED;
 ```
 
-示例 7–82 重置检查状态
+### 示例 7–82 重置检查状态
 
 发布 `INTEGRITY` 命令后，用户可以使用 `insert` 语句加载此表。例如，可以使用以下 SQL 从 `EMPLOYEE` 表加载当前信息到此摘要表（示例 7–83）：
 
-```
+```sql
 INSERT INTO UMST_EMPLOYEE
 SELECT * FROM(
   SELECT WORKDEPT, COUNT(*), SUM(SALARY), SUM(BONUS)
@@ -11242,43 +10578,40 @@ SELECT * FROM(
 ) AS T;
 ```
 
-示例 7–83 加载摘要表
+### 示例 7–83 加载摘要表
 
 用户可能还需要设置特殊优化寄存器，以防止在使用其他摘要表。在运行此插入语句之前，用户应执行以下命令（示例 7–84）：
 
-```
+```sql
 SET CURRENT MAINTAINED TABLE TYPES FOR OPTIMIZATION = NONE;
 ```
 
-示例 7–84 优化设置
+### 示例 7–84 优化设置
 
 将寄存器设置为 `NONE` 将防止 SQL 处理期间使用任何摘要表。但是，如果你想利用已创建的摘要表，应该将此值设置回来。该特殊寄存器可以包含四个值之一：
 
-- ALL 表示在优化动态 SQL 查询时考虑由该特殊寄存器控制的所有可能的维护表类型。
-- NONE 表示在优化动态 SQL 查询的处理时不考虑由该特殊寄存器控制的任何对象类型。
-- SYSTEM 表示可以考虑系统维护的延迟刷新物化查询表来优化查询的处理。（即时物化查询表始终可用。）
+- `ALL` 表示在优化动态 SQL 查询时考虑由该特殊寄存器控制的所有可能的维护表类型。
+- `NONE` 表示在优化动态 SQL 查询的处理时不考虑由该特殊寄存器控制的任何对象类型。
+- `SYSTEM` 表示可以考虑系统维护的延迟刷新物化查询表来优化查询的处理。（即时物化查询表始终可用。）
+- `USER` — 指定用户维护的延迟刷新（refresh-deferred）物化查询表，可以被考虑用于优化动态 SQL 查询的处理。
 
+除了此优化注册表外，用户还必须设置 `CURRENT REFRESH AGE` 以注册 DB2 使用这些用户维护的汇总表（示例 7–85）。如果此值设置为 `0`，DB2 将仅考虑系统自动维护的表。
 
-
-
-
-## 第 7 章 高级 SQL
-
-- USER — 指定用户维护的延迟刷新（refresh-deferred）物化查询表，可以被考虑用于优化动态 SQL 查询的处理。
-
-除了此优化注册表外，用户还必须设置 `CURRENT REFRESH AGE` 以注册 DB2 使用这些用户维护的汇总表（示例 7–85）。如果此值设置为 0，DB2 将仅考虑系统自动维护的表。
-
+```sql
 SET CURRENT REFRESH AGE ANY;
+```
 
-**示例 7–85** 当前刷新年龄
+### 示例 7–85 当前刷新年龄
 
-## 物化查询表 (Materialized Query Tables)
+# 第 7 章 高级 SQL
+
+## 物化查询表（Materialized Query Tables）
 
 物化查询表是一种其定义基于查询结果的表，其数据以预先计算结果的形式存在，这些结果取自一个或多个物化查询表定义所依据的表。物化查询表的定义包含了连接（joins）、函数以及在自动汇总表中是不允许的其它 SQL 元素。
 
 下述两个 SQL 语句突显了自动汇总表与物化查询表之间的区别。第一个示例（示例 7–86）是一个典型的汇总表，包含使用 `GROUP BY` 子句进行的汇总。第二个示例（示例 7–87）包含两个表之间的连接，且不包含任何相关的汇总或分组。这两个表在用于查询之前，都需要进行刷新。
 
-```
+```sql
 CREATE SUMMARY TABLE DEPT_GROUP
 AS (SELECT SALARY,
     SUM(SALARY) AS SALARY,
@@ -11288,9 +10621,9 @@ AS (SELECT SALARY,
   REFRESH DEFERRED);
 ```
 
-**示例 7–86** 自动汇总表
+### 示例 7–86 自动汇总表
 
-```
+```sql
 CREATE SUMMARY TABLE EPLUS
 AS (SELECT EMPNO, LASTNAME, DEPT, DENAME)
 FROM EMPLOYEE E, DEPARTMENT D
@@ -11299,7 +10632,7 @@ DATA INITIALLY DEFERRED
 REFRESH DEFERRED;
 ```
 
-**示例 7–87** 物化查询表
+### 示例 7–87 物化查询表
 
 ## 汇总表
 
@@ -11313,7 +10646,7 @@ REFRESH DEFERRED;
 
 `EXPLAIN_GET_MSGS` 表函数的格式如示例 7–88 所示：
 
-```
+```sql
 CREATE FUNCTION EXPLAIN_GET_MSGS (
   EXPLAIN_REQUESTER VARCHAR(128),
   EXPLAIN_TIME TIMESTAMP,
@@ -11332,28 +10665,28 @@ RETURNS (
 );
 ```
 
-**示例 7–88** Explain_Get_Msgs 定义
+### 示例 7–88 `Explain_Get_Msgs` 定义
 
 `EXPLAIN_GET_MSGS` 表函数以你想要诊断信息的语句作为参数，并返回所有解释细节作为数据行返回。如果你在数据库中保留了多个语句的解释信息，那么在请求返回信息时需要非常具体。然而，如果解释仅是为了诊断特定语句的信息，那么先删除所有的解释语句，然后只带上 `NULL` 参数调用函数可能会更容易（示例 7–89）：
 
-```
+```sql
 DELETE FROM EXPLAIN_INSTANCE;
 EXPLAIN PLAN FOR SELECT C1, COUNT(*) FROM T1 WHERE C2 >= 10 GROUP BY C1;
 SELECT * FROM TABLE(EXPLAIN_GET_MSGS(CAST(NULL AS VARCHAR(128)), CAST(NULL AS TIMESTAMP), CAST(NULL AS VARCHAR(128)), CAST(NULL AS VARCHAR(128)),...)) AS T;
 ```
 
-**示例 7–89** 获取消息
+### 示例 7–89 获取消息
 
 遗憾的是，`EXPLAIN_GET_MSGS` 函数的每个参数必须在函数内部转换为正确的数据类型才能正常工作。在此函数上创建一个视图可能会更方便，这样实现细节就可以对用户隐藏了（示例 7–90）。
 
-```
+```sql
 CREATE VIEW MQT_MESSAGES AS (
 TABLE(
 EXPLAIN_GET_MSGS(CAST(NULL AS VARCHAR(128)), CAST(NULL AS TIMESTAMP), CAST(NULL AS VARCHAR(128)), CAST(NULL AS VARCHAR(128)),...)) AS T
 );
 ```
 
-**示例 7–90** 创建视图以隐藏复杂性
+### 示例 7–90 创建视图以隐藏复杂性
 
 ## 诊断输出
 
@@ -11393,23 +10726,19 @@ EXPLAIN_GET_MSGS(CAST(NULL AS VARCHAR(128)), CAST(NULL AS TIMESTAMP), CAST(NULL 
 
 函数依赖用于提高性能。定义函数依赖允许 DB2 将查询路由到仅包含一个列的汇总表。函数依赖可以通过 `CREATE TABLE` 语句或 `ALTER TABLE` 语句通过检查约束的语法来定义。例如，示例 7–92 展示了连接 `SMU_DESC` 和 `SMU_CODE` 的函数依赖的使用。
 
-
-
-
-
 ## 启用统计视图
 
-DB2 9 默认启用统计视图。DBA 必须将 DB2 变量 `db2_STATVIEW` 设置为 YES，以便 RUNSTAT 工具和优化器允许使用统计视图（示例 7–93）。
+DB2 9 默认启用统计视图。DBA 必须将 DB2 变量 `db2_STATVIEW` 设置为 `YES`，以便 `RUNSTAT` 工具和优化器允许使用统计视图（示例 7–93）。
 
-```
+```shell
 db2set DB2_STATVIEW=YES
 ```
 
 ### 示例 7–93 开启统计视图
 
-如果 DB2_STATVIEW 设置未设置为 YES，DB2 将对命令返回语法错误，而不是返回一条建议统计视图尚未开启的消息（示例 7–94）。该消息具有误导性！
+如果 `DB2_STATVIEW` 设置未设置为 `YES`，DB2 将对命令返回语法错误，而不是返回一条建议统计视图尚未开启的消息（示例 7–94）。该消息具有误导性！
 
-```
+```text
 ALTER VIEW EMP_DEPT ENABLE QUERY OPTIMIZATION;
 SQL0104n an unexpected token found "ENABLE"
 "ALTER VIEW <view-name> Expected tokens may include:
@@ -11420,9 +10749,9 @@ SQL0104n an unexpected token found "ENABLE"
 
 ## 统计视图示例
 
-使用统计视图的一个经典案例发生在两个表连接且若干列之间存在相关性时。任何一个表上的统计信息都将显示列之间没有相互关联。然而，当表组合时，它们存在明显的关联性。在 SAMPLE 数据库中，有两个经常连接的表：EMPLOYEE 表和 DEPARTMENT 表。EMPLOYEE 表包含一个部门编号（WORKDEPT），而 DEPARTMENT 表有一个 DEPNO 列。当执行需要员工及其所在部门信息的查询时，这两个列会被连接在一起。以下查询检索了在 PLANNING 部门部门的员工列表（示例 7–95）：
+使用统计视图的一个经典案例发生在两个表连接且若干列之间存在相关性时。任何一个表上的统计信息都将显示列之间没有相互关联。然而，当表组合时，它们存在明显的关联性。在 SAMPLE 数据库中，有两个经常连接的表：`EMPLOYEE` 表和 `DEPARTMENT` 表。`EMPLOYEE` 表包含一个部门编号（`WORKDEPT`），而 `DEPARTMENT` 表有一个 `DEPNO` 列。当执行需要员工及其所在部门信息的查询时，这两个列会被连接在一起。以下查询检索了在 PLANNING 部门部门的员工列表（示例 7–95）：
 
-```
+```sql
 SELECT EMPNO, DEPARTMENT
 FROM DEPARTMENT, EMPLOYEE
 WHERE
@@ -11439,18 +10768,18 @@ DEPTNAME='PLANNING' AND WORKDEPT=DEPNO;
 
 DB2 正在扫描两张表，并使用哈希连接（hash-join）来确定最终答案。DB2 在此查询中缺失的信息是部门名称（PLANNING）与部门编号（DEPNTO）直接相关。为了给 DB2 提供更多关于此连接的信息，可以生成视图并为该连接收集统计信息。创建了以下紧密模拟所请求查询的视图（示例 7–96）：
 
-```
+```sql
 CREATE VIEW EMP_DEPT AS
 SELECT EMPNO, WORKDEPT, DEPARTMENT, MGRNO
 FROM EMPLOYEE, DEPARTMENT
 WHERE WORKDEPT=DEPNTO);
 ```
 
-示例 7–96 连接上的统计视图
+### 示例 7–96 连接上的统计视图
 
-注意，此视图并没有具体说明正在搜索的是哪个部门名称。为了使用统计视图，必须设置 DB2_STATVIEW 变量并修改视图以启用查询优化（示例 7–97）：
+注意，此视图并没有具体说明正在搜索的是哪个部门名称。为了使用统计视图，必须设置 `DB2_STATVIEW` 变量并修改视图以启用查询优化（示例 7–97）：
 
-```
+```sql
 ALTER VIEW EMP_DEPT ENABLE QUERY OPTIMIZATION;
 ```
 
@@ -11458,7 +10787,7 @@ ALTER VIEW EMP_DEPT ENABLE QUERY OPTIMIZATION;
 
 一旦修改视图以启用查询优化，必须更新视图的统计信息（示例 7–98）。
 
-```
+```sql
 RUNSTATS ON TABLE BAKLARZ.EMP_DEPT WITH DISTRIBUTION;
 ```
 
@@ -11470,13 +10799,15 @@ RUNSTATS ON TABLE BAKLARZ.EMP_DEPT WITH DISTRIBUTION;
 
 图 7–17 更新后的解释图
 
-DB2 现在利用 EMPLOYEE 表上的可用索引来加速记录搜索。即使是这个简单的示例也说明了 DB2 如何使用视图上的额外统计信息来提高查询性能。
+DB2 现在利用 `EMPLOYEE` 表上的可用索引来加速记录搜索。即使是这个简单的示例也说明了 DB2 如何使用视图上的额外统计信息来提高查询性能。
 
-## 序列 (Sequences)
+## 序列（Sequences）
 
-许多编写的应用程序需要使用序列来跟踪发票号、客户编号和其他在需要新项目时递增1的对象。DB2 可以通过使用标识列（identity columns）自动增加表中的值（参见第 256 页的“标识列”）。尽管这种技术对于单表有效，但它可能不是生成跨多个表使用的唯一值最方便的方法。
+许多编写的应用程序需要使用序列来跟踪发票号、客户编号和其他在需要新项目时递增 1 的对象。DB2 可以通过使用标识列（identity columns）自动增加表中的值（参见第 256 页的“标识列”）。尽管这种技术对于单表有效，但它可能不是生成跨多个表使用的唯一值最方便的方法。
 
-DB2 中的 SEQUENCE 对象允许 DBA 或开发人员创建一个在程序控制下递增的值，该值可以在许多不同的表中使用。示例 7–99 显示了使用整数数据类型为客户创建一个序列号：
+
+
+DB2 中的 `SEQUENCE` 对象允许 DBA 或开发人员创建一个在程序控制下递增的值，该值可以在许多不同的表中使用。示例 7–99 显示了使用整数数据类型为客户创建一个序列号：
 
 ```
 CREATE SEQUENCE CUSTOMER_NO AS INTEGER;
@@ -11484,7 +10815,7 @@ CREATE SEQUENCE CUSTOMER_NO AS INTEGER;
 
 ### 示例 7–99 Customer_no 序列
 
-默认情况下，该序列号从1开始，每次递增1，数据类型为 INTEGER。应用程序需要使用 `NEXTVAL` 函数获取序列中的下一个值。该函数为序列生成下一个值，可用于后续 SQL 语句（示例 7–100）：
+默认情况下，该序列号从 1 开始，每次递增 1，数据类型为 `INTEGER`。应用程序需要使用 `NEXTVAL` 函数获取序列中的下一个值。该函数为序列生成下一个值，可用于后续 SQL 语句（示例 7–100）：
 
 ```
 VALUES NEXTVAL FOR CUSTOMER_NO;
@@ -11501,7 +10832,7 @@ INSERT INTO CUSTOMERS VALUE
 
 ### 示例 7–101 使用序列插入
 
-如果插入时需要序列号，可以使用 `PREVAL` 函数（注：此处原文可能为 NEXTVAL 之误）。例如，如果 DBA 设置不同的起始值，可以使用以下 SQL：
+如果插入时需要序列号，可以使用 `PREVAL` 函数（注：此处原文可能为 `NEXTVAL` 之误）。例如，如果 DBA 设置不同的起始值，可以使用以下 SQL：
 
 ```
 INSERT INTO INVOICES
@@ -11510,90 +10841,119 @@ INSERT INTO INVOICES
 
 ### 示例 7–102 序列的后续
 
-DBA 需要注意的选项是 CACHE 值。该值告诉 DB2 在返回目录表生成另一组序列值之前应生成多少个序列值。如果用户在创建时没有指定，CACHE 值设置为 20。当首次启动时，内存缓存会自动生成 20 个值（1, 2..., 20）。这些值用于返回给用户下一个值。当这些值用完后，DB2 将生成下二十个（21, 2..., 40）。
+DBA 需要注意的选项是 `CACHE` 值。该值告诉 DB2 在返回目录表生成另一组序列值之前应生成多少个序列值。如果用户在创建时没有指定，`CACHE` 值设置为 20。当首次启动时，内存缓存会自动生成 20 个值（1, 2..., 20）。这些值用于返回给用户下一个值。当这些值用完后，DB2 将生成下二十个（21, 2..., 40）。
 
-通过这种方式实现序列缓存，DB2 不需要不断访问目录获取下一个值。这减少了与序列号相关的开销，但如果发生系统故障或在结束结束关闭系统，会导致序列出现间隔。例如，如果 DBA 决定将序列缓存设置为 100，DB2 将缓存 100 个值，并设置系统目录显示下一组值应从 200 开始。在数据库关闭的情况下，下一组序列号将从 200 开始。从 100 到 199 生成的数字将在序列集中丢失。如果应用程序无法容忍生成值的间隙，DBA 需要将缓存值设置为 NO CACHE，代价是增加系统开销。
+通过这种方式实现序列缓存，DB2 不需要不断访问目录获取下一个值。这减少了与序列号相关的开销，但如果发生系统故障或在结束结束关闭系统，会导致序列出现间隔。例如，如果 DBA 决定将序列缓存设置为 100，DB2 将缓存 100 个值，并设置系统目录显示下一组值应从 200 开始。在数据库关闭的情况下，下一组序列号将从 200 开始。从 100 到 199 生成的数字将在序列集中丢失。如果应用程序无法容忍生成值的间隙，DBA 需要将缓存值设置为 `NO CACHE`，代价是增加系统开销。
 
 ## 序列续续
 
-除了易于设置和创建外，SEQUENCE 对象还具有多种选项，为用户提供了更大的灵活性：
+除了易于设置和创建外，`SEQUENCE` 对象还具有多种选项，为用户提供了更大的灵活性：
 
-- 使用不同的数据类型（SMALLINT, INTEGER, DECIMAL）
-- 修改起始值（START WITH）
-- 修改序列递增量（INCREMENT BY）
-- 设置最小值和最大值（MAXVALUE/MINVALUE）
-- 允许值循环以便序列重新开始（CYCLE/NO CYCLE）
-- 允许序列缓存以减少冲突（CACHE/NO CACHE）
+- 使用不同的数据类型（`SMALLINT`, `INTEGER`, `DECIMAL`）
 
-即使在序列生成后，用户也可以对许多这些值进行 ALTER 操作。例如，DBA 可能想根据星期几来设置不同的起始值。
+- 修改起始值（`START WITH`）
+
+- 修改序列递增量（`INCREMENT BY`）
+
+- 设置最小值和最大值（`MAXVALUE`/`MINVALUE`）
+
+- 允许值循环以便序列重新开始（`CYCLE`/`NO CYCLE`）
+
+- 允许序列缓存以减少冲突（`CACHE`/`NO CACHE`）
+
+即使在序列生成后，用户也可以对许多这些值进行 `ALTER` 操作。例如，DBA 可能想根据星期几来设置不同的起始值。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_498_0.png)
-
-
-
-
 
 ## 高级函数
 
 DB2 包含大量的内置列函数和标量函数，这些函数可以增加用户对数据进行计算的灵活性。函数可以分为以下几类：
 
-- 三角形函数 (COS, SIN, TAN, COT, TANH, COSH, SINH, ATAH, ATAN2)
-- 数学函数 (INTEGER, FLOOR, CEILING, TRUNC, SQRT, LN, EXP)
-- 字符串函数 (RTRIM, LTRIM, INSTR, TRANSLATE, REPEAT, REPLACE, CONCAT, SUBSTR, LENGTH, LOWER, UPPER)
-- 统计函数 (CORRELATION, STDDEV, VARIANCE)
-- 日期函数 (DATE, TIME, TO_CHAR, TO_DATE, DAYNAME, DAYOFWEEK)
-- 逻辑函数 (COALESCE, NULLIF)
-- 特殊函数 (MQPUBlish, MQREAD, ENCRYPT, REC2XML)
+- 三角形函数（`COS`, `SIN`, `TAN`, `COT`, `TANH`, `COSH`, `SINH`, `ATAH`, `ATAN2`）
+
+- 数学函数（`INTEGER`, `FLOOR`, `CEILING`, `TRUNC`, `SQRT`, `LN`, `EXP`）
+
+- 字符串函数（`RTRIM`, `LTRIM`, `INSTR`, `TRANSLATE`, `REPEAT`, `REPLACE`, `CONCAT`, `SUBSTR`, `LENGTH`, `LOWER`, `UPPER`）
+
+- 统计函数（`CORRELATION`, `STDDEV`, `VARIANCE`）
+
+- 日期函数（`DATE`, `TIME`, `TO_CHAR`, `TO_DATE`, `DAYNAME`, `DAYOFWEEK`）
+
+- 逻辑函数（`COALESCE`, `NULLIF`）
+
+- 特殊函数（`MQPUBlish`, `MQREAD`, `ENCRYPT`, `REC2XML`）
 
 DB2 提供了许多用户可以利用的函数。有关所有可用函数的完整列表，请参阅 DB2 SQL 参考。下面描述了在 DB2 最近几个版本中引入的一些特定函数。
 
 ## ADMIN_CMD
 
-##2 包含一项功能，允许管理员从 SQL 接口运行命令。通过使用名为 `ADMIN_CMD` 的新存储过程，你可以通过 SQL 运行一组管理命令，而无需使用 DB2 CLP 或编写应用程序。这种接口对于 Java 开发者来说也方便得多，他们不再需要与 C 库交互来对数据库执行管理命令。
+DB2 包含一项功能，允许管理员从 SQL 接口运行命令。通过使用名为 `ADMIN_CMD` 的新存储过程，你可以通过 SQL 运行一组管理命令，而无需使用 DB2 CLP 或编写应用程序。这种接口对于 Java 开发者来说也方便得多，他们不再需要与 C 库交互来对数据库执行管理命令。
 
 受支持的管理命令列表随着 DB2 版本的更新不断增长。以下列表包含了可以对数据库执行的一些函数。
 
-- UPDATE DATABASE CONFIG
-- RUNSTATS
-- REORG TABLE/INDEX
-- EXPORT/IMPORT/LOAD
-- UPDATE DBM CFG
-- UPDATE HISTORY
-- QUIESCE TABLESPACES FOR TABLE
-- FORCE APPLICATIONS
-- DESCRIBE TABLE/INDEX/DATA PARTITION
-- REDISTRIBUTE
-- BACKUP/QUIESCE/UNQUIESCE DATABASE
-- AUTOCONFIGURE
-- PRUNE/UPDATE HISTORY
+- `UPDATE DATABASE CONFIG`
+
+- `RUNSTATS`
+
+- `REORG TABLE/INDEX`
+
+- `EXPORT/IMPORT/LOAD`
+
+- `UPDATE DBM CFG`
+
+- `UPDATE HISTORY`
+
+- `QUIESCE TABLESPACES FOR TABLE`
+
+- `FORCE APPLICATIONS`
+
+- `DESCRIBE TABLE/INDEX/DATA PARTITION`
+
+- `REDISTRIBUTE`
+
+- `BACKUP/QUIESCE/UNQUIESCE DATABASE`
+
+- `AUTOCONFIGURE`
+
+- `PRUNE/UPDATE HISTORY`
 
 `ADMIN_CMD` 的通用格式如示例 7–103 所示。它显示了在描述 select 语句中的列时，`ADMIN_CMD` 返回的部分列。
 
+```
 CALL ADMIN_CMD('DESCRIBE SELECT * FROM DEPT');
+```
 
 | SQL_ID | SQLTYPE | SQLLENGTH | SQLSCALE | SQLNAME_DATA | SQLNAME_LENGTH |
+
 | :--- | :--- | :--- | :--- | :--- | :--- |
+
 | 452 | CHARACTER | 3 | | DEPTNO | 6 |
+
 | 448 | VARCHAR | 36 | | DEPTNAME | 8 |
+
 | 453 | CHARACTER | 6 | | MGRNO | 5 |
+
 | 452 | CHARACTER | 3 | | ADMREPT | 8 |
+
 | 453 | CHARACTER | 16 | | LOCATION | 8 |
 
 选择了 5 条记录。
 
-示例 7–103 ADMIN_CMD 结果
+示例 7–103 `ADMIN_CMD` 结果
 
 ## SQLERRM
 
-SQLERRM 是一个标量函数，返回与特定错误代码关联的消息。尽管尽管被认为是一项应用程序开发的增强功能，但该函数对于 DBA 查看与错误消息相关的文本非常有用。
+`SQLERRM` 是一个标量函数，返回与特定错误代码关联的消息。尽管尽管被认为是一项应用程序开发的增强功能，但该函数对于 DBA 查看与错误消息相关的文本非常有用。
 
 `SQLERRM` 函数有两种形式：
 
-- SQLERRM(SQLCODE)
+- `SQLERRM(SQLCODE)`
+
 短形式接收 `SQLCODE` 并返回短消息。
 
-- SQLERRM(MESSAGEID, TOKENS, TOKEN_DELIMITER, LOCALE, SHORTMSG)
-长形式接收 locale 输入，如果服务器支持该 locale，则返回指定 locale 中的消息。此形式的命令可以返回消息的短版本或长版本。示例 7–104 显示了 SQL0526N（或 -526）错误的短错误消息。
+- `SQLERRM(MESSAGEID, TOKENS, TOKEN_DELIMITER, LOCALE, SHORTMSG)`
+
+长形式接收 locale 输入，如果服务器支持该 locale，则返回指定 locale 中的消息。此形式的命令可以返回消息的短版本或长版本。示例 7–104 显示了 `SQL0526N`（或 -526）错误的短错误消息。
 
 ```
 VALUES SQLERRM(-526);
@@ -11604,13 +10964,13 @@ declared temporary tables.
 RECORD(S) SELECTED.
 ```
 
-示例 7–104 SQLERRM 短消息输出
+示例 7–104 `SQLERRM` 短消息输出
 
 ## 第 7 章 高级 SQL
 
 长形式中，`MESSAGEID` 是 SQL 错误消息，`TOKENS` 是传递给错误消息的令牌，`TOKEN_DELIMITER` 是令牌字符串中使用的分隔符，`LOCALE` 是用于打印错误消息的语言，而 `SHORTMSG` 在你需要短文本描述时为 1，在需要整个错误消息时为 0。
 
-示例 7–105 显示了 SQL0551N 错误的长格式错误消息。
+示例 7–105 显示了 `SQL0551N` 错误的长格式错误消息。
 
 ```
 VALUES
@@ -11623,7 +10983,7 @@ operation "UPDATE" on object "SYSCAT.TABLES"
 RECORD(S) SELECTED.
 ```
 
-示例 7–105 SQLERRM 长消息输出
+示例 7–105 `SQLERRM` 长消息输出
 
 ## MULTIPLY_ALT
 
@@ -11637,29 +10997,33 @@ OCCURRED.
 
 示例 7–106
 
-示例 7–107 SQLERRM 长消息输出
+示例 7–107 `SQLERRM` 长消息输出
 
-示例 7–107 SQLERRM 长消息输出
+示例 7–107 `SQLERRM` 长消息输出
 
 ## SNAPSHOT 表函数
 
 DB2 拥有许多表函数，可以返回通常通过 API 访问的内部对象的数据。使用 SQL 获取这些信息的优势在于编写脚本，而不是将 C 语言程序链接到应用程序中。
 
-
-
-
-
 ## 表 7–1 快照函数
 
 | 函数名 | 目的 |
+
 |---|---|
-| SNAPSHOT_STATEMENT | SNAPSHOT_STATEMENT 函数返回关于应用程序快照中语句的信息。 |
-| SNAPSHOT_SUBSELECT | SNAPSHOT_SUBSELECT 函数返回关于应用程序快照中访问计划子集的信息。 |
-| SNAPSHOT_SWITCHES | SNAPSHOT_SWITCHES 函数返回数据库快照状态的信息。 |
-| SNAPSHOT_TABLE | SNAPSHOT_TABLE 函数返回表快照的活动信息。 |
-| SNAPSHOT_TBS | SNAPSHOT_TBS 函数返回表快照的活动信息。 |
-| SNAPSHOT_TBS_CFG | SNAPSHOT_TBS_CFG 函数返回表快照的配置信息。 |
-| SQLCACHE_SNAPSHOT | SQLCACHE_SNAPSHOT 函数返回 DB2 动态 SQL 语句缓存快照的结果。 |
+
+| `SNAPSHOT_STATEMENT` | `SNAPSHOT_STATEMENT` 函数返回关于应用程序快照中语句的信息。 |
+
+| `SNAPSHOT_SUBSELECT` | `SNAPSHOT_SUBSELECT` 函数返回关于应用程序快照中访问计划子集的信息。 |
+
+| `SNAPSHOT_SWITCHES` | `SNAPSHOT_SWITCHES` 函数返回数据库快照状态的信息。 |
+
+| `SNAPSHOT_TABLE` | `SNAPSHOT_TABLE` 函数返回表快照的活动信息。 |
+
+| `SNAPSHOT_TBS` | `SNAPSHOT_TBS` 函数返回表快照的活动信息。 |
+
+| `SNAPSHOT_TBS_CFG` | `SNAPSHOT_TBS_CFG` 函数返回表快照的配置信息。 |
+
+| `SQLCACHE_SNAPSHOT` | `SQLCACHE_SNAPSHOT` 函数返回 DB2 动态 SQL 语句缓存快照的结果。 |
 
 快照函数的通用形式如下（示例 7–109）：
 
@@ -11682,17 +11046,29 @@ FROM TABLE(SNAPSHOT_CONTAINER('SAMPLE',-2)) AS S;
 ```
 
 | TABLESPACE_ID | TABLESPACE_NAME | TOTAL_PAGES |
+
 |---|---|---|
+
 | 0 | SYSCATSPACE | 3644 |
+
 | 1 | TEMPSPACE1 | 1 |
+
 | 2 | USERSPACE1 | 4150 |
+
 | 3 | DB2DEMO | 1 |
+
 | 4 | TEMPSESSION | 1 |
+
 | 5 | MDC | 458 |
+
 | 6 | ORVRTS | 108 |
+
 | 8 | Q2_2001 | 22 |
+
 | 9 | Q3_2001 | 23 |
+
 | 10 | Q1_2002 | 2 |
+
 | 11 | Q4_2001 | 22 |
 
 已选择的记录(S)。
@@ -11701,7 +11077,7 @@ FROM TABLE(SNAPSHOT_CONTAINER('SAMPLE',-2)) AS S;
 
 ## DB2 备注
 
-SNAPSHOT 函数是在 DB2 8.1 版本中引入的。SQL 参考手册列出了这些函数，但关于快照的使用和监控的更多细节，可以在《DB2 监控指南和参考》中找到。
+`SNAPSHOT` 函数是在 DB2 8.1 版本中引入的。SQL 参考手册列出了这些函数，但关于快照的使用和监控的更多细节，可以在《DB2 监控指南和参考》中找到。
 
 ## MQSeries 函数
 
@@ -11714,25 +11090,32 @@ MQSeries 函数可以用于多种场景，包括基本消息传递、应用程�
 ## 表 7–2 MQSeries 函数
 
 | 函数 | 目的 |
+
 | --- | --- |
-| MQPublish | MQPUBlish 函数将数据发布到 MQSeries。这需要安装 MQSeries Publish/Subscribe 或 MQSeries Integrator。 |
-| MQREAD | MQREAD 函数从 MQSeries 服务返回消息。使用此函数不会将消息从队列中移除。消息的最大长度为 4000 字节。 |
-| MQREADCLOB | MQREADCLOB 函数从 MQSeries 服务返回消息。使用此函数不会将消息从队列中移除。消息的最大长度为 1M 字节。 |
-| MQREADALL MQREADALLCLOB | MQREADALL 函数返回 MQSeries 服务的所有消息表。 |
-| MQRECEIVE | MQRECEIVE 函数从 MQSeries 服务返回消息。接收函数会将消息从队列中移除。消息的最大长度为 4000 字节。 |
-| MQRECEIVECLOB | MQRECEIVECLOB 函数从 MQSeries 服务返回消息并将消息从队列中移除。消息的最大长度为 1M 字节。 |
-| MQRECEIVEALL MQRECEIVEALLCLOB | MQRECEIVEALL 函数返回 MQSeries 服务的所有消息表，并将所有消息从队列中移除。 |
-| MQSEND | MQSEND 函数将数据发送到 MQSeries 服务。 |
-| MQSUBSCRIBE | MQSUBSCRIBE 函数用于注册对 MQSeries 消息的兴趣。 |
-| MQUNSUBSCRIBE | MQUNSUBSCRIBE 函数用于注销现有的消息订阅。 |
+
+| `MQPublish` | `MQPUBlish` 函数将数据发布到 MQSeries。这需要安装 MQSeries Publish/Subscribe 或 MQSeries Integrator。 |
+
+| `MQREAD` | `MQREAD` 函数从 MQSeries 服务返回消息。使用此函数不会将消息从队列中移除。消息的最大长度为 4000 字节。 |
+
+| `MQREADCLOB` | `MQREADCLOB` 函数从 MQSeries 服务返回消息。使用此函数不会将消息从队列中移除。消息的最大长度为 1M 字节。 |
+
+| `MQREADALL` `MQREADALLCLOB` | `MQREADALL` 函数返回 MQSeries 服务的所有消息表。 |
+
+| `MQRECEIVE` | `MQRECEIVE` 函数从 MQSeries 服务返回消息。接收函数会将消息从队列中移除。消息的最大长度为 4000 字节。 |
+
+| `MQRECEIVECLOB` | `MQRECEIVECLOB` 函数从 MQSeries 服务返回消息并将消息从队列中移除。消息的最大长度为 1M 字节。 |
+
+| `MQRECEIVEALL` `MQRECEIVEALLCLOB` | `MQRECEIVEALL` 函数返回 MQSeries 服务的所有消息表，并将所有消息从队列中移除。 |
+
+| `MQSEND` | `MQSEND` 函数将数据发送到 MQSeries 服务。 |
+
+| `MQSUBSCRIBE` | `MQSUBSCRIBE` 函数用于注册对 MQSeries 消息的兴趣。 |
+
+| `MQUNSUBSCRIBE` | `MQUNSUBSCRIBE` 函数用于注销现有的消息订阅。 |
 
 ## 健康快照函数
 
-SNAPSHOT 函数是在 DB2 8.1 版本中引入的。SQL 参考手册列出了这些函数，但关于快照的使用和监控的更多细节，可以在《DB2 监控指南和参考》中找到。
-
-
-
-
+`SNAPSHOT` 函数是在 DB2 8.1 版本中引入的。SQL 参考手册列出了这些函数，但关于快照的使用和监控的更多细节，可以在《DB2 监控指南和参考》中找到。
 
 # 482 第 7 章 高级 SQL
 
@@ -11744,21 +11127,25 @@ DB2 中目前处理字符串的 SQL 函数是基于字节或双字节为基础�
 
 DB2 创建了一系列新函数来正确处理双字节字符。为了使用这些函数，需要定义三个长度单位：
 
-- **CODEUNITS16**：使用 CODEUNITS16 的函数根据 16 位 UTF-16 代码单元计算字符串长度。该格式被 C 编译器使用，并用 wCHAR 数据类型表示。Java 也使用此格式来表示 CHAR 数据类型。
+- **CODEUNITS16**：使用 `CODEUNITS16` 的函数根据 16 位 UTF-16 代码单元计算字符串长度。该格式被 C 编译器使用，并用 `wCHAR` 数据类型表示。Java 也使用此格式来表示 `CHAR` 数据类型。
 
-- **CODEUNITS32**：使用 CODEUNITS32 的函数根据 32 位 UTF-32 代码单元计算字符串长度。当应用程序想要以简单的固定长度格式处理数据，并且无论字符是否为 Unicode 补充字符都需要相同的答案时，这种方法非常有用。
+- **CODEUNITS32**：使用 `CODEUNITS32` 的函数根据 32 位 UTF-32 代码单元计算字符串长度。当应用程序想要以简单的固定长度格式处理数据，并且无论字符是否为 Unicode 补充字符都需要相同的答案时，这种方法非常有用。
 
-- **OCTETS**：使用 OCTETS 的函数按字节数计算字符串长度。这对于关注分配缓冲区空间或需要简单字节处理的应用程序非常有用。
+- **OCTETS**：使用 `OCTETS` 的函数按字节数计算字符串长度。这对于关注分配缓冲区空间或需要简单字节处理的应用程序非常有用。
 
 DB2 使用的默认字符串长度取决于字符串长度单位使用的上下文：
 
-- **字符字符串 (Character String)**：默认字符串长度单位是字节（或 octet）。
-- **图形字符串 (Graphic String)**：默认字符串长度单位是两个字节。对于 ASCII 和 EBCDIC，这对应于双字节字符。对于 Unicode，这对应于 UTF-16 代码点。
-- **二进制字符串 (Binary String)**：默认字符串长度单位是字节（或 octet）。
+- **字符字符串（Character String）**：默认字符串长度单位是字节（或 octet）。
+
+- **图形字符串（Graphic String）**：默认字符串长度单位是两个字节。对于 ASCII 和 EBCDIC，这对应于双字节字符。对于 Unicode，这对应于 UTF-16 代码点。
+
+- **二进制字符串（Binary String）**：默认字符串长度单位是字节（或 octet）。
 
 从输出的角度来看，Unicode 函数返回的数据类型与参数相同，例如，如果输入是字符字符串，则返回字符字符串。
 
-下面描述的函数使用了下表，该表包含一个单字节列（NAME）和一个双字节列（NAMEG）（示例 7–113）。
+下面描述的函数使用了下表，该表包含一个单字节列（`NAME`）和一个双字节列（`NAMEG`）（示例 7–113）。
+
+
 
 名称“jürgen”看起来是六个字符长。在 UTF-8 格式（单字节变长）中，该字符串实际上占用七个字节。字符“n”只占用一个位置，而“ü”占用两个字节。如果使用 UCS-2 Unicode 格式（双字节固定长度），每个字符将恰好占用两个字节。
 
@@ -11774,11 +11161,12 @@ CREATE TABLE UNICODE_TEST
 INSERT INTO UNICODE_TEST VALUES
   ('UTF-8', 'JÜRGEN', 'JÜRGEN');
 ```
-示例 7–113 Unicode 表
+
+## 示例 7–113 Unicode 表
 
 ## CHARACTER_LENGTH, CHARACTER_LENGTH, LENGTH
 
-CHARACTER_LENGTH 返回字符（UNICODE）字符串的长度。字符和图形字符串的长度包括尾随空格，二进制字符串的长度包括二进制零。变长字符串的长度是实际长度而非最大长度。
+`CHARACTER_LENGTH` 返回字符（UNICODE）字符串的长度。字符和图形字符串的长度包括尾随空格，二进制字符串的长度包括二进制零。变长字符串的长度是实际长度而非最大长度。
 
 示例 7–114 展示了该函数的用法。
 
@@ -11796,7 +11184,8 @@ SELECT 'NAME OCTETS',
   CHAR_LENGTH(NAME,OCTETS) FROM UNICODE_TEST
 ORDER BY 1;
 ```
-示例 7–114 CHARACTER_LENGTH 函数
+
+### 示例 7–114 CHARACTER_LENGTH 函数
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_510_0.png)
 
@@ -11817,12 +11206,7 @@ ORDER BY 1;
 
 无论是单字节 Unicode 格式（UTF-8）还是双字节格式（UCS-2），字符串的大小恰好是 6 个字符。然而，从实际长度来看，使用 UTF-8 时字符串为 7 个字节，使用 UCS-2 时为 12 个字节。
 
-
-
-
-
-## 第8 章
-## pureXML 存储引擎
+# 第 8 章 pureXML 存储引擎
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_516_0.png)
 
@@ -11883,10 +11267,6 @@ pureXML 技术在市场上确实是独特的。要理解它的独特性，最好
 
 *(注：提供的原始文本在结尾处存在重复和乱码字符串。上述翻译已根据可用片段对内容进行了连贯性处理。)*
 
-
-
-
-
 ## 494 第 8 章 pureXML 存储引擎
 
 实际上，被迫为电话号码创建一个新表，并创建引用完整性规则将它们连接起来，如下所示（图 8–3）：
@@ -11941,18 +11321,23 @@ LOB 和粉碎存储格式被当今每个关系型数据库供应商所使用，�
 
 pureXML 今天引入了一项对应用程序和 DBA 均完全透明的新服务，但它提供的 XML 存储服务不会面临与上一节中讨论的 XML 存储方法相关的任何权衡。
 
-> DB2 备注
+> **DB2 备注**
+>
 > 通过创建带有 XML 扩展的 DB2 SAMPLE 数据库可以快速访问 SAMPLE 表和数据。在使用基于 UNIX 的平台时，在操作系统命令行提示符下，执行
+
 ```bash
 sqlib/bin/db2sample -dbpath <path>
 ```
-从数据库实例所有者的历史记录中执行，其中 path 是可选参数，用于指定创建 SAMPLE 数据库的路径。如果未指定 path 参数，则示例数据库将在数据库管理器配置文件中 DFTDBPATH 参数指定的默认路径下创建。DB2SAMPL 的架构是 CURRENT SCHEMA 寄存器的值。
+
+从数据库实例所有者的历史记录中执行，其中 `path` 是可选参数，用于指定创建 SAMPLE 数据库的路径。如果未指定 `path` 参数，则示例数据库将在数据库管理器配置文件中 `DFTDBPATH` 参数指定的默认路径下创建。`DB2SAMPL` 的架构是 `CURRENT SCHEMA` 寄存器的值。
 
 > 当使用 Windows 平台时，在操作系统命令行提示符下，执行
+
 ```bash
 db2sample -dbpath e
 ```
-其中 e 是可选参数，用于指定创建数据库的驱动器。如果未指定 drive 参数，则示例数据库将在与 DB2 相同的驱动器上创建。
+
+其中 `e` 是可选参数，用于指定创建数据库的驱动器。如果未指定 `drive` 参数，则示例数据库将在与 DB2 相同的驱动器上创建。
 
 DB2 中的 pureXML 特性将 XML 数据以仅查询的类 DOM 解析树格式、以 XML 形式存储在磁盘上。这种结构与仅限 XML 的数据库相似，相比其他方法提供了巨大的性能和灵活性优势，而且由于在 DB2 内部，它与关系型数据集成在一起。同时，关系型数据存储在常规行和列中。换句话说，DB2 有两个存储服务，一个用于 XML，一个用于关系型数据。这两个存储机制对 DBA 都是透明的。示例所示（图 8–4）：
 
@@ -11978,9 +11363,6 @@ pureXML 列占用额外空间的原因是它以解析格式存储在磁盘上，
 
 通过 pureXML 列你可以看到也存在权衡；毕竟，世界上没有“免费的午餐”。pureXML 列比任何其他存储机制提供了更好的性能、功能和灵活性，但代价是更多的磁盘空间。考虑到磁盘空间每 MB 成本正在以惊人的速度下降，这些似乎是值得的权衡。
 
-
-
-
 要查看 DB2 如何在转换为磁盘格式的过程中处理 XML 数据，请从下方的 XML 文档开始（图 8–7）：
 
 ```xml
@@ -11998,7 +11380,7 @@ pureXML 列占用额外空间的原因是它以解析格式存储在磁盘上，
 </dept>
 ```
 
-# 图 8–7 XML 片段
+### 图 8–7 XML 片段
 
 上述形式的 XML 文档被认为是序列化的。当它被解析时，其表示形式会变成 DB2 应用程序可以使用的形式。
 
@@ -12006,7 +11388,7 @@ pureXML 列占用额外空间的原因是它以解析格式存储在磁盘上，
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_526_0.png)
 
-# 图 8–8 压缩前的 XML 结构
+### 图 8–8 压缩前的 XML 结构
 
 ## 500 第 8 章 pureXML 存储引擎
 
@@ -12016,19 +11398,21 @@ pureXML 列占用额外空间的原因是它以解析格式存储在磁盘上，
 
 图 8–9 压缩后的 XML 结构
 
-从上一个图中可以看到，创建了一个表来存储被压缩的字符串值。本质上，压缩算法将标签名转换为整数，而这种表示的翻译存储在名为 SYSIBMXMLSTRINGS 的内部表中（尽管你不需要与此表进行交互）。DB2 的 XML 压缩是非常高效的；它不仅减少了存储需求（这从上图中显而易见），还为更快的字符串比较和层次结构导航创建了环境，因为它可以通过整数运算完成，而这通常比字符串比较要快。
+从上一个图中可以看到，创建了一个表来存储被压缩的字符串值。本质上，压缩算法将标签名转换为整数，而这种表示的翻译存储在名为 `SYSIBMXMLSTRINGS` 的内部表中（尽管你不需要与此表进行交互）。DB2 的 XML 压缩是非常高效的；它不仅减少了存储需求（这从上图中显而易见），还为更快的字符串比较和层次结构导航创建了环境，因为它可以通过整数运算完成，而这通常比字符串比较要快。
 
 ## 创建启用 XML 的数据库
 
-在处理 pureXML 列之前，你需要创建一个能够存储这些列的数据库。在 DB2 9 通用发布时，pureXML 列只能存储在为支持 UTF-8 Unicode 格式而创建的数据库中。你可以通过 DB2 CLP 指定 USING CHARSET UTF-8 选项在 DB2 9 中创建一个启用了 Unicode 的数据库（示例 8–1）：
+在处理 pureXML 列之前，你需要创建一个能够存储这些列的数据库。在 DB2 9 通用发布时，pureXML 列只能存储在为支持 UTF-8 Unicode 格式而创建的数据库中。你可以通过 DB2 CLP 指定 `USING CHARSET UTF-8` 选项在 DB2 9 中创建一个启用了 Unicode 的数据库（示例 8–1）：
+
+
 
 ```sql
 CREATE DATABASE MYXML AUTOMATIC STORAGE YES ON 'D:\nDBPATH' ON 'D:\' USING CHARSET UTF-8 COLLATE USING SYSTEM PAGESIZE 4096 WITH 'This is my XML Database'
 ```
 
-示例 8–1 创建启用 XML 的数据库
+## 示例 8–1 创建启用 XML 的数据库
 
-DB2 中的某些功能不支持 pureXML。例如，数据库分区功能 (DPF) 和存储优化功能（用于深度行级压缩）目前不支持 pureXML 列。
+DB2 中的某些功能不支持 pureXML。例如，数据库分区功能（DPF）和存储优化功能（用于深度行级压缩）目前不支持 pureXML 列。
 
 其他选项是使用如下所示的创建数据库向导（图 8–10）：
 
@@ -12046,13 +11430,13 @@ DB2 未来版本可能会缓解仅在 Unicode 数据库（UTF-8）中支持 XML 
 CREATE DATABASE MYXML AUTOMATIC STORAGE YES USING CODESET UTF-8 TERRITORY US
 ```
 
-示例 8–2 示例 XML 数据库
+## 示例 8–2 示例 XML 数据库
 
 ## 使用 pureXML 创建表
 
 一旦数据库启用了 pureXML，你创建在这些列中存储 XML 数据的表的方法与你创建仅包含关系数据的表完全相同。pureXML 的巨大灵活性优势之一是它不需要支持关系列来存储 XML。你可以选择创建一个具有单个或多个 XML 列的表，也可以创建一个带有一个或多个 XML 列的关系列的表，依此类推。
 
-例如，以下 CREATE TABLE 语句都是有效的（示例 8–3）：
+例如，以下 `CREATE TABLE` 语句都是有效的（示例 8–3）：
 
 ```sql
 CREATE TABLE XML1
@@ -12069,9 +11453,9 @@ CREATE TABLE XML2
 );
 ```
 
-**示例 8–3** 带有 XML 列的表
+## 示例 8–3 带有 XML 列的表
 
-XML 类型已从 DB2 扩展到流行的开发环境 (IDE)，如 IBM Developer、Visual Studio 等。这意味着你可以使用任何你觉得熟悉的工具来处理 pureXML。
+XML 类型已从 DB2 扩展到流行的开发环境（IDE），如 IBM Developer、Visual Studio 等。这意味着你可以使用任何你觉得熟悉的工具来处理 pureXML。
 
 ## 使用 pureXML 创建表
 
@@ -12089,7 +11473,7 @@ CREATE TABLE XML1
 );
 ```
 
-示例 8–4 用于 XML
+## 示例 8–4 用于 XML
 
 ## 504 第 8 章 pureXML 存储引擎
 
@@ -12119,7 +11503,7 @@ xsi:schemaLocation="http://tempuri.org/XMLSchema C:\Temp\Customer.xsd">
 </customerinfo>
 ```
 
-示例 8–5 示例 XML 文档
+## 示例 8–5 示例 XML 文档
 
 由于这是一个良好的 XML 文档，你可以在启用 XML 的浏览器（如 Internet Explorer）中看到它（示例 8–12）。
 
@@ -12129,7 +11513,7 @@ xsi:schemaLocation="http://tempuri.org/XMLSchema C:\Temp\Customer.xsd">
 
 ## 向 pureXML 插入数据
 
-你可以使用 SQL INSERT 语句将此数据添加到 COMMUTERS 表，方法与将其添加到仅包含关系数据的表中相同。插入 pureXML 列的数据必须是根据 XML 1.0规范定义的良好的 XML 文档（或片段）。例如，要使用 CLP 插入工作 XML 文档，请执行以下命令（示例 8–6）：
+你可以使用 SQL `INSERT` 语句将此数据添加到 COMMUTERS 表，方法与将其添加到仅包含关系数据的表中相同。插入 pureXML 列的数据必须是根据 XML 1.0 规范定义的良好的 XML 文档（或片段）。例如，要使用 CLP 插入工作 XML 文档，请执行以下命令（示例 8–6）：
 
 ```sql
 INSERT INTO COMMUTERS VALUES (1,
@@ -12138,7 +11522,7 @@ INSERT INTO COMMUTERS VALUES (1,
 </customerinfo>')
 ```
 
-示例 8–6 示例 XML 文档
+## 示例 8–6 示例 XML 文档
 
 你可以看到这些数据现在位于 pureXML 列中（示例 8–13）：
 
@@ -12146,12 +11530,9 @@ INSERT INTO COMMUTERS VALUES (1,
 
 图 8–13 在命令行中心查看 XML 数据
 
-
-
-
 ## 第 8 章 pureXML 存储引擎
 
-例如，要向工作示例中添加 XML 文档（一个完整的 <CanadianAddress> 块），你可以输入以下命令（示例 8–7）：
+例如，要向工作示例中添加 XML 文档（一个完整的 `<CanadianAddress>` 块），你可以输入以下命令（示例 8–7）：
 
 ```sql
 INSERT INTO COMMUTERS VALUES (2,
@@ -12173,7 +11554,7 @@ INSERT INTO COMMUTERS VALUES (2,
 
 上图使用 DB2 命令行编辑器可视化了 COMMUTERS 表中的 XML 数据，该工具是 DB2 控制中心的一部分。
 
-如果你还记得起来，DB2 必须存储格式良好的 XML 文档和片段，尽管你可以选择根据 XML 架构定义 (XSD) 文档对它们进行验证。
+如果你还记得起来，DB2 必须存储格式良好的 XML 文档和片段，尽管你可以选择根据 XML 架构定义（XSD）文档对它们进行验证。
 
 ## 向 pureXML 列中插入数据
 
@@ -12183,9 +11564,9 @@ INSERT INTO COMMUTERS VALUES (2,
 
 ### 8–15 无效的 XML 片段
 
-在上一个示例中，你可以看到 <Address> 元素没有正确关闭——它使用了 <Address> 来关闭，而不是正确的 </Address> 元素。由于该元素没有正确关闭，根据标准，该片段不被认为是格式良好的，因此插入操作失败。
+在上一个示例中，你可以看到 `<Address>` 元素没有正确关闭——它使用了 `<Address>` 来关闭，而不是正确的 `</Address>` 元素。由于该元素没有正确关闭，根据标准，该片段不被认为是格式良好的，因此插入操作失败。
 
-最后，你应该意识到，在使用 INSERT 命令向表中插入 XML 数据时，有多个选项可以使用。
+最后，你应该意识到，在使用 `INSERT` 命令向表中插入 XML 数据时，有多个选项可以使用。
 
 ```sql
 INSERT INTO COMMUTTERS VALUES
@@ -12226,17 +11607,17 @@ XMLPARSE(
 
 ## 示例 8–8 插入 XML 片段
 
-查看示例 8–8，INSERT 语句说明了在 pureXML 列中插入 XML 数据时你拥有的灵活性。首先，注意在一个 INSERT 语句中插入了两个独立的 XML 文档。此外，注意影响向 pureXML 列插入 XML 的各种选项，其中一些包括 DOCUMENT、PRESERVE WHITESPACE 等。其他还包括根据注册的 XML 架构定义验证 XML 数据的能力。
+查看示例 8–8，`INSERT` 语句说明了在 pureXML 列中插入 XML 数据时你拥有的灵活性。首先，注意在一个 `INSERT` 语句中插入了两个独立的 XML 文档。此外，注意影响向 pureXML 列插入 XML 的各种选项，其中一些包括 `DOCUMENT`、`PRESERVE WHITESPACE` 等。其他还包括根据注册的 XML 架构定义验证 XML 数据的能力。
 
 ## 向 pureXML 列中插入数据
 
 ### 空格保留
 
-PRESERVE WHITESPACE 选项在示例 8–8 中指定。该选项如其名所示，指示 DB2 在解析磁盘格式时保留 XML 文档中的空格。当最近的元素具有 `xml:space='default'` 属性时，该选项规定所有空格都将被保留。
+`PRESERVE WHITESPACE` 选项在示例 8–8 中指定。该选项如其名所示，指示 DB2 在解析磁盘格式时保留 XML 文档中的空格。当最近的元素具有 `xml:space='default'` 属性时，该选项规定所有空格都将被保留。
 
 通常，当 XML 文档存储在 pureXML 列中时，需要最高级别的保真度，就会使用此选项。例如，一个典型的订单可能会按照其插入数据服务器的方式返回给应用程序。
 
-相反，STRIP WHITESPACE 选项规定任何长度小于 1000 字节且仅包含空格字符的节点将被删除，除非最近的元素具有 `xml:space='preserve'` 属性。如果任何文本节点以超过 1000 字节的空格开头，SQLSTATE 为 405。
+相反，`STRIP WHITESPACE` 选项规定任何长度小于 1000 字节且仅包含空格字符的节点将被删除，除非最近的元素具有 `xml:space='preserve'` 属性。如果任何文本节点以超过 1000 字节的空格开头，SQLSTATE 为 405。
 
 ## 通过应用程序添加数据
 
@@ -12260,24 +11641,21 @@ insertStmt.executeUpdate();
 
 ## 插入大量数据
 
-如果你是负责数据迁移的 DBA，你对 DB2 提供的 IMPORT 和 LOAD 工具非常熟悉。对于 pureXML 列，由于 DB2 9 发布，涉及 pureXML 列的大型数据操作必须由 IMPORT 工具处理。
+如果你是负责数据迁移的 DBA，你对 DB2 提供的 `IMPORT` 和 `LOAD` 工具非常熟悉。对于 pureXML 列，由于 DB2 9 发布，涉及 pureXML 列的大型数据操作必须由 `IMPORT` 工具处理。
 
-## DB2 注意
+### DB2 注意
 
-向 pureXML 列填充大量 XML 功能在 DB2 9 发布期间不断演进；你应该监控 DB2 9 版本对 pureXML 列和 LOAD 工具的支持。
+向 pureXML 列填充大量 XML 功能在 DB2 9 发布期间不断演进；你应该监控 DB2 9 版本对 pureXML 列和 `LOAD` 工具的支持。
 
-如果 XML 信息是以 ASCII 格式传递给你的（或者你有能力将 XML 文档放入此类格式），你可以使用 IMPORT 工具以更高效的方式填充你的 pureXML 列。IMPORT 工具对 pureXML 列支持的优点在于，你不需要在应用程序中通过编程处理此过程；你只需要一个包含 XML 数据的分隔（DEL）ASCII 文件。
+如果 XML 信息是以 ASCII 格式传递给你的（或者你有能力将 XML 文档放入此类格式），你可以使用 `IMPORT` 工具以更高效的方式填充你的 pureXML 列。`IMPORT` 工具对 pureXML 列支持的优点在于，你不需要在应用程序中通过编程处理此过程；你只需要一个包含 XML 数据的分隔（DEL）ASCII 文件。
 
-IMPORT 处理绑定 pureXML 列的 XML 数据与处理 LOB 列的 LOB 数据类似：包含实际关系数据的源文件，并使用指针指向 IMPORT 工具 LOB 数据存在的位置。对于 pureXML 列，该指针被称为 XML 数据指定符 (XDS)，它指向一个包含 XML 数据的文件。
+`IMPORT` 处理绑定 pureXML 列的 XML 数据与处理 LOB 列的 LOB 数据类似：包含实际关系数据的源文件，并使用指针指向 `IMPORT` 工具 LOB 数据存在的位置。对于 pureXML 列，该指针被称为 XML 数据指定符（XDS），它指向一个包含 XML 数据的文件。
 
-例如，考虑图 8–16 中 COMMUTERS 表的 IMPORT 文件。该文件指向三个独立的 XML 片段（而不是完整的 XML 文档），这些片段包含了单个通勤者的信息。
+例如，考虑图 8–16 中 COMMUTERS 表的 `IMPORT` 文件。该文件指向三个独立的 XML 片段（而不是完整的 XML 文档），这些片段包含了单个通勤者的信息。
 
-## DB2 注意
+### DB2 注意
 
 如果你的某些行没有关联 XML 数据，只需省略该行的 `<XDS FIL='...'/>` 指针即可。
-
-
-
 
 ## 512 第 8 章 pureXML 存储引擎
 
@@ -12285,7 +11663,7 @@ IMPORT 处理绑定 pureXML 列的 XML 数据与处理 LOB 列的 LOB 数据类�
 
 图 8–16 XML 列导入文件规范
 
-一旦你定义了导入源文件，只需如示例 8-12 所示，从 IMPORT 命令中调用它即可。
+一旦你定义了导入源文件，只需如示例 8–12 所示，从 `IMPORT` 命令中调用它即可。
 
 ```
 IMPORT FROM 'C:\TEMP\IMPORTFILE.TXT OF DEL'
@@ -12295,7 +11673,7 @@ MESSAGES 'c:\TEMP\IMPORTMESSAGES.TXT'
 INSERT INTO COMMUTERS
 ```
 
-示例 8–12 IMPORT 命令
+## 示例 8–12 IMPORT 命令
 
 ## 从 pureXML 列中选择数据
 
@@ -12303,11 +11681,11 @@ INSERT INTO COMMUTERS
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_540_0.png)
 
-**图 8–17 XQuery 与 DB2 的关系**
+## 图 8–17 XQuery 与 DB2 的关系
 
 在实践中，取决于你想要检索的数据，你将使用不同的接口来解决不同的问题；然而，这最终取决于你的技能组。如果你的企业精通所有的 XML 数据访问方法，你将能够使用各种方法进行数据检索，从而带来与开发时间、性能、效率等相关的收益。
 
-从 pureXML 列中检索数据最简单（但可能效率最低）的方法是仅使用 SQL，如之前的某些示例所示。然而，通常情况下，使用 SELECT、SQL/XML、XQuery 或其组合的应用程序可以提供更多价值。本节的余下部分将简要讨论用于数据检索的两种处理方法：SQL/XML 方法和 XQuery 方法。
+从 pureXML 列中检索数据最简单（但可能效率最低）的方法是仅使用 SQL，如之前的某些示例所示。然而，通常情况下，使用 `SELECT`、SQL/XML、XQuery 或其组合的应用程序可以提供更多价值。本节的余下部分将简要讨论用于数据检索的两种处理方法：SQL/XML 方法和 XQuery 方法。
 
 ## SQL/XML 简介
 
@@ -12319,39 +11697,41 @@ DB2 9 中至少有十几个 SQL/XML 函数，而且列表在不断增加，为 S
 
 部分 SQL/XML 函数包括：
 
-- XMLAGG
+- `XMLAGG`
 
-一种聚合函数，返回一个 XML 序列，其中包含一组 XML 值中每个非空值的对应项。
+  一种聚合函数，返回一个 XML 序列，其中包含一组 XML 值中每个非空值的对应项。
 
-- XMLATTRIBUTES
+- `XMLATTRIBUTES`
 
-一种标量函数，根据传递的参数构建 XML 属性。此函数仅能作为 XMLELEMENT 函数的参数使用。
+  一种标量函数，根据传递的参数构建 XML 属性。此函数仅能作为 `XMLELEMENT` 函数的参数使用。
 
-- XMLCOMMENT
+- `XMLCOMMENT`
 
-一种标量函数，返回一个带有单个 XQuery 节点的 XML 值，并使用输入参数作为内容。
+  一种标量函数，返回一个带有单个 XQuery 节点的 XML 值，并使用输入参数作为内容。
 
-- XMLCONCAT
+- `XMLCONCAT`
 
-一种标量函数，返回一个包含可变 XML 输入参数拼接结果的序列。
+  一种标量函数，返回一个包含可变 XML 输入参数拼接结果的序列。
 
-- XMLDOCUMENT
+- `XMLDOCUMENT`
 
-一种标量函数，返回一个带有单个 XQuery 文档节点以及零或多个子节点的 XML 值。此函数创建一个文档节点，根据定义，每个 XML 文档必须拥有该节点。文档节点在 XML 的序列化表示中是不可见的；然而，存储在 DB2 表中的每个文档必须包含一个文档节点。注意，XMLELEMENT 函数不创建文档节点，只创建元素节点。在构建要插入的 XML 文档时，仅创建一个元素节点是不够的——文档必须包含一个文档节点。
+  一种标量函数，返回一个带有单个 XQuery 文档节点以及零或多个子节点的 XML 值。此函数创建一个文档节点，根据定义，每个 XML 文档必须拥有该节点。文档节点在 XML 的序列化表示中是不可见的；然而，存储在 DB2 表中的每个文档必须包含一个文档节点。注意，`XMLELEMENT` 函数不创建文档节点，只创建元素节点。在构建要插入的 XML 文档时，仅创建一个元素节点是不够的——文档必须包含一个文档节点。
 
-- XMLELEMENT
+- `XMLELEMENT`
 
-一种标量函数，返回一个作为 XML 元素节点的 XML 值。
+  一种标量函数，返回一个作为 XML 元素节点的 XML 值。
 
-- XMLFOREST
+- `XMLFOREST`
 
-一种标量函数，返回一个作为 XML 元素节点序列的 XML 值。
+  一种标量函数，返回一个作为 XML 元素节点序列的 XML 值。
 
-- XMLNAMESPACES
+- `XMLNAMESPACES`
 
-用于根据传递的参数构建命名空间声明。此声明只能作为 XMLELEMENT、XMLFOREST 和 XMLTABLE 函数的参数。
 
-- XMLPI
+
+用于根据传递的参数构建命名空间声明。此声明只能作为`XMLELEMENT`、`XMLFOREST`和`XMLTABLE`函数的参数。
+
+- `XMLPI`
 
 一种标量函数，返回一个带有单个 XQuery 处理指令节点的 XML 值。
 
@@ -12359,9 +11739,9 @@ DB2 9 中至少有十几个 SQL/XML 函数，而且列表在不断增加，为 S
 
 - 一种标量函数，返回一个带有单个 XQuery 节点的 XML 值，其中输入参数是实际内容。
 
-示例 8–13 创建了一个关系表，然后使用 INSERT 语句填充它。
+示例 8–13 创建了一个关系表，然后使用`INSERT`语句填充它。
 
-```
+```sql
 CREATE TABLE CARPOOL
 (
   POOLER_ID      INT NOT NULL,
@@ -12371,7 +11751,7 @@ CREATE TABLE CARPOOL
 );
 ```
 
-```
+```sql
 INSERT INTO CARPOOL VALUES
 ('George', 'Martin',1234),
 ('Fred', 'Flintstone',2345),
@@ -12383,7 +11763,7 @@ INSERT INTO CARPOOL VALUES
 
 一个 SQL/XML 语句可以返回 XML 标签内的关系型数据，如示例 8–14 所示：
 
-```
+```sql
 SELECT XML2CLOB
 (XMLELEMENT(NAME="CarPoolers",
   XMLELEMENT(NAME="Id", C.POOLER_ID),
@@ -12414,19 +11794,19 @@ XQuery 是一种用于查询数据集合的函数语言，通常被称为“XML 
 
 以下 XQuery 语句（通常被称为 FLWOR 表达式）用于执行此类操作：
 
-- FOR
-- LET
-- WHERE
-- ORDER BY
-- RETURN
+- `FOR`
+- `LET`
+- `WHERE`
+- `ORDER BY`
+- `RETURN`
 
 ## 从 pureXML 列中选择数据
 
-从pureXML 列中检索数据最简单（但可能效率最低）的方法是仅使用 SQL，如之前的某些示例所示。然而，通常情况下，使用 SELECT、SQL/XML、XQuery 或其组合的应用程序可以提供更多价值。本节的余下部分将简要讨论用于数据检索的两种处理方法：SQL/XML 方法和 XQuery 方法。
+从 pureXML 列中检索数据最简单（但可能效率最低）的方法是仅使用 SQL，如之前的某些示例所示。然而，通常情况下，使用 `SELECT`、SQL/XML、XQuery 或其组合的应用程序可以提供更多价值。本节的余下部分将简要讨论用于数据检索的两种处理方法：SQL/XML 方法和 XQuery 方法。
 
 以下 SQL/XML 语句将返回 XML 标签内的关系型数据，如示例 8–14 所示：
 
-```
+```sql
 SELECT XML2CLOB
 (XMLELEMENT(NAME="CarPoolers",
   XMLELEMENT(NAME="Id", C.POOLER_ID),
@@ -12443,7 +11823,7 @@ FROM CARPOOL C;
 
 以下 XQuery 语句将检索 `<PostalCode>` 元素（示例 8–15）：
 
-```
+```xquery
 XQUERY FOR $y IN db2-fn:xmlcolumn
 ('COMMUTERS.CUSTOMER')/CanadianAddress/PostalCode
 RETURN $y
@@ -12453,7 +11833,7 @@ RETURN $y
 
 XQuery 有许多操作和选项。如果你想限制结果集，可以输入类似的内容（示例 8–16）：
 
-```
+```xquery
 XQUERY FOR $y IN db2-fn:xmlcolumn
 ('COMMUTERS.CUSTOMER')/CanadianAddress/
 WHERE $y/PostalCode="ML5C7"
@@ -12474,7 +11854,7 @@ DB2 在开发者工作台中提供了丰富的 XQuery 构建器，可以使这�
 
 图 8–19 DB2 开发者工作台
 
-## SQL/XML、SQL 或 xQuery 最佳实践
+## SQL/XML、SQL 或 XQuery 最佳实践
 
 下表总结了哪些 API 最适合执行对 XML 数据的操作（表 8–1）：
 
@@ -12489,16 +11869,12 @@ DB2 在开发者工作台中提供了丰富的 XQuery 构建器，可以使这�
 | 连接 与 连接 | N/A | Good | Best | Best |
 | XML 数据转换 | N/A | Awkward | Best | Best |
 
-
-
-
-
 # 从 pureXML 列中选择数据
 
 表 8–1 XML API 摘要
 
 | 功能、功能、优势 | SQL | SQL/XML | XQuery & SQL/XML |
-|---|---|---|---|---|
+|---|---|---|---|
 | INSERT, UPDATE, DELETE | 优 | 优 | N/A | N/A |
 | 参数标记 | 好 | 优 | N/A | N/A |
 | 全文检索 | 好 | 优 | N/A | 优 |
@@ -12515,7 +11891,7 @@ DB2 在开发者工作台中提供了丰富的 XQuery 构建器，可以使这�
 
 # 更新和删除 pureXML 列
 
-要更新或删除 pureXML 列中的整个 XML 文档或片段，可以使用传统的 INSERT 和 UPDATE SQL 语句。如果你想更新 pureXML 列中的整个 XML 文档，可以输入类似下面的 UPDATE 语句（示例 8–17）：
+要更新或删除 pureXML 列中的整个 XML 文档或片段，可以使用传统的 `INSERT` 和 `UPDATE` SQL 语句。如果你想更新 pureXML 列中的整个 XML 文档，可以输入类似下面的 `UPDATE` 语句（示例 8–17）：
 
 ```sql
 UPDATE COMMUTERS SET CUSTOMER =
@@ -12537,7 +11913,7 @@ si:schemaLocation="http://tempuri.org/XMLESchema.xsd C:\temp\Example\Customer.xs
 
 **示例 8–17** 更新 XML 列
 
-正如你所想的，你可以像删除普通行一样使用 DELETE 命令删除带有 XML 文行的（示例 8–18）：
+正如你所想的，你可以像删除普通行一样使用 `DELETE` 命令删除带有 XML 文行的（示例 8–18）：
 
 ```sql
 DELETE FROM COMMUTERS WHERE ID=4
@@ -12545,7 +11921,7 @@ DELETE FROM COMMUTERS WHERE ID=4
 
 **示例 8–18** 删除带有 XML 列的行
 
-如果你想从 pureXML 列中移除 XML 文档或片段，则可以使用 UPDATE 命令并将值设置为 NULL（示例 8–19）：
+如果你想从 pureXML 列中移除 XML 文档或片段，则可以使用 `UPDATE` 命令并将值设置为 `NULL`（示例 8–19）：
 
 ```sql
 UPDATE COMMUTERS SET CUSTOMER=NULL WHERE ID=3
@@ -12555,7 +11931,7 @@ UPDATE COMMUTERS SET CUSTOMER=NULL WHERE ID=3
 
 在 DB2 9 通用可用时，XQuery 标准实际上只定义了其名称所含义的内容：查询。没有 ANSI 标准方法可以更新或删除 XML 文档片段。正如前面的示例所示，你可以操作现有 pureXML 列中的数据，但仅限于在单次操作中处理整个文档或片段。随着 XML 普及到主流，应该预期会有越来越多的操作在层次结构的子级上以事务方式发生。
 
-例如，一个工人阶级的通勤者可能会搬到同一个城市的新位置——这可能需要更新 XML 数据，但不需要更新所有元素（你不需要更新 <country> 或 <province>）。如果你在大量文档（在单个列内或跨多个 pureXML 列）中考虑此类操作，那么处理整个文档或片段的开销可能会很大。
+例如，一个工人阶级的通勤者可能会搬到同一个城市的新位置——这可能需要更新 XML 数据，但不需要更新所有元素（你不需要更新 `<country>` 或 `<province>`）。如果你在大量文档（在单个列内或跨多个 pureXML 列）中考虑此类操作，那么处理整个文档或片段的开销可能会很大。
 
 由于在 DB9 通用可用时还没有更新 XML 文档部分内容的标准，因此决定提供 `DB2XML.FUNCTIONS.UPDATE` 存储过程，以便在期间提供更新 XML 文档或片段部分内容的能力。
 
@@ -12570,10 +11946,6 @@ UPDATE COMMUTERS SET CUSTOMER=NULL WHERE ID=3
 对于存储在 XML 列中的数据提供了索引支持。在 XML 数据上使用索引可以提高针对存储在 DB2 9 pureXML 列中的 XML 文档或片段的查询效率。
 
 与关系索引一样，XML 数据上的索引索引列的内容。然而，它们的区别在于，关系索引索引整个列，而 XML 数据上的索引索引列的一部分。（注：原文中此部分存在大量重复的 OCR 错误文本，译文已根据逻辑进行了清理）。
-
-
-
-
 
 ## 524 第 8 章 pureXML 存储引擎
 
@@ -12598,19 +11970,19 @@ UPDATE COMMUTERS SET CUSTOMER=NULL WHERE ID=3
 
 8–21 XML 书籍描述符
 
-下表显示了从不同的 XMLPATTERNS 中将进行索引的信息示例（图 8–21）：
+下表显示了从不同的 `XMLPATTERNS` 中将进行索引的信息示例（图 8–21）：
 
 | XMLPATTERN | 数据索引 |
-|---|---|---|
-| XMLPATTERN | '//author' as sql varchar(35) | 索引所有 <author> 元素 |
-| XMLPATTERN | '//\*' as sql double | 索引所有数字属性 |
-| XMLPATTERN | '//text()' as sqlvarchar (hashed) | 索引所有文本节点并对其进行哈希处理 |
-| XMLPATTERN | '//keywords/keyword' as sqlvarchar(35) | 索引 <keywords> 下所有的 <keyword> |
-| XMLPATTERN | '//book/text()' as varchar(128) | 索引 <book> 下的所有文本节点 |
+|---|---|
+| `XMLPATTERN` | `'//author' as sql varchar(35)` | 索引所有 `<author>` 元素 |
+| `XMLPATTERN` | `'//\*' as sql double` | 索引所有数字属性 |
+| `XMLPATTERN` | `'//text()' as sqlvarchar (hashed)` | 索引所有文本节点并对其进行哈希处理 |
+| `XMLPATTERN` | `'//keywords/keyword' as sqlvarchar(35)` | 索引 `<keywords>` 下所有的 `<keyword>` |
+| `XMLPATTERN` | `'//book/text()' as varchar(128)` | 索引 `<book>` 下的所有文本节点 |
 
 ## 图 8–21 XMLPATTERN 示例
 
-如果你想根据邮政编码（Postal Codes）对整个客户池进行索引（示例 8–4），你将构建示例 8–22 中找到的 XMLPATTERN 表达式：
+如果你想根据邮政编码（Postal Codes）对整个客户池进行索引（示例 8–4），你将构建示例 8–22 中找到的 `XMLPATTERN` 表达式：
 
 ```
 customerinfo/CanadianAddress[2]/PostalCode
@@ -12620,9 +11992,9 @@ customerinfo/CanadianAddress[2]/PostalCode
 
 ## DB2 注意
 
-此 XMLPATTERN 表达式中的 `[2]` 表示法实际上表示元素的第二次出现。因此，此表示将实际上索引文档中第二个加拿大地址的邮政编码。
+此 `XMLPATTERN` 表达式中的 `[2]` 表示法实际上表示元素的第二次出现。因此，此表示将实际上索引文档中第二个加拿大地址的邮政编码。
 
-虽然之前的 XMLPATTERN 表达式索引的是 <PostalCode> 元素的第二次出现，但你可以使用 `text()` 函数如下所示索引任何 <PostalCode> 的实际文本：
+虽然之前的 `XMLPATTERN` 表达式索引的是 `<PostalCode>` 元素的第二次出现，但你可以使用 `text()` 函数如下所示索引任何 `<PostalCode>` 的实际文本：
 
 ```
 customerinfo/CanadianAddress/PostalCode/text()
@@ -12632,9 +12004,9 @@ customerinfo/CanadianAddress/PostalCode/text()
 
 正如你所预期的，尝试为大型文档生成 XML 索引时可能会变得相当复杂。出于原因，在 DB2 9 中使用控制中心（Control Center）或开发工作台（Developer Workbench）创建 XML 索引更好。这些工具提供了图形化工具来检查 XML 文档的分层结构（在文件系统或 DB2 pureXML 列中），并使用图形化工具构建索引。
 
-例如，以下说明了使用控制中心在工作示例上构建 customerinfo/CanadianAddress[2]/PostalCode 索引的过程。
+例如，以下说明了使用控制中心在工作示例上构建 `customerinfo/CanadianAddress[2]/PostalCode` 索引的过程。
 
-- 从开始菜单中选择控制 Center 或从 CLP 中输入 db2cc 来启动控制中心。
+- 从开始菜单中选择控制 Center 或从 CLP 中输入 `db2cc` 来启动控制中心。
 - 选择 Indexes 文件夹，右键点击，并选择 Create→Index（图 8–22）。打开创建索引向导。
 
 ## 第 8 章 pureXML 存储引擎
@@ -12661,11 +12033,13 @@ customerinfo/CanadianAddress/PostalCode/text()
 
 ## 528 第 8 章 pureXML 存储引擎
 
+
+
+# 图 8–25 查看数据以辅助索引
+
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_555_0.png)
 
-**图 8–25** 查看数据数据以辅助索引
-
-- 6. 选择第二个 CanadianAddress 元素中的 PostalCode 条目，点击 Add Index，选择 Selected element only，并点击 OK。Indexes 字段将填充此新索引的 XMLPATTERN（图 8–26）。
+6. 选择第二个 `CanadianAddress` 元素中的 `PostalCode` 条目，点击 **Add Index**，选择 **Selected element only**，并点击 **OK**。`Indexes` 字段将填充此新索引的 `XMLPATTERN`（图 8–26）。
 
 ## 索引 pureXML 列
 
@@ -12673,39 +12047,39 @@ customerinfo/CanadianAddress/PostalCode/text()
 
 ### 图 8–26 选择元素进行索引
 
-在指定 XMLPATTERN 时，你可以同时定义多个索引。例如，如果你想为使用 `text()` 函数的 XML 创建一个文本索引，可以点击 Add Index 并选择 Text。DB2 会根据你的选择自动生成索引名称。你可以通过双击 name 字段来覆盖此设置。由于索引在创建后无法更改，此外，如果你正在处理较大的 XML 文档，可以通过点击 Find 对它们进行搜索（图 8–27）。
+在指定 `XMLPATTERN` 时，你可以同时定义多个索引。例如，如果你想为使用 `text()` 函数的 XML 创建一个文本索引，可以点击 **Add Index** 并选择 **Text**。DB2 会根据你的选择自动生成索引名称。你可以通过双击 `name` 字段来覆盖此设置。由于索引在创建后无法更改，此外，如果你正在处理较大的 XML 文档，可以通过点击 **Find** 对它们进行搜索（图 8–27）。
 
 ## 第 8 章 pureXML 存储引擎
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_557_0.png)
 
-图 8–27 查找节点
+### 图 8–27 查找节点
 
-当你指定要创建的所有索引后，点击 Finish。你应该能在控制中心的 Object View 中看到这些索引（图 8–28）。
+当你指定要创建的所有索引后，点击 **Finish**。你应该能在控制中心的 **Object View** 中看到这些索引（图 8–28）。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_557_1.png)
 
-图 8–28 查看表中的索引
+### 图 8–28 查看表中的索引
 
-### 索引 pureXML 列
+## 索引 pureXML 列
 
 使用控制中心创建索引比手动使用 CLP 要简单得多。与 pureXML 相关的索引功能也紧密集成到流行的 IDE 中。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_558_0.png)
 
-图 8–28 通过 Visual Studio 2005 创建索引
+### 图 8–28 通过 Visual Studio 2005 创建索引
 
-### 全文索引
+## 全文索引
 
-XMLPATTERN 索引可以很容易搜索 XML 文档的子集（尽管之前说过，它可以被设置为索引列的内容）。在 DB2 9 中，DB2 Net Search Extender (DB2 NSE) 在所有版本中均可用（正如前文所述，它在 DB2 8 中是一个一个收费组件）。在 DB2 9 中，DB2 NSE 针对 pureXML 进行了增强，提供了创建语言感知索引的能力。
+`XMLPATTERN` 索引可以很容易搜索 XML 文档的子集（尽管之前说过，它可以被设置为索引列的内容）。在 DB2 9 中，DB2 Net Search Extender (DB2 NSE) 在所有版本中均可用（正如前文所述，它在 DB2 8 中是一个收费组件）。在 DB2 9 中，DB2 NSE 针对 pureXML 进行了增强，提供了创建语言感知索引的能力。
 
 ## 532 第 8 章 pureXML 存储引擎
 
 你也可以使用 DB2 NSE 索引部分文档，但你可能正在索引大型片段中的文本；例如作为 XML 文件交付的整本书章节。
 
-例如，对 COMMUTER 表的 NSE 索引如下（示例 8–24）：
+例如，对 `COMMUTER` 表的 NSE 索引如下（示例 8–24）：
 
-```
+```sql
 CREATE INDEX IDX_COMMUTERS FOR TEXT ON COMMUTERS(CUSTOMERS)
 ```
 
@@ -12713,7 +12087,7 @@ CREATE INDEX IDX_COMMUTERS FOR TEXT ON COMMUTERS(CUSTOMERS)
 
 DB2 NSE 提供了一系列易用的函数，只需将其添加到 SQL 语句中即可指示 DB2 运行时调用此类索引。此外，NSE 提供了复杂的搜索标准，如同义词匹配、词干提取等。
 
-例如，你可能希望你的查询使用由 DB2 NSE 构建的高级文本索引，该索引提取邮政地址中使用 whby 的形式（常见形式为 whity、wbty 和 wby）。请求 SQL 可能如下（示例 8–25）：
+例如，你可能希望你的查询使用由 DB2 NSE 构建的高级文本索引，该索引提取邮政地址中使用 `whby` 的形式（常见形式为 `whity`、`wbty` 和 `wby`）。请求 SQL 可能如下（示例 8–25）：
 
 ```sql
 SELECT FROM COMMUTERS WHERE CONTAINS
@@ -12726,11 +12100,7 @@ NSE 的管理集成在控制中心，这使得使用此项功能变得更容易�
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_559_0.png)
 
-图 8–30 通过控制中心创建 NSE 索引
-
-
-
-
+### 图 8–30 通过控制中心创建 NSE 索引
 
 ## XML Schema 仓库 (XSR)
 
@@ -12744,7 +12114,7 @@ DB2 9 不仅具有行业领先的 XML 支持，还拥有丰富且灵活的 XML S
 
 在使用 XML Schema 定义文档验证你的 XML 数据之前，你需要先在 XML Schema 仓库 (XSR) 中向 DB2 注册它。这种能力是 DB2 9 引擎的一部分，有多种接口可以完成此任务。例如，你可以使用 Control Center、DB2 Developers Workbench、Visual Studio.NET、DB2 命令行处理器 (CLP)、存储过程等，如图 8–31 所示。
 
-图 8–31 在 DB2 9 XSR 中注册 XSD 文档
+### 图 8–31 在 DB2 9 XSR 中注册 XSD 文档
 
 ## 第 8 章 pureXML 存储引擎
 
@@ -12752,7 +12122,7 @@ DB2 9 不仅具有行业领先的 XML 支持，还拥有丰富且灵活的 XML S
 
 DB2 9 具有一些集成功能，使得某些工具与其他工具配合更加容易。例如，使用 DB2 Developers Workbench、Oxygen XML Editor、Visual Studio（以及其他），你可以使用集成的 XML Schema 定义编辑器并直接从设计模板中注册它们。图 8–32 显示了在 Visual Studio 中使用原生 XSD 编辑器（这与 DB2 完全没有关系）并通过单击即可在 DB2 9 XSR 中注册的示例。
 
-**图 8–32** 使用原生工具在 DB2 9 XSR 中组合 XML Schema 定义
+### 图 8–32 使用原生工具在 DB2 9 XSR 中组合 XML Schema 定义
 
 那么，除了简化拓扑结构显而易见的优势之外，为什么你想将 XSD 文档存储在 DB2 9 XSR 中呢？当你将文档存储在 XSR 中时，验证性能得到了提高。通常，验证是一个重量级过程，可能会降低应用程序性能，因此任何可以让你的应用程序运行更快的方法通常都是好事。DB2 9 XSR 服务有助于提高验证性能，因为你不需要跨网络（或文件系统或其他存储配置）查找这些验证文档来执行验证。
 
@@ -12774,7 +12144,7 @@ create table certtable (test xml)
 register xmlschema 'http://books.com' from 'c:/certtest.xsd' as certtest
 ```
 
-在 XSD 文档注册到 DB2 之后，你可以使用 XMLATE 函数直接验证你的 XML，如下所示：
+在 XSD 文档注册到 DB2 之后，你可以使用 `XMLATE` 函数直接验证你的 XML，如下所示：
 
 ```sql
 insert into certtable(test) values (xmlvalidate(? as xmlschema 'http://books.com'))
@@ -12804,7 +12174,7 @@ select * from sysatcat.xsobjects
 select deptid, xsobjects(test) from certtable where testid=704
 ```
 
- 总结
+## 总结
 
 在本章中，我们检查了 DB2 中新的 XML 能力，包括新的 XML 类型、pureXML 实现以及支持此新数据类型的 SQL 和 XML 特性。
 
@@ -12812,13 +12182,7 @@ DB2 在多个版本中支持 XML 结构。这些功能允许开发者从 DB2 数
 
 DB2 新的 pureXML 支持为数据库增加了显著的新功能，并使 XML 操作变得更加高效和强大。
 
-
-
-
-
-## 第9 章
-
-## 开发 SQL
+# 第 9 章 开发 SQL
 
 - 用户定义函数
 - 用户定义结构化数据类型
@@ -12827,7 +12191,7 @@ DB2 新的 pureXML 支持为数据库增加了显著的新功能，并使 XML �
 - SQL 过程语言
 - 存储过程
 
-本将介绍 DB2 中的一些额外的 SQL 功能，这些功能主要面向开发者。用户定义函数 (UDFs) 和用户定义结构化数据类型可增强 DB2 提供的功能和数据类型。SYNONYM、ALIAS、COMMIT 和 ROLLBACK 在程序中用于控制对对象的访问并确定数据库的更改。最后，引入了 SQL 过程语言 (SQL PL)，以便将其用于触发器、用户定义函数、存储过程以及 SQL 块中。
+本章将介绍 DB2 中的一些额外的 SQL 功能，这些功能主要面向开发者。用户定义函数 (UDFs) 和用户定义结构化数据类型可增强 DB2 提供的功能和数据类型。`SYNONYM`、`ALIAS`、`COMMIT` 和 `ROLLBACK` 在程序中用于控制对对象的访问并确定数据库的更改。最后，引入了 SQL 过程语言 (SQL PL)，以便将其用于触发器、用户定义函数、存储过程以及 SQL 块中。
 
 ## 用户定义函数
 
@@ -12842,7 +12206,7 @@ DB2 新的 pureXML 支持为数据库增加了显著的新功能，并使 XML �
 
 列函数接收来自列的一组数据值并派生单一结果。例如，确定所有已测试的平均分（示例 9–1）：
 
-```
+```sql
 SELECT AVG(SCORE) FROM TEST_TAKEN;
 ```
 
@@ -12872,9 +12236,9 @@ RETURN VALUES (P..SALARY, P..BONUS, P..COMMISSION);
 
 ### 示例 9–3 行函数
 
-行语句仅在将结构化数据类型传递给外部例程时使用。外部例是用是用语言编写的，需要将结构化数据类型的组件转换为该语言理解的数据类型。这种函数在标准 SQL 中从未使用，因此大多数用户不需要了解它。
+行语句仅在将结构化数据类型传递给外部例程时使用。外部例程是用语言编写的，需要将结构化数据类型的组件转换为该语言理解的数据类型。这种函数在标准 SQL 中从未使用，因此大多数用户不需要了解它。
 
-最后一种函数是表函数，可以在 SQL 语句的 `FROM` 子句中使用。它返回一个表的列，类似于创建的表。这种类型的函数用于 SELECT 语句的 `FROM` 子句，并取代普通的表名（示例 9–4）。
+最后一种函数是表函数，可以在 SQL 语句的 `FROM` 子句中使用。它返回一个表的列，类似于创建的表。这种类型的函数用于 `SELECT` 语句的 `FROM` 子句，并取代普通的表名（示例 9–4）。
 
 ```sql
 SELECT * FROM TABLE(STORES(10,20)) AS STORE_NUMBERS;
@@ -12884,7 +12248,7 @@ SELECT * FROM TABLE(STORES(10,20)) AS STORE_NUMBERS;
 
 DB2 内置了大量函数，可以在 DB2 SQL 参考手册中找到它们。
 
-在 DB2 中，你可以创建自己的函数（可以是标量函数或表函数）。UDF 可以用高级级编程语言（如 C、C++、Java、SQL PL）编写，你也可以使用 SQL 语句。
+在 DB2 中，你可以创建自己的函数（可以是标量函数或表函数）。UDF 可以用高级编程语言（如 C、C++、Java、SQL PL）编写，你也可以使用 SQL 语句。
 
 你还可以基于另一个 UDF 或内置函数创建用户定义函数。此概念类似于面向对象编程中的类重载。这被称为源函数 (sourced function)。你从头编写的 UDF 称为外部函数 (external function)。
 
@@ -12892,9 +12256,9 @@ DB2 内置了大量函数，可以在 DB2 SQL 参考手册中找到它们。
 
 在 Windows 环境下，作为微软对象链接嵌入 (OLE) 架构的一部分，DB2 可以作为 OLE 自动化控制单元。通过这种机制，DB2 可以作为外部 UDF 调用 OLE 自动化对象的方法。
 
-## 第9 章 开发 SQL
+## 第 9 章 开发 SQL
 
-外部 UDF 一旦编写并生成为动态加载的库文件或类，就必须在数据库中注册。示例 9–5 所示的 CONGRAT 函数使用 `CREATE FUNCTION` 语句注册。
+外部 UDF 一旦编写并生成为动态加载的库文件或类，就必须在数据库中注册。示例 9–5 所示的 `CONGRAT` 函数使用 `CREATE FUNCTION` 语句注册。
 
 ```sql
 CREATE FUNCTION CONGRAT(VARCHAR(30),VARCHAR(40))
@@ -12910,7 +12274,7 @@ CREATE FUNCTION CONGRAT(VARCHAR(30),VARCHAR(40))
 
 ### 示例 9–5 注册用户定义函数
 
-源 UDF 的注册方式相同，只需指定父源函数即可。示例 9–6 展示了如何为 SCORE 数据类型创建 AVG 函数：
+源 UDF 的注册方式相同，只需指定父源函数即可。示例 9–6 展示了如何为 `SCORE` 数据类型创建 `AVG` 函数：
 
 ```sql
 CREATE FUNCTION AVG(SCORE)
@@ -12922,11 +12286,7 @@ CREATE FUNCTION AVG(SCORE)
 
 这些 `CREATE FUNCTION` 语句会在 `SYSCAT.FUNCTIONS` 视图中为每个 UDF 放置一个条目。你可以在控制中心查看注册到数据库的 UDF。
 
-用户定义函数就像 DB2 中的任何其他数据库对象。虽然这看起来像是一个限制，但 SQL 语言包含了 `CASE` 语句，允许有限的逻辑。示例 9–10 修改了 BONUS 函数，根据薪资水平返回不同的奖金值。
-
-
-
-
+用户定义函数就像 DB2 中的任何其他数据库对象。虽然这看起来像是一个限制，但 SQL 语言包含了 `CASE` 语句，允许有限的逻辑。示例 9–10 修改了 `BONUS` 函数，根据薪资水平返回不同的奖金值。
 
 ## 自定义函数
 
@@ -12936,7 +12296,7 @@ CREATE FUNCTION AVG(SCORE)
 
 表函数是一种向调用它的 SQL 语句返回表（table）的用户定义函数（UDF）。这意味着表函数只能在 `SELECT` 语句的 `FROM` 子句中引用。表函数提供了一种在 SQL 查询中包含外部数据的方法。表函数可以读取非 DB2 数据（例如操作系统上的数据），将其表格化，并将数据作为结果集返回给 DB2，随后像任何其他表一样进行处理。
 
-例如，示例 9–12 中的 APPFORM 表接收一个候选申请表，对其进行处理，并以适当的格式返回数据以插入 CANDID 表（候选人 ID 除外，它是自动生成的）：
+例如，示例 9–12 中的 `APPFORM` 表接收一个候选申请表，对其进行处理，并以适当的格式返回数据以插入 `CANDID` 表（候选人 ID 除外，它是自动生成的）：
 
 ```sql
 CREATE FUNCTION APPFORM(VARCHAR(30))
@@ -12949,9 +12309,11 @@ FINAL CALL
 CARDINALITY 20;
 ```
 
-示例 9–12 自定义表函数 - APPFORM
+### 示例 9–12 自定义表函数 - APPFORM
 
-如果我们想根据候选人的申请表向 CANDIDATE 表中插入新候选人，可以使用以下 `SELECT` 语句（示例 9–13）：
+
+
+如果我们想根据候选人的申请表向 `CANDIDATE` 表中插入新候选人，可以使用以下 `SELECT` 语句（示例 9–13）：
 
 ```sql
 INSERT INTO TEST CANDIDATE
@@ -12966,15 +12328,15 @@ FROM APPFORM('D:\DOCS\NEWFORM.TXT') AS CANDIDATE;
 
 DB2 需要额外的 `TABLE()` 子句来标识结果将从表函数而非传统表返回。
 
-## 第 9 章 开发 SQL
+# 第 9 章 开发 SQL
 
-### DB2 注意事项
+## DB2 注意事项
 
 DB2 提供了表函数，用于从 OLE DB 提供程序访问数据。这允许你从各种关系和非关系关系数据源（包括 Oracle、Microsoft SQL Server 和 Microsoft Access）将数据整合到你的 DB2 数据库或应用程序中。
 
 自定义表函数可以使用一个或多个 SQL 语句编写。让用户能够在无需编写 C、C++ 或 Java 程序的情况下创建表 UDF。
 
-表 UDF 只能在定义定义部分访问数据库表，因此其灵活性没有外部 UDF 那么高。示例 9–14 中的示例创建了一个表 UDF，它返回 TEST_TAKEN 表中分数在两个值之间的记录。
+表 UDF 只能在定义定义部分访问数据库表，因此其灵活性没有外部 UDF 那么高。示例 9–14 中的示例创建了一个表 UDF，它返回 `TEST_TAKEN` 表中分数在两个值之间的记录。
 
 ```sql
 CREATE FUNCTION GET_MARKS(
@@ -12990,7 +12352,7 @@ WHERE
 INTEGER(SCORE) BETWEEN BEGIN_RANGE AND END_RANGE;
 ```
 
-示例 9–14 GET_MARKS 表函数
+示例 9–14 `GET_MARKS` 表函数
 
 此示例中广泛使用了自定义类型。该函数接受两个分数参数，代表我们想要从表中检索的分数范围。现在，该表函数可以作为 `select` 语句的一部分使用。示例 9–15 中的 SQL 获取了考试分数在 60 到 70 百比之间的候选人列表。
 
@@ -13002,7 +12364,7 @@ CID NUMBER SCORE
 111 502 67
 ```
 
-示例 9–15 GET_MARKS 表函数用法
+示例 9–15 `GET_MARKS` 表函数用法
 
 为了使用表函数，SQL 语句必须使用 `TABLE` 子句，并在其中嵌入表函数。此外，结果表必须使用 `AS` 子句进行命名。
 
@@ -13013,9 +12375,9 @@ SELECT * FROM TABLE(GET_MARKS(60,70)) AS MARKS
 WHERE NUMBER = TEST_ID('500');
 ```
 
-示例 9–16 带有额外逻辑的 GET_MARKS 表函数用法
+示例 9–16 带有额外逻辑的 `GET_MARKS` 表函数用法
 
-当开发者希望动态控制返回用户的行时，可以使用 UDF。可以创建一个视图来返回有关 TEST_TAKEN 表的信息，但其定义是静态的。例如，以下定义将返回完全相同的结果（示例 9–17）：
+当开发者希望动态控制返回用户的行时，可以使用 UDF。可以创建一个视图来返回有关 `TEST_TAKEN` 表的信息，但其定义是静态的。例如，以下定义将返回完全相同的结果（示例 9–17）：
 
 ```sql
 CREATE VIEW GET_MARKS AS (
@@ -13024,7 +12386,7 @@ WHERE
 INTEGER(SCORE) BETWEEN 60 AND 70;
 ```
 
-示例 9–17 作为视图的 GET_MARKS
+示例 9–17 作为视图的 `GET_MARKS`
 
 然而，此视图只会返回 60 到 70 之间的分数。相比之下，UDF 可以使用变量更改返回的行。
 
@@ -13032,7 +12394,7 @@ INTEGER(SCORE) BETWEEN 60 AND 70;
 
 自定义表函数还可以包含修改其他表的 SQL 语句。当系统需要访问表或更新某些统计数据时，这有时非常有用。
 
-例如，一个跟踪谁使用了 GET_MARKS 函数的表可以很容易地被表中。当有人访问 GET_MARKS 函数时，他们的访问时间和参数将被记录在 AUDIT 表中（示例 9–18）：
+例如，一个跟踪谁使用了 `GET_MARKS` 函数的表可以很容易地被表中。当有人访问 `GET_MARKS` 函数时，他们的访问时间和参数将被记录在 `AUDIT` 表中（示例 9–18）：
 
 ```sql
 CREATE TABLE AUDIT (
@@ -13043,7 +12405,7 @@ END_RANGE INT
 );
 ```
 
-示例 9–18 Audit 表
+示例 9–18 `Audit` 表
 
 表函数更改为 ATOMIC（示例 9–19）：
 
@@ -13064,7 +12426,7 @@ INTEGER(SCORE) BETWEEN BEGIN_RANGE AND END_RANGE;
 
 示例 9–19 通过表函数访问
 
-针对此表执行 select 语句，结果如下（示例 9–20）：
+针对此表执行 `select` 语句，结果如下（示例 9–20）：
 
 ```sql
 SELECT * FROM TABLE(GET_MARKS(60,70)) AS MARKS;
@@ -13075,7 +12437,7 @@ SELECT * FROM TABLE(GET_MARKS(60,70)) AS MARKS;
 | 2007-02-26-10:00:00 | BAKLARZ | 60 | 70 |
 | 2007-02-26-10:05:00 | BAKLARZ | 90 | 100 |
 
-示例 9–20 Audit 结果
+示例 9–20 `Audit` 结果
 
 ## 结构化数据类型
 
@@ -13100,9 +12462,9 @@ CERT_APP CHAR(1) NOT NULL WITH DEFAULT,
 PRIMARY KEY (CID));
 ```
 
-示例 9–21 CANDIDATE 表的定义
+示例 9–21 `CANDIDATE` 表的定义
 
-此表的定义使用了许多 UDT。例如，创建了一个名为 CANDIDATE_ID 的 UDT 来表示此个人的唯一标识符。在表的定义下方，创建了一些字段用于存储表中候选人的地址信息。这些多个字段可以合并为一个结构化数据类型定义，如示例 9–22 所示：
+此表的定义使用了许多 UDT。例如，创建了一个名为 `CANDIDATE_ID` 的 UDT 来表示此个人的唯一标识符。在表的定义下方，创建了一些字段用于存储表中候选人的地址信息。这些多个字段可以合并为一个结构化数据类型定义，如示例 9–22 所示：
 
 ```sql
 CREATE TYPE ADDRESS_TYPE AS
@@ -13119,11 +12481,7 @@ MODE DB2SQL WITH FUNCTION INSTANTIABLE;
 
 示例 9–22 创建结构化数据类型
 
-
-
-
-
-## 第 9 章 SQL 开发
+# 第 9 章 SQL 开发
 
 现在定义已经创建，我们可以将其作为创建表的一部分（示例 9–23）：
 
@@ -13142,7 +12500,7 @@ CREATE TABLE TEST_CANDIDATE (
 );
 ```
 
-示例 9–23 使用地址结构创建 TEST_CANDIDATE 表
+示例 9–23 使用地址结构创建 `TEST_CANDIDATE` 表
 
 结构化数据类型可以帮助简化具有许多共同元素的表定义。这使得使用面向对象技术开发应用程序变得更加容易。你的结构化数据类型内部可以包含其他结构化数据类型，例如 UDT（用户定义类型）。
 
@@ -13158,11 +12516,11 @@ CREATE TYPE COMPENSATION AS (
 ) MODE DB2SQL WITH FUNCTION ACCESS INSTANTIABLE;
 ```
 
-示例 9–24 创建 COMPENSATION 数据类型
+示例 9–24 创建 `COMPENSATION` 数据类型
 
 ## 结构化数据类型
 
-COMPENSATION 结构包含组成薪水的三个元素。该结构将用于创建 EMPLOYEES 表（示例 9–25）。
+`COMPENSATION` 结构包含组成薪水的三个元素。该结构将用于创建 `EMPLOYEES` 表（示例 9–25）。
 
 ```sql
 CREATE TABLE EMPLOYEES
@@ -13172,9 +12530,9 @@ PAY COMPENSATION
 );
 ```
 
-### 示例 9–25 使用 COMPENSATION 数据类型创建表
+### 示例 9–25 使用 `COMPENSATION` 数据类型创建表
 
-此时我们需要向 EMPLOYEES 表插入一些信息。要向 PAY 列插入值，我们使用 `COMPENSATION` 构造函数，它类似于转换函数（示例 9–26）：
+此时我们需要向 `EMPLOYEES` 表插入一些信息。要向 `PAY` 列插入值，我们使用 `COMPENSATION` 构造函数，它类似于转换函数（示例 9–26）：
 
 ```sql
 INSERT INTO EMPLOYEES VALUES
@@ -13184,9 +12542,9 @@ COMPENSATION().SALARY(30000)..BONUS(1000)..COMMISSION(30000)
 );
 ```
 
-### 示例 9–26 向 EMPLOYEES 表插入结构
+### 示例 9–26 向 `EMPLOYEES` 表插入结构
 
-COMPENSATION 构造函数告诉 DB2 随其后的字段构成了结构的一部分，双点 ".." 符号组合了这些元素。由于 PAY 列被定义为 `COMPENSATION` 类型，所需的值需要转换为 `COMPENSATION` 类型。对开发者来说的是，你也可以生成一个 `PAY` SQL 语句构造函数，使语法更具读性（示例 9–27）。
+`COMPENSATION` 构造函数告诉 DB2 随其后的字段构成了结构的一部分，双点 `..` 符号组合了这些元素。由于 `PAY` 列被定义为 `COMPENSATION` 类型，所需的值需要转换为 `COMPENSATION` 类型。对开发者来说的是，你也可以生成一个 `PAY` SQL 语句构造函数，使语法更具读性（示例 9–27）。
 
 ```sql
 CREATE FUNCTION PAY(A INT, B INT, C INT)
@@ -13197,7 +12555,7 @@ COMPENSATION().SALARY(A)..BONUS(B)..COMMISSION(C)
 );
 ```
 
-### 示例 9–27 创建 PAY 构造函数
+### 示例 9–27 创建 `PAY` 构造函数
 
 现在，插入结构的 SQL 可以简化了（示例 9–28）：
 
@@ -13208,11 +12566,11 @@ INSERT INTO EMPLOYEES VALUES
 );
 ```
 
-### 示例 9–28 使用 PAY 函数插入结构
+### 示例 9–28 使用 `PAY` 函数插入结构
 
-## 第 9 章 SQL 开发
+# 第 9 章 SQL 开发
 
-在数据插入表之后，你必须使用 "..." 符号来提取结构的各个单独元素。当你定义结构化数据类型时，DB2 会生成许多函数，允许你在不使用双点符号的情况下提取值。示例 9–29 中找到两个语句产生相同的结果：
+在数据插入表之后，你必须使用 `...` 符号来提取结构的各个单独元素。当你定义结构化数据类型时，DB2 会生成许多函数，允许你在不使用双点符号的情况下提取值。示例 9–29 中找到两个语句产生相同的结果：
 
 ```sql
 SELECT NAME, PAY..SALARY, PAY..BONUS, PAY..COMMISSION
@@ -13227,9 +12585,9 @@ FROM EMPLOYEES;
 | KELLY | 30000 | 1000 | 3000 |
 | KATRIN | 40000 | 2000 | 6000 |
 
-示例 9–29 从 EMPLOYEES 表中选择信息
+示例 9–29 从 `EMPLOYEES` 表中选择信息
 
-在显示结构时，DB2 不像普通列类型那样生成列名。用户必须通过在 SELECT 列表中使用 `AS` 关键字提供列名。
+在显示结构时，DB2 不像普通列类型那样生成列名。用户必须通过在 `SELECT` 列表中使用 `AS` 关键字提供列名。
 
 结构元素也可以用于 `where` 以及 SQL 中任何使用列信息的部分。例如，可以修改之前的 SQL，仅返回那些 SALARY >= 30000 且奖金和佣金价值不超过 5000 的员工（示例 9–30）。
 
@@ -13245,22 +12603,25 @@ SALARY(PAY) >= 30000 AND
 |---|---|---|---|
 | KELLY | 30000 | 1000 | 3000 |
 
-示例 9–30 带逻辑从 EMPLOYEES 表中选择信息
+示例 9–30 带逻辑从 `EMPLOYEES` 表中选择信息
 
 示例 9–30 展示了在同一结构上使用双点符号和转换函数。最后，开发者或 DBA 需要为 DB2 创建一些函数，以便它可以处理没有显式指定列的 `SELECT` 命令。
 
-结构化数据类型
+## 结构化数据类型
 
 以下 SQL 语句将产生错误（示例 9–31）：
 
 ```sql
 SELECT * FROM EMPLOYEES;
 ```
+
+```text
 SQL2001 A transform "DB2_PROGRAM" is not defined for data type "COMPENSATION". SQLSTATE=42741
+```
 
 ### 示例 9–31 无列名选择
 
-DB2 不知道如何在 EMPLOYEES 表中执行 `SELECT *`。为了实现这一点，需要采取两个步骤。首先需要创建一个返回结构内容的 UDF，该值必须是简单类型而不是结构。例如，我们可以创建一个返回 PAY 结构中每个字段值的函数。示例 9–32 中的 SQL 返回 PAY 结构的字符串。
+DB2 不知道如何在 `EMPLOYEES` 表中执行 `SELECT *`。为了实现这一点，需要采取两个步骤。首先需要创建一个返回结构内容的 UDF，该值必须是简单类型而不是结构。例如，我们可以创建一个返回 `PAY` 结构中每个字段值的函数。示例 9–32 中的 SQL 返回 `PAY` 结构的字符串。
 
 ```sql
 CREATE FUNCTION SHOW_PAY (P COMPENSATION)
@@ -13280,9 +12641,9 @@ SELECT NAME, SHOW_PAY(PAY) FROM EMPLOYEES;
 | KELLY | 30000,1000,3000 |
 | KATRINA | 40000,2000,6000 |
 
-### 示例 9–32 用于列的 SHOW_PAY 函数
+### 示例 9–32 用于列的 `SHOW_PAY` 函数
 
-定义此函数后，我们需要为该列创建一个转换，以便 DB2 知道如何在 select 语句中处理它（示例 9–33）。
+定义此函数后，我们需要为该列创建一个转换，以便 DB2 知道如何在 `select` 语句中处理它（示例 9–33）。
 
 ```sql
 CREATE TRANSFORM FOR COMPENSATION
@@ -13292,20 +12653,20 @@ AS SQL FUNCTION SHOW_PAY(COMPENSATION);
 
 ### 示例 9–33 类型转换
 
-一旦定义了转换，可以在 select 列表中使用 PAY 列而无需担心结构（示例 9–34）。
+一旦定义了转换，可以在 `select` 列表中使用 `PAY` 列而无需担心结构（示例 9–34）。
 
 ```sql
 SELECT * FROM EMPLOYEES;
 ```
 
 | NAME | PAY |
-----------------------------
+|---|---|
 | KELLY | 30000,1000,3000 |
 | KATRINA | 40000,2000,6000 |
 
 ### 示例 9–34 类型转换
 
-由于 PAY 列现在可以表示为一个值，DB2 将列标题放在结果顶部。在为列创建转换时，开发者或 DBA 应理解用户如何解释该列。之前定义的转换将 PAY 列表示为字符字符串。对于期望从数据库返回单个值的用户来说，这可能很奇怪。更直观的定义是让 `SHOW_PAY` 函数通过将列相加来计算实际 PAY。示例 9–35 中的 SQL 创建了一个返回三个 PAY 要素之的函数。
+由于 `PAY` 列现在可以表示为一个值，DB2 将列标题放在结果顶部。在为列创建转换时，开发者或 DBA 应理解用户如何解释该列。之前定义的转换将 `PAY` 列表示为字符字符串。对于期望从数据库返回单个值的用户来说，这可能很奇怪。更直观的定义是让 `SHOW_PAY` 函数通过将列相加来计算实际 `PAY`。示例 9–35 中的 SQL 创建了一个返回三个 `PAY` 要素之的函数。
 
 ```sql
 DROP FUNCTION SHOW_PAY;
@@ -13325,7 +12686,7 @@ SELECT NAME, SHOW_PAY(PAY) FROM EMPLOYEES;
 ```
 
 | NAME | PAY |
------------------
+|---|---|
 | SHIRLEY | 34000 |
 | KATRINA | 48000 |
 
@@ -13334,13 +12695,15 @@ SELECT * FROM EMPLOYEES;
 ```
 
 | NAME | PAY |
-----------------------------
+|---|---|
 | KELLY | 34000 |
 | KATRINA | 48000 |
 
 ### 示例 9–35 用于列的替代函数
 
-创建如 `SHOW_PAY` 的函数的优势是，它现在可以在普通的 SQL 语句中根据个人总薪选择记录。例如，以下 SQL 语句将只返回总薪大于 45000 的员工。
+
+
+创建如`SHOW_PAY`的函数的优势是，它现在可以在普通的 SQL 语句中根据个人总薪选择记录。例如，以下 SQL 语句将只返回总薪大于 45000 的员工。
 
 ```sql
 SELECT * FROM EMPLOYEES
@@ -13355,15 +12718,15 @@ WHERE SHOW_PAY(PAY) > 45000;
 
 用户定义结构化数据类型和用户定义函数是 DB2 中的强大功能。开发组可以创建在数据库内部使用的常用程序。这可以对数据定义进行更好的控制，并通过使用 UDF 鼓励更多代码重用。
 
-## 模式和别名
+# 模式和别名
 
 在本节中，我们将讨论两个数据库对象：模式和别名，它们在之前的章节中没有详细讨论过。
 
-## 模式 (Schema)
+## 模式（Schema）
 
 模式是一个数据库实体，代表 DB2 数据库中一组命名对象的集合。模式名实际上是所访问对象的完全限定限定名称的一部分。当使用 SQL `CREATE <DB OBJECT>` 语句定义数据库对象时，应在数据库对象的名称中提供限定符或模式名。
 
-可以使用 `CREATE` 语句显式创建模式并指定一个用户作为所有者。如果用户 BERT 想要创建一个名为 DB2 的模式的表，DBADM 可以使用控制中心为 BERT 创建模式，或者使用以下语句。由于 BERT 拥有该模式，他可以在模式内创建对象（示例 9–37）。
+可以使用`CREATE`语句显式创建模式并指定一个用户作为所有者。如果用户 BERT 想要创建一个名为 DB2 的模式的表，DBADM 可以使用控制中心为 BERT 创建模式，或者使用以下语句。由于 BERT 拥有该模式，他可以在模式内创建对象（示例 9–37）。
 
 ```sql
 CREATE SCHEMA DB2 AUTHORIZATION BERT;
@@ -13371,26 +12734,21 @@ CREATE SCHEMA DB2 AUTHORIZATION BERT;
 
 示例 9–37 创建模式
 
-模式名与许多数据库对象相关，包括表、视图、索引和包。出于应用程序开发考虑，表、视图和
+模式名与许多数据库对象相关，包括表、视图、索引和包。出于应用程序开发考虑，表、视图和包对象（package objects）是关注重点，因为索引无法在 SQL DML 语句（`INSERT`、`UPDATE`、`DELETE`）中直接引用。
 
+如果数据库对象的创建者在数据库对象定义中没有包含架构名称，则该对象将使用创建者的授权 ID 创建（假设创建者没有被撤销 `IMPLICIT_SCHEMA` 权限）。
 
-
-
-## 第9 章 SQL 开发
-
-包对象（package objects）是关注重点，因为索引无法在 SQL DML 语句（INSERT、UPDATE、DELETE）中直接引用。如果数据库对象的创建者在数据库对象定义中没有包含架构名称，则该对象将使用创建者的授权 ID 创建（假设创建者没有被撤销 IMPLICIT_SCHEMA 权限）。
-
-例如，假设用户使用语句 `CREATE TABLE 1(C1 CHAR(3))` 创建了一个名为 MARK 的表。那么该数据库对象的完整名称将为 MARK.TABLE1，应用程序将指定该完整名称。
+例如，假设用户使用语句`CREATE TABLE 1(C1 CHAR(3))`创建了一个名为 MARK 的表。那么该数据库对象的完整名称将为`MARK.TABLE1`，应用程序将指定该完整名称。
 
 ## DB2 注意
 
 在创建生产级应用程序时，避免在 SQL 语句中使用未限定的表名或视图名。这可以避免应用程序引用错误表的问题。为了本书的目的，我们尝试通过删除架构名称来简化 SQL。在大多数情况下，这将是您自己的用户 ID。
 
-在示例 9–38 中，被调用表的架构是 DB2CERT。如果你在嵌入式 SQL 应用程序中引用此表，你应该使用其完全限定名称 DB2CERT.TEST 来引用该表。未包含架构名称可能会导致意料之外的行为。
+在示例 9–38 中，被调用表的架构是 DB2CERT。如果你在嵌入式 SQL 应用程序中引用此表，你应该使用其完全限定名称`DB2CERT.TEST`来引用该表。未包含架构名称可能会导致意料之外的行为。
 
-在嵌入式 SQL 应用程序中，未限定的数据库对象将使用执行 BIND 命令将应用程序包绑定到数据库的人的授权 ID 进行限定。在动态 SQL 应用程序中，未限定的数据库对象将使用执行该语句的人的授权 ID 进行限定。这种差异是应用程序开发期间的一个主要考虑因素，因为它影响了所需的数据访问权限。
+在嵌入式 SQL 应用程序中，未限定的数据库对象将使用执行`BIND`命令将应用程序包绑定到数据库的人的授权 ID 进行限定。在动态 SQL 应用程序中，未限定的数据库对象将使用执行该语句的人的授权 ID 进行限定。这种差异是应用程序开发期间的一个主要考虑因素，因为它影响了所需的数据访问权限。
 
-数据库对象的完全限定名称在数据库内必须是。因此，根据上一个示例，如果架构名称不是 DB2CERT，则可以存在另一个名为 TEST 的表。
+数据库对象的完全限定名称在数据库内必须是唯一的。因此，根据上一个示例，如果架构名称不是 DB2CERT，则可以存在另一个名为 TEST 的表。
 
 ```sql
 CREATE TABLE DB2CERT.TEST (
@@ -13408,82 +12766,90 @@ CREATE TABLE DB2CERT.TEST (
 
 示例 9–38 指定架构创建表
 
-## 别名 (Alias)
+## 别名（Alias）
 
 别名可用于引用数据库中的表。如果应用程序中包含根据别名访问表的 SQL 语句，可以定义别名来代表不同的表，而无需修改应用程序。可以为表或另一个别名创建别名。
 
-例如，名为 CHLOE 的用户创建了一个名为 PRICES 的表，名为 MAXINE 的用户也创建了一个名为 PRICES 的表。这些表位于同一个数据库中，名为 CHLOE.PRICES 和 MAXINE.PRICES。假设你被要求开发一个能够访问这两个表并生成摘要报告的应用程序。同时假设你正在使用嵌入式 SQL 技术。你的应用程序将需要两组查询，每个架构名称各一组：CHLOE 和 MAXINE。这不是一种良好的编程技术，而且容易出错。例如，如果你发现其中一条 SQL 语句存在问题，可能会忘记在访问另一个表的语句中进行相应的更改。别名可以被作为你应用程序中 SQL 语句的目标表名。
+例如，名为 CHLOE 的用户创建了一个名为 PRICES 的表，名为 MAXINE 的用户也创建了一个名为 PRICES 的表。这些表位于同一个数据库中，名为`CHLOE.PRICES`和`MAXINE.PRICES`。假设你被要求开发一个能够访问这两个表并生成摘要报告的应用程序。同时假设你正在使用嵌入式 SQL 技术。你的应用程序将需要两组查询，每个架构名称各一组：CHLOE 和 MAXINE。
 
-（注：原文中存在大量 OCR 重复和错误，已根据逻辑流进行清理处理。）
+这不是一种良好的编程技术，而且容易出错。例如，如果你发现其中一条 SQL 语句存在问题，可能会忘记在访问另一个表的语句中进行相应的更改。别名可以被作为你应用程序中 SQL 语句的目标表名。
 
+# 第 9 章 SQL 开发
 
-
-
-## 第9 章 开发 SQL
-
-- ITERATE 语句
-- LEAVE 语句
-- RETURN 语句
-- SIGNAL 语句
-- CALL 语句
-- WHILE 语句
+- `ITERATE` 语句
+- `LEAVE` 语句
+- `RETURN` 语句
+- `SIGNAL` 语句
+- `CALL` 语句
+- `WHILE` 语句
 
 SQL PL 块可以执行大多数 SQL 语句，但例外如下：
 
 - 创建索引、表或视图以外的任何对象
 - 删除索引、表或视图以外的任何对象
-- FLUSH EVENT MONITOR
-- REFRESH TABLE
-- RENAME TABLE, RENAME TABLESPACE
-- REVOKE
-- SET INTEGRITY
+- `FLUSH EVENT MONITOR`
+- `REFRESH TABLE`
+- `RENAME TABLE`、`RENAME TABLESPACE`
+- `REVOKE`
+- `SET INTEGRITY`
 
-下是所有 SQL 控制语句的说明。
+下面是所有 SQL 控制语句的说明。
 
 ## BEGIN ATOMIC 语句
 
-所有的 PL 语句块必须以 BEGIN ATOMIC 语句开始，并以相应的 END 语句结束。位于这些关键字之间的 SQL 语句被解释为 SQL PL 控制语句。在这些块之外，这些关键字将导致 SQL 错误。要将一个系列命令作为独立的 SQL 块运行，请确保使用与分号不同的定界符。分号在 SQL PL 中被用作语句的终止符，因此您需要使用不同的字符来分隔脚本中的多个命令。以下示例包含一组将作为 SQL PL 块一部分执行的 SQL（示例 9–42）：
+所有的 PL 语句块必须以 BEGIN ATOMIC 语句开始，并以相应的 END 语句结束。位于这些关键字之间的 SQL 语句被解释为 SQL PL 控制语句。在这些块之外，这些关键字将导致 SQL 错误。
 
-```
-CONNECT TO DB2CERT@nDROP TABLE TEST@nBEGIN ATOMIC DECLARE INT DEFAULT 1; WHILE I <= 10 DO INSERT INTO TEST VALUES(I); SET I = I + 1; END while; END@
-SELECT * FROM TEST@nQUIT@
+要将一系列命令作为独立的 SQL 块运行，请确保使用与分号不同的定界符。分号在 SQL PL 中被用作语句的终止符，因此您需要使用不同的字符来分隔脚本中的多个命令。以下示例包含一组将作为 SQL PL 块一部分执行的 SQL（示例 9–42）：
+
+```sql
+CONNECT TO DB2CERT@n
+DROP TABLE TEST@n
+BEGIN ATOMIC
+  DECLARE INT DEFAULT 1;
+  WHILE I <= 10 DO
+    INSERT INTO TEST VALUES(I);
+    SET I = I + 1;
+  END while;
+END@
+SELECT * FROM TEST@n
+QUIT@
 ```
 
 示例 9–42 文件中的 SQL PL 命令
 
 注意上一个示例中，每个命令都以“@”符号结束。要将此 SQL 作为脚本的一部分执行，必须修改 CLP 命令以允许使用“@”符号作为定界符。
 
-假设该文件名为 SQLBLOCK.DB2，则接下来的命令将执行此 SQL（示例 9-43）：
+假设该文件名为`SQLBLOCK.DB2`，则接下来的命令将执行此 SQL（示例 9-43）：
 
-```
+```bash
 DB2 -td@ -v -f SQLBLOCK.DB2
 ```
 
 ## 示例 9–43 使用 @ 符号作为定界符
 
-与其在整个脚本中使用特殊定界符，可以使用 SET TERMINATOR 语句来更改脚本中的定界符。该语句的语法如下（示例 9–44）：
+与其在整个脚本中使用特殊定界符，可以使用`SET TERMINATOR`语句来更改脚本中的定界符。该语句的语法如下（示例 9–44）：
 
-```
+```sql
 --#SET TERMINATOR <char>
 ```
 
 ## 示例 9–44 设置终止字符
 
-在 V8.2.2 版本之前的 DB2 版本中，--#SET 命令将被读取为注释。这允许脚本与旧版本的 DB2 使用，但如果没有在全局使用定界符，脚本将会失败。
+在 V8.2.2 版本之前的 DB2 版本中，`--#SET`命令将被读取为注释。这允许脚本与旧版本的 DB2 使用，但如果没有在全局使用定界符，脚本将会失败。
 
 更改定界符的脚本示例见下方的示例 9–45。
 
-```
+```sql
 DROP TABLE TDEP;
 CREATE TABLE TDEP (DEPNO CHAR(4));
 --#SET TERMINATOR @
 BEGIN ATOMIC
-DECLARE COUNT INT DEFAULT 5;
-WHILE COUNT > 0 DO
-  INSERT INTO TDEP VALUES 'F'|
-  RTRIM(COUNT);
-  SET COUNT = COUNT - 1;
-END;
+  DECLARE COUNT INT DEFAULT 5;
+  WHILE COUNT > 0 DO
+    INSERT INTO TDEP VALUES 'F'|
+    RTRIM(COUNT);
+    SET COUNT = COUNT - 1;
+  END;
 END@
 --#SET TERMINATOR ;
 SELECT * FROM TDEP;
@@ -13493,56 +12859,58 @@ SELECT * FROM TDEP;
 
 允许多个语句包含分号的最终选项是特殊的“--;”序列。当语句包含此特殊序列时，DB2 命令行处理器会将其视为延续字符，并在找到单独的分号之前，不会执行该语句（示例 9–46）。
 
-```
+```sql
 DROP TABLE TDEPT;
 CREATE TABLE TDEPT (DEPTNO CHAR(4));
 ```
 
-```
+```sql
 BEGIN ATOMIC
-DECLARE COUNT INT DEFAULT 5;-
+  DECLARE COUNT INT DEFAULT 5;-
 
-WHILE COUNT > 0 DO
-  INSERT INTO TDEP VALUES 'F'|
-  RTRIM(CHAR(COUNT));-
-  SET COUNT = COUNT - 1;
-END WHILE;
+  WHILE COUNT > 0 DO
+    INSERT INTO TDEP VALUES 'F'|
+    RTRIM(CHAR(COUNT));-
+    SET COUNT = COUNT - 1;
+  END WHILE;
 END;
 ```
 
-```
+```sql
 SELECT * FROM TDEPT;
 ```
 
 ## 示例 9–46 使用语句延续
 
-虽然 SQL PL 可用于各种 SQL 命令，但 SELECT 语句不会作为可以被取的打开式游标返回给调用程序（无论是 CLP 还是应用程序）。从用户的角度来看，在 BEGIN ATOMIC 块内颁发 SELECT 语句不会返回结果集，而在块之外则会返回。例如，如果对示例 9–42 中的 SQL PL 进行修改，将 SELECT 语句放在控制块内部，则在您执行 DB2 命令时将不会返回结果集（示例 9–47）：
+虽然 SQL PL 可用于各种 SQL 命令，但 SELECT 语句不会作为可以被取的打开式游标返回给调用程序（无论是 CLP 还是应用程序）。从用户的角度来看，在 BEGIN ATOMIC 块内颁发 SELECT 语句不会返回结果集，而在块之外则会返回。
 
-```
+例如，如果对示例 9–42 中的 SQL PL 进行修改，将 SELECT 语句放在控制块内部，则在您执行 DB2 命令时将不会返回结果集（示例 9–47）：
+
+```sql
 CONNECT TO DB2CERT@
 DROP TABLE TEST@
 CREATE TABLE TEST (NUMBER INT);
 ```
 
-```
+```sql
 BEGIN ATOMIC
-DECLARE I INT DEFAULT 1;
-WHILE I <= 10 DO
-  INSERT INTO TEST VALUES(I);
-  SET I = I + 1;
-END WHILE;
-SELECT * FROM TEST;
+  DECLARE I INT DEFAULT 1;
+  WHILE I <= 10 DO
+    INSERT INTO TEST VALUES(I);
+    SET I = I + 1;
+  END WHILE;
+  SELECT * FROM TEST;
 END
 @
 ```
 
 ## 示例 9–47 无输出的 SQL PL
 
-通常，您使用 SQL PL 块对 INSERT、UPDATE 和 DELETE 语句应用复杂逻辑。如果您需要查看这些语句的结果，必须在 SQL PL 块的作用范围之外执行 语句。但是，您可以在 SQL PL 块内部 SELECT 语句来计算值、查找值或用于显示结果以外的任何用途。
+通常，您使用 SQL PL 块对`INSERT`、`UPDATE`和`DELETE`语句应用复杂逻辑。如果您需要查看这些语句的结果，必须在 SQL PL 块的作用范围之外执行语句。但是，您可以在 SQL PL 块内部使用 SELECT 语句来计算值、查找值或用于显示结果以外的任何用途。
 
-对于用户定义函数，RETURN 语句被 BEGIN ATOMIC 块取代（示例 9–48）。
+对于用户定义函数，`RETURN`语句被 BEGIN ATOMIC 块取代（示例 9–48）。
 
-```
+```sql
 CREATE FUNCTION TAX_PAYMENT(SALARY INT) RETURNS INT
 LANGUAGE SQL READS
 BEGIN ATOMIC
@@ -13552,9 +12920,9 @@ BEGIN ATOMIC
 
 然而，您可以使用 SQL PL 块内部 SELECT 语句来计算值、查找值或用于显示结果以外的任何用途。
 
-对于用户定义函数，RETURN 语句被 BEGIN ATOMIC 块取代（示例 9–48）。
+对于用户定义函数，`RETURN`语句被 BEGIN ATOMIC 块取代（示例 9–48）。
 
-```
+```sql
 CREATE FUNCTION TAX_PAYMENT(SALARY INT) RETURNS INT
 LANGUAGE SQL READS
 BEGIN ATOMIC
@@ -13566,9 +12934,9 @@ BEGIN ATOMIC
 
 ## 示例 9–50 SET 语句
 
-对于用户定义函数，RETURN 语句被 BEGIN ATOMIC 块取代（示例 9–48）。
+对于用户定义函数，`RETURN`语句被 BEGIN ATOMIC 块取代（示例 9–48）。
 
-```
+```sql
 CREATE FUNCTION TAX_PAYMENT(SALARY INT) RETURNS INT
 LANGUAGE SQL READS
 BEGIN ATOMIC
@@ -13582,7 +12950,7 @@ BEGIN ATOMIC
 
 允许多个语句包含分号的最终选项是特殊的“--;”序列。当语句包含此特殊序列时，DB2 命令行处理器会将其视为延续字符，并在找到单独的分号之前，不会执行该语句（示例 9–46）。
 
-## 示例 9–53 SET 语句 
+## 示例 9–53 SET 语句
 
 允许多个语句包含分号的最终选项是特殊的“--;”序列。当语句包含此特殊序列时，DB2 命令行处理器会将其视为延续字符，并在找到单独的分号之前，不会执行该语句（示例 9–46）。
 
@@ -13590,27 +12958,23 @@ BEGIN ATOMIC
 
 SQL PL 包含许多逻辑结构，允许用户根据测试结果修改处理过程。IF 语句有三种：
 
-- IF THEN/END IF 块
+- **IF THEN/END IF 块**
+
   当 IF 语句中的条件为 TRUE 时，会执行 IF THEN/END IF 块内的逻辑。如果值不是 TRUE，处理将在 END IF 语句之后继续。
-- IF THEN/ELSE/END IF 块
-  THEN/ELSE/END IF 与 IF 语句相似，不同在于如果 IF 语句中的条件为真，处理将继续直到
 
+- **IF THEN/ELSE/END IF 块**
 
-
-
-
-## 第 9 章 SQL 开发
-
-找到 ELSE 语句后，将跳转到 END IF 语句。如果条件为 FALSE（假），处理将从 ELSE 语句继续到 END IF 语句。
+  THEN/ELSE/END IF 与 IF 语句相似，不同在于如果 IF 语句中的条件为真，处理将继续直到找到 ELSE 语句后，将跳转到 END IF 语句。如果条件为 FALSE（假），处理将从 ELSE 语句继续到 END IF 语句。
 
 ### IF THEN/ELSEIF/ELSE/END IF 块
-尽管 SQL PL 控制语句缺少 CASE 语句，但可以通过使用 `IF THEN/ELSEIF` 逻辑来克服这一局限性。ELSEIF 是多个 `IF THEN/ELSEIF THEN` 代码块的简写形式。当 IF 语句被求值且结果为 FALSE 时，处理将跳转到下一个 ELSEIF 块。
+
+尽管 SQL PL 控制语句缺少 CASE 语句，但可以通过使用`IF THEN/ELSEIF`逻辑来克服这一局限性。ELSEIF 是多个`IF THEN/ELSEIF THEN`代码块的简写形式。当 IF 语句被求值且结果为 FALSE 时，处理将跳转到下一个 ELSEIF 块。
 
 如果此 ELSEIF 为假，处理将继续执行列表中的 ELSEIF 块，直到其中一个 ELSEIF 块为 true（真）。如果没有一个部分为真，处理将转到最后的 ELSE 子句。这种结构允许你处理多个条件，并允许设置一个最终的逻辑部分，用于捕获之前代码中未处理的错误。
 
-示例 9–54 显示的示例了所有类型的 IF 语句。IF 语句内部的逻辑可以包含任何产生 TRUE 或 FALSE 值的有效 SQL。允许包含标准比较运算符（<=, >=, <, >, =, NOT）的布尔表达式，以及产生真或假值的 SQL 语句。
+示例 9–54 显示了所有类型的 IF 语句。IF 语句内部的逻辑可以包含任何产生 TRUE 或 FALSE 值的有效 SQL。允许包含标准比较运算符（`<=`、`>=`、`<`、`>`、`=`、`NOT`）的布尔表达式，以及产生真或假值的 SQL 语句。
 
-```
+```sql
 IF (COMMISSION > 30000) THEN
   BONUS = COMMISSION / 100;
 END IF;
@@ -13636,35 +13000,35 @@ END IF;
 
 之前的示例仅使用布尔表达式来判断条件是 TRUE 还是 FALSE。除了正则表达式运算符外，用户还可以包含 SQL 语句来确定处理应该如何继续。
 
-## SQL 过程语言
+# SQL 过程语言
 
 几个简单的示例说明了 SQL 在 IF 语句中的用法。
 
-### 使用 SQL 运算符检查值
+## 使用 SQL 运算符检查值
 
 与其使用复杂的比较语句，用户可以利用可用的 SQL 语法并代之使用。
 
-```
+```sql
 IF (SALARY BETWEEN 10000 AND 90000) THEN ...
 IF (DEPTNO IN ('A00', 'B01', 'D11')) THEN ...
 ```
 
-### 检查 NULL 值
+## 检查 NULL 值
 
-```
+```sql
 IF (SALARY IS NULL) THEN ...
 ```
 
-### 检查表内是否存在值
+## 检查表内是否存在值
 
-```
+```sql
 IF (SELECT * FROM EMPLOYEE) THEN ...
 IF ((SELECT(*) FROM EMPLOYEE) > 0) THEN ...
 ```
 
-### 根据 SELECT 语句检查值
+## 根据 SELECT 语句检查值
 
-```
+```sql
 IF (EMP.SALARY < (SELECT AVG(SALARY) FROM EMPLOYEE)) THEN ...
 ```
 
@@ -13674,10 +13038,10 @@ IF (EMP.SALARY < (SELECT AVG(SALARY) FROM EMPLOYEE)) THEN ...
 
 WHILE 语句允许用户在代码段内循环，直到条件不再满足。WHILE 语句具有以下格式（示例 9–55）：
 
-```
+```sql
 LABEL:
 WHILE CONDITION DO
-...SQL PL...
+  ...SQL PL...
 END WHILE LABEL;
 ```
 
@@ -13689,25 +13053,25 @@ LABEL 字段对于 WHILE 语句是可选的，可以用于唯一标识此代码�
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_594_0.png)
 
-## 第 9 章 SQL 开发
-
 下方显示了一个示例 WHILE 语句（示例 9–56）：
 
-```
+```sql
 BEGIN ATOMIC
-DECLARE COUNT INT DEFAULT 0;
+  DECLARE COUNT INT DEFAULT 0;
 
-WHILE COUNT > 0 DO
-  INSERT INTO DEPARTMENTS VALUES 'F'|RTRIM(CHAR(COUNT));
-  SET COUNT = COUNT - 1;
-END WHILE;
+  WHILE COUNT > 0 DO
+    INSERT INTO DEPARTMENTS VALUES 'F'|RTRIM(CHAR(COUNT));
+    SET COUNT = COUNT - 1;
+  END WHILE;
 ```
 
-示例 9–56 WHILE 示例
+
+
+# 示例 9–56 WHILE 示例
 
 ## FOR 语句
 
-熟悉其他编程语言的用户可能期望 FOR 语句以类似的方式工作。然而，FOR 语句的设计并不是为了根据循环计数器执行“n” 次程序逻辑，而是为了在 SELECT 语句返回的结果集的行上执行逻辑。FOR 语句的语法请见示例 9–57。
+熟悉其他编程语言的用户可能期望 `FOR` 语句以类似的方式工作。然而，`FOR` 语句的设计并不是为了根据循环计数器执行“n”次程序逻辑，而是为了在 `SELECT` 语句返回的结果集的行上执行逻辑。`FOR` 语句的语法请见示例 9–57。
 
 ```
 LABEL:
@@ -13716,11 +13080,11 @@ FOR ROW_LABEL AS SELECT STATEMENT DO
 END FOR LABEL;
 ```
 
-示例 9–57 FOR 语句
+**示例 9–57 FOR 语句**
 
-LABEL 字段对于 FOR 语句是可选的，可以用于唯一标识此代码块。LABEL 由一个遵循 SQL 列相同命名规则的唯一名称组成。如果 FOR 语句指定了 LABEL，则它也必须放置在 END FOR 语句上。
+`LABEL` 字段对于 `FOR` 语句是可选的，可以用于唯一标识此代码块。`LABEL` 由一个遵循 SQL 列相同命名规则的唯一名称组成。如果 `FOR` 语句指定了 `LABEL`，则它也必须放置在 `END FOR` 语句上。
 
-ROW_LABEL 类似于 FOR LABEL，但它用于标识 SELECT 语句返回的数据行。以下代码块根据 BONUS 数据从 EMPLOYEE 表中进行选择（示例 9–58）：
+`ROW_LABEL` 类似于 `FOR LABEL`，但它用于标识 `SELECT` 语句返回的数据行。以下代码块根据 `BONUS` 数据从 `EMPLOYEE` 表中进行选择（示例 9–58）：
 
 ```
 SET TOTAL_BONUS = 0;
@@ -13729,21 +13093,21 @@ FOR EMP AS SELECT FROM EMPLOYEE WHERE BONUS > 1000 DO
 END FOR;
 ```
 
-示例 9–58 FOR 循环语句示例
+**示例 9–58 FOR 循环语句示例**
 
-使用循环时，用户不应声明可能与 SELECT 语句返回的列发生冲突的变量。如果列名已经定义为变量，你将收到引用以下内容的错误信息：
+使用循环时，用户不应声明可能与 `SELECT` 语句返回的列发生冲突的变量。如果列名已经定义为变量，你将收到引用以下内容的错误信息：
 
 ## SQL 过程语言 569
 
-赋值语句中的变量无效。这是由于 DB2 尝试将值赋给一个被视为行的一部分的变量，而不是最初的那个变量。结果集的名称优先级高于声明的（DECLARED） 变量。这种问题在具有相同列名的嵌套 FOR 语句中不会发生，因为每个答案都将有不同的行标签。
+赋值语句中的变量无效。这是由于 DB2 尝试将值赋给一个被视为行的一部分的变量，而不是最初的那个变量。结果集的名称优先级高于声明的（`DECLARED`）变量。这种问题在具有相同列名的嵌套 `FOR` 语句中不会发生，因为每个答案都将有不同的行标签。
 
-当结果作为 FOR 语句的一部分返回时，可以通过直接列名或通过行标签来访问每一列。使用显式的行标签和列名会更好，以避免在日后尝试修改（或调试）代码时产生歧义。
+当结果作为 `FOR` 语句的一部分返回时，可以通过直接列名或通过行标签来访问每一列。使用显式的行标签和列名会更好，以避免在日后尝试修改（或调试）代码时产生歧义。
 
 ## ITERATE 语句
 
-ITERATE 语句用于使处理从 FOR 或 WHILE 循环的开始处继续。这用于记录不符合某些标准且逻辑需要下一条记录并重新开始处理的情况。
+`ITERATE` 语句用于使处理从 `FOR` 或 `WHILE` 循环的开始处继续。这用于记录不符合某些标准且逻辑需要下一条记录并重新开始处理的情况。
 
-ITERATE 语句必须提供一个标签作为参数，因为任何与此函数一起使用的 FOR 或 WHILE 语句都必须有一个关联的标签。ITERATE 语句必须提供标签作为参数，因为任何使用此函数的 FOR 或 WHILE 语句都必须有一个相应的标签。用户在循环中使用 ITERATE 语句时应小心，以确保在迭代之前增加或减少变量。下面是 ITERATE 语句的一个示例用法（示例 9–59）：
+`ITERATE` 语句必须提供一个标签作为参数，因为任何与此函数一起使用的 `FOR` 或 `WHILE` 语句都必须有一个关联的标签。用户在循环中使用 `ITERATE` 语句时应小心，以确保在迭代之前增加或减少变量。下面是 `ITERATE` 语句的一个示例用法（示例 9–59）：
 
 ```
 SET TOTAL_BONUS = 0;
@@ -13757,11 +13121,11 @@ FOR EMP AS SELECT FROM EMPLOYEE DO
 NEXT
 ```
 
-示例 9–59 ITERATE 语句
+**示例 9–59 ITERATE 语句**
 
 ## LEAVE 语句
 
-LEAVE 语句配合 FOR 和 WHILE 循环中的 ITERATE 语句。当用户需要退出循环时，可以使用 LEAVE 语句将处理转移到 END 之后的语句。LEAVE 语句要求提供标签作为参数，因为任何想要退出的 FOR 或 WHILE 语句都必须提供标签。该-
+`LEAVE` 语句配合 `FOR` 和 `WHILE` 循环中的 `ITERATE` 语句。当用户需要退出循环时，可以使用 `LEAVE` 语句将处理转移到 `END` 之后的语句。`LEAVE` 语句要求提供标签作为参数，因为任何想要退出的 `FOR` 或 `WHILE` 语句都必须提供标签。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_596_0.png)
 
@@ -13780,11 +13144,11 @@ FOR EMP AS SELECT FROM EMPLOYEE DO
 END FOR ADD_BONUS;
 ```
 
-示例 9–60 LEAVE 语句
+**示例 9–60 LEAVE 语句**
 
 ## RETURN 语句
 
-RETURN 语句用于退出函数并返回值。SQL PL 命令块或触发器不支持 RETURN 语句。如果需要返回代码，应使用 SIGNAL 命令。RETURN 语句有一个参数，可以是常量、变量或返回单个值的 SELECT 语句，或者是 NULL 值。表函数可以以 SELECT 语句的形式返回多行。
+`RETURN` 语句用于退出函数并返回值。SQL PL 命令块或触发器不支持 `RETURN` 语句。如果需要返回代码，应使用 `SIGNAL` 命令。`RETURN` 语句有一个参数，可以是常量、变量或返回单个值的 `SELECT` 语句，或者是 `NULL` 值。表函数可以以 `SELECT` 语句的形式返回多行。
 
 以下函数返回输入值的立方（示例 9–61）：
 
@@ -13798,32 +13162,28 @@ BEGIN ATOMIC
 END
 ```
 
-示例 9–61 RETURN 语句
+**示例 9–61 RETURN 语句**
 
 ## SIGNAL 语句
 
-在处理你的 SQL PL 代码期间发生异常时，你可能希望使用 SIGNAL 命令向应用程序告知问题。SIGNAL 命令具有以下格式（示例 9–62）：
+在处理你的 SQL PL 代码期间发生异常时，你可能希望使用 `SIGNAL` 命令向应用程序告知问题。`SIGNAL` 命令具有以下格式（示例 9–62）：
 
 ```
 SIGNAL SQLSTATE VALUE SET MESSAGE_TEXT='...';
 SIGNAL CONDITION SET MESSAGE_TEXT='...'
 ```
 
-示例 9–62 SIGNAL 语句
-
-
-
-
+**示例 9–62 SIGNAL 语句**
 
 ## SQL 过程语言
 
-SIGNAL 命令的第一种形式要求你必须知道想要抛出的 SQLSTATE。例如，SQLSTATE '02000' 表示未找到任何记录。`SET MESSAGE_TEXT` 关键字允许你将诊断信息返回给调用应用程序，以便进行额外的错误处理。
+`SIGNAL` 命令的第一种形式要求你必须知道想要抛出的 `SQLSTATE`。例如，`SQLSTATE '02000'` 表示未找到任何记录。`SET MESSAGE_TEXT` 关键字允许你将诊断信息返回给调用应用程序，以便进行额外的错误处理。
 
-该函数有多种使用方式。一个初始的 `SELECT` 语句可能会返回有效行，但可能不符合函数所需的标准。在这种情况下，SQLSTATE '02000' 可能是一个可以发送回调用应用程序的有效错误。
+该函数有多种使用方式。一个初始的 `SELECT` 语句可能会返回有效行，但可能不符合函数所需的标准。在这种情况下，`SQLSTATE '02000'` 可能是一个可以发送回调用应用程序的有效错误。
 
-在其他情况下，用户可能希望设置特定的错误代码，用于用于表示由函数生成的错误代码，而不是 SQL 代码本身的错误。对于这些类型的错误代码，用户应该考虑使用以 7、8、9 以及 1 到 Z 开头的 SQLSTATE。这些范围未被 DB2 使用，可供用户错误使用。
+在其他情况下，用户可能希望设置特定的错误代码，用于表示由函数生成的错误代码，而不是 SQL 代码本身的错误。对于这些类型的错误代码，用户应该考虑使用以 7、8、9 以及 1 到 Z 开头的 `SQLSTATE`。这些范围未被 DB2 使用，可供用户错误使用。
 
-原始的 `CUBEIT` 函数在以下示例中经过修改，以便当数字太大而无法进行 CUBE 运算时抛出错误（示例 9–63）：
+原始的 `CUBEIT` 函数在以下示例中经过修改，以便当数字太大而无法进行 `CUBE` 运算时抛出错误（示例 9–63）：
 
 ```sql
 CREATE FUNCTION CUBEIT(CUBE INT) RETURNS INT
@@ -13839,17 +13199,21 @@ BEGIN ATOMIC
 END
 ```
 
-## 示例 9–63 SIGNAL 示例
+**示例 9–63 SIGNAL 示例**
 
 无效立方体值的结果在示例 9–64 中：
 
+```
 VALUES CUBEIT(600);
+```
 
+```
 1 SQL0438N 抛出带有诊断文本的错误："Number too big to cube!" SQLSTATE=98000
+```
 
-## 示例 9–64 SIGNAL 结果
+**示例 9–64 SIGNAL 结果**
 
-作为在应用程序中放置 SQLSTATE 代码的替代方案，用户可以为 SQLSTATE 声明符号名称。这通过 `DECLARE` 语句实现。示例 9–65 声明了坏立方体数字 SQLSTATE 的符号名称为 TOOBIG。
+作为在应用程序中放置 `SQLSTATE` 代码的替代方案，用户可以为 `SQLSTATE` 声明符号名称。这通过 `DECLARE` 语句实现。示例 9–65 声明了坏立方体数字 `SQLSTATE` 的符号名称为 `TOOBIG`。
 
 ## 第 9 章 SQL 开发
 
@@ -13868,9 +13232,9 @@ BEGIN ATOMIC
 END
 ```
 
-## 示例 9–65 使用 DECLARE 语句的 SIGNAL
+**示例 9–65 使用 DECLARE 语句的 SIGNAL**
 
-程序现在不再根据精确的 SQLSTATE 抛出错误，而是可以使用符号名称（TOOBIG）抛出错误。注意，消息文本必须在抛出错误的地方设置，而不是在声明部分。
+程序现在不再根据精确的 `SQLSTATE` 抛出错误，而是可以使用符号名称（`TOOBIG`）抛出错误。注意，消息文本必须在抛出错误的地方设置，而不是在声明部分。
 
 ## GET DIAGNOSTICS
 
@@ -13880,9 +13244,9 @@ END
 GET DIAGNOSTICS VARIABLE = ROW_COUNT;
 ```
 
-## 示例 9–66 GET DIAGNOSTICS 语句
+**示例 9–66 GET DIAGNOSTICS 语句**
 
-语句中引用的 `VARIABLE` 是一个声明的变量，将包含受上一个 SQL 语句影响的行数。当在 `UPDATE` 命令中没有记录被更新时，以下 SQL 将抛出一个 SQLSTATE（示例 9–67）：
+语句中引用的 `VARIABLE` 是一个声明的变量，将包含受上一个 SQL 语句影响的行数。当在 `UPDATE` 命令中没有记录被更新时，以下 SQL 将抛出一个 `SQLSTATE`（示例 9–67）：
 
 ```sql
 BEGIN ATOMIC
@@ -13897,7 +13261,7 @@ BEGIN ATOMIC
   END IF;
 ```
 
-## 示例 9–67 GET DIAGNOSTICS 示例
+**示例 9–67 GET DIAGNOSTICS 示例**
 
 ## SQL PL 示例
 
@@ -13907,7 +13271,7 @@ BEGIN ATOMIC
 
 `EMPLOYEE` 表中的税额根据 `TAX_RATE` 计算，该表包含了基于薪资增量金额的税率百分比。此表包含以下数据（表 9–1）：
 
-## 表 9–1 税收表
+**表 9–1 税收表**
 
 | 薪资范围 | 税率 |
 |---|---|
@@ -13934,7 +13298,7 @@ INSERT INTO TAX_RATE VALUES
 (4,0,0.30);
 ```
 
-## 示例 9–68 TAX_RATE 定义
+**示例 9–68 TAX_RATE 定义**
 
 税额的处理基于以下逻辑：
 
@@ -13944,7 +13308,7 @@ INSERT INTO TAX_RATE VALUES
 - 如果剩余薪资不零，则进入下一个档位。
 - 将税率百分比加到税额。
 - 从剩余薪资中减去税额金额。
-- 确保 TAX_RATE 表按升序排序。否则可能会得到错误结果。
+- 确保 `TAX_RATE` 表按升序排序。否则可能会得到错误结果。
 
 税计算可以通过多种方式实现：
 
@@ -13979,7 +13343,7 @@ BEGIN ATOMIC
 END
 ```
 
-## 示例 9–69 TAX_PAYMENT 函数
+**示例 9–69 TAX_PAYMENT 函数**
 
 创建此函数后，用户可以在任何 SQL 语句中引用该函数。`VALUES` 子句对于测试新用户定义的功能（示例 9–70）非常有用：
 
@@ -13989,7 +13353,7 @@ TAX_PAYMENT(35000);
 5500
 ```
 
-## 示例 9–70 TAX_PAYMENT 计算
+**示例 9–70 TAX_PAYMENT 计算**
 
 现在该函数可以作为 `INSERT` 语句的一部分来更新税额。假设 `EMPL`（员工）表具有以下简单设计：
 
@@ -14001,9 +13365,9 @@ TAX INT NOT NULL
 );
 ```
 
-## 示例 9–71 EMPL 表
+**示例 9–71 EMPL 表**
 
-向此表（示例 9–71）插入具有正确税值的记录，SQL类似于（示例 9–72）：
+向此表插入具有正确税值的记录，SQL 类似于（示例 9–72）：
 
 ```sql
 INSERT INTO EMP VALUES
@@ -14020,10 +13384,7 @@ SELECT * FROM EMP;
 | 2 | 30000 | 4500 |
 | 3 | 64000 | 12700 |
 
-## 示例 9–72 向 EMPL 表插入记录
-
-
-
+**示例 9–72 向 EMPL 表插入记录**
 
 ## 第 9 章 SQL 开发
 
@@ -14073,7 +13434,9 @@ END L1;
 SET X.TAX = TAX_PAID;
 ```
 
-示例 9-73 触发器体中的 `TAX_PAYMENT`
+
+
+# 示例 9-73 触发器体中的 `TAX_PAYMENT`
 
 逻辑上唯一的更改（除了定义触发器而非函数外）是在逻辑开始处替换了 `REMAINDER = X.SALARY`，并在结尾处使用 `SET X.TAX = TAX_PAID` 代替 `RETURN` 语句。
 
@@ -14090,13 +13453,14 @@ INSERT INTO EMP VALUES
 SELECT * FROM EMP;
 ```
 
-| EMPNO  SALARY    TAX |
-| 1      50000      8500 |
-| 2      30000      4500 |
-| 3      64000     12700 |
-| 1      50000      8500 |
-| 2      30000      4500 |
-| 3      64000     12700 |
+| EMPNO | SALARY | TAX |
+|-------|--------|-----|
+| 1     | 50000  | 8500 |
+| 2     | 30000  | 4500 |
+| 3     | 64000  | 12700 |
+| 1     | 50000  | 8500 |
+| 2     | 30000  | 4500 |
+| 3     | 64000  | 12700 |
 
 示例 9–74 使用触发器向 `EMP` 表插入记录
 
@@ -14173,19 +13537,17 @@ SET X.TAX = TAX_PAID;
 
 逻辑上唯一的更改（除了定义触发器而非函数外）是在逻辑开始处替换了 `REMAINDER = X.SALARY`，并在结尾处使用 `SET X.TAX = TAX_PAID` 代替 `RETURN` 语句。
 
-``` 
-
 ## 存储过程中的 SQL PL
 
-存储过程可以使用多种语言编写，如 C、C++、Java 和 SQL PL。SQL PL 是一种专门为 DB2 设计的语言，提供了丰富的功能set，使其适用于许多用途，包括编写存储过程。它的额外优点是不需要任何外部编译器，并且与许多其他高级语言相似，因此容易学习。
+存储过程可以使用多种语言编写，如 C、C++、Java 和 SQL PL。SQL PL 是一种专门为 DB2 设计的语言，提供了丰富的功能集，使其适用于许多用途，包括编写存储过程。它的额外优点是不需要任何外部编译器，并且与许多其他高级语言相似，因此容易学习。
 
-SQL PL 代码可以用于 DB2 存储过程的体，但其语法在许多方面与 SQL PL 控制语句有不同。SQL PL 存储过程支持以下扩展是器、、DF 或 或允许允许允许的扩展：
+SQL PL 代码可以用于 DB2 存储过程的体，但其语法在许多方面与 SQL PL 控制语句有不同。SQL PL 存储过程支持以下扩展：
 
-- ALLOCATE CURSOR, ASSOCIATE LOCATORS LOC CALL
+- `ALLOCATE CURSOR`、`ASSOCIATE LOCATORS`、`LOC CALL`
 
-SQL PL 控制语句可以调用存储过程，但它们无法处理结果集。这就是为什么 ALLOCATE 和 ASSOCIATE 语句在控制语句中不支持的原因。
+SQL PL 控制语句可以调用存储过程，但它们无法处理结果集。这就是为什么 `ALLOCATE` 和 `ASSOCIATE` 语句在控制语句中不支持的原因。
 
-- PREPARE, DESCRIBE, OPEN, FETCH
+- `PREPARE`、`DESCRIBE`、`OPEN`、`FETCH`
 
 ## 使用存储过程
 
@@ -14194,27 +13556,23 @@ SQL PL 控制语句可以调用存储过程，但它们无法处理结果集。�
 - 公用例程的集中安全、管理和维护
 - 增强功能
 
-
-
-
-
 # 存储过程
 
-如果这是该块的最后一个语句，则 COMMIT 工作。
+如果这是该块的最后一个语句，则 `COMMIT` 工作。
 
-- CASE, GOTO, LOOP, REPEAT 语句
+- `CASE`、`GOTO`、`LOOP`、`REPEAT` 语句
 
-这些大多数控制语句都可以通过 IF 和 WHILE 语句的组合来模拟。虽然这可能会导致逻辑更加复杂，但它并没有降低 SQL PL 的功能。
+这些大多数控制语句都可以通过 `IF` 和 `WHILE` 语句的组合来模拟。虽然这可能会导致逻辑更加复杂，但它并没有降低 SQL PL 的功能。
 
 - 过程复合语句 (procedure compound statement)
 
 SQL 控制语句已经是过程复合语句的一部分，并且不支持这些结构的嵌套。
 
-- RESIGNAL
+- `RESIGNAL`
 
 SQL PL 块可以发出（signal）错误，但不支持重新抛出（resign）为不同的错误。
 
-- INSERT, UPDATE, DELETE
+- `INSERT`、`UPDATE`、`DELETE`
 
 在用户定义函数 (UDF) 中使用的 SQL PL 具有一个额外的限制，即它不能发布任何数据修改命令。触发器、用户定义表函数以及作为 SQL 命令运行的 SQL PL 语句可以修改数据。用 C、C++ 或 Java 编写的外部 UDF 可以在程序范围内更新数据。
 
@@ -14222,9 +13580,9 @@ SQL PL 块可以发出（signal）错误，但不支持重新抛出（resign）�
 
 # CREATE PROCEDURE 语句
 
-通过使用 CREATE PROCEDURE 语句创建 SQL PL 过程，如示例 9–77 所示：
+通过使用 `CREATE PROCEDURE` 语句创建 SQL PL 过程，如示例 9–77 所示：
 
-```
+```sql
 CREATE PROCEDURE CREATE_T_EMP(
   LANGUAGE SQL
 BEGIN
@@ -14239,57 +13597,57 @@ BEGIN
 END
 ```
 
-示例 9–77 CREATE PROCEDURE 语句
+示例 9–77 `CREATE PROCEDURE` 语句
 
-CREATE PROCEDURE 语句允许在例体中使用 SQL PL 语句。CREATE_T_EMP 存储过程删除 T_EMP 表并重新创建它以便进一步处理。
+`CREATE PROCEDURE` 语句允许在例体中使用 SQL PL 语句。`CREATE_T_EMP` 存储过程删除 `T_EMP` 表并重新创建它以便进一步处理。
 
-CREATE PROCEDURE 命令的简化结构如下（示例 9–78）：
+`CREATE PROCEDURE` 命令的简化结构如下（示例 9–78）：
 
-- [1] CREATE PROCEDURE NAME(IN OUT INOUT ARG1 TYPE,
-- [2] LANGUAGE SQL CONTAINS SQL IN OUT ARG2 TYPE2, ...)
-- [3] BEGIN ... END
+- [1] `CREATE PROCEDURE NAME(IN OUT INOUT ARG1 TYPE,`
+- [2] `LANGUAGE SQL CONTAINS SQL IN OUT ARG2 TYPE2, ...)`
+- [3] `BEGIN ... END`
 
-# **示例 9–78** CREATE PROCEDURE 语句的各个
+# 示例 9–78 `CREATE PROCEDURE` 语句的各个部分
 
-下面将讨论 CREATE PROCEDURE 的部分。
+下面将讨论 `CREATE PROCEDURE` 的部分。
 
-- 1. CREATE PROCEDURE NAME(...)
+## 1. `CREATE PROCEDURE NAME(...)`
 
-CREATE PROCEDURE 语句的初始部分为存储过程命名，并定义参数的名称和类型。存储过程的每个参数都必须定义，无论它是输入变量 (IN)、输出变量 (OUT) 还是两者 (INOUT)。存储过程中内部没有可选参数的概念。CREATE PROCEDURE 命令不允许将自定义类型作为存储过程的参数。
+`CREATE PROCEDURE` 语句的初始部分为存储过程命名，并定义参数的名称和类型。存储过程的每个参数都必须定义，无论它是输入变量 (`IN`)、输出变量 (`OUT`) 还是两者 (`INOUT`)。存储过程中内部没有可选参数的概念。`CREATE PROCEDURE` 命令不允许将自定义类型作为存储过程的参数。
 
-- 2. LANGUAGE SQL CONTAINS SQL
+## 2. `LANGUAGE SQL CONTAINS SQL`
 
-这是存储过程定义中所需的强制性子句。选项可以是 READ SQL DATA、CONTAINS SQL 或 MODIFIES SQL DATA。关于结果集的额外选项在 DB2 关于该命令的文档中有所介绍。
+这是存储过程定义中所需的强制性子句。选项可以是 `READ SQL DATA`、`CONTAINS SQL` 或 `MODIFIES SQL DATA`。关于结果集的额外选项在 DB2 关于该命令的文档中有所介绍。
 
-- 3. BEGIN ... END 块
+## 3. `BEGIN ... END` 块
 
-存储过程的所有逻辑都在 BEGIN/END 块中。可以使用 Control Center 或 DROP 命令删除存储过程（示例 9–79）：
+存储过程的所有逻辑都在 `BEGIN/END` 块中。可以使用 Control Center 或 `DROP` 命令删除存储过程（示例 9–79）：
 
-```
+```sql
 DROP PROCEDURE STORED-PROCEDURE-NAME <type1, type2,...>
 ```
 
-# **示例 9–79** DROP PROCEDURE 语句
+# 示例 9–79 `DROP PROCEDURE` 语句
 
-如果当前模式 (SCHEMA) 中存在多个相同的存储过程，则需要包含该特定版本存储过程的数据类型，以便 DB2 确定需要删除哪一个。
+如果当前模式 (`SCHEMA`) 中存在多个相同的存储过程，则需要包含该特定版本存储过程的数据类型，以便 DB2 确定需要删除哪一个。
 
-存储过程无法进行更新。例程需要删除并重新创建。这就是为什么要要在单独文件中保留所有 CREATE 语句副本的一个非常好的理由。
+存储过程无法进行更新。例程需要删除并重新创建。这就是为什么要在单独文件中保留所有 `CREATE` 语句副本的一个非常好的理由。
 
-# CALL, ALLOCATE 和 ASSOCIATE
+# CALL、ALLOCATE 和 ASSOCIATE
 
-CALL、ALLOCATE 和 ASSOCIATE 关键字均用于从另一个存储过程中检索结果。CALL 语句用于调用存储过程（示例 9–80）：
+`CALL`、`ALLOCATE` 和 `ASSOCIATE` 关键字均用于从另一个存储过程中检索结果。`CALL` 语句用于调用存储过程（示例 9–80）：
 
-```
+```sql
 CALL PROCEDURE_NAME(PARM1, PARM2, ...)
 ```
 
-# 示例 9–80 CALL 语句
+# 示例 9–80 `CALL` 语句
 
-如果存储过程返回结果集（游标），则调用程序必须 ALLOCATE 一个游标来处理行，并将该游标 ASSOCIATE 到返回的结果集上。
+如果存储过程返回结果集（游标），则调用程序必须 `ALLOCATE` 一个游标来处理行，并将该游标 `ASSOCIATE` 到返回的结果集上。
 
-例如，存储过程 EMPR 被另一个存储过程调用。通过使用与结果集关联的游标来打开结果集（示例 9–81）：
+例如，存储过程 `EMPR` 被另一个存储过程调用。通过使用与结果集关联的游标来打开结果集（示例 9–81）：
 
-```
+```sql
 CALL EMPR;
 ASSOCIATE RESULT SET LOCATOR (LOC1) WITH PROCEDURE EMPR;
 ALLOCATE C CURSOR FOR RESULT SET LOC1;
@@ -14297,21 +13655,21 @@ ALLOCATE C CURSOR FOR RESULT SET LOC1;
 
 # 示例 9–81 使用过程的结果集
 
-在读取游标内容时，不需要 OPEN。EMPR 过程已经返回了一个已打开的游标供处理。
+在读取游标内容时，不需要 `OPEN`。`EMPR` 过程已经返回了一个已打开的游标供处理。
 
-关于 ALLOCATE、ASSOCIATE 和 CALL 的更多详细信息可以在 DB2 SQL Reference 文档中找到。
+关于 `ALLOCATE`、`ASSOCIATE` 和 `CALL` 的更多详细信息可以在 DB2 SQL Reference 文档中找到。
 
-CALL 语句可以用于触发器、函数、SQL 和存储过程。
+`CALL` 语句可以用于触发器、函数、SQL 和存储过程。
 
-# PREPARE, EXECUTE 和参数标记 (Parameter Markers)
+# PREPARE、EXECUTE 和参数标记 (Parameter Markers)
 
-执行期间，存储过程可能需要动态构建 SQL 语句并提交处理。这种动态 SQL 执行可以通过使用 PREPARE 和 EXECUTE 语句来实现。
+执行期间，存储过程可能需要动态构建 SQL 语句并提交处理。这种动态 SQL 执行可以通过使用 `PREPARE` 和 `EXECUTE` 语句来实现。
 
-PREPARE 语句用于检查语句语法并将其转换为可以提交给 DB2 执行的格式。EXECUTE 语句将语句提交到数据库中执行。示例 9–82 说明了这一概念。
+`PREPARE` 语句用于检查语句语法并将其转换为可以提交给 DB2 执行的格式。`EXECUTE` 语句将语句提交到数据库中执行。示例 9–82 说明了这一概念。
 
 # 第 9 章 SQL 开发
 
-```
+```sql
 DECLARE EOF INT DEFAULT 0;
 DECLARE STMT VARCHAR(200);
 DECLARE CONTINUE HANDLER FOR NOT FOUND
@@ -14321,23 +13679,23 @@ SET STMT = 'CREATE TABLE T_EMP(EMP CHAR(6), SALARY INT)';
 EXECUTE IMMEDIATE STMT;
 ```
 
-# 示例 9–82 PREPARE 语句
+# 示例 9–82 `PREPARE` 语句
 
-STMT 变量可以更改并多次执行（示例 9–83）：
+`STMT` 变量可以更改并多次执行（示例 9–83）：
 
-```
+```sql
 DECLARE STMT VARCHAR(200);
 SET STMT = 'CREATE TABLE T_EMP(EMP CHAR(6), SALARY INT)';
 PREPARE S1 FROM STMT;
 ```
 
-# 示例 9–83 EXECUTE 语句
+# 示例 9–83 `EXECUTE` 语句
 
-参数标记 (?) 被插入到 SQL 中，并用于 select、insert 和 delete 语句。
+参数标记 (`?`) 被插入到 SQL 中，并用于 `SELECT`、`INSERT` 和 `DELETE` 语句。
 
 例如，以下 SQL 语句将删除尚未定义的员工（示例 9–84）：
 
-```
+```sql
 DECLARE EMPNO CHAR(6);
 SET STMT = 'DELETE FROM EMPLOYEE WHERE EMPNO = ?';
 PREPARE S1 FROM STMT;
@@ -14353,9 +13711,9 @@ EXECUTE S1 USING EMPNO;
 
 # 游标、OPEN、CLOSE 和 FETCH
 
-DECLARE CURSOR 语句定义了一个后续用于 OPEN 和 FETCH 记录的游标。DECLARE 语句包含了检索数据的 SQL 语句（示例 9–86）：
+`DECLARE CURSOR` 语句定义了一个后续用于 `OPEN` 和 `FETCH` 记录的游标。`DECLARE` 语句包含了检索数据的 SQL 语句（示例 9–86）：
 
-```
+```sql
 DECLARE CURSOR-NAME CURSOR [WITH HOLD]
 [RETURN TO CALLER | TO CLIENT]
 FOR SELECT-STATEMENT
@@ -14363,43 +13721,39 @@ FOR SELECT-STATEMENT
 
 # 示例 9–86 声明游标
 
-WITH HOLD 子句规定了 COMMIT 发生时游标的情况。通常游标会在 COMMIT 发生时关闭，但当指定了 HOLD 时，它将保持打开以便进一步处理。这对于需要处理大量数据且存储过程想要“保存”到目前的工作非常有用。
+`WITH HOLD` 子句规定了 `COMMIT` 发生时游标的情况。通常游标会在 `COMMIT` 发生时关闭，但当指定了 `HOLD` 时，它将保持打开以便进一步处理。这对于需要处理大量数据且存储过程想要“保存”到目前的工作非常有用。
 
-RETURN 子句是可选的，它指定游标返回给调用程序 (TO CALLER) 或直接返回给客户端 (TO CLIENT)。
+`RETURN` 子句是可选的，它指定游标返回给调用程序 (`TO CALLER`) 或直接返回给客户端 (`TO CLIENT`)。
 
-一旦定义了游标，就可以随后将其打开。OPEN 语句包含了游标名称以及任何存在的参数标记值（示例 9–87）：
+一旦定义了游标，就可以随后将其打开。`OPEN` 语句包含了游标名称以及任何存在的参数标记值（示例 9–87）：
 
-```
+```sql
 OPEN CURSOR-NAME
 ```
 
-# 示例 9–87 OPEN 语句
+# 示例 9–87 `OPEN` 语句
 
-当语句打开后，可以使用 FETCH 语句从返回的行中检索值（示例 9–88）：
+当语句打开后，可以使用 `FETCH` 语句从返回的行中检索值（示例 9–88）：
 
-```
+```sql
 FETCH FROM CURSOR-NAME INTO VAR1, VAR2, ...
 ```
 
-# 示例 9–88 FETCH 语句
+# 示例 9–88 `FETCH` 语句
 
 处理完成后，可以关闭游标（示例 9–89）：
 
-```
+```sql
 CLOSE CURSOR-NAME
 ```
 
-# 示例 9–89 CLOSE 语句
-
-
-
-
+# 示例 9–89 `CLOSE` 语句
 
 ## 第9章 开发 SQL
 
 以下代码说明了本节中描述的所有元素的使用（示例 9–90）。
 
-```
+```sql
 CREATE PROCEDURE FIND_SALARY()
 LANGUAGE SQL
 BEGIN
@@ -14426,43 +13780,49 @@ CLOSE C1;
 
 ## 示例 9–90 使用游标处理记录
 
-此代码选择 EMPLOYEE 表中的所有记录（游标 C1）并将其放入 T_RESULTS 表中。在将记录插入此表之前，会先删除 T_RESULTS 的内容（首先执行 EXECUTE IMMEDIATE），然后准备一个带有两个参数标记的 INSERT 语句。当从结果集中读取每条记录时，将使用从 EMPLOYEE 表返回的值来执行已准备的插入语句。注意 EOF 的值，它表示已到达记录的末尾。
+此代码选择 `EMPLOYEE` 表中的所有记录（游标 `C1`）并将其放入 `T_RESULTS` 表中。在将记录插入此表之前，会先删除 `T_RESULTS` 的内容（首先执行 `EXECUTE IMMEDIATE`），然后准备一个带有两个参数标记的 `INSERT` 语句。当从结果集中读取每条记录时，将使用从 `EMPLOYEE` 表返回的值来执行已准备的插入语句。注意 `EOF` 的值，它表示已到达记录的末尾。
 
 ## COMMIT、ROLLBACK 和 SAVEPOINTS
 
 在存储过程连接到数据库之前，必须由客户端应用程序建立连接。SQL PL 存储过程本身无法连接数据库；它依赖于应用程序为其完成此操作。
 
-在 SQL PL 中可以发布 COMMIT 和 ROLLBACK。通常情况下，COMMIT 或 ROLLBACK 会留给调用程序处理，除非存储过程必须撤销其生成的更新。
+在 SQL PL 中可以发布 `COMMIT` 和 `ROLLBACK`。通常情况下，`COMMIT` 或 `ROLLBACK` 会留给调用程序处理，除非存储过程必须撤销其生成的更新。
 
-开发者还可以在 SQL 中创建中间 SAVEPOINTS（保存点），这样他们就可以选择性地回滚（ROLLBACK）到代码中的之前的一个点。这一功能在处理模块化代码和存储过程时提供了更大的灵活性。SAVEPOINTS 在存储过程内部非常有用，因为由于错误，部分工作可能需要回滚。SAVEPOINT 的定义类似于下所示（示例 9–91）：
+开发者还可以在 SQL 中创建中间 `SAVEPOINTS`（保存点），这样他们就可以选择性地回滚（`ROLLBACK`）到代码中的之前的一个点。这一功能在处理模块化代码和存储过程时提供了更大的灵活性。`SAVEPOINTS` 在存储过程内部非常有用，因为由于错误，部分工作可能需要回滚。`SAVEPOINT` 的定义类似于下所示（示例 9–91）：
 
-```
+```sql
 SAVEPOINT SAVEPOINT-NAME ON ROLLBACK RETAIN CURSORS;
 ```
 
+
+
 ## 示例 9–91 SAVEPOINT 语句
 
-使用 SAVEPOINT 的最佳说明由以下示例所示（示例 9–92）：
+使用 `SAVEPOINT` 的最佳说明由以下示例所示（示例 9–92）：
 
 ```
 INSERT INTO EMP VALUES ('111111','FRED','A20');
+
 SAVEPOINT SPI ON ROLLBACK RETAIN CURSORS;
+
 INSERT INTO EMP VALUES ('222222','PAUL','A31');
+
 ROLLBACK TO SAVEPOINT SPI;
 ```
 
 ## 示例 9–92 回滚到 SAVEPOINT
 
-此示例将第一个员工（Fred）插入到 EMP 表中，随后是‘Paul’。ROLLBACK 语句导致第二次 INSERT 被回滚，因此只保留第一条记录。
+此示例将第一个员工（Fred）插入到 `EMP` 表中，随后是‘Paul’。`ROLLBACK` 语句导致第二次 `INSERT` 被回滚，因此只保留第一条记录。
 
-Savepoints 可以在应用程序中嵌套，这样开发者就可以控制应该回滚哪部分的 SQL。例如，如果调用了一个存储过程，该存储过程可以拥有独立于主程序的嵌套保存点。这允许存储过程在选择性地回滚部分工作的同时，而不影响原始应用程序。
+`Savepoints` 可以在应用程序中嵌套，这样开发者就可以控制应该回滚哪部分的 SQL。例如，如果调用了一个存储过程，该存储过程可以拥有独立于主程序的嵌套保存点。这允许存储过程在选择性地回滚部分工作的同时，而不影响原始应用程序。
 
 ## CASE
 
-CASE 语句根据多个条件选择合适的执行路径。有两种形式的 CASE 语句可用（示例 9–93）：
+`CASE` 语句根据多个条件选择合适的执行路径。有两种形式的 `CASE` 语句可用（示例 9–93）：
 
 ```
 CASE SEARCHED CASE STATEMENT
+
 WHEN VALUE THEN ...
 ELSE
 END CASE
@@ -14470,6 +13830,7 @@ END CASE
 
 ```
 CASE
+
 WHEN VAR = VALUE THEN
 ELSE
 END CASE
@@ -14477,15 +13838,18 @@ END CASE
 
 ## 示例 9–93 CASE 语句的两种形式
 
-例如，根据员工所属的部门对记录应用逻辑，可以通过 CASE 语句轻松实现（示例 9–94）。
+例如，根据员工所属的部门对记录应用逻辑，可以通过 `CASE` 语句轻松实现（示例 9–94）。
 
 ```
 CASE WORKDEPT
+
   WHEN 'A00' THEN ...
   WHEN 'B01' THEN ...
   ELSE ...
 END CASE
+
 CASE
+
   WHEN WORKDEPT='A00' THEN ...
   WHEN WORKDEPT='B01' THEN ...
   ELSE ...
@@ -14494,13 +13858,13 @@ END CASE
 
 ## 示例 9–94 使用 CASE 语句检查部门值
 
-当没有任何 WHEN 子句被选中时，将执行 ELSE 子句。如果没有任何 WHEN 子句被选中且没有 ELSE 子句，DB2 将抛出错误条件。
+当没有任何 `WHEN` 子句被选中时，将执行 `ELSE` 子句。如果没有任何 `WHEN` 子句被选中且没有 `ELSE` 子句，DB2 将抛出错误条件。
 
-CASE 表达式的条件顺序非常重要。DB2 会先处理第一个条件，然后是第二个，依此类推。如果你不注意条件处理的顺序，可能会对进入 CASE 语句的每个值执行相同的条件。例如，如果你在“AGE<45”之前编写了类似“AGE<=65”的条件，那么所有低于 65 或 30 的数据将进入第一个 WHEN 子句。
+`CASE` 表达式的条件顺序非常重要。DB2 会先处理第一个条件，然后是第二个，依此类推。如果你不注意条件处理的顺序，可能会对进入 `CASE` 语句的每个值执行相同的条件。例如，如果你在“`AGE<45`”之前编写了类似“`AGE<=65`”的条件，那么所有低于 65 或 30 的数据将进入第一个 `WHEN` 子句。
 
 ## GOTO
 
-GOTO 语句用于跳转到 SQL 过程内的标签（示例 9–95）。
+`GOTO` 语句用于跳转到 SQL 过程内的标签（示例 9–95）。
 
 ```
 GOTO LABEL_NAME
@@ -14508,27 +13872,32 @@ GOTO LABEL_NAME
 
 ## 示例 9–95 GOTO 语句
 
-标签必须存在，否则在过程创建时将生成错误。使用 GOTO 在编程社区中引起了大量争议。有充分的理由不使用 GOTO，因为代码的可维护性和调试性较差。然而，GOTO 可以有效地用于跳过某些内容。
+标签必须存在，否则在过程创建时将生成错误。使用 `GOTO` 在编程社区中引起了大量争议。有充分的理由不使用 `GOTO`，因为代码的可维护性和调试性较差。然而，`GOTO` 可以有效地用于跳过某些内容。
 
-使用 GOTO 有一些限制：
+使用 `GOTO` 有一些限制：
 
-- 如果 GOTO 语句定义在处理程序（handler）中，标签必须在同一语句中定义。
-- 如果 GOTO 语句定义在处理程序之外，标签必须在同一语句中定义。
-- 如果 GOTO 语句定义在处理程序中，标签必须在同一语句中定义。
-- 如果 GOTO 语句定义在处理程序中，标签必须在同一语句中定义。
+- 如果 `GOTO` 语句定义在处理程序（handler）中，标签必须在同一语句中定义。
+- 如果 `GOTO` 语句定义在处理程序之外，标签必须在同一语句中定义。
+- 如果 `GOTO` 语句定义在处理程序中，标签必须在同一语句中定义。
+- 如果 `GOTO` 语句定义在处理程序中，标签必须在同一语句中定义。
 
 ## LOOP
 
-LOOP 是一种简单的控制结构，持续执行直到遇到 LEAVE 语句（示例 9–96）。
+`LOOP` 是一种简单的控制结构，持续执行直到遇到 `LEAVE` 语句（示例 9–96）。
 
 ```
 FETCH_LOOP:
+
 LOOP
+
   FETCH C1 INTO V_SALARY;
+
   IF V_SALARY = 0 THEN
     LEAVE FETCH_LOOP;
   END IF;
+
   SET V_COUNTER = V_COUNTER + 1;
+
 END LOOP FETCH_LOOP;
 ```
 
@@ -14536,14 +13905,19 @@ END LOOP FETCH_LOOP;
 
 ## REPEAT
 
-REPEAT 语句执行语句或一组语句直到搜索条件成立。这与 WHILE 语句相似，区别是在循环结束而不是开始时测试。REPEAT 结构还支持 ITERATE 和 LEAVE 语句（示例 9–97）。
+`REPEAT` 语句执行语句或一组语句直到搜索条件成立。这与 `WHILE` 语句相似，区别是在循环结束而不是开始时测试。`REPEAT` 结构还支持 `ITERATE` 和 `LEAVE` 语句（示例 9–97）。
 
 ```
 FETCH_LOOP:
+
 REPEAT
+
   FETCH C1 INTO V_SALARY;
+
   SET V_COUNTER = V_COUNTER + 1
+
 UNTIL V_SALARY = 0
+
 END REPEAT FETCH_LOOP;
 ```
 
@@ -14551,7 +13925,7 @@ END REPEAT FETCH_LOOP;
 
 ## RESIGNAL
 
-SQL过程语言部分描述了使用 SIGNAL 语句在过程中引发错误处理。RESIGNAL 语句与 SIGNAL 语句相似，但它仅用于特定错误条件的处理程序主体。RESIGNAL 语句的作用是向调用程序返回另一个并非引起初始问题的错误代码（示例 9–98）。
+SQL 过程语言部分描述了使用 `SIGNAL` 语句在过程中引发错误处理。`RESIGNAL` 语句与 `SIGNAL` 语句相似，但它仅用于特定错误条件的处理程序主体。`RESIGNAL` 语句的作用是向调用程序返回另一个并非引起初始问题的错误代码（示例 9–98）。
 
 ## 条件处理
 
@@ -14565,35 +13939,39 @@ SQL过程语言部分描述了使用 SIGNAL 语句在过程中引发错误处理
 
 ```
 DECLARE SQLCODE INT;
+
 DECLARE SQLSTATE CHAR(5);
+
 DECLARE RC_SQLCODE INT DEFAULT 0;
+
 DECLARE RC_SQLSTATE CHAR(5) DEFAULT '00000';
+
 DECLARE CONTINUE HANDLER FOR
 LEXCEPTION,
 SQLWARNING,
 NOT FOUND
 VALUES (SQLCODE, SQLSTATE) INTO
 MY_SQLCODE, MY_SQLSTATE;
+
 UPDATE EMPLOYEE SET SALARY=50000 WHERE EMPNO=20;
 ```
 
-
-
-
-
+```
 IF (MY_SQLCODE <> 0) THEN
   SQLSTATE '78001'
   SET MESSAGE_Text='ERROR FINDING EMPLOYEE';
 END IF;
+```
 
 ## 示例 9–99 条件处理示例
 
-从 SQL PL 的角度来看，这种技术的开销很大，因为所有的 SQL 语句都会调用条件处理程序。此外，NOT FOUND 条件实际上是一个警告，可以显式地检查，而不是使用 CONTINUE HANDLER（继续处理程序）。
+从 SQL PL 的角度来看，这种技术的开销很大，因为所有的 SQL 语句都会调用条件处理程序。此外，`NOT FOUND` 条件实际上是一个警告，可以显式地检查，而不是使用 `CONTINUE HANDLER`（继续处理程序）。
 
-与其在过程的主体中使用 `MY_SQLCODE`，不如可以将其替换为原生的 SQLCODE 值（示例 9–100）：
+与其在过程的主体中使用 `MY_SQLCODE`，不如可以将其替换为原生的 `SQLCODE` 值（示例 9–100）：
 
 ```
 UPDATE EMPLOYEE SET SALARY=50000 WHERE EMPNO=20;
+
 IF (SQLCODE = 100) THEN
   SIGNAL STATE '78001'
   SET MESSAGE_Text='EMPLOYEE NOT FOUND';
@@ -14602,9 +13980,9 @@ END IF;
 
 ## 示例 9–100 使用原生 SQLCODE 捕获错误
 
-任何意外错误都应该放在异常处理程序中，而不是使用局部变量来测试错误类型。这将使代码更具读性，并减少因忘记清零临时变量而可能导致的错误。
+任何意外错误都应该放在异常处理程序中，而不是使用局部变量来测试错误类型。这将使代码更具可读性，并减少因忘记清零临时变量而可能导致的错误。
 
-对上一个示例修改异常处理程序，以消除 NOT FOUND 异常并在异常处理程序内部直接返回错误（示例 9–101）：
+对上一个示例修改异常处理程序，以消除 `NOT FOUND` 异常并在异常处理程序内部直接返回错误（示例 9–101）：
 
 ```
 DECLARE CONTINUE HANDLER FOR SQLLEXCEPTION
@@ -14614,15 +13992,19 @@ DECLARE CONTINUE HANDLER FOR SQLLEXCEPTION
 
 ## 示例 9–101 在错误处理程序设置错误描述
 
-变量 `SQLCODE` 和 `SQLSTATE` 必须在例过程中定义，并留供 DB2 使用。这些变量在每个 SQL 语句执行后被设置。现在更新例过程以包含新的条件处理程序，并对 SQLCODE 进行直接检查，以判断记录是否已更新（示例 9–102）。
+变量 `SQLCODE` 和 `SQLSTATE` 必须在例过程中定义，并留供 DB2 使用。这些变量在每个 SQL 语句执行后被设置。现在更新例过程以包含新的条件处理程序，并对 `SQLCODE` 进行直接检查，以判断记录是否已更新（示例 9–102）。
 
 ```
 DECLARE SQLCODE INT;
+
 DECLARE SQLSTATE CHAR(5);
+
 DECLARE CONTINUE_TEXT HANDLER FOR SQLEXCEPTION
 SIGNAL SQLSTATE '78001'
 SET MESSAGE_TEXT='ERROR UPDATING RECORD';
+
 UPDATE EMPLOYEE SET SALARY=50000 WHERE EMPNO=20;
+
 IF (SQLCODE = 100) THEN
   SIGNAL SQLSTATE '78001'
   SET MESSAGE_TEXT='EMPLOYEE NOT FOUND'
@@ -14694,7 +14076,7 @@ DB2 提供了不同的保护级别来隔离彼此的数据。这些保护级别�
 
 隔离级别是在绑定到数据库时通过 `PREP` 或 `BIND` 命令的嵌入 SQL 语句定义的。如果没有指定隔离级别，则使用游标稳定。
 
-如果你使用命令行处理器，可以使用 `CHANGE ISOLATION` 命令更改隔离级别。对于 DB2 接口 (DB2 CLI)，可以在 DB2 CLI 配置文件 (DB2CLI.INI) 中更改隔离级别。最后，在 SQL 例过程中，可以使用 `SET_ROUTINE_OPTS` 例程更改隔离。
+如果你使用命令行处理器，可以使用 `CHANGE ISOLATION` 命令更改隔离级别。对于 DB2 接口 (DB2 CLI)，可以在 DB2 CLI 配置文件 (`DB2CLI.INI`) 中更改隔离级别。最后，在 SQL 例过程中，可以使用 `SET_ROUTINE_OPTS` 例程更改隔离。
 
 ## 未提交读取
 
@@ -14704,20 +14086,17 @@ DB2 提供了不同的保护级别来隔离彼此的数据。这些保护级别�
 
 游标稳定 (CS) 隔离级别会在事务期间锁定游标所处的任何行。该行的锁将保持到获取下一行或事务终止为止。如果行已更新，锁将保持到事务终止。事务在执行 `COMMIT` 或 `ROLLBACK` 语句时终止。
 
-
-
-
 使用游标稳定性（cursor stability）的应用程序无法读取未提交的数据。此外，应用程序会锁定当前获取的行，其他应用程序无法修改当前行的内容。
 
 ## 读稳定性（Read Stability）
 
-读稳定性（RS）隔离级别会锁定作为结果表一部分的行。如果你有一张包含 10,000 行的表，而查询返回了 10 行，那么只有这 10 行会被锁定。使用读稳定性的应用程序无法读取未提交的数据。它不是锁定单行，而是锁定结果结果表中的所有行。其他应用程序无法更改或修改这些行。
+读稳定性（RS）隔离级别会锁定作为结果表一部分的行。如果你有一张包含 10,000 行的表，而查询返回了 10 行，那么只有这 10 行会被锁定。使用读稳定性的应用程序无法读取未提交的数据。它不是锁定单行，而是锁定结果表中的所有行。其他应用程序无法更改或修改这些行。
 
 ## 可重复读（Repeatable Read）
 
 可重复读（RR）隔离级别是 DB2 中提供的最高隔离级别。它会锁定事务中引用的所有行，因此可以保证应用程序如果再次读取同一行，它将获得相同的结果。
 
-在构建结果集时，所有处理过的行都将保持锁定，无论结果集有多大。如果需要引用表的很大一部分部分，DB2 可能会获取表锁。使用可重复读的应用程序无法读取并发应用程序未提交的数据。
+在构建结果集时，所有处理过的行都将保持锁定，无论结果集有多大。如果需要引用表的很大一部分，DB2 可能会获取表锁。使用可重复读的应用程序无法读取并发应用程序未提交的数据。
 
 ## 为过程设置隔离级别（Setting Isolation Level for a Procedure）
 
@@ -14769,9 +14148,11 @@ WHERE SALARY BETWEEN 10000.00 AND 30000.00
 WITH UR;
 ```
 
-## 示例 9–107 更改 SQL 语句上的锁定级别
 
-为了保证在执行存储过程期间 DB2 的锁定行为，你应该通过通过 `SET_ROUTINE_OPTS` 命令设置默认锁定，或者作为 SQL 语句的一部分显式声明它。
+
+## 示例 9–107：更改 SQL 语句上的锁定级别
+
+为了保证在执行存储过程期间 DB2 的锁定行为，你应该通过 `SET_ROUTINE_OPTS` 命令设置默认锁定，或者作为 SQL 语句的一部分显式声明它。
 
 ## 总结（Summary）
 
@@ -14783,13 +14164,11 @@ WITH UR;
 
 模式（Schemas）和别名（aliases）可以简化应用程序开发并减少访问数据库对象时的混淆。
 
-`Commit`（提交）和 `Rollback`（回滚）命令提供了确保数据库事务完整性的方法。
+`COMMIT`（提交）和 `ROLLBACK`（回滚）命令提供了确保数据库事务完整性的方法。
 
 最后，引入了 SQL PL 语言，作为扩展触发器、用户定义函数、存储过程和 SQL 命令功能的方法。
 
-## 第 10 章
-
-# 并发（Concurrency）
+# 第 10 章：并发（Concurrency）
 
 - 并发（CONCURRENCY）
 - 隔离级别（ISOLATION LEVELS）
@@ -14823,24 +14202,21 @@ WITH UR;
 
 当使用 `COMMIT` 或 `ROLLBACK` 状态永久更改数据时，建立了一个一致性点。一致性点很重要，因为它在数据库崩溃恢复和前滚恢复期间会被使用。
 
-> DB2 注意
-工作单元（unit of work）术语与事务相同。
+> **DB2 注意**  
+> 工作单元（unit of work）术语与事务相同。
 
 在前面的章节中，我们讨论了数据访问控制。用户可以使用 `GRANT` 和 `REVOKE` 语句来提供和撤销访问表、视图和包的能力。一旦建立了访问控制，就必须考虑资源控制。如果资源管理不当，可能会出现并发问题。
 
-DB2 提供了管理资源控制的机制。我们将讨论如何使用事务控制数据修改，并检查一些可能的并发
-
-
-# 并发问题以及避免这些问题的策略，并检查应用程序需要解决的某些并发问题。
+DB2 提供了管理资源控制的机制。我们将讨论如何使用事务控制数据修改，并检查一些可能的并发问题以及避免这些问题的策略，并检查应用程序需要解决的某些并发问题。
 
 ## 并发考虑因素
 
 数据库资源控制需要使用数据修改规则。在使用 DB2CERT 数据库应用程序时，我们会考虑一些并发异常情况。它们包括：
 
--   丢失更新 (Lost update)
--   未提交读 (Uncommitted read)
--   不可重复读 (Nonrepeatable read)
--   幻读 (Phantom read)
+- 丢失更新（Lost update）
+- 未提交读（Uncommitted read）
+- 不可重复读（Nonrepeatable read）
+- 幻读（Phantom read）
 
 ## 丢失更新问题
 
@@ -14856,27 +14232,27 @@ CREATE TABLE TEST_SEATS
   NAME VARCHAR(8);
 ```
 
-示例 10–1 `TEST_SEATS` 表设计
+示例 10–1：`TEST_SEATS` 表设计
 
 该表已填充了四条关于 Markham 地点的记录，其中一条表示空座位的空值记录（示例 10–2）：
 
 ```sql
 INSERT INTO TEST_SEATS VALUES
-  ('MARKHAM','1','2007-02-01','GEORGE'),
-  ('MARKHAM','2','2007-02-01','KATRINA'),
-  ('MARKHAM','3','2007-02-01','BILL'),
-  ('MARKHAM','4','2007-02-01',NULL);
+  ('MARKHAM', '1', '2007-02-01', 'GEORGE'),
+  ('MARKHAM', '2', '2007-02-01', 'KATRINA'),
+  ('MARKHAM', '3', '2007-02-01', 'BILL'),
+  ('MARKHAM', '4', '2007-02-01', NULL);
 ```
 
-示例 10–2 为 Markham 测试中心插入座位信息
-
-## 第 10 章 并
+示例 10–2：为 Markham 测试中心插入座位信息
 
 Kelly 查询了 Paul 请求日期的 Markham 测试中心座位可用性，发现有一个座位可用（示例 10–3）：
 
 ```sql
-SELECT SEAT, NAME FROM TEST_SEATS WHERE LOCATION='MARKHAM'
-AND TEST_DATE = '2007-02-01';
+SELECT SEAT, NAME
+FROM TEST_SEATS
+WHERE LOCATION = 'MARKHAM'
+  AND TEST_DATE = '2007-02-01';
 ```
 
 | SEAT | NAME |
@@ -14886,7 +14262,7 @@ AND TEST_DATE = '2007-02-01';
 | 3 | PAUL |
 | 4 | - |
 
-**示例 10–3** Markham 测试中心的可用座位
+**示例 10–3：**Markham 测试中心的可用座位
 
 Kelly 决定去喝咖啡，而 Paul 则在确认考试日期对他是否合适。
 
@@ -14896,21 +14272,23 @@ Paul 最终决定参加考试，Kelly 更新了表中的记录：
 
 ```sql
 UPDATE TEST_SEATS
-SET NAME='PAUL'
-WHERE SEAT=4 AND TEST_DATE='2007-02-01';
+SET NAME = 'PAUL'
+WHERE SEAT = 4
+  AND TEST_DATE = '2007-02-01';
 ```
 
-示例 10–4 更新 Paul 的座位记录
+示例 10–4：更新 Paul 的座位记录
 
-另一个考生 Geoffrey 决定参加考试，Andrew也将 4 号座位分配给了 Geoffrey（示例 10–5）。
+另一个考生 Geoffrey 决定参加考试，Andrew 也将 4 号座位分配给了 Geoffrey（示例 10–5）。
 
 ```sql
 UPDATE TEST_SEATS
-SET NAME='GEOFFREY'
-WHERE SEAT=4 AND TEST_DATE='2007-02-01';
+SET NAME = 'GEOFFREY'
+WHERE SEAT = 4
+  AND TEST_DATE = '2007-02-01';
 ```
 
-示例 10–5 更新 Geoffrey 的座位记录
+示例 10–5：更新 Geoffrey 的座位记录
 
 Andrew 没有看到 Kelly 已将 4 号座位分配给 Paul，所以也将同一个座位分配给了 Geoffrey。记住，Andrew 看到 4 号座位是空闲。由于没有遇到冲突，提交成功了。
 
@@ -14923,11 +14301,11 @@ Andrew 没有看到 Kelly 已将 4 号座位分配给 Paul，所以也将同一�
 | 3 | BILL |
 | 4 | GEOFFREY |
 
-示例 10–6 已分配的座位列表
+示例 10–6：已分配的座位列表
 
 考试当天，Paul 和 Geoffrey 到达测试中心，数据显示分配正确。Paul 非常不开心，必须重新安排时间。
 
-问题是什么？为了维护数据的准确性，需要强制控制机制。数据库管理器 (DB2) 的目标是避免丢失更新并确保数据的性。
+问题是什么？为了维护数据的准确性，需要强制控制机制。数据库管理器（DB2）的目标是避免丢失更新并确保数据的性。
 
 如果使用了表级锁定，Kelly 的应用程序可以限制对表的任何更新。然而，如果 Kelly 的应用程序控制了表，由于所有测试中心都访问同一张表，其他测试中心将无法分配座位。是否只允许一个测试协调员更新给定日期的记录？对于某些应用程序来说可能是合适的，但没有为其他人提供足够的并发性。
 
@@ -14935,19 +14313,21 @@ Andrew 没有看到 Kelly 已将 4 号座位分配给 Paul，所以也将同一�
 
 为了避免丢失更新，DB2 必须维护每条数据的控制。涉及获取查询所有匹配或可能匹配记录的更新控制机制被称为可重复读。详情请参见第 609 页的“可重复读”。
 
-DB2 提供的显式 SQL 控制机制是 `LOCK TABLE` 语句。根据 DB2 应用程序的设计，有一张表代表在所有测试中心参加考试。如果应用程序显式锁定表以进行更新（称为 EXCLUSIVE 模式），其他测试中心将不允许更新或读取表中的任何提交数据。如果应用程序显式锁定表（SHARE 模式），其他测试中心将被读取但不允许更新数据。
+DB2 提供的显式 SQL 控制机制是 `LOCK TABLE` 语句。根据 DB2 应用程序的设计，有一张表代表在所有测试中心参加考试。如果应用程序显式锁定表以进行更新（称为 `EXCLUSIVE` 模式），其他测试中心将不允许更新或读取表中的任何提交数据。如果应用程序显式锁定表（`SHARE` 模式），其他测试中心将被读取但不允许更新数据。
 
-Kelly 的应用程序可以获取 `TEST_TABLE` 的锁。共享锁将防止 Andrew 成功执行表的更新（将4号座位分配给 Geoffrey）。直到 Kelly 的应用程序使用 `COMMIT` 或 `ROLLBACK` 语句释放锁。
+Kelly 的应用程序可以获取 `TEST_TABLE` 的锁。共享锁将防止 Andrew 成功执行表的更新（将 4 号座位分配给 Geoffrey），直到 Kelly 的应用程序使用 `COMMIT` 或 `ROLLBACK` 语句释放锁。
 
-另一种方法涉及记录或行级锁定。如果 Kelly 的应用程序获取了4号座位的记录锁，Andrew 的更新将失败。无法使用 SQL 语句显式获取行级锁。详情请参见第 608 页的“游标稳定性 (Cursor Stability)”。
+另一种方法涉及记录或行级锁定。如果 Kelly 的应用程序获取了 4 号座位的记录锁，Andrew 的更新将失败。无法使用 SQL 语句显式获取行级锁。详情请参见第 608 页的“游标稳定性（Cursor Stability）”。
 
 ## 未提交读
 
-Kelly 的应用程序锁定了未分配的行并对4号座位进行了临时更新。在 Kelly 提交或回滚此更新之前，其他人无法读取4号座位的记录。示例 10–7 显示 George 必须读取未提交的更改。
+Kelly 的应用程序锁定了未分配的行并对 4 号座位进行了临时更新。在 Kelly 提交或回滚此更新之前，其他人无法读取 4 号座位的记录。示例 10–7 显示 George 必须读取未提交的更改。
 
 ```sql
-SELECT SEAT, NAME FROM TEST_SEATS WHERE LOCATION='MARKHAM'
-AND TEST_DATE = '2007-02-01';
+SELECT SEAT, NAME
+FROM TEST_SEATS
+WHERE LOCATION = 'MARKHAM'
+  AND TEST_DATE = '2007-02-01';
 ```
 
 | SEAT | NAME |
@@ -14957,22 +14337,22 @@ AND TEST_DATE = '2007-02-01';
 | 3 | BILL |
 | 4 | PAUL |
 
-示例 10–7 已分配座位列表（包括未提交的）
+示例 10–7：已分配座位列表（包括未提交的）
 
-如果 George 在 Andrew 将4号座位分配给 Geoffrey 后重新发布查询，他将获得不同的结果。这被称为未提交读（脏读）。
+如果 George 在 Andrew 将 4 号座位分配给 Geoffrey 后重新发布查询，他将获得不同的结果。这被称为未提交读（脏读）。
 
-如果测试中心运行报告来确定2月1日有多少人参加考试，由于她使用了未提交读，她将得到一个不一致的结果。
+如果测试中心运行报告来确定 2 月 1 日有多少人参加考试，由于她使用了未提交读，她将得到一个不一致的结果。
 
-```
+```text
 1
 4
 ```
 
-示例 10–8 当前计划计数（错误）
+示例 10–8：当前计划计数（错误）
 
 结果将包含临时分配的座位。为了避免这种行为，应用程序不应该能够读取未提交的更改。
 
-## 不可读
+## 不可重复读
 
 不可重复读场景可以在同一事务中获得不同的结果集。未提交读应用程序不保证可重复读。
 
@@ -14980,30 +14360,27 @@ AND TEST_DATE = '2007-02-01';
 
 ```sql
 DELETE FROM TEST_SEATS;
+
 INSERT INTO TEST_SEATS VALUES
-  ('MARKHAM','1','2007-02-01','GEORGE'),
-  ('MARKHAM','2','2007-02-01','KATRINA'),
-  ('MARKHAM','3','2007-02-01','NULL'),
-  ('MARKHAM','4','2007-02-01',NULL),
-  ('ROCKWOOD','1','2007-02-01','GEOFFREY'),
-  ('ROCKWOOD','2','2007-02-01','PAUL'),
-  ('ROCKWOOD','3','2007-02-01','BILL'),
-  ('ROCKWOOD','4','2007-02-01',NULL);
+  ('MARKHAM', '1', '2007-02-01', 'GEORGE'),
+  ('MARKHAM', '2', '2007-02-01', 'KATRINA'),
+  ('MARKHAM', '3', '2007-02-01', 'NULL'),
+  ('MARKHAM', '4', '2007-02-01', NULL),
+  ('ROCKWOOD', '1', '2007-02-01', 'GEOFFREY'),
+  ('ROCKWOOD', '2', '2007-02-01', 'PAUL'),
+  ('ROCKWOOD', '3', '2007-02-01', 'BILL'),
+  ('ROCKWOOD', '4', '2007-02-01', NULL);
 ```
 
-示例 10–9 重新填充 `TEST_SEATS` 表
+示例 10–9：重新填充 `TEST_SEATS` 表
 
 与此同时，Andrew 已将 Rockwood 的最后一个空座位分配给了 Mike。Katrina 尝试分配该座位。更新失败，当 Kelly 重新发布 SQL 时，Rockwood 的座位不再可用。Linda 更新后的屏幕显示在示例 10–11 中。
 
-
-
-
-
-## 第 10 章 并发
-
 ```sql
-SELECT SEAT, LOCATION FROM TEST_SEATS WHERE
-TEST_DATE = '2007-02-01' AND NAME IS NULL;
+SELECT SEAT, LOCATION
+FROM TEST_SEATS
+WHERE TEST_DATE = '2007-02-01'
+  AND NAME IS NULL;
 ```
 
 | SEAT | LOCATION |
@@ -15011,21 +14388,23 @@ TEST_DATE = '2007-02-01' AND NAME IS NULL;
 | 3 | MARKHAM |
 | 4 | MARKHAM |
 
-示例 10–11 Rockwood 地点已不再可用
+示例 10–11：Rockwood 地点已不再可用
 
 该应用程序在编码时仅锁定正在被更新的数据行。在这种情况下，Andrew 在将座位分配给 Mike 时获取了排他锁。这与 Kelly 持有的锁并不产生冲突，因为她没有锁定该行。我们假设该行仅在管理员选择对其进行更新时才会被锁定。
 
 为了避免这种非可重复读的场景，必须锁定所有检索到的数据。如果你想保证所选数据中没有哪一个被修改，那么锁定这些行就足够了。这在 DB2 中被称为读取稳定性（read stability）。如果你希望确保在获取此结果时所选行在事务中不会发生变化，请使用可重复读（repeatable read）。这可能需要额外的锁定。
 
-# 幻读问题
+## 幻读问题
 
 如果应用程序执行两次相同的查询；第二次执行查询时返回了额外的行，就会发生幻读现象。对于许多应用程序来说，这是一个可以接受的场景。例如，如果查询涉及查找音乐会上的所有可用座位，那么重新发布查询并获得更好的座位选择将是一个理想的功能。
 
-让我们再次查看我们的应用程序。假设 TEST_SEATS 表包含与之前相同的信息（示例 10–9）。Katrina 想在 Markham 或 Rockwood 考试。Kelly 请求了这些地点的可用座位列表，如示例 10–12所示。
+让我们再次查看我们的应用程序。假设 `TEST_SEATS` 表包含与之前相同的信息（示例 10–9）。Katrina 想在 Markham 或 Rockwood 考试。Kelly 请求了这些地点的可用座位列表，如示例 10–12 所示。
 
 ```sql
-SELECT SEAT, LOCATION FROM TEST_SEATS WHERE
-TEST_DATE = '2007-02-01' AND NAME IS NULL;
+SELECT SEAT, LOCATION
+FROM TEST_SEATS
+WHERE TEST_DATE = '2007-02-01'
+  AND NAME IS NULL;
 ```
 
 | SEAT | LOCATION |
@@ -15034,23 +14413,27 @@ TEST_DATE = '2007-02-01' AND NAME IS NULL;
 | 4 | MARKHAM |
 | 4 | ROCKWOOD |
 
-示例 10–12 Markham 和 Rockwood 的可用座位（第一次查询）
+示例 10–12：Markham 和 Rockwood 的可用座位（第一次查询）
 
 另一个测试协调员使用 `INSERT` 语句向 Rockwood 测试点增加了一个座位（示例 10–13）：
 
 ```sql
 INSERT INTO TEST_SEATS VALUES
-('ROCKWOOD', '2007-02-01',NULL);
+  ('ROCKWOOD', '2007-02-01', NULL);
 ```
 
-**示例 10–13** 在 Rockwood 增加一个座位
+**示例 10–13：**在 Rockwood 增加一个座位
 
-现在可以同时在 Rockwood 测试五个候选人。如果再次发布查询，Kelly 将检索到一个不同的结果集，其中包含四个可用座位。尽管应用程序锁定了之前检索到的行，但应用程序能够看到新行，如示例 10–14所示。
+现在可以同时在 Rockwood 测试五个候选人。如果再次发布查询，Kelly 将检索到一个不同的结果集，其中包含四个可用座位。尽管应用程序锁定了之前检索到的行，但应用程序能够看到新行，如示例 10–14 所示。
 
 ```sql
-SELECT SEAT, LOCATION FROM TEST_SEATS WHERE
-TEST_DATE = '2007-02-01' AND NAME IS NULL;
+SELECT SEAT, LOCATION
+FROM TEST_SEATS
+WHERE TEST_DATE = '2007-02-01'
+  AND NAME IS NULL;
 ```
+
+
 
 | | LOCATION |
 |---|---|
@@ -15065,7 +14448,7 @@ TEST_DATE = '2007-02-01' AND NAME IS NULL;
 
 根据情况的不同，幻读可能是理想。如果你希望避免这种行为，应用程序必须锁定所有可能的符合行。这确保了没有其他应用程序可以更新、删除或插入会影响结果表的行。这是一个需要理解的重要概念。
 
-> DB2 注意
+> **DB2 注意**  
 > 如果 DB2 需要为表中的每一行获取锁以提供所需的隔离级别，则可能会获取表级锁而不是多个行级锁。
 
 # 隔离级别
@@ -15083,39 +14466,39 @@ TEST_DATE = '2007-02-01' AND NAME IS NULL;
 
 如果你使用命令处理器，可以使用 `CHANGE isolation level` 命令更改隔离级别。
 
-对于 DB2 级接口 (DB2 CLI)，你可以在 DB2 CLI 配置 (DB2CLI.INI) 文件的一部分中更改隔离级别。
+对于 DB2 级接口（DB2 CLI），你可以在 DB2 CLI 配置（DB2CLI.INI）文件的一部分中更改隔离级别。
 
 # 未提交读
 
-未提交读 (UR) 隔离级别也称为脏读，是 DB2 支持的最低隔离级别。它可以用于访问其他应用程序未提交的数据更改。例如，使用未提交读隔离级别的应用程序将返回查询的所有行，即使数据正在修改过程中且可能未提交到数据库中。如果你决定使用此隔离级别，你的应用程序可能会访问错误的数据。在使用此隔离级别时，可能会发生非可重复读和幻读现象。
+未提交读（UR）隔离级别也称为脏读，是 DB2 支持的最低隔离级别。它可以用于访问其他应用程序未提交的数据更改。例如，使用未提交读隔离级别的应用程序将返回查询的所有行，即使数据正在修改过程中且可能未提交到数据库中。如果你决定使用此隔离级别，你的应用程序可能会访问错误的数据。在使用此隔离级别时，可能会发生非可重复读和幻读现象。
 
-未提交读事务持有的锁很少。如果应用程序使用游标 (`FOR UPDATE`) 更新数据，则锁定模式将升级为游标稳定性 (CS)。此外，如果 `SELECT` 语句利用在索引中找到的数据（键中的数据），则将持有 `IS` 锁，并防止另一个应用程序对表获取排他锁。此行为防止了索引在选择 语句处理期间期间被移除。
+未提交读事务持有的锁很少。如果应用程序使用游标（`FOR UPDATE`）更新数据，则锁定模式将升级为游标稳定性（CS）。此外，如果 `SELECT` 语句利用在索引中找到的数据（键中的数据），则将持有 `IS` 锁，并防止另一个应用程序对表获取排他锁。此行为防止了索引在选择语句处理期间被移除。
 
 # 游标稳定性
 
-游标稳定性 (CS) 隔离级别在执行期间锁定游标所在的任何行。锁在游标移动到下一行或事务结束时释放。
+游标稳定性（CS）隔离级别在执行期间锁定游标所在的任何行。锁在游标移动到下一行或事务结束时释放。
 
 使用游标稳定性的应用程序无法读取未提交的数据。如果你决定使用此隔离级别，将始终看到提交的数据。
 
 # 读取稳定性
 
-读取稳定性 (RS) 隔离级别在执行期间锁定游标所在的任何行。这意味着在事务期间符合条件的行保持稳定。
+读取稳定性（RS）隔离级别在执行期间锁定游标所在的任何行。这意味着在事务期间符合条件的行保持稳定。
 
 使用读取稳定性的应用程序无法读取未提交的数据。如果你决定使用此隔离级别，可能会发生幻读。
 
 # 可重复读
 
-可重复读 (RR) 隔离级别是 DB2 提供的最高隔离级别。它在事务期间锁定所有处理的行。
+可重复读（RR）隔离级别是 DB2 提供的最高隔离级别。它在事务期间锁定所有处理的行。
 
 使用可重复读的应用程序无法读取未提交的数据。之前讨论的情况这些都不会发生。
 
 # 选择隔离级别
 
-选择正确的隔离级别非常，因为隔离级别不仅影响并发性，还影响性能。保护越多，并发性越低。
+选择正确的隔离级别非常重要，因为隔离级别不仅影响并发性，还影响性能。保护越多，并发性越低。
 
 决定哪些并发问题对你的应用程序是不可接受的，然后选择防止这些问题的隔离级别：
 
-- 仅对只读表进行查询，或者你仅使用 SELECT 语句且不在意从并发应用程序中获取未提交的数据时，使用未提交读隔离级别。
+- 仅对只读表进行查询，或者你仅使用 `SELECT` 语句且不在意从并发应用程序中获取未提交的数据时，使用未提交读隔离级别。
 - 当你想在看到并发应用程序的提交数据的同时获得最大的并发性时，使用游标稳定性隔离级别。
 - 当你在当前环境中操作时，使用读取稳定性隔离级别。
 - 如果结果集的变化不可接受的，使用可重复读隔离级别。
@@ -15124,14 +14507,14 @@ TEST_DATE = '2007-02-01' AND NAME IS NULL;
 
 DB2 提供隔离级别来控制并发。通常，你不需要采取行动建立锁。
 
-# 锁属性
+## 锁属性
 
 被锁定的资源称为对象。你可以显式锁定的唯一对象是表和表空间。其他类型对象（如行、索引键以及有时表）的隐式锁是由 DB2 根据隔离级别获取的。被锁的对象代表锁的粒度。
 
 锁保持的时间称为持续，受隔离级别的影响。
 
-> DB2 注意
-如果 `CONNECT` 语句包含 `IN EXCLUSIVE MODE` 子句，则可以锁定数据库。这将获取数据库的排他锁并防止其他用户连接。
+> **DB2 注意**  
+> 如果 `CONNECT` 语句包含 `IN EXCLUSIVE MODE` 子句，则可以锁定数据库。这将获取数据库的排他锁并防止其他用户连接。
 
 与锁相关的访问和规则由锁定模式定义。某些模式仅用于锁定表对象，而其他锁定模式用于行对象。DB2 使用以下可锁定数据库对象的层次结构：
 
@@ -15141,44 +14524,24 @@ DB2 提供隔离级别来控制并发。通常，你不需要采取行动建立�
 
 不同的表锁模式按控制力顺序列出：
 
-- IN (意图无) — 锁的所有者可以读取表中任何已提交或未提交的数据。其他应用程序可以读取或更新表。
-- IS (意图共享) — 锁的所有者可以读取表中的任何数据并
+- `IN`（意图无）— 锁的所有者可以读取表中任何已提交或未提交的数据。其他应用程序可以读取或更新表。
+- `IS`（意图共享）— 锁的所有者可以读取表中的任何数据并在读取每行时获取一个 `S` 或 `NS` 锁。其他应用程序可以读取或更新表中的行。
+- `S`（共享锁）— 锁的所有者可以读取表中的任何数据，且不会获取行锁。其他应用程序可以读取数据。
+- `IX`（意图排他锁）— 如果锁的所有者可以在行上获取 `U`、`S`、`NS` 或 `X` 锁，则就可以读取表中的任何数据；如果可以在行上获取 `X` 锁，则可以更改表中的任何数据。其他应用程序可以读取和更新表行。
+- `SIX`（带意图排他锁）— 锁的所有者如果可以在目标行上获取 `X` 锁，则可以读取表中的任何数据并更改行。其他应用程序只能读取数据。
+- `U`（更新锁）— 锁的所有者可以读取表中的任何数据，如果在更新之前可以在表上获取 `X` 锁，就可以更改数据。其他应用程序只能读取数据。
+- `X`（排他锁）— 锁的所有者可以读取或更新表中的任何数据。不会获取行锁。只有使用未提交（Uncommitted）隔离级别的其他应用程序可以读取表的行。
+- `Z`（超级排他锁）— 没有其他应用程序可以访问该表。
 
+行锁模式按对资源控制力递增的顺序列出：
 
-
-
-
-# 锁定 611
-
-在读取每行时，获取一个 S 或 NS 锁。其他应用程序可以读取或更新表中的行。
-
-- S（共享锁）—— 锁的所有者可以读取表中的任何数据，且不会获取行锁。其他应用程序可以读取数据。
-
-- IX（意图排他锁）——如果锁的所有者可以在行上获取 U、S、NS 或 X 锁，则就可以读取表中的任何数据；如果可以在行上获取 X 锁，则就可以更改表中的任何数据。其他应用程序可以读取和更新表行。
-
-- SIX（带意图排他锁）—— 锁的所有者如果可以在目标行上获取 X 锁，则可以读取表中的任何数据并更改行。其他应用程序只能读取数据。
-
-- U（更新锁）—— 锁的所有者可以读取表中的任何数据，如果如果在更新之前可以在表上获取 X 锁，就可以更改数据。其他应用程序只能读取数据。
-
-- X（排他锁）—— 锁的所有者可以读取或更新表中的任何数据。不会获取行锁。只有使用未提交（Uncommitted）隔离级别的其他应用程序可以读取表的行。
-
-- Z（超级排他锁）—— 没有其他应用程序可以访问该表。
-
-行锁模式按对资源控制力递增的顺序列如下：
-
-- NS（间隙共享锁）—— 该行正被一个应用程序读取，并可以被并发应用程序读取。此锁类型由 RS 或 CS 隔离级别的持有。它与 NX 锁兼容。
-
-- S（共享锁）—— 该行正被一个应用程序读取，并允许并发应用程序进行只读。
-
-- U（更新锁）—— 该行正被一个应用程序读取，该程序意图更新此行的数据。它允许并发应用程序进行只读。只有一个应用程序可以拥有某行的 U 锁。锁的所有者将在更新前获取该行上的 X 锁。
-
-- NX（间隙排他锁）—— 当从索引中删除行或向表中索引插入行时，会在下一行上获取此锁。锁的所有者可以读取但不能更改被锁定的行。对于 2 类索引，这仅在下一行当前正被 RR 扫描锁定时才会发生。
-
-- NW（间隙排他锁）—— 当向非目录表的索引中插入行时，会在下一行上获取此锁。锁的所有者可以读取但不能读取被锁定的行。在 NW 模式下只有单独行可以锁定。这与 X 和 NX 锁相似，不同之处它与 W 和 NS 锁兼容。对于 2 类索引，此锁仅在下一行当前正被 RR 扫描锁定时发生。
-
-- X（排他锁）—— 该行正被一个应用程序更改，并发应用程序无法访问，具有未提交读隔离级别的应用程序除外。锁的所有者可以读取和更改被锁定对象中的数据。
-
-- W（弱排他锁）—— 当向非目录表插入行时，会在该行上获取此锁。锁的所有者可以更改被锁定的行。此锁与 X 锁相似，在于它与 NW 锁兼容。只有未提交读应用程序可以访问被锁定的行。
+- `NS`（间隙共享锁）— 该行正被一个应用程序读取，并可以被并发应用程序读取。此锁类型由 RS 或 CS 隔离级别持有。它与 `NX` 锁兼容。
+- `S`（共享锁）— 该行正被一个应用程序读取，并允许并发应用程序进行只读。
+- `U`（更新锁）— 该行正被一个应用程序读取，该程序意图更新此行的数据。它允许并发应用程序进行只读。只有一个应用程序可以拥有某行的 `U` 锁。锁的所有者将在更新前获取该行上的 `X` 锁。
+- `NX`（间隙排他锁）— 当从索引中删除行或向表中索引插入行时，会在下一行上获取此锁。锁的所有者可以读取但不能更改被锁定的行。对于 2 类索引，这仅在下一行当前正被 RR 扫描锁定时才会发生。
+- `NW`（间隙排他锁）— 当向非目录表的索引中插入行时，会在下一行上获取此锁。锁的所有者可以读取但不能读取被锁定的行。在 NW 模式下只有单独行可以锁定。这与 `X` 和 `NX` 锁相似，不同之处在于它与 `W` 和 `NS` 锁兼容。对于 2 类索引，此锁仅在下一行当前正被 RR 扫描锁定时发生。
+- `X`（排他锁）— 该行正被一个应用程序更改，并发应用程序无法访问，具有未提交读隔离级别的应用程序除外。锁的所有者可以读取和更改被锁定对象中的数据。
+- `W`（弱排他锁）— 当向非目录表插入行时，会在该行上获取此锁。锁的所有者可以更改被锁定的行。此锁与 `X` 锁相似，在于它与 `NW` 锁兼容。只有未提交读应用程序可以访问被锁定的行。
 
 下表说明了所有锁模式如何协同工作（锁定兼容性）。该表展示了一个锁是否与另一个锁兼容；“否”意味着请求的应用程序必须等待锁释放，“是”意味着可以授予锁。
 
@@ -15186,27 +14549,27 @@ DB2 提供隔离级别来控制并发。通常，你不需要采取行动建立�
 
 | 请求状态 | none | IN | IS | NS | S | IX | SIX | U | NX | X | Z | NW | W |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| none | yes yes yes yes yes yes yes yes yes yes yes yes no |
-| IN | yes yes yes yes yes yes yes yes no yes yes yes yes |
-| IS | yes yes yes yes yes no no yes no no no no no |
-| NS | yes yes yes yes no no no yes no no no no no |
-| S | yes yes yes yes no no yes no no no no no no |
-| IX | yes yes no no no no no no no no no no no |
-| SIX | yes yes no no no no no no no no no no no |
-| U | yes yes yes yes no no no no no no no no no |
-| NX | yes yes no no no no no no no no no no no |
-| X | yes no no no no no no no no no no no no |
-| Z | yes no no no no no no no no no no no no |
-| NW | yes yes yes no no no no no no no no no yes |
-| W | yes yes no no no no no no no no no yes no |
+| none | yes | yes | yes | yes | yes | yes | yes | yes | yes | yes | yes | yes | no |
+| IN | yes | yes | yes | yes | yes | yes | yes | yes | no | yes | yes | yes | yes |
+| IS | yes | yes | yes | yes | yes | no | no | yes | no | no | no | no | no |
+| NS | yes | yes | yes | yes | no | no | no | yes | no | no | no | no | no |
+| S | yes | yes | yes | yes | no | no | yes | no | no | no | no | no | no |
+| IX | yes | yes | no | no | no | no | no | no | no | no | no | no | no |
+| SIX | yes | yes | no | no | no | no | no | no | no | no | no | no | no |
+| U | yes | yes | yes | yes | no | no | no | no | no | no | no | no | no |
+| NX | yes | yes | no | no | no | no | no | no | no | no | no | no | no |
+| X | yes | no | no | no | no | no | no | no | no | no | no | no | no |
+| Z | yes | no | no | no | no | no | no | no | no | no | no | no | no |
+| NW | yes | yes | yes | no | no | no | no | no | no | no | no | no | yes |
+| W | yes | yes | no | no | no | no | no | no | no | no | no | yes | no |
 
 ## 锁转换
 
 如果应用程序持有某个数据对象的锁，且访问模式需要更严格的锁，则该锁将转换为更严格的锁。此过程被称为锁转换。在锁转换过程中，更严格的锁可能被授予，也可能不被授予。
 
-让我们来看锁转换的示例。假设应用程序从 test_taken 表中获取一个行，并意图更新此行。更新的意图告诉 DB2 在查询处理期间在当前位置的行上获取更新锁。
+让我们来看锁转换的示例。假设应用程序从 `test_taken` 表中获取一个行，并意图更新此行。更新的意图告诉 DB2 在查询处理期间在当前位置的行上获取更新锁。
 
-数据库管理器持有该表的 IX 锁和指定行的 U 锁。如示例 10-15 所示的 SQL 语句分配了所有当前安排参加座位的测试候选人。
+数据库管理器持有该表的 `IX` 锁和指定行的 `U` 锁。如示例 10-15 所示的 SQL 语句分配了所有当前安排参加座位的测试候选人。
 
 ## 锁升级
 
@@ -15222,27 +14585,21 @@ DB2 提供隔离级别来控制并发。通常，你不需要采取行动建立�
 
 有两个数据库配置参数对升级有直接影响。它们是：
 
-- LOCKLIST — 定义分配给锁的内存量。
-- MAXLOCKS — 定义允许分配给单个应用程序的总锁列表百分比。
+- `LOCKLIST` — 定义分配给锁的内存量。
+- `MAXLOCKS` — 定义允许分配给单个应用程序的总锁列表百分比。
 
 升级有两种情况：
 
-- 一个应用程序超过了 MAXLOCKS 参数定义的锁列表百分比。数据库管理器尝试通过获取表锁并释放行锁来释放内存。
+- 一个应用程序超过了 `MAXLOCKS` 参数定义的锁列表百分比。数据库管理器尝试通过获取表锁并释放行锁来释放内存。
 - 许多连接到数据库的应用程序填充了锁列表。DB2 尝试通过获取表锁并释放行锁来释放内存。
 
 注意应用程序使用的隔离级别对升级有影响：
 
 - 游标稳定性（Cursor stability）最初获取行锁。如果需要，可以获取表锁。通常，每个游标稳定性应用程序获取的锁非常少，因为只需要保证当前行数据的完整性。
 - 读锁稳定性（Read lock stability）获取原始结果集中的所有行。
-- 可重复读（Repeatable read）可能可能不会在确定结果集的所有行上获取锁。如果没有，则将获取表锁。
+- 可重复读（Repeatable read）可能不会在确定结果集的所有行上获取锁。如果没有，则将获取表锁。
 
-
-
-
-
-## 锁定 615
-
-已禁用（设置为值 -1）。这意味着等待的应用程序将不会接收到超时，并将无限期等待。
+已禁用（设置为值 `-1`）。这意味着等待的应用程序将不会接收到超时，并将无限期等待。
 
 ## 死锁行为
 
@@ -15255,7 +14612,7 @@ DB2 提供隔离级别来控制并发。通常，你不需要采取行动建立�
 - Jon 尝试锁定记录 5，但由于 Finn 已经持有该记录的锁而处于等待状态。
 - Finn 然后尝试锁定记录 1，但由于 Jon 已经持有该记录的锁而处于等待状态。
 
-在这种情况下，Jon 和 Finn 将无限期地等待对方的锁，直到外部事件导致他们中的一个或两个都执行 ROLLBACK（回滚）。
+在这种情况下，Jon 和 Finn 将无限期地等待对方的锁，直到外部事件导致他们中的一个或两个都执行 `ROLLBACK`（回滚）。
 
 DB2 使用一个名为死锁检测器的后台进程来检测死锁。该进程通过数据库配置文件中的 `DLCHTIME` 参数定期激活。激活后，它会检查锁系统是否存在死锁。
 
@@ -15275,13 +14632,13 @@ DB2 中表的默认锁定方法是行级锁定。DB2 现在提供了一种能力
 
 `LOCKSIZE` 参数允许你指定希望 DB2 对特定表执行的锁定粒度，即行级或表级锁定。例如，要将 `TEST_TAKEN` 表的默认锁定方法从行级改为表级锁定，你需要使用以下 SQL 语句（示例 10–16）：
 
-```
+```sql
 ALTER TABLE TEST_TAKEN LOCKSIZE TABLE;
 ```
 
 示例 10–16 强制表级锁定
 
-每当应用程序需要锁来访问表中的数据时，都会发布适当的表级锁。需要意识到，由于表上所有的锁都是表级而非行级的，这会降低了访问该表的应用程序的并发性。
+每当应用程序需要锁来访问表中的数据时，都会发布适当的表级锁。需要意识到，由于表上所有的锁都是表级而非行级的，这会降低访问该表的应用程序的并发性。
 
 ## 在 SQL 中更改锁定级别
 
@@ -15289,14 +14646,14 @@ ALTER TABLE TEST_TAKEN LOCKSIZE TABLE;
 
 `WITH` 语句置于任何 `SELECT` 或数据修改语句的末尾，后跟你想要该语句的锁定级别：
 
-- RR — Repeatable Read（可重复读）
-- RS — Read Stability（读稳定性）
-- CS — Cursor Stability（游标稳定性）
-- UR — Uncommitted Read（未提交读）
+- `RR` — Repeatable Read（可重复读）
+- `RS` — Read Stability（读稳定性）
+- `CS` — Cursor Stability（游标稳定性）
+- `UR` — Uncommitted Read（未提交读）
 
-以下示例显示了如何更改 SELECT 语句使其在请求期间不持有任何锁（示例 10–17）：
+以下示例显示了如何更改 `SELECT` 语句使其在请求期间不持有任何锁（示例 10–17）：
 
-```
+```sql
 SELECT * FROM DB2CERT.TEST_TAKEN
 WHERE SEAT_NO = '1' AND DATE_TAKEN = CURRENT DATE
 WITH UR;
@@ -15308,7 +14665,7 @@ WITH UR;
 
 有时正在执行的 SQL 位于存储过程或其他代码中，无法于修改更改锁定行为。在这种情况下，可以使用 `SET CURRENT ISOLATION` 语句来更改 `CURRENT ISOLATION` 特殊寄存器的值。在执行任何选择语句时，将使用该特定的隔离级别，但语句已指定了锁定级别的情况除外。命令的语法见示例 10–18。
 
-```
+```sql
 SET CURRENT ISOLATION = US | CS | RR | RS | RESET
 ```
 
@@ -15316,12 +14673,12 @@ SET CURRENT ISOLATION = US | CS | RR | RS | RESET
 
 执行 SQL 时，`CURRENT ISOLATION` 特殊寄存器将被替换为指定的值，或者如果设置为 `RESET` 则置为空。锁定级别与示例 10–17 中使用的相同。除了两个字符锁定代码外，还有一些同义词可以使用：
 
-- 可以用 DIRTY READ 代替 UR
-- 可以用 READ UNCOMMITTED 代替 UR
-- READ COMMITTED 会被识别并升级为 CS
-- 可以用 CURSOR STABILITY 代替 CS
-- 可以用 REPEATABLE READ 代替 RR
-- 可以用 SERIALIZABLE 代替 RR
+- 可以用 `DIRTY READ` 代替 `UR`
+- 可以用 `READ UNCOMMITTED` 代替 `UR`
+- `READ COMMITTED` 会被识别并升级为 `CS`
+- 可以用 `CURSOR STABILITY` 代替 `CS`
+- 可以用 `REPEATABLE READ` 代替 `RR`
+- 可以用 `SERIALIZABLE` 代替 `RR`
 
 ## 修改锁定
 
@@ -15332,36 +14689,35 @@ DB2 包含两个可以修改处理记录方式的注册表变量：
 
 这两个注册变量都必须使用 `db2set` 命令设置（示例 10–19）。
 
-```
+```bash
 db2set DB2_SKIPINSERTED=ON
 ```
 
-示例 10–19 更改 DB2_SKIPINSERTED
 
-DB2_SKIPINSERTED 和 DB2_SKIPDELETED 值适用于整个数据库，且只有在数据库运行时才能更改。
 
-## DB2_SKIPINSERTED
+# 示例 10–19 更改 `DB2_SKIPINSERTED`
 
-通常 DB2 会等待 INSERT 事务完成才允许 SELECT 语句读取值。换句话说，任何插入活动都会导致 SELECT 语句等待插入提交或回滚。这是 DB2 的默认行为，当 DB2_SKIPINSERTED 设置为 OFF 时如此。
+`DB2_SKIPINSERTED` 和 `DB2_SKIPDELETED` 值适用于整个数据库，且只有在数据库运行时才能更改。
+
+## `DB2_SKIPINSERTED`
+
+通常 DB2 会等待 `INSERT` 事务完成才允许 `SELECT` 语句读取值。换句话说，任何插入活动都会导致 `SELECT` 语句等待插入提交或回滚。这是 DB2 的默认行为，当 `DB2_SKIPINSERTED` 设置为 `OFF` 时如此。
 
 然而，在许多情况下，创建报告不需要等待未提交的数据。这意味着报告应该跳过已插入但尚未提交的数据。通过设置 `DB2_SKIPINSERTED=OFF`，可以增加表的并发性。
 
-## DB2_SKIPDELETED
+## `DB2_SKIPDELETED`
 
-DB2_SKIPDELETED 与 DB2_SKIPINSERTED 类似，但处理的是删除记录。当此参数设置为 ON 时，任何使用游标稳定性或读稳定性隔离级别的语句在索引访问期间跳过删除键，表访问期间跳过删除行。注意，另一个注册变量 `DB2_EVAL_UNCOMMITTED` 也可以提高某些形式 SQL 的并发性。
+`DB2_SKIPDELETED` 与 `DB2_SKIPINSERTED` 类似，但处理的是删除记录。当此参数设置为 `ON` 时，任何使用游标稳定性或读稳定性隔离级别的语句在索引访问期间跳过删除键，表访问期间跳过删除行。注意，另一个注册变量 `DB2_EVAL_UNCOMMITTED` 也可以提高某些形式 SQL 的并发性。
 
-启用 DB2_EVAL_UNCOMMITTED 后，谓词评估将在未提交的数据上进行。这意味着谓词评估将等待未提交的更新完成。如果检查是在行提交之前进行的，它可能无法满足查询，而如果谓词评估等待更新事务完成后，该行可能满足查询。此外，表扫描期间会跳过未提交的删除行。
+启用 `DB2_EVAL_UNCOMMITTED` 后，谓词评估将在未提交的数据上进行。这意味着谓词评估将等待未提交的更新完成。如果检查是在行提交之前进行的，它可能无法满足查询，而如果谓词评估等待更新事务完成后，该行可能满足查询。此外，表扫描期间会跳过未提交的删除行。
 
-此注册变量不影响 DB2目录表游标的行为。
+此注册变量不影响 DB2 目录表游标的行为。
 
 ## 修改死锁超时
 
-用于实现事务隔离级别的传统锁定会导致应用程序相互阻塞。当这种情况时，一个应用程序必须等待另一个应用程序释放特定表、行或索引键值的锁。数据库有一个名为 lockout 的配置参数限制了
+用于实现事务隔离级别的传统锁定会导致应用程序相互阻塞。当这种情况时，一个应用程序必须等待另一个应用程序释放特定表、行或索引键值的锁。数据库有一个名为 `lockout` 的配置参数限制了应用程序在超时之前等待锁的时间。然而，这个数据库级别的参数可能并不适用于许多应用程序。另一方面，在某些情况下，告诉用户目前无法进行更新并稍后重试可能更好。
 
-
-应用程序在超时之前等待锁的时间。然而，这个数据库级别的参数可能并不适用于许多应用程序。另一方面，在某些情况下，告诉用户目前无法进行更新并稍后重试可能更好。
-
-应用程序/会话的锁模式超时可以设置为 `WAIT`（等待，无限期）、`NOT WAIT`（不等待）、等待指定的时间（最多 32767 秒），或重置为数据库配置值。该命令的语法在示例 10–20 中所示
+应用程序/会话的锁模式超时可以设置为 `WAIT`（等待，无限期）、`NOT WAIT`（不等待）、等待指定的时间（最多 32767 秒），或重置为数据库配置值。该命令的语法在示例 10–20 中所示：
 
 ```
 SET CURRENT LOCK TIMEOUT = WAIT | NOT WAIT | NULL | 1..32767
@@ -15379,7 +14735,7 @@ SET NAME='PAUL'
 WHERE SEAT=4 AND TEST_DATE='2007-02-01';
 ```
 
-## 示例 10–22 在执行 UPDATE 前修改锁超时
+## 示例 10–22 在执行 `UPDATE` 前修改锁超时
 
 ## 使用临时表
 
@@ -15405,6 +14761,8 @@ SELECT * FROM TRANSACTIONS WHERE SALES < 3000;
 ```
 SELECT * FROM SESSION.T1;
 ```
+
+
 
 ## 示例 10–22 使用临时表避免锁
 
@@ -15482,15 +14840,11 @@ DB2 可以在以下硬件环境中运行：
 
 这种环境通常由同一台机器内的多个等能力处理器组成，被称为对称多处理器 (SMP) 系统。磁盘空间和内存等资源是共享的。与单分区数据库单处理器环境相比，位于这种机器中。
 
-这种环境比多台机器更容易管理，因为所有物理上都包含在一个机器内。由于有多个可用处理器，不同的数据库操作可以比分配给单个处理器的数据库操作更快完成。DB2 还可以将单个查询的工作分配到可用处理器之间以提高处理速度。其他数据-
-
-
-
-基础操作如 `LOAD`、`BACKUP` 和 `RESTORE` 实用程序，以及 `CREATE INDEX` 语句可以利用多处理器。
+这种环境比多台机器更容易管理，因为所有物理上都包含在一个机器内。由于有多个可用处理器，不同的数据库操作可以比分配给单个处理器的数据库操作更快完成。DB2 还可以将单个查询的工作分配到可用处理器之间以提高处理速度。其他数据库操作如 `LOAD`、`BACKUP` 和 `RESTORE` 实用程序，以及 `CREATE INDEX` 语句可以利用多处理器。
 
 在这种环境中，并行 I/O 操作更有可能发生，特别是当数据分布在磁盘驱动器上的多个容器时。
 
-# 内存
+### 内存
 
 如前所述，缓冲池（buffer pools）是 DB2 性能调优中一个非常重要的区域。你配置系统的物理和虚拟内存、DB2 内部内存使用以及 DB2 缓冲池的方式将极大地影响系统性能。
 
@@ -15500,7 +14854,7 @@ DB2 可以在以下硬件环境中运行：
 
 内存需求受并发用户数量的影响。例如，在 Windows 环境中，建议至少从 256 MB 内存开始，随着用户数量的增加，可能需要额外的内存。请参考相关操作系统的 DB2 快速入门手册，以获取适用于你发行版本的准确详细信息。
 
-# 磁盘
+### 磁盘
 
 所需的磁盘量最终取决于数据库中需要存储的数据量。在规划硬盘配置时需要考虑的因素包括：
 
@@ -15511,7 +14865,7 @@ DB2 可以在以下硬件环境中运行：
 
 性能和可用性受到硬盘控制器以及连接到控制器上的磁盘数量的影响。通过将磁盘放置在单独控制器上，你可以减少通过控制器的流量，从而减少对磁盘的竞争。
 
-# DB2 存储模型
+### DB2 存储模型
 
 将讨论以下数据对象：
 
@@ -15526,19 +14880,17 @@ DB2 存储模型说明了表、表空间、数据库和 DB2 实例之间的关�
 
 图 11–1 DB2 存储模型
 
-# DB2 存储模型
-
 通常，单个表会被放置在一个表空间中。然而，表（或范围）分区允许 DBA 将表的部分放在不同的表空间中。此功能允许 DBA 对频繁从表中添加和删除的数据（如每月或每季度销售数据）进行更高效的维护。有关此功能的更多信息可以查阅第 674 页的“表（范围）分区”章节。
 
-# 缓冲池
+### 缓冲池
 
 缓冲池是分配给数据库管理器的的主内存区域，用于在从磁盘读取或修改时缓存表和索引数据页。缓冲池的目的是提高数据库系统性能。数据库决定何时将数据从磁盘引入缓冲池，以及何时缓冲池中的旧数据短期内可能不再使用并写回磁盘。从内存访问数据的速度远快于磁盘；因此，数据库读取或写入磁盘的次数越少，性能越好。可以创建多个缓冲池。缓冲池的配置是一个非常重要的调优区域，因为你可以减少过度物理 I/O 引起的延迟。
 
 > DB2 注意事项
 
-在 UNIX 平台上，创建 DB2 数据库将创建一个名为 TBDEFAULTS 的默认缓冲池，包含 1000 个四千字节的页。对于其他平台，缓冲池的大小为 250 个四千字节的页。
+在 UNIX 平台上，创建 DB2 数据库将创建一个名为 `TBDEFAULTS` 的默认缓冲池，包含 1000 个四千字节的页。对于其他平台，缓冲池的大小为 250 个四千字节的页。
 
-# 表空间
+### 表空间
 
 建立关系型数据库的的首要任务之一是将逻辑设计映射到系统上的物理存储。用于指定数据物理位置的对象称为表空间。表空间被用作数据库与存放实际表数据的容器对象之间的层。一个表空间可以包含多个表。
 
@@ -15555,29 +14907,23 @@ DB2 存储模型说明了表、表空间、数据库和 DB2 实例之间的关�
 - 自动存储的 DMS
 自动存储并不是真的一种独立的表空间类型，而是处理 DMS 的不同方式。DMS 容器需要更多的维护（见下文），自动存储在 DB2 V8.2.2 中引入是为了简化空间管理。
 
-### DB2 注意事项
+> DB2 注意事项
 
 DB2 9 创建的新数据库的默认存储机制基于自动存储。在 DB2 9 之前使用系统管理存储创建。
 
-# SMS 表空间
+### SMS 表空间
 
 在系统管理空间 (SMS) 表空间中，操作系统的文件系统管理器分配并管理存储表的空间。这种存储模型通常由许多表示表对象的文件的组成。用户决定文件的位置，DB2 控制它们的名称，文件系统负责管理它们。每个容器都是操作系统文件空间中的一个目录。
 
-# DMS 表空间
+### DMS 表空间
 
 在数据库管理空间 (DMS) 表空间中，由数据库管理器控制存储空间。存储模型由有限数量的设备组成，空间由 DB2 管理。数据库管理员决定使用哪些设备，DB2 管理设备上的空间。表空间定义包含了属于该表空间的设备或文件列表。每个容器要么是固定大小的预分配文件或物理设备（如磁盘）。
 
-
-
-
-
-## DB2 存储模型
-
-## 自动存储
+### 自动存储
 
 启用了自动存储的数据库关联有一组或多个存储路径。表空间可以定义为“由自动存储管理”，其容器（containers）由 DB2 根据这些存储路径进行分配和配置。
 
-## DMS 与 SMS 与自动存储的对比
+### DMS 与 SMS 与自动存储的对比
 
 虽然表 11–1 并非详尽，但在决定使用 DMS、自动存储和 SMS 表空间时，它确实包含了一些需要考虑的因素。
 
@@ -15589,43 +14935,33 @@ DB2 9 创建的新数据库的默认存储机制基于自动存储。在 DB2 9 �
 | 默认类型 | 版本 8 | 否 | 版本 9 |
 | 对象管理 | 操作系统 | DB2 | DB2 |
 | 空间分配 | 根据需要增长/缩小。 | 预分配。大小可以缩小和增长，但需要 DBA 干预。 | 预分配。可以自动增长。 |
-| 管理易用性 | 最佳。几乎或不需要调优。 | 良好，但需要某些调优（例如 EXTSIZE PREFETCH-SIZE）。 | 最佳。几乎或不需要调优。 |
+| 管理易用性 | 最佳。几乎或不需要调优。 | 良好，但需要某些调优（例如 `EXTSIZE` `PREFETCH-SIZE`）。 | 最佳。几乎或不需要调优。 |
 | 性能 | 非常好 | 最佳。使用原始容器（raw containers）可获得额外 10% 的性能。 | 最佳。但无法使用原始容器。 |
 | 最大表空间大小 | 64GB (4K 页) | 2TB (4K 页) | 2TB (4K 页) |
 
-除了使用 SMS 表空间管理外，两种存储模型之间最显著的区别是表空间的最大限制。使用 SMS 时，DBA 被限制在表空间中放置最多 64GB 的数据。可以通过将页大小更改为 32K (512GB) 来增加此数量，但代价可能是页面上的可用空间减少。转向 DMS 模型将
+除了使用 SMS 表空间管理外，两种存储模型之间最显著的区别是表空间的最大限制。使用 SMS 时，DBA 被限制在表空间中放置最多 64GB 的数据。可以通过将页大小更改为 32K (512GB) 来增加此数量，但代价可能是页面上的可用空间减少。转向 DMS 模型将在 4K 页大小下，将表空间限制增加到 2TB。在 32K 页大小下，可用存储量可以增长到高达 16TB。虽然还有其他方法可以增加表超过 64GB 边界的大小，但最简单的方法可能是最初使用 DMS 表空间。
 
-## 第 11 章数据存储管理
+### DMS 与自动存储的对比
 
-在 4K 页大小下，将表空间限制增加到 2TB。在 32K 页大小下，可用存储量可以增长到高达 16TB。虽然还有其他方法可以增加表超过 64GB 边界的大小，但最简单的方法可能是最初使用 DMS 表空间。
-
-## DMS 与自动存储的对比
-
-DB2 8.2.2 引入了自动存储（AUTOMATIC STORAGE）的概念。自动存储允许 DBA 在设置数据库时存储路径，这些路径可用于所有表空间容器的创建。无需由 DBA 显式编码表空间的位置和大小，系统将自动分配它们。在 DB2 9 中，除非 DBA 显式覆盖此设置，否则创建数据库时将带有自动存储。
+DB2 8.2.2 引入了自动存储（`AUTOMATIC STORAGE`）的概念。自动存储允许 DBA 在设置数据库时存储路径，这些路径可用于所有表空间容器的创建。无需由 DBA 显式编码表空间的位置和大小，系统将自动分配它们。在 DB2 9 中，除非 DBA 显式覆盖此设置，否则创建数据库时将带有自动存储。
 
 数据库只有在创建时才能启用自动存储。你无法对最初未定义为使用它的数据库启用自动存储。同样，你无法对最初设计为使用它的数据库禁用自动存储。
 
 表 11–2 总结了管理非自动存储和自动存储之间的某些区别。
 
-## 表 11–2 DMS 与自动存储对比
+表 11–2 DMS 与自动存储对比
 
 | 特性 | 非自动存储 | 自动存储 |
 | --- | --- | --- |
 | 容器创建 | 创建表空间时必须显式提供容器。 | 创建表空间时无法提供容器 —— 它们将由 DB2 自动分配和配置。 |
-| 容器调整大小 | 默认关闭表空间自动调整 (AUTRESIZE NO)。 | 默认开启表空间自动调整 (AUTORESIZE YES)。 |
-| 初始大小 | 无法使用 INITIALSIZE 子句指定表空间的初始大小。 | 可以 INITIALSIZE 子句指定表空间的初始大小。 |
-| 容器修改 | 可以 ALTER TABLESPACE 语句执行容器操作（ADD, DROP, BEGIN NEW STRIPE SET 等）。 | 无法执行容器操作，因为 DB2 控制着空间管理。 |
-
-## DB2 存储模型 633
-
-| 表 11–2 DMS 存储与自动存储对比
-| 特性 | 非自动存储 | 自动存储 |
-|---|---|---|
+| 容器调整大小 | 默认关闭表空间自动调整 (`AUTORESIZE NO`)。 | 默认开启表空间自动调整 (`AUTORESIZE YES`)。 |
+| 初始大小 | 无法使用 `INITIALSIZE` 子句指定表空间的初始大小。 | 可以 `INITIALSIZE` 子句指定表空间的初始大小。 |
+| 容器修改 | 可以 `ALTER TABLESPACE` 语句执行容器操作（`ADD`, `DROP`, `BEGIN NEW STRIPE SET` 等）。 | 无法执行容器操作，因为 DB2 控制着空间管理。 |
 | 管理易用性 | 可以使用重定向恢复（redirected restore）操作重新定义与表空间关联的容器。 | 无法使用重定向恢复操作重新定义与表空间关联的容器，因为 DB2 控制着空间管理。 |
 
 引入自动存储模型的主要目的是简化 DMS 表空间的管理，同时保留性能特性。在某些情况下，DBA 必须定义所用表空间的所有特性，但许多应用程序将从自动存储减少的管理需求中受益。
 
-## 普通表空间与大表空间
+### 普通表空间与大表空间
 
 DB2 将行放置在页上，页的大小可以是 4K、8K、16K 或 32K。虽然页的大小可以不同，但表空间中的最大页数受到行标识符（RID）大小的限制。RID 是表中行位置的引用。RID 包含表空间中的页号和行在页上的槽位号。
 
@@ -15640,10 +14976,6 @@ DB2 将行放置在页上，页的大小可以是 4K、8K、16K 或 32K。虽然
 （注：原文后续存在大量重复的 RID 结构描述，已按逻辑精简）
 
 在 DB2 9 之前，行标识符长度为四个字节，其中 3 字节指向普通表空间中的一个页，1 字节表示页内的行号。图 11–2 展示了 DB2 8 及更早版本的 RID 结构。
-
-## 页 11–1
-
-## DB2 存储模型 635
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_662_0.png)
 
@@ -15668,12 +15000,7 @@ DB2 将行放置在页上，页的大小可以是 4K、8K、16K 或 32K。虽然
 
 虽然表空间现在可以增长到 16TB，但这种大小的表会有相关的挑战，包括备份和恢复。当表开始增长到 TB 级时，使用其他技术（如表分区或数据库分区）可能合适，而不是将所有数据放在一个表空间中。这些选项允许更细粒度的备份和恢复，并为访问表的某些部分提供优化选项。
 
-大表空间现在是 DB2 9 数据库中任何数据库管理存储（DMS）表空间的默认类型。这意味着 `CREATE TABLE` 命令不需要显式指定一个大表空间对象是
-
-
-
-
-尽管语法允许指定此项，但默认会创建。如果 DBA 想要继续创建较小的表空间格式，则必须指定表空间类型为 REGULAR。请注意，对于系统管理存储（SMS），仅支持 REGULAR 表空间格式。
+大表空间现在是 DB2 9 数据库中任何数据库管理存储（DMS）表空间的默认类型。这意味着 `CREATE TABLE` 命令不需要显式指定一个大表空间对象。尽管语法允许指定此项，但默认会创建。如果 DBA 想要继续创建较小的表空间格式，则必须指定表空间类型为 `REGULAR`。请注意，对于系统管理存储（SMS），仅支持 `REGULAR` 表空间格式。
 
 现在可以支持更大 RID 格式的对象包括：
 
@@ -15681,21 +15008,23 @@ DB2 将行放置在页上，页的大小可以是 4K、8K、16K 或 32K。虽然
 - 用户临时表
 - 用户表空间
 
-### DB2 注意事项
+> DB2 注意事项
 
-目录表空间不会创建为 LARGE。在目前，当前的目录表规模尚不够大，不足以支持更大的表空间大小。
+目录表空间不会创建为 `LARGE`。在目前，当前的目录表规模尚不够大，不足以支持更大的表空间大小。
 
-## 迁移到大表空间
+### 迁移到大表空间
 
-从之前的版本迁移到 DB2 9 不会将任何表空间升级为新格式。要将表空间更改为 LARGE 格式，必须使用 ALTER TABLESPACE 命令：
+从之前的版本迁移到 DB2 9 不会将任何表空间升级为新格式。要将表空间更改为 `LARGE` 格式，必须使用 `ALTER TABLESPACE` 命令：
 
 ```
 ALTER TABLESPACE tablespacename CONVERT TO LARGE
 ```
 
-ALTER 命令不会在物理上更改表空间的结构；它仅仅更改了目录条目，以指示该表空间符合新的 RID 格式。所有从版本 8 迁移的表空间都将是 REGULAR 格式。
 
-虽然执行 ALTER 命令不需要大量时间，但你必须在命令完成后立即进行 COMMIT。如果未提交命令，表空间将保持排他锁，在锁释放之前，无法对表空间中的表进行任何操作。
+
+`ALTER`命令不会在物理上更改表空间的结构；它仅仅更改了目录条目，以指示该表空间符合新的 RID 格式。所有从版本 8 迁移的表空间都将是 `REGULAR` 格式。
+
+虽然执行 `ALTER` 命令不需要大量时间，但你必须在命令完成后立即进行 `COMMIT`。如果未提交命令，表空间将保持排他锁，在锁释放之前，无法对表空间中的表进行任何操作。
 
 一旦表空间被更改，还需要采取额外的两个步骤以获得与更大的 RID 相关的优势：
 
@@ -15704,13 +15033,15 @@ ALTER 命令不会在物理上更改表空间的结构；它仅仅更改了目�
 
 重组索引将允许表空间增加其分配的页面数量。为了让表增长到 64GB 边界，此步骤是必要的。如果不重组索引，表空间将继续限制在原始的 64GB 边界。
 
-请注意，如果没有进行索引重组，之前存在的表在发生表或索引重组织之前将继续限制为每页 255 行以及三字节的页码。如果表空间中的页数耗尽，DB2 将发出错误消息：
+请注意，如果没有进行索引重组，之前存在的表在发生表或索引重组织之前将继续限制为每页 255 行以及三字节的页码。如果表空间中的页数耗尽，`DB2` 将发出错误消息：
 
+```
 SQL1236N 表 "table-name>"无法分配新页，因为标识符为 "index-id>" 的索引不支持大 RID。
+```
 
-重组织表没有重组索引那么关键。虽然索引控制着表空间页面数量的增长，但重组织表可能会导致每页包含更多行。必须使用标准的 REORG 表命令在页上放置更多行。在转换为新的 RID 格式时，不支持在线 REORG 命令。
+重组织表没有重组索引那么关键。虽然索引控制着表空间页面数量的增长，但重组织表可能会导致每页包含更多行。必须使用标准的 `REORG` 表命令在页上放置更多行。在转换为新的 RID 格式时，不支持在线 `REORG` 命令。
 
-在 LARGE 表空间中重组表仅在行大小小于表 11–3 所示的最小记录长度时才是必需的。
+在 `LARGE` 表空间中重组表仅在行大小小于表 11–3 所示的最小记录长度时才是必需的。
 
 ## 容器
 
@@ -15718,19 +15049,19 @@ SQL1236N 表 "table-name>"无法分配新页，因为标识符为 "index-id>" �
 
 图 11–4 DB2 中的容器
 
-容器被分配给表空间。所有的数据库和表数据都分配给表空间。表空间的定义和属性记录在数据库系统目录中。一旦创建了表空间，你就可以在该表空间内创建表。可以使用 LIST TABLESPACE 命令获取有关容器的详细信息。单个表空间可以跨多个容器，但每个容器只能属于一个表空间。图 11-5 显示了数据库内表与表空间以及关联容器和磁盘之间关系的示例。
+容器被分配给表空间。所有的数据库和表数据都分配给表空间。表空间的定义和属性记录在数据库系统目录中。一旦创建了表空间，你就可以在该表空间内创建表。可以使用 `LIST TABLESPACE` 命令获取有关容器的详细信息。单个表空间可以跨多个容器，但每个容器只能属于一个表空间。图 11-5 显示了数据库内表与表空间以及关联容器和磁盘之间关系的示例。
 
-容器通常位于本地磁盘上。可以使用局域网重定向驱动器或 NFS 挂载的文件系统，但必须确保网络延迟不会影响系统性能。此外，只有特定的网络文件系统通过了测试，因此最好在 DB2 支持网站上检查，以确保你的特定配置受到支持：
+容器通常位于本地磁盘上。可以使用局域网重定向驱动器或 `NFS` 挂载的文件系统，但必须确保网络延迟不会影响系统性能。此外，只有特定的网络文件系统通过了测试，因此最好在 `DB2` 支持网站上检查，以确保你的特定配置受到支持：
 
-www-306.ibm.com/software/data/db2/support/db2_9/
+`www-306.ibm.com/software/data/db2/support/db2_9/`
 
 图 11–5 表空间和容器
 
 ## 目录容器
 
-目录名称的容器是 SMS 表空间中唯一可以使用容器类型。SMS 表空间可以定义多个容器，每个容器都可以映射到物理磁盘以平衡 I/O 负载。DB2 将平衡写入到多个容器中的数据量。识别所有你想要使用的容器非常重要，因为在使用 ALTER TABLESPACE 语句创建 SMS 表空间后，你无法向该表空间添加或删除容器。
+目录名称的容器是 `SMS` 表空间中唯一可以使用容器类型。`SMS` 表空间可以定义多个容器，每个容器都可以映射到物理磁盘以平衡 I/O 负载。`DB2` 将平衡写入到多个容器中的数据量。识别所有你想要使用的容器非常重要，因为在使用 `ALTER TABLESPACE` 语句创建 `SMS` 表空间后，你无法向该表空间添加或删除容器。
 
-目录容器的名称标识一个绝对或相对目录名称。该目录不能包含任何文件或子目录。相对目录是相对于数据库目录的。更多信息请参阅《DB2 SQL 参考》中的 CREATE TABLESPACE 语句。
+目录容器的名称标识一个绝对或相对目录名称。该目录不能包含任何文件或子目录。相对目录是相对于数据库目录的。更多信息请参阅《DB2 SQL 参考》中的 `CREATE TABLESPACE` 语句。
 
 ### DB2 注意事项
 
@@ -15742,65 +15073,65 @@ www-306.ibm.com/software/data/db2/support/db2_9/
 
 ## 文件容器
 
-文件容器是 DMS 表空间使用的预先分配大小的文件。文件和设备之间在操作上没有区别。在定义容器名称时，可以使用绝对或相对文件名。如果目录不存在，它将被创建并初始化为特定大小。所需的空间量可以用页、KB、MB 或 GB 为单位指定。
+文件容器是 `DMS` 表空间使用的预先分配大小的文件。文件和设备之间在操作上没有区别。在定义容器名称时，可以使用绝对或相对文件名。如果目录不存在，它将被创建并初始化为特定大小。所需的空间量可以用页、KB、MB 或 GB 为单位指定。
 
 ### DB2 注意事项
 
-容器只能通过 ALTER TABLESPACE 语句添加到 DMS 表空间中。你可以在定向恢复操作期间向 SMS 表空间添加容器。
+容器只能通过 `ALTER TABLESPACE` 语句添加到 `DMS` 表空间中。你可以在定向恢复操作期间向 `SMS` 表空间添加容器。
 
 ## 表空间设计
 
-除了定义表空间是 SMS 还是 DMS 外，在 CREATE TABLESPACE 命令还可以指定其他几个参数。以下是 CREPACE 语句的语法（图 11–6）：
+除了定义表空间是 `SMS` 还是 `DMS` 外，在 `CREATE TABLESPACE` 命令还可以指定其他几个参数。以下是 `CREPACE` 语句的语法（图 11–6）：
 
 图 11–6 创建表语法
 
-CREATE TABLESPACE 的关键参数包括：
+```
+CREATE TABLESPACE
+```
 
-- REGULAR | TEMPORARY | LARGE TABLESPACE 指定要创建的表空间类型；如果没有指定将选择 LARGE
-- MANAGED BY SYSTEM | DATABASE | AUTOMATIC STORAGE 指定 SMS (SYSTEM)、DMS (DATABASE) 或自动存储。SMS 或 DMS 表空间使用 USING 子句定义容器。对于 SMS 表空间，容器是目录名称。对于 DMS 表空间，指定 FILE 或 DEVICE容器及其页数。
+`CREATE TABLESPACE` 的关键参数包括：
+
+- `REGULAR | TEMPORARY | LARGE TABLESPACE` 指定要创建的表空间类型；如果没有指定将选择 `LARGE`
+- `MANAGED BY SYSTEM | DATABASE | AUTOMATIC STORAGE` 指定 `SMS` (`SYSTEM`)、`DMS` (`DATABASE`) 或自动存储。`SMS` 或 `DMS` 表空间使用 `USING` 子句定义容器。对于 `SMS` 表空间，容器是目录名称。对于 `DMS` 表空间，指定 `FILE` 或 `DEVICE` 容器及其页数。
 
 对于自动存储表空间，大小属性如图 11–7 所示。
 
 图 11–7 自动存储大小属性
 
-- PAGESIZE 表大小的允许值：4、8、16 或 32。
-- EXTENSIZE 在移动到下一个容器之前写入的页数。
-- PREFETCHSIZE 执行预取操作时读取的页数。
-- BUFFERPOOL 用于此表空间内表的缓冲池名称。
-- OVERHEAD I/O 控制器读取页的毫秒数（寻道和延迟，默认值为 24.1）。
-- TRANSFERRATE 将页读入内存的毫秒数；该值用于优化器计算 I/O 成本（默认值为 0.9）。
-- DROPPED TABLE RECOVERY ON | OFF 指定是否可以使用 ROLLFORWARD 命令的 RECOVER TABLE 恢复表空间中的删除表。
-- DATABASE PARTITION GROUP 用于指定集群环境所属的分组；默认假设非集群环境。
+- `PAGESIZE` 表大小的允许值：4、8、16 或 32。
+- `EXTENSIZE` 在移动到下一个容器之前写入的页数。
+- `PREFETCHSIZE` 执行预取操作时读取的页数。
+- `BUFFERPOOL` 用于此表空间内表的缓冲池名称。
+- `OVERHEAD` I/O 控制器读取页的毫秒数（寻道和延迟，默认值为 24.1）。
+- `TRANSFERRATE` 将页读入内存的毫秒数；该值用于优化器计算 I/O 成本（默认值为 0.9）。
+- `DROPPED TABLE RECOVERY ON | OFF` 指定是否可以使用 `ROLLFORWARD` 命令的 `RECOVER TABLE` 恢复表空间中的删除表。
+- `DATABASE PARTITION GROUP` 用于指定集群环境所属的分组；默认假设非集群环境。
 
 ## 常规表空间
 
-包含数据的表存在于一个或多个常规表空间。默认，执行 CREATE DATABASE 命令时会创建一个表空间 USERSPACE1。索引也存储在常规表空间中。系统目录也存在于常规表空间。默认的系统表空间是 SYSCATCH。默认情况下，USERSPACE1 和 SYSCATCH 都被创建为 SMS，但可以在 CREATE DATABASE 命令中定义为 DMS。虽然它
-
-
-
-可以选择使用 USERSPACE 表空间（它始终会被创建，但可以被删除），但强制要求使用 SYSCATPACE 作为存放系统目录表的表空间名称。普通表空间（包括索引数据）的最大大小取决于该表空间使用的页大小。例如，4 KB 页的最大大小为 64 GB，8 KB 页的最大大小为 128 GB。
+包含数据的表存在于一个或多个常规表空间。默认，执行 `CREATE DATABASE` 命令时会创建一个表空间 `USERSPACE1`。索引也存储在常规表空间中。系统目录也存在于常规表空间。默认的系统表空间是 `SYSCATCH`。默认情况下，`USERSPACE1` 和 `SYSCATCH` 都被创建为 `SMS`，但可以在 `CREATE DATABASE` 命令中定义为 `DMS`。虽然它可以选择使用 `USERSPACE` 表空间（它始终会被创建，但可以被删除），但强制要求使用 `SYSCATPACE` 作为存放系统目录表的表空间名称。普通表空间（包括索引数据）的最大大小取决于该表空间使用的页大小。例如，4 KB 页的最大大小为 64 GB，8 KB 页的最大大小为 128 GB。
 
 ## 大表 (Large Table Space)
 
-包含长字段数据或长对象数据（如多媒体对象）的表存储在一个或多个表空间中。它们的使用是可选的，因为长数据也可以存储在普通表空间。长表必须是 DMS。长表的最大大小为 2 TB。
+包含长字段数据或长对象数据（如多媒体对象）的表存储在一个或多个表空间中。它们的使用是可选的，因为长数据也可以存储在普通表空间。长表必须是 `DMS`。长表的最大大小为 2 TB。
 
 > DB2 注意
 > 长表空间（Long table space）已重命名为大表（large table spaces）。
 
 ## 系统临时表空间
 
-临时表空间由数据库管理器在 SQL 操作期间使用，用于存储临时数据，例如排序操作期间的临时表、规范化表、创建索引以及连接表。数据库必须至少有一个临时表空间。默认情况下，当删除数据库以及在创建另一个临时表空间（必须已存在一个）之后，会创建一个 SMS 表空间 TEMPSPACE1，它可以被称为任何合法的表空间名称。不必使用 TEMPSPACE1 名称。临时表空间可以是 SMS 或是 DMS。临时表空间的最大大小为 2 TB。
+临时表空间由数据库管理器在 SQL 操作期间使用，用于存储临时数据，例如排序操作期间的临时表、规范化表、创建索引以及连接表。数据库必须至少有一个临时表空间。默认情况下，当删除数据库以及在创建另一个临时表空间（必须已存在一个）之后，会创建一个 `SMS` 表空间 `TEMPSPACE1`，它可以被称为任何合法的表空间名称。不必使用 `TEMPSPACE1` 名称。临时表空间可以是 `SMS` 或是 `DMS`。临时表空间的最大大小为 2 TB。
 
 > DB2 注意
-> DB2 支持系统临时表空间和用户临时表空间。DB2 必须存在系统临时表空间才能正常运行。用户临时表空间用于 DECLARED TEMPORARY 表。
+> `DB2` 支持系统临时表空间和用户临时表空间。`DB2` 必须存在系统临时表空间才能正常运行。用户临时表空间用于 `DECLARED TEMPORARY` 表。
 
 ## 区大小 (Extentsize)
 
-区是表空间容器内的空间单位。数据库对象存储在 DB2 的页中（LOB 和长 vchar 除外）。这些页被组成称为“区”的分配单元。区的大小在表空间级别定义。
+区是表空间容器内的空间单位。数据库对象存储在 `DB2` 的页中（`LOB` 和长 `vchar` 除外）。这些页被组成称为“区”的分配单元。区的大小在表空间级别定义。
 
 ## 表空间设计
 
-一旦确定了表空间的区大小，就无法更改。数据库配置参数 DFT_EXTENT_SZ 指定了数据库中所有表空间的默认区大小。该值的取值范围从 2 到 256 页；例如，4 KB 页对应 8 – 1024 KB，或 8 KB 页对应 16 – 2048 KB。可以使用 `CREATE TABLESPACE` 语句中的 `EXTSIZE` 参数来覆盖此值。虽然该参数也可以以千字节或兆字节为单位指定，但 DB2 通过将字节数除以页大小并向下取整，确保区大小始终是页页的整数倍。
+一旦确定了表空间的区大小，就无法更改。数据库配置参数 `DFT_EXTENT_SZ` 指定了数据库中所有表空间的默认区大小。该值的取值范围从 2 到 256 页；例如，4 KB 页对应 8 – 1024 KB，或 8 KB 页对应 16 – 2048 KB。可以使用 `CREATE TABLESPACE` 语句中的 `EXTSIZE` 参数来覆盖此值。虽然该参数也可以以千字节或兆字节为单位指定，但 `DB2` 通过将字节数除以页大小并向下取整，确保区大小始终是页页的整数倍。
 
 图 11–8 区和容器
 
@@ -15809,16 +15140,16 @@ CREATE TABLESPACE 的关键参数包括：
 
 ## 页大小 (Pagesize)
 
-DB2 表数据行被组织成称为*页 (pages)* 的块。页可以是四种大小：4、8、16 和 32 KB。表数据页不包含定义为 LONG VARCHAR、LONG GRAPHIC、BLOB、CLOB 或 DBCLOB 类型的列的数据。
+`DB2` 表数据行被组织成称为*页 (pages)* 的块。页可以是四种大小：4、8、16 和 32 KB。表数据页不包含定义为 `LONG VARCHAR`、`LONG GRAPHIC`、`BLOB`、`CLOB` 或 `DBCLOB` 类型的列的数据。
 
-在表数据页中，预留了 68 字节给 DB2。其他 4028 字节可用于用户数据，尽管单行的长度不能超过 4005 字节（8 KB 页为 8101 字节）。使用 4 KB 页的表空间定义的表，其最大列数为 500 列；对于 8、16 和 32 KB 页，则为 1012 列。
+在表数据页中，预留了 68 字节给 `DB2`。其他 4028 字节可用于用户数据，尽管单行的长度不能超过 4005 字节（8 KB 页为 8101 字节）。使用 4 KB 页的表空间定义的表，其最大列数为 500 列；对于 8、16 和 32 KB 页，则为 1012 列。
 
 > DB2 注意
-> LOB 和长字段数据可以存储在任何页大小的表空间中。
+> `LOB` 和长字段数据可以存储在任何页大小的表空间中。
 
 ## 性能考虑
 
-表空间的类型和设计决定了针对该表空间执行 I/O 的效率。以下概念对于理解 DB2 如何执行 I/O 操作非常重要。
+表空间的类型和设计决定了针对该表空间执行 I/O 的效率。以下概念对于理解 `DB2` 如何执行 I/O 操作非常重要。
 
 ## 大块读取 (Big-Block Reads)
 
@@ -15828,12 +15159,12 @@ DB2 表数据行被组织成称为*页 (pages)* 的块。页可以是四种大�
 
 顺序预取是数据库管理器在查询引用页之前提前读取这些页的能力，以预测查询的需求。这种异步检索可以显著短执行时间。
 
-你可以通过更改 `CREATE TABLESPACE` 或 `ALTER TABLESPACE` 语句上的 `PREFETCHSIZE` 参数来控制预取的激进程度。默认情况下，该值被设置为数据库配置参数 `DFT_PREFETCH_SZ`。此值代表当 DB2 触发预取请求时，一次读取多少页。通过将此值设置为区大小的倍数，可以并行读取多个区。当表空间的容器位于硬盘上，此功能也同样有效。
+你可以通过更改 `CREATE TABLESPACE` 或 `ALTER TABLESPACE` 语句上的 `PREFETCHSIZE` 参数来控制预取的激进程度。默认情况下，该值被设置为数据库配置参数 `DFT_PREFETCH_SZ`。此值代表当 `DB2` 触发预取请求时，一次读取多少页。通过将此值设置为区大小的倍数，可以并行读取多个区。当表空间的容器位于硬盘上，此功能也同样有效。
 
 > DB2 注意
 > 在 Linux 和 UNIX 平台上，预取将创建独立的 I/O 进程。在 Windows 上，预取是通过线程实现的。
 
-为了启用预取，DB2 会启动单独的控制线程（称为 I/O 服务器）来执行页读取。这些 I/O 服务器等待管理所有 SQL 请求处理的数据库代理提出的页请求。第一个 I/O 服务器从队列中读取预取请求，并将数据读入缓冲区池。根据队列中预取请求的数量以及数据库配置参数 `NUM_TOSVERS` 配置的 I/O 服务器数量，多个 I/O 服务器会同时获取数据。DB2 可以监控 I/O 活动。如果正在发生顺序页读取，DB2 将启动预取。此功能称为顺序检测，通过 `SEQDETECT` 参数实现。默认情况下，该参数设置为 YES。无论 `SEQDETECT` 参数如何设置，都有另一种预取形式，即列表预取。这是 DB2 在扫描索引后通常建立行标识符列表，然后按物理地址排序并开始扫描表。由于 DB2 知道需要哪些页，它可以提前获取它们；因此由于异步处理缩短了获取数据的时间。
+为了启用预取，`DB2` 会启动单独的控制线程（称为 I/O 服务器）来执行页读取。这些 I/O 服务器等待管理所有 SQL 请求处理的数据库代理提出的页请求。第一个 I/O 服务器从队列中读取预取请求，并将数据读入缓冲区池。根据队列中预取请求的数量以及数据库配置参数 `NUM_TOSVERS` 配置的 I/O 服务器数量，多个 I/O 服务器会同时获取数据。`DB2` 可以监控 I/O 活动。如果正在发生顺序页读取，`DB2` 将启动预取。此功能称为顺序检测，通过 `SEQDETECT` 参数实现。默认情况下，该参数设置为 `YES`。无论 `SEQDETECT` 参数如何设置，都有另一种预取形式，即列表预取。这是 `DB2` 在扫描索引后通常建立行标识符列表，然后按物理地址排序并开始扫描表。由于 `DB2` 知道需要哪些页，它可以提前获取它们；因此由于异步处理缩短了获取数据的时间。
 
 ## 页清理 (Page Cleaning)
 
@@ -15845,14 +15176,14 @@ DB2 表数据行被组织成称为*页 (pages)* 的块。页可以是四种大�
 
 ## 所需区数
 
-DMS 表空间最少需要五个区：
+`DMS` 表空间最少需要五个区：
 
 - 三个区用于开销和控制信息
 - 每个表对象两个区（始终假设有一个）
 
 ## 所需页数
 
-在 DMS 表空间中，每个容器预留一页用于开销，其余页将一次使用一个区。容器内只使用完整的区，因此为了实现优化空间管理，可以使用以下公式在分配容器大小时确定合适的页大小：
+在 `DMS` 表空间中，每个容器预留一页用于开销，其余页将一次使用一个区。容器内只使用完整的区，因此为了实现优化空间管理，可以使用以下公式在分配容器大小时确定合适的页大小：
 
 ```
 (区大小（页) * n) + 1
@@ -15860,17 +15191,15 @@ DMS 表空间最少需要五个区：
 
 
 
+# 第 11 章 数据存储管理
 
+在该公式中，区段的大小是表空间每个区段的大小，`n` 是你想要存储在容器中的区段数量。请记住，DMS 表空间至少需要五个区段。
 
-# 第 11 章数据存储管理
+请记住，SMS 表空间是根据需要由操作系统文件系统分配空间的。
 
-在该公式中，区段的大小是表空间每个区段的大小，n 是你想要存储在容器中的区段数量。请记住，DMS 表空间至少需要五个区段。
+## 分带（Striping）
 
-请记住，SMS 表空间是根据需要由操作系统文件系统分配空间的的。
-
-## 分带 (Striping)
-
-由于表空间可以跨越多个容器，DB2 会以轮询方式写入每个容器，其中每个区段通过依次写入每个容器的数据来填充。这被称为分带（**stripping**）。
+由于表空间可以跨越多个容器，DB2 会以轮询方式写入每个容器，其中每个区段通过依次写入每个容器的数据来填充。这被称为分带（`stripping`）。
 
 在 SMS 表空间中，如果任何容器变满，则整个表空间都被视为已满，无法再添加更多数据。
 
@@ -15900,11 +15229,11 @@ DMS 表空间最少需要五个区：
 
 以下是针对不同支持的系统的考虑因素：
 
-- 在 Windows 中，DMS 表空间可以使用设备。如果你想使用整个物理驱动器作为容器，请指定 `\\N`，其中 N 是物理驱动器编号。如果你想使用逻辑驱动器作为容器，请指定 `\\X`；其中 X 是逻辑驱动器号。驱动器必须未格式化。其他应用程序不得使用这些容器位置。
+- 在 Windows 中，DMS 表空间可以使用设备。如果你想使用整个物理驱动器作为容器，请指定 `\\N`，其中 N 是物理驱动器编号。如果你想使用逻辑驱动器作为容器，请指定 `\\X`，其中 X 是逻辑驱动器号。驱动器必须未格式化。其他应用程序不得使用这些容器位置。
 - 在 AIX 中，在你将用于 DB2 容器的物理磁盘上创建卷组（volume group）。
 - 在 UNIX 平台上，逻辑卷创建者必须对所使用的设备容器的字符部分具有写权限。
 
-## 多页文件分配 (Multipage File Allocation)
+## 多页文件分配（Multipage File Allocation）
 
 在 SMS 表空间中，随着对象的增长，关联的文件一次扩展一个页面。在插入大量行时，等待系统分配另一个页面可能会导致某些延迟。如果你需要提高性能，可以启用多页分配。这允许系统一次分配或扩展多于一个区段的文件。它将分配空页以填满所有 SMS 表空间容器中的最后一个区段（更多信息请参阅《DB2 命令参考》）。
 
@@ -15925,14 +15254,14 @@ DMS 表空间最少需要五个区：
 ### 表 11–5 SMS 和 DMS 用户表空间的特征
 
 | 特性 | SMS | DMS |
-|---|---|--|
+| --- | --- | --- |
 | 一个表可以跨多个表空间 | 否 | 是 |
 | 仅在需要时分配空间 | 是 | 不* |
 | 表空间可以放在不同的磁盘上 | 是 | 是 |
 | 支持大 RID 格式（每个表空间 >64GB） | 否 | 是 |
 | 创建后可以更改区段大小 | 否 | 否 |
 
-* 对于自动存储，会在需要时扩展容器。
+\* 对于自动存储，会在需要时扩展容器。
 
 ### DB2 注意事项
 
@@ -15952,13 +15281,13 @@ DMS 表空间最少需要五个区：
 
 如果数据库有多个临时表空间，临时对象将以轮询方式分配到临时表空间。每个临时表空间必须足够容纳最大的临时表。应用程序可能会遇到临时表空间满的情况，即使临时表空间还有未使用的空间。
 
-空间设计：
+### 空间设计
 
 - 为每个页大小创建一个 SMS 临时表。
 - 定义这些表空间的容器，使它们共享相同的文件系统。这可以最大化磁盘共享并最小化总磁盘需求。随着 DB2 创建和删除临时表，磁盘空间将被回收。
 - 如果你需要最高性能且可以负担专用磁盘空间，请考虑将 DMS 用于临时表空间。虽然你会失去使用 SMS 的灵活性优势，但你可能会从 DMS 的性能优势中获益。
 
-DB2 注意：数据库始终必须至少有一个临时表空间。通常情况下，SMS 是 TEMP 表空间的首选。
+**DB2 注意：**数据库始终必须至少有一个临时表空间。通常情况下，SMS 是 TEMP 表空间的首选。
 
 ## 选择区段大小
 
@@ -15967,16 +15296,9 @@ DB2 注意：数据库始终必须至少有一个临时表空间。通常情况�
 DMS 表空间空间是按区段一次分配的。随着表的填充和区段变满，将分配一个新的区段。一个表由以下独立的表对象组成：
 
 - 数据对象 — 这是存储常规列数据的地方。
-
-
-
-
-
-## 第 11 章 数据存储管理
-
--   INDEX 对象 — 表上定义的所有索引都存储在此处。
--   LONG FIELD 对象 — 如果您的表包含一个或多个 LONG 列，它们都存储在此处。
--   两个 LOB 对象 — 如果您的表包含一个或多个 LOB 列，它们被存储在 fact两个表对象中：一个对象用于存储 LOB 数据，第二个表对象用于存储描述 LOB 数据的元数据。
+- `INDEX` 对象 — 表上定义的所有索引都存储在此处。
+- `LONG FIELD` 对象 — 如果您的表包含一个或多个 LONG 列，它们都存储在此处。
+- 两个 LOB 对象 — 如果您的表包含一个或多个 LOB 列，它们被存储在 fact两个表对象中：一个对象用于存储 LOB 数据，第二个表对象用于存储描述 LOB 数据的元数据。
 
 每个表对象都是单独存储的。每个表对象还配对了一个名为 *extent map*（区映射）的元数据对象，它描述了表空间中属于该表对象的所有区（extents）。区映射表的空间也是一次性分配的。
 
@@ -15988,47 +15310,47 @@ DMS 表空间空间是按区段一次分配的。随着表的填充和区段变�
 
 相比之下，在线事务处理（OLTP）涉及通常以随机顺序访问表的查询，通过键值（key values）检索数据。在这种，较大的区会将许多应用程序不需要的数据页带入缓冲池。在这种情况下，使用较小的区大小可能是合理的。
 
-## 长字段数据 (Long Field Data)
+## 长字段数据（Long Field Data）
 
-对于 LONG VARCHAR 和 LONG VARGRAPHIC 类型，使用 20 字节用于存储在表数据行中的描述符。有关长字段数据如何存储的更多信息，请参阅《DB2 管理指南》。
+对于 `LONG VARCHAR` 和 `LONG VARGRAPHIC` 类型，使用 20 字节用于存储在表数据行中的描述符。有关长字段数据如何存储的更多信息，请参阅《DB2 管理指南》。
 
-## 大对象数据 (Large Object Data)
+## 大对象数据（Large Object Data）
 
-如果表包含 BLOB、CLOB 或 DBCLOB 数据，除了描述符（在表中）的字节计数（72 到 312 字节之间）外，数据本身也必须存储。
+如果表包含 `BLOB`、`CLOB` 或 `DBCLOB` 数据，除了描述符（在表中）的字节计数（72 到 312 字节之间）外，数据本身也必须存储。
 
 ## 表空间设计 651
 
 此数据存储在两个独立的表对象中，其结构与其他数据类型不同。
 
-## LOB 数据对象
+### LOB 数据对象
 
 数据存储在 64 MB 的区域中，这些区域被划分为大小为 1 KB 幂方的段（segments）。这些段可以是 1024 字节、2048 字节、4096 字节等，最高可 64 MB。
 
-为了减少 LOB 数据占用的磁盘空间，您可以在 CREATE TABLE 和 ALTER TABLE 语句的 LOB 选项子句中使用 COMPACT 参数。COMPACT 选项通过允许 LOB 数据拆分成更小的段，并让这些段尽可能使用最少的空间来最小化所需的磁盘空间。这不涉及数据压缩，而简单地使用最接近 1 KB 边界的最少空间。如果不使用 COMPACT 选项，对使用该选项所存储的 LOB 值进行追加，性能可能比未指定该选项的 LOB 值慢。LOB 对象包含的空闲空间将受到更新和删除活动量以及插入的 LOB 值大小的影响。
+为了减少 LOB 数据占用的磁盘空间，您可以在 `CREATE TABLE` 和 `ALTER TABLE` 语句的 LOB 选项子句中使用 `COMPACT` 参数。`COMPACT` 选项通过允许 LOB 数据拆分成更小的段，并让这些段尽可能使用最少的空间来最小化所需的磁盘空间。这不涉及数据压缩，而简单地使用最接近 1 KB 边界的最少空间。如果不使用 `COMPACT` 选项，对使用该选项所存储的 LOB 值进行追加，性能可能比未指定该选项的 LOB 值慢。LOB 对象包含的空闲空间将受到更新和删除活动量以及插入的 LOB 值大小的影响。
 
-## LOB 分配对象
+### LOB 分配对象
 
 分配和可用空间信息存储在与实际数据分离的 4 KB 分配页中。4 KB 页的数量取决于为大对象数据分配的数据量（包括未使用的空间）。开销计算方式如下：每 64 GB 一个 1 KB 页，每 8 MB 一个 1 KB 页。
 
-如果数据长度小于 4 KB 且能与其余数据一起放入记录中，则应使用 CHAR、GRAPHIC、VARCHAR 或 VARGRAPHIC 类型，而不是 LOB 类型。
+如果数据长度小于 4 KB 且能与其余数据一起放入记录中，则应使用 `CHAR`、`GRAPHIC`、`VARCHAR` 或 `VARGRAPHIC` 类型，而不是 LOB 类型。
 
 ## 将表映射到表空间
 
 在设计中确定如何将表映射到表空间时，请考虑以下因素：
 
--   数据量。如果您的设计涉及数据量较小的表，考虑为它们使用 SMS 表空间。管理许多小表（每个表在自己的 DMS 表空间中）的工作量与所获得的收益不成正比。
+- **数据量。**如果您的设计涉及数据量较小的表，考虑为它们使用 SMS 表空间。管理许多小表（每个表在自己的 DMS 表空间中）的工作量与所获得的收益不成正比。
 
-    关注较大且访问更频繁的表会更稳妥。在这里，您可以认为将每个表放在自己的 DMS 表空间中是合理的。
+  关注较大且访问更频繁的表会更稳妥。在这里，您可以认为将每个表放在自己的 DMS 表空间中是合理的。
 
--   表中的数据类型。不经常使用且没有关键响应时间要求的历史数据可以放在较慢、更廉价的设备上。
+- **表中的数据类型。**不经常使用且没有关键响应时间要求的历史数据可以放在较慢、更廉价的设备上。
 
-    相反，响应时间要求最高的表应分配给最快的设备。在极端情况下，这些表空间可以拥有它们自己的缓冲池。
+  相反，响应时间要求最高的表应分配给最快的设备。在极端情况下，这些表空间可以拥有它们自己的缓冲池。
 
-    另一种方法是将相关的表分组成一组表空间。它们可能通过引用完整性、触发器或存储数据类型相关联。由于 BACKUP 和 RESTORE 实用程序在表空间级别工作，可以认为表之间的相关数据是一致且可恢复的。
+  另一种方法是将相关的表分组成一组表空间。它们可能通过引用完整性、触发器或存储数据类型相关联。由于 `BACKUP` 和 `RESTORE` 实用程序在表空间级别工作，可以认为表之间的相关数据是一致且可恢复的。
 
--   分离索引和长数据组件。通过将表的索引分配到单独的表空间，可以将该表空间的容器放置在不同的磁盘上，从而减少包含实际表数据的磁盘上的竞争。索引可以拥有它们自己的缓冲池。
+- **分离索引和长数据组件。**通过将表的索引分配到单独的表空间，可以将该表空间的容器放置在不同的磁盘上，从而减少包含实际表数据的磁盘上的竞争。索引可以拥有它们自己的缓冲池。
 
-    同样，通过将长数据与其他数据分离也可以减少竞争。
+  同样，通过将长数据与其他数据分离也可以减少竞争。
 
 ## 实施示例
 
@@ -16038,7 +15360,7 @@ DMS 表空间空间是按区段一次分配的。随着表的填充和区段变�
 CREATE DATABASE DB2
 ```
 
-LISTSPACES 显示了上述 CREATE DATABASE 命令的结果。
+`LISTSPACES` 显示了上述 `CREATE DATABASE` 命令的结果。
 
 ```sql
 LIST TABLESPACES;
@@ -16056,106 +15378,123 @@ LIST TABLESPACES;
 
 注意默认值是如何应用的。默认的数据库空间（SYSCATCHSPACE，DB 2）是自动存储（AUTOMATIC STORAGE）。USERSPACE1 定义为数据库管理空间（DMS），其中目录区大小为 4，用户数据区大小为 32。TEMPSPACE1 表空间定义为系统管理空间（SMS），区大小为 32。SYSCATCHSPACE 的总页数为 7924 页，页大小为 4 KB，这意味着分类日志默认占用约 32 MB。随着数据库中创建对象，该空间将会增长。用户空间包含 384K 的数据，临时空间仅分配了 1 页。
 
-
-
-
-
-# 第 11 章 数据存储管理
-
 ```sql
 CREATE DATABASE DB2CERT
+
 DFT_EXTENT_SZ 4
+
 CATALOG TABLESPACE
+
 MANAGED BY DATABASE USING
+
 (FILE 'C:\CAT\CATALOG.DAT' 6000
+
 (FILE 'D:\CAT\CATALOG.DAT' 6000)
+
 EXTENTSIZE 8
+
 PREFETCHSIZE 16
+
 TEMPORARY TABLESPACE
+
 MANAGED BY SYSTEM USING
+
 ('C:\TEMPTS','D:\TEMPPS')
 
 USER TABLESPACE
+
 MANAGED BY DATABASE USING
+
 (FILE 'C:\TS\USERS.DAT' 8000)
+
 EXTENTSIZE 24
+
 PREFETCHSIZE 48
 ```
 
 在这里我们要求 DB2 创建具有以下属性的数据库：
 
-- 默认区（extent）为四页
-- 系统目录表空间作为 DMS 表空间，具有两个文件容器，每个容器包含 6000 页，区大小为 8 页，且预取大小（prefetch size）为 16 页
-- 临时表空间 TEMP1 作为具有两个容器的 SMS 表空间
-- 用户表空间 USER1 作为具有一个容器的 DMS 表空间，包含 8000 页，区大小为 24 页，预取大小为 48
+- 默认区（extent）为四页。
+- 系统目录表空间作为 DMS 表空间，具有两个文件容器，每个容器包含 6000 页，区大小为 8 页，且预取大小（prefetch size）为 16 页。
+- 临时表空间 TEMP1 作为具有两个容器的 SMS 表空间。
+- 用户表空间 USER1 作为具有一个容器的 DMS 表空间，包含 8000 页，区大小为 24 页，预取大小为 48 页。
 
 在此情况下，`LIST TABLESPACES SHOW DETAIL` 的输出如下（图 1–10）：
 
 ```sql
 CONNECT TO DB2CERT;
+
 LIST TABLESPACES SHOW DETAIL;
 ```
 
-当前数据库的表空间
 
-| 表空间 ID = 0 |
-| :--- |
-| 名称 = SYSCATS |
-| 类型 = 数据库管理空间 |
-| 内容 = 所有永久数据。常规表空间。 |
-| 状态 = 0x0000 |
-| 详细说明：正常 |
-| 总页 = 12000 |
-| 可用页 = 11984 |
-| 已用页 = 9976 |
-| 空闲页 = 2008 |
-| 高水位（页） = 9976 |
-| 页大小（字节） = 4096 |
-| 区大小（页） = 8 |
-| 预取大小（页） = 16 |
-| 容器数量 = 2 |
 
-| 表空间 ID = 1 |
-| :--- |
-| 名称 = TEMP1 |
-| 内容 = 系统管理数据 |
-| 状态 = 0x0000 |
-| 详细说明：正常 |
-| 总页 = 2 |
-| 可用页 = 2 |
-| 已用页 = 2 |
-| 空闲页 = 不适用 |
-| 高水位（页） = 不适用 |
-| 页大小（字节） = 4096 |
-| 区大小（页） = 4 |
-| 前缀大小（页） = 8 |
-| 容器数量 = 2 |
+## 当前数据库的表空间
+
+### 表空间 ID = 0
+
+| 属性 | 值 |
+| :--- | :--- |
+| 名称 | `SYSCATS` |
+| 类型 | 数据库管理空间 |
+| 内容 | 所有永久数据。常规表空间。 |
+| 状态 | `0x0000` |
+| 详细说明 | 正常 |
+| 总页 | 12000 |
+| 可用页 | 11984 |
+| 已用页 | 9976 |
+| 空闲页 | 2008 |
+| 高水位（页） | 9976 |
+| 页大小（字节） | 4096 |
+| 区大小（页） | 8 |
+| 预取大小（页） | 16 |
+| 容器数量 | 2 |
+
+### 表空间 ID = 1
+
+| 属性 | 值 |
+| :--- | :--- |
+| 名称 | `TEMP1` |
+| 内容 | 系统管理数据 |
+| 状态 | `0x0000` |
+| 详细说明 | 正常 |
+| 总页 | 2 |
+| 可用页 | 2 |
+| 已用页 | 2 |
+| 空闲页 | 不适用 |
+| 高水位（页） | 不适用 |
+| 页大小（字节） | 4096 |
+| 区大小（页） | 4 |
+| 前缀大小（页） | 8 |
+| 容器数量 | 2 |
+
+### 表空间概览
 
 | 表空间 ID | 名称 | 类型 | 内容 | 状态 | 详细说明：正常 | 总页 | 可用页 | 已用页 | 高水位（页） | 页大小（字节） | 区大小（页） | 前缀大小（页） | 容器数量 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| USERSPACE1 | 数据库管理空间 | 所有永久数据。大表空间。 | 0x000 | 8000 | 7968 | 72 | 7896 | 72 | 4096 | 24 | 48 | 1 |
+| `USERSPACE1` | 数据库管理空间 | 所有永久数据。大表空间。 | `0x000` | 8000 | 7968 | 72 | 7896 | 72 | 4096 | 24 | 48 | 1 |
 
 # 实现示例
 
-# 图 11–10 扩展示例中的表空间详情
+## 图 11–10 扩展示例中的表空间详情
 
-注意 SYSCSPACE 中的可用页数为 11984。由于每个容器都需要一页作为开销页，因此留下了 11984 页供区（extent）使用。
+注意 `SYSCSPACE` 中的可用页数为 11984。由于每个容器都需要一页作为开销页，因此留下了 11984 页供区（extent）使用。
 
 由于区大小为 8，在仅使用完整区的情况下，每个容器中都有 7 页无法用于区。再加上强制性的 1 页开销页，每个容器总共有 8 页不可用。因此，整个表空间在 4000 页中，有 16 页是不可用的。
 
-在 USERSPACE 表空间中，容器大小为 121。其中一页用于开销页，留下了 120 页可用页。此外还有三个区被用于开销，这占了 72 页的页数。这为用户数据留下了 48 页（两个区）。考虑到区大小，这是定义容器时可以设置的最小页数。
+在 `USERSPACE` 表空间中，容器大小为 121。其中一页用于开销页，留下了 120 页可用页。此外还有三个区被用于开销，这占了 72 页的页数。这为用户数据留下了 48 页（两个区）。考虑到区大小，这是定义容器时可以设置的最小页数。
 
-执行 `LISTSPACE CONTAINERS FOR 2 SHOW DETAIL` 命令产生以下输出。注意，该命令所需的表空间 ID 是表空间 USERSPACE1。
+执行 `LISTSPACE CONTAINERS FOR 2 SHOW DETAIL` 命令产生以下输出。注意，该命令所需的表空间 ID 是表空间 `USERSPACE1`。
 
-# 表空间 2 的表空间容器
+## 表空间 2 的表空间容器
 
 | 容器 ID | 名称 | 类型 | 总页 | 可用页 | 可访问 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 0 | C:\TS\USERS.DAT | 文件 | 121 | 120 | 是 |
+| 0 | `C:\TS\USERS.DAT` | 文件 | 121 | 120 | 是 |
 
-# 图 11–11 表空间容器
+### 图 11–11 表空间容器
 
-# 创建缓冲池
+## 创建缓冲池
 
 此语句创建了一个包含 2000 个四千字节页的缓冲池（8 MB）：
 
@@ -16175,7 +15514,7 @@ PAGESIZE 8192
 
 在创建页大小非 4KB 的表空间之前，必须存在一个相同页大小的缓冲池。
 
-# 创建表空间
+## 创建表空间
 
 这是一个在 Windows 下定义具有原始设备容器的表空间的示例。在这种情况下，我们使用一个未格式化的逻辑驱动器。
 
@@ -16191,17 +15530,19 @@ BUFFERPOOL BPCERT4K
 
 此示例使用了之前创建的缓冲池。关于表空间和容器的报告（图 11–12）：
 
-| 表空间 ID = 3 | 名称 = RAWTS | 类型 = 数据库管理空间 | 内容 = 任何数据 | 状态 = 0x0000 | 详细说明：正常 | 总页 = 8001 | 可用页 = 8000 | 已用页 = 24 | 空闲页 = 7976 | 高水位（页） = 24 | 页大小（字节） = 4096 | 区 = 8 | 预取大小 = 16 | 容器数量 = 1 |
+| 表空间 ID | 名称 | 类型 | 内容 | 状态 | 详细说明 | 总页 | 可用页 | 已用页 | 空闲页 | 高水位（页） | 页大小（字节） | 区 | 预取大小 | 容器数量 |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 3 | `RAWTS` | 数据库管理空间 | 任何数据 | `0x0000` | 正常 | 8001 | 8000 | 24 | 7976 | 24 | 4096 | 8 | 16 | 1 |
 
-表空间 3 的容器
+### 表空间 3 的容器
 
 | 容器 ID | 名称 | 类型 | 总页 | 可用页 | 可访问 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| 0 | \.\E:\ | 磁盘 | 8001 | 8000 | 是 |
+| 0 | `\.\E:\` | 磁盘 | 8001 | 8000 | 是 |
 
-# 图 11–12 表空间容器
+### 图 11–12 表空间容器
 
-# 创建表
+## 创建表
 
 此示例显示了如何将表和它的索引分开存储。
 
@@ -16213,7 +15554,7 @@ CREATE TABLE CERTAB
 INDEX IN USERSPACE
 ```
 
-# 删除表空间
+## 删除表空间
 
 此示例显示了如何删除表空间。可以同时删除多个表空间。被定义的表空间将失效。
 
@@ -16221,7 +15562,7 @@ INDEX IN USERSPACE
 DROP TABLESPACE RAWTS, USERSPACE
 ```
 
-# 删除缓冲池
+## 删除缓冲池
 
 此示例显示了如何删除缓冲池。注意，如果表空间使用了该缓冲池，操作将失败。删除后，缓冲池占用的内存将释放。
 
@@ -16229,7 +15570,7 @@ DROP TABLESPACE RAWTS, USERSPACE
 DROP BUFFERPOOL BC4K
 ```
 
-# 删除数据库
+## 删除数据库
 
 使用 DB2 命令（而非 SQL 语句）来删除数据库。这会完全删除数据库中的所有对象。执行此命令前，所有用户必须断开数据库连接。
 
@@ -16237,57 +15578,53 @@ DROP BUFFERPOOL BC4K
 DROP DATABASE DB2CERT
 ```
 
-# 使用控制中心创建表空间
+## 使用控制中心创建表空间
 
-可以通过命令行或 DB2 控制中心执行上述语句外
+可以通过命令行或 DB2 控制中心执行上述语句。
 
-图 11–13 控制中心 — 创建表空间向导
+### 图 11–13 控制中心 — 创建表空间向导
 
-图 11–14 为新表空间指定名称
+### 图 11–14 为新表空间指定名称
 
 输入表空间的名称并点击下一步（图 11–15）。
 
-图 11–15 选择要创建的表空间类型
+### 图 11–15 选择要创建的表空间类型
 
 选择你希望与表空间关联的缓冲池。注意，你可以创建一个新的缓冲池，或者接受默认缓冲池（图 11–16）。点击下一步。
 
-图 11–16 为你的新表空间指定缓冲池
+### 图 11–16 为你的新表空间指定缓冲池
 
 选择表空间是 SMS 还是 DMS（图 11–17）。点击下一步。
 
-图 11–17 选择要使用的空间管理系统
+### 图 11–17 选择要使用的空间管理系统
 
 下一个面板提供了为该表空间添加容器的机会（图 11–18）。
 
-图 11–18 为此表空间定义容器
+### 图 11–18 为此表空间定义容器
 
 在此示例中，文件将作为容器。点击添加按钮调出容器定义对话框（图 11–19）。选择或创建一个要使用的文件名并点击确定。
 
-图 11–19 定义容器
-
-
-
-
+### 图 11–19 定义容器
 
 此面板允许通过表空间恢复（常规表空间选项）恢复被删除的表（图 11–22）。点击“下一步”。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_690_0.png)
 
-图 11–22 为你的新表空间指定被删除表的恢复选项
+### 图 11–22 为你的新表空间指定被删除表的恢复选项
 
 此终点面板（图 11–23）总结了创建此表空间时指定的选项。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_690_1.png)
 
-图 11–23 查看点击“完成”时将执行的操作
+### 图 11–23 查看点击“完成”时将执行的操作
 
 另一个选项是选择“显示 SQL”，这提供了将结果保存到脚本的进阶选项（图 11–24）。随着 DBA 对创建表空间变得越来越熟悉，提交脚本的技术可能会花费更少的时间。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_691_0.png)
 
-图 11–24 显示 SQL
+### 图 11–24 显示 SQL
 
-# 自动存储
+## 自动存储
 
 自动存储通过 SMS 表空间易于增长的特性，提供了 DMS 的性能和灵活性。选择自动存储（默认值）允许 DBA 为数据库设置可用于所有表空间容器的存储路径。系统无需让 DMS 显式编码表空间的位置和大小，而是将自动分配它们。
 
@@ -16297,15 +15634,15 @@ DROP DATABASE DB2CERT
 
 要创建自动存储数据库，你只需在创建数据库时指定多个存储路径。以下示例在 Windows 平台上自动从 D: 盘和 E: 盘获取存储：
 
-```
+```sql
 CREATE DATABASE DB_NAME ON D:, E;
 ```
 
 任何定义为使用自动存储的表空间都将在其 D: 盘和 E: 盘上为其容器定义存储路径。示例将使用三个存储路径为所有表空间设置自动存储：
 
-# 自动存储 665
+### 自动存储 665
 
-```
+```sql
 CREATE DATABASE TEST
 AUTOMATIC STORAGE ON
 /db2/storagepath001,
@@ -16317,44 +15654,42 @@ INCREASESIZE 75 M
 MAXSIZE NONE
 ```
 
-在 AUTOMATIC STORAGE 选项之后，显示了三个目录（路径）。这三个路径是表空间容器所在的位置。其余选项为：
+在 `AUTOMATIC STORAGE` 选项之后，显示了三个目录（路径）。这三个路径是表空间容器所在的位置。其余选项为：
 
-- AUTORESIZE YES：如果表空间空间不足，系统将自动扩展容器的大小。
-- INITIALSIZE 300 M (INITIALSIZE 整数 [K | M | G]):任何未定义初始大小的表空间默认大小为 300 MB。每个容器的大小为 100 MB（共有三个存储路径）。
-- INCREASEASESIZE 75 M (或 %) (INCREASESIZE 整数 [K | M | G]):如果表空间空间不足，表空间的总空间将增加 75 MB。也可以指定百分比，在这种情况下，表空间将按当前大小的百分比增加。
-- MAXSIZE NONE (MAXSIZE 整数 [K | M | G]):表空间的最大大小不受限制。如果 DBA 想要对表空间可以拥有的存储设置限制，可以通过指定最大值来实现。
+- `AUTORESIZE YES`：如果表空间空间不足，系统将自动扩展容器的大小。
+- `INITIALSIZE 300 M`（`INITIALSIZE` 整数 `[K | M | G]`）：任何未定义初始大小的表空间默认大小为 300 MB。每个容器的大小为 100 MB（共有三个存储路径）。
+- `INCREASEASESIZE 75 M`（或 `%`）（`INCREASESIZE` 整数 `[K | M | G]`）：如果表空间空间不足，表空间的总空间将增加 75 MB。也可以指定百分比，在这种情况下，表空间将按当前大小的百分比增加。
+- `MAXSIZE NONE`（`MAXSIZE` 整数 `[K | M | G]`）：表空间的最大大小不受限制。如果 DBA 想要对表空间可以拥有的存储设置限制，可以通过指定最大值来实现。
 
-请注意，CREATE DATABASE 命令中使用的值（默认情况下）应用于所有表空间。
+请注意，`CREATE DATABASE` 命令中使用的值（默认情况下）应用于所有表空间。
 
-当使用 AUTOMATIC STORAGE 定义表空间时，不需要提供额外的参数：
+当使用 `AUTOMATIC STORAGE` 定义表空间时，不需要提供额外的参数：
 
-```
+```sql
 CREATE TABLESPACE TEST MANAGED BY AUTOMATIC STORAGE
 ```
 
-表空间 TEST 没有容器定义。相反，此表空间的存储是在数据库层级进行管理的。在此命令中，可以提供与表空间相关的任何参数，包括 AUTORESIZE、
+表空间 `TEST` 没有容器定义。相反，此表空间的存储是在数据库层级进行管理的。在此命令中，可以提供与表空间相关的任何参数，包括 `AUTORESIZE`、`INCREASESIZE`、`MAXSIZE` 参数。注意，这最后三个选项也可以用于标准表空间。
+
+在未启用自动存储的数据库中创建表空间时，必须指定 `MANAGED BY SYSTEM` 或 `MANAGED BY DATABASE` 子句。使用这些子句分别创建系统管理空间（SMS）表空间或数据库管理空间（DMS）表空间。在两种情况下都必须提供显式的容器列表。
 
 # 第 11 章数据存储管理
 
-INCREASESIZE、MAXSIZE 参数。注意，这最后三个选项也可以用于标准表空间。
+## 添加额外存储
 
-在未启用自动存储的数据库中创建表空间时，必须指定 MANAGED BY SYSTEM 或 MANAGED BY DATABASE 子句。使用这些子句分别创建系统管理空间 (SMS) 表空间或数据库管理空间 (DMS) 表空间。在两种情况下都必须提供显式的容器列表。
+如果数据库需要更多空间，可以使用 `ALTER` 命令添加更多存储：
 
-# 添加额外存储
-
-如果数据库需要更多空间，可以使用 ALTER 命令添加更多存储：
-
-```
+```sql
 ALTER DATABASE DB_NAME ADD STORAGE ON F:
 ```
 
 此命令将 F: 盘添加到存储池中，现在任何自动存储表空间如果需要额外空间，将自动从 F: 盘获取存储。以这种方式为数据库添加更多空间将创建一个新的带集（stripe set）。
 
-# 表空间维护
+## 表空间维护
 
 我们涵盖了创建和大小监控。
 
-# 数据库文件
+## 数据库文件
 
 DB2 创建用于支持这些的文件：
 
@@ -16362,11 +15697,11 @@ DB2 创建用于支持这些的文件：
 - 备份数据库的唯一方法是通过
 - 如果表空间不处于正常状态，请使用这些（应用程序接口）。
 
-# 列出表空间
+## 列出表空间
 
-要列出表空间的基本或详细信息，请使用 LIST DP 命令。该命令的语法为：
+要列出表空间的基本或详细信息，请使用 `LIST DP` 命令。该命令的语法为：
 
-```
+```text
 LIST DP [SHOW DETAIL]
 ```
 
@@ -16378,7 +15713,7 @@ LIST DP [SHOW DETAIL]
 - 表空间类型，可以是常规（数据）、临时
 - 状态，指示表状态的十六进制值
 
-如果使用了 DETAIL 选项，将显示以下详细信息：
+如果使用了 `DETAIL` 选项，将显示以下详细信息：
 
 - 总页面数
 - 可用页面数
@@ -16393,25 +15728,27 @@ LIST DP [SHOW DETAIL]
 
 这些信息对于告知表空间有多满以及需要哪些操作非常重要。
 
-有关此命令输出的示例，请参见示例中的 CREATE DATABASE 命令和 CREATE TABLESPACE 语句。
+有关此命令输出的示例，请参见示例中的 `CREATE DATABASE` 命令和 `CREATE TABLESPACE` 语句。
 
-# 第 11 章数据存储管理
+## 第 11 章数据存储管理
 
-# 列出表空间容器
+## 列出表空间容器
 
-要列出特定表空间容器的基本或详细信息，请使用 LIST TABLESPACE CONTAINERS 命令。该命令的语法为：
+要列出特定表空间容器的基本或详细信息，请使用 `LIST TABLESPACE CONTAINERS` 命令。该命令的语法为：
 
-```
+```text
 LIST TABLESPACE CONTAINERS FOR tablespace_id [SHOW DETAIL]
 ```
 
-此命令的基本的基本信息：
+
+
+此命令的基本信息：
 
 - 容器 ID
 - 容器名称
 - 容器类型
 
-当使用 DETAIL 选项时，额外信息为：
+当使用 `DETAIL` 选项时，额外信息为：
 
 - 总页面数
 - 可用页面数
@@ -16419,78 +15756,74 @@ LIST TABLESPACE CONTAINERS FOR tablespace_id [SHOW DETAIL]
 
 # 表空间状态
 
-DB2 维护表空间的状态，如果表空间不处于正常状态，则不允许使用 SQL 语句访问。表空间状态用十六进制数表示。有时，一个表空间可以关联多个状态。这将产生一个组合的十六进制数。LISTTABLESP SHOW DETAIL 命令提供了状态的描述。
+DB2 维护表空间的状态。如果表空间不处于正常状态，则不允许使用 SQL 语句访问。表空间状态用十六进制数表示。有时，一个表空间可以关联多个状态，这将产生一个组合的十六进制数。`LISTTABLESP SHOW DETAIL` 命令提供了状态的描述。
 
-在加载、备份和恢复期间，表空间会被置于非正常状态，或者通过 QUIESCE TABLESPACE 命令进入静止状态。该命令本身并不经常使用，但会被各种 DB2 工具使用。
+在加载、备份和恢复期间，表空间会被置于非正常状态，或者通过 `QUIESCE TABLESPACE` 命令进入静止状态。该命令本身并不经常使用，但会被各种 DB2 工具使用。
 
-LOAD 命令将表空间置于 LOAD PENDING 状态，并在成功完成之前让表处于此等待状态。RESTORE 命令在成功恢复数据库后将表空间置于 ROLLFORWARD PENDING 状态。表空间将一直保持在此状态，直到成功执行了 ROLLFORWARD DATABASE 命令。
-
-
-
-
+`LOAD` 命令将表空间置于 `LOAD PENDING` 状态，并在成功完成之前让表处于此等待状态。`RESTORE` 命令在成功恢复数据库后将表空间置于 `ROLLFORWARD PENDING` 状态。表空间将一直保持在此状态，直到成功执行了 `ROLLFORWARD DATABASE` 命令。
 
 以下是某些可能的表空间状态列表：
 
-- 0x0000 — 允许访问表空间（正常）
-- 0x0001 — 静止共享（Quiesced share）
-- 0x0002 — 静止更新（Quiesced update）
-- 0x0004 — 静止独占（Quiesced exclusive）
-- 0x0008 — 等待加载（Load pending）
-- 0x0010 — 等待删除（Delete pending）
-- 0x0020 — 等待备份（Backup pending）
-- 0x0100 — 等待恢复（Restore pending）
+- `0x0000` — 允许访问表空间（正常）
+- `0x0001` — 静止共享（Quiesced share）
+- `0x0002` — 静止更新（Quiesced update）
+- `0x0004` — 静止独占（Quiesced exclusive）
+- `0x0008` — 等待加载（Load pending）
+- `0x0010` — 等待删除（Delete pending）
+- `0x0020` — 等待备份（Backup pending）
+- `0x0100` — 等待恢复（Restore pending）
 
-有关表空间状态的信息，请参阅 DB2 命令参考中的 LIST TABLESPACES 命令。
+有关表空间状态的信息，请参阅 DB2 命令参考中的 `LIST TABLESPACES` 命令。
 
-## DB2 注意：如果无法访问容器，DB2 将将相关的表空间置于离线（OFFLINE）状态。一旦问题解决，可以使用 ALTER TABLESPACE 语句通过 SWITCH ONLINE 选项查询此信息，从而使表空间重新可用。
+> **DB2 注意：**如果无法访问容器，DB2 将相关的表空间置于离线（`OFFLINE`）状态。一旦问题解决，可以使用 `ALTER TABLESPACE` 语句通过 `SWITCH ONLINE` 选项查询此信息，从而使表空间重新可用。
 
 ## 关于表空间的系统目录信息
 
-表空间信息存储在 SYSCAT.TABLESPACES 目录视图中。您可以使用 SQL 查询这些信息。该视图的布局如下：
+表空间信息存储在 `SYSCAT.TABLESPACES` 目录视图中。您可以使用 SQL 查询这些信息。该视图的布局如下：
 
-### 表 11–6 SYSCAT.TABLESPACES
-
-| 列名 | 数据类型 | 是否为空 | 描述 |
-| :--- | :--- | :--- | :--- |
-| TBSPACE | VARCHAR(18) | | 表空间名称 |
-| DEFINER | VARCHAR(128) | | 表空间定义者的授权 ID |
-| CREATE_TIME | TIMESTAMP | | 表空间的创建时间 |
-| TBSPACEID | INTEGER | | 内部表空间标识符 |
-| TBSPACETYPE | CHAR(1) | | 表空间的类型：S = 系统管理空间 D = 数据库管理空间 |
-| DATATYPE | CHAR(1) | | 可存储的数据类型：A = 所有类型的永久数据 L = 仅限长数据 T = 仅限临时表 |
-
-### 表 11–6 SYSCAT.TABLESPACES
+### 表 11–6 `SYSCAT.TABLESPACES`
 
 | 列名 | 数据类型 | 是否为空 | 描述 |
 | :--- | :--- | :--- | :--- |
-| EXTENSIZE | INTEGER | | 区的大小，以 PAGESIZE 为大小的页计算 |
-| PREFETCHSIZE | INTEGER | | 预取时要读取的 PAGESIZE 为大小的页数 |
-| OVERHEAD | DOUBLE | | 控制器开销以及磁盘寻道和延迟时间（毫秒） |
-| TRANSFERRATE | DOUBLE | | 将一个大小为 PAGESIZE 的页读到表中所需的时间 |
-| PAGESIZE | INTEGER | | 表空间中页的大小（字节） |
-| NGNAME | VARCHAR(18) | | 该表空间的数据库分区组名称 |
-| BUFFERPOOLID | INTEGER | | 此表空间使用的缓冲池 ID（1 表示默认缓冲池） |
-| DROP_RECOVERY | CHAR(1) | | N = 执行 DROP TABLE 语句后不可恢复 Y = 执行 DROP TABLE 语句后可恢复 |
-| REMARKS | VARCHAR(254) | 是 | 用户提供的注释 |
+| `TBSPACE` | `VARCHAR(18)` | | 表空间名称 |
+| `DEFINER` | `VARCHAR(128)` | | 表空间定义者的授权 ID |
+| `CREATE_TIME` | `TIMESTAMP` | | 表空间的创建时间 |
+| `TBSPACEID` | `INTEGER` | | 内部表空间标识符 |
+| `TBSPACETYPE` | `CHAR(1)` | | 表空间的类型：`S` = 系统管理空间，`D` = 数据库管理空间 |
+| `DATATYPE` | `CHAR(1)` | | 可存储的数据类型：`A` = 所有类型的永久数据，`L` = 仅限长数据，`T` = 仅限临时表 |
 
-以下是 SYSCAT.TABLE 目录视图中与表相关的列。
-
-### 表 11–7 SYSCAT.TABLES
+### 表 11–6 `SYSCAT.TABLESPACES`
 
 | 列名 | 数据类型 | 是否为空 | 描述 |
 | :--- | :--- | :--- | :--- |
-| TBSPACEID | SMALLINT | | 该表主表空间的内部标识符 |
-| TBSPACE | VARCHAR(18) | 是 | 该表的主表空间名称 |
-| INDEX_TBSPACE | VARCHAR(18) | 是 | 存放该表所有索引的表空间名称 |
-| LONG_TBSPACE | VARCHAR(18) | 是 | 存放该表所有长数据的表空间名称 |
+| `EXTENSIZE` | `INTEGER` | | 区的大小，以 `PAGESIZE` 为大小的页计算 |
+| `PREFETCHSIZE` | `INTEGER` | | 预取时要读取的 `PAGESIZE` 为大小的页数 |
+| `OVERHEAD` | `DOUBLE` | | 控制器开销以及磁盘寻道和延迟时间（毫秒） |
+| `TRANSFERRATE` | `DOUBLE` | | 将一个大小为 `PAGESIZE` 的页读到表中所需的时间 |
+| `PAGESIZE` | `INTEGER` | | 表空间中页的大小（字节） |
+| `NGNAME` | `VARCHAR(18)` | | 该表空间的数据库分区组名称 |
+| `BUFFERPOOLID` | `INTEGER` | | 此表空间使用的缓冲池 ID（1 表示默认缓冲池） |
+| `DROP_RECOVERY` | `CHAR(1)` | | `N` = 执行 `DROP TABLE` 语句后不可恢复；`Y` = 执行 `DROP TABLE` 语句后可恢复 |
+| `REMARKS` | `VARCHAR(254)` | 是 | 用户提供的注释 |
+
+以下是 `SYSCAT.TABLE` 目录视图中与表相关的列。
+
+### 表 11–7 `SYSCAT.TABLES`
+
+| 列名 | 数据类型 | 是否为空 | 描述 |
+| :--- | :--- | :--- | :--- |
+| `TBSPACEID` | `SMALLINT` | | 该表主表空间的内部标识符 |
+| `TBSPACE` | `VARCHAR(18)` | 是 | 该表的主表空间名称 |
+| `INDEX_TBSPACE` | `VARCHAR(18)` | 是 | 存放该表所有索引的表空间名称 |
+| `LONG_TBSPACE` | `VARCHAR(18)` | 是 | 存放该表所有长数据的表空间名称 |
 
 ## 表空间维护 67
 
 ## 向 DMS 表空间添加容器
 
-可以使用 ALTER TABLESPACE 语句向现有表空间添加容器以增加其存储容量。表空间的内容将在所有容器之间进行重新平衡。在重新平衡期间，不会限制对表空间的访问。如果您需要添加多个容器，应该在一条 ALTER TABLESPACE 语句中同时添加，或者在同一个事务中添加，以防止 DB2 多次对容器进行重新平衡。
+可以使用 `ALTER TABLESPACE` 语句向现有表空间添加容器以增加其存储容量。表空间的内容将在所有容器之间进行重新平衡。在重新平衡期间，不会限制对表空间的访问。如果您需要添加多个容器，应该在一条 `ALTER TABLESPACE` 语句中同时添加，或者在同一个事务中添加，以防止 DB2 多次对容器进行重新平衡。
 
-您应该使用 LIST TABLESPACE 和 LIST TABLESPACE CONTAINER 命令来检查容器的填充程度。应在现有容器几乎满或完全满之前添加新容器。在重新平衡完成之前，跨所有容器的新空间是不可用的。
+您应该使用 `LIST TABLESPACE` 和 `LIST TABLESPACE CONTAINER` 命令来检查容器的填充程度。应在现有容器几乎满或完全满之前添加新容器。在重新平衡完成之前，跨所有容器的新空间是不可用的。
 
 添加比现有容器小的容器会导致数据分布不均。这可能会导致并行 I/O 操作（如预取数据）的执行效率低于在相同大小的容器上的效率。
 
@@ -16498,18 +15831,18 @@ LOAD 命令将表空间置于 LOAD PENDING 状态，并在成功完成之前让�
 
 这是一个如何向之前示例中创建的表空间添加另一个容器（在本例中为文件容器）的示例。
 
-```
+```sql
 ALTER TABLESPACE RUNTS
 ADD (FILE 'C:FILE1.DAT' 8001)
 PREFETCHSIZE 32
 BUFFERPOOL IBMDEFAULTBTP
 ```
 
-> 注意如何使用 ALTER TABLESPACE 语句来更改表空间的预取数量和缓冲池。
+> 注意如何使用 `ALTER TABLESPACE` 语句来更改表空间的预取数量和缓冲池。
 
-## DB2 注意：
+## DB2 注意
 
-在 V8 之前，当添加新容器时，现有数据会自动在所有可用设备上进行重新分配或重新平衡。ALTER 命令中新的 BEGIN STRIPE 选项允许向表空间添加新容器，而不发生重新平衡。
+在 V8 之前，当添加新容器时，现有数据会自动在所有可用设备上进行重新分配或重新平衡。`ALTER` 命令中新的 `BEGIN STRIPE` 选项允许向表空间添加新容器，而不发生重新平衡。
 
 ## 使用控制中心添加新容器
 
@@ -16521,7 +15854,7 @@ BUFFERPOOL IBMDEFAULTBTP
 
 显示表空间面板（图 11–26）。
 
-点击 Containers 选项卡并点击 Add。然后您可以输入新容器的详细信息（图 11–27）。
+点击 `Containers` 选项卡并点击 `Add`。然后您可以输入新容器的详细信息（图 11–27）。
 
 选择 **OK** 添加容器，DB2 将自动重新平衡数据。
 
@@ -16535,60 +15868,49 @@ BUFFERPOOL IBMDEFAULTBTP
 
 ## 范围分区 675
 
-逻辑表
+### 逻辑表
 
 虽然表可能被分成不同的表空间，但用户、实用程序和应用程序将其视为一个逻辑实体。
 
 表分区的主要优势包括：
 
-- 允许优化的数据装入和迁出处理：可以将新数据放在单独的表中，而不会影响分区表。当数据准备好添加时，使用 ALTER TABLE ATTACH 命令后使用 SET INTEGRITY 语句将使数据作为分区表的一部分可用。
+- 允许优化的数据装入和迁出处理：可以将新数据放在单独的表中，而不会影响分区表。当数据准备好添加时，使用 `ALTER TABLE ATTACH` 命令后使用 `SET INTEGRITY` 语句将使数据作为分区表的一部分可用。
 - 允许将大表划分为更易管理的各个：数据备份变得简单，因为可以对分区表的局部进行备份和恢复，而不是管理一个大对象。
-- 改进的层级存储管理（HSM）集成：可以对不经常访问的选择范围进行归档，而无必归档整个表。
-- 消除了对 UNION ALL 视图的需求：不再需要 UNION ALL 视图，因为表分区已经完成了 UNION ALL 所
-
-
-
-
-
-## 第11 章 数据存储管理
-
-union all 视图提供了功能，同时也包含了滚动入（rolling in）和滚动表（rolling table）数据的特性。
-
-- 单表可以分区到多个表空间
+- 改进的层级存储管理（HSM）集成：可以对不经常访问的选择范围进行归档，而无需归档整个表。
+- 消除了对 `UNION ALL` 视图的需求：不再需要 `UNION ALL` 视图，因为表分区已经完成了 `UNION ALL` 所提供的功能，同时也包含了滚动入（rolling in）和滚动表（rolling table）数据的特性。
+- 单表可以分区到多个表空间。
 
 范围分区表中的每个分区都可以放置在独立的表空间中。这在管理表的各个范围时提供了更大的灵活性。
 
-- SET INTEGRITY 处理现在支持在线
+- `SET INTEGRITY` 处理现在支持在线。
 
 `SET INTEGRITY` 语句现在可以在线运行，而不会锁定现有用户。
 
-- 分区表的索引可以放置在不同的表空间
+- 分区表的索引可以放置在不同的表空间。
 
 范围分区表的每个索引都可以放置在独立的表空间中。这可以帮助 DBA 将特定索引放置在性能更高的表空间。
 
-- 高级优化
+- 高级优化。
 
 表分区允许 SQL 编译器对数据执行“分区裁剪（partition elimination）”。这种技术是指根据查询谓词，确定仅需要访问表的某部分数据分区即可回答查询的判别能力。分区裁剪可以显著提高某些查询的性能。
 
 随着表分区功能的引入，DB2 9 提供了三个级的数据组织方法。每种方法都可以单独使用，也可以与其他方法结合使用。以下三个子句演示了可以任意组合使用的数据组织层级：
 
-- DISTRIBUTE BY HASH
+- `DISTRIBUTE BY HASH`
 
-该子句用于将数据均匀地分布到数据库分区中。这一概念被称为数据库分区，通过数据库分区功能（DPF）启用。
+  该子句用于将数据均匀地分布到数据库分区中。这一概念被称为数据库分区，通过数据库分区功能（DPF）启用。
 
-- PARTITION BY RANGE
+- `PARTITION BY RANGE`
 
-该子句将单维度上具有相似值的行分组在同一个数据分区中。这一概念被称为表分区。
+  该子句将单维度上具有相似值的行分组在同一个数据分区中。这一概念被称为表分区。
 
-- ORDER BY DIMENSIONS
+- `ORDER BY DIMENSIONS`
 
-该子句将多个维度上具有相似值的行分组在同一个表区（table extent）中。这一概念被称为多维聚类（MDC）。
+  该子句将多个维度上具有相似值的行分组在同一个表区（table extent）中。这一概念被称为多维聚类（MDC）。
 
 这些子句可以在单个表中组合，以创建更复杂的分区方案。图 11–31 展示了在创建表时如何组合这三种分区类型。
 
-![](img/2fc7488b6558d6b99bbc7356ac4116b1_704_0.png)
-
-图 11–31 三种分区形式
+![图 11–31 三种分区形式](img/2fc7488b6558d6b99bbc7356ac4116b1_704_0.png)
 
 ## 创建分区表
 
@@ -16597,50 +15919,51 @@ union all 视图提供了功能，同时也包含了滚动入（rolling in）和
 分区列必须基于常规数据类型——不支持以下类型：
 
 - XML 数据类型
-- LONG VARCHAR, LONG VARCHARIC
-- BLOB, CLOB, DBCLOB
+- `LONG VARCHAR`、`LONG VARCHARIC`
+- `BLOB`、`CLOB`、`DBCLOB`
 - 用户定义的区分类型和结构化数据类型
-- DATALINK（在 DB2 9 中也不支持作为数据类型）
+- `DATALINK`（在 DB2 9 中也不支持作为数据类型）
 
 所有其他标准数据类型都是有效的。表分区最典型的用法是使用 `DATE` 或 `TIMESTAMP` 列。使用表分区时的额外考虑因素：
 
 - 生成列
 
-用于定义分区的列可以是普通列，也可以是生成列。当分区列没有提供方便的范围时，可以使用生成列来创建一个较小的值集。例如，`SALARY` 列可能不是分区的良好候选对象，但 `SALARY/10000` 可能比较合适。
+  用于定义分区的列可以是普通列，也可以是生成列。当分区列没有提供方便的范围时，可以使用生成列来创建一个较小的值集。例如，`SALARY` 列可能不是分区的良好候选对象，但 `SALARY/10000` 可能比较合适。
 
 - 多列
 
-可以为分区定义多个列，但必须确保这些列的值互不重叠。
+  可以为分区定义多个列，但必须确保这些列的值互不重叠。
 
 - 分区限制
 
-分区的理论限制是 32,000，但对于大多数实际应用，这个数字应该少得多。
+  分区的理论限制是 32,000，但对于大多数实际应用，这个数字应该少得多。
 
 ## 定义范围
 
 使用范围分区的 `CREATE TABLE` 语句的基本结构如下：
 
-```
+```sql
 CREATE TABLE NAME
 (
-COLUMN_NAME DATA TYPE ...
+  COLUMN_NAME DATA TYPE ...
 )
 IN TABLESPACE...
 PARTITION BY RANGE(COLUMN_NAME)
 (
-PARTITIONING STATEMENTS ...
+  PARTITIONING STATEMENTS ...
 ```
 
-`PARTITION BY RANGE()` 规范包含了表将进行分区的列名。规范括号内的语句定义了各个分区的内容以及它们关联的范围。`IN` 类指定了放置分区的的空间。例如，以下 SQL 语句创建了四个范围：
+`PARTITION BY RANGE()` 规范包含了表将进行分区的列名。规范括号内的语句定义了各个分区的内容以及它们关联的范围。`IN` 子句指定了放置分区的表空间。例如，以下 SQL 语句创建了四个范围：
 
-```
+```sql
 CREATE TABLE SALES (SALE_DATE DATE, CUSTOMER INT)
 PARTITION BY RANGE (SALE_DATE)
 (
-STARTING '2006-01-01' ENDING '2006-03-31',
-STARTING '2006-04-01' ENDING '2006-06-30',
-STARTING '2006-07-01' ENDING '2006-09-30',
-STARTING '2006-10-01' ENDING '2007-12-31');
+  STARTING '2006-01-01' ENDING '2006-03-31',
+  STARTING '2006-04-01' ENDING '2006-06-30',
+  STARTING '2006-07-01' ENDING '2006-09-30',
+  STARTING '2006-10-01' ENDING '2007-12-31'
+);
 ```
 
 ## 表（范围）分区 679
@@ -16649,11 +15972,11 @@ STARTING '2006-10-01' ENDING '2007-12-31');
 
 范围不需要是连续的，也不要求在范围内具有相同的数值范围。然而，如果有人向缺少某个范围的表中插入行，且没有可用分区处理其尝试插入的行，则会收到错误消息：
 
-```
+```text
 SQL0327N The row cannot be inserted
 ```
 
-SQL0327N 无法将行插入 "SALES"，因为超出了定义的范围。
+`SQL0327N` 无法将行插入 `"SALES"`，因为超出了定义的范围。
 
 ## 插入与更新
 
@@ -16669,7 +15992,7 @@ SQL0327N 无法将行插入 "SALES"，因为超出了定义的范围。
 
 定义范围时的问题之一是如何表示最大值。特殊值 `MINVALUE` 和 `MAXVALUE` 可用于指定开放范围。例如，以下示例将 2000 年之前的所有内容放在第一个分区：
 
-```
+```sql
 CREATE TABLE SALES (SALE_DATE DATE, CUSTOMER INT)
 PARTITION BY RANGE (SALE_DATE)
 (
@@ -16678,21 +16001,21 @@ PARTITION BY RANGE (SALE_DATE)
   STARTING '2000-04-01' ENDING '2000-06-30',
   STARTING '2000-07-01' ENDING '2000-09-30',
   STARTING '2000-10-01' ENDING '2004-12-31'
-)
+);
 ```
 
-任何小于或等于 '1999-12-31' 的插入记录都将被放在第一个分区。注意 `MINVALUE` 和 `MAXVALUE` 是排除值，因此它们永远不会作为范围的一部分。以下创建语句将失败，因为第一个分区没有范围：
+任何小于或等于 `'1999-12-31'` 的插入记录都将被放在第一个分区。注意 `MINVALUE` 和 `MAXVALUE` 是排除值，因此它们永远不会作为范围的一部分。以下创建语句将失败，因为第一个分区没有范围：
 
-```
+```sql
 CREATE TABLE SALES (SALE_DATE DATE, CUSTOMER INT)
 PARTITION BY RANGE (SALE_DATE)
 (
   STARTING MINVALUE ENDING MINVALUE,
   STARTING '2000-01-01' ENDING '2004-12-31'
-)
+);
 ```
 
-SQL0636N 数据分区 "PART0" 指定的范围无效。原因代码 = "1"。
+`SQL0636N` 数据分区 `"PART0"` 指定的范围无效。原因代码 = `"1"`。
 
 通常，分区的起始值必须小于结束值。然而，如果两个边界都是包含性的，则起始值可以等于结束值。包含 `MINVALUE` 或 `MAXVALUE` 的边界被认为是包含性的。
 
@@ -16700,88 +16023,92 @@ SQL0636N 数据分区 "PART0" 指定的范围无效。原因代码 = "1"。
 
 有两个关键字控制范围规范中值的处理方式。`EXCLUSIVE` 关键字用于指示范围边界是排除性的，即不包含在范围内。默认值是 `IN`，它会包含范围内的值。日期范围应始终使用排除性的日期边界，特别是在尝试处理月底的日期时。
 
-
-
-
-
 ## 表（范围）分区 681
 
-范围的定义是包含下一个范围的第一天，并将其标记为 EXCLUSIVE（排除）。这将确保直到该日期（但不包含该日期）的所有内容都处于范围内。
+范围的定义是包含下一个范围的第一天，并将其标记为 `EXCLUSIVE`（排除）。这将确保直到该日期（但不包含该日期）的所有内容都处于范围内。
 
-此示例通过使每个结束边界与下一个范围的起始边界相同，并对结束边界使用 EXCLUSIVE，来避免出现“空隙”：
+此示例通过使每个结束边界与下一个范围的起始边界相同，并对结束边界使用 `EXCLUSIVE`，来避免出现“空隙”：
 
-```
+```sql
 CREATE TABLE SALES (SALE_DATE DATE, CUSTOMER INT)
 PARTITION BY RANGE (SALE_DATE)
 (
-STARTING MINVALUE ENDING '2000-01-01' EXCLUSIVE,
-STARTING '2000-01-01' ENDING '2000-04-01' EXCLUSIVE,
-STARTING '2000-04-01' ENDING '2000-07-01' EXCLUSIVE,
-STARTING '2000-07-01' ENDING '2000-10-01' EXCLUSIVE,
-STARTING '2000-10-01' ENDING '2004-12-31'
-)
+  STARTING MINVALUE ENDING '2000-01-01' EXCLUSIVE,
+  STARTING '2000-01-01' ENDING '2000-04-01' EXCLUSIVE,
+  STARTING '2000-04-01' ENDING '2000-07-01' EXCLUSIVE,
+  STARTING '2000-07-01' ENDING '2000-10-01' EXCLUSIVE,
+  STARTING '2000-10-01' ENDING '2004-12-31'
+);
 ```
 
 ## 隐式边界
 
-如果范围规范中未包含缺失的边界，DB2 将自动生成这些边界。只要所有范围都是无歧的，就可以省略起始和结束边界。以下示例创建了五个分区：
+如果范围规范中未包含缺失的边界，DB2 将自动生成这些边界。只要所有范围都是无歧义的，就可以省略起始和结束边界。以下示例创建了五个分区：
 
-```
+```sql
 CREATE TABLE SALES (SALE_DATE DATE, CUSTOMER INT)
 PARTITION BY RANGE (SALE_DATE)
 (
-STARTING MINVALUE,
-STARTING '2000-01-01',
-STARTING '2000-04-01',
-STARTING '2000-07-01',
-STARTING '2000-10-01',
-ENDING '2004-12-31'
-)
+  STARTING MINVALUE,
+  STARTING '2000-01-01',
+  STARTING '2000-04-01',
+  STARTING '2000-07-01',
+  STARTING '2000-10-01',
+  ENDING '2004-12-31'
+);
 ```
 
-第一个范围从 MINVALUE 开始，到 '2000-01-01'结束（排除）。这意味着第一个范围的最后一个有效日期是 '1999-12-31'。第二个范围从'2000-01-01' 开始，到'2000-03-31'结束，因为它是到'2000-04-01'结束（排除）。最后一个范围从'2000-10-01'开始，到'2004-12-31'结束。该行没有额外的修饰符，因此'2004-12-31'被包含在最后一个范围内。
+
+
+
+第一个范围从 `MINVALUE` 开始，到 `'2000-01-01'` 结束（排除）。这意味着第一个范围的最后一个有效日期是 `'1999-12-31'`。第二个范围从 `'2000-01-01'` 开始，到 `'2000-03-31'` 结束，因为它是到 `'2000-04-01'` 结束（排除）。最后一个范围从 `'2000-10-01'` 开始，到 `'2004-12-31'` 结束。该行没有额外的修饰符，因此 `'2004-12-31'` 被包含在最后一个范围内。
+
+## 第 11 章 数据存储管理
 
 ## 为分区命名
 
 当表被置于生产环境时，DBA 需要为单个分区命名，以便对它们进行维护。如果不对分区进行显式命名，DB2 将生成一个 SQL 标识符，在对表进行任何维护时，该标识符将很难记忆。
 
-## 第 11 章数据存储管理
-
-可以使用 PART 或 PARTITION 关键字为分区命名。此名称将在 ALTER TABLE DETACH 等分区操作期间用于指定分区名称。
+可以使用 `PART` 或 `PARTITION` 关键字为分区命名。此名称将在 `ALTER TABLE DETACH` 等分区操作期间用于指定分区名称。
 
 下面是一个命名数据分区的示例。
 
-```
+```sql
 CREATE TABLE SALES (SALE_DATE, CUSTOMER INT)
+
 PARTITION BY RANGE (SALE_DATE)
+
 (
-PART REST STARTING MINVALUE,
-PARTITION Q1 STARTING '2000-01-01',
-PARTITION Q2 STARTING '2000-04-01',
-PARTITION Q3 STARTING '2000-07-01',
-PARTITION Q4 STARTING '2000-10-01' ENDING '2004-12-31'
+    PART REST STARTING MINVALUE,
+    PARTITION Q1 STARTING '2000-01-01',
+    PARTITION Q2 STARTING '2000-04-01',
+    PARTITION Q3 STARTING '2000-07-01',
+    PARTITION Q4 STARTING '2000-10-01' ENDING '2004-12-31'
 )
 ```
 
 ## 处理 NULL 值
 
-如果表设计要求分区列允许空值，你必须告诉 DB2 在 `INSERT` 语句期间将空值放在什么位置。NULLS FIRST/LAST 关键字指定了空值所在的分区：
+如果表设计要求分区列允许空值，你必须告诉 DB2 在 `INSERT` 语句期间将空值放在什么位置。`NULLS FIRST`/`LAST` 关键字指定了空值所在的分区：
 
-- 默认值是 NULLS ROWS。当分区键列中有空值时，它们被放置在到 MAXVALUE 结束的范围内。
-- 使用 NULLS FIRST 将空值放置在从 MINVALUE 开始的范围内。
+- 默认值是 `NULLS ROWS`。当分区键列中有空值时，它们被放置在到 `MAXVALUE` 结束的范围内。
+- 使用 `NULLS FIRST` 将空值放置在从 `MINVALUE` 开始的范围内。
 
-如果表中的分区不包含 MINVALUE 或 MAXVALUE 值，则空值被视为超出范围（out-of-range）。
+如果表中的分区不包含 `MINVALUE` 或 `MAXVALUE` 值，则空值被视为超出范围（out-of-range）。
 
-```
-CREATE TABLE SALES (SALE_DATE, DATE, CUSTOMER INT )
+```sql
+CREATE TABLE SALES (SALE_DATE, DATE, CUSTOMER INT)
+
 (
-PARTITION BY RANGE (SALE_DATE NULLS FIRST)
-(
-STARTING MINVALUE,
-STARTING '2000-01-01',
-STARTING '2000-04-01',
-STARTING '2000-07-01',
-STARTING '2000-10-01' ENDING '2004-12-31'
+    PARTITION BY RANGE (SALE_DATE NULLS FIRST)
+
+    (
+        STARTING MINVALUE,
+        STARTING '2000-01-01',
+        STARTING '2000-04-01',
+        STARTING '2000-07-01',
+        STARTING '2000-10-01' ENDING '2004-12-31'
+    )
 )
 ```
 
@@ -16789,13 +16116,13 @@ STARTING '2000-10-01' ENDING '2004-12-31'
 
 这种方法的问题是空值会随第一个分区一起被删除。这可能不是预期的结果，因为空值可能为了未来的处理而需要保留。
 
-在这种情况下，最好创建一个使用 MINVALUE 的范围，其范围到但不包含表中的第一个有效日期。该分区不会像图 11–32 所示作为维护的一部分被移除：
+在这种情况下，最好创建一个使用 `MINVALUE` 的范围，其范围到但不包含表中的第一个有效日期。该分区不会像图 11–32 所示作为维护的一部分被移除：
 
-## NULLS FIRST
+### NULLS FIRST
 
 | MINVALUE | 2006Q1 | 2006Q2 | 2006Q3 | 2006Q4 | 2007Q1 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| --- | --- | --- | --- | --- | |
+| --- | --- | --- | --- | --- | --- |
 | | 1 | 2 | 5 | 4 | 1 |
 | Table Space 1 | Table Space 2 | Table Space 3 | Table Space 4 | Table Space 6 |
 
@@ -16803,27 +16130,33 @@ STARTING '2000-10-01' ENDING '2004-12-31'
 
 ## 计算范围
 
-上述所有示例都使用起始和结束值进行分区。PARTITION 命令中包含一个快捷方式，根据起始值、结束值和间隔来计算范围。
+上述所有示例都使用起始和结束值进行分区。`PARTITION` 命令中包含一个快捷方式，根据起始值、结束值和间隔来计算范围。
 
-## 短语法
+### 短语法
 
-PARTITION 子句中包含 `STARTING ... ENDING ... EVERY` 关键字来快速定义范围。这是一种基于日期或数字快速创建许多分区的简单方法。例如，此 SQL 创建了 8 个分区，每个一个季度。
+`PARTITION` 子句中包含 `STARTING ... ENDING ... EVERY` 关键字来快速定义范围。这是一种基于日期或数字快速创建许多分区的简单方法。例如，此 SQL 创建了 8 个分区，每个一个季度。
 
-```
+```sql
 CREATE TABLE SALES (SALE_DATE, CUSTOMER INT)
+
 PARTITION BY RANGE(SALE_DATE)
-(STARTING '2006-01-01' ENDING '2007-12-31' EVERY 3 MONTHS)
+
+(
+    STARTING '2006-01-01' ENDING '2007-12-31' EVERY 3 MONTHS
+)
 ```
 
-第一个范围从'2006-01-01'开始，到'2006-03-31'结束。下一个从'2006-04-01'开始，到'2006-06-30'结束，直到'2007-12-31'。虽然这是生成多个范围的一种非常有效的方法，但缺点是范围没有名称，因此执行 `DETACH` 命令将需要在系统目录中查找。
+第一个范围从 `'2006-01-01'` 开始，到 `'2006-03-31'` 结束。下一个从 `'2006-04-01'` 开始，到 `'2006-06-30'` 结束，直到 `'2007-12-31'`。虽然这是生成多个范围的一种非常有效的方法，但缺点是范围没有名称，因此执行 `DETACH` 命令将需要在系统目录中查找。
 
 虽然所有示例都显示了日期范围，但也可以使用相同的语法计算数值值。以下 SQL 生成了四个分区：
 
-```
+```sql
 CREATE TABLE T1 (C1 INT)
+
 PARTITION BY RANGE (C1)
+
 (
-STARTING (1) ENDING (400) EVERY (100)
+    STARTING (1) ENDING (400) EVERY (100)
 )
 ```
 
@@ -16840,160 +16173,181 @@ STARTING (1) ENDING (400) EVERY (100)
 
 计算范围的短形式可以长语法混合。这种格式混合在创建正常分区的同时创建一个异常分区时特别有用。此示例使用长语法创建一个全捕分区，然后使用短语法指定剩余的分区：
 
-```
+```sql
 CREATE TABLE SALES (SALE_DATE DATE, CUSTOMER INT)
+
 PARTITION BY RANGE (SALE_DATE)
+
 (
-STARTING MINVALUE '2006-01-01' EXCLUSIVE,
-STARTING '2006-06-01' ENDING '2007-12-31' EVERY 3 MONTHS
+    STARTING MINVALUE '2006-01-01' EXCLUSIVE,
+    STARTING '2006-06-01' ENDING '2007-12-31' EVERY 3 MONTHS
 )
 ```
 
 ## 多列分区
 
-PARTITION 子句中可以指定多个列。这类似于在索引键中定义多个列。
+`PARTITION` 子句中可以指定多个列。这类似于在索引键中定义多个列。
 
-## 表（范围）分区
+### 表（范围）分区
 
-```
+```sql
 CREATE TABLE SALES (YEAR INT, MONTH INT)
+
 PARTITION BY RANGE(YEAR, MONTH)
+
 (
-STARTING (2006,1) ENDING (2006,3),
-STARTING (2006,4) ENDING (2006,6),
-STARTING (2006,7) ENDING (2006,9),
-STARTING (2006,10) ENDING (2006,12),
-STARTING (2007,1) ENDING (2007,3)
+    STARTING (2006,1) ENDING (2006,3),
+    STARTING (2006,4) ENDING (2006,6),
+    STARTING (2006,7) ENDING (2006,9),
+    STARTING (2006,10) ENDING (2006,12),
+    STARTING (2007,1) ENDING (2007,3)
 )
 ```
 
 注意多列不是多个维度。范围不能重叠，否则 DB2 将引发错误条件：
 
-```
+```sql
 CREATE TABLE NEIGHBORHOOD (STREET INT, AVENUE INT)
+
 PARTITION BY RANGE(STREET, AVENUE)
+
 (
-STARTING (1,1) ENDING (10,10),
-STARTING (1,11) ENDING (10,20)
+    STARTING (1,1) ENDING (10,10),
+    STARTING (1,11) ENDING (10,20)
 )
 ```
 
-SQL063N 数据分区 "PART0" 指定范围无效。原因代码 = "10"。SQLSTATE=56016
+`SQL063N` 数据分区 `"PART0"` 指定范围无效。原因代码 = `"10"`。`SQLSTATE=56016`
 
-错误原因是两个分区规范之间的范围重叠。范围从(1,1)到(10,20)，而第二个从(1,11)到(10,20)。范围是线性的，因此第二个范围在(10,20)结束后，从(2,1)重新开始，而不是预期的(2,11)。如果需要按网格或立方体组织数据，应使用多维聚类（MDC）功能。
+错误原因是两个分区规范之间的范围重叠。范围从 `(1,1)` 到 `(10,20)`，而第二个从 `(1,11)` 到 `(10,20)`。范围是线性的，因此第二个范围在 `(10,20)` 结束后，从 `(2,1)` 重新开始，而不是预期的 `(2,11)`。如果需要按网格或立方体组织数据，应使用多维聚类（MDC）功能。
 
 ## 分区存储映射
 
-范围表分区的处之一是可以将每个表、索引和长字段放入它们自己的表空间。本节描述了这些对象如何映射到不同的表空间。
+范围表分区的优点之一是可以将每个表、索引和长字段放入它们自己的表空间。本节描述了这些对象如何映射到不同的表空间。
 
 ## 自动将范围映射到表空间
 
 `CREATE TABLE` 中的 `IN` 子句现在接受用于各种分区的表空间列表：
 
-```
+```sql
 CREATE TABLE SALES (SALE_DATE, CUSTOMER INT)
+
 IN TBSP1, TBSP2, TBSP3
+
 PARTITION BY RANGE(SALE_DATE)
+
 (
-STARTING '2006-01-01' ENDING '2007-12-31' EVERY 3 MONTHS
+    STARTING '2006-01-01' ENDING '2007-12-31' EVERY 3 MONTHS
 )
 ```
 
 图 11–33 展示了分区是如何放置在表空间中的。
 
+![图 11–33 表空间的轮询分配](img/2fc7488b6558d6b99bbc7356ac4116b1_713_0.png)
 
-
-
-
-# 第11章 数据存储管理
-
-![](img/2fc7488b6558d6b99bbc7356ac4116b1_713_0.png)
-
-图 11–33 表空间的轮询分配
-
-范围将以轮询方式在提供的表空间之间循环。1Q/2006 的数据将存放在 TBSP1，2Q/2006 放在 TBSP2，3Q/2006 放在 TBSP3，4Q/2006 放在 TBSP1，依此类推，直到所有分区分配完毕。可以通过表空间列表尾的 `NO CYCLE` 选项禁用轮询行为。如果指定了 `NO CYCLE` 没有足够的表空间供生成的分区使用，DB2 将生成错误消息且不会创建该表。
+范围将以轮询方式在提供的表空间之间循环。1Q/2006 的数据将存放在 `TBSP1`，2Q/2006 放在 `TBSP2`，3Q/2006 放在 `TBSP3`，4Q/2006 放在 `TBSP1`，依此类推，直到所有分区分配完毕。可以通过表空间列表尾的 `NO CYCLE` 选项禁用轮询行为。如果指定了 `NO CYCLE` 没有足够的表空间供生成的分区使用，DB2 将生成错误消息且不会创建该表。
 
 ```sql
 CREATE TABLE SALES (SALE_DATE, CUSTOMER INT)
-in TBSP1, TBSP2, TBSP3 NO CYCLE
+
+IN TBSP1, TBSP2, TBSP3 NO CYCLE
+
 PARTITION BY RANGE(SALE_DATE)
+
 (
-STARTING '2006-01-01' ENDING '2007-12-31' EVERY 3 MONTHS
+    STARTING '2006-01-01' ENDING '2007-12-31' EVERY 3 MONTHS
 );
 ```
 
-SQL2025ON 数据分区数量超过表 SQL 的表空间数量 SQLSTATE=428G1
+`SQL2025ON` 数据分区数量超过表 SQL 的表空间数量 `SQLSTATE=428G1`
 
-# 范围到表空间的手动映射
+## 范围到表空间的手动映射
 
 上一个示例使用了短语法将分区分配到表空间。长格式则在每个分区定义之后使用 `IN` 子句。
-在此示例中，'2006-01-01'之前的数据将放在第一个分区，'2006-01-01' 到 '2006-06-01'（不包含）放在第二个分区，然后 '2006-06-01' 到 '2006-09-30' 放在最后一个分区。
+
+在此示例中，`'2006-01-01'` 之前的数据将放在第一个分区，`'2006-01-01'` 到 `'2006-06-01'`（不包含）放在第二个分区，然后 `'2006-06-01'` 到 `'2006-09-30'` 放在最后一个分区。
 
 ```sql
 CREATE TABLE SALES (SALE_DATE, CUSTOMER INT)
+
 PARTITION BY RANGE(SALE_DATE)
+
 (
-STARTING MINVALUE IN TBSP1,
-STARTING '2006-01-01' IN TBSP2,
-STARTING '2006-06-01' ENDING '2006-09-30' IN TBSP3
+    STARTING MINVALUE IN TBSP1,
+    STARTING '2006-01-01' IN TBSP2,
+    STARTING '2006-06-01' ENDING '2006-09-30' IN TBSP3
 )
 ```
 
-# 索引映射
+## 索引映射
 
 在表上定义的任何索引的位置都取决于所使用的存储类型。
 
-- 系统管理存储 (SMS)
-如果表位于 SMS 表空间中，则该表的所有索引对象都存储在同一个表空间中。
-- 数据库管理存储 (DMS)
-如果表位于 DMS 表空间或使用自动存储（Automatic Storage），则可以通过 `INDEX` 关键字将该表的所有索引存储在一个不同的 DMS 表空间中。
+- **系统管理存储（SMS）**  
+  如果表位于 SMS 表空间中，则该表的所有索引对象都存储在同一个表空间中。
+- **数据库管理存储（DMS）**  
+  如果表位于 DMS 表空间或使用自动存储（Automatic Storage），则可以通过 `INDEX` 关键字将该表的所有索引存储在一个不同的 DMS 表空间中。
 
 通过范围分区，分区表的每个索引现在都可以放在它自己的表空间中，无论底层的表类型如何。
 
 ```sql
 CREATE TABLE T1 (C1 INT, C2 INT)
+
 IN TBS1, TBS2, TBS3
+
 INDEX IN TBS4
+
 PARTITION BY RANGE(c1)
+
 (
-STARTING FROM (1) ENDING (100) EVERY (25)
+    STARTING FROM (1) ENDING (100) EVERY (25)
 );
+
 CREATE INDEX I1 ON T1(c1);
+
 CREATE INDEX I2 ON T1(c2) IN TBS5;
 ```
 
-`INDEX` 用于在 `CREATE INDEX` 命令中未指定 `IN` 子句时，指定索引的默认位置。在此示例中，索引 I1 没有 `IN` 指定，因此它将存放在 TBS4 中。如果索引包含 `IN` 子句，则将存放在特定的表空间中。
+`INDEX` 用于在 `CREATE INDEX` 命令中未指定 `IN` 子句时，指定索引的默认位置。在此示例中，索引 `I1` 没有指定 `IN`，因此它将存放在 `TBS4` 中。如果索引包含 `IN` 子句，则将存放在特定的表空间中。
 
 从表维护的角度来看，将索引存放在与表不同的表空间中是非常重要的。如果没有给出索引位置，它将默认置于为表定义的第一个表空间。如果数据被放在该表空间中，不同对象之间将发生磁盘竞争。此外，在不删除索引的情况下无法删除该表空间。
 
 除了维护考虑外，由于潜在的大小问题，索引可能需要与主表分离。在范围分区表上创建的索引是全局的。这意味着一个索引结构包含所有分区的条目，而不是每个分区对应一个独立的索引。虽然这似乎是范围分区表的局限性，但一项名为“异步索引清理”（Asynchronous Index Cleanup）的新功能确保了在任何 `DETACH` 处理期间索引和表具有最高的可用性。
 
-# 大对象的映射
+## 大对象的映射
 
 大对象（LONG VARCHAR、BLOB 和 XML）与索引类似，只要在 `CREATE TABLE` 命令中包含了 `LONG IN` 指定，它们就会存储在不同的表空间中。通常，特定分区的大对象被放在与该分区相同的表空间中。然而，大对象可以像数据分区一样以轮询方式放在不同的表空间中：
 
 ```sql
 CREATE TABLE SALES (SALE_DATE, CUSTOMER INT)
+
 IN TBS6, TBS7
+
 PARTITION BY RANGE (SALE_DATE)
+
 (
-STARTING '2006-01-01' ENDING '2007-12-31' EVERY 3 MONTHS
+    STARTING '2006-01-01' ENDING '2007-12-31' EVERY 3 MONTHS
 ```
 
-# 用于滚动出和滚动（Roll-out and Roll-In）的新操作
+## 用于滚动出和滚动入（Roll-out and Roll-In）的新操作
 
-表分区最显著的功能之一是能够对表数据进行滚动入（roll-in）和滚动（roll-out）。`ALTER TABLE` 命令新增了两个新命令来执行数据的滚动入和滚动出：`ATTACH PARTITION` 和 `DETACH PARTITION`。滚动入分区表数据允许将新范围轻松合并到分区表中，而滚动出分区表数据则允许（此处原文不完整）...
+表分区最显著的功能之一是能够对表数据进行滚动入（roll-in）和滚动出（roll-out）。`ALTER TABLE` 命令新增了两个新命令来执行数据的滚动入和滚动出：`ATTACH PARTITION` 和 `DETACH PARTITION`。
 
-# 向现有表添加分区
+滚动入分区表数据允许将新范围轻松合并到分区表中，而滚动出分区表数据则允许（此处原文不完整）……
 
-使用 `ALTER TABLE ... ATTACH partition` 创建新分区。添加分区最简单的方法是使用带有以下内容的 `ALTER TABLE ... ATTACH partition` 命令：
+## 向现有表添加分区
+
+使用 `ALTER TABLE ... ATTACH PARTITION` 创建新分区。添加分区最简单的方法是使用带有以下内容的 `ALTER TABLE ... ATTACH PARTITION` 命令：
 
 ```sql
 CREATE TABLE SALES (SALE_DATE, CUSTOMER INT)
+
 IN TBS1, TBS2, TBSP3 NO CYCLE
+
 PARTITION BY RANGE(SALE_DATE)
+
 (
-STARTING '2006-01-01' ENDING '2007-12-31' EVERY 3 MONTHS
+    STARTING '2006-01-01' ENDING '2007-12-31' EVERY 3 MONTHS
 );
 ```
 
@@ -17001,6 +16355,7 @@ STARTING '2006-01-01' ENDING '2007-12-31' EVERY 3 MONTHS
 
 ```sql
 SET INTEGRITY FOR TXS ALLOW WRITE ACCESS
+
 IMMEDIATE CHECKED INCREMENTAL
 ```
 
@@ -17010,21 +16365,25 @@ IMMEDIATE CHECKED INCREMENTAL
 SELECT * FROM TXS WHERE C1=3;
 
 C1  C2
+
 -- --
+
 3   2
+
 3   3
+
 3   5
 ```
 
 选择了 3 条记录。
 
-# 设置完整性处理 (Set Integrity Processing)
+## 设置完整性处理（Set Integrity Processing）
 
-在任何 `ALTER TABLE ATTA partition` 之前，必须运行 `SET INTEGRITY`。`SET INTEGRITY` 命令执行多个功能：
+在任何 `ALTER TABLE ATTACH PARTITION` 之前，必须运行 `SET INTEGRITY`。`SET INTEGRITY` 命令执行多个功能：
 
 - 检查新分区的数据以确保其符合该分区的范围
 - 更新任何生成列并检查可能在表上的约束
-- 更新定义在基表上的任何物化查询表 (MQTs)
+- 更新定义在基表上的任何物化查询表（MQTs）
 - 更新索引
 
 所有这些操作都是在后台完成的，不会影响现有分区表的用户。一旦 `SET INTEGRITY` 命令完成，新数据将对应用程序可见。
@@ -17033,63 +16392,75 @@ C1  C2
 
 ```sql
 SET INTEGRITY FOR <table> ALLOW WRITE ACCESS
+
 IMMEDIATE CHECKED INCREMENTAL
+
 FOR EXCEPTION IN <table> USE <exception-table>
 ```
 
+`ALLOW ACCESS` 为基表的现有用户提供了最大的并发性，但由于命令需要竞争表上的资源，它将消耗更多的处理时间。`EXCEPTION` 语句对于可能尚未检查过数据完整性的表尤为重要。
 
+`SET INTEGRITY` 是一个原子命令，这意味着该命令要么对所有行完全完成，要么失败。如果百万条记录中有一条是不正确的，整个命令将失败。例如，创建了以下表，并将其作为基表的分区添加：
 
-
-
-## 表（范围）分区
-
-`ALLOW ACCESS` 为基表的现有用户提供了最大的并发性，但由于命令需要竞争表上的资源，它将消耗更多的处理时间。`EXCEPTION` 语句对于可能尚未检查过数据完整性的表尤为重要。`SET INTEGRITY` 是一个原子命令，这意味着该命令要么对所有行完全完成，要么失败。如果百万条记录中有一条是不正确的，整个命令将失败。例如，创建了以下表，并将将其作为基表的分区添加：
-
-```
+```sql
 CREATE TABLE NEWRANGE LIKE TXSP4;
+
 INSERT INTO NEWRANGE VALUES (4,4), (4,3), (4,5);
 ```
 
-挂载表不会导致任何错误，尽管其中值 (5,3)  超出了定义的范围：
+挂载表不会导致任何错误，尽管其中值 `(5,3)` 超出了定义的范围：
 
-```
+```sql
 ALTER TABLE TXS
+
 ATTACH PARTITION P4
+
 STARTING 4 ENDING 4
+
 FROM TABLE NEWRANGE
 ```
 
 `SET INTEGRITY` 命令发现了错误，但正确的记录没有被加载到表中。
 
-```
+```sql
 SET INTEGRITY FOR TXS ALLOW WRITE ACCESS
+
 IMMEDIATE CHECKED INCREMENTAL;
 ```
 
-SQL360N 通过 `SET INTEGRITY` 语句进行的数据处理发现涉及名为 "BAKLAR.TXS.RANGE_CONSTRAINT" 的约束或唯一索引的完整性违反。SQLSTATE=23514
+`SQL360N` 通过 `SET INTEGRITY` 语句进行的数据处理发现涉及名为 `"BAKLAR.TXS.RANGE_CONSTRAINT"` 的约束或唯一索引的完整性违反。`SQLSTATE=23514`
 
 处理具有约束或完整性违反行的方法是添加 `FOR EXCEPTION` 子句。该子句包含了可能发生违反的表或 MQT 的名称。
 
 在上例中，可以再次带有 `FOR EXCEPTION` 子句运行 `SET INTEGRITY` 以捕获坏记录。
 
-```
+```sql
 CREATE TABLE TXSBAD LIKE TXNS IN USERSPACE;
+```
+
+
+
+
+# 设置完整性以允许写入访问
+
+```sql
 SET INTEGRITY FOR TXS ALLOW WRITE ACCESS
 IMMEDIATE CHECKED INCREMENTAL
 FOR EXCEPTION IN TXS USE TXSBAD;
 ```
 
-SQL3602w 数据处理发现约束违反并将其移动到异常表中。SQLSTATE=01603
+`SQL3602w` 数据处理发现约束违反并将其移动到异常表中。`SQLSTATE=01603`
 
-```
+```sql
 SELECT * FROM TXSBAD;
-C1
-C2
----
-5
-3
-1 record(s) selected.
 ```
+
+| C1 | C2 |
+| --- | --- |
+| 5 | 3 |
+| 1 |  |
+
+`1 record(s) selected.`
 
 检查约束违反被置于此错误表中，并发布警告消息，说明某些行存在错误。
 
@@ -17105,17 +16476,22 @@ C2
 `SET INTEGRITY` 有三种锁定现有用户的选项：
 
 - **ALLOW NO ACCESS**
+
   这将允许 `SET INTEGRITY` 命令以最快速度完成，但不允许对表进行任何访问。
+
 - **ALLOW READ ACCESS**
+
   `SET INTEGRITY` 也可以带有 `READ ACCESS` 运行，允许用户查询表但不能更新其任何内容。所有更新将排队等待 `SET INTEGRITY` 命令完成。
+
 - **ALLOW WRITE ACCESS**
+
   这种锁定模式将为用户提供最高的可用性，但 `SET INTEGRITY` 性能最慢。
 
 使用 `SET INTEGRITY` 命令时，DBA 必须尽快发出 `COMMIT WORK` 以避免持有任何锁。
 
 运行 `SET INTEGRITY` 命令的另一个考虑因素是设置锁超时。在执行 `SET INTEGRITY` 命令之前可能需要发出以下命令，以请求数据库管理器在等待锁时不要超时。这将防止在处理结束时因锁冲突失败：
 
-```
+```sql
 SET LOCKEOUT
 ```
 
@@ -17125,32 +16501,31 @@ SET LOCKEOUT
 
 `ALTER TABLE ... DETACH` 命令用于从现有分区表中删除分区。当数据需要分离出一组新记录时，可能会删除分区。`ALTER TABLE DETACH` 的格式为：
 
-```
+```sql
 ALTER TABLE <table>
 DETACH PARTITION <partition-name> INTO TABLE <detached-table>
 ```
 
 `partition-name` 是在挂载到表或使用 `PART` 或 `PARTITION` 子句创建时赋予分区的名称。`detached-table` 是 DB2 创建的用于存放分离区的表名。`DETACH` 仅更改目录项并将分区变为实际表。在 `ALTER TABLE DETACH` 命令中没有数据移动。
 
-## 第 11 章存储管理
+# 第 11 章：存储管理
 
+## 数据存储管理
 
-
-
-
-## 第 11 章 数据存储管理
-
-- 如果与用户活动产生锁冲突，则暂停
-- 不会保持数据库处于活动状态
-- 定期提交（硬化）其进度
-- 在关机或恢复后从中断处继续
+- 如果与用户活动产生锁冲突，则暂停。
+- 不会保持数据库处于活动状态。
+- 定期提交（硬化）其进度。
+- 在关机或恢复后从中断处继续。
 
 可以使用 `LIST UTILITIES DETAIL` 命令监控 AIC 的进度（图 11–34）：
 
+```sql
 LIST UTILITIES SHOW DETAIL;
+```
 
+| 项目 | 值 |
+| --- | --- |
 | ID | 2 |
-| :--- | :--- |
 | Type | ASYNCH INDEX CLEANUP |
 | Database Name | SAMPLE |
 | Partition Number | 0 |
@@ -17158,20 +16533,20 @@ LIST UTILITIES SHOW DETAIL;
 | Start Time | 04/14/2007 11:15:01.987513 |
 | State | 执行中 (Executing) |
 | Invocation Type | 自动 (Automatic) |
-| Throttling: | |
+| Throttling |  |
 | Priority | 50 |
-| Progress Monitoring: | |
+| Progress Monitoring |  |
 | Total work | 5 pages |
 | Completed work | 0 pages |
 | Start Time | 04/14/2007 11:15:01.980518 |
 
-图 11-34 List Utilities 详情
+图 11-34 `LIST UTILITIES` 详情
 
 ## 范围分区的额外考虑
 
 在许多其他情况下，使用范围分区表时需要特殊考虑。这些情况在下文中进行了详细描述。
 
-## 从 UNION ALL 视图迁移
+## 从 `UNION ALL` 视图迁移
 
 许多客户利用 DB2 的 `UNION ALL` 视图功能来创建某种范围分区。为每个范围创建一个单独的表，然后将所有表合并到一个视图。
 
@@ -17213,7 +16588,7 @@ ATTACH PARTITION Q1
 FROM TABLE QTR1;
 ```
 
-### 3. 运行 SET INTEGRITY
+### 3. 运行 `SET INTEGRITY`
 
 需要执行 `SET INTEGRITY` 语句以恢复数据在线。在 `SET INTEGRITY` 完成后，`PARTITIONED_SALES` 表的内容与原始 `SALES` 视图的内容相同。
 
@@ -17297,9 +16672,7 @@ ALTER TABLE SALES COMPRESS YES
 
 最后，我们研究了新的表分区功能，该功能可以显著减少管理大表的维护工作，并增加单个表的潜在容量。
 
-## 第12 章
-
-## 维护
+# 第 12 章：维护
 
 - 导出数据
 - 导入数据
@@ -17312,11 +16685,7 @@ ALTER TABLE SALES COMPRESS YES
 
 额外的维护主题包括检查物理数据布局和收集统计信息。我们将检查的一些工具包括 `REORGCHK`、`REORG`、`RUNSTATS` 和 `REBIND`。
 
-
-
-
-
-## 第 12 章 维护数据
+## 维护数据
 
 ## 移动数据
 
@@ -17339,21 +16708,21 @@ ALTER TABLE SALES COMPRESS YES
 
 ## 分隔符 ASCII 文件
 
-这种文件类型在关系型数据库管理系统（RDBMS）和其他软件包中广泛使用，它利用分隔符。分隔符用于识别数据元素的开始或结束的字符。分隔符 ASCII (DEL) 文件中使用的最重要的分隔符包括：
+这种文件类型在关系型数据库管理系统（RDBMS）和其他软件包中广泛使用，它利用分隔符。分隔符用于识别数据元素的开始或结束的字符。分隔符 ASCII（DEL）文件中使用的最重要的分隔符包括：
 
 - 字符分隔符 — 如名所示，它用于标记字符字段的开始和结束。默认情况下，DB2 使用双引号（"）作为字符分隔符。DBA 可以选择覆盖此默认值，让 DB2 使用另一个字符作为字符分隔符。
 - 列分隔符 — 此分隔符用于标记字段的结束。默认列分隔符是逗号（,），但 DBA 可以选择另一个字符使用。
 - 行分隔符 — 用于标记记录或行的结束。DB2 假设换行符 X'0A'（通常在 UNIX 操作系统中用于标记新行）为行分隔符。在 Windows 上，DB2 使用回车/换行符 X'0D0A' 作为行分隔符。
 
-在 DEL 文件中，行被一个接一个流式写入文件中。它们通过*行分隔符*隔开。行中的字段通过*列分隔符*相互分隔。
+在 DEL 文件中，行被一个接一个流式写入文件中。它们通过行分隔符隔开。行中的字段通过列分隔符相互分隔。
 
 字符字段由两个字符封装。
 
-数值字段用其 ASCII 等效值表示。如果需要，使用点（.）字符表示小数点。浮点值用 E 计数法表示，负值前带减号（-），正值前带加号（+）。
+数值字段用其 ASCII 等效值表示。如果需要，使用点（`.`）字符表示小数点。浮点值用 E 计数法表示，负值前带减号（`-`），正值前带加号（`+`）。
 
-为了说明，有一张名为 NAMES 的表包含以下数据（表 12–2）：
+为了说明，有一张名为 `NAMES` 的表包含以下数据（表 12–2）：
 
-### 表 12–2 Names 表
+### 表 12–2：`NAMES` 表
 
 | EMP_NO | NAME | LASTNAME | DEPT_NO |
 | --- | --- | --- | --- |
@@ -17361,9 +16730,9 @@ ALTER TABLE SALES COMPRESS YES
 | 10002 | Paul | Zikopoulos | 204 |
 | 10003 | Beverly | Crusher | 305 |
 
-假设 EMP_NO 的类型为 INTEGER，且所有列均为 CHARACTER 类型。如果列分隔符是逗号（,），行分隔符和字符分隔符是双引号（"），则包含这些数据的 DEL 文件将由如下数据流组成：
+假设 `EMP_NO` 的类型为 `INTEGER`，且所有列均为 `CHARACTER` 类型。如果列分隔符是逗号（,），行分隔符和字符分隔符是双引号（"），则包含这些数据的 DEL 文件将由如下数据流组成：
 
-```
+```text
 10001,"George","Baklarz","307"
 10002,"Paul","Zikopoulos","204"
 10003,"Beverly","Crusher","305"
@@ -17373,9 +16742,9 @@ ALTER TABLE SALES COMPRESS YES
 
 ## 非分隔符 ASCII 文件
 
-非分隔符 ASCII (ASC) 文件有时被称为固定长度 ASCII 文件。该文件由按行和列组织的 ASCII 字符数据值流组成。数据流中的行通过回车/换行符或换行符分隔，所有列值均为固定长度（如果指定了记录长度，则不需要行分隔符）。变长字符类型用空格填充并表示其最大长度。没有列分隔符或字符分隔符。使用相同的示例，代表 NAMES 表中数据的 ASC 文件如下所示：
+非分隔符 ASCII（ASC）文件有时被称为固定长度 ASCII 文件。该文件由按行和列组织的 ASCII 字符数据值流组成。数据流中的行通过回车/换行符或换行符分隔，所有列值均为固定长度（如果指定了记录长度，则不需要行分隔符）。变长字符类型用空格填充并表示其最大长度。没有列分隔符或字符分隔符。使用相同的示例，代表 `NAMES` 表中数据的 ASC 文件如下所示：
 
-```
+```text
 10001George Baklarz 307
 10002Paul Zikopoulos204
 10003BeverlyCrusher 305
@@ -17387,7 +16756,7 @@ ALTER TABLE SALES COMPRESS YES
 
 ## IXF 文件
 
-集成交换格式 (IXF) 文件用于在 DB2 数据库之间移动数据。例如，你可以从宿主机数据库导出数据文件，并将其作为输入来填充 DB2 服务器数据库中的表。通常情况下，IXF 文件由一组不连续的变长记录组成。数值以压缩小数（packed decimal）或二进制值存储，取决于数据类型。字符值以其 ASCII 表示存储，且仅存储变长字符类型中使用的部分。IXF 文件还与数据一起存储了表定义。
+集成交换格式（IXF）文件用于在 DB2 数据库之间移动数据。例如，你可以从宿主机数据库导出数据文件，并将其作为输入来填充 DB2 服务器数据库中的表。通常情况下，IXF 文件由一组不连续的变长记录组成。数值以压缩小数（packed decimal）或二进制值存储，取决于数据类型。字符值以其 ASCII 表示存储，且仅存储变长字符类型中使用的部分。IXF 文件还与数据一起存储了表定义。
 
 ### DB2 注意事项
 
@@ -17397,39 +16766,41 @@ IXF 文件不能用普通的文本编辑器编辑。使用这种格式的优势�
 
 ## 表格格式文件
 
-表格格式 (WSF) 用于电子表格、文字处理程序或其他 RDBMS。这种格式使用了大多数版本接受的功能子集。
+表格格式（WSF）用于电子表格、文字处理程序或其他 RDBMS。这种格式使用了大多数版本接受的功能子集。
 
 ## 数据移动工具
 
 DB2 提供了一套工具用于移动数据或提取表。这些工具使能够轻松地在数据库之间移动大量数据。这些操作的速度非常重要。
 
-在本节中，将检查三个 DB2 工具。并将审查每个工具的各种选项。这些工具是：
+在本节中，将检查三个 DB2 工具，并将审查每个工具的各种选项。这些工具是：
 
-- EXPORT
-- IMPORT
-- LOAD
+- `EXPORT`
+- `IMPORT`
+- `LOAD`
 
 ## 导出工具
 
-导出工具用于从表、视图或任何 SQL 语句提取数据到文件中。数据可以提取为不同的格式，供 IMPORT 或 LOAD 工具使用。
+导出工具用于从表、视图或任何 SQL 语句提取数据到文件中。数据可以提取为不同的格式，供 `IMPORT` 或 `LOAD` 工具使用。
 
-你必须连接到要导出的数据库，并且拥有 SYSADM 或 DBADM 权限，或者对访问的表具有 CONTROL 权限。
+你必须连接到要导出的数据库，并且拥有 `SYSADM` 或 `DBADM` 权限，或者对访问的表具有 `CONTROL` 权限。
 
 以下是导出工具的简略语法：
 
-```
+```text
 export TO [filename] OF [filetype] [select-statement]
 ```
 
-## 使用 EXPORT 命令
+## 使用 `EXPORT` 命令
 
-要使用默认选项将 NAMES 表的所有数据导出为类型为 NAMES.DEL，可以使用命令：
+要使用默认选项将 `NAMES` 表的所有数据导出为类型为 `NAMES.DEL`，可以使用命令：
 
-```
+```text
 export to names.del of del select * from names
 ```
 
-下表说明了运行 EXPORT 命令的结果：
+
+
+下表说明了运行 `EXPORT` 命令的结果：
 
 | First_Name | Last_Name | names.del |
 | --- | --- | --- |
@@ -17437,29 +16808,25 @@ export to names.del of del select * from names
 | Paul | Zikopoulos | "Paul","Zikopoulos" |
 | Beverly | Crusher | "Beverly","Crusher" |
 
-EXPORT 命令的一些关键参数包括（详细信息请参见 DB2 命令参考）：
+`EXPORT` 命令的一些关键参数包括（详细信息请参见 DB2 命令参考）：
 
-- TO filename 指定要导出数据所需的文件名。
-- OF filetype 指定输出文件中数据的格式：DEL, WSF, IXF。
-- METHOD column-name 指定在输出文件中使用的一个或多个列名，仅对 WSF 和 IXF 文件有效。
-- select-statement 指定返回要导出数据的 SELECT 语句。
-- MESSAGES message-file 指定用于写入警告和错误消息的文件，否则消息将写入标准输出。
-
-
-
-
+- `TO filename` 指定要导出数据所需的文件名。
+- `OF filetype` 指定输出文件中数据的格式：`DEL`, `WSF`, `IXF`。
+- `METHOD column-name` 指定在输出文件中使用的一个或多个列名，仅对 `WSF` 和 `IXF` 文件有效。
+- `select-statement` 指定返回要导出数据的 `SELECT` 语句。
+- `MESSAGES message-file` 指定用于写入警告和错误消息的文件，否则消息将写入标准输出。
 
 ## 支持的文件格式
 
-导出实用允许用户将数据导出为三种支持的文件类型之一：IXF、DEL 或 WSF。
+导出实用允许用户将数据导出为三种支持的文件类型之一：`IXF`、`DEL` 或 `WSF`。
 
-要指定文件类型，请使用 OF FILE 子句。例如，可以使用命令选项将来自 PRODUCT 表的数据导出到类型为 IXF 的文件 PRODUCT.IXF（请注意，也可以指定其他选项）：
+要指定文件类型，请使用 `OF FILE` 子句。例如，可以使用命令选项将来自 `PRODUCT` 表的数据导出到类型为 `IXF` 的文件 `PRODUCT.IXF`（请注意，也可以指定其他选项）：
 
 ```
 export to product.ixf of ifx ... select ... from product ...
 ```
 
-虽然 EX 命令不支持 ASC 文件类型，但用户仍然可以通过修改 SELECT 语句来生成 ASC 类型的数据文件。例如，如果要将名为 FIRST_NAME（定义为 CHAR(10)）和 EMP_NO（定义为 CHAR(5)）的两个列导出到 ASC 类型的文件，用户可以指定 DEL 文件类型并修改 select 语句为：
+虽然 `EX` 命令不支持 `ASC` 文件类型，但用户仍然可以通过修改 `SELECT` 语句来生成 `ASC` 类型的数据文件。例如，如果要将名为 `FIRST_NAME`（定义为 `CHAR(10)`）和 `EMP_NO`（定义为 `CHAR(5)`）的两个列导出到 `ASC` 类型的文件，用户可以指定 `DEL` 文件类型并修改 `select` 语句为：
 
 ```
 export ... of del ... select first_name concat emp_no from ...
@@ -17473,11 +16840,11 @@ export ... of del ... select first_name concat emp_no from ...
 "beverly 10003"
 ```
 
-在将数据导入表时，第一列的列起始位置应设为 2，忽略第一个位置的双引号（""）字符。数值值可以设置为字符类型，然后与其他列合并。
+在将数据导入表时，第一列的列起始位置应设为 2，忽略第一个位置的双引号（`""`）字符。数值值可以设置为字符类型，然后与其他列合并。
 
 ## 日期格式修改
 
-对于 DEL 和 WSF 文件，日期值使用的默认格式为 yyyymmdd。用户可以选择通过 EX 命令指定 DATESISO 文件类型修符，将格式更改为 ISO 标准表示 yyyy-mm-dd：
+对于 `DEL` 和 `WSF` 文件，日期值使用的默认格式为 `yyyymmdd`。用户可以选择通过 `EX` 命令指定 `DATESISO` 文件类型修符，将格式更改为 ISO 标准表示 `yyyy-mm-dd`：
 
 ```
 export ... modified by datesiso ...
@@ -17485,7 +16852,7 @@ export ... modified by datesiso ...
 
 ## DEL 文件中使用的分隔符
 
-默认字符分隔符是双引号（"）。若要覆盖此设置，请指定 CHARDEL 文件类型修符。例如，使用星号 (*) 字符作为字符分隔符：
+默认字符分隔符是双引号（`"`）。若要覆盖此设置，请指定 `CHARDEL` 文件类型修符。例如，使用星号（`*`）字符作为字符分隔符：
 
 ```
 export ... modified by chard*
@@ -17497,19 +16864,19 @@ export ... modified by chard*
 
 ## 处理小数列
 
-在导出到 DEL 文件时，小数数据类型使用小数点（.）字符导出。在值之前（或之后）会插入前导和尾零以及加号 (+) 或减号（–）。例如，名为 AMOUNT DECIMAL (8,2) 的列中的值 22.5 将导出为：
+在导出到 `DEL` 文件时，小数数据类型使用小数点（`.`）字符导出。在值之前（或之后）会插入前导和尾零以及加号（`+`）或减号（`–`）。例如，名为 `AMOUNT DECIMAL (8,2)` 的列中的值 22.5 将导出为：
 
 ```
 +00002.50
 ```
 
-要更改小数点分隔符，请指定 DECPT 文件类型修符：
+要更改小数点分隔符，请指定 `DECPT` 文件类型修符：
 
 ```
 export ... modified by decpt^
 ```
 
-用户还可以更改正小数值的导出方式。默认情况下，值前面会添加加号 (+) 以识别其为正值。通过使用 DECPLUSBLANK 文件类型修符，正值前面将不会添加加号 (+)。负值不受影响。
+用户还可以更改正小数值的导出方式。默认情况下，值前面会添加加号（`+`）以识别其为正值。通过使用 `DECPLUSBLANK` 文件类型修符，正值前面将不会添加加号（`+`）。负值不受影响。
 
 ```
 export ... modified by decplusblank
@@ -17517,28 +16884,28 @@ export ... modified by decplusblank
 
 ## 导出时的派生列名
 
-在某些情况下，用户可能将从一个或多个列派出的数据导出到输出文件的单列中。例如，SELECT 语句可能包含一个“工资减去扣款”的派生列。在这种情况下，将生成一个数字并作为派生列的。有两种方法可以强制重命名该列。这仅适用于 IXF 和 WSF 格式。
+在某些情况下，用户可能将从一个或多个列派出的数据导出到输出文件的单列中。例如，`SELECT` 语句可能包含一个“工资减去扣款”的派生列。在这种情况下，将生成一个数字并作为派生列的。有两种方法可以强制重命名该列。这仅适用于 `IXF` 和 `WSF` 格式。
 
 ## 数据移动实用程序
 
-首先，您可以使用 SELECT 语句中的 AS 子句。在我们的示例中，“工资减去扣款”可以写为 SALARY - DEDUCTIONS AS PAY。派生列的名称现在将是 PAY。
+首先，您可以使用 `SELECT` 语句中的 `AS` 子句。在我们的示例中，“工资减去扣款”可以写为 `SALARY - DEDUCTIONS AS PAY`。派生列的名称现在将是 `PAY`。
 
 ```
 export ... select salary - deduction as pay ... from ...
 ```
 
-或者，您可以指定 METHOD n 后面跟用于列的名称，按照它们被选择的顺序。在我们的示例中，如果第一列是“工资减去扣款”列，则 METHOD n 选项后的第一个名称将是 PAY：
+或者，您可以指定 `METHOD n` 后面跟用于列的名称，按照它们被选择的顺序。在我们的示例中，如果第一列是“工资减去扣款”列，则 `METHOD n` 选项后的第一个名称将是 `PAY`：
 
 ```
 export method n ('PAY', ...)
 select salary - deduction, ... from ...
 ```
 
-IXF 文件可以利用 IXF 文件本身存储的表定义在另一个数据库中创建表。在导出到 IXF 文件时更改列的名称，当文件被导入目标数据库时，可以使用所需的列名创建后续表。
+`IXF` 文件可以利用 `IXF` 文件本身存储的表定义在另一个数据库中创建表。在导出到 `IXF` 文件时更改列的名称，当文件被导入目标数据库时，可以使用所需的列名创建后续表。
 
 ## 捕获错误和警告消息
 
-使用 MESSAGES 选项指定一个用于记录所有错误和警告的文件：
+使用 `MESSAGES` 选项指定一个用于记录所有错误和警告的文件：
 
 ```
 export ... messages x:\error_logs\exports\expl1.txt ...
@@ -17546,29 +16913,29 @@ export ... messages x:\error_logs\exports\expl1.txt ...
 
 ## 导出大对象数据
 
-在导出包含 LOB 数据类型的表时，用户有两种 LOB 值的导出方式。LOB 数据的前 32 KB 可以与普通表数据一起被包含在目标文件中，或者可以将 LOB 单独存储在文件中。如果用户选择第一种方案，则不需要在 EX 命令中指定额外参数。然而，这种方法仅适用于 32 KB 或更小的 LOB。如果 LOB 大小超过 32 KB，它将被截断，只有前 32 KB 会导出到文件中。
+在导出包含 `LOB` 数据类型的表时，用户有两种 `LOB` 值的导出方式。`LOB` 数据的前 32 KB 可以与普通表数据一起被包含在目标文件中，或者可以将 `LOB` 单独存储在文件中。如果用户选择第一种方案，则不需要在 `EX` 命令中指定额外参数。然而，这种方法仅适用于 32 KB 或更小的 `LOB`。如果 `LOB` 大小超过 32 KB，它将被截断，只有前 32 KB 会导出到文件中。
 
-为了让导出实用程序将每个 LOB 值导出到单独的文件，用户必须指定文件的存放位置和使用的名称。这是通过指定三个参数来实现的：
+为了让导出实用程序将每个 `LOB` 值导出到单独的文件，用户必须指定文件的存放位置和使用的名称。这是通过指定三个参数来实现的：
 
-- LOBSFILE — 一个文件类型修符，指定时会通知实用程序所有 LOB 值都将导出到单独的文件（DB2 可以合并多个 LOB）
+- `LOBSFILE` — 一个文件类型修符，指定时会通知实用程序所有 `LOB` 值都将导出到单独的文件（DB2 可以合并多个 `LOB`）
 
-## 第12 章维护数据
+## 第 12 章 维护数据
 
 文件中同一个字符不能用于多个分隔符。
 
-在导出到 DEL 文件时，小数数据类型使用小数点（.）字符导出。在值之前（或之后）会插入前导和尾零以及加号 (+) 或减号（–）。例如，名为 AMOUNT DECIMAL (8,2) 的列中的值 22.5 将导出为：
+在导出到 `DEL` 文件时，小数数据类型使用小数点（`.`）字符导出。在值之前（或之后）会插入前导和尾零以及加号（`+`）或减号（`–`）。例如，名为 `AMOUNT DECIMAL (8,2)` 的列中的值 22.5 将导出为：
 
 ```
 +00002.50
 ```
 
-要更改小数点分隔符，请指定 DECPT 文件类型修符：
+要更改小数点分隔符，请指定 `DECPT` 文件类型修符：
 
 ```
 export ... modified by decpt^
 ```
 
-用户还可以更改正小数值的导出方式。默认情况下，值前面会添加加号 (+) 以识别其为正值。通过使用 DECPLUSBLANK 文件类型修符，正值前面将不会添加加号 (+)。负值不受影响。
+用户还可以更改正小数值的导出方式。默认情况下，值前面会添加加号（`+`）以识别其为正值。通过使用 `DECPLUSBLANK` 文件类型修符，正值前面将不会添加加号（`+`）。负值不受影响。
 
 ```
 export ... modified by decplusblank
@@ -17576,28 +16943,28 @@ export ... modified by decplusblank
 
 ## 导出时的派生列名
 
-在某些情况下，用户可能将从一个或多个列派出的数据导出到输出文件的单列中。例如，SELECT 语句可能包含一个“工资减去扣款”的派生列。在这种情况下，将生成一个数字并作为派生列的。有两种方法可以强制重命名该列。这仅适用于 IXF 和 WSF 格式。
+在某些情况下，用户可能将从一个或多个列派出的数据导出到输出文件的单列中。例如，`SELECT` 语句可能包含一个“工资减去扣款”的派生列。在这种情况下，将生成一个数字并作为派生列的。有两种方法可以强制重命名该列。这仅适用于 `IXF` 和 `WSF` 格式。
 
 ## 数据移动实用程序
 
-首先，您可以使用 SELECT 语句中的 AS 子句。在我们的示例中，“工资减去扣款”可以写为 SALARY - DEDUCTIONS AS PAY。派生列的名称现在将是 PAY。
+首先，您可以使用 `SELECT` 语句中的 `AS` 子句。在我们的示例中，“工资减去扣款”可以写为 `SALARY - DEDUCTIONS AS PAY`。派生列的名称现在将是 `PAY`。
 
 ```
 export ... select salary - deduction as pay ... from ...
 ```
 
-或者，您可以指定 METHOD n 后面跟用于列的名称，按照它们被选择的顺序。在我们的示例中，如果第一列是“工资减去扣款”列，则 METHOD n 选项后的第一个名称将是 PAY：
+或者，您可以指定 `METHOD n` 后面跟用于列的名称，按照它们被选择的顺序。在我们的示例中，如果第一列是“工资减去扣款”列，则 `METHOD n` 选项后的第一个名称将是 `PAY`：
 
 ```
 export method n ('PAY', ...)
 select salary - deduction, ... from ...
 ```
 
-IXF 文件可以利用 IXF 文件本身存储的表定义在另一个数据库中创建表。在导出到 IXF 文件时更改列的名称，当文件被导入目标数据库时，可以使用所需的列名创建后续表。
+`IXF` 文件可以利用 `IXF` 文件本身存储的表定义在另一个数据库中创建表。在导出到 `IXF` 文件时更改列的名称，当文件被导入目标数据库时，可以使用所需的列名创建后续表。
 
 ## 捕获错误和警告消息
 
-使用 MESSAGES 选项指定一个用于记录所有错误和警告的文件：
+使用 `MESSAGES` 选项指定一个用于记录所有错误和警告的文件：
 
 ```
 export ... messages x:\error_logs\exports\expl1.txt ...
@@ -17605,15 +16972,11 @@ export ... messages x:\error_logs\exports\expl1.txt ...
 
 ## 导出大对象数据
 
-在导出包含 LOB 数据类型的表时，用户有两种 LOB 值的导出方式。LOB 数据的前 32 KB 可以与普通表数据一起被包含在目标文件中，或者可以将 LOB 单独存储在文件中。如果用户选择第一种方案，则不需要在 EX 命令中指定额外参数。然而，这种方法仅适用于 32 KB 或更小的 LOB。如果 LOB 大小超过 32 KB，它将被截断，只有前 32 KB 会导出到文件中。
+在导出包含 `LOB` 数据类型的表时，用户有两种 `LOB` 值的导出方式。`LOB` 数据的前 32 KB 可以与普通表数据一起被包含在目标文件中，或者可以将 `LOB` 单独存储在文件中。如果用户选择第一种方案，则不需要在 `EX` 命令中指定额外参数。然而，这种方法仅适用于 32 KB 或更小的 `LOB`。如果 `LOB` 大小超过 32 KB，它将被截断，只有前 32 KB 会导出到文件中。
 
-为了让导出实用程序将每个 LOB 值导出到单独的文件，用户必须指定文件的存放位置和使用的名称。这是通过指定三个参数来实现的：
+为了让导出实用程序将每个 `LOB` 值导出到单独的文件，用户必须指定文件的存放位置和使用的名称。这是通过指定三个参数来实现的：
 
-- LOBSFILE — 一个文件类型修符，指定时会通知实用程序所有 LOB 值都将导出到单独的文件（DB2 可以合并多个 LOB）
-
-
-
-
+- `LOBSFILE` — 一个文件类型修符，指定时会通知实用程序所有 `LOB` 值都将导出到单独的文件（DB2 可以合并多个 `LOB`）
 
 要为导出指定另一个遍历顺序，请列出表的顺序而不是 `STARTING table_name` 选项。所有子表都必须列出。
 
@@ -17634,33 +16997,33 @@ where dept = 'Sales'
 
 控制中心为 `EXPORT` 实用程序提供了一个简单的界面。要调用它，选择需要导出的表并对其右键点击。选择如图 12-4 所示的 Export（导出）选项。
 
-一旦调用，用户可以指定上述讨论的各种选项。控制中心还将通过演示用户如何将名为 PRODUCT 的表导出到 DEL 文件来展示 EXPORT。输出文件名和消息文件名指定为：C:\EXTRACT\PROJECT.DEL 和 C:\EXTRACT\PROJECT.MSG。
+一旦调用，用户可以指定上述讨论的各种选项。控制中心还将通过演示用户如何将名为 `PRODUCT` 的表导出到 `DEL` 文件来展示 `EXPORT`。输出文件名和消息文件名指定为：`C:\EXTRACT\PROJECT.DEL` 和 `C:\EXTRACT\PROJECT.MSG`。
 
 ## 数据移动工具
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_740_0.png)
 
-图 12–4 从控制中心调用 EXPORT 实用程序
+图 12–4 从控制中心调用 `EXPORT` 实用程序
 
 显示 Export Table 面板：
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_740_1.png)
 
-图 12–5 EXPORT 实用程序
+图 12–5 `EXPORT` 实用程序
 
 如图 12–5 中的 `SELECT` 语句所示，所有行和列都将被导出。
 
-如果用户选择 DEL 或 WSF 文件类型，可以通过点击文件类型旁 **Options**（选项）按钮指定特定于这些文件类型的修饰符。图 12–6 显示了可以为 DEL 文件指定的指定的选项。
+如果用户选择 `DEL` 或 `WSF` 文件类型，可以通过点击文件类型旁 **Options**（选项）按钮指定特定于这些文件类型的修饰符。图 12–6 显示了可以为 `DEL` 文件指定的指定的选项。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_741_0.png)
 
 ## 图 12–6 修改 DEL 选项
 
-Columns 选项卡（见图 12–5）可指定导出文件中使用的列名（仅限 IXF 或 WSF）。如果未指定，将使用 `SELECT` 语句中的列名。
+Columns 选项卡（见图 12–5）可指定导出文件中使用的列名（仅限 `IXF` 或 `WSF`）。如果未指定，将使用 `SELECT` 语句中的列名。
 
-如果要将 LOB 导出到单独的文件，请使用 Large Objects 选项卡指定路径和文件名。
+如果要将 `LOB` 导出到单独的文件，请使用 Large Objects 选项卡指定路径和文件名。
 
-一旦在相关面板中捕获了所有信息，用户可以选择点击 **OK** 按钮（图 12–7）运行 `EX` 命令。或者，用户可以选择查看将执行的命令。图 12–8 显示了用于导出 PROJECT 表生成的命令。用户还可以选择将命令保存到脚本文件中，以便稍后执行。
+一旦在相关面板中捕获了所有信息，用户可以选择点击 **OK** 按钮（图 12–7）运行 `EX` 命令。或者，用户可以选择查看将执行的命令。图 12–8 显示了用于导出 `PROJECT` 表生成的命令。用户还可以选择将命令保存到脚本文件中，以便稍后执行。
 
 ## 数据移动工具
 
@@ -17680,20 +17043,20 @@ Columns 选项卡（见图 12–5）可指定导出文件中使用的列名（�
 
 - 指定要导出数据的 `SELECT` 语句（或用于类型表的层次结构选择子句）
 - 存储导出数据的文件的路径和名称
-- 数据写入的格式（IXF、DEL 或 WSF）
+- 数据写入的格式（`IXF`、`DEL` 或 `WSF`）
 
-## 第 12 章维护数据
+## 第 12 章 维护数据
 
 ### DB2 注意事项
 
-可以通过翻译和连接 `SELECT` 语句中的列来生成 ASC 格式。
+可以通过翻译和连接 `SELECT` 语句中的列来生成 `ASC` 格式。
 
 导出数据时，以下信息是可选的：
 
 - 文件名
-- 导出到 IXF 或 WSF 文件时的新列名
-- 在创建 DEL 和 WSF 文件时指定额外格式的文件类型修饰符
-- 导出的 LOB 列的文件名和路径
+- 导出到 `IXF` 或 `WSF` 文件时的新列名
+- 在创建 `DEL` 和 `WSF` 文件时指定额外格式的文件类型修饰符
+- 导出的 `LOB` 列的文件名和路径
 
 ## EXPORT 实用程序的性能
 
@@ -17707,27 +17070,24 @@ Columns 选项卡（见图 12–5）可指定导出文件中使用的列名（�
 
 ## 数据移动工具
 
-IMPORT FROM - OF filetype
+`IMPORT FROM - OF filetype`
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_744_0.png)
 
-图 12–9 IMPORT 实用程序
+图 12–9 `IMPORT` 实用程序
 
 ## 使用 IMPORT 命令
 
 | Names.del | | |
-| First_Name | Last_Name | |
 | --- | --- | --- |
-| "George","Baklarz" | IMPORT FROM NAMES | DEL |
-| "Paul","Zikopoulos" | INSERT INTO NAMES | DEL |
-| "Beverly","Crusher" | INSERT INTO NAMES | DEL |
+| First_Name | Last_Name | |
+| "George","Baklarz" | `IMPORT FROM NAMES` | `DEL` |
+| "Paul","Zikopoulos" | `INSERT INTO NAMES` | `DEL` |
+| "Beverly","Crusher" | `INSERT INTO NAMES` | `DEL` |
 
 图 12–10 简单导入
 
-
-
-
-源文件中的列顺序与目标表中的列顺序不一致，此时必须在表名之后指定列的顺序。例如，如果 PRODUCT 表有三个列，按顺序排列为 PROD_NO、PRICE 和 DESCRIPTION，而源文件中包含这三个列的顺序为 PRICE、PROD_NO 和 DESCRIPTION，则需要指定以下命令：
+源文件中的列顺序与目标表中的列顺序不一致，此时必须在表名之后指定列的顺序。例如，如果 `PRODUCT` 表有三个列，按顺序排列为 `PROD_NO`、`PRICE` 和 `DESCRIPTION`，而源文件中包含这三个列的顺序为 `PRICE`、`PROD_NO` 和 `DESCRIPTION`，则需要指定以下命令：
 
 ```
 import ... insert into product(price,prod_no,description)
@@ -17735,11 +17095,12 @@ import ... insert into product(price,prod_no,description)
 
 ## 插入和更新模式
 
-有时，DBA 会接收到的一个包含表更新数据的文件。文件中的某些行在目标表中并不存在，但大多数行是存在的。某些现有的数据需要更新以反映新值。例如，DBA 接收到了一个名为为 PRODUCT.DEL 的文件，其中包含某些现有产品的新价格以及新产品。他无法插入所有数据，因为其中包含某些产品的值；也不能替换所有数据，因为表中不存在某些有效的产品值。唯一的选择法是使用 IMPORT 命令的 `INSERT_UPDATE` 选项。这将插入所有新行，并更新现有行以反映新值。
+有时，DBA 会接收到的一个包含表更新数据的文件。文件中的某些行在目标表中并不存在，但大多数行是存在的。某些现有的数据需要更新以反映新值。例如，DBA 接收到了一个名为 `PRODUCT.DEL` 的文件，其中包含某些现有产品的新价格以及新产品。他无法插入所有数据，因为其中包含某些产品的值；也不能替换所有数据，因为表中不存在某些有效的产品值。唯一的选择法是使用 `IMPORT` 命令的 `INSERT_UPDATE` 选项。这将插入所有新行，并更新现有行以反映新值。
 
-IMPORT 实用程序使用表上定义的主键和唯一约束来确定行是否存在，以及应该被插入还是更新。在我们的示例中，PRODUCT 表定义了一个主键值为产品编号 (PROD_NO)。在图 12-11 中，显示了输入文件的四行和导入前表中的三行。
+`IMPORT` 实用程序使用表上定义的主键和唯一约束来确定行是否存在，以及应该被插入还是更新。在我们的示例中，`PRODUCT` 表定义了一个主键值为产品编号（`PROD_NO`）。在图 12-11 中，显示了输入文件的四行和导入前表中的三行。
 
 | 产品表（导入前） | | | |
+| --- | --- | --- | --- |
 | Prod no | Price | Description |
 | 00001 | 10.00 | Book |
 | 00002 | 20.00 | Table |
@@ -17750,92 +17111,105 @@ IMPORT FROM PRODUCT.DEL OF DEL...
 INSERT_UPDATE INTO PRODUCT
 ```
 
-| 产品表（导入后） | | | |
-| Prod no | Price | Description |
-| 00001 | 15.00 | Book |
-| 00002 | 20.00 | Table |
-| 00003 | 30.00 | Lamp - Green |
-| 00004 | 20.00 | Table |
-| 00005 | 3.00 | Pen |
 
-图 12–11 使用 INSERT_UPDATE 选项使用 IMPORT
 
-## 第 12 章维护数据
+## 导入 ASC 文件
 
-使用 `INSERT_UPDATE` 选项调用 IMPORT 命令。输入文件中的第一条记录将导致表中的第一行被更新。这是因为文件中提供的 PROD_NO 值与表中的某现有行匹配。如导入后的 PRODUCTS 表所示，与 PRICE 列关联的值已更新，以显示新价格。
+处理将从输入文件的第 101 条记录开始。
 
-输入文件中的第二条记录的 PROD_NO 值在导入前不存在于 PRODUCT 表。因此，它被视为一条需要插入到表中的新行。
-
-第三条记录更新了某现有行的描述和价格。
-
-输入文件中的第四条记录被作为新行插入，因为 PROD_NO 值与表中的某现有行不匹配，尽管 PRICE 和 DESCRIPTION 与表中的某现有行匹配。
-
-## 替换模式
-
-要替换表中的现有数据，可以指定 `REPLACE` 选项。如果需要替换数据的表具有主键，且该主键被另一个表中的外键所引用，则该选项无效。这是为了强制执行引用完整性。假设 PRODUCT 表没有任何引用依赖，并且希望用名为 PRODUCT.IXF 的文件数据替换现有数据。使用 IMPORT 命令时将指定以下内容：
-
-```
-IMPORT FROM PRODUCT.IXF OF IXF ... REPLACE INTO PRODUCT
+```text
+import from product.del of del ...
+commitcount 50 restartcount 100 ...
+into product ...
 ```
 
-## 替换和创建模式
+在导入类型为 ASC 的文件时，`IMPORT` 实用程序需要指定列值的起始和结束位置。必须指定所有导入列的结束位置。这是通过使用 `METHOD L` 修饰符实现的。在图 12–13 中显示了一个 ASC 类型的输入文件。它由三列组成，与 `PRODUCT` 表的三列类型和长度相匹配。第一个是 `PROD_NO` 列，类型为 `CHAR(5)`；第二个是类型为 `DECIMAL (8,2)` 的 `PRICE` 列；最后一个是类型为 `VARCHAR(10)` 的 `DESCRIPTION`。所有空格将用字符 “ ” 表示。
 
-当使用 EXPORT 命令创建 IXF 文件时，表结构和定义存储在其中。IMPORT 实用程序可能会使用该结构来重建表及其索引。如果表已经存在，可以使用 `REPLACE_CREATE` 选项进行重建。例如，如果存在一个名为 Product 的文件，并在导入新数据时需要重建它，可以如下调用 IMPORT 命令。注意，这不会更改表定义——它只是在导入之前删除所有数据。如果表不存在且使用了此选项，则将创建该表。
+![](img/2fc7488b6558d6b99bbc7356ac4116b1_750_0.png)
 
-```
-import from product.ixf of ixf ...nreplace_create into product ...
-```
+| 产品 (Product) | 价格 (Price) | 说明 (Description) |
+| --- | --- | --- |
+| Char (5) | Decimal (8,2) | Varchar(10) |
 
-### DB2 注意事项
-
-如果 PRODUCT 表定义了被另一个表的外键引用的主键，则不能使用 `REPLACE_CREATE` 选项。
-
-如果 PRODUCT 表在导入前不​​，则可以使用 `CREATE` 选项来创建它。例如：
-
-```
-import from product.ixf of ixf ...ncreate into product ...
+```text
+IMPORT FROM PRODUCT.ASC OF ASC
+METHOD L (1 5, 14, 24)
+INSERT INTO PRODUCT
 ```
 
-以这种方式创建表时，用户还可以指定创建该表的表空间。也可以指定索引空间和长表空间。例如，假设源表 PRODUCT 有两个索引并包含长数据。此示例在名为 DMS1 的类型为 DMS 的现有表中创建了一个名为 PRODUCT 的新表，其索引位于类型为 DMS 的 INDEXDMS1 表空间，其长数据位于类型为 DMS 的 LONG1 表空间。为了实现这一点，将在命令行上发出以下命令：
+图 12–13 使用列进行导入
 
-```
-import from product.ixf of ixf ...ncreate into product in dms1
-index in indexdms1 long in long1
-```
+## 选择要导入的列
 
-## 强制中间提交
+有时数据文件包含的列比目标表多。如果文件类型为 IXF 或 DEL，可以通过指定 `METHOD P` 选项使用列号进行导入。例如，DEL 文件包含四列数据：`PROD_NO`、`PRICE`、`SUPPLIER` 和 `DESCRIPTION`。目标表 `PRODUCT` 只需要 `PROD_NO`、`PRICE` 和 `DESCRIPTION` 列（输入文件的第 1、2 和 4 列）。要将数据导入到 `PRODUCT` 表，可以使用以下命令：
 
-默认情况下，IMPORT 实用程序仅在成功导入结束时执行提交。如果在执行过程中发生失败，所有更改都将回滚。用户可以指示 IMPORT 实用程序在处理若干行后执行提交。（有关导入的更多详细信息，请参考 DB2 参考手册。）例如，如果在处理 50 条后提交，则命令为：
-
-```
-import ... commitcount 50
+```text
+import from product.del of del ... method p (1,2,4) ...ninto product(prod_no,price,description) ...
 ```
 
-在执行提交之前和之后，都会向消息文件（如果定义）或屏幕写入记录读取和提交的数量。
+## 724 第 12 章 维护数据
 
-## 重新启动失败的导入
+## 导入大对象 (LOBs)
 
-如果 IMPORT 操作失败，在解决导致失败的问题后可以重新启动。所执行的 IMPORT 类型将决定所需的恢复工作。
+LOB 可以作为表数据的一部分导出到导出文件中，也可以导出到单独的文件。如果 LOB 数据与表的其余部分数据位于同一个文件中，则可以在使用 `IMPORT` 实用程序时不指定任何额外参数进行导入。
 
-如果使用 `COMMITCOUNT` 选项调用 IMPORT 操作并在随后失败，可以使用 `RESTART` 选项重新启动。这用于告诉 IMPORT 实用程序跳过文件开头的某些记录以导入剩余部分。
+如果 LOB 值被导出到单独的文件，`IMPORT` 实用程序需要两个要素：LOB 文件所在的目录或多个目录，以及 LOB 文件的文件名。
 
-例如，通过 COMMIT50 选项将名为 PRODUCT.DEL 的文件导入名为 Product 的表中。在处理 IMPORT 命令期间，用户意外终止了导入会话。这导致导入途中失败。以下提取自消息文件的内容（图 12）：
+由于 LOB 文件的文件名存储在导出文件中，用户不需要指定它们。要指定源目录，请使用 `LOBS from` 选项以及一个或多个作为源目录的目录。然后指定 `LOBSINFILE` 类型修饰符。如果没有指定 `LOBSFILE` 修饰符，则 `LOBS` 选项将被忽略。
 
-```
-SQL3109N 程序开始从文件 "Product.del" 加载数据。
-SQL3221W...Begin COMMIT WORK. Input Record Count = "50"
-SQL3222W...任何数据库更改提交成功。
-SQL3221W...Begin COMMIT WORK. Input Record Count = "100"
-SQL3222W...任何数据库更改提交成功。
-SQL3005N 处理已中断。
-SQL3110N 程序已完成处理。从输入文件中读取了 "100" 行。
+例如，表 `EMP_PHOTO` 被导出到名为 `EMP_PHOTO.DEL`（类型为 DEL）的文件中，其 LOB 文件以 `EMP_PHOTO_LOB.XXX` 的文件名导出到两个目录。`EMP_PHOTO_DEL` 文件被复制到另一个数据库服务器。源目录被复制到 `D:\LDIR` 目录下的第一个目录，第二个目录中的 `EMP_PHOTO_LOB.XXX` 文件被复制到 `D:\LOBDIR`。要将数据导入目标数据库中的 `EMPLOYEE_PHOTO` 表，应在 `IMPORT` 命令中指定以下选项。
+
+```text
+import from emp_photo.del of del
+lobs from d:\lobdir\,d:\lobdir\
+modified by lobsinfile ... into employee_photo ...
 ```
 
-图 12-12 IMPORT 消息提取
+## DB2 注意
 
-这显示前 100 条记录已提交。通过使用 `RESTART100` 选项重新启动 IMPORT 实用程序，将跳过文件中前 100 条记录。
+在指定路径时，Windows 路径结尾必须包含 `\` 字符，而 UNIX 路径则需包含 `/`。
+
+## 导入类型表
+
+在将数据导入到层次结构中时，用户可以指定遍历顺序，该顺序必须与导出时的顺序匹配。目的地的层次结构可能与数据导出的结构不同。例如，在我们的示例中，`EMPLOYEE` 表下创建了一个名为 `TEMP_EMPLOYEES` 的额外表。在这种情况下，默认遍历顺序以及表的数量/名称与原始设计不同。用户可以通过指定要导入的子表列表来补偿这些差异。
+
+例如，导出的文件仅包含与 Employee 和 manager 子表相关的数据。可以使用命令选项使用默认遍历顺序进行导入：
+
+```text
+import ... (employee,manager)
+in hierarchy starting employee ...
+```
+
+遍历顺序也可以指定为：
+
+```text
+import ... (employee,manager)
+in hierarchy (employee,manager) ...
+```
+
+如果需要导入遍历顺序中命名的所有子表，可以使用 `ALL TABLES` 选项。在我们的示例中，这仅指 `EMPLOYEE` 和 `MANAGER` 表：
+
+```text
+import ... all tables in hierarchy (employee,manager) ...
+```
+
+要使用默认遍历顺序导入包括 `EMPLOYEE` 表在内的所有表，执行以下命令：
+
+```text
+import ... all tables in hierarchy starting employee ...
+```
 
 
+
+## DB2 注意
+
+如果复合组中的某个记录无法插入，所有记录都将被拒绝。只有在确定数据正确时才使用此选项。
+
+## 使用 Control Center 调用导入
+
+也可以从 Control Center 运行 `IMPORT` 实用程序。选择目标表并点击右键，然后选择 `Import` 选项。图 12–14 显示了 `Import Notebook` 的 `File` 标签。
+
+*（注：751-756 页提供的 OCR 文本包含了大量的重复标题和伪影。我已处理了这些页面中的唯一内容段以保持文档的连贯性。）*
 
 处理将从输入文件的第 101 条记录开始。
 
@@ -17847,7 +17221,7 @@ into product ...
 
 ## 导入 ASC 文件
 
-在导入类型为 ASC 的文件时，IMPORT 实用程序需要指定列值的起始和结束位置。必须指定所有导入列的结束位置。这是通过使用 `METHOD L` 修饰符实现的。在图 12–13 中显示了一个 ASC 类型的输入文件。它由三列组成，与 PRODUCT 表的三列类型和长度相匹配。第一个是 PROD_NO 列，类型为 CHAR(5)；第二个是类型为 DECIMAL (8,2) 的 PRICE 列；最后一个是类型为 VARCHAR(10) 的 DESCRIPTION。所有空格将用字符 “ ” 表示。
+在导入类型为 `ASC` 的文件时，`IMPORT` 实用程序需要指定列值的起始和结束位置。必须指定所有导入列的结束位置。这是通过使用 `METHOD L` 修饰符实现的。在图 12–13 中显示了一个 `ASC` 类型的输入文件。它由三列组成，与 `PRODUCT` 表的三列类型和长度相匹配。第一个是 `PROD_NO` 列，类型为 `CHAR(5)`；第二个是类型为 `DECIMAL (8,2)` 的 `PRICE` 列；最后一个是类型为 `VARCHAR(10)` 的 `DESCRIPTION`。所有空格将用字符 “ ” 表示。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_750_0.png)
 
@@ -17865,7 +17239,7 @@ INSERT INTO PRODUCT
 
 ## 选择要导入的列
 
-有时数据文件包含的列比目标表多。如果文件类型为 IXF 或 DEL，可以通过指定 `METHOD P` 选项使用列号进行导入。例如，DEL 文件包含四列数据：PROD_NO、PRICE、SUPPLIER 和 DESCRIPTION。目标表 PRODUCT 只需要 PROD_NO、PRICE 和 DESCRIPTION 列（输入文件的第 1、2 和 4 列）。要将数据导入到 PRODUCT 表，可以使用以下命令：
+有时数据文件包含的列比目标表多。如果文件类型为 `IXF` 或 `DEL`，可以通过指定 `METHOD P` 选项使用列号进行导入。例如，`DEL` 文件包含四列数据：`PROD_NO`、`PRICE`、`SUPPLIER` 和 `DESCRIPTION`。目标表 `PRODUCT` 只需要 `PROD_NO`、`PRICE` 和 `DESCRIPTION` 列（输入文件的第 1、2 和 4 列）。要将数据导入到 `PRODUCT` 表，可以使用以下命令：
 
 ```
 import from product.del of del ... method p (1,2,4) ...ninto product(prod_no,price,description) ...
@@ -17875,13 +17249,13 @@ import from product.del of del ... method p (1,2,4) ...ninto product(prod_no,pri
 
 ## 导入大对象 (LOBs)
 
-LOB 可以作为表数据的一部分导出到导出文件中，也可以导出到单独的文件。如果 LOB 数据与表的其余部分数据位于同一个文件中，则可以在使用 IMPORT 实用程序时不指定任何额外参数进行导入。
+`LOB` 可以作为表数据的一部分导出到导出文件中，也可以导出到单独的文件。如果 `LOB` 数据与表的其余部分数据位于同一个文件中，则可以在使用 `IMPORT` 实用程序时不指定任何额外参数进行导入。
 
-如果 LOB 值被导出到单独的文件，IMPORT 实用程序需要两个要素：LOB 文件所在的目录或多个目录，以及 LOB 文件的文件名。
+如果 `LOB` 值被导出到单独的文件，`IMPORT` 实用程序需要两个要素：`LOB` 文件所在的目录或多个目录，以及 `LOB` 文件的文件名。
 
-由于 LOB 文件的文件名存储在导出文件中，用户不需要指定它们。要指定源目录，请使用 `LOBS from` 选项以及一个或多个作为源目录的目录。然后指定 `LOBSINFILE` 类型修饰符。如果没有指定 `LOBSFILE` 修饰符，则 `LOBS` 选项将被忽略。
+由于 `LOB` 文件的文件名存储在导出文件中，用户不需要指定它们。要指定源目录，请使用 `LOBS from` 选项以及一个或多个作为源目录的目录。然后指定 `LOBSINFILE` 类型修饰符。如果没有指定 `LOBSFILE` 修饰符，则 `LOBS` 选项将被忽略。
 
-例如，表 EMP_PHOTO 被导出到名为 EMP_PHOTO.DEL（类型为 DEL）的文件中，其 LOB 文件以 EMP_PHOTO_LOB.XXX 的文件名导出到两个目录。EMP_PHOTO_DEL 文件被复制到另一个数据库服务器。源目录被复制到 D:\LDIR目录下的第一个目录，第二个目录中的 EMP_PHOTO_LOB.XXX 文件被复制到 D:\LOBDIR 。要将数据导入目标数据库中的 EMPLOYEE_PHOTO 表，应在 IMPORT 命令中指定以下选项。
+例如，表 `EMP_PHOTO` 被导出到名为 `EMP_PHOTO.DEL`（类型为 `DEL`）的文件中，其 `LOB` 文件以 `EMP_PHOTO_LOB.XXX` 的文件名导出到两个目录。`EMP_PHOTO_DEL` 文件被复制到另一个数据库服务器。源目录被复制到 `D:\LDIR` 目录下的第一个目录，第二个目录中的 `EMP_PHOTO_LOB.XXX` 文件被复制到 `D:\LOBDIR`。要将数据导入目标数据库中的 `EMPLOYEE_PHOTO` 表，应在 `IMPORT` 命令中指定以下选项。
 
 ```
 import from emp_photo.del of del
@@ -17891,13 +17265,13 @@ modified by lobsinfile ... into employee_photo ...
 
 ## DB2 注意
 
-在指定路径时，Windows 路径结尾必须包含 "\" 字符，而 UNIX 路径则需包含 "/"。
+在指定路径时，Windows 路径结尾必须包含 `\` 字符，而 UNIX 路径则需包含 `/`。
 
 ## 导入类型表
 
-在将数据导入到层次结构中时，用户可以指定遍历顺序，该顺序必须与导出时的顺序匹配。目的地的层次结构可能与数据导出的结构不同。例如，在我们的示例中，EMPLOYEE 表下创建了一个名为 TEMP_EMPLOYEES 的额外表。在这种情况下，默认遍历顺序以及表的数量/名称与原始设计不同。用户可以通过指定要导入的子表列表来补偿这些差异。
+在将数据导入到层次结构中时，用户可以指定遍历顺序，该顺序必须与导出时的顺序匹配。目的地的层次结构可能与数据导出的结构不同。例如，在我们的示例中，`EMPLOYEE` 表下创建了一个名为 `TEMP_EMPLOYEES` 的额外表。在这种情况下，默认遍历顺序以及表的数量/名称与原始设计不同。用户可以通过指定要导入的子表列表来补偿这些差异。
 
-例如，导出的文件仅包含与 Employee 和 manager 子表相关的数据。可以使用命令选项使用默认遍历顺序进行导入：
+例如，导出的文件仅包含与 `Employee` 和 `manager` 子表相关的数据。可以使用命令选项使用默认遍历顺序进行导入：
 
 ```
 import ... (employee,manager)
@@ -17911,13 +17285,13 @@ import ... (employee,manager)
 in hierarchy (employee,manager) ...
 ```
 
-如果需要导入遍历顺序中命名的所有子表，可以使用 `ALL TABLES` 选项。在我们的示例中，这仅指 EMPLOYEE 和 MANAGER 表：
+如果需要导入遍历顺序中命名的所有子表，可以使用 `ALL TABLES` 选项。在我们的示例中，这仅指 `EMPLOYEE` 和 `MANAGER` 表：
 
 ```
 import ... all tables in hierarchy (employee,manager) ...
 ```
 
-要使用默认遍历顺序导入包括 EMPLOYEE 表在内的所有表，执行以下命令：
+要使用默认遍历顺序导入包括 `EMPLOYEE` 表在内的所有表，执行以下命令：
 
 ```
 import ... all tables in hierarchy starting employee ...
@@ -17929,213 +17303,13 @@ import ... all tables in hierarchy starting employee ...
 
 ## 使用 Control Center 调用导入
 
-也可以从 Control Center 运行 IMPORT 实用程序。选择目标表并点击右键，然后选择 Import 选项。图 12–14 显示了 Import Notebook 的 File 标签。
+也可以从 Control Center 运行 `IMPORT` 实用程序。选择目标表并点击右键，然后选择 `Import` 选项。图 12–14 显示了 `Import Notebook` 的 `File` 标签。
 
-图 12–14 显示了 Import Notebook 的 File 标签。
-
-![](img/2fc7488b6558d6b99bbc7356ac4116b1_750_0.png) (等待，751-756 页的 OCR 文本需要重新评估。我将根据提供的逻辑内容处理文本，修复错误。*(纠正：751-756 页的 OCR 文本似乎是重复的标题和伪影。我将根据提供的逻辑内容进行清理。)*
-
-[content]
-处理将从输入文件的第 101 条记录开始。
-
-```
-import from product.del of del ...
-commitcount 50 restartcount 100 ...
-into product ...
-```
-
-## 导入 ASC 文件
-
-在导入类型为 ASC 的文件时，IMPORT 实用程序需要指定列值的起始和结束位置。必须指定所有导入列的结束位置。这是通过使用 `METHOD L` 修饰符实现的。在图 12–13 中显示了一个 ASC 类型的输入文件。它由三列组成，与 PRODUCT 表的三列类型和长度相匹配。第一个是 PROD_NO 列，类型为 CHAR(5)；第二个是类型为 DECIMAL (8,2) 的 PRICE 列；最后一个是类型为 VARCHAR(10) 的 DESCRIPTION。所有空格将用字符 “ ” 表示。
-
-![](img/2fc7488b6558d6b99bbc7356ac4116b1_750_0.png)
-
-| 产品 (Product) | 价格 (Price) | 说明 (Description) |
-| --- | --- | --- |
-| Char (5) | Decimal (8,2) | Varchar(10) |
-
-```
-IMPORT FROM PRODUCT.ASC OF ASC
-METHOD L (1 5, 14, 24)
-INSERT INTO PRODUCT
-```
-
-图 12–13 使用列进行导入
-
-## 选择要导入的列
-
-有时数据文件包含的列比目标表多。如果文件类型为 IXF 或 DEL，可以通过指定 `METHOD P` 选项使用列号进行导入。例如，DEL 文件包含四列数据：PROD_NO、PRICE、SUPPLIER 和 DESCRIPTION。目标表 PRODUCT 只需要 PROD_NO、PRICE 和 DESCRIPTION 列（输入文件的第 1、2 和 4 列）。要将数据导入到 PRODUCT 表，可以使用以下命令：
-
-```
-import from product.del of del ... method p (1,2,4) ...ninto product(prod_no,price,description) ...
-```
-
-## 724 第 12 章 维护数据
-
-## 导入大对象 (LOBs)
-
-LOB 可以作为表数据的一部分导出到导出文件中，也可以导出到单独的文件。如果 LOB 数据与表的其余部分数据位于同一个文件中，则可以在使用 IMPORT 实用程序时不指定任何额外参数进行导入。
-
-如果 LOB 值被导出到单独的文件，IMPORT 实用程序需要两个要素：LOB 文件所在的目录或多个目录，以及 LOB 文件的文件名。
-
-由于 LOB 文件的文件名存储在导出文件中，用户不需要指定它们。要指定源目录，请使用 `LOBS from` 选项以及一个或多个作为源目录的目录。然后指定 `LOBSINFILE` 类型修饰符。如果没有指定 `LOBSFILE` 修饰符，则 `LOBS` 选项将被忽略。
-
-例如，表 EMP_PHOTO 被导出到名为 EMP_PHOTO.DEL（类型为 DEL）的文件中，其 LOB 文件以 EMP_PHOTO_LOB.XXX 的文件名导出到两个目录。EMP_PHOTO_DEL 文件被复制到另一个数据库服务器。源目录被复制到 D:\LDIR目录下的第一个目录，第二个目录中的 EMP_PHOTO_LOB.XXX 文件被复制到 D:\LOBDIR 。要将数据导入目标数据库中的 EMPLOYEE_PHOTO 表，应在 IMPORT 命令中指定以下选项。
-
-```
-import from emp_photo.del of del
-lobs from d:\lobdir\,d:\lobdir\
-modified by lobsinfile ... into employee_photo ...
-```
-
-## DB2 注意
-
-在指定路径时，Windows 路径结尾必须包含 "\" 字符，而 UNIX 路径则需包含 "/"。
-
-## 导入类型表
-
-在将数据导入到层次结构中时，用户可以指定遍历顺序，该顺序必须与导出时的顺序匹配。目的地的层次结构可能与数据导出的结构不同。例如，在我们的示例中，EMPLOYEE 表下创建了一个名为 TEMP_EMPLOYEES 的额外表。在这种情况下，默认遍历顺序以及表的数量/名称与原始设计不同。用户可以通过指定要导入的子表列表来补偿这些差异。
-
-例如，导出的文件仅包含与 Employee 和 manager 子表相关的数据。可以使用命令选项使用默认遍历顺序进行导入：
-
-```
-import ... (employee,manager)
-in hierarchy starting employee ...
-```
-
-遍历顺序也可以指定为：
-
-```
-import ... (employee,manager)
-in hierarchy (employee,manager) ...
-```
-
-如果需要导入遍历顺序中命名的所有子表，可以使用 `ALL TABLES` 选项。在我们的示例中，这仅指 EMPLOYEE 和 MANAGER 表：
-
-```
-import ... all tables in hierarchy (employee,manager) ...
-```
-
-要使用默认遍历顺序导入包括 EMPLOYEE 表在内的所有表，执行以下命令：
-
-```
-import ... all tables in hierarchy starting employee ...
-```
-
-## DB2 注意
-
-如果复合组中的某个记录无法插入，所有记录都将被拒绝。只有在确定数据正确时才使用此选项。
-
-## 使用 Control Center 调用导入
-
-也可以从 Control Center 运行 IMPORT 实用程序。选择目标表并点击右键，然后选择 Import 选项。图 12–14 显示了 Import Notebook 的 File 标签。
-
-*(注：751-756 页提供的 OCR 文本包含了大量的重复标题和伪影。我已处理了这些页面中的唯一内容段以保持文档的连贯性。）*[/content] (Wait, the prompt asks for *only* the final text. I will provide the clean version now.)
-
-***
-
-[content]
-处理将从输入文件的第 101 条记录开始。
-
-```
-import from product.del of del ...
-commitcount 50 restartcount 100 ...
-into product ...
-```
-
-## 导入 ASC 文件
-
-在导入类型为 ASC 的文件时，IMPORT 实用程序需要指定列值的起始和结束位置。必须指定所有导入列的结束位置。这是通过使用 `METHOD L` 修饰符实现的。在图 12–13 中显示了一个 ASC 类型的输入文件。它由三列组成，与 PRODUCT 表的三列类型和长度相匹配。第一个是 PROD_NO 列，类型为 CHAR(5)；第二个是类型为 DECIMAL (8,2) 的 PRICE 列；最后一个是类型为 VARCHAR(10) 的 DESCRIPTION。所有空格将用字符 “ ” 表示。
-
-![](img/2fc7488b6558d6b99bbc7356ac4116b1_750_0.png)
-
-| 产品 (Product) | 价格 (Price) | 说明 (Description) |
-| --- | --- | --- |
-| Char (5) | Decimal (8,2) | Varchar(10) |
-
-```
-IMPORT FROM PRODUCT.ASC OF ASC
-METHOD L (1 5, 14, 24)
-INSERT INTO PRODUCT
-```
-
-图 12–13 使用列进行导入
-
-## 选择要导入的列
-
-有时数据文件包含的列比目标表多。如果文件类型为 IXF 或 DEL，可以通过指定 `METHOD P` 选项使用列号进行导入。例如，DEL 文件包含四列数据：PROD_NO、PRICE、SUPPLIER 和 DESCRIPTION。目标表 PRODUCT 只需要 PROD_NO、PRICE 和 DESCRIPTION 列（输入文件的第 1、2 和 4 列）。要将数据导入到 PRODUCT 表，可以使用以下命令：
-
-```
-import from product.del of del ... method p (1,2,4) ...ninto product(prod_no,price,description) ...
-```
-
-## 724 第 12 章 维护数据
-
-## 导入大对象 (LOBs)
-
-LOB 可以作为表数据的一部分导出到导出文件中，也可以导出到单独的文件。如果 LOB 数据与表的其余部分数据位于同一个文件中，则可以在使用 IMPORT 实用程序时不指定任何额外参数进行导入。
-
-如果 LOB 值被导出到单独的文件，IMPORT 实用程序需要两个要素：LOB 文件所在的目录或多个目录，以及 LOB 文件的文件名。
-
-由于 LOB 文件的文件名存储在导出文件中，用户不需要指定它们。要指定源目录，请使用 `LOBS from` 选项以及一个或多个作为源目录的目录。然后指定 `LOBSINFILE` 类型修饰符。如果没有指定 `LOBSFILE` 修饰符，则 `LOBS` 选项将被忽略。
-
-例如，表 EMP_PHOTO 被导出到名为 EMP_PHOTO.DEL（类型为 DEL）的文件中，其 LOB 文件以 EMP_PHOTO_LOB.XXX 的文件名导出到两个目录。EMP_PHOTO_DEL 文件被复制到另一个数据库服务器。源目录被复制到 D:\LDIR目录下的第一个目录，第二个目录中的 EMP_PHOTO_LOB.XXX 文件被复制到 D:\LOBDIR 。要将数据导入目标数据库中的 EMPLOYEE_PHOTO 表，应在 IMPORT 命令中指定以下选项。
-
-```
-import from emp_photo.del of del
-lobs from d:\lobdir\,d:\lobdir\
-modified by lobsinfile ... into employee_photo ...
-```
-
-## DB2 注意
-
-在指定路径时，Windows 路径结尾必须包含 "\" 字符，而 UNIX 路径则需包含 "/"。
-
-## 导入类型表
-
-在将数据导入到层次结构中时，用户可以指定遍历顺序，该顺序必须与导出时的顺序匹配。目的地的层次结构可能与数据导出的结构不同。例如，在我们的示例中，EMPLOYEE 表下创建了一个名为 TEMP_EMPLOYEES 的额外表。在这种情况下，默认遍历顺序以及表的数量/名称与原始设计不同。用户可以通过指定要导入的子表列表来补偿这些差异。
-
-例如，导出的文件仅包含与 Employee 和 manager 子表相关的数据。可以使用命令选项使用默认遍历顺序进行导入：
-
-```
-import ... (employee,manager)
-in hierarchy starting employee ...
-```
-
-遍历顺序也可以指定为：
-
-```
-import ... (employee,manager)
-in hierarchy (employee,manager) ...
-```
-
-如果需要导入遍历顺序中命名的所有子表，可以使用 `ALL TABLES` 选项。在我们的示例中，这仅指 EMPLOYEE 和 MANAGER 表：
-
-```
-import ... all tables in hierarchy (employee,manager) ...
-```
-
-要使用默认遍历顺序导入包括 EMPLOYEE 表在内的所有表，执行以下命令：
-
-```
-import ... all tables in hierarchy starting employee ...
-```
-
-## DB2 注意
-
-如果复合组中的某个记录无法插入，所有记录都将被拒绝。只有在确定数据正确时才使用此选项。
-
-## 使用 Control Center 调用导入
-
-也可以从 Control Center 运行 IMPORT 实用程序。选择目标表并点击右键，然后选择 Import 选项。图 12–14 显示了 Import Notebook 的 File 标签。
-
-*(注：751-756 页提供的 OCR 文本包含了大量的重复标题和伪影。我已处理了这些页面中的唯一内容段以保持文档的连贯性。）*
-
-
+*（注：751-756 页提供的 OCR 文本包含了大量的重复标题和伪影。我已处理了这些页面中的唯一内容段以保持文档的连贯性。）*
 
 # 730 第 12 章 维护数据
 
-将数据导出到名为 PERSONH.DEL 的文件中：
+将数据导出到名为 `PERSONH.DEL` 的文件中：
 
 ```sql
 export to personh.del of del messages personh.msg
@@ -18152,7 +17326,7 @@ hierarchy starting person
 | 2,"B" Pavel | "Chkalov" | "28,"000170",90000,"b" |
 | 2,"C",Montgomery | "Scott" | "42,"000301",100000,"b" |
 
-将 PERSONH.DEL 文件导入整个 PERSON 层次结构。假设该层次结构中的所有表为空，请使用 `INSERT` 命令选项。执行的命令为：
+将 `PERSONH.DEL` 文件导入整个 `PERSON` 层次结构。假设该层次结构中的所有表为空，请使用 `INSERT` 命令选项。执行的命令为：
 
 ```sql
 import from personh.del of del
@@ -18184,21 +17358,23 @@ messages personh.msg
 insert into all tables in hierarchy starting person
 ```
 
+
+
 # 数据移动工具
 
 ## LOAD 工具
 
-`LOAD` 工具与 `IMPORT` 工具一样，用于将输入文件中提供的数据移动到目标表中。与 `IMPORT` 工具不同的是，在加载过程开始之前，目标表必须存在于数据库中。目标表可以是加载 之前刚刚创建的新表，也可以是向其添加或替换数据的现有表。表上的索引可能已经存在，也可能不存在。加载过程不会创建新索引——它只维护表中已定义的索引。
+`LOAD` 工具与`IMPORT`工具一样，用于将输入文件中提供的数据移动到目标表中。与`IMPORT`工具不同的是，在加载过程开始之前，目标表必须存在于数据库中。目标表可以是加载之前刚刚创建的新表，也可以是向其添加或替换数据的现有表。表上的索引可能已经存在，也可能不存在。加载过程不会创建新索引——它只维护表中已定义的索引。
 
-对于 DBA 而言，`IMPORT` 工具和 `LOAD` 工具之间最重要的区别在于性能。`IMPORT` 工具一次插入一行。每插入的一行都必须检查其是否符合约束条件（例如外键约束或表约束）。更改也会被记录在日志文件中。
+对于 DBA 而言，`IMPORT`工具和`LOAD`工具之间最重要的区别在于性能。`IMPORT`工具一次插入一行。每插入的一行都必须检查其是否符合约束条件（例如外键约束或表约束）。更改也会被记录在日志文件中。
 
-`LOAD` 工具向表中插入数据的速度会比 `IMPORT` 工具快得多，因为它不是一次插入一行，而是 `LOAD` 工具将使用从输入文件中读取的行来构建页，然后直接写入数据中。在插入数据页之后，可能会重建现有索引（包括主键或唯一索引，根据新添加的数据进行完全或部分重建），最后，从表中删除所有不符合唯一性约束或主键约束的重复行。在加载操作期间，单条记录不会记录在日志文件中。
+`LOAD`工具向表中插入数据的速度会比`IMPORT`工具快得多，因为它不是一次插入一行，而是`LOAD`工具将使用从输入文件中读取的行来构建页，然后直接写入数据中。在插入数据页之后，可能会重建现有索引（包括主键或唯一索引，根据新添加的数据进行完全或部分重建），最后，从表中删除所有不符合唯一性约束或主键约束的重复行。在加载操作期间，单条记录不会记录在日志文件中。
 
-由于 `LOAD` 工具的更改不会被记录，因此无法使用日志文件进行回滚。然而，`LOAD` 工具可以使用源数据的副本（加载副本），因此在需要时可以重新加载。
+由于`LOAD`工具的更改不会被记录，因此无法使用日志文件进行回滚。然而，`LOAD`工具可以使用源数据的副本（加载副本），因此在需要时可以重新加载。
 
-使用 `LOAD` 工具要求在数据库上具有 `SYSADM`、`DBADM` 或 `LOAD` 权限，并且在目标表上具有 `INSERT` 权限。当选择 `REPLACE` 模式、`TERMINATE` 模式（终止之前的加载替换操作）或 `RESTART` 模式（重启之前的加载替换操作）时，还需要目标表的 `DELETE` 权限。
+使用`LOAD`工具要求在数据库上具有`SYSADM`、`DBADM`或`LOAD`权限，并且在目标表上具有`INSERT`权限。当选择`REPLACE`模式、`TERMINATE`模式（终止之前的加载替换操作）或`RESTART`模式（重启之前的加载替换操作）时，还需要目标表的`DELETE`权限。
 
-在使用 `LOAD` 工具之前，DBA 必须理解其工作原理，以利用其性能优势，并避免在使用不当时可能出现的任何问题。
+在使用`LOAD`工具之前，DBA 必须理解其工作原理，以利用其性能优势，并避免在使用不当时可能出现的任何问题。
 
 ### DB2 注意事项
 
@@ -18224,21 +17400,21 @@ insert into all tables in hierarchy starting person
 
 图 **12–21** LOAD 阶段
 
-现在将检查图 12-21 所示的 `LOAD` 工具各个阶段。
+现在将检查图 12-21 所示的`LOAD`工具各个阶段。
 
 + **1. 加载阶段** —— 在加载阶段会发生两件事：数据存储在表中，并收集和排序索引键。
 
-在加载阶段发生了两件事：数据被存储在表中，索引键被收集并排序。在运行 `LOAD` 工具时，DBA 可以指定多频繁生成一致性点。一致性点作为 `LOAD` 工具的检查点。如果在执行期间被中断，它可以从一致性点重启。`LOAD` 工具将生成已加载记录数的消息。
+在加载阶段发生了两件事：数据被存储在表中，索引键被收集并排序。在运行`LOAD`工具时，DBA 可以指定多频繁生成一致性点。一致性点作为`LOAD`工具的检查点。如果在执行期间被中断，它可以从一致性点重启。`LOAD`工具将生成已加载记录数的消息。
 
-+ **2. 构建阶段** —— 在构建阶段，会对加载阶段收集的键创建索引。如果在构建阶段发生故障并使用 `RESTART` 选项重启 `LOAD` 工具，将从构建阶段开始。
++ **2. 构建阶段** —— 在构建阶段，会对加载阶段收集的键创建索引。如果在构建阶段发生故障并使用`RESTART`选项重启`LOAD`工具，将从构建阶段开始。
 
 # 数据移动工具
 
-+ **3. 删除阶段** —— 在删除阶段，所有违反唯一或主键约束的行将被复制到异常表（如果在调用 `LOAD` 工具时指定的）。仅检查这两种约束类型。如果发生故障，从删除阶段重启。当输入行被拒绝时，会在文件中生成消息。
++ **3. 删除阶段** —— 在删除阶段，所有违反唯一或主键约束的行将被复制到异常表（如果在调用`LOAD`工具时指定的）。仅检查这两种约束类型。如果发生故障，从删除阶段重启。当输入行被拒绝时，会在文件中生成消息。
 
 + **4. 索引复制阶段** —— 如果在加载期间指定了用于创建索引的临时表空间并选择了 READ ACCESS，这些索引数据将复制到原始空间。
 
-加载的所有阶段都是一个操作的一部分，只有在所有阶段成功完成后该操作才完成。`LOAD` 工具在每个阶段进行期间生成消息。如果在任何一个阶段发生故障，这些消息可以帮助 DBA 进行问题分析和解决。
+加载的所有阶段都是一个操作的一部分，只有在所有阶段成功完成后该操作才完成。`LOAD`工具在每个阶段进行期间生成消息。如果在任何一个阶段发生故障，这些消息可以帮助 DBA 进行问题分析和解决。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_760_0.png)
 
@@ -18258,12 +17434,8 @@ LOAD 工具的一些关键参数（图 12–22 和 12–23）在此处（详情�
 - FROM —— 指定输入数据：包含加载数据的文件名、管道、设备或游标名（SQL 语句）。
 - OF filetype —— 指定数据的格式：ASC、DEL、IXF、CURSOR（声明为 SELECT 或 VALUES 语句的游标）。
 - METHOD L | N | P —— 指定从中加载数据的起始和结束列（仅适用于 ASC 文件，从 1 开始计数）。N 指定要加载的列名（仅适用于 IXF 文件）。p 指定输入数据字段的字段编号（从 1 开始计数，支持 IXF、DEL 或 CURSOR）。
-- ALLOW NO ACCESS —— 指定 `LOAD` 在加载期间对目标表加独占锁；这是默认设置。
-- ALLOW READ ACCESS —— 指定 `LOAD` 在加载期间对目标表加共享锁；在表加载期间，读取者可以访问非增量数据。
-
-
-
-
+- ALLOW NO ACCESS —— 指定`LOAD`在加载期间对目标表加独占锁；这是默认设置。
+- ALLOW READ ACCESS —— 指定`LOAD`在加载期间对目标表加共享锁；在表加载期间，读取者可以访问非增量数据。
 
 # 使用异常表
 
@@ -18275,16 +17447,12 @@ LOAD 工具的一些关键参数（图 12–22 和 12–23）在此处（详情�
 
 LOAD 异常表在定义时不包含任何约束或触发器。
 
-
-
-
-
 ## 第 12 章维护数据
 
 目标表
 
 | Name CHAR(20) | Age INT | Serial_num CHAR(3) | Salary INT | Department CHAR(25) |
-|---|---|---|---|---||
+|---|---|---|---|---|
 | George | 26 | 105 | 30000 | Toy |
 | Paul | 31 | 83 | 45000 | Shoe |
 | Kelly | 28 | 214 | 39000 | Shoe |
@@ -18308,8 +17476,8 @@ LOAD 异常表在定义时不包含任何约束或触发器。
 在构建阶段，加载之前存在的索引必须进行重建。用户可以定义用于重建的方法。一共有四种可可用选项：
 
 - 重建（Rebuild）——此选项将强制无论加载类型是 INSERT 还是 REPLACE 都重新创建所有索引。
-- 增量（Incremental）——这将允许 LOAD 实用程序在使用 `INSERT` 选项调用加载时使用它们中的数据。如果加载到表中的数据量相对于现有数据较小，则此选项非常有用。
-- 延迟（Deferred）——此选项将防止 LOAD 实用程序重建索引；相反，索引将被标记为待刷新。它们将在随后首次访问表或数据库重启时进行重建。使用数据库配置文件中 `INDEXREC` 参数指定的值来决定何时重建索引。对于定义了主键索引或唯一索引的表，不支持此选项，因为这些索引需要被用来检查重复项。
+- 增量（Incremental）——这将允许 LOAD 实用程序在使用`INSERT`选项调用加载时使用它们中的数据。如果加载到表中的数据量相对于现有数据较小，则此选项非常有用。
+- 延迟（Deferred）——此选项将防止 LOAD 实用程序重建索引；相反，索引将被标记为待刷新。它们将在随后首次访问表或数据库重启时进行重建。使用数据库配置文件中`INDEXREC`参数指定的值来决定何时重建索引。对于定义了主键索引或唯一索引的表，不支持此选项，因为这些索引需要被用来检查重复项。
 - 自动选择（Autoselect）——将允许 LOAD 实用程序在 REBUILD 和 INCREMENTAL 选项之间进行选择。
 
 例如，如果名为 Product 的表定义了两个索引且没有唯一约束或主键约束，并且使用 LOAD 实用程序替换所有现有数据，则在 LOAD 命令中指定以下选项将允许延迟索引构建：
@@ -18345,7 +17513,7 @@ into person ...
 
 ## 生成统计信息
 
-LOAD 实用程序可用于与表和索引相关的统计信息。优化器使用这些统计信息来确定执行 SQL 语句的最有效方法。如果用户使用 `REPLACE` 加载选项，还可以指定表和/或索引统计信息的详细程度。表 12–3 显示了可以为表和索引生成的不同统计信息组合。
+LOAD 实用程序可用于与表和索引相关的统计信息。优化器使用这些统计信息来确定执行 SQL 语句的最有效方法。如果用户使用`REPLACE`加载选项，还可以指定表和/或索引统计信息的详细程度。表 12–3 显示了可以为表和索引生成的不同统计信息组合。
 
 ## 表 12–3 加载 – 生成统计信息
 
@@ -18382,7 +17550,7 @@ load from ... statistics no ...
 
 ## 统计配置文件
 
-LOAD 命令可以包含一个 `RUNSTATS` 配置文件，而不是在加载期间指定要使用哪些统计信息。LOAD 实用程序提供了一个注册配置文件的选项，这是一组指定要收集哪些统计信息的选项。例如，以下命令注册了一个配置文件：
+LOAD 命令可以包含一个`RUNSTATS`配置文件，而不是在加载期间指定要使用哪些统计信息。LOAD 实用程序提供了一个注册配置文件的选项，这是一组指定要收集哪些统计信息的选项。例如，以下命令注册了一个配置文件：
 
 ```
 runstats on table
@@ -18427,15 +17595,11 @@ LOAD 实用程序有很多与性能相关的选项。其中一些：
 
 在加载过程中不进行记录。这意味着用户无法使用 RESTORE ROLLFORWARD 命令对加载操作进行滚动恢复。用户可以选择使表可恢复的，但是以性能为代价的。
 
-当对可恢复数据库指定 `COPY NO` 选项时，表空间将在加载开始时进入备份状态。
+当对可恢复数据库指定`COPY NO`选项时，表空间将在加载开始时进入备份状态。
 
 LOAD 实用程序提供了三种平衡性能和恢复性的方法。选项如下：
 
 - 不可恢复（Nonrecoverable）——指定将加载操作标记为不可恢复，并且无法通过后续的回滚操作进行恢复。滚动恢复工具将跳过该事务并将正在加载数据的表标记为“无效”。该工具将忽略对其进行的后续事务。在滚动恢复操作完成后，可以在不可恢复加载操作完成后的提交点之后，从备份（全量或表空间）删除或恢复此类表。使用此选项时，表空间在加载操作后不会进入备份状态，且在加载期间不需要创建已加载数据的副本。不可恢复加载适用于加载大型只读表。你也可以使用不可恢复选项向一个表空间加载多个表。一旦最后一个表加载完成，你可以备份数据库或包含该表的表空间，其
-
-
-
-
 
 ## 数据移动工具
 
@@ -18445,19 +17609,25 @@ LOAD 实用程序提供了三种平衡性能和恢复性的方法。选项如下
 
 - * Copy Yes — 如果在 COPY 选项中指定了 YES 且数据库启用了归档日志，则加载过程对更改的副本将保存到磁带、目录或 TSM 服务器中，且表空间将不会留存在“等待备份”（backup-pending）状态。此选项不适用于使用循环日志的数据库，因为这种数据库是不可恢复的。如果在加载操作完成后立即发生数据库损坏，可以恢复现有的备份并向前滚滚（假设使用了归档日志）。
 
+```
 load from ... copy yes to tsm ...
+```
 
 ## FASTPARSE
 
 这是一个文件类型修符，用于减少数据检查量。只有在已知数据正确的情况下才应该使用它。由于 IXF 文件仅包含正确格式的数据，因此当使用 IXF 文件类型时，此参数可能无法提高 LOAD 的性能。如果使用 DEL 或 ASC 文件，LOAD 工具运行可能会更快。
 
+```
 load from ... modified by fastparse ...
+```
 
 ## ANYORDER
 
 未使用 SAVECOUNT 选项，此参数将允许 LOAD 工具将数据加载到表中，而无需遵循数据在输入文件中出现的顺序。如果输入文件中的数据是按聚集索引排序的，那么此选项可能不是很好的选择，因为它会影响后续 REORG 操作的性能。使用时，文件修符可能会提高 LOAD 工具的性能，特别是在 SMP 系统中（且 CPU_PARALLELISM 选项 > 1）。
 
+```
 load from ... modified by anyorder ...
+```
 
 ## DATA BUFFER
 
@@ -18483,17 +17653,19 @@ load from ... modified by cpu_parallelism ...
 load from ... disk_parallelism 3 ...
 ```
 
+
+
 ## 其他选项
 
-可能影响性能的其他 LOAD 选项和文件类型修符包括：
+可能影响性能的其他 `LOAD` 选项和文件类型修饰符包括：
 
-- * Norowarnings — 如果指定，通常会提高性能。
-- Savecount — 在一致性点之前加载的记录数越多，对性能越有利。
-- * Statistics — 生成的统计信息越少，性能越好。然而，LOAD 工具和 RUNSTATS 工具的组合运行时间通常比使用 LOAD 工具生成统计信息要长得多。
+- `NOROWARNINGS` — 如果指定，通常会提高性能。
+- `SAVECOUNT` — 在一致性点之前加载的记录数越多，对性能越有利。
+- `STATISTICS` — 生成的统计信息越少，性能越好。然而，`LOAD` 工具和 `RUNSTATS` 工具的组合运行时间通常比使用 `LOAD` 工具生成统计信息要长得多。
 
 ## 从控制中心使用加载工具
 
-你运行 LOAD 工具的方式与 IMPORT 和 EX 工具非常相似。使用控制中心并选择要加载的目标表。点击右键并选择 Load 选项（图 12–25）。
+你运行 `LOAD` 工具的方式与 `IMPORT` 和 `EXPORT` 工具非常相似。使用控制中心并选择要加载的目标表。点击右键并选择 `Load` 选项（图 12–25）。
 
 一旦调用，用户可以指定命令行上所有可用选项。将通过示例演示使用控制中心的方法。
 
@@ -18501,7 +17673,7 @@ load from ... disk_parallelism 3 ...
 
 图 12–25 选择替换或保留原始表数据
 
-## 748 第 12 章维护数据
+## 748 第 12 章 维护数据
 
 DBA 选择追加现有数据或替换现有数据（图 12–26）。点击下一步。
 
@@ -18509,7 +17681,7 @@ DBA 选择追加现有数据或替换现有数据（图 12–26）。点击下�
 
 图 12–26 指定输入和输出文件
 
-DBA 想要将名为 sales.del 的文件加载到名为 TRANSACTIONS 的表中，并追加表中当前的数据。点击 Del Options 按钮（图 12–27）。
+DBA 想要将名为 `sales.del` 的文件加载到名为 `TRANSACTIONS` 的表中，并追加表中当前的数据。点击 `Del Options` 按钮（图 12–27）。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_775_1.png)
 
@@ -18539,11 +17711,7 @@ DBA 提供了若干关于应采取的操作的选项（图 12–30）。
 
 图 12–28 显示的列用于指定你是否以及如何想要这些列。
 
-
-
-
-
-754 第12 章 维护数据
+## 754 第 12 章 维护数据
 
 ```sql
 SELECT ABSCHEMA AS SCHEMA,
@@ -18556,16 +17724,16 @@ FROM SYSCAT.TABLES
 WHERE TABNAME='MYTAB' AND SCHEMA='MYSCHEMA'
 ```
 
-要移除表上的检查等待（check-pending）状态，可以使用 `SET INTEGRITY` 语句。该语句的使用请参阅第 758 页的“SET INTEGRITY 语句”。
+要移除表上的检查等待（check-pending）状态，可以使用 `SET INTEGRITY` 语句。该语句的使用请参阅第 758 页的“`SET INTEGRITY` 语句”。
 
-DBA 可以通过查看转储文件（通过 `MODIFIED BYFILE` 选项指定）来检查由于格式或空值而无法加载的记录。此外，还可以查询异常表（如果已指定）来找到作为重复值被拒绝的记录。可以使用 `LOAD QUERY` 命令查询远程文件。它包含了关于读取、拒绝和加载的行数信息，以及由 `LOAD` 工具生成的任何错误或警告消息。如果发生故障，将返回一个带有短描述的 SQL 错误代码。可以检查 `DB2DTAG.LOG` 文件。它可以提供有关故障前事件序列的有用信息。
+DBA 可以通过查看转储文件（通过 `MODIFIED BY FILE` 选项指定）来检查由于格式或空值而无法加载的记录。此外，还可以查询异常表（如果已指定）来找到作为重复值被拒绝的记录。可以使用 `LOAD QUERY` 命令查询远程文件。它包含了关于读取、拒绝和加载的行数信息，以及由 `LOAD` 工具生成的任何错误或警告消息。如果发生故障，将返回一个带有短描述的 SQL 错误代码。可以检查 `DB2DTAG.LOG` 文件。它可以提供有关故障前事件序列的有用信息。
 
 ## 多维聚类考虑
 
 以下限制适用于多维聚类（MDC）表：
 
 - 不支持 `LOAD` 工具的 `SAVECOUNT` 选项。
-- 不支持 `TOTALFREESPACE` 文件类型修符，因为这些表会随着时间的推移而回收空空间。
+- 不支持 `TOTALFREESPACE` 文件类型修饰符，因为这些表会随着时间的推移而回收空空间。
 
 在使用 `LOAD` 工具处理 MDC 时，违反唯一约束的冲突将按以下方式处理：
 
@@ -18584,15 +17752,15 @@ DBA 可以通过查看转储文件（通过 `MODIFIED BYFILE` 选项指定）来
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_782_0.png)
 
-图 12–34 LOAD QUERY 命令
+图 12–34 `LOAD QUERY` 命令
 
 关键参数为：
 
-- **table-name** — 正在加载的表名。
-- **local-message-file** — 服务器上（执行 `LOAD` 的地方）的一个文件名。加载查询报告将输出到此文件。此文件不能与 `LOAD` 命令指定的指定相同。如果指定的文件存在，则所有新输出都将追加到其中。
-- **NOSUMMARY** — 表示不应生成摘要信息。
-- **SUMMARYONLY** — 将生成关于读取、加载、拒绝等记录数量的摘要信息。
-- **SHOWDELTA** — 将导致仅显示自上次调用 `LOAD QUERY` 以来的新信息。
+- `table-name` — 正在加载的表名。
+- `local-message-file` — 服务器上（执行 `LOAD` 的地方）的一个文件名。加载查询报告将输出到此文件。此文件不能与 `LOAD` 命令指定的指定相同。如果指定的文件存在，则所有新输出都将追加到其中。
+- `NOSUMMARY` — 表示不应生成摘要信息。
+- `SUMMARYONLY` — 将生成关于读取、加载、拒绝等记录数量的摘要信息。
+- `SHOWDELTA` — 将导致仅显示自上次调用 `LOAD QUERY` 以来的新信息。
 
 ## 使用 LOAD QUERY 和 LOAD
 
@@ -18600,14 +17768,14 @@ DBA 可以通过查看转储文件（通过 `MODIFIED BYFILE` 选项指定）来
 
 `SALES` 表上定义了两个摘要表。第一个是关于每个员工销售额的摘要表，第二个定义为汇总每个产品的销售额。第一个 `EMP_SALES` 使用 `REFRESH DEFERRED` 选项定义，第二个 `PROD_SALES` 使用 `REFRESH IMMEDIATE` 选项定义。
 
-`SALES` 表还有一个一个引用 `PRODUCT` 表的外键约束。它在 `AMOUNT` 列上还定义了一个检查约束。该约束确保在表中插入或更新的任何行其 `AMOUNT` 都大于 0。图 12–35 显示了这些表之间的关系。
+`SALES` 表还有一个引用 `PRODUCT` 表的外键约束。它在 `AMOUNT` 列上还定义了一个检查约束。该约束确保在表中插入或更新的任何行其 `AMOUNT` 都大于 0。图 12–35 显示了这些表之间的关系。
 
 | Product_no | Cost | Description |
 |---|---|---|
 | PK | | |
 | Char(12) | Decimal(9,2) | Varchar(50) |
 
-检查约束：Amount>0
+检查约束：`Amount > 0`
 
 | Invoice | SerialNum | Product_no | Amount | CC |
 |---|---|---|---|---|
@@ -18620,17 +17788,17 @@ DBA 可以通过查看转储文件（通过 `MODIFIED BYFILE` 选项指定）来
 |---|---|---|---|---|---|---|---|
 | Sum(Amount) | Sum(Tax) | Count(*) | | | Sum(Amount) | Sum(Tax) | Count(*) |
 
-Emp_Sales
+`Emp_Sales`
 
-Prod_Sales
+`Prod_Sales`
 
 | Invoice | SerialNum | Product_no | Amount | Tax | Time | Description |
 |---|---|---|---|---|---|---|
 | Char(12) | Char(6) | Char(12) | Decimal(9,2) | Decimal(7,2) | Timestamp | CLOB(2) |
 
-图 12–35 SALES 表依赖关系
+图 12–35 `SALES` 表依赖关系
 
-在评估信息后，DBA 决定从文件 `SALES.DEL` 加载到 `SALES` 表，使用字符分隔符 `*` 和列分隔符 `|`。评估信息后， DBA 决定使用以下选项加载 `SALES` 表：
+在评估信息后，DBA 决定从文件 `SALES.DEL` 加载到 `SALES` 表，使用字符分隔符 `*` 和列分隔符 `|`。评估信息后，DBA 决定使用以下选项加载 `SALES` 表：
 
 ```sql
 LOAD FROM SALES_DEL
@@ -18659,7 +17827,7 @@ MODIFIED BY *
 | SQL350W LOAD BEGIN |
 | SQL3515W LOAD END |
 
-图 12–36 加载 SALES 表
+图 12–36 加载 `SALES` 表
 
 它将所有冲突移动到异常表，但它会强制用户对表空间进行备份。
 
@@ -18667,12 +17835,9 @@ MODIFIED BY *
 INSERT INTO SALES FOR EXCEPTION
 STATISTICS YES AND INDEXES
 COPY NO
-CPU_PARALLEISM 4
-DISK_PARALLEISM 3
+CPU_PARALLELISM 4
+DISK_PARALLELISM 3
 ```
-
-
-
 
 ## 数据移动实用
 
@@ -18700,20 +17865,18 @@ DISK_PARALLEISM 3
 
 如果在表上定义了新约束，且没有立即执行约束检查，表也可能被置为此状态。这样做是因为无法保证表中的现有行符合新约束。
 
-以下是 SET INTEGRITY 语句的简略语法（图 12–37）：
+以下是 `SET INTEGRITY` 语句的简略语法（图 12–37）：
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_787_0.png)
 
-## 图 12–37 SET INTEGRITY 命令
+## 图 12–37 `SET INTEGRITY` 命令
 
 可以使用这些语句之一来检查表中现有数据的有效性：
 
-- SET INTEGRITY（也称为 SET CONSTRAINTS）
-- REFRESH TABLE
+- `SET INTEGRITY`（也称为 `SET CONSTRAINTS`）
+- `REFRESH TABLE`
 
-
-
-SET INTEGRITY 语句可以执行以下操作：
+`SET INTEGRITY` 语句可以执行以下操作：
 
 - 将表设置为检查等待状态，并标记以下一个或多个项为未检查：检查约束、外键约束以及立即刷新（refresh immediate）汇总表的刷新。主键和唯一键约束的检查无法关闭。
 
@@ -18722,23 +17885,23 @@ SET INTEGRITY 语句可以执行以下操作：
 - 通过检查以下所有或部分约束来重置表的检查等待状态：检查约束、外键约束以及立即刷新（refresh immediate）汇总表的刷新。
 - 通过将以下任何一个约束标记为已检查来重置检查等待状态：检查约束、外键约束以及立即刷新（refresh immediate）汇总表的刷新。将不会对约束进行实际检查。这被称为延迟检查（deferred checking）。
 
-REFRESH TABLE 语句只能用于汇总表。它将通过利用其源表中的当前数据来更新汇总表中的数据。
+`REFRESH TABLE` 语句只能用于汇总表。它将通过利用其源表中的当前数据来更新汇总表中的数据。
 
 ## DB2 注意
 
-在第 8 版本之前，执行加载操作后，如果目标表包含生成列（generated columns），表将保持在检查等待状态。现在加载实用程序将生成列值，您不再需要在包含生成列且没有其他表约束的表加载操作后执行 SET INTEGRITY 语句。
+在第 8 版本之前，执行加载操作后，如果目标表包含生成列（generated columns），表将保持在检查等待状态。现在加载实用程序将生成列值，您不再需要在包含生成列且没有其他表约束的表加载操作后执行 `SET INTEGRITY` 语句。
 
 如果需要检查现有数据，用户可以指定以增量方式进行。这意味着只有自上次检查以来添加到表中的数据需要被检查。
 
-以下示例是第 755 页“使用 LOAD QUERY 和 LOAD”中 LOAD 示例的延续。在上一个示例中，在 LOAD 完成后，表空间处于备份等待（backup-pending）状态。在进行备份后，SELECT 语句带有以下错误消息失败了：
+以下示例是第 755 页“使用 `LOAD QUERY` 和 `LOAD`”中 `LOAD` 示例的延续。在上一个示例中，在 `LOAD` 完成后，表空间处于备份等待（backup-pending）状态。在进行备份后，`SELECT` 语句带有以下错误消息失败了：
 
-```
+```sql
 SQL0668N Operation not allowed when the table (or a dependent table) is in the Check Pending state. SQLSTATE=57016
 ```
 
-此消息表示表处于检查等待状态。如前所述，这种等待状态可能发生在定义了外键约束或检查约束的表上。使用以下语句查找 SALES 表处于检查等待状态的原因。
+此消息表示表处于检查等待状态。如前所述，这种等待状态可能发生在定义了外键约束或检查约束的表上。使用以下语句查找 `SALES` 表处于检查等待状态的原因：
 
-```
+```sql
 SELECT SCHEMA AS SCHEMA,
 TABNAME AS NAME,
 STATUS AS State,
@@ -18749,37 +17912,39 @@ FROM SYSBMTABLES
 WHERE TABNAME='SALES' AND SCHEMA='DB2ADMIN'
 ```
 
-结果如下所示。STATUS 列中的值 "C" 表示表处于检查等待状态。
+结果如下所示。`STATUS` 列中的值 "C" 表示表处于检查等待状态。
 
 | SCHEMA | NAME | State | FOREIGN_KEYS | CHECK_CONSTRAINTS | SUMMARY_TABLES |
 |---|---|---|---|---|---|
 | DB2ADMIN | SALES | C | | N | |
 
-输出中的 "N" 表示检查等待状态的原因。在本例中，是因为一个或多个约束尚未检查。要移除表的检查等待状态，请使用 SET INTEGRITY 语句：
+输出中的 "N" 表示检查等待状态的原因。在本例中，是因为一个或多个约束尚未检查。要移除表的检查等待状态，请使用 `SET INTEGRITY` 语句：
 
-```
+```sql
 SET INTEGRITY FOR SALES IMMEDIATE CHECKED
 ```
 
 该语句产生以下消息：
 
-```
+```sql
 SQL362W data processing found violations and moved them into exception table.
 ```
+
+
 
 此时，表现在可以访问。
 
 ## 使用 Set Integrity
 
-SET INTEGRITY 语句也可以从 Control Center 执行。要这样做，请右键点击表并选择 Set Integrity 选项。图 12–38 展示了如何选择检查选项。
+`SET INTEGRITY` 语句也可以从 Control Center 执行。要这样做，请右键点击表并选择 Set Integrity 选项。图 12–38 展示了如何选择检查选项。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_789_0.png)
 
 ## 图 12–38 从 Control Center 使用 Set Integrity
 
-在执行 SET INTEGRITY 语句期间，所有不符合 SALES 表定义的行将被复制到异常表中。此异常表也可以在加载操作中使用。
+在执行 `SET INTEGRITY` 语句期间，所有不符合 `SALES` 表定义的行将被复制到异常表中。此异常表也可以在加载操作中使用。
 
-图 12–39 显示了如何评估在 PRODUCT 表上的外键约束。
+图 12–39 显示了如何评估在 `PRODUCT` 表上的外键约束。
 
 | Sales | Referential | Product |
 |---|---|---|
@@ -18802,118 +17967,10 @@ SET INTEGRITY 语句也可以从 Control Center 执行。要这样做，请右�
 | 41 5 | Time Stamp Message |
 | 15 4 | Time Stamp Message |
 
-图 12–39 SET INTEGRITY 和异常表的使用
+图 12–39 `SET INTEGRITY` 和异常表的使用
 
-完成 SET INTEGRITY 操作后，用户可以查询 SALES_EXCEPTION 表中的消息列（如果已定义），以确定给定行被拒绝的原因。这些行可以在以后修改并重新插入 SALES 表中。
+完成 `SET INTEGRITY` 操作后，用户可以查询 `SALES_EXCEPTION` 表中的消息列（如果已定义），以确定给定行被拒绝的原因。这些行可以在以后修改并重新插入 `SALES` 表中。
 
-
-
-
-
-## 第 12 章维护数据
-
-如果以导入模式执行 `db2move` 实用程序将使用 `IMPORT` 工具将 IXF 类型的数据文件导入到指定的数据库。它将尝试读取 `DB2MOVE.LST` 文件，以查找数据文件文件名与必须导入这些数据的表名之间的关系。
-
-在装载模式下，`DB2MOVE.LST` 文件中指定的输入文件将使用 `LOAD` 工具加载到表中。
-
-以下是 `db2move` 实用程序的简略语法（图 12–40）：
-
-![](img/2fc7488b6558d6b99bbc7356ac4116b1_791_0.png)
-
-图 12–40 db2move 语法
-
-关键参数包括以下内容（详情请参见《DB2 命令参考》）：
-
-- -dbname — 数据库名称。
-- -action — 有效的操作有 IMPORT、EXPORT 或 LOAD。
-- -tc — 后接一个或多个由逗号分隔的创建者 ID（creator IDs）。可以使用 `*` 作为通配符。如果不使用此选项，该实用程序的默认行为是处理所有创建者 ID。
-- -tn — 标记仅在 `IMPORT` 操作时有效。如果指定，后面应接一个或多个（最多十个）由逗号分隔的表名。
-- -io — 用于指定要执行的导入操作的标记。如果指定，后面应接以下选项之一：INSERT、INSERT_UPDATE、REPLACE、CREATE 或 REPLACE_CREATE。如果在指定 `IMPORT` 操作时未指定此项，将使用 `REPLACE_CREATE` 作为默认值。
-- -lo — 用于指定要使用的装载选项的标记。有效选项有 INSERT 和 REPLACE。如果在指定 `LOAD` 操作时未指定此项，将使用 `INSERT` 作为默认装载选项。
-- -l — 用于指定在导入、导出或将 LOB 值导入或从单独文件时所用目录的绝对路径名。如果在 `EXPORT` 操作中指定，则在将 LOB 导出到目录或多个目录之前，将清除这些目录。
-- -u — 后接用于运行该实用程序的用户 ID（userid）。如果不指定，将使用登录用户的用户 ID 来执行该实用程序。
-- -p — 后接用于验证执行实用程序时用的用户 ID 的密码。
-
-## 数据移动实用程序
-
-以下是使用 `db2move` 实用程序的示例。
-
-一个现有数据库 `SAMPLE` 需要复制到另一个服务器上的新数据库。新数据库中尚未定义任何表，并计划使用 `db2move` 实用程序来实现此目标。为了导出 `SAMPLE` 数据库中的所有表，用户执行以下命令：
-
-```
-db2move sample export
-```
-
-这将产生以下文件：
-
-- - EXPORT.OUT — `EXPORT` 操作的结果
-- DB2MOVE.LST — 包含文件名列表及其源表名的文件
-- TABNN.IXF — 包含表数据的 IXF 文件
-- TABNN.MSG — 与每个表导出操作相关的消息
-
-用户现在想在 `NEWSAMP` 数据库中重新创建数据库结构，并用 IXF 文件中的数据填充该数据库。现在可以使用以下命令：
-
-```
-db2move newsamp1 import -io REPLACE_CREATE
-```
-
-在我们的情况下，不需要使用 `-io` 选项，因为默认选项是 `REPLACE_CREATE`。
-
-该实用程序作为输入的文件有：
-
-- - DB2MOVE.LST — 包含数据表名和文件名的列表
-- TABNN.IXF — 实际的 IXF 类型数据文件
-
-此操作的输出文件为：
-
-- - IMPORT.OUT — 此文件包含各个导入操作结果的摘要。
-- TABNN.MSG — 这些文件包含在导入各种文件期间生成的错误和警告消息。
-
-## 数据维护
-
-存储在表中数据的物理分布对使用这些表的应用程序性能有显著影响。数据在表中的存储方式受表上的更新、插入和删除操作的影响。例如，删除操作可能会留下无法重用的空数据页。此外，对变长列的更新可能会导致新的列值无法适应相同的数据页。这可能导致行移动到不同的页，并在表中产生内部间隙或未使用的空间。因此，DB2 可能需要读取更多的物理页来检索应用程序所需的信息。
-
-这些情况几乎是不可避免的。然而，数据库管理员可以使用 DB2 提供的数据维护命令来优化存储在表中数据的物理分布。有三个相关的实用程序或命令可以帮助您组织数据。它们是：
-
-- REORGCHK
-- REORG
-- RUNSTATS
-
-注意 本节中使用的大多数命令要求将 `SCHEMA` 名称固定为表名：`SCHEMA.TEST_CANDATE`，其中 `schema` 应替换为创建的对象。
-
-## 分析物理结构
-
-已经讨论过 SQL 操作可能会在表中产生内部间隙。因此，你可能会问，我如何确定我的表的物理结构？我如何知道当前使用了多少空间，剩余多少空间？这类问题可以通过 `REORGCHK` 实用程序回答。该实用程序用于分析系统目录并收集有关我的表物理结构的信息。用户可以选择使用目录中的当前信息，或在在使用前让 `REORG` 工具更新信息。
-
-通过从系统目录收集的信息，`REORGCHK` 实用程序显示空间分配特征。用户可以选择使用目录中的当前信息，或在在使用前让 `REORG` 工具更新信息（此处注：此处原文有重复，翻译为：收集有关我的表物理结构的信息。用户可以选择使用目录中的当前信息，或在在使用前让 `REORG` 工具更新信息。） -> 修正：原文在此处重复，翻译时保持原意并顺。
-
-*抱歉，由于原文存在重复，我重新翻译该段落：*
-
-[content]
-## 分析物理结构
-
-已经讨论过 SQL 操作可能会在表中产生内部间隙。因此，你可能会问，我如何确定我的表的物理结构？我如何知道当前使用了多少空间，剩余多少空间？这类问题可以通过 `REORGCHK` 实用程序回答。该实用程序用于分析系统目录并收集有关我的表物理结构的信息。用户可以选择使用目录中的当前信息，或在在使用前让 `REORG` 工具更新信息。
-
-通过从系统目录收集的信息，`REORGCHK` 实用程序显示空间分配特征。用户可以选择使用目录中的当前信息，或在在使用前让 `REORG` 工具更新信息（注：原文此处确实重复，翻译已按逻辑处理）。
-[/content]
-
-**重新根据指令“不要漏掉任何一行”的要求，包含重复部分的翻译如下：**
-
-[content]
-## 分析物理结构
-
-已经讨论过 SQL 操作可能会在表中产生内部间隙。因此，你可能会问，我如何确定我的表的物理结构？我如何知道当前使用了多少空间，剩余多少空间？这类问题可以通过 `REORGCHK` 实用程序回答。该实用程序用于分析系统目录并收集有关我的表物理结构的信息。用户可以选择使用目录中的当前信息，或在在使用前让 `REORG` 工具更新信息。
-
-通过从系统目录收集的信息，`REORGCHK` 实用程序显示空间分配特征。用户可以选择使用目录中的当前信息，或在在使用前让 `REORG` 工具更新信息。
-[/content]
-
-*(注：由于原文中 "The user has the option of using the current information in the catalog or to make the REORG utility update the information before using it." 这句话确实出现了两次，根据“一定不要漏掉任何一行”的原则，我在译文中完整保留了。)*
-
----
-
-**为了确保严谨，我为您提供最终的、包含重复行的完整翻译：**
-
-[content]
 ## 第 12 章 维护数据
 
 如果以导入模式执行 `db2move` 实用程序，将使用 `IMPORT` 工具将 IXF 类型的数据文件导入到指定的数据库中。它将尝试读取 `DB2MOVE.LST` 文件，以查找数据文件文件名与必须导入这些数据的表名之间的关系。
@@ -18924,19 +17981,19 @@ db2move newsamp1 import -io REPLACE_CREATE
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_791_0.png)
 
-图 12–40 db2move 语法
+图 12–40 `db2move` 语法
 
 关键参数包括以下内容（详情请参见《DB2 命令参考》）：
 
-- -dbname — 数据库名称。
-- -action — 有效的操作有 IMPORT、EXPORT 或 LOAD。
-- -tc — 后接一个或多个由逗号分隔的创建者 ID。可以使用 `*` 作为通配符。如果不使用此选项，该实用程序的默认行为是处理所有创建者 ID。
-- -tn — 标记仅在 `IMPORT` 操作时有效。如果指定，后面应接一个或多个（最多十个）由逗号分隔的表名。
-- -io — 用于指定要执行的导入操作的标记。如果指定，后面应接以下选项之一：INSERT、INSERT_UPDATE、REPLACE、CREATE 或 REPLACE_CREATE。如果在指定 `IMPORT` 操作时未指定此项，将使用 `REPLACE_CREATE` 作为默认值。
-- -lo — 用于指定要使用的装载选项的标记。有效选项有 INSERT 和 REPLACE。如果在指定 `LOAD` 操作时未指定此项，将使用 `INSERT` 作为默认装载选项。
-- -l — 用于指定在导入、导出或将 LOB 值导入或从单独文件时所用目录的绝对路径名。如果在 `EXPORT` 操作中指定，则在将 LOB 导出到目录或多个目录之前，将清除这些目录。
-- -u — 后接用于运行该实用程序的用户 ID。如果不指定，将使用登录用户的用户 ID 来执行该实用程序。
-- -p — 后接用于验证执行实用程序时用的用户 ID 的密码。
+- `-dbname` — 数据库名称。
+- `-action` — 有效的操作有 `IMPORT`、`EXPORT` 或 `LOAD`。
+- `-tc` — 后接一个或多个由逗号分隔的创建者 ID（creator IDs）。可以使用 `*` 作为通配符。如果不使用此选项，该实用程序的默认行为是处理所有创建者 ID。
+- `-tn` — 标记仅在 `IMPORT` 操作时有效。如果指定，后面应接一个或多个（最多十个）由逗号分隔的表名。
+- `-io` — 用于指定要执行的导入操作的标记。如果指定，后面应接以下选项之一：`INSERT`、`INSERT_UPDATE`、`REPLACE`、`CREATE` 或 `REPLACE_CREATE`。如果在指定 `IMPORT` 操作时未指定此项，将使用 `REPLACE_CREATE` 作为默认值。
+- `-lo` — 用于指定要使用的装载选项的标记。有效选项有 `INSERT` 和 `REPLACE`。如果在指定 `LOAD` 操作时未指定此项，将使用 `INSERT` 作为默认装载选项。
+- `-l` — 用于指定在导入、导出或将 LOB 值导入或从单独文件时所用目录的绝对路径名。如果在 `EXPORT` 操作中指定，则在将 LOB 导出到目录或多个目录之前，将清除这些目录。
+- `-u` — 后接用于运行该实用程序的用户 ID（userid）。如果不指定，将使用登录用户的用户 ID 来执行该实用程序。
+- `-p` — 后接用于验证执行实用程序时用的用户 ID 的密码。
 
 ## 数据移动实用程序
 
@@ -18950,10 +18007,10 @@ db2move sample export
 
 这将产生以下文件：
 
-- - EXPORT.OUT — `EXPORT` 操作的结果
-- DB2MOVE.LST — 包含文件名列表及其源表名的文件
-- TABNN.IXF — 包含表数据的 IXF 文件
-- TABNN.MSG — 与每个表导出操作相关的消息
+- `EXPORT.OUT` — `EXPORT` 操作的结果
+- `DB2MOVE.LST` — 包含文件名列表及其源表名的文件
+- `TABNN.IXF` — 包含表数据的 IXF 文件
+- `TABNN.MSG` — 与每个表导出操作相关的消息
 
 用户现在想在 `NEWSAMP` 数据库中重新创建数据库结构，并用 IXF 文件中的数据填充该数据库。现在可以使用以下命令：
 
@@ -18965,13 +18022,13 @@ db2move newsamp1 import -io REPLACE_CREATE
 
 该实用程序作为输入的文件有：
 
-- - DB2MOVE.LST — 包含表名和文件名的列表
-- TABNN.IXF — 实际的 IXF 类型数据文件
+- `DB2MOVE.LST` — 包含数据表名和文件名的列表
+- `TABNN.IXF` — 实际的 IXF 类型数据文件
 
 此操作的输出文件为：
 
-- - IMPORT.OUT — 此文件包含各个导入操作结果的摘要。
-- TABNN.MSG — 这些文件包含在导入各种文件期间生成的错误和警告消息。
+- `IMPORT.OUT` — 此文件包含各个导入操作结果的摘要。
+- `TABNN.MSG` — 这些文件包含在导入各种文件期间生成的错误和警告消息。
 
 ## 数据维护
 
@@ -18979,11 +18036,11 @@ db2move newsamp1 import -io REPLACE_CREATE
 
 这些情况几乎是不可避免的。然而，数据库管理员可以使用 DB2 提供的数据维护命令来优化存储在表中数据的物理分布。有三个相关的实用程序或命令可以帮助您组织数据。它们是：
 
-- REORGCHK
-- REORG
-- RUNSTATS
+- `REORGCHK`
+- `REORG`
+- `RUNSTATS`
 
-注意 本节中使用的大多数命令要求将 SCHEMA 名称固定为表名：`SCHEMA.TEST_CANDATE`，其中 `schema` 应替换为被创建的对象。
+注意：本节中使用的大多数命令要求将 `SCHEMA` 名称固定为表名：`SCHEMA.TEST_CANDATE`，其中 `schema` 应替换为被创建的对象。
 
 ## 分析物理结构
 
@@ -18991,139 +18048,137 @@ db2move newsamp1 import -io REPLACE_CREATE
 
 通过从系统目录收集的信息，`REORGCHK` 实用程序显示空间分配特征。用户可以选择使用目录中的当前信息，或在在使用前让 `REORG` 工具更新信息。（注：原文此处确实重复，翻译已按要求保留）。
 
-
-
-
 # 解析 REORGCHK 的输出
 
-REORGCHK 实用使用了公式，这些公式可以帮助您判断表是否需要重组。本节将检查用于计算这些公式的元素的解释：
+`REORGCHK` 实用程序使用了公式，这些公式可以帮助您判断表是否需要重组。本节将检查用于计算这些公式的元素的解释：
 
 表格统计数据：
 
-- F1: 100 * OVERFLOW / CARD < 5
-- F2: 100 * (数据页有效空间利用率) > 70
-- F3: 100 * (所需页数 / 总页数) > 80
+- F1: `100 * OVERFLOW / CARD < 5`
+- F2: `100 * (数据页有效空间利用率) > 70`
+- F3: `100 * (所需页数 / 总页数) > 80`
 
 | SCHEMA_NAME | OV | NP | FP ACTUAL | TSIZE | F1 | F2 | F3 REORG |
 |---|---|---|---|---|---|---|---|
 | Table: BAKLARZ.TEST_CANDIDATE | | 8 | 0 | 1 | 1 | 920 | 0 - 100 |
 
-- SCHEMA_NAME — 表示模式和表的名称。请记住，对象的创建者的授权 ID 将被用作默认模式。REORGCHK 可以一次性检查一组表。
-- CARD — 表示基表的行数。
-- OV (OVERFLOW) — 溢出指示器。它表示溢出行的数量。当向表中添加新列或变长值的大小变大时，会发生新的溢出。
-- NP (NPAGES) — 表示包含数据的总页数。表示分配给表的总页数。
-- ACTBLCK — 多维聚类 (MDC) 表活动块的总数。此字段仅适用于使用 ORG 子句定义的表。它表示包含数据的表块数。
-- TSIZE — 表示以字节为的大小。此值通过将表的行数乘以平均行长度的结果计算得出。
-- TABLESIZE — 表示该表所在的表页大小。
-- REORG —该列对前三个公式中的每个公式都有单独的指示器。连字符 (-) 表示不建议重组。星号 (*) 表示建议重组。
+- `SCHEMA_NAME` — 表示模式和表的名称。请记住，对象的创建者的授权 ID 将被用作默认模式。`REORGCHK` 可以一次性检查一组表。
+- `CARD` — 表示基表的行数。
+- `OV` (`OVERFLOW`) — 溢出指示器。它表示溢出行的数量。当向表中添加新列或变长值的大小变大时，会发生新的溢出。
+- `NP` (`NPAGES`) — 表示包含数据的总页数。表示分配给表的总页数。
+- `ACTBLCK` — 多维聚类 (MDC) 表活动块的总数。此字段仅适用于使用 `ORG` 子句定义的表。它表示包含数据的表块数。
+- `TSIZE` — 表示以字节为的大小。此值通过将表的行数乘以平均行长度的结果计算得出。
+- `TABLESIZE` — 表示该表所在的表页大小。
+- `REORG` — 该列对前三个公式中的每个公式都有单独的指示器。连字符 (`-`) 表示不建议重组。星号 (`*`) 表示建议重组。
 
-公式 F1、F2 和 F3 为表重组提供了指南。这些公式显示在 REORGCHK 的输出中。
+公式 F1、F2 和 F3 为表重组提供了指南。这些公式显示在 `REORGCHK` 的输出中。
 
 - F1 结合溢出行数进行计算。如果总行数的 5% 或以上是溢出行，则建议重组。
-- F2 适用于表大小 (TSIZE) 小于或等于分配给表的总空间大小的 70%。换句话说，当分配空间中超过 30% 未使用时，它建议重组表。
+- F2 适用于表大小 (`TSIZE`) 小于或等于分配给表的总空间大小的 70%。换句话说，当分配空间中超过 30% 未使用时，它建议重组表。
 - F3 结合空页进行计算。当表中有超过 20% 的页为空时，它建议对表进行重组。当页不包含任何行时，该页被认为为空。
 
-当公式发现需要重组表时，输出的 REORG 列将显示一个星号。
+当公式发现需要重组表时，输出的 `REORG` 列将显示一个星号。
 
-例如，如果表的溢出行超过了推荐值，REORG 列将如下所示：
+例如，如果表的溢出行超过了推荐值，`REORG` 列将如下所示：
 
 ```
 REORG
 -----
-* 
+*
 ```
+
+
 
 记住，这些值仅为通用指南。您可以使用自己的阈值。然而，大多数情况下，您会发现这些值对于您的环境是足够的。
 
-REORGCHK 的另一部分涉及解释从索引中收集的输出。要做到这一点，需要有关索引结构的信息。DB2 中的索引使用 B+ 树创建。这些数据结构提供了高效的搜索方法来定位索引的条目值。DB2 索引的逻辑结构如图 12–43 所示：
+`REORGCHK` 的另一部分涉及解释从索引中收集的输出。要做到这一点，需要有关索引结构的信息。DB2 中的索引使用 B+ 树创建。这些数据结构提供了高效的搜索方法来定位索引的条目值。DB2 索引的逻辑结构如图 12–43 所示：
 
 **图 12–43** DB2 索引结构
 
-# 数据维护
+## 数据维护
 
-索引有多个级别。索引级别越少，DB2 访问表或数据页的速度就越快。图 12–43 所示的索引有两个级别。以下是对 REORGCHK 输出索引信息的审查。
+索引有多个级别。索引级别越少，DB2 访问表或数据页的速度就越快。图 12–43 所示的索引有两个级别。以下是对 `REORGCHK` 输出索引信息的审查。
 
 索引统计数据：
 
-- F4: 100 * CLUSTERRAT 或归一化的 CLUSTERFACTOR > 80
-- F5: 100 * (叶页上的空间 / 非空叶页可用空间) MIN(SO, (100 - PCTFREE))
-- F6: (100 - PCTFREE)/(少一级的索引中可用空间 / 任何键所需的空间) < 100
-- F7: 100 * (伪删除 RID 的数量 / RID 总数) < 20
-- F8: 100 * (伪空叶页的数量 / 叶页总数) < 20
+- `F4`: `100 * CLUSTERRAT` 或归一化的 `CLUSTERFACTOR` > 80
+- `F5`: `100 * (叶页上的空间 / 非空叶页可用空间) MIN(SO, (100 - PCTFREE))`
+- `F6`: `(100 - PCTFREE)/(少一级的索引中可用空间 / 任何键所需的空间) < 100`
+- `F7`: `100 * (伪删除 RID 的数量 / RID 总数) < 20`
+- `F8`: `100 * (伪空叶页的数量 / 叶页总数) < 20`
 
-| SCHEMA.NAME | INDEX | LEAF | LVLS | NDEL | KEYS | LO | NO | F4 | F5 | F6 | F7 | F8 | REORG |
+| `SCHEMA.NAME` | `INDEX` | `LEAF` | `LVLS` | `NDEL` | `KEYS` | `LO` | `NO` | `F4` | `F5` | `F6` | `F7` | `F8` | `REORG` |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| SYSIBM.BAKLZ.SQL | 0704820231520 | 8 | | 0 | 3 | 984 | 100 | | | | | |
+| `SYSIBM.BAKLZ.SQL` | `0704820231520` | 8 | | 0 | 3 | 984 | 100 | | | | | |
 
-- SCHEMA.NAME — 索引所属的模式和表名。对象的创建者被用作默认模式。我们将显示表的所有索引。信息也为系统定义的索引（如主键）收集。
-- INDCARD — 表示索引中的条目数量。
-- LEAF — 表示索引的叶节点数量。
-- ELEAF — 伪叶页数。
-- LVLS (LEVELS) — 索引的总层数。
-- NDEL — 被删除的唯一索引条目数。
-- KEYS — 唯一索引条目数。
-- F4 — 聚类率或归一化的聚类因子
-- F5 — 空间利用
-- F6 — 少一级的索引中可用空间 / 任何键所需的空间
-- F7 — 伪删除 RID 的数量 / RID 总数
-- F8 — 伪空叶页的数量 / 叶页总数
-- REORG — 重组
-- F8 — 伪空叶页的数量 / 叶页总数
-- F5 — 叶页上的空间 / 非空叶页可用空间
-- F6 — 少一级的索引中可用空间 / 任何键所需的空间
-- F7 — 伪删除 RID 的数量 / RID 总数
-- F4 — 聚类率或归一化的聚类因子
-- NDEL — 被删除的唯一索引条目数
-- KEYS — 唯一索引条目数
-- LVLS (LEVELS) — 索引的总层数
-- ELEAF — 伪叶页数
-- LEAF — 索引的叶节点数量
-- INDCARD — 索引中的条目数量
-- SCHEMA.NAME — 索引所属的模式和表名
+- `SCHEMA.NAME` — 索引所属的模式和表名。对象的创建者被用作默认模式。我们将显示表的所有索引。信息也为系统定义的索引（如主键）收集。
+- `INDCARD` — 表示索引中的条目数量。
+- `LEAF` — 表示索引的叶节点数量。
+- `ELEAF` — 伪叶页数。
+- `LVLS (LEVELS)` — 索引的总层数。
+- `NDEL` — 被删除的唯一索引条目数。
+- `KEYS` — 唯一索引条目数。
+- `F4` — 聚类率或归一化的聚类因子
+- `F5` — 空间利用
+- `F6` — 少一级的索引中可用空间 / 任何键所需的空间
+- `F7` — 伪删除 RID 的数量 / RID 总数
+- `F8` — 伪空叶页的数量 / 叶页总数
+- `REORG` — 重组
+- `F8` — 伪空叶页的数量 / 叶页总数
+- `F5` — 叶页上的空间 / 非空叶页可用空间
+- `F6` — 少一级的索引中可用空间 / 任何键所需的空间
+- `F7` — 伪删除 RID 的数量 / RID 总数
+- `F4` — 聚类率或归一化的聚类因子
+- `NDEL` — 被删除的唯一索引条目数
+- `KEYS` — 唯一索引条目数
+- `LVLS (LEVELS)` — 索引的总层数
+- `ELEAF` — 伪叶页数
+- `LEAF` — 索引的叶节点数量
+- `INDCARD` — 索引中的条目数量
+- `SCHEMA.NAME` — 索引所属的模式和表名
 
 *(注：由于原文表格中部分行对应关系重复或错位，已按表格逻辑对应翻译)*
 
-
-
-
-
 ## 第 12 章 — 维护数据
 
-- RESUME — 恢复之前暂停的原地表重组。
-此命令将重组 TEST_TAKEN 表及其所有的索引，但不会将数据按任何特定顺序排列。
+- `RESUME` — 恢复之前暂停的原地表重组。
+
+此命令将重组 `TEST_TAKEN` 表及其所有的索引，但不会将数据按任何特定顺序排列。
 
 ```
 reorg table baklarz.test_taken
 ```
 
-> DB2 注意
-> 使用 REORG 时，必须使用表的完全限定位名。
+> **DB2 注意**
+> 使用 `REORG` 时，必须使用表的完全限定位名。
 
-> DB2 注意
-> DB2 具有执行在线 REORG 的能力，并支持整个表的读/写操作，正在进行 REORG 的表小部分除外。此外，重组可以“原地”（in-place）进行，因此在操作过程中不需要分配大量的临时空间。此操作仅支持类型 2 索引。
+> **DB2 注意**
+> DB2 具有执行在线 `REORG` 的能力，并支持整个表的读/写操作，正在进行 `REORG` 的表小部分除外。此外，重组可以“原地”（in-place）进行，因此在操作过程中不需要分配大量的临时空间。此操作仅支持类型 2 索引。
 
 ## 使用索引重组表
 
-在索引的帮助下，REORG 将把表数据按照与所选索引相同的物理顺序排列。此操作有助于缩短应用程序执行的响应时间。这是因为表的数据页将根据索引按顺序放置。这将有助于 DB2 在连续空间中查找数据，并减少读取数据所需的寻道时间。
+在索引的帮助下，`REORG` 将把表数据按照与所选索引相同的物理顺序排列。此操作有助于缩短应用程序执行的响应时间。这是因为表的数据页将根据索引按顺序放置。这将有助于 DB2 在连续空间中查找数据，并减少读取数据所需的寻道时间。
 
 如果 DB2 发现具有非常高聚集率的索引，可以使用它来避免排序，从而提高需要排序操作的应用程序的性能。
 
 当表只有一个索引时，建议使用该索引重组表。如果您的表定义了多个索引，应选择使用最频繁的索引。
 
-> DB2 注意
-> 使用 INDEX 命令重组索引时，DB2 允许对表及其现有索引进行读和更新操作。
+> **DB2 注意**
+> 使用 `INDEX` 命令重组索引时，DB2 允许对表及其现有索引进行读和更新操作。
 
-例如，假设 TEST_CENTER 表有一个名为 BY_COUNTRY 的索引，大多数该表的查询按国家分组。因此，您可能想使用 BY_COUNTRY 索引重组 TEST_CENTER 表。
+例如，假设 `TEST_CENTER` 表有一个名为 `BY_COUNTRY` 的索引，大多数该表的查询按国家分组。因此，您可能想使用 `BY_COUNTRY` 索引重组 `TEST_CENTER` 表。
 
-REORG 命令如下：
+`REORG` 命令如下：
 
 ```
 reorg table baklarz.test_center index by_country
 ```
 
-INDEX 告诉 REORG 工具使用指定的索引重组表。REORG 命令完成后，表的物理结构将匹配所选索引的顺序。通过这种方式，键将在表中顺序查找。
+`INDEX` 告诉 `REORG` 工具使用指定的索引重组表。`REORG` 命令完成后，表的物理结构将匹配所选索引的顺序。通过这种方式，键将在表中顺序查找。
 
-在图 12–45 中，使用了高聚集率索引来 REORG 表。所示低聚集率索引强调了使用与不使用索引进行重组的差异![](img/2fc7488b6558d6b99bbc7356ac416b1_802_0.png)
+在图 12–45 中，使用了高聚集率索引来 `REORG` 表。所示低聚集率索引强调了使用与不使用索引进行重组的差异
+
+![](img/2fc7488b6558d6b99bbc7356ac416b1_802_0.png)
 
 图 12–45 聚集率
 
@@ -19131,29 +18186,29 @@ INDEX 告诉 REORG 工具使用指定的索引重组表。REORG 命令完成后�
 
 表中定义的聚集索引可以帮助 DB2 在尝试插入新行时，使其物理上靠近键值范围相同的行。一个表只能有一个聚集索引。
 
-在使用索引选项重组表后，DB2 不会强制随后的插入或更新匹配表的物理结构。您可能希望定期运行 REORG 工具。
+在使用索引选项重组表后，DB2 不会强制随后的插入或更新匹配表的物理结构。您可能希望定期运行 `REORG` 工具。
 
 ## 使用临时表空间重组
 
-当 REORG 执行时，它会在表所在的表空间创建临时文件（或表）。您可以为 REORG 工具指定不同的表空间。如果您想控制这些表的位置，需要指定 USE 选项。
+当 `REORG` 执行时，它会在表所在的表空间创建临时文件（或表）。您可以为 `REORG` 工具指定不同的表空间。如果您想控制这些表的位置，需要指定 `USE` 选项。
 
-例如，如果正在重组表的表空间页大小为 8 KB，而你想使用 USE 选项，则指定的表空间必须具有相同的 8 KB 页大小。
+例如，如果正在重组表的表空间页大小为 8 KB，而你想使用 `USE` 选项，则指定的表空间必须具有相同的 8 KB 页大小。
 
-在此示例中，REORG 工具处理期间创建的临时表将放在临时表空间 TEMP1 中。
+在此示例中，`REORG` 工具处理期间创建的临时表将放在临时表空间 `TEMP1` 中。
 
 ```
 reorg table baklarz.test_center index by_country
 use tempspace1
 ```
 
-> DB2 注意
-> 如果发生故障，请勿删除 REORG 创建的临时文件，DB2 恢复时需要它们。
+> **DB2 注意**
+> 如果发生故障，请勿删除 `REORG` 创建的临时文件，DB2 恢复时需要它们。
 
-除了使用 REORG 工具外，还可以带有 MINPACTED 选项创建索引以启用在线在线在线。此参数指示索引页上允许的最小空间。如果记录的删除导致索引页条目的删除，且索引页使用的空间百分比小于 MINPACTED 值，则 DB2 合并两个页面并将一个标记为完全空。这提高了索引的性能。空页不会被删除；但索引文件（SMS）的大小或索引使用的存储（DMS）不受影响。要删除索引并减少使用的存储空间，用户必须显式重组表。
+除了使用 `REORG` 工具外，还可以带有 `MINPACTED` 选项创建索引以启用在线在线在线。此参数指示索引页上允许的最小空间。如果记录的删除导致索引页条目的删除，且索引页使用的空间百分比小于 `MINPACTED` 值，则 DB2 合并两个页面并将一个标记为完全空。这提高了索引的性能。空页不会被删除；但索引文件（SMS）的大小或索引使用的存储（DMS）不受影响。要删除索引并减少使用的存储空间，用户必须显式重组表。
 
 ## 从控制中心使用 REORG 工具
 
-您也可以通过右键点击表并选择“重组”从控制中心 REORG 表。图 12–46 给出了如何指定用于 REORG 的临时表空间和索引的示例。
+您也可以通过右键点击表并选择“重组”从控制中心 `REORG` 表。图 12–46 给出了如何指定用于 `REORG` 的临时表空间和索引的示例。
 
 ## 数据维护
 
@@ -19163,106 +18218,101 @@ use tempspace1
 
 用户可以选择查看并调度该命令：
 
-img/2fc7488b6558d6b99bbc7356ac416b1_804_0.png
+`img/2fc7488b6558d6b99bbc7356ac416b1_804_0.png`
 
-图 12–47 REORG 命令
+图 12–47 `REORG` 命令
 
 ## 重组表后的建议操作
 
 表重组有助于提高应用程序的性能。您应该遵循以下一些额外步骤：
 
-- 在表及其索引上使用 RUNSTATS。这将为优化器提供有关新物理结构的更新信息。
-- 对访问该表的包使用 REBIND。这将允许您的应用程序利用任何更改。
+- 在表及其索引上使用 `RUNSTATS`。这将为优化器提供有关新物理结构的更新信息。
+- 对访问该表的包使用 `REBIND`。这将允许您的应用程序利用任何更改。
 
 ## 生成统计信息
 
 系统目录表包含有关列、表和索引的信息。它们包含诸如表行数、表空间使用情况以及列中不同值的数量等信息。
 
-然而，这些信息不会保持更新。它们必须由名为 RUNSTATS 的工具生成。
+然而，这些信息不会保持更新。它们必须由名为 `RUNSTATS` 的工具生成。
 
-RUNSTATS 工具收集的统计信息可以用两种方式使用：显示数据的物理结构，以及为 DB2 优化器选择访问路径提供信息。
+`RUNSTATS` 工具收集的统计信息可以用两种方式使用：显示数据的物理结构，以及为 DB2 优化器选择访问路径提供信息。
 
 为了获得数据的高效访问路径，必须存在反映实际状态的最新统计信息。每当发布 SQL 语句时，DB2 优化器都会读取目录表以查看索引、表的大小、列的特征以及其他信息，以选择执行查询的最佳访问路径。
 
-如果统计信息没有反映当前状态，DB2 优化器将无法获得正确信息来选择执行查询的最优路径。随着 SQL 语句复杂性的增加，这变得至关重要。当仅访问没有索引的表时，优化器的可选范围较小。然而，当 SQL 语句涉及多个表且每个表都有一个或多个索引时，优化器的可选范围急剧增加。选择正确的访问路径可以显著缩短响应时间。改进性能的下一步涉及使用 RUNSTATS 工具。
+如果统计信息没有反映当前状态，DB2 优化器将无法获得正确信息来选择执行查询的最优路径。随着 SQL 语句复杂性的增加，这变得至关重要。当仅访问没有索引的表时，优化器的可选范围较小。然而，当 SQL 语句涉及多个表且每个表都有一个或多个索引时，优化器的可选范围急剧增加。选择正确的访问路径可以显著缩短响应时间。改进性能的下一步涉及使用 `RUNSTATS` 工具。
 
-建议对具有大量更新、插入或删除的表定期执行 RUNSTATS。
+建议对具有大量更新、插入或删除的表定期执行 `RUNSTATS`。
 
-在表进行 REORG 后，建议使用 RUNSTATS 工具。
+在表进行 `REORG` 后，建议使用 `RUNSTATS` 工具。
 
-DB2 的一项重要功能是允许您对系统目录表进行重组并使用 STATISTICS 工具。此功能可以提高查询目录表时生成的访问计划。
+DB2 的一项重要功能是允许您对系统目录表进行重组并使用 `STATISTICS` 工具。此功能可以提高查询目录表时生成的访问计划。
 
+## 使用 RUNSTATS 工具
 
+要使用 `RUNSTATS` 工具，你必须拥有以下权限之一：
+表的 `SYSADM`、`SYSCTRL`、`SYSMAINT`、`DBADM CONTROL` 权限，或 `LOAD` 权限。
 
-
-
-# 使用 RUNSTATS 工具
-
-要使用 RUNSTATS 工具，你必须拥有以下权限之一：
-表的 SYSADM、SYSCTRL、SYSMAINT、DBADM CONTROL 权限，或 LOAD 权限。
-
-图 12–48 显示了 RUNSTATS 工具的简写语法：
+图 12–48 显示了 `RUNSTATS` 工具的简写语法：
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_806_0.png)
 
-图 12–48 RUNSTATS 命令
+图 12–48 `RUNSTATS` 命令
 
-RUNSTATS 命令的一些关键参数包括（详细信息请参阅《DB2 命令参考》）：
+`RUNSTATS` 命令的一些关键参数包括（详细信息请参阅《DB2 命令参考》）：
 
-- - FOR INDEXES 仅收集和更新索引的统计信息。
-- AND INDEXES 同时收集和更新表和索引的统计信息。
-- DETAILED — 为大型索引计算扩展的索引统计信息。
-- SAMPLED — 与 DETAILED 选项配合时，使用采样技术来估计扩展索引统计信息。
-- ALLOW WRITE ACCESS 在计算统计信息时允许用户对表进行读写。
-- ALLOW READ ACCESS 在计算统计信息时允许用户对表进行读取访问。
+- `FOR INDEXES` — 仅收集和更新索引的统计信息。
+- `AND INDEXES` — 同时收集和更新表和索引的统计信息。
+- `DETAILED` — 为大型索引计算扩展的索引统计信息。
+- `SAMPLED` — 与 `DETAILED` 选项配合时，使用采样技术来估计扩展索引统计信息。
+- `ALLOW WRITE ACCESS` — 在计算统计信息时允许用户对表进行读写。
+- `ALLOW READ ACCESS` — 在计算统计信息时允许用户对表进行读取访问。
 
-# DB2 Note
+> **DB2 注意**
+> `RUNSTATS` 命令增强了其收集的统计信息，包括：列组合的统计信息、表的预取统计信息、索引统计信息、能够接受索引名称列表（以前仅适用于 API）、接受收集统计信息的列列表、接受统计信息限制（表级别的 `NUM_FREQVALUES` 和 `NUM_QUANTI` 值），而无需更改配置参数断开并重新连接所有用户。该工具通过对详细统计信息进行采样收集来运行得更快。
 
-RUNSTATS 命令增强了其收集的统计信息，包括：列组合的统计信息、表的预取统计信息、索引统计信息、能够接受索引名称列表（以前仅适用于 API）、接受收集统计信息的列列表、接受统计信息限制（表级别的 NUM_FREQVALUES 和 NUM_QUANTI 值），而无需更改配置参数断开并重新连接所有用户。该工具通过对详细统计信息进行采样收集来运行得更快。
-
-假设你是数据库管理员，并且注意到每当决策支持系统尝试解析用户请求时，在检索数据之前都需要花费大量时间。你决定通过使用 RUNSTATS 工具对某些系统目录表进行调查。此示例将使用 SYSIBM.SYSCOLUMNS 表：
+假设你是数据库管理员，并且注意到每当决策支持系统尝试解析用户请求时，在检索数据之前都需要花费大量时间。你决定通过使用 `RUNSTATS` 工具对某些系统目录表进行调查。此示例将使用 `SYSIBM.SYSCOLUMNS` 表：
 
 ```
 runstats on table sysibm.syscolumns
 ```
 
-RUNSTATS 工具不会产生显式结果。你只能通过查询系统目录表来查看其结果。
+`RUNSTATS` 工具不会产生显式结果。你只能通过查询系统目录表来查看其结果。
 
-以下是 RUNSTATS 更新的一些数据：
+以下是 `RUNSTATS` 更新的一些数据：
 
-| TABSSCHEMA | TABNAME | CARD | NPAGES | FPAGES | OVERFLOW |
+| `TABSSCHEMA` | `TABNAME` | `CARD` | `NPAGES` | `FPAGES` | `OVERFLOW` |
 | --- | --- | --- | --- | --- | --- |
-| SYSIBM | SYSCOLUMNS | 5033 | 286 | 286 | 33 |
-| SYSIBM | SYSTABLES | 368 | 45 | 45 | 1 |
+| `SYSIBM` | `SYSCOLUMNS` | 5033 | 286 | 286 | 33 |
+| `SYSIBM` | `SYSTABLES` | 368 | 45 | 45 | 1 |
 
-此输出是通过选择 SYSSTAT.TABLES 目录视图的所有列获取的。如果任何值为 -1（负一），则表示该对象没有可用的统计信息。SYSSTAT.TABLES 视图的列含义与 REORGCHK 工具的列含义相同：
+此输出是通过选择 `SYSSTAT.TABLES` 目录视图的所有列获取的。如果任何值为 -1（负一），则表示该对象没有可用的统计信息。`SYSSTAT.TABLES` 视图的列含义与 `REORGCHK` 工具的列含义相同：
 
-- * CARD — 表示表中的行数
-- NPAGES — 表示包含数据的总页数
-- FPAGES — 表示分配给表的总页数
-- OVERFLOW — 表示溢出行数
+- `CARD` — 表示表中的行数
+- `NPAGES` — 表示包含数据的总页数
+- `FPAGES` — 表示分配给表的总页数
+- `OVERFLOW` — 表示溢出行数
 
-# 识别已更新的统计信息
+## 识别已更新的统计信息
 
 识别特定对象缺少可用统计信息并不困难。统计信息列中的 -1（负一）值表示这种状态。然而，识别对象统计信息的最后更新时间也同样重要。
 
-当你对对象执行 RUNSTATS 时，该工具会在系统目录表中记录执行时间戳。根据对象的类型，你可以在 SYSCAT.TABLES 或 SYSCAT.INDEXES 中找到时间戳信息。在这两个视图中，信息存储在 STATS_TIME 列中。
+当你对对象执行 `RUNSTATS` 时，该工具会在系统目录表中记录执行时间戳。根据对象的类型，你可以在 `SYSCAT.TABLES` 或 `SYSCAT.INDEXES` 中找到时间戳信息。在这两个视图中，信息存储在 `STATS_TIME` 列中。
 
 旧的统计信息可能会影响访问路径的选择。它们可能会误导优化器为 SQL 语句选择不恰当的访问计划。
 
 拥有当前的统计信息是帮助优化器为特定 SQL 语句选择最佳访问路径的最佳方法。
 
-# 为表和索引收集统计信息
+## 为表和索引收集统计信息
 
-可以同时对表及其所有索引执行 RUNSTATS。这在下面的命令所示：
+可以同时对表及其所有索引执行 `RUNSTATS`。这在下面的命令所示：
 
 ```
 runstats on table baklarz.test_taken and indexes all
 ```
 
-REORGCHK 工具在调用 RUNSTATS 工具时会执行上述命令。INDEXES ALL 选项表示需要表所有索引的统计信息。AND 选项指定你需要表和索引的统计信息。
+`REORGCHK` 工具在调用 `RUNSTATS` 工具时会执行上述命令。`INDEXES ALL` 选项表示需要表所有索引的统计信息。`AND` 选项指定你需要表和索引的统计信息。
 
-# 仅为索引收集统计信息
+## 仅为索引收集统计信息
 
 在表上创建新索引后，你可能会发现仅为该表的索引收集统计是有用的。如果从未生成过表统计信息，此命令将同时生成表和索引统计信息；否则，仅生成索引统计信息。
 
@@ -19270,13 +18320,13 @@ REORGCHK 工具在调用 RUNSTATS 工具时会执行上述命令。INDEXES ALL �
 runstats on table baklarz.test_taken for indexes all
 ```
 
-# 为表列收集分布统计信息
+## 为表列收集分布统计信息
 
 某些列的值分布可能不均匀，或者其值集中在特定范围内。
 
-这种数据的非均匀分布可能会在优化器选择最合适的访问方法时误导它。然而，RUNSTATS 工具提供了此功能向优化器显示这种非均匀分布。这可能会改进此类表的访问计划。
+这种数据的非均匀分布可能会在优化器选择最合适的访问方法时误导它。然而，`RUNSTATS` 工具提供了此功能向优化器显示这种非均匀分布。这可能会改进此类表的访问计划。
 
-在此示例中，假设 75% 的 DB2 认证考试在一个测试中心进行，另外 25% 分布在其他测试中心。这种值的非均匀分布存储在 TEST_TAKEN 表中。
+在此示例中，假设 75% 的 DB2 认证考试在一个测试中心进行，另外 25% 分布在其他测试中心。这种值的非均匀分布存储在 `TEST_TAKEN` 表中。
 
 可以使用以下命令收集分布统计信息：
 
@@ -19284,77 +18334,73 @@ runstats on table baklarz.test_taken for indexes all
 runstats on table baklarz.test_taken with distribution
 ```
 
-WITH DISTRIBUTION 选项用于指示 DB2 收集有关值分布的数据。该选项与三个数据库参数相关：NUM_FREQVALUES、NUM_QUANTI 和 STAT_HEAP。
+`WITH DISTRIBUTION` 选项用于指示 DB2 收集有关值分布的数据。该选项与三个数据库参数相关：`NUM_FREQVALUES`、`NUM_QUANTI` 和 `STAT_HEAP`。
 
-# 第12 章维护数据
+## 第 12 章 维护数据
 
-WITH DISTRIBUTION 选项用于指示 DB2 收集有关值分布的数据。该选项与三个数据库参数相关：
+`WITH DISTRIBUTION` 选项用于指示 DB2 收集有关值分布的数据。该选项与三个数据库参数相关：
 
-- NUM_FREQVALUES — 指定 DB2 收集的频繁值的数量。
-- NUM_QUANTI — 指定 DB2 将查找的位数。
-- STAT_HEAP_SZ — 指定收集统计信息使用的内存。
+- `NUM_FREQVALUES` — 指定 DB2 收集的频繁值的数量。
+- `NUM_QUANTI` — 指定 DB2 将查找的位数。
+- `STAT_HEAP_SZ` — 指定收集统计信息使用的内存。
 
 此过程要求很高，不建议用于所有表。
 
 ## 索引的详细信息
 
-可以收集有关索引的更多信息，在此示例中为 TEST_TAKEN：
+可以收集有关索引的更多信息，在此示例中为 `TEST_TAKEN`：
 
 ```
 runstats on table baklarz.test_taken for detailed indexes all
 ```
 
-DETAILED 选项用于收集这些信息。收集的统计信息位于 SYSIBM.INDEXES 表的 CLUSTERFACTOR 和 PAGE_FETCHIRS 列中。CLUSTERFACTOR 和 PAGE_FETCHIRS 提供了索引与数据页之间更准确的测量。这两个值可以为优化器提供更详细的方式。
+`DETAILED` 选项用于收集这些信息。收集的统计信息位于 `SYSIBM.INDEXES` 表的 `CLUSTERFACTOR` 和 `PAGE_FETCHIRS` 列中。`CLUSTERFACTOR` 和 `PAGE_FETCHIRS` 提供了索引与数据页之间更准确的测量。这两个值可以为优化器提供更详细的方式。
 
 ## RUNSTATS 期间对表的访问
 
-RUNSTATS 工具允许对分析的表进行不同类型的访问：
+`RUNSTATS` 工具允许对分析的表进行不同类型的访问：
 
-- ALLOW WRITE ACCESS — 其他应用程序对表有读写权限。
-- ALLOW READ ACCESS — 其他应用程序对表有只读权限。
+- `ALLOW WRITE ACCESS` — 其他应用程序对表有读写权限。
+- `ALLOW READ ACCESS` — 其他应用程序对表有只读权限。
 
-你使用 RUNSTATS 命令中的 SHRLEVEL 选项指定这种访问级别（称为共享级别）。例如，在对 TEST_CANDIDATE 表执行 RUNSTATS 时，可以使用命令阻止其他应用程序写入表：
+你使用 `RUNSTATS` 命令中的 `SHRLEVEL` 选项指定这种访问级别（称为共享级别）。例如，在对 `TEST_CANDIDATE` 表执行 `RUNSTATS` 时，可以使用命令阻止其他应用程序写入表：
 
 ```
 runstats on table baklarz.test_candidate shrlevel read
 ```
 
-# RUNSTATS 后的建议操作
+## RUNSTATS 后的建议操作
 
 现在系统目录表已经更新，你应该执行以下过程。这将使你的应用程序从最近收集的表统计信息。
 
-- 对访问表的包执行 REBIND。这将让你的应用程序获得 DB2 优化器为改进访问策略所选择的更改。
-- 动态 SQL 语句将从 RUNSTATS 工具的执行中立即获益。在这种情况下不需要重新绑定包。
+- 对访问表的包执行 `REBIND`。这将让你的应用程序获得 DB2 优化器为改进访问策略所选择的更改。
+- 动态 SQL 语句将从 `RUNSTATS` 工具的执行中立即获益。在这种情况下不需要重新绑定包。
 
-# 从控制中心收集统计信息
+## 从控制中心收集统计信息
 
-通过在控制中心中右键点击表，你可以点击 Runstats 并通过图形界面更新表的统计信息。你可以指定对该表及其索引想要收集哪些统计信息。图 12–49 显示了针对 SALES 表的 RUNSTATS。Index 选项卡显示了与表关联的索引应收集的统计信息的额外选项。
+通过在控制中心中右键点击表，你可以点击 `Runstats` 并通过图形界面更新表的统计信息。你可以指定对该表及其索引想要收集哪些统计信息。图 12–49 显示了针对 `SALES` 表的 `RUNSTATS`。`Index` 选项卡显示了与表关联的索引应收集的统计信息的额外选项。
 
-
-
-
-
-## 784 第12 章 维护数据
+## 784 第 12 章 维护数据
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_811_0.png)
 
-图 12–49 从中心控制执行的 RUNSTATS
+图 12–49 从中心控制执行的 `RUNSTATS`
 
 用户可以选择检查生成的命令，并将其保存或调度在稍后执行。图 12–50 显示了生成的命令：
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_811_1.png)
 
-图 12–50 生成 RUNSTATS 命令
+图 12–50 生成 `RUNSTATS` 命令
 
 ## REBIND 工具
 
-REBIND 工具提供了使用系统目录表中的可用信息重新创建包（package）的能力。这可能允许您的嵌入 SQL 程序使用优化器选择的不同的访问路径。
+`REBIND` 工具提供了使用系统目录表中的可用信息重新创建包（package）的能力。这可能允许您的嵌入 SQL 程序使用优化器选择的不同的访问路径。
 
-建议在执行 REORG 或 RUNSTATS 后使用 REBIND。DB2 SQL 优化器将使用新的组织结构和最近收集的统计来生成访问路径。该访问路径可能更适合您的数据的新的物理结构。
+建议在执行 `REORG` 或 `RUNSTATS` 后使用 `REBIND`。DB2 SQL 优化器将使用新的组织结构和最近收集的统计来生成访问路径。该访问路径可能更适合您的数据的新的物理结构。
 
 ## 数据维护 785
 
-以下是 REBIND 工具的简写语法：
+以下是 `REBIND` 工具的简写语法：
 
 ```
 REBIND package-name
@@ -19366,173 +18412,97 @@ REBIND package-name
     CONSERVATIVE
 ```
 
+
+
 ## 图 12–51 REBIND 命令
 
-例如，假设您有一个名为 db2cert 的应用程序，它使用了 BAKLARZ.TEST_TAKEN 表。您为该表创建了一个新索引，需要使用 REBIND 让 db2cert 应用程序尝试使用新索引进行数据访问。
+例如，假设您有一个名为 `db2cert` 的应用程序，它使用了 `BAKLARZ.TEST_TAKEN` 表。您为该表创建了一个新索引，需要使用 `REBIND` 让 `db2cert` 应用程序尝试使用新索引进行数据访问。
 
 ## rebind db2cert
 
-如果您对数据库进行了重大更改并更新了所有统计信息，您可能希望重新创建所有使用该数据库的包。在这种情况下，您可能想使用 db2rind 工具。db2rind 工具允许您对当前位于 SYSCAT.PACKAGES 目录视图中的所有包进行显式重新绑定。以下命令重新绑定 SAMPLE 数据库中的所有包，并将结果记录到 db2rind.log。
+如果您对数据库进行了重大更改并更新了所有统计信息，您可能希望重新创建所有使用该数据库的包。在这种情况下，您可能想使用 `db2rind` 工具。`db2rind` 工具允许您对当前位于 `SYSCAT.PACKAGES` 目录视图中的所有包进行显式重新绑定。以下命令重新绑定 `SAMPLE` 数据库中的所有包，并将结果记录到 `db2rind.log`。
 
 ```
 db2rind sample /1 db2rind.log
 ```
 
-REOPT 选项对于根据新的索引、统计信息、参数标记或数据库中可能发生的其他优化来更新应用程序的行为。
+`REOPT` 选项用于根据新的索引、统计信息、参数标记或数据库中可能发生的其他优化来更新应用程序的行为。
 
-- NONE：对于包含主机变量、参数标记、全局变量或特殊寄存器的特定 SQL 语句的访问路径将不会使用这些变量的真实值进行优化。将使用这些变量的默认估计值，该计划将被缓存并在后续使用。
-- ONCE：在首次执行查询时，将使用主机变量、参数标记、全局变量或特殊寄存器的真实值优化特定 SQL 语句的访问路径。该计划将被缓存并在后续使用。
-- ALWAYS：特定 SQL 语句的访问路径将使用每次执行时已知的主机变量、参数标记、全局变量或特殊寄存器的值进行编译和重新优化。
+- `NONE`：对于包含主机变量、参数标记、全局变量或特殊寄存器的特定 SQL 语句的访问路径将不会使用这些变量的真实值进行优化。将使用这些变量的默认估计值，该计划将被缓存并在后续使用。
+- `ONCE`：在首次执行查询时，将使用主机变量、参数标记、全局变量或特殊寄存器的真实值优化特定 SQL 语句的访问路径。该计划将被缓存并在后续使用。
+- `ALWAYS`：特定 SQL 语句的访问路径将使用每次执行时已知的主机变量、参数标记、全局变量或特殊寄存器的值进行编译和重新优化。
 
- 数据维护过程
+## 数据维护过程
 
-如图 12–52 所示，数据维护过程从 RUNSTATS 开始，REORGCHK 工具可以同时执行 RUNSTATS 工具。但是，建议单独调用 RUNSTATS，以便您可以控制工具的选项并针对您的环境进行自定义。
+如图 12–52 所示，数据维护过程从 `RUNSTATS` 开始，`REORGCHK` 工具可以同时执行 `RUNSTATS` 工具。但是，建议单独调用 `RUNSTATS`，以便您可以控制工具的选项并针对您的环境进行自定义。
 
-执行 RUNSTATS 后，REORGCHK 工具会检查收集的统计信息，应用六个公式，然后给出是否需要 REORG 建议。
+执行 `RUNSTATS` 后，`REORGCHK` 工具会检查收集的统计信息，应用六个公式，然后给出是否需要 `REORG` 建议。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_813_0.png)
 
 图 12–52 数据维护过程
 
-如果建议重新组织，请对选定对象使用 REORG 工具，然后执行 RUNSTATS 和 REBIND。您必须对任何上述操作影响的包执行 REBIND，以便它们能够利用新的物理结构和更新统计信息的优势。在执行随后的更新、插入和删除操作后，作为数据维护过程的一部分，重复首先执行 RUNSTATS 工具。
+如果建议重新组织，请对选定对象使用 `REORG` 工具，然后执行 `RUNSTATS` 和 `REBIND`。您必须对任何上述操作影响的包执行 `REBIND`，以便它们能够利用新的物理结构和更新统计信息的优势。在执行随后的更新、插入和删除操作后，作为数据维护过程的一部分，重复首先执行 `RUNSTATS` 工具。
 
-为 RUNSTATS 和 REBIND 过程建立常规。更新的统计信息为您提供有关数据库状态的精确信息。
+为 `RUNSTATS` 和 `REBIND` 过程建立常规。更新的统计信息为您提供有关数据库状态的精确信息。
 
 ## 生产环境建模
 
-您可以使用 SYSSTAT 更新系统目录统计信息。您可以为表基数、列分布或索引聚集因子等统计信息输入值。这样做，您将能够在测试数据库上模拟不同量的数据。
+您可以使用 `SYSSTAT` 更新系统目录统计信息。您可以为表基数、列分布或索引聚集因子等统计信息输入值。这样做，您将能够在测试数据库上模拟不同量的数据。
 
 当您希望确保应用程序在生产环境中使用的访问路径与开发环境中的相同时，这非常有用。由于数据量不同，优化器在每个环境中选择的访问路径可能不同。
 
-通过更新 SYSSTAT 视图，您将为优化器提供与不同数据库相同的环境。更新过程是使用 SQL UPDATE 语句。
+通过更新 `SYSSTAT` 视图，您将为优化器提供与不同数据库相同的环境。更新过程是使用 `SQL UPDATE` 语句。
 
-在 SYSSTAT 架构下有可更新的视图。这些视图是：
+在 `SYSSTAT` 架构下有可更新的视图。这些视图是：
 
-- SYSSTAT.TABLES
-- SYSSTAT.COLUMNS
-- SYSSTAT.INDEXES
-- SYSSTAT.COLDIST
-- SYSSTAT.FUNCTIONS
+- `SYSSTAT.TABLES`
+- `SYSSTAT.COLUMNS`
+- `SYSSTAT.INDEXES`
+- `SYSSTAT.COLDIST`
+- `SYSSTAT.FUNCTIONS`
 
 这些目录视图可用于为数据库应用程序提供“假设性”（what-if）分析。例如，您可以增加表的基数或索引的聚集因子。
 
-您可以使用 REBIND 工具在“假设性”分析过程中模拟您的静态 SQL 应用程序的行为。您可以创建或删除索引，然后使用 REBIND 模拟该行为。
+您可以使用 `REBIND` 工具在“假设性”分析过程中模拟您的静态 SQL 应用程序的行为。您可以创建或删除索引，然后使用 `REBIND` 模拟该行为。
 
 ## REBIND 工具
 
-REBIND 工具提供了使用系统目录表中的可用信息重新创建包的能力。这可能允许您的嵌入 SQL 程序使用优化器选择的不同的访问路径。
+`REBIND` 工具提供了使用系统目录表中的可用信息重新创建包的能力。这可能允许您的嵌入 SQL 程序使用优化器选择的不同的访问路径。
 
-建议在执行 REORG 或 RUNSTATS 后使用 REBIND。DB2 SQL 优化器将使用新的组织结构和最近收集的统计来生成访问路径。该访问路径可能更适合您的数据的新的物理结构。
-
-## 数据维护 785
-
-以下是 REBIND 工具的简写语法：
-
-```
-REBIND package-name
-  PACKAGE VERSION version-name
-  REOPT NONE
-  REOPT ONCE
-  REOPT ALWAYS
-  RESOLVE ANY
-    CONSERVATIVE
-```
-
-## 图 12–51 REBIND 命令
-
-例如，假设您有一个名为 db2cert 的应用程序，它使用了 BAKLARZ.TEST_TAKEN 表。您为该表创建了一个新索引，需要使用 REBIND 让 db2cert 应用程序尝试使用新索引进行数据访问。
-
-## rebind db2cert
-
-如果您对数据库进行了重大更改并更新了所有统计信息，您可能希望重新创建所有使用该数据库的包。在这种情况下，您可能想使用 db2rind 工具。db2rind 工具允许您对当前位于 SYSCAT.PACKAGES 目录视图中的所有包进行显式重新绑定。以下命令重新绑定 SAMPLE 数据库中的所有包，并将结果记录到 db2rind.log。
-
-```
-db2rind sample /1 db2rind.log
-```REOPT 选项对于根据新的索引、统计信息、参数标记或数据库中可能发生的其他优化来更新应用程序的行为。
-
-- NONE：对于包含主机变量、参数标记、全局变量或特殊寄存器的特定 SQL 语句的访问路径将不会使用这些变量的真实值进行优化。将使用这些变量的默认估计值，该计划将被缓存并在后续使用。
-- ONCE：在首次执行查询时，将使用主机变量、参数标记、全局变量或特殊寄存器的真实值优化特定 SQL 语句的访问路径。该计划将被缓存并在后续使用。
-- ALWAYS：特定 SQL 语句的访问路径将使用每次执行时已知的主机变量、参数标记、全局变量或特殊寄存器的值进行编译和重新优化。
-
- 数据维护过程
-
-如图 12–52 所示，数据维护过程从 RUNSTATS 开始，REORGCHK 工具可以同时执行 RUNSTATS 工具。但是，建议单独调用 RUNSTATS，以便您可以控制工具的选项并针对您的环境进行自定义。
-
-执行 RUNSTATS 后，REORGCHK 工具会检查收集的统计信息，应用六个公式，然后给出是否需要 REORG 建议。
-
-![](img/2fc7488b6558d6b99bbc7356ac4116b1_813_0.png) 图 12–52 数据维护过程
-
-如果建议重新组织，请对选定对象使用 REORG 工具，然后执行 RUNSTATS 和 REBIND。您必须对任何上述操作影响的包执行 REBIND，以便它们能够利用新的物理结构和更新统计信息的优势。在执行随后的更新、插入和删除操作后，作为数据维护过程的一部分，重复首先执行 RUNSTATS 工具。
-
-为 RUNSTATS 和 REBIND 过程建立常规。更新的统计信息为您提供有关数据库状态的精确信息。
-
-## 生产环境建模
-
-您可以使用 SYSSTAT 更新系统目录统计信息。您可以为表基数、列分布或索引聚集因子等统计信息输入值。这样做，您将能够在测试数据库上模拟不同量的数据。
-
-当您希望确保应用程序在生产环境中使用的访问路径与开发环境中的相同时，这非常有用。由于数据量不同，优化器在每个环境中选择的访问路径可能不同。
-
-通过更新 SYSSTAT 视图，您将为优化器提供与不同数据库相同的环境。更新过程是使用 SQL UPDATE 语句。
-
-在 SYSSTAT 架构下有可更新的视图。这些视图是：
-
-- SYSSTAT.TABLES
-- SYSSTAT.COLUMNS
-- SYSSTAT.INDEXES
-- SYSSTAT.COLDIST
-- SYSSTAT.FUNCTIONS
-
-这些目录视图可用于为数据库应用程序提供“假设性”分析。例如，您可以增加表的基数或索引的聚集因子。
-
-您可以使用 REBIND 工具在“假设性”分析过程中模拟您的静态 SQL 应用程序的行为。您可以创建或删除索引，然后使用 REBIND 模拟该行为。
-
-## REBIND 工具
-
-REBIND 工具提供了使用系统目录表中的可用信息重新创建包的能力。这可能允许您的嵌入 SQL 程序使用优化器选择的不同的访问路径。
-
-建议在执行 REORG 或 RUNSTATS 后使用 REBIND。DB2 SQL 优化器将使用新的组织结构和最近收集的统计来生成访问路径。该访问路径可能更适合您的数据的新的物理结构。
+建议在执行 `REORG` 或 `RUNSTATS` 后使用 `REBIND`。`DB2 SQL` 优化器将使用新的组织结构和最近收集的统计来生成访问路径。该访问路径可能更适合您的数据的新的物理结构。
 
 ## 数据维护 785
 
-以下是 REBIND 工具的简写语法：
+以下是 `REBIND` 工具的简写语法：
 
 ```
 REBIND package-name
+
   PACKAGE VERSION version-name
+
   REOPT NONE
+
   REOPT ONCE
+
   REOPT ALWAYS
+
   RESOLVE ANY
+
     CONSERVATIVE
 ```
 
-## 图 12–51 REBIND 命令
-
-例如，假设您有一个名为 db2cert 的应用程序，它使用了 BAKLARZ.TEST_TAKEN 表。您为该表创建了一个新索引，需要使用 REBIND 让 db2cert 应用程序尝试使用新索引进行数据访问。
-
-## rebind db2cert
-
-如果您对数据库进行了重大更改并更新了所有统计信息，您可能希望重新创建所有使用该数据库的包。在这种情况下，您可能想使用 db2rind 工具。db2rind 工具允许您对当前位于 SYSCAT.PACKAGES 目录视图中的所有包进行显式重新绑定。以下命令重新绑定 SAMPLE 数据库中的所有包，并将结果记录到 db2rind.log。
-
-```
-db2rind sample /1 db2rind.log
-```
-
-（注：由于原文中存在大量内容重复，译文已根据您的要求完成了核心逻辑的翻译并保持了格式。）
-
-
-
-
-
-## 第12 章 维护数据
+## 第 12 章 维护数据
 
 DBA 编辑 `SAMPLE.DDL` 文件，将 `CONNECT` 语句中的 `SAMPLE` 替换为 `TESTMPL` 并执行以下命令：
 
-```bash
+```
 db2 -tvf sample.ddl
 ```
 
-控制中心（Control Center）提供了一种用户友的方法来调用 DB2LOOK 工具。只需在所需的数据库对象上点击右键并选择“生成 DDL”选项（图 12–54）。
+
+
+控制中心（Control Center）提供了一种用户友好的方法来调用 `DB2LOOK` 工具。只需在所需的数据库对象上点击右键并选择“生成 DDL”选项（图 12–54）。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_817_0.png)
 
@@ -19540,13 +18510,11 @@ db2 -tvf sample.ddl
 
 ### 从控制中心执行 DB2LOOK
 
-DB2LOOK 工具可以远程调用，因此用户不需要指定存储输出的文件名。相反，用户可以查看调用脚本中心（Script Center）生成的脚本文件来查看和编辑脚本，如图 12–55 所示。
-
-## 总结 791
+`DB2LOOK` 工具可以远程调用，因此用户不需要指定存储输出的文件名。相反，用户可以查看调用脚本中心（Script Center）生成的脚本文件来查看和编辑脚本，如图 12–55 所示。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_818_0.png)
 
-图 12–55 任务中心列表 DB2LOOK 输出脚本
+图 12–55 任务中心列表 `DB2LOOK` 输出脚本
 
 ## 总结
 
@@ -19558,13 +18526,14 @@ DB2LOOK 工具可以远程调用，因此用户不需要指定存储输出的文
 - 存储导出数据的操作系统文件的路径和名称。
 - 输入文件中数据的格式。该格式可以是 `IXF`、`WSF` 或 `DEL`。
 
-- `IMPORT` 工具将数据从输入文件插入表或可更新的视图中。如果接收导入数据的表或视图已包含数据，您可以替换或追加现有数据。`IMPORT` 工具需要以下信息：
+`IMPORT` 工具将数据从输入文件插入表或可更新的视图中。如果接收导入数据的表或视图已包含数据，您可以替换或追加现有数据。`IMPORT` 工具需要以下信息：
+
 - 输入文件的路径和名称。
 - 目标表或视图的名称或别名。
 - 输入文件中数据的格式。该格式可以是 `IXF`、`WSF`、`DEL` 或 `ASC`。
 - 输入数据是插入到表或视图，还是用输入数据更新或替换表或视图中的现有数据。
 
-`LOAD` 工具能够高效地将大量数据移动新创建的表或已包含数据的表中。该工具可以处理大多数数据类型，包括大对象（LOBs）和自定义类型（UDTs）。`LOAD` 工具比 `IMPORT` 工具快，因为它直接将格式化后的页面写入数据库，而 `IMPORT` 工具执行的是 `INSERT`。`LOAD` 工具不会触发触发器，也不会执行引用或约束检查（除验证索引的唯一性外外）。加载数据需要以下信息：
+`LOAD` 工具能够高效地将大量数据移动新创建的表或已包含数据的表中。该工具可以处理大多数数据类型，包括大对象（LOBs）和自定义类型（UDTs）。`LOAD` 工具比 `IMPORT` 工具快，因为它直接将格式化后的页面写入数据库，而 `IMPORT` 工具执行的是 `INSERT`。`LOAD` 工具不会触发触发器，也不会执行引用或约束检查（除验证索引的唯一性外）。加载数据需要以下信息：
 
 - 输入文件、命名管道或设备的路径和名称。
 - 目标表的名称或别名。
@@ -19575,9 +18544,7 @@ DB2LOOK 工具可以远程调用，因此用户不需要指定存储输出的文
 
 当索引表被修改多次后，索引中的数据可能会变得碎片。如果表相对于索引是聚集的，则表和索引可能会超出聚集顺序。这两个因素都会不利地影响使用索引进行扫描的性能，并影响索引页预取的有效性。可以使用 `REORG INDEXES` 重新组织表上的所有索引，消除任何碎片并恢复叶节点页的聚集。被修改多次以至于数据碎片化且访问性能明显缓慢的表是 `REORG TABLE` 命令的候选对象。在重新组织表后，使用 `RUNSTATS` 更新表统计信息。在运行 `RUNSTATS` 后，应执行 `REBIND` 以确保应用程序感知到您环境中更新的统计信息。
 
-## 第13 章
-
-## 数据库恢复
+## 第 13 章 数据库恢复
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_820_0.png)
 
@@ -19592,29 +18559,15 @@ DB2LOOK 工具可以远程调用，因此用户不需要指定存储输出的文
 
 在本章中，将讨论关系型数据库系统中与恢复相关的日志记录概念。此外，将回顾涉及恢复的主要工具 `BACKUP` 和 `RESTORE`。
 
-## 数据库恢复
-
-### 第13 章
-
-### 数据库恢复
-
-任何数据库管理系统的基本功能之一都是能够从导致数据库完整性受损的事件中恢复。DB2 在这方面也不例外，提供了许多特性和功能帮助您管理环境并确保您能够对数据进行适当恢复。
-
-在本章中，将讨论关系型数据库系统中与恢复相关的日志记录概念。此外，将回顾涉及恢复的主要工具 `BACKUP` 和 `RESTORE`。
-
-### 数据库恢复
-
 ### 数据库恢复概念
 
 能够从导致数据库完整性受损的事件中恢复是任何数据库管理系统的基本功能之一。DB2 在这方面也不例外，提供了许多特性和功能帮助您管理环境并确保您能够对数据进行适当恢复。
 
 在本章中，将讨论关系型数据库系统中与恢复相关的日志记录概念。此外，将回顾涉及恢复的主要工具 `BACKUP` 和 `RESTORE`。
 
-### 数据库恢复
-
 虽然 DB2 具有确保您可以对数据进行适当恢复的机制，但无法涵盖每种情况，仔细的计划可以确保最小损失。考虑到的情况：
 
-字体 系统故障——由于硬件原因故障。
+- 系统故障——由于硬件原因故障。
 - 事务失败——在完成前失败。
 - 介质故障——磁盘部分或完全丢失。
 - 灾难——影响超过单一组件。
@@ -19623,7 +18576,7 @@ DB2LOOK 工具可以远程调用，因此用户不需要指定存储输出的文
 
 为了确保数据库的一致性，通常需要将更改作为一个单元进行应用。工作单元是应用程序中的一系列操作。
 
-## 事务
+### 事务
 
 工作单元也称为事务。当对数据库执行第一个 SQL 语句时隐式启动。应用程序必须通过执行 `COMMIT` 或 `ROLLBACK` 语句来结束事务。
 
@@ -19643,7 +18596,7 @@ DB2LOOK 工具可以远程调用，因此用户不需要指定存储输出的文
 
 版本恢复允许恢复使用 `BACKUP` 命令创建的数据库之前的版本或映像。
 
-恢复将使用某时间点的数据库备份重建整个数据库。数据库备份允许您将数据库恢复到与备份时相同的状态。从备份到日志结束的所有工作单元都丢失了。这些可以通过滚向前恢复来。
+恢复将使用某时间点的数据库备份重建整个数据库。数据库备份允许您将数据库恢复到与备份时相同的状态。从备份到日志结束的所有工作单元都丢失了。这些可以通过滚向前恢复来恢复。
 
 版本恢复方法要求为未来可能需要恢复的每个版本都需要完整的数据库备份。DB2 默认支持版本恢复。
 
@@ -19653,22 +18606,16 @@ DB2LOOK 工具可以远程调用，因此用户不需要指定存储输出的文
 
 通过使用完整数据库备份作为基准，如果可用覆盖从备份时间到当前时间的所有日志文件，您可以选择让 DB2 在日志覆盖范围内的任何时间应用数据库中任何或所有表的所有工作单元。
 
-
-
-
-
-## 第 13 章 数据库恢复
-
 ## DB2 注意
 
-在表空间重滚恢复（roll-forward recovery）中使用的目录表空间 SYSCATSPACE *必须*向前滚到日志末尾。它可以作为数据库重滚恢复的一部分，向前滚到某个时间点。
+在表空间重滚恢复（roll-forward recovery）中使用的目录表空间 `SYSCATSPACE` *必须*向前滚到日志末尾。它可以作为数据库重滚恢复的一部分，向前滚到某个时间点。
 
 ## 恢复策略
 
 在制定恢复策略时，需要考虑的因素包括：
 
 - 数据库是可恢复的还是不可恢复的？
-- 你需要多多接近故障发生的时间来恢复数据库（恢复点）？
+- 你需要多接近故障发生的时间来恢复数据库（恢复点）？
 - 可以花费多少时间来恢复数据库？
 - 所有的恢复活动的时间窗口有多大？
 - 有哪些可用存储资源用于存储备份和日志文件？
@@ -19706,8 +18653,6 @@ DB2 中的可恢复数据库通过启用 `LOGRETAIN` 和 `USEREXIT`，或 `LOGAR
 
 图 13–1 事务日志文件使用
 
-## 第 13 章 数据库恢复
-
 图的顶部代表三个用户进程（1 – 3）访问同一个数据库的演变。框表示作为插入或更新的数据库更改。每个事务的生命周期也被描绘出来（A – F）。图的中底部显示了数据库更改如何同步记录在日志文件中（x,y）。每个框中的字母表示数据库更改所属的事务。
 
 ## DB2 注意
@@ -19742,97 +18687,91 @@ DB2 中可以发生两种日志记录类型：循环记录和归档。
 - 循环记录：这是默认方法。它使用固定数量的主日志文件。当日志文件满时，最旧的日志将被覆盖。此方法不支持重滚恢复。
 - 归档记录：这种方法在日志文件满时将其移动到另一个位置。这允许进行重滚恢复。
 
+## LOGRETAIN 和 USEREXIT
 
-
-
-
-# LOGRETAIN 和 USEREXIT
-
-当启用 LOGRETAIN 数据库配置参数时，日志文件在失效后不会被删除。当启用 USEREXIT 数据库配置参数时，当日志文件准备归档时，DB2 将调用用户退出程序。数据库名称、日志文件路径以及其他几个参数将传递给该程序。
+当启用 `LOGRETAIN` 数据库配置参数时，日志文件在失效后不会被删除。当启用 `USEREXIT` 数据库配置参数时，当日志文件准备归档时，DB2 将调用用户退出程序。数据库名称、日志文件路径以及其他几个参数将传递给该程序。
 
 如果启用了用户退出选项，你可以选择执行 `ARCHIVE LOG` 命令来强制进行日志归档。
 
 ## DB2 注意
 
-LOGRETAIN 和 USEREXIT 的默认设置为 NO；因此，循环日志是默认设置。
+`LOGRETAIN` 和 `USEREXIT` 的默认设置为 `NO`；因此，循环日志是默认设置。
 
-# LOGARCHMETHOD1 和 LOGARCHMETH2
+## LOGARCHMETHOD1 和 LOGARCHMETH2
 
-LOGARCHMETHOD1 参数指定归档日志主要目的介质类型。LOGARCHMETHOD1 可以包含五个值之一：
+`LOGARCHMETHOD1` 参数指定归档日志主要目的介质类型。`LOGARCHMETHOD1` 可以包含五个值之一：
 
-- OFF（默认）
-  指定不使用日志归档方法。如果 LOGARCHMETHOD1 和 LOGARCHMETH2 都被设置为 OFF，则该数据库被认为使用循环日志，且无法恢复。
-- LOGRETAIN
-  此值仅适用于 LOGARCHMETHOD1，且等同于将 LOGRETAIN 配置参数设置为 RECOVERY。
-- USEREXIT
-  此值仅对 LOGARCHMETHOD1 有效，且等同于将退出配置参数设置为 ON。
-- DISK
-  此值后必须跟一个冒号(:)，然后是日志文件将归档的完全限定现有路径名。例如，如果你将 LOGARCHMETHOD1 设置为 DISK:/u/db2user/archived_logs，则归档日志文件将被放在 /u/db2user/archived_logs 目录。
-- TSM
-  此值表示日志文件应使用默认管理类在本地 TSM 服务器上归档。如果后面跟着冒号(:) 和一个 TSM 管理类，则日志文件将使用指定的管理类进行归档。
-- VENDOR
-  指定将使用厂商库 library() 来归档日志文件。此值后必须跟一个冒号和日志名称。库中提供的 API 必须使用厂商产品的备份和恢复 API。
+- `OFF`（默认）
+  指定不使用日志归档方法。如果 `LOGARCHMETHOD1` 和 `LOGARCHMETH2` 都被设置为 `OFF`，则该数据库被认为使用循环日志，且无法恢复。
+- `LOGRETAIN`
+  此值仅适用于 `LOGARCHMETHOD1`，且等同于将 `LOGRETAIN` 配置参数设置为 `RECOVERY`。
+- `USEREXIT`
+  此值仅对 `LOGARCHMETHOD1` 有效，且等同于将退出配置参数设置为 `ON`。
+- `DISK`
+  此值后必须跟一个冒号（`:`），然后是日志文件将归档的完全限定现有路径名。例如，如果你将 `LOGARCHMETHOD1` 设置为 `DISK:/u/db2user/archived_logs`，则归档日志文件将被放在 `/u/db2user/archived_logs` 目录。
+- `TSM`
+  此值表示日志文件应使用默认管理类在本地 TSM 服务器上归档。如果后面跟着冒号（`:`）和一个 TSM 管理类，则日志文件将使用指定的管理类进行归档。
+- `VENDOR`
+  指定将使用厂商库 `library()` 来归档日志文件。此值后必须跟一个冒号和日志名称。库中提供的 API 必须使用厂商产品的备份和恢复 API。
 
-LOGARCHMETHOD2 参数指定归档日志次目的地的介质类型。该参数的值可以是 OR，也可以设置为文件路径。如果指定了路径，日志文件将同时归档到此目的地以及 LOGARCHMETHOD1 数据库配置参数指定的目的地。
+`LOGARCHMETHOD2` 参数指定归档日志次目的地的介质类型。该参数的值可以是 `OR`，也可以设置为文件路径。如果指定了路径，日志文件将同时归档到此目的地以及 `LOGARCHMETHOD1` 数据库配置参数指定的目的地。
 
-# 滚前进恢复 (Roll-FORWARD Recovery)
+## 滚向前恢复 (Roll-Forward Recovery)
 
-滚前进恢复可以使用归档日志、离线归档日志和活动日志，在日志末尾或特定时间点重建数据库或表空间。滚前进功能通过将归档日志和活动日志中找到已提交工作单元重放到恢复的数据库中来实现这一目标。
+滚向前恢复可以使用归档日志、离线归档日志和活动日志，在日志末尾或特定时间点重建数据库或表空间。滚向前功能通过将归档日志和活动日志中找到已提交工作单元重放到恢复的数据库中来实现这一目标。
 
 ## DB2 注意
 
-当前日志文件路径由数据库配置参数 LOGPATH 指定。在创建数据库时，日志文件被放在默认的数据库目录下。NEWLOGPATH 数据库配置参数用于更改日志文件位置。
+当前日志文件路径由数据库配置参数 `LOGPATH` 指定。在创建数据库时，日志文件被放在默认的数据库目录下。`NEWLOGPATH` 数据库配置参数用于更改日志文件位置。
 
-# 日志文件使用
+## 日志文件使用
 
 在使用日志文件时，有一些需要注意的考虑。这些考虑如下：
 
-# 删除日志
+### 删除日志
 
 如果活动日志被删除，数据库将变得不可用，必须在恢复后才能再次使用。
 
-如果归档日志被删除，你将只能滚前进恢复到第一个被删除的日志之前的更改。
+如果归档日志被删除，你将只能滚向前恢复到第一个被删除的日志之前的更改。
 
 所有日志文件都由操作系统的安全子系统进行保护是至关重要的。除了将归档日志移出日志路径目录的过程外，DB2 之外没有其他用户或应用程序需要访问日志文件。
 
-# 第 13 章数据库恢复
+### 使用“初始不日志” (NOT LOGGED INITIALLY) 选项
 
-# 使用“初始不日志” (NOT LOGGEDITIALLY) 选项
-
-NOT LOGGEDALLY 选项存在于 CREATE TABLE 和 ALTER TABLE 语句中。当使用此选项时，创建或更改表（或稍后激活此选项）的工作单元内的任何可日志活动都不会被记录日志。这在首次向表中插入或更新大量数据时是一个优势。该选项也适用于数据可以重新创建的工作表。
+`NOT LOGGED INITIALLY` 选项存在于 `CREATE TABLE` 和 `ALTER TABLE` 语句中。当使用此选项时，创建或更改表（或稍后激活此选项）的工作单元内的任何可日志活动都不会被记录日志。这在首次向表中插入或更新大量数据时是一个优势。该选项也适用于数据可以重新创建的工作表。
 
 该选项的优势是由于没有日志开销而提高了性能；其缺点是工作单元缺乏可恢复性。
 
-# 使用原始设备 (Raw Devices) 进行日志记录
+### 使用原始设备 (Raw Devices) 进行日志记录
 
 通常，日志文件使用标准操作系统文件系统来支持其实现（例如 Windows 的 NTFS，AIX 的 JFS）。
 
 除了标准文件系统外，你还可以使用原始设备进行日志记录。通过使用原始设备，你可以避免文件系统的开销，因此日志性能应该会提高。这种支持在 Windows、AIX 和 Solaris 操作系统上可用。
 
-这涉及使用未格式化的磁盘分区（Windows）或原始逻辑卷（AIX）。数据库配置参数 NEWLOGPATH 被设置为指向该设备。
+这涉及使用未格式化的磁盘分区（Windows）或原始逻辑卷（AIX）。数据库配置参数 `NEWLOGPATH` 被设置为指向该设备。
 
 使用原始设备进行日志记录的一些考虑因素如下：
 
-- 主日志文件（区段）仍然根据 LOGPRIMARY 和 LOGFILSZ 数据库配置参数使用。原始设备中的容量必须至少为 (LOGPRIMARY * (LOGFILSZ + 2)) + 1) 个每个 4 KB 的页。
-- 不使用辅助日志文件。你可能需要增加主日志文件的数量和/大小以补偿这一点。
+- 主日志文件（区段）仍然根据 `LOGPRIMARY` 和 `LOGFILSZ` 数据库配置参数使用。原始设备中的容量必须至少为 `(LOGPRIMARY * (LOGFILSZ + 2)) + 1)` 个每个 4 KB 的页。
+- 不使用辅助日志文件。你可能需要增加主日志文件的数量和/或大小以补偿这一点。
 
 请参阅《DB2 管理指南》获取有关使用原始设备的更多细节。使用原始设备记录日志在 DB2 9 中被弃用，这意味着它在未来的版本中将不再支持。
 
-# 日志目录满时分块事务
+### 日志目录满时分块事务
 
-DBM 配置参数 BLK_LOG_DSK_FUL 可防止生成磁盘满错误。这涉及对 db2diag.log 进行未格式化的磁盘分析。
+DBM 配置参数 `BLK_LOG_DSK_FUL` 可防止生成磁盘满错误。这涉及对 `db2diag.log` 进行未格式化的磁盘分析。
 
-# 使用备份和恢复进行版本恢复
+## 使用备份和恢复进行版本恢复
 
 ## DB2 注意
 
 日志量已增加到 256GB。
 
-# 备份数据库
+### 备份数据库
 
 执行数据库备份时，恢复历史文件会自动更新摘要信息。这些信息对于跟踪数据库的备份历史有用。其他工具的活动也记录在此文件中。
 
-备份映像创建在调用 BACKUP 工具时指定的目标位置：
+备份映像创建在调用 `BACKUP` 工具时指定的目标位置：
 
 - 在磁盘备份目录中
 - 在磁带备份指定的设备上
@@ -19845,26 +18784,23 @@ DBM 配置参数 BLK_LOG_DSK_FUL 可防止生成磁盘满错误。这涉及对 d
 - 实例名称 —— 实例的一个到八字符的名称。
 - 节点号 —— 节点号。
 - 目录节点号 —— 数据库目录节点的节点号。
-
-
-
-
-
-# 使用备份和恢复进行版本恢复
-
-- 时间戳（Time stamp）—— 执行备份时的日期和时间的 14 位字符表示。时间戳格式为 yyyymymmddhhmmss，其中：
-  yyyy 是年份（1995 到 9999），mm 是月份（01 到 12），
-  dd 是日期（01 到 31），hh 是小时（00 到 23），
-  mm 是分钟（00 到 59），ss 是秒数（00 到 59）。
+- 时间戳（Time stamp）—— 执行备份时的日期和时间的 14 位字符表示。时间戳格式为 `yyyymmddhhmmss`，其中：
+  `yyyy` 是年份（1995 到 9999），`mm` 是月份（01 到 12），
+  `dd` 是日期（01 到 31），`hh` 是小时（00 到 23），
+  `mm` 是分钟（00 到 59），`ss` 是秒数（00 到 59）。
 - 序列号（Sequence number）—— 用作文件扩展名的三位序列号。
 
 在所有操作系统上，该格式显示如下：
 
 ```
-DB_alias.Type.Inst.nodennnn.catnnnn.timestamp.seq_num
+database_alias.type.instance_name.nodenum.catnodenum.timestamp.seqnum
 ```
 
-例如，在 DB2 实例中名为 SAMPLE 的数据库被备份为名为如下的文件：
+
+
+`DB_alias.Type.Inst.nodennnn.catnnnn.timestamp.seq_num`
+
+例如，在 DB2 实例中名为 `SAMPLE` 的数据库被备份为名为如下的文件：
 
 ```
 SAMPLE.0.DB2.NODE0000.CAT0000.20070410092203.001
@@ -19876,7 +18812,7 @@ SAMPLE.0.DB2.NODE0000.CAT0000.20070410092203.001
 DB_alias.Type\Inst\nodennnn\catnnnn\yyymymddhhmmss.seq_num
 ```
 
-上一个示例将 SAMPLE 数据库备份为：
+上一个示例将 `SAMPLE` 数据库备份为：
 
 ```
 V:\SAMPLE.0\DB2\NODE0000\CAT0000\20070410\092203.001
@@ -19884,25 +18820,21 @@ V:\SAMPLE.0\DB2\NODE0000\CAT0000\20070410\092203.001
 
 对于磁带定向输出，不会创建文件名；但上述信息存储在备份头中用于验证。
 
-# 使用备份的示例
+## 使用备份的示例
 
-BACKUP 命令的一些关键参数（图 13–4）请参考《DB2 命令参考》以获取详细信息：
+`BACKUP` 命令的一些关键参数（图 13–4）请参考《DB2 命令参考》以获取详细信息：
 
-- ONLINE — 指定进行在线备份，默认为 off。
-- INCREMENTAL（增量）—— 指定自上一次全备以来的所有数据的备份。
-- DELTA（差异）—— 指定自由于任何类型的最近一次备份操作以来的数据备份。
+- `ONLINE` — 指定进行在线备份，默认为 `off`。
+- `INCREMENTAL`（增量）—— 指定自上一次全备以来的所有数据的备份。
+- `DELTA`（差异）—— 指定自由于任何类型的最近一次备份操作以来的数据备份。
 
-你可以从 DB2 命令行处理器或 DB2 命令中心运行 BACKUP 命令。例如，此命令将数据库 SAMPLE 备份到 Windows 系统上的 C:\DBBACKUP 目录。其他参数采用其默认值：
+你可以从 DB2 命令行处理器或 DB2 命令中心运行 `BACKUP` 命令。例如，此命令将数据库 `SAMPLE` 备份到 Windows 系统上的 `C:\DBBACKUP` 目录。其他参数采用其默认值：
 
 ```
 BACKUP DATABASE SAMPLE TO C:\DBBACKUP
 ```
 
-# 第 13 章 数据库恢复
-
-# 图 13–4 BACKUP 命令
-
-此命令将数据库 SAMPLE 备份到 AIX 系统上的磁带设备上。分配了两个各 512 (4 KB) 页的缓冲区。使用两个并行任务进行并行备份。
+此命令将数据库 `SAMPLE` 备份到 AIX 系统上的磁带设备上。分配了两个各 512 (4 KB) 页的缓冲区。使用两个并行任务进行并行备份。
 
 ```
 BACKUP DATABASE SAMPLE TO /dev/rmt0
@@ -19915,8 +18847,6 @@ PARALLEISM 2
 
 图 13–5 从控制中心备份数据库
 
-# 第 13 章 数据库恢复
-
 显示备份向导面板（图 13–6）：
 
 图 13–6 确认数据库详情
@@ -19925,11 +18855,11 @@ PARALLEISM 2
 
 图 13–7 指定存储备份镜像的位置
 
-# 使用备份和恢复进行版本恢复
+## 使用备份和恢复进行版本恢复
 
-在这里，你可以选择是备份到文件系统、磁带、TSM、XBSA 还是第三方存储。在此例中，选择“文件系统”，点击“添加”，选择目录 DBBACKUP，并点击“确定”返回此面板。点击“下一步”。
+在这里，你可以选择是备份到文件系统、磁带、TSM、XBSA 还是第三方存储。在此例中，选择“文件系统”，点击“添加”，选择目录 `DBBACKUP`，并点击“确定”返回此面板。点击“下一步”。
 
-## DB2 注意
+### DB2 注意
 
 DB2 备份现在可以与实现了 XBSA（备份服务 API）行业标准接口的存储供应商解决方案对接。
 
@@ -19937,17 +18867,13 @@ DB2 备份现在可以与实现了 XBSA（备份服务 API）行业标准接口�
 
 如果启用了归档日志，此面板将为 DBA 提供在线执行备份过程的选择（图 13–8）。归档日志还允许执行增量备份。在此例中，点击“下一步”以显示备份期间可用的性能选项（图 13–9）。
 
-# 第 13 章 数据库恢复
-
 图 13–9 指定备份的性能选项
 
 你可以在此面板上更改备份的各种性能参数，但通常你应该让 DB2 决定。点击“下一步”。
 
-## DB2 注意
+### DB2 注意
 
 在在线备份完成后，DB2 将关闭活动日志。这一操作增强使得更容易确保在线备份具有恢复所需的全部日志。
-
-# 使用备份和恢复进行版本恢复
 
 图 13–10 调度任务
 
@@ -19957,9 +18883,9 @@ DB2 备份现在可以与实现了 XBSA（备份服务 API）行业标准接口�
 
 在启动备份过程之前，你可以选择将脚本保存到文件中（图 13–11）。点击“完成”。
 
-在两种情况下，你都可以通过从控制中心调用的日志（Journal）监控并查看运行 BACKUP 命令的结果。
+在两种情况下，你都可以通过从控制中心调用的日志（Journal）监控并查看运行 `BACKUP` 命令的结果。
 
-# 增量备份
+## 增量备份
 
 DB2 允许两种增量备份：
 
@@ -19970,82 +18896,71 @@ DB2 允许两种增量备份：
 
 图 13–12 增量备份用法
 
-## DB2 注意
+### DB2 注意
 
 DB2 允许增量备份。
 
-# 使用备份和恢复进行版本恢复
+## 恢复数据库
 
-# 恢复数据库
-
-在命令行处理器、控制中心或接口中调用 RESTORE 命令时，格式如下：
+在命令行处理器、控制中心或接口中调用 `RESTORE` 命令时，格式如下：
 
 在执行恢复之前，请注意以下点：
 
-- 必须具有 SYSADM、SYSCTL 或 MAINT 权限来执行恢复。
-- 在恢复现有数据库时，RESTORE 命令需要指定时间戳。
-- RESTORE 命令可以与外部存储管理器（如 TSM）对接。
-- 在 RESTORE 启动后，它阻止其他应用程序访问数据库，直到恢复完成。
-- 在恢复到新数据库时，可以使用 ONLINE 参数。
+- 必须具有 `SYSADM`、`SYSCTL` 或 `MAINT` 权限来执行恢复。
+- 在恢复现有数据库时，`RESTORE` 命令需要指定时间戳。
+- `RESTORE` 命令可以与外部存储管理器（如 TSM）对接。
+- 在 `RESTORE` 启动后，它阻止其他应用程序访问数据库，直到恢复完成。
+- 在恢复到新数据库时，可以使用 `ONLINE` 参数。
+- 当使用 TSM 时未指定此参数，将使用最新的备份，DB2 必须启动。
 
-- 当使用 TSM 时未指定此参数，将使用最新的备份DB2 必须启动。
-
-当你调用 RESTORE 命令时，请注意：
+当你调用 `RESTORE` 命令时，请注意：
 
 - DB2 必须启动。
 - 可以恢复到新或现有数据库。
-- 仅在表空间恢复时可以通过 ONLINE 参数使用在线模式。
+- 仅在表空间恢复时可以通过 `ONLINE` 参数使用在线模式。
 
-此外，请考虑以下项以提高 RESTORE 的性能：
+此外，请考虑以下项以提高 `RESTORE` 的性能：
 
-- PARALLEISM 参数的值。使用此参数可以减少完成恢复所需的时间。它定义了用于恢复的进程或线程数。值为1。
+- `PARALLEISM` 参数的值。使用此参数可以减少完成恢复所需的时间。它定义了用于恢复的进程或线程数。值为 1。
 
-## DB2 注意
+### DB2 注意
 
 恢复过程中，线程与表空间之间关联。
 
-# 第 13 章 数据库恢复
+- 增加恢复缓冲区大小和数量。你可以通过增加恢复缓冲区（`BUFFER` 参数）和缓冲区数量（`WITH BUFFERS` 参数）来提高 `RESTORE` 的性能。
 
-- 增加恢复缓冲区大小和数量。你可以通过增加恢复缓冲区（BUFFER 参数）和缓冲区数量（WITH BUFFERS 参数）来提高 RESTORE 的性能。
-
-BUFFER 参数的最小值为 8 页；默认值为 1024 页。恢复缓冲区池的大小必须是备份期间指定的缓冲区大小的正整数倍数。
+`BUFFER` 参数的最小值为 8 页；默认值为 1024 页。恢复缓冲区池的大小必须是备份期间指定的缓冲区大小的正整数倍数。
 
 例如，如果备份时指定的缓冲区大小为 1024 页，并尝试用 16 页缓冲区恢复此备份，则实际恢复缓冲区大小将为 1024。如果指定的恢复缓冲区大小为 2049，则实际恢复缓冲区大小将为 2048。
 
-## DB2 注意
+### DB2 注意
 
 如果在数据库恢复期间发生故障，在成功恢复之前数据库将无法使用。
 
-# 使用恢复的示例
+## 使用恢复的示例
 
-RESTORE 命令的一些关键参数（参考《DB2 命令参考》获取更多详细信息）：
+`RESTORE` 命令的一些关键参数（参考《DB2 命令参考》获取更多详细信息）：
 
-- ONLINE — 仅适用于表级恢复。
-- HISTORY FILE — 指定从备份镜像中恢复历史文件。
-- INCREMENTAL — 在不带任何额外参数的情况下，指定手动累积恢复操作。
-- INCREMENTAL AUTO/AUTOMATIC — 指定自动累积恢复操作。
-- REDIRECT — 指定定向恢复操作。此命令应跟随一个或多个 TABLESPACE CONTAINERS 命令，然后是带有 CONTINUE 选项的 RESTORE DATABASE 命令。
-- WITHOUT ROLLING FORWARD — 指定在成功恢复后不将数据库置回滚等待状态。
+- `ONLINE` — 仅适用于表级恢复。
+- `HISTORY FILE` — 指定从备份镜像中恢复历史文件。
+- `INCREMENTAL` — 在不带任何额外参数的情况下，指定手动累积恢复操作。
+- `INCREMENTAL AUTO/AUTOMATIC` — 指定自动累积恢复操作。
+- `REDIRECT` — 指定定向恢复操作。此命令应跟随一个或多个 `TABLESPACE CONTAINERS` 命令，然后是带有 `CONTINUE` 选项的 `RESTORE DATABASE` 命令。
+- `WITHOUT ROLLING FORWARD` — 指定在成功恢复后不将数据库置回滚等待状态。
 
-你可以从命令行处理器或控制中心运行 RESTORE 命令。例如：
+你可以从命令行处理器或控制中心运行 `RESTORE` 命令。例如：
 
 ```
 RESTORE DATABASE DB2CERT FROM C:\DBBACKUP
 ```
 
-RESTORE 命令的简写语法见图 13–13。
-
-
-
-
-
-## 使用备份和还原进行版本恢复 817
+`RESTORE` 命令的简写语法见图 13–13。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_844_0.png)
 
 **图 13–13 RESTORE 命令**
 
-图 13–13 RESTORE 此命令从 Windows 系统上的 C:\DBBACKUP 还原 SAMPLE 数据库。其他参数使用其默认值。这可能导致数据库处于等待重滚（roll-forward pending）状态，在访问数据库之前需要执行 ROLLFORWARD 命令。
+图 13–13 `RESTORE` 此命令从 Windows 系统上的 `C:\DBBACKUP` 还原 `SAMPLE` 数据库。其他参数使用其默认值。这可能导致数据库处于等待重滚（roll-forward pending）状态，在访问数据库之前需要执行 `ROLLFORWARD` 命令。
 
 ```
 RESTORE DATABASE PROD FROM C:\DBBACKUP
@@ -20053,17 +18968,15 @@ WITHOUT ROLLING FORWARD
 WITHOUT PROMPTING
 ```
 
-## 818 第 13 章 数据库恢复
+上述 `RESTORE` 命令消除了执行 `ROLLFORWARD` 命令的要求。`ROLLFORWARD` 命令将在本章稍后的 829 页的“回滚数据库和表空间”中进行详细讨论。
 
-上述 RESTORE 命令消除了执行 ROLLFORWARD 命令的要求。ROLLFORWARD 命令将在本章稍后的 829 页的“回滚数据库和表空间”中进行详细讨论。
-
-WITHOUT PROMPTING 选项指定还原将以无人值模式运行，任何通常需要用户干预的操作将返回错误消息。
+`WITHOUT PROMPTING` 选项指定还原将以无人值模式运行，任何通常需要用户干预的操作将返回错误消息。
 
 ```
 RESTORE DATABASE PROD FROM C:\DBBACKUP INTO NEWPROD WITH 2 BUFFERS BUFFER 512 WITHOUT ROLLING PRO
 ```
 
-上述命令将数据库还原到新数据库 NEWPROD，并分配了两个大小为 512 页的还原缓冲区。
+上述命令将数据库还原到新数据库 `NEWPROD`，并分配了两个大小为 512 页的还原缓冲区。
 
 你也可以使用控制中心（Control Center）来调用还原。在要还原的数据库上单击右键后，选择“还原数据库”（Restore Database）选项，如图 13–14 所示——下面的示例允许我们还原到现有数据库。
 
@@ -20071,9 +18984,7 @@ RESTORE DATABASE PROD FROM C:\DBBACKUP INTO NEWPROD WITH 2 BUFFERS BUFFER 512 WI
 
 图 13–14 使用控制中心还原数据库
 
-## 使用备份和还原进行版本恢复
-
-第一个面板确认你要恢复的数据库详情（图 13–15）。 wizards允许你还原到现有数据库、创建新数据库（重定向还原）或还原数据库历史。选择“还原到现有数据库”选项，并点击“下一步”。
+第一个面板确认你要恢复的数据库详情（图 13–15）。向导允许你还原到现有数据库、创建新数据库（重定向还原）或还原数据库历史。选择“还原到现有数据库”选项，并点击“下一步”。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_846_0.png)
 
@@ -20084,8 +18995,6 @@ RESTORE DATABASE PROD FROM C:\DBBACKUP INTO NEWPROD WITH 2 BUFFERS BUFFER 512 WI
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_846_1.png)
 
 **图 13–16** 选择要还原哪个备份
-
-## 第 13 章 数据库恢复
 
 容器（Containers）选项卡允许你重新定义表空间使用的容器。只有当你想要更改容器为备份镜像中定义的容器时，才应该这样做（图 13–17）。这被称为重定向还原。点击“下一步”。
 
@@ -20102,8 +19011,6 @@ RESTORE DATABASE PROD FROM C:\DBBACKUP INTO NEWPROD WITH 2 BUFFERS BUFFER 512 WI
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_847_1.png)
 
 图 13–18 选择你的还原选项
-
-## 使用备份和还原进行版本恢复
 
 下一个面板包含影响还原性能的参数，类似于备份（图 13–19）。如果需要，请更改值，并点击“下一步”。
 
@@ -20125,13 +19032,11 @@ RESTORE DATABASE PROD FROM C:\DBBACKUP INTO NEWPROD WITH 2 BUFFERS BUFFER 512 WI
 
 ## 在还原期间重新定义表空间容器
 
-在备份数据库期间，会记录被备份的表空间所使用的所有表空间容器。在还原期间，将检查备份中列出的所有容器，查看它们当前是否存在且可以访问。如果由于其他原因导致一个或多个容器无法，还原将失败。为了在这种情况下允许还原，支持在还原期间重定向表空间容器。这支持添加、更改或删除容器。在某些情况下，即使备份中列出的容器不存在你也想要还原。这种情况的一个例子是你希望恢复备份系统之外的其他系统。在这两种情况下，重新定义表空间的过程被称为重定向还原。
+在备份数据库期间，会记录被备份的表空间所使用的所有表空间容器。在还原期间，将检查备份中列出的所有容器，查看它们当前是否存在且可以访问。如果由于其他原因导致一个或多个容器无法访问，还原将失败。为了在这种情况下允许还原，支持在还原期间重定向表空间容器。这支持添加、更改或删除容器。在某些情况下，即使备份中列出的容器不存在你也想要还原。这种情况的一个例子是你希望恢复备份系统之外的其他系统。在这两种情况下，重新定义表空间的过程被称为重定向还原。
 
-## 使用备份和还原进行版本恢复 823
+### DB2 注意
 
-**DB2 注意**
-
-重定向还原也可用于从一个站点备份到另一个站点。对于下一个示例，假设 PRODUCT 数据库是使用如下命令创建的：
+重定向还原也可用于从一个站点备份到另一个站点。对于下一个示例，假设 `PRODUCT` 数据库是使用如下命令创建的：
 
 ```
 CREATE DATABASE PRODUCT
@@ -20146,32 +19051,31 @@ BACKUP DATABASE PRODUCT
 TO "C:\DBBACK";
 ```
 
-下一个还原命令将创建 NEWPROD 数据库。然而，由于 SMS 和 DMS 容器不能跨数据库共享，必须为新数据库定义新容器。
+下一个还原命令将创建 `NEWPROD` 数据库。然而，由于 SMS 和 DMS 容器不能跨数据库共享，必须为新数据库定义新容器。
 
 ```
 RESTORE DATABASE FROM C:\DBBACK
 INTO NEWPROD
 REDIRECT
 ```
-上述命令还原程序返回了以下消息：SQL127 正在执行重定向还原。现在可以查看表空间配置。DB20000I 还原执行成功。
 
-## 824 第 13 章 数据库恢复
+上述命令还原程序返回了以下消息：`SQL127` 正在执行重定向还原。现在可以查看表空间配置。`DB20000I` 还原执行成功。
 
-**DB2 注意**
+### DB2 注意
 
-与单个重定向还原相关的命令必须在同一个窗口或 CLP 会话中调用。要列出要定义的容器，请使用 LIST TABLESPACE 命令，它产生如下输出。注意，通过之前的 RESTORE 命令，你连接到了 NEWPROD 数据库，功能受限。
+与单个重定向还原相关的命令必须在同一个窗口或 CLP 会话中调用。要列出要定义的容器，请使用 `LIST TABLESPACE` 命令，它产生如下输出。注意，通过之前的 `RESTORE` 命令，你连接到了 `NEWPROD` 数据库，功能受限。
 
 当前数据库的表空间
 
 | 表空间 ID | 名称 | 类型 | 内容 | 状态 |
 | :--- | :--- | :--- | :--- | :--- |
-| 0 | SYSCATSPACE | 系统管理存储空间 | 所有永久数据。常规表空间 | 0x2001100 |
-| 1 | TEMP1 | 系统管理存储空间 | 系统临时数据 | 0x2001100 |
-| 2 | USERSPACE1 | 数据库管理存储空间 | 所有永久数据。大型表空间 | 0x2001100 |
+| 0 | `SYSCATSPACE` | 系统管理存储空间 | 所有永久数据。常规表空间 | `0x2001100` |
+| 1 | `TEMP1` | 系统管理存储空间 | 系统临时数据 | `0x2001100` |
+| 2 | `USERSPACE1` | 数据库管理存储空间 | 所有永久数据。大型表空间 | `0x2001100` |
 
 （注：对于上述所有状态，解释为：等待还原、必须定义存储、可以定义存储。）
 
-注意所有表空间处于“必须定义存储”状态。要继续，使用 SET TABLESPACE CONTAINER 为所有表空间定义新容器：
+注意所有表空间处于“必须定义存储”状态。要继续，使用 `SET TABLESPACE CONTAINER` 为所有表空间定义新容器：
 
 ```
 SET TABLESPACE CONTAINERS FOR 0
@@ -20184,24 +19088,17 @@ SET TABLESPACE CONTAINERS FOR 2
 USING (FILE "D:\NEWPROD3.USER.DAT" 5120);
 ```
 
-
-
-
-
-# 使用备份和恢复进行版本恢复
-
 现在已经定义了容器，请执行以下语句继续重定向恢复：
 
 ```
 RESTORE DATABASE PRODUCT CONTINUE
 ```
 
-这完成了重定向恢复。请注意，类型为 SMS 的表空间和类型为 DMS 的表空间在重定向过程中，必须必须保持其各自的存储类型。
+这完成了重定向恢复。请注意，类型为 SMS 的表空间和类型为 DMS 的表空间在重定向过程中，必须保持其各自的存储类型。
 
 在用重定向存储时，您还应该注意以下考量：
 
 - 如果目录和文件容器不存在，则会自动创建。除非由于其他原因无法访问容器，否则不需要进行重定向。DB2 不会自动创建设备容器（device containers）。
-
 - 在任何恢复操作中均能够执行容器重定向，这为管理表空间容器提供了极大的灵活性。例如，尽管 DB2 不直接支持向 SMS 表空间添加容器，但您只需通过在重定向恢复时指定一个额外的容器即可实现这一点。同样地，您还可以将 DMS 表空间从文件容器移动到设备容器。
 
 ## 恢复到现有数据库
@@ -20211,13 +19108,9 @@ DB2 使用“数据库种子（database seeds）”来确定给定的数据库�
 当恢复到现有数据库时，将执行以下功能：
 
 - 删除现有数据库的表、索引、长字段（long field）和大型对象（large object）的内容，并用备份中的内容替换它们。
-
 - 替换每个正在恢复的表空间项。
-
 - 保留恢复历史文件，除非现有的文件损坏，在这种情况下，它将被用备份镜像中的文件替换。
-
 - 保留现有数据库的身份验证信息。
-
 - 保留现有数据库的数据库目录，这些目录定义了数据库所在的位置以及如何对其编目录。
 
 某些功能依赖于数据库种子。当数据库种子不同时：
@@ -20244,21 +19137,7 @@ DB2 使用“数据库种子（database seeds）”来确定给定的数据库�
 
 ## 恢复自动存储数据库
 
-自动存储数据库提供了最形式的恢复和重定向。如果数据库是仅使用自动存储表空间创建的，则 `RESTORE` 命令只需要为恢复的数据库指定新路径。这些路径可以与原始数据库设计相同，也可以完全不同。例如，如果原始数据库是用以下命令创建的：
-
-```
-CREATE DATABASE PRODUCT AUTOMATIC STORAGE YES
-ON /db2/path01, /db2/path02
-```
-
-恢复命令将包含数据库的新路径规范：
-
-```
-RESTORE DATABASE PRODUCT FROM C:\
-ON /db2/path03, /db2/path04
-```
-
-[content] 自动存储数据库提供了最简单形式的恢复和重定向。如果数据库是仅使用自动存储表空间创建的，则 `RESTORE` 命令只需要为恢复的数据库指定新路径。这些路径可以与原始数据库设计相同，也可以完全不同。例如，如果原始数据库是用以下命令创建的：
+自动存储数据库提供了最简单形式的恢复和重定向。如果数据库是仅使用自动存储表空间创建的，则 `RESTORE` 命令只需要为恢复的数据库指定新路径。这些路径可以与原始数据库设计相同，也可以完全不同。例如，如果原始数据库是用以下命令创建的：
 
 ```
 CREATE DATABASE PRODUCT AUTOMATIC STORAGE YES
@@ -20274,119 +19153,128 @@ ON /db2/path03, /db2/path04
 
 
 
+## 数据库恢复与向前滚
+
+```
+ON /db2/path01, /db2/path02
+```
+
+恢复命令将包含数据库的新路径规范：
+
+```
+RESTORE DATABASE PRODUCT FROM C:\
+ON /db2/path03, /db2/path04
+```
 
 您从全量数据库备份镜像恢复选定的表空间。与表空间相关的所有日志文件必须从备份创建时一直存在。
 
 ## 在表空间级别进行恢复的示例
 
-您可以从命令行处理器（Command Line Processor）或控制中心（Command Center）运行 RESTORE 命令。当然，也可以通过控制中心完成相同的功能。例如，通过命令行处理器：
+您可以从命令行处理器（Command Line Processor）或控制中心（Command Center）运行 `RESTORE` 命令。当然，也可以通过控制中心完成相同的功能。例如，通过命令行处理器：
 
 ```
 RESTORE DATABASE PROD TABLESPACE (USERSPACE1) ONLINE FROM C:\DBBACKUP
 ```
 
-此命令在 Windows 系统上以在线模式从 C:\DBBACKUP 目录恢复数据库 PROD 中的表空间 USSPACE1。此时仍然可以与数据库建立连接。其他参数使用默认值。此命令将使表空间处于前滚待处理（roll-forward-pending）状态，这要求在访问表空间之前必须执行 ROLLFORWARD 命令。
+此命令在 Windows 系统上以在线模式从 `C:\DBBACKUP` 目录恢复数据库 `PROD` 中的表空间 `USSPACE1`。此时仍然可以与数据库建立连接。其他参数使用默认值。此命令将使表空间处于前滚待处理（roll-forward-pending）状态，这要求在访问表空间之前必须执行 `ROLLFORWARD` 命令。
 
 ## 数据库和表空间的向前滚（Rolling Forward）
 
-可以从命令行处理器、应用程序编程接口（API）或控制中心调用 ROLLFORWARD 命令。
+可以从命令行处理器、应用程序编程接口（API）或控制中心调用 `ROLLFORWARD` 命令。
 
 在执行向前滚恢复之前，请考虑以下因素：
 
 ### DB2 注意事项
 
-在使用点点（PIT）向前滚恢复时，可以使用 ROLLFORWARD 命令的 USING LOCAL TIME 选项指定本地时间而非 UTC 时间。
+在使用点点（PIT）向前滚恢复时，可以使用 `ROLLFORWARD` 命令的 `USING LOCAL TIME` 选项指定本地时间而非 UTC 时间。
 
-- 您必须拥有 SYSADM、SYSCTL 或 SYSMMAINT 权限才能调用 ROLLFORWARD。
+- 您必须拥有 `SYSADM`、`SYSCTL` 或 `SYSMMAINT` 权限才能调用 `ROLLFORWARD`。
 - 数据库可以是局部的也可以是远程的。
 - 数据库必须是可恢复的。
-- 数据库在向前滚之前必须成功恢复（使用 RESTORE 命令）。
+- 数据库在向前滚之前必须成功恢复（使用 `RESTORE` 命令）。
 - 表空间除了被恢复外，还可能由于介质错误或其他或其他意外事件进入向前滚待处理状态。
-- 数据库向前滚在离线模式下运行。在向前滚完成之前，数据库不可用。表空间的在线向前滚是可用的，但目录表空间 SYSCATSPACE 除外，该空间需要离线向前滚。其他表空间在在线向前滚期间可以使用。
-
+- 数据库向前滚在离线模式下运行。在向前滚完成之前，数据库不可用。表空间的在线向前滚是可用的，但目录表空间 `SYSCATSPACE` 除外，该空间需要离线向前滚。其他表空间在在线向前滚期间可以使用。
 - 只要您拥有足够的日志文件覆盖您想要向前滚的时间段，就可以任何备份镜像。
-- 频繁备份可以缩短 ROLLFORWARD 的执行时间，因为在备份时间与恢复点之间读取的日志数据较少。
+- 频繁备份可以缩短 `ROLLFORWARD` 的执行时间，因为在备份时间与恢复点之间读取的日志数据较少。
 
-通常，调用 ROLLFORWARD 命令的序列顺序如下：
+通常，调用 `ROLLFORWARD` 命令的序列顺序如下：
 
-- 执行不带 STOP/COMPLETE 选项的 ROLLFORWARD 命令。
-- 执行带有 QUERY 状态选项的 ROLLFORWARD 命令。如果返回的时间点早于预期向前滚到日志末尾的时间，则 QUERY 状态选项可能指示日志文件。
-- 执行带有 STOP/COMPLETE 选项的 ROLLFORWARD 命令。调用此命令后，将无法对额外的更改向前滚。
+- 执行不带 `STOP`/`COMPLETE` 选项的 `ROLLFORWARD` 命令。
+- 执行带有 `QUERY STATUS` 选项的 `ROLLFORWARD` 命令。如果返回的时间点早于预期向前滚到日志末尾的时间，则 `QUERY STATUS` 选项可能指示日志文件。
+- 执行带有 `STOP`/`COMPLETE` 选项的 `ROLLFORWARD` 命令。调用此命令后，将无法对额外的更改向前滚。
 
-当您调用 ROLLFORWARD 命令时，应注意以下几点：
+当您调用 `ROLLFORWARD` 命令时，应注意以下几点：
 
-- 如果您需要取消向前滚操作，可以使用带有 CANCEL 选项的 ROLLFORWARD。这会将数据库置于恢复等待（restore-pending）状态，无论数据库是否正在进行向前滚。
-- 如果您使用带有 CANCEL 选项的 ROLLFORWARD 取消向前滚操作并指定处于向前滚待处理状态的表空间列表，它们将进入恢复等待状态。
-- 您不能使用带有 CANCEL 选项的 ROLLFORWARD 取消正在运行的向前滚操作。您只能用它取消已完成但未执行 ROLLFORWARD STOP 的向前滚操作，或在完成之前失败的向前滚操作。
-- 日志使用与工作单元完成相关的时间戳。日志中的时间戳使用协调时（UTC）。格式为 yyyy-mm-dd-hh.mm.ss.nnnnnn（年、月、日、时、分、秒、微秒）。当您想向前滚到某个时间点时，您可以使用本地时间或 UTC 时间指定该时间。
-- 如果您正在将一个或多个表空间向前滚到某个时间点，您必须至少向前滚到最小恢复时间，即表空间系统目录的最后更新时间。最小恢复时间显示在 LIST TABLESPACES SHOW DETAIL 命令的输出中。
+- 如果您需要取消向前滚操作，可以使用带有 `CANCEL` 选项的 `ROLLFORWARD`。这会将数据库置于恢复等待（restore-pending）状态，无论数据库是否正在进行向前滚。
+- 如果您使用带有 `CANCEL` 选项的 `ROLLFORWARD` 取消向前滚操作并指定处于向前滚待处理状态的表空间列表，它们将进入恢复等待状态。
+- 您不能使用带有 `CANCEL` 选项的 `ROLLFORWARD` 取消正在运行的向前滚操作。您只能用它取消已完成但未执行 `ROLLFORWARD STOP` 的向前滚操作，或在完成之前失败的向前滚操作。
+- 日志使用与工作单元完成相关的时间戳。日志中的时间戳使用协调时（UTC）。格式为 `yyyy-mm-dd-hh.mm.ss.nnnnnn`（年、月、日、时、分、秒、微秒）。当您想向前滚到某个时间点时，您可以使用本地时间或 UTC 时间指定该时间。
+- 如果您正在将一个或多个表空间向前滚到某个时间点，您必须至少向前滚到最小恢复时间，即表空间系统目录的最后更新时间。最小恢复时间显示在 `LIST TABLESPACES SHOW DETAIL` 命令的输出中。
 
-##向前滚恢复
+## 向前滚恢复
 
 ### 向前滚期间的表空间状态
 
 不同的状态与表空间关联以指示其当前状态：
 
 - 表空间在恢复后或发生 I/O 错误后将处于向前滚待处理状态。必须进行向前滚以消除向前滚待处理状态。如果原因是 I/O 错误，则在执行向前滚之前必须纠正此情况。
-
-- 当该表空间正在进行向前滚操作时，表空间将处于向前滚进行状态。该状态将持续到向前滚操作成功完成。如果在点点恢复时未使用 STOP/COMPLETE 选项，表空间也将保持在此状态。
-
-- 在执行带有 CANCEL 选项的 ROLLFORWARD 或在 ROLLFORWARD 执行过程中发生不可恢复错误后，表空间将处于恢复等待状态。必须重新恢复并再次向前滚。
-
-- 在向前滚到某个时间点或在执行 LOAD NO COPY 操作后，表空间将处于备份等待状态。表空间在使用之前必须进行备份。
+- 当该表空间正在进行向前滚操作时，表空间将处于向前滚进行状态。该状态将持续到向前滚操作成功完成。如果在点点恢复时未使用 `STOP`/`COMPLETE` 选项，表空间也将保持在此状态。
+- 在执行带有 `CANCEL` 选项的 `ROLLFORWARD` 或在 `ROLLFORWARD` 执行过程中发生不可恢复错误后，表空间将处于恢复等待状态。必须重新恢复并再次向前滚。
+- 在向前滚到某个时间点或在执行 `LOAD NO COPY` 操作后，表空间将处于备份等待状态。表空间在使用之前必须进行备份。
 
 ```
 ROLLFORWARD--DATABASE=source-database-alias-
+
 DB--USER=username --USING=password
+
 TO--isotime --USING LOCAL TIME --ON ALL DBPARTITIONNUMS --AND COMPLETE
 ```
 
-## 第 13 章数据库恢复
+## 第 13 章 数据库恢复
 
 ### 向前滚示例
 
-ROLLFORWARD 命令的一些关键参数（图 13–22）包括：
+`ROLLFORWARD` 命令的一些关键参数（图 13–22）包括：
 
-- isetime — 所有提交事务向前滚的时间点。该值为用协调时（UTC）表示的时间戳。特殊寄存器 CURRENT TIME 指定 UTC 与本地时间的差异。
-- USING LOCAL TIME — 允许用户向前滚到本地时间点，而非 UTC 时间。
-- COMPLETE/STOP — 停止日志记录的向前滚，并通过回滚未完成的事务完成向前滚恢复。
-- CANCEL — 取消向前滚操作并将一个或多个表于恢复状态。
-- ONLINE — 指定在线执行表级向前滚恢复操作。
-- NORETVE — 指定在备机上向前滚哪些日志文件，允许禁用检索归档日志。
+- `isetime` — 所有提交事务向前滚的时间点。该值为用协调时（UTC）表示的时间戳。特殊寄存器 `CURRENT TIME` 指定 UTC 与本地时间的差异。
+- `USING LOCAL TIME` — 允许用户向前滚到本地时间点，而非 UTC 时间。
+- `COMPLETE`/`STOP` — 停止日志记录的向前滚，并通过回滚未完成的事务完成向前滚恢复。
+- `CANCEL` — 取消向前滚操作并将一个或多个表于恢复状态。
+- `ONLINE` — 指定在线执行表级向前滚恢复操作。
+- `NORETVE` — 指定在备机上向前滚哪些日志文件，允许禁用检索归档日志。
 
-您可以从命令行处理器或控制中心运行 ROLLFORWARD 命令。例如：
+您可以从命令行处理器或控制中心运行 `ROLLFORWARD` 命令。例如：
 
-```
+```text
 ROLLFORWARD DATABASE PROD TO END OF LOG OVERFLOW LOG PATH (C:\LOGS)
 ```
 
-此命令恢复处于 RESTORE 命令后向前滚待处理状态的 PROD 数据库。向前滚将执行到日志末尾，这意味着将处理所有归档日志文件中最后一个工作单元。这并不意味着向前滚将处理到当前时间。
+此命令恢复处于 `RESTORE` 命令后向前滚待处理状态的 `PROD` 数据库。向前滚将执行到日志末尾，这意味着将处理所有归档日志文件中最后一个工作单元。这并不意味着向前滚将处理到当前时间。
 
-例如，如果最近的活动日志可用性存在问题，命令仍将成功。使用 QUERY STATUS 选项确保最新的工作单元处于预期时间，并且日志文件按预期处理。
+例如，如果最近的活动日志可用性存在问题，命令仍将成功。使用 `QUERY STATUS` 选项确保最新的工作单元处于预期时间，并且日志文件按预期处理。
 
-存储日志的目录（在数据库配置参数 LOGPATH 列出）用于 ROLLFORWARD 查找活动和在线归档日志。
+存储日志的目录（在数据库配置参数 `LOGPATH` 列出）用于 `ROLLFORWARD` 查找活动和在线归档日志。
 
-OVERFLOW LOG PATH 参数指定离线日志文件的目录，以便 ROLLFORWARD 使用它们来重应用工作单元。
+`OVERFLOW LOG PATH` 参数指定离线日志文件的目录，以便 `ROLLFORWARD` 使用它们来重应用工作单元。
 
-此命令向前滚处于向前滚待处理状态的 USSPACE1 表空间。
-
-
-
-
+此命令向前滚处于向前滚待处理状态的 `USSPACE1` 表空间。
 
 来自 `RESTORE` 命令的挂起状态（pending status）。`ONLINE` 参数允许对其他表空间的并发访问。`AND COMPLETE` 参数指示 DB2 完成滚向前操作（rolling forward），回滚任何未完成的工作单元，并通过关闭滚向前等待状态（roll-forward-pending state）使数据库恢复可供常规使用。
 
-```
+```text
 ROLLFORWARD DATABASE PROD
- END OF LOGS AND COMPLETE
+
+END OF LOGS AND COMPLETE
+
 SPACE (USERS1) ONLINE
 ```
 
 此命令列出 DB2 已进行滚向前处理的日志文件、所需的归档文件，以及自滚向前处理开始以来最后一次提交事务的时间戳（UTC）。
 
-```
+```text
 ROLLFORWARD DATABASE PROD
- QUERY STATUS
+
+QUERY STATUS
 ```
 
 返回的信息包含以下内容：
@@ -20394,28 +19282,35 @@ ROLLFORWARD DATABASE PROD
 - 滚向前状态 — 状态可能是数据库或表空间滚向前等待、数据库或表空间滚向前正在进行中、数据库或表空间滚向前处理停止，或无滚向前等待。
 - 下一个要读取的日志文件 — 包含下一个所需日志文件名称的字符串。
 - 已处理的日志文件 — 包含已处理日志文件名称的字符串，这些文件不再需要用于恢复，可以从目录中删除。
-- 最后一次提交的事务 — 包含 ISO 格式时间戳（yyyy-mm-dd-hh.mm.ss）的字符串。该时间戳标记了滚向前恢复完成后最后提交的事务。时间戳适用于数据库。对于表空间滚向前，它是提交到数据库的最后一个事务的时间戳。
+- 最后一次提交的事务 — 包含 ISO 格式时间戳（`yyyy-mm-dd-hh.mm.ss`）的字符串。该时间戳标记了滚向前恢复完成后最后提交的事务。时间戳适用于数据库。对于表空间滚向前，它是提交到数据库的最后一个事务的时间戳。
 
-以下是 `QUERY status` 的示例输出（图 13–23）：
+以下是 `QUERY STATUS` 的示例输出（图 13–23）：
 
-```
+```text
 Rollforward Status
+
 Input database alias = PROD
+
 Number of nodes returned status = 1
+
 Node number = 0
+
 Rollforward status = DB WORKING
+
 Next log file to be read = S0000019.LOG
+
 Log files processed = S0000014.LOG - S0000018.LOG
+
 Last committed transaction = 2007-04-10-00.00.59.010000
 ```
 
 ## 图 13–23 滚向前状态 (1)
 
-注意状态为 DB WORKING，意味着正在进行数据库滚向前处理且操作仍在进行中，未指定 STOP/COMPLETE 选项。
+注意状态为 `DB WORKING`，意味着正在进行数据库滚向前处理且操作仍在进行中，未指定 `STOP`/`COMPLETE` 选项。
 
-此命令停止日志记录的滚向前处理，并通过回滚任何未完成的事务以及关闭数据库的滚向前等待状态来完成滚向前恢复过程。这允许访问已滚向前处理的数据库或表空间。STOP 和 COMPLETE 关键字等效。在将表空间滚向前到某个时间点时，表空间将被置于备份等待状态（backup-pending state）。
+此命令停止日志记录的滚向前处理，并通过回滚任何未完成的事务以及关闭数据库的滚向前等待状态来完成滚向前恢复过程。这允许访问已滚向前处理的数据库或表空间。`STOP` 和 `COMPLETE` 关键字等效。在将表空间滚向前到某个时间点时，表空间将被置于备份等待状态（backup-pending state）。
 
-```
+```text
 ROLLFORWARD DATABASE PROD COMPLETE
 ```
 
@@ -20423,47 +19318,66 @@ ROLLFORWARD DATABASE PROD COMPLETE
 
 对于表空间的恢复，仅处理恢复数据库所需的日志文件；不需要的日志文件将被跳过。
 
-以下是 `QUERY status` 选项的输出（图 13–24）：
+以下是 `QUERY STATUS` 选项的输出（图 13–24）：
 
-```
+```text
 Rollforward Status
+
 Input database alias          = PROD
+
 Number of nodes returned status = 1
+
 Node number                     = 0
+
 Rollforward status             = not pending
+
 Next log file to be read        = 
+
 Log files processed            = S0000014.LOG - S0000018.LOG
+
 Last committed transaction     = 2007-04-10-00.09.51.000000
 ```
 
 ### 图 13–24 滚向前状态 (2)
 
-注意状态现在已更改为 not pending（未等待）。
+注意状态现在已更改为 `not pending`（未等待）。
 
-```
+```text
 ROLLFORWARD DATABASE_PROD
+
 TO 2007-04-10-00.00.0000000
+
 TABLESPACE(USERSPACE1) ONLINE
 ```
 
-此命令将 USSPACE1 表空间滚向前到特定的时间点。注意滚向前时间为 UTC 时间，不受本地时间影响。以下是 `QUERY status` 选项的输出（由上述命令默认生成）（图 13-25）：
+此命令将 `USSPACE1` 表空间滚向前到特定的时间点。注意滚向前时间为 UTC 时间，不受本地时间影响。以下是 `QUERY STATUS` 选项的输出（由上述命令默认生成）（图 13-25）：
 
-```
+```text
 Rollforward Status
+
 Input database alias          = PROD
+
 Number of nodes returned status = 1
+
 Node number                     = 0
+
 Rollforward status             = TBS working
+
 Next log file to be read        = 
+
 Log files processed            = 
+
 Last committed transaction     = 2007-04-10-00.09.51.000000
 ```
+
+
+
 
 ### 图 13–25 滚向前状态 (3)
 
 ## 滚向前恢复
 
-注意状态现在已更改为 TBS working，因为这是一个表滚向前处理。你可以越过指定时间继续滚向前，因为仍有可以应用的工作单元（注意“最后一次提交的事务”时间晚于请求的时间点），或者带有 COMPLETE 选项执行 `ROLLFORWARD` 命令以回滚未完成的工作单元并使表空间可供常规使用。
+注意状态现在已更改为`TBS working`，因为这是一个表滚向前处理。你可以越过指定时间继续滚向前，因为仍有可以应用的工作单元（注意“最后一次提交的事务”时间晚于请求的时间点），或者带有`COMPLETE`选项执行`ROLLFORWARD`命令以回滚未完成的工作单元并使表空间可供常规使用。
 
 你也可以使用控制调用（Control Invoke）来调用滚向前。在对要滚向前的数据库上点击右键并选择 Rollforward 选项后，将显示滚向前向导面板（图 13–26）。除非数据库处于滚向前等待状态，否则你无法进入此面板。
 
@@ -20479,11 +19393,11 @@ Last committed transaction     = 2007-04-10-00.09.51.000000
 
 图 13–27 滚向前向导 — 最终状态
 
-此面板允许你选择数据库的最终状态，无论是滚向前等待状态（等同于 STOP 选项）还是活动状态。
+此面板允许你选择数据库的最终状态，无论是滚向前等待状态（等同于`STOP`选项）还是活动状态。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_862_1)
 
-图 13–28 滚向前向导 — 
+图 13–28 滚向前向导 —
 
 ## 管理日志文件
 
@@ -20491,21 +19405,17 @@ Last committed transaction     = 2007-04-10-00.09.51.000000
 
 ### 命名方案
 
-日志名称格式为 Snnnnnn.LOG，其中 nnnnnnn 是从 000000 到 999999 的七位数。在以下情况下，DB2 重启日志 S000000：
+日志名称格式为`Snnnnnn.LOG`，其中`nnnnnnn`是从 000000 到 999999 的七位数。在以下情况下，DB2 重启日志`S000000`：
 
 - 更改配置以启用归档
 - 更改配置以禁用归档
-- 日志文件循环，S999999.LOG
+- 日志文件循环，`S999999.LOG`
 
-当 `ROLLFORWARD` 命令成功执行后，最后一个日志将被截断。如果你需要恢复到更早的时间点，则无法，因为日志已重用。你必须将原始日志备份到另一个位置。
+当`ROLLFORWARD`命令成功执行后，最后一个日志将被截断。如果你需要恢复到更早的时间点，则无法，因为日志已重用。你必须将原始日志备份到另一个位置。
 
 > DB2 注意事项
 
-DB2 允许数据库管理员按需强制归档日志。这在支持在线备份的情况下提供了更大的日志管理灵活性。如果你在滚向前处理数据库或表空间时 ROLLFORWARD 找不到下一个日志，则 ROLLFORWARD 将停止并在 SQLCA 中返回日志名称。
-
-
-
-
+DB2 允许数据库管理员按需强制归档日志。这在支持在线备份的情况下提供了更大的日志管理灵活性。如果你在滚向前处理数据库或表空间时`ROLLFORWARD`找不到下一个日志，则`ROLLFORWARD`将停止并在 SQLCA 中返回日志名称。
 
 # 其他恢复考虑因素
 
@@ -20522,7 +19432,7 @@ DB2 允许数据库管理员按需强制归档日志。这在支持在线备份�
 
 ## 日志文件的存储考虑因素
 
-为了防止介质故障破坏数据库以及您的重建能力，你应该将数据库备份、数据库日志和数据库本身存储在其他设备上。在创建数据库后，使用 `LOGPATH` 数据库配置参数将日志移动到新设备。
+为了防止介质故障破坏数据库以及您的重建能力，你应该将数据库备份、数据库日志和数据库本身存储在其他设备上。在创建数据库后，使用`LOGPATH`数据库配置参数将日志移动到新设备。
 
 日志文件可能会占用大量的磁盘空间，如果您计划使用滚动恢复，必须计划如何管理归档日志。您可以：
 
@@ -20534,7 +19444,7 @@ DB2 允许数据库管理员按需强制归档日志。这在支持在线备份�
 
 ## 静止（Quiesce）命令
 
-您可以执行 `QUIESCE TABLESPACES FOR TABLE` 命令来创建一个一致点，该点可用于后续的前滚恢复。当您对表的表空间执行静止操作时，请求将等待（通过锁定）所有正在访问表空间中对象的运行事务完成，同时阻塞针对该表空间的新请求。当静止请求被授予时，所有未完成的事务已完成（提交或回滚），且表空间处于一致状态。
+您可以执行`QUIESCE TABLESPACES FOR TABLE`命令来创建一个一致点，该点可用于后续的前滚恢复。当您对表的表空间执行静止操作时，请求将等待（通过锁定）所有正在访问表空间中对象的运行事务完成，同时阻塞针对该表空间的新请求。当静止请求被授予时，所有未完成的事务已完成（提交或回滚），且表空间处于一致状态。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_866_0.png)
 
@@ -20544,33 +19454,33 @@ DB2 允许数据库管理员按需强制归档日志。这在支持在线备份�
 
 在上面的示例中，当收到静止共享请求时，事务会为表空间请求意图共享锁（intent share locks），并为表请求一个锁。
 
-当事务获得锁后，表空间的状态将变为 `QUIESCED SHARE`。只有当其他用户没有持有冲突状态时，该状态才会授予静止请求者。
+当事务获得锁后，表空间的状态将变为`QUIESCED SHARE`。只有当其他用户没有持有冲突状态时，该状态才会授予静止请求者。
 
 ## DB2 注意
 
-`QUIESCE` 现在可以强制所有用户离开实例或数据库，并将其置静止模式以进行数据库维护活动。
+`QUIESCE`现在可以强制所有用户离开实例或数据库，并将其置静止模式以进行数据库维护活动。
 
-当表的表空间处于 `QUIESCED SHARE` 状态时，无法更改表。对表和表空间的其他共享模式请求将是允许。当工作单元提交或回滚时，锁会被释放，但表的表空间将保持在 `QUIESCED SHARE` 状态，直到通过以下命令显式重置该状态：
+当表的表空间处于`QUIESCED SHARE`状态时，无法更改表。对表和表空间的其他共享模式请求将是允许。当工作单元提交或回滚时，锁会被释放，但表的表空间将保持在`QUIESCED SHARE`状态，直到通过以下命令显式重置该状态：
 
 `QUIESCE TABLESPACES FOR TABLE PRODUCT.EMPLOYEE RESET`
 
-`QUIESCE` 命令可以从命令行处理器、命令中心或应用程序接口调用。
+`QUIESCE`命令可以从命令行处理器、命令中心或应用程序接口调用。
 
 ## 恢复历史文件
 
 每个数据库都会创建一个恢复历史文件，并在每发生以下情况时自动更新：
 
 - 日志归档（Archive）
-- 数据库或表空间的备份（BACKUP）
-- 数据库或表空间的恢复（RESTORE）
-- 数据库或表空间的前滚（ROLLFORWARD）
-- 表空间的创建（CREATE）
-- 表空间的更改（ALTER）
-- 表空间的重命名（RENAME）
-- 表空间的静止（QUIESCE）
-- 表的删除（DROP）
-- 表的加载（LOAD）
-- 表的重组（REORG）
+- 数据库或表空间的备份（`BACKUP`）
+- 数据库或表空间的恢复（`RESTORE`）
+- 数据库或表空间的前滚（`ROLLFORWARD`）
+- 表空间的创建（`CREATE`）
+- 表空间的更改（`ALTER`）
+- 表空间的重命名（`RENAME`）
+- 表空间的静止（`QUIESCE`）
+- 表的删除（`DROP`）
+- 表的加载（`LOAD`）
+- 表的重组（`REORG`）
 
 可以使用此文件中的汇总备份信息将数据库全部或部分恢复到某个点。文件中的信息包括：
 
@@ -20581,50 +19491,66 @@ DB2 允许数据库管理员按需强制归档日志。这在支持在线备份�
 
 每个备份操作都包含恢复历史文件的副本。该文件与数据库关联，因此当数据库被删除时，文件会被删除。
 
-如果当前数据库不可用且文件损坏或删除，`RESTORE` 命令中的一个选项仅允许恢复历史文件。
+如果当前数据库不可用且文件损坏或删除，`RESTORE`命令中的一个选项仅允许恢复历史文件。
 
-该文件通过 `PRUNE HISTORY` 命令管理。可以使用此命令删除文件中早于指定日期时间的条目。
+该文件通过`PRUNE HISTORY`命令管理。可以使用此命令删除文件中早于指定日期时间的条目。
 
-`LIST HISTORY` 命令报告恢复历史文件中的信息。例如：
+`LIST HISTORY`命令报告恢复历史文件中的信息。例如：
 
-```
+```text
 LIST HISTORY ALL FOR DB2CERT
 ```
 
 此命令产生以下输出（图 13–29）：
 
-```
+```text
 List History File for product
+
 Number of matching file entries = 5
 ```
 
-| Op Obj Timestamp+Sequence Type Dev Earliest Log Current Log Backup ID |
-|---|---|---|---|---|---|---|
-| B D 2007040175928001 | F D | S00000000.LOG | S00000000.LOG | | | |
+| Op | Obj | Timestamp+Sequence | Type | Dev | Earliest Log | Current Log | Backup ID |
+|---|---|---|---|---|---|---|---|
+| B | D | 2007040175928001 | F | D | S00000000.LOG | S00000000.LOG | |
 
-```
+```text
 包含 2 个表：
+
 00001 SYSPACE
+
 00002 USERSPACE1
+
 Comment: DB_BACKUP PRODUCT OFFLINE
+
 Start Time: 20070401759228
+
 End Time: 20070401759300
+
 Status: A
+
 EID:1 Location: C:\DBBACKUP
 ```
+
 （注：此处为表格内容错乱，已根据原文格式保留，未翻译内部内容）
+
 包含 2 个表：
+
 （此处为表格内容错乱，已保留格式）
-```
-| Op Obj Timestamp+Sequence Type Dev Earliest Log Current Log Backup ID |
-|---|---|---|---|
-| X D 20070401109434 | 1 D | | |
-```
-```
+
+| Op | Obj | Timestamp+Sequence | Type | Dev | Earliest Log | Current Log | Backup ID |
+|---|---|---|---|---|---|---|---|
+| X | D | 20070401109434 | 1 | D | | | |
+
+```text
 Comment:
+
 Start Time: 20070401109434
+
 End Time: 20070401109412
 ```
+
+
+
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_868_0.png)
 
@@ -20640,11 +19566,11 @@ End Time: 20070401109412
 
 ### 被删除表的恢复
 
-被意外删除的表可以使用以下技术恢复：
+被意外删除的表可以使用以下技术恢复。
 
 在表被意外删除之前：
 
-- 使用带有 `DROPPED TABLE RECOVERY ON` 选项 `CREATE` 或 `ALTER TABLESPACE` 语句。DB2 将写入额外的日志和恢复历史条目以支持删除表的恢复。
+- 使用带有 `DROPPED TABLE RECOVERY ON` 选项的 `CREATE` 或 `ALTER TABLESPACE` 语句。DB2 将写入额外的日志和恢复历史条目以支持删除表的恢复。
 
 当表被删除并需要恢复时，执行以下操作：
 
@@ -20662,12 +19588,9 @@ End Time: 20070401109412
 
 ### 大对象
 
-如果表包含长字段或大对象（LOB）列，您应该考虑将这些数据放入单独的表空间。考虑到时间和磁盘
+如果表包含长字段或大对象（LOB）列，您应该考虑将这些数据放入单独的表空间。考虑到时间和磁盘。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_870_0.png)
-
-
-
 
 通过将 LOB（大对象）数据放入单独的表空间，可以减少备份 LOB 数据所需的空间，你可以决定以常规表空间更低的频率对其进行备份。
 
@@ -20677,7 +19600,7 @@ End Time: 20070401109412
 
 在数据库启动/激活期间，DB2 会检查并确保所有表空间都是可用的。
 
-如果容器不可用，该表空间除了可能处于其他恢复状态（如等待备份 back-up-pending、等待恢复 restore-pending、等待重滚 roll-forward-pending 等）外，还会进入离线状态（offline）。因此，表空间可能处于例如 BACKUP PENDING + OFFLINE 的状态。
+如果容器不可用，该表空间除了可能处于其他恢复状态（如等待备份 `back-up-pending`、等待恢复 `restore-pending`、等待重滚 `roll-forward-pending` 等）外，还会进入离线状态（`offline`）。因此，表空间可能处于例如 `BACKUP PENDING + OFFLINE` 的状态。
 
 在解决容器问题后将表空间恢复到在线状态：
 
@@ -20698,7 +19621,7 @@ DB2 支持高可用性功能，当运行 DB2 实例的机器发生故障时，�
 
 例如，在 AIX 上，此功能由高可用性集群多处理器处理（HACMP™）产品支持并启用。HACMP 通过共享磁盘或网络访问等资源的处理器集群提供更高的可用性。如果其中一个处理器发生故障，集群中的另一个处理器可以替代故障的处理器。根据操作系统环境，还有额外的高可用性程序。
 
-热备模式和互备接管模式的简要描述。
+热备模式和互备接管模式的简要描述：
 
 - **热备**（Hot standby）——活动处理器正积极用于运行 DB2 实例，而 DB2 服务器处于备用模式，如果发生第一个处理器的操作系统或硬件故障，它准备好接管该实例。
 - **互备接管**（Mutual takeover）——使用不同的处理器运行独立的 DB2 实例，或者在一个处理器运行 DB2 实例时，使用另一个处理器运行 DB2 应用程序。如果其中一个处理器发生操作系统或硬件故障，另一个处理器将接管故障处理器的任务。接管完成后，剩余的处理器将承担两个处理器的工作。
@@ -20707,9 +19630,9 @@ DB2 支持高可用性功能，当运行 DB2 实例的机器发生故障时，�
 
 其他流行的高可用性软件程序包括 Microsoft Cluster Server (MSCS)、Sun® Cluster (SC) 和 Steeleye®（用于 Linux 环境），以及 Veritas™ Cluster Server。
 
-## 第 13 章 数据库恢复
+# 第 13 章 数据库恢复
 
-## SET WRITE 命令
+## `SET WRITE` 命令
 
 磁盘技术的进步通过提供创建副本或镜像拷贝的能力提高了数据库的可用性。通过拆分一致的数据副本，主数据库或生产数据库可以继续正常操作，而副本可以用于在线或离线操作。
 
@@ -20723,15 +19646,16 @@ DB2 支持高可用性功能，当运行 DB2 实例的机器发生故障时，�
 
 `SET WRITE` 命令的关键参数包括（更多信息请参阅 DB2 命令参考）：
 
-- SUSPEND — 这将挂 I/O 写入并将所有表空间置于 `SUSPEND_WRITE` 状态。该命令也会挂对日志的写入。
-- RESUME — 这将恢复 I/O 写入，并从所有表空间中移除 `SUSPEND_WRITE` 状态，使表空间可以进行更新活动。
+- `SUSPEND` — 这将挂 I/O 写入并将所有表空间置于 `SUSPEND_WRITE` 状态。该命令也会挂对日志的写入。
+- `RESUME` — 这将恢复 I/O 写入，并从所有表空间中移除 `SUSPEND_WRITE` 状态，使表空间可以进行更新活动。
 
-> DB2 注意
+> **DB2 注意**
+>
 > 你可以使用 DB2 `LIST TABLESPACES` 命令来查看处于 `SUSPEND_WRITE` 状态的表空间状态。
 
-## DB2INDDB 命令
+## `DB2INDDB` 命令
 
-`db2indb` 命令（图 13–32）用于在拆分镜像环境中初始化镜像数据库。镜像数据库可以初始化为主数据库的克隆并处于等待重滚（roll-forward-pending）状态，或作为用于恢复主数据库的备份映像。
+`db2indb` 命令（图 13–32）用于在拆分镜像环境中初始化镜像数据库。镜像数据库可以初始化为主数据库的克隆并处于等待重滚（`roll-forward-pending`）状态，或作为用于恢复主数据库的备份映像。
 
 你必须拥有 SYSADM、SYSCTL 或 SYSMAINT 权限才能执行此命令。
 
@@ -20739,113 +19663,101 @@ DB2 支持高可用性功能，当运行 DB2 实例的机器发生故障时，�
 
 图 13–32 db2indb 命令
 
-## 高可用性 847
+## `db2indb` 命令的关键参数
 
 `db2indb` 命令的关键参数包括（更多信息请参见 DB2 命令参考）：
 
-- SNAPSHOT — 指定镜像数据库将初始化为主数据库的克隆。
-- STANDBY — 指定数据库将处于等待重滚（roll-forward-pending）状态。主数据库的日志可以应用到备用数据库。如果主数据库宕机，备用数据库将替代主数据库。
-- MIRROR — 指定镜像数据库将作为备份映像。
-- RELOCATE USING configfile — 指定根据配置文件迁移数据库文件。
+- `SNAPSHOT` — 指定镜像数据库将初始化为主数据库的克隆。
+- `STANDBY` — 指定数据库将处于等待重滚（`roll-forward-pending`）状态。主数据库的日志可以应用到备用数据库。如果主数据库宕机，备用数据库将替代主数据库。
+- `MIRROR` — 指定镜像数据库将作为备份映像。
+- `RELOCATE USING configfile` — 指定根据配置文件迁移数据库文件。
 
 ## 使用拆分镜像克隆数据库
 
 创建主数据库的快照或克隆对于运行查询或报告非常有用，从而分流主数据库的负载。创建克隆的步骤如下：
 
-1. 挂起主数据库的 I/O 写入：
-   `db2 set write suspend database`
+1. 挂起主数据库的 I/O 写入：`db2 set write suspend database`
 2. 拆分镜像。
-3. 恢复主数据库的 I/O 写入：
-   `db2 set write resume database`
+3. 恢复主数据库的 I/O 写入：`db2 set write resume database`
 4. 将镜像数据库附加到另一个实例。
-5. 启动数据库：
-   `db2start`
-6. 将镜像数据库初始化为主数据库的克隆：
-   `db2indb database_alias as snapshot`
+5. 启动数据库：`db2start`
+6. 将镜像数据库初始化为主数据库的克隆：`db2indb database_alias as snapshot`
 
-> DB2 注意
-> write 命令强制重启处于 SUSPEND_WRITE 状态的数据库。此命令仅适用于主数据库，不适用于镜像数据库。
+> **DB2 注意**
+>
+> `write` 命令强制重启处于 `SUSPEND_WRITE` 状态的数据库。此命令仅适用于主数据库，不适用于镜像数据库。
 
-## 第 13 章 数据库恢复
+# 第 13 章 数据库恢复
 
 ## 使用拆分镜像作为备用数据库
 
 创建备用数据库通过缩短接管负载所需的潜在恢复时间来提高可用性。备用数据库不断重滚。创建镜像备用数据库的步骤如下：
 
-1. 挂起主数据库的 I/O 写入：
-   `db2 set write suspend database`
+1. 挂起主数据库的 I/O 写入：`db2 set write suspend database`
 2. 拆分镜像。
-3. 恢复主数据库的 I/O 写入：
-   `db2 set write resume database`
+3. 恢复主数据库的 I/O 写入：`db2 set write resume database`
 4. 将镜像数据库附加到另一个实例。
-5. 将镜像数据库置于等待重滚（roll-forward-pending）状态：
-   `db2indb database_alias as standby`
+5. 将镜像数据库置于等待重滚（`roll-forward-pending`）状态：`db2indb database_alias as standby`
+
    在任何记录写入备用数据库之前，建议对镜像数据库进行备份。
 6. 设置用户导出以从主系统检索日志文件。
 7. 将数据库重滚到日志末尾或时间点。
 8. 继续检索日志并重滚数据库，直到到达日志末尾或备用数据库所需的时间点。
 9. 通过带有 `STOP` 选项的 `ROLLFORWARD` 命令将备用数据库变为在线。DB2 客户端现在可以重新连接到备用数据库。
+
    `db2 rollforward database <dbn> to end of logs and stop`
 
-> DB2 注意
-> write RESUME 命令必须与 write SUSPEND 命令在同一个窗口或 CLP 会话中执行。
+> **DB2 注意**
+>
+> `write RESUME` 命令必须与 `write SUSPEND` 命令在同一个窗口或 CLP 会话中执行。
 
 ## 使用拆分镜像作为备份数据库
 
 当主数据库需要恢复时，可以将镜像系统的备份映像恢复到主系统。
 
-
-
 创建镜像数据库备份映像的步骤如下：
 
-- 1. 挂起主数据库上的 I/O：
-  `db2 set write suspend for database`
+1. 挂起主数据库上的 I/O：`db2 set write suspend for database`
+2. 分离镜像。
+3. 恢复主数据库上的 I/O：`db2 set write resume for database`
+4. 主系统发生故障，需要从备份映像进行恢复。
+5. 停止主数据库实例：`db2stop`
+6. 使用操作系统级命令将分离出的数据拷贝到主系统。不要拷贝分离出的日志文件，因为前滚恢复（`rollforward recovery`）需要主日志日志。
+7. 启动主数据库实例：`db2start`
+8. 初始化主数据库：`db2inidb database_alias as mirror`
+9. 通过指定 `STOP` 选项的 `ROLLFORWARD` 命令使备用数据库上线。DB2 客户端现在已准备好重新连接。
 
-- 2. 分离镜像。
+   `db2 rollforward db <db> to end of logs and stop`
 
-- 3. 恢复主数据库上的 I/O：
-  `db2 set write resume for database`
+## 高可用性灾难恢复（HADR）
 
-- 4. 主系统发生故障，需要从备份映像进行恢复。
-
-- 5. 停止主数据库实例：
-  `db2stop`
-
-- 6. 使用操作系统级命令将分离出的数据拷贝到主系统。不要拷贝分离出的日志文件，因为前滚恢复（rollforward recovery）需要主日志日志。
-
-- 7. 启动主数据库实例：
-  `db2start`
-
-- 8. 初始化主数据库：
-  `db2inidb database_alias as mirror`
-
-- 9. 通过指定 STOP 选项的 ROLLFORWARD 命令使备用数据库上线。DB2 客户端现在已准备好重新连接。
-  `db2 rollforward db <db> to end of logs and stop`
-
-## 高可用性灾难恢复 (HADR)
-
-DB2 数据库高可用性灾难恢复 (HADR) 是一种数据库复制功能，为部分或整个站点故障提供高可用性解决方案。HADR 通过将数据更改从源数据库（称为主库）复制到目标数据库（称为备用库）来保护数据。在主库上进行的更改会被捕获在日志文件中，并发送到备用系统进行应用。
+DB2 数据库高可用性灾难恢复（HADR）是一种数据库复制功能，为部分或整个站点故障提供高可用性解决方案。HADR 通过将数据更改从源数据库（称为主库）复制到目标数据库（称为备用库）来保护数据。在主库上进行的更改会被捕获在日志文件中，并发送到备用系统进行应用。
 
 HADR 的设计具有以下远目标：
 
-- 极快的故障切换，并支持零事务丢失选项
+- **极快的故障切换，并支持零事务丢失选项**
+
   HADR 解决方案提供了极快的故障切换，恢复时间通常在分钟级。其他技术（例如数据库集群）通常需要更长的恢复时间。HADR 适用于各种负载，且通常不需要对应用程序进行任何修改。
 
-- 易于设置和管理
+- **易于设置和管理**
+
   HADR 解决方案易于设置和管理。可以通过控制中心（Control Center）或设置五个数据库配置参数来设置 HADR。
 
-- 对性能的影响忽略
+- **对性能的影响忽略**
+
   HADR 后端的架构确保了对主数据库的性能影响微乎其微。
 
-- 无需中断的软件升级
+- **无需中断的软件升级**
+
   HADR 通过赋予 DBA 在不停机的情况下升级软件的能力，将可用性提升了一个新水平。备用系统继续运行负载时，可以对主系统进行升级。当维护完成后，主库可以追上在备用系统完成的工作，然后恢复接受事务。
 
-- 应用程序的自动故障切换
+- **应用程序的自动故障切换**
+
   可用性特性也扩展到了客户端。如果发生停机，HADR 解决方案提供了自动客户端重路由能力。客户端将在无需用户或外部恢复监控器干预的情况下自动切换到备份系统。
 
 ## 高可用性灾难恢复的工作原理
 
-理解 HADR 最简单的方法是将其看作日志传输（log shipping）——只是单个事务是从内存中传输的，而不是整个日志文件。
+理解 HADR 最简单的方法是将其看作日志传输（`log shipping`）——只是单个事务是从内存中传输的，而不是整个日志文件。
 
 日志传输的问题在于，你可能始终跟不上日志文件中的事务数量。出于性能考虑，你通常会创建更大的日志文件——这意味着传输的日志中包含更多事务，在发生故障时可能会丢失更多事务。
 
@@ -20861,20 +19773,21 @@ HADR 的架构如图 13–19 所示。
 
 当事务在数据库上运行时，它们会在备用服务器上被“重放”。日志缓冲区项通过网络线路（使用任何 TCP/IP 网络连接）传输、解析并在备用库上运行。
 
-## 第 13 章 数据库恢复
+# 第 13 章 数据库恢复
 
 在设置 HADR 解决方案时，定义了同步模式。HADR 支持三种同步模式：异步、近同步和同步，如图 13–34 所示。
 
 > **DB2 注意事项**
-> 不仅 COMMIT 操作会刷新日志缓冲区；还有参数和其他操作也会影响日志刷新的及时性。为了简单起见，以下解释假设只有 COMMIT 会刷新日志缓冲区。
+>
+> 不仅 `COMMIT` 操作会刷新日志缓冲区；还有参数和其他操作也会影响日志刷新的及时性。为了简单起见，以下解释假设只有 `COMMIT` 会刷新日志缓冲区。
 
-![]((img/2fc7488b6558d6b99bbc7356ac4116b1_879_0.png)
+![](img/2fc7488b6558d6b99bbc7356ac4116b1_879_0.png)
 
 图 13–34 HADR 同步模式
 
-在同步模式下，当客户端请求 COMMIT 操作时，在包含事务的日志缓冲区发送到备用服务器、完成重放并固化到磁盘之前，数据库管理器不会返回成功状态码。通过此设置，你可以保证永远不会丢失任何事务。
+在同步模式下，当客户端请求 `COMMIT` 操作时，在包含事务的日志缓冲区发送到备用服务器、完成重放并固化到磁盘之前，数据库管理器不会返回成功状态码。通过此设置，你可以保证永远不会丢失任何事务。
 
-在光谱的另一端是异步模式。在这种模式下，当对线缆协议执行 send() 套接字调用时，COMMIT 操作即完成。此后事务进入线缆后很少再被考虑。如果数据在链路上丢失，或者在事务流期间主服务器或备用服务器发生某些故障，你可能会丢失事务。
+在光谱的另一端是异步模式。在这种模式下，当对线缆协议执行 `send()` 套接字调用时，`COMMIT` 操作即完成。此后事务进入线缆后很少再被考虑。如果数据在链路上丢失，或者在事务流期间主服务器或备用服务器发生某些故障，你可能会丢失事务。
 
 在这两个设置之间是近同步模式，这是我们在部署 HADR 解决方案时推荐给大多数客户的模式。这是 HADR 的默认模式。在这种模式下，在事务的日志缓冲区流过线路并进入备用服务器的内存之前，系统不会向应用程序返回成功状态码。在主库和备用服务器同时故障且你选择启动备用服务器作为主库的极端情况下，你可能会丢失日志缓冲区中的事务。
 
@@ -20890,24 +19803,21 @@ HADR 向导通过在控制中心右键点击要使用的数据库来调用。注
 
 下一步是确定备用数据库的所在地（图 13–37）。创建备用数据库有三种选项。
 
-
-
-
 # 高可用性灾难恢复
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_882_0.png)
 
 ## 图 13–37 备数据库设置
 
-可以从现有的主数据库备份创建、通过拆分/镜像（split/mirror）过程创建，或通过手动过程创建数据库。如果从现有的备份映像创建数据库，将显示一个额外的面板，让您选择要使用哪个备份映像（图 13–38）。
+可以从现有的主数据库备份创建、通过拆分/镜像（`split/mirror`）过程创建，或通过手动过程创建数据库。如果从现有的备份映像创建数据库，将显示一个额外的面板，让您选择要使用哪个备份映像（图 13–38）。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_882_1.png)
 
 ## 图 13–38 备份选择
 
-图 13–39 总结了创建备用数据库将执行的命令。如果需要额外的 RESTORE 选项，命令旁边有一个按钮允许进行进一步的自定义。
+图 13–39 总结了创建备用数据库将执行的命令。如果需要额外的 `RESTORE` 选项，命令旁边有一个按钮允许进行进一步的自定义。
 
-如果选择了 SPLIT/MIRROR，向导将不会继续，因为它在继续之前需要备用数据库可用。一旦拆分/镜像处理完成，用户将选择“使用另一个数据库”。
+如果选择了 `SPLIT/MIRROR`，向导将不会继续，因为它在继续之前需要备用数据库可用。一旦拆分/镜像处理完成，用户将选择“使用另一个数据库”。
 
 除了移动数据库外，任何执行应用程序执行所需的外部存储过程、函数或对象也必须移动到备用服务器。这些外部对象通常是恢复数据库时被遗忘的部分。
 
@@ -20917,7 +19827,7 @@ HADR 向导通过在控制中心右键点击要使用的数据库来调用。注
 
 下一个面板用于更新 TCP/IP 通信的用于文件，以便 HADR 知道备用数据库的端口是哪个。
 
-# 高可用性灾难恢复 857
+# 高可用性灾难恢复
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_884_0.png)
 
@@ -20935,17 +19845,17 @@ HADR 向导通过在控制中心右键点击要使用的数据库来调用。注
 
 主系统和备系统之间使用 TCP 连接。当 HADR 在主数据库和备数据库之间建立连接时，它会查找每个数据库配置的 TCP 服务名称和主机名。
 
-| 主数据库 - BAKLAZ - DB2 - PRODUCT |
+| 主数据库 - BAKLAZ - DB2 - PRODUCT |  |  |
 | :--- | :--- | :--- |
 | 主机名 | BAKLAZ | 查看 IP 信息... |
 | HADR 服务名称 | DB2_HADR_1 | 查看服务文件 |
-| HADR 端口号 | | 55001 |
+| HADR 端口号 |  | 55001 |
 
-| 备数据库 - BAKLAZ - BACKUP - PRODALT (PRODUCT) |
+| 备数据库 - BAKLAZ - BACKUP - PRODALT (PRODUCT) |  |  |
 | :--- | :--- | :--- |
 | 主机名 | BAKLAZ | 查看 IP 信息... |
 | HADR 服务名称 | DB2_HADR_2 | 查看服务文件 |
-| HADR 端口号 | | 55002 |
+| HADR 端口号 |  | 55002 |
 
 图 13–40 TCP/IP 参数
 
@@ -20967,15 +19877,15 @@ HADR 向导通过在控制中心右键点击要使用的数据库来调用。注
 
 客户端重路由允许客户端应用程序在对其访问的数据库上发生 HADR 故障转移时，以最小的中断继续其工作。
 
-| 主数据库 - BAKLAZ - DB2 - PRODUCT |
+| 主数据库 - BAKLAZ - DB2 - PRODUCT |  |  |
 | :--- | :--- | :--- |
-| 备用主机名 | BAKLAZ | |
-| 备用端口号 | | 50000 |
+| 备用主机名 | BAKLAZ |  |
+| 备用端口号 |  | 50000 |
 
-| 备数据库 - BAKLAZ - BACKUP - PRODALT (PRODUCT) |
+| 备数据库 - BAKLAZ - BACKUP - PRODALT (PRODUCT) |  |  |
 | :--- | :--- | :--- |
-| 备用主机名 | BAKLAZ | |
-| 备用端口号 | | 50000 |
+| 备用主机名 | BAKLAZ |  |
+| 备用端口号 |  | 50000 |
 
 如果启用了客户端且在客户端发起服务器连接，但客户端未设置客户端连接注册表值，则 DB2 可能需要长达指定超时值三倍的时间才能报告连接尝试超时。这种延迟是因为 DB2 等待连接到主服务器代理的尝试失败，然后 DB2 尝试连接到备用服务器。在尝试失败后，DB2 报告连接尝试由于超时而失败。
 
@@ -20983,7 +19893,7 @@ HADR 向导通过在控制中心右键点击要使用的数据库来调用。注
 
 下一个面板（图 13–42）让用户选择在两个服务器之间放置的何种同步类型。默认情况下，使用近同步日志页传输。
 
-# 858 第 13 章 数据库恢复
+# 第 13 章 数据库恢复
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_885_0.png)
 
@@ -20995,9 +19905,9 @@ HADR 向导通过在控制中心右键点击要使用的数据库来调用。注
 
 ## 图 13–43 总结
 
-向导完成时将执行的操作。如果需要额外的 RESTORE 选项，命令旁边有一个按钮允许进行进一步的自定义。
+向导完成时将执行的操作。如果需要额外的 `RESTORE` 选项，命令旁边有一个按钮允许进行进一步的自定义。
 
-如果选择了 SPLIT/MIRROR，向导将不会继续，因为它在继续之前需要备用数据库可用。一旦拆分/镜像处理完成，用户将选择“使用另一个数据库”。
+如果选择了 `SPLIT/MIRROR`，向导将不会继续，因为它在继续之前需要备用数据库可用。一旦拆分/镜像处理完成，用户将选择“使用另一个数据库”。
 
 除了移动数据库外，任何执行应用程序执行所需的外部存储过程、函数或对象也必须移动到备用服务器。这些外部对象通常是恢复数据库时被遗忘的部分。
 
@@ -21019,13 +19929,9 @@ HADR 向导通过在控制中心右键点击要使用的数据库来调用。注
 
 下一个面板用于更新 TCP/IP 通信的用于文件，以便 HADR 知道备用数据库的端口是哪个。
 
-
-
-
-
 ## 高可用灾难恢复
 
-## 监控 HADR
+### 监控 HADR
 
 DB2 提供了许多机制来监控 HADR。例如，DBA 可以使用 SQL 获取 HADR 状态信息，或使用控制中心（Control Center）。图 13–47 显示了控制中心的某些 HADR 特定输出。
 
@@ -21033,25 +19939,29 @@ DB2 提供了许多机制来监控 HADR。例如，DBA 可以使用 SQL 获取 H
 
 图 13–47 HADR 状态
 
-两台服务器的状态为“远程同步”（remote catch-up）。这意味着备用服务器在进入对等状态（peer state）之前仍然需要应用来自主数据库的日志。下方提供了有关服务器状态的更详细信息。
+两台服务器的状态为“远程同步”（`remote catch-up`）。这意味着备用服务器在进入对等状态（`peer state`）之前仍然需要应用来自主数据库的日志。下方提供了有关服务器状态的更详细信息。
 
-## 第 13 章数据库恢复
+# 第 13 章数据库恢复
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_891_0.png)
 
 **图 13–48** 对等状态
 
-备用服务器正在处理日志文件 S000002.LOG，它需要追上主数据库正在写入的 S0000005.LOG。一旦日志同步完成，数据库将处于“对等状态”（图 13–48）。
+备用服务器正在处理日志文件 `S000002.LOG`，它需要追上主数据库正在写入的 `S0000005.LOG`。一旦日志同步完成，数据库将处于“对等状态”（图 13–48）。
 
 对等状态意味着两台服务器已同步，并且日志缓冲区在刷新时直接从主服务器发送到备用服务器。
 
-HADR 节点的连接状态也会在数据库快照输出中。在这种情况下，你可以查看两台服务器是否已连接，以及它们连接、断开连接或拥塞的时间。以下 SQL 语句通过查询 SYSIBMADM.SNAPHADR 管理视图的内容返回 HADR 状态（图 13–49）：
+HADR 节点的连接状态也会在数据库快照输出中。在这种情况下，你可以查看两台服务器是否已连接，以及它们连接、断开连接或拥塞的时间。以下 SQL 语句通过查询 `SYSIBMADM.SNAPHADR` 管理视图的内容返回 HADR 状态（图 13–49）：
 
 ```sql
-SELECT SUBSTR(DB_NAME, 1, 8) AS DBNAME, HADR_ROLE, HADR_STATE,
-HADR_SYNCHMODE, HADR_CONNECT_STATUS
-FROM SYSIBMADM.SNAPHADR
-```
+
+
+
+`SELECT SUBSTR(DB_NAME, 1, 8) AS DBNAME, HADR_ROLE, HADR_STATE,`
+
+`HADR_SYNCHMODE, HADR_CONNECT_STATUS`
+
+`FROM SYSIBMADM.SNAPHADR`
 
 ```
 DBNAME         HADR_ROLE      HADR_STATE      HADR_SYNCHMODE HADR_CONNECT_STATUS
@@ -21076,6 +19986,8 @@ UPDATE ALTERNATE SERVER FOR DATABASE PRODUCT
 USING HOSTNAME BACK PORT 756
 ```
 
+
+
 当 Db2 客户端成功连接到主数据库服务器时，备用服务器信息将返回给客户端并存储在那里。
 
 在发生故障时，一旦 ACR 技术确认主数据库确实发生了停机，连接将转移到备用服务器。
@@ -21084,9 +19996,9 @@ USING HOSTNAME BACK PORT 756
 
 可用性方面的一个方面涉及计划内维护。这涉及数据库和非数据库特定的任务。你可以使用 HADR 维护你的软件或硬件而无需关闭数据库。例如，你可能想为 DB2 应用修复包（Fix Pack）、为操作系统应用服务包（service pack），或更换某些硬件组件。
 
-通过 HADR，你可以将备用服务器“关闭”，进行维护并将其恢复在线。HADR 将重新同步备用服务器，并追上维护期间错过的事务。一旦达到对等状态，你只需执行角色切换（switch roles），然后对新的备用数据库应用补丁，并让 HADR 重新与新的主服务器同步。下所示示例。
+通过 HADR，你可以将备用服务器“关闭”，进行维护并将其恢复在线。HADR 将重新同步备用服务器，并追上维护期间错过的事务。一旦达到对等状态，你只需执行角色切换（switch roles），然后对新的备用数据库应用补丁，并让 HADR 重新与新的主服务器同步。如下所示示例。
 
-- 1. 应用程序当前连接到主服务器。从备用服务器发出 TAKEOVER 命令（图 13–50）。
+1. 应用程序当前连接到主服务器。从备用服务器发出 `TAKEOVER` 命令（图 13–50）。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_892_0.png)
 
@@ -21096,13 +20008,13 @@ USING HOSTNAME BACK PORT 756
 
 图 13–50 备用接管
 
-- 2. 主服务器与备用服务器反转角色。应用程序开始使用备用服务器作为新主。事务日志现在以反向应用（图 13–51）。
+2. 主服务器与备用服务器反转角色。应用程序开始使用备用服务器作为新主。事务日志现在以反向应用（图 13–51）。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_893_1.png)
 
 图 13–51 角色反转
 
-- 3. 在此此时，可以在原始主服务器（现在标记为备用）上进行维护。由于客户端当前访问备用服务器，此时可以对该服务器进行硬件、软件、数据库和网络维护。
+3. 在此此时，可以在原始主服务器（现在标记为备用）上进行维护。由于客户端当前访问备用服务器，此时可以对该服务器进行硬件、软件、数据库和网络维护。
 
 ## 高可用灾难恢复
 
@@ -21110,17 +20022,17 @@ USING HOSTNAME BACK PORT 756
 
 **图 13–52** 角色反转
 
-- 4. 一旦系统工作完成，备用服务器将重启。主服务器不会向备用服务器发送任何事务，因为它被视为“离线”（图 13–53）。
+4. 一旦系统工作完成，备用服务器将重启。主服务器不会向备用服务器发送任何事务，因为它被视为“离线”（图 13–53）。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_894_1.png)
 
 **图 13–53** 备用服务器已重启
 
-- 5. 随着备用服务器启动，主服务器开始向其发送事务以便“追上”（图 13–54）。一旦备用服务器读取了所有主日志，它将被认为处于“对等状态”。
+5. 随着备用服务器启动，主服务器开始向其发送事务以便“追上”（图 13–54）。一旦备用服务器读取了所有主日志，它将被认为处于“对等状态”。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_895_0.png)
 
-- 6. 整个过程现在可以在二级服务器上重复。当前的备用服务器可以启动接管并关闭主服务器以维护。
+6. 整个过程现在可以在二级服务器上重复。当前的备用服务器可以启动接管并关闭主服务器以维护。
 
 ## HADR 益处
 
@@ -21141,40 +20053,30 @@ HADR 确实限制了 HADR 备用数据库的活动——它只能用于故障转
 
 需要考虑的有种恢复类型：
 
-可恢复数据库支持崩溃恢复、版本恢复和向前恢复。DB2 通过允许使用 LOGRETAIN 和/或 USERXIT 数据库配置参数支持可恢复数据库。不可恢复数据库支持崩溃恢复和版本恢复。DB2 通过不允许使用这些参数来实现此类数据库。
+可恢复数据库支持崩溃恢复、版本恢复和向前恢复。DB2 通过允许使用 `LOGRETAIN` 和/或 `USERXIT` 数据库配置参数支持可恢复数据库。不可恢复数据库支持崩溃恢复和版本恢复。DB2 通过不允许使用这些参数来实现此类数据库。
 
 离线访问数据库意味着数据库访问处于独占模式；无人连接到数据库。在线访问意味着在执行特定操作时，其他应用程序可以连接到数据库。
-
-
-
-
 
 - 归档日志文件 — 由 DB2 写入且不再需要支持崩溃恢复的日志文件。在线归档日志文件位于活动日志路径目录中。在线归档日志文件不在活动路径目录中。它们可以手动或通过外部存储管理产品进行移动。
 
 以下 DB2 命令可以启用数据库的可恢复性：
 
 - `BACKUP` 命令创建数据库或表空间的镜像，用于还原，此操作可以在在线或离线状态进行。同时也支持增量备份。
-
 - `RESTORE` 命令采用由 `BACKUP` 命令创建的备份镜像并还原数据库或表空间。
-
 - `ROLLFORWARD` 命令通过重新应用日志中捕获的工作单元（直到滚向前恢复停止的指定点）来支持滚向前恢复。
-
 - `QUIES` 命令为相关的表空间建立一致性点，稍后可用于滚向前操作。它通过对表加锁来实现，确保在静期间没有其他应用程序更新这些表。
 
 为了提高 DB2 的可用性，您可以使用 AIX 上的 HACMP 等高可用产品实现备用和互接切换模式。这允许在主机故障时自动将 DB2 操作切换到备用机，而不会中断操作。这可以显著提高 DB2 的运行可用性。
 
 多个存储供应商已提供高级的磁盘镜像功能。DB2 提供了使用此技术的命令，并可以将镜像数据库初始化为：
 
-- SNAPSHOT — 主数据库的克隆。
-
-- STANDBY — 处于滚向前等待状态的数据库，当主系统故障时准备好接替运行。
-
-- MIRROR — 可还原主数据库的备份镜像。
+- `SNAPSHOT` — 主数据库的克隆。
+- `STANDBY` — 处于滚向前等待状态的数据库，当主系统故障时准备好接替运行。
+- `MIRROR` — 可还原主数据库的备份镜像。
 
 除了使用 HACMP 外，DB2 提供了提供了高可用灾难恢复 (HADR) 功能以提供更高的可用性。这可以帮助防止许多不同的故障，同时也允许对生产系统进行硬件和软件的滚动升级。
 
-## 第 14 章
-## 监控与调优
+## 第 14 章 监控与调优
 
 - 规划
 - DB2 体系概述
@@ -21215,25 +20117,25 @@ HADR 确实限制了 HADR 备用数据库的活动——它只能用于故障转
 
 在开发性能调优整体方法时，应考虑以下指南。
 
-## 记住收益递减规律
+### 记住收益递减规律
 
 您最大的性能收益通常来自最初的努力。进一步的更改通常产生越来越微小的收益，并且需要更大的努力。
 
-## 性能要素
+### 性能要素
 
-## 不要为了调优而调优
+### 不要为了调优而调优
 
 为了缓解已识别的约束而调优。如果您调优的资源不是性能问题的主要原因，那么在解决主要约束之前，这对响应时间的影响很小或没有影响，并且可能会使随后的调优工作变得更加困难。如果有任何重大的改进潜力，它在于提高响应时间主要因素的资源的性能。
 
-## 考虑整个系统
+### 考虑整个系统
 
 您永远不能孤立地调优一个参数或系统。在进行任何调整之前，请考虑它将如何影响整个系统。
 
-## 一次更改一个参数
+### 一次更改一个参数
 
 不要一次更改超过一个性能调优参数。即使您确定所有的更改都是有益的，您也将无法评估每个更改贡献了多少。您还无法有效地判断通过一次更改多个参数所做的权衡。每当您调整一个参数来改进一个领域时，几乎总是会影响至少一个可能未被考虑过的领域。
 
-## 分级测量和重新配置
+### 分级测量和重新配置
 
 由于您应该一次只更改一个参数的原因相同，请一次调优系统的一个级别。您可以使用以下系统级别列表作为指南：
 
@@ -21244,15 +20146,15 @@ HADR 确实限制了 HADR 备用数据库的活动——它只能用于故障转
 - SQL 语句
 - 应用程序
 
-## 检查硬件和软件问题
+### 检查硬件和软件问题
 
 某些性能问题可以通过对您的硬件、软件或两者进行维护来纠正。不要在简单的维护解决问题的情况下花费过多时间监控和调优您的系统。
 
-## 在升级硬件之前理解问题
+### 在升级硬件之前理解问题
 
 即使额外的存储或处理器资源似乎可以立即提高性能，也要花时间理解瓶颈在哪里，避免在购买额外的磁盘存储后发现没有处理器资源来利用它。
 
-## 在开始调优之前设置回滚程序
+### 在开始调优之前设置回滚程序
 
 由于对现有系统进行了更改，如果这些更改没有产生效果或对系统产生了负面影响，您必须准备好撤销这些更改。
 
@@ -21276,9 +20178,7 @@ HADR 确实限制了 HADR 备用数据库的活动——它只能用于故障转
 
 提高系统效率是有极限的。请考虑您在提高系统性能上花费的时间和金钱，以及投入额外的时间金钱对系统用户有多少帮助。
 
-您的系统在不进行任何调优的情况下可能运行尚可，但可能无法发挥其潜力。每个数据库都是独特的。在您为它开发自己的数据库和应用程序时，研究可用的调优参数并学习如何自定义设置以反映您的状况。在某些
-
-
+您的系统在不进行任何调优的情况下可能运行尚可，但可能无法发挥其潜力。每个数据库都是独特的。在您为它开发自己的数据库和应用程序时，研究可用的调优参数并学习如何自定义设置以反映您的状况。
 
 在某些情况下，调整系统只能带来微小的收益。然而，在大多数情况下，这种收益可能是显著的。
 
@@ -21304,7 +20204,7 @@ DB2 控制中心（DB2 Control Center）提供了辅助调整数据库参数的�
 - DB2 内存使用
 - SQL 编译器/优化器
 
-## 进程模型
+### 进程模型
 
 DB2 的进程模型或服务器架构被称为 n-n 进程模型。该架构的主要特征是确保数据库的完整性。它将所有数据库应用程序与关键数据库资源隔离开。这些资源包括数据库控制块和关键数据库文件。在图 14–1 中可以看到 DB2 架构的高级视图。
 
@@ -21315,7 +20215,7 @@ DB2 的进程模型或服务器架构被称为 n-n 进程模型。该架构的�
 
 这种架构提供了一个防火墙，保护数据库资源免受错误应用程序的影响。
 
-通过 DB2 连接集中器（connection concentrator）可以实现多对一的进程模型。使用集中器可以通过允许处理更多的客户端连接并减少每个连接的内存占用，从而提高性能。当 MAX_CONNECTIONS 的值大于 MAX_COORDINAGENTS 的值时，将启用连接集中器。
+通过 DB2 连接集中器（connection concentrator）可以实现多对一的进程模型。使用集中器可以通过允许处理更多的客户端连接并减少每个连接的内存占用，从而提高性能。当 `MAX_CONNECTIONS` 的值大于 `MAX_COORDINAGENTS` 的值时，将启用连接集中器。
 
 ## DB2 架构概述 877
 
@@ -21325,7 +20225,7 @@ DB2 的进程模型或服务器架构被称为 n-n 进程模型。该架构的�
 
 图 14–1 DB2 架构概述
 
-## 围栏非围栏资源 (Fenced/Not Fenced Resources)
+### 围栏非围栏资源 (Fenced/Not Fenced Resources)
 
 数据库存储过程或动态链接库（DLL）可以通过数据库应用程序使用 `CALL` 语句调用。该库存储在 DB2 数据库服务器上，可以作为围栏资源（fenced resource）或非围栏资源（not fenced resource）执行。围栏资源是指在与数据库代理单独的进程中执行的资源。
 
@@ -21336,7 +20236,7 @@ DB2 的进程模型或服务器架构被称为 n-n 进程模型。该架构的�
 > DB2 注意
 > 用户定义函数（UDFs）也可以被定义为作为围栏或非围栏（未围栏）资源执行。
 
-## 查询并行化
+### 查询并行化
 
 在第 1 章中，简要讨论了 DB2 从小型单处理器增长到并行系统的扩展性选项。DB2 内部的某些元素在利用多任务操作系统优势的同时，还利用了硬件并行性。并行性的利用对于针对 DB2 的查询以及其他管理任务具有显著的性能收益。
 
@@ -21345,7 +20245,7 @@ DB2 的进程模型或服务器架构被称为 n-n 进程模型。该架构的�
 - *查询间并行是指多个应用程序同时查询数据库的能力。每个查询将独立于其他查询执行，但 DB2 会同时执行所有查询。DB2 一直支持这种类型的并行化。*
 - *查询内并行是指使用分区内并行、分区间并行或两者兼顾，同时处理单个查询的部分。通过查询内并行，一个单一的复杂查询可以被 DB2 优化器捕获并拆分成多个可以并行执行的碎件。*
 
-## 分区内并行
+### 分区内并行
 
 分区内并行是指将查询拆分为多个部分的能力。这种类型的并行化将通常被视为单个数据库基础操作（如索引创建、数据库加载或 SQL 查询）细分为多个部分，其中许多部分或所有部分都可以并行执行。
 
@@ -21359,14 +20259,11 @@ SELECT... FROM
 
 ## 第 14 章监控与调整
 
-优化器会在后台处理这一切；因此，用户无需更改应用程序中的任何内容，即可通过将内部并行数据库配置设置为 yes 并将并行度设置为大于1 来利用 SMP。此外，如果某个部分是由优化器以特定的并行度构建的，如果实例默认的并行度较低，则该并行度会被降低。
-
-
-
+优化器会在后台处理这一切；因此，用户无需更改应用程序中的任何内容，即可通过将内部并行数据库配置设置为 `yes` 并将并行度设置为大于 1 来利用 SMP。此外，如果某个部分是由优化器以特定的并行度构建的，如果实例默认的并行度较低，则该并行度会被降低。
 
 图 14–3 显示了一个查询被分为四个部分，这些部分可以并行执行，其结果返回比在单个分区中串行运行查询更快。并行程度在很大程度上取决于你创建的分区数量以及你定义节点组（nodegroups）的方式。DB2 数据分区功能允许分区间并行，并结合分区内并行和分区间并行。该产品在《DB2 管理指南》中有详细介绍。
 
-## DB2 内存使用
+### DB2 内存使用
 
 数据库活动涉及磁盘访问（I/O）和内存访问（CPU）。每个 DB2 数据库配置参数都会影响内存或磁盘资源。由于磁盘访问远慢于内存访问，数据库性能调优的关键目标是减少磁盘活动量。如果你能够消除 I/O 等待时间，数据库请求将受限于 CPU，此时提高性能将需要更快的 CPU 或多个 CPU。
 
@@ -21385,14 +20282,14 @@ SELECT... FROM
 
 每个 DB2 应用程序都有关联的 DB2 协调代理（coordinating agent）。数据库代理代表应用程序访问资源。因此，存在可以调整数据库代理资源使用的的调优参数。每个代理都存在一个代理私有内存（Agent Private Memory），其大小取决于以下参数的值：
 
-- 应用程序堆大小 (APPLHEAPSZ)
-- 排序堆大小 (SORTHEAP)
-- 语句堆大小 (STMTHEAP)
-- 统计信息堆大小 (STAT_HEAP_SZ)
-- 查询堆大小 (QUERY_HEAP_SZ)
-- DRDA 堆大小 (DRDA_HEAP_SZ)
-- 用户定义函数 (UDF) 共享内存集大小 (UDF_MEM_SZ)
-- 代理堆栈大小 (AGENT_STACK_SZ)
+- 应用程序堆大小 (`APPLHEAPSZ`)
+- 排序堆大小 (`SORTHEAP`)
+- 语句堆大小 (`STMTHEAP`)
+- 统计信息堆大小 (`STAT_HEAP_SZ`)
+- 查询堆大小 (`QUERY_HEAP_SZ`)
+- DRDA 堆大小 (`DRDA_HEAP_SZ`)
+- 用户定义函数 (UDF) 共享内存集大小 (`UDF_MEM_SZ`)
+- 代理堆栈大小 (`AGENT_STACK_SZ`)
 
 如果通过将并行数据库管理器配置参数 `in-parallel` 设置为 `yes`（这是 SMP 环境下的默认值）来启用分区内并行，则协调代理会将请求分发给子代理，由代理代表应用程序执行请求。一旦创建了协调代理，它将通过协调在数据库上执行请求的子代理来代表应用程序处理所有数据库请求。
 
@@ -21400,7 +20297,7 @@ SELECT... FROM
 
 称为应用程序共享内存（application shared memory）的区域用于确定应用程序与 DB2 协调代理之间通信所需的内存量。记录阻塞（Record blocking）发生在此内存区域。参数为 `ASHEAPSZ`。
 
-## 将数据预取到缓冲区池
+### 将数据预取到缓冲区池
 
 预取页面意味着从磁盘中检索一个或多个页面，预期这些页面将被应用程序需要。将索引和数据预取到缓冲区池可以通过减少 I/O 等待时间来提高性能。此外，并行 I/O 增强了预取效率。预取有两种类型：
 
@@ -21415,7 +20312,7 @@ SELECT... FROM
 
 由于其重要性，预取的执行得得更为激进。
 
-## SQL 编译器概述
+### SQL 编译器概述
 
 SQL 编译器执行多项任务；这些阶段在下文中描述，并在图 14–5 中所示。它使用称为查询图（Query Graph）的内部表示。
 
@@ -21424,9 +20321,6 @@ SQL 编译器执行多项任务；这些阶段在下文中描述，并在图 14�
 - 重写查询（Rewrite query）——SQL 编译器使用查询图将查询转换为更容易优化的形式。这一特定过程被称为谓词下推（predicate pushdown）。
 - 优化访问计划（Optimize access plan）——优化器使用查询图作为输入并生成许多替代计划。它估计每个替代计划的执行成本并选择成本最小的一个。
 - 生成可执行代码（Generate executable code）——SQL 编译器的最后一步使用访问计划和查询图创建可执行代码。此代码生成步骤利用查询图的信息，避免重复执行只需计算一次或可以进行优化的表达式，包括代码转换和主机变量的使用。
-
-
-
 
 # 第 14 章监控与调优
 
@@ -21443,8 +20337,8 @@ SQL 编译器执行多项任务；这些阶段在下文中描述，并在图 14�
 
 当 SQL 查询要求按照定义的序列或顺序返回数据时，结果可能需要排序，也可能不需要。DB2 会尝试通过使用索引来执行排序。如果无法使用索引，则会进行排序。排序包含两个步骤：
 
-- 1. 排序阶段
-- 2. 返回排序阶段的结果
+1. 排序阶段
+2. 返回排序阶段的结果
 
 在这两个步骤中处理排序的方式决定了用于描述排序的若干不同类别或类型。在考虑排序阶段时，排序可以被分为溢出（overflowed）或非溢出（nonoverflowed）。在考虑返回排序阶段的结果时，排序可以被分为管道式（piped）或非管道式（non-piped）。
 
@@ -21519,25 +20413,26 @@ DB2 优化器通过比较预期结果集与 `SORTHEAP` 数据库配置参数的�
 
 | 分组 | 提供的信息 | 监控开关 | DBM 参数 |
 |---|---|---|---|
-| 排序 | 使用的堆数量、溢出、排序性能 | SORT | DFT_MON_SORT |
-| 锁 | 持有的锁数量、死锁数量 | LOCK | DFT_MON_LOCK |
-| 表 | 衡量活动（读取行、写入行） | TABLE | DFT_MON_TABLE |
-| 缓冲池 | 读取和写入的次数、耗用时间 | BUFFERPOOL | DFT_MON_BUFFOOL |
-| 工作单元 | 开始时间、结束时间、完成状态 | UOW | DFT_MON_UOW |
-| SQL | 开始时间、停止时间、语句标识 | STATEMENT | DFT_MON_STMT |
-| 时间戳 | 监控时间戳 | TIMESTAMP | DFT_MON_TIMESTAMP |
+| 排序 | 使用的堆数量、溢出、排序性能 | `SORT` | `DFT_MON_SORT` |
+| 锁 | 持有的锁数量、死锁数量 | `LOCK` | `DFT_MON_LOCK` |
+| 表 | 衡量活动（读取行、写入行） | `TABLE` | `DFT_MON_TABLE` |
+| 缓冲池 | 读取和写入的次数、耗用时间 | `BUFFERPOOL` | `DFT_MON_BUFFOOL` |
+| 工作单元 | 开始时间、结束时间、完成状态 | `UOW` | `DFT_MON_UOW` |
+| SQL | 开始时间、停止时间、语句标识 | `STATEMENT` | `DFT_MON_STMT` |
+| 时间戳 | 监控时间戳 | `TIMESTAMP` | `DFT_MON_TIMESTAMP` |
 
 监控开关可以在实例级别（DBM 配置）或应用程序级别（使用 `UPDATE MONITOR SWITCHES` 命令）开启或关闭。无论监控开关设置如何，快照都会收集基础信息。设置实例监控开关配置参数将影响实例中的所有数据库。连接到数据库的每个应用程序将继承 DBM 配置中设置的默认开关。
 
-
-
-
-
-## DB2 注意
-
-DB2 快照监控器（Snapshot Monitors）只能由具有 SYSADM、SYSCTRL 或 SYSMAINT 权限的用户使用。事件监控器（Event Monitors）需要 SYSADM 或 DBADM 权限。
+> DB2 注意
+> DB2 快照监控器（Snapshot Monitors）只能由具有 `SYSADM`、`SYSCTRL` 或 `SYSMAINT` 权限的用户使用。事件监控器（Event Monitors）需要 `SYSADM` 或 `DBADM` 权限。
 
 例如，为了捕获在 DB2 中执行的 SQL 语句，必须开启相应的监控开关。命令如下：
+
+```
+
+
+
+UPDATE DBM CONFIGURATION USING DFT_MON_STMT ON
 
 ```
 UPDATE DBM CONFIGURATION USING DFT_MON_STMT ON
@@ -21549,7 +20444,7 @@ UPDATE DBM CONFIGURATION USING DFT_MON_STMT ON
 UPDATE MONITOR SWITCHES USING STATEMENT ON
 ```
 
-`UPDATE DBM CONFIGURATION` 命令将修改数据库管理器配置。因此，访问实例中所有数据库的应用程序都会记录 SQL语句信息。
+`UPDATE DBM CONFIGURATION` 命令将修改数据库管理器配置。因此，访问实例中所有数据库的应用程序都会记录 SQL 语句信息。
 
 ## DB2 注意
 
@@ -21559,7 +20454,7 @@ UPDATE MONITOR SWITCHES USING STATEMENT ON
 
 ## DB2 注意
 
-即使未开启任何开关，快照监控器也会捕到一些基本信息。
+即使未开启任何开关，快照监控器也会捕获一些基本信息。
 
 # 查看快照监控数据
 
@@ -21600,7 +20495,7 @@ GET SNAPSHOT FOR LOCKS ON SAMPLE
 
 图 14–9 显示了 `GET FOR LOCKS` 命令的 SNAPSHOT 输出。如果你想获取如图 14–9 所示的锁信息，必须开启锁监控开关。
 
-分析快照，你可以看到第一个应用程序（应用程序 ID *LOCAL.DB2.070041021031）处于锁等待（Lock-Wait）状态。它正尝试获取第二个应用程序（应用程序 ID *LOCAL.DB2.070041020055）对某行的选择锁。要释放锁，持有锁的应用程序必须使用 `COMMIT` 或 `ROLLBACK` 语句完成其事务。
+分析快照，你可以看到第一个应用程序（应用程序 ID `*LOCAL.DB2.070041021031`）处于锁等待（Lock-Wait）状态。它正尝试获取第二个应用程序（应用程序 ID `*LOCAL.DB2.070041020055`）对某行的选择锁。要释放锁，持有锁的应用程序必须使用 `COMMIT` 或 `ROLLBACK` 语句完成其事务。
 
 ## DB2 注意
 
@@ -21751,10 +20646,6 @@ GET SNAPSHOT FOR APPLICATIONS ON SAMPLE
 
 图 14–10 Get Snapshot for applications 命令的部分输出
 
-
-
-*
-
 # 数据库监控 899
 
 使用自动存储
@@ -21876,19 +20767,21 @@ GET DBM MONITOR SWITCHES
 RESET MONITOR FOR DATABASE
 ```
 
+
+
 重置监控开关将使所有计数器归零。
 
-要重置所有数据库的监控开关，应使用 RESET MONITOR 命令。
+要重置所有数据库的监控开关，应使用`RESET MONITOR`命令。
 
 # 事件监控
 
 快照监控记录数据库的状态，而事件监控记录事件发生时的活动。某些需要监控的数据库活动无法通过快照轻松捕获，例如死锁场景。
 
-事件监控使用数据定义语言 (DDL) 创建，与其他数据库对象一样。事件监控可以开启或关闭。
+事件监控使用数据定义语言（DDL）创建，与其他数据库对象一样。事件监控可以开启或关闭。
 
 ## DB2 注意
 
-创建事件监控需要 SYSADM 或 DBADM 权限。
+创建事件监控需要`SYSADM`或`DBADM`权限。
 
 # 第 14 章 监控与调优
 
@@ -21907,44 +20800,33 @@ RESET MONITOR FOR DATABASE
 
 使用以下系统目录表存储事件监控定义：
 
-- SYSCAT.EVENTMON — 为每个事件监控包含记录，包括事件监控的状态，并标识目标输出为 SQL 表、文件或管道。
-- SYSCAT.EVENTS — 为每个监控的事件包含记录。一个事件监控可以定义为监控多个事件（例如死锁和语句）。
-- SYSIBM.EVENTTABLES — 为写入 SQL 表的每个事件监控目标表包含行。
+- `SYSCAT.EVENTMON` — 为每个事件监控包含记录，包括事件监控的状态，并标识目标输出为 SQL 表、文件或管道。
+- `SYSCAT.EVENTS` — 为每个监控的事件包含记录。一个事件监控可以定义为监控多个事件（例如死锁和语句）。
+- `SYSIBM.EVENTTABLES` — 为写入 SQL 表的每个事件监控目标表包含行。
 
 # 分析事件监控输出
 
 这些工具用于分析事件监控数据：
 
-- db2eva — 一个可以从命令行调用的 GUI 工具（用于读取
+- `db2eva` — 一个可以从命令行调用的 GUI 工具（用于读取写入 SQL 表的数据）。
+- `db2evmon` — 一个基于文本的工具，用于读取事件记录并生成报告（用于读取文件）。
 
+现在将创建一个死锁情况来演示事件监控器（Event Monitor）。要做到这一点，你需要两个关闭了`AUTOCOMMIT`功能的 DB2 命令中心窗口（`db2 -c-`）。不要忘记确保你已经为`DEADLOCKS`创建了事件监控器并激活了它。以下是创建死锁情况的步骤：
 
-
-
-
-## 数据库监控
-
-写入 SQL 表的数据。
-
-- db2evmon — 一个基于文本的工具，用于读取事件记录并生成报告（用于读取文件）。
-
-现在将创建一个死锁情况来演示事件监控器（Event Monitor）。要做到这一点，你需要两个关闭了 AUTOCOMMIT 功能的 DB2 命令中心窗口（db2 -c-）。不要忘记确保你已经为 DEADLOCKS 创建了事件监控器并激活了它。以下是创建死锁情况的步骤：
-
-- 在第一个窗口中，执行：LOCK TABLE_TAKEN IN SHARE MODE
-- 在第二个窗口中，执行：LOCK TABLE TEST IN SHARE MODE
-- 回到第一个窗口，执行：LOCK TABLE TEST IN EXCLUSIVE MODE
-- 回到第二个窗口，执行：LOCK TABLE TEST_TAKEN IN EXCLUSIVE MODE
+- 在第一个窗口中，执行：`LOCK TABLE TABLE_TAKEN IN SHARE MODE`
+- 在第二个窗口中，执行：`LOCK TABLE TEST IN SHARE MODE`
+- 回到第一个窗口，执行：`LOCK TABLE TEST IN EXCLUSIVE MODE`
+- 回到第二个窗口，执行：`LOCK TABLE TEST_TAKEN IN EXCLUSIVE MODE`
 
 这些步骤将产生一个将由 DB2 解决的死锁情况。现在将对事件监控器捕获的数据进行分析。
 
 ## 事件分析器/监控器
 
-事件分析器显示之前收集的事件监控器记录。要调用事件分析器，请执行 DB2EVA 命令。如果你在 Windows 上工作，可以在 DB2 文件夹中选择事件分析器图标。
+事件分析器显示之前收集的事件监控器记录。要调用事件分析器，请执行`DB2EVA`命令。如果你在 Windows 上工作，可以在 DB2 文件夹中选择事件分析器图标。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_930_0.png)
 
 图 14–14 从控制中心调用事件监控器
-
-# 第14章 监控与调优 90
 
 选择事件分析器图标的替代方法是右键点击控制中心中的事件监控器对象，如图 14–14 所示。
 
@@ -21952,15 +20834,13 @@ RESET MONITOR FOR DATABASE
 
 图 14–15 创建事件监控器
 
-在本示例中将创建一个名为 Deadlocks 的事件监控器来监控死锁（图 14–15）。注意，该监控器也可以用于监控死锁事件之外的额外事件。
+在本示例中将创建一个名为`Deadlocks`的事件监控器来监控死锁（图 14–15）。注意，该监控器也可以用于监控死锁事件之外的额外事件。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_931_1.png)
 
 图 14–16 创建事件监控器生成的 SQL
 
 生成的 SQL 可以保存为脚本（图 14–16）。点击关闭和确定。
-
-## 数据库监控 905
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_932_0.png)
 
@@ -21972,77 +20852,29 @@ RESET MONITOR FOR DATABASE
 
 图 14–18 事件监控器的监控时段视图
 
-从监控时段视图（Monitored Periods View）中（如图 14–18），你可以分析事件监控器激活期间特定时间范围的事件记录。选择要分析的时间间隔，并从下拉菜单中选择 DEADLOCKS 事件。如图 14–19 所示。
-
-# 第14章 监控与调优
+从监控时段视图（Monitored Periods View）中（如图 14–18），你可以分析事件监控器激活期间特定时间范围的事件记录。选择要分析的时间间隔，并从下拉菜单中选择`DEADLOCKS`事件。如图 14–19 所示。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_933_0.png)
 
 图 14–19 为特定时期选择死锁事件
 
-选择死锁事件监控器后，注意 Deadlocks 事件视图中的信息，如图 14–20 所示。
+选择死锁事件监控器后，注意`Deadlocks`事件视图中的信息，如图 14–20 所示。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_933_1.png)
 
 图 14–20 死锁事件视图
 
-Deadlocks 视图窗口指示检测到了数量死锁。图 14–20 显示了导致死锁的连接。钻取到死锁连接（Deadlocked Connections），然后在图 14–21 中显示死锁连接窗口。
-
-## 数据库监控
+`Deadlocks`视图窗口指示检测到了数量死锁。图 14–20 显示了导致死锁的连接。钻取到死锁连接（Deadlocked Connections），然后在图 14–21 中显示死锁连接窗口。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_934_0.png)
 
 图 14–22 死锁连接视图
 
-事件分析器仅显示之前捕获的数据。因此，使用事件分析器不会像使用快照监控器（Snapshot Monitor）那样产生开销。事件分析器可能不包含所需信息，因为它只能显示之前捕获的事件记录。例如，如果你将 Open 设置为 Statements（语句），且没有为事件监控器定义语句信息，则显示将不包含 语句信息。
+事件分析器仅显示之前捕获的数据。因此，使用事件分析器不会像使用快照监控器（Snapshot Monitor）那样产生开销。事件分析器可能不包含所需信息，因为它只能显示之前捕获的事件记录。例如，如果你将`Open`设置为`Statements`（语句），且没有为事件监控器定义语句信息，则显示将不包含语句信息。
 
 ## 使用文件输出进行事件监控
 
-如所述，事件监控器是使用 SQL DDL 语句创建的数据库对象。在本示例中，将创建一个死锁事件监控器，将其事件记录存储在“\EVENTMONITORS\DEADLOCK\EVMON1”目录下。
-
-> DB2 注意
-> 使用文件输出时，DB2 不会创建事件监控器输出。它必须由数据库管理员创建，并且实例所有者必须向指定的目录写入。
-
-以下 SQL 语句使用文件输出创建事件监控器。在示例中：
-
-```sql
-CREATE EVENT MONITOR FOR DEADLOCKS
-WRITE TO '\EVENTMONITORS\DEADLOCK\EVMON1'
-MAXFILES 100;
-```
-
-# 第14章 监控与调优 935
-
-所述，事件监控器是使用 SQL DDL 语句创建的数据库对象。在本示例中，将创建一个死锁事件监控器，将其事件记录存储在“\EVENTMONITORS\DEADLOCK\EVMON1”目录下。
-
-> DB2 注意
-> 使用文件输出时，DB2 不会创建事件监控器输出。它必须由数据库管理员创建，并且实例所有者必须向指定的目录写入。
-
-以下 SQL 语句使用文件输出创建事件监控器。在示例中：
-
-```sql
-CREATE EVENT MONITOR FOR DEADLOCKS
-WRITE TO '\EVENTMONITORS\DEADLOCK\EVMON1'
-MAXFILES 100;
-```
-
-选择事件分析器图标的替代方法是右键点击控制中心的事件监控器对象，如图 14–14 所示。
-
-在本示例中，将创建 Deadlocks 事件监控器来监控死锁（图 14–15）。注意，该监控器也可以用于监控死锁事件之外的额外事件。生成的 SQL 可以保存为脚本（图 14–16）。点击关闭和确定。
-
-创建监控器后，可以从控制中心显示（图 14–17）。
-
-从监控时段视图（图 14–18），当事件监控器激活时，你可以分析特定时间范围的事件记录。选择要分析的时间间隔，并从下拉菜单中选择 DEADLOCKS 事件。如图 14–19 所示。
-
-选择死锁事件监控器后，注意 Deadlocks 事件视图中的信息，如图 14–20 所示。
-
-Deadlocks 视图窗口指示检测到了数量死锁。图 14–20 显示了导致死锁的连接。钻取到死锁连接，然后在图 14–21 中显示死锁连接窗口。
-
-事件分析器仅显示之前捕获的数据。因此，使用事件分析器不会像快照监控器那样产生开销。事件分析器可能不包含所需信息，因为它只能显示之前捕获的事件记录。例如，如果你选择 Open 为 Statements 且没有为事件监控器定义语句信息，则显示将不包含 SQL 语句信息。
-
-## 使用文件输出进行事件监控
-
-所述，事件监控器是使用 SQL DDL 语句创建的数据库对象。在本示例中，将创建一个死锁事件监控器，将其事件记录存储在“\EVENTMONITORS\DEADLOCK\EVMON1”目录。
+如所述，事件监控器是使用 SQL DDL 语句创建的数据库对象。在本示例中，将创建一个死锁事件监控器，将其事件记录存储在`\EVENTMONITORS\DEADLOCK\EVMON1`目录下。
 
 > DB2 注意
 > 使用文件输出时，DB2 不会创建事件监控器输出。它必须由数据库管理员创建，并且实例所有者必须向指定的目录写入。
@@ -22064,9 +20896,9 @@ SET EVENT MONITOR evmon1 STATE = 1
 ```
 
 > DB2 注意
-> 激活监控器时目录必须存在，否则将报错 SQL1114：激活事件监控器时发生 I/O 错误。
+> 激活监控器时目录必须存在，否则将报错`SQL1114`：激活事件监控器时发生 I/O 错误。
 
-当事件监控器监控数据、表空间或表事件时，将在最后一个使用数据库的应用程序退出时写入完整的事件记录。如所述，你可以使用 FLUSH EVENT MONITOR 命令记录部分事件记录。
+当事件监控器监控数据、表空间或表事件时，将在最后一个使用数据库的应用程序退出时写入完整的事件记录。如所述，你可以使用`FLUSH EVENT MONITOR`命令记录部分事件记录。
 
 使用以下语句关闭事件监控器：
 
@@ -22076,9 +20908,9 @@ SET EVENT MONITOR evmon1 STATE = 0
 
 关闭事件监控器将还将刷新其所有内容。
 
-要确定事件监控器是激活还是非激活状态，使用 EVENT_STATE 函数或在控制中心查看状态。EVENT_STATE 函数在事件监控器激活时返回值“1”，在监控器未激活时返回“0”。
+要确定事件监控器是激活还是非激活状态，使用`EVENT_STATE`函数或在控制中心查看状态。`EVENT_STATE`函数在事件监控器激活时返回值“1”，在监控器未激活时返回“0”。
 
-使用 EVENT_STATE 函数查询 EVMON1 状态的示例 SQL 语句：
+使用`EVENT_STATE`函数查询`EVMON1`状态的示例 SQL 语句：
 
 ```sql
 SELECT EVMONNAME, EVENT_STATE(EVMONNAME)
@@ -22086,11 +20918,10 @@ FROM SYSCAT.EVENTMONORS WHERE EVMONNAME = 'EVMON1';
 
 EVMONNAME                               2
 EVMON1                                            1
-
 已选择 1 条记录。
 ```
 
-与其他数据库对象一样，事件监控器可以从数据库中删除。移除 EVMON1 事件监控器的示例如下：
+与其他数据库对象一样，事件监控器可以从数据库中删除。移除`EVMON1`事件监控器的示例如下：
 
 ```sql
 DROP EVENT MONITOR evmon1
@@ -22098,37 +20929,28 @@ DROP EVENT MONITOR evmon1
 
 事件监控器文件无法直接分析。必须使用应用程序。DB2 提供了几种分析事件监控器数据的替代方案。首先将一些事件监控器记录。
 
-为了确保所有事件记录已写入磁盘（某些可能被缓冲），只需关闭事件监控器。你也可以如下使用 FLUSH EVENT MONITOR 命令的 BUFFER 选项：
+为了确保所有事件记录已写入磁盘（某些可能被缓冲），只需关闭事件监控器。你也可以如下使用`FLUSH EVENT MONITOR`命令的`BUFFER`选项：
 
 ```sql
 FLUSH EVENT MONITOR evmon1 BUFFER
 ```
 
-带有 BUFFER 选项的 FLUSH EVENT MONITOR 命令不会生成部分记录。只有已存在事件监控器缓冲区中的数据会被写入。
+带有`BUFFER`选项的`FLUSH EVENT MONITOR`命令不会生成部分记录。只有已存在事件监控器缓冲区中的数据会被写入。
 
-要为 evmon1 监控器生成事件监控器报告，执行以下命令指定事件监控器文件的位置：
+要为`evmon1`监控器生成事件监控器报告，执行以下命令指定事件监控器文件的位置：
 
 ```bash
 db2evmon -path /eventmonitors/deadlock/evmon1
-
 or
-
 db2evmon -db sample -evm evmon1
 ```
 
-
-
-
-
+```
 + 6 连接头部事件 ...
 App句柄: 186
 App ID: *LOCAL.DB2.070404120455
 App 序列: 00002
 DRDA 关联时间: *LOCAL.DB2.070404120455
-
-# 数据库监控 911
-
-```
 Program Name : db2bp.exe
 Authorization Id: BAKLARS
 Execution Id : BAKLARS
@@ -22141,15 +20963,14 @@ Client Communication Protocol: Local
 Client Network Name: BAKLARS
 Connect timestamp : 04/04/2007 08:04:49.828772
  ...
++ 7 锁锁的连接 ...
 ```
 
-+ 7 锁锁的连接 ...
-
-# 图 14–22 死锁事件监视器记录
+图 14–22 死锁事件监视器记录
 
 在图 14–22 中，显示了一个死锁事件记录和两个连接事件记录。这些信息识别了参与死锁的两个应用程序以及死锁的原因。
 
-在此示例中，死锁涉及两个共享锁：一个在 BAKLARS.TEST_TAKEN 表上，另一个在 BAKLARS.TEST 表上。事件监视器显示了回滚应用程序的 ID 以及死锁发生的时间。
+在此示例中，死锁涉及两个共享锁：一个在`BAKLARS.TEST_TAKEN`表上，另一个在`BAKLARS.TEST`表上。事件监视器显示了回滚应用程序的 ID 以及死锁发生的时间。
 
 # 附加实用
 
@@ -22165,11 +20986,9 @@ DB2 提供了多个附加工具，用于监控和管理特定事件。将审查�
 
 # DB2 Governor
 
-在监控 DB2 时，你可以检测系统瓶颈出现在何处、正在发生哪些类型的数据库活动，以及 DB2 是否正在充分利用服务器的所有资源。你还可以分析数据库应用程序的行为，查看某些应用程序是否比其他应用程序更消耗资源。然而，如果应用程序是资源密集型的或阻止了其他应用程序获取信息， DBA 必须首先使用监控技术检测该应用程序，然后更改应用程序的行为或显式地强制应用程序离开系统。
+在监控 DB2 时，你可以检测系统瓶颈出现在何处、正在发生哪些类型的数据库活动，以及 DB2 是否正在充分利用服务器的所有资源。你还可以分析数据库应用程序的行为，查看某些应用程序是否比其他应用程序更消耗资源。然而，如果应用程序是资源密集型的或阻止了其他应用程序获取信息，DBA 必须首先使用监控技术检测该应用程序，然后更改应用程序的行为或显式地强制应用程序离开系统。
 
-# 第 14 章 监控与优化
-
-DB2 Governor 是一个自动执行此类检查的服务器应用程序。该控制器还可以强制被认为在服务器上使用过多资源的应用程序。（请注意，你也可以使用 DB2 的 FORCE APPLICATIONS 命令强制某个应用程序或所有应用程序离开实例。有关此命令的详细信息，请参阅《DB2 命令参考》）
+DB2 Governor 是一个自动执行此类检查的服务器应用程序。该控制器还可以强制被认为在服务器上使用过多资源的应用程序。（请注意，你也可以使用 DB2 的`FORCE APPLICATIONS`命令强制某个应用程序或所有应用程序离开实例。有关此命令的详细信息，请参阅《DB2 命令参考》）
 
 控制器收集运行在数据库上的应用程序的统计信息。然后它会将这些统计信息与为该数据库指定的规则进行对比。规则可能包括：
 
@@ -22177,48 +20996,51 @@ DB2 Governor 是一个自动执行此类检查的服务器应用程序。该控�
 - 减慢应用程序子集，即 A、B 和 C。
 - 不要让任何工作单元运行超过 15 分钟。
 
-控制器通过更改指定应用程序的参数或强制应用程序离开系统来执行这些规则。你像启动和停止监控 DB2 一样启动和停止 DB2 Governor。例如，使用名为 MYGO.CFG 的控制器配置文件（包含控制器规则），你可以在操作系统的命令行提示符中使用 DB2GOV 实用启动对 SAMPLE 数据库的监控。
+控制器通过更改指定应用程序的参数或强制应用程序离开系统来执行这些规则。你像启动和停止监控 DB2 一样启动和停止 DB2 Governor。例如，使用名为`MYGO.CFG`的控制器配置文件（包含控制器规则），你可以在操作系统的命令行提示符中使用`DB2GOV`实用启动对`SAMPLE`数据库的监控。
 
-```
+```bash
 db2gov START SAMPLE mygov.cfg gov.log
 ```
 
-指定的日志 GOV.LOG 是 DB2 Governor 记录其所采取任何操作的地方。你可以停止针对 SAMPLE 数据库运行的控制器。
+指定的日志`GOV.LOG`是 DB2 Governor 记录其所采取任何操作的地方。你可以停止针对`SAMPLE`数据库运行的控制器。
 
-```
+```bash
 db2gov STOP SAMPLE
 ```
 
-你可以针对多个数据库运行多个实例的 DB2 Governor。DB2 Governor 在针对 DB2 数据库运行时运行时会产生性能影响，因为它会定期收集统计信息并监控数据库应用程序的活动。你可以使用 DB2GOVG 工具检查 DB2 Governor 生成的日志。
+
+
+
+你可以针对多个数据库运行多个实例的 DB2 Governor。DB2 Governor 在针对 DB2 数据库运行时会产生性能影响，因为它会定期收集统计信息并监控数据库应用程序的活动。你可以使用 `DB2GOVG` 工具检查 DB2 Governor 生成的日志。
 
 # Inspect 命令
 
 此命令提供了检查数据库页架构完整性的功能。该命令可以选择检查表对象的结构和表空间的结构。
 
-以下是 INSPECT 命令的一些关键选项（图 14–23）：
+以下是 `INSPECT` 命令的一些关键选项（图 14–23）：
 
-![](img/2fc7488b6558d6b99bbc7356ac4116b1_940_0.png)
+![](img/2fc7488b6558d6b99bbc7356ac411b6_940_0.png)
 
-图 14–23 INSPECT 命令
+图 14–23 `INSPECT` 命令
 
-INSPECT 命令的一些关键参数包括（更多详细信息请参阅《DB2 命令参考》）：
+`INSPECT` 命令的一些关键参数包括（更多详细信息请参阅《DB2 命令参考》）：
 
-- CHECK — 指定检查处理。
-- DATABASE — 指定哪个数据库。
-- CATALOG TO TABLESPACE CONSISTENCY — 指定包含检查表空间中的物理表与目录中列出的表之间的一性。
-- LIMIT ERROR TO n — 指定对象的错误页数以限制报告。
-- LIMIT ERROR TO DEFAULT — 指定用于报告的默认页数（对象的范围）。
-- KEEP — 指定允许结果输出文件。
+- `CHECK` — 指定检查处理。
+- `DATABASE` — 指定哪个数据库。
+- `CATALOG TO TABLESPACE CONSISTENCY` — 指定包含检查表空间中的物理表与目录中列出的表之间的一性。
+- `LIMIT ERROR TO n` — 指定对象的错误页数以限制报告。
+- `LIMIT ERROR TO DEFAULT` — 指定用于报告的默认页数（对象的范围）。
+- `KEEP` — 指定允许结果输出文件。
 
-注意，也可以使用 DB2DART 命令（数据库分析和报告工具）来检查架构完整性，该工具离线运行，因此在它运行时用户无法使用该系统。
+注意，也可以使用 `DB2DART` 命令（数据库分析和报告工具）来检查架构完整性，该工具离线运行，因此在它运行时用户无法使用该系统。
 
 # 审计设施管理员工具
 
-DB2 提供了一个审计设施，以协助检测对数据的未知或意料之外的访问。DB2 审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。记录生成的
+DB2 提供了一个审计设施，以协助检测对数据的未知或意料之外的访问。DB2 审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。审计设施生成并允许维护一系列预定义数据库事件的审计跟踪。从该设施生成的记录保存在审计跟踪中。记录生成的
 
 记录
 
-你希望审计以下以下，使用 db2audit：
+你希望审计以下以下，使用 `db2audit`：
 
 - 启动实例内的审计事件。
 - 停止实例内的审计事件。
@@ -22228,7 +21050,9 @@ DB2 提供了一个审计设施，以协助检测对数据的未知或意料之�
 - 刷新等待的审计记录。
 - 修理审计记录。
 
-# 存储管理工具可以通过控制中心（Control Center）可用，在控制窗口中右键单击数据库图标并选择“存储管理”。通过此工具，你可以访问特定数据库、数据库分区组或表空间的存储快照。
+# 存储管理工具
+
+可以通过控制中心（Control Center）可用，在控制窗口中右键单击数据库图标并选择“存储管理”。通过此工具，你可以访问特定数据库、数据库分区组或表空间的存储快照。
 
 统计信息可以定期捕获并根据所选对象显示：
 
@@ -22242,11 +21066,11 @@ DB2 提供了一个审计设施，以协助检测对数据的未知或意料之�
 
 # 数据库监控 915
 
-字段，一组事件可以关联到一个数据库操作。例如，动态 SQL 的 SQL 语句、静态 SQL 的包标识符，或者执行的操作类型指示（如 CONNECT），可以在分析审计结果时提供所需的上下文。
+字段，一组事件可以关联到一个数据库操作。例如，动态 SQL 的 SQL 语句、静态 SQL 的包标识符，或者执行的操作类型指示（如 `CONNECT`），可以在分析审计结果时提供所需的上下文。
 
 在大多数情况下，你会为你希望审计的事件通过更限制或更关注的视图配置审计设施。例如，你可能希望审计那些失败的事件。在这种情况下，审计设施可以配置如下：
 
-```
+```text
 db2audit configure scope audit,
 checking,
 objmaint,
@@ -22255,17 +21079,13 @@ sysadmin,
 validate status failure
 ```
 
+## 第 14 章 监控与调优
 
-
-
-
-## 第14章 监控与调优
-
-![](img/2fc7488b6558d6b99bbc7356ac4116b1_943_0.png)
+![](img/2fc7488b6558d6b99bbc7356ac411b6_943_0.png)
 
 ### 14–24 存储工具
 
-#### 入站事务管理器 (Inbound Transaction Manager)
+#### 入站事务管理器（Inbound Transaction Manager）
 
 调用入站事务管理器将检查给定数据库当前悬疑事务（in doubt transactions）的状态。通常，事务管理器会尝试重新同步悬疑事务。然而，悬疑事务可能无法自动解决。
 
@@ -22273,7 +21093,7 @@ validate status failure
 
 通过在命令行输入以下命令可以使用入站事务管理器：
 
-```
+```text
 db2indbt
 ```
 
@@ -22283,27 +21103,27 @@ db2indbt
 
 以下是 `db2batch` 命令的一些关键参数（图 14–25）：
 
-![](img/2fc7488b6558d6b99bbc7356ac4116b1_944_0.png)
+![](img/2fc7488b6558d6b99bbc7356ac411b6_944_0.png)
 
-图 14–25 db2batch 命令
+图 14–25 `db2batch` 命令
 
-`db2batch` 命令的关键参数是 -o (options)。有效选项有（其他选项请参见《DB2 命令参考》）：
+`db2batch` 命令的关键参数是 `-o`（options）。有效选项有（其他选项请参见《DB2 命令参考》）：
 
-- rows_detail (-1 to n) — 指定要获取的行数（-1 表示获取所有行）。
-- rows_out (-1 to n) — 指定发送到输出的获取行数。
-- p perf_detail — 指定要返回的性能信息级别。
-    - 0 — 不进行计时。
-    - 1 — 仅返回通过时间。
-    - 2 — 返回通过时间和 CPU 时间。
-    - 3 — 返回监控信息的摘要。
-    - 4 — 返回数据库管理器、数据库、应用程序和语句的快照。
-    - 5 — 返回数据库管理器、数据库、应用程序、语句、缓冲池、表空间和 FCM（如果在多分区环境话）。
-- -o query_optimization_class — 指定查询优化类。
-- e explain_mode — 指定 `db2batch` 运行的 explain
-    - 0 — 仅运行查询（默认值）。
-    - 1 — 仅填充解释表。
-    - 2 — 填充解释表并运行查询。
-    - -1 x — 指定终止字符。
+- `rows_detail (-1 to n)` — 指定要获取的行数（`-1` 表示获取所有行）。
+- `rows_out (-1 to n)` — 指定发送到输出的获取行数。
+- `p perf_detail` — 指定要返回的性能信息级别。
+  - `0` — 不进行计时。
+  - `1` — 仅返回通过时间。
+  - `2` — 返回通过时间和 CPU 时间。
+  - `3` — 返回监控信息的摘要。
+  - `4` — 返回数据库管理器、数据库、应用程序和语句的快照。
+  - `5` — 返回数据库管理器、数据库、应用程序、语句、缓冲池、表空间和 FCM（如果在多分区环境话）。
+- `-o query_optimization_class` — 指定查询优化类。
+- `e explain_mode` — 指定 `db2batch` 运行的 explain。
+  - `0` — 仅运行查询（默认值）。
+  - `1` — 仅填充解释表。
+  - `2` — 填充解释表并运行查询。
+  - `-1 x` — 指定终止字符。
 
 #### DB2PD 命令
 
@@ -22322,7 +21142,7 @@ DB2 自带了一个用于收集 DB2 实例和数据库统计信息的实用程�
 
 `db2pd` 命令的格式为：
 
-```
+```text
 db2pd -inst instance -db database options
 ```
 
@@ -22330,61 +21150,62 @@ db2pd -inst instance -db database options
 
 某些命令可能需要实例或数据库名称。如果需要来自所有数据库的信息，则应使用 `-all databases` 或 `-everything` 选项。`db2pd` 命令提供了大量的可用选项。下面是这些选项的简要摘要——更多信息可以在《DB2 命令参考》中找到。
 
-- -inst 返回所有实例范围的信息。
-- -help 显示在线帮助信息。
-- -version 显示已安装 DB2 产品的当前版本和服务级别。
-- -dbpartitionnum num 指定命令在指定的数据库分区服务器上运行。
-- -alldbpartitions num 指定此命令在实例中的所有活动数据库分区服务器上运行。`db2pd` 仅报告来自运行 `db2pd` 所在的同一台物理机器上的数据库分区服务器的信息。
-- -database database 指定命令连接到指定数据库的内存集。
-- -alldatabases 指定命令连接到所有数据库。
-- -everything 在服务器上对所有数据库运行所有选项。
-- -file filename 指定将输出写入文件。
-- -command filename 指定读取并执行 `db2pd` 命令。
-- -interactive 指定覆盖 DB2 环境的值。
-- -full 指定所有输出扩展到最大长度。
-- -hadr Reports高可用灾难恢复（HADR）信息。
-- -utilities Reports实用程序信息。
-- -repeat num count 指定命令在指定的秒数后重复。如果未指定值，则每五秒重复一次。您还可以指定重复的次数。
-- -applications 返回应用程序信息。
-- -fmp 返回进程信息。
-- -agents 返回代理信息![](img/2fc7488b6558d6b99bbc7356ac4116b1_946_0.png)
+- `-inst` 返回所有实例范围的信息。
+- `-help` 显示在线帮助信息。
+- `-version` 显示已安装 DB2 产品的当前版本和服务级别。
+- `-dbpartitionnum num` 指定命令在指定的数据库分区服务器上运行。
+- `-alldbpartitions num` 指定此命令在实例中的所有活动数据库分区服务器上运行。`db2pd` 仅报告来自运行 `db2pd` 所在的同一台物理机器上的数据库分区服务器的信息。
+- `-database database` 指定命令连接到指定数据库的内存集。
+- `-alldatabases` 指定命令连接到所有数据库。
+- `-everything` 在服务器上对所有数据库运行所有选项。
+- `-file filename` 指定将输出写入文件。
+- `-command filename` 指定读取并执行 `db2pd` 命令。
+- `-interactive` 指定覆盖 DB2 环境的值。
+- `-full` 指定所有输出扩展到最大长度。
+- `-hadr` Reports 高可用灾难恢复（HADR）信息。
+- `-utilities` Reports 实用程序信息。
+- `-repeat num count` 指定命令在指定的秒数后重复。如果未指定值，则每五秒重复一次。你还可以指定重复的次数。
+- `-applications` 返回应用程序信息。
+- `-fmp` 返回进程信息。
+- `-agents` 返回代理信息。
 
-- -transactions 返回活动事务信息。
-- -bufferpools 返回缓冲池信息。
-- -logs 返回日志文件信息。
-- -locks 返回锁信息。
-- -tablespaces 返回表空间信息。
-- -dynamic 返回动态 SQL 的执行信息。
-- -static 返回静态 SQL 和包的执行信息。
-- -fcm 返回快速管理器信息。
-- -memsets 返回内存集信息。
-- -mempools 返回内存池信息。
-- -memblocks 返回内存块信息。
-- -dbmcfg 返回数据库管理器配置参数设置。
-- -dbcfg 返回数据库配置参数设置。
-- -catalogcache 返回目录缓存信息。
-- -sysplex 返回与 db 参数关联的服务器列表。
-- -tcbstats 返回表信息。
-- -reorg 返回表和数据分区重组信息。
-- -recovery 返回恢复活动信息。
-- -reopt 返回使用 REOPT ON 重新打开的缓存 SQL 语句信息。
-- -osinfo 返回操作系统信息。如果指定了磁盘路径，将打印磁盘信息。
-- -storagepaths 返回为数据库定义的自动存储路径信息。
-- -pages 返回缓冲池页信息。
-- -stack 在 DIAGPATH 中生成堆栈跟踪文件。
-- -dump 在 DIAGPATH 生成堆栈跟踪和二进制转储文件。
+![](img/2fc7488b6558d6b99bbc7356ac411b6_946_0.png)
+
+- `-transactions` 返回活动事务信息。
+- `-bufferpools` 返回缓冲池信息。
+- `-logs` 返回日志文件信息。
+- `-locks` 返回锁信息。
+- `-tablespaces` 返回表空间信息。
+- `-dynamic` 返回动态 SQL 的执行信息。
+- `-static` 返回静态 SQL 和包的执行信息。
+- `-fcm` 返回快速管理器信息。
+- `-memsets` 返回内存集信息。
+- `-mempools` 返回内存池信息。
+- `-memblocks` 返回内存块信息。
+- `-dbmcfg` 返回数据库管理器配置参数设置。
+- `-dbcfg` 返回数据库配置参数设置。
+- `-catalogcache` 返回目录缓存信息。
+- `-sysplex` 返回与 `db` 参数关联的服务器列表。
+- `-tcbstats` 返回表信息。
+- `-reorg` 返回表和数据分区重组信息。
+- `-recovery` 返回恢复活动信息。
+- `-reopt` 返回使用 `REOPT ON` 重新打开的缓存 SQL 语句信息。
+- `-osinfo` 返回操作系统信息。如果指定了磁盘路径，将打印磁盘信息。
+- `-storagepaths` 返回为数据库定义的自动存储路径信息。
+- `-pages` 返回缓冲池页信息。
+- `-stack` 在 DIAGPATH 中生成堆栈跟踪文件。
+- `-dump` 在 DIAGPATH 生成堆栈跟踪和二进制转储文件。
 
 以下命令将请求 SAMPLE 数据库日志文件的状态信息：
 
-```
+```text
 db2pd -db sample -logs
 ```
 
+
+
+
 此命令的结果可以在图 14–26 中找到。
-
-
-
-
 
 # SQL 监控
 
@@ -22408,7 +21229,7 @@ db2pd -db sample -logs
 
 图 14-26 db2bpd 结果
 
-db2bpd 命令的主要优势之一是，它在 Windows 环境下不需要 DB2 命令行界面。此外，由于数据库引擎的竞争，此工具通常可以在其他实用程序之前从 DB2 获取信息。
+`db2bpd`命令的主要优势之一是，它在 Windows 环境下不需要 DB2 命令行界面。此外，由于数据库引擎的竞争，此工具通常可以在其他实用程序之前从 DB2 获取信息。
 
 # SQL 监控
 
@@ -22416,7 +21237,7 @@ db2bpd 命令的主要优势之一是，它在 Windows 环境下不需要 DB2 �
 
 在描述解释设施的功能和特性之前，你应该从宏观上理解 DB2 数据库引擎如何处理 SQL 语句。每条 SQL 语句都会被 DB2 分析，然后确定在静态绑定（static bind）期间或动态执行时如何处理该语句。从表中检索数据的方法就是访问计划。
 
-DB2 中用于确定要使用的访问计划的组件被称为优化器（optimizer）。在 SQL 语句的静态准备期间，会调用 DB2 编译器来生成访问计划。访问计划包含数据访问策略，包括索引使用、排序方法、锁定语义和连接方法。当执行 BIND 命令时，SQL 语句的可执行形式将被存储在系统目录表中（假设采用延迟绑定方法）。这被称为包（package）。
+DB2 中用于确定要使用的访问计划的组件被称为优化器（optimizer）。在 SQL 语句的静态准备期间，会调用 DB2 编译器来生成访问计划。访问计划包含数据访问策略，包括索引使用、排序方法、锁定语义和连接方法。当执行 `BIND` 命令时，SQL 语句的可执行形式将被存储在系统目录表中（假设采用延迟绑定方法）。这被称为包（package）。
 
 # 第 14 章 监控与优化
 
@@ -22430,15 +21251,15 @@ DB2 中用于确定要使用的访问计划的组件被称为优化器（optimiz
 
 DB2 使用表来存储访问计划信息，以便用户可以看到优化器所做的决策。这些表被称为：
 
-- EXPLAIN_ARGUMENT — 代表每个单独算符的唯一特性。
-- EXPLAIN_INSTANCE — 所有解释信息的主控制表。解释表中的每行数据都显式链接到此表中的一个唯一行。关于被解释 SQL 语句来源的基本信息和环境信息保留在此表中。
-- EXPLAIN_OBJECT — 包含满足 SQL 语句生成的访问计划所需的数据对象。
-- EXPLAIN_OPERATOR — 包含满足 SQL 语句所需的所有算符。
-- EXPLAIN_PREDICATE — 识别特定算符应用了哪些谓词。
-- EXPLAIN_STATEMENT — 包含两种形式的 SQL 语句文本。除了用户输入的原始版本外，还存储了编译过程产生的重写版本。
-- EXPLAIN_STREAM — 此表表示各个算符和数据对象之间的输入和输出数据流。数据对象本身表示在 EXPLAIN_OBJECT 表中。涉及数据流的算符表示在 EXPLAIN_OPERATOR 表。
+- `EXPLAIN_ARGUMENT` — 代表每个单独算符的唯一特性。
+- `EXPLAIN_INSTANCE` — 所有解释信息的主控制表。解释表中的每行数据都显式链接到此表中的一个唯一行。关于被解释 SQL 语句来源的基本信息和环境信息保留在此表中。
+- `EXPLAIN_OBJECT` — 包含满足 SQL 语句生成的访问计划所需的数据对象。
+- `EXPLAIN_OPERATOR` — 包含满足 SQL 语句所需的所有算符。
+- `EXPLAIN_PREDICATE` — 识别特定算符应用了哪些谓词。
+- `EXPLAIN_STATEMENT` — 包含两种形式的 SQL 语句文本。除了用户输入的原始版本外，还存储了编译过程产生的重写版本。
+- `EXPLAIN_STREAM` — 此表表示各个算符和数据对象之间的输入和输出数据流。数据对象本身表示在 `EXPLAIN_OBJECT` 表中。涉及数据流的算符表示在 `EXPLAIN_OPERATOR` 表。
 
-在收集任何解释信息之前，必须创建解释表。CLP 输入文件 EXPLAIN.DDL 位于 SQLLIB 目录下的 misc 目录中，它包含了解释表的定义。要创建解释表，你可以连接到数据库并使用以下命令：
+在收集任何解释信息之前，必须创建解释表。CLP 输入文件 `EXPLAIN.DDL` 位于 SQLLIB 目录下的 misc 目录中，它包含了解释表的定义。要创建解释表，你可以连接到数据库并使用以下命令：
 
 ```
 db2 -tvf EXPLAIN.DDL
@@ -22450,42 +21271,42 @@ db2 -tvf EXPLAIN.DDL
 
 可以收集不同类型的解释数据。它们的区别在于将填充的解释表列。解释数据选项有：
 
-- EXPLAIN — 捕获访问计划的详细信息并将信息存储在表中。不存储快照信息。
-- EXPLAIN SNAPSHOT — 捕获 SQL 查询的当前内部表示和相关信息。快照信息存储在 EXPLAIN_STATEMENT 表中。
+- `EXPLAIN` — 捕获访问计划的详细信息并将信息存储在表中。不存储快照信息。
+- `EXPLAIN SNAPSHOT` — 捕获 SQL 查询的当前内部表示和相关信息。快照信息存储在 `EXPLAIN_STATEMENT` 表中。
 
-并不是所有的解释工具都需要相同类型的解释数据。使用 EXPLAIN 选项以及其他（如 Visual Explain）捕获的数据需要快照数据。
+并不是所有的解释工具都需要相同类型的解释数据。使用 `EXPLAIN` 选项以及其他（如 Visual Explain）捕获的数据需要快照数据。
 
-创建解释表后，你可以开始捕获填充它们的解释数据。并不是所有 SQL 语句都可以被解释。可解释的 SQL 语句包括：SELECT、UPDATE、INSERT、DELETE、VALUES。
+创建解释表后，你可以开始捕获填充它们的解释数据。并不是所有 SQL 语句都可以被解释。可解释的 SQL 语句包括：`SELECT`、`UPDATE`、`INSERT`、`DELETE`、`VALUES`。
 
 根据 SQL 语句的数量或类型，应使用以下方法：
 
-- EXPLAIN 语句 — 为 SQL 语句收集数据
-- CURRENT EXPLAIN MODE 特殊寄存器 — 指定动态 SQL 语句的解释数据
-- CURRENT EXPLAIN SNAPSHOT 特殊寄存器 — 指定动态 SQL 语句的快照数据
-- BIND 选项 — 指定包中解释数据的收集
+- `EXPLAIN` 语句 — 为 SQL 语句收集数据
+- `CURRENT EXPLAIN MODE` 特殊寄存器 — 指定动态 SQL 语句的解释数据
+- `CURRENT EXPLAIN SNAPSHOT` 特殊寄存器 — 指定动态 SQL 语句的快照数据
+- `BIND` 选项 — 指定包中解释数据的收集
 
 这些方法将逐一进行检查。
 
 # EXPLAIN 语句
 
-EXPLAIN 语句在你想为单个动态 SQL 语句收集信息时非常有用。可以从命令行处理器、中心或应用程序内部调用 EXPLAIN 语句。
+`EXPLAIN` 语句在你想为单个动态 SQL 语句收集信息时非常有用。可以从命令行处理器、中心或应用程序内部调用 `EXPLAIN` 语句。
 
 # 第 14 章 监控与优化
 
-你可以控制 EXPLAIN 语句存储在解释表中的解释信息量。默认只捕获解释表信息，而不是快照信息。如果你希望修改此行为，请使用以下 EXPLAIN 语句选项：
+你可以控制 `EXPLAIN` 语句存储在解释表中的解释信息量。默认只捕获解释表信息，而不是快照信息。如果你希望修改此行为，请使用以下 `EXPLAIN` 语句选项：
 
-- WITH SNAPSHOT — 将解释和快照数据捕获到解释表中。
-- FOR SNAPSHOT — 仅捕获解释快照。除了存储在 EXPLAIN_STATEMENT 表外，不捕获其他信息。
+- `WITH SNAPSHOT` — 将解释和快照数据捕获到解释表中。
+- `FOR SNAPSHOT` — 仅捕获解释快照。除了存储在 `EXPLAIN_STATEMENT` 表外，不捕获其他信息。
 
-未指定其他解释选项时使用默认情况。默认情况下，EXPLAIN 语句将仅收集解释数据。不捕获快照数据。
+未指定其他解释选项时使用默认情况。默认情况下，`EXPLAIN` 语句将仅收集解释数据。不捕获快照数据。
 
-执行 EXPLAIN 语句，用户必须拥有解释表的 INSERT 权限。
+执行 `EXPLAIN` 语句，用户必须拥有解释表的 `INSERT` 权限。
 
 ## DB2 注意
 
-使用 EXPLAIN 语句的 SQL 语句不会执行；仅捕获解释数据。
+使用 `EXPLAIN` 语句的 SQL 语句不会执行；仅捕获解释数据。
 
-现在检查一个使用 EXPLAIN 语句收集访问计划信息的示例。解释语句所示。此示例收集解释表中所有可解释信息。
+现在检查一个使用 `EXPLAIN` 语句收集访问计划信息的示例。解释语句所示。此示例收集解释表中所有可解释信息。
 
 ```
 EXPLAIN ALL WITH SNAPSHOT FOR "SELECT * FROM TEST_CANDIDATE"
@@ -22493,27 +21314,23 @@ EXPLAIN ALL WITH SNAPSHOT FOR "SELECT * FROM TEST_CANDIDATE"
 
 ## DB2 注意
 
-除了我们示例中的关键字 ALL，还可以 PLAN 和 COLLECTION。你的 EXPLAIN 语句必须包含其中一个。
+除了我们示例中的关键字 `ALL`，还可以 `PLAN` 和 `COLLECTION`。你的 `EXPLAIN` 语句必须包含其中一个。
 
-上例中的 EXPLAIN 语句填充了多个解释表，EXPLAIN_INSTANCE 表中的 SNAPSHOT_TOKEN 列指示每个解释语句的 Visual Explain 快照。
+上例中的 `EXPLAIN` 语句填充了多个解释表，`EXPLAIN_INSTANCE` 表中的 `SNAPSHOT_TOKEN` 列指示每个解释语句的 Visual Explain 快照。
 
-EXPLAIN 语句也可以嵌入应用程序中填充解释表。一旦填充完成，就可以对其进行查询。可以检查特殊算符以确定是否使用了理想的访问计划。
+`EXPLAIN` 语句也可以嵌入应用程序中填充解释表。一旦填充完成，就可以对其进行查询。可以检查特殊算符以确定是否使用了理想的访问计划。
 
 # 解释特殊寄存器 (Explain Special Register)
 
-收集解释信息的另一种方法是使用解释特殊寄存器。DB2 使用两个特殊寄存器来收集动态 SQL 语句的解释信息。这些寄存器可以交互式设置，也可以在动态嵌入 SQL 程序中使用。使用 SET special 语句修改特殊寄存器的值。
+收集解释信息的另一种方法是使用解释特殊寄存器。DB2 使用两个特殊寄存器来收集动态 SQL 语句的解释信息。这些寄存器可以交互式设置，也可以在动态嵌入 SQL 程序中使用。使用 `SET special` 语句修改特殊寄存器的值。
 
 特殊寄存器为：
 
-- CURRENT EXPLAIN MODE — 用于仅填充解释数据。不会拍摄快照。
-
-
-
-
+- `CURRENT EXPLAIN MODE` — 用于仅填充解释数据。不会拍摄快照。
 
 ## 第 14 章 监控与调优
 
-- CURRENT EXPLAIN SNAPSHOT — 用于仅采集解释（explain）快照数据。
+- `CURRENT EXPLAIN SNAPSHOT` — 用于仅采集解释（explain）快照数据。
 
 以下语句用于设置解释特殊寄存器的值：
 
@@ -22524,28 +21341,28 @@ SET CURRENT EXPLAIN SNAPSHOT option
 
 解释寄存器选项有：
 
-- NO — 不为动态 SQL 语句采集任何信息。
-- YES — 在执行动态 SQL 语句时，将为语句填充表或快照信息，并返回结果。
-- EXPLAIN — 在不执行 SQL 语句的情况下，为动态 SQL 语句填充表或快照信息。使用此状态可以在不执行 SQL 语句的情况下解释信息。
+- `NO` — 不为动态 SQL 语句采集任何信息。
+- `YES` — 在执行动态 SQL 语句时，将为语句填充表或快照信息，并返回结果。
+- `EXPLAIN` — 在不执行 SQL 语句的情况下，为动态 SQL 语句填充表或快照信息。使用此状态可以在不执行 SQL 语句的情况下解释信息。
 
-以下两个选项仅用于 CURRENT EXPLAIN MODE 寄存器。它们将在讨论索引顾问（Index Advisor）的章节中说明。
+以下两个选项仅用于 `CURRENT EXPLAIN MODE` 寄存器。它们将在讨论索引顾问（Index Advisor）的章节中说明。
 
-- RECOMMEND INDEXES
-- EVALUATE INDEXES
+- `RECOMMEND INDEXES`
+- `EVALUATE INDEXES`
 
 > **DB2 注意**
-> 一旦你将寄存器设置为 YES 或 EXPLAIN，任何后续的动态 SQL 语句都将被解释，直到寄存器被重置为 NO。
+> 一旦你将寄存器设置为 `YES` 或 `EXPLAIN`，任何后续的动态 SQL 语句都将被解释，直到寄存器被重置为 `NO`。
 
 ## 解释 BIND 选项
 
-BIND 命令在第 997 页的“开发考虑因素”中讨论。然而，在本节中，将回顾与解释信息相关的 bind 选项。
+`BIND` 命令在第 997 页的“开发考虑因素”中讨论。然而，在本节中，将回顾与解释信息相关的 bind 选项。
 
-可以指定的解释 BIND 选项有：EXPLAIN 和 EXPLSNAP。EXPLSNAP 收集解释快照信息。如果你想使用视觉解释（Visual Explain）查看访问计划，请使用 EXPLSNAP 选项。EXPLAIN 选项仅填充解释信息而不包含快照。
+可以指定的解释 `BIND` 选项有：`EXPLAIN` 和 `EXPLSNAP`。`EXPLSNAP` 收集解释快照信息。如果你想使用视觉解释（Visual Explain）查看访问计划，请使用 `EXPLSNAP` 选项。`EXPLAIN` 选项仅填充解释信息而不包含快照。
 
 > **DB2 注意**
 > DRDA 应用程序服务器无法执行解释快照。
 
-图 14–27 显示了 BIND 命令的选项以及使用这些选项时填充的解释表。
+图 14–27 显示了 `BIND` 命令的选项以及使用这些选项时填充的解释表。
 
 | BIND 选项 | 静态 SQL | 动态 SQL |
 | --- | --- | --- |
@@ -22556,13 +21373,13 @@ BIND 命令在第 997 页的“开发考虑因素”中讨论。然而，在本�
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_954_0.png)
 
-图 14–27 在 BIND 命令中使用 EXPLAIN 或 EXPLSNAP 选项
+图 14–27 在 `BIND` 命令中使用 `EXPLAIN` 或 `EXPLSNAP` 选项
 
 现在将采集使用 bind 选项的解释数据。
 
 `BIND checkid.bnd EXPLSNAP ALL`
 
-在此示例中，CHECKID.BND 包中定义的所有静态 SQL 语句都将填充解释快照信息。由于指定了 ALL 选项，包执行期间发出的动态 SQL 语句将在运行时收集解释快照信息。
+在此示例中，`CHECKID.BND` 包中定义的所有静态 SQL 语句都将填充解释快照信息。由于指定了 `ALL` 选项，包执行期间发出的动态 SQL 语句将在运行时收集解释快照信息。
 
 在 bind 期间获取解释的方法对于管理员确定从包执行的静态或动态语句的访问计划非常有用。
 
@@ -22570,9 +21387,9 @@ BIND 命令在第 997 页的“开发考虑因素”中讨论。然而，在本�
 
 ## 使用解释报告工具收集和分析解释数据
 
-收集解释数据的另一种方法是将其存储在报告而非解释表中。它们是 dynexpln 工具和 db2expln 工具。
+收集解释数据的另一种方法是将其存储在报告而非解释表中。它们是 `dynexpln` 工具和 `db2expln` 工具。
 
-db2expln 工具描述了系统目录表中包的静态 SQL 语句所选的访问计划，而 dynexpln 工具描述了动态 SQL 语句的选访问计划。它为动态语句创建一个静态包，然后使用 db2expln 工具对其进行描述。
+`db2expln` 工具描述了系统目录表中包的静态 SQL 语句所选的访问计划，而 `dynexpln` 工具描述了动态 SQL 语句的选访问计划。它为动态语句创建一个静态包，然后使用 `db2expln` 工具对其进行描述。
 
 这两个实用程序的解释输出都存储在可读的报告文件中。解释报告工具是收集访问计划信息的快速简便方法。
 
@@ -22607,7 +21424,7 @@ db2expln 工具描述了系统目录表中包的静态 SQL 语句所选的访问
 一旦打开解释语句历史，所有解释过的语句将如图 14–29 所示列出。由于它是根据环境定制的，显示的信息可能有所不同。在图 14–29 中，显示了总成本和 SQL 语句。
 
 > **DB2 注意**
-> 一旦你将寄存器设置为 YES 或 EXPLAIN，任何后续的动态 SQL 语句都将被解释，直到寄存器被重置为 NO。
+> 一旦你将寄存器设置为 `YES` 或 `EXPLAIN`，任何后续的动态 SQL 语句都将被解释，直到寄存器被重置为 `NO`。
 
 所有解释过的语句将如图 14–29 所示。（注：此处文本不连续）
 
@@ -22624,9 +21441,9 @@ db2expln 工具描述了系统目录表中包的静态 SQL 语句所选的访问
 
 ## SQL 监控
 
-这些操作指示如何访问数据（IXSCAN, TBSCAN, RIDSCN, IXAND）、如何内部连接表（MSJOIN, NLJOIN）以及其他因素，例如是否需要排序（SORT）。有关操作的更多信息可以通过在线视觉解释找到。
+这些操作指示如何访问数据（`IXSCAN`, `TBSCAN`, `RIDSCN`, `IXAND`）、如何内部连接表（`MSJOIN`, `NLJOIN`）以及其他因素，例如是否需要排序（`SORT`）。有关操作的更多信息可以通过在线视觉解释找到。
 
-视觉解释输出的对象通过箭头连接，显示数据从一个节点到另一个节点的流向。访问计划的终始终是一个返回（RETURN）运算符。
+视觉解释输出的对象通过箭头连接，显示数据从一个节点到另一个节点的流向。访问计划的终始终是一个返回（`RETURN`）运算符。
 
 对于下一组示例，假设在 SAMPLE 数据库中创建了以下表：
 
@@ -22635,15 +21452,11 @@ CREATE TABLE ALLEMP LIKE EMPLOYEE;
 INSERT INTO ALLEMP SELECT * FROM EMPLOYEE;
 ```
 
-图 14–31 显示的访问计划是一个简单的 SQL 语句：SELECT * FROM ALLEMP。在此示例中，有两个操作和一个操作数。操作数是 ALLEMP 表，操作符包括表扫描（TBSCAN）和返回（RETURN）运算符。
+图 14–31 显示的访问计划是一个简单的 SQL 语句：`SELECT * FROM ALLEMP`。在此示例中，有两个操作和一个操作数。操作数是 `ALLEMP` 表，操作符包括表扫描（`TBSCAN`）和返回（`RETURN`）运算符。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_958_0.png)
 
 图 14–31 视觉解释：SQL 语句的图形访问计划
-
-
-
-
 
 ## 第 14 章 监控与优化
 
@@ -22657,7 +21470,7 @@ INSERT INTO ALLEMP SELECT * FROM EMPLOYEE;
 - 累计属性（Cumulative properties）——包含用于满足查询的表、列等信息。
 - 输入参数（Input arguments）——包含影响算子行为的输入参数信息。
 
-还可以查看有关操作数的详细信息。选择一个操作数节点，然后从“节点”菜单项中选择“显示统计”（Show statistics）。图 14–33 显示了 ALLEMP 表的操作数详情。
+还可以查看有关操作数的详细信息。选择一个操作数节点，然后从“节点”菜单项中选择“显示统计”（Show statistics）。图 14–33 显示了 `ALLEMP` 表的操作数详情。
 
 # SQL 监控 933
 
@@ -22665,26 +21478,28 @@ INSERT INTO ALLEMP SELECT * FROM EMPLOYEE;
 
 图 14–33 可视化解释：操作数的详细统计
 
-操作数节点的详细信息显示了表或索引统计信息，包括表空间信息、列数和对象的行数。图 14–33 显示了来自系统目录表的解释统计和当前统计信息。这些统计信息被 DB2 优化器用于确定访问计划。图 14–33 显示 ALLEMP 表没有收集到任何统计信息。
+操作数节点的详细信息显示了表或索引统计信息，包括表空间信息、列数和对象的行数。图 14–33 显示了来自系统目录表的解释统计和当前统计信息。这些统计信息被 DB2 优化器用于确定访问计划。图 14–33 显示 `ALLEMP` 表没有收集到任何统计信息。
 
 当优化器对某个表没有统计信息可用时，或者表的统计信息表明表的基数（cardinality）较小时，优化器将尝试计算该表的基数。优化器通过某些因素来实现这一点，包括表的平均列长度和表所占用的页数。
 
-当前统计信息是获得良好访问计划的关键。如果 DB2 不了解查询中涉及对象的特征，它可能无法生成良好的访问计划。为了确保优化器拥有最新的统计信息，必须使用 DB2 工具程序。该工具被称为 RUNSTATS。以下是一个为 ALLEMP 表收集统计信息的示例。
+当前统计信息是获得良好访问计划的关键。如果 DB2 不了解查询中涉及对象的特征，它可能无法生成良好的访问计划。为了确保优化器拥有最新的统计信息，必须使用 DB2 工具程序。该工具被称为 `RUNSTATS`。以下是一个为 `ALLEMP` 表收集统计信息的示例。
 
-``````
+```
 RUNSTATS ON TABLE BAKLAR.ALLEMP
 WITH DISTRIBUTION AND DETAILED INDEXES ALL
 ```
 
-ALLEMP 表的统计信息存储在系统目录表中。运行 RUNSTATS 工具后，重新对数据库进行绑定（rebind）包并重新解释 SQL 语句。你会发现当前统计信息的值发生了变化，生成的访问计划的总成本可能也会发生变化。图 14–34 显示更新后的 ALLEMP 统计信息发生了变化。
+
+
+`ALLEMP`表的统计信息存储在系统目录表中。运行`RUNSTATS`工具后，重新对数据库进行绑定（rebind）包并重新解释 SQL 语句。你会发现当前统计信息的值发生了变化，生成的访问计划的总成本可能也会发生变化。图 14–34 显示更新后的`ALLEMP`统计信息发生了变化。
 
 # 934 第 14 章 监控与优化
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_961_0.png)
 
-图 14–34 可视化解释：RUNSTATS 后的表统计
+图 14–34 可视化解释：`RUNSTATS`后的表统计
 
-在确定动态 SQL 语句的访问计划时，DB2 优化器始终使用当前统计信息。对于静态 SQL 语句，DB2 使用 BIND 时（创建包时）可用的统计信息。为了确保在更新更新之前编译的静态 SQL 语句使用当前统计信息，必须重新创建包。这可以使用 REBIND 命令完成。
+在确定动态 SQL 语句的访问计划时，DB2 优化器始终使用当前统计信息。对于静态 SQL 语句，DB2 使用 BIND 时（创建包时）可用的统计信息。为了确保在更新更新之前编译的静态 SQL 语句使用当前统计信息，必须重新创建包。这可以使用`REBIND`命令完成。
 
 在图 14–35 中，两种情况下 SQL 语句的总成本不相同。它们的区别是因为 DB2 在捕解释快照（explain snapshot）时使用了不同的统计信息。
 
@@ -22696,15 +21511,15 @@ ALLEMP 表的统计信息存储在系统目录表中。运行 RUNSTATS 工具后
 
 在我们的示例中，解释查询的总成本差异非常小。这是因为在没有收集统计信息的情况下，DB2 优化器会为表估计某些统计信息。因此，默认统计信息与实际统计信息非常接近，从而总成本相似。统计信息是根据表的页数、行长度等估计的。由于数据库的动态性，估计的或目录的统计信息可能与数据库的实际情况大不相同。在这些情况下，DB2 选择的访问计划可能是无效的。
 
-请参阅第 701 页的“维护数据”以获取有关 RUNSTATS 和 REBIND 命令的详细信息。
+请参阅第 701 页的“维护数据”以获取有关`RUNSTATS`和`REBIND`命令的详细信息。
 
 ## DB2 注意
 
 随着 SQL 语句复杂性的增加，更新后的统计信息变得至关重要。
 
-可以使用可视化解释来查看优化器为排序做出的决策。在图 14–36 中，你可以看到使用索引来提供 TEST_CANDIDATE 表的排序结果。
+可以使用可视化解释来查看优化器为排序做出的决策。在图 14–36 中，你可以看到使用索引来提供`TEST_CANDIDATE`表的排序结果。
 
-``````
+```
 SELECT * FROM TEST_CANDIDATE
 WHERE CID=CANDIDATE_ID('111')
 ```
@@ -22717,17 +21532,17 @@ WHERE CID=CANDIDATE_ID('111')
 
 排序堆（sort heap）用于每个应用程序排序请求。DB2 优化器可能会尝试执行非溢出的管道化排序（nonoverflowed piped sort）。然而，如果运行时没有足够的内存来分配另一个排序堆，则可能会使用临时表执行排序。
 
-有一个数据库管理器参数用于控制在 DB2 服务器上分配排序的总内存。该参数是 SHEATHRES。结合缓冲池分配，尽可能为排序堆分配内存（并相应设置阈值）是重要的，同时要避免过度分配内存。
+有一个数据库管理器参数用于控制在 DB2 服务器上分配排序的总内存。该参数是`SHEATHRES`。结合缓冲池分配，尽可能为排序堆分配内存（并相应设置阈值）是重要的，同时要避免过度分配内存。
 
-SHEATHRES 用于私有和共享排序的方式不同：
+`SHEATHRES`用于私有和共享排序的方式不同：
 
 - 对于私有排序，该参数是实例范围内的内存消耗软限制。当私有排序达到此限制时，分配的内存将大幅减少。
-- 对于共享排序，该参数是数据库范围内的内存消耗硬性限制。当达到此限制时，将不允许进一步的共享排序请求（直到共享排序消耗下降到 SHEATHRES 指定的）。
+- 对于共享排序，该参数是数据库范围内的内存消耗硬性限制。当达到此限制时，将不允许进一步的共享排序请求（直到共享排序消耗下降到`SHEATHRES`指定的）。
 
 解释过的，如果启用了分区内并行，排序操作可以并行处理，可以是私有排序或共享排序。共享内存区域是预定义的，而不是预先分配的。可以使用监控监控许多排序相关的性能变量，包括：
 
-- 溢出排序百分比（Percentage of overflowed sorts）——监控此变量确定是否尝试使用排序堆但失败。如果百分比很高，考虑 SORTEAP 和 SHEATHRES 值。
-- 接受的管道排序百分比（Percentage of piped sorts accepted）——监控此变量确定管道排序是否被选中但未接受。如果百分比较低，考虑增加 SORTEAP 或 SHEATHRES。
+- 溢出排序百分比（Percentage of overflowed sorts）——监控此变量确定是否尝试使用排序堆但失败。如果百分比很高，考虑`SORTEAP`和`SHEATHRES`值。
+- 接受的管道排序百分比（Percentage of piped sorts accepted）——监控此变量确定管道排序是否被选中但未接受。如果百分比较低，考虑增加`SORTEAP`或`SHEATHRES`。
 
 # SQL 监控 937
 
@@ -22735,9 +21550,9 @@ SHEATHRES 用于私有和共享排序的方式不同：
 
 图 14–37 带有排序算子的可视化解释
 
-图 14–37 中的视化解释输出显示了一个排序算子。显示了算子的详细信息、排序类型以及涉及的列。伴随的快照信息可用于判断排序操作是管道化的（piped）还是非管道化的（non-piped）。注意存在表扫描算子。第一个表扫描读取基础表 TEST_CANDIDATE，第二个表扫描从临时排序表读取。
+图 14–37 中的视化解释输出显示了一个排序算子。显示了算子的详细信息、排序类型以及涉及的列。伴随的快照信息可用于判断排序操作是管道化的（piped）还是非管道化的（non-piped）。注意存在表扫描算子。第一个表扫描读取基础表`TEST_CANDIDATE`，第二个表扫描从临时排序表读取。
 
-``````
+```
 SELECT LNAME, INITIAL, FNAME
 FROM TEST_CANDIDATE
 ORDER BY LNAME
@@ -22753,20 +21568,16 @@ ORDER BY LNAME
 - 连接谓词（Join Predicates）
 - 本地谓词（Local Predicates）
 
-
-
-
-
 ## 第 14 章 监控与优化
 
-- GROUP BY 子句
-- ORDER BY 子句
+- `GROUP BY`子句
+- `ORDER BY`子句
 - select 列表
 
-你还可以使用解释功能（Explain Facility）来评估是否可以使用不同的索引代替现有索引或无索引。在创建新索引后，使用 `RUNSTATS` 命令为该索引收集统计信息并重新编译你的查询。随着时间的推移，你可能会通过解释数据发现，现在使用的不再索引扫描（index scan）而是扫描（scan）。这可能是由于表数据聚集情况发生了变化导致的。如果之前使用的索引现在的聚集因子（cluster ratio）较低，你可能需要：
+你还可以使用解释功能（Explain Facility）来评估是否可以使用不同的索引代替现有索引或无索引。在创建新索引后，使用`RUNSTATS`命令为该索引收集统计信息并重新编译你的查询。随着时间的推移，你可能会通过解释数据发现，现在使用的不再索引扫描（index scan）而是扫描（scan）。这可能是由于表数据聚集情况发生了变化导致的。如果之前使用的索引现在的聚集因子（cluster ratio）较低，你可能需要：
 
 - 根据该索引重新组织表数据。
-- 使用 `RUNSTATS` 命令更新目录统计信息。
+- 使用`RUNSTATS`命令更新目录统计信息。
 - 重新编译查询（绑定或重新绑定）。
 - 重新检查解释输出，以确定重组表是否影响了访问计划。
 
@@ -22782,7 +21593,7 @@ OLTP 应用是使用带有范围限制谓词的索引扫描的理想候选对象
 
 只读类型查询的搜索标准可能是模糊的，导致查询大量行。如果用户通常只查看输出数据中的一小部分，可能希望尝试确保在返回某些结果之前不计算结果集。在这种情况下，用户的目标与优化器的基本运行原理不同，优化器试图尽力地减少整个查询的资源消耗，而不仅仅是前几行数据。
 
-例如，如果解释输出显示访问计划中同时使用了合并连接（merge join）和排序（sort）操作符，则在向应用程序返回任何行之前，结果集将在临时表中具物化。在这种情况下，你可以尝试通过在 `SELECT` 语句使用 `OPTIMIZE FOR` 子句来更改访问计划。通过这种方式，优化器可以尝试选择一种在向应用程序返回第一行之前不在临时表中产生整个结果集的访问计划。
+例如，如果解释输出显示访问计划中同时使用了合并连接（merge join）和排序（sort）操作符，则在向应用程序返回任何行之前，结果集将在临时表中具物化。在这种情况下，你可以尝试通过在`SELECT`语句使用`OPTIMIZE FOR`子句来更改访问计划。通过这种方式，优化器可以尝试选择一种在向应用程序返回第一行之前不在临时表中产生整个结果集的访问计划。
 
 ## 索引顾问 (Index Advisor)
 
@@ -22794,24 +21605,26 @@ OLTP 应用是使用带有范围限制谓词的索引扫描的理想候选对象
 
 与此功能相关的两个概念是负载（workload）和虚拟索引（virtual indexes）。
 
-负载（workload load）是指 DB2 在给定时间范围内必须处理的一组 SQL 语句（SELECT, INSERT, UPDATE, DELETE）。负载中的信息涉及给定时间范围内 SQL 语句的类型和频率。索引顾问结合数据库信息来推荐索引。顾问引擎的目标是最小化总工作负载成本。
+负载（workload load）是指 DB2 在给定时间范围内必须处理的一组 SQL 语句（`SELECT`, `INSERT`, `UPDATE`, `DELETE`）。负载中的信息涉及给定时间范围内 SQL 语句的类型和频率。索引顾问结合数据库信息来推荐索引。顾问引擎的目标是最小化总工作负载成本。
 
 虚拟索引是不存在当前数据库架构中的索引。这些索引可能是该功能做出的建议，也可能是建议创建但使用顾问功能来模拟其影响的索引。
 
-顾问功能使用两个作为 `EXPLAIN` 表扩展的表：
+顾问功能使用两个作为`EXPLAIN`表扩展的表：
 
-- ADVISE_WORKLOAD——在该表中，你描述了要考虑的负载。表该表中的每行都代表一条 SQL 语句，并由关联的频率进行描述。每个负载都有一个标识的 `workload_NAME`，它是表中的一个字段。作为负载一部分的所有 SQL 语句应具有相同的 `workload_NAME`。
-- ADVISE_INDEX——此表存储有关推荐索引的信息。信息通过 SQL 编译器、`db2adv` 命令（DB2 索引顾问命令）或手动使用 SQL 语句放入此表。
+- `ADVISE_WORKLOAD`——在该表中，你描述了要考虑的负载。表该表中的每行都代表一条 SQL 语句，并由关联的频率进行描述。每个负载都有一个标识的`workload_NAME`，它是表中的一个字段。作为负载一部分的所有 SQL 语句应具有相同的`workload_NAME`。
+- `ADVISE_INDEX`——此表存储有关推荐索引的信息。信息通过 SQL 编译器、`db2adv`命令（DB2 索引顾问命令）或手动使用 SQL 语句放入此表。
 
-通过将 `CURRENT EXPLAIN` 模式特殊寄存设置为 `INDEXES`，当调用 `EXPLAIN` 函数时，`ADVISE_INDEX` 表将被填充。
+通过将`CURRENT EXPLAIN`模式特殊寄存设置为`INDEXES`，当调用`EXPLAIN`函数时，`ADVISE_INDEX`表将被填充。
 
-当 `CURRENT EXPLAIN` 模式特殊寄存用于评估 `INDEXES` 时，`ADVISE_INDEX` 表将作为 `EXPLAIN` 过程输入，读取虚拟索引定义并在过程中中使用它们，就像它们是真实索引一样。
+当`CURRENT EXPLAIN`模式特殊寄存用于评估`INDEXES`时，`ADVISE_INDEX`表将作为`EXPLAIN`过程输入，读取虚拟索引定义并在过程中中使用它们，就像它们是真实索引一样。
 
-可以使用 `db2adv` 命令或通过控制中心调用 DB2 索引顾问。此示例连接到 SAMPLE 数据库，并为输入文件中引用的每个表推荐索引。寻找解决方案的最大允许时间为 3 分钟。
+可以使用`db2adv`命令或通过控制中心调用 DB2 索引顾问。此示例连接到 SAMPLE 数据库，并为输入文件中引用的每个表推荐索引。寻找解决方案的最大允许时间为 3 分钟。
 
 ```
 db2vis -d sample -f sql.in -t 3
 ```
+
+
 
 ## 配置数据库资源
 
@@ -22832,13 +21645,9 @@ DB2 允许在不停止数据库活动的情况下分配、更改和删除缓冲�
 - 使用针对加载优化的配置运行加载
 - 在加载完成后将参数恢复原值
 
+## 第 14 章 监控与调优
 
-
-
-
-# 第 14 章 监控与调优
-
-多个日志记录。为了优化磁盘写入性能，写入操作会在内存中缓冲并定期刷新到磁盘。目录缓存（catalog cache）用于在内存中存储系统目录表。当 SQL 语句被编译或引用时，需要验证数据库对象信息。如果信息在内存中，则不需要执行磁盘活动来访问数据。包缓存（PCKCHESZ）用于减少包中重载页面（段）的访问。当同一段在程序中被多次使用时，这种缓存可以提高性能。
+多个日志记录。为了优化磁盘写入性能，写入操作会在内存中缓冲并定期刷新到磁盘。目录缓存（catalog cache）用于在内存中存储系统目录表。当 SQL 语句被编译或引用时，需要验证数据库对象信息。如果信息在内存中，则不需要执行磁盘活动来访问数据。包缓存（`PCKCHESZ`）用于减少包中重载页面（段）的访问。当同一段在程序中被多次使用时，这种缓存可以提高性能。
 
 ## DB2 注意
 
@@ -22846,25 +21655,29 @@ DB2 允许在不停止数据库活动的情况下分配、更改和删除缓冲�
 
 记录分块（Record blocking）是一种分布式缓存技术，用于将一组记录跨网络发送到客户端，而不是一次发送一条记录。网络流量的减少提高了应用程序的性能，并允许获得更好的网络吞吐量。DB2 根据标器类型和绑定参数对记录进行分组。如果优化器决定分块返回查询输出，则每个块的数据量由 `ASLHEAPSZ` 参数决定。
 
-应用程序堆（APLHEAPSZ）包含多个内存块，供 DB2 处理每个应用程序的请求。
+应用程序堆（`APLHEAPSZ`）包含多个内存块，供 DB2 处理每个应用程序的请求。
 
-排序堆（SORTHEAP）决定了每个排序可以使用的最大内存页数。如果禁用了分区内并行，排序区域分配在代理私有内存中。然而，如果启用了分区内并行，排序操作将并行处理，并根据执行的排序类型（私有排序或共享排序）将排序区域分配在代理私有内存或数据库全局内存中。对于私有排序，会为每个并行代理独立分配排序区域。对于共享排序，排序区域分配在数据库全局内存中，每个并行代理共享此排序堆。优化器使用 `SORTHEAP` 参数来确定排序是否可以在内存中或磁盘上进行。DB2 始终会尝试在内存中执行排序。
+排序堆（`SORTHEAP`）决定了每个排序可以使用的最大内存页数。如果禁用了分区内并行，排序区域分配在代理私有内存中。然而，如果启用了分区内并行，排序操作将并行处理，并根据执行的排序类型（私有排序或共享排序）将排序区域分配在代理私有内存或数据库全局内存中。对于私有排序，会为每个并行代理独立分配排序区域。对于共享排序，排序区域分配在数据库全局内存中，每个并行代理共享此排序堆。优化器使用 `SORTHEAP` 参数来确定排序是否可以在内存中或磁盘上进行。DB2 始终会尝试在内存中执行排序。
 
 `SHEATHRES` 参数用于控制 DB2 服务器中为排序堆可以分配的内存量。
 
 影响 DB2 服务器作为数据缓存（数据库级）时所用内存的关键性能参数之一，现在将对其进行修改。可以使用以下命令将默认缓冲区池大小更新为 200 MB：
 
-# SQL 监控
+## SQL 监控
 
+```
 UPDATE DB CFG FOR SAMPLE USING BUFFERPAGE 50000
+```
 
 在调整缓冲区池大小时，将机器上至少一半的物理内存分配给缓冲区池空间通常是一个良好的起点。这假设了一个专用的 DB2 数据库服务器，并且在任何给定时间只有一个活动数据库。例如，为了有效使用具有 400 MB RAM 的数据库服务器，所有缓冲区池的总大小可以达到 200 或 300 MB。
 
 对数据库配置文件的任何修改在所有使用该数据库的应用程序断开连接之前将不会生效。随后的数据库连接将使用数据库配置参数。如果您更改了 DBM（实例）配置参数，在实例停止并重启之前新值将不会生效。
 
-用于执行记录锁定的内存大小将会被修改。用于记录锁定的内存区域被称为应用程序支持层（ASLHEAPAPS）。以下命令将记录锁定的尺寸设置为 200 KB（单位为 4 KB）。
+用于执行记录锁定的内存大小将会被修改。用于记录锁定的内存区域被称为应用程序支持层（`ASLHEAPAPS`）。以下命令将记录锁定的尺寸设置为 200 KB（单位为 4 KB）。
 
+```
 UPDATE DATABASE MANAGER CONFIGURATION USING ASLHEAPAPS 50
+```
 
 数据库管理器配置的任何更改在实例启动并重启之前都不会生效，默认数据库监控参数除外，例如 `DFT_MON_BUFFPOOL`、`DFT_MON_LOCK`、`DFT_MON_SORT`、`DFT_MON_TABLE`、`DFT_MON_UOW` 和 `DFT_MON_STMT`。
 
@@ -22876,7 +21689,7 @@ UPDATE DATABASE MANAGER CONFIGURATION USING ASLHEAPAPS 50
 
 DB2 还提供了图形化工具，让您能够轻松地配置 DB2。配置顾问（Configuration Advisor）是一项工具，它要求您定义想要如何使用数据库：以定义大小需求和某些特定国家的信息。然后，以您的输入作为指南，顾问将调优某些参数以适应您的 DB2 需求。在控制中心（Control Center）窗口中右键点击数据库图标并选择配置顾问。这将弹出如图 14–38 所示的配置顾问窗口。
 
-# 第 14 章 监控与调优
+## 第 14 章 监控与调优
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_971_0.png)
 
@@ -22888,7 +21701,7 @@ DB2 还提供了图形化工具，让您能够轻松地配置 DB2。配置顾问
 
 `AUTOCFIGURE` 命令会为指定的数据库调用性能向导（Performance Wizard）。使用 `AUTOCFIGURE` 时有可用选项可以帮助您定义改进性能的数据库管理器和配置参数。
 
-# SQL 监控
+## SQL 监控
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_972_0.png)
 
@@ -22900,11 +21713,13 @@ DB2 提供的另一个工具是数据库管理器配置文件的用户界面。�
 
 图 14–40 使用控制中心配置数据库
 
-# 配置分区内并行
+## 配置分区内并行
 
 DB2 的分区内并行可以通过 `INTRA_PARALLEL` 参数启用。要在 DB2 中启用分区内并行，应执行以下命令：
 
+```
 UPDATE DBM CFG USING INTRA_PARALLEL YES
+```
 
 `INTRA_PARALLEL` 参数的默认值在 SMP 机器上为 YES，在单处理器机器上为 NO。
 
@@ -22912,41 +21727,37 @@ UPDATE DBM CFG USING INTRA_PARALLEL YES
 
 在单处理器环境中，将配置参数 `MAX_QUERYDEGREE` 设置为 2 可以稍微提高 I/O 性能。这是因为单处理器可能不需要等待输入或输出任务完成即可处理新查询，从而提高了 I/O 密集型应用程序的性能。嵌入 SQL 应用程序和 CLI 应用程序可以使用各种选项覆盖默认并行度。表 14-2 简要了启用 DB2 并行的参数和选项。
 
-# 表 14-2 DB2 并行参数
+## 表 14-2 DB2 并行参数
 
 | 参数 | 取值 |
 | :--- | :--- |
-| INTRA_PARALLEL 数据库管理器配置 | YES/NO。在单处理器机器上默认为 NO。在 SMP 机器上默认 YES。如果更改，已绑定的包将在下次执行时自动重新绑定。 |
-| MAX_QUERYDEGREE 数据库管理器配置 | -1 (ANY), 1-32767。默认值为 -1 允许优化器根据成本选择并行度。在此实例上执行的任何 SQL 语句使用的并行度不能超过此值。 |
-
-
-
-
+| `INTRA_PARALLEL` 数据库管理器配置 | YES/NO。在单处理器机器上默认为 NO。在 SMP 机器上默认 YES。如果更改，已绑定的包将在下次执行时自动重新绑定。 |
+| `MAX_QUERYDEGREE` 数据库管理器配置 | -1 (ANY), 1-32767。默认值为 -1 允许优化器根据成本选择并行度。在此实例上执行的任何 SQL 语句使用的并行度不能超过此值。 |
 
 ## 诊断与问题确定
 
 | 参数 | 值 |
 | --- | --- |
-| DFT_DEGREE 数据库配置 | -1 (任意)，1-32767。默认值为 1（无并行）。为 CURRENT DEGREE 特殊寄存器提供默认值。为 DEGREE 绑定选项提供。该数据库中任何 SQL 语句的最大并行度。 |
-| 用于动态 SQL 的 CURRENT DEGREE 特殊寄存器 | -1 (任意)，1-32767。设置动态 SQL 的并行度。默认值为 DFT_DEGREE。 |
-| 用于静态 SQL 的 DEGREE 预编译或绑定选项 | -1 (任意)，1-32767。设置静态 SQL 的并行度。默认值为 DFT_DEGREE。如需更改：执行 PREP STATIC.SQL DEGREE 2。 |
-| RUNTIME DEGREE SET RUNTIME 命令 | -1 (任意)，1-32767。设置运行应用程序的并行度。如需更改（将处理程序号为 100 的应用程序并行度设置为 4）：SET RUNTIME DEGREE FOR (100) to 4。仅影响在执行 SET RUNTIME 之后发布的查询。 |
-| DB2DEGREE CLI 配置文件 | -1 (任意)，1-32767。默认值为 0。设置 CLI 应用程序的并行度。CLI 应用程序在连接数据库后发出 SET CURRENT DEGREE 语句。 |
+| `DFT_DEGREE` 数据库配置 | -1 (任意)，1-32767。默认值为 1（无并行）。为 `CURRENT DEGREE` 特殊寄存器提供默认值。为 `DEGREE` 绑定选项提供。该数据库中任何 SQL 语句的最大并行度。 |
+| 用于动态 SQL 的 `CURRENT DEGREE` 特殊寄存器 | -1 (任意)，1-32767。设置动态 SQL 的并行度。默认值为 `DFT_DEGREE`。 |
+| 用于静态 SQL 的 `DEGREE` 预编译或绑定选项 | -1 (任意)，1-32767。设置静态 SQL 的并行度。默认值为 `DFT_DEGREE`。如需更改：执行 `PREP STATIC.SQL DEGREE 2`。 |
+| `RUNTIME DEGREE` `SET RUNTIME` 命令 | -1 (任意)，1-32767。设置运行应用程序的并行度。如需更改（将处理程序号为 100 的应用程序并行度设置为 4）：`SET RUNTIME DEGREE FOR (100) to 4`。仅影响在执行 `SET RUNTIME` 之后发布的查询。 |
+| `DB2DEGREE` CLI 配置文件 | -1 (任意)，1-32767。默认值为 0。设置 CLI 应用程序的并行度。CLI 应用程序在连接数据库后发出 `SET CURRENT DEGREE` 语句。 |
 
-活动应用程序的最大查询并行度使用 SET RUNTIME DEGREE 命令指定。应用程序可以使用 SET CURRENT DEGREE 语句设置自己的运行时并行度。实际的运行时并行度为以下三者中的较低值：
+活动应用程序的最大查询并行度使用 `SET RUNTIME DEGREE` 命令指定。应用程序可以使用 `SET CURRENT DEGREE` 语句设置自己的运行时并行度。实际的运行时并行度为以下三者中的较低值：
 
-- * MAX_QUERYDEGREE* DBM 配置参数
+- `MAX_QUERYDEGREE` DBM 配置参数
 - 应用程序运行时并行度
 - SQL 语句编译并行度
 
-有关关于 DB2 并行支持的更多信息，请参阅《DB2 管理指南》*。
+有关关于 DB2 并行支持的更多信息，请参阅《DB2 管理指南》。
 
 ## 诊断与问题确定
 
 DB2 提供了一系列工具，可用于确定 DB2 系统出现问题或错误的原因。潜在问题包括：
 
-- * 特定操作系统的
-- - 特定硬件或 I/O 的
+- 特定操作系统的
+- 特定硬件或 I/O 的
 - 特定应用程序的
 - 特定通信的
 
@@ -22956,7 +21767,7 @@ DB2 提供了一系列工具，可用于确定 DB2 系统出现问题或错误�
 
 DB2 拥有大量的错误代码，解释数据库系统内部可能的问题。这意味着 DB2 不仅可以报告数据库内部的问题，还可以报告 DB2 提供的任何工具和功能内部的问题。
 
-这些消息分为几个不同的类别。每条消息都关联有一个错误代码。错误代码的前缀决定了错误代码所属的类别
+这些消息分为几个不同的类别。每条消息都关联有一个错误代码。错误代码的前缀决定了错误代码所属的类别：
 
 - ADM — 管理通知消息
 - ASN — DB2 复制支持消息
@@ -22992,265 +21803,234 @@ SQL 代码有两种格式：负数代码（或格式为 SQLXXXN）或正数代�
 
 ## 第 14 章 监控与优化
 
-![](img/2fc7488b655d8b)
+![](img/2fc7488b6558d6b99bbc7356ac4116b1_973_0.png)
 
-## 第 14 章 监控与优化
+图 14–41 日志中的消息
 
-### 日志中的消息
-
-### 诊断和服务日志
+## 诊断和服务日志
 
 DB2 允许你在系统内部记录管理任务。每个 DB2 实例都有诊断文件，用于 DB2 自带工具的诊断日志，以及用于 DB2 安装的日志。重点是实例的数据定义语言（DDL）语句或数据操作语言（DML）语句，例如激活数据库、备份数据库、启动和停止 DB2 或通信支持。当 DB2 记录的这些消息时，被称为信息消息。在故障排除场景中，你将寻找错误和警告消息。这被称为首次故障捕获（FFDC）。FFDC 信息是管理服务器自动捕获错误的诊断信息。这些：
 
 ## 诊断与问题确定
 
-- 管理日志 — 当发生重大事件时，DB2 将信息写入管理通知日志。信息供数据库管理员和系统管理员使用。许多消息为提供的 SQL 提供附加信息。事件类型和信息的详细程度由 NOTIFY 参数决定。在 Windows 中，管理消息被写入事件日志。
-
+- 管理日志 — 当发生重大事件时，DB2 将信息写入管理通知日志。信息供数据库管理员和系统管理员使用。许多消息为提供的 SQL 提供附加信息。事件类型和信息的详细程度由 `NOTIFY` 参数决定。在 Windows 中，管理消息被写入事件日志。
 - 转储文件 — 有时，当 DB2 进程或线程失败并发出错误时，它可能在外部二进制转储文件中记录信息。这些文件难以读取，供 DB2 服务人员使用。
-
 - 轨迹文件 — 如果发生操作系统异常，DB2 创建轨迹文件。
 
 ## DB2 注意
 
-以前名为 db2alert.log 的日志已删除，报警现在写入管理通知和诊断日志。
+以前名为 `db2alert.log` 的日志已删除，报警现在写入管理通知和诊断日志。
 
-FFDC 信息记录在 DIAGPATH 数据库配置参数指定的目录。FFDC 信息为每个 DB2 实例单独记录，并为 DB2 实例和 DB2 管理服务器记录。创建实例时，默认 DIAGPATH 值为空。默认情况下，诊断文件写入实例目录（UNIX 平台上的 db2dump 子目录）。
+FFDC 信息记录在 `DIAGPATH` 数据库配置参数指定的目录。FFDC 信息为每个 DB2 实例单独记录，并为 DB2 实例和 DB2 管理服务器记录。创建实例时，默认 `DIAGPATH` 值为空。默认情况下，诊断文件写入实例目录（UNIX 平台上的 `db2dump` 子目录）。
 
-DIAGPATH 参数是数据库配置参数，因此你可以在控制中心通过右键点击相应的实例并点击“配置”来更改。你也可以使用 CLP 或控制中心：
+`DIAGPATH` 参数是数据库配置参数，因此你可以在控制中心通过右键点击相应的实例并点击“配置”来更改。你也可以使用 CLP 或控制中心：
 
 ```
 UPDATE DBM CFG USING DIAGPATH 'C:\NEWDIAGPATH'
 ```
 
-诊断信息的级别 DIAGLEVEL 也是数据库配置参数。DIAGLEVEL 参数可以设置为以下值：
+诊断信息的级别 `DIAGLEVEL` 也是数据库配置参数。`DIAGLEVEL` 参数可以设置为以下值：
 
 - 0 — 不捕获任何管理消息。（不建议此设置。）
 - 1 — 仅严重错误。仅记录致命不可恢复的错误。要从某些这种情况中恢复，你可能需要 DB2 帮助。
-- 2 — 所有错误。记录需要系统管理员或数据库管理员立即处理的情况。如果该情况未
-
-
-已解析，可能会导致致命错误。非常重要的非错误活动（例如，恢复）也可能在此级别进行记录。此级别将捕获健康监测器（Health Monitor）的告报。
-
+- 2 — 所有错误。记录需要系统管理员或数据库管理员立即处理的情况。如果该情况未解析，可能会导致致命错误。非常重要的非错误活动（例如，恢复）也可能在此级别进行记录。此级别将捕获健康监测器（Health Monitor）的告报。
 - 3 — 所有错误和警告。记录不构成威胁且不需要立即采取的状况，但可能表明系统未处于最佳状态。此级别将捕获健康监测器告报、健康监测器警告和健康监测器注意。这是默认值。
 - 4 — 所有错误、警告和信息消息。
 
 默认的 `DIAGLEVEL` 通常足够 DB2 正常运行。然而，在 DB2 的初始设置期间或当发生错误时，可以将 `DIAGLEVEL` 更新为 4，以便收集尽可能的信息。
 
-```sql
+```
 UPDATE DBM CFG USING DIAGLEVEL 4
 ```
 
+
+
 ### DB2 注意事项
 
-你必须将 `notifylevel` 设置为 2 或更高值，以便健康监测器能够向其配置中定义的联系人发送任何通知。
+你必须将`notifylevel`设置为 2 或更高值，以便健康监测器能够向其配置中定义的联系人发送任何通知。
 
 ## 在 DB2 数据库中跟踪问题
 
 有时 DB2 或使用 DB2 的应用程序会出现问题，而 FFDC（故障指示性持续诊断）信息不足以确定问题的来源。此时，DB2 客户服务可能会要求 DBA 对应用程序、CLI/ODBC/JDBC 驱动或数据库本身运行跟踪。
 
-`DB2TR` 命令的简略语法见图 14–42。
+`DB2TR`命令的简略语法见图 14–42。
 
-## 诊断与问题确定 953
+![图 14-42 DB2Trace 命令](img/2fc7488b6558d6b99bbc7356ac4116b1_980_0.png)
 
-![](img/2fc7488b6558d6b99bbc7356ac4116b1_980_0.png)
+跟踪或调试 DB2 应用程序主要是创建该程序的应用程序开发人员的任务。DB2 嵌入 SQL 程序使用`SQLCA`结构提供了丰富的错误报告功能。这允许开发者监控其代码执行的情况，类似于 DB2 环境。
 
-## 图 14-42 DB2Trace 命令
+对 DB2 本身进行跟踪与 CLI/ODBC/JDBC 跟踪有些相似。你指定跟踪输出的去向，然后开启跟踪。跟踪也对 DB2 有重大的性能影响。然而，在 DB2 内部进行跟踪时你具有一定的灵活性。你可以过滤想要监控的内容。你可以指定使用多大的内存缓冲区来存放跟踪信息。你可以指定 DB2 跟踪保留多少条记录。可以使用`db2trace`命令启动对 DB2 的跟踪。你需要指定某些选项来收集跟踪信息。
 
-跟踪或调试 DB2 应用程序主要是创建该程序的应用程序开发人员的任务。DB2 嵌入 SQL 程序使用 `SQLCA` 结构提供了丰富的错误报告功能。这允许开发者监控其代码执行的情况，类似于 DB2 环境。
+你通过四个步骤获取 DB2 跟踪：
 
-对 DB2 本身进行跟踪与 CLI/ODBC/JDBC 跟踪有些相似。你指定跟踪输出的去向，然后开启跟踪。跟踪也对 DB2 有重大的性能影响。然而，在 DB2 内部进行跟踪时你具有一定的灵活性。你可以过滤想要监控的内容。你可以指定使用多大的内存缓冲区来存放跟踪信息。你可以指定 DB2 跟踪保留多少条记录。可以使用 `db2trace` 命令启动对 DB2 的跟踪。你需要指定某些选项来收集跟踪信息。你通过四个步骤获取 DB2 跟踪：
+1. 开启跟踪（`db2trc on`）。
+2. 转储跟踪输出（`db2trc dump`）。
+3. 关闭跟踪（`db2trc off`）。
+4. 格式化跟踪输出（`db2trc flow`或`db2trc format`）。
 
-- 开启跟踪 (`db2trc on`)
-
- 转储跟踪输出 (`db2trc dump`)。
-- 关闭跟踪 (`db2trc off`).
-- 格式化跟踪输出 (`db2trc flow` 或 `db2trc format`)。
-
-使用 `flow` 选项，你可以指定按 DB2 线程/进程格式格式化跟踪输出。使用 `format` 选项，你可以指定按时间顺序格式化跟踪输出。
-
-## 第 14 章监控与调优
+使用`flow`选项，你可以指定按 DB2 线程/进程格式格式化跟踪输出。使用`format`选项，你可以指定按时间顺序格式化跟踪输出。
 
 开启跟踪时，你可以指定一些附加选项（此处仅显示部分内容）：
 
-- m — 屏蔽你想要跟踪的特定记录类型。
-- -e — 指定跟踪保留的 DB2 错误数量限制。
-- -r — 指定跟踪记录的大小限制。
-- -f — 指定跟踪输出是否应直接写入文件。
-- -1 或 -i — 指定存储跟踪输出的内存缓冲区的大小。`-1` 选项将保留跟踪记录。`-i` 选项将保留初始记录。
+- `-m`—屏蔽你想要跟踪的特定记录类型。
+- `-e`—指定跟踪保留的 DB2 错误数量限制。
+- `-r`—指定跟踪记录的大小限制。
+- `-f`—指定跟踪输出是否应直接写入文件。
+- `-1`或`-i`—指定存储跟踪输出的内存缓冲区的大小。`-1`选项将保留跟踪记录。`-i`选项将保留初始记录。
 
-在使用 `db2trc dmp` 命令和 `db2trc off` 命令后，你格式化化跟踪输出。执行 `db2trc format` 命令，如下：
+在使用`db2trc dmp`命令和`db2trc off`命令后，你格式化跟踪输出。执行`db2trc format`命令，如下：
 
-```
+```text
 C:\SQLIB\BIN> db2trc format mytrace.out
+
 Trace wrapped      :YES
+
 Size of trace :3996054 bytes
+
 Records in trace :39450
+
 Records formatted :39450
 ```
 
-使用 `db2trc fmt` 命令格式化后的跟踪文件可能如下所示：
+使用`db2trc fmt`命令格式化后的跟踪文件可能如下所示：
 
 | 列 | 数据 |
 | :--- | :--- |
-| 14719 | DB2 fnc_retcode sw_query graph sqlnq_ftb::new (1.33.60.55) |
-| | pid 138 tid 117; cpid 139; time 7951153; trace_point 254 |
-| | return_code = 000000 0 | |
-| 14720 | DB2 fnc_entry sw_query graph sqlnq_ftb::ftb (1.30.60.56) |
-| | pid 138; tid 117; cpid 139; time 7951153; trace_point 0 |
-| | called_from 008F116 | |
-| 14721 | DB2 cei_entry sw_query graph oper_system_services sqlmgblk (1.20.15.82) |
-| | pid 138; tid 117; cpid 139; time 7951153; trace_point 0 |
-| | called_from 10047AEF | |
-| 14722 | DB2 cei_data oper_system_services sqlmgblk (1.25.15.82) |
-| | pid 138; tid 117; cpid 139; time 7951153; trace_point 0 |
+| 14719 | DB2 fnc_retcode sw_query graph `sqlnq_ftb::new` (1.33.60.55) |
+|  | pid 138 tid 117; cpid 139; time 7951153; trace_point 254 |
+|  | `return_code = 000000 0` |
+| 14720 | DB2 fnc_entry sw_query graph `sqlnq_ftb::ftb` (1.30.60.56) |
+|  | pid 138; tid 117; cpid 139; time 7951153; trace_point 0 |
+|  | `called_from 008F116` |
+| 14721 | DB2 cei_entry sw_query graph oper_system_services `sqlmgblk` (1.20.15.82) |
+|  | pid 138; tid 117; cpid 139; time 7951153; trace_point 0 |
+|  | `called_from 10047AEF` |
+| 14722 | DB2 cei_data oper_system_services `sqlmgblk` (1.25.15.82) |
+|  | pid 138; tid 117; cpid 139; time 7951153; trace_point 0 |
 
-使用 `db2trc fmt` 命令格式化后的跟踪文件可能如下所示：
+使用`db2trc fmt`命令格式化后的跟踪文件可能如下所示：
 
-| 14719 | 14719 | DB2 fnc_retcode sw_query graph sqlnq_ftb::new (1.33.60.55) |
-| | pid 138 tid 117; cpid 139; time 7951153; trace_point 254 |
-| | return_code = 000000 0 | |
-| 14720 | 14720 | DB2 fnc_entry sw_query graph sqlnq_ftb::ftb (1.30.60.56) |
-| | pid 138; tid 117; cpid 139; time 7951153; trace_point 0 |
-| | called_from 008F116 | |
-| 14721 | 14721 | DB2 cei_entry sw_query graph oper_system_services sqlmgblk (1.20.15.82) |
-| | pid 138; tid 117; cpid 139; time 7951153; trace_point 0 |
-| | called_from 10047AEF | |
-| 14722 | 14722 | DB2 cei_data oper_system_services sqlmgblk (1.25.15.82) |
-| | pid 138; tid 117; cpid 139; time 7951153; trace_point 0 |
-
-使用 `db2trc fmt` 命令格式化后的跟踪文件可能如下所示：
-
-| 14719 | 14719 | DB2 fnc_retcode sw_query graph sqlnq_ftb::new (1.33.60.55) |
-| | pid 138 tid 117; cpid 139; time 7951153; trace_point 254 |
-| | return_code = 000000 0 | |
-| 14720 | 14720 | DB2 fnc_entry sw_query graph sqlnq_ftb::ftb (1.30.60.56) |
-| | pid 138; tid 117; cpid 139; time 7951153; trace_point 0 |
-| | called_from 008F116 | |
-| 14721 | 14721 | DB2 cei_entry sw_query graph oper_system_services sqlmgblk (1.20.15.82) |
-| | pid 138; tid 117; cpid 139; time 7951153; trace_point 0 |
-| | called_from 10047AEF | |
-| 14722 | 14722 | DB2 cei_data oper_system_services sqlmgblk (1.25.15.82) |
-| | pid 138; tid 117; cpid 139; time 7951153; trace_point 0 |
-
-## 诊断与问题确定 953
-
-## 诊断与问题确定 953
-
-有时 DB2 或使用 DB2 的应用程序会出现问题，而 FFDC 信息不足以确定问题的来源。此时，DB2 客户服务可能会要求 DBA 对应用程序、CLI/ODBC/JDBC 驱动或数据库本身运行跟踪。
-
-## 诊断与问题确定 953
-
-有时 DB2 或使用 DB2 的应用程序会出现问题，而 FFDC 信息不足以确定问题的来源。此时，DB2 客户服务可能会要求 DBA 对应用程序、CLI/ODBC/JDBC 驱动或数据库本身运行跟踪。
-
-## 诊断与问题确定 953
-
-有时 DB2 或使用 DB2 的应用程序会出现问题，而 FFDC 信息不足以确定问题的来源。此时，DB2 客户服务可能会要求 DBA 对应用程序、CLI/ODBC/JDBC 驱动或数据库本身运行跟踪。
-
-## 诊断与问题确定 953
-
-有时 DB2 或使用 DB2 的应用程序会出现问题，而 FFDC 信息不足以确定问题的来源。此时，DB2 客户服务可能会要求 DBA 对应用程序、CLI/ODBC/JDBC 驱动或数据库本身运行跟踪。
-
-## 诊断与问题确定 953
-
-有时 DB2 或使用 DB2 的应用程序会出现问题，而 FFDC 信息不足以确定问题的来源。此时，DB2 客户服务可能会要求 DBA 对应用程序、CLI/ODBC/JDBC 驱动或数据库本身运行跟踪。
-
-## 诊断与问题确定 953
-
-有时 DB2 或使用 DB2 的应用程序会出现问题，而 FFDC 信息不足以确定问题的来源。此时，DB2 客户服务可能会要求 DBA 对应用程序、CLI/ODBC/JDBC 驱动或数据库本身运行跟踪。
-
-## 诊断与问题确定 953
-
-有时 DB2 或使用 DB2 的应用程序会出现问题，而 FFDC 信息不足以确定问题的来源。此时，DB2 客户服务可能会要求 DBA 对应用程序、CLI/ODBC/JDBC 驱动或数据库本身运行跟踪。
-
-## 诊断与问题确定 953
-
-有时 DB2 或使用 DB2 的应用程序会出现问题，而 FFDC 信息不足以确定问题的来源。此时，DB2 客户服务可能会要求 DBA 对应用程序、CLI/ODBC/JDBC 驱动或数据库本身运行跟踪。
+|  |  |  |
+| :--- | :--- | :--- |
+| 14719 | 14719 | DB2 fnc_retcode sw_query graph `sqlnq_ftb::new` (1.33.60.55) |
+|  |  | pid 138 tid 117; cpid 139; time 7951153; trace_point 254 |
+|  |  | `return_code = 000000 0` |
+| 14720 | 14720 | DB2 fnc_entry sw_query graph `sqlnq_ftb::ftb` (1.30.60.56) |
+|  |  | pid 138; tid 117; cpid 139; time 7951153; trace_point 0 |
+|  |  | `called_from 008F116` |
+| 14721 | 14721 | DB2 cei_entry sw_query graph oper_system_services `sqlmgblk` (1.20.15.82) |
+|  |  | pid 138; tid 117; cpid 139; time 7951153; trace_point 0 |
+|  |  | `called_from 10047AEF` |
+| 14722 | 14722 | DB2 cei_data oper_system_services `sqlmgblk` (1.25.15.82) |
+|  |  | pid 138; tid 117; cpid 139; time 7951153; trace_point 0 |
 
 ## DB2 跟踪配置
 
-## DB2 CLI 跟踪选项和 db2cli.ini 文件
+### DB2 CLI 跟踪选项和 `db2cli.ini` 文件
 
-当使用 DB2 驱动的应用程序执行时，驱动程序会检查 db2cli.ini 中 `[COMMON]` 部分的跟踪选项。这些跟踪选项是在 db2cli.ini 中设置某些值的特定跟踪关键字。
+当使用 DB2 驱动的应用程序执行时，驱动程序会检查`db2cli.ini`中`[COMMON]`部分的跟踪选项。这些跟踪选项是在`db2cli.ini`中设置某些值的特定跟踪关键字。
 
 可以定义的 DB2 CLI 跟踪关键字（详见 DB2 信息中心）：
 
-- TRACE=0|1 — 启用或禁用跟踪
-- TRACEFILENAME=0 | <任意正整数> — 指定跟踪信息写入 DB2 跟踪日志文件的频率。
-- TRACEPATHNAME=<完全限定的跟踪名称> — 指定所有 DB2 跟踪信息的写入位置。没有默认路径，且路径在执行时必须存在。
-- TRACEFLUSH=0 | <任意正整数> — 指定跟踪信息写入 DB2 跟踪日志文件的频率。
-- TRACINTERVAL=0 | <任意正整数> — 任何大于 0 的值都会使 DB2 CLI 跟踪设施每隔（n 秒）从 db2cli.ini 文件重新读取 TRACE 和 TRACEPIDLIST 关键字。
-- TRCOMM=0|1 — 启用客户端与服务器之间的通信跟踪（与服务器发送和接收的字节数，以及客户端与服务器之间通信的时间）。
-- TRACETIMESTAMP=0|1|2|3 — 指定在跟踪记录中添加各种时间戳。
-- TRACEPIDID=0|1 — 指定将进程和线程 ID 信息包含在跟踪中。
-- TRACEPIDLIST=<无值> | <pid1,pid2,pid3,...> — 限制 DB2 CLI 生成的进程 ID 值。
+- `TRACE=0|1`—启用或禁用跟踪。
+- `TRACEFILENAME=0 | <任意正整数>`—指定跟踪信息写入 DB2 跟踪日志文件的频率。
+- `TRACEPATHNAME=<完全限定的跟踪名称>`—指定所有 DB2 跟踪信息的写入位置。没有默认路径，且路径在执行时必须存在。
+- `TRACEFLUSH=0 | <任意正整数>`—指定跟踪信息写入 DB2 跟踪日志文件的频率。
+- `TRACINTERVAL=0 | <任意正整数>`—任何大于 0 的值都会使 DB2 CLI 跟踪设施每隔（n 秒）从`db2cli.ini`文件重新读取`TRACE`和`TRACEPIDLIST`关键字。
+- `TRCOMM=0|1`—启用客户端与服务器之间的通信跟踪（与服务器发送和接收的字节数，以及客户端与服务器之间通信的时间）。
+- `TRACETIMESTAMP=0|1|2|3`—指定在跟踪记录中添加各种时间戳。
+- `TRACEPIDID=0|1`—指定将进程和线程 ID 信息包含在跟踪中。
+- `TRACEPIDLIST=<无值> | <pid1,pid2,pid3,...>`—限制 DB2 CLI 生成的进程 ID 值。
 
-
-
-
-## 诊断与问题确定
-
-一个使用这些 DB2 CLI 关键字和值的 db2cli.ini 文件跟踪配置示例如下：
+一个使用这些 DB2 CLI 关键字和值的`db2cli.ini`文件跟踪配置示例如下：
 
 ```ini
 [COMMON]
+
 TRACE=1
+
 TRACEFILENAME=\TEMP\CLIMATE.TXT
+
 TRACEFLUSH=1
 ```
 
 DB2 CLI 跟踪的输出是 CLI/ODBC API 调用的序列。以下示例演示了连接 DB2 数据库失败时 ODBC 跟踪输出的样式。
 
-```
+```text
 SQLAllocHandle(HandleType=SQL_HANDLE_ENV, hinput=0, phout=&121d5c)
+
 SQLAllocHandle(phout=0)
+
   -- SUCCESS Time elapsed +1.000000e-002 seconds
+
 SQLSetEnvAttr(hEnv=0,1, fattrtype=SQL_ATTR_VERSION, vParam=2,cbParam=0)
+
   -- Time elapsed -0.000000e+000 seconds
+
 SQLSetEnvAttr()
+
   -- SUCCESS Time elapsed +0.000000e+000 seconds
+
 SQLAllocHandle(HandleType=SQL_HANDLE_DBC, hinput=0, phout=&121d4c)
+
   -- Time elapsed -0.000000e+000 seconds
+
 SQLGetInfo(hbc=0,1, hlen=11;1402,szConnectionString="DB2",cbConnectionString=3,cbbininfoValueMax=128,pcbininfoValue=&128324)
+
   -- Time elapsed +0.000000e+000 seconds
+
 SQLGetInfo(rgbinfoValue="03.00", pcbininfoValue=5)
+
   -- Time elapsed +0.000000e+000 seconds
 ```
 
-```
+```text
 SQLDriverConnect(hbc,szConnectString="DSN=SAMPLE;UID=baklarz;PWD=******;DB2DEG=ANY;MAXCOLUMNSIZE=104857;LONGDATAMAPATCOMP=1;ALIAS=SAMPLE;PATCH=131072;",pcConnect=121)
+
   -- SUCCESS Time elapsed +1.502000e+000 seconds
+
 (DSN="SAMPLE")
+
 (UID="baklarz")
+
 (PWD="")
+
 (DB2DEG=ANY")
+
 (MAXCOLUMNSIZE="1048575")
+
 (LONGDATAPATCOMP="1")
+
 (ALIAS="SAMPLE")
+
 (PATCH="131072")
 ```
 
-## DB2 跟踪选项与 db2cli.ini 文件
+### DB2 跟踪选项与 `db2cli.ini` 文件
 
-当应用程序在执行期间使用 DB2 JDBC 驱动程序时，驱动程序还会检查 db2cli.ini 文件中的跟踪设施。与 CLI 跟踪一样，DB2 JDBC 跟踪选项是以关键字/值对的形式在 db2cli.ini 的 [COMMON] 部分下指定的。
-
-## 第 14 章 监控与调优
+当应用程序在执行期间使用 DB2 JDBC 驱动程序时，驱动程序还会检查`db2cli.ini`文件中的跟踪设施。与 CLI 跟踪一样，DB2 JDBC 跟踪选项是以关键字/值对的形式在`db2cli.ini`的`[COMMON]`部分下指定的。
 
 可以定义的 DB2 JDBC 跟踪关键字：
 
-- JDBCTRACE=0|1—启用或禁用跟踪。
-- JDBCTRACEPATH=<fully_qualified_trace_path_name>—指定所有 DB2 跟踪信息的写入位置。DB2 跟踪输出日志文件没有默认路径，且指定的路径在执行时必须存在。
-- JDBCTRACEFLUSH=0 | <任何正整数>—指定跟踪信息写入 DB2 JDBC 跟踪日志的频率。
+- `JDBCTRACE=0|1`—启用或禁用跟踪。
+- `JDBCTRACEPATH=<fully_qualified_trace_path_name>`—指定所有 DB2 跟踪信息的写入位置。DB2 跟踪输出日志文件没有默认路径，且指定的路径在执行时必须存在。
+- `JDBCTRACEFLUSH=0 | <任何正整数>`—指定跟踪信息写入 DB2 JDBC 跟踪日志的频率。
 
-一个使用这些 DB2 JDBC 关键字和值的 db2cli.ini 文件跟踪配置示例：
+一个使用这些 DB2 JDBC 关键字和值的`db2cli.ini`文件跟踪配置示例：
 
 ```ini
 [COMMON]
+
 JDBCTRACE=1
+
 JDBCTRACEPATH=\TEMP\JDBCTRACE
+
 JDBCTRACEFLUSH=1
 ```
 
-启用 DB2 跟踪不会启用 CLI 跟踪。某些版本的 DB2 JDBC 驱动程序依赖 DB2 CLI 驱动程序来访问数据库。因此，Java 开发者可能还会启用 DB2 CLI 跟踪，以获取有关其应用程序如何通过各种软件层与数据库交互的额外信息。DB2 JDBC 和 DB2 CLI 选项相互独立，可以在 db2cli.ini 文件的 [COMMON] 部分以任何顺序进行指定。
+
+
+启用 DB2 跟踪不会启用 CLI 跟踪。某些版本的 DB2 JDBC 驱动程序依赖 DB2 CLI 驱动程序来访问数据库。因此，Java 开发者可能还会启用 DB2 CLI 跟踪，以获取有关其应用程序如何通过各种软件层与数据库交互的额外信息。DB2 JDBC 和 DB2 CLI 选项相互独立，可以在`db2cli.ini`文件的`[COMMON]`部分以任何顺序进行指定。
 
 ## DB2 CLI 驱动程序跟踪与 ODBC 驱动管理器跟踪
 
@@ -23260,9 +22040,9 @@ ODBC 驱动管理器可能会直接将函数调用转发到 DB2 CLI 驱动程序
 
 ODBC 驱动管理器干预应用程序函数调用的原因包括：
 
-- Microsoft 标库会将对 SQLExtendedFetch() 的调用映射到多次 SQLFetch() 调用和其他辅助函数，以实现相同效果。
+- Microsoft 标库会将对`SQLExtendedFetch()`的调用映射到多次`SQLFetch()`调用和其他辅助函数，以实现相同效果。
 
-如果未将 TRACEREFRESHINTERVAL 关键字设置为正非零值，请确保在数据库启动之前（即发布 `db2start` 命令时）正确配置所有关键字。在数据库服务器运行时更改跟踪设置可能会产生不可预测的结果。例如，如果在服务器运行期间更改了 TRACEPATHNAME，那么在下次执行存储过程时，某些跟踪文件可能会写入新路径，而另一些可能被写入旧路径。
+如果未将`TRACEREFRESHINTERVAL`关键字设置为正非零值，请确保在数据库启动之前（即发布`db2start`命令时）正确配置所有关键字。在数据库服务器运行时更改跟踪设置可能会产生不可预测的结果。例如，如果在服务器运行期间更改了`TRACEPATHNAME`，那么在下次执行存储过程时，某些跟踪文件可能会写入新路径，而另一些可能被写入旧路径。
 
 ## 故障排除
 
@@ -23272,9 +22052,9 @@ ODBC 驱动管理器干预应用程序函数调用的原因包括：
 
 之前的章节讨论了调优数据库的各种技术。然而，许多技术可能非常耗时且需要持续修订。DB2 可以根据需求剧烈变化的服务器优化维护内存分配。当 STMM 运行时，它会自动感知数据服务器的负载并根据需要进行调优。STMM 还可以管理的对象包括：
 
-- 排序堆 (SHEAPRES_SHR)
-- 锁堆 (LOCKLIST 和 MAXLOCKS)
-- 程序缓存 (PCCACHE)
+- 排序堆 (`SHEAPRES_SHR`)
+- 锁堆 (`LOCKLIST` 和 `MAXLOCKS`)
+- 程序缓存 (`PCCACHE`)
 - 缓冲池
 
 这些堆构成了主要的共享内存工作集。STMM 的离线内存调优不需要数据库管理员 (DBA) 交互。在环境中，STMM 能够在极短的时间内获得最优参数。这意味着在大多数情况下，DB2 系统都可以被“专家级调优”。
@@ -23290,10 +22070,7 @@ STMM 的自调优内存算法在以下情况下特别有用：
 - 当缺乏经验的 DBA 被分配调优一个数据库且不了解 DB2 如何使用内存时。STMM 非常适用于缺乏经验的 DBA——那些对 DB2 内存模型不熟悉，或不熟悉数据服务器负载特征的人员。在服务器拥有大量可用内存的环境中，DBA 也可以从 STMM 中受益。
 - 当应用程序负载未知且无法确定内存需求时。DBA 经常会收到内存需求不明的新应用程序。由于 STMM 深度集成到 DB2 引擎中，它能够感知内存需求并快速调优配置。一旦开启，STMM 完全不需要 DBA 交互。
 - 当负载在白天变化，且没有时间对这些变化做出反应时。DB2 可以根据需求剧烈变化的服务器优化维护内存分配。STMM 持续重新评估内存需求——它可以在整个日常业务周期内整体地维护数据服务器的最佳性能水平。STMM 每小时可以更新内存分配高达 120 次，以确保 DB2 正在优化当前运行负载所需的内存。
-- 调优具有不同大小缓冲池的数据库。有时 DBA 
-
-
-
+- 调优具有不同大小缓冲池的数据库。有时 DBA
 
 # 第 14 章 监控与调优
 
@@ -23322,7 +22099,7 @@ STMM 对于在 Windows 或 AIX 上运行的多数据库或多实例环境也特�
 
 图 14–43 中大部分堆的内存是根据需要分配的，并从工作集中传递到这些堆。数据库堆的大小由配置参数控制。
 
-要跟踪数据库共享内存和内存工作集内部的内存分配，可以使用 `db2mtr` 工具（图 14-44）：
+要跟踪数据库共享内存和内存工作集内部的内存分配，可以使用`db2mtr`工具（图 14-44）：
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_990_1.png)
 
@@ -23336,29 +22113,29 @@ STMM 对于在 Windows 或 AIX 上运行的多数据库或多实例环境也特�
 - 类型（指示内存用途的标识符）
 - 分配池的代理（仅当内存池为私有时显示）
 
-`DB2MTRK` 命令的参数：
+`DB2MTRK`命令的参数：
 
-- -i — 显示实例内存
-- -d — 显示数据库级内存
-- -p — 显示私有内存
-- -m — 显示每个池的最大值
-- -w — 显示每个池的高水位值
-- -r interval count — 重复模式
+- `-i` — 显示实例内存
+- `-d` — 显示数据库级内存
+- `-p` — 显示私有内存
+- `-m` — 显示每个池的最大值
+- `-w` — 显示每个池的高水位值
+- `-r interval count` — 重复模式
 
-重复模式每隔“interval”秒继续报告内存情况。`count` 参数是可选的，如果指定，则表示命令应执行的次数。如果没有提供计数值，该工具将继续运行直到取消。
+重复模式每隔“interval”秒继续报告内存情况。`count`参数是可选的，如果指定，则表示命令应执行的次数。如果没有提供计数值，该工具将继续运行直到取消。
 
-- -v — 详细输出。
-- -h — 显示帮助屏幕。
+- `-v` — 详细输出。
+- `-h` — 显示帮助屏幕。
 
-如果你指定了 -h，则只显示帮助屏幕。不显示其他信息。
+如果你指定了`-h`，则只显示帮助屏幕。不显示其他信息。
 
-例如，`db2mtrk -d` 命令将显示当前数据库内存用法。在此示例中，只有 SAMPLE 数据库是活跃的：
+例如，`db2mtrk -d`命令将显示当前数据库内存用法。在此示例中，只有 SAMPLE 数据库是活跃的：
 
 正在跟踪内存：2007/04/14 15:40:51
 
 数据库内存：SAMPLE
 
-`db2mtrk` 工具显示了使用了多少堆内存，以及当前值、任何某时刻获得的最大值以及初始值。
+`db2mtrk`工具显示了使用了多少堆内存，以及当前值、任何某时刻获得的最大值以及初始值。
 
 # STMM 示例
 
@@ -23395,33 +22172,29 @@ STMM 提供了一个无需干预的调优环境，不需要 DBA 介入。STMM �
 
 STMM 分配或释放任何堆的内存总量限制在增加 50% 和减少 20%。这种阻尼形式控制了 STMM 运行时性能的剧波动。
 
-取决于 `DATABASE_MEMORY` 配置参数的值，STMM 可以以三种不同的模式运行：
+取决于`DATABASE_MEMORY`配置参数的值，STMM 可以以三种不同的模式运行：
 
-* DATABASE_MEMORY=AUTOMATIC
+* `DATABASE_MEMORY=AUTOMATIC`
 
 在此模式下，DB2 将决定为 DB2 数据内存区域分配多少内存，以及为操作系统留出多少内存。STMM 在“需要”的基础上从操作系统获取并将其返回内存。DB2 将尝试在服务器上保持一定量的空闲内存。
-
-
-
-
 
 # 自调优内存管理器
 
 始终如此。如果服务器上存在可用的空闲内存，只要 DB2 能找到合适的用途，它就会消耗更多内存。
 
-使用 `AUTOMATIC` 设置可以解决 DBA 在不知道该为数据库分配多少内存时所遇到的问题。
+使用`AUTOMATIC`设置可以解决 DBA 在不知道该为数据库分配多少内存时所遇到的问题。
 
 ## DB2 注意
 
-DATABASE_MEMORY=AUTOMATIC 模式仅支持 AIX 和 Windows 操作系统。如果你尝试在 Linux、HP-UX 或 Solaris 上将此参数设置为 AUTOMATIC，你将收到错误消息。
+`DATABASE_MEMORY=AUTOMATIC`模式仅支持 AIX 和 Windows 操作系统。如果你尝试在 Linux、HP-UX 或 Solaris 上将此参数设置为`AUTOMATIC`，你将收到错误消息。
 
-- DATABASE_MEMORY=x(4KB 页面)
+- `DATABASE_MEMORY=x`(4KB 页面)
 
-分配给 `DATABASE_MEMORY` 参数的值定义了 DB2 分配给共享内存数据库的最大内存量。在这种模式下，STMM 仍然动态支持 DB2 使用的内存堆，但内存集是固定的。DB2 将无法与同一台机器上的其他 DB2 数据服务器平衡内存使用。
+分配给`DATABASE_MEMORY`参数的值定义了 DB2 分配给共享内存数据库的最大内存量。在这种模式下，STMM 仍然动态支持 DB2 使用的内存堆，但内存集是固定的。DB2 将无法与同一台机器上的其他 DB2 数据服务器平衡内存使用。
 
-- DATABASE_MEMORY=COMPUTED
+- `DATABASE_MEMORY=COMPUTED`
 
-在 DB2 8 中，设置 `DATABASE_MEMORY=AUTOMATIC` 意味着 DB2 会汇总所有堆的内存分配，并将 `DATABASE_MEMORY` 设置为此计算值。在 DB2 9 中，DB2 8 中的 `AUTOMATIC` 设置已重命名为 `COMPUTED`。在 DB2 8 数据库迁移到 DB2 9 的过程中，`AUTOMATIC` 关键字将变为 `COMPUTED`。
+在 DB2 8 中，设置`DATABASE_MEMORY=AUTOMATIC`意味着 DB2 会汇总所有堆的内存分配，并将`DATABASE_MEMORY`设置为此计算值。在 DB2 9 中，DB2 8 中的`AUTOMATIC`设置已重命名为`COMPUTED`。在 DB2 8 数据库迁移到 DB2 9 的过程中，`AUTOMATIC`关键字将变为`COMPUTED`。
 
 图 14–46 展示了 STMM 支持的各种内存堆，包括多个缓冲区池。DB2 可以在任何时间以任何操作模式从这些堆中的任何一个传递内存到另一个堆。图中的箭头表示不同内存消费者之间潜在的内存移动。
 
@@ -23435,11 +22208,11 @@ DATABASE_MEMORY=AUTOMATIC 模式仅支持 AIX 和 Windows 操作系统。如果�
 
 在 DB2 中，默认所有缓冲区池都由 STMM 管理。注意，缓冲区池是数据库中唯一可以拥有多个实例的内存堆。DB2 利用这一点，因为它具有在缓冲区池之间交换内存的独特能力，即使它们使用不同的内存页大小。例如，如果 DB2 需要将内存从基于 8KB 的缓冲区池移动到基于 4KB 的缓冲区池，它将通过一次传输完成，并拆分为两个 4KB 页面。
 
-DB2 为 DBA 提供了细粒度的控制机制，用于指定哪些堆由 STMM 调优。`ALTER BUFFERPOOL` 可以指定你希望让 STMM 为你管理的缓冲区池，以及你想自己管理的缓冲区池。
+DB2 为 DBA 提供了细粒度的控制机制，用于指定哪些堆由 STMM 调优。`ALTER BUFFERPOOL`可以指定你希望让 STMM 为你管理的缓冲区池，以及你想自己管理的缓冲区池。
 
 ## 在 DB2 9 中使用 STMM
 
-在 DB2 9 中，STMM 能够管理的所有内存参数现在都有 `AUTOMATIC` 和 `MANUAL` 新选项，除了传统的指定静态值的能力外。默认情况下，启用 STMM 所需的所有配置参数都设置为 `ON`，相应的内存堆被设置为 `AUTOMATIC`（对于非分区的数据库）。
+在 DB2 9 中，STMM 能够管理的所有内存参数现在都有`AUTOMATIC`和`MANUAL`新选项，除了传统的指定静态值的能力外。默认情况下，启用 STMM 所需的所有配置参数都设置为`ON`，相应的内存堆被设置为`AUTOMATIC`（对于非分区的数据库）。
 
 如果数据库正在迁移到 DB2 9，或者正在为现有数据库启用 STMM，则需要采取以下步骤：
 
@@ -23449,9 +22222,9 @@ DB2 为 DBA 提供了细粒度的控制机制，用于指定哪些堆由 STMM �
 
 ## 开启 STMM
 
-为了开启 STMM，必须将 `SELF_TUNING_MEM` 参数设置为 `ON`。
+为了开启 STMM，必须将`SELF_TUNING_MEM`参数设置为`ON`。
 
-设置此参数的最简单方法是获取 `DATABASE CONFIGURATION FOR <DATABASE_name>` 命令。要更新参数，我们使用以下命令：
+设置此参数的最简单方法是获取`DATABASE CONFIGURATION FOR <DATABASE_name>`命令。要更新参数，我们使用以下命令：
 
 ```
 UPDATE DATABASE CONFIGURATION FOR <database_name>
@@ -23464,17 +22237,17 @@ USING SELF_TUNING_MEM ON
 
 图 14–47 启用 STMM
 
-`SELF_TUNING_MEM` 参数是动态的，因此你可以随时开启或关闭 STMM。
+`SELF_TUNING_MEM`参数是动态的，因此你可以随时开启或关闭 STMM。
 
-在 DB2 9 中，所有 STMM 参数均在数据库级别启用。然而，DB2 8 中 `SEAPHATHRES` 堆的配置位于实例级别。因此，取决于你设置此参数的方式，STMM 的行为会有所不同。
+在 DB2 9 中，所有 STMM 参数均在数据库级别启用。然而，DB2 8 中`SEAPHATHRES`堆的配置位于实例级别。因此，取决于你设置此参数的方式，STMM 的行为会有所不同。
 
-- 如果 `SEAPHATHRES` 大于 0，DB2 将使用 DB2 8.2 的排序内存模式，即某些内存消费者将使用私有内存，而另一些将使用共享内存。如果你设置 `SEAPHATHRES` 大于 0，STMM 将无法调优该堆。
+- 如果`SEAPHATHRES`大于 0，DB2 将使用 DB2 8.2 的排序内存模式，即某些内存消费者将使用私有内存，而另一些将使用共享内存。如果你设置`SEAPHATHRES`大于 0，STMM 将无法调优该堆。
 
 # 第14 章监控与调优
 
-- 如果 `SHEAPTHRES=0`，则使用新的 DB2 9 内存模型。这是所有新实例的默认设置。使用此内存模型，所有排序内存消费者将始终使用共享内存。
+- 如果`SHEAPTHRES=0`，则使用新的 DB2 9 内存模型。这是所有新实例的默认设置。使用此内存模型，所有排序内存消费者将始终使用共享内存。
 
-`SHEAPTHRES` 数据库管理器配置参数不是动态的，更改其设置需要你重启数据库实例。
+`SHEAPTHRES`数据库管理器配置参数不是动态的，更改其设置需要你重启数据库实例。
 
 > DB2 注意
 
@@ -23482,22 +22255,22 @@ USING SELF_TUNING_MEM ON
 
 ## 定义可用内存量
 
-`DATABASE_MEMORY` 配置参数用于定义适用于 STMM 的内存量。这可以在控制中心或通过命令行设置：
+`DATABASE_MEMORY`配置参数用于定义适用于 STMM 的内存量。这可以在控制中心或通过命令行设置：
 
 ```
 UPDATE DATABASE CONFIGURATION FOR <database_name>
 USING DATABASE_MEMORY=AUTOMATIC
 ```
 
-如果你设置 `DATABASE_MEMORY=AUTOMATIC`，STMM 将管理内存。如果你设置 `DATABASE_MEMORY=# OF 4KB pages`，DB2 将为共享内存分配固定数量的内存。
+如果你设置`DATABASE_MEMORY=AUTOMATIC`，STMM 将管理内存。如果你设置`DATABASE_MEMORY=# OF 4KB pages`，DB2 将为共享内存分配固定数量的内存。
 
 ## 配置 STMM 支持的每个堆
 
-受支持的内存参数默认都设置为 `AUTOMATIC`。如果你不希望 STMM 管理某些堆，应将值设置为 `MANUAL`。`GET DATABASE CONFIGURATION` 命令将显示对象的实际设置而非 `MANUAL` 关键字。
+受支持的内存参数默认都设置为`AUTOMATIC`。如果你不希望 STMM 管理某些堆，应将值设置为`MANUAL`。`GET DATABASE CONFIGURATION`命令将显示对象的实际设置而非`MANUAL`关键字。
 
 # 自调优内存管理器
 
-要为 STMM 启用缓冲区池，你需要在 `SIZE` 参数中使用 `AUTOMATIC` 设置。你可以创建由 STMM 管理的缓冲区池，也可以修改现有的池。例如，你可以这样修改 `IBMDEFAULTBP` 缓冲区池以便 STMM 管理其内存：
+要为 STMM 启用缓冲区池，你需要在`SIZE`参数中使用`AUTOMATIC`设置。你可以创建由 STMM 管理的缓冲区池，也可以修改现有的池。例如，你可以这样修改`IBMDEFAULTBP`缓冲区池以便 STMM 管理其内存：
 
 ```
 ALTER BUFFERPOOL IBMDEFAULTBP SIZE AUTOMATIC
@@ -23509,6 +22282,8 @@ ALTER BUFFERPOOL IBMDEFAULTBP SIZE AUTOMATIC
 CREATE BUFFERPOOL <bufferpool_name> SIZE AUTOMATIC
 ```
 
+
+
 可以使用 `IMMEDIATE` 或 `DEFERRED` 关键字为 STMM 启用缓冲区池。如果你使用 `IMMEDIATE` 关键字，请求将立即执行，而 `DEFERRED` 将延迟到下次重启数据库。
 
 ## 关闭 STMM
@@ -23519,15 +22294,9 @@ CREATE BUFFERPOOL <bufferpool_name> SIZE AUTOMATIC
 
 此参数是动态的，因此当你启动此更改时效果会立即生效。当通过这种方法禁用 STMM 时，所有 STMM 的设置都保留在系统中。设置 `SELF_TUNING_MEM=ON` 将根据之前的配置启用 STMM。
 
+- 将堆大小设置为 `MANUAL`
 
-
-
-
-# 第 14 章 监控与调优
-
--   将堆大小设置为 MANUAL
-
-任何 STMM 支持的堆参数都可以设置为 MANUAL 或特定的数值。这将导致 STMM 不再对该堆进行调优。在大多数无法动态禁用堆的更改中，它将执行延迟更改，且针对 <DATABASE_NAME> 的 `GET DATABASE CONFIGURATION` 输出将告知您待处理的更改。
+任何 STMM 支持的堆参数都可以设置为 `MANUAL` 或特定的数值。这将导致 STMM 不再对该堆进行调优。在大多数无法动态禁用堆的更改中，它将执行延迟更改，且针对 `<DATABASE_NAME>` 的 `GET DATABASE CONFIGURATION` 输出将告知您待处理的更改。
 
 ## 监控 STMM
 
@@ -23541,39 +22310,39 @@ CREATE BUFFERPOOL <bufferpool_name> SIZE AUTOMATIC
 | 数据库字符集 | | 1252 | |
 | 数据库国家/地区代码 | | IBM-1252 | |
 | 数据库排序序列 | | 1 | |
-| 交替排序 | (ALT_COLLATE) | UNIQUE | |
+| 交替排序 | (`ALT_COLLATE`) | `UNIQUE` | |
 | 交替序列的页大小 | | 4096 | 4096 |
-| 动态 SQL 查询管理 | (DYN_QUERY_MTGT) | DISABLE | DISABLE |
-| 此数据库的发现支持 | (DISCOVER_DB) | ENABLE | ENABLE |
+| 动态 SQL 查询管理 | (`DYN_QUERY_MTGT`) | `DISABLE` | `DISABLE` |
+| 此数据库的发现支持 | (`DISCOVER_DB`) | `ENABLE` | `ENABLE` |
 | 限制访问 | | | |
-| 默认优化类 | (DEFAULT_OPTY) | NO | 5 |
+| 默认优化类 | (`DEFAULT_OPTY`) | `NO` | 5 |
 | 并行度 | | 1 | 1 |
-| 持续直到发生算术异常 | (DEFAULT_SOLTHMANN) | NO | | |
-| 默认刷新年龄 | (DEFAULT_REFRESH_AGE) | 0 | NO |
-| 优化的默认维护表类型 (DB_MTTB_TYPES) | | SYSTEM | 10 |
-| 保留的频繁值数量 | (NUM_FREQUALS) | 10 | SYSTEM |
-| 保留的数量数量 | (NUM_QUANTITIES) | 20 | 20 |
+| 持续直到发生算术异常 | (`DEFAULT_SOLTHMANN`) | `NO` | |
+| 默认刷新年龄 | (`DEFAULT_REFRESH_AGE`) | 0 | `NO` |
+| 优化的默认维护表类型 (`DB_MTTB_TYPES`) | | `SYSTEM` | 10 |
+| 保留的频繁值数量 | (`NUM_FREQUALS`) | 10 | `SYSTEM` |
+| 保留的数量数量 | (`NUM_QUANTITIES`) | 20 | 20 |
 | 待处理备份 | | | |
-| 数据库一致性 | | YES | |
-| 待处理回滚向前 | | NO | |
-| 待处理恢复 | | NO | |
-| 多页文件分配 | | YES | |
+| 数据库一致性 | | `YES` | |
+| 待处理回滚向前 | | `NO` | |
+| 待处理恢复 | | `NO` | |
+| 多页文件分配 | | `YES` | |
 | 恢复状态日志保留 | | | |
-| 用于记录的用户汇出程序 | | NO | |
+| 用于记录的用户汇出程序 | | `NO` | |
 | 自调优内存 | | | |
-| 统计共享内存大小 (4KB) | (DATABASE_MEMORY) | ON (Active) | ON AUTO(6332) |
-| 数据库内存阈值 | (DB_MEM_THRES) | AUTO(6332) | 10 |
-| 锁列表最大存储 (4KB) | (LOCKLIST) | AUTO(14701) | AUTO(14701) |
-| 每个应用程序的锁 own | (MAXLOCKS) | AUTO(98) | AUTO(98) |
-| 程序包缓存大小 (4KB) | (CACHE_SIZE) | AUTO(77) | AUTO(77) |
-| 共享排序的排序堆 (4KB) | (SHEATHRES_SR) | AUTO(269) | AUTO(269) |
-| 排序堆 (4KB) | (SORTHEAP) | AUTO(53) | AUTO(53) |
+| 统计共享内存大小 (4KB) | (`DATABASE_MEMORY`) | `ON (Active)` | `ON AUTO(6332)` |
+| 数据库内存阈值 | (`DB_MEM_THRES`) | `AUTO(6332)` | 10 |
+| 锁列表最大存储 (4KB) | (`LOCKLIST`) | `AUTO(14701)` | `AUTO(14701)` |
+| 每个应用程序的锁 own | (`MAXLOCKS`) | `AUTO(98)` | `AUTO(98)` |
+| 程序包缓存大小 (4KB) | (`CACHE_SIZE`) | `AUTO(77)` | `AUTO(77)` |
+| 共享排序的排序堆 (4KB) | (`SHEATHRES_SR`) | `AUTO(269)` | `AUTO(269)` |
+| 排序堆 (4KB) | (`SORTHEAP`) | `AUTO(53)` | `AUTO(53)` |
 
 图 14–48 STMM 详情
 
-## 摘要 973
+## 摘要
 
-除了 DB2.LOG 配置中找到的信息外，STMM 还会将诊断信息放在 DB2DIAG.LOG 文件和特殊的 STMM.#_LOG 文件中。STMM 日志文件在每个间隔更新一次，包含诊断信息、配置更新、堆分配和其他信息。如果数据库崩溃或关闭，STMM 知道将使用上次使用的内存配置设置启动 DB2。
+除了 `DB2.LOG` 配置中找到的信息外，STMM 还会将诊断信息放在 `DB2DIAG.LOG` 文件和特殊的 `STMM.#_LOG` 文件中。STMM 日志文件在每个间隔更新一次，包含诊断信息、配置更新、堆分配和其他信息。如果数据库崩溃或关闭，STMM 知道将使用上次使用的内存配置设置启动 DB2。
 
 STMM 日志位于 Windows 下的 `sqllib\<instance_name>\stmml` 目录，位于 UNIX 和 Linux 下的 `sqllib/db2/db2dump/stmml` 目录。STMM 日志文件可能包含大量信息，因此 DB2 拥有一种自修剪算法，防止同时存在五个 10MB 的 STMM 日志文件。当达到此阈值时，DB2 将删除链中的第一个日志文件并创建一个新文件进行额外的记录。
 
@@ -23622,11 +22391,7 @@ DB2 允许通过多种编程语言和第三方应用程序开发工具进行开�
 
 FORTRAN 和 REXX 支持自 DB2 通用数据库 5.2 版本起已稳定。
 
-
-
-
-
-## DB2 应用开发环境 979
+## DB2 应用开发环境
 
 由于每个编译器或开发工具都有不同的属性，你可能需要对其其进行配置以供 DB2 使用。设置开发工具的说明以及支持的编译器列表可以在《DB2 应用开发指南：DB2 应用程序开发入门》中找到。
 
@@ -23636,27 +22401,25 @@ FORTRAN 和 REXX 支持自 DB2 通用数据库 5.2 版本起已稳定。
 
 大多数情况下，开发用途的数据库位置是根据便利性选择的，并且可能不是其最终位置。这是因为数据服务器的位置和平台对客户端的开发过程影响很小。例如，如果数据库从 Windows XP 上的 DB2 开发平台移动到 AIX 上的 DB2 生产平台，应用程序不需要任何更改。但是，你可能需要将应用程序绑定（bind）到新数据库。我们将详细讨论绑定过程。
 
-DB2 提供了一个运行提供的示例程序所需的示例数据库。可以使用 `db2sample` 命令或通过 DB2 文件夹中的“第一步”（First Steps）工具创建示例数据库。你可以将示例数据库用于开发目的，也可以选择创建一个自定义数据库。可以使用控制中心（Control Center）、命令行处理器（CLP）或脚本创建数据库。数据库只能由具有 SYSADM 或 SYSCTL 权限的用户创建。在创建数据库后，创建数据库的用户将成为 DBADM（默认情况下）。该用户可以向其他用户授予权限，这些用户可以创建数据库对象并填充数据以供开发使用。
+DB2 提供了一个运行提供的示例程序所需的示例数据库。可以使用 `db2sample` 命令或通过 DB2 文件夹中的“第一步”（First Steps）工具创建示例数据库。你可以将示例数据库用于开发目的，也可以选择创建一个自定义数据库。可以使用控制中心（Control Center）、命令行处理器（CLP）或脚本创建数据库。数据库只能由具有 `SYSADM` 或 `SYSCTL` 权限的用户创建。在创建数据库后，创建数据库的用户将成为 `DBADM`（默认情况下）。该用户可以向其他用户授予权限，这些用户可以创建数据库对象并填充数据以供开发使用。
 
 ## DB2 客户端
 
-DB2 客户端提供了 DB2 应用程序访问数据服务器资源所需的运行时环境。例如，DB2 客户端包含与远程服务器通信的通信基础设施。你还可以使用 DB2 客户端执行 SQL、绑定包、使用数据处理工具（IMPORT、LOAD、EXPORT 等）、编目录远程节点和数据库等。事实上，DBA 执行的大多数数据库管理任务通常是在 DB2 客户端工作站上完成的。
+DB2 客户端提供了 DB2 应用程序访问数据服务器资源所需的运行时环境。例如，DB2 客户端包含与远程服务器通信的通信基础设施。你还可以使用 DB2 客户端执行 SQL、绑定包、使用数据处理工具（`IMPORT`、`LOAD`、`EXPORT` 等）、编目录远程节点和数据库等。事实上，DBA 执行的大多数数据库管理任务通常是在 DB2 客户端工作站上完成的。
 
 有两种不同类型的客户端：
 
-- **DB2 运行时客户端（DB2 Runtime Client）** — 提供最少的客户端占用空间（约 20–30 MB），以支持与 DB2 9 数据服务器的连接（例外是你选择支持通过 API 驱动程序进行通信，这将在本节稍后部分介绍）。当你安装 DB2 运行时客户端时，你安装了一组支持 DB2 9 支持的所有编程语言的驱动程序，其中一些包括：ADO.NET、ADO、OLE DB、ODBC、JDBC、SQLJ 等。
+- **DB2 运行时客户端（DB2 Runtime Client）** — 提供最少的客户端占用空间（约 20–30 MB），以支持与 DB2 9 数据服务器的连接（例外是你选择支持通过 API 驱动程序进行通信，这将在本节稍后部分介绍）。当你安装 DB2 运行时客户端时，你安装了一组支持 DB2 9 支持的所有编程语言的驱动程序，其中一些包括：`ADO.NET`、`ADO`、`OLE DB`、`ODBC`、`JDBC`、`SQLJ` 等。
 
 - **DB2 客户端（DB2 Client）** — 包含 DB2 运行时客户端中的所有功能，外加用于客户端-服务器配置和数据库管理的工具，以及可加速应用程序开发的应用程序开发文件（如头文件、示例程序等）。例如，此客户端包含了配置助手（Configuration Assistant），它提供了一个用于客户端管理和连接的图形化工具。DB2 客户端的占用空间与你选择安装的组件直接相关，取决于你选择的选项，可以在 200 MB — 800 MB 之间。安装 DB2 客户端的过程与 DB2 数据服务器非常相似。
 
-对于希望以最小磁盘占用空间建立客户端工作站与 DB2 服务器之间连接的独立软件供应商（ISV）和企业，他们可以选择性使用独立驱动程序。可以使用驱动程序使用特定的 API 设置连接；例如，有一个用于 JDBC/SQLJ 连接的驱动程序，另一个用于 ODBC/CLI 连接的驱动程序。
+对于希望以最小磁盘占用空间建立客户端工作站与 DB2 服务器之间连接的独立软件供应商（ISV）和企业，他们可以选择性使用独立驱动程序。可以使用驱动程序使用特定的 API 设置连接；例如，有一个用于 `JDBC/SQLJ` 连接的驱动程序，另一个用于 `ODBC/CLI` 连接的驱动程序。
 
 驱动程序有时比 DB2 客户端更受欢迎，因为它们的占用空间很小（例如，IBM JDBC 和 SQLJ 驱动程序约为 2 MB），因此很容易嵌入应用程序中。它们还附带了此目的免版发行许可。
 
 DB2 运行时客户端与驱动程序的主要区别在于，DB2 运行时客户端支持 DB2 9 支持的所有连接 API，而驱动程序仅支持其创建时针对的 API。
 
-例如，在本书编写时，还没有针对 .NET 应用程序的特定驱动程序，因此为了将使用 ADO.NET API 编写的应用程序连接到 DB2 数据服务器，你需要安装一个 DB2 客户端。
-
-## DB2 应用开发环境 981
+例如，在本书编写时，还没有针对 .NET 应用程序的特定驱动程序，因此为了将使用 `ADO.NET` API 编写的应用程序连接到 DB2 数据服务器，你需要安装一个 DB2 客户端。
 
 DB2 9 中可用的驱动程序有：
 
@@ -23710,13 +22473,9 @@ DB2 应用程序开发人员可以使用许多编程方法。这些包括：
 
 为什么会有这么多编程方法？每种方法都有其独特的优势。我们将检查每种方法并提供其优缺点的示例。
 
+## DB2 接口
 
-
-
-
-# DB2 接口 983
-
-## 嵌入式 SQL
+### 嵌入式 SQL
 
 SQL（结构查询语言）是用于访问和操作 DB2 数据库数据的数据库接口语言。你可以将 SQL 语句嵌入应用程序中，使其能够执行 SQL 支持的任何任务，例如检索或存储数据。
 
@@ -23724,7 +22483,7 @@ SQL（结构查询语言）是用于访问和操作 DB2 数据库数据的数据
 
 嵌入式 SQL 语句有两种类型：静态和动态。接下来的章节将对它们进行讨论。
 
-## 静态嵌入式 SQL
+### 静态嵌入式 SQL
 
 静态 SQL 语句是指在运行应用程序之前就已经确定 SQL 语句类型以及该语句访问的数据库对象（如列名）的语句。唯一未知的是语句正在搜索或修改的数据。当静态嵌入式应用程序模块绑定到数据库时，其被访问的数据库对象必须已经存在。
 
@@ -23733,8 +22492,6 @@ SQL（结构查询语言）是用于访问和操作 DB2 数据库数据的数据
 在数据库中存储准备就绪执行的数据库逻辑具有许多性能优势。静态嵌入式 SQL 程序在所有 DB2 编程方法中运行时开销最小，并且以数据服务器可以理解的包的形式执行包。然而，正如你可能猜的那样，这种应用程序开发方法并不是灵活灵活，因为终端用户执行的每条 SQL 语句在开发过程中都需要被感知和理解。
 
 事务被分组为包并存储在数据库中。SQL 语句嵌入在编程模块中。包含嵌入式 SQL 语句的模块必须经过预编译。由预编译器生成的修改后的编程模块随后被编译并链接以创建应用程序。在预编译阶段，会对 SQL 语句进行分析并创建包。图 15–1 展示了这些不同的步骤。
-
-# 984 第15 章 开发概述
 
 我们将在下一章检查创建静态嵌入式 DB2 应用程序的所有步骤。
 
@@ -23746,17 +22503,17 @@ DB2 的静态应用程序可以使用 C/C++、Java、COBOL 或 FORTRAN 编写。
 
 图 15–1 在应用程序开发期间准备的 SQL 语句
 
-### 优点
+#### 优点
 
 - 即取即用的包可能对更快的执行进行优化
 - 使用 COBOL、C/C++ 或 FORTRAN 的编程技能
 
-### 缺点
+#### 缺点
 
 - 必须在开发期间定义 SQL 语句
 - 需要预编译
 
-## 动态嵌入式 SQL
+### 动态嵌入式 SQL
 
 动态 SQL 语句是你的应用程序在运行时构建并执行的语句。提示终端用户输入 SQL 语句关键部分（例如要搜索的名称和列）的交互式应用程序是动态 SQL 的良好示例。应用程序在运行期间构建 SQL 语句并提交该语句进行处理。
 
@@ -23766,7 +22523,7 @@ DB2 的静态应用程序可以使用 C/C++、Java、COBOL 或 FORTRAN 编写。
 
 嵌入式静态 SQL 编程模块的数据访问方法将在绑定阶段使用绑定时可用的数据库统计进行确定。嵌入式动态 SQL 编程模块的数据访问方法将在语句准备期间确定，并将利用查询执行时可用的数据库统计。
 
-因此，没有必要在收集数据库统计信息后将动态嵌入式 SQL 模块重新构建到数据库。数据库统计是在发布 RUNSTATS 命令时收集的。结果存储在系统目录表中。当然，选择访问路径存在查询时开销，因为每条动态准备的 SQL 语句都必须经过优化。
+因此，没有必要在收集数据库统计信息后将动态嵌入式 SQL 模块重新构建到数据库。数据库统计是在发布 `RUNSTATS` 命令时收集的。结果存储在系统目录表中。当然，选择访问路径存在查询时开销，因为每条动态准备的 SQL 语句都必须经过优化。
 
 图 15–2 中显示了嵌入式动态 SQL 程序模块的开发步骤。使用嵌入式动态 SQL 语句并没有消除开发的预编译阶段，但它确实提供了动态 SQL 语句的执行。
 
@@ -23774,21 +22531,19 @@ DB2 的静态应用程序可以使用 C/C++、Java、COBOL 或 FORTRAN 编写。
 
 图 15–2 在应用程序执行期间准备的 SQL 语句
 
-# 第15 章 开发概述
-
 通常，动态 SQL 语句非常适用于运行在快速变化的数据库上的应用程序，且需要在运行时指定事务。交互式查询界面是此类应用程序的良好示例。
 
-### 优点
+#### 优点
 
 - 每条 SQL 语句都使用当前的数据库统计信息。
 - 数据库对象不需要在运行时存在。
 - 它们比静态 SQL 语句更灵活。
 
-### 缺点
+#### 缺点
 
 - 由于 SQL 语句在运行时优化，它们的执行可能需要更多时间。
 
-## 级接口和 ODBC
+### 级接口和 ODBC
 
 DB2 调用接口 (CLI) 是你的 C 和 C++ 应用程序可以使用其访问 DB2 数据库的编程接口。CLI 基于微软开放数据库连接 (ODBC) 规范和 X/Open 调用接口标准。由于 DB2 CLI 基于行业标准，熟悉数据库接口的应用程序开发人员可能受益于更短的学习曲线。许多 ODBC 应用程序无需任何修改即可用于 DB2。同样，CLI 应用程序很容易发布到其他数据服务器。
 
@@ -23806,7 +22561,7 @@ CLI 开发环境如图 15–3 所示。
 
 图 15–3 使用 CLI 或 ODBC 的应用程序开发
 
-### 优点
+#### 优点
 
 - 不需要预编译器
 - 不需要向数据库绑定应用程序包
@@ -23815,26 +22570,22 @@ CLI 开发环境如图 15–3 所示。
 - 可以使用滚动和可更新的光标
 - 于迁移到其他数据库平台
 
-### 缺点
+#### 缺点
 
 - 需要具备 C/C++ 编程技能
 - 动态绑定可能导致查询执行变慢
 
-
-
-
-
-# Java 接口 (JDBC 和 SQLJ)
+### Java 接口 (JDBC 和 SQLJ)
 
 DB2 支持许多不同类型的 Java 程序，包括 applets、servlets 和高级的 DB2 服务端功能。访问和管理 DB2 数据库的 Java 程序可以使用 Java 数据库连接 (JDBC) API 和 Java 嵌入式 SQL (SQLJ) 标准。这两种与供应商无关的 SQL 接口都通过标准化的 Java 方法为您的应用程序提供数据访问。无论使用哪种接口，使用 Java 的最大优势是其“编写一次，到处运行”的能力，这使得同一个 Java 程序可以在异构环境中无需重新编译即可在各种操作系统平台上进行分发和执行。由于 DB2 支持的两个 Java 数据库接口都是行业开放标准，您还额外获得了一个优势，可以使用您的 Java 程序连接不同的数据库供应商。
 
 对于 JDBC 程序，您的 Java 代码将动态 SQL 传递给随 DB2 提供的 JDBC 驱动程序。DB2 通过 JDBC API 执行 SQL 语句，并将结果传回给您的 Java 代码。JDBC 与 DB2 CLI 类似，JDBC 使用动态 SQL，且您不需要重新编译或绑定 JDBC 程序。
 
-在 SQLJ 支持下，您可以构建并运行包含静态嵌入 SQL 语句的 SQL 程序。由于您的 SQLJ 程序包含静态 SQL，您需要在重新编译和绑定之前执行某些步骤。在编译 SQL 源文件之前，您必须使用 SQL 翻译器对其进行翻译以创建原生 Java 源代码。翻译后，您需要使用 DB2 for Java 配置自定义程序 (db2sqlcustomize) 创建 DB2 包。SQLJ 内部的机制依赖 DB2 来建立连接等许多任务。
+在 SQLJ 支持下，您可以构建并运行包含静态嵌入 SQL 语句的 SQL 程序。由于您的 SQLJ 程序包含静态 SQL，您需要在重新编译和绑定之前执行某些步骤。在编译 SQL 源文件之前，您必须使用 SQL 翻译器对其进行翻译以创建原生 Java 源代码。翻译后，您需要使用 DB2 for Java 配置自定义程序 (`db2sqlcustomize`) 创建 DB2 包。SQLJ 内部的机制依赖 DB2 来建立连接等许多任务。
 
 为您的 Java 程序选择 SQLJ 还是 JDBC 涉及到其他语言中静态与动态嵌入 SQL 的许多考虑因素和权衡（SQLJ 可能更有利，因为静态 SQL 速度更快）。包含嵌入 SQL 的 Java 程序也可以对 SQL 语句进行静态分析，用于进行语法检查、类型检查和架构验证。另一方面，并非所有要访问的数据对象在执行前都是未知的，这需要 JDBC 来处理动态 SQL。Java 程序员可以轻松地通过包含静态和动态结构来创建一个强大的应用程序。SQLJ 与 JDBC 共享环境和状态信息。
 
-## 表 15–1 JDBC 和 SQLJ 的区别
+#### 表 15–1 JDBC 和 SQLJ 的区别
 
 | JDBC | SQLJ |
 | :--- | :--- |
@@ -23842,7 +22593,7 @@ DB2 支持许多不同类型的 Java 程序，包括 applets、servlets 和高�
 | 动态 SQL | 静态 SQL |
 | 不需要预编译 | 翻译 SQLJ 并创建包 |
 
-## 优势
+#### 优势
 
 为 DB2 编写 Java 程序提供：
 
@@ -23851,12 +22602,12 @@ DB2 支持许多不同类型的 Java 程序，包括 applets、servlets 和高�
 - Java 类型内置了 NULL 状态表示
 - 面对象的应用程序开发和数据访问模型
 
-## 缺点
+#### 缺点
 
 - 必须具备 Java 编程技能
 - 由于 Java 是解释执行的，速度可能较慢
 
-## 原生 DB2 API
+### 原生 DB2 API
 
 DB2 提供了原生 DB2 编程接口 (API)，可用于直接操作 DB2 实例和数据库。它们也被称为管理员或数据库管理器 API。由于没有等效 SQL 语句来执行某些操作，某些任务必须使用这些 API 进行编码。
 
@@ -23864,15 +22615,13 @@ DB2 API 以多种编程语言提供，包括 C/C++、COBOL 和 FORTRAN。应用�
 
 原生 DB2 API 不直接用于单独编写 SQL 语句。例如，`sqllaintp()` 函数通常用于检索 DB2 错误消息的完整文本，因为嵌入式 SQL 应用程序随后可以向用户显示该错误消息。DB2 API 按功能类别分组（见表 15–2）。有关使用这些 API 的详细信息，请参 *DB2 API Reference*。
 
-## 表 15–2 原生（管理）DB2 API 类型
+#### 表 15–2 原生（管理）DB2 API 类型
 
 | 备份/恢复 | 数据库监控 |
 | :--- | :--- |
 | 数据库控制 | 操作实用程序 |
 
-## 第 15 章应用程序开发概述
-
-## 表 15–2 原生（管理）DB2 API 类型
+#### 表 15–2 原生（管理）DB2 API 类型
 
 | 数据库管理器控制 | 数据工具 |
 | :--- | :--- |
@@ -23881,12 +22630,12 @@ DB2 API 以多种编程语言提供，包括 C/C++、COBOL 和 FORTRAN。应用�
 | 网络支持 | 远程服务器工具 |
 | 数据库配置 | 表空间管理 |
 
-## 优势
+#### 优势
 
 - 启用 DB2 的高级功能（例如表空间管理）
 - 不需要预编译或绑定
 
-## 缺点
+#### 缺点
 
 - 需要宿主机语言编译器/链接器
 - 实现可能更困难
@@ -23894,9 +22643,9 @@ DB2 API 以多种编程语言提供，包括 C/C++、COBOL 和 FORTRAN。应用�
 - 不易于迁移到其他数据服务器
 
 > **DB2 注意**
-> DB2 引入了一个新的存储过程 ADMIN_CMD，支持使用 SQL call 语句执行许多 DB2 实用程序。这将减少对许多低级 API 用的需求。对于 Java 开发者来说，使用 SQL CALL 语句特别有用，因为他们不需要使用 JNI (Java Native Interface) 来调用这些 API 函数。
+> DB2 引入了一个新的存储过程 `ADMIN_CMD`，支持使用 SQL call 语句执行许多 DB2 实用程序。这将减少对许多低级 API 用的需求。对于 Java 开发者来说，使用 SQL CALL 语句特别有用，因为他们不需要使用 JNI (Java Native Interface) 来调用这些 API 函数。
 
-## Microsoft 数据对象 (DAO, RDO, ADO, OLE-DB)
+### Microsoft 数据对象 (DAO, RDO, ADO, OLE-DB)
 
 出于历史考虑，此处包含了您支持的应用程序中可能仍使用 Microsoft Visual Basic 或 Microsoft Visual C++ 编写，并符合数据访问对象 (DAO) 和远程数据对象 (RDO) 规范。这些应用程序使用 DB2 的 ODBC (CLI) 驱动程序与 DB2 接口（图 15–4）。DB2 还通过 OLE:ODBC 桥或原生 LE DB 驱动支持 ActiveX 数据对象 (ADO) 应用程序。
 
@@ -23906,17 +22655,17 @@ ActiveX 数据对象 (ADO) 允许您编写通过 OLE DB 提供程序访问数据
 
 图 15–4 使用 Microsoft 数据对象的应用程序
 
-## 优势
+#### 优势
 
 - 提供独立于数据源的标准模型
 
-## 缺点
+#### 缺点
 
 - 数据对象仅适用于 Microsoft Windows
 
-## DB2 .NET Provider 支持
+### DB2 .NET Provider 支持
 
-DB2 自带了一个托管提供程序 IBM.DATA.DB2，它专为配合 DB2 服务器设计。这种原生托管程序相比 OLE DB 和 ODBC 桥可以提供显著的性能提升。
+DB2 自带了一个托管提供程序 `IBM.DATA.DB2`，它专为配合 DB2 服务器设计。这种原生托管程序相比 OLE DB 和 ODBC 桥可以提供显著的性能提升。
 
 需要使用 .NET 功能访问 DB2 的用户有三种：
 
@@ -23924,7 +22673,7 @@ DB2 自带了一个托管提供程序 IBM.DATA.DB2，它专为配合 DB2 服务�
 ODBC .NET Provider 使用 DB2 CLI 对 DB2 源进行 ODBC 调用。因此，ODBC .NET Provider 支持的连接字符串与 DB2 CLI 相同。此外，ODBC .NET Provider 与 DB2 CLI 具有相同的限制。
 
 - OLE DB .NET Provider
-OLE DB .NET Provider 使用 IBM DB2 OLE 驱动程序，在 ConnectionString 对象中被称为 IBMADB。OLE DB .NET Provider 支持的连接字符串与 IBM DB2 OLE 提供程序相同。此外，OLE DB .NET Provider 与 IBM DB2 OLE 提供程序具有相同的限制。
+OLE DB .NET Provider 使用 IBM DB2 OLE 驱动程序，在 `ConnectionString` 对象中被称为 `IBMADB`。OLE DB .NET Provider 支持的连接字符串与 IBM DB2 OLE 提供程序相同。此外，OLE DB .NET Provider 与 IBM DB2 OLE 提供程序具有相同的限制。
 
 - DB2 .NET Provider
 DB2 .NET Provider 扩展了 DB2 对 ADO.net 接口的支持。DB2 .NET Provider 提供高性能、安全的 DB2 数据访问。DB2 .NET Provider 允许您的 .NET 应用程序访问以下数据库管理系统：
@@ -23936,53 +22685,43 @@ DB2 .NET Provider 扩展了 DB2 对 ADO.net 接口的支持。DB2 .NET Provider 
 
 要开发和运行使用 DB2 .NET Provider 的应用程序，需要 .NET Framework 2.0 或 1.1。除了 DB2 .NET Provider 之外，IBM Database Development Add-In 允许您在 Visual Studio 2005 中快速方便地为 DB2 数据库开发 .NET 应用程序。
 
-## 其他接口和工具
+### 其他接口和工具
 
-大量的第三方应用程序构建工具和终端用户应用程序使用上述的一种或多种编程方法与 DB2 接口
-
-
-
-
-
-# DB2 接口 993
-
-此前（图 15–5）。然而，这些许多工具和应用程序提供了自己的前端数据访问方法，使得数据库的底层接口对应用程序开发人员终端用户是透明的。这为使用高级编程语言开发应用程序提供了一种更简单的替代方案。
+大量的第三方应用程序构建工具和终端用户应用程序使用上述的一种或多种编程方法与 DB2 接口（图 15–5）。然而，这些许多工具和应用程序提供了自己的前端数据访问方法，使得数据库的底层接口对应用程序开发人员终端用户是透明的。这为使用高级编程语言开发应用程序提供了一种更简单的替代方案。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1020_0.png)
 
 图 15–5 使用其他接口进行开发
 
-# ODBC 工具
+### ODBC 工具
 
 某些情况下你可能需要执行基本任务，例如查询数据库、开发报告和分析数据。ODBC 用户工具（如 Lotus Notes 和 Microsoft Access）可以帮助创建执行这些任务的应用程序。通过 Lotus 产品，你可以使用 LotusScript 开发应用程序，这是一种功能完备面向对象的编程语言，带有大量的对象、事件、方法和属性，并带有内置的程序编辑器。
 
-# Perl DBI
+### Perl DBI
 
 Perl DBI 是为 Perl 语言提供数据库访问的应用程序接口。与 ODBC 类似，Perl DBI 提供了一个独立于实际使用的数据库的标准化数据库接口。DB2 通过 `DBI::DB2` 驱动支持 Perl Database Interface (DBI) 规范的数据访问。
 
-# 第 15 章 应用程序开发概述
-
 该驱动程序与 DBI 配合工作，通过 CLI 访问 DB2。在 UNIX 和 Windows 平台上 Perl 环境进行数据库测试和维护脚本特别有用。Perl 应用程序也常用于编写 Web 的 CGI 脚本。
 
-# PHP
+### PHP
 
 PHP 可以作为从 Web 应用程序访问 DB2 的方法。PHP 是一种服务端、嵌入 HTML 的、跨平台的脚本语言。它支持使用 Unified-ODBC 方法访问 DB2，用户级 PHP 通过 ODBC 调用与 DB2 通信。与标准 ODBC 不同，使用 Unified-ODBC 方法通信是直接到 DB2 CLI 层，而不是通过 DB2 层。
 
 本节中提到的每种第三方产品都有其自身的优缺点。下面描述了一些常用功能。
 
-# 优点
+#### 优点
 
 - 使用简单或图形化界面快速访问数据
 - 开发相对简单的应用程序更快方法
 - 开发技能可与其他数据源复用
 - 对低级数据访问细节提供抽象
 
-# 缺点
+#### 缺点
 
 - 有时不适用于复杂的应用程序
 - 可能无法访问某些 DB2 特性和功能
 
-# Ruby 和 Rails 在 Rails 上
+### Ruby 和 Rails 在 Rails 上
 
 Ruby 是一种用于开发 Web 应用程序的全集成面向对象编程语言。该编程语言的主要特性包括：
 
@@ -24049,10 +22788,6 @@ IBM Database Enterprise Developer Edition 提供了适用于多种编程语言�
 
 包含动态 SQL 语句的程序模块有相关的包和节，但在这种情况下，节被用作动态准备的 SQL 语句的占位符。节中不存储访问计划，因为它们在嵌入静态 SQL 模块中。
 
-
-
-
-
 ## 第 16 章：开发考虑
 
 与视图和表一样，包也有关联的架构名称（schema name）。包的全限定名称为 `SCHEMA-NAME.PACKAGE-NAME`。
@@ -24079,23 +22814,29 @@ IBM Database Enterprise Developer Edition 提供了适用于多种编程语言�
 | FORTRAN (UNIX) | .sqf | .f |
 | FORTRAN (Windows) | .sqf | .for |
 
-如果你执行了这些 DB2 命令/语句，你将在 DB2CERT 数据库中创建一个名为 `DB2CERT.PROG1` 的应用程序包（示例 16–1）。
+如果你执行了这些 DB2 命令/语句，你将在 `DB2CERT` 数据库中创建一个名为 `DB2CERT.PROG1` 的应用程序包（示例 16–1）。
 
 ```sql
-CONNECT TO SAMPLE USER DB2CERT;
-PRECOMPILE PROG1.SQC;
-CONNECT RESET;
-```
+
+
+
+`CONNECT TO SAMPLE USER DB2CERT;`
+
+`PRECOMPILE PROG1.SQC;`
+
+`CONNECT RESET;`
 
 #### 示例 16–1 预编译应用程序
 
-该包将包含大量关于嵌入 SQL 语句的信息，除了执行文件 PROG1.SQC 中包含的嵌入 SQL 语句所需的主机变量值外。在重命名可执行的应用程序之前，还需要额外的步骤。引用的所有数据库对象（表、视图等）在预编译阶段都必须存在，因为在本示例中没有使用延迟绑定。不创建单独绑定文件的不便之处在于，整个数据库都需要同应用程序一起提供给最终用户，因为包只存在于数据库中。在本示例中，创建包所需的数据并不包含在单独绑定文件中。
+该包将包含大量关于嵌入 SQL 语句的信息，除了执行文件 `PROG1.SQC` 中包含的嵌入 SQL 语句所需的主机变量值外。在重命名可执行的应用程序之前，还需要额外的步骤。引用的所有数据库对象（表、视图等）在预编译阶段都必须存在，因为在本示例中没有使用延迟绑定。不创建单独绑定文件的不便之处在于，整个数据库都需要同应用程序一起提供给最终用户，因为包只存在于数据库中。在本示例中，创建包所需的数据并不包含在单独绑定文件中。
 
 让我们来看使用 DB2 命令/语句延迟绑定的示例（示例 16–2）：
 
 ```sql
 CONNECT TO SAMPLE USER DB2CERT;
+
 PRECOMPILE PROG1.SQC BINFILE;
+
 CONNECT RESET;
 ```
 
@@ -24107,7 +22848,7 @@ CONNECT RESET;
 
 ### DB2 注意事项
 
-在嵌入静态 SQL 程序中引用的数据库对象在创建包期间（不带 BINDFILE 选项的 PRECOMPILE 或 BIND）必须存在于数据库，除非 `DEFERRED_PREPARE` 选项设置为 `YES`。
+在嵌入静态 SQL 程序中引用的数据库对象在创建包期间（不带 `BINDFILE` 选项的 `PRECOMPILE` 或 `BIND`）必须存在于数据库，除非 `DEFERRED_PREPARE` 选项设置为 `YES`。
 
 对于每个包含嵌入 SQL 语句的源模块，数据库中必须存在一个对应的包。假设我们正在创建一个访问两个不同 DB2 数据库的应用程序。应用程序中引用的对象必须存在于数据库中才能完整创建包。因此，我们将使用两个不同的程序模块来开发应用程序。每个程序模块或源文件代表一个数据库包。如果我们将每个数据库的 SQL 语句保持在单独的包中，绑定将成功。然后我们可以将程序模块编译并链接成单个可执行文件。
 
@@ -24127,68 +22868,59 @@ CONNECT RESET;
 
 ```
 SQL0805N Package 'pkgschema.dbname' was not found.
+
 SQLSTATE=51002
 ```
 
 为了避免这个问题，你可以在预编译步骤中使用 `VERSION` 选项。`VERSION` 选项允许多个共享相同架构和包 ID 的包在系统目录中共存。该选项允许你在系统上引入并测试包的新版本，而不会影响现有版本包的用户。对 `VERSION` 选项的支持允许持续进行包维护，而不中断最终用户访问系统。`PREP`、`BIND`、`REBIND` 和 `DROP PACKAGE` 功能已增强以支持包版本控制。
 
-
-
-
-
-## 1004 第 16 章 开发考虑
-
 ## 静态 SQL 的权限考虑
 
-如果数据库中不存在该程序包，则执行 BIND 的用户必须拥有数据库的 BIND 权限，或者是具有该权限的组的成员。该用户还必须拥有以下权限之一：数据库上的 IMPLICIT_SCHEMA（如果架构名称不存在）或该架构上的 CREATE 权限（如果架构名称已存在）。默认情况下，绑定程序包的人将成为所有者，除非在 BIND 期间指定了 OWNER 关键字。此外，由于静态语句以程序包所有者 ID 的权限执行，因此用户还必须对绑定文件信息中引用的所有 SQL 语句中引用的对象具有适当的权限。这些权限必须显式地授予绑定程序包的用户或 PUBLIC。如果权限授予了用户所属的某个组但未授予该用户本人，则绑定将失败。
+如果数据库中不存在该程序包，则执行 `BIND` 的用户必须拥有数据库的 `BIND` 权限，或者是具有该权限的组的成员。该用户还必须拥有以下权限之一：数据库上的 `IMPLICIT_SCHEMA`（如果架构名称不存在）或该架构上的 `CREATE` 权限（如果架构名称已存在）。默认情况下，绑定程序包的人将成为所有者，除非在 `BIND` 期间指定了 `OWNER` 关键字。此外，由于静态语句以程序包所有者 ID 的权限执行，因此用户还必须对绑定文件信息中引用的所有 SQL 语句中引用的对象具有适当的权限。这些权限必须显式地授予绑定程序包的用户或 `PUBLIC`。如果权限授予了用户所属的某个组但未授予该用户本人，则绑定将失败。
 
-嵌入式静态 SQL 中的未限定数据库对象默认使用程序包所有者的 userid 进行限定（即限定符处理）。或者，您也可以在 BIND 期间指定 QUALIFIER 关键字，以指示静态 SQL 语句中未限定对象的限定符名。
+嵌入式静态 SQL 中的未限定数据库对象默认使用程序包所有者的 userid 进行限定（即限定符处理）。或者，您也可以在 `BIND` 期间指定 `QUALIFIER` 关键字，以指示静态 SQL 语句中未限定对象的限定符名。
 
-表 16–2 汇总了静态 SQL 在用于语句的权限 ID 以及用于未限定数据库对象的限定符方面的行为特征，这取决于在 BIND 期间是否使用了 OWNER 和 QUALIFIER 选项：
+表 16–2 汇总了静态 SQL 在用于语句的权限 ID 以及用于未限定数据库对象的限定符方面的行为特征，这取决于在 `BIND` 期间是否使用了 `OWNER` 和 `QUALIFIER` 选项：
 
 ### 表 16–2 静态 SQL — 权限与限定符摘要
 
 | BIND 关键字 | 权限 ID | 未限定对象的限定值 |
 | :--- | :--- | :--- |
-| 未指定 OWNER AND NOT | 绑定程序包的用户 ID | 绑定程序包的用户 ID |
-| 指定了 OWNER | OWNER 选项指定的用户 ID | OWNER 选项指定的用户 ID |
-| 指定了 QUALIFIER | 绑定程序包的用户 ID | QUALIFIER bind 选项指定的用户 ID |
-| 指定了 OWNER AND QUALIFIER | OWNER 选项指定的用户 ID | QUALIFIER bind 选项指定的用户 ID |
+| 未指定 `OWNER` AND `NOT` | 绑定程序包的用户 ID | 绑定程序包的用户 ID |
+| 指定了 `OWNER` | `OWNER` 选项指定的用户 ID | `OWNER` 选项指定的用户 ID |
+| 指定了 `QUALIFIER` | 绑定程序包的用户 ID | `QUALIFIER` bind 选项指定的用户 ID |
+| 指定了 `OWNER` AND `QUALIFIER` | `OWNER` 选项指定的用户 ID | `QUALIFIER` bind 选项指定的用户 ID |
 
-一旦程序包存在于数据库中，任何拥有该程序包 EXECUTE 权限的人都可以执行程序包中包含的任何 SQL 语句，即使该个人对数据对象没有显式权限。这是嵌入式静态 SQL 程序模块的特性。它允许终端用户在不定义视图或列级权限的情况下访问表中包含部分数据。
-
-## 嵌入式 SQL 概述
+一旦程序包存在于数据库中，任何拥有该程序包 `EXECUTE` 权限的人都可以执行程序包中包含的任何 SQL 语句，即使该个人对数据对象没有显式权限。这是嵌入式静态 SQL 程序模块的特性。它允许终端用户在不定义视图或列级权限的情况下访问表中包含部分数据。
 
 ## 动态 SQL 的权限
 
-与静态 SQL 不同，动态准备的语句可以设置为在绑定程序包的用户（程序包所有者）或执行应用程序的用户权限 ID 下执行，这取决于在绑定 期间对 DYNAMIC 关键字使用了哪种选项。
+与静态 SQL 不同，动态准备的语句可以设置为在绑定程序包的用户（程序包所有者）或执行应用程序的用户权限 ID 下执行，这取决于在绑定期间对 `DYNAMIC` 关键字使用了哪种选项。
 
-在 DYNAMICRULES RUN（默认值）下，运行动态 SQL 应用程序的用户必须具有执行每个 SQL 语句所需的权限（它规定了使用执行程序包的用户权限 ID），以及对该程序包的 EXECUTE 权限。这些权限可以授予用户的权限 ID、用户所属的任何组或 PUBLIC。使用 DYNAMICRULES，如果程序中不包含静态 SQL，则绑定应用程序的人只需要数据库的 BIND 权限。
+在 `DYNAMICRULES RUN`（默认值）下，运行动态 SQL 应用程序的用户必须具有执行每个 SQL 语句所需的权限（它规定了使用执行程序包的用户权限 ID），以及对该程序包的 `EXECUTE` 权限。这些权限可以授予用户的权限 ID、用户所属的任何组或 `PUBLIC`。使用 `DYNAMICRULES`，如果程序中不包含静态 SQL，则绑定应用程序的人只需要数据库的 `BIND` 权限。
 
-当使用 DYNAMIC 绑定选项时，所需的授权和权限与静态 SQL 类似。也就是说，绑定动态 SQL 应用程序的用户（程序包所有者的权限 ID）拥有 BIND 权限，并拥有执行执行应用程序中所有动态和静态 SQL 语句所需的权限。运行应用程序的用户继承与程序包所有者权限 ID 关联的权限，因此只需要对该程序包拥有 EXECUTE 权限。
+当使用 `DYNAMIC` 绑定选项时，所需的授权和权限与静态 SQL 类似。也就是说，绑定动态 SQL 应用程序的用户（程序包所有者的权限 ID）拥有 `BIND` 权限，并拥有执行执行应用程序中所有动态和静态 SQL 语句所需的权限。运行应用程序的用户继承与程序包所有者权限 ID 关联的权限，因此只需要对该程序包拥有 `EXECUTE` 权限。
 
-> DB2 备注
-> 如果您使用 DYNAMICRULES BIND 绑定程序包，并且当 SYSADM 或 DBADM 权限或其他程序包用户不应接收的任何权限时，请显式指定 OWNER 以指定不同的权限 ID。这防止程序包自动从绑定应用程序的用户那里继承 SYSADM、DBADM 或其他动态 SQL 必要的权限。
+> **DB2 备注**
+> 如果您使用 `DYNAMICRULES BIND` 绑定程序包，并且当 `SYSADM` 或 `DBADM` 权限或其他程序包用户不应接收的任何权限时，请显式指定 `OWNER` 以指定不同的权限 ID。这防止程序包自动从绑定应用程序的用户那里继承 `SYSADM`、`DBADM` 或其他动态 SQL 必要的权限。
 
-用于 DYNAMICRULES RUN 和 BIND 选项的权限 ID 权限和限定符值汇总在表 16–3：
+用于 `DYNAMICRULES RUN` 和 `BIND` 选项的权限 ID 权限和限定符值汇总在表 16–3：
 
 ### 表 16–3 动态 SQL — 权限与限定符摘要
 
 | DYNAMICRULES 选项 | 权限 ID | 未限定对象的限定值 |
 | :--- | :--- | :--- |
-| RUN (默认) | 执行程序包的用户 ID | 所有者的权限 ID（无论是否明确指定），会被 CURRENT SCHEMA 特殊寄存器覆盖 |
-
-## 第 16 章 开发考虑
+| `RUN` (默认) | 执行程序包的用户 ID | 所有者的权限 ID（无论是否明确指定），会被 `CURRENT SCHEMA` 特殊寄存器覆盖 |
 
 表 16–3 动态 SQL — 权限与限定符摘要（续）
 
 | DYNAMIC-RULES 选项 | 权限 ID | 未限定对象的限定值 |
 | :--- | :--- | :--- |
-| BIND | OWNER 绑定选项的隐式或显式值 | QUALIFIER 绑定选项的隐式或显式值 |
+| `BIND` | `OWNER` 绑定选项的隐式或显式值 | `QUALIFIER` 绑定选项的隐式或显式值 |
 
 ## 检查程序包和时间戳
 
-我们简要讨论了程序包和时间戳。让我们检查如何验证绑定文件和数据库中的程序包是匹配的。当 BIND 命令成功执行时，系统目录视图 SYSCAT.PACKAGES 中会创建一个条目。该表定义了许多列。我们在这里不进行完整的解释，但让我们看看时间戳列。与程序包关联的时间实际上存储在名为 UNIQUE_ID 的列中。如果您在示例 16–3 中成功执行了该命令，SYSCAT.PACKAGE 视图将为此绑定文件显示一个新条目，程序包名为 DB2LOOK，权限用户 ID 为程序包架构。任何错误或警告消息都将写入文件。
+我们简要讨论了程序包和时间戳。让我们检查如何验证绑定文件和数据库中的程序包是匹配的。当 `BIND` 命令成功执行时，系统目录视图 `SYSCAT.PACKAGES` 中会创建一个条目。该表定义了许多列。我们在这里不进行完整的解释，但让我们看看时间戳列。与程序包关联的时间实际上存储在名为 `UNIQUE_ID` 的列中。如果您在示例 16–3 中成功执行了该命令，`SYSCAT.PACKAGE` 视图将为此绑定文件显示一个新条目，程序包名为 `DB2LOOK`，权限用户 ID 为程序包架构。任何错误或警告消息都将写入文件。
 
 ```sql
 BIND DB2LOOK MESSAGES MSG1.OUT
@@ -24196,7 +22928,7 @@ BIND DB2LOOK MESSAGES MSG1.OUT
 
 ### 示例 16–3 绑定应用程序
 
-要检查 DB2LOOK.BND 文件中包含的时间戳，DB2 提供了一个名为 db2bfd 的工具（示例 16–4）。
+要检查 `DB2LOOK.BND` 文件中包含的时间戳，DB2 提供了一个名为 `db2bfd` 的工具（示例 16–4）。
 
 ```bash
 db2bfd -b db2look.bnd
@@ -24204,26 +22936,35 @@ db2bfd -b db2look.bnd
 
 ### 示例 16–4 检查绑定文件
 
-以下是 db2bfd 的输出示例（示例 16–5）：
+以下是 `db2bfd` 的输出示例（示例 16–5）：
 
 ```text
 db2look.bnd: Header Contents
 
 Header Fields:
+
 Field | value
+
 ---
+
 releaseNum | 0x800
+
 Endian | 0x44
+
 numVars | 46
+
 maxSet | 59
+
 numStmt | 271
+
 optCnt | 4
+
 optCount | 10
+
 Name | value
+
 Isolation Level | Uncommitted
 ```
-
-## 嵌入式 SQL 概述
 
 | Field | value |
 | :--- | :--- |
@@ -24239,15 +22980,19 @@ Isolation Level | Uncommitted
 
 *** 所有其他选项均使用服务器指定的设置 ***
 
-该时间戳编码为 060629。此时间戳是使用 PRECOMPILE 命令生成绑定文件的准确时间。
+该时间戳编码为 `060629`。此时间戳是使用 `PRECOMPILE` 命令生成绑定文件的准确时间。
 
-要确认此绑定文件（db2look.bind）已绑定到数据库，请在连接数据库后使用此 SQL 语句（示例 16–6）：
+要确认此绑定文件（`db2look.bind`）已绑定到数据库，请在连接数据库后使用此 SQL 语句（示例 16–6）：
 
 ```sql
 SELECT PKGSCHEMA, PKNAME, UNIQUE_ID
+
 FROM SYSCAT.PACKAGES
+
 WHERE PKNAME = 'DB2LOOK';
 ```
+
+
 
 | PKGSCHEMA | PKNAME | UNIQUE_ID |
 | :--- | :--- | :--- |
@@ -24255,48 +23000,47 @@ WHERE PKNAME = 'DB2LOOK';
 
 ### 示例 16–6 DB2LOOK 的绑定信息
 
-此 SQL 语句的输出应包含一行结果，其 UNIQUE_ID 与绑定文件匹配，如示例 16–5 所示。UNIQUE_ID 以十六进制返回。
+此 SQL 语句的输出应包含一行结果，其 `UNIQUE_ID` 与绑定文件匹配，如示例 16–5 所示。`UNIQUE_ID` 以十六进制返回。
 
 ## 绑定工具
 
-CLP 是 DB2 提供的一个动态 SQL 应用程序。与工具（如 DB2 CLP）关联的程序包包含在 sqlib 目录的 bind 子目录下。
+CLP 是 DB2 提供的一个动态 SQL 应用程序。与工具（如 DB2 CLP）关联的程序包包含在 `sqlib` 目录的 `bind` 子目录下。
 
-与 DB2 CLP 等工具关联的绑定文件位于 db2ubind.lst 文件中。
+与 DB2 CLP 等工具关联的绑定文件位于 `db2ubind.lst` 文件中。
 
-具体来说，与 DB2 CLP 关联的绑定文件是db2c1pcs.bind, db2c1prr.bd, db2c1pur.bd, db2c1prs.bd 和 db2c1pnc.bd。
-
-
-
-
+具体来说，与 DB2 CLP 关联的绑定文件是 `db2c1pcs.bind`、`db2c1prr.bd`、`db2c1pur.bd`、`db2c1prs.bd` 和 `db2c1pnc.bd`。
 
 # 第 16 章 开发考虑
 
-> DB2 注意：每个 CLP 绑定文件在创建时都具有不同的隔离级别。这允许用户在使用 CLP 实用程序时，通过 CHANGE ISOLATION LEVEL 命令更改隔离级别。
+> DB2 注意：每个 CLP 绑定文件在创建时都具有不同的隔离级别。这允许用户在使用 CLP 实用程序时，通过 `CHANGE ISOLATION LEVEL` 命令更改隔离级别。
 
-这些绑定文件必须已经使用 DB2 命令行中心、DB2 CLP 或配置助手 (CA) 绑定到你想要访问的数据库上。
+这些绑定文件必须已经使用 DB2 命令行中心、DB2 CLP 或配置助手（CA）绑定到你想要访问的数据库上。
 
 > DB2 注意：要绑定 DB2 实用程序（例如 CLP、IMPORT、EXPORT），请执行此命令：
-bind @dbubind.lst blocking all.
 
-要使用单个 BIND 命令绑定多个包，请在源文件名前添加“@”字符。当遇到此字符时，DB2 将认为该文件包含一个绑定文件列表，而不是其本身是一个绑定文件。
+```text
+bind @dbubind.lst blocking all.
+```
+
+要使用单个 `BIND` 命令绑定多个包，请在源文件名前添加“@”字符。当遇到此字符时，DB2 将认为该文件包含一个绑定文件列表，而不是其本身是一个绑定文件。
 
 # 阻塞（Blocking）
 
 记录级阻塞（Record blocking）是 DB2 的一项功能，当应用程序检索大量数据时，它可以减少跨网络的数据访问。记录阻塞基于游标类型以及在 DB2 服务器上分配用于执行记录阻塞的存储量。游标用于应用程序中以处理来自 DB2 服务器的多行结果集。
 
-名为 ASLHEAPZ 的 DBM 配置参数指定了服务器上为请求多条记录的应用程序缓冲数据所需的内存。对于在远程客户端执行的应用程序，缓冲区由名为 QRIOBLK 的 DB2 配置参数指定。
+名为 `ASLHEAPZ` 的 DBM 配置参数指定了服务器上为请求多条记录的应用程序缓冲数据所需的内存。对于在远程客户端执行的应用程序，缓冲区由名为 `QRIOBLK` 的 DB2 配置参数指定。
 
-你可以将记录阻塞视为数据检索缓存。记录阻塞选项在表 16-4 中描述。通常，对于执行许多查询的应用程序，你会指定 ALL。歧义游标（Ambiguous cursor）是指在 SQL 语句中定义时没有引用任何其预期用途的游标。我们将看到，所有游标都是使用 SELECT 语句定义的。它们用于 SELECT、DELETE 或 UPDATE 语句。
+你可以将记录阻塞视为数据检索缓存。记录阻塞选项在表 16–4 中描述。通常，对于执行许多查询的应用程序，你会指定 `ALL`。歧义游标（Ambiguous cursor）是指在 SQL 语句中定义时没有引用任何其预期用途的游标。我们将看到，所有游标都是使用 `SELECT` 语句定义的。它们用于 `SELECT`、`DELETE` 或 `UPDATE` 语句。
 
-静态嵌入式应用程序的默认阻塞选项是 UNAMBIG。CLI 应用程序和 CLP 的默认阻塞选项是 BLOCKING ALL。
+静态嵌入式应用程序的默认阻塞选项是 `UNAMBIG`。CLI 应用程序和 CLP 的默认阻塞选项是 `BLOCKING ALL`。
 
 # 表 16–4 记录阻塞选项
 
-| BLOCKING <option> | 记录阻塞行为 |
+| BLOCKING `<option>` | 记录阻塞行为 |
 |---|---|
-| UNAMBIG | 除指定为 FOR UPDATE 的游标外，所有游标均被阻塞。 |
-| ALL | 阻塞歧义游标。 |
-| NO | 不阻塞任何游标。 |
+| `UNAMBIG` | 除指定为 `FOR UPDATE` 的游标外，所有游标均被阻塞。 |
+| `ALL` | 阻塞歧义游标。 |
+| `NO` | 不阻塞任何游标。 |
 
 记录阻塞影响你作为应用程序开发者在应用程序中声明游标的方式。你对游标的声明越具体，DB2 越可能恰当地使用记录阻塞。如果启用了记录阻塞，缓存会在游标打开时分配，在游标关闭时释放。因此，为了避免浪费服务器上的内存资源，请避免在不再需要时保持游标打开状态。
 
@@ -24304,11 +23048,11 @@ bind @dbubind.lst blocking all.
 
 # 对 CLI 和 ODBC 编程的支持
 
-我们一直在讨论通过在应用程序模块中嵌入 SQL 语句来处理静态和动态 SQL 语句。需要预编译或准备阶段来将这些 SQL 语句映射到 DB2 API 调用。我们需要操作 SQLDA 数据来处理动态 SQL。这些可能会变得非常复杂，更重要的是，它们不容易迁移到各种数据库供应商。使用可调用 SQL 接口开发数据库应用程序的替代方法已成为创建强大且高度移植应用程序的流行技术。
+我们一直在讨论通过在应用程序模块中嵌入 SQL 语句来处理静态和动态 SQL 语句。需要预编译或准备阶段来将这些 SQL 语句映射到 DB2 API 调用。我们需要操作 `SQLDA` 数据来处理动态 SQL。这些可能会变得非常复杂，更重要的是，它们不容易迁移到各种数据库供应商。使用可调用 SQL 接口开发数据库应用程序的替代方法已成为创建强大且高度移植应用程序的流行技术。
 
-调用 API（在本章中也称为函数或函数调用）的可调用 SQL 接口允许开发者直接访问数据库信息；因此不需要重新编译应用程序，也不需要学习特定数据库的语言。其中一种可调用 SQL 接口是微软的开放数据库连接 (ODBC)。存在略有不同的 SQL 接口标准，被称为调用级接口 (CLI)，由 X/Open 和 ISO 等组织定义。
+调用 API（在本章中也称为函数或函数调用）的可调用 SQL 接口允许开发者直接访问数据库信息；因此不需要重新编译应用程序，也不需要学习特定数据库的语言。其中一种可调用 SQL 接口是微软的开放数据库连接（ODBC）。存在略有不同的 SQL 接口标准，被称为调用级接口（CLI），由 X/Open 和 ISO 等组织定义。
 
- DB2 有自己的 CLI，它基于 X/Open、ISO 和 ODBC 标准。这里讨论的重点将是使用 DB2 CLI 进行应用程序开发。我们也会简要介绍 ODBC，但不会进行过多细节，因为这两个标准非常相似。
+DB2 有自己的 CLI，它基于 X/Open、ISO 和 ODBC 标准。这里讨论的重点将是使用 DB2 CLI 进行应用程序开发。我们也会简要介绍 ODBC，但不会进行过多细节，因为这两个标准非常相似。
 
 # 第 16 章 开发考虑
 
@@ -24323,16 +23067,16 @@ DB2 环境在以下方面与嵌入式 SQL 有不同之处：
 - 不需要显式游标。
 - 没有没有预编译阶段。
 - 不创建应用程序级别的包。有一组 CLI 包为所有 CLI 应用程序绑定一次。
-- 不使用 COMMIT/ROLLBACK 语句来控制处理。使用名为 SQLLETran() 的 API 来提交或回滚事务。
-- 不需要 SQLDATA 结构。
-- 不使用 SQLCA 数据结构，因为错误通过特殊的错误处理 API 使用 SQLSTATES 和返回代码进行分析。
+- 不使用 `COMMIT`/`ROLLBACK` 语句来控制处理。使用名为 `SQLLETran()` 的 API 来提交或回滚事务。
+- 不需要 `SQLDATA` 结构。
+- 不使用 `SQLCA` 数据结构，因为错误通过特殊的错误处理 API 使用 `SQLSTATES` 和返回代码进行分析。
 - SQL 语句中不使用主机变量；取而使用的是参数标记（parameter markers）。
 
 在尝试开发 CLI 应用程序之前，理解上述差异是重要的。CLI 提供了一些嵌入式 SQL 环境中不具备的独特特性：
 
-- 一次处理多行（数组获取/插入）
-- 具有双向（可滚动）游标的能力
-- 更容易地查询系统目录表，因为有预定义的 API 来查询系统目录资源
+- 一次处理多行（数组获取/插入）。
+- 具有双向（可滚动）游标的能力。
+- 更容易地查询系统目录表，因为有预定义的 API 来查询系统目录资源。
 
 # ODBC 对比 CLI
 
@@ -24342,11 +23086,11 @@ ODBC 标准基于 X/Open CLI 标准的早期版本，多年来一直在不断演
 
 # 对 CLI 和 ODBC 编程的支持
 
- DB2 产品同时提供 CLI 和 ODBC 接口。在 CLI 环境中，应用程序直接与 CLI 驱动程序通信。在 ODBC 环境中，驱动管理器提供接口。它还动态加载应用程序连接所需的驱动程序。图 16–2 展示了在 ODBC 和 CLI 环境下应用程序与 DB2 之间的关系。
+DB2 产品同时提供 CLI 和 ODBC 接口。在 CLI 环境中，应用程序直接与 CLI 驱动程序通信。在 ODBC 环境中，驱动管理器提供接口。它还动态加载应用程序连接所需的驱动程序。图 16–2 展示了在 ODBC 和 CLI 环境下应用程序与 DB2 之间的关系。
 
 **图 16–2** DB2 CLI 对比 ODBC
 
- DB2 CLI 应用程序不需要 ODBC 驱动程序或 ODBC 驱动管理器即可运行。编写 ODBC 应用程序的优势在于易于移植。还可以访问多个数据库供应商。DB2 CLI 驱动只能访问 DB2 数据源。
+DB2 CLI 应用程序不需要 ODBC 驱动程序或 ODBC 驱动管理器即可运行。编写 ODBC 应用程序的优势在于易于移植。还可以访问多个数据库供应商。DB2 CLI 驱动只能访问 DB2 数据源。
 
 > DB2 注意：只有在执行 ODBC 应用程序时才需要安装 ODBC 驱动程序。运行 CLI 应用程序只需要安装 DB2 运行时。它包含了 DB2 CLI。
 
@@ -24354,42 +23098,39 @@ ODBC 标准基于 X/Open CLI 标准的早期版本，多年来一直在不断演
 
 设置 DB2 CLI 环境有很多步骤。所有的 CLI API 都包含在一个库中。这些是各种 DB2 开发操作系统上的库名称：
 
-- Windows 平台上的 DB2 CLI 库称为 db2cli.lib。
-- UNIX 平台上的 DB2 CLI 库称为 libdb2.a 或 libdb2.so。
+- Windows 平台上的 DB2 CLI 库称为 `db2cli.lib`。
+- UNIX 平台上的 DB2 CLI 库称为 `libdb2.a` 或 `libdb2.so`。
 
 在我们尝试开发应用程序之前，我们必须确保成功执行了以下步骤：
 
 - 已安装 DB2 开发工作台或一个 DB2 客户端。
 - 访问的数据库已注册。如果数据库是远程的，还必须注册节点。
 - DB2 CLI 绑定文件已绑定到数据库。
-- 使用配置助手或直接编辑 db2cli.ini 文件配置 CLI 环境。记住要在 db2cli.ini 文件或通过配置助手检查 CLI 环境设置。这些设置会影响系统中执行的所有 CLI 应用程序的执行行为。
+- 使用配置助手或直接编辑 `db2cli.ini` 文件配置 CLI 环境。记住要在 `db2cli.ini` 文件或通过配置助手检查 CLI 环境设置。这些设置会影响系统中执行的所有 CLI 应用程序的执行行为。
 
 # CLI 绑定文件
 
-CLI 应用程序所需的绑定文件将在第一个 CLI 连接数据库时自动绑定。如果有多个系统的 CLI 应用程序连接数据库，则需要每个客户端平台和唯一构建版本的 CLI 包绑定到数据库。如果用户没有数据库的 BINDADM 权限，绑定可能失败。因此，可能需要数据库管理员绑定必要的绑定文件
-
-
-
-
+CLI 应用程序所需的绑定文件将在第一个 CLI 连接数据库时自动绑定。如果有多个系统的 CLI 应用程序连接数据库，则需要每个客户端平台和唯一构建版本的 CLI 包绑定到数据库。如果用户没有数据库的 `BINDADM` 权限，绑定可能失败。因此，可能需要数据库管理员绑定必要的绑定文件。
 
 ## CLI 和 ODBC 编程支持 1013
 
-使用 DB2 BIND 命令或配置助手 (CA) 手动处理文件。每个支持的 DB2 服务器使用不同的绑定文件（表 16–5）。
+使用 DB2 `BIND` 命令或配置助手（CA）手动处理文件。每个支持的 DB2 服务器使用不同的绑定文件（表 16–5）。
 
 ## 表 16–5 CLI 绑定文件列表
 
 | 绑定文件 | DB2 服务器 |
-| --- | --- |
-| db2cli.list | DB2 for Linux, UNIX, Windows |
-| ddcsvmm.list | DB2 for VM (SQL/DS) |
-| ddcsvsse.list | DB2 for VSE (SQL/DS) |
-| ddcsmvs.list | DB2 for z/OS |
-| ddcs400.list | DB2 for iSeries (OS/400) |
+|---|---|
+| `db2cli.list` | DB2 for Linux, UNIX, Windows |
+| `ddcsvmm.list` | DB2 for VM (SQL/DS) |
+| `ddcsvsse.list` | DB2 for VSE (SQL/DS) |
+| `ddcsmvs.list` | DB2 for z/OS |
+| `ddcs400.list` | DB2 for iSeries (OS/400) |
 
 例如，在 Windows 上的 DB2 命令窗口中使用 DB2 for AIX 数据库手动绑定 CLI 程序包，您需要在连接数据库后执行以下命令（示例 16–7）：
 
-```
+```text
 DB2 BIND @db2cli.list BLOCKING ALL
+
 MESSAGES DB2.CLI.MSG GRANT PUBLIC
 ```
 
@@ -24397,8 +23138,9 @@ MESSAGES DB2.CLI.MSG GRANT PUBLIC
 
 同样，如果 DB2 数据库位于 zSeries 系列上，您可以使用此命令（示例 16–8）：
 
-```
+```text
 DB2 BIND @ddcsmvs.list BLOCKING ALL SQLERROR CONTINUE
+
 MESSAGES MVSBIND.MSG GRANT PUBLIC
 ```
 
@@ -24406,11 +23148,11 @@ MESSAGES MVSBIND.MSG GRANT PUBLIC
 
 ## 配置 CLI
 
-通常不需要修改 DB2 CLI 配置文件 (db2cli.ini)。了解该文件存在并可能需要进行微调很重要。修改 CLI 配置文件的某些原因包括：
+通常不需要修改 DB2 CLI 配置文件（`db2cli.ini`）。了解该文件存在并可能需要进行微调很重要。修改 CLI 配置文件的某些原因包括：
 
-- 提高 CLI 应用程序性能
-- 更改默认 CLI 行为
-- 为特定应用程序启用变通方案
+- 提高 CLI 应用程序性能。
+- 更改默认 CLI 行为。
+- 为特定应用程序启用变通方案。
 
 ## 1014 第 16 章 开发考虑因素
 
@@ -24418,17 +23160,25 @@ MESSAGES MVSBIND.MSG GRANT PUBLIC
 
 图 16–3 显示了一个示例的 `db2cli.ini` 文件。
 
-```
+```ini
 ; 注释在此
+
 [SAMPLE]
+
 CURSORHOLD=0
+
 TNISOLATION=4
+
 DEFERREDPPAPARE=1
+
 DB2DEGREE=4
+
 PATCH1=4
 ```
 
-**图 16–3** 示例 db2cli.ini 配置
+
+
+### 图 16–3 示例 `db2cli.ini` 配置
 
 CLI 配置文件中可以指定许多选项，但选择这些选项是因为它们会极大地影响应用程序的执行环境。此处显示的关键字和值可能不适用于您的环境。
 
@@ -24436,20 +23186,20 @@ CLI 配置文件中可以指定许多选项，但选择这些选项是因为它�
 
 数据库名称下方的五行包含关键字和对应的值。支持的关键字在《DB2 Call Level Interface Guide and Reference, Volume 1》中定义，但让我们检查图 16–3 中定义的关键字并在图 16–6 中对其进行解释。
 
-**表 16–6** 配置 DB2 CLI 环境
+### 表 16–6 配置 DB2 CLI 环境
 
 | 关键字 | 含义 |
-|--- | --- |
-| CURSORHOLD | 0 = 游标不保持（当提交事务时游标被销毁）。<br>1 = 游标保持（默认）。<br>该关键字的默认值为 1。这意味着游标在工作单元之间保持。这与嵌入式 SQL 不同，因为除非 `DECLARE CURSOR` 语句包含 `WITH HOLD` 短语，否则所有游标都表现出游标保持的行为。 |
+|---|---|
+| `CURSORHOLD` | 0 = 游标不保持（当提交事务时游标被销毁）。<br>1 = 游标保持（默认）。<br>该关键字的默认值为 1。这意味着游标在工作单元之间保持。这与嵌入式 SQL 不同，因为除非 `DECLARE CURSOR` 语句包含 `WITH HOLD` 短语，否则所有游标都表现出游标保持的行为。 |
 
-## 表 16–6 配置 DB2 CLI 环境（续）
+### 表 16–6 配置 DB2 CLI 环境（续）
 
 | 关键字 | 含义 |
-| --- | --- |
-| TXNISOLATION | 1 - 未提交的读<br>2 - 游标稳定（默认）<br>4 - 读稳定<br>8 - 可重复读<br>32 - 不提交（仅限 DB2 for iSeries）<br>该关键字标识用于并发的隔离级别。 |
-| DEFERREDPREPARE | 0 = 不使用延迟准备。<br>1 = 使用延迟准备（默认）。<br>将 $\text{PREPARE}$ 请求推迟到相应的执行请求发出。然后将这两个请求合并为一个命令/流（而不是两个），以最大限度地减少网络流量并提高性能。 |
-| DB2DEGREE | 0-32767/ANY（默认值为 0）<br>设置 SQL 语句执行的并行度。 |
-| PATCH1 PATCH2 | 关键字 `Patch1` 和 `Patch2` 用于在使用某些应用程序或环境时针对已知问题的变通方案。在示例中，我们使用 `PATCH1=4` 将时间戳值到日期值。要使用多个 `PATCH1` 值，只需将这些值相加形成关键字值。例如，如果您需要补丁 1、4 和8，则指定 `PATCH1=13`。与 `PATCH1` 不同，为 `PATCH2` 指定多个补丁使用逗号分隔的字符串，例如 `PATCH2="7,15"` |
+|---|---|
+| `TXNISOLATION` | 1 - 未提交的读<br>2 - 游标稳定（默认）<br>4 - 读稳定<br>8 - 可重复读<br>32 - 不提交（仅限 DB2 for iSeries）<br>该关键字标识用于并发的隔离级别。 |
+| `DEFERREDPREPARE` | 0 = 不使用延迟准备。<br>1 = 使用延迟准备（默认）。<br>将 `PREPARE` 请求推迟到相应的执行请求发出。然后将这两个请求合并为一个命令/流（而不是两个），以最大限度地减少网络流量并提高性能。 |
+| `DB2DEGREE` | 0-32767/ANY（默认值为 0）<br>设置 SQL 语句执行的并行度。 |
+| `PATCH1 PATCH2` | 关键字 `Patch1` 和 `Patch2` 用于在使用某些应用程序或环境时针对已知问题的变通方案。在示例中，我们使用 `PATCH1=4` 将时间戳值到日期值。要使用多个 `PATCH1` 值，只需将这些值相加形成关键字值。例如，如果您需要补丁 1、4 和 8，则指定 `PATCH1=13`。与 `PATCH1` 不同，为 `PATCH2` 指定多个补丁使用逗号分隔的字符串，例如 `PATCH2="7,15"`。 |
 
 Windows 平台上的 DB2 CA 或 ODBC 管理工具允许您在不直接编辑 `db2cli.ini` 文件的情况下配置 CLI 环境。界面易于使用，并解释了可以修改的每个参数（图 16–4）。
 
@@ -24469,7 +23219,7 @@ Windows 平台上的 DB2 CA 或 ODBC 管理工具允许您在不直接编辑 `db
 
 ## CLI 和 ODBC 编程支持
 
-使用 DB2 BIND 命令或配置助手 (CA) 手动处理。每个支持的 DB2 服务器使用不同的绑定文件（表 16–5）。
+使用 DB2 BIND 命令或配置助手（CA）手动处理。每个支持的 DB2 服务器使用不同的绑定文件（表 16–5）。
 
 在 UNIX 环境下，`db2cli.ini` 文件位于实例所有者的 `sqllib/cfg` 目录，在 Windows 32 位操作系统中位于 `sqllib` 目录。
 
@@ -24485,11 +23235,12 @@ Windows 平台上的 DB2 CA 或 ODBC 管理工具允许您在不直接编辑 `db
 
 Windows 平台上的 DB2 CA 或 ODBC 管理工具允许您在不直接编辑 `db2cli.ini` 文件的情况下配置 CLI 环境。
 
-1 - 未提交的读
-2 - 游标稳定（默认）
-4 - 读稳定
-8 - 可重复读
-32 - 不提交（仅限 DB2 for iSeries）
+- 1 - 未提交的读
+- 2 - 游标稳定（默认）
+- 4 - 读稳定
+- 8 - 可重复读
+- 32 - 不提交（仅限 DB2 for iSeries）
+
 此关键字标识用于并发的隔离级别。
 
 Windows 平台上的 DB2 CA 或 ODBC 管理工具允许您在不直接编辑 `db2cli.ini` 文件的情况下配置 CLI 环境。界面易于使用，并解释了可以修改的每个参数（图 16–4）。
@@ -24526,15 +23277,11 @@ Java 应用程序依赖 DB2 客户端代码连接到 DB2 数据库。您从桌�
 
 Java Applet 不需要执行系统上安装任何 DB2 客户端代码。您只需要在客户端机器上启用 Java 的 Web 浏览器来运行您的 Applet。通常，您会将 Applet 嵌入超文本标记语言（HTML）页面中。当您加载 HTML 页面时，浏览器会将 Java Applet 下载到您的机器，然后下载 Java 类文件和 DB2 的 JDBC 驱动。当您的 Applet 调用 JDBC API 连接到 DB2 时，JDBC 驱动程序与位于 Web 服务器上的 DB2 JDBC Applet 服务器建立独立的网络连接。JDBC 服务器通过 DB2 CLI 驱动与数据库通信，并通过独立连接将结果发送给客户端。图 16–7 展示了使用 JDBC 的 Java Applet 的通信流。
 
-
-
-
-
 ## 对 Java 编程的支持
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1046_0.png)
 
-图 16–7 用于 DB2 的 Java applet
+**图 16–7** 用于 DB2 的 Java applet
 
 DB2 还支持用 Java 编写的用户定义函数和存储过程。访问 DB2 数据库的 Java 程序可以使用 JDBC 或 SQL 接口来实现。JDBC API 允许你编写 Java 程序来对数据库执行动态 SQL 调用。SQLJ 扩展了 JDBC 以支持嵌入式静态 SQL。接下来的几节将介绍如何使用 JDBC 和 SQLJ 为 DB2 编写 Java 程序。
 
@@ -24544,38 +23291,38 @@ DB2 还支持用 Java 编写的用户定义函数和存储过程。访问 DB2 �
 
 ## DB2 的 JDBC 驱动程序
 
-DB2 驱动程序在安装 DB2 客户端或服务器代码时进行安装。DB2 提供了一个应用驱动程序：`com.ibm.db2.jdbc.app.DB2Driver`。你将其用于运行在安装了 DB2 的机器上的*应用程序*。DB2 还带有一个*网络* 驱动程序：`com.ibm.db2.jdbc.net.DB2Driver`。当你的 Java 程序在没有安装 DB2 的机器上执行时（即运行应用程序），你会使用该驱动程序。驱动程序的类文件封装在 `db2java.zip` 中。
+DB2 驱动程序在安装 DB2 客户端或服务器代码时进行安装。DB2 提供了一个应用驱动程序：`com.ibm.db2.jdbc.app.DB2Driver`。你将其用于运行在安装了 DB2 的机器上的应用程序。DB2 还带有一个网络驱动程序：`com.ibm.db2.jdbc.net.DB2Driver`。当你的 Java 程序在没有安装 DB2 的机器上执行时（即运行应用程序），你会使用该驱动程序。驱动程序的类文件封装在 `db2java.zip` 中。
 
 JDBC 类位于 `java.sql` 包中。
 
 ## 1020 第 16 章开发注意事项
 
 > **DB2 注意**
-
-第 3 类驱动程序（以前称为“网络”驱动程序）已废弃。DB2 Java applet 应该迁移到第 4 类驱动程序。
+>
+> 第 3 类驱动程序（以前称为“网络”驱动程序）已废弃。DB2 Java applet 应该迁移到第 4 类驱动程序。
 
 ## SQLJ 编程
 
-SQLJ 源文件包含嵌入式静态 SQL 语句。尽管我们在上一节中涵盖了嵌入式静态 SQL，但我们将在本节中单独讨论 Java 嵌入式 SQL (SQLJ)。这是因为 Java 与 C 等传统语言不同，而且因为 SQLJ 使用 JDBC 作为基础来处理如连接数据库和处理 SQL 错误等任务。
+SQLJ 源文件包含嵌入式静态 SQL 语句。尽管我们在上一节中涵盖了嵌入式静态 SQL，但我们将在本节中单独讨论 Java 嵌入式 SQL（SQLJ）。这是因为 Java 与 C 等传统语言不同，而且因为 SQLJ 使用 JDBC 作为基础来处理如连接数据库和处理 SQL 错误等任务。
 
-SQLJ 程序使用 JDBC 作为与 DB2 通交互的运行时接口；然而，任何静态 SQL 语句都需要在执行程序之前数据库中存在应用程序包。SQLJ 程序与 DB2 之间的交互如图 16–8 所示。
+SQLJ 程序使用 JDBC 作为与 DB2 交互的运行时接口；然而，任何静态 SQL 语句都需要在执行程序之前数据库中存在应用程序包。SQLJ 程序与 DB2 之间的交互如图 16–8 所示。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1047_0.png)
 
-**图 16-8** SQLJ 与 DB2 的接口
+**图 16–8** SQLJ 与 DB2 的接口
 
-SQLJ 和 applet 通过 DB2 的 JDBC 支持访问数据库，它们需要 db2java.zip 中的 JDBC 类 (`java.sql*`) 和 DB2 的 JDBC 驱动程序类。替换 SQLJ 程序中嵌入式 SQL 语句的 SQLJ 翻译器使用 sqlj.zip（位于 `sqllib/java` 目录）中的类。然而，执行程序并不需要 sqlj.zip 中的接口和类。要执行 SQL 程序，需要 SQLJ 运行时类 (`sqllib/java/runtime.zip`) 来验证并执行在预编译和绑定阶段绑定到数据库的任何 SQL 包。
+SQLJ 和 applet 通过 DB2 的 JDBC 支持访问数据库，它们需要 `db2java.zip` 中的 JDBC 类（`java.sql*`）和 DB2 的 JDBC 驱动程序类。替换 SQLJ 程序中嵌入式 SQL 语句的 SQLJ 翻译器使用 `sqlj.zip`（位于 `sqllib/java` 目录）中的类。然而，执行程序并不需要 `sqlj.zip` 中的接口和类。要执行 SQL 程序，需要 SQLJ 运行时类（`sqllib/java/runtime.zip`）来验证并执行在预编译和绑定阶段绑定到数据库的任何 SQL 包。
 
 ## DB2 开发者工作台
 
-DB2 9 开发者工作台 (DB2 DWB) 取代了 DB2 8 开发中心。这个新设计的工具基于 Eclipse 框架，并取代了 DB2 开发者中心。
+DB2 9 开发者工作台（DB2 DWB）取代了 DB2 8 开发中心。这个新设计的工具基于 Eclipse 框架，并取代了 DB2 开发者中心。
 
 开发者工作台使得以下操作变得简单：
 
 - 创建、查看和编辑数据库对象（如表和模式）
 - 探索和编辑表中的行数据
 - 可视化构建 SQL 和 XQuery 语句
-- 开发和部署存储过程、用户定义函数 (UDF)、例和脚本
+- 开发和部署存储过程、用户定义函数（UDF）、例和脚本
 - 调试 SQL 和 Java 存储过程
 - 开发 SQL 应用程序
 - 为 XML 数据开发查询和例
@@ -24585,7 +23332,7 @@ DB2 9 开发者工作台 (DB2 DWB) 取代了 DB2 8 开发中心。这个新设�
 
 然而，还有很多内容未列出。例如，DB2 DWB 包含一个带有语法高亮和代码助手的 SQL 编辑器，以及团队支持、比较实用程序等。
 
-DB2 DWB 是一个独立的工具，与 DB2 数据服务器分开维护。你可以从 www-304.ibm.com/jct03001/software/data/db2/ad/dwb.html 下载它。
+DB2 DWB 是一个独立的工具，与 DB2 数据服务器分开维护。你可以从 `www-304.ibm.com/jct03001/software/data/db2/ad/dwb.html` 下载它。
 
 DB2 DWB 实际上是为那些不是编码专家但需要为他们数据服务器构建业务逻辑提供快速开发协助的高级 DBA 设计的。根据你的环境，你可能选择使用 Toad for DB2 等其他工具。纯开发者可能会选择在各自的 IDE 中使用 DB2 9 提供的插件，尽管他们免费（且在很多情况下也会）使用 DB2 DWB。在理想情况下，你可以在 IBM 提供的任何工具或特定 IDE 的集成点中执行相同的任务。
 
@@ -24593,9 +23340,9 @@ DB2 DWB 实际上是为那些不是编码专家但需要为他们数据服务器
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1049_0.png)
 
-### ### 图 16–9 DB2 开发者工作台
+### 图 16–9 DB2 开发者工作台
 
-本章讨论了创建静态嵌入式 SQL 模块的过程。通过将 SQL 语句嵌入 DB2 中，我们可以操作数据。本章讨论了创建静态嵌入式 SQL 模块的过程。通过将 SQL 语句嵌入 DB2 中，我们可以操作数据。本章讨论了创建静态嵌入式 SQL 模块的过程。通过将 SQL 语句嵌入 DB2 中，我们可以操作数据。本章讨论了创建静态嵌入式 SQL 模块的过程。通过将 SQL 语句嵌入 DB2 中，我们可以操作数据。本章讨论了创建静态嵌入式 SQL 模块的过程。通过将 SQL 语句嵌入 DB2 中，我们可以操作数据。本章讨论了创建静态嵌入式 SQL 模块的过程。通过将 SQL 语句嵌入 DB2 中，我们可以操作数据。本章讨论了创建静态嵌入式 SQL 模块的过程。通过将 SQL 语句嵌入 DB2 中，我们可以操作数据。本章讨论了创建静态嵌入式 SQL 模块的过程。通过将 SQL 语句嵌入 DB2 中，我们可以操作数据。本章讨论了创建静态嵌入式 SQL 模块的过程。通过将 SQL 语句嵌入 DB2 中，我们可以操作数据。本章讨论了创建静态嵌入式 SQL 模块的过程。通过将 SQL 语句嵌入 DB2 中，我们可以操作数据。本章讨论了创建静态嵌入式 SQL 模块的过程。通过将 SQL 语句嵌入 DB2 中，我们可以操作数据。本章讨论了创建静态嵌入式 SQL 模块的过程。通过将 SQL 语句嵌入 DB2 中，我们可以操作数据。本章讨论了创建静态嵌入式 SQL 模块的过程。通过将 SQL 语句嵌入 DB2 中，我们可以操作数据。本章讨论了创建静态嵌入式 SQL 模块的过程。通过将 SQL 语句嵌入 DB2 中，我们可以操作数据。本章讨论了创建静态嵌入式 SQL 模块的过程。通过将 SQL 语句嵌入 DB2 中，我们可以操作数据。本章讨论了创建静态嵌入式 SQL 模块的过程。通过将 SQL 语句嵌入 DB2 中，我们可以操作数据。本章讨论了创建静态嵌入式 SQL 模块的过程。通过将 SQL 语句嵌入 DB2 中，我们可以操作数据。本章讨论了创建静态嵌入式 SQL 模块的过程。通过将 SQL 语句嵌入 DB2 中，我们可以操作数据。本章讨论了创建静态嵌入式 SQL 模块的过程。通过将 SQL 语句嵌入 DB2 中，我们可以操作数据。本章讨论了创建静态嵌入式 SQL 模块的过程。通过将 SQL 语句嵌入 DB2 中，我们可以操作数据。本章讨论了创建静态嵌入式 SQL 模块的过程。通过将 SQL 语句嵌入 DB2 中，我们可以操作数据。本章讨论了创建静态嵌入式 SQL 模块的过程。通过将 SQL 语句嵌入 DB2 中，我们可以操作数据。本章讨论了创建静态嵌入式 SQL 模块的过程。通过将 SQL 语句嵌入 DB2 中，我们可以操作数据。本章讨论了创建静态嵌入式 SQL 模块的过程。通过将 SQL 语句嵌入 DB2 中，我们可以操作数据。本章讨论了创建静态嵌入式 SQL 模块的过程。通过将 SQL 语句嵌入 DB2 中，我们可以
+本章讨论了创建静态嵌入式 SQL 模块的过程。通过将 SQL 语句嵌入 DB2 中，我们可以操作数据。
 
 ## 对 Java 编程的支持
 
@@ -24610,10 +23357,6 @@ DB2 DWB 实际上是为那些不是编码专家但需要为他们数据服务器
 
 本页留白
 
-
-
-
-
 ## 1028 附录 A DB2 认证目标
 
 - 使用 SQL 对数据进行排序（SORT）或分组（GROUP）的能力
@@ -24622,7 +23365,7 @@ DB2 DWB 实际上是为那些不是编码专家但需要为他们数据服务器
 - 调用过程或用户自定义函数的能力
 - 根据 XQuery 语句识别结果的能力
 
-## 第 5 部分 — 操作 DB2 表、视图和索引 (23.5%)
+## 第 5 部分 — 操作 DB2 表、视图和索引（23.5%）
 
 - 演示 DB2 数据类型的使用
 - 根据特定情况创建表的能力
@@ -24632,24 +23375,22 @@ DB2 DWB 实际上是为那些不是编码专家但需要为他们数据服务器
 - 存储 XML 数据的类型类型选项的知识
 - 模式（Schemas）的知识
 
-## 第 6 部分 — 数据并发 (11%)
+## 第 6 部分 — 数据并发（11%）
 
 - 识别影响锁的因素的知识
 - 列出可以获取锁的对象
 - 识别 DB2 锁特性的知识
 - 根据特定情况，识别应使用的隔离级别的知识
 
-# DB2 for LUW 数据库管理 (731)
-
-# DB2 for LUW 数据库管理 (731)
+# DB2 for LUW 数据库管理（731）
 
 如果你熟悉 DB2 9，并能够胜任 DB2 实例和数据库日常管理所需的中、高级技能，你将从此认证角色中获益。
 
-要获得 IBM 认证数据库管理员 – DB2 DBA for Linux, UNIX and Windows ，候选人必须通过测试 2：测试 730 (DB2 9 基础) 和测试 731。
+要获得 IBM 认证数据库管理员 – DB2 DBA for Linux, UNIX and Windows，候选人必须通过测试 2：测试 730（DB2 9 基础）和测试 731。
 
 通过了考试 700 – DB2 UDB V8.1 家族基础，或获得了 IBM 认证数据库管理员 – DB2 UDB V8.1 for Linux, UNIX and Windows 认证（通过 700 和 701 两门考试）的候选人，只需通过考试 731 – DB2 DBA for Linux, UNIX and Windows 即可获得数据库管理员认证。
 
-## 第 1 部分 — DB2 服务器管理 (20.5%)
+## 第 1 部分 — DB2 服务器管理（20.5%）
 
 - 配置/管理 DB2 实例（例如范围）的能力
 - 获取/修改数据库管理器配置信息的能力
@@ -24657,14 +23398,14 @@ DB2 DWB 实际上是为那些不是编码专家但需要为他们数据服务器
 - DB2 强制命令（force command）的知识
 - 配置客户端/服务器连接的能力
 - 调度作业的能力
-- 使用自动维护（即 RUNSTAT、备份、REORG）的能力
-- 使用 DISCOVERY 配置客户端/服务器连接的能力
+- 使用自动维护（即 `RUNSTAT`、备份、`REORG`）的能力
+- 使用 `DISCOVERY` 配置客户端/服务器连接的能力
 - 解释通知日志（notify log）的技能
 - 获取并修改 DB2 注册变量的能力
 - 使用自调优内存管理和自动配置（autoconfig）的能力
 - 使用节流实用程序（throttling utilities）的能力
 
-## 第 2 部分 — 数据放置 (17.5%)
+## 第 2 部分 — 数据放置（17.5%）
 
 - 创建数据库的能力
 - 讨论模式（schemas）使用的技能
@@ -24672,14 +23413,11 @@ DB2 DWB 实际上是为那些不是编码专家但需要为他们数据服务器
 - 创建和操作各种 DB2 对象的能力
 - 创建并讨论 SMS 表空间（表 space）特性的能力
 - 创建并讨论自动管理表空间特性的能力
-
-## 1030 附录 A DB2 认证目标
-
 - 分区能力知识（例如：表分区、哈希分区、MDC、混合分区）
 - XML 结构知识（用于性能的索引）
 - 数据压缩的知识
 
-## 第 3 部分 — 数据库访问 (11.5%)
+## 第 3 部分 — 数据库访问（11.5%）
 
 - 索引的创建和管理知识
 - 在表上创建约束的能力（例如：RI、信息性、唯一）
@@ -24688,28 +23426,28 @@ DB2 DWB 实际上是为那些不是编码专家但需要为他们数据服务器
 - 使用 GUI 工具进行管理的能力
 - 如何强制数据唯一性的知识
 
-## 第 4 部分 — 分析 DB2 活动 (13%)
+## 第 4 部分 — 分析 DB2 活动（13%）
 
-- 捕获和分析 EXPLAIN/VISUAL EXPLAIN 信息的能力
+- 捕获和分析 `EXPLAIN`/`VISUAL EXPLAIN` 信息的能力
 - 使用 Get Snapshots 或 SQL 函数捕获快照的能力
 - 创建和激活事件监控器（event monitors）的能力
 - 使用健康中心（Health Center）配置健康监控器（Health Monitor）的能力
-- 识别问题确定工具（例如：db2pd、db2mtrk）功能的能力
+- 识别问题确定工具（例如：`db2pd`、`db2mtrk`）功能的能力
 
-## 第 5 部分 — DB2 实用程序 (14.5%)
+## 第 5 部分 — DB2 实用程序（14.5%）
 
-- 使用 EX 实用程序从表中提取数据
-- 使用 IMPORT 实用程序向表中插入数据的能力
-- 使用 LOAD 实用程序向表中插入数据的能力
-- 识别何时使用 IMPORT 而非 LOAD 的知识
-- 使用 REORG、REORGCHK、REBIND 和 RUNSTATS 实用程序的能力
-- 使用 DB2Move、DB2Look 和 DB2Batch 能力
-- DB2 顾问（db2advis 实用程序）的功能知识
+- 使用 `EX` 实用程序从表中提取数据
+- 使用 `IMPORT` 实用程序向表中插入数据的能力
+- 使用 `LOAD` 实用程序向表中插入数据的能力
+- 识别何时使用 `IMPORT` 而非 `LOAD` 的知识
+- 使用 `REORG`、`REORGCHK`、`REBIND` 和 `RUNSTATS` 实用程序的能力
+- 使用 `DB2Move`、`DB2Look` 和 `DB2Batch` 能力
+- DB2 顾问（`db2advis` 实用程序）的功能知识
 - 使用 DB2 控制中心（Control Center）的能力
 
-## 第 6 部分 — 高可用性 (14.5%)
+## 第 6 部分 — 高可用性（14.5%）
 
-- 执行数据库级和空间级备份与恢复（BACKUP & RESTORE）的能力
+- 执行数据库级和空间级备份与恢复（`BACKUP` & `RESTORE`）的能力
 - 识别和解释索引重建问题的知识
 - 数据库日志知识
 - 崩溃恢复知识
@@ -24719,47 +23457,47 @@ DB2 DWB 实际上是为那些不是编码专家但需要为他们数据服务器
 - 日志镜像（Log Mirroring）的知识及执行其的能力
 - 可配置在线参数的知识
 
-## 第 7 部分 — 安全 (8.5%)
+## 第 7 部分 — 安全（8.5%）
 
 - DB2 认证知识
 - DB2 授权知识
 - 设置用户和/或组权限的能力
 - DB2 安全基础设施知识（例如：LBAC）
 
-# DB2 for LUW 高级 DBA (734)
+# DB2 for LUW 高级 DBA（734）
 
 IBM 认证数据库管理员是 Linux、UNIX 和 Windows 平台的首席 DBA。该人员能够胜任高可用性、安全和网络等高级任务。
 
 要获得 IBM 认证数据库管理员 DB2 9，你必须通过以下考试：
 
-- 1. 考试 734 – DB2 9 for Linux, UNIX and Windows Database Administrator
-- 2. 考试 736 – Upgrade Exam for DB2 9 for Linux, UNIX and Windows
-- 3. 考试 700 – DB2 Family Fundamentals
+1. 考试 734 – DB2 9 for Linux, UNIX and Windows Database Administrator
+2. 考试 736 – Upgrade Exam for DB2 9 for Linux, UNIX and Windows
+3. 考试 700 – DB2 Family Fundamentals
 
 考试包含六部分，共有 51 道选题。必须达到 64% 或更高分才能通过。每个部分的百分比反映了题集的近似分布。
 
-## 第 1 部分 — 数据库设计 (14%)
+## 第 1 部分 — 数据库设计（14%）
 
 - 设计、创建和管理表空间的能力
 - 设计、创建和管理缓冲池（buffer pools）的能力
 - 设计和配置联邦数据库访问
 
-## 第 2 部分 — 数据分区与聚集 (15%)
+## 第 2 部分 — 数据分区与聚集（15%）
 
 - 设计、创建和管理数据库分区的能力
 - 设计、创建和管理多维聚集表的能力
 - 设计、创建和管理表分区的能力
 - 平衡配置单元（BCU）知识
 
-## 第 3 部分 — 高可用性与诊断 (20%)
+## 第 3 部分 — 高可用性与诊断（20%）
 
 - 管理恢复日志的能力
 - 使用高级备份功能的能力
 - 使用高级恢复功能的能力
 - 增强数据库可用性的能力
-- 使用诊断工具（db2pd、db2mtrk、inspect、db2dart、db2diag）的能力
+- 使用诊断工具（`db2pd`、`db2mtrk`、`inspect`、`db2dart`、`db2diag`）的能力
 
-## 第 4 部分 — 性能与可扩展性 (33%)
+## 第 4 部分 — 性能与可扩展性（33%）
 
 - 识别并使用影响数据库系统性能的 DB2 注册变量
 - 识别并使用影响数据库系统性能的配置参数
@@ -24771,79 +23509,74 @@ IBM 认证数据库管理员是 Linux、UNIX 和 Windows 平台的首席 DBA。�
 - 确定更合适的索引的能力
 - 利用并行的能力
 
-## 第 5 部分 — 安全 (8%)
+## 第 5 部分 — 安全（8%）
 
 - 外部认证机制知识
 - 实现数据加密的能力
 - 实现基于访问控制（LBAC）的能力
 - 使用 DB2 审计（Audit）的能力
 
-## 第 6 部分 — 连接性与网络 (10%)
+## 第 6 部分 — 连接性与网络（10%）
 
-- 配置客户端/服务器连接（例如：db2discovery）的能力
+- 配置客户端/服务器连接（例如：`db2discovery`）的能力
 - 管理与主机系统连接的能力
 - 识别并解决连接问题的能力
 
-
-
-
-
-# IBM Certified DBA for DB2 9 for LUW，升级认证
-(736)
+# IBM Certified DBA for DB2 9 for LUW，升级认证（736）
 
 如果您是众多已获得 IBM Certified Database Administrator – DB2 UDB V8.1 for Linux, UNIX and Windows 认证的人员之一，这是一项可提供的升级考试。
 
 与版本 8 类似，您可以参加两项不同的考试来升级到 V9 DBA 认证：
 
-- 1. 考试 736 – IBM Certified Database Administrator for DB2 9 for Linux, UNIX, and Windows, 升级考试
-- 2. 考试 731 – IBM Certified Database Administrator for DB2 9 for Linux, and Windows, 完整量考试
+1. 考试 736 – IBM Certified Database Administrator for DB2 9 for Linux, UNIX, and Windows，升级考试
+2. 考试 731 – IBM Certified Database Administrator for DB2 9 for Linux, and Windows，完整量考试
 
 升级考试 736 仅适用于已获得 IBM Certified Database Administrator – DB2 UDB V8.1 for Linux, UNIX and Windows 认证的候选人。如果您通过了该考试，将获得与通过考试 731 获得的相同的证书。
 
-# 第 1 部分 — 服务器管理 (29%)
+## 第 1 部分 — 服务器管理（29%）
 
-- 理解 AUTONFIGURE 的功能
-- 手动配置通信（协议映像 (IPV6)）的能力
+- 理解 `AUTONFIGURE` 的功能
+- 手动配置通信（协议映像（`IPV6`））的能力
 - 启用自动维护的能力
-- 启用自调优内存管理器 (Self-Tuning Memory Manager)的能力
-- 启用实用程序节流 (Utility Throttling)的能力
+- 启用自调优内存管理器（Self-Tuning Memory Manager）的能力
+- 启用实用程序节流（Utility Throttling）的能力
 
-# 第 2 部分 — 数据布局 (21%)
+## 第 2 部分 — 数据布局（21%）
 
-- 创建 DATABASE（新默认行为）
-- 创建和管理自动存储 (Automatic Storage)表空间的能力
+- 创建 `DATABASE`（新默认行为）
+- 创建和管理自动存储（Automatic Storage）表空间的能力
 - 表分区知识
 - 数据行压缩知识
 
-# 第 3 部分 — XML 概念 (13%)
+## 第 3 部分 — XML 概念（13%）
 
 - 使用 XML 数据类型的能力
 - 创建和管理 XML 索引的能力
-- 使用基本 XML 函数 (XMLPARSE, XMLSERIALIZE, XMLVALIDATE, XMLQUERY)的能力
+- 使用基本 XML 函数（`XMLPARSE`、`XMLSERIALIZE`、`XMLVALIDATE`、`XMLQUERY`）的能力
 - 理解 XQuery 基础
 - 使用 DB2 工具处理 XML 数据
 
-# 第 4 部分 — 分析 DB2 活动 (16%)
+## 第 4 部分 — 分析 DB2 活动（16%）
 
-- 使用 DB2 实用程序 (db2bfd, db2mtrk, db2pd)的能力
+- 使用 DB2 实用程序（`db2bfd`、`db2mtrk`、`db2pd`）的能力
 - 监控死锁的能力
-- 使用管理程序和 SNAPSHOT 函数的能力
+- 使用管理程序和 `SNAPSHOT` 函数的能力
 
-# 第 5 部分 — 高可用性 (10.5%)
+## 第 5 部分 — 高可用性（10.5%）
 
-- 使用 RECOVER DATABASE 命令的能力
-- 高可用灾难恢复 (HADR)知识
+- 使用 `RECOVER DATABASE` 命令的能力
+- 高可用灾难恢复（HADR）知识
 
-# 第 6 部分 — 安全 (10.5%)
+## 第 6 部分 — 安全（10.5%）
 
-- 理解基于标签的访问控制 (LBAC)
+- 理解基于标签的访问控制（LBAC）
 - 新身份类型的知识
 
 # 附录 B
 
-# DB2DEMO 安装
+## DB2DEMO 安装
 
-## 引言
+### 引言
 
 现在您已经阅读了此书，您可能想针对 DB2 尝试一些示例。DB2DEMO 程序允许您探索 DB2 的各种功能，包括：
 
@@ -24854,7 +23587,7 @@ IBM 认证数据库管理员是 Linux、UNIX 和 Windows 平台的首席 DBA。�
   - 递归 SQL
   - 外连接
 - 高级对象关系特性
-  - 大对象支持 (BLOBs)
+  - 大对象支持（BLOBs）
   - 用户定义类型
   - 用户定义函数
   - 表函数
@@ -24869,23 +23602,20 @@ IBM 认证数据库管理员是 Linux、UNIX 和 Windows 平台的首席 DBA。�
   - 星型架构支持
   - 多维度分析
   - 动态位图索引
-
-# 1038 附录 B DB2DEMO 安装
-
-- 自动汇总表
-- 压缩
-- 表分区
-- 可管理性
-- 性能
+  - 自动汇总表
+  - 压缩
+  - 表分区
+  - 可管理性
+  - 性能
 
 此演示让您尝试 DB2 的许多功能，包括一些管理和性能特性。您唯一需要做的就是检查您是否符合要求，然后安装代码！
 
-# 安装要求
+## 安装要求
 
-此程序旨在演示 DB2 9 产品的功能。为了使用此程序，您需要以下配置： 
+此程序旨在演示 DB2 9 产品的功能。为了使用此程序，您需要以下配置：
 
-- Windows 操作系统 (Windows 2000/XP/2003/Vista)
-- 浏览器 (Internet Explorer, Firefox 或任何合适的浏览器)
+- Windows 操作系统（Windows 2000/XP/2003/Vista）
+- 浏览器（Internet Explorer、Firefox 或任何合适的浏览器）
 - 具有带有 SAMPLE 数据库的 DB 系统访问权限
 
 您的工作站或笔记本电脑应至少有 384M 内存来运行 Windows 和 DB2，尽管超过 512M 为理想。DB2DEMO 程序本身需要大约 3MB 的磁盘空间存储程序和帮助文件，但可能会增长到 20MB 以存储演示期间创建的示例表。
@@ -24897,45 +23627,48 @@ IBM 认证数据库管理员是 Linux、UNIX 和 Windows 平台的首席 DBA。�
 - AIX
 - HP
 - SUN
-- Linux (所有平台)
-- Windows 2000, Windows XP, Windows 2003
-- iSeries (需要 DB2 Connect)
-- z/OS (需要 DB2 Connect)
+- Linux（所有平台）
+- Windows 2000、Windows XP、Windows 2003
+- iSeries（需要 DB2 Connect）
+- z/OS（需要 DB2 Connect）
 
 尽管数据库可以位于这些机器之一上，但实际客户端（演示）必须在 Windows 2000/XP/2003/Vista 上运行。有关如何操作的详细信息，请参见安装程序章节。
 
-DB2DEMO 程序也可以用于您环境中的其他 DB2 数据库，但许多示例专门适用于 Linux, UNIX 和 Windows 平台上的 DB2。
+DB2DEMO 程序也可以用于您环境中的其他 DB2 数据库，但许多示例专门适用于 Linux、UNIX 和 Windows 平台上的 DB2。
 
-# DB2 数据库服务器
+## DB2 数据库服务器
 
 可以通过 DB2 网站安装 DB2 数据库服务器：
-www-306.ibm.com/software/data/db2/express/download.html
+
+`www-306.ibm.com/software/data/db2/express/download.html`
 
 DB2 Express-C 是面向社区的 DB2 Express 版本。它是用于 XML、C/C++、Java、.NET、PHP 等开发的免费数据服务器。DB2 Express-C 可以运行在双核 CPU 上，内存高达 4 GB，使用任何存储系统，且对数据库大小或其他限制的人为限制。
 
-# 安装 DB2DEMO 程序
+## 安装 DB2DEMO 程序
 
-# 安装文件
+### 安装文件
 
-DB2DEMO 安装程序由一个文件组成，该文件包含执行文件以及运行程序所需的所有支持文件。从互联网下载的文件名为 DB2SETUP.EXE。
+DB2DEMO 安装程序由一个文件组成，该文件包含执行文件以及运行程序所需的所有支持文件。从互联网下载的文件名为 `DB2SETUP.EXE`。
 
-# 设置与安装
+### 设置与安装
 
 在开始安装之前，请确保您满足相关要求。
 
-在放置 DB2SETUP 的目录内，双击文件名，或从命令行执行它：
+在放置 `DB2SETUP` 的目录内，双击文件名，或从命令行执行它：
+
+```text
+DB2SETUP.EXE
+```
+
+
+
+`C:\DOWNLOADS>DB2SETUP.EXE`
 
 ```
-C:\DOWNLOADS>DB2SETUP.EXE
-```
-
 点击 DB2SETUP 后，程序在解压文件时会出现一些临时消息，然后将看到第一个安装界面。
+```
 
-
-
-
-
-# 安装要求
+## 安装要求
 
 点击“继续”按钮后，程序将开始复制文件：
 
@@ -24945,39 +23678,39 @@ C:\DOWNLOADS>DB2SETUP.EXE
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1070_1.png)
 
-根据你所安装的操作系统，你可能会被要求重启机器，或者获得试用演示程序的选项，或者查看程序随附带的额外 README 信息。你也可以通过进入 DB2DEMO 组并从该组中选择 DB2DEMO 图标（或你定义的任何名称）并点击它来启动 DB2DEMO：
+根据你所安装的操作系统，你可能会被要求重启机器，或者获得试用演示程序的选项，或者查看程序随附带的额外 `README` 信息。你也可以通过进入 `DB2DEMO` 组并从该组中选择 `DB2DEMO` 图标（或你定义的任何名称）并点击它来启动 `DB2DEMO`：
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1070_2.png)
 
-要查看程序如何工作，请查看“运行程序”章节。如果你想针对另一台服务器运行 DB2DEMO 程序，请阅读“自定义”说明说明。
+要查看程序如何工作，请查看“运行程序”章节。如果你想针对另一台服务器运行 `DB2DEMO` 程序，请阅读“自定义”说明。
 
-# 附录 B DB2DEMO 安装
+## 附录 B DB2DEMO 安装
 
-## 高级安装
+### 高级安装
 
-数据库可以安装在任何支持 DB2 的服务器上。创建该数据库的程序名为 `db2samp1`，可以在服务器的 `sqllib/bin` 目录下找到。当你在另一台机器上安装数据库时，你仍然需要在 Windows 2000 或 Windows XP 上使用 DB2DEMO 程序，但数据将位于本地机器的服务器上。
+数据库可以安装在任何支持 DB2 的服务器上。创建该数据库的程序名为 `db2samp1`，可以在服务器的 `sqllib/bin` 目录下找到。当你在另一台机器上安装数据库时，你仍然需要在 Windows 2000 或 Windows XP 上使用 `DB2DEMO` 程序，但数据将位于本地机器的服务器上。
 
 为了在不同的服务器上安装此程序，你将非常熟悉 DB2 命令以及你正在操作的机器安全性。在不同服务器上运行此演示程序所需的步骤如下：
 
-- 1. 在操作系统上安装 DB2。
-- 2. 创建一个可以管理 DB2 系统的特权用户 ID。
-- 3. 在系统上创建示例数据库。
-- 4. 在此系统上创建一个可以从远程系统连接的用户 ID。
-- 5. 设置 Windows 客户端，使 SAMPLE 数据库被正确编目。这包括在工作站上安装 DB2 客户端应用程序启用器代码。没有此代码，演示程序无法运行。
+1. 在操作系统上安装 DB2。
+2. 创建一个可以管理 DB2 系统的特权用户 ID。
+3. 在系统上创建示例数据库。
+4. 在此系统上创建一个可以从远程系统连接的用户 ID。
+5. 设置 Windows 客户端，使 `SAMPLE` 数据库被正确编目。这包括在工作站上安装 DB2 客户端应用程序启用器代码。没有此代码，演示程序无法运行。
 
-安装完成后，你应该能够从客户端运行 DB2DEMO 程序并连接到远程 SAMPLE 数据库。
+安装完成后，你应该能够从客户端运行 `DB2DEMO` 程序并连接到远程 `SAMPLE` 数据库。
 
-## 卸载演示
+### 卸载演示
 
-要卸载 DB2DEMO 程序，请使用服务组中的“添加/删除”面板删除该应用程序：
+要卸载 `DB2DEMO` 程序，请使用服务组中的“添加/删除”面板删除该应用程序：
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1071_0.png)
 
-选择 DB2 演示程序，各种文件将被删除。如果你个性化了任何文件，该目录可能不会被删除。
+选择 DB2 演示程序，各种文件将被删除。如果你个性化（个性化了）任何文件，该目录可能不会被删除。
 
-# 使用 DB2DEMO 程序
+## 使用 DB2DEMO 程序
 
-要启动演示程序，请前往命令行或使用 Windows 资源管理器在 DB2DEMO 目录（或你选择放置它的位置）启动 DB2DEMO 程序。
+要启动演示程序，请前往命令行或使用 Windows 资源管理器在 `DB2DEMO` 目录（或你选择放置它的位置）启动 `DB2DEMO` 程序。
 
 你也可以从命令行运行它：
 
@@ -24991,30 +23724,30 @@ DB2DEMO [filename.sql] {option1=value option2=value ...}
 
 将显示若干条简短信息，最后将显示演示界面。
 
-# 附录 B DB2DEMO 安装
+## 附录 B DB2DEMO 安装
 
 注意：程序启动时将使用多个默认值：
 
-- password=
-- userid=
-- database="SAMPLE"
-- file="DB2DEMO.SQL"
-- font="Tahoma"
-- fontsize="10"
-- schema="userid if blank"
-- autostart="on"
-- sqllib="c:\program files\ibm\sqlib" 或如果设置了 DB2INSTPROF 值
-- instance="DB2" 或如果设置了 DB2INSTANCE 值
+- `password=`
+- `userid=`
+- `database="SAMPLE"`
+- `file="DB2DEMO.SQL"`
+- `font="Tahoma"`
+- `fontsize="10"`
+- `schema="userid if blank"`
+- `autostart="on"`
+- `sqllib="c:\program files\ibm\sqlib"` 或如果设置了 `DB2INSTPROF` 值
+- `instance="DB2"` 或如果设置了 `DB2INSTANCE` 值
 
-如果找不到 DB2DEMO sql 文件，将显示错误信息，屏幕上的命令部分将为空白。在连接到 SAMPLE 数据库时也会发生错误。如果发生任何类型的故障，程序将显示错误并调出演示界面。此时，你需要检查你到 SAMPLE 数据库的连接性。
+如果找不到 `DB2DEMO` SQL 文件，将显示错误信息，屏幕上的命令部分将为空白。在连接到 `SAMPLE` 数据库时也会发生错误。如果发生任何类型的故障，程序将显示错误并调出演示界面。此时，你需要检查你到 `SAMPLE` 数据库的连接性。
 
-## 面板概览
+### 面板概览
 
-DB2DEMO 程序的主界面所示。
+`DB2DEMO` 程序的主界面所示。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1073_0.png)
 
-# 使用 DB2DEMO 程序
+## 使用 DB2DEMO 程序
 
 演示界面分为若干部分。屏幕的最左侧是：
 
@@ -25038,13 +23771,13 @@ DB2DEMO 程序的主界面所示。
 
 下节描述了主演示界面中找到每个窗口的功能。
 
-## 主面板
+### 主面板
 
 | DB2 演示程序 | 文件 |
 | :--- | :--- |
 | 主面板有六项内容。 | 每个项目在下方有详细说明。 |
 
-![](img/2fc7488b6558d6b99bbc7356ac4116b1_1073_0.png) | 注意：当你完成 DB2DEMO 程序的使用时，点击“退出”关闭应用程序。 |
+![](img/2fc7488b6558d6b99bbc7356ac4116b1_1073_0.png) | 注意：当你完成 `DB2DEMO` 程序的使用时，点击“退出”关闭应用程序。 |
 | 设置 |
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1074_0.png) | 这里的菜单有两个选项。 |
@@ -25061,55 +23794,51 @@ DB2DEMO 程序的主界面所示。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1076_0.png) | 当你点击“分隔符”按钮时，程序将加载该文件。 |
 
-
-
-
-
 ## 1052 附录 B DB2DEMO 安装
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1079_0.png)
 
-## 最大行数
+### 最大行数
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1079_1.png)
 
-默认情况下，DB2DEMO 将任何结果集返回的行数限制为 1000 行。你可以通过将最大行数设置为 `Off` 来覆盖此设置。
+默认情况下，`DB2DEMO` 将任何结果集返回的行数限制为 1000 行。你可以通过将最大行数设置为 `Off` 来覆盖此设置。
 
-## 查询日志
+### 查询日志
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1079_2.png)
 
 查询日志记录了程序中执行的命令。默认情况下，所有命令都会记录在查询日志窗口中。可以更改此设置，每当执行新的命令流时日志都会清空。这在你需要调试 SQL 脚本时有时非常有用。
 
-## Windows
+### Windows
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1079_3.png)
 
-Windows 菜单中有两个选项。第一个选项将打开另一个 SQL 窗口（见下一页）。
+`Windows` 菜单中有两个选项。第一个选项将打开另一个 SQL 窗口（见下一页）。
 
 ## 1053 使用 DB2DEMO 程序
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1080_0.png)
 
-通常情况下，DB2DEMO 程序在启动时会打开一个 SQL 窗口。然而，你可能希望打开额外的窗口来比较两组不同的 SQL。打开的 SQL 窗口数量没有限制，但当显示过多窗口时，可能很难追踪哪个窗口处于激活状态！
+通常情况下，`DB2DEMO` 程序在启动时会打开一个 SQL 窗口。然而，你可能希望打开额外的窗口来比较两组不同的 SQL。打开的 SQL 窗口数量没有限制，但当显示过多窗口时，可能很难追踪哪个窗口处于激活状态！
 
 如果你想清除所有 SQL 窗口，请选择“关闭所有窗口”（Close All Windows）选项。请注意，这将移除所有 SQL 窗口，因此如果你想继续运行 SQL 命令，则至少打开一个 SQL 窗口。
 
-## 工具
+### 工具
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1080_1.png)
 
-DB2 控制中心（DB2 Control Center）和信息中心（Information Center）都可以通过“工具”菜单访问。注意，必须安装这些 DB2 程序，DB2DEMO 程序才能访问它们。
+DB2 控制中心（DB2 Control Center）和信息中心（Information Center）都可以通过“工具”菜单访问。注意，必须安装这些 DB2 程序，`DB2DEMO` 程序才能访问它们。
 
-## 帮助
+### 帮助
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1080_2.png)
 
 ## 1054 附录 B DB2DEMO 安装
 
-帮助菜单包含与 DB2DEMO 程序相关的所有帮助主题的链接。
+帮助菜单包含与 `DB2DEMO` 程序相关的所有帮助主题的链接。
 
-## SQL 输入窗口
+### SQL 输入窗口
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1081_0.png)
 
@@ -25131,14 +23860,15 @@ SQL 输入窗口顶部有若干按钮。按钮（从左到右）为：
 
 当你运行 `Run SQL` 按钮时，它会将 SQL 提交给 DB2 执行。你可以从此程序执行的 SQL 类型有：
 
-UPDATE, INSERT, DELETE, CREATE, DROP, VALUES, GRANT, REVOKE, WITH, XQUERY
+`UPDATE`, `INSERT`, `DELETE`, `CREATE`, `DROP`, `VALUES`, `GRANT`, `REVOKE`, `WITH`, `XQUERY`
 
-你无法在此屏幕上运行 LOAD、CONNECT 或任何实用程序。通常，大多数 SQL 都可以运行。最糟糕的情况是你收到来自 DB2 的错误消息！
+你无法在此屏幕上运行 `LOAD`、`CONNECT` 或任何实用程序。通常，大多数 SQL 都可以运行。最糟糕的情况是你收到来自 DB2 的错误消息！
 
 要在此窗口中输入 SQL 语句，请将光标放在输入区域并点击鼠标左键，然后开始输入。你可以通过在每个语句末尾放置 `;` 来分隔多个 SQL 命令：
 
 ```
 select * from employee;
+
 select * from department;
 ```
 
@@ -25148,23 +23878,24 @@ select * from department;
 
 ```
 select * from employee
+
 select * from department
 ```
 
 当你点击 `RUN SQL` 按钮时，消息窗口将变为 `RUNNING`（运行中），并在 SQL 完成后显示最终的错误消息。
 
-如果命令有任何输出（OUTPUT），`OUTPUT` 窗口将更新。该输出窗口允许对数据进行水平和垂直滚动。注意，列输出受到限制，以防止 `SELECT` 语句返回过量数据。
+如果命令有任何输出（`OUTPUT`），`OUTPUT` 窗口将更新。该输出窗口允许对数据进行水平和垂直滚动。注意，列输出受到限制，以防止 `SELECT` 语句返回过量数据。
 
 你还可以使用额外的非 SQL 命令：
 
-- VIEW
-- EXPLAIN
-- Autonun On/Off
-- Clear
-- Paste
-- Show
-- Magnify
-- Plot
+- `VIEW`
+- `EXPLAIN`
+- `Autonun On/Off`
+- `Clear`
+- `Paste`
+- `Show`
+- `Magnify`
+- `Plot`
 
 ## 1055 附录 B DB2DEMO 安装
 
@@ -25181,10 +23912,6 @@ select * from department
 ## 1058 附录 B DB2DEMO 安装
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1087_0.png)
-
-
-
-
 
 ## 使用 DB2DEMO 程序
 
@@ -25212,9 +23939,9 @@ select * from department
 
 如果教程包含多个面板，用户可以通过点击左箭头（位于顶部）翻页整个演示，或使用右箭头向后翻页。数字代表不同的 XQuery（或 SQL）示例，按下后将执行它们。
 
-## 查询日志
+### 查询日志
 
-命令窗口下方是查询日志（Query Log）。此窗口跟踪在任何 SQL 输入窗口中发出的所有命令。当一个 SQL 命令完成后，此窗口将更新更新，以包含已执行的命令、返回的记录、返回代码和运行时间。
+命令窗口下方是查询日志（Query Log）。此窗口跟踪在任何 SQL 输入窗口中发出的所有命令。当一个 SQL 命令完成后，此窗口将更新，以包含已执行的命令、返回的记录、返回代码和运行时间。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1089_1.png)
 
@@ -25262,7 +23989,7 @@ SQL 信息行为你提供了已执行的精确 SQL 语句。通过点击此行�
 
 注意，图表显示了执行命令所花费的毫秒数，右上角的数字是命令的平均执行时间。点击图表任意位置关闭性能屏幕。
 
-## 高级编程信息
+### 高级编程信息
 
 本节讨论了 SQL 窗口内提供的可用功能，这些功能可用于自定义演示：
 
@@ -25285,74 +24012,73 @@ SQL 信息行为你提供了已执行的精确 SQL 语句。通过点击此行�
 - 打开、关闭、写入、写入 SQL
 - 调试模式
 
-## 启动选项
+### 启动选项
 
-DB2DEMO 程序允许使用若干命令行选项：
+`DB2DEMO` 程序允许使用若干命令行选项：
 
 ```
 DB2DEMO [filename.sql] {option1=value option2=value ...}
 ```
 
+
+
 每个选项由选项名称、等号以及带引号的值（单引号或双引号）组成。选项之间用空格分隔。
 
-- password=
+- `password=`
 
-默认情况下，DB2DEMO 程序不提供
+默认情况下，`DB2DEMO` 程序不提供
 
 ## 高级编程信息 1064
 
-- userid=
+- `userid=`
 
-默认情况下，DB2DEMO 程序不提供
+默认情况下，`DB2DEMO` 程序不提供
 
-- database=
+- `database=`
 
-- database="SAMPLE"
+- `database="SAMPLE"`
 
-- database.SQL
+- `database.SQL`
 
-- file="DB2DEMO"
+- `file="DB2DEMO"`
 
-- Arial
-- Lucida Console
-- MS Sans Serif
-- Tahoma
+- `Arial`
+- `Lucida Console`
+- `MS Sans Serif`
+- `Tahoma`
 
-- fontsize="10"
+- `fontsize="10"`
 
-- autostart="on"
+- `autostart="on"`
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1094_0.png)
 
 ## 1068 附录 B DB2DEMO 安装
 
-- schema=(userid)
+- `schema=(userid)`
 
-- sqllib=(DB2INSTPROF)
-instance=(DB2INSTANCE)
-
-
-
+- `sqllib=(DB2INSTPROF)`
+- `instance=(DB2INSTANCE)`
 
 # 高级编程信息 1069
 
-查询程序中的变量设置（使用 %DUMPVARS 命令）将显示这些变量的设置：
+查询程序中的变量设置（使用 `%DUMPVARS` 命令）将显示这些变量的设置：
 
 DB2DEMO 变量
 | 变量 | 值 |
 |---|---|
-| VERSION | 9.0.1 |
-| DATE | 2007-03-27 |
-| FONT | Tahoma |
-| FSIZE | 10 |
-| DATABASE | SAMPLE |
-| USERID | BAKLARZ |
-| PASSWORD | C1Program-!DR2Dama |
+| `VERSION` | 9.0.1 |
+| `DATE` | 2007-03-27 |
+| `FONT` | Tahoma |
+| `FSIZE` | 10 |
+| `DATABASE` | SAMPLE |
+| `USERID` | BAKLARZ |
+| `PASSWORD` | C1Program-!DR2Dama |
 
-总结来说，DB2DEMO 设置选项的顺序为：
+总结来说，`DB2DEMO` 设置选项的顺序为：
 
 - 启动（默认）值
-- 来自 DB2DEMO.INI 文件的选项
+- 来自 `DB2DEMO.INI` 文件的选项
 - 命令行选项
 
 # SQL 命令
@@ -25363,48 +24089,51 @@ SQL 输入窗口可用于发布 SQL 和其他类型的命令。在大多数示�
 select * from employee
 ```
 
-然而，某些情况下您需要发布多个 SQL 命令。为了实现这一点，请在每个 SQL 命令后跟一个分号 (;;)：
+然而，某些情况下您需要发布多个 SQL 命令。为了实现这一点，请在每个 SQL 命令后跟一个分号 (`;;`)：
 
 ```
 select * from employee;
+
 select count(*) from department;
 ```
 
-如果你使用的 SQL 需要使用分号（例如触发器定义），请在每个 SQL 语句的开头使用美元符号 ($)、井号 (#) 或 @ 符号 (@) 而不是分号：
+如果你使用的 SQL 需要使用分号（例如触发器定义），请在每个 SQL 语句的开头使用美元符号 (`$`)、井号 (`#`) 或 `@` 符号 (`@`) 而不是分号：
 
 ```
 #select * from employee
+
 #select count(*) from department
 ```
 
 # 1070 附录 B DB2DEMO 安装
 
-如果解析器在第一个位置没有看到 "$" "#" 或 "@"，它将假设你将使用分号。如果找到任何特殊符号，它将使用这些分隔符作为缩进标识来解析语句。
+如果解析器在第一个位置没有看到 `"$"` `"#"` 或 `"@"`，它将假设你将使用分号。如果找到任何特殊符号，它将使用这些分隔符作为缩进标识来解析语句。
 
 希望你的 SQL 中不会有太多需要分号的情况。
 
 # 非 SQL 命令
 
-所有非 SQL 命令都以百分号 (%) 开头。这些命令在下文中进行了了描述，但可以分为以下几类：
+所有非 SQL 命令都以百分号 (`%`) 开头。这些命令在下文中进行了了描述，但可以分为以下几类：
 
-- %var, %dumpvars — 设置变量
-- %msg — 显示请求确认的消息
-- %graph — 绘制 SQL 语句性能图
-- %cmd — 发布操作系统命令
-- %load, %loadsql — 加载数据和 SQL 命令
-- %view — 检查文本对象
-- %plot — 根据输出窗口绘制数据图
-- %db2 — 通过 db2 命令行界面向 DB2 发布命令
-- %clear — 清除 SQL 输入区域
-- %connect — 连接到另一个数据库
-- %tables — 列出数据库中的表
-- %describe — 描述列布局
-- %open, %write, %writesql, %close — I/O 命令
+- `%var`, `%dumpvars` — 设置变量
+- `%msg` — 显示请求确认的消息
+- `%graph` — 绘制 SQL 语句性能图
+- `%cmd` — 发布操作系统命令
+- `%load`, `%loadsql` — 加载数据和 SQL 命令
+- `%view` — 检查文本对象
+- `%plot` — 根据输出窗口绘制数据图
+- `%db2` — 通过 `db2` 命令行界面向 DB2 发布命令
+- `%clear` — 清除 SQL 输入区域
+- `%connect` — 连接到另一个数据库
+- `%tables` — 列出数据库中的表
+- `%describe` — 描述列布局
+- `%open`, `%write`, `%writesql`, `%close` — I/O 命令
 
-如果命令以 % 开头，后面跟着一个或多个空格，或者跟着一个星号 (*)，则该命令被视为注释，直到分号结束。例如，以下是一行注释：
+如果命令以 `%` 开头，后面跟着一个或多个空格，或者跟着一个星号 (`*`)，则该命令被视为注释，直到分号结束。例如，以下是一行注释：
 
 ```
 % This is a comment;
+
 % And so is this;
 ```
 
@@ -25416,26 +24145,31 @@ select count(*) from department;
 
 ```
 %var var1=val1
+
 var2="value 2 with double quotes"
+
 var3='value 3 with single quotes'
+
 var4=
+
 var5;
 ```
 
-可以在 %var 命令块中设置多个变量。不需要为每组值设置单独的 var 语句，但以下写法也是合法的：
+可以在 `%var` 命令块中设置多个变量。不需要为每组值设置单独的 `var` 语句，但以下写法也是合法的：
 
 ```
 %var var1=var1;
+
 %var var2="value 2 with double quotes";
 ```
 
-需要记住的是，分号分隔了 %var 命令的结束。
+需要记住的是，分号分隔了 `%var` 命令的结束。
 
 关于变量以及可以赋值给它们的值的关键信息：
 
 - 变量名
 
-变量名对大小不敏感，因此名称中的大小写字母没有区别。变量名的长度也是无限的，但你可能不希望名字太长，且名称只能由字母、数字和 "-" 字符组成。空格始终表示变量名的结束。以下是良好的变量名示例：
+变量名对大小不敏感，因此名称中的大小写字母没有区别。变量名的长度也是无限的，但你可能不希望名字太长，且名称只能由字母、数字和 `"-"` 字符组成。空格始终表示变量名的结束。以下是良好的变量名示例：
 
 ```
 var1 this_is_a_long_name a123
@@ -25455,11 +24189,11 @@ var1 this_is_a_long_name a123
 %var city=Toronto;
 ```
 
-如果你不在等号后放置值，(city)= 或不带等号使用变量名 (city)，程序将为此对象分配一个空值。
+如果你不在等号后放置值，`(city)=` 或不带等号使用变量名 (`city`)，程序将为此对象分配一个空值。
 
 # 1072 附录 B DB2DEMO 安装
 
-包含空格或特殊字符的字符串可以用单引号 ('') 或双引号 ("") 括起来。只需确保结束字符串结束并使用相同的分隔符即可！
+包含空格或特殊字符的字符串可以用单引号 (`''`) 或双引号 (`""`) 括起来。只需确保结束字符串结束并使用相同的分隔符即可！
 
 ```
 %var city="New York";
@@ -25470,15 +24204,12 @@ var1 this_is_a_long_name a123
 
 # 1074 附录 B DB2DEMO 安装
 
-这些语句中的每一个都是可选的，但你真的应该提供一些图表！graph 命令中的参数是：
+这些语句中的每一个都是可选的，但你真的应该提供一些图表！`graph` 命令中的参数是：
 
-- "title=text" — 设置图表标题
-- color=red/blue/green — 设置下一个图表的颜色
-- repeat=count — 执行 SQL 的次数
-- sql=select... — 绘制 SQL 的性能
-
-
-
+- `"title=text"` — 设置图表标题
+- `color=red/blue/green` — 设置下一个图表的颜色
+- `repeat=count` — 执行 SQL 的次数
+- `sql=select...` — 绘制 SQL 的性能
 
 ## 高级编程信息
 
@@ -25489,19 +24220,25 @@ var1 this_is_a_long_name a123
 
 ```
 [1] %graph
+
 [2] color=blue
+
 [3] title="Query without Summary Tables (Blue)"
+
 [4] repeat=20
+
 [5] sql="select store, quarter, item, sum(quantity)
+
 from transactions
+
 group by cube(store, quarter, item)"
 ```
 
-- [1] 图表命令
-- [2] 将图表颜色设置为蓝色
-- [3] 图表标题
-- [4] 在性能图中重复执行该 SQL 20 次
-- [5] 用于绘图的 SQL 语句
+- `[1]` 图表命令
+- `[2]` 将图表颜色设置为蓝色
+- `[3]` 图表标题
+- `[4]` 在性能图中重复执行该 SQL 20 次
+- `[5]` 用于绘图的 SQL 语句
 
 当语句完成 20 次迭代后，绘图将结束。你可以通过关闭窗口或在 SQL 输入窗口外下发另一条 SQL 命令来停止绘图。
 
@@ -25511,17 +24248,25 @@ group by cube(store, quarter, item)"
 
 ```
 %compare
+
 title="some title"
+
 repeat=[1..50]
+
 sql1=
+
 select *
+
 from employee
+
 label1="what is this"
+
 sql2="select * from department"
+
 label2="Another SQL";
 ```
 
-`title` 指绘图的原因，而 `label1` 和 `label2` 关键字描述了各个 SQL 图表的内容。`sql1` 和 `sql2` 字符串中的 SQL 将执行 "x" 次，然后绘制平均值。你可能需要考虑将 `repeat` 值至少设置为 10 或 20，以便平滑性能波动。该默认值为 1。
+`title` 指绘图的原因，而 `label1` 和 `label2` 关键字描述了各个 SQL 图表的内容。`sql1` 和 `sql2` 字符串中的 SQL 将执行 `"x"` 次，然后绘制平均值。你可能需要考虑将 `repeat` 值至少设置为 10 或 20，以便平滑性能波动。该默认值为 1。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1102_0.png)
 
@@ -25531,7 +24276,7 @@ label2="Another SQL";
 
 ## 从输出窗口绘制数据
 
-DB2DEMO 程序还可以绘制位于 SQL 输出窗口中的值。在绘制数据之前，你必须先在输出窗口中创建一些结果。如果窗口中没有结果，绘图按钮将无法工作并显示错误消息。
+`DB2DEMO` 程序还可以绘制位于 SQL 输出窗口中的值。在绘制数据之前，你必须先在输出窗口中创建一些结果。如果窗口中没有结果，绘图按钮将无法工作并显示错误消息。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1103_1.png)
 
@@ -25557,7 +24302,7 @@ select lastname, salary from employee
 
 - 分组列 (Grouping Column)
 
-对于 3D 或 2D 折线图，你必须指定一个分组列。该列用于确定线条的何时结束。例如，以下 select 语句（使用 SAMPLE 数据库的数据）将生成一系列值：
+对于 3D 或 2D 折线图，你必须指定一个分组列。该列用于确定线条的何时结束。例如，以下 `select` 语句（使用 `SAMPLE` 数据库的数据）将生成一系列值：
 
 ```
 select lastname, salary from employee
@@ -25573,15 +24318,19 @@ select lastname, salary from employee
 
 ```
 %PLOT
+
 { LINE | 2DLINE | BAR | 2BAR | PIE | MENU }
+
 DATA=Column with data to plot
+
 [ GROUP=Grouping column ]
+
 [ LABEL=Column with labels ]
 ```
 
 ## 消息支持
 
-DB2DEMO 演示程序具有生成消息的能力，该消息可用于执行某些 SQL 的部分。此功能作为表创建过程的一部分，以便在不编辑实际 SQL 的情况下对演示进行自定义
+`DB2DEMO` 演示程序具有生成消息的能力，该消息可用于执行某些 SQL 的部分。此功能作为表创建过程的一部分，以便在不编辑实际 SQL 的情况下对演示进行自定义
 
 # 附录 B DB2DEMO 安装
 
@@ -25595,8 +24344,11 @@ DB2DEMO 演示程序具有生成消息的能力，该消息可用于执行某些
 
 ```
 %msg
+
 title="some title"
+
 text="Some information about this menu"
+
 ;
 ```
 
@@ -25608,15 +24360,11 @@ text="Some information about this menu"
 %loadsql filename;
 ```
 
-当你使用此命令时，文件名的内容将加载到程序中，并移除现有的命令。有时，将以下代码段放入你的 .SQL 文件中是有用的。
-
-
-
-
+当你使用此命令时，文件名的内容将加载到程序中，并移除现有的命令。有时，将以下代码段放入你的 `.SQL` 文件中是有用的。
 
 ## 1082 附录 B DB2DEMO 安装
 
-表。如果你点击CEL，此脚本中的所有执行都将停止。如果你希望脚本在没有用户输入的情况下停止，请使用 %EXIT 命令停止执行：
+表。如果你点击 `CEL`，此脚本中的所有执行都将停止。如果你希望脚本在没有用户输入的情况下停止，请使用 `%EXIT` 命令停止执行：
 
 ```sql
 %IF EXISTS=SAMPLE ;
@@ -25624,47 +24372,49 @@ text="Some information about this menu"
 %ENDIF;
 ```
 
-最后一点说明：IF 和 ENDIF 语句必须以分号结束，与其他所有命令一样。
+最后一点说明：`IF` 和 `ENDIF` 语句必须以分号结束，与其他所有命令一样。
 
 ## 连接 (Connect)
 
-%CONNECT 命令允许你连接另一个数据库。connect 命令的语法如下：
+`%CONNECT` 命令允许你连接另一个数据库。`connect` 命令的语法如下：
 
 ```sql
 %CONNECT DATABASE=database name
+
 [ USERID=userid ]
+
 [ PASSWORD=password ]
 ```
 
-这些选项告诉程序如何附加到数据库。你通常指定数据库名称，然后可选地指定你想要连接时使用的 userid 和密码。这些参数在下文中有更详细描述：
+这些选项告诉程序如何附加到数据库。你通常指定数据库名称，然后可选地指定你想要连接时使用的 `userid` 和密码。这些参数在下文中有更详细描述：
 
-- DATABASE=value
+- `DATABASE=value`
 
-这是你想要连接的数据库名称。为了使此功能生效，数据库本身必须在本地客户端目录或 LDAP 目录中定义。你应该将此值作为 connect 命令的一部分提供，否则 connect 命令将仅仅重新连接到现有数据库。
+这是你想要连接的数据库名称。为了使此功能生效，数据库本身必须在本地客户端目录或 LDAP 目录中定义。你应该将此值作为 `connect` 命令的一部分提供，否则 `connect` 命令将仅仅重新连接到现有数据库。
 
-- USERID=value
+- `USERID=value`
 
-userid 字段是可选的，可以配合密码字段使用，也可以单独使用。如果不提供 userid，系统将使用你当前的 userid 和密码。
+`userid` 字段是可选的，可以配合密码字段使用，也可以单独使用。如果不提供 `userid`，系统将使用你当前的 `userid` 和密码。
 
-- PASSWORD=value
+- `PASSWORD=value`
 
-密码是可选的，通常与 userid 关联。
+密码是可选的，通常与 `userid` 关联。
 
-connect 命令会重置当前连接，因此如果你的 connect 命令失败，你将无法在该点发布任何 SQL 命令。
+`connect` 命令会重置当前连接，因此如果你的 `connect` 命令失败，你将无法在该点发布任何 SQL 命令。
 
 ## 高级编程信息 1083
 
-如果你在不带任何参数的情况下输入 %CONNECT 命令，或者从下拉菜单（选项）中使用 CONNECT 命令，将显示以下菜单：
+如果你在不带任何参数的情况下输入 `%CONNECT` 命令，或者从下拉菜单（选项）中使用 `CONNECT` 命令，将显示以下菜单：
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1110_0.png)
 
-在此面板上输入适当的信息并按下 CONNECT 或 CANCEL。注意，使用菜单时密码不会显示密码。
+在此面板上输入适当的信息并按下 `CONNECT` 或 `CANCEL`。注意，使用菜单时密码不会显示密码。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1110_1.png)
 
 ## 退出命令 (Exit Command)
 
-EXIT 命令会导致在执行脚本时，随其后的任何 SQL 都被忽略。以下 SQL 证明了这一点：
+`EXIT` 命令会导致在执行脚本时，随其后的任何 SQL 都被忽略。以下 SQL 证明了这一点：
 
 ```sql
 select * from employee;
@@ -25672,18 +24422,19 @@ select * from employee;
 select * from workdept;
 ```
 
-在示例中，select * from workdept 的代码将永远不会执行。exit 命令主要用于测试大型 SQL 命令脚本时的方便便利。你可以在特定的 SQL 语句后停止执行并检查结果，而无需删除命令序列中的所有 SQL。一旦你确认到该点之前的 SQL 运行正常，就可以删除 EXIT 命令并查看整个 SQL 字符串运行的结果。
+在示例中，`select * from workdept` 的代码将永远不会执行。`exit` 命令主要用于测试大型 SQL 命令脚本时的方便便利。你可以在特定的 SQL 语句后停止执行并检查结果，而无需删除命令序列中的所有 SQL。一旦你确认到该点之前的 SQL 运行正常，就可以删除 `EXIT` 命令并查看整个 SQL 字符串运行的结果。
 
 ## 列出表命令 (List Tables Command)
 
-TABLES 命令用于列出当前数据库中找到的表。该命令的语法为：
+`TABLES` 命令用于列出当前数据库中找到的表。该命令的语法为：
 
 ```sql
 %TABLES
+
 [ pattern ]
 ```
 
-如果你不向 TABLES 命令提供任何值，程序将显示数据库中找到的所有表名。然而，你可以可选地提供一个模式，程序将使用该模式来查找所有包含这些字母的表名。
+如果你不向 `TABLES` 命令提供任何值，程序将显示数据库中找到的所有表名。然而，你可以可选地提供一个模式，程序将使用该模式来查找所有包含这些字母的表名。
 
 ## 1084 附录 B DB2DEMO 安装
 
@@ -25697,13 +24448,13 @@ TABLES 命令用于列出当前数据库中找到的表。该命令的语法为�
 
 ## 描述表命令 (Describe Table Command)
 
-DESCRIBE 命令用于显示构成表内容的列。该命令的语法为：
+`DESCRIBE` 命令用于显示构成表内容的列。该命令的语法为：
 
 ```sql
 %DESCRIBE [ table name ]
 ```
 
-如果你不向 DESCRIBE 命令提供任何值，程序将显示数据库中找到的所有表的列名。然而，你可以可选地提供一个模式，程序将使用该模式描述所有包含这些字母的表。例如，命令：
+如果你不向 `DESCRIBE` 命令提供任何值，程序将显示数据库中找到的所有表的列名。然而，你可以可选地提供一个模式，程序将使用该模式描述所有包含这些字母的表。例如，命令：
 
 ```sql
 %DESCRIBE emp
@@ -25713,11 +24464,11 @@ DESCRIBE 命令用于显示构成表内容的列。该命令的语法为：
 
 ## 解释 SQL 语句 (Explain SQL Statement)
 
-EXPLAIN 命令用于显示 DB2 在执行 SQL 命令时将使用的优化。EXPLAIN 命令会产生该语句在 DB2 引擎内执行的文本表示。通过 DB2 控制中心也可以提供可视化表示，但无法从此程序直接查看。
+`EXPLAIN` 命令用于显示 DB2 在执行 SQL 命令时将使用的优化。`EXPLAIN` 命令会产生该语句在 DB2 引擎内执行的文本表示。通过 DB2 控制中心也可以提供可视化表示，但无法从此程序直接查看。
 
 该命令的语法为：
 
-注意，你可以定义多个 SQL 语句，但只有最后一个会产生 explain 语句。每个语句都需要用引号括。。如果你在 explain 的过程中更改优化级别或其他参数，你需要将每个 SQL 语句放在单独的引号字符串中。
+注意，你可以定义多个 SQL 语句，但只有最后一个会产生 `explain` 语句。每个语句都需要用引号括。。如果你在 `explain` 的过程中更改优化级别或其他参数，你需要将每个 SQL 语句放在单独的引号字符串中。
 
 ## 高级编程信息
 
@@ -25725,7 +24476,9 @@ EXPLAIN 命令用于显示 DB2 在执行 SQL 命令时将使用的优化。EXPLA
 
 ```sql
 %EXPLAIN
+
 "set current refresh age 0"
+
 "select sum(sales) from transactions"
 ```
 
@@ -25733,14 +24486,14 @@ EXPLAIN 命令用于显示 DB2 在执行 SQL 命令时将使用的优化。EXPLA
 
 ## I/O 命令 (I/O Commands)
 
-DB2DEMO 有四个允许你与文件系统交互的命令。这些命令是：
+`DB2DEMO` 有四个允许你与文件系统交互的命令。这些命令是：
 
-- OPEN filename — 打开一个文件用于输出。OPEN 命令将打开一个文件。如果文件存在，将被覆盖。文件名放在 OPEN 命令之后。
-- WRITE 'string' — 将字符串写入文件。WRITE 命令后的任何内容都将被放入文件中。该行将会追加一个换行符。
-- WRITESQL select — 将 SQL 语句写入文件。WRITESQL 语句将执行并写入结果。
-- CLOSE — 关闭文件。文件关闭后可以被程序读取。
+- `OPEN filename` — 打开一个文件用于输出。`OPEN` 命令将打开一个文件。如果文件存在，将被覆盖。文件名放在 `OPEN` 命令之后。
+- `WRITE 'string'` — 将字符串写入文件。`WRITE` 命令后的任何内容都将被放入文件中。该行将会追加一个换行符。
+- `WRITESQL select` — 将 SQL 语句写入文件。`WRITESQL` 语句将执行并写入结果。
+- `CLOSE` — 关闭文件。文件关闭后可以被程序读取。
 
-以下 SQL 将 EMPLOYEE 表的内容放入 EMPLOYEE.TXT：
+以下 SQL 将 `EMPLOYEE` 表的内容放入 `EMPLOYEE.TXT`：
 
 ```sql
 %open employee.txt;
@@ -25748,33 +24501,39 @@ DB2DEMO 有四个允许你与文件系统交互的命令。这些命令是：
 %close;
 ```
 
+
+
 ## 调试模式 (Debug Mode)
 
-如果你想测试脚本，可以在 DB2DEMO 中开启调试模式，运行脚本中的所有内容。DEBUG 命令有两个选项。默认情况下，DEBUG 命令将不等待。如果你在命令后添加可选的 wait 参数，程序将在遇到任何错误时停止（DROP 语句除外）。如果你在错误消息处点击 OK，它将继续运行脚本。如果你点击 CANCEL，脚本将停止。
+如果你想测试脚本，可以在 `DB2DEMO` 中开启调试模式，运行脚本中的所有内容。`DEBUG` 命令有两个选项。默认情况下，`DEBUG` 命令将不等待。如果你在命令后添加可选的 `wait` 参数，程序将在遇到任何错误时停止（`DROP` 语句除外）。如果你在错误消息处点击 `OK`，它将继续运行脚本。如果你点击 `CANCEL`，脚本将停止。
 
+```
 %debug wait
+```
 
 错误将停止程序：
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1113_0.png)
 
-点击 CANCEL 将停止后续 SQL 的执行。
+点击 `CANCEL` 将停止后续 `SQL` 的执行。
 
-# 附录 B DB2DEMO 安装
+## 附录 B DB2DEMO 安装
 
-## 定制 DB2DEMO 程序
+### 定制 DB2DEMO 程序
 
-### 脚本概述
+#### 脚本概述
 
-DB2DEMO.SQL（或演示脚本）在此文件中，演示程序将找到作为演示部分的章节、SQL 命令和帮助文件。你可以修改此文件以添加新示例或创建你自己的自定义脚本。
+`DB2DEMO.SQL`（或演示脚本）在此文件中，演示程序将找到作为演示部分的章节、`SQL` 命令和帮助文件。你可以修改此文件以添加新示例或创建你自己的自定义脚本。
 
-默认情况下，启动 DB2DEMO 程序时会寻找名为 DB2DEMO.SQL 的脚本文件。然而，你可以通过程序名称后添加命令来覆盖它：
+默认情况下，启动 `DB2DEMO` 程序时会寻找名为 `DB2DEMO.SQL` 的脚本文件。然而，你可以通过程序名称后添加命令来覆盖它：
 
+```
 DB2DEMO MYDEMO.SQL
+```
 
-程序将不再使用输入文件，而是读取此文件。这为你提供了创建演示脚本或尝试奇特 SQL 的选项，而不会丢失原始演示文件。
+程序将不再使用输入文件，而是读取此文件。这为你提供了创建演示脚本或尝试奇特 `SQL` 的选项，而不会丢失原始演示文件。
 
-DB2DEMO.SQL 文件包含以下内容：
+`DB2DEMO.SQL` 文件包含以下内容：
 
 ```xml
 <Include filename="filename.xmp/>
@@ -25790,8 +24549,6 @@ DB2DEMO.SQL 文件包含以下内容：
 </section>
 ```
 
-
-
 ```xml
 <sql>
 SELECT * FROM EMPLOYEE
@@ -25800,13 +24557,12 @@ SELECT * FROM EMPLOYEE
 </section>
 ```
 
-DB2DEMO SQL 文件虽然很长，但通常遵循上述的提纲类型。该文件使用 XML 标签来描述脚本中的对象，且元素必须正确嵌套。每个标签（<section>, <example>, <info>, <sql>）及其闭合标签必须单独占一行。例如，以下代码是正确的：
+`DB2DEMO` `SQL` 文件虽然很长，但通常遵循上述的提纲类型。该文件使用 `XML` 标签来描述脚本中的对象，且元素必须正确嵌套。每个标签（`<section>`、`<example>`、`<info>`、`<sql>`）及其闭合标签必须单独占一行。例如，以下代码是正确的：
 
 ```
 <section title="This is a title">
 <sql>
 ...
-
 </sql>
 </section>
 ```
@@ -25819,18 +24575,16 @@ DB2DEMO SQL 文件虽然很长，但通常遵循上述的提纲类型。该文�
 
 该脚本文件包含多个元素，包括：
 
-- 注释 <!-- Comment --> — 用于注释代码部分。
-- 包含文件 <include file="filename"> — 用于将其他文件包含脚本脚本。
-- 章节 <section title="Information about this section"> — 用于在脚本中开始一个新的主要章节。
-- 示例 <example title="Information about this example"> — 定义脚本中的单个示例。
-- 信息标签 <info> — 描述屏幕上正在查看章节或示例。
-- SQL 标签 <sql> — 包含将作为示例一部分执行的 SQL
+- 注释 `<!-- Comment -->` — 用于注释代码部分。
+- 包含文件 `<include file="filename">` — 用于将其他文件包含脚本脚本。
+- 章节 `<section title="Information about this section">` — 用于在脚本中开始一个新的主要章节。
+- 示例 `<example title="Information about this example">` — 定义脚本中的单个示例。
+- 信息标签 `<info>` — 描述屏幕上正在查看章节或示例。
+- `SQL` 标签 `<sql>` — 包含将作为示例部分执行的 `SQL`
 
-# 注释
+### 注释
 
-你可以通过在行开头使用标准的 XML 注释字符 "<!--" 在文件中嵌入注释。该行之后的所有内容都将被忽略，直到找到对应的 "-->"。这对于记录你正在操作的内容或注释你不想在文件中使用的代码非常有用。
-
-# 附录 B DB2DEMO 安装
+你可以通过在行开头使用标准的 `XML` 注释字符 `"<!--"` 在文件中嵌入注释。该行之后的所有内容都将被忽略，直到找到对应的 `"-->"`。这对于记录你正在操作的内容或注释你不想在文件中使用的代码非常有用。
 
 例如，以下脚本用于描述脚本的功能：
 
@@ -25841,11 +24595,11 @@ DB2DEMO SQL 文件虽然很长，但通常遵循上述的提纲类型。该文�
 <section ...>
 ```
 
-# 包含文件
+### 包含文件
 
-你可以将某些 SQL 放在单独的文件中，并使用 <include> 命令将它们合并。"file=" 属性用于指定文件名。文件名必须放在引号中，且命令必须用 /> 符号闭合。文件名可以是任何 Windows 文件名，DB2DEMO 使用的约定是将主要示例文件命名为 x.SQL，子章节命名为 x.XMP（例如）。你可以嵌套最多 10 层文件，达到该深度时，程序将抛出文件嵌套过深的错误信息。
+你可以将某些 `SQL` 放在单独的文件中，并使用 `<include>` 命令将它们合并。`"file="` 属性用于指定文件名。文件名必须放在引号中，且命令必须用 `/>` 符号闭合。文件名可以是任何 `Windows` 文件名，`DB2DEMO` 使用的约定是将主要示例文件命名为 `x.SQL`，子章节命名为 `x.XMP`（例如）。你可以嵌套最多 10 层文件，达到该深度时，程序将抛出文件嵌套过深的错误信息。
 
-例如，以下脚本加载了所有与 DB2DEMO 程序相关的示例：
+例如，以下脚本加载了所有与 `DB2DEMO` 程序相关的示例：
 
 ```
 <section title="DB2 Demonstration Program">
@@ -25865,15 +24619,15 @@ welcome to the DB2 Demonstration Program! 这组命令向你展示了 DB2 数据
 <include file="db2-optimizer.xmp"/>
 ```
 
-# 高级编程信息
+### 高级编程信息
 
-# 章节
+#### 章节
 
-章节用于将多个示例或教程分组。章节也可以用于分组其他章节。当章节未展开时，它在命令窗口中显示为一个名称旁边带有 [+] 的条目。这是一个所有章节都已关闭的命令窗口示例：
+章节用于将多个示例或教程分组。章节也可以用于分组其他章节。当章节未展开时，它在命令窗口中显示为一个名称旁边带有 `[+]` 的条目。这是一个所有章节都已关闭的命令窗口示例：
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1116_0.png)
 
-要执行其中一个示例 SQL 命令，用户需要点击上面的章节之一。如果你点击 [+] 号，它将展开并显示各种 SQL 命令和屏幕：
+要执行其中一个示例 `SQL` 命令，用户需要点击上面的章节之一。如果你点击 `[+]` 号，它将展开并显示各种 `SQL` 命令和屏幕：
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1116_1.png)
 
@@ -25888,21 +24642,19 @@ welcome to the DB2 Demonstration Program! 这组命令向你展示了 DB2 数据
 </section>
 ```
 
-# 1090 附录 B DB2DEMO 安装
-
-title="..." 标签是可选的，但应该描述章节的作用。例如，在上一个示例中，对象关系章节是启动的：
+`title="..."` 标签是可选的，但应该描述章节的作用。例如，在上一个示例中，对象关系章节是启动的：
 
 ```
 <section title="Object Relational">
 ```
 
-每个章节必须有一个对应的闭合标签 </section>。章节可以包含其他章节、示例和教程，但只有章节可以嵌套。句话说，在启动另一个章节之前，必须“关闭”示例和教程。
+每个章节必须有一个对应的闭合标签 `</section>`。章节可以包含其他章节、示例和教程，但只有章节可以嵌套。换句话说，在启动另一个章节之前，必须“关闭”示例和教程。
 
-# 章节：<info> 标签
+#### 章节：`<info>` 标签
 
-<info> 标签用于详细描述章节的功能。使用 标签是可选的，但通常关于章节的某些信息是有用的！info 标签内的内容将被放置在主屏幕的帮助面板中。<info> 和 </info> 标签之间的信息可以包含任何 HTML 标签。除了 info 标签本身外，对这两个标签内包含的内容没有限制。例如，以下 HTML 可以是：
+`<info>` 标签用于详细描述章节的功能。使用标签是可选的，但通常关于章节的某些信息是有用的！`info` 标签内的内容将被放置在主屏幕的帮助面板中。`<info>` 和 `</info>` 标签之间的信息可以包含任何 `HTML` 标签。除了 `info` 标签本身外，对这两个标签内包含的内容没有限制。例如，以下 `HTML` 可以是：
 
-```
+```html
 <section title="Dropping Tables">
 <info>
 此章节包含关于
@@ -25913,21 +24665,19 @@ title="..." 标签是可选的，但应该描述章节的作用。例如，在�
 
 | Dropping Tables |
 | :--- |
-| 此章节包含关于 TEST 表的信息。 |
+| 此章节包含关于 `TEST` 表的信息。 |
 
-# 高级编程信息 1091
-
-title="..." 标签是可选的，但应该用于描述章节的作用。例如，在上一个示例中，对象关系章节是启动的：
+`title="..."` 标签是可选的，但应该用于描述章节的作用。例如，在上一个示例中，对象关系章节是启动的：
 
 ```
 <section title="Object Relational">
 ```
 
-每个章节必须有一个对应的闭合标签 </section>。章节可以包含其他章节、示例和教程，但只有章节可以嵌套。换句话说，在启动另一个章节之前，必须“关闭”示例和教程。
+每个章节必须有一个对应的闭合标签 `</section>`。章节可以包含其他章节、示例和教程，但只有章节可以嵌套。换句话说，在启动另一个章节之前，必须“关闭”示例和教程。
 
-# 章节：<info> 标签
+#### 章节：`<info>` 标签
 
-<info> 标签用于详细描述章节的功能。使用 标签是可选的，但通常关于章节的某些信息是有用的！info 标签内的内容将被放置在主屏幕的帮助面板中。<info> 和 </info> 标签之间的信息可以包含任何 HTML 标签。除了 info 标签本身外，对这两个标签内包含的内容没有限制。例如，以下 HTML 可以是：
+`<info>` 标签用于详细描述章节的功能。使用标签是可选的，但通常关于章节的某些信息是有用的！`info` 标签内的内容将被放置在主屏幕的帮助面板中。`<info>` 和 `</info>` 标签之间的信息可以包含任何 `HTML` 标签。除了 `info` 标签本身外，对这两个标签内包含的内容没有限制。例如，以下 `HTML` 可以是：
 
 ```html
 <section title="Dropping Tables">
@@ -25940,52 +24690,35 @@ TEST 表格的信息。
 
 | Dropping Tables |
 | :--- |
-| 此章节包含关于 TEST 表的信息。 |
+| 此章节包含关于 `TEST` 表的信息。 |
 
-# 高级编程信息 1091
-
-title="..." 标签是可选的，但应该用于描述章节的作用。例如，在上一个示例中，对象关系章节是启动的：
-
-```
-<section title="Object Relational">
-```
-
-每个章节必须有一个对应的闭合标签 </section>。章节可以包含其他章节、示例和教程，但只有章节可以嵌套。换句话说，在启动另一个章节之前，必须“关闭”示例和教程。
-
-# 高级编程信息 1093
-
-你可以通过在每行末尾放置 ; 来分隔多个 SQL 命令：
+你可以通过在每行末尾放置 `;` 来分隔多个 `SQL` 命令：
 
 ```sql
 select * from employee;
 select * from workdept;
 ```
 
-如果你的 SQL 需要使用分号，那么可以在每个语句的开头使用井号 (#)、@符号 (@) 或美元符号 ($) 代替：
+如果你的 `SQL` 需要使用分号，那么可以在每个语句的开头使用井号 (`#`)、`@` 符号 (`@`) 或美元符号 (`$`) 代替：
 
 ```sql
 #select * from employee
 #select from workdept
 ```
 
-在窗口内还可以运行额外的 SQL 和非 SQL 语句。这些在高级编程部分进行了详细讨论。
+在窗口内还可以运行额外的 `SQL` 和非 `SQL` 语句。这些在高级编程部分进行了详细讨论。
 
-# 示例：<sql button="x"> 标签
+#### 示例：`<sql button="x">` 标签
 
-示例可以与其关联最多九个按钮。这些按钮可以包含通常位于 sql 块中的任何 SQL。SQL 并不是作为示例的一部分执行，而是与面板上的按钮关联的，而不是作为示例的一部分自动执行。
+示例可以与其关联最多九个按钮。这些按钮可以包含通常位于 `sql` 块中的任何 `SQL`。`SQL` 并不是作为示例的一部分执行，而是与面板上的按钮关联的，而不是作为示例的一部分自动执行。
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1120_0.png)
 
-按钮从 1 到 9 编号 ( ... )。文本描述了按钮应该做什么，点击帮助部分上面的按钮将实际上“显示”执行的 SQL 或 XQuery 命令。info 章节中的按钮图标是通过使用特殊的 DB2DEMO 变量 %[B1] 到 %[B9] 创建的。当文本中使用这些特殊变量时，它们会被替换为 1 到 9 的图标。
+按钮从 `1` 到 `9` 编号 (`...`)。文本描述了按钮应该做什么，点击帮助部分上面的按钮将实际上“显示”执行的 `SQL` 或 `XQuery` 命令。`info` 章节中的按钮图标是通过使用特殊的 `DB2DEMO` 变量 `%[B1]` 到 `%[B9]` 创建的。当文本中使用这些特殊变量时，它们会被替换为 `1` 到 `9` 的图标。
 
+当用按钮定义 `sql` 块时，在帮助面板上方会创建一个与其按钮编号相对应的图标。按钮编号 `0` 同样存在，但它对应于没有按钮编号的 `sql` 块。这在加载示例时也会自动加载该 `SQL`。
 
-
-
-# 1094 附录 B DB2DEMO 安装
-
-当用按钮定义 sql 块时，在帮助面板上方会创建一个与其按钮编号相对应的图标。按钮编号 0 同样存在，但它对应于没有按钮编号的 sql 块。这在加载示例时也会自动加载该 SQL。
-
-当按下按钮时，为该按钮定义的 SQL 将被自动放入 SQL 区域并执行。为了描述按钮的功能，文本中应包含对此按钮的引用。要显示按钮图标，请在脚本中使用特殊的 DB2DEMO 变量 `%[b1].%[b9]`。DB2DEMO 程序会将此变量翻译为显示的正确图标。如果您创建的脚本没有包含这些文件，DB2DEMO 会自动生成这些图标（或 GIF 文件）。示例说明了按钮属性的使用：
+当按下按钮时，为该按钮定义的 `SQL` 将被自动放入 `SQL` 区域并执行。为了描述按钮的功能，文本中应包含对此按钮的引用。要显示按钮图标，请在脚本中使用特殊的 `DB2DEMO` 变量 `%[b1].%[b9]`。`DB2DEMO` 程序会将此变量翻译为显示的正确图标。如果您创建的脚本没有包含这些文件，`DB2DEMO` 会自动生成这些图标（或 `GIF` 文件）。示例说明了按钮属性的使用：
 
 ```
 <example title="Simple SELECT example">
@@ -25999,28 +24732,31 @@ select * from workdept;
 </example>
 ```
 
+
+
 生成的屏幕如下：
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1121_0.png)
 
 当用户按下帮助屏幕上按钮时，将执行对应的 SQL。
 
-如果按下第二个按钮，sql 屏幕现在将显示如下：
+如果按下第二个按钮，`sql` 屏幕现在将显示如下：
 
 ![](img/2fc7488b6558d6b99bbc7356ac4116b1_1122_0.png)
 
-# 支持
+## 支持
 
-我们尝试考虑到所有情况，但偶尔还是会出现问题。如果您在使用演示代码时遇到问题，请向我们发送邮件，包含您的电子邮件地址、姓名以及对问题的描述。可以通过 baklarz@ca.ibm.com 与我们联系。
+我们尝试考虑到所有情况，但偶尔还是会出现问题。如果您在使用演示代码时遇到问题，请向我们发送邮件，包含您的电子邮件地址、姓名以及对问题的描述。可以通过 `baklarz@ca.ibm.com` 与我们联系。
 
 本页特留空白
 
 ## 索引
 
-## 符号
-NET Provider 支持 991
+### 符号
 
-## A
+`NET Provider` 支持 991
+
+### A
 
 访问路径 921
 访问路径 921, 999
@@ -26032,24 +24768,24 @@ NET Provider 支持 991
 管理通知日志 950
 管理服务器 113
 高级功能 47
-ADMIN CMD 472
+`ADMIN CMD` 472
 健康快照 478
-MQSeries 函数 478
-MULTIPLY_ALT 474
-SNAPSHOT 475
-SQLERRM 473
-Unicode 482
+`MQSeries` 函数 478
+`MULTIPLY_ALT` 474
+`SNAPSHOT` 475
+`SQLERRM` 473
+`Unicode` 482
 向导和向师 51
 别名 341, 346, 557
-Apache Dephy 122
-APIs
+`Apache Dephy` 122
+`APIs`
 描述 989
 应用程序
 动态嵌入（描述） 984
 静态嵌入 983
 应用程序开发框架 982
-AS 类 344
-ASHELAPSZ 1008
+`AS` 类 344
+`ASHELAPSZ` 1008
 星号，用法 329
 异步索引清理 695
 原子性 600
@@ -26057,111 +24793,111 @@ ASHELAPSZ 1008
 审计设施管理员 913
 审计 216
 身份验证 170
-CLIENT 174
-DATA_ENCRYPT 175
-DATA_ENCRYPT_CMP 176
-GSS_SERVER_ENCRYPT 176
-GSSPLUG IN 176
-KERBEROS 175
-KRB_SERVER_ENCRYPT 175
+`CLIENT` 174
+`DATA_ENCRYPT` 175
+`DATA_ENCRYPT_CMP` 176
+`GSS_SERVER_ENCRYPT` 176
+`GSSPLUG IN` 176
+`KERBEROS` 175
+`KRB_SERVER_ENCRYPT` 175
 位置 173
-SERVER 174
-SERVER_ENCRYPT 174
+`SERVER` 174
+`SERVER_ENCRYPT` 174
 设置 177
 用户 ID 和密码 171
 授权 184
-BINDALL 1004
-DBADM 191
-LOAD 192
-SECADM 189
-SYSADM 187
-SYSCTRL 188
-SYSMAINT 188
+`BINDALL` 1004
+`DBADM` 191
+`LOAD` 192
+`SECADM` 189
+`SYSADM` 187
+`SYSCTRL` 188
+`SYSMAINT` 188
 自动配置 125
 自动客户端重路由 865
 自动存储 664
 
-## B
+### B
 
-BACKUP 805
+`BACKUP` 805
 增量备份 814
-redist 恢复 822
-TSM 815
+`redist` 恢复 822
+`TSM` 815
 伯努利采样 224
-BETWEEN 351
+`BETWEEN` 351
 大块读取 644
 绑定 160
 应用程序 1002
 延迟 999
-显示内容 (db2bf) 1006
+显示内容 (`db2bf`) 1006
 解释选项 926
 多次绑定 1008
-OWNER 1004
-PACKAGE USING 1001
-QUALIFIER 1004
+`OWNER` 1004
+`PACKAGE USING` 1001
+`QUALIFIER` 1004
 记录预订 1008
 使用配置助手 1062
-ntities 1008
+`ntities` 1008
 缓冲池 231
 内置函数 345
 业务智能服务 606
 
-## C
+### C
 
 缓存
 系统目录 941
 笛卡尔积 334
-CASE 表达式 358
+`CASE` 表达式 358
 高级 431
 在函数中使用 432
 类型转换函数 251
 表达式定义 333
 函数定义 333
-CATALOG 156
+`CATALOG` 156
 
 # 1098 索引
 
 - 数据库 156, 158
 命名管道 157
 节点 156
-TCP/IP 节点 157
+`TCP/IP` 节点 157
 目录表空间 648
 变更管理专家 59
 子表 338
-CLI 1010
+`CLI` 1010
 绑定文件 1012
 配置 1013
 描述 986
 关键字 1014
 客户端身份验证 179
-CLIENT 180
+`CLIENT` 180
 设置 181
-TRUST_ALL 180
+`TRUST_ALL` 180
 客户端 219, 118
-DB2  120
+`DB2` 120
 安装 118
-CLOB 244
+`CLOB` 244
 绑定文件 1007
 代码页 260
 转换 259
-CODESET 259
+`CODESET` 259
 排序序列 260
 集合 1001
 列函数 345, 346
 派生 318
 命令顺序 48
 命令行处理器 54
-COMMIT 232, 558
+`COMMIT` 232, 558
 通用表表达式 361
 复合键 324
 压缩表 277
-INSPECT 命令 281
+`INSPECT` 命令 281
 行压缩 279
 使用重组 284
 值压缩 278
 连接性 28
 约束
-CHECK 子句 267
+`CHECK` 子句 267
 等待检查状态 267
 检查 758
 外键 324
@@ -26170,42 +24906,42 @@ CHECK 子句 267
 命名 267, 322
 主键 322
 引用 324
-RESTRICT (RI) 324
-SET INTEGRITY 267, 758
+`RESTRICT (RI)` 324
+`SET INTEGRITY` 267, 758
 表检查 266
 唯一约束 263
 容器
 视图 629
 控制中心 45
 名称 339
-COUNT 350
+`COUNT` 350
 创建事件监视器 908
 创建缓冲池 656
 创建表空间 656
-CUBE 421
-CURRENT EXPLAIN MODE 925
-CURRENT EXPLAIN SNAPSHOT 925
-CURRENT SCHEMA registry 229
+`CUBE` 421
+`CURRENT EXPLAIN MODE` 925
+`CURRENT EXPLAIN SNAPSHOT` 925
+`CURRENT SCHEMA` registry 229
 模糊 1008
 
-## D
+### D
 
 数据存档专家 59
 数据管理 6
 数据移动
-DB2MOVE 763
+`DB2MOVE` 763
 分界 ASCII 702
 派生列名 708
-EXPORT 705
+`EXPORT` 705
 文件类型 701
-IMPORT 工具 716
-IXF 文件 704
-LOAD 工具 731
+`IMPORT` 工具 716
+`IXF` 文件 704
+`LOAD` 工具 731
 非分界 ASCII 703
-REORGCHK 766
+`REORGCHK` 766
 工作表文件 704
 数据检索
-join 731
+`join` 731
 投影列 730
 限制行 311
 丢失更新 601
@@ -26215,49 +24951,49 @@ join 731
 未提交读取 601
 配置向导 943
 配置助手 50, 147
-CLI/ODBC 设置 1016
+`CLI/ODBC` 设置 1016
 
 # Index
 
 数据类型 227, 238
-BIGINT 241
-BLOB, 最大大小 245
+`BIGINT` 241
+`BLOB`, 最大大小 245
 内置 227
-CHAR 242
-CLOB 244
+`CHAR` 242
+`CLOB` 244
 考虑 261
-DATE 246
-datetime 245
-DBCLOB 244
-DECIMAL 241
-DOUBLE 242
-外部文件 (DATALINK) 248
-FLOAT 241
-FOR BIT DATA 子句 243
-GRAPHIC 244
-INTEGER 240
-LONG VARCHAR 243
-LONG VARGRAPHIC 244
-NUMERIC 241
-REAL 241
-引用 (REF) 类型 227
-SMALLINT 240
-TIME 247
-TIMESTAMP 248
+`DATE` 246
+`datetime` 245
+`DBCLOB` 244
+`DECIMAL` 241
+`DOUBLE` 242
+外部文件 (`DATALINK`) 248
+`FLOAT` 241
+`FOR BIT DATA` 子句 243
+`GRAPHIC` 244
+`INTEGER` 240
+`LONG VARCHAR` 243
+`LONG VARGRAPHIC` 244
+`NUMERIC` 241
+`REAL` 241
+引用 (`REF`) 类型 227
+`SMALLINT` 240
+`TIME` 247
+`TIMESTAMP` 248
 用户定义数据类型 227, 250
 用户定义唯一类型 227
 用户定义引用类型 227
 用户定义结构化类型 227
-VARCHAR 243
-VARGRAPHIC 244
-XML 249
+`VARCHAR` 243
+`VARGRAPHIC` 244
+`XML` 249
 数据仓库版 6
 数据库
 创建 233
 维护 786
 数据库基准工具 916
 数据库开发者版 39
-数据库管理空间 (DMS) 229
+数据库管理空间 (`DMS`) 229
 数据库对象
 缓冲池 231
 索引 230
@@ -26268,486 +25004,492 @@ XML 249
 表空间 229
 表 228
 视图 229
-DATALINK 248
-日期字符串 (DATE) 246
-DB 配置 614
-APPLHEAPSZ 947
-AVG. APPLS 941
-BUFFPAGE 940
-CATALOGCACHE_SZ 941
-DBHEAP 941
-FT_DEGREE 947
-DLCHKTIME 615
-LOCKLIST 233, 614
-LOCKTIMEOUT 614, 895
-LOGBUFSZ 947
-MAXLOCKS 614
-NUM. FREQUELS 781
-NUM. QUANTILES 781
-SHEATHES 936
-SORTHEAP 942
-DB2 client 980
-DB2 for 32
-DB2 Workbench 90
-DB2 discovery 125
+`DATALINK` 248
+日期字符串 (`DATE`) 246
+`DB` 配置 614
+`APPLHEAPSZ` 947
+`AVG. APPLS` 941
+`BUFFPAGE` 940
+`CATALOGCACHE_SZ` 941
+`DBHEAP` 941
+`FT_DEGREE` 947
+`DLCHKTIME` 615
+`LOCKLIST` 233, 614
+`LOCKTIMEOUT` 614, 895
+`LOGBUFSZ` 947
+`MAXLOCKS` 614
+`NUM. FREQUELS` 781
+`NUM. QUANTILES` 781
+`SHEATHES` 936
+`SORTHEAP` 942
+`DB2 client` 980
+`DB2 for` 32
+`DB2 Workbench` 90
+`DB2 discovery` 125
 已知发现 130
 搜索发现 130
-DB2 驱动 31
-DB2 版本
+`DB2` 驱动 31
+`DB2` 版本
 企业版 15
 快速版 14
-Express-C 版 15
+`Express-C` 版 15
 个人版 19
-DB2 for 20
-DB2 功能 41
+`DB2 for` 20
+`DB2` 功能 41
 测地数据管理 22
 高可用性包 17
 同构联邦 20
 基于标签的访问 22
 按需移动 23
 性能优化 18
-pureXML 19
+`pureXML` 19
 查询状态 18
-
-
-
 
 # 索引 1101
 
-# G
-- GET SNAPSHOT 894
-- GRANT 201
-- GROUP BY 347
-- 分组值 (Grouping Values) 347
-- 删除 (removing) 315
-- 唯一键 (unique key) 312
-- 索引，顾问 (Index, Advisor) 939
-- 挂事务管理器 (Indoubt Transaction Manager) 916
-- 信息即服务 (Information as a Service) 4
-- 信息集成 (Information Integration) 6
-- 内连接 (Inner Join) 409
-- INSERT 365
-- 数据集 (set of data) 368
-- 使用 DEFAULT 256
-- 检查命令 (Inspect Command) 912
-- 安装 (Installation) 64
-- db2_install 82
-- db2setup 81
-- Linux 和 UNIX 81
-- 多副本 (multiple copies) 83
-- 响应文件生成器 (response file generator) 91
-- 响应文件 (response files) 82
-- 示例响应文件 (sample response file) 89
-- Windows 64
-- 实例 (Instance) 103
-- 管理 (administration) 108
-- Linux 和 UNIX 105
-- 启动 (starting) 107
-- 停止 (stopping) 108
-- Windows 103
-- 分区间并行 (Inter-partition parallelism) 880, 883
-- 查询内并行 (Intra-query parallelism) 778
-- 交集 (INTERSECTION) 362
-- 分区内并行 (Intra-partition parallelism) 778
-- 查询内并行 (Intra-query parallelism) 778
-- 隔离级别 (Isolation levels) 233, 609
-- 选择 (choosing) 609
-- 游标稳定性 (CS) 608
-- 读稳定性 (RS) 609
-- 可重复读 (RR) 609
-- 静态 SQL 中的设置 (setting in static SQL) 608
-- 未提交读 (UR) 608
+### G
 
-# H
-- HAVING 349
-- 健康中心 (Health Center) 48
-- 健康快照函数 (Health snapshot functions) 478
-- 层次结构表 (Hierarchy table (H-Table)) 442
-- 高可用性 (High Availability) 845
-- 热备用 (Hot standby) 845
-- MSCS 845
-- 相互接管 (Mutual takeover) 845
-- 分裂镜像 (split mirror) 847
-- Steelejee 845
-- Sun Cluster 845
-- Veritas Cluster Server 845
-- 高可用灾难恢复 (High Availability Disaster Recovery) 850
-- 自动客户端重路由 (automatic client reroute) 865
-- 手动设置 (manual setup) 860
-- 监控 (monitoring) 863
-- 场景 (scenario) 850
-- 使用 Control Center 进行设置 (setup using Control Center) 853
-- 接管 (takeover) 862
-- 高性能卸载 (High Performance Unload) 851
+- `GET SNAPSHOT` 894
+- `GRANT` 201
+- `GROUP BY` 347
+- 分组值 (`Grouping Values`) 347
+- 删除 (`removing`) 315
+- 唯一键 (`unique key`) 312
+- 索引，顾问 (`Index, Advisor`) 939
+- 挂事务管理器 (`Indoubt Transaction Manager`) 916
+- 信息即服务 (`Information as a Service`) 4
+- 信息集成 (`Information Integration`) 6
+- 内连接 (`Inner Join`) 409
+- `INSERT` 365
+- 数据集 (`set of data`) 368
+- 使用 `DEFAULT` 256
+- 检查命令 (`Inspect Command`) 912
+- 安装 (`Installation`) 64
+- `db2_install` 82
+- `db2setup` 81
+- `Linux` 和 `UNIX` 81
+- 多副本 (`multiple copies`) 83
+- 响应文件生成器 (`response file generator`) 91
+- 响应文件 (`response files`) 82
+- 示例响应文件 (`sample response file`) 89
+- `Windows` 64
+- 实例 (`Instance`) 103
+- 管理 (`administration`) 108
+- `Linux` 和 `UNIX` 105
+- 启动 (`starting`) 107
+- 停止 (`stopping`) 108
+- `Windows` 103
+- 分区间并行 (`Inter-partition parallelism`) 880, 883
+- 查询内并行 (`Intra-query parallelism`) 778
+- 交集 (`INTERSECTION`) 362
+- 分区内并行 (`Intra-partition parallelism`) 778
+- 查询内并行 (`Intra-query parallelism`) 778
+- 隔离级别 (`Isolation levels`) 233, 609
+- 选择 (`choosing`) 609
+- 游标稳定性 (`CS`) 608
+- 读稳定性 (`RS`) 609
+- 可重复读 (`RR`) 609
+- 静态 SQL 中的设置 (`setting in static SQL`) 608
+- 未提交读 (`UR`) 608
 
-# I
-- IBM Cloudscape 12
-- IBM JDBC 和 SQL 驱动程序 981
-- IBM ODBC 和 CLI 驱动程序 981
-- 标识列 (Identity Column) 256
-- IMPORT 716
-- 示例 (examples) 729
-- 大对象支持 (large object support) 724
-- 类型表支持 (typed table support) 724
-- 使用 Control Center (using the Control Center) 725
-- 索引 (Index) 230
-- 双向 (bi-directional) 314
-- 外键 (foreign key) 312
-- 导则 (guidelines) 313
-- 仅索引访问 (index only access) 313
-- 索引结构 (index structure) 770
-- 修改 (modification) 315
-- 非唯一 (non-unique) 312
-- 空值 (null values) 313
-- 主的 (primary) 312
-- 主键 (primary key) 312
-- 记录 ID (record id) 311
+### H
 
-# J
-- Java 开发 (Java development) 1018
-- nBC 编程 1019
-- 连接 (Join) 337
-- 内 (inner) 339
-- 连接列 (join column) 338
-- 外部 (outer) 409
-- 谓词 (predicate) 339
-- 日志 (Journal) 48
+- `HAVING` 349
+- 健康中心 (`Health Center`) 48
+- 健康快照函数 (`Health snapshot functions`) 478
+- 层次结构表 (`Hierarchy table (H-Table)`) 442
+- 高可用性 (`High Availability`) 845
+- 热备用 (`Hot standby`) 845
+- `MSCS` 845
+- 相互接管 (`Mutual takeover`) 845
+- 分裂镜像 (`split mirror`) 847
+- `Steelejee` 845
+- `Sun Cluster` 845
+- `Veritas Cluster Server` 845
+- 高可用灾难恢复 (`High Availability Disaster Recovery`) 850
+- 自动客户端重路由 (`automatic client reroute`) 865
+- 手动设置 (`manual setup`) 860
+- 监控 (`monitoring`) 863
+- 场景 (`scenario`) 850
+- 使用 `Control Center` 进行设置 (`setup using Control Center`) 853
+- 接管 (`takeover`) 862
+- 高性能卸载 (`High Performance Unload`) 851
+
+### I
+
+- `IBM Cloudscape` 12
+- `IBM JDBC` 和 `SQL` 驱动程序 981
+- `IBM ODBC` 和 `CLI` 驱动程序 981
+- 标识列 (`Identity Column`) 256
+- `IMPORT` 716
+- 示例 (`examples`) 729
+- 大对象支持 (`large object support`) 724
+- 类型表支持 (`typed table support`) 724
+- 使用 `Control Center` (`using the Control Center`) 725
+- 索引 (`Index`) 230
+- 双向 (`bi-directional`) 314
+- 外键 (`foreign key`) 312
+- 导则 (`guidelines`) 313
+- 仅索引访问 (`index only access`) 313
+- 索引结构 (`index structure`) 770
+- 修改 (`modification`) 315
+- 非唯一 (`non-unique`) 312
+- 空值 (`null values`) 313
+- 主的 (`primary`) 312
+- 主键 (`primary key`) 312
+- 记录 ID (`record id`) 311
+
+### J
+
+- `Java` 开发 (`Java development`) 1018
+- `nBC` 编程 1019
+- 连接 (`Join`) 337
+- 内 (`inner`) 339
+- 连接列 (`join column`) 338
+- 外部 (`outer`) 409
+- 谓词 (`predicate`) 339
+- 日志 (`Journal`) 48
 
 # 1102 索引
 
-# L
-- 标记时长 (Labeled durations) 370
-- LBAC 213
-- 基于标签的访问控制 (Label-based Access Control) 213
-- 局限性 (limitations) 215
-- 概述 (overview) 214
-- 左连接 (Left Join) 409
-- 左外连接 (Left Outer Join) 409
-- 许可证中心 (License Center) 408
-- LIKE 350
-- LOAD 730
-- 构建阶段 (build phase) 732
-- 游标文件类型 (cursor file type) 736
-- 删除阶段 (delete phase) 736
-- 异常表 (exception table) 739
-- 生成列 (Generated Columns) 737
-- 索引复制阶段 (index copy phase) 739
-- 大对象考虑 (large object considerations) 743
-- LOAD QUERY 755
-- 统计分析 (statistical profile) 742
-- 使用 Control Center (using the Control Center) 747
-- LOAD 权限 (LOAD Authority) 192
-- SQL 中的锁级别 (Locking Level in SQL) 616
-- LOCKLIST 233, 614
-- 锁 (Locks) 232
-- 兼容性 (compatibility) 612
-- 转换 (conversion) 613
-- 时长 (duration) 610
-- 升级 (escalation) 613
-- 行级 (row level) 611
-- 表（显式）(table (explicit)) 615
-- 表级 (table level) 610
-- LOCKSIZE 参数 616
-- LOCKTIMEOUT 614
-- 日志文件 (Log files) 233
-- 活跃，归档的 (active, archived) 801
-- 归档日志 (archival logging) 809
-- 缓冲写入 (buffered writes) 941
-- 缓冲区 (buffers) 798
-- 循环日志 (circular logging) 799
-- 删除 (erasing) 803
-- 完整日志目录 (full log directory) 804
-- LOGARCHMETH1 802
-- LOGARCHMETH2 802
-- LOGRETAIN 和 USEREXIT 802
-- 镜像 (mirroring) 801
-- 备份 (aming) 837
-- 初始不记录日志 (NOT LOGGED INITIALLY) 804
-- 放置 (placement) 837
-- 主日志和备日志 (primary and secondary logs) 799
-- 修剪 (pruning) 838
-- 原始设备 (raw devices) 804
-- 向前恢复 (roll-forward recovery) 803
-- 用法 (usage) 797
-- 预写日志 (write-ahead logging) 233
-- LOGARCHMETH1 802
-- LOGARCHMETH2 802
-- LOGRETAIN 和 USEREXIT 802
-- 长字段数据 (Long field data) 650
+### L
 
-# M
-- 主数据管理 (Master data management) 6
-- 物化查询表 (Materialized Query Table) 462
-- MAXLOCKS 614
-- MDC
-- 块索引 (block indexes) 292
-- 块映射 (block map) 294
-- 候选维度 (candid dimensions) 294
-- 单元 (cell) 291
-- 复合索引 (composite index) 293
-- 加载表 (loading tables) 297
-- 多维表 (multidimensional tables) 289
-- ORGANIZE BY 292
-- 内存 (Memory)
-- 代理 (agent) 882
-- 应用程序接口 (application interface) 843
-- DB2 使用 (DB2 usage) 881
-- 内存可视化器 (Memory Visualizer) 889
-- 合并 (Merge)
-- 忽略记录 (ignoring records) 382
-- 概述 (overview) 377
-- 抛错误条件 (raising error conditions) 382
-- 语法 (syntax) 739
-- Microsoft 数据对象 (Microsoft Data Objects) 990
-- 监控 (Monitoring)
-- 应用程序活动 (application activity) 896
-- 所需权限 (authority required) 892
-- 图形性能详情 (graphical performance details) 881
-- 锁活动 (lock activity) 895
-- 排序活动 (sorting activity) 937
-- 表活动 (table activity) 897
-- 工具 (tools) 575
-- 移动函数 (Moving Functions) 422
-- 查询函数 (Queries functions) 478
-- 多行插入 (Multiple row insert) 367
+- 标记时长 (`Labeled durations`) 370
+- `LBAC` 213
+- 基于标签的访问控制 (`Label-based Access Control`) 213
+- 局限性 (`limitations`) 215
+- 概述 (`overview`) 214
+- 左连接 (`Left Join`) 409
+- 左外连接 (`Left Outer Join`) 409
+- 许可证中心 (`License Center`) 408
+- `LIKE` 350
+- `LOAD` 730
+- 构建阶段 (`build phase`) 732
+- 游标文件类型 (`cursor file type`) 736
+- 删除阶段 (`delete phase`) 736
+- 异常表 (`exception table`) 739
+- 生成列 (`Generated Columns`) 737
+- 索引复制阶段 (`index copy phase`) 739
+- 大对象考虑 (`large object considerations`) 743
+- `LOAD QUERY` 755
+- 统计分析 (`statistical profile`) 742
+- 使用 `Control Center` (`using the Control Center`) 747
+- `LOAD` 权限 (`LOAD Authority`) 192
+- SQL 中的锁级别 (`Locking Level in SQL`) 616
+- `LOCKLIST` 233, 614
+- 锁 (`Locks`) 232
+- 兼容性 (`compatibility`) 612
+- 转换 (`conversion`) 613
+- 时长 (`duration`) 610
+- 升级 (`escalation`) 613
+- 行级 (`row level`) 611
+- 表（显式）(`table (explicit)`) 615
+- 表级 (`table level`) 610
+- `LOCKSIZE` 参数 616
+- `LOCKTIMEOUT` 614
+- 日志文件 (`Log files`) 233
+- 活跃，归档的 (`active, archived`) 801
+- 归档日志 (`archival logging`) 809
+- 缓冲写入 (`buffered writes`) 941
+- 缓冲区 (`buffers`) 798
+- 循环日志 (`circular logging`) 799
+- 删除 (`erasing`) 803
+- 完整日志目录 (`full log directory`) 804
+- `LOGARCHMETH1` 802
+- `LOGARCHMETH2` 802
+- `LOGRETAIN` 和 `USEREXIT` 802
+- 镜像 (`mirroring`) 801
+- 备份 (`aming`) 837
+- 初始不记录日志 (`NOT LOGGED INITIALLY`) 804
+- 放置 (`placement`) 837
+- 主日志和备日志 (`primary and secondary logs`) 799
+- 修剪 (`pruning`) 838
+- 原始设备 (`raw devices`) 804
+- 向前恢复 (`roll-forward recovery`) 803
+- 用法 (`usage`) 797
+- 预写日志 (`write-ahead logging`) 233
+- `LOGARCHMETH1` 802
+- `LOGARCHMETH2` 802
+- `LOGRETAIN` 和 `USEREXIT` 802
+- 长字段数据 (`Long field data`) 650
 
-# N
-- 嵌套表表达式 (Nested table expressions) 358
-- 别名 (Nicknames) 307
-- 联邦化支持 (federated support) 307
-- 非空 (NOT NULL) 255
-- 空值 (NULL values) 254
+### M
+
+- 主数据管理 (`Master data management`) 6
+- 物化查询表 (`Materialized Query Table`) 462
+- `MAXLOCKS` 614
+- `MDC`
+- 块索引 (`block indexes`) 292
+- 块映射 (`block map`) 294
+- 候选维度 (`candid dimensions`) 294
+- 单元 (`cell`) 291
+- 复合索引 (`composite index`) 293
+- 加载表 (`loading tables`) 297
+- 多维表 (`multidimensional tables`) 289
+- `ORGANIZE BY` 292
+- 内存 (`Memory`)
+- 代理 (`agent`) 882
+- 应用程序接口 (`application interface`) 843
+- `DB2` 使用 (`DB2 usage`) 881
+- 内存可视化器 (`Memory Visualizer`) 889
+- 合并 (`Merge`)
+- 忽略记录 (`ignoring records`) 382
+- 概述 (`overview`) 377
+- 抛错误条件 (`raising error conditions`) 382
+- 语法 (`syntax`) 739
+- `Microsoft` 数据对象 (`Microsoft Data Objects`) 990
+- 监控 (`Monitoring`)
+- 应用程序活动 (`application activity`) 896
+- 所需权限 (`authority required`) 892
+- 图形性能详情 (`graphical performance details`) 881
+- 锁活动 (`lock activity`) 895
+- 排序活动 (`sorting activity`) 937
+- 表活动 (`table activity`) 897
+- 工具 (`tools`) 575
+- 移动函数 (`Moving Functions`) 422
+- 查询函数 (`Queries functions`) 478
+- 多行插入 (`Multiple row insert`) 367
+
+### N
+
+- 嵌套表表达式 (`Nested table expressions`) 358
+- 别名 (`Nicknames`) 307
+- 联邦化支持 (`federated support`) 307
+- 非空 (`NOT NULL`) 255
+- 空值 (`NULL values`) 254
 
 # 索引 1103
 
-# O
-- 对象 ID (OID) 435
-- ODBC 1010
-- 标准 (standard) 986
-- OLAP
-- 索引 (indexes) 415
-- 星型模型 (star schema) 414
-- 联机分析处理 (Online Analytical Processing (OLAP)) 414
-- 联机事务处理 (Online Transaction Processing (OLTP)) 414
-- ONLY 子句 (ONLY clause) 441, 442
-- ORDER BY 348
-- OUTER 子句 (OUTER clause) 411
-- 外连接 (Outer Join) 409
-- 全外连接 (Full Outer Join) 409
-- 左外连接 (Left Outer Join) 409
-- 右外连接 (Right Outer Join) 410
-- 目录 (catalog) 199
-- 数据库 (database) 197
-- EXECUTE 1004
-- 显式、隐式、间接 (explicit, implicit, indirect) 206
-- GRANT 201
-- 组 (groups) 206
-- 对象 (objects) 197
-- REVOKE 201
-- 处理模型 (DB2 服务器) (Process model) 876
-- 配置注册表 (Profile Registry) 98
-- 全局级别 (Global level) 99
-- 实例 (Instance) 99
-- 实例级别 (Instance level) 99
-- 节点级别 (Node level) 99
-- 编程接口 (Programming Interfaces) 982
-- 投影 (Projection) 330
+### O
 
-# P
-- 包 (Packages) 231, 998
-- 定义模式 (defining schema) 1001
-- 重命名 (renaming) 1001
--  (section) 998
-- 页面清理 (Page cleaning) 645
-- 页面大小 (Page size) 643
-- 并行 (Parallelism) 278
-- 父表 (Parent table) 264, 338
-- 性能专家 (Performance Expert) 59
-- 性能调优 (Performance tuning) 887
-- Perl DBI 993
-- 排列 (Permutation) 331
-- 持久性 (Persistency) 600
-- PHP 994
-- 定位删除 (Positioned delete) 372
-- 定位更新 (Positioned update) 370
-- 预编译 (PRECOMPILE)
-- 错误消息 (error messages) 1002
-- 输出 (output) 1007
-- 谓词 (Predicate)
-- BETWEEN 351
-- 评估 (evaluation) 332
-- IS 352
-- LIKE 350
-- NOT 352
-- 量化的 (quantified) 355
-- 主索引 (Primary index) 312
-- 主键 (Primary key) 264, 322
-- 属性 (attributes) 318
-- 权限 (Privileges) 194
-- 应用程序开发 (application development) 203
-- 分配 (assigning) 201
+- 对象 ID (`OID`) 435
+- `ODBC` 1010
+- 标准 (`standard`) 986
+- `OLAP`
+- 索引 (`indexes`) 415
+- 星型模型 (`star schema`) 414
+- 联机分析处理 (`Online Analytical Processing (OLAP)`) 414
+- 联机事务处理 (`Online Transaction Processing (OLTP)`) 414
+- `ONLY` 子句 (`ONLY clause`) 441, 442
+- `ORDER BY` 348
+- `OUTER` 子句 (`OUTER clause`) 411
+- 外连接 (`Outer Join`) 409
+- 全外连接 (`Full Outer Join`) 409
+- 左外连接 (`Left Outer Join`) 409
+- 右外连接 (`Right Outer Join`) 410
+- 目录 (`catalog`) 199
+- 数据库 (`database`) 197
+- `EXECUTE` 1004
+- 显式、隐式、间接 (`explicit, implicit, indirect`) 206
+- `GRANT` 201
+- 组 (`groups`) 206
+- 对象 (`objects`) 197
+- `REVOKE` 201
+- 处理模型 (`DB2` 服务器) (`Process model`) 876
+- 配置注册表 (`Profile Registry`) 98
+- 全局级别 (`Global level`) 99
+- 实例 (`Instance`) 99
+- 实例级别 (`Instance level`) 99
+- 节点级别 (`Node level`) 99
+- 编程接口 (`Programming Interfaces`) 982
+- 投影 (`Projection`) 330
 
-# Q
-- 量化行 (Qualifying rows) 334
-- 查询 (Query) 328
-- 子查询 (sub-query) 354
-- 查询巡逻 (Query Patrol) 55
-- 查询处理 (Query processing) 884
+### P
 
-# R
-- 范围表 (Range tables) 298
-- 重新绑定 (REBIND) 784
-- 记录锁定 (Record locking) 610
-- 兼容性 (compatibility) 612
-- 因素 (factors) 942
-- 恢复 (Recovery) 794
-- 备份 (BACKUP) 805
-- 崩溃恢复 (crash recovery) 795
-- 历史文件 (history file) 840
-- 静止 (QUIESCE) 839
-- 可恢复的 (recoverable) 796
-- 恢复 (RESTORE) 815
-- 自动恢复 (automatic) 826
-- 恢复现有数据库 (restore existing database) 826
-- 恢复新版本 (restore new version) 825
-- 向前恢复 (roll-forward recovery) 803
-- 策略 (strategy) 796
-- 事务 (transaction) 794
-- 工作单元 (unit of work) 974
-- 版本恢复 (version recovery) 795
-- X 60
-- 恢复专家 (Recovery Expert) 650
+- 包 (`Packages`) 231, 998
+- 定义模式 (`defining schema`) 1001
+- 重命名 (`renaming`) 1001
+- (`section`) 998
+- 页面清理 (`Page cleaning`) 645
+- 页面大小 (`Page size`) 643
+- 并行 (`Parallelism`) 278
+- 父表 (`Parent table`) 264, 338
+- 性能专家 (`Performance Expert`) 59
+- 性能调优 (`Performance tuning`) 887
+- `Perl DBI` 993
+- 排列 (`Permutation`) 331
+- 持久性 (`Persistency`) 600
+- `PHP` 994
+- 定位删除 (`Positioned delete`) 372
+- 定位更新 (`Positioned update`) 370
+- 预编译 (`PRECOMPILE`)
+- 错误消息 (`error messages`) 1002
+- 输出 (`output`) 1007
+- 谓词 (`Predicate`)
+- `BETWEEN` 351
+- 评估 (`evaluation`) 332
+- `IS` 352
+- `LIKE` 350
+- `NOT` 352
+- 量化的 (`quantified`) 355
+- 主索引 (`Primary index`) 312
+- 主键 (`Primary key`) 264, 322
+- 属性 (`attributes`) 318
+- 权限 (`Privileges`) 194
+- 应用程序开发 (`application development`) 203
+- 分配 (`assigning`) 201
+
+### Q
+
+- 量化行 (`Qualifying rows`) 334
+- 查询 (`Query`) 328
+- 子查询 (`sub-query`) 354
+- 查询巡逻 (`Query Patrol`) 55
+- 查询处理 (`Query processing`) 884
+
+### R
+
+- 范围表 (`Range tables`) 298
+- 重新绑定 (`REBIND`) 784
+- 记录锁定 (`Record locking`) 610
+- 兼容性 (`compatibility`) 612
+- 因素 (`factors`) 942
+- 恢复 (`Recovery`) 794
+- 备份 (`BACKUP`) 805
+- 崩溃恢复 (`crash recovery`) 795
+- 历史文件 (`history file`) 840
+- 静止 (`QUIESCE`) 839
+- 可恢复的 (`recoverable`) 796
+- 恢复 (`RESTORE`) 815
+- 自动恢复 (`automatic`) 826
+- 恢复现有数据库 (`restore existing database`) 826
+- 恢复新版本 (`restore new version`) 825
+- 向前恢复 (`roll-forward recovery`) 803
+- 策略 (`strategy`) 796
+- 事务 (`transaction`) 794
+- 工作单元 (`unit of work`) 974
+- 版本恢复 (`version recovery`) 795
+- `X` 60
+- 恢复专家 (`Recovery Expert`) 650
 
 # 1104 索引
-- 重定向恢复 (Redirected restore) 638
-- 完整性 (Referential integrity) 264
-- 声明式 (declarative) 324
-- 删除 (DELETE) 215
-- 外键 (foreign key) 312
-- 插入 (INSERT) 265
-- 父表 (parent table) 264
-- 主键 (primary key) 264
-- 唯一键 (unique key) 312
-- 更新 (UPDATE) 265
-- 重新组织 (REORG) 773
-- 分区和重新组织 (cluster and REORG) 775
-- 使用 Control Center (using the Control Center) 747
-- 重新组织 (REORG) 766
-- 描述 (description) 766
-- 如何使用 (how to use) 772
-- 输出 (output) 768
-- 可重复采样 (Repeatable) 429
-- 反映 (Reflection) 427
-- 重置 (RESET) 901
-- 正在重置快照 (RESETting Snapshot) 900
-- 响应文件 (Response File) 348
-- 响应生成器 (Response Generator) 478
-- 恢复 (RESTORE) 638
-- 表空间 (table space) 629
-- 限制 (Restriction) 331
-- 结果集 (Result set) 328
-- 结果输出 (Result output) 330
-- 右外连接 (Right Outer Join) 410
-- 回滚 (ROLLBACK) 233, 614
-- 汇总 (ROLLUP) 419
-- Ruby 994
-- 运行 (RUN) 315
 
-# S
-- 卫星中心 (Satellite Center) 889
-- 标量函数 (Scalar functions) 478
-- 模式 (Schemas) 228
-- 搜索删除 (Searched delete) 372
-- 搜索更新 (Searched update) 370
-- SQL 986
-- SQL 过程化语言 (SQL Procedural Language) 559
-- SQL 采样 (SQL Sampling) 424
-- SQL 实体化 (SQL-Bodied) 542
-- SQL 实体表 (SQL-Bodied Table) 545
-- 特殊 (Special) 644
-- 排序 (Sorting) 937
-- 快照 (Snapshot) 894
-- 统计信息 (Statistics) 787
-- STMM 960
-- 存储 (Storage) 970
-- 跟踪 (tracking) 972
-- 用法 (usage) 963
-- 操作 (operation) 966
-- SET 256
-- 设置约束 (SET CONSTRAINTS) 255
-- 设置会话 (SET SESSION) 211
-- 设置当前刷新 (SET CURRENT REFRESH) 805
-- 设置当前模式 (SET CURRENT SCHEMA) 229
-- SET 716
-- 特殊 (Special) 644
-- 序列 (Sequences) 278
-- 顺序的 (Sequential) 646
-- 强类型 (Strong) 250
-- 结构化 (Structured) 549
-- 结构化类型 (Structured type) 433
-- 修改 (alter) 437
-- 创建 (creation) 435
-- 摘要表 (Summary Table) 455
-- 考虑 (considerations) 458
-- 创建 (create) 456
-- 延迟 (deferred) 457
-- 立即 (immediate) 457
-- 物化查询表 (materialized query table) 462
-- 用户维护的 (user-maintained) 460
-- 超级分组 (Super grouping) 416
-- CUBE 414
-- 分组集 (grouping sets) 416
-- ROLLUP 419
-- SYSADM 187
-- SYSCAT 273
-- SYSCSPACE 234
-- SYSIBM 273
-- SYSMAINT 188
-- SYSSTAT 272
-- 系统目录表 (System catalog tables) 271
-- 基础表 (base tables) 273
-- 缓存 (caching) 941
-- 创建时间 (creation time) 272
-- 位置 (location) 272
-- 只读 (read-only) 273
+- 重定向恢复 (`Redirected restore`) 638
+- 完整性 (`Referential integrity`) 264
+- 声明式 (`declarative`) 324
+- 删除 (`DELETE`) 215
+- 外键 (`foreign key`) 312
+- 插入 (`INSERT`) 265
+- 父表 (`parent table`) 264
+- 主键 (`primary key`) 264
+- 唯一键 (`unique key`) 312
+- 更新 (`UPDATE`) 265
+- 重新组织 (`REORG`) 773
+- 分区和重新组织 (`cluster and REORG`) 775
+- 使用 `Control Center` (`using the Control Center`) 747
+- 重新组织 (`REORG`) 766
+- 描述 (`description`) 766
+- 如何使用 (`how to use`) 772
+- 输出 (`output`) 768
+- 可重复采样 (`Repeatable`) 429
+- 反映 (`Reflection`) 427
+- 重置 (`RESET`) 901
+- 正在重置快照 (`RESETting Snapshot`) 900
+- 响应文件 (`Response File`) 348
+- 响应生成器 (`Response Generator`) 478
+- 恢复 (`RESTORE`) 638
+- 表空间 (`table space`) 629
+- 限制 (`Restriction`) 331
+- 结果集 (`Result set`) 328
+- 结果输出 (`Result output`) 330
+- 右外连接 (`Right Outer Join`) 410
+- 回滚 (`ROLLBACK`) 233, 614
+- 汇总 (`ROLLUP`) 419
+- `Ruby` 994
+- 运行 (`RUN`) 315
 
+### S
 
-
-
+- 卫星中心 (`Satellite Center`) 889
+- 标量函数 (`Scalar functions`) 478
+- 模式 (`Schemas`) 228
+- 搜索删除 (`Searched delete`) 372
+- 搜索更新 (`Searched update`) 370
+- `SQL` 986
+- `SQL` 过程化语言 (`SQL Procedural Language`) 559
+- `SQL` 采样 (`SQL Sampling`) 424
+- `SQL` 实体化 (`SQL-Bodied`) 542
+- `SQL` 实体表 (`SQL-Bodied Table`) 545
+- 特殊 (`Special`) 644
+- 排序 (`Sorting`) 937
+- 快照 (`Snapshot`) 894
+- 统计信息 (`Statistics`) 787
+- `STMM` 960
+- 存储 (`Storage`) 970
+- 跟踪 (`tracking`) 972
+- 用法 (`usage`) 963
+- 操作 (`operation`) 966
+- `SET` 256
+- 设置约束 (`SET CONSTRAINTS`) 255
+- 设置会话 (`SET SESSION`) 211
+- 设置当前刷新 (`SET CURRENT REFRESH`) 805
+- 设置当前模式 (`SET CURRENT SCHEMA`) 229
+- `SET` 716
+- 特殊 (`Special`) 644
+- 序列 (`Sequences`) 278
+- 顺序的 (`Sequential`) 646
+- 强类型 (`Strong`) 250
+- 结构化 (`Structured`) 549
+- 结构化类型 (`Structured type`) 433
+- 修改 (`alter`) 437
+- 创建 (`creation`) 435
+- 摘要表 (`Summary Table`) 455
+- 考虑 (`considerations`) 458
+- 创建 (`create`) 456
+- 延迟 (`deferred`) 457
+- 立即 (`immediate`) 457
+- 物化查询表 (`materialized query table`) 462
+- 用户维护的 (`user-maintained`) 460
+- 超级分组 (`Super grouping`) 416
+- `CUBE` 414
+- 分组集 (`grouping sets`) 416
+- `ROLLUP` 419
+- `SYSADM` 187
+- `SYSCAT` 273
+- `SYSCSPACE` 234
+- `SYSIBM` 273
+- `SYSMAINT` 188
+- `SYSSTAT` 272
+- 系统目录表 (`System catalog tables`) 271
+- 基础表 (`base tables`) 273
+- 缓存 (`caching`) 941
+- 创建时间 (`creation time`) 272
+- 位置 (`location`) 272
+- 只读 (`read-only`) 273
 
 # 1106 索引
 
-SYSCAT.DATATYPES 443
-SYSCAT.EVENTMONITORS 902
-SYSCAT.EVENTS 902
-SYSCAT.HIERARCHIES 443
-SYSCAT.PACKAGES 1006
-SYSCAT.TABLES 443
-SYSCAT.TRIGDEP 398
-SYSCAT.TRIGGERS 398
-可更新 272
-系统管理空间 (SMS) 229
-SYSTEM 采样 426
-维护 666
-迁移 636
-页大小 643
-常规 633, 641
-状态 668
-SYSCATSPACE 272
-系统目录 272
-临时 642
-表 228
-子表 320
-定义 263
-父表 320
-永久 228
-大小限制 274
-临时 228, 301
-未限定引用 556
-任务中心 48
-临时表
+- `SYSCAT.DATATYPES` 443
+- `SYSCAT.EVENTMONITORS` 902
+- `SYSCAT.EVENTS` 902
+- `SYSCAT.HIERARCHIES` 443
+- `SYSCAT.PACKAGES` 1006
+- `SYSCAT.TABLES` 443
+- `SYSCAT.TRIGDEP` 398
+- `SYSCAT.TRIGGERS` 398
+- 可更新 272
+- 系统管理空间 (`SMS`) 229
+- `SYSTEM` 采样 426
+- 维护 666
+- 迁移 636
+- 页大小 643
+- 常规 633, 641
+- 状态 668
+- `SYSCATSPACE` 272
+- 系统目录 272
+- 临时 642
+- 表 228
+- 子表 320
+- 定义 263
+- 父表 320
+- 永久 228
+- 大小限制 274
+- 临时 228, 301
+- 未限定引用 556
+- 任务中心 48
+- 临时表
 
-# T
+### T
 
 表
 子表 338
@@ -26774,11 +25516,11 @@ SYSCATSPACE 272
 空值 682
 通用表表达式 361
 临时表空间 648
-TEMPSPACE1 234
-TERRORY 259
+`TEMPSPACE1` 234
+`TERRORY` 259
 测试数据生成器 60
-时间字符串 (TIME) 247
-时间戳字符串 (TIMESTAMP) 248
+时间字符串 (`TIME`) 247
+时间戳字符串 (`TIMESTAMP`) 248
 标记记录 243
 事务 232, 600
 所有权 211
@@ -26788,25 +25530,25 @@ TERRORY 259
 级联触发器 399
 定义 397
 替代触发器 401
-SIGNAL 401
+`SIGNAL` 401
 类型 398
 用途 398
 优化数据库 240
 类型 2 索引 774
-TYPE 谓词 449
-TYPE.NAME 448
-TYPE_SCHEMA 448
+`TYPE` 谓词 449
+`TYPE.NAME` 448
+`TYPE_SCHEMA` 448
 类型表 433
 创建类型表 437
-DEREF 447
+`DEREF` 447
 删除 439
 动态数据类型 467
 插入行 439
-ONLY 子句 441, 442
-OUTER 子句 441
+`ONLY` 子句 441, 442
+`OUTER` 子句 441
 物理实现 442
 引用列 444
-SET INTEGRITY 690
+`SET INTEGRITY` 690
 表扫描 931
 表空间 229
 添加容器 671
@@ -26815,20 +25557,20 @@ SET INTEGRITY 690
 
 范围 444
 选择行 440
-SQL 函数 447
-TYPE 谓词 449
-TYPE_NAME 448
-TYPE_SCHEMA 448
-TYPED_ID 447
+`SQL` 函数 447
+`TYPE` 谓词 449
+`TYPE_NAME` 448
+`TYPE_SCHEMA` 448
+`TYPED_ID` 447
 更新和删除行 441
 类型视图 434, 446
-TYPED_ID 447
+`TYPED_ID` 447
 对称 301
 系统表定义 306
 类型 383
-带表空间的 UNION_ALL 391
+带表空间的 `UNION_ALL` 391
 可日期 384
-使用 UNION ALL 386
+使用 `UNION ALL` 386
 可视化解释 55, 230
 动态 930
 解释输出 930
@@ -26836,69 +25578,69 @@ TYPED_ID 447
 操作符 930
 排序 936
 
-# U
+### U
 
-UCS-2 260
-UDFs 539, 596
+`UCS-2` 260
+`UDFs` 539, 596
 围栏 / 非围栏 877
-UDT 227
+`UDT` 227
 未提交读取 604
-Unicode 260
-Unicode 函数 482
-UNION 362
+`Unicode` 260
+`Unicode` 函数 482
+`UNION` 362
 唯一键 264
 工作单元 232, 600
-UPDATE MONITOR SWITCHES 892
-UPDATE 语句 369
+`UPDATE MONITOR SWITCHES` 892
+`UPDATE` 语句 369
 用户定义函数 345, 539
 用户维护摘要表 460
-USERSPACE1 234
-UTF-8 260
-Utility, * 命令
+`USERSPACE1` 234
+`UTF-8` 260
+`Utility`, * 命令
 
-# W
+### W
 
-Web 查询工具 60
-Web 工具 48
-WebSphere Federation Server 37
-WebSphere Information Server 37
+`Web` 查询工具 60
+`Web` 工具 48
+`WebSphere Federation Server` 37
+`WebSphere Information Server` 37
 通配符 350
 
-# X
+### X
 
-XBSA 810
-XML
+`XBSA` 810
+`XML`
 应用考虑 510
 最佳实践 518
 数据批量加载 511
 创建表 501
 数据库需求 500
-DB2 存储模型 495
+`DB2` 存储模型 495
 文档 498
-FLWOR 表达式 517
-indexesex 521
+`FLWOR` 表达式 517
+`indexesex` 521
 插入值 504
-pureXML 489
-查询图模型 (QGM) 496
+`pureXML` 489
+查询图模型 (`QGM`) 496
 检索数据 513
 模式库 533
 序列化 499
 粉碎 492
-SQL/XML 513
+`SQL/XML` 513
 存储模型 490
 文本索引 531
 传统查询 490
 更新或删除记录 520
 空白 509
-XQuery 516
+`XQuery` 516
 
-# V
+### V
 
-可变长度字符串 (VARCHAR) 243
-可变长度长字符串 (LONG VARCHAR) 243
+可变长度字符串 (`VARCHAR`) 243
+可变长度长字符串 (`LONG VARCHAR`) 243
 视图 229, 300
 级联选项 303
-CHECK OPTION 301
+`CHECK OPTION` 301
 分类 383
 可删除 384
 不可操作 305, 386, 394
@@ -26908,4 +25650,3 @@ CHECK OPTION 301
 只读 386
 移除 306
 行迁移 390
-

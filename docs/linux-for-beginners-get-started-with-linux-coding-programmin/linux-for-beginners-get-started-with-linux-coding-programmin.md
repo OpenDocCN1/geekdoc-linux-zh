@@ -1,18 +1,7 @@
+
 # Linux 入门指南：开启 Linux 编码与编程，第14版，2023年
 
-
-
-
-
-
-
-
-
-
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_0_0.png)
-
-
-
 
 在 Readly 上提供的技术指南
 
@@ -33,22 +22,11 @@
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_1_14.png)
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_1_15.png)
 
-
-
 如果你是一个初尝试的新用户，并想要学习启动编码和编程所需的所有知识，《Linux 入学者教程》是你的首次且唯一选择。本指南充满了实用的指导和逐步的完全插图教程，并使用通俗易懂的英语编写。在这份新用户指南页面中，你将清晰地学习编写自己的奇妙应用所需的所有知识。有这本非官方说明手册在身边，在你学习、探索和增强编程技能的过程中，没有任何问题是无法解决的，没有任何问题是没有答案的。
 
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_2_0.png)
 
 Papercut
-
-
-
-
-
-
-
-
-
 
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_3_0.png)
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_4_0.png)
@@ -57,9 +35,10 @@ Papercut
 ## 接触 Linux
 
 > “你为什么对计算机这么了解？”
+>
 > “我并不懂，它是第一台。”
-
-– 格蕾丝·霍珀将（编程先驱）在接受大卫·莱特曼采访时
+>
+> – 格蕾丝·霍珀将（编程先驱）在接受大卫·莱特曼采访时
 
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_5_0.png)
 
@@ -73,16 +52,9 @@ Papercut
 
 因此，Linux 是一个编程和进化的绝佳环境。它非常适合开发者，并且在不断改进。如果你认真想要学习编程，或者想尝试一些新事物，Linux 将向你展示它是如何适合你的。
 
-
-
-
-
-
 目前有很多版本的 Linux 可供选择，被称为“发行版”（Distributions）。每个发行版都有不同的理念和方法。以下是五个值得尝试的优秀发行版以及你可以在哪里获取它们。
 
-
 大多数发行版的安装过程非常相似。你只需从网站下载磁盘镜像，并将其刻录到光盘或创建 USB 闪存盘安装程序。请务必为你的硬件选择正确的发行版，并仔细阅读说明文档。
-
 
 到目前为止，最受欢迎的 Linux 发行版是 Linux Mint。Mint 诞生于 2006 年，作为最流行的 Ubuntu 的替代品。虽然它基于 Ubuntu 的长期支持版（LTS），但 Linux Mint 采取了不同的方向，并为用户提供了更好的整体体验。
 
@@ -92,12 +64,7 @@ Cinnamon 是一个图形丰富的桌面环境，MATE 使用的图形较少，在
 
 在本书中，我们将使用 Cinnamon 版本；不过，你可以根据自己尝试任何其他桌面发行版。事实上，建议你花时间尝试不同的环境，甚至是不同的发行版，看看哪一个最适合你和你的电脑。
 
-```
-```
-
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_9_0.png)
-
-
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_9_1.png)
 
 第二受欢迎的发行版是 Ubuntu，它是一个非洲单词，意为“对他人的仁”。Ubuntu 在其十四年的历史中经历过起伏。曾几何时，它是世界上最易用的 Linux 系统，在呈现方式上提供了一些选择，但一些不利的状况（特别是涉及隐私的问题）导致它一度跌下神。
@@ -108,8 +75,6 @@ Ubuntu 尽管有各种缺点，但是一个非常适合开始实验的 Linux 发
 
 ```
 ```
-
-
 
 Arch 是运行最久的 Linux 发行版之一，也是许多 Linux 版本的基础。既然可以安装 Arch，为什么还要安装 Mint 或 Ubuntu 呢？许多用户确实是这样做，但它对初学者并不理想。
 
@@ -123,8 +88,6 @@ Ubuntu 和 Mint 都提供了安装路径，并附带软件包帮助你起步。�
 
 ```
 ```
-
-
 
 无疑，你一定听过树莓派（Raspberry Pi）。这很难不，因为自从推出以来，这款奇不起的微型电脑在过去的六年里席卷了世界。
 
@@ -150,16 +113,9 @@ Raspian 对于树莓派是扩展的，因为树莓派使用 ARM 处理器驱动�
 
 openSUSE 广受好。
 
-```
-```
-
-
-
-
 
 
 Linux Mint 提供了几个不同的版本，或口味：Cinnamon、MATE 和 Xfce；这些版本也有 32 位和 64 位之分。这一切到底意味着什么呢？你在安装时应该选择哪个版本呢？
-
 
 桌面环境（Desktop Environment）是你用于与 Linux 系统交互的图形化界面。就像 Windows 10 的图形桌面也被称为 Fluent 设计（Fluent Design）。
 
@@ -171,45 +127,33 @@ Linux Mint 提供了多种发行版版本：Cinnamon、MATE 和 Xfce。虽然对
 
 简而言之，Cinnamon 是 Linux Mint 的旗舰桌面环境。MATE 与更多种硬件兼容兼容。例如，Windows 只提供一种桌面环境供使用，而 Linux 提供了许多。因此，Linux Mint 选择为用户提供丰富的选择。
 
-
 Cinnamon 除了外观和感受之外，还有许多优点，尽管这些也是重要的因素。在这里，我们列出了几个功能，帮助你判断它是否适合你。
 
 ### 特色功能 1
-
 它在更现代的系统上表现出色，但比以前稳定得多，而且不再是以前那样的资源大户了。因此，如果你在使用旧电脑安装 Linux Mint，切不要被 Cinnamon 劝退了。
 
 ### 特色功能 2
-
 Cinnamon 具有可配置的“热角”（Hot Corners），桌面的每个角落都可以被点击以执行特定任务，例如显示工作区或运行命令。热角有助于在不同视图之间高效切换。
-
 
 MATE 是一个简单易用、快速且稳定的 DE。与 Cinnamon 相比，它看起来有点过时，但仅是表面如此。有很多理由喜欢 MATE：
 
 ### 特色功能 1
-
 MATE 是旧电脑的优秀桌面环境。它对硬件的支持通常比 Cinnamon 更好，但同样能够提供优秀的桌面体验。
 
 ### 特色功能 2
-
 由于其高度可配置的特性，MATE 可以自定义到很高的程度。有许多可用选项，包括 Compiz 设置。
-
 
 Xfce 起于 1996 年的通用桌面环境（CDE）。从那时起它发生了变化，现在简单称为 Xfce，绰号为“无胆桌面”。
 
 ### 特色功能 1
-
 Xfce 确实是一个快速桌面，并带来了 Linux 的最佳体验。事实上，我们为了将其安装到新电脑上已经花了几百个字。
 
 ### 特色功能 2
-
 因为它是轻量级的，这意味着 Xfce 并不是一个完整的操作系统。就像其他环境一样，你可以使用最新的 Firefox、Libreoffice、VLC、Gimp 以及下载客户端。
-
 
 到为止我们主要看了 Linux Mint。事实上，有数千个发行版可以下载和安装，所以你应该选择哪一个？
 
-
 发行版切换是社区中的一个术语，指的是那些从不坚持单一发行版的人，从一个跳到另一个。发行版切换并没有错，它是一种寻找符合你口味元素的好方法。例如，Linux Mint 是一个理想的起点。它易于安装和使用，包含了日常所需的所有软件。继续进行，随着你更有信心，你可能会发现 Ubuntu 或 Debian 比较受青。考虑到 Linux Mint 的巨大价值，我们建议你慢慢增加你的技能。你可能会发现切换到另一个完全不同的发行版。例如，Tails 是一个为匿名而设计的发行版。Kali 是为了安全设计的，包含了许多种工具。
-
 
 这些工具已经预先安装，用户可以对自己的网络进行渗透测试。曾经甚至出现过一个名为 Hannah Montana 的 Linux 发行版，但我们谈得越少越好。重点是，总有一个适合你的发行版。
 
@@ -230,15 +174,11 @@ Xfce 确实是一个快速桌面，并带来了 Linux 的最佳体验。事实�
 | 办公 | LibreOffice Writer |
 | 其他 | |
 
-
 > “在开源世界中，你有权控制自己的命运。” – Linus Torvalds（Linux 内核开发者）
-
 
 谈论 Linux 有多好固然言而易之，但如何把它安装到你的电脑上呢？安装 Linux 非常简单，但有几个选项供你选择。本节将介绍你如何下载 Linux ISO、将其安装在 PC 上作为你的主操作系统，甚至包括如何安装虚拟环境。通过虚拟环境，你可以在继续使用主操作系统 macOS 的同时运行 Linux。感兴趣吗？继续阅读以了解更多。
 
-
 在将 Linux 安装到电脑之前，你需要将下载的 Linux ISO 传输到 DVD 或 USB 闪盘。这将是一个运行环境，允许你在安装之前测试该操作系统，但首先你需要创建可启动的介质。
-
 
 我们正在使用一台 Windows 10 电脑将 ISO 传输到 DVD。如果你使用的是 Windows 7 及更高版本的 Windows，该过程非常简单。
 
@@ -262,7 +202,6 @@ Xfce 确实是一个快速桌面，并带来了 Linux 的最佳体验。事实�
 共享
 使用 WinRAR 打开
 
-
 USB 介质比 DVD 快，而且更方便，因为大多数现代 PC 都没有安装光驱器。传输镜像的过程很容易，但你需要一个第三方程序和一个 USB 闪盘。
 
 | 首先打开网络浏览器并访问 rufus.ie。向下滚动页面下载最新版本的 Rufus。点击链接下载。 |
@@ -284,13 +223,7 @@ USB 介质比 DVD 快，而且更方便，因为大多数现代 PC 都没有安�
 
 | 步骤 6 Linux ISO 正在传输到 USB 闪盘。这可能需要几分钟，取决于你 USB 闪盘的速度。在此过程中，Rufus 会在 Windows 期间运行，在此期间请不要关闭它。完成后，点击“开始”按钮。 |
 
-
-
-
-
-
 大多数发行版都以现场环境（Live Environment）的形式提供。在该环境中，你可以从创建的 DVD 或 USB 启动进入一个真实的、功能完整的发行版。让我们来看看它是如何工作的，以及你如何进行 Linux 安装。
-
 
 统一扩展固件接口（UEFI）用于在 PC 启动过程中识别并保护。它取代了传统的 BIOS，但在安装 Linux 时可能会导致问题。
 
@@ -301,7 +234,6 @@ USB 介质比 DVD 快，而且更方便，因为大多数现代 PC 都没有安�
 
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_21_0.png)
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_21_1.png)
-
 
 现场环境启动后，使用选项将发行版安装到你的电脑上。观察周围，当你准备好后，寻找桌面上的 Install（安装）选项。
 
@@ -319,9 +251,7 @@ USB 介质比 DVD 快，而且更方便，因为大多数现代 PC 都没有安�
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_22_4.png)
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_22_5.png)
 
-
 虚拟环境是一个模拟的计算机系统。使用虚拟机（Virtual Machine），你可以模拟标准 PC 并向其安装整个操作系统，而不会影响电脑上已安装的项目。这是使用 Linux 的极佳方法，同时保留 Windows 10 作为主操作系统。
-
 
 使用虚拟机（VM）会消耗电脑的资源：内存、硬盘空间、处理器占用率等。在开始之前确保你有足够的资源。
 
@@ -348,10 +278,9 @@ USB 介质比 DVD 快，而且更方便，因为大多数现代 PC 都没有安�
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_24_3.png)
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_24_4.png)
 
-
 当 Oracle 的 VirtualBox 运行后，下一个任务是创建将要安装的虚拟机（VM）环境。此过程不会影响你当前安装的操作系统。
-## 创建虚拟机
 
+## 创建虚拟机
 创建虚拟机时有许多选项。现在，我们将设置一个足以运行 Linux Mint 的虚拟机。
 
 - **第 1 步** 打开 VirtualBox，点击应用程序右侧面板顶部的 New（新建）图标。这将打开新虚拟机向导。
@@ -364,40 +293,27 @@ USB 介质比 DVD 快，而且更方便，因为大多数现代 PC 都没有安�
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_25_2.png)
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_25_3.png)
 
-
-
-
-
 ## 第 5 步
-
 点击“创建”（Create）后弹出的窗口会询问您想要创建什么类型的虚拟磁盘。在这种情况下，我们建议使用默认（VirtualBox 磁盘镜像），因为其他选项通常用于将虚拟机从一个虚拟机应用程序移动到另一个。确保选择了 VDI，并点击“下一步”（Next）。
-
 
 在完成虚拟机的初始设置后；您应该可以在 VirtualBox 应用中看到新创建的虚拟机。在开始之前，点击右侧面板顶部的“设置”（Settings）按钮，在“常规”（General）部分中，点击下拉菜单，为“共享贴板”和“拖放”选择：“双向”（Bidirectional）。
 
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_26_0.png)
 
 ## 第 6 步
-
 关于选择动态分配大小还是固定大小的虚拟硬盘的问题，对于初学者来说可能会有些困惑。基本上，动态分配的虚拟硬盘是一个灵活的选项；它起初不会在您的物理磁盘上占用大量空间。确保选择了“动态分配”（Dynamically Allocated），并点击“下一步”（Next）。
-
 
 接着点击“系统”（System）部分，然后点击“处理器”（Processor）选项卡。根据您的 CPU，在不影响主机系统的情况下，尽可能分配尽可能多的核心；我们选择了双 CPU。现在点击“显示”（Display）部分，将“显存”（Video Memory）滑动到最大值，并勾选“3D 加速”（3D Acceleration）。点击“确定”（OK）确认后续设置。
 
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_26_1.png)
-
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_26_2.png)
 
-
 确保虚拟硬盘在计算机上的位置有可用空间。例如，我们在您的 D 盘上使用了一个较大的存储选项，命名为 Linux Mint，并为虚拟硬盘分配了 25.30GB 的空间。
-
 
 点击“启动”（Start）按钮，并在“选择启动”（Select-Start Up）窗口中使用资源管理器；资源管理器用绿色箭头标亮。点击“确定”（OK）添加新的弹出窗口，下载 ISO 并点击“打开”（Open）选择该 ISO。现在点击“启动”按钮使用 Linux Mint Live 环境启动虚拟机。现在您可以按照标准的 PC 安装要求安装 Linux。
 
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_26_3.png)
-
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_26_4.png)
-
 
 > “任何人都可以构建快速的处理器。诀窍在于构建一个快速的系统。”
 
@@ -405,15 +321,11 @@ USB 介质比 DVD 快，而且更方便，因为大多数现代 PC 都没有安�
 
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_27_0.png)
 
-
 我们在这里使用 Linux Mint 作为指南，因为它是一个易于使用的发行版，非常适合原来的 Windows 用户。它也是最先进、文档最齐全的 Linux 发行版之一，并具有一些极好的配置选项。
 
 在本节中，我们将介绍 Linux Mint Cinnamon 菜单和桌面环境、它的工作原理以及你可以进行哪些自定义的自定义。想要创建另一个用户，甚至发现如何在网上匿名吗？请继续阅读。
 
-
-
 现在您已经安装了 Linux，是时候环顾四周了。但首先，如果您在使用 Virtualbox，您会收到一个关于“软件渲染”（Software Rendering）的通知，这里是修复方法。
-
 
 您已经查看了一些函数，.insert、.remove 和 .pop，但也有一些可以应用于字符串的函数。
 
@@ -428,7 +340,6 @@ USB 介质比 DVD 快，而且更方便，因为大多数现代 PC 都没有安�
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_29_1.png)
 
 30 www.pcipubications.com
-
 
 现在 Virtualbox 的软件渲染问题已经解决了，让我们看看 Mint 菜单及其工作原理。请记住，这仅适用于 Mint Cinnamon，其他发行版的视图和行为会有所不同。
 
@@ -446,12 +357,9 @@ USB 介质比 DVD 快，而且更方便，因为大多数现代 PC 都没有安�
 - **第 6 步** 悬停在任何列表上，右键点击将显示选项：“添加到面板”（Add to Panel）、“添加到桌面”（Add to Desktop）。
 
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_30_2.png)
-
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_30_3.png)
 
-
 每个桌面环境的行为都与众不同。有些发行版提供可以自定义的桌面组件，而另一些为了保持整洁的外。让我们看看 Cinnamon 桌面提供了什么。
-
 
 Cinnamon 桌面环境是风格与性能的完美结合。它有很多优点，这也是为什么它如此受欢迎的原因。
 
@@ -459,15 +367,10 @@ Cinnamon 桌面环境是风格与性能的完美结合。它有很多优点，�
 - **第 3 步** Nemo 具有许多功能、视图等，方便您导航和管理文件。例如，如果您在“图片”文件夹中有任何图像，可以使用 Nemo 右下角的滑块来调整图标的缩放级别。
 
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_31_0.png)
-
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_31_1.png)
 
 - **第 2 步** Linux 文件系统对于原来的 Windows 用户来说可能看起来很奇怪，直到您对它的工作原理更加了解，我们建议您关注桌面上的“主目录”（Home）图标。这里是与用户账户相关的所有内容：您存储图片、视频、音乐、文档、下载项目的地方。
 - **第 4 步** 就像任何优秀的文件管理器一样，如果您右键点击任何文件或文件夹，您将获得丰富的选项。在 Cinnamon 的情况下，默认允许您根据文件类型播放或查看文件。
-
-
-
-
 
 在桌面底部有一个面板（Panel），我们已经看过了面板中的一个，即菜单。如果你在面板上右键点击，除了面板应用外，还会看到一个允许你以不同方式编辑和设置面板的菜单。
 
@@ -509,10 +412,7 @@ Cinnamon 桌面环境是风格与性能的完美结合。它有很多优点，�
 
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_32_2.png)
 
-
-
 Linux Mint 是一个开箱即用的精致发行版，但与大多数 Linux 发行版一样，可以通过一些调整来改进它的工作方式。虽然这些是 Mint 特有的调整，但也适用于其他发行版。
-
 
 这些安装后的操作某些是非常建议的，而另一些只是实用的补充，用于调优系统或添加自定义。
 
@@ -527,7 +427,6 @@ Linux Mint 是一个开箱即用的精致发行版，但与大多数 Linux 发�
 - **第 4 步** 点击“更新缓存”按钮并清除“软件源”窗口。在“更新管理器”中，按回车并输入密码。更新将自动安装并重新启动更新管理器，显示大致更新时间。点击“安装”、OK 以及任何消息并等待完成。
 
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_33_1.png)
-
 
 第 5 步 更新按级别分级，低级更新，第 5 级是危险的。我们的建议保持在 3 个左右的更新；关于覆盖配置文件的消息，点击“回复”。对于软件问题和非 VirtualBox 缺少驱动的问题，使用菜单并在搜索框中输入“driver”。
 
@@ -550,11 +449,6 @@ Linux Mint 是一个开箱即用的精致发行版，但与大多数 Linux 发�
 
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_34_2.png)
 
-
-
-
-
-
 ### 步骤 5 你可以为新用户输入密码，或者点击“新密码”文本框末尾的弯曲箭头来为你生成并显示密码。当然，设置一个尽可能强的密码是个好主意。完成后，点击“更改”按钮。
 
 ### 步骤 7 登录后，新用户需要设置他们的桌面壁纸、图标、面板、菜单等。根据你设置的账户类型（标准用户或管理员），他们将无法安装任何程序。此截图来自标准用户类型。
@@ -565,39 +459,60 @@ Linux Mint 是一个开箱即用的精致发行版，但与大多数 Linux 发�
 | David (david) | |
 
 ```text
-更改密码
-新密码 4vvc_f8*
-确认密码 4vvc_f8*
 ```
+
+
+
+更改密码
+
+新密码 `4vvc_f8*`
+
+确认密码 `4vvc_f8*`
 
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_38_0.png)
 
-### 步骤 6 新用户已创建，现在可以使用用户和组控制台。如果你点击 Mint 菜单并选择“注销”，你将看到登录管理器。新用户现在出现在可用用户列表中。点击他们登录。
+### 步骤 6
+新用户已创建，现在可以使用用户和组控制台。如果你点击 Mint 菜单并选择“注销”，你将看到登录管理器。新用户现在出现在可用用户列表中。点击他们登录。
 
-### 步骤 8 你可以根据需要创建新账户，并在它们之间切换。最好只保留一个能够安装软件的账户，这样你可以跟踪桌面。
+### 步骤 8
+你可以根据需要创建新账户，并在它们之间切换。最好只保留一个能够安装软件的账户，这样你可以跟踪桌面。
 
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_38_1.png)
 
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_38_2.png)
 
 # 命令行账户
+
 正如你所期的，你也可以在命令行创建新用户。要开始，在终端中输入 `sudo adduser username`。然后会被要求为该用户创建密码和其他详细信息。点击以创建账户。
 
-### 步骤 2 你可以在用户和组中检查新用户的详情和账户类型。如果你想从 Mint 中删除用户，可以在终端或组中输入 `sudo deluser username`。
+### 步骤 2
+你可以在用户和组中检查新用户的详情和账户类型。如果你想从 Mint 中删除用户，可以在终端或组中输入 `sudo deluser username`。
 
-```text
+```
 $ adduser username
+
 添加用户 username...
+
 添加组 'username' (GID 1001)...
+
 创建主目录 /home/username...
+
 为 username 设置密码:
+
 输入密码:
+
 密码更新成功
+
 重新输入新密码:
+
 为 username 输入完整信息:
+
 全名:
+
 房间号:
+
 电话:
+
 其他:
 ```
 
@@ -605,21 +520,27 @@ $ adduser username
 
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_39_0.png)
 
-### 步骤 5 如果没有可用壁纸符合你的口味，打开浏览器并搜索你喜欢的背景类型。当你找到了想要的桌面壁纸时，右键点击它并从列表中选择“设置为桌面背景”。打开桌面背景控制台，点击“设置桌面背景”按钮。
+### 步骤 5
+如果没有可用壁纸符合你的口味，打开浏览器并搜索你喜欢的背景类型。当你找到了想要的桌面壁纸时，右键点击它并从列表中选择“设置为桌面背景”。打开桌面背景控制台，点击“设置桌面背景”按钮。
 
-### 步骤 8 允许你更改桌面的某些外观：窗口框、图标和桌面。在“设置”选项页中，你可以通过开启/关闭按钮扩展选项。
+### 步骤 8
+允许你更改桌面的某些外观：窗口框、图标和桌面。在“设置”选项页中，你可以通过开启/关闭按钮扩展选项。
 
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_40_0.png)
 
-### 步骤 6 点击菜单按钮搜索“桌面”，然后点击“桌面设置”，允许你选择布局、桌面图标和多显示器支持。你可以根据个人喜味对最佳设置进行尝试。
+### 步骤 6
+点击菜单按钮搜索“桌面”，然后点击“桌面设置”，允许你选择布局、桌面图标和多显示器支持。你可以根据个人喜味对最佳设置进行尝试。
 
-### 步骤 9 如果你点击可用视图中间的“添加/删除”按钮，可以选择你想要的默认视图，然后点击向下箭头启用它。
+### 步骤 9
+如果你点击可用视图中间的“添加/删除”按钮，可以选择你想要的默认视图，然后点击向下箭头启用它。
 
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_40_1.png)
 
-### 步骤 7 除了更改桌面壁纸和图标显示方式外，你还可以更改 Linux Mint 的整体主题。从 Mint 菜单搜索“主题”，并点击搜索结果中的主题。
+### 步骤 7
+除了更改桌面壁纸和图标显示方式外，你还可以更改 Linux Mint 的整体主题。从 Mint 菜单搜索“主题”，并点击搜索结果中的主题。
 
-### 步骤 10 点击“主题”，然后“桌面”，你就可以安装新主题并将其应用于桌面。已安装的主题也可以通过“添加/删除”按钮卸载。花时间个性化你想要的桌面是值得的，有很多非常棒的主题可用。
+### 步骤 10
+点击“主题”，然后“桌面”，你就可以安装新主题并将其应用于桌面。已安装的主题也可以通过“添加/删除”按钮卸载。花时间个性化你想要的桌面是值得的，有很多非常棒的主题可用。
 
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_40_2.png)
 
@@ -629,17 +550,21 @@ $ adduser username
 
 数字时代带来了通信的巨大进步；然而，它带来了监视和窥探的新时代。我们大多数人对政府、秘密组织和地下黑客破坏隐私的新闻并不陌生，但你该如何应对呢？
 
-# 使用 MINT 实现匿名
+## 使用 MINT 实现匿名
 
 虽然在网上完全匿名是不可能的，但你可以采取措施确保隐私处于最佳状态。
 
-### 步骤 1 从基础开始，浏览时使用 HTTPS 而不是标准的 HTTP。这意味着通过 HTTPS 传输任何内容都是安全的（最后的 S 部分）并经过加密的。
+### 步骤 1
+从基础开始，浏览时使用 HTTPS 而不是标准的 HTTP。这意味着通过 HTTPS 传输任何内容都是安全的（最后的 S 部分）并经过加密的。
 
-### 步骤 2 浏览时，考虑使用浏览器的无痕或隐私浏览模式。这将禁用网页历史和缓存，允许你在浏览时不会让他人存储详细信息。
+### 步骤 2
+浏览时，考虑使用浏览器的无痕或隐私浏览模式。这将禁用网页历史和缓存，允许你在浏览时不会让他人存储详细信息。
 
-### 步骤 3 尽管使用 Google 似乎是现代互联网的显然选择，但请考虑替代搜索引擎，例如 DuckDuckGo，一个不存储个人数据或跟踪你的搜索引擎。
+### 步骤 3
+尽管使用 Google 似乎是现代互联网的显然选择，但请考虑替代搜索引擎，例如 DuckDuckGo，一个不存储个人数据或跟踪你的搜索引擎。
 
-### 步骤 4 考虑一些浏览器插件来增强你的隐私。例如，对于 Firefox，可以使用 Ghostery、NoScript 和 Adblock Plus 来拦截追踪器和其他挖掘技术。
+### 步骤 4
+考虑一些浏览器插件来增强你的隐私。例如，对于 Firefox，可以使用 Ghostery、NoScript 和 Adblock Plus 来拦截追踪器和其他挖掘技术。
 
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_41_0.png)
 
@@ -649,8 +574,7 @@ $ adduser username
 
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_41_3.png)
 
-
-之前的步骤可以帮助你的在线隐私，但为了实现匿名，可以使用 VPN 和 Tor。VPN 是一种隐藏你 IP 地址的远程服务器。img/2f5daccbaef9a995b10c4942ee31a6fa_40_0.png)
+之前的步骤可以帮助你的在线隐私，但为了实现匿名，可以使用 VPN 和 Tor。VPN 是一种隐藏你 IP 地址的远程服务器。`img/2f5daccbaef9a995b10c4942ee31a6fa_40_0.png`
 
 - Tor 是一个可以通过全球节点隐藏你 IP 地址的开放网络。VPN 客户端与远程服务器建立连接。
 
@@ -658,23 +582,15 @@ $ adduser username
 
 - 大多数人支付月费或年费，但它是值得的。我们使用 CyberGhost（www.cyberghost.com/hz/articles/2139029-Read-me-first），它提供了 VPN 连接。
 
-
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_42_2.png)
 
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_42_3.png)
-
 
 点击“连接”调整网络设置。如果你处于审查国家（如中国）或你处于限制性防火墙之后，请使用代理。
 
 - Tor 浏览器是 Firefox 的定制版本，在这里你可以安全地浏览互联网而不被查看或跟踪。混合 VPN 和 Tor 可以提供极其安全且隐私的在线连接。
 
-
-
-
-
-
 > “Linux：一个带有 CLUE 的操作系统…… 命令行用户环境。” - 匿名（发布于 comp.software.testing）
-
 
 Linux 命令行，即终端（Terminal），是一个极其强大的环境。通过它，你可以让操作系统瘫痪，也可以将其更新到令人惊叹的状态。你可以入侵远程计算机、查看动画化的 ASCII 篝火、安装新的应用程序和程序、观看在荷兰服务器上运行的《星球大战》，并编写复杂的自动化脚本。
 
@@ -682,25 +598,23 @@ Linux 命令行，即终端（Terminal），是一个极其强大的环境。通
 
 终端在 Linux 世界中处于至高无上的地位。学习它是工作的，你就能掌握那所有的力量。
 
-
 大多数操作系统使用两种类型的界面：GUI（图形用户界面），即 Windows、macOS 和 Linux Mint 启动进入的桌面，以及命令行。虽然现代操作系统尽量避开命令行，但 Mint 使用终端赋予用户对系统更大的控制权。
-
 
 命令行或终端终端是一个极其强大的界面。你在桌面上可以做的一切都可以在终端内完成。让我们先看看它是如何工作的。
 
 - 步骤 1：可以通过点击面板上的终端图标（位于 Firefox 和文件图标之间），或打开菜单并从左侧的快速启动栏中选择来访问终端。
-- 步骤 3：你目前在终端中看到的是你的登录名，后面跟着计算机名称；这是你在第一次安装 Mint 时在设置期间命名的。该行以当前文件夹名称结束；起初这只是波浪号 ~，你的主目录（Home folder）。
+- 步骤 3：你目前在终端中看到的是你的登录名，后面跟着计算机名称；这是你在第一次安装 Mint 时在设置期间命名的。该行以当前文件夹名称结束；起初这只是波浪号 `~`，你的主目录（Home folder）。
 
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_45_0.png)
 
 - 步骤 2：终端让你能够访问 Linux Mint Shell（称为 Bash），它让你能够访问底层操作系统。Mint 中的所有内容（包括桌面和 GUI）都是从命令行运行的模块。
-- 步骤 4：行最末端闪烁的光标是你输入基于文本的命令的地方。你可以开始尝试一个简单的命令：打印工作目录 (`pwd`），它会将你当前所在的文件夹输出到屏幕上。输入 `pwd` 并按回车。
+- 步骤 4：行最末端闪烁的光标是你输入基于文本的命令的地方。你可以开始尝试一个简单的命令：打印工作目录 (`pwd`)，它会将你当前所在的文件夹输出到屏幕上。输入 `pwd` 并按回车。
 
 ```
 $ david@david-mint ~ $ 
+
 pwd
 ```
-
 
 步骤 5：你输入的所有命令工作方式相同：你输入命令，包含任何扩展命令用法的参数，然后按回车执行你输入的命令。在终端中输入：`uname` 并按回车。这将显示关于 Mint 的系统信息。
 
@@ -723,9 +637,7 @@ pwd
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_46_4.png)
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_46_5.png)
 
-
 **到目前为止，你一直使用盾牌图标启动 Mint 更新管理器，以更新系统并升级当前安装的应用程序、工具和其他元素。然而，你也可以从终端完成完整的系统更新和升级。**
-
 
 用于更新和升级终端的 APT（高级软件包工具）是一项强大的命令，并根据其用法组合不同的元素。
 
@@ -740,50 +652,85 @@ david@david-mint ~ $
 
 ```
 File-...-sudo apt-get update
+
 Hit:1 http://archive.ubuntu.com/ubuntu-security InRelease
+
 Get:2 http://archive.ubuntu.com/ubuntu-security [118 KB]
+
 Hit:3 http://archive.ubuntu.com/ubuntu-backports InRelease
+
 Get:4 http://archive.ubuntu.com/ubuntu-backports [116 KB]
+
 Hit:5 http://archive.ubuntu.com/ubuntu-updates InRelease
+
 Get:6 http://archive.ubuntu.com/ubuntu-updates [1.1 MB]
+
 Hit:7 http://archive.ubuntu.com/ubuntu-main InRelease
+
 Reading package lists... Done
+
 Building dependency tree... Done
+
 All lists are up to date.
 ```
 
 ```
 apt-get 1.7 (ubuntu)
+
 Usage: apt-get [options] (package|command) [...]
 
   apt-get update
+
   apt-get upgrade
+
   apt-get install
+
   apt-get remove
+
   apt-get autoremove
+
   apt-get purge
+
   apt-get clean
+
   apt-get download
+
   apt-get show
 
 Options:
+
   update package lists
+
   upgrade currently installed packages
+
   install package
+
   purge remove and configure packages
+
   autoremove remove unused
+
   dist-upgrade selection
+
   size total size of packages
+
   list available packages
+
   search for packages
+
   remove old versions of packages
+
   Download the binary package
 
 The following packages will be UPGRADED:
+
   linux-image-5.15.0-72-generic [62.4 MB -> 62.5 MB]
+
   linux-headers-5.15.0-72-all [15.2 MB -> 15.3 MB]
+
 2 packages upgraded, 0 newly to install, 0 packages to be removed and 0 failed to upgrade.
+
 After this operation, 77.7 MB of additional disk space will be used.
+
 Do you want to continue? [Y/n] 0 to remove and 0 not to upgrade.
 ```
 
@@ -791,34 +738,47 @@ Do you want to continue? [Y/n] 0 to remove and 0 not to upgrade.
 
 # 通过终端更新 Mint
 
-### 步骤 5：根据你的更新状态，如果有任何等待安装的项，你可能想要应用 **sudo apt-get upgrade** 的结果。你可以尝试接受并继续。这里发生的情况是 apt-get 有一些更新的软件要应用到 Mint，而你看起来没问题。
+### 步骤 5
+根据你的更新状态，如果有任何等待安装的项，你可能想要应用 `sudo apt-get upgrade` 的结果。你可以尝试接受并继续。这里发生的情况是 apt-get 有一些更新的软件要应用到 Mint，而你看起来没问题。
 
-### 步骤 7：本质，根据 `apt-get update` 命令提供的可用软件包列表，你的系统现在是最新的。你可以再次运行一遍过程，以防万一一切出错。总结一下：**sudo apt-get update**，按回车，然后输入：**sudo apt-get upgrade** 并按回车。
+### 步骤 7
+本质，根据 `apt-get update` 命令提供的可用软件包列表，你的系统现在是最新的。你可以再次运行一遍过程，以防万一一切出错。总结一下：`sudo apt-get update`，按回车，然后输入：`sudo apt-get upgrade` 并按回车。
 
-### 步骤 6：可能会有很多软件包需要处理。升级的软件包文件已经下载、解压、处理并安装。
+### 步骤 6
+可能会有很多软件包需要处理。升级的软件包文件已经下载、解压、处理并安装。
 
 ```
 Reading package lists... Done
+
 Building dependency tree... Done
+
 Reading information... Done
+
 All lists are up to date.
 ```
 
-### 步骤 8：有趣的是，Mint 等内容让你有机会选择想要的功能。在这个例子中，我们使用了 `sudo apt-get update & sudo apt-get upgrade`。双符号 `&` 会等待前一个命令完成后再开始后一个。建议使用更新和升级。
+### 步骤 8
+有趣的是，Mint 等内容让你有机会选择想要的功能。在这个例子中，我们使用了 `sudo apt-get update & sudo apt-get upgrade`。双符号 `&` 会等待前一个命令完成后再开始后一个。建议使用更新和升级。
 
 ```
 Unpacking linux-image-5.15.0-72-generic (62.4 MB -> 62.5 MB) ...
+
 Setting up linux-image-5.15.0-72-generic...
+
 Unpacking linux-headers-5.15.0-72-all (15.2 MB -> 15.3 MB) ...
+
 Setting up linux-headers-5.15.0-72-all...
+
 Unpacking linux-modules-5.15.0-72-amd64 (15.2 MB -> 15.3 MB) ...
+
 Setting up linux-modules-5.15.0-72-amd64...
+
 Processing triggers for queued (0/0)
+
 Processing triggers for upgraded (0/0)
+
 Processing triggers for installed (0/0)
 ```
-
-
 
 
 
@@ -826,42 +786,46 @@ Processing triggers for installed (0/0)
 
 ## 通过终端安装应用 – 第一部分
 
-
-## 命令行安装
+### 命令行安装
 
 通过终端安装应用可能需要一些巧妙的键盘操作，但它可以让你对正在安装的内容及其安装位置有更好的了解。
 
 - **步骤 1** 从终端安装应用相对简单。首先，你需要确保系统是最新版本。要执此此操作，请使用终端并输入：`sudo apt-get update && sudo apt-get upgrade`。
-
 - **步骤 2** 正如你使用 `sudo apt-get update/upgrade` 一样，这些命令设计用于升级系统中已安装的软件。你要安装的应用比你想象的要多吗？恰好这非常简单。首先你需要一个要安装的应用，让我们用 Stella 为例。输入：`sudo apt-get install stella`。
-
 - **步骤 3** 你需要输入 `y` 来确认安装，这将占用系统约 5MB 的存储。一旦 Stella 安装完成，你会发现 Mint 已自动在菜单中创建了“游戏”分类。
-
 - **步骤 4** 有时在安装软件时，你需要添加应用的仓库（Repository）。仓库或简称 repo 是存放软件的最简单远程服务器位置，包含了软件及其所有的依赖项（运行所需的库和文件）。要执行此操作，请使用：`sudo apt-add-repository ppa:peterlevi/ppa`。按回车键添加该 PPA（个人包存档）。
 
 ```bash
 davidsmith-mint$ sudo apt-get update && sudo apt-get upgrade
+
 Reading package lists... Done
+
 Building dependency tree... Done
+
 Reading state information... Done
+
 0 up./ubuntu-security 0 upgraded, 0 newly installed, 0 to remove and 0 failed to upgrade.
+
 0 upgraded, 0 to upgrade.
 ```
 
 ```bash
 davidsmith-mint$ sudo apt-add-repository ppa:peterlevi/ppa
+
 Contains packages for variety changer
+
 More info: https://launchpad.net/~peterlevi/archive/ubuntu/
+
 Press Enter to continue or cancel.
 ```
 
-
-### 步骤 5 这为 Wallpaper Changer 添加了仓库，这是一个基于 Ubuntu 的应用，可以在 Mint 中自动更改壁纸。当仓库添加后，输入：`sudo apt-get update` 来更新软件包信息并添加到数据库。
-
+#### 步骤 5 这为 Wallpaper Changer 添加了仓库，这是一个基于 Ubuntu 的应用，可以在 Mint 中自动更改壁纸。当仓库添加后，输入：`sudo apt-get update` 来更新软件包信息并添加到数据库。
 
 ```bash
 sudo apt-add-repository ppa:variety-team/ppa
+
 sudo apt-get update
+
 sudo apt-get install variety
 ```
 
@@ -871,12 +835,17 @@ Setting up dependencies...
 Reading package list...
 Building dependency tree...
 Reading state information...Done
+
 The following packages will be automatically installed,
   variety
+
 The following packages will be upgraded:
   0
-The following packages will be removed:  0
 
+The following packages will be removed:  0
+```
+
+```bash
 sudo apt-get remove variety
 sudo apt-get autoremove
 ```
@@ -885,83 +854,111 @@ sudo apt-get autoremove
 
 除了安装，apt 命令还可以用于删除应用并释放系统资源。
 
-### 步骤 1 要卸载应用，输入 `sudo apt-get remove variety`。按 `y` 继续卸载应用；你会注意到删除操作释放了多少磁盘空间。
+#### 步骤 1 要卸载应用，输入 `sudo apt-get remove variety`。按 `y` 继续卸载应用；你会注意到删除操作释放了多少磁盘空间。
 
-### 步骤 2 `apt-get autoremove` 命令会卸载应用，但不会移除它附带的额外内容，如配置和库文件。要完全删除应用，输入：`sudo apt-get purge`。
+#### 步骤 2 `apt-get autoremove` 命令会卸载应用，但不会移除它附带的额外内容，如配置和库文件。要完全删除应用，输入：`sudo apt-get purge`。
 
-### 步骤 3 当你从系统移除软件包时，某些包不再需要。通过 `sudo apt-get autoremove` 可以清理系统，然后按 `y` 接受该过程。
+#### 步骤 3 当你从系统移除软件包时，某些包不再需要。通过 `sudo apt-get autoremove` 可以清理系统，然后按 `y` 接受该过程。
 
 ```
 sudo apt-get remove variety
+
 Reading package list...
 Building dependency tree...
 Reading state information...Done
+
 The following packages were automatically installed and no longer required
   variety-*
+
 The following packages will be removed:
   variety-common-*
+
 The following packages will be installed:
   0
+
 The following packages will be upgraded:
   0
+
 The following packages will be removed:
   0
+
 Do you want to continue? [Y/n]
 ```
 
-### 步骤 4 最后，为了清理系统中所有未使用的软件包并移除 autoremove 命令删除的元素，你可以输入：`sudo apt-get autoremove`。这些残留文件对于保持 Mint 设置良好以及关闭不必要的安装和升级至关重要。
+#### 步骤 4 最后，为了清理系统中所有未使用的软件包并移除 autoremove 命令删除的元素，你可以输入：`sudo apt-get autoremove`。这些残留文件对于保持 Mint 设置良好以及关闭不必要的安装和升级至关重要。
 
 ```
 sudo apt-get remove variety
+
 Reading package list...
 Building dependency tree...
 Reading state information...Done
+
 The following packages were automatically installed and no longer required
   variety-*
+
 The following packages will be removed:
   variety-common-*
+
 The following packages will be installed:
   0
+
 The following packages will be upgraded:
   0
+
 The following packages will be removed:
   0
+
 Do you want to continue? [Y/n]
 ```
 
 ```
 sudo apt-get purge variety
+
 Reading package list...
 Building dependency tree...
 Reading state information...Done
+
 The following packages were automatically installed and no longer required
   variety-*
+
 The following packages will be removed:
   variety-common-*
+
 The following packages will be installed:
   0
+
 The following packages will be upgraded:
   0
+
 The following packages will be removed:
   0
+
 Do you want to continue? [Y/n]
 ```
 
 ```
 sudo apt-get autoremove
+
 Reading package list...
 Building dependency tree...
 Reading state information...Done
+
 The following packages were automatically installed and no longer required
   variety-*
+
 The following packages will be removed:
   0
+
 The following packages will be installed:
   0
+
 The following packages will be upgraded:
   0
+
 The following packages will be removed:
   0
+
 Do you want to continue? [Y/n]
 ```
 
@@ -969,55 +966,71 @@ Do you want to continue? [Y/n]
 
 大多数情况下，你会使用标准的 `apt-get` 命令从终端安装应用。然而，有时某些应用需要更多的工作。这意味着从其源码安装应用，这听起来并没有那么可怕。
 
-## 从源码安装
+### 从源码安装
 
 你需要熟悉的命令有 `Configure`、`Make` 和 `Install`。你会发现很多应用都是从源码使用的，因此这是一项值得投入时间的技能。
 
-步骤 1 Linux 源码文件通常以 .TAR.GZ 或 .TAR.BZ2 形式出现。两者都是包含“make” 所需所有代码的压缩文件。在 Home 目录下创建一个新文件夹开始本教程：`mkdir vim`。
+步骤 1 Linux 源码文件通常以 `.TAR.GZ` 或 `.TAR.BZ2` 形式出现。两者都是包含“make” 所需所有代码的压缩文件。在 Home 目录下创建一个新文件夹开始本教程：`mkdir vim`。
 
 步骤 2 顺便说一下，Vim 是一种高级文本编辑器，可以帮助我们编辑代码。`cd vim`，然后从互联网获取内容（此处为 Vim 的 BZ 文件），在新的 Vim 文件夹内，在终端输入以下命令：`wget ftp://vim.org/pub/unix/vim-7.4.tar.bz2`。
 
 步骤 3 现在我们需要配置文件的内容，所以：在终端中输入 `tar -xf vim-7.4.tar.bz2`。你可以按 Tab 键自动填充文件名。
 
-### 步骤 5 如果你再次输入 `ls`，你会发现了一个了一个文件夹：**vim**：在 Mint 中用浅色文本表示文件夹。为主应用创建根文件夹总是更好的，因为当你使用这种方法升级 apt 时，每个单独的版本将会有它们自己的文件夹。
+#### 步骤 5 如果你再次输入 `ls`，你会发现了一个了一个文件夹：`vim`：在 Mint 中用浅色文本表示文件夹。为主应用创建根文件夹总是更好的，因为当你使用这种方法升级 apt 时，每个单独的版本将会有它们自己的文件夹。
 
-### 步骤 6 输入 `cd vim` 进入文件夹，再次输入 `ls` 查看其内容。会有相当数量的文件；大部分是核心文件，其他应该应该是 **README** 或 **INSTALL**。阅读这些文件总是明智的，因为它们提供了关于安装的宝贵信息。
+#### 步骤 6 输入 `cd vim` 进入文件夹，再次输入 `ls` 查看其内容。会有相当数量的文件；大部分是核心文件，其他应该应该是 `README` 或 `INSTALL`。阅读这些文件总是明智的，因为它们提供了关于安装的宝贵信息。
 
-### 步骤 7 安装的第一部分要求你配置系统以使用与应用关联的依赖项。`./configure`。如果你在编译组件时收到错误，该命令将生效。使用 **sudo apt install build-essential**。缺少了第三方应用 ncurses。正如我们提到的，你需要获取 **sudo apt-install libcurses5-dev ncurses-dev**。
+#### 步骤 7 安装的第一部分要求你配置系统以使用与应用关联的依赖项。`./configure`。如果你在编译组件时收到错误，该命令将生效。使用 `sudo apt install build-essential`。缺少了第三方应用 ncurses。正如我们提到的，你需要获取 `sudo apt-install libcurses5-dev ncurses-dev`。
 
-### 步骤 8 你可能需要继续安装依赖项。每安装一个依赖项后，运行 `sudo ./configure`，如果没有报告错误，即可继续安装的下一个阶段。你可能需要在网上搜索某些信息。
+#### 步骤 8 你可能需要继续安装依赖项。每安装一个依赖项后，运行 `sudo ./configure`，如果没有报告错误，即可继续安装的下一个阶段。你可能需要在网上搜索某些信息。
 
-### 步骤 9 成功执行 `./configure` 后，系统将创建一个 Makefile。这需要在终端中进行“make”。这可能需要一段时间时间，取决于应用的大小。
+#### 步骤 9 成功执行 `./configure` 后，系统将创建一个 Makefile。这需要在终端中进行“make”。这可能需要一段时间时间，取决于应用的大小。
 
-### 步骤 10 最后，你需要在终端输入：**sudo make install**。这将安装应用，在这种情况下，你可以通过终端输入或通过 Dash 搜索来执行它。
-
-
-
-
+#### 步骤 10 最后，你需要在终端输入：`sudo make install`。这将安装应用，在这种情况下，你可以通过终端输入或通过 Dash 搜索来执行它。
 
 # 使用终端
 
 ```
 Kernel command line: block2mtd.block2mtd=/dev/hda2,131072.rootfs root=/dev/mtdblock0 roottype=jffs2 init=//etc/preinit noinittrd console=tty0 console=ttyS0,38408 reboot-bios
+
 Found and enabled local APIC:
+
 Enabling FPU save and restore... done.
+
 Enabling unmasked SIMD FPU exception support... done.
+
 Initializing CPU...
+
 PID hash table entries: 32 (order: 5, 128 bytes)
+
 Detected i686GP77+ MHz processor.
+
 Console: colour VGA+0x25
+
 console [tty0] enabled
+
 console [tty0] enabled
+
 Dentry cache hash table entries: 1024 (order: 0, 4096 bytes)
+
 Inode-cache hash table entries: 1024 (order: 0, 4096 bytes)
+
 Memory: 512K/812K available (1497k kernel code, 264k reserved, 597k data, 196k init, Ok highmem)
+
 virtual kernel memory layout:
+
 fixmap: 0xfffff9000 - 0xffffff (280 KB)
+
 vmalloc: 0xc0000000 - 0xffff7000 (1007 MB)
+
 lowmem: 0xc0000000 - 0xc07f0000 (7 MB)
+
 .init: 0xc0313000 - 0xc0344000 (196 KB)
+
 .data: 0xc0d27653c - 0xc030bbfc (597 KB)
+
 .text: 0xc0010000 - 0xc027653c (1497 KB)
+
 Checking if this processor honours WP bit in supervisor mode...Ok. Calibrating delay using timer routine (lp)=203810)
 ```
 
@@ -1027,6 +1040,7 @@ Checking if this processor honours WP bit in supervisor mode...Ok. Calibrating d
 
 ```c
 #include <linux/sched.h>
+
 /*
  * 此模块实现了控制台 IO 函数
  * 希望这将是一个完整的实现。
@@ -1035,13 +1049,11 @@ Checking if this processor honours WP bit in supervisor mode...Ok. Calibrating d
 #include <linux/sched.h>
 #include <linux/tty.h>
 #include <asm/system.h>
-
 #define SCREEN_START 0x0800
 #define SCREEN_END 0x0000
 #define LINES 25
 #define COLUMNS 80
 #define WIDTH 1
-
 extern void interrupt(struct tty_queue *queue) {
     static unsigned long end=SCREEN_START;
     static unsigned long x,y;
@@ -1050,7 +1062,11 @@ extern void interrupt(struct tty_queue *queue) {
     static unsigned long status=0;
     static unsigned char attr=0;
 }
-``` 注意：有时我们需要禁用中断（为了输入一个单词），但即使在获取中断时，这样做也能有效。希望一切顺利。
+```
+
+
+
+注意：有时我们需要禁用中断（为了输入一个单词），但即使在获取中断时，这样做也能有效。希望一切顺利。
 
 你知道吗？Linus Torvalds 编写的 Linux 最初只占用了 5KB 内存？而且自 0.01 版本以来，Linux 内核现在拥有超过 800 万行代码。
 
@@ -1067,10 +1083,10 @@ extern void interrupt(struct tty_queue *queue) {
 - **第 3 步** 你的命令行应该切换到 `Test` 文件夹，输入 `ls`（列出目录内容）可以看到文件夹内的内容；显然，`mkdir` 命令是创建目录的，现在你已经猜出它代表 Directory（目录）。你可以在其中创建子目录。
 - **第 4 步** 创建名为 `Test.txt` 的空文件，在终端输入 `touch Test.txt`。你可以使用 `ls` 查看文件夹中的新文件。`touch` 是一个标准命令，无需打开编辑器即可创建文件。
 - **第 5 步** 假设我们现在想创建一个 `Test2.txt` 文件并写入一些内容。输入 `cat > Test2.txt`。这将创建文件进入编辑模式。
-- **第 6 步** 你会注意到 `cat > Test2.txt` 命令下方光标在闪烁。这允许你编辑文件，然后按 Ctrl+S 保存内容。
+- **第 6 步** 你会注意到 `cat > Test2.txt` 命令下方光标在闪烁。这允许你编辑文件，然后按 `Ctrl+S` 保存内容。
 - **第 7 步** 当然，你不总是必须使用终端来输入文本。Linux 自带了一个文本编辑器，类似于 Windows 的记事本。在终端输入 `xed Test2.txt` 并按回车。
 - **第 8 步** Xed 是一个 GUI 应用程序，你可以使用主窗口的“文件 > 保存”或“另存为”功能来输入文本并保存文件。
-- **第 9 步** 如果你留在留在终端编辑/保存文件，可以使用 Nano。Nano 是一个简单的文本编辑器。例如，输入 `nano Test2.txt`。屏幕底部有一个菜单。按 Ctrl+X 保存并退出。
+- **第 9 步** 如果你留在留在终端编辑/保存文件，可以使用 Nano。Nano 是一个简单的文本编辑器。例如，输入 `nano Test2.txt`。屏幕底部有一个菜单。按 `Ctrl+X` 保存并退出。
 - **第 10 步** 我们已经用过终端启动过 Xed 应用，但在终端内也可以启动任何应用。例如，尝试输入 `firefox` 并按回车。关闭 Firefox 返回终端。此外，输入应用程序名称即可在终端运行它。
 
 # 创建和重命名目录
@@ -1083,7 +1099,7 @@ extern void interrupt(struct tty_queue *queue) {
 
 - **第 1 步** 在终端打开状态下输入 `cd ~` 确保你在自己的 Home 目录中。现在输入 `ls` 查看 Home 目录下的当前文件夹。你会发现文件夹被标记为青色（浅蓝色）。让我们开始创建一个新目录：`mkdir testdir`。如果你再次输入命令 `mkdir testdir`，你会收到一条消息：`mkdir: directory exists`。不言说，在当前目录下只能有一个同名的唯一目录。然而，由于 Linux 是区分大小写的，你不能有两个 `testdir`。
 - **第 2 步** 如果你现在再次输入 `ls`，你会看到新目录 `testdir` 已与 Home 区域的其他目录一起被创建。显然，`mkdir` 命令是创建它的工具，现在你已经猜出它代表 Directory。你可以在其中创建目录。
-- **第 3 步** `-p` 选项允许 `mkdir` 根据需要创建父目录。在上一步中，命令是 (mkdir)，选项是 (-p)，参数是 (Temp/finances)。
+- **第 3 步** `-p` 选项允许 `mkdir` 根据需要创建父目录。在上一步中，命令是 `mkdir`，选项是 `-p`，参数是 `Temp/finances`。
 - **第 4 步** `rmdir` 只能删除空目录。要删除子目录甚至文件，你需要使用 `rm` 命令配合 `-r` 选项。例如，删除目录使用 `rm -r Temp`。使用此命令要小心。
 - **第 5 步** `-rf` 选项用于删除目录及其内容而不进行询问。警告：这是永久性的删除。
 - **第 6 步** `-i` 选项用于在删除目录前提示确认。
@@ -1091,10 +1107,6 @@ extern void interrupt(struct tty_queue *queue) {
 - **第 8 步** `cp` 命令用于复制目录和文件。
 - **第 9 步** `chmod` 命令用于更改目录和文件的权限。
 - **第 10 步** `chown` 命令用于更改目录的所有者
-
-
-
-
 
 ## 终端中的趣味活动
 
@@ -1105,44 +1117,46 @@ extern void interrupt(struct tty_queue *queue) {
 在接下来的两个部分中，你将完全在终端中操作，所以开始热身你的手指吧。毕竟，俗话说的，工作之余必有娱乐……
 
 - 步骤 1：我们将使用的第一个命令是 `sl`，它默认没有安装，请输入：`sudo apt-get install sl`。你可以通过 `sl` 运行该命令，执行时会在屏幕上显示一辆蒸汽机（因此命名为 'sl'）。输入 `LS`（注意是大大写）也可以运行。
-
 - 如果你曾想让电脑向你读出随机的运势，那么你走运了。大多数发行版都需要你安装该程序，但 Linux Mint 的不同之处在于它已经预装了它。你只需要在终端中输入命令 `fortune`，然后享受即可。
 
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_59_0.png)
 
 - 步骤 2：星大战粉丝甚至在终端中也能获得满足。通过 `telnet` 命令连接到远程服务器，你可以看到以 ASCII 格式出的《星球大战 IV：新希望》。要查看这一奇景，请输入：`telnet towel.blinklights.nl`。
-
-- 步骤 4：`rev` 命令非常有趣，起初对操作系统似乎毫无用。然而，它可以用来创建一些似乎不可破解的密码。输入 `rev`，然后输入一些文本，当你按下回车键时，一切都会反转。按 Ctrl+C 退出。
+- 步骤 4：`rev` 命令非常有趣，起初对操作系统似乎毫无用。然而，它可以用来创建一些似乎不可破解的密码。输入 `rev`，然后输入一些文本，当你按下回车键时，一切都会反转。按 `Ctrl+C` 退出。
 
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_59_1.png)
 
 - 步骤 5：如果你卡在尝试计算特定数字的所有可能因数，只需输入 `factor` 后跟数字即可。例如，`factor 7` 的输出不多，而 `factor 60` 显示的内容更多。
-
 - 步骤 8：如果你出于某种原因真的想扩展整个列，可以通过管道将 `fortune` 命令传递给它，使用：`fortune | cowsay`；对于图形化的牛：`fortune | cowsay`。此外，为了一直使用 cowsay，尝试一下：`cowthink` ... 这本书太棒了。
 
 ```
 $ david-mind - factor 7
+
 $ david-mind - factor 60
+
 $ david-mind - 5
 ```
 
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_60_0.png)
 
 - 步骤 6：在“相当酷”和“非常离谱”之间只有微妙的界限。让一只 ASCII 牛向你重复内容可能属于后者。输入 `cowsay` 后跟你想要的任何文本，例如：`cowsay Mint is ice!`。事实上，你甚至可以通过牛输出命令结果，只需输入：`ls | cowsay`
-
 - 步骤 9：我们承认，`toilet` 命令并没有给人多少信心。然而，它并没有像刚开始那样糟糕。通过 `sudo apt-get install toilet` 安装它。安装好后，输入类似 `toilet David` 的内容。或者直接用 `ls | toilet` 列出当前文件夹的内容。
 
 ```
 $ Lime Mint is ice !
+
 $ ls
+
 $ david-mind - ls cowsay
+
 $ david-mind - 1
+
 $ Pictures Templates Videos:
+
 $ david-mind - 1
 ```
 
 - 步骤 7：为了遵循示例，还有一个图形化的（即非终端的）命令。通过 `sudo apt-get cowsay` 安装它，安装后使用 `cowsay` 某些内容，例如：`cowsay IBM Publications`。
-
 - 步骤 10：通过扩展 `toilet` 命令，你可以生成美观的图形。例如，尝试这个：`toilet -f monoid12 -f Metal David`。你可以输入 `toilet -help` 来查看命令行参数列表以进一步扩展。
 
 ```
@@ -1183,84 +1197,156 @@ $ david-mind - 5
 
 既然终端已经打开，而且你的键盘也热身了，这里有两页终端的胡说八语（其实是内容）。
 
-- 步骤 1：记得旧的 ZX Spectrum 时代吗，你可以输入 `10 print "Hello"`，然后 Hello 就会在屏幕上显示？在 Linux Mint 中你可以做同样的事。只需输入 `10` 后跟一些文本，例如 `Linux is os`。它会一直运行直到你按下 Ctrl-C。
-
-- 步骤 3：让一只小白猫在桌面上追逐指针听起来可能是在浪费时间。奇怪的是，其实并不是。执行 `sudo apt-get install oneko` 然后输入 `oneko` 让猫出现。让它在屏幕上追逐光标。使用 Ctrl-C 退出操作。
+- 步骤 1：记得旧的 ZX Spectrum 时代吗，你可以输入 `10 print "Hello"`，然后 Hello 就会在屏幕上显示？在 Linux Mint 中你可以做同样的事。只需输入 `10` 后跟一些文本，例如 `Linux is os`。它会一直运行直到你按下 `Ctrl-C`。
+- 步骤 3：让一只小白猫在桌面上追逐指针听起来可能是在浪费时间。奇怪的是，其实并不是。执行 `sudo apt-get install oneko` 然后输入 `oneko` 让猫出现。让它在屏幕上追逐光标。使用 `Ctrl-C` 退出操作。
 
 ```
 Edit View Terminal help
+
 $ david@david-mint ~# echo Mint is os!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
+
 $ 10 print Hello!
 ```
  help
@@ -1283,7 +1369,6 @@ $ david@david-mint ~# oneko
 ```
 
 - 步骤 2：Matrix 被揭示了。通过 `sudo apt-get cmatrix` 安装它。完成后，跟随 Matrix：`telnet towel.blinklights.nl`。
-
 - 步骤 4：这个比之前的厉害一点。输入 `:(){ :;`。这是一个 fork 弹，请小心。它会占用所有资源导致系统崩溃。
 
 ```
@@ -1304,18 +1389,10 @@ $ david-mind - 5
 ```
 
 - 步骤 6：在“相当酷”和“非常离谱”之间只有微妙的界限。让一只 ASCII 牛向你重复内容可能属于后者。输入 `cowsay` 后跟你想要的任何文本，例如：`cowsay Mint is ice!`。事实上，你甚至可以通过牛输出命令结果，只需输入：`ls | cowsay`
-
 - 步骤 7：为了遵循示例，还有一个图形化的（即非终端的）命令。通过 `sudo apt-get cowsay` 安装它，安装后使用 `cowsay` 某些内容，例如：`cowsay IBM Publications`。
-
 - 步骤 8：如果你出于某种原因真的想扩展整个列，可以通过管道将 `fortune` 命令传递给它，使用：`fortune | cowsay`；对于图形化的牛：`fortune | cowsay`。尝试一下：`cowthink` ... 这本书太棒了。
-
 - 步骤 9：我们承认，`toilet` 命令并没有给人多少信心。然而，它并没有像刚开始那样糟糕。通过 `sudo apt-get install toilet` 安装它。安装好后，输入类似 `toilet David` 的内容。或者直接用 `ls | toilet` 列出当前文件夹的内容。
-
 - 步骤 10：通过扩展 `toilet` 命令，你可以生成美观的图形。例如，尝试这个：`toilet -f monoid12 -f Metal David`。你可以输入 `toilet -help` 来查看命令行参数列表以进一步扩展。
-
-
-
-
 
 # Linux 技巧与妙招
 
@@ -1326,29 +1403,37 @@ $ david-mind - 5
 世界上有无数的 Linux 技巧、秘密、黑客技巧和妙招。有些非常古老，源自 Linux 的传统，而另一些则是 Linux 传说中近期添加的内容。这里有我们最喜欢的十个技巧。
 
 ### 彩蛋
-文本编辑器 Emacs 是一款非常出色的软件，但它还包含一个隐藏的彩蛋！你知道吗？在安装了 Emacs 的情况下（`sudo apt-get install emacs25`），切换到终端会话并输入：
+
+
+
+文本编辑器 `Emacs` 是一款非常出色的软件，但它还包含一个隐藏的彩蛋！你知道吗？在安装了 `Emacs` 的情况下（`sudo apt-get install emacs25`），切换到终端会话并输入：
+
 ```bash
 emacs -batch -l dunnet
 ```
 
 ### 终端浏览
+
 是否曾经想过从终端浏览互联网？虽然不是特别实用，但这是一个非常引人注目的现象。要这样做，请输入：
+
 ```bash
 sudo apt-get install elinks
 ```
 
-Dunnet 是 Ron Schnell 在 1982 年编写的一款文字冒险游戏，自 1994 年起一直隐藏在 Emacs 中。
+`Dunnet` 是 `Ron Schnell` 在 1982 年编写的一款文字冒险游戏，自 1994 年起一直隐藏在 `Emacs` 中。
 
 输入你想要访问的网站。
 
 ### 月球车
-基于 1982 年的经典街机游戏《月球巡逻》（Moon Patrol），月球车在 1985 年出现在家用电脑上，并备受赞誉。它是一款非常棒的雅达游戏，通过输入以下命令可以在 Linux 终端中运行：
+
+基于 1982 年的经典街机游戏《月球巡逻》（`Moon Patrol`），月球车在 1985 年出现在家用电脑上，并备受赞誉。它是一款非常棒的雅达游戏，通过输入以下命令可以在 Linux 终端中运行：
 
 ```bash
 sudo apt-get install moon-buggy
 ```
 
 ### 让雪落下
+
 终端控制台可能会任何一天下雪。如果你感兴趣，请输入：
 
 ```bash
@@ -1356,24 +1441,28 @@ wget https://github.com/semtek/15058483/raw/7/d024716ea57e69fb52632fee09f4427353
 chmod +x snowjob.job
 ```
 
-# 内存大户
+## 内存大户
 
 删除一个文件，可能会消耗系统的大部分内存。查看内存大户，只需输入：
 
 ```bash
 ps aux --sort -rnk 4
 ```
+
 这将根据内存使用情况对输出进行排序。
 
-# BBS
-在拨号连接时代，在线世界是由公告板（BBS）组成的。这些系统一直是用户聊天、交换代码、玩游戏的聚集地，通过 Telnet，我们仍然可以连接到一些活跃的 BBS。
+## BBS
+
+在拨号连接时代，在线世界是由公告板（`BBS`）组成的。这些系统一直是用户聊天、交换代码、玩游戏的聚集地，通过 `Telnet`，我们仍然可以连接到一些活跃的 `BBS`。
 
 ```bash
 telnet startbestarrars.dyndns.org
 ```
-有无数 BBS 可用，你可以查看 https://www.telnetbse.com/bbs/list/ 获取更多信息。
 
-# 彻底粉碎
+有无数 `BBS` 可用，你可以查看 https://www.telnetbse.com/bbs/list/ 获取更多信息。
+
+## 彻底粉碎
+
 当你想要删除整个具有树形结构的目录（或文件夹）时，拥有正确软件的人可以恢复它。然而，要安全且永久地删除文件：
 
 ```bash
@@ -1381,71 +1470,78 @@ mkdir -p New-Dir/
 # subfolder1, subfolder2, subfolder3, subfolder4
 shred -zu FILENAME.txt
 ```
-这将创建一个包含四个子文件夹的 New-Dir。将 FILENAME 替换为文件名。
 
-# ASCII 艺术
-ASCII 应用于某些图像时会非常醒目。但这很难实现。你可以使用 img2txt 从图像创建一些很棒的 ASCII 艺术：
+这将创建一个包含四个子文件夹的 `New-Dir`。将 `FILENAME` 替换为文件名。
+
+## ASCII 艺术
+
+`ASCII` 应用于某些图像时会非常醒目。但这很难实现。你可以使用 `img2txt` 从图像创建一些很棒的 `ASCII` 艺术：
 
 ```bash
 img2txt FILENAME.png
 ```
-将 FILENAME 替换为系统中实际的文件。
 
-# 忘记的命令
-想要记住所有的 Linux 命令并不容易。坦率说，我们可以使用 apropos 来帮助。只需使用它，并带有描述：
+将 `FILENAME` 替换为系统中实际的文件。
+
+## 忘记的命令
+
+想要记住所有的 Linux 命令并不容易。坦率说，我们可以使用 `apropos` 来帮助。只需使用它，并带有描述：
 
 ```bash
 apropos "copy files"
 ```
-(1) 复制文件和目录
-(2) 复制文件和目录
-(3) 复制文件并设置属性
-(1) 重命名文件
-(2) 在标准输出中写入注释，编辑并重命名
-(3) 重命名
 
-# 使用终端
-# Linux 与大爆炸
-Linux 是碰撞的粒子，因此我们可以理解宇宙是如何运作的。
+1. 复制文件和目录
+2. 复制文件和目录
+3. 复制文件并设置属性
+1. 重命名文件
+2. 在标准输出中写入注释，编辑并重命名
+3. 重命名
 
-# 你知道吗...
-Linux 是大型对子对撞机背后科学的核心吗？通过将 Red Hat 和 CentOS（一个基于 Red Hat 核心构建的超稳定发行版）作为基础，欧洲核研究中心（CERN）的聪明人们开发了多个不同版本的自己的发行版来协助各个方面。最著名的是 SLC，也称为 CERN。据报告，有超过 6000 个系统正在运行，超过 15000 个正在运行。
+## 使用终端
+
+## Linux 与大爆炸
+
+`Linux` 是碰撞的粒子，因此我们可以理解宇宙是如何运作的。
+
+## 你知道吗...
+
+`Linux` 是大型对子对撞机背后科学的核心吗？通过将 `Red Hat` 和 `CentOS`（一个基于 `Red Hat` 核心构建的超稳定发行版）作为基础，欧洲核研究中心（`CERN`）的聪明人们开发了多个不同版本的自己的发行版来协助各个方面。最著名的是 `SLC`，也称为 `CERN`。据报告，有超过 6000 个系统正在运行，超过 15000 个正在运行。
 
 # 创建 Bash 脚本 – 第一部分
 
 ## 脚本编写
-脚本仅仅是 Bash 将运行以完成特定任务的一系列命令。它们可能非常复杂，取决于具体情况。最终，你将在终端内并配合文本编辑器工作，但为了方便起见，我们将通过以下方式进行示例：
 
-- **第 1 步**：有几种文本编辑器我们可以创建 Bash 脚本；Nano、Vim、GNU Emacs 等。根结底取决于个人偏好。使用 Nano 纯粹是为了方便在截图中读取脚本。
+脚本仅仅是 `Bash` 将运行以完成特定任务的一系列命令。它们可能非常复杂，取决于具体情况。最终，你将在终端内并配合文本编辑器工作，但为了方便起见，我们将通过以下方式进行示例：
+
+- **第 1 步**：有几种文本编辑器我们可以创建 `Bash` 脚本；`Nano`、`Vim`、`GNU Emacs` 等。根结底取决于个人偏好。使用 `Nano` 纯粹是为了方便在截图中读取脚本。
 - **第 2 步**：首先，在你开始编写任何脚本之前，你需要创建一个文件夹，将所有的脚本都放在里面。这将我们的工作文件夹，如果你需要，你可以在这里创建子文件夹。
-- **第 3 步**：让我们从简单的脚本开始，向终端输出一些内容。输入 `nano helloworld.sh`。这将启动 Nano 并创建一个名为 helloworld.sh 的文件。在 Nano 中输入以下内容：
-  ```bash
-  #!/bin/bash
-  echo Hello World!
-  ```
+- **第 3 步**：让我们从简单的脚本开始，向终端输出一些内容。输入 `nano helloworld.sh`。这将启动 `Nano` 并创建一个名为 `helloworld.sh` 的文件。在 `Nano` 中输入以下内容：
+
+```bash
+#!/bin/bash
+echo Hello World!
+```
+
 - **第 4 步**：保存文件并返回终端。
-- **第 5 步**：`#!/bin/bash` 行告诉 shell 你将使用什么。井号（#）表示注释行，系统会忽略它；感叹号（!）表示跳过命令，并将强制脚本将该行作为命令执行。这被称为 Shebang（井号）。
-- **第 6 步**：当你再次输入 `ls` 时，你可以看到 helloworld.sh 现在已经从黑色变成了绿色，这意味着它现在是一个可执行文件。运行脚本，换句话说让它执行你输入的内容：`./helloworld.sh`。
-- **第 7 步**：你可以点击 Save 保存文件，并返回终端。要让任何脚本变得可执行并能够修改权限，请执行 `chmod +x helloworld.sh`。你应该对创建的每个脚本都这样做。
-- **第 8 步**：虽然这并不非常有趣，但“Hello World!”单词将显示在终端中。echo 命令负责输出其后面的单词，因此无论你让命令输出什么，它都会存储。
-- **第 9 步**：将 echo 想象成 BASIC 的打印命令。它显示文本或存储在系统的变量，例如当前日期。尝试：`echo Hello World! Today is $(date)`。
+- **第 5 步**：`#!/bin/bash` 行告诉 shell 你将使用什么。井号（`#`）表示注释行，系统会忽略它；感叹号（`!`）表示跳过命令，并将强制脚本将该行作为命令执行。这被称为 `Shebang`（井号）。
+- **第 6 步**：当你再次输入 `ls` 时，你可以看到 `helloworld.sh` 现在已经从黑色变成了绿色，这意味着它现在是一个可执行文件。运行脚本，换句话说让它执行你输入的内容：`./helloworld.sh`。
+- **第 7 步**：你可以点击 `Save` 保存文件，并返回终端。要让任何脚本变得可执行并能够修改权限，请执行 `chmod +x helloworld.sh`。你应该对创建的每个脚本都这样做。
+- **第 8 步**：虽然这并不非常有趣，但“`Hello World!`”单词将显示在终端中。`echo` 命令负责输出其后面的单词，因此无论你让命令输出什么，它都会存储。
+- **第 9 步**：将 `echo` 想象成 `BASIC` 的打印命令。它显示文本或存储在系统的变量，例如当前日期。尝试：`echo Hello World! Today is $(date)`。
 - **第 10 步**：注意：`$(date +A)` 正在调用存储今天日期的变量。
-
-
-
-
 
 ## 创建 Bash 脚本 – 部分 2
 
-之前我们查看了如何创建你的第一个 Bash 脚本 Hello World，并添加了一个系统变量。现在你可以扩展这些内容，看看当你开始尝试创建自己的独特变量时可以做什么。
+之前我们查看了如何创建你的第一个 `Bash` 脚本 `Hello World`，并添加了一个系统变量。现在你可以扩展这些内容，看看当你开始尝试创建自己的独特变量时可以做什么。
 
-## 变量
+### 变量
 
-与其他所有编程语言一样，Bash 脚本可以存储和调用系统的某些变量，无论是通用的还是自定义。
+与其他所有编程语言一样，`Bash` 脚本可以存储和调用系统的某些变量，无论是通用的还是自定义。
 
-- 步骤1：让我们创建一个名为 hello.sh 的脚本；`xed hello.sh`。在编辑器中：`#!/bin/bash`，然后输入 `echo Hello $1`。保存文件并退出 xed。使用 `chmod +x hello.sh` 使脚本具有执行权限。
-- 步骤2：由于脚本是可执行的，使用 `./hello.sh` 运行它。现在，正如你预期的那样，终端显示了“Hello”。如果你对变量使用该命令，它就会变得有趣起来。例如，尝试 `./hello.sh David`。
-- 步骤3：现在的输出将是 Hello David。这是因为 Bash 会自动为用户分配变量，这些变量会被持有并传递给脚本。$1 现在持有 David。你可以通过输入不同的内容来更改变量：`./hello.sh Mint`。
+- 步骤1：让我们创建一个名为 `hello.sh` 的脚本；`xed hello.sh`。在编辑器中：`#!/bin/bash`，然后输入 `echo Hello $1`。保存文件并退出 `xed`。使用 `chmod +x hello.sh` 使脚本具有执行权限。
+- 步骤2：由于脚本是可执行的，使用 `./hello.sh` 运行它。现在，正如你预期的那样，终端显示了“`Hello`”。如果你对变量使用该命令，它就会变得有趣起来。例如，尝试 `./hello.sh David`。
+- 步骤3：现在的输出将是 `Hello David`。这是因为 `Bash` 会自动为用户分配变量，这些变量会被持有并传递给脚本。`$1` 现在持有 `David`。你可以通过输入不同的内容来更改变量：`./hello.sh Mint`。
 
 ```
 File Edit View Search Terminal
@@ -1468,7 +1564,7 @@ Hello Mint
 david@david-mint ~/scripts$ $
 ```
 
-- 步骤4：你可以重命名变量。使用以下内容修改 hello.sh 脚本：`firstname=$1`, `surname=$2`, `echo $firstname $surname`。将每个语句放在新的一行。保存脚本并返回终端。
+- 步骤4：你可以重命名变量。使用以下内容修改 `hello.sh` 脚本：`firstname=$1`, `surname=$2`, `echo $firstname $surname`。将每个语句放在新的一行。保存脚本并返回终端。
 
 ```
 File Edit View Search Documents Help
@@ -1487,11 +1583,11 @@ echo Hello $firstname $surname
 
 接下来
 
-- 步骤5：当你运行脚本时，现在可以使用自定义变量了：`./hello.sh David Hayward`。自然地根据你的名字更改这两个变量；除非你也是 David Hayward。目前我们只是在打印内容，所以让这两个变量派上用场。
-- 步骤6：创建一个名为 addition.sh 的新脚本，使用与 hello.sh 相同的格式。在这里我们定义了变量 `firstname` 和 `surname`，并使用 `echo` 命令通过让一个表达式执行简单的算术运算：`echo The sum is $((firstname+surname))`。保存脚本并使其具有执行权限（chmod +x addition.sh`）。
-- 步骤7：当你运行 addition 脚本时，我们可以输入两个数字：`./addition.sh 1 2`。结果将是 3。尝试不同的数字看看会发生什么。同时也修改脚本并重命名为 multiplication。
-- 步骤8：让我们进一步扩展。创建一个名为 greetings.sh 的新脚本。输入下面的脚本并使用 chmod 命令使其具有执行权限。你可以看到脚本现在增加了一些内容。
-- 步骤9：我们在 echo 命令中添加了 `-n`，这会让光标留在与新行的同一行。`read` 命令将用户的输入存储到变量 `firstname` 和 `surname` 中以供稍后读取。`clear` 命令清除屏幕。
+- 步骤5：当你运行脚本时，现在可以使用自定义变量了：`./hello.sh David Hayward`。自然地根据你的名字更改这两个变量；除非你也是 `David Hayward`。目前我们只是在打印内容，所以让这两个变量派上用场。
+- 步骤6：创建一个名为 `addition.sh` 的新脚本，使用与 `hello.sh` 相同的格式。在这里我们定义了变量 `firstname` 和 `surname`，并使用 `echo` 命令通过让一个表达式执行简单的算术运算：`echo The sum is $((firstname+surname))`。保存脚本并使其具有执行权限（`chmod +x addition.sh`）。
+- 步骤7：当你运行 `addition` 脚本时，我们可以输入两个数字：`./addition.sh 1 2`。结果将是 3。尝试不同的数字看看会发生什么。同时也修改脚本并重命名为 `multiplication`。
+- 步骤8：让我们进一步扩展。创建一个名为 `greetings.sh` 的新脚本。输入下面的脚本并使用 `chmod` 命令使其具有执行权限。你可以看到脚本现在增加了一些内容。
+- 步骤9：我们在 `echo` 命令中添加了 `-n`，这会让光标留在与新行的同一行。`read` 命令将用户的输入存储到变量 `firstname` 和 `surname` 中以供稍后读取。`clear` 命令清除屏幕。
 - 步骤10：作为最后的完善，让我们包含上一节中使用的变量。修改脚本末尾以 `echo Hello $firstname $surname`。输出应该显示当前日期，调用了一个系统变量。
 
 ```
@@ -1514,15 +1610,15 @@ echo Hello $firstname, how are you?
 
 ## 创建 Bash 脚本 – 部分 3
 
-在之前的页面中，我们查看了 If、Else 语句，现在是一个非常基础的 Bash 脚本，涉及向屏幕输出文本、获取用户输入、存储并输出到屏幕，以及包含变量。现在让我们结合目前已取得的并引入循环。
+在之前的页面中，我们查看了 `If`、`Else` 语句，现在是一个非常基础的 `Bash` 脚本，涉及向屏幕输出文本、获取用户输入、存储并输出到屏幕，以及包含变量。现在让我们结合目前已取得的并引入循环。
 
-## IF, THEN, ELSE
+### IF, THEN, ELSE
 
 在大多数编程结构中，总会有需要循环遍历你输入的命令以创建更好功能的时候。
 
-- 步骤1：让我们现在查看 If, Then 和 Else 语句，当正确执行时，它们会带来一组指令，并简单地判断某些内容是否存在，如果存在则执行不同的操作。创建一个新脚本 greeting.sh 并输入下面的文本。
-- 步骤2：greeting.sh 是 greeting.sh 的副本，但略有不同。在这里我们在 if 语句处添加了一个循环。这意味着如果 IF 变量等于 David，那么下一行 THEN 就是对所发生情况的反应，它将在屏幕上输出“Awesome name”，然后是变量（即 David）。
-- 步骤3：下一行 ELSE 是当变量不等于“David”时发生的情况。在这种情况下，它只是在屏幕上输出第一行的“Hello...”。最后一行，命令是用于结束循环的语句。如果你有一个没有命令的 if，你就会得到错误。
+- 步骤1：让我们现在查看 `If`, `Then` 和 `Else` 语句，当正确执行时，它们会带来一组指令，并简单地判断某些内容是否存在，如果存在则执行不同的操作。创建一个新脚本 `greeting.sh` 并输入下面的文本。
+- 步骤2：`greeting.sh` 是 `greeting.sh` 的副本，但略有不同。在这里我们在 `if` 语句处添加了一个循环。这意味着如果 `IF` 变量等于 `David`，那么下一行 `THEN` 就是对所发生情况的反应，它将在屏幕上输出“`Awesome name`”，然后是变量（即 `David`）。
+- 步骤3：下一行 `ELSE` 是当变量不等于“`David`”时发生的情况。在这种情况下，它只是在屏幕上输出第一行的“`Hello...`”。最后一行，命令是用于结束循环的语句。如果你有一个没有命令的 `if`，你就会得到错误。
 
 ```
 greeting.sh
@@ -1551,15 +1647,13 @@ else
   echo "Hello $firstname $surname, how are you on this"
 ```
 
-## 创建 Bash 脚本 - 部分 3
-
 ## 更多循环
 
-你可以使用 FOR、WHILE 和 UNTIL 语句来循环数据。如果你正在进行批量命名、复制或运行需要计数器的脚本，这些会非常有用。
+你可以使用 `FOR`、`WHILE` 和 `UNTIL` 语句来循环数据。如果你正在进行批量命名、复制或运行需要计数器的脚本，这些会非常有用。
 
-- 步骤1：创建一个名为 count.sh 的新脚本。输入截图中的文本并使其具有执行权限。这创建了变量 `count`，它在脚本开始时等于零。然后是 WHILE 循环，当 count 小于（LT 部分）100 时，将在 echo 中打印计数器的当前值。
-- 步骤2：执行 count.sh 脚本将产生 0 到 99 的数字显示；当它达到 100 时脚本结束。使用 FOR 语句修改脚本使其工作相同。在这种情况下，你将截图中的文本输入 count.sh。
-- 步骤4：UNTIL 循环与 WHILE 循环的工作相同，只是更多时候是反向的。所以数到一百，使用 UNTIL，我们将是：[ count -gt 100 ]。区别在于，直到计数器大于（gt 部分）100，继续循环。
+- 步骤1：创建一个名为 `count.sh` 的新脚本。输入截图中的文本并使其具有执行权限。这创建了变量 `count`，它在脚本开始时等于零。然后是 `WHILE` 循环，当 `count` 小于（`LT` 部分）100 时，将在 `echo` 中打印计数器的当前值。
+- 步骤2：执行 `count.sh` 脚本将产生 0 到 99 的数字显示；当它达到 100 时脚本结束。使用 `FOR` 语句修改脚本使其工作相同。在这种情况下，你将截图中的文本输入 `count.sh`。
+- 步骤4：`UNTIL` 循环与 `WHILE` 循环的工作相同，只是更多时候是反向的。所以数到一百，使用 `UNTIL`，我们将是：`[ count -gt 100 ]`。区别在于，直到计数器大于（`gt` 部分）100，继续循环。
 
 ```
 count.sh
@@ -1571,7 +1665,7 @@ while [ $count -lt 100 ]; do
 done
 ```
 
-- 步骤5：你不限于数字到一百。你可以循环执行你喜欢的任何命令集，运行你想循环运行的次数。重命名文件、创建五个文件夹等。此脚本将使用 FOR 循环创建从 folder1 到 folder10 的文件夹。
+- 步骤5：你不限于数字到一百。你可以循环执行你喜欢的任何命令集，运行你想循环运行的次数。重命名文件、创建五个文件夹等。此脚本将使用 `FOR` 循环创建从 `folder1` 到 `folder10` 的文件夹。
 
 ```
 count.sh
@@ -1580,7 +1674,9 @@ until [ $count -gt 100 ]; do
   echo $count
   ((count+=1))
 done
-```- 步骤6：再次使用 FOR 语句，我们可以通过操作 (0-100) 部分来执行以下序列。此部分实际上意味着起始、增量；如果没有增量，它只是一个跳转到结束的单数字，例如我们可以将循环设置到 1000 且步长为 2：for count in {0..1000..2}; do:
+```
+
+- 步骤6：再次使用 `FOR` 语句，我们可以通过操作 `(0-100)` 部分来执行以下序列。此部分实际上意味着起始、增量；如果没有增量，它只是一个跳转到结束的单数字，例如我们可以将循环设置到 1000 且步长为 2：`for count in {0..1000..2}; do:` 
 
 ```
 count.sh
@@ -1591,15 +1687,13 @@ for count in {0..100}; do
 done
 ```
 
-
-
 # 创建 Bash 脚本 – 第 4 部分
 
 你已经遇到过脚本与用户交互的情况，例如用户名等。你还查看了如何在脚本中创建循环来计数或简单地多次执行某些操作。让我们结合并扩展更多内容。
 
 ## 选择与循环
 
-让我们引入另一种方法 CHOICE，以及一些嵌套的 `IF` 和 `ELSE` 语句。从创建一个新脚本 `mychoice.sh` 开始。
+让我们引入另一种方法 `CHOICE`，以及一些嵌套的 `IF` 和 `ELSE` 语句。从创建一个新脚本 `mychoice.sh` 开始。
 
 ### 第 1 步
 
@@ -1623,15 +1717,19 @@ done
 
 你可以在菜单中使用方向键和回车键来选择脚本。`choice` 是一个反馈信息的外部命令。关于命令、选择以及你可以得到的结果，比我们之前看到的要好一点，让你对可以实现的内容有了很好的理解。
 
+
+
 ![](img/2f5daccbaef9a995b10c4942ee31a6fa_73_3.png)
 
 # 创建 Bash 脚本 - 第 4 部分
 
 Bash 脚本最常用的示例之一是创建备份程序，该程序可以管理任务并在过程中添加一些自定义功能。
 
-第 1 步 一个非常基础的备份脚本看起来像：`~/bin/bash`，然后 `tar cvzf ~/backups/my-backup.tgz` 将为 `~/Documents` 文件夹创建一个压缩文件备份，并将其放入名为 `~/backups` 的文件夹中，命名为 `my-backup.tgz`。
+## 第 1 步
+一个非常基础的备份脚本看起来像：`~/bin/bash`，然后 `tar cvzf ~/backups/my-backup.tgz` 将为 `~/Documents` 文件夹创建一个压缩文件备份，并将其放入名为 `~/backups` 的文件夹中，命名为 `my-backup.tgz`。
 
-第 4 步 一旦创建了 `~/backups` 文件夹，我们现在就可以设置的时间戳变量在其中创建一个新的子文件夹。添加 `mkdir -p $dest/$d/$M/$Y`，你在这里放置与该日期/月/年相关的备份文件。
+## 第 4 步
+一旦创建了 `~/backups` 文件夹，我们现在就可以设置的时间戳变量在其中创建一个新的子文件夹。添加 `mkdir -p $dest/$d/$M/$Y`，你在这里放置与该日期/月/年相关的备份文件。
 
 ```bash
 #!/bin/bash
@@ -1652,13 +1750,17 @@ fi
 mkdir -p $dest/$year/$month/$day
 ```
 
-第 2 步 最后，我们可以让脚本更具交互性。让我们从定义一些变量开始。将截图中的文本输入新的 bash 脚本中。注意我们将 `source` 拼错成了 `sauce`，这是因为这里有一个内置命令 `source`，这是我们方面的拼写错误。
+## 第 2 步
+最后，我们可以让脚本更具交互性。让我们从定义一些变量开始。将截图中的文本输入新的 bash 脚本中。注意我们将 `source` 拼错成了 `sauce`，这是因为这里有一个内置命令 `source`，这是我们方面的拼写错误。
 
-第 3 步 上一个脚本允许你创建一个时间戳，这样你就能知道备份是什么时候完成的。你创建了一个 `dest` 变量，即创建备份文件的文件夹（`~/backups`）。你现在可以添加一行代码首先检查 `~/backups` 文件夹是否存在，如果不存在，则创建它。
+## 第 3 步
+上一个脚本允许你创建一个时间戳，这样你就能知道备份是什么时候完成的。你创建了一个 `dest` 变量，即创建备份文件的文件夹（`~/backups`）。你现在可以添加一行代码首先检查 `~/backups` 文件夹是否存在，如果不存在，则创建它。
 
-第 5 步 一切就绪后，你现在可以根据第 5 步中的 `Tar` 命令输入实际的备份程序。结合变量，你得到了：`cvfz $dest/$d/$M/$Y~/Documents/Backup.tgz`。在截图中，我们添加了一个方便的 `echo "backing up..."` 命令。
+## 第 5 步
+一切就绪后，你现在可以根据第 5 步中的 `Tar` 命令输入实际的备份程序。结合变量，你得到了：`cvfz $dest/$d/$M/$Y~/Documents/Backup.tgz`。在截图中，我们添加了一个方便的 `echo "backing up..."` 命令。
 
-第 6 步 最后，你可以添加一条友好的消息：`echo "Backup complete. All done."` 现在脚本已经不再复杂，它可以轻松地包含 Home 区域内的任何文件夹以及 Home 区域本身。
+## 第 6 步
+最后，你可以添加一条友好的消息：`echo "Backup complete. All done."` 现在脚本已经不再复杂，它可以轻松地包含 Home 区域内的任何文件夹以及 Home 区域本身。
 
 ```bash
 #!/bin/bash
@@ -1695,31 +1797,34 @@ www.pctubications.com
 
 输入一系列命令来获取系统信息、查找文件或重命名一批文件？脚本是更好的答案。
 
-第 1 步 让我们创建一个脚本来帮助显示 Mint 信息；而必每次都创建一个新的 `sysinfo.sh` 并进入你喜欢的编辑器。
+### 第 1 步
+让我们创建一个脚本来帮助显示 Mint 信息；而必每次都创建一个新的 `sysinfo.sh` 并进入你喜欢的编辑器。
 
-第 2 步 我们在这个脚本中包含了一些额外内容。这是用于代码换行，以及随后的特殊字符允许设置颜色和背景。
+### 第 2 步
+我们在这个脚本中包含了一些额外内容。这是用于代码换行，以及随后的特殊字符允许设置颜色和背景。
 
-第 3 步 每个部分都运行一个适合终端的标题。你可以包含更多内容，例如系统使用的当前日期等。此外，你还可以将所有信息管道到一个方便的文件中，准备在浏览器中查看。
+### 第 3 步
+每个部分都运行一个适合终端的标题。你可以包含更多内容，例如系统使用的当前日期等。此外，你还可以将所有信息管道到一个方便的文件中，准备在浏览器中查看。
 
-第 4 步 尽管有一些终端命令可以帮助你查找特定的文件或文件夹，但非技术用户可以使用名为 `look.sh` 的脚本。
+### 第 4 步
+尽管有一些终端命令可以帮助你查找特定的文件或文件夹，但非技术用户可以使用名为 `look.sh` 的脚本。
 
-第 5 步 执行脚本时，它会等待用户输入，在这种情况下是文件扩展名，如 `jpg` 等。这看起来不太友好。让我们让它变得更友好一点。在 `read` 命令之前添加 `echo`。
+### 第 5 步
+执行脚本时，它会等待用户输入，在这种情况下是文件扩展名，如 `jpg` 等。这看起来不太友好。让我们让它变得更友好一点。在 `read` 命令之前添加 `echo`。
 
-第 6 步 这是一个有趣的、使用 `speak` 程序的脚本。使用 `sudo apt-install speak` 安装 `speak`。然后将下面的文本输入新创建的脚本。正如你所看到的，从我们写的第一个脚本开始，它使用了脚本输出中的变量。
+### 第 6 步
+这是一个有趣的、使用 `speak` 程序的脚本。使用 `sudo apt-install speak` 安装 `speak`。然后将下面的文本输入新创建的脚本。正如你所看到的，从我们写的第一个脚本开始，它使用了脚本输出中的变量。
 
-第 7 步 我们简要地为脚本的输出添加了一些颜色。要深入研究颜色选项太长了，这里有一个可以输出你创建的任何内容的脚本。创建一个名为 `colours.sh` 的新脚本并将下面的文本输入其中。
+### 第 7 步
+我们简要地为脚本的输出添加了一些颜色。要深入研究颜色选项太长了，这里有一个可以输出你创建的任何内容的脚本。创建一个名为 `colours.sh` 的新脚本并将下面的文本输入其中。
 
-第 8 步 `colours.sh` 的输出当然可以混合，根据你想让输出显示的内容产生不同的效果。例如，红色背景上的白色文字（或闪烁）。遗憾的是，闪烁效果在所有终端上不起作用，所以你可能需要切换到不同的终端。
+### 第 8 步
+`colours.sh` 的输出当然可以混合，根据你想让输出显示的内容产生不同的效果。例如，红色背景上的白色文字（或闪烁）。遗憾的是，闪烁效果在所有终端上不起作用，所以你可能需要切换到不同的终端。
 
-第 9 步 虽然我们不是写华丽的脚本，但使用 `Zenith` 输出图形界面如何？将下面的文本输入新脚本 `menu.sh`。赋予其可执行权限并运行它。如果你有几个框箭头，最后是结束。
+### 第 9 步
+虽然我们不是写华丽的脚本，但使用 `Zenith` 输出图形界面如何？将下面的文本输入新脚本 `menu.sh`。赋予其可执行权限并运行它。如果你有几个框箭头，最后是结束。
 
 虽然在 Bash 脚本中游戏并不经常被谈起，但它是完全可能的，尽管有点困难。基于移动的游戏是……然而，一个好的文本冒险游戏或幻想游戏是终端中游戏的完美选择。尝试一下，并让我们知道你的进展如何。
-
-（此处省略了后续大量重复的代码块和 OCR 错误，根据要求已进行去重处理，保留核心逻辑内容）
-
-
-
-
 
 ## Pi x Linux = 完美组合
 
@@ -1780,23 +1885,14 @@ Python 是初学者最受欢迎的选择，树莓派预装了你充分利用 Pyt
 ### 前 10 常用命令
 
 - `cd` 命令允许你更改目录。
-
 - `ls` 显示当前目录下的文件。
-
 - `mv` 将文件移动到不同位置或重命名。
-
 - `cp` 用于复制文件。
-
 - `chmod` 更改文件的权限。
-
 - `rm` 移除或删除文件或目录。
-
 - `pwd` 打印当前目录的完整路径。
-
 - `clear` 清除屏幕。这等同于输入 Ctrl+L。
-
 - `mkdir` 是 "make directory"创建目录）的缩写，用于创建目录（如果指定的目录不存在）。
-
 - `ls` 显示目录中的文件。
 
 ### 使用/信息命令
@@ -1804,32 +1900,17 @@ Python 是初学者最受欢迎的选择，树莓派预装了你充分利用 Pyt
 当你尝试进一步了解系统或程序时，以下命令非常有用。你可能并不是每天都需要它们，但当你需要时，它们将无价之。
 
 - `free` 命令显示系统物理内存和交换内存总量和使用情况。例如，`free -m` 以兆字节为单位提供信息。
-
 - `sed` 命令打开一个流编辑器。流编辑器用于对输入流（文件或管道的输入）执行文本转换。
-
 - `df` 显示所有分区的磁盘使用情况。`df -h` 命令可能是最有用的（-h 表示人类可读格式）。
-
 - `adduser` 命令向系统添加新用户。同样，`addgroup` 命令向系统添加新组。
-
 - `top` 程序提供运行中系统的动态视图。它可以显示系统信息以及进程列表。
-
 - `deluser` 命令从系统中删除用户。要删除用户的文件和主目录，你需要添加 `--remove` 参数。
-
 - `uname` 命令配合 `-a` 选项提供所有系统信息，包括机器名称、内核版本以及其他细节。
-
 - `delgroup` 命令从系统中删除组。你不能删除作为任何用户主用户组的组。
-
 - `ps` 命令允许查看机器上运行的所有进程。每个操作系统的 `ps` 版本略有不同，但功能相同。
-
 - `man` 命令调入命令的手手册条目，当你需要帮助时，这是一个极佳的起点。
-
 - `grep` 命令允许在多个文件中搜索特定的搜索模式并打印匹配的行。一个例子是：`grep help file`。
-
 - `man intro` 特别有用。它显示《用户命令简介》，这是一份关于 Linux 命令的编写良好且相当简洁的介绍。
-
-
-
-
 
 ## Linux 命令 A-Z 详解
 
@@ -1837,117 +1918,117 @@ Linux 命令多到数以千计，所以虽然这并不是一份完整的 A-Z 列
 
 | | | | |
 |---|---|---|---|
-| adduser | 添加新用户 | dd | 数据转储，转换并复制文件 |
-| arch | 打印机器架构 | diff | 显示两行之间的差异 |
-| awk | 在（文件）中查找并替换文本 | dirname | 将完整路径名转换为路径 |
-| B | | | du | 估算文件空间占用 |
-| bc | 任意精度计算器语言 | gawk | 在（文件）中查找并替换文本 |
-| | | | grep | 在文件中匹配模式的行 |
-| C | | | groups | 打印用户所属的组名 |
-| cat | 合并文件并打印到标准输出 | | 压缩或解压命名文件 |
-| chdir | 切换工作目录 | head | 输出文件的开头部分 |
-| E echo | ed | 行式文本编辑器 (ed) | 打印或设置系统名称 |
-| chgrp | 修改文件所有者 | | egrep | 在文件中匹配扩展标准的行 |
-| chroot | env | 显示、设置或删除环境变量 | id | 打印用户和组 ID |
-| cksum | 打印 CRC 校验和和字节计数 | expand | 将制表符转换为空格 | info | 帮助信息 |
-| cmp | 比较两个文件 | expr | 评估表达式 | 复制文件并设置属性 |
-| comm | 按行比较两个排序后的文件 | F | 打印质因 |
-| cp | 将一个或多个文件复制到另一个位置 | fdisk | Linux 分区表 | J join | 按公共字段连接行 |
-| crontab | 调度命令在稍后运行 | fgrep | 在文件中匹配固定字符串的行 |
-| csplit | 将文件分割成由上下文决的部分 | find | 查找符合所需条件的文件 | K kill 停止进程运行 |
-| cut | 将一行分成几部分 | fmt | 使用指定格式重新格式化段落文本 | L less 每次显示一屏输出 |
-| D date | 显示或更改日期和时间 | format | 格式化磁盘或磁带 | ln 在文件间创建链接 |
-| dc | 桌面计算器 | fschck | 文件系统一致性检查和修复 | locate 查找文件 |
+| `adduser` | 添加新用户 | `dd` | 数据转储，转换并复制文件 |
+| `arch` | 打印机器架构 | `diff` | 显示两行之间的差异 |
+| `awk` | 在（文件）中查找并替换文本 | `dirname` | 将完整路径名转换为路径 |
+| B | | | `du` | 估算文件空间占用 |
+| `bc` | 任意精度计算器语言 | `gawk` | 在（文件）中查找并替换文本 |
+| | | | `grep` | 在文件中匹配模式的行 |
+| C | | | `groups` | 打印用户所属的组名 |
+| `cat` | 合并文件并打印到标准输出 | | 压缩或解压命名文件 |
+| `chdir` | 切换工作目录 | `head` | 输出文件的开头部分 |
+| E `echo` | `ed` | 行式文本编辑器 (`ed`) | 打印或设置系统名称 |
+| `chgrp` | 修改文件所有者 | | `egrep` | 在文件中匹配扩展标准的行 |
+| `chroot` | `env` | 显示、设置或删除环境变量 | `id` | 打印用户和组 ID |
+| `cksum` | 打印 CRC 校验和和字节计数 | `expand` | 将制表符转换为空格 | `info` | 帮助信息 |
+| `cmp` | 比较两个文件 | `expr` | 评估表达式 | 复制文件并设置属性 |
+| `comm` | 按行比较两个排序后的文件 | F | 打印质因 |
+| `cp` | 将一个或多个文件复制到另一个位置 | `fdisk` | Linux 分区表 | J `join` | 按公共字段连接行 |
+| `crontab` | 调度命令在稍后运行 | `fgrep` | 在文件中匹配固定字符串的行 | `find` | 查找符合所需条件的文件 | K `kill` 停止进程运行 |
+| `csplit` | 将文件分割成由上下文决的部分 | `fmt` | 使用指定格式重新格式化段落文本 | L `less` 每次显示一屏输出 |
+| `cut` | 将一行分成几部分 | D `date` | 显示或更改日期和时间 | `format` | 格式化磁盘或磁带 | `ln` 在文件间创建链接 |
+| D `dc` | 桌面计算器 | `fschck` | 文件系统一致性检查和修复 | `locate` 查找文件 |
 
 ## Linux 命令 A-Z 详解
 
 | | | | |
 |---|---|---|---|
-| hostname | 打印当前登录名 | rcp | 在两台机器间复制文件 |
-| lpc | 行打印机控制程序 | rm | 删除文件 |
-| lpr | 离线打印 | rdir | 删除文件夹 |
-| lpm | 从打印队列移除作业 | rpm | 软件包管理器 |
-| | | rsync | 远程文件复制（同步文件） |
-
+| `hostname` | 打印当前登录名 | `rcp` | 在两台机器间复制文件 |
+| `lpc` | 行打印机控制程序 | `rm` | 删除文件 |
+| `lpr` | 离线打印 | `rdir` | 删除文件夹 |
+| `lpm` | 从打印队列移除作业 | `rpm` | 软件包管理器 |
+| | | `rsync` | 远程文件复制（同步文件） |
 | | | | |
 |---|---|---|---|
 | U | | 卸载设备 | |
-| unmount | | 将空格转换为制表符 | |
-| unexpand | | 合并文件 | |
-| uniq | | 将单位从一个标度转换为另一个 |
-| units | | 
+| `unmount` | | 将空格转换为制表符 | |
+| `unexpand` | | 合并文件 | |
+| `uniq` | | 将单位从一个标度转换为另一个 |
+| `units` | | 
 包脚本 | 解包 shell 归档脚本 |
-| user | | 创建新用户 |
-| usermod | | 修改用户账户 |
+| `user` | | 创建新用户 |
+| `usermod` | | 修改用户账户 |
 
 ## M
 
 | | | | |
 |---|---|---|---|
-| man | 查看帮助手册 | s | 终端窗口管理器 |
-| mkdir | 创建新文件夹 | diff | 交互式合并文件 |
-| mkfifo | 创建 FIFOs（命名管道） | select | 接受键盘输入 |
-| knod | 创建块或字符特殊字段 | seq | 打印数字序列 |
-| more | 一次显示屏幕输出 | shutdown | 机或重启 linux |
-| mount | 挂载文件系统 | sleep | 睡眠指定的时间 |
+| `man` | 查看帮助手册 | s | 终端窗口管理器 |
+| `mkdir` | 创建新文件夹 | `diff` | 交互式合并文件 |
+| `mkfifo` | 创建 FIFOs（命名管道） | `select` | 接受键盘输入 |
+| `knod` | 创建块或字符特殊字段 | `seq` | 打印数字序列 |
+| `more` | 一次显示屏幕输出 | `shutdown` | 机或重启 linux |
+| `mount` | 挂载文件系统 | `sleep` | 睡眠指定的时间 |
 
 ## N
 
 | | | | |
 |---|---|---|---|
-| nice | 设置命令或作业的优先级 | sort | 对内容进行排序 |
-| nl | 为行编号 | su | 切换用户身份 |
-| nohup | 在后台运行命令 | sum | 打印文件的和 |
-| | | link | 创建新的硬链接 |
-| | | sync | 同步磁盘数据 |
+| `nice` | 设置命令或作业的优先级 | `sort` | 对内容进行排序 |
+| `nl` | 为行编号 | `su` | 切换用户身份 |
+| `nohup` | 在后台运行命令 | `sum` | 打印文件的和 |
+| | | `link` | 创建新的硬链接 |
+| | | `sync` | 同步磁盘数据 |
 
 ## P
 
 | | | | |
 |---|---|---|---|
-| printf | 格式化并打印 |
-| password | 修改密码 | tac | 反序合并并打印文件 |
-| paste | 合并行 | tail | 输出文件的末尾 |
-| pathchk | 检查路径有效性 | tar | 归档 |
-| printenv | 打印环境变量 | tee | 输出重定向到多个文件 |
-| | | test | 评估条件表达式 |
+| `printf` | 格式化并打印 |
+| `password` | 修改密码 | `tac` | 反序合并并打印文件 |
+| `paste` | 合并行 | `tail` | 输出文件的末尾 |
+| `pathchk` | 检查路径有效性 | `tar` | 归档 |
+| `printenv` | 打印环境变量 | `tee` | 输出重定向到多个文件 |
+| | | `test` | 评估条件表达式 |
 
 ## Q
 
 | | | | |
 |---|---|---|---|
-| quota | 显示磁盘使用情况和限制 | time | 测量时间 |
-| quotacheck | 扫描文件系统磁盘使用 | touch | 修改时间戳 |
-| quotactl | 设置磁盘配额 | top | 列出运行中的进程 |
-| | | traceroute | 跟踪路由 |
-| | | tr | 翻译、压缩或删除字符 |
-| | | tsort | 拓扑排序 |
+| `quota` | 显示磁盘使用情况和限制 | `time` | 测量时间 |
+| `quotacheck` | 扫描文件系统磁盘使用 | `touch` | 修改时间戳 |
+| `quotactl` | 设置磁盘配额 | `top` | 列出运行中的进程 |
+| | | `traceroute` | 跟踪路由 |
+| | | `tr` | 翻译、压缩或删除字符 |
+| | | `tsort` | 拓扑排序 |
 
 ## R
 
 | | | | |
 |---|---|---|---|
-| ram | 内存磁盘 | | |
-
+| `ram` | 内存磁盘 | | |
 | | | | |
 |---|---|---|---|
-| watch | 定期执行或显示程序 | | |
-| wc | 打印字节、单词和行数 | | |
-| where | 在用户路径中报告命令的所有实例 | | |
-| which | 查找命令的位置 | | |
 
-| | | | |
-|---|---|---|---|
-| who | 打印当前登录的用户 | | |
-| whoami | 打印当前用户名称 | | |
 
-| | | | |
-|---|---|---|---|
-| xargs | 执行命令并传递参数列表 | | |
 
-| | | | |
+| `watch` | 定期执行或显示程序 | | |
+| `wc` | 打印字节、单词和行数 | | |
+| `where` | 在用户路径中报告命令的所有实例 | | |
+| `which` | 查找命令的位置 | | |
+
 |---|---|---|---|
-| yes | 打印字符串直到被中断 | | |
+
+| `who` | 打印当前登录的用户 | | |
+| `whoami` | 打印当前用户名称 | | |
+
+|---|---|---|---|
+
+| `xargs` | 执行命令并传递参数列表 | | |
+
+|---|---|---|---|
+
+| `yes` | 打印字符串直到被中断 | | |
 
 # 使用终端
 
@@ -1968,15 +2049,13 @@ Linux 命令多到数以千计，所以虽然这并不是一份完整的 A-Z 列
 ## 现在在 Readly 上上线
 
 想要精通你的代码吗？
+
 千万不要错过 Readly 上的新《Programming & Coding》（编程与编码）杂志！
 
 ## Linux 入门
 
-
-
-
-
 # 想精通你的 iPhone 吗？
+
 那么现在不要错过我们在 Readly 上推出的全新的《iPhone & iOS 杂志》！
 
 点击我们的便捷链接立即阅读：https://bit.ly/3y7g1LO

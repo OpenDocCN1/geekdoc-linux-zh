@@ -1,12 +1,13 @@
+
 # 各式各样的文本处理工具
 
 > [`learnbyexample.github.io/cli-computing/assorted-text-processing-tools.html`](https://learnbyexample.github.io/cli-computing/assorted-text-processing-tools.html)
 
 专业的文本处理工具实在太多了。本章将讨论一些在前几章中没有涉及到的命令。
 
-> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) [example_files](https://github.com/learnbyexample/cli-computing/tree/master/example_files) 目录包含本章中使用的示例输入文件。
+> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) [`example_files`](https://github.com/learnbyexample/cli-computing/tree/master/example_files) 目录包含本章中使用的示例输入文件。
 
-## seq
+## `seq`
 
 `seq` 命令是一个便捷的工具，可以生成升序或降序的数字序列。支持整数和浮点数。您还可以自定义数字的格式和它们之间的分隔符。
 
@@ -87,7 +88,7 @@ $ seq -f'%.3e' 1.2e2 0.752 1.22e2
 1.215e+02 
 ```
 
-## shuf
+## `shuf`
 
 默认情况下，`shuf` 将随机化输入行的顺序。您可以使用 `-n` 选项来限制输出行的数量。
 
@@ -123,7 +124,7 @@ $ shuf -n3 -i 100-200
 148 
 ```
 
-## cut
+## `cut`
 
 `cut` 是许多字段处理用例的便捷工具。与 `awk` 和 `perl` 命令相比，其功能有限，但较小的范围也导致处理速度更快。
 
@@ -202,7 +203,7 @@ bat
 fog 
 ```
 
-## column
+## `column`
 
 `column` 命令是一个巧妙的工具，可以按列对齐输入数据。默认情况下，使用空白字符作为输入分隔符。空格字符用于对齐输出列，因此制表符等空白字符将被转换为空格。
 
@@ -239,14 +240,14 @@ apple  banana  cherry
 ```
 
 > ![警告](img/b5314b4a0acf0f436c4bf59486793342.png) 输入应在末尾包含换行符，否则您将得到错误：
-> 
-> ```sh
-> $ printf '1 2 3\na   b   c' | column -t
-> column: line too long
-> 1  2  3 
-> ```
 
-## tr
+```sh
+$ printf '1 2 3\na   b   c' | column -t
+column: line too long
+1  2  3 
+```
+
+## `tr`
 
 `tr` 帮助您将一组字符映射到另一组字符。诸如范围、重复、字符集、压缩、补集等功能使其成为必须了解的文本处理工具。
 
@@ -305,7 +306,7 @@ $ echo 'apple    noon     banana!!!!!' | tr -cs 'a-z'
 apple noon banana! 
 ```
 
-## paste
+## `paste`
 
 `paste` 通常用于按列合并两个或多个文件。它还具有序列化数据的有用功能。默认情况下，`paste` 在输入文件的对应行之间添加制表符。
 
@@ -385,7 +386,7 @@ Blue:Brown:Orange:Purple
 Black:Blue:Green:Orange 
 ```
 
-## pr
+## `pr`
 
 > 分页或按列打印文件。
 
@@ -402,9 +403,8 @@ Have a nice day
 
 `--columns` 和 `-a` 选项可以用来以两种不同的方式合并输入行：
 
-+   分割输入文件，然后按列合并它们
-
-+   合并连续行，类似于 `paste` 命令
+- 分割输入文件，然后按列合并它们
+- 合并连续行，类似于 `paste` 命令
 
 这里有一个开始示例。请注意，`-N` 与使用 `--columns=N` 相同，其中 `N` 是你希望在输出中拥有的列数。默认页面宽度是 `72`，这意味着每列只能有最多 `72/N` 个字符（包括分隔符）。制表符和空格字符将按需用于填充列。你可以使用 `-J` 选项来防止 `pr` 截断较长的列。这里使用 `-t` 选项来关闭分页功能。
 
@@ -418,6 +418,10 @@ $ seq 9 | pr -3t
 ```
 
 你可以使用 `-s` 选项来自定义分隔符。默认是制表符，你可以将其更改为任何其他字符串值。`-s` 选项还关闭行截断，因此不需要 `-J` 选项。使用 `-a` 选项合并连续行，类似于前面看到的 `paste` 命令示例。
+
+
+
+`pr`命令示例中，`-s`选项用于自定义分隔符，默认分隔符为制表符。
 
 ```sh
 # tab is the default separator when no argument is passed to the -s option
@@ -625,7 +629,9 @@ dragon unicorn
 ```
 
 > ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 注意，`xargs -L1` 与 `awk '{$1=$1} 1'` 不相同，因为 `xargs` 会忽略空白行。此外，尾随的空白字符会导致下一行被视为当前行的一部分。例如：
+
 > 
+
 > ```sh
 > # no trailing blanks
 > $ printf 'xerox apple\nregex   go  sea\n' | xargs -L1
@@ -870,6 +876,8 @@ $ rm xa?
 ```
 
 **20)** 将输入文件`purchases.txt`分割，使得包含`powder`行的文本是第一个文件的一部分，其余的是第二个文件的一部分，如下所示。
+
+
 
 ```sh
 # ???

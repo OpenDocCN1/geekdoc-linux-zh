@@ -1,3 +1,4 @@
+
 # 在 Debian 11 - Eldernode 上安装和配置 Pritunl VPN 服务器
 
 > 原文：<https://blog.eldernode.com/pritunl-vpn-server-on-debian-11/>
@@ -6,31 +7,26 @@
 
 VPN 服务器是一种虚拟服务器，配置为托管并向全球用户提供 VPN 服务。服务器是 VPN 硬件和 VPN 软件的组合，允许用户连接到安全的专用网络。Pritunl 是一个 VPN 服务器。在本文中，我们将解释**如何在 Debian 11** 上安装和配置 Pritunl VPN 服务器。如果你想从 [Eldernode](https://eldernode.com/) 网站上提供的软件包中购买 [**Linux VPS**](https://eldernode.com/linux-vps/) 服务器。
 
-## **如何在 Debian VPS 上安装 Pritunl VPN 服务器**
+## 如何在 Debian VPS 上安装 Pritunl VPN 服务器
 
-### **什么是 Pritunl VPN 服务器？**
+### 什么是 Pritunl VPN 服务器？
 
 Pritunl VPN Server 是一款开源的企业 VPN 软件，提供了一个简单且用户友好的 web 界面。这种 VPN 服务器可以创建广泛的云 VPN 网络，可以作为 Aviatrix 和 Pulse 安全解决方案的替代方案。您可以在几分钟内虚拟化数据中心的专用网络。
 
 Pritunl 是世界上最安全的 VPN 服务器之一，客户和服务器之间的所有流量都是加密的。Pritunl 还提供了几层保护，包括 2FA、移动认证、用户 PIN 等等。它提供了一个官方客户端包，并支持大多数设备和操作系统的所有 OpenVPN 客户端。
 
-### **Pritunl 特征**
+### Pritunl 特征
 
-–支持多云 VPN 对等
-
-–支持 Wireguard 和 OpenVPN 客户端
-
-–配置多达五层身份验证，以提高安全性
-
-–通过 VPC 对等为多云站点到站点链路进行配置
-
-–易于安装、配置和管理
-
-–对数千用户高度可扩展
+- 支持多云 VPN 对等
+- 支持 Wireguard 和 OpenVPN 客户端
+- 配置多达五层身份验证，以提高安全性
+- 通过 VPC 对等为多云站点到站点链路进行配置
+- 易于安装、配置和管理
+- 对数千用户高度可扩展
 
 在这篇来自 [Debian 培训](https://blog.eldernode.com/tag/debian/)系列的文章的续篇中，我们打算一步一步地教你如何在 Debian 11 上安装和配置 Pritunl VPN 服务器。
 
-## **在 Debian 11 上安装 Pritunl VPN 服务器**
+## 在 Debian 11 上安装 Pritunl VPN 服务器
 
 首先，作为一个拥有 Sudo 特权的用户或者根用户登录到你的 Debian 机器，然后**更新你的系统**:
 
@@ -116,7 +112,7 @@ sudo systemctl enable pritunl mongod
 
 安装过程已成功完成！
 
-### **如何在 Debian 11 上配置 Pritunl VPN 服务器**
+### 如何在 Debian 11 上配置 Pritunl VPN 服务器
 
 在此之前，您应该**通过网络浏览器服务器的 IP 访问 Pritunl 网络控制台**:
 

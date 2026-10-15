@@ -1,3 +1,4 @@
+
 # 如何在 Windows Server 2012 - Eldernode 上安装 VPN
 
 > 原文：<https://blog.eldernode.com/installing-vpn-on-windows-server-2012/>
@@ -16,7 +17,7 @@ VPN 或虚拟专用网络是一组连接到公共网络(如互联网)的计算�
 
 在 Windows Server 2012 上安装 VPN 很容易，请执行以下步骤。这个配置是服务器端的。这意味着在另一个地方配置了一个 VPN 服务器，您作为客户端连接到它。
 
-### 1。如何安装与远程访问相关的角色
+### 1. 如何安装与远程访问相关的角色
 
 打开 [**服务器管理器**](https://docs.microsoft.com/en-us/windows-server/administration/server-manager/server-manager) ，点击**管理**。然后选择**添加角色和功能**。
 
@@ -62,7 +63,7 @@ VPN 或虚拟专用网络是一组连接到公共网络(如互联网)的计算�
 
 ![install directaccess and vpn (RAS)](img/fd392b675f4462e00305c6e183da15eb.png)
 
-### 2。安装和配置 VPN 教程
+### 2. 安装和配置 VPN 教程
 
 回到服务器管理控制台，点击**远程访问**。选择您的服务器并右键单击它。然后点击**远程访问管理**:
 
@@ -104,7 +105,7 @@ VPN 或虚拟专用网络是一组连接到公共网络(如互联网)的计算�
 
 ***注意:*** 路由器和防火墙必须正确配置才能支持 VPN 性能。
 
-### 3。如何启用远程控制的用户访问
+### 3. 如何启用远程控制的用户访问
 
 您可以允许用户通过 **Active Directory** 设置进行远程访问。
 

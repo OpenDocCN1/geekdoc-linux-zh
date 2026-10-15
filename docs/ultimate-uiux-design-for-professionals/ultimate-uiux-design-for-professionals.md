@@ -1,5 +1,5 @@
-# 专业人士的终极 UI/UX 设计
 
+# 专业人士的终极 UI/UX 设计
 
 ## Dedicated To
 
@@ -21,11 +21,7 @@ Sharanpreet 在设计方法中结合逻辑与同理心，专注于用户的需�
 
 在专业生活之外，Sharanpreet 也是艺术家，她将对创造力的热爱带入 UI/UX 设计师的工作中。她热衷于紧跟最新的设计趋势和工具，不断推动自己学习更多。她擅长素描的才能使她具有独特的优势，能够将想法变为现实，从一开始就可视化概念。这种艺术与设计的融合帮助她创造出既具有视觉吸引力又用户友好的解决方案。
 
-本书汇集了 Sharanpreet 的经验和热情，指导设计师应对该领域的挑战，涵盖从基本概念到
-
-
-
-advanced techniques. She hopes her insights will inspire a new generation of designers to not only create, but innovate and make a lasting impact in the digital world.
+本书汇集了 Sharanpreet 的经验和热情，指导设计师应对该领域的挑战，涵盖从基本概念到 advanced techniques. She hopes her insights will inspire a new generation of designers to not only create, but innovate and make a lasting impact in the digital world.
 
 ## 关于技术审校
 
@@ -47,53 +43,44 @@ advanced techniques. She hopes her insights will inspire a new generation of des
 
 以下是本书涵盖的关键见解和技能概览：
 
-Chapter 1. The Design Thinking Process: 本章介绍 UI/UX 以及设计流程——一种包含研究、头脑风暴、原型制作、测试和实施等阶段的问题解决方式。该框架帮助设计师理解用户、提出创新概念、完善解决方案并交付惠及用户和企业的产品。
+### Chapter 1. The Design Thinking Process
+本章介绍 UI/UX 以及设计流程——一种包含研究、头脑风暴、原型制作、测试和实施等阶段的问题解决方式。该框架帮助设计师理解用户、提出创新概念、完善解决方案并交付惠及用户和企业的产品。
 
-Chapter 2. Fundamentals of UX Design: 本章涵盖 UX 设计的基础，重点关注情境、内容、沟通和社区如何塑造数字体验。我们将解决应用这些要素的挑战，并了解 UX 设计师用于创造性解决设计问题的七步法。
+### Chapter 2. Fundamentals of UX Design
+本章涵盖 UX 设计的基础，重点关注情境、内容、沟通和社区如何塑造数字体验。我们将解决应用这些要素的挑战，并了解 UX 设计师用于创造性解决设计问题的七步法。
 
-Chapter 3. Research and Analysis for UX Design: 本章介绍 UX 研究方法，将帮助你从设定目标到收集、评估和使用用户洞察。你将学习定性和定量方法，如访谈和分析，以指导以用户为中心、富有影响力的设计决策。
+### Chapter 3. Research and Analysis for UX Design
+本章介绍 UX 研究方法，将帮助你从设定目标到收集、评估和使用用户洞察。你将学习定性和定量方法，如访谈和分析，以指导以用户为中心、富有影响力的设计决策。
 
-# Chapter 4. The Art of UX Mapping:
-
+### Chapter 4. The Art of UX Mapping
 本章讨论 UX 映射的基础，包括如何使用同理心地图、旅程地图和用户角色更好地理解用户互动，以及提高映射清晰度和有效性的工具。
 
-# Chapter 5. Mastering Information Architecture and Sitemaps:
-
+### Chapter 5. Mastering Information Architecture and Sitemaps
 本章介绍网站地图和信息架构，这两者是创建用户友好网站的两个关键组成部分。除了探索 IA 系统和了解组织和清晰度等 IA 概念外，你还将发现网站地图如何促进高效的网站规划。
 
-# Chapter 6. The Power of Wireframes and Prototypes:
-
+### Chapter 6. The Power of Wireframes and Prototypes
 本章通过实际案例强调线框图在结构化设计想法方面的价值。此外，你将探索原型并发现交互元素如何让线框图栩栩如生。你将了解创建和测试原型和线框图的最佳工具。
 
-# Chapter 7. Visual Design and UI Patterns:
-
+### Chapter 7. Visual Design and UI Patterns
 本章介绍视觉层次结构这一聚焦用户注意力和设计用户友好界面的关键概念。你将审视 UI 设计模式，即行业针对常见问题的标准解决方案，并找到顶级 UI 模式库以简化你的设计流程。
 
-# Chapter 8. The Power of Mockups:
-
+### Chapter 8. The Power of Mockups
 本章介绍 UI 设计中模型的作用、创建模型的关键工具，以及微文案和微交互的重要性。我们将探讨 AI 如何影响 UI 设计，突出其优势和劣势。
 
-# Chapter 9. Responsive Web Design:
-
+### Chapter 9. Responsive Web Design
 本章介绍响应式网页设计的基础，如媒体查询、弹性网格和响应式图片。我们还将介绍响应式设计与自适应设计的区别，并强调移动优先方法。
 
-# Chapter 10. Mastering in Design Handoff:
-
+### Chapter 10. Mastering in Design Handoff
 本章介绍设计交接流程，即 UX 设计师向开发人员交付资产和文档。你将了解设计师和开发人员之间高效的合作和沟通如何确保从设计到开发的无缝过渡。
 
-
-
-
-
-# 第11章. UI/UX 设计师面试准备：
-
+### 第11章. UI/UX 设计师面试准备
 本节最后部分提供了如何向潜在雇主有效展示设计技能、准备常见面试问题的建议，以及创建引人入胜的作品集。
 
 无论你的目标是什么——是开启新职业还是磨练技能，本书都将带你踏上一段以用户为中心的设计之旅。到本章结束时，你不仅会知道如何创建美观且实用的界面，而且还会知道为什么企业和用户都认为它们很重要。欢迎来到塑造数字体验未来的工具箱——让我们一起创造非凡之作。
 
 ## 彩色图片
 
-请按照链接或扫描二维码下载本书的 *Images*：
+请按照链接或扫描二维码下载本书的 `Images`：
 
 你可以在我们的官方 Github 仓库找到我们书籍的代码包。前往以下链接和二维码以探索更多：
 
@@ -112,10 +99,14 @@ Chapter 3. Research and Analysis for UX Design: 本章介绍 UX 研究方法，�
 ## 勘误
 
 我们在 **Orange Education Pvt Ltd** 的工作上引以为傲，并遵循最佳实践以确保内容的准确性，为订阅者提供愉悦的阅读体验。我们的读者是我们的一面镜子，我们利用他们的反馈来反思和改进出版过程中可能出现的人为错误。为让我们保持质量并帮助联系可能因任何意外错误而遇到困难的读者，请写信至：
+
 [errata@orangeava.com](errata@orangeava.com)
+
 我们非常感谢您的支持、建议和反馈。
 
 ## 你知道吗
+
+
 
 你知道 Orange Education Pvt Ltd 为每本出版的书籍提供电子书版本，附带 PDF 和 ePub 文件吗？你可以在 www.orangeava.com 升级到电子书版本，并且作为印刷书籍客户，你有权享受电子书的折扣。欲了解更多详情，请联系我们：info@orangeava.com。
 
@@ -134,17 +125,14 @@ Chapter 3. Research and Analysis for UX Design: 本章介绍 UX 研究方法，�
 请留下评价。读完并使用本书后，为什么不在你购买的网站上留下评价呢？潜在读者可以查看并使用你的公正意见来做出购买决定。我们
 
 Orange Education 非常希望了解你对我们产品的看法，我们的作者也可以从你的反馈中学习。谢谢！
+
 有关 Orange Education 的更多信息，请访问 [www.orangeava.com](http://www.orangeava.com)。
 
-
-
-
-
-## 第一章
+# 第一章
 
 ## 设计思维流程
 
-## 引言
+### 引言
 
 欢迎来到用户体验（UX）和用户界面（UI）设计的世界！本章将带你穿越 UX 和 UI 的历史之旅，帮助你了解设计多年来是如何演变的。我们将深入探讨 UX 和 UI 的真正含义，以及它们为何对于创造人们喜爱的产品至关重要。我们将探索引人入胜的设计思维流程——一种帮助设计师创造创新解决方案的强大方法。你将了解其重要性以及它如何改变你解决问题的方式。
 
@@ -152,7 +140,7 @@ Orange Education 非常希望了解你对我们产品的看法，我们的作者
 
 在章节末尾，我们将提供设计思维必备工具的快速指南。这些工具将为你配备实用的技巧，以提升你的设计项目。
 
-## 结构
+### 结构
 
 在本章中，我们将讨论以下主题：
 
@@ -173,7 +161,7 @@ Orange Education 非常希望了解你对我们产品的看法，我们的作者
 - 设计思维工具：快速指南
 - 免费的设计思维资源
 
-## UI 和 UX 的历史
+### UI 和 UX 的历史
 
 **用户体验（UX）** 和 **用户界面（UI）** 设计经历了一段有趣的旅程，塑造了我们多年来使用技术的方式。计算机刚被引入时，与之交互是相当困难的。要使其运行，需要大量的技术知识。然而，在 1970 年代，图形用户界面（GUI）被引入。这大大简化了事情。它们通过引入窗口、图标、菜单和指针（WIMP）等功能使计算机更易于使用。
 
@@ -183,15 +171,11 @@ Orange Education 非常希望了解你对我们产品的看法，我们的作者
 
 应用程序和社交媒体在 2000 年代后期获得了流行。
 
-
-
-
-
 设计师开始尝试不同的外观。有些人追求简洁、干净的风格，而另一些人则让事物看起来像真实的物品。这两种风格都得以保留，并在时间中不断演变。
 
 如今，UX 和 UI 设计的主要关注点是让事物在视觉上具有吸引力且易于使用。设计师通过考虑用户的需求和期望，确保网站和应用程序对所有用户都能正常运行。此外，随着语音界面和增强现实（AR）等新技术的出现，设计师也在不断创造新的方法，让事物变得有趣且易于我们使用。
 
-## 理解 UX 和 UI 设计
+### 理解 UX 和 UI 设计
 
 用户体验设计（UX Design）就是要打造人们觉得使用起来简单有趣的产品，并在过程中确保他们的感受得到考虑。它不仅仅是让软件易于使用；还包括与产品其他部分创造良好的体验，比如它的广告方式、包装方式以及购买后提供的帮助。最重要的是解决问题和满足需求，因为没有人愿意使用对他们没有任何帮助的东西。
 
@@ -201,13 +185,13 @@ Orange Education 非常希望了解你对我们产品的看法，我们的作者
 
 如果你正在寻找租房，可以考虑使用手机上的应用程序。你输入的信息、按下的按钮以及屏幕上显示的内容都是用户界面的组成部分。
 
-## 了解 UX 与 UI 的区别
+#### 了解 UX 与 UI 的区别
 
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_35_0.png)
 
 图 1.1：UX 与 UI 的区别
 
-### 理解 UX 与 UI 之间的区别
+##### 理解 UX 与 UI 之间的区别
 
 UX 和 UI 设计经常被混淆，但它们有不同的角色。UI 设计让事物看起来好且工作良好，而 UX 设计则关注人们如何使用事物。
 
@@ -221,13 +205,13 @@ UX 设计涉及理解我们如何使用某物，而 UI 设计则是关于使其�
 
 虽然 UI 和 UX 设计师有一些共同的职责，但他们并非可以互换。他们的技能相互补充，共同协作打造产品。UI 设计师专注于外观和功能，而 UX 设计师研究用户交互。他们将各自的专业知识整合在一起，共同促进产品的整体成功。每个岗位的主要职责如下：
 
-### UX 设计师的职责
+##### UX 设计师的职责
 
 - 提升用户满意度
 - 改善可用性、可访问性和交互的愉悦感
 - 理解用户的需求和行为
 
-### UI 设计师的职责
+##### UI 设计师的职责
 
 - 专注于产品的视觉方面
 - 确保其在视觉上具有吸引力
@@ -235,14 +219,13 @@ UX 设计涉及理解我们如何使用某物，而 UI 设计则是关于使其�
 
 现在你已经了解了 UI 和 UX 以及设计师的工作，让我们看看它们如何融入设计思维过程。我们将观察它们如何协同工作，从最初的想法到最终产品，创造出网站或应用程序等事物。通过理解他们的团队合作、解决问题以及不断尝试不同方法直到成功，你将看到 UI 和 UX 如何确保最终产品易于使用且对人们有帮助。
 
-## 设计思维过程
+### 设计思维过程
 
 所有产品设计师、服务设计师、企业家、教育工作者、医疗专业人员、社会创新者和商业领袖都使用设计思维过程，以创造性、以人为本和协作的方式解决问题。设计思维是一种以人为先的解决问题方式，涉及反复尝试想法。它关乎理解人们的需求、提出大量想法并测试它们以查看哪种效果最好。
 
-## 这是如何运作的
+#### 这是如何运作的
 
 首先，我们真正倾听人们的声音，以了解他们正在经历什么，并且
-
 
 他们需要什么。这有助于我们准确找出问题所在。一旦知道了问题，我们就会集思广益，想出各种不同的想法，即使有些想法看起来有点天马行空。在这个阶段，我们不会对任何想法做出评判。
 
@@ -258,7 +241,7 @@ UX 设计涉及理解我们如何使用某物，而 UI 设计则是关于使其�
 
 *图1.2：展示设计思维工作原理的图片*
 
-## 好吧，让我们想象一个简单的例子来理解这个概念：
+#### 好吧，让我们想象一个简单的例子来理解这个概念：
 
 想象一下你所在城镇里最喜欢的咖啡店或繁忙的咖啡馆，那里总是排着长队。现在你的任务是改善在繁忙咖啡店排队等候的顾客的体验。
 
@@ -267,6 +250,8 @@ UX 设计涉及理解我们如何使用某物，而 UI 设计则是关于使其�
 首先，观察顾客排队等候的过程。与他们交谈，了解他们在等候时的感受、不满和需求。也许他们感到无聊、不耐烦、焦虑或困惑，因为可供选择的选项太多了。
 
 当你掌握了所有信息后，集思广益，想出让等候时间变得愉快而高效的点子。也许可以尝试在屏幕上提供数字拼图，或者提供咖啡配料的相关信息，以教育和吸引顾客。
+
+
 
 接下来，开始主要任务，为这些想法创建一个简单的原型。你可以使用带有拼图游戏的平板电脑，或者在墙壁或柱子上张贴一些内容丰富且有创意的咖啡海报。然后在顾客中进行测试。观察顾客的反应，收集他们的反馈，了解他们喜欢什么以及哪些地方可以改进。
 
@@ -279,13 +264,9 @@ UX 设计涉及理解我们如何使用某物，而 UI 设计则是关于使其�
 用户测试是设计思维过程中至关重要的一环，因为它能帮助设计师了解真实用户如何与他们的产品或解决方案互动。以下说明为什么进行用户测试如此重要：
 
 - **验证假设**：用户测试让设计师能够验证他们对用户需求、偏好和行为的假设是否准确。通过观察用户与原型互动，设计师可以确认或挑战他们最初的构想，确保最终产品满足用户的真实需求。
-
 - **发现痛点**：用户测试有助于揭示用户在使用产品时可能遇到的可用性问题或痛点。通过观察用户行为并收集反馈，设计师可以识别需要改进的地方，并相应地优化用户体验。
-
 - **获取洞察**：用户测试提供了关于用户在与产品互动时如何思考、感受和行动的宝贵见解。这些洞察可以为设计决策提供依据，帮助设计师创建更直观、更用户友好的解决方案。
-
 - **迭代改进**：通过反复测试和改进，设计师可以根据用户的反馈持续完善产品。通过将用户洞察融入设计过程，设计师可以创建对用户来说更有效、更高效、更令人满意的解决方案。
-
 - **建立同理心**：用户测试让设计师与用户及其体验直接接触，从而培养同理心。通过理解用户的视角、挑战和动机，设计师可以更深入地体会他们的需求，并设计出真正引起共鸣的解决方案。
 
 总而言之，设计思维之所以重要，是因为它能帮助组织创造真正惠及用户的创新解决方案，促进团队合作和创造力，降低失败的可能性，并建立持续学习和发展文化。通过运用设计思维，组织可以推动重大变革，为消费者创造价值，让他们满意，并在快速变化的市场中保持领先。
@@ -295,8 +276,6 @@ UX 设计涉及理解我们如何使用某物，而 UI 设计则是关于使其�
 **在深入探讨五个阶段之前，让我们先追溯设计思维过程的起源。**
 
 设计和创新领域正是设计思维方法的发源地
-
-
 
 它开始成形。尽管其确切起源尚不明确，但在二十世纪，它因斯坦福大学的 D-school 以及 IDEO 等设计公司的努力而变得流行。但其思想基于多种学科，例如商业、心理学、工程学和建筑学。对更具创新性和以人为本的解决问题方法的需求，尤其是在复杂和不确定的情况下，推动了设计思维的兴起。
 
@@ -349,9 +328,11 @@ UX 设计涉及理解我们如何使用某物，而 UI 设计则是关于使其�
 ### 例如，考虑一个问题陈述：
 
 作为业务目标：
+
 通过让用户更容易找到和购买产品来提高在线销售额。
 
 从用户的角度来看：
+
 我们如何让客户在线上更容易找到和购买他们想要的东西？
 
 到本步骤结束时，你将拥有一个清晰的问题陈述来指导剩余的设计流程。此陈述有助于你提出创造性想法并找到真正帮助用户的解决方案。
@@ -359,10 +340,6 @@ UX 设计涉及理解我们如何使用某物，而 UI 设计则是关于使其�
 ### 问题随之而来：我们如何有效地实现这一目标？
 
 当你从事一个项目时，你可能需要以不同的方式解释问题或你所思考的内容。因此，问题陈述可以采用任何格式，但无论你如何表述，其主要思想都是帮助设计团队找到可行的解决方案。
-
-
-
-
 
 ## Who?
 
@@ -422,7 +399,11 @@ Through user research, it’s evident that customers waiting in line at the busy
 +   What：排队等待。
 +   Where: At the coffee shop.
 +   Where：在咖啡店。
+
+
+
 +   Why: To enhance the waiting experience and overall satisfaction for customers.
+
 +   Why：提升顾客的等待体验和整体满意度。
 
 These statements all tackle the same problem but approach it from slightly different angles. The common thread among them is the emphasis on understanding the user, their needs, and the underlying reasons behind those needs. How you articulate and structure the problem statement ultimately depends on how you want to convey the issue and frame it within the context of the user experience.
@@ -468,21 +449,32 @@ Here are a few popular ideation methods frequently utilized by designers:
 以下是设计师经常使用的几种流行头脑风暴方法：
 
 - **Brainstorming:** A group activity where participants freely generate ideas without criticism, aiming for quantity over quality.
+
 - **头脑风暴：**一种团体活动，参与者在没有批评的情况下自由产生想法，目标是数量重于质量。
+
 - **Mind Mapping:** A visual technique where ideas are organized hierarchically around a central concept, allowing for exploration of connections and associations. In other words, drawing a diagram to show how different ideas are connected.
+
 - **思维导图：**一种可视化技巧，将想法围绕一个中心概念进行层级组织，从而探索联系和关联。换句话说，绘制图表以显示不同想法之间的联系。
-- **SCAMPER:** An acronym that stands for Substitute, Combine, Adapt, Modify, Put to another use, Eliminate, and Reverse, which prompts participants to explore different ways to innovate existing ideas or products. In simple terms, asking questions to think about how you can change or improve something.
-- **SCAMPER：**是一个首字母缩写词，代表替代、组合、改编、修改、另作他用、消除和反转，促使参与者探索创新现有想法或产品的不同方式。简单来说，就是提出问题来思考如何改变或改进某物。
-- **Worst Possible Idea:** Encourages participants to deliberately generate the worst possible solutions to a problem, which can sometimes lead to unexpected and innovative ideas.
-- **最糟糕的想法：**鼓励参与者故意为问题生成最糟糕的解决方案，有时这会带来出乎意料且富有创意的想法。
-- **Six Thinking Hats:** Developed by Edward de Bono, this method involves assigning different “hats” to participants, each representing a different perspective (for example, logical thinking, creativity, emotions) to explore a problem from multiple angles.
-- **六顶思考帽：**由爱德华·德·波诺提出，该方法为参与者分配不同的“帽子”，每顶帽子代表不同的视角，例如逻辑思考、创造力、情感，以从多个角度探索问题。
-- **Rapid Prototyping:** Quickly creating rough, low-fidelity prototypes of ideas to test and iterate upon, allowing for rapid experimentation and refinement to see what works.
-- **快速原型制作：**快速创建粗糙的低保真原型来测试和迭代想法，从而实现快速实验和改进，看看什么有效。
 
 
 
+### 头脑风暴方法示例
 
+- `SCAMPER:` An acronym that stands for Substitute, Combine, Adapt, Modify, Put to another use, Eliminate, and Reverse, which prompts participants to explore different ways to innovate existing ideas or products. In simple terms, asking questions to think about how you can change or improve something.
+
+- `SCAMPER：`是一个首字母缩写词，代表替代、组合、改编、修改、另作他用、消除和反转，促使参与者探索创新现有想法或产品的不同方式。简单来说，就是提出问题来思考如何改变或改进某物。
+
+- `Worst Possible Idea:` Encourages participants to deliberately generate the worst possible solutions to a problem, which can sometimes lead to unexpected and innovative ideas.
+
+- `最糟糕的想法：`鼓励参与者故意为问题生成最糟糕的解决方案，有时这会带来出乎意料且富有创意的想法。
+
+- `Six Thinking Hats:` Developed by Edward de Bono, this method involves assigning different “hats” to participants, each representing a different perspective (for example, logical thinking, creativity, emotions) to explore a problem from multiple angles.
+
+- `六顶思考帽：`由爱德华·德·波诺提出，该方法为参与者分配不同的“帽子”，每顶帽子代表不同的视角，例如逻辑思考、创造力、情感，以从多个角度探索问题。
+
+- `Rapid Prototyping:` Quickly creating rough, low-fidelity prototypes of ideas to test and iterate upon, allowing for rapid experimentation and refinement to see what works.
+
+- `快速原型制作：`快速创建粗糙的低保真原型来测试和迭代想法，从而实现快速实验和改进，看看什么有效。
 
 这些只是设计思维过程中使用的头脑风暴方法的几个例子，每种方法都提供了一种独特的激发创造力和产生创新解决方案的方法。
 
@@ -500,38 +492,31 @@ Here are a few popular ideation methods frequently utilized by designers:
 
 现在是决定哪些方式对解决问题最重要的时候了。你将开始着手这些工作并创建原型。制作原型是设计思维过程中的一个非常重要的步骤。关键在于用真实用户测试你的想法，而原型可以帮助你做到这一点，而无需花费大量时间和金钱。
 
-## 原型可以帮助你在几种不同的方面：
+### 原型可以帮助你在几种不同的方面：
 
 - 它们让你看到用户将如何使用你的产品以及对你的产品做出什么反应。观察人们与产品早期版本互动，可以看出它在现实世界中是否真的可行。
+
 - 它们帮助你在为时已晚之前发现产品在功能或外观上的任何问题。如果某件事行不通，及早发现会更好。原型可以帮助你在花费太多时间和金钱之前发现任何薄弱环节或问题。
+
 - 它们帮助你对设计做出明智的决定。如果你不确定网页或应用中的图标应该放在哪里，或者你的网站的最佳设计是什么，你可以尝试使用原型制作几个不同的版本，看看人们最喜欢哪一个。
 
 即使你已经做了很多关于用户想要什么的研究，在你亲眼看到产品之前，真正理解产品仍然可能很困难。原型让你可以不断更改和改进你的产品，直到它准备好面向公众发布。
 
-## 制作原型的不同方法
+### 制作原型的不同方法
 
 原型制作是将你的想法变成你可以看、可以触摸并可以测试的真实事物的途径。有不同的原型制作方法，每种方法都有其自身的优势。让我们深入了解一些有趣且易于理解的原型方法：
 
-- **纸质原型：**想象一下——你把应用或网站的屏幕画在纸上，然后像翻书一样翻阅。就像你的项目的分镜脚本一样。想测试你的想法是否可行吗？只要翻阅看看就行！
-- **奥兹国巫师：**不，我们不是在说那部电影。在这种方法中，你创建一个产品的假版本。就像在演戏一样！你模拟产品在幕后如何运作，而用户与之互动，从而为你提供宝贵的见解。
-- **角色扮演：**是时候进入角色了！通过角色扮演，团队成员假装成用户并与原型互动。就像玩假装游戏一样，但它能帮助你了解用户可能会如何真正使用你的产品。
-- **数字原型：**把它想象成你最终产品的预览。使用软件，你创建想法的数字版本。就像构建一个迷你版本的应用程序或网站，人们可以点击
+- `纸质原型：`想象一下——你把应用或网站的屏幕画在纸上，然后像翻书一样翻阅。就像你的项目的分镜脚本一样。想测试你的想法是否可行吗？只要翻阅看看就行！
 
+- `奥兹国巫师：`不，我们不是在说那部电影。在这种方法中，你创建一个产品的假版本。就像在演戏一样！你模拟产品在幕后如何运作，而用户与之互动，从而为你提供宝贵的见解。
 
+- `角色扮演：`是时候进入角色了！通过角色扮演，团队成员假装成用户并与原型互动。就像玩假装游戏一样，但它能帮助你了解用户可能会如何真正使用你的产品。
 
-through and explore.
+- `数字原型：`把它想象成你最终产品的预览。使用软件，你创建想法的数字版本。就像构建一个迷你版本的应用程序或网站，人们可以点击 through and explore.
 
-- **原型应用：** 听说过 Figma 或 InVision 这类原型工具吗？它们就像虚拟游乐场，你可以在这里构建产品的交互模型。只需拖拽元素来设计你的原型——无需编码！
+- `原型应用：`听说过 Figma 或 InVision 这类原型工具吗？它们就像虚拟游乐场，你可以在这里构建产品的交互模型。只需拖拽元素来设计你的原型——无需编码！
 
-- **3D 打印：** 想象一下用一台神奇的打印机把你的想法变成现实！借助 3D 打印，你可以制作产品的实体模型。这就像雕塑，但属于数字时代。
-
-每一种方法都像你创意工具箱中的不同工具。无论你是在纸上[content]
-
-through and explore.
-
-- **原型应用：** 听说过 Figma 或 InVision 这类原型工具吗？它们就像虚拟游乐场，你可以在这里构建产品的交互模型。只需拖拽元素来设计你的原型——无需编码！
-
-- **3D 打印：** 想象一下用一台神奇的打印机把你的想法变成现实！借助 3D 打印，你可以制作产品的实体模型。这就像雕塑，但属于数字时代。
+- `3D 打印：`想象一下用一台神奇的打印机把你的想法变成现实！借助 3D 打印，你可以制作产品的实体模型。这就像雕塑，但属于数字时代。
 
 每一种方法都像你创意工具箱中的不同工具。无论你是在纸上涂鸦还是在数字应用中点击，制作原型都能帮助你一步步将想法变为现实！
 
@@ -543,42 +528,38 @@ through and explore.
 
 在测试期间，你会观察目标用户，或代表他们的人，如何尝试使用你的原型。你也会询问他们对体验的想法和感受。这有助于你了解用户对设计的真实感受，以及设计可能需要改进的地方。
 
-## 用户测试方法
+### 用户测试方法
 
 在设计思维过程的第五阶段，即用真实用户测试你的想法时，有几种常见的方法来收集反馈。以下是其中几种，用简单的语言解释：
 
-- **观察性测试**：这种方法涉及观察用户与原型互动的情况。你可能会观察他们的面部表情、肢体语言和行为，以了解他们在使用产品时的感受和想法。
+- `观察性测试`：这种方法涉及观察用户与原型互动的情况。你可能会观察他们的面部表情、肢体语言和行为，以了解他们在使用产品时的感受和想法。
 
-- **访谈**：访谈允许你与用户直接对话，了解他们对原型的体验。你可以提问以获得更详细的见解，了解他们喜欢什么、不喜欢什么，以及遇到的任何问题。
+- `访谈`：访谈允许你与用户直接对话，了解他们对原型的体验。你可以提问以获得更详细的见解，了解他们喜欢什么、不喜欢什么，以及遇到的任何问题。
 
-- **调查**：调查是收集大量用户反馈的一种方式。你可以创建包含多选题或开放式问题的问卷，以收集用户体验和偏好数据。
+- `调查`：调查是收集大量用户反馈的一种方式。你可以创建包含多选题或开放式问题的问卷，以收集用户体验和偏好数据。
 
-- **可用性测试**：可用性测试关注用户使用原型完成特定任务的难易程度。你可能会要求用户完成某些操作并观察他们如何在产品中导航。
+- `可用性测试`：可用性测试关注用户使用原型完成特定任务的难易程度。你可能会要求用户完成某些操作并观察他们如何在产品中导航。
 
-- **原型演练**：在原型演练中，你引导用户浏览你的原型，解释其工作原理以及每个功能的作用。这种方法让你看到用户如何与原型的不同部分互动，以及他们可能卡住的地方。
+- `原型演练`：在原型演练中，你引导用户浏览你的原型，解释其工作原理以及每个功能的作用。这种方法让你看到用户如何与原型的不同部分互动，以及他们可能卡住的地方。
 
-- **A/B 测试**：A/B 测试涉及创建两个具有细微差异的原型版本并让不同用户组进行测试。这让你可以比较哪个版本表现更好，并就保留或更改哪些设计元素做出明智决策。
+- `A/B 测试`：A/B 测试涉及创建两个具有细微差异的原型版本并让不同用户组进行测试。这让你可以比较哪个版本表现更好，并就保留或更改哪些设计元素做出明智决策。
 
 这些只是设计思维过程中使用的用户测试方法的几个例子。每种方法都能提供独特的见解，了解用户如何与原型互动，帮助你根据真实用户反馈来完善和改进设计。
 
-## 迭代和非线性过程
+### 迭代和非线性过程
 
-设计思维确实是一个非线性过程，这意味着它并不严格遵循从开始到结束的逐步进展。相反，它是一种灵活的方法，允许在各个阶段进行迭代、探索和完善（请参阅 *Figure 1.3* 以了解该动态过程的视觉表示）。
-
-**让我们用一个简单的类比来深入了解设计思维：烘焙蛋糕。**
+设计思维确实是一个非线性过程，这意味着它并不严格遵循从开始到结束的逐步进展。相反，它是一种灵活的方法，允许在各个阶段进行迭代、探索和完善（请参阅 `Figure 1.3` 以了解该动态过程的视觉表示）。
 
 
 
-
+# 让我们用一个简单的类比来深入了解设计思维：烘焙蛋糕。
 
 想象你正在为朋友的生日烤蛋糕。现在，设计思维就像以一种非常有趣和富有创意的方式烤那个蛋糕！
-
-+   1. **了解朋友的口味**：在你开始烘焙之前，你想知道朋友喜欢什么口味。也许他们爱巧克力，或者更喜欢水果味。所以，你会和他们聊天，了解他们会喜欢什么。
-+   2. **规划你的蛋糕**：掌握这些信息后，你开始规划蛋糕。你思考层次、奶油霜以及任何装饰。但这里变得有趣了：你不会只坚持一个计划，而是记下几个想法。也许是层层叠叠的巧克力蛋糕，或是水果海绵蛋糕。
-+   3. **混合和品尝：** 现在，是时候混合面糊了。在混合过程中，你会边尝边调。也许你意识到它需要多一点甜味，或加一点盐来平衡味道。所以，你在过程中进行调整，就像设计思维允许你调整和完善你的想法一样。
-+   4. **装饰和测试：** 蛋糕烤好并冷却后，就是装饰的时候了。你尝试不同的奶油霜设计，也许在上面加一些糖屑或水果。然后，你请朋友品尝。他们可能就这样喜欢它，或者他们可能会建议改变，比如加更多奶油霜或减少糖分。
-+   5. **最后润色和呈现：** 根据他们的反馈，你做出最后的润色。也许你在上面加一个生日蜡烛，或用奶油霜写上一条甜蜜的信息。然后，你把蛋糕呈给朋友，他们对它美味又漂亮的样子感到非常兴奋。
-
++ 1. 了解朋友的口味：在你开始烘焙之前，你想知道朋友喜欢什么口味。也许他们爱巧克力，或者更喜欢水果味。所以，你会和他们聊天，了解他们会喜欢什么。
++ 2. 规划你的蛋糕：掌握这些信息后，你开始规划蛋糕。你思考层次、奶油霜以及任何装饰。但这里变得有趣了：你不会只坚持一个计划，而是记下几个想法。也许是层层叠叠的巧克力蛋糕，或是水果海绵蛋糕。
++ 3. 混合和品尝：现在，是时候混合面糊了。在混合过程中，你会边尝边调。也许你意识到它需要多一点甜味，或加一点盐来平衡味道。所以，你在过程中进行调整，就像设计思维允许你调整和完善你的想法一样。
++ 4. 装饰和测试：蛋糕烤好并冷却后，就是装饰的时候了。你尝试不同的奶油霜设计，也许在上面加一些糖屑或水果。然后，你请朋友品尝。他们可能就这样喜欢它，或者他们可能会建议改变，比如加更多奶油霜或减少糖分。
++ 5. 最后润色和呈现：根据他们的反馈，你做出最后的润色。也许你在上面加一个生日蜡烛，或用奶油霜写上一条甜蜜的信息。然后，你把蛋糕呈给朋友，他们对它美味又漂亮的样子感到非常兴奋。
 你看，设计思维就像烤那个蛋糕。它不是一个僵化的逐步过程，你从头到尾遵循食谱。相反，它是灵活和富有创造性的，允许你在沿途进行实验、迭代和调整，直到你想出真正特别且符合朋友口味的东西。
 
 ## 大品牌的 设计思维 成功案例
@@ -596,15 +577,11 @@ UberEats 是 Uber 家族的一部分，是如何跳出思维定式就能改变�
 他们的核心想法？他们专注于让人们轻松找到并享受他们最喜欢的餐食。尽管智能手机相对较新，但人们已经烹饪和售卖食物很久了。UberEats 将这一古老传统与新技术结合起来，让点餐变得更方便。
 
 让我们看看他们是如何做到的以及取得了什么成就。
-
-+   1. **共情**：首先，他们深入挖掘了客户和餐厅的需求。他们不仅仅坐在办公室里；他们走上街头，与送餐合作伙伴、厨师以及像你一样热爱美食的普通客户聊天。他们会定期派遣设计师前往 UberEats 运营的不同城市，以真正了解当地的美食场景。他们研究食物是如何运输和送达的，并与送餐合作伙伴、餐厅工作人员和客户交谈。这帮助他们了解人们在点餐时面临的问题，以及餐厅如何难以有效地触达客户。他们做了大量研究并密切观察，以尽可能多地学习。
-+   2. **定义**：在了解人们的问题后，UberEats 弄清了他们想要解决的主要问题：传统的外卖方式对客户和餐厅来说都很不方便且效率低下。一旦他们对问题有了清晰的认识，他们就着手解决它。他们将重点缩小到目标，并决定创建一个平台，让每个人都能更轻松地订购和送达食物。
-+   3. **头脑风暴**：然后是头脑风暴阶段。UberEats 想出了巧妙的点子来解决它。他们考虑制作一个客户易于使用的应用程序。该应用程序将让你查看菜单、快速点餐并实时跟踪你的配送。此外，他们希望确保送货迅速且无麻烦。
-+   4. **原型**：在投入开发并制作 UberEats 应用的最终版本之前，团队制作了样本版本来尝试他们的想法。他们构建了应用可能的外观模型，并与人们一起测试，看看什么有效什么无效。他们希望在发布前确保一切都恰到好处。这帮助他们在应用完成前做出更改和改进。
-+   5. **测试**：UberEats 在某些城市启动了试运行计划，以了解他们的平台在现实生活中效果如何。他们密切关注用户说了什么、做了什么，以查看他们的解决方案是否有效。这一测试阶段为他们提供了有关什么做得好、什么
-
-
-需要做出改变。
++ 1. 共情：首先，他们深入挖掘了客户和餐厅的需求。他们不仅仅坐在办公室里；他们走上街头，与送餐合作伙伴、厨师以及像你一样热爱美食的普通客户聊天。他们会定期派遣设计师前往 UberEats 运营的不同城市，以真正了解当地的美食场景。他们研究食物是如何运输和送达的，并与送餐合作伙伴、餐厅工作人员和客户交谈。这帮助他们了解人们在点餐时面临的问题，以及餐厅如何难以有效地触达客户。他们做了大量研究并密切观察，以尽可能多地学习。
++ 2. 定义：在了解人们的问题后，UberEats 弄清了他们想要解决的主要问题：传统的外卖方式对客户和餐厅来说都很不方便且效率低下。一旦他们对问题有了清晰的认识，他们就着手解决它。他们将重点缩小到目标，并决定创建一个平台，让每个人都能更轻松地订购和送达食物。
++ 3. 头脑风暴：然后是头脑风暴阶段。UberEats 想出了巧妙的点子来解决它。他们考虑制作一个客户易于使用的应用程序。该应用程序将让你查看菜单、快速点餐并实时跟踪你的配送。此外，他们希望确保送货迅速且无麻烦。
++ 4. 原型：在投入开发并制作 UberEats 应用的最终版本之前，团队制作了样本版本来尝试他们的想法。他们构建了应用可能的外观模型，并与人们一起测试，看看什么有效什么无效。他们希望在发布前确保一切都恰到好处。这帮助他们在应用完成前做出更改和改进。
++ 5. 测试：UberEats 在某些城市启动了试运行计划，以了解他们的平台在现实生活中效果如何。他们密切关注用户说了什么、做了什么，以查看他们的解决方案是否有效。这一测试阶段为他们提供了有关什么做得好、什么需要做出改变。
 
 那么，这样做有回报吗？UberEats 迅速风靡，得益于其流畅的应用和闪电般的配送。顾客喜欢下单的便利，餐厅也看到生意蒸蒸日上。
 
@@ -617,14 +594,10 @@ UberEats 是 Uber 家族的一部分，是如何跳出思维定式就能改变�
 ## 成就
 
 通过遵循设计思维的原则，Uber Eats 取得了几个重要成果：
-
-- **速度至关重要：** UberEats 就像一个巨大的市场，需要很多人快速汇聚才能良好运转。配送伙伴和餐厅需要大量订单来盈利，顾客则希望有丰富的就餐选择和快速的配送。因此，UberEats 需要快速行动，以便迅速扩大客户群。通过快速做出调整，他们能保持进展，并确保设计臻于完美。
-
-- **更好的用户体验：** UberEats 打造了一个极其易用的平台。现在，你只需在手机上轻点几下，就能从最喜欢的餐厅点餐。
-
-- **更快的配送：** UberEats 利用智能技术让配送系统运转得更好。这意味着你不必为餐食等待太久，餐厅也能服务更多顾客。
-
-- **改变行业格局：** UberEats 在食品配送领域掀起了波澜。他们挑战了传统做法，引入了全新理念，从而改变了整个行业的运作方式。
+- 速度至关重要：UberEats 就像一个巨大的市场，需要很多人快速汇聚才能良好运转。配送伙伴和餐厅需要大量订单来盈利，顾客则希望有丰富的就餐选择和快速的配送。因此，UberEats 需要快速行动，以便迅速扩大客户群。通过快速做出调整，他们能保持进展，并确保设计臻于完美。
+- 更好的用户体验：UberEats 打造了一个极其易用的平台。现在，你只需在手机上轻点几下，就能从最喜欢的餐厅点餐。
+- 更快的配送：UberEats 利用智能技术让配送系统运转得更好。这意味着你不必为餐食等待太久，餐厅也能服务更多顾客。
+- 改变行业格局：UberEats 在食品配送领域掀起了波澜。他们挑战了传统做法，引入了全新理念，从而改变了整个行业的运作方式。
 
 ## Airbnb
 
@@ -635,31 +608,21 @@ Airbnb 是一个全球性的在线市场，将旅行者与独特的住宿和体�
 图 1.9：Airbnb
 
 Airbnb 的历程是设计思维如何塑造公司成功的绝佳范例。让我们深入了解他们是怎样应用这一流程的，以及取得了哪些成果：
-
-1. **同理心：** Airbnb 首先理解房东和游客双方的痛点和需求。他们意识到旅行者追求独特而真实的体验，而房东则希望找到赚取额外收入的方法。因此，他们全身心投入旅行体验，在世界各地的住所中留宿，以了解双方的看重之处。
-
-2. **定义问题：** 基于同理心阶段的工作，Airbnb 明确了他们想要解决的核心问题：传统住宿中缺乏有意义的连接和真实体验。他们将关注点缩小到创建一个平台，将旅行者与独特的住宿和当地房东连接起来。
-
-3. **构思：** 在对问题有了清晰理解后，Airbnb 集思广益，提出了创新的解决方案。他们构思了一个用户友好的网站和应用界面，让房东能够轻松地列出自己的空间，游客能够无缝地发现并预订住宿。他们还探索了如何促进房东与游客之间的信任和沟通。
-
-4. **原型制作：** 在全面开发 Airbnb 平台之前，团队创建了原型来测试他们的想法。他们构建了网站和应用界面的模型，并进行了可用性测试，以收集潜在用户的反馈。这个迭代过程让他们能够尽早优化设计，并发现需要改进的地方。
-
-5. **测试：** Airbnb 在选定的城市启动了试点项目，在真实环境中测试其平台。他们密切监控用户反馈和行为，以评估解决方案的有效性。这一测试阶段提供了宝贵的洞察，让他们知道哪些方面运作良好，哪些方面需要调整。
-
-6. **迭代 – 迭代 - 迭代：** 根据测试阶段的反馈，Airbnb 对平台进行了迭代，做出改进和增强，以进一步提升用户体验。他们微调了功能，加强了信任与安全措施，并扩展了服务内容，以满足房东和游客不断变化的需求。
+1. 同理心：Airbnb 首先理解房东和游客双方的痛点和需求。他们意识到旅行者追求独特而真实的体验，而房东则希望找到赚取额外收入的方法。因此，他们全身心投入旅行体验，在世界各地的住所中留宿，以了解双方的看重之处。
+2. 定义问题：基于同理心阶段的工作，Airbnb 明确了他们想要解决的核心问题：传统住宿中缺乏有意义的连接和真实体验。他们将关注点缩小到创建一个平台，将旅行者与独特的住宿和当地房东连接起来。
+3. 构思：在对问题有了清晰理解后，Airbnb 集思广益，提出了创新的解决方案。他们构思了一个用户友好的网站和应用界面，让房东能够轻松地列出自己的空间，游客能够无缝地发现并预订住宿。他们还探索了如何促进房东与游客之间的信任和沟通。
+4. 原型制作：在全面开发 Airbnb 平台之前，团队创建了原型来测试他们的想法。他们构建了网站和应用界面的模型，并进行了可用性测试，以收集潜在用户的反馈。这个迭代过程让他们能够尽早优化设计，并发现需要改进的地方。
+5. 测试：Airbnb 在选定的城市启动了试点项目，在真实环境中测试其平台。他们密切监控用户反馈和行为，以评估解决方案的有效性。这一测试阶段提供了宝贵的洞察，让他们知道哪些方面运作良好，哪些方面需要调整。
+6. 迭代 – 迭代 - 迭代：根据测试阶段的反馈，Airbnb 对平台进行了迭代，做出改进和增强，以进一步提升用户体验。他们微调了功能，加强了信任与安全措施，并扩展了服务内容，以满足房东和游客不断变化的需求。
 
 ## 成就
 
 通过遵循设计思维的原则，Airbnb 取得了多项成就。
 
-
-
-
 显著成果：
-
-- **颠覆性创新：** Airbnb 通过提供传统住宿的独特替代方案颠覆了传统酒店业。他们挑战了酒店的主导地位，并为旅行者体验目的地引入了一种新方式。
-- **社区建设：** Airbnb 在房东和客人之间培养了社区感，创造了有意义的联系和文化交流。他们赋予房东分享当地知识和好客之道的权力，而客人则获得了接触真实体验和了解当地生活的机会。
-- **全球扩张：** Airbnb 的平台迅速在全球范围内扩张，使旅行者能够在全球各地的目的地获得多样化的住宿选择。他们通过让旅行对各行各业的人来说更易于获取和负担得起，从而实现了旅行的民主化。
+- 颠覆性创新：Airbnb 通过提供传统住宿的独特替代方案颠覆了传统酒店业。他们挑战了酒店的主导地位，并为旅行者体验目的地引入了一种新方式。
+- 社区建设：Airbnb 在房东和客人之间培养了社区感，创造了有意义的联系和文化交流。他们赋予房东分享当地知识和好客之道的权力，而客人则获得了接触真实体验和了解当地生活的机会。
+- 全球扩张：Airbnb 的平台迅速在全球范围内扩张，使旅行者能够在全球各地的目的地获得多样化的住宿选择。他们通过让旅行对各行各业的人来说更易于获取和负担得起，从而实现了旅行的民主化。
 
 总体而言，Airbnb 的成功故事 exemplifies 如何设计思维可以推动创新，培养有意义的联系，并通过以创造性和影响力的方式满足用户的需求和愿望来颠覆行业。
 
@@ -667,13 +630,15 @@ Airbnb 的历程是设计思维如何塑造公司成功的绝佳范例。让我�
 
 ## 解决 7—12 岁儿童的礼物难题
 
+
+
 为 7 至 12 岁的儿童挑选礼物，对父母来说是一个常见挑战：在实用性、教育价值和趣味性之间找到平衡。这个年龄段正处于关键的发展阶段，他们渴望学习、探索和玩乐。父母希望挑选的礼物不仅能娱乐，还能促进孩子的成长和发展。然而，面对市场上琳琅满目的玩具和产品，要找到样样俱全的东西可能会让人不知所措。
 
 父母通常会寻找能够激发好奇心、鼓励创造力并以有趣的方式促进学习的礼物。教育游戏、科学套件、美术用品和互动书籍都是热门选择。挑战在于挑选一份能吸引孩子兴趣，同时提供教育价值和娱乐性的礼物。
 
 设计思维在为 7 至 12 岁儿童挑选礼物时可以是一种宝贵的方法。这个年龄段的人群多样，兴趣、偏好和发展阶段各不相同。
 
-## 以下是你如何将设计思维应用于此场景的方法：
+## 以下是你如何将设计思维应用于此场景的方法
 
 ### 共情
 
@@ -684,7 +649,7 @@ Airbnb 的历程是设计思维如何塑造公司成功的绝佳范例。让我�
 
 ### 定义
 
-从我们在共情阶段对人们的了解中，我们可以创建人物角色（ *人物角色是一个虚构的角色，代表具有相似特征、需求和行为的真实用户群体* ）。我们将在后续章节详细介绍如何创建人物角色。这些人物角色帮助我们了解是什么激励他们，他们面临什么挑战，他们的目标，以及是什么造就了他们。
+从我们在共情阶段对人们的了解中，我们可以创建人物角色（*人物角色是一个虚构的角色，代表具有相似特征、需求和行为的真实用户群体*）。我们将在后续章节详细介绍如何创建人物角色。这些人物角色帮助我们了解是什么激励他们，他们面临什么挑战，他们的目标，以及是什么造就了他们。
 
 根据你的理解，定义一份成功礼物的标准。这可能包括：
 
@@ -694,44 +659,50 @@ Airbnb 的历程是设计思维如何塑造公司成功的绝佳范例。让我�
 - 耐用性
 - 创造力和想象力的潜力
 
-### 供你参考，以下是人物角色的详细信息：Lily the Artistic Explorer
+#### 供你参考，以下是人物角色的详细信息：Lily the Artistic Explorer
 
-Name : Lily
-Age : 10 years old
-Interests : Art, drawing, painting
-Personality Traits:
-Creative : Lily is constantly doodling and experimenting with colors and shapes.
-Curious : She loves exploring new art techniques and materials.
-Patient : When working on her art, Lily can spend hours focused on perfecting her creations.
-Favorite Activities:
-Drawing in her sketchbook
-Spends most afternoons playing at the local park with friends
-Enjoys playing the guitar on occasion
-Goals:
-To improve her artistic skills and try new techniques
-Dreams of becoming a professional artist one day
-Challenges:
-Doesn’t always have enough art stuff and wants time every day to do art
-Sometimes finds it hard to do homework after playing outside for a long time
-Wanting feedback and encouragement for her artwork
-Insights:
+- **Name**：Lily
+- **Age**：10 years old
+- **Interests**：Art, drawing, painting
+
+**Personality Traits：**
+
+- **Creative**：Lily is constantly doodling and experimenting with colors and shapes.
+- **Curious**：She loves exploring new art techniques and materials.
+- **Patient**：When working on her art, Lily can spend hours focused on perfecting her creations.
+
+**Favorite Activities：**
+
+- Drawing in her sketchbook
+- Spends most afternoons playing at the local park with friends
+- Enjoys playing the guitar on occasion
+
+**Goals：**
+
+- To improve her artistic skills and try new techniques
+- Dreams of becoming a professional artist one day
+
+**Challenges：**
+
+- Doesn’t always have enough art stuff and wants time every day to do art
+- Sometimes finds it hard to do homework after playing outside for a long time
+- Wanting feedback and encouragement for her artwork
+
+**Insights：**
+
 Lily is a 10-year-old artist who is deeply passionate about art. She enjoys experimenting with various mediums and techniques to create unique pieces. However, she faces challenges such as limited access to art supplies and occasional difficulties finding inspiration. Lily seeks encouragement and opportunities to learn and improve her skills.
 
 从这一步，你将收集关于孩子们的所有有趣信息，并制作一个小小的人物角色，告诉我们她喜欢什么，是什么让她动起来，她的梦想等等。
 
 基于此，我们可以创建一个好的问题陈述。
 
-### 示例问题陈述：
+#### 示例问题陈述
 
-### 用户研究视角问题陈述：
+#### 用户研究视角问题陈述
 
 我们需要一份适合 9–12 岁儿童的礼物，它能吸引人、有教育意义，并与他们对探索的兴趣相符。
 
-
-
-
-
-## 构思
+### 构思
 
 构思阶段，我们利用之前收集的信息和用户画像，为用户想出大量新点子。
 
@@ -739,17 +710,17 @@ Lily is a 10-year-old artist who is deeply passionate about art. She enjoys expe
 
 思考一系列选项，例如：
 
--   科学实验套装
--   教育类游戏或拼图
--   美术和手工材料
--   拼搭套装，如乐高或机器人套件
--   书籍或教育订阅服务
--   户外探索套装（例如双筒望远镜、昆虫捕捉套装）
--   任何乐器
+- 科学实验套装
+- 教育类游戏或拼图
+- 美术和手工材料
+- 拼搭套装，如乐高或机器人套件
+- 书籍或教育订阅服务
+- 户外探索套装（例如双筒望远镜、昆虫捕捉套装）
+- 任何乐器
 
 思考每个创意如何满足孩子的兴趣，并在学习和娱乐方面提供价值。每个解决方案都可能是完美的，即使乍一看并非如此。因此，在继续之前，明智的做法是把所有想法都记下来。
 
-## 原型制作
+### 原型制作
 
 从你最好的礼物创意中选择一个或多个，制作原型或概念方案。
 
@@ -763,7 +734,7 @@ Lily is a 10-year-old artist who is deeply passionate about art. She enjoys expe
 
 图 1.10：礼物创意
 
-## 测试
+### 测试
 
 利用反馈来优化你的选择，并做出必要的调整。
 
@@ -777,7 +748,7 @@ Lily is a 10-year-old artist who is deeply passionate about art. She enjoys expe
 
 这就像玩一幅缺了几块拼图的拼图——几乎完成了，但又不完整。为了确保莉莉能最大限度地利用这份礼物，我们需要找到她真正会使用并完全享受的东西。这说明直接听取莉莉的反馈、更好地了解她的偏好和需求是多么重要。
 
-## 迭代——迭代——再迭代
+### 迭代——迭代——再迭代
 
 完成第 5 步并不意味着整个流程就此结束。有时，你可能会发现有必要回到第 3 步去构思更多想法，或者回到第 4 步去制作不同的解决方案。关键在于保持灵活，并愿意在需要时重新审视之前的阶段，以找到最佳结果。
 
@@ -791,9 +762,7 @@ Lily is a 10-year-old artist who is deeply passionate about art. She enjoys expe
 
 以下是一些符合设计思维方法的具体礼物创意：
 
-## 美术与手工套装：
-
-
+#### 美术与手工套装
 
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_65_0.png)
 
@@ -808,9 +777,14 @@ Lily is a 10-year-old artist who is deeply passionate about art. She enjoys expe
 以下是一些与设计思维方法相契合的其他具体礼物创意：
 
 - **科学实验套件：**
-  - 制作一套包含材料和说明的套件，用于有趣且富有教育意义的实验。
-  - 包含试管、放大镜、安全护目镜和实验手册等物品。
-  - 强调动手学习和对科学概念的探索。
+    - 制作一套包含材料和说明的套件，用于有趣且富有教育意义的实验。
+
+
+
+### 礼物选择建议
+
+- 包含试管、放大镜、安全护目镜和实验手册等物品。
+- 强调动手学习和对科学概念的探索。
 
 - **教育类桌游：**
   - 选择一款将乐趣与学习相结合的桌游，例如基于数学的游戏、地理问答或策略游戏。
@@ -843,14 +817,12 @@ Lily is a 10-year-old artist who is deeply passionate about art. She enjoys expe
 
 - **可持续性与社会影响：** 设计思维将在应对气候变化和社会不平等等全球挑战中发挥关键作用。将更强调创造可持续解决方案，以最小化环境影响并促进社会公平。企业将把社会责任融入其设计流程，旨在为世界带来积极改变。
 
-- **敏捷性、迭代与数据利用：** 设计思维的未来
-
-
-
-将以敏捷性和对数据的强依赖为特征。公司将采用快速原型设计和迭代测试，以便根据用户反馈迅速调整。这种灵活的方法，结合利用大数据和分析，将使设计师能够通过理解用户行为和偏好做出明智的决策。持续的反馈循环将在设计过程中建立，以收集用户输入，确保设计能够根据真实的用户体验不断完善和改进。
+- **敏捷性、迭代与数据利用：** 设计思维的未来将以敏捷性和对数据的强依赖为特征。公司将采用快速原型设计和迭代测试，以便根据用户反馈迅速调整。这种灵活的方法，结合利用大数据和分析，将使设计师能够通过理解用户行为和偏好做出明智的决策。持续的反馈循环将在设计过程中建立，以收集用户输入，确保设计能够根据真实的用户体验不断完善和改进。
 
 - **全面整合与采纳：** 设计思维将成为跨学科教育的标准组成部分，从商业和工程到医疗保健和教育。更多组织将采纳设计思维方法论，不仅在产品设计中，也在战略、领导力和组织文化中。
+
 - **设计教育演进：** 随着设计思维变得更加普及，教育将不仅关注技术技能，还将关注同理心、沟通和协作等软技能。通过在线课程、工作坊和专业发展进行持续学习，对于设计师保持对新工具、技术和方法论的了解至关重要。
+
 - **虚拟现实和增强现实：** 随着 VR 和 AR 技术成熟，设计思维将探索创建沉浸式和交互式体验的新可能性。从虚拟产品原型到医疗保健和教育中的增强现实应用，这些技术将为创新设计开辟新的前沿。
 
 本质上，设计思维的未来是关于将人置于创新的中心，拥抱多样性，负责任地利用技术，并在社会中推动积极变革。这是一个创造力、同理心和协作引领产生真正改变世界的解决方案的未来。
@@ -876,10 +848,6 @@ Lily is a 10-year-old artist who is deeply passionate about art. She enjoys expe
 ### 头脑风暴
 
 头脑风暴就是让你的想法自由奔放。这是一个创意环节，你和你的团队尽可能多地提出想法，无论它们乍看之下多么疯狂或不切实际。这就像一场头脑风暴风暴，创造力的闪电可能带来突破性的解决方案。
-
-
-
-
 
 我们将在接下来的章节中深入探讨这些技术。
 
@@ -912,51 +880,49 @@ Lily is a 10-year-old artist who is deeply passionate about art. She enjoys expe
 
 那么，收获是什么？让我们记住始终从理解用户视角开始。通过对他们产生同理心，我们可以发掘出推动设计决策的宝贵洞察。然后，让我们拥抱头脑风暴中的创造力，跳出思维定式，提出创新解决方案。原型制作帮助我们快速将这些想法变为现实并与用户一起测试以获取反馈。这种迭代过程确保我们能根据真实世界的洞察不断完善和改进设计。
 
-展望未来，让我们保持好奇、开放思想，并渴望从用户那里学习。设计思维不仅仅是一个流程；它是一种可以改变
-
-
-
-the way we approach design. So, as we close this chapter, let us continue our journey with enthusiasm, empathy, and a commitment to creating user-centric designs that make a difference. The next chapter is a guide that explores the details of UX design, including different strategies, problems designers face, and new ideas.
+展望未来，让我们保持好奇、开放思想，并渴望从用户那里学习。设计思维不仅仅是一个流程；它是一种可以改变 the way we approach design. So, as we close this chapter, let us continue our journey with enthusiasm, empathy, and a commitment to creating user-centric designs that make a difference. The next chapter is a guide that explores the details of UX design, including different strategies, problems designers face, and new ideas。
 
 ## Key Terms
 
-- **User Experience (UX) Design:** The process of creating products that are easy and enjoyable for people to use, considering their needs and emotions throughout the design process.
-- **User Interface (UI) Design:** The visual and interactive aspects of a product, focusing on how it looks, how users interact with it, and how it responds to their actions.
-- **Graphical User Interface (GUI):** A visual way of interacting with computers, introduced in the 1970s, featuring elements like windows, icons, menus, and pointers (WIMP).
-- **Usability:** The ease with which users can interact with a product to achieve their goals effectively and efficiently.
-- **Accessibility:** The extent to which a product can be used by individuals with diverse abilities and characteristics, including those with disabilities.
-- **Design Thinking:** A problem-solving approach that prioritizes human needs and involves iterative ideation, prototyping, and testing to create innovative solutions.
-- **Empathy:** The ability to understand and share the feelings and experiences of others, crucial for designing solutions that truly meet user needs.
-- **Prototype:** A preliminary version of a product or solution used for testing and validation purposes, ranging from low-fidelity sketches to interactive digital models.
-- **User Testing:** A method of gathering feedback from real users to evaluate the usability, effectiveness, and satisfaction of a prototype or product.
-- **Problem Statement:** A concise description of the challenge or opportunity that a design team aims to solve or leverage through the design process, providing focus and direction for ideation and solution development.
-- **Iterative:** A process characterized by repetition and refinement, where ideas, designs, or solutions are continuously improved through cycles of testing and feedback.
-- **Creative Problem-Solving:** A method of addressing challenges or opportunities by generating innovative ideas and exploring unconventional solutions, often associated with design to changing circumstances or feedback, a critical skill in non-linear processes like design thinking.
-- **Digital Transformation:** The integration of digital technologies into all aspects of business operations, leading to fundamental changes in how organizations operate and deliver value to customers.
-- **Agility:** The ability to respond quickly and effectively to changing circumstances or opportunities, often associated with iterative and adaptive approaches to problem-solving.
-- **Virtual Reality (VR) and Augmented Reality (AR):** Technologies that create immersive, computer-generated environments (VR) or enhance real-world environments with digital elements (AR), offering new possibilities for design and user experience.
-- **Brainstorming:** A creative technique for generating a large number of ideas or solutions through open and spontaneous discussion within a group.
-- **User Mapping:** The process of creating visual representations of users’ interactions with a product or service, often used to identify opportunities for improvement and innovation.
-- **Persona:** A fictional representation of a target user group, based on demographic, psychographic, and behavioral characteristics, used to guide design decisions and strategies.
 
-- Roles of UX Designers
-- User-Centered Design
-- Benefits of User Centered Design
-- User-Centered Design Process
-- User-Centered Design versus Design Thinking
-- Factors that Influence User Experience
+
+# User Experience Glossary
+
+- `User Experience (UX) Design`: The process of creating products that are easy and enjoyable for people to use, considering their needs and emotions throughout the design process.
+- `User Interface (UI) Design`: The visual and interactive aspects of a product, focusing on how it looks, how users interact with it, and how it responds to their actions.
+- `Graphical User Interface (GUI)`: A visual way of interacting with computers, introduced in the 1970s, featuring elements like windows, icons, menus, and pointers (WIMP).
+- `Usability`: The ease with which users can interact with a product to achieve their goals effectively and efficiently.
+- `Accessibility`: The extent to which a product can be used by individuals with diverse abilities and characteristics, including those with disabilities.
+- `Design Thinking`: A problem-solving approach that prioritizes human needs and involves iterative ideation, prototyping, and testing to create innovative solutions.
+- `Empathy`: The ability to understand and share the feelings and experiences of others, crucial for designing solutions that truly meet user needs.
+- `Prototype`: A preliminary version of a product or solution used for testing and validation purposes, ranging from low-fidelity sketches to interactive digital models.
+- `User Testing`: A method of gathering feedback from real users to evaluate the usability, effectiveness, and satisfaction of a prototype or product.
+- `Problem Statement`: A concise description of the challenge or opportunity that a design team aims to solve or leverage through the design process, providing focus and direction for ideation and solution development.
+- `Iterative`: A process characterized by repetition and refinement, where ideas, designs, or solutions are continuously improved through cycles of testing and feedback.
+- `Creative Problem-Solving`: A method of addressing challenges or opportunities by generating innovative ideas and exploring unconventional solutions, often associated with design to changing circumstances or feedback, a critical skill in non-linear processes like design thinking.
+- `Digital Transformation`: The integration of digital technologies into all aspects of business operations, leading to fundamental changes in how organizations operate and deliver value to customers.
+- `Agility`: The ability to respond quickly and effectively to changing circumstances or opportunities, often associated with iterative and adaptive approaches to problem-solving.
+- `Virtual Reality (VR) and Augmented Reality (AR)`: Technologies that create immersive, computer-generated environments (VR) or enhance real-world environments with digital elements (AR), offering new possibilities for design and user experience.
+- `Brainstorming`: A creative technique for generating a large number of ideas or solutions through open and spontaneous discussion within a group.
+- `User Mapping`: The process of creating visual representations of users’ interactions with a product or service, often used to identify opportunities for improvement and innovation.
+- `Persona`: A fictional representation of a target user group, based on demographic, psychographic, and behavioral characteristics, used to guide design decisions and strategies.
+
+### Roles of UX Designers
+### User-Centered Design
+### Benefits of User Centered Design
+### User-Centered Design Process
+### User-Centered Design versus Design Thinking
+### Factors that Influence User Experience
 
 ## User Experience (UX)
 
 User Experience — how people interact with a product or service. In other words, every little tap, click, or swipe as you use an app or a website. But it is not just how it looks; it is also about how it feels and how easy it is to use.
 
+
+
 UX Design — the behind-the-scenes magic that makes using something smooth and enjoyable. Designers plan everything to the smallest details so that the use of a product is as seamless as can be. What is the goal for them? To give users an experience that feels natural, efficient, and relevant.
 
 This sounds awesome, but how does one become a UX designer, and what exactly do they do? They do this by utterly effectively understanding the individuals who will use their product. They think about what the user requires, desires, and becomes irritated with. It’s not only the user; they consider what the company desires to achieve as well.
-
-
-
-
 
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_77_0.png)
 
@@ -965,7 +931,7 @@ This sounds awesome, but how does one become a UX designer, and what exactly do 
 他们的职责是让事物看起来美观，但他们更关注的是让事物易于使用且令人愉悦。他们设身处地站在用户的角度，确定引导用户使用产品的最快方式。从开始到结束，整个过程让人感觉像是一场胜利。
 
 > 没有产品是一座孤岛。产品不仅仅是产品本身，它是一系列连贯、集成的体验。请全面思考产品或服务的所有阶段——从最初意图到最终反思，从首次使用到帮助、服务与维护。让这些阶段无缝协同工作。
-> 
+>
 > — 唐·诺曼，“用户体验”一词的创造者
 
 ## UX 背后的故事
@@ -987,19 +953,11 @@ This sounds awesome, but how does one become a UX designer, and what exactly do 
 让我们来看几个证明 UX 重要性的关键点：
 
 - **满足用户需求：** 想象一下，你使用的应用或访问的网站似乎每次都像是专门为你定制的。有效的 UX 恰恰能做到这一点。它就像一位在线私人助理，确切了解你的需求，并让你轻松获取所需内容。当用户感到自己的需求得到满足时，他们会更加满意，更愿意购买（转化），也更愿意再次回来（留存）。
-
 - **创造积极体验：** 想想你偏爱的产品或品牌，你很可能会因为它带给你的感受而喜爱它，而不仅仅是因为它提供的功能。优秀的用户体验设计就是要让人感觉良好。这就像一次愉快顺畅的旅程，而非颠簸坎坷的旅途。出色的用户体验会增加用户留下来并成为品牌忠实拥护者的可能性。
-
 - **建立关系：** 你是否曾觉得某个企业真正懂你？这正是他们绘制的客户旅程地图所带来的效果。为你的产品或网站创建用户体验（UX）路线图，与绘制这样一幅地图如出一辙。它关乎建立忠诚与信任，而不仅仅是促成销售。当用户感到自己被珍视和理解时，他们更愿意长久相伴。
-
 - **降低成本：** 开展营销活动、频繁更新功能、修复错误，这些都可能成本高昂。然而，有效的 UX 能够降低这些开支。通过打造一个易于使用、易于理解的产品，你将来会节省大量时间和金钱。此外，满意的客户更有可能把你推荐给他人，从而为你省下不少广告费用。
-
 - **提高投资回报率（ROI）：** 提高投资回报率就像让你的钱发挥更大的价值。当你优先考虑卓越的用户体验时，你实际上是在投资用户的愉悦与满足。而且，满意的客户更有可能购买商品、将你的产品推荐给朋友，并在长期内持续光顾。因此，你最终会从投资中收获更丰厚的回报。
-
 - **留下深刻印象：** 很多时候，我们不必重新发明轮子，而是要改进自己已经拥有的轮子。以用户为中心的设计正是个中关键。通过优先考虑用户并真正了解他们的需求，你可以将一个普通的想法变成令人惊艳的杰作。这就像给老房子刷上一层新漆；虽然并不是全新的，但看起来确实焕然一新。
-
-
-
 
 **提供直觉体验：** 你是否曾经使用过一款应用或网站，感觉它立刻就适合你？那是因为它是为你量身打造的。让事物变得直观是优秀用户体验设计的基石，能让人们轻松地完成任务，无需过多思考。这就像驾驶一辆所有开关和按钮都各就各位的汽车一样。当使用起来舒适且熟悉时，用户更有可能留下来。
 
@@ -1018,11 +976,11 @@ This sounds awesome, but how does one become a UX designer, and what exactly do 
 
 让我们逐一探讨这 4C 原则。
 
-## 一致性
+### 一致性
 
 就像你最爱歌曲的稳定节拍，或是日常作息中可靠的节奏，一致性在 UI/UX 设计中非常重要。它归结为确保网站或应用在整体上保持一致的行为、感受和外观。如果一个按钮每次点击时行为都不同，那将会是一片混乱。当一切保持一致且熟悉时，用户会感到体验更加愉悦和直观。
 
-### 示例
+#### 示例
 
 让我们以 Instagram 这样的社交应用为例。无论你身处应用的哪个页面，底部的导航栏、右上角的个人资料图标以及中间的动态流都保持相同的布局。用户在探索应用的各种功能和区域时，会因这种一致性而受益，感到轻松和自信。
 
@@ -1034,7 +992,7 @@ This sounds awesome, but how does one become a UX designer, and what exactly do 
 
 简而言之，一致的 UI/UX 设计能改善用户体验，并增加用户对产品的信任。它创造出无缝、可靠且精致的体验，如同欣赏一场精彩的音乐演出。当设计保持一致性时，用户能更轻松地浏览和享受数字产品。
 
-## 设计一致性的力量
+#### 设计一致性的力量
 
 网页开发公司可以从用户体验中一致的设计元素中受益匪浅。它们通过营造可靠舒适的氛围来提升用户体验。想象一下走进你常去的咖啡店，你无需思考就能找到一切。
 
@@ -1042,15 +1000,15 @@ This sounds awesome, but how does one become a UX designer, and what exactly do 
 - 一致性还能培养信任和信心。如果你最亲密的朋友每次出现都换一个新发型，你可能会开始怀疑自己是否还能依赖他们！设计也是如此；当元素的外观和功能保持一致时，用户就会感到放心。
 - 苹果、谷歌和 Meta（原 Facebook）等知名公司深谙一致性的价值。想想你的 iPhone 多么易用和直观，或者谷歌的应用似乎都使用同一种设计语言。这一切都是为了塑造强大的品牌形象，并为用户营造一个亲切的环境。这些企业证明，一致性改变了用户理解和品牌认知的格局——它不仅仅是“锦上添花”。
 
-## 连续性
+### 连续性
 
 就 UI/UX 设计而言，连续性就像一段没有任何停顿或障碍的顺畅旅程。确保访问者能够轻松地在……之间导航
 
-
-
 在网站或应用程序的各个部分之间浏览时不会感到困惑或迷失方向，这才是关键。如果你正在阅读一本书，每翻一页文字和图片的颜色和排列都突然改变，你会觉得很惊讶，对吧？在数字世界中，连续性防止了这种情况的发生。
 
-## 示例
+#### 示例
+
+
 
 以亚马逊这样的电商应用为例。连续性确保了当你在笔记本电脑上浏览产品，然后切换到手机完成交易时，你的搜索历史、偏好设置和购物车都能轻松转移。因此，你不必从头开始，也不用浪费时间去寻找已经找到的商品。
 
@@ -1067,9 +1025,7 @@ This sounds awesome, but how does one become a UX designer, and what exactly do 
 在 UX 设计中使用连续性有几个优势，它们极大地改善了用户体验。连续性使网站或应用在各部分之间的过渡变得流畅无缝，为消费者提供一致且易于使用的体验。由于其流畅的流程，用户可以与产品的功能进行交互，更轻松地浏览，并以最少的困难实现其目标。正因如此，用户更有可能对体验感到满意和投入，从而提高用户忠诚度和留存率。
 
 - 增强用户参与度和留存率是连续性的主要好处之一。当用户能够轻松无缝地在平台、设备或任务之间切换时，他们更有可能更长时间地坚持使用产品。通过鼓励客户尝试不同的功能和功能，连续性有助于用户更频繁地与产品互动，并随着时间的推移与之建立更牢固的联系。
-
 - 连续性提高了用户交互效率。通过消除用户在切换触点时重复操作或重新输入信息的需要，连续性简化了用户旅程并降低了不必要的摩擦。这种效率不仅节省了用户的时间和精力，还通过提供更轻松、无忧的体验来提高他们对产品的整体满意度。
-
 - 连续性对于建立对品牌或产品的信心和信任至关重要。当用户在各种渠道和交互中始终如一地体验到同样的事物时，他们会感到安心，并增强对产品可靠性的信心。当用户可以依靠流畅一致的体验时，他们更有可能将产品视为可靠和值得信赖的，这随着时间的推移可以增强品牌忠诚度和倡导。
 
 简而言之，一致的 UX 设计对于积极持久的用户体验是必要的。连续性确保了在多个触点和交互中保持连贯性和一致性，从而最大化 UX 设计的有效性，并有助于产品或服务的整体成功。
@@ -1079,10 +1035,6 @@ This sounds awesome, but how does one become a UX designer, and what exactly do 
 上下文是用户交互意义的重要因素。用户需要与他们的活动相关且引人入胜的信息才能获得积极的体验。在此上下文中，内容是指文本、图像、视频和可点击元素。归根结底，这一切都取决于为消费者提供准确的信息，在他们身上唤起情感，并帮助他们实现目标。
 
 你是否留下，很大程度上可能受到你所看到的内容的影响。当设计精良时，它可以吸引你的兴趣，诱使你在网站或应用上停留更长时间，并鼓励你回来。然而，如果它杂乱无章或毫无意义，它可能会让你感到恼火，并让你想要离开。网站或应用的质量和相关性会影响用户对其的看法以及他们对它的享受程度。
-
-
-
-
 
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_86_0.png)
 
@@ -1111,10 +1063,6 @@ Figure 2.4: Tailoring context to meet user needs
 UI/UX 设计中的互补元素是功能组合，当结合在一起时会产生美味且平衡的餐食。关键在于确保设计的各个元素协同工作，以提升整体用户体验。如果你在装饰房间时，房间里的每件家具都与其他东西冲突，那看起来就不会很友好，你明白我的意思吗？为了使网站或应用程序具有凝聚力和视觉吸引力，每个元素必须与其他元素配合良好。我们称之为互补设计。
 
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_88_0.png)
-
-
-
-
 
 - **更高的可记忆性：** 用户更有可能记住组织良好且协调统一的设计。当设计的许多组件和谐地协同运作时，客户更有可能回忆起使用产品的体验，并在日后再次回来。
 - **更强的品牌识别：** 通过突出品牌的价值和身份，互补性设计有助于将产品与竞争对手区分开来。颜色、字体和图像的持续使用创造了一种统一的品牌形象，与消费者产生共鸣，并逐渐培养信任和忠诚度。
@@ -1150,10 +1098,11 @@ UI/UX 设计中的互补元素是功能组合，当结合在一起时会产生�
 
 最后，为了妥善解决问题，选定的解决方案随后被……
 
-
 付诸实践、评估并按需改进。CPS 可用于各种场景，包括商业、技术、人际交往和个人问题。它能够提升创造力、创新能力和高效的问题解决技巧。
 
 ## 七步法
+
+
 
 尽管创造力作为一种问题解决技巧已有数十年历史，但直到西德尼·帕内斯（Sidney Parnes）和亚历克斯·奥斯本（Alex Osborn）才将其正式化为创造性问题解决（CPS）。这一由推广头脑风暴的奥斯本和帕内斯共同提出的创造性问题解决过程（CPSP），自20世纪50年代以来，一直在纽约布法罗学院（Buffalo College）的国际创造力研究中心教授。
 
@@ -1167,7 +1116,7 @@ UI/UX 设计中的互补元素是功能组合，当结合在一起时会产生�
 - 6. 制定行动计划
 - 7. 采取行动
 
-### 1. 识别问题
+## 1. 识别问题
 
 找出问题的根源，就像侦探寻找线索来解开谜团一样。在尝试解决问题之前，必须首先识别问题的真正本质。设想你正在修理厨房漏水的龙头。你最初可能会认为问题只是水龙头在漏水。然而，仔细检查后，你会发现漏水可能是多种潜在问题造成的，例如管道松动或垫圈老旧。
 
@@ -1177,19 +1126,19 @@ UI/UX 设计中的互补元素是功能组合，当结合在一起时会产生�
 
 如果你花时间仔细评估情况并提出相关问题，你将能更清晰地理解手头的问题。就像侦探拼凑线索一样，你会更善于找到能够解决根本问题并产生积极结果的方案。
 
-### 2. 研究问题
+## 2. 研究问题
 
 在创造性问题解决中，调查挑战就像去异国他乡寻找失落的宝藏。你首先要尽可能多地了解这个问题。这可能包括阅读书籍或文章、与遇到类似问题的人交流，甚至进行实验以更好地理解情况。假设你想找出花园里植物生长不良的原因。你可以研究许多影响植物生长的因素，例如水分含量、光照和土壤质量。
 
 收集到足够的数据后，你开始对其进行分析，以发现趋势或规律。这有助于你理解问题的根本原因。例如，如果土壤非常干燥，或者植物得不到充足的阳光，你可能会注意到它们在枯萎。
 
-### 3. 提出创造性挑战
+## 3. 提出创造性挑战
 
 当你收集到所有必要信息后，就该把问题转化为一个提问。这个提问应该直截了当，直击问题的核心。同时，它还应该具有灵活性，允许提出广泛的建议和想法，而不设定任何僵化的评估标准。
 
 举例来说，假设你在寻找减少城市交通拥堵的策略。你可以提出一个更聚焦的挑战性问题，例如“我们如何鼓励更多人在高峰时段使用公共交通？”而不是像“我们如何解决交通问题？”这样宽泛的问题。这是一个清晰、有针对性的问题，能够容纳各种想法和思路，从而促进创造力。
 
-### 4. 探索想法
+## 4. 探索想法
 
 选择一个创造性任务，然后留出一些安静的时间，想出至少三十个想法，无论它们是否能直接解决挑战。你可以独自进行这场探索，也可以邀请家人或朋友一起参与头脑风暴。
 
@@ -1199,9 +1148,7 @@ UI/UX 设计中的互补元素是功能组合，当结合在一起时会产生�
 
 记住，你不一定非要在工作场所才能进行头脑风暴。为了获得新想法，试着改变一下环境。也许可以出去散散步，让思绪自由驰骋，或者在家里、花园、你最喜欢的餐厅里找一个安静的地方，等等。
 
-收到你的挑战性问题后，是时候开始思考答案了。永远不要忘记，目标是提出尽可能多的想法
-
-你可以在此时不考虑它们是否可行或实用。你可以通过让问题保持开放且没有评估标准来鼓励问题解决过程中的更大创造性和独创性。
+收到你的挑战性问题后，是时候开始思考答案了。永远不要忘记，目标是提出尽可能多的想法。你可以在此时不考虑它们是否可行或实用。你可以通过让问题保持开放且没有评估标准来鼓励问题解决过程中的更大创造性和独创性。
 
 当你尝试各种概念和可能性时，你会开始注意到模式的出现以及可能的解决方案的成形。秘诀在于保持开放的心态，并欢迎你遇到的各种观点。通过创建挑战性问题并探究富有创意的答案，你将很好地找到解决即使是最困难情况的新颖方案。
 
@@ -1231,9 +1178,7 @@ UI/UX 设计中的互补元素是功能组合，当结合在一起时会产生�
 
 ## 7. 采取行动
 
-执行计划意味着逐步将你的想法付诸实践。一开始就分配职责给团队成员，确保每个人都知道什么时候需要做什么。接下来，遵守你制定的时间表，按时完成任务以保持进展。检查
-
-经常检查你的进度，并做出必要的调整。有效沟通对于让每个人了解情况、促进团队合作至关重要。达到目标后要奖励自己，以保持动力。永远不要忘记保持灵活性，并准备好应对意外情况而调整计划。适应性和灵活性是解决问题的关键特质；如果你愿意根据批评和结果调整策略，成功的机会就会增加。通过持续行动并保持对目标的专注，你可以将想法变为现实，并找到当前问题的解决方案。
+执行计划意味着逐步将你的想法付诸实践。一开始就分配职责给团队成员，确保每个人都知道什么时候需要做什么。接下来，遵守你制定的时间表，按时完成任务以保持进展。经常检查你的进度，并做出必要的调整。有效沟通对于让每个人了解情况、促进团队合作至关重要。达到目标后要奖励自己，以保持动力。永远不要忘记保持灵活性，并准备好应对意外情况而调整计划。适应性和灵活性是解决问题的关键特质；如果你愿意根据批评和结果调整策略，成功的机会就会增加。通过持续行动并保持对目标的专注，你可以将想法变为现实，并找到当前问题的解决方案。
 
 ## 设计师使用创造性问题解决法（CPS）的目的
 
@@ -1252,6 +1197,8 @@ UI/UX 设计中的互补元素是功能组合，当结合在一起时会产生�
 
 ## UX 设计师简介
 
+
+
 用户体验（UX）设计师，通常被称为数字架构师，负责创建网站和移动应用程序的用户界面与功能。他们的作用类似于应用或网站的问题解决方案！想象一下，你用新的个人理财或预算软件跟踪日常开支。用户体验设计师会确保应用程序直观易用，按钮放置得当，跟踪支出的说明清晰明确。他们会考虑你如何浏览应用，确保你不会感到困惑或烦躁。为了帮助用户更有效地管理财务，他们通常会提供预算管理、交易分类、财务洞察和支出监控等工具。
 
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_100_0.png)
@@ -1260,9 +1207,7 @@ UI/UX 设计中的互补元素是功能组合，当结合在一起时会产生�
 
 让用户体验尽可能流畅愉快是他们的责任。想想你花在使用最喜欢的社交媒体应用上的时间。一切看起来都那么显而易见，是不是？这是因为 UX 设计。你能轻松找到正在寻找的内容，按钮也都在你预料的位置。这一切都归功于一位熟练的 UX 设计师。UX 设计师除了关注外观美观之外，也关注功能正常。
 
-简而言之，UX 设计师的职责是打造既高效又易用的数字体验。无论你是网购、使用应用还是访问网站，让生活更轻松、更有趣都是 UX 设计的主要目标。UX 设计师通过运用设计思维和创造性问题解决法（CPS）来创造用户喜欢使用的数字产品。这需要把自己想象成用户，并以他们的
-
-requirements and preferences in mind. And for that reason, in the modern digital environment, user experience designers are crucial. They could be employed by any number of digitally focused businesses, from small start-ups to major tech organizations.
+简而言之，UX 设计师的职责是打造既高效又易用的数字体验。无论你是网购、使用应用还是访问网站，让生活更轻松、更有趣都是 UX 设计的主要目标。UX 设计师通过运用设计思维和创造性问题解决法（CPS）来创造用户喜欢使用的数字产品。这需要把自己想象成用户，并以他们的 requirements and preferences in mind. And for that reason, in the modern digital environment, user experience designers are crucial. They could be employed by any number of digitally focused businesses, from small start-ups to major tech organizations.
 
 ## Roles of UX designers
 
@@ -1285,6 +1230,9 @@ There are four important things to keep in mind with UCD:
 
 - **Visibility:** When users first arrive on your website, can they quickly figure out what it’s all about and how to use it?
 - **Accessibility:** Is your website easy for users to access? Can they find what they’re looking for without any trouble? Important action buttons, navigation menus, and search options should be easy to find.
+
+
+
 - **Legibility:** Can users read the text on your site easily? It is important that the words are clear and easy to understand.
 - **Language:** Is the language on your site easy for users to understand? It is best to avoid using complicated words or phrases that might confuse them. Keep it simple and straightforward.
 
@@ -1292,12 +1240,7 @@ There are four important things to keep in mind with UCD:
 
 Consider the well-known e-commerce site Amazon to gain a thorough understanding of user-centered design, or UCD.
 
-- **Comprehending User Needs:** Prioritizing user needs and wants when conducting online shopping is how Amazon starts. They carry out
-
-
-
-research to discover the inclinations, purchasing patterns, and problems of people.
-
+- **Comprehending User Needs:** Prioritizing user needs and wants when conducting online shopping is how Amazon starts. They carry out research to discover the inclinations, purchasing patterns, and problems of people.
 - **User-Friendly Interface:** Users can easily find what they’re looking for on Amazon’s website thanks to its simple, user-friendly interface. The search box is easily accessible at the top of the page, enabling customers to look up products with ease. Navigating between departments is made easy for users with the navigation menu’s obvious category organization.
 - **Personalization:** To enhance the user experience, Amazon leverages information from previous purchases and browsing habits. By offering personalized product recommendations based on each user’s interests and preferences, they facilitate the process of discovering new things that they may find appealing.
 - **Reviews and Ratings:** Product ratings and reviews are available on Amazon to assist customers in making well-informed selections. Before making a purchase, users can read what other people think about a product, which increases their confidence and sense of trust.
@@ -1312,24 +1255,29 @@ To delve deeper into the concepts of user-centered design (UCD), let us examine 
 - **Personalized Experience:** Depending on each user’s unique tastes and goals, MyFitnessPal offers a personalized experience. Users of the app can specify particular objectives, including calorie intake or macronutrient targets, and the app offers advice and recommendations to assist them reach these objectives.
 - **User-Friendly Interface:** MyFitnessPal’s user-friendly interface makes it simple for users to log their food intake, exercise routine, and goal progress. With just a few touches, users can register their meals and workouts using the app’s fitness tracker and food journal, which provide a summary of daily goals and progress.
 - **Food Database:** MyFitnessPal’s extensive food and recipe database makes it simple for users to keep track of their caloric intake and nutritional values. The app automatically computes calorie counts and macronutrient breakdowns, and users can easily register their meals by searching for specific foods or scanning barcodes.
+
+
+
 - **Community Support:** MyFitnessPal has a built-in community feature that allows users to connect with others who share similar goals and interests. Users can join groups, participate in challenges, and share their progress with friends for added motivation and support.
+
 - **Feedback and Progress Tracking:** To assist users in staying on track towards their objectives, MyFitnessPal offers feedback and progress tracking features. Viewing their progress over time, tracking weight and body measurement changes, and getting insights and recommendations based on their eating and activity habits are all available to users.
 
 MyFitnessPal prioritizes the requirements and objectives of its users throughout the design process, making it a great example of user-centered design overall. Every feature of the app, including straightforward monitoring tools, community support, and personalized goal setting, is made to make it easier and more fun for users to reach their fitness objectives.
 
 ## Benefits of User Centered Design
 
-
-
-
-
 众多以用户为中心的设计（UCD）优势使其既实用又引人入胜。以下是 UCD 如此具有革命性的几个原因：
 
 - **改善用户体验：** UCD 在整个设计过程中优先考虑用户的需求、偏好和行为，确保产品和服务能够量身定制以满足他们的需求。用户因此拥有直观、愉悦、最终更令人满意的体验。
+
 - **提升用户满意度：** UCD 通过把用户需求放在首位，打造出能与客户更深层次产生共鸣的产品和服务。当用户认为产品是专门为他们打造时，他们更有可能对体验感到满意并对企业产生忠诚度。
+
 - **更好的可用性：** UCD 专注于创建易于使用和导航的产品，从而降低用户的学习曲线并减少挫败感。这导致更高的采用率、更强的参与度，最终为个人和企业带来更好的成果。
+
 - **改善问题解决：** UCD 促进了对用户需求和困难的更深入理解，从而实现更具创造性和效率的问题解决。通过培养对用户的同理心并从他们的视角观察环境，设计师可能会发现原本可能被忽视的机会和见解。
+
 - **降低风险：** UCD 通过将用户纳入设计过程，帮助降低开发出与目标市场脱节的产品风险。设计师可以通过频繁地与真实用户测试概念和原型，在问题变得昂贵之前发现并修复它们。
+
 - **提高效率：** 尽管看似矛盾，但在设计过程中让用户参与最终可以节省时间和资源。通过在早期评估想法和概念，设计师可以将精力集中在真正重要的事情上，避免在无法满足用户需求的功能上浪费时间和资源。
 
 本质上，以用户为中心的设计的目标是创造真正能在有意义的层面上吸引用户的体验，而不仅仅是生产产品。通过优先考虑用户的需求和愿望，设计师可以释放无限可能，并创造出令人兴奋、赋能和愉悦的解决方案。
@@ -1351,9 +1299,13 @@ Research Align Build Test Iterate
 *Figure 2.8: User-centered design steps*
 
 1. **Research:** 这个初始阶段涉及尽可能多地了解用户、他们的需求、偏好和行为。归根结底就是要了解你的客户以及他们对你的产品或服务的需求。
+
 2. **Align:** 在进行研究后，至关重要的是将研究结果与项目的目标和目的相匹配。通过这一步，可以确保设计过程始终集中于满足用户需求并产生预期结果。
+
 3. **Build:** 基于研究结果和一致的目标，设计师开始开发产品或服务的原型或 mockup。在此阶段，概念被转化为可以检查和评估的具体表现形式。
+
 4. **Test:** 为了获得关于可用性、功能性和整体满意度的反馈，原型会与真实用户进行测试。在设计定稿之前，测试有助于发现任何可用性缺陷或需要改进的领域。
+
 5. **Iterate:** 设计师根据测试过程中获得的反馈改进和修改原型。在此迭代过程中利用用户反馈有助于完善设计，并确保其成功满足消费者的需求和期望。
 
 以用户为中心的设计流程通过研究、对齐、构建、测试和迭代这些步骤，确保最终的产品或服务基于用户洞察，与项目目标保持一致，并经过持续完善以提供理想的用户体验。
@@ -1366,11 +1318,6 @@ Research Align Build Test Iterate
 | --- | --- | --- |
 | **Focus** | 理解并在整个设计过程中解决用户需求、偏好和行为是以用户为中心的设计（UCD）的主要目标。它强烈强调用户满意度、功能性和可用性。 | 相反，设计思维遵循更全面的策略，强调识别问题的根本原因并创造创新解决方案。它提倡实验、同理心和创造力。 |
 | **Process** | UCD 通常遵循一套固定的流程，包括研究、设计、原型制作、测试、实施等阶段。它经常应用于数字产品和服务的创建。 | 设计思维更灵活、迭代，强调好奇心、实验和持续学习的态度。它通常涉及定义、同理心、头脑风暴、原型制作和测试等阶段；然而，这些阶段并不总是顺序进行，可以根据需要重复。 |
-
-
-
-
-
 | 范围 | UCD 主要专注于创建满足消费者需求的商品和服务。它经常被应用于产品设计、人机交互（HCI）和用户体验（UX）设计等学科。 | 超越产品设计，设计思维具有更广泛的应用，可以用来解决各种问题，例如组织变革、社会创新和商业战略。 |
 |---|---|---|
 | 工具和技术 | 为了理解用户需求并评估设计方案，UCD 通常使用诸如人物角色、线框图、可用性测试和用户研究等工具和技术。 | 为了促进创造力、合作和发明，设计思维采用多种工具和方法，包括同理心地图、头脑风暴会议、原型制作和讲故事。 |
@@ -1404,6 +1351,8 @@ Research Align Build Test Iterate
 
 确保产品有益是创建人们喜欢使用的产品中最关键的因素。如果它不能满足他们的需求或提供解决他们困难的答案，那几乎没什么用处。但如果它满足了他们的需求，他们就会使用它。这就像问自己，“如果没人玩，制作玩具的意义何在？”为了创建人们会继续使用的产品，它们必须非常有益。
 
+
+
 根据理查德·科赫（英国作家，商业事务专家）的说法，有五种基本方法可以改善你的产品的用户体验。
 
 - 改变性能
@@ -1426,10 +1375,6 @@ Research Align Build Test Iterate
 - **桌面玩具：** 在办公室环境中，磁性雕塑（可重新排列成各种配置的小金属件）或牛顿摆（展示动量和能量守恒的一系列摆动球）等物品可以是有趣的并成为谈资。
 
 每当你对设计决策犹豫不决时，只需问自己，“我为什么要这样做？”以这种方式，你可以确保你的设计与你对产品的目标保持一致。
-
-
-
-
 
 ## 可用性
 
@@ -1464,22 +1409,20 @@ Research Align Build Test Iterate
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_115_0.png)
 
 诸如尺寸、价格范围和品牌等参数有效地减少可能性。当用户选择一件连衣裙以便更仔细地查看时，面包屑导航有助于他们保持上下文并使其能够轻松返回到之前的搜索结果。
+
 自动完成功能提供对常用搜索词的即时洞察，同时用户正在操作搜索字段，使用户能够轻松缩小搜索范围。
+
 在这个全面的示例中，电子商务平台强大的可发现性功能不仅使用户更容易找到一件白色连衣裙，而且还大大提高了他们的满意度以及成功购买的机会。
 
 ## 可信度
 
 产品的可信度是信任的基础。在当今数字时代，用户在各行各业拥有无穷无尽的选择，因此企业必须确立自己作为可靠供应商的地位。如果产品或服务达不到预期，客户通常会在几次尝试后就离开。缺乏信任会使提供良好的用户体验变得困难。可信度为用户交互建立了氛围，就像第一印象一样。即使产品并不完美，如果用户认为开发者可靠且诚实，他们仍会喜欢使用该产品。
 
-
-
-
-
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_117_0.png)
 
 Figure 2.13: UX Honeycomb Factor 4. Credible
 
-## Example:
+### Example:
 
 Connect 曾经是一个备受欢迎的社交媒体网站，用户可以在上面与朋友互动、交换图片并阅读新闻更新。但与 Facebook 一样，Connect 在近年经历了信誉危机。
 
@@ -1519,10 +1462,6 @@ Figure 2.15: UX Honeycomb Factor 6. Accessible
 
 W3C 网站使用结构化 HTML 标记，为内容提供清晰的结构和含义，这是其主要特点之一。由于其语义框架，借助屏幕阅读器等辅助技术，残疾用户可以准确地访问和理解内容。
 
-
-
-
-
 视觉组件也包含在可访问性类别中。由于 W3C 网站使用了高对比度颜色，并且文本与背景元素之间提供了足够的颜色对比，因此视力受损或色盲用户会更容易阅读和识别网站上的内容。为了进一步确保视力低下或盲视用户能够理解视觉元素的上下文和目的，网站为每张图片都提供了信息丰富的替代文本。
 
 W3C 网站上的表单是在考虑可访问性功能的情况下开发的，例如适当的标签、输入字段的说明以及易于理解的错误信息。这些功能保证了用户能够正确地与网站上的表单进行交互并提交表单，即使是依赖语音输入设备或屏幕阅读器的用户也是如此。此外，网站的自适应设计保证了它能够轻松地适应各种屏幕尺寸和设备，在平板电脑、智能手机和台式电脑上提供一致的用户体验。
@@ -1530,6 +1469,8 @@ W3C 网站上的表单是在考虑可访问性功能的情况下开发的，例�
 ## 价值
 
 最终，产品必须产生影响。除了满足制造该产品的公司需求之外，还必须为用户提供真正的价值。价值取决于产品在相对于其成本的情况下提供优势或解决问题的好坏程度。当产品相对于其成本提供显著的优势时，其价值就会提升并吸引客户。
+
+
 
 作为设计师，你有责任平衡所有元素，为用户提供尽可能最佳的体验。用户可能对产品的不同功能赋予不同的价值；对于某些人来说，最重要的因素是他们想要它的程度，而对于其他人来说，可访问性是最重要的因素。这意味着价值并不是单一实体，而是用户体验中所有不同组成部分汇聚而成的结果。
 
@@ -1551,11 +1492,7 @@ W3C 网站上的表单是在考虑可访问性功能的情况下开发的，例�
 
 随着本章的结束，很明显，用户体验（UX）设计不仅对数字产品和服务至关重要，对任何类型的体验，无论是否数字化，都至关重要。UX 设计的重要性怎么强调都不为过，因为它直接影响用户参与度、满意度，并最终影响商业成果。上下文、内容、沟通和社区是 UX 设计的四大支柱，它们作为构建有意义用户体验的框架。
 
-在 UX 设计中实施 4C 面临着各种挑战，从平衡技术限制与组织目标到理解用户需求。七步法和 CPS 假设等框架强调以用户为中心的设计和迭代问题解决。UX 设计师凭借其在同理心、创造力、研究和技术专长方面的技能，在创造与用户产生深刻共鸣的产品方面发挥着关键作用。虽然设计思维和以用户为中心的设计目标相同，但在关注点和实施方式上有所不同，但它们相互补充。 通过解决七个要素，UX 设计师促进了长期的参与和忠诚度。因此，UX 设计将人类心理学、技术和创造力融合在一起，打造令人愉悦的数字体验。
-
-
-
-
+在 UX 设计中实施 4C 面临着各种挑战，从平衡技术限制与组织目标到理解用户需求。七步法和 CPS 假设等框架强调以用户为中心的设计和迭代问题解决。UX 设计师凭借其在同理心、创造力、研究和技术专长方面的技能，在创造与用户产生深刻共鸣的产品方面发挥着关键作用。虽然设计思维和以用户为中心的设计目标相同，但在关注点和实施方式上有所不同，但它们相互补充。通过解决七个要素，UX 设计师促进了长期的参与和忠诚度。因此，UX 设计将人类心理学、技术和创造力融合在一起，打造令人愉悦的数字体验。
 
 在下一章中，我们将探讨 UX 研究、其在理解用户需求和行为方面的关键作用，并考察流行的以用户为中心的研究方法，这些方法为有效的设计决策提供依据，确保创造出直观且引人入胜的用户体验。
 
@@ -1590,11 +1527,8 @@ W3C 网站上的表单是在考虑可访问性功能的情况下开发的，例�
 - **可信度：** 产品或服务的可信度和可靠性，通常受声誉和用户反馈等因素影响。
 - **可欲性：** 产品或服务的吸引力和美感，通常受美学和情感共鸣等因素影响
 
-
-
-
-
 ## 第三章
+
 ## UX 设计的研究与分析
 
 ## 引言
@@ -1661,7 +1595,7 @@ UX 研究是一个持续的过程，就像一位忠实的朋友，在产品发�
 
 dream, it is achievable! To make a product users will adore, you need their input throughout the process. It is like baking a cake — you need everyone’s help to get it just right. By engaging with users and listening to their needs, you can create something they truly enjoy. Success is not just about meeting targets; it’s about making people happy. Just as you would ask kids what they want in a playground, UX research helps ensure your product meets user expectations.
 
-Some key reasons highlighting the importance of UX research are as follows:
+## Some key reasons highlighting the importance of UX research are as follows:
 
 - 1. **Understanding People:** UX research aids in our comprehension of the target market for our good or service. UX research helps us understand the preferences, wants, and behaviors of the people who will use our websites, apps, or any other product, in the same way that interviewing the kids helps you figure out what they like to do on the playground.
 - 2. **Improving Design:** You may create better designs when you are aware of what appeals to and bothers individuals. Assume that a majority of children prefer climbing walls than swings. If your research has shown you this, you should build more climbing walls in your playground. In a similar vein, UX research directs us toward creating goods, apps, and websites that users find simple and fun to use.
@@ -1681,16 +1615,15 @@ In the fast-paced digital landscape of today, UX research acts as a guiding ligh
 
 ## UX Research Process
 
+
+
 In this chapter, we have created a guide for anyone, from experienced UX researchers to newcomers. Research is crucial for great UX design and development. A systematic approach ensures each design version improves with valuable data, but flexibility is key. There’s no one-size-fits-all method—effective UX research adapts to your team’s, users’, and business’s needs. This guide outlines how to build a strong UX research process in seven steps, based on lean UX principles of user feedback, testing, and continuous improvement. Remember, UX research is an ongoing cycle, with insights and feedback shaping the design and development process continuously.
 
-### 1. Setting Clear Research Goals
+## 1. Setting Clear Research Goals
 
-Establishing clear goals and objectives marks the initial and most crucial step
+Establishing clear goals and objectives marks the initial and most crucial step in any user research activity. Without them, you are essentially conducting the process blindly, which is not conducive to effective user research.
 
-
-在任何用户研究活动中都不可或缺。没有它们，你本质上是在盲目地进行过程，这不利于有效的用户研究。
-
-为了明确你的研究目标，请考虑以下问题：
+To clarify your research goals, consider the following questions:
 
 | 问题 | 解释 |
 |---|---|
@@ -1703,15 +1636,15 @@ Establishing clear goals and objectives marks the initial and most crucial step
 
 *表 3.1：定义研究目标时需要考虑的问题*
 
-## 进行利益相关者访谈
+## 2. 进行利益相关者访谈
 
 进行利益相关者访谈对于任何研究项目都是必不可少的。利益相关者，包括团队成员、经理和客户，提供宝贵的见解来塑造项目并确保一致性。从确定你的利益相关者开始，安排访谈，准备问题，并设定明确的目标。
 
 使用开放式和封闭式问题的混合方式来收集全面数据。以下是一个简洁的访谈指南：
 
-- 1. **介绍：**介绍你自己并说明访谈的目的。
-- 2. **项目重要性：**询问项目的意义和期望成果。
-- 3. **成功标准：**定义成功及其在更广泛的业务中的契合度
+1. **介绍：** 介绍你自己并说明访谈的目的。
+2. **项目重要性：** 询问项目的意义和期望成果。
+3. **成功标准：** 定义成功及其在更广泛的业务中的契合度。
 
 人们所说与所做之间的差距，以及混合定性和定量数据可以更深入地了解用户偏好和趋势。
 
@@ -1721,24 +1654,20 @@ Establishing clear goals and objectives marks the initial and most crucial step
 
 以下是一页研究计划模板：
 
-- **标题：**为便于参考，明确命名你的项目。
-- **作者：**列出负责人员及其联系方式，以及可以接收反馈的其他人员。
-- **利益相关者：**包括参与研究以及接收研究结果的所有人员的详细信息和联系方式。
-- **日期：**注明开始日期和任何修订日期以供更新。
-- **项目背景：**提供研究动机和相关背景的简要总结。
-- **主要目标：**用一句话清晰地说明你研究的首要目标。
-- **研究问题：**概述需要回答的关键问题，指导你的方法和分析重点。
-- **研究方法：**描述定性和定量方法，明确研究将是主持还是非主持，以及预计持续时间。
-- **参与者信息：**定义你的目标受众，包括人口统计特征和所需参与者数量。
-- **时间表：**制定包含研究日期和里程碑的时间线以跟踪进度。
-- **预算：**概述用于研究不同方面的财务资源和分配情况。
-- **支持信息：**包括可能影响研究项目或结果的任何额外数据。
+- **标题：** 为便于参考，明确命名你的项目。
+- **作者：** 列出负责人员及其联系方式，以及可以接收反馈的其他人员。
+- **利益相关者：** 包括参与研究以及接收研究结果的所有人员的详细信息和联系方式。
+- **日期：** 注明开始日期和任何修订日期以供更新。
+- **项目背景：** 提供研究动机和相关背景的简要总结。
+- **主要目标：** 用一句话清晰地说明你研究的首要目标。
+- **研究问题：** 概述需要回答的关键问题，指导你的方法和分析重点。
+- **研究方法：** 描述定性和定量方法，明确研究将是主持还是非主持，以及预计持续时间。
+- **参与者信息：** 定义你的目标受众，包括人口统计特征和所需参与者数量。
+- **时间表：** 制定包含研究日期和里程碑的时间线以跟踪进度。
+- **预算：** 概述用于研究不同方面的财务资源和分配情况。
+- **支持信息：** 包括可能影响研究项目或结果的任何额外数据。
 
-
-
-
-
-# 示例
+### 示例
 
 | 用户研究计划：提升移动银行体验 |  |
 |---|---|
@@ -1773,12 +1702,12 @@ Establishing clear goals and objectives marks the initial and most crucial step
 
 过去4个月内您购买了以下哪些好东西？
 
--  balsamic vinegar - Nope.
--  Soy sauce - Ding ding! You are in!
--  Fish sauce - Not quite.
--  Olive oil - Uh-uh, not this time.
--  Canola oil - Nope.
--  None of the above - Swing and a miss!
+- Balsamic vinegar - Nope.
+- Soy sauce - Ding ding! You are in!
+- Fish sauce - Not quite.
+- Olive oil - Uh-uh, not this time.
+- Canola oil - Nope.
+- None of the above - Swing and a miss!
 
 看到了吗？通过巧妙设计问题，您可以在不透露答案的情况下筛选出酱油爱好者。
 
@@ -1793,6 +1722,9 @@ Establishing clear goals and objectives marks the initial and most crucial step
 以下是进行有主持人参与的用户研究的必备技巧：
 
 - **建立真诚的联系：** 表现出同理心，以温暖和尊重对待参与者。
+
+
+
 - **拥抱沉默：** 让参与者按自己的节奏反思并提供见解。观察他们的行为和非语言线索。
 - **提供背景：** 管理对研究结果的期望，但避免分享您的假设以防止偏见。
 - **做详尽的笔记：** 让同事做笔记或使用转录工具捕捉关键见解，让您能够全神贯注。
@@ -1800,10 +1732,6 @@ Establishing clear goals and objectives marks the initial and most crucial step
 请记住尽早开始研究并频繁进行，以确保您的解决方案满足实际用户需求。
 
 ## 6. 分析和整合结果
-
-
-
-
 
 一旦你从研究之旅归来，就该整理并筛选你所收集到的所有信息了。寻找共同主题和重要的洞察，帮助你更好地理解用户。这就是你在数据中发现真正宝藏的地方。
 
@@ -1845,10 +1773,6 @@ Establishing clear goals and objectives marks the initial and most crucial step
 |---|---|---|
 | 可以定量测量的信息并提供统计和数值洞察被称为定量数据。另一方面，非数值洞察和描述性数据构成定性数据，它提供了对潜在模式、行为、 | 行为数据追踪消费者在使用产品、完成任务或解决问题时采取的活动。另一方面，态度数据记录用户的想法、观点和信念，并为他们的动机和信仰提供窗口。 | 生成式研究的目的是产生有利于用户的新概念和解决方案。评估式研究则旨在确定消费者对现有解决方案的反应和感知，以便评估其有效性并找出需要改进的领域。 |
 
-
-
-
-
 # 表 3.3：UX 研究方法分类
 
 ## 定性与定量
@@ -1867,7 +1791,7 @@ Establishing clear goals and objectives marks the initial and most crucial step
 - 数量是多少？
 - 多频繁？
 
-结合这些技术，团队可以全面了解其用户，从而产生更高效、以用户为中心[content]
+结合这些技术，团队可以全面了解其用户，从而产生更高效、以用户为中心
 
 # 表 3.3：UX 研究方法分类
 
@@ -1957,12 +1881,7 @@ Establishing clear goals and objectives marks the initial and most crucial step
 - 6. 至少进行一次访谈试运行。
 - 7. 进行访谈
 - 8. 检查信息
-
-
-
-
-
-9. 回顾访谈得出的主要结论。
+- 9. 回顾访谈得出的主要结论。
 
 成功的用户访谈依赖于几个关键做法：保持中立以避免偏见，并表现出真诚的兴趣和同理心以建立信任。强调没有对错答案，以创造一个舒适的环境来获取诚实的反馈。追求自然的对话流，而不是僵化的问答格式，这有助于参与者放松并提供更丰富、更详细的见解。通过遵循这些做法，你将收集到有关用户体验的宝贵信息，从而能够创建更能满足其需求和期望的产品。
 
@@ -1989,6 +1908,9 @@ Establishing clear goals and objectives marks the initial and most crucial step
 - 1. 制定一个计划，留出招募、测试、分析和整合结果的时间。
 - 2. 召集你的团队并分配角色：主持人、记录员和讨论负责人。
 - 3. 确定研究的范围：你将问哪些问题？你希望多深入地探索答案？这将指导参与人数和小组数量。
+
+
+
 - 4. 制定包含 3-5 个主题的讨论指南。
 - 5. 招募潜在或现有用户，他们可以提供有价值的反馈。
 - 6. 运行焦点小组会议并做笔记。
@@ -2004,12 +1926,7 @@ Establishing clear goals and objectives marks the initial and most crucial step
 
 调查是探索定性和定量用户研究的灵活且必要的工具。它们提供了人们对不同物品的需求和需要的洞察。调查是一个宽泛的概念，包含各种问题类型。本质上，调查由一组问题组成，可分为两类：
 
-- **封闭式问题：** 这些问题要么提供预定的多项选择选项列表，要么只需回答“是”或“否”。它们非常适合收集相关
-
-
-
-information and seeing trends among users. Closed-ended questions yield readily quantifiable, graphical, and analytical data.
-
+- **封闭式问题：** 这些问题要么提供预定的多项选择选项列表，要么只需回答“是”或“否”。它们非常适合收集相关 information and seeing trends among users. Closed-ended questions yield readily quantifiable, graphical, and analytical data。
 - **开放式问题：** 这些提问允许参与者提供自由形式的、自己用词的答案。开放式问题产生定性数据，可深入、全面地洞察用户 的想法和体验。
 
 ## 为了让调查有效，请牢记以下建议：
@@ -2056,7 +1973,6 @@ information and seeing trends among users. Closed-ended questions yield readily 
 
 ## 卡片分类主要有三种类型：
 
-
 - **开放式卡片分类**：在这种类型中，参与者将主题归入逻辑类别，并自行命名这些分组。除了鼓励创新外，这种方法还能揭示人们对信息架构感知的新视角。
 - **混合式卡片分类**：在这种类型中，参与者可以在使用预设类别的基础上开发新类别。该方法兼顾预设组织框架和用户生成概念，在结构与灵活性之间取得平衡。
 - **封闭式卡片分类**：在这种类型中，参与者会得到预定的类别，并负责将内容组织到这些分组中。通过衡量用户将项目匹配到既定类别的效率，该方法可以评估预定义结构是否符合用户的心智模型。
@@ -2082,9 +1998,7 @@ information and seeing trends among users. Closed-ended questions yield readily 
 
 - 1. 首先，在卡片上列出你希望用户组织的元素，例如网站或应用的各个部分。对于面对面会话，这些可以是实体卡片；对于在线卡片分类，则可以是数字卡片。
 - 2. 之后，请参与者根据自己的感受将卡片分组。如果是开放式卡片分类，参与者会自行命名分组。如果是封闭式，参与者会将卡片排列到你预先设定的类别中。
-- 3. 为了深入了解参与者的心智模型，观察他们如何排列你提供的卡片。这些发现随后可用于
-
-创建人们会立即感到直观的信息架构。
+- 3. 为了深入了解参与者的心智模型，观察他们如何排列你提供的卡片。这些发现随后可用于创建人们会立即感到直观的信息架构。
 
 无论你是新建网站还是改造现有网站，遵循这些最佳实践将帮助你最大化卡片分类会话的有效性，并获得可靠、可执行的洞察：
 
@@ -2107,10 +2021,7 @@ information and seeing trends among users. Closed-ended questions yield readily 
 
 ## 日记研究
 
-通过持续记录自己在一段时间内的想法、感受和行为，日记研究的参与者成为自己生活的叙述者——这是一种迷人的研究工具。借助这种方法，研究人员可以窥见自然环境中的长期体验和行为。参与者可能会揭示他们的日常习惯以及与商品和
-
-
-通过每日记录或在特定事件发生时记录细节来服务。所得数据是识别趋势、揭示问题以及确定需要改进领域的宝库。
+通过持续记录自己在一段时间内的想法、感受和行为，日记研究的参与者成为自己生活的叙述者——这是一种迷人的研究工具。借助这种方法，研究人员可以窥见自然环境中的长期体验和行为。参与者可能会揭示他们的日常习惯以及与商品和通过每日记录或在特定事件发生时记录细节来服务。所得数据是识别趋势、揭示问题以及确定需要改进领域的宝库。
 
 ## 开展日记研究的有效时机
 
@@ -2121,6 +2032,8 @@ information and seeing trends among users. Closed-ended questions yield readily 
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_156_0.png)
 
 *图 3.7：参与者记录他们的日常互动和体验*
+
+
 
 ## 开展日记研究的有效技巧
 
@@ -2140,21 +2053,14 @@ information and seeing trends among users. Closed-ended questions yield readily 
 ## 日记研究的缺点
 
 研究人员应意识到与日记研究相关的各种挑战。一个主要问题是参与者负担，因为长期记日记可能导致疲劳，以及记录仓促或不完整，从而影响数据的准确性。
-
 主观性和偏差也是值得关注的问题，因为记录基于参与者的观点和解读，这可能会使洞见产生偏差。当参与者事后而非实时填写记录时，可能会出现回忆偏差，进一步影响准确性。
-
 随着时间的推移，参与者的参与度可能会下降，从而降低所收集数据的数量和质量。分析日记记录是复杂且耗时的，需要熟练的研究人员来识别重要模式。
-
-
-
 隐私问题可能会出现，特别是在敏感话题上，导致数据不够详细。此外，数字日记的技术问题可能会干扰数据收集和参与者的配合。
 
 ## 可用性测试
 
 可用性测试是用户体验研究的关键部分，涉及来自目标受众的真实用户，以评估网站或应用程序是否准备好发布。它衡量用户完成常见任务的难易程度，提供整体用户体验的清晰图景。这种方法有助于在产品正式发布之前发现可用性问题并确定需要改进的领域。
-
 可用性测试通常包含三个组成部分：主持人（主持测试并记录数据的用户体验研究员）、参与者（执行模拟现实生活使用的任务）以及任务本身。
-
 可用性测试的好处包括通过收集真实用户数据来减少假设，从而揭示产品是否有效。
 
 可用性测试有多种形式，包括：
@@ -2172,7 +2078,6 @@ information and seeing trends among users. Closed-ended questions yield readily 
 ## 进行可用性测试的适当时机
 
 可用性测试在产品生命周期的每个阶段都很有益。如前所述，这种技术可以减少假设，并且可以应用于现有网站或早期网站设计，甚至基本的网站原型。你应该在设计过程中尽早并定期进行可用性测试，以帮助指导设计选择。可以使用以下指南来确定何时适合进行可用性测试：
-
 - 开始任何设计工作之前
 - 一旦你准备好原型或线框图
 - 产品发布之前
@@ -2185,7 +2090,6 @@ information and seeing trends among users. Closed-ended questions yield readily 
 ## 进行可用性测试的有效技巧
 
 在进行任何可用性测试之前，理解用户如何使用你的产品至关重要。通过观察他们的行为并获取反馈，你可以改善整体用户体验并找出需要改进的地方。以下是执行可用性测试的简要指南：
-
 - 1. **定义目标：** 明确说明你想了解产品可用性哪些方面。
 - 2. **招募参与者：** 找到能够代表目标用户的人群。
 - 3. **创建任务：** 设计现实场景供参与者完成。
@@ -2205,10 +2109,7 @@ information and seeing trends among users. Closed-ended questions yield readily 
 
 ## 实地研究
 
-与实验室或办公室环境不同，用户体验研究中的实地研究涉及在用户的自然环境中观察他们。这种方法揭示了真实的
-
-
-客户需求和行为并为设计团队提供产品在真实世界情境中如何被使用的洞察。通过沉浸在用户的环境中，研究人员可以发现（例如突发中断或连接问题）在受控环境中可能不会出现的问题。通过捕捉常规产品使用的上下文和细微差别，实地研究帮助设计师开发更能满足消费者实际需求并整体提升用户体验的解决方案。
+与实验室或办公室环境不同，用户体验研究中的实地研究涉及在用户的自然环境中观察他们。这种方法揭示了真实的客户需求和行为并为设计团队提供产品在真实世界情境中如何被使用的洞察。通过沉浸在用户的环境中，研究人员可以发现（例如突发中断或连接问题）在受控环境中可能不会出现的问题。通过捕捉常规产品使用的上下文和细微差别，实地研究帮助设计师开发更能满足消费者实际需求并整体提升用户体验的解决方案。
 
 ## 实地研究揭示：
 
@@ -2221,7 +2122,6 @@ information and seeing trends among users. Closed-ended questions yield readily 
 ## 进行实地研究的最佳时机
 
 在项目的不同阶段，UX 研究中的实地研究都很重要。在发现阶段尤其有用，可帮助设定方向并了解用户如何与产品互动。此外，在可用性测试阶段，当原型可用时，实地研究至关重要，因为它们有助于评估解决方案的有效性，并在真实世界情境中验证设计假设。因此，实地研究既用于项目开始时指导初始决策，也用于后期确保解决方案在实际情境中满足用户需求和行为。
-
 简单来说，我们可以说进行实地研究的最佳时间是在项目开始时和可用性测试期间。在开始时，它们有助于了解用户需求和上下文，指导项目的初始方向。后来，在可用性测试期间，实地研究评估原型并验证设计，确保它们满足用户需求并在真实世界情境中有效运作。
 
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_163_0.png)
@@ -2231,7 +2131,6 @@ information and seeing trends among users. Closed-ended questions yield readily 
 ## 进行实地研究的有效技术
 
 在讨论实际方法之前，有必要认识到实地研究在 UX 研究中的重要性。这些研究提供了关于用户行为和产品互动的宝贵洞察，因为它们是在不同项目阶段开展的。
-
 - 1. **确定你的学习目标**：明确你希望在真实环境中发现关于用户互动和体验的内容。
 - 2. **选择地点**：确定客户必然会与你的产品互动的合适实地场所。
 - 3. **选择参与者**：寻找愿意在自然环境中被观察并且代表你的目标受众的用户。
@@ -2245,12 +2144,11 @@ information and seeing trends among users. Closed-ended questions yield readily 
 
 ## 实地研究的缺点
 
-在 UX 研究中，实地研究有不同的缺点。最初，研究人员在无意中影响参与者行为或以有偏见的方式解释观察结果时，主观性可能会受到损害。此外，完成这些研究需要投入大量时间和精力以及资源。另一个挑战是找到愿意在自然环境中被观察的受试者。此外，由于人们的行为在被观察时可能会改变，实地研究可能无法始终获得完全代表目标用户群的样本。外部因素也在实地环境中引入了不可预测性。很难分析这些研究中的定性数据；为了获得有用的洞察，需要对大量数据进行彻底审查。最后，一些用户
 
 
-demographics or research objectives may make field investigations impossible or immoral. However, when carried out carefully, they continue to be vital for studying user behaviors and improving.
+在 UX 研究中，实地研究有不同的缺点。最初，研究人员在无意中影响参与者行为或以有偏见的方式解释观察结果时，主观性可能会受到损害。此外，完成这些研究需要投入大量时间和精力以及资源。另一个挑战是找到愿意在自然环境中被观察的受试者。此外，由于人们的行为在被观察时可能会改变，实地研究可能无法始终获得完全代表目标用户群的样本。外部因素也在实地环境中引入了不可预测性。很难分析这些研究中的定性数据；为了获得有用的洞察，需要对大量数据进行彻底审查。最后，一些用户 demographics or research objectives may make field investigations impossible or immoral. However, when carried out carefully, they continue to be vital for studying user behaviors and improving.
 
-## Tree Testing
+# Tree Testing
 
 Tree testing is a method to determine how findable your website menu items are. In tree testing, participants are presented with a simplified text version of the website’s or app’s hierarchy (often represented as a tree diagram) and are asked to find specific items or complete tasks by navigating through the structure. This method helps identify navigation issues such as confusing labeling, unclear hierarchy, or dead ends.
 
@@ -2270,27 +2168,25 @@ Figure 3.10: Conducting tree testing to improve site navigation and user experie
 
 Tree testing is a simple yet effective way to assess how well your information architecture is working. To efficiently conduct a tree test, adhere to these brief steps:
 
-- 1. **Define Objectives**: Determine what you hope to discover from the tree test (for example, user preferences, navigational problems).
-- 2. **Build a Tree Structure**: Without using any visual design components, describe the application’s or website’s hierarchical structure.
-- 3. **Develop activities**: Using the tree structure, create realistic activities that users must accomplish, such as “Find the contact information.”
-- 4. **Select Participants**: To take part in the test, select a representative sample of users from your intended audience.
-- 5. **Select a Tree Testing Tool**: To set up and carry out your tree testing, use a tool like Treejack from Optimal Workshop or a comparable platform.
-- 6. **Conduct the Test**: Using the tree structure, have participants complete the activities to conduct the test. Assure them that there are no visual clues and that the structure is the only thing to pay attention to.
-- 7. **Analyze Results**: Examine participant pathways, success rates, and any areas of ambiguity or challenge.
-- 8. **Make Adjustments**: Modify the information architecture to solve any issues found in light of the findings.
-- 9. **Retest if Necessary**: After making modifications, run additional tests to make sure the original problems have been fixed.
+1. **Define Objectives**: Determine what you hope to discover from the tree test (for example, user preferences, navigational problems).
+2. **Build a Tree Structure**: Without using any visual design components, describe the application’s or website’s hierarchical structure.
+3. **Develop activities**: Using the tree structure, create realistic activities that users must accomplish, such as “Find the contact information.”
+4. **Select Participants**: To take part in the test, select a representative sample of users from your intended audience.
+5. **Select a Tree Testing Tool**: To set up and carry out your tree testing, use a tool like Treejack from Optimal Workshop or a comparable platform.
+6. **Conduct the Test**: Using the tree structure, have participants complete the activities to conduct the test. Assure them that there are no visual clues and that the structure is the only thing to pay attention to.
+7. **Analyze Results**: Examine participant pathways, success rates, and any areas of ambiguity or challenge.
+8. **Make Adjustments**: Modify the information architecture to solve any issues found in light of the findings.
+9. **Retest if Necessary**: After making modifications, run additional tests to make sure the original problems have been fixed.
 
 ## Downsides of Tree Testing
 
 Despite its value, tree testing has a number of disadvantages. The absence of visual context is one of its main drawbacks. Tree testing does not take into consideration the way that visual design components, such as navigation menus and icons, affect user behavior because it assesses the organization of information in a text-only format. This may result in differences between the output of tree testing and real-world user interactions on a website or application.
 
+
+
 Tree testing has another disadvantage in that it ignores other important UX elements like content quality, layout, and general usability in favor of concentrating only on navigation and information architecture. Furthermore, it might not adequately convey the complex nature of user journeys, particularly in the case of dynamic or irregular navigation on websites or applications.
 
 Finally, it can be difficult to comprehend the results of tree testing. Even if the data shows where customers run into problems, it might not necessarily explain why these problems arise. To obtain a thorough grasp of user behavior, this frequently calls for the use of additional research techniques like usability testing or user interviews.
-
-
-
-
 
 ## 眼动追踪
 
@@ -2301,6 +2197,7 @@ Finally, it can be difficult to comprehend the results of tree testing. Even if 
 它以热力图和扫视路径的形式产生数据。
 
 - **热力图：** 热力图是图形工具，用于显示用户在网页上更注意的区域。红色区域代表更长的专注时间，而蓝色区域反映观看的持续时间。这有助于识别哪些网站部分经常被访问，哪些被忽略，从而指导布局和设计更改，以改善用户体验。
+
 - **扫视路径：** 扫视路径直观地显示眼睛如何在网页上的兴趣点之间移动。红色圆圈标记关注区域，线条追踪眼睛的移动轨迹。这些数据帮助设计师了解用户如何浏览内容，揭示关注模式，并指导设计更改以改善用户体验和内容布局。
 
 ## 进行眼动追踪的有效时机
@@ -2308,7 +2205,9 @@ Finally, it can be difficult to comprehend the results of tree testing. Even if 
 由于眼动追踪是一种专门的研究工具，并非所有项目都适合使用。尽管如此，在优化关键页面时，认识以下三个基本要素很有帮助，列示如下：
 
 - **盲点：** 它提供有关人们忽略的网站区域的信息，可用于改善视觉层次结构。
+
 - **绊脚石：** 它指示令人困惑的地方，即人们反复阅读同一段落。
+
 - **阅读模式：** 这有助于通过显示用户如何与各种项目交互来优化可读性。例如，眼动追踪显示用户经常回到表格顶部重新阅读表头，这表明表格必须足够小以便于查看。
 
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_169_0.png)
@@ -2320,11 +2219,17 @@ Finally, it can be difficult to comprehend the results of tree testing. Even if 
 进行眼动追踪测试涉及以下快速步骤：
 
 1. **定义目标：** 确定你希望从眼动追踪测试中发现什么（例如，导航问题和用户注意力）。
+
 2. **选择参与者：** 为保证相关结果，选择代表目标受众的样本。
+
 3. **设置设备：** 确保眼动追踪软件和硬件已准确配置。
+
 4. **构建测试：** 为参与者分配可复制其与产品或页面常见用户交互的任务。
+
 5. **执行测试：** 当参与者完成任务时，眼动追踪系统收集他们的注视模式和眼动。
+
 6. **分析数据：** 检查注视图、扫视路径和热力图，以找到阅读模式、盲点和绊脚石位置。
+
 7. **报告结果：** 总结洞察并根据收集的数据推荐更改，以改善用户体验。
 
 ## 眼动追踪的缺点
@@ -2338,8 +2243,6 @@ Finally, it can be difficult to comprehend the results of tree testing. Even if 
 ## A/B 测试
 
 在选择可能影响用户交互或整体体验的两种设计方面时，UX 设计师经常面临挑战。这就是 A/B 测试派上用场的地方。这种方法允许 UX 设计师在不完全依赖理论知识或直觉的情况下测试用户对各种设计方面的反应。A/B 测试的想法，有时也称为拆分测试，相当简单：你制作两个或多个版本的某物，
-
-
 
 允许用户与它们交互，并追踪它们在现实世界中的使用情况。为了让你能够比较 A 和 B 的性能，每个版本都会展示给目标受众中的不同细分群体。
 
@@ -2366,18 +2269,27 @@ A/B 测试的有效性来源于其构思和实施。A/B 测试的设置、运行
 那么，让我们学习如何进行 A/B 测试：
 
 - 1. **设定目标：** 确定你希望改进的网站方面，包括用户参与度、点击率或转化率。
+
 - 2. **创建变体：** 创建你想要测试的元素两个迭代（版本 A 和版本 B）。
+
 - 3. **划分受众：** 随机将受众分配到两个组，并向每个组展示一个版本。
+
 - 4. **启动测试：** 同时向相应组展示变体并记录它们之间的互动。
+
 - 5. **分析结果：** 检查两个版本相对于你预先设定的目标的表现如何。
+
 - 6. **实施最佳版本：** 根据收集到的信息，使用表现更优的版本。
 
 ## A/B 测试工具：
 
 - **Google Optimize：** 用于 A/B 测试和个性化网站体验的免费工具。
+
 - **Optimizely：** 用于实验的综合平台，包括 A/B 测试和多变量测试。
+
 - **VWO（Visual Website Optimizer）：** 用于 A/B 测试和拆分 URL 测试以优化用户体验的工具。
+
 - **Unbounce：** 具有 A/B 测试功能的落地页构建器，可提高转化率。
+
 - **Adobe Target：** Adobe Experience Cloud 工具，提供先进的 A/B 测试和个性化功能。
 
 ## A/B 测试的缺点
@@ -2385,13 +2297,12 @@ A/B 测试的有效性来源于其构思和实施。A/B 测试的设置、运行
 尽管 A/B 测试在改善用户体验方面很受欢迎，但它也有自身的缺点和挑战需要考虑。
 
 - **范围有限：** 由于 A/B 测试通常一次只评估一个变量，因此对用户行为的理解可能更狭窄。这意味着它可能会错过重要信息，因为没有考虑到页面上各种项目之间的相互作用或整体用户体验。
+
 - **时间和流量要求：** 为了获得具有统计学意义的结果，有效的 A/B 测试需要大量的时间和流量。对于较小的网站或流量较少的网站而言，收集足够数据以做出明智结论可能需要一段时间，这会显著减缓优化进程。
 
-
-
-
-
 ## 五秒测试
+
+
 
 在实践中，五秒测试是一种流行的可用性研究技术。在我们快节奏的社会中，人们的注意力持续时间越来越短，要保持他们的兴趣，每一秒都至关重要。如果你的目标是提供出色的用户体验，那么你可能听说过五秒测试。该流程是让目标受众中的一名成员观看你的设计预览五秒钟，无论是网站还是应用。之后，隐藏图像并向参与者询问几个问题。目标是了解他们的第一印象是否符合你的预期。他们是否理解了关键点？他们能否记起品牌名称？通过这种方法，无需进行大量可用性测试，你就能快速评估产品的影响力。
 
@@ -2469,11 +2380,6 @@ A/B 测试的有效性来源于其构思和实施。A/B 测试的设置、运行
 | 方法 | 定性 | 定量 | 生成性 | 评估性 | 行为性 | 态度性 |
 |---|---|---|---|---|---|---|
 | 用户访谈 | 是 |  | 是 |  |  | 是 |
-
-
-
-
-
 |  |  |  |  |  |  |  |
 |---|---|---|---|---|---|---|
 | 焦点小组 | Yes |  | Yes |  |  | Yes |
@@ -2519,6 +2425,7 @@ A/B 测试的有效性来源于其构思和实施。A/B 测试的设置、运行
 ### Google Search 的移动优化
 
 挑战是改善移动设备上的搜索可用性。
+
 Google 希望确保用户在移动设备上进行网络搜索时速度快且无缝，因为越来越多的人使用这些设备进行此目的。他们必须找出任何问题并理解人们如何在手机上使用 Google Search。
 
 ### 目标：
@@ -2529,57 +2436,64 @@ Google 希望确保用户在移动设备上进行网络搜索时速度快且无�
 
 ### 使用的 UX 研究方法
 
-### 眼动追踪研究：
+#### 眼动追踪研究：
 
 - **描述**：该方法使用了眼动追踪技术来追踪用户在移动搜索结果上的移动和交互。
 - **结果：** 提供了搜索结果视觉层级和用户关注区域的见解。突出了获得最多关注的组件以及用户遇到问题或感到困惑的区域。
 
-### 远程可用性测试：
+#### 远程可用性测试：
 
 - **描述**：与参与者使用其个人移动设备进行了面对面可用性测试。研究人员使用屏幕共享软件进行观察并收集反馈。
 - **结果：** 突出了消费者在现实世界中遇到的问题，包括导航困难、加载缓慢以及在小屏幕上阅读的问题。
 
-### 情境访谈：
+#### 情境访谈：
 
-- **描述：** 研究人员在人们在其自然环境中使用移动设备进行搜索时观察他们。这提供了有关用户典型搜索环境背景信息。
+
+
+- **描述**：研究人员在人们在其自然环境中使用移动设备进行搜索时观察他们。这提供了有关用户典型搜索环境背景信息。
 - **结果**：确定了环境因素，如照明、干扰以及在需要快速信息检索的移动使用情况下的需求，对移动搜索使用产生影响。
 
-### A/B 测试：
+## A/B 测试
 
+- **描述**：用户测试了移动搜索体验的许多迭代，以查看哪些设计组件改善了可用性和参与度。
+- **结果**：协助选择最佳的交互组件、字体大小和布局。这使 Google 能够根据实际用户偏好和交互调整用户界面。
 
+## 调查和反馈
 
-- **描述** : 用户测试了移动搜索体验的许多迭代，以查看哪些设计组件改善了可用性和参与度。
-- **结果** : 协助选择最佳的交互组件、字体大小和布局。这使 Google 能够根据实际用户偏好和交互调整用户界面。
-
-## 调查和反馈：
-
-- **描述** : 向移动用户部署调查，以收集他们对搜索体验、偏好和痛点的定性反馈。
-- **结果** : 提供了用户关于他们喜欢、讨厌以及希望改进的内容的直接输入。确定了指导设计决策的常见主题和问题。
+- **描述**：向移动用户部署调查，以收集他们对搜索体验、偏好和痛点的定性反馈。
+- **结果**：提供了用户关于他们喜欢、讨厌以及希望改进的内容的直接输入。确定了指导设计决策的常见主题和问题。
 
 ## 实施的关键更改
 
-- 1. **简洁且响应式的设计：**
-  a. 开发了一个更简单、更直观的用户界面，可动态调整以适应各种屏幕尺寸。
-  b. 确保可见且易于获取的主要导航按钮和搜索栏是重要方面之一。
-- 2. **最佳加载时间：**
-  a. 通过加快移动设备上页面和搜索结果的加载速度，整体提升了用户体验。
-  b. 通过使用优化图片尺寸和懒加载等策略减少了加载时间。
-- 3. **改进交互和可读性：**
-  a. 修改按钮宽度、间距和文字大小，使其在较小的屏幕上更易于阅读和使用。
-  b. 改进触控目标以提高用户愉悦感和无错误交互。
-- 4. **更好的结果呈现和相关性：**
-  a. 增强算法以优先考虑移动友好内容，并为移动用户提供更相关、量身定制的结果。
-  b. 改进精选内容和搜索摘要的呈现方式，以提供简洁易懂的信息。
+1. **简洁且响应式的设计：**
 
-## 5. 语音搜索集成：
+    - 开发了一个更简单、更直观的用户界面，可动态调整以适应各种屏幕尺寸。
+    - 确保可见且易于获取的主要导航按钮和搜索栏是重要方面之一。
 
-  a. 改进语音搜索功能，以适应偏好免提通信的移动用户。
-  b. 确保语音搜索结果在移动设备上的呈现方式专为快速消费而设计。
+2. **最佳加载时间：**
 
-## 6. 保持视觉和功能一致性：
+    - 通过加快移动设备上页面和搜索结果的加载速度，整体提升了用户体验。
+    - 通过使用优化图片尺寸和懒加载等策略减少了加载时间。
 
-  a. 确保各种移动平台和设备使用相同的视觉语言和功能。
-  b. 确保在设备之间切换的消费者从移动到桌面体验的过渡顺畅。
+3. **改进交互和可读性：**
+
+    - 修改按钮宽度、间距和文字大小，使其在较小的屏幕上更易于阅读和使用。
+    - 改进触控目标以提高用户愉悦感和无错误交互。
+
+4. **更好的结果呈现和相关性：**
+
+    - 增强算法以优先考虑移动友好内容，并为移动用户提供更相关、量身定制的结果。
+    - 改进精选内容和搜索摘要的呈现方式，以提供简洁易懂的信息。
+
+5. **语音搜索集成：**
+
+    - 改进语音搜索功能，以适应偏好免提通信的移动用户。
+    - 确保语音搜索结果在移动设备上的呈现方式专为快速消费而设计。
+
+6. **保持视觉和功能一致性：**
+
+    - 确保各种移动平台和设备使用相同的视觉语言和功能。
+    - 确保在设备之间切换的消费者从移动到桌面体验的过渡顺畅。
 
 ## 结果
 
@@ -2591,62 +2505,60 @@ Google 希望确保用户在移动设备上进行网络搜索时速度快且无�
 
 作为全球最大的在线零售商之一，亚马逊在购物车放弃方面存在严重问题。当客户将商品添加到购物车但在完成交易前离开网站时，就会发生这种情况。较高的购物车放弃率可能导致收入大幅损失，并表明结账流程中存在摩擦。
 
-## 目标：
+### 目标
 
 - 第一个目标是识别并消除导致客户放弃购物车的障碍。
 - 第二个是简化结账流程，使其更易于使用。
 - 提高转化率和整体用户满意度。
 
-## 使用的 UX 研究方法
+### 使用的 UX 研究方法
 
-## 可用性测试：
+**可用性测试：**
 
-- **描述** : 让真实用户完成结账流程，研究人员观察并记录交互。
-- **结果** : 突出了消费者遇到困难或挫折的特定区域，例如输入送货信息有困难、付款方式不明确以及意外的运费。
+- **描述**：让真实用户完成结账流程，研究人员观察并记录交互。
+- **结果**：突出了消费者遇到困难或挫折的特定区域，例如输入送货信息有困难、付款方式不明确以及意外的运费。
 
-## 用户调查：
+**用户调查：**
 
-- **描述** : 调查的目的是从购物车空置的用户那里获得第一手反馈，了解他们未完成购买的原因。
-- **结果** : 收集的信息显示出反复出现的问题，例如缺少访客结账选项、安全问题以及缺乏首选付款方式。
+- **描述**：调查的目的是从购物车空置的用户那里获得第一手反馈，了解他们未完成购买的原因。
+- **结果**：收集的信息显示出反复出现的问题，例如缺少访客结账选项、安全问题以及缺乏首选付款方式。
 
-## A/B 测试：
+**A/B 测试：**
 
-- **描述** : 通过对用户细分群体评估各种迭代，比较哪个结账流程版本能带来更高的完成率。
-- **结果** : 使亚马逊能够确定哪些修改，包括简化设计和更清晰的进度标记，将最有益。
+- **描述**：通过对用户细分群体评估各种迭代，比较哪个结账流程版本能带来更高的完成率。
+- **结果**：使亚马逊能够确定哪些修改，包括简化设计和更清晰的进度标记，将最有益。
 
-## 分析回顾：
+**分析回顾：**
 
-- **描述** : 跟踪客户通过结账漏斗的行为
-
-
-
-
-
-通过分析网络分析数据并识别特定的流失点。
-
+- **描述**：跟踪客户通过结账漏斗的行为，通过分析网络分析数据并识别特定的流失点。
 - **结果**：指出了客户最容易在购物车中放弃的特定阶段，从而指导了有针对性的改进。
 
-## 实施的关键变更
+### 实施的关键变更
 
 1. **简化导航：**
-   a. 将结账流程从多个页面转换为单页，节省了步骤数量。
-   b. 添加了清晰的进度指示器，让用户知道还剩下多少步骤。
+
+    - 将结账流程从多个页面转换为单页，节省了步骤数量。
+    - 添加了清晰的进度指示器，让用户知道还剩下多少步骤。
 
 2. **改进支付方式：**
-   a. 增加了更多支付选择，例如分期付款和数字钱包。
-   b. 增强了支付流程的安全性和清晰度，以培养用户信心。
+
+    - 增加了更多支付选择，例如分期付款和数字钱包。
+    - 增强了支付流程的安全性和清晰度，以培养用户信心。
 
 3. **明确的配送详情：**
-   a. 在用户付款前就提前展示运费和预计到达时间。
-   b. 提供了多种配送选择，例如普通和加急配送。
+
+    - 在用户付款前就提前展示运费和预计到达时间。
+    - 提供了多种配送选择，例如普通和加急配送。
 
 4. **访客结账选项：**
-   a. 为不希望注册账户的人引入了访客结账选项，以降低交易的门槛。
+
+    - 为不希望注册账户的人引入了访客结账选项，以降低交易的门槛。
 
 5. **增强移动体验：**
-   a. 确保结账流程完全适合移动设备，为出行中的用户提供流畅的体验。
 
-## 结果
+    - 确保结账流程完全适合移动设备，为出行中的用户提供流畅的体验。
+
+### 结果
 
 这些改进导致购物车放弃率显著下降，成功完成的交易数量上升。客户表示结账流程更容易理解且更无缝，这提高了他们的满意度和对平台的忠诚度。通过消除妨碍交易的障碍，加速的结账流程改善了客户体验并增强了亚马逊的收入增长。
 
@@ -2674,13 +2586,7 @@ Google 希望确保用户在移动设备上进行网络搜索时速度快且无�
 - **UX 研究**：通过各种研究方法了解用户行为、需求和动机以指导以用户为中心的产品设计的过程。
 - **UX 研究方法论**：在 UX 研究中用于收集和分析用户数据的不同方法和技术，包括定性和定量方法。
 - **关键绩效指标 (KPI)**：用于评估产品或项目在实现特定业务目标方面的成功程度的指标。
-- **主持研究**：在积极参与下进行的研究
-
-
-
-
-of a facilitator or moderator to guide participants and ensure data collection aligns with research goals.
-
+- **主持研究**：在积极参与下进行的研究 of a facilitator or moderator to guide participants and ensure data collection aligns with research goals.
 - **非主持研究**：在没有主持人的情况下进行的研究，让参与者独立完成任务，常用于收集大规模数据。
 - **态度数据**：记录用户想法、观点和信念的数据，为其动机和态度提供洞察。
 - **行为数据**：追踪用户在使用产品、完成任务或解决问题时所采取行动的数据，为实际用户行为提供洞察。
@@ -2691,8 +2597,10 @@ of a facilitator or moderator to guide participants and ensure data collection a
 - **调查**：结构化问卷，用于收集定性和定量数据，可适应产品开发过程的各个阶段。
 - **日记研究**：一种研究方法，参与者持续记录其随时间的想法、感受和行为，为长期用户体验和行为提供洞察。
 - **A/B 测试**：一种比较两种设计版本的方法，以确定哪种在用户交互或实现特定目标方面表现更好。它涉及向不同用户组展示不同版本并分析其交互，以做出数据驱动的决策。
-- **眼动追踪**：一种定性研究技术，使用摄像机和传感器追踪并记录用户在页面上注视的位置，产生热图和扫视路径等形式的数据，以了解用户注意力和导航情况。
 
+
+
+- **眼动追踪**：一种定性研究技术，使用摄像机和传感器追踪并记录用户在页面上注视的位置，产生热图和扫视路径等形式的数据，以了解用户注意力和导航情况。
 - **实地研究**：一种研究方法，涉及在用户自然环境中观察用户以了解真实行为和需求，揭示真实世界的使用场景和情境挑战。
 - **五秒测试**：一种快速可用性测试技术，用户查看设计五秒钟后回答问题以评估其初步印象，有助于评估关键信息和视觉吸引力的有效性。
 - **可用性测试**：UX 研究的重要组成部分，涉及让真实用户测试网站或应用以衡量完成常见任务的难易程度，识别可用性问题和改进领域。
@@ -2701,16 +2609,10 @@ of a facilitator or moderator to guide participants and ensure data collection a
 - **远程可用性测试**：一种可用性测试方法，参与者在正常环境中执行任务，可以是有主持人（有引导者）或无主持人（无引导者），使用软件捕获交互和反馈。
 - **树状测试**：一种评估网站菜单项可查找性的方法，让参与者导航网站层级的简化文本版本以完成任务，识别诸如标签不清或死胡同等导航问题。
 - **热图**：眼动追踪中使用的可视化表示，显示用户在网页上集中注意力的区域，颜色表示专注时长（红色为较长时间，蓝色为较短时间）。
-- **扫视路径**：眼动追踪中使用的可视化表示，用于显示
-
-
-
-网页上兴趣点之间眼球的移动，红色圆圈标记关注区域，线条追踪眼睛的移动轨迹。
-
+- **扫视路径**：眼动追踪中使用的可视化表示，用于显示网页上兴趣点之间眼球的移动，红色圆圈标记关注区域，线条追踪眼睛的移动轨迹。
 - **Facilitator**：在可用性测试中，一名运行测试会话、记录数据并向参与者提供指导的 UX 研究员。
 
-# Chapter 4
-## 用户体验映射的艺术
+# Chapter 4 用户体验映射的艺术
 
 ## Introduction
 
@@ -2766,34 +2668,31 @@ of a facilitator or moderator to guide participants and ensure data collection a
 - 使公司能够按重要性顺序排列其客户体验计划中的步骤。
 - 突出不同部门和渠道之间的差距。
 
-### Fundamentals of UX Mapping
+## Fundamentals of UX Mapping
+
 https://example.com
 
 UX 映射的基础涉及创建用户与产品或服务体验的视觉故事。它首先要了解用户是谁以及他们需要什么。接下来，它逐步跟踪他们的旅程，突出关键操作、感受和痛点。这张地图帮助团队看到用户遇到问题的地方并找到改进机会。这是一种强大的方式，使每个人在同一目标上保持一致，并做出更好的设计和业务决策。从本质上讲，UX 映射将用户体验转化为清晰、可操作的见解。
 
-UX 地图有各种形式，但每种都应包含一个观点，
-
-
-
-scope, and focus.
+UX 地图有各种形式，但每种都应包含一个观点，scope, and focus.
 
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_193_0.png)
 
-# Scope
+### Scope
 
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_193_1.png)
 
-# Focus
+### Focus
 
 Figure 4.1: Essential Elements of a UX Map
 
-# Point of View
+### Point of View
 
 在 UX 设计中，“观点”一词指的是从用户的角度来看待产品或服务。这种方法有助于设计师全面了解客户的需求、目标和潜在的挫败感。设计师通过设身处地为用户着想，可以制定出更高效、以用户为中心的解决方案，直接解决用户的痛点。例如，设计师会考虑用户在浏览、挑选和购买产品时的感受——如兴奋、困惑或沮丧。通过采用以同理心为驱动的设计方法，可以产生更直观、更令人满意的用户体验。
 
 为了对业务目标和计划有清晰的认识，务必让利益相关者参与到构建观点的过程中。
 
-# Think on these important queries:
+#### Think on these important queries:
 
 - What is the organization’s mission and direction?
 - Which markets and subsets are we focusing on?
@@ -2815,23 +2714,20 @@ UX 映射的重点是确定用户旅程中需要关注的关键要素。它涉�
 - **Chronological**: 这种结构以基于时间的时间顺序突出用户旅程的每一步，从开始到结束。当用户体验涉及清晰的进展时效果最佳，例如从主页到购买的在线购物流程。通过可视化每个阶段的关键交互、情感高峰和痛点，设计师可以识别改进领域。这种方法在跟踪时间敏感或分步骤的流程时尤其有用。
 - **Hierarchical**: 这种结构按重要性和依赖级别组织任务和交互，将复杂流程分解为可管理的部分。它非常适合多个任务共同促成更大目标的场景，例如将“查看产品详情”、“浏览分类”和“结账”等任务归类到“购买产品”这一主要目标下。层级结构有助于明确任务优先级和工作流程，使其在理解任务依赖性对改善用户体验至关重要的多步骤流程中非常有效。
 
-# Selecting the Format
+## Selecting the Format
 
-在选择格式时，应考虑将使用该图表信息作为主要来源的人或实体。通过定义制图过程的目标、我们希望解决的问题以及知识空白来组织工作。最后，确定地图的用途以及我们希望取得的结果。我们应该关注特定问题还是系统整体的概览？我们是否需要不止一张地图来描绘体验的过去、现在和未来状态？
+
 
 # Create a User Experience Map
-
 创建 UX 地图对于理解和改进用户对产品或服务的体验至关重要。UX 地图直观地概述了用户在旅程中采取的步骤、他们的交互以及他们的情绪。通过映射这种体验，你可以识别痛点，了解用户需求，并发现改进机会。这一过程使团队和利益相关者保持一致，确保每个人都在同一页面上并朝着更好的用户体验努力。
-
-
-
-
 
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_196_0.png)
 
 *Figure 4.2: The process of creating an experience map*
 
 *图 4.2：创建体验地图的过程*
+
+在选择格式时，应考虑将使用该图表信息作为主要来源的人或实体。通过定义制图过程的目标、我们希望解决的问题以及知识空白来组织工作。最后，确定地图的用途以及我们希望取得的结果。我们应该关注特定问题还是系统整体的概览？我们是否需要不止一张地图来描绘体验的过去、现在和未来状态？
 
 This overview highlights the key steps needed to create an effective user experience map:
 
@@ -2846,13 +2742,12 @@ This overview highlights the key steps needed to create an effective user experi
 - 4. Define customer interactions
 - 4. 定义客户互动
 - 5. Pinpoint friction points
-- 5.  pinpoint 摩擦点
+- 5. pinpoint 摩擦点
 - 6. Resolve issues
 - 6. 解决問題
 
 ## Step 1: Developing a Persona
-
-## 第 1 步：开发用户画像
+第 1 步：开发用户画像
 
 Personas are made-up characters that are based on research and are meant to represent various user types that could utilize your site, product, or service in a similar way. They support your understanding of user objectives, experiences, behaviors, and needs. In order to understand your target users’ needs and develop empathy for them, UX designers begin by performing user research. Based on this research, personas are created that represent the needs, objectives, and behavioral patterns of the target audience.
 
@@ -2863,8 +2758,7 @@ By clarifying issues and demonstrating how they affect people’s lives, persona
 通过阐明问题并展示它们如何影响人们的生活，用户画像帮助公司以更具战略性的方式与客户建立联系，这对所有相关方都有利。用户画像通常在设计思维的定义阶段开发，此时设计师将共情阶段的发现结合起来。这有助于过渡到构思阶段。
 
 ## Step 2: Performing User Research
-
-## 第 2 步：进行用户研究
+第 2 步：进行用户研究
 
 The next step involves directly engaging with users to gather insights. An accurate user experience map cannot rely on guesses and assumptions; it must be founded on real-time data collected through surveys, interviews, and observations from actual users. This approach allows for the development of solutions tailored to users’ needs.
 
@@ -2892,8 +2786,9 @@ Try to determine the following for each stage of the journey:
 - 完成与产品互动的每个阶段所需的时间。
 
 ## Step 3: Define the Journey Stages
+第 3 步：定义旅程阶段
 
-## 第 3 步：定义旅程阶段
+
 
 User experience maps are organized into stages or phases and have a structured format. Every stage of the journey has a specific objective the user wishes to accomplish. These stages demonstrate how, when, and where customers find your product, become aware of its advantages and features, decide to buy it over opponents, and finish the buying process. This facilitates targeted enhancements to improve the entire experience by helping designers and stakeholders understand the users’ interactions and decisions at each level.
 
@@ -2910,10 +2805,6 @@ Once your persona has been developed, determine the customer journey phases. Fin
 Customer interactions refer to all points where a customer engages with your product or service during their journey. These interactions include every instance of contact, whether through digital platforms, physical touchpoints, or human interactions.
 
 客户互动是指客户在其旅程中与你的产品或服务互动的所有点。这些互动包括每次接触，无论是通过数字平台、物理接触点还是人际互动。
-
-
-
-
 
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_199_0.png)
 
@@ -2953,10 +2844,6 @@ Customer interactions refer to all points where a customer engages with your pro
 
 用户画像就像在故事中创造一个角色，但不是为书籍，而是为设计产品或服务。它就像为你的典型客户画像——你为他们取名字、设定年龄、爱好和目标。这让他们感觉真实，帮助设计师理解他们需要什么和想要什么。创建画像有助于团队打造人们会喜爱的产品，因为它们是根据人们的愿望和需求量身定制的，就像为你量身定制的完美服装一样！
 
-
-
-
-
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_202_0.png)
 
 ## 沙兰普雷特·考尔
@@ -2964,6 +2851,7 @@ Customer interactions refer to all points where a customer engages with your pro
 UI UX 设计师
 
 用户基本资料：
+
 - 教育背景：工商管理学士学位
 - 年收入：80,000 美元
 - 所在地：纽约市
@@ -3016,6 +2904,8 @@ Lorem Ipsum 是印刷和排版行业中的占位文本。自 16 世纪以来，L
 - 我的用户有哪些目标和需求？
 - 在这种情况下，人们会遇到哪些问题和困扰？
 
+
+
 通过塑造一个详细的人物角色，你可以深入了解你的用户以及他们对产品的期望。凭借这些信息，你可以调整设计和功能，以满足他们的特定需求和偏好。创建人物画像之所以重要，是因为它能帮助你更好地理解用户。以下是其强大之处：
 
 - **增强同理心**：人物画像帮助你和你的团队站在用户的角度，理解他们的挣扎与渴望。这种同理心会带来更友好的设计。
@@ -3035,31 +2925,29 @@ Lorem Ipsum 是印刷和排版行业中的占位文本。自 16 世纪以来，L
 
 ## 用户人物画像的类型
 
-莱娜·尼尔森（Lene Nielsen）是研究人物画像的博士和专家，她概述了在设计中最大化人物画像价值的四个关键视角。这些视角有助于创建更有效、更真实的人物画像。这些
+莱娜·尼尔森（Lene Nielsen）是研究人物画像的博士和专家，她概述了在设计中最大化人物画像价值的四个关键视角。这些视角有助于创建更有效、更真实的人物画像。这些 categories focus on different aspects of user needs and behaviors.
 
-
-
-categories focus on different aspects of user needs and behaviors.
-
-## Goal-Directed Personas
+### Goal-Directed Personas
 
 Goal-directed personas center on the objectives that customers have in mind when using a good or service. The goal of these systems is to comprehend and rank the user’s objectives, driving forces, and essential tasks. This strategy guarantees that the product is customized to help consumers in successfully achieving their goals.
 
-### Key Elements:
+#### Key Elements:
 
 The key elements of goal-directed personas are user goals. These comprise life goals, which are more general, individual aspirations that may have an impact on how users use the product, secondary goals, which encourage or supplement primary goals, and primary goals, which are the major objectives users want to accomplish with the product. Detailed task breakdowns and usage scenarios that illustrate how consumers engage with the product are also important aspects of behavior patterns.
 
 Goal-directed personas heavily rely on motivations. Extrinsic motivations are outside forces that affect user behavior, such as rewards or recognition, whereas intrinsic motivations are internal wants that push users towards their objectives, such as skill improvement or satisfaction. Comprehending these incentives facilitates the creation of features that effectively appeal to users. Additionally, designers can successfully address these concerns by identifying pain spots, which are the difficulties and frustrations users face.
 
-### Creating Goal-Directed Personas:
+#### Creating Goal-Directed Personas:
 
 The process of developing goal-directed personas starts with extensive user research, which includes questionnaires, interviews, and in-person observations to learn in-depth details about the objectives and habits of users. Common themes and patterns are found through the analysis of both quantitative and qualitative data. Following the synthesis of this data, significant insights are extracted by categorizing individuals into unique personas based on shared goals and behaviors. To make each persona more relatable, they are given names and backstories along with concise descriptions of their motives, behavior patterns, primary, secondary, and life goals.
 
-### Benefits:
+#### Benefits:
 
 Goal-directed personas have a number of advantages. As a result, goods better satisfy the requirements and expectations of users, as it promotes a user-centered design approach. By creating intuitive and effective interfaces, this comprehension of activities and challenges enhances usability. Goal-directed personas assist in minimizing needless complexity by prioritizing elements that directly help users achieve their objectives. In the end, goal-directed persona goods are more likely to satisfy users, increasing user engagement and loyalty.
 
-### Example:
+#### Example:
+
+
 
 Consider creating a tool for project management. An example of a goal-oriented persona would be “Sharan, a project manager.” Her main objective is to effectively monitor the status of projects. Life goals could comprise advancing one’s profession through project completion success, while secondary goals might involve managing deadlines and team communication effectively. With an understanding of Sharan’s aims, the solution may be created with functionalities like an all-inclusive dashboard, smooth communications, and automated deadline reminders, all of which will assist her effectively accomplish her major and secondary goals.
 
@@ -3072,10 +2960,6 @@ Role-based personas concentrate on the distinct roles that users assume in their
 ### Key Elements:
 
 The first step involves defining a user’s role, including their responsibilities
-
-
-
-
 
 和目标都受其环境塑造。理解行为模式、互动和日常习惯有助于设计与用户习惯相符的界面，从而提升产品的效率和直观性。此外，考虑协作动态还能洞察与同事、客户或家庭成员沟通的需求，增强必要的协调要素。
 
@@ -3104,7 +2988,6 @@ The first step involves defining a user’s role, including their responsibiliti
 ## 示例：
 
 考虑创建一个全新的社交媒体应用程序。虚构人物的一个例子是“Emma，一名35岁的自由职业平面设计师。” Emma 使用社交媒体与艺术家和其他潜在客户互动。她喜欢参加艺术活动并生活在大城市。背景突出了对一个促进专业网络和创意协作的平台的需求。它还详细描述了她从企业就业到自由职业的转变。设计师可以通过想象 Emma 的
-
 
 与应用程序的交互。通过想象她的痛点，例如管理客户沟通或寻找值得信赖的同事，可以确定创新和改进的关键领域。
 
@@ -3142,44 +3025,56 @@ The first step involves defining a user’s role, including their responsibiliti
 
 假设正在开发一款运动健康应用程序。想象“杰克，28岁的营销专业人士”作为你的用户角色。杰克在健身热情与繁忙工作之间取得平衡，他是一位热衷的跑步者。他的旅程从
 
-
 相似之处和差异。
 
 ## 相似之处：
 
 - **目的**
+
   - 所有用户画像都旨在代表目标受众的一个细分群体，以指导营销、产品开发和用户体验设计。
+
   - 它们帮助团队理解并共情受众，确保策略和解决方案以用户为中心。
+
 - **要素**
+
   - 所有用户画像通常都包括人口统计信息（年龄、性别、职业等）、心理特征（目标、价值观、兴趣）和行为特征（购买习惯、使用模式）。
-  - 它们解决目标受众面临的痛点和挑战，以帮助提高满意度和参与度。
-- **益处**
-  - 增强有针对性的营销和沟通工作。
-  - 指导产品开发以更好地满足用户需求。
-  - 通过理解偏好和期望来改善客户服务。
-  - 通过专注于高影响力策略来高效分配资源。
 
-## 差异：
 
-- **买家画像**
-  - **关注点**：代表营销和销售目的的理想客户。
-  - **关键要素**：人口统计、心理特征、购买行为、消费习惯、品牌忠诚度、痛点和偏好的沟通渠道。
-  - **示例**：“*精通技术的蒂姆*”重视创新和效率，偏好在线购物，并且忠于高科技品牌。
 
-- **客户画像**
-  - **关注点**：代表现有客户以增强持续的客户关系和满意度。
-  - **关键要素**：与买家画像类似，但更侧重于现有客户的体验、挑战以及与品牌的互动。
-  - **示例**：“*注重生态的艾玛*”重视可持续性，偏好环保产品，并且在寻找真正绿色产品方面面临挑战。
+- 它们解决目标受众面临的痛点和挑战，以帮助提高满意度和参与度。
 
-- **用户画像**
-  - **关注点**：代表终端用户以指导产品和服务设计，获得更好的用户体验。
-  - **关键要素**：人口统计、心理特征、行为特征、痛点、技术使用。
-  - **示例**：“自由职业者菲奥娜”重视创造力和效率，使用图形设计软件，并寻求简化工作流程的工具。
+### 益处
 
-- **原型画像**
-  - **关注点**：一种基于假设的初始画像，用于设计过程早期以统一团队理解并指导初步决策。
-  - **关键要素**：基于内部团队洞察的假设人口统计、心理特征、行为特征、痛点、技术使用。
-  - **示例**：“初创公司山姆”被假设为一名重视创新和效率的软件开发人员，面临时间管理和跟上技术更新的挑战。
+- 增强有针对性的营销和沟通工作。
+- 指导产品开发以更好地满足用户需求。
+- 通过理解偏好和期望来改善客户服务。
+- 通过专注于高影响力策略来高效分配资源。
+
+## 差异
+
+### 买家画像
+
+- **关注点**：代表营销和销售目的的理想客户。
+- **关键要素**：人口统计、心理特征、购买行为、消费习惯、品牌忠诚度、痛点和偏好的沟通渠道。
+- **示例**：“*精通技术的蒂姆*”重视创新和效率，偏好在线购物，并且忠于高科技品牌。
+
+### 客户画像
+
+- **关注点**：代表现有客户以增强持续的客户关系和满意度。
+- **关键要素**：与买家画像类似，但更侧重于现有客户的体验、挑战以及与品牌的互动。
+- **示例**：“*注重生态的艾玛*”重视可持续性，偏好环保产品，并且在寻找真正绿色产品方面面临挑战。
+
+### 用户画像
+
+- **关注点**：代表终端用户以指导产品和服务设计，获得更好的用户体验。
+- **关键要素**：人口统计、心理特征、行为特征、痛点、技术使用。
+- **示例**：“自由职业者菲奥娜”重视创造力和效率，使用图形设计软件，并寻求简化工作流程的工具。
+
+### 原型画像
+
+- **关注点**：一种基于假设的初始画像，用于设计过程早期以统一团队理解并指导初步决策。
+- **关键要素**：基于内部团队洞察的假设人口统计、心理特征、行为特征、痛点、技术使用。
+- **示例**：“初创公司山姆”被假设为一名重视创新和效率的软件开发人员，面临时间管理和跟上技术更新的挑战。
 
 虽然四种画像都旨在代表和理解受众的不同细分群体，但它们在营销、产品开发和用户体验设计中发挥着不同的作用。买家画像和客户画像分别侧重于营销和现有客户。用户画像强调终端用户的需求以实现更好的设计，而原型画像则为早期项目提供快速、基于假设的起点。通过利用这些画像，企业可以创建更有效的策略、产品和服务，与目标受众产生共鸣。
 
@@ -3194,16 +3089,20 @@ The first step involves defining a user’s role, including their responsibiliti
 ### 个人信息
 
 - **姓名**
-  不要使用“学徒”、“建造者”或“单身妈妈”等术语，而是为你的画像取一个真实的名字，如 Emily、James、Jessica 或 Daniel，这有助于员工更容易地与画像产生联系并在对话中讨论他们。避免使用名人名字以保持对画像特征的关注。
-- **个人资料照片**
-  照片是每个画像的核心。避免使用“女人用笔记本电脑打字”或“男人握手”之类的通用库存图片——这些不会唤起任何真实的联系。照片应感觉真实且易于产生共鸣。选择一张能提供画像性格洞察的肖像，可能是来自你的研究之旅。
-- **人口统计**
-  包括年龄、性别、职业、教育、收入和地点等详细信息。例如，健身应用可能需要有关锻炼习惯和饮食偏好的信息，而预算应用可能侧重于
 
+  不要使用“学徒”、“建造者”或“单身妈妈”等术语，而是为你的画像取一个真实的名字，如 `Emily`、`James`、`Jessica` 或 `Daniel`，这有助于员工更容易地与画像产生联系并在对话中讨论他们。避免使用名人名字以保持对画像特征的关注。
+
+- **个人资料照片**
+
+  照片是每个画像的核心。避免使用“女人用笔记本电脑打字”或“男人握手”之类的通用库存图片——这些不会唤起任何真实的联系。照片应感觉真实且易于产生共鸣。选择一张能提供画像性格洞察的肖像，可能是来自你的研究之旅。
+
+- **人口统计**
+
+  包括年龄、性别、职业、教育、收入和地点等详细信息。例如，健身应用可能需要有关锻炼习惯和饮食偏好的信息，而预算应用可能侧重于
 
 收入来源与支出模式。
 
-## 背景
+### 背景
 
 用户角色的“背景”部分全面概述了该角色的背景和情况。它包含如下重要信息：
 
@@ -3211,17 +3110,17 @@ The first step involves defining a user’s role, including their responsibiliti
 - **当前状况：** 关于居住安排、家庭情况和职业角色的详细信息。
 - **日常作息：** 说明他们可能在何时以及如何使用你产品的常规日常任务。
 
-## 目标与需求
+### 目标与需求
 
 用户角色的“目标与需求”部分重点关注该角色的目标以及他们实现这些目标所需的资源。本节中的主要和次要目标有助于清晰理解用户的优先事项和动机。
 
-- **主要目标：** 这些是驱动他们与你的产品互动的主要目标。例如，项目经理Sharan可能致力于有效监控和管理项目。
-- **次要目标：** 这些是支持主要目标的附加目标。对于Sharan来说，改善团队协作和沟通可以是次要目标。
-- **需求：** 这些是为实现其目标所需的具体特性、功能或资源。Sharan可能需要仪表盘定制或用户友好的界面。
+- **主要目标：** 这些是驱动他们与你的产品互动的主要目标。例如，项目经理`Sharan`可能致力于有效监控和管理项目。
+- **次要目标：** 这些是支持主要目标的附加目标。对于`Sharan`来说，改善团队协作和沟通可以是次要目标。
+- **需求：** 这些是为实现其目标所需的具体特性、功能或资源。`Sharan`可能需要仪表盘定制或用户友好的界面。
 
 了解这些目标和需求可确保产品能够满足用户的期望，并提供有价值的、以用户为中心的体验。通过关注用户的目标和需求，设计师能够确定功能优先级，并产出能成功解决真实用户问题的解决方案。
 
-## 行为模式
+### 行为模式
 
 设计以用户为中心的体验并提高整体参与度需要理解行为模式。一些关键模式如下：
 
@@ -3230,53 +3129,51 @@ The first step involves defining a user’s role, including their responsibiliti
 
 设计师通过理解使用模式和技术熟练度，可以开发符合该角色日常习惯和技术能力的产品，从而改善用户体验。
 
-## 痛点与挑战
+### 痛点与挑战
 
 术语“痛点与挑战”描述了角色在日常或使用产品时面临的特定问题和障碍。
 
-### 发现痛点：
+#### 发现痛点：
 
-- **当前不满：** 造成挫败感的问题，例如让项目经理Sharan工作速度变慢的复杂工具。
-- **未满足的需求：** 当前解决方案未能完全解决的问题，例如Sharan需要更好的工具集成。
-- **效率低下：** 耗时的流程，例如缺少集中式仪表盘，使Sharan难以跟踪团队进展。
+- **当前不满：** 造成挫败感的问题，例如让项目经理`Sharan`工作速度变慢的复杂工具。
+- **未满足的需求：** 当前解决方案未能完全解决的问题，例如`Sharan`需要更好的工具集成。
+- **效率低下：** 耗时的流程，例如缺少集中式仪表盘，使`Sharan`难以跟踪团队进展。
 
-### 理解挑战：
+#### 理解挑战：
 
-- **外部障碍：** 超出角色控制的因素，例如预算限制使Sharan无法获得必要的软件。
-- **内部障碍：** 个人限制或技能差距，例如Sharan对新技术感到不知所措。
-- **情境问题：** 情境性挑战，例如Sharan远程工作时的沟通障碍。
+- **外部障碍：** 超出角色控制的因素，例如预算限制使`Sharan`无法获得必要的软件。
+- **内部障碍：** 个人限制或技能差距，例如`Sharan`对新技术感到不知所措。
+- **情境问题：** 情境性挑战，例如`Sharan`远程工作时的沟通障碍。
 
-## 动机
+### 动机
 
 动机驱动用户与产品或服务的互动，理解这些动机有助于创造出能与用户产生共鸣的设计。
 
-### 内在动机：
+#### 内在动机：
 
-- **个人目标：** 例如提升技能或实现目标的抱负，比如Sharan希望有效管理团队并看到项目成功。
-- **情感驱动因素：** 例如想要获得成就感或减轻压力的情感，促使Sharan使用项目管理工具，以便更好地掌控局面，减少对任务的焦虑。
+- **个人目标：** 例如提升技能或实现目标的抱负，比如`Sharan`希望有效管理团队并看到项目成功。
+- **情感驱动因素：** 例如想要获得成就感或减轻压力的情感，促使`Sharan`使用项目管理工具，以便更好地掌控局面，减少对任务的焦虑。
 
-### 外在动机：
+#### 外在动机：
 
-- **外部奖励：** 如晋升或认可等实际利益，激励Sharan在项目管理中表现出色。
-- **社会影响：** 同伴压力或融入感，促使Sharan采用同事使用的新工具。
+- **外部奖励：** 如晋升或认可等实际利益，激励`Sharan`在项目管理中表现出色。
+- **社会影响：** 同伴压力或融入感，促使`Sharan`采用同事使用的新工具。
 
 理解这些动机有助于设计师创建满足用户需求并增强用户体验的产品。
 
-## 引述
+### 引述
 
 在角色中加入直接引述，通过捕捉他们的情感和想法来增加深度和真实感。简而言之，这部分应包含一到两句能洞察该角色感受和个性的引述。
 
-## 场景
+### 场景
 
 场景是让角色变得生动的详细故事，展示他们在真实情境中如何使用产品。通过沉浸在这些故事中，你能更好地理解用户，并创造出满足他们需求和目标的产品。每个场景都提供新的见解，帮助你设计优化用户与产品互动方式的解决方案。
 
-### 场景通常涵盖：
+#### 场景通常涵盖：
 
 - **使用情境：** 角色在何时何地使用产品，例如
 
-
 沙拉在通勤时用手机查看更新。
-
 - **任务：** 角色采取的具体行动，例如分配任务和跟踪项目。
 - **目标：** 角色希望实现的目标，例如确保项目按时完成。
 - **挑战：** 诸如界面复杂难用之类的问题，会拖慢工作流程。
@@ -3289,42 +3186,72 @@ The first step involves defining a user’s role, including their responsibiliti
 ## 角色画像示例
 
 **姓名：** 沙拉普里特
+
 **基本信息：**
+
   **年龄：** 35岁
+
   **性别：** 女
+
   **职业：** 一家中型科技公司的项目经理
+
 **人口统计详情：**
+
   **教育水平：** 工商管理学士学位
+
   **收入：** 年薪8万美元
+
   **所在地：** 纽约市
+
 **心理特征信息：**
+
   **性格特征：** 有条理、注重细节、积极主动。
+
   **价值观与信念：** 信奉团队合作和持续改进。
+
   **兴趣与爱好：** 喜欢阅读效率类书籍、跑马拉松和烹饪。
+
 **目标与动机：**
+
   **主要目标：** 高效地跟踪和管理项目进度。
+
   **次要目标：** 改善团队沟通与协作。
+
   **动机：** 希望按时交付项目并提升团队生产力。
+
 **挑战与痛点：**
 
 挑战：同时管理多个项目，并应对沟通不畅的问题。
+
 痛点：对当前过于复杂且缺乏集成性的项目管理工具感到失望。
+
 行为模式：
+
 日常安排：以查看项目状态开始一天的工作，举行每日站立会议，下午用于战略规划和客户沟通。
+
 技术使用：使用笔记本电脑和智能手机，偏好基于云端的项目管理工具。
+
 引言与轶事：
+
 直接引言：“我需要一个既简单易用，又足够强大以处理复杂项目的工具。”
+
 轶事：曾因团队内部沟通失误而错过一个关键项目截止日期，这凸显了对更好协作工具的需求。
+
 场景：
+
 使用场景：在一个新的软件开发项目中使用项目管理工具来分配任务和监控进度。
+
 使用环境：主要在工作时间于办公桌前使用该工具，但通勤时也会在手机上查看更新。
+
 总之，用户角色是全面的档案，概括了用户是谁、他们希望达成什么目标以及他们面临的挑战。通过理解这些主要组成部分，设计师可以创造出更符合用户需求和偏好的产品。
+
+
 
 ## 用户体验映射的类型
 
 设计在很大程度上依赖于用户体验（UX）映射，它以可视化的方式呈现用户与产品或服务的路径和互动。这种方法帮助团队更好地理解用户的需求、问题和动机，从而促进以用户为中心的解决方案的诞生。UX 映射通过将复杂数据提炼为易于理解的形式，促进了利益相关者之间的协作和决策。不同的 UX 映射方法论处理用户体验的不同方面，提供有价值的见解，推动设计的改进和调整。
 
-## UX 映射的类型：
+## UX 映射的类型
 
 - 客户旅程地图
 - 同理心地图
@@ -3350,27 +3277,23 @@ The first step involves defining a user’s role, including their responsibiliti
 - 通过识别用户觉得容易使用和难以使用的部分，指导改进工作。
 - 促进统一协议的制定、员工培训，以及
 
-
-
-
-
 identify their problem and offers potential solutions. The goal here is to understand the customer’s problem, not to push for a sale.
 
 In the awareness stage, you can use page views and click data to discover which web pages and blog posts attract customers as they start to recognize their need for a solution. By analyzing this data, brands can better tailor their content to address the specific problems customers are looking to solve, guiding them gently toward the next stage of their journey.
 
-## 2. **Consideration**
+## 2. Consideration
 
 Customers who are in the consideration stage have done their homework and are well-aware of the issues they face. When they realize they need a good or service, they start evaluating various brands and deals. Now is the time for brands to shine by offering persuasive marketing material that assists consumers in weighing their options and, in the end, selecting a good or service.
 
 Here, assisting clients in navigating the overcrowded market will enable them to make more informed purchasing decisions. Businesses can assist consumers in understanding why their product is the greatest option by emphasizing special features, advantages, and client testimonials. The main goals of this stage are to support inquiry and increase trust in the decision-making process.
 
-## 3. **Decision Stage**
+## 3. Decision Stage
 
 In the decision stage, customers are ready to buy — they have found the solution to their problem. For brands, this is the critical moment to provide a seamless purchase experience. The shopping process should be straightforward and hassle-free, ensuring customers can complete their purchase with ease.
 
 At this stage, the key is to remove any hurdles. Do not overwhelm customers with more information or product details. Focus on a smooth, user-friendly checkout process to ensure a flawless purchase experience. This is where simplicity and efficiency can make all the difference, helping customers confidently complete their transactions.
 
-## 4. **Retention Stage**
+## 4. Retention Stage
 
 In the retention stage, customers have made their purchase and are now deciding whether to stick with the brand or switch to another provider. This is a crucial phase where brands can solidify loyalty by delivering an outstanding onboarding experience and exceptional ongoing customer service.
 
@@ -3381,6 +3304,8 @@ To keep customers from churning, it is essential to make them feel valued and su
 In the loyalty stage, customers not only remain with a company but also actively promote it to their family, friends, and colleagues. Also known as the advocacy stage, this is where customers become true brand champions.
 
 During this phase, brands should focus on delivering an outstanding end-to-end customer experience. This includes everything from your website content and sales representatives to your social media presence and product’s user experience.
+
+
 
 The key to cultivating loyalty is ensuring customers succeed with your product. When they see great results, they are more likely to recommend your brand to others. Additionally, loyal customers are often willing to provide valuable feedback and insights, enriching your customer journey mapping strategy and helping you refine the overall experience.
 
@@ -3406,10 +3331,7 @@ Touchpoints in a customer journey map are interactions like visiting a website, 
 
 ### Insights and Ownership:
 
-Insights in a customer journey map are key findings from studying customer interactions, behaviors, and feedback, guiding improvements in the customer experience. Ownership assigns responsibility for managing each touchpoint, fostering accountability and teamwork to ensure a smooth customer journey. Without clear ownership, there is no authority to drive change or
-
-
-对结果负责。
+Insights in a customer journey map are key findings from studying customer interactions, behaviors, and feedback, guiding improvements in the customer experience. Ownership assigns responsibility for managing each touchpoint, fostering accountability and teamwork to ensure a smooth customer journey. Without clear ownership, there is no authority to drive change or be responsible for the results.
 
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_225_0.png)
 
@@ -3425,13 +3347,19 @@ Insights in a customer journey map are key findings from studying customer inter
 
 为了确保无缝且令人满意的客户体验，客户旅程地图有助于识别接触点、痛点和改进机会。以下是创建有效客户旅程地图的七个基本步骤：
 
-- 1. 明确定义地图的目标。
-- 2. 描述你的用户角色并设定其目标。
-- 3. 突出你的目标客户角色。
-- 4. 列出每一个接触点。
-- 5. 评估你现在拥有的资源以及你将需要的资源。
-- 6. 自己进行一次客户旅程。
-- 7. 检查你的发现。
+1. 明确定义地图的目标。
+
+2. 描述你的用户角色并设定其目标。
+
+3. 突出你的目标客户角色。
+
+4. 列出每一个接触点。
+
+5. 评估你现在拥有的资源以及你将需要的资源。
+
+6. 自己进行一次客户旅程。
+
+7. 检查你的发现。
 
 在执行第一步之前，利用客户旅程地图模板。
 
@@ -3453,6 +3381,8 @@ Insights in a customer journey map are key findings from studying customer inter
 
 ### 3. 突出你的目标客户角色
 
+
+
 突出你的目标客户角色意味着选择最有可能与你的品牌互动的个人的详细资料。确定一个常见的客户并跟随他们的旅程，当他们首次与你的业务互动时。不要忽视任何数据，即使它似乎与你的目标无关。最好将所有见解记录在安全的地方，以便日后回顾和利用。这种彻底的方法确保你了解客户的体验，并能根据真实互动改进你的策略。
 
 ### 4. 列出每一个接触点
@@ -3461,11 +3391,7 @@ Insights in a customer journey map are key findings from studying customer inter
 
 **示例：**
 
-想象你经营一家在线服装店。通过你的研究，你识别出
-
-
-
-几个接触点。
+想象你经营一家在线服装店。通过你的研究，你识别出几个接触点。
 
 - **广告互动：** 客户在社交媒体上看到广告。
 - **网站访问：** 他们点击广告并访问您的网站。
@@ -3480,11 +3406,11 @@ Insights in a customer journey map are key findings from studying customer inter
 
 分析接触点可以揭示改进机会。例如，高购物车放弃率表明结账流程复杂——简化可以帮助。如果售后配送支持咨询很常见，可能表明产品或配送问题需要解决，以获得更好的客户体验。
 
-## 客户行为：
+## 客户行为
 
-旅程地图追踪客户与贵组织每一次互动时的行为，从研究和客户服务联系到购买和反馈。使用交易数据、网站分析、调查和访谈等工具来监控这些行为，了解偏好和痛点。CRM 软件、消费者反馈平台和 Google Analytics 等工具对于获得这些洞察至关重要。简化流程，尽管看起来有风险，但通常可以通过减少不必要的步骤来提高转化率，让客户更容易完成交易。这些数据对于提升整体客户体验至关重要。
+旅程地图追踪客户与贵组织每一次互动时的行为，从研究和客户服务联系到购买和反馈。使用交易数据、网站分析、调查和访谈等工具来监控这些行为，了解偏好和痛点。`CRM` 软件、消费者反馈平台和 `Google Analytics` 等工具对于获得这些洞察至关重要。简化流程，尽管看起来有风险，但通常可以通过减少不必要的步骤来提高转化率，让客户更容易完成交易。这些数据对于提升整体客户体验至关重要。
 
-## 客户情感和动机：
+## 客户情感和动机
 
 在绘制客户旅程时，情感和动机引导您了解他们的体验——对产品的兴奋、对顺畅交易的满意，或对结账问题的沮丧，都揭示了什么有效以及什么需要改进。了解寻求价值、可靠服务或便利性等动机可以解释他们的决策。通过访谈、调查和反馈收集洞察，以创建与积极和具有挑战性的体验都产生共鸣的旅程。通过强调情感和动机，您可以将基础地图转变为引人入胜的故事，设计令人难忘的体验，从而增强客户忠诚度和满意度。
 
@@ -3497,7 +3423,7 @@ Insights in a customer journey map are key findings from studying customer inter
 
 通过调查和反馈找到这些问题，以了解客户经历了什么。通过解决这些问题，您可以将艰难的旅程转变为美好的体验，确保客户在与品牌的每一步都感到愉快。
 
-## 示例：
+### 示例
 
 让我们绘制在线购物者 Emma 的旅程，并确定她的障碍和痛点。
 
@@ -3541,11 +3467,7 @@ Insights in a customer journey map are key findings from studying customer inter
 
 ## 5. 评估您现在拥有的资源以及您将需要的资源
 
-评估您现有的资源是创建有效的客户旅程地图所必需的。列出可以协助此项目的信息、资源和团队人员。需要网站分析和客户反馈。确定您的团队在设计、消费者研究和数据分析方面的能力。确定需要更多资源或知识的差距，并采取适当措施，例如购买新软件或雇用 UX 专业人员。通过估算您的资源需求，您可以确保获得所需的帮助来开发精确且信息丰富的客户
-
-
-
-journey map that will improve the customer experience.
+评估您现有的资源是创建有效的客户旅程地图所必需的。列出可以协助此项目的信息、资源和团队人员。需要网站分析和客户反馈。确定您的团队在设计、消费者研究和数据分析方面的能力。确定需要更多资源或知识的差距，并采取适当措施，例如购买新软件或雇用 `UX` 专业人员。通过估算您的资源需求，您可以确保获得所需的帮助来开发精确且信息丰富的客户 journey map that will improve the customer experience.
 
 ## 6. 亲自体验客户旅程
 
@@ -3577,26 +3499,24 @@ journey map that will improve the customer experience.
 
 仅仅通过同理心映射来个性化设计过程是不够的。相反，它寻求反映具有相似需求和兴趣的更大群体消费者。有时把自己置于你不常互动的人的位置会很困难。你可以通过使用同理心映射来更多地了解这些人对你的问题、服务或产品真正的想法和感受。
 
+
+
 考虑你将与一家公司或品牌合作创建一个名为“兽医定位器”或“宠物诊所查找器”的应用程序。第一步是确定你的目标市场。考虑各年龄段的工薪阶层人士、最近的移民或最近搬到城市的人。想象一下56岁的Olivia独自与她的猫Milli一起生活，正在寻找当地和互联网宠物服务。你的团队想象Olivia的日常活动，她在创建为她服务的应用程序时遇到的技术障碍。虽然Olivia是一个角色，但许多其他人可以与她的需求产生共鸣。你的团队可以通过同理心映射将自己置于她的立场，从而把握Olivia和许多其他用户的共同需求和偏好。
 
 要创建同理心地图，你需要一些绘图工具，如便利贴和笔，或者你可以使用带有同理心地图模板的软件。在开始之前选择你将要映射的人物角色，并确保团队中的每个人都了解它。选择一个基于你研究中的真实数据的人物角色并为其命名。
 
-### Empathy Maps 的结构
+## Empathy Maps 的结构
 
-同理心地图最初由 **Dave Gray**（XPLANE 的创始人）创建，并在敏捷社区中获得了很大的人气。原始的同理心地图分为四个象限：Thoughts、Feelings、Actions 和 Observations。每个象限捕捉客户体验的不同方面：
+同理心地图最初由 Dave Gray（XPLANE 的创始人）创建，并在敏捷社区中获得了很大的人气。原始的同理心地图分为四个象限：Thoughts、Feelings、Actions 和 Observations。每个象限捕捉客户体验的不同方面：
 
-- **Thoughts:** What the customer says
-- **Feelings:** What the customer thinks
-- **Actions:** What the customer does
-- **Observations:** What the customer feels
+- Thoughts: What the customer says
+- Feelings: What the customer thinks
+- Actions: What the customer does
+- Observations: What the customer feels
 
 这种结构帮助你全面了解客户的体验。
 
-**修订版包含七个部分——用户位于中间。**
-
-
-
-
+修订版包含七个部分——用户位于中间。
 
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_234_0.png)
 
@@ -3604,13 +3524,13 @@ Figure 4.8: Empathy Map template by XPLANE (2021)
 
 GOAL: It is great if we write our goal at top as it will be always accessible, what do you aim to achieve with this Empathy Map?
 
-+   1. **Who are we empathizing with?** As we mentioned earlier, first step will be to select persona. In this section, you might be mapping a group of customers who needs a new app designed.
-+   2. **What do they need to do?** In this section, mention the type of change that they need or want.
-+   3. **What do they see?** This section covers, what is available to them in the marketplace, in their surroundings, or in their daily life.
-+   4. **What do they say?** This section contains what major points and quotes are being made by the user?
-+   5. **What do they do?** It should reflect what actions and behavior did you notice? How customers actually use the product?
-+   6. **What do they hear?** This could come from websites, news, coworkers, friends, and more.
-7. **What do they think and feel?** This section mostly covers what feelings could the user experience? And what do they think? What are their beliefs? What are they worried or happy about?
++ 1. Who are we empathizing with? As we mentioned earlier, first step will be to select persona. In this section, you might be mapping a group of customers who needs a new app designed.
++ 2. What do they need to do? In this section, mention the type of change that they need or want.
++ 3. What do they see? This section covers, what is available to them in the marketplace, in their surroundings, or in their daily life.
++ 4. What do they say? This section contains what major points and quotes are being made by the user?
++ 5. What do they do? It should reflect what actions and behavior did you notice? How customers actually use the product?
++ 6. What do they hear? This could come from websites, news, coworkers, friends, and more.
+7. What do they think and feel? This section mostly covers what feelings could the user experience? And what do they think? What are their beliefs? What are they worried or happy about?
 
 In order to make a clear separation between observable and inferred phenomena, “thoughts” and “feelings” were combined into the core portion of Empathy Maps after they were updated from four to seven sections. Add a list of “gains” and “pains” to better understand your user or character.
 
@@ -3651,20 +3571,18 @@ When considering what others say , we may ask:
 - What is the essential message they convey to their peers/teams?
 - What do they convey as aspirations or optimism?
 
-When we think about what our audience is thinking and feeling , we aim to understand how they make decisions and what their pains or gains might be. We want to know their fears and hopes. What concerns them? What makes them feel optimistic? At this stage, we review what we’ve noted in other sections of the map. Do any insights help us understand their pains or gains better?
-
-At this point, we might inquire about the following:
-
-- Why do they not sleep at night?
-- What are they looking forward to?
-- What would be the one thing they could change about their work if they could?
-- What would they be doing most of the time in an ideal world?
-
-By following this structure, empathy maps allow you to gain an understanding of your people. They also share this understanding with your team and stakeholders, ensuring that everyone understands what users want and need. This allows you to focus on the proper things. They encourage open-mindedness and avoid judgement, which makes it simpler to develop empathy and make user-centered decisions.
 
 
+当我们思考受众的想法和感受时，我们旨在了解他们如何做决策，以及他们的痛点或收益可能是什么。我们想知道他们的恐惧和希望。什么让他们担忧？什么让他们感到乐观？在此阶段，我们回顾在地图其他部分所记录的内容。是否有任何洞察有助于我们更好地理解他们的痛点或收益？
 
+此时，我们可能会询问以下问题：
 
+- 为什么他们晚上睡不着？
+- 他们期待什么？
+- 如果可以，他们希望在工作中改变的一件事是什么？
+- 在理想的世界里，他们大部分时间会做什么？
+
+通过遵循这种结构，同理心地图允许你获得对你的人群的理解。它们也将这种理解与你的团队和利益相关者分享，确保每个人都了解用户想要和需要什么。这使你能够专注于正确的事情。它们鼓励开放的心态并避免评判，这使得培养同理心和做出以用户为中心决策变得更简单。
 
 ## 同理心地图与用户画像
 
@@ -3723,10 +3641,6 @@ By following this structure, empathy maps allow you to gain an understanding of 
 
 体验地图捕捉了假日规划的典型旅程，并将过程分为四个类别，有助于识别常见的障碍和改进机会。因此，它是评估用户总体行为和提升用户体验的有用工具。
 
-
-
-
-
 ## 服务蓝图
 
 在某些情况下，单一类型的 UX 地图无法充分描绘客户与服务互动的每一个细节。不同类型的 UX 地图可以组合使用以获得完整的视图。例如，客户旅程地图在展示用户视角方面非常出色，但在披露业务相关信息的能力上有限。在这种情况下，服务蓝图地图就变得有用。
@@ -3780,52 +3694,51 @@ By following this structure, empathy maps allow you to gain an understanding of 
 
 ## 最佳用户体验映射工具
 
-用户体验映射工具是一种旨在帮助可视化和分析用户与产品或服务互动的各个方面的软件程序。这些工具有助于创建各种地图，包括体验地图、同理心地图、服务蓝图和客户旅程
-
-
-maps (CJMs)。以下是每种 UX 地图常用的工具：
+用户体验映射工具是一种旨在帮助可视化和分析用户与产品或服务互动的各个方面的软件程序。这些工具有助于创建各种地图，包括体验地图、同理心地图、服务蓝图和客户旅程 maps (CJMs)。以下是每种 UX 地图常用的工具：
 
 ## Customer Journey Maps (CJMs)
+
+
 
 客户旅程地图展示了客户所采取的步骤，强调了他们在与产品或服务互动时的需求、问题和感受。
 
 **Tools:**
-- **Smaply:** 专注于旅程映射和用户画像创建，使可视化客户旅程变得简单。
-- **UXPressia:** 提供用于创建详细的客户旅程地图、用户画像和影响地图的模板。
-- **Canvanizer:** 提供各种画布模板，包括客户旅程地图，用于协作头脑风暴。
+- `Smaply`: 专注于旅程映射和用户画像创建，使可视化客户旅程变得简单。
+- `UXPressia`: 提供用于创建详细的客户旅程地图、用户画像和影响地图的模板。
+- `Canvanizer`: 提供各种画布模板，包括客户旅程地图，用于协作头脑风暴。
 
 ## Empathy Maps
 
 团队可以通过使用同理心地图来深入了解用户的动机和挑战，从而更好地理解他们的感受、想法和行为。
 
 **Tools:**
-- **Mural:** 一个用于视觉协作的数字工作区，包含同理心地图模板。
-- **Stormboard:** 提供同理心映射模板，允许团队实时头脑风暴和协作。
-- **Canvanizer:** 也支持同理心映射，提供预设计模板便于使用。
+- `Mural`: 一个用于视觉协作的数字工作区，包含同理心地图模板。
+- `Stormboard`: 提供同理心映射模板，允许团队实时头脑风暴和协作。
+- `Canvanizer`: 也支持同理心映射，提供预设计模板便于使用。
 
 ## Experience Maps
 
 体验地图对用户遭遇提供了更广阔的视角，经常跨越多个情境和时期，以理解用户的整体行为。
 
 **Tools:**
-- **Miro:** 一个多功能的在线协作白板，通过其多种模板和工具支持体验映射。
-- **Lucidchart:** 一个图表工具，可轻松创建详细的体验地图。
-- **Adobe XD:** 一个设计工具，可用于创建交互式且视觉上吸引人的体验地图。
+- `Miro`: 一个多功能的在线协作白板，通过其多种模板和工具支持体验映射。
+- `Lucidchart`: 一个图表工具，可轻松创建详细的体验地图。
+- `Adobe XD`: 一个设计工具，可用于创建交互式且视觉上吸引人的体验地图。
 
 ## Service Blueprints
 
 服务蓝图突出了前端和后端运营，并提供了有关支持客户体验的内部程序和交互的详细信息。
 
 **Tools:**
-- **ServiceDesignTools:** 提供专门用于创建服务蓝图的模板和资源。
-- **Smaply:** 也适用于服务蓝图，提供结构化方式来绘制面向客户和内部流程。
-- **Touchpoint Dashboard:** 有助于可视化服务设计流程和交互，使识别痛点和改进点变得更容易。
+- `ServiceDesignTools`: 提供专门用于创建服务蓝图的模板和资源。
+- `Smaply`: 也适用于服务蓝图，提供结构化方式来绘制面向客户和内部流程。
+- `Touchpoint Dashboard`: 有助于可视化服务设计流程和交互，使识别痛点和改进点变得更容易。
 
 许多提到的工具提供免费版本或试用，但大多数都有付费计划，可解锁高级功能。虽然免费版本通常功能有限，但这些工具对于节省时间和精力非常宝贵，使设计师无需从零开始。然而，完全可以使用 Word、Excel 或甚至白板作为起点来创建自己的地图。随着经验的积累和对益处的认识，你可能会决定投资付费版本以获得增强功能。
 
 ## Conclusion
 
-我们在本章中探索了用户体验 (UX) 映射这一迷人的领域。我们首先回顾了 UX 映射的基础，并强调了理解用户互动的重要性。接下来，我们研究了用户画像——识别目标受众特征和需求的关键工具。
+我们在本章中探索了用户体验 `UX` 映射这一迷人的领域。我们首先回顾了 UX 映射的基础，并强调了理解用户互动的重要性。接下来，我们研究了用户画像——识别目标受众特征和需求的关键工具。
 
 我们讨论了各种 UX 地图类型，例如帮助我们理解消费者感受和想法的同理心地图，以及展示用户与产品或服务互动时所经历阶段的客户旅程地图。我们还研究了许多有助于使这些地图更具洞察力和效率的技术，使设计师能够专注于改善用户体验。
 
@@ -3834,71 +3747,46 @@ maps (CJMs)。以下是每种 UX 地图常用的工具：
 我们将在下一章深入探讨信息架构和网站地图。我们将研究如何安排和结构化信息，以便消费者能够轻松访问和理解。准备好发现如何开发易于使用的导航系统并提升整体用户体验吧。
 
 ## Key Terms
-- UX Mapping: 用户体验的视觉化呈现，展示用户与产品或服务的互动，用于识别痛点和改进机会。
-- Point of View: 用户或设计师看待问题的视角，考虑他们的需求、目标和挑战。
-- Scope: 项目的范围和边界，定义用户体验设计中将包含的内容和将排除的内容。
-- Chronological Structure: 一种组织方法，按事件发生的时间顺序排列信息或事件。
-- Hierarchical Structure: 一种组织方法，按重要程度从高到低对信息进行分级排列。
-- User Research: 通过观察技术、任务分析和其它反馈方法来理解用户行为、需求和动机的过程。
-- Customer Interactions: 客户与品牌、产品或服务互动的各种方式，包括面对面、在线以及通过客户服务。
 
-
-
-
-
-- **外在动机：** 影响用户行为的外部因素，例如奖励、认可或避免负面结果。
-- **客户旅程地图：** 对客户随时间与产品或服务互动的体验的视觉呈现，突出关键触点和情感状态。
-- **触点：** 客户与品牌、产品或服务互动的具体时刻或互动，对于理解用户体验至关重要。
-- **共情地图：** 一种用于深入了解用户的工具，通过捕捉用户所说、所想、所做和所感来促进设计团队的共情。
-- **体验地图：** 详细图表，概述用户在不同阶段和触点中的体验，提供对其旅程的洞察并识别改进机会。
-- **服务蓝图：** 服务的详细视觉呈现，展示不同服务组件之间的关系，包括人员、道具和流程。
-- **前台：** 服务中可见的部分，用户在此直接与服务及其员工互动，影响其即时体验。
-- **后台：** 支持前台互动的幕后活动和流程，对于提供整体服务体验至关重要。
+- `UX Mapping`: 用户体验的视觉化呈现，展示用户与产品或服务的互动，用于识别痛点和改进机会。
+- `Point of View`: 用户或设计师看待问题的视角，考虑他们的需求、目标和挑战。
+- `Scope`: 项目的范围和边界，定义用户体验设计中将包含的内容和将排除的内容。
+- `Chronological Structure`: 一种组织方法，按事件发生的时间顺序排列信息或事件。
+- `Hierarchical Structure`: 一种组织方法，按重要程度从高到低对信息进行分级排列。
+- `User Research`: 通过观察技术、任务分析和其它反馈方法来理解用户行为、需求和动机的过程。
+- `Customer Interactions`: 客户与品牌、产品或服务互动的各种方式，包括面对面、在线以及通过客户服务。
+- `外在动机`: 影响用户行为的外部因素，例如奖励、认可或避免负面结果。
+- `客户旅程地图`: 对客户随时间与产品或服务互动的体验的视觉呈现，突出关键触点和情感状态。
+- `触点`: 客户与品牌、产品或服务互动的具体时刻或互动，对于理解用户体验至关重要。
+- `共情地图`: 一种用于深入了解用户的工具，通过捕捉用户所说、所想、所做和所感来促进设计团队的共情。
+- `体验地图`: 详细图表，概述用户在不同阶段和触点中的体验，提供对其旅程的洞察并识别改进机会。
+- `服务蓝图`: 服务的详细视觉呈现，展示不同服务组件之间的关系，包括人员、道具和流程。
+- `前台`: 服务中可见的部分，用户在此直接与服务及其员工互动，影响其即时体验。
+- `后台`: 支持前台互动的幕后活动和流程，对于提供整体服务体验至关重要。
 
 # 第5章
+
 ## 精通信息架构和网站地图
 
 ### 引言
 
-本章将涵盖与网站地图和信息架构（IA）相关的[content]
+本章将涵盖与网站地图和信息架构 `IA` 相关的主题。
 
-- **外在动机：** 影响用户行为的外部因素，例如奖励、认可或避免负面结果。
-- **客户旅程地图：** 对客户随时间与产品或服务互动的体验的视觉呈现，突出关键触点和情感状态。
-- **触点：** 客户与品牌、产品或服务互动的具体时刻或互动，对于理解用户体验至关重要。
-- **共情地图：** 一种用于深入了解用户的工具，通过捕捉用户所说、所想、所做和所感来促进设计团队的共情。
-- **体验地图：** 详细图表，概述用户在不同阶段和触点中的体验，提供对其旅程的洞察并识别改进机会。
-- **服务蓝图：** 服务的详细视觉呈现，展示不同服务组件之间的关系，包括人员、道具和流程。
-- **前台：** 服务中可见的部分，用户在此直接与服务及其员工互动，影响其即时体验。
-- **后台：** 支持前台互动的幕后活动和流程，对于提供整体服务体验至关重要。
+# CHAPTER 5
 
-## CHAPTER 5
 ## Mastering Information Architecture and Sitemaps
 
 ### Introduction
 
-本章将涵盖与网站地图和信息架构（IA）相关的[content]
+This chapter will cover important topics related to sitemaps and information architecture `IA`, which are essential for building user-friendly websites. Information architecture is the process of organizing and arranging content so that it is easier for users to find and navigate. We will explore the fundamental ideas behind successful IA, with a focus on organization, clarity, and user-centric design.
 
-- **外在动机：** 影响用户行为的外部因素，例如奖励、认可或避免负面结果。
-- **客户旅程地图：** 对客户随时间与产品或服务互动的体验的视觉呈现，突出关键触点和情感状态。
-- **触点：** 客户与品牌、产品或服务互动的具体时刻或互动，对于理解用户体验至关重要。
-- **共情地图：** 一种用于深入了解用户的工具，通过捕捉用户所说、所想、所做和所感来促进设计团队的共情。
-- **体验地图：** 详细图表，概述用户在不同阶段和触点中的体验，提供对其旅程的洞察并识别改进机会。
-- **服务蓝图：** 服务的详细视觉呈现，展示不同服务组件之间的关系，包括人员、道具和流程。
-- **前台：** 服务中可见的部分，用户在此直接与服务及其员工互动，影响其即时体验。
-- **后台：** 支持前台互动的幕后活动和流程，对于提供整体服务体验至关重要。
+You will come across a number of IA systems that offer logical frameworks for classifying and labeling data. A visual representation of a website’s structure is provided by sitemaps, which are crucial tools for web development that facilitate planning and communication. We will examine several sitemap formats, including as `XML` for search engines and graphic sitemaps for stakeholders, and practical ways to generate them.
 
-## CHAPTER 5
-## Mastering Information Architecture and Sitemaps
 
-### Introduction
-
-This chapter will cover important topics related to sitemaps and information architecture (IA), which are essential for building user-friendly websites. Information architecture is the process of organizing and arranging content so that it is easier for users to find and navigate. We will explore the fundamental ideas behind successful IA, with a focus on organization, clarity, and user-centric design.
-
-You will come across a number of IA systems that offer logical frameworks for classifying and labeling data. A visual representation of a website’s structure is provided by sitemaps, which are crucial tools for web development that facilitate planning and communication. We will examine several sitemap formats, including as XML for search engines and graphic sitemaps for stakeholders, and practical ways to generate them.
 
 Comprehending these ideas gives you the ability to create user-friendly websites that are easy for people to navigate and find information on. Let us embark on a journey to master the art of information architecture and sitemapping for optimal web design!
 
-### Structure
+## Structure
 
 In this chapter, we will discuss the following topics:
 
@@ -3916,7 +3804,7 @@ In this chapter, we will discuss the following topics:
 - How to Create a Sitemap
 - Information Architecture versus Sitemap
 
-### Introduction to Information Architecture
+## Introduction to Information Architecture
 
 Picture yourself going to a big, unknown theme park for the first time. There are a tonne of rides, shows, restaurants, and attractions at the park, but if you didn’t have any direction, you would be lost and wouldn’t know where to begin or where to look for your favourite ride. This is where an effective signage and park map system come in to help you traverse the intricate surroundings.
 
@@ -3928,11 +3816,7 @@ Effective theme park maps provide answers to three key questions:
 
 For digital environments, information architecture, or IA, is comparable to a theme park map. It makes data easier to access and understand by labeling and organizing it in an intuitive manner. The map in the theme park example shows you where you are (Adventureland, Fantasyland, Tomorrowland), what you can find here (certain rides, eateries, restrooms), and where you can go in the future (more themed sections, exits, first aid stations). In a similar vein, an intuitive interface (IA) that is well-designed for a website or application helps users navigate its content and locate the features or information they require.
 
-### Understanding Information Architecture
-
-
-
-
+## Understanding Information Architecture
 
 网站组织过程旨在让访客能够轻松浏览和理解，这被称为信息架构。这需要对所有相关信息进行逻辑且透明的安排。在信息架构中，一致性至关重要，可以通过在所有页面上标准化标签来实现，包括按钮、菜单和链接的标签。
 
@@ -3950,7 +3834,7 @@ For digital environments, information architecture, or IA, is comparable to a th
 
 这些组件协同工作，提供一个流畅的导航系统，使用户能够轻松找到所需内容，而不会迷路或感到信息过载。
 
-## 示例
+### 示例
 
 假设你正在组织一次穿越一个庞大且陌生的国家的公路旅行。你精心规划行程，以确保你不会迷路或错过任何必看景点。你计划好在哪里用餐、在哪里加油、以及哪些美景不可错过。每一个选择都是以你的旅程为出发点，以确保旅途顺利并让你享受其中。
 
@@ -3962,31 +3846,46 @@ For digital environments, information architecture, or IA, is comparable to a th
 
 然而，信息架构的起源还要追溯得更远。人类一直以逻辑的方式整理事实和信息，确保互动和沟通具有目的性。当信息杂乱无章时，信息就会丢失，机会也会错过。这种对结构与秩序的内在需求，是现代信息架构的种子。
 
-让我们回到 1960 年代。IBM 在 1964 年发表的开创性研究论文《IBM System/360 的架构》将计算中的“架构”定义为数据流和控制的概念性组织和功能行为。这是首次正式承认一致信息结构必要性的表述之一。仅仅几年后，在 1970 年，施乐帕洛阿尔托研究中心的研究人员通过开发支持“信息架构”的技术，为如今所知的 信息架构 奠定了概念基础。
+让我们回到 1960 年代。IBM 在 1964 年发表的开创性研究论文《IBM System/360 的架构》将计算中的“架构”定义为数据流和控制的概念性组织和功能行为。这是首次正式承认一致信息结构必要性的表述之一。仅仅几年后，在 1970 年，施乐帕洛阿尔托研究中心的研究人员通过开发支持“信息架构”的技术，为如今所知的信息架构奠定了概念基础。
 
-让我们从建筑师和平面设计师理查德·索尔·沃曼 说起，他在 1970 年代首次使用了“信息架构”这一短语。沃曼观察到建筑架构与数字空间组织需求之间的相似之处。他最初对“信息设计”的讨论以及设计师所需的能力，后来催生了“信息架构”这一概念，该概念成为他一部重要著作的标题。
+让我们从建筑师和平面设计师理查德·索尔·沃曼说起，他在 1970 年代首次使用了“信息架构”这一短语。沃曼观察到建筑架构与数字空间组织需求之间的相似之处。他最初对“信息设计”的讨论以及设计师所需的能力，后来催生了“信息架构”这一概念，该概念成为他一部重要著作的标题。
 
 随着 1990 年代互联网的爆发，信息架构变得至关重要。常被称为信息架构之父的 Lou Rosenfeld 和 Peter Morville 在 1998 年出版了《极地熊之书》，即《世界广域网的信息架构》。这部开创性著作为信息架构提供了框架，并定义了塑造行业多年的价值观和流程。
 
 自 1980 年代中期以来，信息架构（IA）已大幅发展。起初它相当松散和开放，但此后已发展成为一个具有明确流程的领域。如今，信息架构在用户体验（UX）设计中发挥着重要作用，从移动应用程序界面到网站导航都由其组织。它不断变化以跟上技术发展和信息使用模式的新趋势。当你使用应用程序、浏览数字图书馆或浏览网站时，信息架构在后台运行，以确保你能够快速轻松地找到所需内容。
 
-将信息架构置于设计的中心将使现代和未来的世界受益。只要
-
-
-
-Technology does. It will continue to be a crucial component of our interactions with the abundance of information around us, facilitating easy and intuitive digital travel.
+将信息架构置于设计的中心将使现代和未来的世界受益。只要 Technology does. It will continue to be a crucial component of our interactions with the abundance of information around us, facilitating easy and intuitive digital travel.
 
 ## Importance of Information Architecture
 
+
+
+# Information Architecture
+
 Picture yourself in a disorganized library with all the files and books scattered around. You would think it would be time-consuming and frustrating to find the book you wanted. If there is no clear hierarchy, the same thing occurs in the digital realm. Information architecture, or IA, is useful in this situation.
 
-- **Improving the User Interface:** Users can locate what they are looking for with ease on a well-organized website or app. Similar to how aisles are indicated by signs in a well-organized store, effective information architecture facilitates consumers’ easy navigation of content. Because of their excellent experience, visitors are more inclined to visit the website again and refer others to it.
-- **Enhances Accessibility:** IA makes sure that all users, including those with impairments, can access the content. It makes the content easier to find and comprehend for all users, regardless of ability, by employing clear labels and logical information organization.
-- **Increases Productivity:** Effective IA can help firms save money and time. Workers can complete tasks more quickly and with less annoyance when they can easily locate the information they require. This effectiveness may result in increased output and a more positive work environment.
-- **Encourages SEO:** Search engines can better comprehend your site’s structure and content if your IA is coherent and clear. By doing this, you may raise your website’s search engine rating and facilitate potential clients’ discovery of you. Enhanced visibility has the potential to result in higher traffic and more business.
-- **Facilitates Content Management:** Managing content can get harder as websites get bigger. A solid information architecture foundation facilitates the addition, updating, and removal of content without causing disruption. It guarantees that, despite its evolution, the website will always be organized and user-friendly.
-- **Lessens Clutter and Redundancy:** IA helps prevent clutter and duplication by efficiently organizing content. It guarantees that every item of information has a designated spot, making the website easier to navigate and cleaner overall.
-- **Improves the Overall Design:** A website or app visual design is enhanced by effective IA. An aesthetically beautiful and harmonious user experience is produced by well-organized content, which lets the design take center stage. It resembles having a well-organized space where everything has a designated spot.
+## Benefits
+
+### Improving the User Interface
+Users can locate what they are looking for with ease on a well-organized website or app. Similar to how aisles are indicated by signs in a well-organized store, effective information architecture facilitates consumers’ easy navigation of content. Because of their excellent experience, visitors are more inclined to visit the website again and refer others to it.
+
+### Enhances Accessibility
+IA makes sure that all users, including those with impairments, can access the content. It makes the content easier to find and comprehend for all users, regardless of ability, by employing clear labels and logical information organization.
+
+### Increases Productivity
+Effective IA can help firms save money and time. Workers can complete tasks more quickly and with less annoyance when they can easily locate the information they require. This effectiveness may result in increased output and a more positive work environment.
+
+### Encourages SEO
+Search engines can better comprehend your site’s structure and content if your IA is coherent and clear. By doing this, you may raise your website’s search engine rating and facilitate potential clients’ discovery of you. Enhanced visibility has the potential to result in higher traffic and more business.
+
+### Facilitates Content Management
+Managing content can get harder as websites get bigger. A solid information architecture foundation facilitates the addition, updating, and removal of content without causing disruption. It guarantees that, despite its evolution, the website will always be organized and user-friendly.
+
+### Lessens Clutter and Redundancy
+IA helps prevent clutter and duplication by efficiently organizing content. It guarantees that every item of information has a designated spot, making the website easier to navigate and cleaner overall.
+
+### Improves the Overall Design
+A website or app visual design is enhanced by effective IA. An aesthetically beautiful and harmonious user experience is produced by well-organized content, which lets the design take center stage. It resembles having a well-organized space where everything has a designated spot.
 
 To put it briefly, information architecture is similar to a building’s blueprint. It guarantees that everything is conveniently located, easy to find, and enjoyable to use. Good user experience (UX) design is essential for producing a satisfying, productive, and successful user experience on any digital platform, be it a website, an app, or another.
 
@@ -4000,12 +3899,11 @@ Here is a detailed explanation of each principle of information architecture:
 
 According to the Principle of Objects, content needs to be viewed as dynamic entities with distinct behaviors, lifecycles, and properties. Every book, for instance, is more than just a static item in a digital library catalogue. It contains metadata with the following: title, author, and genre; availability status (checked out or available); and user-generated content with reservations and reviews. This perspective on content helps designers build more
 
-
-
-
 响应式和交互式系统，能够更好地表现真实世界中材料的复杂性，并帮助用户定位、理解所需信息及与之交互。
 
 ## 选择原则
+
+
 
 为了不让消费者不知所措，选择原则强调为他们提供简洁、可管理的选项列表。这些选项必须适合手头的特定任务。如果选项太多，用户可能会感到沮丧和犹豫不决。电子商务网站可能不会提供数十种筛选器，而是将产品筛选选项限制为最重要的几个，包括尺寸、颜色和价格范围。这种有针对性的策略帮助用户快速找到所需内容，同时不会被过多选项淹没，从而提升了整体购买体验。
 
@@ -4019,11 +3917,11 @@ According to the Principle of Objects, content needs to be viewed as dynamic ent
 
 信息揭示原则的目标是向消费者提供足够的信息，帮助他们理解接下来的内容，而不过度。随着消费者深入探索，信息会逐步呈现，使他们能够做出明智的决定。
 
-**例如，** 在线课程平台可能会为每门课程提供简介、讲师简介和一些关键亮点。用户快速浏览后，可以选择是否通过阅读学生评价或查看完整教学大纲来进一步了解。当信息逐步呈现时，用户被轻松地引导浏览内容，感受到更低的认知压力，整体体验也更好。
+例如，在线课程平台可能会为每门课程提供简介、讲师简介和一些关键亮点。用户快速浏览后，可以选择是否通过阅读学生评价或查看完整教学大纲来进一步了解。当信息逐步呈现时，用户被轻松地引导浏览内容，感受到更低的认知压力，整体体验也更好。
 
 ### 在线课程平台 - udemy
 
-### 使用 Web 开发构建网站和应用程序
+#### 使用 Web 开发构建网站和应用程序
 
 Web 开发世界的广度和互联网本身一样宽广。我们许多社交和职业生活都在互联网上展开，这催生了旨在创建、管理和调试我们日益依赖的网站和应用程序的新行业。
 
@@ -4033,7 +3931,7 @@ Web 开发世界的广度和互联网本身一样宽广。我们许多社交和�
 
 ### 在线课程平台 - coursera
 
-### 最受欢迎的证书
+#### 最受欢迎的证书
 
 专项课程与专业证书
 
@@ -4055,30 +3953,27 @@ Web 开发世界的广度和互联网本身一样宽广。我们许多社交和�
 
 前门原则强调，并非所有用户都会从首页进入你的网站。因此，在设计网站时必须理解用户可能从任何页面进入。确保每个页面都提供上下文、导航选项和关键信息，以便访问者始终知道他们身在何处以及下一步可以采取哪些步骤。
 
-**例如，** 想象一个用户搜索某篇特定博客文章，并直接到达该文章的页面。如果该页面包含清晰的站点菜单、面包屑导航和相关内容链接，用户就能轻松导航到网站的其他部分，而不会感到迷失。通过在所有页面提供一致的导航辅助和关键信息，无论用户从哪个入口进入，都能无缝地探索你的网站。这种方法通过让导航变得直观来提升用户体验，并确保所有访问者都能轻松找到方向。
+例如，想象一个用户搜索某篇特定博客文章，并直接到达该文章的页面。如果该页面包含清晰的站点菜单、面包屑导航和相关内容链接，用户就能轻松导航到网站的其他部分，而不会感到迷失。通过在所有页面提供一致的导航辅助和关键信息，无论用户从哪个入口进入，都能无缝地探索你的网站。这种方法通过让导航变得直观来提升用户体验，并确保所有访问者都能轻松找到方向。
 
 ## 多重分类原则
 
 多重分类原则的一部分是为消费者提供搜索和浏览网站内容的多种选择。虽然顶级菜单和搜索栏是标准方法，但对于希望通过层级结构浏览或研究的用户来说，提供替代路径至关重要。这能保证信息架构满足不同用户的需求和偏好。
 
-**例如，** 为了改善用户体验，教学网站可以包含多种分类选项。内容可以按年级（例如，小学或高中）、学科（例如，数学或科学）或资源类型（例如，工作表、视频或文章）进行搜索。这种多层面的方法使网站更加用户友好和易访问，让访客能够以适合其浏览习惯的方式找到所需信息。通过允许多种导航方式，你可以创造一个更具适应性和用户友好性的环境。
-
-
-
+例如，为了改善用户体验，教学网站可以包含多种分类选项。内容可以按年级（例如，小学或高中）、学科（例如，数学或科学）或资源类型（例如，工作表、视频或文章）进行搜索。这种多层面的方法使网站更加用户友好和易访问，让访客能够以适合其浏览习惯的方式找到所需信息。通过允许多种导航方式，你可以创造一个更具适应性和用户友好性的环境。
 
 模式。
 
-### 1. 聚焦导航原则
+### 聚焦导航原则
 
 正如聚焦导航原则所强调的，整个网站导航菜单和辅助工具的连贯性与相关性至关重要。确保菜单上的所有内容一致且相关；不要混入可能让用户困惑的不相关主题。例如，不要在与产品类别相关的菜单中列出其他服务。同样，如果菜单用于导航，则要去除任何营销或功能组件。
 
-**例如**，电子商务网站的产品菜单应只包含“电子产品”“服装”和“家居用品”等类别。“客户支持”和“特别优惠”等无关元素不应出现在其中。通过有针对性的导航帮助用户快速、简单地找到他们想要的内容，可以提升用户在网站上的体验。一致且相关的菜单使导航变得简单易用，从而降低用户不满的风险。
+例如，电子商务网站的产品菜单应只包含“电子产品”“服装”和“家居用品”等类别。“客户支持”和“特别优惠”等无关元素不应出现在其中。通过有针对性的导航帮助用户快速、简单地找到他们想要的内容，可以提升用户在网站上的体验。一致且相关的菜单使导航变得简单易用，从而降低用户不满的风险。
 
 亚马逊是电商网站保持导航有序的绝佳例子。它在主菜单中展示所有产品类别，同时在页脚区域放置客户支持和其他服务。
 
 图 5.4：亚马逊井然有序的导航菜单
 
-### 2. 增长原则
+### 增长原则
 
 增长原则的主要目标是创建一个易于容纳新内容而无需完全重做的框架。网站的整体布局，包括导航和搜索功能，应可轻松扩展以满足未来需求。无论随时间添加何种内容，该策略都能保证网站可持续增长。
 
@@ -4099,13 +3994,12 @@ Web 开发世界的广度和互联网本身一样宽广。我们许多社交和�
 - **搜索系统：** 用户可以通过信息架构（IA）的搜索机制输入关键词或短语来查找信息。当搜索系统运行良好时，用户能够快速轻松地找到所需内容。同时，它还会考虑如何使搜索结果更易于理解。高级搜索引擎的用户还可以通过过滤和排序选项来细化搜索，精确定位他们要查找的内容。信息架构师通过创建用户友好的搜索系统，确保用户能快速找到所需信息。
 
 - **组织系统：**
+
   - **层级结构**：信息被分组为广泛的类别，再分支为更聚焦的子类别，形成类似树的结构。例如，在线商店可能有一个名为“服装”的主要类别，再细分为“男装”“女装”等。
+
   - **顺序结构**：信息以特定顺序呈现，引导用户完成一个有组织的过程。这在多步骤表单或教程中很常见。
-  - **矩阵结构**：用户可以通过多种方式查看内容，
 
-
-
-including popularity, date, and price.
+  - **矩阵结构**：用户可以通过多种方式查看内容，including popularity, date, and price.
 
 - **标签系统：** 标签为用户提供上下文并指引他们获取更多信息。网站要想有效地与受众沟通，标签必须易于理解、熟悉且清晰。
 
@@ -4114,7 +4008,9 @@ including popularity, date, and price.
 - **导航系统：** 在网站上，导航帮助用户找到特定信息。它由各种组件组成，这些组件结合起来为访客创建可识别的模式。信息架构师现在创建人们浏览网站时将采取的路径，并指定页面之间如何相互连接。
 
 - Global Navigation: 可从每个页面访问的主要导航菜单，通向网站的关键部分。
+
 - Local Navigation: 区域特定菜单，将观众引导至特定部分或页面内的相关内容。
+
 - Contextual Navigation: 位于内容内部，指向相关信息或资源的指针。
 
 ## Example
@@ -4123,7 +4019,7 @@ including popularity, date, and price.
 
 将塑造你的 IA 决策。
 
-## 2. 创建类别并为内容标注
+## 创建类别并为内容标注
 
 在你的网站上高效组织信息的第一步是列出你当前拥有或打算添加的所有文章、产品页面和视频。详尽的清单有助于开发一个连贯的框架。将你的信息分类到观众易于理解的类别中。例如，科技博客将包括标有“Gadgets”、“Software”、“Reviews”和“Tutorials”的部分。
 
@@ -4131,19 +4027,19 @@ including popularity, date, and price.
 
 尝试使用信息架构师使用的一些程序。应用树测试和卡片分类策略来帮助你组织内容。
 
-**Card Sorting：** 为了了解消费者如何将各种产品分类到不同组中，我们采用了一种称为卡片分类的参与式设计流程。他们被要求将印有术语、功能或概念的卡片归类。
 
-**Tree Testing：** 在树测试的帮助下，你可以观察用户对标签和导航的反应。此过程将向你展示你的网站在查找信息方面的用户友好程度。
+
+### Card Sorting：
+为了了解消费者如何将各种产品分类到不同组中，我们采用了一种称为卡片分类的参与式设计流程。他们被要求将印有术语、功能或概念的卡片归类。
+
+### Tree Testing：
+在树测试的帮助下，你可以观察用户对标签和导航的反应。此过程将向你展示你的网站在查找信息方面的用户友好程度。
 
 之后，将这些类别分组。查看竞争对手网站，看看他们如何组织其内容。选择采用他们哪些策略以及哪些需要调整。在此过程中，你可能会遇到不完全符合任何一个类别的内容。这种内容有时会落入多个类别或不属于任何现有组。为了保持连贯的结构，评估并决定如何处理此类内容。
 
 定期审查和更新你的内容组织对于保持网站对受众友好且相关至关重要。
 
 ## 3. 创建层级，开发导航和站点地图
-
-
-
-
 
 在开始在网站上组织材料之前，先建立一个明确的层级结构。将其视为为房屋奠定基础。主分类类似于房屋的主要房间，必须在进入子分类（类似于主房间内部更具体的区域）之前选定。有了这种结构，用户将更容易浏览你的信息，形成逻辑流畅的体验。
 
@@ -4161,15 +4057,15 @@ including popularity, date, and price.
 
 ### 导航模型：
 
-- **单页模型：** 非常适合信息丰富的网站，所有内容都可以通过滚动单页访问。
-- **扁平模型：** 确保每个页面距离主页只有几次点击，适用于拥有少量分类的小型到中型网站。
-- **层级模型：** 内容在这些庞大而复杂的网站上按主分类和子分类排列。
+- `单页模型`：非常适合信息丰富的网站，所有内容都可以通过滚动单页访问。
+- `扁平模型`：确保每个页面距离主页只有几次点击，适用于拥有少量分类的小型到中型网站。
+- `层级模型`：内容在这些庞大而复杂的网站上按主分类和子分类排列。
 
 ### 导航类型：
 
-- **主导航：** 主要菜单，通常位于页面顶部，引导访客进入你网站最重要的区域。
-- **次要导航：** 额外的菜单，通常位于侧边栏或页脚，提供对不太重要元素的访问。
-- **隐藏导航：** 菜单如下拉菜单、汉堡菜单和弹出菜单，最初不可见，仅在操作时显示，被称为隐藏导航。
+- `主导航`：主要菜单，通常位于页面顶部，引导访客进入你网站最重要的区域。
+- `次要导航`：额外的菜单，通常位于侧边栏或页脚，提供对不太重要元素的访问。
+- `隐藏导航`：菜单如下拉菜单、汉堡菜单和弹出菜单，最初不可见，仅在操作时显示，被称为隐藏导航。
 
 ## 4. 用户测试和迭代
 
@@ -4177,13 +4073,9 @@ including popularity, date, and price.
 
 对此你有几个选择。你可以对初始用户组进行额外测试，以评估你最终网站的标签和分类。或者，你可以组建一个新的非正式小组进行可用性测试。
 
-**树状测试**和**封闭式卡片分类**是其他选择，它们是在设计网站结构时不可或缺的工具，各自提供独特优势以确保用户友好的体验。
+`树状测试`和`封闭式卡片分类`是其他选择，它们是在设计网站结构时不可或缺的工具，各自提供独特优势以确保用户友好的体验。
 
-想象你在建造一个图书馆。**树状测试**可以帮助你了解访客是否能轻松找到方向。它告诉你部分名称是否合理，是否清楚地传达了其包含的内容，以及每个标题是否独特。通过引导用户浏览你网站的简化版本，你可以确定你的内容是否以对他们有意义的方式组织。
-
-
-
-
+想象你在建造一个图书馆。`树状测试`可以帮助你了解访客是否能轻松找到方向。它告诉你部分名称是否合理，是否清楚地传达了其包含的内容，以及每个标题是否独特。通过引导用户浏览你网站的简化版本，你可以确定你的内容是否以对他们有意义的方式组织。
 
 categories. 这就像要求你的图书馆访客把书籍归类到标有标签的书架上。这一过程揭示了分类名称是否准确描述了内容，以及用户是否能轻松区分标题。它还确保组织以用户为中心，反映了人们在脑海中自然归类信息的方式。
 
@@ -4203,16 +4095,12 @@ categories. 这就像要求你的图书馆访客把书籍归类到标有标签�
 
 信息架构（IA）工具对于开发和构建应用程序和网页至关重要。它们有助于为用户创建逻辑内容排列，并帮助创建直观的导航系统。以下是一些流行的免费信息架构工具：
 
-- **Diagrams.net:** Diagrams.net（以前称为 Draw.io）可用于制作流程图、站点地图和图表。它基于网络，并提供各种模板来说明概念，例如 IA。
-- **MindMup:** 一个免费的思维导图应用程序，便于组织想法和头脑风暴。它有助于说明各个 IA 组件之间的联系和层级结构。
-- **Pencil Project:** 一个免费的开源 GUI 原型工具，可让你制作线框图、图表和 UI 原型。它易于使用并满足各种 IA 设计图表需求。
-- **XMind:** XMind 是另一个免费的头脑风暴和思维导图工具，便于组织想法。它通过可视化层级和联系来帮助信息结构和 IA 规划。
-- **FigJam:** FigJam 的主要目的是作为团队头脑风暴和构思的协作白板工具。然而，它可以通过让用户生成站点地图、流程图和用户旅程来促进信息架构任务。由于其用户友好的界面和实时协作功能，它是可视化复杂信息结构的实用工具。
-- **Miro:** Miro 是另一个用于创造力和团队合作的协作白板工具。它除了
-
-
-
-其主要功能是实现头脑风暴会议。借助思维导图、线框图和用户可以开发的图表，可以对信息进行组织和可视化。其适应性使其成为高效组织信息的宝贵工具。
+- `Diagrams.net`：`Diagrams.net`（以前称为 Draw.io）可用于制作流程图、站点地图和图表。它基于网络，并提供各种模板来说明概念，例如 IA。
+- `MindMup`：一个免费的思维导图应用程序，便于组织想法和头脑风暴。它有助于说明各个 IA 组件之间的联系和层级结构。
+- `Pencil Project`：一个免费的开源 GUI 原型工具，可让你制作线框图、图表和 UI 原型。它易于使用并满足各种 IA 设计图表需求。
+- `XMind`：`XMind`是另一个免费的头脑风暴和思维导图工具，便于组织想法。它通过可视化层级和联系来帮助信息结构和 IA 规划。
+- `FigJam`：`FigJam`的主要目的是作为团队头脑风暴和构思的协作白板工具。然而，它可以通过让用户生成站点地图、流程图和用户旅程来促进信息架构任务。由于其用户友好的界面和实时协作功能，它是可视化复杂信息结构的实用工具。
+- `Miro`：`Miro`是另一个用于创造力和团队合作的协作白板工具。它除了其主要功能是实现头脑风暴会议。借助思维导图、线框图和用户可以开发的图表，可以对信息进行组织和可视化。其适应性使其成为高效组织信息的宝贵工具。
 
 这些工具是设计师和开发人员的经济实惠替代方案，因为它们包含了开发和改进信息架构所需的所有必要功能。
 
@@ -4240,11 +4128,13 @@ categories. 这就像要求你的图书馆访客把书籍归类到标有标签�
 
 网站地图对于优化你的网站至关重要，原因如下：
 
-- **增强 SEO 和搜索引擎抓取：** 网站地图为搜索引擎提供了你网站的路线图，确保所有关键页面都被找到并编入索引。通过帮助搜索引擎理解你网站的架构和内容，这提高了你网站的搜索引擎排名。
-- **增强用户体验：** 结构良好的网站地图便于用户浏览你的网站，使他们能够快速获得所需的信息。
-- **管理大型和复杂的网站：** 对于拥有大量页面的网站来说，网站地图是必要的。它便于搜索引擎高效地导航和索引你的信息，而仅靠传统抓取则可能很困难。
+- `增强 SEO 和搜索引擎抓取`：网站地图为搜索引擎提供了你网站的路线图，确保所有关键页面都被找到并编入索引。通过帮助搜索引擎理解你网站的架构和内容，这提高了你网站的搜索引擎排名。
+- `增强用户体验`：结构良好的网站地图便于用户浏览你的网站，使他们能够快速获得所需的信息。
+- `管理大型和复杂的网站`：对于拥有大量页面的网站来说，网站地图是必要的。它便于搜索引擎高效地导航和索引你的信息，而仅靠传统抓取则可能很困难。
 
 ## 网站地图的类型
+
+
 
 网站地图主要有两种类型：HTML 和 XML。网页使用两种语言编码：XML（可扩展标记语言）和 HTML（超文本标记语言）。每种类型在你的网站上都有独特的功能。我们还将详细介绍另外几种网站地图类型。
 
@@ -4256,10 +4146,6 @@ HTML 网站地图的主要目标是使访客更容易找到他们感兴趣的特
 
 HTML 网站地图具有层次结构，使其类似于传统的索引卡或目录。它们使用户更容易探索和查找网站上的信息，尤其是在结构复杂或内容众多的网站上。通过按字母顺序或按类别对链接进行排序，HTML 网站地图可以通过提供你网站内容和结构的简明摘要来增强用户体验。
 
-
-
-
-
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_273_0.png)
 
 *Figure 5.6: Explore the HTML Sitemap of Firstcry Shopping Website*
@@ -4268,7 +4154,7 @@ HTML 网站地图具有层次结构，使其类似于传统的索引卡或目录
 
 从本质上讲，HTML 网站地图通过提供易于导航的网站内容路线图来改善可用性，让用户更满意。
 
-## [XML Sitemap](#)
+## XML Sitemap
 
 一种专门用 XML（可扩展标记语言）准备的文件，称为 XML 网站地图，有助于搜索引擎有效地抓取和索引网站内容。与为人类访客制作的 HTML 网站地图不同，XML 网站地图是专门为搜索引擎遍历和索引网站网页而制作的。因为它们是保存在网站根目录中的 XML 文件，所以对网站用户是隐藏的。它们提供有关网站上 URL 的全面详细信息，包括最后更新时间、更改频率以及相对于页面上其他 URL 的重要性等元数据。
 
@@ -4360,6 +4246,8 @@ An XML sitemap created especially for websites that post news material is known 
 
 For news websites, news sitemaps are critical because they allow new items to be quickly indexed, which is necessary for timely news distribution. Webmasters can guarantee that their content appears in search results as quickly as possible and hence increase traffic and reading by providing the most recent items in the sitemap.
 
+
+
 **Example:** An online news portal that covers everything from sports to politics. Each news article that has been published in the last 48 hours would have a URL on this site’s news sitemap, along with metadata like the title (“Election Results 2024”), the publication date (“2024-07-15”), and keywords (“election, 2024, results”). This facilitates the speedy discovery and indexing of the new articles by search engines, giving readers looking for the most recent election updates access to them.
 
 In conclusion, news sites need a news sitemap to make sure that fresh content is quickly indexed and available to anyone looking for up-to-date information. It raises the site’s organic traffic count, increases search engine ranking, and makes news material more visible.
@@ -4371,7 +4259,6 @@ A mobile sitemap is a unique type of XML sitemap created to help search engines 
 Websites with discrete mobile-friendly pages or independent mobile versions benefit most from mobile sitemaps. The URLs of mobile-specific pages are included in these sitemaps, along with pertinent metadata like the page’s priority in relation to other URLs on the website and the date of its last modification. A mobile sitemap makes sure search engines can appropriately index and present the right material to mobile consumers by giving them this information.
 
 **Example:** An online retailer with a mobile-specific website. All mobile-optimized pages, including product listings, category pages, and checkout pages, would have their URLs listed in a mobile sitemap. To aid search engines in comprehending the organization and significance of these sites, metadata is included with each entry in the sitemap. By doing this, search engines can swiftly lead consumers to the mobile-friendly version of the
-
 
 当他们在移动设备上进行产品搜索时，网站可以改善用户体验，并可能提高转化率。
 
@@ -4405,7 +4292,7 @@ Websites with discrete mobile-friendly pages or independent mobile versions bene
 
 请参阅*图 5.8*以更好地理解：
 
-如图所示，“我们的产品”页面位于**顶级**，并链接到**二级**类别：按类别、按关注点、按肤质、按关键成分。这些类别中的每一个再链接到多个**三级**页面，这些页面以黄色方框显示。
+如图所示，“我们的产品”页面位于`顶级`，并链接到`二级`类别：按类别、按关注点、按肤质、按关键成分。这些类别中的每一个再链接到多个`三级`页面，这些页面以黄色方框显示。
 
 “我们的产品”页面至关重要，因此它位于顶级导航中。将黄色链接的页面与蓝色顶级内容放在同一优先级上是不合逻辑的，这就是为什么它们被归类为三级内容。
 
@@ -4433,13 +4320,13 @@ Websites with discrete mobile-friendly pages or independent mobile versions bene
 </url>
 ```
 
-
-
 你仔细检查每个URL，确保每个方面都正确编码。随着时间的推移，这种细致的工作会提升你网站的性能。慢慢来，确保所有事情都正确完成。
 
 ## 第三步：确保代码准确性
 
 无论你手工编码多么频繁，任何人都会犯人为错误。然而，对于你的网站地图来说，任何编码错误都是绝对不能容忍的。
+
+
 
 幸运的是，有一些程序可以检查你的代码错误并确保语法正确。在这里，互联网应用程序可以成为你最好的伙伴。你只需在Google中输入“网站地图验证”，就会找到大量结果。
 
@@ -4449,17 +4336,17 @@ Websites with discrete mobile-friendly pages or independent mobile versions bene
 
 首先，进入你网站的根文件夹，并将你的网站地图文件上传到那里。这类似于为搜索引擎提供一张易于遵循的网站路线图。
 
-包含网站地图可确保每个页面都可访问，并改善网站的结构。许多网站都采用这种常见做法，即简单地在任何URL后添加“/sitemap/”，如下例所示：
+包含网站地图可确保每个页面都可访问，并改善网站的结构。许多网站都采用这种常见做法，即简单地在任何URL后添加`/sitemap/`，如下例所示：
 
 **例如，在Apple网站上查看：**
 
-https://www.apple.com/sitemap/
+`https://www.apple.com/sitemap/`
 
 想要深入了解？
 
-只需在任何网站的URL后添加“/sitemap.xml”，即可查看其底层代码，就像在HubSpot网站上一样。
+只需在任何网站的URL后添加`/sitemap.xml`，即可查看其底层代码，就像在HubSpot网站上一样。
 
-图5.9：显示HubSpot网站的sitemap.xml代码示例
+图5.9：显示HubSpot网站的`sitemap.xml`代码示例
 
 你还可以将其作为“Sitemap”标签集成到页脚导航中，以便快速访问。花点时间观察每个部分的逻辑结构和层次。
 
@@ -4468,10 +4355,10 @@ https://www.apple.com/sitemap/
 你的网站地图的旅程并未就此结束——一旦配置好并包含在网站文件中，就该将其提交给搜索引擎了。你应该按以下步骤操作：
 
 1. 访问Google Search Console。
-2. 找到“Crawl”部分并点击“Sitemaps”。
-3. 在右上角找到“Add/Test Sitemap”按钮。
+2. 找到`Crawl`部分并点击`Sitemaps`。
+3. 在右上角找到`Add/Test Sitemap`按钮。
 4. 在提交之前，你可以测试你的网站地图，确保没有错误。
-5. 一旦没有错误，点击“Submit”。
+5. 一旦没有错误，点击`Submit`。
 
 就这样！剩下的交给Google处理。你的网站将被其系统索引，这将提高你的SEO排名，并让用户更容易找到你的页面。
 
@@ -4483,17 +4370,16 @@ https://www.apple.com/sitemap/
 
 一些其他选项包括：
 
-- **Yoast SEO：** 一个全面的WordPress网站SEO插件。
-- **The SEO Framework：** 另一个WordPress SEO插件，专注于简洁性和性能。
-- **Jetpack：** 一个多功能的WordPress插件，包括站点管理工具、安全功能和性能增强。
-- **All in One SEO Plugin：** 一个受欢迎的WordPress插件，提供强大的SEO工具和优化功能。
-- **Slickplan：** 一个用于创建网站地图和可视化规划网站结构的工具。
+- `Yoast SEO`：一个全面的WordPress网站SEO插件。
+- `The SEO Framework`：另一个WordPress SEO插件，专注于简洁性和性能。
+- `Jetpack`：一个多功能的WordPress插件，包括站点管理工具、安全功能和性能增强。
+- `All in One SEO Plugin`：一个受欢迎的WordPress插件，提供强大的SEO工具和优化功能。
+- `Slickplan`：一个用于创建网站地图和可视化规划网站结构的工具。
 
 除了上面列出的工具外，互联网上还有大量其他创建网站地图的选项，每个都有独特的功能集，以满足各种需求和个人喜好。
 
-总之，无论网站多么简单或复杂，网站地图都是必不可少的。HTML和XML格式的网站地图对于提高搜索引擎排名都至关重要。XML网站地图有助于更快
+总之，无论网站多么简单或复杂，网站地图都是必不可少的。HTML和XML格式的网站地图对于提高搜索引擎排名都至关重要。XML网站地图有助于更快 indexing by helping search engines understand the structure and content of your website. HTML sitemaps, on the other hand, improve user experience through easier navigation and longer visitor engagement.
 
-indexing by helping search engines understand the structure and content of your website. HTML sitemaps, on the other hand, improve user experience through easier navigation and longer visitor engagement.
 If improving the SEO of your website is something you want to do, adding a sitemap is a great place to start.
 
 ## Information Architecture versus Sitemap
@@ -4514,29 +4400,43 @@ Table 5.2: Difference between Information Architecture and Sitemap
 
 The principles of information architecture (IA) and its vital function in structuring website content for a smooth user experience were covered in this chapter. We discussed the fundamental IA systems and principles that serve as the framework for efficient information structure. We also looked at guide users to relevant information, enhancing navigation and usability.
 
-- **Hierarchical:** Arranges information into broad categories and subcategories, resembling a tree structure.
-- **Sequential:** Presents information in a step-by-step order, common in processes like forms or tutorials.
+- `Hierarchical`：Arranges information into broad categories and subcategories, resembling a tree structure.
+- `Sequential`：Presents information in a step-by-step order, common in processes like forms or tutorials.
+
+
+
 - **Search Systems:** Mechanisms that allow users to find information by entering keywords or phrases, with options for refining results to locate specific content efficiently.
+
 - **Sitemap:** A structured list of all URLs on a website, along with metadata about each URL, such as relevance and last update date. It helps search engines crawl and index the site more effectively.
+
 - **Metadata:** Additional information about each URL in a sitemap, including its relevance and the date it was last updated, which assists search engines in understanding the site’s content.
+
 - **Search Engine Crawling:** The process by which search engines systematically browse and index a website’s content to include it in search results.
+
 - **Internal Linking:** Links that connect different pages within the same website, aiding in navigation and indexing.
+
 - **External Links:** Links from other websites pointing to your site, which can help improve search engine visibility and traffic.
+
 - **Large and Complex Sites:** Websites with many pages and sections, where a sitemap is essential for efficient navigation and indexing by search engines.
+
 - **HTML (Hypertext Markup Language):** The standard markup language used to create and structure content on the web, defining elements such as headings, paragraphs, and links.
+
 - **CSS (Cascading Style Sheets):** A stylesheet language used to control the presentation and layout of HTML elements on a webpage, including colors, fonts, and spacing.
+
 - **XML (eXtensible Markup Language):** A markup language designed to store and transport data, used in sitemaps to describe the structure and hierarchy of web content.
 
-
-
-
-
 - **WordPress：** 一种流行的内容管理系统（CMS），允许用户通过用户友好的界面和可自定义的功能创建、管理和发布网站和博客。
+
 - **网站管理员：** 负责管理和维护网站的个人，包括其内容、性能和技术方面。
+
 - **搜索引擎：** 在线工具（如 Google、Bing 或 Yahoo），根据用户查询对网络内容进行索引和检索，帮助用户在互联网上找到相关信息。
+
 - **可发现性：** 内容或网站被用户和搜索引擎找到的难易程度，通常通过有效的 SEO 实践和网站地图得到增强。
+
 - **首页：** 网站的主要或介绍性页面，通常作为导航和访问其他页面的中心枢纽。
+
 - **网站地图验证：** 检查网站地图以确保其格式正确、包含有效 URL 且无错误的过程，以确保搜索引擎能够正确索引。
+
 - **插件：** 软件附加组件，可扩展网站或内容管理系统的功能，例如添加 SEO、社交分享或增强安全性的功能。
 
 # 第 6 章
@@ -4585,16 +4485,19 @@ The principles of information architecture (IA) and its vital function in struct
 
 ## 线框图的重要性
 
-在进行任何设计或编码之前，线框图充当视觉参考，帮助利益相关者、开发人员和设计师理解功能和布局。它们确保各方达成一致，这促进了更
+在进行任何设计或编码之前，线框图充当视觉参考，帮助利益相关者、开发人员和设计师理解功能和布局。它们确保各方达成一致，这促进了更 effective project development and clearer communication.
 
-
-
-effective project development and clearer communication.
 Wireframes fulfill the following essential purposes:
 
 - **User-Focused Screen Planning:** Wireframes are vital for planning screens with a user-centered approach. They help designers map out the layout of apps and websites, logically arranging content and features without worrying about visual design details. This clear and accessible structure allows designers to gather early feedback from users and involve stakeholders in discussions. Using placeholders, designers can ask users what they expect to see, making sure the final product is intuitive and easy to use.
-- **Clarifying Features and Navigation:** Wireframes help clarify features and navigation by providing a basic outline of the app or website. They avoid going into the specifics of visual design and instead concentrate on how things are arranged and how people will interact with them. This frees up designers to focus on usefulness, making sure every element is accessible and arranged properly. Wireframes illustrate how users will navigate the interface by outlining the user flow and navigation patterns. This early emphasis on functionality guarantees that the finished product is intuitive and user-friendly while also assisting in the identification of possible problems.
-- **Quick and Cost-Effective Iteration:** Wireframes are crucial for the iterative design process because they are quick and inexpensive to create. All you need is a pen and paper to sketch a wireframe quickly and for free, or you can use various tools to create a digital wireframe in just minutes. They allow designers to experiment with different layouts and functionalities without investing significant time or resources. This flexibility enables rapid iterations based on feedback from users and stakeholders, ensuring the design evolves to meet user needs effectively. By refining wireframes early and often, designers can identify and address potential issues before moving to more detailed design stages, saving time and reducing costs. This approach helps create a more user-friendly final product while maintaining efficiency in the design process.
+
+
+
+### Clarifying Features and Navigation
+Wireframes help clarify features and navigation by providing a basic outline of the app or website. They avoid going into the specifics of visual design and instead concentrate on how things are arranged and how people will interact with them. This frees up designers to focus on usefulness, making sure every element is accessible and arranged properly. Wireframes illustrate how users will navigate the interface by outlining the user flow and navigation patterns. This early emphasis on functionality guarantees that the finished product is intuitive and user-friendly while also assisting in the identification of possible problems.
+
+### Quick and Cost-Effective Iteration
+Wireframes are crucial for the iterative design process because they are quick and inexpensive to create. All you need is a pen and paper to sketch a wireframe quickly and for free, or you can use various tools to create a digital wireframe in just minutes. They allow designers to experiment with different layouts and functionalities without investing significant time or resources. This flexibility enables rapid iterations based on feedback from users and stakeholders, ensuring the design evolves to meet user needs effectively. By refining wireframes early and often, designers can identify and address potential issues before moving to more detailed design stages, saving time and reducing costs. This approach helps create a more user-friendly final product while maintaining efficiency in the design process.
 
 ## Types of Wireframes
 
@@ -4618,16 +4521,15 @@ The preceding figure displays the wireframe design of the mobile application. In
 
 Mid-fidelity wireframes, often referred to as grayscale wireframes as well, use different tones of gray in place of full-color or high-resolution pictures, offering a thorough overview of the structure of a website or app. These wireframes are simpler and more basic than low-fidelity versions, but they
 
-
 缺乏高保真线框图的精细程度，后者是完全打磨和完善的。中保真线框图由设计师用来清晰地说明视觉层次和布局，这有助于传达各种元素的意义，而不会出现完整设计元素的视觉杂乱。这些线框图通常使用 Sketch 或 Balsamiq 等程序制作，可保证对拟议设计的平衡且易于理解的描述。
 
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_296_0.png)
 
-Figure 6.3: Example of Mid-Fidelity Wireframe
 
-前面的图显示了移动应用程序的线框设计。诸如标题、搜索栏、产品图片和描述等元素在中保真线框中以更大的深度显示。您可能会看到精细的框、图标和一些真实内容，而不仅仅是粗糙的块和线条。这种
 
-方法在复杂性和简洁性之间取得了平衡，使人们更容易看到布局和用户流程，而不会因复杂的设计功能而负担过重。
+### Figure 6.3: Example of Mid-Fidelity Wireframe
+
+前面的图显示了移动应用程序的线框设计。诸如标题、搜索栏、产品图片和描述等元素在中保真线框中以更大的深度显示。您可能会看到精细的框、图标和一些真实内容，而不仅仅是粗糙的块和线条。这种方法在复杂性和简洁性之间取得了平衡，使人们更容易看到布局和用户流程，而不会因复杂的设计功能而负担过重。
 
 ## High-Fidelity Wireframes
 
@@ -4657,10 +4559,6 @@ Figure 6.3: Example of Mid-Fidelity Wireframe
 
 ## Benefits of Wireframing
 
-
-
-
-
 线框图是设计网站或应用程序的重要工具。它们就像蓝图，帮助设计师和利益相关者看到并就布局和结构达成一致。以下是使用线框图的优点：
 
 - **可视化网站架构**
@@ -4676,9 +4574,10 @@ Figure 6.3: Example of Mid-Fidelity Wireframe
 次要导航是一个较小的菜单，可能出现在顶部右侧或特定页面内，提供指向相关部分或子页面的链接。
 
 有时，标记为“更多”的菜单项在点击时会显示其他选项或页面。
+
 在站点地图上，这些不同的导航元素可能看起来令人困惑，因为很难看出它们如何组合在一起。然而，线框图通过直观地组织导航在实际网站上将如何显示和工作，使其更清晰。它显示了主菜单和次要菜单将如何排列，以及用户如何在“更多”下访问额外选项，使复杂的导航更容易理解和使用。
 
-## 网站功能的详细概述
+### 网站功能的详细概述
 
 假设你正在与客户合作一个网站项目，而他们不知道“弹出窗口”、“产品筛选”或“Google 地图集成”是什么意思。你开始为该项目开发线框图以弥合这一差距。你的视觉讲故事工具将是这些线框图，它们使每个功能将在页面上的位置以及其如何工作变得明显。
 
@@ -4686,7 +4585,7 @@ Figure 6.3: Example of Mid-Fidelity Wireframe
 
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_301_1.png)
 
-### Figure 6.6: Wireframe Example Showing Website Features as Filters and Popup
+#### Figure 6.6: Wireframe Example Showing Website Features as Filters and Popup
 
 当你带他们浏览线框图时，客户可以清楚地看到产品筛选将如何促进更好的搜索，以及弹出窗口将如何显示信息以吸引注意力。除了确保最终产品有趣且用户友好之外，这种视觉方法还有助于他们更好地理解设计。通过明确定义每个项目的功能和位置，你可以创建一个满足用户需求和期望的网站。
 
@@ -4702,11 +4601,7 @@ Figure 6.3: Example of Mid-Fidelity Wireframe
 
 他们在此时讨论是否要创建新表单还是集成来自第三方应用程序表单的现有表单。他们还绘制了用户的转化路径，并决定谁将负责每个组件。这种共同理解确保所有各方都同意项目的目标和功能。
 
-团队通过提前解决这些问题并避免事后进行重大调整来节省时间和资源。通过简化
-
-
-
-开发流程并实现高效的资源分配，这种主动策略最终节省了时间和金钱。
+团队通过提前解决这些问题并避免事后进行重大调整来节省时间和资源。通过简化开发流程并实现高效的资源分配，这种主动策略最终节省了时间和金钱。
 
 - **高效的开发流程**
 
@@ -4728,6 +4623,8 @@ Figure 6.3: Example of Mid-Fidelity Wireframe
 
 ## 颜色
 
+
+
 出于多种原因，在线框图时最好避免使用颜色。保持灰色。它有助于避免从内容放置等关键组件上分散注意力，并有助于保持对建立布局和功能的主要目标的关注。过早引入颜色可能会导致利益相关者更关注美观而不是实用性，从而使布局讨论变得混乱。通过优先考虑实用性而不是美观，设计师确保线框图有效地传达用户体验和交互，而不会出现颜色误解的可能性。这种方法在整个设计过程中保持效率和关注度。
 
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_305_0.png)
@@ -4736,13 +4633,9 @@ Figure 6.3: Example of Mid-Fidelity Wireframe
 
 前面的图示说明了如何在线框图中呈现不同类型的內容，包括图像、文本、图标、下拉菜单等。有了这个视觉指南，你现在清楚地了解如何设计每个部分。是时候继续创建实际的线框图了。为了有效地做到这一点，我们需要遵循一系列结构化步骤。
 
-- 1. 识别元素并起草草图
+## 1. 识别元素并起草草图
 
 列出页面上必须包含的每个元素，包括文本、标题、照片、标志和导航栏。尽量做到尽可能彻底；额外内容以后总可以添加。之后至少绘制一个简单的低保真线框图。使用钢笔或铅笔手工绘制通常比使用任何数字软件创建更快、更灵活。尝试多种布局以确定哪个是最好的用户友好设计，并制作多个草图来探索其他概念。
-
-
-
-
 
 ## 2. 细化线框图
 
@@ -4756,60 +4649,56 @@ Figure 6.3: Example of Mid-Fidelity Wireframe
 
 选择合适的线框图工具对设计流程至关重要。记住，你也可以始终使用笔和纸！以下是一些流行的免费和付费创建线框图选项的详细介绍：
 
-### 创建线框图的免费工具：
+### 创建线框图的免费工具
 
-### Figma
+#### Figma
 
 - **Features:** Figma 为协作设计提供免费计划，具有全面的功能，包括线框图、原型制作和设计系统。当用户可以与团队成员实时协作时，共享和迭代设计变得简单。
 - **Pros:** 大型社区资源，实时协作，基于云。
 - **Cons:** 免费计划上编辑和文件存储受限。
 
-### Wireframe.cc
+#### Wireframe.cc
 
 - **Features:** Wireframe.cc 提供简洁的 UI，用于快速轻松地构建线框图。它使用简单工具并专注于创建基础线框图。
 - **Pros:** 基于浏览器，学习曲线低，使用简单。
 - **Cons:** 没有复杂的原型制作或设计选择，功能有限。
 
-### Pencil Project
+#### Pencil Project
 
 - **Features:** Pencil Project 是一个开源应用程序，可用于制作线框图、模型和原型。它内置了多种连接器和表单。
 - **Pros:** 免费且开源，丰富的形状库。
 - **Cons:** 与更新的工具相比，界面可能感觉陈旧且不够用户友好。
 
-### MockFlow
+#### MockFlow
 
 - **Features:** 用户可以使用 MockFlow 的免费基础计划通过拖放界面设计线框图和模型。还包括站点地图和 UI 流程设计工具。
 - **Pros:** 易于集成的套件满足各种设计需求，易于使用。
 - **Cons:** 免费计划功能有限，协作功能受限。
 
-### 创建线框图的付费工具：
+### 创建线框图的付费工具
 
-### Adobe XD
+#### Adobe XD
 
 - **Features:** Adobe XD 是一款完整的设计工具，包含原型制作、线框图、高保真设计和协作功能。它与 Adobe 其他 Creative Cloud 产品具有良好的集成。
 - **Pros:** 插件众多，与 Adobe 产品界面流畅，功能强大。
 - **Cons:** 价格取决于订阅；对于基础线框图可能过高。
 
-### Balsamiq
+#### Balsamiq
 
 - **Features:** Balsamiq 专长于制作模仿手绘草图的低保真线框图。其目的是避免陷入设计元素，而专注于结构和内容。
 - **Pros:** 鼓励专注于功能，易于使用，界面直观。
 - **Cons:** 对个人用户来说价格昂贵，且仅限于低保真设计。
 
-### Sketch
+#### Sketch
 
 - **Features:** Sketch 是 Mac 用户中备受欢迎的设计工具，具有丰富的线框图、UI 设计和原型制作功能集。它拥有强大的插件和集成生态系统。
 - **Pros:** Mac 原生性能，庞大的插件生态系统，高保真设计出色。
 - **Cons:** 仅在 Mac 上可用；升级和协作功能需要会员。
 
-### InVision
+#### InVision
 
 - **Features:** InVision 提供协作、原型制作和线框图工具。其功能包括交互式模型、设计移交和用户测试能力。
 - **Pros:** 实时更新，广泛的设计和协作功能，以及用户测试。
-
-
-
-
 - **缺点**：它可能很昂贵，而且一些用户发现基础的线框图绘制不太直观。
 
 每种工具都有各自的优势，适用于从基础线框图到详细的交互式原型等不同需求。你可以根据自己的需求、预算和工作方式来选择。
@@ -4844,25 +4733,20 @@ UX 设计需要在最终投产之前进行原型设计，以测试和完善用�
 以下是原型之所以重要的几个关键原因。
 
 - **早期问题发现：** 在发布新应用或对现有应用进行任何更改之前，你必须先获得利益相关者的同意。在利益相关者批准设计之前，原型是帮助他们看到最终产品的绝佳方式。在将设计交给开发团队之前，这也是收集他们意见并进行必要调整的好方法。通过尽早识别可能的可用性问题和设计缺陷，原型设计使设计师能够在问题变得代价更高、耗时更长之前加以解决。
-- **以用户为中心的设计：** 为了确保设计以用户为中心，原型设计至关重要。早期用户测试使设计师能够了解用户的偏好和需求，从而带来更直观且
-
-
-用户友好的最终产品。
-
+- **以用户为中心的设计：** 为了确保设计以用户为中心，原型设计至关重要。早期用户测试使设计师能够了解用户的偏好和需求，从而带来更直观且用户友好的最终产品。
 - **沟通工具：** 对于设计师、开发者和利益相关者来说，原型是一种有用的沟通手段。团队可以利用它来传达设计概念、预览最终产品，并提供反馈，使产品更好地满足企业目标。
-
 - **知情决策：** 原型制作提供了有见地的用户信息和反馈，可以指导开发过程并影响设计选择。这确保决策不是基于假设，而是基于真实的用户互动和偏好。
-
 - **迭代改进：** 原型制作使持续的测试、反馈和改进成为可能，从而促进迭代设计流程。通过这种迭代流程产生的最终设计更加精炼和实用。在应用构建之前，UX 团队可以利用原型这一迭代流程调整设计并发现未来的障碍。
 
 原型是 UX 设计的关键工具，有助于将想法可视化、测试和完善，最终带来更好的用户体验和更成功的产品。
 
 ## 原型制作的益处
 
+
+
 原型制作带来了一些关键优势，大大增强了设计和开发流程。以下是一些主要益处：
 
 - **降低风险：** 经过完整原型流程的项目比未经过的项目风险更低。这是因为项目资源、进度和预算都直接受到原型制作的影响。通过及早发现潜在问题并采取行动加以解决，原型制作降低了开发过程中昂贵返工和修改的可能性。通过原型制作，可以预测开发所需的时间和资源。
-
 - **成本效益：** 原型制作是一种经济实惠的方式，可以在不投入大量开发资源的情况下尝试各种设计概念。它有助于在广泛开发之前确定最佳方案。在项目内各项任务开始之前，应制作多个原型。这一基本概念可以用低保真原型清晰传达，类似于一套简单的草图。然而，在与焦点小组进行可用性测试时，高保真原型，如交互式数字模型，是收集深入反馈的更优选择。
 
 让我们探索最有效的原型制作方法：
@@ -4870,7 +4754,7 @@ UX 设计需要在最终投产之前进行原型设计，以测试和完善用�
 - Low-Fidelity Prototyping
 - High-Fidelity Prototyping
 
-## 低保真原型制作
+# 低保真原型制作
 
 低保真原型的目的是通过简化的基本表现形式来展示用户流程和产品的整体结构。这些原型通常使用线框图，即简单的图表，展示应用程序或网站应如何布局和导航。它们支持 UX 研究团队理解产品的资讯架构，并可视化信息应如何向用户呈现。
 
@@ -4882,10 +4766,9 @@ UX 设计需要在最终投产之前进行原型设计，以测试和完善用�
 
 以下是一些低保真原型的例子：
 
-
--   草图
--   纸质原型
--   可点击原型
+- 草图
+- 纸质原型
+- 可点击原型
 
 ## 草图
 
@@ -4921,12 +4804,8 @@ UX 设计需要在最终投产之前进行原型设计，以测试和完善用�
 
 低保真原型具有多项关键优势，使其成为设计早期阶段的宝贵工具：
 
--   **快速迭代**：低保真原型可以快速简便地制作。这使设计师能够快速迭代概念，并根据反馈进行修改和改进，从而节省大量时间和金钱。
--   **成本效益高：**制作低保真原型所需的材料和工具很少。更基础的数字线框、纸质模型或
-
-
-一个简单的草图比更为复杂的原型或成品成本更低。
-
+- **快速迭代**：低保真原型可以快速简便地制作。这使设计师能够快速迭代概念，并根据反馈进行修改和改进，从而节省大量时间和金钱。
+- **成本效益高：**制作低保真原型所需的材料和工具很少。更基础的数字线框、纸质模型或一个简单的草图比更为复杂的原型或成品成本更低。
 - **鼓励创新：** 低保真原型制作简单且能激发创新。设计师可以自由探索和头脑风暴，而不受技术实现问题或高细节设计要求的限制。
 - **促进早期用户测试：** 低保真原型允许早期用户测试和反馈。在进入更复杂的阶段之前，设计师可以及早发现可用性问题、理解用户需求，并通过让用户参与早期阶段做出必要的改进。
 - **改善沟通：** 这些原型是增强沟通的重要手段。它们通过帮助设计师有效地向客户、团队成员和利益相关者传达其概念，确保每个人都知道项目的主要思想和方向。
@@ -4949,7 +4828,7 @@ UX 设计需要在最终投产之前进行原型设计，以测试和完善用�
 
 低保真原型制作有一些好处，但也有一些可能影响设计过程的缺点。要就何时以及如何有效使用低保真原型做出明智的决定，就需要理解这些缺点。
 
-## 高保真原型制作
+# 高保真原型制作
 
 高保真数字原型是复杂的、精细的模型，与最终结果非常相似。通过使用这些原型对设计和用户流程进行全面测试和验证，UX 团队可以确保用户体验的每个部分都得到优化。
 
@@ -4967,9 +4846,10 @@ UX 设计需要在最终投产之前进行原型设计，以测试和完善用�
 
 - **交互式原型**
 
-  高保真交互式原型是一种复杂且动态的产品版本，在外观和功能上都与最终设计高度相似。这些原型包含真实图片、排版以及按钮、菜单和动画等交互组件，并使用先进的原型设计工具和软件制作。由于它们提供了逼真的用户体验，设计师可以借助它们测试和改进产品的每个部分。
+高保真交互式原型是一种复杂且动态的产品版本，在外观和功能上都与最终设计高度相似。这些原型包含真实图片、排版以及按钮、菜单和动画等交互组件，并使用先进的原型设计工具和软件制作。由于它们提供了逼真的用户体验，设计师可以借助它们测试和改进产品的每个部分。
 
-  一个电子商务网站就是一个典型的例子。A
+一个电子商务网站就是一个典型的例子。A
+
 
 
 comprehensive layout comprising photographs, product descriptions, and functional navigation would be present in the high-fidelity prototype. Customers could browse the complete selection, put products in their cart, and check out. This enables designers to find any problems and fix them before the development process starts.
@@ -4986,9 +4866,7 @@ Because they offer a realistic glimpse of the finished product, high-fidelity di
 
 ## Coded Prototypes
 
-For instance, a coded prototype for a new e-commerce website would utilize HTML to organize the pages, CSS to apply styling, including color and font choices, and JavaScript to include interactive features like picture sliders or drop-down menus. The prototype allows users to
-
-engage with the site in a manner that closely resembles the final version, including adding items to a shopping cart and completing the checkout procedure.
+For instance, a coded prototype for a new e-commerce website would utilize `HTML` to organize the pages, `CSS` to apply styling, including color and font choices, and `JavaScript` to include interactive features like picture sliders or drop-down menus. The prototype allows users to engage with the site in a manner that closely resembles the final version, including adding items to a shopping cart and completing the checkout procedure.
 
 Coded prototypes are useful because they offer an accurate and useful depiction of the finished product. This ensures a more seamless transition from prototype to final product by enabling designers and developers to test interactions, evaluate user flows, and make improvements based on actual performance data.
 
@@ -4997,17 +4875,21 @@ Coded prototypes are useful because they offer an accurate and useful depiction 
 Several significant advantages of high-fidelity prototyping improve the process of design and development. Some of them are as follows:
 
 - **Realistic User Experience:** In terms of functionality and design, high-fidelity prototypes closely match the final product. Users are given a genuine impression of the final product’s appearance and functionality, thanks to this realism, which encourages more accurate and insightful feedback.
+
 - **Detailed Feedback:** High-fidelity prototypes enable users to offer comprehensive input on both functioning and aesthetics since they have interactive features and realistic graphics. This aids in locating and resolving particular problems early in the design process.
+
 - **Improved Stakeholder Communication:** High-fidelity prototypes help team members, clients, and stakeholders understand design concepts. The thorough depiction lowers misconceptions and aligns expectations by assisting all parties in grasping the product vision.
+
 - **Refined Usability Testing:** High-fidelity prototypes allow for in-depth usability testing because of their realistic designs and interactive features. This guarantees that intricate features and interactions function as expected and aids in evaluating how consumers engage with the product.
-- **Reduced Risk of Misalignment:** High-fidelity prototypes reduce the possibility of miscommunication between the design team and stakeholders by offering a near-final product approximation. This
 
 
 
-确保最终产品更接近原始目标和规格。
+- **Reduced Risk of Misalignment:** High-fidelity prototypes reduce the possibility of miscommunication between the design team and stakeholders by offering a near-final product approximation. This 确保最终产品更接近原始目标和规格。
 
 - **精确的技术规格：** 高保真原型中经常包含详细规格和交互，可用于生成精确的技术文档。这使得设计更容易被开发者理解和应用。
+
 - **增强的设计验证：** 这些原型可以更有信心地确认设计选择。在进行大规模开发之前，它们有助于确保用户流程、交互和设计方面高效且满足用户需求。
+
 - **改善用户参与度：** 因为高保真原型看起来精致且逼真，用户更倾向于与之交互并提供有见地的评论。这种互动可能会产生有价值的信息，有助于打磨和提升最终作品。
 
 高保真原型制作是在全面开发之前测试和微调设计的强大工具，因为它提供了诸多益处，例如逼真的用户体验、详尽的反馈和增强的沟通。
@@ -5017,11 +4899,17 @@ Several significant advantages of high-fidelity prototyping improve the process 
 高保真原型提供了对最终产品的全面而准确的展示，但也带来了一些困难：
 
 - **高成本：** 生产高保真原型需要大量资金投入用于软件、设计工具，并经常需要专业知识。与更简单的原型技术相比，这可能会更昂贵，特别是如果需要多次迭代。
+
 - **耗时：** 创建具有逼真图形和交互的复杂原型需要大量工作。这可能会延迟设计流程，推迟评论和修改，而这些修改如果使用低保真技术可以更快完成。
+
 - **过度强调细节：** 高保真原型有可能通过过度关注视觉设计和细节，而使人们忽视在设计阶段更早应解决的重要功能缺陷或用户体验问题。
+
 - **误导性反馈的风险：** 因为高保真原型与最终产品如此相似，客户可能会给出更侧重于设计美观性而非其可用性或功能性的反馈。这可能导致反馈优先考虑美学，而非重要的用户体验问题。
+
 - **灵活性有限：** 对高保真原型进行调整可能更困难且耗时。调整通常需要重新制作复杂细节，这与低保真原型提供的灵活性相比可能很费力。
+
 - **范围蔓延：** 由于高保真原型非常详细，可能会根据原型看起来有多逼真而提出更多功能或修改。这可能导致成本增加和进度延长。
+
 - **资源密集：** 高保真原型需要大量资源投入，例如经验丰富的开发人员和设计师。这可能会给项目预算和资源带来压力，尤其是在小型团队或初创公司中。
 
 高保真原型虽然提供了最终产品的逼真样本，但也有诸多缺点，例如高昂的价格、时间需求以及可能过度强调视觉方面。高效的设计和开发需要在这些变量与项目需求之间取得平衡。
@@ -5033,10 +4921,8 @@ Several significant advantages of high-fidelity prototyping improve the process 
 ### 低保真原型制作和线框图
 
 - **Balsamiq：** 非常适合快速创建简单线框图。
+
 - **Sketch：** 广泛用于线框图制作，专注于 UI/UX 设计。
-
-
-
 
 | 方面 | 线框图 | 原型 |
 |---|---|---|
@@ -5064,51 +4950,77 @@ Several significant advantages of high-fidelity prototyping improve the process 
 
 - **线框图：** 展示网站或应用布局与导航的基本图示。
 
-
-
-
-
 - **低保真：** 简单、基础的原型，用于测试和探索早期设计概念。
+
 - **高保真：** 详细、精致的原型，与最终产品非常相似。
+
 - **蓝图：** 设计项目的详细计划或大纲。
+
 - **草图：** 设计概念的粗略、手绘表现形式。
+
 - **以用户为中心：** 设计方法优先考虑终端用户的需求和偏好。
+
 - **占位符：** 临时内容或元素，标示最终内容将放置的位置。
+
 - **视觉层次：** 设计元素的排列方式，用于引导观众的注意力和理解。
+
 - **可用性测试：** 真实用户测试产品的过程，以识别问题并提供反馈。
+
 - **交互：** 用户与产品互动的方式，例如点击、轻触或滑动。
+
 - **交互流程：** 用户在产品内完成任务所采取的步骤序列。
+
 - **可扩展性：** 产品在增加使用量或增长时仍能保持性能的能力。
+
 - **原型：** 产品的一个早期版本，提供对设计结构、用户体验和整体概念的洞察，允许对各种功能进行测试和改进。
+
 - **模型：** 用于测试和完善设计概念的产品原型或早期模型。
+
 - **设计思维：** 一种设计方法论，在测试的后期阶段高度依赖原型制作，以确保最终产品满足用户需求。
+
 - **表现形式：** 原型所呈现的形式，例如纸上、移动设备或计算机屏幕上。
+
 - **精确度：** 原型中的细节程度，从粗糙简单（低保真）到非常详细和精致（高保真）。
+
 - **交互性：** 用户在测试期间可以与原型互动的程度，无论他们只能查看、部分互动还是完全使用其功能。
+
 - **演进：** 原型的生命周期，其中测试版本可通过快速原型制作迅速被新迭代取代。
+
 - **低保真原型制作：** 简化的表现形式，展示用户流程和产品的整体结构，通常使用线框图。在设计早期阶段用于快速迭代和反馈，非常有用。
+
 - **高保真原型制作：** 用于在可用性测试期间收集深入反馈的详细、交互式数字模型。
+
 - **早期问题检测：** 在原型制作过程中尽早识别可用性问题和设计缺陷，以便在问题变得更昂贵和耗时之前解决。
+
 - **沟通工具：** 原型用于传达设计概念并收集设计师、开发人员和利益相关者的意见。
+
 - **知情决策：** 利用原型制作的洞察和用户反馈来指导开发过程并影响设计选择。
+
 - **迭代改进：** 对原型进行持续测试、反馈和完善，以生产出更具功能性和更精致的最终设计。
+
 - **成本效益：** 通过原型制作以较少投入实验各种设计概念的能力，降低昂贵返工和重做的风险。
+
 - **评估技术可行性：** 使用原型来确定哪些功能难以实现，并揭示意外的财务、技术或实际限制。
+
 - **改进可视化：** 通过提供一种切实探索设计概念的方式，增强思想的传达并获得利益相关者的支持。
+
 - **功能验证：** 使用原型通过确认其可行性和有效性来优先考虑对用户价值最大的功能。
+
 - **完整版本：** 设计或产品的详细完整版本，包含最终版本中预期的所有功能、功能和设计元素。
+
 - **逼真图形：** 视觉元素与真实生活的外观和细节非常接近，提供更逼真、更准确的最终产品表现。
 
-
-
-
-
 # 第7章
+
 ## 视觉设计与UI模式
 
 ## 引言
 
-欢迎学习本章关于用户界面（UI）设计关键方面的内容。我们将首先深入探讨视觉层次的概念，这对于引导用户的注意力以及设计用户友好的界面至关重要。通过了解如何在视觉上对元素进行优先级排序，设计师可以创造出有趣且用户友好的体验。接着，我们将研究UI设计模式，这些是解决典型设计问题的行业标准方法，能够提高可用性和用户满意度。我们还将介绍最优秀的UI模式库，这些资源提供了预制元素和设计思路，帮助你加快设计流程。最后，我们将探讨暗色UI设计模式，审视这些策略如何影响用户行为，并讨论道德设计的重要性。学完本章后，你将全面理解这些基础UI概念及其对用户体验的影响。
+
+
+# 欢迎学习本章关于用户界面（UI）设计关键方面的内容
+
+我们将首先深入探讨视觉层次的概念，这对于引导用户的注意力以及设计用户友好的界面至关重要。通过了解如何在视觉上对元素进行优先级排序，设计师可以创造出有趣且用户友好的体验。接着，我们将研究UI设计模式，这些是解决典型设计问题的行业标准方法，能够提高可用性和用户满意度。我们还将介绍最优秀的UI模式库，这些资源提供了预制元素和设计思路，帮助你加快设计流程。最后，我们将探讨暗色UI设计模式，审视这些策略如何影响用户行为，并讨论道德设计的重要性。学完本章后，你将全面理解这些基础UI概念及其对用户体验的影响。
 
 ## 章节结构
 
@@ -5152,37 +5064,36 @@ Several significant advantages of high-fidelity prototyping improve the process 
 
 ## 视觉层次的重要性
 
-在设计领域，视觉层次至关重要，因为它引导观看者的
+在设计领域，视觉层次至关重要，因为它引导观看者的 attention, facilitating navigation and information comprehension. There are multiple essential factors that highlight the significance of visual hierarchy in design:
 
-
-attention, facilitating navigation and information comprehension. There are multiple essential factors that highlight the significance of visual hierarchy in design:
-
-## Guides User Attention
+### Guides User Attention
 
 - **Prioritization**: Visual hierarchy ensures that the most crucial elements stand out by drawing users’ attention to them first. Emphasizing vital aspects, like headlines, call-to-action buttons, or important messaging, makes it easier for readers to quickly comprehend the most relevant information without becoming overwhelmed. This prioritization makes the content simpler to read and understand.
 - **Flow**: The information is presented in an intelligible and logical arrangement, allowing the user’s eye to follow its natural flow.
 
-## Improves User Experience
+### Improves User Experience
 
 - **Ease of Navigation**: A well-organized website or application helps customers locate what they need fast and execute tasks with ease, which improves their overall experience.
 - **Readability**: Text is easier to read and comprehend when headings, subheadings, and body text are clearly distinguished from one another.
 
-## Enhances Engagement
+### Enhances Engagement
 
 - **Attention-Grabbing**: Visual hierarchy facilitates rapid material scanning by arranging text and graphics in a clear, logical manner that enhances readability. In order to assist consumers understand and retain information, it draws attention to crucial components such as headlines, calls to action (CTAs), and critical messaging.
 - **Interaction**: Promoting interaction with the most crucial components makes it more likely that users will perform the intended actions, like pressing a button or completing a form.
 
-## Increases Conversion Rates
+### Increases Conversion Rates
 
 - **Strategic Placement**: By strategically placing calls to action (CTAs) and critical information where users are most likely to notice them, you can increase conversion rates by encouraging users to take the required action.
 - **User Journey**: Leading users through a carefully considered journey enhances the likelihood that they will accomplish particular objectives, like buying something or subscribing to a newsletter.
 
-## Conveys Brand Message Effectively
+### Conveys Brand Message Effectively
 
 - **Consistency**: By guaranteeing that the design is in line with the company’s message and values, a well-executed visual hierarchy strengthens the brand identity.
 - **Clarity**: It ensures that users comprehend the purpose and objectives of the material by helping to communicate the intended message in an unambiguous and clear manner.
 
-## Reduces Cognitive Load
+### Reduces Cognitive Load
+
+
 
 - **Simplification**: By organizing content in a structured manner, visual hierarchy reduces the cognitive load on users, making it easier for them to process information.
 - **Focus**: By allowing users to concentrate on a single aspect at a time without becoming sidetracked by unimportant information, they can browse more effectively.
@@ -5202,13 +5113,9 @@ You can use a variety of design techniques on your website to draw users in and 
 
 When a page or screen has a strong visual hierarchy, visitors are guided to its functionality and provided with appropriate visual signals. Users react to interfaces milliseconds faster than other types of websites, making snap decisions about whether to stay or go. Z pattern and F pattern are the two main reading layouts. These carefully arrange material to create a coherent narrative that makes sense to visitors, thereby supporting their natural reading tendencies, which are typically left to right for most people in western countries.
 
-**Z-Pattern Layout**
+#### Z-Pattern Layout
 
 This well-liked design idea in visual hierarchy mimics how our eyes naturally scan information. Envision a path that is Z-shaped. It begins at the top left, travels horizontally to the right, then descends diagonally to the left, and ends with one more horizontal sweep heading to the right. People usually read from left to right and top to bottom, which is reflected in this pattern.
-
-
-
-
 
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_338_0.png)
 
@@ -5218,7 +5125,7 @@ This well-liked design idea in visual hierarchy mimics how our eyes naturally sc
 
 这种布局非常适合制作干净、有条理的设计，使人们易于理解和参与重要组件。它确保关键信息被放置在人们可能查看的位置，从而增强可用性和参与度。
 
-## F-Pattern Layout
+#### F-Pattern Layout
 
 基于人们通常阅读和扫描文本密集型内容的方式，设计师创建了 F 形模式布局。这种设计模仿字母“F”，代表人们从上到下、从左到右扫描的自然倾向。F 形模式中有两条水平笔画和一条垂直笔画。
 
@@ -5228,15 +5135,15 @@ This well-liked design idea in visual hierarchy mimics how our eyes naturally sc
 
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_339_2.png)
 
-F-pattern layout
+*F-pattern layout*
 
-Figure 7.4: Example of F-pattern layout
+*Figure 7.4: Example of F-pattern layout*
 
 在实际使用 F 形模式时，用户通常先阅读顶部的水平线，其中经常包含标题或重要信息。他们继续向下浏览页面时，会扫描一条位于顶部下方一点的另一条水平线；该线可能包含副标题或关键信息。最后，访客通常通过沿文章左侧垂直扫描来寻找更多信息或导航选项。
 
 例如，在新闻网站上，F 形模式可以这样使用：顶部的水平线包含一个大标题或重要新闻。第二个水平线中可能出现其他文章的简短摘要或副标题。左侧的垂直笔画中可能包含一个带有更多文章或链接的侧边栏。由于这种布局使访客能够快速找到并理解最重要的内容，因此非常适合文本密集的页面，在这些页面中需要立即获取重要信息。
 
-## Size and Scale
+### Size and Scale
 
 大小和比例是视觉层次的重要组成部分，会极大地影响用户与设计的互动。较大的元素通常会吸引更多的注意力，而较小的功能通常被视为不太重要。设计师可以通过仔细调整各个组件的大小和比例来引导用户的注意力，并确保最重要的信息得到突出显示。
 
@@ -5248,7 +5155,9 @@ Figure 7.4: Example of F-pattern layout
 
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_341_0.png)
 
-Figure 7.5: Visual impact of large elements in design
+*Figure 7.5: Visual impact of large elements in design*
+
+
 
 作为设计师，你有权像建筑师规划大都市一样组织这些组件。你可以通过仔细改变不同组件的比例和大小，将用户的注意力精确地引导到你想要的位置。当大小和比例被明智使用时，最重要的信息会被看到和理解，从而创造出视觉上令人愉悦且和谐的设计环境。这可以通过一个立即吸引注意力的巨大标题来实现，也可以通过提供深度的微妙细节来实现。这种战略性安排可以提高你网站的用户参与度和转化率。
 
@@ -5256,11 +5165,14 @@ Figure 7.5: Visual impact of large elements in design
 
 在设计中利用比例和大小可以帮助建立清晰的视觉层次并突出关键组件：
 
-
 - **优先处理关键元素：** 为了确保标题、关键图片和行动号召按钮首先获得观看者的注意，请为这些元素使用更大的尺寸。
+
 - **保持平衡：** 避免使用过大的元素让用户不堪重负。较大的部分应与较小的细节相平衡，以形成令人愉悦的布局。
+
 - **运用对比：** 将较大的元素与较小的元素搭配，以形成强烈对比并突出设计中最重要的组成部分。
+
 - **保持尺寸一致：** 为了保持统一的外观和感觉，请在相似元素之间遵循一致的大小层级（例如，让所有标题大小一致）。
+
 - **响应式缩放：** 为了保持可读性和重点，请确保文本和图片大小具有响应性，并能在各种屏幕尺寸下良好工作。
 
 ## 色彩与对比度
@@ -5286,18 +5198,20 @@ Figure 7.5: Visual impact of large elements in design
 通过巧妙运用色彩和对比度来突出重要组件，可以在你的设计中创造出赏心悦目的体验。以下建议将帮助你在设计中充分利用色彩和对比度：
 
 - **在重要元素上使用大胆的颜色：** 为了使行动号召按钮和标题脱颖而出，请为这些元素使用明亮或对比鲜明的颜色。
+
 - **创造可读性对比：** 通过提供足够的文本与背景色对比，确保你的内容易于阅读和访问。
+
 - **限制调色板颜色数量：** 为保持视觉和谐并避免让用户感到压迫，请在统一的配色方案中限制冲突颜色的数量。
+
 - **使用强调色进行突出：** 使用强调色将用户的注意力引向最重要的内容或交互组件。
+
 - **利用色彩一致性：** 在整个网站中一致地使用颜色，以强调每个功能或类别的重要性，并建立清晰的视觉层级。
+
 - **利用色彩心理学：** 考虑颜色如何影响情绪和用户行为。例如，使用暖色来暗示紧迫感。
 
 ## 留白
 
 网页上元素之间和周围的空白区域被称为留白，或负空间。通过消除杂乱，留白提高了可读性和视觉平衡，便于用户更轻松地吸收信息，并帮助用户专注于重要文本。
-
-
-
 
 想象走进一间布置精美的艺术画廊。每幅画作都留有充足的周围空间，让你能够欣赏其细节，而不会因周围的杂乱而感到不知所措。这种开放的空间，或“负空间”，有助于你专注于艺术作品并吸收其精髓。
 
@@ -5318,10 +5232,15 @@ Figure 7.5: Visual impact of large elements in design
 在设计中添加空白将极大地提高注意力和清晰度，使你的内容更易于阅读且更具吸引力。以下是利用空白布局的一些基本要点：
 
 - 优先考虑关键元素：为关键元素周围留出充足的空白，使其脱颖而出并吸引注意力。
+
 - 分区：利用空白清晰划分网站的各个部分，以便读者更轻松地导航和理解材料。
+
 - **提高可读性：** 在文本块周围添加更多空白，使其更易于阅读且视觉上不那么杂乱。
+
 - **建立视觉平衡：** 在不同元素之间保持健康的空白量，以产生统一且井然有序的设计。
+
 - **专注于重要步骤：** 在号召性用语按钮和重要信息周围提供额外的空白，以吸引访客的注意力并促进参与。
+
 - **简化布局：** 使用空白为每个元素提供特定区域，使你的设计不那么杂乱。这将使你的布局更具美感且更易于使用。
 
 ## 排版
@@ -5331,10 +5250,6 @@ Figure 7.5: Visual impact of large elements in design
 想象你正在浏览一个按样式和大小排列书籍的图书馆。你的眼睛会被书架上醒目展示的最大、最精美的书籍所吸引。随着你走近，由较小、更易读的书籍以系统顺序排列，你的眼睛会被引导穿过整个收藏。这种排列方式模仿了排版在网页设计中的功能。
 
 网页上的排版与这个井然有序的图书馆类似。通过使用不同的字体样式、大小和粗细，创造了视觉层级，使用户能够更快地浏览和理解文本。例如，一个大号、粗体的标题会立即吸引读者的目光，而正文和子标题的设计则是为了强调而非削弱主要主题。
-
-
-
-
 
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_348_0.png)
 
@@ -5346,12 +5261,18 @@ Figure 7.5: Visual impact of large elements in design
 
 用有效的排版增强设计是创建清晰视觉层级的关键。以下是确保排版既富有创意又易于阅读的一些技巧：
 
-- 创建清晰的层级：使用不同的字体大小和粗细来区分标题、副标题和正文，以便清晰地区分各部分，帮助用户快速把握结构和内容的重要性。例如，Reddit.com（图 7.8）通过清晰、引人入胜的排版有效地组织了其庞大的信息，使导航变得简单直观。
+- 创建清晰的层级：使用不同的字体大小和粗细来区分标题、副标题和正文，以便清晰地区分各部分，帮助用户快速把握结构和内容的重要性。例如，`Reddit.com`（图 7.8）通过清晰、引人入胜的排版有效地组织了其庞大的信息，使导航变得简单直观。
+
 - **选择可读的字体：** 确保您选择的字体在各种设备上都能轻松阅读。为了使作品具有可读性和可访问性，请将清晰度置于风格之上。
+
 - **有效使用对比：** 对重要元素使用对比的字体粗细和颜色以创造醒目的视觉效果。强烈的对比吸引读者的注意力，使关键材料脱颖而出。
+
 - **最小化字体变化：** 为保持一致性，请坚持使用少量字体家族。过多的字体变化可能会分散内容的注意力并造成视觉混乱。
+
 - **使用层级缩放：** 调整字体大小以建立明确的层级。通过使用较大字体用于主要标题、中等字体用于副标题、较小字体用于正文，用户可以轻松浏览信息。
+
 - **使用视觉平衡：** 确保文本块对齐和间距适当。适当的间距和对齐不仅提高了可读性，还产生了平衡、视觉上美观的布局。
+
 - **强调重要信息：** 通过使用大胆或斜体的创新排版功能，使号召性用语或基本事实脱颖而出，同时不会让读者感到不知所措。
 
 ## 一致性
@@ -5361,6 +5282,8 @@ Figure 7.5: Visual impact of large elements in design
 将创建网站想象成组织一个社区。街道（或布局）精确对齐，每个房屋（或网页元素）都具有相同的风格。这使得访客能够轻松地四处导航。
 
 在线设计中的一致性类似于确保所有房屋具有相同的风格，具有一致的字体、颜色和页面空间。这种统一性使用户感到更舒适，并了解在浏览您的网站时可以期待什么。
+
+
 
 对齐为客人提供了一条清晰的路径，就像保持所有房屋排成一排一样。通过正确对齐文本、照片和按钮，用户的视线能够轻松地从页面一个区域引导到另一个区域，从而使网站易于导航。
 
@@ -5375,10 +5298,6 @@ Figure 7.5: Visual impact of large elements in design
 - 统一对齐元素：确保按钮、文本和图像在整个页面上都放置相等。正确完成的对齐会产生视觉流动，有效地集中用户的注意力。
 - 建立重复的设计模式：使用相似的设计模式，例如按钮设计和标题格式，以在多个页面上建立可识别的用户体验。
 - 均匀分布元素空间：保持项目之间的恒定距离。这保持了整洁，并保证了平衡良好的布局，从而提高了可读性和美观性。
-
-
-
-
 
 ## 布局
 
@@ -5398,26 +5317,31 @@ Figure 7.5: Visual impact of large elements in design
 
 ### 图 7.9：使用纹理背景和 z-index 分层样式营造景深的网站
 
-# GFCA 足球卡正式发布！
+#### GFCA 足球卡正式发布！
 
 成为会员 →
 
-# 新闻
+#### 新闻
 
-# 新闻稿
+#### 新闻稿
 
 阿雅克肖加泽莱克足球俱乐部新闻稿
 
-# 日程
+#### 日程
 
 周一 训练
+
 周二 训练
+
 周三 训练
+
 周四 休息
+
 周五 训练
+
 日程 10/21 至 10/27
 
-# 周日比赛结果
+#### 周日比赛结果
 
 周日比赛结果
 
@@ -5427,7 +5351,7 @@ Figure 7.5: Visual impact of large elements in design
 
 ## 使用 Z-Index 增加深度
 
-创造深度的另一个重要工具是 z-index 属性，它控制网页上元素的层叠顺序。通过为重要的组件（如浮动按钮或横幅）分配更高的 z-index 值，你可以确保它们显示在其他元素之上，从而有效地吸引用户的注意力。正如房间中分层的纹理可以增加立体感一样，在网页设计中有策略地使用 z-index，可以通过增加焦点层次来创造引人入胜的视觉体验。
+创造深度的另一个重要工具是 `z-index` 属性，它控制网页上元素的层叠顺序。通过为重要的组件（如浮动按钮或横幅）分配更高的 `z-index` 值，你可以确保它们显示在其他元素之上，从而有效地吸引用户的注意力。正如房间中分层的纹理可以增加立体感一样，在网页设计中有策略地使用 `z-index`，可以通过增加焦点层次来创造引人入胜的视觉体验。
 
 ## 打造有力的视觉层次
 
@@ -5437,12 +5361,7 @@ Figure 7.5: Visual impact of large elements in design
 - **运用对比：** 使用对比鲜明的颜色、字体和样式来突出重要部分并产生视觉区分。
 - **使用一致的对齐：** 通过清晰对齐元素，提供简洁有序的结构，自然引导用户的注意力在材料间移动。
 - **适当缩放元素：** 使用大小和比例突出关键文本或图像，确保它们在视觉领域中占主导地位。
-- **有效利用留白：** 防止杂乱，并让每一
-
-
-
-元素脱颖而出，为重要组件周围留出充足的空间。
-
+- **有效利用留白：** 防止杂乱，并让每一元素脱颖而出，为重要组件周围留出充足的空间。
 - **使用视觉提示：** 通过箭头、线条或粗体文本等功能，将用户的注意力引导至关键位置或任务。
 - **创建清晰路径：** 以一种引导用户从一个信息到下一个信息的方式排列内容，遵循逻辑顺序。
 
@@ -5467,15 +5386,18 @@ UI 设计模式为频繁的设计问题提供了经过验证的答案，就像�
 除这些好处外，UI 设计模式还因以下原因而必不可少：
 
 - **跨界面的一致性**
+
   可以通过使用 UI 设计模式来保持应用程序或网站各个部分之间的一致性。用户自然了解如何与常见功能（如按钮、表单和导航菜单）交互。由于一致性防止用户每次都要重新学习如何使用界面的每个部分，因此用户将拥有更流畅和愉快的体验。
+
 - **改善可用性**
+
   由于其已证实能够解决常见设计问题，因此设计模式是提高可用性的有用工具。例如，用户可以轻松快速地找到所需内容，使用设计良好的搜索栏模式。设计师可以使用这些模式制作简单易用且直观的界面，从而降低用户挫败感的风险。
+
 - **设计流程效率**
+
   对于设计师而言，UI 设计模式节省了时间和精力。设计师可以专注于定制和完善设计以满足特定需求
 
-
-
-next. 你只需简单点击继续，这将简化流程并减少你体验中的挫败感。
+  next. 你只需简单点击继续，这将简化流程并减少你体验中的挫败感。
 
 界面内的主要操作按钮充当有用的顾问，促进高效且轻松的任务完成。
 
@@ -5495,11 +5417,13 @@ next. 你只需简单点击继续，这将简化流程并减少你体验中的�
 
 这种模式代表你的进度，就像一张路线图。例如，当你为一项新服务注册时，你可能会注意到页面顶部的进度条在你完成每一步时稳步填满。或者，你可能会看到编号的阶段，例如“第 2 步，共 5 步”，这表明你快完成了。
 
+
+
 不仅要完成一个程序，感到掌控一切并知道下一步是什么也很重要。想象一下你正在从一次网络购物马拉松中结账。当你意识到完成订单只剩下两个步骤时，感觉是可管理的，这会激励你完成它。
 
 还有其他方法可以应用这种模式：你可以使用随着进行而填满的进度条、每完成一步就出现的复选标记，甚至只是简单的数字来表示还剩下多少步骤。
 
-Steps Left 模式在你填写冗长的表单、进行入职流程或进行购买时，让你保持知情和积极，从而使你更容易坚持计划并完成你开始的任务。
+`Steps Left`模式在你填写冗长的表单、进行入职流程或进行购买时，让你保持知情和积极，从而使你更容易坚持计划并完成你开始的任务。
 
 ## Breadcrumbs: Your Navigation Trail
 
@@ -5510,10 +5434,6 @@ Steps Left 模式在你填写冗长的表单、进行入职流程或进行购买
 对于大型网站或应用程序，例如电子商务网站、拥有大量条目的博客或具有广泛类别的网站，面包屑的使用非常有益。它们使用户能够在各个区域之间移动、保持井然有序，并在信息的海洋中保持漂浮。
 
 简单来说，面包屑充当一个有用的指南，使探索变得更容易，而不会迷路。
-
-
-
-
 
 ## 渐进式披露：逐步呈现
 
@@ -5552,10 +5472,6 @@ Steps Left 模式在你填写冗长的表单、进行入职流程或进行购买
 ## 订阅计划：选择完美匹配
 
 把订阅计划想象成餐厅的菜单。就像菜单以不同的价格提供不同的菜肴一样，订阅计划提供不同级别、价格和功能的服务或内容访问选项。
-
-
-
-
 
 例如，想象你正在为一个流媒体服务注册。你可能会看到以下选项：
 
@@ -5619,35 +5535,31 @@ Steps Left 模式在你填写冗长的表单、进行入职流程或进行购买
 
 ## 实现 UI 设计模式
 
-有效使用 UI（用户界面）设计模式需要了解它们为何被使用、为你的需求选择最佳模式，以及以提升用户体验的方式将其付诸实践。以下是如何使用 UI 设计模式的指南：
+有效使用 UI 设计模式需要了解它们为何被使用、为你的需求选择最佳模式，以及以提升用户体验的方式将其付诸实践。以下是如何使用 UI 设计模式的指南：
 
-- 1. **定义问题**
-  
-  有效使用 UI 设计模式的第一步是确定用户界面需要解决的确切问题或需求。这涉及弄清人们的需求，例如一种轻松查找信息的方式，这可能会引导你应用搜索模式。此外，检查用户行为、反馈和数据对于了解他们遇到的困难并帮助你选择最佳设计模式至关重要。
+### 1. 定义问题
 
-- 2. **选择正确的模式**
+有效使用 UI 设计模式的第一步是确定用户界面需要解决的确切问题或需求。这涉及弄清人们的需求，例如一种轻松查找信息的方式，这可能会引导你应用搜索模式。此外，检查用户行为、反馈和数据对于了解他们遇到的困难并帮助你选择最佳设计模式至关重要。
 
-
+### 2. 选择正确的模式
 
 a. **导航模式**：使用菜单和面包屑来组织和访问材料。
-
 b. **输入模式：** 这些用于表单和滑块中收集用户输入。
-
 c. **反馈模式：** 使用反馈模式（如进度条和通知）为消费者提供反馈。
-
 d. **内容结构化模式**：使用卡片和网格以有意义的方式组织内容。
 
-## 3. 保持一致性和可用性
+### 3. 保持一致性和可用性
 
 a. 验证该模式在你的产品中始终一致，并且与你的整体设计语言契合良好。
-
 b. 考虑可访问性指南，以确保该模式对所有用户都有效，包括残障人士。
 
-## 4. 实现该模式
+### 4. 实现该模式
 
-通过将其与你喜欢的设计软件（如 Adobe XD、Sketch 或 Figma）结合，将模式应用到你的设计中。自定义模式以符合你的品牌并满足用户需求，但要小心不要偏离标准太多，以免让用户感到困惑。
+通过将其与你喜欢的设计软件（如 `Adobe XD`、`Sketch` 或 `Figma`）结合，将模式应用到你的设计中。自定义模式以符合你的品牌并满足用户需求，但要小心不要偏离标准太多，以免让用户感到困惑。
 
-## 5. 测试和迭代
+### 5. 测试和迭代
+
+
 
 在模式付诸实践后应进行可用性测试，以确保它解决了手头的问题而不引发新的问题。获取用户反馈并准备好根据获得的知识做出设计更改。
 
@@ -5663,31 +5575,31 @@ b. 考虑可访问性指南，以确保该模式对所有用户都有效，包�
 
 专为企业应用设计的模式由 Ant Design 提供，这是一款面向企业级产品的设计解决方案。
 
-- **网站：** https://ant.design
+- **网站：** `https://ant.design`
 
 ## Foundation
 
 - **描述：** Foundation 是一个响应式前端框架，专注于灵活性，提供易于为任何项目定制的 UI 组件和模式。
 
-- **网站：** https://get.foundation
+- **网站：** `https://get.foundation`
 
 ## Carbon Design System
 
 - **描述：** IBM 设计的 Carbon Design System 是一个完整的设计系统，包含面向企业应用的模式、设计规则和用户界面组件库。
 
-- **网站：** https://carbon.designsystem.com
+- **网站：** `https://carbon.designsystem.com`
 
 ## Semantic UI
 
 - **描述：** Semantic UI 是一个前端框架，它利用自然语言概念来生成响应且可适应的 UI 元素。
 
-- **网站：** https://semantic-ui.com
+- **网站：** `https://semantic-ui.com`
 
 ## Fluent UI
 
 - **描述：** Microsoft 的 Fluent UI 提供了一系列基于 React 的组件和设计原则，用于构建标准化且易于导航的在线体验，尤其适用于企业应用。
 
-- **网站：** https://developer.microsoft.com/en-us/fluentui
+- **网站：** `https://developer.microsoft.com/en-us/fluentui`
 
 这些库为设计和开发用户界面提供了坚实的基础，无论你是在构建小型网站还是大型企业级应用。
 
@@ -5699,66 +5611,77 @@ b. 考虑可访问性指南，以确保该模式对所有用户都有效，包�
 
 Figure 7.11: Example of Mobile UI Design Pattern
 
-随着技术的进步，打造强大的移动用户界面（UI）变得更加关键。像专家工匠一样，设计师们理解 UI 模式，即经过验证的设计方法，在创建美观且用户友好的应用中的价值。此外，他们还发现提供预制设计元素的 UI 库在加速设计过程的同时不会牺牲质量方面非常有帮助。设计师能够选择
+随着技术的进步，打造强大的移动用户界面（UI）变得更加关键。像专家工匠一样，设计师们理解 UI 模式，即经过验证的设计方法，在创建美观且用户友好的应用中的价值。此外，他们还发现提供预制设计元素的 UI 库在加速设计过程的同时不会牺牲质量方面非常有帮助。设计师能够选择 and alter templates to match the brand’s identity thanks to these resources.
 
-
-
-and alter templates to match the brand’s identity thanks to these resources.
 然而，设计师们明白，他们的应用程序需要的不仅仅是好看的外观。为了开发出既直观又令人愉悦的用户体验，每一个设计元素，包括颜色、图标、字体和标志，都需要协同工作。由于设计师对这些方面的精心挑选和应用，移动应用设计蓬勃发展，用户体验也得到了改善，这使得用户在应用中导航变得轻松。
 
 以下是移动应用 UI 模式的一些关键方面：
 
-## Navigation Patterns
+### Navigation Patterns
 
 在移动应用设计中使用导航模式至关重要，因为它们通过引导用户在应用中浏览来促进用户访问不同的功能和信息。汉堡菜单、底部导航栏和标签栏是三种流行的导航设计，各有不同的功能。
 
 - **Hamburger Menu**
+
   汉堡菜单通常位于应用程序的上角，是一个被广泛使用的导航模式，其特征是一个由三条水平线组成的图标。点击该符号可以打开一个隐藏菜单，其中包含各种应用部分或选项。汉堡菜单的主要好处是它节省了屏幕空间，保持了清晰简洁的用户界面。例如，在 Facebook 移动应用中，汉堡菜单图标会打开一个侧边菜单，其中包含个人资料设置、已保存项目和应用设置等选项。
+
 - **Bottom Navigation Bar**
+
   底部导航栏由屏幕底部的图标行组成，每个图标代表一个不同的程序部分。例如，Instagram 应用的底部导航栏使用户可以轻松地在个人资料、视频、购物、搜索和主页信息流之间切换。这种方法非常用户友好，因为它确保了重要功能始终可访问。
+
 - **Tab Bar**
+
   标签栏通常位于屏幕顶部，其功能与底部导航栏类似，因为它使用户能够在不同的视角或内容类型之间移动。经常对内容进行分类的应用经常采用这种策略。例如，Gmail 应用中的标签栏允许用户在主邮件、社交和促销邮件类别之间导航。标签栏提供了一种简单直观的方式在各部分之间切换，而不会过于复杂。
 
-## Content Display Patterns
+### Content Display Patterns
 
 在移动 UI 设计中，内容展示模式对于安排内容至关重要，以便用户可以轻松地消费和参与其中。列表和卡片布局是两种流行的模式，各有不同的功能。
 
 - **Card Layout**
+
   在灵活的卡片布局模式中，内容以独立的卡片状容器显示。每个卡片通常包含一个内容单元，例如图像、文本或两者兼有。信息以美观的方式组织，使其更容易消化。例如，在 Pinterest 应用中，每个 Pin 都显示在其自己的卡片中。这种方法不仅使内容得到妥善组织，而且还使用户能够一次专注于一个信息，从而增强了浏览体验。
+
 - **Lists**
+
   列表是一种简单的模式，以垂直排列的方式显示项目并允许滚动浏览。对于显示相关对象的组，例如联系人、消息或产品列表，这种设计非常理想。例如，在 WhatsApp 应用中，聊天对话以列表格式显示，使用户可以轻松滚动并选择他们想要继续的对话。列表对于快速以易于导航的格式让访客浏览大量相关数据非常有用。
 
-## Input Patterns
+### Input Patterns
 
 就移动 UI 设计而言，输入模式至关重要，因为它们决定了用户如何与应用程序交互，特别是输入数据或执行重要操作时。浮动操作按钮（FAB）和表单是两种流行的输入模式。
 
 - **Forms**
+
   专门为人类交互而设计的结构化输入区域称为表单。移动设备的表单具有直观的布局、较大且易于点击的字段以及清晰的标签。它们针对触摸输入进行了优化。这种设计将使用户输入数据尽可能轻松。例如，Google 注册表单的大文本字段和简单的说明使用户可以轻松地在小屏幕上输入他们的信息，包括姓名、电子邮件地址和密码。
+
 - **Floating Action Button (FAB)**
+
   浮动操作按钮（FAB）是一种通常悬浮在内容上方并位于屏幕右下角的圆形按钮。它提供对应用主要功能的即时访问，例如添加新项目和发送消息。例如，Gmail 应用中的 FAB 允许用户从应用中的任何位置快速开始撰写新电子邮件。FAB 是一种非常有用的工具，用于突出显示应用中最重要的活动，同时保持清晰简洁的用户体验。
 
-## Feedback Patterns
+### Feedback Patterns
 
 在移动 UI 设计中，反馈模式至关重要，因为它们让用户了解其活动的进展情况。Toast 消息和进度指示器是两种典型的反馈样式。
 
 - **Progress Indicators**
+
   视觉提示告诉用户正在进行任务的状态，例如加载或处理数据，这些提示称为进度指示器。这些提示的例子包括条形、旋转器和百分比显示。作为例证，Google Drive 上的进度条指示文件已上传的量，告知用户并在等待时缓解他们的焦虑。
+
 - **Toast Messages**
-  短暂的提醒称为 Toast 消息，会立即在底部显示
 
+  短暂的提醒称为 Toast 消息，会立即在底部显示 screen. 通过告知用户消息已发送或验证保存是否成功，它们为用户已采取的活动提供反馈。
 
-screen. 通过告知用户消息已发送或验证保存是否成功，它们为用户已采取的活动提供反馈。
-
-## 交互模式
+### 交互模式
 
 交互模式促进自然的动作，从而提高用户参与度。
 
-- **滑动手势**  
+- **滑动手势**
+
   它允许用户在项目上向左或向右滑动以执行活动。例如，在 iOS 邮件应用中向左滑动一封电子邮件会显示归档或删除的选项，从而简化用户交互。
-- **下拉刷新**  
+
+- **下拉刷新**
+
   这是一种手势，用户从列表顶部向下滑动以刷新内容。这种模式在 Twitter 等应用中经常出现，用户可以向下滑动以快速刷新其信息流并始终查看最新发展。
 
-## 上手引导模式
+### 上手引导模式
 
 逐步说明向新用户介绍应用功能的称为**引导流程和教程**。为了促进学习，它们经常结合使用工具提示、动画和交互式演示。例如，教程通过引导用户在首次启动程序时选择语言并开始课程的基础知识，帮助用户快速高效地熟悉 Duolingo 应用。
 
@@ -5772,19 +5695,21 @@ screen. 通过告知用户消息已发送或验证保存是否成功，它们为
 
 Google 的 Material Design 为创建 Android 及其他平台的应用提供了详尽的说明和 UI 模式。它拥有按钮、导航模式和动画等元素，是移动 UI 设计的首选资源。
 
-### Apple 的 Human Interface Guidelines (HIG)
+
+
+## Apple 的 Human Interface Guidelines (HIG)
 
 Apple 的 HIG 提供了 iOS 应用设计的全面 UI 模式和指南。它涵盖了手势、控件和导航等各种主题，以帮助设计师为 Apple 产品制作合乎逻辑且美观的用户界面。
 
-### Ant Design Mobile
+## Ant Design Mobile
 
 Ant Design Mobile 是一个专用于移动 Web 和应用界面的 UI 模式集合。它提供大量可修改的元素和设计，在制作易于使用且具有时尚现代外观的界面时特别有帮助。
 
-### Ionic Framework
+## Ionic Framework
 
 Ionic 提供了一系列 UI 元素，专门用于使用 Web 技术创建精美的移动应用。它附带多个现成的 UI 模式，具有适应性和跨平台兼容性。
 
-### Flutter 的 Widget Catalog
+## Flutter 的 Widget Catalog
 
 Google 的 Flutter 提供了一个广泛的 widget 目录，可作为 UI 模式库。它拥有大量可自定义的 widget 可用于移动应用设计，是跨平台开发的有效工具。
 
@@ -5792,7 +5717,7 @@ Google 的 Flutter 提供了一个广泛的 widget 目录，可作为 UI 模式�
 
 ## 深色 UI 设计模式
 
-探索深色 UI 设计模式的世界！深色 UI 设计模式，通常称为**暗黑模式**，是网站和应用中使用的狡猾技巧，迫使用户做出他们可能不想要的选择。虽然好的设计旨在改善你的体验并建立信任，但暗黑模式的设计是为了让公司受益，通常以你的利益为代价。
+探索深色 UI 设计模式的世界！深色 UI 设计模式，通常称为暗黑模式，是网站和应用中使用的狡猾技巧，迫使用户做出他们可能不想要的选择。虽然好的设计旨在改善你的体验并建立信任，但暗黑模式的设计是为了让公司受益，通常以你的利益为代价。
 
 以下是一些常见示例：
 
@@ -5806,19 +5731,15 @@ Google 的 Flutter 提供了一个广泛的 widget 目录，可作为 UI 模式�
 
 - **强制连续**
 
-  强制连续是一种设计策略，用户注册免费试用，但在试用期结束时如果没有明确提醒或简单取消方式，就会<|start|>自动收费。
+  强制连续是一种设计策略，用户注册免费试用，但在试用期结束时如果没有明确提醒或简单取消方式，就会自动收费。
 
   让我们说你决定试用一项服务并注册免费试用。如果你在试用期结束前忘记取消，该服务将立即开始向你收费，而不会再另行通知你。这种策略利用了用户的健忘性，通常隐藏取消选项或使其难以找到。其目标是让用户在试用期后继续付款，即使他们本无此意。
 
 - **隐藏费用**
 
-  隐藏费用发生在你准备购买时，但
+  隐藏费用发生在你准备购买时，但结账最后一步突然出现额外费用，例如意外的运费或税费。这些额外支出要到交易即将完成时才会被揭示。
 
-
-
-结账最后一步突然出现额外费用，例如意外的运费或税费。这些额外支出要到交易即将完成时才会被揭示。
-
-例如，在选择产品并结账后，你可能会在最后一刻发现，由于额外费用，所需支付的总金额远高于之前显示的金额。这种策略通过不提前披露全部成本来欺骗消费者，这可能会导致失望和恼怒，因为如果你事先知道全部费用，就可能会三思而后行。
+  例如，在选择产品并结账后，你可能会在最后一刻发现，由于额外费用，所需支付的总金额远高于之前显示的金额。这种策略通过不提前披露全部成本来欺骗消费者，这可能会导致失望和恼怒，因为如果你事先知道全部费用，就可能会三思而后行。
 
 ## 确认羞辱
 
@@ -5864,12 +5785,7 @@ Google 的 Flutter 提供了一个广泛的 widget 目录，可作为 UI 模式�
 - **优先级排序：** 确定设计中任务或元素的优先顺序的过程，确保最关键的方面首先得到解决，以优化用户体验和功能性。
 - **用户旅程：** 用户与产品或服务交互时所走的路径，从初始参与到最终行动，涵盖其交互过程中的所有接触点和体验。
 - **一致性：** 在产品中对设计元素，如字体、颜色和布局进行统一应用，以创造连贯的用户体验，提高可用性和用户信任。
-- **侧边栏：** 网页或应用程序界面上的垂直或水平面板，其中包含导航链接、工具或附加内容，
-
-
-
-providing quick access to important features.
-
+- **侧边栏：** 网页或应用程序界面上的垂直或水平面板，其中包含导航链接、工具或附加内容，providing quick access to important features.
 - **点击率 (CTR)：** 一个衡量指标，表示点击特定链接或号召性用语的用户占查看该链接或号召性用语的总用户数的百分比，反映了参与度和有效性。
 - **交互：** 用户与数字界面互动的方式，包括点击、滑动和其他输入，共同定义了整体用户体验以及设计满足用户需求的有效程度。
 - **配色方案：** 网站中一致使用的颜色选择，用于创造统一的视觉外观并体现整体风格。
@@ -5882,22 +5798,20 @@ providing quick access to important features.
 - **易读字体：** 在不同设备和屏幕尺寸上都易于阅读的字体，确保内容的清晰度和可访问性。
 - **字体族：** 共享共同设计特征的一组相关字体，通常用于在设计中保持视觉一致性。
 - **视觉平衡：** 页面上文字和其他元素的排列方式，美观且易于导航，通常通过适当的对齐和间距实现。
-
 - **网格系统：** 设计中用于结构化内容的垂直和水平线相交的框架，确保对齐、一致性和平衡的布局。
 - **视觉提示：** 引导用户注意、指示操作或提供反馈的设计元素，如箭头、颜色或图标，以改善界面内的导航和交互。
 - **UI 设计模式：** 用户界面中常见设计问题的预定义、可复用解决方案。它们作为指南，帮助设计师创建功能性、用户友好的界面。
 - **汉堡菜单：** 由三个水平线组成的图标表示的 UI 设计模式，通常用于在移动应用和某些网站中隐藏和显示导航菜单。
 - **直观设计：** 一种设计方法，界面易于使用和理解，通常因为它利用了熟悉的模式和用户期望。
 - **定制化：** 修改 UI 模式以适应项目特定需求、品牌或偏好的过程，确保设计满足独特要求。
+
+
+
 - **一致性：** 在界面不同部分保持设计元素统一性的做法，有助于用户更轻松地导航和理解系统。
 - **框架：** 构建界面的基础结构或一套指南，为设计师提供创建变体的同时保持核心可用性原则的基础。
 - **学习曲线：** 用户理解如何与新界面交互所需的时间和精力。熟悉的 UI 模式有助于最小化此曲线。
 - **功能性：** UI 元素的实际用途和目的，确保设计不仅外观良好，而且能有效执行其预期任务。
-- **适应性：** UI 模式能够根据不同平台、设备或用户需求进行调整和修改，同时仍保持一致的
-
-
-
-+   连贯设计。
+- **适应性：** UI 模式能够根据不同平台、设备或用户需求进行调整和修改，同时仍保持一致的连贯设计。
 - **效率：** 用户使用界面完成任务的难易程度和速度，通常通过精心设计的 UI 模式得以增强。
 - **内容展示模式：** 用于以便于用户消费和参与的方式排列内容的设计方法。
 - **Toast 消息：** 简短、无干扰的通知，会暂时出现在屏幕上，通常在底部，用于告知用户某个操作的执行结果，例如确认保存或删除。
@@ -5912,14 +5826,13 @@ providing quick access to important features.
 
 ## 原型的力量
 
-## 引言
+### 引言
 
-在吸引用户注意方面，有效的用户界面 (UI) 设计比以往任何时候都更重要。本章深入探讨原型在 UI 设计中的关键作用，探索各种类型的原型以及创建它们的过程。我们还将重点介绍制作精美 UI 原型的最佳工具。除了视觉效果之外，我们还将审视微文案和微交互的重要性，这些细节在提升用户体验方面发挥着关键作用。最后，我们将探讨 AI 对 UI 设计的不断演变的影响，讨论 AI 工具在创意过程中的利弊。这些组件是现代以用户为中心设计的基础。
+在吸引用户注意方面，有效的用户界面 UI 设计比以往任何时候都更重要。本章深入探讨原型在 UI 设计中的关键作用，探索各种类型的原型以及创建它们的过程。我们还将重点介绍制作精美 UI 原型的最佳工具。除了视觉效果之外，我们还将审视微文案和微交互的重要性，这些细节在提升用户体验方面发挥着关键作用。最后，我们将探讨 AI 对 UI 设计的不断演变的影响，讨论 AI 工具在创意过程中的利弊。这些组件是现代以用户为中心设计的基础。
 
-## 结构
+### 结构
 
 在本章中，我们将讨论以下主题：
-
 - 原型简介
 - 原型的目的
 - 原型的要素
@@ -5934,7 +5847,7 @@ providing quick access to important features.
 - AI 对 UI 设计的影响
 - UI 设计的 AI 工具
 
-### 原型简介
+#### 原型简介
 
 UI 原型是 UI 设计的点睛之笔。我们已经了解了线框图，它提供了基本轮廓，原型则更进一步。它们加入了所有视觉元素——如字体、颜色和标志——使设计栩栩如生。原型提供了最终设计的逼真预览，展示了它实际的外观，而线框图则类似于带有箭头和方框的简单草图。
 
@@ -5948,9 +5861,6 @@ UI 原型是 UI 设计的点睛之笔。我们已经了解了线框图，它提�
 
 原型的主要功能是以易于理解的形式可视化概念。在任何实际建设开始之前，它使所有相关方——设计师、客户、开发人员和利益相关者——都能清楚地看到最终结果的确切样子。这样，可以在早期获得反馈，并在不浪费时间和金钱的情况下进行调整。
 
-
-
-
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_383_0.png)
 
 图 8.1：简洁时尚的网站模型设计
@@ -5961,80 +5871,67 @@ UI 原型是 UI 设计的点睛之笔。我们已经了解了线框图，它提�
 
 简而言之，模型是设计过程中必不可少的工具。它们有助于弥合想法与现实之间的鸿沟，确保每个人都达成共识，并让最终成果完全符合预期。
 
-## 模型的目的
+#### 模型的目的
 
 出于多种原因，模型是设计过程中至关重要的一部分。最常见的原因包括：
-
-- **直观展示最终产品**
+- **直观展示最终产品**  
   通过清晰简洁地呈现最终产品的外观，模型帮助利益相关者理解设计概念。早期设计可视化能让各方协调一致理解，并推动项目朝正确方向发展。
-
-- **收集反馈**
+- **收集反馈**  
   模型是获取利益相关者对产品或服务设计反馈的有效方式。这种早期输入使设计者能在开发流程早期做出调整，从而产出更精致的最终产品。
-
-- **节省时间、资金和资源**
+- **节省时间、资金和资源**  
   通过在早期设计阶段发现潜在问题，模型有助于节省时间和资金。设计者通过尽早识别和解决设计问题，可以减少后续返工需求，确保项目保持在预算和进度之内。
-
-- **确保一致性**
+- **确保一致性**  
   模型确保设计的所有方面（包括布局、颜色和字体）在整个最终产品中保持一致。保持一致对于创造无缝的用户体验至关重要。
-
-- **模型带来的清晰与精确**
+- **模型带来的清晰与精确**  
   模型通过提供清晰、详细的最终产品呈现，增强沟通并指导开发。它们帮助非设计人员（如客户和利益相关者）轻松理解和讨论设计构想，同时为开发人员提供精确的蓝图，确保产品按照设计规范构建。
-
-- **探索设计变体**
+- **探索设计变体**  
   模型是一种有用的工具，供设计者试验各种设计方案（如配色方案或布局），然后并排比较以确定哪种效果最佳。
 
-## 模型的要素
+#### 模型的要素
 
 这些基本组件赋予模型对最终设计的高保真、全面呈现。了解这些元素有助于更轻松地创建能准确体现最终产品外观的模型。以下是核心要素的分解说明：
-
-- **内容布局与结构**
+- **内容布局与结构**  
   模型的布局和结构对于产出平衡且实用的设计至关重要。栅格系统确保各元素对齐一致，增强了设计的秩序感和美观度。页眉、页脚、侧边栏和导航菜单的精心安排体现了内容的层级结构，也有助于用户轻松浏览。与仅使用基本方框和线条的线框图相比，模型包含真实内容，例如照片、UI 元素和文本。模型经常采用 F 型或 Z 型等模式，以便在屏幕限制内对元素进行优先级排序和适配。包含真实或占位文本，并结合清晰的视觉层级和内容组织，创建内容排列方式的真实预览，强调最重要的细节并改善整体用户体验。
-
-- **排版**
-  设计要具有某种基调并保持可读性，排版至关重要。模型中显示相同的字体——连同它们的粗细、样式和大小——以代表它们在最终项目中的样子。标题、段落、标签和按钮是文本定位的示例，用于展示内容将如何呈现和排列。这种对排版的细致关注真实地预览了文本将如何提升整体视觉体验，确保
-
-
-
-that the design communicates effectively and clearly.
-
+- **排版**  
+  设计要具有某种基调并保持可读性，排版至关重要。模型中显示相同的字体——连同它们的粗细、样式和大小——以代表它们在最终项目中的样子。标题、段落、标签和按钮是文本定位的示例，用于展示内容将如何呈现和排列。这种对排版的细致关注真实地预览了文本将如何提升整体视觉体验，确保 that the design communicates effectively and clearly.
 - **Color Scheme**  
   A mockup’s color scheme displays the chosen palette’s primary, secondary, and accent hues. To create a unified effect, these colors are used consistently in all parts of the design, from buttons to backdrops. The mockup also shows how colors interact with one another, showing how buttons change color when hovered over or how text contrasts with different background tones. This visual gives a realistic preview of how the final product will look, making sure that the color choices enhance readability and usability.
+- **Images and Icons**
 
-- **Images and Icons**  
-  Mockups include icons and pictures as they will appear in the final design, although in a less polished version. Product photographs, graphics, and background visuals are examples of high-resolution images that are meticulously cropped and arranged to blend smoothly into the layout. Despite their modest size, icons are important to the design. Their style, size, and placement are all displayed in the mockup to make sure they complement and align with the overall design. This focus on detail reflects how these components will work together to produce a polished and seamless visual experience.
 
-- **Interactive Elements**  
-  Even though the mockup is not interactive, interactive components like buttons, forms, and links are visually represented in them. These components are made to stand out and point users in the direction of important tasks. A mockup typically incorporates feedback and hover state visual signals, although it is not as interactive as a prototype. For example, it shows how a form field might glow when selected or how buttons could change color when hovered over. This enhances design clarity and helps demonstrate how interactive features will function in the final product.
 
-- **Spacing and Margins**  
-  In a mockup, margins and spacing are essential to keeping the design neat and tidy. They guarantee that components are arranged appropriately, creating an airy and uncluttered style. Sufficient margins and padding increase readability and user experience. Furthermore, by providing items with adequate breathing area, the deliberate use of whitespace balances the design, improving its overall visual appeal and preventing the layout from feeling crowded.
+# Mockup Anatomy
 
-- **Branding and User Flow**  
-  Branding components, such as the logo, are positioned and sized correctly in a mockup to preserve brand integrity. In order to maintain consistency throughout, the design also complies with brand guidelines for tone, color, font, and imagery. Furthermore, by displaying the screen order and the way consumers will interact with the product, mockups help to show the user flow. This provides a clear image of the entire user experience and interaction by making it easier to see how various design elements work together, such as when switching from the homepage to a product page.
+Mockups include icons and pictures as they will appear in the final design, although in a less polished version. Product photographs, graphics, and background visuals are examples of high-resolution images that are meticulously cropped and arranged to blend smoothly into the layout. Despite their modest size, icons are important to the design. Their style, size, and placement are all displayed in the mockup to make sure they complement and align with the overall design. This focus on detail reflects how these components will work together to produce a polished and seamless visual experience.
+
+## Interactive Elements
+Even though the mockup is not interactive, interactive components like buttons, forms, and links are visually represented in them. These components are made to stand out and point users in the direction of important tasks. A mockup typically incorporates feedback and hover state visual signals, although it is not as interactive as a prototype. For example, it shows how a form field might glow when selected or how buttons could change color when hovered over. This enhances design clarity and helps demonstrate how interactive features will function in the final product.
+
+## Spacing and Margins
+In a mockup, margins and spacing are essential to keeping the design neat and tidy. They guarantee that components are arranged appropriately, creating an airy and uncluttered style. Sufficient margins and padding increase readability and user experience. Furthermore, by providing items with adequate breathing area, the deliberate use of whitespace balances the design, improving its overall visual appeal and preventing the layout from feeling crowded.
+
+## Branding and User Flow
+Branding components, such as the logo, are positioned and sized correctly in a mockup to preserve brand integrity. In order to maintain consistency throughout, the design also complies with brand guidelines for tone, color, font, and imagery. Furthermore, by displaying the screen order and the way consumers will interact with the product, mockups help to show the user flow. This provides a clear image of the entire user experience and interaction by making it easier to see how various design elements work together, such as when switching from the homepage to a product page.
 
 Designers can produce polished mockups that function as precise blueprints for the finished product by understanding these components. Making sure that every element is taken into account to facilitate a seamless transfer from design to development is the essence of a mockup’s anatomy.
 
 ## Types of Mockups
 
 ### Static Mockups
-
 Detailed, static mockups are static graphic depictions of a user interface. They display every visual component—fonts, colors, photos, and arrangement—but they omit any functional features like buttons or links.
 
-### Use Case
+#### Use Case
+Before developing an interactive prototype or going on to development, static mockups are a great way to get feedback on a design’s visual elements. For example, a static mockup helps a client concentrate on the appearance and feel of a new website design without being distracted by interactive elements.
 
-Before developing an interactive prototype or going on to development, static mockups are a great way to get feedback on a design’s visual elements. For example, a static mockup helps a client concentrate on the appearance and
-
-
-
-feel of a new website design without being distracted by interactive elements.
-
-## Interactive Mockups
-
+### Interactive Mockups
 Some functionality is included in interactive mockups, enabling users to press buttons, switch between displays, and observe simple transitions. These provide a more accurate representation of the real user experience than static mockups, providing a clearer idea of how the finished product will operate.
 
-### Use Case
-
+#### Use Case
 Interactive mockups are useful for collecting in-depth client input and usability testing. An interactive mockup, for instance, lets users test out the fundamental navigation and transitions of an app before it is fully developed, which can help find any usability problems.
+
+### Low-Fidelity Mockups
+
+
 
 ## Low-Fidelity Mockups
 
@@ -6066,61 +5963,63 @@ In the UI design process, each kind of mockup has a distinct function that aids 
 
 Mockups are a crucial part of the design process since they aid in the visualization and refinement of a product prior to development. Here is a step-by-step guide on making mockups with an example.
 
-- 1. **Define the Project Requirements**
-  
-  A thorough grasp of the project’s objectives, the target audience, and the technical needs are all necessary for defining project requirements. This step guarantees that all parties involved are in agreement regarding the goals of the project, user needs, and technical limitations, allowing for a focused and organized approach to the project’s development.
-  
-  **Example:** For a new mobile app, gather requirements such as the app’s purpose, user demographics, and platform specifications (iOS or Android).
-  
-- 2. **Research and Gather Inspiration**
-  
-  Studying UI patterns, looking at comparable goods, and compiling ideas to guide your design are all part of the research and inspiration process. This process makes sure your design is innovative and aligned with industry standards.
+1. **Define the Project Requirements**
 
-  **Example:** Look at successful mobile apps in the same category to explore and learn about popular design trends and features.
+   A thorough grasp of the project’s objectives, the target audience, and the technical needs are all necessary for defining project requirements. This step guarantees that all parties involved are in agreement regarding the goals of the project, user needs, and technical limitations, allowing for a focused and organized approach to the project’s development.
 
-- 3. **Sketch Initial Ideas**
+   **Example:** For a new mobile app, gather requirements such as the app’s purpose, user demographics, and platform specifications (iOS or Android).
 
-  Making rough sketches of your earliest concepts allows you to experiment with different design layouts and frameworks. In this step, you can play around with different element arrangements without getting caught down in the specifics. Before going on to more refined versions, it helps in visualizing the design’s overall organization and flow.
+2. **Research and Gather Inspiration**
 
-  **Example:** Make basic wireframes of the app’s primary screens, including the product pages, navigation menu, and homepage.
+   Studying UI patterns, looking at comparable goods, and compiling ideas to guide your design are all part of the research and inspiration process. This process makes sure your design is innovative and aligned with industry standards.
 
-- 4. **Create Low-Fidelity Mockups**
+   **Example:** Look at successful mobile apps in the same category to explore and learn about popular design trends and features.
 
-  Creating low-fidelity mockups involves transforming your initial sketches into basic digital designs using design tools. These mockups focus on the overall layout and structure, using simple shapes and placeholder text to represent various elements. The goal is to establish a clear visual hierarchy and design flow without delving into finer details like color, typography, or imagery. This step allows for easy adjustments and helps communicate the general concept to stakeholders before moving on to more detailed designs.
+3. **Sketch Initial Ideas**
 
-  **Example:** Create a basic version of the application using a tool like Figma or Sketch, indicating the positions of the buttons, graphics, and text.
+   Making rough sketches of your earliest concepts allows you to experiment with different design layouts and frameworks. In this step, you can play around with different element arrangements without getting caught down in the specifics. Before going on to more refined versions, it helps in visualizing the design’s overall organization and flow.
 
-- 5. **Review and Gather Feedback**
+   **Example:** Make basic wireframes of the app’s primary screens, including the product pages, navigation menu, and homepage.
 
-  Sharing your low-fidelity mockups with stakeholders or team members in order to get their views is part of the review and feedback process. Instead of concentrating on fine-tuning design details at this point, the evaluation process now focuses on the general layout, user flow, and functionality. Before going on to higher-fidelity versions, this collaboration process makes sure that the design complies with project
+4. **Create Low-Fidelity Mockups**
 
-目标与用户期望，以允许进行任何必要的修改。
 
-**示例：**向你的团队展示原型图，讨论重要功能的位置以及用户如何与应用交互。
+
+## 4. 创建低保真原型图
+
+创建低保真原型图涉及将初始草图转变为使用设计工具的基础数字设计。这些原型图关注整体布局和结构，使用简单形状和占位文本来表示各种元素。目标是建立清晰的视觉层次和设计流程，而无需深入探讨颜色、字体或图像等细节。此步骤允许轻松调整，并有助于在进入更详细的设计之前向利益相关者传达总体概念。
+
+**示例：** 使用Figma或Sketch等工具创建应用的基本版本，标明按钮、图形和文本的位置。
+
+## 5. 评审与收集反馈
+
+与利益相关者或团队成员分享你的低保真原型图，以获取他们的意见，这是评审与反馈过程的一部分。此时评估的重点是整体布局、用户流程和功能，而不是微调设计细节。在进入高保真版本之前，这种协作过程确保设计符合项目目标与用户期望，以允许进行任何必要的修改。
+
+**示例：** 向你的团队展示原型图，讨论重要功能的位置以及用户如何与应用交互。
 
 ## 6. 优化并创建高保真原型图
 
 收集反馈以改进设计，并创建贴近最终产品的详细版本，是优化工作并转向高保真原型图的关键步骤。为了确保设计精良并为后续开发做好准备，此步骤涉及整合精确的UI元素、图形、排版和配色方案。
 
-**示例：**使用精确的字体、品牌颜色和真实内容，创建一个看起来像最终产品的精致应用版本。
+**示例：** 使用精确的字体、品牌颜色和真实内容，创建一个看起来像最终产品的精致应用版本。
 
 ## 7. 创建响应式版本（如需要）
 
 设计能够适应不同屏幕尺寸的原型是创建响应式版本的必要步骤，这能保证产品在各种设备上正常运行。通过适当调整布局和元素，这一阶段对于确保一致的用户体验至关重要，无论用户使用智能手机、平板电脑还是其他设备查看设计。
 
-**示例：**为桌面端和移动端屏幕开发应用示例版本，确保设计能流畅地适应不同屏幕尺寸。
+**示例：** 为桌面端和移动端屏幕开发应用示例版本，确保设计能流畅地适应不同屏幕尺寸。
 
 ## 8. 最终审查与调整
 
 向利益相关者展示高保真原型图供其最终批准，并借此机会讨论并做出任何必要的设计决策。收集更多反馈，对设计进行必要修改，以确保满足所有要求。
 
-**示例：**向客户展示应用原型，逐一演示每个界面，并根据他们的意见进行必要的设计修改，例如调整配色方案或导航。
+**示例：** 向客户展示应用原型，逐一演示每个界面，并根据他们的意见进行必要的设计修改，例如调整配色方案或导航。
 
 ## 9. 为开发做好准备
 
 整理并完善设计文件，确保其为开发团队做好准备，是为开发做准备的一部分。此步骤需要制作全面的文档，包括组件规格、样式指南和注释，以保证开发人员理解设计特性和适当的实现方法。
 
-**示例：**完成原型图后，将其导出为所需格式（如PNG、JPG，或直接从设计应用中导出），并向开发人员提供有关设计规格的详细说明。
+**示例：** 完成原型图后，将其导出为所需格式（如PNG、JPG，或直接从设计应用中导出），并向开发人员提供有关设计规格的详细说明。
 
 ## 实际案例
 
@@ -6146,23 +6045,19 @@ Mockups are a crucial part of the design process since they aid in the visualiza
 
 价格：基础功能免费；提供高级计划以增强功能。
 
-### 优势
+#### 优势
 
--   实时协作：无论团队成员身在何处，都能同时进行协作。
-
-
-
-
+- 实时协作：无论团队成员身在何处，都能同时进行协作。
 - 跨平台灵活性：由于其基于网络的架构，Figma 与各种操作系统兼容。
 
-### 缺点
+#### 缺点
 
 - 互联网依赖性：为了获得最佳效果，需要可靠的互联网连接。
 - 有限的离线功能：虽然有一些离线功能，但不如其他竞争对手那样全面。
 
-## Adobe XD
+### Adobe XD
 
-全方位的设计和原型制作工具
+**全方位的设计和原型制作工具**
 
 UI 设计工具的瑞士军刀是 Adobe XD。有了 Adobe XD，你可以从基本的线框图到交互式原型，一切都能创建。由于其与其他 Adobe Creative Cloud 工具的顺畅交互，你可以通过从 Illustrator 或 Photoshop 导入元素来快速开始设计。XD 中革命性的响应式调整大小功能让你能够无缝地将设计适配到任何屏幕尺寸。此外，由于其语音原型制作和自动动画功能，你可以设计出与最终产品一样逼真的体验。
 
@@ -6172,52 +6067,27 @@ UI 设计工具的瑞士军刀是 Adobe XD。有了 Adobe XD，你可以从基�
 
 价格：付费；不过，提供了一个功能有限的入门计划供免费使用。
 
-### 优点
+#### 优点
 
 - 与其他 Adobe Creative Cloud 应用，如 Photoshop 和 Illustrator，完美集成，提供无缝的用户体验。
 - 响应式调整大小：此功能通过自动调整设计以适应各种屏幕尺寸来节省时间。
 
-### 缺点
+#### 缺点
 
 - 受限的插件环境：尽管有所增长，但插件库不如一些其他程序那么大。
 - Windows 性能：尽管可在 Windows 上使用，但性能有时落后于 macOS 版本的现象经常被观察到。
 
-## Sketch
+### Sketch
 
-具有创意[content]
+具有创意
 
-- 跨平台灵活性：由于其基于网络的架构，Figma 与各种操作系统兼容。
 
-### 缺点
 
-- 互联网依赖性：为了获得最佳效果，需要可靠的互联网连接。
-- 有限的离线功能：虽然有一些离线功能，但不如其他竞争对手那样全面。
-
-## Adobe XD
-
-全方位的设计和原型制作工具
-
-UI 设计工具的瑞士军刀是 Adobe XD。有了 Adobe XD，你可以从基本的线框图到交互式原型，一切都能创建。由于其与其他 Adobe Creative Cloud 工具的顺畅交互，你可以通过从 Illustrator 或 Photoshop 导入元素来快速开始设计。XD 中革命性的响应式调整大小功能让你能够无缝地将设计适配到任何屏幕尺寸。此外，由于其语音原型制作和自动动画功能，你可以设计出与最终产品一样逼真的体验。
-
-![](img/5fa48c4cd6454bfb24b9d1359df45cda_395_0.png)
-
-图 8.3：UI 设计工具 – Adobe XD
-
-价格：付费；不过，提供了一个功能有限的入门计划供免费使用。
-
-### 优点
-
-- 与其他 Adobe Creative Cloud 应用，如 Photoshop 和 Illustrator，完美集成，提供无缝的用户体验。
-- 响应式调整大小：此功能通过自动调整设计以适应各种屏幕尺寸来节省时间。
-
-### 缺点
-
-- 受限的插件环境：尽管有所增长，但插件库不如一些其他程序那么大。
 - Windows 性能：尽管可在 Windows 上使用，但性能有时落后于 macOS 版本的现象经常被观察到。
 
 ## Sketch
 
-具有创意边缘的行业标准
+### 具有创意边缘的行业标准
 
 Sketch 有充分的理由长期以来一直是 UI 设计师的最爱工具。它主要为界面设计而设计，提供清晰、用户友好的工作区，非常适合创建复杂的 mockup。你可以通过 Sketch 强大的符号工具创建可重用的组件，从而确保设计的一致性。此外，由于其庞大的插件生态系统，你可以自定义 Sketch 的功能以适应你的工作流程。Sketch 是一款灵活的工具，非常适合网页、移动和桌面设计，因此大大小小的企业设计师都依赖它。
 
@@ -6241,7 +6111,7 @@ Sketch 有充分的理由长期以来一直是 UI 设计师的最爱工具。它
 
 ## InVision Studio
 
-动态设计大师
+### 动态设计大师
 
 如果你想为你的 mockup 添加一些（或大量）动态效果，InVision Studio 可能成为你的新好朋友。借助该工具的先进动画功能，你可以制作感觉逼真且过渡流畅的交互式原型，将 UI 设计提升到新水平。InVision Studio 中的基于时间线的动画让你能够精确控制每一个动作，从而轻松制作复杂、深思熟虑的设计。此外，由于它是 InVision 套件的一部分，分享你的作品给利益相关者并收集反馈可以在一个顺畅、集成的流程中完成。
 
@@ -6261,15 +6131,11 @@ Sketch 有充分的理由长期以来一直是 UI 设计师的最爱工具。它
 ### 缺点
 
 - 陡峭的学习曲线：由于其复杂性，学习如何使用高级动画工具可能需要一些时间。
-- 资源密集型：可能会给你的系统带来很大压力，尤其
-
-
-
-处理大型任务时。
+- 资源密集型：可能会给你的系统带来很大压力，尤其处理大型任务时。
 
 ## Axure RP
 
-## 适用于复杂交互的终极工具
+### 适用于复杂交互的终极工具
 
 当你的项目对界面要求不仅仅是好看时，Axure RP 就能发挥其优势。使用此应用程序，你可以轻松创建实用的原型，超越简单的用户界面 mockup。你可以创建动态内容、条件逻辑以及与 Axure 相似于成品行为的交互。它就像在你的设计工具包中拥有开发者的专业知识。Axure 强大的文档工具也有助于你向开发者传达设计决策，确保你的愿景得以完全实现。
 
@@ -6281,12 +6147,12 @@ Sketch 有充分的理由长期以来一直是 UI 设计师的最爱工具。它
 
 费用：付费；提供免费试用。
 
-## 优点
+### 优点
 
 - 高级交互性：创建具有动态内容、条件逻辑和复杂交互的精细原型。
 - 强大的文档：为了确保无缝交接，为开发者提供全面文档非常简单。
 
-## 缺点
+### 缺点
 
 - 更陡峭的学习曲线：由于其复杂的特性，新手可能会觉得使用起来令人不知所措。
 - 成本更高：作为市场上最昂贵的科技之一，小型团队可能更难使用。
@@ -6316,10 +6182,6 @@ UI 套件和组件库通过提供预设计的按钮、表单和图标等元素�
 ### 5. 信任常见模式
 
 即使创新是必要的，融入众所周知的设计模式对于用户舒适度和效率也至关重要。因为他们习惯了这些常见元素，如果你遵循既定的界面模式，访客会很容易浏览你的网站或应用。过度偏离这些被广泛接受的规范可能会导致用户沮丧和困惑，甚至可能使他们离开。通过在新颖性和熟悉性之间取得平衡，可以实现流畅且简单的用户体验。
-
-
-
-
 
 ## 6. 使用 AI 加速 UI 模型设计
 
@@ -6355,34 +6217,41 @@ UI 套件和组件库通过提供预设计的按钮、表单和图标等元素�
 以下是其重要原因以及一些示例：
 
 - **指导用户操作**
-  微文案提供简洁的说明或提示，帮助用户完成各种任务。
-  
-  **例如**，网站上的“免费注册”按钮让消费者立即清楚预期内容，从而更容易采取行动而不感到困惑。表单字段中写着“输入您的电子邮件地址”也是另一个例子，帮助用户准确了解需要什么信息。
-  
-- **减少摩擦和困惑**
-  良好的微文案通过澄清所有令人困惑的点来减少用户挫败感。
-  
-  **例如**，一条指示错误的通知，例如 _“哎呀！我们无法完成您的付款”_。比笼统的 _“错误”_ 更有帮助的信息是 _“请检查您的卡片信息并重试。”_ 通过告知用户出了什么问题以及如何修复，它降低了用户流失的可能性。
-  
-- **建立信任和共鸣**
-  微文案可以建立用户与品牌之间的共鸣和信任。
-  
-  **例如**，一条友好的确认信息例如 _“一切就绪！”_ 信息 _“您的订单将很快发货”_ 确保用户
 
 
 
-their action was accomplished. This type of encouraging language makes consumers feel at ease and valued.
+微文案提供简洁的说明或提示，帮助用户完成各种任务。
 
-- **Enhances Brand Voice**
+**例如**，网站上的“免费注册”按钮让消费者立即清楚预期内容，从而更容易采取行动而不感到困惑。表单字段中写着“输入您的电子邮件地址”也是另一个例子，帮助用户准确了解需要什么信息。
+
+## 减少摩擦和困惑
+
+良好的微文案通过澄清所有令人困惑的点来减少用户挫败感。
+
+**例如**，一条指示错误的通知，例如 _“哎呀！我们无法完成您的付款”_。比笼统的 _“错误”_ 更有帮助的信息是 _“请检查您的卡片信息并重试。”_ 通过告知用户出了什么问题以及如何修复，它降低了用户流失的可能性。
+
+## 建立信任和共鸣
+
+微文案可以建立用户与品牌之间的共鸣和信任。
+
+**例如**，一条友好的确认信息例如 _“一切就绪！”_ 信息 _“您的订单将很快发货”_ 确保用户 their action was accomplished. This type of encouraging language makes consumers feel at ease and valued.
+
+## Enhances Brand Voice
+
 Microcopy enhances the brand’s personality and voice.
+
 **For example**, an enjoyable message such as “You’re almost there!” or “Just one more step to complete your profile” on a social networking platform conveys a casual, welcoming tone that is consistent with the brand’s identity, making conversations more personal.
 
-- **Encourages User Engagement**
+## Encourages User Engagement
+
 Well-crafted microcopy can increase engagement by making interactions more appealing.
+
 **For example**, on a cooking app, a call-to-action button that reads “Discover Your New Favorite Recipe” encourage users to explore content rather than a generic “Click Here”.
 
-- **Provides Reassurance**
+## Provides Reassurance
+
 Microcopy is frequently used to calm users in delicate situations.
+
 **For example**, messages like “We have received your feedback and appreciate your input” following a survey submission tells users that their thoughts are valued and will be taken into account.
 
 Microcopy is important because it guides people, minimizes uncertainty, fosters trust, expresses the brand’s personality, promotes engagement, and provides comfort. Its smart implementation improves the overall user experience and encourages more positive interactions with the interface.
@@ -6391,25 +6260,34 @@ Microcopy is important because it guides people, minimizes uncertainty, fosters 
 
 Microcopy plays an important role in increasing user engagement by changing interactions into more intuitive and engaging experiences. Here are some interesting examples:
 
-- **Makes Actions Clear and Inviting**
+### Makes Actions Clear and Inviting
+
 Microcopy transforms unclear buttons and prompts into direct, compelling calls to action. Instead of a standard “Submit” button, adding “Send Your Feedback” makes it more visible and appealing, encouraging people to submit their ideas. This clarity and attractiveness can dramatically boost the likelihood of user interaction.
 
-- **Adds a Personal Touch**
+### Adds a Personal Touch
+
 Personalized microcopy can help users feel more connected. For example, a message like “Welcome back, [User Name]!” “Are you ready to continue where you left off?” gives a personal touch that helps consumers feel cherished and engaged, as opposed to just another face in the crowd.
 
-- **Creates a Sense of Progress**
+### Creates a Sense of Progress
+
 Microcopy allows consumers to track their progress, making them more likely to stay interested. For example, progress indicators with friendly messaging such as “You’re halfway there!” can keep users engaged when navigating long processes or forms, encouraging them to finish the activity.
 
-- **Encourages Exploration and Discovery**
+### Encourages Exploration and Discovery
+
 Microcopy may spark consumers’ interest and encourage them to investigate further. For example, a cheerful prompt like “See What’s New!” or “Explore Our Latest Features” encourages users to delve further into content or functionality they might not have noticed otherwise.
 
-- **Provides Instant Feedback and Reassurance**
+### Provides Instant Feedback and Reassurance
+
 Microcopy provides immediate feedback, which can reassure people and keep them interested. For example, following a successful action, send a message like “Great job!” “Your changes have been saved” immediately reassures users that their activity was effective, lowering worry and keeping them engaged with the platform.
 
-- **Fosters a Conversational Tone**
+### Fosters a Conversational Tone
+
 Using genuine, conversational microcopy can make interactions more engaging. For instance, a warm “Need assistance?” followed by “Click here, and we’ll help you right away” creates a friendly tone that encourages users to ask for help without feeling frustrated or overwhelmed.
 
-- **Encourages Positive Behavior**
+### Encourages Positive Behavior
+
+
+
 Microcopy can subtly direct users towards desirable behaviors. For example, a subtle reminder like “Don’t miss out—subscribe now for exclusive updates” can encourage users to do a positive action, such as subscribing to a newsletter, by emphasizing the advantages.
 
 Microcopy improves user engagement by making interactions more explicit, personalized, and entertaining. It helps customers navigate their journey, keeps them engaged, and builds a stronger relationship with the brand, resulting in a more engaging and fulfilling experience.
@@ -6425,10 +6303,6 @@ Later that afternoon, Mia found herself adjusting the volume on her tablet as sh
 In between meetings, Mia took a brief break, scrolling through her social media feed. She double-tapped a post she liked, and a small heart appeared, pulsing softly before settling in place. The moment was brief, but it brought a smile to her face.
 
 Throughout her day, these interactions unfolded seamlessly, almost unnoticed. Yet, each tiny motion, each swift response, added to her experience. The slide of a menu as she explored an app, the smooth glide of a card off the screen as she dismissed a notification—these were the invisible threads weaving through her digital life, making every interaction feel fluid and intuitive.
-
-
-
-
 
 这让她的数字日常变得不仅仅是一系列任务。它让她感到与之相连、掌控自如，最重要的是，每一次互动都充满愉悦。
 
@@ -6454,29 +6328,17 @@ Throughout her day, these interactions unfolded seamlessly, almost unnoticed. Ye
 
 以下是创建无缝互动的一些有效技术：
 
-- 清晰简洁的反馈
+- **清晰简洁的反馈**：清晰简洁的反馈确保消费者了解其活动的結果。例如，当用户点击“提交”按钮时，临时的颜色变化或加载转圈会传达操作正在处理中。这种快速的视觉回应让用户确信系统正在处理其请求，消除了不确定性并改善了整体体验。
 
-清晰简洁的反馈确保消费者了解其活动的結果。例如，当用户点击“提交”按钮时，临时的颜色变化或加载转圈会传达操作正在处理中。这种快速的视觉回应让用户确信系统正在处理其请求，消除了不确定性并改善了整体体验。
+- **渐进式披露**：将复杂流程分解为更小、更易管理的步骤，可以提高用户的认知能力同时降低认知压力。这种技术一次一步地引导消费者完成互动，使整个过程更直接。
 
-- 渐进式披露
+- **情境线索**：设计师可以通过在适当时机提供相关信息来改善用户体验。例如，当用户将鼠标悬停在未知图标上时，工具提示或微文案可能会出现，描述其用途。这种及时的帮助使用户能够更自信地浏览界面，并在不产生混淆的情况下理解各种项目的含义。
 
-将复杂流程分解为更小、更易管理的步骤，可以提高用户的认知能力同时降低认知压力。这种技术一次一步地引导消费者完成互动，使整个过程更直接。
-
-- 情境线索
-
-设计师可以通过在适当时机提供相关信息来改善用户体验。
-
-例如，当用户将鼠标悬停在未知图标上时，工具提示或微文案可能会出现，描述其用途。这种及时的帮助使用户能够更自信地浏览界面，并在不产生混淆的情况下理解各种项目的含义。
-
-- 无缝过渡
-
-屏幕或状态之间的过渡应流畅自然。
-
-例如，在从主页移动到产品页时，流畅的动画提供了连续感，帮助消费者保持其思维流畅。这种平滑的过渡加强了界面各部分之间的联系，使整体体验更直观、更统一。
+- **无缝过渡**：屏幕或状态之间的过渡应流畅自然。例如，在从主页移动到产品页时，流畅的动画提供了连续感，帮助消费者保持其思维流畅。这种平滑的过渡加强了界面各部分之间的联系，使整体体验更直观、更统一。
 
 有效的微交互依赖于对用户行为和偏好的深刻理解。通过专注于清晰度、情境和流畅的过渡，设计师可以提升用户体验，将简单的互动转变为令人难忘且引人入胜的时刻，即使用户离开界面后仍能留下印象。
 
-## 推动 UI/UX 成功 的微交互
+## 推动 UI/UX 成功的微交互
 
 执行良好的微交互对 UI/UX 设计有明显影响。
 
@@ -6492,15 +6354,13 @@ Instagram，这家流行的社交媒体网络，有效地运用微交互来提�
 
 ### Uber 的叫车请求按钮
 
-Uber，这家流行的拼车服务，采用微交互来改善用户体验并简化叫车请求流程。当用户点击“请求叫车”按钮时，加载动画会显示其请求正在被处理。这种短暂但重要的微交互通过提供安心感并增强对平台稳定性的信任来减少用户焦虑，使整体体验更流畅、更自信。通过关注这些细微之处
-
-
-
-事情，Uber 改善了用户体验，让消费者在整个交易过程中感到安全和知情。
+Uber，这家流行的拼车服务，采用微交互来改善用户体验并简化叫车请求流程。当用户点击“请求叫车”按钮时，加载动画会显示其请求正在被处理。这种短暂但重要的微交互通过提供安心感并增强对平台稳定性的信任来减少用户焦虑，使整体体验更流畅、更自信。通过关注这些细微之处的事情，Uber 改善了用户体验，让消费者在整个交易过程中感到安全和知情。
 
 ## 下拉刷新
 
 考虑在手机上使用新闻应用。当内容变得过时时，你可以通过下拉屏幕来刷新它。在此过程中，会显示一个小动画，例如旋转图标或弹跳的刷新指示器，表示正在加载新内容。这种微交互不仅在视觉上显示刷新正在进行中，而且还能让你了解请求的最新状态。它通过显示应用的当前内容更新，将一个简单的任务转变为有趣的体验。
+
+
 
 这些例子——Spotify 的播放按钮、Instagram 的心形动画和 Uber 的行程请求按钮——展示了微交互在创造出色的 UI/UX 设计中的重要性。这些经过精心设计的微小交互在提升可用性的同时，也打造出令人难忘且能引起情感共鸣的用户体验。通过关注这些细节，设计师可以提升产品的功能性和吸引力，确保每次交互都直观且令人满意。最终，这些微交互不仅仅是细微的点缀；它们在当今竞争激烈的数字环境中建立用户信任、参与度和长期忠诚度方面发挥着至关重要的作用。
 
@@ -6526,19 +6386,15 @@ Khroma 对于寻求灵感或在选择颜色时遇到困难的设计师尤其有�
 
 Khroma 的出色可访问性和易用性使其成为新手和经验丰富的设计师都不可或缺的工具，这也是该软件的另一个有趣之处。Khroma 简化了选择和谐配色方案的过程，为你设计网站、应用或品牌项目时节省了时间和精力。
 
-
-
-
-
-## 选择 50 种颜色
+#### 选择 50 种颜色
 
 这些颜色将用于训练个性化为你的配色生成算法。为了获得最佳效果，请选择多种不同的色相、明度和饱和度。祝你挑选愉快！
 
-注意：此处你的数据将保存在 localStorage 中，该存储仅在此浏览器此设备上可访问。你可以稍后下载/传输你的数据。
+注意：此处你的数据将保存在 `localStorage` 中，该存储仅在此浏览器此设备上可访问。你可以稍后下载/传输你的数据。
 
 从其他设备获取数据？导入它
 
-## 为什么这么多？
+#### 为什么这么多？
 
 是的，50 听起来很多，但数量确保 Khroma 不会错误地认为你不喜欢你实际喜欢的颜色。种类越广泛，你能获得的组合可能性就越多。
 
@@ -6546,7 +6402,7 @@ Khroma 的出色可访问性和易用性使其成为新手和经验丰富的设�
 
 图 8.8：Khroma 是一款面向设计师的 AI 驱动配色方案生成工具
 
-## Uizard
+### Uizard
 
 即使没有设计知识的人也能借助 Uizard 这一 AI 驱动的设计工具，快速轻松地创建网站和应用程序等数字产品。Uizard 将草图转化为数字设计的能力是其最佳优势之一。你的想法可以写下来、拍照并上传到 Uizard。随后你的粗糙绘图将被 AI 转化为精炼的线框图甚至完全可用的原型。
 
@@ -6558,7 +6414,7 @@ Uizard 的用户友好型拖放界面是另一个重要功能，让用户无需�
 
 图 8.9：AI 驱动的 UI 设计工具
 
-## Adobe Firefly
+### Adobe Firefly
 
 Adobe Firefly 是一个促进设计和创造力的 AI 工具。只需输入任何内容即可生成照片、文本效果，甚至 3D 模型。它是 Adobe Creative Cloud 的一个功能。这使其非常适合快速将概念转化为视觉素材，即使没有设计知识也是如此。
 
@@ -6570,7 +6426,7 @@ Firefly 是为各种用途生成原创且优质图像的绝佳工具，包括艺
 
 *图 8.10：Firefly 使用 AI 根据文本提示创建图像、文本效果和内容*
 
-## Visily
+### Visily
 
 Visily 是一款 AI 驱动的设计工具，可简化网站和应用的线框图和原型制作。对于希望快速可视化想法的团队和非设计师来说，它是理想的选择。得益于其用户友好的拖放界面，你无需任何设计知识即可生成详细的 mockup。
 
@@ -6580,17 +6436,12 @@ Visily 将手绘概念转化为数字图形的能力是其最佳品质之一。V
 
 图 8.11：基于网络的 AI 驱动线框图和设计工具
 
-## 其他强大的 AI 工具，正在节省设计师的精力
+### 其他强大的 AI 工具，正在节省设计师的精力
 
 AI 工具彻底改变了 UI 设计，提供创新解决方案，简化工作流程并增强创造力。以下是一些可提升你的设计流程的其他可用工具列表。
 
 - **Canva 的 AI 驱动 Magic Resize 工具：** 此功能可让设计师自动为各种平台调整设计尺寸，从而节省设计师的时间并确保跨多种格式的一致性。
-- **Remove.bg：** 此工具利用人工智能（AI）快速
-
-
-
-消除照片中的背景，为设计师节省时间，使其在创建精美的视觉效果时无需费力地手工去除背景。
-
+- **Remove.bg：** 此工具利用人工智能（AI）快速消除照片中的背景，为设计师节省时间，使其在创建精美的视觉效果时无需费力地手工去除背景。
 - **Microsoft 的 Sketch2Code：** 该 AI 工具将手绘草图翻译成 HTML 代码，使设计师能够快速迭代，在无需从头开始手动编码的情况下看到自己的想法。
 - **Coolors.co：** Coolors.co 是一款 AI 驱动的配色方案生成器，可帮助设计师快速创建美观的配色方案。它确保设计的色彩选择在美观和一致性方面都令人满意，同时通过一键提供多种色彩变化来节省时间。
 
@@ -6610,16 +6461,15 @@ UX 讲究深思熟虑的创造力，而 AI 则以逻辑为基础。设计卓越�
 
 你认识到这种区别。虽然 AI 在例行任务方面表现出色，但它缺乏生成原创想法或创造情感化体验的能力。作为一名 UX 设计师，你的角色不仅仅是遵循规则；它是关于想象新的可能性并打造既实用又令人愉悦的体验。你欣赏 AI 在逻辑任务方面的辅助作用，但你知道正是你的创造力和同理心让设计真正非凡。
 
+
+
 AI 可以协助 UI 设计师，但无法完全取代他们。AI 工具可以自动化重复性任务、建议设计元素并简化工作流程，使设计过程更快、更高效。然而，UI 设计涉及创造力、同理心和理解人类行为，这些是 AI 所缺乏的技能。设计师利用这些能力打造直观且视觉上吸引人的界面，以满足特定用户的需求。虽然 AI 可以增强设计师的工作，但 UI 设计中创造性和以人为中心的方面是不可替代的。因此，AI 是设计师的强大工具，但它无法完全取代设计中的人文关怀。
 
 ## 结论
 
-总而言之，模型图是 UI 设计的重要组成部分，因为它们提供了数字界面的物理描述。了解从高保真原型到低保真草图等各种类型的模型图，有助于设计师为项目的每个阶段选择最佳策略。 使用最佳工具并熟练掌握模型图的创建可以大大提高设计工作的效率和质量。正如我们所见，AI 对 UI 设计产生了重大影响，新的 AI 工具正在彻底改变设计师开发和实施其概念的方式。采用这些创新可以带来更具创造性和以用户为中心的解决方案。
+总而言之，模型图是 UI 设计的重要组成部分，因为它们提供了数字界面的物理描述。了解从高保真原型到低保真草图等各种类型的模型图，有助于设计师为项目的每个阶段选择最佳策略。使用最佳工具并熟练掌握模型图的创建可以大大提高设计工作的效率和质量。正如我们所见，AI 对 UI 设计产生了重大影响，新的 AI 工具正在彻底改变设计师开发和实施其概念的方式。采用这些创新可以带来更具创造性和以用户为中心的解决方案。
 
-下一章将探讨响应式网页设计（RWD），这是一种开发灵活网站以提供一致
-
-
-user experience on a range of screens and devices. We will go over the fundamentals of RWD, including flexible images, fluid grids, and media queries, which let webpages adapt dynamically to various viewing situations. We will also go over typical problems faced by designers and how to solve them, as well as best practices for creating responsive design. Understanding RWD is essential for ensuring your website remains user-friendly and visually appealing, regardless of how it is accessed.
+下一章将探讨响应式网页设计（RWD），这是一种开发灵活网站以提供一致 user experience on a range of screens and devices. We will go over the fundamentals of RWD, including flexible images, fluid grids, and media queries, which let webpages adapt dynamically to various viewing situations. We will also go over typical problems faced by designers and how to solve them, as well as best practices for creating responsive design. Understanding RWD is essential for ensuring your website remains user-friendly and visually appealing, regardless of how it is accessed.
 
 ## Key Terms
 
@@ -6648,6 +6498,9 @@ user experience on a range of screens and devices. We will go over the fundament
 - **Frameworks:** Pre-built structures or systems that provide a foundation for developing applications or websites.
 - **Microcopy:** Brief, targeted text that guides users through an interface, such as button labels, error messages, or tooltips.
 - **Slack:** A communication platform often used by teams for collaboration and project management.
+
+
+
 - **Empathy:** The ability to understand and share the feelings of users, crucial in designing user-centered experiences.
 - **Microinteractions:** Small, subtle animations or feedback in a design that enhance the user experience.
 - **Progressive:** A design approach that emphasizes gradual enhancement and improvement, particularly in terms of user experience.
@@ -6657,17 +6510,13 @@ user experience on a range of screens and devices. We will go over the fundament
 - **Templates:** Pre-designed layouts or structures that serve as a starting point for creating new designs or documents.
 - **Algorithm:** A set of rules or steps used to solve problems or perform tasks, often implemented in software.
 
-
-
-
-
 # 第9章 响应式网页设计
 
-### 引言
+## 引言
 
 响应式网页设计，或称 RWD，已成为网页开发中的标准流程，以确保网站在各种屏幕和设备上都能提供最佳的浏览体验。本章深入探讨 RWD 的基本理念，分析其核心组成部分，包括媒体查询、响应式图片和弹性网格。我们还将探讨响应式与自适应网页设计，学习它们的区别以及何时使用各自的方法。本章还将强调移动优先设计的重要性，这是一种考虑用户行为模式并在扩展到更大设备之前优先考虑移动体验的方法。
 
-### 结构
+## 结构
 
 在本章中，我们将讨论以下主题：
 
@@ -6680,13 +6529,13 @@ user experience on a range of screens and devices. We will go over the fundament
 - 移动优先设计
 - 将移动优先与响应式设计相结合
 
-### 响应式网页设计 (RWD)
+## 响应式网页设计 (RWD)
 
 开发能够自动适应各种屏幕尺寸的网站——无论是在桌面、笔记本、平板还是智能手机上查看——被称为响应式网页设计。如今，网站不仅要在电脑上看起来不错，因为越来越多的人通过移动设备访问互联网。今天，大多数客户要求网站能够响应移动设备。设计师还必须考虑各种平板尺寸以及市场上当今众多的智能手机型号。
 
 有了响应式设计，你的网站将在所有设备上完美运行并看起来很棒。因此，用户拥有更好的整体体验，这可以提高转化率和参与度。因此，企业可以通过增强的网站功能实现扩张。在当今的数字世界中，响应式网页设计是任何希望在线取得成功的人必备的条件。
 
-### 理解响应式网页设计
+## 理解响应式网页设计
 
 响应式网页设计的目的是创建能够自动改变布局以适应不同屏幕尺寸的网站，无论是电脑、平板还是手机。与为每种设备创建不同版本不同，布局会根据平台、方向和屏幕尺寸进行调整。CSS 媒体查询、流式布局和弹性网格被用来实现这一点。
 
@@ -6694,7 +6543,7 @@ user experience on a range of screens and devices. We will go over the fundament
 
 **例如**，像 Amazon 或 Airbnb 这样的网站使用响应式设计。网站能够无缝地适应桌面和智能手机平台上的屏幕，提供一致的用户体验。
 
-### 响应式设计的兴起
+## 响应式设计的兴起
 
 让我们回到 1990 年代，那时网站仅限于电脑屏幕，互联网仍处于起步阶段。当时，人们甚至没有想过用手机进行网页浏览——它们仅用于打电话。自然地，多年来，网页设计师专注于创建在大型桌面屏幕上功能有效且外观良好的网站。
 
@@ -6704,25 +6553,17 @@ user experience on a range of screens and devices. We will go over the fundament
 
 正是在这一点上，响应式网页设计使得网站能够自动适应任何屏幕尺寸。然而，还有另一种选择：自适应网页设计，它以不同的方式来满足不同设备的需求。
 
-### 自适应网页设计
+## 自适应网页设计
 
 与响应式设计不同，自适应网页设计 (AWD) 为网站创建多个版本，每个版本都针对特定的屏幕尺寸或设备进行优化。与动态调整的单一布局不同，AWD 使用预先设计的布局，根据所使用的设备进行投放。这使得高度优化、特定于设备的体验成为可能。
 
 苹果的网站就是一个典型例子。当你在 iPhone 上访问时，你会看到适合移动浏览的布局，而在 PC 上访问时，你会看到针对更大显示器优化的另一个布局。为了获得更流畅、更个性化的浏览体验，网站会检测你的设备并发送最适合你屏幕尺寸的版本。
 
-
-
-
-
-## 自适应设计
-## 响应式设计
+### 自适应设计与响应式设计对比
 
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_425_0.png)
-
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_425_1.png)
-
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_425_2.png)
-
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_425_3.png)
 
 图9.1：自适应设计与响应式设计
@@ -6742,9 +6583,7 @@ user experience on a range of screens and devices. We will go over the fundament
 
 服务器在用户访问网站时识别其使用的设备类型，并提供相应的布局。与响应式设计根据任意屏幕尺寸灵活调整不同，自适应设计为每种设备预设了布局。
 
-### 示例：
-
-像 **亚马逊** 这样的网站就是自适应网页设计（AWD）的一个例子。无论你是通过台式机、平板电脑还是智能手机访问亚马逊，该网站都会根据设备提供多种布局。
+**示例：** 像亚马逊这样的网站就是自适应网页设计（AWD）的一个例子。无论你是通过台式机、平板电脑还是智能手机访问亚马逊，该网站都会根据设备提供多种布局。
 
 - **在智能手机上**，网站会显得更紧凑，按钮更大、浏览更方便，整体内容更少，以适应较小的屏幕。
 - **在平板电脑上**，设计会针对中等尺寸屏幕进行调整，在保持触控灵敏度的同时为内容提供更大空间。
@@ -6756,19 +6595,18 @@ user experience on a range of screens and devices. We will go over the fundament
 
 使用自适应网页设计（AWD）可以实现更快的加载时间，因为它为每种设备提供量身定制的布局。基于设备识别，AWD 加载预先设计的布局，而不是动态缩放项目来匹配屏幕。通过这种方法，用户看到的是针对其设备优化的网站，而无需处理额外加载的无用内容。
 
-### 示例：
-
-以苹果公司的网站为例，来说明灵活设计。该网站通过使用针对较小屏幕优化的功能和图片，在移动设备上运行迅速。另一方面，面向更大屏幕的高清视觉内容、视频和动画则会在台式机上展示给用户。苹果通过为每种设备提供不同的布局，确保每个人都能获得更快的加载时间和更无缝的浏览体验。
+**示例：** 以苹果公司的网站为例，来说明灵活设计。该网站通过使用针对较小屏幕优化的功能和图片，在移动设备上运行迅速。另一方面，面向更大屏幕的高清视觉内容、视频和动画则会在台式机上展示给用户。苹果通过为每种设备提供不同的布局，确保每个人都能获得更快的加载时间和更无缝的浏览体验。
 
 ### 针对特定功能进行优化
 
 自适应设计使开发者能够满足每种设备类型的特定需求。例如，手机具有触摸屏和较小的显示屏，通常以竖屏模式使用，而台式机则具备更大的屏幕和更强的处理能力。AWD 根据这些差异定制用户体验，并基于设备能力优化性能。
 
-### 示例：
-
-Netflix 在其平台上有效地展示了自适应设计。在台式机上，Netflix 会呈现宽幅的电影分类视图，并带有悬停效果、大缩略图和键盘导航。相反，在移动设备上，设计会调整以提供更大的触控友好控件和更简洁的界面，方便用户滑动浏览内容。移动版本还通过加载较低分辨率的图片和较小的视频来节省数据，从而提升性能。
+**示例：** Netflix 在其平台上有效地展示了自适应设计。在台式机上，Netflix 会呈现宽幅的电影分类视图，并带有悬停效果、大缩略图和键盘导航。相反，在移动设备上，设计会调整以提供更大的触控友好控件和更简洁的界面，方便用户滑动浏览内容。移动版本还通过加载较低分辨率的图片和较小的视频来节省数据，从而提升性能。
 
 ### 对旧系统更友好
+
+
+
 
 需要兼容旧浏览器或旧设备的网站可以极大受益于自适应设计。借助 AWD，开发者可以专门为那些可能无法支持 HTML5 或 CSS3 等较新 Web 技术的旧电脑创建布局。这种方法能确保网站在多种设备上保持功能和可访问性，同时不损害用户体验。
 
@@ -6776,15 +6614,11 @@ Netflix 在其平台上有效地展示了自适应设计。在台式机上，Net
 
 NASA 的网站和其他政府网站采用自适应设计，以适应用户使用旧技术的情况。对于使用旧浏览器的用户，NASA 可能会提供网站的简化版本，去除交互组件和新设计元素。这一策略既保证了所有用户都能获取关键信息，又为使用较新设备的用户提供丰富、现代化的体验。
 
-
-
-
-
 ## 更精细的内容呈现控制
 
 借助自适应网页设计，设计师可以更精确地控制内容在各种设备上的显示方式。这对于希望为客户提供个性化体验的公司来说尤其有益。桌面用户可以获得更深入、更具吸引力的内容，而移动用户可能只需要简单的导航和联系信息。
 
-**示例：**
+### 示例：
 
 BBC 是自适应设计的典型范例，其信息针对不同设备进行了定制。BBC 网站可在移动设备上提供可滚动的最新新闻 feed、更大的文字以及便捷的视频材料访问。用户在桌面电脑上会看到更长的文章、改进的导航和更深入的新闻板块。通过这种策略，可以确保所有类型的用户都能获得对其设备最有趣、最相关的材料。
 
@@ -6792,7 +6626,7 @@ BBC 是自适应设计的典型范例，其信息针对不同设备进行了定�
 
 自适应设计为开发者提供了一个可预测的框架。由于每个布局都是预先定义的，设计师可以准确预测内容在各种平台上的显示效果。这种一致性使测试变得更容易，并保证在所有平台上都能获得优化良好的体验。
 
-**示例：**
+### 示例：
 
 Target 的网站是灵活设计实际应用的绝佳例证。用户在电脑上可以看到带有筛选器和清晰高清照片的复杂产品网格。当在移动设备上查看时，设计会转变为更简单的网格，按钮更大，结账流程更快。无论使用何种设备，网站的每个版本都经过精心设计，以提供可靠且一致的购物体验。
 
@@ -6811,19 +6645,18 @@ Target 的网站是灵活设计实际应用的绝佳例证。用户在电脑上�
 自适应在线设计（AWD）是一种强大的技术，适用于某些类型的在线项目，因为它在特定情况下效果特别好。以下是考虑使用 AWD 的时机：
 
 - **重新设计现有网站**
-  如果您的网站目前不适合移动设备或尚未针对各种屏幕宽度进行优化，自适应设计是一个不错的选择。通过 AWD，您可以在保留当前网站基本框架的同时，为移动设备、平板电脑和其他设备添加新布局，从而避免每次都从头开始。与全面改造相比，这一转变更简单、更经济。
-  例如，即使您当前的网站在桌面上运行良好，但在智能手机上看起来很奇怪，自适应设计也能让您开发网站的移动专用版本，而不会改变桌面布局。对于希望在不从头开始的情况下改变在线形象的企业来说，这种方法效果很好。
+
+    如果您的网站目前不适合移动设备或尚未针对各种屏幕宽度进行优化，自适应设计是一个不错的选择。通过 AWD，您可以在保留当前网站基本框架的同时，为移动设备、平板电脑和其他设备添加新布局，从而避免每次都从头开始。与全面改造相比，这一转变更简单、更经济。
+
+    例如，即使您当前的网站在桌面上运行良好，但在智能手机上看起来很奇怪，自适应设计也能让您开发网站的移动专用版本，而不会改变桌面布局。对于希望在不从头开始的情况下改变在线形象的企业来说，这种方法效果很好。
 
 - **为不同设备创建多个视口**
-  自适应设计能够根据设备屏幕大小支持各种布局是其优势之一。借助这种灵活性，您现在可以选择要支持多少个视口（布局）。
 
+    自适应设计能够根据设备屏幕大小支持各种布局是其优势之一。借助这种灵活性，您现在可以选择要支持多少个视口（布局）。
 
+    虽然通常习惯为六种标准屏幕尺寸进行设计（小尺寸平板为600px，大尺寸平板为768px，笔记本电脑为1024px，桌面显示器为1200px），但你可以根据品牌需求和财务限制，使用尽可能多的视口。
 
-
-
-虽然通常习惯为六种标准屏幕尺寸进行设计（小尺寸平板为600px，大尺寸平板为768px，笔记本电脑为1024px，桌面显示器为1200px），但你可以根据品牌需求和财务限制，使用尽可能多的视口。
-
-对于需要在各种平台上精确控制内容呈现效果的公司来说，这种灵活性非常理想。例如，为了提升用户体验和转化率，电商网站可能会在移动端上优先采用与桌面端不同的产品展示方式或结账流程。
+    对于需要在各种平台上精确控制内容呈现效果的公司来说，这种灵活性非常理想。例如，为了提升用户体验和转化率，电商网站可能会在移动端上优先采用与桌面端不同的产品展示方式或结账流程。
 
 - **聚焦特定设备**
 
@@ -6855,22 +6688,21 @@ Target 的网站是灵活设计实际应用的绝佳例证。用户在电脑上�
 
 - **构建新网站**
 
+    从零开始构建网站时，响应式设计效果极佳。其灵活的布局可适配各种屏幕尺寸，无需为同一网站构建多个独立版本。设计布局会动态调整，以适应台式机、平板电脑和手机等多种屏幕尺寸。因此，对于新建的网站来说，这是一个明智的选择，因为适应性和灵活性至关重要。
 
-从零开始构建网站时，响应式设计效果极佳。其灵活的布局可适配各种屏幕尺寸，无需为同一网站构建多个独立版本。设计布局会动态调整，以适应台式机、平板电脑和手机等多种屏幕尺寸。因此，对于新建的网站来说，这是一个明智的选择，因为适应性和灵活性至关重要。
-
-例如，在搭建电子商务网站时，响应式设计可确保台式机和移动设备用户获得流畅的购物体验。由于布局能适应各种屏幕尺寸，因此不再需要为每种设备进行单独设计。
+    例如，在搭建电子商务网站时，响应式设计可确保台式机和移动设备用户获得流畅的购物体验。由于布局能适应各种屏幕尺寸，因此不再需要为每种设备进行单独设计。
 
 - **更轻松的开发和维护**
 
-  与自适应设计相比，响应式网页设计（RWD）更容易创建和维护。由于RWD依赖单一布局，利用CSS媒体查询自动调整大小以适应多种屏幕尺寸，因此开发人员只需维护网站的一个版本。对于资源有限的企业来说，这尤其有帮助，因为它减少了更新或修正多个版本所需的时间和精力。
+    与自适应设计相比，响应式网页设计（RWD）更容易创建和维护。由于RWD依赖单一布局，利用CSS媒体查询自动调整大小以适应多种屏幕尺寸，因此开发人员只需维护网站的一个版本。对于资源有限的企业来说，这尤其有帮助，因为它减少了更新或修正多个版本所需的时间和精力。
 
-  得益于WordPress、Drupal和Joomla等内容管理系统（CMS），制作响应式网站变得更加简单。由于许多主题和模板本身已支持响应式设计，设计人员在使用现成方案时无需从头开始。凭借其易用性，RWD正逐渐成为新网页项目的流行选择。
+    得益于WordPress、Drupal和Joomla等内容管理系统（CMS），制作响应式网站变得更加简单。由于许多主题和模板本身已支持响应式设计，设计人员在使用现成方案时无需从头开始。凭借其易用性，RWD正逐渐成为新网页项目的流行选择。
 
 - **面向未来的网站**
 
-  使用响应式设计时，您无需为市场上推出的每一种新设备或屏幕尺寸创建设计。凭借其灵活且自适应的布局，它可以兼容多种设备，从智能手机、平板电脑到电视，甚至可折叠手机等新颖形态。因此，RWD是一种面向未来的解决方案，能确保您的网站在多年后才问世的设备上依然美观。
+    使用响应式设计时，您无需为市场上推出的每一种新设备或屏幕尺寸创建设计。凭借其灵活且自适应的布局，它可以兼容多种设备，从智能手机、平板电脑到电视，甚至可折叠手机等新颖形态。因此，RWD是一种面向未来的解决方案，能确保您的网站在多年后才问世的设备上依然美观。
 
-  例如，您的灵活网站将为每一款新流行的、具有不同屏幕分辨率的平板电脑或可穿戴设备做好准备。这意味着，每当设备资源更紧张时，您都无需重新设计网站。
+    例如，您的灵活网站将为每一款新流行的、具有不同屏幕分辨率的平板电脑或可穿戴设备做好准备。这意味着，每当设备资源更紧张时，您都无需重新设计网站。
 
 ## 何时自适应设计不太适用
 
@@ -6883,14 +6715,14 @@ Target 的网站是灵活设计实际应用的绝佳例证。用户在电脑上�
 在当今的数字世界中，用户通过各种屏幕尺寸不同的设备访问网站，因此响应式网页设计至关重要。以下是其重要性的详细说明：
 
 - **更广泛的覆盖面：** 确保您的网站在台式机和移动设备上均可运行和访问，从而触达更广泛的受众。
+
 - **成本效益：** 无需制作网站的多个版本，从而降低开发和维护费用。
+
+
+
 - **更好的用户体验：** 提供更快的加载时间和灵活的布局，带来无缝的浏览体验。
 - **SEO优势：** 提升搜索引擎排名，因为Google会奖励加载快且移动友好的网站。
 - **面向未来：** 这一特性通过适应新的屏幕尺寸和设备，确保您的网站在未来仍保持相关性。
-
-
-
-
 
 ## 响应式网页设计的构建模块
 
@@ -6908,7 +6740,7 @@ HTML（超文本标记语言）提供网页的结构和内容，定义标题、�
 
 ### HTML
 
-任何网页都由 HTML 结构化，它能有效组织其内容。语义化 HTML 元素如 <header>、<nav>、<main> 和 <footer> 用于在响应式设计中指定不同的区域。这些组件支持灵活的布局以及可访问性。结构良好的 HTML 更易于应用响应式 CSS，从而保证信息在各种设备上正确显示。
+任何网页都由 HTML 结构化，它能有效组织其内容。语义化 HTML 元素如 `<header>`、`<nav>`、`<main>` 和 `<footer>` 用于在响应式设计中指定不同的区域。这些组件支持灵活的布局以及可访问性。结构良好的 HTML 更易于应用响应式 CSS，从而保证信息在各种设备上正确显示。
 
 ### CSS
 
@@ -6920,28 +6752,40 @@ HTML 元素的外观由 CSS（层叠样式表）处理。CSS 调整响应式设�
 
 ### 大型桌面屏幕
 
+```
 @media screen and (min-width: 1400px)
+
 {...}
+```
 
 ### 平板电脑和 iPad
 
+```
 @media screen and
 (min-width: 780px) and
 (max-width: 1023px)
+
 {...}
+```
 
 ### 笔记本电脑
 
+```
 @media screen and
 (min-width: 1024px) and
 (max-width: 1399px)
+
 {...}
+```
 
 ### 移动设备
 
+```
 @media screen and
 (max-width: 767px)
+
 {...}
+```
 
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_438_0.png)
 
@@ -6969,9 +6813,7 @@ HTML 元素的外观由 CSS（层叠样式表）处理。CSS 调整响应式设�
 }
 ```
 
-在此示例中，.container 类在宽度大于 768px 的屏幕上将具有 75% 的宽度和
-
-额外的内边距，而在较窄的屏幕上，宽度会减小到 95%，内边距更少。这种方法可确保布局在从桌面到移动电话的各种设备上保持有效且具有视觉吸引力。
+在此示例中，`.container` 类在宽度大于 768px 的屏幕上将具有 75% 的宽度和额外的内边距，而在较窄的屏幕上，宽度会减小到 95%，内边距更少。这种方法可确保布局在从桌面到移动电话的各种设备上保持有效且具有视觉吸引力。
 
 在这种情况下，`.container` 类在大于 768px 的设备上将具有 75% 的宽度和额外的内边距，而在小于 768px 的显示屏上宽度为 95% 且内边距更少。这种方法可保证布局在智能手机和台式电脑等各种平台上继续保持功能性和美观性。
 
@@ -6979,15 +6821,11 @@ HTML 元素的外观由 CSS（层叠样式表）处理。CSS 调整响应式设�
 
 使用流体网格布局时，由于使用相对单位（如百分比）而不是固定单位（如像素），项目可以按比例缩放以适应屏幕或容器的大小。与可能导致布局问题或在较小的显示屏上需要用户水平滚动的固定网格不同，此方法可确保布局轻松适应不同的设备尺寸。流体网格提供更多灵活性，可动态调整内容大小，以保持设计在包括计算机和移动电话在内的各种平台上可访问且可适应。这使设计更具响应性和用户友好性。
 
-
-
-
-
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_440_0.png)
 
 Figure 9.4: 流体布局示例
 
-## Example:
+### Example:
 
 以下是流体网格布局的一些代码示例：
 
@@ -7004,7 +6842,7 @@ Figure 9.4: 流体布局示例
 }
 ```
 
-这里，.column 类使用宽度为 50%，意味着它将占据 .container 宽度的一半，而与容器的整体宽度无关。这种自适应性保证了列在较小的屏幕上能够适当缩小并保持平衡的布局，而无需固定尺寸。
+这里，`.column` 类使用宽度为 50%，意味着它将占据 `.container` 宽度的一半，而与容器的整体宽度无关。这种自适应性保证了列在较小的屏幕上能够适当缩小并保持平衡的布局，而无需固定尺寸。
 
 ## Flexbox Layout
 
@@ -7019,20 +6857,17 @@ Figure 9.5: Flexbox 容器的独特属性
 以下是 Flexbox 布局的代码示例：
 
 ```
-```css
 .container {
   display: flex;
   flex-wrap: wrap;
 }
-
 .item {
   flex: 1 1 200px; /* Grow, shrink, and base size */
   margin: 10px;
 }
 ```
-```
 
-在此示例中，通过在 **.container** 上使用 **display: flex** 激活了 Flexbox 布局。** .item** 元素是灵活的，**flex: 1 1 200px** 表示它们将从 200px 的基础宽度开始扩展和收缩以填充可用空间。由于这种样式会自动调整项目以适应不同的屏幕尺寸，而无需复杂的计算，因此更简单地创建响应式设计。
+在此示例中，通过在 `.container` 上使用 `display: flex` 激活了 Flexbox 布局。`.item` 元素是灵活的，`flex: 1 1 200px` 表示它们将从 200px 的基础宽度开始扩展和收缩以填充可用空间。由于这种样式会自动调整项目以适应不同的屏幕尺寸，而无需复杂的计算，因此更简单地创建响应式设计。
 
 ## Responsive Images
 
@@ -7053,15 +6888,17 @@ img {
 }
 ```
 
-通过设置 max-width: 100% 和 height: auto，可以使图像按比例缩小以适应容器，而不会丢失宽高比。这种方法确保图像保持在其容器的宽度之内，并根据不同的屏幕尺寸和分辨率进行调整，而不会出现任何问题。
+通过设置 `max-width: 100%` 和 `height: auto`，可以使图像按比例缩小以适应容器，而不会丢失宽高比。这种方法确保图像保持在其容器的宽度之内，并根据不同的屏幕尺寸和分辨率进行调整，而不会出现任何问题。
 
 ## Responsive Typography
 
-从巨大的电脑到较小的智能手机，响应式排版通过根据屏幕尺寸或视口宽度调整字体大小和行距，确保在所有平台上都具有可读性和视觉吸引力。当使用 em 或 rem 等相对单位时，文本会按比例缩放，保持一致的设计。可以通过使用媒体查询来应用指定的字体大小，从而在屏幕宽度范围内保持适当的文本大小和间距，从而改善用户体验。这种方法保证了无论设备或屏幕尺寸如何，内容始终可读且可用。
+从巨大的电脑到较小的智能手机，响应式排版通过根据屏幕尺寸或视口宽度调整字体大小和行距，确保在所有平台上都具有可读性和视觉吸引力。当使用 `em` 或 `rem` 等相对单位时，文本会按比例缩放，保持一致的设计。可以通过使用媒体查询来应用指定的字体大小，从而在屏幕宽度范围内保持适当的文本大小和间距，从而改善用户体验。这种方法保证了无论设备或屏幕尺寸如何，内容始终可读且可用。
 
 ### Example:
 
 以下是实现响应式排版的代码片段。
+
+
 
 ```
 body {
@@ -7074,21 +6911,17 @@ body {
 }
 ```
 
-对于更大的显示器，这里将基础字体大小设置为 16px。对于宽度为 768px 或更小的显示器，字体大小为 14px。这确保了内容在各种设备上保持可读且缩放适当，从而改善了整体用户体验。
+对于更大的显示器，这里将基础字体大小设置为 `16px`。对于宽度为 `768px` 或更小的显示器，字体大小为 `14px`。这确保了内容在各种设备上保持可读且缩放适当，从而改善了整体用户体验。
 
 ## Adaptive Layouts
 
 自适应布局会根据所使用的设备更改其内容和结构。与动态变化的响应式布局不同，自适应布局使用预先建立的断点在不同的固定设计之间转换。通过使用这种方法，可以保证布局针对特定屏幕尺寸进行定制，在任何设备上都能提供最佳体验。自适应布局通过强调重要断点，为内容提供独特的视觉效果。这使得信息在从台式机到智能手机的各种平台上都易于访问和交互。
 
-
-
-
-
 ![](img/5fa48c4cd6454bfb24b9d1359df45cda_445_0.png)
 
 图 9.7：响应式图片示例
 
-## 示例：
+## 示例
 
 以下是创建自适应布局的代码片段：
 
@@ -7103,7 +6936,7 @@ body {
 }
 ```
 
-在此示例中，`.nav-menu` 在较大屏幕上可见，而在小于 768 像素的屏幕上隐藏。通过采用自适应策略，您可以根据设备尺寸提供不同的导航选项，从而提升各种用户场景下的可用性和可访问性。
+在此示例中，`.nav-menu` 在较大屏幕上可见，而在小于 `768` 像素的屏幕上隐藏。通过采用自适应策略，您可以根据设备尺寸提供不同的导航选项，从而提升各种用户场景下的可用性和可访问性。
 
 适用于桌面和大屏幕的详细菜单
 
@@ -7113,12 +6946,16 @@ body {
 
 移动优先设计策略是一种响应式网页设计方法，强调优先为移动设备创建网站，而平板和桌面等较大屏幕则稍后处理。该方法的基本理念是从最小的屏幕尺寸开始，逐步向上设计，确保移动设备能够优先访问和使用最重要的功能和内容。
 
-## 移动优先设计的关键方面
+### 移动优先设计的关键方面
 
 - **优先处理核心内容**：首先，构建一个精简版网站，突出其主要功能和关键内容。这能确保快速高效的体验，专注于移动用户最关心的事情，而这些用户通常处于多任务处理或外出状态。
+
 - **渐进增强**：移动版本完成后，逐步添加功能，并为更大的屏幕优化设计。该技术创建了一个可在所有平台上良好运行的坚实基础，并允许你随着屏幕尺寸增大而加入更复杂的设计和功能。
+
 - **性能优化**：性能优化是移动优先设计的关键组成部分，因为移动设备通常网络连接较慢，处理能力较弱。通过从移动端设计开始，你可以确保网站能在所有设备上快速高效地加载。
+
 - **改善用户体验**：通过优先考虑移动端设计，你能满足最大且增长最快的互联网用户群体的需求。这种方法通常能在每一台设备上带来更友好、更直观的体验。
+
 - **CSS 媒体查询**：移动优先设计中使用媒体查询根据屏幕尺寸应用样式。通过从移动端样式开始，并使用 `@media (min-width:...)` 为大屏幕添加样式，你的设计会随着屏幕尺寸的增大而无缝调整。
 
 **示例：**
@@ -7176,10 +7013,6 @@ body {
 
 ## 平衡移动优先设计与响应式设计以实现自适应组件
 
-
-
-
-
 根据具体组件选择移动优先（Mobile-First）或响应式设计（Responsive Design）方法，能够创造更具适应性、更以用户为中心的体验。移动优先优先考虑较小屏幕上的核心元素，而响应式设计则在不同设备上动态调整布局。
 
 **例如**，响应式导航栏可以从桌面端的全横向菜单，自适应为移动端的可折叠“汉堡”菜单，确保不同屏幕尺寸下操作流畅。
@@ -7193,22 +7026,30 @@ body {
 ## 关键术语
 
 - **响应式网页设计：** 一种网站设计方法，网站能自动适应各种屏幕尺寸，确保跨设备的无缝用户体验。
+
 - **自适应网页设计：** 另一种网页设计方法，它针对特定屏幕尺寸创建不同布局，而非像响应式设计那样自动调整。
+
 - **桌面端导向网站：** 最初为大型桌面屏幕设计的网站，随着移动浏览的增加，这类网站的有效性下降，导致适应缓慢的企业错失机遇。
+
 - **设计理念：** 一种强调先为小屏幕进行设计、再扩展到大屏幕的原则，同时优先考虑移动设备的关键功能。
+
 - **实现技术：** 在移动优先策略中使用CSS媒体查询，先为小屏幕应用样式，再逐步添加大屏幕样式。诸如弹性网格、响应式图像等技术可实现不同设备间的流畅变化。
+
 - **性能优化：** 考虑到移动设备连接较慢、计算能力较低，通过简化设计复杂度来确保移动端快速性能。响应式设计还包括跨平台优化图像、脚本和元素。
+
 - **用户体验：** 移动优先和响应式网页设计都能确保内容在任何设备上均可访问且用户友好。移动优先优先照顾网络较慢的用户，响应式设计则让内容流畅适应多种屏幕尺寸。
+
 - **移动优先设计：** 一种先为移动用户提供简洁布局、随着屏幕尺寸增大逐步增加复杂度的网页设计方法。
+
 - **竖屏模式：** 一种高度大于宽度的屏幕方向，常见于移动设备。
+
 - **个性化体验：** 基于个人偏好、行为或人口统计特征定制的用户体验，能够提升用户参与度和满意度。
+
+
+
 - **框架：** 预构建的结构或平台（如Bootstrap或React），通过提供可重用组件和工具来简化网页开发。
 - **电商网站：** 支持在线买卖产品或服务的网站，通常包含支付处理和客户支持功能。
-- **预设计布局：** 现成的网页设计模板，可直接用于
-
-
-定制以满足特定需求，加快设计过程。
-
+- **预设计布局：** 现成的网页设计模板，可直接用于定制以满足特定需求，加快设计过程。
 - **灵活布局：**一种能够动态调整以适应不同屏幕尺寸和设备的网页布局，确保响应式用户体验。
 - **SEO（搜索引擎优化）：**用于提升网站在搜索引擎中可见度的技术，从而增加流量和排名。
 - **移动优先索引：**一种 Google 索引方法，优先考虑网站移动版本的排名和索引，反映了移动网络流量的日益主导地位。
@@ -7218,7 +7059,7 @@ body {
 
 # 第10章
 
-### 掌握设计交接
+## 掌握设计交接
 
 ### 简介
 
@@ -7227,7 +7068,6 @@ body {
 ### 结构
 
 在本章中，我们将讨论以下主题：
-
 - 理解设计交接
 - 协作在设计交接中的作用
 - 促进更好协作的策略
@@ -7249,13 +7089,6 @@ body {
 ### 协作在设计交接中的作用
 
 任何产品的成功和无缝的设计交接都依赖于协作。当开发人员和设计师密切合作时，两个团队都能清楚了解项目的需求、技术限制和目标。有效的沟通确保了从设计到开发的无缝转移，也有助于避免误解。至关重要的是，设计师必须在整个开发过程中持续参与，以保证其愿景得到恰当实现。通过保持开放的反馈循环，两个团队可以及早解决问题、做出调整，并确保最终产品遵循原始计划，同时为持续改进留出机会。
-
-
-
-
-## 更好的协作策略
-
-在深入了解设计交接的细节之前，首先回顾协作概念至关重要。由于每个项目都不同，这些指南应根据团队的具体需求和目标进行修改。有效的团队合作促进了更好的沟通，有助于避免误解，并确保更顺畅、更高效的工作流程。团队合作是优化交接流程的关键，这有助于创造性地解决问题，并确保工程师和设计师之间保持一致。这种方法在保持未来修改灵活性的同时，仍能[content]
 
 ## 更好的协作策略
 
@@ -7284,22 +7117,16 @@ body {
 ### 设计文件
 
 确保所有设计文件都已正确整理且开发者可以轻松访问。这包括最终成品以及展示设计演进过程的任何修订版本。
-
 - 以 Adobe XD、Sketch 或 Figma 格式交付最终设计文件。
 - 为展示迭代，提供任何相关的设计修订。
 
 ### Figma Dev Mode：简化开发者设计交接
 
-通过为开发者提供直接访问设计文件中重要规范的方式，Figma 的 Dev Mode 简化了设计交接流程。此模式使开发者能够轻松
-
-
-
-检查测量值、样式、颜色、排版以及组件信息。Dev Mode 还会为 CSS、Swift 和 Android 生成代码片段，帮助开发者更高效地复制精确的设计。Dev Mode 通过确保设计细节的一致、透明的沟通，促进设计师和开发者之间无缝的协作，从而最终加快开发流程并提升最终产品的质量。
+通过为开发者提供直接访问设计文件中重要规范的方式，Figma 的 Dev Mode 简化了设计交接流程。此模式使开发者能够轻松检查测量值、样式、颜色、排版以及组件信息。Dev Mode 还会为 CSS、Swift 和 Android 生成代码片段，帮助开发者更高效地复制精确的设计。Dev Mode 通过确保设计细节的一致、透明的沟通，促进设计师和开发者之间无缝的协作，从而最终加快开发流程并提升最终产品的质量。
 
 ## 文档
 
 良好的设计交接依赖于详尽的文档。确保开发者拥有精确的实施说明，包括功能和美观应如何实现。
-
 - 提供设计规范，如内边距、尺寸和间距。
 - 提供风格手册，涵盖组件使用、排版和配色方案。
 - 为说明用户导航，分享旅程地图或用户流程图。
@@ -7307,73 +7134,66 @@ body {
 ## 交互式原型
 
 为了传达你的设计在实践中应如何运作，交互式原型至关重要。它们为开发者提供了用户将如何与各种组件交互的清晰画面。
-
 - 展示用户交互和组件活动。
 - 强调过渡动画，以提供无缝的用户体验。
 
 ## 资源
 
 确保开发者能够访问所有必要的资源以实现无缝实施。这包括照片、图标和图形的正确格式。
-
 - 提供 SVG、PNG 及其他格式的资源。
 - 创建共享文件夹或下载链接以便便捷访问。
 
 ## 设计系统或风格指南
 
 为了保持一致性，如果你有设计系统，请与开发者分享。它应包含关于组件使用的明确规则。
-
 - 给出组件的应做和不应做事项。
 - 交换关于可复用部件的信息以实现更高效的开发。
 
 ## 反馈和修订
 
 为了在设计过程中让所有人保持知情，务必记录所有评论和更改。这使得需要更改的内容以及需要开发者参与的地方更加清晰。
-
 - 列出设计评审的任何结论以及即将进行的更改。
 - 指出需要开发者输入的区域。
 
 ## 功能和特性
 
 为了帮助开发者，清晰定义你设计的主要功能和特性。这确保他们了解事物应如何运作。
-
 - 解释组件在各种状态下的行为方式（如悬停、激活等）。
 - 强调最终产品所需的任何 API 或集成。
 
 ## 技术规范
 
 为了防止实施过程中出现意外，确保开发者知晓所有技术规范。这使得你的设计更有可能在所有平台上按预期运行。
-
 - 提供支持的浏览器和设备的兼容性列表。
 - 提出开发者应注意的任何性能限制或问题。
 
 ## 联系信息
 
 确保在开发期间开发者可以联系到正确的联系人。分享关键团队成员的信息，以便他们在需要时能快速获得帮助。
-
 - 在项目开发期间让设计师能够被联系以解答询问。
 - 创建利益相关者名单以便了解问题或进展。
 
 ## 项目时间线
 
 为了保持开发的推进，务必包含一个清晰的项目时间线，标识重要里程碑。
-
 - 提供开发各个阶段的重要日期。
 - 分发任何评审会议或反馈循环的日期。
 
+
+
 通过使用此清单，你可以最大限度地减少开发过程中误解和低效的可能性，确保设计师和开发者保持同步，并拥有成功交接所需的一切。
 
-## 有效设计交接的技巧
+# 有效设计交接的技巧
 
 高效的设计交接对于开发者和设计师之间富有成效的工作关系至关重要。团队可以通过遵循最佳实践，保证从设计到开发的更顺畅过渡，并最终获得更好的最终产品。
 
 以下是一些改进设计交接的提示：
 
-- **及早让开发者参与**
-  在设计过程中及早让开发者参与可以促进更顺畅的协作并降低后期技术障碍的可能性。你可以通过在对话早期就征求他们对技术限制的重要意见，确保你的概念是可实现的。
-  例如，如果开发者指出限制，复杂的动画可以尽早简化，避免后期额外工作。通过共同合作
+## 及早让开发者参与
 
+在设计过程中及早让开发者参与可以促进更顺畅的协作并降低后期技术障碍的可能性。你可以通过在对话早期就征求他们对技术限制的重要意见，确保你的概念是可实现的。
 
-为了使设计目标与可行方案保持一致、减少延误并改善团队协作。
+例如，如果开发者指出限制，复杂的动画可以尽早简化，避免后期额外工作。通过共同合作为了使设计目标与可行方案保持一致、减少延误并改善团队协作。
 
 ## 提供清晰详细的文档
 
@@ -7397,17 +7217,17 @@ body {
 
 例如，定期检查或协作会议使两个团队都能确保设计顺利推进、及时做出必要调整，并在项目接近完成时避免重大问题。这种持续反馈保证了流程更加顺畅，并避免出现偏差。
 
-- **保持灵活的心态**
+## 保持灵活的心态
 
-  在开发过程中出现意外问题或技术限制时，设计师应准备好进行调整。在某些技术要求下，可能需要更改部分设计组件。
+在开发过程中出现意外问题或技术限制时，设计师应准备好进行调整。在某些技术要求下，可能需要更改部分设计组件。
 
-  例如，与开发者协调调整动画或布局，同时保留整体设计目标，这一点至关重要。这种适应性既能确保设计目标不被干扰地实现，又能营造协作氛围。
+例如，与开发者协调调整动画或布局，同时保留整体设计目标，这一点至关重要。这种适应性既能确保设计目标不被干扰地实现，又能营造协作氛围。
 
-- **使用协作设计工具**
+## 使用协作设计工具
 
-  利用 Figma、Zeplin 或 Sketch 等工具来促进设计交接。这些平台让开发者可以直接检查元素、查看规格，并实时了解任何设计变更。
+利用 Figma、Zeplin 或 Sketch 等工具来促进设计交接。这些平台让开发者可以直接检查元素、查看规格，并实时了解任何设计变更。
 
-  例如，整理好所有设计材料和规格，可以让开发者更快地找到所需内容，从而减少混乱，确保更顺畅的工作流程，并减少开发过程中的错误。
+例如，整理好所有设计材料和规格，可以让开发者更快地找到所需内容，从而减少混乱，确保更顺畅的工作流程，并减少开发过程中的错误。
 
 ## 结论
 
@@ -7424,11 +7244,6 @@ body {
 - **技术限制：** 技术或编码框架带来的限制，可能需要在开发过程中调整设计以确保功能正常。
 - **持续改进：** 设计是一个不断演变的过程，允许在开发期间及之后进行调整和增强，以更好地满足用户需求和项目目标。
 - **技术规格：** 详细的需求说明，概述设计应如何在不同的平台上运行，帮助开发者确保实现过程中的兼容性。
-
-
-
-
-
 - **兼容性列表：** 一个记录了设计 intended 支持的浏览器和设备的列表，确保设计在各种平台上都能正确运行。
 - **性能限制：** 可能影响产品速度或效率的限制或问题，开发人员在实现过程中必须解决，以确保最佳性能。
 - **APIs（应用程序编程接口）：** 允许不同软件系统相互通信的工具，通常需要为最终产品添加高级功能。
@@ -7473,12 +7288,12 @@ body {
 将你的作品集视为一个独立的设计挑战。就像你会处理的任何产品一样，它必须井然有序、易于理解且使用方便。一个结构良好的作品集将向招聘人员展示你创造性思考、解决问题以及引导他们了解你的工作的能力。
 
 - **结构清晰**
+
   在每个项目的开头给出问题的快速概述、困难和用户。之后，介绍你的流程，重点介绍用户流程、线框图和研究。最后提供最终解决方案，展示你的努力如何解决了问题。
+
 - **展示你的流程**
 
-
-
-你的设计历程是招聘人员想要看到的。谈谈你的想法、困难、迭代和批评。为了展示你是如何改进设计的，请包含线框图、草图和之前的迭代版本。
+  你的设计历程是招聘人员想要看到的。谈谈你的想法、困难、迭代和批评。为了展示你是如何改进设计的，请包含线框图、草图和之前的迭代版本。
 
 - **Make it Visual**：保持你的作品集简洁却引人注目。为了让你的设计和解释脱颖而出，使用清晰的字体、高质量的照片和简洁的布局。通过避免杂乱来保持你的文字可读性。
 
@@ -7493,6 +7308,8 @@ body {
 **“Can you tell us about yourself?”**
 
 虽然这个问题看起来很基础和友好，但它实际上是你给人留下良好第一印象的最佳机会。创建一个简洁的叙述，强调你对 UX 设计的热情、相关的经验，以及你今天来到这里的动机，而不是简单地复述你的简历。
+
+
 
 **Tip:** *提醒自己你是如何爱上 UX 的，是什么让你从竞争对手中脱颖而出，以及这些如何与你申请的职位相关。*
 
@@ -7517,52 +7334,60 @@ body {
 ### General Questions
 
 1. What inspired you to pursue a career in UI/UX design?
+
 2. How do you stay updated with industry trends and design tools?
 
 ### Design Process
 
 1. Describe your design process from research to final implementation.
+
 2. How do you approach user research, and what methods do you use?
+
 3. Can you explain the difference between UX and UI design?
 
 ### Tools and Technologies
 
 1. What design tools do you prefer and why? (for example, Sketch, Figma, and Adobe XD)
+
 2. How do you manage version control and collaborate with developers?
 
 ### Problem Solving
 
 1. Describe a challenging design problem you faced and how you solved it.
+
 2. How do you prioritize user needs when designing a product?
 
 ### Portfolio and Projects
 
 1. Can you walk us through a project in your portfolio? What was your role?
+
 2. What metrics do you use to measure the success of your designs?
 
 ### Collaboration and Communication
 
 1. How do you handle feedback from stakeholders or team members?
+
 2. Describe a time when you had to advocate for a design decision. How did you approach it?
 
 ### User Experience Focus
 
 1. How do you ensure your designs are accessible and inclusive?
+
 2. What techniques do you use to create user personas?
 
 ### Trends and Future
 
 1. What emerging trends in UI/UX design are you most excited about?
+
 2. How do you envision the future of UI/UX design?
 
 ### Behavioral Questions
 
 1. Describe a time when you failed on a project. What did you learn from it?
+
 2. How do you handle tight deadlines and multiple projects?
 
 你将感到更加自信和准备好进行有意义的讨论
-
-
 
 在面试期间，如果你提前准备好答案并预期这些类型的问题。
 
@@ -7577,9 +7402,13 @@ body {
 以下建议将帮助你应对设计挑战：
 
 - **Understand the Problem:** 慢慢思考解决方案。提问有助于明确挑战。认识用户、他们的目标以及任何限制。
+
 - **Describe Your Procedure:** 在起草线框图或草图时，大声谈论你的想法。雇主想要了解的不仅是最终设计，还有你是如何得出解决方案的。
+
 - **Focus on the User:** 在解决问题时，牢记用户的需求。
+
 - **Display Your Work:** 无论你使用数字 mockup 还是草图，都要确保回顾你的选择并提供理由。
+
 - **Be Receptive to Criticism:** 在挑战过程中，你可能会收到批评。展示你能够很好地接受建设性批评并据此修改设计。
 
 雇主重视技术设计才能，但他们也寻求展示团队合作的软素质。UI/UX 设计师必须能够沟通、协作和适应，因为他们经常直接与开发人员、产品经理和利益相关者合作。
@@ -7587,8 +7416,11 @@ body {
 以下是一些需要突出的关键软技能：
 
 - **Collaboration:** 描述你如何与跨职能团队共同制定设计方案。
+
 - **Adaptability:** 举例说明你如何应对截止日期压力或不断变化的需求。
+
 - **Problem-Solving:** 展示你批判性思考和以用户为中心解决问题的能力。
+
 - **Communication:** 强调你向不参与设计流程的利益相关者传达设计概念和反馈的能力。
 
 这种方法不仅展示了你的设计熟练程度，还展示了你与他人互动的能力，这在任何团队环境中都是必不可少的。
@@ -7606,7 +7438,9 @@ UI/UX 设计领域一直在不断变化。保持对最新工具、技术和趋�
 以下是一些保持更新的方法：
 
 - Follow design influencers and read blogs on sites like Behance, Dribbble, and Medium. Networking on LinkedIn is also a great way to stay connected and informed.
+
 - Take part in online communities such as Reddit’s design threads or UX Stack Exchange.
+
 - To maintain your abilities, take part in online courses, webinars, or seminars.
 
 ## Be Confident and Authentic
@@ -7615,15 +7449,13 @@ UI/UX 设计领域一直在不断变化。保持对最新工具、技术和趋�
 
 ## Future Trends in UI/UX Design
 
+
+
 UI/UX 设计的未来发展将强调沉浸式技术，如虚拟现实（VR）和增强现实（AR），以及个性化和 AI 集成。能够根据用户活动实时变化的超个性化用户体验正变得越来越受欢迎。自动化和 AI 驱动的设计工具加快了流程，而语音和手势界面也越来越受欢迎。此外，可访问性变得越来越重要，确保为所有用户提供包容性设计。此外，动效设计和微交互不断提升用户参与度，使界面更具响应性和动态性。对可持续性的日益重视也在影响 UI/UX，推广环保的数字产品设计解决方案。
 
 ## Final Thoughts
 
 获得你梦想的 UI/UX 设计工作不仅仅是运气——它是将你的技能、沟通能力和作品集融合为一个强大的整体。想象一下你走进面试房间，手握对公司的深入了解，自信地回答问题，并准备展示你的解决问题天才。有了准备，你已经领先一步。遵循这些技巧，碾压你的面试并获得你梦想的职位！
-
-
-
-
 
 随着本书的结束，我们希望它提升了你对 UI/UX 设计的热情，并为你成长配备了工具。但旅程并未止步于此——继续探索、实验，并在你的项目中应用这些见解。
 
@@ -7633,12 +7465,12 @@ UI/UX 设计的未来发展将强调沉浸式技术，如虚拟现实（VR）和
 
 ## 符号
 
-- <footer> 327
-- <header> 327
-- <main> 327
-- <nav> 327
-- <url> 196
-- <video> 196
+- `<footer>` 327
+- `<header>` 327
+- `<main>` 327
+- `<nav>` 327
+- `<url>` 196
+- `<video>` 196
 - 4 Cs 39
 - 4 Cs, concepts
   - Complementary 45, 46
@@ -7786,7 +7618,10 @@ UI/UX 设计的未来发展将强调沉浸式技术，如虚拟现实（VR）和
   - functionality, features 344
   - project, timeline 345
   - prototypes, interactive 343
-  - technical, specifications 344
+
+
+
+- technical, specifications 344
 - Design Handoff, roles 341
 - Design Handoff, strategies
   - continues beyond 342
@@ -7832,186 +7667,176 @@ UI/UX 设计的未来发展将强调沉浸式技术，如虚拟现实（VR）和
 - Design Thinking, key points
   - Brainstorming 31
   - Empathy Maps 31
-
-
-
-
-
-+   人物画像 [30](#30)
-+     用户，映射 [31](#31)
-+   设计思维，方法论
-+     AirBnB [20](#20)
-+     UberEats [18](#18)
-+   设计思维，方法
-+     头脑风暴 [13](#13)
-+     思维，映射 [13](#13)
-+     快速，原型制作 [13](#13)
-+     SCAMPER [13](#13)
-+     六顶思考帽 [13](#13)
-+     最糟糕的点子 [13](#13)
-+   设计思维，工具
-+     Canva [32](#32)
-+     共情地图，模板 [32](#32)
-+     MindMeister [32](#32)
-+     Miro [32](#32)
-+   设计思维/UCD，对比 [60](#60)
-+   设计思维，工作流程 [5](#5)，[6](#6)
-+   日记研究 [97](#97)
-+   日记研究，挑战 [98](#98)
-+   日记研究，方法
-+     有效技巧 [98](#98)
-+     有效时机 [97](#97)
-+   日记研究，步骤
-+     数据，分析 [98](#98)
-+     格式，结构 [98](#98)
-+     指导，提供 [98](#98)
-+     监控，进展 [98](#98)
-+     目标，定义 [98](#98)
-+     试点测试 [98](#98)
-+     招募，参与者 [98](#98)
-+     报告，发现 [98](#98)
+- 人物画像 [30](#30)
+- 用户，映射 [31](#31)
+- 设计思维，方法论
+  - AirBnB [20](#20)
+  - UberEats [18](#18)
+- 设计思维，方法
+  - 头脑风暴 [13](#13)
+  - 思维，映射 [13](#13)
+  - 快速，原型制作 [13](#13)
+  - SCAMPER [13](#13)
+  - 六顶思考帽 [13](#13)
+  - 最糟糕的点子 [13](#13)
+- 设计思维，工具
+  - Canva [32](#32)
+  - 共情地图，模板 [32](#32)
+  - MindMeister [32](#32)
+  - Miro [32](#32)
+- 设计思维/UCD，对比 [60](#60)
+- 设计思维，工作流程 [5](#5)，[6](#6)
+- 日记研究 [97](#97)
+- 日记研究，挑战 [98](#98)
+- 日记研究，方法
+  - 有效技巧 [98](#98)
+  - 有效时机 [97](#97)
+- 日记研究，步骤
+  - 数据，分析 [98](#98)
+  - 格式，结构 [98](#98)
+  - 指导，提供 [98](#98)
+  - 监控，进展 [98](#98)
+  - 目标，定义 [98](#98)
+  - 试点测试 [98](#98)
+  - 招募，参与者 [98](#98)
+  - 报告，发现 [98](#98)
 
 ## E
-
-+   共情地图 [159](#159)
-+   共情地图，方面
-+     行为 [160](#160)
-+     感受 [160](#160)
-+     观察 [160](#160)
-+   想法 160
-+   共情地图，益处 161
-+   共情地图，目标 161
-+   共情地图，重要性 161
-+   共情地图，优化 161，162
-+   共情地图/人物画像，对比 163
-+   共情地图，结构 160
-+   共情地图，工具
-+     Canvanizer 169
-+     Mural 168
-+     Stormboard 169
-+   吸引人的人物画像
-+     关于 140
-+     益处 141
-+     关键要素 140
-+     结构 140
-+   体验地图 163
-+   体验地图，益处 165
-+   体验地图，组件 164
-+   体验地图，概念
-+     行为 165
-+     心态，感受 165
-+     阶段 165
-+     想法 165
-+   体验地图，工具
-+     Adobe XD 169
-+     Lucidchart 169
-+     Miro 169
-+   眼动追踪 106
-+   眼动追踪，元素
-+     盲点 107
-+       阅读，模式 107
-+       绊倒 107
-+   眼动追踪，基础
-+     热力图 107
-+     扫视路径 107
-+   眼动追踪，局限性 109
-+   眼动追踪，方法
-+     有效技巧 108
-+     有效时机 107
-+   眼动追踪，步骤
-+     数据，分析 108
-+     设备，设置 108
-+     目标，定义 108
-+     参与者，选择 108
-+     报告，发现 109
-+     测试，构建 108
-+     测试，执行 108
+- 共情地图 [159](#159)
+- 共情地图，方面
+  - 行为 [160](#160)
+  - 感受 [160](#160)
+  - 观察 [160](#160)
+- 想法 160
+- 共情地图，益处 161
+- 共情地图，目标 161
+- 共情地图，重要性 161
+- 共情地图，优化 161，162
+- 共情地图/人物画像，对比 163
+- 共情地图，结构 160
+- 共情地图，工具
+  - Canvanizer 169
+  - Mural 168
+  - Stormboard 169
+- 吸引人的人物画像
+  - 关于 140
+  - 益处 141
+  - 关键要素 140
+  - 结构 140
+- 体验地图 163
+- 体验地图，益处 165
+- 体验地图，组件 164
+- 体验地图，概念
+  - 行为 165
+  - 心态，感受 165
+  - 阶段 165
+  - 想法 165
+- 体验地图，工具
+  - Adobe XD 169
+  - Lucidchart 169
+  - Miro 169
+- 眼动追踪 106
+- 眼动追踪，元素
+  - 盲点 107
+    - 阅读，模式 107
+    - 绊倒 107
+- 眼动追踪，基础
+  - 热力图 107
+  - 扫视路径 107
+- 眼动追踪，局限性 109
+- 眼动追踪，方法
+  - 有效技巧 108
+  - 有效时机 107
+- 眼动追踪，步骤
+  - 数据，分析 108
+  - 设备，设置 108
+  - 目标，定义 108
+  - 参与者，选择 108
+  - 报告，发现 109
+  - 测试，构建 108
+  - 测试，执行 108
 
 ## F
-
-+   虚构人物画像
-+     关于 138
-+     益处 139
-+     关键要素 138
-+     结构 139
-+   实地研究 101
-+   实地研究，挑战 104
-+   实地研究，方法
-+     有效技巧 103
-+     有效时机 102
-+   实地研究，阶段
-+     跟进，问题 104
-+     洞察，报告 104
-+     迭代，实现 104
-+     学习目标，识别 103
-+     地点，选择 103
-+     参与者 103
-+     计划，观察 103
-+     项目，开发 104
-+     做笔记，观察 103
-+     转录，分析 104
-+   五秒测试 112
-+   五秒测试，挑战 114
-+   五秒测试，关键问题 113，114
-+   五秒测试，方法
-+     有效技巧 113
-+     有效时机 112
-+   五秒测试，步骤
-+     目标，定义 113
-+     问题，创建 113
-+     招募，测试 113
-+     结果，分析 [113]
-+     测试，设置 [113]
-+   焦点小组 [90]
-+   焦点小组，优势 [92]
-+   焦点小组，类型
-+     有效技巧 [91]
-+     有效时机 [90]
+- 虚构人物画像
+  - 关于 138
+  - 益处 139
+  - 关键要素 138
+  - 结构 139
+- 实地研究 101
+- 实地研究，挑战 104
+- 实地研究，方法
+  - 有效技巧 103
+  - 有效时机 102
+- 实地研究，阶段
+  - 跟进，问题 104
+  - 洞察，报告 104
+  - 迭代，实现 104
+  - 学习目标，识别 103
+  - 地点，选择 103
+  - 参与者 103
+  - 计划，观察 103
+  - 项目，开发 104
+  - 做笔记，观察 103
+  - 转录，分析 104
+- 五秒测试 112
+- 五秒测试，挑战 114
+- 五秒测试，关键问题 113，114
+- 五秒测试，方法
+  - 有效技巧 113
+  - 有效时机 112
+- 五秒测试，步骤
+  - 目标，定义 113
+  - 问题，创建 113
+  - 招募，测试 113
+  - 结果，分析 [113]
+  - 测试，设置 [113]
+- 焦点小组 [90]
+- 焦点小组，优势 [92]
+- 焦点小组，类型
+  - 有效技巧 [91]
+  - 有效时机 [90]
 
 ## G
-
-+   礼物困境，场景
-+     共情 [23]
-+     头脑风暴 [25]
-+     迭代–迭代 [27, 28]
-+     原型 [25]
-+     阶段，定义 [23, 24]
-+     测试 [26]
-+   以目标为导向的人物画像
-+     关于 [136](#136)
-+     益处 [136, 137](#136)
-+     关键要素 [136](#136)
-+     结构 [136](#136)
+- 礼物困境，场景
+  - 共情 [23]
+  - 头脑风暴 [25]
+  - 迭代–迭代 [27, 28]
+  - 原型 [25]
+  - 阶段，定义 [23, 24]
+  - 测试 [26]
+- 以目标为导向的人物画像
+  - 关于 [136](#136)
+  - 益处 [136, 137](#136)
+  - 关键要素 [136](#136)
+  - 结构 [136](#136)
 
 ## H
-
-+   高保真原型 [231]
-+   高保真原型，优势
-+     设计验证，增强 [233](#233)
-+     细节，反馈 [233](#233)
-+     精确，规范 [233](#233)
-+     真实用户，体验 [233](#233)
-+     风险，不一致 [233](#233)
-+     利益相关者，沟通 [233](#233)
-+     可用性，测试 [233](#233)
-+     用户参与度，提升 [233](#233)
-+   高保真原型，劣势
-+     细节，过分强调 [234](#234)
-+     高成本 [234](#234)
-+     限制，灵活性 [234](#234)
-+     误导，反馈 [234](#234)
-+     资源，密集 [234](#234)
+- 高保真原型 [231]
+- 高保真原型，优势
+  - 设计验证，增强 [233](#233)
+  - 细节，反馈 [233](#233)
+  - 精确，规范 [233](#233)
+  - 真实用户，体验 [233](#233)
+  - 风险，不一致 [233](#233)
+  - 利益相关者，沟通 [233](#233)
+  - 可用性，测试 [233](#233)
 
 
 
-
-
-- 范围蔓延 [234]
-- 时间消耗 [234]
+- 高保真原型，优势
+  - 用户参与度，提升 [233](#233)
+- 高保真原型，劣势
+  - 细节，过分强调 [234](#234)
+  - 高成本 [234](#234)
+  - 限制，灵活性 [234](#234)
+  - 误导，反馈 [234](#234)
+  - 资源，密集 [234](#234)
+  - 范围蔓延 [234]
+  - 时间消耗 [234]
 - 高保真原型，类型
-- 编码原型 [232]
-- 数字原型 [232]
-- 交互原型 [231]
+  - 编码原型 [232]
+  - 数字原型 [232]
+  - 交互原型 [231]
 
 ## I
 
@@ -8051,617 +7876,595 @@ UI/UX 设计的未来发展将强调沉浸式技术，如虚拟现实（VR）和
   - Mirp [191]
   - Pencil Project [190]
   - XMind [190]
-
-信息架构/用户体验，比较 [185]
-
-信息架构 [174]
-
-Instagram [306]
+- 信息架构/用户体验，比较 [185]
+- 信息架构 [174]
+- Instagram [306]
 
 ## K
 
-Khroma [307]
+- Khroma [307]
 
 ## L
 
-低保真原型 [226]
-
-低保真原型，优势
-- 沟通，改善 [229]
-- 成本效益 [229]
-- 鼓励，创造力 [229]
-- 专注，功能性 [230]
-- 促进，团队合作 [230]
-- 快速，迭代 [229]
-- 风险，降低 [229]
-- 用户测试，促进 [229]
-
-低保真原型，劣势
-- 细节，不足 [230]
-- 可视化，不充分 [230]
-- 限制，交互性 [230]
-- 潜在，误解 [230]
-- 生命周期，短 [230]
-- 用户，反馈 [230]
-
-低保真原型，类型
-- 点击式原型 [228]
-- 纸质原型 [227, 228]
-- 草图 [227]
+- 低保真原型 [226]
+- 低保真原型，优势
+  - 沟通，改善 [229]
+  - 成本效益 [229]
+  - 鼓励，创造力 [229]
+  - 专注，功能性 [230]
+  - 促进，团队合作 [230]
+  - 快速，迭代 [229]
+  - 风险，降低 [229]
+  - 用户测试，促进 [229]
+- 低保真原型，劣势
+  - 细节，不足 [230]
+  - 可视化，不充分 [230]
+  - 限制，交互性 [230]
+  - 潜在，误解 [230]
+  - 生命周期，短 [230]
+  - 用户，反馈 [230]
+- 低保真原型，类型
+  - 点击式原型 [228]
+  - 纸质原型 [227, 228]
+  - 草图 [227]
 
 ## M
 
-移动优先设计，关键方面
-- CSS 媒体，查询 [335]
-- 渐进，增强 [335]
-- 性能，优化 [335]
-- 优先，核心内容 [335]
-- 用户体验，改善 [335]
-
-移动优先设计/响应式网页设计，关键策略 [336, 337]
-
-微文案 [299, 300]
-
-微文案，影响
-- 行动，邀请 [302]
-- 行为，鼓励 [303]
-- 鼓励，探索 [302]
-- 反馈， reassurance [302]
-- 个性化触感 [302]
-- 进展感 [302]
-- 语气，对话 [303]
-
-微文案，重要性
-- 品牌声音，增强 [301]
-- 共情信任，建立 [301]
-- 摩擦困惑，减少 [301]
-- reassurance [301]
-- 用户行动，引导 [301]
-- 用户参与，鼓励 [301]
-
-微交互
-- 关于 [303]
-- 益处 [304]
-- Instagram [306]
-- 下拉刷新，防止 [306]
-- 无缝界面 [304, 305]
-- Spotify 的，配置 [305]
-- UI/UX，优化 [305]
-
-移动优先设计 [334, 335]
-
-移动 UI 模式，库
-- Ant Design Mobile [275]
-- Google Flutter [275]
-- Google Material Design [275]
-- 人机交互指南 [275]
-- Ionic [275]
-
-模型 [283, 284]
-
-模型，分解
-- 颜色，方案 [286]
-- 内容布局 [285, 286]
-- 元素，交互 [286]
-- 图像，图标 [286]
-- 边距，间距 [287]
-- 排版 [286]
-- 用户流程，品牌 [287]
-
-模型，阶段
-- 模型 [298]
-- 原型 [299]
-- UI，草图 [298]
-- 线框图 [298]
-
-模型，目的
-- 一致性，确保 [285]
-- 设计变体，探索 [285]
-- 反馈，收集 [285]
-- 精确，清晰 [285]
-- 产品，可视化 [285]
-- 时间/金钱，资源 [285]
-
-模型，步骤 [289 - 291]
-
-模型，技巧 [297, 298]
-
-模型，工具
-- Adobe XD [293]
-- Axure RP [296, 297]
-- Figma [292]
-- InVision Studio [295]
-- Sketch [294]
-
-模型，类型
-- 高保真 [288]
-- 交互 [288]
-- 低保真 [288]
-- 响应式 [289]
-- 静态 [287]
+- 移动优先设计，关键方面
+  - CSS 媒体，查询 [335]
+  - 渐进，增强 [335]
+  - 性能，优化 [335]
+  - 优先，核心内容 [335]
+  - 用户体验，改善 [335]
+- 移动优先设计/响应式网页设计，关键策略 [336, 337]
+- 微文案 [299, 300]
+- 微文案，影响
+  - 行动，邀请 [302]
+  - 行为，鼓励 [303]
+  - 鼓励，探索 [302]
+  - 反馈， reassurance [302]
+  - 个性化触感 [302]
+  - 进展感 [302]
+  - 语气，对话 [303]
+- 微文案，重要性
+  - 品牌声音，增强 [301]
+  - 共情信任，建立 [301]
+  - 摩擦困惑，减少 [301]
+  - reassurance [301]
+  - 用户行动，引导 [301]
+  - 用户参与，鼓励 [301]
+- 微交互
+  - 关于 [303]
+  - 益处 [304]
+  - Instagram [306]
+  - 下拉刷新，防止 [306]
+  - 无缝界面 [304, 305]
+  - Spotify 的，配置 [305]
+  - UI/UX，优化 [305]
+- 移动优先设计 [334, 335]
+- 移动 UI 模式，库
+  - Ant Design Mobile [275]
+  - Google Flutter [275]
+  - Google Material Design [275]
+  - 人机交互指南 [275]
+  - Ionic [275]
+- 模型 [283, 284]
+- 模型，分解
+  - 颜色，方案 [286]
+  - 内容布局 [285, 286]
+  - 元素，交互 [286]
+  - 图像，图标 [286]
+  - 边距，间距 [287]
+  - 排版 [286]
+  - 用户流程，品牌 [287]
+- 模型，阶段
+  - 模型 [298]
+  - 原型 [299]
+  - UI，草图 [298]
+  - 线框图 [298]
+- 模型，目的
+  - 一致性，确保 [285]
+  - 设计变体，探索 [285]
+  - 反馈，收集 [285]
+  - 精确，清晰 [285]
+  - 产品，可视化 [285]
+  - 时间/金钱，资源 [285]
+- 模型，步骤 [289 - 291]
+- 模型，技巧 [297, 298]
+- 模型，工具
+  - Adobe XD [293]
+  - Axure RP [296, 297]
+  - Figma [292]
+  - InVision Studio [295]
+  - Sketch [294]
+- 模型，类型
+  - 高保真 [288]
+  - 交互 [288]
+  - 低保真 [288]
+  - 响应式 [289]
+  - 静态 [287]
 
 ## N
 
-非线性流程 [17]
-
-非线性流程，方式
-- 蛋糕，规划 [17]
-- 装饰 [17]
-- 最后润色，展示 [18]
-- 朋友品尝 [17]
-- 混合，测试 [17]
+- 非线性流程 [17]
+- 非线性流程，方式
+  - 蛋糕，规划 [17]
+  - 装饰 [17]
+  - 最后润色，展示 [18]
+  - 朋友品尝 [17]
+  - 混合，测试 [17]
 
 ## P
 
-作品集，能力
-- 展示，流程 [350]
-- 结构，清晰 [350]
-- 视觉，呈现 [351]
-
-作品集，打磨 [350]
-
-原型 [14]
-
-原型，方法
-- 3D，打印 [16]
-- 应用 [15]
-- 数字 [15]
-- Oz 巫师 [15]
-- 纸质原型 [15]
-- 角色扮演 [15]
-
-原型 [222, 223]
-
-原型，益处
-- 成本效益 [225]
-- 开发，简化 [225]
-- 功能，验证 [225]
-- 风险，降低 [225]
-- 技术可行性，评估 [225]
-- 可视化，改善 [225]
-
-原型，关键原因
-- 沟通，工具 [224]
-- 决策制定 [224]
-- 迭代，改善 [224]
-- 问题，检测 [224]
-- 以用户为中心，设计 [224]
-
-原型，品质
-- 进化 [224]
-- 交互性 [223]
-- 精确性 [223]
-- 表现力 [223]
-
-原型，工具 [235]
-
-原型，类型
-- 高保真原型 [231]
-- 低保真原型 [226]
-
-原型/线框图，比较 [235]
-
-原型，方式 [15]
+- 作品集，能力
+  - 展示，流程 [350]
+  - 结构，清晰 [350]
+  - 视觉，呈现 [351]
+- 作品集，打磨 [350]
+- 原型 [14]
+- 原型，方法
+  - 3D，打印 [16]
+  - 应用 [15]
+  - 数字 [15]
+  - Oz 巫师 [15]
+  - 纸质原型 [15]
+  - 角色扮演 [15]
+- 原型 [222, 223]
+- 原型，益处
+  - 成本效益 [225]
+  - 开发，简化 [225]
+  - 功能，验证 [225]
+  - 风险，降低 [225]
+  - 技术可行性，评估 [225]
+  - 可视化，改善 [225]
+- 原型，关键原因
+  - 沟通，工具 [224]
+  - 决策制定 [224]
+  - 迭代，改善 [224]
+  - 问题，检测 [224]
+  - 以用户为中心，设计 [224]
+- 原型，品质
+  - 进化 [224]
+  - 交互性 [223]
+  - 精确性 [223]
+  - 表现力 [223]
+- 原型，工具 [235]
+- 原型，类型
+  - 高保真原型 [231]
+  - 低保真原型 [226]
+- 原型/线框图，比较 [235]
+- 原型，方式 [15]
 
 ## R
 
+- 响应式网页设计 (RWD) 316, 317
+- 基于角色的人物画像
+  - 关于 137
+  - 优势 138
+  - 关键要素 137
+  - 结构 137
+- RWD，分解
+  - 更广泛的覆盖 326
+  - 成本效益 326
+  - 未来保障 326
+  - SEO，优势 326
+  - 用户体验 326
+- RWD，演进 317, 318
+- RWD，重要性 326
+- RWD，关键要点
+  - 自适应，布局 333, 334
+  - CSS 327
+  - flexbox，布局 330, 331
+  - 流式网格，布局 329, 330
+  - HTML 327
+  - 图像，响应式 332
+  - 媒体查询 328, 329
+  - 排版，响应式 332, 333
+- RWD，适用场景
+  - 成本效益 325
+  - 开发，维护 324
+  - 未来保障 324
+  - 较少，适用 326
+  - 移动使用，增长 325
+  - SEO，优势 325
+  - 网站，设计 324
+- RWD，结构 317
+
+## S
+
+- 服务蓝图 165
+- 服务蓝图，优势
+  - 全面，视图 167
+  - 客户，洞察 167
+  - 改进，机会 167
+  - 员工，培训 167
+- 服务蓝图，关键组成部分
+  - 后台，交互 167
+  - 客户行为 167
+  - 前台，交互 167
+  - 有形，证据 167
+  - 支持，流程 167
+- 服务蓝图，工具
+  - ServiceDesignTools 169
+  - smaply 169
+  - Touchpoint 169
+- 站点地图 191
+- 站点地图/信息架构，对比 204
+- 站点地图，重要性 192
+- 站点地图，原因 192
+- 站点地图，步骤
+  - 代码准确性，确保 201
+  - 页面结构，审阅 199, 200
+  - Root，集成 202
+  - 提交 203
+  - URLs，优化 201
+- 站点地图，类型
+  - HTML 192 - 194
+  - 图像 197, 198
+  - 移动 198
+  - 新闻 198
+  - 视频 195 - 197
+  - XML 194
+- 利益相关者，进行 79
+- 利益相关者，指南
+  - 影响，评估 79
+  - 顾虑，挑战 79
+  - 洞察 79
+  - 访谈 79
+  - 项目，重要性 79
+  - 问题，反馈 79
+  - 角色，职责 79
+  - 成功，标准 79
+- 调查 92
+- 调查，类别
+  - 封闭式，问题 92
+  - 开放式，问题 92
+- 调查，挑战 94
 
 
-响应式网页设计 (RWD) 316, 317
-基于角色的人物画像
-  关于 137
-  优势 138
-  关键要素 137
-  结构 137
-RWD，分解
-  更广泛的覆盖 326
-  成本效益 326
-  未来保障 326
-  SEO，优势 326
-  用户体验 326
-RWD，演进 317, 318
-RWD，重要性 326
-RWD，关键要点
-  自适应，布局 333, 334
-  CSS 327
-  flexbox，布局 330, 331
-  流式网格，布局 329, 330
-  HTML 327
-  图像，响应式 332
-  媒体查询 328, 329
-  排版，响应式 332, 333
-RWD，适用场景
-  成本效益 325
-  开发，维护 324
-  未来保障 324
-  较少，适用 326
-  移动使用，增长 325
-  SEO，优势 325
-  网站，设计 324
-RWD，结构 317
 
-S
-服务蓝图 165
-服务蓝图，优势
-  全面，视图 167
-  客户，洞察 167
-  改进，机会 167
-  员工，培训 167
-服务蓝图，关键组成部分
-后台，交互 167
-客户行为 167
-前台，交互 167
-有形，证据 167
-支持，流程 167
-服务蓝图，工具
-ServiceDesignTools 169
-smaply 169
-Touchpoint 169
-站点地图 191
-站点地图/信息架构，对比 204
-站点地图，重要性 192
-站点地图，原因 192
-站点地图，步骤
-代码准确性，确保 201
-页面结构，审阅 199, 200
-Root，集成 202
-提交 203
-URLs，优化 201
-站点地图，类型
-HTML 192 - 194
-图像 197, 198
-移动 198
-新闻 198
-视频 195 - 197
-XML 194
-利益相关者，进行 79
-利益相关者，指南
-影响，评估 79
-顾虑，挑战 79
-洞察 79
-访谈 79
-项目，重要性 79
-问题，反馈 79
-角色，职责 79
-成功，标准 79
-调查 92
-调查，类别
-封闭式，问题 92
-开放式，问题 92
-调查，挑战 94
-调查，基础
-+   有效技巧 93, 94
-+   有效时机 93
-调查，关键要点
-+   清晰 92
-+   中立 92
-+   尊重 92
-+   多样性 92
+- 调查，基础
+    - 有效技巧 93, 94
+    - 有效时机 93
+
+- 调查，关键要点
+    - 清晰 92
+    - 中立 92
+    - 尊重 92
+    - 多样性 92
+
 # T
-树测试 104
-树测试，缺点 106
-树测试，方法
-+   有效技巧 105
-+   有效时机 104
-树测试，步骤
-+   活动，开发 106
-+   调整，做出 106
-+   进行，测试 106
-+   目标，定义 105
-+   参与者，选择 106
-+   结果，分析 106
-+   重新测试，必要 106
-+   结构，构建 105
-+   工具，选择 106
+
+- 树测试 104
+- 树测试，缺点 106
+- 树测试，方法
+    - 有效技巧 105
+    - 有效时机 104
+- 树测试，步骤
+    - 活动，开发 106
+    - 调整，做出 106
+    - 进行，测试 106
+    - 目标，定义 105
+    - 参与者，选择 106
+    - 结果，分析 106
+    - 重新测试，必要 106
+    - 结构，构建 105
+    - 工具，选择 106
+
 # U
-Uber 306
-UberEats 19
-UberEats，成就 20
-UberEats，概念
-+   共情 19
-+   构思 19
-+   不便 19
-+   原型 19
-+   测试 19
-UCD，优势 58
-UCD，概念
-社区，支持 58
-体验，个性化 57
-反馈，追踪 58
-食物，数据库 57
-用户友好，界面 57
-用户目标，识别 57
-UCD，基础
-持续，改进 57
-便利性 57
-个性化 57
-评论，评分 57
-用户，理解 56
-用户友好，界面 56
-UCD，要点
-可访问性 56
-语言 56
-可读性 56
-可见性 56
-UCD，流程
-对齐 60
-构建 60
-迭代 60
-研究 60
-测试 60
-UI 设计 AI，工具 311, 312
-UI 设计模式 259
-UI 设计模式，指南
-正确模式，选择 268
-问题，定义 268
-心智，可用性 268
-模式，实现 268
-保持，更新 268
-测试，迭代 268
-UI 设计模式，重要性 260
-UI 设计模式，关键方面
-内容展示模式 272
-反馈模式 273
-输入模式 273
-交互模式 274
-导航模式 272
-引导模式 274
-UI 设计模式，关键要点
-操作按钮 262
-面包屑 263
-卡片布局 267
-渐进式披露 264
-宽容，格式 262
-无限滚动 266
-即时，建议 267
-延迟，注册 264
-排行榜 266
-模态窗口 267
-预览 265
-粘性，导航 267
-订阅计划 265
-流程，通过 263
-UI 设计模式，库
-Ant Design 269
-Bootstrap 269
-Carbon Design System 270
-Fluent UI 270
-Foundation 270
-Material Design 269
-Semantic UI 270
-UI 设计模式，原因
-跨界面，一致性 261
-跨平台，适应性 261
-设计流程，效率 261
-学习曲线，降低 261
-可用性，改进 261
-UI/UX 2
-UI/UX 设计，未来趋势 355
-UI/UX 设计，原则
-自信，真实 355
-行业趋势 354
-UI/UX，历史 2
-UI/UX 面试，挑战
-批评 354
-展示，作品 353
-问题，识别 353
-程序 353
-用户，关注 353
 
+- Uber 306
+- UberEats 19
+- UberEats，成就 20
+- UberEats，概念
+    - 共情 19
+    - 构思 19
+    - 不便 19
+    - 原型 19
+    - 测试 19
+- UCD，优势 58
+- UCD，概念
+    - 社区，支持 58
+    - 体验，个性化 57
+    - 反馈，追踪 58
+    - 食物，数据库 57
+    - 用户友好，界面 57
+    - 用户目标，识别 57
+- UCD，基础
+    - 持续，改进 57
+    - 便利性 57
+    - 个性化 57
+    - 评论，评分 57
+    - 用户，理解 56
+    - 用户友好，界面 56
+- UCD，要点
+    - 可访问性 56
+    - 语言 56
+    - 可读性 56
+    - 可见性 56
+- UCD，流程
+    - 对齐 60
+    - 构建 60
+    - 迭代 60
+    - 研究 60
+    - 测试 60
+- UI 设计 AI，工具 311, 312
+- UI 设计模式 259
+- UI 设计模式，指南
+    - 正确模式，选择 268
+    - 问题，定义 268
+    - 心智，可用性 268
+    - 模式，实现 268
+    - 保持，更新 268
+    - 测试，迭代 268
+- UI 设计模式，重要性 260
+- UI 设计模式，关键方面
+    - 内容展示模式 272
+    - 反馈模式 273
+    - 输入模式 273
+    - 交互模式 274
+    - 导航模式 272
+    - 引导模式 274
+- UI 设计模式，关键要点
+    - 操作按钮 262
+    - 面包屑 263
+    - 卡片布局 267
+    - 渐进式披露 264
+    - 宽容，格式 262
+    - 无限滚动 266
+    - 即时，建议 267
+    - 延迟，注册 264
+    - 排行榜 266
+    - 模态窗口 267
+    - 预览 265
+    - 粘性，导航 267
+    - 订阅计划 265
+    - 流程，通过 263
+- UI 设计模式，库
+    - Ant Design 269
+    - Bootstrap 269
+    - Carbon Design System 270
+    - Fluent UI 270
+    - Foundation 270
+    - Material Design 269
+    - Semantic UI 270
+- UI 设计模式，原因
+    - 跨界面，一致性 261
+    - 跨平台，适应性 261
+    - 设计流程，效率 261
+    - 学习曲线，降低 261
+    - 可用性，改进 261
+- UI/UX 2
+- UI/UX 设计，未来趋势 355
+- UI/UX 设计，原则
+    - 自信，真实 355
+    - 行业趋势 354
+- UI/UX，历史 2
+- UI/UX 面试，挑战
+    - 批评 354
+    - 展示，作品 353
+    - 问题，识别 353
+    - 程序 353
+    - 用户，关注 353
+- UI/UX 面试、技能
+    - 适应性 354
+    - 协作 354
+    - 沟通 354
+    - 问题解决 354
+- UI/UX，关键区别 3, 4
+- Uizard 308
+- 可用性测试 99
+- 可用性测试，形式
+    - 评估 99
+    - 比较 99
+    - 探索性 99
+    - 面对面 99
+    - 有主持 99
+    - 远程 99
+    - 无主持 99
+- 可用性测试，局限性 101
+- 可用性测试，方法
+    - 有效技巧 100, 101
+    - 有效时机 100
+- 以用户为中心的设计（UCD）56
+- 用户体验设计（UX 设计）3
+- 用户体验（UX）36
+- 用户界面设计（UI 设计）3
+- 用户访谈 88
+- 用户访谈，概念
+    - 缺点 90
+    - 有效技巧 89
+    - 有效时机 89
+- 用户画像 134
+- 用户利益 134
+- 用户画像，特征
+    - 增强共情 135
+    - 明确方向 135
+    - 促进沟通 135
+    - 吸引用户 135
+- 用户画像，基础
+    - 背景 144
+    - 行为模式 145
+    - 理解目标 144
+    - 信息对话 144
+    - 动机 146
+    - 痛点与挑战 145
+    - 引述 146
+    - 场景 146
+- 用户画像，工具
+    - Canva 135
+    - HubSpot 135
+    - Xtensio 135
+- 用户画像，类型
+    - 参与型画像 140
+    - 虚构型画像 138
+    - 目标导向型画像 136
+    - 基于角色的画像 137
+- 用户测试，方法
+    - A/B 测试 17
+    - 访谈 16
+    - 观察法 16
+    - 原型测试 17
+    - 调查 16
+    - 可用性测试 16
+- UX 设计 36, 37
+- UX 设计，架构 37
+- UX 设计师 54, 55
+- UX 设计师，角色
+    - 信息架构师 55
+    - 交互设计师 55
+    - UI 设计师 55
+    - 用户研究员 55
+    - UX 设计师 55
+- UX 文案 56
+- UX 设计，重要性 37
+- UX 设计，关键点
+    - 降低成本 38
+    - 留下印象 38
+    - 提供直观体验 38
+    - 积极体验 38
+    - 建立关系 38
+    - 提升 ROI 38
+    - 满足用户需求 38
+- UX，因素
+    - 可访问性 68, 69
+    - 可信度 66, 67
+    - 吸引力 67, 68
+    - 可发现性 65, 66
+    - 可用性 64, 65
+    - 有用性 62, 63
+    - 价值性 70, 71
+    - 总结 71
+- UX 映射
+    - 关于 126
+    - 重点 128
+    - 选择格式 129
+    - 基础 127
+    - 重要性 126, 127
+    - 视角 128
+    - 范围 128
+    - 结构 129
+- UX 映射，场景
+    - 按时间顺序 129
+    - 按层级 129
+- UX 映射，步骤
+    - 与客户互动 132
+    - 解决问题 133
+    - 旅程阶段 131
+    - 开发画像 130
+    - 查明摩擦点 133
+    - 执行用户研究 131
+- UX 映射，工具
+    - 客户旅程地图（CJMs）168
+    - 同理心地图 168
+    - 体验地图 169
+    - 服务蓝图 169
+- UX 映射，类型
+    - 客户旅程地图 149
+    - 同理心地图 159
+    - 体验地图 163
+    - 服务蓝图 165
+- UX 研究 75
+- UX 研究，益处 77
+- UX 研究，案例研究
+    - 眼动追踪 117
+    - 实施关键变更 118, 119
+    - 优化移动端 117
+- UX 研究，目标 75, 76
+- UX 研究，关键原因
+    - 改进设计 77
+    - 创造满意用户 77
+    - 解决问题 77
+    - 理解目标 77
+    - 节省时间/金钱 77
+- UX 研究，方法
+    - 行为/态度 86
+    - 生成性/评估性 87, 88
+    - 定性/定量 86
+- UX 研究，流程
+    - 探索机会 83
+    - 招募参与者 82, 83
+    - 研究结果 84
+    - 设定研究目标 78
+    - 选择研究方法 79, 80
+    - 整合结果 84
+    - 准备用户研究 80
+- UX 研究，工具 116
 
+# V
 
-UI/UX 面试、技能
-  适应性 354
-  协作 354
-  沟通 354
-  问题解决 354
-UI/UX，关键区别 3, 4
-Uizard 308
-可用性测试 99
-可用性测试，形式
-  评估 99
-  比较 99
-  探索性 99
-  面对面 99
-  有主持 99
-  远程 99
-  无主持 99
-可用性测试，局限性 101
-可用性测试，方法
-  有效技巧 100, 101
-  有效时机 100
-以用户为中心的设计（UCD）56
-用户体验设计（UX 设计）3
-用户体验（UX）36
-用户界面设计（UI 设计）3
-用户访谈 88
-用户访谈，概念
-  缺点 90
-  有效技巧 89
-  有效时机 89
-用户画像 134
-用户利益 134
-用户画像，特征
-  增强共情 135
-  明确方向 135
-  促进沟通 135
-  吸引用户 135
-用户画像，基础
-  背景 144
-  行为模式 145
-  理解目标 144
-  信息对话 144
-  动机 146
-  痛点与挑战 145
-  引述 146
-  场景 146
-  用户画像，工具
-    Canva 135
-    HubSpot 135
-    Xtensio 135
-  用户画像，类型
-    参与型画像 140
-    虚构型画像 138
-    目标导向型画像 136
-    基于角色的画像 137
-  用户测试，方法
-    A/B 测试 17
-    访谈 16
-    观察法 16
-    原型测试 17
-    调查 16
-    可用性测试 16
-  UX 设计 36, 37
-  UX 设计，架构 37
-  UX 设计师 54, 55
-  UX 设计师，角色
-    信息架构师 55
-    交互设计师 55
-    UI 设计师 55
-    用户研究员 55
-    UX 设计师 55
-  UX 文案 56
-  UX 设计，重要性 37
-  UX 设计，关键点
-    降低成本 38
-    留下印象 38
-    提供直观体验 38
-    积极体验 38
-    建立关系 38
-    提升 ROI 38
-    满足用户需求 38
-  UX，因素
-    可访问性 68, 69
-    可信度 66, 67
-    吸引力 67, 68
-    可发现性 65, 66
-    可用性 64, 65
-    有用性 62, 63
-    价值性 70, 71
-    总结 71
-  UX 映射
-    关于 126
-    重点 128
-    选择格式 129
-    基础 127
-    重要性 126, 127
-    视角 128
-    范围 128
-    结构 129
-  UX 映射，场景
-    按时间顺序 129
-    按层级 129
-  UX 映射，步骤
-    与客户互动 132
-    解决问题 133
-    旅程阶段 131
-    开发画像 130
-    查明摩擦点 133
-    执行用户研究 131
-  UX 映射，工具
-    客户旅程地图（CJMs）168
-    同理心地图 168
-    体验地图 169
-    服务蓝图 169
-  UX 映射，类型
-    客户旅程地图 149
-    同理心地图 159
-    体验地图 163
-    服务蓝图 165
-  UX 研究 75
-  UX 研究，益处 77
-  UX 研究，案例研究
-    眼动追踪 117
-    实施关键变更 118, 119
-    优化移动端 117
-  UX 研究，目标 75, 76
-  UX 研究，关键原因
-    改进设计 77
-    创造满意用户 77
-    解决问题 77
-    理解目标 77
-    节省时间/金钱 77
-  UX 研究，方法
-    行为/态度 86
-    生成性/评估性 87, 88
-    定性/定量 86
-  UX 研究，流程
-    探索机会 83
-    招募参与者 82, 83
-    研究结果 84
-    设定研究目标 78
-    选择研究方法 79, 80
-    整合结果 84
-    准备用户研究 80
-  UX 研究，工具 116
-
-V
-Visily 310
-视觉层级 241 - 243
-视觉层级，组成部分
-  一致性 255, 256
-  对比色 249 - 251
-  布局 256
-  纹理/风格 257, 258
-  字体排印 253 - 255
-  留白 251 - 253
-视觉层级，因素
-  传达品牌信息 244
-  减少认知负担 244
-  提高转化率 244
-  建立可信度与信任 245
-  提升参与度 244
-引导用户注意力 243
-改善用户体验 244
-
-
-
-视觉层次，策略
-- F-Pattern [246](#246), [247](#247)
-- 阅读模式 [245](#245)
-- 大小，缩放 [247](#247)-[249](#249)
-- Z-Pattern [245](#245), [246](#246)
-
-视觉层次，提示
-- 清晰路径，创建 [259](#259)
-- 一致对齐 [258](#258)
-- 对比，使用 [258](#258)
-- 元素，适当使用 [258](#258)
-- 优先，内容 [258](#258)
-- 视觉线索，使用 [258](#258)
-- 留白 [258](#258)
+- Visily 310
+- 视觉层级 241 - 243
+- 视觉层级，组成部分
+    - 一致性 255, 256
+    - 对比色 249 - 251
+    - 布局 256
+    - 纹理/风格 257, 258
+    - 字体排印 253 - 255
+    - 留白 251 - 253
+- 视觉层级，因素
+    - 传达品牌信息 244
+    - 减少认知负担 244
+    - 提高转化率 244
+    - 建立可信度与信任 245
+    - 提升参与度 244
+- 引导用户注意力 243
+- 改善用户体验 244
+- 视觉层次，策略
+    - F-Pattern [246](#246), [247](#247)
+    - 阅读模式 [245](#245)
+    - 大小，缩放 [247](#247)-[249](#249)
+    - Z-Pattern [245](#245), [246](#246)
+- 视觉层次，提示
+    - 清晰路径，创建 [259](#259)
+    - 一致对齐 [258](#258)
+    - 对比，使用 [258](#258)
+    - 元素，适当使用 [258](#258)
+    - 优先，内容 [258](#258)
+    - 视觉线索，使用 [258](#258)
+    - 留白 [258](#258)
 
 # W
 
-线框图 [209](#209), [210](#210)
-线框图，优势 [215](#215)-[217](#217)
-线框图 桌面/移动，对比 [214](#214)
-线框图，重要性 [210](#210)
-线框图，关键点
-    颜色，建立 [218](#218)
-    图像，创建 [218](#218)
-    文本，创建 [218](#218)
-线框图，目的
-    成本效益，迭代 [210](#210)
-    功能，澄清 [210](#210)
-    以用户为中心的屏幕，规划 [210](#210)
-线框图，步骤
-    草图草案，识别 [219](#219)
-    迭代，反馈 [220](#220)
-    精炼 [219](#219)
-线框图，工具
-    Adobe XD [221](#221)
-    Balsamiq [221](#221)
-    Figma [220](#220)
-    InVision [222](#222)
-    MockFlow [221](#221)
-    Pencil Project [220](#220)
-    Sketch [221](#221)
-    Wireframe.cc [220](#220)
+- 线框图 [209](#209), [210](#210)
+- 线框图，优势 [215](#215)-[217](#217)
+- 线框图 桌面/移动，对比 [214](#214)
+- 线框图，重要性 [210](#210)
+- 线框图，关键点
+    - 颜色，建立 [218](#218)
+    - 图像，创建 [218](#218)
 
-线框图，类型
-  高保真线框图 213, 214
-  低保真线框图 211, 212
-  中保真线框图 212
+
+
+# 文本，创建 [218](#218)
+
+## 线框图，目的
+
+成本效益，迭代 [210](#210)
+功能，澄清 [210](#210)
+以用户为中心的屏幕，规划 [210](#210)
+
+## 线框图，步骤
+
+草图草案，识别 [219](#219)
+迭代，反馈 [220](#220)
+精炼 [219](#219)
+
+## 线框图，工具
+
+Adobe XD [221](#221)
+Balsamiq [221](#221)
+Figma [220](#220)
+InVision [222](#222)
+MockFlow [221](#221)
+Pencil Project [220](#220)
+Sketch [221](#221)
+Wireframe.cc [220](#220)
+
+## 线框图，类型
+
+高保真线框图 213, 214
+低保真线框图 211, 212
+中保真线框图 212
+
 万维网联盟 (W3C) 69
-

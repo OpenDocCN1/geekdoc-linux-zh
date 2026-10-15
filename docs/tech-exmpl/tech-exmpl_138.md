@@ -1,29 +1,30 @@
+
 # 将查询参数字符串转换为 Ruby 语言中的查询参数哈希
 
 > 原文：[`techbyexample.com/query-param-string-to-hash/`](https://techbyexample.com/query-param-string-to-hash/)
 
-# **概述**
+## 概述
 
-假设我们有以下查询参数字符串
+假设我们有以下查询参数字符串：
 
-```go
+```ruby
 a=b&x=y
 ```
 
-我们希望输出为
+我们希望输出为：
 
-```go
+```ruby
 {
  "a" => "b",
  "x" => "y"
 }
 ```
 
-# **程序**
+## 程序
 
-以下是相同的程序
+以下是相同的程序：
 
-```go
+```ruby
 input_sring = 'a=b&x=y'
 
 query_params_hash = {}
@@ -36,10 +37,10 @@ end
 puts query_params_hash
 ```
 
-**输出**
+### 输出
 
-```go
+```ruby
 {"a"=>"b", "x"=>"y"}
 ```
 
-+   [ruby](https://techbyexample.com/tag/ruby/)
+- [ruby](https://techbyexample.com/tag/ruby/)

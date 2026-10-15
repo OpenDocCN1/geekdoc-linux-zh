@@ -1,190 +1,70 @@
+
 # Ubuntu 实战 2017 版（包含内容更新计划）：涵盖 16.10, 17.04, 17.10（第 12 版）
-
-
-
-
-
-
-
-
-
-
-
 
 与他人分享
 
-合作 Andrew Hudson
-以及 Paul Hudson
+合作 Andrew Hudson 以及 Paul Hudson
 
+## 总编
 
-
-
-
-
-
-
-
-
-
-
-# 总编
 Mark Taub
 
-# 策划编辑
+## 策划编辑
+
 Debra Williams Cauley
 
-# 执行编辑
+## 执行编辑
+
 Sandra Schroeder
 
-# 项目编辑
+## 项目编辑
+
 Lori Lyons
 
-# 制作经理
+## 制作经理
+
 Dhayandidhi
 
-# 校对
+## 校对
+
 Sasirekha
 
-# 技术编辑
+## 技术编辑
+
 José Antonio Rey
 
-# 编辑助理
+## 编辑助理
+
 Kim Boedgheimer
 
-# 媒体制作
+## 媒体制作
+
 Dan Scherf
 
-# 封面设计
+## 封面设计
+
 Chuti Prasertsith
 
-# 谱曲
+## 谱曲
+
 codeMantra
 
-
 引言 ... xxxiii
 
-
-
-
-
-
-
-
-
-
-
-
-引言 ... xxxiii
 本书使用的约定 ... xviii
 
-
-
-
-
- - 参考文献 61
-
-参考文献 74
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+- 参考文献 61
+- 参考文献 74
 - 参考文献 118
-
-
-
-
-
 - dotdee 145
-目录
+
+## 目录
+
 Snappy Ubuntu Core 146
 
 # 10 命令行入门课程 149
+
 什么是命令行？150
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 - stdin, stdout, stderr 和重定向 211
 - 使用 diff 查找文件差异 212
@@ -205,8 +85,6 @@ Snappy Ubuntu Core 146
 - 组合命令 239
 - 使用通配符 240
 - 使用 dmesg 查看内核信息 241
-
-
 - 权限 242
 - 文件权限 244
 - 组工具 245
@@ -219,7 +97,6 @@ Snappy Ubuntu Core 146
 - 安全 255
 - 任务控制 256
 - 参考文献 258
-
 - 调度任务 259
 - 使用 cron 定期运行任务 260
 - 睡眠 262
@@ -240,35 +117,30 @@ Snappy Ubuntu Core 146
 - select 语句 (pdksh) 287
 - if 语句 288
 - break 和 exit 语句 290
-
-
 - 开始启动加载过程 293
 - 系统服务和运行级别 295
+- 参考文献 322
 
+# 系统监控工具 323
 
+- 基于控制的监控 323
+- 使用优先级调度和控制 326
+- 磁盘空间 328
+- 检查日志文件 329
+- 图形进程和系统管理工具 333
+- Conky 334
+- KDE 进程和系统监控工具 339
+- Landscape 340
+- 参考文献 340
 
+# 备份 341
 
-
-
-- 参考文献 ........................................................................................................ 322
-
-# 系统监控工具 ................................................................................ 323
-- 基于控制的监控 ............................................................................ 323
-- 使用优先级调度和控制 ................................................................ 326
-- 磁盘空间 ........................................................................................................ 328
-- 检查日志文件 ............................................................................................................ 329
-- 图形进程和系统管理工具 .................................................... 333
-- Conky ............................................................................................. 334
-- KDE 进程和系统监控工具 ........................................................ 339
-- Landscape ....................................................................................................... 340
-- 参考文献 ....................................................................................... 340
-# 备份 ....................................................................................................... 341
-- 选择备份策略 ........................................................................ 341
-- 评估您的备份需求和资源 .................................................... 343
-- 做出选择 ............................................................................ 348
-- 可移动存储介质 ...................................................................... 348
-- 网络存储 ............................................................................ 349
-- 云存储 ....................................................................................... 350
+- 选择备份策略 341
+- 评估您的备份需求和资源 343
+- 做出选择 348
+- 可移动存储介质 348
+- 网络存储 349
+- 云存储 350
 
 # 目录 xv
 
@@ -281,7 +153,6 @@ Snappy Ubuntu Core 146
 - 使用 rsync 362
 - 系统救援 366
 - 恢复 GRUB2 启动加载器 367
-
 - 基础基础 369
 - 检查回环接口的可用性 370
 - 使用 ping, traceroute 和 mtr 检查连接 371
@@ -300,19 +171,16 @@ Snappy Ubuntu Core 146
 - 从可用无线协议中进行选择 397
 - 配置 PPPoE 连接 399
 - 排除连接故障 401
-
 - 设置 Telnet 服务器 403
 - 设置 SSH 服务器 405
 - 使用 scp 在机器间复制文件 407
 - 使用 ssh-keygen 密钥登录 409
 - 参考文献 411
-
 - 评估你的漏洞 413
 - 无线网络安全 415
 - 配置和使用 Tripwire 设备 417
 - 配置你的防火墙 419
 - 制定灾难恢复计划 425
-
 - 硬盘 428
 - hdparm 命令 430
 - tune2fs 命令 432
@@ -321,7 +189,6 @@ Snappy Ubuntu Core 146
 - MySQL 438
 - 使用查询缓存 440
 - 查询优化 442
-
 - Linux 内核 444
 - 内核类型 447
 - 何时需要重新编译 449
@@ -330,17 +197,6 @@ Snappy Ubuntu Core 146
 - 创建初始内存磁盘镜像 459
 - 编译期间错误 460
 - 参考文献 463
-
-
-
-
-
-
-
-
-
-
-
 - mod_alias 502
 - mod_auth 503
 - mod_auth_dbm 503
@@ -354,24 +210,29 @@ Snappy Ubuntu Core 146
 - mod_ssl 506
 - mod_userdir 507
 - mod_vhost_alias 507
+
 ### 虚拟主机 507
+
 - 基于名称虚拟主机 509
+
 ### 日志 509
+
 - 参考文献 513
+
 ## 25 Nginx Web 服务器管理 515
+
 - 关于 Nginx Web 服务器 515
 - 从 Ubuntu 仓库安装 517
 - 配置 Nginx 服务器 518
 - 设置 PHP 522
 - HTTPS 524
-
-
 - Yaws 528
 - Jetty 529
+
 | 项目目 | 页码 |
+| --- | --- |
 | httpd | 529 |
 | 参考文献 | 530 |
-
 
 - 选择身份验证或匿名服务器 532
 - 其他 FTP 服务器 532
@@ -379,8 +240,6 @@ Snappy Ubuntu Core 146
 - 控制匿名访问 537
 - 使用 fthosts 文件允许或拒绝
 - 参考文献 540
-
-
 - 邮件传输代理 (MTA) 542
 - 邮件投递代理 (MDA) 544
 - Postfix 基础配置和操作 546
@@ -395,15 +254,15 @@ Snappy Ubuntu Core 146
 - Oracle Beehive 557
 - Open-Xchange 558
 - 参考文献 558
+
 ## 29 代理、反向代理和虚拟专用网络 (VPN) 561
+
 - 什么是代理服务器？561
 - 安装 Squid 562
 - 配置客户端 562
-- 指定客户端 地址 567
+- 指定客户端地址 567
 - 虚拟专用网络 (VPN) 570
 - 设置 VPN 服务器 573
-
-
 - 关系型数据库如何工作 580
 - 创建表 582
 - 从数据库检索数据 584
@@ -415,8 +274,6 @@ Snappy Ubuntu Core 146
 - 通过 SSH 访问数据库 595
 - Web 访问数据库 597
 - PostgreSQL 命令行客户端 600
-
-
 - Berkeley DB 606
 - Memcached 和 Memcache 607
 - Riak 608
@@ -474,7 +331,7 @@ Snappy Ubuntu Core 146
 - Charms 650
 - Juju GUI 652
 - Juju 快速上手 653
-- Mac OS 和 Windows  Juju 653
+- Mac OS 和 Windows Juju 653
 - Mojo：Juju 的持续交付 653
 - Snappy Ubuntu Core 653
 - 服务的 Ubuntu (MaaS) 653
@@ -566,18 +423,17 @@ Snappy Ubuntu Core 146
 - JavaScript 716
 - Lisp 716
 
-
-
-
-
 xx Ubuntu 2017 发布版
 
-- Lua ................................................................................ 717
-- Mono ............................................................................... 717
-- OCaml .............................................................................. 718
-- Perl ............................................................................... 718
-- PHP ................................................................................ 719
-- Python ............................................................................ 719
+- Lua 717
+- Mono 717
+- OCaml 718
+- Perl 718
+- PHP 719
+- Python 719
+
+
+
 - Ruby ............................................................................... 719
 - Rust ............................................................................... 720
 - Scala ............................................................................... 720
@@ -608,7 +464,7 @@ xx Ubuntu 2017 发布版
 
 ## 索引 733
 
-第 45–47 章可以通过 informit.com/title/9780134268118 在线访问。
+第 45–47 章可以通过 `informit.com/title/9780134268118` 在线访问。
 
 ## 额外章节
 
@@ -626,16 +482,16 @@ xx Ubuntu 2017 发布版
 - 算术运算符 Web:7
 - 其他运算符 Web:8
 - 特殊字符串常量 Web:8
-- 条件语句：if/else 和 unless Web:9
-- if Web:9
-- unless Web:10
+- 条件语句：`if/else` 和 `unless` Web:9
+- `if` Web:9
+- `unless` Web:10
 - 循环 Web:10
-- for Web:10
-- foreach Web:10
-- while Web:11
-- until Web:11
-- last 和 next Web:12
-- do ... while 和 do until Web:12
+- `for` Web:10
+- `foreach` Web:10
+- `while` Web:11
+- `until` Web:11
+- `last` 和 `next` Web:12
+- `do ... while` 和 `do until` Web:12
 - 正则表达式 Web:12
 - 访问外壳 Web:13
 - 模块和 CPAN Web:14
@@ -678,7 +534,7 @@ xx Ubuntu 2017 发布版
 - 运算符 Web:53
 - 条件语句 Web:54
 - 特殊运算符 Web:55
-- Switch Web:56
+- `Switch` Web:56
 - 循环 Web:59
 - 包含其他函数 Web:60
 - 基础函数 Web:60
@@ -692,19 +548,19 @@ xx Ubuntu 2017 发布版
 
 ## 关于作者
 
-Matthew Helmke 是 Ubuntu 社区的活跃成员。他在 2006 年至 2011 年担任 Ubuntu 论坛委员会成员，为 Ubuntu 论坛（www.ubuntuforums.org）提供领导和监督，并在欧洲、中东和非洲的 Ubuntu 区域批准委员会工作了两年。他曾为多家杂志和网站撰写过关于 Ubuntu 文章，是《官方 Ubuntu 书》的主作者，并合著了《VMware 南》。他在 Canonical, Inc. 担任技术作家，负责云和基础设施文档编写。
+Matthew Helmke 是 Ubuntu 社区的活跃成员。他在 2006 年至 2011 年担任 Ubuntu 论坛委员会成员，为 Ubuntu 论坛（`www.ubuntuforums.org`）提供领导和监督，并在欧洲、中东和非洲的 Ubuntu 区域批准委员会工作了两年。他曾为多家杂志和网站撰写过关于 Ubuntu 文章，是《官方 Ubuntu 书》的主作者，并合著了《VMware 南》。他在 `Canonical, Inc.` 担任技术作家，负责云和基础设施文档编写。
 
-Matthew Helmke 是 Ubuntu 社区的活跃成员。他在 2006 年至 2011 年担任 Ubuntu 论坛委员会成员，为 Ubuntu 论坛（www.ubuntuforums.org）提供领导和监督，并在欧洲、中东和非洲的 Ubuntu 区域批准委员会工作了两年。他曾为多家杂志和网站撰写过关于 Ubuntu 文章，是《官方 Ubuntu 书》的主作者，并合著了《VMware 实南》。他在 Canonical, Inc. 担任技术作家，负责云和基础设施文档编写。
+Matthew Helmke 是 Ubuntu 社区的活跃成员。他在 2006 年至 2011 年担任 Ubuntu 论坛委员会成员，为 Ubuntu 论坛（`www.ubuntuforums.org`）提供领导和监督，并在欧洲、中东和非洲的 Ubuntu 区域批准委员会工作了两年。他曾为多家杂志和网站撰写过关于 Ubuntu 文章，是《官方 Ubuntu 书》的主作者，并合著了《VMware 实南》。他在 `Canonical, Inc.` 担任技术作家，负责云和基础设施文档编写。
 
-Matthew Helmke 是 Ubuntu 社区的活跃成员。他在 2006 年至 2011 年担任 Ubuntu 论坛委员会成员，为 Ubuntu 论坛（www.ubuntuforums.org）提供领导和监督，并在欧洲、中东和非洲的 Ubuntu 区域批准委员会工作了两年。他曾为多家杂志和网站撰写过关于 Ubuntu 文章，是《官方 Ubuntu 书》的主作者，并合著了《VMware 实南》。他在 Canonical, Inc. 担任技术作家，负责云和基础设施文档编写。
+Matthew Helmke 是 Ubuntu 社区的活跃成员。他在 2006 年至 2011 年担任 Ubuntu 论坛委员会成员，为 Ubuntu 论坛（`www.ubuntuforums.org`）提供领导和监督，并在欧洲、中东和非洲的 Ubuntu 区域批准委员会工作了两年。他曾为多家杂志和网站撰写过关于 Ubuntu 文章，是《官方 Ubuntu 书》的主作者，并合著了《VMware 实南》。他在 `Canonical, Inc.` 担任技术作家，负责云和基础设施文档编写。
 
-Matthew Helmke 是 Ubuntu 社区的活跃成员。他在 2006 年至 2011 年担任 Ubuntu 论坛委员会成员，为 Ubuntu 论坛（www.ubuntuforums.org）提供领导和监督，并在欧洲、中东和非洲的 Ubuntu 区域批准委员会工作了两年。他曾为多家杂志和网站撰写过关于 Ubuntu 文章，是《官方 Ubuntu 书》的主作者，并合著了《VMware 实南》。他在 Canonical, Inc. 担任技术作家，负责云和基础设施文档编写。
+Matthew Helmke 是 Ubuntu 社区的活跃成员。他在 2006 年至 2011 年担任 Ubuntu 论坛委员会成员，为 Ubuntu 论坛（`www.ubuntuforums.org`）提供领导和监督，并在欧洲、中东和非洲的 Ubuntu 区域批准委员会工作了两年。他曾为多家杂志和网站撰写过关于 Ubuntu 文章，是《官方 Ubuntu 书》的主作者，并合著了《VMware 实南》。他在 `Canonical, Inc.` 担任技术作家，负责云和基础设施文档编写。
 
-Matthew Helmke 是 Ubuntu 社区的活跃成员。他在 2006 年至 2011 年担任 Ubuntu 论坛委员会成员，为 Ubuntu 论坛（www.ubuntuforums.org）提供领导和监督，并在欧洲、中东和非洲的 Ubuntu 区域批准委员会工作了两年。他曾为多家杂志和网站撰写过关于 Ubuntu 文章，是《官方 Ubuntu 书》的主作者，并合著了《VMware 实南》。他在 Canonical, Inc. 担任技术作家，负责云和基础设施文档编写。
+Matthew Helmke 是 Ubuntu 社区的活跃成员。他在 2006 年至 2011 年担任 Ubuntu 论坛委员会成员，为 Ubuntu 论坛（`www.ubuntuforums.org`）提供领导和监督，并在欧洲、中东和非洲的 Ubuntu 区域批准委员会工作了两年。他曾为多家杂志和网站撰写过关于 Ubuntu 文章，是《官方 Ubuntu 书》的主作者，并合著了《VMware 实南》。他在 `Canonical, Inc.` 担任技术作家，负责云和基础设施文档编写。
 
-Andrew Hudson 是一个专注于开源的自由职业记者。他的文章曾出现在 MacFormat、PC Answers、PC Plus 以及 Linux Format。Paul 对自由软件充满热情，并适用于桌面和服务器。（此处文本包含重复/混乱片段，Helmke 是主要作者。）
+Andrew Hudson 是一个专注于开源的自由职业记者。他的文章曾出现在 `MacFormat`、`PC Answers`、`PC Plus` 以及 `Linux Format`。Paul 对自由软件充满热情，并适用于桌面和服务器。（此处文本包含重复/混乱片段，Helmke 是主要作者。）
 
-Matthew Helmke 是 Ubuntu 社区的活跃成员。他在 2006 年至 2011 年担任 Ubuntu 论坛委员会成员，为 Ubuntu 论坛（www.ubuntuforums.org）提供领导和监督，并在欧洲、中东和非洲的 Ubuntu 区域批准委员会工作了两年。他曾为多家杂志和网站撰写过关于 Ubuntu 文章，是《官方 Ubuntu 书》的主作者，并合著了《VMware 实南》。他在 Canonical, Inc. 担任技术作家，负责云和基础设施文档编写。
+Matthew Helmke 是 Ubuntu 社区的活跃成员。他在 2006 年至 2011 年担任 Ubuntu 论坛委员会成员，为 Ubuntu 论坛（`www.ubuntuforums.org`）提供领导和监督，并在欧洲、中东和非洲的 Ubuntu 区域批准委员会工作了两年。他曾为多家杂志和网站撰写过关于 Ubuntu 文章，是《官方 Ubuntu 书》的主作者，并合著了《VMware 实南》。他在 `Canonical, Inc.` 担任技术作家，负责云和基础设施文档编写。
 
 ## 献词
 
@@ -726,11 +582,7 @@ Matthew 感谢在过去版本中提供帮助、提供建设性意见和想法、
 
 读者服务
 
-访问我们的网站并在 informit.com/register 注册本书，以便方便获取可能提供的更新、下载或勘误。
-
-
-
-
+访问我们的网站并在 `informit.com/register` 注册本书，以便方便获取可能提供的更新、下载或勘误。
 
 # 引言
 
@@ -761,7 +613,7 @@ Ubuntu 所做的是利用 Debian 的优质品质，创建一个普通人也能�
 
 ## 许可协议
 
-软件许可对所有用户来说都是一个重要问题，可能涉及道德、法律和财务考量。许多消费者认为购买商业或专有操作系统、应用程序或工具的副本意味着拥有所有权，但事实并非如此。在大多数情况下，商业软件附带的最终用户许可协议（EULA）规定你支付的只是使用权。这通常意味着你不能复制、共享或转让软件的所有权。更严苛的软件许可协议会执行禁止你分发或发布软件评论的条款。甚至更阴险的许可方案（尤其是在美国）包含了允许审计软件的条款。书中包含的软件并非如此。你可以完全自由地复制、共享并在任意数量的计算机上安装该软件——不过，我们鼓励你购买本书的额外副本。请务必阅读 Ubuntu 附带的 README 文件获取有关软件的重要信息，并在安装 Ubuntu 后，访问 www.gnu.org/licenses/gpl.html 查找 GPL 副本。你会发现 GPL 赋予了使用、共享、修改甚至出售软件的自由。你可以立即在家里或工作场所开始使用你的 Ubuntu 副本，而不必担心软件许可或版税问题。然而，请注意，虽然 Ubuntu 包含的大许多软件是根据 GPL 许可的，但某些软件包是根据其他条款许可的。软件许可有多种，许多软件包属于被称为“开源”的宽泛定义。其中包括 Artistic 许可、BSD 许可、Mozilla 公共许可。有关 GNU 许可的更多额外信息，请访问 www.gnu.org/。关于开源的定义和许可指南，以及指向几乎所有开源许可条款的链接，请访问 www.opensource.org/。
+软件许可对所有用户来说都是一个重要问题，可能涉及道德、法律和财务考量。许多消费者认为购买商业或专有操作系统、应用程序或工具的副本意味着拥有所有权，但事实并非如此。在大多数情况下，商业软件附带的最终用户许可协议（EULA）规定你支付的只是使用权。这通常意味着你不能复制、共享或转让软件的所有权。更严苛的软件许可协议会执行禁止你分发或发布软件评论的条款。甚至更阴险的许可方案（尤其是在美国）包含了允许审计软件的条款。书中包含的软件并非如此。你可以完全自由地复制、共享并在任意数量的计算机上安装该软件——不过，我们鼓励你购买本书的额外副本。请务必阅读 Ubuntu 附带的 README 文件获取有关软件的重要信息，并在安装 Ubuntu 后，访问 `www.gnu.org/licenses/gpl.html` 查找 GPL 副本。你会发现 GPL 赋予了使用、共享、修改甚至出售软件的自由。你可以立即在家里或工作场所开始使用你的 Ubuntu 副本，而不必担心软件许可或版税问题。然而，请注意，虽然 Ubuntu 包含的大许多软件是根据 GPL 许可的，但某些软件包是根据其他条款许可的。软件许可有多种，许多软件包属于被称为“开源”的宽泛定义。其中包括 Artistic 许可、BSD 许可、Mozilla 公共许可。有关 GNU 许可的更多额外信息，请访问 `www.gnu.org/`。关于开源的定义和许可指南，以及指向几乎所有开源许可条款的链接，请访问 `www.opensource.org/`。
 
 ## 本书目标读者
 
@@ -775,10 +627,6 @@ Ubuntu 所做的是利用 Debian 的优质品质，创建一个普通人也能�
 
 《Ubuntu Unleashed》面向中级和高级用户，以及想要成为这类用户的人。我们的目标是通过让你接触尽可能多的工具和想法，引导你进入更高阶段；我们希望为你提供一些思考和方法，并促你去探索更多。
 
-
-
-
-
 本书内容 xxxvii
 
 程序员是编写软件的人。他们有时被称为开发者。程序员与其他合作，创建运行在这些系统之上的应用程序。Ubuntu 是编写和测试软件的绝佳平台。无论你是在进行 Web 应用开发，还是为桌面或服务器系统编写软件都是如此。它也是学习新编程语言和尝试新想法的优秀平台。本书可以帮助你入门。
@@ -787,21 +635,19 @@ DevOps 是 developer（开发）和 operations（运维）的组合词。它代�
 
 ## 本书内容
 
+
+
 《Ubuntu Unleashed》分为六部分，在此处进行描述。书中附有一张包含整个发行版的光盘，确保你拥有入门所需的所有内容。
 
 - 第一部分“安装与配置”将带你如何在计算机上安装 Ubuntu，替换你可能正在运行的任何操作系统（如 Windows）。
-
 - 第二部分“桌面版 Ubuntu”针对想在桌面系统上使用 Ubuntu 的用户。
-
 - 第三部分“系统管理”涵盖了为特定任务设置系统以及维护该系统的基础和高级细节。
-
 - 第四部分“作为服务器的 Ubuntu”为你提供所需信息，以便为家庭或办公室构建自己的文件服务器、Web 服务器和其他服务器。
+- 第五部分“Linux 编程”向你介绍如何使用提供的开发工具进一步扩展 Ubuntu 的功能。
 
-- 第五部分“Linux 编程”向你介绍介绍如何使用提供的开发工具进一步扩展 Ubuntu 的功能。
+除了已经提到的之外，在 Ubuntu 春季发布后，将在 `www.informit.com/title/9780134511884` 在线提供赠送章节。
 
-除了已经提到的之外，在 Ubuntu 春季发布后，将在 www.informit.com/title/9780134511884- 在线提供赠送章节。
-
-此外，本书是 InformIt 令人兴奋的“内容更新计划”的一部分，该计划针对重大技术改进提供内容更新！随着 Ubuntu 发生重大更新，本书的章节将进行更新或添加新章节以匹配技术的更新。当更新可用时，它们将以本书 Web 版的形式交付给你，可以通过任何互联网连接访问。要了解更多信息，请访问 informit.com/cup。
+此外，本书是 InformIt 令人兴奋的“内容更新计划”的一部分，该计划针对重大技术改进提供内容更新！随着 Ubuntu 发生重大更新，本书的章节将进行更新或添加新章节以匹配技术的更新。当更新可用时，它们将以本书 Web 版的形式交付给你，可以通过任何互联网连接访问。要了解更多信息，请访问 `informit.com/cup`。
 
 如何访问 Web 版：按照内部说明，学习如何注册你的书籍以访问免费 Web 版。
 
@@ -849,7 +695,7 @@ mathew@semour:- sudo printinfo &
 - 使用 Snaps
 - 参考文献
 
-在本章中，我们将查看你在 Ubuntu 中管理软件的各种选项。如果你习惯于访问不同的供应商网站下载更新，那么你将获得一个惊喜。更新整个 Ubuntu 安装（包括所有应用程序软件）只需运行“更新管理器”（Update Manager）程序即可。你将发现安装甚至删除软件包是多么件简单的事。
+在本章中，我们将查看你在 Ubuntu 中管理软件的各种选项。如果你习惯于访问不同的供应商网站下载更新，那么你将获得一个惊喜。更新整个 Ubuntu 安装（包括所有应用程序软件）只需运行“更新管理器”（Update Manager）程序即可。你将发现安装甚至删除软件包是多么简单的事。
 
 Ubuntu 提供了多种系统资源管理工具。接下来的章节介绍了你将用于大多数软件管理的图形化软件管理工具。本章还涵盖了系统的监控和磁盘存储。
 
@@ -880,12 +726,9 @@ Ubuntu Software 在添加和删除应用程序方面非常好，但如果你需�
 - *标记移除 (Mark for Removal)*——此选项将从系统中删除选定的软件包，但会保留其配置文件，以便在以后重新安装它时无需重新配置。
 - *标记彻底移除 (Mark for Complete Removal)*——此选项将从系统中删除选定的软件包，还将删除任何配置文件，从系统中清除所有内容。
 
-
-
-
 完成更改后，点击“应用”（Apply）按钮让 Synaptic 根据需要下载、升级、安装或卸载。如果你在点击“应用”之前关闭程序，更改将会丢失。
 
-除了屏幕左侧的分类，你还会看到六个按钮：部分（Sections）、状态（Status）、源（Origin）、自定义过滤器（Custom Filters）、搜索结果（Search Results）和架构（Architecture）。这些按钮可以自定义左侧列表：“部分”显示分类视图，“状态”允许你查看已安装或可升级的包，“源”列出了可以下载软件包的不同存储库；自定义过滤器”包含了一些对高级用户非常有用的复杂查询，“搜索结果”存储你的搜索结果；“架构”显示了适用于 Ubuntu 每种架构的软件包。
+除了屏幕左侧的分类，你还会看到六个按钮：部分（Sections）、状态（Status）、源（Origin）、自定义过滤器（Custom Filters）、搜索结果（Search Results）和架构（Architecture）。这些按钮可以自定义左侧列表：“部分”显示分类视图，“状态”允许你查看已安装或可升级的包，“源”列出了可以下载软件包的不同存储库；“自定义过滤器”包含了一些对高级用户非常有用的复杂查询，“搜索结果”存储你的搜索结果；“架构”显示了适用于 Ubuntu 每种架构的软件包。
 
 你可以随时按 `Ctrl+F` 搜索特定软件包。默认情况下，它设置为按软件包描述和名称搜索。你可以更改“查找范围”（Look In）框的设置来按名称搜索。如前提到的，你的搜索词保存在“搜索”视图（左下角的按钮）下，你可以从该列表中重新搜索该术语。
 
@@ -902,7 +745,7 @@ Synaptic 会弹出一个消息框，警告存储库列表已更改，你需要�
 
 # 保持更新
 
-尽管你可以通过 Synaptic 管理软件更新，但 Ubuntu 还提供了一个名为“软件更新器”（Software Updater）的专用工具（如图 9.3 所示）。该工具设计简单简单：当你运行它时，软件更新器会自动下载可用更新列表并检查其列表中显示的所有项目。如果更新列表下载时间不久，Ubuntu 将通过点击“检查”按钮来刷新可用更新列表。否则，你需要点击“安装更新”使你的系统保持最新状态。如果你想获取更多关于更新的信息，点击底部的“显示详情”以查看更新发生了哪些变化。
+尽管你可以通过 Synaptic 管理软件更新，但 Ubuntu 还提供了一个名为“软件更新器”（Software Updater）的专用工具（如图 9.3 所示）。该工具设计简单：当你运行它时，软件更新器会自动下载可用更新列表并检查其列表中显示的所有项目。如果更新列表下载时间不久，Ubuntu 将通过点击“检查”按钮来刷新可用更新列表。否则，你需要点击“安装更新”使你的系统保持最新状态。如果你想获取更多关于更新的信息，点击底部的“显示详情”以查看更新发生了哪些变化。
 
 ![](img/11c82181e4caaaf9479163b62848851c_43_0.png)
 
@@ -914,9 +757,9 @@ Ubuntu 会定期检查更新，并在可用关键更新时通知你。不过，�
 
 由于有许多软件可供安装，基于 Debian 的发行版有许多管理软件安装的方法这并不意外。然而，它们的核心使用的是 Debian 闻名遐迩的高级软件包管理工具（APT）。Slashdot.com 上的一个人曾说：“欢迎来到 Slashdot。如果你找不到任何原创内容，只需夸一下 APT 有多牛，你就能很快融入其中。”你看，尽管许多其他发行版都尝试过 APT 的威力，但没有任何东西能与之相提并论。
 
-为什么 APT 如此酷炫？嗯，它是第一个正确处理软件依赖关系的系统。其他发行版（如红帽 [Red Hat））使用带有依赖关系的 RPM 文件。例如，Gimp 的 RPM 会依赖于 Gtk（Gtk 是 Gimp 所赖的图形工具包）。因此，如果你尝试在没有 Gtk RPM 的情况下安装 Gimp，你的安装将失败。于是，你获取 Gtk RPM 并再次尝试。再次结果：Gtk 依赖于三个你需要下载的项。而另外三个项又依赖于 20 个其他项。如此，如此，再如此，直到你无法找到某个依赖项的可用 RPM，并放弃。
+为什么 APT 如此酷炫？嗯，它是第一个正确处理软件依赖关系的系统。其他发行版（如红帽 [Red Hat））使用带有依赖关系的 RPM 文件。例如，Gimp 的 RPM 会依赖于 Gtk（Gtk 是 Gimp 所依赖的图形工具包）。因此，如果你尝试在没有 Gtk RPM 的情况下安装 Gimp，你的安装将失败。于是，你获取 Gtk RPM 并再次尝试。再次结果：Gtk 依赖于三个你需要下载的项。而另外三个项又依赖于 20 个其他项。如此，如此，再如此，直到你无法找到某个依赖项的可用 RPM，并放弃。
 
-另一方面，APT 设计用于自动查找并下载你软件包的依赖关系。因此，如果你想安装 Gimp，它会下载 Gimp 软件包以及它运行所需的任何其他软件。不再需要手动到处搜寻，不再需要担心找到正确的包，也绝不再需要手动编译东西。APT 还可以处理安装恢复，这意味着如果你在升级过程中丢失了网络连接（或电池耗尽了，或者你必须退出，或其他原因），APT 在你运行它时会从上次停止的地方继续。
+另一方面，APT 设计用于自动查找并下载你软件包的依赖关系。因此，如果你想安装 Gimp，它会下载 Gimp 软件包以及它运行所需的任何其他软件。不再需要手动到处搜寻，不再需要担心找到正确的包，也绝不再需要手动编译东西。APT 还可以处理安装恢复，这意味着如果你在升级过程中丢失了网络连接（或电池耗尽了，或你必须退出，或其他原因），APT 在你运行它时会从上次停止的地方继续。
 
 ## 日常使用
 
@@ -948,11 +791,15 @@ matthew@seymour:-$ sudo apt-get upgrade
 # 命令行操作
 
 读取软件包列表...
+
 正在依赖树...
+
 读取状态...
+
 以下软件包将被升级：
 
 报告的每个部分都包含一些重要信息。从顶部开始，“以下软件包将被升级”提供了可用更新的确切列表。如果你正在安装新软件或删除软件，将变为“以下软件包将被安装”和“以下软件包将被删除”。在最后显示 APT 总将升级 21 个软件包，其中 0 个新安装，0 个删除，0 个未升级。由于这是升级而不是安装新软件，所有新软件包仅额外占用 623KB 空间。尽管下载了 84.8MB，软件包将覆盖文件。
+
 是否继续？
 
 重要的是，基础的 `apt-upgrade` 永远不会删除软件或添加新软件。结果是，保持系统完全补丁是安全的，因为它永远不会破坏事情。然而，偶尔会看到“0 个未升级”的状态，这意味着某些项无法升级。当必须安装或删除软件以满足更新软件包的依赖关系时，如前所述，`apt-upgrade` 永远做不到。
@@ -971,18 +818,29 @@ mathew@seymour:$ sudo apt-get install mysql-server
 ```
 
 正在读取软件包列表... 完成
+
 正在构建依赖树
+
 正在读取状态信息... 完成
+
 将安装以下额外的软件包：
 
 libaio libddd-mysql-perl libibdi-perl libhtml-template-perl libmysqlclient18
+
 libnet-daemon-perl libipprc-perl libtern-readkey-perl mysql-client-5.5
+
 mysql-client-core-5.5 mysql-server-5.5 mysql-server-core-5.5
+
 建议的软件包：
+
 libpc-shared-cache-perl tinyca maill
+
 0 个已升级，13 个新安装，0 个要移除，0 个未升级。
+
 需要下载 26 MB 的存档。
-执行此操作将将使用 96.2 MB 的额外磁盘空间。
+
+执行此操作将使用 96.2 MB 的额外磁盘空间。
+
 您要继续吗 [Y/n]?
 
 “建议的”软件包仅仅是低级形式的推荐。它们不会向你安装的软件添加任何关键功能，但你可能在某些非关键（如正在安装的主程序软件）功能或任务中需要它们。
@@ -1016,7 +874,7 @@ mathew@semour:-$ sudo apt-get-purge firefox
 这任一种方法都会执行完全卸载。
 
 > 注意
-你可以通过运行不带任何参数的 `apt-get` 来查看更广泛的 `apt-get` 参数列表。底部那行神秘的“此 APT 有超级牛能力”，在你运行 `apt-get moo` 命令时会变得更加神秘。
+> 你可以通过运行不带任何参数的 `apt-get` 来查看更广泛的 `apt-get` 参数列表。底部那行神秘的“此 APT 有超级牛能力”，在你运行 `apt-get moo` 命令时会变得更加神秘。
 
 ## 查找软件
 
@@ -1030,83 +888,26 @@ mathew@semour:-$ apt-cache search kde
 
 你可以通过几种方式过滤这些信息。首先，你可以指示 `apt-cache` 只在包名中搜索，而不是在描述中搜索。你可以这样操作 `apt-cache`：
 
-```
-mathew@semour:-$ apt-cache search --names kde
-```
+
 
 ## 管理软件包
 
-## 使用 apt-get
+### 使用 `apt-get`
 
-apt-get` 是 APT 的一个简化的界面，用于移除软件包。
+`apt-get` 是 APT 的一个简化的界面，用于移除软件包。
 
-| apt-get 命令 | apt 命令 |
+| `apt-get` 命令 | `apt` 命令 |
 |---|---|
-| apt-get install | apt install |
-| apt-get remove | apt remove |
-| apt-get update | apt update |
-| apt-get upgrade | apt upgrade |
+| `apt-get install` | `apt install` |
+| `apt-get remove` | `apt remove` |
+| `apt-get update` | `apt update` |
+| `apt-get upgrade` | `apt upgrade` |
 
-## 从源码编译
-
-从源码编译应用程序并不困难。有两种方法：你可以使用 Ubuntu 仓库中的源码，或者使用开发者提供的源码。
-
-```
-mathew@semour:-$ apt-cache search kde
-```
-
-## 从 Tarball 编译
-
-大多数不在 Ubuntu 仓库中的代码来自原始作者或公司网站，作为压缩源码 tarball——即使用 gzip 或 bzip 压缩的 tar 文件。压缩文件通常会解压到一个包含多个文件的目录。为了限制损坏或恶意代码可能造成的伤害，作为普通用户编译源码总是一个好习惯，在你的主目录下创建一个名为 `source` 的目录。
-
-从你下载 tarball 的地方，使用 `tar` 的 `-C` 选项将其解压到 `/source` 目录。如果你不确定使用了哪种文件压缩方法，使用 `file` 命令来判断：
-
-```
-mathew@semour:-$ file packageName
-```
-
-现在，切换到 `~/source/pathname` 并寻找名为 `README`、`INSTALL` 或类似的文件。如果它包含如何编译和安装软件的特定说明，请将其打印。通常，编译源码的步骤如下：
-
-```
-mathew@semour:-$ /source/pathname$ ./configure
-```
-
-## 查找软件
-
-## 查找软件
-
-由于有许多软件包可用，使用命令行 APT 可能很难找到你确切需要。通用的搜索工具是 `apt-cache`，其用法如下：
-
-```
-mathew@semour:-$ apt-cache search kde
-```
-
-取决于你启用了哪些存储库，它会返回约一千个软件包。其中许多结果的包名不包含 KDE，但会通过描述中包含 KDE 一词进行匹配。
-
-你可以通过几种方式过滤这些信息。首先，你可以指示 `apt-cache` 只在包名中搜索，而不是在描述中搜索。你可以这样操作 `apt-cache`：
-
-```
-mathew@semour:-$ apt-cache search --names kde
-```
-
-## 管理软件包
-
-## 使用 apt-get
-
-apt-get` 是 APT 的一个简化的界面，用于移除软件包。
-
-| apt-get 命令 | apt 命令 |
-|---|---|
-| apt-get install | apt install |
-| apt-get remove | apt remove |
-| apt-get update | apt update |
-| apt-get upgrade | apt upgrade |
-
-## 从源码编译
+### 从源码编译
 
 从源码编译应用程序并不困难。有两种方法：你可以使用 Ubuntu 仓库中的源码，或者使用开发者提供的源码。对于任何方法，你都需要安装 `build-essential` 软件包以确保你拥有编译所需的工具。你可能还需要安装 `automake` 和 `checkinstall`，这些都是构建工具。
 
-## 从 Tarball 编译
+### 从 Tarball 编译
 
 大多数不在 Ubuntu 仓库中的代码来自原始作者或公司网站，作为压缩源码 tarball——即使用 gzip 或 bzip 压缩的 tar 文件。压缩文件通常会解压到一个包含多个文件的目录。为了限制损坏或恶意代码可能造成的伤害，作为普通用户编译源码总是一个好习惯，在你的主目录下创建一个名为 `source` 的目录。
 
@@ -1130,8 +931,6 @@ mathew@semour:-$ file packageName
 ```
 mathew@semour:-$ /source/pathname$ ./configure
 ```
-
-
 
 当脚本配置成功后，运行以下命令来编译软件：
 
@@ -1157,7 +956,7 @@ matthew@seym:~/source/originalname$ make clean
 matthew@seym:~/source/originalname$ sudo make uninstall
 ```
 
-## 从 Ubuntu 仓库从源码编译
+### 从 Ubuntu 仓库从源码编译
 
 你有时可能想要编译一个包，即使 Ubuntu 仓库中已经有了二进制包。例如，某个程序可能在编译成二进制文件时启用了特定的功能，而你又想要该功能。以下是实现此操作的方法。我们将想要编译的软件包包称为 `foo`。
 
@@ -1183,9 +982,9 @@ matthew@seym:-$ cd foo-4.5.2
 
 接下来，创建一个新的 `debian/changelog` 条目。在输入此内容后，你需要输入一条消息，说明制作新版本的原因，也许类似于带有额外酱料的*马修的幻想* (Matthew's flight of fancy) 。
 
-注意
+**注意**
 
-Ubuntu 的编号遵循特定的模式。为了方便以后使用，你应该遵循此模式。使用这里显示的 foo 数字，一个继承自 Debian 且未经过更改的典型 Ubuntu 包将是 4.5.2-1。一个继承自 Debian 但为 4.5.2-ubuntu1 进行了更改的包（以及第二个版本为 ubuntu2，依此类推）。一个在 Debian 中没有版本但专为 Ubuntu 创建的包将是 4.5.2-ubuntu1（以及 ubuntu2 等）。
+Ubuntu 的编号遵循特定的模式。为了方便以后使用，你应该遵循此模式。使用这里显示的 `foo` 数字，一个继承自 Debian 且未经过更改的典型 Ubuntu 包将是 `4.5.2-1`。一个继承自 Debian 但为 `4.5.2-ubuntu1` 进行了更改的包（以及第二个版本为 `ubuntu2`，依此类推）。一个在 Debian 中没有版本但专为 Ubuntu 创建的包将是 `4.5.2-ubuntu1`（以及 `ubuntu2` 等）。
 
 ```
 matthew@seymour:~$ dch -i
@@ -1197,27 +996,43 @@ matthew@seymour:~$ dch -i
 matthew@seymour:~$ debuild -s
 ```
 
-最后
+最后：
 
 ```
 matthew@seymour:~$ sudo dpkg -O1 foo-4.5.2-lubuntucustom.deb
+```
+
+## 查找软件
+
+由于有许多软件包可用，使用命令行 APT 可能很难找到你确切需要。通用的搜索工具是 `apt-cache`，其用法如下：
+
+```
+mathew@semour:-$ apt-cache search kde
+```
+
+取决于你启用了哪些存储库，它会返回约一千个软件包。其中许多结果的包名不包含 KDE，但会通过描述中包含 KDE 一词进行匹配。
+
+你可以通过几种方式过滤这些信息。首先，你可以指示 `apt-cache` 只在包名中搜索，而不是在描述中搜索。你可以这样操作 `apt-cache`：
+
+```
+mathew@semour:-$ apt-cache search --names kde
 ```
 
 ## 配置管理
 
 本节为那些想要控制系统配置管理的用户简要介绍可能实用的工具。对于更大的需求，请参阅第 36 章“管理服务器组”。
 
-## dotdee
+### dotdee
 
-如果你运行基于 Linux 的系统，你会发现一系列以 .d 结尾的目录，它们存储了名为 .d 或 "dot dee" 目录的配置文件。如果你查看 `/etc/` 目录，你会发现许多如 `apparmor.d` 和 `pam.d` 这样的目录。打开这些目录会发现大量的配置文件。在 Ubuntu 或其他基于 Debian 的系统中，任何软件包直接更改另一个包的配置文件都是违反礼节（以及 Debian 策略的）。如果你想使用系统配置管理，这可能会产生问题。
+如果你运行基于 Linux 的系统，你会发现一系列以 `.d` 结尾的目录，它们存储了名为 `.d` 或 "dot dee" 目录的配置文件。如果你查看 `/etc/` 目录，你会发现许多如 `apparmor.d` 和 `pam.d` 这样的目录。打开这些目录会发现大量的配置文件。在 Ubuntu 或其他基于 Debian 的系统中，任何软件包直接更改另一个包的配置文件都是违反礼节（以及 Debian 策略的）。如果你想使用系统配置管理，这可能会产生问题。
 
 dotdee 通过允许你将文件系统中的任何扁平文件替换为指向从 d 样式目录生成的文件的符号链接，从而解决了这个问题。这保留了原始文件，并在原始文件发生任何添加、删除或修改时，自动动态地更新生成的文件。通过这种方式，既符合 Debian 策略和通用礼节标准，又可以修改配置。
 
-## Snappy Core
+### Snappy Core
 
 Snappy Core 采用了运行所需的极少文件和代码，为 Ubuntu 服务器增加了管理软件包的新方法。这种方法类似于智能手机中的 Android。这种设计旨在防止包破坏整个操作系统。它的初衷是让更新变得更容易且整洁。
 
-## 使用 Snaps
+### 使用 Snaps
 
 以这种方式打包的软件包被称为 snaps。snaps 可以 Ubuntu Software 或命令行安装。在命令行中，snaps 有一个新命令。使用以下命令与 snaps 交互。
 
@@ -1272,11 +1087,7 @@ matthew@seymour:~$ snap list
 - www.debian.org/synaptic/—Synaptic 器首页。
 - www.ubuntu.com/security/—Ubuntu 通知。
 
-
-
-
-
-身份验证 735
+## 身份验证
 
 - `android-studio/bin/` 目录, 725
 - AppArmor, 435–437
@@ -1315,8 +1126,8 @@ matthew@seymour:~$ snap list
     - 概述, 637
     - 优化, 446–447
 - 存档，PPAs (个人包存档)
-    - 概述, 489–490
     - 创建, 688
+    - 概述, 489–490
     - 运行时服务器配置设置
         - apache2.conf, 493–495
         - .htaccess 配置文件, 496–498
@@ -1346,7 +1157,9 @@ matthew@seymour:~$ snap list
 - APIs (应用程序编程接口), 606
 - 身份验证 FTP (文件传输协议), 532
 - 应用开发, 698
-# auth.log
+
+## auth.log
+
 - auth.log, 330
 - AuthType 指令, 500
 - UserFile 指令, 500
@@ -1359,7 +1172,8 @@ matthew@seymour:~$ snap list
 - Avidemex, 108
 - awk 命令, 230–232
 
-# B
+## B
+
 - 巴贝奇，Charles, 710
 - Back in Time, 356–357
 - 背景
@@ -1415,98 +1229,103 @@ matthew@seymour:~$ snap list
     - 逻辑操作符, 294–295
     - 数字比较, 292–293
     - 字符串比较, 290–292
-- 基础输入输出系统。另见 BIOS
-(basic input/output system)
+- 基础输入输出系统。另见 BIOS (basic input/output system)
 - 批量命令, 265–268
 - Battle for Wesnoth, 126–127
+
 ## Bazaar
+
 - BIOS (基础输入输出系统), 311–313
     - 配置, 697
     - 版本控制, 683–684
 - 引导加载程序
     - GRUB (统一引导加载程序), 5, 235–236
     - 配置, 697
-    - 版本控制, 683–684
-    - 安装, 5
-    - 概述, 312
-    - 启动, 491–492
-    - 停止, 491–492
-    - 恢复, 367
-    - 双系统启动, 6
-    - 系统, 238
-- ch 命令, 690
-- Beekmans,Gerard, 39
+
+
+
+- 版本控制, 683–684
+- 安装, 5
+- 概述, 312
+- 启动, 491–492
+- 停止, 491–492
+- 恢复, 367
+- 双系统启动, 6
+- 系统, 238
+- `ch` 命令, 690
+- Beekmans, Gerard, 39
 - 哔哔代码, 93
 - Berkeley DB (数据库), 606–607
-    - 定义, 615
-    - 概述, 311
-    - 脚本, 316–317
-    - 在线资源, 322
+  - 定义, 615
+  - 概述, 311
+  - 脚本, 316–317
+  - 在线资源, 322
 - BIND (域名系统), 665–667
-    - 概述, 313
+  - 概述, 313
 - BigTable, 611
 - Banshee, 91–93
-- 管道操作符 (|), 219–221, 276
+- 管道操作符 (`|`), 219–221, 276
 - Base, 77
 - BaseX, 610–611
-- bash，在 bash 中比较表达式
-    - 文件操作符, 293–294
-    - 逻辑操作符, 294–295
-    - 数字比较, 292–293
-    - 字符串比较, 290–292
-- 基础输入输出系统。另见 BIOS
-(basic input/output system)
+- `bash`，在 `bash` 中比较表达式
+  - 文件操作符, 293–294
+  - 逻辑操作符, 294–295
+  - 数字比较, 292–293
+  - 字符串比较, 290–292
+- 基础输入输出系统。另见 BIOS (basic input/output system)
 - 批量命令, 265–268
 - Battle for Wesnoth, 126–127
-## Bazaar
+
+# Bazaar
+
 - BIOS (基础输入输出系统), 311–313
-    - 配置, 697
-    - 版本控制, 683–684
+  - 配置, 697
+  - 版本控制, 683–684
 - 引导加载程序
-    - GRUB (统一引导加载程序), 5, 235–236
-    - 配置, 697
-    - 版本控制, 683–684
-    - 安装, 5
-    - 概述, 312
-    - 启动, 491–492
-    - 停止, 491–492
-    - 恢复, 367
-    - 双系统启动, 6
-    - 系统, 238
-- ch 命令, 690
-- Beekmans,Gerard, 39
+  - GRUB (统一引导加载程序), 5, 235–236
+  - 配置, 697
+  - 版本控制, 683–684
+  - 安装, 5
+  - 概述, 312
+  - 启动, 491–492
+  - 停止, 491–492
+  - 恢复, 367
+  - 双系统启动, 6
+  - 系统, 238
+- `ch` 命令, 690
+- Beekmans, Gerard, 39
 - 哔哔代码, 93
 - Berkeley DB (数据库), 606–607
-    - 定义, 615
-    - 概述, 311
-    - 脚本, 316–317
-    - 在线资源, 322
+  - 定义, 615
+  - 概述, 311
+  - 脚本, 316–317
+  - 在线资源, 322
 - BIND (域名系统), 665–667
-    - 概述, 313
+  - 概述, 313
 - BigTable, 611
 - Banshee, 91–93
-- 管道操作符 (|), 219–221, 276
+- 管道操作符 (`|`), 219–221, 276
 - Base, 77
 - BaseX, 610–611
-- bash，在 bash 中比较表达式
-    - 文件操作符, 293–294
-    - 逻辑操作符, 294–295
-    - 数字比较, 292–293
-    - 字符串比较, 290–292
-- 基础输入输出系统。另见 BIOS
-(basic input/output system)
+- `bash`，在 `bash` 中比较表达式
+  - 文件操作符, 293–294
+  - 逻辑操作符, 294–295
+  - 数字比较, 292–293
+  - 字符串比较, 290–292
+- 基础输入输出系统。另见 BIOS (basic input/output system)
 - 批量命令, 265–268
 - Battle for Wesnoth, 126–127
 
 # C
+
 - 线缆, 384–385
 - Calc, 76
 - 数字相机, 98
 - 屏幕截屏, 97
-- 尖角 (^), 567
-- cat, 160, 177, 180–189
+- 尖角 (`^`), 567
+- `cat`, 160, 177, 180–189
 - 无屏蔽双绞线 (UTP), 384–385
-- Canonical Ltd.,33, 657
+- Canonical Ltd., 33, 657
 - Carrier Advisory Group (CAG), 745
 - Cassandra, 607
 - 取消命令, 487
@@ -1514,17 +1333,17 @@ matthew@seymour:~$ snap list
 - 修改命令, 264
 - 更改目录, 164–165, 189–191
 - 频道 (IRC), 42
--  Charm (Juju), 650–652
-- chattr 命令, 444
-- chfn 命令, 264
-- chgrp 命令, 170, 244
-- chgrpr 命令, 170
-- chmod 命令, 168–191, 194, 264
-- chown 命令, 170, 244, 264
-- chpasswd 命令, 264
-- chroot 监狱, 238–239
-- chsh 命令, 250, 264
-- CIDR (无分类域间路由)表示, 550, 567
+- Charm (Juju), 650–652
+- `chattr` 命令, 444
+- `chfn` 命令, 264
+- `chgrp` 命令, 170, 244
+- `chgrpr` 命令, 170
+- `chmod` 命令, 168–191, 194, 264
+- `chown` 命令, 170, 244, 264
+- `chpasswd` 命令, 264
+- `chroot` 监狱, 238–239
+- `chsh` 命令, 250, 264
+- CIDR (无分类域间路由) 表示, 550, 567
 - Cineler, 108
 - CinePaint, 97, 108
 - Claws, 68
@@ -1538,59 +1357,56 @@ matthew@seymour:~$ snap list
 - CFEngine, 656–657
 - CGI (通用网接口), 718
 - Chalup, Strata R., 40
-- 客户端 739
-- Alpine, 68
-- apt 客户端
-- apt-get, 66
-- cd 命令, 164–165, 189–191
-- cdrecord, 101–102
-- dhclient, 401–402
-- 依赖检查, 671
-- 数字相机, 98
-- DVDs, 102–104
-- Evolution, 67–68
-- evince, 35–36
-- Glade, 677–678
-- vg, 36
+- 客户端, 739
+  - Alpine, 68
+  - `apt` 客户端
+  - `apt-get`, 66
+  - `cd` 命令, 164–165, 189–191
+  - `cdrecord`, 101–102
+  - `dhclient`, 401–402
+  - 依赖检查, 671
+  - 数字相机, 98
+  - DVDs, 102–104
+  - Evolution, 67–68
+  - `evince`, 35–36
+  - Glade, 677–678
+  - `vg`, 36
 - Chef, 656
 - Cherokee, 528–529
-- cherokee-admin-launcher 命令, 528–529
+- `cherokee-admin-launcher` 命令, 528–529
 - Web 邮件应用, 68
-
-
-
-
 
 ## 客户端
 
 - LDAP（轻量级目录访问协议）
-- 概述，641–642
-- 演变, 620
-- PaaS（平台即服务）, 643
-- Thunderbird, 621
-- SaaS（软件即服务）, 643
-- NFS（网络文件系统）, 475–476
-- Snappy Ubuntu Core, 653
-- Pan, 73–74
-- cloud-sandbox 命令, 690
-- Squid, 562–563
-- Cloudsmith, 656
-- 客户端, 623
-- CNAME 记录 (DNS), 663
-- VPNs（虚拟专用网络）, 571–573
+  - 概述, 641–642
+  - 演变, 620
+  - PaaS（平台即服务）, 643
+  - Thunderbird, 621
+  - SaaS（软件即服务）, 643
+  - NFS（网络文件系统）, 475–476
+  - Snappy Ubuntu Core, 653
+  - Pan, 73–74
+  - `cloud-sandbox` 命令, 690
+  - Squid, 562–563
+  - Cloudsmith, 656
+  - 客户端, 623
+  - CNAME 记录 (DNS), 663
+  - VPNs（虚拟专用网络）, 571–573
 - COBOL（常用面向业务语言）, 711–712
-- clisp 包, 716–717
+- `clisp` 包, 716–717
 - 代号, 33
 - Clojure, 710–711
 - CodeWeavers CrossOver Office, 83
-- clojure 包, 711
-- col1 命令, 692, 690
+- `clojure` 包, 711
+- `col1` 命令, 692, 690
 - Zoneilla, 7
 - 组合日志格式 (CLF), 509
 
 ## 云计算
 
 ## 组合命令
+
 - 优势, 642
 - 布尔运算符, 221–222
 - 备份, 350
@@ -1601,17 +1417,19 @@ matthew@seymour:~$ snap list
 - 按顺序执行, 222
 
 ## Juju
-- comm 命令, 212-213
+
+- `comm` 命令, 212-213
 - charms（守护咒）, 650–652
 - 逗号分隔值 (CSV), 231
 - GUI（图形用户界面）, 652
-- at 命令, 265–268
+- `at` 命令, 265–268
 - 安装, 648–650
 - 命令行. 另见命令
-- 访问, 151–152
-- 在 Mac OS 和 Windows 上, 653
+  - 访问, 151–152
+  - 在 Mac OS 和 Windows 上, 653
 
 ## Mojo, 653
+
 - 优势, 185–187
 - 概述, 647
 - 从此处刻录 DVD, 102–104
@@ -1619,282 +1437,287 @@ matthew@seymour:~$ snap list
 - CDs, 刻录, 99–101
 
 ## Landscape, 654
+
 - 定义, 16, 150–151
 - MaaS（金属即服务）, 643, 653–654
--文档
-- 在线资源, 654
-- apropos 命令, 156–157
+- 文档
+  - 在线资源, 654
+  - `apropos` 命令, 156–157
 
 ## OpenStack
+
 - 手帮助页, 156
-- Glance, 647
-- whereis 命令, 157
-- Horizon, 647
+  - Glance, 647
+  - `whereis` 命令, 157
+  - Horizon, 647
 - DVDs, 刻录
-- Keystone, 646
-- 数据包写入, 103–104
-- Neutron, 646
-- 会话写入, 103
-- Nova, 645–646
-- 登录
-- 在线资源, 646
-- 来自远程计算机, 153–154
-- 概述, 645
-- 基于文本控制控制登录, 152
-- Swift, 646
+  - Keystone, 646
+  - 数据包写入, 103–104
+  - Neutron, 646
+  - 会话写入, 103
+  - Nova, 645–646
+  - 登录
+    - 在线资源, 646
+    - 来自远程计算机, 153–154
+    - 概述, 645
+    - 基于文本控制控制登录, 152
+    - Swift, 646
 
 ## 命令 741
 
-- bunzip2, 232
-- byobu, 233–234
-- bzip2, 232
-- zbr add, 683
-- zbr cdiff, 684
-- zbr checkout, 683
-- zbr commit, 684
-- zbr init, 683
-- zbr push, 684
-- zbr-build, 695
-- zbrp, 690
-- sudo 命令, 178–181
+- `bunzip2`, 232
+- `byobu`, 233–234
+- `bzip2`, 232
+- `zbr add`, 683
+- `zbr cdiff`, 684
+- `zbr checkout`, 683
+- `zbr commit`, 684
+- `zbr init`, 683
+- `zbr push`, 684
+- `zbr-build`, 695
+- `zbrp`, 690
+- `sudo` 命令, 178–181
 - 取消, 487
-- cat, 160, 177, 185–189, 330
-- ac, 264
-- cd, 164–165, 189–191
+- `cat`, 160, 177, 185–189, 330
+- `ac`, 264
+- `cd`, 164–165, 189–191
 - 接受, 487
-- cdrecord, 101–102
-- add-repository, 730
+- `cdrecord`, 101–102
+- `add-repository`, 730
 - 修改, 264
-- aduser, 181–182
-- chat, 445
-- aflio, 359
-- cherokee-admin-launcher, 528–529
+- `aduser`, 181–182
+- `chat`, 445
+- `aflio`, 359
+- `cherokee-admin-launcher`, 528–529
 - 别名, 278
-- chfn, 264
-- apply-patch, 690
-- chgrp, 170, 244
-- apropos, 156–157, 203
-- chmod, 168–169, 191, 244, 264
-- apt-cache, 141–142
-- chown, 170, 244, 264
-- apt-file, 695
-- chpasswd, 264
-- chsh, 250, 264
-- col1, 692, 690
+- `chfn`, 264
+- `apply-patch`, 690
+- `chgrp`, 170, 244
+- `apropos`, 156–157, 203
+- `chmod`, 168–169, 191, 244, 264
+- `apt-cache`, 141–142
+- `chown`, 170, 244, 264
+- `apt-file`, 695
+- `chpasswd`, 264
+- `chsh`, 250, 264
+- `col1`, 692, 690
 - 组合
-- 布尔运算符, 222–222
-- 管道, 219–221
-- 进程替换, 222
-- 按顺序执行, 222
-- awk, 230–232
-- comm, 212–213
-- badlocks, 445
+  - 布尔运算符, 222–222
+  - 管道, 219–221
+  - 进程替换, 222
+  - 按顺序执行, 222
+- `awk`, 230–232
+- `comm`, 212–213
+- `badlocks`, 445
 - 命令历史, 237
 - 命令替换, 289–290
-- bch, 690
-- convert, 96
-- bg, 215–216
-- cp, 26, 176, 191–192
-- bootmail, 691
-- createuser, 593
-- date, 24
-- deluser, 182
-- depmod, 459
-- def, 328–329
-- diff, 212
-- disable, 487
-- dman, 690
-- dmesg, 26, 239
-- dropuser, 594
-- du, 192
-- e2fsck, 444
-- echo, 193
-- edquota, 263
-- emacs, 229–230
-- enable, 487
+- `bch`, 690
+- `convert`, 96
+- `bg`, 215–216
+- `cp`, 26, 176, 191–192
+- `bootmail`, 691
+- `createuser`, 593
+- `date`, 24
+- `deluser`, 182
+- `depmod`, 459
+- `def`, 328–329
+- `diff`, 212
+- `disable`, 487
+- `dman`, 690
+- `dmesg`, 26, 239
+- `dropuser`, 594
+- `du`, 192
+- `e2fsck`, 444
+- `echo`, 193
+- `edquota`, 263
+- `emacs`, 229–230
+- `enable`, 487
 - 变量, 222–226
-- etkeeper, 365
-- extit, 153
-- faillog, 330
-- fg, 215–216
-- find, 193–195
-- flexbackup, 359
-- free, 160, 327–328
-- gdb, 675
-- git add, 683
-- git commit, 683
-- git init, 682
-- git pull, 683
-- git push, 683
-- git remote add, 682
-- git rm, 683
-- gnome-screenshot, 97
-- gnome-terminal, 151
+- `etkeeper`, 365
+- `extit`, 153
+- `faillog`, 330
+- `fg`, 215–216
+- `find`, 193–195
+- `flexbackup`, 359
+- `free`, 160, 327–328
+- `gdb`, 675
+- `git add`, 683
+- `git commit`, 683
+- `git init`, 682
+- `git pull`, 683
+- `git push`, 683
+- `git remote add`, 682
+- `git rm`, 683
+- `gnome-screenshot`, 97
+- `gnome-terminal`, 151
 - GNU Coreutils, 239
-- passwd, 247
-- gprof, 675
-- groovy, 715
-- groupadd, 247
-- groupdel, 247
-- groupmod, 247
-- groups, 264
-- growfs, 103–104
-- unzip, 232
-- gzip, 232
-- hparm, 443
-- hg add, 686
-- hg commit, 686
-- hg init, 686
-- hg update, 686
-- htop, 327
-- htpasswd, 499
-- hwclock, 246
-- if config, 370
-- ifconfig, 389–391
-- info, 156
-- initrd, 458
-- inmod, 458
-- ip, 392
-- iptables, 435
-- iwconfig, 405–406
-- iwlist, 405
-- iwpriv, 405
-- iwspy, 405
-- jobs, 214
-- keep-running, 691
+- `passwd`, 247
+- `gprof`, 675
+- `groovy`, 715
+- `groupadd`, 247
+- `groupdel`, 247
+- `groupmod`, 247
+- `groups`, 264
+- `growfs`, 103–104
+- `unzip`, 232
+- `gzip`, 232
+- `hparm`, 443
+- `hg add`, 686
+- `hg commit`, 686
+- `hg init`, 686
+- `hg update`, 686
+- `htop`, 327
+- `htpasswd`, 499
+- `hwclock`, 246
+- `if config`, 370
+- `ifconfig`, 389–391
+- `info`, 156
+- `initrd`, 458
+- `inmod`, 458
+- `ip`, 392
+- `iptables`, 435
+- `iwconfig`, 405–406
+- `iwlist`, 405
+- `iwpriv`, 405
+- `iwspy`, 405
+- `jobs`, 214
+- `keep-running`, 691
 - 快捷键, 238
-- kill, 325–326
-- lastlog, 330
-- ldapadd, 622
-- ldapdelete, 622
-- ldapmodify, 621
-- ldapsearch, 621
-- less, 36, 156, 177, 197–198
-- locate, 199–200
-- logname, 264
-- logout, 153
-- lograte, 331–333
-- lp, 487
-- lpq, 487
-- liprm, 487
-- lipstat, 487
-- lsblk, 162–164, 200–202
-- lsmod, 202–203
-- lmod, 202–203, 458
-- lua, 717, 661–673
-- make, 466
-- make menuconfig, 466–467
-- make oldconfig, 467
-- make xconfig, 467
-- man, 35, 156, 203
-- mc, 372
-- mkdir, 173–174, 204
-- mkinitrd, 470
-- modinfo, 459
-- modprobe, 388–389, 458–459
-- tr, 373
-- mv, 175–176, 204
-- mysql, 598–600
-- mysql_install_db, 589
-- nano, 227
-- netstat, 394
-- newusers, 264
-- nice, 218–219, 326–327
-- nm-connection-editor, 389
+- `kill`, 325–326
+- `lastlog`, 330
+- `ldapadd`, 622
+- `ldapdelete`, 622
+- `ldapmodify`, 621
+- `ldapsearch`, 621
+- `less`, 36, 156, 177, 197–198
+- `locate`, 199–200
+- `logname`, 264
+- `logout`, 153
+- `lograte`, 331–333
+- `lp`, 487
+- `lpq`, 487
+- `liprm`, 487
+- `lipstat`, 487
+- `lsblk`, 162–164, 200–202
+- `lsmod`, 202–203
+- `lmod`, 202–203, 458
+- `lua`, 717, 661–673
+- `make`, 466
+- `make menuconfig`, 466–467
+- `make oldconfig`, 467
+- `make xconfig`, 467
+- `man`, 35, 156, 203
+- `mc`, 372
+- `mkdir`, 173–174, 204
+- `mkinitrd`, 470
+- `modinfo`, 459
+- `modprobe`, 388–389, 458–459
+- `tr`, 373
+- `mv`, 175–176, 204
+- `mysql`, 598–600
+- `mysql_install_db`, 589
+- `nano`, 227
+- `netstat`, 394
+- `newusers`, 264
+- `nice`, 218–219, 326–327
+- `nm-connection-editor`, 389
 - 概述, 187–188
-- passwd, 249
-- patch, 464
-- pbget, 690
-- pubut, 690
-- ping, 371–373, 667
-- pconfig, 412
+- `passwd`, 249
+- `patch`, 464
+- `pbget`, 690
+- `pubut`, 690
+- `ping`, 371–373, 667
+- `pconfig`, 412
 - 打印位置, 207
-- ps, 213–214
-- psql, 600
-- purge-old-kernels, 691
-- pwd, 152–153, 165
-- quickstart, 653
-- quotacheck, 263
-- quotaon, 263
+- `ps`, 213–214
+- `psql`, 600
+- `purge-old-kernels`, 691
+- `pwd`, 152–153, 165
+- `quickstart`, 653
+- `quotacheck`, 263
+- `quotaon`, 263
 - 正则表达式, 177
-- release, 690
-- release-build, 690
-- rename, 204
-- renice, 326–327
-- repquota, 263
-- rm, 175, 205
-- rdir, 173–174
-- rmmod, 458
-- route, 392–394
-- rsync, 362–364
-- rtwake, 270–272
+- `release`, 690
+- `release-build`, 690
+- `rename`, 204
+- `renice`, 326–327
+- `repquota`, 263
+- `rm`, 175, 205
+- `rdir`, 173–174
+- `rmmod`, 458
+- `route`, 392–394
+- `rsync`, 362–364
+- `rtwake`, 270–272
 - 多个命令, 237–238
 - 一个命令, 236–237
 - 按顺序执行, 222
-- run-one, 691
-- run-this-one, 691
-- scp, 418
-- sed, 230–232
-- sftp, 417, 418–419
-- shutdown, 13, 182–183
-- smbclient, 482
-- smbstatus, 481–482
-- snap, 146–147
-- socks-prox, 690
-- sort, 205–207
-- so, 89
-- splint, 674–675
-- ssh-import-id, 691
-- ssh-keygen, 419–420
-- stderr, 211–212
-- stdint, 211–212
-- stdout, 211–212
-- su, 257–259
-- sudo, 18, 178–181, 259–262
-- svn add, 685
-- svn checkout, 685
-- svn commit, 685
-- svn delete, 685
-- svn import, 684
-- svn update, 685
-- svnadmin-create, 684
-- sync, 444
-- sysctl, 444–446
-- systemctl, 321
-- systemd, 318
-- system-search, 690
-- tail, 207
-- tar, 232, 351–353, 360–361
-- telinit, 318
-- telnet, 416
-- terminal, 16
-- testdrive, 706
-- top, 216–218, 327
-- touch, 165–166, 173
-- traceroute, 373
-- tripwire, 430
-- tune2fs, 444
-- ufw, 432–433
-- umask, 165–169–170
-- uname, 320
-- uptime, 328
-- uquick, 691
-- useradd, 247–248, 250–251
-- usermod, 249
-- vi, 227–228
-- virt-clone, 636–637
-- virt-install, 636
-- vmbuilder, 635
-- vmstat, 328
-- wget, 207–208
-- whatis, 203
-- what-provides, 691
-- whereis, 157, 225
-- which, 207
-- wifi-status, 692, 691
-- wildcards, 177
-- wish, 281
-- zless, 36
+- `run-one`, 691
+- `run-this-one`, 691
+- `scp`, 418
+- `sed`, 230–232
+- `sftp`, 417, 418–419
+- `shutdown`, 13, 182–183
+- `smbclient`, 482
+- `smbstatus`, 481–482
+- `snap`, 146–147
+- `socks-prox`, 690
+- `sort`, 205–207
+- `so`, 89
+- `splint`, 674–675
+- `ssh-import-id`, 691
+- `ssh-keygen`, 419–420
+- `stderr`, 211–212
+- `stdint`, 211–212
+- `stdout`, 211–212
+- `su`, 257–259
+- `sudo`, 18, 178–181, 259–262
+- `svn add`, 685
+- `svn checkout`, 685
+- `svn commit`, 685
+- `svn delete`, 685
+- `svn import`, 684
+- `svn update`, 685
+- `svnadmin-create`, 684
+- `sync`, 444
+- `sysctl`, 444–446
+- `systemctl`, 321
+- `systemd`, 318
+- `system-search`, 690
+- `tail`, 207
+- `tar`, 232, 351–353, 360–361
+- `telinit`, 318
+- `telnet`, 416
+- `terminal`, 16
+- `testdrive`, 706
+- `top`, 216–218, 327
+- `touch`, 165–166, 173
+- `traceroute`, 373
+- `tripwire`, 430
+- `tune2fs`, 444
+- `ufw`, 432–433
+- `umask`, 165–169–170
+- `uname`, 320
+- `uptime`, 328
+- `uquick`, 691
+- `useradd`, 247–248, 250–251
+- `usermod`, 249
+- `vi`, 227–228
+- `virt-clone`, 636–637
+- `virt-install`, 636
+- `vmbuilder`, 635
+
+
+
+- `vmstat`, 328
+- `wget`, 207–208
+- `whatis`, 203
+- `what-provides`, 691
+- `whereis`, 157, 225
+- `which`, 207
+- `wifi-status`, 692, 691
+- `wildcards`, 177
+- `wish`, 281
+- `zless`, 36
 - 商业游戏, 129
 - 商业业务, 38–39
 - 常用面向业务语言 (COBOL), 711–712
@@ -1905,40 +1728,48 @@ matthew@seymour:~$ snap list
 - 表达式比较
 
 ## 文件运算符
-- 在 pdksh 和 bash, 293–298
-- 在 tcsh, 297–298
+
+- 在 `pdksh` 和 `bash`, 293–298
+- 在 `tcsh`, 297–298
 
 ## 配置 745
 
 ## 逻辑运算符
+
 - Bash, 697–698
-- 在 pdksh 和 bash, 294–295
+- 在 `pdksh` 和 `bash`, 294–295
 - Bazaar, 697
-- 在 tcsh, 298
+- 在 `tcsh`, 298
 
 ## 环境设置
+
 - 桌面环境, 52
-- 在 pdksh 和 bash, 292–293
-- 在 tcsh, 296–297
+- 在 `pdksh` 和 `bash`, 292–293
+- 在 `tcsh`, 296–297
 
 ## 字符串比较
+
 - Launchpad 账户, 696
-- 在 pdksh 和 bash, 290–292
-- 在 tcsh, 290–291
+- 在 `pdksh` 和 `bash`, 290–292
+- 在 `tcsh`, 290–291
 
 ## 配置管理工具
+
 - 包, 695–696
 
 ## 数字比较
+
 - 开发系统, 318
 
 ## 网络连接
+
 - 计算基础设施 (OpenStack), 644–646
 - 拨号上网接入, 412–413
 - 计算机攻击, 425–427
 - PPPo（以太网上的对点协议）, 467–470
 
 ## Kernel
+
 - 错误, 471
 - 全局选项, 552
 - 初始内存磁盘映像创建, 471
@@ -1947,39 +1778,38 @@ matthew@seymour:~$ snap list
 - 概述, 551–552
 
 ## 软件
+
 - 用户帐户, 553–554
 
 ## JIT（即时）编译, 724
 
 ## FTP（文件传输协议）
+
 - 来自压缩包, 143–144
-- ftphosts, 539
+- `ftphosts`, 539
 - 来自 Ubuntu 仓库源, 144–145
 - 快速粗略的安装, 535
 
 ## Compiz, 112
+
 - 软件安装, 533–534
 
 ## CompizConfig Settings (CCSM), 59, 60
 
 ## Very Secure FTP 服务器, 536–538
 
-
-
-
-
 ## 746 配置
 
 - 网络
-- /etc/hosts 文件, 395
-- /etc/resolconf 文件, 396–397
-- /etc/services 文件, 395–396
-- 图形配置工具, 397–399
-- ifconfig 命令, 389–341
-- ip 命令, 392
-- netstat 命令, 394
-- 网络配置工具, 388
-- route 命令, 392–394
+  - `/etc/hosts` 文件, 395
+  - `/etc/resolconf` 文件, 396–397
+  - `/etc/services` 文件, 395–396
+  - 图形配置工具, 397–399
+  - `ifconfig` 命令, 389–341
+  - `ip` 命令, 392
+  - `netstat` 命令, 394
+  - 网络配置工具, 388
+  - `route` 命令, 392–394
 - NFS (网络文件系统)
   - 客户端, 475–476
   - 服务端, 474–475
@@ -1995,22 +1825,22 @@ matthew@seymour:~$ snap list
   - 客户端, 571–573
   - 服务端, 573–575
 - 窗口管理器, 52
-- config.file, 674
+- `config.file`, 674
 - 将脚本限制在目录, 238–239
 - Conky, 334–339
 - 连接，检查, 371–373
 - 一致性, 587
 - 控制台监控
-  - df 命令, 328–329
+  - `df` 命令, 328–329
   - 磁盘配额, 329
-  - free 命令, 327–328
-  - kill 命令, 325–326
+  - `free` 命令, 327–328
+  - `kill` 命令, 325–326
   - 日文件
     - 检查, 329–330
     - 轮转, 331–333
-    - nview, 323–325
+    - `nview`, 323–325
   - 优先级调度, 326–373
-  - vmstat 命令, 328
+  - `vmstat` 命令, 328
 - Nginx
   - HTTPS (安全 HTTP), 524–526
   - 模块配置, 523–524
@@ -2029,14 +1859,14 @@ matthew@seymour:~$ snap list
   - 无线网络, 24–25
 - Samba, 476–481
 - 软件管理
-  - dotdee (.d), 145
+  - `dotdee` (`.d`), 145
   - Snappy Ubuntu Core, 146–147
 - 文件内容
   - 显示, 177
   - 排序, 205–207
   - 控制结构. 参阅 loops
   - 收敛, 52–53
-  - convert 命令, 96
+  - `convert` 命令, 96
   - Cooper, Mendel, 39
   - 复制文件
 - Squid
@@ -2044,70 +1874,70 @@ matthew@seymour:~$ snap list
   - 客户端 IP 地址, 567–568
   - 示例配置, 568–398
 - 删除 747
-- cp 命令, 176, 191–192
+- `cp` 命令, 176, 191–192
 - 数据
   - 数据目录初始化 (PostgreSQL), 592
   - 机器之间, 418–419
   - 数据锁定, 586–587
-  - mc 命令, 362
+  - `mc` 命令, 362
   - 插入 SQL 数据库, 583–584
   - 概述, 360
   - 管道, 276
-  - rsync 命令, 362–364
+  - `rsync` 命令, 362–364
   - 从 SQL 数据库检索, 583–584
-  - tar 命令, 360–361
-- 数据显示调试器 (ddd), 675
+  - `tar` 命令, 360–361
+- 数据显示调试器 (`ddd`), 675
 - Coreutils, 239
 - 数据库管理员 (DBAs), 577–605
 - 数据库
   - CouchDB, 690
   - DBAs (数据库管理员), 577–582
-  - cp 命令, 26, 176, 191–192
+  - `cp` 命令, 26, 176, 191–192
   - 平文件数据库, 578
   - 破解器, 426
   - NoSQL 数据库. 参阅 NoSQL databases
-  - CREATE DATABASE 语句, 590, 593
+  - `CREATE DATABASE` 语句, 590, 593
   - 相关的 Ubuntu 命令, 601
-  - CREATE 语句, 582–583
+  - `CREATE` 语句, 582–583
   - 关系数据库. 参阅 relational
-  - CREATE USER 语句, 593
+  - `CREATE USER` 语句, 593
   - 数据库
-    - createuser 命令, 593
-  - date 命令, 24
-  - cron 命令, 268–270
+    - `createuser` 命令, 593
+  - `date` 命令, 24
+  - `cron` 命令, 268–270
 - 日/时间配置
 - CrossOver Office, 83
-  - date 命令, 24
+  - `date` 命令, 24
   - CSRs (证书签名请求), 511, 524
-  - hwclock 命令, 24
+  - `hwclock` 命令, 24
 - CSV (逗号分隔值), 231
   - 概述, 23
 - CUPS (通用 Unix 打印系统), 483–486
   - 时间与日期工具, 23
 - DBAs (数据库管理员), 577–605
-  - cups conf 文件, 483
-  - ddd (数据显示调试器), 675
+  - `cups conf` 文件, 483
+  - `ddd` (数据显示调试器), 675
 - Debian, 18, 30
 - 调试工具
-  - gdb 命令, 675
-  - .dotdee, 145
-  - gprof 命令, 675
+  - `gdb` 命令, 675
+  - `.dotdee`, 145
+  - `gprof` 命令, 675
   - D language, 712–713
-  - splint 命令, 674–675
+  - `splint` 命令, 674–675
 - 守护进程
   - 默认运行级别，进入, 316
   - AND (自动守护进程), 384
   - 默认-jdk-package, 716
-  - pppd, 549
-  - slapd, 616, 622
+  - `pppd`, 549
+  - `slapd`, 616, 622
 - Déjà Dup, 354–356
 - 删除
   - Dapper Rack, 33
 - 目录
-  - darktable, 97
+  - `darktable`, 97
   - Dart, 712–713
   - Dash, 14, 54–57
-  - dashboard (OpenStack), 647
+  - `dashboard` (OpenStack), 647
   - Android 架构, 724–725
   - Android Studio, 725
   - Dent, Kyle, 548
@@ -2135,14 +1965,14 @@ matthew@seymour:~$ snap list
     - Xfce and Ubuntu, 114–115
 - 文件
   - 删除命令, 175, 205
-  - rmdir 命令, 173–178
+  - `rmdir` 命令, 173–178
   - 从 Git 仓库删除, 683
   - 从 Subversion 删除, 685
   - Android 用户创建, 182
   - PostgreSQL 用户, 594
-  - deluser 命令, 182
+  - `deluser` 命令, 182
   - 依赖检查, 671
-  - depmod, 459
+  - `depmod`, 459
   - Bash 配置, 697–698
   - GPG key, 695–696
   - SSH key, 697
@@ -2151,7 +1981,7 @@ matthew@seymour:~$ snap list
   - Launchpad 账户创建, 687–688
   - 在线资源, 692
   - 仓库工具, 691–692
-  - snap 打包, 689
+  - `snap` 打包, 689
   - 开发 (Ubuntu)
     - 开发者, 641–642
     - Ubuntu Make, 688–689
@@ -2160,15 +1990,15 @@ matthew@seymour:~$ snap list
     - 概述, 729–730
     - SDK (软件开发包) 安装, 730
 - 设备驱动程序, 457
-- Device 部分 (xorg.conf), 49–50
+- Device 部分 (`xorg.conf`), 49–50
 - 设备安全, 431
-- devices.txt 文件, 455
+- `devices.txt` 文件, 455
 - DevOps, 641–642
-- df 命令, 328–329
-- dhlient, 401–402
+- `df` 命令, 328–329
+- `dhlient`, 401–402
 - DHCP (动态主机配置协议)
   - 激活, 400–401
-  - dhlient, 401–402
+  - `dhlient`, 401–402
   - DHCP 服务器, 402
   - 工作原理, 399–404
   - 网络主机配置,, 403–404
@@ -2177,662 +2007,776 @@ matthew@seymour:~$ snap list
 - DHCP手册, 405
 - Dia, 77
 - 拨号上网接入, 412–438
-- diff 命令, 212
+- `diff` 命令, 212
 - 查找文件之间的差异, 212
 - Digikam, 98
 - 数字相机, 98
 - 数字用户用户线 (DSL), 408–412
 - Dijkstra, Edsger, 712
 - 指令
-  - AuthType, 500
-  - AuthUserFile, 500
-  - DirectoryIndex, 495
-  - DocumentRoot, 495
-  - Group, 494
+  - `AuthType`, 500
+  - `AuthUserFile`, 500
+  - `DirectoryIndex`, 495
+  - `DocumentRoot`, 495
+  - `Group`, 494
 - 目录.参阅文件系统
-  - AllowOverrides, 497–498
-  - android-studio/bin/, 725
-  - /bin, 158–159
+  - `AllowOverrides`, 497–498
+  - `android-studio/bin/`, 725
+  - `/bin`, 158–159
   - 修改, 164–165, 189
   - 将脚本限制在, 238–239
   - 创建, 173–178
-  - /bin, 158–159
-  - /etc/aliases, 445
-  - /etc/bind, 550
-  - /etc/bind/named.conf, 567
-  - /etc/cups/cupsd.conf, 483
-  - /etc/events.d,, 54–57
-  - /etc/exports, 476–481
-  - /etc/init.d, 315
-  - /etc/hosts, 395
-  - /etc/modprobe.conf, 387–388
-  - /etc/modules.conf, 105
-  - /etc/nginx, 518–520
-  - /etc/nginx/nginx.conf, 523–524
-  - /etc/passwd, 253–254
-  - /etc/postfix, 546–548
-  - /etc/resolv.conf, 396–397
-  - /etc/services, 395–396
-  - /etc/squid/smb.conf, 476–481
-  - /etc/ssh/sshd.conf, 497–498
-  - /etc/sudoers, 260–261
-- /var, 162
-
-
-
-
-
-elixir 软件包 751
-
-请求处理, 661–662
-DocBook, 81
-文档基金会, 77–78
-文档存储
-- BaseX, 610–611
-- CouchDB, 609
-- MongoDB, 610
-- 概览, 608–609
-文档
-- apropos 命令, 156–157
-- IRC (Internet Relay Chat), 42
-- Linux 项目, 413
-- Linux 指南, 39–40
-- 邮件列表, 40–42
-- man 页面, 156, 203
-- 阅读, 35–36
-- Ubuntu 相关网站, 40–42
-- whereis 命令, 157
-DocumentRoot 指令, 495
-美元符号 ($)
-- URL 结尾, 567
-- 用户提示符, 155, 243
-- 变量名, 282
-规划, 5
-- 根分区, 10
-- swap 分区, 10
-- USB 硬盘, 安装 Ubuntu, 3–4
+  - `/bin`, 158–159
+  - `/etc/aliases`, 445
+  - `/etc/bind`, 550
+  - `/etc/bind/named.conf`, 567
+  - `/etc/cups/cupsd.conf`, 483
+  - `/etc/events.d`, 54–57
+  - `/etc/exports`, 476–481
+  - `/etc/init.d`, 315
+  - `/etc/hosts`, 395
+  - `/etc/modprobe.conf`, 387–388
+  - `/etc/modules.conf`, 105
+  - `/etc/nginx`, 518–520
+  - `/etc/nginx/nginx.conf`, 523–524
+  - `/etc/passwd`, 253–254
+  - `/etc/postfix`, 546–548
+  - `/etc/resolv.conf`, 396–397
+  - `/etc/services`, 395–396
+  - `/etc/squid/smb.conf`, 476–481
+  - `/etc/ssh/sshd.conf`, 497–498
+  - `/etc/sudoers`, 260–261
+- `/var`, 162
+- `elixir` 软件包 751
+- 请求处理, 661–662
+- DocBook, 81
+- 文档基金会, 77–78
+- 文档存储
+  - BaseX, 610–611
+  - CouchDB, 609
+  - MongoDB, 610
+  - 概览, 608–609
+- 文档
+  - `apropos` 命令, 156–157
+  - IRC (Internet Relay Chat), 42
+  - Linux 项目, 413
+  - Linux 指南, 39–40
+  - 邮件列表, 40–42
+  - `man` 页面, 156, 203
+  - 阅读, 35–36
+  - Ubuntu 相关网站, 40–42
+  - `whereis` 命令, 157
+- `DocumentRoot` 指令, 495
+- 美元符号 (`$`)
+  - URL 结尾, 567
+  - 用户提示符, 155, 243
+  - 变量名, 282
+- 规划, 5
+  - 根分区, 10
+  - swap 分区, 10
+  - USB 硬盘, 安装 Ubuntu, 3–4
 - Drizzle, 577
-- DROP USER 语句, 594
-- dropuser 命令, 594
+- `DROP USER` 语句, 594
+- `dropuser` 命令, 594
 - DSL (数字用户线路), 408–412
 - 双系统启动, 192
 - 虚拟接口, 371
-持久性, 588
+- 持久性, 588
 - 刻录, 102–104
 - DVD+/-RW, 349
 - 安装 Ubuntu 的, 6
 - Ubuntu 救急磁盘, 367
-动态主机控制协议。参见 DHCP (Dynamic Host Control)
+- 动态主机控制协议。参见 DHCP (Dynamic Host Control)
 - Dynamo, 608
 - Dyn.com, 400
 
-E
+## E
 
-域名系统。参见 DNS (Domain Name System)
-域名名, 661. 亦参见 DNS (Domain Name System)
-dotdee (.d), 145
-双引号 (*), 288
-下载文件, 207–208
-Draw, 77
-驱动程序
-- 设备驱动程序, 457
-- 专有驱动程序, 安装, 122–123
-硬盘
-- 分区策略
-- GParted, 11
-- /home 分区, 10
-
-e2fsck 命令, 445
-echo 命令, 193
-Eclipse, 679
-Edgy Soft, 33
-编辑
-- PDF (Portable Document Format) 文件, 81
-- 视频, 107–109
-- 编辑器。参见编辑器
-edquota 命令, 263
-- #edubuntu 频道, 42
-Elixir, 713
-elixir 软件包, 713
-
-# 752 emacs 命令
-
-emacs 命令, 229–230
-环境变量, 222–226, 278
-
-邮件
-- epic 客户端, 70
-客户端
-- Alpine, 68
-- 选择, 66
-- Claws, 68
-- Evolution, 67–68, 79
-
-Erlang, 609, 713
-erlang 软件包, 713
-错误, 内核, 471
-转义字符, 287
-/etc 目录。参见 /etc
-etckeeper 命令, 365
-以太网
-- 千兆以太网, 383–384
-- PPPoE (以太网拨号协议), 410–412
-- Mozilla Thunderbird, 66–67
-IRC (Internet Relay Chat) 礼, 71
-Mutt, 68
-
-评估
-- 邮件应用程序, 389
-- 备份策略, 345–346
-
-Fetchmail
-- 配置, 551–552
-- 安装, 551
-- 懒求值, 715
-- 在线资源, 558–559
-
-Postfix
-Evince, 80–81
-- 别名, 550–551
-- 配置, 546–548
-- 邮件中继, 550
-- 伪装, 548
-- 投递间隔, 549
-- 智能主机, 549
-
-evince, 35–36
-Evolution, 67–68, 79, 620
-Exchange Server, 557
-感叹号 (!), 237
-执行。参见运行
-Exim, 543–544
-发送/接收
-exit 语句, 153, 307
-- MDAs (邮件投递代理), 544–545, 555–556
-- MTAs (邮件传输代理), 541–544
-- MUAs (邮件用户代理), 概览, 541–542
-exports 文件, 474–475
-表达式
-- 表达式比较
-- pdksh 和 bash 中的, 290–295
-- tsch 中的, 295–299
-- 正则表达式, 177
-服务器, 556–558
-可扩展标记语言 (XML), 784
-等一下，EMACcript 可能是 EMAScript
-EMAScript, 716
-仿真, 632
-模拟器 (游戏), 121
-外部攻击, 425–426
-enable 命令, 487
-启用。参见配置
-加密/home 分区, 310
-循环结束, 301
-fail 命令, 330
-Enlightenment, 11
-FDDI (分布式数据接口), 383–384
-智能主机, 549
-文件传输协议。参见 FTP (File Transfer Protocol)
-Fetchmail
-- 文件名, 551
-- 扩展名
-- 配置
-- 全局选项
-- 脚本, 238–239
-- 修改, 173
-- 创建, 173–174
-- 删除, 173–175
-- 比较, 175–158
-- 查找, 156–157
-- diff 命令, 192–193
-- cd 命令, 164–165
-- 压缩文件, 232
-- 配置.in, 674
-- 概览, 162
-- 复制, 165
-- pwd 命令, 165
-- 权限, 176–191
-- 机器间, 518–520
-- 调优, 444–445
-- mc 命令, 160–161
-- 分布式数据接口, 383–384
-- 光纤, 383–384
-文件访问时间, 445
-文件禁用, 340
-文件操作
-File Roller, 353
-文件系统。参见 /etc
-chroot 监狱, 238–239
-文件
-目录
-- 文件传输协议 (File Transfer Protocol)
-- .avi, 106
-- .bmp, 95
-- .flac, 88
-- .flv, 106
-- .gif, 96
-- .ldif, 519
-- .mov, 106
-- .mp3, 88
-- .mpeg, 106
-- .ogg, 88
-- .ogv, 106
-- .pcx, 96
-- .pdf, 36
-- .png, 96
-- .ps, 36
-- .qt, 106
-- .raw, 88
-- .svg, 96
-- .tif, 96
-- .wav, 88
-- .webm, 106
-- 别名, 550–551
-- apache2.conf, 493–495
-- comm 命令, 212–213
-- cd 命令, 164–165
-- ls 命令, 162–164
-- 配置.in, 674
-- 概览, 162
-- 复制, 165
-- pwd 命令, 165
-- 权限, 176–191
-- 机器间, 518–520
-- 调优, 444–445
-- mc 命令, 160–161
-- 分布式数据接口, 383–384
-- 光纤, 383–384
-对象文件, 670
-OpenDocument, 78
-PDF (Portable Document Format) 文件
-devices.txt, 455
-显示内容, 177
-named.conf.local, 666
-named.conf.options, 666
-exports, 474–475
-nginx.conf, 518–520
-passwd, 159, 253–254
-概览, 551–552
-PDF (Portable Document Format) 文件
-编辑, 81
-查找, 14, 193–205,
-阅读, 36, 81
-fstab, 159, 475
-peers, 75
-权限
-FTP (File Transfer Protocol)
-754 文件
-程序, 14
-相似性, 212
-软件, 141
-strings, 196
-Firefox
-RSS 馈, 69
-防火墙
-iptables, 435
-UFW (Uncomplicated Firewall), 432–435
-第一人称射击 (FPS) 游戏, 12
-FLAC (Lossless Audio Format), 88
-视频文件, 107–109
-
-
-
-
-
-# FTP (文件传输协议)
-
-- FTP 主机, FTP 主机, 539
-- Gedit, 81
-- 在线资源, 540
-- 生成
-- 概述, 531
-- GPG 密钥, 695–696
-- 服务器。参见服务器, FTP
-- SSH 密钥, 696
-- 软件安装, 533–534
-- gforth 软件包, 714
-- 用户, 534–536
-- GHC (光荣格拉斯编译系统), 715
-- FTP 主机, 539
-- ghc 软件包, 715
-- 全量增量备份, 347
-- GIDs (组 ID), 244
-- .gif 文件扩展名, 95
-- 全量周期备份, 347
-- 千兆以太网, 383–384
-- 全完全限定域名 (FQDN), 616
-- 函数。另见命令;
-- GIMP (GNU 图像处理程序), 79, 93–94
-    - CONCAT(I), 585
-    - 定义, 670
-    - Shell 脚本, 307–308
-    - GIMP 工具包 (GTK) 部件集, 79
-    - Git, 682–683
-    - git add 命令, 683
-    - git commit 命令, 683
-    - git init 命令, 682
-    - git pull 命令, 683
-    - git push 命令, 683
-    - git remote 命令, 682
-    - git rm 命令, 683
-    - Glade, 677–678
-    - Glance, 647
-    - [global] 部分 (smb.conf), 479
-    - 光荣格拉斯编译系统 (GHC), 715
-
-# G
-- 游戏
-    - 韦斯诺斯之战 (Battle of Wesnoth), 126–127
-    - 儿童游戏, 129
-    - 商业游戏, 129
-    - 模拟器, 121
-    - FlightGear, 128
-    - Frets on Fire, 127–128
-    - Frozen Bubble, 125–126
-    - 在线资源, 130–131
-    - 概述, 121
-    - 专有视频驱动，安装, 122–123
-    - Scorched 3D, 124–125
-    - Speed Dreams, 129
-    - Steam 平台, 123
-    - SuperFlex, 126
-    - 华沙, 124
-    - Windows 游戏，玩, 130
-- gcc (GNU 编译器集), 669, 675–676
-- gdb 命令, 675
-- gnat 软件包, 710
-- gnat-gps 软件包, 710
-- GNOME
-    - File Roller, 353
-    - Glade, 677–678
-    - GNOME Office, 78–79
-    - GNOME3, 116–117
-    - 邮件列表, 41
-    - 网站, 61
-    - gnome-nettool, 339
-    - gnome-screenshot 命令, 97
-    - gnome-shell 软件包, 116
-    - gnome-terminal 命令, 151
-    - 概述, 257
-- GNU Ada 编译器, 710
-- 配合 su 命令, 257–259
-- GNU 编译器集 (gcc), 669, 675-676
-- 配合 sudo 命令, 259–262
-- 图形数据库
-    - FlockDB, 613
-    - HyperGraphDB, 612–613
-    - Neo4j, 612
-    - OrientDB, 612
-- GNU 通用公共许可证 (GPL), 29, 93-94
-- GNU 项目, 149
-- 概述, 612
-- Gnumeric, 79
-- 图形数据库客户端, 600
-- gnupg 命令, 695
-- 图形化开发工具
-- Go, 714
-- IDEs (集成开发环境), 678–680
-- gofortran 软件包, 714–355
-- KDevelop 客户端, 676–688
-- golang-docs 软件包, 714
-- SDKs (软件开发包), 678–890
-- Goobuntu, 38
-- 图形化网络配置工具, 397–399
-- 图形化系统管理工具
-    - BigTable, 611
-    - Conky, 334–339
-    - Chrome, 65–66
-    - Chromium, 65–66
-    - gnome-nettool, 339
-    - 概述, 333–334
-    - Dart, 712–713
-    - 系统监器, 334
-    - MapReduce, 611
-    - envncviewer, 339
-    - 搜索技巧, 37–38
-    - wireshark, 339
-- GParted, 11
-- 图形用户界面。参见 GUIs
-- 图像格式, 95–97
-- GPG 密钥
-    - 生成, 695–696
-    - 上传到 Launchpad, 696–697
-- 安迪·格林, 417
-- grep 命令, 196, 730
-- preplog, 284–286
-- GPL (GNU 通用公共许可证), 29
-- Groovy, 715
-- gprof 命令, 675
-- groovy 软件包, 715
-- GPT (GUID 分区表), 314
-- groovyConsole 命令, 715
-- 统一引导加载程序。参见 GRUB2
-- groovysh 命令, 715
-- GRANT 语句, 591, 594
-- group 指令, 494
-- 组 ID (GIDs), 244
-- groupadd 命令, 247
-- PostgreSQL 权限, 594–595
-- groupdel 命令, 247
-- 系统管理员权限
-
-## groupmod 命令
-- groupmod 命令, 247
-- 组
-    - 组列表, 245–246
-    - 管理工具, 246–248
-    - 概述, 245
-- groups 命令, 264
-- groupofs 命令, 103–104
-- GRUB2 (高级引导加载程序)
-    - 检查, 235
-    - 重新安装, 235–236
-    - 恢复, 367
-- 克里斯蒂安·格林 (Christian Grün)
-- GStreamer, 888
-- 10-软件包, 88
-- GTK (GIMP 工具包) 部件集, 79
-- GUID 分区表 (GPT), 314
-- 图形用户界面 (GUIs)
-    - 数据库访问, 597
-    - GNOME3 和 Ubuntu, 116–117
-    - MATE 和 Ubuntu, 115–116
-    - 概述, 102
-    - Xfce 和 Ubuntu, 114
-- Juju, 552
-- Mir, 44
--  X
-- 快捷键, 60
-- Unity
-- 参见 X
-- gv 客户端, 36
-- gzip 命令, 232
-
-# H
-- Hadoop, 611
-- 哈诺 (Hamano), 682
-- 磁盘优化, 442–443
-- 硬链接, 199–200
-- 硬件时钟，设置, 24
-- 硬件模拟, 632
-- 采集, 701
-- Haskell, 715
-- 平台软件包, 721
-- 高级数据链路 (HDLC), 412
-- hdparm 命令, 443
-- 头部格式, 88
-- 海因 (Hein), 40
-- 帮助。参见在线资源
-- 环境设置, 696
-- Launchpad 账户，创建, 696
-- 宇宙的 Masters
-- HTTP (超文本传输协议)
-    - 社区团队, 703
-    - 在线资源, 705
-    - 发布周期, 694
-- HTTPS (安全 HTTP), 510–512
-- 参见服务器,524
-- hg add 命令, 686
-- hg commit 命令, 686
-- hg init 命令, 686
-- hg push 命令, 686
-- hg update 命令, 686
-- 组, 385–386
-- 休眠系统, 11
-- 高性能计算 (HPC), 670
-- 访问文件, 496–498
-- HTML (超文本语言), 63
-- 范围, 694–695
-- 参见服务器, 718
-- httpass 命令, 499
-- 跳跃, 327
-
-# I
-- ImageMagick, 96
-- 图像处理, 94
-- 输入/O (输入输出) 重定向, 209–212, 275–276
-- 输入
-- 配置
-- 引导程序, 5
-- DHCP (动态主机配置协议), 401–402
-- 包含文件, 670
-- 索引，查找文件, 200
-- 双系统启动, 2, 6
-- 已安装的软件包，列表, 38
-- 初始内存镜像，创建, 470
-- 初始化网络硬件, 387–389
-- LTSP (Linux 终端服务器项目), 627–628
-- init 命令, 456
-- 在 Mac 硬件上, 3
-- initrd.img 文件, 470
-- MySQL, 588–589
-- initrd.txt 文件, 456
-- NFS (网络文件系统), 774
-- innitab 文件, 315
-- Nginx, 517–518
-- Inkscape, 98
-- 在线资源, 27
-- 内联驱动, 457
-- 输入
-- 安装后配置
-- BIOS (基本输入输出系统)
-- 电源管理, 22
-- 蜂鸣代码, 313
-- 打印机, 22
-- 启动过程, 311–313
-- 软件仓库, 19–21
-
-
-
-
-
-## iptables 761
-
-- 时间/日期, 23–24
-- 演变, 67–79
-- 故障排除, 26–27
-- Kmail, 68
-- 无线网络, 24–25
-- Mozilla Thunderbird, 66–67
-- Mutt, 68
-- 基于网页的电子邮件应用, 68
-- 历史, 63
-- IRC (互联网时聊天), 70–72
-- ISP (互联网服务提供商), 374–375, 507
-- 在线资源, 74
-
-## 准备
-- 32位与 64位 Ubuntu, 4–5
-- 备份, 7
-- 硬件规格，调研, 2
-- 安装选项, 2–4
-- 概览, 1–2
-- 分区策略，规划, 5
-- 专有视频驱动, 122–123
-- SDKs (软件开发工具包)
-  - Android SDK, 725–727
-  - Ubuntu SDK, 730
-
-## 软件
-- 使用 APT (高级包工具), 139–141
-- 使用 Synaptic, 134–135
-- 概览, 63
-- RSS 阅读器
-  - Firefox, 69
-  - Liferea, 69–70
-  - 概览, 69
-  - 搜索技巧, 37–38
-- 网页浏览器
-  - Firefox, 63–65
-  - Google Chrome, 65–66
-
-- Squid, 562
-- 逐步安装, 6–12
-- 故障排除, 26–27
-- 电子电气工程师学会 (IEEE), 407
-- 整数。见数字 (numbers)
-- 集成开发环境 (IDEs), 678–680, 710
-- 内部攻击, 425–426
-- 互联网 (Internet)
-  - Google Chromium, 65–66
-  -  {名称与数字分配机构 (ICANN), 661
-  - 互联网信息服务 (IIS), 489–490
-  - 互联网消息访问协议 (IMAP), 545
-  - 互联网新闻组, 72–74
-  - 互联网协议。见 (Internet Protocol)
-  - 互联网时聊天 (IRC), 42–70
-  - 互联网服务提供商 (ISPs), 374–375
-- 解析 shell 脚本, 280–281
-- 互联网连接
-  - 通用配置信息, 480
-  - 拨号上网接入, 412–413
-  - 概览, 408
-  - PPPoE (以太网拨点协议), 410–412
-  - 故障排除, 413
-- 电子邮件客户端
+- 域名系统。参见 DNS (Domain Name System)
+- 域名名, 661. 亦参见 DNS (Domain Name System)
+- `dotdee` (`.d`), 145
+- 双引号 (`*`), 288
+- 下载文件, 207–208
+- Draw, 77
+- 驱动程序
+  - 设备驱动程序, 457
+  - 专有驱动程序, 安装, 122–123
+- 硬盘
+  - 分区策略
+    - GParted, 11
+    - `/home` 分区, 10
+- `e2fsck` 命令, 445
+- `echo` 命令, 193
+- Eclipse, 679
+- Edgy Soft, 33
+- 编辑
+  - PDF (Portable Document Format) 文件, 81
+  - 视频, 107–109
+  - 编辑器。参见编辑器
+- `edquota` 命令, 263
+- `#edubuntu` 频道, 42
+- Elixir, 713
+- `elixir` 软件包, 713
+- `emacs` 命令, 229–230
+- 环境变量, 222–226, 278
+- 邮件
+  - `epic` 客户端, 70
+- 客户端
   - Alpine, 68
   - 选择, 66
   - Claws, 68
-- I/O (输入/输出重定向), 209–212, 275–276
-- IP (互联网协议)
-  - IP 伪装, 376–377
-  - IPv4 地址, 374–376
-  - IPv6 地址, 378–380
-  - 概览, 374
-  - Squid 客户端, 567–658
-  - ip 命令, 392
-  - iptables, 435
+  - Evolution, 67–68, 79
+- Erlang, 609, 713
+- `erlang` 软件包, 713
+- 错误, 内核, 471
+- 转义字符, 287
+- `/etc` 目录。参见 `/etc`
+- `etckeeper` 命令, 365
+- 以太网
+  - 千兆以太网, 383–384
+  - PPPoE (以太网拨号协议), 410–412
+  - Mozilla Thunderbird, 66–67
+  - IRC (Internet Relay Chat) 礼, 71
+  - Mutt, 68
+- 评估
+  - 邮件应用程序, 389
+  - 备份策略, 345–346
+- Fetchmail
+  - 配置, 551–552
+  - 安装, 551
+  - 懒求值, 715
+  - 在线资源, 558–559
+- Postfix
+- Evince, 80–81
+  - 别名, 550–551
+  - 配置, 546–548
+  - 邮件中继, 550
+  - 伪装, 548
+  - 投递间隔, 549
+  - 智能主机, 549
+- `evince`, 35–36
+- Evolution, 67–68, 79, 620
+- Exchange Server, 557
+- 感叹号 (`!`), 237
+- 执行。参见运行
+- Exim, 543–544
+- 发送/接收
+- `exit` 语句, 153, 307
+  - MDAs (邮件投递代理), 544–545, 555–556
+  - MTAs (邮件传输代理), 541–544
 
-## IRC (互联网时聊天)
 
-- IRC (互联网时聊天), 42, 70–72
-- Mojo, 653
-- IRCd, 72
-- 概览, 647
-- irssi, 70
-- 快速入门, 653
-- IS/IT (信息服务/技术), 31
-- juju, 655
-- 即时编译 (JIT), 724
-- ISO 录器, 3–4
-- JVM (虚拟机), 710–711, 725
-- 隔离, 588
-- ISPs (互联网服务提供商), 374–375, 508
+
+# 索引
+
+## M
+
+- MUAs（邮件用户代理），概览，541–542
+
+## E
+
+- `exports` 文件，474–475
+
+## 表达式
+
+- 表达式比较
+- `pdksh` 和 `bash` 中的，290–295
+- `tsch` 中的，295–299
+- 正则表达式，177
+
+## 服务器
+
+- 服务器，556–558
+
+## X
+
+- 可扩展标记语言（XML），784
+
+## E
+
+- 等一下，EMACcript 可能是 EMAScript
+- EMAScript，716
+
+## 仿真
+
+- 仿真，632
+- 模拟器（游戏），121
+
+## 外部攻击
+
+- 外部攻击，425–426
+
+## E
+
+- `enable` 命令，487
+- 启用。参见配置
+- 加密 `/home` 分区，310
+- 循环结束，301
+
+## F
+
+- `fail` 命令，330
+- Enlightenment，11
+- FDDI（分布式数据接口），383–384
+- 智能主机，549
+- 文件传输协议。参见 FTP（File Transfer Protocol）
+
+## Fetchmail
+
+- 文件名，551
+- 扩展名
+- 配置
+- 全局选项
+- 脚本，238–239
+
+## 文件
+
+- 修改，173
+- 创建，173–174
+- 删除，173–175
+- 比较，175–158
+- 查找，156–157
+- `diff` 命令，192–193
+- `cd` 命令，164–165
+- 压缩文件，232
+- `配置.in`，674
+- 概览，162
+- 复制，165
+- `pwd` 命令，165
+- 权限，176–191
+- 机器间，518–520
+- 调优，444–445
+- `mc` 命令，160–161
+- 分布式数据接口，383–384
+- 光纤，383–384
+
+## 文件
+
+- 文件访问时间，445
+- 文件禁用，340
+- 文件操作
+- File Roller，353
+- 文件系统。参见 `/etc`
+- `chroot` 监狱，238–239
+
+## 文件
+
+- 目录
+- 文件传输协议（File Transfer Protocol）
+
+## 文件扩展名
+
+- `.avi`，106
+- `.bmp`，95
+- `.flac`，88
+- `.flv`，106
+- `.gif`，96
+- `.ldif`，519
+- `.mov`，106
+- `.mp3`，88
+- `.mpeg`，106
+- `.ogg`，88
+- `.ogv`，106
+- `.pcx`，96
+- `.pdf`，36
+- `.png`，96
+- `.ps`，36
+- `.qt`，106
+- `.raw`，88
+- `.svg`，96
+- `.tif`，96
+- `.wav`，88
+- `.webm`，106
+
+## 文件
+
+- 别名，550–551
+- `apache2.conf`，493–495
+- `comm` 命令，212–213
+- `cd` 命令，164–165
+- `ls` 命令，162–164
+- `配置.in`，674
+- 概览，162
+- 复制，165
+- `pwd` 命令，165
+- 权限，176–191
+- 机器间，518–520
+- 调优，444–445
+- `mc` 命令，160–161
+- 分布式数据接口，383–384
+- 光纤，383–384
+
+## 对象文件
+
+- 对象文件，670
+
+## O
+
+- OpenDocument，78
+
+## P
+
+- PDF（Portable Document Format）文件
+  - `devices.txt`，455
+  - 显示内容，177
+  - `named.conf.local`，666
+  - `named.conf.options`，666
+  - `exports`，474–475
+  - `nginx.conf`，518–520
+  - `passwd`，159, 253–254
+  - 概览，551–552
+
+## PDF（Portable Document Format）文件
+
+- 编辑，81
+- 查找，14, 193–205
+- 阅读，36, 81
+
+## F
+
+- `fstab`，159, 475
+- `peers`，75
+
+## 权限
+
+- FTP（File Transfer Protocol）
+  - 754 文件
+  - 程序，14
+  - 相似性，212
+  - 软件，141
+  - `strings`，196
+
+## Firefox
+
+- RSS 馈，69
+
+## 防火墙
+
+- `iptables`，435
+- UFW（Uncomplicated Firewall），432–435
+
+## F
+
+- 第一人称射击（FPS）游戏，12
+- FLAC（Lossless Audio Format），88
+- 视频文件，107–109
+
+# FTP（文件传输协议）
+
+- FTP 主机，539
+- Gedit，81
+- 在线资源，540
+- 生成
+- 概述，531
+- GPG 密钥，695–696
+- 服务器。参见服务器，FTP
+- SSH 密钥，696
+- 软件安装，533–534
+- `gforth` 软件包，714
+- 用户，534–536
+- GHC（光荣格拉斯编译系统），715
+- FTP 主机，539
+- `ghc` 软件包，715
+- 全量增量备份，347
+- GIDs（组 ID），244
+- `.gif` 文件扩展名，95
+- 全量周期备份，347
+- 千兆以太网，383–384
+- 全完全限定域名（FQDN），616
+- 函数。另见命令；
+- GIMP（GNU 图像处理程序），79, 93–94
+  - `CONCAT(I)`，585
+  - 定义，670
+  - Shell 脚本，307–308
+- GIMP 工具包（GTK）部件集，79
+- Git，682–683
+  - `git add` 命令，683
+  - `git commit` 命令，683
+  - `git init` 命令，682
+  - `git pull` 命令，683
+  - `git push` 命令，683
+  - `git remote` 命令，682
+  - `git rm` 命令，683
+- Glade，677–678
+- Glance，647
+- `[global]` 部分（`smb.conf`），479
+- 光荣格拉斯编译系统（GHC），715
+
+# G
+
+## 游戏
+
+- 韦斯诺斯之战（Battle of Wesnoth），126–127
+- 儿童游戏，129
+- 商业游戏，129
+- 模拟器，121
+- FlightGear，128
+- Frets on Fire，127–128
+- Frozen Bubble，125–126
+- 在线资源，130–131
+- 概述，121
+- 专有视频驱动，安装，122–123
+- Scorched 3D，124–125
+- Speed Dreams，129
+- Steam 平台，123
+- SuperFlex，126
+- 华沙，124
+- Windows 游戏，玩，130
+
+## 开发工具
+
+- `gcc`（GNU 编译器集），669, 675–676
+- `gdb` 命令，675
+- `gnat` 软件包，710
+- `gnat-gps` 软件包，710
+
+## GNOME
+
+- File Roller，353
+- Glade，677–678
+- GNOME Office，78–79
+- GNOME3，116–117
+- 邮件列表，41
+- 网站，61
+- `gnome-nettool`，339
+- `gnome-screenshot` 命令，97
+- `gnome-shell` 软件包，116
+- `gnome-terminal` 命令，151
+- 概述，257
+
+## GNU
+
+- GNU Ada 编译器，710
+- 配合 `su` 命令，257–259
+- GNU 编译器集（`gcc`），669, 675–676
+- 配合 `sudo` 命令，259–262
+
+## 图形数据库
+
+- FlockDB，613
+- HyperGraphDB，612–613
+- Neo4j，612
+- OrientDB，612
+- GNU 通用公共许可证（GPL），29, 93–94
+- GNU 项目，149
+- 概述，612
+- Gnumeric，79
+- 图形数据库客户端，600
+- `gnupg` 命令，695
+
+## 图形化开发工具
+
+- IDEs（集成开发环境），678–680
+- Go，714
+- KDevelop 客户端，676–688
+- `gofortran` 软件包，714–355
+- SDKs（软件开发包），678–890
+- `golang-docs` 软件包，714
+
+## 其他
+
+- Goobuntu，38
+- 图形化网络配置工具，397–399
+
+## 图形化系统管理工具
+
+- BigTable，611
+- Conky，334–339
+- Chrome，65–66
+- Chromium，65–66
+- `gnome-nettool`，339
+- 概述，333–334
+- Dart，712–713
+- 系统监器，334
+- MapReduce，611
+- `envncviewer`，339
+- 搜索技巧，37–38
+- `wireshark`，339
+
+## 其他
+
+- GParted，11
+- 图形用户界面。参见 GUIs
+- 图像格式，95–97
+
+## GPG 密钥
+
+- 生成，695–696
+- 上传到 Launchpad，696–697
+
+## 其他
+
+- 安迪·格林，417
+- `grep` 命令，196, 730
+- `preplog`，284–286
+- GPL（GNU 通用公共许可证），29
+- Groovy，715
+- `gprof` 命令，675
+- `groovy` 软件包，715
+- GPT（GUID 分区表），314
+- `groovyConsole` 命令，715
+- 统一引导加载程序。参见 GRUB2
+- `groovysh` 命令，715
+- `GRANT` 语句，591, 594
+- `group` 指令，494
+- 组 ID（GIDs），244
+- `groupadd` 命令，247
+- PostgreSQL 权限，594–595
+- `groupdel` 命令，247
+- 系统管理员权限
+
+## groupmod 命令
+
+- `groupmod` 命令，247
+
+## 组
+
+- 组列表，245–246
+- 管理工具，246–248
+- 概述，245
+- `groups` 命令，264
+- `groupofs` 命令，103–104
+
+## GRUB2（高级引导加载程序）
+
+- 检查，235
+- 重新安装，235–236
+- 恢复，367
+
+## 其他
+
+- 克里斯蒂安·格林（Christian Grün）
+- GStreamer，888
+- 10-软件包，88
+- GTK（GIMP 工具包）部件集，79
+- GUID 分区表（GPT），314
+
+## 图形用户界面（GUIs）
+
+- 数据库访问，597
+- GNOME3 和 Ubuntu，116–117
+- MATE 和 Ubuntu，115–116
+- 概述，102
+- Xfce 和 Ubuntu，114
+- Juju，552
+- Mir，44
+- X
+- 快捷键，60
+- Unity
+- 参见 X
+- `gv` 客户端，36
+- `gzip` 命令，232
+
+# H
+
+- Hadoop，611
+- 哈诺（Hamano），682
+- 磁盘优化，442–443
+- 硬链接，199–200
+- 硬件时钟，设置，24
+- 硬件模拟，632
+- 采集，701
+- Haskell，715
+- 平台软件包，721
+- 高级数据链路（HDLC），412
+- `hdparm` 命令，443
+- 头部格式，88
+- 海因（Hein），40
+- 帮助。参见在线资源
+- 环境设置，696
+- Launchpad 账户，创建，696
+- 宇宙的 Masters
+
+## HTTP（超文本传输协议）
+
+- 社区团队，703
+- 在线资源，705
+- 发布周期，694
+- HTTPS（安全 HTTP），510–512
+- 参见服务器，524
+- `hg add` 命令，686
+- `hg commit` 命令，686
+- `hg init` 命令，686
+- `hg push` 命令，686
+- `hg update` 命令，686
+- 组，385–386
+- 休眠系统，11
+- 高性能计算（HPC），670
+- 访问文件，496–498
+- HTML（超文本语言），63
+- 范围，694–695
+- 参见服务器，718
+- `httpass` 命令，499
+- 跳跃，327
+
+# I
+
+- ImageMagick，96
+- 图像处理，94
+- 输入/O（输入输出）重定向，209–212, 275–276
+
+## 输入
+
+- 配置
+- 引导程序，5
+- DHCP（动态主机配置协议），401–402
+- 包含文件，670
+- 索引，查找文件，200
+- 双系统启动，2, 6
+- 已安装的软件包，列表，38
+- 初始内存镜像，创建，470
+- 初始化网络硬件，387–389
+- LTSP（Linux 终端服务器项目），627–628
+- `init` 命令，456
+- 在 Mac 硬件上，3
+- `initrd.img` 文件，470
+- MySQL，588–589
+- `initrd.txt` 文件，456
+- NFS（网络文件系统），774
+- `innitab` 文件，315
+- Nginx，517–518
+- Inkscape，98
+- 在线资源，27
+- 内联驱动，457
+
+## 输入
+
+- 安装后配置
+- BIOS（基本输入输出系统）
+- 电源管理，22
+- 蜂鸣代码，313
+- 打印机，22
+- 启动过程，311–313
+- 软件仓库，19–21
+
+## iptables 761
+
+- 时间/日期，23–24
+- 演变，67–79
+- 故障排除，26–27
+- Kmail，68
+- 无线网络，24–25
+- Mozilla Thunderbird，66–67
+- Mutt，68
+- 基于网页的电子邮件应用，68
+- 历史，63
+- IRC（互联网时聊天），70–72
+- ISP（互联网服务提供商），374–375, 507
+- 在线资源，74
+
+## 准备
+
+- 32位与 64位 Ubuntu，4–5
+- 备份，7
+- 硬件规格，调研，2
+- 安装选项，2–4
+- 概览，1–2
+- 分区策略，规划，5
+- 专有视频驱动，122–123
+
+## SDKs（软件开发工具包）
+
+- Android SDK，725–727
+- Ubuntu SDK，730
+
+## 软件
+
+- 使用 APT（高级包工具），139–141
+- 使用 Synaptic，134–135
+- 概览，63
+
+## RSS 阅读器
+
+- Firefox，69
+- Liferea，69–70
+- 概览，69
+- 搜索技巧，37–38
+
+## 网页浏览器
+
+- Firefox，63–65
+- Google Chrome，65–66
+- Squid，562
+- 逐步安装，6–12
+- 故障排除，26–27
+- 电子电气工程师学会（IEEE），407
+- 整数。见数字（numbers）
+- 集成开发环境（IDEs），678–680, 710
+- 内部攻击，425–426
+
+## 互联网（Internet）
+
+- Google Chromium，65–66
+- 名称与数字分配机构（ICANN），661
+- 互联网信息服务（IIS），489–490
+- 互联网消息访问协议（IMAP），545
+- 互联网新闻组，72–74
+- 互联网协议。见（Internet Protocol）
+- 互联网时聊天（IRC），42–70
+- 互联网服务提供商（ISPs），374–375
+- 解析 shell 脚本，280–281
+
+## 互联网连接
+
+- 通用配置信息，480
+- 拨号上网接入，412–413
+- 概览，408
+- PPPoE（以太网拨点协议），410–412
+- 故障排除，413
+
+## 电子邮件客户端
+
+- Alpine，68
+- 选择，66
+- Claws，68
+
+## I/O
+
+- I/O（输入/输出重定向），209–212, 275–276
+
+## IP（互联网协议）
+
+- IP 伪装，376–377
+- IPv4 地址，374–376
+- IPv6 地址，378–380
+- 概览，374
+- Squid 客户端，567–658
+- `ip` 命令，392
+- `iptables`，435
+
+## IRC（互联网时聊天）
+
+- IRC（互联网时聊天），42, 70–72
+- Mojo，653
+- IRCd，72
+- 概览，647
+- `irssi`，70
+- 快速入门，653
+- IS/IT（信息服务/技术），31
+- `juju`，655
+- 即时编译（JIT），724
+- ISO 录器，3–4
+- JVM（虚拟机），710–711, 725
+- 隔离，588
+- ISPs（互联网服务提供商），374–375, 508
 
 # K
 
-- iwconfig 命令, 405–406
-- iwlist 命令, 405
+- `iwconfig` 命令，405–406
+
+
+
+- `iwlist` 命令, 405
 - Katz, Damien, 605, 609
-- iwpriv 命令, 405
-- iwspry 命令, 405
-- ark 工具, 353–354
+- `iwpriv` 命令, 405
+- `iwspry` 命令, 405
+- `ark` 工具, 353–354
 - KDE
   - 邮件列表, 41
   - 监控工具, 339
   - Kdenlive, 108
   - KDevelop, 676–697
-  - kdiff, 339
+  - `kdiff`, 339
   - Jetty, 529
 
 # J
@@ -2845,129 +2789,134 @@ FLAC (Lossless Audio Format), 88
 - Juju, 655
 
 ## 内核 (kernel)
-  - 错误, 471
-  - 创建 RAM 映像, 816
-  - 逐步过程, 464–467
-  - 配置, 467–470
-  - 优先级调度, 218–219
-  - 后台运行, 215
-  - 重复运行, 268–230
-  - 后期调度, 265–268
-  - 命令, 214
-  - 加载, 314–315
-  - 模块管理, 458–460
-  - 优化, 455–446
-  - 补丁, 463–464
-  - 编译, 460–461
-  - 获取, 462
-  - 源码树, 453–454
-  - 故障排除, 470–472
-  - 类型, 457–458
-  - 版本, 461–462
-  - 内核黑客, 456
-  - 内核缓冲区, 239
-  - 基于内核的虚拟机 (KVM), 633–637
-  - KVM (内核虚拟机), 633–637
-  - parameters.txt 文件, 456
-  - kern.log, 330
-  - ubuntu 通道, 42
-  - kubuntu 与 KDE, 113–114
-  - kubuntu-desktop 软件包, 113–114
-  - kvm 软件包, 633–634
-  - 文件名扩展名, 106
+
+- 错误, 471
+- 创建 RAM 映像, 816
+- 逐步过程, 464–467
+- 配置, 467–470
+- 优先级调度, 218–219
+- 后台运行, 215
+- 重复运行, 268–230
+- 后期调度, 265–268
+- 命令, 214
+- 加载, 314–315
+- 模块管理, 458–460
+- 优化, 455–446
+- 补丁, 463–464
+- 编译, 460–461
+- 获取, 462
+- 源码树, 453–454
+- 故障排除, 470–472
+- 类型, 457–458
+- 版本, 461–462
+- 内核黑客, 456
+- 内核缓冲区, 239
+- 基于内核的虚拟机 (KVM), 633–637
+- KVM (内核虚拟机), 633–637
+- `parameters.txt` 文件, 456
+- `kern.log`, 330
+- ubuntu 通道, 42
+- kubuntu 与 KDE, 113–114
+- `kubuntu-desktop` 软件包, 113–114
+- `kvm` 软件包, 633–634
+- 文件名扩展名, 106
 
 # L
 
-  - Landscape, 340, 654, 657
-  - Lisp, 716–717
-  - Lua, 717–718
-  - LDIF (LDAP 数据交换格式), 619
-  - Mono, 717–718
-  - OCaml, 764
-  - Perl, 718, 719
-  - Python, 721
-  - Ruby, 719
-  - Rust, 720
-  - Scala, 722
-  - LaTeX, 712
-  - LibreOffice, 763
-  - libvirt, 616
-  - libvirt-bin 软件包, 634
-  - Linux, 177
-  - Linux 桌面测试 (LTP), 705
-  - Linux 会, 29
-  - Linux from Scratch, 39
-  - Linux 内核模块编程, 39
-  - Linux 终端服务器项目 (LTSP), 709
-  - Linux 用户组 (LUG), 39
-  - LDM (Linux 桌面管理器), 628
-  - Lisp, 716
-  - Lua, 717
-  - Mono, 717
-  - Perl, 718
-  - Python, 721
-  - Ruby, 719
-  - Rust, 720
-  - Scala, 722
-  - LaTeX, 712
-  - LibreOffice, 763
-  - libvirt, 616
-  - libvirt-bin 软件包, 634
-  - Linux, 177
-  - Linux 桌面测试 (LTP), 705
-  - Linux 会, 29
-  - Linux from Scratch, 39
-  - Linux 内核模块编程, 39
-  - Linux 终端服务器项目 (LTSP), 709
-  - Linux 用户组 (LUG), 39
-  - LDM (Linux 桌面管理器), 628
+- Landscape, 340, 654, 657
+- Lisp, 716–717
+- Lua, 717–718
+- LDIF (LDAP 数据交换格式), 619
+- Mono, 717–718
+- OCaml, 764
+- Perl, 718, 719
+- Python, 721
+- Ruby, 719
+- Rust, 720
+- Scala, 722
+- LaTeX, 712
+- LibreOffice, 763
+- `libvirt`, 616
+- `libvirt-bin` 软件包, 634
+- Linux, 177
+- Linux 桌面测试 (LTP), 705
+- Linux 会, 29
+- Linux from Scratch, 39
+- Linux 内核模块编程, 39
+- Linux 终端服务器项目 (LTSP), 709
+- Linux 用户组 (LUG), 39
+- LDM (Linux 桌面管理器), 628
+- Lisp, 716
+- Lua, 717
+- Mono, 717
+- Perl, 718
+- Python, 721
+- Ruby, 719
+- Rust, 720
+- Scala, 722
+- LaTeX, 712
+- LibreOffice, 763
+- `libvirt`, 616
+- `libvirt-bin` 软件包, 634
+- Linux, 177
+- Linux 桌面测试 (LTP), 705
+- Linux 会, 29
+- Linux from Scratch, 39
+- Linux 内核模块编程, 39
+- Linux 终端服务器项目 (LTSP), 709
+- Linux 用户组 (LUG), 39
+- LDM (Linux 桌面管理器), 628
 
-- 语言 (languages)
-  - Ada, 710
-  - Berkeley DB, 606–607
-  - Cassandra, 607
-  - C++, 669–671
-  - Clojure, 710–711
-  - Dart, 712–713
-  - Elixir, 713
-  - Erlang, 713
-  - Forth, 713–714
-  - Fortran, 714–715
-  - Go, 714
-  - Groovy, 715
-  - Haskell, 715
-  - Java, 715–716
-  - JavaScript, 716
-  - Kmail, 68
-  - KOffice, 80
-  - Kile, 82
-  - Lisp, 716–717
-  - Lua, 717–718
-  - Mono, 717–718
-  - OCaml, 764
-  - Perl, 718
-  - Python, 721
-  - Ruby, 719
-  - Rust, 720
-  - Scala, 722
-  - LaTeX, 712
-  - LibreOffice, 763
+## 语言 (languages)
 
-- C
-  - 选择, 8
-  - 调试, 674–675
-  - GNU 编译器, 675–678
-  - Makefiles, 671–673
-  - 概览, 669–670
-  - Memcached, 607–608
-  - MemcachedDB, 607–608
-  - 概览, 606
+- Ada, 710
+- Berkeley DB, 606–607
+- Cassandra, 607
+- C++, 669–671
+- Clojure, 710–711
+- Dart, 712–713
+- Elixir, 713
+- Erlang, 713
+- Forth, 713–714
+- Fortran, 714–715
+- Go, 714
+- Groovy, 715
+- Haskell, 715
+- Java, 715–716
+- JavaScript, 716
+- Kmail, 68
+- KOffice, 80
+- Kile, 82
+- Lisp, 716–717
+- Lua, 717–718
+- Mono, 717–718
+- OCaml, 764
+- Perl, 718
+- Python, 721
+- Ruby, 719
+- Rust, 720
+- Scala, 722
+- LaTeX, 712
+- LibreOffice, 763
+
+## C
+
+- 选择, 8
+- 调试, 674–675
+- GNU 编译器, 675–678
+- Makefiles, 671–673
+- 概览, 669–670
+- Memcached, 607–608
+- MemcachedDB, 607–608
+- 概览, 606
+
 - D, 712–713
 - Riak, 608
 - Redis, 6086
 
-- keys
-  - GPG 密钥
+## keys
+
+- GPG 密钥
   - 密钥用法, 448–453
   - 密钥用法 (PKI), 573
   - 基于密钥的登录, 419–420, 30
@@ -2975,579 +2924,681 @@ FLAC (Lossless Audio Format), 88
   - 键值存储
   - 键盘快捷键, 030, 238
   - KeyPass, 12
-
 - SSH 密钥
   - 上传到 Launchpad, 696–697
 
+# `lprm` 命令
 
+`lprm` 命令, 487
 
+`mail` 参见 email
 
+`lpstat` 命令, 487
 
-# lprm 命令
-
-lprm 命令, 487
-mail. 参见 email
-lpstat 命令, 487
 邮件投递代理 (MDAs), 544–545
-Is 命令, 162–164, 200–202
+
+`ls` 命令, 162–164, 200–202
+
 邮件中继, 550
-lsblk 命令, 202–203
+
+`lsblk` 命令, 202–203
+
 邮件传输代理 (MTAs), 541–544
-lsh 命令, 202–203
+
+`lsh` 命令, 202–203
+
 邮件用户代理 (MUAs), 545
-lsmod 命令, 202–203, 458
-maildir, 544
-lspci 命令, 105, 202–203
+
+`lsmod` 命令, 202–203, 458
+
+`maildir`, 544
+
+`lspci` 命令, 105, 202–203
+
 邮件列表, 40–42
+
 LTS (长期支持), 21, 33
-make 命令, 671–673
+
+`make` 命令, 671–673
+
 LTSP (Linux 终端服务器项目)
-make config 命令, 466
+
+`make config` 命令, 466
+
 能力 (capabilities), 628–629
-make menoconfig 命令, 466–478
+
+`make menoconfig` 命令, 466–478
+
 安装, 627–628
-make oldconfig 命令, 467
+
+`make oldconfig` 命令, 467
+
 LDM (LTSP 显示管理器), 628
-make xconfig 命令, 467
+
+`make xconfig` 命令, 467
+
 在线资源, 629
-makefiles, 671–673
+
+`makefiles`, 671–673
+
 概述, 44, 623–624
+
 创建目录, 204
+
 要求, 624–627
-man 命令, 35, 156, 203
+
+`man` 命令, 35, 156, 203
+
 LTSP 显示管理器 (LDM), 628
-man 页面, 156, 203
+
+`man` 页面, 156, 203
+
 Lua, 717
+
 强制性访问控制 (MAC), 435
-lua 命令, 717
+
+`lua` 命令, 717
+
 手册页, 35, 203
-lua50 软件包, 717
+
+`lua50` 软件包, 717
+
 MAPI (邮件应用程序编程接口), 557
+
 Lubuntu, LXDE 以及 115–116
-MapReduce, 611
-lubuntu-desktop 软件包, 116
+
+`MapReduce`, 611
+
+`lubuntu-desktop` 软件包, 116
+
 MariaDB, 577
+
 LUGs (Linux 用户组), 39
+
 伪装 (masquerading), 376–377, 548
+
 LVM (逻辑卷管理器), 646
+
 主引导记录。参见 MBR (master boot record)
+
 LXDE 和 Ubuntu, 115–116
->  {通用正则表达式 (Freidl), 274
+
+> {通用正则表达式 (Freidl), 274
+
 宇宙之主 (MOTUS), 18, 101
+
 匹配模式。参见 模式匹配
 
 # M
 
 MATE, 117–118
+
 MaaS (基础设施即服务), 643, 653–654
+
 数学, 77
+
 MAC (强制性访问控制), 435
+
 Matrox Naval, 104
+
 MAC (介质访问控制) 地址, 423
+
 Matrox Rainbow Runner G 系列, 104
+
 Mac 硬件
-mbox 格式, 544
+
+`mbox` 格式, 544
+
 在...上安装 Ubuntu, 3
+
 MBR (主引导记录)
+
 在 Juju 上运行, 653
+
 定义, 313
-带有 make 命令的宏, 672–683
+
+带有 `make` 命令的宏, 672–683
+
 安装引导加载程序到, 5
-mc 命令, 362
+
+`mc` 命令, 362
+
 Mago, 705
+
 MDAs (邮件投递代理), 544–545, 555–556
+
 模块 767
-测量键缓冲区使用, 448–449 调过的新闻组, 72
-介质访问控制 (MAC) 地址, 382 modinfo 命令, 459
-Memcached, 607–608 modprobe 命令, 388–389, 458–459
-MemcachedDB, 607–608 modprobe.conf 文件, 387–388, 459
-内存, 327–328. 另另缓存 (SQL) modprobe.d/
-旧的, 159
-Mercurial, Dwight, 685–686 模块化内核, 457
-消息投递间隔隔 (Postfix), 549 模块部分 (xorg.conf), 48
-邮件应用程序编程接口模块 (MAPI), 557 Apache
-- mod_access, 502
-- mod_alias, 502
-- mod_ais, 503
-- mod_auth, 503
-- mod_auth_anon, 503
-- mod_auth_dbm, 503
-- mod_auth_digest, 504
-- mod_autoindex, 504
-- mod_cgi, 504
-- mod_dir, 504
-- mod_expires, 504
-- mod_headers, 504-505
-- mod_include, 505
-- mod_info, 505
-- mod_log_config, 505
-- mod_mime, 505
-- mod_mime_magic, 505
-- mod_negotiation, 505
-- mod_proxy, 505
-- mod_rewrite, 505
-- mod_setenvif, 506
-- mod_speling, 506
-- mod_ssl, 506
-- mod_status, 506
-- mod_unique_id, 506
-- mod_userdir, 506
-- mod_usertrack, 507
-- mod_vhost_alias, 507
+
+测量键缓冲区使用, 448–449
+
+调过的新闻组, 72
+
+介质访问控制 (MAC) 地址, 382
+
+`modinfo` 命令, 459
+
+Memcached, 607–608
+
+`modprobe` 命令, 388–389, 458–459
+
+MemcachedDB, 607–608
+
+`modprobe.conf` 文件, 387–388, 459
+
+内存, 327–328. 另见缓存 (SQL)
+
+`modprobe.d/`, 旧的, 159
+
+Mercurial, Dwight, 685–686
+
+模块化内核, 457
+
+消息投递间隔 (Postfix), 549
+
+模块部分 (`xorg.conf`), 48
+
+邮件应用程序编程接口模块 (MAPI), 557
+
+Apache
+
+- `mod_access`, 502
+- `mod_alias`, 502
+- `mod_ais`, 503
+- `mod_auth`, 503
+- `mod_auth_anon`, 503
+- `mod_auth_dbm`, 503
+- `mod_auth_digest`, 504
+- `mod_autoindex`, 504
+- `mod_cgi`, 504
+- `mod_dir`, 504
+- `mod_expires`, 504
+- `mod_headers`, 504-505
+- `mod_include`, 505
+- `mod_info`, 505
+- `mod_log_config`, 505
+- `mod_mime`, 505
+- `mod_mime_magic`, 505
+- `mod_negotiation`, 505
+- `mod_proxy`, 505
+- `mod_rewrite`, 505
+- `mod_setenvif`, 506
+- `mod_speling`, 506
+- `mod_ssl`, 506
+- `mod_status`, 506
+- `mod_unique_id`, 506
+- `mod_userdir`, 506
+- `mod_usertrack`, 507
+- `mod_vhost_alias`, 507
+
 基础设施即服务 (MaaS), 643, 653–654
+
 方法。另见函数; Microsoft Exchange Server, 557
+
 Microsoft Office, Microsoft 声卡, 85–86
+
 中间件, 597
+
 MIME (多用途互联网邮件扩展), 73
-Mir, 44 镜像系统, 348
-mkdir 命令, 173–174, 204
-rnd 命令, 470
-mkisofs 命令, 101
-助记符 (权限), 166 移动开发
+
+Mir, 44
+
+镜像系统, 348
+
+`mkdir` 命令, 173–174, 204
+
+`rnd` 命令, 470
+
+`mkisofs` 命令, 101
+
+助记符 (权限), 166
+
+移动开发
+
 - Android
-Android 架构, 724–725
-Android Studio 安装, 725
-创建, 727
-在线资源, 728
-SDK (软件工具包), 729
-安装, 730
+  - Android 架构, 724–725
+  - Android Studio 安装, 725
+  - 创建, 727
+  - 在线资源, 728
+  - SDK (软件工具包), 729
+  - 安装, 730
 - Android
-创建应用程序, 730
-在线资源, 731
-概述, 732
-SDK (软件工具包), 733
-安装, 734
-模块, 735–736
-Nginx, 522–523
-Puppet, 656
-Jojo, 653
-MongoDB, 610
-Monitor 部分 (xorg.conf), 48
-mono 软件包, 718
-模块 768
-内核管理, 458–460
-图像, 739
-Nginx, 522–523
-Puppet, 656
-在线资源, 709
-Jojo, 653
-MongoDB, 610
-Monitor 部分 (xorg.conf), 48
-mono 软件包, 718
-模块 768
-内核管理, 458–460
-图像, 739
-Nginx, 522–523
-Puppet, 656
-在线资源, 709
-Jojo, 653
-MongoDB, 610
-Monitor 部分 (xorg.conf), 48
-mono 软件包, 718
-模块 768
-内核管理, 458–460
-图像, 739
-Nginx, 522–523
-Puppet, 656
-在线资源, 709
-Jojo, 653
-MongoDB, 610
-Monitor 部分 (xorg.conf), 48
-mono 软件包, 718
-模块 768
-内核管理, 458–460
-图像, 739
-Nginx, 522–523
-Puppet, 656
-在线资源, 709
-Jojo, 653
-MongoDB, 610
-Monitor 部分 (xorg.conf), 48
-mono 软件包, 718
-模块 768
-内核管理, 458–460
-图像, 739
-Nginx, 522–523
-Puppet, 656
-在线资源, 709
-Jojo, 653
-MongoDB, 610
-Monitor 部分 (xorg.conf), 48
-mono 软件包, 718
-模块 768
-内核管理, 458–460
-图像, 739
-Nginx, 522–523
-Puppet, 656
-在线资源, 709
-Jojo, 653
-MongoDB, 610
-Monitor 部分 (xorg.conf), 48
-mono 软件包, 718
-模块 768
-内核管理, 458–460
-图像, 739
-Nginx, 522–523
-Puppet, 656
-在线资源, 709
-Jojo, 653
-MongoDB, 610
-Monitor 部分 (xorg.conf), 48
-mono 软件包, 718
-模块 768
-内核管理, 458
+  - 创建应用程序, 730
+  - 在线资源, 731
+  - 概述, 732
+  - SDK (软件工具包), 733
+  - 安装, 734
+  - 模块, 735–736
+  - Nginx, 522–523
+  - Puppet, 656
+  - Jojo, 653
+  - MongoDB, 610
+  - Monitor 部分 (`xorg.conf`), 48
+  - `mono` 软件包, 718
+  - 模块 768
+  - 内核管理, 458–460
+  - 图像, 739
+  - Nginx, 522–523
+  - Puppet, 656
+  - 在线资源, 709
+  - Jojo, 653
+  - MongoDB, 610
+  - Monitor 部分 (`xorg.conf`), 48
+  - `mono` 软件包, 718
+  - 模块 768
+  - 内核管理, 458–460
+  - 图像, 739
+  - Nginx, 522–523
+  - Puppet, 656
+  - 在线资源, 709
+  - Jojo, 653
+  - MongoDB, 610
+  - Monitor 部分 (`xorg.conf`), 48
+  - `mono` 软件包, 718
+  - 模块 768
+  - 内核管理, 458–460
+  - 图像, 739
+  - Nginx, 522–523
+  - Puppet, 656
+  - 在线资源, 709
+  - Jojo, 653
+  - MongoDB, 610
+  - Monitor 部分 (`xorg.conf`), 48
+  - `mono` 软件包, 718
+  - 模块 768
+  - 内核管理, 458–460
+  - 图像, 739
+  - Nginx, 522–523
+  - Puppet, 656
+  - 在线资源, 709
+  - Jojo, 653
+  - MongoDB, 610
+  - Monitor 部分 (`xorg.conf`), 48
+  - `mono` 软件包, 718
+  - 模块 768
+  - 内核管理, 458–460
+  - 图像, 739
+  - Nginx, 522–523
+  - Puppet, 656
+  - 在线资源, 709
+  - Jojo, 653
+  - MongoDB, 610
+  - Monitor 部分 (`xorg.conf`), 48
+  - `mono` 软件包, 718
+  - 模块 768
+  - 内核管理, 458
+
 10 宇宙之主 (MOTUS), 18, 101
+
 主引导记录。参见 MBR (master boot record)
+
 匹配模式。参见 模式匹配
 
 # M
 
 MATE, 117–118
+
 MaaS (基础设施即服务), 643, 653–654
+
 数学, 77
+
 MAC (强制性访问控制), 435
+
 Matrox Naval, 104
+
 MAC (介质访问控制) 地址, 423
+
 Matrox Rainbow Runner G 系列, 104
+
 Mac 硬件
-mbox 格式, 544
+
+`mbox` 格式, 544
+
 在...上安装 Ubuntu, 3
+
 MBR (主引导记录)
+
 在 Juju 上运行, 653
+
 定义, 313
-带有 make 命令的宏, 672–683
+
+带有 `make` 命令的宏, 672–683
+
 安装引导加载程序到, 5
-mc 命令, 362
+
+`mc` 命令, 362
+
 Mago, 705
+
 MDAs (邮件投递代理), 544–545, 555–556
+
 模块 767
-测量键缓冲区使用, 448–449 调过的新闻组, 72
-介质访问控制 (MAC) 地址, 382 modinfo 命令, 459
-Memcached, 607–608 modprobe 命令, 388–389, 458–459
-MemcachedDB, 607–608 modprobe.conf 文件, 387–388, 459
-内存, 327–328. 另见缓存 (SQL) modprobe.d/
-旧的, 159
-Mercurial, Dwight, 685–686 模块化内核, 457
-消息投递间隔 (Postfix), 549 模块部分 (xorg.conf), 48
-邮件应用程序编程接口模块 (MAPI), 557 Apache
-- mod_access, 502
-- mod_alias, 502
-- mod_ais, 503
-- mod_auth, 503
-- mod_auth_anon, 503
-- mod_auth_dbm, 503
-- mod_auth_digest, 504
-- mod_autoindex, 504
-- mod_cgi, 504
-- mod_dir, 504
-- mod_expires, 504
-- mod_headers, 504-505
-- mod_include, 505
-- mod_info, 505
-- mod_log_config, 505
-- mod_mime, 505
-- mod_mime_magic, 505
-- mod_negotiation, 505
-- mod_proxy, 505
-- mod_rewrite, 505
-- mod_setenvif, 506
-- mod_speling, 506
-- mod_ssl, 506
-- mod_status, 506
-- mod_unique_id, 506
-- mod_userdir, 506
-- mod_usertrack, 507
-- mod_vhost_alias, 507
+
+测量键缓冲区使用, 448–449
+
+调过的新闻组, 72
+
+介质访问控制 (MAC) 地址, 382
+
+`modinfo` 命令, 459
+
+Memcached, 607–608
+
+`modprobe` 命令, 388–389, 458–459
+
+MemcachedDB, 607–608
+
+`modprobe.conf` 文件, 387–388, 459
+
+内存, 327–328. 另见缓存 (SQL)
+
+`modprobe.d/`, 旧的, 159
+
+Mercurial, Dwight, 685–686
+
+模块化内核, 457
+
+消息投递间隔 (Postfix), 549
+
+模块部分 (`xorg.conf`), 48
+
+邮件应用程序编程接口模块 (MAPI), 557
+
+Apache
+
+- `mod_access`, 502
+- `mod_alias`, 502
+- `mod_ais`, 503
+- `mod_auth`, 503
+- `mod_auth_anon`, 503
+- `mod_auth_dbm`, 503
+- `mod_auth_digest`, 504
+- `mod_autoindex`, 504
+- `mod_cgi`, 504
+- `mod_dir`, 504
+- `mod_expires`, 504
+- `mod_headers`, 504-505
+- `mod_include`, 505
+- `mod_info`, 505
+- `mod_log_config`, 505
+- `mod_mime`, 505
+- `mod_mime_magic`, 505
+- `mod_negotiation`, 505
+- `mod_proxy`, 505
+- `mod_rewrite`, 505
+- `mod_setenvif`, 506
+- `mod_speling`, 506
+- `mod_ssl`, 506
+- `mod_status`, 506
+- `mod_unique_id`, 506
+- `mod_userdir`, 506
+- `mod_usertrack`, 507
+- `mod_vhost_alias`, 507
+
 基础设施即服务 (MaaS), 643, 653–654
+
 方法。另见函数; Microsoft Exchange Server, 557
+
 Microsoft Office, Microsoft 声卡, 85–86
+
 中间件, 597
+
 MIME (多用途互联网邮件扩展), 73
-Mir, 44 镜像系统, 348
-mkdir 命令, 173–174, 204
-rnd 命令, 470
-mkisofs 命令, 101
-助记符 (权限), 166 移动开发
-- Android
-Android 架构, 724–725
-Android Studio 安装, 725
-创建, 727
-在线资源, 728
-SDK (软件工具包), 729
-安装, 730
-- Android
-创建应用程序, 730
-在线资源, 731
-概述, 732
-SDK (软件工具包), 733
-安装, 734
-模块, 735–736
-Nginx, 522–523
-Puppet, 656
-Jojo, 653
-MongoDB, 610
-Monitor 部分 (xorg.conf), 48
-mono 软件包, 718
-模块 768
-内核管理, 458–460
-图像, 739
-Nginx, 522–523
-Puppet, 656
-在线资源, 709
-Jojo, 653
-MongoDB, 610
-Monitor 部分 (xorg.conf), 48
-mono 软件包, 718
-模块 768
-内核管理, 458
-10 宇宙之主...
-pdksh and bash, 292–293
-numbers
-number comparison
 
-对不起，上面的处理出现了重复。译文：
+Mir, 44
 
-[content]
-> 通用正则表达式 (Freidl), 274
-宇宙之主 (MOTUS), 18, 101
-主引导记录。参见 MBR (master boot record)
-匹配模式。参见 模式匹配
+镜像系统, 348
 
-# M
 
-MATE, 117–118
-MaaS (基础设施即服务), 643, 653–654
-数学, 77
-MAC (强制性访问控制), 435
-Matrox Naval, 104
-MAC (介质访问控制) 地址, 423
-Matrox Rainbow Runner G 系列, 104
-Mac 硬件
-mbox 格式, 544
-在...上安装 Ubuntu, 3
-MBR (主引导记录)
-在 Juju 上运行, 653
-定义, 313
-带有 make 命令的宏, 672–683
-安装引导加载程序到, 5
-mc 命令, 362
-Mago, 705
-MDAs (邮件投递代理), 544–545, 555–556
-模块 767
-测量键缓冲区使用, 448–449 调过的新闻组, 72
-介质访问控制 (MAC) 地址, 382 modinfo 命令, 459
-Memcached, 607–608 modprobe 命令, 388–389, 458–459
-MemcachedDB, 607–608 modprobe.conf 文件, 387–388, 459
-内存, 327–328. 另见缓存 (SQL) modprobe.d/
-旧的, 159
-Mercurial, Dwight, 685–686 模块化内核, 457
-消息投递间隔 (Postfix), 549 模块部分 (xorg.conf), 48
-邮件应用程序编程接口模块 (MAPI), 557 Apache
-- mod_access, 502
-- mod_alias, 502
-- mod_ais, 503
-- mod_auth, 503
-- mod_auth_anon, 503
-- mod_auth_dbm, 503
-- mod_auth_digest, 504
-- mod_autoindex, 504
-- mod_cgi, 504
-- mod_dir, 504
-- mod_expires, 504
-- mod_headers, 504-505
-- mod_include, 505
-- mod_info, 505
-- mod_log_config, 505
-- mod_mime, 505
-- mod_mime_magic, 505
-- mod_negotiation, 505
-- mod_proxy, 505
-- mod_rewrite, 505
-- mod_setenvif, 506
-- mod_speling, 506
-- mod_ssl, 506
-- mod_status, 506
-- mod_unique_id, 506
-- mod_userdir, 506
-- mod_usertrack, 507
-- mod_vhost_alias, 507
-基础设施即服务 (MaaS), 643, 653–654
-方法。另见函数; Microsoft Exchange Server, 557
-Microsoft Office, Microsoft 声卡, 85–86
-中间件, 597
-MIME (多用途互联网邮件扩展), 73
-Mir, 44 镜像系统, 348
-mkdir 命令, 173–174, 204
-rnd 命令, 470
-mkisofs 命令, 101
-助记符 (权限), 166 移动开发
-- Android
-Android 架构, 724–725
-Android Studio 安装, 725
-创建, 727
-在线资源, 728
-SDK (软件工具包), 729
-安装, 730
-- Android
-创建应用程序, 730
-在线资源, 731
-概述, 732
-SDK (软件工具包), 733
-安装, 734
-模块, 735–736
-Nginx, 522–523
-Puppet, 656...
-[/content]
 
-*(注：由于文本长度限制，上述处理中出现了逻辑重复错误。以下是为您重新整理的完整译文：)*
-
-[content]
 # lprm 命令
 
-lprm 命令, 487
-mail. 参见 email
-lpstat 命令, 487
+`lprm`命令, 487
+
+`mail`。参见 email
+
+`lpstat`命令, 487
+
 邮件投递代理 (MDAs), 544–545
-Is 命令, 162–164, 200–202
+
+`ls`命令, 162–164, 200–202
+
 邮件中继, 550
-lsblk 命令, 202–203
+
+`lsblk`命令, 202–203
+
 邮件传输代理 (MTAs), 541–544
-lsh 命令, 202–203
+
+`lsh`命令, 202–203
+
 邮件用户代理 (MUAs), 545
-lsmod 命令, 202–203, 458
-maildir, 544
-lspci 命令, 105, 202–203
+
+`lsmod`命令, 202–203, 458
+
+`maildir`, 544
+
+`lspci`命令, 105, 202–203
+
 邮件列表, 40–42
+
 LTS (长期支持), 21, 33
-make 命令, 671–673
+
+`make`命令, 671–673
+
 LTSP (Linux 终端服务器项目)
-make config 命令, 466
+
+`make config`命令, 466
+
 能力 (capabilities), 628–629
-make menoconfig 命令, 466–478
+
+`make menoconfig`命令, 466–478
+
 安装, 627–628
-make oldconfig 命令, 467
+
+`make oldconfig`命令, 467
+
 LDM (LTSP 显示管理器), 628
-make xconfig 命令, 467
+
+`make xconfig`命令, 467
+
 在线资源, 629
-makefiles, 671–673
+
+`makefiles`, 671–673
+
 概述, 44, 623–624
+
 创建目录, 204
+
 要求, 624–627
-man 命令, 35, 156, 203
+
+`man`命令, 35, 156, 203
+
 LTSP 显示管理器 (LDM), 628
-man 页面, 156, 203
+
+`man`页面, 156, 203
+
 Lua, 717
+
 强制性访问控制 (MAC), 435
-lua 命令, 717
+
+`lua`命令, 717
+
 手册页, 35, 203
-lua50 软件包, 717
+
+`lua50`软件包, 717
+
 MAPI (邮件应用程序编程接口), 557
+
 Lubuntu, LXDE 以及 115–116
-MapReduce, 611
-lubuntu-desktop 软件包, 116
+
+`MapReduce`, 611
+
+`lubuntu-desktop`软件包, 116
+
 MariaDB, 577
+
 LUGs (Linux 用户组), 39
+
 伪装 (masquerading), 376–377, 548
+
 LVM (逻辑卷管理器), 646
+
 主引导记录。参见 MBR (master boot record)
+
 LXDE 和 Ubuntu, 115–116
+
 > 通用正则表达式 (Freidl), 274
+
 宇宙之主 (MOTUS), 18, 101
+
 匹配模式。参见 模式匹配
 
 # M
 
 MATE, 117–118
+
 MaaS (基础设施即服务), 643, 653–654
+
 数学, 77
+
 MAC (强制性访问控制), 435
+
 Matrox Naval, 104
+
 MAC (介质访问控制) 地址, 423
+
 Matrox Rainbow Runner G 系列, 104
+
 Mac 硬件
-mbox 格式, 544
+
+`mbox`格式, 544
+
 在...上安装 Ubuntu, 3
+
 MBR (主引导记录)
+
 在 Juju 上运行, 653
+
 定义, 313
-带有 make 命令的宏, 672–683
+
+带有 `make`命令的宏, 672–683
+
 安装引导加载程序到, 5
-mc 命令, 362
+
+`mc`命令, 362
+
 Mago, 705
+
 MDAs (邮件投递代理), 544–545, 555–556
+
 模块 767
+
 测量键缓冲区使用, 448–449 调过的新闻组, 72
-介质访问控制 (MAC) 地址, 382 modinfo 命令, 459
-Memcached, 607–608 modprobe 命令, 388–389, 458–459
-MemcachedDB, 607–608 modprobe.conf 文件, 387–388, 459
-内存, 327–328. 另见缓存 (SQL) modprobe.d/
+
+介质访问控制 (MAC) 地址, 382 `modinfo`命令, 459
+
+Memcached, 607–608 `modprobe`命令, 388–389, 458–459
+
+MemcachedDB, 607–608 `modprobe.conf`文件, 387–388, 459
+
+内存, 327–328. 另见缓存 (SQL) `modprobe.d/`
+
 旧的, 159
+
 Mercurial, Dwight, 685–686 模块化内核, 457
-消息投递间隔 (Postfix), 549 模块部分 (xorg.conf), 48
+
+消息投递间隔 (Postfix), 549 模块部分 (`xorg.conf`), 48
+
 邮件应用程序编程接口模块 (MAPI), 557 Apache
-- mod_access, 502
-- mod_alias, 502
-- mod_ais, 503
-- mod_auth, 503
-- mod_auth_anon, 503
-- mod_auth_dbm, 503
-- mod_auth_digest, 504
-- mod_autoindex, 504
-- mod_cgi, 504
-- mod_dir, 504
-- mod_expires, 504
-- mod_headers, 504-505
-- mod_include, 505
-- mod_info, 505
-- mod_log_config, 505
-- mod_mime, 505
-- mod_mime_magic, 505
-- mod_negotiation, 505
-- mod_proxy, 505
-- mod_rewrite, 505
-- mod_setenvif, 506
-- mod_speling, 506
-- mod_ssl, 506
-- mod_status, 506
-- mod_unique_id, 506
-- mod_userdir, 506
-- mod_usertrack, 507
-- mod_vhost_alias, 507
+
+- `mod_access`, 502
+- `mod_alias`, 502
+- `mod_ais`, 503
+- `mod_auth`, 503
+- `mod_auth_anon`, 503
+- `mod_auth_dbm`, 503
+- `mod_auth_digest`, 504
+- `mod_autoindex`, 504
+- `mod_cgi`, 504
+- `mod_dir`, 504
+- `mod_expires`, 504
+- `mod_headers`, 504-505
+- `mod_include`, 505
+- `mod_info`, 505
+- `mod_log_config`, 505
+- `mod_mime`, 505
+- `mod_mime_magic`, 505
+- `mod_negotiation`, 505
+- `mod_proxy`, 505
+- `mod_rewrite`, 505
+- `mod_setenvif`, 506
+- `mod_speling`, 506
+- `mod_ssl`, 506
+- `mod_status`, 506
+- `mod_unique_id`, 506
+- `mod_userdir`, 506
+- `mod_usertrack`, 507
+- `mod_vhost_alias`, 507
+
 基础设施即服务 (MaaS), 643, 653–654
+
 方法。另见函数; Microsoft Exchange Server, 557
+
 Microsoft Office, Microsoft 声卡, 85–86
+
 中间件, 597
+
 MIME (多用途互联网邮件扩展), 73
+
 Mir, 44 镜像系统, 348
-mkdir 命令, 173–174, 204
-rnd 命令, 470
-mkisofs 命令, 101
+
+`mkdir`命令, 173–174, 204
+
+`rnd`命令, 470
+
+`mkisofs`命令, 101
+
 助记符 (权限), 166 移动开发
+
 - Android
+
 Android 架构, 724–725
+
 Android Studio 安装, 725
+
 创建, 727
+
 在线资源, 728
+
 SDK (软件工具包), 729
+
 安装, 730
+
 - Android
+
 创建应用程序, 730
+
 在线资源, 731
+
 概述, 732
+
 SDK (软件工具包), 733
+
 安装, 734
+
 模块, 735–736
+
 Nginx, 522–523
-Puppet, 656... (此处由于原文内容重复，省略后续重复部分，已按要求完成核心逻辑翻译)
 
+Puppet, 656...
 
+`open-cobol`软件包 771
 
+在 `tcsh`中, 296–297
 
-open-cobol 软件包 771
-在 tcsh 中, 296–297
 在 reading 中， 35–36
 
 编号系统
+
 - Ubuntu 相关的网站, 40–42
 - Linux 内核, 30
 - 网络搜索技巧, 37–38
@@ -3562,19 +3613,19 @@ open-cobol 软件包 771
 - 多媒体应用, 109
 - OCaml, 718
 - 网络, 414
-- ocam 软件包, 718
+- `ocam`软件包, 718
 - Nginx, 526
-- ocamlc, 718
+- `ocamlc`, 718
 - NoSQL 数据库, 613
 - 进制表示, 166
 - OpenStack, 647
 - ODSL (开源开发实验室), 29
 - 机会性开发, 692
-- .ogg 文件扩展名, 88, 106
+- `.ogg`文件扩展名, 88, 106
 - 性能调优, 452
 - Ogg-Vorbis 格式, 88
 - 办公套件与应用程序, 83
-- .ovy 文件扩展名, 106
+- `.ovy`文件扩展名, 106
 - 编程工具, 680
 - 在线资源
 - 远程访问, 423
@@ -3603,21 +3654,19 @@ open-cobol 软件包 771
 - X. 61
 
 ## 帮助
-- 开源系统 (OSS), 86
-+ 商业支持, 38–39
-- 开源, 20
-+ Linux 组, 39–40
-- 开源开发实验室 (ODSL), 29
-+ LUGs (Linux 用户组), 39
-- open-cobol 软件包, 712
-+ 邮件列表, 40–42
+
+- 商业支持, 38–39
+- Linux 组, 39–40
+- LUGs (Linux 用户组), 39
+- 邮件列表, 40–42
 
 ## 772 OpenDocument
+
 - OpenDocument, 78
 - OpenLDAP, 615
 - OpenOffice.org, 77–78
 - OpenShot 视频编辑器, 108
-- openssh-server 软件包, 417
+- `openssh-server`软件包, 417
 - OpenStack, 645–647
 - OpenVPN, 573–575
 - OpenXchange, 558
@@ -3628,15 +3677,17 @@ open-cobol 软件包 771
 - 选项方向, 497
 
 ## 操作符
-- 管道运算符 (), 219–222
+
+- 管道运算符 (`|`), 219–222
 - 布尔运算符, 221–222
 - 文件操作符, 297–298
 - 逻辑运算符, 298–299
-- pdksh 和 bash
+- `pdksh`和 `bash`
 - 文件操作符, 293–294
 - 逻辑运算符, 294–295
 
 ## Oracle
+
 - Beeve, 557
 - Developer, 679
 - OpenOffice.org, 77–78
@@ -3646,6 +3697,7 @@ open-cobol 软件包 771
 - OSS (开源声音系统), 86
 
 ## 输出
+
 - BIOS (基本输入/输出系统)
 - 深度代码, 313
 - 启动过程, 311–313
@@ -3665,25 +3717,27 @@ open-cobol 软件包 771
 - 分页处理, 197–198
 
 ## P
+
 - PaaS (平台即服务), 643
-- 软件包管理工具, apt-get, 16
+- 软件包管理工具, `apt-get`, 16
 
 ## 软件包
-- apache2, 490
-- apparmor-profiles, 436
-- bikeshed, 689
-- bind9, 666
-- bridge-utils, 634
-- clisp, 716
-- clojure, 711
-- default-jdk, 716
-- elixir, 713
+
+- `apache2`, 490
+- `apparmor-profiles`, 436
+- `bikeshed`, 689
+- `bind9`, 666
+- `bridge-utils`, 634
+- `clisp`, 716
+- `clojure`, 711
+- `default-jdk`, 716
+- `elixir`, 713
 - 优化
 - Apache, 446–447
 - 文件系统调优, 444–445
 - 硬盘
 - BIOS 设置, 442–443
-- hdparm 命令, 443
+- `hdparm`命令, 443
 - 概述, 441–442
 - 内核, 445–446
 - MySQL
@@ -3691,63 +3745,66 @@ open-cobol 软件包 771
 - 概述, 448
 - 查询缓存, 449–451
 - 密码, 773
-- erlang, 713
-- gforth, 714
-- ghc, 715
-- gnat, 710
-- gnat-gps, 710
-- gnome-shell, 116
-- gofortran, 715
-- golang, 714
-- golang-docs, 714
-- groovy, 715
-- gstreamer1.0-plugins-ugly, 88
-- haskell-platform, 715
-- kubuntu-desktop, 113–114
-- kvm-ok, 633–634
-- ldap-utils, 616
-- librtbin, 634
-- linux-backports-modules, 461
-- linux-source, 462
+- `erlang`, 713
+- `gforth`, 714
+- `ghc`, 715
+- `gnat`, 710
+- `gnat-gps`, 710
+- `gnome-shell`, 116
+- `gofortran`, 715
+- `golang`, 714
+- `golang-docs`, 714
+- `groovy`, 715
+- `gstreamer1.0-plugins-ugly`, 88
+- `haskell-platform`, 715
+- `kubuntu-desktop`, 113–114
+- `kvm-ok`, 633–634
+- `ldap-utils`, 616
+- `librtbin`, 634
+- `linux-backports-modules`, 461
+- `linux-source`, 462
 - 列表, 38
-- lua510, 717
-- lubuntu-desktop, 116
-- mono-devel, 718
-- oacity-actions, 363
-- oacity-image-converter, 397
-- hnfs-common, 475
-- ngix, 517
-- ocaml, 718
-- open-cobol, 712
-- openssh-server, 417
-- packaging-dev, 695–696
-- patches, 698–701
-- postfix, 546
-- postgresql, 600
+- `lua510`, 717
+- `lubuntu-desktop`, 116
+- `mono-devel`, 718
+- `oacity-actions`, 363
+- `oacity-image-converter`, 397
+
+
+
+- `hnfs-common`, 475
+- `ngix`, 517
+- `ocaml`, 718
+- `open-cobol`, 712
+- `openssh-server`, 417
+- `packaging-dev`, 695–696
+- `patches`, 698–701
+- `postfix`, 546
+- `postgresql`, 600
 - PPAs (个人软件包存档)
-- 创建, 688
-- Ubuntu SDK, 730
-- qemu-kvm, 634
-- ruby1.8, 719
-- cala, 720
+  - 创建, 688
+  - Ubuntu SDK, 730
+- `qemu-kvm`, 634
+- `ruby1.8`, 719
+- `cala`, 720
 - Scratch
-- scratch, 720
-- slapd, 616
+  - `scratch`, 720
+- `slapd`, 616
 - snap 打包, 146–147, 689
-- soundconverter, 89
-- telnet, 416
-- ubuntu-gnome-desktop, 117
-- ubuntu-make, 668
-- ubuntu-qa-tools, 705
-- ubuntu-restricted-extras, 88, 106
-- ubuntu-software, 133
+- `soundconverter`, 89
+- `telnet`, 416
+- `ubuntu-gnome-desktop`, 117
+- `ubuntu-make`, 668
+- `ubuntu-qa-tools`, 705
+- `ubuntu-restricted-extras`, 88, 106
+- `ubuntu-software`, 133
 - Vala, 720–721
-- valac, 721
-- virt-inst, 634
-- virt-manager, 634
-- virt-viewer, 634
-- xubuntu-desktop, 115
-- packaging-dev 软件包, 695–696
+- `valac`, 721
+- `virt-inst`, 634
+- `virt-manager`, 634
+- `virt-viewer`, 634
+- `xubuntu-desktop`, 115
+- `packaging-dev` 软件包, 695–696
 - 数据包写入, 103–104
 - 分页处理, 197–198
 - PAM (可插身份模块), 255–256
@@ -3756,68 +3813,71 @@ open-cobol 软件包 771
 - 参数, 位置, 222–284
 - 括号 (), 222
 - 分区策略
-- /home 分区, 10
-- 规划, 5
-- 根分区, 10
-- 交换分区, 10
-- passwd 命令, 249
-- passwd 文件, 159, 253
+  - `/home` 分区, 10
+  - 规划, 5
+  - 根分区, 10
+  - 交换分区, 10
+- `passwd` 命令, 249
+- `passwd` 文件, 159, 253
 - 密码, 256
 
 ## 密码
+
 - 批量更改, 256–257
 - 选择, 12, 429–430
-- /etc/passwd 文件, 253–254
+- `/etc/passwd` 文件, 253–254
 - MySQL, 589–590
 - 策略, 密码, 252
 - shadow 密码, 254–255
-- pasteinit, 691
-- patch 命令, 464
+- `pasteinit`, 691
+- `patch` 命令, 464
 - 补丁内核, 460, 463–464
-- patch-kernel 脚本, 463
+- `patch-kernel` 脚本, 463
 - 模式匹配, 274–275
-- pbget 命令, 690
+- `pbget` 命令, 690
 - pbm (便位图), 97
-- put 命令, 690
-- put 命令, 695
-- /pcx 文件扩展名, 96
+- `put` 命令, 690
+- `put` 命令, 695
+- `/pcx` 文件扩展名, 96
 - PDF (便文档格式) 文件
-- 编辑, 81
-- .pdf 文件扩展名, 36, 80–81
+  - 编辑, 81
+  - `.pdf` 文件扩展名, 36, 80–81
 - PDF 编辑器, 81
 - 对等节点, 549
 - Percona Server, 577
 - 性能调优
-- Apache, 446–447
-- 文件系统调优, 444–445
-- 硬盘
-- BIOS 设置, 442–443
-- hdparm 命令, 443
-- 概述, 441–442
-- 内核, 445–446
-- MySQL
-- 缓冲区使用, 448–449
-- 概述, 448
-- 查询缓存, 449–451
-- 查询优化, 451–452
-- 读取缓冲区, 451
-- 表缓存, 451
-- 在线资源, 452
+  - Apache, 446–447
+  - 文件系统调优, 444–445
+  - 硬盘
+    - BIOS 设置, 442–443
+    - `hdparm` 命令, 443
+    - 概述, 441–442
+  - 内核, 445–446
+  - MySQL
+    - 缓冲区使用, 448–449
+    - 概述, 448
+    - 查询缓存, 449–451
+    - 查询优化, 451–452
+    - 读取缓冲区, 451
+    - 表缓存, 451
+    - 在线资源, 452
 - PHP, 718
+
 ## 权限
-- chgrp 命令, 170
-- chmod 命令, 170
-- chown 命令, 170
-- umask, 170
+
+- `chgrp` 命令, 170
+- `chmod` 命令, 170
+- `chown` 命令, 170
+- `umask`, 170
 - 权限设置, 170
 - 目录权限, 170
 - 文件权限, 170
 - 权限更改, 170
 - 分页处理, 197–198
 - 权限策略, 170
-- suid 权限, 170
-- sgid 权限, 170
--  sticky位, 170
+- `suid` 权限, 170
+- `sgid` 权限, 170
+- sticky 位, 170
 - 权限列表, 170
 - 权限检查, 170
 - 权限继承, 170
@@ -3834,83 +3894,82 @@ open-cobol 软件包 771
 - 权限恢复, 170
 - 权限同步, 170
 
+## `quotacheck` 命令 777
 
-
-
-
-## quotacheck 命令 777
 - KOffice, 80
-- .ps 文件扩展名, 36
+- `.ps` 文件扩展名, 36
 - LibreOffice, 76–78
 - pskhsh, 比较表达式
 - Microsoft Office, 75
-- 文件操作符, 293–294
+  - 文件操作符, 293–294
 - ProFTPD, 533
-- 逻辑操作符, 294–295
+  - 逻辑操作符, 294–295
 - 编程语言。参见 languages
-- 数字数字比较, 292–293
+  - 数字数字比较, 292–293
 - 编程工具
-- 字符串比较, 290–292
-- autoconf 命令, 673–674
-- psql 命令, 600
-- gdb 命令, 675
+  - 字符串比较, 290–292
+  - `autoconf` 命令, 673–674
+- `psql` 命令, 600
+  - `gdb` 命令, 675
 - 公有云, 644
-- GNU 编译器集合 (gcc), 675–676
+  - GNU 编译器集合 (`gcc`), 675–676
 - 公钥基础设施架构 (PKI), 573
 - Publican, 81–82
-- gprof 命令, 675
+  - `gprof` 命令, 675
 - PulseAudio, 86–87
 - 图形化开发工具
-- purge-old-kernels 命令, 691
-- Glide 客户端, 677–678
-- pwd 命令, 152–153, 165
-- IDE（集成开发环境）, 678–680
+  - `purge-old-kernels` 命令, 691
+  - Glide 客户端, 677–678
+- `pwd` 命令, 152–153, 165
+  - IDE（集成开发环境）, 678–680
 - PXE, 314
-- KDevelop 客户端, 676–677
+  - KDevelop 客户端, 676–677
 - Python, 719
-- 概述, 676
+  - 概述, 676
 
 # Q
+
 - SDKs（软件开发包）, 678–680
 - QA（质量保证）
-- QA 团队, 705
-- make 命令, 671–673
-- 在线资源, 680
-- Ubuntu 测试，帮助与
-- 概述, 669
-- Bug Squad, 705
-- splint 命令, 674–675
-- 社区团队, 703–704
-- [programs] 部分 (smb.conf), 479
-- 在线资源, 708
+  - QA 团队, 705
+  - `make` 命令, 671–673
+  - 在线资源, 680
+  - Ubuntu 测试，帮助与
+    - 概述, 669
+    - Bug Squad, 705
+  - `splint` 命令, 674–675
+  - 社区团队, 703–704
+- `[programs]` 部分 (`smb.conf`), 479
+  - 在线资源, 708
 - 混杂模式, 431
 - QA 团队, 705
 - Test Drive, 705–708
 - 有软件, 20
 - Ubuntu 测试团队, 704–705
 - 有视频驱动程序，安装, 122–123
-- qemu-kvm 软件包, 634
+- `qemu-kvm` 软件包, 634
 - 代理服务器
-- Qmail, 543–544
-- 定义, 561
-- 在线资源, 575
+  - Qmail, 543–544
+  - 定义, 561
+  - 在线资源, 575
 - Quassel, 70
-- Squid
-- ACLs（访问控制列表）, 563–567
+  - Squid
+    - ACLs（访问控制列表）, 563–567
 - 查询缓存优化, 449–551
-- 客户端配置, 562–563
+  - 客户端配置, 562–563
 - 问号 (?), 275
-- 客户端 IP 地址, 567–568
+  - 客户端 IP 地址, 567–568
 - Quickstart (Juju), 653
-- 安装, 562
-- quickstart 命令, 653
-- 示例配置, 568–569
-- quotacheck 命令, 263
-- ps 命令, 213–214
+  - 安装, 562
+- `quickstart` 命令, 653
+  - 示例配置, 568–569
+- `quotacheck` 命令, 263
+  - `ps` 命令, 213–214
 
-## quotaoff 命令
-- quotaoff 命令, 263
-- quotaon 命令, 263
+## `quotaoff` 命令
+
+- `quotaoff` 命令, 263
+- `quotaon` 命令, 263
 - 磁盘配额, 262–263
 - 引号, 288
 - A, 662
@@ -3922,15 +3981,16 @@ open-cobol 软件包 771
 - TXT, 665
 
 # R
-- rabbit-mq, 646
+
+- `rabbit-mq`, 646
 - Radiance, 98
 - RAID（独立磁盘冗列）, 348
 - Rails, 719
 - ARP（反向地址协议）, 382
-- .raw 文件扩展名, 88
+- `.raw` 文件扩展名, 88
 - RAW 格式, 88
 - Raymond, Eric, 185
-- rc 脚本, 316
+- `rc` 脚本, 316
 - RDBMS（关系数据库管理系统）。参见 relational databases
 - RDP（远程显示协议）, 638
 - 缓冲区, 451
@@ -3939,32 +3999,32 @@ open-cobol 软件包 771
 - 系统重启, 183
 - 重新编译内核, 460–461
 - A 记录 (DNS), 662
-- apropos 命令, 156–157
-- man 页面, 156, 203
+- `apropos` 命令, 156–157
+- `man` 页面, 156, 203
 - 概述, 35–36
-- where 命令, 157
+- `where` 命令, 157
 - DBAs（数据库管理员）, 577–778
 - root 用户 779
-- 概述, 579–581
+  - 概述, 579–581
 - 救援, 366–368
 - 硬件规格研究, 2
 - 重置系统, 234–235
 - 创建表命令, 582–583
-- resolv.conf 文件, 396–397
-- release 命令, 690
+- `resolv.conf` 文件, 396–397
+- `release` 命令, 690
 - 版本发布周期 (Ubuntu), 694–695
-- release-build 命令, 690
-- bg 命令, 215–216
+- `release-build` 命令, 690
+- `bg` 命令, 215–216
 - 命令行, 153–154
-- fg 命令, 215–216
-- jobs 命令, 214
-- ps 命令, 213–214
-- top 命令, 216–218
-- 重启 slapd, 616
+- `fg` 命令, 215–216
+- `jobs` 命令, 214
+- `ps` 命令, 213–214
+- `top` 命令, 216–218
+- 重启 `slapd`, 616
 - 从 SQL 数据库检索数据, 584–586
 - 密钥登录, 419–420
-- scp 命令, 418
-- sftp 命令, 417, 418–419
+- `scp` 命令, 418
+- `sftp` 命令, 417, 418–419
 - 反向搜索, 237
 - Telnet, 415–417
 - REVOKE 语句, 591, 595
@@ -3976,166 +4036,163 @@ open-cobol 软件包 771
 - 权限。参见 privileges
 - 使用 APT（高级包工具）, 141
 - 使用 Synaptic, 134–135
-- rename 命令, 204
+- `rename` 命令, 204
 - 重命名文件, 175–176, 204
-- renice 命令, 326–327
+- `renice` 命令, 326–327
 - RivaT, 104
-- repeat 语句, 303
-- rm 命令, 175, 205
+- `repeat` 语句, 303
+- `rm` 命令, 175, 205
 - REPL（读-评估-打印循环）, 711
-- rmdir 命令, 173–174
-- rmmod 命令, 458
+- `rmdir` 命令, 173–174
+- `rmmod` 命令, 458
 - 从...编译软件, 144–145
 - root 分区, 10
-- 配置, 19–21
+  - 配置, 19–21
 - root 提示符, 18
 - root 用户（软件）
-- repquota 命令, 263
-- 创建用户, 181–182
-- 请求 (DNS), 661–662
-- 删除用户, 182
-- 概述, 178, 242–244
-- require 指令, 498–499, 500
-- sudo 命令, 178–181
+  - `repquota` 命令, 263
+  - 创建用户, 181–182
+  - 请求 (DNS), 661–662
+  - 删除用户, 182
+  - 概述, 178, 242–244
+- `require` 指令, 498–499, 500
+  - `sudo` 命令, 178–181
 - root 区域, 661
 - 轮日志文件, 331–333
 - 路由器, 386
-- route 命令, 392–394
+- `route` 命令, 392–394
 - RSS 阅读器
-- 连接状态，检查, 481–482
-- rsync 命令, 362–386
-- rtcake 命令, 270–292
-- 测试, 481
-- /bin 目录
-- 启动到默认运行级别, 316
-- /bin/ifconfig, 389–394
-- /bin/ip, 392
-- /bin/netstat, 394
-- /bin/route, 392–394
+  - 连接状态，检查, 481–482
+- `rsync` 命令, 362–386
+- `rtcake` 命令, 270–292
+  - 测试, 481
+- `/bin` 目录
+  - 启动到默认运行级别, 316
+  - `/bin/ifconfig`, 389–394
+  - `/bin/ip`, 392
+  - `/bin/netstat`, 394
+  - `/bin/route`, 392–394
 - 运行命令, 237–238
-- run-one 命令, 691
-- run-this-one 命令, 691
+- `run-one` 命令, 691
+- `run-this-one` 命令, 691
 - Runtime (Android), 724
 - 服务器配置设置, 496
 - 开发开发, 698
 - Rust, 720
 
 # S
+
 - SaaS（软件即服务）, 643
 - Samba
-- 配置, 476–481
-- 挂载, 482–483
-- 停止/启动, 481
-- smclient 命令, 482
+  - 配置, 476–481
+  - 挂载, 482–483
+  - 停止/启动, 481
+  - `smclient` 命令, 482
 - Ruby, 719
 - Ruby Gems, 719
 - Ruby on Rails, 719
-- ruby.8 软件包, 719
+- `ruby.8` 软件包, 719
 - 从非启动硬盘保存文件, 368
-- /etc/passwd 文件, 253–254
+- `/etc/passwd` 文件, 253–254
 - shadow 密码, 254–255
 - 脚本, 238–239
 - 脚本, 316–317
-- scp 命令, 418
-- sftp 命令, 417, 418–419
+- `scp` 命令, 418
+- `sftp` 命令, 417, 418–419
 - 安全
-- 服务器
-- AppArmor, 435
-- Apache
-- 内置内核保护, 425
-- 访问控制, 498–501
-- 设备, 431
-- 灾难恢复计划, 437–438
-- 加密, 10
-- 防火墙, 435
-- 概述, 489–490
-- UFW（简单防火墙）, 432–435
-- 在线资源, 439
-- Apache Tomcat, 530
-- Cherokee, 528–529
-- DHCP 服务器, 402
-- DNS（域名系统） X.Org
-- 使用 BIND 配置, 665–667
-- 请求处理, 661–662
-- 电子邮件, 556–558
-- FTP（文件传输协议）
-- 匿名服务器, 533–536
-- 经过验证的服务器, 532
-- dfptd-ssi, 532–536
-- NcFd, 532–536
-- Jetty, 532
-- 标准服务器, 531–534
-- 服务标识符 (SSIDs), 25
-- 设置组 ID (sgid) 权限, 170–171
-- 设置用户 ID (sid) 权限, 170–171
-- 会话消息块 (SMB), 476
-- 会话写入, 103
-- SSH（安全外壳）脚本。参见命令行
-- LTSP（Linux 终端服务器）管理
-- Ansible, 657
-- CFEngine, 656–657
-- Chef, 656
-- juju, 655
-- Landscape, 655
-- 在线资源, 657
-- 概述, 655
-- Puppet, 656
-- PS（通用 Unix打印系统）
-- NFS（网络文件系统）, 474–476
-- Nginx。参见 Nginx 网络打印机, 483–485
-- 在线资源, 488
-- Samba, 480–481
-- Smart Scopes, 59
-- scratch 软件包, 124
-- scratch 软件包, 720
-- Screen (xorg.conf), 50–51
-- 脚本小子, 426
-- Tripwire, 430
-- 漏洞评估, 427–428
-- 无线网络, 429
-- VPNs（虚拟专用网络）服务器, 573–575
-- xorg.conf 文件, 43–44
-- Yaws, 528
-
-
-
-
+  - 服务器
+    - AppArmor, 435
+    - Apache
+      - 内置内核保护, 425
+      - 访问控制, 498–501
+    - 设备, 431
+    - 灾难恢复计划, 437–438
+    - 加密, 10
+    - 防火墙, 435
+    - 概述, 489–490
+    - UFW（简单防火墙）, 432–435
+    - 在线资源, 439
+    - Apache Tomcat, 530
+    - Cherokee, 528–529
+    - DHCP 服务器, 402
+    - DNS（域名系统） X.Org
+      - 使用 BIND 配置, 665–667
+      - 请求处理, 661–662
+    - 电子邮件, 556–558
+    - FTP（文件传输协议）
+      - 匿名服务器, 533–536
+      - 经过验证的服务器, 532
+      - `dfptd-ssi`, 532–536
+      - NcFd, 532–536
+    - Jetty, 532
+    - 标准服务器, 531–534
+    - 服务标识符 (SSIDs), 25
+    - 设置组 ID (`sgid`) 权限, 170–171
+    - 设置用户 ID (`sid`) 权限, 170–171
+    - 会话消息块 (SMB), 476
+    - 会话写入, 103
+    - SSH（安全外壳）脚本。参见命令行
+    - LTSP（Linux 终端服务器）管理
+      - Ansible, 657
+      - CFEngine, 656–657
+      - Chef, 656
+      - `juju`, 655
+      - Landscape, 655
+      - 在线资源, 657
+      - 概述, 655
+      - Puppet, 656
+      - PS（通用 Unix打印系统）
+        - NFS（网络文件系统）, 474–476
+        - Nginx。参见 Nginx 网络打印机, 483–485
+        - 在线资源, 488
+        - Samba, 480–481
+    - Smart Scopes, 59
+    - `scratch` 软件包, 124
+    - `scratch` 软件包, 720
+    - Screen (`xorg.conf`), 50–51
+    - 脚本小子, 426
+    - Tripwire, 430
+    - 漏洞评估, 427–428
+    - 无线网络, 429
+    - VPNs（虚拟专用网络）服务器, 573–575
+    - `xorg.conf` 文件, 43–44
+    - Yaws, 528
 
 # 软件管理 783
 
 - 可用的 shell, 272
 - 后台处理, 277
 - 表达式比较
-  在 pdsh 和 bash 中, 290–295
-  在 tcsh 中, 295–299
+  - 在 `pdsh` 和 `bash` 中, 290–295
+  - 在 `tcsh` 中, 295–299
 - 限制于目录, 238–239
 - 数据管道, 276
 - 执行, 279
 - 函数, 307–308
-- slapd 软件包, 616
+- `slapd` 软件包, 616
 - Slashdot 效应, 446–447
 - Sleepcity Software, 606, 615
--小型办公/家庭办公 (SOHO) 用户, 35
+- 小型办公/家庭办公 (SOHO) 用户, 35
 - 智能网关, 386
 - hmart hosts, 549
 - smart Scopes, 59
-- smbclient 客户端, 482
-- smbc.conf 文件, 476–481
-- smbstatus 命令, 481–482
-- grepglog, 284–286
+- `smbclient` 客户端, 482
+- `smbc.conf` 文件, 476–481
+- `smbstatus` 命令, 481–482
+- `grepglog`, 284–286
 - 通过特定 shell 解释, 280–281
 - I/O (输入/输出重定向), 275–276
 - 在线资源, 308–309
 - 模式匹配, 274–
 - shell 命令行, 273–274
 - 特殊字符
-  - 反斜线 \\), 279
-  - 反引号 (\), 289–290
-  - 双引号 (*), 288
-  - 单引号 (*), 288–289
+  - 反斜线 (\), 279
+  - 反引号 (`), 289–290
+  - 双引号 ("), 288
+  - 单引号 ('), 288–289
   - 列表, 287–288
 - SMTP (简单邮件传输协议), 377, 541
-- snap 命令, 146–147
+- `snap` 命令, 146–147
 - snap 封装, 689
 - Snapcraft, 689
 - snappy Ubuntu Core, 146, 653
@@ -4143,7 +4200,7 @@ open-cobol 软件包 771
 - Snyder, Garth, 40
 - SOA 记录 (DNS), 666–665
 - Sobell, Mark G., 40
-- socks-prox 命令, 690
+- `socks-prox` 命令, 690
 - 软链接, 199–200
 - Software AGs Adabas 数据库, 77
 - 软件即服务 (SaaS), 643
@@ -4158,14 +4215,14 @@ open-cobol 软件包 771
 - shells. 另见
   - 命令行, 273–274
   - 列表, 272
-- shift 命令, 304
+- `shift` 命令, 304
 - 快捷键 (键盘), 60, 236
-- shutdown 命令, 132–183
+- `shutdown` 命令, 132–183
 - Shuttleworth, Mark, 33, 52
 - 文件之间的相似性, 212
 - 简单邮件传输协议 (SMTP), 377, 541
 - 简单扫描 (Simple Scan), 94–95
-- 单引号 (*), 288
+- 单引号 ('), 288
 - GNU 通用公许可证 (GPL), 29
 - 软件管理
   - APT (高级包工具). 见 APT (高级包工具)
@@ -4178,532 +4235,805 @@ open-cobol 软件包 771
 
 - 概述, 133
 - 数据检索, 584–586
-- 软件编译
-  - 数据库客户端
-    - 来自 tarballs, 143–144
-    - 图形客户端, 600
-    - 来自 Ubuntu 仓库, 144–145
-    - 本地 GUI 客户端访问, 597
-    - MySQL 命令行客户端, 598–600
-    - 软件更新器 (Software Updater), 137
-    - Synaptic, 134–136
-  - 概述, 595
-  - PostgreSQL 命令行客户端, 600
-  - Ubuntu 软件, 133–134
-  - SSH 访问, 595–596
-  - 软件仓库
-    - 从中编译软件, 144–145
-    - 配置, 19–21
-    - Web 访问, 597
-  - MySQL
-    - 与 PostgreSQL 的, 588–588
-    - 数据库创建, 590–591
-    - 软件更新器, 15–18, 137
-    - s updater 命令, 15
-  - SHO (小型办公/家庭办公) 用户, 35
-  - sort 命令, 205–207
-  - 排序文件内容, 205–207
-  - 声音
-    - 安装, 588–589
-    - 密码, 589–590
-  - PostgreSQL
-    - 与 MySQL , 586–588
-    - 数据库目录初始化, 592
-    - 数据库创建, 593
-    - 监听
-      - Banshee, 91–92
-      - 概述, 89
-      - Rhythmbox, 89–91
-    - 概述, 85–86
-    - 声音, 86–87
-    - 声音格式, 88–89
-    - 音量调整, 87
-    - 声音, 86–87
-    - 声音 Juicer, 91–92
-    - soundconverter 软件包, 89
-    - sox 命令, 89
-  - spamassin, 255–556
-  - Dreams, 129
-  - 关系型数据库, 586
-  - SPF (发者策略框架), 665
-  - split 命令, 674–675
-  - SQL 数据库
-    - ACID 合性 (数据库), 587–588
-    - 数据插入, 583–584
-    - 数据锁定, 586–587
-    - 安装, 592
-    - 权限, 594–595
-    - 用户创建, 593–594
-    - 用户删除, 594
-    - 数量, 586
-    - 子查询, 588
-    - 表创建, 582–583
-    - 触发器, 588
-  - squid.conf 文件, 563
-  - Squirrelmail, 556
-  - SSH (Secure Shell)
-    - 通过 IRC 客户端, 745
-    - 与 Telnet, 417
-    - 数据库访问, 595–596
-    - 基于密钥的登录, 419–420
-    - 概述, 15
-    - scp 命令, 166
-    - sftp 命令, 417, 418–419
-    - SSH 密钥
-    - 基于密钥的登录, 419–420
-    - 上传到 Launchpad, 696
-    - sshd-config 文件, 377
-    - ssh-import-id 命令, 691
-    - ssh-keygen 命令, 419–420
-    - SSIDs (服务标识符), 25
-    - 标准 FTP (文件传输协议) 服务器, 531–532
-    - 新 Android Studio 命令, 727
-    - 权威 (SoA) 记录
-    - 语句. 见 loops
-    - break, 307
-    - exit, 307
-    - for, 299–300
-    - if, 304–305
-    - repeat, 303
-    - select, 303–304
-    - shift, 304
-    - until, 302–303
-    - while, 300–302
-  - SQL
-    - CREATE, 582–583
-    - CREATE DATABASE, 590, 593
-    - CREATE USER, 593
-    - GRANT, 591, 594
-    - INSERT, 583–584
-    - REVOKE, 591, 595
-    - SELECT, 584–585
-    - stderr 命令, 211–212
-    - stdin 命令, 211–212
-  - 子网掩码, 785
-  - 子网划分, 381
-  - 子查询 (SQL), 588
-  - sysctl 命令, 445–446
-  - syslog, 330
-  - 替换
-    - 命令, 289–290
-    - 进程, 222
-    - 使用 su 命令, 257–259
-  - 系统
-    - 授予管理员权限
-    - 信息, 列出, 202–203
-    - 恢复, 236
-    - 救援, 366–368
-    - 重置, 234–235
-    - 服务
-      - 启动, 315–316
-      - 创建用户, 181–182
-      - 启动时控制, 317–338
-      - 删除用户, 182
-      - 手动启动/停止, 319
-    - 设置
-    - system-config-printer, 483
-    - 系统管理工具
-  - 系统监控工具
-    - 基于控制台监控
-    - df 命令, 328–329
-    - sync 命令, 444
-    - 同步文件系统, 444
-    - free 命令, 327–328
-    - 系统管理员, 641–642
-  - kill 命令, 325–326
-  - 编辑器 787
-    - awk, 230–232
-    - emacs, 229–230
-    - nano, 227
-    - 概述, 226
+
+
+
+# 软件编译
+
+## 数据库客户端
+
+- 来自 tarballs, 143–144
+- 图形客户端, 600
+- 来自 Ubuntu 仓库, 144–145
+- 本地 GUI 客户端访问, 597
+- MySQL 命令行客户端, 598–600
+- 软件更新器 (Software Updater), 137
+- Synaptic, 134–136
+
+## 概述, 595
+
+## PostgreSQL 命令行客户端, 600
+
+## Ubuntu 软件, 133–134
+
+## SSH 访问, 595–596
+
+## 软件仓库
+
+- 从中编译软件, 144–145
+- 配置, 19–21
+- Web 访问, 597
+
+## MySQL
+
+- 与 PostgreSQL 的, 588–588
+- 数据库创建, 590–591
+- 软件更新器, 15–18, 137
+- `s updater` 命令, 15
+
+## SHO (小型办公/家庭办公) 用户, 35
+
+## `sort` 命令, 205–207
+
+## 排序文件内容, 205–207
+
+## 声音
+
+- 安装, 588–589
+- 密码, 589–590
+
+## PostgreSQL
+
+- 与 MySQL, 586–588
+- 数据库目录初始化, 592
+- 数据库创建, 593
+- 监听
+  - Banshee, 91–92
+  - 概述, 89
+  - Rhythmbox, 89–91
+- 概述, 85–86
+- 声音, 86–87
+- 声音格式, 88–89
+- 音量调整, 87
+- 声音, 86–87
+- 声音 Juicer, 91–92
+- `soundconverter` 软件包, 89
+- `sox` 命令, 89
+
+## `spamassin`, 255–556
+
+## Dreams, 129
+
+## 关系型数据库, 586
+
+## SPF (发者策略框架), 665
+
+## `split` 命令, 674–675
+
+## SQL 数据库
+
+- ACID 合性 (数据库), 587–588
+- 数据插入, 583–584
+- 数据锁定, 586–587
+- 安装, 592
+- 权限, 594–595
+- 用户创建, 593–594
+- 用户删除, 594
+- 数量, 586
+- 子查询, 588
+- 表创建, 582–583
+- 触发器, 588
+
+## `squid.conf` 文件, 563
+
+## Squirrelmail, 556
+
+## SSH (Secure Shell)
+
+- 通过 IRC 客户端, 745
+- 与 Telnet, 417
+- 数据库访问, 595–596
+- 基于密钥的登录, 419–420
+- 概述, 15
+- `scp` 命令, 166
+- `sftp` 命令, 417, 418–419
+- SSH 密钥
+  - 基于密钥的登录, 419–420
+  - 上传到 Launchpad, 696
+- `sshd-config` 文件, 377
+- `ssh-import-id` 命令, 691
+- `ssh-keygen` 命令, 419–420
+
+## SSIDs (服务标识符), 25
+
+## 标准 FTP (文件传输协议) 服务器, 531–532
+
+## 新 Android Studio 命令, 727
+
+## 权威 (SoA) 记录
+
+## 语句. 见 loops
+
+- `break`, 307
+- `exit`, 307
+- `for`, 299–300
+- `if`, 304–305
+- `repeat`, 303
+- `select`, 303–304
+- `shift`, 304
+- `until`, 302–303
+- `while`, 300–302
+
+## SQL
+
+- `CREATE`, 582–583
+- `CREATE DATABASE`, 590, 593
+- `CREATE USER`, 593
+- `GRANT`, 591, 594
+- `INSERT`, 583–584
+- `REVOKE`, 591, 595
+- `SELECT`, 584–585
+
+## `stderr` 命令, 211–212
+
+## `stdin` 命令, 211–212
+
+## 子网掩码, 785
+
+## 子网划分, 381
+
+## 子查询 (SQL), 588
+
+## `sysctl` 命令, 445–446
+
+## `syslog`, 330
+
+## 替换
+
+- 命令, 289–290
+- 进程, 222
+- 使用 `su` 命令, 257–259
+
+## 系统
+
+- 授予管理员权限
+- 信息, 列出, 202–203
+- 恢复, 236
+- 救援, 366–368
+- 重置, 234–235
+- 服务
+  - 启动, 315–316
+  - 创建用户, 181–182
+  - 启动时控制, 317–338
+  - 删除用户, 182
+  - 手动启动/停止, 319
+- 设置
+- `system-config-printer`, 483
+
+## 系统管理工具
+
+## 系统监控工具
+
+- 基于控制台监控
+- `df` 命令, 328–329
+- `sync` 命令, 444
+- 同步文件系统, 444
+- `free` 命令, 327–328
+
+## 系统管理员, 641–642
+
+## `kill` 命令, 325–326
+
+## 编辑器 787
+
+- `awk`, 230–232
+- `emacs`, 229–230
+- `nano`, 227
+- 概述, 226
 
 # T
 
--   表
-  - 缓存优化, 451
-  - GPT (GUID 分区表), 314
-  - SQL 表, 创建, 582–583
-  - tail 命令, 207, 329
-  - 磁带驱动备份, 349–350
-  - tar 命令, 232, 351–353, 360–361
-  - tarballs, 编译软件, 143–144
-  - 任务调度
-    - b 命令, 265–268
-    - at 命令, 265–268
-    - cron 命令, 268–270
-    - rtwake 命令, 270–272
-    - 任务. 见 jobs
-  - taylor, David, 85–86
-  - Texmaker, 82
-  - 编辑器
-    - awk, 230–232
-    - emacs, 229–230
-    - nano, 227
-    - 概述, 226
-- 测试
-  - DNS (域名系统), 667
-  - Samba, 481
-  - Ubuntu 测试, 帮助与
+## 表
+
+- 缓存优化, 451
+- GPT (GUID 分区表), 314
+- SQL 表, 创建, 582–583
+
+## `tail` 命令, 207, 329
+
+## 磁带驱动备份, 349–350
+
+## `tar` 命令, 232, 351–353, 360–361
+
+## tarballs, 编译软件, 143–144
+
+## 任务调度
+
+- `b` 命令, 265–268
+- `at` 命令, 265–268
+- `cron` 命令, 268–270
+- `rtwake` 命令, 270–272
+
+## 任务. 见 jobs
+
+## taylor, David, 85–86
+
+## Texmaker, 82
+
+## 编辑器
+
+- `awk`, 230–232
+- `emacs`, 229–230
+- `nano`, 227
+- 概述, 226
+
+## 测试
+
+- DNS (域名系统), 667
+- Samba, 481
+- Ubuntu 测试, 帮助与
   - 社区团队, 703–705
   - 在线资源, 708
-  - Test Drive, 705–708
-- TCP/IP (传输控制协议/网协议)
-  - IP 伪装, 376–777
-  - IPv4 地址, 374–376
-  - IPv6, 378–380
-  - 概述, 374
-  - 端口, 377
-  - tcsh, 比较表达式在
-    - 文件运算符, 297–298
-    - 逻辑运算符, 298–299
-    - 数字比较, 296–297
-    - 字符串比较, 290–292
-  - 团队, 社区, 703–705
-  - telinit 命令, 318
-  - Telnet, 415–417
-  - telnet 命令, 416
-  - telnetd 软件包, 416
-  - 终端. 见命令行
-  - 终端命令, 16
-  - Test Drive, 705–708
-  - testdrive 命令, 706
-  - testdrive-gtk 软件包, 708
-  - testdriver 文件, 706
+- Test Drive, 705–708
 
+## TCP/IP (传输控制协议/网协议)
 
+- IP 伪装, 376–777
+- IPv4 地址, 374–376
+- IPv6, 378–380
+- 概述, 374
+- 端口, 377
 
+## `tcsh`, 比较表达式在
 
+- 文件运算符, 297–298
+- 逻辑运算符, 298–299
+- 数字比较, 296–297
+- 字符串比较, 290–292
 
-788 文本编辑器
+## 团队, 社区, 703–705
 
-sed, 230–232
-vi, 227–228
-文本文件, 读取, 36
-基于文本的终端登录, 152
-瘦客户端, 623
-Thompson, Laura, 591
-线程, 73, 516
-http, 529–530
-Thunar, 114
-Thunderbird, 66–67, 621
-.tif 文件扩展名, 96
-波号 (-), 152
-Time & Date tool, 223
-time warp, 252
-时间/日期配置
-date 命令, 24
-hwclock 命令, 24
-概述, 23
-Time & Date tool, 223
-TIO, 107
-TLDs (顶级域名), 661
-/tmp 目录, 162
-令牌环网络 (Token Ring), 383
-工具控制语言 (tcl), 281
-top 命令, 216–218, 327
-顶级域名 (TLDs), 661
-Norvalis, Lin Benedict, 29, 454, 682
-Totem 播放器, 106
-touch 命令, 165–166, 173
-触摸屏平台, 为开发
-应用程序, 创建, 730
-在线资源, 731
-概述, 729–730
-SDK (软件开发包)
-安装, 730
-traceroute 命令, 373
-传输控制协议 (TCP), 374
+## `telinit` 命令, 318
 
-传输控制协议/互联网协议。
-参见 TCP/IP (传输控制协议/互联网协议)
-传输层安全 (TLS), 506
-travers, 612
-触发器, 588
-Tripwire, 430–431
-tripwire 命令, 430
-木木马, 430
-故障排除, 另另安全
-启动过程
-使用 Boot Repair, 320–321
-概述, 235–236
-手动启动/停止服务, 319
-使用 system, 320–321
-使用 Upstart, 319–320
-帮助
-商业支持, 38–39
-文档, 35–36
-LUGs (Linux 用户组), 39
-Web 搜索技巧, 37–38
-网络连接, 413
-内核, 470–472
-安装后配置, 26–27
-打印机, 487
-运行级别, 319
-sudo 命令, 178–181
-UEFI (统一可扩展固件接口), 6
-tune2fs 命令, 444
-性能调优。参见性能调优
-电视和视频硬件, 104–105
-TXT 记录 (DNS), 665
+## Telnet, 415–417
+
+## `telnet` 命令, 416
+
+## `telnetd` 软件包, 416
+
+## 终端. 见命令行
+
+## 终端命令, 16
+
+## Test Drive, 705–708
+
+## `testdrive` 命令, 706
+
+## `testdrive-gtk` 软件包, 708
+
+## `testdriver` 文件, 706
+
+## 文本编辑器
+
+- `sed`, 230–232
+- `vi`, 227–228
+
+## 文本文件, 读取, 36
+
+## 基于文本的终端登录, 152
+
+## 瘦客户端, 623
+
+## Thompson, Laura, 591
+
+## 线程, 73, 516
+
+## `http`, 529–530
+
+## Thunar, 114
+
+## Thunderbird, 66–67, 621
+
+## `.tif` 文件扩展名, 96
+
+## 波号 (-), 152
+
+## Time & Date tool, 223
+
+## time warp, 252
+
+## 时间/日期配置
+
+- `date` 命令, 24
+- `hwclock` 命令, 24
+- 概述, 23
+- Time & Date tool, 223
+
+## TIO, 107
+
+## TLDs (顶级域名), 661
+
+## `/tmp` 目录, 162
+
+## 令牌环网络 (Token Ring), 383
+
+## 工具控制语言 (tcl), 281
+
+## `top` 命令, 216–218, 327
+
+## 顶级域名 (TLDs), 661
+
+## Norvalis, Lin Benedict, 29, 454, 682
+
+## Totem 播放器, 106
+
+## `touch` 命令, 165–166, 173
+
+## 触摸屏平台, 为开发
+
+- 应用程序, 创建, 730
+- 在线资源, 731
+- 概述, 729–730
+- SDK (软件开发包)
+  - 安装, 730
+
+## `traceroute` 命令, 373
+
+## 传输控制协议 (TCP), 374
+
+## 传输控制协议/互联网协议。参见 TCP/IP (传输控制协议/互联网协议)
+
+## 传输层安全 (TLS), 506
+
+## travers, 612
+
+## 触发器, 588
+
+## Tripwire, 430–431
+
+## `tripwire` 命令, 430
+
+## 木木马, 430
+
+## 故障排除, 另另安全
+
+### 启动过程
+
+- 使用 Boot Repair, 320–321
+- 概述, 235–236
+- 手动启动/停止服务, 319
+- 使用 `system`, 320–321
+- 使用 Upstart, 319–320
+
+### 帮助
+
+- 商业支持, 38–39
+- 文档, 35–36
+- LUGs (Linux 用户组), 39
+- Web 搜索技巧, 37–38
+
+### 网络连接, 413
+
+### 内核, 470–472
+
+### 安装后配置, 26–27
+
+### 打印机, 487
+
+### 运行级别, 319
+
+### `sudo` 命令, 178–181
+
+## UEFI (统一可扩展固件接口), 6
+
+## `tune2fs` 命令, 444
+
+## 性能调优。参见性能调优
+
+## 电视和视频硬件, 104–105
+
+## TXT 记录 (DNS), 665
 
 # U
 
-Ubuntu 公告邮件列表, 41
-#Ubuntu 频道, 42
-Ubuntu 开发者大会 (UDS), 694
+## Ubuntu 公告邮件列表, 41
 
-Unity
+## #Ubuntu 频道, 42
 
-Ubuntu GNOME, 116–117
-配置
+## Ubuntu 开发者大会 (UDS), 694
 
-Ubuntu Kylin, 118
-CCSM (Compiz 设置管理器), 59
-Ubuntu Make, 688–689
-Smart Scopes, 59
-Ubuntu MATE, 117–118
-系统设置, 58
-Ubuntu 裸即服务 (MaaS), 653–654
-Unity Tweak, 59–60
-Ubuntu Mobile, 为应用程序创建, 730
-在线资源, 731
-桌面
-Dash, 54–57
-默认外观, 53
-SDK (软件开发包) 安装, 730
-启动器 (Launcher), 53–54
-面板 (Panel), 57–58
-概述, 729–730
-概述, 52–53
-Ubuntu 仓库, 编译软件, 144–145
-Ubuntu Mobile, 为应用程序开发, 730
-在线资源, 731 概述, 729–730
-Ubuntu SDK, 698
-SDK (软件开发包) 安装, 730
-Ubuntu Software, 133–134
-Unity Tweak 工具, 59–60
-Ubuntu 测试团队, 704–705
-通用数据报协议 (UDP), 374 
-ubuntu-gnome-desktop 包, 117
-通用 USB 安装器, 3–4
-ubuntu-make-tools, 705
-UnQL (无限制查询语言), 60
-ubuntu-qa-tools 包, 65, 88, 106
-非屏蔽绞线 (UTP), 383, 384–385
-ubuntu-restricted-extras 包, 65, 88, 106
-非结构化查询语言 (UnQL)
-ubuntu-software 包, 133
-语句, 302–733
-UDP (通用数据报协议), 374
-更新
-UDS (Ubuntu 开发者大会), 694 检查
-UEFI (统一可扩展固件接口), 6, 313–314
-APT (高级包工具), 138
-UFW (通用防火墙), 432–443
-Software Updater, 15–18
-ufw 命令, 432–443
-首次更新
-Ubuntu 公告邮件列表, 441
-ufw.log, 330
-UIDs (用户 ID), 244
-UPG (用户私组), 245
-umask 命令, 165–170
-uname 命令, 30
-GPG 密钥, 696–697
-UFW (通用防火墙), 432–443
-单播寻址, 382
-统一可扩展固件接口 (UEFI), 6, 313–314
-统一资源标识符 (URIs), 485–486
+## Unity
+
+- Ubuntu GNOME, 116–117
+- 配置
+  - Ubuntu Kylin, 118
+  - CCSM (Compiz 设置管理器), 59
+  - Ubuntu Make, 688–689
+  - Smart Scopes, 59
+  - Ubuntu MATE, 117–118
+  - 系统设置, 58
+  - Ubuntu 裸即服务 (MaaS), 653–654
+  - Unity Tweak, 59–60
+
+## Ubuntu Mobile, 为应用程序创建
+
+- 在线资源, 731
+- 桌面
+  - Dash, 54–57
+  - 默认外观, 53
+  - SDK (软件开发包) 安装, 730
+  - 启动器 (Launcher), 53–54
+  - 面板 (Panel), 57–58
+  - 概述, 729–730
+  - 概述, 52–53
+
+## Ubuntu 仓库, 编译软件, 144–145
+
+## Ubuntu Mobile, 为应用程序开发
+
+- 在线资源, 731
+- 概述, 729–730
+
+## Ubuntu SDK, 698
+
+- SDK (软件开发包) 安装, 730
+
+## Ubuntu Software, 133–134
+
+## Unity Tweak 工具, 59–60
+
+## Ubuntu 测试团队, 704–705
+
+## 通用数据报协议 (UDP), 374
+
+## `ubuntu-gnome-desktop` 包, 117
+
+## 通用 USB 安装器, 3–4
+
+## `ubuntu-make-tools`, 705
+
+## UnQL (无限制查询语言), 60
+
+## `ubuntu-qa-tools` 包, 65, 88, 106
+
+## 非屏蔽绞线 (UTP), 383, 384–385
+
+## `ubuntu-restricted-extras` 包, 65, 88, 106
+
+## 非结构化查询语言 (UnQL)
+
+## `ubuntu-software` 包, 133
+
+## 语句, 302–733
+
+## UDP (通用数据报协议), 374
+
+## 更新
+
+- UDS (Ubuntu 开发者大会), 694
+- 检查
+  - UEFI (统一可扩展固件接口), 6, 313–314
+  - APT (高级包工具), 138
+  - UFW (通用防火墙), 432–443
+  - Software Updater, 15–18
+  - `ufw` 命令, 432–443
+  - 首次更新
+  - Ubuntu 公告邮件列表, 441
+
+## `ufw.log`, 330
+
+## UIDs (用户 ID), 244
+
+## UPG (用户私组), 245
+
+## `umask` 命令, 165–170
+
+## `uname` 命令, 30
+
+## GPG 密钥, 696–697
+
+## UFW (通用防火墙), 432–443
+
+## 单播寻址, 382
+
+## 统一可扩展固件接口 (UEFI), 6, 313–314
+
+## 统一资源标识符 (URIs), 485–486
+
 # Upstart
 
-Upstart, 311–312, 314, 319–320
-uptime 命令, 228
-quick 命令, 691
-超级用户/root 用户, 181–182
-sudo 命令, 178–181
-概述, 257
-使用 su 命令, 257–259
-使用 sudo 命令, 259–262
-驱动器, 安装, 6
-已内存, 显示, 327–328
-Usenet 新闻, 72–74
-用户 ID (UIDs), 244
-用户私组 (UPG), 245
-用户指令, 494
-用户, 251
-命令行, 154–155
-文件权限, 244
-超级用户/root 用户, 242–244
-UIDs (用户 ID), 244
-用户类型, 245
-添加, 250–251
-创建, 181–182
-删除, 182
-磁盘配额, 262–263
-FTP 软件, 534–536
-组
-UTP (非屏蔽绞线), 383, 384–385
-组列表, 245–246
-管理工具, 246–248
-管理工具, 248–250
-监控, 251–552
-在线资源, 264
-密码. 参见密码
-Vala, 720–721
-valac 包, 721
-Valve Steam 平台, 123
-原生内核, 454
-/var 目录, 162
-变量
-环境变量, 222–226
-shell 脚本
-访问, 282
-赋值, 282
-内置变量, 286–287
-位置参数, 282–284
-创建, 593–594
-删除, 594
-权限, 594–595
-相关的 Ubuntu 命令, 264
-/var/log 文件, 330
+## Upstart, 311–312, 314, 319–320
+
+## `uptime` 命令, 228
+
+## `quick` 命令, 691
+
+## 超级用户/root 用户
+
+- `sudo` 命令, 178–181
+- 概述, 257
+- 使用 `su` 命令, 257–259
+- 使用 `sudo` 命令, 259–262
+
+## 驱动器, 安装, 6
+
+## 已内存, 显示, 327–328
+
+## Usenet 新闻, 72–74
+
+## 用户 ID (UIDs), 244
+
+## 用户私组 (UPG), 245
+
+## 用户指令, 494
+
+## 用户
+
+- 命令行, 154–155
+- 文件权限, 244
+- 超级用户/root 用户, 242–244
+- UIDs (用户 ID), 244
+- 用户类型, 245
+- 添加, 250–251
+- 创建, 181–182
+- 删除, 182
+- 磁盘配额, 262–263
+- FTP 软件, 534–536
+- 组
+  - UTP (非屏蔽绞线), 383, 384–385
+  - 组列表, 245–246
+  - 管理工具, 246–248
+  - 管理工具, 248–250
+  - 监控, 251–552
+  - 在线资源, 264
+  - 密码. 参见密码
+
+## Vala, 720–721
+
+## `valac` 包, 721
+
+## Valve Steam 平台, 123
+
+## 原生内核, 454
+
+## `/var` 目录, 162
+
+## 变量
+
+- 环境变量, 222–226
+- shell 脚本
+  - 访问, 282
+  - 赋值, 282
+  - 内置变量, 286–287
+  - 位置参数, 282–284
+- 创建, 593–594
+- 删除, 594
+- 权限, 594–595
+- 相关的 Ubuntu 命令, 264
+
+## `/var/log` 文件, 330
+
 # 漏洞评估 791
-VBA (Visual Basic Applications), 75
-版本控制系统
-Bazaar, 683–684
-配置文件, 364–366
-Git, 682–683
-Mercurial, 685–686
-概述, 681–682
-Subversion, 684–685
-版本号
-Linux, 30
-Ubuntu, 33
-版本 (内核), 461–462
-Very Secure FTP 服务器, 532, 536–538
-vi 命令, 227–228
-视频
-编辑, 107–109
-个人视频录制器, 107
-专有视频驱动, 安装, 122–123
-电视和视频硬件, 104–105
-视频格式, 105–106
-视频查看器, 106
-virt-clone 命令, 636–637
-virt-install 包, 634
-virt-manager 包, 634
-virt-viewer, 634
-虚拟虚拟文件系统, 160
-虚拟主机
-Apache
-基于地址的虚拟主机, 507–508
-基于名称的虚拟主机, 508–509
-概述, 507
-Nginx, 521–522
-虚拟机 (VMs), 632, 642
-虚拟网络 (VNC), 420–423
-虚拟分辨率, 51
-VirtualBox, 637–638
-虚拟化
-KVM (内核级虚拟机), 633–638
-在线资源, 264
-概述, 631–635
-Xen, 634
-v-viewer, 634
-漏洞评估, 427
+
+## VBA (Visual Basic Applications), 75
+
+## 版本控制系统
+
+- Bazaar, 683–684
+- 配置文件, 364–366
+- Git, 682–683
+- Mercurial, 685–686
+- 概述, 681–682
+- Subversion, 684–685
+
+## 版本号
+
+- Linux, 30
+- Ubuntu, 33
+
+## 版本 (内核), 461–462
+
+## Very Secure FTP 服务器, 532, 536–538
+
+## `vi` 命令, 227–228
+
+## 视频
+
+- 编辑, 107–109
+- 个人视频录制器, 107
+- 专有视频驱动, 安装, 122–123
+- 电视和视频硬件, 104–105
+- 视频格式, 105–106
+- 视频查看器, 106
+
+## `virt-clone` 命令, 636–637
+
+## `virt-install` 包, 634
+
+## `virt-manager` 包, 634
+
+## `virt-viewer`, 634
+
+## 虚拟虚拟文件系统, 160
+
+## 虚拟主机
+
+- Apache
+  - 基于地址的虚拟主机, 507–508
+  - 基于名称的虚拟主机, 508–509
+  - 概述, 507
+- Nginx, 521–522
+
+## 虚拟机 (VMs), 632, 642
+
+## 虚拟网络 (VNC), 420–423
+
+## 虚拟分辨率, 51
+
+## VirtualBox, 637–638
+
+## 虚拟化
+
+- KVM (内核级虚拟机), 633–638
+- 在线资源, 264
+- 概述, 631–635
+- Xen, 634
+
+## `v-viewer`, 634
+
+## 漏洞评估, 427
 
 # W
 
-唤醒计算机, 270–272
-WAP (无线接入点), 404–405
-Warsaw, 124
-Warty Wog, 33
-观看视频
-个人视频录制器, 107
-电视和视频硬件, 104–105
-视频格式, 105–106
-视频查看器, 106
-.wav 文件扩展名, 88
-WAV 格式, 88
-Web 访问, 597
-Web 浏览器
-Firefox, 63–65
-Google Chrome, 65–66
-Google Chromium, 65–66
-Web 搜索技巧, 37–38
-Web 服务器
-Apache. 参见 Apache
-Apache Tomcat, 530
-Cherokee, 528–529
-Jetty, 529
-lighttpd, 527–528
-Nginx. 参见 Nginx
+## 唤醒计算机, 270–272
+
+## WAP (无线接入点), 404–405
+
+## Warsaw, 124
+
+## Warty Wog, 33
+
+## 观看视频
+
+- 个人视频录制器, 107
+- 电视和视频硬件, 104–105
+- 视频格式, 105–106
+- 视频查看器, 106
+
+## `.wav` 文件扩展名, 88
+
+## WAV 格式, 88
+
+## Web 访问, 597
+
+## Web 浏览器
+
+- Firefox, 63–65
+- Google Chrome, 65–66
+- Google Chromium, 65–66
+
+## Web 搜索技巧, 37–38
+
+## Web 服务器
+
+- Apache. 参见 Apache
+- Apache Tomcat, 530
+- Cherokee, 528–529
+- Jetty, 529
+- lighttpd, 527–528
+- Nginx. 参见 Nginx
+
+
+
 在线资源, 530
-thhtpd, 529–530
-Yaws, 528
+
+`thhtpd`, 529–530
+
+`Yaws`, 528
+
 基于 Web 的应用程序, 68
+
 网站. 参见在线资源
-Welling, Luke, 591
-wget 命令, 207–208
-Whaley, Ben, 40
-所见即所得 (WYSIWYG), 82
-所见即所得 (WYGIWYW), 82
-GTK whatis, 203
-what-provides 命令, 691
-whereis 命令, 157, 225
-which 命令, 207
-while 循环, 300–302
+
+`Welling`, `Luke`, 591
+
+`wget` 命令, 207–208
+
+`Whaley`, `Ben`, 40
+
+所见即所得 (`WYSIWYG`), 82
+
+所见即所得 (`WYGIWYW`), 82
+
+`GTK whatis`, 203
+
+`what-provides` 命令, 691
+
+`whereis` 命令, 157, 225
+
+`which` 命令, 207
+
+`while` 循环, 300–302
+
 宽列存储
-BigTable, 611
-HBase, 611
+
+`BigTable`, 611
+
+`HBase`, 611
+
 概述, 611
+
 小组件
+
 定义, 112
-GTK (GIMP 工具包) 小组件集, 79
-wifi-status 命令, 692, 691
+
+`GTK` (GIMP 工具包) 小组件集, 79
+
+`wifi-status` 命令, 692, 691
+
 通配符, 177
+
 窗口管理器, 52, 112
+
 Windows 游戏播放, 130
-Wine, 83
+
+`Wine`, 83
+
 无线接入点 (WAP), 404–405
+
 无线网络接口, 384
+
 无线网络
+
 优势, 407
+
 配置, 24–25
+
 概述, 405
+
 安全, 429
+
 支持, 405–406
+
 无线协议, 407–408
+
 无线协议, 407–408
-wireshark, 339
-wish 命令, 281
+
+`wireshark`, 339
+
+`wish` 命令, 281
+
 虫, 426
-Writer, 76
+
+`Writer`, 76
+
 写入
+
 数据写入, 103–104
+
 会话写入, 103
-shell 脚本, 277–278
-wu-ftp, 533
+
+`shell` 脚本, 277–278
+
+`wu-ftp`, 533
+
 WWW 安全 FAQ, 498
 
+`WYGIWYW` (所想即所得), 82
 
-
-
-
-WYGIWYW (所想即所得), 82
-
-WYSIWYG (所见即所得), 82
+`WYSIWYG` (所见即所得), 82
 
 # X
 
 - 显示管理器, 45, 51–52
 - 在线资源, 61
 - 概述, 43–44
--入门, 51
+- 入门, 51
 - 窗口管理器, 52
 - X 协议, 44–45
-- X.Org
+- `X.Org`
     - 目录, 45–46
-    - xorg.conf 文件, 46–51
+    - `xorg.conf` 文件, 46–51
 - X Window System. 参见 X11
 - X11. 参见 X11R7
 - X11R7. 参见 Kamarinin, 717
@@ -4715,9 +5045,9 @@ WYSIWYG (所见即所得), 82
 - Xmarks Sync, 56
 - XML (可扩展标记语言), 81
 - XML Copy Editor, 82
-- X.Org
+- `X.Org`
     - 历史, 43–44
-    - xorg.conf 文件
+    - `xorg.conf` 文件
         - 设备部分 (Device section), 49–50
         - 文件部分 (Files section), 47–48
         - 输入设备部分 (InputDevice section), 48–49
@@ -4726,7 +5056,7 @@ WYSIWYG (所见即所得), 82
         - 概述, 46–47
         - 屏幕部分 (Screen section), 50–51
         - 服务器布局部分 (ServerLayout section), 47
-- xorg.conf 文件
+- `xorg.conf` 文件
     - 设备部分 (Device section), 49–50
     - 文件部分 (Files section), 47–48
     - 输入设备部分 (InputDevice section), 48–49
@@ -4737,15 +5067,14 @@ WYSIWYG (所见即所得), 82
     - 服务器布局部分 (ServerLayout section), 47
 - Xubuntu, Xfce, 和 ubuntu, 114–115
 - ubuntu 频道, 42
-- ubuntu-desktop 包, 115
+- `ubuntu-desktop` 包, 115
 
 # Y
 
-- Yaws, 528
-- Yet Another Web Server (Yaws), 528
+- `Yaws`, 528
+- Yet Another Web Server (`Yaws`), 528
 
 # Z
 
-- Zenoss, 340
-- zless 命令, 36
-
+- `Zenoss`, 340
+- `zless` 命令, 36

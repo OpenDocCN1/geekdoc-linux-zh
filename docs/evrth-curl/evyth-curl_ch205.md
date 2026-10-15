@@ -1,8 +1,9 @@
+
 # 设置字符串选项
 
 目前`curl_easy_setopt()`函数有超过 80 个选项接受字符串作为其第三个参数。
 
-当在句柄中设置字符串时，libcurl 会立即复制该数据，这样应用程序就不必在传输过程中保留数据 - **有一个显著的例外**：`CURLOPT_POSTFIELDS`。
+当在句柄中设置字符串时，libcurl 会立即复制该数据，这样应用程序就不必在传输过程中保留数据——**有一个显著的例外**：`CURLOPT_POSTFIELDS`。
 
 在句柄中设置 URL：
 
@@ -22,7 +23,7 @@ curl_easy_setopt(handle, CURLOPT_URL, "https://example.com");
 
 ## C++
 
-如果你从 C++程序中使用 libcurl，重要的是要记住你不能传递 libcurl 期望的字符串对象。它必须是一个以 null 结尾的 C 字符串。通常你可以使用`c_str()`方法来实现这一点。
+如果你从 C++ 程序中使用 libcurl，重要的是要记住你不能传递 libcurl 期望的字符串对象。它必须是一个以 null 结尾的 C 字符串。通常你可以使用`c_str()`方法来实现这一点。
 
 例如，将 URL 保存在字符串对象中，并在句柄中设置该对象：
 

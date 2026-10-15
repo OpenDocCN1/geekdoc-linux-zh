@@ -1,18 +1,19 @@
+
+
 # 通配符匹配或正则表达式匹配问题
 
 > [`techbyexample.com/wildcard-matching-problem/`](https://techbyexample.com/wildcard-matching-problem/)
 
-## **概述**
+## 概述
 
-我们给定一个输入正则表达式和输入字符串。正则表达式可以包含两个特殊字符
+我们给定一个输入正则表达式和输入字符串。正则表达式可以包含两个特殊字符：
 
-+   **星号‘*’ –** 星号匹配零个或多个字符。
-
-+   **问号‘?’ –** 它匹配任何字符。
+- **星号 `*`**：星号匹配零个或多个字符。
+- **问号 `?`**：它匹配任何字符。
 
 目标是判断给定的输入字符串是否匹配正则表达式。
 
-例如
+例如：
 
 ```go
 Input String: aa
@@ -32,19 +33,17 @@ Regex Sring: a
 Output: false
 ```
 
-以下是相同问题的递归解法
+以下是相同问题的递归解法。
 
-## **递归解法**
+## 递归解法
 
-在递归解法中
+在递归解法中：
 
-+   如果遇到星号*，我们有两种情况。我们忽略模式中的*字符，继续处理模式中的下一个字符。另一种情况是我们在输入字符串中向前移动一个字符，假设*至少匹配一个字符。基本上，我们需要检查**(inputIndex, patternIndex+1)**和**(inputIndex+1, patternIndex)**是否匹配。如果其中一个返回 true，那么输入字符串匹配正则表达式。
+- 如果遇到星号 `*`，我们有两种情况。我们忽略模式中的 `*` 字符，继续处理模式中的下一个字符。另一种情况是我们在输入字符串中向前移动一个字符，假设 `*` 至少匹配一个字符。基本上，我们需要检查`(inputIndex, patternIndex+1)`和`(inputIndex+1, patternIndex)`是否匹配。如果其中一个返回 `true`，那么输入字符串匹配正则表达式。
+- 如果遇到问号 `?`，我们也简单地继续处理`(inputIndex+1, patternIndex+1)`。
+- 如果遇到一个简单字符，我们就简单地沿着输入字符串和模式继续前进，也就是说，我们继续处理`(inputIndex+1, patternIndex+1)`。
 
-+   如果遇到问号?，我们也简单地继续处理**(inputIndex+1, patternIndex+1)**
-
-+   如果遇到一个简单字符，我们就简单地沿着输入字符串和模式继续前进，也就是说，我们继续处理**(inputIndex+1, patternIndex+1)**
-
-这是程序
+这是程序：
 
 ```go
 package main
@@ -134,7 +133,7 @@ func restPatternStar(pattern []rune, patternIndex int, patternLength int) bool {
 }
 ```
 
-**输出**
+### 输出
 
 ```go
 true
@@ -146,13 +145,13 @@ false
 false
 ```
 
-## **动态规划解法**
+## 动态规划解法
 
 上面的程序并不是一个优化的解法，因为子问题被一遍又一遍地解决。这个问题也可以通过动态规划（DP）来解决。
 
-创建一个名为**isMatchingMatrix**的二维矩阵，其中
+创建一个名为`isMatchingMatrix`的二维矩阵，其中：
 
-**isMatchingMatrix[i][j]** 如果输入字符串的前**i**个字符与模式的前**j**个字符匹配，则为 true
+`isMatchingMatrix[i][j]`如果输入字符串的前`i`个字符与模式的前`j`个字符匹配，则为 `true`。
 
 ```go
 If both input and pattern is empty
@@ -165,7 +164,7 @@ If the input string is empty
 isMatchingMatrix[0][j] = isMatchingMatrix[0][j - 1] if pattern[j – 1] is '*'
 ```
 
-以下是相同问题的程序。
+以下是相同问题的程序：
 
 ```go
 package main
@@ -244,7 +243,7 @@ func isMatch(s string, p string) bool {
 }
 ```
 
-**输出**
+### 输出
 
 ```go
 true
@@ -255,3 +254,4 @@ false
 false
 false
 ```
+

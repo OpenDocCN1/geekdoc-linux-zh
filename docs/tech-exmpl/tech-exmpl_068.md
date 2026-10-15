@@ -1,10 +1,11 @@
+
 # 如果某行或某列为零，则将矩阵置为零
 
 > 原文：[`techbyexample.com/set-matrix-zero/`](https://techbyexample.com/set-matrix-zero/)
 
-## **概述**
+## 概述
 
-给定一个 m*n 的矩阵。如果某个元素为零，则将其所在的行和列设置为零
+给定一个 `m*n` 的矩阵。如果某个元素为零，则将其所在的行和列设置为零。
 
 示例
 
@@ -24,7 +25,7 @@
 0, 1, 1
 ```
 
-我们将通过使用两个额外的数组**rowSet**和**columnSet**，它们的长度分别为**m**和**n**，来解决这个问题。我们将遍历整个矩阵并
+我们将通过使用两个额外的数组`rowSet`和`columnSet`，它们的长度分别为`m`和`n`，来解决这个问题。我们将遍历整个矩阵并
 
 ```go
 if matrix[i][j] == 0 then
@@ -32,9 +33,9 @@ if matrix[i][j] == 0 then
    columnSet[j] = 1
 ```
 
-然后，如果**rowSet[i]**等于 1 或**columnSet[j]**等于 1，我们可以将**matrix[i][j]**设置为零
+然后，如果`rowSet[i]`等于 1 或`columnSet[j]`等于 1，我们可以将`matrix[i][j]`设置为零。
 
-## **程序**
+## 程序
 
 这是相应的程序。
 

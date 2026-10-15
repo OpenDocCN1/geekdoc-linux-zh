@@ -1,4 +1,5 @@
-# 在 CentOS 7 - centos 防病毒软件上安装 ClamAV 防病毒软件
+
+# 在 CentOS 7 上安装 ClamAV 防病毒软件
 
 > 原文：<https://blog.eldernode.com/install-clamav-antivirus-centos-7/>
 
@@ -14,25 +15,25 @@
 
 **在开始**时，确保您以 root 用户身份访问了 CentOS 7 服务器或 VPS。
 
-**注意:** 你需要知道如何使用 [Putty](https://eldernode.com/what-is-putty-and-what-does-it-do/) 来建立 SSH 连接。
+**注意：** 你需要知道如何使用 [Putty](https://eldernode.com/what-is-putty-and-what-does-it-do/) 来建立 SSH 连接。
 
-1.默认情况下，ClamAV 没有预先打包在 CentOs 中，因此您需要通过运行 **yum** 命令来添加存储库。
+1. 默认情况下，ClamAV 没有预先打包在 CentOS 中，因此您需要通过运行 `yum` 命令来添加存储库。
 
 ```
 yum install -y epel-release
 ```
 
-2.连接到终端后，输入以下命令下载安装必备组件。
+2. 连接到终端后，输入以下命令下载安装必备组件。
 
 ```
 yum install -y clamav
 ```
 
-3.过一会儿，ClamAV 防病毒软件就安装在您的 CentOS Linux 上，并准备运行了。
+3. 过一会儿，ClamAV 防病毒软件就安装在您的 CentOS Linux 上，并准备运行了。
 
-4.在扫描和使用 ClamAV 防病毒软件之前，请对其进行更新。
+4. 在扫描和使用 ClamAV 防病毒软件之前，请对其进行更新。
 
-**注:**ClamAV 杀毒，有一个数据库需要不时更新。
+**注：** ClamAV 杀毒，有一个数据库需要不时更新。
 
 ```
 freshclam
@@ -40,37 +41,37 @@ freshclam
 
 ### 一些对 ClamAV 杀毒有用的命令
 
-1.使用以下命令立即扫描主要分支。
+1. 使用以下命令立即扫描主要分支。
 
 ```
 clamscan
 ```
 
-2.您可以使用-r 开关来扫描特定的文件夹。例如，我们想要扫描/ home 目录。
+2. 您可以使用 `-r` 开关来扫描特定的文件夹。例如，我们想要扫描 `/home` 目录。
 
 ```
 clamscan -r /home
 ```
 
-3.要完全扫描根分支，请输入以下命令。
+3. 要完全扫描根分支，请输入以下命令。
 
 ```
 clamscan -r /
 ```
 
-4.如果你想显示病毒文件，使用 **-i** 开关。
+4. 如果你想显示病毒文件，使用 `-i` 开关。
 
 ```
 clamscan -r -i /home
 ```
 
-5.要删除病毒，使用**-删除**开关。
+5. 要删除病毒，使用 `-remove` 开关。
 
 ```
 clamscan -r -remove /home
 ```
 
-6.使用 help 参数了解 ClamAV 防病毒软件的其他开关和其他功能。
+6. 使用 `help` 参数了解 ClamAV 防病毒软件的其他开关和其他功能。
 
 ```
 clamscan --help

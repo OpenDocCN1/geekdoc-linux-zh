@@ -1,3 +1,4 @@
+
 # 如何在 CentOS 8[完整] - Eldernode 博客上配置 Ajenti
 
 > 原文：<https://blog.eldernode.com/configure-ajenti-on-centos-8/>
@@ -18,115 +19,115 @@
 
 ### 阿让蒂控制面板先决条件
 
-**1。**在安装之前，您必须将 EPEL 存储库添加到您的服务器中。输入以下命令下载 EPEL:
+1. 在安装之前，您必须将 EPEL 存储库添加到您的服务器中。输入以下命令下载 EPEL：
 
-```
+```bash
 wget http://download.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 ```
 
-**–**然后输入以下命令进行安装:
+2. 然后输入以下命令进行安装：
 
-```
+```bash
 rpm -ivh epel-release-6-8.noarch.rpm
 ```
 
-**–**用编辑器打开 **epel.repo** 文件:
+3. 用编辑器打开 `epel.repo` 文件：
 
-```
+```bash
 vi /etc/yum.repos.d/epel.repo
 ```
 
-**–**在地址开头的第四行，将短语 HTTPS 改为 HTTP。
+4. 在地址开头的第四行，将短语 HTTPS 改为 HTTP。
 
-修改前的主要短语如下:
+修改前的主要短语如下：
 
-```
+```text
 mirrorlist = https: //mirrors.fedoraproject.org/metalink? repo = epel-6 & arch = $ basearch
 ```
 
-修改后的短语应该是这样的:
+修改后的短语应该是这样的：
 
-```
+```text
 mirrorlist = http: //mirrors.fedoraproject.org/metalink? repo = epel-6 & arch = $ basearch
 ```
 
-***注意:*** 更改后，按一次 **Esc** 键，然后输入短语 **:wq** 保存更改并退出编辑器。
+> **注意：** 更改后，按一次 `Esc` 键，然后输入短语 `:wq` 保存更改并退出编辑器。
 
-**2。**安装 EPEL 后，更新你的 CentOS Linux。
+5. 安装 EPEL 后，更新你的 CentOS Linux。
 
-## 如何在 CentOS 8 Linux 上安装 ajen ti
+## 如何在 CentOS 8 Linux 上安装 Ajenti
 
-**1。**输入以下命令下载 Ajenti 包:
+1. 输入以下命令下载 Ajenti 包：
 
-```
+```bash
 wget http://repo.ajenti.org/ajenti-repo-1.0-1.noarch.rpm
 ```
 
-**2。**下载后，通过以下命令安装 Ajenti 存储库:
+2. 下载后，通过以下命令安装 Ajenti 存储库：
 
-```
+```bash
 rpm -i ajenti-repo-1.0-1.noarch.rpm
 ```
 
-**3。**最后，使用以下命令安装 Ajenti 控制面板:
+3. 最后，使用以下命令安装 Ajenti 控制面板：
 
-```
+```bash
 yum install agent
 ```
 
-***注意:*** 安装时会问你几个问题来安装不同的包，都可以通过输入 **y** 和 **Enter** 键来通过。
+> **注意：** 安装时会问你几个问题来安装不同的包，都可以通过输入 `y` 和 `Enter` 键来通过。
 
-**4。**重新启动 Ajenti 服务一次:
+4. 重新启动 Ajenti 服务一次：
 
-```
+```bash
 service agent restart
 ```
 
-## 教程在 CentOS 8 上配置 ajen ti
+## 教程：在 CentOS 8 上配置 Ajenti
 
-输入以下命令打开**端口 8000** 以允许防火墙访问 Ajenti。首先，输入以下命令:
+输入以下命令打开**端口 8000**以允许防火墙访问 Ajenti。首先，输入以下命令：
 
-```
+```bash
 iptables -A INPUT -p udp -m state --state NEW --dport 8000 -j ACCEPT  iptables -A INPUT -p tcp -m state --state NEW --dport 8000 -j ACCEPT
 ```
 
-然后使用以下命令保存 **iptables** 的更改:
+然后使用以下命令保存 `iptables` 的更改：
 
-```
+```bash
 service iptables save
 ```
 
-最后，重新启动 iptables 服务:
+最后，重新启动 `iptables` 服务：
 
-```
+```bash
 service iptables restart
 ```
 
 然后打开浏览器，输入 IP 服务器和端口 8000。请注意，Ajenti 控制面板会随 HTTPS 一起打开。
 
-**例如**，浏览器中服务器 192.168.1.1 的 IP 应该输入如下地址:
+**例如**，浏览器中服务器 192.168.1.1 的 IP 应该输入如下地址：
 
-```
+```text
 https://192.168.1.1:8000
 ```
 
 ### 如何解决进入 Ajenti 面板的问题
 
-***注意:*** 如果您无法使用您的 Linux 用户名和密码登录 Ajenti 控制面板，请按照以下步骤操作。
+> **注意：** 如果您无法使用您的 Linux 用户名和密码登录 Ajenti 控制面板，请按照以下步骤操作。
 
-**–**用编辑器打开 **config.json** 文件:
+1. 用编辑器打开 `config.json` 文件：
 
-```
+```bash
 vi /etc/ajenti/config.json
 ```
 
-**–**然后找到你想要进入 Ajenti 控制面板的用户。
+2. 然后找到你想要进入 Ajenti 控制面板的用户。
 
-**–**在密码字段中，删除现有的密码散列，并简单地输入您的密码(纯文本)。
+3. 在密码字段中，删除现有的密码散列，并简单地输入您的密码（纯文本）。
 
-**–**然后保存文件，并使用以下命令重新启动 Ajenti 服务一次:
+4. 然后保存文件，并使用以下命令重新启动 Ajenti 服务一次：
 
-```
+```bash
 service agent restart
 ```
 

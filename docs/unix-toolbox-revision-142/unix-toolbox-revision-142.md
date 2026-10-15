@@ -1,8 +1,5 @@
+
 # Unix 工具箱 修订版 14.2
-
-
-
-
 
 本文档收集了对 IT 工作或高级用户有用的 Unix/Linux/BSD 命令和任务。这是一份包含简洁说明的实用指南，但读者应具备相应基础知识。
 
@@ -19,7 +16,7 @@
 # cat /etc/debian_version    # Get Debian version
 ```
 
-使用 /etc/DISTR-release，其中 DISTR= lsb（Ubuntu、redhat、gentoo、mandrake、sun（Solaris）等）。另请参阅 /etc/issue。
+使用 `/etc/DISTR-release`，其中 `DISTR` = `lsb`（Ubuntu、redhat、gentoo、mandrake、sun（Solaris）等）。另请参阅 `/etc/issue`。
 
 ```
 # uptime                    # Show how long the system has been running + load
@@ -83,9 +80,6 @@
 # systat -tcp 1            # BSD tcp connections (try also -ip)
 ```
 
-
-
-
 # — 系统 —
 
 ```
@@ -97,6 +91,8 @@
 ```
 
 ## 1.3 用户
+
+
 
 ```
 # id                         # Show the active user id with login and group
@@ -115,9 +111,9 @@
 # pw userdel colin; pw groupdel admin
 ```
 
-加密密码存储在 Linux 和 Solaris 的 /etc/shadow 中，在 FreeBSD 上存储在 /etc/master.passwd 中。如果 master.passwd 被手动修改（例如删除密码），运行 # pwd_mkdb -p master.passwd 来重建数据库。
+加密密码存储在 Linux 和 Solaris 的 `/etc/shadow` 中，在 FreeBSD 上存储在 `/etc/master.passwd` 中。如果 `master.passwd` 被手动修改（例如删除密码），运行 `# pwd_mkdb -p master.passwd` 来重建数据库。
 
-要暂时禁止全系统登录（除 root 外的所有用户）请使用 nologin。nologin 中的消息将被显示（可能不适用于 ssh 预共享密钥）。
+要暂时禁止全系统登录（除 root 外的所有用户）请使用 `nologin`。`nologin` 中的消息将被显示（可能不适用于 ssh 预共享密钥）。
 
 ```
 # echo "Sorry no login now" > /etc/nologin      # (Linux)
@@ -128,21 +124,21 @@
 
 某些应用程序需要更高的打开文件和套接字限制（如代理 Web 服务器、数据库）。默认限制通常太低。
 
-#### Linux
+### Linux
 
 #### 每 shell/脚本
 
-shell 限制由 ulimit 控制。状态通过 ulimit -a 检查。例如将打开文件限制从 1024 改为 10240：
+shell 限制由 `ulimit` 控制。状态通过 `ulimit -a` 检查。例如将打开文件限制从 1024 改为 10240：
 
 ```
 # ulimit -n 10240              # This is only valid within the shell
 ```
 
-ulimit 命令可在脚本中使用，仅更改该脚本的限制。
+`ulimit` 命令可在脚本中使用，仅更改该脚本的限制。
 
 #### 每用户/进程
 
-登录用户和应用程序可在 /etc/security/limits.conf 中配置。例如：
+登录用户和应用程序可在 `/etc/security/limits.conf` 中配置。例如：
 
 ```
 # cat /etc/security/limits.conf
@@ -152,7 +148,7 @@ asterisk hard nofile 409600   # Limit application open files
 
 #### 全系统
 
-内核限制使用 sysctl 设置。永久限制设置在 /etc/sysctl.conf 中。
+内核限制使用 `sysctl` 设置。永久限制设置在 `/etc/sysctl.conf` 中。
 
 ```
 # sysctl -a                    # View all system limits
@@ -167,19 +163,19 @@ fs.file-max=102400        # Permanent entry in sysctl.conf
 # cat /proc/sys/fs/file-nr   # How many file descriptors are in use
 ```
 
-#### FreeBSD
+### FreeBSD
 
 #### 每 shell/脚本
 
-在 csh 或 tcsh 中使用 limits 命令，或在 sh 或 bash shell 中像 Linux 一样使用 ulimit。
+在 `csh` 或 `tcsh` 中使用 `limits` 命令，或在 `sh` 或 `bash` shell 中像 Linux 一样使用 `ulimit`。
 
 #### 每用户/进程
 
-登录时的默认限制设置在 /etc/login.conf 中。无限值仍受系统最大值限制。
+登录时的默认限制设置在 `/etc/login.conf` 中。无限值仍受系统最大值限制。
 
 #### 全系统
 
-内核限制也使用 sysctl 设置。永久限制设置在 /etc/sysctl.conf 或 /boot/loader.conf 中。语法与 Linux 相同但键不同。
+内核限制也使用 `sysctl` 设置。永久限制设置在 `/etc/sysctl.conf` 或 `/boot/loader.conf` 中。语法与 Linux 相同但键不同。
 
 ```
 # sysctl -a                 # View all system limits
@@ -196,9 +192,9 @@ kern.ipc.somaxconn=8192     # TCP queue. Better for apache/sendmail
 
 参见 The FreeBSD handbook Chapter 11¹ 了解详情。
 
-#### Solaris
+### Solaris
 
-以下 /etc/system 中的值将增加每个进程的最大文件描述符：
+以下 `/etc/system` 中的值将增加每个进程的最大文件描述符：
 
 ```
 set rlim_fd_max = 4096      # Hard limit on file descriptors for a single proc
@@ -207,18 +203,18 @@ set rlim_fd_cur = 1024      # Soft limit on file descriptors for a single proc
 
 ## 1.5 运行级别
 
-#### Linux
+### Linux
 
-启动后，内核启动 init，然后启动 rc，后者启动属于某个运行级别的所有脚本。脚本存储在 /etc/init.d 中，并链接到 /etc/rc.d/rcN.d，N 为运行级别编号。
+启动后，内核启动 `init`，然后启动 `rc`，后者启动属于某个运行级别的所有脚本。脚本存储在 `/etc/init.d` 中，并链接到 `/etc/rc.d/rcN.d`，N 为运行级别编号。
 
-默认运行级别在 /etc/inittab 中配置，通常为 3 或 5：
+默认运行级别在 `/etc/inittab` 中配置，通常为 3 或 5：
 
 ```
 # grep default: /etc/inittab
 id:3:initdefault:
 ```
 
-实际运行级别可使用 init 更改。例如从 3 切换到 5：
+实际运行级别可使用 `init` 更改。例如从 3 切换到 5：
 
 ```
 # init 5                    # Enters runlevel 5
@@ -231,7 +227,9 @@ id:3:initdefault:
 - 5   Multi-user with X
 - 6   Reboot
 
-使用 chkconfig 配置在某个运行级别启动时将启动的程序。
+使用 `chkconfig` 配置在某个运行级别启动时将启动的程序。
+
+
 
 ```
 # chkconfig --list         # List all init scripts
@@ -239,10 +237,6 @@ id:3:initdefault:
 # chkconfig sshd --level 35 on  # Configure sshd for levels 3 and 5
 # chkconfig sshd off       # Disable sshd for all runlevels
 ```
-
-
-
-
 
 ## 系统
 
@@ -255,7 +249,7 @@ Debian 以及基于 Debian 的发行版（如 Ubuntu 或 Knoppix）使用 `updat
 # shutdown -h now (或 # poweroff)      # 关闭并停止系统
 ```
 
-#### FreeBSD
+### FreeBSD
 
 BSD 的启动方式与 SysV 不同，它没有运行级。最终的启动状态（单用户模式，是否带 X）在 `/etc/ttys` 中配置。所有系统脚本位于 `/etc/rc.d/`，第三方应用程序的脚本位于 `/usr/local/etc/rc.d/`。服务的激活在 `/etc/rc.conf` 和 `/etc/rc.conf.local` 中配置。默认行为在 `/etc/defaults/rc.conf` 中配置。这些脚本至少响应 `start|stop|status` 命令。
 
@@ -270,11 +264,11 @@ sshd is running as pid 552.
 
 进程 `init` 也可以用于达到以下状态级别之一。例如 `# init 6` 用于重启。
 
--   0   停止并关闭电源（信号 USR2）
--   1   进入单用户模式（信号 TERM）
--   6   重启机器（信号 INT）
--   c   阻止进一步登录（信号 TSTP）
--   q   重新扫描 `ttys(5)` 文件（信号 HUP）
+- `0` 停止并关闭电源（信号 USR2）
+- `1` 进入单用户模式（信号 TERM）
+- `6` 重启机器（信号 INT）
+- `c` 阻止进一步登录（信号 TSTP）
+- `q` 重新扫描 `ttys(5)` 文件（信号 HUP）
 
 ### Windows
 
@@ -298,6 +292,7 @@ init=/bin/sh
 ```
 
 内核将挂载根分区，`init` 将启动 Bourne shell 而不是 rc，然后进入某个运行级。在提示符下使用 `passwd` 命令更改密码，然后重新启动。不要使用单用户模式，因为进入该模式也需要密码。
+
 如果启动后根分区是只读挂载的，请重新以读写方式挂载：
 
 ```
@@ -315,9 +310,9 @@ init=/bin/sh
 
 其他 Unix 系统可能不允许你使用简单的 init 技巧。解决办法是从另一个操作系统（如救援 CD）挂载根分区，并在磁盘上更改密码。
 
--   将 live CD 或安装 CD 启动到救援模式，这样你会获得一个 shell。
--   使用 `fdisk` 找到根分区，例如 `fdisk /dev/sda`
--   挂载它并使用 `chroot`：
+- 将 live CD 或安装 CD 启动到救援模式，这样你会获得一个 shell。
+- 使用 `fdisk` 找到根分区，例如 `fdisk /dev/sda`
+- 挂载它并使用 `chroot`：
 
 ```
 # mount -o rw /dev/ad4s3a /mnt
@@ -328,14 +323,14 @@ init=/bin/sh
 
 ## 1.7 内核模块
 
-#### Linux
+### Linux
 
 ```
 # lsmod                 # 列出内核中加载的所有模块
 # modprobe isdn         # 加载模块（此处为 isdn）
 ```
 
-#### FreeBSD
+### FreeBSD
 
 ```
 # kldstat               # 列出内核中加载的所有模块
@@ -344,7 +339,7 @@ init=/bin/sh
 
 ## 1.8 编译内核
 
-#### Linux
+### Linux
 
 ```
 # cd /usr/src/linux
@@ -358,9 +353,9 @@ init=/bin/sh
 # reboot
 ```
 
-#### FreeBSD
+### FreeBSD
 
-可选地，使用 `csup`（自 FreeBSD 6.2 起）更新源代码树（位于 /usr/src）：
+可选地，使用 `csup`（自 FreeBSD 6.2 起）更新源代码树（位于 `/usr/src`）：
 
 ```
 # csup <supfile>
@@ -388,8 +383,6 @@ src-all
 
 要重新构建整个操作系统：
 
-
-
 ## 进程
 
 ```
@@ -403,16 +396,18 @@ src-all
 # reboot
 ```
 
-对于源代码的小改动，可以使用 NO_CLEAN=yes 来避免重建整个树。
+对于源代码的小改动，可以使用 `NO_CLEAN=yes` 来避免重建整个树。
 
 ```
 # make buildworld NO_CLEAN=yes      # Don't delete the old objects
 # make buildkernel KERNCONF=MYKERNEL NO_CLEAN=yes
 ```
 
-### 1.9 修复 grub
+## 1.9 修复 grub
 
-所以你弄坏了 grub？从 live cd 启动，[在 /dev 下找到你的 linux 分区并使用 fdisk 找到 linux 分区] 挂载 linux 分区，添加 /proc 和 /dev 并使用 grub-install /dev/xyz。假设 linux 位于 /dev/sda6：
+
+
+所以你弄坏了 `grub`？从 live cd 启动，[在 `/dev` 下找到你的 linux 分区并使用 `fdisk` 找到 linux 分区] 挂载 linux 分区，添加 `/proc` 和 `/dev` 并使用 `grub-install /dev/xyz`。假设 linux 位于 `/dev/sda6`：
 
 ```
 # mount /dev/sda6 /mnt          # mount the linux partition on /mnt
@@ -425,18 +420,20 @@ src-all
 ## 2 进程
 
 | 列出 | 优先级 | 后台/前台 | Top | Kill |
+
 |---------|----------|----------------------|-----|------|
+
 | (p7) | (p7) | (p8) | (p8) | (p8) |
 
 ### 2.1 列出和 PIDs
 
-每个进程都有一个唯一的编号，即 PID。所有正在运行的进程列表可通过 ps 获取。
+每个进程都有一个唯一的编号，即 `PID`。所有正在运行的进程列表可通过 `ps` 获取。
 
 ```
 # ps -auxefw                 # Extensive list of all running process
 ```
 
-然而更典型的用法是使用管道或 pgrep：
+然而更典型的用法是使用管道或 `pgrep`：
 
 ```
 # ps axww | grep cron
@@ -454,14 +451,14 @@ src-all
 
 ### 2.2 优先级
 
-使用 renice 更改正在运行进程的优先级。负数优先级更高，最低为 -20，而 "nice" 具有正值。
+使用 `renice` 更改正在运行进程的优先级。负数优先级更高，最低为 `-20`，而 "`nice`" 具有正值。
 
 ```
 # renice -5 586        # Stronger priority
 586: old priority 0, new priority -5
 ```
 
-使用 nice 以定义的优先级启动进程。正值为 "nice" 或较弱，负值为强调度优先级。确保你知道使用的是 /usr/bin/nice 还是 shell 内置命令（使用 # which nice 检查）。
+使用 `nice` 以定义的优先级启动进程。正值为 "`nice`" 或较弱，负值为强调度优先级。确保你知道使用的是 `/usr/bin/nice` 还是 shell 内置命令（使用 `# which nice` 检查）。
 
 ```
 # nice -n -5 top       # Stronger priority (/usr/bin/nice)
@@ -469,7 +466,7 @@ src-all
 # nice +5 top           # tcsh builtin nice (same as above!)
 ```
 
-虽然 nice 更改 CPU 调度器，另一个有用的命令 ionice 将调度磁盘 IO。这对于密集 IO 应用程序（例如编译）非常有用。你可以选择一个类（空闲 - 最佳努力 - 实时），手册页简短且解释良好。
+虽然 `nice` 更改 CPU 调度器，另一个有用的命令 `ionice` 将调度磁盘 IO。这对于密集 IO 应用程序（例如编译）非常有用。你可以选择一个类（空闲 - 最佳努力 - 实时），手册页简短且解释良好。
 
 ```
 # ionice c3 -p123          # set idle class for pid 123 (Linux only)
@@ -477,9 +474,9 @@ src-all
 # ionice -c3 -p$$          # Set the actual shell to idle priority
 ```
 
-最后一条命令对于编译（或调试）大型项目非常有用。从此 shell 启动的每个命令都将具有较低的优先级。$$ 是你的 shell pid（尝试 echo $$）。
+最后一条命令对于编译（或调试）大型项目非常有用。从此 shell 启动的每个命令都将具有较低的优先级。`$$` 是你的 shell pid（尝试 `echo $$`）。
 
-FreeBSD 使用 idprio/rtprio（0 = 最大优先级，31 = 最空闲）：
+FreeBSD 使用 `idprio`/`rtprio`（`0` = 最大优先级，`31` = 最空闲）：
 
 ```
 # idprio 31 make          # compile in the lowest priority
@@ -489,7 +486,7 @@ FreeBSD 使用 idprio/rtprio（0 = 最大优先级，31 = 最空闲）：
 
 ### 2.3 后台/前台
 
-从 shell 启动时，进程可以使用 [Ctrl]-[Z] (^Z)、bg 和 fg 在后台和前台之间切换。使用 jobs 列出进程。
+从 shell 启动时，进程可以使用 `[Ctrl]`-`[Z]` (`^Z`)、`bg` 和 `fg` 在后台和前台之间切换。使用 `jobs` 列出进程。
 
 ```
 # ping cb.vu > ping.log
@@ -501,7 +498,7 @@ FreeBSD 使用 idprio/rtprio（0 = 最大优先级，31 = 最空闲）：
 # fg %2                   # Bring process 2 back in foreground
 ```
 
-使用 nohup 启动在 shell 关闭时仍需继续运行的进程（对挂断免疫）。
+使用 `nohup` 启动在 shell 关闭时仍需继续运行的进程（对挂断免疫）。
 
 ```
 # nohup ping -i 60 > ping.log &
@@ -509,16 +506,19 @@ FreeBSD 使用 idprio/rtprio（0 = 最大优先级，31 = 最空闲）：
 
 ### 2.4 Top
 
-程序 top 显示进程的运行信息。另请参阅来自 htop.sourceforge.net 的程序 htop（top 的更强大的版本），它可在 Linux 和 FreeBSD 上运行（ports/sysutils/htop/）。在 top 运行期间按 h 键获取帮助概览。实用键包括：
+程序 `top` 显示进程的运行信息。另请参阅来自 `htop.sourceforge.net` 的程序 `htop`（`top` 的更强大的版本），它可在 Linux 和 FreeBSD 上运行（`ports/sysutils/htop/`）。在 `top` 运行期间按 `h` 键获取帮助概览。实用键包括：
 
-- **u [用户名]** 仅显示属于该用户的进程。使用 + 或空白查看所有用户
-- **k [pid]** 使用 pid 终止进程。
-- **1** 显示所有处理器统计信息（仅限 Linux）
-- **R** 切换正常/反向排序。
+- `u [用户名]` 仅显示属于该用户的进程。使用 `+` 或空白查看所有用户
+
+- `k [pid]` 使用 pid 终止进程。
+
+- `1` 显示所有处理器统计信息（仅限 Linux）
+
+- `R` 切换正常/反向排序。
 
 ### 2.5 信号/Kill
 
-使用 kill 或 killall 终止或发送信号。
+使用 `kill` 或 `killall` 终止或发送信号。
 
 ```
 # ping -i 60 cb.vu > ping.log &
@@ -532,23 +532,25 @@ FreeBSD 使用 idprio/rtprio（0 = 最大优先级，31 = 最空闲）：
 
 重要信号有：
 
-- 1  HUP（挂断）
-- 2  INT（中断）
-- 3  QUIT（退出）
-- 9  KILL（不可捕获，不可忽略的 kill）
-- 15 TERM（软件终止信号）
+- `1`  HUP（挂断）
 
+- `2`  INT（中断）
 
+- `3`  QUIT（退出）
 
+- `9`  KILL（不可捕获，不可忽略的 kill）
 
+- `15` TERM（软件终止信号）
 
 ## 3 文件系统
+
+
 
 磁盘信息 (p9) | 启动 (p9) | 磁盘使用情况 (p9) | 已打开文件 (p9) | 挂载/重新挂载 (p10) | 挂载 SMB (p11) | 挂载镜像 (p12) | 刻录 ISO (p12) | 创建镜像 (p13) | 内存磁盘 (p14) | 磁盘性能 (p14)
 
 ### 3.1 权限
 
-使用 chmod 和 chown 修改权限和所有权。默认 umask 可以在 Linux 的 /etc/profile 或 FreeBSD 的 /etc/login.conf 中为所有用户更改。默认 umask 通常为 022。umask 从 777 中减去，因此 umask 022 得到权限 755。
+使用 `chmod` 和 `chown` 修改权限和所有权。默认 `umask` 可以在 Linux 的 `/etc/profile` 或 FreeBSD 的 `/etc/login.conf` 中为所有用户更改。默认 `umask` 通常为 `022`。`umask` 从 `777` 中减去，因此 `umask 022` 得到权限 `755`。
 
 ```
 1 --x execute          # Mode 764 = exec/read/write | read/write | read
@@ -638,7 +640,7 @@ root     Xorg      1252 text /usr    216016 -rws--x--x 1679848 r
 root     Xorg      1252 0 /var       212042 -rw-r--r-- 56987 w
 ```
 
-inum 为 212042 的文件是 /var 中唯一的该文件：
+inum 为 212042 的文件是 `/var` 中唯一的该文件：
 
 ```
 # find -x /var -inum 212042
@@ -647,7 +649,7 @@ inum 为 212042 的文件是 /var 中唯一的该文件：
 
 #### Linux
 
-使用 fuser 或 lsof 查找挂载点上的已打开文件：
+使用 `fuser` 或 `lsof` 查找挂载点上的已打开文件：
 
 ```
 # fuser -m /home          # List processes accessing /home
@@ -677,15 +679,17 @@ Xorg    3324 root   0w   REG 8,6     56296    12492 /var/log/Xorg.0.log
 
 ### 3.6 挂载/重新挂载文件系统
 
-例如光盘。如果在 /etc/fstab 中列出：
+例如光盘。如果在 `/etc/fstab` 中列出：
 
 ```
 # mount /cdrom
 ```
 
-或在 /dev/ 中查找设备或使用 dmesg
+或在 `/dev/` 中查找设备或使用 `dmesg`
 
 #### FreeBSD
+
+
 
 ```
 # mount -v -t cd9660 /dev/cd0c /mnt   # cdrom
@@ -693,7 +697,7 @@ Xorg    3324 root   0w   REG 8,6     56296    12492 /var/log/Xorg.0.log
 # mount -v -t msdos /dev/fd0c /mnt   # floppy
 ```
 
-### /etc/fstab 中的条目：
+### `/etc/fstab` 中的条目：
 
 ```
 # Device          Mountpoint  FStype  Options    Dump  Pass#
@@ -706,10 +710,6 @@ Xorg    3324 root   0w   REG 8,6     56296    12492 /var/log/Xorg.0.log
 # sysctl vfs.usermount=1  # Or insert the line "vfs.usermount=1" in /etc/sysctl.conf
 ```
 
-
-
-
-
 #### Linux
 
 ```
@@ -719,7 +719,7 @@ Xorg    3324 root   0w   REG 8,6     56296    12492 /var/log/Xorg.0.log
 # mount /dev/sdC0 -t ntfs-3g /windows    # typical SCSI
 ```
 
-### /etc/fstab 中的条目：
+### `/etc/fstab` 中的条目：
 
 ```
 /dev/cdrom  /media/cdrom  subfs noauto,fs=cdfs,ro,procuid,nosuid,nodev,exec 0 0
@@ -727,7 +727,7 @@ Xorg    3324 root   0w   REG 8,6     56296    12492 /var/log/Xorg.0.log
 
 ### 使用 Linux 挂载 FreeBSD 分区
 
-使用 fdisk 找到分区号，通常是根分区，但也可能是其他 BSD 切片。如果 FreeBSD 有多个切片，它们不会列在 fdisk 表中，但在 /dev/sda* 或 /dev/hda* 中可见。
+使用 `fdisk` 找到分区号，通常是根分区，但也可能是其他 BSD 切片。如果 FreeBSD 有多个切片，它们不会列在 `fdisk` 表中，但在 `/dev/sda*` 或 `/dev/hda*` 中可见。
 
 ```
 # fdisk /dev/sda                # Find the FreeBSD partition
@@ -738,7 +738,7 @@ Xorg    3324 root   0w   REG 8,6     56296    12492 /var/log/Xorg.0.log
 
 #### 重新挂载
 
-在不卸载的情况下重新挂载设备。例如 fsck 时需要
+在不卸载的情况下重新挂载设备。例如 `fsck` 时需要
 
 ```
 # mount -o remount,ro /          # Linux
@@ -753,7 +753,7 @@ Xorg    3324 root   0w   REG 8,6     56296    12492 /var/log/Xorg.0.log
 
 ### 3.7 动态添加 swap
 
-假设你现在需要更多 swap，比如一个 2GB 文件 /swap2gb（仅限 Linux）。
+假设你现在需要更多 swap，比如一个 2GB 文件 `/swap2gb`（仅限 Linux）。
 
 ```
 # dd if=/dev/zero of=/swap2gb bs=1024k count=2000
@@ -765,7 +765,7 @@ Xorg    3324 root   0w   REG 8,6     56296    12492 /var/log/Xorg.0.log
 
 ### 3.8 挂载 SMB 共享
 
-假设我们想访问计算机 smbserver 上的 SMB 共享 myshare，在 Windows PC 上输入的地址为 \\smbserver\myshare\。我们挂载到 /mnt/smbshare。警告> cifs 需要 IP 或 DNS 名称，而不是 Windows 名称。
+假设我们想访问计算机 `smbserver` 上的 SMB 共享 `myshare`，在 Windows PC 上输入的地址为 `\\smbserver\myshare\`。我们挂载到 `/mnt/smbshare`。警告> `cifs` 需要 IP 或 DNS 名称，而不是 Windows 名称。
 
 #### Linux
 
@@ -775,7 +775,7 @@ Xorg    3324 root   0w   REG 8,6     56296    12492 /var/log/Xorg.0.log
 # mount -t cifs -o username=winuser,password=winpwd //192.168.16.229/myshare /mnt/share
 ```
 
-另外，使用 mount.cifs 包可以将凭据存储在文件中，例如 /home/user/.smb：
+另外，使用 `mount.cifs` 包可以将凭据存储在文件中，例如 `/home/user/.smb`：
 
 ```
 username=winuser
@@ -790,7 +790,7 @@ password=winpwd
 
 #### FreeBSD
 
-使用 -I 指定 IP（或 DNS 名称）；smbserver 是 Windows 名称。
+使用 `-I` 指定 IP（或 DNS 名称）；`smbserver` 是 Windows 名称。
 
 ```
 # smbutil view -I 192.168.16.229 //winuser@smbserver   # List the shares
@@ -808,7 +808,7 @@ password=winpwd
 
 #### FreeBSD
 
-使用内存设备（必要时执行 # kldload md.ko）：
+使用内存设备（必要时执行 `# kldload md.ko`）：
 
 ```
 # mdconfig -a -t vnode -f file.iso -u 0
@@ -825,7 +825,7 @@ password=winpwd
 
 ### Solaris 和 FreeBSD
 
-使用 loop-back 文件接口或 lofi：
+使用 loop-back 文件接口或 `lofi`：
 
 ```
 # lofiadm -a file.iso
@@ -835,42 +835,42 @@ password=winpwd
 
 ### 3.10 创建和刻录 ISO 镜像
 
-这将按扇区复制 cd 或 DVD。没有 conv=notrunc，镜像会更小，如果 cd 上内容较少。见下文和 dd 示例（第 41 页）。
+这将按扇区复制 cd 或 DVD。没有 `conv=notrunc`，镜像会更小，如果 cd 上内容较少。见下文和 `dd` 示例（第 41 页）。
 
 ```
 # dd if=/dev/hdc of=/tmp/mycd.iso bs=2048 conv=notrunc
 ```
 
-使用 mkisofs 从目录中的文件创建 CD/DVD 镜像。为克服文件名限制：-r 启用常见于 UNIX 系统的 Rock Ridge 扩展，-J 启用 Microsoft 系统使用的 Joliet 扩展。-L 允许 ISO9660 文件名以句点开头。
+使用 `mkisofs` 从目录中的文件创建 CD/DVD 镜像。为克服文件名限制：`-r` 启用常见于 UNIX 系统的 Rock Ridge 扩展，`-J` 启用 Microsoft 系统使用的 Joliet 扩展。`-L` 允许 ISO9660 文件名以句点开头。
 
 ```
 # mkisofs -J -L -r -V TITLE -o imagefile.iso /path/to/dir
 ```
 
-在 FreeBSD 上，mkisofs 可在 ports 的 sysutils/cdtools 中找到。
+在 FreeBSD 上，`mkisofs` 可在 ports 的 `sysutils/cdtools` 中找到。
 
 #### 刻录 CD/DVD ISO 镜像
 
 #### FreeBSD
 
-FreeBSD 默认不会在 ATAPI 驱动器上启用 DMA。DMA 可通过 sysctl 命令和以下参数启用，或通过 /boot/loader.conf 中的以下条目启用：
+FreeBSD 默认不会在 ATAPI 驱动器上启用 DMA。DMA 可通过 `sysctl` 命令和以下参数启用，或通过 `/boot/loader.conf` 中的以下条目启用：
 
 ```
 hw.ata.ata_dma="1"
 hw.ata.atapi_dma="1"
 ```
 
-使用 ATAPI 设备使用 burncd（burncd 是基本系统的一部分）和使用 SCSI 驱动器的 cdrecord（在 sysutils/cdtools 中）。
+使用 ATAPI 设备使用 `burncd`（`burncd` 是基本系统的一部分）和使用 SCSI 驱动器的 `cdrecord`（在 `sysutils/cdtools` 中）。
 
-```
+
+
 # burncd -f /dev/acd0 data imagefile.iso fixate      # For ATAPI drive
 # cdrecord -scanbus                                   # To find the burner device (like 1,0,0)
 # cdrecord dev=1,0,0 imagefile.iso
-```
 
-#### Linux
+## Linux
 
-也可以按上述描述使用 cdrecord。还可以使用原生 ATAPI 接口，可通过以下方式找到：
+也可以按上述描述使用 `cdrecord`。还可以使用原生 ATAPI 接口，可通过以下方式找到：
 
 ```
 # cdrecord dev=ATAPI -scanbus
@@ -878,13 +878,9 @@ hw.ata.atapi_dma="1"
 
 并按上述方式刻录 CD/DVD。
 
-
-
-
-
 # dvd+rw-tools
 
-dvd+rw-tools 软件包（FreeBSD: ports/sysutils/dvd+rw-tools）可以完成所有操作，并且包含 growisofs 用于刻录 CD 或 DVD。示例中将 dvd 设备引用为 /dev/dvd，它可能是 /dev/scd0 的符号链接（Linux 典型的 scsi），或 /dev/cd0（典型的 FreeBSD），或 /dev/rcd0c（典型的 NetBSD/OpenBSD 字符 SCSI），或 /dev/rdsk/c0t1d0s2（Solaris 字符 SCSI/ATAPI CD-ROM 设备的示例）。FreeBSD 手册第 18.7 章中有很好的文档和示例。
+`dvd+rw-tools` 软件包（FreeBSD: `ports/sysutils/dvd+rw-tools`）可以完成所有操作，并且包含 `growisofs` 用于刻录 CD 或 DVD。示例中将 dvd 设备引用为 `/dev/dvd`，它可能是 `/dev/scd0` 的符号链接（Linux 典型的 scsi），或 `/dev/cd0`（典型的 FreeBSD），或 `/dev/rcd0c`（典型的 NetBSD/OpenBSD 字符 SCSI），或 `/dev/rdsk/c0t1d0s2`（Solaris 字符 SCSI/ATAPI CD-ROM 设备的示例）。FreeBSD 手册第 18.7 章中有很好的文档和示例。
 
 ```
 # -dvd-compat closes the disk
@@ -894,7 +890,7 @@ dvd+rw-tools 软件包（FreeBSD: ports/sysutils/dvd+rw-tools）可以完成所�
 
 ## 将 Nero .nrg 文件转换为 .iso
 
-Nero 只是在正常的 iso 映像前添加了 300Kb 的头。这可以用 dd 去除。
+Nero 只是在正常的 iso 映像前添加了 300Kb 的头。这可以用 `dd` 去除。
 
 ```
 # dd bs=1k if=imagefile.nrg of=imagefile.iso skip=300
@@ -902,7 +898,7 @@ Nero 只是在正常的 iso 映像前添加了 300Kb 的头。这可以用 dd �
 
 ## 将 bin/cue 映像转换为 .iso
 
-小巧的 bchunk 程序可以做到这一点。它在 FreeBSD ports 中位于 sysutils/bchunk。
+小巧的 `bchunk` 程序可以做到这一点。它在 FreeBSD ports 中位于 `sysutils/bchunk`。
 
 ```
 # bchunk imagefile.bin imagefile.cue imagefile.iso
@@ -910,7 +906,7 @@ Nero 只是在正常的 iso 映像前添加了 300Kb 的头。这可以用 dd �
 
 ### 3.11 创建基于文件的映像
 
-例如使用文件 /usr/vdisk.img 创建一个 1GB 的分区。这里我们使用 vnode 0，但也可以是 1。
+例如使用文件 `/usr/vdisk.img` 创建一个 1GB 的分区。这里我们使用 vnode 0，但也可以是 1。
 
 #### FreeBSD
 
@@ -923,23 +919,23 @@ Nero 只是在正常的 iso 映像前添加了 300Kb 的头。这可以用 dd �
 # umount /mnt; mdconfig -d -u 0; rm /usr/vdisk.img      # Cleanup the md device
 ```
 
-基于文件的映像可以通过 /etc/rc.conf 和 /etc/fstab 中的条目在启动时自动挂载。使用 # /etc/rc.d/mdconfig start 测试你的设置（首先使用 # mdconfig -d -u 0 删除 md0 设备）。
+基于文件的映像可以通过 `/etc/rc.conf` 和 `/etc/fstab` 中的条目在启动时自动挂载。使用 `# /etc/rc.d/mdconfig start` 测试你的设置（首先使用 `# mdconfig -d -u 0` 删除 `md0` 设备）。
 
-请注意，此自动设置仅在文件映像不在根分区上时才有效。原因是 /etc/rc.d/mdconfig 脚本在启动期间非常早执行，而根分区仍为只读。位于根分区之外的映像将使用脚本 /etc/rc.d/mdconfig2 稍后挂载。
+请注意，此自动设置仅在文件映像不在根分区上时才有效。原因是 `/etc/rc.d/mdconfig` 脚本在启动期间非常早执行，而根分区仍为只读。位于根分区之外的映像将使用脚本 `/etc/rc.d/mdconfig2` 稍后挂载。
 
-/boot/loader.conf:
+`/boot/loader.conf`:
 
 ```
 md_load="YES"
 ```
 
-/etc/rc.conf:
+`/etc/rc.conf`:
 
 ```
 # mdconfig_md0="-t vnode -f /usr/vdisk.img"      # /usr is not on the root partition
 ```
 
-/etc/fstab:（末尾的 0 0 很重要，它告诉 fsck 忽略此设备，因为它尚不存在）
+`/etc/fstab`:（末尾的 0 0 很重要，它告诉 `fsck` 忽略此设备，因为它尚不存在）
 
 ```
 /dev/md0c          /usr/vdisk    ufs     rw              0       0
@@ -966,7 +962,7 @@ md_load="YES"
 
 #### Linux with losetup
 
-/dev/zero 比 urandom 快得多，但对加密来说安全性较低。
+`/dev/zero` 比 `urandom` 快得多，但对加密来说安全性较低。
 
 ```
 # dd if=/dev/urandom of=/usr/vdisk.img bs=1024k count=1024
@@ -981,7 +977,7 @@ md_load="YES"
 
 ### 3.12 创建内存文件系统
 
-内存基于文件系统对于重 IO 应用程序来说非常快。如何创建挂载在 /memdisk 上的 64 MB 分区：
+内存基于文件系统对于重 IO 应用程序来说非常快。如何创建挂载在 `/memdisk` 上的 64 MB 分区：
 
 #### FreeBSD
 
@@ -999,7 +995,7 @@ md      /memdisk    mfs     rw,-s64M    0    0    # /etc/fstab entry
 
 ### 3.13 磁盘性能
 
-在分区 ad4s3c（/home）上读写 1 GB 文件
+在分区 `ad4s3c`（`/home`）上读写 1 GB 文件
 
 ```
 # time dd if=/dev/ad4s3c of=/dev/null bs=1024k count=1000
@@ -1007,7 +1003,7 @@ md      /memdisk    mfs     rw,-s64M    0    0    # /etc/fstab entry
 # hdparm -tT /dev/hda        # Linux only
 ```
 
-## 4 NETWORK
+# 4 NETWORK
 
 路由（p15） | 额外 IP（p15） | 更改 MAC（p16） | 端口（p16） | 防火墙（p16） | IP 转发（p17） | NAT（p17） | DNS（p17） | DHCP（p19） | 流量（p19） | QoS（p20） | NIS（p21） | Netcat（p21）
 
@@ -1015,7 +1011,8 @@ md      /memdisk    mfs     rw,-s64M    0    0    # /etc/fstab entry
 
 #### Linux
 
-```
+
+
 # ethtool eth0                         # Show the ethernet status (replaces mii-diag)
 # ethtool -s eth0 speed 100 duplex full # Force 100Mbit Full duplex
 # ethtool -s eth0 autoneg off          # Disable auto negotiation
@@ -1024,11 +1021,6 @@ md      /memdisk    mfs     rw,-s64M    0    0    # /etc/fstab entry
 # ip link set eth0 up                   # Bring device up (or down). Same as "ifconfig eth0 up"
 # ip addr show                          # Display all IP addresses on Linux (similar to ifconfig)
 # ip neigh show                         # Similar to arp -a
-```
-
-
-
-
 
 ## 其他操作系统
 
@@ -1068,7 +1060,7 @@ FreeBSD
 # route add default 192.168.1.1
 ```
 
-在 /etc/rc.conf 中永久添加路由
+在 `/etc/rc.conf` 中永久添加路由
 
 ```
 static_routes="myroute"
@@ -1094,7 +1086,7 @@ Solaris
 # route change default 192.168.50.254 1
 ```
 
-永久条目设置在 /etc/defaultrouter 中的条目。
+永久条目设置在 `/etc/defaultrouter` 中的条目。
 
 Windows
 
@@ -1103,7 +1095,7 @@ Windows
 # Route add 0.0.0.0 mask 0.0.0.0 192.168.51.254
 ```
 
-使用 add -p 使路由持久化。
+使用 `add -p` 使路由持久化。
 
 ### 4.3 配置附加 IP 地址
 
@@ -1124,7 +1116,7 @@ Windows
 # ifconfig fxp0 -alias 192.168.51.254                     # Remove second IP alias
 ```
 
-/etc/rc.conf 中的永久条目
+`/etc/rc.conf` 中的永久条目
 
 ```
 ifconfig_fxp0="inet 192.168.50.254  netmask 255.255.255.0"
@@ -1133,7 +1125,7 @@ ifconfig_fxp0_alias0="192.168.51.254 netmask 255.255.255.0"
 
 #### Solaris
 
-使用 ifconfig -a 检查设置
+使用 `ifconfig -a` 检查设置
 
 ```
 # ifconfig hme0 plumb                         # Enable the network card
@@ -1154,11 +1146,13 @@ ifconfig_fxp0_alias0="192.168.51.254 netmask 255.255.255.0"
 # sudo ifconfig en0 lladdr 00:01:02:03:04:05     # Mac OS X Leopard
 ```
 
-Windows 上存在许多工具。例如 etherchange4。或查找 "Mac Makeup"、"smac"。
+Windows 上存在许多工具。例如 `etherchange4`。或查找 "Mac Makeup"、"smac"。
 
 ### 4.5 使用中的端口
 
 正在监听的开放端口：
+
+
 
 ```
 # netstat -an | grep LISTEN
@@ -1179,7 +1173,9 @@ Windows 上存在许多工具。例如 etherchange4。或查找 "Mac Makeup"、"
 
 ```
 # iptables -L -n -v               # For status
-打开 iptables 防火墙
+```
+打开 `iptables` 防火墙
+```
 # iptables -P INPUT   ACCEPT       # Open everything
 # iptables -P FORWARD ACCEPT
 # iptables -P OUTPUT  ACCEPT
@@ -1197,9 +1193,6 @@ Windows 上存在许多工具。例如 etherchange4。或查找 "Mac Makeup"、"
 # sysctl net.inet.ip.fw.enable=1     # Enable
 ```
 
-
-
-
 ### 4.7 IP 转发用于路由
 
 Linux
@@ -1211,7 +1204,7 @@ Linux
 # echo 1 > /proc/sys/net/ipv4/ip_forward
 ```
 
-或编辑 /etc/sysctl.conf：
+或编辑 `/etc/sysctl.conf`：
 
 ```
 net.ipv4.ip_forward = 1
@@ -1227,7 +1220,8 @@ FreeBSD
 # sysctl net.inet.ip.fastforwarding=1      # For dedicated router or firewall
 ```
 
-永久生效请在 /etc/rc.conf 中添加条目：
+永久生效请在 `/etc/rc.conf` 中添加条目：
+
 ```
 gateway_enable="YES"      # Set to YES if this host will be a gateway.
 ```
@@ -1252,7 +1246,7 @@ Linux
 # iptables -L -t nat      # Check NAT status
 ```
 
-使用 -D 代替 -A 删除端口转发。程序 netstat-nat⁵ 非常有用，可以追踪连接（它使用 /proc/net/ip_conntrack 或 /proc/net/nf_conntrack）。
+使用 `-D` 代替 `-A` 删除端口转发。程序 `netstat-nat`⁵ 非常有用，可以追踪连接（它使用 `/proc/net/ip_conntrack` 或 `/proc/net/nf_conntrack`）。
 
 ```
 # netstat-nat -n      # show all connections with IPs
@@ -1262,7 +1256,8 @@ Linux
 # natd -s -m -u -dynamic -f /etc/natd.conf -n fxp0
 ```
 
-或编辑 /etc/rc.conf：
+或编辑 `/etc/rc.conf`：
+
 ```
 firewall_enable="YES"      # Set to YES to enable firewall functionality
 firewall_type="open"      # Firewall type (see /etc/rc.firewall)
@@ -1284,11 +1279,13 @@ redirect_port udp 192.168.51.103:7777 7777
 
 ### 4.9 DNS
 
-在 Unix 上，DNS 条目对所有接口有效，并存储在 /etc/resolv.conf 中。主机所属的域也存储在此文件中。最小配置如下：
+在 Unix 上，DNS 条目对所有接口有效，并存储在 `/etc/resolv.conf` 中。主机所属的域也存储在此文件中。最小配置如下：
 
-nameserver 78.31.70.238
-search sleepyowl.net intern.lab
-domain sleepyowl.net
+`nameserver 78.31.70.238`
+
+`search sleepyowl.net intern.lab`
+
+`domain sleepyowl.net`
 
 使用以下命令检查系统域名：
 
@@ -1318,7 +1315,7 @@ domain sleepyowl.net
 
 #### 转发查询
 
-Dig 是测试 DNS 设置的好帮手。例如公共 DNS 服务器 213.133.105.2 ns.second-ns.de 可用于测试。查看客户端从哪个服务器接收到响应（简化答案）。
+`Dig` 是测试 DNS 设置的好帮手。例如公共 DNS 服务器 `213.133.105.2` `ns.second-ns.de` 可用于测试。查看客户端从哪个服务器接收到响应（简化答案）。
 
 ```
 # dig sleepyowl.net
@@ -1326,7 +1323,9 @@ sleepyowl.net.      600  IN  A     78.31.70.238
 ;; SERVER: 192.168.51.254#53(192.168.51.254)
 ```
 
-路由器 192.168.51.254 作出了响应，响应为 A 记录。任何记录都可以查询，并且可以使用 @ 指定 DNS 服务器：
+路由器 `192.168.51.254` 作出了响应，响应为 A 记录。任何记录都可以查询，并且可以使用 `@` 指定 DNS 服务器：
+
+
 
 ```
 # dig MX google.com
@@ -1335,7 +1334,7 @@ sleepyowl.net.      600  IN  A     78.31.70.238
 # dig AXFR @ns1.xname.org cb.vu   # Get the full zone (zone transfer)
 ```
 
-程序 host 也很强大。
+程序 `host` 也很强大。
 
 ```
 # host -t MX cb.vu          # Get the mail MX entry
@@ -1345,7 +1344,7 @@ sleepyowl.net.      600  IN  A     78.31.70.238
 
 #### 反向查询
 
-查找属于某个 IP 地址的名称（in-addr.arpa.）。这可以使用 dig、host 和 nslookup 完成：
+查找属于某个 IP 地址的名称（`in-addr.arpa.`）。这可以使用 `dig`、`host` 和 `nslookup` 完成：
 
 ```
 # dig -x 78.31.70.238
@@ -1353,28 +1352,25 @@ sleepyowl.net.      600  IN  A     78.31.70.238
 # nslookup 78.31.70.238
 ```
 
-#### /etc/hosts
+#### `/etc/hosts`
 
-单个主机可以在文件 /etc/hosts 中配置，而无需本地运行 named 来解析主机名查询。格式很简单，例如：
+单个主机可以在文件 `/etc/hosts` 中配置，而无需本地运行 `named` 来解析主机名查询。格式很简单，例如：
 
 ```
 78.31.70.238  sleepyowl.net  sleepyowl
 ```
 
-hosts 与 DNS 查询之间的优先级，即名称解析顺序，可以在 /etc/nsswitch.conf 和 /etc/host.conf 中配置。该文件在 Windows 上也存在，通常位于：
+`hosts` 与 DNS 查询之间的优先级，即名称解析顺序，可以在 `/etc/nsswitch.conf` 和 `/etc/host.conf` 中配置。该文件在 Windows 上也存在，通常位于：
 
 ```
 C:\WINDOWS\SYSTEM32\DRIVERS\ETC
 ```
 
-
-
-
 ### 4.10 DHCP
 
 #### Linux
 
-某些发行版（SuSE）使用 dhcpc d 作为客户端。默认接口为 eth0。
+某些发行版（SuSE）使用 `dhcpc d` 作为客户端。默认接口为 `eth0`。
 
 ```
 # dhcpc d -n eth0          # Trigger a renew (does not always work)
@@ -1389,7 +1385,7 @@ C:\WINDOWS\SYSTEM32\DRIVERS\ETC
 
 #### FreeBSD
 
-FreeBSD（和 Debian）使用 dhclient。要配置一个接口（例如 bge0）运行：
+FreeBSD（和 Debian）使用 `dhclient`。要配置一个接口（例如 `bge0`）运行：
 
 ```
 # dhclient bge0
@@ -1420,7 +1416,7 @@ interface "rl0" {
 
 ### Windows
 
-dhcp 租约可以用 ipconfig 续期：
+`dhcp` 租约可以用 `ipconfig` 续期：
 
 ```
 # ipconfig /renew       # renew all adapters
@@ -1432,9 +1428,9 @@ dhcp 租约可以用 ipconfig 续期：
 
 ### 4.11 流量分析
 
-Bmon⁶ 是一个小型控制台带宽监视器，可以显示不同接口上的流量。
+`Bmon`⁶ 是一个小型控制台带宽监视器，可以显示不同接口上的流量。
 
-#### 使用 tcpdump 嗅探
+#### 使用 `tcpdump` 嗅探
 
 ```
 # tcpdump -n l -i bge0 not port ssh and src \(192.168.16.121 or 192.168.16.54\)
@@ -1453,16 +1449,19 @@ Bmon⁶ 是一个小型控制台带宽监视器，可以显示不同接口上的
 
 其他重要选项：
 
-- -A  以明文打印每个数据包（无头）
-- -X  以十六进制和 ASCII 打印数据包
-- -l  使 stdout 行缓冲
-- -D  打印所有可用接口
+- `-A`  以明文打印每个数据包（无头）
 
-在 Windows 上使用来自 www.winpcap.org 的 windump。使用 windump -D 列出接口。
+- `-X`  以十六进制和 ASCII 打印数据包
 
-#### 使用 nmap 扫描
+- `-l`  使 stdout 行缓冲
 
-Nmap⁷ 是一款具有操作系统检测功能的端口扫描器，通常已安装在大多数发行版上，也可用于 Windows。如果你不扫描你的服务器，黑客会替你扫描...
+- `-D`  打印所有可用接口
+
+在 Windows 上使用来自 `www.winpcap.org` 的 `windump`。使用 `windump -D` 列出接口。
+
+#### 使用 `nmap` 扫描
+
+`Nmap`⁷ 是一款具有操作系统检测功能的端口扫描器，通常已安装在大多数发行版上，也可用于 Windows。如果你不扫描你的服务器，黑客会替你扫描...
 
 ```
 # nmap cb.vu          # scans all reserved TCP ports on the host
@@ -1477,7 +1476,7 @@ Running: FreeBSD 5.X
 Uptime 33.120 days (since Fri Aug 31 11:41:04 2007)
 ```
 
-其他非标准但有用的工具是 hping（www.hping.org）一个 IP 数据包组装/分析器和 fping（fping.sourceforge.net）。fping 可以以轮询方式检查多个主机。
+其他非标准但有用的工具是 `hping`（`www.hping.org`）一个 IP 数据包组装/分析器和 `fping`（`fping.sourceforge.net`）。`fping` 可以以轮询方式检查多个主机。
 
 ### 4.12 流量控制（QoS）
 
@@ -1491,6 +1490,8 @@ DSL 或电缆调制解调器具有较长的队列以提高上传吞吐量。然�
 
 对于 512 Kbit 上传调制解调器。
 
+
+
 ```
 # tc qdisc add dev eth0 root tbf rate 480kbit latency 50ms burst 1540
 # tc -s qdisc ls dev eth0                 # Status
@@ -1498,9 +1499,9 @@ DSL 或电缆调制解调器具有较长的队列以提高上传吞吐量。然�
 # tc qdisc change dev eth0 root tbf rate 220kbit latency 50ms burst 1540
 ```
 
-#### FreeBSD
+### FreeBSD
 
-FreeBSD 使用 dummynet 流量整形器，通过 ipfw 配置。管道用于以 [K|M]{bit/s|Byte/s} 单位设置带宽限制，0 表示带宽无限制。使用相同的管道编号会重新配置它。例如将上传带宽限制为 500 Kbit。
+FreeBSD 使用 `dummynet` 流量整形器，通过 `ipfw` 配置。管道用于以 `[K|M]{bit/s|Byte/s}` 单位设置带宽限制，0 表示带宽无限制。使用相同的管道编号会重新配置它。例如将上传带宽限制为 500 Kbit。
 
 ```
 # kldload dummynet          # load the module if necessary
@@ -1508,11 +1509,11 @@ FreeBSD 使用 dummynet 流量整形器，通过 ipfw 配置。管道用于以 [
 # ipfw add pipe 1 ip from me to any   # divert the full upload into the pipe
 ```
 
-#### 服务质量
+### 服务质量
 
 #### Linux
 
-使用 tc 进行优先级队列以优化 VoIP。完整示例请参见 voip-info.org 或 www.howtoforge.com。假设 VoIP 使用 udp 端口 10000:11024 和设备 eth0（也可能是 ppp0 等）。以下命令将 QoS 定义为三个队列并强制 VoIP 流量进入队列 1，QoS 为 0x1e（所有位都置位）。默认流量进入队列 3，QoS 最小化延迟进入队列 2。
+使用 `tc` 进行优先级队列以优化 VoIP。完整示例请参见 `voip-info.org` 或 `www.howtoforge.com`。假设 VoIP 使用 `udp` 端口 `10000:11024` 和设备 `eth0`（也可能是 `ppp0` 等）。以下命令将 QoS 定义为三个队列并强制 VoIP 流量进入队列 1，QoS 为 `0x1e`（所有位都置位）。默认流量进入队列 3，QoS 最小化延迟进入队列 2。
 
 ```
 # tc qdisc add dev eth0 root handle 1: prio priomap 2 2 2 2 2 2 2 2 1 1 1 1 1 1 0
@@ -1520,24 +1521,26 @@ FreeBSD 使用 dummynet 流量整形器，通过 ipfw 配置。管道用于以 [
 # tc qdisc add dev eth0 parent 1:2 handle 20: sfq
 ```
 
-
-
-
+```
 # tc qdisc add dev eth0 parent 1:3 handle 30: sfq
+```
+
+```
 # tc filter add dev eth0 protocol ip parent 1: prio 1 u32 \
 match ip dport 10000 0x3C00 flowid 1:1        # 使用服务器端口范围
 match ip dst 123.23.0.1 flowid 1:1            # 或/和使用服务器 IP
+```
 
-# 状态和删除
+#### 状态和删除
 
 ```
 # tc -s qdisc ls dev eth0        # 队列状态
 # tc qdisc del dev eth0 root     # 删除所有 QoS
 ```
 
-# 计算端口范围和掩码
+#### 计算端口范围和掩码
 
-tc filter 使用端口和掩码来定义端口范围，你需要自行计算。找到端口范围的 2^N 末尾，推导出范围并转换为 HEX。这就是你的掩码。例如 10000 -> 11024，范围为 1024。
+`tc filter` 使用端口和掩码来定义端口范围，你需要自行计算。找到端口范围的 2^N 末尾，推导出范围并转换为 HEX。这就是你的掩码。例如 `10000 -> 11024`，范围为 1024。
 
 ```
 # 2^13 (8192) < 10000 < 2^14 (16384)      # 末尾是 2^14 = 16384
@@ -1559,7 +1562,7 @@ tc filter 使用端口和掩码来定义端口范围，你需要自行计算。�
 # ipfw add 30 queue 3 from me to any                # 其余所有流量
 ```
 
-# 状态和删除
+#### 状态和删除
 
 ```
 # ipfw list                        # 规则状态
@@ -1579,7 +1582,7 @@ tc filter 使用端口和掩码来定义端口范围，你需要自行计算。�
 # rpcinfo -p servername  # 报告服务器的 RPC 服务
 ```
 
-# ypbind 是否正在运行？
+#### ypbind 是否正在运行？
 
 ```
 # ps auxww | grep ypbind
@@ -1600,13 +1603,13 @@ domain domain.net broadcast
 
 ### 4.14 Netcat
 
-Netcat® (nc) 更为人所知的是“网络瑞士军刀”，它可以操作、创建或读写 TCP/IP 连接。以下是一些有用的示例，网上还有更多，例如 g-loaded.eu[...]⁹ 和这里¹⁰。
+`Netcat®` (`nc`) 更为人所知的是“网络瑞士军刀”，它可以操作、创建或读写 TCP/IP 连接。以下是一些有用的示例，网上还有更多，例如 `g-loaded.eu[...]`⁹ 和这里¹⁰。
 
-你可能需要使用命令 netcat 而不是 nc。另请参阅类似的命令 socat。
+你可能需要使用命令 `netcat` 而不是 `nc`。另请参阅类似的命令 `socat`。
 
 #### 文件传输
 
-通过原始 tcp 连接复制一个大文件夹。传输非常快（无协议开销），你无需折腾 NFS 或 SMB 或 FTP 等，只需在服务器上使文件可用，然后从客户端获取。这里 192.168.1.1 是服务器 IP 地址。
+通过原始 tcp 连接复制一个大文件夹。传输非常快（无协议开销），你无需折腾 NFS 或 SMB 或 FTP 等，只需在服务器上使文件可用，然后从客户端获取。这里 `192.168.1.1` 是服务器 IP 地址。
 
 ```
 server# tar -cf - -C VIDEO_TS . | nc -l -p 4444      # 在端口 4444 上提供 tar 文件夹
@@ -1624,7 +1627,7 @@ client# nc 192.168.1.1 4444 | dd of=da0.img           # 拉取分区到文件
 
 #### 远程 shell
 
-选项 -e 仅在 Windows 版本上可用？或使用 nc 1.10。
+选项 `-e` 仅在 Windows 版本上可用？或使用 `nc 1.10`。
 
 ```
 # nc -lp 4444 -e /bin/bash          # 提供远程 shell（服务器后门）
@@ -1650,58 +1653,57 @@ bob  # nc 192.168.1.1 4444
 
 ## 5 SSH SCP
 
-公钥 (p22) | 指纹 (p23) | SCP (p23) | 隧道 (p24)
+
+
+公钥 (`p22`) | 指纹 (`p23`) | SCP (`p23`) | 隧道 (`p24`)
 
 ### 5.1 公钥认证
 
-使用公钥认证无需密码连接到主机。其思想是将你的公钥追加到远程主机的 authorized_keys2 文件中。对于此示例，让我们将 host-client 连接到 host-server，密钥在客户端生成。使用 cygwin 时，你可能需要创建主目录和 .ssh 目录，执行 # mkdir -p /home/USER/.ssh
+使用公钥认证无需密码连接到主机。其思想是将你的公钥追加到远程主机的 `authorized_keys2` 文件中。对于此示例，让我们将 `host-client` 连接到 `host-server`，密钥在客户端生成。使用 `cygwin` 时，你可能需要创建主目录和 `.ssh` 目录，执行 `# mkdir -p /home/USER/.ssh`
 
-- 使用 ssh-keygen 生成密钥对。~/.ssh/id_dsa 是私钥，~/.ssh/id_dsa.pub 是公钥。
-- 将公钥复制到服务器并追加到服务器上你主目录中的文件 ~/.ssh/authorized_keys2。
+- 使用 `ssh-keygen` 生成密钥对。`~/.ssh/id_dsa` 是私钥，`~/.ssh/id_dsa.pub` 是公钥。
+- 将公钥复制到服务器并追加到服务器上你主目录中的文件 `~/.ssh/authorized_keys2`。
 
 ```
 # ssh-keygen -t dsa -N ''
 # cat ~/.ssh/id_dsa.pub | ssh you@host-server "cat - >> ~/.ssh/authorized_keys2"
 ```
 
-# 使用来自 ssh.com 的 Windows 客户端
+#### 使用来自 ssh.com 的 Windows 客户端
 
-非商业版的 ssh.com 客户端可以从主 ftp 站点下载：ftp.ssh.com/pub/ssh/. ssh.com 客户端生成的密钥需要转换为 OpenSSH 服务器可用的格式。这可以使用 ssh-keygen 命令完成。
+非商业版的 `ssh.com` 客户端可以从主 `ftp` 站点下载：`ftp.ssh.com/pub/ssh/`。`ssh.com` 客户端生成的密钥需要转换为 OpenSSH 服务器可用的格式。这可以使用 `ssh-keygen` 命令完成。
 
-9.http://www.g-loaded.eu/2006/11/06/netcat-a-couple-of-useful-examples
-10.http://www.terminally-incoherent.com/blog/2007/08/07/few-useful-netcat-tricks
+`9.http://www.g-loaded.eu/2006/11/06/netcat-a-couple-of-useful-examples`
 
+`10.http://www.terminally-incoherent.com/blog/2007/08/07/few-useful-netcat-tricks`
 
-
-
-
-- 使用 ssh.com 客户端创建密钥对：设置 - 用户身份验证 - 生成新...
-- 我使用密钥类型 DSA；密钥长度 2048。
-- 将 ssh.com 客户端生成的公钥复制到服务器的 ~/.ssh 文件夹中。
-- 密钥位于 C:\Documents and Settings\%USERNAME%\Application Data\SSH\UserKeys。
-- 在服务器上使用 ssh-keygen 命令转换密钥：
+- 使用 `ssh.com` 客户端创建密钥对：设置 - 用户身份验证 - 生成新...
+- 我使用密钥类型 `DSA`；密钥长度 `2048`。
+- 将 `ssh.com` 客户端生成的公钥复制到服务器的 `~/.ssh` 文件夹中。
+- 密钥位于 `C:\Documents and Settings\%USERNAME%\Application Data\SSH\UserKeys`。
+- 在服务器上使用 `ssh-keygen` 命令转换密钥：
 
 ```
 # cd ~/.ssh
 # ssh-keygen -i -f keyfilename.pub >> authorized_keys2
 ```
 
-注意：我们使用的是 DSA 密钥，RSA 也是可能的。密钥未受密码保护。
+注意：我们使用的是 `DSA` 密钥，`RSA` 也是可能的。密钥未受密码保护。
 
-## 使用 putty for Windows
+#### 使用 putty for Windows
 
-Putty 是 Windows 的一个简单免费 ssh 客户端。
+`Putty` 是 Windows 的一个简单免费 `ssh` 客户端。
 
-- 使用 puTTYgen 程序创建密钥对。
-- 保存公钥和私钥（例如保存到 C:\Documents and Settings\%USERNAME%\.ssh）。
-- 将公钥复制到服务器的 ~/.ssh 文件夹中：
+- 使用 `puTTYgen` 程序创建密钥对。
+- 保存公钥和私钥（例如保存到 `C:\Documents and Settings\%USERNAME%\.ssh`）。
+- 将公钥复制到服务器的 `~/.ssh` 文件夹中：
 
 ```
 # scp .ssh/puttykey.pub root@192.168.51.254:~/.ssh/
 ```
 
-- 在服务器上使用 ssh-keygen 命令将密钥转换为 OpenSSH 用：
-- 在 putty 设置中指定私钥位置：连接 - SSH - 身份验证
+- 在服务器上使用 `ssh-keygen` 命令将密钥转换为 OpenSSH 用：
+- 在 `putty` 设置中指定私钥位置：连接 - SSH - 身份验证
 
 ```
 # cd ~/.ssh
@@ -1710,7 +1712,7 @@ Putty 是 Windows 的一个简单免费 ssh 客户端。
 
 ### 5.2 检查指纹
 
-首次登录时，ssh 会询问是否将未知主机及其指纹存储在 known hosts 中。为了避免中间人攻击，服务器管理员可以向你发送服务器指纹，然后在首次登录时进行比较。使用 ssh-keygen -l 获取指纹（在服务器上）：
+首次登录时，`ssh` 会询问是否将未知主机及其指纹存储在 `known hosts` 中。为了避免中间人攻击，服务器管理员可以向你发送服务器指纹，然后在首次登录时进行比较。使用 `ssh-keygen -l` 获取指纹（在服务器上）：
 
 ```
 # ssh-keygen -l -f /etc/ssh/ssh_host_rsa_key.pub    # For RSA key
@@ -1738,8 +1740,9 @@ Are you sure you want to continue connecting (yes/no)? yes
 # scp -r joe@host-two:/www /www/tmp
 ```
 
-在 Konqueror 或 Midnight Commander 中，可以使用地址 fish://user@gate 访问远程文件系统。但是实现非常慢。
-此外，还可以使用基于 SCP 的文件系统客户端 sshfs 挂载远程文件夹。参见 fuse sshfs。
+在 `Konqueror` 或 `Midnight Commander` 中，可以使用地址 `fish://user@gate` 访问远程文件系统。但是实现非常慢。
+
+此外，还可以使用基于 `SCP` 的文件系统客户端 `sshfs` 挂载远程文件夹。参见 `fuse sshfs`。
 
 ```
 ssh_exchange_identification: Connection closed by remote host
@@ -1754,7 +1757,7 @@ echo 'SSHD: ALL' >> /etc/hosts.allow
 
 ### 5.4 隧道
 
-SSH 隧道允许通过 SSH 连接转发或反向转发端口，从而保护流量并访问原本会被阻止的端口。这仅适用于 TCP。转发和反向的通用命名法为（另见 ssh 和 NAT 示例）：
+`SSH` 隧道允许通过 `SSH` 连接转发或反向转发端口，从而保护流量并访问原本会被阻止的端口。这仅适用于 `TCP`。转发和反向的通用命名法为（另见 `ssh` 和 `NAT` 示例）：
 
 ```
 # ssh -L localport:desthost:destport user@gate  # desthost as seen from the gate
@@ -1763,71 +1766,81 @@ SSH 隧道允许通过 SSH 连接转发或反向转发端口，从而保护流�
 # ssh -X user@gate   # To force X forwarding
 ```
 
-这将连接到 gate 并将本地端口转发到主机 desthost:destport。请注意 desthost 是 gate 所见的目的主机，因此如果连接至 gate，则 desthost 为 localhost。可以同时转发多个端口。
+这将连接到 `gate` 并将本地端口转发到主机 `desthost:destport`。请注意 `desthost` 是 `gate` 所见的目的主机，因此如果连接至 `gate`，则 `desthost` 为 `localhost`。可以同时转发多个端口。
 
 #### 在 gate 上直接转发
 
-假设我们想要访问在 gate 上运行的 CVS（端口 2401）和 http（端口 80）。这是最简单的示例，desthost 因此为 localhost，我们在本地使用端口 8080 而不是 80，这样就不需要 root 权限。一旦 ssh 会话打开，两个服务都可以通过本地端口访问。
+假设我们想要访问在 `gate` 上运行的 `CVS`（端口 `2401`）和 `http`（端口 `80`）。这是最简单的示例，`desthost` 因此为 `localhost`，我们在本地使用端口 `8080` 而不是 `80`，这样就不需要 `root` 权限。一旦 `ssh` 会话打开，两个服务都可以通过本地端口访问。
 
 ```
 # ssh -L 2401:localhost:2401 -L 8080:localhost:80 user@gate
 ```
 
-### Netbios 和远程桌面转发到第二台服务器
+#### Netbios 和远程桌面转发到第二台服务器
 
-假设一台 Windows smb 服务器位于 gate 后面且未运行 ssh。我们需要访问 smb 共享以及对服务器的远程桌面。
+假设一台 Windows `smb` 服务器位于 `gate` 后面且未运行 `ssh`。我们需要访问 `smb` 共享以及对服务器的远程桌面。
 
 ```
 # ssh -L 139:smbserver:139 -L 3388:smbserver:3389 user@gate
 ```
 
-现在可以通过 \\127.0.0.1\ 访问 smb 共享，但前提是本地共享被禁用，因为本地共享正在监听端口 139。
+现在可以通过 `\\127.0.0.1\` 访问 `smb` 共享，但前提是本地共享被禁用，因为本地共享正在监听端口 `139`。
 
-可以保留本地共享启用，为此我们需要创建一个具有新 IP 地址的新虚拟设备，通过该地址连接 smb 共享。此外，本地 RDP 已在 3389 上监听，因此我们选择 3388。对于此示例，让我们使用虚拟 IP 10.1.1.1。
+可以保留本地共享启用，为此我们需要创建一个具有新 IP 地址的新虚拟设备，通过该地址连接 `smb` 共享。此外，本地 `RDP` 已在 `3389` 上监听，因此我们选择 `3388`。对于此示例，让我们使用虚拟 IP `10.1.1.1`。
 
-- 使用 putty 设置源端口=10.1.1.1:139。可以创建多个环回设备并进行隧道。在 Windows 2000 上，只有 putty 对我有效。在 Windows Vista 上，还需额外转发端口 445 除了端口 139。此外在 Vista 上，补丁 KB942624 会阻止端口 445 的转发，因此我不得不卸载 Vista 上的此补丁。
-- 使用 ssh.com 客户端，禁用“仅允许本地连接”。由于 ssh.com 将绑定到所有地址，因此只能连接单个共享。
+- 使用 `putty` 设置源端口=`10.1.1.1:139`。可以创建多个环回设备并进行隧道。在 Windows 2000 上，只有 `putty` 对我有效。在 Windows Vista 上，还需额外转发端口 `445` 除了端口 `139`。此外在 Vista 上，补丁 `KB942624` 会阻止端口 `445` 的转发，因此我不得不卸载 Vista 上的此补丁。
+- 使用 `ssh.com` 客户端，禁用“仅允许本地连接”。由于 `ssh.com` 将绑定到所有地址，因此只能连接单个共享。
 
-现在创建具有 IP 10.1.1.1 的环回接口：
+现在创建具有 IP `10.1.1.1` 的环回接口：
 
-- # 系统->控制面板->添加硬件 # 是的，硬件已连接 # 添加新硬件设备（在底部）。
-- # 安装我手动选择的硬件 # 网络适配器 # Microsoft , Microsoft Loopback Adapter。
-- 将假设备的 IP 地址配置为 10.1.1.1 掩码 255.255.255.0，无网关。
-- 高级->WINS，启用 LMHosts 查找；禁用 TCP/IP 上的 NetBIOS。
-- # 启用 Microsoft 网络客户端。 # 禁用 Microsoft 网络的文件和打印机共享。
 
-我必须重启才能使其工作。现在使用 \\10.1.1.1 连接到 smb 共享，并远程桌面到 10.1.1.1:3388。
+
+# 系统 -> 控制面板 -> 添加硬件
+是的，硬件已连接
+添加新硬件设备（在底部）。
+
+# 安装我手动选择的硬件
+网络适配器
+`Microsoft`, `Microsoft Loopback Adapter`。
+
+将假设备的 IP 地址配置为 `10.1.1.1` 掩码 `255.255.255.0`，无网关。
+
+高级 -> WINS，启用 LMHosts 查找；禁用 TCP/IP 上的 NetBIOS。
+
+# 启用 Microsoft 网络客户端
+# 禁用 Microsoft 网络的文件和打印机共享。
+
+我必须重启才能使其工作。现在使用 `\\10.1.1.1` 连接到 smb 共享，并远程桌面到 `10.1.1.1:3388`。
 
 #### 调试
 
 如果无法工作：
 
-- 端口是否已转发：netstat -an？查看 0.0.0.0:139 或 10.1.1.1:139
-- telnet 10.1.1.1 139 是否能连接？
+- 端口是否已转发：`netstat -an`？查看 `0.0.0.0:139` 或 `10.1.1.1:139`
+
+- `telnet 10.1.1.1 139` 是否能连接？
+
 - 你需要勾选“本地端口接受来自其他主机的连接”。
+
 - 环回接口上是否已禁用“Microsoft 网络的文件和打印机共享”？
-
-
-
-
 
 ## 连接 NAT 后面的两个客户端
 
-假设两个客户端位于一台 NAT 网关后面，客户端 cliadmin 需要连接到客户端 cliuser（目标端），两者都可以通过 SSH 登录到网关，并且都运行带有 sshd 的 Linux。只要网关上的端口大于 1024，你就不需要任何 root 权限。我们使用网关上的 2022 端口。另外，由于网关是在本地使用，因此不需要 `GatewayPorts` 选项。
+假设两个客户端位于一台 NAT 网关后面，客户端 `cliadmin` 需要连接到客户端 `cliuser`（目标端），两者都可以通过 SSH 登录到网关，并且都运行带有 `sshd` 的 Linux。只要网关上的端口大于 `1024`，你就不需要任何 root 权限。我们使用网关上的 `2022` 端口。另外，由于网关是在本地使用，因此不需要 `GatewayPorts` 选项。
 
-在客户端 cliuser 上（从目标端到网关）：
+在客户端 `cliuser` 上（从目标端到网关）：
 
 ```
 # ssh -R 2022:localhost:22 user@gate      # forwards client 22 to gate:2022
 ```
 
-在客户端 cliadmin 上（从主机到网关）：
+在客户端 `cliadmin` 上（从主机到网关）：
 
 ```
 # ssh -L 3022:localhost:2022 admin@gate      # forwards client 3022 to gate:2022
 ```
 
-现在，管理员可以使用以下命令直接连接到客户端 cliuser：
+现在，管理员可以使用以下命令直接连接到客户端 `cliuser`：
 
 ```
 # ssh -p 3022 admin@localhost      # local:3022 -> gate:2022 -> client:22
@@ -1835,15 +1848,15 @@ SSH 隧道允许通过 SSH 连接转发或反向转发端口，从而保护流�
 
 ## 连接 NAT 后面的 VNC
 
-假设需要从 NAT 后面访问一台 Windows 客户端，该客户端的 VNC 正在监听 5900 端口。
+假设需要从 NAT 后面访问一台 Windows 客户端，该客户端的 VNC 正在监听 `5900` 端口。
 
-在客户端 cliwin 上连接到网关：
+在客户端 `cliwin` 上连接到网关：
 
 ```
 # ssh -R 15900:localhost:5900 user@gate
 ```
 
-在客户端 cliadmin 上（从主机到网关）：
+在客户端 `cliadmin` 上（从主机到网关）：
 
 ```
 # ssh -L 5900:localhost:15900 admin@gate
@@ -1857,13 +1870,13 @@ SSH 隧道允许通过 SSH 连接转发或反向转发端口，从而保护流�
 
 ## 建立多跳 SSH 隧道
 
-假设你无法直接通过 ssh 访问服务器，只能经由多个中间主机（例如由于路由问题）。有时仍然需要建立直接的客户端 - 服务器连接，例如使用 scp 复制文件，或转发 smb、vnc 等其他端口。一种方法是将多个隧道串联起来，沿着各跳将端口转发到服务器。这个“承载”端口只有在最后一次连接到服务器时才会到达最终目的地。
+假设你无法直接通过 `ssh` 访问服务器，只能经由多个中间主机（例如由于路由问题）。有时仍然需要建立直接的客户端 - 服务器连接，例如使用 `scp` 复制文件，或转发 `smb`、`vnc` 等其他端口。一种方法是将多个隧道串联起来，沿着各跳将端口转发到服务器。这个“承载”端口只有在最后一次连接到服务器时才会到达最终目的地。
 
-假设我们要通过两跳将 ssh 端口从客户端转发到服务器。隧道建立后，就可以从客户端直接连接到服务器（还可以再添加一个端口转发）。
+假设我们要通过两跳将 `ssh` 端口从客户端转发到服务器。隧道建立后，就可以从客户端直接连接到服务器（还可以再添加一个端口转发）。
 
 在一个 shell 中创建隧道
 
-client -> host1 -> host2 -> server，并打通 5678 隧道
+`client -> host1 -> host2 -> server`，并打通 `5678` 隧道
 
 ```
 client$ ssh -L5678:localhost:5678 host1      # 5678 is an arbitrary port for the tunnel
@@ -1873,7 +1886,7 @@ host2$ ssh -L5678:localhost:22 server      # end the tunnel on port 22 on the se
 
 在另一个 shell 中使用隧道
 
-client -> server，通过隧道 5678
+`client -> server`，通过隧道 `5678`
 
 ```
 # ssh -p 5678 localhost      # connect directly from client to server
@@ -1883,7 +1896,7 @@ client -> server，通过隧道 5678
 
 ## 自动连接与保活脚本
 
-我使用以下脚本的变体来保持机器通过反向 ssh 隧道可达。如果连接被关闭，它会被自动重建。你可以在同一行中添加多个 -L 或 -R 隧道。
+我使用以下脚本的变体来保持机器通过反向 `ssh` 隧道可达。如果连接被关闭，它会被自动重建。你可以在同一行中添加多个 `-L` 或 `-R` 隧道。
 
 ```
 #!/bin/sh
@@ -1898,7 +1911,7 @@ exit 0
 
 ## 6 使用 SSH 的 VPN
 
-从 4.3 版本开始，OpenSSH 可以使用 tun/tap 设备加密隧道。这与其他基于 TLS 的 VPN 解决方案（如 OpenVPN）非常相似。SSH 的一个优势是不需要安装和配置额外软件。此外，隧道使用 SSH 认证，例如预共享密钥。缺点是封装通过 TCP 完成，这可能导致慢速链路上的性能不佳。而且，隧道依赖单一（易断的）TCP 连接。这种技术对于快速搭建基于 IP 的 VPN 非常有用。与单一 TCP 端口转发不同，这里没有限制，所有第三/四层协议（如 ICMP、TCP/UDP 等）都可以通过 VPN 转发。无论如何，sshd_config 文件中需要以下选项：
+从 `4.3` 版本开始，OpenSSH 可以使用 `tun/tap` 设备加密隧道。这与其他基于 TLS 的 VPN 解决方案（如 `OpenVPN`）非常相似。SSH 的一个优势是不需要安装和配置额外软件。此外，隧道使用 SSH 认证，例如预共享密钥。缺点是封装通过 TCP 完成，这可能导致慢速链路上的性能不佳。而且，隧道依赖单一（易断的）TCP 连接。这种技术对于快速搭建基于 IP 的 VPN 非常有用。与单一 TCP 端口转发不同，这里没有限制，所有第三/四层协议（如 ICMP、TCP/UDP 等）都可以通过 VPN 转发。无论如何，`sshd_config` 文件中需要以下选项：
 
 ```
 PermitRootLogin yes
@@ -1907,9 +1920,10 @@ PermitTunnel yes
 
 ### 6.1 单个点对点连接
 
-这里，我们使用点对点隧道连接两台主机 hclient 和 hserver。连接从 hclient 发起至 hserver，并以 root 身份执行。隧道端点为 10.0.1.1（服务器）和 10.0.1.2（客户端），我们创建一个 tun5 设备（也可以是其他编号）。过程非常简单：
+这里，我们使用点对点隧道连接两台主机 `hclient` 和 `hserver`。连接从 `hclient` 发起至 `hserver`，并以 root 身份执行。隧道端点为 `10.0.1.1`（服务器）和 `10.0.1.2`（客户端），我们创建一个 `tun5` 设备（也可以是其他编号）。过程非常简单：
 
-- 使用 SSH 的 -w 隧道选项进行连接
+- 使用 SSH 的 `-w` 隧道选项进行连接
+
 - 配置隧道的 IP 地址。分别在服务器和客户端上各配置一次。
 
 #### 连接到服务器
@@ -1943,24 +1957,25 @@ cli># ifconfig tun5 10.0.1.2 10.0.1.1                  # Client is on FreeBSD
 
 ### 6.2 连接两个网络
 
-除了上述 p2p 设置外，使用两台网关通过 SSH VPN 连接两个私有网络更为实用。例如，假设 netA 是 192.168.51.0/24，netB 是 192.168.16.0/24。过程与上述类似，我们只需要添加路由。仅当网关不是其网络的默认网关时，才需要在私有接口上激活 NAT。192.168.51.0/24 (netA)|gateA <-> gateB|192.168.16.0/24 (netB)
+除了上述 p2p 设置外，使用两台网关通过 SSH VPN 连接两个私有网络更为实用。例如，假设 `netA` 是 `192.168.51.0/24`，`netB` 是 `192.168.16.0/24`。过程与上述类似，我们只需要添加路由。仅当网关不是其网络的默认网关时，才需要在私有接口上激活 NAT。`192.168.51.0/24 (netA)|gateA <-> gateB|192.168.16.0/24 (netB)`
 
-- 使用 SSH 的 -w 隧道选项进行连接。
+- 使用 SSH 的 `-w` 隧道选项进行连接。
+
 - 配置隧道的 IP 地址。分别在服务器和客户端上各配置一次。
+
 - 为两个网络添加路由。
+
 - 如有必要，在网关的私有接口上激活 NAT。
 
-该设置从 netA 中的 gateA 发起。
+该设置从 `netA` 中的 `gateA` 发起。
 
 #### 从 gateA 连接到 gateB
 
-连接从 gateA 发起，命令在 gateB 上执行。
 
 
+连接从 `gateA` 发起，命令在 `gateB` 上执行。
 
-
-
-#### gateB 在 Linux 上
+### `gateB` 在 Linux 上
 
 ```
 gateA# ssh -w5:5 root@gateB
@@ -1970,7 +1985,7 @@ gateB# echo 1 > /proc/sys/net/ipv4/ip_forward      # Only needed if not default 
 gateB# iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 ```
 
-#### gateB 在 FreeBSD 上
+### `gateB` 在 FreeBSD 上
 
 ```
 gateA# ssh -w5:5 root@gateB      # Creates the tun5 devices
@@ -1981,11 +1996,11 @@ gateB# natd -s -m -u -dynamic -n fxp0    # see NAT (page 17)
 gateB# sysctl net.inet.ip.fw.enable=1
 ```
 
-#### 配置 gateA
+### 配置 `gateA`
 
-在 gateA 上执行的命令：
+在 `gateA` 上执行的命令：
 
-#### gateA 在 Linux 上
+#### `gateA` 在 Linux 上
 
 ```
 gateA# ifconfig tun5 10.0.0.2 netmask 255.255.255.252
@@ -1994,7 +2009,7 @@ gateA# echo 1 > /proc/sys/net/ipv4/ip_forward
 gateA# iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
 ```
 
-#### gateA 在 FreeBSD 上
+#### `gateA` 在 FreeBSD 上
 
 ```
 gateA# ifconfig tun5 10.0.0.2 10.0.0.1
@@ -2004,11 +2019,12 @@ gateA# natd -s -m -u -dynamic -n fxp0      # see NAT (page 17)
 gateA# sysctl net.inet.ip.fw.enable=1
 ```
 
-两个私有网络现在已通过 SSH VPN 透明连接。IP 转发和 NAT 设置只有在网关不是默认网关时才有必要。在这种情况下客户端将不知道如何转发响应，并且必须激活 nat。
+两个私有网络现在已通过 SSH VPN 透明连接。IP 转发和 NAT 设置只有在网关不是默认网关时才有必要。在这种情况下客户端将不知道如何转发响应，并且必须激活 `nat`。
 
 ## 7 RSYNC
 
-Rsync 几乎可以完全取代 cp 和 scp，而且中断的传输可以高效地重新开始。尾部斜杠的存在与否具有不同的含义，man 手册很不错……这里有一些示例：
+`Rsync` 几乎可以完全取代 `cp` 和 `scp`，而且中断的传输可以高效地重新开始。尾部斜杠的存在与否具有不同的含义，`man` 手册很不错……这里有一些示例：
+
 复制目录及其完整内容：
 
 ```
@@ -2017,28 +2033,28 @@ Rsync 几乎可以完全取代 cp 和 scp，而且中断的传输可以高效地
 # rsync -aR --delete --during /home/user/ /backup/   # use relative (see below)
 ```
 
-与之前相同但通过网络并使用压缩。Rsync 默认使用 SSH 进行传输，如果已设置则会使用 ssh 密钥。使用与 SCP 相同的方式 "..."。典型的远程复制：
+与之前相同但通过网络并使用压缩。`Rsync` 默认使用 `SSH` 进行传输，如果已设置则会使用 `ssh` 密钥。使用与 `SCP` 相同的方式 "..."。典型的远程复制：
 
 ```
 # rsync -axSzrv /home/user/ user@server:/backup/user/   # Copy to remote
 # rsync -a 'user@server:My\ Documents' 'My\ Documents'   # Quote AND escape spaces for the remote sh
 ```
 
-排除 /home/user/ 内的任何 tmp 目录并保持相对文件夹层次结构，即远程目录将具有结构 /backup/home/user/。这通常用于备份。
+排除 `/home/user/` 内的任何 `tmp` 目录并保持相对文件夹层次结构，即远程目录将具有结构 `/backup/home/user/`。这通常用于备份。
 
 ```
 # rsync -aZR --exclude=tmp/ /home/user/ user@server:/backup/
 ```
 
-# 使用端口 20022 进行 ssh 连接：
+### 使用端口 20022 进行 ssh 连接：
 
 ```
 # rsync -az -e 'ssh -p 20022' /home/colin/ user@server:/backup/colin/
 ```
 
-使用 rsync 守护进程（使用“:”）速度要快得多，但不会通过 ssh 加密。/backup 的位置由 /etc/rsyncd.conf 中的配置定义。变量 RSYNC_PASSWORD 可以设置以避免手动输入密码的需要。
+使用 `rsync` 守护进程（使用“:”）速度要快得多，但不会通过 `ssh` 加密。`/backup` 的位置由 `/etc/rsyncd.conf` 中的配置定义。变量 `RSYNC_PASSWORD` 可以设置以避免手动输入密码的需要。
 
-# — RSYNC —
+### — RSYNC —
 
 ```
 # rsync -axSRz /home/ ruser@hostname::rmodule/backup/
@@ -2047,25 +2063,25 @@ Rsync 几乎可以完全取代 cp 和 scp，而且中断的传输可以高效地
 
 一些重要选项：
 
-+   -a, --archive      archive mode; same as -rlptgoD (no -H)
-+   -r, --recursive    recurse into directories
-+   -R, --relative     use relative path names
-+   -H, --hard-links   preserve hard links
-+   -S, --sparse       handle sparse files efficiently
-+   -x, --one-file-system  don't cross file system boundaries
-+   --exclude=PATTERN  exclude files matching PATTERN
-+   --delete-during    receiver deletes during xfer, not before
-+   --delete-after     receiver deletes after rtransfer, not before
++   `-a`, `--archive`      archive mode; same as `-rlptgoD` (no `-H`)
++   `-r`, `--recursive`    recurse into directories
++   `-R`, `--relative`     use relative path names
++   `-H`, `--hard-links`   preserve hard links
++   `-S`, `--sparse`       handle sparse files efficiently
++   `-x`, `--one-file-system`  don't cross file system boundaries
++   `--exclude=PATTERN`  exclude files matching PATTERN
++   `--delete-during`    receiver deletes during xfer, not before
++   `--delete-after`     receiver deletes after rtransfer, not before
 
 ## 7.1 Windows 上的 Rsync
 
-Rsync 可通过 cygwin 在 Windows 上使用，或作为独立软件包打包在 cwrsync¹³ 中。这对于自动备份非常方便。安装其中之一（不要同时安装两个）并将路径添加到 Windows 系统变量中：# 控制面板 -> 系统 -> 高级选项卡，按钮 环境变量。编辑“Path”系统变量并添加已安装 rsync 的完整路径，例如 C:\Program Files\cwRsync\bin 或 C:\cygwin\bin。这样 rsync 和 ssh 命令就可以在 Windows 命令 shell 中使用。
+`Rsync` 可通过 `cygwin` 在 Windows 上使用，或作为独立软件包打包在 `cwrsync`¹³ 中。这对于自动备份非常方便。安装其中之一（不要同时安装两个）并将路径添加到 Windows 系统变量中：# 控制面板 -> 系统 -> 高级选项卡，按钮 环境变量。编辑“Path”系统变量并添加已安装 `rsync` 的完整路径，例如 `C:\Program Files\cwRsync\bin` 或 `C:\cygwin\bin`。这样 `rsync` 和 `ssh` 命令就可以在 Windows 命令 shell 中使用。
 
-#### 公钥认证
+### 公钥认证
 
-Rsync 自动通过 SSH 隧道传输，因此使用服务器上的 SSH 认证。自动备份必须避免用户交互，为此可以使用 SSH 公钥认证，rsync 命令将无需密码运行。
+`Rsync` 自动通过 `SSH` 隧道传输，因此使用服务器上的 `SSH` 认证。自动备份必须避免用户交互，为此可以使用 `SSH` 公钥认证，`rsync` 命令将无需密码运行。
 
-以下所有命令都在 Windows 控制台中执行。在控制台中（开始 -> 运行 -> cmd）按 SSH 中所述创建并上传密钥，并根据需要更改“user”和“server”。如果文件 authorized_keys2 尚不存在，只需将 id_dsa.pub 复制到 authorized_keys2 并上传即可。
+以下所有命令都在 Windows 控制台中执行。在控制台中（开始 -> 运行 -> `cmd`）按 `SSH` 中所述创建并上传密钥，并根据需要更改“user”和“server”。如果文件 `authorized_keys2` 尚不存在，只需将 `id_dsa.pub` 复制到 `authorized_keys2` 并上传即可。
 
 ```
 # ssh-keygen -t dsa -N ''          # Creates a public and a private key
@@ -2077,14 +2093,16 @@ Rsync 自动通过 SSH 隧道传输，因此使用服务器上的 SSH 认证。�
 
 现在用以下命令测试（在一行中）：
 
+
+
 ```
 rsync -rv "//cygdrive/c/Documents and Settings/%USERNAME%/My Documents/" \
 'user@server:My\ Documents/'
 ```
 
-#### 自动备份
+### 自动备份
 
-使用批处理文件来自动化备份并将文件添加到计划任务中（程序 -> 附件 -> 系统工具 -> 计划任务）。例如创建文件 backup.bat 并替换 user@server。
+使用批处理文件来自动化备份并将文件添加到计划任务中（程序 -> 附件 -> 系统工具 -> 计划任务）。例如创建文件 `backup.bat` 并替换 `user@server`。
 
 ```
 @ECHO OFF
@@ -2101,13 +2119,9 @@ rsync -av "//cygdrive/c/Documents and Settings/%USERNAME%/My Documents/" \
 pause
 ```
 
-
-
-
-
 ## 8 SUDO
 
-Sudo 是一种标准方法，可在不泄露 root 密码的情况下授予用户部分管理权限。在多用户环境且同时存在服务器和工作站的情况下，Sudo 非常有用。只需使用 sudo 调用命令：
+`Sudo` 是一种标准方法，可在不泄露 root 密码的情况下授予用户部分管理权限。在多用户环境且同时存在服务器和工作站的情况下，`Sudo` 非常有用。只需使用 `sudo` 调用命令：
 
 ```
 # sudo /etc/init.d/dhcpd restart          # Run the rc script as root
@@ -2116,18 +2130,21 @@ Sudo 是一种标准方法，可在不泄露 root 密码的情况下授予用户
 
 ### 8.1 配置
 
-Sudo 在 /etc/sudoers 中进行配置，且只能使用 visudo 进行编辑。基本语法是（列表以逗号分隔）：
+`Sudo` 在 `/etc/sudoers` 中进行配置，且只能使用 `visudo` 进行编辑。基本语法是（列表以逗号分隔）：
 
 ```
 user hosts = (runas) commands          # In /etc/sudoers
 ```
 
-- users 一个或多个用户或 %组（如 %wheel）以获得权限
-- hosts 主机列表（或 ALL）
-- runas 命令规则可以作为其运行的用户列表（或 ALL）。它用 ( ) 括起来！
-- commands 将作为 root 或作为 (runas) 运行的命令列表（或 ALL）
+- `users` 一个或多个用户或 `%组`（如 `%wheel`）以获得权限
 
-此外，这些关键字可以定义为别名，它们称为 User_Alias、Host_Alias、Runas_Alias 和 Cmdn_Alias。这对于大型设置很有用。下面是一个 sudoers 示例：
+- `hosts` 主机列表（或 `ALL`）
+
+- `runas` 命令规则可以作为其运行的用户列表（或 `ALL`）。它用 `( )` 括起来！
+
+- `commands` 将作为 `root` 或作为 `(runas)` 运行的命令列表（或 `ALL`）
+
+此外，这些关键字可以定义为别名，它们称为 `User_Alias`、`Host_Alias`、`Runas_Alias` 和 `Cmdn_Alias`。这对于大型设置很有用。下面是一个 `sudoers` 示例：
 
 ```
 # cat /etc/sudoers
@@ -2172,7 +2189,7 @@ ALL     DESKTOP = NOPASSWD: /sbin/mount /cdrom,/sbin/umount /cdrom
 # openssl aes-128-cbc -d -salt -in file.aes -out file
 ```
 
-请注意，文件当然可以是 tar 归档。
+请注意，文件当然可以是 `tar` 归档。
 
 #### tar 并加密整个目录
 
@@ -2188,14 +2205,15 @@ ALL     DESKTOP = NOPASSWD: /sbin/mount /cdrom,/sbin/umount /cdrom
 # openssl aes-128-cbc -d -salt -in directory.tar.gz.aes | tar -xz -f -         # Decrypt
 ```
 
-- - 在 aes-128-cbc 后使用 -k mysecretpassword 可避免交互式密码请求。然而请注意，这非常不安全。
-- - 使用 aes-256-cbc 代替 aes-128-cbc 可获得更强的加密。这也会使用更多 CPU。
+- `-` 在 `aes-128-cbc` 后使用 `-k mysecretpassword` 可避免交互式密码请求。然而请注意，这非常不安全。
+
+- `-` 使用 `aes-256-cbc` 代替 `aes-128-cbc` 可获得更强的加密。这也会使用更多 CPU。
 
 ### 9.2 GPG
 
-GnuPG 以加密和签名电子邮件或任何数据而闻名。此外 gpg 还提供了一个高级密钥管理系统。本节仅涵盖文件加密，不涉及电子邮件使用、签名或 Web-Of-Trust。
+`GnuPG` 以加密和签名电子邮件或任何数据而闻名。此外 `gpg` 还提供了一个高级密钥管理系统。本节仅涵盖文件加密，不涉及电子邮件使用、签名或 Web-Of-Trust。
 
-最简单的加密是使用对称密码。在这种情况下，文件使用密码加密，任何知道密码的人都可以解密它，因此不需要密钥。Gpg 会在加密的文件名后添加扩展名 ".gpg"。
+最简单的加密是使用对称密码。在这种情况下，文件使用密码加密，任何知道密码的人都可以解密它，因此不需要密钥。`Gpg` 会在加密的文件名后添加扩展名 `".gpg"`。
 
 ```
 # gpg -c file                         # Encrypt file with password
@@ -2204,13 +2222,15 @@ GnuPG 以加密和签名电子邮件或任何数据而闻名。此外 gpg 还提
 
 #### 使用密钥
 
-更多细节请参阅 GPG Quick Start¹⁴ 和 GPG/PGP Basics¹⁵ 以及 gnupg 文档¹⁶ 等。
+更多细节请参阅 `GPG Quick Start`¹⁴ 和 `GPG/PGP Basics`¹⁵ 以及 `gnupg` 文档¹⁶ 等。
 
 私钥和公钥是非对称加密的核心。需要记住的重要事项：
 
-- - 你的公钥由他人用于加密文件，只有你作为接收者可以解密（甚至加密该文件的人也无法解密）。因此公钥旨在分发。
-- - 你的私钥使用你的密码短语加密，并用于解密用你的公钥加密的文件。私钥必须保密。此外，如果密钥或密码短语丢失，则所有用你的公钥加密的文件也将丢失。
-- - 密钥文件称为 keyrings，因为它们可以包含多个密钥。
+- `-` 你的公钥由他人用于加密文件，只有你作为接收者可以解密（甚至加密该文件的人也无法解密）。因此公钥旨在分发。
+
+- `-` 你的私钥使用你的密码短语加密，并用于解密用你的公钥加密的文件。私钥必须保密。此外，如果密钥或密码短语丢失，则所有用你的公钥加密的文件也将丢失。
+
+- `-` 密钥文件称为 `keyrings`，因为它们可以包含多个密钥。
 
 首先生成一个密钥对。默认值即可，不过你至少需要输入你的全名和电子邮件，可选地输入注释。注释对于使用相同姓名和电子邮件创建多个密钥很有用。此外你应该使用“密码短语”，而不是简单的密码。
 
@@ -2218,7 +2238,9 @@ GnuPG 以加密和签名电子邮件或任何数据而闻名。此外 gpg 还提
 # gpg --gen-key                         # This can take a long time
 ```
 
-密钥存储在 Unix 上的 ~/.gnupg/ 中，在 Windows 上通常存储在 C:/Documents and Settings/%USERNAME%/Application Data/gnupg/。
+
+
+密钥存储在 Unix 上的 `~/.gnupg/` 中，在 Windows 上通常存储在 `C:/Documents and Settings/%USERNAME%/Application Data/gnupg/`。
 
 ```
 ~/.gnupg/pubring.gpg        # Contains your public keys and all others imported
@@ -2227,17 +2249,13 @@ GnuPG 以加密和签名电子邮件或任何数据而闻名。此外 gpg 还提
 
 最常用选项的简短提醒：
 
-- -e 加密数据
-- -d 解密数据
-- -r NAME 为收件人 NAME 加密（或 '全名' 或 'email@domain'）
-- -a 创建密钥的 ascii 护甲输出
-- -o 用作输出文件
+- `-e` 加密数据
+- `-d` 解密数据
+- `-r NAME` 为收件人 `NAME` 加密（或 '全名' 或 'email@domain'）
+- `-a` 创建密钥的 ascii 护甲输出
+- `-o` 用作输出文件
 
-示例中使用 'Your Name' 和 'Alice' 作为密钥，它们通过电子邮件或全名或部分名称引用。例如我可以使用 'Colin' 或 'c@cb.vu' 来引用我的密钥 [Colin Barschel (cb.vu) <c@cb.vu>]。
-
-
-
-
+示例中使用 'Your Name' 和 'Alice' 作为密钥，它们通过电子邮件或全名或部分名称引用。例如我可以使用 'Colin' 或 'c@cb.vu' 来引用我的密钥 `[Colin Barschel (cb.vu) <c@cb.vu>]`。
 
 # 仅用于个人加密
 
@@ -2268,7 +2286,7 @@ GnuPG 以加密和签名电子邮件或任何数据而闻名。此外 gpg 还提
 # gpg -d file.gpg -o file          # Decrypt a file encrypted by Alice for you.
 ```
 
-#### 密钥管理
+### 密钥管理
 
 ```
 # gpg --list-keys                     # list public keys and see the KEYIDS
@@ -2283,19 +2301,19 @@ The KEYID follows the '/' e.g. for: pub 1024D/D12B77CE the KEYID is D12B77CE
 
 ## 10 加密分区
 
-Linux with LUKS (p31) | Linux dm-crypt only (p32) | FreeBSD GELI (p32) | FBSD pwd only (p33)
+`Linux with LUKS (p31)` | `Linux dm-crypt only (p32)` | `FreeBSD GELI (p32)` | `FBSD pwd only (p33)`
 
 还有（许多）其他替代方法来加密磁盘，我在这里只展示我知道并使用的方法。请记住安全性只有在操作系统未被篡改时才有效。入侵者可以很容易地从键盘事件中记录密码。此外，当分区挂载时数据可以自由访问，在这种状态下无法阻止入侵者访问它。
 
 ### 10.1 Linux
 
-这些说明使用 Linux dm-crypt（device-mapper）功能，可在 2.6 内核上使用。在此示例中，让我们加密分区 /dev/sdc1，它可以是任何其他分区或磁盘，或 USB 或使用 losetup 创建的文件基础分区。在这种情况下我们将使用 /dev/loop0。参见文件映像分区。设备映射器使用标签来标识分区。我们在此示例中使用 sdc1，但它可以是任何字符串。
+这些说明使用 Linux `dm-crypt`（device-mapper）功能，可在 2.6 内核上使用。在此示例中，让我们加密分区 `/dev/sdc1`，它可以是任何其他分区或磁盘，或 USB 或使用 `losetup` 创建的文件基础分区。在这种情况下我们将使用 `/dev/loop0`。参见文件映像分区。设备映射器使用标签来标识分区。我们在此示例中使用 `sdc1`，但它可以是任何字符串。
 
 #### 使用 LUKS 的 dm-crypt
 
-LUKS 与 dm-crypt 具有更好的加密，并使同一个分区可以有多个密码或轻松更改密码。要测试 LUKS 是否可用，只需输入 # cryptsetup --help，如果没有关于 LUKS 的内容显示，请使用下面的 Without LUKS 说明。首先如有必要创建分区：fdisk /dev/sdc。
+`LUKS` 与 `dm-crypt` 具有更好的加密，并使同一个分区可以有多个密码或轻松更改密码。要测试 `LUKS` 是否可用，只需输入 `# cryptsetup --help`，如果没有关于 `LUKS` 的内容显示，请使用下面的 Without LUKS 说明。首先如有必要创建分区：`fdisk /dev/sdc`。
 
-#### 创建加密分区
+##### 创建加密分区
 
 ```
 # dd if=/dev/urandom of=/dev/sdc1    # Optional. For paranoids only (takes days)
@@ -2310,14 +2328,14 @@ LUKS 与 dm-crypt 具有更好的加密，并使同一个分区可以有多个�
 # cryptsetup luksClose sdcl        # Detach the encrypted partition
 ```
 
-#### 挂载
+##### 挂载
 
 ```
 # cryptsetup luksOpen /dev/sdc1 sdcl
 # mount -t ext3 /dev/mapper/sdcl /mnt
 ```
 
-#### 卸载
+##### 卸载
 
 ```
 # umount /mnt
@@ -2335,11 +2353,11 @@ LUKS 与 dm-crypt 具有更好的加密，并使同一个分区可以有多个�
 # cryptsetup remove sdcl                   # Detach the encrypted partition
 ```
 
-要重新挂载分区，请完全重复上述操作（不包括 mkfs 部分！）。如果密码不正确，mount 命令将失败。在这种情况下只需移除映射 sdcl（cryptsetup remove sdcl）并重新创建它。
+要重新挂载分区，请完全重复上述操作（不包括 `mkfs` 部分！）。如果密码不正确，`mount` 命令将失败。在这种情况下只需移除映射 `sdcl`（`cryptsetup remove sdcl`）并重新创建它。
 
 ### 10.2 FreeBSD
 
-FreeBSD 两个流行的磁盘加密模块是 gbde 和 geli。我现在使用 geli，因为它更快并且也使用 crypto 设备进行硬件加速。参见 The FreeBSD handbook 第 18.6 章了解所有细节。geli 模块必须加载或编译到内核中：
+FreeBSD 两个流行的磁盘加密模块是 `gbde` 和 `geli`。我现在使用 `geli`，因为它更快并且也使用 crypto 设备进行硬件加速。参见 The FreeBSD handbook 第 18.6 章了解所有细节。`geli` 模块必须加载或编译到内核中：
 
 ```
 options GEOM_ELI
@@ -2349,9 +2367,11 @@ device crypto                         # or as module:
 
 #### 使用密码和密钥
 
-我对典型的磁盘加密使用这些设置，它使用密码 AND 密钥来加密主密钥。也就是说你需要密码和生成的密钥 /root/adl.key 两者才能挂载分区。主密钥存储在分区内部且不可见。参见下面关于典型 USB 或文件基础映像的说明。
 
-#### 创建加密分区
+
+我对典型的磁盘加密使用这些设置，它使用密码 AND 密钥来加密主密钥。也就是说你需要密码和生成的密钥 `/root/adl.key` 两者才能挂载分区。主密钥存储在分区内部且不可见。参见下面关于典型 USB 或文件基础映像的说明。
+
+### 创建加密分区
 
 ```
 # dd if=/dev/random of=/root/adl.key bs=64 count=1   # this key encrypts the master key
@@ -2362,7 +2382,7 @@ device crypto                         # or as module:
 # mount /dev/adl.eli /mnt
 ```
 
-#### 挂载
+### 挂载
 
 ```
 # geli attach -k /root/adl.key /dev/adl
@@ -2370,22 +2390,18 @@ device crypto                         # or as module:
 # mount /dev/adl.eli /mnt
 ```
 
-#### 卸载
+### 卸载
 
 卸载过程在关机时自动完成。
-
-
-
-
 
 ```
 # umount /mnt
 # geli detach /dev/ad1.eli
 ```
 
-## /etc/fstab
+## `/etc/fstab`
 
-加密分区可以通过 /etc/fstab 配置自动挂载。启动时将提示输入密码。本示例需要以下设置：
+加密分区可以通过 `/etc/fstab` 配置自动挂载。启动时将提示输入密码。本示例需要以下设置：
 
 ```
 # grep geli /etc/rc.conf
@@ -2395,9 +2411,9 @@ geli_ad1_flags="-k /root/ad1.key"
 /dev/ad1.eli    /home/private    ufs    rw    0    0
 ```
 
-#### 仅使用密码
+### 仅使用密码
 
-仅使用密码而无需密钥来加密 U 盘或基于文件的镜像会更方便。这种情况下无需携带额外的密钥文件。流程与上面基本相同，只是没有密钥文件。让我们对 1 GB 的基于文件的镜像 /cryptfile 进行加密。
+仅使用密码而无需密钥来加密 U 盘或基于文件的镜像会更方便。这种情况下无需携带额外的密钥文件。流程与上面基本相同，只是没有密钥文件。让我们对 1 GB 的基于文件的镜像 `/cryptfile` 进行加密。
 
 ```
 # dd if=/dev/zero of=/cryptfile bs=1M count=1000  # 1 GB file
@@ -2425,13 +2441,16 @@ geli_ad1_flags="-k /root/ad1.key"
 ### 11.1 流程
 
 - 我们需要一个证书颁发机构来签署我们的证书。此步骤通常由 Thawte、Verisign 等厂商提供，但我们也可以自行创建。
+
 - 创建证书签名请求。该请求类似于未签名的证书（公开部分），并且已包含所有必要信息。证书请求通常发送给颁发机构厂商进行签名。此步骤也在本地机器上创建私钥。
+
 - 使用证书颁发机构签署证书。
+
 - 如有必要，将证书和密钥合并到单个文件中以供应用程序（Web 服务器、邮件服务器等）使用。
 
 ### 11.2 配置 OpenSSL
 
-我们使用 /usr/local/certs 作为本示例的目录，请检查或根据你的设置编辑 /etc/ssl/openssl.cnf，以便知道文件将被创建在何处。以下是 openssl.cnf 的相关部分：
+我们使用 `/usr/local/certs` 作为本示例的目录，请检查或根据你的设置编辑 `/etc/ssl/openssl.cnf`，以便知道文件将被创建在何处。以下是 `openssl.cnf` 的相关部分：
 
 ```
 [ CA_default ]
@@ -2467,7 +2486,7 @@ database     = $dir/index.txt     # database index file.
 
 ### 11.4 创建证书签名请求
 
-要创建新的证书（例如用于邮件服务器或 Web 服务器），首先使用其私钥创建请求证书。如果你的应用程序不支持加密的私钥（例如 UW-IMAP 不支持），则使用 -nodes 禁用加密。
+要创建新的证书（例如用于邮件服务器或 Web 服务器），首先使用其私钥创建请求证书。如果你的应用程序不支持加密的私钥（例如 UW-IMAP 不支持），则使用 `-nodes` 禁用加密。
 
 ```
 # openssl req -new -keyout newkey.pem -new newreq.pem \
@@ -2476,7 +2495,7 @@ database     = $dir/index.txt     # database index file.
 -config /etc/ssl/openssl.cnf      # No encryption for the key
 ```
 
-保留此生成的 CSR（newreq.pem），因为它可以在下次续期时再次签名，签名仅会限制证书的有效期。此过程同时创建了私钥 newkey.pem。
+保留此生成的 CSR（`newreq.pem`），因为它可以在下次续期时再次签名，签名仅会限制证书的有效期。此过程同时创建了私钥 `newkey.pem`。
 
 ### 11.5 签署证书
 
@@ -2489,16 +2508,17 @@ database     = $dir/index.txt     # database index file.
 # mv newkey.pem servernamekey.pem
 ```
 
-现在 servernamekey.pem 是私钥，servernamecert.pem 是服务器证书。
+现在 `servernamekey.pem` 是私钥，`servernamecert.pem` 是服务器证书。
 
 ### 11.6 创建联合证书
 
-IMAP 服务器希望私钥和服务器证书在同一个文件中。一般来说，这样处理也更方便，但文件必须安全保存！Apache 也能很好地处理它。创建包含证书和密钥的 servername.pem 文件：
+IMAP 服务器希望私钥和服务器证书在同一个文件中。一般来说，这样处理也更方便，但文件必须安全保存！Apache 也能很好地处理它。创建包含证书和密钥的 `servername.pem` 文件：
 
-- 使用文本编辑器打开私钥（servernamekey.pem）并将私钥复制到 "servername.pem" 文件中。
-- 对服务器证书（servernamecert.pem）执行相同的操作。
+- 使用文本编辑器打开私钥（`servernamekey.pem`）并将私钥复制到 "`servername.pem`" 文件中。
 
-最终的 servername.pem 文件应如下所示：
+- 对服务器证书（`servernamecert.pem`）执行相同的操作。
+
+最终的 `servername.pem` 文件应如下所示：
 
 ```
 -----BEGIN RSA PRIVATE KEY-----
@@ -2511,10 +2531,16 @@ MIERzCCATC...iG9w0BAQQPADCBxTELMAKGA1UEBhMCREUx
 
 我们现在在 `/usr/local/certs/` 目录中有以下内容：
 
+
+
 - `CA/private/cakey.pem`（CA 服务器私钥）
+
 - `CA/cacert.pem`（CA 服务器公钥）
+
 - `certs/servernamekey.pem`（服务器私钥）
+
 - `certs/servernamecert.pem`（服务器签名证书）
+
 - `certs/servername.pem`（带私钥的服务器证书）
 
 确保私钥安全！
@@ -2537,7 +2563,7 @@ MIERzCCATC...iG9w0BAQQPADCBxTELMAKGA1UEBhMCREUx
 
 #### 初始化 CVS
 
-决定主仓库的存放位置，并创建根 cvs 目录。例如 `/usr/local/cvs`（以 root 身份）：
+决定主仓库的存放位置，并创建根 `cvs` 目录。例如 `/usr/local/cvs`（以 root 身份）：
 
 ```
 # mkdir -p /usr/local/cvs
@@ -2559,37 +2585,39 @@ writers
 # cvs commit                            # Commit all the configuration changes
 ```
 
-如果你想要区分读写权限，可以添加一个 readers 文件。注意：切勿（永远不要）直接编辑主 CVS 中的文件，而应检出文件、修改后再提交。我们通过 `writers` 文件定义了写权限，就是这样做的。
+如果你想要区分读写权限，可以添加一个 `readers` 文件。注意：切勿（永远不要）直接编辑主 CVS 中的文件，而应检出文件、修改后再提交。我们通过 `writers` 文件定义了写权限，就是这样做的。
 
 此时有三种常用的访问 CVS 的方式。前两种不需要任何额外配置。关于如何使用它们，请参阅下面 `CVSROOT` 的示例：
 
 - 直接本地访问文件系统。用户需要拥有足够的文件权限才能直接访问 CVS，除操作系统登录外，不需要进一步的身份验证。不过这仅在仓库位于本地时才有用。
-- 通过 ssh 使用 ext 协议进行远程访问。任何拥有 ssh shell 账户且对 CVS 服务器具有读写权限的用户，都可以通过 ssh 直接使用 ext 访问 CVS，无需任何额外的隧道。这不需要在 CVS 上运行服务器进程。身份验证由 ssh 登录完成。
-- 使用 pserver 进行远程访问（默认端口：2401/tcp）。对于较大的用户群，这是首选方式，因为用户由 CVS pserver 通过专用的密码数据库进行身份验证；因此不需要本地用户账户。此设置将在下面说明。
+
+- 通过 `ssh` 使用 `ext` 协议进行远程访问。任何拥有 `ssh` shell 账户且对 CVS 服务器具有读写权限的用户，都可以通过 `ssh` 直接使用 `ext` 访问 CVS，无需任何额外的隧道。这不需要在 CVS 上运行服务器进程。身份验证由 `ssh` 登录完成。
+
+- 使用 `pserver` 进行远程访问（默认端口：2401/tcp）。对于较大的用户群，这是首选方式，因为用户由 CVS `pserver` 通过专用的密码数据库进行身份验证；因此不需要本地用户账户。此设置将在下面说明。
 
 #### 使用 inetd 进行网络设置
 
-只有在不需要网络访问时，CVS 才可以在本地运行。对于远程访问，守护进程 inetd 可以通过 `/etc/inetd.conf`（SuSE 上为 `/etc/xinetd.d/cvs`）中的以下行启动 pserver：
+只有在不需要网络访问时，CVS 才可以在本地运行。对于远程访问，守护进程 `inetd` 可以通过 `/etc/inetd.conf`（SuSE 上为 `/etc/xinetd.d/cvs`）中的以下行启动 `pserver`：
 
 ```
 cvspserver    stream tcp nowait cvs /usr/bin/cvs    cvs \
 --allow-root=/usr/local/cvs pserver
 ```
 
-最好用防火墙阻止 cvs 端口从互联网访问，并使用 ssh 隧道远程访问仓库。
+最好用防火墙阻止 `cvs` 端口从互联网访问，并使用 `ssh` 隧道远程访问仓库。
 
 #### 独立认证
 
-可以创建不属于操作系统（没有本地用户）的 cvs 用户。实际上，从安全角度来看，这很可能也是我们想要的。只需在 CVSROOT 目录中添加一个名为 `passwd` 的文件，其中包含用户的登录名和密码（以 crypt 格式）。这可以使用 Apache 的 htpasswd 工具完成。
+可以创建不属于操作系统（没有本地用户）的 `cvs` 用户。实际上，从安全角度来看，这很可能也是我们想要的。只需在 `CVSROOT` 目录中添加一个名为 `passwd` 的文件，其中包含用户的登录名和密码（以 `crypt` 格式）。这可以使用 Apache 的 `htpasswd` 工具完成。
 
-注意：这个 `passwd` 文件是唯一必须在 CVSROOT 目录中直接编辑的文件。而且它不会被检出。更多信息请参阅 `htpasswd --help`。
+注意：这个 `passwd` 文件是唯一必须在 `CVSROOT` 目录中直接编辑的文件。而且它不会被检出。更多信息请参阅 `htpasswd --help`。
 
 ```
 # htpasswd -c passwd user1 password1   # -c creates the file
 # htpasswd -b passwd user2 password2
 ```
 
-现在在每行末尾添加 `:cvs`，告诉 cvs 服务器将用户切换为 cvs（或你的 cvs 服务器运行时所使用的任何用户）。如下所示：
+现在在每行末尾添加 `:cvs`，告诉 `cvs` 服务器将用户切换为 `cvs`（或你的 `cvs` 服务器运行时所使用的任何用户）。如下所示：
 
 ```
 # cat passwd
@@ -2609,7 +2637,7 @@ CVS password:
 
 #### CVSROOT 变量
 
-这是一个环境变量，用于指定我们要进行操作的仓库位置。对于本地使用，只需将其设置为仓库目录即可。对于网络使用，必须指定传输协议。在 csh/tcsh shell 中，使用 `setenv CVSROOT string` 设置 `CVSROOT` 变量；在 sh/bash shell 中，使用 `export CVSROOT=string` 设置。
+这是一个环境变量，用于指定我们要进行操作的仓库位置。对于本地使用，只需将其设置为仓库目录即可。对于网络使用，必须指定传输协议。在 `csh/tcsh` shell 中，使用 `setenv CVSROOT string` 设置 `CVSROOT` 变量；在 `sh/bash` shell 中，使用 `export CVSROOT=string` 设置。
 
 ```
 # setenv CVSROOT :pserver:<username>@<host>:/cvsdirectory
@@ -2625,7 +2653,7 @@ CVS password:
 # setenv CVSROOT :pserver:user@cvsserver.254:/usr/local/cvs  # network with pserver
 ```
 
-登录成功后，就可以将新项目导入到仓库中：先 cd 到你的项目根目录。
+登录成功后，就可以将新项目导入到仓库中：先 `cd` 到你的项目根目录。
 
 ```
 cvs import <module name> <vendor tag> <initial tag>
@@ -2647,13 +2675,11 @@ cvs -d :pserver:colin@192.168.50.254:/usr/local/cvs import MyProject MyCompany S
 # cvs checkout MyProject
 ```
 
-
-
-
-
 ### 12.3 SSH tunneling for CVS
 
-我们需要 2 个 shell 来完成此操作。在第一个 shell 中，我们通过 ssh 连接到 cvs 服务器并端口转发 cvs 连接。在第二个 shell 中，我们像它在本地运行一样正常使用 cvs。
+
+
+我们需要 2 个 shell 来完成此操作。在第一个 shell 中，我们通过 `ssh` 连接到 `cvs` 服务器并端口转发 `cvs` 连接。在第二个 shell 中，我们像它在本地运行一样正常使用 `cvs`。
 
 on shell 1:
 
@@ -2676,7 +2702,7 @@ CVS password:
 
 #### Import
 
-import 命令用于添加整个目录，必须从要导入的目录内运行。假设目录 /devel/ 包含所有要导入的文件和子目录。CVS 上的目录名（模块）将称为 "myapp"。
+`import` 命令用于添加整个目录，必须从要导入的目录内运行。假设目录 `/devel/` 包含所有要导入的文件和子目录。CVS 上的目录名（模块）将称为 "`myapp`"。
 
 ```
 # cvs import [options] directory-name vendor-tag release-tag
@@ -2684,7 +2710,7 @@ import 命令用于添加整个目录，必须从要导入的目录内运行。�
 # cvs import myapp Company_R1_0      # Release tag can be anything in one word
 ```
 
-过了一段时间，又添加了新目录 "/devel/tools/"，它也需要导入。
+过了一段时间，又添加了新目录 `"/devel/tools/"`，它也需要导入。
 
 ```
 # cd /devel/tools
@@ -2716,7 +2742,7 @@ import 命令用于添加整个目录，必须从要导入的目录内运行。�
 
 #### Apply a patch
 
-有时有必要从补丁中剥离一个目录层级，这取决于补丁的创建方式。如果遇到困难，只需查看补丁的第一行并尝试 -p0、-p1 或 -p2。
+有时有必要从补丁中剥离一个目录层级，这取决于补丁的创建方式。如果遇到困难，只需查看补丁的第一行并尝试 `-p0`、`-p1` 或 `-p2`。
 
 ```
 # cd /devel/project
@@ -2727,13 +2753,13 @@ import 命令用于添加整个目录，必须从要导入的目录内运行。�
 
 ## 13 SVN
 
-Server setup (p38) | SVN+SSH (p38) | SVN over http (p38) | SVN usage (p39)
+`Server setup (p38)` | `SVN+SSH (p38)` | `SVN over http (p38)` | `SVN usage (p39)`
 
-Subversion (SVN)¹⁸ 是一种版本控制系统，旨在成为 CVS（Concurrent Versions System）的继任者。概念与 CVS 相似，但许多不足之处得到了改进。另请参阅 SVN 书籍¹⁹。
+`Subversion (SVN)`¹⁸ 是一种版本控制系统，旨在成为 `CVS`（Concurrent Versions System）的继任者。概念与 `CVS` 相似，但许多不足之处得到了改进。另请参阅 `SVN` 书籍¹⁹。
 
 ### 13.1 Server setup
 
-仓库的初始化相当简单（例如这里 /home/svn/ 必须存在）：
+仓库的初始化相当简单（例如这里 `/home/svn/` 必须存在）：
 
 ```
 # svnadmin create --fs-type fsfs /home/svn/project1
@@ -2741,28 +2767,28 @@ Subversion (SVN)¹⁸ 是一种版本控制系统，旨在成为 CVS（Concurren
 
 现在可以通过以下方式访问仓库：
 
-- file:// 通过 svn 客户端直接访问文件系统。这需要对文件系统具有本地权限。
-- svn:// 或 svn+ssh:// 通过 svnserve 服务器进行远程访问（也通过 SSH）。这需要对文件系统具有本地权限（默认端口：2690/tcp）。
-- http:// 通过 apache 使用 webdav 进行远程访问。此方法不需要本地用户。
+- `file://` 通过 `svn` 客户端直接访问文件系统。这需要对文件系统具有本地权限。
+- `svn://` 或 `svn+ssh://` 通过 `svnserve` 服务器进行远程访问（也通过 SSH）。这需要对文件系统具有本地权限（默认端口：2690/tcp）。
+- `http://` 通过 apache 使用 webdav 进行远程访问。此方法不需要本地用户。
 
-使用本地文件系统，现在可以导入然后检出现有项目。与 CVS 不同，不必 cd 到项目目录，只需给出完整路径即可：
+使用本地文件系统，现在可以导入然后检出现有项目。与 `CVS` 不同，不必 `cd` 到项目目录，只需给出完整路径即可：
 
 ```
 # svn import /project1 file:///home/svn/project1/trunk -m 'Initial import'
 # svn checkout file:///home/svn/project1
 ```
 
-新的目录 "trunk" 只是约定，并非必需。
+新的目录 "`trunk`" 只是约定，并非必需。
 
 ### Remote access with ssh
 
-通过 ssh 访问仓库不需要特殊设置，只需将 file:// 替换为 svn+ssh/hostname。例如：
+通过 `ssh` 访问仓库不需要特殊设置，只需将 `file://` 替换为 `svn+ssh/hostname`。例如：
 
 ```
 # svn checkout svn+ssh://hostname/home/svn/project1
 ```
 
-与本地文件访问一样，每个用户都需要对服务器具有 ssh 访问权限（使用本地账户）并且具有读写权限。此方法可能适合小型团队。所有用户可以属于一个 subversion 组，该组拥有仓库，例如：
+与本地文件访问一样，每个用户都需要对服务器具有 `ssh` 访问权限（使用本地账户）并且具有读写权限。此方法可能适合小型团队。所有用户可以属于一个 `subversion` 组，该组拥有仓库，例如：
 
 ```
 # groupadd subversion
@@ -2773,7 +2799,7 @@ Subversion (SVN)¹⁸ 是一种版本控制系统，旨在成为 CVS（Concurren
 
 ### Remote access with http (apache)
 
-通过 http（https）进行远程访问是大型用户组的唯一良好解决方案。此方法使用 apache 认证，而不是本地账户。这是一个典型但小的 apache 配置：
+通过 `http`（`https`）进行远程访问是大型用户组的唯一良好解决方案。此方法使用 apache 认证，而不是本地账户。这是一个典型但小的 apache 配置：
 
 ```
 LoadModule dav_module modules/mod_dav.so
@@ -2793,10 +2819,6 @@ Require valid-user
 </Location>
 ```
 
-
-
-
-
 # — 有用命令 —
 
 Apache 服务器需要对仓库有完全访问权限：
@@ -2805,13 +2827,15 @@ Apache 服务器需要对仓库有完全访问权限：
 # chown -R www:www /home/svn
 ```
 
-使用 htpasswd2 创建用户：
+使用 `htpasswd` 创建用户：
 
 ```
 # htpasswd -c /etc/svn-passwd user1  # -c creates the file
 ```
 
-# 访问控制 svn.acl 示例
+# 访问控制 `svn.acl` 示例
+
+
 
 ```
 # Default it read access. "* =" would be default no access
@@ -2830,7 +2854,7 @@ project1-developers = joe, jack, jane
 
 #### Import
 
-新的项目，即包含一些文件的目录，使用 import 命令导入到仓库中。Import 也用于向现有项目添加一个目录及其内容。
+新的项目，即包含一些文件的目录，使用 `import` 命令导入到仓库中。`Import` 也用于向现有项目添加一个目录及其内容。
 
 ```
 # svn help import                  # Get help for any command
@@ -2855,11 +2879,11 @@ project1-developers = joe, jack, jane
 
 ## 14 有用命令
 
-less (p39) | vi (p40) | mail (p40) | tar (p41) | dd (p41) | screen (p42) | find (p43) | 杂项 (p43)
+`less` (p39) | `vi` (p40) | `mail` (p40) | `tar` (p41) | `dd` (p41) | `screen` (p42) | `find` (p43) | 杂项 (p43)
 
 ### 14.1 less
 
-less 命令在控制台上显示文本文档。它存在于大多数安装中。
+`less` 命令在控制台上显示文本文档。它存在于大多数安装中。
 
 ```
 # less unix toolbox.xhtml
@@ -2875,44 +2899,45 @@ less 命令在控制台上显示文本文档。它存在于大多数安装中。
 - ?pattern 向后搜索第 (N) 个匹配行。
 
 20.http://www.cs.put.poznan.pl/csobaniec/Papers/svn-refcard.pdf
+
 21.http://tortoisesvn.tigris.org
 
 ### 14.2 vi
 
-Vi 存在于任何 Linux/Unix 安装中（不是 gentoo？），因此了解一些基本命令很有用。有两种模式：命令模式和插入模式。命令模式通过 [ESC] 访问，插入模式通过 i 访问。使用 : help 如果你迷路了。编辑器 nano 和 pico 通常也可用，使用起来更容易（在我看来）。
+`Vi` 存在于任何 Linux/Unix 安装中（不是 gentoo？），因此了解一些基本命令很有用。有两种模式：命令模式和插入模式。命令模式通过 [ESC] 访问，插入模式通过 i 访问。使用 : help 如果你迷路了。编辑器 nano 和 pico 通常也可用，使用起来更容易（在我看来）。
 
 #### Quit
 
-- :w newfilename    将文件保存为 newfilename
-- :wq 或 :x    保存并退出
-- :q!    不保存退出
+- `:w newfilename` 将文件保存为 newfilename
+- `:wq` 或 `:x` 保存并退出
+- `:q!` 不保存退出
 
 #### 搜索和移动
 
-- /string    向前搜索字符串
-- ?string    向后搜索字符串
-- n    搜索字符串的下一个实例
-- N    搜索字符串的上一个实例
-- {    向后移动一个段落
-- }    向前移动一个段落
-- 1G    移动到文件的第一行
-- nG    移动到文件的第 n 行
-- G    移动到文件的最后一行
-- :%s/OLD/NEW/g    搜索并替换所有出现
+- `/string` 向前搜索字符串
+- `?string` 向后搜索字符串
+- `n` 搜索字符串的下一个实例
+- `N` 搜索字符串的上一个实例
+- `{` 向后移动一个段落
+- `}` 向前移动一个段落
+- `1G` 移动到文件的第一行
+- `nG` 移动到文件的第 n 行
+- `G` 移动到文件的最后一行
+- `:%s/OLD/NEW/g` 搜索并替换所有出现
 
 #### 删除复制粘贴文本
 
-- dd (dw)    剪切当前行（单词）
-- D    剪切到行尾
-- x    删除（剪切）字符
-- yy (yw)    复制光标后的行（单词）
-- P    在光标后粘贴
-- u    撤销上次修改
-- U    撤销当前行的所有更改
+- `dd` (`dw`) 剪切当前行（单词）
+- `D` 剪切到行尾
+- `x` 删除（剪切）字符
+- `yy` (`yw`) 复制光标后的行（单词）
+- `P` 在光标后粘贴
+- `u` 撤销上次修改
+- `U` 撤销当前行的所有更改
 
 ### 14.3 mail
 
-mail 命令是读取和发送电子邮件的基础应用程序，通常已安装。要发送电子邮件，只需输入 "mail user@domain"。第一行是主题，然后是邮件内容。用新行中的单个点 (.) 结束并发送邮件。示例：
+`mail` 命令是读取和发送电子邮件的基础应用程序，通常已安装。要发送电子邮件，只需输入 "`mail user@domain`" 。第一行是主题，然后是邮件内容。用新行中的单个点 (.) 结束并发送邮件。示例：
 
 ```
 # mail c@cb.vu
@@ -2932,17 +2957,13 @@ EOT
 
 这也是测试邮件服务器的一种简单方法。
 
-- n    重复上一次搜索（第 N 次出现）。
-- N    反向重复上一次搜索。
-- q    退出
-
-
-
-
+- `n` 重复上一次搜索（第 N 次出现）。
+- `N` 反向重复上一次搜索。
+- `q` 退出
 
 ### 14.4 tar
 
-命令 tar（tape archive）用于创建和提取文件和目录的归档。归档 .tar 是未压缩的，压缩归档的扩展名为 .tgz 或 .tar.gz（zip）或 .tbz（bzip2）。创建归档时不要使用绝对路径，你可能想在其他地方解包。一些典型命令如下：
+命令 `tar`（tape archive）用于创建和提取文件和目录的归档。归档 `.tar` 是未压缩的，压缩归档的扩展名为 `.tgz` 或 `.tar.gz`（zip）或 `.tbz`（bzip2）。创建归档时不要使用绝对路径，你可能想在其他地方解包。一些典型命令如下：
 
 #### Create
 
@@ -2953,7 +2974,7 @@ EOT
 # tar -cjf home.tbz home/      # same with bzip2 compression
 ```
 
-只包含树中的一个（或两个）目录，但保持相对结构。例如归档 /usr/local/etc 和 /usr/local/www，归档中的第一个目录应为 local/。
+只包含树中的一个（或两个）目录，但保持相对结构。例如归档 `/usr/local/etc` 和 `/usr/local/www`，归档中的第一个目录应为 `local/`。
 
 ```
 # tar -C /usr -czf local.tgz local/etc local/www
@@ -2971,6 +2992,8 @@ EOT
 # tar -xjf home.tbz home/colin/file.txt   # Restore a single file
 ```
 
+
+
 #### More advanced
 
 ```
@@ -2983,7 +3006,7 @@ EOT
 
 ### 14.5 dd
 
-程序 dd（disk dump or destroy disk or see the meaning of dd）用于复制分区和磁盘以及其他复制技巧。典型用法：
+程序 `dd`（disk dump or destroy disk or see the meaning of dd）用于复制分区和磁盘以及其他复制技巧。典型用法：
 
 ```
 # dd if=<source> of=<target> bs=<byte size> conv=<conversion>
@@ -2991,9 +3014,9 @@ EOT
 
 #### Important conv options:
 
-- notrunc    do not truncate the output file, all zeros will be written as zeros.
-- noerror    continue after read errors (e.g. bad blocks)
-- sync       pad every input block with Nulls to ibs-size
+- `notrunc`    do not truncate the output file, all zeros will be written as zeros.
+- `noerror`    continue after read errors (e.g. bad blocks)
+- `sync`       pad every input block with Nulls to ibs-size
 
 默认字节大小为 512（一块）。MBR，即分区表所在的位置，在第一块上，磁盘的前 63 块为空。更大的字节大小复制更快但也需要更多内存。
 
@@ -3013,7 +3036,7 @@ EOT
 
 #### Recover
 
-命令 dd 会读取分区的每一个块。出现问题时最好使用选项 conv=sync,noerror，这样 dd 会跳过坏块并在目标处写入零。因此重要的是将块大小设置为等于或小于磁盘块大小。1k 大小似乎是安全的，使用 bs=1k 设置。如果磁盘有坏扇区并且需要从分区恢复数据，使用 dd 创建映像文件，挂载映像并将内容复制到新磁盘。使用选项 noerror，dd 会跳过坏扇区并改写零，因此只有坏扇区中的数据会丢失。
+命令 `dd` 会读取分区的每一个块。出现问题时最好使用选项 `conv=sync,noerror`，这样 `dd` 会跳过坏块并在目标处写入零。因此重要的是将块大小设置为等于或小于磁盘块大小。1k 大小似乎是安全的，使用 `bs=1k` 设置。如果磁盘有坏扇区并且需要从分区恢复数据，使用 `dd` 创建映像文件，挂载映像并将内容复制到新磁盘。使用选项 `noerror`，`dd` 会跳过坏扇区并改写零，因此只有坏扇区中的数据会丢失。
 
 ```
 # dd if=/dev/hda of=/dev/null bs=1m          # Check for bad blocks
@@ -3049,20 +3072,20 @@ MBR 包含引导加载程序和分区表，且大小为 512 字节。前 446 字
 
 ### 14.6 screen
 
-Screen（必备）有两个主要功能：
+`Screen`（必备）有两个主要功能：
 
 - 在单个终端内运行多个终端会话。
 - 启动的程序与真实终端解耦，因此可以在后台运行。真实终端可以关闭并稍后重新连接。
 
 #### Short start example
 
-使用以下命令启动 screen：
+使用以下命令启动 `screen`：
 
 ```
 # screen
 ```
 
-在 screen 会话中我们可以启动一个长时间运行的程序（如 top）。
+在 `screen` 会话中我们可以启动一个长时间运行的程序（如 `top`）。
 
 ```
 # top
@@ -3080,17 +3103,13 @@ Screen（必备）有两个主要功能：
 # screen -x
 ```
 
-以多显示模式连接到正在运行的 screen。控制台因此在多个用户之间共享。对团队协作/调试非常有用！
+以多显示模式连接到正在运行的 `screen`。控制台因此在多个用户之间共享。对团队协作/调试非常有用！
 
 #### Screen commands (within screen)
 
-所有 screen 命令均以 Ctrl-a 开始。
+所有 `screen` 命令均以 Ctrl-a 开始。
 
 - Ctrl-a ? help and summary of functions
-
-
-
-
 
 # — 有用命令 —
 
@@ -3102,18 +3121,25 @@ Screen（必备）有两个主要功能：
 - Ctrl-a Ctrl-d 断开连接并在后台保持会话运行
 - Ctrl-a x 使用密码锁定屏幕终端
 
-当正在运行终端中的程序关闭并且你从终端注销时，screen 会话将被终止。
+当正在运行终端中的程序关闭并且你从终端注销时，`screen` 会话将被终止。
 
 ### 14.7 Find
 
 一些重要选项：
 
-- -x (在 BSD 上) -xdev (在 Linux 上) 保持在同一文件系统上（fstab 中的 dev）。
-- -exec cmd {} \; 执行命令并用完整路径替换 {}
-- -iname 类似 -name 但不区分大小写
-- -ls 显示有关文件的信息（类似于 ls -la）
-- -size n n 为 +-n (k M G T P)
-- -cmin n 文件的状态最后更改于 n 分钟前。
+
+
+- `-x` (在 BSD 上) `-xdev` (在 Linux 上) 保持在同一文件系统上（fstab 中的 dev）。
+
+- `-exec cmd {} \;` 执行命令并用完整路径替换 `{}`
+
+- `-iname` 类似 `-name` 但不区分大小写
+
+- `-ls` 显示有关文件的信息（类似于 `ls -la`）
+
+- `-size n` `n` 为 `+-n` (`k M G T P`)
+
+- `-cmin n` 文件的状态最后更改于 `n` 分钟前。
 
 ```
 # find . -type f ! -perm -444        # Find files not readable by all
@@ -3133,7 +3159,7 @@ Screen（必备）有两个主要功能：
 # find / -type f -user root -perm -4000 -exec ls -l {} \;
 ```
 
-使用 xarg 或 exec 时要小心，因为它可能或可能不遵守引号，并且当文件或目录包含空格时可能会返回错误结果。如有疑问，请改用 "-print0 | xargs -0" 而不是 "| xargs"。选项 -print0 必须是 find 命令中的最后一个。参见这个不错的 find²² 小教程。
+使用 `xarg` 或 `exec` 时要小心，因为它可能或可能不遵守引号，并且当文件或目录包含空格时可能会返回错误结果。如有疑问，请改用 `"-print0 | xargs -0"` 而不是 `"| xargs"`。选项 `-print0` 必须是 `find` 命令中的最后一个。参见这个不错的 `find²²` 小教程。
 
 ```
 # find . -type f | xargs ls -l        # Will not work with spaces in names
@@ -3161,7 +3187,7 @@ Screen（必备）有两个主要功能：
 # rmdir /path/to/dir                  # Remove directory
 ```
 
-使用 openssl 检查文件哈希。这是对命令 md5sum 或 sha1sum 的不错替代方案（FreeBSD 使用 md5 和 sha1），这些命令并不总是安装的。
+使用 `openssl` 检查文件哈希。这是对命令 `md5sum` 或 `sha1sum` 的不错替代方案（FreeBSD 使用 `md5` 和 `sha1`），这些命令并不总是安装的。
 
 ```
 # openssl md5 file.tar.gz        # Generate an md5 checksum from file
@@ -3171,7 +3197,7 @@ Screen（必备）有两个主要功能：
 
 ## 15 安装软件
 
-通常包管理器使用代理变量进行 http/ftp 请求。在 .bashrc 中：
+通常包管理器使用代理变量进行 `http/ftp` 请求。在 `.bashrc` 中：
 
 ```
 export http_proxy=http://proxy_server:3128
@@ -3190,7 +3216,7 @@ export ftp_proxy=http://proxy_server:3128
 
 ### 15.2 添加/删除软件
 
-前端：SuSE 的 yast2/yast，Red Hat 的 redhat-config-packages。
+前端：SuSE 的 `yast2/yast`，Red Hat 的 `redhat-config-packages`。
 
 ```
 # rpm -i pkgname.rpm     # install the package (RH, SuSE, RPM based)
@@ -3199,7 +3225,9 @@ export ftp_proxy=http://proxy_server:3128
 
 #### SuSE zypper (see doc and cheet sheet)²³
 
-```
+
+
+``` 
 # zypper refresh         # Refresh repositorie
 # zypper install vim     # Install the package vim
 # zypper remove vim      # Remove the package vim
@@ -3207,8 +3235,7 @@ export ftp_proxy=http://proxy_server:3128
 # zypper update vim      # Search packages with vim
 ```
 
-#### Debian
-
+### Debian
 ```
 # apt-get update         # First update the package lists
 # apt-get install emacs  # Install the package emacs
@@ -3216,10 +3243,8 @@ export ftp_proxy=http://proxy_server:3128
 # dpkg -S file           # find what package a file belongs to
 ```
 
-#### Gentoo
-
-Gentoo 使用 emerge 作为其 "Portage" 包管理系统的核心。
-
+### Gentoo
+Gentoo 使用 `emerge` 作为其 "Portage" 包管理系统的核心。
 ```
 # emerge --sync           # First sync the local portage tree
 # emerge -u packagename   # Install or upgrade a package
@@ -3227,40 +3252,29 @@ Gentoo 使用 emerge 作为其 "Portage" 包管理系统的核心。
 # revdep-rebuild          # Repair dependencies
 ```
 
-#### Solaris
+### Solaris
+`<cdrom>` 路径通常为 `/cdrom/cdrom0`。
 
-<cdrom> 路径通常为 /cdrom/cdrom0。
-
-
-
-
-
-## 转换媒体
-
+#### 转换媒体
 ```
 # pkgadd -d <cdrom>/Solaris_9/Product SUNWgtar
 # pkgadd -d SUNWgtar          # Add downloaded package (bunzip2 first)
 # pkg rm SUNWgtar             # Remove the package
 ```
 
-#### FreeBSD
-
+### FreeBSD
 ```
 # pkg_add -r rsync          # Fetch and install rsync.
 # pkg_delete /var/db/pkg/rsync-xx  # Delete the rsync package
 ```
-
-使用 PACKAGESITE 变量设置软件包的获取位置。例如：
-
+使用 `PACKAGESITE` 变量设置软件包的获取位置。例如：
 ```
 # export PACKAGESITE=ftp://ftp.freebsd.org/pub/FreeBSD/ports/i386/packages/Latest/
 # or ftp://ftp.freebsd.org/pub/FreeBSD/ports/i386/packages-6-stable/Latest/
 ```
 
-## FreeBSD ports
-
-端口树 /usr/ports/ 是一组可编译和安装的软件集合（参见 man ports）。端口通过 portsnap 程序进行更新。
-
+#### FreeBSD ports
+端口树 `/usr/ports/` 是一组可编译和安装的软件集合（参见 `man ports`）。端口通过 `portsnap` 程序进行更新。
 ```
 # portsnap fetch extract      # Create the tree when running the first time
 # portsnap update              # Update the port tree
@@ -3271,9 +3285,7 @@ Gentoo 使用 emerge 作为其 "Portage" 包管理系统的核心。
 ```
 
 ### 15.3 库路径
-
-由于复杂的依赖关系和运行时链接，程序很难复制到其他系统或发行版。然而对于依赖很少的小程序，缺失的库可以复制过去。运行时库（以及缺失的）通过 ldd 检查，并通过 ldconfig 管理。
-
+由于复杂的依赖关系和运行时链接，程序很难复制到其他系统或发行版。然而对于依赖很少的小程序，缺失的库可以复制过去。运行时库（以及缺失的）通过 `ldd` 检查，并通过 `ldconfig` 管理。
 ```
 # ldd /usr/bin/rsync          # List all needed runtime libraries
 # ldconfig -n /path/to/libs/   # Add a path to the shared libraries directories
@@ -3282,25 +3294,19 @@ Gentoo 使用 emerge 作为其 "Portage" 包管理系统的核心。
 ```
 
 ## 16 转换媒体
-
 有时只需将视频、音频文件或文档转换为另一种格式。
 
 ### 16.1 文本编码
-
-文本编码可能会完全错误，特别是当语言需要特殊字符如 àç 时。iconv 命令可以从一种编码转换到另一种编码。
-
+文本编码可能会完全错误，特别是当语言需要特殊字符如 àç 时。`iconv` 命令可以从一种编码转换到另一种编码。
 ```
 # iconv -f <from_encoding> -t <to_encoding> <input_file>
 # iconv -f ISO8859-1 -t UTF-8 -o file.input > file_utf8
 # iconv -l                 # List known coded character sets
 ```
-
-如果不使用 -f 选项，iconv 将使用本地字符集，如果文档显示正常，通常是可以的。
+如果不使用 `-f` 选项，`iconv` 将使用本地字符集，如果文档显示正常，通常是可以的。
 
 ### 16.2 Unix - DOS 换行符
-
-在 Unix shell 中将 DOS (CR/LF) 转换为 Unix (LF) 换行符，反之亦然。另请参阅 dos2unix 和 unix2dos，如果你有它们。
-
+在 Unix shell 中将 DOS (CR/LF) 转换为 Unix (LF) 换行符，反之亦然。另请参阅 `dos2unix` 和 `unix2dos`，如果你有它们。
 ```
 # sed 's/.$//' dosfile.txt > unixfile.txt          # DOS to UNIX
 # awk '{sub(/\r$/,"" );print}' dosfile.txt > unixfile.txt  # DOS to UNIX
@@ -3308,9 +3314,7 @@ Gentoo 使用 emerge 作为其 "Portage" 包管理系统的核心。
 ```
 
 ### 16.3 PDF 转 Jpeg 并合并 PDF 文件
-
-使用 gs (GhostScript) 将 PDF 文档转换为每个页面的 jpeg（或 png）图像。也可以使用 convert 和 mogrify（来自 ImageMagick 或 GraphicsMagick）更简洁。
-
+使用 `gs` (GhostScript) 将 PDF 文档转换为每个页面的 jpeg（或 png）图像。也可以使用 `convert` 和 `mogrify`（来自 ImageMagick 或 GraphicsMagick）更简洁。
 ```
 # gs -dBATCH -dNOPAUSE -sDEVICE=jpeg -r150 -dTextAlphaBits=4 -dGraphicsAlphaBits=4 \ -dMaxStripSize=8192 -sOutputFile=unixxtoolbox.%d.jpg unixxtoolbox.pdf
 # convert unixxtoolbox.pdf unixxtoolbox-#03d.png
@@ -3318,26 +3322,23 @@ Gentoo 使用 emerge 作为其 "Portage" 包管理系统的核心。
 # convert image000* -resize 120x120 -compress JPEG -quality 80 images.pdf
 # mogrify -format png *.ppm      # convert all ppm images to png format
 ```
-
 Ghostscript 也可以将多个 pdf 文件合并为一个文件。只有在 PDF 文件“表现良好”时才有效。
-
 ```
 # gs -q -sPAPERSIZE=a4 -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=all.pdf \ file1.pdf file2.pdf ...      # On Windows use '#' instead of '='
 ```
 
 ### 16.4 转换视频
-
-使用 mpeg4 编解码器压缩佳能数码相机视频并修复糟糕的声音。
-
+使用 `mpeg4` 编解码器压缩佳能数码相机视频并修复糟糕的声音。
 ```
 # mencoder -o videout.avi -oac mp3lame -ovc lavc -srate 11025 \ -channels 1 -af adv_force1 -lameopts preset=medium -lavcopts \ vcodec=mspmpe4v2:vbitrate=600 -mc 0 videoin.AVI
 ```
-
-有关声音处理，请参阅 sox。
+有关声音处理，请参阅 `sox`。
 
 ### 16.5 复制音频 CD
 
-程序 cdparanoia 可以保存音频轨道（FreeBSD 端口在 audio/cdparanoia/），oggenc 可以编码为 Ogg Vorbis 格式，lame 转换为 mp3。
+
+
+程序 `cdparanoia` 可以保存音频轨道（FreeBSD 端口在 `audio/cdparanoia/`），`oggenc` 可以编码为 Ogg Vorbis 格式，`lame` 转换为 mp3。
 
 ```
 # cdparanoia -B                # Copy the tracks to wav files in current dir
@@ -3373,10 +3374,7 @@ Ghostscript 也可以将多个 pdf 文件合并为一个文件。只有在 PDF �
 # gs -dSAFER -dNOPAUSE -sDEVICE=deskjet -sOutputFile=\|lpr file.pdf
 ```
 
-
-
-
-即使应用程序不支持，也可打印到 PDF 文件。在打印命令中使用 gs 代替 lpr。
+即使应用程序不支持，也可打印到 PDF 文件。在打印命令中使用 `gs` 代替 `lpr`。
 
 ```
 # gs -q -sPAPERSIZE=a4 -dNOPAUSE -dBATCH -sDEVICE=pdfwrite -sOutputFile=/path/file.pdf
@@ -3395,7 +3393,7 @@ Ghostscript 也可以将多个 pdf 文件合并为一个文件。只有在 PDF �
 
 #### 创建用户和数据库
 
-命令 createuser、dropuser、createdb 和 dropdb 是方便的快捷方式，等同于 SQL 命令。新建用户为 bob，数据库为 bobdb；使用 root 以 psql 登录数据库超级用户：
+命令 `createuser`、`dropuser`、`createdb` 和 `dropdb` 是方便的快捷方式，等同于 SQL 命令。新建用户为 `bob`，数据库为 `bobdb`；使用 `root` 以 `psql` 登录数据库超级用户：
 
 ```
 # createuser -U pgsql -P bob          # -P will ask for password
@@ -3404,13 +3402,13 @@ Ghostscript 也可以将多个 pdf 文件合并为一个文件。只有在 PDF �
 # dropuser bob                         # Delete user bob
 ```
 
-通用数据库认证机制在 pg_hba.conf 中配置
+通用数据库认证机制在 `pg_hba.conf` 中配置
 
 #### 授予远程访问
 
-文件 $PGSQL_DATA_D/postgresql.conf 指定绑定地址。通常 listen_addresses = '*' 用于 Postgres 8.x。
+文件 `$PGSQL_DATA_D/postgresql.conf` 指定绑定地址。通常 `listen_addresses = '*'` 用于 Postgres 8.x。
 
-文件 $PGSQL_DATA_D/pg_hba.conf 定义访问控制。示例：
+文件 `$PGSQL_DATA_D/pg_hba.conf` 定义访问控制。示例：
 
 ```
 # TYPE  DATABASE  USER    IP-ADDRESS      IP-MASK         METHOD
@@ -3420,7 +3418,7 @@ host    all       all     0.0.0.0/0                   password
 
 #### 备份和恢复
 
-备份和恢复使用用户 pgsql 或 postgres。备份和恢复单个数据库：
+备份和恢复使用用户 `pgsql` 或 `postgres`。备份和恢复单个数据库：
 
 ```
 # pg_dump --clean dbname > dbname_sql.dump
@@ -3434,7 +3432,7 @@ host    all       all     0.0.0.0/0                   password
 # psql -f full.dump postgres
 ```
 
-在这种情况下，恢复从数据库 postgres 开始，在重新加载空集群时更好。
+在这种情况下，恢复从数据库 `postgres` 开始，在重新加载空集群时更好。
 
 ### 18.2 MySQL
 
@@ -3476,7 +3474,7 @@ mysql> FLUSH PRIVILEGES;
 
 #### 授予远程访问
 
-远程访问通常允许用于某个数据库，而非所有数据库。文件 /etc/my.cnf 包含绑定 IP 地址。通常注释掉行 bind-address = out。
+远程访问通常允许用于某个数据库，而非所有数据库。文件 `/etc/my.cnf` 包含绑定 IP 地址。通常注释掉行 `bind-address = out`。
 
 ```
 # mysql -u root mysql
@@ -3488,6 +3486,8 @@ mysql> FLUSH PRIVILEGES;                    # Use 'hostname' or also '%' for ful
 #### 备份和恢复
 
 备份和恢复单个数据库：
+
+
 
 ```
 # mysqldump -u root -psecret --add-drop-database dbname > dbname_sql.dump
@@ -3501,15 +3501,15 @@ mysql> FLUSH PRIVILEGES;                    # Use 'hostname' or also '%' for ful
 # mysql -u root -psecret < full.dump
 ```
 
-这里的 "secret" 是 mysql root 密码，-p 后没有空格。当单独使用 -p 选项（无密码）时，密码会在命令行提示输入。
+这里的 `secret` 是 `mysql` `root` 密码，`-p` 后没有空格。当单独使用 `-p` 选项（无密码）时，密码会在命令行提示输入。
 
 ### 18.3 SQLite
 
-SQLite²⁷ 是一个小型强大、独立、免服务器、零配置的 SQL 数据库。
+`SQLite`²⁷ 是一个小型强大、独立、免服务器、零配置的 SQL 数据库。
 
 #### 转储和恢复
 
-转储和恢复 SQLite 数据库可能很有用。例如你可以编辑转储文件以更改列属性或类型，然后恢复数据库。这比处理 SQL 命令更容易。使用命令 sqlite3 用于 3.x 数据库。
+转储和恢复 SQLite 数据库可能很有用。例如你可以编辑转储文件以更改列属性或类型，然后恢复数据库。这比处理 SQL 命令更容易。使用命令 `sqlite3` 用于 3.x 数据库。
 
 ```
 # sqlite database.db .dump > dump.sql                # dump
@@ -3522,14 +3522,13 @@ SQLite²⁷ 是一个小型强大、独立、免服务器、零配置的 SQL 数
 sqlite database_v2.db .dump | sqlite3 database_v3.db
 ```
 
-
 ## 19 磁盘配额
 
 磁盘配额允许限制用户或（或组成员）可使用的磁盘空间量和/或文件数量。配额按文件系统分配，由内核强制执行。
 
 ### 19.1 Linux 设置
 
-通常需要安装配额工具包，它包含命令行工具。在 fstab 中激活用户配额并重新挂载分区。如果分区繁忙，则必须关闭所有被锁定的文件，或必须重新启动系统。将 usrquota 添加到 fstab 挂载选项中，例如：
+通常需要安装配额工具包，它包含命令行工具。在 `fstab` 中激活用户配额并重新挂载分区。如果分区繁忙，则必须关闭所有被锁定的文件，或必须重新启动系统。将 `usrquota` 添加到 `fstab` 挂载选项中，例如：
 
 ```
 /dev/sda2   /home   reiserfs   rw,acl,user_xattr,usrquota 1 1
@@ -3537,14 +3536,14 @@ sqlite database_v2.db .dump | sqlite3 database_v3.db
 # mount                 # 检查 usrquota 是否激活，否则重启
 ```
 
-使用 quotacheck 初始化 quota.user 文件。
+使用 `quotacheck` 初始化 `quota.user` 文件。
 
 ```
 # quotacheck -vum /home
 # chmod 644 /home/aquota.user   # 让用户自行检查其配额
 ```
 
-使用提供的脚本（例如 SuSE 上的 /etc/init.d/quotad）或使用 quotaon 激活配额：
+使用提供的脚本（例如 SuSE 上的 `/etc/init.d/quotad`）或使用 `quotaon` 激活配额：
 
 ```
 quotaon -vu /home
@@ -3558,20 +3557,20 @@ quota -v
 
 ### 19.2 FreeBSD 设置
 
-配额工具是基本系统的一部分，然而内核需要选项 quota。如果没有，则添加它并重新编译内核。
+配额工具是基本系统的一部分，然而内核需要选项 `quota`。如果没有，则添加它并重新编译内核。
 
 ```
 options QUOTA
 ```
 
-与 Linux 相同，将配额添加到 fstab 选项中（userquota，而不是 usrquota）：
+与 Linux 相同，将配额添加到 `fstab` 选项中（`userquota`，而不是 `usrquota`）：
 
 ```
 /dev/ad0s1d   /home   ufs   rw,noatime,userquota   2   2
 # mount /home              # 重新挂载分区
 ```
 
-在 /etc/rc.conf 中启用磁盘配额并启动配额。
+在 `/etc/rc.conf` 中启用磁盘配额并启动配额。
 
 ```
 # grep quotas /etc/rc.conf
@@ -3582,7 +3581,7 @@ check_quotas="YES"         # 启动时检查配额（或 NO）。
 
 ### 19.3 分配配额限制
 
-默认情况下配额不受限制（设为 0）。限制使用 edquota 为单个用户设置。配额也可以复制给多个用户。不同配额实现的文件结构不同，但原理相同：块和 inode 的值可以受限。只更改 soft 和 hard 的值。如果未指定，块为 1k。宽限期使用 edquota -t 设置。例如：
+默认情况下配额不受限制（设为 0）。限制使用 `edquota` 为单个用户设置。配额也可以复制给多个用户。不同配额实现的文件结构不同，但原理相同：块和 inode 的值可以受限。只更改 `soft` 和 `hard` 的值。如果未指定，块为 1k。宽限期使用 `edquota -t` 设置。例如：
 
 ```
 # edquota -u colin
@@ -3590,9 +3589,11 @@ check_quotas="YES"         # 启动时检查配额（或 NO）。
 
 #### Linux
 
-用户 colin（uid 1007）的磁盘配额：
+用户 `colin`（`uid` 1007）的磁盘配额：
+
 Filesystem   blocks   soft   hard   inodes   soft   hard
-/dev/sda8    108      1000   2000   1        0      0
+
+`/dev/sda8`    108      1000   2000   1        0      0
 
 #### FreeBSD
 
@@ -3604,7 +3605,7 @@ Quotas for user colin:
 
 #### 多用户
 
-命令 edquota -p 用于将配额复制给其他用户。例如将参考配额复制给所有用户：
+命令 `edquota -p` 用于将配额复制给其他用户。例如将参考配额复制给所有用户：
 
 ```
 # edquota -p refuser `awk -F: '$3 > 499 {print $1}' /etc/passwd`
@@ -3613,7 +3614,7 @@ Quotas for user colin:
 
 #### 检查
 
-用户只需输入 quota 即可检查其配额（quota.user 文件必须可读）。root 可以检查所有配额。
+用户只需输入 `quota` 即可检查其配额（`quota.user` 文件必须可读）。`root` 可以检查所有配额。
 
 ```
 # quota -u colin                # 检查用户的配额
@@ -3622,13 +3623,17 @@ Quotas for user colin:
 
 ## 20 Shell
 
-大多数 Linux 发行版使用 bash shell，而 BSD 使用 tcsh，bourne shell 仅用于脚本。过滤器非常有用，可以通过管道连接：
+大多数 Linux 发行版使用 `bash` shell，而 BSD 使用 `tcsh`，`bourne shell` 仅用于脚本。过滤器非常有用，可以通过管道连接：
 
-- grep 模式匹配
-- sed 搜索并替换字符串或字符
-- cut 从标记打印特定列
-- sort 按字母或数字排序
-- uniq 从文件中删除重复行
+- `grep` 模式匹配
+
+- `sed` 搜索并替换字符串或字符
+
+- `cut` 从标记打印特定列
+
+- `sort` 按字母或数字排序
+
+- `uniq` 从文件中删除重复行
 
 例如一次性全部使用：
 
@@ -3637,11 +3642,11 @@ Quotas for user colin:
 # ifconfig | sed '/inet addr:/!d;s/.*//.*/'|sort -t. -k1,1n -k2,2n -k3,3n -k4,4n
 ```
 
-sed 模式中的第一个字符是一个制表符。要在控制台上写入制表符，请使用 ctrl-v ctrl-tab。
+`sed` 模式中的第一个字符是一个制表符。要在控制台上写入制表符，请使用 `ctrl-v ctrl-tab`。
 
 ### 20.1 bash
 
-bash 和 sh 的重定向和管道：
+`bash` 和 `sh` 的重定向和管道：
 
 ```
 # cmd1 > file                 # 将 stdout 重定向到文件。
@@ -3653,7 +3658,9 @@ bash 和 sh 的重定向和管道：
 # cmd1 2>&1 | cmd2            # 将 stdout 和 stderr 管道传输到 cmd2
 ```
 
-在 ~/.bashrc 中修改你的配置（也可以是 ~/.bash_profile）。以下条目很有用，使用 ". ~/.bashrc" 重新加载。使用 cygwin 时使用 ~/.bash_profile；使用 rxvt 时使用 shift + 左键粘贴。
+在 `~/.bashrc` 中修改你的配置（也可以是 `~/.bash_profile`）。以下条目很有用，使用 `". ~/.bashrc"` 重新加载。使用 `cygwin` 时使用 `~/.bash_profile`；使用 `rxvt` 时使用 `shift + 左键` 粘贴。
+
+
 
 ```
 # in .bashrc
@@ -3669,9 +3676,6 @@ PS1="$PS1\w\[\033[1;30m\]>\[\033[0m\]"
 alias ls='ls -af'                    # 追加指示符（其中之一 */=>@l）
 ```
 
-
-
-
 ```
 alias ll='ls -AFls'
 alias la='ls -all'
@@ -3684,7 +3688,7 @@ export LSCOLORS=ExGxFxdxCxDxBxBxExEx
 
 ### 20.2 tcsh
 
-tcsh 和 csh 的重定向和管道（简单的 > 和 >> 与 sh 相同）：
+`tcsh` 和 `csh` 的重定向和管道（简单的 `>` 和 `>>` 与 `sh` 相同）：
 
 ```
 # cmd >& file                # Redirect both stdout and stderr to file.
@@ -3693,7 +3697,7 @@ tcsh 和 csh 的重定向和管道（简单的 > 和 >> 与 sh 相同）：
 # cmd1 |& cmd2               # pipe stdout and stderr to cmd2
 ```
 
-csh/tcsh 的设置保存在 ~/.cshrc 中，使用 "source .cshrc" 重新加载。示例：
+`csh`/`tcsh` 的设置保存在 `~/.cshrc` 中，使用 `"source .cshrc"` 重新加载。示例：
 
 ```
 # in .cshrc
@@ -3718,32 +3722,32 @@ setenv CLICOLOR 1                # Use colors (if possible)
 setenv LSCOLORS ExGxFxdxCxDxBxBxExEx
 ```
 
-Emacs 模式允许你使用 Emacs 键快捷键来修改命令行提示符。这非常有用（不仅对于 Emacs 用户）。最常用的命令有：
+`Emacs` 模式允许你使用 `Emacs` 键快捷键来修改命令行提示符。这非常有用（不仅对于 `Emacs` 用户）。最常用的命令有：
 
-- C-a    将光标移动到行首
-- C-e    将光标移动到行尾
-- M-b    将光标向后移动一个词
-- M-f    将光标向前移动一个词
-- M-d    剪切下一个词
-- C-w    剪切上一个词
-- C-u    剪切光标前所有内容
-- C-k    剪切光标后所有内容（行的剩余部分）
-- C-y    粘贴最后一次剪切的内容（直接粘贴）
-- C-_    撤销
+- `C-a`    将光标移动到行首
+- `C-e`    将光标移动到行尾
+- `M-b`    将光标向后移动一个词
+- `M-f`    将光标向前移动一个词
+- `M-d`    剪切下一个词
+- `C-w`    剪切上一个词
+- `C-u`    剪切光标前所有内容
+- `C-k`    剪切光标后所有内容（行的剩余部分）
+- `C-y`    粘贴最后一次剪切的内容（直接粘贴）
+- `C-_`    撤销
 
-注意：C- 表示按住 Control 键，M- 表示按住 Meta 键（通常是 Alt 或 Esc 键）。
+注意：`C-` 表示按住 `Control` 键，`M-` 表示按住 `Meta` 键（通常是 `Alt` 或 `Esc` 键）。
 
 ## 21 脚本
 
-基础（第52页） | 脚本示例（第53页） | awk（第53页） | sed（第53页） | 正则表达式（第53页） | 常用命令（第54页）
+基础（第52页） | 脚本示例（第53页） | `awk`（第53页） | `sed`（第53页） | 正则表达式（第53页） | 常用命令（第54页）
 
-Bourne shell（/bin/sh）存在于所有 Unix 安装中，用该语言编写的脚本（相当）可移植；man 1 sh 是一个很好的参考。
+`Bourne shell`（`/bin/sh`）存在于所有 `Unix` 安装中，用该语言编写的脚本（相当）可移植；`man 1 sh` 是一个很好的参考。
 
 ### 21.1 基础
 
 #### 变量和参数
 
-使用 variable=value 进行赋值，使用 $variable 获取内容。
+使用 `variable=value` 进行赋值，使用 `$variable` 获取内容。
 
 ```
 MESSAGE="Hello World"          # Assign a string
@@ -3816,15 +3820,13 @@ _EOF
 sh testhome.sh
 ```
 
-
-
-
-
 ### 21.2 Bourne 脚本示例
 
-作为一个小例子，用于从本 xhtml 文档创建 PDF 小册子的脚本：
+作为一个小例子，用于从本 `xhtml` 文档创建 `PDF` 小册子的脚本：
 
-```
+
+
+```sh
 #!/bin/sh
 # This script creates a book in pdf format ready to print on a duplex printer
 if [ $# -ne 1 ]; then          # Check the argument
@@ -3847,7 +3849,7 @@ exit 0                         # exit 0 means successful
 
 ### 21.3 一些 awk 命令
 
-Awk 对于字段剥离很有用，像 cut 但功能更强大。 在本文件中搜索其他示例。 例如请参阅 gnulamp.com 和 awk 的 one-liners 以获取一些不错的示例。
+`awk` 对于字段剥离很有用，像 `cut` 但功能更强大。 在本文件中搜索其他示例。 例如请参阅 `gnulamp.com` 和 `awk` 的 one-liners 以获取一些不错的示例。
 
 ```
 awk '{ print $2, $1 }' file                # Print and inverse first two columns
@@ -3859,7 +3861,7 @@ awk 'length > 80'                           # print line longer than 80 char
 
 ### 21.4 一些 sed 命令
 
-这里是单行代码宝库²⁸。 以及 sed 的一个不错的介绍和教程²⁹。
+这里是单行代码宝库²⁸。 以及 `sed` 的一个不错的介绍和教程²⁹。
 
 ```
 sed 's/string1/string2/g'                 # Replace string1 with string2
@@ -3896,7 +3898,7 @@ root | grep -v ^: | awk -F':' '{ printf("%s\n", $1) }' | grep 'user$'
 tail +2 file > file2                              # remove the first line from file
 ```
 
-我使用这个小技巧一次更改许多文件的扩展名。 例如从 .cxx 到 .cpp。 先在没有 | sh 结尾的情况下测试它。 你也可以使用已安装的 rename 命令来完成。 或者使用 bash 内置命令。
+我使用这个小技巧一次更改许多文件的扩展名。 例如从 `.cxx` 到 `.cpp`。 先在没有 `| sh` 结尾的情况下测试它。 你也可以使用已安装的 `rename` 命令来完成。 或者使用 `bash` 内置命令。
 
 ```
 # ls *.cxx | awk -F . '{print "mv "$0" "$1".cpp"}' | sh
@@ -3908,6 +3910,8 @@ tail +2 file > file2                              # remove the first line from f
 ## 22 编程
 
 ### 22.1 C 基础
+
+
 
 ```
 strcpy(newstr,str)                          /* copy str to newstr */
@@ -3922,7 +3926,7 @@ sprintf(str, "%d", i);
 
 ### 22.2 C 示例
 
-一个最小的 c 程序 simple.c：
+一个最小的 c 程序 `simple.c`：
 
 ```
 #include <stdio.h>
@@ -3950,17 +3954,13 @@ pobj->x                                  // Member x of class pointed to by pobj
                                          // (*pobj).x and pobj->x are the same
 ```
 
-
-
-
-
 ### 22.4 C++ 示例
 
-作为一个稍微更现实的 C++ 程序：一个类拥有自己的头文件（IPv4.h）和实现文件（IPv4.cpp），以及一个使用该类功能的程序。该类将整数格式的 IP 地址转换为已知的四段格式。
+作为一个稍微更现实的 C++ 程序：一个类拥有自己的头文件 `IPv4.h` 和实现文件 `IPv4.cpp`，以及一个使用该类功能的程序。该类将整数格式的 IP 地址转换为已知的四段格式。
 
 #### IPv4 类
 
-#### IPv4.h：
+#### `IPv4.h`：
 
 ```
 #ifndef IPV4_H
@@ -3977,7 +3977,7 @@ public:
 #endif // IPV4_H
 ```
 
-#### IPv4.cpp：
+#### `IPv4.cpp`：
 
 ```
 #include "IPv4.h"
@@ -3998,7 +3998,7 @@ string IPv4::IPint_to_IPquad(unsigned long ip) {    // member implementation
 }
 ```
 
-#### 程序 simplecpp.cpp
+#### 程序 `simplecpp.cpp`
 
 ```
 #include "IPv4.h"
@@ -4025,11 +4025,11 @@ int main (int argc, char* argv[]) {
 1347861486 = 80.86.187.238
 ```
 
-使用 ldd 检查可执行文件使用了哪些库以及它们的位置。也可用于检查共享库是否缺失或可执行文件是否为静态链接。
+使用 `ldd` 检查可执行文件使用了哪些库以及它们的位置。也可用于检查共享库是否缺失或可执行文件是否为静态链接。
 
 ### 22.5 简单 Makefile
 
-下面展示了多源程序的最小 Makefile。包含指令的行*必须以制表符开头！* 反斜杠 "\" 可用于截断长行。
+下面展示了多源程序的最小 Makefile。包含指令的行*必须以制表符开头！* 反斜杠 `\` 可用于截断长行。
 
 ```
 CC = g++
@@ -4055,21 +4055,31 @@ clean:
 ### 23.1 文档
 
 - Linux Documentation          en.tldp.org
+
 - Linux Man Pages              www.linuxmanpages.com
+
 - Linux commands directory     www.oreillynet.com/linux/cmd
+
 - Linux doc man howtos         linux.die.net
+
 - FreeBSD Handbook             www.freebsd.org/handbook
+
 - FreeBSD Man Pages            www.freebsd.org/cgi/man.cgi
+
 - FreeBSD user wiki            www.freebsdwiki.net
+
 - Solaris Man Pages            docs.sun.com/app/docs/coll/40.10
 
 ### 23.2 其他 Unix/Linux 参考
 
-- Rosetta Stone for Unix       bhami.com/rosetta.html (a Unix command translator)
-- Unix guide cross reference   unixguide.net/unixguide.shtml
-- Linux commands line list     www.linuxcmd.org
-- Short Linux reference        www.pixelbeat.org/cmdline.html
-- Little command line goodies  www.shell-fu.org
+
+
+# Unix/Linux 参考资源
+
+- Rosetta Stone for Unix `bhami.com/rosetta.html` (a Unix command translator)
+- Unix guide cross reference `unixguide.net/unixguide.shtml`
+- Linux commands line list `www.linuxcmd.org`
+- Short Linux reference `www.pixelbeat.org/cmdline.html`
+- Little command line goodies `www.shell-fu.org`
 
 That's all folks!
-

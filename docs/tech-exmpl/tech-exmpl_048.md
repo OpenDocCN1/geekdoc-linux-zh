@@ -1,28 +1,29 @@
+
 # 数组中的多数元素
 
 > 原文：[`techbyexample.com/majority-element-array/`](https://techbyexample.com/majority-element-array/)
 
-# **概述**
+## 概述
 
-目标是找出给定数组中的多数元素。多数元素是指在给定数组中出现次数超过 n/2 的元素，其中 n 是数组的长度
+目标是找出给定数组中的多数元素。多数元素是指在给定数组中出现次数超过 `n/2` 的元素，其中 `n` 是数组的长度。
 
-**示例 1**
+### 示例 1
 
 ```go
 Input: [2, 1, 2, 2, 3]
 Output: 2
 ```
 
-**示例 2**
+### 示例 2
 
 ```go
 Input: [1]
 Output: 1
 ```
 
-# **程序**
+## 程序
 
-以下是相应的程序
+以下是相应的程序：
 
 ```go
 package main
@@ -51,7 +52,6 @@ func majorityElement(nums []int) int {
 	}
 
 	return 0
-
 }
 
 func main() {
@@ -63,7 +63,7 @@ func main() {
 }
 ```
 
-**输出：**
+### 输出
 
 ```go
 2

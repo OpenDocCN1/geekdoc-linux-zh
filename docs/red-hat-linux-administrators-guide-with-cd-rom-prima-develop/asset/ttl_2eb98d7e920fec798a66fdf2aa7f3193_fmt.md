@@ -1,2 +1,0 @@
-
-# red hat linux 管理员指南（含 cd-rom）

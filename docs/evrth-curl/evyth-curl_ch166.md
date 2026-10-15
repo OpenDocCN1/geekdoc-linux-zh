@@ -1,6 +1,7 @@
+
 # 多部分表单
 
-多部分表单是当 HTML 表单提交时，`enctype`设置为`multipart/form-data`时，HTTP 客户端发送的内容。这是一个带有特殊格式化的请求体，作为一系列部分发送的 HTTP POST 请求，这些部分由 MIME 边界分隔。
+多部分表单是当 HTML 表单提交时，`enctype` 设置为 `multipart/form-data` 时，HTTP 客户端发送的内容。这是一个带有特殊格式化的请求体，作为一系列部分发送的 HTTP POST 请求，这些部分由 MIME 边界分隔。
 
 一个 HTML 示例可能如下所示：
 

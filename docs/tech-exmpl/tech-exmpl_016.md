@@ -1,170 +1,128 @@
+
 # 停车场系统设计
 
 > 原文：[`techbyexample.com/parking-lot-system-design/`](https://techbyexample.com/parking-lot-system-design/)
 
-目录
+## 目录
 
-+   概述
+- 概述
+- 需求
+- 停车系统设计中的所有角色
+  - 停车位
+  - 停车门
+  - 停车票
+  - 支付网关类型
+  - 车辆
+  - 停车费
+  - 停车楼层
+  - 停车系统
+- UML 图
+- 低级设计
+- 程序
+- 完整工作代码在一个文件中
+- 结论
 
-+   需求
-
-+   停车系统设计中的所有角色
-
-    +   停车位
-
-    +   停车门
-
-    +   停车票
-
-    +   支付网关类型
-
-    +   车辆
-
-    +   停车费
-
-    +   停车楼层
-
-    +   停车系统
-
-+   UML 图
-
-+   低级设计
-
-+   程序
-
-+   完整工作代码在一个文件中
-
-+   结论
-
-# **概述**
+## 概述
 
 在回答任何系统设计问题时，重要的是要记住系统设计问题可能非常广泛。因此，切勿直接跳到解决方案。与面试官讨论用例是很好的，这样可以理解他在寻找什么。决定在你的系统设计中包含哪些功能。
 
-这也是面试官在考察的一个方面。他们可能在寻找
+这也是面试官在考察的一个方面。他们可能在寻找：
 
-+   你如何进行需求分析
+- 你如何进行需求分析
+- 你能否列出所有的需求
+- 你在问什么问题？
 
-+   你能否列出所有的需求
+设计一个停车场是一个非常常见的系统设计面试问题，和其他任何系统设计面试一样，面试官在寻找的就是这些：
 
-+   你在问什么问题？
-
-设计一个停车场是一个非常常见的系统设计面试问题，和其他任何系统设计面试一样，面试官在寻找的就是这些
-
-+   你对面向对象设计的理解
-
-+   你如何在设计模式的框架下进行设计
+- 你对面向对象设计的理解
+- 你如何在设计模式的框架下进行设计
 
 另外，请注意，这个问题不是分布式系统设计问题。
 
-在本教程中，我们将讨论停车场的低级设计。除此之外，我们还将展示停车场的完整工作代码。以下是目录
+在本教程中，我们将讨论停车场的低级设计。除此之外，我们还将展示停车场的完整工作代码。以下是目录：
 
-+   需求
+- 需求
+- 设计中的角色
+- UML 图
+- 用 Go 编程语言表示的低级设计
+- 完整的工作代码
+- 完整工作代码在一个文件中
 
-+   设计中的角色
-
-+   UML 图
-
-+   用 Go 编程语言表示的低级设计
-
-+   完整的工作代码
-
-+   完整工作代码在一个文件中
-
-# **需求**
+## 需求
 
 设计任何东西时，了解系统的一些高级需求是至关重要的。
 
-+   系统可能有多个入口
+- 系统可能有多个入口
+- 停车场中可能会有多个
+- 将有不同类型的停车位
+- 每小时停车将收取费用。费用将根据不同类型的停车位和不同的车辆类型进行收费
+- 系统应该能够适应任何类型的变化
+- 停车场可以是多层的
 
-+   停车场中可能会有多个
+## 停车系统设计中的所有角色
 
-+   将有不同类型的停车位
+- 停车系统
+- 停车楼层
+- 停车位 – 不同类型的停车位
+  - 停车位
+  - 卡车停车位
+  - 摩托车停车位
+- 停车票
+- 入口和出口门
+- 支付网关
+- 车辆
 
-+   每小时停车将收取费用。费用将根据不同类型的停车位和不同的车辆类型进行收费
+让我们来看看这些角色中的每一个。
 
-+   系统应该能够适应任何类型的变化
-
-+   停车场可以是多层的
-
-# **停车系统设计中的所有角色**
-
-+   停车系统
-
-+   停车楼层
-
-+   停车位 – 不同类型的停车位
-
-    +   停车位
-
-    +   卡车停车位
-
-    +   摩托车停车位
-
-+   停车票
-
-+   入口和出口门
-
-+   支付网关
-
-+   车辆
-
-让我们来看看这些角色中的每一个
-
-## **停车位**
+### 停车位
 
 现在，停车位可以是不同类型的。它可以是：
 
-+   汽车停车位
+- 汽车停车位
+- 大型车辆停车位
+- 摩托车停车位
 
-+   大型车辆停车位
-
-+   摩托车停车位
-
-## **停车闸口**
+### 停车闸口
 
 可能会有进出口闸口。不同楼层可能会有不同的闸口。
 
-## **停车票**
+### 停车票
 
 每辆进场的车辆都会发放停车票。车辆将根据类型分配停车位。例如，汽车将被分配到汽车停车位类型，摩托车将被分配到摩托车停车位，等等。
 
-## **支付网关类型**
+### 支付网关类型
 
 客户可以通过以下方式支付：
 
-+   现金
+- 现金
+- 借记卡
+- 信用卡
 
-+   借记卡
+### 车辆
 
-+   信用卡
+停车场为以下车辆类型提供停车位：
 
-## **车辆**
+- 汽车
+- 卡车
+- 摩托车
 
-停车场为以下车辆类型提供停车位
-
-+   汽车
-
-+   卡车
-
-+   摩托车
-
-## **停车费**
+### 停车费
 
 停车一辆车、卡车或摩托车的费用是不同的。这些将被封装在停车费用类别中。
 
-## **停车楼层**
+### 停车楼层
 
 停车楼层维护该楼层所有停车位的列表。停车楼层将负责预定和释放该楼层不同类型的停车位。
 
-## **停车系统**
+### 停车系统
 
 它是系统的主要组件，是我们设计中的驱动类。
 
 这些角色如何相互通信将通过 UML 图和后续的解释来清楚展示。
 
-# **UML 图**
+## UML 图
 
-以下是停车场的 UML 图
+以下是停车场的 UML 图：
 
 ![](img/863385fa42c1a1f7f1f476f1f69385a2.png)
 
@@ -172,57 +130,44 @@
 
 上述 UML 系统中最简单的组件是停车位。一个停车位包含三个信息：
 
-+   满位 – 表示停车位是否已满
-
-+   楼层 – 停车位所在的楼层
-
-+   位置 – 停车位的具体位置编号
+- 满位 – 表示停车位是否已满
+- 楼层 – 停车位所在的楼层
+- 位置 – 停车位的具体位置编号
 
 下一个组件是停车票。停车票将包含以下信息：
 
-+   **车辆** – 该停车票是为哪种类型的车辆发放的。车辆还会有车牌号码。
-
-+   **停车位** – 车辆停放的具体停车位。你可能会想为什么停车票中需要包含这一信息。这个信息存在于停车票中是为了我们能够找回停车位。你可能会争辩说，一旦停车票发出，停车就可以停在任何位置。但在本教程中，我们正在构建一个更复杂的系统，在这个系统中，我们可以确切知道车辆停放的位置。如果你想构建一个系统，在其中针对某张停车票停车可以分配到任何停车位，那是比较简单的，方法是我们只需为每个停车位维护一个计数。事实上，这就是本教程中设计的简化版本。
-
-+   除此之外，停车票还会包含入场时间、出场时间、价格、闸口信息、PG 信息等。
+- **车辆** – 该停车票是为哪种类型的车辆发放的。车辆还会有车牌号码。
+- **停车位** – 车辆停放的具体停车位。你可能会想为什么停车票中需要包含这一信息。这个信息存在于停车票中是为了我们能够找回停车位。你可能会争辩说，一旦停车票发出，停车就可以停在任何位置。但在本教程中，我们正在构建一个更复杂的系统，在这个系统中，我们可以确切知道车辆停放的位置。如果你想构建一个系统，在其中针对某张停车票停车可以分配到任何停车位，那是比较简单的，方法是我们只需为每个停车位维护一个计数。事实上，这就是本教程中设计的简化版本。
+- 除此之外，停车票还会包含入场时间、出场时间、价格、闸口信息、PG 信息等。
 
 下一个组件是**停车楼层**。停车楼层维护该楼层所有停车位的列表。它包含以下信息：
 
-+   **停车位** – 每种类型的停车位都会有一个双向链表。例如，车位类型停车位会有一个单独的 DLL，而卡车类型停车位则会有不同的 DLL。为什么使用 DLL？使用 DLL 可以轻松在 O(1)时间内找到下一个空闲停车位。而且当一个停车位变为空闲时，我们可以简单地将其移到链表前面，表示它是空的。
+- **停车位** – 每种类型的停车位都会有一个双向链表。例如，车位类型停车位会有一个单独的 DLL，而卡车类型停车位则会有不同的 DLL。为什么使用 DLL？使用 DLL 可以轻松在 O(1) 时间内找到下一个空闲停车位。而且当一个停车位变为空闲时，我们可以简单地将其移到链表前面，表示它是空的。
+- **楼层编号** – 楼层编号仅仅是
+- **isFull** – 表示是否已满
 
-+   **楼层编号 –** 楼层编号仅仅是
+然后，主要组件是 `ParkingSystem`。它将包含以下信息：
 
-+   **isFull –** 表示是否已满
+- 一个停车楼层的数组
+- 它已经发出的停车票列表
+- 除此之外，它还会包含关于出入口门的信息，`isFull` 变量用于表示整个停车场是否已满。
 
-然后，主要组件是**ParkingSystem**。它将包含以下信息
+除了这些主要组件，我们还有：
 
-+   一个停车楼层的数组
-
-+   它已经发出的停车票列表
-
-+   除此之外，它还会包含关于出入口门的信息，**isFull** 变量用于表示整个停车场是否已满。
-
-除了这些主要组件，我们还有
-
-+   车辆组件
-
-+   支付网关组件
-
-+   出入口门
-
-+   停车费
-
-+   等等
+- 车辆组件
+- 支付网关组件
+- 出入口门
+- 停车费
+- 等等
 
 **此设计中使用的设计模式**
 
-+   使用工厂模式创建不同类型停车位的实例
+- 使用工厂模式创建不同类型停车位的实例
+- 使用享元设计模式创建固定的停车费和支付网关实例。
 
-+   使用享元设计模式创建固定的停车费和支付网关实例。
+## 低级设计
 
-# **低**–**级设计**
-
-以下是用 Go 编程语言表示的低级设计，稍后我们还会看到一个实际的示例
+以下是用 Go 编程语言表示的低级设计，稍后我们还会看到一个实际的示例。
 
 **停车系统**
 
@@ -452,21 +397,25 @@ type DebitCardPaymentGateway struct {
 func (this DebitCardPaymentGateway) pay(price int) {}
 ```
 
-# **程序**
+## 程序
 
-下面是完整的工作代码，如果有人对 Go 编程语言感兴趣的话。在下面的示例中，我们将查看两个示例
+下面是完整的工作代码，如果有人对 Go 编程语言感兴趣的话。在下面的示例中，我们将查看两个示例：
 
-+   第一个是一个小型停车场，只有一层和两个汽车停车位
+- 第一个是一个小型停车场，只有一层和两个汽车停车位
+- 另一个是一个大停车场，拥有两层，每层都有两个汽车停车位、两个摩托车停车位和一个卡车停车位。
 
-+   另一个是一个大停车场，拥有两层，每层都有两个汽车停车位、两个摩托车停车位和一个卡车停车位。
+我们使用了双向链表来存储停车位列表，这样：
 
-我们使用了双向链表来存储停车位列表，这样
-
-+   我们可以在 O(1)时间内找到一个空闲停车位
-
-+   我们应该能够在 O(1)时间内重新获取一个停车位
+- 我们可以在 O(1) 时间内找到一个空闲停车位
+- 我们应该能够在 O(1) 时间内重新获取一个停车位
 
 **parkingSystem.go**
+
+
+
+# 停车场系统代码
+
+## `main.go`
 
 ```go
 package main
@@ -520,7 +469,7 @@ func (this *ParkingSystem) exitVehicle(ticket *ParkingTicket, pGType PaymentGate
 }
 ```
 
-**parkingFloor.go**
+## `parkingFloor.go`
 
 ```go
 package main
@@ -592,7 +541,7 @@ func (this *ParkingFloor) freeParkingSpot(pSpot ParkingSpot) {
 }
 ```
 
-**parkingSpot.go**
+## `parkingSpot.go`
 
 ```go
 package main
@@ -607,7 +556,7 @@ type ParkingSpot interface {
 }
 ```
 
-**parkingSpotType.go**
+## `parkingSpotType.go`
 
 ```go
 package main
@@ -654,7 +603,7 @@ func initParkingSpot(floor int, partkingSpotType ParkingSpotType, location strin
 }
 ```
 
-**carParkingSpot.go**
+## `carParkingSpot.go`
 
 ```go
 package main
@@ -690,7 +639,7 @@ func (this *CarParkingSpot) markFree() {
 }
 ```
 
-**truckParkingSpot.go**
+## `truckParkingSpot.go`
 
 ```go
 package main
@@ -726,7 +675,7 @@ func (this *TruckParkingSpot) markFree() {
 }
 ```
 
-**motorcycleParkingSpot.go**
+## `motorcycleParkingSpot.go`
 
 ```go
 package main
@@ -762,7 +711,7 @@ func (this *MotorCycleParkingSpot) markFree() {
 }
 ```
 
-**parkingTicket.go**
+## `parkingTicket.go`
 
 ```go
 package main
@@ -813,7 +762,7 @@ func (this *ParkingTicket) print() {
 }
 ```
 
-**parkingTicketStatus.go**
+## `parkingTicketStatus.go`
 
 ```go
 package main
@@ -836,7 +785,11 @@ func (s ParkingTicketStatus) toString() string {
 }
 ```
 
-**dll.go**
+## `dll.go`
+
+
+
+以下是对给定 Go 语言代码文件的排版整理，保留了原有代码结构并添加了必要的 Markdown 格式。
 
 ```go
 package main
@@ -1176,6 +1129,8 @@ func (this DebitCardPaymentGateway) pay(price int) {
 
 **main.go**
 
+
+
 ```go
 package main
 
@@ -1193,11 +1148,8 @@ var (
 )
 
 func main() {
-
 	testSmallParkingLot()
-
 	testLargeParkingLot()
-
 }
 
 func testSmallParkingLot() {
@@ -1213,7 +1165,8 @@ func testSmallParkingLot() {
 		exitGates:     []Gate{firstFloorExitGate},
 		issuedTickets: make(map[string]ParkingTicket),
 	}
-	//Add first floor parkings
+
+	// Add first floor parkings
 	parkingSystem.addParkingSpot(firstFloorCarParkingSpot1)
 	parkingSystem.addParkingSpot(firstFloorCarParkingSpot2)
 
@@ -1258,19 +1211,18 @@ func testSmallParkingLot() {
 	}
 	carVehicleTicket3.print()
 	parkingSystem.printStatus()
-
 }
 
 func testLargeParkingLot() {
-	//We have two parking floor
+	// We have two parking floor
 	firstParkingFloor := initParkingFloor(1)
 	secondParkingFloor := initParkingFloor(2)
 
-	//We have two entry gates in firstParkingFloor
+	// We have two entry gates in firstParkingFloor
 	firstFloorEntryGate1 := initGate(1, entryGateType)
 	firstFloorEntryGate2 := initGate(1, entryGateType)
 
-	//We have one exit gate on firstParkingFloor
+	// We have one exit gate on firstParkingFloor
 	firstFloorExitGate := initGate(1, exitGateType)
 
 	parkingSystem := ParkingSystem{
@@ -1280,28 +1232,28 @@ func testLargeParkingLot() {
 		issuedTickets: make(map[string]ParkingTicket),
 	}
 
-	//We have two car parking spots, two motorcyle parking spots, 1 truck paring spot on each of the floor
+	// We have two car parking spots, two motorcyle parking spots, 1 truck paring spot on each of the floor
 	firstFloorCarParkingSpot1 := initParkingSpot(1, carPT, "A1")
 	firstFloorCarParkingSpot2 := initParkingSpot(1, carPT, "A2")
 	firstFloorMotorCycleParkingSpot1 := initParkingSpot(1, motorcyclePT, "A3")
 	firstFloorMotorCycleParkingSpot2 := initParkingSpot(1, motorcyclePT, "A4")
 	firstFloorTruckParkingSpot := initParkingSpot(1, truckPT, "A5")
 
-	//We have two car parking spots, two motorcyle parking spots, 1 truck paring spot on each of the floor
+	// We have two car parking spots, two motorcyle parking spots, 1 truck paring spot on each of the floor
 	secondFloorCarParkingSpot1 := initParkingSpot(2, carPT, "B1")
 	secondFloorCarParkingSpot2 := initParkingSpot(2, carPT, "B2")
 	secondFloorMotorCycleParkingSpot1 := initParkingSpot(2, motorcyclePT, "B3")
 	secondFloorMotorCycleParkingSpot2 := initParkingSpot(2, motorcyclePT, "B4")
 	secondFloorTruckParkingSpot := initParkingSpot(2, truckPT, "B5")
 
-	//Add first floor parkings
+	// Add first floor parkings
 	parkingSystem.addParkingSpot(firstFloorCarParkingSpot1)
 	parkingSystem.addParkingSpot(firstFloorCarParkingSpot2)
 	parkingSystem.addParkingSpot(firstFloorMotorCycleParkingSpot1)
 	parkingSystem.addParkingSpot(firstFloorMotorCycleParkingSpot2)
 	parkingSystem.addParkingSpot(firstFloorTruckParkingSpot)
 
-	//Add second floor parkings
+	// Add second floor parkings
 	parkingSystem.addParkingSpot(secondFloorCarParkingSpot1)
 	parkingSystem.addParkingSpot(secondFloorCarParkingSpot2)
 	parkingSystem.addParkingSpot(secondFloorMotorCycleParkingSpot1)
@@ -1324,7 +1276,6 @@ func testLargeParkingLot() {
 		numberPlate: "M2",
 		vehicleType: motorcycle,
 	}
-
 	truckVehicle1 := Vehicle{
 		numberPlate: "T1",
 		vehicleType: motorcycle,
@@ -1336,21 +1287,25 @@ func testLargeParkingLot() {
 		fmt.Println(err)
 	}
 	carVehicleTicket1.print()
+
 	carVehicleTicket2, err := parkingSystem.issueTicket(carPT, carVehicle2, firstFloorEntryGate1)
 	if err != nil {
 		fmt.Println(err)
 	}
 	carVehicleTicket2.print()
+
 	motorCycleVehicleTicket1, err := parkingSystem.issueTicket(motorcyclePT, motorCycleVehicle1, firstFloorEntryGate1)
 	if err != nil {
 		fmt.Println(err)
 	}
 	motorCycleVehicleTicket1.print()
+
 	motorCycleVehicleTicket2, err := parkingSystem.issueTicket(motorcyclePT, motorCycleVehicle2, firstFloorEntryGate1)
 	if err != nil {
 		fmt.Println(err)
 	}
 	motorCycleVehicleTicket2.print()
+
 	truckVehicleTicket1, err := parkingSystem.issueTicket(truckPT, truckVehicle1, firstFloorEntryGate1)
 	if err != nil {
 		fmt.Println(err)
@@ -1374,31 +1329,35 @@ func testLargeParkingLot() {
 		numberPlate: "M4",
 		vehicleType: motorcycle,
 	}
-
 	truckVehicle2 := Vehicle{
 		numberPlate: "T2",
 		vehicleType: motorcycle,
 	}
+
 	carVehicleTicket3, err := parkingSystem.issueTicket(carPT, carVehicle3, firstFloorEntryGate1)
 	if err != nil {
 		fmt.Println(err)
 	}
 	carVehicleTicket3.print()
+
 	carVehicleTicket4, err := parkingSystem.issueTicket(carPT, carVehicle4, firstFloorEntryGate1)
 	if err != nil {
 		fmt.Println(err)
 	}
 	carVehicleTicket4.print()
+
 	motorCycleVehicleTicket3, err := parkingSystem.issueTicket(motorcyclePT, motorCycleVehicle3, firstFloorEntryGate1)
 	if err != nil {
 		fmt.Println(err)
 	}
 	motorCycleVehicleTicket3.print()
+
 	motorCycleVehicleTicket4, err := parkingSystem.issueTicket(motorcyclePT, motorCycleVehicle4, firstFloorEntryGate1)
 	if err != nil {
 		fmt.Println(err)
 	}
 	motorCycleVehicleTicket4.print()
+
 	truckVehicleTicket2, err := parkingSystem.issueTicket(truckPT, truckVehicle2, firstFloorEntryGate1)
 	if err != nil {
 		fmt.Println(err)
@@ -1430,6 +1389,8 @@ func testLargeParkingLot() {
 ```
 
 **输出**
+
+
 
 ```go
 Printing Status of Parking Spot
@@ -1465,9 +1426,11 @@ Location = A1, parkingType = Car Parking Type, floor = 1 full =true
 Location = A2, parkingType = Car Parking Type, floor = 1 full =true
 ```
 
-# **单文件完整工作代码**
+# 单文件完整工作代码
 
 这里是完整的工作代码
+
+
 
 ```go
 package main
@@ -1524,7 +1487,6 @@ func initDoublyList() *ParkingSpotDLL {
 }
 
 func (d *ParkingSpotDLL) AddToFront(node *ParkingSpotDLLNode) {
-
 	if d.head == nil {
 		d.head = node
 		d.tail = node
@@ -1565,6 +1527,7 @@ func (d *ParkingSpotDLL) AddToEnd(node *ParkingSpotDLLNode) {
 	}
 	d.len++
 }
+
 func (d *ParkingSpotDLL) Front() *ParkingSpotDLLNode {
 	return d.head
 }
@@ -1580,12 +1543,15 @@ func (d *ParkingSpotDLL) MoveNodeToEnd(node *ParkingSpotDLLNode) {
 	if next != nil {
 		next.prev = prev
 	}
+
 	if d.tail == node {
 		d.tail = prev
 	}
+
 	if d.head == node {
 		d.head = next
 	}
+
 	node.next = nil
 	node.prev = nil
 	d.len--
@@ -1603,12 +1569,15 @@ func (d *ParkingSpotDLL) MoveNodeToFront(node *ParkingSpotDLLNode) {
 	if next != nil {
 		next.prev = prev
 	}
+
 	if d.tail == node {
 		d.tail = prev
 	}
+
 	if d.head == node {
 		d.head = next
 	}
+
 	node.next = nil
 	node.prev = nil
 	d.len--
@@ -1619,11 +1588,13 @@ func (d *ParkingSpotDLL) TraverseForward() error {
 	if d.head == nil {
 		return fmt.Errorf("TraverseError: List is empty")
 	}
+
 	temp := d.head
 	for temp != nil {
 		fmt.Printf("Location = %v, parkingType = %s, floor = %d full =%t\n", temp.pSpot.getLocation(), temp.pSpot.getParkingSpotType().toString(), temp.pSpot.getFloor(), temp.pSpot.isFull())
 		temp = temp.next
 	}
+
 	fmt.Println()
 	return nil
 }
@@ -1734,9 +1705,11 @@ func (this *ParkingFloor) bookParkingSpot(pSpotType ParkingSpotType) (ParkingSpo
 	nextPSpot := this.parkingSpots[pSpotType].Front()
 	nextPSpot.pSpot.markFull()
 	this.parkingSpots[pSpotType].MoveNodeToEnd(nextPSpot)
+
 	if this.parkingSpots[pSpotType].Front().pSpot.isFull() {
 		this.isFull[pSpotType] = true
 	}
+
 	return nextPSpot.pSpot, nil
 }
 
@@ -1762,24 +1735,28 @@ func (this *ParkingRateFactory) getParkingRateInstanceByVehicleType(vType Vehicl
 	if this.parkingRateMap[vType] != nil {
 		return this.parkingRateMap[vType]
 	}
+
 	if vType == car {
 		this.parkingRateMap[vType] = &CarParkingRate{
 			ParkingRateBase{perHourCharges: 2},
 		}
 		return this.parkingRateMap[vType]
 	}
+
 	if vType == truck {
 		this.parkingRateMap[vType] = &TruckParkingRate{
 			ParkingRateBase{perHourCharges: 3},
 		}
 		return this.parkingRateMap[vType]
 	}
+
 	if vType == motorcycle {
 		this.parkingRateMap[vType] = &MotorCycleParkingRate{
 			ParkingRateBase{perHourCharges: 1},
 		}
 		return this.parkingRateMap[vType]
 	}
+
 	return nil
 }
 
@@ -1847,17 +1824,20 @@ func (s ParkingSpotType) toString() string {
 func initParkingSpot(floor int, partkingSpotType ParkingSpotType, location string) ParkingSpot {
 	switch partkingSpotType {
 	case carPT:
-		return &CarParkingSpot{full: false,
+		return &CarParkingSpot{
+			full:     false,
 			floor:    floor,
 			location: location,
 		}
 	case truckPT:
-		return &TruckParkingSpot{full: false,
+		return &TruckParkingSpot{
+			full:     false,
 			floor:    floor,
 			location: location,
 		}
 	case motorcyclePT:
-		return &MotorCycleParkingSpot{full: false,
+		return &MotorCycleParkingSpot{
+			full:     false,
 			floor:    floor,
 			location: location,
 		}
@@ -1890,6 +1870,7 @@ func (this *ParkingSystem) bookParkingSpot(pSpotType ParkingSpotType) (ParkingSp
 
 func (this *ParkingSystem) issueTicket(pSpotType ParkingSpotType, vehicle Vehicle, entryGate Gate) (*ParkingTicket, error) {
 	fmt.Printf("\nGoing to issue ticket for vehicle number %s\n", vehicle.numberPlate)
+
 	pSpot, err := this.bookParkingSpot(pSpotType)
 	if err != nil {
 		return nil, err
@@ -1935,11 +1916,13 @@ func initParkingTicket(vehicle Vehicle, pSpot ParkingSpot, entryGate Gate) *Park
 
 func (this *ParkingTicket) exit(pgType PaymentGatewayType) {
 	fmt.Printf("Vehicle with number %s exiting from Parking Lot\n", this.vehicle.numberPlate)
+
 	this.exitTime = time.Now()
 	pRateInstance := pRateFactorySingleInstance.getParkingRateInstanceByVehicleType(this.vehicle.vehicleType)
 	totalDurationInHours := int(this.exitTime.Sub(this.entryTime).Hours())
 	this.price = pRateInstance.amountToPay(totalDurationInHours) + 1
 	this.pgType = pgType
+
 	pgInstance := pgFactorySingleInstance.getPaymentGatewayInstanceByPGType(pgType)
 	pgInstance.pay(this.price)
 	this.status = paid
@@ -1984,18 +1967,22 @@ func (this *PaymentGatewayFactory) getPaymentGatewayInstanceByPGType(pgType Paym
 	if this.paymentGatewayMap[pgType] != nil {
 		return this.paymentGatewayMap[pgType]
 	}
+
 	if pgType == cash {
 		this.paymentGatewayMap[pgType] = &CashPaymentGateway{}
 		return this.paymentGatewayMap[pgType]
 	}
+
 	if pgType == creditCard {
 		this.paymentGatewayMap[pgType] = &CreditCardPaymentGateway{}
 		return this.paymentGatewayMap[pgType]
 	}
+
 	if pgType == debitCard {
 		this.paymentGatewayMap[pgType] = &DebitCardPaymentGateway{}
 		return this.paymentGatewayMap[pgType]
 	}
+
 	return nil
 }
 
@@ -2084,11 +2071,9 @@ func (s VehicleType) toString() string {
 }
 
 func main() {
-
 	testSmallParkingLot()
 
 	//testLargeParkingLot()
-
 }
 
 func testSmallParkingLot() {
@@ -2104,6 +2089,7 @@ func testSmallParkingLot() {
 		exitGates:     []Gate{firstFloorExitGate},
 		issuedTickets: make(map[string]ParkingTicket),
 	}
+
 	//Add first floor parkings
 	parkingSystem.addParkingSpot(firstFloorCarParkingSpot1)
 	parkingSystem.addParkingSpot(firstFloorCarParkingSpot2)
@@ -2149,7 +2135,6 @@ func testSmallParkingLot() {
 	}
 	carVehicleTicket3.print()
 	parkingSystem.printStatus()
-
 }
 
 func testLargeParkingLot() {
@@ -2227,21 +2212,25 @@ func testLargeParkingLot() {
 		fmt.Println(err)
 	}
 	carVehicleTicket1.print()
+
 	carVehicleTicket2, err := parkingSystem.issueTicket(carPT, carVehicle2, firstFloorEntryGate1)
 	if err != nil {
 		fmt.Println(err)
 	}
 	carVehicleTicket2.print()
+
 	motorCycleVehicleTicket1, err := parkingSystem.issueTicket(motorcyclePT, motorCycleVehicle1, firstFloorEntryGate1)
 	if err != nil {
 		fmt.Println(err)
 	}
 	motorCycleVehicleTicket1.print()
+
 	motorCycleVehicleTicket2, err := parkingSystem.issueTicket(motorcyclePT, motorCycleVehicle2, firstFloorEntryGate1)
 	if err != nil {
 		fmt.Println(err)
 	}
 	motorCycleVehicleTicket2.print()
+
 	truckVehicleTicket1, err := parkingSystem.issueTicket(truckPT, truckVehicle1, firstFloorEntryGate1)
 	if err != nil {
 		fmt.Println(err)
@@ -2270,26 +2259,31 @@ func testLargeParkingLot() {
 		numberPlate: "T2",
 		vehicleType: motorcycle,
 	}
+
 	carVehicleTicket3, err := parkingSystem.issueTicket(carPT, carVehicle3, firstFloorEntryGate1)
 	if err != nil {
 		fmt.Println(err)
 	}
 	carVehicleTicket3.print()
+
 	carVehicleTicket4, err := parkingSystem.issueTicket(carPT, carVehicle4, firstFloorEntryGate1)
 	if err != nil {
 		fmt.Println(err)
 	}
 	carVehicleTicket4.print()
+
 	motorCycleVehicleTicket3, err := parkingSystem.issueTicket(motorcyclePT, motorCycleVehicle3, firstFloorEntryGate1)
 	if err != nil {
 		fmt.Println(err)
 	}
 	motorCycleVehicleTicket3.print()
+
 	motorCycleVehicleTicket4, err := parkingSystem.issueTicket(motorcyclePT, motorCycleVehicle4, firstFloorEntryGate1)
 	if err != nil {
 		fmt.Println(err)
 	}
 	motorCycleVehicleTicket4.print()
+
 	truckVehicleTicket2, err := parkingSystem.issueTicket(truckPT, truckVehicle2, firstFloorEntryGate1)
 	if err != nil {
 		fmt.Println(err)
@@ -2320,7 +2314,9 @@ func testLargeParkingLot() {
 }
 ```
 
-**输出**
+
+
+## 输出
 
 ```go
 Printing Status of Parking Spot
@@ -2356,6 +2352,6 @@ Location = A1, parkingType = Car Parking Type, floor = 1 full =true
 Location = A2, parkingType = Car Parking Type, floor = 1 full =true
 ```
 
-# **结论**
+## 结论
 
 这篇文章的内容是关于设计一个停车场的，希望你喜欢这篇文章。如果有任何反馈，请在评论中分享。

@@ -1,14 +1,9 @@
+
 # LAMP 栈高可用性：消除单点故障并提高 Linux、Apache、MySQL 和 PHP Web 的运行时间
-
-
-
-
-
 
 版权所有。未经版权所有者事先书面许可，本出版物的任何部分或其中的信息不得通过打印、扫描、复印或其他形式以任何形式进行引用或复制。
 
-免责声明与使用条款：我们已努力确保书中信息的准确性和完整性，但由于科学、研究、互联网以及已知和未知事实的快速变化特性，作者和出版者不保证书中包含的信息、文本和图形的准确性。作者和出版者对本文涉及主题的错误、遗漏或相反的解释不承担任何责任。本书的提供仅供激励和信息之目的。
-
+免责声明与使用条款：我们已努力确保书中信息的准确性和完整性，但由于科学、研究、互联网以及已知和未知事实的快速变化特性，作者和出版者不保证书中包含的信息、文本和图形的准确性。作者和出版者对本文涉及主题的错误、 omissions 或相反的解释不承担任何责任。本书的提供仅供激励和信息之目的。
 
 # 引言
 
@@ -35,10 +30,6 @@
 # Vagrant 快速入门课程
 
 以下是常用 vagrant 命令列表。
-
-
-
-
 
 `vagrant init [box-name] [box-url]` - 将当前目录初始化为 Vagrant 环境，并创建 Vagrant 配置文件 `Vagrantfile`。
 
@@ -129,9 +120,6 @@ Welcome to Ubuntu 14.04.1 LTS (GNU/Linux 3.13.0-40-generic x86_64)
 
 ### 水平扩展
 
-
-
-
 另一种扩展方法是添加更多服务器，你有时会听到人们称之为节点（nodes）。这被称为水平扩展（horizontal scaling）或向外扩展（scaling out）。为了进行水平扩展，你需要做一些准备工作并进行设计。例如，为了从一台 Web 服务器扩展到两台，你需要一种方法将流量路由到额外的节点，并且最好将负载分布在两台服务器之间。如果你需要更多资源，可以添加第三台或第四台服务器。当你只有一台服务器且它宕机时，会导致服务中断；但如果你有几台执行相同功能的服务器，且其中一台宕机，最坏的情况是服务降级，性能无法达到通常水平。理想的情况是单点故障几乎无法被察觉。
 
 ## 兼得有者
@@ -197,9 +185,9 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 end
 ```
 
-
-
 在每个节点上启动服务，并检查 VIP 是否如我们预期分配给了 `server01`。
+
+
 
 ```bash
 vagrant@server01:~$ sudo service keepalived start
@@ -209,7 +197,7 @@ vagrant@server01:~$ sudo service keepalived start
 vagrant@server02:~$ sudo service keepalived start
 ```
 
-此时，你应该能够 ping 通 VIP（浮动 IP），它应该被分配到主服务器。
+此时，你应该能够 ping 通 `VIP`（浮动 IP），它应该被分配到主服务器。
 
 ```bash
 vagrant@server01:~$ ip addr show eth1
@@ -223,7 +211,7 @@ vagrant@server01:~$ ip addr show eth1
                    valid_lft forever preferred_lft forever
 ```
 
-你可以通过从工作站 ping VIP 来验证连通性。
+你可以通过从工作站 ping `VIP` 来验证连通性。
 
 ```bash
 [jason@localbox]$ ping -c 3 10.11.12.50
@@ -238,7 +226,7 @@ rtt min/avg/max/mdev = 0.305/0.370/0.427/0.054 ms
 
 注意，`ping` 命令在 Windows 机器上的形式如下：`ping 10.11.12.50`。
 
-为了确保故障转移正常工作，我们可以通过禁用（停止）VIP 关联的网络接口来模拟主服务器故障。如果你愿意，可以在模拟故障时在另一个终端或窗口中开始 ping VIP。
+为了确保故障转移正常工作，我们可以通过禁用（停止）`VIP` 关联的网络接口来模拟主服务器故障。如果你愿意，可以在模拟故障时在另一个终端或窗口中开始 ping `VIP`。
 
 ```bash
 [jason@localbox]$ ping 10.11.12.50
@@ -252,7 +240,7 @@ $ vagrant ssh server01
 vagrant@server01:~$ ip link set eth1 down
 ```
 
-在 `server01` 的 `/var/log/syslog` 中，你会看到类似的内容：
+在`server01`的`/var/log/syslog`中，你会看到类似的内容：
 
 ```
 Dec  4 04:57:58 server01 Keepalived_vrrp[2227]: Kernel is reporting: interface eth1 DOWN
@@ -260,14 +248,14 @@ Dec  4 04:57:58 server01 Keepalived_vrrp[2227]: VRRP_Instance(VI_1) Entering FAU
 Dec  4 04:57:58 server01 Keepalived_vrrp[2227]: VRRP_Instance(VI_1) Now in FAULT state
 ```
 
-在 `server02` 的 `/var/log/syslog` 中，你会看到类似的内容：
+在`server02`的`/var/log/syslog`中，你会看到类似的内容：
 
 ```
 Dec  4 05:00:02 vagrant-ubuntu-trusty-64 Keepalived_vrrp[4071]: VRRP_Instance(VI_1) Transition to MASTER STATE
 Dec  4 05:00:03 vagrant-ubuntu-trusty-64 Keepalived_vrrp[4071]: VRRP_Instance(VI_1) Entering MASTER STATE
 ```
 
-如果你在后台运行着 `ping` 命令，它仍然应该响应 ping 请求。你也可以启动一个新的 ping 来确保 VIP 可可的。
+如果你在后台运行着`ping`命令，它仍然应该响应 `ping` 请求。你也可以启动一个新的 ping 来确保 `VIP` 是可用的。
 
 ```bash
 [jason@localbox]$ ping -c 3 10.11.12.50
@@ -280,13 +268,13 @@ PING 10.11.12.50 (10.11.12.50) 56(84) bytes of data.
 rtt min/avg/max/mdev = 0.305/0.370/0.427/0.054 ms
 ```
 
-当你重新启用主服务器上的网络接口时，它将重新夺回 VIP。如果你想防止这种行为，可以在 `keepalived.conf` 中使用 `preempt_option`。
+当你重新启用主服务器上的网络接口时，它将重新夺回 `VIP`。如果你想防止这种行为，可以在`keepalived.conf`中使用`preempt_option`。
 
 ```bash
 vagrant@server01:~$ ip link set eth1 up
 ```
 
-在 `server01` 的 `/var/log/syslog` 中，你会看到类似的内容：
+在`server01`的`/var/log/syslog`中，你会看到类似的内容：
 
 ```
 Dec  4 05:01:08 server01 Keepalived_vrrp[2227]: VRRP_Instance(VI_1) prio is higher than received advert
@@ -294,7 +282,7 @@ Dec  4 05:01:08 server01 Keepalived_vrrp[2227]: VRRP_Instance(VI_1) Transition t
 Dec  4 05:01:09 server01 Keepalived_vrrp[2227]: VRRP_Instance(VI_1) Entering MASTER STATE
 ```
 
-在 `server02` 的 `/var/log/syslog` 中，你会看到类似的内容：
+在`server02`的`/var/log/syslog`中，你会看到类似的内容：
 
 ```
 Dec  4 05:03:15 vagrant-ubuntu-trusty-64 Keepalived_vrrp[4071]: VRRP_Instance(VI_1) Received higher prio advert
@@ -303,14 +291,14 @@ Dec  4 05:03:15 vagrant-ubuntu-trusty-64 Keepalived_vrrp[4071]: VRRP_Instance(VI
 
 ### 安装和配置负载均衡器
 
-HAProxy 将作为负载均衡器。我们将使用以下命令在前端节点上安装它。
+`HAProxy` 将作为负载均衡器。我们将使用以下命令在前端节点上安装它。
 
 ```bash
 vagrant@server01:~$ sudo apt-get install -y haproxy
 vagrant@server02:~$ sudo apt-get install -y haproxy
 ```
 
-在两个前端节点的 `/etc/haproxy/haproxy.cfg` 中使用以下配置。
+在两个前端节点的`/etc/haproxy/haproxy.cfg`中使用以下配置。
 
 ```
 global
@@ -346,19 +334,16 @@ backend webservers
     server03 10.11.12.53:8080 check
 ```
 
+除了 Web 流量，我们还将使用`HAProxy`来将请求路由到数据库服务器。为了实现这一点，我们将让`HAProxy`监听在`MySQL`的默认端口`3306`上。它将根据`leastconn`算法路由请求。这意味着在发起请求时，哪一个数据库服务器的连接数最少，请求就会路由到该服务器。如果所有数据库服务器的连接数相同，则使用轮询（round robin）算法来选择数据库服务器。对于在使用`SQL`、`LDAP`等时会遇到的“长”话，建议使用`leastconn`算法。我们将在配置数据库服务器时详细介绍健康检查的工作原理。
 
-
-
-除了 Web 流量，我们还将使用 `HAProxy` 来将请求路由到数据库服务器。为了实现这一点，我们将让 `HAProxy` 监听在 `MySQL` 的默认端口 `3306` 上。它将根据 `leastconn` 算法路由请求。这意味着在发起请求时，哪一个数据库服务器的连接数最少，请求就会路由到该服务器。如果所有数据库服务器的连接数相同，则使用轮询（round robin）算法来选择数据库服务器。对于在使用 `SQL`、`LDAP` 等时会遇到的“长”话，建议使用 `leastconn` 算法。我们将在配置数据库服务器时详细介绍健康检查的工作原理。
-
-要启用 `HAProxy`，请在 `/etc/default/haproxy` 中设置 `ENABLED=1`。可以随时使用你喜欢的编辑器进行该更改，或者使用下方的单行命令，它会创建一个名为 `haproxy.orig` 的备份文件并进行修改。
+要启用`HAProxy`，请在`/etc/default/haproxy`中设置`ENABLED=1`。可以随时使用你喜欢的编辑器进行该更改，或者使用下方的单行命令，它会创建一个名为`haproxy.orig`的备份文件并进行修改。
 
 ```bash
 vagrant@server01:~$ sudo sed -i.orig 's/ENABLED=.*/ENABLED=1/' /etc/default/haproxy
 vagrant@server01:~$ sudo sed -i.orig 's/ENABLED=.*/ENABLED=1/' /etc/default/haproxy
 ```
 
-我们已经配置了 `HAProxy` 将日志记录到 `localhost`。现在我们需要配置 `rsyslog`，通过监听 `UDP:514` 来接收这些日志消息。创建 `/etc/rsyslog.d/udp-localhost.conf` 并向文件中添加以下行。
+我们已经配置了`HAProxy`将日志记录到`localhost`。现在我们需要配置`rsyslog`，通过监听`UDP:514`来接收这些日志消息。创建`/etc/rsyslog.d/udp-localhost.conf`并向文件中添加以下行。
 
 ```text
 $ModLoad imudp
@@ -366,25 +351,25 @@ $UDPServerRun 514
 $UDPServerAddress 127.0.0.1
 ```
 
-让我们加载 `rsyslog` 以使其读取新配置。
+让我们加载`rsyslog`以使其读取新配置。
 
 ```bash
 vagrant@server01:~$ sudo service rsyslog restart
 vagrant@server02:~$ sudo service rsyslog restart
 ```
 
-我们已经准备好启动 `haproxy` 了。
+我们已经准备好启动`haproxy`了。
 
 ```bash
 vagrant@server01:~$ sudo service haproxy start
 vagrant@server02:~$ sudo service haproxy start
 ```
 
-你现在可以通过访问 `http://10.11.12.51/haproxy/stats` 查看 `server01` 的 `HAProxy` 统计信息，通过 `http://10.11.12.52/haproxy/stats` 查看 `server02` 的统计信息。我使用了相当不安全的用户名和密码 `admin:admin`，所以请随时更新 `haproxy.cfg` 并更改这些值。此外，你可以使用 `VIP` 访问状态页面，任何与 `VIP` 关联的服务器都会响应。此时，Web 服务器和数据库服务器将被正确地报告为 `DOWN`，因为我们还没有配置它们。
+你现在可以通过访问`http://10.11.12.51/haproxy/stats`查看`server01`的`HAProxy`统计信息，通过`http://10.11.12.52/haproxy/stats`查看`server02`的统计信息。我使用了相当不安全的用户名和密码`admin:admin`，所以请随时更新`haproxy.cfg`并更改这些值。此外，你可以使用`VIP`访问状态页面，任何与`VIP`关联的服务器都会响应。此时，Web 服务器和数据库服务器将被正确地报告为`DOWN`，因为我们还没有配置它们。
 
 ### 安装和配置 Apache 和 PHP
 
-现在 `HAProxy` 已经准备好接受 Web 请求，让我们安装 `Apache` Web 服务器和 `PHP` 编程语言。由于我们需要连接到 `MySQL`，我们需要 `PHP` 的 `MySQL` 模块。
+现在`HAProxy`已经准备好接受 Web 请求，让我们安装`Apache` Web 服务器和`PHP`编程语言。由于我们需要连接到`MySQL`，我们需要`PHP`的`MySQL`模块。
 
 ```bash
 vagrant@server01:~$ sudo apt-get install -y apache2 php5 php5-mysql
@@ -395,7 +380,7 @@ vagrant@server02:~$ sudo apt-get install -y apache2 php5 php5-mysql
 
 `(98)Address already in use: AH00073: make_sock: unable to listen for connections on address 0.0.0.0:80`
 
-发生此错误是因为 `HAProxy` 已经在使用端口 `80`。如果我们想在同一台主机上运行 `Apache` 和 `HAProxy`，我们需要配置 `Apache` 使用不同的端口。为此，编辑 `/etc/apache2/ports.conf`，将 `Listen 80` 更改为 `Listen 8080`。以下是更改后 `/etc/apache2/ports.conf` 的内容。
+发生此错误是因为`HAProxy`已经在使用端口`80`。如果我们想在同一台主机上运行`Apache`和`HAProxy`，我们需要配置`Apache`使用不同的端口。为此，编辑`/etc/apache2/ports.conf`，将`Listen 80`更改为`Listen 8080`。以下是更改后`/etc/apache2/ports.conf`的内容。
 
 ```apache
 # 如果你更改了端口或在这里添加了更多端口，你可能
@@ -411,14 +396,14 @@ Listen 8080
 </IfModule>
 ```
 
-让我们在这个新端口启动 `apache`。
+让我们在这个新端口启动`apache`。
 
 ```bash
 vagrant@server01:~$ sudo service apache2 start
 vagrant@server02:~$ sudo service apache2 start
 ```
 
-我们现在可以看到 `HAProxy` 正在监听 `80` 和 `3306` 端口，而 `apache` 正在监听 `8080` 端口。
+我们现在可以看到`HAProxy`正在监听`80`和`3306`端口，而`apache`正在监听`8080`端口。
 
 ```bash
 vagrant@server01:~$ sudo netstat -ntlp | egrep 'haproxy|apache'
@@ -427,7 +412,7 @@ tcp 0-0 0.0.0.0:3306 0.0.0.0:* LISTEN haproxy
 tcp 0-0 0.0.0.0:8080 0.0.0.0:* LISTEN apache
 ```
 
-此时，`HAProxy` 统计页面将显示它可以与 Web 服务器通信，并且它们处于开启状态。我们可以通过发送 HTTP 请求来演示 `HAProxy` 正在执行轮询。第一个请求（`session`）将发送到 `server01`，`HAProxy` 将 `SRVNAME` cookie 设置为 `server01`。第二个请求（`session`）将发送到 `server02`，`HAProxy` 将 `SRVNAME` cookie 设置为 `server02`。使用 `curl` 配合 `-I` 仅显示 HTTP 头部。我们对实际的 HTML 内容感兴趣。在这个示例中，`curl` 的行为不像普通的图形化 Web 浏览器，因为当设置 cookie 时，`curl` 不会保存并在后续请求中重用它。这就是为什么重复的 `curl` 请求将演示轮询的生效。
+此时，`HAProxy`统计页面将显示它可以与 Web 服务器通信，并且它们处于开启状态。我们可以通过发送 HTTP 请求来演示`HAProxy`正在执行轮询。第一个请求（`session`）将发送到`server01`，`HAProxy`将`SRVNAME` cookie 设置为`server01`。第二个请求（`session`）将发送到`server02`，`HAProxy`将`SRVNAME` cookie 设置为`server02`。使用`curl`配合`-I`仅显示 HTTP 头部。我们对实际的 HTML 内容感兴趣。在这个示例中，`curl`的行为不像普通的图形化 Web 浏览器，因为当设置 cookie 时，`curl`不会保存并在后续请求中重用它。这就是为什么重复的`curl`请求将演示轮询的生效。
 
 ```bash
 jason@localbox ~]$ curl -I http://10.11.12.50
@@ -447,7 +432,9 @@ Content-Type: text/html; charset=UTF-8
 Set-Cookie: SRVNAME=server02; path=/
 ```
 
-现在让我们让 `curl` 的行为像典型用户的 Web 浏览器并返回 cookie。我们将发送一个初始请求来获取 cookie 值，然后使用该 cookie 值发送所有后续请求。要让 `curl` 发送 cookie，使用 `-b "cookie-name:cookie-value"`。如果你使用 `VIP` 查看 `HAProxy` 统计页面，你会发现每次发起请求时，总会话数都会递增。
+现在让我们让`curl`的行为像典型用户的 Web 浏览器并返回 cookie。我们将发送一个初始请求来获取 cookie 值，然后使用该 cookie 值发送所有后续请求。要让`curl`发送 cookie，使用`-b "cookie-name:cookie-value"`。如果你使用`VIP`查看`HAProxy`统计页面，你会发现每次发起请求时，总会话数都会递增。
+
+
 
 ```bash
 jason@localbox ~]$ curl -I http://10.11.12.50
@@ -502,10 +489,6 @@ vagrant@server02:~$ sudo a2ensite wordpress
 vagrant@server02:~$ sudo a2dissite 000-default
 vagrant@server02:~$ sudo a2enmod rewrite
 ```
-
-
-
-
 
 现在我们可以让 Apache 重新加载配置。
 
@@ -642,17 +625,11 @@ Brick2: server02-private:/data/glusterfs/var-www/brick02/brick
 
 `server02-private:/var-www /var/www glusterfs defaults,_netdev,fetch-attempts=5 0 0`
 
-
-
-` 标签而没有具体的待翻译文本，我根据你提供的上下文逻辑，将该部分的英文内容翻译成了中文。
-
-[content]
-
 请注意，尽管我们在 `/etc/fstab` 中指定了主机本身，但 Gluster 了解集群中所有拥有该卷数据的成员。Gluster 将这些数据存储在客户端的一个称为“卷文件”（volume file）的文件中。在此配置中，我们的 Gluster 服务器也是 Gluster 客户端，但并非如此，且工作方式保持相同。如果用于托管 `server01` 砖（brick）的磁盘发生故障，`server01` 将从 `server02` 无缝获取其 `/var/www` 的数据，因为它知道它是集群的一部分并拥有这些数据。`fetch-attempts=5` 选项告诉 Gluster 重复尝试获取卷文件。通常用于像我们示例中那样服务器上有多个 IP 地址的情况。此外，`_netdev` 信号表示尝试挂载文件系统之前需要启动网络。
 
 在我们开始使用 Gluster 卷之前，让我们停止 Apache 并将原始的 `/var/www` 目录移开。如果不这样做，我们将挂载到现有数据之上。你也可以删除此目录的内容，或者如果你想保留数据，可以将内容复制到卷中。我们将在两个节点上运行这些命令。
 
-```
+```bash
 vagrant@server01:~$ sudo service apache2 stop
 vagrant@server01:~$ sudo mv /var/www{,.orig}
 vagrant@server01:~$ sudo mkdir /var/www
@@ -668,7 +645,7 @@ vagrant@server02:~$ sudo service apache2 start
 
 现在，`/var/www` 的内容在每个服务器上都是相同的。我们可以通过从每台服务器创建一个文件并检查其是否存在来快速测试这一点。
 
-```
+```bash
 vagrant@server01:~$ sudo touch /var/www/from-server01
 vagrant@server02:~$ sudo touch /var/www/from-server02
 vagrant@server01:~$ ls -l /var/www
@@ -683,13 +660,15 @@ total 0
 
 在大多数 MySQL 高可用性设计中，会有一个主服务器和一个或多个从服务器。通过添加更多从服务器来实现扩展性，但这些从服务器是只读副本。只有主服务器可以接受并处理写入请求。这意味着你的 Web 应用程序需要将数据库读取发送到一个位置，将数据库写入发送到另一个位置。如果你使用的是自定义编写的应用程序，你需要自己完成这一点。一些现有的 Web 应用程序已经提供了此功能，因此这不是问题。例如，要在 WordPress 中实现此，你需要安装并配置 HyperDB 插件。在任何情况下，使用 Percona XtraDB Cluster 都完全避免了这种复杂性。
 
-我们将使用三个节点构建数据库集群，以便它可以确定多数派（quorum）。如果集群中的某个节点无法访问，意味着该节点故障，或者它仍在运行但存在网络连接问题。如果你有两个节点的集群，且节点之间发生网络连接故障，但到客户端的网络连接仍然存在且它们都提交了更新，你最终会导致冲突的数据集。一个节点拥有某些数据，另一个节点拥有其他数据。这被称为“脑裂”（split brain）。
 
-Percona XtraDB Cluster 防止你受到脑裂和网络分区事件的影响。如果它无法确定多数，则集群中的没有任何节点将处理请求。这比脑裂要好，但它实际上是一个单点故障。当你想要水平扩展数据库集群时请记住这一点。始终使用奇数个节点。不过，还有另一个选项。你可以使用 `garbd`（Galera 仲裁者）作为集群的轻量成员。它不处理数据库请求，但可以在网络分区期间充当决定者。如果你使用 `garbd`，不要在其中一个数据库节点上运行它，将其放在另一台服务器上。运行它的良好位置是作为负载均衡器的服务器之一。
 
-要要安装 Percona XtraDB Cluster，请在每个数据库节点上运行以下命令。在安装期间，你会被要求为 MySQL `root` 用户指定密码。在我们安装软件后，让我们在更新默认配置和设置集群之前确保它是正确的。
+我们将使用三个节点构建数据库集群，以便它可以确定多数派（`quorum`）。如果集群中的某个节点无法访问，意味着该节点故障，或者它仍在运行但存在网络连接问题。如果你有两个节点的集群，且节点之间发生网络连接故障，但到客户端的网络连接仍然存在且它们都提交了更新，你最终会导致冲突的数据集。一个节点拥有某些数据，另一个节点拥有其他数据。这被称为“脑裂”（`split brain`）。
 
-```
+`Percona XtraDB Cluster` 防止你受到脑裂和网络分区事件的影响。如果它无法确定多数，则集群中的没有任何节点将处理请求。这比脑裂要好，但它实际上是一个单点故障。当你想要水平扩展数据库集群时请记住这一点。始终使用奇数个节点。不过，还有另一个选项。你可以使用 `garbd`（`Galera` 仲裁者）作为集群的轻量成员。它不处理数据库请求，但可以在网络分区期间充当决定者。如果你使用 `garbd`，不要在其中一个数据库节点上运行它，将其放在另一台服务器上。运行它的良好位置是作为负载均衡器的服务器之一。
+
+要安装 `Percona XtraDB Cluster`，请在每个数据库节点上运行以下命令。在安装期间，你会被要求为 MySQL `root` 用户指定密码。在我们安装软件后，让我们在更新默认配置和设置集群之前确保它是正确的。
+
+```bash
 vagrant@db01:~$ sudo apt-get install -y percona-xtradb-cluster-server percona-xtradb-cluster-galera-2.x
 vagrant@db01:~$ sudo service mysql stop
 vagrant@db02:~$ sudo apt-get install -y percona-xtradb-cluster-server percona-xtradb-cluster-galera-2.x
@@ -774,13 +753,9 @@ wsrep_cluster_name=my_lamp_cluster
 wsrep_sst_auth="sstuser:sstuser"
 ```
 
-
-
-
-
 `wsrep_sst_auth="sstuser:sstuser"`
 
-## db03 私有 IP 地址
+### db03 私有 IP 地址
 
 `wsrep_node_address=192.168.12.63`
 
@@ -805,6 +780,7 @@ vagrant@db01:~$ sudo mysql -e 'FLUSH PRIVILEGES;'
 ```bash
 vagrant@db01:~$ sudo mysql -e "show status like 'wsrep_cluster_size';"
 ```
+
 ```
 +--------------------+-------+
 | Variable_name      | Value |
@@ -825,6 +801,7 @@ vagrant@db03:~$ sudo service mysql start
 ```bash
 vagrant@db02:~$ sudo mysql -e "show status like 'wsrep_cluster_size';"
 ```
+
 ```
 +--------------------+-------+
 | Variable_name      | Value |
@@ -857,7 +834,7 @@ vagrant@db03:~$ echo 'mysqlchk 9200/tcp # mysqlchk' | sudo tee -a /etc/services
 vagrant@db03:~$ sudo apt-get install -y xinetd
 ```
 
-最后，让我们配置一个数据库用户，以便该工具连接到集群并验证其运行状态。由于这是一个集群，你只需要其中一个数据库节点上创建该用户。注意密码为 `"clustercheckpassword!"`，但你可能需要像下面的示例那样转义感叹号 (`\!`)。
+最后，让我们配置一个数据库用户，以便该工具连接到集群并验证其运行状态。由于这是一个集群，你只需要在其中一个数据库节点上创建该用户。注意密码为 `"clustercheckpassword!"`，但你可能需要像下面的示例那样转义感叹号 (`\!`)。
 
 ```bash
 vagrant@db01:~$ sudo mysql -e "GRANT PROCESS ON *.* TO 'clustercheckuser'@'localhost' IDENTIFIED BY 'clustercheckpassword\!';"
@@ -917,7 +894,58 @@ Percona XtraDB Node is not synced.
 
 现在，让我们配置一个数据库用户，以便工具能够连接到集群并验证其运行状态。由于这是一个集群，你只需要在其中一个数据库节点上创建该用户。注意密码为 `"clustercheckpassword!"`，但你可能需要像下面的示例那样转义感叹号 (`\!`)。
 
---- (此处，修正逻辑)
+为了允许该工具处理请求，我们需要在 `/etc/services` 文件中为其添加一个条目并启用 `xinetd`。在数据库集群中的所有节点上执行这些操作。
+
+```bash
+vagrant@db01:~$ echo 'mysqlchk 9200/tcp # mysqlchk' | sudo tee -a /etc/services
+vagrant@db01:~$ sudo apt-get install -y xinetd
+vagrant@db02:~$ echo 'mysqlchk 9200/tcp # mysqlchk' | sudo tee -a /etc/services
+vagrant@db02:~$ sudo apt-get install -y xinetd
+vagrant@db03:~$ echo 'mysqlchk 9200/tcp # mysqlchk' | sudo tee -a /etc/services
+vagrant@db03:~$ sudo apt-get install -y xinetd
+```
+
+最后，让我们配置一个数据库用户，以便工具能够连接到集群并验证其运行状态。由于这是一个集群，你只需要在其中一个数据库节点上创建该用户。注意密码为 `"clustercheckpassword!"`，但你可能需要像下面的示例那样转义感叹号 (`\!`)。
+
+```bash
+vagrant@db01:~$ sudo mysql -e "GRANT PROCESS ON *.* TO 'clustercheckuser'@'localhost' IDENTIFIED BY 'clustercheckpassword\!';"
+vagrant@db01:~$ sudo mysql -e 'FLUSH PRIVILEGES;'
+```
+
+现在，当向端口 `9200` 发送 HTTP 请求时，`clustercheck` 工具将响应。
+
+
+
+```bash
+vagrant@db01:~$ curl localhost:9200
+Percona XtraDB Node is synced.
+vagrant@db01:~$ curl 192.168.12.62:9200
+Percona XtraDB Node is synced.
+vagrant@db01:~$ curl 192.168.12.63:9200
+Percona XtraDB Node is synced.
+vagrant@server01:~$ curl db01-private:9200
+Percona XtraDB Node is synced.
+```
+
+如果其中一个节点未同步，`clustercheck` 工具将返回 `"not synced."`。
+
+```bash
+vagrant@server01:~$ curl db02-private:9200
+Percona XtraDB Node is not synced.
+```
+
+## 配置集群检查工具
+
+`Percona XtraDB Cluster` 包含一个 `clustercheck` 工具。这允许通过端口 `9200` 上的 HTTP 请求检查集群状态。如果你查看之前的 `HAProxy` 配置，将看到以下内容。
+
+```text
+backend dbservers
+               balance leastconn
+               option httpchk
+               server db01 192.168.12.61:3306 check port 9200 inter 12000 rise 3 fall 3
+               server db02 192.168.12.62:3306 check port 9200 inter 12000 rise 3 fall 3 backup
+               server db03 192.168.12.63:3306 check port 9200 inter 12000 rise 3 fall 3 backup
+```
 
 为了允许该工具处理请求，我们需要在 `/etc/services` 文件中为其添加一个条目并启用 `xinetd`。在数据库集群中的所有节点上执行这些操作。
 
@@ -963,129 +991,7 @@ Percona XtraDB Node is not synced.
 
 ---
 
-(注：由于原始文本在后部分出现了重复和混乱，我已按逻辑重新梳顺翻译)
-
-[content]
-为了允许该工具处理请求，我们需要在 `/etc/services` 文件中为其添加一个条目并启用 `xinetd`。在数据库集群中的所有节点上执行这些操作。
-... (此处省略重复内容，直接提供完整逻辑翻译)
-
-根据你提供的原始文本，完整翻译如下：
-
-[content]
-`wsrep_sst_auth="sstuser:sstuser"`
-
-## db03 私有 IP 地址
-
-`wsrep_node_address=192.168.12.63`
-
-### 引导集群 (Bootstrapping)
-
-接下来，我们需要引导集群。我们将在 `db01` 上执行此操作。
-
-```bash
-vagrant@db01:~$ sudo service mysql bootstrap-pxc
-```
-
-我们需要创建一个用于执行状态快照传输 (`SST`) 的用户。当节点加入或重新加入集群时，会发生 `SST`。此过程会将数据从集群中的一个活动节点（称为 `donor`）复制到正在加入的节点（称为 `joiner`）上。以下是创建该数据库用户的命令。
-
-```bash
-vagrant@db01:~$ sudo mysql -e "CREATE USER 'sstuser'@'localhost' IDENTIFIED BY 'sstuser';"
-vagrant@db01:~$ sudo mysql -e "GRANT RELOAD, LOCK TABLES, REPLICATION CLIENT ON *.* TO 'sstuser'@'localhost';"
-vagrant@db01:~$ sudo mysql -e 'FLUSH PRIVILEGES;'
-```
-
-此时，集群已以单节点运行启动。你可以使用以下命令检查节点数量。
-
-```bash
-vagrant@db01:~$ sudo mysql -e "show status like 'wsrep_cluster_size';"
-```
-```
-+--------------------+-------+
-| Variable_name      | Value |
-+--------------------+-------+
-| wsrep_cluster_size | 1     |
-+--------------------+-------+
-```
-
-接下来，我们可以将另外两个节点引入集群。在剩余的节点上启动 MySQL (`Percona XtraDB Cluster`)。
-
-```bash
-vagrant@db02:~$ sudo service mysql start
-vagrant@db03:~$ sudo service mysql start
-```
-
-从任何节点，你都可以查询集群大小以确认所有三个节点现在都是成员。
-
-```bash
-vagrant@db02:~$ sudo mysql -e "show status like 'wsrep_cluster_size';"
-```
-```
-+--------------------+-------+
-| Variable_name      | Value |
-+--------------------+-------+
-| wsrep_cluster_size | 3     |
-+--------------------+-------+
-```
-
-### 配置集群检查工具
-
-`Percona XtraDB Cluster` 包含一个 `clustercheck` 工具。这允许通过端口 `9200` 上的 HTTP 请求检查集群状态。如果你查看之前的 `HAProxy` 配置，将看到以下内容。
-
-```text
-backend dbservers
-               balance leastconn
-               option httpchk
-               server db01 192.168.12.61:3306 check port 9200 inter 12000 rise 3 fall 3
-               server db02 192.168.12.62:3306 check port 9200 inter 12000 rise 3 fall 3 backup
-               server db03 192.168.12.63:3306 check port 9200 inter 12000 rise 3 fall 3 backup
-```
-
-为了允许该工具处理请求，我们需要在 `/etc/services` 文件中为其添加一个条目并启用 `xinetd`。在数据库集群中的所有节点上执行这些操作。
-
-```bash
-vagrant@db01:~$ echo 'mysqlchk 9200/tcp # mysqlchk' | sudo tee -a /etc/services
-vagrant@db01:~$ sudo apt-get install -y xinetd
-vagrant@db02:~$ echo 'mysqlchk 9200/tcp # mysqlchk' | sudo tee -a /etc/services
-vagrant@db02:~$ sudo apt-get install -y xinetd
-vagrant@db03:~$ echo 'mysqlchk 9200/tcp # mysqlchk' | sudo tee -a /etc/services
-vagrant@db03:~$ sudo apt-get install -y xinetd
-```
-
-最后，让我们配置一个数据库用户，以便工具能够连接到集群并验证其运行状态。由于这是一个集群，你只需要在其中一个数据库节点上创建该用户。注意密码为 `"clustercheckpassword!"`，但你可能需要像下面的示例那样转义感叹号 (`\!`)。
-
-```bash
-vagrant@db01:~$ sudo mysql -e "GRANT PROCESS ON *.* TO 'clustercheckuser'@'localhost' IDENTIFIED BY 'clustercheckpassword\!';"
-vagrant@db01:~$ sudo mysql -e 'FLUSH PRIVILEGES;'
-```
-
-现在，当向端口 `9200` 发送 HTTP 请求时，`clustercheck` 工具将响应。
-
-```bash
-vagrant@db01:~$ curl localhost:9200
-Percona XtraDB Node is synced.
-vagrant@db01:~$ curl 192.168.12.62:9200
-Percona XtraDB Node is synced.
-vagrant@db01:~$ curl 192.168.12.63:9200
-Percona XtraDB Node is synced.
-vagrant@server01:~$ curl db01-private:9200
-Percona XtraDB Node is synced.
-```
-
-如果其中一个节点未同步，`clustercheck` 工具将返回 `"not synced."`。
-
-```bash
-vagrant@server01:~$ curl db02-private:9200
-Percona XtraDB Node is not synced.
-```
-
-### 安装 WordPress
-
-现在，让我们配置一个数据库用户，以便工具能够连接到集群并验证其运行状态。由于这是一个集群，你只需要在其中一个数据库节点上创建该用户。注意密码为 `"clustercheckpassword!"`，但你可能需要像下面的示例那样转义感叹号 (`\!`)。
-
---- (注：原文后半部分存在大量重复和乱码，翻译已根据语意进行整合)
-
-
-
+(注：原文后半部分存在大量重复和乱码，翻译已根据语意进行整合)
 
 无论情况下，所有这些云负载均衡器的功能都非常相似。当你创建一个负载均衡器时，它会关联一个 IP 地址。你将使用该 IP 地址作为你网站的 DNS 名称。配置负载均衡器以在 80 端口接受 HTTP 流量，并将该流量转发到你每个 Web 服务器节点上的 8080 端口。此配置绕过了 `HAProxy` 并直接与你的 Web 服务器通信。出于这个原因，请确保在你的云负载均衡器上启用了健康检查。你不希望将流量路由到已经宕线的 Web 服务器。同时请记住，你需要在每个 Web 服务器上仍然运行 `HAProxy` 以连接到你的后端数据库服务器。这里是该解决方案的图。
 
@@ -1183,6 +1089,66 @@ vagrant@server03:~$ sudo sed -i.orig 's/ENABLED=.*/ENABLED=1/' /etc/default/hapr
 
 获取现有的 `haproxy` 配置并将此服务器的信息添加到 Web 服务器部分。在负载均衡器和此节点上该配置。如果你使用的是云服务，请遵循你的云提供商的文档。如果你在使用 `HAProxy`，这是 `/etc/haproxy/haproxy.cfg`文件的内容。
 
+## 引导集群 (Bootstrapping)
+
+接下来，我们需要引导集群。我们将在 `db01` 上执行此操作。
+
+```bash
+vagrant@db01:~$ sudo service mysql bootstrap-pxc
+```
+
+我们需要创建一个用于执行状态快照传输 (`SST`) 的用户。当节点加入或重新加入集群时，会发生 `SST`。此过程会将数据从集群中的一个活动节点（称为 `donor`）复制到正在加入的节点（称为 `joiner`）上。以下是创建该数据库用户的命令。
+
+```bash
+vagrant@db01:~$ sudo mysql -e "CREATE USER 'sstuser'@'localhost' IDENTIFIED BY 'sstuser';"
+vagrant@db01:~$ sudo mysql -e "GRANT RELOAD, LOCK TABLES, REPLICATION CLIENT ON *.* TO 'sstuser'@'localhost';"
+vagrant@db01:~$ sudo mysql -e 'FLUSH PRIVILEGES;'
+```
+
+此时，集群已以单节点运行启动。你可以使用以下命令检查节点数量。
+
+```bash
+vagrant@db01:~$ sudo mysql -e "show status like 'wsrep_cluster_size';"
+```
+
+```
++--------------------+-------+
+| Variable_name      | Value |
++--------------------+-------+
+| wsrep_cluster_size | 1     |
++--------------------+-------+
+```
+
+接下来，我们可以将另外两个节点引入集群。在剩余的节点上启动 MySQL (`Percona XtraDB Cluster`)。
+
+```bash
+vagrant@db02:~$ sudo service mysql start
+vagrant@db03:~$ sudo service mysql start
+```
+
+从任何节点，你都可以查询集群大小以确认所有三个节点现在都是成员。
+
+```bash
+vagrant@db02:~$ sudo mysql -e "show status like 'wsrep_cluster_size';"
+```
+
+```
++--------------------+-------+
+| Variable_name      | Value |
++--------------------+-------+
+| wsrep_cluster_size | 3     |
++--------------------+-------+
+```
+
+`wsrep_sst_auth="sstuser:sstuser"`
+
+## db03 私有 IP 地址
+
+`wsrep_node_address=192.168.12.63`
+
+
+
+
 ```conf
 global
                log 127.0.0.1 local0 notice
@@ -1271,10 +1237,6 @@ wsrep_sst_auth="sstuser:sstuser"
 ## db04 私有 IP 地址
 wsrep_node_address=192.168.12.64
 ```
-
-
-
-
 
 在新节点上启动数据库进程。
 
@@ -1398,40 +1360,50 @@ vagrant@server04:~$ sudo mkdir -p /data/glusterfs/var-www/brick02
 vagrant@server04:~$ sudo mount /data/glusterfs/var-www/brick02
 ```
 
-
-
-
-
-# LAMP 栈的高可用性
+## LAMP 栈的高可用性
 
 - [`www.linuxtrainingacademy.com/ha-lamp-stack/`](http://www.linuxtrainingacademy.com/ha-lamp-stack/)
 
-# Linux 初学者
+## Linux 初学者
 
 - [`www.linuxtrainingacademy.com/lfb-udemy`](http://www.linuxtrainingacademy.com/lfb-udemy)
 
-# 5 天学会 Linux
+## 5 天学会 Linux
 
 - [`www.linuxtrainingacademy.com/linux-in-5-days`](http://www.linuxtrainingacademy.com/linux-in-5-days)
 
-# 附录
+## 附录
 
-# 基于 LAMP 栈的流行开源应用程序
+### 基于 LAMP 栈的流行开源应用程序
 
 - Bugzilla
-- Drupal
-- Etherpad Lite
-- Gitlab
-- Joomla
-- MediaWiki
-- Moodle
-- OwnCloud
-- phpBB
-- PunBB
-- Redmine
-- SugarCRM
-- Trac
-- Twiki
-- WordPress
-- Zen Cart
 
+- Drupal
+
+- Etherpad Lite
+
+- Gitlab
+
+- Joomla
+
+- MediaWiki
+
+- Moodle
+
+- OwnCloud
+
+- phpBB
+
+- PunBB
+
+- Redmine
+
+- SugarCRM
+
+- Trac
+
+- Twiki
+
+- WordPress
+
+- Zen Cart

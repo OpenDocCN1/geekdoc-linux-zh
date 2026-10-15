@@ -1,3 +1,4 @@
+
 # 认证
 
 libcurl 支持多种 HTTP 认证方案。
@@ -18,7 +19,7 @@ curl_easy_setopt(curl, CURLOPT_USERNAME, "joe");
 curl_easy_setopt(curl, CURLOPT_PASSWORD, "secret");
 ```
 
-这就是你需要做的。这使得 libcurl 为这次传输切换到其默认的认证方法：*HTTP Basic*。
+这就是你需要做的。这使得 libcurl 为这次传输切换到其默认的认证方法：`HTTP Basic`。
 
 ## 认证要求
 

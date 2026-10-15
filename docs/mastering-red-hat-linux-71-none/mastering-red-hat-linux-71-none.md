@@ -1,252 +1,290 @@
+
 # Red Hat Linux 7.1 精通指南
-
-
-
-
-
-
-
-
-
-
-
 
 这是一份关于常用 Linux 命令的快速指南。书中包含了每个命令的语法大纲、重要的选项和标志，随后是关于该命令用途的描述。如需查阅所有命令的详细参考（包括选项和标志的说明），请参阅附录 C，“命令参考”。
 
 ### kill
+
 ```
 kill [-s signal] -p pid
 kill -t
 ```
+
 `kill` 命令向一个或多个正在运行的进程发送信号。
 
 ## less
+
 ```
 less [-aeEG1nrsS$]
 ```
+
 `less` 命令一次显示一个文本文件，同时允许搜索和滚动。
 
 ## cat
+
 ```
 cat [-bVETAE] [--number] [--number-nonblank] [--squeeze-blank] [--show-printing] [--show-ends] [--tabs] [--show-all] [...]
 ```
+
 `cat` 命令合并一个或多个文件并在标准输出上显示它们。如果没有提供文件，默认则从标准输入读取。
 
 ## ln
+
 ```
 ln [-bis] [--backup] [--interactive] [--symbolic] source [dest]
 ln [-bis] [--backup] [--interactive] [--symbolic] source ...
 ```
+
 `ln` 命令在文件之间建立链接。当指定了链接时，每个源会在指定的目录中创建一个同名的文件。
 
 ## chmod
+
 ```
 chmod [-rcf] [--recursive] [--changes] [--silent] [--quiet] [--verbose] mode file...
 ```
+
 `chmod` 命令更改一个或多个文件或目录的权限。
 
 ## chown
+
 ```
 chown [-R] [--recursive] [--changes] [--silent] [--quiet] [owner] [::]group file...
 ```
+
 `chown` 命令更改文件或目录的所有者和/或组。
 
 ## cp
+
 ```
 cp [options] destination source ...
 ```
+
 `cp` 命令复制文件和目录。
 
 ## lpq
+
 ```
 lpq [-q] [-Pprinter] job ... [user]
 ```
+
 `lpq` 命令检查并显示打印队列的当前状态。如果没有指定打印机，则查询默认打印机。查询的打印机中，普通作业是未签名的作业号。如果指定了用户，则仅显示该打印机上这些用户的打印作业。
 
 ## df
+
 ```
 df [-T] -t ftype [-x ftype] [-all] [-inodes] [--ftype] [--exclude-ftype] [--print-type] [--filename...]
 ```
+
 `df` 命令显示一个或多个磁盘或分区上的可用空间。如果没有指定文件（或目录），则显示所有挂载的文件系统。如果指定了文件名，则显示包含每个文件的所在文件系统的可用空间。
 
 ## lpr
+
 `lpr` 命令将一个或多个文件打印到指定的打印机队列。如果没有指定打印机，则将标准输入发送到默认打印机。
 
 ## lp
+
 ```
 lrm [-Pprinter] job ... [user]
 ```
+
 `lrm` 命令从打印队列中删除一个或多个作业。如果没有指定打印机，它将尝试从默认打印队列中删除作业。如果指定了用户名，将删除该用户的所有作业（除非指定了特定的作业）。
 
 ## gunzip
+
 ```
 gunzip [-f] [-stdout] [--stdout] [--force]
 [-list] [--recursive] [--test] [name ...]
 [-stdout] [--force] [--list] [--recursive] [--test]
 name ...
 ```
-`gunzip` 命令使用 gzip 命令（以及 zip 命令）解压缩文件。结果将替换原始压缩文件，并带有 .gz 扩展名。
+
+`gunzip` 命令使用 `gzip` 命令（以及 `zip` 命令）解压缩文件。结果将替换原始压缩文件，并带有 `.gz` 扩展名。
 
 ## gzip
+
 ```
 gzip [-cdflrt] [-decompress] [--uncompressed] [--stdout]
 [--stdout] [--force] [--list] [--recursive] [--test]
 name ...
 ```
+
 `gzip` 命令使用 Lempel-Ziv 编码压缩文件。结果将替换原始压缩文件并带有。
 
 ## ls
+
 ```
 ls [-acdlRsStux] [-al] [--time] [--status]
 [--directory] [-format=long] [--format=verbose]
 [--reverse] [-recursive] [-size] [--sort-sort]
 [--time=atime] [--time] ...
 ```
+
 `ls` 命令列出文件和目录。如果没有指定文件或目录，则显示当前目录的内容。默认按字母顺序排序。
 
 ## man
+
 ```
 man command
 ```
+
 `man` 命令显示指定命令的页面。
 
 ### mdltree
+
 ```
 mdltree msdosdirectory [msdosdirectory ...]
 ```
+
 `mdltree` 命令删除一个或多个 MS-DOS 目录。它类似于 DOS 的 DELETE 命令。
 
 ## mkdir
+
 ```
 mkdir [-p] [-m] [--parents] [--mode=mode]
 [--help] [--version] directory ...
 ```
+
 `mkdir` 命令创建一个或多个目录。
 
 ## mount
+
 ```
 mount [-a [-rw] [-t vfstype] [...] device dir
 mount [-rw] [-t vfstype] [-o options] device dir
 ```
+
 `mount` 命令将文件系统挂载到指定的目录。
 
 ### nlookup
+
 ```
 nlookup [host | [server]]
 ```
-`nlookup` 命令查询 DNS 服务器。它可以在交互模式下运行。如果没有提供主机，程序将进入交互模式。默认情况下，使用 /etc/resolv.conf 中指定的 DNS 服务器，除非另有指定。如果你想指定服务器但不查询目录，`nlookup` 在名称列表中提供。
+
+`nlookup` 命令查询 DNS 服务器。它可以在交互模式下运行。如果没有提供主机，程序将进入交互模式。默认情况下，使用 `/etc/resolv.conf` 中指定的 DNS 服务器，除非另有指定。如果你想指定服务器但不查询目录，`nlookup` 在名称列表中提供。
 
 ## passwd
+
 ```
 passwd [-S] [-d-list] [file...]
 ```
+
 `passwd` 命令更改用户的密码。当由 root 用户运行时，可以通过提供用户名作为参数来更改特定用户的密码。
 
 ## ping
+
 ```
 ping [-F] [-c number] [-i seconds]
 [-s packets] host
 ```
+
 `ping` 命令向网络主机发送回显包，以检查其在网络上是否可访问。
 
 ### ps
+
 ```
 ps [username] [pid] ...
 ```
+
 `ps` 显示当前运行进程的状态。通过给定特定的进程 ID 作为参数，`ps` 提供有关该进程的信息。在没有选项的情况下，`ps` 显示当前用户。
 
 ## pwd
+
 ```
 pwd
 ```
+
 `pwd` 命令显示当前目录的名称。
 
 ## rm
+
 ```
 rm [-F] [--interactive] [--recursive] file ...
 ```
+
 `rm` 命令删除一个或多个文件或目录。
 
 ## rmdir
+
 ```
 rmdir [-p] [--parents] directory
 ```
+
 `rmdir` 命令删除空目录。
 
 ## rsh
+
 ```
 rsh [-l] username [command]
 ```
+
 `rsh` 命令执行远程命令。
 
 ## su
+
 ```
 su [-l] [-c]
 ```
+
 `su` 命令切换用户身份。
 
 ## tar
+
 ```
 tar [options] archivefile [file ...]
 ```
+
 `tar` 命令用于创建、提取和维护归档文件。
 
 ## find
+
 ```
 find [path ...] [expression]
 ```
+
 `find` 命令在目录层次中搜索文件。
 
 ## grep
+
 ```
 grep [options] pattern [file ...]
 ```
+
 `grep` 命令在文件中搜索指定的模式。
 
 ## sed
+
 ```
 sed [options] script [file ...]
 ```
+
 `sed` 命令是一种流编辑器，用于文本转换。
 
 ## awk
+
 ```
 awk [options] program [file ...]
 ```
+
 `awk` 是一种强大的文本处理语言。
 
 ## sort
+
 ```
 sort [options] [file ...]
 ```
+
 `sort` 命令对文件内容进行排序。
 
 ## diff
+
 ```
 diff [options] file1 file2
 ```
+
 `diff` 命令比较两个文件之间的差异。
 
-
-
-
-
-
 本图书及随附的任何其他当前或未来提供的材料均包含程序和/文本文件（以下简称“软件”），用于与本书结合使用。SYBEX 授予您使用该软件的许可，须遵循以下条款。您对软件的购买、接受或使用将构成您对此类条款的接受。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 SYBEX 保证介质在购买后九十（90）天内无物理缺陷。SYBEX 不以书中附带或发布在 www.syex.com 上的其他形式或介质提供软件。如果您在保修期内发现介质有缺陷，您可以获得：
 
@@ -255,130 +293,81 @@ SYBEX 保证介质在购买后九十（90）天内无物理缺陷。SYBEX 不以
 软件的整体或部分可能未复制保护或加密。然而，在所有情况下，除非其中的所有者另有规定，否则严禁授权转售或重新分发这些文件。
 
 致所有使用 GNU 和 Linux 帮助缩小数字鸿沟的人。
+
 欲了解更多信息，请访问 www.digitaldividenetwork.org。
 
 ## 致谢
 
-
-
 ## 目录摘要
+
 引言 xxii
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 索引 928
 
-
-
-
 # 目录
+
 引言 xxxii
 
 - 什么是发行版？ 14
 
-
-
 - 显示分区表 82
-- 使用空空间添加分区 82
-- 修改分区类型 83
-- 删除分区 84
-- 提交你的更改 84
-- 展望 85
 
+- 使用空空间添加分区 82
+
+- 修改分区类型 83
+
+- 删除分区 84
+
+- 提交你的更改 84
+
+- 展望 85
 
 - 什么是 X Windows？ 90
 
-
-
 - Xnumeric 190
-
-
-
-
-
 
 - 复制和删除文件 330
 
-
-
-
-
-
-
-
 - 日日志 414
-
-
-
-
-
-
-
-
 
 - 展望 531
 
-
-
-
-
-
-
-
-
-
-
-
-
 - 设置名称服务器 (DNS) 645
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 - Laser5 Linux 820
-- Vine Linux 820
-- 葡语版 Linux 821
-- Conectiva Linux 821
-- 俄罗斯版 Linux 821
-- 西班牙语版 Linux 822
-- Blue Linux 823
-- Gelecek Linux 823
-- S.u.S.E. Linux 826
 
+- Vine Linux 820
+
+- 葡语版 Linux 821
+
+- Conectiva Linux 821
+
+- 俄罗斯版 Linux 821
+
+- 西班牙语版 Linux 822
+
+- Blue Linux 823
+
+- Gelecek Linux 823
+
+- S.u.S.E. Linux 826
 
 - 附录：如何将这些条款应用于你的新程序 920
 
 ## E 非 Intel 硬件上的 Linux
 
 - 针对 Compaq Alpha 处理器的 Linux 924
+
 - 嵌入式 Linux 924
+
 - 针对 Motorola 680x0 处理器的 Linux 925
+
 - 针对 MIPS 处理器的 Linux 926
+
 - 针对 Power Macintosh 的 Linux 926
+
 - 针对 PowerPC 处理器的 Linux 927
+
 - 针对 SPARC 处理器的 Linux 927
 
 索引 928
@@ -410,20 +399,27 @@ Linux 是一个免费分发、高效且快速的操作系统，它将 Unix 的�
 要使用本书，你需要一台具有上述最低配置的个人计算机：
 
 - 奔腾（Pentium）CPU 或更高型号（从理论上讲，你可以在 386 系统上运行 Linux，但性能可能足够糟糕，对大多数用户来说不值得尝试。）
+
 - 32MB 或更多内存（RAM）（你会发现 Linux 在拥有 64MB 或更多内存时，性能会有显著提升。）
+
 - 具有至少 1GB 空闲磁盘空间的硬盘；对于工作站或笔记本电脑配置需要 1.5GB（如果你能负担得起 3GB 或更多，这将极大增强你实验 Linux 及 Linux 应用程序的自由。）
 
 ## 简介
 
 - CD-ROM 驱动器（优选 ATAPI/IDE CD-ROM 或 SCSI CD-ROM 驱动器）
+
 - 你当前系统的备份，以防你需要恢复现有数据或程序
+
 - 显卡和 VGA 或更高规格显示器
+
 - 键盘和鼠标
 
 你可能还想要准备以下选项：
 
 - 打印机（如果有选择，请选择 PCL 或 PostScript 打印机）
+
 - 声卡扬声器
+
 - 电话调制解调器、ISDN 调制解调器或其他高速连接
 
 ## 本书结构
@@ -444,17 +440,16 @@ Linux 是一个免费分发、高效且快速的操作系统，它将 Unix 的�
 
 **Red Hat Linux 7.1 作为 Web 和电子邮件服务器** 除了是 SOHO 的理想文件和打印服务器外，Linux 还可以用于创建强大的企业级 Web 和邮件服务器。这一部分描述了如何设置基于 Linux 的 Web 和邮件服务器。
 
-
-
-
-
 # 第一章
 
 ## 什么是 Linux？
 
 - Linux 历史
+
 - 作为操作系统的 Linux
+
 - 作为自由软件的 Linux
+
 - Linux 的商业应用
 
 如果你已经读到了这里——购买了这本书，翻阅了前言并看了目录——那么你可能对 Linux 以及 Linux 现象已经有了初步了解。如果你还不了解，请继续读下去。
@@ -466,6 +461,8 @@ Linux 是计算机领域中一个真正令人惊叹的发展。它表明，优�
 本章简要概述了 Linux 的历史，然后介绍了让 Linux 成为适用于各种技术应用的强大操作系统的关键特性。最后，本章将探讨自由软件模型，并分析了它对整个软件行业的影响。
 
 ## Linux 历史
+
+
 
 Linux 在计算领域的出现源于 Unix 文化。作为一种操作系统（实际上是一系列具有相似特征的不同操作系统），Unix 的出现远早于桌面电脑时代；Unix 开发于 1969 年，当时微型计算机和大型主机是企业界的主流。Unix 持续在这些企业环境以及教育领域被广泛使用，尽管在如今的客户端-服务器-局域网网络中也能看到它的运行。
 
@@ -481,7 +478,7 @@ Linux 在计算领域的出现源于 Unix 文化。作为一种操作系统（�
 
 Linux 作为 PC 上突出的 Unix 克隆操作系统继续演进。硬件支持现在非常广泛，包括最流行和常见的外围设备；性能强劲，使许多 PC 拥有了与 Sun Microsystems SPARC 系统等中期工作站相当的能力。Linux 现在甚至被移植到 PowerPC 和 Compaq 等平台。尽管从技术上讲，今天的 Linux 并不是 Unix，因为它不符合该品牌的资质，但在功能上，Linux 在几乎所有可以想象的方面都与 Unix 等同。
 
-## 作为操作系统的 Linux
+# 作为操作系统的 Linux
 
 “Linux”这个词实际上有些模糊。“Linux”有两种用法：一种是特指内核本身——这是任何版本 Linux 的核心；另一种是更泛泛地指运行在内核上的任何应用程序集合，这通常被称为“发行版”（distribution）。内核的工作是提供应用程序运行的基础环境，包括与硬件的基本接口，以及管理任务和当前运行程序的系统。
 
@@ -509,10 +506,6 @@ Linux 作为 PC 上突出的 Unix 克隆操作系统继续演进。硬件支持�
 
 从历史上看，Unix 系统在多任务方面比 Windows 好得多；Unix 能够运行大量并发应用程序，这使其成为大型企业服务器和高功率工作站的理想选择。今天，只有 Windows 2000 及其前身 Windows NT 4.0 声称提供了同样稳健的多任务实现。尽管 Windows 95/98/Me 拥有大量的粉丝，它们在有效处理大量并发进程方面仍然面临困难。
 
-
-
-
-
 # Linux 应用程序
 
 作为一个操作系统，Linux 可用于开发几乎任何类型的应用程序。Linux 可用的应用程序包括以下：
@@ -527,11 +520,11 @@ Linux 作为 PC 上突出的 Unix 克隆操作系统继续演进。硬件支持�
 
 **互联网工具** 除了支持 Netscape 和 Mosaic 等知名软件外，Linux 还提供了广泛的互联网软件，包括基于字符和图形的邮件阅读器程序、创建互联网服务器所需的全套软件（Web 服务器、邮件服务器和新闻服务器），以及通过局域网或调制解调器连接互联网的完整网络支持。
 
-**数据库** 像所有 Unix 平台一样，Linux 为运行客户端-服务器数据库应用程序提供了一个强大的平台。从早期开始，mSQL 和 PostgreSQL 等强大的免费数据库就可以在 Linux 上。随着 Linux 的普及（特别是在企业信息系统中），Linux 商业关系型数据库服务器的数量不断增加。今天，Oracle、Sybase 和 Inform 都为 Linux 提供了关系型数据库产品。
+**数据库** 像所有 Unix 平台一样，Linux 为运行客户端-服务器数据库应用程序提供了一个强大的平台。从早期开始，`mSQL` 和 `PostgreSQL` 等强大的免费数据库就可以在 Linux 上。随着 Linux 的普及（特别是在企业信息系统中），Linux 商业关系型数据库服务器的数量不断增加。今天，Oracle、Sybase 和 Inform 都为 Linux 提供了关系型数据库产品。
 
 **DOS 和 Windows 兼容软件** 正如你在第 30 章看到的“红帽 Linux 7.1 与 DOS/Windows”，Linux 可以以很高的稳定兼容性运行 DOS 软件，并提供了运行 Windows 软件的多种方法。事实上，本书的全文都是在运行 Linux 的计算机上使用 Microsoft Word for Windows 编写的。这为 Linux 在 Windows 环境下工作的能力提供了有力证据。此外，还有其他流行的计算机系统（包括 Macintosh 和 Atari 计算机系列）的模拟器。
 
-这个列表仅仅是冰山一角。Linux 存在许多应用程序。寻找 Linux 软件的良好来源是 Linux 软件地图（Linux Software Map），可以在万网 http://www.exepc.com/1sm/ 找到它。
+这个列表仅仅是冰山一角。Linux 存在许多应用程序。寻找 Linux 软件的良好来源是 Linux 软件地图（Linux Software Map），可以在万网 `http://www.exepc.com/1sm/` 找到它。
 
 ## 作为自由软件的 Linux
 
@@ -575,9 +568,6 @@ Linux 的大部分内容都在 GNU 通用公共许可证下提供。这使得不
 
 毕竟，在所有这些情况下，操作系统的名称代表的是一个非常特定的产品。例如，Windows 98 定义了微软提供的的一整套 Windows 工具、应用程序和驱动程序。它没有余地。用户向系统添加的任何应用程序、驱动程序或工具都不被视为 Windows 98 的一部分，而且如果没有完整的软件和工具，Windows 98 在技术上并不存在。
 
-
-
-
 在 Linux 世界中，这种定义变得模糊了。尽管严格来说，“Linux”只是内核（操作系统的核心），但“Linux”一词可以指从内核到任何基于 Linux 的应用程序集合，这些程序与内核组合在一起产生一个可以运行的 Linux 系统。
 
 之所以缺乏一套明确的、可识别的应用程序、实用程序、驱动程序和内核，是因为 Linux 为满足不同需求的 Linux 变体（flavors）打开了大门。这些变体就是所谓的发行版（distributions）。
@@ -596,16 +586,18 @@ Linux 的大部分内容都在 GNU 通用公共许可证下提供。这使得不
 
 大多数 Linux 发行版都是免费提供的。它们可以从互联网上的 Linux 存档（例如 Metalab FTP 站点或 MIT 的 TSX-11 Linux 存储库）下载。
 
-## 第 2 章 • 选择发行版
+### 第 2 章 • 选择发行版
 
 提示
+
 请参阅附录 B，“Linux 信息来源”，获取提供发行版的 Linux 网站完整列表以及 CD-ROM 供应商列表。
 
 当然，一个平均水平的 Linux 发行版可能很大，大小从几兆字节到几个 GB 不等，大多数用户都不希望花宝贵的在线时间和带宽下载一个完整的 Linux 发行版。为了缓解这种情况，许多制作发行版的组织或第三方来源在 CD-ROM 上提供了 Linux 发行版，这些来源将一个或多个发行版捆成包含 Linux 软件和文档的 CD-ROM 集中。
 
-例如，CheapBytes 的 MONDO Pack 第27 版（www.cheapybytes.com）是 11 张 CD-ROM 的套装，包含了最新的 Red Hat、Slackware、Mandrake 和 StormLinux发行版。或者，LinuxMall（www.linuxmall.com）提供 MegaPack 2.0，这是一个 16 张 CD-ROM 的套装，包含了 MONDO Pack 中的相同发行版，以及最新的 Debian、Storm、S.U.S.E., FreeBSD 和 TurboLinux发行版。
+例如，CheapBytes 的 MONDO Pack 第27 版（`www.cheapybytes.com`）是 11 张 CD-ROM 的套装，包含了最新的 Red Hat、Slackware、Mandrake 和 StormLinux发行版。或者，LinuxMall（`www.linuxmall.com`）提供 MegaPack 2.0，这是一个 16 张 CD-ROM 的套装，包含了 MONDO Pack 中的相同发行版，以及最新的 Debian、Storm、S.U.S.E., FreeBSD 和 TurboLinux发行版。
 
 注意
+
 FreeBSD 与不同的 Linux 发行版一样，是 Unix 的克隆。
 
 通常，免费 Linux 发行版的 CD-ROM 拷贝价格在 2 美元到 50 美元之间，较流行的套装如 Linux MegaPack 费用低于 30 美元。
@@ -618,9 +610,9 @@ Linux 发行版有很多。尽管如此，最近六种发行版脱颖而出成�
 
 ## 主要发行版概览
 
-## Red Hat
+### Red Hat
 
-按销量，来自 Red Hat Software（www.redhat.com）的 Red Hat Linux 已成为大多数用户喜欢的 Linux 发行版。该发行版是许多商业 Linux 软件开发者的目标或基础发行版，也是许多 Linux 发行的衡量基准。
+按销量，来自 Red Hat Software（`www.redhat.com`）的 Red Hat Linux 已成为大多数用户喜欢的 Linux 发行版。该发行版是许多商业 Linux 软件开发者的目标或基础发行版，也是许多 Linux 发行的衡量基准。
 
 Red Hat 特别因其安装和升级操作系统的工具，以及其设计良好的安装、卸载和跟踪软件软件包的系统而闻名。
 
@@ -631,15 +623,18 @@ Red Hat 提供可以在互联网流行的 Linux 存档下载的免费版本，�
 Red Hat Linux 7.1 是该发行版的当前版本，也是本书包含的发行版。本章将深入研究 Red Hat。
 
 注意
-除了 CD-ROM 中包含的 Red Hat Linux 7.1 发行版外，你始终可以 .redhat.com 的 Red Hat FTP 服务器或 biblio.org/pub/distributions/redhat 的 Ibiblio Linux 存档下载最新版本。如果这两个站点都不容易访问，在多个镜像站点在 http://www.redhat.com/download/mirror.html 中列出了该发行版的副本。
 
-## Slack
+除了 CD-ROM 中包含的 Red Hat Linux 7.1 发行版外，你始终可以 `.redhat.com` 的 Red Hat FTP 服务器或 `biblio.org/pub/distributions/redhat` 的 Ibiblio Linux 存档下载最新版本。如果这两个站点都不容易访问，在多个镜像站点在 `http://www.redhat.com/download/mirror.html` 中列出了该发行版的副本。
 
-在 Red Hat Linux 出名之前，Slack 是最受追的发行版。Slack 仍然是一个流行的发行版；但截至本文写作时，由于最近的行业整合，它的未来尚存疑虑。Slack 项目负责人 Patrick Volkerding 目前正在为他的开发者寻找另一个赞助商。有关 Slack 的最新进展和更多信息，请参考他们的官方主页（www.slack.com）。
+### Slack
+
+在 Red Hat Linux 出名之前，Slack 是最受追的发行版。Slack 仍然是一个流行的发行版；但截至本文写作时，由于最近的行业整合，它的未来尚存疑虑。Slack 项目负责人 Patrick Volkerding 目前正在为他的开发者寻找另一个赞助商。有关 Slack 的最新进展和更多信息，请参考他们的官方主页（`www.slack.com`）。
+
+
 
 写作时提供的 Slack 版本是 Slack 7.1。该发行版提供了全系列的实用程序、工具和应用程序，包括 X Windows、开发工具（如 GNU 编译器）、PPP 支持、完整的 Java 支持以及 Linux 的 Java SDK（开发工具包）。与大多数 Linux 发行版一样，Slack 提供 Apache Web 服务器。
 
-列于 http://www.slack.com/getslack/。
+列于 `http://www.slack.com/getslack/`。
 
 ## Caldera OpenLinux
 
@@ -651,17 +646,17 @@ Caldera 通过大声支持商业版 Linux 在 Linux 和更广泛的计算机市�
 
 - StarOffice for Linux 非商业许可证
 
-
-
-
 ## 主要发行版概览
 
 - NetWare 支持
+
 - 用于 DOS 兼容的 DR-DOS 许可
+
 - Webmin，一种强大的、可自定义的 Linux 管理系统，可在 Web 浏览器中打开
+
 - 集成版的 Partition Magic，帮助用户在安装 Linux 之前配置其硬盘
 
-Caldera 的 eDesktop 2.4 于 2000 年 10 月获得了 CNet 编辑选择奖。在颁发此项荣誉时，CNet 的编辑们指出其基于互联网的管理工具具有额外价值。Caldera 的 eDesktop 和 eServer 可以从 Caldera 的官方网站 www.caldera.com 免费下载。
+Caldera 的 eDesktop 2.4 于 2000 年 10 月获得了 CNet 编辑选择奖。在颁发此项荣誉时，CNet 的编辑们指出其基于互联网的管理工具具有额外价值。Caldera 的 eDesktop 和 eServer 可以从 Caldera 的官方网站 `www.caldera.com` 免费下载。
 
 ## S.u.S.E. Linux
 
@@ -670,8 +665,11 @@ S.u.S.E. Linux 是一种流行的 Linux 发行版，主要用于欧洲，提供�
 本文写作时的 S.u.S.E. 版本为 7.1，与其他主要发行版相比在几个方面具有独特之处。S.u.S.E. 提供以下内容：
 
 - KDE 2.0，XFree86 X Windows 服务器的最新版本（某些版本落后一个版本）
+
 - 称为 YaST 和 YaST2 的系统管理工具，用于配置从拨号上网连接到扫描仪和网卡的所有设备
+
 - SaX2，用于配置 X Windows 的自定义实用程序
+
 - 最新版 StarOffice 的副本
 
 与 Caldera 和红帽（Red Hat）一样，目前提供两个版本的 S.u.S.E. 7.1。S.u.S.E. Linux 7.1 个人版盒装包含 700 多个程序，以及独立的应用程序和配置手册。S.u.S.E. Linux 7.1 专业版盒装在 7 张 CD-ROM 和 1 张 DVD 上包含了超过 2500 个应用程序，这使其成为当今最全面的 Linux 发行版。
@@ -682,7 +680,7 @@ S.u.S.E. Linux 也支持非 Intel 平台的版本，包括 Digital Alpha、Power
 
 ## Debian/GNU
 
-作为六大 Linux 巨头之一，Debian/GNU (www.debian.org) 是一个异类，因为它不被任何特定公司“所有”。红帽软件和 Slackware 都有位于沃尔特克溪（Walnut Creek）的总部；然而，Debian/GNU 由志愿者团队生产，就像 Linux 本身开发的方式一样。
+作为六大 Linux 巨头之一，Debian/GNU (`www.debian.org`) 是一个异类，因为它不被任何特定公司“所有”。红帽软件和 Slackware 都有位于沃尔特克溪（Walnut Creek）的总部；然而，Debian/GNU 由志愿者团队生产，就像 Linux 本身开发的方式一样。
 
 Debian 使用其自己的包管理系统提供了超过 3950 个软件包，该系统旨在提供与红帽发行版类似的功能。截至写作时，Debian/GNU Linux 的当前版本为 2.2.r3。
 
@@ -693,8 +691,11 @@ Debian 发行版在某些方面是独特的。他们的网站强调了将所生�
 最新的发行版是 Corel Linux。它的开发是第一个明确目标为桌面端 Microsoft Windows 替代方案的 Linux 发行版。Corel Linux 第二版包含以下特性：
 
 - Corel 控制中心，一种基于 KDE 控制中心的系统管理工具
+
 - 四步安装过程
+
 - 如用户管理器（User Manager）和打印向导（Print Wizard）等工具，这些工具明确基于等效的 Microsoft Windows 工具
+
 - SmartMove，允许你从现有的 Microsoft Windows 计算机中导入配置文件和设置
 
 Core Linux 构建在 Debian 发行版之上。换句话说，他们在 Debian Linux 中添加了功能并将其作为自己的发行版出售。根据通用公共许可证（GPL）的条款（如附录 D 所示），这种做法是被明确允许的。
@@ -703,7 +704,7 @@ Core Linux 构建在 Debian 发行版之上。换句话说，他们在 Debian Li
 
 其他值得注意的英语版 Linux 发行版包括 LinuxPro、LinuxWare、Turbolinux 和 Yggdrasil 等。此外，还有几种非英语发行版（特别是法语和德语版），涵盖于附录 A“世界周围 Linux”。
 
-你可以通过 Linux Online 的英语发行版页面 www.linux.org/dist/english.html 更多关于其他发行版的信息并找到相关网站的链接。
+你可以通过 Linux Online 的英语发行版页面 `www.linux.org/dist/english.html` 更多关于其他发行版的信息并找到相关网站的链接。
 
 ## 红帽 Linux
 
@@ -722,7 +723,9 @@ Core Linux 构建在 Debian 发行版之上。换句话说，他们在 Debian Li
 红帽 Linux 7.1 版本提供了若干早期版本没有的新功能。这些功能包括：
 
 - 2.4 内核
+
 - 针对打印机和防火墙的新配置工具
+
 - 更新的 X Window 系统，包括 KDE 2.1 和 GNOME 1.2
 
 ## Linux 2.4 内核
@@ -730,6 +733,7 @@ Core Linux 构建在 Debian 发行版之上。换句话说，他们在 Debian Li
 Linux 内核在过去一年的进化令人深刻。虽然内核每次修订都很小，但这些开发为桌面、服务器和小型设备带来了新功能。这些包括：
 
 - 自动检测显卡及其特性
+
 - 集成硬件支持：USB 支持正在增加，2.4 版本还通过将驱动程序直接集成到内核中支持 PCMCIA 即插即用设备
 
 平台多样性：通过内核，你可以在多种非 Intel 平台上运行 Linux，包括 Alpha、Sparc、MIPS、PowerPC 和基于 ARM 的计算机。新内核甚至支持 IBM S/390 主机
@@ -740,15 +744,11 @@ Linux 内核在过去一年的进化令人深刻。虽然内核每次修订都�
 
 Linux 一直拥有一套强大的命令行和图形工具，用于配置和管理红帽 Linux 系统。从 5 版本开始，这些工具得到了扩展，包括一个设置用户信息（如姓名和电话）的用户信息工具、一个方便更改用户密码的用户密码工具，以及一个允许从图形界面挂载和卸载文件系统的工具。
 
-红帽 Linux 还提供了一个用于配置免费版 X Windows (XFree86) 的工具，称为 Xconfigurator。Xconfigurator 比比 XFree86 自带的配置程序更容易使用。在红帽 Linux 中，Xconfigurator 提供了额外的改进，如自动检测显卡及其特性。
-
-
-
-
+红帽 Linux 还提供了一个用于配置免费版 X Windows (`XFree86`) 的工具，称为 `Xconfigurator`。`Xconfigurator` 比比 `XFree86` 自带的配置程序更容易使用。在红帽 Linux 中，`Xconfigurator` 提供了额外的改进，如自动检测显卡及其特性。
 
 # 改进的 X Window 系统
 
-Red Hat Linux 7.1 包含了 XFree86 4.0.3 版本，这是 Linux 窗口系统的最新版本。这为两个主要的桌面环境 GNOME 和 KDE 提供了更稳定的平台和改进的 3D 图形，这两个环境也都包含在 Red Hat Linux 7.1 中。
+Red Hat Linux 7.1 包含了 `XFree86 4.0.3` 版本，这是 Linux 窗口系统的最新版本。这为两个主要的桌面环境 GNOME 和 KDE 提供了更稳定的平台和改进的 3D 图形，这两个环境也都包含在 Red Hat Linux 7.1 中。
 
 GNOME 和 KDE 是为 X Windows 设计的桌面环境，旨在简化应用程序开发，并为 Linux 用户提供更一致、专业质量的桌面环境。GNOME 1.2 及其配套的 Sawfish 窗口管理器将在第 10 节“高级 GNOME 配置”中进行详细讨论。KDE 2.1 将将在第 11 节“使用 KDE”中详细讨论。
 
@@ -769,16 +769,23 @@ Red Hat Linux 7.1 提供了若干新功能或改进特性，可用于利用高�
 ## 安装 Red Hat Linux 7.1
 
 - 第 3 节：准备安装 Red Hat Linux 7.1
+
 - 第 4 节：安装 Red Hat Linux 7.1
+
 - 第 5 节：特殊安装
 
 # 第三节
+
 ## 准备安装 Red Hat Linux 7.1
 
 - 您需要什么
+
 - 检查您的硬件兼容性
+
 - 记录您的硬件信息
+
 - 选择安装方法
+
 - 安排您的硬盘
 
 在本章中，您将开始着安装 Red Hat Linux 7.1 的事务。本章的大部分内容涉及影响安装过程的决策，而不是安装过程本身，但决策制定是确保您的 Linux 安装顺利进行并最终您获得一个配置良好的系统的关键步骤。
@@ -792,57 +799,56 @@ Red Hat Linux 7.1 提供了若干新功能或改进特性，可用于利用高�
 在安装 Linux 之前，重要的是退一步考虑您确切需要什么种类型的计算机。Linux 可以安装在各种硬件上，包括：
 
 - ARM 处理器
+
 - 罗特罗拉68000 系列处理器
+
 - 8086 CPU
+
 - Alpha 处理器
+
 - SPARC 处理器
+
 - MIPS 系统
+
 - 基于 PowerPC 的系统
+
 - 基于 S/390 的服务器
+
 - Acorn 计算机
+
 - Power Macintos
+
 - Intel 及 Intel 兼容 PC
 
 但到目前为止，Intel 兼容 PC 硬件是最常见的 Linux 平台。尽管如此，Intel 兼容 PC 硬件是最常见的 Linux 平台（注：原文此处逻辑重复）。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。（*注：此处严格翻译了原文的重复内容*）。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
-- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
-- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
-- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
-- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
-- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的版本的 id，，它 安装安装设置分区时时检测错误。到目前为止，
-- Intel 兼容 PC  硬件 常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
-- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
-- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
-- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
-- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装 期间设置分区区时检测 错误。到目前为止，
-- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
-- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
-- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
-- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
-- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
-- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
-- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
-- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
-- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
-- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测 错误。到目前为止，
-- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
-- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
-- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测 错误。到目前为止，
-- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
-- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时时检测 错误。到目前为止，
-- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
-（注：由于原文中存在大量重复内容和乱码，此处已根据“不要重复输出原文”的原则进行清理，以下为核心内容的准确翻译：）
 
-- ARM 处理器
-- 罗特罗拉 68000 系列处理器
-- 8086 CPUs
-- Alpha 处理器
-- SPARC 处理器
-- MIPS 系统
-- 基于 PowerPC 的系统
-- 基于 S/390 的服务器
-- Acorn 计算机
-- Power Macintoshes
-- Intel 及 Intel 兼容 PC
+- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
+
+- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
+
+- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
+
+- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
+
+- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的版本的 id，，它 安装安装设置分区时时检测错误。到目前为止，
+
+- Intel 兼容 PC  硬件 常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
+
+- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
+
+- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
+
+- Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。到目前为止，
+
+
+
+# Intel 兼容 PC 硬件
+
+Intel 兼容 PC 硬件是最常见的 Linux 平台。Red Hat Linux 7.1 包含了一个改进版本的 Disk Druid，它可以在您安装期间设置分区时检测错误。
+
+到目前为止，Intel 兼容 PC 硬件是最常见的 Linux 平台。
+
+# 您需要什么
 
 在安装 Linux 之前，重要的是退一步考虑您确切需要什么种类型的计算机。Linux 可以安装在各种硬件上，包括以下：
 
@@ -866,27 +872,6 @@ Red Hat Linux 7.1 提供了若干新功能或改进特性，可用于利用高�
 
 从这里开始，本章讨论一个关键问题：硬件兼容性。在 Windows 世界中，供应商会迅速为各种可以想象的硬件提供驱动程序，但问题仍然会发生，硬件不兼容可能是导致为了让 Windows 操作系统正常工作而彻夜失眠的原因之一。在 Linux 中，同样存在此类问题，特别是当你尝试使用目前支持有限或没有支持的硬件时。
 
-# 您需要什么
-
-在安装 Linux 之前，重要的是退一步考虑您确切需要什么种类型的计算机。Linux 可以安装在各种硬件上，包括以下：
-
-- ARM 处理器
-- 罗特罗拉 68000 系列处理器
-- 8086 CPUs
-- Alpha 处理器
-- SPARC 处理器
-- MIPS 系统
-- 基于 PowerPC 的系统
-- 基于 S/390 的服务器
-- Acorn 计算机
-- Power Macintoshes
-- Intel 及 Intel 兼容 PC
-
-## 最小化 Linux 系统
-（前文略）
-
-## 最小化 Linux 系统
-
 作为一个操作系统，Linux 所需的资源远少于 Windows 98 或 Windows NT/2000。例如，工作站可以用 486-100MHz 处理器和 16MB 内存组成。这种系统将能够运行 Windows（图形界面）、访问互联网、运行图形化浏览器，同时作为网络运行。
 
 然而，普通用户会想要更强大的系统。一个体面的 Linux 工作站需要以下配置：
@@ -898,52 +883,27 @@ Red Hat Linux 7.1 提供了若干新功能或改进特性，可用于利用高�
 
 有了这样的系统，你将拥有更足够的资源将 Linux 作为桌面操作系统运行。你不需要去购买最新的、功能齐全的 1.7GHz Pentium IV 系统来让 Linux 以体面的速度运行。事实上，你可能希望避免最新的硬件，特别是如果它们在过去几周内刚刚发布。更多信息，请参见本章稍后的关于硬件兼容性的讨论。
 
-## 最小化 Linux 系统
-（前文略）
-
-## 最小化 Linux 系统
-
 由于这些限制，一台机器仍然可以：
+
 - 运行 Windows（图形界面）。
 - 它的性能将受内存限制。
 - 它的能够运行的程序数量受内存限制。
 - 作为 DNS 服务器（域名服务，帮助将 www.yahoo.com 转换为 [IP] 地址）。
 
-事实上，Linux 比 DOS 提供了对旧硬件更好的利用方式。如果你想运行最小化 Linux，请参考 http://www.linuxdoc.org/HowTO/Memory。
-
-## 最小化 Linux 系统
-（前文略）
-
-## 最小化 Linux 系统
-
-由于这些限制，一台机器仍然可以：
-- 运行 Windows（图形界面）。
-- 它的性能将受内存限制。
-- 它的能够运行的程序数量受内存限制。
-- 作为 DNS 服务器（域名服务，帮助将 www.yahoo.com 转换为 [IP] 地址）。
-
-事实上，Linux 比 DOS 提供了对旧硬件更好的利用方式。如果你想运行最小化 Linux，请参考 http://www.linuxdoc.org/HowTO/Memory。
-
-
-
-
+事实上，Linux 比 DOS 提供了对旧硬件更好的利用方式。如果你想运行最小化 Linux，请参考 `http://www.linuxdoc.org/HowTO/Memory`。
 
 ## 额外奖励
 
 当然，在如今的计算环境中，你可能希望将 PC 的功能扩展到多媒体和互联网等领域。有几个插件可以极大增强任何 Linux 系统，你应该将它们视为完善你工作站的一种：
 
 - **CD-ROM 驱动器** 如果你打算安装 IDE/ATAPI CD-ROM 驱动器，或者如果预算允许，安装 SCSI CD-ROM 驱动器。通常情况下，最好避免使用自带接口卡或直接连接到声卡特殊接口的专有 CD-ROM 驱动器。CD-ROM 驱动器在 Linux 中的性能通常差且难以配置。
-
 - **声卡** Linux 支持大多数兼容 Sound Blaster 的声卡；请查看本章的硬件兼容性部分。
-
 - **调制解调器** 在速度方面，规则与 Windows 相同：最好获取尽可能快的调制解调器，并以最高速度连接到你的互联网服务提供商（ISP）。如果你的 ISP 无法提供 56Kbps 的连接，你可能不需要 56Kbps 的调制解调器。）不过有两点注意事项：第一，在 Linux 中选择外部调制解调器通常是明智的。对于内部 ISDN 调制解调器尤其如此，因为 Linux 对内部 ISDN 调制解调器的支持有限。外部调制解调器（ISDN 或模拟信号）的优势是更容易配置，并提供外部指示，以便你更容易地调试配置问题。第二，通常最好避免使用“winmodems”，即使用 Windows 驱动程序库文件的调制解调器。Linux 只能毫无困难地支持少数 winmodems。
 
 虽然 CD-ROM、声卡和调制解调器在较新的 PC 上是标准设备，但如果你计划将 Linux 作为内网上的小型服务器使用，你应该考虑以下插件：
 
 - **SCSI 卡** 对于硬盘而言，它提供的性能比 IDE 接口好得多，并且对多个设备有更好的支持。如果你计划运行任何类型的多用户系统（例如文件服务器、Web 服务器或应用程序服务器），你真的需要使用 SCSI 卡。在选择 SCSI 卡之前，务必咨询硬件兼容性部分，如果可能的话，选择支持 Ultra-Wide SCSI 的显卡。
-
 - **SCSI 硬盘** SCSI 卡的一个功能是可以使用更快的 SCSI 驱动器。如果可能，请使用 Ultra-Wide SCSI 驱动器以获得最佳性能。你可能希望考虑多个磁盘驱动器。例如，如果你估计用户数据以及操作系统和所有已安装应用程序需要 8GB 空间，你可能想考虑 4GB 的驱动器（一个用于用户数据，另一个用于系统和软件）。通过将软件和数据分离，你可能会发现性能有所提高，因为不需要同时访问同一个磁盘。
-
 - **磁带机** 如果你计划运行服务器，你将需要备份以确保你的数据不受系统故障和其他灾难的侵害。虽然可以使用连接到软磁盘总线的某些磁带机，但你会发现如果买得起，选择 SCSI 磁带机会让生活轻松得多。它们更快，而且受 Linux 的支持更好。
 
 ## 检查硬件兼容性
@@ -954,11 +914,12 @@ Red Hat Linux 7.1 提供了若干新功能或改进特性，可用于利用高�
 
 虽然大多数硬件以某种方式得到了 Linux 支持，但在安装 Linux 或为基于 Linux 的系统购买新硬件之前，做一些研究是明智的。你可以尝试：
 
-- 尝试在 hardware.redhat.com 查看 Red Hat 硬件兼容列表。它包含了最新 Red Hat 发行版兼容硬件的可搜索数据库。
+- 尝试在 `hardware.redhat.com` 查看 Red Hat 硬件兼容列表。它包含了最新 Red Hat 发行版兼容硬件的可搜索数据库。
+- 参考 `Linux Hardware Compatibility HOWTO`。这份由 Patrick Reijnen 编写的文档包含了详尽的已知兼容 Linux 的硬件列表、不兼容 Linux 的硬件列表以及与这两类硬件相关的问题。如果你购买了获得此 HOWTO 指南批准的硬件，你的生活将变得更容易。你可以在 `http://www.linuxdoc.org/HOWTO/Hardware-HOWTO.html` 该指南的最新版本。
 
-- 参考 `Linux Hardware Compatibility HOWTO`。这份由 Patrick Reijnen 编写的文档包含了详尽的已知兼容 Linux 的硬件列表、不兼容 Linux 的硬件列表以及与这两类硬件相关的问题。如果你购买了获得此 HOWTO 指南批准的硬件，你的生活将变得更容易。你可以在 http://www.linuxdoc.org/HOWTO/Hardware-HOWTO.html 该指南的最新版本。
 
-- 参考 comp.os.linux.hardware 新组。这是获取与 Linux 相关的硬件问题的良好来源。如果你不确定打算购买的硬件是否明智，可以在组里发一个问题，询问任何人对相关硬件的经验。你通常会发现其他人已经尝试过你正在考虑的内容，他们的集体智慧是做出明智购买决策的宝贵资源。或者，可以在 http://groups.google.com 搜索新闻组存档。
+
+- 参考 `comp.os.linux.hardware` 新组。这是获取与 Linux 相关的硬件问题的良好来源。如果你不确定打算购买的硬件是否明智，可以在组里发一个问题，询问任何人对相关硬件的经验。你通常会发现其他人已经尝试过你正在考虑的内容，他们的集体智慧是做出明智购买决策的宝贵资源。或者，可以在 `http://groups.google.com` 搜索新闻组存档。
 
 - 尝试在购买前对硬件进行评估。如果你正在考虑从经常使用的供应商处批量购买硬件，可能可以在购买前借用硬件进行 Linux 测试。这当然是确保硬件能够运行的唯一方法。
 
@@ -971,9 +932,13 @@ Red Hat Linux 7.1 提供了若干新功能或改进特性，可用于利用高�
 如果你在没有图形界面的情况下安装 Linux，可能对任何显卡都不会遇到困难。然而，使用 X Windows 时你需要注意以下点：
 
 - 显卡的厂商和型号
+
 - 显卡使用的视频芯片组（有时 X Windows 可能不对芯片组提供显式支持。）
+
 - 显卡显存大小
+
 - 显卡时钟类型（如果有；许多显卡没有时钟。）
+
 - 显卡的 RAMDAC 类型（如果有；许多显卡没有 RAMDAC。）
 
 ### 声卡
@@ -981,8 +946,11 @@ Red Hat Linux 7.1 提供了若干新功能或改进特性，可用于利用高�
 声卡需要你提供非常具体的信息才能使其工作。以下信息对大多数声卡至关重要：
 
 - 显卡的厂商和型号
+
 - 声卡的 IRQ
+
 - 声卡的 I/O 地址
+
 - 声卡的 DMA 地址
 
 你可能需要使用跳线帽或 DIP 拨开关手动设置 IRQ、I/O 地址和 DMA 地址。根据你的显卡，可能并不需要所有这些信息。请参考显卡的文档。
@@ -992,9 +960,13 @@ Red Hat Linux 7.1 提供了若干新功能或改进特性，可用于利用高�
 与你的显卡一样，记录显示器的技术规格对于使其在 X Windows 中优化工作非常重要。如果你没有这些信息，或者使用了错误的信息，可能会损坏显示器。请在查阅显示器文档后记录以下规格：
 
 - 显示器的厂商和型号
+
 - 显示器的最高分辨率
+
 - 显示器在最高分辨率下的最高刷新率
+
 - 显示器的水平同步范围
+
 - 显示器的垂直同步范围
 
 ### 鼠标
@@ -1002,8 +974,11 @@ Red Hat Linux 7.1 提供了若干新功能或改进特性，可用于利用高�
 为了让你的鼠标在 Linux 的字符控制模式和 X Windows 中都能工作，你需要记录以下内容：
 
 - 鼠标的厂商和型号
+
 - 鼠标按钮数量
+
 - 鼠标协议（参考鼠标文档；常见协议包括微软协议、USB、Mouse Systems 协议和 PS/2 协议。）
+
 - 鼠标连接到计算机的端口（在 DOS 术语中，这通常是 COM1:, COM2: 或 PS/2 鼠标端口。）
 
 ### 硬盘
@@ -1012,13 +987,12 @@ Red Hat Linux 7.1 提供了若干新功能或改进特性，可用于利用高�
 
 - 硬盘的总存储容量
 
-
-
-
 # 第 3 章 • 为安装 Red Hat Linux 7.1 做准备
 
 - 柱数
+
 - 磁头数
+
 - 每道的扇区数
 
 通常情况下，你不需要提供这些信息，因为 Linux 在系统启动时会自动检测这些信息。
@@ -1028,7 +1002,9 @@ Red Hat Linux 7.1 提供了若干新功能或改进特性，可用于利用高�
 如果你有一个调制调器，你应该记录以下信息：
 
 - 调制调器的厂商和型号
+
 - 调制调器的速度
+
 - 你的外部调制调器连接的端口，或你配置内部调制调器使用的端口（在 DOS 术语中，通常为 COM1: 或 COM2..），对于内部调制调器，还包括 IRQ、I/O 地址以及端口。
 
 ## 网卡
@@ -1036,9 +1012,13 @@ Red Hat Linux 7.1 提供了若干新功能或改进特性，可用于利用高�
 如果你有一块网卡，你应该记录以下信息：
 
 - 网卡的厂商和型号
+
 - 网卡的 IRQ(s)
+
 - 网卡的 I/O 地址(es)
+
 - 特殊驱动程序（可用）
+
 - 与 Novell 1000 或 2000 网卡驱动程序的兼容性
 
 某些网卡包含带有 Linux 驱动程序的驱动盘。或者，如果你的网卡兼容 Novell 1000 或 2000 网卡驱动程序，你可能可以使用这些驱动程序在 Linux 上安装你的网卡。请咨询你的网卡文档获取更多信息。
@@ -1049,9 +1029,9 @@ Red Hat Linux 7.1 提供了若干新功能或改进特性，可用于利用高�
 
 ## 选择安装方法
 
-然而，Red Hat 7.1 基于 2.4.x 内核，允许几乎全范围的 USB 支持。如 http://www.qbik.ch/usb/devices 上的 Linux-USB 设备数据库所示，从调制调器到摄像头，每种类型的 USB 设备都可以在某种程度上获得 USB 支持。
+然而，Red Hat 7.1 基于 2.4.x 内核，允许几乎全范围的 USB 支持。如 `http://www.qbik.ch/usb/devices` 上的 Linux-USB 设备数据库所示，从调制调器到摄像头，每种类型的 USB 设备都可以在某种程度上获得 USB 支持。
 
-如果你对“热插拔”感兴趣（即可以在计算机运行时安装 USB 设备），请参考 Linux 热插拔网站：http://nlinux-hotplug.sourceforge.net。该网站包含以 rpm 格式下载的脚本，专为 Red Hat Linux 设计。
+如果你对“热插拔”感兴趣（即可以在计算机运行时安装 USB 设备），请参考 Linux 热插拔网站：`http://nlinux-hotplug.sourceforge.net`。该网站包含以 rpm 格式下载的脚本，专为 Red Hat Linux 设计。
 
 关于 Linux USB 的大量工作正在进行中。如果你无法在你的发行版上安装 USB 硬件……
 
@@ -1085,34 +1065,35 @@ Red Hat Linux 7.1 提供了若干新功能或改进特性，可用于利用高�
 
 如果你需要启动磁盘和任何辅助磁盘，你可以在大多数 Linux 安装 CD-ROM 上通过 DOS 或 Windows DOS 提示符构建它们。
 
-
-
-
 ## 磁盘整理
 
 在 Windows 98 下对磁盘进行整理非常简单。只需按照以下步骤操作：
 
 - 1. 备份驱动器上的数据。
+
 - 2. 在“我的电脑”或“Windows 资源管理器”中，右键点击“驱动器”图标。
+
 - 3. 从下拉菜单选择“属性”。
+
 - 4. 选择属性窗口顶部的“工具”选项卡。
+
 - 5. 点击“立即整理”按钮。等待整理完成后，然后继续下一个章节。
 
 ## 磁盘分区
 
-一旦你对磁盘进行了整理并有了足够的空间安装 Linux，你就需要从空闲空间创建一个新分区。大多数 Linux 发行版（包括 Red Hat Linux 7.1）都带有一个名为 fips.exe 的免费 DOS 工具，它位于 `dosutil` 子目录或该目录的某个子目录下。对于本书附带的 Red Hat 版本，你可以在 `\dosutils\fips20` 子目录中找到该程序。
+一旦你对磁盘进行了整理并有了足够的空间安装 Linux，你就需要从空闲空间创建一个新分区。大多数 Linux 发行版（包括 Red Hat Linux 7.1）都带有一个名为 `fips.exe` 的免费 DOS 工具，它位于 `dosutil` 子目录或该目录的某个子目录下。对于本书附带的 Red Hat 版本，你可以在 `\dosutils\fips20` 子目录中找到该程序。
 
-> 警告 Red Hat 不支持 fips。它受通用公共许可协议（GPL）保护，这意味着如果你正确使用它但它损坏了你的数据，fips 的开发者不承担任何责任。虽然我使用过多次 fips 从未出现过问题，但请注意：风险自担。还有其他商业性的分区拆分程序，包括 System Commander (www.com.com) 和 Partition Magic (www.powerquest.com)。
+> 警告 Red Hat 不支持 `fips`。它受通用公共许可协议（GPL）保护，这意味着如果你正确使用它但它损坏了你的数据，`fips` 的开发者不承担任何责任。虽然我使用过多次 `fips` 从未出现过问题，但请注意：风险自担。还有其他商业性的分区拆分程序，包括 System Commander (`www.com.com`) 和 Partition Magic (`www.powerquest.com`)。
 
 此工具允许你调整现有分区的大小，通过删除分区末尾的空空间来缩小分区。这些空空间将被转换为另一个分区。
 
-要使用 fips.exe，你首先需要进入 MS-DOS 模式。要执行此操作，从开始菜单选择“关机”，并选择“以 MS-DOS 模式重启”。Windows 98 将关闭并切换到全屏 DOS 环境。
+要使用 `fips.exe`，你首先需要进入 MS-DOS 模式。要执行此操作，从开始菜单选择“关机”，并选择“以 MS-DOS 模式重启”。Windows 98 将关闭并切换到全屏 DOS 环境。
 
 ## 第 3 章 准备安装 Red Hat Linux 7.1
 
-> 警告这是一个关键步骤。在 Windows 98 运行时，你不应该在 DOS 窗口或全屏 DOS 环境中使用 fips.exe 程序。与 DOS 不同，Windows 95 及更高版本允许多个程序同时运行，因此其他程序可能会访问正在被 fips.exe 处理的分区。如果发生这种情况，你的数据可能会损坏且无法恢复。
+> 警告这是一个关键步骤。在 Windows 98 运行时，你不应该在 DOS 窗口或全屏 DOS 环境中使用 `fips.exe` 程序。与 DOS 不同，Windows 95 及更高版本允许多个程序同时运行，因此其他程序可能会访问正在被 `fips.exe` 处理的分区。如果发生这种情况，你的数据可能会损坏且无法恢复。
 
-进入 DOS 模式后，从你的 CD-ROM 运行 fips.exe。如果你的 CD-ROM 驱动器是 E，请使用命令：
+进入 DOS 模式后，从你的 CD-ROM 运行 `fips.exe`。如果你的 CD-ROM 驱动器是 E，请使用命令：
 
 ```
 c:\e\dosit1\fips20\fips.exe
@@ -1121,8 +1102,11 @@ c:\e\dosit1\fips20\fips.exe
 程序首先显示你的分区表。在之前的双分区驱动器示例中，它看起来像下面：
 
 | 分区 | 可启动 | 头/道/扇区 | 系统 | 头/道/扇区 | 扇区数 | MB |
+
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
 | 1 | yes | | 1 | 0 | 06h | 254 222 | 63 | 63 | 3582432 | 1749 |
+
 | 2 | no | | 023 | 1 | 05h | 254 286 | 63 | 3582495 | 1028160 | 502 |
 
 在系统中识别分区很容易，因为 C 盘是分区 1，D 盘是分区 2，依此类推。如果你遇到困难，可以使用最后一列的兆字节（MB）分区大小来帮助。
@@ -1146,11 +1130,11 @@ Physical drive number: 80h
 Signature: 29h
 ```
 
-假设在你所选择的分区末尾有空空间，系统会询问你使用哪个磁盘磁道作为切割和分割分区的线。你可以使用方向键更改选定的磁道。在此操作过程中，将显示以兆字节为单位的分区大小，以便你确保新分区足够大。fips exe 程序负责确保你不会选择一个会导致当前分区中的部分数据留在新分区上的分割磁道。
+假设在你所选择的分区末尾有空空间，系统会询问你使用哪个磁盘磁道作为切割和分割分区的线。你可以使用方向键更改选定的磁道。在此操作过程中，将显示以兆字节为单位的分区大小，以便你确保新分区足够大。`fips exe` 程序负责确保你不会选择一个会导致当前分区中的部分数据留在新分区上的分割磁道。
 
 最后，会出现一个修订后的分区表，现在系统要求你确认一切看起来都正常。在这个示例中，你应该有三个分区，第三个是你的新分区，第二个分区的大小比原来小了。
 
-> 为了防止错误，请从 Linux 安装 CD-ROM 中将 fips.exe、restorb.exe 和 errors.txt 复制到可启动的软盘中。这些文件通常位于 `asutils` 子目录下。当系统询问你是否想将引导扇区和根扇区的备份副本写入软盘时，回答 Yes。然后，如果你需要从错误中恢复，可以从软盘启动并运行 restorb.exe 来恢复原始引导扇区和根扇区。
+> 为了防止错误，请从 Linux 安装 CD-ROM 中将 `fips.exe`、`restorb.exe` 和 `errors.txt` 复制到可启动的软盘中。这些文件通常位于 `asutils` 子目录下。当系统询问你是否想将引导扇区和根扇区的备份副本写入软盘时，回答 Yes。然后，如果你需要从错误中恢复，可以从软盘启动并运行 `restorb.exe` 来恢复原始引导扇区和根扇区。
 
 ## 展望
 
@@ -1158,7 +1142,7 @@ Signature: 29h
 
 在第 4 章“安装 Red Hat Linux 7.1”中，你将学习从 CD-ROM 安装的方法。在第 5 章“特殊安装”中，你将介绍特殊情况，例如在多个驱动上安装。
 
-## 第 4 章 安装 Red Hat Linux 7.1
+# 第 4 章 安装 Red Hat Linux 7.1
 
 ## 开始安装
 
@@ -1167,6 +1151,7 @@ Signature: 29h
 为了执行此操作，你需要用于启动的介质。如上一章所述，你有两个选择：
 
 - 直接从 CD-ROM 启动。这需要你的计算机 BIOS 支持从 CD-ROM 启动。
+
 - 从一组启动磁盘启动然后从 CD-ROM 安装。
 
 无论哪种情况，插入启动磁盘（软盘或 CD-ROM）并启动计算机。当计算机从 Red Hat Linux 7.1 软盘或 CD-ROM 启动时，将看到初始欢迎界面，如图 4.1 所示。
@@ -1174,24 +1159,22 @@ Signature: 29h
 这里有主要的安装选项：
 
 - 按回车启动正常的图形化安装过程。
+
 - 虽然菜单上没有显示，但你可以输入启动参数允许安装软件检测某些冷门硬件，然后按回车启动正常安装过程。（大多数硬件在安装期间会自动检测。）
-- 输入 text 并回车进入文本模式。（在文本模式下，安装将在图形要求较低的界面开始。你们中的一些人可能熟悉 Red Hat Linux 6.0 及以下版本的文本模式界面。）
+
+- 输入 `text` 并回车进入文本模式。（在文本模式下，安装将在图形要求较低的界面开始。你们中的一些人可能熟悉 Red Hat Linux 6.0 及以下版本的文本模式界面。）
 
 注意
 
 与上述描述的文本模式相比，我描述的另外两种安装模式更接近正常的图形化安装过程。
 
+输入 `nofb` 并按回车键以无帧缓冲（no frame buffer）模式启动。在此模式下，图形化安装将启动，但不会使用加速显卡相关的帧缓冲。如果你的显卡不支持 2D 或 3D 加速图形，那么无帧缓冲模式可能是一个可行的选项。
 
+输入 `expert` 并按回车键以专家模式启动。（在专家模式下，将不会进行硬件检测，你需要在安装期间为你的所有硬件配置参数。只有当你的硬件无法被正确检测且你对参数有足够的把握时，才应选择此选项。）
 
+输入 `linux rescue` 并按回车键进入通用的 Linux 救援磁盘启动。这可以帮助你从某些系统故障中恢复。它允许你以 root 用户身份访问计算机，并使用基础编辑器和工具来纠正损坏或丢失的配置文件。通常情况下，你应该创建一个包含关键配置文件的专用软盘；如果丢失了该软盘，救援模式可能是一个选项。
 
-
-输入 **nofb** 并按回车键以无帧缓冲（no frame buffer）模式启动。在此模式下，图形化安装将启动，但不会使用加速显卡相关的帧缓冲。如果你的显卡不支持 2D 或 3D 加速图形，那么无帧缓冲模式可能是一个可行的选项。
-
-输入 **expert** 并按回车键以专家模式启动。（在专家模式下，将不会进行硬件检测，你需要在安装期间为你的所有硬件配置参数。只有当你的硬件无法被正确检测且你对参数有足够的把握时，才应选择此选项。）
-
-输入 **linux rescue** 并按回车键进入通用的 Linux 救援磁盘启动。这可以帮助你从某些系统故障中恢复。它允许你以 root 用户身份访问计算机，并使用基础编辑器和工具来纠正损坏或丢失的配置文件。通常情况下，你应该创建一个包含关键配置文件的专用软盘；如果丢失了该软盘，救援模式可能是一个选项。
-
-`dd` 选项并不是一个独立的选项，而是启动普通图形化安装过程的另一种方式。如果你输入 `linux dd`，安装程序会提示你插入特殊设备的驱动器磁盘。典型的驱动器磁盘可以从安装 CD-ROM 上 images 目录下的 `drivers.img` 文件创建。
+`dd` 选项并不是一个独立的选项，而是启动普通图形化安装过程的另一种方式。如果你输入 `linux dd`，安装程序会提示你插入特殊设备的驱动器磁盘。典型的驱动器磁盘可以从安装 CD-ROM 上 `images` 目录下的 `drivers.img` 文件创建。
 
 > 注意
 
@@ -1214,7 +1197,9 @@ Signature: 29h
 此屏幕包含以下元素：
 
 - 文本输入框（IP 地址、子网掩码等）
+
 - 复选框（使用 DHCP 配置和启动时激活）
+
 - 按钮（隐藏帮助、上一步和下一步）
 
 你可以使用 Tab 键（或向后）在这些元素之间移动，也可以使用鼠标。方向键也可以用于在字段之间移动。
@@ -1238,16 +1223,26 @@ Signature: 29h
 表 4.1：典型键盘模型
 
 | 模型 | 描述 |
+
 |---|---|
+
 | Dell 101-key PC | 用于某些 Dell PC 键盘 |
+
 | Japanese 106-key | 带有日语字符 |
+
 | Microsoft Natural | 微软自然（分体式）键盘 |
+
 | Winbook Model XPS5 | Winbook 特殊型号 XPS5 键盘 |
 
 表 4.2：典型键盘布局
 
 | 布局 | 描述 |
+
 |---|---|
+
+
+
+
 | Brazilian | 巴西葡萄牙语键盘 |
 | Canadian | 加拿大英语键盘 |
 | German | 德语键盘 |
@@ -1259,19 +1254,7 @@ Signature: 29h
 
 如果你有特殊键盘且模型列表中没有看到它，默认为通用 104 键 PC。布局通常对应于不同的语言或方言（例如，法语或瑞士法语）。在美国，正确的布局几乎都是美式英语布局。其他常见的模型和布局包括表 4.1 和表 4.2 中列出的。
 
-如果你有特殊键盘且模型列表中没有看到它，默认为通用 104 键 PC。布局通常对应于不同的语言或方言（例如，法语或瑞士法语）。在美国，正确的布局几乎都是美式英语布局。其他常见的模型和布局包括表 4.1 和表 4.2 中列出的。
-
-如果你有特殊键盘且模型列表中没有看到它，默认为通用 104 键 PC。布局通常对应于不同的语言或方言（例如，法语或瑞士法语）。在美国，正确的布局几乎都是美式英语布局。其他常见的模型和布局包括表 4.1 和表 4.2 中列出的。
-
-如果你有特殊键盘且模型列表中没有看到它，默认为通用 104 键 PC。布局通常对应于不同的语言或方言（例如，法语或瑞士法语）。在美国，正确的布局几乎都是美式英语布局。其他常见的模型和布局包括表 4.1 和表 4.2 中列出的。
-
-如果你有特殊键盘且模型列表中没有看到它，默认为通用 104 键 PC。布局通常对应于不同的语言或方言（例如，法语或瑞士法语）。在美国，正确的布局几乎都是美式英语布局。其他常见的模型和布局包括表 4.1 和表 4.2 中列出的。
-
-如果你有特殊键盘且模型列表中没有看到它，Linux 7.1 会尝试检测它。在你配置鼠标后，你将看到一个列表供你选择。如果你有特殊键盘且模型列表中没有看到它，默认为通用 104 键 PC。布局通常对应于不同的语言或方言（例如，法语或瑞士法语）。在美国，正确的布局几乎都是美式英语布局。其他常见的模型和布局包括表 4.1 和表 4.2 中列出的。
-
-如果你有特殊键盘且模型列表中没有看到它，默认为通用 104 键 PC。布局通常对应于不同的语言或方言（例如，法语或瑞士法语）。在美国，正确的布局几乎都是美式英语布局。其他常见的模型和布局包括表 4.1 和表 4.2 中列出的。
-
-（注：原文中此处存在大量重复的段落，已根据要求完成翻译并保留了最后一段的逻辑内容）
+如果你有特殊键盘且模型列表中没有看到它，Linux 7.1 会尝试检测它。在你配置鼠标后，你将看到一个列表供你选择。
 
 ## 安装还是升级？
 
@@ -1294,17 +1277,14 @@ Signature: 29h
 
 假设你的系统中只有一个驱动器，如第 3 章“准备安装 Red Hat Linux 7.1”所示——你已使用其中描述的技术创建了空闲区域（最好大于 1GB），并且该空间现在可以使用。
 
-你遇到的第一个问题是想使用哪种工具来设置分区。Red Hat Linux 中的两个选择是 Druid 和 fdisk。
-
-
-
-
+你遇到的第一个问题是想使用哪种工具来设置分区。Red Hat Linux 中的两个选择是 Druid 和 `fdisk`。
 
 ## 警告
 
 如果你不知道自己在做什么，磁盘可能会导致你丢失所有数据。此外，Linux 磁盘工具与 MS-DOS 磁盘工具不同，它包含大量的分区，正如第 5 章所讨论的。为了简化这一过程，Red Linux 7.1 提供了自己的磁盘分区管理工具，称为 Disk Druid。本节重点介绍使用 Disk Druid，因为它为初接触 Linux 环境的用户简化了初始安装过程。如果你选择 Disk Druid 按钮，将出现 Disk Druid 主界面，如图 4.4 所示。
 
 ## 图 4.4:
+
 Disk Druid 主界面
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_93_0.png)
@@ -1315,17 +1295,17 @@ Disk Druid 主界面
 
 **挂载点（Mount Point）** 表示分区在你的 Linux 目录结构中出现的位置。Linux 目录都显示为根目录的子目录。根目录是 `/`，所有子目录都以 `/` 开始，例如 `/home`、`/opt` 和 `/usr/X11R`。你至少需要有一个挂载为 `/` 的分区和一个交换分区（swap）。如果你选择附加分区挂载为子目录，这将你的 Linux 发行版分散到额外的目录。例如，如果你将分区挂载为 `/usr`，则存储在该子目录下的任何内容都存储在 `/usr` 分区上，而所有其他数据都在根挂载（`/`）分区上。如果你想限制或专门某些空间，可以在限制的空间内挂载该目录。Red Hat 标准顶层目录的主要角色存储如下：
 
-- /bin 标准系统实用程序存储在此。
-- /boot 内核、引导加载程序、内存映射和模块详细信息存储在此。通常设置在单独的分区中。
-- /dev 设备文件存储在此。
-- /home 用户的家目录存储在此。
-- /mnt 临时挂载的文件系统（如 `/mnt/cdrom` 和 `/mnt/floppy`）通常存储在此。
-- /opt 可选安装软件根存储在此。
-- /root root 用户的家目录。不要将其与根挂载（`/`）分区混淆。
-- /sbin 标准系统管理文件存储在此。通常，这些文件应仅允许 root 用户访问。
-- /usr 额外的系统软件和管理工具存储在此。
-- /var 日志文件和打印池存储在此。在 Web 服务器上，通常在限制的空间内单独挂载，因为来自网站的日志文件很容易挤满该 Linux 计算机上的任何其他信息。
-- /etc 管理文件和配置文件包含在此。以前位于此目录中的其他命令应移动到 `/bin` 或 `/sbin`。
+- `/bin` 标准系统实用程序存储在此。
+- `/boot` 内核、引导加载程序、内存映射和模块详细信息存储在此。通常设置在单独的分区中。
+- `/dev` 设备文件存储在此。
+- `/home` 用户的家目录存储在此。
+- `/mnt` 临时挂载的文件系统（如 `/mnt/cdrom` 和 `/mnt/floppy`）通常存储在此。
+- `/opt` 可选安装软件根存储在此。
+- `/root` root 用户的家目录。不要将其与根挂载（`/`）分区混淆。
+- `/sbin` 标准系统管理文件存储在此。通常，这些文件应仅允许 root 用户访问。
+- `/usr` 额外的系统软件和管理工具存储在此。
+- `/var` 日志文件和打印池存储在此。在 Web 服务器上，通常在限制的空间内单独挂载，因为来自网站的日志文件很容易挤满该 Linux 计算机上的任何其他信息。
+- `/etc` 管理文件和配置文件包含在此。以前位于此目录中的其他命令应移动到 `/bin` 或 `/sbin`。
 
 **设备（Device）** 表示每个分区的设备名称。对于 IDE 磁盘，驱动器标记为 `hdx`，其中 `x` 是指定驱动器的字母（a 表示主盘，b 表示主从盘，c 表示从主盘，d 表示从从盘）。因此，如果你有一个磁盘 `hda`。SCSI 磁盘标记为 `sdx`，其中 `x` 指定驱动器。磁盘上的分区从 `hda1` 开始连续编号。通常，分区 1 到 4 是主分区，5 和 6 代表许多 DOS 系统中常见的逻辑分区。在图 4.4 中，你可以看到与引导目录（hda1）、根目录（hda5）和交换分区（hda6）关联的 Linux 分区。
 
@@ -1351,7 +1331,7 @@ Disk Druid 主界面
 
 ## 为安装配置系统
 
-## 添加新分区
+### 添加新分区
 
 要添加新分区，只需按下 `Add` 按钮。会出现 Disk Druid 屏幕请求以下信息：
 
@@ -1361,31 +1341,29 @@ Disk Druid 主界面
 - 分区类型（从列表中选择）
 - 在哪个驱动器上创建分区
 
-## 编辑分区
+### 编辑分区
 
 你可以通过从当前分区列表中选择它们并点击 `Edit` 按钮来编辑现有分区。这将打开与添加新分区时类似的窗口，只是这里所有的字段都已填充以匹配你正在编辑的分区的设置。
 
-
-
-
 如果你有一个单独的 DOS 分区，例如，你可以将其挂载为 `/dos`。如果你有两个 DOS 分区（在 DOS 和 Windows 中对应 C 盘和 D 盘），你可以分别选择 `/dsc` 和 `/dsd`(或 `/c` 和 `/d`) 作为挂载点。
 
-## 删除分区
+### 删除分区
 
 在创建 Linux 交换分区和根分区的过程中，如果你犯了错误（可能是交换分区太大，或者你的根分区太小），你可以删除这些分区然后重新添加它们。要执行此操作，请在当前分区列表中选择该分区并按下“Delete（删除）”按钮。
 
 > 警告
+>
 > 删除分区时务必小心。不要意外删除在你开始安装 Linux 之前就已经存在、且包含你想要保留的重要数据或软件的分区。
 
-## 重置
+### 重置
 
 如果在创建 Linux 分区的过程中你觉得需要重新开始，请点击“Reset（重置）”按钮。这会将分区表恢复到启动 Disk Druid 之前的状态。
 
-## 创建 RAID 设备
+### 创建 RAID 设备
 
 如果你正在将 Linux 设置为服务器，那么你正在为多个用户配置计算机。该服务器上的程序和数据将变得更加重要。你可以通过将数据分布在多个硬盘上来保护数据，这些硬盘被称为冗余磁盘阵列（RAID）。如果你设置了一系列 RAID 分区，然后可以使用“Make RAID Device（创建 RAID 设备）”选项将它们一起配置。
 
-## 继续
+### 继续
 
 一旦完成分区的创建和配置，你就可以继续了。你可以通过点击“Next（下一步）”按钮来实现。
 
@@ -1406,6 +1384,7 @@ LILO 是 Linux 引导加载程序。为了让系统正常启动，你需要配�
 接下来，如果你选择将 LILO 安装在硬盘上（你应该应该这样做），有两个位置：在主引导记录（MBR）上或启动分区的第一个扇区上。你应该将 LILO 安装在 MBR 上，除非你正在运行带有如 OS/2 或 Windows/2000 等带有引导加载程序的操作系统，或者你设置了如 Partition Magic 或 System Commander 等其他引导加载程序。如果你已经有了这些其他引导加载程序之一，你不需要这种方式的 LILO；因此，你应该将 LILO 安装在 Linux 启动分区上。
 
 > 警告
+>
 > 在此步骤中，你必须安装 LILO 或创建一个启动磁盘，以便启动你的 Linux 系统。强烈建议在初始安装期间安装 LILO。
 
 ## 图 4.5：
@@ -1456,9 +1435,6 @@ LILO 是 Linux 引导加载程序。为了让系统正常启动，你需要配�
 
 除非你熟悉这些选项并有充分的理由进行更改，否则请保持默认选择不变并继续。
 
-
-
-
 # 选择软件包
 
 现在，你的硬盘已经配置好，Linux 分区也已格式化，你准备好开始安装实际软件了。默认安装包含了所有必要的核心软件，但也提供了几个可选组件，包括图 4.6 所示的内容。
@@ -1476,6 +1452,9 @@ LILO 是 Linux 引导加载程序。为了让系统正常启动，你需要配�
 如果你有充足的磁盘空间（超过 3GB；4GB 为佳），请选择所有内容，以便获得完整的 Linux 安装。请注意图 4.6 底部显示的“总安装大小”（Total Install Size）。如果你的空间有限，请考虑至少安装以下组件：
 
 - 打印机支持（如果你没有打印机，则没有必要）
+
+
+
 - X Window 系统
 - GNOME
 - 邮件/WWW/新闻工具
@@ -1538,11 +1517,8 @@ Linux 允许你登录多次，即使在初始字符模式下。使用 Alt+F1 到
 
 如果这些任何特殊安装对你有用，请转到第 5 章。不过，如果你的系统启动正常，你已经准备好继续并学习 X Windows 了。跳到第 6 章“X Windows 概述”，并从那里开始。
 
-
-
-
-
 # 第五章
+
 ## 特殊安装方法
 
 * 从硬盘分区安装
@@ -1555,7 +1531,7 @@ Linux 允许你登录多次，即使在初始字符模式下。使用 Alt+F1 到
 
 此外，由于现在硬盘成本的降低，你可能有多个可用的分区或硬盘用于安装 Linux。在这些情况下，通过将 Linux 系统分布在多个分区和硬盘上，你可以最大限度地提高系统性能。
 
-最后，本章还将介绍如何使用 fdisk 程序代替 Disk Druid 来配置你的硬盘分区。fdisk 是所有 Linux 发行版的标准配置，而 Disk Druid 仅由 Red Hat Linux 提供。
+最后，本章还将介绍如何使用 `fdisk` 程序代替 Disk Druid 来配置你的硬盘分区。`fdisk` 是所有 Linux 发行版的标准配置，而 Disk Druid 仅由 Red Hat Linux 提供。
 
 ## 从硬盘分区安装
 
@@ -1627,11 +1603,8 @@ Linux 允许你登录多次，即使在初始字符模式下。使用 Alt+F1 到
 但如果你的交换分区位于独立的物理硬盘上，瓶颈就会减少：一个磁盘可以从磁盘读取数据到内存，而另一块磁盘可以完成将数据从内存移动到磁盘的过程。尽管计算机无法同时执行两条指令，但缓慢的磁盘操作分布在两个磁盘上这一事实，减少了 CPU 等待磁盘完成工作的时间。
 
 图 5.1：选择分区
+
 (img/2d9aa645b3d05a8ce06954a79484114_0.png)
-
-
-
-
 
 ## 将 Linux 分散到多个分区
 
@@ -1648,11 +1621,8 @@ Linux 允许你登录多次，即使在初始字符模式下。使用 Alt+F1 到
 
 - 如果你计划安装许多自己的软件（包括文字处理器、Web 浏览器和 Windows 模拟器等商业软件），你会发现其中大部分内容安装在 `/opt` 目录中。如果你的主 Linux 分区有足够的空间存放操作系统和用户数据，那么可以考虑将额外分区设置为 `/opt`。这将为你的所有应用程序提供一个独立区域，当你启动应用程序时，主系统可以空出来访问数据或运行系统实用程序以及 Linux 始终在执行的后台任务。
 - 如果你预计会有很多用户，或者计划在用户的家目录中存储大量数据，请考虑将你的额外分区挂载为 `/home`。这样，你可以单独监控用户的磁盘使用情况，而且当许多用户访问其数据而其他用户正尝试启动应用程序时，你将获得性能提升，因为这两个操作需要访问不同的磁盘分区。
-
 - 如果你发现单独一个分区都无法容纳完整的 Linux 安装，你可能希望选择一个较大的目录树，例如 `/usr/X1R6`（X Windows 目录树），并将其安装到单独的分区，以便你能够安装整个系统。
-
 - 虽然许多新包安装在 `/opt` 中，但如果你安装软件，你会发现 `/usr` 也可能很快填满，使其成为独立分区的良好选择。
-
 - 如果你将 Linux 作为繁忙的邮件服务器或高频多用户服务器，请考虑为 `/var` 分配单独分区，因为系统池队列和系统日志位于此目录，并且在这类服务器中增长非常迅速。
 
 ## 使用 fdisk 代替 Disk Druid
@@ -1675,7 +1645,7 @@ fdisk 欢迎界面
 
 本章中的 fdisk 图形是基于使用 Red Hat 安装启动 fdisk 的。如果你从标准的 Red Hat 安装界面进入 fdisk，你将看到与图 5.2 相同的内容。
 
-fdisk 使用简单的命令操作。要执行任务，最简单的命令是输入 `m` 并回车。如果 fdisk 需要额外信息，它会向你显示图 5.3 所示的帮助界面。这些字符会导致 fdisk 显示正在操作磁盘的分区表。
+`fdisk` 使用简单的命令操作。要执行任务，最简单的命令是输入 `m` 并回车。如果 `fdisk` 需要额外信息，它会向你显示图 5.3 所示的帮助界面。这些字符会导致 `fdisk` 显示正在操作磁盘的分区表。
 
 # 图 5.3：
 
@@ -1685,7 +1655,7 @@ fdisk 帮助界面
 
 ## 添加分区
 
-要在硬盘的现有空闲空间上添加新分区，请使用 `n` 命令。如图 5.5 所示，fdisk 会提示你分区类型。通常，使用 fdisk 时，你应该选择主分区。一旦选择了分区类型，就会为你的分区分配起始和结束扇区。
+要在硬盘的现有空闲空间上添加新分区，请使用 `n` 命令。如图 5.5 所示，`fdisk` 会提示你分区类型。通常，使用 `fdisk` 时，你应该选择主分区。一旦选择了分区类型，就会为你的分区分配起始和结束扇区。
 
 ```
 分区号 (1-4): 1
@@ -1700,7 +1670,7 @@ fdisk 帮助界面
 
 ## 修改分区类型
 
-默认情况下，fdisk 创建的所有分区都分配为 Linux 类型 (83)。要更改分区的类型，请使用 `t` 命令。fdisk 会提示要操作的分区，你可以像图 5.6 所示通过数字选择，然后提示你输入类型 ID。要查看类型列表，请在此处使用 `l` 命令以查看图 5.6 所示的列表。
+默认情况下，`fdisk` 创建的所有分区都分配为 Linux 类型 (83)。要更改分区的类型，请使用 `t` 命令。`fdisk` 会提示要操作的分区，你可以像图 5.6 所示通过数字选择，然后提示你输入类型 ID。要查看类型列表，请在此处使用 `l` 命令以查看图 5.6 所示的列表。
 
 # 图 5.6：
 
@@ -1713,26 +1683,38 @@ fdisk 帮助界面
 | 6 | XDNM | 64 Mobile |
 | 3 | XDNM | 64 Network |
 | 4 | FAT12 | 70 DiscSource |
+
+
+
 | 5 | Extended | 70 SpeedStor |
+
 | 7 | NTFS/NTFS | 30 Partition type |
+
 | 8 | AIX | 32 Partition 02/86 | 81 DOSBR |
+
 | 9 | AIX | 41 PPC Boot | 82 Old Mis |
+
 | 10 | boottable | 45 DNX.x | 83 LVM |
+
 | 5/2 Boot Main | 49 2nd part | 85 Linux hidden |
+
 | 6 | Win95 FAT32 (l-bf) | 52 Linux partition | e0 Linux Re., |
+
 | 7 | Win95 FAT16 (l-bf) | 53 Linux partition | eb f6 Red.fs |
+
 | 8 | WXFS FS (l-bf) | 54 Linux partition | de f9 Linux no. |
+
 | 10 | OPIS | 55 CP/PK | 90 f2 secondary |
+
 | 11 | Hidden | 60 Hidden DMX aux | 94 Ameeba BBT fd Linux auto |
+
 | 12 | Company diagnost | 62 UnTrackDM | 97 E-Drive fx Last auto |
+
 | 14 | Hidden FAT13 <5 | 65 Golden Home a0 BIOS/OS lx Step |
+
 | 14 | Hidden FAT16 | 56 Golden Home a9 IBM Thinkpad bi fi BBT |
 
 表 5.1 中所示的最常用分区类型。
-
-
-
-
 
 # 表 5.1: 常用分区类型
 
@@ -1784,7 +1766,6 @@ fdisk 帮助界面
 - 第 10 章：高级 GNOME 配置
 - 第 11 章：使用 KDE
 - 第 12 章：高级 X Windows 配置
-
 - 什么是 X Windows？
 - Microsoft Windows 对比 X Windows
 - X 服务器、窗口管理器和桌面环境
@@ -1830,6 +1811,7 @@ X Windows 环境引入的另一个概念是窗口化与接口的分离。在 X W
 注意图 6.1 中极简的风格。没有花哨的颜色背景，没有复杂的窗口边框或菜单控制，也没有其他构成完整 GUI 的功能。所有这些功能都由名为“窗口管理器”的第二个应用程序提供。图 6.2 显示了运行 fvwm 窗口管理器的完整 X Windows 桌面。注意窗口框、控制按钮、控制菜单以及任务栏和虚拟桌面系统。窗口管理器提供了所有这些内容。
 
 # 图 6.2:
+
 运行窗口管理器的 Windows 显示
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_129_0.png)
@@ -1848,10 +1830,6 @@ X Windows 环境引入的另一个概念是窗口化与接口的分离。在 X W
 
 （注：此部分原文仅有标题，翻译未提供具体正文）
 
-
-
-
-
 从基础窗口层，通过创建不同的窗口管理器，为 X Windows 创建多个界面成为可能。
 
 多个界面并不像微软 Windows 界面的某些自定义工具那样仅提供外观上的细微差异；相反，它们允许从窗口管理器到用户界面进行完全的重新设计。
@@ -1859,11 +1837,13 @@ X Windows 环境引入的另一个概念是窗口化与接口的分离。在 X W
 例如，图 6.3 显示了一个运行窗口管理器的示例窗口，其界面类似于 NeXT 操作系统的用户界面。与图 6.4 相比（后者在相同系统上运行并显示相同的应用程序），后者显示的用户界面不像任何流行的 PC 或 Macintosh 操作系统。
 
 # 图 6.3：
+
 Afterstep 窗口管理器
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_131_0.png)
 
 # 图 6.4：
+
 Lestif 窗口管理器
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_132_0.png)
@@ -1900,23 +1880,23 @@ X Windows 环境的另一个优势是它对窗口环境和界面的所有方面�
 
 # X 服务器、窗口管理器和桌面环境 97
 
-具有这些基本能力的多个 X 服务器脱颖而出。在 Linux 世界中有三个主要选择：XFree86、Metro-X 和 Accelerated-X。
+具有这些基本能力的多个 X 服务器脱颖而出。在 Linux 世界中有三个主要选择：`XFree86`、`Metro-X` 和 `Accelerated-X`。
 
 ## XFree86
 
-XFree86 是几乎所有非商业 Linux 发行版中的默认 X 服务器，因为它按照 Linux 相同的条款免费提供。提供完整的源代码，用户可以自由更改代码以满足其需求，并且任何人都可以重新分发。Red Hat Linux 7.1 带有 XFree86 4.0.3。每几个月发布一次小更新，可以从 XFree86 网站 http://www.xfree86.org 下载。
+`XFree86` 是几乎所有非商业 Linux 发行版中的默认 X 服务器，因为它按照 Linux 相同的条款免费提供。提供完整的源代码，用户可以自由更改代码以满足其需求，并且任何人都可以重新分发。Red Hat Linux 7.1 带有 `XFree86` 4.0.3。每几个月发布一次小更新，可以从 XFree86 网站 `http://www.xfree86.org` 下载。
 
-XFree86 Web 服务器设计用于为兼容 Intel 的 x86 PC 常用硬件，以及带有 Compaq Alpha、PowerPC、Sparc 和 MIPS 处理器的计算机提供广泛支持。虽然它的性能并不总是完美的，但 XFree86 是 Linux 和其他基于 Intel 的 Unix 变体中 X 服务器的规范，因此是大多数人熟悉的 X 服务器。
+`XFree86` Web 服务器设计用于为兼容 Intel 的 x86 PC 常用硬件，以及带有 Compaq Alpha、PowerPC、Sparc 和 MIPS 处理器的计算机提供广泛支持。虽然它的性能并不总是完美的，但 `XFree86` 是 Linux 和其他基于 Intel 的 Unix 变体中 X 服务器的规范，因此是大多数人熟悉的 X 服务器。
 
-虽然在写本文时对 MIPS 的支持还不完全，但根据 XFree86 项目网站，MIPS HOWTO http://os.sgi.com/mips/mips-howto.html 提供了大量的文档。
+虽然在写本文时对 MIPS 的支持还不完全，但根据 `XFree86` 项目网站，MIPS HOWTO `http://os.sgi.com/mips/mips-howto.html` 提供了大量的文档。
 
-XFree86 支持的流行显卡芯片组包括 Tseng 的 ET3000、4000 和 6000，Trident 全系列芯片，Cirrus Logic 大多数产品，Chips and Technologies 显卡芯片以及许多其他。你可以在 XFree86 项目的驱动页面 http://www.xfree86.org/4.0.3/Status.html 上找到支持硬件的完整列表。如果你使用的是更高版本，请相应替换 4.0.3。
+`XFree86` 支持的流行显卡芯片组包括 Tseng 的 ET3000、4000 和 6000，Trident 全系列芯片，Cirrus Logic 大多数产品，Chips and Technologies 显卡芯片以及许多其他。你可以在 `XFree86` 项目的驱动页面 `http://www.xfree86.org/4.0.3/Status.html` 上找到支持硬件的完整列表。如果你使用的是更高版本，请相应替换 4.0.3。
 
-虽然 XFree86 4 X 服务器在使 Linux 成为完整的免费的类 Unix 操作系统方面迈了一步，但它确实存在一些缺点，使其对企业或关键任务任务的吸引力较低。幸运的是，Red Hat Linux 7.1 有一个非常出实用程序，极大减轻了配置 XFree86 的工作。事实上，Free86 对笔记本显示的支持非常有限，一个错误可能意味着你的 LCD 损坏。如果你计划将笔记本作为 Linux 系统长期使用，查看 Laptop Accelerated-X 服务器支持的系统列表，看看你的设备是否在。
+虽然 `XFree86` 4 X 服务器在使 Linux 成为完整的免费的类 Unix 操作系统方面迈了一步，但它确实存在一些缺点，使其对企业或关键任务任务的吸引力较低。幸运的是，Red Hat Linux 7.1 有一个非常出实用程序，极大减轻了配置 `XFree86` 的工作。事实上，Free86 对笔记本显示的支持非常有限，一个错误可能意味着你的 LCD 损坏。如果你计划将笔记本作为 Linux 系统长期使用，查看 Laptop Accelerated-X 服务器支持的系统列表，看看你的设备是否在。
 
 ## XFree86 4 有什么新？
 
-XFree86 第 4 版本包含了早期版本中未发现的新功能。其中一些新功能包括：
+`XFree86` 第 4 版本包含了早期版本中未发现的新功能。其中一些新功能包括：
 
 - 统一的服务器架构设计
 - 支持多显卡
@@ -1924,139 +1904,138 @@ XFree86 第 4 版本包含了早期版本中未发现的新功能。其中一些
 - 3D 渲染
 - FreeType 支持
 
-通过统一的服务器，XFree86 4 不再依赖驱动库（或任何其他操作系统）。通过 GLX 扩展，XFree86 现在支持通过 Silicon Graphics 的 OpenGL 进行 3D 渲染。有了 FreeType 支持，XFree86 现在可以管理 TrueType 字体。
+通过统一的服务器，`XFree86` 4 不再依赖驱动库（或任何其他操作系统）。通过 GLX 扩展，`XFree86` 现在支持通过 Silicon Graphics 的 OpenGL 进行 3D 渲染。有了 FreeType 支持，`XFree86` 现在可以管理 TrueType 字体。
 
-XFree86 现在增强并增加了对更多平台的支持，包括基于 Alpha、MIPS 和 PowerPC 处理器的平台。预计它将为 Intel Itanium 64 位平台就绪。
+`XFree86` 现在增强并增加了对更多平台的支持，包括基于 Alpha、MIPS 和 PowerPC 处理器的平台。预计它将为 Intel Itanium 64 位平台就绪。
 
 ## 商业 X 服务器
 
-除了作为 Linux 完整免费解决方案部分的 XFree86 项目外，Linux 世界有两个领先的商业 X 服务器：Metro-X 和 Accelerated-X。这些产品的优势在于对各种图形芯片和卡的更广泛支持，并且通常充分利用这些芯片卡的加速特性。此外，Metro-X 和 Accelerated-X 提供了更智能的配置，通常可以在几分钟内安装并运行。
+除了作为 Linux 完整免费解决方案部分的 `XFree86` 项目外，Linux 世界有两个领先的商业 X 服务器：`Metro-X` 和 `Accelerated-X`。这些产品的优势在于对各种图形芯片和卡的更广泛支持，并且通常充分利用这些芯片卡的加速特性。此外，`Metro-X` 和 `Accelerated-X` 提供了更智能的配置，通常可以在几分钟内安装并运行。
 
 ## X 服务器、窗口管理器和桌面环境
 
-来自 Metro Link 的 Metro-X 是一种高性能 X 服务器选项。Metro-X 的许多优势包括一个设计良好的图形配置界面（如图 6.5 所示）、支持多头显示（标准配置支持四个不同的显示器）、支持某些品牌的触摸屏。关于 Metro-X 服务器的完整信息（包括支持的显卡）可以在 Metro Link 主页 http://www.metrolink.com/ 上找到。Metro-X Linux 版售价 39 美元。
+来自 Metro Link 的 `Metro-X` 是一种高性能 X 服务器选项。`Metro-X` 的许多优势包括一个设计良好的图形配置界面（如图 6.5 所示）、支持多头显示（标准配置支持四个不同的显示器）、支持某些品牌的触摸屏。关于 `Metro-X` 服务器的完整信息（包括支持的显卡）可以在 Metro Link 主页 `http://www.metrolink.com/` 上找到。`Metro-X` Linux 版售价 39 美元。
 
 # 图 6.5：
-Metro-X 的配置窗口
+
+`Metro-X` 的配置窗口
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_136_0.png)
 
-Accelerated-X X-Inside 实际上为 Linux 提供了一系列 X 服务器。这些包括 Linux 的 Accelerated-X 服务器、3D Accelerated-X 服务器、多笔记本 Accelerated-X 服务器以及专门的 Laptop Accelerated-X 服务器。笔记本 Accelerated-X 服务器意义重大，因为笔记本上的芯片组与桌面显卡不同，且 LCD 屏幕有自己的一套被桌面驱动程序忽略的 own。
+`Accelerated-X` X-Inside 实际上为 Linux 提供了一系列 X 服务器。这些包括 Linux 的 `Accelerated-X` 服务器、3D `Accelerated-X` 服务器、多笔记本 `Accelerated-X` 服务器以及专门的 Laptop `Accelerated-X` 服务器。笔记本 `Accelerated-X` 服务器意义重大，因为笔记本上的芯片组与桌面显卡不同，且 LCD 屏幕有自己的一套被桌面驱动程序忽略的 own。
 
+`Accelerated-X` 支持来自 60 多家制造商的 400 多块显卡。多头 X 服务器支持多达 16 个屏幕，并在每个屏幕上提供 `Accelerated-X` 的所有功能。
 
-
-
-Accelerated-X 支持来自 60 多家制造商的 400 多块显卡。多头 X 服务器支持多达 16 个屏幕，并在每个屏幕上提供 Accelerated-X 的所有功能。
-
-总体而言，X-Inside 的服务器价格具有竞争力。Accelerated-X 售价 99.95 美元，笔记本服务器为 149.95 美元，多头版本为 199.95 美元。详细信息可用 X-Inside 网站 http://www.xinside.com。
+总体而言，X-Inside 的服务器价格具有竞争力。`Accelerated-X` 售价 99.95 美元，笔记本服务器为 149.95 美元，多头版本为 199.95 美元。详细信息可用 X-Inside 网站 `http://www.xinside.com`。
 
 ## 窗口管理器
 
 窗口管理器完善了 X 服务器提供的优质 GUI 功能。除此外，窗口管理器包括窗口装饰（提供调整大小、移动、关闭和最小化窗口的方法）以及启动应用程序的机制（如桌面菜单、控制面板和按钮栏）。
 
-本节其余部分将要介绍 Linux 可用的某些主要窗口管理器，包括 FVWM、fwm95、twin、olwm 等。Red Hat Linux 7.1 的默认窗口管理器是 Sawfish，任何相对完整的安装都会包含 FVWM 和其他备用窗口管理器。
 
-X Windows 窗口管理器的概述可以访问 http://plig.org/xwinman/。
+
+本节其余部分将要介绍 Linux 可用的某些主要窗口管理器，包括 `FVWM`、`fwm95`、`twin`、`olwm` 等。`Red Hat Linux 7.1` 的默认窗口管理器是 `Sawfish`，任何相对完整的安装都会包含 `FVWM` 和其他备用窗口管理器。
+
+`X Windows` 窗口管理器的概述可以访问 `http://plig.org/xwinman/`。
 
 ## FVWM 和 fwm95
 
-在 20 世纪 90 年代中期，Linux 最常用的窗口管理器是 FVWM 或该包的变体。FVWM 这个名字很奇怪，因为没有人确定“F”代表什么。有人认为它代表“Feebble”（笨拙的）虚拟窗口管理器；另一些人认为它是“Fine”（精细的）虚拟窗口管理器；还有人认为“F”的含义早已被遗忘，而且对任何人都不重要（我倾向倾向于后者的观点）。
+在 20 世纪 90 年代中期，Linux 最常用的窗口管理器是 `FVWM` 或该包的变体。`FVWM` 这个名字很奇怪，因为没有人确定“F”代表什么。有人认为它代表“Feebble”（笨拙的）虚拟窗口管理器；另一些人认为它是“Fine”（精细的）虚拟窗口管理器；还有人认为“F”的含义早已被遗忘，而且对任何人都不重要（我倾向倾向于后者的观点）。
 
-FVWM 是一个轻量级窗口管理器，提供了一个灵活、可定制的窗口环境，设计看起来有点像 Motif 窗口管理器（MWM，一种商业产品）。FVWM 提供了多个虚拟桌面和一个用于扩展窗口管理器的模块系统，在较新的 2.2.5 版本中，它允许即时的配置更改和特定窗口的功能定制。FVWM 的主页位于 http://www.fwwm.org/。图 6.6 包含了一个 FVWM 桌面示例。
+`FVWM` 是一个轻量级窗口管理器，提供了一个灵活、可定制的窗口环境，设计看起来有点像 `Motif` 窗口管理器（`MWM`，一种商业产品）。`FVWM` 提供了多个虚拟桌面和一个用于扩展窗口管理器的模块系统，在较新的 `2.2.5` 版本中，它允许即时的配置更改和特定窗口的功能定制。`FVWM` 的主页位于 `http://www.fwwm.org/`。图 6.6 包含了一个 `FVWM` 桌面示例。
 
-# FVWM 6.6
+### FVWM 6.6
 
-FVWM 桌面示例
+`FVWM` 桌面示例
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_138_0.png)
 
-FVWM 几乎随几乎每个 Linux 发行版发布，并以作为具有自身外观和感受的新型窗口管理器的基础而闻名，包括：
+`FVWM` 几乎随几乎每个 Linux 发行版发布，并以作为具有自身外观和感受的新型窗口管理器的基础而闻名，包括：
 
-- **fwwm95** 设计外观像 Windows 95
-- **Afterstep** 设计外观像 NeXT 环境
-- **SCWM (Scheme 可配置窗口管理器)** 使用 Scheme 语言进行配置
+- `fwwm95` 设计外观像 Windows 95
+- `Afterstep` 设计外观像 NeXT 环境
+- `SCWM (Scheme 可配置窗口管理器)` 使用 Scheme 语言进行配置
 
-图 6.7 包含一个 fvwm95 运行中的屏幕。
+图 6.7 包含一个 `fvwm95` 运行中的屏幕。
 
-# 图 6.7 
+### 图 6.7
 
-Fvwm95 提供了一个类似于 Windows 95 的环境。
+`Fvwm95` 提供了一个类似于 Windows 95 的环境。
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_139_0.png)
 
-Fvwm95 基于 FVWM 版本 2，并保留了该版本灵活、易于配置的特性。它继续支持 FVWM 模块，但增加了实现 Windows 95 风格功能（如任务栏）所需的模块。Fvwm95 的信息可以在网站 http://www.plig.org/xwinman/fvwm95.html 上获取。
+`Fvwm95` 基于 `FVWM` 版本 2，并保留了该版本灵活、易于配置的特性。它继续支持 `FVWM` 模块，但增加了实现 Windows 95 风格功能（如任务栏）所需的模块。`Fvwm95` 的信息可以在网站 `http://www.plig.org/xwinman/fvwm95.html` 上获取。
 
-## 注意
-
-FVWM2 包可在第二张 Red Hat Linux 7.1 安装光盘中找到（本图书未包含）。
+> 注意
+> `FVWM2` 包可在第二张 `Red Hat Linux 7.1` 安装光盘中找到（本图书未包含）。
 
 ## twm
 
-Tab 窗口管理器（twm），通常根据其主要开发者的名字命名为“Tom 的窗口管理器”，是一个基础且功能齐全的环境，作为备用窗口管理器包含在 Red Hat Linux 7.1 中。图 6.8 显示了一个典型的 twm 桌面。
+`Tab` 窗口管理器（`twm`），通常根据其主要开发者的名字命名为“Tom 的窗口管理器”，是一个基础且功能齐全的环境，作为备用窗口管理器包含在 `Red Hat Linux 7.1` 中。图 6.8 显示了一个典型的 `twm` 桌面。
 
-# 图 6.8
+### 图 6.8
 
-twm 桌面
+`twm` 桌面
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_140_0.png)
 
-twm 窗口管理器提供了用户在 X Windows 窗口管理器中期望的许多关键功能，包括点击输入或指针驱动的键盘焦点，以及用户定义的按键和按钮绑定。然而，它的界面在视觉上非常简单，一些人会认为它局限性。Vtwm 是包含虚拟桌面的 twm 版本也可用，可以从 ftp:/ftp.x.org/R5contrib/tvwm-5.3.tar.gz 下载。
+`twm` 窗口管理器提供了用户在 `X Windows` 窗口管理器中期望的许多关键功能，包括点击输入或指针驱动的键盘焦点，以及用户定义的按键和按钮绑定。然而，它的界面在视觉上非常简单，一些人会认为它局限性。`Vtwm` 是包含虚拟桌面的 `twm` 版本也可用，可以从 `ftp:/ftp.x.org/R5contrib/tvwm-5.3.tar.gz` 下载。
 
 ## olvm
 
-Olvm，即 OpenLook 虚拟窗口管理器（olvm），多年一直是 Sun 系统上的标准窗口管理器。虽然 Sun 系统现在采用了 Motif 和通用桌面环境（在本章稍后部分讨论），但独特的 OpenLook 界面在许多用户中仍然很流行。Olvm 为 OpenLook 包增加了对虚拟桌面的支持。图 6.9 显示了一个 olvm 桌面示例。
+`Olvm`，即 `OpenLook` 虚拟窗口管理器（`olvm`），多年一直是 `Sun` 系统上的标准窗口管理器。虽然 `Sun` 系统现在采用了 `Motif` 和通用桌面环境（在本章稍后部分讨论），但独特的 `OpenLook` 界面在许多用户中仍然很流行。`Olvm` 为 `OpenLook` 包增加了对虚拟桌面的支持。图 6.9 显示了一个 `olvm` 桌面示例。
 
-olvm 中使用的界面会让许多用户感到别扭，特别是在菜单和窗口响应鼠标按钮的方式上。这是 OpenLook 在 Sun 世界之外没有获得巨大流行的原因之一。Olvm 可以从 ftp:/ftp.x.org/R5contrib/olvm4.tar.gz 下载。
+`olvm` 中使用的界面会让许多用户感到别扭，特别是在菜单和窗口响应鼠标按钮的方式上。这是 `OpenLook` 在 `Sun` 世界之外没有获得巨大流行的原因之一。`Olvm` 可以从 `ftp:/ftp.x.org/R5contrib/olvm4.tar.gz` 下载。
 
-# 图 6.9
+### 图 6.9
 
-olvm 界面
+`olvm` 界面
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_141_0.png)
 
 ## Afterstep
 
-Afterstep 是另一个基于 FVWM 的变体，设计外观像 NextSTEP。图 6.10 显示了 Afterstep 示例。
+`Afterstep` 是另一个基于 `FVWM` 的变体，设计外观像 `NextSTEP`。图 6.10 显示了 `Afterstep` 示例。
 
-# 图 6.10
+### 图 6.10
 
-Afterstep 桌面
+`Afterstep` 桌面
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_142_0.png)
 
 ## Amiwm
 
-如果你是 Amiga 用户并爱上了它的界面，那么 Amiwm 可能就是你的窗口管理器。Amiwm 模拟了 Amiga，如图 6.11 所示。你可以从这里了解 Amiwm。
+如果你是 `Amiga` 用户并爱上了它的界面，那么 `Amiwm` 可能就是你的窗口管理器。`Amiwm` 模拟了 `Amiga`，如图 6.11 所示。你可以从这里了解 `Amiwm`。
 
-# 图 6.11
+### 图 6.11
 
-Amiwm 桌面
+`Amiwm` 桌面
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_143_0.png)
 
 ## Enlightenment
 
-Enlightenment 是一个大项目，试图开发一种超越常规的窗口管理器。图 6.12 和 6.13 显示了环境可能的两种配置。帮助 Enlightenment 脱颖出的众多功能之一是它赋予用户手工打造外观和感受的能力。
+`Enlightenment` 是一个大项目，试图开发一种超越常规的窗口管理器。图 6.12 和 6.13 显示了环境可能的两种配置。帮助 `Enlightenment` 脱颖出的众多功能之一是它赋予用户手工打造外观和感受的能力。
 
-# 图 6.12
+### 图 6.12
 
-Enlightenment 桌面
+`Enlightenment` 桌面
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_144_0.png)
 
-# 图 6.13
+### 图 6.13
 
-Enlightenment 环境
+`Enlightenment` 环境
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_144_1.png)
 
 ## Sawfish
 
-Sawfish 窗口管理器是 GNOME 桌面环境的新默认管理器。像 Enlightenment 一样，Sawfish 最大化了配置每个窗口的能力，这是通过使用 LISP 编程语言的工具实现的。作为 GNOME 桌面的一部分，Sawfish 控制集成在 GNOME 控制中心中，如图 6.14 所示。第 10 章《高级 GNOME 配置中心》详细涵盖了 GNOME 控制中心和 Sawfish。
+`Sawfish` 窗口管理器是 `GNOME` 桌面环境的新默认管理器。像 `Enlightenment` 一样，`Sawfish` 最大化了配置每个窗口的能力，这是通过使用 `LISP` 编程语言的工具实现的。作为 `GNOME` 桌面的一部分，`Sawfish` 控制集成在 `GNOME` 控制中心中，如图 6.14 所示。第 10 章《高级 GNOME 配置中心》详细涵盖了 `GNOME` 控制中心和 `Sawfish`。
 
-# 图 6.14
+### 图 6.14
 
-Sawfish 环境
+`Sawfish` 环境
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_145_0.png)
 
@@ -2068,62 +2047,64 @@ Sawfish 环境
 
 Linux 有多种不同的桌面环境，它们提供了强大且集成的图形用户界面（GUI），并为应用程序开发者提供了一个目标平台，以便他们构建具有统一外观和体验的软件，并包含了拖放等集成功能。
 
-在这些桌面环境中，K Desktop Environment 和 GNOME 是两个免费提供的，并且已成为事实上的标准 Linux 桌面环境的竞争者。
+在这些桌面环境中，`K Desktop Environment` 和 `GNOME` 是两个免费提供的，并且已成为事实上的标准 Linux 桌面环境的竞争者。
 
 ### K Desktop Environment
 
-K Desktop Environment (KDE) 尝试提供 Common Desktop Environment（CDE，在本节稍后部分讨论）的免费替代方案。在这一项工作中，KDE 将一组应用程序（如文件管理器、终端模拟器和配置系统）与窗口管理器相结合，为 X 应用程序创建一个一致的外观和体验。6.15 显示了一个典型的 KDE 桌面。
+`K Desktop Environment (KDE)` 尝试提供 `Common Desktop Environment (CDE)`，在本节稍后部分讨论的免费替代方案。在这一项工作中，`KDE` 将一组应用程序（如文件管理器、终端模拟器和配置系统）与窗口管理器相结合，为 `X` 应用程序创建一个一致的外观和体验。6.15 显示了一个典型的 `KDE` 桌面。
 
 图 6.15：
-KDE 桌面
+
+`KDE` 桌面
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_146_0.png)
 
-KDE 是许多 Linux 发行版的默认桌面环境，包括 Caldera、S.U.S.E. 和 Corel。它是大多数其他发行版的替代桌面环境。
+`KDE` 是许多 Linux 发行版的默认桌面环境，包括 `Caldera`、`S.U.S.E.` 和 `Corel`。它是大多数其他发行版的替代桌面环境。
 
-KDE 规划背后的部分内容是指定规范并确保开发环境使得开发者能够创建在功能和外观上都一致的应用程序。KDE 提供了一个极具吸引力、外观专业的工作环境，如果为 KDE 开发了必要的应用程序，它将成为桌面用户一个很有前景的选择。该网站为 http://www.kde.org/。第 11 章“使用 KDE”详细介绍了随 Red Hat Linux 7.1 包含的 KDE 2.1.1。
+`KDE` 规划背后的部分内容是指定规范并确保开发环境使得开发者能够创建在功能和外观上都一致的应用程序。`KDE` 提供了一个极具吸引力、外观专业的工作环境，如果为 `KDE` 开发了必要的应用程序，它将成为桌面用户一个很有前景的选择。该网站为 `http://www.kde.org/`。第 11 章“使用 KDE”详细介绍了随 `Red Hat Linux 7.1` 包含的 `KDE 2.1.1`。
 
 ### GNOME: The GNOME Network Object Model Environment
 
-GNOME 是另一项为 Linux 开发全面的、免费桌面环境的尝试成果。与内置窗口管理器的 KDE 不同，GNOME 是与窗口无关的。它提供了一个编程接口，允许窗口管理器开发者在其窗口管理器中集成对 GNOME 的完全支持。
+`GNOME` 是另一项为 Linux 开发全面的、免费桌面环境的尝试成果。与内置窗口管理器的 `KDE` 不同，`GNOME` 是与窗口无关的。它提供了一个编程接口，允许窗口管理器开发者在其窗口管理器中集成对 `GNOME` 的完全支持。
 
-Red Hat Linux 7.1 使用 Sawfish 窗口管理器将 GNOME 作为默认桌面环境发布。该发行版还包含了其他窗口管理器和 KDE，但由于默认安装使用的是 GNOME 和 Enlightenment，因此本书将使用 GNOME 和 Enlightenment 作为目标桌面。有关使用 GNOME 的介绍，请参阅第 8 章“使用 GNOME 和 X Windows”。
+`Red Hat Linux 7.1` 使用 `Sawfish` 窗口管理器将 `GNOME` 作为默认桌面环境发布。该发行版还包含了其他窗口管理器和 `KDE`，但由于默认安装使用的是 `GNOME` 和 `Enlightenment`，因此本书将使用 `GNOME` 和 `Enlightenment` 作为目标桌面。有关使用 `GNOME` 的介绍，请参阅第 8 章“使用 GNOME 和 X Windows”。
 
 ### MWM
 
-MWM，即 Motif Window Manager，是一个 Motif 发行版的一部分商业窗口管理器。本章的下一节将更详细讨论作为完整环境的 Motif。
+`MWM`，即 `Motif Window Manager`，是一个 `Motif` 发行版的一部分商业窗口管理器。本章的下一节将更详细讨论作为完整环境的 `Motif`。
 
 ### The Common Desktop Environment
 
-Common Desktop Environment (CDE) 是一个心勃勃的项目，旨在标准化各种 Unix 平台（包括 AIX、Compaq Unix、HP/UX 和 Solaris）图形环境和开发区域。现在 CDE 也通过 X-Inside (http://www.xinside.com/) 的 DeDesktop 图形界面适用于 Linux。此商业应用程序费用 49 美元，需要 X-Inside 的 Accelerated-X。
+`Common Desktop Environment (CDE)` 是一个心勃勃的项目，旨在标准化各种 Unix 平台（包括 `AIX`、`Compaq Unix`、`HP/UX` 和 `Solaris`）图形环境和开发区域。现在 `CDE` 也通过 `X-Inside (http://www.xinside.com/)` 的 `DeDesktop` 图形界面适用于 Linux。此商业应用程序费用 49 美元，需要 `X-Inside` 的 `Accelerated-X`。
 
-除了基于 Motif 的一致图形环境外，CDE 还提供了一系列凝聚的工具和应用程序，以标准化管理程序并简化用户图形环境的配置和管理。CDE 为 X 环境带来的增强包括拖放功能以及在其他 GUI 操作系统中常见的文件夹和图标类型。
+除了基于 `Motif` 的一致图形环境外，`CDE` 还提供了一系列凝聚的工具和应用程序，以标准化管理程序并简化用户图形环境的配置和管理。`CDE` 为 `X` 环境带来的增强包括拖放功能以及在其他 GUI 操作系统中常见的文件夹和图标类型。
 
 ### What Is Motif?
 
-如果你开始在网络上寻找要安装在 Linux 系统上的 X Windows 应用程序，你不可避免地会遇到提到它们使用 Motif 库或 Motif 工具集的应用程序。
+如果你开始在网络上寻找要安装在 Linux 系统上的 `X Windows` 应用程序，你不可避免地会遇到提到它们使用 `Motif` 库或 `Motif` 工具集的应用程序。
 
-Motif 是由开放软件基金会 (OSF) 在 20 世纪 80 年代引入的 X Windows 开发环境，旨在为 X Windows 应用程序提供一致的策略。Motif 提供了一个控件工具包，开发者可以在开发应用程序可以使用。通过这些控件，Motif 开发者制作的应用程序遵循 Motif 策略，具有一致的外观和体验。
+`Motif` 是由开放软件基金会 (`OSF`) 在 20 世纪 80 年代引入的 `X Windows` 开发环境，旨在为 `X Windows` 应用程序提供一致的策略。`Motif` 提供了一个控件工具包，开发者可以在开发应用程序可以使用。通过这些控件，`Motif` 开发者制作的应用程序遵循 `Motif` 策略，具有一致的外观和体验。
 
-Motif 最近在一种“开放”许可下重新发布，这意味着想要基于 Motif 库构建和分发应用程序的开发者不再需要为该特权付费。然而，新 Open Motif 背后的组织 Open Group（开放组）仍在销售该语言和系列库背后的文档。许多 Linux 开发者认为 Motif 许可的意思是它不能用于为 Linux 等免费操作系统开发软件。
+`Motif` 最近在一种“开放”许可下重新发布，这意味着想要基于 `Motif` 库构建和分发应用程序的开发者不再需要为该特权付费。然而，新 `Open Motif` 背后的组织 `Open Group`（开放组）仍在销售该语言和系列库背后的文档。许多 Linux 开发者认为 `Motif` 许可的意思是它不能用于为 Linux 等免费操作系统开发软件。
 
-> Open Group 是一个致力于软件标准的行业组织。他们与开源许可的赞助者没有关系。事实上，他们承认他们的 Motif 许可并不符合开源要求。
+> `Open Group` 是一个致力于软件标准的行业组织。他们与开源许可的赞助者没有关系。事实上，他们承认他们的 `Motif` 许可并不符合开源要求。
 
-除了工具包和库之外，Motif 发行版还包含了自己的窗口管理器 MWM，原始的 FVMWM 外观和体验基于此获得了专利。图 6.16 显示了一个 MWM 桌面示例。
+除了工具包和库之外，`Motif` 发行版还包含了自己的窗口管理器 `MWM`，原始的 `FVMWM` 外观和体验基于此获得了专利。图 6.16 显示了一个 `MWM` 桌面示例。
 
 # 第 6 章 • X Windows 概述
 
-图 6.16：
-一个 MWM 桌面
+### 图 6.16：
+
+一个 `MWM` 桌面
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_149_0.png)
 
 ## Do I Need Motif?
 
-对于大多数 Linux 用户来说，可能不需要使用 Motif。应该考虑 Motif 的用户包括以下人员：
+对于大多数 Linux 用户来说，可能不需要使用 `Motif`。应该考虑 `Motif` 的用户包括以下人员：
 
-- 想要使用 Motif 工具包开发应用程序的开发者。
-- 想要运行需要 Motif 库的应用程序的用户。大多数使用 Motif 库的商业应用程序要么在应用程序中嵌入必要的 Motif 代码（因此用户不需要拥有许可），要么包含完整版本的 Motif 运行时库。
+- 想要使用 `Motif` 工具包开发应用程序的开发者。
+- 想要运行需要 `Motif` 库的应用程序的用户。大多数使用 `Motif` 库的商业应用程序要么在应用程序中嵌入必要的 `Motif` 代码（因此用户不需要拥有许可），要么包含完整版本的 `Motif` 运行时库。
 
 ## Alternative to Motif
 
@@ -2131,7 +2112,7 @@ Motif 最近在一种“开放”许可下重新发布，这意味着想要基�
 
 ## Looking Ahead
 
-对 X Windows 的这些讨论是你向实际操作...的第一步。
+对 `X Windows` 的这些讨论是你向实际操作...的第一步。
 
 在接下来的两个章节中，你将掌握基础并开始。
 
@@ -2145,28 +2126,28 @@ Motif 最近在一种“开放”许可下重新发布，这意味着想要基�
 - 使用 Xf6 配置 X86
 - 测试你的配置
 
-现在你对 X Windows 是什么有了了解，是时候安装并配置软件，使其运行起来了。
+现在你对 `X Windows` 是什么有了了解，是时候安装并配置软件，使其运行起来了。
 
-本章讨论了如果你不安装发行版自带的版本，如何获取 X Windows。随后，它描述了如何配置以便在你的计算机上优化运行。
+本章讨论了如果你不安装发行版自带的版本，如何获取 `X Windows`。随后，它描述了如何配置以便在你的计算机上优化运行。
 
 ## 获取 X Windows
 
-如果你使用的是书中附带的 Red 7.1，并且按照第 4 章“安装 Red Hat Linux 7.1”建议安装了所有关键组件，那么你不需要阅读这一节，因为你已经获取并安装了 X 文件。你可以直接跳到“准备配置 X”部分。
+如果你使用的是书中附带的 `Red 7.1`，并且按照第 4 章“安装 Red Hat Linux 7.1”建议安装了所有关键组件，那么你不需要阅读这一节，因为你已经获取并安装了 `X` 文件。你可以直接跳到“准备配置 X”部分。
 
 ## 从 Red Hat Linux 7.1 CD 安装
 
-如果你使用的是 Red Hat Linux 7.1 但安装 Linux 时没有安装 X Windows，安装 X 是一个相当简单的过程。这里概述依赖于第 14 章“处理文件”中描述的访问光驱的技术。
+如果你使用的是 `Red Hat Linux 7.1` 但安装 Linux 时没有安装 `X Windows`，安装 `X` 是一个相当简单的过程。这里概述依赖于第 14 章“处理文件”中描述的访问光驱的技术。
 
 ## 使用 rpm
 
-在本节中，你将使用 rpm（Red Hat 包管理器），这是一个随 Red Hat Linux 以及其他许多发行版提供的用于管理 Red Hat 软件包的工具。
+在本节中，你将使用 `rpm`（Red Hat 包管理器），这是一个随 `Red Hat Linux` 以及其他许多发行版提供的用于管理 `Red Hat` 软件包的工具。
 
-rpm 允许你安装新包、卸载已安装的包并查看包的信息（例如它们包含哪些文件）。
+`rpm` 允许你安装新包、卸载已安装的包并查看包的信息（例如它们包含哪些文件）。
 
 要安装包，使用以下命令：
 
 ```
-$ rpm -i package-file-name 
+$ rpm -i package-file-name
 ```
 
 要列出所有已安装的包，使用此命令：
@@ -2181,19 +2162,19 @@ $ rpm -qa | more
 $ rpm -e package-file-name
 ```
 
-为了从你的 Red Hat 7.1 CD-ROM 安装 X Windows，第一步是挂载你的 CD-ROM 驱动器，以便 Linux 能够访问它。这个过程并不看起来那么简单，它取决于你拥有的 CD-ROM 驱动器类型（IDE/ATAPI、SCSI 或专用）以及驱动器的安装方式。关于 CD-ROM 选项的详细讨论请见第 19 章“Linux 多媒体”。
+为了从你的 `Red Hat 7.1 CD-ROM` 安装 `X Windows`，第一步是挂载你的 `CD-ROM` 驱动器，以便 Linux 能够访问它。这个过程并不看起来那么简单，它取决于你拥有的 `CD-ROM` 驱动器类型（`IDE/ATAPI`、`SCSI` 或专用）以及驱动器的安装方式。关于 `CD-ROM` 选项的详细讨论请见第 19 章“Linux 多媒体”。
 
-接下来的指令假设你有一个 IDE 的 CD-ROM 驱动器，因为这些在当今的多媒体 PC 中非常常见。这些指令还假设 CD-ROM 驱动器被安装为次级 IDE 从设备，因为大多数市售电脑只包含一个硬盘。
+接下来的指令假设你有一个 `IDE` 的 `CD-ROM` 驱动器，因为这些在当今的多媒体 PC 中非常常见。这些指令还假设 `CD-ROM` 驱动器被安装为次级 `IDE` 从设备，因为大多数市售电脑只包含一个硬盘。
 
-基于这些假设，你的 CD-ROM 驱动器将是设备 `/dev/hdb`。对于其他驱动器类型和配置，请参考第 19 章的讨论以确定你的设备。
+基于这些假设，你的 `CD-ROM` 驱动器将是设备 `/dev/hdb`。对于其他驱动器类型和配置，请参考第 19 章的讨论以确定你的设备。
 
-将 Red Hat Linux 7.1 CD-ROM 插入驱动器并输入命令：
+将 `Red Hat Linux 7.1 CD-ROM` 插入驱动器并输入命令：
 
 ```
 $ mount /dev/hdb /mnt/cdrom
 ```
 
-以挂载磁盘并让 Linux 可以访问。你可以使用以下命令查看 CD-ROM 的内容并确保它是可访问的：
+以挂载磁盘并让 Linux 可以访问。你可以使用以下命令查看 `CD-ROM` 的内容并确保它是可访问的：
 
 ```
 $ ls /mnt/cdrom
@@ -2207,11 +2188,10 @@ boot. images RELEASE-NOTES RELEASE-NOTES.fr RPM-PG-KEY
 COPYING README RELEASE-NOTES.de RELEASE-NOTES.it Trans.TBL
 ```
 
-## 注意
+> 注意
+> 如果你不知道是哪一个 `CD-ROM` 设备，`/dev/cdrom /mnt/cdrom` 命令通常可以正常工作。如果你运行 `ls -1 /dev/cdrom` 命令，可能会发现它链接到了你 `CD-ROM` 实际使用的设备。
 
-如果你不知道是哪一个 CD-ROM 设备，`/dev/cdrom /mnt/cdrom` 命令通常可以正常工作。如果你运行 `ls -1 /dev/cdrom` 命令，可能会发现它链接到了你 CD-ROM 实际使用的设备。
-
-下一步是进入 CD-ROM 上包含构成 Red Hat Linux 7.1 的所有软件包的目录。该目录是 `RedHat/RPMS` 子目录。使用以下命令：
+下一步是进入 `CD-ROM` 上包含构成 `Red Hat Linux 7.1` 的所有软件包的目录。该目录是 `RedHat/RPMS` 子目录。使用以下命令：
 
 ```
 $ cd /mnt/cdrom/RedHat/RPMS
@@ -2223,25 +2203,27 @@ $ cd /mnt/cdrom/RedHat/RPMS
 $ ls
 ```
 
-你应该能看到一个文件列表滚动，它们都以 `.rpm` 扩展名结尾，表示它们是 Red Hat 包管理器文件。
+你应该能看到一个文件列表滚动，它们都以 `.rpm` 扩展名结尾，表示它们是 `Red Hat` 包管理器文件。
 
-现在你准备好安装 X Windows 软件包了。为了实现这一点，你需要确定要安装哪些软件包。首先，你需要 `XFree86-4.0.3-5.i386.rpm` 中的通用 XFree86 字体。接下来，你需要所有的 X Windows 字体，它们位于：
+现在你准备好安装 `X Windows` 软件包了。为了实现这一点，你需要确定要安装哪些软件包。首先，你需要 `XFree86-4.0.3-5.i386.rpm` 中的通用 `XFree86` 字体。接下来，你需要所有的 `X Windows` 字体，它们位于：
 
 - `XFree86-100dpi-fonts-4.0.3-5.i386.rpm`
 - `XFree86-75dpi-fonts-4.0.3-5.i386.rpm`
 
-此外，你还需要共享的 XFree86 库：
+此外，你还需要共享的 `XFree86` 库：
 
 - `XFree86-libs-4.0.3-5.i386.rpm`
 - `XFree86-xfs-4.0.3-5.i386.rpm`
 
-你还需要 Red Hat 提供的 XFree86 配置工具，它位于 `XConfigurator-4.9.27-1.i386.rpm` 文件中，以及你想要的 X Windows 程序集合，这些可以在 `XFree86-tools-4.0.3-5.i386.rpm` 中找到。
+你还需要 `Red Hat` 提供的 `XFree86` 配置工具，它位于 `XConfigurator-4.9.27-1.i386.rpm` 文件中，以及你想要的 `X Windows` 程序集合，这些可以在 `XFree86-tools-4.0.3-5.i386.rpm` 中找到。
 
-XFree86 4 不再需要单独的包。然而，本文写作时的版本不支持 3.3.x 中支持的所有模块。请查看你的 XFree6 发布说明。版本 4.0.3 的发布说明可以在 http://www.xfree86.org/4.0.3/RELNOTES.html 找到。如果你有不同版本的 XFree86，请相应替换 4.0.3。
+`XFree86 4` 不再需要单独的包。然而，本文写作时的版本不支持 `3.3.x` 中支持的所有模块。请查看你的 `XFree6` 发布说明。版本 `4.0.3` 的发布说明可以在 `http://www.xfree86.org/4.0.3/RELNOTES.html` 找到。如果你有不同版本的 `XFree86`，请相应替换 `4.0.3`。
 
-对于 XFree86 4，不再需要特定显卡的单独包。
+对于 `XFree86 4`，不再需要特定显卡的单独包。
 
 现在你已经列出了需要安装的文件列表，可以使用 `rpm -i` 命令安装这些文件：
+
+
 
 ```
 $ rpm -i XFree86-4.0.3-5.i386.rpm
@@ -2288,14 +2270,14 @@ Xinstall.sh          extract          Xupdate.tgz
 Xdocupd.tgz          Xdrivers.tgz
 ```
 
-在大多数情况下，你可以使用下载的针对版本-4.0.3 的脚本 Xinstall.sh 在你的计算机上安装 XFree86。进入包含下载文件的目录（在本例中为 /dos/tmp），并使用以下命令运行脚本：
+在大多数情况下，你可以使用下载的针对版本-4.0.3 的脚本 `Xinstall.sh` 在你的计算机上安装 XFree86。进入包含下载文件的目录（在本例中为 `/dos/tmp`），并使用以下命令运行脚本：
 
 ```bash
 $ cd /dos/tmp
 $ sh Xinstall.sh
 ```
 
-这仅在你已经安装了 XFree86 版本 4.0.2 时才有效。你现在应该会经历一系列提示。安装完成后，使用 Xconfigurator 或 xf86config 配置 X Windows。这两个工具将在接后的章节中讨论。
+这仅在你已经安装了 XFree86 版本 4.0.2 时才有效。你现在应该会经历一系列提示。安装完成后，使用 `Xconfigurator` 或 `xf86config` 配置 X Windows。这两个工具将在接后的章节中讨论。
 
 ## 准备配置 X Windows
 
@@ -2310,7 +2292,7 @@ $ sh Xinstall.sh
 
 如果没有这些信息，在配置 XFree86 时可能会出错，从而可能损坏你的显示器。让我们逐项获取这些信息。
 
-## 显卡的品牌和型号
+### 显卡的品牌和型号
 
 获取这些规格应该并不困难。通常情况下，如果你检查显卡的说明书，就可以获得这些信息。
 
@@ -2318,23 +2300,23 @@ $ sh Xinstall.sh
 
 如果你的计算机主板集成了视频支持，请检查你的计算机或主板的文档以确定芯片组制造商和型号。
 
-如果你手头没有文档，有一个名为 SuperProbe 的 XFree86 工具，可以帮助检测你的视频硬件。如果成功，此命令可以检测与你的硬件相关的 X 服务器、芯片组和 RAMDAC。要运行该程序，请使用命令
+如果你手头没有文档，有一个名为 `SuperProbe` 的 XFree86 工具，可以帮助检测你的视频硬件。如果成功，此命令可以检测与你的硬件相关的 X 服务器、芯片组和 RAMDAC。要运行该程序，请使用命令
 
 ```
 $ SuperProbe
 ```
 
-## 显示器的品牌和型号
+### 显示器的品牌和型号
 
 检查显示器说明书获取其品牌和型号。如果你的显示器是配置软件已知的类型，那么这些信息在配置 XFree86 时可能会很有用。
 
-## 显卡上的显存
+### 显卡上的显存
 
 检查显卡说明书获取卡上的内存大小。在现代计算机中，这通常不少于 4MB，在某些 PC 上可能是 8MB 甚至高达 32MB。在较旧的计算机或显卡上，你可能会发现只有 256KB 的显存。
 
 如果你无法确定卡上的内存大小，
 
-## 你正在使用的鼠标类型
+### 你正在使用的鼠标类型
 
 这些信息对于配置 X Windows 是必须的。可能的类型包括：
 
@@ -2345,19 +2327,17 @@ $ SuperProbe
 
 ## 使用 Xconfigurator 配置 XFree86
 
-Red Hat Linux 带有 Xconfigurator，这是一个用于 XFree86 的配置程序，它比 XFree86 自带的工具好用得多。让我们先看看使用 Xconfigurator 配置 X Windows，然后查看在没有 Xconfigurator 的系统上配置 XFree86。
+Red Hat Linux 带有 `Xconfigurator`，这是一个用于 XFree86 的配置程序，它比 XFree86 自带的工具好用得多。让我们先看看使用 `Xconfigurator` 配置 X Windows，然后查看在没有 `Xconfigurator` 的系统上配置 XFree86。
 
-Xconfigurator 是一个简单的、菜单驱动的工具，极大简化了配置 XFree86 的过程。要运行该程序，请使用
+`Xconfigurator` 是一个简单的、菜单驱动的工具，极大简化了配置 XFree86 的过程。要运行该程序，请使用
 
 ```
 $ Xconfigurator
 ```
 
+### 使用 Xconfigurator 127 配置 XFree86
 
-
-## 使用 Xconfigurator 127 配置 XFree86
-
-要开始使用该程序，按回车键跳过欢迎屏幕。Xconfigurator 首先尝试检测你的显卡。如果检测成功，你将看到结果，如图 7.3 所示。
+要开始使用该程序，按回车键跳过欢迎屏幕。`Xconfigurator` 首先尝试检测你的显卡。如果检测成功，你将看到结果，如图 7.3 所示。
 
 # 图 7.3：
 
@@ -2397,12 +2377,11 @@ X 服务器菜单
 
 - 选择“Custom”（自定义），然后为你的系统指定水平和垂直同步范围（如前文所述）。
 - 如果你对显示器的最大分辨率/或或同步范围有大致了解，请选择一个通用显示器。对于主流分辨率（640 × 480 到 1600 × 1200），有不同的通用显示器可选择。对于 LCD 屏幕，还有其他通用显示器选项，它们对应于大多数笔记本电脑（请见警告）。
+- 如果你没有显示器的同步范围，且不知道显示器是否为多同步显示器，请选择“Generic LCD Panel”（通用 LCD 面板）或具有最低可用垂直同步率的“Generic Standard VGA”（通用标准 VGA）（这些是最小公分数，应作为你的最后选择）。
 
 ## 警告
 
 在配置 LCD 显示器或笔记本电脑时要格外小心，因为最大分辨率和同步范围各不相同。错误的设置可能会导致你的 LCD 屏幕永久损坏。在选择最大分辨率和/或同步范围之前，请咨询 LCD 或笔记本电脑附带的文档，或咨询制造商。
-
-- 如果你没有显示器的同步范围，且不知道显示器是否为多同步显示器，请选择“Generic LCD Panel”（通用 LCD 面板）或具有最低可用垂直同步率的“Generic Standard VGA”（通用标准 VGA）（这些是最小公分数，应作为你的最后选择）。
 
 做出选择后，系统可能会让你探测硬件以获取显卡的正确分辨率和色彩深度。许多现代 PCI 卡都支持此功能，如果你有一张这样的卡，值得尝试探测。如果你使用的是较旧的卡或探测失败，仍然可以手动配置相关设置。
 
@@ -2458,9 +2437,9 @@ X 服务器菜单
 
 ## 使用 X86config 配置 XFree86
 
-Xconfigurator 只提供一种配置 XFree86 的方法，且这种方法仅适用于 Red Linux。XFree86 本身带有一个配置程序，适用于任何包含 X8 的 Linux 发行版：xf86config。
+`Xconfigurator` 只提供一种配置 XFree86 的方法，且这种方法仅适用于 Red Linux。XFree86 本身带有一个配置程序，适用于任何包含 X8 的 Linux 发行版：`xf86config`。
 
-xf86config 也是菜单驱动的，但它为你完成的工作较少，操作较繁琐。然而，xf86config 还允许你配置鼠标和键盘。要运行 xf86config，使用以下命令：
+`xf86config` 也是菜单驱动的，但它为你完成的工作较少，操作较繁琐。然而，`xf86config` 还允许你配置鼠标和键盘。要运行 `xf86config`，使用以下命令：
 
 ```
 $ xf86config
@@ -2468,19 +2447,15 @@ $ xf86config
 
 会出现类似图 7.12 所示的欢迎行。
 
-
-
-
-
-## 使用 Xf86config 135 配置 XFree86
+### 使用 Xf86config 135 配置 XFree86
 
 ## 提示
 
-你需要作为 root 用户才能成功完成使用 xf86config 配置 X Windows 的所有步骤。
+你需要作为 root 用户才能成功完成使用 `xf86config` 配置 X Windows 的所有步骤。
 
 ## 注意事项
 
-在配置过程中，Xf86config 会在屏幕上显示大量密集的文本。欢迎界面仅仅是其中的第一个。如果你不熟悉 xf86config，最好仔细阅读所有内容，以便充分了解你所做选择的意义性。一旦你做出了选择（即使是留空），也无法返回；你将需要重新启动 xf86config。
+在配置过程中，`Xf86config` 会在屏幕上显示大量密集的文本。欢迎界面仅仅是其中的第一个。如果你不熟悉 `xf86config`，最好仔细阅读所有内容，以便充分了解你所做选择的意义性。一旦你做出了选择（即使是留空），也无法返回；你将需要重新启动 `xf86config`。
 
 显示的第一个菜单是图 7.13所示所示鼠标协议菜单。通过输入相关数字并按 Enter 键来选择正确选项。你将看到一系列鼠标相关的问题，可能包括以下内容：
 
@@ -2549,6 +2524,8 @@ $ xf86config
 | 7 | 31-55.0 高分辨率, 1024x768 @ 70 Hz @ 73 Hz |
 | 9 | 31-64.3 可支持 1280x1024 @ 60 Hz |
 | 10 | 31-82.0 可支持 1280x1024 @ 76 Hz |
+
+
 
 输入协议号：图 7.13：协议菜单
 
@@ -2628,10 +2605,6 @@ $ xf86config
 - 17 Compaq Internet
 - 18 微软 Natural Pro
 
-
-
-
-
 ## 使用 Xf86config 配置 XFree86
 
 一旦你选择了视频内存容量，系统会要求你为显卡提供一个自由格式的定义。与显示器一样，这些项目与你的 X Windows 系统的正常运行无关，因此你应该输入一个在你以后需要管理或编辑 XFree86 配置文件时能够识别的内容。
@@ -2643,6 +2616,7 @@ $ xf86config
 颜色深度菜单
 
 + 请指定你想要默认使用的颜色深度：
+
 - 1 位（单色模式）
 - 4 位（16 色模式）
 - 8 位（256 色模式）
@@ -2750,7 +2724,6 @@ $ startx
 
 默认情况下，Red Hat Linux 7.1 会安装 GNOME 桌面环境。如果由于某种原因你选择不安装 GNOME，或者 GNOME 没有自动安装，你将需要手动安装 GNOME。
 
-
 要此此，你需要从 Red Hat 安装光盘-ROM 的 RedHat/RPMS 目录中安装以下软件包：
 
 - gnome-applets-1.2.4-3.i386.rpm
@@ -2850,15 +2823,14 @@ GNOME 系统菜单
 - **游戏 (Games)** 此子菜单提供了访问游戏的权限。
 - **图形 (Graphics)** 此子菜单提供了访问图形工具的权限。
 - **互联网 (Internet)** 此子菜单提供了访问互联网工具的权限。
+
+
+
 - **多媒体 (Multimedia)** 此子菜单提供了访问多媒体工具的权限。
 - **设置 (Settings)** 此子菜单提供了访问系统设置的权限。
 - **系统 (System)** 此子菜单提供了访问系统级工具的权限。
 - **文件管理器 (File Manager)** 此子菜单提供了访问文件管理器的权限。
 - **帮助 (Help)** 此子菜单提供了访问帮助系统的权限。
-
-
-
-
 
 # 第 8 章 • 使用 GNOME 和 X Windows
 
@@ -2918,6 +2890,7 @@ GNOME 包含了许多插件，并提供了一个接口，让程序员可以通�
 在 GNOME 之前的版本中，桌面指南和任务列表插件合称为分页 (Pager)。
 
 图 8.9：
+
 桌面指南和任务列表插件
 
 | mj@testlinux:home/mi | 控制中心 |
@@ -2972,9 +2945,6 @@ GNOME 中的窗口看起来与 Windows 98 中的窗口非常相似，行为也�
 - 框架样式：框架样式下的子菜单管理框架的外观感觉。
 - 历史：这些子菜单更改主体窗口的默认位置、尺寸和属性。
 
-
-
-
 ## 窗口边界
 
 大多数窗口都有一个五像素宽的边框。该边框用于在视觉上指示窗口边缘，并允许用户调整窗口大小。
@@ -3025,7 +2995,7 @@ $ /usr/bin/gmc &
 
 ## 文件管理器窗口
 
-如图 8.10 所示，GNOME 文件管理器窗口显示你计算机上单个目录的内容。默认情况下，显示的目录是运行该程序的用户的主目录。在 във幅图中，mj 运行了文件管理器，因此显示的目录是他的主目录：/home/mj。
+如图 8.10 所示，GNOME 文件管理器窗口显示你计算机上单个目录的内容。默认情况下，显示的目录是运行该程序的用户的主目录。在 във幅图中，mj 运行了文件管理器，因此显示的目录是他的主目录：`/home/mj`。
 
 窗口分为三个三个主要部分：
 
@@ -3072,9 +3042,6 @@ $ /usr/bin/gmc &
 - **搜索（Search）**
 
 （注：原文中工具栏部分的描述存在大量重复和 OCR 错误，已根据逻辑进行了整合和翻译。）
-
-
-
 
 ## 文件 > 移动
 
@@ -3186,13 +3153,15 @@ xterm 程序是高度可定制的。除其他外，您可以更改：
 
 在继续之前，您需要了解 Unix 命令。关于 Unix 命令的完整介绍将在后续章节给出。
 
-要执行程序（或命令），只需输入程序名称（以及可能的路径）并按下回车键。例如，要启动 xterm，可以使用命令
+
+
+要执行程序（或命令），只需输入程序名称（以及可能的路径）并按下回车键。例如，要启动 `xterm`，可以使用命令
 
 ```
 $ xterm
 ```
 
-或者，如果 xterm 所在的目录不在您的路径中，请使用命令
+或者，如果 `xterm` 所在的目录不在您的路径中，请使用命令
 
 ```
 $ /usr/X11R6/bin/xterm
@@ -3208,48 +3177,45 @@ $ echo PATH
 
 参数是提供给程序的信息；可以是从文件名到要搜索文本的任何内容。
 
-标志是改变程序行为的选项。它们出现在命令之后，用一个或多个空格和连字符隔开。例如，help 标志会让 xterm 打印帮助信息：
+标志是改变程序行为的选项。它们出现在命令之后，用一个或多个空格和连字符隔开。例如，`help` 标志会让 `xterm` 打印帮助信息：
 
 ```
 $ xterm -help
 usage:  xterm-options ... -e args
 ```
 
-- -help 输出此消息
--display display_name 要连接的 X 服务器
--geometry geom 大小（以字符计）和位置
--/rv 开启/关闭反转视频
--bg color 背景颜色
--fg color 前景颜色
--bd color 框颜色
--bw number 像素宽度
--fn fontname 字体
--iconic 最小化启动
--name string 客户端实例、图标和标题字符串
--title string 标题字符串
--xrm 额外的资源规范
-+-132 开启/关闭列切换限制
-+-ah 始终高亮
-+-ai 开启/关闭活动图标
+- `-help` 输出此消息
+- `-display` `display_name` 要连接的 X 服务器
+- `-geometry` `geom` 大小（以字符计）和位置
+- `-/rv` 开启/关闭反转视频
+- `-bg` `color` 背景颜色
+- `-fg` `color` 前景颜色
+- `-bd` `color` 框颜色
+- `-bw` `number` 像素宽度
+- `-fn` `fontname` 字体
+- `-iconic` 最小化启动
+- `-name` `string` 客户端实例、图标和标题字符串
+- `-title` `string` 标题字符串
+- `-xrm` 额外的资源规范
+- `+-132` 开启/关闭列切换限制
+- `+-ah` 始终高亮
+- `+-ai` 开启/关闭活动图标
 
-也可以创建复杂的标志以提供标志正常运行所需的信息。例如，设置 xterm 颜色，您使用 -fg 和 -bg 标志，但还需要提供您希望在前景和背景显示的颜色。命令
+也可以创建复杂的标志以提供标志正常运行所需的信息。例如，设置 `xterm` 颜色，您使用 `-fg` 和 `-bg` 标志，但还需要提供您希望在前景和背景显示的颜色。命令
 
 ```
 $ xterm -fg white -bg black
 ```
 
-将创建一个黑色背景白色文字的 xterm 窗口。另一方面，一个简单的标志是符号 &)。例如，命令
+将创建一个黑色背景白色文字的 `xterm` 窗口。另一方面，一个简单的标志是符号 `&`。例如，命令
 
 ```
 $ xterm &
 ```
 
+打开另一个 `xterm` 窗口并将当前的 `xterm` 窗口返回命令行界面。
 
-
-
-打开另一个 xterm 窗口并将当前的 xterm 窗口返回命令行界面。
-
-另一方面，参数（Arguments）不是配置选项，而是提供给程序进行处理的信息。参数不像标志以横字符（dash）作为标志（flags）开头。参数通常是需要打开、处理或编辑的文件名——如下例所示，该示例表示使用 emacs 编辑器打开文件 testfile 进行编辑：
+另一方面，参数（Arguments）不是配置选项，而是提供给程序进行处理的信息。参数不像标志以横字符（dash）作为标志（flags）开头。参数通常是需要打开、处理或编辑的文件名——如下例所示，该示例表示使用 `emacs` 编辑器打开文件 `testfile` 进行编辑：
 
 ```
 $ emacs testfile
@@ -3257,56 +3223,58 @@ $ emacs testfile
 
 # 设置配色方案
 
-通过使用各种标志，可以设置 xterm 窗口几乎所有部分的颜色，从边框颜色到光标颜色。本节将介绍配色方案的主要元素：前景颜色、背景颜色和光标颜色。
+通过使用各种标志，可以设置 `xterm` 窗口几乎所有部分的颜色，从边框颜色到光标颜色。本节将介绍配色方案的主要元素：前景颜色、背景颜色和光标颜色。
 
 ## 理解 X Windows 颜色
 
-在查看用于设置 xterm 窗口颜色的特定标志之前，你需要先了解颜色在 X Windows 中是如何表示的。
+在查看用于设置 `xterm` 窗口颜色的特定标志之前，你需要先了解颜色在 X Windows 中是如何表示的。
 
 X Windows 中的颜色是以 RGB（红-绿-蓝）格式指定的。RGB 格式由有序的数字三元组组成，每个数字的值从 0 到 255 不等。这些数字分别代表红色、绿色和蓝色通道的值，其中 0 表示无颜色，255 表示颜色的最高可能值。
 
-幸运的是，你不需要为了获得所需的颜色而研究颜色组合。这项工作已经完成，并存储在一个文件中，X Windows 使用该文件将颜色名称映射到数值三元组。该文件通常称为 rgb.txt，通常位于 /usr/X11R/lib/X11 目录下。
+幸运的是，你不需要为了获得所需的颜色而研究颜色组合。这项工作已经完成，并存储在一个文件中，X Windows 使用该文件将颜色名称映射到数值三元组。该文件通常称为 `rgb.txt`，通常位于 `/usr/X11R/lib/X11` 目录下。
 
-Red Hat Linux 7.1 的 rgb 文件中选定的颜色列表显示在此，以便你在学习本节内容时进行颜色实验：
+Red Hat Linux 7.1 的 `rgb` 文件中选定的颜色列表显示在此，以便你在学习本节内容时进行颜色实验：
 
-- snow GhostWhite PapayaWhip LemonChiffon
-- AliceBlue LavenderBlush MistyRose white
-- DarkSlateGray DimGray gray MidnightBlue
-- NavyBlue SlateBlue blue SteelBlue
-- turquoise cyan DarkGreen SeaGreen
-- lawnGreen green GreenYellow DarkKhaki
-- LightYellow yellow gold RosyBrown
-- IndianRed sienna beige wheat
-- tan chocolate orange
-- tomato red DeepPink pink
-- maroon magenta violet orchid
-- purple DarkCyan DarkRed LightGreen
+- `snow` `GhostWhite` `PapayaWhip` `LemonChiffon`
+- `AliceBlue` `LavenderBlush` `MistyRose` `white`
+- `DarkSlateGray` `DimGray` `gray` `MidnightBlue`
+- `NavyBlue` `SlateBlue` `blue` `SteelBlue`
+- `turquoise` `cyan` `DarkGreen` `SeaGreen`
+- `lawnGreen` `green` `GreenYellow` `DarkKhaki`
+- `LightYellow` `yellow` `gold` `RosyBrown`
+- `IndianRed` `sienna` `beige` `wheat`
+- `tan` `chocolate` `orange`
+- `tomato` `red` `DeepPink` `pink`
+- `maroon` `magenta` `violet` `orchid`
+- `purple` `DarkCyan` `DarkRed` `LightGreen`
 
-## 注意
+### 注意
 
 取决于你的显示器颜色以及你正在运行的应用程序，你可能会发现某些颜色的显示与你预期的不符。这是由于显卡的限制以及系统之间的差异造成的。
 
 # 背景和前景颜色
 
-设置背景和前景颜色允许你控制屏幕上文本的外观。逻辑上，文本以前景颜色显示，而背景颜色（background-color）被分配给窗口背景。
+设置背景和前景颜色允许你控制屏幕上文本的外观。逻辑上，文本以前景颜色显示，而背景颜色（`background-color`）被分配给窗口背景。
 
-默认 xterm 窗口是白底黑字。使用 -fg 和 -bg 标志设置前景和背景颜色：
+默认 `xterm` 窗口是白底黑字。使用 `-fg` 和 `-bg` 标志设置前景和背景颜色：
+
+```
 $ xterm -fg white -bg black &
+```
 
-此命令提供了与默认 xterm 窗口完全相反的配色，将背景设置为黑色，前景设置为白色。结果如图 9.2 所示。
+此命令提供了与默认 `xterm` 窗口完全相反的配色，将背景设置为黑色，前景设置为白色。结果如图 9.2 所示。
 
-## 注意
+### 注意
 
--bg 和 -fg 标志并不是 xterm 特有的。事实上，它们是标准的 Windows 标志，可以更改大多数 Windows 应用程序的配色。然而，这些标志对 gnome-terminal 命令无效。要找到 GNOME terminal 的正确开关，请运行 gnome-terminal -help 命令。
+`-bg` 和 `-fg` 标志并不是 `xterm` 特有的。事实上，它们是标准的 Windows 标志，可以更改大多数 Windows 应用程序的配色。然而，这些标志对 `gnome-terminal` 命令无效。要找到 GNOME terminal 的正确开关，请运行 `gnome-terminal -help` 命令。
 
-# 图 9.2：
-控制配色方案
+## 图 9.2：控制配色方案
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_213_0.png)
 
 # 光标颜色
 
-如果你尝试了上一个设置颜色的示例，你可能注意到光标颜色与默认 xterm 配色方案相同。你也可以使用 -cr 标志更改此颜色。例如，如果你想要深蓝色的光标，可能会使用以下命令
+如果你尝试了上一个设置颜色的示例，你可能注意到光标颜色与默认 `xterm` 配色方案相同。你也可以使用 `-cr` 标志更改此颜色。例如，如果你想要深蓝色的光标，可能会使用以下命令
 
 ```
 $ xterm -bg white -fg black -cr MidnightBlue &
@@ -3314,18 +3282,18 @@ $ xterm -bg white -fg black -cr MidnightBlue &
 
 # 设置窗口大小和位置
 
-当你打开一个窗口（或者任何其他应用程序的窗口）时，窗口的大小被设置为默认大小，窗口的位置由你的窗口管理器配置决定（当你在阅读第 12 章“高级 X Windows 配置”时，你将在关键文件中看到 xterm 命令）。
+当你打开一个窗口（或者任何其他应用程序的窗口）时，窗口的大小被设置为默认大小，窗口的位置由你的窗口管理器配置决定（当你在阅读第 12 章“高级 X Windows 配置”时，你将在关键文件中看到 `xterm` 命令）。
 
-然而，你可以使用 -geometry 标志在 X Windows 中指定窗口的精确大小和位置。这是一个标准的 X Windows 标志（类似于 -bg 和 -fg），适用于大多数 X Windows 程序。
+然而，你可以使用 `-geometry` 标志在 X Windows 中指定窗口的精确大小和位置。这是一个标准的 X Windows 标志（类似于 `-bg` 和 `-fg`），适用于大多数 X Windows 程序。
 
-该标志的基本语法是 -geometry widthheight+x+y。该命令中的变量显示如下：
+该标志的基本语法是 `-geometry widthheight+x+y`。该命令中的变量显示如下：
 
-- width 指定窗口以像素为单位的宽度。
-- height 指定窗口以像素为单位的高度。
-- x 指定窗口的水平位置，即距离显示器左侧的像素偏移量。
-- y 指定窗口的垂直位置，即距离显示器顶部的像素偏移量。
+- `width` 指定窗口以像素为单位的宽度。
+- `height` 指定窗口以像素为单位的高度。
+- `x` 指定窗口的水平位置，即距离显示器左侧的像素偏移量。
+- `y` 指定窗口的垂直位置，即距离显示器顶部的像素偏移量。
 
-Xterm 接受使用 -geometry 标志，但处理信息的方式有些非标准。想一想，以像素为单位指定终端窗口的高度和宽度并没有太大意义。相反，xterm 将宽度和高度解释为显示的字符数和行数，并根据所使用的字体调整窗口大小。
+`xterm` 接受使用 `-geometry` 标志，但处理信息的方式有些非标准。想一想，以像素为单位指定终端窗口的高度和宽度并没有太大意义。相反，`xterm` 将宽度和高度解释为显示的字符数和行数，并根据所使用的字体调整窗口大小。
 
 默认窗口大小为 80 列 24 行字符。但如果你想让一个 10x 10 字符的小窗口放置在屏幕左侧 200 像素、屏幕顶部 300 像素处，你可以使用
 
@@ -3335,51 +3303,51 @@ $ xterm -geometry 10x10+200+300 &
 
 以获得如图 9.3 所示的窗口。
 
-# 图 9.3：
-使用几何标志
+## 图 9.3：使用几何标志
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_214_0.png)
 
 # 178 第 9 章 与 GNOME 使用应用程序
 
-## 注意
-GNOME 对应的命令是 gnome-terminal --geometry=10x10+200+300 & 然而，结果如图 9.4。
+### 注意
 
-# 图 9.4：
-几何标志与颜色标志结合
+GNOME 对应的命令是 `gnome-terminal --geometry=10x10+200+300 &` 然而，结果如图 9.4。
+
+## 图 9.4：几何标志与颜色标志结合
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_215_0.png)
 
 # 在 xterm 中运行应用程序
 
-虽然 xterm 的目的是使用命令行执行命令，但你可能希望在启动 xterm 时默认运行字符模式程序。例如，如果你经常在 xterm 窗口中运行 top，你可能希望在打开 xterm 时启动它。这是通过 -e 标志实现的：
+虽然 `xterm` 的目的是使用命令行执行命令，但你可能希望在启动 `xterm` 时默认运行字符模式程序。例如，如果你经常在 `xterm` 窗口中运行 `top`，你可能希望在打开 `xterm` 时启动它。这是通过 `-e` 标志实现的：
+
+```
 $ xterm -e top &
+```
 
-当窗口运行的程序退出时，xterm 窗口会关闭。需要注意的是，在 xterm 中使用 -e 标志时，默认窗口标题是启动的程序名称。
+当窗口运行的程序退出时，`xterm` 窗口会关闭。需要注意的是，在 `xterm` 中使用 `-e` 标志时，默认窗口标题是启动的程序名称。
 
-## 注意
+### 注意
+
 该标志不会设置默认窗口标题。
 
 # 自定义 xterm
 
-# 图 9-5
-xterm 窗口打开时启动 top
+## 图 9-5 xterm 窗口打开时启动 top
 
 ![](img/fd2d9aa645b3d05a8fce0216_0.png)
 
 # 设置字体
 
-xterm 的默认字体通常易读且适用于大多数显示器。如果你有一个特别大或小的显示器，或者使用异常低或高的分辨率，你可能想更改 xterm 中使用的字体。
+`xterm` 的默认字体通常易读且适用于大多数显示器。如果你有一个特别大或小的显示器，或者使用异常低或高的分辨率，你可能想更改 `xterm` 中使用的字体。
 
-为了实现这一点，请使用 -fn 标志。但你如何引用字体呢？字体通过名称引用，可以是简单的 7x13（表示宽 7 像素、深 13 像素），也可以是 -sony-fixed-medium-r-normal-24-230-75-75-c-120-iso8859-1（表示来自字体库的24 点罗马风格字体）。
+为了实现这一点，请使用 `-fn` 标志。但你如何引用字体呢？字体通过名称引用，可以是简单的 `7x13`（表示宽 7 像素、深 13 像素），也可以是 `-sony-fixed-medium-r-normal-24-230-75-75-c-120-iso8859-1`（表示来自字体库的24 点罗马风格字体）。
 
-X Windows 提供了一个程序 xfonts，它可以提供 Windows 系统可用字体列表。要查看系统上的可用字体，请在 xterm 窗口中使用以下命令：
+X Windows 提供了一个程序 `xfonts`，它可以提供 Windows 系统可用字体列表。要查看系统上的可用字体，请在 `xterm` 窗口中使用以下命令：
 
-- xfonts | more
+- `xfonts | more`
 
-more 部分允许你通过按空格键向前翻页查看长字体列表。
-
-
+`more` 部分允许你通过按空格键向前翻页查看长字体列表。
 
 因此，要选择 10×20 字体，请使用命令
 
@@ -3387,29 +3355,27 @@ more 部分允许你通过按空格键向前翻页查看长字体列表。
 $ xterm -fn 10x20 &
 ```
 
-以获得一个如图 9.6 所示的大字体窗口。当你将其与图 9.1 进行比较时，请注意不仅字体变大了，xterm 窗口也变大了，以便以相同的行数和列数容纳更大的字体。
+以获得一个如图 9.6 所示的大字体窗口。当你将其与图 9.1 进行比较时，请注意不仅字体变大了，`xterm` 窗口也变大了，以便以相同的行数和列数容纳更大的字体。
 
-## 图 9.6：
-10×20 字体
+## 图 9.6：10×20 字体
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_217_0.png)
 
-从理论上讲，这些字体中的任何一种都可以配合 `-fn` 标志和 xterm 命令使用。但在实践中，这并不可行。xterm 的本质是它需要等宽字体——即无论字符相对大小如何，所有字符都占据相同空间的字体。在 Microsoft Windows 世界中，等宽字体的一个例子是 Courier。
+从理论上讲，这些字体中的任何一种都可以配合 `-fn` 标志和 `xterm` 命令使用。但在实践中，这并不可行。`xterm` 的本质是它需要等宽字体——即无论字符相对大小如何，所有字符都占据相同空间的字体。在 Microsoft Windows 世界中，等宽字体的一个例子是 `Courier`。
 
-相比之下，许多字体是比例间距的。这意味着字母“i”占据的空间比“w”少，因为后者是一个更宽的字母。xterm 处理这些比例间距字体的效果并不好，如图 9.7 所示，所选字体来自 Times 家族。
+相比之下，许多字体是比例间距的。这意味着字母“i”占据的空间比“w”少，因为后者是一个更宽的字母。`xterm` 处理这些比例间距字体的效果并不好，如图 9.7 所示，所选字体来自 Times 家族。
 
-## 图 9.7：
-使用比例间距字体
+## 图 9.7：使用比例间距字体
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_218_0.png)
 
 下面列出了 Red Hat Linux 7.1 随带的 X Windows 发行版中一些常用的（易于输入的）等宽字体：
 
-- 5x7 6x13bold 7x14bold 9x15bold
-- 5x8 6x9 8x13 10x20
-- 6x10 7x13 8x13bold 12x24
-- 6x12 7x13bold 8x16
-- 6x13 7x14
+- `5x7` `6x13bold` `7x14bold` `9x15bold`
+- `5x8` `6x9` `8x13` `10x20`
+- `6x10` `7x13` `8x13bold` `12x24`
+- `6x12` `7x13bold` `8x16`
+- `6x13` `7x14`
 
 如果你想尝试其他字体，可以使用 `xfonts` 选择一个字体列表，选择其中一种字体，然后使用 `xfd` 命令在窗口中显示该字体。例如，显示你之前看到的 Sony 字体 `-sony-fixed-medium-r-normal-24-230-75-c-120-isoiso08859-1`，使用命令
 
@@ -3419,27 +3385,23 @@ $ xfd -fn -sony-fixed-medium-r-normal-24-230-75-c-120-isoiso08859-1
 
 注意使用 `-fn` 标志来指定字体名称。字体将显示在类似于图 9.8 所示窗口中。点击 Quit 按钮关闭窗口。
 
-## 图 9.8：
-使用 xfd 命令显示字体
+## 图 9.8：使用 xfd 命令显示字体
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_219_0.png)
 
 # 其他功能
 
-Xterm 提供的功能比这里列出的多得多。你可以在 xterm man 页面中找到它们。man 页面（manual 的缩写）提供了有关如何使用特定程序的信息。要访问 xterm 页面，请在 xterm 窗口中使用命令
+`Xterm` 提供的功能比这里列出的多得多。你可以在 `xterm` man 页面中找到它们。man 页面（manual 的缩写）提供了有关如何使用特定程序的信息。要访问 `xterm` 页面，请在 `xterm` 窗口中使用命令
 
 ```bash
 $ man xterm
 ```
 
-此命令将显示如图 9.9 所示的 man 页面。使用箭头键滚动查看 man 页面。要退出 man 页面，输入 q。
+此命令将显示如图 9.9 所示的 man 页面。使用箭头键滚动查看 man 页面。要退出 man 页面，输入 `q`。
 
-## 图 9.9：
-xterm man 页面
+## 图 9.9：xterm man 页面
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_220_0.png)
-
-
 
 在保存图片时，你也想指定图片的类型。对话框中间是“确定文件类型”（Determine File Type）按钮。通过点击此按钮，你可以查看可用文件类型的列表。从列表中选择你想要的文件类型。准备好保存文件后，点击确定。
 
@@ -3449,15 +3411,13 @@ xterm man 页面
 
 要开启裁剪，右键点击图片。在打开的菜单中，选择 工具（Tools） > 变换工具（Transform Tools） > 裁剪与调整（Crop & Resize）。要选择裁剪区域，在查看器窗口中用左鼠标键拖出一个矩形。图 9.15 显示了查看器窗口中的图片，其中矩形表示了用户拖动鼠标的位置。
 
-图 9.15：
-选择裁剪
+## 图 9.15：选择裁剪
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_225_0.png)
 
 当你选择好裁剪区域后，只需点击“裁剪与调整信息”窗口中的“裁剪”按钮。结果将类似于上例中的图 9.16。
 
-图 9.16：
-裁剪结果
+## 图 9.16：裁剪结果
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_225_1.png)
 
@@ -3467,19 +3427,15 @@ xterm man 页面
 
 GIMP 的常用用途之一是截图。如果你想将打开的窗口捕获到图片文件中，可以使用“获取屏幕”（Acquire Screen）功能。当你有一个想要捕获的窗口时，选择 文件（File） > 获取（Acquire） > 截图（Screen Shot），这会打开一个如图 9.17 所示的截图对话框。
 
-## 图 9.17：
-
-截图窗口
+## 图 9.17：截图窗口
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_226_0.png)
 
 你可以捕获单个窗口或整个桌面的内容。要捕获单个窗口，选择“单个窗口”（Single Window）。点击确定，然后点击你选择的窗口。
 
-如果你不想显示窗口框或标题，请取消勾选“装饰”（Decorations）。例如，如果你捕获顶部实用工具的 xterm 窗口，并反转了背景色和前景色，结果看起来几乎就像你没有使用 X Window，如图 9.18 所示。
+如果你不想显示窗口框或标题，请取消勾选“装饰”（Decorations）。例如，如果你捕获顶部实用工具的 `xterm` 窗口，并反转了背景色和前景色，结果看起来几乎就像你没有使用 X Window，如图 9.18 所示。
 
-## 图 9.18：
-
-top 的截图
+## 图 9.18：top 的截图
 
 | PID | USER | PR | NI | VID | RSS | SHARE | STAT | ZCPU | JEM | TIME | COMMAND |
 |---|---|---|---|---|---|---|---|---|---|---|---|
@@ -3498,24 +3454,27 @@ top 的截图
 | 4 root | 0 | 0 | 0 | 0 | 0 | S | 0.0 | 0.0 | 0004 | init |
 | 6 root | -20 | 0 | 0 | 0 | 0 | SMK | 0.0 | 0.0 | 0029 | krecovery |
 
-
-
-
 ## 图 9.21: gedit 窗口
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_231_0.png)
 
-你可以通过以下命令启动 gedit：
+你可以通过以下命令启动 `gedit`：
 
-`$ gedit &`
+```
+$ gedit &
+```
 
-或者，如果 gedit 不在你的路径中，可以使用以下命令：
+或者，如果 `gedit` 不在你的路径中，可以使用以下命令：
 
-`$ /usr/bin/gedit &`
+```
+$ /usr/bin/gedit &
+```
 
 你也可以点击 GNOME 系统主菜单并选择 程序（Programs） > 应用程序（Applications） > Gedit。
 
 界面非常简单。顶部是工具栏，带有自明的按钮，用于加载和保存文件、剪切、复制和搜索文本。
+
+
 
 要加载现有文件，点击打开（Open）按钮或选择文件（File） > 打开（Open）。会弹出一个对话框，你可以在其中浏览并选择要打开。当文件打开时，它将如图 9.22 所示。
 
@@ -3523,11 +3482,11 @@ top 的截图
 
 工具栏上的查找（Find）按钮会弹出如图 9.23 所示的查找对话框。你也可以通过编辑（Edit） > 查找（Find）来打开此对话框。
 
-## 图 9.22: 加载文件的结果
+### 图 9.22: 加载文件的结果
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_232_0.png)
 
-## 图 9.23: 查找对话框
+### 图 9.23: 查找对话框
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_232_1.png)
 
@@ -3539,7 +3498,7 @@ top 的截图
 
 你可能已经注意 GNOME 面板中出现的时。不过，有些用户喜欢在桌面上看到一个更大的数字钟或模拟钟。
 
-这可以通过 xclock 程序实现。xclock 是一个基础时钟程序，允许你创建模拟或数字钟。默认情况下，xclock 显示模拟钟，命令：
+这可以通过 `xclock` 程序实现。`xclock` 是一个基础时钟程序，允许你创建模拟或数字钟。默认情况下，`xclock` 显示模拟钟，命令：
 
 ```
 $ xclock &
@@ -3553,15 +3512,15 @@ $ /usr/X11R/bin/xclock &
 
 会创建一个类似于图 9.24 所示的窗口。
 
-## 图 9.24: 默认 xclock 样式
+### 图 9.24: 默认 xclock 样式
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_233_0.png)
 
--digital 标志会导致 xclock 显示类似于如图 9.25 所示的数字钟。
+`-digital` 标志会导致 `xclock` 显示类似于如图 9.25 所示的数字钟。
 
-## 图 9.25: 2001年1月15日 周一 11:29:31 - 数字 xclock 窗口
+### 图 9.25: 2001年1月15日 周一 11:29:31 - 数字 xclock 窗口
 
--digital 标志并不是 xclock 接受的唯一标志。-hd 和 -h1 标志为模拟钟创建了更有趣的视觉显示。-hd 标志用于指定时钟指针的颜色，而 -h1 标志指定时钟指针轮廓的颜色。（记得之前关于 RGB 颜色的讨论吗？这是使用 RGB 颜色的实例之一。）
+`-digital` 标志并不是 `xclock` 接受的唯一标志。`-hd` 和 `-h1` 标志为模拟钟创建了更有趣的视觉显示。`-hd` 标志用于指定时钟指针的颜色，而 `-h1` 标志指定时钟指针轮廓的颜色。（记得之前关于 RGB 颜色的讨论吗？这是使用 RGB 颜色的实例之一。）
 
 例如，命令：
 
@@ -3571,11 +3530,11 @@ $ xclock -hd yellow -h1 green &
 
 会创建一个具有黄色指针和绿色轮廓的时钟，如图 9.26 所示（当然，在你正在看的黑白复印图中很难看清）。
 
-## 图 9.26: 设置时钟指针的颜色
+### 图 9.26: 设置时钟指针的颜色
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_234_0.png)
 
-注意指针与时钟白色表盘之间缺乏对比。这可以通过标准的 X Windows 标志来修正：即你之前在讨论 xterm 时看到的 -bg 标志。通过指定背景颜色为黑色：
+注意指针与时钟白色表盘之间缺乏对比。这可以通过标准的 X Windows 标志来修正：即你之前在讨论 `xterm` 时看到的 `-bg` 标志。通过指定背景颜色为黑色：
 
 ```
 $ xclock -hd yellow -h1 green -bg black &
@@ -3583,11 +3542,11 @@ $ xclock -hd yellow -h1 green -bg black &
 
 你将得到类似图 9.27 的效果。
 
-## 图 9.27: 设置背景颜色
+### 图 9.27: 设置背景颜色
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_234_1.png)
 
-虽然指针现在清晰可见，但出现了一个新问题：指示时钟点的标记现在变得不可见，因为它们是黑色的，并且绘制在黑色背景上。这些标记被视为前景的一部分，它们的颜色可以使用标准的 X Windows -fg 标志进行更改。命令：
+虽然指针现在清晰可见，但出现了一个新问题：指示时钟点的标记现在变得不可见，因为它们是黑色的，并且绘制在黑色背景上。这些标记被视为前景的一部分，它们的颜色可以使用标准的 X Windows `-fg` 标志进行更改。命令：
 
 ```
 $ xclock -hd yellow -h1 green -bg black -fg cyan &
@@ -3595,7 +3554,7 @@ $ xclock -hd yellow -h1 green -bg black -fg cyan &
 
 会产生类似于图 9.28 的结果。
 
-## 图 9.28: 设置前景颜色
+### 图 9.28: 设置前景颜色
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_234_2.png)
 
@@ -3623,7 +3582,7 @@ $ /usr/bin/gcalc
 
 到这里，你应该已经习惯了导航你的 GNOME 环境。你可以控制 GNOME 的基本选项，可以启动应用程序，并可以操作窗口。正如之前提到的，不过，X Windows 的力量源于其灵活性可配置性。本章将考虑如何配置 GNOME 以满足你的需求，包括配置 GNOME 面板外观。
 
-## 第十章：高级 GNOME 配置
+# 第十章：高级 GNOME 配置
 
 - 使用控制中心
 - 配置面板
@@ -3639,13 +3598,15 @@ GNOME 控制中心可以通过两种方式访问：
 
 - 左侧显示按七个主要类别组织的配置树：桌面、文档处理器、多媒体、外设、窗口管理器、会话和用户界面。
 
-## 使用 GNOME 控制中心
-
 右侧显示你所选择配置树部分的控件。例如，在图 10.2 中，显示的是桌面背景部分。
 
-## 图 10.1: 控制中心窗口![](img/fd2d9aa645b3d05a8fce065954a79484_240_0.png)
+### 图 10.1: 控制中心窗口
 
-## 图 10.2: 桌面背景部分![](img/fd2d9aa645b3d05a8fce065954a79484_240_1.png)
+![](img/fd2d9aa645b3d05a8fce065954a79484_240_0.png)
+
+### 图 10.2: 桌面背景部分
+
+![](img/fd2d9aa645b3d05a8fce065954a79484_240_1.png)
 
 ## 桌面
 
@@ -3656,20 +3617,17 @@ GNOME 控制中心可以通过两种方式访问：
 - **桌面壁纸** 点击浏览按钮并从硬盘选择一张图像作为背景壁纸。你可以选择将其居中、在桌上重复平铺或缩放以填充桌面。或者，你可以使用浮雕标志（Embossed Logo）选项为你的背景添加红帽标志。
 - **单一纯色** 从颜色下拉列表中选择纯（Solid），然后选择主颜色（Primary Color）以打开图 10.3 所示的选取颜色窗口。
 
-## 图 10.3: 选取颜色窗口![](img/fd2d9aa645b3d05a8fce065954a79484_241_0.png)
+### 图 10.3: 选取颜色窗口
+
+![](img/fd2d9aa645b3d05a8fce065954a79484_241_0.png)
 
 - **双色渐变** 从颜色下拉列表中选择垂直渐变（Vertical Gradient）或水平渐变（Horizontal Gradient），然后为主颜色（Primary Color）和次颜色（Secondary Color）都选择颜色。这创建了一个从顶部到部（或从左到右）从主颜色变为次颜色的渐变效果。
-
-
-
 
 当你完成背景设置更改后，点击 OK 按钮提交更改。
 
 要控制你的面板（Panel）设置，请在 GNOME 控制中心的桌面部分选择“面板”项。在 GNOME 控制中心窗口的右侧，显示如图 10.4 所示的面板配置应用程序。
 
-# 图 10.4：
-
-配置你的面板
+### 图 10.4：配置你的面板
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_242_0.png)
 
@@ -3685,9 +3643,7 @@ GNOME 控制中心可以通过两种方式访问：
 
 要控制你的屏幕保护程序设置，请在 GNOME 控制中心的桌面部分选择屏幕保护程序（Screensaver）项。在 GNOME 窗口的右侧，显示如图 10.5 所示的屏幕保护程序配置应用程序。
 
-# 图 10.5：
-
-配置你的屏幕保护程序
+### 图 10.5：配置你的屏幕保护程序
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_243_0.png)
 
@@ -3701,28 +3657,23 @@ GNOME 控制中心可以通过两种方式访问：
 
 控制中心桌面部分的另一个有用功能是图 10.6 中的主题选择器（Theme Selector）。
 
-# 图 10.6：
-
-主题选择器
+### 图 10.6：主题选择器
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_244_0.png)
 
 在此部分中，你可以从窗口上部的桌面主题列表中进行选择。这些桌面主题定义了统一的窗口背景、按钮样式、窗口样式和配色方案集合。你可以通过选择“使用自定义字体”（Use Custom Font）来调整主题。当你然后点击显示的字体（在图 10.6 所示的情况下，是 Helvetica）时，会打开“选择字体”（Pick A Font）窗口，为你提供字体、样式和大小的选择。当你选择一个主题时，主题示例将显示在应用程序的半部分，如图 10.7 所示，其中选择了 Quiet 主题。
 
-# 图 10.7：
-选择 Quiet 主题
+### 图 10.7：选择 Quiet 主题
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_245_0.png)
 
 控制中心桌面部分的最后一个功能是图 10.8 所示的窗口管理器选择器（Window Manager selector）。此部分包含了所有可用窗口管理器。你可以在此菜单中切换窗口管理器。“为 Sawfish 运行配置工具”（Run Configuration Tool For Sawfish）选项会打开另一个窗口，你可以在可以在中配置与 GNOME 控制中心 Sawfish 窗口管理器部分相同的选项。这些选项将在本章稍后进行讨论。
 
-# 图 10.8：
-
-窗口管理器选择器
+### 图 10.8：窗口管理器选择器
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_246_0.png)
 
-# 文档处理程序
+## 文档处理程序
 
 文档处理程序（Document Handlers）部分管理与各种类型文件相关的应用程序，包括默认文本编辑器、其他程序的 MIME 类型以及 Web 地址的 URL 处理器。换句话说，此部分设置了你在 GNOME 文件管理器中打开数据文件时的应用程序。
 
@@ -3730,15 +3681,13 @@ GNOME 控制中心可以通过两种方式访问：
 
 点击 Gnome 编辑器（Gnome Editor）下拉框以选择你喜好的默认编辑器。Emacs 是默认的 Gnome 编辑器。如果你保持默认且计算机上没有安装 Emacs，当你尝试从 GNOME 文件管理器打开文本文件时，你会收到一条错误消息。
 
-# 图 10.9：
-设置默认编辑器
+### 图 10.9：设置默认编辑器
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_247_0.png)
 
 要定义与文档扩展名关联的应用程序，请选择“MIME 类型”（Mime Types）项。该项显示图 10.10 所示的配置程序。
 
-# 图 10.10：
-各种 MIME 类型
+### 图 10.10：各种 MIME 类型
 
 | MIME 类型 | 扩展名 | 更多 |
 |---|---|---|
@@ -3753,12 +3702,9 @@ GNOME 控制中心可以通过两种方式访问：
 | application/x-word | aw | |
 | application/xml | lr | |
 
-(注：原文第 246-247 页的表格文本存在严重重复，已根据逻辑流过滤。)
-
 要定义与 Web 页面或任何使用通用资源定位符（URL）的文件关联的应用程序，请选择“URL 处理器”（URL Handlers）项。该项显示图 10.11 所示的配置程序。
 
-# 图 10.11：
-URL 处理器
+### 图 10.11：URL 处理器
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_248_0.png)
 
@@ -3766,23 +3712,19 @@ URL 处理器
 
 默认有两种浏览器可选：Netscape 和 GNOME 帮助浏览器。你可以在当前浏览器或新窗口中打开它们。突出显示你想更改的协议。点击处理器框中的下拉箭头以查看选项。做出选择，然后点击设置。
 
-# 多媒体
+## 多媒体
 
 多媒体部分允许你控制基于 GNOME 系统的两个声音方面：启动 GNOME 时是否启动声音系统，以及创建“声音事件”的操作。
 
 要定义声音启动序列，请在左侧面板的“多媒体”下选择“声音”（Sound）。默认打开“常规”（General）标签页，如图 10.12 所示。
 
-图 10.12：
-配置声音启动序列
+### 图 10.12：配置声音启动序列
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_249_0.png)
 
 要在 GNOME 窗口中获得声音服务，必须选择“启用声音启动”（Enable Sound Startup）选项。在此标签页下启用声音事件，必须选择“事件声音”（Sounds For Events）选项。要定义事件发生时的声音，请点击“声音事件”（Sound Events）标签页，如图 10.13 所示。
 
-
-
-
-## 图 10.13：声音事件选项卡
+### 图 10.13：声音事件选项卡
 
 | 事件 | 要播放的文件 |
 |---|---|
@@ -3813,13 +3755,15 @@ URL 处理器
 
 如果你插入了一张包含数据的 CD，此部分允许你配置三个选项中的任何或全部：自动将 CD 的文件挂载到默认驱动器（Red Hat Linux 7.1 中的 `/mnt/cdrom`）、自动运行驱动器主目录下的程序，以及打开 GNOME 文件管理器来管理该目录。
 
-如果你插入了一张音频 CD，可以设置 Linux 在识别到 CD 时运行特定的命令。默认情况下，GNOME 控制中心配置为使用 GNOME CD 播放器播放介质上的任何音乐。有关 GNOME CD 播放器命令选项的更多信息，请打开 xterm 并运行 `gtcd -help` 命令。
+如果你插入了一张音频 CD，可以设置 Linux 在识别到 CD 时运行特定的命令。默认情况下，GNOME 控制中心配置为使用 GNOME CD 播放器播放介质上的任何音乐。有关 GNOME CD 播放器命令选项的更多信息，请打开 `xterm` 并运行 `gtcd -help` 命令。
 
-## 图 10.14：配置你的 CD 驱动器
+### 图 10.14：配置你的 CD 驱动器
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_251_0.png)
 
 图 10.15 所示的键盘条目允许你指定要启用键盘自动重复，如果启用，则可以指定开始重复之前的延迟以及字符重复的速度。此外，你还可以选择启用在每次按下按键时播放点击声。如果你启用了点击声，可以控制点击的音量。你还可以指定键盘蜂的音量、音调和持续时间，键盘蜂在有键盘消息或错误时会响。
+
+
 
 ## 图 10.15：配置你的键盘
 
@@ -3884,6 +3828,7 @@ $ /usr/bin/sawfish-ui &
 用户界面选项允许你控制界面的各个方面，包括：
 
 - 窗口的默认外观
+
 - 对话框的方式
 
 ## 配置 GNOME 面板
@@ -3895,9 +3840,13 @@ GNOME 面板在启动时创建一个默认面板。
 用户可以创建自己的面板。从 GNOME 菜单选择创建五种不同的面板：
 
 - 菜单面板（Menu Panel）：包含下拉菜单。
+
 - 边缘面板（Edge Panel）：沿边缘添加面板。
+
 - 对齐面板（Aligned Panel）：类似于边缘面板，但不需要放置在角落。
+
 - 滑动面板（Sliding Panel）：类似于对齐面板，但可以根据需要伸缩。
+
 - 浮动面板（Floating Panel）：是最自由的面板，可以放置在屏幕任何位置。
 
 一旦创建，任何面板的属性都可以更改。右键点击面板。在弹出菜单中，选择面板>属性>所有属性。在出现的属性窗口中，你可以调整除菜单面板以外面板的位置、颜色等。
@@ -3905,8 +3854,11 @@ GNOME 面板在启动时创建一个默认面板。
 你还可以通过其他方式配置 GNOME 面板。就本节而言，你将使用默认面板。你想面板面板的主要配置任务有：
 
 - 添加抽屉（drawer）
+
 - 添加注销按钮
+
 - 添加启动器（launcher）
+
 - 控制面板属性
 
 ## 在面板上添加抽屉
@@ -3921,15 +3873,12 @@ GNOME 面板在启动时创建一个默认面板。
 
 通常，你通过从 GNOME 主菜单选择注销来退出 GNOME。不过，你可以在面板上添加按钮，以便单点击注销。要执行此操作，右键点击面板背景，然后点击面板>添加面板>注销按钮。注销按钮会被添加到面板中。
 
-
-
-
-
 ## 添加新启动器
 
 默认的 GNOME 面板包含几个按钮，用于启动如 Netscape 和终端窗口等应用程序。这些都是启动器按钮。你可以通过右键点击面板背景，然后从出现的菜单中选择面板（Panel） > 添加到面板（Add To Panel） > 启动器（Launcher）来创建自己的启动器按钮。这将打开类似于图 10.18 的对话框，用于定义要启动的应用程序。
 
 图 10.18：
+
 定义新的应用程序启动器
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_257_0.png)
@@ -3945,6 +3894,7 @@ GNOME 面板在启动时创建一个默认面板。
 该对话框包含两个选项卡。“边缘面板”（Edge Panel）选项卡控制面板在屏幕上的位置、面板（以及相关图标）的大小、自动隐藏功能的激活，以及面板两端隐藏按钮的状态。这些功能在第 8 章“使用 GNOME 和 Windows”中有所描述。
 
 ## 图 10.19：
+
 面板属性对话框，边缘面板选项卡
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_258_0.png)
@@ -3952,6 +3902,7 @@ GNOME 面板在启动时创建一个默认面板。
 背景（Background）选项卡如图 10.20 所示。此界面允许为面板定义背景图像或颜色。在屏幕顶部，你可以选择标准（Standard）、位图（Pixmap）或颜色（Color）背景。标准背景遵循你为 GNOME 定义的主题或颜色方案；位图使用位图图像作为背景；颜色允许你为背景定义纯色。
 
 ## 图 10.20：
+
 面板属性对话框，背景选项卡
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_259_0.png)
@@ -3971,10 +3922,15 @@ GNOME 面板在启动时创建一个默认面板。
 ## 使用 KDE
 
 - KDE 项目历史
+
 - KDE 与 Red Hat Linux 7.1
+
 - 探索 KDE 桌面
+
 - 浏览文件系统
+
 - 配置 KDE
+
 - 使用 KDE 工具
 
 Linux 用户界面最有前景的进展之一是 K 桌面环境（KDE）。KDE 是从零开发的完整图形桌面环境。KDE 也是大多数主流 Linux 发行版的默认桌面环境。尽管书中包含的 Red Hat Linux 7.1 默认安装 GNOME 桌面，它也包含了运行 KDE 2.1.1 版本所需的文件。
@@ -3989,30 +3945,43 @@ KDE 贡献者中还有翻译人员、作家、用户界面设计师和多媒体�
 
 KDE 并没有取代 Linux 电脑上的 X Windows 系统。相反，KDE 使用 X Windows 系统作为图形基础，在此基础上构建桌面。
 
-如果你用过其他的 X 窗口管理器（如 Sawfish、AfterStep 甚至 CDE），你可能会发现 KDE 包含了它自己的窗口管理器，称为 kwin。
+如果你用过其他的 X 窗口管理器（如 Sawfish、AfterStep 甚至 CDE），你可能会发现 KDE 包含了它自己的窗口管理器，称为 `kwin`。
 
 除了提供在桌面创建和管理窗口的核心功能的窗口管理器外，KDE 还包含了任务栏和主菜单等几个功能。对于 Red Hat Linux 7.1，运行 KDE 2.1.1 版本所需的文件已包含在内。
 
+* * `kdelibs-devel-2.1.1-5.i386.rpm` *
 
+* `kdelibs-sound-2.1.1-5.i386.rpm`
 
+* `kdelibs-sound-devel-2.1.1-5.i386.rpm` *
 
-* * kdelibs-devel-2.1.1-5.i386.rpm *
-* kdelibs-sound-2.1.1-5.i386.rpm
-* kdelibs-sound-devel-2.1.1-5.i386.rpm *
-* kdemultimedia-2.1.1-1.i386.rpm
-* kdenetwork-ppp-2.1.1-1.i386.rpm
-* kdenetwork-2.1.1-1.i386.rpm
-* kdepim-2.1.1-1.i386.rpm
-* kdesdk-2.1.1-1.i386.rpm *
-* kdesdk-devel-2.1.1-1.i386.rpm *
-* kdesupport-2.1-3.i386.rpm
-* kdesupport-devel-2.1-3.i386.rpm *
-* kdetoys-2.1.1-2.i386.rpm *
-* kdeutils-2.1.1-1.i386.rpm *
-* kdevelop-1.4.1-2.i386.rpm *
-* kdoc-2.1.1-1.noarch.rpm *
-* koffice-2.0.1-2.i386.rpm
-* kppload-1.04-23.i386.rpm
+* `kdemultimedia-2.1.1-1.i386.rpm`
+
+* `kdenetwork-ppp-2.1.1-1.i386.rpm`
+
+* `kdenetwork-2.1.1-1.i386.rpm`
+
+* `kdepim-2.1.1-1.i386.rpm`
+
+* `kdesdk-2.1.1-1.i386.rpm` *
+
+* `kdesdk-devel-2.1.1-1.i386.rpm` *
+
+* `kdesupport-2.1-3.i386.rpm`
+
+* `kdesupport-devel-2.1-3.i386.rpm` *
+
+* `kdetoys-2.1.1-2.i386.rpm` *
+
+* `kdeutils-2.1.1-1.i386.rpm` *
+
+* `kdevelop-1.4.1-2.i386.rpm` *
+
+* `kdoc-2.1.1-1.noarch.rpm` *
+
+* `koffice-2.0.1-2.i386.rpm`
+
+* `kppload-1.04-23.i386.rpm`
 
 带有星号 (*) 的软件包位于第二张 Red Hat 7.1 安装光盘上，该书中未包含这些光盘内容。你可以从 KDE 主页 http://www.kde.org 或 RPM 数据库网站 http://www.rpmfind.net 下载它们。
 
@@ -4034,18 +4003,22 @@ KDE 并没有取代 Linux 电脑上的 X Windows 系统。相反，KDE 使用 X 
 在 Red Hat Linux 7.1 中，默认桌面环境是 GNOME。如果你是从安装光盘或下载安装的 KDE，可以从默认的 GNOME 图形登录窗口启动 KDE。为此，请按照以下步骤操作：
 
 1. 选择 Session（会话）菜单。
+
 2. 在可能的桌面列表中选择 KDE。
+
 3. 使用你的用户名和密码登录。
 
 当 KDE 启动时，会显示一个初始界面，如图 11.1 所示。
 
-如果你通常通过登录控制台提示符并使用 startx 命令来启动 X Windows，那么你需要配置系统，以便在启动 startx 命令时启动 KDE。
+如果你通常通过登录控制台提示符并使用 `startx` 命令来启动 X Windows，那么你需要配置系统，以便在启动 `startx` 命令时启动 KDE。
 
 在这方面，你有三个选择：
 
 - 如果你想更改每个用户的默认桌面，请修改全局 Xclients 文件，你可以在 `/etc/X11/init/Xclients` 找到它。
-- 如果你只想更改自己的默认桌面环境，请将全局 Xclients 文件复制到你的家目录，将文件重命名为 .Xclients，然后编辑家目录中的该文件。你可以使用以下命令复制文件：
-  - cp /etc/X11/init/Xclients ~/.Xclients
+
+- 如果你只想更改自己的默认桌面环境，请将全局 Xclients 文件复制到你的家目录，将文件重命名为 `.Xclients`，然后编辑家目录中的该文件。你可以使用以下命令复制文件：
+
+  - `cp /etc/X11/init/Xclients ~/.Xclients`
 
 ### 图 11.1：
 
@@ -4055,15 +4028,15 @@ KDE 并没有取代 Linux 电脑上的 X Windows 系统。相反，KDE 使用 X 
 
 在前两种情况中的任何，你都需要对文件进行一处更改。第五行最初应该是：
 
-PREFERRED=
+`PREFERRED=`
 
 将此行更改为
 
-PREFERRED=startkde
+`PREFERRED=startkde`
 
-一旦你进行了此项更改并保存，当你使用 startx 命令时，X Windows 将以 KDE 作为你的桌面启动。如果你对全局 .Xclients 文件进行此更改，那么每个用户都把 KDE 作为他们的默认桌面。
+一旦你进行了此项更改并保存，当你使用 `startx` 命令时，X Windows 将以 KDE 作为你的桌面启动。如果你对全局 `.Xclients` 文件进行此更改，那么每个用户都把 KDE 作为他们的默认桌面。
 
-- 如果你只想更改你的默认桌面用户，请使用 Red Hat Linux 7.1 switchdesktop 命令。这会打开桌面切换（Desktop Switcher）对话框，你可以在其中选择喜欢的桌面环境。例如，如果你选择了 .Xclients，这将修改你家目录中的 .Xclients 文件，使其指向 .Xclients-default 文件，其中只有一行：
+- 如果你只想更改你的默认桌面用户，请使用 Red Hat Linux 7.1 `switchdesktop` 命令。这会打开桌面切换（Desktop Switcher）对话框，你可以在其中选择喜欢的桌面环境。例如，如果你选择了 `.Xclients`，这将修改你家目录中的 `.Xclients` 文件，使其指向 `.Xclients-default` 文件，其中只有一行：
 
 ```
 exec startkde
@@ -4073,9 +4046,6 @@ exec startkde
 
 当你准备好退出 KDE 时，从登录窗口选择 Logout（注销）。
 
-
-
-
 字体（Font）选项卡允许您定义用于问候（Greeting）、失败（Fail）和标准（Standard）消息的文本字体。要更改字体，请从下拉列表中选择想要更改的字体，并点击更改字体（Change Font）按钮。会出现一个选择字体（Select Font）对话框，您可以在其中选择所需的字体。
 
 背景（Background）选项卡（如图 11.3所示）允许您为登录屏幕选择背景颜色图案或背景图像。
@@ -4083,7 +4053,9 @@ exec startkde
 如果您更喜欢彩色背景，在选择模式（Mode）下拉框时有多种选择，包括：
 
 - 平色（Flat）：单色（两个颜色条中的第一个）
+
 - 水平渐变（Horizontal Gradient）：两种颜色从左右混合
+
 - 垂直渐变（Vertical Gradient，默认值）：两种颜色从上下混合
 
 要选择颜色，请点击颜色 1（Color 1）或颜色 2（Color 2）。会出现一个选择颜色（Select Color）对话框（如图 11.4 所示），您可以在其中选择要使用的颜色。
@@ -4096,7 +4068,7 @@ exec startkde
 
 # 图 11.4：
 
-标准的 KDE 选择颜色对话框允许您定义用于 kdm 背景的颜色。
+标准的 KDE 选择颜色对话框允许您定义用于 `kdm` 背景的颜色。
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_273_0.png)
 
@@ -4106,21 +4078,25 @@ KDE 2.1.1 提供了 25 多种标准壁纸图形。您可以从壁纸下拉列表
 
 如果您有另一个想要作为壁纸的图形，请点击浏览（Browse）按钮并从存储图形文件的目录中进行选择。
 
-> 建议将您想要作为壁纸的图形文件复制到标准的 KDE 壁纸目录 /usr/share/wallpapers/，这样即使在将其指定为 KDE 壁纸后，也不会意外删除该文件。
+> 建议将您想要作为壁纸的图形文件复制到标准的 KDE 壁纸目录 `/usr/share/wallpapers/`，这样即使在将其指定为 KDE 壁纸后，也不会意外删除该文件。
 
 通过选择模式选择下拉列表下方显示的按钮，可以将壁纸图形放置在背景的几个不同位置。选项包括：
 
 - 平铺（Tiled）：将壁纸图形作为跨整个背景的重复图案。
-- 居中（Centered）：将单个壁纸副本置于 kdm 屏幕中间——在这种情况下，它可能会大部分被 kdm 登录窗口覆盖。
+
+- 居中（Centered）：将单个壁纸副本置于 `kdm` 屏幕中间——在这种情况下，它可能会大部分被 `kdm` 登录窗口覆盖。
+
 - 缩放（Scaled）：将壁纸扩展到屏幕边缘。
 
 ## 注意
 
 如果您使用了平铺（Tiled）或缩放（Scaled）等壁纸选项，您选择的任何背景颜色将不可见。如果您只想使用背景颜色而非壁纸图形，请务必在壁纸下拉列表中选择“无壁纸”（No Wallpaper）选项。
 
-会话（Sessions）选项卡允许您指定登录会话的定义。例如，您可以添加用户安装的其他窗口管理器，如 CDE。用户（Users）选项卡允许您配置哪些用户以图标形式显示在登录窗口中。最后，便利（Convenience）选项卡允许您设置 KDE 登录时不需要密码的情况。
 
-当您定义好所需的 kdm 选项后，点击 OK 关闭对话框并保存设置。您将在下次看到 KDE 窗口时看到这些设置。
+
+会话（Sessions）选项卡允许您指定登录会话的定义。例如，您可以添加用户安装的其他窗口管理器，如 `CDE`。用户（Users）选项卡允许您配置哪些用户以图标形式显示在登录窗口中。最后，便利（Convenience）选项卡允许您设置 KDE 登录时不需要密码的情况。
+
+当您定义好所需的 `kdm` 选项后，点击 `OK` 关闭对话框并保存设置。您将在下次看到 KDE 窗口时看到这些设置。
 
 # 添加其他 KDE 应用
 
@@ -4128,12 +4104,12 @@ KDE 2.1.1 提供了 25 多种标准壁纸图形。您可以从壁纸下拉列表
 
 特别是，您可能希望将喜爱的 KDE 应用更新到新版本，或者下载未包含在默认 KDE 发行版中的应用程序。
 
-DE 应用的主要来源是 KDE Applications 网站：http://apps.kde.com。KDE Applications 网站定期更新，包含 800 多个 KDE 应用，每个应用都有简短说明和直接指向 FTP 下载目录的链接。
+DE 应用的主要来源是 KDE Applications 网站：`http://apps.kde.com`。KDE Applications 网站定期更新，包含 800 多个 KDE 应用，每个应用都有简短说明和直接指向 FTP 下载目录的链接。
 
 您可以在此应用程序页面找到的示例包括：
 
 - KDE 办公套件
-- 配置 BIND (DNS) 的工具
+- 配置 `BIND` (DNS) 的工具
 - 额外的图标集和配色方案（KDE 主题）
 - 视频文件播放器
 - 支持 KDE 的 Telnet 应用程序
@@ -4142,7 +4118,7 @@ DE 应用的主要来源是 KDE Applications 网站：http://apps.kde.com。KDE 
 - 用户管理工具
 - 数十种游戏
 
-记住，这些是您的 KDE 系统中已安装的许多 KDE 应用之外的。幸运的是，这些应用程序大部分以常规 RPM 包的形式提供，您可以按照本章及之前章节所述进行安装。
+记住，这些是您的 KDE 系统中已安装的许多 KDE 应用之外的。幸运的是，这些应用程序大部分以常规 `RPM` 包的形式提供，您可以按照本章及之前章节所述进行安装。
 
 对于新的 KDE 用户来说，某些额外的应用程序是以源代码形式分发的。为了使用它们，您需要安装开发包并在 Linux 系统上编译源代码。
 
@@ -4166,22 +4142,19 @@ DE 应用的主要来源是 KDE Applications 网站：http://apps.kde.com。KDE 
 
 在学习 KDE 环境时，可以启动几个 KDE 应用进行实验。KDE 文本编辑器和终端模拟器是一个很好的起点。在主菜单中选择系统 > 终端打开命令行窗口。一旦打开了终端模拟器，可以通过输入任何应用程序名称来启动它，而不是从菜单或点击图标。例如，可以通过输入 `kedit` 启动文本编辑器。
 
-
-
-
 # 探索 KDE 桌面
 
-进入程序命令的一种快速方法是通过 KDE 中的弹出式命令窗口。要使用此功能，按下 Alt+F2 并在弹出的小窗口中输入命令。
+进入程序命令的一种快速方法是通过 KDE 中的弹出式命令窗口。要使用此功能，按下 `Alt+F2` 并在弹出的小窗口中输入命令。
 
 # 使用多桌面
 
 如果你熟悉其他 Linux 虚拟管理器，每个管理器都包含许多打开的窗口。可以使用分页器（Pager）来管理多个虚拟桌面，每个桌面都是虚拟的；你可以在其中一个运行浏览器；在另一个运行文字处理器；在另一个中运行编辑代码的终端窗口。
 
-KDE 使用相同的理念为您提供多个视觉工作区。默认情况下，KDE 包含四个虚拟桌面，您可以通过点击面板（Panel）上的桌面名称或数字，或者按 Ctrl+F1 进入桌面一、Ctrl+F2 进入桌面二等在它们之间切换。
+KDE 使用相同的理念为您提供多个视觉工作区。默认情况下，KDE 包含四个虚拟桌面，您可以通过点击面板（Panel）上的桌面名称或数字，或者按 `Ctrl+F1` 进入桌面一、`Ctrl+F2` 进入桌面二等在它们之间切换。
 
 你可以更改桌面的数量并对其进行重命名，以适应你的使用习惯。从 KDE 主菜单中，选择设置（Preferences） > 外观（Look & Feel） > 桌面（Desktop）。在弹出的对话框中，点击桌面数量（Number Of Desktops）选项卡。窗口顶部的滑动条允许您配置 1 到 16 个虚拟桌面。每个虚拟桌面关联的文本框都允许您重命名桌面。
 
-您可以通过按住 Ctrl 键并反复按下 Tab 或 Shift+Tab 在桌面之间循环。
+您可以通过按住 `Ctrl` 键并反复按下 `Tab` 或 `Shift+Tab` 在桌面之间循环。
 
 # 操作应用程序窗口
 
@@ -4196,7 +4169,7 @@ KDE 的焦点策略决定了哪个窗口是 KDE 中的活动窗口。如果您�
 KDE 的多个虚拟桌面可以轻松同时处理许多打开的窗口，但您也有其他方法在打开的窗口之间切换：
 
 - 任务栏显示每个打开的窗口的按钮。点击任务栏按钮可以激活该窗口并将其置顶。
-- 您可以按住 Alt 键并按 Tab 或 Shift+Tab，像在 Windows 中一样反复在打开的窗口之间切换。
+- 您可以按住 `Alt` 键并按 `Tab` 或 `Shift+Tab`，像在 Windows 中一样反复在打开的窗口之间切换。
 - 您可以按下鼠标中键打开当前 KDE 会话的窗口和桌面列表。从此列表中，您可以选择任何窗口进行激活并将其置顶。
 
 ## 注意
@@ -4211,34 +4184,35 @@ KDE 的多个虚拟桌面可以轻松同时处理许多打开的窗口，但您�
 
 # 使用 Konqueror 窗口
 
-KDE 中的文件管理器被称为 Konqueror，它同时也兼任 Web 浏览器。
-可以通过点击面板上的所示图标来启动 Konqueror。
+KDE 中的文件管理器被称为 `Konqueror`，它同时也兼任 Web 浏览器。
+
+可以通过点击面板上的所示图标来启动 `Konqueror`。
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_280_0.png)
 
-这会将 Konqueror 作为 Web 浏览器启动，如图 11.6 所示。
+这会将 `Konqueror` 作为 Web 浏览器启动，如图 11.6 所示。
 
-# 图 11.6：
+## 图 11.6：
 
-Konqueror
+`Konqueror`
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_280_1.png)
 
-或者，您可以通过点击面板上的所示主目录（Home Directory）图标在 Konqueror 中打开您的主目录。
+或者，您可以通过点击面板上的所示主目录（Home Directory）图标在 `Konqueror` 中打开您的主目录。
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_280_2.png)
 
-会出现一个 Konqueror 窗口，如图 11.7 所示。
+会出现一个 `Konqueror` 窗口，如图 11.7 所示。
 
-# 图 11.7：
+## 图 11.7：
 
-Konqueror 让您查看主目录的内容并浏览到其他目录。
+`Konqueror` 让您查看主目录的内容并浏览到其他目录。
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_281_0.png)
 
-您文件系统的默认视图在右侧窗格中使用中等图标（由 KDE 根据文件类型分配）。您可以在 Konqueror 窗口顶部看到工具栏和位置（Location）行。左侧窗格还有一个目录树，等于 Microsoft Windows 资源管理器中的文件夹窗格。
+您文件系统的默认视图在右侧窗格中使用中等图标（由 KDE 根据文件类型分配）。您可以在 `Konqueror` 窗口顶部看到工具栏和位置（Location）行。左侧窗格还有一个目录树，等于 Microsoft Windows 资源管理器中的文件夹窗格。
 
-更改这些文件的视图以获取更多信息非常简单：从 Konqueror 工具栏，从视图（View） > 视图模式（View Mode）选择另一种显示选项，例如多列（MultiColumn）或文本视图（Text View）。您还可以在菜单上选择显示隐藏文件（Show Hidden Files）来查看主目录中的所有文件。
+更改这些文件的视图以获取更多信息非常简单：从 `Konqueror` 工具栏，从视图（View） > 视图模式（View Mode）选择另一种显示选项，例如多列（MultiColumn）或文本视图（Text View）。您还可以在菜单上选择显示隐藏文件（Show Hidden Files）来查看主目录中的所有文件。
 
 点击工具栏左端的向上箭头图标切换到父目录；点击任何目录将打开该目录并在窗口显示其内容。
 
@@ -4254,28 +4228,24 @@ http://www.sybex.com
 ftp://ftp.kde.org
 ```
 
-如果您当前连接到互联网，相应的 Web 将下载并在 Konqueror 中显示。
+如果您当前连接到互联网，相应的 Web 将下载并在 `Konqueror` 中显示。
 
 # 配置 Konqueror
 
-在 Konqueror 工具栏上，选择设置（Settings） > 配置 Konqueror（Configure Konqueror）。如图 11.10 所示，您可以在九个不同的类别中配置 Konqueror。
+在 `Konqueror` 工具栏上，选择设置（Settings） > 配置 Konqueror（Configure Konqueror）。如图 11.10 所示，您可以在九个不同的类别中配置 `Konqueror`。
 
-# 图 11.10：
+## 图 11.10：
 
-Konqueror 配置窗口
+`Konqueror` 配置窗口
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_284_0.png)
 
-
-
-
-
-## 第 11 章 • 使用 KDE
+### 第 11 章 • 使用 KDE
 
 - 文件管理器（File Manager）允许你设置文件管理器窗口的行为和外观。
-- 文件关联（File Associations）允许将 XLS 文件等文件类型与特定应用程序（如 KSpread）关联起来。
-- Konqueror 浏览器设置管理链接、文本大小、Java 和插件的规则。
-- 增强浏览（Enhanced Browsing）允许你为不同的网站配置各种关键词；这仅适用于作为浏览器的 Konqueror。
+- 文件关联（File Associations）允许将 `XLS` 文件等文件类型与特定应用程序（如 `KSpread`）关联起来。
+- `Konqueror` 浏览器设置管理链接、文本大小、Java 和插件的规则。
+- 增强浏览（Enhanced Browsing）允许你为不同的网站配置各种关键词；这仅适用于作为浏览器的 `Konqueror`。
 - Cookie（Cookies）允许你配置将接受从不同网站接受的配置消息。你可以按域名对其进行自定义。
 - 代理（Proxies）允许你通过代理服务器计算机连接到互联网或其他 Web 网络。
 - 加密设置（Crypto settings）允许你设置要使用的加密/解密方案。
@@ -4284,21 +4254,21 @@ Konqueror 配置窗口
 
 ## 使用快速浏览器（Quick Browser）
 
-Konqueror 提供了一种图形化管理文件的极方法，但如果你想立即启动程序或访问数据文件，Konqueror 的速度可能会稍慢。快速浏览器允许你通过 KDE 主菜单访问文件系统的任何部分，而无需打开过 Konqueror。
+`Konqueror` 提供了一种图形化管理文件的极方法，但如果你想立即启动程序或访问数据文件，`Konqueror` 的速度可能会稍慢。快速浏览器允许你通过 KDE 主菜单访问文件系统的任何部分，而无需打开过 `Konqueror`。
 
 当然，你无法通过快速浏览器菜单在目录之间拖放文件，也无法通过它为项目打开“属性”窗口，但对于启动应用程序或打开数据文件，快速浏览器是完美的工具。
 
 要访问快速浏览器，请在主菜单上选择“快速浏览器”。快速浏览器子菜单有三个选项：
 
 - 主目录（Home Directory）选项访问以你的主目录为开头的文件和目录。
-- 根目录（Root Directory）选项访问以根目录（/）为开头的文件和目录，根目录是 Linux 中的顶层目录。
-- 系统配置（System Configuration）选项访问 /etc 目录下的配置文件和目录。
+- 根目录（Root Directory）选项访问以根目录（`/`）为开头的文件和目录，根目录是 Linux 中的顶层目录。
+- 系统配置（System Configuration）选项访问 `/etc` 目录下的配置文件和目录。
 
 要查看如何使用快速浏览器查看你的文件系统，请在主菜单上选择 快速浏览器 ➤ 根目录，并花时间浏览出现的子菜单，如图 11.11 所示。请注意以下功能：
 
 - 每当你移动到一个目录时，该目录的内容就会显示。
 - 每当你点击一个文件时，KDE 会尝试启动或打开该文件。
-- 在任何子菜单中，当你点击目录名称时，你可以选择“在文件管理器中打开”或“在终端中打开”，以便在目录中打开 Konqueror 或命令行窗口。
+- 在任何子菜单中，当你点击目录名称时，你可以选择“在文件管理器中打开”或“在终端中打开”，以便在目录中打开 `Konqueror` 或命令行窗口。
 
 ## 图 11.11:
 
@@ -4314,11 +4284,11 @@ Konqueror 提供了一种图形化管理文件的极方法，但如果你想立�
 
 例如，引用你的 CD-ROM 驱动器的 KDE 文件是 KDE 桌面的一部分。这个 KDE 链接文件（以及关联的图标）允许你在无需使用命令行的情况下访问 CD-ROM 驱动器上的文件系统。你可以直接从桌面挂载、卸载和查看 KDE 内容。幸运的是，KDE 允许你以图形化方式创建这些链接文件。
 
-如果你想看看 KDE 链接文件到底像什么样，请进入你主目录下的 desktop 子文件夹。如果你的主目录是 /home/mj，请进入 /home/mj/desktop 并用文本编辑器打开一个与图标对应的文件之一。
+如果你想看看 KDE 链接文件到底像什么样，请进入你主目录下的 `desktop` 子文件夹。如果你的主目录是 `/home/mj`，请进入 `/home/mj/desktop` 并用文本编辑器打开一个与图标对应的文件之一。
 
-要创建一个引用图形化应用程序（如图形查看器 GIMP）的新 KDE 链接文件，请按照以下步骤操作：
+要创建一个引用图形化应用程序（如图形查看器 `GIMP`）的新 KDE 链接文件，请按照以下步骤操作：
 
-- 打开文件管理器（Konqueror）窗口以查看你的主目录，导航到本地 desktop 子目录。
+- 打开文件管理器（`Konqueror`）窗口以查看你的主目录，导航到本地 `desktop` 子目录。
 - 选择 编辑（Edit） > 新（Create New） > 链接到应用程序（Link To Application）。出现属性对话框。
 - 修改显示的名称的第一部分以匹配你的应用程序，在此情况下为 The Gimp。
 - 点击图标弹出一个带有其他可用图标的菜单。选择你喜欢的图标，然后点击确定。
@@ -4336,7 +4306,7 @@ KDE 链接文件属性对话框的执行选项卡，定义如何启动应用程�
 
 你已经创建了一个 KDE 链接文件。下一次登录 KDE 时，该文件的图标应该出现在你的桌面上。你可以使用各种链接文件来扩展 KDE 菜单、为桌面添加图标、自动启动应用程序以及向 KDE 面板（Panel）添加图标。下一部分“配置 KDE”描述了如何使用 KDE 链接文件完成其中一些任务。
 
-## 配置 KDE
+# 配置 KDE
 
 你已经在控制中心看到了许多配置选项。KDE 2.x 发布后的，主要重大变化之一是控制中心左上部分增加了索引（Index）、搜索（Search）和帮助（Help）选项卡。
 
@@ -4360,9 +4330,9 @@ KDE 链接文件属性对话框的执行选项卡，定义如何启动应用程�
 
 ## KDE 文件管理
 
-控制中心的文件浏览部分设置了图形界面内文件链接和组织的方式。文件关联子部分将 .txt 和 .jpg 等文件扩展名与特定应用程序关联。当你点击 KDE 文件管理器 Konqueror 中的文件时，它会被打开。当你选择特定类型的文件时，可以更改关联的应用程序。
+控制中心的文件浏览部分设置了图形界面内文件链接和组织的方式。文件关联子部分将 `.txt` 和 `.jpg` 等文件扩展名与特定应用程序关联。当你点击 KDE 文件管理器 `Konqueror` 中的文件时，它会被打开。当你选择特定类型的文件时，可以更改关联的应用程序。
 
-文件管理器子部分配置了 Konqueror 在打开新目录时的外观、移动文件到垃圾桶时的操作以及关联的命令行终端程序的行为。
+文件管理器子部分配置了 `Konqueror` 在打开新目录时的外观、移动文件到垃圾桶时的操作以及关联的命令行终端程序的行为。
 
 ## 帮助系统
 
@@ -4370,11 +4340,7 @@ KDE 链接文件属性对话框的执行选项卡，定义如何启动应用程�
 
 控制中心左上部分菜单栏下方有一个帮助选项卡。当你突出索引选项卡下的某某项目时，可以点击帮助选项卡获取有关该项目的更多信息。点击窗口底部的帮助按钮是选择特定项目帮助的另一种方法，如图 11.14 所示。
 
-最后，在帮助信息的底部有如下陈述：“点击此处阅读完整手册。”当你点击“此处”一词时，Konqueror 将打开，通常跳转到 KDE 控制中心手册的相关部分。
-
-
-
-
+最后，在帮助信息的底部有如下陈述：“点击此处阅读完整手册。”当你点击“此处”一词时，`Konqueror` 将打开，通常跳转到 KDE 控制中心手册的相关部分。
 
 ## 图 11.14:
 
@@ -4386,12 +4352,12 @@ KDE 链接文件属性对话框的执行选项卡，定义如何启动应用程�
 
 控制中心的信息（Information）部分提供了有关您的 Linux 系统的详细统计数据和技术信息。这些选项卡中的信息无法更改；它们仅供您查阅，以便了解系统设置和状态。可用的子部分如下：
 
-- **块设备 (Block Devices)**：列出配置并挂载的块设备，例如根目录 (/)、CD-ROM (/mnt/cdrom) 以及连接的网络驱动器。
+- **块设备 (Block Devices)**：列出配置并挂载的块设备，例如根目录 (`/`)、CD-ROM (`/mnt/cdrom`) 以及连接的网络驱动器。
 - **DMA 通道 (DMA-Channels)**：列出系统中活跃 DMA 内存访问通道以及相关的硬件。
 - **设备 (Devices)**：列出 Linux 识别的设备类型（而非单个设备）。
 - **IO 端口 (IO-Ports)**：显示系统使用的 IO 端口地址。
 - **中断 (Interrupts)**：显示系统定义的中断（也称为 IRQ 通道，但并非全部列出，因此在此阶段可能价值有限）。
-- **KDE 从机 (KDE Slaves)**：列出如 nfs、pop3 和 telnet 等特定协议的小程序列表。
+- **KDE 从机 (KDE Slaves)**：列出如 `nfs`、`pop3` 和 `telnet` 等特定协议的小程序列表。
 - **内存 (Memory)**：显示实时内存使用界面，每秒对您的虚拟和实际系统内存使用情况进行图形更新。
 - **PCI**：提供所有 PCI 设备状态的报告。
 - **PCMCIA**：列出电脑上的 PCMCIA 插槽，包括每个插槽中安装的 PC 卡类型。
@@ -4402,7 +4368,9 @@ KDE 链接文件属性对话框的执行选项卡，定义如何启动应用程�
 - **声音 (Sound)**：显示您的 Linux 音频系统状态。
 - **X Server**：显示您的 X 服务器使用的版本、服务器类型、颜色深度和分辨率。
 
-## 更改 KDE 的外观和感受
+# 更改 KDE 的外观和感受
+
+
 
 控制中心的许多页面用于定义 KDE 的外观和界面选项。您在本章之前的节中已经看到过其中几个，例如登录管理器配置。最有趣的界面配置选项位于“外观与感受”（Look & Feel）部分。
 
@@ -4410,14 +4378,12 @@ KDE 链接文件属性对话框的执行选项卡，定义如何启动应用程�
 
 在颜色（Colors）子部分中，您可以定义 KDE 中打开的所有窗口的外观。在此部分中，您可以选择颜色方案（参见图 11.16）。此子部分类似于 Microsoft Windows 中的“显示属性”下的“外观”选项卡。在 KDE 中，您可以轻松创建额外的颜色方案，或单独修改每个窗口组件（称为部件）。
 
-## 图 11:15:
-
+### 图 11:15:
 背景（Background）子部分允许您为每个桌面定义背景颜色和壁纸。
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_293_0.png)
 
-## 图 11:16:
-
+### 图 11:16:
 颜色（Colors）子部分为所有 KDE 窗口定义颜色方案。
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_293_1.png)
@@ -4425,7 +4391,6 @@ KDE 链接文件属性对话框的执行选项卡，定义如何启动应用程�
 在桌面（Desktop）子部分中，您可以指定桌面上的字体和图标、桌面边缘的活动、与每个鼠标按钮关联的操作以及虚拟桌面的数量。
 
 在面板（Panel）子部分中，您可以更新面板和任务栏（Taskbar）的排列方式。通过该部分的五个选项卡，您可以配置如下项目的项目：
-
 - 面板和任务栏的屏幕位置
 - 面板和任务栏的动画
 - 主菜单上的特殊项目
@@ -4434,19 +4399,17 @@ KDE 链接文件属性对话框的执行选项卡，定义如何启动应用程�
 
 在屏幕保护程序（Screensaver）子部分中（参见图 11.17），您可以定义一个当系统闲置几分钟后 KDE 将使用的屏幕保护程序。KDE 提供了 21 个屏幕保护程序应用程序供选择。大多数可以通过点击“设置”（Setup）按钮进行预配置。
 
-## 图 11.17:
-
+### 图 11.17:
 使用屏幕保护程序为您的系统定义并配置 KDE 屏幕保护程序之一。
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_294_0.png)
 
-## 第 11 章 • 使用 KDE
+# 第 11 章 • 使用 KDE
 
 > 提示
 > KDE 主菜单包含“锁定屏幕”（Lock Screen）选项，它需要您的 Linux 密码来恢复屏幕。当您离开电脑时要使用此选项，请从主菜单选择“锁定屏幕”。
 
 可以使用控制中心“窗口”（Windows）部分的对话框配置许多界面设置。这些选项更为高级，只有少数用户会感兴趣。它们包括：
-
 - 为不同类别的桌面项目、标题和菜单设置表单
 - 在在不同类型的桌面图标之间进行选择
 - 修改桌面和窗口内各种功能的键盘快捷键
@@ -4464,7 +4427,6 @@ KDE 链接文件属性对话框的执行选项卡，定义如何启动应用程�
 通常，您无法通过控制中心配置硬件。但也有例外。
 
 在外设部分中，您可以设置关于键盘和鼠标的信息：
-
 - 键盘子部分定义自动设置和键盘点击声（这取决于硬件本身）。
 - 鼠标子部分定义您是用左手还是右手使用鼠标，以及鼠标指针移动的速度。
 
@@ -4476,68 +4438,47 @@ KDE 链接文件属性对话框的执行选项卡，定义如何启动应用程�
 - 国家与语言（Country & Language）设置允许您设置 KDE 用于本地数字系统、货币和时间的语言和方言。
 
 如果您想设置美国英语以外的语言且在安装 Red Hat Linux 7.1 时没有安装该语言，可以从本书随附的发行版安装光盘安装相应的 RPM。例如，在设置乌克兰语之前，您需要使用先过的 `rpm -i` 命令安装 `kde-i18n-Ukrainian-2.1.1-2.noarch.rpm` 包。
-
 - 加密（Crypto）设置允许您设置使用的加密/解密方案。
 - 电子邮件（Email）设置允许您设置 ID、服务器和电子邮件。
 - 键盘布局（Keyboard Layout）允许自定义 X Windows 系统支持的大量各国键盘。
 - 新闻滚动（News Ticker）是 KDE 2.1 的新功能。它允许您自定义网站以定期搜索标题。可能适用于 News Ticker 的新闻网站列表位于：http://www.webreference.com/services/news/
 
-
-
-
-
 ## 笔记本电脑电源控制
 
 在笔记本电脑上运行 Linux 需要电源控制以最大限度地延长电池寿命。电源控制部分包含了用于管理功耗以及测量功率或电池电量的实用程序。具体而言，它包含以下子项：
-
 - 电池监控子项允许你向面板（Panel）添加图标，用以测量你电脑上安装的任何电池的剩余电量。该功能假设已安装了高级电源管理守护进程。
-
 - 能量子项配置计时器，可以将你的显示器置于待机（Standby）、挂起（Suspend）或关闭（Off）模式。
-
 - 笔记本电脑电源控制子项可以将你的笔记本电脑（而不只是显示器）置于待机或挂起状态。实际效果取决于具体的笔记本电脑。
 
 在设置笔记本电脑电源控制之前，你需要修改高级电源管理的权限。作为 root 用户，请运行 `chmod +s /usr/bin/apm` 命令。
-
 - 低电量临界值和低电量警告将根据指定的剩余电池电量分钟数按照配置发送消息。这在锂离子电池上最为准确，因为这类电池的放电速度比其他类型的电脑电池更稳定。
 
 ## 声音控制
 
 在 KDE 中有多种配置声音的方法。KDE 控制中心中的声音部分包含四个子项：
-
 - Midi 允许你配置仪器设备驱动程序（例如不同版本的 Sound Blaster），以便在电脑上产生声音，前提是一个或多个可用设备。
-
 - 混音器（Mixer）允许你增加检测到的声卡复杂程度。如果你的声卡具有特殊功能，可以增加每个混音器探测的混音器设备数量。
 
 ## 配置 KDE
 
 - 声音服务器驱动分配给声卡的资源。例如，全双工操作允许声音同时通过你的麦克风和扬声器传输。
-
 - 系统铃音（System Bell）设置控制发生系统事件时响铃的音量、音高和时长。
 
 ## 系统事件
 
 系统部分允许你在以下五个子项中配置或查看若干基本参数：
-
 - 启动管理器（Boot Manager）提供了一个用于配置 Linux 加载程序（LILO）的图形界面，允许你设置电脑上安装的不同操作系统和内核。当你重启时，LILO 允许你选择并启动你偏好的操作系统。
-
 - 日期与时间（Date & Time）允许你修改电脑指定的日期、时间或时区。
-
 - KDE 系统控制（KDE System Control）允许你查看与你电脑硬件相关的一些设置。
-
 - 登录管理器（Login Manager）配合之前描述的设置工作，用于更改 KDE 登录界面。
-
 - 会话管理器（Session Manager）设置默认值，在注销时需要确认，并在登录时恢复之前的会话。
 
 ## 网页浏览
 
 网页浏览部分允许你配置 Web 通信 Cookie、代理以及不同类型的浏览器。具体而言，你可以配置以下子项中的项目：
-
 - Cookie 允许你配置浏览器与不同 Web 网站之间交换的信息。你可以按域名进行自定义。
-
 - 增强浏览（Enhanced Browsing）允许你为不同的 Web网站网站关键词；这仅适用于将 Konqueror 作为浏览器时。
-
 - Konqueror 设置允许你控制网页的外观，包括对 Java 的使用。
-
 - Netscape 插件（Netscape Plugins）列出了与各种文件类型相关的插件模块。
 - 代理（Proxies）允许你通过代理服务器连接到互联网或其他 Web 网络。
 - 用户代理（User Agent）允许你控制你所使用的 Web 服务器如何看待你的浏览器。
@@ -4550,7 +4491,6 @@ KDE 链接文件属性对话框的执行选项卡，定义如何启动应用程�
 为了更新这些项目中的任何一个，你首先需要创建一个 KDE 链接文件（Link file）来描述你想添加到 KDE 中的项目。本章中的“创建 KDE 链接文件”节介绍了如何图形化创建 KDE 链接文件。
 
 一旦你有了代表设备或应用程序的 KDE 链接文件，就可以从创建它的目录拖动该文件的图标，并将其掉入几个位置来配置 KDE：
-
 - 将该文件图标拖入面板，以配置 KDE。
 - 将该文件图标拖入自动启动文件夹，以配置 KDE。
 - 将该文件图标拖入桌面，以配置 KDE。
@@ -4585,16 +4525,11 @@ KDE 还包含一个简单的通讯录（Address Book）。使用此程序记录�
 ## KDE 办公件
 
 随着 KDE 2.0 的发布，KOOffice 套件首次正式发布，它包含了许多复杂的应用程序，类似于 Microsoft Office、Sun Star Office 或 AnywhereOffice 套件。KOOffice 包含五个基础工具，你可以通过选择 KDE 主菜单中的 Office 来访问：
-
 - KWord 是一种 FrameMaker 风格的文字处理器，也可以导入 Microsoft Word 文件。
 - 如图 11.20 所示，KSpread 是 KOOffice 的表格应用程序，可以导入 Microsoft Excel 文件以及逗号分隔（csv）数据文件。
 - KPresenter 是 KOOffice 的演示稿应用程序，可以导入 Microsoft PowerPoint 文件。
 
-
-
-
-
-# 图 11.20：
+### 图 11.20：
 KSpread 是 KOffice 的电子表格应用程序。
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_303_0.png)
@@ -4687,15 +4622,21 @@ Monitor 此部分定义显示器的规格。
 
 **Modes** 此部分定义显示器的刷新率和分辨率能力。
 
-**Screen** 此部分将显示器连接到视频适配器。它还定义了 X 服务器的行为，例如通用 SVGA 服务器、厂商服务器和单色服务器。可以包含多个 Display 子部分，对应不同的分辨率和深度。
 
-**ServerLayout** 此部分将屏幕连接到特定的输入设备。
 
-**DRI** 此部分处理你对直接渲染接口的任何特殊设置，这对于图形密集型负载更为常见。DRI 配置超出了本书的范围。更多信息请参考以下网站：http://www.xfree86.org/current/DRI.html。
+### Screen
+此部分将显示器连接到视频适配器。它还定义了 X 服务器的行为，例如通用 SVGA 服务器、厂商服务器和单色服务器。可以包含多个 Display 子部分，对应不同的分辨率和深度。
 
-**Vendor** 此部分将用于厂商特定的设置。
+### ServerLayout
+此部分将屏幕连接到特定的输入设备。
 
-> 在 XF86Config 文件中，注释以井号 (#) 开始并持续到行尾。XFree86 会忽略包含在注释中的所有内容。
+### DRI
+此部分处理你对直接渲染接口的任何特殊设置，这对于图形密集型负载更为常见。DRI 配置超出了本书的范围。更多信息请参考以下网站：http://www.xfree86.org/current/DRI.html。
+
+### Vendor
+此部分将用于厂商特定的设置。
+
+> 在 XF86Config 文件中，注释以井号 (`#`) 开始并持续到行尾。XFree86 会忽略包含在注释中的所有内容。
 
 Section "Files"
 
@@ -4706,10 +4647,6 @@ FontPath "/usr/X11R6/lib/X11/fonts/misc/"
 FontPath "/usr/X11R6/lib/X11/fonts/75dpi/:unscaled"
 FontPath "/usr/X11R6/lib/X11/fonts/100dpi/:unscaled"
 ```
-
-
-
-
 
 ## XF86Config 文件 273
 
@@ -4724,24 +4661,24 @@ ModulePath "/usr/X11R6/lib/modules"
 
 这里有几条需要注意的基本规则，也适用于其他章节：
 
-- 每个节以一个 Section（节）行开始。
-- 每个节以一个 EndSection（节结束）行结束。
-- 在 Section 行上，用双引号指定节名（在本例中为 "Files"）。
+- 每个节以一个 `Section` 行开始。
+- 每个节以一个 `EndSection` 行结束。
+- 在 `Section` 行上，用双引号指定节名（在本例中为 `"Files"`）。
 
 此节中有三个常用的指令，如表 12.1 所示。
 
 | 表 12.1：Files 指令 |
-| 指令 | 效果 |
 | :--- | :--- |
-| RgbPath | 该指令指定没有 .txt 或 .db 扩展名的 RGB（红-绿-蓝）数据库名称。RGB 文件指定了与其他颜色相关的红色、绿色和蓝色量。通常，除非你移动或更改 RGB 数据库的名称，否则可以保持默认值（尽管这样做不是好主意，因为多个应用程序会使用该数据库并在正常位置找到它）。 |
-| FontPath | 根据需要多次使用此指令，指定 X Windows 在系统的何处找到已安装的 X 字体。可以指定可缩字体和位图字体（无法缩放的位图字体将不缩放到目录末尾）。如果你向系统添加了新目录，应该为它们添加一个 FontPath 指令。 |
-| ModulePath | 该指令用于 Linux 等支持动态加载模块的操作系统。此指令指示了去哪里查找模块。在大多数 XFree86 版本中，此指令不会出现或在示例中被注释。模块的默认路径为 /usr/X11R6/11b/modules，只有在你需要更改值时才需要使用此指令。 |
+| 指令 | 效果 |
+| `RgbPath` | 该指令指定没有 `.txt` 或 `.db` 扩展名的 RGB（红-绿-蓝）数据库名称。RGB 文件指定了与其他颜色相关的红色、绿色和蓝色量。通常，除非你移动或更改 RGB 数据库的名称，否则可以保持默认值（尽管这样做不是好主意，因为多个应用程序会使用该数据库并在正常位置找到它）。 |
+| `FontPath` | 根据需要多次使用此指令，指定 X Windows 在系统的何处找到已安装的 X 字体。可以指定可缩字体和位图字体（无法缩放的位图字体将不缩放到目录末尾）。如果你向系统添加了新目录，应该为它们添加一个 `FontPath` 指令。 |
+| `ModulePath` | 该指令用于 Linux 等支持动态加载模块的操作系统。此指令指示了去哪里查找模块。在大多数 XFree86 版本中，此指令不会出现或在示例中被注释。模块的默认路径为 `/usr/X11R6/11b/modules`，只有在你需要更改值时才需要使用此指令。 |
 
-其他字体模块可以在 /usr/X11R6/lib/modules/fonts 目录下找到。
+其他字体模块可以在 `/usr/X11R6/lib/modules/fonts` 目录下找到。
 
 ## ServerFlags
 
-ServerFlags 节允许你启用或禁用 X 服务器的某些功能。一个没有注释的 ServerFlags 示例所示：
+`ServerFlags` 节允许你启用或禁用 X 服务器的某些功能。一个没有注释的 `ServerFlags` 示例所示：
 
 ```bash
 Section "ServerFlags"
@@ -4762,34 +4699,34 @@ Section "ServerFlags"
 EndSection
 ```
 
-取消你想要激活的任何指令的注释；如果你不想激活它们，请保持注释状态（通常的默认状态）。在此处指定的任何选项都将被 ServerLayout 节中的选项覆盖。
+取消你想要激活的任何指令的注释；如果你不想激活它们，请保持注释状态（通常的默认状态）。在此处指定的任何选项都将被 `ServerLayout` 节中的选项覆盖。
 
 ## XF86Config 文件 275
 
 示例中的指令的效果如表 12.2 所示。
 
 | 表 12.2：ServerFlags 指令 |
-| 指令 | 效果 |
 | :--- | :--- |
-| NoTrapSignals | 该指令用于调试。当接收到指示错误的信号时，服务器会执行核心转储（core dump），将其内存部分的内容导出到磁盘。这可能会导致系统不稳定，但在调试问题时（特别是对于 X 服务器的 Beta 测试版本）是无价的。除非你正在对 XServer 进行故障排除或测试，最好保持此指令的注释。 |
-| DontZap | 通常情况下，Ctrl+Alt+Backspace 键组合会导致 X Windows 终止并返回控制台。启用此项后，Ctrl+Alt+Backspace 将被忽略，键组合将传递给当前应用程序进行处理。只有在极少数情况下，当你运行的需要使用此键组合才能正常工作时，才取消此行的注释。 |
-| DontZoom | 通常情况下，Ctrl+Alt+小数字键盘会在你的 X 服务器可用的配置分辨率之间循环，每次增加一次分辨率。Ctrl+Alt-减号用于降低分辨率。如果应用程序由于其他目的需要这些键组合，请取消此行的注释，让 Windows 忽略这些键组合并将它们传递给你的应用程序。 |
-| DisableVidModeExtension | 该指令防止使用 xvtime 客户端调整你的视频显示。（书中未描述 xvtime；可以通过在打开的窗口中使用命令 `man xvtime` 找到该程序的文档）。无需取消此指令，你可以保持默认设置。 |
-| AllowNonLocalXvidtune | 与上一个指令相关，此指令允许非本地（换句话说，在网络某处）xvtime 客户端访问你的 X Windows 系统。出于考虑，最好保持此指令禁用状态。 |
-| DisableModInDev | 通过启用此指令，在 X Windows 运行时无法动态更改键盘和鼠标设置。 |
+| 指令 | 效果 |
+| `NoTrapSignals` | 该指令用于调试。当接收到指示错误的信号时，服务器会执行核心转储（core dump），将其内存部分的内容导出到磁盘。这可能会导致系统不稳定，但在调试问题时（特别是对于 X 服务器的 Beta 测试版本）是无价的。除非你正在对 XServer 进行故障排除或测试，最好保持此指令的注释。 |
+| `DontZap` | 通常情况下，`Ctrl+Alt+Backspace` 键组合会导致 X Windows 终止并返回控制台。启用此项后，`Ctrl+Alt+Backspace` 将被忽略，键组合将传递给当前应用程序进行处理。只有在极少数情况下，当你运行的需要使用此键组合才能正常工作时，才取消此行的注释。 |
+| `DontZoom` | 通常情况下，`Ctrl+Alt+小数字键盘`会在你的 X 服务器可用的配置分辨率之间循环，每次增加一次分辨率。`Ctrl+Alt-减号`用于降低分辨率。如果应用程序由于其他目的需要这些键组合，请取消此行的注释，让 Windows 忽略这些键组合并将它们传递给你的应用程序。 |
+| `DisableVidModeExtension` | 该指令防止使用 `xvtime` 客户端调整你的视频显示。（书中未描述 `xvtime`；可以通过在打开的窗口中使用命令 `man xvtime` 找到该程序的文档）。无需取消此指令，你可以保持默认设置。 |
+| `AllowNonLocalXvidtune` | 与上一个指令相关，此指令允许非本地（换句话说，在网络某处）`xvtime` 客户端访问你的 X Windows 系统。出于考虑，最好保持此指令禁用状态。 |
+| `DisableModInDev` | 通过启用此指令，在 X Windows 运行时无法动态更改键盘和鼠标设置。 |
 
 | 表 12.2 续：ServerFlags 指令 |
-| 指令 | 效果 |
 | :--- | :--- |
+| 指令 | 效果 |
 | （注：此节提供的 OCR 文本高度损坏且重复。上述逻辑遵循标准的 XF86 配置文档。） | |
 
-其他扩展模块可以在 /usr/X11R6/lib/modules 目录下找到。
+其他扩展模块可以在 `/usr/X11R6/lib/modules` 目录下找到。
 
 ## InputDevice
 
-InputDevice 节指定指针（鼠标）和键盘。虽然 InputDevice 是 XFree86 4 的默认设置，但通常有两个 InputDevice 节：分别用于键盘和一个指针设备。
+`InputDevice` 节指定指针（鼠标）和键盘。虽然 `InputDevice` 是 XFree86 4 的默认设置，但通常有两个 `InputDevice` 节：分别用于键盘和一个指针设备。
 
-正如你预期的那样，一个 InputDevice 节指定了与键盘相关的信息，包括键盘类型和协议。虽然此节不再作为默认使用，但 Keyboard 和 Pointer 节（而不是 InputDevice）是默认 Red Hat Linux 7.1 XF86 配置文件的一部分。这里显示了一个没有注释的典型 InputDevice 节：
+正如你预期的那样，一个 `InputDevice` 节指定了与键盘相关的信息，包括键盘类型和协议。虽然此节不再作为默认使用，但 `Keyboard` 和 `Pointer` 节（而不是 `InputDevice`）是默认 Red Hat Linux 7.1 XF86 配置文件的一部分。这里显示了一个没有注释的典型 `InputDevice` 节：
 
 ```bash
 Section "InputDevice"
@@ -4824,53 +4761,53 @@ Section "InputDevice"
 EndSection
 ```
 
-
-
-
-
 这看起来是一个复杂的章节，但正如表 12.4 所示，它实际上非常简单。
 
-# 表 12.4：键盘指令
+### 表 12.4：键盘指令
 
 | 指令 | 效果 |
 | --- | --- |
-| "Protocol" "Xqueue" | Xqueue 协议用于各种 Sun Solaris 服务器 (SRV3, SRV4)。如果缺少此行，XFree 将默认使用 Standard（标准），它适用于几乎所有其他系统。 |
-| Identifier, Driver | 管理员分配给键盘和键盘驱动程序的名称。 |
-| AutoRepeat | 此指令用于指定按住按键在开始自动重复前等待多久，以及按键重复的频率。所有值单位均为毫秒。在之前的示例中，AutoRepeat 500 表示在按键被按住 500 毫秒（半秒）后开始自动重复，然后每 5 毫秒重复一次按键。 |
-| Xleds | 此指令指定用户可以使用 `xset` 命令控制哪些键盘 LED 灯（例如数字锁定 Num Lock 和大写锁定 Caps Lock）。 |
-| LeftAlt, RightAlt, RightCtrl, ScrollLock | X Windows 的键盘通常与标准 PC 键盘明显不同。这些键盘包含 Meta、ModeShift、Compose 和 ModeLock 等特殊键。如果你发现 Unix 或其他应用程序需要这些按键，请取消它们的注释。 |
-| XkbDisable | 如果取消此行的注释，一个名为 XKB 的 Windows 扩展将被禁用。当 XKB 启用时（即指令被注释掉），XKB 使用一系列指令来定义键盘映射，通常用于较旧的 X 服务器。 |
-| XkbModel | 此指令在 XKB 启用时使用，用于指定键盘模型。标准美国键盘是 pc101。美国“Windows”键盘是 pc104。微软自然手型键盘是 microsoft pc102 或 pc105。标准日本键盘是 pc106。 |
-| XkbLayout | 此指令在 XKB 启用时使用，用于指定哪种键盘布局。当一个键盘模型对应多种语言时最为常见；例如，de 对应德语（deutsch），即德语键盘。 |
+| `"Protocol" "Xqueue"` | `Xqueue` 协议用于各种 Sun Solaris 服务器 (`SRV3`, `SRV4`)。如果缺少此行，XFree 将默认使用 `Standard`（标准），它适用于几乎所有其他系统。 |
+| `Identifier`, `Driver` | 管理员分配给键盘和键盘驱动程序的名称。 |
+| `AutoRepeat` | 此指令用于指定按住按键在开始自动重复前等待多久，以及按键重复的频率。所有值单位均为毫秒。在之前的示例中，`AutoRepeat 500` 表示在按键被按住 500 毫秒（半秒）后开始自动重复，然后每 5 毫秒重复一次按键。 |
+| `Xleds` | 此指令指定用户可以使用 `xset` 命令控制哪些键盘 LED 灯（例如数字锁定 `Num Lock` 和大写锁定 `Caps Lock`）。 |
+| `LeftAlt`, `RightAlt`, `RightCtrl`, `ScrollLock` | X Windows 的键盘通常与标准 PC 键盘明显不同。这些键盘包含 `Meta`、`ModeShift`、`Compose` 和 `ModeLock` 等特殊键。如果你发现 Unix 或其他应用程序需要这些按键，请取消它们的注释。 |
+| `XkbDisable` | 如果取消此行的注释，一个名为 `XKB` 的 Windows 扩展将被禁用。当 `XKB` 启用时（即指令被注释掉），`XKB` 使用一系列指令来定义键盘映射，通常用于较旧的 X 服务器。 |
+| `XkbModel` | 此指令在 `XKB` 启用时使用，用于指定键盘模型。标准美国键盘是 `pc101`。美国“Windows”键盘是 `pc104`。微软自然手型键盘是 `microsoft pc102` 或 `pc105`。标准日本键盘是 `pc106`。 |
+| `XkbLayout` | 此指令在 `XKB` 启用时使用，用于指定哪种键盘布局。当一个键盘模型对应多种语言时最为常见；例如，`de` 对应德语（deutsch），即德语键盘。 |
 
-# 表 12.4 续：键盘指令
+### 表 12.4 续：键盘指令
 
 | 指令 | 效果 |
 | --- | --- |
-| XkbOptions | 当 XKB 启用时，可以使用此指令交换 Caps Lock 和 Ctrl 键的位置。要执行此操作，请将指令设置为值 `ctrl:swapcaps`。 |
-| XkbRules | 键盘布局的基础规则集。使用 XFree86 服务器时需要。 |
-| XkbKeymap | 此指令在 XKB 启用时使用，用于加载键盘映射定义。 |
-
-# 
+| `XkbOptions` | 当 `XKB` 启用时，可以使用此指令交换 `Caps Lock` 和 `Ctrl` 键的位置。要执行此操作，请将指令设置为值 `ctrl:swapcaps`。 |
+| `XkbRules` | 键盘布局的基础规则集。使用 XFree86 服务器时需要。 |
+| `XkbKeymap` | 此指令在 `XKB` 启用时使用，用于加载键盘映射定义。 |
 
 如果你正在设置非英语键盘，可以在 http://www.linuxdoc.org 的 HOWTO 文档获取帮助。有许多针对特定语言的 HOWTO 可以帮助为指定语言配置键盘。
 
-# InputDevice — 指针
+### InputDevice — 指针
 
-第二个 InputDevice 部分处理与鼠标相关的配置。如前所述，在 XFree86 版本 4 中，你可以设置一个 InputDevice 或 Pointer 部分来处理鼠标相关配置。默认的 Red Hat Linux 7.1 XF86Config 文件包含一个用于配置鼠标的 Pointer 部分。在此部分中，你可以设置诸如鼠标类型、鼠标连接端口以及与不同鼠标按钮相关的行为。
+第二个 `InputDevice` 部分处理与鼠标相关的配置。如前所述，在 XFree86 版本 4 中，你可以设置一个 `InputDevice` 或 `Pointer` 部分来处理鼠标相关配置。默认的 Red Hat Linux 7.1 XF86Config 文件包含一个用于配置鼠标的 `Pointer` 部分。在此部分中，你可以设置诸如鼠标类型、鼠标连接端口以及与不同鼠标按钮相关的行为。
 
 Section "InputDevice"
 
 +   # Identifier "Mousel"
+
 # Driver "mouse"
+
 # Option "Protocol" "PS/2"
+
 # Option "Protocol" "Xqueue"
+
 # Option "Device" "/dev/mouse"
 
 # Option BaudRate* "9600* 
+
 # Option SampleRate* "150* 
 
 # Option Emulate3Buttons*
+
 # Option Emulate3Timeout* "50* 
 
 ## Option ChordMiddle*
@@ -4879,37 +4816,34 @@ EndSection
 
 让我们逐行查看表 12.5 中的这些条目。
 
-# 表 12.5：指针指令
+### 表 12.5：指针指令
 
 | 指令 | 效果 |
 | --- | --- |
-| Identifier, Device | 管理员分配给鼠标指针设备驱动程序的名称。 |
-| Protocol | 此指令指定鼠标使用的协议。典型选项包括 Microsoft、Logitech（罗技）、MouseSystems、Bus-Mouse、PS/2 和 Auto（用于 Linux 可以识别的某些即插用鼠标）。 |
-| Device | 此指令用于指定鼠标连接到哪个设备。如果你在安装发行版时正确配置了鼠标，设备 `/dev/mouse` 将链接到你的鼠标并可以使用。否则，`/dev/psaux` 用于 PS2 鼠标端口，Xqueue 用于 Solaris 系统，`/dev/tty50` 用于 DOS 和 Windows 中的 COM1，`/dev/tty51` 用于 DOS 和 Windows 中的 COM2。轨迹球和触摸屏等指针设备还有其他可用选项。 |
-| BaudRate | 此指令仅用于少数老旧的罗技品牌鼠标。请检查你的鼠标文档。 |
-| SampleRate | 查看你的文档。 |
-| Emulate3Buttons | 此指令应用于双键鼠标。取消注释后，同时点击鼠标左键和右键将模拟三键鼠标上的中间键键。因为 X Windows 依赖设备来在双键鼠标上启用此功能。 |
+| `Identifier`, `Device` | 管理员分配给鼠标指针设备驱动程序的名称。 |
+| `Protocol` | 此指令指定鼠标使用的协议。典型选项包括 `Microsoft`、`Logitech`（罗技）、`MouseSystems`、`Bus-Mouse`、`PS/2` 和 `Auto`（用于 Linux 可以识别的某些即插用鼠标）。 |
+| `Device` | 此指令用于指定鼠标连接到哪个设备。如果你在安装发行版时正确配置了鼠标，设备 `/dev/mouse` 将链接到你的鼠标并可以使用。否则，`/dev/psaux` 用于 PS2 鼠标端口，`Xqueue` 用于 Solaris 系统，`/dev/tty50` 用于 DOS 和 Windows 中的 COM1，`/dev/tty51` 用于 DOS 和 Windows 中的 COM2。轨迹球和触摸屏等指针设备还有其他可用选项。 |
+| `BaudRate` | 此指令仅用于少数老旧的罗技品牌鼠标。请检查你的鼠标文档。 |
+| `SampleRate` | 查看你的文档。 |
+| `Emulate3Buttons` | 此指令应用于双键鼠标。取消注释后，同时点击鼠标左键和右键将模拟三键鼠标上的中间键键。因为 X Windows 依赖设备来在双键鼠标上启用此功能。 |
 
-# 表 12.5 续：指针指令
+### 表 12.5 续：指针指令
 
 | 指令 | 效果 |
 | --- | --- |
-| EmulateTimeout | 此指令用于指定按住按键在开始自动重复前等待多久，以及按键重复的频率。所有值均为毫秒。在之前的示例中，AutoRepeat 500 表示在按键被按住 500 毫秒（半秒）后开始自动重复，然后每 5 毫秒重复一次按键。 |
-| EmulateTimeout | 此指令用于指定按住按键在开始自动重复前等待多久，以及按键重复的频率。所有值均为毫秒。在之前的示例中，AutoRepeat 500 表示在按键被按住 500 毫秒（半秒）后开始自动重复，然后每 5 毫秒重复一次按键。 |
-| EmulateTimeout | 此指令用于指定按住按键在开始自动重复前等待多久，以及按键重复的频率。所有值均为毫秒。在之前的示例中，AutoRepeat 500 表示在按键被按住 500 毫秒（半秒）后开始自动重复，然后每 5 毫秒重复一次按键。 |
-| EmulateTimeout | 此指令用于指定按住按键在开始自动重复前等待多久...（此处省略原文未翻译） |
-| ChordMiddle | 此指令用于在三键鼠标上启用中间键。 |
-| EmulateTimeout | 此指令用于指定按住按键在开始自动重复前等待多久...（此处省略原文未翻译） |
-| ChordMiddle | 此指令用于在三键鼠标上启用中间键。 |
-| EmulateTimeout | 此指令用于指定按住按键在开始自动重复前等待多久...（此处省略原文未翻译） |
-| ChordMiddle | 此指令用于在三键鼠标上启用中间键。 |
-| EmulateTimeout | 此指令用于指定按住按键在开始自动重复前等待多久...（此处省略原文未翻译） |
-| ChordMiddle | 此指令用于在三键鼠标上启用中间键。 |
-| EmulateTimeout | 此指令用于指定按住按键在开始自动重复前等待多久...（此处省略原文未翻译） |
-| ChordMiddle | 此指令用于在三键鼠标上启用中间键。 |
-
-
-
+| `EmulateTimeout` | 此指令用于指定按住按键在开始自动重复前等待多久，以及按键重复的频率。所有值均为毫秒。在之前的示例中，`AutoRepeat 500` 表示在按键被按住 500 毫秒（半秒）后开始自动重复，然后每 5 毫秒重复一次按键。 |
+| `EmulateTimeout` | 此指令用于指定按住按键在开始自动重复前等待多久，以及按键重复的频率。所有值均为毫秒。在之前的示例中，`AutoRepeat 500` 表示在按键被按住 500 毫秒（半秒）后开始自动重复，然后每 5 毫秒重复一次按键。 |
+| `EmulateTimeout` | 此指令用于指定按住按键在开始自动重复前等待多久，以及按键重复的频率。所有值均为毫秒。在之前的示例中，`AutoRepeat 500` 表示在按键被按住 500 毫秒（半秒）后开始自动重复，然后每 5 毫秒重复一次按键。 |
+| `EmulateTimeout` | 此指令用于指定按住按键在开始自动重复前等待多久...（此处省略原文未翻译） |
+| `ChordMiddle` | 此指令用于在三键鼠标上启用中间键。 |
+| `EmulateTimeout` | 此指令用于指定按住按键在开始自动重复前等待多久...（此处省略原文未翻译） |
+| `ChordMiddle` | 此指令用于在三键鼠标上启用中间键。 |
+| `EmulateTimeout` | 此指令用于指定按住按键在开始自动重复前等待多久...（此处省略原文未翻译） |
+| `ChordMiddle` | 此指令用于在三键鼠标上启用中间键。 |
+| `EmulateTimeout` | 此指令用于指定按住按键在开始自动重复前等待多久...（此处省略原文未翻译） |
+| `ChordMiddle` | 此指令用于在三键鼠标上启用中间键。 |
+| `EmulateTimeout` | 此指令用于指定按住按键在开始自动重复前等待多久...（此处省略原文未翻译） |
+| `ChordMiddle` | 此指令用于在三键鼠标上启用中间键。 |
 
 Modelines（模式行行）指定了显示器可能的运行模式。模式将分辨率与刷新率、点时钟以及显示到显示器的时序参数结合在一起。当 X 服务器尝试加载这些模式时，会删除 XF86Config 文件中找到的任何不兼容的模式。然而，要准确获取这些行的信息是困难的。通常情况下，最好让你的 XFree86 配置软件为你创建这些行，而不是对它们进行修改。
 
@@ -4917,34 +4851,40 @@ Modelines（模式行行）指定了显示器可能的运行模式。模式将�
 
 表 12.7 描述了第一行 Modeline 中从左到右每个数字的功能。
 
-表 12.7：Modeline 项目
+### 表 12.7：Modeline 项目
 
 | 项目 | 解释 |
 | --- | --- |
-| 640x480 | 以像素为单位的屏幕分辨率 |
-| 46.02 | 像素时钟，单位为 MHz |
-| 640 | 显示的水平像素数 |
-| 656 | 水平同步开始 |
-| 760 | 水平同步结束 |
-| 832 | 水平同步总数 |
-| 480 | 显示的垂直像素数 |
-| 490 | 垂直同步开始 |
-| 498 | 垂直同步结束 |
-| 522 | 垂直同步总数 |
+| `640x480` | 以像素为单位的屏幕分辨率 |
+| `46.02` | 像素时钟，单位为 MHz |
+| `640` | 显示的水平像素数 |
+| `656` | 水平同步开始 |
+| `760` | 水平同步结束 |
+| `832` | 水平同步总数 |
+| `480` | 显示的垂直像素数 |
+| `490` | 垂直同步开始 |
+| `498` | 垂直同步结束 |
+| `522` | 垂直同步总数 |
 
 表示第一个 Modeline 的另一种方式
 
-Modeline "640x480" 46.02 640 656 760 832 480 490 498 522
+
+
+Modeline `"640x480"` `46.02` `640` `656` `760` `832` `480` `490` `498` `522`
 
 ## Device（设备）
 
-如下：Mode "640x480"
-DotClock 46.02
-HTimings 640 656 760 832
-VTimings 480 490 498 522
+如下：Mode `"640x480"`
+
+DotClock `46.02`
+
+HTimings `640` `656` `760` `832`
+
+VTimings `480` `490` `498` `522`
+
 EndMode
 
-XF86Config 通常可以包含多个 Device 节落，允许使用多个图形适配器或显卡。Device 节落描述了 X 服务器可以使用的显卡。通常服务器可以填充大部分大部分信息，但检查你的 XF86Config 文件中的结果是明智的。因为这些信息包含了关于你视频硬件的高度技术规范，除非你真的需要进行这些更改，否则应该让你的 XFree86 配置软件处理此节落。
+`XF86Config` 通常可以包含多个 Device 节落，允许使用多个图形适配器或显卡。Device 节落描述了 X 服务器可以使用的显卡。通常服务器可以填充大部分大部分信息，但检查你的 `XF86Config` 文件中的结果是明智的。因为这些信息包含了关于你视频硬件的高度技术规范，除非你真的需要进行这些更改，否则应该让你的 XFree86 配置软件处理此节落。
 
 Device 节落只有在被 Screen 节落引用时才是激活的。
 
@@ -4978,7 +4918,7 @@ EndSection
 
 | 指令 | 效果 |
 | --- | --- |
-| Identifier | 与 Monitor 节落相同，此指令提供一个名称，可用于 XF86Config 文件的任何位置，以识别显卡。 |
+| Identifier | 与 Monitor 节落相同，此指令提供一个名称，可用于 `XF86Config` 文件的任何位置，以识别显卡。 |
 | VendorName | 此指令不影响 X 服务器的运行，但有助于你识别硬件层。 |
 | BoardName | 此指令也不影响操作，但它是识别设备定义的辅助。 |
 | Chipset | 此指令识别你的视频芯片组。如果 XFree86 不支持你的硬件，则将使用通用芯片组。 |
@@ -4989,13 +4929,9 @@ EndSection
 | Option | 此指令指定特定的选项。 |
 | BusID | 此指令指定总线 ID。 |
 
-
-
-
-
 # .xinitrc 文件
 
-Xinit 是一个特殊的程序，用于启动 X 服务端和一个初始客户端程序（通常是窗口管理器）。默认情况下，`startx` 首先检查用户主目录下是否存在 `.xinitrc` 文件，并根据该文件运行 `xinit`。如果找不到用户的 `.xinitrc`，xinit 将使用系统级的 xinitrc 文件（在 Red Hat Linux 7.1 中为 `/etc/X11/xinitrc`）。如果这两个文件都没有找到，xinit 在启动 X 服务后将打开单个窗口。
+`Xinit` 是一个特殊的程序，用于启动 X 服务端和一个初始客户端程序（通常是窗口管理器）。默认情况下，`startx` 首先检查用户主目录下是否存在 `.xinitrc` 文件，并根据该文件运行 `xinit`。如果找不到用户的 `.xinitrc`，`xinit` 将使用系统级的 `xinitrc` 文件（在 Red Hat Linux 7.1 中为 `/etc/X11/xinitrc`）。如果这两个文件都没有找到，`xinit` 在启动 X 服务后将打开单个窗口。
 
 `xinitrc` 或 `.xinitrc` 文件是一个可执行脚本。你将在第 16 章“理解 Shell”中学习关于 shell。因此，本章将深入涉及 shell 或 shell 脚本的细节；而是将快速查看 Red Hat Linux 7.1 的默认 `xinitrc` 文件，以了解它的功能。文中引用的行号是为了方便讨论。行号并不是实际文件的一部分。
 
@@ -5067,6 +5003,7 @@ if [ -f "$syskbmap" ]; then
 ```
 
 44: # 用户可能有他们想要运行的客户端。如果
+
 45: # 没有，则回退到系统默认值。
 
 ```
@@ -5110,17 +5047,24 @@ if [ -f "$syskbmap" ]; then
 > 注意：第 6 行显示的 `sysresources` 的系统 XResources 文件在 Red Hat Linux 7.1 中位于 `/etc/X11/Xresources`。如果你想将此文件设置为默认值，请修改第 6 行。
 
 - 2. 第 10 到 12 行：如果全局 Xresources存在，则应用它。
+
 - 3. 第 13 到 15 行：如果用户主目录下有 `.Xresources` 文件，则将其应用。
+
 - 4. 第 17 到 20 行：如果全局键映射存在，则应用它。
+
 - 5. 第 21 到 24 行：如果用户主目录下有键映射，则应用它。
+
 - 6. 第 25 到 33 行：除非你使用的是 Sun 服务器，否则这些行可能无效。
+
 - 7. 第 34 到 43 行：如果用户或系统定义的键映射之间存在冲突，设置该映射。
+
 - 8. 第 47 到 51 行：执行位于 `/etc/X11/xinit/xinitrc` 的所有脚本。
+
 - 9. 第 52 到 69 行：这是在 X 服务器启动后实际启动客户端的地方。首先检查用户是否有 `.Xclients` 文件。如果该文件存在，则执行它。如果不存在，脚本检查全局 `Xclients` 文件，如果存在则执行它。最后，如果两个文件都不存在，则启动某些默认程序，包括 `xclock`、浏览器（如果可用）或窗口管理器。
 
 # .Xclients 文件
 
-正如在 `xinitrc` 讨论中提到的，用户可以使用主目录下的 `.Xclients` 文件覆盖全局 `Xclients` 文件。在任何情况下，在 Red Hat 环境中，xinit 最终都会调用这些文件之一来启动客户端。
+正如在 `xinitrc` 讨论中提到的，用户可以使用主目录下的 `.Xclients` 文件覆盖全局 `Xclients` 文件。在任何情况下，在 Red Hat 环境中，`xinit` 最终都会调用这些文件之一来启动客户端。
 
 与 `xinit` 类似，这是一个 shell 脚本并遵循所有 shell 脚本规则。为了理解 `Xclients` 的用途，本节将查看 Red Hat Linux 7.1 带的默认 `Xclients` 文件（已添加行号）：
 
@@ -5198,18 +5142,18 @@ if [ -f "$syskbmap" ]; then
 ```
 
 - 1. 第 4 到 13 行：设置偏好的桌面。如第 11 章“使用 KDE”中讨论的，你可以使用第 4 行的 `PREFERRED` 变量设置你偏好的桌面。
+
 - 2. 第 14 到 18 行：确保 `PREFERRED` 不是 `AnotherLevel`。
+
 - 3. 第 21 到 32 行：如果 `PREFERRED` 未设置，尝试 gnome。
+
 - 4. 第 35 到 36 行：通过删除遗留文件进行一些清理工作。
+
 - 5. 第 38 到 54 行：检查 AnotherLevel 管理器的样式，以该样式启动它并退出。
-
-
-
-
 
 ## 注意
 
-观察如何使用大写字母来区分应用程序（applications）和类（classes）。例如，xterm 是标准的 X Window 终端应用程序，而 XTerm 是它所属的类。
+观察如何使用大写字母来区分应用程序（applications）和类（classes）。例如，`xterm` 是标准的 X Window 终端应用程序，而 `XTerm` 是它所属的类。
 
 对于每个类，一组标准的资源允许你指定诸此类功能，如前景和背景颜色（foreground and background）、窗口大小和位置（geometry）以及默认字体（font）。此外，还有将相关资源分组的资源类。例如，Foreground 类包含了前景资源以及应用程序可能拥有的任何其他与前景相关的资源。通常情况下，你不需要关注单个资源，而只需要与资源类进行工作。
 
@@ -5222,9 +5166,9 @@ if [ -f "$syskbmap" ]; then
 <value>
 ```
 
-在 Linux 手页（man pages）和其他文档中，竖线（或管道符：|）通常用于表示“或”。因此，在上面的示例中，你可以在第一个条目可以使用 <ApplicationClass> 或 <applicationName>在第二个条目可以使用 <ResourceClass> 或 <resourceName>。
+在 Linux 手页（man pages）和其他文档中，竖线（或管道符：|）通常用于表示“或”。因此，在上面的示例中，你可以在第一个条目可以使用 `<ApplicationClass>` 或 `<applicationName>`在第二个条目可以使用 `<ResourceClass>` 或 `<resourceName>`。
 
-这些值通常存放在用户特定资源的 .Xdefaults 文件中。让我们来看示例 .Xdefaults 文件：
+这些值通常存放在用户特定资源的 `.Xdefaults` 文件中。让我们来看示例 `.Xdefaults` 文件：
 
 ```
 XTerm*background: Black
@@ -5241,26 +5185,30 @@ XTerm*titleBar: false
 ```
 
 xclock*Geometry: 100x100+100
+
 xclock*Foreground: purple
+
 xclock*Background: mauve
 
-此 .Xdefaults 文件为 XTerm 类应用程序和时钟应用程序设置了 X 资源。对于 XTerm 类，你可以找到设置颜色、窗口属性（如是否存在滚动条）等资源设置。对于 xclock，你可以看到颜色和几何形状的设置。这些资源所采用的值与在适用提供给命令行标志（如 -fg 和 -geometry）的值相匹配。
+此 `.Xdefaults` 文件为 `XTerm` 类应用程序和时钟应用程序设置了 X 资源。对于 `XTerm` 类，你可以找到设置颜色、窗口属性（如是否存在滚动条）等资源设置。对于 `xclock`，你可以看到颜色和几何形状的设置。这些资源所采用的值与在适用提供给命令行标志（如 `-fg` 和 `-geometry`）的值相匹配。
 
 # X 资源数据库
 
-X 资源的来源是 app-defaults 文件。大多数 X 和 KDE 应用程序都有 app-defaults 文件。你可以查找这些文件，以便在 .Xdefaults 文件中使用这些设置。在 Red Hat Linux 7.1 中，这些文件位于 /usr/X11/lib/X11/app-defaults/ 目录下。KDE 应用程序在 /usr/share/apps/kddisplay/app-defaults/ 中有自己特殊的 app-defaults 文件。
+X 资源的来源是 `app-defaults` 文件。大多数 X 和 KDE 应用程序都有 `app-defaults` 文件。你可以查找这些文件，以便在 `.Xdefaults` 文件中使用这些设置。在 Red Hat Linux 7.1 中，这些文件位于 `/usr/X11/lib/X11/app-defaults/` 目录下。KDE 应用程序在 `/usr/share/apps/kddisplay/app-defaults/` 中有自己特殊的 `app-defaults` 文件。
 
 # 使用 xrdb 命令加载 X 资源
 
-通常，.Xdefaults 文件在 X Windows 时通过 .xinitrc 文件加载。然而，在 X Windows 运行时，可以使用 xrdb 命令将新值加载到数据库中。这对于尝试值直到找到你想要的组合特别有用。
+通常，`.Xdefaults` 文件在 X Windows 时通过 `.xinitrc` 文件加载。然而，在 X Windows 运行时，可以使用 `xrdb` 命令将新值加载到数据库中。这对于尝试值直到找到你想要的组合特别有用。
 
-如果你在一个名为 experiment 的文件中设置了实验性设置，可以使用命令将这些设置临时加载到数据库：
+如果你在一个名为 `experiment` 的文件中设置了实验性设置，可以使用命令将这些设置临时加载到数据库：
 
 ```
 $ xrdb -merge experiment
 ```
 
-一旦你对任何更改满意，可以将实验文件中的设置添加到 .Xdefaults，从而将其整合到未来的 X Window 会话中。
+
+
+一旦你对任何更改满意，可以将实验文件中的设置添加到`.Xdefaults`，从而将其整合到未来的 X Window 会话中。
 
 ## 展望
 
@@ -5291,7 +5239,7 @@ $ xrdb -merge experiment
 
 在本章中，你将开始对 Unix 命令行环境的探索。命令行环境是 Linux 的核心和力量所在。你已经看到 X Windows 为图形应用程序提供了快速方便的访问，这可以让大多数用户立即开始工作。然而，缺少的是完全操控和处理你的 Linux 系统的能力。这种能力在你开始尝试命令时就会出现。
 
-在这里，你将学习使用一些更常见的命令，如 ls、find 和 grep。由于这些命令在大多数发行版中都能找到，Unix 用户应该立即知道这些以及类似命令可以做什么，以及在熟练用户手中它们能提供什么力量。
+在这里，你将学习使用一些更常见的命令，如 `ls`、`find` 和 `grep`。由于这些命令在大多数发行版中都能找到，Unix 用户应该立即知道这些以及类似命令可以做什么，以及在熟练用户手中它们能提供什么力量。
 
 注意
 
@@ -5299,7 +5247,7 @@ $ xrdb -merge experiment
 
 # 什么是 Linux 命令？
 
-在查看特定命令之前，你需要确切理解“命令”是指什么意思。来自 DOS 环境的用户可能熟悉命令的概念，这些命令涵盖了操作系统的核心功能，例如 DIR、COPY 和 ATTRIB。这些命令构成了构建复杂操作和编写批的基础。
+在查看特定命令之前，你需要确切理解“命令”是指什么意思。来自 DOS 环境的用户可能熟悉命令的概念，这些命令涵盖了操作系统的核心功能，例如 `DIR`、`COPY` 和 `ATTRIB`。这些命令构成了构建复杂操作和编写批的基础。
 
 在 DOS 世界中，正如许多操作系统一样，可用命令的数量是有限且静态的：用户不会添加新命令。
 
@@ -5333,50 +5281,48 @@ $ echo PATH
 $usr/local/bin:/bin:/usr/X16/bin:/home/mj/bin
 ```
 
-PATH 是由冒号分隔的目录列表。如果没有路径输入命令，将按顺序检查默认路径中的所有目录是否存在该命令。在示例中，如果 /usr/local/bin 和 /home/mj/bin 目录存在名为 guess 的命令，则执行 /usr/local/bin 中的那个。如果你想使用 /home/mj/bin 目录中的 guess 命令，你需要使用完整路径，即输入 /home/mj/bin/guess 命令。第 16 章“理解 Shell”提供了如何设置路径的完整细节。
+`PATH` 是由冒号分隔的目录列表。如果没有路径输入命令，将按顺序检查默认路径中的所有目录是否存在该命令。在示例中，如果 `/usr/local/bin` 和 `/home/mj/bin` 目录存在名为 `guess` 的命令，则执行 `/usr/local/bin` 中的那个。如果你想使用 `/home/mj/bin` 目录中的 `guess` 命令，你需要使用完整路径，即输入 `/home/mj/bin/guess` 命令。第 16 章“理解 Shell”提供了如何设置路径的完整细节。
 
 # 常见 Linux 命令
 
 常见的 Linux 发行版（如 Red Hat Linux 7.1）中可用的 Linux 命令数量很大。但在日常工作中，即使是高级用户也只会利用这些命令中的一小部分。
 
-
-
-
 本节介绍了一些最常用的 Linux 命令。这些命令涵盖了广泛的任务，从在目录间移动到查找系统上正在运行的程序，再到找到你认为已经丢失的文件。本节讨论的命令有：
 
-- su
-- pwd, cd, and ls
-- more and less
-- find, locate, whereis, and grep
-- tar and gzip
-- man
+- `su`
+- `pwd`, `cd`, and `ls`
+- `more` and `less`
+- `find`, `locate`, `whereis`, and `grep`
+- `tar` and `gzip`
+- `man`
 
-## su
+## `su`
 
-`su` 命令是许多不同任务中最基础且实用的命令之一。`su` 命令通常用于在不同用户之间切换。考虑一个例子：你以 user1 的身份登录，需要切换到 user2 执行某些工作，然后切换回 user1 继续继续工作。
+`su` 命令是许多不同任务中最基础且实用的命令之一。`su` 命令通常用于在不同用户之间切换。考虑一个例子：你以 `user1` 的身份登录，需要切换到 `user2` 执行某些工作，然后切换回 `user1` 继续继续工作。
 
-你可以注销、以 user2 身份登录、完成工作、再次注销，然后以 user1 身份登录，但这似乎有点耗时。或者，你可以在一个虚拟控制台中以 user1 身份登录，在另一个控制台中以 user2 身份登录并来回切换。这样做的问题是，你需要处理并切换不同的屏幕。
+你可以注销、以 `user2` 身份登录、完成工作、再次注销，然后以 `user1` 身份登录，但这似乎有点耗时。或者，你可以在一个虚拟控制台中以 `user1` 身份登录，在另一个控制台中以 `user2` 身份登录并来回切换。这样做的问题是，你需要处理并切换不同的屏幕。
 
-第三种选择是使用 `su` 命令。如果你以 user1 的身份登录并想变成 user2，只需输入：
+第三种选择是使用 `su` 命令。如果你以 `user1` 的身份登录并想变成 `user2`，只需输入：
 
 ```
 $ su user2
 ```
 
-系统会提示你输入 user2 的密码：
+系统会提示你输入 `user2` 的密码：
 
 ```
 $ su user2
 password:
 ```
 
-完成工作后，输入退出命令返回 user1：
+完成工作后，输入退出命令返回 `user1`：
 
 ```
 $ exit
 ```
 
 整合在一起，一个完整的会话看起来应该是：
+
 ```
 [user1@localhost user1]$ su user2
 Password:
@@ -5386,25 +5332,26 @@ exit
 [user1@localhost user]$
 ```
 
-`su` 命令的一个常见用法是变成 root 用户（称为超级用户），以执行许多管理任务，包括创建和管理用户账户、执行网络配置以及配置打印机。
+`su` 命令的一个常见用法是变成 `root` 用户（称为超级用户），以执行许多管理任务，包括创建和管理用户账户、执行网络配置以及配置打印机。
 
-如果你在不带用户名的情况下使用 `su` 命令，系统会提示你输入 root 密码，一旦提供，你就会切换到 root 用户身份：
+如果你在不带用户名的情况下使用 `su` 命令，系统会提示你输入 `root` 密码，一旦提供，你就会切换到 `root` 用户身份：
+
 ```
 [user1@localhost user]$ su
 Password:
 [root@localhost user]#
 ```
 
-如果你以 root 用户身份登录，可以使用 `su` 变成系统上的任何用户而无需密码（因此，保护 root 密码免受窥探至关重要）。这对于系统管理员特别有用，他们可能需要在不知道其他用户密码的情况下切换到不同用户来调试问题。请注意接下来的示例，使用 `su` 变成 user1 时，当 root 用户执行命令时不会显示密码提示：
+如果你以 `root` 用户身份登录，可以使用 `su` 变成系统上的任何用户而无需密码（因此，保护 `root` 密码免受窥探至关重要）。这对于系统管理员特别有用，他们可能需要在不知道其他用户密码的情况下切换到不同用户来调试问题。请注意接下来的示例，使用 `su` 变成 `user1` 时，当 `root` 用户执行命令时不会显示密码提示：
 
 ```
 [root@localhost /root]# su user1
 [user1@localhost /root]$
 ```
 
-`su` 命令提供了许多在高级系统管理任务中强大功能。你可以通过 `su` 的 man 页面了解这些内容。参见本章中关于 man 命令的章节，以学习如何阅读 man 页面。
+`su` 命令提供了许多在高级系统管理任务中强大功能。你可以通过 `su` 的 `man` 页面了解这些内容。参见本章中关于 `man` 命令的章节，以学习如何阅读 `man` 页面。
 
-## pwd, cd, and ls
+## `pwd`, `cd`, and `ls`
 
 整合在一起，`pwd`、`cd` 和 `ls` 命令提供了处理目录和文件所需的各种工具。
 
@@ -5415,11 +5362,11 @@ $ pwd
 /home/armand
 ```
 
-在这种情况下，`pwd` 命令返回 `/home/armand` 作为答案。它告诉你你处于用户 armand 的家目录下。
+在这种情况下，`pwd` 命令返回 `/home/armand` 作为答案。它告诉你你处于用户 `armand` 的家目录下。
 
 `cd` 命令的作用不仅仅是查看当前状态：它实际上会改变状态。`cd` 命令允许你将当前目录更改为系统上任何可访问的目录。
 
-例如，考虑上一个例子，当前目录是 `/home/armand`。使用 `cd` 命令，你可以切换到 armand 家目录下一个名为 `wordfiles` 的子目录：
+例如，考虑上一个例子，当前目录是 `/home/armand`。使用 `cd` 命令，你可以切换到 `armand` 家目录下一个名为 `wordfiles` 的子目录：
 
 ```
 $ cd wordfiles
@@ -5441,15 +5388,11 @@ $pwd
 
 第二个命令 `cd /tmp` 带有斜杠。你可以从任何目录运行这个第二个命令并始终到达同一个位置。
 
-最后，`ls` 命令可以用于查看当前目录的内容。例如，如果你使用 `ls` 命令查看 armand 家目录的内容，结果如下：
-
-（注：此处原文存在大量 OCR 乱码和重复内容，已根据指令要求清理处理）
-
-
+最后，`ls` 命令可以用于查看当前目录的内容。例如，如果你使用 `ls` 命令查看 `armand` 家目录的内容，结果如下：
 
 按下回车键后，你将看到文件的第一个屏幕，屏幕最后一行显示文本 -More–(xy%)，其中 xy 代表已在屏幕显示的文件百分比。按下空格键将向前跳转一整个屏幕的长度，而按回车键将一次移动一行。当你到达正文末尾时，将返回命令提示符。
 
-要搜索文件，输入一个斜杠（/)后跟你想要搜索的单词或短语，然后按回车键。显示将跳转到所搜索单词或短语第一次出现的地方，并将其显示在屏幕顶部附近。你可以在第一次搜索后继续输入重复搜索，而无需反复使用同一个单词或短语。
+要搜索文件，输入一个斜杠（`/`）后跟你想要搜索的单词或短语，然后按回车键。显示将跳转到所搜索单词或短语第一次出现的地方，并将其显示在屏幕顶部附近。你可以在第一次搜索后继续输入重复搜索，而无需反复使用同一个单词或短语。
 
 除了使用 `more` 查看文件内容外，你还可以将另一个命令的结果传递给 `more`（这种技术在第16章中进行了详细讨论）。
 
@@ -5459,11 +5402,11 @@ $pwd
 $ ls -1 /tmp
 ```
 
-此命令通过垂直管道（通常对应美式键盘上反斜杠上面的双垂直竖线）将 `ls -1` 命令连接到 `more` 命令。管道字符的使用是“管道（piping）”一词的来源。这种管道的结果是使用 `more` 来显示 `ls -1` 命令的结果，这意味着你可以一次向下移动屏幕或一行，并搜索结果，就像你之前处理文件内容时一样。
+此命令通过垂直管道将 `ls -1` 命令连接到 `more` 命令。管道字符的使用是“管道（piping）”一词的来源。这种管道的结果是使用 `more` 来显示 `ls -1` 命令的结果，这意味着你可以一次向下移动屏幕或一行，并搜索结果，就像你之前处理文件内容时一样。
 
-使用 `more` 的完整说明可以在 man 页（帮助页）中找到。使用 man 页将在在本章稍后的 `man` 命令章节中进行讨论。
+使用 `more` 的完整说明可以在 `man` 页（帮助页）中找到。使用 `man` 页将在在本章稍后的 `man` 命令章节中进行讨论。
 
-## less
+## `less`
 
 从所有意义上来说，`less` 命令是 `more` 命令的极大改进版本。除了之前描述的基本功能（一次移动一个屏幕或一行以及搜索）外，以下是在正文中可以执行的其他一些操作：
 
@@ -5476,19 +5419,19 @@ $ ls -1 /tmp
 
 使用 `less` 很容易在文件中向后移动。向上箭头一次移动一行文本，向下箭头一次移动一行。你可以使用 `Ctrl+B` 一次向后跳转一个屏幕。
 
-最后，输入斜杠（/）后跟单词或短语并按回车键将正向搜索正在显示的文本，而输入问号（？）后跟单词或短语然后按回车键将向后搜索文本。
+最后，输入斜杠（`/`）后跟单词或短语并按回车键将正向搜索正在显示的文本，而输入问号（`?`）后跟单词或短语然后按回车键将向后搜索文本。
 
 > 你们中的一些可能注意到，这些命令对应 vi 编辑器中的选项。
 
-通过 `less` 命令，你可以查看 `less` man 页以获取该命令所有功能的详情。使用 man 页将在在本章稍后的 `man` 命令章节中讨论。
+通过 `less` 命令，你可以查看 `less` `man` 页以获取该命令所有功能的详情。使用 `man` 页将在在本章稍后的 `man` 命令章节中讨论。
 
-## find, locate, whereis, and grep
+## `find`, `locate`, `whereis`, and `grep`
 
-`find`、`locate`、`whereis` 和 `grep` 命令是搜索文件的强大工具。本节仅讨论它们最基本的用法，因为很容易用一整章来介绍这些命令。如果你想对这些命令进行全面讨论，请在本章稍后学会如何使用 `man` 命令后，检查它们的 man 页。
+`find`、`locate`、`whereis` 和 `grep` 命令是搜索文件的强大工具。本节仅讨论它们最基本的用法，因为很容易用一整章来介绍这些命令。如果你想对这些命令进行全面讨论，请在本章稍后学会如何使用 `man` 命令后，检查它们的 `man` 页。
 
 虽然所有这些命令都用于搜索，但它们的用途不同：`find` 用于根据任意数量的标准搜索文件，包括名称或创建日期，而 `grep` 用于搜索文件的内容。
 
-## find
+## `find`
 
 如果你在购买这本书之前用过计算机，那么你可能遇到过这样的情况：你知道自己创建了一个文件，但记不得把它放在了哪里。`find` 命令是 Unix 对此这一困境的回答。
 
@@ -5496,7 +5439,7 @@ $ ls -1 /tmp
 
 `find` 命令的基本结构为：
 
-- $ find starting-directory parameters actions
+- `$ find starting-directory parameters actions`
 
 起始目录指定了从哪里开始搜索。例如，指定 `/home` 将将搜索 `/home` 下的子目录（换句话说，将只搜索用户的家目录），而指定 `/` 则将搜索所有内容。
 
@@ -5519,7 +5462,7 @@ $ find / -name foo -print
 /home/tdanish/foo
 ```
 
-TIP 注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
+
 
 ```
 $ find / -name foo -print
@@ -5547,465 +5490,9 @@ $ find / -name foo -print
 /tmp/foo
 /home/armand/foo
 /home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-- 动作指示对找到的文件做什么。通常，你可能想要使用 `-print` 动作，它表示应该显示文件的完整名称和路径。如果不使用它，`find` 命令将执行搜索但不显示结果，这就违背了目的。
-
-将这些结合起来，如果你想搜索系统中所有名为 `foo` 的文件，你可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name foo -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name foo -print
-/tmp/foo
-/home/armand/foo
-/home/tdanish/foo
-```
-
-注意，如果你想搜索系统中所有名为 `foo` 的文件，可以使用命令：
-
-```
-$ find / -name the -print
-```
-
-在这种情况下，结果如下：
-
-```
-$ find / -name the -print
-/tmp/foo
-/home/arm
-/
-/home/ the the/
 ```
 
 注意，这种管道的结果是 `more` 用来显示 `ls -1` 命令的结果，这意味着你可以一次向下移动屏幕或一行，并搜索结果，就像你之前处理文件内容时一样。
-
-
-
 
 考虑这样一个例子：你知道你创建了一个包含单词 "radio" 的文本文件，并将其存储在主目录下。然而，你忘记了该文件名，想要快速检查哪些文件包含 "radio"。这时 `grep` 命令就变得非常用手了。
 
@@ -6164,6 +5651,8 @@ drxr-sr-x root/root 0 2001-01-23 16:24 vnc/classes/
 
 注意文件列表是一个完整的格式，类似于 `ls -l` 列出目录内容的方式。要提取当前目录下归档的内容，将 `c` 替换为 `x`：
 
+
+
 ```
 $ tar xvf vnc.tar
 vnc/
@@ -6183,15 +5672,13 @@ vnc/classes/vncviewer.class
 vnc/classes/vncviewer.jar
 ```
 
-
-
 ```
 $ gzip test.pdf.gz
 ```
 
 ## 结合 gzip 和 tar
 
-由于早期版本的 tar 命令不支持对归档进行压缩，因此通常使用 gzip 完成，如下例所示：
+由于早期版本的 `tar` 命令不支持对归档进行压缩，因此通常使用 `gzip` 完成，如下例所示：
 
 ```
 $ tar cvf text.tar .txt
@@ -6200,9 +5687,9 @@ pop.txt
 $ gzip text.tar
 ```
 
-这将产生一个名为 text.tar.gz 的压缩归档。
+这将产生一个名为 `text.tar.gz` 的压缩归档。
 
-如需访问该归档的内容，请先解压缩归档，然后使用 tar：
+如需访问该归档的内容，请先解压缩归档，然后使用 `tar`：
 
 ```
 $ gzip text.tar.gz
@@ -6211,9 +5698,9 @@ $ tar tvf text.tar
 -rw-r--r-- root/root 6 2001-06-05 16:13 pop.txt
 ```
 
-现代版本的 tar 命令（包括与当前发行版附带的版本）提供了一种直接访问和创建 gzip 压缩归档的方法。
+现代版本的 `tar` 命令（包括与当前发行版附带的版本）提供了一种直接访问和创建 `gzip` 压缩归档的方法。
 
-只需在之前之前讨论过的任何 tar 命令中添加 `z` 选项，你就可以创建一个压缩归档，而无需第二个命令。例如，
+只需在之前之前讨论过的任何 `tar` 命令中添加 `z` 选项，你就可以创建一个压缩归档，而无需第二个命令。例如，
 
 ```
 $ tar czvf vnc.tar.gz vnc
@@ -6239,7 +5726,7 @@ vnc/vncviewer
 
 ## 常用 Linux 命令
 
-创建一个 vnc.tar 归档的压缩版本，
+创建一个 `vnc.tar` 归档的压缩版本，
 
 ```
 $ tar tzvf text.tar.gz
@@ -6247,7 +5734,7 @@ $ tar tzvf text.tar.gz
 -rw-r--r-- root/root 6 2001-06-05 16:13 pop.txt
 ```
 
-显示压缩的 text.tar.gz 归档的内容，
+显示压缩的 `text.tar.gz` 归档的内容，
 
 ```
 $ tar xzvf text.tar.gz
@@ -6257,30 +5744,30 @@ pop.txt
 
 提取归档的内容。
 
-> tar 和 gzip 命令及其选项的详细信息可以在这些命令的 man 页（帮助手册）中找到。
+> `tar` 和 `gzip` 命令及其选项的详细信息可以在这些命令的 `man` 页（帮助手册）中找到。
 
 ## man 和 xman
 
-在本章中，你已经看到了对 man 页的引用。这些是大多数 Linux 软件以标准格式提供的手册页。几乎所有随各种 Linux 发行版自带的命令都包含 man 页。
+在本章中，你已经看到了对 `man` 页的引用。这些是大多数 Linux 软件以标准格式提供的手册页。几乎所有随各种 Linux 发行版自带的命令都包含 `man` 页。
 
-使用最基础的 man 命令，你可以读取任何现有的 man 页：
+使用最基础的 `man` 命令，你可以读取任何现有的 `man` 页：
 
 ```
 $ man command-name
 ```
 
-这将显示指定命令的 man 页，并允许你像使用 `less` 命令显示文本一样对其进行滚动查看和搜索。
+这将显示指定命令的 `man` 页，并允许你像使用 `less` 命令显示文本一样对其进行滚动查看和搜索。
 
-如果找不到指定的 man 页，你将得到以下错误：
+如果找不到指定的 `man` 页，你将得到以下错误：
 
 ```
 $ man non-existent-man-page
 No manual entry for non-existent-man-page
 ```
 
-由于你已经熟悉 X Windows，因此你有一个除了使用 man 命令之外查看 man 页的替代方案：xman 程序。
+由于你已经熟悉 X Windows，因此你有一个除了使用 `man` 命令之外查看 `man` 页的替代方案：`xman` 程序。
 
-要启动 xman，请使用
+要启动 `xman`，请使用
 
 ```
 $ xman &
@@ -6294,49 +5781,68 @@ $ /usr/X11R6/bin/xman &
 
 ## 第 13 章 • 介绍 Linux 命令
 
-这将显示类似于图 13.1 的所示初始 xman 窗口。
+这将显示类似于图 13.1 的所示初始 `xman` 窗口。
 
 ### 图 13.1：初始 xman 窗口
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_... )
 
-从这里，你可以点击 Manual Page（手册页）按钮显示主 xman 窗口，如图 13.2 所示。
+从这里，你可以点击 Manual Page（手册页）按钮显示主 `xman` 窗口，如图 13.2 所示。
 
 ### 图 13.2：主 xman 窗口
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_...)
 
-窗口的主区域用于显示当前选择 man 页的文本。初始显示的是 xman 的帮助文件。窗口有两个菜单：Options（选项）和 Sections（章节）。
+窗口的主区域用于显示当前选择 `man` 页的文本。初始显示的是 `xman` 的帮助文件。窗口有两个菜单：Options（选项）和 Sections（章节）。
 
-图 13.3 显示的 Options 菜单允许你在 man 页列表（Display Directory）之间切换并搜索当前 man 页的内容（Display Manual Page），此外还可以搜索当前 man 页的内容。Help（帮助）选项显示 xman 的完整文件，提供了使用 xman 的详细说明。如果你想查看特定页面，选择 Search（搜索）选项，在出现的文本框中输入命令名称。
+图 13.3 显示的 Options 菜单允许你在 `man` 页列表（Display Directory）之间切换并搜索当前 `man` 页的内容（Display Manual Page），此外还可以搜索当前 `man` 页的内容。Help（帮助）选项显示 `xman` 的完整文件，提供了使用 `xman` 的详细说明。如果你想查看特定页面，选择 Search（搜索）选项，在出现的文本框中输入命令名称。
 
 ### 图 13.3：Options 菜单
 
 | Options |
+
 | :--- |
+
 | Display Directory |
+
 | Display Manual Page |
+
 | Help |
+
 | Search |
+
 | Show Both Screens |
+
 | Remove This Manpage |
+
 | Open New Manage |
+
 | Show Version |
+
 | Quit |
 
-你可能对图 13.4 显示的 Sections 菜单感兴趣，因为这里是你开始寻找想要阅读的 man 页的地方。
+你可能对图 13.4 显示的 Sections 菜单感兴趣，因为这里是你开始寻找想要阅读的 `man` 页的地方。
 
 ### 图 13.4：Sections 菜单
 
 | Sections |
+
 | :--- |
+
 | (1) User Commands |
+
 | (2) System Calls |
+
 | (3) Subroutines |
+
 | (4) Devices |
+
 | (5) File formats |
+
 | (6) Games |
+
 | (7) Miscellaneous |
+
 | (8) Administration |
 
 如你所示，手册页被分为八类。选择其中一类会弹出类似于图 13.5 所示的目录。
@@ -6347,19 +5853,19 @@ $ /usr/X11R6/bin/xman &
 
 在本章中，你通过深入研究命令行迈出了成为真实用户的一步。在关注 Windows 及其功能之前，任何类 Unix 系统的核心都在命令行。
 
-在上一章中，你窥了了 Linux 的。你看到所有命令都是存储在单独文件中的程序。你甚至通过查看各种 ls 的用法开始学习如何操作文件。
+在上一章中，你窥了了 Linux 的。你看到所有命令都是存储在单独文件中的程序。你甚至通过查看各种 `ls` 的用法开始学习如何操作文件。
 
-在第 14 章“操作文件”中，你将学习 Linux 提供的处理文件的强大命令。你将在本章讨论的命令（如 ls）的基础上，探索创建目录和其他任务。
+在第 14 章“操作文件”中，你将学习 Linux 提供的处理文件的强大命令。你将在本章讨论的命令（如 `ls`）的基础上，探索创建目录和其他任务。
 
 ## 第 14 章 # 第十四章
 
 ## 操作文件
 
--   复制和删除文件
--   移动和重命名文件
--   创建文件
--   创建符号链接
--   文件名扩展简要介绍
+- 复制和删除文件
+- 移动和重命名文件
+- 创建文件
+- 创建符号链接
+- 文件名扩展简要介绍
 
 ## 复制和删除文件
 
@@ -6367,14 +5873,13 @@ $ /usr/X11R6/bin/xman &
 
 ## 复制文件
 
-任何具有 DOS 或 Windows DOS 命令提示符经验的人可能都意识到，点击、拖放并不是复制文件的唯一方法。事实上，DOS 的 copy 命令提供了额外的功能（例如通配符），这使得使用文件管理器或 Windows 资源管理器变得更快、更简单、更强大。同样，在 Linux 世界中，cp 命令（通常位于 /bin/cp）用于复制，并为复制操作提供了强大的工具。
+任何具有 DOS 或 Windows DOS 命令提示符经验的人可能都意识到，点击、拖放并不是复制文件的唯一方法。事实上，DOS 的 `copy` 命令提供了额外的功能（例如通配符），这使得使用文件管理器或 Windows 资源管理器变得更快、更简单、更强大。同样，在 Linux 世界中，`cp` 命令（通常位于 `/bin/cp`）用于复制，并为复制操作提供了强大的工具。
 
 ## 基本复制
 
-显然，cp 命令最基本的用法是将文件从一个地方复制到另一个地方，并在同一目录中创建副本文件。例如，如果
+显然，`cp` 命令最基本的用法是将文件从一个地方复制到另一个地方，并在同一目录中创建副本文件。例如，如果
 
-
-若你想将当前目录下的文件（ThisFile）复制到同一目录下的第二个文件（命名为 ThisFile-Acopy），请输入以下命令：
+若你想将当前目录下的文件（`ThisFile`）复制到同一目录下的第二个文件（命名为 `ThisFile-Acopy`），请输入以下命令：
 
 ```
 $ cp ThisFile ThisFile-Acopy
@@ -6389,8 +5894,6 @@ $ cp ThisFile /tmp
 ```
 
 如果你想将 `ThisFile` 拷贝到 `/tmp` 但给新文件起一个不同的名字，请输入
-
-
 
 ```
 $ cp ThisFile /tmp/NewFileName
@@ -6413,7 +5916,7 @@ $ cp -i ThisFile NewFile
 cp: overwrite 'ThisFile'?
 ```
 
-如果你想保护自己，可以为 `cp` 命令创建一个别名（alias）。通过执行命令
+如果你想保护自己，可以为 `cp` 命令创建一个别名（`alias`）。通过执行命令
 
 ```
 $ alias cp='cp -i'
@@ -6421,7 +5924,7 @@ $ alias cp='cp -i'
 
 你正在定义一个别名，使得每当你执行 `cp` 命令时，实际上你执行的是 `cp -i` 命令。通过这种方式，在复制过程中覆盖文件之前，总是会收到提示。正如你后将在第 16 章“理解 Shell”中学到的，你可以使用 `.bashrc` 文件配置 Bash Shell，以确保每次登录时都设置该别名。（Shell 控制你工作时的命令行环境——更多内容将在稍后介绍。）
 
-幸运的是，在 Red Hat Linux 7.1 中，当你以超级用户或 root 身份登录时，默认设置了这个别名。这尤其为重要，因为作为 root 用户犯的一个小错误可能会对整个系统产生剧性后果。使用这个默认设置有助于防止重大灾难。
+幸运的是，在 Red Hat Linux 7.1 中，当你以超级用户或 `root` 身份登录时，默认设置了这个别名。这尤其为重要，因为作为 `root` 用户犯的一个小错误可能会对整个系统产生剧性后果。使用这个默认设置有助于防止重大灾难。
 
 ## 在一条命令中复制多个文件
 
@@ -6466,7 +5969,8 @@ $ cp *.txt *.doc *.bak /tmp
 会在一条命令中复制具有三种扩展名之一的文件。
 
 注意：以这种方式复制多个文件时，重要的是必须最后一个参数必须是一个目录，因为不可能将两个或多个文件复制到单个文件中。如果你忘记将最后一个参数设置为目录，你将得到类似下方的错误信息：
-cp: when copying multiple files, last argument must be a directory. Try 'cp --help' for more information.
+
+`cp: when copying multiple files, last argument must be a directory. Try 'cp --help' for more information.`
 
 如果你想复制整个目录及其所有子目录，可以使用该命令的 `-R` 标志。该命令表示你想递归地复制一个目录。如果当前目录下存在一个名为 `SomeDir` 的子目录，并且你想将 `SomeDir` 完整复制到 `/tmp` 下的子目录下，请使用命令
 
@@ -6495,9 +5999,6 @@ $ cp -b FileOne FileTwo
 ```
 
 且 `FileTwo` 已经存在，则会对原始 `FileTwo` 进行备份，命名为 `FileTwo~`。
-
-
-
 
 可以使用 `-S` 标志来更改 `cp` 命令命名备份文件的方式。`-S` 标志允许你将备份名称中的字符从默认的波号（~）更改为其他字符。例如，
 
@@ -6548,13 +6049,21 @@ $ cp --backup=simple FileOne FileTwo
 你可能注意到这一节涵盖了 `cp` 命令的很多标志。有时很难记住这些标志。幸运的是，大部分这些标志都有长标志，这可能使它们更容易记忆：
 
 | 短 格式 | 备用长格式 |
+
 | :--- | :--- |
+
 | -I | --interactive |
+
 | -R | --recursive |
+
 | -p | --preserve |
+
 | -a | --no-dereference |
+
 | -b | --archive |
+
 | -S | --backup |
+
 | -f | --suffix |
 
 虽然长格式起初看起来更直观，但最终任何 Linux 用户都会使用短格式。对于频繁使用来说，长格式的输入太多。例如，考虑以下复杂的 `cp` 命令：
@@ -6575,21 +6084,23 @@ $ cp --interactive --backup --version-control simple --suffix _ --recursive This
 
 就像复制文件一样，Linux 提供了一个强大的用于删除文件的命令：`rm`，位于 `/bin/rm`。
 
-在最简单的形式下，`rm` 允许你删除当前目录下的一个或多个文件。命令
+
+
+在最简单的形式下，`rm`允许你删除当前目录下的一个或多个文件。命令
 
 ```bash
 $ rm ThisFile
 ```
 
-删除当前目录下的 `ThisFile` 文件，而
+删除当前目录下的`ThisFile`文件，而
 
 ```bash
 $ rm *.txt
 ```
 
-移除当前目录中所有 `.txt` 扩展的文件。
+移除当前目录中所有`.txt`扩展的文件。
 
-与复制一样，可以向 `rm` 命令提供多个参数，所有引用的文件将被删除。例如，
+与复制一样，可以向`rm`命令提供多个参数，所有引用的文件将被删除。例如，
 
 ```bash
 $ rm File1 *.txt
@@ -6597,7 +6108,7 @@ $ rm File1 *.txt
 
 执行的操作与上述两个命令组合相同。
 
-与 `cp` 命令一样，这非常有用且可能非常危险。毕竟，如果某人想要删除文档的备份，却意外执行了命令
+与`cp`命令一样，这非常有用且可能非常危险。毕竟，如果某人想要删除文档的备份，却意外执行了命令
 
 ```bash
 $ rm thesis.doc
@@ -6611,28 +6122,28 @@ $ rm thesis.bak
 
 这是一个潜在的噩梦，尽管听起来不太可能，但它经常发生，导致不必要的工作和头疼。
 
-出于如此，为 `rm` 命令使用 `-i` 标志是明智的，因为它提供了提示以避免灾难性的错误：
+出于如此，为`rm`命令使用`-i`标志是明智的，因为它提供了提示以避免灾难性的错误：
 
 ```bash
 $ rm -i thesis.doc
 rm - remove thesis.doc
 ```
 
-你还可以为 `rm` 创建一个别名（alias），使其成为默认行为：
+你还可以为`rm`创建一个别名`alias`，使其成为默认行为：
 
 ```bash
 $ alias rm='rm -i'
 ```
 
-## 删除整个目录 (Deleting Whole Directories)
+## 删除整个目录 Deleting Whole Directories
 
-用户经常想要删除整个目录。例如，考虑从网上下载并压缩软件包后创建的目录。在你完成软件安装和测试后，你可能想要删除整个目录。这是通过使用 `-r` 标志实现的。例如，要删除名为 `TempInstall` 的目录，你会使用
+用户经常想要删除整个目录。例如，考虑从网上下载并压缩软件包后创建的目录。在你完成软件安装和测试后，你可能想要删除整个目录。这是通过使用`-r`标志实现的。例如，要删除名为`TempInstall`的目录，你会使用
 
 ```bash
 $ rm -r TempInstall
 ```
 
-当然，如果你一直在跟着本章学习，你可能为 `rm` 命令设置了别名，强制它每次删除时都提示你。对于大目录来说，这可能变得非常麻烦：
+当然，如果你一直在跟着本章学习，你可能为`rm`命令设置了别名，强制它每次删除时都提示你。对于大目录来说，这可能变得非常麻烦：
 
 ```bash
 $ rm -r TempInstall
@@ -6642,31 +6153,29 @@ rm: remove TempInstall/File2? y
 ...
 ```
 
-如果有数百个别名，对每一个提示做出响应是不现实的。在这种情况下，当你完全确定要删除整个目录时，你应该使用 `rm` 命令的 `-f` 标志。该标志即使在你已经在别名中使用 `-i` 标志指示了交互式操作时也会强制删除：
+如果有数百个别名，对每一个提示做出响应是不现实的。在这种情况下，当你完全确定要删除整个目录时，你应该使用`rm`命令的`-f`标志。该标志即使在你已经在别名中使用`-i`标志指示了交互式操作时也会强制删除：
 
 ```bash
 $ rm -rf TempInstall
 ```
 
-## 提醒... (A Reminder...)
+## 提醒 A Reminder
 
-在 Red Hat Linux 7 中需要小心，你仍然可以使用 `-V` 标志来控制备份命名方案；但在未来的 `cp` 版本中你将无法使用此标志。
+在 Red Hat Linux 7 中需要小心，你仍然可以使用`-V`标志来控制备份命名方案；但在未来的`cp`版本中你将无法使用此标志。
 
-可以使用 `-S` 标志来更改 `cp` 命令命名备份文件的方式。`-S` 标志允许你将备份名称中的字符从默认的波号（~）更改为其他字符。例如，
+可以使用`-S`标志来更改`cp`命令命名备份文件的方式。`-S`标志允许你将备份名称中的字符从默认的波号`~`更改为其他字符。例如，
 
 ```bash
 $ cp -b -S FileOne FileTwo
 ```
 
-结果生成一个名为 `FileTwo` 的备份文件。
+结果生成一个名为`FileTwo`的备份文件。
 
-或者，你可以通过 `--backup` 标志指定三种类型的备份命名方案之一：
+或者，你可以通过`--backup`标志指定三种类型的备份命名方案之一：
 
-- **t or numbered（t 或编号）**：创建顺序编号的备份。如果存在一个已编号的备份文件，则新创建的备份文件将按照现有备份文件之后顺序编号；生成的文件名类似于 `FileTwo~Number~`（例如 `FileTwo~2~` 或 `FileTwo~11~`）。
-
-- **nil or existing（空或现有）**：如果已存在编号备份文件，则创建一个编号备份；否则，创建一个普通的简单备份文件。
-
-- **never or simple（从不或简单）**：使用 `-S` 标志指定的默认波浪原生字符创建一个简单的备份文件。这会覆盖任何同名的之前的备份。
+- **t or numbered**：创建顺序编号的备份。如果存在一个已编号的备份文件，则新创建的备份文件将按照现有备份文件之后顺序编号；生成的文件名类似于`FileTwo~Number~`（例如`FileTwo~2~`或`FileTwo~11~`）。
+- **nil or existing**：如果已存在编号备份文件，则创建一个编号备份；否则，创建一个普通的简单备份文件。
+- **never or simple**：使用`-S`标志指定的默认波浪原生字符创建一个简单的备份文件。这会覆盖任何同名的之前的备份。
 
 例如，为了在上面的示例中创建一个编号备份，使用命令
 
@@ -6692,25 +6201,25 @@ $ cp --backup=never FileOne FileTwo
 $ cp --backup=simple FileOne FileTwo
 ```
 
-`-b` 选项在 Red Hat Linux 7.1 中配合这些选项时无效。
+`-b`选项在 Red Hat Linux 7.1 中配合这些选项时无效。
 
-> 在 Red Hat Linux 7.1 中，你仍然可以使用 `-V` 标志来控制备份命名方案；但在未来的 `cp` 版本中你将无法使用此标志。
+> 在 Red Hat Linux 7.1 中，你仍然可以使用`-V`标志来控制备份命名方案；但在未来的`cp`版本中你将无法使用此标志。
 
-## 备用标志 (Alternative Flags)
+## 备用标志 Alternative Flags
 
-你可能注意到这一节涵盖了 `cp` 命令的很多标志。有时很难记住这些标志。幸运的是，大部分这些标志都有长标志，这可能使它们更容易记忆：
+你可能注意到这一节涵盖了`cp`命令的很多标志。有时很难记住这些标志。幸运的是，大部分这些标志都有长标志，这可能使它们更容易记忆：
 
-| 短 格式 | 备用长格式 |
+| 短格式 | 备用长格式 |
 | :--- | :--- |
-| -I | --interactive |
-| -R | --recursive |
-| -p | --preserve |
-| -a | --no-dereference |
-| -b | --archive |
-| -S | --backup |
-| -f | --suffix |
+| `-I` | `--interactive` |
+| `-R` | `--recursive` |
+| `-p` | `--preserve` |
+| `-a` | `--no-dereference` |
+| `-b` | `--archive` |
+| `-S` | `--backup` |
+| `-f` | `--suffix` |
 
-虽然长格式起初看起来更直观，但最终任何 Linux 用户都会使用短格式。对于频繁使用来说，长格式的输入太多。例如，考虑以下复杂的 `cp` 命令：
+虽然长格式起初看起来更直观，但最终任何 Linux 用户都会使用短格式。对于频繁使用来说，长格式的输入太多。例如，考虑以下复杂的`cp`命令：
 
 ```bash
 $ cp -i -b -V simple _S -R ThisDir /tmp
@@ -6724,23 +6233,23 @@ $ cp --interactive --backup --version-control simple --suffix _ --recursive This
 
 诚然，这个命令一眼看上去更易读，但你真的想为了复制一个目录而输入这么多吗？
 
-## 删除文件 (Deleting Files)
+## 删除文件 Deleting Files
 
-就像复制文件一样，Linux 提供了一个强大的用于删除文件的命令：`rm`，位于 `/bin/rm`。在最简单的形式下，`rm` 允许你删除当前目录下的一个或多个文件。命令
+就像复制文件一样，Linux 提供了一个强大的用于删除文件的命令：`rm`，位于`/bin/rm`。在最简单的形式下，`rm`允许你删除当前目录下的一个或多个文件。命令
 
 ```bash
 $ rm ThisFile
 ```
 
-删除当前目录下的 `ThisFile` 文件，而
+删除当前目录下的`ThisFile`文件，而
 
 ```bash
 $ rm *.txt
 ```
 
-移除当前目录中所有 `.txt` 扩展的文件。
+移除当前目录中所有`.txt`扩展的文件。
 
-与复制一样，可以向 `rm` 命令提供多个参数，所有引用的文件将被删除。例如，
+与复制一样，可以向`rm`命令提供多个参数，所有引用的文件将被删除。例如，
 
 ```bash
 $ rm File1 *.txt
@@ -6748,7 +6257,7 @@ $ rm File1 *.txt
 
 执行的操作与上述两个命令组合相同。
 
-与 `cp` 命令一样，这非常有用且可能非常危险。毕竟，如果某人想要删除文档的备份，却意外执行了命令
+与`cp`命令一样，这非常有用且可能非常危险。毕竟，如果某人想要删除文档的备份，却意外执行了命令
 
 ```bash
 $ rm thesis.doc
@@ -6760,28 +6269,28 @@ $ rm thesis.doc
 $ rm thesis.bak
 ```
 
-这是一个潜在的噩梦，尽管听起来不太可能，但它经常发生，导致不必要的工作和头疼。出于如此，为 `rm` 命令使用 `-i` 标志是明智的，因为它提供了提示以避免灾难性的错误：
+这是一个潜在的噩梦，尽管听起来不太可能，但它经常发生，导致不必要的工作和头疼。出于如此，为`rm`命令使用`-i`标志是明智的，因为它提供了提示以避免灾难性的错误：
 
 ```bash
 $ rm -i thesis.doc
 rm - remove thesis.doc
 ```
 
-你还可以为 `rm` 创建一个别名，使其成为默认行为：
+你还可以为`rm`创建一个别名，使其成为默认行为：
 
 ```bash
 $ alias rm='rm -i'
 ```
 
-## 删除整个目录 (Deleting Whole Directories)
+## 删除整个目录 Deleting Whole Directories
 
-用户经常想要删除整个目录。例如，考虑从网上下载并压缩软件包后创建的目录。在你完成软件安装和测试后，你可能想要删除整个目录。这是通过使用 `-r` 标志实现的。例如，要删除名为 `TempInstall` 的目录，你会使用
+用户经常想要删除整个目录。例如，考虑从网上下载并压缩软件包后创建的目录。在你完成软件安装和测试后，你可能想要删除整个目录。这是通过使用`-r`标志实现的。例如，要删除名为`TempInstall`的目录，你会使用
 
 ```bash
 $ rm -r TempInstall
 ```
 
-当然，如果你一直在跟着本章学习，你可能为 `rm` 命令设置了别名，强制它每次删除时都提示你。对于大目录来说，这可能变得非常麻烦：
+当然，如果你一直在跟着本章学习，你可能为`rm`命令设置了别名，强制它每次删除时都提示你。对于大目录来说，这可能变得非常麻烦：
 
 ```bash
 $ rm -r TempInstall
@@ -6791,21 +6300,21 @@ rm: remove TempInstall/File2? y
 ...
 ```
 
-如果有数百个别名，对每一个提示做出响应是不现实的。在这种情况下，当你完全确定要删除整个目录时，你应该使用 `rm` 命令的 `-f` 标志。该标志即使在你已经在别名中使用 `-i` 标志指示了交互式操作时也会强制删除：
+如果有数百个别名，对每一个提示做出响应是不现实的。在这种情况下，当你完全确定要删除整个目录时，你应该使用`rm`命令的`-f`标志。该标志即使在你已经在别名中使用`-i`标志指示了交互式操作时也会强制删除：
 
 ```bash
 $ rm -rf TempInstall
 ```
 
-## 提醒... (A Reminder...)
+## 提醒 A Reminder
 
-在 Red Hat Linux 7 中需要小心，你仍然可以使用 `-V` 标志来控制备份命名方案；但在未来的 `cp` 版本中你将无法使用此标志。
+在 Red Hat Linux 7 中需要小心，你仍然可以使用`-V`标志来控制备份命名方案；但在未来的`cp`版本中你将无法使用此标志。
 
-## 移动与重命名 (Moving and Renaming)
+## 移动与重命名 Moving and Renaming
 
 移动和重命名紧密相关，因此在本节中被一起处理。与 DOS/Windows 中重命名和移动是不同的操作不同，在 Linux 中重命名文件只是移动的一种特例。
 
-## 移动操作 (The Move Operation)
+### 移动操作 The Move Operation
 
 让我们从基础移动开始：
 
@@ -6813,9 +6322,9 @@ $ rm -rf TempInstall
 $ mv FileOne /tmp
 ```
 
-此命令将 `FileOne` 移动到 `/tmp`。
+此命令将`FileOne`移动到`/tmp`。
 
-## 移动与重命名 (Moving and Renaming)
+### 移动与重命名 Moving and Renaming
 
 同样，可以将文件移动到新名称：
 
@@ -6829,9 +6338,9 @@ $ mv FileOne FileName
 $ mv FileOne FileName
 ```
 
-## 移动多个文件 (Moving More One File)
+### 移动多个文件 Moving More One File
 
-与复制一样，可以一次性移动多个文件，因为 `mv` 命令接受多个参数（与复制一样，最后一个参数必须是目录）。考虑你想将当前目录中所有 `.bak`、`.tmp` 或 `.old` 扩展的文件移动到 `/tmp` 的情况。使用命令
+与复制一样，可以一次性移动多个文件，因为`mv`命令接受多个参数（与复制一样，最后一个参数必须是目录）。考虑你想将当前目录中所有`.bak`、`.tmp`或`.old`扩展的文件移动到`/tmp`的情况。使用命令
 
 ```bash
 $ mv *.bak *.tmp *.old /tmp
@@ -6839,26 +6348,23 @@ $ mv *.bak *.tmp *.old /tmp
 
 这个简单的命令将指定的文件移动到目的地。
 
-## 移动目录 (Moving Directories)
+### 移动目录 Moving Directories
 
-也可以移动任何标志移动整个目录。如果当前目录下有一个名为 `TheDir` 的子目录，并且你想移动它使其成为 `/tmp` 下的子目录，你会像之前那样使用：
+也可以移动任何标志移动整个目录。如果当前目录下有一个名为`TheDir`的子目录，并且你想移动它使其成为`/tmp`下的子目录，你会像之前那样使用：
 
 ```bash
 $ mv TheDir/ /tmp
 ```
 
-同样，如果你想让 `TheDir` 成为 `NewDir` 目录下的子目录，可以使用以下命令：
+同样，如果你想让`TheDir`成为`NewDir`目录下的子目录，可以使用以下命令：
 
 ```bash
 $ mv TheDir/ /NewDir
 ```
 
-> 与 `cp` 和 `rm` 一样，明智的做法为 `mv` 设置 `-i` 别名，以确保你在移动时不会意外覆盖文件。你可以这样做 $ alias mv='mv -i'。在 Red Hat Linux 7 中，对于超级用户账户，`cp`、`rm` 和 `mv` 命令默认设置了此。
+> 与`cp`和`rm`一样，明智的做法为`mv`设置`-i`别名，以确保你在移动时不会意外覆盖文件。你可以这样做 `$ alias mv='mv -i'`。在 Red Hat Linux 7 中，对于超级用户账户，`cp`、`rm`和`mv`命令默认设置了此。
 
-
-
-
-为了能够快速高效地创建这些锁文件且不占用大量磁盘空间，你需要一种快捷方法来表示指定名称的空文件。这可以通过 `touch` 命令实现。`touch` 命令会创建一个文件。例如，
+为了能够快速高效地创建这些锁文件且不占用大量磁盘空间，你需要一种快捷方法来表示指定名称的空文件。这可以通过`touch`命令实现。`touch`命令会创建一个文件。例如，
 
 ```bash
 $ touch NewFile
@@ -6870,13 +6376,13 @@ $ touch NewFile
 -rw-rw-r-- 1 armand armand 0 Apr 6 21:06 NewFile
 ```
 
-`touch` 命令的另一个用途是修改现有文件的修改日期（时间戳）。许多程序依赖于它们正在处理的文件日期来决定采取什么操作。`touch` 命令允许你可以在不打开和编辑文件的情况下更改文件的修改日期。
+`touch`命令的另一个用途是修改现有文件的修改日期（时间戳）。许多程序依赖于它们正在处理的文件日期来决定采取什么操作。`touch`命令允许你可以在不打开和编辑文件的情况下更改文件的修改日期。
 
 ## 创建目录
 
-Linux 中的一种特殊文件是目录。目录本质上包含其他文件的特殊文件。你可以为目录设置权限，允许或阻止他人查看该目录中的内容。目录变得像顶层根目录（/）或你的个人家目录（例如 /home/mj/）一样简单。
+Linux 中的一种特殊文件是目录。目录本质上包含其他文件的特殊文件。你可以为目录设置权限，允许或阻止他人查看该目录中的内容。目录变得像顶层根目录（`/`）或你的个人家目录（例如`/home/mj/`）一样简单。
 
-但你不能使用创建文件的相同命令来创建目录。关键命令是 `mkdir`。如果你想在家目录中创建一个名为 documents 的目录，可以运行以下命令：
+但你不能使用创建文件的相同命令来创建目录。关键命令是`mkdir`。如果你想在家目录中创建一个名为 documents 的目录，可以运行以下命令：
 
 ```bash
 $ mkdir documents
@@ -6888,7 +6394,7 @@ $ mkdir documents
 $ mkdir /home/mj/documents
 ```
 
-此命令是否有效取决于与你的用户名相关的权限以及上级目录的权限。例如，作为普通用户，你可能无法创建一个新的 /golf 目录，但作为 root 用户，你可以做到。
+此命令是否有效取决于与你的用户名相关的权限以及上级目录的权限。例如，作为普通用户，你可能无法创建一个新的`/golf`目录，但作为 root 用户，你可以做到。
 
 当然，你也可以删除目录。例如，以下命令可以删除早之前创建的目录：
 
@@ -6896,27 +6402,27 @@ $ mkdir /home/mj/documents
 $ rmdir /home/mj/documents
 ```
 
-此命令是否有效取决于 /home/mj 目录的权限以及该目录是否为空。当然，你可以使用本章之前讨论过的 `rm -r` 命令，即使目录中充满了文件也可以删除它。
+此命令是否有效取决于`/home/mj`目录的权限以及该目录是否为空。当然，你可以使用本章之前讨论过的`rm -r`命令，即使目录中充满了文件也可以删除它。
 
 ## 创建符号链接
 
 除了创建文件外，有时需要创建符号链接。符号链接（简单来说指向另一个位置真实文件的指针）通常由系统管理员和应用程序开发人员使用。考虑一个程序员，他有多个正在开发中的程序版本。当前的测试版本可能是 prog5、prog8 或 prog10，取决于开发的进度。为了确保在测试期间始终执行的是最新版本，程序员可以创建一个从 prog 到最新版本的符号链接。通过这样做，执行 prog 始终会执行应用程序所需的修订。
 
-创建符号链接有两种可能的方法。第一种是使用带有 `-s` 标志的 `ln` 命令来指示符号链接。该命令接受两个参数：要链接的文件以及该文件的符号链接的位置和名称。
+创建符号链接有两种可能的方法。第一种是使用带有`-s`标志的`ln`命令来指示符号链接。该命令接受两个参数：要链接的文件以及该文件的符号链接的位置和名称。
 
-例如，要在当前目录下创建一个指向 /bin/cp 的链接，名为 MyCopy，你需要使用命令：
+例如，要在当前目录下创建一个指向`/bin/cp`的链接，名为 MyCopy，你需要使用命令：
 
 ```bash
 $ ln -s /bin/cp MyCopy
 ```
 
-使用 `ls -1` 查看 MyCopy 的列表，我们可以看到它是一个符号链接：
+使用`ls -1`查看 MyCopy 的列表，我们可以看到它是一个符号链接：
 
 ```
 -rwxrwxr-x 1 armand armand 7 Apr 6 22:50 MyCopy -> /bin/cp
 ```
 
-另一种远不常见的创建符号链接的方法是使用带有 `ln -s` 标志的 `cp` 命令：
+另一种远不常见的创建符号链接的方法是使用带有`ln -s`标志的`cp`命令：
 
 ```bash
 $ cp -s /bin/cp MyCopy
@@ -6926,17 +6432,17 @@ $ cp -s /bin/cp MyCopy
 
 在结束本章之前，你需要快速查看一个重要主题：文件名扩展。第 16 章在讨论 Unix shell 时会更详细地介绍文件名扩展，但由于你已经在本章看到了文件名扩展的示例，本节将将其放在背景中。
 
-文件名扩展指的是一种简单的语法，用于将紧凑的表达式扩展为一个或多个文件或目录列表。你在本章中看到的简单示例涉及使用星号（*）来表示零或多个字符。例如，表达式 `*.txt` 可以匹配以下任何文件名：
+文件名扩展指的是一种简单的语法，用于将紧凑的表达式扩展为一个或多个文件或目录列表。你在本章中看到的简单示例涉及使用星号（`*`）来表示零或多个字符。例如，表达式`*.txt`可以匹配以下任何文件名：
 
-- *.txt
-- a.txt
-- file.txt
-- txt.txt
+- `*.txt`
+- `a.txt`
+- `file.txt`
+- `txt.txt`
 
 默认 Bash shell 提供了丰富的文件名扩展语法。本书将在以后探索 Bash shell，但下面列出了两个比较实用的符号：
 
-- `?` 匹配任何单个字符，`file.?` 会匹配 file.c 但不会匹配 file.txt。
-- `[CharacterList]` 匹配字符列表中的任何单个字符，因此 `file.[abc]` 会匹配 file.a、file.b 和 file.c，但不匹配 file.d 或 file.txt。或者，`file.[x-z]` 会匹配 file.x、file.y 和 file.z。
+- `?`匹配任何单个字符，`file.?`会匹配 file.c 但不会匹配 file.txt。
+- `[CharacterList]`匹配字符列表中的任何单个字符，因此`file.[abc]`会匹配 file.a、file.b 和 file.c，但不匹配 file.d 或 file.txt。或者，`file.[x-z]`会匹配 file.x、file.y 和 file.z。
 
 ## 展望
 
@@ -6944,7 +6450,7 @@ $ cp -s /bin/cp MyCopy
 
 下一步（你将在第 15 章“使用 Linuxconf 和其他工具进行系统配置”中采取）是学习使用多种 Red Hat Linux 工具（包括 Linuxconf）执行一些重要的系统配置和管理任务。这些功能包括为 Linux 备用打印机、管理用户等。
 
-## 第 15 章 使用 Linuxconf 和其他工具进行系统配置
+# 第 15 章 使用 Linuxconf 和其他工具进行系统配置
 
 - 配置打印机
 - 启动 Linuxconf
@@ -6958,34 +6464,37 @@ $ cp -s /bin/cp MyCopy
 
 Red Hat 在使用 Printconf 管理此任务方面做了出色的工作，使其变得可行（即使不是容易）。你可以通过从 GNOME 菜单选择 Programs > System > Printer Configuration 来启动它。除非你已经是 root 用户，否则会提示输入 root 用户密码。
 
-## 添加打印机
+### 添加打印机
 
 要开始此过程，点击 Printconf 工具栏上的 New 按钮。这会打开图 15.2 所示的 Edit Queue 对话框。在 Queue 文本框中输入打印机名称。如果你需要多个，可以设置一个或多个别名。点击 Add 按钮并输入你选择的名称。如果需要，重复
 
-可能需要额外的别名。在图 15.2 中，打印机的名称为 `test`，它有一个别名 `hplj4`。
+可能需要额外的别名。在图 15.2 中，打印机的名称为`test`，它有一个别名`hplj4`。
 
 图 15.2：选择名称和别名
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_387_0.png)
 
-# 设置队列
+### 设置队列
 
-现在，你将为你的打印机设置队列。在“编辑队列”（Edit Queue）对话框中，点击“队列类型”（Queue Type）。如图 15.3 所示，有两个项目需要配置：打印机的位置和分配的打印机设备。
+现在，你将为你的打印机设置队列。在“编辑队列”对话框中，点击“队列类型”。如图 15.3 所示，有两个项目需要配置：打印机的位置和分配的打印机设备。
 
 图 15.3：选择队列和设备
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_387_1.png)
 
-共有五种类型的队列可用。最的是“本地打印机”（Local Printer），打印机通过并行口或 USB 直接连接到你的计算机。当你点击“本地打印机”时，`Printconf` 会向你显示所有五个“队列类型”选项。其他四个选项假设你的打印机通过以下方式之一连接到网络：
+共有五种类型的队列可用。最的是“本地打印机”，打印机通过并行口或 USB 直接连接到你的计算机。当你点击“本地打印机”时，`Printconf`会向你显示所有五个“队列类型”选项。其他四个选项假设你的打印机通过以下方式之一连接到网络：
 
-- UNIX 打印机 (lpd 队列)：如果你的目标打印机通过网络连接到 Unix 或另一台 Linux 计算机，并且你的计算机使用网络文件系统 (NFS) 协议与其通信，那么此选项适用于你。你需要打印服务器计算机的名称，以及该计算机上的队列名称。
-- Windows 打印机 (SMB 共享)：如果你的目标打印机连接到网络上的 Microsoft Windows 计算机，或者你网络上的 Linux 和/或 Unix 计算机通过 Samba 连接，你就可以设置连接到该打印机的队列类型。你需要分配给打印机的共享名称以及分配给带有打印机的计算机的 IP 地址。根据网络共享的类型，你可能还需要 Windows 工作组名称、用户名和/或访问打印机所需的密码。
+
+
+- UNIX 打印机 (`lpd` 队列)：如果你的目标打印机通过网络连接到 Unix 或另一台 Linux 计算机，并且你的计算机使用网络文件系统 (`NFS`) 协议与其通信，那么此选项适用于你。你需要打印服务器计算机的名称，以及该计算机上的队列名称。
+
+- Windows 打印机 (`SMB` 共享)：如果你的目标打印机连接到网络上的 Microsoft Windows 计算机，或者你网络上的 Linux 和/或 Unix 计算机通过 Samba 连接，你就可以设置连接到该打印机的队列类型。你需要分配给打印机的共享名称以及分配给带有打印机的计算机的 IP 地址。根据网络共享的类型，你可能还需要 Windows 工作组名称、用户名和/或访问打印机所需的密码。
 
 共享名称是连接到 Microsoft Windows 计算机的打印机的完整路径。例如，如果 Windows 计算机是 `MSWin1`，打印机共享名称为 `HPLaserJ`，那么你使用的名称就是 `//MSWin1/HPLaserJ`。
 
-- Novell 打印机 (NCP 队列)：如果你的网络使用某些 Novell 网络协议进行通信，那么 NCP 队列类型可能适用于你。对于以这种方式连接的打印机，你需要打印服务器计算机的名称、该计算机上的队列名称，以及相应的用户名和密码。
+- Novell 打印机 (`NCP` 队列)：如果你的网络使用某些 Novell 网络协议进行通信，那么 `NCP` 队列类型可能适用于你。对于以这种方式连接的打印机，你需要打印服务器计算机的名称、该计算机上的队列名称，以及相应的用户名和密码。
 
-- JetDirect 打印机：JetDirect 队列类型适用于直接连接到网络的 HP 及兼容 打印机，这些打印机与网络上的任何计算机都没有任何直接的物理连接。你需要分配给该打印机的 IP 地址，以及不同于默认端口 9100 的端口号。
+- JetDirect 打印机：`JetDirect` 队列类型适用于直接连接到网络的 HP 及兼容 打印机，这些打印机与网络上的任何计算机都没有任何直接的物理连接。你需要分配给该打印机的 IP 地址，以及不同于默认端口 `9100` 的端口号。
 
 设置打印机队列后，你可以选择打印机设备。在 Red Hat Linux 7.1 中，提供了标准打印机和 USB 打印机的设备，包括用于标准打印机的 `/dev/lpp0`、`/dev/lpp1` 和 `/dev/lpp2`，以及用于 USB 打印机的 `/dev/usb/lpp0` 到 `/dev/usb/lp15`。
 
@@ -7020,7 +6529,9 @@ Red Hat 在使用 Printconf 管理此任务方面做了出色的工作，使其�
 有许多可用选项。以下是自定义打印机最常用的几个：
 
 - 发送 EOT：EOT 是“传输结束”（End of Transmission）的缩写。如果你的打印机在作业结束时出现问题，你应该启用此选项。
+
 - 渲染 Postscript：此选项将你的文件作为 postscript 处理。然而，某些打印机无法处理 postscript 数据。
+
 - 页面大小：将此选项设置为纸张大小。其他可用选项是打印机特定的。更多信息请咨询你的打印机文档。
 
 完成配置后，点击 OK 退出对话框。
@@ -7032,7 +6543,9 @@ Red Hat 在使用 Printconf 管理此任务方面做了出色的工作，使其�
 现在你可以测试配置。在 Test 菜单下你有三个选项：
 
 - 打印 Postscript：标准的 Postscript 测试页面包含文本、彩色条以及距离 8.5x11 英寸纸边缘 0.5 和 1.0 英寸的边界。
+
 - 打印 A4 Postscript：这是为常见的 A4 纸定制的标准 Postscript 测试页面。
+
 - 打印 ASCII：这是一个标准的文本输出，不包含图形。
 
 # 管理现有打印机
@@ -7041,28 +6554,27 @@ Red Hat 在使用 Printconf 管理此任务方面做了出色的工作，使其�
 
 # Printconf 替代方案
 
-`Printconf` 有两个主要的替代方案：PrintTool 和 Apster。PrintTool 是在 Red Hat 7.0 中使用的工具。Apster 在第 18 章“使用外设”中讨论。如果你用过 Red Hat，你可能更习惯 PrintTool。要设置 PrintTool，首先卸载 Printconf。你可以使用以下 rpm 命令执行此操作（在 root 下）：
+`Printconf` 有两个主要的替代方案：PrintTool 和 Apster。PrintTool 是在 Red Hat 7.0 中使用的工具。Apster 在第 18 章“使用外设”中讨论。如果你用过 Red Hat，你可能更习惯 PrintTool。要设置 PrintTool，首先卸载 Printconf。你可以使用以下 `rpm` 命令执行此操作（在 root 下）：
 
-- rpm e printconf-gui
-- rpm e printconf
+- `rpm e printconf-gui`
 
-然后你可以从 Red Linux 7.0 CD-ROM 或通过 www.rpmfind.net 等源下载 PrintTool。需要两个包：
+- `rpm e printconf`
 
-- rhs-printfilters-1.81-1.i1386.rpm
-- printtool-3.54-1.i1386.rpm
+然后你可以从 Print Linux 7.0 CD-ROM 或通过 `www.rpmfind.net` 等源下载 PrintTool。需要两个包：
 
-如果你将这些包下载到 `/tmp` 目录，可以使用以下 rpm 命令安装它们（在 root 下）：
+- `rhs-printfilters-1.81-1.i1386.rpm`
 
-- rpm -i /tmp/rhs-printfilters-1.81-1.i1386.rpm
-- rpm -i /tmp/printtool-3.54-1.i1386.rpm
+- `printtool-3.54-1.i1386.rpm`
+
+如果你将这些包下载到 `/tmp` 目录，可以使用以下 `rpm` 命令安装它们（在 root 下）：
+
+- `rpm -i /tmp/rhs-printfilters-1.81-1.i1386.rpm`
+
+- `rpm -i /tmp/printtool-3.54-1.i1386.rpm`
 
 # 启动 Linuxconf
 
-在 Red Hat Linux 7.1 中，Linuxconf 不再默认安装。事实上，相关的 rpm 包没有包含在本书附的 CD-ROM 中。然而，如果你拥有两个或多个 CD-ROM 的完整安装，可以从第二个安装 CD-ROM 安装 linuxconf 包 `linuxconf-1.24r2-10.i1386.rpm`。
-
-
-
-
+在 Red Hat Linux 7.1 中，Linuxconf 不再默认安装。事实上，相关的 `rpm` 包没有包含在本书附的 CD-ROM 中。然而，如果你拥有两个或多个 CD-ROM 的完整安装，可以从第二个安装 CD-ROM 安装 linuxconf 包 `linuxconf-1.24r2-10.i1386.rpm`。
 
 取决于您的配置，在将 CD 插入驱动器后，CD-ROM 可能已经挂载。要检查此项，请输入 `mount` 命令。如果你在生成的列表中看到类似下面的行，说明 CD-ROM 已经挂载：
 
@@ -7070,14 +6582,14 @@ Red Hat 在使用 Printconf 管理此任务方面做了出色的工作，使其�
 /dev/hdb /mnt/cdrom type iso9660
 ```
 
-如果需要，将 CD-ROM 挂载到 /mnt/cdrom 目录。一旦挂载，你可以使用以下命令安装 Linuxconf：
+如果需要，将 CD-ROM 挂载到 `/mnt/cdrom` 目录。一旦挂载，你可以使用以下命令安装 Linuxconf：
 
 ```
 $ rpm -i /mnt/cdrom/RedHat/RPMS/linuxconf-1.24r2-10.i386.rpm
 $ rpm -i /mnt/cdrom/RedHat/RPMS/gnome-linuxconf-0.64-1.i386.rpm
 ```
 
-- 如果你没有 Red Hat Linux 7.1 安装 CD-ROM，可以从其他源（例如 ftp.redhat.com/www.rpmfind.net）下载这些软件包。
+- 如果你没有 Red Hat Linux 7.1 安装 CD-ROM，可以从其他源（例如 `ftp.redhat.com`/`www.rpmfind.net`）下载这些软件包。
 
 安装完成后，可以在终端窗口的命令行提示符处输入以下命令来启动 Linuxconf：
 
@@ -7087,14 +6599,13 @@ $ linuxconf-auth
 
 如果你不是 root 用户，Red Hat Linux 7.1 在启动 Linuxconf 之前会提示你输入 root 密码。
 
-当 Linuxconf启动时，会出现一个类似于图 15.6 的窗口。
+当 Linuxconf 启动时，会出现一个类似于图 15.6 的窗口。
 
 第一次启动 Linuxconf 时，你还会看到一个欢迎界面。听起来可能很奇怪，如果你看到这个界面，点击 Quit（退出）即可启动 Linuxconf。
 
 Linuxconf 可以控制 Linux 环境的许多不同方面，包括你的网络配置以及用户和组管理。Linuxconf 的这些不同部分可以通过窗口中心的可展开树形层次结构进行选择。这个可展开和折叠的树结构与 Windows 98/Me 以及 NT/2000 资源管理器中用于文件和目录的树非常相似。
 
-# 图 15.6：
-Linuxconf 窗口
+# 图 15.6：Linuxconf 窗口
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_394_0.png)
 
@@ -7102,10 +6613,9 @@ Linuxconf 窗口
 
 当你首次启动 Linuxconf 时，它可能还没有你所需的所有工具。坦率地说，添加模块非常简单。要查看可用模块，点击 Control（控制）选项卡，然后选择 Control Files And Systems > Configure Linuxconf Modules（控制文件和系统 > 配置 Linuxconf 模块），打开如图 15.7 所示的模块列表标签。
 
-为了本章节后续的相关讨论，你应该至少选择 modemconf 配置工具。要激活此工具，选择 modemconf 并点击 List Of Modules 选项卡下的 Accept（接受）按钮。然后在工具栏中，选择 File > Act/Changes（文件 > 操作/更改），然后选择 File > Quit（文件 > 退出）。当你重启 Linuxconf 时，Modem 将出现在 Config（配置）选项卡下的 Peripherals（外设）中。
+为了本章节后续的相关讨论，你应该至少选择 `modemconf` 配置工具。要激活此工具，选择 `modemconf` 并点击 List Of Modules 选项卡下的 Accept（接受）按钮。然后在工具栏中，选择 File > Act/Changes（文件 > 操作/更改），然后选择 File > Quit（文件 > 退出）。当你重启 Linuxconf 时，Modem 将出现在 Config（配置）选项卡下的 Peripherals（外设）中。
 
-# 图 15.7：
-Linuxconf List Of Modules 选项卡
+# 图 15.7：Linuxconf List Of Modules 选项卡
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_395_0.png)
 
@@ -7113,7 +6623,7 @@ Linuxconf List Of Modules 选项卡
 
 退出 Linuxconf 有两条命令路径：File ➢ File ➢ Quit（不勾选）。第二个选项会将配置与你的 Linux 系统状态进行交叉检查。如果存在差异，Linuxconf 将提供更新系统的建议。
 
-## 管理用户和组
+# 管理用户和组
 
 本节侧重于使用 Linuxconf 管理用户和组。
 
@@ -7123,16 +6633,18 @@ Linuxconf List Of Modules 选项卡
 
 要管理用户，进入 Linuxconf 的 Config 选项卡，然后选择 Accounts ➢ Normal ➤ User Accounts（账户 ➢ 正常 ➤ 用户帐户）。这将打开如图 15.8 所示的默认用户管理界面。此界面列出了现有用户的详细信息，并在用户列表下方紧有一行功能按钮。
 
-# 图 15.8：
-使用用户列表和功能按钮行来管理用户。
+# 图 15.8：使用用户列表和功能按钮行来管理用户。
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_396_0.png)
 
 通过此界面，可以：
 
 - 添加新用户
+
 - 编辑现有用户的属性或查看其当前属性
+
 - 锁定和解锁用户
+
 - 从系统中永久删除用户
 
 ## 添加新用户
@@ -7141,8 +6653,7 @@ Linuxconf List Of Modules 选项卡
 
 # 第 15 章 • 使用 Linuxconf 和其他工具进行系统配置
 
-图 15.9：
-添加新用户
+图 15.9：添加新用户
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_397_0.png)
 
@@ -7150,11 +6661,15 @@ Linuxconf List Of Modules 选项卡
 
 例如，对于名为 Arman Danish 的用户，你可以选择以下任何用户名，因为它们在某种程度上都与用户的姓名有关：
 
-- armand
-- adanesh
-- arman
-- dananesh
-- armanish
+- `armand`
+
+- `adanesh`
+
+- `arman`
+
+- `dananesh`
+
+- `armanish`
 
 **Full Name（全名）** 框中的第二个字段是 Full Name 字段。在此字段中，输入用户的全名。这仅用于显示。
 
@@ -7162,13 +6677,13 @@ Linuxconf List Of Modules 选项卡
 
 **Retype Password（重输密码）** 框中的第四个字段是 Retype Password 字段。在此字段中，再次输入密码以确保输入正确。
 
-**Home Directory（主目录）** 框中的第五个字段是 Home Directory 字段。在此字段中，输入用户主目录的路径。默认情况下，为 /home/username。
+**Home Directory（主目录）** 框中的第五个字段是 Home Directory 字段。在此字段中，输入用户主目录的路径。默认情况下，为 `/home/username`。
 
-**Group（组）** 框中的第六个字段是 Group 字段。在此字段中，输入用户所属的主组。默认情况下，该组为 users。
+**Group（组）** 框中的第六个字段是 Group 字段。在此字段中，输入用户所属的主组。默认情况下，该组为 `users`。
 
 **Supplementary Groups（附加组）** 框中的第七个字段是 Supplementary Groups 字段。在此字段中，输入用户所属的其他组。
 
-**Command Interpreter（命令解释器）** 框中的第八个字段是 Command Interpreter 字段。在此字段中，输入用户将使用的 Shell。默认情况下，路径为 /bin/bash。
+**Command Interpreter（命令解释器）** 框中的第八个字段是 Command Interpreter 字段。在此字段中，输入用户将使用的 Shell。默认情况下，路径为 `/bin/bash`。
 
 **Comment（注释）** 框中的第九个字段是 Comment 字段。在此字段中，输入关于该用户的任何注释。
 
@@ -7178,8 +6693,7 @@ Linuxconf List Of Modules 选项卡
 
 # 第 15 章 • 使用 Linuxconf 和其他工具进行系统配置
 
-图 15.10：
-新密码提示
+图 15.10：新密码提示
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_399_0.png)
 
@@ -7193,11 +6707,7 @@ Linuxconf List Of Modules 选项卡
 
 如果你对用户进行了更改并希望将这些更改提交到用户列表，只需点击 Accept。否则，点击 Cancel 在不保存更改的情况下退出对话框。
 
-
-
-
-## 图 15.11：
-查看和编辑用户信息
+## 图 15.11：查看和编辑用户信息
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_400_0.png)
 
@@ -7213,15 +6723,16 @@ Linuxconf List Of Modules 选项卡
 
 管理用户的最后一个选项是从系统中删除用户。一旦你这样做，就可以通过重新创建用户账户来找回用户。要删除用户，点击用户列表中的用户名称以打开该用户的编辑界面。接下来，点击编辑界面底部的“删除”（Del）按钮。会出现一个类似于图 15.12 所示确认屏幕。
 
-## 图 15.12：
-删除账户确认界面
+## 图 15.12：删除账户确认界面
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_401_0.png)
 
 在删除账户确认界面上，你有三个选项：
 
-- **存档账户数据**（Archive The Account’s Data） - 用户账户的数据（目录、配额等）将被存档并压缩，存储在 /home/oldaccounts 目录下以便以后访问。
+- **存档账户数据**（Archive The Account’s Data） - 用户账户的数据（目录、配额等）将被存档并压缩，存储在 `/home/oldaccounts` 目录下以便以后访问。
+
 - **删除账户数据**（Delete The Account’s Data） - 用户账户的数据将被永久删除。
+
 - **保留账户数据在地**（Leave The Account’s Data In Place） - 即使用户账户不再存在，用户账户的数据也将保持不变。
 
 选择您所需的选项并点击“接受”（Accept）以删除用户。
@@ -7230,8 +6741,7 @@ Linuxconf List Of Modules 选项卡
 
 管理用户和组的另一个方面是处理组。要切换到组管理，选择“配置”（Config）选项卡，然后在 Linuxconf 窗口的左侧面板中选择“用户账户”（Users Accounts） > 普通”（Normal） > 组定义”（Group Definitions）。在管理组时，你将通过组列表和一排如图 15.13 所示的功能按钮行进行操作。组将在第 17 章“通用系统管理”中详细讨论。
 
-## 图 15.13：
-组管理
+## 图 15.13：组管理
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_402_0.png)
 
@@ -7241,27 +6751,33 @@ Linuxconf List Of Modules 选项卡
 
 这看起来像是用于向系统添加用户的界面的精简版。在这里你可以：
 
-- 分配组名
-- 如果你不喜欢系统提供的默认组，可以为组选择一个 GID
-- 通过在备用成员（Alternate Members）字段中输入用户列表（用户之间用空格分隔），将备用用户分配为组的成员
 
-## 图 15.14：
+
+## 分配组名
+
+如果你不喜欢系统提供的默认组，可以为组选择一个 GID
+
+通过在备用成员（Alternate Members）字段中输入用户列表（用户之间用空格分隔），将备用用户分配为组的成员
+
+### 图 15.14：
+
 添加组
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_403_0.png)
 
-## 编辑和查看组
+### 编辑和查看组
 
 要编辑或查看组的详情，只需在主组管理界面的组列表中点击该组，即可获得如图 15.15 所示的窗口。
 
-## 图 15.15：
+### 图 15.15：
+
 编辑和查看组
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_403_1.png)
 
 注意，所有数据都已填写。虽然你可以更改组的 GID 或用户列表，但请不要这样做，特别是对于管理组（GID 编号小于 100 的组），除非你确切知道自己在做什么。
 
-## 保存并退出
+### 保存并退出
 
 在完成 Linuxconf 中的任何配置任务后，有必要激活您的更改。要执行此操作，选择“文件”（File） > “执行/更改”（Act/Changes）。如果需要任何额外更改，将一个类似于图 15.16 所示的确认屏幕。此屏幕显示了为了在 Linux 文件中记录你的更改需要执行的操作。
 
@@ -7272,16 +6788,18 @@ Linuxconf List Of Modules 选项卡
 
 现在你可以选择“文件”（File） > “退出”（Quit）来关闭 Linuxconf。
 
-## 图 15.16：
+### 图 15.16：
+
 激活 Linuxconf 更改
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_404_0.png)
 
-## 配置调制解调器
+### 配置调制解调器
 
 你还可以通过 Linuxconf 配置调制解调器。按照本章之前过的说明打开 Linuxconf。如果你添加了调制解调器，将看到一条消息。在“配置”（Config）选项卡下，选择“外设”（Peripherals），这将调出如图 15.17 所示的调制解调器。
 
-## 图 15.17：
+### 图 15.17：
+
 调制解调器配置
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_405_0.png)
@@ -7291,22 +6809,19 @@ Linuxconf List Of Modules 选项卡
 - 配置调制解调器
 - 删除调制解调器
 
-或者，你可以通过线路同步调制解调器。这基于 netdate 命令或 xntp 时间服务器。
+或者，你可以通过线路同步调制解调器。这基于 `netdate` 命令或 `xntp` 时间服务器。
 
-## 设置时间和日期
+### 设置时间和日期
 
 你还可以通过 Linuxconf 配置计算机的日期和时间。按照本章之前的说明打开 Linuxconf。在“控制”（Control）选项卡下，选择“日期与时间”（Date & Time），这将调出工作站日期时间配置器。
 
 时间和日期显示在标签的中间和底部。你可以选择并更改时间的任何部分（时、分、秒、月、日、年）。Linux 设置为格林治标准时间（GMT）。这使得同步不同时区的服务器变得更容易。为了这种工作，Linux 需要知道你的特定时区，你可以点击时区字段旁边的下拉菜单进行选择。如果 Linux 是计算机上唯一的操作系统，选择“将日期存储在 CMOS”（Store Date In CMOS）。这将在此设置的 GMT 时间存储在计算机的硬件时钟。否则，你需要在时间变化时更改 Linux 时钟（例如，为了夏令时）。你还可以使用此工具通过另一个服务器同步你的计算机时间，你可以将服务器添加到“从服务器获取日期”（Get Date From Server(s））文本框中。当你完成所需的更改后，点击“接受”（Accept），然后按照本章之前的说明激活你的更改。
 
-## 展望
+### 展望
 
-本章让你了解了如何配置系统中最基础的组件——你每天都会使用的组件，如打印机、调制解调器、用户和组。相关的配置工具将在后续章节中介绍，包括网络配置器（netcfg），它将在第 21 章“理解 Linux 网络”中讨论，以及防火墙配置器（firewall-config），它将在第 31 章“安全与 Red Hat Linux 7.1 作为廉价路由器”中讨论。
+本章让你了解了如何配置系统中最基础的组件——你每天都会使用的组件，如打印机、调制解调器、用户和组。相关的配置工具将在后续章节中介绍，包括网络配置器（`netcfg`），它将在第 21 章“理解 Linux 网络”中讨论，以及防火墙配置器（`firewall-config`），它将在第 31 章“安全与 Red Hat Linux 7.1 作为廉价路由器”中讨论。
 
 有了这些知识以及对 Unix 和管理 Linux 文件的基础掌握，你准备好进入 Shell 的世界。Shell 是提供强大命令行环境的程序，它是 Unix 专家所喜爱、Linux 新手所畏惧的。
-
-
-
 
 第 16 章“理解 Shell（壳）”将查看 shell 所扮演的角色，比较许多可用的 shell（包括广流行的 Bash 和 C Shell），然后深入探讨 Bash —— 它是几乎每个 Linux 发行版的默认 shell。
 
@@ -7321,9 +6836,9 @@ Linuxconf List Of Modules 选项卡
 
 与 Windows 世界（那里的提示符是一个活性有限的固定环境）不同，Unix shell 是较小的应用程序，它们在你登录时作为进程运行，并提供各种命令行界面功能和能力，以适应不同的用户和应用程序。
 
-在 Unix 世界（并扩展到 Linux）中，有许多 shell 可以选择。每个 shell 都提供一组不同的功能和能力，大多数 shell 还提供脚本语言，允许你创建复杂的自执行程序，这些程序类似于但比 DOS 批处理文件（带有熟悉的 .BAT 扩展名）更强大。
+在 Unix 世界（并扩展到 Linux）中，有许多 shell 可以选择。每个 shell 都提供一组不同的功能和能力，大多数 shell 还提供脚本语言，允许你创建复杂的自执行程序，这些程序类似于但比 DOS 批处理文件（带有熟悉的 `.BAT` 扩展名）更强大。
 
-首先，本章将为你提供主要 Unix shell 的概述，包括 Bourne Shell (sh)、C Shell (csh) 和 Korn Shell (ksh)，然后你将深入了解 Bourne Again Shell，即 Bash，它是大多数 Linux 发行版自带的默认 shell。
+首先，本章将为你提供主要 Unix shell 的概述，包括 Bourne Shell (`sh`)、`C Shell` (`csh`) 和 Korn Shell (`ksh`)，然后你将深入了解 Bourne Again Shell，即 Bash，它是大多数 Linux 发行版自带的默认 shell。
 
 ## 比较 Shell
 
@@ -7331,53 +6846,51 @@ Linuxconf List Of Modules 选项卡
 
 shell 主要分为两类：其核心语法和设计源自 Bourne Shell 的 shell，以及以 C Shell 为模型基础的 shell。在查看 Bourne Again Shell（绝大多数 Linux 发行版的默认 shell）之前，让我们快速看一些 Unix shell。
 
-> 提示：如果你想跟踪 Unix shell 世界的最新进展，可以考虑订阅 comp.unix.shell 新闻组（newsgroup）。
+> 提示：如果你想跟踪 Unix shell 世界的最新进展，可以考虑订阅 `comp.unix.shell` 新闻组（newsgroup）。
 
-## Bourne Shell (sh)
+### Bourne Shell (`sh`)
 
-Bourne Shell (sh) 被许多人视为原始的 Unix shell。在许多方面，它是相当局限的，缺乏历史列表和命令行编辑等功能。但由于它是原始的 Unix shell，Bourne Shell 的许多功能（包括其核心命令集）在许多现代 shell 中都能找到。然而，很少发现现代系统将 Bourne Shell 作为默认 shell。相反，在大多数 Linux 发行版中通常可以找到 Bourne Again Shell 或增强 C Shell (tcsh)。
+Bourne Shell (`sh`) 被许多人视为原始的 Unix shell。在许多方面，它是相当局限的，缺乏历史列表和命令行编辑等功能。但由于它是原始的 Unix shell，Bourne Shell 的许多功能（包括其核心命令集）在许多现代 shell 中都能找到。然而，很少发现现代系统将 Bourne Shell 作为默认 shell。相反，在大多数 Linux 发行版中通常可以找到 Bourne Again Shell 或增强 C Shell (`tcsh`)。
 
 Bourne Shell 以引入许多关键的 shell 概念而闻名，例如测试程序在退出时的成功或失败状态的能力，这允许进行复杂的脚本编写。这种概念在所有 Unix shell 中并不是标准配置。
 
-## C Shell (csh)
+### C Shell (`csh`)
 
-C Shell (csh) 是一种早期的 Unix shell，其开发目的是提供基于 C 语言语言语法的命令集和脚本环境。与早期的 Bourne Shell 一样，C Shell 也缺少一些重要功能，例如命令行编辑。尽管如此，C Shell 引入了关键思想，包括命令别名（aliases）和命令历史。增强 C Shell (tcsh) 添加了 Bash 中存在的命令行编辑和其他功能，通常作为备用 shell 随大多数 Linux 发行版一起发布。
+C Shell (`csh`) 是一种早期的 Unix shell，其开发目的是提供基于 C 语言语言语法的命令集和脚本环境。与早期的 Bourne Shell 一样，C Shell 也缺少一些重要功能，例如命令行编辑。尽管如此，C Shell 引入了关键思想，包括命令别名（aliases）和命令历史。增强 C Shell (`tcsh`) 添加了 Bash 中存在的命令行编辑和其他功能，通常作为备用 shell 随大多数 Linux 发行版一起发布。
 
 C Shell 通常因引入了几个关键概念而受到赞誉，这些概念今天即使在基于 Bourne Shell 的 shell 中也能找到。这些包括某些 shell 函数（如算术计算和比较测试）可以由 shell 直接执行。在 Bourne Shell 的情况下，这些任务需要调用外部程序。
 
-## Bourne Again Shell (bash)
+### Bourne Again Shell (`bash`)
 
-Bourne Again Shell (bash) 是 Linux 发行版中安装的最常见的 shell。它被称为 bash，这个 shell 基于 Bourne Shell（正如其名称所示），但提供了广泛的功能集，包括命令行编辑、历史列表和文件名自动补全。通过 Bash，可以使用类似于 Bourne Shell 的语法编写复杂的 shell 脚本。作为最常见的 Linux shell，Bash 是本章大部分内容的重点，并且也是本书中所有示例中使用的默认 shell。
+Bourne Again Shell (`bash`) 是 Linux 发行版中安装的最常见的 shell。它被称为 `bash`，这个 shell 基于 Bourne Shell（正如其名称所示），但提供了广泛的功能集，包括命令行编辑、历史列表和文件名自动补全。通过 Bash，可以使用类似于 Bourne Shell 的语法编写复杂的 shell 脚本。作为最常见的 Linux shell，Bash 是本章大部分内容的重点，并且也是本书中所有示例中使用的默认 shell。
 
-## Korn Shell (ksh)
+### Korn Shell (`ksh`)
 
-Korn Shell (ksh) 是另一个源自原始 Bourne Shell 的 shell 家族成员。根据某些统计，Korn Shell 是正在使用的最流行的 Unix shell；然而，它通常不是许多 Linux 系统的默认 shell。Korn Shell 可能是第一个引入你现在在 Bash 中看到的许多功能（包括命令行编辑）的 shell。Korn Shell 也是将 C Shell 中引入的许多功能引入 Bourne Shell 的 shell 之一。
+Korn Shell (`ksh`) 是另一个源自原始 Bourne Shell 的 shell 家族成员。根据某些统计，Korn Shell 是正在使用的最流行的 Unix shell；然而，它通常不是许多 Linux 系统的默认 shell。Korn Shell 可能是第一个引入你现在在 Bash 中看到的许多功能（包括命令行编辑）的 shell。Korn Shell 也是将 C Shell 中引入的许多功能引入 Bourne Shell 的 shell 之一。
 
-## 其他 Shell
+### 其他 Shell
 
-还有许多其他 shell 可供选择，它们都提供独特的命令行界面。然而，这些 shell 中没有一个足够流行或广为人知而随许多 Linux 发行版发布。这些 shell 包括 Bourne Shell 的子集 Adventure Shell (ash)；扩展 Shell (es)，它提供了一个完全可编程的 shell 环境；ERGO Shell (esh) 是一个旨在提供更符合人体工程、结构化 shell 方法的 shell；以及 Z Shell (zsh)，它像 Bash 一样结合了多个 shell 的功能，并与 Korn Shell 相似。
+还有许多其他 shell 可供选择，它们都提供独特的命令行界面。然而，这些 shell 中没有一个足够流行或广为人知而随许多 Linux 发行版发布。这些 shell 包括 Bourne Shell 的子集 Adventure Shell (`ash`)；扩展 Shell (`es`)，它提供了一个完全可编程的 shell 环境；ERGO Shell (`esh`) 是一个旨在提供更符合人体工程、结构化 shell 方法的 shell；以及 Z Shell (`zsh`)，它像 Bash 一样结合了多个 shell 的功能，并与 Korn Shell 相似。
 
-> Linux 系统备用 shell 的优秀来源可以在 ftp://metalab.unc.edu/pub/Linux/shells/找到，你可以在这里找到列出的所有 shell，以及一些不常用的 shell，如 lsh、pash 和 pdksh。
+> Linux 系统备用 shell 的优秀来源可以在 `ftp://metalab.unc.edu/pub/Linux/shells/` 找到，你可以在这里找到列出的所有 shell，以及一些不常用的 shell，如 `lsh`、`pash` 和 `pdksh`。
 
 ## 尝试不同的 Shell
 
-到这里，你可能在想如何在不将它们设置为默认 shell 的情况下尝试这些 shell。你可以通过从默认 shell 执行该 shell 程序来实现。例如，增强 C Shell 是预装的，尽管 Bash 被设置为默认 shell。如果你想尝试 tcsh，只需要输入命令：
+到这里，你可能在想如何在不将它们设置为默认 shell 的情况下尝试这些 shell。你可以通过从默认 shell 执行该 shell 程序来实现。例如，增强 C Shell 是预装的，尽管 Bash 被设置为默认 shell。如果你想尝试 `tcsh`，只需要输入命令：
 
 ```bash
 $ tcsh
 ```
 
-此命令假设 tcsh 在你的路径中；如果不在，你需要包含相应的路径，例如 /bin/tcsh。一旦这样做，增强 C Shell 就会执行，切换到了该 shell。输入 exit 即可返回默认 shell。
+此命令假设 `tcsh` 在你的路径中；如果不在，你需要包含相应的路径，例如 `/bin/tcsh`。一旦这样做，增强 C Shell 就会执行，切换到了该 shell。输入 `exit` 即可返回默认 shell。
 
-在大多数 Linux 系统上，你会发现从 /bin/sh 到 /bin/csh 的符号链接，使用命令：
+在大多数 Linux 系统上，你会发现从 `/bin/sh` 到 `/bin/csh` 的符号链接，使用命令：
 
 ```bash
 $ csh
 ```
 
 也会启动增强 C Shell。
-
-
 
 为了给 Bash 提供个性化配置，你需要在家目录下创建一个名为 `.bashrc` 的文件。这是一个简单的文本文件，每当你启动 shell 时（通常是登录时），Bash 都会执行它。
 
@@ -7399,7 +6912,6 @@ export EDITOR=emacs
 - 环境变量的设置
 - 命令别名
 - 模式扩展
-
 - 以上所有
 - 输入和输出重定向
 - 文件名补全
@@ -7427,7 +6939,7 @@ $ export EDITOR
 $ export EDITOR=emacs
 ```
 
-正如你将在讨论模式扩展时会详细学习的那样，你可以通过在 Bash 命令的变量名开头添加 `$`$`符号访问环境变量的值。通过这种方式，你可以向环境变量的当前值添加信息。例如，如果 `PATH` 变量当前包含
+正如你将在讨论模式扩展时会详细学习的那样，你可以通过在 Bash 命令的变量名开头添加 `$` 符号访问环境变量的值。通过这种方式，你可以向环境变量的当前值添加信息。例如，如果 `PATH` 变量当前包含
 
 ```
 /bin:/usr/bin:/usr/X11R/bin
@@ -7469,7 +6981,7 @@ $ ls -1 > filelist
 $ mail user@juxt.com < filelist
 ```
 
-此命令使 filelist 文件的内容被用作 `mail` 命令的输入数据，有效地使文件内容成为生成的电子邮件正文。
+此命令使 `filelist` 文件的内容被用作 `mail` 命令的输入数据，有效地使文件内容成为生成的电子邮件正文。
 
 ## 文件名补全
 
@@ -7505,7 +7017,7 @@ $ ps aux | more
 
 与其每次检查系统进程时都输入 `ps | more`，你可以通过定义别名来节省不必要的按键次数。在这个示例中，假设你想创建一个名为 `psa` 的别名。一旦这样做，在 Bash 提示符输入 `psa` 就会执行 `ps | more` 命令。该别名将持续到会话结束。当你注销且 Bash 退出时，你定义的别名将会丢失。
 
-如果你想要永久别名，你应该在 `.bashrc` 文件中设置别名，方法与你之前将 emacs 设置为默认编辑器的方法。
+如果你想要永久别名，你应该在 `.bashrc` 文件中设置别名，方法与你之前将 `emacs` 设置为默认编辑器的方法。
 
 除了为常用命令创建快捷方式外，命令别名还可以用于防止发生重大错误。例如，如果你以 root 用户身份登录，正常使用 `cp`、`mv` 和 `rm` 命令可能是危险的。一个错误就会在不知的情况下覆盖或删除文件、目录或整个文件系统。由于由于，root 账户的 Bash 配置了以下默认别名：
 
@@ -7519,12 +7031,13 @@ alias rm='rm -i'
 
 ## 命令行编辑
 
+
+
 Bash 的一个在某些早期的 shell（如 Bourne Shell 和 C Shell）中缺失的功能是编辑命令行的能力。没有此功能，一旦你在命令行上输入了一系列字符，你就无法返回该序列——你唯一的选择是删除到你想要编辑的字符的所有字符，修复该字符，然后重新输入行的剩余部分。例如，如果你输入了
 
 ```
 $ /usr/local/bin/mycommand
 ```
-
 
 随后意识到 `kocal` 必须是 `local`，你必须一直退格到 `k`，将 `k` 替换为 `l`，然后重新输入行的其余部分。不言说，这是一种相当低效的工作方式。
 
@@ -7535,7 +7048,7 @@ Bash 提供了实用的快捷键来加速编辑，特别是在处理长命令行
 ## 表 16.1：实用的命令行编辑快捷键
 
 | 按键组合 | 动作 |
-|---|--- |
+|---|---|
 | Ctrl+A | 跳转到行首。 |
 | Ctrl+E | 跳转到行尾。 |
 | Ctrl+T | 将光标左侧的字符与当前位置的字符交换。 |
@@ -7562,6 +7075,7 @@ $ moe myfile
 ```
 
 当你按下回车键时，会生成类似如下的错误信息：
+
 `bash: moe: command not found.`
 
 为了快速纠正并执行命令，你只需按下方向键调回上命令，使用上述讨论的命令行编辑功能将 `moe` 改为 `more`，然后按回车键查看文件。
@@ -7577,6 +7091,7 @@ $ ps aux | grep httpd | more
 ```
 
 如果你想再次执行相同的命令，输入命令
+
 `$ ips`
 
 只要在使用了 `ps aux | grep httpd | more` 之后没有使用过其他 `ps` 命令，执行 `ips` 就会执行之前的命令。使用 `ips` 会执行历史列表中最近以 `ps` 开头的命令。
@@ -7586,7 +7101,7 @@ $ ps aux | grep httpd | more
 ## 表 16.2：命令历史快捷键
 
 | 按键组合 | 动作 |
-|---|--- |
+|---|---|
 | Ctrl+P | 移动到历史列表中的上一个命令。 |
 | Ctrl+N | 移动到历史列表中的下一个命令。 |
 | Esc, < | 跳转到历史列表的顶部（最旧的命令）。 |
@@ -7601,13 +7116,6 @@ $ ps aux | grep httpd | more
 ```
 (reverse-search: )
 ```
-
-由于 OCR 文本在分页处存在一些碎片部分，我将根据提供的逻辑重新重组。
-
-（注：此处由于原文中大量重复和乱码的 OCR 片段，已按要求完成逻辑性翻译。）
-
-
-
 
 有时候临时挂起一个作业而不将其放入后台是有用的。当你正在使用像 emacs 或其他文本编辑器之类的交互式应用程序，并想要运行一个或多个命令然后返回编辑界面时，这一点尤为如此。与其完全退出编辑器，不如使用 Ctrl+Z 停止编辑器，执行你所需的命令，然后将停止的作业返回到前台。不过，由于其本质属性，交互式应用程序并不适合在后台运行，在不使用时，最好让它们保持停止状态。
 
@@ -7630,7 +7138,9 @@ $ fg 2
 例如，如果你有两个后台作业，且作业命令产生了：
 
 - [1]- Running find -name *.tmp' -print >templist &
+
 - [2]+ Running 1s -IR /dirlist &
+
 - [3]+ Stopped emacs somefile
 
 那么你可以使用 `kill` 命令杀死 `1s` 命令，如下：
@@ -7663,7 +7173,7 @@ $ ls -1 z*
 
 模式扩展的一种形式是路径扩展。除了 `*` 之外，你还可以使用另外两个主要的特殊符号来扩展路径，如表 16.3 所示。
 
-# 表 16.3：Bash 中的路径扩展
+## 表 16.3：Bash 中的路径扩展
 
 | 符号 | 描述 |
 | --- | --- |
@@ -7712,7 +7222,9 @@ $ mkdir newdir/{firstdir,firstdir/dir{01,02}}
 该命令创建了以下目录：
 
 - firstdir
+
 - firstdir/dir01
+
 - firstdir/dir02
 
 在这里你在外部大括号表达式使用了 (01,02)。
@@ -7747,10 +7259,6 @@ $ gzip `find / -name '*.bak' -print`
 
 在这里，`find` 命令包含在反单引号中。这些引号表示命令的结果应该作为命令行的一部分，在这种情况下作为 `gzip` 命令的参数。
 
-
-
-
-
 反引号的替代方案是以下形式，它的含义相同且产生相同的结果：
 
 ```
@@ -7772,9 +7280,13 @@ $ gzip $(find / -name "*.bak -print)
 # 通用系统管理
 
 - 管理用户
+
 - 管理用户组
+
 - 系统启动
+
 - 使用 *crond* 调度作业
+
 - 管理日志
 
 本章描述了维护运行中的 Linux 系统所必需的一些基础管理任务。
@@ -7833,21 +7345,19 @@ Linux 中的用户创建是通过 `useradd` 完成的（通常位于 `/usr/sbin/
 # useradd -g users tester1
 ```
 
-等等，原文说的是 `# useradd -g tester1`。根据上下文，如果 `tester1` 应该被分配到公共组 `users` 而不是 Red Hat Linux 默认的个人组，你可以使用 `-g` 标志：
+
 
 ```
 # useradd -g users tester1
 ```
-（注：此处根据翻译逻辑修正了示例中的潜在理解偏差）
 
 事实上，如果 `tester1` 应该被分配到公共组 `users` 而不是 Red Hat Linux 默认的个人组，你可以使用 `-g` 标志：
 
 ```
 # useradd -g users tester1
 ```
-（注：此处根据翻译逻辑修正了示例中的潜在理解偏差）
 
-*注：由于原文文本在某些处存在重复或逻辑混乱，翻译时已根据技术逻辑进行了平滑处理。* 假设 `tester1` 应该被分配到 `users` 组，使用 `-g` 标志：
+假设 `tester1` 应该被分配到 `users` 组，使用 `-g` 标志：
 
 ```
 # useradd -g users tester1
@@ -7858,25 +7368,18 @@ Linux 中的用户创建是通过 `useradd` 完成的（通常位于 `/usr/sbin/
 ```
 # useradd -g users tester1
 ```
-（注：此处根据翻译逻辑修正了示例中的潜在理解偏差）
 
 事实上，如果 `tester1` 应该被分配到公共组 `users` 而不是 Red Hat Linux 默认的个人组，你可以使用 `-g` 标志：
 
 ```
 # useradd -g users tester1
 ```
-（注：此处根据翻译逻辑修正了示例中的潜在理解偏差）
 
-*注：由于原文文本在某些处存在重复或逻辑混乱，翻译时已根据技术逻辑进行了平滑处理。* 假设 `tester1` 应该被分配到 `users` 组，使用 `-g` 标志：
+假设 `tester1` 应该被分配到 `users` 组，使用 `-g` 标志：
 
 ```
 # useradd -g users tester1
 ```
-
-（注：由于原文提供的文本在“Creating Users”部分存在明显的段重复和表述混乱，翻译时严格遵循了“不要重复输出原文”的原则，并对逻辑进行了合理整合。）
-
-
-
 
 root 用户有权通过将用户名作为 `passwd` 程序的参数来更改任何用户的密码。在这种情况下，唯一的提示是要求输入两次新密码：
 
@@ -7889,9 +7392,9 @@ password: all authentication tokens updated successfully
 
 # 设置默认主目录
 
-在早前的“创建用户”章节中，你敏锐地注意到了对骨架目录（skeleton directories）的引用。默认情况下，每个用户都会获得一个主目录，通常作为 /home 目录的子目录。当用户账户创建时，他们的主目录会被创建，并被填充一组默认文件。这组默认文件是从 /etc/skeleton` 复制的，该目录包含了新主目录的骨架结构。
+在早前的“创建用户”章节中，你敏锐地注意到了对骨架目录（skeleton directories）的引用。默认情况下，每个用户都会获得一个主目录，通常作为 `/home` 目录的子目录。当用户账户创建时，他们的主目录会被创建，并被填充一组默认文件。这组默认文件是从 `/etc/skeleton` 复制的，该目录包含了新主目录的骨架结构。
 
-为了在每个新主目录中包含某个文件，只需创建该文件并将其放在 /etc/skeleton` 中，并与你希望在用户主目录中的名称相同。在你放置该文件之后添加的所有用户在账户创建时，都会在其主目录下找到该文件。
+为了在每个新主目录中包含某个文件，只需创建该文件并将其放在 `/etc/skeleton` 中，并与你希望在用户主目录中的名称相同。在你放置该文件之后添加的所有用户在账户创建时，都会在其主目录下找到该文件。
 
 # 删除用户
 
@@ -7907,7 +7410,7 @@ password: all authentication tokens updated successfully
 # /usr/sbin/userdel -r username
 ```
 
-这留下了另一个问题：如果用户在系统的其他地方拥有需要删除的文件怎么办？这可以通过删除用户后使用 `find` 命令来实现。在删除用户之前，请从 /etc/passwd 文件中记录用户的 ID，然后使用 `find` 命令：
+这留下了另一个问题：如果用户在系统的其他地方拥有需要删除的文件怎么办？这可以通过删除用户后使用 `find` 命令来实现。在删除用户之前，请从 `/etc/passwd` 文件中记录用户的 ID，然后使用 `find` 命令：
 
 ```
 # find -type f -uid 503 -print -exec rm {} \
@@ -7915,7 +7418,7 @@ password: all authentication tokens updated successfully
 
 让我们拆解一下这个命令的组件：
 
-- 正斜杠 (/) 表示命令应该从顶层搜索整个目录结构。
+- 正斜杠 `/` 表示命令应该从顶层搜索整个目录结构。
 - `-type f` 表示命令应该只查找文件。
 - `-uid 503` 表示只返回由 ID 为 503 的用户的文件。（此数字应替换为你要删除的用户的 ID。）
 - `-print` 表示在发现文件名时打印它们，以便你跟踪命令的进度。
@@ -7929,7 +7432,7 @@ password: all authentication tokens updated successfully
 
 在其他 Linux 发行版中，这些命令的行为可能与本节描述的不同，因此如果你使用的不是书中附带的 Red Hat Linux 7.1 副本，则应该检查文档。
 
-# 创建组
+## 创建组
 
 你可以使用 `groupadd` 命令向系统添加新用户组（该命令在某些发行版中被称为 `addgroup`）。要创建一个组，只需将组名作为参数提供：
 
@@ -7937,7 +7440,7 @@ password: all authentication tokens updated successfully
 # /usr/sbin/groupadd groupname
 ```
 
-根据 Red Hat Linux 7.1 中 `groupadd` 手页的以下规则，组将被创建并分配一个新的用户数字：“默认使用大于 500 且大于其他所有组的最小 ID 值。”其他几个 Linux 发行版默认会将新用户添加到 users 组 (100)。
+根据 Red Hat Linux 7.1 中 `groupadd` 手页的以下规则，组将被创建并分配一个新的用户数字：“默认使用大于 500 且大于其他所有组的最小 ID 值。”其他几个 Linux 发行版默认会将新用户添加到 `users` 组 `100`。
 
 如果你想指定组号，只需使用 `-g` 标志来指示数字：
 
@@ -7945,16 +7448,17 @@ password: all authentication tokens updated successfully
 # groupadd -g 503 groupname
 ```
 
-这应该会在 /etc/group 中产生一个类似所示的条目：
-groupname :: 503:
+这应该会在 `/etc/group` 中产生一个类似所示的条目：
+
+`groupname :: 503:`
 
 此条目显示了一个具有指定名称和组 ID 的空组。
 
-> 如果你不记得想要哪个组了，现有的组 ID 存储在 /etc/group 文件中。
+> 如果你不记得想要哪个组了，现有的组 ID 存储在 `/etc/group` 文件中。
 
-# 将用户添加到组
+## 将用户添加到组
 
-遗憾的是，没有标准的程序可以方便地将用户添加到组中。为了实现这一点，最简单的方法是直接编辑 /etc/group 文件。该文件中的每行都代表一个组的定义，格式如下：
+遗憾的是，没有标准的程序可以方便地将用户添加到组中。为了实现这一点，最简单的方法是直接编辑 `/etc/group` 文件。该文件中的每行都代表一个组的定义，格式如下：
 
 ```
 groupname::password:groupid:userlist
@@ -7965,15 +7469,15 @@ groupname::password:groupid:userlist
 - `groupname` 条目是组的名称。
 - `password` 条目代表组的密码；密码通常不应用于组，因此此条目通常为空。
 - `groupid` 是组的数字 ID，且该 ID 对于该组应该是唯一的。
-- `userlist` 条目是属于该组的用户的逗号分隔列表。例如，如果 user1、user2 和 user3 都属于组 ID 为 505 的组 group1，则该组的条目看起来如下：
+- `userlist` 条目是属于该组的用户的逗号分隔列表。例如，如果 `user1`、`user2` 和 `user3` 都属于组 ID 为 505 的组 `group1`，则该组的条目看起来如下：
 
 ```
 group1::505:user1,user2,user3
 ```
 
-如果你想将用户添加到已有的组，只需使用你喜欢的文本编辑器编辑 /etc/group 文件，并将用户名添加到用户列表的末尾，用逗号分隔每个用户名。
+如果你想将用户添加到已有的组，只需使用你喜欢的文本编辑器编辑 `/etc/group` 文件，并将用户名添加到用户列表的末尾，用逗号分隔每个用户名。
 
-# 删除组
+## 删除组
 
 通过 `groupdel` 命令实现删除组。这个命令非常简单；没有可用的标志或选项。只需将组名作为参数提供：
 
@@ -7994,18 +7498,18 @@ group1::505:user1,user2,user3
 
 对于许多用户（相对于系统管理员）来说，一个领域是启动序列，即所有消息在屏幕上闪烁。启动消息保存在系统日志中。
 
-# 启动期间发生了什么
+## 启动期间发生了什么
 
 启动周期比启动时消息显示的要简单得多。基本上，启动过程有两个阶段：
 
 - 启动内核。在此阶段，内核加载到内存并在初始化每个设备驱动时打印消息。
-- 执行 init 程序。在内核完成加载和初始化设备后，运行 init 程序。Init 负责启动所有系统守护进程和其他启动时指定的程序。
+- 执行 `init` 程序。在内核完成加载和初始化设备后，运行 `init` 程序。`Init` 负责启动所有系统守护进程和其他启动时指定的程序。
 
-# init 程序
+## init 程序
 
-本节将详细查看 init 程序，因为你可以在这里自定义启动周期期间加载的程序。init 的工作是启动新进程并在它们退出时重启它们。一个完美的例子是提供 Linux 虚拟登录控制台的进程集。在大多数系统中，启动时初始化六个。当你退出控制窗口时，该进程结束，init 会启动一个新的以保持六个控制窗口可用。
+本节将详细查看 `init` 程序，因为你可以在这里自定义启动周期期间加载的程序。`init` 的工作是启动新进程并在它们退出时重启它们。一个完美的例子是提供 Linux 虚拟登录控制台的进程集。在大多数系统中，启动时初始化六个。当你退出控制窗口时，该进程结束，`init` 会启动一个新的以保持六个控制窗口可用。
 
-治理 init 程序运行的规则存储在 /etc/initab 文件中。Red Hat Linux 7.1 的默认 /etc/initab 如下所示：
+治理 `init` 程序运行的规则存储在 `/etc/initab` 文件中。Red Hat Linux 7.1 的默认 `/etc/initab` 如下所示：
 
 ```
 #
@@ -8060,6 +7564,8 @@ pf::powerfail:/sbin/shutdown -f -h +2 "Power Failure; System Shutting Down"
 ```
 
 如果在关机启动前恢复了电源，则取消它。
+
+```bash
 pr:12345:powerokwait:/sbin/shutdown -c "Power Restored; Shutdown Cancelled"
 ```
 
@@ -8081,7 +7587,7 @@ x:5:respawn:/usr/bin/X11/xdm -nodemon
 
 虽然学习如何编写自己的 inittab 文件并不重要，但理解这个文件告诉了我们什么是有用的。
 
-Linux 有一套运行级别（run levels）系统。运行级别是一个标识系统当前状态的数字，以及 init 在系统状态下应该运行并保持运行的进程。在 inittab 文件中，第一条目 `id:3:initdefault` 指定了启动时加载的默认运行级别。在之前的示例中，它是多用户控制台模式，运行级别 3。然后，inittab 文件中的每个条目，运行级别适用于该条目的第二个字段（每个字段之间用冒号分隔）。因此，对于运行级别 3，以下行是相关的：
+Linux 有一套运行级别（run levels）系统。运行级别是一个标识系统当前状态的数字，以及 `init` 在系统状态下应该运行并保持运行的进程。在 `inittab` 文件中，第一条目 `id:3:initdefault` 指定了启动时加载的默认运行级别。在之前的示例中，它是多用户控制台模式，运行级别 3。然后，`inittab` 文件中的每个条目，运行级别适用于该条目的第二个字段（每个字段之间用冒号分隔）。因此，对于运行级别 3，以下行是相关的：
 
 ```
 3:wait:/etc/rc.d/rc 3
@@ -8093,43 +7599,36 @@ Linux 有一套运行级别（run levels）系统。运行级别是一个标识�
 6:2345:respawn:/sbin/getty tty6
 ```
 
-第一行运行启动脚本 `/etc/rc.d/rc 3`。这将运行包含 `/etc/rc.3.d` 目录中的所有脚本。这些脚本代表了系统初始化时需要启动的程序，例如 sendmail、PCMCIA 服务、打印机守护进程和 cron。通常，你不会想要编辑或更改这些脚本；它们是系统默认值。最后六行设置了 Linux 中的六个虚拟控制台。
+第一行运行启动脚本 `/etc/rc.d/rc 3`。这将运行包含 `/etc/rc.3.d` 目录中的所有脚本。这些脚本代表了系统初始化时需要启动的程序，例如 `sendmail`、`PCMCIA` 服务、打印机守护进程和 `cron`。通常，你不会想要编辑或更改这些脚本；它们是系统默认值。最后六行设置了 Linux 中的六个虚拟控制台。
 
-## 注意
+### 注意
 
 运行级别及其脚本随 Linux 发行版的不同而异。多用户控制台模式通常与3 以外的数字关联，多用户控制台模式的目录也可能不同。
 
-重要的是，rc.3 目录中要执行的最后一个脚本将是 `S99local` 脚本。该脚本实际上是 `/etc/rc.d/rc.local` 文件的链接；在这里你可以任何你想在启动时运行的自定义程序。
+重要的是，`rc.3` 目录中要执行的最后一个脚本将是 `S99local` 脚本。该脚本实际上是 `/etc/rc.d/rc.local` 文件的链接；在这里你可以任何你想在启动时运行的自定义程序。
 
 在其他 Linux 系统上，`/etc/inittab` 的结构可能不同，`/etc/rc.d` 目录的组织也是如此。然而，在所有系统中，`/etc/rc.d/rc.local` 文件代表了你可以在其中添加任何启动命令的文件。
 
-# 使用 rc.local 文件
+## 使用 rc.local 文件
 
-默认的 Red Hat Linux 7.1 rc.local 文件设置了登录提示，没有进行其他操作：
+默认的 Red Hat Linux 7.1 `rc.local` 文件设置了登录提示，没有进行其他操作：
 
 ```bash
 #!/bin/sh
-
 # 此脚本将在所有其他 init 脚本之后执行
 # 如果你不想执行完整的 Sys V 风格初始化工作，可以在这里放入自己的初始化内容。
-
 if [ -f /etc/redhat-release ]; then
     R=$(cat /etc/redhat-release)
-
     arch=$(uname -m)
     a="$arch"
     case "$a" in
         *) a="ansi";
         i86) a="ansi";
     esac
-
 NUMPROC=$(egrep "^cpu[0-9]+" /proc/stat)
 if [ "$NUMPROC" -gt "1" ]; then
     # (OCR 页面 444 包含重复循环；此处保留了逻辑内容。)
 ```
-
-
-
 
 每个条目的格式如下：
 
@@ -8147,10 +7646,10 @@ if [ "$NUMPROC" -gt "1" ]; then
 
 - 可以使用数字范围。例如，字段中的 1-3 表示在凌晨 1:00、2:00 和 3:00 调度命令；同样，星期几字段中的 2–4 表示在周二、周三和周四调度作业。
 - 范围可以以大于 1 的增量进行步进。例如，若要从午夜到午夜每隔小时运行一次命令，请使用范围 0–23 并结合步长 2，用斜杠隔开：0–23/2。
-- 星号 (*) 表示该字段从最小值到最大值的整个范围。因此，在几号字段中使用 `*` 等同于 0–31，在星期几字段中使用 `*` 等同于 0–7。
+- 星号 `*` 表示该字段从最小值到最大值的整个范围。因此，在几号字段中使用 `*` 等同于 0–31，在星期几字段中使用 `*` 等同于 0–7。
 - 月份名或日名的前三个字母可以替换相应字段中的数字。
 
-## 示例时间与日期
+### 示例时间与日期
 
 让我们来看一些时间–日期字段的示例：
 
@@ -8162,11 +7661,11 @@ if [ "$NUMPROC" -gt "1" ]; then
 | 0 12 * 1 mon | 该字段表示作业应在每年 1 月每个周一的中午运行。 |
 | 0 12 2 fri * | 该字段表示作业应在每年 2 月 2 日的中午运行。 |
 
-## 命令字段
+### 命令字段
 
 时间–日期字段与命令字段之间用一个或多个空格分隔，并持续到行尾。命令由 `/bin/sh` 终端处理。
 
-例如，crontab 条目：
+例如，`crontab` 条目：
 
 ```
 0 1 * * * /usr/local/bin/backup
@@ -8174,15 +7673,17 @@ if [ "$NUMPROC" -gt "1" ]; then
 
 会导致程序 `/usr/local/bin/backup` 每天凌晨 1:00 执行。
 
-有时命令（如 `mail` 命令）需要通过标准输入输入信息。这是通过百分号 (`%`) 实现的。第一个百分号标记标准输入的开始，每个随后的百分号都作为标准输入中的一个新换行符。
+有时命令（如 `mail` 命令）需要通过标准输入输入信息。这是通过百分号 `%` 实现的。第一个百分号标记标准输入的开始，每个随后的百分号都作为标准输入中的一个新换行符。
 
-因此，crontab 条目
+因此，`crontab` 条目
 
 ```
 30 14 * * fri /bin/mail -s "TGIF" armand@landegg.edu%%Thank God It's Friday%%Me.
 ```
 
-将在每个周五下午 2:30 向 armand@landegg.edu 发送以下电子邮件：
+
+
+将在每个周五下午 2:30 向 `armand@landegg.edu` 发送以下电子邮件：
 
 Thank God It's Friday
 
@@ -8192,12 +7693,13 @@ Me.
 
 你可以使用 `crontab -command` 来编辑你的 crontab 文件。有两种方法：创建一个包含 crontab 字段中所需所有条目的文件并用 `crontab` 命令加载它；或者直接使用 `crontab -command` 编辑 crontab 文件。
 
-## 从文件加载条目
+### 从文件加载条目
 
 为了从文件中加载条目，首先需要创建一个（使用你喜欢的文本编辑器）包含你希望出现的所有条目的文件。该文件可能包含如下条目：
 
 ```
 0 1 * * * /usr/local/bin/backup
+
 30 14 * * fri /bin/mail -s "TGIF" armand@landegg.edu%%Thank God It's Friday%%Me.
 ```
 
@@ -8207,17 +7709,17 @@ Me.
 crontab cronjobs
 ```
 
-root 用户拥有特殊权限，允许他们编辑用户的 crontab 文件。使用 `-u` 标志，root 用户可以指定另一个用户的 crontab 文件，而不是 root 自己的。例如：
+`root` 用户拥有特殊权限，允许他们编辑用户的 crontab 文件。使用 `-u` 标志，`root` 用户可以指定另一个用户的 crontab 文件，而不是 `root` 自己的。例如：
 
 ```
 # crontab -u username cronjobs
 ```
 
-## 直接编辑 crontab 文件
+### 直接编辑 crontab 文件
 
 与其创建一个文件并加载到 crontab 文件，`crontab` 命令提供了 `-e` 标志，允许用户直接编辑 crontab 文件。
 
-默认情况下，`crontab -e` 尝试使用 vi 编辑器编辑 crontab 文件。vi 编辑器是资深 Unix 用户非常流行的但难以精的编辑器。如果你喜欢使用其他编辑器（如 `xedit`），你需要将 `EDITOR` 环境变量设置为该程序：
+默认情况下，`crontab -e` 尝试使用 `vi` 编辑器编辑 crontab 文件。`vi` 编辑器是资深 Unix 用户非常流行的但难以精的编辑器。如果你喜欢使用其他编辑器（如 `xedit`），你需要将 `EDITOR` 环境变量设置为该程序：
 
 ```
 export EDITOR=xedit
@@ -8231,27 +7733,37 @@ crontab -e
 
 将使用指定的编辑器打开 crontab 文件，如图 17.1 所示。
 
-### 图 17.1：使用 xedit 编辑 crontab
+#### 图 17.1：使用 xedit 编辑 crontab
 
 ```
 xedit
+
 Quit Save /tmp/crontab.4245
+
 Use Control-S and Control-R to Search.
+
 File /tmp/crontab.4245 opened read - write.
+
 /tmp/crontab.4245 Read - Write L3
+
 0 1 * * * /usr/local/bin/backup
+
 30 14 * * fri /bin/mail -s "TIFG" armandlandegg.edu&Thank God It's FridayMe
 ```
 
-当你使用 `-u` 标志将文件加载到 crontab 文件时，root 用户可以直接编辑另一个用户的 crontab 文件：
+当你使用 `-u` 标志将文件加载到 crontab 文件时，`root` 用户可以直接编辑另一个用户的 crontab 文件：
 
+```
 $ crontab -u username -e
+```
 
 **查看 crontab 文件的内容** 为了查看 crontab 文件的内容，只需使用 `-l`：
 
+```
 $ crontab -l
+```
 
-## 移除 crontab 文件的内容
+### 移除 crontab 文件的内容
 
 要删除 crontab 文件中的所有条目，请使用 `-r` 标志：
 
@@ -8265,13 +7777,15 @@ Linux 的优点之一是它们提供标准的日志。例如，来自 `/var/log/
 
 ```
 May 13 10:32:58 laptop kernel: eth0: link up speed 10Mbps
+
 May 13 10:33:00 laptop kernel: eth0: link up
+
 May 13 10:33:01 laptop kernel: eth0: flipped to 10baseT
+
 May 13 10:33:04 laptop xinetd: Exiting...
+
 May 13 10:33:05 laptop xinetd: xinetd startup
 ```
-
-
 
 ```
 May 9 11:33:38 laptop71 kernel: smb_trans2_request: result=-104,
@@ -8280,110 +7794,124 @@ May 9 11:33:39 laptop71 kernel: smb_retry: successful, new pid=2190,
   generation=8
 ```
 
-你在这里具体学到了什么？网络程序通知你网络接口 eth0 已关闭并重启；在 10BaseT 类型的网络中，xinetd 在重启之前禁用了某些服务，并且有一个 PID 为 2190 的 smb (Samba) 文件传输。
+你在这里具体学到了什么？网络程序通知你网络接口 `eth0` 已关闭并重启；在 10BaseT 类型的网络中，`xinetd` 在重启之前禁用了某些服务，并且有一个 PID 为 2190 的 `smb` (Samba) 文件传输。
 
-# 什么会产生日志？
+### 什么会产生日志？
 
 在 Linux 系统中，区分不同类型的日志非常重要。基本上，日志分为两种：系统日志和应用程序日志。本节介绍系统日志，因为所有系统都拥有这些日志。特定应用程序日志取决于正在运行的应用程序以及这些应用程序是如何配置以生成日志的。
 
-在系统日志中，你可能会发现来自内核的消息和警告，其中包含了已加载模块的信息、来自 sendmail 守护进程的数据（它提供了系统中已处理消息的轨迹），以及关于身份验证（登录）尝试成功或失败的消息。
+在系统日志中，你可能会发现来自内核的消息和警告，其中包含了已加载模块的信息、来自 `sendmail` 守护进程的数据（它提供了系统中已处理消息的轨迹），以及关于身份验证（登录）尝试成功或失败的消息。
 
-系统日志是由在启动时加载的 syslog 守护进程生成的。该守护进程访问来自各种系统进程（如内核、邮件系统、配置为使用 syslog 的用户程序以及登录程序等身份验证程序）的八个级别的消息。
+系统日志是由在启动时加载的 `syslog` 守护进程生成的。该守护进程访问来自各种系统进程（如内核、邮件系统、配置为使用 `syslog` 的用户程序以及登录程序等身份验证程序）的八个级别的消息。
 
 这些消息按严重从低到高排序为：
 
-- debug（调试）
-- info（信息）
-- notice（通知）
-- warning（警告）
-- err（错误）
-- crit（严重）
-- alert（警报）
-- emerg（紧急）
+- `debug`（调试）
+- `info`（信息）
+- `notice`（通知）
+- `warning`（警告）
+- `err`（错误）
+- `crit`（严重）
+- `alert`（警报）
+- `emerg`（紧急）
 
-这些级别用于 /etc/syslog.conf 文件，以告知 syslogd 在何处为不同类型的信息创建日志/etc/syslog.conf 文件包含多个条目，每行一个，包含两个由一个或多个空格分隔的字段：设施级（facility-level）列表和日志文件位置。
+这些级别用于 `/etc/syslog.conf` 文件，以告知 `syslogd` 在何处为不同类型的信息创建日志。`/etc/syslog.conf` 文件包含多个条目，每行一个，包含两个由一个或多个空格分隔的字段：设施级（facility-level）列表和日志文件位置。
 
-设施级是用分号分隔的设施对列表。设施通过设施名称，如 mail（邮件）、kern（用于内核）、user（用户程序）和 auth（用于身份验证程序）来指示。示例设施级对包括以下内容：
+设施级是用分号分隔的设施对列表。设施通过设施名称，如 `mail`（邮件）、`kern`（用于内核）、`user`（用户程序）和 `auth`（用于身份验证程序）来指示。示例设施级对包括以下内容：
 
-- * mail.err: 由邮件守护进程生成的错误
-- *.info: 所有信息消息
-- kern.emerg: 来自内核的紧急消息
+- `* mail.err`: 由邮件守护进程生成的错误
+- `*.info`: 所有信息消息
+- `kern.emerg`: 来自内核的紧急消息
 
-让我们看看 Red Hat Linux 7.1 自带的默认 /etc/syslog.conf 文件，以了解它的工作原理：
+让我们看看 Red Hat Linux 7.1 自带的默认 `/etc/syslog.conf` 文件，以了解它的工作原理：
 
 ```
 # 将所有内核消息记录到控制台。
+
 # 记录太多内容会让屏幕变得混乱。
+
 #kern.* /dev/console
 ```
 
 ```
 # 记录 info 或更高级别的任何内容（邮件除外）。
- 不要记录私有的身份验证消息！
+
+# 不要记录私有的身份验证消息！
+
 *.info;mail.none;news.none;authpriv.none /var/log/messages
+
 # authpriv 文件有访问限制。
+
 authpriv.* /var/log/secure
 ```
 
 ```
 # 将所有邮件消息记录在某处。
+
 mail.* /var/log/mailog
 ```
 
 ```
 # 记录 cron 任务
+
 cron.* /var/log/cron
 ```
 
 ```
 # 所有人都会接收紧急消息，并将其记录在另一台
+
 #机器上。
+
 *.emerg                                               *
 ```
 
 ```
 # 将 err 及更高级别的邮件和新闻错误保存到
+
 # 特殊文件中。
+
 uuccp.news.crit /var/log/spooler
 ```
 
 ```
 # 将启动消息也保存到 boot.log
+
 local7.* /var/log/boot.log
 ```
 
 第一行重要内容是：
 
-*.info;mail.none;news.none;authpriv.none /var/log/messages
-这会将除了邮件、新闻和身份验证之外的所有设施（因此是 mail.none;news.none;authpriv.none）的信息消息记录到 /log/messages 文件。其后是
+`*.info;mail.none;news.none;authpriv.none /var/log/messages`
+这会将除了邮件、新闻和身份验证之外的所有设施（因此是 `mail.none;news.none;authpriv.none`）的信息消息记录到 `/log/messages` 文件。其后是
 
-authpriv.* /var/log/secure
-它将所有身份验证消息放在 /var/log/secure 中。
+`authpriv.* /var/log/secure`
+它将所有身份验证消息放在 `/var/log/secure` 中。
 
-接下来你会发现以下这一行，它指定所有邮件日志消息应该放在 /var/log/mailog 中：
-mail.* /var/log/mailog
+接下来你会发现以下这一行，它指定所有邮件日志消息应该放在 `/var/log/mailog` 中：
+`mail.* /var/log/mailog`
 几行之后是
 
-uccp,news.crit /var/log/spool
-它将包含邮件和新闻相关消息的日志记录到 /var/log/spool。
+`uccp,news.crit /var/log/spool`
+它将包含邮件和新闻相关消息的日志记录到 `/var/log/spool`。
 你可能会注意到，日志消息被分到了不同的文件中。这种做法的目标是保持日志大小在可控范围内，并保持每个日志中的信息相关，以便于跟踪日志消息。如果每个设施的每个级别的消息都进入单个日志文件，那么由于文件中的信息量到无法管理，这些信息将毫无用处。
 
-如果你想通过编辑 /etc/syslog.conf 来更改你的日志策略，可以通过编辑 syslog.conf 文件，然后使用命令重新加载配置：
+如果你想通过编辑 `/etc/syslog.conf` 来更改你的日志策略，可以通过编辑 `syslog.conf` 文件，然后使用命令重新加载配置：
 
 ```
 # kill -HUP `cat /var/run/syslog.pid`
 ```
 
-注意反引号的使用。这些表示要执行反引号内的命令，并将产生的标准输出作为 kill -HUP 命令的参数。kill 命令的 -HUP 标志表示该进程应该重新读取其配置但保持运行。
+注意反引号的使用。这些表示要执行反引号内的命令，并将产生的标准输出作为 `kill -HUP` 命令的参数。`kill` 命令的 `-HUP` 标志表示该进程应该重新读取其配置但保持运行。
 
-# 日志轮转
+## 日志轮转
 
 为了让日志保持有用，需要定期对它们进行轮转（rotate）。这允许日志的大小保持在可控范围内，并清除不再具有特殊价值的旧信息。此外，由于日志的大小会持续增长，轮转可以释放它们占用的磁盘空间。
 
-轮转日志简单的策略是删除它们并重启 syslogd。当 syslogd 记录日志时，它会创建新的日志。这种策略对于单用户系统是有效的，但在多用户服务器上，历史信息可能具有价值。在这种情况下，策略可能会有不同。例如，通过删除文件并重启 syslogd：
+轮转日志简单的策略是删除它们并重启 `syslogd`。当 `syslogd` 记录日志时，它会创建新的日志。这种策略对于单用户系统是有效的，但在多用户服务器上，历史信息可能具有价值。在这种情况下，策略可能会有不同。例如，通过删除文件并重启 `syslogd`：
 
 ```
 # rm /var/log/messages
+
 # kill -HUP /var/run/syslog.pid
 ```
 
@@ -8391,6 +7919,7 @@ uccp,news.crit /var/log/spool
 
 ```
 # mv /var/log/messages.1 /var/log/messages.2
+
 # mv /var/log/messages /var/log/messages.1
 ```
 
@@ -8398,40 +7927,43 @@ uccp,news.crit /var/log/spool
 
 ```sh
 #!/bin/sh
+
 mv /var/log/messages /var/log/messages.1
+
 mv /var/log/secure /var/log/secure.1
+
 mv /var/log/maillog /var/log/maillog.1
+
 mv /var/log/spooler /var/log/spooler.1
+
 kill -HUP /var/run/syslog.pid
 ```
 
-此脚本文件需要使用文本编辑器在逻辑位置（如 /usr/local/bin/newlogs）创建，然后变为可执行文件：
+此脚本文件需要使用文本编辑器在逻辑位置（如 `/usr/local/bin/newlogs`）创建，然后变为可执行文件：
 
 ```
 # chmod 755 /usr/local/bin/newlogs
 ```
 
-接下来，你需要编辑 root 用户的 crontab 文件（使用本章之前介绍的方法），并添加相应的条目。例如，为了在周日凌晨 12:01 运行该脚本，将使用
+接下来，你需要编辑 `root` 用户的 `crontab` 文件（使用本章之前介绍的方法），并添加相应的条目。例如，为了在周日凌晨 12:01 运行该脚本，将使用
 
 ```
 12 0 * * sun /usr/local/bin/newlogs
 ```
 
-Red Hat logrotate 7.1 根据 /etc/logrotate.conf 文件自动执行轮转。该文件的前两个命令每周轮转日志，保留四周的备份。例如，你可能有五周的系统日志：/var/log/messages 以及 /var/log/messages.1 到 .4。
+
+
+Red Hat logrotate 7.1 根据 `/etc/logrotate.conf` 文件自动执行轮转。该文件的前两个命令每周轮转日志，保留四周的备份。例如，你可能有五周的系统日志：`/var/log/messages` 以及 `/var/log/messages.1` 到 `.4`。
 
 学习了有关用户、调度和日志的一些实用系统管理任务。第 18 章“使用外设”描述了如何配置和使用两种最流行的 PC 外设：打印机和调制调器。
 
 你将学习如何配置 PostScript 和 PCL 打印机，并将发现 Linux/Unix 打印池系统的机制。
 
-第 18 章还讨论了调制调器配置，你将有机会使用 minicom 程序来测试和使用你的调制调器。
+第 18 章还讨论了调制调器配置，你将有机会使用 `minicom` 程序来测试和使用你的调制调器。
 
+# 第十八章 使用外设设备
 
-
-
-
-## 第十八章
-
-## 使用外设设备
+## 目录
 
 - Linux 与即插即用
 - 打印机
@@ -8439,7 +7971,7 @@ Red Hat logrotate 7.1 根据 /etc/logrotate.conf 文件自动执行轮转。该�
 - 其他“调制解器”
 - USB 鼠标/键盘
 
-本章将解释如何配置两种常见的外设设备：打印机和调制解器。你将了解 Linux 端口的工作原理，查看控制 Linux 打印系统的文件，并熟悉 minicom —— 这是一种标准的 Linux 终端模拟器，你可以用它来访问调制解器。你还将检查配置 USB 鼠标和键盘所需的不同系统。但在理解 Linux 设备配置如何工作之前，你首先需要对 Linux 如何配合即插即用有一个基本的了解。
+本章将解释如何配置两种常见的外设设备：打印机和调制解器。你将了解 Linux 端口的工作原理，查看控制 Linux 打印系统的文件，并熟悉 `minicom` —— 这是一种标准的 Linux 终端模拟器，你可以用它来访问调制解器。你还将检查配置 USB 鼠标和键盘所需的不同系统。但在理解 Linux 设备配置如何工作之前，你首先需要对 Linux 如何配合即插即用有一个基本的了解。
 
 ## Linux 与即插即用
 
@@ -8449,19 +7981,17 @@ Linux 并不是真正的即插即用（PnP）操作系统。然而，它拥有�
 
 大多数目前的 BIOS 和设备都是即插即用的。假设你有一个 PnP 主板，BIOS 会为驱动器、键盘和鼠标等设备设置通道、端口和地址。这些配置在操作系统加载之前就已经完成了。Linux 可以使用这些预设通道来检测你的硬件，成功程度不一。Linux 检测的成功在某种程度上取决于相关设备类型。
 
-## 通道、地址与端口
+### 通道、地址与端口
 
 即插即用设置了设备与基本组件（如 CPU 和 RAM）之间的通信。计算机设备通过各种类型的通道、地址或端口进行通信：
 
 - IRQ 设备可以使用 IRQ（或中断请求）端口来从你的 CPU 获取服务。
-
 - I/O 空间在 RAM 中被预留，用于计算机不同部分之间的信息交换。该空间由 I/O（或输入/输出）地址指定。
-
 - DMA 某些设备可以通过 DMA（或直接存储器访问）通道跳过你的 CPU。
 
 不同类型的设备根据它们连接到计算机的方式，需要不同类型的通道、地址或端口。如果你发现如调制解器或声卡等设备出现问题，Linux 可能会在错误的 IRQ 端口、I/O 地址或 DMA 通道上寻找设备。
 
-## ISA
+### ISA
 
 安装在旧电脑内部的许多外设设备是根据某种工业标准架构（ISA）构建的。
 
@@ -8469,37 +7999,37 @@ Linux 并不是真正的即插即用（PnP）操作系统。然而，它拥有�
 
 这是网卡中一个相当常见的问题。网卡的手动配置将在第 28 章“为以太网配置 Red Hat Linux 7.1”中进行详细讨论。
 
-## PCI
+### PCI
 
 外设组件互连（PCI）总线的开发部分是为了克服 ISA 设备的局限性。PCI 总线更快，且 PCI 设备可以共享一些 IRQ 通道。某些 PnP BIOS 菜单允许你直接将 IRQ、I/O 和 DMA 通道分配给单个 PCI 设备。
 
 > 加速显卡是一种特殊的 PCI 卡，优化了视频卡与 CPU 之间的图形处理。
 
-## 外部
+### 外部
 
 外部设备通常更容易配置，因为它们没有独立的通道。调制解器或打印机等外部设备通常连接到特定的物理端口，这些端口通常是串口或并行连接，并且已经分配了通道。连接的设备使用相同的通道。
 
 外部设备中这一原则的例外是 USB。
 
-## USB
+### USB
 
 通用串行总（USB）不仅仅是你计算机上的一个外部连接。每个 USB 根分类器理论上可以处理高达 127 个不同的外设。USB 支持即插即用和“热插拔”，即在计算机运行时添加和删除设备的能力。操作系统应该自动识别新配置。
 
-遗憾的是，Linux 目前并不支持所有的 USB 设备。虽然 Red Linux 7.1 支持大量的 USB 设备，但它不支持 USB 网卡。它与无供电 USB 集线器配合得不好，也不支持从 USB 软盘启动。但有很多开发者不断努力为 Linux 加入支持。欲了解最新信息，请查阅 http://www.linux-usb.org 的 Linux 网站。
+遗憾的是，Linux 目前并不支持所有的 USB 设备。虽然 Red Linux 7.1 支持大量的 USB 设备，但它不支持 USB 网卡。它与无供电 USB 集线器配合得不好，也不支持从 USB 软盘启动。但有很多开发者不断努力为 Linux 加入支持。欲了解最新信息，请查阅 `http://www.linux-usb.org` 的 Linux 网站。
 
-从 Red Hat Linux 7.1 开始，支持热插拔。但如果所需的驱动程序不在 `/lib/modules/2.4.2-2` 数据库中，Linux 将无法识别你插入的内容或提供帮助。有关更多信息，请参阅 http://linux-hotplug.sourceforge.net 的 Linux Hotplug 网站。
+从 Red Hat Linux 7.1 开始，支持热插拔。但如果所需的驱动程序不在 `/lib/modules/2.4.2-2` 数据库中，Linux 将无法识别你插入的内容或提供帮助。有关更多信息，请参阅 `http://linux-hotplug.sourceforge.net` 的 Linux Hotplug 网站。
 
-在本文期间，Linux USB 文档并不完整。正如 Linux USB 子系统指南第一页（http://www.linux-usb.org/USB-guide/book1.html）所述，“某些[当前的 Linux USB 文档]完全是猜测，尤其是[对于]那些知名度较低且更昂贵的设备。”
+在本文期间，Linux USB 文档并不完整。正如 Linux USB 子系统指南第一页（`http://www.linux-usb.org/USB-guide/book1.html`）所述，“某些[当前的 Linux USB 文档]完全是猜测，尤其是[对于]那些知名度较低且更昂贵的设备。”
 
 ## 打印机
 
-在第 15 章“使用 printconf 和其他系统配置工具”中，你学习了如何使用 printconf 实用在 Red Hat Linux 7.1 中轻松地配置打印机。还有另外两种选择。本章将讨论手动配置或借助 Apsilter 系统配置打印机的基础知识。此过程的一个良好参考资料是位于 http://www.linuxdoc.org/HOWTO/Printing-HOWTO/index.html 的 Printing HOWTO。
+在第 15 章“使用 printconf 和其他系统配置工具”中，你学习了如何使用 `printconf` 实用在 Red Hat Linux 7.1 中轻松地配置打印机。还有另外两种选择。本章将讨论手动配置或借助 Apsilter 系统配置打印机的基础知识。此过程的一个良好参考资料是位于 `http://www.linuxdoc.org/HOWTO/Printing-HOWTO/index.html` 的 Printing HOWTO。
 
-## 使用哪种打印机
+### 使用哪种打印机
 
 在讨论 Linux 中的打印机配置之前，让我们快速看看哪些打印机适用于 Linux，以及如何使用它们。唯一的例外是某些低端打印机不支持 PostScript。大多数打印机产生 PostScript，因此你的最佳选择是 PostScript 打印机。大多数打印机支持打印机语言（PCL）。要查看你的打印机是否支持，请查看 Ghostscript。表 18.1 包含了支持 Ghostscript 的打印机列表。
 
-### 表 18.1：支持 Ghostscript 的打印机
+#### 表 18.1：支持 Ghostscript 的打印机
 
 | | |
 |---|---|
@@ -8518,7 +8048,7 @@ Linux 并不是真正的即插即用（PnP）操作系统。然而，它拥有�
 | Canon BJC210 | HP Deskjet 500 |
 | Canon MultiPASS C2500 彩色打印机/传真机 | HP Deskjet 510 |
 
-### 表 18.1：支持 Ghostscript 的打印机（续）
+#### 表 18.1：支持 Ghostscript 的打印机（续）
 
 | | |
 |---|---|
@@ -8538,29 +8068,31 @@ Linux 并不是真正的即插即用（PnP）操作系统。然而，它拥有�
 | HP Deskjet 560C | Epson Stylus 600 |
 | HP Deskjet 600 | Epson Stylus 800 |
 
-并不是所有的打印机都适用于 Linux。少数打印机设置为仅通过 Microsoft Windows 读取信息。某些 USB 打印机尚不支持。Printer HOWTO 同样位于 http://www.linuxprinting.org/）包含了处理这些棘手打印机的技巧。该网站还包含一个更完整的适用于 Linux 的打印机列表。
+并不是所有的打印机都适用于 Linux。少数打印机设置为仅通过 Microsoft Windows 读取信息。某些 USB 打印机尚不支持。Printer HOWTO 同样位于 `http://www.linuxprinting.org/`）包含了处理这些棘手打印机的技巧。该网站还包含一个更完整的适用于 Linux 的打印机列表。
 
-## printcap 文件
+### printcap 文件
 
-printcap 文件位于 /etc 目录，是 Linux 打印机配置的核心。该文件包含了每个你可用的打印机的条目。你的
+`printcap` 文件位于 `/etc` 目录，是 Linux 打印机配置的核心。该文件包含了每个你可用的打印机的条目。你的
 
-
-Linux 系统。当 Linux 打印机守护进程 lpd 加载时（通常在启动时），它会读取此文件以了解它将要管理的打印机。
+Linux 系统。当 Linux 打印机守护进程 `lpd` 加载时（通常在启动时），它会读取此文件以了解它将要管理的打印机。
 
 `printcap` 文件中的基本条目如下：
 
 ```
 # LOCAL
+
 djet5001p|dj|deskjet:\n:sd=/var/spool/lpd/dj:\n:mx#0:\n:lp=/dev/lp0:\n:sh
 ```
 
 每个条目包含许多由冒号分隔的字段。如果条目需要跨越一行，反斜杠表示该条目在下一行继续。
 
-此示例显示了一个打印机具有三个可能的名称：djet5001p、dj 和 deskjet。这台打印机在 `/var/spool/lpd/dj` 处有一个打印目录，lpd 可以在那里存储等待的临时文件。打印机连接到第一个并行端口 (`/dev/lp0`)，并且不打印标题页 (sh)。这看起来可能非常晦涩，在某种程度上确实如此。`printcap` 文件可以包含几十个不同的字段。这些字段在 `printcap` 手册中有列出：
+此示例显示了一个打印机具有三个可能的名称：`djet5001p`、`dj` 和 `deskjet`。这台打印机在 `/var/spool/lpd/dj` 处有一个打印目录，`lpd` 可以在那里存储等待的临时文件。打印机连接到第一个并行端口 (`/dev/lp0`)，并且不打印标题页 (`sh`)。这看起来可能非常晦涩，在某种程度上确实如此。`printcap` 文件可以包含几十个不同的字段。这些字段在 `printcap` 手册中有列出：
 
+```
 # man printcap
+```
 
-如果让打印机工作仅需这些信息，那么配置你的打印机就不会那么糟糕了。但 lpd 本质上是愚笨的。对于像上面那样的条目，给 lpd 的任何数据都会直接发送到打印机。打印机无法理解提供的数据，你将得到乱码或没有任何返回。请考虑以下可能的问题：
+如果让打印机工作仅需这些信息，那么配置你的打印机就不会那么糟糕了。但 `lpd` 本质上是愚笨的。对于像上面那样的条目，给 `lpd` 的任何数据都会直接发送到打印机。打印机无法理解提供的数据，你将得到乱码或没有任何返回。请考虑以下可能的问题：
 
 - 发送到 PostScript 打印机的 ASCII 文本文件无法打印。
 - 发送到 PCL 打印机的 ASCII 文本文件，除非调整文件中的控制代码，否则无法以正确的格式打印。
@@ -8568,25 +8100,31 @@ djet5001p|dj|deskjet:\n:sd=/var/spool/lpd/dj:\n:mx#0:\n:lp=/dev/lp0:\n:sh
 
 这些只是在使用像上述列出的简易 `printcap` 条目进行打印时遇到的一些问题。它们可以通过使用打印过滤器（print filters）来解决。
 
-# 打印过滤器 (Print Filters)
+### 打印过滤器 (Print Filters)
 
 打印过滤器是在数据发送到打印机之前进行数据的特殊程序或脚本。例如，如果你有一台 PCL 打印机，你可以编写一个脚本在发送到打印机之前处理 ASCII 文本，使其以正确的格式显示，并编写另一个脚本通过 Ghostscript 发送 PostScript 数据以生成正确的 PCL 输出。但如果你手动执行操作，你需要在 `printcap` 文件中设置多个打印机条目，每个计划使用的过滤器类型对应一个。
 
 ```
 # 带有 ASCII 过滤器的 PCL 打印机
+
 ascii-pcl:\n:sd=/var/spool/lpd/ascii-pcl:\n:mx#0:
+
 :lp=/dev/lp0:\n:sh:\n:if=/var/spool/lpd/ascii-pcl/filter
 ```
 
 ```
 # 带有 PostScript 过滤器的 PCL 打印机
+
 ps-pcl:\n:sd=/var/spool/lpd/ps-pcl:\n:mx#0:
+
 :lp=/dev/lp0:\n:sh:\n:if=/var/spool/lpd/ps-pcl/filter
 ```
 
 ```
 # 无过滤器的 PCL 打印机
+
 pcl:\n:sd=/var/spool/lpd/pcl:\n:mx#0:
+
 :lp=/dev/lp0:\n:sh:\
 ```
 
@@ -8594,49 +8132,51 @@ pcl:\n:sd=/var/spool/lpd/pcl:\n:mx#0:
 
 这些困难可以通过魔法过滤器（magic filters）来解决。魔法过滤器可以从互联网下载，它们处理大多数支持打印机的所有 `printcap` 配置，提供可以判断发送到打印机数据类型的过滤器，并在此基础上执行正确的过滤。
 
-# APS 打印过滤器系统 (The APS Print Filter System)
+### APS 打印过滤器系统 (The APS Print Filter System)
 
-领先的魔法过滤器包是 APS 打印过滤器系统。你可以从 http://www.apsfilter.org 下载最新的 APS Print Filter。在编写此时，APS Print Filter 的发布版本为 6.1.1。本章你应该下载的文件是 `apsfilter-6.1.1.tar.gz`。这里讨论的操作可能与你其他版本所需的完全相同。如果有疑问，请在 Linux 系统上下载并解压此文件后阅读 `README`。
+领先的魔法过滤器包是 APS 打印过滤器系统。你可以从 `http://www.apsfilter.org` 下载最新的 APS Print Filter。在编写此时，APS Print Filter 的发布版本为 6.1.1。本章你应该下载的文件是 `apsfilter-6.1.1.tar.gz`。这里讨论的操作可能与你其他版本所需的完全相同。如果有疑问，请在 Linux 系统上下载并解压此文件后阅读 `README`。
 
 要安装软件，请使用 `tar` 命令解压并提取存档到逻辑位置，例如 `/usr/local`。你需要创建一个目录来存储解压后的文件。以下命令假设你已经将原始存档下载到 `/tmp` 中：
 
 你需要以 root 身份执行这些步骤。
 
 ```
-# /usr/local
-# tar xzf /tmp/apsfilter6.1.1.tar.gz
-# cd apsfilter
+/usr/local
+tar xzf /tmp/apsfilter6.1.1.tar.gz
+cd apsfilter
 ```
 
 要配置 APS 与你的打印机协同工作，下一步是运行软件包随附的 `SETUP` 脚本：
 
 ```
-# ./SETUP
+./SETUP
 ```
 
 APS 打印过滤器与 Ghostscript 包配合工作。如果你没有足够新的 Ghostscript 版本，`SETUP` 程序会提示你。尽管有警告，APS Print Filter 6.1.1 确实与 Red Hat Linux 7 带的 Ghostscript (5.5) 版本兼容。
 
-如果你想要最新的打印机驱动程序，应该下载最新版本的 Ghostscript，你可以在 http://www.cs.wisc.edu/~ghost/ 找到它。如果你以前使用过 Ghostscript，会弹出欢迎界面。输入 `y` 接受 GNU 公共许可条款。`SETUP` 程序将你带到安装界面。
+如果你想要最新的打印机驱动程序，应该下载最新版本的 Ghostscript，你可以在 `http://www.cs.wisc.edu/~ghost/` 找到它。如果你以前使用过 Ghostscript，会弹出欢迎界面。输入 `y` 接受 GNU 公共许可条款。`SETUP` 程序将你带到安装界面。
 
-# 18.1 开始 APS Filter
+#### 18.1 开始 APS Filter
 
 ```
 APS FILTER V6.1.1
+
 copyright 1993-2001 Andreas Klemm
+
 http://www.apsfilter.org
 ```
 
 输入 `y` 后，脚本将通过检查目录权限并将当前配置备份到 `/etc/printcap.old` 继续执行。一旦你做出选择，将进入图 18.4 所示的 Apsfilter 设置菜单。
 
-# 18.2 配置
+#### 18.2 配置
 
 下一步是设置你存放配置文件的目录，如图 18.3 所示。
 
-# 18.3 配置目录
+#### 18.3 配置目录
 
-# 18.4 Apsfilter 设置菜单
+#### 18.4 Apsfilter 设置菜单
 
-# 18.5 打印机驱动程序选择
+#### 18.5 打印机驱动程序选择
 
 从主菜单选择选项 1。APS Filter 工具包含八种不同类型的驱动程序，如图 18.5 所示。选项 1 和 2 用于配置打印机。
 
@@ -8644,23 +8184,33 @@ http://www.apsfilter.org
 ==========================================
 PRINTER DRIVER SELECTION
 ==========================================
+
 请选择要安装的打印机类型：
+
 1) PostScript 打印机
+
 2) Ghostscript 原生支持的打印机驱动
+
 3) gimp-print / stp
+
 4) hdi
+
 5) pcl (hdi 的祖先，实验性)
+
 6) IBM net
+
 7) cd830, cd870
+
 8) PPN 打印机，需要 ghostscript "ppraw" 设备和 pn2qppa
+
 0) 返回主菜单
+
 你的选择：[]
 ```
 
+
+
 选项 1 允许你选择不同分辨率的 PostScript 打印机。打印机分辨率定义为打印机每英寸可以处理的点数，即 dpi。Red Hat Linux 7.1 包含了范围从 300dpi 到 2880dpi 的 PostScript 打印机。
-
-
-
 
 ## 打印机 433
 
@@ -8742,7 +8292,9 @@ AppleTalk：允许你建立到连接到本地或其他网络上的 Apple 计算�
 
 ```
 # /etc/printcap
+
 # 不要编辑！手动更改将丢失！
+
 # 此文件由 printconf-backend lpd 自动生成。
 ```
 
@@ -8754,12 +8306,13 @@ AppleTalk：允许你建立到连接到本地或其他网络上的 Apple 计算�
 # printcap.local
 # 此文件由 printconf 生成的 printcap 包含，
 # 可用于指定手动编辑的打印机。
-
 ```
-# BEGIN:printer1
-- 不要删除 apsfilter 打印机的起始标签
-- 在 BEGIN 和 END LABEL 之间没有定义其他打印机
 
+# BEGIN:printer1
+
+- 不要删除 apsfilter 打印机的起始标签
+
+- 在 BEGIN 和 END LABEL 之间没有定义其他打印机
 ```
 |lp|Printer1 auto:
 lp=/dev/lp0:
@@ -8780,10 +8333,6 @@ sf:
 sh:
 # END - 不要删除此内容
 ```
-
-
-
-
 
 ## 打印
 
@@ -8818,6 +8367,7 @@ Linux 并不支持所有的内部调制解调器。如果你有一个，可以�
 如果所有配置都与已安装硬件的相关列表匹配，Linux 似乎会停止一段时间；一段时间后，你将返回到命令行。事实上，Kudzu 正在根据记录的配置向你的硬件发送信号。然而，如果你最近更改了硬件，你应该能看到图 18.8 所示的屏幕。
 
 图 18.8：
+
 Kudzu 欢迎屏幕![](img/fd2d9aa645b3d05a8f065954a79484_476_0.png) 按键查看 Kudzu 检测到的内容。示例见图 18.9。
 
 由于 Kudzu 检测到了新的调制解调器（在特定端口上），你需要做的唯一决定是是否将其添加到系统。
@@ -8881,13 +8431,12 @@ crw-rw---- 1 root root Aug 24 09:00 /dev/usb/ttyACM3
 ```
 
 如果没有得到这种输出，运行以下命令：
+
+```
 mknod /dev/usb/ttyACM0 166 0
+```
 
 重复此命令，将 ttyACM1、ttyACM2 等替换为你可能需要的 USB 调制解调器端口。
-
-
-
-
 
 # 第 18 章 • 使用外设设备
 
@@ -8920,20 +8469,25 @@ mknod /dev/usb/ttyACM0 166 0
 | COM3: | /dev/ttyS2 | 4 | 0x3e8 |
 | COM4: | /dev/ttyS3 | 3 | 0x2e8 |
 
+
+
 注意，第一个和第三个端口共享相同的 IRQ，第二个和第四个端口存在某些必须考虑的问题。端口 1 和端口 3 共享相同的 IRQ 但具有不同的 I/O 地址，这一事实基本上意味着它们不能被同时使用。也就是说，你不能在这两个端口（或 2 和 4 端口）上放置需要同时使用的设备。
 
 这意味着，例如，你可以在第一个端口上使用鼠标并在第三个端口上放置调制调器，除非你将在模式下使用该调制调器。如果你使用 Windows，这是一种极不可能的情况。因此，在安装内部调制调器时，你还需要避免创建 IRQ 冲突。如果你在第一个串口上使用鼠标，那么你可能想将内部调制调器放在第四个端口，以消除与鼠标所有可能发生的冲突。
 
-最后，还有一点考虑：内部调制调器通常允许你为卡片配置特殊的 IRQ 和 I/O 地址，这些地址与四个串口的常规设置不同。只有当你的系统上已经有这么多串口设备，以至于你无法以任何其他方式让调制调器工作时，才应该这样做。在这种情况下，你需要咨询 http://www.linuxdoc.org/HOWTO/Serial-HOWTO.html 上的串口设备 HOWTO，以更好地了解如何在 Linux 中安全且正确地进行操作。
+最后，还有一点考虑：内部调制调器通常允许你为卡片配置特殊的 IRQ 和 I/O 地址，这些地址与四个串口的常规设置不同。只有当你的系统上已经有这么多串口设备，以至于你无法以任何其他方式让调制调器工作时，才应该这样做。在这种情况下，你需要咨询 `http://www.linuxdoc.org/HOWTO/Serial-HOWTO.html` 上的串口设备 HOWTO，以更好地了解如何在 Linux 中安全且正确地进行操作。
 
 # 即插即用调制调器
 
 从 Windows 95 开始引入的即插即用主板和微软操作系统导致在使用操作系统配置内部卡时出现了一些问题。许多即插即用设备（包括调制调器）专门设计为与 Windows 工作，并使用 Linux 中不可用的特殊 Microsoft Windows 操作系统库软件进行配置。如果你有这样的卡，通常有四种选择：
 
 - 在 Windows 95 或 98 中配置调制调器，然后重启到 Linux。某些调制调器会保留其配置。
+
 - 你可能可以找到你的调制调器的 Linux 驱动程序。某些制造商在软盘上包含 Linux 驱动程序，而另一些可能在他们的网站上提供。
+
 - 某些调制调器制造商提供配置软盘，你可以使用它（通常在 MS-DOS 模式下）设置调制调器的 IRQ、I/O 和 DMA（如果需要）。
-- 如果这些选项都不行（且你的调制调器制造商未提供其他替代方案），则调制调器每次计算机重新启动时都需要重新配置，Windows 必须在启动过程中完成此操作。如果是如此，你需要使用 `loadlin` 从 Windows 启动 Linux，而无需重启系统。关于 `loadlin` 的信息，请参阅 http://www.linuxdoc.org/HOWTO/mini/loadlinwin95/98-ME.html 上的 The Loadlin+Win95/98/ME mini-HOWTO。
+
+- 如果这些选项都不行（且你的调制调器制造商未提供其他替代方案），则调制调器每次计算机重新启动时都需要重新配置，Windows 必须在启动过程中完成此操作。如果是如此，你需要使用 `loadlin` 从 Windows 启动 Linux，而无需重启系统。关于 `loadlin` 的信息，请参阅 `http://www.linuxdoc.org/HOWTO/mini/loadlinwin95/98-ME.html` 上的 The Loadlin+Win95/98/ME mini-HOWTO。
 
 如果你配置调制调器时仍然遇到问题，请考虑使用外部调制调器。配置它连接的端口（通常是 `/dev/ttyS0`）是最简单的。如果你有一个 winbmod（也称为软件调制调器），Linux 将按照 modem.org 描述的方式与其工作。
 
@@ -8941,10 +8495,13 @@ mknod /dev/usb/ttyACM0 166 0
 
 Linux 中有许多软件可以与你的调制调器配合使用。这些：
 
-- minicom 基础的文本终端仿真器
-- seyon 基于 X 的终端仿真器
-- pppd 用于建立 Internet 连接的守护进程
-- efax 用于发送和接收传真的的程序集
+- `minicom` 基础的文本终端仿真器
+
+- `seyon` 基于 X 的终端仿真器
+
+- `pppd` 用于建立 Internet 连接的守护进程
+
+- `efax` 用于发送和接收传真的的程序集
 
 # 使用 minicom 测试你的调制调器
 
@@ -8962,11 +8519,7 @@ Linux 中有许多软件可以与你的调制调器配合使用。这些：
 
 要更改值，可以通过字母选择。首先，你需要设置串口设备。这是通过选项 A Serial Device 完成的。你应该将此位置指向正确的设备文件。例如，如果你的调制调器在第二个端口，由于你使用 minicom 进行外部连接，你可以设置为 `/dev/ttyS1`。
 
-> 如果串口已经设置为 /dev/modem（如图 18.11 所示），请使用 `ls -s -1 /dev/modem` 命令检查其链接。如果它显示指向特定串口的链接，则不需要任何更改。
-
-
-
-
+> 如果串口已经设置为 `/dev/modem`（如图 18.11 所示），请使用 `ls -s -1 /dev/modem` 命令检查其链接。如果它显示指向特定串口的链接，则不需要任何更改。
 
 ## 图 18.12：配置通信参数
 
@@ -9003,16 +8556,18 @@ CTRL-A Z for help-145SH-0 W-minicom 1.03.1 VEURZ 2
 如果你看到 OK 提示，说明你的调制解调器配置正确且运行正常。你可以通过输入 AT 并按 Enter 进一步测试。你应该收到 OK 消息：
 
 AT
+
 OK
 
 如果这有效，你可以尝试拨号到系统以查看是否可以连接：
 
 ATDT1234567
+
 CONNECT 115200
 
 如果这有效，你可能会听到连接声，然后看到连接消息以及可能来自远程系统的某些消息或提示：
 
-如果你在任何一个阶段遇到问题，说明你的调制解调器物理连接或配置可能错误。在这种情况下，请参考 http://www.linux.org/HOWTO/Modem-HOWTO.html 中的 Modem HOWTO，详细讨论如何让调制解调器配合 Linux。
+如果你在任何一个阶段遇到问题，说明你的调制解调器物理连接或配置可能错误。在这种情况下，请参考 `http://www.linux.org/HOWTO/Modem-HOWTO.html` 中的 Modem HOWTO，详细讨论如何让调制解调器配合 Linux。
 
 ## ISDN 适配器问题
 
@@ -9020,33 +8575,31 @@ ISDN 适配器在 Linux 上可能会有些问题。困难之处在于内部和�
 
 外部 ISDN 适配器是 Linux 系统的最佳选择，因为外部适配器模拟了外部调制解调器的行为，使得它们的使用对 Linux 通常是透明的。
 
-内部适配器存在问题，尽管某些内部适配器模拟标准的串口调制解调器，另一些模拟标准的网卡，两者都可以在 Linux 下工作。然而，也有一些已知无法工作的。解决内部 ISDN 适配器问题的良好指南是 isdn4linux FAQ，地址位于 http://www.isdn4linux.de/faq/。有多种 ISDN 配置工具可用，包括 Red Hat 的 ISDN 配置工具 isdn-config。你可以直接从命令行启动此工具，或通过通用的 Red Hat internet-config 工具启动。在 GNOME 中启动此工具，点击主菜单按钮，然后选择 Programs ➤ System ➤ Internet-config。在弹出的菜单中（如图 18.14 所示），选择 ISDN 设为你的拨号类型并点击下一步。
+内部适配器存在问题，尽管某些内部适配器模拟标准的串口调制解调器，另一些模拟标准的网卡，两者都可以在 Linux 下工作。然而，也有一些已知无法工作的。解决内部 ISDN 适配器问题的良好指南是 isdn4linux FAQ，地址位于 `http://www.isdn4linux.de/faq/`。有多种 ISDN 配置工具可用，包括 Red Hat 的 ISDN 配置工具 `isdn-config`。你可以直接从命令行启动此工具，或通过通用的 Red Hat internet-config 工具启动。在 GNOME 中启动此工具，点击主菜单按钮，然后选择 Programs ➤ System ➤ Internet-config。在弹出的菜单中（如图 18.14 所示），选择 ISDN 设为你的拨号类型并点击下一步。
 
 ## 图 18.14：使用 internet-config 设置 ISDN 连接
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_488_0.png)
 
-有关关于 Linux 和 ISDN 的详细讨论，请咨询 http://www.muc.de/~hm/linux/linux-isdn.html 上的 ISDN Solutions for Linux 。
+有关关于 Linux 和 ISDN 的详细讨论，请咨询 `http://www.muc.de/~hm/linux/linux-isdn.html` 上的 ISDN Solutions for Linux 。
 
 ## 其他“调制解调器”，
 
 现在有许多比 ISDN 更快的服务。这些有时被称为宽带服务。你可能已经通过电视电缆、使用电话线的数字用户线路（DSL）、通过卫星连接，甚至是高速无线连接拥有了宽带连接。
 
-许多提供这些服务的公司也将其设备称为“调制解调器”。电缆型号、DSL 模型和卫星调制解调器在今天很常见。从技术上讲，这是错误的。你不能使用 min com、seppon、pppd、KPPPR 或 Microsoft 拨号上网来连接互联网或这些“调制解调器”。这些设备通常被称为适配器。
+许多提供这些服务的公司也将其设备称为“调制解调器”。电缆型号、DSL 模型和卫星调制解调器在今天很常见。从技术上讲，这是错误的。你不能使用 min com、seppon、`pppd`、KPPPR 或 Microsoft 拨号上网来连接互联网或这些“调制解调器”。这些设备通常被称为适配器。
 
 这些适配器通常通过网卡连接到你的计算机。如果你想配置这些适配器之一，请阅读第六部分“在小型办公室/家庭办公室 (SOHO) 中使用 Linux”，特别是第 28 章“为以太网配置 Red Hat Linux 7.1”。
 
 ## USB 鼠标/键盘
 
 大多数较新的计算机在主板上集成了 USB 根线器。关联 BIOS 通常支持 USB 键盘。在这种情况下，你可能不需要 USB 信息即可让 Linux 内核支持你的键盘。
+
 然而，如果你在计算机上运行另一个非 Unix/Linux 操作系统、不配置 USB 的 BIOS，或者你的键盘有特殊功能，你就需要 USB 键盘支持。如果你重新编译内核来实现此功能，你需要 USB HIDBP 键盘支持，因为这在 Linux 中不起作用。
 
 > 警告
-Linux 加载程序（即 LILO）在 Linux 有机会检测到任何 USB 键盘之前运行。因此，除非 USB 支持内置在你的计算机主板并被 BIOS 检测到，否则你无法在 LILO 启动提示符处使用键盘输入。为了解决这个问题，请考虑使用其他引导加载程序，如 Partition Magic 或 System Commander。
 
-
-
-
+Linux 加载程序（即 `LILO`）在 Linux 有机会检测到任何 USB 键盘之前运行。因此，除非 USB 支持内置在你的计算机主板并被 BIOS 检测到，否则你无法在 LILO 启动提示符处使用键盘输入。为了解决这个问题，请考虑使用其他引导加载程序，如 Partition Magic 或 System Commander。
 
 ## 展望
 
@@ -9057,12 +8610,14 @@ Linux 加载程序（即 LILO）在 Linux 有机会检测到任何 USB 键盘之
 # Linux 多媒体
 
 - 配置声卡
+
 - 使用 XPlaycd
+
 - 其他多媒体应用
 
 本章介绍了 Linux 的一个领域，遗憾的是，该领域不像在 Windows 和 Mac OS 等竞争性平台上那样发达：多媒体。它描述了 Red Hat Linux 7.1 对声卡的内置支持，并讨论了如何配置这些声卡。接下来，它讨论了代表性的多媒体应用 XPlaycd，然后回顾了其他多媒体应用。
 
-遗憾的是，完全精通 Linux 多媒体可能非常复杂。对于硬件支持，请参阅 http://www.linuxdoc.org/HOWTO/Sound-HOWTO.html 中的 Linux Sound HOWTO。对于多媒体应用支持，请参阅 http://www.linuxdoc.org/HOWTO/Sound-Playing-HOWTO.html 中的 Linux Sound Playing HOWTO，详细讨论如何在 Linux 中处理音频。
+遗憾的是，完全精通 Linux 多媒体可能非常复杂。对于硬件支持，请参阅 `http://www.linuxdoc.org/HOWTO/Sound-HOWTO.html` 中的 Linux Sound HOWTO。对于多媒体应用支持，请参阅 `http://www.linuxdoc.org/HOWTO/Sound-Playing-HOWTO.html` 中的 Linux Sound Playing HOWTO，详细讨论如何在 Linux 中处理音频。
 
 # 配置声卡
 
@@ -9089,33 +8644,45 @@ Red Hat 包含了用于配置 Sound Blaster 模块的 `sndconfig` 程序。要�
 图 19.1 所示的初始屏幕显示 sndconfig 正准备对系统进行即插即用（PnP）声卡的探测。如果它检测到你的声卡，其 IRQ 端口、I/O 地址和 DMA 通道将被自动记录。否则，你将收到未找到卡的提示。点击 OK 后，下一个屏幕将要求你识别声卡类型，如图 19.2 所示。
 
 图 19.1：
+
 sndconfig 界面
+
 ![](img/fd2d9aa645b3d05a8fce065954a79484_496_0.png)
 
 图 19.2：
+
 选择 Sound Blaster 声卡
+
 ![](img/fd2d9aa645b3d05a8fce065954a79484_497_0.png)
-<Tab>/<Alt-Tab> 在元素间切换 | 使用 <Enter> 编辑选定
+
+`<Tab>`/`<Alt-Tab>` 在元素间切换 | 使用 `<Enter>` 编辑选定
 
 你可以从标准支持的卡列表中进行选择，或者选择它应兼容的声卡类型。
 
 出现的下一个屏幕取决于你选择的声卡类型。该屏幕要求你为声卡提供相关的硬件设置，例如 I/O 端口、IRQ 和 DMA 地址。图 19.3 显示了普通 Sound Blaster 16 声卡的屏幕。
 
 图 19.3：
+
 为 Sound Blaster 16 声卡指定硬件设置
+
 ![](img/fd2d9aa645b3d05a8fce065954a79484_497_1.png)
-<Tab>/<Alt-Tab> 在元素间切换 | 使用 <Enter> 编辑选定
+
+`<Tab>`/`<Alt-Tab>` 在元素间切换 | 使用 `<Enter>` 编辑选定
 
 一旦你指定并确认这些设置，sndconfig 会将条目添加到 `/etc/modules.conf` 文件（并将你的原始文件备份为 `modules.conf.bak`）。当你按下 OK 时，sndconfig 会设置测试音。在下次点击 OK 后，它会尝试播放测试音（一段对话声音）。后续屏幕将要求你确认已听听到声音。
 
 旧版本的 Linux（在 Red Hat Linux 7.0 等发行版之前）使用 `/etc/conf.modules` 文件代替 `/etc/modules.conf` 文件。
 
 接下来，sndconfig 设置了测试音。
+
 图 19.4：
+
 测试声音
+
 ![](img/fd2d9aa645b3d05a8fce065954a79484_498_0.png)
 
 在出现静音的情况下
+
 如果 sndconfig 无法播放声音，可能存在某些问题。首先，检查你的卡是否正确插入。如果这些都正常，再次尝试 sndconfig。
 
 # 使用 XPlaycd
@@ -9123,7 +8690,9 @@ sndconfig 界面
 声卡的一个流行用途是播放 CD-ROM。该应用程序随 Red Hat 7.1 一起发行，并为扬声器提供了简单的界面。你可以通过 GNOME 主菜单中的多媒体 > XPlaycd 访问它。
 
 图 19.5：
+
 XPlaycd 窗口
+
 ![](img/fd2d9aa645b3d05a8fce065954a79484_499_0.png)
 
 如图 19.5 所示，XPlaycd 对立体声用户来说应该是熟悉的。
@@ -9137,27 +8706,35 @@ XPlaycd 窗口
 播放列表从开始图标到结束图标，按照它们在播放列表中的顺序播放每个歌曲。你可以点击并拖动任何图标向左或向右以更改其在播放列表中的位置。图 19.6 显示了一个调整后的播放列表，其中所有歌曲都被播放，但不是按原始顺序。
 
 从左到右，顶行的控制按钮执行以下功能：
+
 - 退出 XPlaycd
+
 - 打开/关闭切换弹出或关闭 CD 盒
+
 - 回退以每秒 2 秒的速度向后扫描当前歌曲
+
 - 播放/停止切换播放和停止当前歌曲
+
 - 快进以每秒 2 秒的速度向前扫描当前歌曲
+
 - 暂停/继续切换暂停和恢复播放
+
 - 随机播放/排序切换以随机顺序播放歌曲并返回歌曲的物理顺序
+
 - 重复 循环播放列表
 
 倒退按钮正下方是后退歌曲按钮。按下后退键一次会跳转到当前歌曲的开头，再次按下则会向后移动一首。快进按钮正下方是下一首歌曲按钮，它可以跳转到下一首歌的开头。
 
 图 19.6：
+
 一个重新排序的播放列表
+
 ![](img/fd2d9aa645b3d05a8fce065954a79484_500_0.png)
-
-
-
 
 通过移动开始和结束图标，可以创建一个排除某些曲目的播放列表，如图 19.7 所示。
 
 ## 图 19.7：
+
 调整播放列表的开始和结束位置
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_501_0.png)
@@ -9166,13 +8743,16 @@ XPlaycd 窗口
 
 虽然流畅、华丽的多媒体应用和游戏在可用性不如某些其他平台，但这并没有阻止大量适用于 Linux 应用的应用。
 
+
+
 在 [http://www.linuxapps.com](http://www.linuxapps.com) 的 Linux Apps 页面，你可以找到许多适用于 Linux 的音频、电影和其他多媒体应用列表。本节将简要介绍其中的部分多媒体应用。
 
 ## GNOME CD 播放器
 
 GNOME 是 Red Hat Linux 7.1 的默认桌面管理器，它包含一个集成 CD 播放器，如图 19.8 所示。你可以通过 GNOME 主菜单，选择“程序 > 多媒体 > CD 播放器”来访问它。
 
-## 图 19.8：
+### 图 19.8：
+
 GNOME CD 播放器
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_501_1.png)
@@ -9193,9 +8773,9 @@ MiXViews 是一个基于 X Windows 的数字音频编辑器，可以免费分发
 
 ## Grio 和 Krio
 
-随着便携式内存音乐播放器的发展，对 MPEG 编码器或录制器的需求增加。有大量用于管理向 Rio 播放器等系统的输入，包括适用于 GNOME 和 KDE 桌面的应用。不足的是，它们分别命名为 grio 和 krio。
+随着便携式内存音乐播放器的发展，对 MPEG 编码器或录制器的需求增加。有大量用于管理向 Rio 播放器等系统的输入，包括适用于 GNOME 和 KDE 桌面的应用。不足的是，它们分别命名为 `grio` 和 `krio`。
 
-这两个应用程序都能帮助你向从 Rio 播放器传输数据、根据需要删除文件、初始化播放器以及重新排列播放顺序。你可以从 [http://kipper.crk.umm.edu/~gerla/grio/](http://kipper.crk.umm.edu/~gerla/grio/) 下载 grio，或从 [http://krio.sourceforge.net/index.php](http://krio.sourceforge.net/index.php) 下载 krio。
+这两个应用程序都能帮助你向从 Rio 播放器传输数据、根据需要删除文件、初始化播放器以及重新排列播放顺序。你可以从 [http://kipper.crk.umm.edu/~gerla/grio/](http://kipper.crk.umm.edu/~gerla/grio/) 下载 `grio`，或从 [http://krio.sourceforge.net/index.php](http://krio.sourceforge.net/index.php) 下载 `krio`。
 
 ## RealPlayer
 
@@ -9203,7 +8783,7 @@ MiXViews 是一个基于 X Windows 的数字音频编辑器，可以免费分发
 
 ## FreePhone
 
-FreePhone 是一种互联网音频会议工具，其概念类似于 Windows 和 Macintosh 系统上的互联网软件。它不仅仅是一个一对一的电话系统；用户可以创建单播或组播音频会议。FreePhone 支持多种流行的音频压缩系统，并使用互联网的多媒体骨干网 (Mbone)。该软件位于 [http://www.inria.fr/rodeo/fphone/obtain.html](http://www.inria.fr/rodeo/fphone/obtain.html)。
+FreePhone 是一种互联网音频会议工具，其概念类似于 Windows 和 Macintosh 系统上的互联网软件。它不仅仅是一个一对一的电话系统；用户可以创建单播或组播音频会议。FreePhone 支持多种流行的音频压缩系统，并使用互联网的多媒体骨干网 `Mbone`。该软件位于 [http://www.inria.fr/rodeo/fphone/obtain.html](http://www.inria.fr/rodeo/fphone/obtain.html)。
 
 ## 展望
 
@@ -9213,7 +8793,7 @@ FreePhone 是一种互联网音频会议工具，其概念类似于 Windows 和 
 
 第 20 章“重新编译 Linux 内核”讨论了一个重要但高级的主题。由于许多原因，重新编译内核可能是必要的，添加对声卡等设备的支持、添加对不常见网络协议的支持，或缩小安装 Linux 时安装的默认内核的大小。你将学习重新编译的过程，并回顾重新编译期间需要做的主要选择。
 
-## 第二十章
+# 第二十章
 
 ## 重新编译 Linux 内核
 
@@ -9228,12 +8808,9 @@ FreePhone 是一种互联网音频会议工具，其概念类似于 Windows 和 
 
 内核的配置旨在内核大小、速度和硬件支持之间取得良好的平衡。这种平衡试图满足 Linux 供应商所看到的普通用户的需求。在本章中，你将学习如何对你计算环境中最重要的功能做出决策。
 
-## 了解模块
+### 了解模块
 
-内核模块是 Linux 的关键组成部分。内核模块允许你在不重新编译内核源码的情况下向 Linux Core添加功能。你将在本章晚些时候看到，这是一个巨大的优势。
-
-
-
+内核模块是 Linux 的关键组成部分。内核模块允许你在不重新编译内核源码的情况下向 Linux Core 添加功能。你将在本章晚些时候看到，这是一个巨大的优势。
 
 例如，如果你发现你需要使用一种特殊的新的 SCSI 接口卡，你可以可以使用单个命令（`insmod` 命令）加载内核模块来支持它。在此之前，Linux 将要求你重新编译内核以包含对该 SCSI 设备的支持。
 
@@ -9243,15 +8820,15 @@ FreePhone 是一种互联网音频会议工具，其概念类似于 Windows 和 
 
 表 20.1 包含了与内核模块一起使用的命令摘要。你可以查看这些命令中任何一个的主页以获取更多信息。
 
-# 表格 20.1：用于内核模块的命令
+#### 表格 20.1：用于内核模块的命令
 
 | 命令 | 描述 |
 | --- | --- |
-| lsmod | 列出当前运行内核中安装的所有模块。 |
-| insmod | 将模块插入到运行的内核中。此命令使用模块名称，以及可选的额外参数来定义模块的行为（例如，硬件设备的 IRQ 和地址信息）。 |
-| rmmod | 从运行系统中移除模块。小心不要删除正在被其他模块使用的模块。（请查看 `lsmod` 命令的输出以获取当前加载模块依赖关系的详情。） |
-| depmod | 创建一个依赖文件，可以使用 `modprobe` 命令加载一组模块。 |
-| modprobe | 加载由 `depmod` 命令定义的模块组。 |
+| `lsmod` | 列出当前运行内核中安装的所有模块。 |
+| `insmod` | 将模块插入到运行的内核中。此命令使用模块名称，以及可选的额外参数来定义模块的行为（例如，硬件设备的 IRQ 和地址信息）。 |
+| `rmmod` | 从运行系统中移除模块。小心不要删除正在被其他模块使用的模块。（请查看 `lsmod` 命令的输出以获取当前加载模块依赖关系的详情。） |
+| `depmod` | 创建一个依赖文件，可以使用 `modprobe` 命令加载一组模块。 |
+| `modprobe` | 加载由 `depmod` 命令定义的模块组。 |
 
 > 注意 除 `lsmod` 之外，所有列出的命令都要求用户处于 root 模式。在 Red Hat Linux 7.1 中，这些命令位于 `/sbin` 目录，默认情况下不在路径中；因此，你可能需要输入这些命令的完整路径，例如 `/sbin/lsmod`、`/sbin/insmod` 等。
 
@@ -9262,18 +8839,17 @@ FreePhone 是一种互联网音频会议工具，其概念类似于 Windows 和 
 检查以下文件：
 
 - `/boot/module-info-2.4.2-2` 包含每个模块的信息，你可以修改它以反映你硬件的任何特定设置。
-
 - `/lib/modules/2.4.2-2/` 包含几个子目录，划分了你系统上所有的内核模块。例如，检查 `kernel/drivers/cdrom` 子目录的内容以查看支持各种 CD-ROM 驱动器的所有可用模块。
 
 与 Red Hat Linux 7.1 关联的内核版本是 2.4.2。如果你使用的是不同版本的 Linux 或之前升级过内核，请相应地替换版本号。
 
 所有内核都有采用 `major.minor.patch` 格式的版本号。最大的变化与新的主修订版本号有关。次要修订版本号的变化可能非常显著。当次要修订版本为偶数时，内核被认为是稳定的。当它是奇数时，它处于开发阶段，不应供初学者使用或用于生产计算机。随着增量变化的开发，这些更改会被合并到补丁（patch）中。
 
-# 了解重新编译的原因
+### 了解重新编译的原因
 
 如果你仍然好奇具体你为什么需要重新编译你的 Linux 内核，表 20.2 中的信息应该可以提供见解。该表概述了你可能遇到的一些常见问题的解决方案。当然，你可能只需要为了这些原因之一而重新编译内核。理解人们为什么要处理内核将让你了解更多关于 Linux 的灵活性。
 
-# 表格 20.2：重新编译 Linux 内核的解决方案
+#### 表格 20.2：重新编译 Linux 内核的解决方案
 
 | 问题 | 解决方案 |
 | --- | --- |
@@ -9284,32 +8860,31 @@ FreePhone 是一种互联网音频会议工具，其概念类似于 Windows 和 
 | 你购买了一个带有 2.2.16 内核的商业 Linux 产品，但你想要最新的修订版本。 | 下载内核源码（它们很大）并重新制作内核，以便你拥有最新版本的内核。 |
 | 你系统上的用户抱怨除非他们先使用一系列奇怪的命令（例如 `insmod`），否则他们无法访问某些文件系统。 | 重新制作内核并内置所需的文件系统支持，这样就可以不显式添加模块的情况下挂载类型。 |
 
-# 查找内核更新
+### 查找内核更新
 
 Linux 内核字面上每天都会发生变化。通常，当你运行一个稳定的系统时，你通常并不关心跟踪所有这些变化。事实上，Linux 的大多数变化发生在内核开发版本中，而这并不是你想要在生产系统上运行的。
 
 为了跟进 Linux 内核及相关主题的动态，请计划访问以下网站。这些网站每几天就会更新一次新信息：
 
-www.linux.org 这个网站包含关于 Linux 内核的最新信息，以及关于内核的许多细节。www.kernel.org 这个网站是内核软件和相关主题的发布中心，它包含了内核发布公告。www.linuxhq.com 这个网站是关于开源软件和相关主题的每日摘要，它包含了内核发布公告。www.freshmeat.net 这个网站是关于开源软件和相关主题的发布中心，它包含了内核发布公告。www.linxtoday.com 这个网站是开源软件和相关主题的每日新闻摘要，它包含了内核发布公告。
+`www.linux.org` 这个网站包含关于 Linux 内核的最新信息，以及关于内核的许多细节。`www.kernel.org` 这个网站是内核软件和相关主题的发布中心，它包含了内核发布公告。`www.linuxhq.com` 这个网站是关于开源软件和相关主题的每日摘要，它包含了内核发布公告。`www.freshmeat.net` 这个网站是关于开源软件和相关主题的发布中心，它包含了内核发布公告。`www.linxtoday.com` 这个网站是开源软件和相关主题的每日新闻摘要，它包含了内核发布公告。
 
-# 检查源码包
+### 检查源码包
 
 为了重新编译你的 Linux 内核，你必须在系统中安装源码。Red Hat Linux 7.1 的源码位于一个默认安装的 rpm 包中。如果尚未安装，要检查的包是
 
-```kernel-source-2.4.2-i386```
+```
+kernel-source-2.4.2-i386
+```
 
-你可以在挂载随书附的 Red Hat 7.1 光盘后使用 rpm 命令安装此包：
+你可以在挂载随书附的 Red Hat 7.1 光盘后使用 `rpm` 命令安装此包：
 
 ```
-rpm -Uvh kernel-source-2.4.2-i386```
+rpm -Uvh kernel-source-2.4.2-i386
+```
 
 Red Hat 将内核源码包含在一个标记为“源码包”且扩展名为 `.src.rpm` 的 rpm 包中。`.src.rpm` 包不是你需要的。内核源码包未包含 7.1 发行版中，但可以从 http://www.redhat.com 下载。
 
-
-
-
-
-# 备份旧内核
+### 备份旧内核
 
 虽然这里的暗示重新编译 Linux 内核是小菜一碟，但在进入深水区之前，你仍然应该采取一些预防措施。这意味着要备份你的内核，并提供一种在出现问题时可以重启到以前版本内核的方法。
 
@@ -9331,39 +8906,39 @@ Red Hat 将内核源码包含在一个标记为“源码包”且扩展名为 `.
 # cp /boot/vmlinuz-2.4.2-2 /boot/vmlinuz-2.4.2-2.orig
 ```
 
-当你重新编译内核时，现有的内核将以 .old 扩展名保存。然而，该旧内核版本无法自动用于启动系统，这正是这些步骤的目的。
+当你重新编译内核时，现有的内核将以 `.old` 扩展名保存。然而，该旧内核版本无法自动用于启动系统，这正是这些步骤的目的。
 
-通常从你的硬盘启动 Linux 的 LILO 启动加载程序是通过指向根文件系统中的内核文件来配置的。例如，你可能会在 /etc/lilo.conf 文件看到这样的一行：image = /boot/vmlinuz-2.4.2-2
+通常从你的硬盘启动 Linux 的 LILO 启动加载程序是通过指向根文件系统中的内核文件来配置的。例如，你可能会在 `/etc/lilo.conf` 文件看到这样的一行：`image = /boot/vmlinuz-2.4.2-2`
 
 此行指示了要启动的内核路径和文件名。
 
-一旦你创建了内核本身的备份（在上一步中），你还应该在 lilo.conf 中创建另一个条目，以便使用旧的（已验证的）内核启动你的 Linux 系统。
+一旦你创建了内核本身的备份（在上一步中），你还应该在 `lilo.conf` 中创建另一个条目，以便使用旧的（已验证的）内核启动你的 Linux 系统。
 
 要执行此操作，请遵循以下步骤：
 
-- 1. 用文本编辑器打开 /etc/lilo.conf 文件。
-- 2. 在 /etc/lilo.conf 文件中找到引用你的内核镜像的部分。
+- 1. 用文本编辑器打开 `/etc/lilo.conf` 文件。
+- 2. 在 `/etc/lilo.conf` 文件中找到引用你的内核镜像的部分。
 - 3. 复制整个部分（通常是四五行文本）。
 - 4. 在你的副本中更改两个项目：
-    - 将内核名称更改为你备份的内核名称（在示例中以 .orig 结尾）。
-    - 将 label 字段更改为类似 linux.original 或 linux-previous 的内容。
-- 5. 如果有以 initrd 开头的行，将此名称更改为相应的备份，例如 initrd-2.4.2-2.img。如果需要，你稍将创建此文件。
-- 6. 将你的更改保存到 /etc/lilo.conf。
-- 7. 运行命令 /sbin/lilo 将新条目添加到你的启动加载程序中。当 lilo 运行时，你会看到屏幕上显示不同的标签，它们正被添加到你的启动加载程序中。
+    - 将内核名称更改为你备份的内核名称（在示例中以 `.orig` 结尾）。
+    - 将 `label` 字段更改为类似 `linux.original` 或 `linux-previous` 的内容。
+- 5. 如果有以 `initrd` 开头的行，将此名称更改为相应的备份，例如 `initrd-2.4.2-2.img`。如果需要，你稍将创建此文件。
+- 6. 将你的更改保存到 `/etc/lilo.conf`。
+- 7. 运行命令 `/sbin/lilo` 将新条目添加到你的启动加载程序中。当 `lilo` 运行时，你会看到屏幕上显示不同的标签，它们正被添加到你的启动加载程序中。
 
 下次重启系统时，你将看到图形界面 LILO 启动提示中出现新的内核条目。如果你使用的是不使用图形 LILO 启动提示的发行版，你可能需要按 Tab 键来在重新编译内核之前查看你定义的额外镜像，作为预防措施。
 
-# 获取新内核
+### 获取新内核
 
-有多种方法可以获取新内核副本。两种主要方法是通过 http://www.kernel.org 上的 Linux 内核存档或你的 Linux 发行版网站。如果你正在寻找内核的 rpm 版本，一个中心源位于 http://www.rpmfind.net。下载和安装 rpm 包在之前的章节中已经介绍，因此本节涵盖了下载 tar.gz 格式的内核（例如 linux-2.4.4.tar.gz）。
+有多种方法可以获取新内核副本。两种主要方法是通过 http://www.kernel.org 上的 Linux 内核存档或你的 Linux 发行版网站。如果你正在寻找内核的 rpm 版本，一个中心源位于 http://www.rpmfind.net。下载和安装 rpm 包在之前的章节中已经介绍，因此本节涵盖了下载 `tar.gz` 格式的内核（例如 `linux-2.4.4.tar.gz`）。
 
-# 配置新内核
+### 配置新内核
 
 > 请确保已如本章前面的所述备份了以前版本的内核。
 
-一旦你下载了相关的内核包，请将其移动到 /usr/src 目录。记住，本节假设你已经按照本章前面介绍的方法备份了当前内核。
+一旦你下载了相关的内核包，请将其移动到 `/usr/src` 目录。记住，本节假设你已经按照本章前面介绍的方法备份了当前内核。
 
-提取内核和相关文件（2.4.4 版本中有 8,000 多个），导航到 /usr/src 目录，然后运行以下命令：
+提取内核和相关文件（2.4.4 版本中有 8,000 多个），导航到 `/usr/src` 目录，然后运行以下命令：
 
 ```
 tar zzvf linux-2.4.4.tar.gz
@@ -9371,9 +8946,9 @@ tar zzvf linux-2.4.4.tar.gz
 
 如果你的内核包文件名不同，请相应替换。现在你可以使用后续章节讨论的工具之一来配置你的新内核。
 
-如果你正在升级内核，请确保你的软件足够先进以适应升级。对于 2.4 系列内核，请查看 /usr/src/linux-2.4.x/Documentation/Changes 文件，以获取你所需的关键软件版本。
+如果你正在升级内核，请确保你的软件足够先进以适应升级。对于 2.4 系列内核，请查看 `/usr/src/linux-2.4.x/Documentation/Changes` 文件，以获取你所需的关键软件版本。
 
-# 理解选项
+### 理解选项
 
 创建新内核的有趣部分是设置新内核配置。在这一步骤中，你决定内核将包含什么、不包含什么等等。你可以在新源或现有源配置内核之间进行选择。例如，如果你正在运行 Red Hat Linux 7.1，你可以用新选项重新配置现有的 2.4.2 内核。或者，你可以下载并安装更新的 2.4.4 内核。虽然详细的配置选项有所不同，但工具、实用程序和技术是相同的。
 
@@ -9384,16 +8959,16 @@ tar zzvf linux-2.4.4.tar.gz
 
 如果一个选项不能作为加载模块，那么它必须是：
 
-- [*] 内核的一部分
-- [ ] 内核的一部分
+- `[*]` 内核的一部分
+- `[ ]` 内核的一部分
 
 上面的括号指示显示了菜单工具中的选择方式。如果一个选项可以作为模块，你有这些选择（同样，这些在菜单工具中显示）：
 
-- <> 不包含，也不作为以后可以加载的模块创建。
-- <+ 作为内核的一部分包含，因此不需要作为内核加载；它始终是系统的一部分。
-- <M> 作为模块包含，但不内核的一部分。因此，你可以根据需要从运行的内核中添加或删除该选项。
+- `<>` 不包含，也不作为以后可以加载的模块创建。
+- `<+` 作为内核的一部分包含，因此不需要作为内核加载；它始终是系统的一部分。
+- `<M>` 作为模块包含，但不内核的一部分。因此，你可以根据需要从运行的内核中添加或删除该选项。
 
-# 启动命令行界面
+### 启动命令行界面
 
 要启动命令行界面，请遵循以下步骤：
 
@@ -9404,21 +8979,17 @@ tar zzvf linux-2.4.4.tar.gz
 # cd /usr/src/linux-2.4.2
 ```
 
-
-
-
-
 ## 第 20 章 重新编译 Linux 内核
 
 ## 注意
 
 如果你将内核下载到了不同的目录，请相应进行替换。
 
-3. 执行以下 make 命令：
+3. 执行以下 `make` 命令：
 
-```
+
+
 # make config
-```
 
 几乎立即，你就会看到第一个配置问题。当你使用 `make config` 命令时，系统会提示你回答关于内核的一系列问题。图 20.1 显示了前几个。
 
@@ -9428,20 +8999,35 @@ Linux 内核最基本的配置选项是 `make config`，它以命令行格式向
 
 ```
 [root@linux71 linux~2.4.2]# make config
+
 rm -f include/asm
+
 (cd include : -sf asm-i386 asm)
+
 /bin/sh scripts/configure arch /i386/config.in
+
 # Using defaults found in /i386/config
+
 # Code maturity level options
+
 # Prompt for development/ or incomplete code/drivers (CONFIG_EXPERIMENTAL) [N/y]
+
 [y]
+
 # Loadable module support
+
 Enable enable module support (CONFIG_MODULES) [Y/n]
+
 Set module version information for all module symbols (CONFIG_MODVERSIONS) [Y/n]
+
 Kernel module loader (CONFIG_MODIO) [Y/n]
+
 # Processor types
+
 # Processor family (386, 486, 586/586-x86/586-686, Pentium-Classic, Pentium-MM X, Pentium-Pro/Celeron/Pentium-II, Pentium-III, Pentium-4, K6/K6-II/K6-III, Athl onUbuntu/2.6, Winchip-2/Winchip-3 [Pentium-III]
+
 defined CONFIG_PENTIUM
+
 Tishiba Laptop support (CONFIG_ID_TOSHIBA) [N/y] []
 ```
 
@@ -9451,11 +9037,11 @@ Tishiba Laptop support (CONFIG_ID_TOSHIBA) [N/y] []
 
 如果你想为每个问题选择默认选项，只需按回车键。在每情况下，默认选择用大写字母显示。例如，你会看到这个关于网络支持的问题：
 
-Networking support (CONFIG_NET) [Y/n]:
+`Networking support (CONFIG_NET) [Y/n]:`
 
 如果你按回车，将选择默认的 Y（是）。对于那些可以定义为内置或模块的选项，这些选项在该例所示：
 
-Kernel support for ELF binaries (CONFIG_BINFMT_ELF) [Y/m/n]:
+`Kernel support for ELF binaries (CONFIG_BINFMT_ELF) [Y/m/n]:`
 
 许多设备相关的问题只提供 m/n 选项，分别代表 [模块] 或 [不包含]。
 
@@ -9484,27 +9070,44 @@ Kernel support for ELF binaries (CONFIG_BINFMT_ELF) [Y/m/n]:
 
 - 1. 使用 `su` 命令获取 root 权限。
 - 2. 进入源码目录：
+```
 # cd /usr/src/linux-2.4.2
-
+```
 注意 如果你将不同的内核下载到了不同的目录，请替换 make。
 
 ```
 方向键导航菜单。（Enter）选择子菜单 ---
+
 高亮显示的字母已加粗。按 <> 包含，> 排除，
+
 * 调整功能。Ctrl-X: 退出，? 帮助，
+
 图例：[* 内置] [已排除] M 模块 <> 可模块化
+
 ---
+
 ld CD-ROM 驱动程序 (非 SSI, 非 IDE) -->
+
 root core support -->
+
 harter devices -->
+
 hitem devices -->
+
 lia suites
+
 nonsole drivers -->
+
 output -->
+
 [*] support -->
+
 nernel hacking -->
+
 ---
+
 oad an Alternate Configuration File
+
 save Configuration to an Alternate File
 ```
 
@@ -9527,7 +9130,7 @@ save Configuration to an Alternate File
 
 ### 20.4：
 
-menuconfig 工具中的单独选项在每个项目的左侧显示选择。菜单配置选项从一个你可以选择内核选项的类别列表开始。要导航此界面，请记住以下按键：
+`menuconfig` 工具中的单独选项在每个项目的左侧显示选择。菜单配置选项从一个你可以选择内核选项的类别列表开始。要导航此界面，请记住以下按键：
 
 - 使用向上和向下方向键在菜单中列出的选项之间移动。
 - 输入 M 将内核选项选择为模块（适用时）。
@@ -9540,15 +9143,9 @@ menuconfig 工具中的单独选项在每个项目的左侧显示选择。菜单
 - **Exit**（退出）返回上一个菜单，如果是从顶级菜单选择的，则完成配置。
 - **Help**（帮助）显示帮助
 
-（注：由于原文后续存在大量重复段落，此处已根据指令“不要重复输出原文”的原则进行精简，保留核心结构说明）
-
-
-
-
-
--   创建一个模块以支持此功能（在可能的情况下）
--   不包含该功能，也不为其创建模块
--   为高亮项目显示帮助屏幕
+- 创建一个模块以支持此功能（在可能的情况下）
+- 不包含该功能，也不为其创建模块
+- 为高亮项目显示帮助屏幕
 
 提示
 你也可以反复按下空格键，在高亮项目的各个可用选项之间进行切换。
@@ -9563,23 +9160,25 @@ menuconfig 工具中的单独选项在每个项目的左侧显示选择。菜单
 
 要启动图形（基于 X 的）内核配置界面，请遵循以下步骤：
 
--   1. 启动 X Windows 系统（使用你喜欢的任何图形环境或桌面）。
+- 1. 启动 X Windows 系统（使用你喜欢的任何图形环境或桌面）。
 
 ## 配置新内核
 
--   2. 打开终端模拟器（命令行）窗口。
+- 2. 打开终端模拟器（命令行）窗口。
 
--   3. 使用 `su` 命令获取 root 权限。
+- 3. 使用 `su` 命令获取 root 权限。
 
--   4. 切换源代码目录：
+- 4. 切换源代码目录：
+```
 # cd /usr/src/linux-2.4.2
-
+```
 注意
 如果你将内核下载到了不同的目录，请相应地替换。
 
--   5. 执行以下 `make` 命令：
+- 5. 执行以下 `make` 命令：
+```
 # make xconfig
-
+```
 注意
 基于 X 的配置工具需要一些 Windows 系统开发软件包包。如果你在运行 `make xconfig` 时看到错误，请检查系统是否已安装适当的开发包。
 
@@ -9588,8 +9187,6 @@ menuconfig 工具中的单独选项在每个项目的左侧显示选择。菜单
 # 图 20.6：
 
 图形化内核配置工具提供了用于选择内核选项的菜单和按钮。
-
-[content] 
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_526_0.png)
 
@@ -9619,8 +9216,8 @@ menuconfig 工具中的单独选项在每个项目的左侧显示选择。菜单
 
 基于 X 工具底部的选项与你在菜单工具中使用的类似：
 
--   **Save And Exit（保存并退出）** 创建内核配置文件并关闭配置工具。
--   **Quit Without Saving（不保存退出）** 关闭配置工具，但不创建内核配置文件。
+- **Save And Exit（保存并退出）** 创建内核配置文件并关闭配置工具。
+- **Quit Without Saving（不保存退出）** 关闭配置工具，但不创建内核配置文件。
 
 ## 警告
 
@@ -9634,30 +9231,27 @@ menuconfig 工具中的单独选项在每个项目的左侧显示选择。菜单
 
 一旦内核重配置完成，检查是否有新的配置文件（`.config`），可能在 `/usr/src/linux-2.4.2` 目录下。记住，要隐藏文件，你需要使用 `ls -a` 命令。如果 `.config` 在那里，说明成功了。
 
-
-
-
-
 # 测试新内核
 
 在您将新内核移动到默认位置（如 lilo.conf 文件所示）之后，可以重启系统以启动新内核。
 
 一旦您的 Linux 系统重启，请尝试您在内核配置中指定的额外功能。这可能包括以下内容：
 
--   比较新内核与旧内核的大小。还可以尝试使用 `free` 命令查看系统消耗了多少内存。
--   在不先加载支持该设备的模块的情况下，挂载文件系统或访问设备（如果您已经为该服务构建了内置支持）。
--   使用在原始内核中不可用的网络资源（如 IP 别名）。
+- 比较新内核与旧内核的大小。还可以尝试使用 `free` 命令查看系统消耗了多少内存。
+- 在不先加载支持该设备的模块的情况下，挂载文件系统或访问设备（如果您已经为该服务构建了内置支持）。
+- 使用在原始内核中不可用的网络资源（如 IP 别名）。
 
 您可能还想尝试使用 `uname` 命令查看当前内核的时间戳。此命令可以验证您正在运行的内核正是您重新编译的那个。请确保重新编译内核时的日期和时间是匹配的。
 
 ```
 # uname -v
+
 #1 Tue Mar 9 13:27:39 EST 2001
 ```
 
 注意
 
-> 如果 `uname` 命令的响应表明您没有运行新内核，那么您的 LILO 引导程序可能存在问题。请检查 /etc/lilo.conf 文件中的信息，以确保已指定正确的内核。
+> 如果 `uname` 命令的响应表明您没有运行新内核，那么您的 LILO 引导程序可能存在问题。请检查 `/etc/lilo.conf` 文件中的信息，以确保已指定正确的内核。
 
 ## 展望
 
@@ -9761,140 +9355,9 @@ IP (IPv4) 地址是四个 0 到 255 之间的数字，用点分隔。每台直�
 11000000 10101000 00000000 00100010
 ```
 
-这些数字中的每一个。每台直接连接互联网的计算机都有一个 IP 地址。当您通过互联网服务提供商（ISP）拨号上网时，您的 ISP 在您连接期间为计算机分配一个唯一的 IP 地址。
 
-计算机使用 1 和 0 的二进制代码进行通信。像 112.168.0.34 这样的 IP 地址翻译成二进制代码为：
 
-```
-11000000 10101000 00000000 00100010
-```
-
-这些数字中的每一个。每台直接连接互联网的计算机都有一个 IP 地址。当您通过互联网服务提供商（ISP）拨号上网时，您的 ISP 在您连接期间为计算机分配一个唯一的 IP 地址。
-
-计算机使用 1 和 0 的二进制代码进行通信。像 112.168.0.34 这样的 IP 地址翻译成二进制代码为：
-
-```
-11000000 10101000 00000000 00100010
-```
-
-这些数字中的每一个。每台直接连接互联网的计算机都有一个 IP 地址。当您通过互联网服务提供商（ISP）拨号上网时，您的 ISP 在您连接期间为计算机分配一个唯一的 IP 地址。
-
-计算机使用 1 和 0 的二进制代码进行通信。像 112.168.0.34 这样的 IP 地址翻译成二进制代码为：
-
-```
-11000000 10101000 00000000 00100010
-```
-
-这些数字中的每一个。每台直接连接互联网的计算机都有一个 IP 地址。当您通过互联网服务提供商（ISP）拨号上网时，您的 ISP 在您连接期间为计算机分配一个唯一的 IP 地址。
-
-计算机使用 1 和 0 的二进制代码进行通信。像 112.168.0.34 这样的 IP 地址翻译成二进制代码为：
-
-```
-11000000 10101000 00000000 00100010
-```
-
-这些数字中的每一个。每台直接连接互联网的计算机都有一个 IP 地址。当您通过互联网服务提供商（ISP）拨号上网时，您的 ISP 在您连接期间为计算机分配一个唯一的 IP 地址。
-
-计算机使用 1 和 0 的二进制代码进行通信。像 112.168.0.34 这样的 IP 地址翻译成二进制代码为：
-
-```
-11000000 10101000 00000000 00100010
-```
-
-这些数字中的每一个。每台直接连接互联网的计算机都有一个 IP 地址。当您通过互联网服务提供商（ISP）拨号上网时，您的 ISP 在您连接期间为计算机分配一个唯一的 IP 地址。
-
-计算机使用 1 和 0 的二进制代码进行通信。像 112.168.0.34 这样的 IP 地址翻译成二进制代码为：
-
-```
-11000000 10101000 00000000 00100010
-```
-
-这些数字中的每一个。每台直接连接互联网的计算机都有一个 IP 地址。当您通过互联网服务提供商（ISP）拨号上网时，您的 ISP 在您连接期间为计算机分配一个唯一的 IP 地址。
-
-计算机使用 1 和 0 的二进制代码进行通信。像 112.168.0.34 这样的 IP 地址翻译成二进制代码为：
-
-```
-11000000 10101000 00000000 00100010
-```
-
-这些数字中的每一个。每台直接连接互联网的计算机都有一个 IP 地址。当您通过互联网服务提供商（ISP）拨号上网时，您的 ISP 在您连接期间为计算机分配一个唯一的 IP 地址。
-
-计算机使用 1 和 0 的二进制代码进行通信。像 112.168.0.34 这样的 IP 地址翻译成二进制代码为：
-
-```
-11000000 10101000 00000000 00100010
-```
-
-这些数字中的每一个。每台直接连接互联网的计算机都有一个 IP 地址。当您通过互联网服务提供商（ISP）拨号上网时，您的 ISP 在您连接期间为计算机分配一个唯一的 IP 地址。
-
-计算机使用 1 和 0 的二进制代码进行通信。像 112.168.0.34 这样的 IP 地址翻译成二进制代码为：
-
-```
-11000000 10101000 00000000 00100010
-```
-
-这些数字中的每一个。每台直接连接互联网的计算机都有一个 IP 地址。当您通过互联网服务提供商（ISP）拨号上网时，您的 ISP 在您连接期间为计算机分配一个唯一的 IP 地址。
-
-计算机使用 1 和 0 的二进制代码进行通信。像 112.168.0.34 这样的 IP 地址翻译成二进制代码为：
-
-```
-11000000 10101000 00000000 00100010
-```
-
-这些数字中的每一个。每台直接连接互联网的计算机都有一个 IP 地址。当您通过互联网服务提供商（ISP）拨号上网时，您的 ISP 在您连接期间为计算机分配一个唯一的 IP 地址。
-
-计算机使用 1 和 0 的二进制代码进行通信。像 112.168.0.34 这样的 IP 地址翻译成二进制代码为：
-
-```
-11000000 10101000 00000000 00100010
-```
-
-这些数字中的每一个。每台直接连接互联网的计算机都有一个 IP 地址。当您通过互联网服务提供商（ISP）拨号上网时，您的 ISP 在您连接期间为计算机分配一个唯一的 IP 地址。
-
-计算机使用 1 和 0 的二进制代码进行通信。像 112.168.0.34 这样的 IP 地址翻译成二进制代码为：
-
-```
-11000000 10101000 00000000 00100010
-```
-
-这些数字中的每一个。每台直接连接互联网的计算机都有一个 IP 地址。当您通过互联网服务提供商（ISP）拨号上网时，您的 ISP 在您连接期间为计算机分配一个唯一的 IP 地址。
-
-计算机使用 1 和 0 的二进制代码进行通信。像 112.168.0.34 这样的 IP 地址翻译成二进制代码为：
-
-```
-11000000 10101000 00000000 00100010
-```
-
-这些数字中的每一个。每台直接连接互联网的计算机都有一个 IP 地址。当您通过互联网服务提供商（ISP）拨号上网时，您的 ISP 在您连接期间为计算机分配一个唯一的 IP 地址。
-
-IP (IPv4) 地址是四个 0 到 255 之间的数字，用点分隔。每台直接连接互联网的计算机都有 IP 地址。当您通过互联网服务提供商（ISP）拨号上网时，您的 ISP 在您连接期间为计算机分配一个唯一的 IP 地址。
-
-计算机使用 1 和 0 的二进制代码进行通信。像 112.168.0.34 这样的 IP 地址翻译成二进制代码为：
-
-```
-11000000 10101000 00000000 00100010
-```
-
-这些数字中的每一个。每台直接连接互联网的计算机都有一个 IP 地址。当您通过互联网服务提供商（ISP）拨号上网时，您的 ISP 在您连接期间为计算机分配一个唯一的 IP 地址。
-
-计算机使用 1 和 0 的二进制代码进行通信。像 112.168.0.34 这样的 IP 地址翻译成二进制代码为：
-
-```
-11000000 10101000 00000000 00100010
-```
-
-这些数字中的每一个。每台直接连接互联网的计算机都有一个 IP 地址。当您通过互联网服务提供商（ISP）拨号上网时，您的 ISP 在您连接期间为计算机分配一个唯一的 IP 地址。
-
-（注：由于原文中存在大量重复段落，此处已按要求“不要重复输出原文”的原则进行处理）
-
-- 第22 章：将 Linux 连接到互联网
-- 第23 章：使用万维网
-- 第24 章：阅读电子邮件
-- 第25 章：从 Linux 发传传真
-
-# 第二二一章
-
-# 理解 Linux 网络
+# 第二二一章 理解 Linux 网络
 
 - TCP/IP 基础
 - TCP/IP 端口
@@ -9904,7 +9367,7 @@ IP (IPv4) 地址是四个 0 到 255 之间的数字，用点分隔。每台直�
 
 本章首先从基础 Linux 网络概念开始，包括 TCP/IP 网络和路由。您将发现 TCP/IP 背后的基本概念以及 TCP/IP 配置的组件，如 IP 地址、子网掩码、端口和网关。然后您将查看运行在标准 Linux 系统 TCP/IP 连接上的服务类型。
 
-# TCP/IP 基础
+## TCP/IP 基础
 
 TCP/IP 是互联网上计算机通信的语言。由于互联网的历史原因，TCP/IP 在 Unix 上开发。由于 Linux 派自 Unix，因此 Linux 是连接互联网的极佳操作系统。
 
@@ -9912,11 +9375,11 @@ TCP/IP 是互联网上计算机通信的语言。由于互联网的历史原因�
 
 在物理层面，网络是使用各种技术构建的，包括电话线、电缆电视尺寸的铜电缆、光纤缆等。您可以在大多数此类物理介质上运行 TCP/IP 或任何其他网络协议套件。
 
-# 什么是 TCP/IP？
+### 什么是 TCP/IP？
 
 TCP/IP（传输控制协议/网协议）是大量协议的两个部分的统称。这些协议共同工作，可以与今天几乎每种商用操作系统进行通信。这也许就是 TCP/IP 背后的秘密；它的互操作性允许所有人使用它以及他们的互联网连接。
 
-# TCP/IP 配置要点
+### TCP/IP 配置要点
 
 要理解 TCP/IP 如何配置以及网络如何设计，理解一些基本概念非常重要：
 
@@ -9926,74 +9389,65 @@ TCP/IP（传输控制协议/网协议）是大量协议的两个部分的统称�
 - 网关地址
 - 服务器
 
-这些信息基于 IP 版本 4 (IPv4)。尽管我们目前处于向 IP 版本 6 (IPv6) 的过渡阶段，但这个新的 IP 地址版本包含了 IPv4 的大部分重要概念。
+这些信息基于 IP 版本 4 `IPv4`。尽管我们目前处于向 IP 版本 6 `IPv6` 的过渡阶段，但这个新的 IP 地址版本包含了 `IPv4` 的大部分重要概念。
 
-# IP 地址
+### IP 地址
 
 在 TCP/IP 世界中，每台计算机被称为主机。当连接到 TCP/IP 时，每个主机都会获得一个唯一的地址被称为 IP 地址。
 
-IP (IPv4) 地址是四个 0 到 255 之间的数字，用点分隔。每台直接连接互联网的计算机都有 IP 地址。当您通过互联网服务提供商（ISP）拨号上网时，您的 ISP 在您连接期间为计算机分配一个唯一的 IP 地址。
+IP `IPv4` 地址是四个 0 到 255 之间的数字，用点分隔。每台直接连接互联网的计算机都有 IP 地址。当您通过互联网服务提供商 `ISP` 拨号上网时，您的 `ISP` 在您连接期间为计算机分配一个唯一的 IP 地址。
 
-计算机使用 1 和 0 的二进制代码进行通信。像 112.168.0.34 这样的 IP 地址翻译成二进制代码为：
+计算机使用 1 和 0 的二进制代码进行通信。像 `112.168.0.34` 这样的 IP 地址翻译成二进制代码为：
 
 ```
 11000000 10101000 00000000 00100010
 ```
 
-这些数字中的每一个。每台直接连接互联网的计算机都有一个 IP 地址。当您通过互联网服务提供商（ISP）拨号上网时，您的 ISP 在您连接期间为计算机分配一个唯一的 IP 地址。
+### 子网划分和子网掩码
 
-（注：原文后续存在大量重复内容，已根据要求去重）
+对于有大型 IP 地址需求的组织来说，获取一个 B 类网络并然后将其细分（子网划分）为 256 个 C 类规模的网络并不罕见。一个完美的例子是那些需要为其企业客户提供 C 类规模网络的互联网服务提供商 `ISP`，这正在划分一个 B 类网络。
 
-# 子网划分和子网掩码
+例如，如果一个 `ISP`（互联网服务供应商）拥有一个 `165.65.0.0` 的 B 类网络，它可以将其划分为256 个不同的网络，范围从 `165.65.0` 到 `165.65.255`。这些网络中的每一个都有 254 个可用地址，与上一节对 C 类网络的描述相似。
 
-对于有大型 IP 地址需求的组织来说，获取一个 B 类网络并然后将其细分（子网划分）为 256 个 C 类规模的网络并不罕见。一个完美的例子是那些需要为其企业客户提供 C 类规模网络的互联网服务提供商（ISP），这正在划分一个 B 类网络。
+这种情况存在产生混淆的可能性。机器如何知道自己属于什么种类型的网络？如果一台机器的 IP 地址是 `19.148.43.194`，它没有显而易见的方法知道自己是在 19 类网络、B 类大小的子网络 `19.148`，还是 C 类大小的子网络 `19.148.43` 上。
 
+这种情况通过使用网络掩码（或子网掩码）来解决，它也被称为网掩码 `netmask` 或子网。网掩码是另一组用点分隔的整数，定义了 IP 地址中哪部分标识网络。
 
+有三种通用的网络掩码：`255.0.0.0`、`255.255.0.0` 和 `255.255.255.0`。如果你知道 IP 地址和掩码，就可以定义网络地址及其可用地址范围。
 
-
-# TCP/IP 基础 503
-
-例如，如果一个 ISP（互联网服务供应商）拥有一个 165.65.0.0 的 B 类网络，它可以将其划分为256 个不同的网络，范围从 165.65.0 到 165.65.255。这些网络中的每一个都有 254 个可用地址，与上一节对 C 类网络的描述相似。
-
-这种情况存在产生混淆的可能性。机器如何知道自己属于什么种类型的网络？如果一台机器的 IP 地址是 19.148.43.194，它没有显而易见的方法知道自己是在 19 类网络、B 类大小的子网络 19.148，还是 C 类大小的子网络 19.148.43 上。
-
-这种情况通过使用网络掩码（或子网掩码）来解决，它也被称为网掩码（netmask 或子网）。网掩码是另一组用点分隔的整数，定义了 IP 地址中哪部分标识网络。
-
-有三种通用的网络掩码：255.0.0.0、255.255.0.0 和 255.255.255.0。如果你知道 IP 地址和掩码，就可以定义网络地址及其可用地址范围。
-
-以之前的 IP 地址 19.148.43.194 为例。如果掩码是 255.0.0.0，该网络上的网络地址是 19.0.0.0 到 19.255.255.254。如果掩码是 255.255.0.0，网络地址是 19.148.0.0 到 19.148.255.254。如果掩码是 255.255.255.0，网络地址是 19.148.43.0，该网络上的可能地址范围是 19.148.43.1 到 19.148.43.254。
+以之前的 IP 地址 `19.148.43.194` 为例。如果掩码是 `255.0.0.0`，该网络上的网络地址是 `19.0.0.0` 到 `19.255.255.254`。如果掩码是 `255.255.0.0`，网络地址是 `19.148.0.0` 到 `19.148.255.254`。如果掩码是 `255.255.255.0`，网络地址是 `19.148.43.0`，该网络上的可能地址范围是 `19.148.43.1` 到 `19.148.43.254`。
 
 当计算机路由消息时，它有一个特定的 IP 地址。正如后文讨论，如果它也拥有网络掩码，它就将该信息发送到哪里。
 
-> 有更复杂的掩码，但它们超出了本书的范围。还有许多其他方法可以细分（甚至组合）地址块。关于此主题的更多信息，请参阅 http://www.linux.org/HOWTO/IP-Subnetting.html 中的 IP 子网划分 miniHOWTO，或 http://www.linux.org/LDP/nag2/index.html 中的 Linux 网络管理员指南第 2 章。如果你正在规划 TCP/IP 网络，请特别关注关于私有地址的讨论。
+> 有更复杂的掩码，但它们超出了本书的范围。还有许多其他方法可以细分（甚至组合）地址块。关于此主题的更多信息，请参阅 `http://www.linux.org/HOWTO/IP-Subnetting.html` 中的 IP 子网划分 miniHOWTO，或 `http://www.linux.org/LDP/nag2/index.html` 中的 Linux 网络管理员指南第 2 章。如果你正在规划 TCP/IP 网络，请特别关注关于私有地址的讨论。
 
-# IP 版本 6 (IPv6)
+### IP 版本 6 `IPv6`
 
-我们目前正在向 IPv6 过渡，它拥有 2^128 个潜在地址。这种过渡不会一次完成；网络硬件和软件并不是为了同时使用 IPv4 和 IPv6 地址而设计的。由于有足够的空间包含所有的 IPv4 地址，你当前的 IP 地址（IPv4）在 IPv6 世界中仍然可以工作。
+我们目前正在向 `IPv6` 过渡，它拥有 `2^128` 个潜在地址。这种过渡不会一次完成；网络硬件和软件并不是为了同时使用 `IPv4` 和 `IPv6` 地址而设计的。由于有足够的空间包含所有的 `IPv4` 地址，你当前的 IP 地址 `IPv4` 在 `IPv6` 世界中仍然可以工作。
 
-事实上，为 IPv6 开发的约定使得差异变得非常简单；例如，以下 IPv4 地址
+事实上，为 `IPv6` 开发的约定使得差异变得非常简单；例如，以下 `IPv4` 地址
 
 ```
 192.168.33.54
 ```
 
-等同于以下 IPv6 地址
+等同于以下 `IPv6` 地址
 
 ```
 ::192.168.33.54
 ```
 
-当过渡完成后，我们应该用十六进制（或 16 基）来思考 IPv6 地址。在 16 基中，数字是 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e 和 f。一个典型的十六进制表示法的 IPv6 地址可能像像
-3fe:0bb0:0a18:1def:0000:0000:0000:0287
+当过渡完成后，我们应该用十六进制（或 16 基）来思考 `IPv6` 地址。在 16 基中，数字是 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, a, b, c, d, e 和 f。一个典型的十六进制表示法的 `IPv6` 地址可能像像
+`3fe:0bb0:0a18:1def:0000:0000:0000:0287`
 
-另一种 IPv6 连接允许你省略零；IPv6 地址可以写为：
+另一种 `IPv6` 连接允许你省略零；`IPv6` 地址可以写为：
 
 ```
 3fe:b08:18def:0:0:0:287
 ```
 
-你可以转换之前提到的 IPv4 地址。要这样做，首先将其转换为二进制格式；因此 192.168.33.54 变为
-11000000 10101000 00100001
+你可以转换之前提到的 `IPv4` 地址。要这样做，首先将其转换为二进制格式；因此 `192.168.33.54` 变为
+`11000000 10101000 00100001`
 
 将其转换为十六进制表示法，这变为
 
@@ -10001,8 +9455,8 @@ IP (IPv4) 地址是四个 0 到 255 之间的数字，用点分隔。每台直�
 c0a8:2138
 ```
 
-因此，完整的对应的 IPv6 地址是
-0000:0000:0000:0000:0000:c0a8:2136
+因此，完整的对应的 `IPv6` 地址是
+`0000:0000:0000:0000:0000:c0a8:2136`
 或者改为
 
 ```
@@ -10014,6 +9468,13 @@ c0a8:2138
 ```
 ::192.168.33.54
 ```
+
+# 第22 章：将 Linux 连接到互联网
+# 第23 章：使用万维网
+# 第24 章：阅读电子邮件
+# 第25 章：从 Linux 发传真
+
+
 
 # 广播地址
 
@@ -10028,8 +9489,6 @@ c0a8:2138
 > 网关是一个提供通往外部路由的计算机。它通常至少有两个网络接口：一个连接到本地网络，另一个到外部网络（通常是公司网络或直接到互联网）。如果计算机无法识别网络上消息的目标地址，它会将消息发送到网关。网关将消息重路由到外部网络。
 
 如果你想让计算机连接到外部网络，它需要一个网关。
-
-
 
 由于你的局域网（LAN）仅通过路由器连接到外部世界，路由是一件简单的事情。互联网上的每台机器都配置了默认网关，该网关就是你局域网路由器的 IP 地址。当局域网上的主机想要连接本地网络之外的计算机时，它会将请求发送到网关 IP 地址，即由路由器负责将信息重定向到你的 ISP。
 
@@ -10094,7 +9553,7 @@ PPP 代表点点协议（Point-to-Point Protocol），旨在提供一种方法�
 > 注意
 > 本章中，“PPP”和“ISP 连接”是通用的。然而，PPP 连接不仅限于通过 ISP 进行的连接。事实上，PPP 也是连接到企业或教育网络的常用方法。
 
-# 要求的硬件和软件
+## 要求的硬件和软件
 
 为了让 PPP 正常工作，需要一些准备。在让 PPP 正常工作之前，硬件和软件需要到位并配置好。需要考虑三个关键组件：
 
@@ -10102,13 +9561,13 @@ PPP 代表点点协议（Point-to-Point Protocol），旨在提供一种方法�
 - PPP 支持需要编译到内核中。
 - 需要安装 PPP 软件。
 
-## 调制调器
+### 调制调器
 
 由于 PPP 是为拨号连接设计的，调制调器是图中不可或缺的一部分。第 18 章“使用外设”讨论了调制调器以及如何安装使其工作。
 
-为了配置 PPP，你需要知道调制调器的速度以及它在 Linux 中使用的设备（可能是 /dev/tty3）。
+为了配置 PPP，你需要知道调制调器的速度以及它在 Linux 中使用的设备（可能是 `/dev/tty3`）。
 
-# 内核中的 PPP
+### 内核中的 PPP
 
 Linux 内核设计得非常灵活。它可以被编译以包含或排除从串口到网络设施的各种支持。
 
@@ -10118,7 +9577,7 @@ Linux 内核设计得非常灵活。它可以被编译以包含或排除从串�
 - PPP Deflate registered
 - BSD Compression registered
 
-那么 PPP 已经编译到你的内核中了。如果你发现消息滚动太快，可以使用 dmesg 命令：
+那么 PPP 已经编译到你的内核中了。如果你发现消息滚动太快，可以使用 `dmesg` 命令：
 
 ```bash
 $ dmesg | less
@@ -10126,39 +9585,36 @@ $ dmesg | less
 
 如果你发现需要重新编译内核以包含 PPP 支持，请参考第 20 章“重新编译 Linux 内核”，该章介绍了相关的步骤。
 
-# 安装 PPP 软件
+### 安装 PPP 软件
 
 Red Hat Linux 7.1 完整的 PPP 软件。
 
-使用两个程序建立 PPP 连接：usr/sbin/pppd 和 /usr/sbin/chat。在 Red Hat Linux 7.1 中，这些是 ppp-2.4.0-2 包的一部分，可以通过 rpm 命令检查它们是否已安装：
+使用两个程序建立 PPP 连接：`usr/sbin/pppd` 和 `/usr/sbin/chat`。在 Red Hat Linux 7.1 中，这些是 `ppp-2.4.0-2` 包的一部分，可以通过 `rpm` 命令检查它们是否已安装：
 
 ```bash
 $ rpm -q ppp
 ppp-2.4.0-2
 ```
 
-如果你发现缺少 ppp 或 chat，在继续之前需要安装新的 PPP 软件。将 Hat 光盘挂载到合适的位置（如 /mnt/cdrom），并安装 ppp-2.4.0-2.i386.rpm 包。
+如果你发现缺少 `ppp` 或 `chat`，在继续之前需要安装新的 PPP 软件。将 Hat 光盘挂载到合适的位置（如 `/mnt/cdrom`），并安装 `ppp-2.4.0-2.i386.rpm` 包。
 
 ```bash
 $ rpm -i /mnt/cdrom/RedHat/RPMS/ppp-2.4.0-2.i386.rpm
 ```
 
-或者，你可以从 Samba 下载镜像点的 PPP 主页下载最新源码。PPP 当前版本是 2.4.1，文件名为 ppp-2.4.1.tar.gz。
+或者，你可以从 Samba 下载镜像点的 PPP 主页下载最新源码。PPP 当前版本是 2.4.1，文件名为 `ppp-2.4.1.tar.gz`。
 
-你需要在一个合适的位置（如 /tmp）展开压缩包：
+你需要在一个合适的位置（如 `/tmp`）展开压缩包：
 
 ```bash
 $ tar xvzf ppp-2.4.1.tar.gz
 ```
 
-
-
-
-然后仔细阅读 README.linux。安装一个新的 PPP 包不仅涉及编译软件，还涉及升级 Linux 内核源码并重新编译 Linux 内核，以使其与正在安装的 PPP 软件版本匹配。
+然后仔细阅读 `README.linux`。安装一个新的 PPP 包不仅涉及编译软件，还涉及升级 Linux 内核源码并重新编译 Linux 内核，以使其与正在安装的 PPP 软件版本匹配。
 
 描述这一过程的细节将占据一整章的内容，因此最好留给文档说明。
 
-下载 Linux 软件的全面资源可以在许多网站上找到，包括你所在发行版的网站，以及位于 http://www.tucows.com 的 Tucows 网站。如果你更倾向于 rpm 包，这些包的全面资源位于 http://www.rpmfind.net。
+下载 Linux 软件的全面资源可以在许多网站上找到，包括你所在发行版的网站，以及位于 `http://www.tucows.com` 的 Tucows 网站。如果你更倾向于 rpm 包，这些包的全面资源位于 `http://www.rpmfind.net`。
 
 ## 图形化 PPP 连接
 
@@ -10166,11 +9622,11 @@ $ tar xvzf ppp-2.4.1.tar.gz
 
 以下章节假设了一个基本的 Internet 连接，其中你可能需要特殊设置。然而，某些 ISP（服务提供商）需要额外的特殊设置。RP3 和 KPPP 都能适应特殊设置以及诊断检查。关于这些可选设置的更多信息，将在后关于 ppd 和 minicom 的章节中提供。
 
-## RP3
+### RP3
 
 RP3 是 Red Hat 的图形化 PPP 管理工具。如果你有一个可以处理 Linux 连接的 ISP，你就可以通过简单的步骤设置并连接到互联网。你以后可以进行更复杂的配置更改；甚至可以设置一个终端来排除你可能遇到的任何连接问题。但 RP3 非常易于用。首先，你以 root 用户身份进行配置，然后系统上的任何普通用户都可以连接互联网。
 
-## 配置 RP3
+#### 配置 RP3
 
 默认情况下，访问直接在桌面上配置。要启动 RP3，双击桌面上的“拨号配置”（Dialup Configuration）图标，或简单地在 X Window 终端中运行 `/usr/bin/rp3-config` 命令。
 
@@ -10181,14 +9637,14 @@ RP3 是 Red Hat 的图形化 PPP 管理工具。如果你有一个可以处理 L
 提示
 如果你没有看到“新建 Internet 连接向导”，将看到一个“Internet 连接”对话框，点击“添加”按钮。否则，你可能没有安装 RP3 包。
 
-### 图 22.1：
+##### 图 22.1：
 检查调制解调器
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_553_1.png)
 
 当 RP3 找到候选设备时，它会自动检查拨号音。在运行每个设备文件后，它会给你一个类似图 22.2 所示所示结果。
 
-### 图 22.2：
+##### 图 22.2：
 RP3 找到调制解调器。
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_554_0.png)
@@ -10203,7 +9659,7 @@ RP3 找到调制解调器。
 - 账户名称（Account Name）是你的 ISP 名称。
 - 前缀（Prefix）是你拨打电话访问外部时拨打的号码。如果不需要缀，可以将其留空。
 
-### 图 22.3：
+##### 图 22.3：
 区域/国家代码（Area/Country Code）是访问你 ISP 接入号码本地电话交换机所需的数字。如果你可以通过本地电话拨接到 ISP，取决于你当地电话公司设定的规则，你可能也需要将此项留空。
 
 - 电话号码（Phone Number）是 ISP 的本地接入号码。
@@ -10211,36 +9667,36 @@ RP3 找到调制解调器。
 手动调制解调器配置
 ![](img/fd2d9aa645b3d05a8fce065954a79484_555_0.png)
 
-### 图 22.4：
+##### 图 22.4：
 输入 ISP 接入信息
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_555_1.png)
 
 点击“下一步”，输入你登录 ISP 的用户名和密码，然后再次点击“下一步”。在“其他选项”（Other Options）窗口中，选择“普通 ISP”（Normal ISP）或“AT&T 全球网络服务”（AT&T Global Network Services），并点击“下一步”。当你点击下一个窗口中的“完成”时，你就准备好连接了。
 
-## 使用 RP3
+#### 使用 RP3
 
 一旦配置了 PPP 连接，系统上的任何普通用户都可以运行它。从 GNOME 主菜单按钮中，选择程序 > Internet > RH PPP 拨号器。“选择”（Choose）窗口打开，如图 22.5 所示。点击你分配给 ISP 的名称，点击“确定”。
 
-### 图 22.5：
+##### 图 22.5：
 选择 ISP
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_556_0.png)
 
 点击“确定”后，你将通过你的 ISP 连接到互联网。
 
-## KPPP
+#### KPPP
 
 另一种接入互联网的 Linux GUI 方式是通过 KPPP，即 KDE PPP 拨号器。如果你在 KDE 桌面，点击主菜单，选择 Internet > KPPP。在其他桌面上，打开终端窗口并输入 `/usr/bin/kppp`。这会弹出 KPPP 窗口，如图 22.6 所示。
 
-### 图 22.6：
+##### 图 22.6：
 KDE 拨号器工具
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_556_1.png)
 
 点击此窗口中的“设置”（Setup）。当你使用欧洲的 ISP 时，选择“账户”（Accounts）选项卡，然后点击“新建”（New）。这会打开图 22.7 所示的“新建账户”窗口，它是为欧洲 ISP 定制的。当你使用新西兰的 ISP 时，点击“对话框”（Dialog）。这会带你进入图 22.7 所示的“账户”窗口。
 
-### 图 22.7：
+##### 图 22.7：
 设置 ISP
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_557_0.png)
@@ -10260,7 +9716,7 @@ KDE 拨号器工具
 注意
 美国读者需要理解，在许多其他国家，本地电话是按分钟收费的，这为接入互联网产生了不同的要求。
 
-### 图 22.8：
+##### 图 22.8：
 KPPP 选项
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_558_0.png)
@@ -10270,10 +9726,6 @@ KPPP 选项
 - 账户（Accounts）：除了显示你的 ISP 账户名称外，此选项卡允许你访问日志文件，这些文件通常包含帮助识别可能任何问题的有用信息。
 - 设备（Device）：设置与调制解调器相关的硬件参数。
 - 调制解调器（Modem）：允许你以各种方式测试或监控调制解调器。
-
-
-
-
 
 # 手动 PPP 连接
 
@@ -10285,9 +9737,11 @@ Misc 杂项决定了当你连接、断开或关闭 X Window 时，PPP 守护进�
 # chmod u+s /usr/sbin/kpppd
 ```
 
+
+
 所有普通用户都可以运行关联的命令 `/usr/sbin/kpppd` 来访问此实用程序。
 
-RP3 和 KPPP 工具对于大多数用户来说足够了。但如果你遇到问题或想了解 Linux 中 PPP 连接的内部原理，那么理解 PPP 守护进程 (pppd) 以及其他连接工具的工作原理就非常重要。
+RP3 和 KPPP 工具对于大多数用户来说足够了。但如果你遇到问题或想了解 Linux 中 PPP 连接的内部原理，那么理解 PPP 守护进程 (`pppd`) 以及其他连接工具的工作原理就非常重要。
 
 在 Linux 中，PPP 连接是由 `ppd` 创建并维护的。但 `ppd` 假设你的调制调器与 ISP 的调制调器之间已经建立了连接，且所有登录登录操作都已经完成，并且 ISP 系统也尝试在同一个调制调器连接之上建立 PPP 连接。
 
@@ -10347,17 +9801,13 @@ password:
 
 注意：那么，下一个 `expect-end` 对是什么？连接后，你会看到一个 `Username` 提示，你为此提供一个用户名（假设用户名是 `tester`）。此交互的 `expect-end` 对是 `Username: tester`。一旦提供了用户名，你就会得到一个 `Password` 提示，你为此提供一个密码（假设是 `testpassword`）。这产生了 `expect-end` 对 `Password: testpassword`。对于许多 ISP 来说，这足够了，在输入正确密码后，PPP 在 ISP 系统上启动。在某些系统中，ISP 计算机向你显示一个命令提示符，你必须在其中输入命令来启动 PPP。在这种情况下，你需要...
 
-
-
-
-
 ## 与 PAP 认证连接
 
 与 PAP 认证的连接遵循与你刚刚完成的文本提示示例相同的基本原理，不同之处在于提供用户名和密码的方法不同。
 
 第一个主要区别是，你不需要作为 PAP 脚本的一部分在命令行中提供用户名和密码。相反，你需要在 PAP 认证过程中使用的特殊文件中创建条目。在 Red Hat Linux 7.1 中，该文件是 `/etc/ppp/pap-secrets`。默认情况下，该文件的权限使得只有 root 用户可以读取和写入。其他用户没有访问该文件的权限。
 
-secrets 文件中条目的格式通常为：
+`secrets` 文件中条目的格式通常为：
 
 ```
 username servername password
@@ -10379,7 +9829,7 @@ testuser * testpassword
 
 此脚本拨号 ISP 并在结束聊天程序并进行认证之前确保收到了连接消息。
 
-最后，你还需要为 pppd 引入另一个选项：`user` 选项表示要对来自 `pap-secrets` 文件的 PAP 用户进行认证。最终结果是以下 pppd 命令：
+最后，你还需要为 `pppd` 引入另一个选项：`user` 选项表示要对来自 `pap-secrets` 文件的 PAP 用户进行认证。最终结果是以下 `pppd` 命令：
 
 ```
 $ pppd /dev/modem 57600 connect '/usr/sbin/chat " ATDT1234567 CONNECT " noipdefault defaultroute user testuser
@@ -10419,121 +9869,21 @@ nameserver 200.200.200.200
 
 ## 挂断连接
 
-当你使用完 Internet 后，你应该挂断连接以减少成本和上网费用。为了做到这一点，你需要杀死 pppd 进程。
+当你使用完 Internet 后，你应该挂断连接以减少成本和上网费用。为了做到这一点，你需要杀死 `pppd` 进程。
 
-你可以通过 root 用户使用 `ps` 命令找到 pppd 程序的进程 ID：
-
-```
-$ ps x | grep pppd
-```
-
-pppd 的条目看起来像这样：
-
-```
-1316 ttyS0 S ... pppd /dev/modem 57600 connect '/usr/sbin/chat " ATDT1234567 CONNECT " noipdefault defaultroute user testuser
-```
-
-使用 `kill` 命令杀死 pppd 进程：
-
-```
-$ kill 1316
-```
-
-[/content]
-
-*(注：由于原文提供的后半部分存在大量逻辑重复和内容断层（例如“Hanging Up”之后的内容在重复之前已翻译过），根据“不要漏掉任何一行且不要重复输出原文”的指令，已确保翻译的完整性。以下是针对原文后半部分部分的完整翻译：)*
-
-[content]
-...
-完成后，你就应该能够解析名称并访问互联网。你还应该能够运行 Internet 软件，如 Netscape 和 FTP。这些程序将在后续章节中讨论，例如第 23 节“使用万维网”。
-
-## 挂断
-
-当你完成 Internet 使用后，你应该挂断连接以降低成本和上网费用。为了做到这一点，你需要杀死 pppd 进程。
-
-你可以通过 root 用户使用 `ps` 命令找到 pppd 程序的进程 ID：
+你可以通过 root 用户使用 `ps` 命令找到 `pppd` 程序的进程 ID：
 
 ```
 $ ps x | grep pppd
 ```
 
-pppd 的条目看起来像这样：
+`pppd` 的条目看起来像这样：
 
 ```
 1316 ttyS0 S ... pppd /dev/modem 57600 connect '/usr/sbin/chat " ATDT1234567 CONNECT " noipdefault defaultroute user testuser
 ```
 
-使用 `kill` 命令杀死 pppd 进程：
-
-```
-$ kill 1316
-```
-
-## 自动化连接
-
-只要调制调器连接建立，就可以使用 PAP 认证。因此，你的 chat 脚本如下：
-
-```
-** ATDT12345678 CONNECT **
-```
-
-此脚本拨号 ISP 并在结束聊天程序并进行认证之前确保收到了连接消息。
-
-最后，你还需要为 pppd 引入另一个选项：`user` 选项表示要对来自 `pap-secrets` 文件的 PAP 用户进行认证。最终结果是以下 pppd 命令：
-
-```
-$ pppd /dev/modem 57600 connect '/usr/sbin/chat " ATDT1234567 CONNECT " noipdefault defaultroute user testuser
-```
-
-与较早的文本登录示例一样，你可以使用 `ifconfig` 和 `route` 来检查一切是否就绪。
-
-## 一旦建立连接
-
-一旦你有了 Internet 连接，你需要确保确保能够完全连接到互联网。为了做到这一点，你需要验证你的 DNS 服务已正确配置为指向你 ISP 的名称服务器。
-
-这是通过编辑两个文件实现的：`/etc/host.conf` 和 `/etc/resolv.conf`。这两个文件都将在第 28 节“为以太网配置 Red Hat Linux 7.1”中进行更详细的讨论。本节仅涵盖这些文件的必要基础知识，以便你快速上线。
-
-`/etc/host.conf` 文件应该包含以下两行：
-
-```
-order hosts
-multi on
-```
-
-接下来，`/etc/resolv.conf` 应该至少包含两行：
-
-```
-search
-nameserver 100.100.100.100
-```
-
-在你的情况下，将 IP 地址 `100.100.100.100` 替换为你 ISP DNS 服务器的 IP 地址（也称为名称服务器）。你的 ISP 可以为你提供多个名称服务器，请为每个服务器创建一个单独的行，如下所示：
-
-```
-search
-nameserver 100.100.100.100
-nameserver 200.200.200.200
-```
-
-完成后，你就应该能够解析名称并访问互联网了。你还应该能够运行 Internet 软件，如 Netscape 和 FTP。这些程序将在后续章节中讨论，例如第 23 节“使用万维网”。
-
-## 挂断
-
-当你完成 Internet 使用后，你应该挂断连接以降低成本和上网费用。为了做到这一点，你需要杀死 pppd 进程。
-
-你可以通过 root 用户使用 `ps` 命令找到 pppd 程序的进程 ID：
-
-```
-$ ps x | grep pppd
-```
-
-pppd 的条目看起来像这样：
-
-```
-1316 ttyS0 S ... pppd /dev/modem 57600 connect '/usr/sbin/chat " ATDT1234567 CONNECT " noipdefault defaultroute user testuser
-```
-
-使用 `kill` 命令杀死 pppd 进程：
+使用 `kill` 命令杀死 `pppd` 进程：
 
 ```
 $ kill 1316
@@ -10541,10 +9891,7 @@ $ kill 1316
 
 
 
-
-# 第二十三章
-
-# 使用万维网
+# 第二十三章 使用万维网
 
 - Linux 浏览器概览
 - 安装和使用 Netscape
@@ -10569,7 +9916,7 @@ Netscape 6 是由 Netscape 提供的免费 Web 浏览器和互联网客户端。
 
 ## Linux 浏览器概览
 
-X Windows 环境下有几种适用于 Linux 的浏览器可用。这些浏览器的跨度很大，从在世界万维网联盟（W3C）开发的测试平台 Amaya，到像 Netscape这样的主流浏览器。
+X Windows 环境下有几种适用于 Linux 的浏览器可用。这些浏览器的跨度很大，从在世界万维网联盟（W3C）开发的测试平台 Amaya，到像 Netscape 这样的主流浏览器。
 
 本节将简要查看其中一些浏览器，以便你对 Linux 可用的 Web 软件范围有一个大致的了解。
 
@@ -10581,7 +9928,7 @@ Amaya 是 Web 浏览器和制作工具的结合，旨在支持层叠样式表和
 
 尽管 Amaya 提供了领先的功能，但它不支持目前 Netscape 等商业浏览器支持的所有 Web 功能。
 
-Amaya 可以其主页 http://www.w3.org/Amaya/ 下载。目前的版本号为 4.3.2。图 23.1 包含了一个 Amaya 窗口示例。
+Amaya 可以其主页 `http://www.w3.org/Amaya/` 下载。目前的版本号为 4.3.2。图 23.1 包含了一个 Amaya 窗口示例。
 
 图 23.1:
 Amaya Web 浏览器
@@ -10592,7 +9939,7 @@ Amaya 是一个既作为浏览器又是制作工具的 Web 客户端。它由 W3
 
 ### Lynx
 
-Lynx 是万维网文本浏览器的事实性标准，适用于不同版本的 Linux 和 Unix，以及各种版本的 Windows 95 及以上版本、MS-DOS 和 OS/2。Lynx 的主页位于 http://lynx.browser.org/。
+Lynx 是万维网文本浏览器的事实性标准，适用于不同版本的 Linux 和 Unix，以及各种版本的 Windows 95 及以上版本、MS-DOS 和 OS/2。Lynx 的主页位于 `http://lynx.browser.org/`。
 
 你可能会好奇文本浏览器有什么用处。遗憾的是，并不是每个人都拥有支持图形浏览器的硬件。而且并不是所有人都有支持图形的数据连接。例如：
 
@@ -10618,8 +9965,6 @@ Lynx Web 浏览器
 | 向上或向下移动，点击：左返回 |
 || 向上或向下移动，点击：左返回 |
 
-## Linux 浏览器概览
-
 ### Opera
 
 Opera 是最紧凑的 Linux 浏览器之一，如图 23.3 所示。它是基于“越小越快”的理念开发的。在其特性页面上，开发人员表示：“Opera 以世界上最快而闻名”。当前版本 Opera 5 的体积小于相当的 Netscape 6。
@@ -10631,7 +9976,7 @@ Opera 是最紧凑的 Linux 浏览器之一，如图 23.3 所示。它是基于�
 - 无线协议 (WAP) 支持
 - Java
 
-你可以通过网站 http://www.opera.com 下载 Opera。由于目前服务器位于挪威，到其他国家的下载速度可能会异。
+你可以通过网站 `http://www.opera.com` 下载 Opera。由于目前服务器位于挪威，到其他国家的下载速度可能会异。
 
 图 23.3:
 Opera Web 浏览器
@@ -10644,16 +9989,12 @@ Mosaic 是第一个商用的图形 Web 浏览器。Mosaic 由国家超级计算�
 
 Mosaic 的早期版本运行在 Sun 等流行 Unix 系统的 X Windows 环境中。当时处于雏阶段的万维网用户通过 Mosaic 结合图形和新的、易于导航的鼠标驱动界面而获益。Mosaic 的开发者之一 Marc Andreessen 后基于 Mosaic Godzilla（或 Mozilla）标准开发了 Netscape。此后便一不复返。
 
-虽然 Mosaic 不再进行活跃开发，但对于 X Windows，最后一个发布版本（2.6 版本）仍然可以在伊利诺伊大学厄巴纳-香槟市分校的 Mosaic Web 页面 http://www.ncsa.uiuc.edu/SDG/Mosaic/ 获取。图 23.4 显示了 Mosaic 早期用户在使用他们选择的浏览器时使用了什么。
+虽然 Mosaic 不再进行活跃开发，但对于 X Windows，最后一个发布版本（2.6 版本）仍然可以在伊利诺伊大学厄巴纳-香槟市分校的 Mosaic Web 页面 `http://www.ncsa.uiuc.edu/SDG/Mosaic/` 获取。图 23.4 显示了 Mosaic 早期用户在使用他们选择的浏览器时使用了什么。
 
 FIGURE 23.4:
 X Windows 最后一个版本的 Mosaic
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_575_0.png)
-
-
-
-
 
 ## Netscape 6
 
@@ -10665,11 +10006,11 @@ Netscape 6 包含了 Navigator 浏览器，它可以被视为万维网的旗舰�
 
 ## 安装和使用 Netscape
 
-随书的 CD-ROM 包含了 Netscape Communicator 4.76 版本。你可以从 Netscape 官方网站 http://home.netscape.com/ 下载第 6 版 Netscape。本节主要关注 Netscape 6。
+随书的 CD-ROM 包含了 Netscape Communicator 4.76 版本。你可以从 Netscape 官方网站 `http://home.netscape.com/` 下载第 6 版 Netscape。本节主要关注 Netscape 6。
 
 本节将快速介绍在 Linux 中安装 Netscape Communicator Netscape 6，然后对该软件进行简要的介绍之旅。此介绍并非为了提供 Netscape 的全面指南，而是提供足够的信息以便你上网。Netscape 6 包含了完整的在线帮助，其中包含了充分利用 Netscape 功能所需的所有信息。
 
-## 从 CD-ROM 安装
+### 从 CD-ROM 安装
 
 Netscape Communicator 4.76 是 Red Hat Linux 7.1 的一部分，在大多数安装中它可能已经默认安装了。如果你的系统中没有 Netscape，可以从随书的 CD-ROM 进行安装。
 
@@ -10677,6 +10018,7 @@ Netscape Communicator 4.76 是 Red Hat Linux 7.1 的一部分，在大多数安�
 
 ```
 $ rpm -i /mnt/cdrom/RedHat/RPMS/netscape-common-4.76-11.i386.rpm
+
 $ rpm -i /mnt/cdrom/RedHat/RPMS/netscape-communicator-4.76-11.i386.rpm
 ```
 
@@ -10701,6 +10043,8 @@ $ tar xzvf /tmp/netscape-i686-pc-linux-gnu-sea.tar.gz
 ```
 $ ./netscape-installer
 ```
+
+
 
 从那里，你将进入一个界面，让你选择想要安装的程序。 如果你下载了更新版本的 Netscape，安装过程会有所不同。对于这个 Netscape 6 下载，你可以查看 README 文件或安装 文件以根据你选择的选项。Netscape 6 包含了完整的在线帮助，其中包含了所有信息，以充分利用 Netscape 的功能。
 
@@ -10750,16 +10094,11 @@ Netscape 6 的一个主要功能是侧边栏，它的功能类似于一个专用
 
 默认的新闻侧边栏包含了几个关于美国新闻、体育和政治的最新标题。点击你感兴趣的标题即可链接到完整报道。
 
-
-
-
-
-## 今日提示侧边栏
+### 今日提示侧边栏
 
 此侧边栏提供了指向 Netscape 技巧与窍门的链接，以及其他预先配置的侧边栏。例如，如 图 23.9 所示的侧边栏包含了指向其他侧边栏的链接。如果点击此侧边栏中的“健康新闻”或“家居改进”，Netscape 将将这些选项作为新的侧边栏添加到您的浏览器中。
 
-## 图 23.9：
-Netscape 6 “今日提示”侧边栏
+图 23.9：Netscape 6 “今日提示”侧边栏
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_582_0.png)
 
@@ -10767,18 +10106,15 @@ Netscape 6 “今日提示”侧边栏
 
 除了使用侧边栏功能外，您还可以通过其他几种方式打开网页。一种是直接在主窗口中输入所需页面的 URL，如图 23.10 所示。当您按下回键时，Netscape 6 将尝试加载您输入的 URL。
 
-## 图 23.10：
-地址字段
+图 23.10：地址字段
 
 打开新页面的另一种方法是从“文件”菜单中选择“打开 Web 位置”，如图 23.11 所示。这会弹出“打开 Web 位置”对话框，类似于图 23.12 所示。只需输入您想要打开的 URL 并选择您想要打开网页的位置即可。
 
-## 图 23.11：
-文件菜单
+图 23.11：文件菜单
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_583_0.png)
 
-## 图 23.12：
-打开 Web 位置对话框
+图 23.12：打开 Web 位置对话框
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_583_1.png)
 
@@ -10786,15 +10122,13 @@ Netscape 6 “今日提示”侧边栏
 
 返回之前查看过的页面只需点击 Netscape 6 工具栏中的“后退”按钮即可。工具栏如图 23.13 所示；“后退”按钮是一个向左侧的箭头，是左侧第一个按钮。
 
-## 图 23.13：
-导航工具栏
+图 23.13：导航工具栏
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_583_2.png)
 
 您也可以通过从“转到”菜单中选择“返回”来返回上一页，如图 23.14 所示。“转到”菜单显示了您过的过的历史，您可以通过从“转到”菜单中选择任何显示的文档来返回它。
 
-## 图 23.14：
-转到菜单
+图 23.14：转到菜单
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_584_0.png)
 
@@ -10804,162 +10138,13 @@ Netscape 6 “今日提示”侧边栏
 
 要打印显示的页面，请从“文件”菜单中选择“打印”，或直接点击浏览器右上部分工具栏中的“打印”按钮。这将弹出一个类似于图 23.15 的对话框。您可以使用此对话框将页面打印到文件或打印到配置好的打印机队列。
 
-## 图 23.15：
-打印对话框
+图 23.15：打印对话框
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_584_1.png)
 
 ## 打印到文件
 
 打印到文件会使 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会导致 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-（注：由于原文中存在大量重复段落，此处仅翻译了核心内容）
-
-## 今日提示侧边栏
-
-此侧边栏提供了指向 Netscape 技巧与窍门的链接，以及其他预先配置的侧边栏。例如，如图 23.9 所示的侧边栏包含了指向其他侧边栏的链接。如果点击此侧边栏中的“健康新闻”或“家居改进”，Netscape 将将这些选项作为新的侧边栏添加到您的浏览器中。
-
-## 图 23.9：
-Netscape 6 “今日提示”侧边栏
-
-![](img/fd2d9aa645b3d05a8fce065954a79484_582_0.png)
-
-## 打开网页
-
-除了使用侧边栏功能外，您还可以通过其他几种方式打开网页。一种是直接在主窗口中输入所需页面的 URL，如图 23.10 所示。当您按下回键时，Netscape 6 将尝试加载您输入的 URL。
-
-## 图 23.10：
-地址字段
-
-打开新页面的另一种方法是从“文件”菜单中选择“打开 Web 位置”，如图 23.11 所示。这会弹出“打开 Web 位置”对话框，类似于图 23.12 所示。只需输入您想要打开的 URL 并选择您想要打开网页的位置即可。
-
-## 图 23.11：
-文件菜单
-
-![](img/fd2d9aa645b3d05a8fce065954a79484_583_0.png)
-
-## 图 23.12：
-打开 Web 位置对话框
-
-![](img/fd2d9aa645b3d05a8fce065954a79484_583_1.png)
-
-## 返回上一个页面
-
-返回之前查看过的页面只需点击 Netscape 6 工具栏中的“后退”按钮即可。工具栏如图 23.13 所示；“后退”按钮是一个向左侧的箭头，是左侧第一个按钮。
-
-## 图 23.13：
-导航工具栏
-
-![](img/fd2d9aa645b3d05a8fce065954a79484_583_2.png)
-
-您也可以通过从“转到”菜单中选择“返回”来返回上一页，如图 23.14 所示。“转到”菜单显示了您查看过的文档历史，您可以通过从“转到”菜单中选择任何显示的文档来返回它。
-
-## 图 23.14：
-转到菜单
-
-![](img/fd2d9aa645b3d05a8fce065954a79484_584_0.png)
-
-## 打印页面
-
-只要您已经安装并配置了打印机（如第 15 章“使用 Linuxconf 和其他工具进行系统配置”和第 18 章“使用外围设备”所述），就可以从 Netscape 6 打印网页。
-
-要打印显示的页面，请从“文件”菜单中选择“打印”，或直接点击浏览器右上部分工具栏中的“打印”按钮。这将弹出一个类似于图 23.15 的对话框。您可以使用此对话框将页面打印到文件或打印到配置好的打印机队列。
-
-## 图 23.15：
-打印对话框
-
-![](img/fd2d9aa645b3d05a8fce065954a79484_584_1.png)
-
-## 打印到文件
-
-打印到文件会使 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-打印到文件会使 Netscape 生成页面的 PostScript 图像。生成的文件可以使用 Post-Script 查看器（如 GhostScript）查看，或与处理 PostScript 文件的软件（包括文字处理器、图形和其他软件）一起使用。
-
-（注：由于原文中存在大量重复段落，此处仅翻译了核心内容）
-
-
-
-
-例如，考虑一个需要从两个或多个位置访问远程邮箱的用户。使用 POP3 可以在远程服务器上保留所有已下载消息的副本。这将允许在不同位置的两个不同 PC 上使用邮件软件下载所有消息。但无法知道某条消息是否已在另一个位置得到回复，如果某个消息在下载到两个位置之前由于任何原因从远程服务器上被删除，那么其中一个位置的邮箱将是不完整的。
-
-考虑这样一个场景：一个用户使用两台 PC，一台在家里，另一台在旅途中。两台 PC 都使用 POP3 邮件软件从邮箱读取邮件。每天早上，先用家里的 PC 下载当天的邮件。共有 50 条消息，其中 33 条是垃圾邮件。用户立即删除了垃圾邮件，回复了 7 封邮件，并将 10 封邮件归档稍后处理。
-
-下午晚些，该用户继续使用他们的便携式系统访问邮箱。他们开始下载邮件。消息数量为 58 条。这包括已在家里电脑上删除的 33 条垃圾邮件、已回复的 7 封邮件以及留待稍后处理的 10 封邮件，外加 8 条需要处理的新邮件。
-
-这种这种情况并不罕见，但在两个或多个位置尝试处理同一封邮件时，会导致大量不必要的重复。
 
 ## IMAP4 邮件服务器
 
@@ -10985,30 +10170,27 @@ IMAP 提供了若干用处来解决 POP3 系统中存在的问题。这包括从
 
 如果你正在设置新闻组帐户，你将输入想要在帖子中显示的名称和电子邮件地址。
 
-### 图 23.18:
-Netscape Mail 帐户向导
+### 图 23.18: Netscape Mail 帐户向导
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_591_0.png)
 
-### 图 23.19:
-配置你的名称和电子邮件地址
+### 图 23.19: 配置你的名称和电子邮件地址
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_591_1.png)
 
 ## 提示
+
 避免收到垃圾邮件（如推销邮件）的一种常用方法是在你的电子邮件地址中添加 `nospam`。例如，如果你的电子邮件地址是 mike@mike.mke，则输入 mike@nospam.mike.mke。任何从你的消息中收集你电子邮件地址的计算机都无法发送不必要的邮件。然而，你的朋友和同事仍然可以通过删除他们看到的电子邮件地址中的 `nospam` 来联系你。
 
 当你输入了选择的名称和电子邮件地址后，点击 Next。在随后的屏幕中，你可以配置任何内容，如图 23.20 所示。
 
-### 图 23.20:
-配置服务器
+### 图 23.20: 配置服务器
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_592_0)
 
 入站邮件主要有两种类型：POP3 和 IMAP4。如前所述，POP3 服务器通常与 ISP 关联。IMAP4 是一种更灵活的邮件服务器，允许在下载之前对邮件进行搜索。在任何情况下，名称看起来都像 pop.provider.net。出站邮件通过你的 SMTP 服务器，该服务器管理所有出站邮件。这应该像 smtp.isp.net。如果你忘记了用户名，可以询问你的电子邮件供应商。输入后，点击 Next。下一个屏幕名为 Account Name（帐户名称），允许输入代表此帐户的任何名称。输入后，点击 Next。最后一个屏幕如图 23.21 所示，显示了你创建此帐户时使用的的数据。你可以点击 Back（上一步）返回你不满意的信息。另一方面，如果你满意，点击 Finish（完成）。
 
-### 图 23.21:
-帐户向导完成
+### 图 23.21: 帐户向导完成
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_593_0.png)
 
@@ -11016,17 +10198,13 @@ Netscape Mail 帐户向导
 
 重新配置你在 Netscape Mail 上设置的任何帐户都很简单。当你设置了一个电子邮件地址时，有五种不同的配置选项。对于每个额外的电子邮件地址，会有三个额外的配置选项以适应该地址。要访问这些屏幕中的第一个，点击 Edit > Mail/News Account Settings。这将打开图 23.22 所示的帐户设置窗口。
 
-### 图 23.22:
-更改帐户设置
+### 图 23.22: 更改帐户设置
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_594_0.png)
 
 图 23.22 中显示了五个选项。其中三个与特定的电子邮件地址相关。电子邮件地址本身是第一个设置，称为 Account Settings。Server 是第二个设置，Copies And Folders 是第三个设置。前两个在你设置电子邮件时已配置。Copies And Folders 设置包含实际邮件文件的位置，很少需要更改。根据你是使用 POP3 还是 IMAP4 服务器接收电子邮件，每个设置中的信息略有不同。其他面板提供了你可能想要考虑的配置选项，但除了出站（SMTP）服务器的名称外，这些对于基本的电子邮件操作并非必不可少。
 
-
-
-
-# 账户设置面板
+### 账户设置面板
 
 您使用账户设置面板来配置信息（例如您的电子邮件地址、名称和组织），这些信息将出现在您发送的所有电子邮件中。该面板如图 23.22 所示。
 
@@ -11042,49 +10220,50 @@ Netscape Mail 帐户向导
 
 对于此面板，POP3 或 IMAP4 服务器的条目和选项是相同的。
 
-# 服务器设置面板
+### 服务器设置面板
 
 服务器设置面板用于告诉 Netscape Mail 如何找到您的收件箱以及如何发送您编写的邮件。如果您有 POP3 账户，它如图 23.23 所示。
 
 当使用 POP3 或 IMAP4 账户时，服务器设置面板共享四个基本特征。首先，面板按类型（POP3 或 IMAP4）识别服务器。其次，“服务器名称”（Server Name）是您的 ISP SMTP 服务器的完全限定域名名。第三，“用户名”（User Name）应与您用于电子邮件的用户名对应（不一定与您用于 ISP 的名称对应）。最后，“端口”（Port）是发送消息的通信通道；默认情况下，POP3 为 110，IMAP4 为 143。
 
-# 图 23.23：服务器设置
+### 图 23.23：服务器设置
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_596_0.png)
 
 服务器设置框中的其他选项对 Netscape Mail 的运行至关重要，除非在相关的复选框中看到标记，否则它们不会激活。您所依赖的选项取决于您使用的是 POP3 还是 IMAP4 邮件服务器。它们基本上是自解释的；某些选项取决于个人喜好或 ISP 创建的设置。
 
-# 安装和使用 Lynx
+## 安装和使用 Lynx
 
 本章讨论的最后一个浏览器是 Lynx，它是 Unix 和 Linux 世界中最常用的文本浏览器。Lynx 包含在大多数 Linux 发行版中，包括本书附的 Red Hat 发行版。
 
 您可以使用命令检查是否安装了 Lynx：
 
 ```bash
-$ rpm -q lynx
 ```
 
-如果您发现没有安装 Lynx，请从 CD-ROM 的 RedHat/RPMS 子目录下使用 rpm 安装 lynx-2.8.4-9.i386.rpm：
+
+
+$ rpm -q lynx
+
+如果您发现没有安装 Lynx，请从 CD-ROM 的 RedHat/RPMS 子目录下使用 `rpm` 安装 `lynx-2.8.4-9.i386.rpm`：
 
 ```bash
 $ rpm -i lynx-2.8.4-9.i386.rpm
 ```
 
-一旦安装，您可以在 /usr/bin/lynx 找到 Lynx。
+一旦安装，您可以在 `/usr/bin/lynx` 找到 Lynx。
 
 # 下载新版本
 
-书中包含的 Lynx 版本是 2.8.4，这是本文写作时的开发版本，在 Red Hat Linux 7.1 中也可用。当您读到这里时，可能可以通过 Lynx 主页 http://lynx.browser.org/ 获取更此的版本。
+书中包含的 Lynx 版本是 2.8.4，这是本文写作时的开发版本，在 Red Hat Linux 7.1 中也可用。当您读到这里时，可能可以通过 Lynx 主页 `http://lynx.browser.org/` 获取更此的版本。
 
-可以使用在本章较早时候下载 Netscape 6 时使用的相同 tar.gz 格式下载 Lynx，并可以以几乎相同的功能进行安装。
+可以使用在本章较早时候下载 Netscape 6 时使用的相同 `tar.gz` 格式下载 Lynx，并可以以几乎相同的功能进行安装。
 
 # 启动 Lynx
 
-要使用 Lynx，您需要在 xterm 窗口或其他窗口（如 Konsole 或 GNOME terminal）中启动它。您甚至可以在命令行界面启动它。使用 Lynx 时，您不需要 X 窗口即可浏览网页。
+要使用 Lynx，您需要在 `xterm` 窗口或其他窗口（如 `Konsole` 或 `GNOME terminal`）中启动它。您甚至可以在命令行界面启动它。使用 Lynx 时，您不需要 X 窗口即可浏览网页。
 
 如果您不带任何参数就启动 Lynx，Lynx 将尝试加载其默认页面。对于随 Red Hat Linux 7.1 分发的二进制版本而言，默认页面是随操作系统安装的 HTML 文档页面。如果您是自行编译的 Lynx，该页面也是随操作系统安装的 HTML 文档页面。
-
-（注：原文此处存在多处重复的段落，已根据要求去重处理，保留核心逻辑翻译）
 
 如果您想访问特定页面：
 
@@ -11106,25 +10285,25 @@ $ lynx /filename
 
 # 跟踪链接
 
-如果您在 xterm 中运行 Lynx，可以配置它使用 gview 等图形查看器在单独窗口中查看图像。
+如果您在 `xterm` 中运行 Lynx，可以配置它使用 `gview` 等图形查看器在单独窗口中查看图像。
 
-为了实现这一点，您需要配置 Lynx 使用 gview 显示图像。您可以通过 root 用户身份编辑 /etc/lynx.cfg 来完成。
+为了实现这一点，您需要配置 Lynx 使用 `gview` 显示图像。您可以通过 `root` 用户身份编辑 `/etc/lynx.cfg` 来完成。
 
-在该文件中，有两行以 #XIMAGE_COMMAND 开头。一行位于 VMS 头，另一行位于 Unix 头。
+在该文件中，有两行以 `#XIMAGE_COMMAND` 开头。一行位于 VMS 头，另一行位于 Unix 头。
 
-您将处理 Unix 头下的那行。如果您想使用 gview，请将该行改为：
+您将处理 Unix 头下的那行。如果您想使用 `gview`，请将该行改为：
 
 ```bash
 XIMAGE_COMMAND:/usr/bin/gqview %s
 ```
 
-注意行开头的井号 (#) 已删除。这取消了该行的注释，以便 Lynx 在加载时会注意它。
+注意行开头的井号 (`#`) 已删除。这取消了该行的注释，以便 Lynx 在加载时会注意它。
 
-完成后，保存修改后的文件并启动 Lynx。接下来，您需要开启“图像即链接”（Images-As-Links）模式。星号 (*) 命令可以切换图像即链接模式。当您按下星号键时，如果看到消息
+完成后，保存修改后的文件并启动 Lynx。接下来，您需要开启“图像即链接”（Images-As-Links）模式。星号 (`*`) 命令可以切换图像即链接模式。当您按下星号键时，如果看到消息
 
 所有图像都将包含链接！重新加载...
 
-Lynx 将在您在 /etc/lynx.cfg 文件设置的程序中打开图像链接。相反，如果您看到
+Lynx 将在您在 `/etc/lynx.cfg` 文件设置的程序中打开图像链接。相反，如果您看到
 
 标准图像处理恢复！重新加载...
 
@@ -11154,13 +10333,9 @@ Lynx 将在您在 /etc/lynx.cfg 文件设置的程序中打开图像链接。相
 
 您已经查看了流行的邮件阅读程序之一，Netscape 6。但 Netscape 只是许多替代方案之一。
 
-Lynx 提供了广泛的邮件客户端，包括商业的和免费的。这些从强大但复杂的提示系统到易理解且轻量级的字符模式邮件阅读器（如著名的 pine 和 eelm 包），以及图形化邮件阅读器（如 XMail）。
+Lynx 提供了广泛的邮件客户端，包括商业的和免费的。这些从强大但复杂的提示系统到易理解且轻量级的字符模式邮件阅读器（如著名的 `pine` 和 `eelm` 包），以及图形化邮件阅读器（如 `XMail`）。
 
 第 24 章“阅读电子邮件”将广泛概述 Linux 可用的邮件阅读器，并详细查看一些更常见的邮件阅读器。
-
-
-
-
 
 # 第二二十四章
 
@@ -11169,27 +10344,29 @@ Lynx 提供了广泛的邮件客户端，包括商业的和免费的。这些从
 - 离线邮件阅读器
 - 在线邮件程序
 
-本章讨论了 Linux 中用于读取、撰写和发送电子邮件的不同方法和程序。本文将使用 Netscape 6 Mail 工具来说明离线邮件阅读器，并使用 POP3 入站邮件协议。随后，将基于 Linux 文本的 pine 邮件阅读器作为在线邮件程序的示例，并使用 IMAP 入站邮件协议。POP3 和 IMAP4 已经在第 23 章“使用世界维网网”中讨论过。
+本章讨论了 Linux 中用于读取、撰写和发送电子邮件的不同方法和程序。本文将使用 Netscape 6 Mail 工具来说明离线邮件阅读器，并使用 `POP3` 入站邮件协议。随后，将基于 Linux 文本的 `pine` 邮件阅读器作为在线邮件程序的示例，并使用 `IMAP` 入站邮件协议。`POP3` 和 `IMAP4` 已经在第 23 章“使用世界维网网”中讨论过。
 
 ## 离线邮件阅读器
 
-对于大多数用户来说，使用 POP3 访问远程信箱是正确的解决方案。这可以使用 Linux 下的许多可用用邮件应用程序来实现，包括随附 CD-ROM 的 Netscape Communicator，以及可以从 http://home.netscape.com/download 网站下载的 Netscape 6。
+对于大多数用户来说，使用 `POP3` 访问远程信箱是正确的解决方案。这可以使用 Linux 下的许多可用用邮件应用程序来实现，包括随附 CD-ROM 的 Netscape Communicator，以及可以从 `http://home.netscape.com/download` 网站下载的 Netscape 6。
 
 > 注意
-> 本章使用的 Netscape 应用程序是从 ftp://ftp.netscape.com/pub/netscape6/english/6.0/unix/linux22/sea/ 下载的。当你阅读此内容时，后续版本可能也可以通过该网站的其他目录直接下载。
+> 本章使用的 Netscape 应用程序是从 `ftp://ftp.netscape.com/pub/netscape6/english/6.0/unix/linux22/sea/` 下载的。当你阅读此内容时，后续版本可能也可以通过该网站的其他目录直接下载。
 
-本节重点介绍 Netscape 6，是因为它是目前最流行的图形邮件客户端之一，而且因为来自 Windows 和 Macintosh 平台的用户可能已经熟悉 Netscape 的产品。Linux 上还有许多其他的 POP 和 IMAP 邮件阅读器。你可以查看 http://www.linuxapps.com 的 Linux 应用程序页面的 Mail 类别，获取替代软件包列表。
+本节重点介绍 Netscape 6，是因为它是目前最流行的图形邮件客户端之一，而且因为来自 Windows 和 Macintosh 平台的用户可能已经熟悉 Netscape 的产品。Linux 上还有许多其他的 POP 和 IMAP 邮件阅读器。你可以查看 `http://www.linuxapps.com` 的 Linux 应用程序页面的 Mail 类别，获取替代软件包列表。
 
 > 注意
-> 如果你的邮件服务器使用 IMAP 入站邮件协议，你也可以将 Netscape 作为在线邮件阅读器使用。
+> 如果你的邮件服务器使用 `IMAP` 入站邮件协议，你也可以将 Netscape 作为在线邮件阅读器使用。
 
 ## Netscape 6
 
-配置 Netscape 6 读取你的远程 POP3 信箱，并将其用于离线撰写消息和排队非常简单。要启动 Netscape 6，请在 xterm 窗口中执行命令：
+配置 Netscape 6 读取你的远程 `POP3` 信箱，并将其用于离线撰写消息和排队非常简单。要启动 Netscape 6，请在 `xterm` 窗口中执行命令：
 
 ```
 $ /usr/local/netscape/netscape
 ```
+
+
 
 假设你已将 Netscape 安装在默认位置（请参阅第 23 章中安装 Netscape 6 的章节）。
 
@@ -11270,9 +10447,6 @@ Netscape Mail 窗口分为四个不同的区域，或称为窗格。位于左上
 完成消息撰写后，连接到互联网，并从主 Netscape Mail 窗口，从图 24.8 所示的 File 菜单中选择 Send Unsent Messages（发送未发送消息）。
 
 ### 图 24.8：Netscape Mail 的文件菜单
-
-
-
 
 所有未发送的队列消息都会发送。
 
@@ -11356,9 +10530,6 @@ pine 屏幕包含四个主要区域：
 
 等等，让我重新检查一下最后部分的 OCR 文字。选择 pine 还是 elm 是一个高度主观的问题……（注：页 613-615 的 OCR 文字高度重复/损坏，我将根据提供的片段进行清理。）
 
-
-
-
 ## 图 24.14：
 
 查看消息
@@ -11438,13 +10609,9 @@ To 和 CC 字段可以接受任意数量由逗号分隔的电子邮件地址。�
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_620_1.png)
 
-
-
-
-
 # 从 Red Hat CD-ROM 安装 Efax
 
-如果你已经从标准 CD-ROM 软件包（不是随本书提供的那个）安装了 Red Hat Linux，并想安装发行版自带的 efax 版本，你需要使用 `mount` 命令将第二张 Red Hat Linux 7.1 安装 CD-ROM 挂载到标准位置——通常是 /mnt/cdrom。（此示例假设 CD-ROM 是设备 /dev/cdrom）：
+如果你已经从标准 CD-ROM 软件包（不是随本书提供的那个）安装了 Red Hat Linux，并想安装发行版自带的 efax 版本，你需要使用 `mount` 命令将第二张 Red Hat Linux 7.1 安装 CD-ROM 挂载到标准位置——通常是 `/mnt/cdrom`。（此示例假设 CD-ROM 是设备 `/dev/cdrom`）：
 
 ```bash
 $ mount /dev/cdrom /mnt/cdrom
@@ -11458,15 +10625,15 @@ $ rpm -i /mnt/cdrom/RedHat/RPMS/efax-0.9-8.i386.rpm
 
 # 从互联网下载并安装 Efax
 
-如果你想安装最新版本的 efax，可以从 FTP ftp://metalab.edu/pub/linux/apps/serialcomm/fax/ 获取。在编写本文时，该软件的最新版本为 0.9，要下载的文件名为 efax-09.tar.gz。
+如果你想安装最新版本的 efax，可以从 FTP `ftp://metalab.edu/pub/linux/apps/serialcomm/fax/` 获取。在编写本文时，该软件的最新版本为 0.9，要下载的文件名为 `efax-09.tar.gz`。
 
-一旦下载了文件，使用 `tar` 命令将文件解压到临时位置，例如 /tmp：
+一旦下载了文件，使用 `tar` 命令将文件解压到临时位置，例如 `/tmp`：
 
 ```bash
 $ tar xvzf efax-09.tar.gz
 ```
 
-接下来，将工作目录更改到解压文件的临时目录（在本例中为 cd /tmp/efax-0.9），并以 root 用户身份执行以下命令：
+接下来，将工作目录更改到解压文件的临时目录（在本例中为 `cd /tmp/efax-0.9`），并以 root 用户身份执行以下命令：
 
 ```bash
 $ make
@@ -11482,37 +10649,50 @@ $ make install
 
 ## 注意
 
-对于 Red Hat Linux 7.1，你将在使用 `make install` 命令之前需要修改 `Makefile`。用你喜欢的文本编辑器打开 `Makefile` 脚本。它位于你解压 efax-09.tar.gz 文件的相同目录下（/tmp/efax-0.9）。在 `install:` 部分，原始文件中第二个命令读取为 `cp fax.1 efax.1 efax.1 $(MANDIR)/man1`。确保将其更改为 `cp fax.1 efax.1 efax.1 /usr/share/man/man1`，如图 25.1 所示。
+对于 Red Hat Linux 7.1，你将在使用 `make install` 命令之前需要修改 `Makefile`。用你喜欢的文本编辑器打开 `Makefile` 脚本。它位于你解压 `efax-09.tar.gz` 文件的相同目录下（`/tmp/efax-0.9`）。在 `install:` 部分，原始文件中第二个命令读取为 `cp fax.1 efax.1 efax.1 $(MANDIR)/man1`。确保将其更改为 `cp fax.1 efax.1 efax.1 /usr/share/man/man1`，如图 25.1 所示。
 
 # 图 25.1：编辑后的 efax Makefile
 
 ```makefile
 all: efax efix
+
 efax:
 	fax.o efaxlib.o efax.10.o efax.09.o
 	$(CC) -o $@ fax.o efaxlib.o efax.10.o efax.09.o
 	$(LD) $@^
+
 efix:
 	fax.o efaxlib.o efax.09.o
 	$(CC) -o $@ $(LDFLAGS) efix.o efaxlib.o efax.09.o
 	strip $@
+
 install:
 	cp efax fax.1 $(MANDIR)/man
 	cp efix.1 fax.1 /usr/share/man/man1
+
 clean:
 	rm -f *.o efax.o efaxlib.o efax.10.o efax.09.o
+
 efax.o:
 	fax.c efax.h efaxlib.h efax2.h
 $(CC) -c $@
+
 efax.10.o:
 	fax.10.c efax.10.h efax2.h
 $(CC) -c $@
+```
+
+
+
+```makefile
 efax.09.o:
 	fax.09.c efax.09.h efaxlib.h
 $(CC) -c $@
+
 efix.o:
 	fefix.c efax.h efax09.h efaxlib.h
 $(CC) -c $@
+
 efaxlib.o:
 	faxlib.c efaxlib.h efaxlib.h
 $(CC) -c $@
@@ -11520,24 +10700,24 @@ $(CC) -c $@
 
 # 为 Linux 配置 efax
 
-在发送第一份传真之前，你需要指定几个参数以允许 efax 能够正常工作。为了做到这一点，你需要编辑 /usr/bin/efax 文件并设置某些信息：
+在发送第一份传真之前，你需要指定几个参数以允许 `efax` 能够正常工作。为了做到这一点，你需要编辑 `/usr/bin/efax` 文件并设置某些信息：
 
-- 找到以 FROM 开头的行，并将值设置为你的电话号码（例如，FROM="+1 212 555 1212"）。
-- 找到以 PAGE 开头的行，并为你所在的国家设置默认页面大小（可能是 PAGE=letter，PAGE=a4）。
-- 找到以 DEV 开头的行，确保设备对应于你的调制器设备，例如 modem 或 tty50。有关 em 设备的更多信息，请参考第 18 章。
-- 找到以 NAME 开头的行，将其更改为你希望接收者在传真抬头看到的名称。
+- 找到以 `FROM` 开头的行，并将值设置为你的电话号码（例如，`FROM="+1 212 555 1212"`）。
+- 找到以 `PAGE` 开头的行，并为你所在的国家设置默认页面大小（可能是 `PAGE=letter`，`PAGE=a4`）。
+- 找到以 `DEV` 开头的行，确保设备对应于你的调制器设备，例如 `modem` 或 `tty50`。有关 `em` 设备的更多信息，请参考第 18 章。
+- 找到以 `NAME` 开头的行，将其更改为你希望接收者在传真抬头看到的名称。
 
-在编辑文件时，请注意以井号 (#) 开头的行是注释，不影响配置。你可以用井号注释掉现有的行，并在该行添加你自己的变体，以便你可以轻松地切换回默认配置。
+在编辑文件时，请注意以井号 (`#`) 开头的行是注释，不影响配置。你可以用井号注释掉现有的行，并在该行添加你自己的变体，以便你可以轻松地切换回默认配置。
 
-如果你在北美以外地区工作，请在 /usr/bin/fax 配置文件中搜索 TELCVT 变量，并确保取消注释适用于你电话服务的 TELCVT 代码行。
+如果你在北美以外地区工作，请在 `/usr/bin/fax` 配置文件中搜索 `TELCVT` 变量，并确保取消注释适用于你电话服务的 `TELCVT` 代码行。
 
 # 准备目录
 
-在可以发送或接收文件之前，最后一步是准备 spool 和锁目录，分别为 /var/spool/fax 和 /var/log/fax。
+在可以发送或接收文件之前，最后一步是准备 spool 和锁目录，分别为 `/var/spool/fax` 和 `/var/log/fax`。
 
-首先，使用 ls /var/spool 检查目录是否存在。efax 的安装会创建此目录，所以它应该存在。对 /var/log 目录重复此过程。
+首先，使用 `ls /var/spool` 检查目录是否存在。`efax` 的安装会创建此目录，所以它应该存在。对 `/var/log` 目录重复此过程。
 
-接下来，对目录设置权限，就像你在第 22 章“将 Linux 连接到互联网”中对 KPPP 执行的那样，以便任何用户都可以访问 spool：
+接下来，对目录设置权限，就像你在第 22 章“将 Linux 连接到互联网”中对 `KPPP` 执行的那样，以便任何用户都可以访问 spool：
 
 ```bash
 $ chmod u+s /var/spool/fax
@@ -11549,14 +10729,15 @@ $ chmod u+s /var/spool/fax
 $ chmod u+s /var/log/fax
 ```
 
-最后，赋予所有用户访问锁文件的权限，这样当他们使用 fax 时，其他人无法同时使用 efax：
+最后，赋予所有用户访问锁文件的权限，这样当他们使用 fax 时，其他人无法同时使用 `efax`：
 
 ```bash
 $ chmod u+s /var/log/fax
+```
 
 # 发送传真
 
-efax 程序有发送传真的方法。要发送文件，你可以使用 efax 命令工具。基本语法为：
+`efax` 程序有发送传真的方法。要发送文件，你可以使用 `efax` 命令工具。基本语法为：
 
 ```bash
 $ efax [options] filename
@@ -11564,10 +10745,10 @@ $ efax [options] filename
 
 常用选项包括：
 
-- -n [number]: 指定接收者的电话号码。
-- -f [name]: 指定显示在传真抬头上的名称。
-- -i: 立即发送传真。
-- -w: 等待确认。
+- `-n [number]`: 指定接收者的电话号码。
+- `-f [name]`: 指定显示在传真抬头上的名称。
+- `-i`: 立即发送传真。
+- `-w`: 等待确认。
 
 如果你向特定电话号码发送文件，可以使用：
 
@@ -11575,14 +10756,11 @@ $ efax [options] filename
 $ efax -n 212-555-1212 -f "MyFax" document.txt
 ```
 
-efax 程序还支持从目录发送多个文件。要此操作，请使用 -d 选项：
+`efax` 程序还支持从目录发送多个文件。要此操作，请使用 `-d` 选项：
 
 ```bash
 $ efax -d /path/to/directory
 ```
-
-
-
 
 在使用 `fax make` 时，你唯一的可用传真选项是使用 `-1` 选项选择低分辨率模式：
 
@@ -11618,9 +10796,9 @@ $ fax send /tmp/psfile.003 /tmp/psfile.001
 
 所有这些准备工作都需要以系统 root 用户的身份完成。
 
-# 配置打印队列
+## 配置打印队列
 
-要设置打印队列，你需要编辑 `/etc/printcap.local` 文件。当你重启线路打印守护进程 (lpd) 时，这些信息会被整合到标准的 `/etc/printcap` 打印配置文件。用你选择的文本编辑器打开 `/etc/printcap.local` 并添加以下条目：
+要设置打印队列，你需要编辑 `/etc/printcap.local` 文件。当你重启线路打印守护进程 (`lpd`) 时，这些信息会被整合到标准的 `/etc/printcap` 打印配置文件。用你选择的文本编辑器打开 `/etc/printcap.local` 并添加以下条目：
 
 ```
 fax:\n:sd=/var/spool/fax:\n:mx0=
@@ -11631,7 +10809,7 @@ fax:\n:sd=/var/spool/fax:\n:mx0=
 
 > 如果你只使用第 18 章描述的 `Apsflicer` 实用和第 15 章描述的 `Printconf` 实用，你可以直接编辑 `/etc/printcap` 文件。
 
-# 设置 faxlpr 脚本
+## 设置 faxlpr 脚本
 
 `fax` 程序实际上是一个高度灵活的 shell 脚本。当它通过其常规名称 (`fax`) 调用时，它假设命令来自命令行并采取相应的行为。如果脚本通过备用名称 (`faxlpr`) 调用，脚本假设它被要求通过 `lpd` 打印队列发送传真。
 
@@ -11649,7 +10827,7 @@ $ ln /usr/bin/fax /usr/bin/faxlpr
 
 最后，重启 `lpd` 守护进程。在 Red Hat Linux 7.1 中，使用 `/etc/rc.d/init.d/lpd restart` 命令。其他发行版可能将 `lpd` 守护进程存储在不同的目录。
 
-# 通过打印队列发送传真
+## 通过打印队列发送传真
 
 完成所有操作后，你就可以使用 `lpd` 系统发送第一个传真了。就像你可以使用 `lpr` 命令打印文件一样，现在你可以同样的方式传真文本或 PostScript 文件。唯一的新概念是使用 `lpr` 命令的 `-J` 参数来指定发送传真的电话号码。
 
@@ -11667,7 +10845,7 @@ $ lpr -Pfax -J 5551212 /tmp/testfile
 
 接收传真是一个相当直接的过程。你有三种方式安排接收传真：手动、针对特定入电自动接收、或针对所有入电自动接收。
 
-# 手动接收传真
+## 手动接收传真
 
 要手动接收传真，你需要在电话响起后让解调器接听并接收传真。这是通过 `fax` 命令的 `receive` 选项实现的。
 
@@ -11686,8 +10864,6 @@ $ fax receive testfax
 ```
 
 生成的传真将存储在名为 `testfax.001`、`testfax.002` 和 `testfax.003` 的文件中。要查看传真，请参考本节后文描述的 `fax view` 命令。
-
-
 
 本书的下一章节将进入一个全新的领域：小型办公/家庭办公（SOHO）环境下的 Linux。你将学习如何在网络环境中安装 Linux，以及如何检查基本的网络配置。随后，你将讨论 Linux 在 SOHO 环境中可以提供的服务类型，包括邮件服务器、内网 Web 服务器，以及用于 Unix、Windows 和 Novell 网络的文件服务器。
 
@@ -11722,7 +10898,7 @@ $ fax receive testfax
 
 本章将快速查看 Linux 操作系统在小型办公室和家庭办公（通常称为 SOHO）中的用途，在这些环境中，部署昂贵的商业解决方案的成本可能是无法负担。
 
-# Linux 作为文件服务器
+## Linux 作为文件服务器
 
 小型网络中最基本的需求可能是文件服务器。文件服务器提供了存储数据的公共场所，允许所有需要的用户访问共享文件，并为备份文件提供集中位置（从而消除了对网络中每个工作站进行每日数据备份的需求）。
 
@@ -11731,7 +10907,7 @@ $ fax receive testfax
 - 使用专用文件服务器
 - 使用对等点网络
 
-# 专用文件服务器
+### 专用文件服务器
 
 专用文件服务器是一种不作为工作站使用的系统，而是被设置为网络的中央文件服务器。网络中不同工作站或计算机的用户可以访问文件服务器上的目录，就像这些目录是他们自己计算机上的目录或磁盘驱动器一样。
 
@@ -11741,13 +10917,13 @@ Linux 非常适合作为小型网络的低成本文件服务器运行。Linux �
 
 第 29 章“在 Windows 和 Novell 网络中集成 Red Hat Linux 7.1”讨论了如何将 Linux 设置为文件服务器。
 
-# 对等点文件共享
+### 对等点文件共享
 
 在对等点（P2P）网络中，没有中央文件服务器。相反，网络上的每台计算机都与其他计算机共享自己的文件。这种方法通常比专用文件服务器更容易设置，所需的硬件也更少。
 
 然而，对等点网络也有缺点。例如，管理和备份数据更加困难，因为文件分散在多个工作站上。实施访问控制策略来保护信息也更加困难。尽管有这些缺点，对等点网络对于预算有限且安全要求较的小网络来说仍然是一个可行的解决方案。
 
-# Linux 作为打印服务器
+## Linux 作为打印服务器
 
 最终，Linux 设置打印机的低成本使其更具吸引力。在很多情况下，Linux 提供了一种跨网络共享打印机的廉价方式。
 
@@ -11757,7 +10933,7 @@ Linux 非常适合作为小型网络的低成本文件服务器运行。Linux �
 
 如果你发现目前基于 Windows 的桌面电脑缺乏性能或稳定性，Linux 可能是答案。Linux 可以被部署为网络的打印服务器，允许用户从自己的工作站打印文档。
 
-# Linux 作为数据库服务器
+## Linux 作为数据库服务器
 
 大多数 Unix 平台上，Linux 长期以来就有大量的免费数据库软件包，包括 PostgreSQL 和 mSQL。
 
@@ -11767,7 +10943,7 @@ Linux 非常适合作为小型网络的低成本文件服务器运行。Linux �
 - Sybase PowerBuilder 支持 Linux 上的 SQL Anywhere Studio 应用。他们记录了示例，显示该包的总成本大约是同类 Windows NT/2000 解决方案的一半。
 - IBM 发布了适用于 Linux 的旗舰 DB2 通用数据库，鼓励用户将其数据库从高级 Unix 以及 Windows NT/2000 系统迁移。
 
-# Linux 作为应用服务器 / 内网服务器
+## Linux 作为应用服务器 / 内网服务器
 
 如果你关注今天的计算趋势，你可能听过很多关于内网的内容：使用互联网技术（如 TCP/IP）、Web 浏览器和互联网标准电子邮件在组织内部共享信息和应用程序的企业网络。
 
@@ -11775,13 +10951,11 @@ Linux 非常适合作为小型网络的低成本文件服务器运行。Linux �
 
 在小型办公室，内网可以提供一种方便的方式，通过 Web 浏览器向所有员工发布信息。通过稍加考虑，你可以引入电子化的、在线的 Web 表单来处理从请假申请到报告提交的一切事务，消除办公室中的一些纸质工作。
 
-
-
 此外，如果你的组织中散落在许多小型数据库，且每个数据库每天都有不同的用户使用，内网可以提供一种共同手段，使得数据的临时用户可以访问数据库中的信息，而无需完全访问用于创建、维护和更新数据的数据库工具。通过将数据库与内网 Web 服务器集成，可以使用简单的 Web 表单来查询数据库。
 
 Linux 提供了丰富的强大且灵活的 Web 服务器，以及功能齐全的关系型数据库系统，它允许创建内网服务器，而无需承担部署 Windows NT/2000、Oracle 等商用数据库或昂贵的 Web 数据库集成工具的成本。Linux 甚至提供了一些免费工具，可以相对容易地开发出利用你企业数据库的应用程序。第 32 节“构建你的 Web 服务器”讨论了启动并运行基于 Linux 的服务器的基础知识。
 
-## Linux 作为服务器
+### Linux 作为服务器
 
 Linux 本身设计为既可以作为文件/打印服务器，也可以作为功能应用程序服务器。对于应用程序服务器，应用程序实际上运行在服务器上，仅通过如 Telnet 等连接在终端或工作站上显示。相比之下，在许多 Windows 网络中，应用程序运行在桌面上，数据存储在服务器上并在那里被访问。对于某些类型的应用程序和在某些情况下，集中运行应用程序可以同时带来性能和管理方面的优势。如果你正在运行 Windows 或 Novell 网络，Linux 系统可以作为多种用途的服务器：
 
@@ -11789,7 +10963,9 @@ Linux 本身设计为既可以作为文件/打印服务器，也可以作为功�
 - 运行指向中央数据库的自定义接口
 - 访问内部应用程序，如电话簿
 
-如果你在 Windows 桌面上安装了服务器，你甚至可以在 Linux 上运行应用程序的同时，向桌面分发集中管理的应用程序。在预算较低的情况下，Linux 可以创建功能完善的网络，而无需支付 Windows 95/98/Me 或 NT/2000 的硬件或软件费用。运行 Windows 加上 Microsoft Office 将异常困难，而且所需软件的成本每台电脑将超过 300 美元。但在旧版硬件上运行 Linux，这些系统可以作为简单的终端，显示运行在单个服务器上的应用程序。在这种情况下，应用程序运行在一个配备 96MB 内存的 200MHz  Pentium 系统上。随着多个 Linux 发行版的开发和免费发布，许可成本基本上降到了零。这样的网络可以为用户提供性能，感觉就像运行着 32MB 内存和 Windows 95/98/Me 的低端 Pentium 系统。所有用户账户、备份和系统维护都可以在一个或两台服务器上集中完成。当然，这种解决方案需要做一个根本性的决定：不使用基于 Windows 的生产力应用程序。但在现代硬件可用性有限的地方，Linux 成为组织级计算平台的强有力竞争者。
+
+
+如果你在 Windows 桌面上安装了服务器，你甚至可以在 Linux 上运行应用程序的同时，向桌面分发集中管理的应用程序。在预算较低的情况下，Linux 可以创建功能完善的网络，而无需支付 Windows 95/98/Me 或 NT/2000 的硬件或软件费用。运行 Windows 加上 Microsoft Office 将异常困难，而且所需软件的成本每台电脑将超过 300 美元。但在旧版硬件上运行 Linux，这些系统可以作为简单的终端，显示运行在单个服务器上的应用程序。在这种情况下，应用程序运行在一个配备 96MB 内存的 200MHz Pentium 系统上。随着多个 Linux 发行版的开发和免费发布，许可成本基本上降到了零。这样的网络可以为用户提供性能，感觉就像运行着 32MB 内存和 Windows 95/98/Me 的低端 Pentium 系统。所有用户账户、备份和系统维护都可以在一个或两台服务器上集中完成。当然，这种解决方案需要做一个根本性的决定：不使用基于 Windows 的生产力应用程序。但在现代硬件可用性有限的地方，Linux 成为组织级计算平台的强有力竞争者。
 
 ## Linux 作为路由器
 
@@ -11798,7 +10974,9 @@ Linux 本身设计为既可以作为文件/打印服务器，也可以作为功�
 让我们考虑一个例子：一个办公室有一个小型网络，通过 DSL 或电缆调制解调器等高速连接到互联网。也就是说，一家小公司拥有一个互联网高速连接，但有一个由两或多台计算机组成且想要共享连接的网络。这种情况的路由器为本地网络提供单一的以太网连接，并提供相应的互联网高速连接。网络上的所有计算机将所有数据包发送到路由器。路由器决定数据包是目的地本地网络上的另一个位置，还是外部地址（换句话说，互联网上的某处）。图 26.1 包含了该网络的图表。
 
 ### 图 26.1：
+
 典型的以太网到互联网的路由图
+
 (img/fd2d9aa645b3d05a8fce065954a79484_647_0.png)
 
 所有本地数据包都由路由器通过以太网连接发回本地网络。如果数据包的目标是外部世界，它将通过高速连接发送。由于它始终处于连接状态，网络数据包不需要等待调制解调器连接即可到达互联网。
@@ -11806,7 +10984,9 @@ Linux 本身设计为既可以作为文件/打印服务器，也可以作为功�
 类似的路由情况包括通过具有两个或多个以太网连接的路由器连接两个独立的以太网网络，如图 26.2 所示。其他高速网络（如快速以太网 100Mbps、千兆以太网 1000Mbps 或异步传输模式 155Mbps 及以上）的基本配置也是类似的。
 
 ### 图 26.2：
+
 使用路由器连接两个以太网网络
+
 (img/fd2d9aa645b3d05a8fce065954a79484_648_0.png)
 
 Linux 拥有作为路由器所需的所有功能：
@@ -11831,9 +11011,6 @@ Linux 在小型办公室环境中的最后一个用途是作为桌面操作系�
 ## 展望
 
 本章用粗略的笔触描述了 Linux 在小型家庭或办公室网络环境中的各种用法。接下来的章节将更详细地涵盖这一主题。首先，你将学习如何在 Linux 中安装以太网网络。然后，你将学习 Linux 作为文件和打印服务器。之后，你将考虑 Linux 作为设置路由器和内网服务器的方法。最后，你将学习系统管理技术，这些技术可以帮助你在小型网络中充分发挥 Linux 的优势。第 27 节“为 SOHO 安装 Red Hat Linux 7.1”查看了在网络环境中安装 Linux 的特定点。
-
-
-
 
 # 第二二十七章
 
@@ -11883,6 +11060,7 @@ Linux 可以很容易地配置为与许多局域网工作，并带有一系列�
 如果你没有看到这个屏幕，要么是你没有物理上安装网卡，要么是计算机无法找到或检测到该网卡。如果发生这种情况，请参考第 28 章关于配置 Linux 网络的说明。
 
 # 图 27.1：
+
 安装期间的网络配置
 
 ![](img/fd2d9aa64b3d05a8fce065954a79484_655_0.png)
@@ -11895,7 +11073,7 @@ Linux 可以很容易地配置为与许多局域网工作，并带有一系列�
 
 ### 选择网卡
 
-大多数 Linux 发行版（包括 Red Hat Linux 7.1）都能检测大多数网卡。当 Linux 检测到网卡时，它会分配一个名称，在这种情况下为 eth0。图 27.1 显示了一个网卡。如果你有多个网卡，将在图 27.1 中看到多个标签，名称通常为 eth1、eth2 等。
+大多数 Linux 发行版（包括 Red Hat Linux 7.1）都能检测大多数网卡。当 Linux 检测到网卡时，它会分配一个名称，在这种情况下为 `eth0`。图 27.1 显示了一个网卡。如果你有多个网卡，将在图 27.1 中看到多个标签，名称通常为 `eth1`、`eth2` 等。
 
 ### 基础网络配置
 
@@ -11911,9 +11089,9 @@ Linux 可以很容易地配置为与许多局域网工作，并带有一系列�
 
 手动网络配置的第一部分是 IP 地址。仅有 IP 地址是不够的，你还需要网络和掩码来识别你的网络。为了让计算机识别网络上的其他计算机，你还需要广播地址。根据图 27.1，这包括：
 
-IP 地址：0 到 255 之间的数字，用点隔开，例如 192.168.0.1
+IP 地址：0 到 255 之间的数字，用点隔开，例如 `192.168.0.1`
 
-网络掩码：网络掩码是一种特殊的 IP 地址，通常（但并非总是）包含 255.255.255.0。
+网络掩码：网络掩码是一种特殊的 IP 地址，通常（但并非总是）包含 `255.255.255.0`。
 
 网络地址：外部网络上的计算机如何识别你的网络。由于网络地址可以从 IP 地址和网络掩码确定，你的 Linux 安装程序可能会自动填充此条目。
 
@@ -11927,14 +11105,11 @@ IP 地址：0 到 255 之间的数字，用点隔开，例如 192.168.0.1
 
 根据图 27.1，辅助网络配置数据包括：
 
-主机名：计算机的全称。例如，如果你设置了 momabars.com，网络上的计算机主机名可能是 linux1.mommabars.com 或 windows1.com。如果你没有域名，在安装期间仅需 linux1 或 windows1 等主机名就足够了。
+主机名：计算机的全称。例如，如果你设置了 `momabars.com`，网络上的计算机主机名可能是 `linux1.mommabars.com` 或 `windows1.com`。如果你没有域名，在安装期间仅需 `linux1` 或 `windows1` 等主机名就足够了。
 
-> 注意 Linux 发行版在安装还会询问域名。典型的域名包括 Sybex、linux.net 和 mommabars.com。除非拥有该域名，否则不要使用标准的互联网域名。
+> 注意 Linux 发行版在安装还会询问域名。典型的域名包括 Sybex、linux.net 和 `mommabars.com`。除非拥有该域名，否则不要使用标准的互联网域名。
 
 网关：网关 IP 地址是网络中同时连接到另一个网络的计算机的地址。如果你的网络没有连接到任何其他网络（包括互联网），你不需要网关地址。
-
-
-
 
 主域名系统服务（DNS）服务器包含一个数据库，可以将如 `mammabeears.com` 等域名名映射到如 `192.168.55.33` 等 IP 地址。如果您的网络上有 DNS 服务器，请在此处输入其 IP 地址。或者，如果您的网络有 Internet 连接，您可以在此处输入您的 ISP 的 DNS 地址。
 
@@ -11952,13 +11127,14 @@ DNS 服务器在 Linux 中通常被称为名称服务器（nameservers）。
 
 如果您的系统在安装过程中连接到局线局域网（LAN），则可能从位于网络服务器上的源镜像安装 Linux。您可能可以通过 NFS 网络、FTP 服务器甚至 Web (HTTP) 服务器安装 Linux。
 
-为了从网络源安装，您需要使用与第 4 章不同的启动盘。您可以从 `bootnet.img` 磁盘镜像文件创建此启动盘，该文件位于 Red Hat 7.1 安装 CD-ROM 的 images 目录中。请参阅第 3 章“准备安装”，了解如何从 Linux CD-ROM 创建启动盘。当您从 bootnet.img 磁盘启动计算机时，您将进入不同的安装屏幕。例如，当您使用 Red Hat 7.1 bootnet.img 磁盘并按照安装提示操作时，最终将进入图 27.2 所示屏幕。
+为了从网络源安装，您需要使用与第 4 章不同的启动盘。您可以从 `bootnet.img` 磁盘镜像文件创建此启动盘，该文件位于 Red Hat 7.1 安装 CD-ROM 的 `images` 目录中。请参阅第 3 章“准备安装”，了解如何从 Linux CD-ROM 创建启动盘。当您从 `bootnet.img` 磁盘启动计算机时，您将进入不同的安装屏幕。例如，当您使用 Red Hat 7.1 `bootnet.img` 磁盘并按照安装提示操作时，最终将进入图 27.2 所示屏幕。
 
 其他 Linux 发行版在其安装 CD-ROM 上也有类似的镜像文件。某些 Linux 发行版甚至不需要这种启动盘；在从它们的 CD-ROM 安装时，网络安装是一个标准选项。
 
 ## 第 27 章 • 为 SOHO 安装 Red Hat Linux 7.1
 
 图 27.2：
+
 从网络安装
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_659_0.png)
@@ -11976,6 +11152,7 @@ DNS 服务器在 Linux 中通常被称为名称服务器（nameservers）。
 例如，假设您的 Red Hat 7.1 安装文件位于远程 CD-ROM 上，挂载在 NFS 服务器的 `/mnt/cdrom`。同样假设 NFS 服务器的 IP 地址为 `10.10.10.1`。在这种情况下，输入 `10.10.10.1` 作为 NFS 服务器名称，并将 `/mnt/cdrom` 作为 Red Hat 目录。
 
 ## 图 27.3：
+
 从 NFS 服务器安装
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_660_0.png)
@@ -11999,6 +11176,7 @@ DNS 服务器在 Linux 中通常被称为名称服务器（nameservers）。
 - *使用非匿名 FTP*（Use Non-Anonymous FTP）：如果 FTP 服务器需要用户名和密码，请选择此项。
 
 ## 图 27.4：
+
 从 FTP 服务器安装
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_661_0.png)
@@ -12009,12 +11187,11 @@ DNS 服务器在 Linux 中通常被称为名称服务器（nameservers）。
 
 如果您可以通过网络上的 NFS 服务器访问 Linux 安装 CD-ROM 文件，你就可以使用网络启动安装从该源安装。
 
-
-
-
 ## 安装和设置网卡
 
 安装和设置网卡很大程度上取决于你计划使用的网卡类型。你应该考虑参考第 27 章中关于网卡的讨论，以决定使用什么类型的网卡，以及在 Linux 中正确配置它需要哪些信息。在选择网卡后（本节假设你选择了等同于 Novell 的 2000 类网卡，这是许多“无品牌”以太卡的典型默认选项），你首先需要根据网卡随附的说明安装硬件。在某些情况下，你需要重启电脑并让 Red Hat Linux 7.1 加载驱动程序。在其他情况下，Red Hat Linux 7.1 会自动检测、配置并安装你的网卡。如果你看到网卡处于激活状态，进入 root 用户模式并运行 `/sbin/ifconfig` 命令。如果你看到如下结果：
+
+
 
 ```
 eth0 Link enc:Ethernet Haddr 00:50:56:08:25:03
@@ -12035,7 +11212,7 @@ TX packets:6 errors dropped:0 overruns:0 carrier:0
 collisions:0 txqueuelen:0
 ```
 
-那么 Linux 已经在你的电脑上正确设置了一个以太网网卡（eth0）以及一个回环设备（lo）。如果这与你的硬件相符，你就可以阅读本章的剩余部分来检查帮助你维护网卡的工具。
+那么 Linux 已经在你的电脑上正确设置了一个以太网网卡（`eth0`）以及一个回环设备（`lo`）。如果这与你的硬件相符，你就可以阅读本章的剩余部分来检查帮助你维护网卡的工具。
 
 然而，如果你已经安装了网卡但没有看到 `eth0` 段落，说明 Linux 没有识别出你的网卡。或者，如果你有多个网卡但只看到一个 `eth0` 段落，说明 Linux 没有识别出你的其他网卡。你需要阅读本章的剩余部分来学习如何设置和配置你的一个或网卡。
 
@@ -12076,7 +11253,7 @@ $ linuxconf-auth
 - **Aliases**: 如果你有多个别名，请用空格分隔它们。
 - **IP Address**: 如第 21 章“理解 Linux”所示，IP 地址在 0 到 255 之间。
 - **Netmask**: 网络的掩码。
-- **Net Device**: 设备的名称，通常为 eth0、eth1、eth2。
+- **Net Device**: 设备的名称，通常为 `eth0`、`eth1`、`eth2`。
 - **Kernel Module**: 你想要驱动。
 - **I/O Port**: 网卡的内存地址。
 - **IRQ**: 网卡的中断请求通道。
@@ -12106,7 +11283,6 @@ $ cd /lib/modules/2.4.2-2/kernel/drivers/net/
 ```
 $ insmod ne.o
 ```
-
 
 如果 Linux 未识别出你所需的模块，请检查此目录（或其子目录）中的可用模块列表。如果你看到了正确的模块，请检查拼写并重试。注意模块的文件名为 `.o` 扩展名。
 
@@ -12141,6 +11317,7 @@ $ netcfg
 这将调用图 28.4 显示的红帽网络配置器（Red Hat Network Configurator）。
 
 ## 图 28.4：
+
 ## 网络配置器对话框
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_672_0.png)
@@ -12186,17 +11363,19 @@ $ netcfg
 编辑主机表中的条目与添加新条目类似。选择一个现有条目，然后点击“编辑”（Edit）按钮。会出现像图 28.5 所示的对话框，你在其中找到与添加条目时相同的三个字段。完成后，点击“完成”（Done）按钮。结果如图 28.6 所示。
 
 ## 图 28.6：
+
 ## 主机表
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_674_0.png)
 
 # 管理接口
 
-下一个面板是配置你系统网络接口的地方。点击“接口”（Interfaces）按钮。接口可以包括调制解调器连接、以太网连接以及令牌连接。默认情况下，此表应该包含一个名为 lo 的本地回环接口（这在没有网络的情况下工作也是所需的）。
+下一个面板是配置你系统网络接口的地方。点击“接口”（Interfaces）按钮。接口可以包括调制解调器连接、以太网连接以及令牌连接。默认情况下，此表应该包含一个名为 `lo` 的本地回环接口（这在没有网络的情况下工作也是所需的）。
 
 添加新接口的第一步（假设此处不存在）是点击“添加”（Add）按钮。会出现像图 28.7 那样的对话框，你可以在其中选择要添加的接口类型。
 
 ## 图 28.7：
+
 ## 接口类型对话框
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_675_0.png)
@@ -12204,6 +11383,7 @@ $ netcfg
 如果是局域网，选择你之前设置网络模块时使用的设备类型。点击“确定”（OK）后会出现对话框，你可以在其中配置接口的属性。以太网接口的情况下，对话框像 28.8。
 
 ## 图 28.8：
+
 ## 配置以太网接口
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_675_1.png)
@@ -12217,6 +11397,7 @@ $ netcfg
 设置好接口后，点击“完成”（Done）。在图 28.9 所示的接口界面，你可以通过选择接口并点击“激活”（Activate）按钮立即激活你的接口。
 
 ## 图 28.9：
+
 ## 激活以太网接口
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_676_0.png)
@@ -12225,19 +11406,15 @@ $ netcfg
 
 网络配置的最后拼图是设置路由。点击窗口顶部的“路由”（Routing）按钮显示图 28.10 所示的路由面板。路由表用于告诉计算机如何引导去往不同网络的数据。
 
-
-
-
-
 ## 图 28.10:
 
 路由面板
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_677_0.png)
 
-如果你的网络有一个默认网关，请输入网关计算机的 IP 地址。如果你的计算机有多个网卡，请确保选择直接连接到网关的那个（例如 eth0 或 ppp0）作为“默认网关设备”。其他设备将变成指向本地网络的静态路由。
+如果你的网络有一个默认网关，请输入网关计算机的 IP 地址。如果你的计算机有多个网卡，请确保选择直接连接到网关的那个（例如 `eth0` 或 `ppp0`）作为“默认网关设备”。其他设备将变成指向本地网络的静态路由。
 
-例如，假设你的电脑有两个以太网卡，一个连接到主公司网络 (eth0)，另一个连接到你用于测试某些软件的小型局域网。点击“添加”（Add）以弹出“编辑静态路由”对话框，如图 28.11 所示。在此面板中设置内部静态路由，确保将静态路由分配给 eth1，然后点击“完成”（Done）。
+例如，假设你的电脑有两个以太网卡，一个连接到主公司网络 (`eth0`)，另一个连接到你用于测试某些软件的小型局域网。点击“添加”（Add）以弹出“编辑静态路由”对话框，如图 28.11 所示。在此面板中设置内部静态路由，确保将静态路由分配给 `eth1`，然后点击“完成”（Done）。
 
 ## 图 28.11:
 
@@ -12245,7 +11422,7 @@ $ netcfg
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_677_1.png)
 
-你的路由配置包括一个默认网关（位于此处）以及一个用于测试网络的静态路由（位于 eth1），如图 28.12 所示。为你所连接的本地以太网包含一个静态路由并不罕见。
+你的路由配置包括一个默认网关（位于此处）以及一个用于测试网络的静态路由（位于 `eth1`），如图 28.12 所示。为你所连接的本地以太网包含一个静态路由并不罕见。
 
 ## 图 28.12:
 
@@ -12292,13 +11469,15 @@ PING 192.168.4.65 (192.168.4.65) from 192.168.4.65 : 56(84) bytes of data.
 64 bytes from localhost.localdomain (192.168.4.65): icmp_seq=2 ttl=255 time=216 use
 ```
 
-记得按下 Ctrl+C。如果此命令有效，说明你已成功将正确的 IP 地址绑定到你的网卡。如果无效，请重新检查 netcfg 的“接口（Interfaces）”部分。
+记得按下 Ctrl+C。如果此命令有效，说明你已成功将正确的 IP 地址绑定到你的网卡。如果无效，请重新检查 `netcfg` 的“接口（Interfaces）”部分。
 
 接下来，尝试命令：
 
 ```
 $ ping mycomputer
 ```
+
+
 
 其中 `mycomputer` 是你计算机的主机名。请在该命令中替换为你实际计算机的主机名。
 
@@ -12309,7 +11488,7 @@ PING (192.168.4.65) from 192.168.4.65 : 56(84) bytes of data.
 64 bytes from mycomputer.localdomain (192.168.4.65): icmp_seq=2 ttl=255 time=216 use
 ```
 
-如果此命令有效，说明你已成功将主机名与网卡的 IP 地址相关联。如果无效，请重新检查 netcfg 的“主机（Hosts）”部分或 `/etc/hosts` 文件。
+如果此命令有效，说明你已成功将主机名与网卡的 IP 地址相关联。如果无效，请重新检查 `netcfg` 的“主机（Hosts）”部分或 `/etc/hosts` 文件。
 
 现在你知道本地计算机的网络正常，下一步是检查与网关的连接。例如，如果你的网关 IP 地址是 192.168.4.244，尝试此命令：
 
@@ -12323,34 +11502,28 @@ $ ping 192.168.4.244
 $ ping 63.86.158.42
 ```
 
-（注：原文后续部分存在大量重复的文本，翻译时已按要求进行了逻辑处理，确保不重复输出。）
-
-
-
-
-
 # 设置本地 hosts 文件
 
-虽然在理论上可以使用 DNS 服务器查找每一个名称（包括本地网络上主机的名称），但这种方式的效率极低。在在中等规模的网络中，作为使用 DNS 服务器查找机器名称的替代方案，你可以使用本地 hosts 文件来执行这些查找。
+虽然在理论上可以使用 DNS 服务器查找每一个名称（包括本地网络上主机的名称），但这种方式的效率极低。在在中等规模的网络中，作为使用 DNS 服务器查找机器名称的替代方案，你可以使用本地 `hosts` 文件来执行这些查找。
 
-hosts 文件存储在你的系统上，包含一个将 IP 地址与主机名相匹配的列表。要启用本地 hosts 文件，你首先需要用你喜欢的文本编辑器编辑 `/etc/hosts.conf`。此文件告诉 Linux 如何进行名称查找，并且需要包含以下两行来启用本地 hosts 文件：
+`hosts` 文件存储在你的系统上，包含一个将 IP 地址与主机名相匹配的列表。要启用本地 `hosts` 文件，你首先需要用你喜欢的文本编辑器编辑 `/etc/hosts.conf`。此文件告诉 Linux 如何进行名称查找，并且需要包含以下两行来启用本地 `hosts` 文件：
 
 ```
 order hosts,bind
 multi on
 ```
 
-第一行表示，当查找名称时，首先检查本地 hosts 文件（hosts），然后根据 `/etc/resolv.conf` 中的指令检查 DNS bind（bind 指的是运行 DNS 的 Linux 守护进程，即伯克利互联网名称守护进程 Berkeley）。
+第一行表示，当查找名称时，首先检查本地 `hosts` 文件（`hosts`），然后根据 `/etc/resolv.conf` 中的指令检查 DNS `bind`（`bind` 指的是运行 DNS 的 Linux 守护进程，即伯克利互联网名称守护进程 Berkeley）。
 
-接下来，你需要创建本地 hosts 文件，其名为 `/etc/hosts`。使用你喜欢的文本编辑器编辑此文件，并为列出的每个主机创建一个单行条目。该条目的格式如下：
+接下来，你需要创建本地 `hosts` 文件，其名为 `/etc/hosts`。使用你喜欢的文本编辑器编辑此文件，并为列出的每个主机创建一个单行条目。该条目的格式如下：
 
 ```
 IP_Address hostname alias alias alias ...
 ```
 
-该行的每个部分（IP 地址、主机名和别名）可以用一个或多个空格分隔。注释行以井号（#）开头，可用于在较大的 hosts 文件中结构化和扩展条目。
+该行的每个部分（IP 地址、主机名和别名）可以用一个或多个空格分隔。注释行以井号（`#`）开头，可用于在较大的 `hosts` 文件中结构化和扩展条目。
 
-让我们考虑一个例子。这四个条目取自一个 hosts 文件：
+让我们考虑一个例子。这四个条目取自一个 `hosts` 文件：
 
 ```
 194.148.43.194 serv1.landeg.edu
@@ -12365,27 +11538,27 @@ IP_Address hostname alias alias alias ...
 
 最后一步是设置必要的路由，允许你与网络以及世界其他部分通信。基本上，对于每个接口，你都需要一个路由条目告诉 Linux 哪个网络连接到该接口。此外，如果你的网络通过网关连接到其他非本地网络，你还需要一个指定默认网关的条目。
 
-让我们从环回设备（loopback device）开始。使用 `route` 命令指定通过环回设备访问本地机器：
+让我们从环回设备（`loopback device`）开始。使用 `route` 命令指定通过环回设备访问本地机器：
 
 ```
 $ /bin/route add -host 127.0.0.1 lo
 ```
 
-该命令表示主机 127.0.0.1（本地主机）应该通过设备 `lo` 访问。
+该命令表示主机 `127.0.0.1`（本地主机）应该通过设备 `lo` 访问。
 
-接下来，考虑我们之前提到的 `eth0` 设备。该设备将 PC 连接到网络地址为 100.100.100.0 且子网掩码为 255.255.255.0 的网络。再次使用 `route` 命令告诉 Linux 将本地网络的所有信息通过 `eth0` 接口发送：
+接下来，考虑我们之前提到的 `eth0` 设备。该设备将 PC 连接到网络地址为 `100.100.100.0` 且子网掩码为 `255.255.255.0` 的网络。再次使用 `route` 命令告诉 Linux 将本地网络的所有信息通过 `eth0` 接口发送：
 
 ```
 $ /bin/route add -net 100.100.100.0 netmask 255.255.255.0 eth0
 ```
 
-最后，再次使用 `route` 命令指定用于访问远程网络的默认网关。如果你的默认网关位于 IP 地址 100.100.100.1，请使用以下命令：
+最后，再次使用 `route` 命令指定用于访问远程网络的默认网关。如果你的默认网关位于 IP 地址 `100.100.100.1`，请使用以下命令：
 
 ```
 $ /bin/route add default gw 100.100.100.1 eth0
 ```
 
-这表示默认网关（gw）位于地址 100.100.100.1，可以通过将发往网网关的信息通过 `eth0` 接口发送来访问。
+这表示默认网关（`gw`）位于地址 `100.100.100.1`，可以通过将发往网网关的信息通过 `eth0` 接口发送来访问。
 
 最后，使用不带参数或参数的 `route` 命令检查所有的路由条目。这将返回一个如下的路由表：
 
@@ -12406,7 +11579,6 @@ ifconfig eth0 100.100.100.2 netmask 255.255.255.0
 route add -net 100.100.100.0 netmask 255.255.255.0 eth0
 route add default gw 100.100.100.1 eth0
 ```
-
 
 `/etc/exports` 文件的其他选项可以在 `exports` 手页中找到，通过以下命令访问：
 
@@ -12456,13 +11628,15 @@ $ mount foo.bar:/test/dir /foo
 此命令表示将机器 `foo.bar` 上的 `/test/dir` 挂载到本地目录 `/foo`。完成后，你就可以根据分配给文件的权限访问远程目录中的文件和子目录。列出 `/foo` 的内容实际上是列出 `foo.bar` 上 `/test/dir` 的内容。
 
 > 警告
-> NFS 系统有一个例外。在你的本地系统中，root 用户具有神一般的权限，可以打开、读取或删除系统上的任何文件，无论该文件是谁创建或拥有的。但在远程挂载的目录中，root 在 NFS 模型下受到严格限制：它只能访问已授予显式权限的文件和目录。
+>
+> NFS 系统有一个例外。在你的本地系统中，`root` 用户具有神一般的权限，可以打开、读取或删除系统上的任何文件，无论该文件是谁创建或拥有的。但在远程挂载的目录中，`root` 在 NFS 模型下受到严格限制：它只能访问已授予显式权限的文件和目录。
 
 ## 在启动时挂载远程目录
 
-如果你经常使用远程目录，你可能希望它们在启动时自动挂载。要实现这一点，你可以使用 Linuxconf。使用 `linuxconf-auth` 命令启动 Linuxconf。在 `Config` 标签下，从配置屏幕列表中选择 `File Systems ▷ Access NFS Volume`。此屏幕包含任何当前 NFS 挂载的列表。点击 `Add` 按钮显示图 28.13 所示的 NFS 卷规格。
+如果你经常使用远程目录，你可能希望它们在启动时自动挂载。要实现这一点，你可以使用 `linuxconf`。使用 `linuxconf-auth` 命令启动 `linuxconf`。在 `Config` 标签下，从配置屏幕列表中选择 `File Systems ▷ Access NFS Volume`。此屏幕包含任何当前 NFS 挂载的列表。点击 `Add` 按钮显示图 28.13 所示的 NFS 卷规格。
 
 图 28.13：
+
 NFS 卷规格屏幕
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_689_0.png)
@@ -12489,8 +11663,6 @@ linux71:/home/mj    /home/mj/test    nfs    exec,dev,ro    1 1
 
 默认情况下，`hosts.allow` 或 `hosts.deny` 中没有条目，默认选项是 3：任何人都可以尝试连接到系统。虽然你可以将 Telnet 和 FTP 等单独服务设置为需要进一步验证，但这无法阻止初始的连接尝试。
 
-
-
 在安装 Linux 时可能已经安装了 Samba。你可以使用 `rpm` 命令进行检查：
 
 ```
@@ -12501,9 +11673,9 @@ $ rpm -q samba-common
 
 如果你发现没有安装 Samba，可以从相应的 Red Hat CD-ROM 安装，只需将 CD-ROM 挂载到逻辑位置（例如 `/mnt/cdrom`），然后使用 `rpm` 安装三个 Samba 软件包：
 
--   $ rpm -i /mnt/cdrom/RedHat/RPMS/samba-2.0.7-36.i386.rpm
--   $ rpm -i /mnt/cdrom/RedHat/RPMS/samba-client-2.0.7-36.i386.rpm
--   $ rpm -i /mnt/cdrom/RedHat/RPMS/samba-common-2.0.7-36.i386.rpm
+- `$ rpm -i /mnt/cdrom/RedHat/RPMS/samba-2.0.7-36.i386.rpm`
+- `$ rpm -i /mnt/cdrom/RedHat/RPMS/samba-client-2.0.7-36.i386.rpm`
+- `$ rpm -i /mnt/cdrom/RedHat/RPMS/samba-common-2.0.7-36.i386.rpm`
 
 随书附带的发行版 CD-ROM 仅包含了 `samba-client` 和 `samba-common` 软件包。虽然这对于从局域网上的 Microsoft Windows 计算机连接共享资源是够的（参见后文章节中的 `smbmount` 命令），但对于将你的 Linux 计算机资源共享给同一网络上的其他 Microsoft Windows 计算机是不够。
 
@@ -12519,10 +11691,10 @@ $ rpm -q samba-common
 
 当安装 Samba 时，会安装多个文件，包括：
 
-- /usr/sbin/smbd 处理来自客户端连接的 Samba 服务器
-- /usr/sbin/nmbd NetBIOS 服务器允许客户端在 Windows 网络上定位服务器
-- /usr/bin/smbclient 用于访问 SMB 服务器的基础基础 Samba 客户端 
-- etc/samba/smb.conf Samba 
+- `/usr/sbin/smbd` 处理来自客户端连接的 Samba 服务器
+- `/usr/sbin/nmbd` NetBIOS 服务器允许客户端在 Windows 网络上定位服务器
+- `/usr/bin/smbclient` 用于访问 SMB 服务器的基础基础 Samba 客户端
+- `etc/samba/smb.conf` Samba
 
 ## 配置 Samba
 
@@ -12538,21 +11710,20 @@ public = yes
 
 注意头部包含在方括号中（`[tmp]`），每个参数单独占一行，参数的结构为 `参数 = 值`。
 
-## [global] 部分
+## `[global]` 部分
 
 大多数 `smb.conf` 文件以 `[global]` 部分开头，它定义了影响 Samba 整体行为的一些基本参数。`[global]` 部分中的常用参数包括：
 
-- printing：指定使用的打印系统类型；除非你使用的是旧版本的 Linux 发行版，否则这应该是 `lprng`。
-- printcap name：指定 `printcap` 文件的位置；通常情况下，这是 `/etc/printcap`。
-- load printers：如果你将共享打印机，应将其设置为 `yes`。
-- guest account：指示使用哪个 Linux 用户来验证访客连接；大多数 Linux 管理员会将其设置为 `nobody`，因为其权限极其有限。
-- workgroup：指示 Samba 服务器所属的 Windows 工作组或域。
-- security：指定如何验证用户以访问系统资源。有四种选项：`user`、`server`、`domain` 和 `share`。
-
-- user：从本地 `/etc/passwd` 文件检查用户名和密码。这是最常用且最简单的选项。
-- server：通过 `password server` 参数指定的 Windows NT/2000 域服务器进行验证。可以设置另一个 Samba 服务器来模拟 Windows NT/2000 域服务器。
-- domain：需要将 Samba 服务器的 NetBIOS 名称映射到适当的 Windows 域控制器。如果少于 15 个字符，则 NetBIOS 名称通常与主机名相同。
-- share：用于将 Linux 设置为点对点网络的一部分，这是 Microsoft Windows 风格工作组的特征。如果少于 15 个字符，则 NetBIOS 名称通常与主机名相同。
+- `printing`：指定使用的打印系统类型；除非你使用的是旧版本的 Linux 发行版，否则这应该是 `lprng`。
+- `printcap name`：指定 `printcap` 文件的位置；通常情况下，这是 `/etc/printcap`。
+- `load printers`：如果你将共享打印机，应将其设置为 `yes`。
+- `guest account`：指示使用哪个 Linux 用户来验证访客连接；大多数 Linux 管理员会将其设置为 `nobody`，因为其权限极其有限。
+- `workgroup`：指示 Samba 服务器所属的 Windows 工作组或域。
+- `security`：指定如何验证用户以访问系统资源。有四种选项：`user`、`server`、`domain` 和 `share`。
+- `user`：从本地 `/etc/passwd` 文件检查用户名和密码。这是最常用且最简单的选项。
+- `server`：通过 `password server` 参数指定的 Windows NT/2000 域服务器进行验证。可以设置另一个 Samba 服务器来模拟 Windows NT/2000 域服务器。
+- `domain`：需要将 Samba 服务器的 NetBIOS 名称映射到适当的 Windows 域控制器。如果少于 15 个字符，则 NetBIOS 名称通常与主机名相同。
+- `share`：用于将 Linux 设置为点对点网络的一部分，这是 Microsoft Windows 风格工作组的特征。如果少于 15 个字符，则 NetBIOS 名称通常与主机名相同。
 
 考虑典型服务器中 `smb.conf` 文件中的以下 `[global]` 部分：
 
@@ -12567,7 +11738,9 @@ security = user
 
 此部分指定打印系统类型，设置访客账户使用 Linux 用户 `nobody`，使服务器成为 `testgroup` Windows 工作组的一部分，并指定 Samba 应使用本地的 `/etc/passwd` 文件进行验证。
 
-## [homes] 部分
+## `[homes]` 部分
+
+
 
 `[homes]` 部分用于指定如何向 Windows 网络共享用户的家目录。如果没有此部分，用户的家目录需要单独进行共享，正如你稍后看到的。
 
@@ -12579,6 +11752,7 @@ browseable = yes
 read only = no
 preserve case = yes
 ```
+
 （注：此处根据示例逻辑保持结构完整）
 
 正如后文所示，考虑以下的 `[homes]` 部分：
@@ -12601,6 +11775,7 @@ browseable = yes
 read only = no
 preserve case = yes
 ```
+
 （注：此处根据示例逻辑保持结构完整）
 
 正如后文所示，考虑以下 `[homes]` 部分：
@@ -12677,8 +11852,6 @@ read only = no
 public = yes
 ```
 
-
-
 # 共享私有访问目录
 
 除了共享供公共访问的目录外，有时也有必要创建一个仅供少数用户访问的共享目录。
@@ -12704,7 +11877,7 @@ create mask = 0765
 现在，让我们将所有内容整合到一个完整的 `smb.conf` 文件中。这里有两点需要注意：
 
 - 空行会被忽略。
-- 注释行以分号（;）或井号（#）开始，并持续到行尾。
+- 注释行以分号（`;`）或井号（`#`）开始，并持续到行尾。
 
 我们完成后的文件如下：
 
@@ -12777,6 +11950,7 @@ writable = yes
 ```
 
 # printable = no
+
 create mask = 0765
 
 如果你的网络运行在 TCP/IP 上，配置已完成，你可以运行 Samba 了。然而，如果你有一个 NetBIOS 网络，则需要执行最后一步。在 `/etc/services` 文件中查找以下内容（如果没有，请添加它们）：
@@ -12874,9 +12048,6 @@ $ smbclient //server/resourcename
 | recurse | 为多个文件操作开启目录递归（input 和 mget） |
 | rmdir | 从服务器删除指定目录 |
 
-
-
-
 - 要将本地目录下的文件 `foo` 复制到远程共享并重命名为 `newfoo`，请使用命令 `put foo newfoo`。
 - 要从远程共享当前目录下获取所有 `.txt` 文件，请使用命令 `get *.txt`。
 - 要在远程共享上创建一个名为 `foo` 的新目录，请使用命令 `mkdir foo`。
@@ -12919,6 +12090,7 @@ queueename:
 ```
 
 让我们来看这里重要的条目：
+
 spool 目录。
 
 - sd=/var/pool/samba 指定 spool 目录。
@@ -12966,6 +12138,8 @@ $ lpr -P queueename
 
 NetWare-Linux 集成世界远没有 Windows-Linux 集成那样健壮。出于此原因，本节将只讨论可用选项，而不涉及实现细节。
 
+
+
 在免费软件领域，有一个名为 `ncpfs` 的相当有限的 NetWare 软件包，还有一个处于 beta 阶段的 NetWare 服务器产品 `mars_nwe`。这两个产品都受限于它们支持的 NetWare 版本以及它们可以交互的 NetWare 产品类型。两者都包含在 Red Hat Linux 7.1 中。您可能还需要在系统中安装 IPX。`iputils` 软件包包含在随本书的 Red Hat Linux 7.1 光盘中，位于 `/RedHat/RPMS` 子目录，文件名为 `iputils-2.2.0.18-3.i386.rpm`。
 
 `ncpfs` 和 `mars_nwe` 共同提供了最接近免费 Linux NetWare 的解决方案。`ncpfs` 软件包可以从 `ftp.gwdg.de/pub/linux/misc/ncpfs` 获取，`mars_nwe` 软件包可以从 `http://www.comp-art.de/download/mars_nwe.html` 获取。虽然大部分文档（特别是 `mars_nwe`）是德语，但两个说明也可以在 IPX-HOWTO 中找到，在线访问地址为 http://www.linuxdoc.org/HOWTO/IPX-HOWTO.html。
@@ -12974,16 +12148,14 @@ NetWare-Linux 集成世界远没有 Windows-Linux 集成那样健壮。出于此
 
 - 它们都仅与 NetWare 3.x 兼容，这意味着您可能只能以二进制模拟模式使用 NetWare 4.x 和 5。
 - ncpfs 不后兼容 NetWare 2.x 服务器。
-- ncpfs 不 
+- ncpfs 不
 
 ## 展望
 
 在本章中，您学习了如何将 Linux 集成到 Windows 并进行文件共享。
 
-
-
-
 此外，DOS 环境可以在 X Windows 中的一个独立窗口中运行，从而方便在 Linux 程序旁边运行 DOS 应用程序。
+
 DOSEmu 提供的功能包括：
 
 - 多个用户同时运行 DOS 应用程序的能力
@@ -13037,8 +12209,11 @@ DOSEmu 软件包让事情变得简单，它带有一个预配置的磁盘镜像�
 ## 在 Linux 中运行 DOS 应用程序
 
 # 在 $_zzz = "s" 中 s 是字符串
+
 #
+
 # 请仅编辑括号引号之间的内容并保持其余部分不变。
+
 # ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 ```
@@ -13261,9 +12436,6 @@ $X_vbootfloppy = "" # 如果你想从虚拟软磁盘启动：
 $X_floppy_a = "threeinch" # 或者 "fiveinch" 或 "atapi" 或空，如果不存在
 ```
 
-
-
-
 # 在 Linux 中运行 DOS 应用程序
 
 - (/etc/printcap) 打印机名称列表，将显示为 LPT1、LPT2、LPT3（并非所有都需要，留空表示无）
@@ -13273,17 +12445,25 @@ $_printer_timeout = (20) # 溢打印之前的空闲时间（秒）
 $_ports = ""
 
 $_ipxsupport = (off)
+
 $_novell_hack = (off)
+
 $_vnet = (off)
 
 - # 或设置为 'on' 以启用数据包多（由 dosnet 使用）
 
 $_sound = (off)
+
 $_sb_base = (0x220)
+
 $_sb_irq = (5)
+
 $_sb_dma = (1)
+
 $_sb_dsp = "/dev/dsp"
+
 $_sb_mixer = "/dev/mixer"
+
 $_mpu_base = 0x330
 
 - # 开启/关闭支持
@@ -13370,10 +12550,6 @@ DOSEmu 附带的磁盘映像包含了几个有用的命令和工具，包括表 
 | lredir.com | 将 Unix 目录重定向到 DOS 盘。 |
 | unix.com | 在 DOSEmu 内部执行 Linux 命令。 |
 
-
-
-
-
 例如，如果你在 `/tmp` 目录下下载了 tar.gz 文件，你需要解压文件，切换到新创建的安装目录，然后使用以下命令以 root 用户模式运行安装脚本：
 
 ```
@@ -13383,6 +12559,8 @@ $ ./vmware-install.pl
 ```
 
 或者，如果你在 `/tmp` 目录下下载了 RPM 文件，你需要解压文件，切换到新创建的安装目录，然后使用以下命令以 root 用户模式运行安装脚本：
+
+
 
 ```
 $ rpm -i vmware-2.0.3-799.i386.rpm
@@ -13413,7 +12591,7 @@ $ /usr/bin/vmware
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_727_0.png)
 
-随后， VMware 将引导你经过一系列选项，你需要选择以下内容：
+随后，VMware 将引导你经过一系列选项，你需要选择以下内容：
 
 - **操作系统 (Operating System)**：在 VMware Workstation 中，你可以安装 Windows 3.1、95、98、NT 4.0、2000、Linux 或另一个名为 FreeBSD 的其他主要 Unix 克隆系统。
 - **磁盘类型设置 (Disk Type Setting)**：你可以在虚拟磁盘或现有物理磁盘上设置你的新操作系统。
@@ -13465,9 +12643,6 @@ WordPerfect 套件背后的 Corel 公司从 1998 年开始与 Wine 工作。他�
 
 Deneba 是图形和计算机辅助设计领导者之一，他们希望将其高性能 Canvas 应用移植到 Linux。他们能够在六个月内使用 Wine 工具将 Canvas 移植到 Linux。事实上，在仅对 Wine 库进行微小调整后，大部分工作（测试版）在两个月内就完成了。
 
-
-
-
 具体来说，你将考虑一个许多小型办公室的典型示例：将整个局域网（LAN）连接到互联网，而该拨号连接仅提供一个真实的 IP 地址。
 
 # 第三十章
@@ -13502,7 +12677,6 @@ Deneba 是图形和计算机辅助设计领导者之一，他们希望将其高�
 - 使你的密码足够复杂，使其难以被猜到或破解。这包括将字母、数字和其他字符组合成非单词密码。密码应该经常更改。特别重要的是，你的 root 密码必须是一个非单词的复杂密码，并要定期更改。
 
 有许多专门设计用于破解密码的程序。利用当前 PC 的能力，基于词典单词的密码可以在几分钟内被破解，而一个混合了数字大小写字母的密码，同一台 PC 可能需要几周才能破解。设置复杂密码的一种方法是基于喜欢的句子；例如，可以从“March 15, I'm going to Paris.”创建一个类似 OM15ftP 的复杂密码。
-
 - 确保你的计算机保持物理安全。如果它包含重要数据，午饭时不要离开未锁的办公室。同样，不要离开办公室并让系统处于登录状态，特别是如果你已经在控制台或终端窗口中以 root 用户身份登录。
 - 不要创建不必要的用户账户。如果只有两个人经常使用该系统，请仅为他们创建账户，不要为其他人创建。这使得更容易跟踪谁在使用系统以及安全违规源于何处。
 - 最重要的是，不要共享密码（用户密码或 root 密码），即使是对于那些被授权经常使用系统的人。特别要保持 root 密码的安全。只需要错误的用户获取了 root 密码，某一天你就会发现系统上的所有数据都被删除了。
@@ -13512,32 +12686,29 @@ Deneba 是图形和计算机辅助设计领导者之一，他们希望将其高�
 
 一旦你将 Linux 系统连接到局域网，安全问题就会出现。毕竟，如果你遵循了之前为孤机系统列出的所有规则（当系统在局域网时你也应该遵循这些规则），蓄意的黑客仍然有可能通过网络利用许多安全漏洞来访问你的 Linux 系统。
 
-- 不要运行不必要的网络服务。例如，如果你不需要允许用户 telnet 登录你的系统，请确保 Telnet 守护进程 (/usr/sbin/in.xinetd) 未安装，并且在 /etc/xinetd.d 中没有该守护进程的条目。同样，如果你的机器不作为邮件服务器，请禁用 sendmail 守护进程。同样的规则适用于大多数网络服务：FTP、finger、news、DNS 以及许多其他。只运行那些对于连接网络和执行你正在使用的 Linux 系统完成的任务所必需的网络服务守护进程。
+- 不要运行不必要的网络服务。例如，如果你不需要允许用户 telnet 登录你的系统，请确保 Telnet 守护进程 (`/usr/sbin/in.xinetd`) 未安装，并且在 `/etc/xinetd.d` 中没有该守护进程的条目。同样，如果你的机器不作为邮件服务器，请禁用 sendmail 守护进程。同样的规则适用于大多数网络服务：FTP、finger、news、DNS 以及许多其他。只运行那些对于连接网络和执行你正在使用的 Linux 系统完成的任务所必需的网络服务守护进程。
 
 如果你使用其他 Linux 版本中常用的 `/etc/inetd.conf` 文件（包括 Red Hat Linux 6.x），你可以将其转换为 Red Hat 7.1 的 `/usr/sbin/inetd.convert` 命令。
 
 | 提示 |
 | :--- |
-| 如果你使用另一个没有 /etc/xinetd.conf 文件的 Linux 版本，请确保 /etc/xinetd.conf 文件中没有相关守护进程的条目（你也可以通过添加 # 来注释掉该条目）。 |
+| 如果你使用另一个没有 `/etc/xinetd.conf` 文件的 Linux 版本，请确保 `/etc/xinetd.conf` 文件中没有相关守护进程的条目（你也可以通过添加 # 来注释掉该条目）。 |
 
-- 有效利用 /etc/allow 和 /etc/deny（这些内容在第 28 章“配置作为廉价路由器的 Red Hat Linux 7.1”中讨论过），以确保仅访问你运行的服务。例如，如果你想允许特定的主机访问你的服务器，请使用这些文件。
+- 有效利用 `/etc/allow` 和 `/etc/deny`（这些内容在第 28 章“配置作为廉价路由器的 Red Hat Linux 7.1”中讨论过），以确保仅访问你运行的服务。例如，如果你想允许特定的主机访问你的服务器，请使用这些文件。
 
 ## xinetd
 
-Red Hat 将扩展服务守护进程 xinetd 作为 inetd 的替代品，从 Red Hat Linux 7.1 开始引入。xinetd 守护进程允许你按服务来管理访问。换句话说，如果你需要让某人访问你的服务器，就不必让他们访问 Telnet 或 NFS 等其他服务。如果有人入侵了你的计算机，风险仅在于你开启的服务。
+Red Hat 将扩展服务守护进程 `xinetd` 作为 `inetd` 的替代品，从 Red Hat Linux 7.1 开始引入。`xinetd` 守护进程允许你按服务来管理访问。换句话说，如果你需要让某人访问你的服务器，就不必让他们访问 Telnet 或 NFS 等其他服务。如果有人入侵了你的计算机，风险仅在于你开启的服务。
 
-xinetd 的另一个优势是防止拒绝服务（DoS）攻击。DoS 是一种某人向你的服务器发送持续消息流的过程，例如简单的 ping，从而阻止他人访问。
+`xinetd` 的另一个优势是防止拒绝服务（DoS）攻击。DoS 是一种某人向你的服务器发送持续消息流的过程，例如简单的 ping，从而阻止他人访问。
 
-有关 xinetd 的更多信息，请访问其站点：http://www.xinetd.org。
+有关 `xinetd` 的更多信息，请访问其站点：http://www.xinetd.org。
 
 ## 维护你的网络安全
 
 即使你在局域网内部保持 Linux 系统相当安全，如果你的局域网连接到互联网，你的整个网络就面临着各种安全威胁和攻击。
 
 维护网络安全是一项巨大的工作，需要对网络安全深入了解。但从根本上说，有两种主要的技术（以及它们的许多变体）可以确保基本的网络安全。
-
-
-
 
 ## 第 31 章 • 安全与 Red Hat Linux 7.1 作为廉价路由器
 
@@ -13554,6 +12725,7 @@ Linux 系统可以轻松配置为你的局域网和互联网之间的路由器�
 在 Red Hat Linux 7.1 安装过程中，你可以为你的 Linux 系统配置防火墙支持，如图 31.1 所示。稍后你将看到如何使用 `lokkit` 工具来设置新的防火墙配置。你将分析一个简单的防火墙，并初步了解其背后的威力。
 
 ### 图 31.1:
+
 Linux 安装期间的防火墙配置
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_740_0.png)
@@ -13584,9 +12756,6 @@ Linux 安装期间的防火墙配置
 
 **DHCP** 如第 4 章中所述，动态主机配置协议（DHCP）允许服务器自动为网络上的客户端分配 IP 地址。如果你的计算机作为 DHCP 服务器运行，你必须配置防火墙允许端口 67 和 68 上的流量。
 
-*(由于提供的原文文本后续存在大量重复段落，根据指令“不要重复输出原文”，此处仅翻译了首次出现的核心内容部分)*
-
-
 根据这些信息，你可以在图 31.1 所示的“防火墙配置”界面中打开相关端口。点击“自定义”（Customize），然后在“其他端口”（Other Ports）文本框中输入以下内容：
 
 ```
@@ -13597,7 +12766,7 @@ Linux 安装期间的防火墙配置
 
 ## 安装后配置防火墙支持
 
-安装 Red Hat Linux 7.1 后，你可以使用 `lokkit` 实用程序重新配置防火墙。如有需要，从 /mnt/cdrom 目录挂载安装 CD-ROM，然后使用以下命令安装此包：
+安装 Red Hat Linux 7.1 后，你可以使用 `lokkit` 实用程序重新配置防火墙。如有需要，从 `/mnt/cdrom` 目录挂载安装 CD-ROM，然后使用以下命令安装此包：
 
 ```
 # rpm -i /mnt/cdrom/RedHat/RPMS/RPMS/lokkit-0.43-6.i386.rpm
@@ -13609,30 +12778,35 @@ Linux 安装期间的防火墙配置
 # /usr/sbin/lokkit
 ```
 
+
+
 当 `lokkit` 打开时，你将看到图 31.2 所示的“防火墙配置”界面，它允许你在计算机上设置高安全、中安全或无防火墙。在 `lokkit` 中，你可以使用 Tab 键在选项之间导航，并按空格键进行选择。
 
 选择“高”（High）或“中”（Medium）安全级别并点击“自定义”继续。你将看到类似于图 31.3 所示的“防火墙配置 - 自定义”菜单。
 
-在此菜单中，你可以看到与 Red Hat 安装期间显示的“防火墙配置”菜单中相同的自定义选项。在这种情况下，网卡选项包括一个红外设备 (irlan0) 和一个普通以太网适配器 (eth0)。使用之前描述的方法进行选择，然后选择“确定”。这将你返回到图 31.2 所示的原始界面。然后你可以点击“确定”，`lokkit` 将会将你的新防火墙记录在 /etc/sysconfig/ipchains 文件中。
+在此菜单中，你可以看到与 Red Hat 安装期间显示的“防火墙配置”菜单中相同的自定义选项。在这种情况下，网卡选项包括一个红外设备 (`irlan0`) 和一个普通以太网适配器 (`eth0`)。使用之前描述的方法进行选择，然后选择“确定”。这将你返回到图 31.2 所示的原始界面。然后你可以点击“确定”，`lokkit` 将会将你的新防火墙记录在 `/etc/sysconfig/ipchains` 文件中。
 
 ### 图 31.2：
-lokkit 防火墙配置界面
+
+`lokkit` 防火墙配置界面
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_745_0.png)
 
 ### 图 31.3：
+
 自定义防火墙
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_745_1.png)
 
 ## 注意
-在安装后使用 `lokkit` 时，默认的高、中安全防火墙不会开启 DHCP 。
+
+在安装后使用 `lokkit` 时，默认的高、中安全防火墙不会开启 DHCP。
 
 ## 创建基于 Linux 的路由器
 
 Red Hat Linux 7.1 的默认防火墙命令是 `iptchains`。针对 2.4.x 内核的新防火墙命令是 `iptables`。你可以禁用 `iptchains`，然后 `iptables` 将在你的防火墙中可用。然而，`lokkit` 实用程序不支持 `iptables` 的配置。`iptables` 的文档尚未最终确定；目前的 HOWTO 可以在 http://va.samba.org/netfilter/unreliable-guides/packet-filtering-HOWTO/index.html 找到。就绪后，请在 www.linuxdoc.org 网站上查找。
 
-还有另一个防火墙配置实用工具 /usr/sbin/firewall-config。它比 `lokkit` 稍微难用一些。
+还有另一个防火墙配置实用工具 `/usr/sbin/firewall-config`。它比 `lokkit` 稍微难用一些。
 
 你可以通过 IP 地址自定义你打开的端口。换句话说，只有具有特定 IP 地址的计算机才有向你发送特定类型数据的密钥。设置这些内容的技术超出了本书的范围。有关防火墙和网络配置的更多信息，请参阅 Robert Ziegler 写的《Linux Firewalls》（New Riders, 1999）。
 
@@ -13642,40 +12816,41 @@ Red Hat Linux 7.1 的默认防火墙命令是 `iptchains`。针对 2.4.x 内核�
 
 本节将介绍使用 Linux Router Project 发行版 Linux 创建基于 Linux 的路由器的步骤。
 
-Linux Router Project 的 Linux 发行版设计为极简 Linux 安装，对于大多数站点它可以放入单个 1.44MB 的软盘中，并提供了两个以太网局域网之间或通过 PPP 访问之间之间路由的所有组件。通过 add-modules，可以支持 WAN 连接的额外硬件。其他功能如 SNMP 管理也是可。
+Linux Router Project 的 Linux 发行版设计为极简 Linux 安装，对于大多数站点它可以放入单个 1.44MB 的软盘中，并提供了两个以太网局域网之间或通过 PPP 访问之间之间路由的所有组件。通过 `add-modules`，可以支持 WAN 连接的额外硬件。其他功能如 SNMP 管理也是可。
 
 ### 第 31 章 安全与 Red Hat Linux 7.1 一个廉价的路由器
 
 使用 Linux Router Project 发行版而不是 Red Hat 等完整版 Linux 设置路由器的好处是，所有工作都为你做好了。你不需要费力识别安装什么来实现路由。此外，软件包含了一个简单的、菜单驱动的配置，允许你检查一切是否已完成。Linux Router Project 软件可以他们的网站 http://www.linuxrouter.org/ 下载。
 
-接下来的章节提供了如何在安全和不安全网络之间配置路由器的绝佳示例。遗憾的是，生产级 Linux Router Project (LRP) 软件基于 Linux 内核 2.0 和 2.2。针对内核 2.2 的 LRP 软件包含了过时的 ipfw 命令，该命令存在安全漏洞。针对内核 2.2 的 LRP 软件包含了 `iptchains`，它更安全。到目前为止，还没有生产级别的 `iptables` 支持。
+接下来的章节提供了如何在安全和不安全网络之间配置路由器的绝佳示例。遗憾的是，生产级 Linux Router Project (LRP) 软件基于 Linux 内核 2.0 和 2.2。针对内核 2.2 的 LRP 软件包含了过时的 `ipfw` 命令，该命令存在安全漏洞。针对内核 2.2 的 LRP 软件包含了 `iptchains`，它更安全。到目前为止，还没有生产级别的 `iptables` 支持。
 
 ### 你将创建
 
 本节演示了使用 Linux Router Project 发行版 Linux 创建基于 Linux 路由器的步骤。
 
-设计为极简 Linux 安装的 Linux Router Project Linux 发行版对于大多数站点可以放入单个 1.44MB 的软盘中，并提供了两个以太网局域网之间或通过 PPP 访问互联网之间路由的所有组件。通过 add-modules，可以支持 WAN 连接的额外硬件。其他功能如 SNMP 管理也是提供的。
+设计为极简 Linux 安装的 Linux Router Project Linux 发行版对于大多数站点可以放入单个 1.44MB 的软盘中，并提供了两个以太网局域网之间或通过 PPP 访问互联网之间路由的所有组件。通过 `add-modules`，可以支持 WAN 连接的额外硬件。其他功能如 SNMP 管理也是提供的。
 
 ### 第 31 章 安全与 Red Hat Linux 7.1 一个廉价的路由器
 
 使用 Linux Router Project 发行版而不是 Red Hat 等完整版 Linux 设置路由器的好处是，所有工作都为你做好了。你不需要费力识别需要安装什么来实现路由工作。此外，软件包含了一个简单的、菜单驱动的配置，允许你检查一切是否已完成。Linux Router Project 软件可以从他们的网站 http://www.linuxrouter.org/ 下载。
 
-接下来的章节提供了如何在安全和不安全网络之间配置路由器的绝佳示例。遗憾的是，生产级 Linux Router Project (LRP) 软件基于 Linux 内核 2.0 和 2.2。针对内核 2.2 的 LRP 软件包含了过时的 ipfw 命令，该命令存在安全漏洞。针对内核 2.2 的 LRP 软件包含了 `iptchains`，它更安全。到目前为止，还没有生产级别的 `iptables` 支持。
+接下来的章节提供了如何在安全和不安全网络之间配置路由器的绝佳示例。遗憾的是，生产级 Linux Router Project (LRP) 软件基于 Linux 内核 2.0 和 2.2。针对内核 2.2 的 LRP 软件包含了过时的 `ipfw` 命令，该命令存在安全漏洞。针对内核 2.2 的 LRP 软件包含了 `iptchains`，它更安全。到目前为止，还没有生产级别的 `iptables` 支持。
 
 ### 你将创建
 
 本节演示了使用 Linux Router Project 发行版 Linux 创建基于 Linux 路由器的步骤。
 
-设计为极简 Linux 安装的 Linux Router Project Linux 发行版对于大多数站点可以放入单个 1.44MB 的软盘中，并提供了两个以太网局域网之间或通过 PPP 访问互联网之间路由的所有组件。通过 add-modules，可以支持 WAN 连接的额外硬件。其他功能如 SNMP 管理也是提供的。
+设计为极简 Linux 安装的 Linux Router Project Linux 发行版对于大多数站点可以放入单个 1.44MB 的软盘中，并提供了两个以太网局域网之间或通过 PPP 访问互联网之间路由的所有组件。通过 `add-modules`，可以支持 WAN 连接的额外硬件。其他功能如 SNMP 管理也是提供的。
 
 ## 注意
-在安装后使用 `lokkit` 时，默认的高、中安全防火墙不会开启 DHCP 。
+
+在安装后使用 `lokkit` 时，默认的高、中安全防火墙不会开启 DHCP。
 
 ## 创建基于 Linux 的路由器
 
 Red Hat Linux 7.1 的默认防火墙命令是 `iptchains`。针对 2.4.x 内核的新防火墙命令是 `iptables`。你可以禁用 `iptchains`，然后 `iptables` 将在你的防火墙中自动可用。然而，`lokkit` 实用程序不支持 `iptables` 的配置。`iptables` 的文档尚未最终确定；目前的 HOWTO 可以在 http://va.samba.org/netfilter/unreliable-guides/packet-filtering-HOWTO/index.html 找到。就绪后，请在 www.linuxdoc.org 网站上查找。
 
-另一个防火墙配置实用工具 /usr/sbin/firewall-config 也是提供的。它比 `lokkit` 稍微难用。
+另一个防火墙配置实用工具 `/usr/sbin/firewall-config` 也是提供的。它比 `lokkit` 稍微难用。
 
 你可以通过 IP 地址自定义你打开的端口。换句话说，只有具有特定 IP 地址的计算机才有向你发送特定类型数据的密钥。设置这些内容的技术超出了本书的范围。有关防火墙和网络配置的更多信息，请参阅 Robert Ziegler 写的《Linux Firewalls》（New Riders, 1999）。
 
@@ -13685,28 +12860,29 @@ Red Hat Linux 7.1 的默认防火墙命令是 `iptchains`。针对 2.4.x 内核�
 
 本节将介绍使用 Linux Router Project 发行版 Linux 创建基于 Linux 路由器的步骤。
 
-设计为极简 Linux 安装的 Linux Router Project Linux 发行版对于大多数站点可以放入单个 1.44MB 的软盘中，并提供了两个以太网局域网之间或通过 PPP 访问互联网之间路由的所有组件。通过 add-modules，可以支持 WAN 连接的额外硬件。其他功能如 SNMP 管理也是提供的。
+设计为极简 Linux 安装的 Linux Router Project Linux 发行版对于大多数站点可以放入单个 1.44MB 的软盘中，并提供了两个以太网局域网之间或通过 PPP 访问互联网之间路由的所有组件。通过 `add-modules`，可以支持 WAN 连接的额外硬件。其他功能如 SNMP 管理也是提供的。
 
 ### 第 31 章 安全与 Red Hat Linux 7.1 一个廉价的路由器
 
 使用 Linux Router Project 发行版而不是 Red Hat 等完整版 Linux 设置路由器的好处是，所有工作都为你做好了。你不需要费力识别需要安装什么来实现路由工作。此外，软件包含了一个简单的、菜单驱动的配置，允许你检查一切是否已完成。Linux Router Project 软件可以从他们的网站 http://www.linuxrouter.org/ 下载。
 
-接下来的章节提供了如何在安全和不安全网络之间配置路由器的绝佳示例。遗憾的是，生产级 Linux Router Project (LRP) 软件基于 Linux 内核 2.0 和 2.2。针对内核 2.2 的 LRP 软件包含了过时的 ipfw 命令，该命令存在安全漏洞。针对内核 2.2 的 LRP 软件包含了 `iptchains`，它更安全。到目前为止，还没有生产级别的 `iptables` 支持。
+接下来的章节提供了如何在安全和不安全网络之间配置路由器的绝佳示例。遗憾的是，生产级 Linux Router Project (LRP) 软件基于 Linux 内核 2.0 和 2.2。针对内核 2.2 的 LRP 软件包含了过时的 `ipfw` 命令，该命令存在安全漏洞。针对内核 2.2 的 LRP 软件包含了 `iptchains`，它更安全。到目前为止，还没有生产级别的 `iptables` 支持。
 
 ### 你将创建
 
 本节演示了使用 Linux Router Project 发行版 Linux 创建基于 Linux 路由器的步骤。
 
-设计为极简 Linux 安装的 Linux Router Project Linux 发行版对于大多数站点可以放入单个 1.44MB 的软盘中，并提供了两个以太网局域网之间或通过 PPP 访问互联网之间路由的所有组件。通过 add-modules，可以支持 WAN 连接的额外硬件。其他功能如 SNMP 管理也是提供的。
+设计为极简 Linux 安装的 Linux Router Project Linux 发行版对于大多数站点可以放入单个 1.44MB 的软盘中，并提供了两个以太网局域网之间或通过 PPP 访问互联网之间路由的所有组件。通过 `add-modules`，可以支持 WAN 连接的额外硬件。其他功能如 SNMP 管理也是提供的。
 
 ## 注意
-在安装后使用 `lokkit` 时，默认的高、中安全防火墙不会开启 DHCP 。
+
+在安装后使用 `lokkit` 时，默认的高、中安全防火墙不会开启 DHCP。
 
 ## 创建基于 Linux 的路由器
 
 Red Hat Linux 7.1 的默认防火墙命令是 `iptchains`。针对 2.4.x 内核的新防火墙命令是 `iptables`。你可以禁用 `iptchains`，然后 `iptables` 将在你的防火墙中自动可用。然而，`lokkit` 实用程序不支持 `iptables` 的配置。`iptables` 的文档尚未最终确定；目前的 HOWTO 可以在 http://va.samba.org/netfilter/unreliable-guides/packet-filtering-HOWTO/index.html 找到。就绪后，请在 www.linuxdoc.org 网站上查找。
 
-另一个防火墙配置实用工具 /usr/sbin/firewall-config 也是提供的。它比 `lokkit` 稍微难用。
+另一个防火墙配置实用工具 `/usr/sbin/firewall-config` 也是提供的。它比 `lokkit` 稍微难用。
 
 你可以通过 IP 地址自定义你打开的端口。换句话说，只有具有特定 IP 地址的计算机才有向你发送特定类型数据的密钥。设置这些内容的技术超出了本书的范围。有关防火墙和网络配置的更多信息，请参阅 Robert Ziegler 写的《Linux Firewalls》（New Riders, 1999）。
 
@@ -13716,14 +12892,17 @@ Red Hat Linux 7.1 的默认防火墙命令是 `iptchains`。针对 2.4.x 内核�
 
 以下说明允许你从软盘创建 Linux Router Project。就目前为止，你可以从 http://www.linuxrouter.org 下载这些文件。
 
-1. 下载 "iot-image" 文件并将其保存到方便的位置，例如 /tmp/。
+1. 下载 "iot-image" 文件并将其保存到方便的位置，例如 `/tmp/`。
+
 2. 切换当前目录到下载文件的目录，使用命令 `cd /tmp`。
+
 3. 解压缩存档。该镜像以 gzip 格式提供，可以使用以下命令解压：
 
 ```
 gunzip idiot-image-1440KB_FAT_2.9_8_Linux_2.2.gz
 ```
-4. 将磁盘镜像拷贝到软盘。这将擦除该磁盘上的任何数据。使用 dd 命令如：
+
+4. 将磁盘镜像拷贝到软盘。这将擦除该磁盘上的任何数据。使用 `dd` 命令如：
 
 ```
 dd if=idiot-image-1440KB_FAT_2.9_8_Linux_2.2 of=/dev/fd0
@@ -13731,17 +12910,15 @@ dd if=idiot-image-1440KB_FAT_2.9_8_Linux_2.2 of=/dev/fd0
 
 完成后，你就有了 Linux Router 的启动软盘。但不够。你还需要相同内核版本的网络驱动程序，在这种情况下为 2.2.16-1。
 
-对 2.2.16-1.tar.gz 文件重复基本过程，从相同的下载站点可用。将此文件拷贝到 /tmp 目录。使用 `tar xzv 2.2.16-1.tar.gz` 命令解压并提取存档。将网络模块从解压的 `/tmp/2.2.16-1/modules/net/` 子目录拷贝到第二个软盘。备后用。
+对 `2.2.16-1.tar.gz` 文件重复基本过程，从相同的下载站点可用。将此文件拷贝到 `/tmp` 目录。使用 `tar xzv 2.2.16-1.tar.gz` 命令解压并提取存档。将网络模块从解压的 `/tmp/2.2.16-1/modules/net/` 子目录拷贝到第二个软盘。备后用。
 
 到目前，Linux Router Project 2.9.8 版本是“测试版”。换句话说，在最终确定之前，不建议在生产计算机中使用。
 
 确保你有足够的硬件来运行路由器。虽然带有 8MB RAM 的 386SX 可以作为路由器运行，而带有 12MB RAM 的 486DX2 66MHz 表现尚可，但你真的想要运行 Pentium 100MHz 或更快的系统，并配备至少 16MB RAM。不需要硬盘，只需要用于启动的软盘。如果你想为你的 Linux Router Project 配置添加更多插件，那么软件可能会超过你的软盘的大小，在
 
-
-
 假设考虑从硬盘或可启动的 Zip 驱动器启动，并将你的 RAM 增加到 32MB。有关如何从其他介质启动的详情，可以在 Linux Router Project 页面上找到。
 
-如果你使用的是基于 Intel 类型 386 或 486 的计算机，最佳可用选项是基于 2.0.36 内核的过时 ipfwadm 命令的“idiot-images”。按照上述相同步骤，使用 `idiot-image_14400KB_FAT_2.9_8_Linux2.0.gz` 镜像文件和 `2.0.36pre15-1.tar.gz` 内核模块文件。
+如果你使用的是基于 Intel 类型 386 或 486 的计算机，最佳可用选项是基于 2.0.36 内核的过时 `ipfwadm` 命令的“idiot-images”。按照上述相同步骤，使用 `idiot-image_14400KB_FAT_2.9_8_Linux2.0.gz` 镜像文件和 `2.0.36pre15-1.tar.gz` 内核模块文件。
 
 Slackware 有其 Linux 发行版的变体，设计用于放入 Zip 驱动器。更多信息请查看 http://www.Slackware/zipslack。
 
@@ -13770,8 +12947,11 @@ PC 需要两个以太网卡。一个用于连接到不安全的网络，另一�
 在你提示以 root 用户身份登录且无需密码后，Linux 路由器启动，并向你显示图 31.5 所示的配置菜单。让我们按照之前的描述通过以下步骤运行一个最小网络：
 
 - 1. 网卡模块：取出你创建的第二张软盘。假设你将其挂载到 `/mnt/floppy` 目录，从 `/mnt/floppy` 目录将你每张已安装网卡所需的所需的模块 `copy`（复制）到 `/lib/modules` 目录。
+
 - 2. 基本设置：配置两个以太网卡的 IP 地址、网络掩码和路由。
+
 - 3. 基本安全：配置实现网络地址转换所需的网络安全设置。
+
 - 4. 进一步配置：配置额外的网络参数，例如名称服务器（DNS）和主机表。
 
 # 图 31.5：Linux Router Project 主菜单
@@ -13781,6 +12961,8 @@ PC 需要两个以太网卡。一个用于连接到不安全的网络，另一�
 菜单完全是数字化的，通过输入数字并按回车键访问。例如，在主配置菜单上为网络设置（Network Settings）输入 1 将显示网络设置子菜单。在子菜单上选择一个项目将在简单的编辑器中打开文件进行编辑（用于配置）。为了有效使用编辑器，你真的需要知道如何保存（按 `Ctrl+W` 然后按回车确认文件名）和退出（按 `Ctrl+C`）。如果你不记得这些命令，在编辑器中按 F1。
 
 # 安装网卡模块
+
+
 
 Linux Router Project 启动磁盘（你创建的第一张）不包含任何网卡模块。它们是你创建的第二张软盘的一部分。在后续步骤中，你将所需的模块从第二张软盘复制到启动 Linux Router Project 的计算机 RAM 磁盘上。
 
@@ -13801,14 +12983,13 @@ Linux Router Project 启动磁盘（你创建的第一张）不包含任何网�
 
 接下来，通过将以下行从 `NO` 改为 `YES`，确保你可以为路由器分配主机名。
 
+```
 IPFWING_KERNEL=YES
 IPFWING_FW=YES
-
-
+```
 
 ` 块内容进行完整且符合格式的翻译。
 
-[content]
 接下来，注释掉主机信息。在所有与主机相关的行前面添加井号标记。由于这台计算机仅作为路由器使用，通常您不需要分配主机信息。
 
 ```
@@ -13868,7 +13049,7 @@ GWO_METRIC=1
 HOSTNAME=tourettes
 ```
 
-现在是此文件。按 Ctrl+W 并按回车保存，然后按 Ctrl+C 返回网络配置菜单。在此菜单中按 2 进入 `/etc/network_direct.conf` 文件，你可以在其中设置基础安全。
+现在是此文件。按 `Ctrl+W` 并按回车保存，然后按 `Ctrl+C` 返回网络配置菜单。在此菜单中按 2 进入 `/etc/network_direct.conf` 文件，你可以在其中设置基础安全。
 
 ## 设置基础安全
 
@@ -13884,7 +13065,7 @@ HOSTNAME=tourettes
 - 启用 IP 伪装，使得所有出站连接的源都是路由器的外部 IP 地址，而不是安全网络上的原始主机地址。由于外部人员看不到你安全网络内部的 IP 地址，他们无法轻易使用这些地址入侵你的系统。
 - 处理所有返回连接，以确保响应出站连接的数据返回到你安全网络内部正确的主机。
 
-现在你可以保存文件（Ctrl+W）并退出编辑器（Ctrl+C）。
+现在你可以保存文件（`Ctrl+W`）并退出编辑器（`Ctrl+C`）。
 
 > 更更新的 ipchains 超出了本书的范围。欲需更多信息，请参考 Linux Router Project 文档网站 1rp.cowz.com 中的安全链接。这些脚本的一个一个良好示例是“西雅图防火墙”，可在 seawall.sourceforge.net 获取。
 
@@ -13948,36 +13129,34 @@ HOSTNAME=tourettes
 
 为了让所有这些交互发生，现代 Web 服务器不能仅仅是回答 HTTP 请求。Web 服务器通常提供两种交互机制：
 
-- 通用网关接口 (CGI)
-- 服务器应用程序接口 (API)
+- 通用网关接口 `CGI`
+- 服务器应用程序接口 `API`
 
 ## 通用网关接口
 
-CGI 是为添加交互性的最广泛部署的方法。在 CGI 模型下，为请求静态文件添加了非常简单的扩展。
+`CGI` 是为添加交互性的最广泛部署的方法。在 CGI 模型下，为请求静态文件添加了非常简单的扩展。
 
-CGI 提供了一种标准方法，用于触发在服务器上运行程序并将表单数据传递给程序进行处理。这些程序可以使用几乎任何编程或脚本语言编写——C、Perl 和 Java 都是常用的。
+`CGI` 提供了一种标准方法，用于触发在服务器上运行程序并将表单数据传递给程序进行处理。这些程序可以使用几乎任何编程或脚本语言编写——C、Perl 和 Java 都是常用的。
 
 当用户请求 CGI 程序时（可能通过提交表单或点击链接到程序），Web 服务器将用户数据传递给程序并等待程序返回数据。程序返回的任何数据都将以返回静态文件的方式传递给客户端。程序的职责是为浏览器产生有效内容，并处理所有情况以确保向客户端返回有效内容。
 
+总的来说，`CGI` 概念运行得非常好。数据从服务器传递到 CGI 程序的方式非常简单，以及程序构建返回给服务器的数据的方式也很简单，这意味着即使编程经验很少，也可以编写出简单的 CGI 程序。
 
+此外，`CGI` 程序易于更改和测试，因为可以使用像 Perl 这样流行的脚本语言来编写它们。
 
-总的来说，CGI 概念运行得非常好。数据从服务器传递到 CGI 程序的方式非常简单，以及程序构建返回给服务器的数据的方式也很简单，这意味着即使编程经验很少，也可以编写出简单的 CGI 程序。
-
-此外，CGI 程序易于更改和测试，因为可以使用像 Perl 这样流行的脚本语言来编写它们。
-
-CGI 接口的标准性也意味着，为任何 Linux Web 服务器编写的 CGI 脚本或程序可能可以在无需更改的情况下在任何其他 Linux Web 服务器上运行——并可能在任何其他 Unix 服务器上运行——只要它是使用所有操作系统中常见的语言编写的。
+`CGI` 接口的标准性也意味着，为任何 Linux Web 服务器编写的 CGI 脚本或程序可能可以在无需更改的情况下在任何其他 Linux Web 服务器上运行——并可能在任何其他 Unix 服务器上运行——只要它是使用所有操作系统中常见的语言编写的。
 
 尽管如此，尽管 CGI 有许多优点，但它仍然存在一些严重的缺点，这使得它对某些网站失去了吸引力。它的两个主要弱点在于安全和速度。
 
-自从 Web 出现以来，CGI 接口中发现了许多严重的安全漏洞，如果脚本编写得当，这些漏洞允许运行 Web 服务器的系统被精通技术的黑客完全访问。这使得 CGI 在 Web 服务器上的数据安全性至关重要的情况下不那么理想，而这在在大多数公司互联网和局内网服务器上都是如此——特别是在提供在线金融交易和信用卡销售的网站上。
+自从 Web 出现以来，`CGI` 接口中发现了许多严重的安全漏洞，如果脚本编写得当，这些漏洞允许运行 Web 服务器的系统被精通技术的黑客完全访问。这使得 CGI 在 Web 服务器上的数据安全性至关重要的情况下不那么理想，而这在在大多数公司互联网和局内网服务器上都是如此——特别是在提供在线金融交易和信用卡销售的网站上。
 
-此外，CGI 接口并不高效。Web 服务器运行一个或多个响应客户端请求的进程。浏览器随后启动 CGI 程序的进程，将数据传递给该进程并等待其完成。在繁忙的网站上，这可能导致短时间内需要大量新进程启动，特别是在大量使用 CGI 脚本的地方。每个对 CGI 程序的请求都会导致每个请求产生单独进程。
+此外，`CGI` 接口并不高效。Web 服务器运行一个或多个响应客户端请求的进程。浏览器随后启动 CGI 程序的进程，将数据传递给该进程并等待其完成。在繁忙的网站上，这可能导致短时间内需要大量新进程启动，特别是在大量使用 CGI 脚本的地方。每个对 CGI 程序的请求都会导致每个请求产生单独进程。
 
 这是处理大量数据和请求的一种非常低效的方法，这也是为什么领先的 Web 服务器都实现了自己的 API 来编写服务器端程序的原因。
 
 # 应用程序接口
 
-API 提供了一种编写程序的方法，这些程序可以紧密地集成到 Web 服务器中，并且通常不需要为每个请求创建新进程。与类似的基于 CGI 的解决方案相比，API 使得能够处理大量请求的 Web 应用程序开发成为可能。此外，基于 API 的解决方案在安全性方面受到的批评也较少。
+`API` 提供了一种编写程序的方法，这些程序可以紧密地集成到 Web 服务器中，并且通常不需要为每个请求创建新进程。与类似的基于 CGI 的解决方案相比，API 使得能够处理大量请求的 Web 应用程序开发成为可能。此外，基于 API 的解决方案在安全性方面受到的批评也较少。
 
 基于 API 的程序通常可以完成与 CGI 程序相同的工作，例如处理表单提供的信息、访问数据库中的数据以及验证信用卡。
 
@@ -14027,8 +13206,6 @@ NCSA httpd 是最初构建 Web 的两个原始 Web 服务器之一（另一个�
 
 NCSA http 提供了一组核心功能，旨在满足所有最苛刻网站的需求。这些功能包括对 Basic（基础）和 Digest 认证的内置支持、目录级控制、服务器端包含和 CGI 支持。虽然 NCSA http 不再处于活跃开发状态，但原始代码可以从 nca.edu 获取。
 
-
-
 Boa 通过单任务设计实现了这种性能提升。传统的 Web 服务器创建多个进程来监听请求，然后为每个请求创建一个进程进行处理；而 Boa 服务器以单进程方式运行，并在内部处理所有多个请求的执行和调度，而不是让操作系统的多任务机制来完成。Boa 仅在发出 CGI 请求时才产生子进程。你可以在 www.boa.org 了解更多关于 Boa。
 
 ## Stronghold
@@ -14049,6 +13226,8 @@ FastTrack 是一个易于管理的 Web 服务器。所有的配置和管理都�
 
 FastTrack 提供对服务器端包含（SSI）、CGI 以及 Netscape 用于开发应用的 API 支持。此外，FastTrack 可以支持 Netscape 的服务器端 JavaScript 开发环境 LiveWire。
 
+
+
 该服务器还可以通过 SSL 技术作为安全服务器使用。更多关于 FastTrack 的信息，请访问 http://home.netscape.com/fasttrack/v3.0/index.html。
 
 ## AOLserver
@@ -14060,9 +13239,13 @@ AOLserver 起源于 NaviPress，这是最早的商业服务器之一。1995 年�
 在写作期间，AOLserver 的最新版本 (3.4) 包含以下功能：
 
 - 内置全文本索引，用于为网站提供搜索功能
+
 - 一个可以从 C 语言和 Tscript 语言访问的内置 API
+
 - 全功能 CGI（可选）和服务器端包含支持
+
 - 类似于微软 Active Server Pages (ASP) 的服务器端动态页面功能
+
 - 数据库连接性，用于构建数据库驱动的动态应用，无需第三方 Web-数据库集成工具
 
 截至写作期间，尽管 AOL/Netscape 与 Sun 的联盟对 iPlanet 系列服务器付出了努力，但 AOLserver 仍然得到支持。你可以从 AOLserver 网站 www.aolserver.com 下载 AOLserver。
@@ -14090,35 +13273,35 @@ Java Web Server 提供了许多使其具有竞争竞争力的功能，包括一�
 本章其余部分将详细介绍 Apache 服务器，原因有两个：
 
 - Apache 服务器是大多数 Linux 发行版自带的默认 Web 服务器（包括光盘上的 Red Hat Linux 7.1）。
+
 - 由于 Apache 是目前互联网上最流行的 Web 服务器，它可能是你想要使用的 Web 服务器。
 
-如果你在设置 Linux 系统时执行了相当完整的安装，你可能已经安装了 Apache。有几种方法可以检查这一点。例如，你可以使用 rpm 命令：
+如果你在设置 Linux 系统时执行了相当完整的安装，你可能已经安装了 Apache。有几种方法可以检查这一点。例如，你可以使用 `rpm` 命令：
 
 ```bash
 $ rpm -q apache
 ```
 
 如果你已安装 Apache，你应该会得到类似这样的结果：
-apache-1.3.19-5
+
+`apache-1.3.19-5`
 
 如果你收到 Apache 已安装的指示，可以直接跳到“配置 Apache”部分。
 
-## 从 Red Hat 光盘安装 Apache
+### 从 Red Hat 光盘安装 Apache
 
-安装 Apache 最简单的方法是使用随书附的 Red Hat 光盘。要实现此操作，只需挂载光盘（通常在 /mnt/cdrom），然后使用 `cd /mnt/cdrom/RedHat/RPM` 命令。（如果你将光盘挂载在 /mnt/cdrom 以外的地方，你需要根据挂载点更改相应的目录。）此目录包含完整 Red Hat Linux 发行版的所有 RPM 文件。在这里你只需使用 rpm 安装包即可：
+安装 Apache 最简单的方法是使用随书附的 Red Hat 光盘。要实现此操作，只需挂载光盘（通常在 `/mnt/cdrom`），然后使用 `cd /mnt/cdrom/RedHat/RPM` 命令。（如果你将光盘挂载在 `/mnt/cdrom` 以外的地方，你需要根据挂载点更改相应的目录。）此目录包含完整 Red Hat Linux 发行版的所有 RPM 文件。在这里你只需使用 `rpm` 安装包即可：
 
 ```bash
 $ rpm -i apache-1.3.19-5.i386.rpm
 ```
 
-## 下载最新版本的 Apache
+### 下载最新版本的 Apache
 
-如果你计划运行任务关键或高流量的 Web 服务器，你可能希望从 httpd.org 下载最新版本的 Apache（见图 3.1）。通过使用最新版本，你可以确保那些不会影响普通网站的小 bug 不会困扰你更复杂或频繁使用的网站。
-
-
-
+如果你计划运行任务关键或高流量的 Web 服务器，你可能希望从 `httpd.org` 下载最新版本的 Apache（见图 3.1）。通过使用最新版本，你可以确保那些不会影响普通网站的小 bug 不会困扰你更复杂或频繁使用的网站。
 
 ## 图 32.1：
+
 Apache 网站
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_774_0.png)
@@ -14129,11 +13312,11 @@ Apache 网站
 
 从网站下载 Apache 时，你可以选择下载原始源代码或适用于 Linux 的预编译二进制文件。虽然使用源代码有其充分的理由（特别是如果你计划使用 Apache API 开发程序，或者你想在服务器中构建额外的模块），但如果你没有特殊需求，你应该下载预编译的二进制文件来设置一个具有基础 Apache 功能集的站点。本书将不会讨论编译自己的 Apache 副本，因为这需要对 Web 服务器进行更深入的讨论，超出了单章能提供的范围。
 
-如果你想从 Apache 获取最新的二进制分发版本，请将浏览器指向 (http://httpd.apache.org) 并点击此处的 Download 链接。这将进入一个文件目录。有时可以在此目录找到最新发布版本。如果没有，请遵循 httpd 和 binaries 链接，并选择你的操作系统（在我们的案例中为 Linux）。在这里你将找到可用文件列表。
+如果你想从 Apache 获取最新的二进制分发版本，请将浏览器指向 (`http://httpd.apache.org`) 并点击此处的 Download 链接。这将进入一个文件目录。有时可以在此目录找到最新发布版本。如果没有，请遵循 `httpd` 和 `binaries` 链接，并选择你的操作系统（在我们的案例中为 Linux）。在这里你将找到可用文件列表。
 
 ## 第 32 章 章 构建你自己的 Web 服务器
 
-当你查看这些文件时，最新版本取决于你的处理器。例如，i586 和 i686 标识表示该包已针对 Pentium 或 Pentium II 级处理器进行了优化编译。
+当你查看这些文件时，最新版本取决于你的处理器。例如，`i586` 和 `i686` 标识表示该包已针对 Pentium 或 Pentium II 级处理器进行了优化编译。
 
 任何下载目录中的 `README` 文件都是文本文件；在下载之前阅读它们是一个好主意。`.GZ` 文件使用 `gzip` 工具进行压缩。`.ASC` 文件包含一个 PGP 安全签名。一旦你选择了要下载的包，请在临时位置解压该文件。你可以使用命令：
 
@@ -14152,6 +13335,7 @@ $ install-bindist.sh
 默认情况下，此命令会将 Apache 服务器、配置文件和 Web 文档安装在 `/usr/local/apache`。这与 Red Hat 不同，Red Hat 将 Apache 服务器放在 `/usr/sbin`，将配置文件放在 `/etc/httpd/conf`，并将 `/var/www/html` 设置为 Web 文档的根目录。本章假设使用 Red Hat 的默认设置，因为这是你从随书附带的 CD-ROM 安装 Apache 时会发现的默认设置。
 
 > 注意
+>
 > 如果你使用的是不同版本的 Apache，目录可能会有所不同。请使用 `find` 或 `locate` 命令来获取适用于你的目录。
 
 二进制 Apache 分发版包含了从包含的源代码编译应用程序的完整说明，因此如果你发现下载的二进制文件工作不符合预期（可能是由于在你的 Linux 版本中存在不兼容的库等问题），你可能想要遵循这些说明并尝试构建自己的 Apache 二进制文件。
@@ -14174,7 +13358,7 @@ access.conf: 此文件可用于设置服务器或特定目录的访问控制限�
 
 通过文件中的参数，你可以指定 Apache 服务器的整体行为、主服务器如何响应 HTTP 请求，以及任何虚拟主机的响应（对于任何仅使用 Web 浏览器的用户来说，这些看起来是独立的各个 网站）。
 
-## Apache 配置文件
+### Apache 配置文件
 
 虽然 `/etc/httpd/conf` 子目录包含了所有三个原始配置文件，但必须配置的只有 `httpd.conf` 文件。剩余的 `CONF` 文件是为了向后兼容。`httpd.conf` 文件的结构非常直观。以下是默认的 `httpd.conf` 文件：
 
@@ -14193,62 +13377,97 @@ access.conf: 此文件可用于设置服务器或特定目录的访问控制限�
 # directory is NFS mounted, since the lockfile MUST BE STORED ON A LOCAL
 # DISK.
 ```
+
 *(注：由于原文中存在大量重复的注释块，译文已按要求保留了格式并翻译了其核心内容)*
 
-
-
-
 # 在标准配置下，服务器将按照顺序处理此文件、
+
 # srm.conf 和 access.conf。后两个文件现在
+
 # 分发时是空内容，因为建议将所有指令
+
 # 保留在一个文件中以简化操作。下方被注释的
+
 # 值是内置的默认值。你可以通过在指令中使用
+
 # /dev/null/（针对 Unix）或 "nul"（针对 Win32）来让
+
 # 服务器完全忽略这些文件。
 
 # 服务器池大小调节。Apache 并不是让你去猜测需要多少
+
 # 服务器进程，而是根据它观察到的负载进行动态
+
 # 调整 --- 换句话说，它尝试维持足够的服务器进程来
+
 # 处理当前负载，并额外保留几个空闲服务器以处理瞬时的
+
 # 负载峰值（例如，来自单个 Netscape 浏览器的多个并发请求）。
 
 # 它通过定期检查有多少服务器正在等待请求
+
 # 来这一点。如果空闲服务器少于 MinSpareServers，它就会
+
 # 创建一个新的空闲进程。如果多于 MaxSpareServers，某些空闲
+
 # 进程就会消失。默认值对于大多数网站来说可能是可以的。
 
 MinSpareServers 5
+
 MaxSpareServers 20
 
 # 初始启动的服务器数量 -- 应该是一个合理的
+
 # 数字范围。
+
 StartServers 8
 
 # 运行服务器总数的限制，即同时连接的客户端
+
 # 数量限制 -- 如果达到此限制，客户端将被
+
 # 锁定（LOCKED OUT），因此它**不应设置得太低**。
+
 # 它主要旨在作为一个制动器，防止失控的服务器
+
 # 在系统螺旋式崩溃时将其拖垮...
+
 MaxClients 150
 
 # MaxRequestsPerChild：每个子进程在退出之前被允许
+
 # 处理的请求数。子进程将退出，以避免在长时间
+
 # 使用后由于 Apache（以及它可能使用的库）泄漏
+
 # 内存或其他资源而导致的问题。在大多数系统上，
+
 # 这并不真正需要，但某些系统（如 Solaris）在库中存在
+
 # 明显的内存泄漏。对于这些平台，将值设置为 10000
+
 # 或 0 则表示无限。
+
 # 注意：此值不包括初始请求之后的随后的 
+
 # 保持连接（keepalive）请求。例如，如果一个子进程
+
 # 处理了初始请求和 100 个“保持连接”请求，
+
 # 它在限制中仅计为一次请求。
 
 MaxRequestsPerChild 100
+
 # Listen：允许你将 Apache 绑定到特定的 IP 地址
+
 # 或端口，除默认值外。另见 <VirtualHost>
+
 # 指令。
+
 #Listen 3000
+
 #Listen 12.34.56.78:80
+
 ```
 
 # BindAddress：你可以通过此选项支持虚拟主机。
@@ -14257,17 +13476,25 @@ MaxRequestsPerChild 100
 # 另见 <VirtualHost> 和 Listen 指令。
 
 ```
+
 #Address *
 
 # 动态共享对象 (DSO) 支持
+
 # 为了使用在此位置构建的模块功能，必须
+
 # 在此处放置相应的 'LoadModule' 行，以便其中的
+
 # 指令在被使用之前实际上是有效的。
+
 # 请阅读 Apache 1.3 中的 README.DSO 文件以获取
+
 # DSO 机制的更多细节，并运行 `httpd -l` 查看
+
 # 你的d 中已内置（静态链接，因此始终可用）的模块列表。
 
 # 注意：模块加载的顺序很重要。在没有专家建议的情况下
+
 # 不要更改顺序。
 
 ```
@@ -14291,6 +13518,8 @@ LoadModule info_module modules/mod_info.so
 
 # 配置 Apache 2.4
 
+
+
 ```
 LoadModule includes_module modules/mod_include.so
 LoadModule autoindex_module modules/mod_autoindex.so
@@ -14307,75 +13536,37 @@ LoadModule access_module modules/mod_access.so
 LoadModule auth_module modules/mod_auth.so
 ```
 
+# 正在定义虚拟主机
 
+# 如果你的 ServerType 指令（早些在“全局环境”部分中设置）设置为 'inetd'，则接下来几条指令不会产生任何影响，因为它们的设置是由 inetd 配置定义的。跳到 ServerAdmin 指令。
 
+# Port: 独立服务器监听的端口。对于小于 1023 的端口，你将初始以 root 身份运行 httpd。
 
-# 正在定义虚拟主机。
+`Port 80`
 
-#
-# 如果你的 ServerType 指令（早些在“全局环境”部分
-# 中设置）设置为 'inetd'，则接下来几条指令不会产生任何
-# 影响，因为它们的设置是由 inetd 配置定义的。
-# 跳到 ServerAdmin 指令。
+# 如果你希望 httpd 以不同的用户或组运行，你必须以 root 身份运行 httpd，然后它会进行切换。User/Group: 运行 httpd 的用户/组名称（或数字）。在 SCO (ODT 3) 上使用 'User nouser' 和 'Group nogroup'。在 HPUX 上，你可能无法以 nobody 身份使用共享内存，建议的数学方法是创建一个 www 用户并使用该用户。注意，某些内核在 (无符号)Group 的值大于 6000 时会拒绝设置ggid(Group) 或 shcmctl(IPC_SET)；在这些系统上不要使用 Group nobody！
 
-#
-# Port: 独立服务器监听的端口。对于
-# 小于 1023 的端口，你将初始以 root 身份运行 httpd。
-#
+`User apache`
 
-Port 80
+`Group apache`
 
-#
-# 如果你希望 httpd 以不同的用户或组运行，你必须
-# 以 root 身份运行 httpd，然后它会进行切换。
+# ServerAdmin: 你的地址，服务器出现问题时应邮件至此处。此地址出现在某些服务器生成的页面上，例如错误文档。
 
-# User/Group: 运行 httpd 的用户/组名称（或 #数字）。
-# 在 SCO (ODT 3) 上使用 'User nouser' 和 'Group nogroup'。
-# 在 HPUX 上，你可能无法以 nobody 身份使用共享内存，
-# 建议的数学方法是创建一个 www 用户并使用该用户。
-# 注意，某些内核在 (无符号)Group 的值大于 6000 时
-# 会拒绝设置ggid(Group) 或 shcmctl(IPC_SET)；
-# 在这些系统上不要使用 Group nobody！
+`ServerAdmin root@localhost`
 
-User apache
-Group apache
-
-#
-# ServerAdmin: 你的地址，服务器出现问题时应邮件至
-此处。此地址出现在某些服务器生成的页面上，例如
-# 错误文档。
-#
-ServerAdmin root@localhost
-
-#
-# ServerName: 允许你设置一个返回给客户端的主机名，
-# 如果它与程序获取的主名称不同（例如，使用
-# "www" 而不是主机的真实名称）。
+# ServerName: 允许你设置一个返回给客户端的主机名，如果它与程序获取的主名称不同（例如，使用 "www" 而不是主机的真实名称）。
 
 ## 配置 Apache
 
-# 注意：你不能随意发明主机名并希望它们能够工作。你
-# 在这里定义的名称必须是你主机的有效 DNS 名称。如果你
-# 不知道这一点，请咨询你的网络管理员。
-# 如果你的主机没有注册 DNS 名称，请在此处输入其 IP 地址。
-# 你将通过其地址（例如 http://123.45.67.89/）访问它，
-# 这将使重定向以合理的方式工作。
+# 注意：你不能随意发明主机名并希望它们能够工作。你在这里定义的名称必须是你主机的有效 DNS 名称。如果你不知道这一点，请咨询你的网络管理员。如果你的主机没有注册 DNS 名称，请在此处输入其 IP 地址。你将通过其地址（例如 http://123.45.67.89/）访问它，这将使重定向以合理的方式工作。
+
 # ServerName localhost
 
-#
-# DocumentRoot: 你提供文档服务的目录。默认情况下，
-# 所有的请求都来自此目录，但可以使用符号链接和
-# 别名（aliases）指向其他位置。
-#
-DocumentRoot "/var/www/html"
+# DocumentRoot: 你提供文档服务的目录。默认情况下，所有的请求都来自此目录，但可以使用符号链接和别名（aliases）指向其他位置。
 
-#
-# Apache 可访问的每个目录都可以配置在该
-# 目录下允许和/或禁用的服务和功能（以及其
-# 子目录）。
-# 首先，我们将“默认”值配置为一组非常严格的
-# 权限。
-<Directory />
+`DocumentRoot "/var/www/html"`
+
+# Apache 可访问的每个目录都可以配置在该目录下允许和/或禁用的服务和功能（以及其子目录）。首先，我们将“默认”值配置为一组非常严格的权限。
 
 ```
 Options FollowSymLinks
@@ -14383,35 +13574,24 @@ AllowOverride None
 </Directory>
 ```
 
-#
-# 注意：从此点开始，你必须专门允许
-# 特定功能——如果某些功能没有按你
-# 期的那样工作，请确保你已经在下方专门地启用了它。
+# 注意：从此点开始，你必须专门允许特定功能——如果某些功能没有按你期的那样工作，请确保你已经在下方专门地启用了它。
 
-#
 # 此处应更改为你设置 DocumentRoot 的任何值。
-#
+
+```
 <Directory "/var/www/html">
+```
 
-#
-# 这也可以是 "None"、All" 或 "Indexes",
-# "Includes", "FollowSymLinks", "ExecCGI" 或 "MultiViews" 的任何组合。
+# 这也可以是 "None"、All" 或 "Indexes", "Includes", "FollowSymLinks", "ExecCGI" 或 "MultiViews" 的任何组合。注意 "MultiViews" 必须*显式地*命名——"Options All" 不会提供它。
 
-# 注意 "MultiViews" 必须*显式地*命名——"Options All"
-# 不会提供它。
+`Options Indexes Includes FollowSymLinks`
 
-Options Indexes Includes FollowSymLinks
-
-#
-# 这控制目录中的 .htaccess 文件可以覆盖
-# 哪些选项。也可以是 "All", 或 "Options", "FileInfo",
-# "AuthConfig" 和 "Limit" 的任何组合
+# 这控制目录中的 .htaccess 文件可以覆盖哪些选项。也可以是 "All", 或 "Options", "FileInfo", "AuthConfig" 和 "Limit" 的任何组合
 
 ```
 AllowOverride None
 ```
 
-#
 # 控制谁可以从此服务器获取内容。
 
 ```
@@ -14420,17 +13600,13 @@ Allow from all
 </Directory>
 ```
 
-#
-# UserDir: 当接收到 `user` 请求时，附加到用户主
-# 目录的目录名称。
+# UserDir: 当接收到 `user` 请求时，附加到用户主目录的目录名称。
 
 ```
 UserDir public_html
 ```
 
-#
-# 控制 UserDir 目录的访问。以下是一个示例，
-# 其中这些目录被限制为只读。
+# 控制 UserDir 目录的访问。以下是一个示例，其中这些目录被限制为只读。
 
 ```
 #<Directory /home/~*/public_html>
@@ -14450,22 +13626,16 @@ Deny from all
 </Directory>
 ```
 
-# DirectoryIndex: 用作预写 HTML 目录
-# 索引的文件名。用空格分隔多个条目。
+# DirectoryIndex: 用作预写 HTML 目录索引的文件名。用空格分隔多个条目。
+
 # DirectoryIndex index.html index.htm index.shtml index.php index.php4 index-.php3 index.cgi
 
-# AccessFileName: 在每个目录中查找用于
-# 访问控制信息的文件名。
+# AccessFileName: 在每个目录中查找用于访问控制信息的文件名。
+
 # AccessFileName.htaccess
 
-# 以下行防止 Web 客户端查看 .htaccess 文件。
-# 由于 .htaccess 文件通常包含授权
-# 信息，出于安全考虑，禁止访问。如果你想
-# 让访问者看到 .htaccess 文件的内容，请注释
-# 掉这些几行。如果你更改了上面的 AccessFileName 指令，
-# 请确保在此处进行相应的更改。
+# 以下行防止 Web 客户端查看 .htaccess 文件。由于 .htaccess 文件通常包含授权信息，出于安全考虑，禁止访问。如果你想让访问者看到 .htaccess 文件的内容，请注释掉这些几行。如果你更改了上面的 AccessFileName 指令，请确保在此处进行相应的更改。此外，人们倾向于使用 .htaccess
 
-# 此外，人们倾向于使用 .htaccess
 ```
 <Files ~\.ht*>
 Order allow,deny
@@ -14473,25 +13643,15 @@ Deny from all
 </Files>
 ```
 
-# mod_mime_magic 允许服务器根据文件扩展名
-# 确定 MIME 类型。如果无法确定，
-# DefaultType 是服务器用于二进制
-# 文件的默认类型。
+# mod_mime_magic 允许服务器根据文件扩展名确定 MIME 类型。如果无法确定，DefaultType 是服务器用于二进制文件的默认类型。
 
-DefaultType text/plain
+`DefaultType text/plain`
 
-# mod_mime_magic 允许服务器根据文件扩展名
-# 确定 MIME 类型。如果无法确定，
-# DefaultType 是服务器用于二进制
-# 文件的默认类型。
+# mod_mime_magic 允许服务器根据文件扩展名确定 MIME 类型。如果无法确定，DefaultType 是服务器用于二进制文件的默认类型。
 
-# mod_mime_magic 允许服务器根据文件扩展名
-# 确定 MIME 类型。如果无法确定，
-# DefaultType 是服务器用于二进制
-# 文件的默认类型。
+# mod_mime_magic 允许服务器根据文件扩展名确定 MIME 类型。如果无法确定，DefaultType 是服务器用于二进制文件的默认类型。
 
-# MIMEFile 告诉我们定义所在的位置。它不是默认
-# 配置的一部分，因此它被封装在 <IfModule> 容器中。
+# MIMEFile 告诉我们定义所在的位置。它不是默认配置的一部分，因此它被封装在 <IfModule> 容器中。
 
 ```
 <IfModule mod_mime_magic>
@@ -14499,34 +13659,21 @@ MIMEFile /usr/share/magic
 </IfModule>
 ```
 
-# HostnameLookups: 记录客户端的名称或仅记录 IP 地址
-# 例如 www.apache.org (开启) 或 204.62.129.132 (关闭)。
-# 默认是关闭的，因为对于网络来说，如果人们必须
-# 开启此功能会更好，因为启用它意味着
-# 每个客户端请求都会导致一次向名称服务器的
-# 查询。
+# HostnameLookups: 记录客户端的名称或仅记录 IP 地址例如 www.apache.org (开启) 或 204.62.129.132 (关闭)。默认是关闭的，因为对于网络来说，如果人们必须开启此功能会更好，因为启用它意味着每个客户端请求都会导致一次向名称服务器的查询。
 
-HostnameLookups Off
+`HostnameLookups Off`
 
-# ErrorLog: 错误日志文件的位置。
-# 如果没有在 <VirtualHost> 容器内指定
-# ErrorLog 指令，则与虚拟主机相关的错误消息
-# 将记录在此处。如果你为 <VirtualHost>
-# 容器定义了错误日志，则该主机的错误将
-# 记录在那里而不是在此处。
+# ErrorLog: 错误日志文件的位置。如果没有在 <VirtualHost> 容器内指定 ErrorLog 指令，则与虚拟主机相关的错误消息将记录在此处。如果你为 <VirtualHost> 容器定义了错误日志，则该主机的错误将记录在那里而不是在此处。
 
 ```
 ErrorLog /var/log/httpd/error_log
 ```
 
-# LogLevel: 控制记录到 error_log 中的消息数量。
-# 可能的值包括 debug, info, notice, warn, error, crit,
-# alert, emerg。
+# LogLevel: 控制记录到 error_log 中的消息数量。可能的值包括 debug, info, notice, warn, error, crit, alert, emerg。
 
-LogLevel warn
+`LogLevel warn`
 
-# 以下指令定义了一些格式别名，供 CustomLog
-# 指令使用（见下文）。
+# 以下指令定义了一些格式别名，供 CustomLog 指令使用（见下文）。
 
 ```
 LogFormat "%h %l %u %t" %>s \"%(Referer)i\" \"%(User-Agent)i\"
@@ -14536,17 +13683,11 @@ LogFormat \"%{Referer}i - %>U\" referer
 LogFormat \"%{User-Agent}i\" agent
 ```
 
-# 访问日志的位置和格式（常用日志格式）。
-# 如果你没有在 <VirtualHost> 容器内定义任何
-# 访问日志，它们将记录在此处。相反，如果你
-# 定义了每个 <VirtualHost> 的访问日志，事务将记录在
+# 访问日志的位置和格式（常用日志格式）。如果你没有在 <VirtualHost> 容器内定义任何访问日志，它们将记录在此处。相反，如果你定义了每个 <VirtualHost> 的访问日志，事务将记录在
 
 ```
 CustomLog /var/log/httpd/access_log common
 ```
-
-
-
 
 # 754 第 32 章 • 构建你自己的 Web 服务器
 
@@ -14608,6 +13749,7 @@ Allow from all
 
 # "/var/www/cgi-bin*" 应该更改为你配置的任何 ScriptAliased
 # CGI 目录项。
+```
 
 ```apache
 <Directory /var/www/cgi-bin*>
@@ -14624,25 +13766,22 @@ Allow from all
 # 服务器命名空间但现在不再的文档。这允许你告诉
 # 客户端去哪里寻找重位置的文档。
 # 格式：Redirect 旧URL-新URL
-
 #
 # 控制服务器生成的目录列表显示的指令。
 #
-
 #
 # FancyIndexing（花式索引）：你是否想要花式的目录索引或标准的
 #
 IndexOptions FancyIndexing
-
 #
 # AddIcon* 指令告诉服务器为不同的文件
 # 或文件名扩展名显示哪个图标。这些图标只在
 # FancyIndexed 目录中显示。
 #
+```
 
 ```apache
 AddIconByEncoding (CMP, /icons/compressed.gif) x-compress x-gzip
-
 AddByType (TXT, /icons/text.gif) text/*
 AddByType (IMG, /icons/image2.gif) image/*
 AddByType (SND, /icons/sound2.gif) audio/*
@@ -14679,7 +13818,6 @@ AddIcon /icons/blank.gif ^^BLANKICON^^
 #
 # DefaultIcon（默认图标）：对于没有显式设置图标的文件
 # 显示哪个图标。
-
 DefaultIcon /icons/unknown.gif
 ```
 
@@ -14689,11 +13827,12 @@ DefaultIcon /icons/unknown.gif
 # 文件后放置简短描述。这些只在 FancyIndexed
 # 目录中显示。
 # 格式：AddDescription "描述" 文件名
-
 #AddDescription 'GZIP compressed document' .gz
 #AddDescription 'tar archive' .tar
 #AddDescription 'GZIP compressed tar archive' .tgz
 ```
+
+
 
 ```apache
 #
@@ -14745,9 +13884,6 @@ AddLanguage de
 AddLanguage da
 AddLanguage it
 ```
-
-
-
 
 ```apache
 Alias /perl/ /var/www/perl/
@@ -15041,10 +14177,6 @@ CRLFile /etc/http/conf/server-ca-bundle.crt
 # CGI 和 SSI 请求启用导出。
 ```
 
-
-
-
-
 # 配置 Apache 767
 
 ```
@@ -15069,76 +14201,82 @@ SSLOptions +StdEnvVars
 ```
 
 注意：大多数客户端连接的问题也与 HTTP 保持连接（keep-alive）机制有关，因此你通常还想同时为这些客户端禁用保持连接。使用变量 "nokealive" 实现此。
+
 SetEnvIf User-Agent "*MSIE.**" nokealive ssl-unclean-shutdown
 
 # 服务器日志：
+
 # 自定义 SSL 日志文件。当你想在虚拟主机的基础上
+
 # 创建紧凑的非错误 SSL 日志文件时使用此项。
+
 CustomLog /var/log/httpd/ssl_request_log \
+
 "%t %h %x{SSL_PROTOCOL}x %{SSL_CIPHER}x \%r" %b"
 
 ```
 <VirtualHost>
 ```
 
-```
-#IfDefine
 
-你应该首先注意到，此文件由注释和实际配置项组成。注释以井号（#）开头。配置项由任何条值命名的项组成。
 
-httpd.conf 有三个主要部分：全局环境（Global Environment）、服务器配置（Server Configuration）和虚拟主机（Virtual Hosts）。让我们详细查看每个部分。
+# IfDefine
 
-全局环境 (Global Environment)
+你应该首先注意到，此文件由注释和实际配置项组成。注释以井号（`#`）开头。配置项由任何条值命名的项组成。
+
+`httpd.conf` 有三个主要部分：全局环境（Global Environment）、服务器配置（Server Configuration）和虚拟主机（Virtual Hosts）。让我们详细查看每个部分。
+
+## 全局环境 (Global Environment)
 
 此部分中的指令和模块控制 Apache 服务器进程的整体运行。在这里看到的内容适用于所有 Apache 主机，无论它们是主服务器还是后续章节讨论的任何虚拟主机。
 
-# ServerType
+### ServerType
 
-你将学习的第一个指令是 ServerType。Apache 服务器可以通过两种方式运行：在独立模式下，通过自己的进程监听连接；或者在 inetd 模式下（你在网络章节中见过）。在 inetd 中，它监听连接并在连接到来时启动 Apache 进程。如果你是第一次运行 Web 服务器，那么你将是以独立模式运行 Apache，除非你熟悉 inetd、正在使用 Unix 服务器，并且有充分的理由以这种方式运行服务器。
+你将学习的第一个指令是 `ServerType`。Apache 服务器可以通过两种方式运行：在独立模式下，通过自己的进程监听连接；或者在 `inetd` 模式下（你在网络章节中见过）。在 `inetd` 中，它监听连接并在连接到来时启动 Apache 进程。如果你是第一次运行 Web 服务器，那么你将是以独立模式运行 Apache，除非你熟悉 `inetd`、正在使用 Unix 服务器，并且有充分的理由以这种方式运行服务器。
 
-# ServerRoot
+### ServerRoot
 
-ServerRoot 用于指定服务器配置文件和日志文件的根目录。Red Hat 将其设置在 /etc/httpd 目录。该目录包含三个配置文件以及一个指向 /var/log/httpd 的 logs 目录（软链接）。
+`ServerRoot` 用于指定服务器配置文件和日志文件的根目录。Red Hat 将其设置在 `/etc/httpd` 目录。该目录包含三个配置文件以及一个指向 `/var/log/httpd` 的 `logs` 目录（软链接）。
 
 你可以自由地将该目录移动到系统中的任何位置，以匹配你正在使用的管理风格。然而，通常将它们保留在 Linux 发行版默认存放的地方是最容易的。
 
-# 加载模块 (Loading Modules)
+### 加载模块 (Loading Modules)
 
-第一个主要部分由一系列 LoadModule 指令组成，随后是系列 AddModule 指令。Apache 的功能通过使用模块来创建和扩展。在 Apache 的早期版本中，这些模块被组合进可执行的 Apache httpd 文件中。从 Apache 1.3 版本开始，现在可以创建在服务器启动时加载的模块。
+第一个主要部分由一系列 `LoadModule` 指令组成，随后是系列 `AddModule` 指令。Apache 的功能通过使用模块来创建和扩展。在 Apache 的早期版本中，这些模块被组合进可执行的 Apache `httpd` 文件中。从 Apache 1.3 版本开始，现在可以创建在服务器启动时加载的模块。
 
-由于这些模块的大部分通过指令进行配置的，因此在 httpd.conf 文件中出现任何其他指令之前，加载所有相关的模块是非常关重要的。
+由于这些模块的大部分通过指令进行配置的，因此在 `httpd.conf` 文件中出现任何其他指令之前，加载所有相关的模块是非常关重要的。
 
-对于大多数基础安装，默认模块列表已经足够了，你不需要更改它。如果你需要扩展或更改 Web 服务器的功能，请咨询 http.apache.org 上的 Apache 在线文档，获取更多关于添加加载模块以及使用 LoadModule 和 AddModule 指令的信息。
+对于大多数基础安装，默认模块列表已经足够了，你不需要更改它。如果你需要扩展或更改 Web 服务器的功能，请咨询 `http.apache.org` 上的 Apache 在线文档，获取更多关于添加加载模块以及使用 `LoadModule` 和 `AddModule` 指令的信息。
 
-# 主服务器配置 (Main Server Configuration)
+## 主服务器配置 (Main Server Configuration)
 
 你可以在 Apache 服务器上设置任意数量的虚拟主机。但每个 Apache 服务器都需要一个主主机。主服务器部分中的指令决定了主主机的默认参数，以及任何未在任何虚拟主机中指定的指令。
 
-# 端口 (Port)
+### 端口 (Port)
 
-由于运行在 1024 端口以下的进程存在安全漏洞，如果你运行的 Web 服务器未在互联网上公开发布，并希望避免与这些端口相关的风险，你可以尝试在 1024 以上的端口运行服务器。这类 Web 服务器的常用端口是 8000 和 8080，但你可以选择任何空闲端口。如果你运行着高安全性防火墙，请确保对你选择的端口允许 WWW 数据。当你使用第 31 章描述的 iptables 工具自定义防火墙时，如果你打算使用端口 8080，请在自定义部分的“其他端口”（Other Ports）文本框中使用 8080,8080:udp,8080:tcp。
+由于运行在 1024 端口以下的进程存在安全漏洞，如果你运行的 Web 服务器未在互联网上公开发布，并希望避免与这些端口相关的风险，你可以尝试在 1024 以上的端口运行服务器。这类 Web 服务器的常用端口是 8000 和 8080，但你可以选择任何空闲端口。如果你运行着高安全性防火墙，请确保对你选择的端口允许 WWW 数据。当你使用第 31 章描述的 `iptables` 工具自定义防火墙时，如果你打算使用端口 8080，请在自定义部分的“其他端口”（Other Ports）文本框中使用 `8080,8080:udp,8080:tcp`。
 
-# 用户和组 (User and Group)
+### 用户和组 (User and Group)
 
-User 和 Group 条目是关键项，因为它们影响你系统的核心安全性。通常，httpd 进程由 root 账户启动，但该进程并不监听连接。相反，该进程根据这些配置指令指定的用户和组（通过名称或 ID 数字指定）启动一个或多个子进程。
+`User` 和 `Group` 条目是关键项，因为它们影响你系统的核心安全性。通常，`httpd` 进程由 `root` 账户启动，但该进程并不监听连接。相反，该进程根据这些配置指令指定的用户和组（通过名称或 ID 数字指定）启动一个或多个子进程。
 
-这样做是因为，否则 Web 服务器启动的所有进程（包括 CGI 程序）都将以 root 身份运行。这将带来巨大的安全风险，特别是当编写得糟糕的 CGI 脚本留下了巨大的安全漏洞时。通过以用户及其相关的子进程运行 Web 服务器，可以避免这一点。
+这样做是因为，否则 Web 服务器启动的所有进程（包括 CGI 程序）都将以 `root` 身份运行。这将带来巨大的安全风险，特别是当编写得糟糕的 CGI 脚本留下了巨大的安全漏洞时。通过以用户及其相关的子进程运行 Web 服务器，可以避免这一点。
 
-# ServerAdmin
+### ServerAdmin
 
 此指令指明网站管理员的电子邮件地址。
 
-# ServerName
+### ServerName
 
-ServerName 配置指令通过主机表识别返回给客户端的主机名。在内部网环境中，你可以使用主机表定义它；在互联网环境中，你可以通过 DNS 记录定义。在情况下，ServerName 设置为 localhost。
+`ServerName` 配置指令通过主机表识别返回给客户端的主机名。在内部网环境中，你可以使用主机表定义它；在互联网环境中，你可以通过 DNS 记录定义。在情况下，`ServerName` 设置为 `localhost`。
 
-# DocumentRoot
+### DocumentRoot
 
-DocumentRoot 配置项指定 HTML 文件所在的根目录。在 Linux 的情况下，默认通常设置为 /var/www/html。
+`DocumentRoot` 配置项指定 HTML 文件所在的根目录。在 Linux 的情况下，默认通常设置为 `/var/www/html`。
 
-# 启用 HTML 目录 (Enabling the HTML Directory)
+### 启用 HTML 目录 (Enabling the HTML Directory)
 
-下面的代码是 httpd.conf 文件中处理根目录的部分，没有任何注释。
+下面的代码是 `httpd.conf` 文件中处理根目录的部分，没有任何注释。
 
 ```
 <Directory /var/www/html>
@@ -15149,35 +14287,31 @@ allow from all
 </Directory>
 ```
 
-该条目的结构是将必要的指令封装在 <Directory> 开始和结束标签之间。开始标签指定指令适用于目录，在本例中为 /var/www/html。
+该条目的结构是将必要的指令封装在 `<Directory>` 开始和结束标签之间。开始标签指定指令适用于目录，在本例中为 `/var/www/html`。
 
-在 <Directory> 和 </Directory> 标签之间，注意四个指令：Options 指明对目录及其子目录中的文件可以采取哪些特殊操作。可能的值包括 None, All, Indexes, Includes, FollowSymlinks, ExecCGI 和 MultiViews。
+在 `<Directory>` 和 `</Directory>` 标签之间，注意四个指令：`Options` 指明对目录及其子目录中的文件可以采取哪些特殊操作。可能的值包括 `None`, `All`, `Indexes`, `Includes`, `FollowSymlinks`, `ExecCGI` 和 `MultiViews`。
 
-下一个指令是 AllowOverride，它指示本地 .htaccess 文件覆盖全局 httpd.conf 条目的权限。可能的值包括 None, All, Options, FileInfo, AuthConfig 和 Limit。例如，Options 值限制了 .htaccess 文件只能覆盖 Options 指令。在 Web 管理员控制所有内容的服务器上，通常最容易允许完全覆盖权。当你运行一个多个用户控制自己目录内容的服务器时，限制这些用户覆盖访问配置的权限可能是明智的。
+下一个指令是 `AllowOverride`，它指示本地 `.htaccess` 文件覆盖全局 `httpd.conf` 条目的权限。可能的值包括 `None`, `All`, `Options`, `FileInfo`, `AuthConfig` 和 `Limit`。例如，`Options` 值限制了 `.htaccess` 文件只能覆盖 `Options` 指令。在 Web 管理员控制所有内容的服务器上，通常最容易允许完全覆盖权。当你运行一个多个用户控制自己目录内容的服务器时，限制这些用户覆盖访问配置的权限可能是明智的。
 
-最后，order 和 allow 指令结合使用，控制谁可以访问目录中的页面。在这里，order allow, deny 指明应该使用第一个 allow 指令，如果该指令没有允许用户获取请求的文件，则应应用任何 deny 指令。
+最后，`order` 和 `allow` 指令结合使用，控制谁可以访问目录中的页面。在这里，`order allow, deny` 指明应该使用第一个 `allow` 指令，如果该指令没有允许用户获取请求的文件，则应应用任何 `deny` 指令。
 
-
-
-
-
-从 `order` 指令到 `allow` 指令，后者表示允许所有用户访问。如果你想完全了解如何拒绝用户，应该阅读可以在 http://httpd.apache.org 找到的在线 Apache 文档。
+从 `order` 指令到 `allow` 指令，后者表示允许所有用户访问。如果你想完全了解如何拒绝用户，应该阅读可以在 `http://httpd.apache.org` 找到的在线 Apache 文档。
 
 ## UserDir
 
-UserDir 是一个指令，当管理员想要允许系统上的每个用户都拥有自己的个人网站时，该指令非常有用，用户可以通过其主目录下的子目录来管理该网站。该指令指示了主目录中被视为 Web 目录的子目录名称。
+`UserDir` 是一个指令，当管理员想要允许系统上的每个用户都拥有自己的个人网站时，该指令非常有用，用户可以通过其主目录下的子目录来管理该网站。该指令指示了主目录中被视为 Web 目录的子目录名称。
 
 通常做法是使用 `public_html`。因此，如果测试者拥有目录 `/home/tester/public_html`，则可以通过 URL：`http://servername/~tester` 通过 Web 访问该目录。
 
 ## DirectoryIndex
 
-DirectoryIndex 是一个重要的指令，因为它指示了哪些文件应该被视为默认文件。这就是为什么像 http://www.mammabears.com 这样的 URL 可以访问正确文件的原因。
+`DirectoryIndex` 是一个重要的指令，因为它指示了哪些文件应该被视为默认文件。这就是为什么像 `http://www.mammabears.com` 这样的 URL 可以访问正确文件的原因。
 
 例如，在上面的示例 `httpd.conf` 文件中，为目录索引给出了七项输入：`index.html`、`index.htm`、`index.shtml`、`index.php`、`index.php4`、`index.php3` 和 `index.cgi`。这意味着任何未指定文件名且仅提供目录的 URL，服务器将首先从指定的目录返回 `index.html`。如果该文件不存在，则向客户端发送 `index.htm`。如果没有找到匹配项，服务器将根据其他配置选项返回目录列表或错误消息。
 
 ## AccessFileName
 
-AccessFileName 用于指定包含给定目录访问控制信息的文件名。访问控制信息可以存储在 `httpd.conf` 文件中，也可以存储在每个主目录目录下的 `.htaccess` 配置文件中。
+`AccessFileName` 用于指定包含给定目录访问控制信息的文件名。访问控制信息可以存储在 `httpd.conf` 文件中，也可以存储在每个主目录目录下的 `.htaccess` 配置文件中。
 
 示例文件表明，如果目录中存在名为 `.htaccess` 的文件，则该文件包含该目录的访问控制信息。
 
@@ -15240,7 +14374,7 @@ AddType text/html
 
 除了能够启动 Web 服务器外，你还需要管理用户和组、保护目录以及维护日志以便它们持续运行。
 
-## Starting and Stopping
+### Starting and Stopping
 
 如果你启动了 Apache，你需要知道服务器的 ID (PID)。你可以使用命令确定服务器的 PID：
 
@@ -15264,7 +14398,7 @@ AddType text/html
 # kill 544
 ```
 
-## Managing Apache Users and Groups
+### Managing Apache Users and Groups
 
 正如你将在下一节保护目录中看到的，一种主要的保护方法是通过用户名和密码，限制访问特定的用户列表，这些用户必须正确提供用户名和密码才能访问受保护的目录。
 
@@ -15276,20 +14410,17 @@ AddType text/html
 # htpasswd -c filename username
 ```
 
-使用此命令，将创建 `filename` 指定的文件并将第一个用户添加到文件中。`-c` 标志表示需要创建该文件。你可以
+使用此命令，将创建 `filename` 指定的文件并将第一个用户添加到文件中。`-c` 标志表示需要创建该文件。你可以将密码文件存储在 Apache Web 服务器可以访问的任何地方。
 
-
-将密码文件存储在 Apache Web 服务器可以访问的任何地方。
 良好的存储位置是与你的配置文件放在一起。例如，使用命令
 
 ```bash
 # htpasswd -c /etc/httpd/conf/users user
 ```
 
-这会在与其他 Apache 配置文件相同的目录下创建一个文件，
-并创建用户条目。
+这会在与其他 Apache 配置文件相同的目录下创建一个文件，并创建用户条目。
 
-当你执行上述命令时，系统会提示你输入两次用户密码，以确保输入正确。然后，密码将被加密并存储在 /etc/httpd/conf/users 中。该条目格式如下：
+当你执行上述命令时，系统会提示你输入两次用户密码，以确保输入正确。然后，密码将被加密并存储在 `/etc/httpd/conf/users` 中。该条目格式如下：
 
 ```
 user1:N31mVAxFtiv0
@@ -15297,7 +14428,7 @@ user1:N31mVAxFtiv0
 
 该条目的格式为用户名，后跟冒号，然后是加密后的密码。每个用户条目单独一行。
 
-虽然系统密码文件（/etc/passwd）中的密码与 Apache 密码文件看起来是以相同方式加密的，但 `htpasswd` 的加密过程是不同的，你不能简单地从 /etc/passwd 复制加密密码来创建你的 Apache 密码文件。
+虽然系统密码文件（`/etc/passwd`）中的密码与 Apache 密码文件看起来是以相同方式加密的，但 `htpasswd` 的加密过程是不同的，你不能简单地从 `/etc/passwd` 复制加密密码来创建你的 Apache 密码文件。
 
 文件创建后，要添加额外的用户，只需使用 `htpasswd` 命令而不要带 `-c` 标志：
 
@@ -15305,7 +14436,7 @@ user1:N31mVAxFtiv0
 $ htpasswd /etc/httpd/conf/users user2
 ```
 
-此命令允许添加 user2，同样会触发两次密码提示。生成的密码文件包含两个条目：
+此命令允许添加 `user2`，同样会触发两次密码提示。生成的密码文件包含两个条目：
 
 ```
 user1:N31mVAxFtiv0.
@@ -15314,7 +14445,7 @@ user2:W0TrHb.3pPk
 
 除了创建用户外，你通常还想创建用户组。组将多个用户关联到一个名称下，使得在配置目录访问控制时，更容易访问相关用户。
 
-要创建组，只需使用如 `vi` 或 `emacs` 等文本编辑器编辑该文件来创建组。你可能应该将组文件放在与用户文件相同的目录下，例如 /etc/httpd/conf/groups。此文件包含一个或多个条目，每个条目单独一行，格式如下：
+要创建组，只需使用如 `vi` 或 `emacs` 等文本编辑器编辑该文件来创建组。你可能应该将组文件放在与用户文件相同的目录下，例如 `/etc/httpd/conf/groups`。此文件包含一个或多个条目，每个条目单独一行，格式如下：
 
 ```
 username: username1 username2 username3 ...
@@ -15332,14 +14463,14 @@ authors: user1 user2
 
 此文件中用于访问控制的主要指令如下：
 
-- AuthUserFile
-- AuthGroupFile
-- AuthName
-- AuthType
-- require
-- order
-- deny
-- allow
+- `AuthUserFile`
+- `AuthGroupFile`
+- `AuthName`
+- `AuthType`
+- `require`
+- `order`
+- `deny`
+- `allow`
 
 ### AuthUserFile 和 AuthGroupFile
 
@@ -15352,7 +14483,7 @@ AuthGroupFile /etc/httpd/conf/groups
 
 这些指令非常重要，因为没有它们，服务器将不知道去哪里查找用户及其密码。
 
-## AuthName
+### AuthName
 
 `AuthName` 用于指定认证的域名。根结底，这是一个显示给用户的提示信息，让他们知道应该提供哪个用户名和密码。例如，
 
@@ -15360,15 +14491,17 @@ AuthGroupFile /etc/httpd/conf/groups
 AuthName Authors Only
 ```
 
+
+
 在询问用户名和密码时，会向用户显示“Authors Only”的提示。
 
 ## AuthType
 
-`AuthType` 用于指定访问列出目录中 Web 页面的认证类型。由于目前可用的 `AuthType` 选项 `basic`，该指令在当前 Apache 版本中的影响较小。
+`AuthType`用于指定访问列出目录中 Web 页面的认证类型。由于目前可用的`AuthType`选项`basic`，该指令在当前 Apache 版本中的影响较小。
 
 ## require
 
-`require` 指令用于限制用户和组的访问。该指令可用于限制密码文件中所有用户的访问、特定用户列表的访问，或特定组列表的访问。
+`require`指令用于限制用户和组的访问。该指令可用于限制密码文件中所有用户的访问、特定用户列表的访问，或特定组列表的访问。
 
 - 要限制任何现有用户的访问，请使用指令
   `require valid-user`
@@ -15381,21 +14514,21 @@ AuthName Authors Only
 
 ## order
 
-`order` 指令配合 `deny` 和 `allow` 条目使用，根据主机而非用户控制访问。通过使用 `order`、`deny` 和 `allow`，可以根据 IP 地址或主机允许指定的主机访问。
+`order`指令配合`deny`和`allow`条目使用，根据主机而非用户控制访问。通过使用`order`、`deny`和`allow`，可以根据 IP 地址或主机允许指定的主机访问。
 
-`order` 指令指定了 `deny` 和 `allow` 指令的执行顺序。例如，
-  `order allow,deny`
+`order`指令指定了`deny`和`allow`指令的执行顺序。例如，
+`order allow,deny`
 
-表示先应用 `allow` 指令，如果客户端主机不在指令指定的这些范围内，则应应用 `deny` 指令。
+表示先应用`allow`指令，如果客户端主机不在指令指定的这些范围内，则应应用`deny`指令。
 
 同样，
-  `order deny,allow`
+`order deny,allow`
 
-反转了顺序，首先测试 `deny` 指令。
+反转了顺序，首先测试`deny`指令。
 
 ## deny
 
-`deny` 指令指定哪些主机应被拒绝访问目录。可能的值包括 `all`、部分主机名以及部分或完整的 IP 地址。例如，
+`deny`指令指定哪些主机应被拒绝访问目录。可能的值包括`all`、部分主机名以及部分或完整的 IP 地址。例如，
 
 - `deny from all`
 
@@ -15403,7 +14536,7 @@ AuthName Authors Only
 
 - `deny from .juxt.com`
 
-拒绝所有 `juxt.com` 域主机的访问。对于 IP 地址，格式相同：
+拒绝所有`juxt.com`域主机的访问。对于 IP 地址，格式相同：
 
 - `deny from 194.148.43.195`
 
@@ -15411,33 +14544,38 @@ AuthName Authors Only
 
 ## allow
 
-`allow` 指令是 `deny` 指令的反面，指定哪些主机被允许访问相关目录。它与 `deny` 指令具有相同的值。
+`allow`指令是`deny`指令的反面，指定哪些主机被允许访问相关目录。它与`deny`指令具有相同的值。
 
 ## 综合运用
 
 现在让我们考虑这两个示例是如何结合在一起的：按组启用访问和按域名名允许访问。
 
-**按组启用访问** 下面的 `.htaccess` 示例仅允许组中的用户访问特定目录：
+**按组启用访问** 下面的`.htaccess`示例仅允许组中的用户访问特定目录：
 
 ```
 AuthName Authors Only
+
 AuthFile /etc/httpd/conf/users
+
 AuthGroup /etc/httpd/conf/groups
+
 require group authors
 ```
 
-注意，此示例为提示指定了 `AuthName`，识别了密码文件，并指示用户必须属于该组才能访问目录。
+注意，此示例为提示指定了`AuthName`，识别了密码文件，并指示用户必须属于该组才能访问目录。
 
-**按域名名启用访问** 下面的 `.htaccess` 文件仅允许从 `juxt.com` 域主机访问 网站的用户访问特定目录：
+**按域名名启用访问** 下面的`.htaccess`文件仅允许从`juxt.com`域主机访问网站的用户访问特定目录：
 
 ```
 order allow, deny
+
 allow from .juxt.com
+
 deny from all
 ```
 
-在此示例中，注意 `allow` 和 `deny` 的顺序。其逻辑如下：
-当主机访问目录时，首先将主机的域名与指定的域名进行比较。如果主机在指定的域内，则授予访问。如果主机不在，则查看 `deny` 指令，因为该指示拒绝所有主机访问，因此该主机被拒绝访问。
+在此示例中，注意`allow`和`deny`的顺序。其逻辑如下：
+当主机访问目录时，首先将主机的域名与指定的域名进行比较。如果主机在指定的域内，则授予访问。如果主机不在，则查看`deny`指令，因为该指示拒绝所有主机访问，因此该主机被拒绝访问。
 
 ## 日志维护
 
@@ -15447,19 +14585,15 @@ deny from all
 
 因此，建立日志轮转计划是明智的。轮转意味着将现有版本保存到归档中，并从一个新的空日志开始。根据你接收的次数，日志轮转的理想频率从每月到每周每天不等。
 
-Red Hat Linux 7.1 将 Apache 日志整合到 /var/log/httpd 目录。它们与 /var/log 中的其他日志一起轮转，作为 /etc/cron.daily/logrotate 脚本中定义的每日任务。
+Red Hat Linux 7.1 将 Apache 日志整合到`/var/log/httpd`目录。它们与`/var/log`中的其他日志一起轮转，作为`/etc/cron.daily/logrotate`脚本中定义的每日任务。
 
-或者，如果你安装了下载版本的 Apache，可以使用 `rotatools` 工具来自动轮转日志。默认情况下，Red Hat Linux 将安装在 /usr/sbin/rotatools。为了使用该程序，你需要在 `httpd.conf` 中添加一条目：
+或者，如果你安装了下载版本的 Apache，可以使用`rotatools`工具来自动轮转日志。默认情况下，Red Hat Linux 将安装在`/usr/sbin/rotatools`。为了使用该程序，你需要在`httpd.conf`中添加一条目：
 
 ```
 TransferLog *|/usr/sbin/rotatools /some/location/file time
 ```
 
-条目 /some/location/file 为轮转后的日志提供文件名。系统日志开始的时间数字会被添加到文件名中。`time` 参数以秒为单位指定轮转日志的频率。
-
-
-
-
+条目`/some/location/file`为轮转后的日志提供文件名。系统日志开始的时间数字会被添加到文件名中。`time`参数以秒为单位指定轮转日志的频率。
 
 # 构建网站
 
@@ -15474,17 +14608,21 @@ TransferLog *|/usr/sbin/rotatools /some/location/file time
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_819_0.png)
 
-完成这一步后，你需要创建必要的文件来实现该结构。假设使用了本章之前章节中的配置，HTML 文件的根目录树位于 `/var/www/html`，CGI 目录位于 `/var/www/cgi-bin`。因此，你网站的目录和文件树可能包含以下文件：
+完成这一步后，你需要创建必要的文件来实现该结构。假设使用了本章之前章节中的配置，HTML 文件的根目录树位于`/var/www/html`，CGI 目录位于`/var/www/cgi-bin`。因此，你网站的目录和文件树可能包含以下文件：
 
 ```
 /var/www/html/index.html
+
 /var/www/html/about/index.html
+
 /var/www/html/books/index.html
+
 /var/www/html/contact/index.html
 ```
 
 ```
 /var/www/html/authors/index.html
+
 /var/www/cgi-bin/formmail
 ```
 
@@ -15494,37 +14632,51 @@ TransferLog *|/usr/sbin/rotatools /some/location/file time
 /var/www/html/images/
 ```
 
-由于你正在这一章中学习 HTML，让我们来看两个 HTML 文件作为示例，看看它们可能是如何编写的。让我们从 `/var/www/html/index.html` 的主主页开始。在你的示例中，该文件的源代码将是
+由于你正在这一章中学习 HTML，让我们来看两个 HTML 文件作为示例，看看它们可能是如何编写的。让我们从`/var/www/html/index.html`的主主页开始。在你的示例中，该文件的源代码将是
 
 ```
 <HEAD>
+
 <TITLE>On the Web Publishers</TITLE>
+
 </HEAD>
 ```
 
 ```
 <BODY BCOLOR=lightcyan TEXT=midnightblue>
+
 <DIV ALIGN=CENTER>
+
 <A HREF=""><IMG SRC="images/logo.gif" BORDER=0></A>
+
 <TABLE ORDER=0 CELLPADDING=5 CELLACING=5
+
 BGCOLOR=pink>
+
 <TR>
+
 <TD ALIGN=CENTER><A HREF="ABOUT US</a></TD>
+
 <TD ALIGN=CENTER><A HREF="books">OUR BOOKS</a></TD>
+
 <TD ALIGN=CENTER><A HREF="contact">CONTACT US</a></TD>
+
 <TD ALIGN=CENTER><A HREF="authors">JUST AUTHORS</a></TD>
+
 </TR>
+
 </TABLE>
+
 </DIV>
 ```
 
 ```
 <FONT SIZE=5><W>/elcome来到 <<strong>On the Web Publishers</STRONG>. 我们以合理的价格提供优质的在线电子书。
-查看我们提供的产品 ...
 
+查看我们提供的产品 ...
 ```
 
-
+```
 <UL>
 <LI HREF="about">了解我们的工作</A>
 <LI HREF="books">查看我们提供的书籍</A>
@@ -15548,7 +14700,7 @@ BGCOLOR=pink>
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_821_0.png)
 
-其他页面将具有类似的源代码，位于 `/var/www/html/contact/index.html` 的联系表单除外。该页面看起来像图 32.4 所示，由以下源代码产生：
+其他页面将具有类似的源代码，位于`/var/www/html/contact/index.html`的联系表单除外。该页面看起来像图 32.4 所示，由以下源代码产生：
 
 ```
 <HTML>
@@ -15561,6 +14713,7 @@ BGCOLOR=pink>
 # 构建网站
 
 <TITLE>On the Web Publishers</TITLE>
+
 </HEAD>
 
 <BODY BGCOLOR=lightcyan TEXT=midnightblue
@@ -15602,18 +14755,22 @@ BGCOLOR=pink>
 ```
 
 </BODY>
+
 </HTML>
+
 ```
 
 # 图 32.4：联系表单
 
 ![](img/fd2d9aa645b3d05a8fce065954a79484_823_0.png)
 
-该页面的特殊之处在于，它允许任何服务器通过此 CGI 脚本将表单内容发送到指定的地址。formmail 是由 Matthew 编写的可用脚本。
+该页面的特殊之处在于，它允许任何服务器通过此 CGI 脚本将表单内容发送到指定的地址。`formmail`是由 Matthew 编写的可用脚本。
 
 ```
 #!/usr/bin/perl
+
 ################################################
+
 # 版权声明
 
 1995-1997 Matthew Wright。所有权利保留。
@@ -15623,6 +14780,7 @@ formmail 可以被免费使用和修改，只要保留版权声明。使用本�
 # 定义变量
 
 详细信息请见 README 文件。
+```
 
 ```
 $mailprog = '/usr/lib/sendmail';
@@ -15637,12 +14795,15 @@ $referers = ('juxta.com');
 # 完成
 
 # 检查 URL
+
 &check_url;
 
 # 获取日期
+
 &get_date;
 
 # 解析表单内容
+
 &parse_form;
 
 ```
@@ -15690,6 +14851,7 @@ sub get_date (
     @days = ('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday');
     @months = ('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
 ```
+
 ```
 
 
@@ -15706,58 +14868,93 @@ sub get_date (
 
 # 格式化日期。
 # $date = "days[$wday], months[$mon] $mday, year at $time";
+```
 
 ```perl
+
 sub parse_form (
 
 # 定义配置关联数组。
+
 %Config = ('recipient', 'subject',
+
 'email', 'realname',
+
 'redirect', 'bgcolor',
+
 'background', 'link_color',
+
 'vlink_color', 'text_color',
+
 'alink_color', 'title',
+
 'sort', 'print_config',
+
 'required', 'env_report',
+
 'return_link_title', 'return_link_url',
+
 'print_blank_fields', 'missing_fields_redirect');
 ```
 
 ```perl
+
 # 确定 REQUEST_METHOD (GET 或 POST) 并将表单
+
 #字段拆分为键值对。如果 REQUEST_METHOD 不是
+
 # GET 或 POST，则发送错误信息。
+
 # if ($ENV{'REQUEST_METHOD'} eq 'GET') {
+
 # 拆分键值对
+
 @pairs = split(/&/, $ENV{'QUERY_STRING'});
+
 elsif ($ENV{'REQUEST_METHOD'} eq 'POST') {
+
 # 获取输入
+
 read(STDIN,$buffer, $ENV{'CONTENT_LENGTH'});
 
 # 拆分键值对
+
 @pairs = split(/&/, $buffer);
+
 else {
+
     error('request_method');
+
 }
 ```
 
+
+
 # 对于每个键值对
+```perl
 foreach $pair (@pairs) {
+```
 
 # 将键值对拆分成单独变量。
+```perl
 local($name, $value) = split(/=/, $pair);
+```
 
 # 解码名称和值变量中的表单编码。
+```perl
 $name = ~tr+/ /;
 $name = ~s/([a-fa-f0-9])([a-fa-f0-9])/pack("C", $1)/eg;
 
 $value = ~tr+/ /;
 $value = ~s/([a-fa-f0-9])([a-fa-f0-9])/pack("C", $1)/eg;
+```
 
 # 如果他们尝试包含服务器端包含（SSI），将其删除，以
 # 防止在返回 HTML 时产生安全风险。这是另一个
 # 被修复的安全漏洞。
+```perl
 $value = ~s|<(.|\n)->//g;
+```
 
 # 如果字段在 %Config 数组中已指定，则
 # defined($Config($name)) 将返回 1，我们应该将
@@ -15766,6 +14963,7 @@ $value = ~s|<(.|\n)->//g;
 # 数组 %Form，如果已存在值，则在值后追加一个空格 ' '。
 # 我们还会在 @Field_Order 数组中保存表单字段的顺序，
 #以便通用排序可以使用该顺序。
+```perl
 if ($Config($name)) {
     $Config($name) = $value;
 } else {
@@ -15776,138 +14974,242 @@ if ($Config($name)) {
     push(@Field_Order, $name);
     $Form($name) = $value;
 }
+```
 
 # 构建一个网站
 
 ```perl
 # 下六行从 % 配置
+
 # 变量中移除多余的空格或换行，这可能是由于你的编辑器
+
 # 在达到特定长度后自动换行，或者你在字段名称或
+
 # 环境变量之间使用了空格导致的。
+
 $Config('required') = s/(\s+|\n)?(\s+|\n)?//g;
+
 $Config('required') = s/(\s+)?n(\s+)?//g;
+
 $Config('env_report') = s/(\s+|\n)?(\s+|\n)?//g;
+
 $Config('env_report') = s/(\s+)?n(\s+)?//g;
+
 $Config('print_config') = s/(\s+|\n)?(\s+|\n)?//g;
+
 $Config('print_config') = s/(\s+)?n(\s+)?//g;
 
 # 将配置变量拆分成单独的字段名。%
 @Required = split(/,/,Config('required'));
-@Env_Report = split(/,/,Config('env_report'));
-@Print_Config = split(/,/,Config('print_config'));
-}
 
+@Env_Report = split(/,/,Config('env_report'));
+
+@Print_Config = split(/,/,Config('print_config'));
+
+}
+```
+
+```perl
 sub check_required (
+```
 
 # 本地化此子程序中使用的变量。%
+```perl
 local($require, @error);
 
 if (!$Config('recipient')) {
+
     if (defined($Form)) { error('bad_referer'); }
+
     else { error('no_recipient'); }
+
 }
+```
 
 # 对于表单中定义的每个必填字段：%
+```perl
 foreach $require (@Required) {
+```
 
 # 如果必填字段是邮箱字段，则检查邮箱语法
 # 以确保它通过有效语法检查。
+```perl
 if ($require == 'email' && &check_email($Config($require))) {
+
     push(@error, $require);
+
 }
+```
+
 # 否则，如果必填字段是配置字段且
 # 没有值或被空格填充，则发送错误。
+```perl
 elsif (defined($Config($require))) {
+
     if (!$Config($require)) {
+
         push(@error, $require);
+
     }
+
 }
+```
+
 # 如果字段没有值或被空格填充，则将其标记为错误。
+```perl
 elsif ($value =~ /^\s*$/) {
+
     push(@error, $require);
+
 }
+```
 
 # 如果存在错误，则显示错误信息。
+```perl
 if (@error) {
+
     print "<h1>Error</h1>\n";
+
     print "Please fill all required fields：\n";
+
     print "<ul>\n";
+
     foreach $err (@error) {
+
         print "<li>$err</li>\n";
+
     }
+
     print "</ul>\n";
+
     print "<a href='Go Back</a>";
+
 }
+```
 
 # 如果设置了重定向，输出重定向头。
+```perl
 if ($Config('redirect')) {
+
     print "Location: $Config('redirect')\n";
+
 }
+```
+
 # 否则，开始打印页面。
+```perl
 else {
+```
+
 # 输出 HTTP 头
+```perl
 print "Content-type: text/html\n\n";
+```
+
 # 输出 <head> 标签
+```perl
 print "<head>\n";
+```
+
 # 打印自定义标题。
+```perl
 if ($Config('title')) { 
+
     print "<h1>$Config('title')</h1>\n";
+
 } else { 
+
     print "<h1>Thank You</h1>\n";
+
 }
+```
+
+```perl
 print "</head>\n";
+```
+
 - 输出 <body> 标签
+```perl
 print "<body>\n";
+```
+
 # 输出 <center> 标签
+```perl
 print "<center>\n";
+```
+
 # 打印提交的信息。
+```perl
 if (keys %Form) {
+
     foreach $field (keys %Form) {
+
         # 如果字段有值，则打印。
         if ($Form($field)) {
+
             print "<b>$field:</b> $Form($field)<br>\n";
+
         }
     }
+
 } else {
+
     print "No data submitted.\n";
+
 }
+```
+
+```perl
 print "</center>\n";
+```
+
 # 检查是否有返回链接，如果存在则输出。
+```perl
 if ($Config('return_link_url') && $Config('return_link_title')) {
+
     print "<ul>\n";
+
     print "<li><a href='$Config('return_link_url')$Config('return_link_title')</a></a>\n";
+
     print "</ul>\n";
+
 }
+```
+
 # 打印页脚。
+```perl
 print "<<(END HTML FOOTER)>>\n";
+
 <hr size=1 width=75%">
+
 <font size=-1>
+
 <a href="http://www.widewirect.com/scripts/formmail.shtml">FormMail V1.6 &copy; 1995 -1997 Matt Wright<br>nA Free Product of <a href="http://www.widewirect.com/scripts/">Matt's Archive, Inc.</a></font></center>
+
 </body>
+
 </html>
+
 }
 ```
-```
-
-
-
-
 
 # 如果指定了排序顺序，则根据该顺序对字段进行排序。
+```perl
 elsif ($Config['sort'] = "/order:.**/") {
-
 ```
+
 # 多余的换行符和空格，移除 order:
 # 指令并将排序字段分割为数组。
+```perl
 $Config['sort'] = $s/(\s+\n)?(\s+)?//g;
 $Config['sort'] = $s/(\s+)?(\s+)?//g;
 $Config['sort'] = $s/order//;
 $sorted_fields = split(\//, $Config['sort']);
 ```
 
-```
 # 对于每个排序字段，如果它有值或开启了打印空
 # 选项，则打印表单字段和值。
+```perl
 foreach ($sorted_fields) {
     if ($Config['print_blank_fields'] || $Form[$sorted_field]) ||
     $Form[$sorted_field] eq '0') {
@@ -15917,11 +15219,13 @@ foreach ($sorted_fields) {
 ```
 
 否则，默认按照字段发送时的顺序。
+```perl
 else {
-
 ```
+
 # 对于每个表单字段，如果它有值或开启了打印空
 # 字段选项，则打印表单字段和值。
+```perl
 foreach ($field (@Field_Order) {
     if ($Config['print_blank_fields'] || $Form[$field]) ||
     $Form[$field] eq '0') {
@@ -15930,10 +15234,12 @@ foreach ($field (@Field_Order) {
 }
 ```
 
+```perl
 print MAIL "-" x 75 . "\n\n";
-
 ```
+
 # 将任何指定的环境变量发送给接收者。
+```perl
 foreach $env_report (@Env_Report) {
     if ($ENV[$env_report]) {
         print MAIL "$env_report: $ENV[$env_report]\n\n";
@@ -15942,106 +15248,104 @@ foreach $env_report (@Env_Report) {
 ```
 
 # 构建网站 797
-
+```perl
 close (MAIL);
-)
 
+)
 ```
+
+```perl
 sub check_email (
   # 使用输入内容初始化本地电子邮件变量。
   $email = $\$[0];
 ```
 
-```
 # 如果电子邮件地址包含：
+```perl
 if ($email =~ /\(\.\*)|(\\.)|(\\.)|([^\/])/ //
 ```
 
-```
 # 电子邮件地址包含无效语法。或者，如果
   # 语法不匹配正则表达式中的点，
   # 则未通过基础语法验证。
-```
-
-```
+```perl
 $email1 =~ /\+\*|[@\]?[a-zA-Z0-9\-]+\.([a-zA-Z]{2,3})([0-9]{1,3})\/\/);
 ```
 
-```
-  # 基础语法要求：在 @ 符号之前有一个或多个字符，
-  # 随后是可选的 '[\，任意数量的字母、数字、
-  # 连字符或点（有效的域名/IP 字符），以点结尾，
-  # 然后后面是 2 或 3 个字母（域名后缀）或 1 到 3 个数字
-  #（用于 IP 地址）。也允许右括号结尾，因为像
-  # user@[255.255.255] 这样的电子邮件地址是合法的语法。
-```
-
-```
+# 基础语法要求：在 @ 符号之前有一个或多个字符，
+# 随后是可选的 '[\，任意数量的字母、数字、
+# 连字符或点（有效的域名/IP 字符），以点结尾，
+# 然后后面是 2 或 3 个字母（域名后缀）或 1 到 3 个数字
+#（用于 IP 地址）。也允许右括号结尾，因为像
+# user@[255.255.255] 这样的电子邮件地址是合法的语法。
+```perl
   # 返回假值，因为电子邮件地址未通过有效性检查
   return 0;
 }
 
 else (
-
 ```
-  # 返回真值，电子邮件验证通过。
+
+# 返回真值，电子邮件验证通过。
+```perl
   return 1;
 }
-
 ```
+
+```perl
 sub body_attributes (
   # 检查背景颜色
   if ($Config('bgcolor')) { print "$bgcolor='\$Config('bgcolor')}"; }
 ```
 
 ### 检查背景图像
-
-```
+```perl
 if ($Config{'background'}) { print "background=\$Config['background']\n"; }
 ```
 
 ### 检查链接颜色
-
-```
+```perl
 if ($Config{'link_color'}) { print "link=\$Config['link_color']\n"; }
 ```
 
 ### 检查访问过的链接颜色
-
-```
+```perl
 if ($Config{'vlink_color'}) { print "vlink=\$Config['vlink_color']\n"; }
 ```
 
 ### 检查激活链接颜色
-
-```
+```perl
 if ($Config{'alink_color'}) { print "alink=\$Config['alink_color']\n"; }
 ```
 
 ### 检查正文颜色
-
-```
+```perl
 if ($Config{'text_color'}) { print "text=\$Config['text_color']\n"; }
 ```
 
-```
+```perl
 sub error {
 
 # 局部化变量并赋值输入。
 local($error,$error_fields) = @(\n);
 local($host,$missing_field,$missing_field_list);
-
 ```
 
+```perl
 if ($error eq 'bad_referrer') {
+
 if ($ENV{'HTTP_REFERER'} =~ m|^(https?([\w.]+))|(i)) {
+
 $host = $1;
+
 print <<<END ERROR HTML>";
-
 ```
+
+```perl
 Content-type: text/html
-
 ```
+
+```html
 <html>
 <head>
 <title>Bad Referrer - Access Denied</title>
@@ -16050,13 +15354,11 @@ Content-type: text/html
 <center>
 <table border=0 width=600=#=#B9CC>>
 <><><th size2>>Bad Refer - - Denied</</thtr>
-
 </>
 << border border00 width6600=#=#CFCF>
 <<<td> form单 <aaa="wwwwww........
 / $
 ('HTTP
-
 ER') 不允许访问此 cgi 脚本。</p>
 >如果你正尝试使用 FormMail 运行此表单，需要将以下内容
 到 Referers 中，这些内容在 README 文件中有
@@ -16071,12 +15373,16 @@ A Free Product of <a href="http://www.worldwidart.com/com/scripts/">Matt's Scrip
 </center>
 </body>
 </html>
+```
+
+```perl
 (END ERROR HTML)
 else {
 print "(END ERROR HTML)";
 Content-type: text/html
-
 ```
+
+```html
 <html>
 <head>
 <titletitle>FormMail v1.6</title>
@@ -16099,12 +15405,20 @@ A Free Product of <a href="http://www.worldwidart.com/scripts/">Matt's Script Ar
 </center>
 </body>
 </html>
+```
+
+```perl
 (END ERROR HTML)
-[/content>
+```
+
+```perl
 }
 elsif ($error == 'request_method') {
     print <<"END ERROR HTML>";
 Content-type: text/html
+```
+
+
 
 ```
 <html>
@@ -16128,36 +15442,59 @@ foreach $missing_field (@error_fields) {
 $missing_field_list .= "<li>$missing_field\n";
 
 ```
+
 print <<(END ERROR HTML)';
+
 Content-type: text/html
 
 <html>
+
 <head>
+
 <title>Error: Blank Fields</title>
+
 </head>
+
 <center>
+
 <table border=0 width=600 bgcolor=#9C9C9C>
+
 <tr><<td><font size=+2>Error: Blank Fields</font></td></tr>
+
 </table>
+
 <table border=0 width=600 bgcolor=#CFCFCFC>
+
 <tr><<td>>你的提交表单中以下字段留了空：<p>
+
 <<ul>
+
 $missing_field_list
+
 </ul><br>
+
 在提交表单之前，你必须填写这些字段。</p>
+
 请使用浏览器的返回按钮返回表单并再次尝试。<font size=1>
+
 <center><a href="http://www.worldwidart.com/scripts/formmail.shtml">FormMail v1.6 &copy; 1995 - 1997 Matt Wright</a>
+
 A Free Product of <a href="http://www.worldwidart.com/scripts/">Matt's Script Archive, Inc.</a>
+
 </font></center>
+
 </td></tr>
+
 </table>
+
 </center>
+
 </body>
+
 </html>
+
 (END ERROR HTML)
-
-
-
+```
 
 # 第 32 章 构建你的 Web 服务器
 
@@ -16184,6 +15521,7 @@ ErrorDocument 401 /error.html
 在 Unix 环境中设置邮件服务器是一项艰巨的任务，特别是使用作为主流 Linux 邮件服务器的 Sendmail 程序时。尽管如此，对于许多网络来说，这项工作是可以完成的，一旦完成，就可以依靠 Linux 邮件服务器来投递大量邮件，而日常管理工作极少。
 
 # 章节
+
 # 第三十三
 
 # Linux 作为邮件服务器：Sendmail 的威力
@@ -16220,7 +15558,7 @@ MUA 和 MTA 之间的区别非常。为了为组织或任何其他计算机网�
 
 Sendmail 可能是 Unix 的主导传输代理，但在 Linux 世界，gmail 被广泛用作 MTA。它的配置可能比 Sendmail 更简单（尽管并不总是如此），并且提供了类似的功能，包括对 SMTP 和 UUCP 的支持，使其非常适合邮件服务器配置。
 
- Red Hat Linux 7.1 使用 Sendmail 作为其默认 MTA，并不包含 gmail 包。你可以从 ftp://ftp.planix.com/pub/smail/ 下载最新版本的 smail，或者通过 http://www.rpmfind.net 搜索最新的 RPM。
+Red Hat Linux 7.1 使用 Sendmail 作为其默认 MTA，并不包含 gmail 包。你可以从 ftp://ftp.planix.com/pub/smail/ 下载最新版本的 smail，或者通过 http://www.rpmfind.net 搜索最新的 RPM。
 
 # Qmail
 
@@ -16250,7 +15588,7 @@ qmail 的主页位于 http://www.qmail.org。
 
 Sendmail 可能是 Unix 的主导传输代理，但在 Linux 世界，gmail 被广泛用作 MTA。它的配置可能比 Sendmail 更简单（尽管并不总是如此），并且提供了类似的功能，包括对 SMTP 和 UUCP 的支持，使其非常适合邮件服务器配置。
 
- Red Hat Linux 7.1 使用 Sendmail 作为其默认 MTA，并不包含 gmail 包。你可以从 ftp://ftp.planix.com/pub/smail/ 下载最新版本的 smail，或者通过 http://www.rpmfind.net 搜索最新的 RPM。
+Red Hat Linux 7.1 使用 Sendmail 作为其默认 MTA，并不包含 gmail 包。你可以从 ftp://ftp.planix.com/pub/smail/ 下载最新版本的 smail，或者通过 http://www.rpmfind.net 搜索最新的 RPM。
 
 # Qmail
 
@@ -16268,9 +15606,9 @@ qmail 的主页位于 http://www.qmail.org。
 
 正如前面提到的，配置 Sendmail 是一项艰巨的任务。
 
-Sendmail 的配置存储在 /etc/sendmail.cf，如果你查看此文件，会注意到它包含了许多难以理解的规则。
+Sendmail 的配置存储在 `/etc/sendmail.cf`，如果你查看此文件，会注意到它包含了许多难以理解的规则。
 
-幸运的是，Sendmail 提供了一种创建配置文件的机制：一个名为 m4 的程序。M4 处理这些文件并将其转换为完整的 Sendmail 配置文件。所有高明的用户都应该以这种方式创建 Sendmail 配置文件。
+幸运的是，Sendmail 提供了一种创建配置文件的机制：一个名为 `m4` 的程序。`M4` 处理这些文件并将其转换为完整的 Sendmail 配置文件。所有高明的用户都应该以这种方式创建 Sendmail 配置文件。
 
 ## 注意事项
 
@@ -16288,14 +15626,14 @@ Sendmail 的配置存储在 /etc/sendmail.cf，如果你查看此文件，会注
 $ rpm -i /mnt/cdrom/RedHat/RPMS/sendmail-8.11.2-14.i386.rpm
 ```
 
-安装 Red Hat Linux 7.1 时，默认只安装某些 Sendmail 配置文件。安装包很容易。挂载随书的 Red 光盘，使用 rpm 命令 安装两个包：
+安装 Red Hat Linux 7.1 时，默认只安装某些 Sendmail 配置文件。安装包很容易。挂载随书的 Red 光盘，使用 `rpm` 命令 安装两个包：
 
 ```
 $ rpm -i /mnt/cdrom/RedHat/RPMS/sendmail-8.11.2-14.i386.rpm
 $ rpm -i /mnt/cdrom/RedHat/RPMS/sendmail-cf-8.11.2-14.i386.rpm
 ```
 
-安装 Red Hat Linux 7.1 时，默认不安装 Sendmail 文档。除非你有第二张光盘（不随书提供），否则你需要从 ftp.redhat.com 或 www.rpmfind.net 下载 sendmail-doc-8.11.2-14.i386.rpm。假设你下载到了 /tmp 目录，你可以使用以下命令安装它们：
+安装 Red Hat Linux 7.1 时，默认不安装 Sendmail 文档。除非你有第二张光盘（不随书提供），否则你需要从 ftp.redhat.com 或 www.rpmfind.net 下载 `sendmail-doc-8.11.2-14.i386.rpm`。假设你下载到了 `/tmp` 目录，你可以使用以下命令安装它们：
 
 ```
 $ rpm -i /tmp/sendmail-doc-8.11.2-14.i386.rpm
@@ -16305,11 +15643,7 @@ $ rpm -i /tmp/sendmail-doc-8.11.2-14.i386.rpm
 
 现在你可以查看在线邮件服务器的配置文件。你这样做是因为在线邮件服务器比离线服务器更容易配置和理解。
 
-
-
-
-
-尽管 m4 系统简化了 Sendmail 的配置，但其选项仍然非常庞大。本章仅讨论出现在配置文件中的那些选项。在 `/usr/share/sendmail-cf` 目录的子目录中有大量的示例配置文件。当你最终创建一个 Sendmail 配置文件时，它属于 `/usr/share/sendmail-cf/cf/` 目录。
+尽管 `m4` 系统简化了 Sendmail 的配置，但其选项仍然非常庞大。本章仅讨论出现在配置文件中的那些选项。在 `/usr/share/sendmail-cf` 目录的子目录中有大量的示例配置文件。当你最终创建一个 Sendmail 配置文件时，它属于 `/usr/share/sendmail-cf/cf/` 目录。
 
 在线邮件服务器是为通过专线完全连接到互联网的网路提供的邮件服务器。当网络外部的人向本地网络上的用户发送邮件时，该邮件可以被直接投递；当网络上的用户发送消息时，该消息会立即发送。
 
@@ -16351,23 +15685,37 @@ MAILER(smtp)
 如果您不熟悉 Sendmail，该目录下有很多示例配置文件，包括 `generic-linux.mc` 和 `redhat.mc`，您可以将它们复制到 `online.mc`。
 
 接下来，切换目录到 `/usr/lib/sendmail-cf/cf` 并执行此命令：
-$ m4 online.mc > online.cf
 
-此命令使用 m4 处理文件并生成一个名为 `online.cf` 的 Sendmail 配置文件。
+```
+$ m4 online.mc > online.cf
+```
+
+此命令使用 `m4` 处理文件并生成一个名为 `online.cf` 的 Sendmail 配置文件。
 
 下一步是对您现有的 `sendmail.cf` 文件进行备份，并用您刚刚创建的文件替换它。这需要由 root 用户完成：
+
+```
 # cp /etc/sendmail.cf /etc/sendmail.cf.keep
 # cp online.cf /etc/sendmail.cf
+```
 
 最后也是最后一步是重启 Sendmail 守护进程：
+
+```
 # /etc/rc.d/init.d/sendmail restart
+```
 
 如果您使用的是 Red Linux以外的发行版，守护进程控制工具可能位于略不同的目录位置。
 
 当 Sendmail 守护进程在启动时运行时，它现在将加载您的新配置文件。如果您想手动加载 Sendmail，请使用命令
+
+```
 # /usr/sbin/sendmail -bd
+```
 
 默认情况下，在大多数 Linux 发行版中， Sendmail 守护进程会在启动时加载，除非您选择禁用它。如果您需要将 Sendmail 添加到启动循环，可以在 `rc.local` 文件中使用 `/usr/sbin/sendmail -bd` 命令。
+
+
 
 > 如果您计划运行大型 Sendmail 站点，那么 O’Reilly & Associates 出版的 Costales 和 Allman 著《Sendmail》（第2版，1997年）是权威参考。
 
@@ -16376,10 +15724,6 @@ $ m4 online.mc > online.cf
 本章通过涵盖使用 Linux 搭建自己的邮件服务器的基础知识结束了本书的正文。掌握了这些知识，加上您现在在使用、配置和管理 Linux 系统方面的经验，您应该能够使用 Linux 完成您需要的所有计算任务。
 
 本书其余部分由几个附录组成，其中许多附录将被发现非常有帮助。（注：原文此处存在大量重复文本，翻译已按要求处理并保持了核心意图）。
-
-
-
-
 
 # 日语版 Linux
 
@@ -16401,6 +15745,7 @@ Laser5 Linux 是一个基于红帽（Red Hat Linux）的日本发行版。他们
 Vine Linux 是另一个日本发行版。截至本文编写时的最新版本 Vine Linux 2.1 是基于红帽 Linux 6.2 的。Vine Linux 包含了许多日语字体和应用程序。它通过红帽 Linux 的日本网站进行销售。
 
 Vine Linux
+
 网址：http://www.vinelinux.org/
 
 # 葡萄牙版 Linux
@@ -16410,10 +15755,15 @@ Vine Linux
 Conectiva Linux 是由巴西 Conectiva Informatica 的红帽 Linux 葡萄牙版本。在本文编写时，Conectiva Linux 的当前发行版本是第6 版，包含了 KDE 2 版和 XFree 4.0.1 版。
 
 Conectiva Informatica
+
 Rua Tocantins, 89 – Cristo Rei
+
 邮编：80050-430
+
 巴西
+
 电子邮箱：info@conectiva.com.br
+
 网址：http://www.conectiva.com.br/
 
 # 俄语版 Linux
@@ -16423,7 +15773,9 @@ Rua Tocantins, 89 – Cristo Rei
 来自 UrbanSoft 的 Open Kernel: Linux 是一个基于红帽 Linux 的俄罗斯发行版，它提供俄语控制台字体、俄语 X Windows 环境以及一些不属于标准红帽环境的额外俄语包。当前版本源自红帽 6.2。
 
 UrbanSoft
+
 电子邮箱：info@usoft.spb.ru
+
 网址：http://www.usoft.spb.ru/
 
 # 西班牙语版 Linux
@@ -16433,10 +15785,15 @@ UrbanSoft
 Eurieelec 是另一个基于红帽 Linux 的非英语 Linux 发行版，这次是西班牙语的。Eurieelec 的当前版本基于红帽 Linux 6.2。
 
 Escuela Técnica Superior Ingenieros de Telecomunicación
+
 Avda. Complutense s/n - 28040
+
 马里德
+
 西班牙
+
 电子邮箱：linux@eurieelec.etsit.upm.es
+
 网址：http://www.eurieelec.etsit.upm.es/linux/
 
 ## ESWare Linux
@@ -16444,11 +15801,17 @@ Avda. Complutense s/n - 28040
 ESWare Linux 是一个非英语的 Linux 发行版，所有材料均为西班牙语（Castellano），包括安装程序、命令行、文档和用户手册。
 
 ESWARE LINUX
+
 Proción 1-3
+
 Edif. Oficor
+
 28023 La Florida
+
 马里德
+
 西班牙
+
 网址：http://www.esware.com/
 
 # 瑞典语版 Linux
@@ -16458,6 +15821,7 @@ Edif. Oficor
 Blue Linux 是一个基于 Debian Linux 2.2 的瑞典发行版。根据 Linux Online 的介绍，它不需要安装在硬盘上。
 
 Blue Linux
+
 网址：http://blue.swt.nu/
 
 # 土耳语版 Linux
@@ -16470,8 +15834,11 @@ Gelecek Linux 是另一个基于红帽 Linux 的非英语 Linux 发行版，这�
 - Perpa Ticaret Merkezi
 - B Blok Kat: 11 No: 1932
 - Sisli, Istanbul
+
 土耳其
+
 电子邮箱：info@gelecek.com.tr
+
 网址：http://www.gelecek.com.tr/
 
 # 多语言版 Linux
@@ -16483,10 +15850,15 @@ Gelecek Linux 是另一个基于红帽 Linux 的非英语 Linux 发行版，这�
 Best Linux 是一个独立的、位于芬兰的发行版。他们目前的产品 Best Linux 2000 设计为直接安装到“类似于 Windows 的图形化 KDE 桌面中，其中包含了你每天使用的几乎所有软件”。Best Linux 支持芬兰语、瑞典语、英语、俄语、爱沙尼亚语、法语、德语和西班牙语。它还对其他 14 种欧洲语言提供部分支持。
 
 SOT Finnish Software Engineering Ltd.
+
 Hermiankatu 8 E
+
 Fin-33720 Tampere
+
 芬兰
+
 电子邮箱：finland@bestlinux.net
+
 网址：http://www.bestlinux.net/
 
 ## Caldera Linux
@@ -16494,10 +15866,15 @@ Fin-33720 Tampere
 Caldera 已经用多种主要语言开发了其发行版版本。根据其网站，Caldera 提供多种语言的 OpenLinux 技术支持，包括德语、法语、意大利语、日语和韩语。
 
 Caldera Systems, Inc.
+
 240 West Street
+
 Orem, Utah 84057
+
 美国
+
 电子邮箱：info@calderasystems.com
+
 网址：http://caldera.com/
 
 ## Debian Linux
@@ -16505,6 +15882,7 @@ Orem, Utah 84057
 Debian Linux 由志愿者开发。许多志愿者正致力于将 Debian Linux 翻译成其他语言。在编写本文时，不同语言提供了不同程度的文档和支持。由于它是由志愿者开发的，因此该发行版没有支持中心。
 
 电子邮箱：debian-project@lists.debian.org
+
 网址：http://debian.org/
 
 ## Mandrake Linux
@@ -16512,9 +15890,13 @@ Debian Linux 由志愿者开发。许多志愿者正致力于将 Debian Linux �
 Mandrake Linux（也称为[此处缺失]）基于红帽 Linux 开发，扩展后支持额外功能，包括多种语言。
 
 2400 N. Lincoln Ave.
+
 Altena, CA 91001
+
 美国
+
 电子邮箱：sales@mandrake.com
+
 网址：http://mandrake.com/
 
 ## 红帽 Linux (Red Hat Linux)
@@ -16522,9 +15904,13 @@ Altena, CA 91001
 红帽开发了多个版本。红帽 Linux 提供了多种语言的文档，包含了英语、德语、法语和西班牙语。
 
 Red Hat, Inc.
+
 2600 Meridian
+
 Durham, NC 27713
+
 美国
+
 网址：http://www.redhat.com/
 
 ## SUSE Linux
@@ -16532,9 +15918,13 @@ Durham, NC 27713
 SUSE 是一个在 Linux 领域领先的发行版，提供多种语言的 Linux。SUSE 网站包含了英语、德语、法语和西班牙语的资源。
 
 580 Second Street 210
+
 Oakland, CA 94007
+
 美国
+
 电子邮箱：suse@de
+
 网址：http://www.suse.com
 
 ## Turbo Linux
@@ -16542,10 +15932,15 @@ Oakland, CA 94007
 Turbo Linux 提供日语版本的 Linux。
 
 TurboLinux
+
 8000 Marina
+
 Suite 300
+
 Brisbane, CA 94005
+
 电子邮箱：info@turboux.com
+
 网址：http:///
 
 # 附录 (APPENDIX)
@@ -16595,10 +15990,6 @@ Brisbane, CA 94005
 - ESware Linux http://www.esware.com/
 - Eurieelec Linux（西班牙语）http://www.eurieelec.etsit.upm.es/linux/
 
-
-
-
-
 ## 附录 B · Linux 信息来源
 
 - Gelecek Linux: http://www.gelecek.com.tr/
@@ -16647,7 +16038,6 @@ Brisbane, CA 94005
 - comp.os.linux.security
 - comp.os.linux.setup
 - comp.os.linux.x
-
 - Linux 邮件列表
 - news.alt.os.linux.storm
 - news.alt.os.linux.suse
@@ -16676,87 +16066,133 @@ Brisbane, CA 94005
 ## 非 Intel 平台
 
 - Linux Alpha FTP 存档
+
 http://gatekeeper.dec.com/pub/DEC-Linux-Alpha/
 
 - 针对 BeBox 的 Linux
+
 http://www.sowerbuts.com/belinux-introduction.html
 
 - 针对 Sparc 处理器的 Linux / Macintosh 的 m68k
+
 http://www.ultralinx.org/
+
 http://www.mac.linux-m68k.org/
 
 - Linux/m68k 主页 MK Linux 存档
+
 http://www.linux-m68k.org/
+
 http://ftp.sunet.se/pub/os/Linux/mklinux/mklinux/
 
 - SGI-Linux
+
 http://https.linux-sgi.com/
 
 ## 非英语网站
 
 - EPC 首页（西班牙语）
+
 http://www.arrakis.es/~epujol/linux/
 
 - Linux（捷克语）
+
 http://www.linux.cz/
 
 - Linux - 花最少的钱获得极多的 Unix（德语）
+
+
+
 http://www.uni-tubenden.de/zdv/projekte/linux/
 
 - Linux Indonesia（印尼语）
+
 http://www.linux.or.id/
 
 ## Linux CD-ROM 购买地点
 
 - CD-ROM 商店
+
 http://www.cdromshop.com/
 
-- CheapBytes 
+- CheapBytes
+
 http://www.cheapbytes.com/
 
 - InfoMagic
+
 http://www.infomagic.com/
 
 - Linux Central
+
 http://linuxcentral.com/
 
 - Linux Mall
+
 http://www.linuxmall.com/
 
 ## 下载 Linux 和 Linux 文件的地点
 
 - BLINUX FTP 站点
+
 http://leb.net/pub/blinux/
+
 - Caldera FTP 站点
+
 http://ftp.caldera.com/pub/
+
 - Debian FTP 站点
+
 http://ftp.debian.org/
+
 - Freshmeat.net
+
 http://www.freshmeat.net/
+
 - Georgia Tech Linux 存档
+
 http://ftp.cc.gate.edu/pub/linux/
+
 - Linux Applications
+
 http://www.linuxapps.com/
+
 - Linux Kernel 存档
+
 http://ftp.kernel.org/
+
 - Linux Software Map
+
 http://www.execpc.com/sm/
+
 - Red Hat FTP 站点
+
 http://ftp.redhat.com/pub/
+
 - Tucows Linux
+
 http://linux.tucows.com/
+
 - UNC Linux 存档
+
 http://www.iblio.org/pub/
+
 - Woven Goods for Linux 页面
+
 http://www.fokus.de/linux-softw
 
 ## X Windows
 
 - MetroLink
+
 http://www.metrolink.com/
+
 - XFree86 项目
+
 http://www.xfree86.org/
+
 - Xi 图形
+
 http://www.inside.com/
 
 ## 附录
@@ -16767,251 +16203,251 @@ http://www.inside.com/
 
 以下命令按字母顺序列出，其用法在本附录中描述：
 
-- at
-- batch
-- bc
-- cal
-- clear
-- check
-- chmod
-- compress
-- crypt
-- cr
-- cp
-- date
-- delete
-- dept
-- desc
-- diff
-- dig
-- dir
-- dump
-- du
-- du
-- echo
-- edit
-- else
-- env
-- every
-- find
-- finger
-- file
-- flat
-- free
-- from
-- fg
-- find
-- gpasswd
-- group
-- halt
-- head
-- help
-- history
-- hostname
-- id
-- if
-- info
-- install
-- is
-- join
-- kill
-- keep
-- last
-- less
-- list
-- like
-- load
--
- log
-- login
-- ls
-- ln
-- mail
-- man
-- make
-- map
-- md
-- mount
-- message
-- mid
-- mod
-- move
-- m
-- more
-- mv
-- my
-- name
-- net
-- new
-- nice
-- next
-- node
-- not
-- now
-- of
-- off
-- on
-- once
-- open
-- order
-- other
-- out
-- over
-- path
-- pass
-- pdf
-- pid
-- ping
-- pipe
-- pop
-- port
-- post
-- prompt
-- ps
-- pw
-- pwd
-- pull
-- push
-- quit
-- quick
-- range
-- read
-- ref
-- register
-- res
-- rm
-- rpm
-- right
-- role
-- root
-- route
-- run
-- same
-- save
-- sc
-- search
-- send
-- service
-- set
-- shift
-- shell
-- show
-- size
-- sort
-- space
-- stat
-- status
-- stop
-- string
-- style
-- sum
-- sys
-- table
-- tar
-- take
-- task
-- tea
-- tell
-- test
-- that
-- the
-- there
-- thing
-- this
-- time
-- to
-- today
-- top
-- touch
-- trace
-- track
-- tree
-- try
-- turn
-- type
-- u
-- under
-- unit
-- until
-- up
-- use
-- used
-- user
-- value
-- view
-- wait
-- we
-- web
-- what
-- when
-- which
-- while
-- who
-- will
-- win
-- window
-- with
-- work
-- write
-- year
-- yes
-- you
-- zero
-- zip
+- `at`
+- `batch`
+- `bc`
+- `cal`
+- `clear`
+- `check`
+- `chmod`
+- `compress`
+- `crypt`
+- `cr`
+- `cp`
+- `date`
+- `delete`
+- `dept`
+- `desc`
+- `diff`
+- `dig`
+- `dir`
+- `dump`
+- `du`
+- `du`
+- `echo`
+- `edit`
+- `else`
+- `env`
+- `every`
+- `find`
+- `finger`
+- `file`
+- `flat`
+- `free`
+- `from`
+- `fg`
+- `find`
+- `gpasswd`
+- `group`
+- `halt`
+- `head`
+- `help`
+- `history`
+- `hostname`
+- `id`
+- `if`
+- `info`
+- `install`
+- `is`
+- `join`
+- `kill`
+- `keep`
+- `last`
+- `less`
+- `list`
+- `like`
+- `load`
+- 
+- `log`
+- `login`
+- `ls`
+- `ln`
+- `mail`
+- `man`
+- `make`
+- `map`
+- `md`
+- `mount`
+- `message`
+- `mid`
+- `mod`
+- `move`
+- `m`
+- `more`
+- `mv`
+- `my`
+- `name`
+- `net`
+- `new`
+- `nice`
+- `next`
+- `node`
+- `not`
+- `now`
+- `of`
+- `off`
+- `on`
+- `once`
+- `open`
+- `order`
+- `other`
+- `out`
+- `over`
+- `path`
+- `pass`
+- `pdf`
+- `pid`
+- `ping`
+- `pipe`
+- `pop`
+- `port`
+- `post`
+- `prompt`
+- `ps`
+- `pw`
+- `pwd`
+- `pull`
+- `push`
+- `quit`
+- `quick`
+- `range`
+- `read`
+- `ref`
+- `register`
+- `res`
+- `rm`
+- `rpm`
+- `right`
+- `role`
+- `root`
+- `route`
+- `run`
+- `same`
+- `save`
+- `sc`
+- `search`
+- `send`
+- `service`
+- `set`
+- `shift`
+- `shell`
+- `show`
+- `size`
+- `sort`
+- `space`
+- `stat`
+- `status`
+- `stop`
+- `string`
+- `style`
+- `sum`
+- `sys`
+- `table`
+- `tar`
+- `take`
+- `task`
+- `tea`
+- `tell`
+- `test`
+- `that`
+- `the`
+- `there`
+- `thing`
+- `this`
+- `time`
+- `to`
+- `today`
+- `top`
+- `touch`
+- `trace`
+- `track`
+- `tree`
+- `try`
+- `turn`
+- `type`
+- `u`
+- `under`
+- `unit`
+- `until`
+- `up`
+- `use`
+- `used`
+- `user`
+- `value`
+- `view`
+- `wait`
+- `we`
+- `web`
+- `what`
+- `when`
+- `which`
+- `while`
+- `who`
+- `will`
+- `win`
+- `window`
+- `with`
+- `work`
+- `write`
+- `year`
+- `yes`
+- `you`
+- `zero`
+- `zip`
 
-## at
+## `at`
 
 在指定时间调度命令。用户提示命令或从文件中提供。每个作业被添加到调度并分配一个作业编号。
 
 语法：
+
 ```
 at [-q queue] [-f filename] [-m] [-d job [job]] TIME
 ```
 
 标志和选项：
 
-- -d job 根据作业编号删除调度作业。
-- -f filename 从指定文件读取调度命令，而不是提示输入。
-- -l 显示队列中的命令（忽略 TIME 参数）。
-- -m 作业完成后向调度作业的用户发送电子邮件，并将生成的输出包含在正文中。
-- -q queue 指定要操作的队列。队列用单个字母 (a-z) 指定。默认情况下，队列用于 at 及相关命令。
+- `-d job` 根据作业编号删除调度作业。
+- `-f filename` 从指定文件读取调度命令，而不是提示输入。
+- `-l` 显示队列中的命令（忽略 TIME 参数）。
+- `-m` 作业完成后向调度作业的用户发送电子邮件，并将生成的输出包含在正文中。
+- `-q queue` 指定要操作的队列。队列用单个字母 (a-z) 指定。默认情况下，队列用于 at 及相关命令。
 
 调度时间：指定时间的多种选项，包括：
 
-- HH:MM 指定小时和分钟，例如 11:15 或 23:30。带有 AM 和 PM 后缀，如 11:15AM 或 11:30PM。
-- midnight (24:00 或 12:00PM)、noon (12:00) 和 teat (16:00) 保留用于指定这些时间。
-- MMDDYY、MM/DD/YY 或 DD.MM.YY 可指定特定日期，例如 022598 或 25.02.98。
-- now 指定当前时间。
-- tomorrow 指定明天。
-- 使用 + 可以相对于指定时间的分钟、小时、天或周的偏移。例如，要在后天后的中午调度命令，可以使用 noon + 2 days。
+- `HH:MM` 指定小时和分钟，例如 11:15 或 23:30。带有 AM 和 PM 后缀，如 11:15AM 或 11:30PM。
+- `midnight` (24:00 或 12:00PM)、`noon` (12:00) 和 `teat` (16:00) 保留用于指定这些时间。
+- `MMDDYY`、`MM/DD/YY` 或 `DD.MM.YY` 可指定特定日期，例如 022598 或 25.02.98。
+- `now` 指定当前时间。
+- `tomorrow` 指定明天。
+- 使用 `+` 可以相对于指定时间的分钟、小时、天或周的偏移。例如，要在后天后的中午调度命令，可以使用 `noon + 2 days`。
 
-## arch
+## `arch`
 
 显示运行 Linux 的机器架构。
 
 语法：
+
 ```
 arch
 ```
 
-## atd
+## `atd`
 
-运行 at 和 batch 程序调度执行命令的守护进程。
+运行 `at` 和 `batch` 程序调度执行命令的守护进程。
 
 语法：
+
 ```
 atd [-1 load] [-b interval]
 ```
 
 标志和选项：
 
-- -b interval 指定两个批作业开始之间的最小间隔（秒）。默认值为 60 秒。
-- -1 load 指定负载限制，超过此负载的调度批作业将不会运行。默认负载为 0.8。
+- `-b interval` 指定两个批作业开始之间的最小间隔（秒）。默认值为 60 秒。
+- `-1 load` 指定负载限制，超过此负载的调度批作业将不会运行。默认负载为 0.8。
 
-
-
-
-## atq
+## `atq`
 
 Description
 
@@ -17025,9 +16461,9 @@ atq [-q queue]
 
 Important Flags and Options
 
-- -q queue: 指定要操作的队列。队列用单个字母（a-z 或 A-Z）指定。默认情况下，at 及相关命令使用一个队列。
+- `-q queue`: 指定要操作的队列。队列用单个字母（a-z 或 A-Z）指定。默认情况下，at 及相关命令使用一个队列。
 
-## atrm
+## `atrm`
 
 Description
 
@@ -17043,7 +16479,7 @@ Important Flags and Options
 
 None
 
-## badblocks
+## `badblocks`
 
 Description
 
@@ -17057,8 +16493,8 @@ badblocks [-o filename] [-w] device blocks-count
 
 Important Flags and Options
 
-- -o filename: 指定一个将结果写入的文件，而不是显示在标准输出上。
-- -w: 使用写测试而非只读测试，数据会被写入设备的每个块中，然后从该块中重新读取。
+- `-o filename`: 指定一个将结果写入的文件，而不是显示在标准输出上。
+- `-w`: 使用写测试而非只读测试，数据会被写入设备的每个块中，然后从该块中重新读取。
 
 Notes
 
@@ -17068,7 +16504,7 @@ Warnings
 
 不要在包含重要数据的设备上使用 `-w` 标志。使用 `-w` 标志检查的设备上的将在检查过程中会被擦除。
 
-## batch
+## `batch`
 
 Description
 
@@ -17080,25 +16516,25 @@ Syntax
 batch [-q queue] [-f filename] [-m] TIME
 ```
 
-## biff
+## `biff`
 
 Important Flags and Options
 
-- -f filename: 从指定的文件读取要调度的命令，而不是提示用户输入命令。
-- -m: 作业完成后向调度作业的用户发送电子邮件，并将任何生成的输出包含在消息正文中。
-- -q queue: 指定要操作的队列。队列用单个字母（a-z 或 A-Z）指定。默认情况下，该队列用于 batch。
+- `-f filename`: 从指定的文件读取要调度的命令，而不是提示用户输入命令。
+- `-m`: 作业完成后向调度作业的用户发送电子邮件，并将任何生成的输出包含在消息正文中。
+- `-q queue`: 指定要操作的队列。队列用单个字母（a-z 或 A-Z）指定。默认情况下，该队列用于 batch。
 
 指定时间：有多种选项可以指定时间，包括：
 
-- - HH:MM 指定小时和分钟，例如 11:15 或 22:30。允许使用 AM 和 PM 后缀，如 11:15AM 或 11:30PM。
-- midnight (24:00 或 12:00PM)、noon (12:00) 和 teatime (16:00) 是指定指示时间的保留字。
-- MMDDYY, MM/DD/YY 或 DD, MM, YY 可指示特定日期，例如 0222598 或 25.02.98。
-- now 指定当前时间。
-- tomorrow 指定明天。
+- `- HH:MM` 指定小时和分钟，例如 11:15 或 22:30。允许使用 AM 和 PM 后缀，如 11:15AM 或 11:30PM。
+- `midnight` (24:00 或 12:00PM)、`noon` (12:00) 和 `teatime` (16:00) 是指定指示时间的保留字。
+- `MMDDYY`, `MM/DD/YY` 或 `DD, MM, YY` 可指示特定日期，例如 0222598 或 25.02.98。
+- `now` 指定当前时间。
+- `tomorrow` 指定明天。
 
-使用 + 可以指定相对于指定时间的几分钟、小时、天或周的偏移。例如，要从今天两天后的中午调度一个命令，可以使用 `noon + 2 days`。
+使用 `+` 可以指定相对于指定时间的几分钟、小时、天或周的偏移。例如，要从今天两天后的中午调度一个命令，可以使用 `noon + 2 days`。
 
-## bc
+## `bc`
 
 Description
 
@@ -17120,7 +16556,7 @@ Notes
 
 作为参数提供的文件中的表达式会在提示用户输入待处理的表达式之前处理。
 
-## biff
+## `biff`
 
 Description
 
@@ -17134,10 +16570,10 @@ biff [ny]
 
 Important Flags and Options
 
-- -n: 在启用时禁用邮件到达通知。
-- -y: 在禁用时启用邮件到达通知。
+- `-n`: 在启用时禁用邮件到达通知。
+- `-y`: 在禁用时启用邮件到达通知。
 
-## cal
+## `cal`
 
 Description
 
@@ -17151,14 +16587,14 @@ cal [-j] [-y] [month [year]]
 
 Important Flags and Options
 
-- -j: 指定使用儒略历而非格里哥历。
-- -y: 显示年历而非月历。
+- `-j`: 指定使用儒略历而非格里哥历。
+- `-y`: 显示年历而非月历。
 
 Notes
 
 单个数字参数指定 1 年到 9999 年之间的年份（年份必须是完整的——例如 1998，而不是 98）。当使用两个参数时，第一个用 1 到 12 的数字指定月份，第二个用 1 到 9999 指定年份。
 
-## cat
+## `cat`
 
 Description
 
@@ -17174,11 +16610,11 @@ cat [--benvAET] [--number] [--number-nonblank] [--squeeze-blank]
 
 Important Flags and Options
 
-- -A/show-all: 在每行末尾显示 $，制表符显示为 ^I，控制字符前带有 ^。这与 -v, T, 和 E 的组合相同。
-- -b/number-nonblank: 使所有非空行显示编号。数字从 1 开始。
-- -e: 在每行末尾显示 $ 且控制字符前带有 ^。
+- `-A/show-all`: 在每行末尾显示 $，制表符显示为 ^I，控制字符前带有 ^。这与 -v, T, 和 E 的组合相同。
+- `-b/number-nonblank`: 使所有非空行显示编号。数字从 1 开始。
+- `-e`: 在每行末尾显示 $ 且控制字符前带有 ^。
 
-## checkaliases
+## `checkaliases`
 
 Description
 
@@ -17186,10 +16622,7 @@ Description
 
 （注：原文此处内容似乎存在错误或重复，应为 `biff` 的描述，此处根据提供的文本进行翻译）
 
-
-
-
-## chown
+## `chown`
 
 描述
 
@@ -17204,19 +16637,19 @@ chown [-Rcv] [--recursive] [--changes] [--silent] [--quiet]
 
 重要标志和选项
 
-- -c/-changes: 仅显示所有权发生更改的文件名。
-- -f/--silent: 当无法更改文件所有权时，抑制错误信息的显示。
-- -R/--recursive: 递归地更改所有所有权更改的目录子目录下所有文件的所有权。
-- -v/--verbose: 显示所有所有权更改的结果。
+- `-c/--changes`: 仅显示所有权发生更改的文件名。
+- `-f/--silent`: 当无法更改文件所有权时，抑制错误信息的显示。
+- `-R/--recursive`: 递归地更改所有所有权更改的目录子目录下所有文件的所有权。
+- `-v/--verbose`: 显示所有所有权更改的结果。
 
 用户和组可以通过名称或 ID 指定。用户和组可以通过多种方式组合：
 
 - 用户后跟点或冒号，再跟组名，将把用户和组所有权均更改为指定的值。
 - 用户后跟点或冒号且不跟组，将按指定更改用户所有权，并将组所有权更改为指定用户的登录组。
-- 如果在没有指定用户的情况下指定冒号或点以及组，则仅更改组所有权。这与 chgrp 相同。
+- 如果在没有指定用户的情况下指定冒号或点以及组，则仅更改组所有权。这与 `chgrp` 相同。
 - 如果用户后没有跟点或冒号，则仅更改用户所有权。
 
-# clear
+# `clear`
 
 描述
 
@@ -17232,7 +16665,7 @@ clear
 
 无
 
-# compress
+# `compress`
 
 描述
 
@@ -17244,49 +16677,53 @@ clear
 compress [-f] [-v] [-c] [-r] [file ...]
 ```
 
-## cp
+## `cp`
 
 重要标志和选项
 
-- -c: 在压缩时，将压缩后的数据返回到标准输出而不是文件。
-- -f: 强制压缩硬链接文件，这些文件默认情况下会被忽略。
-- -r: 递归操作。如果指定目录作为参数，它将压缩该目录及其子目录中的所有文件。
-- -v: 显示每个被压缩文件的大小的减小情况。
+- `-c`: 在压缩时，将压缩后的数据返回到标准输出而不是文件。
+- `-f`: 强制压缩硬链接文件，这些文件默认情况下会被忽略。
+- `-r`: 递归操作。如果指定目录作为参数，它将压缩该目录及其子目录中的所有文件。
+- `-v`: 显示每个被压缩文件的大小的减小情况。
 
 说明
 
-在压缩文件时，compress 命令会将原始文件替换为一个带有 .z 前缀的文件，但文件内容保持不变。此行为会被 -c 标志覆盖。如果没有指定任何标志，则对标准输入压缩并通过标准输出返回结果。
+在压缩文件时，`compress` 命令会将原始文件替换为一个带有 `.z` 前缀的文件，但文件内容保持不变。此行为会被 `-c` 标志覆盖。如果没有指定任何标志，则对标准输入压缩并通过标准输出返回结果。
 
 描述
 
 语法
 
+```
 cp [-a] [--archive] [-b] [--backup] [-d] [--no-dereference] [-f] [--force] [-i] [--interactive] [-link] [-p] [--preserve] [-R] [--recursive] [-s] [--symbolic-link] [-u] [--update] source destination
+```
 
+```
 cp [options] source destination
+```
 
 重要标志和选项
 
-- -a/--archive: 复制文件和目录，保持符号链接为链接，并保留原始文件的所有权和权限。这与 -dR 相同。
-- -b/--backup: 在文件被覆盖之前对其进行备份。
-- -d/--no-dereference: 复制链接本身而不是复制链接指向的文件。
-- -f/--force: 强制删除需要覆盖的现有文件。
-- -i/--interactive: 在覆盖现有文件之前提示。
-- -l/--link: 创建链接而不是复制文件。这仅适用于文件，不适用于目录。
-- -p/--preserve: 保留原始文件的所有权和权限。
-- -R/--recursive: 递归复制目录。对于每个指定的目录，目录中的每个文件及其所有子目录中的文件都会被复制，并保留目录结构。
-- -s/--symbolic-link: 创建符号链接而不是复制文件。源文件必须指定完整路径。
-- -u/--update: 仅替换修改时间晚于对应源文件的文件。
+- `-a/--archive`: 复制文件和目录，保持符号链接为链接，并保留原始文件的所有权和权限。这与 `-dR` 相同。
+- `-b/--backup`: 在文件被覆盖之前对其进行备份。
+- `-d/--no-dereference`: 复制链接本身而不是复制链接指向的文件。
+- `-f/--force`: 强制删除需要覆盖的现有文件。
+- `-i/--interactive`: 在覆盖现有文件之前提示。
+- `-l/--link`: 创建链接而不是复制文件。这仅适用于文件，不适用于目录。
+- `-p/--preserve`: 保留原始文件的所有权和权限。
+- `-R/--recursive`: 递归复制目录。对于每个指定的目录，目录中的每个文件及其所有子目录中的文件都会被复制，并保留目录结构。
+- `-s/--symbolic-link`: 创建符号链接而不是复制文件。源文件必须指定完整路径。
+- `-u/--update`: 仅替换修改时间晚于对应源文件的文件。
 
 警告
 
-在使用 root 用户时要小心使用 -f 标志。错误可能会导致重要的系统文件被覆盖，因为 root 用户通常对所有文件和目录都有写权限。
+在使用 root 用户时要小心使用 `-f` 标志。错误可能会导致重要的系统文件被覆盖，因为 root 用户通常对所有文件和目录都有写权限。
 
-# crontab
+# `crontab`
 
 描述
 
-显示或更改用户的 Cron 表格 (crontab)。Cron 表指定了由 Cron 守护进程执行的调度操作。
+显示或更改用户的 Cron 表格 (`crontab`)。Cron 表指定了由 Cron 守护进程执行的调度操作。
 
 语法
 
@@ -17297,99 +16734,102 @@ ontab [-u user] ( -l|-r| -e )
 
 重要标志和选项
 
-- -e: 编辑执行命令的用户或通过 -u 标志指定的用户的 crontab 文件。调用的编辑器由环境变量 EDITOR 决定。
-- -l: 显示执行命令的用户或或通过 -u 标志指定的用户的 crontab 文件内容。
-- -r: 删除执行命令的用户或通过 -u 标志指定的用户的 crontab 文件。
-- -u user: 如果与执行命令的用户不是同一个，则指定要操作哪个用户的 crontab 文件。此标志只能由 root 用户使用。
+- `-e`: 编辑执行命令的用户或通过 `-u` 标志指定的用户的 crontab 文件。调用的编辑器由环境变量 `EDITOR` 决定。
+
+
+
+- `-l`：显示执行命令的用户或或通过 `-u` 标志指定的用户的 `crontab` 文件内容。
+- `-r`：删除执行命令的用户或通过 `-u` 标志指定的用户的 `crontab` 文件。
+- `-u user`：如果与执行命令的用户不是同一个，则指定要操作哪个用户的 `crontab` 文件。此标志只能由 `root` 用户使用。
 
 说明
 
-crontab 文件中的条目格式在第 17 章“通用系统管理”中讨论。
+`crontab` 文件中的条目格式在第 17 章“通用系统管理”中讨论。
 
 # cryptdir
 
-描述
+## 描述
 
 加密指定目录中的所有文件。如果没有指定目录，则加密当前目录下的所有文件。
 
-语法
+## 语法
 
 ```
 cryptdir [directory]
 ```
 
-重要标志和选项
+## 重要标志和选项
 
 无
 
-说明
+## 说明
 
-在加密文件时，系统会提示输入两次密码。解密文件需要此密码。加密后的文件名称将添加 .crypt 扩展。使用 cryptdir 解密文件。
+在加密文件时，系统会提示输入两次密码。解密文件需要此密码。加密后的文件名称将添加 `.crypt` 扩展。使用 `cryptdir` 解密文件。
 
 # date
 
-描述
+## 描述
 
 显示或设置当前系统日期时间。
 
-语法
+## 语法
 
 ```
 date [-u] [--universal] [MMDD][CC][ss]
 ```
 
-重要标志和选项
+## 重要标志和选项
 
-- -u/--universal: 显示格林尼标准时间
+- `-u`/`--universal`：显示格林尼标准时间
 
-说明
+## 说明
 
 如果提供了日期，将显示以下值：
 
-* MM: 月
-* DD: 日
-* hh: 小时
-* mm: 分
-* CC: 世纪
-* ss: 秒
+* `MM`：月
+* `DD`：日
+* `hh`：小时
+* `mm`：分
+* `CC`：世纪
+* `ss`：秒
 
 # dc
 
-描述
+## 描述
 
 交互式、任意精度的逆后缀表示计算器。处理所有指定的表达式。
 
-语法
+## 语法
 
 ```
 dc [file ...]
 ```
 
-重要标志和选项
+## 重要标志和选项
 
 无
 
-说明
+## 说明
 
-表达式的详细语法在 dc 手页中记录。
+表达式的详细语法在 `dc` 手页中记录。
 
 # decryptdir
 
-描述
+## 描述
 
-加密指定目录中的所有文件。如果没有指定目录，则加密当前目录下的文件。文件必须经过 cryptdir 加密。
+加密指定目录中的所有文件。如果没有指定目录，则加密当前目录下的文件。文件必须经过 `cryptdir` 加密。
 
-语法
+## 语法
 
 ```
 decryptdir [directory]
 ```
 
-重要标志和选项
+## 重要标志和选项
 
 无
 
-说明
+## 说明
 
 解密文件时会提示密码。你需要提供加密时使用的密码，否则进程将失败。
 
@@ -17397,195 +16837,200 @@ decryptdir [directory]
 
 在标准输出返回模块依赖。如果指定了文件名，这些关系可以存储在文件中。
 
-语法
+## 语法
 
+```
 depmod module1.o module2.o ...
+```
 
-重要标志和选项
+## 重要标志和选项
 
 无
 
-## df
+# df
+
+## 描述
 
 显示挂载磁盘或分区的可用空间。如果没有指定文件（目录），则显示所有文件系统的可用空间。如果指定了文件，则显示包含该文件的系统。
 
-语法
+## 语法
 
 ```
 df [-T] [-t ftype] [-x f] [--all] [-inodes] [--type=fstream] [--exclude-type=fstream] [--print-type] [filename ...]
 ```
 
-重要标志和选项
+## 重要标志和选项
 
-- -t/--type=fstream: 仅显示指定类型文件系统的信息。
-- -T/--print-type: 为报告的每个文件显示文件系统。
-- -x/--exclude-type=fstream: 不报告指定类型文件系统的信息。
+- `-t`/`--type=fstream`：仅显示指定类型文件系统的信息。
+- `-T`/`--print-type`：为报告的每个文件显示文件系统。
+- `-x`/`--exclude-type=fstream`：不报告指定类型文件系统的信息。
 
 # dir
 
-描述
+## 描述
 
 显示指定目录的文件列表，按字母顺序排列，除非。默认情况下显示当前目录的内容，除非指定了另一个目录。
 
-语法
+## 语法
 
 ```
 dir [-acGlnRStU] [-all] [--no-group] [--numeric-uid-gid] [--reverse] [--recursive] [file ...]
 ```
 
-重要标志和选项
+## 重要标志和选项
 
-- -a/--all: 显示所有项，包括以 * 开头的项。
-- -c: 按创建时间排序并在显示完整信息（使用 -l 标志）时显示创建时间。
-- -C: 分列显示。
-- -G/--no-group: 防止显示组信息。
-- -1: 长格式显示文件。
-- -n/--numeric-uid-gid: 列出用户 ID 和组 ID (UID 和 GID) 而不是名称。
-- -r/--reverse: 排序时反转项顺序。
+- `-a`/`--all`：显示所有项，包括以 `*` 开头的项。
+- `-c`：按创建时间排序并在显示完整信息（使用 `-l` 标志）时显示创建时间。
+- `-C`：分列显示。
+- `-G`/`--no-group`：防止显示组信息。
+- `-1`：长格式显示文件。
+- `-n`/`--numeric-uid-gid`：列出用户 ID 和组 ID (`UID` 和 `GID`) 而不是名称。
+- `-r`/`--reverse`：排序时反转项顺序。
 
+# dmesg
 
-
-
-
-## dmesg
-
-描述
+## 描述
 
 显示或操作内核环形缓冲区。这是存储启动信息的地方。
+
+## 语法
 
 ```
 dmesg [-c]
 ```
 
-重要标志和选项
+## 重要标志和选项
 
-- -c: 在显示内容后清除环形缓冲区。
+- `-c`：在显示内容后清除环形缓冲区。
 
-## dnsdomain
+# dnsdomain
 
-描述
+## 描述
 
 根据全完全限定域名（FQDN）显示系统的 DNS 域名。
 
-语法
+## 语法
 
 ```
 Domainname [-f filename] [--file filename]
 ```
 
-重要标志和选项
+## 重要标志和选项
 
-- -f/-- filename: 指定从哪个文件中读取主机名。
+- `-f`/`--filename`：指定从哪个文件中读取主机名。
 
-## dnsquery
+# dnsquery
 
-描述
+## 描述
 
 查询 DNS 服务器以查找有关指定主机的信息。
 
-语法
+## 语法
 
 ```
-dnsquery [-n nameserver] [-t type] [-c class] [-r retry]
-[-p retryperiod] host
+dnsquery [-n nameserver] [-t type] [-c class] [-r retry] [-p retryperiod] host
 ```
 
-重要标志和选项
+## 重要标志和选项
 
-- -c class: 指定正在搜索的记录类型。
-- -n nameserver: 指定用于查询的名称服务器。如果未指定，则使用默认名称服务器。
-- -p retryperiod: 指定在假设服务器没有响应之前等待多久。
-- -r retry: 指定如果服务器没有响应，重试查询的次数。
-- -t type: 指定要执行的查询类型。
-- -R/--recursive: 递归列出子目录的内容。
-- -S: 按大小排序文件。
-- -t: 按文件的修改时间排序，并在显示完整信息（使用 -l 标志）时显示修改时间。
-- -u: 按文件的最后访问时间排序，并在显示完整信息（使用 -l 标志）时显示最后访问时间。
-- -U: 按目录顺序显示条目，而不是排序。
+- `-c class`：指定正在搜索的记录类型。
+- `-n nameserver`：指定用于查询的名称服务器。如果未指定，则使用默认名称服务器。
+- `-p retryperiod`：指定在假设服务器没有响应之前等待多久。
+- `-r retry`：指定如果服务器没有响应，重试查询的次数。
+- `-t type`：指定要执行的查询类型。
+- `-R`/`--recursive`：递归列出子目录的内容。
+- `-S`：按大小排序文件。
+- `-t`：按文件的修改时间排序，并在显示完整信息（使用 `-l` 标志）时显示修改时间。
+- `-u`：按文件的最后访问时间排序，并在显示完整信息（使用 `-l` 标志）时显示最后访问时间。
+- `-U`：按目录顺序显示条目，而不是排序。
 
 注释
 
 当指定查询类型时，可能的类型包括：
 
-- - A: 仅查找地址。
-- NS: 查找主机的名称服务器。
-- CNAME: 查找主机的规范别名。
-- PTR: 查找域名指针。
-- SOA: 查找主机的权威记录的起始标记。
-- MX: 查找域名的邮件交换记录。
-- ANY: 查找可以找到的任何和所有内容（这是默认值）。
+- `- A`：仅查找地址。
+- `NS`：查找主机的名称服务器。
+- `CNAME`：查找主机的规范别名。
+- `PTR`：查找域名指针。
+- `SOA`：查找主机的权威记录的起始标记。
+- `MX`：查找域名的邮件交换记录。
+- `ANY`：查找可以找到的任何和所有内容（这是默认值）。
 
 当指定信息类别时，可能的类别包括：
 
-- - IN: 互联网（默认值，你可能不想更改它）。
-- HS: Hesiod
-- CHAOS: Chaos
-- ANY: 任意
+- `- IN`：互联网（默认值，你可能不想更改它）。
+- `HS`：Hesiod
+- `CHAOS`：Chaos
+- `ANY`：任意
 
-## domainname
+# domainname
 
-描述
+## 描述
 
 显示或设置系统的 NS 域名。如果不带参数或标志，默认行为是显示当前的 NS 域名。
 
-语法
+## 语法
 
 ```
 domainname [-F file] [--file file] [name]
 ```
 
-重要标志和选项
+## 重要标志和选项
 
-- -F/--file file: 表示应根据指定文件的内容设置域名，而不是期望作为命令行参数传递。
+- `-F`/`--file file`：表示应根据指定文件的内容设置域名，而不是期望作为命令行参数传递。
 
-## du
+# du
 
-描述
+## 描述
 
 显示每个指定文件或目录的磁盘空间使用报告，以及指定目录的所有子目录。默认情况下，显示当前目录下所有文件和目录的信息。
 
-语法
+## 语法
 
 ```
 du [-abcksx] [--all] [-bytes] [--total] [-kilobytes] [--summary] [--one-file-system] [file ...]
 ```
 
-重要标志和选项
+## 重要标志和选项
 
-- -a/-all: 显示文件和目录的使用信息。
-- -b/-bytes: 以字节为单位显示使用信息。
-- -c--total: 显示所有内容的总量。
-- -k--kilobytes: 以千字节为单位显示使用信息。
-- -s--summarize: 显示每个参数的总计，不显示目录内每个文件或子目录的单独信息。
-- -x--one-file-system: 跳过不是当前文件系统部分的目录。
+- `-a`/`-all`：显示文件和目录的使用信息。
+- `-b`/`-bytes`：以字节为单位显示使用信息。
+- `-c`/`--total`：显示所有内容的总量。
+- `-k`/`--kilobytes`：以千字节为单位显示使用信息。
+- `-s`/`--summarize`：显示每个参数的总计，不显示目录内每个文件或子目录的单独信息。
+- `-x`/`--one-file-system`：跳过不是当前文件系统部分的目录。
 
-## e2fsck
+# e2fsck
 
 检查 Linux 第二个扩展文件系统的状态。这是 Linux 分区使用的默认文件系统。
+
+## 语法
 
 ```
 e2fsck [-cfnpy] [-B blocksize] device
 ```
 
-- -B--blocksize: 指定在查找超级块时使用的特定块大小。默认情况下，程序将以不同的块大小进行搜索，直到找到超级块。
-- -c: 运行 badblocks 程序并据此标记任何坏块。
-- -f: 强制检查外部看起来是干净的文件系统。
-- -n: 以只读状态打开文件系统，并对所有采取操作的提示回答“否”。
-- -p: 强制自动修复而无需提示。
-- -y: 假设对所有问题的回答均为“是”。
+- `-B`/`--blocksize`：指定在查找超级块时使用的特定块大小。默认情况下，程序将以不同的块大小进行搜索，直到找到超级块。
+- `-c`：运行 `badblocks` 程序并据此标记任何坏块。
+- `-f`：强制检查外部看起来是干净的文件系统。
+- `-n`：以只读状态打开文件系统，并对所有采取操作的提示回答“否”。
+- `-p`：强制自动修复而无需提示。
+- `-y`：假设对所有问题的回答均为“是”。
 
-应使用完整的 Linux 设备路径来指定要检查的设备，例如 /dev/hda1 或 /dev/sdb3。建议不要挂载文件系统，或者如果需要检查根文件系统或必须挂载的文件系统，应在单用户模式下进行。
+应使用完整的 Linux 设备路径来指定要检查的设备，例如 `/dev/hda1` 或 `/dev/sdb3`。建议不要挂载文件系统，或者如果需要检查根文件系统或必须挂载的文件系统，应在单用户模式下进行。
 
-## echo
+# echo
 
 显示一行文本，可选择地不带尾随换行（默认包含换行）。
+
+## 语法
 
 ```
 echo [-ne] [string ...]
 ```
 
-- -e: 启用对字符串中反斜杠特殊字符的解释。
-- -n: 禁用输出尾随换行。
+- `-e`：启用对字符串中反斜杠特殊字符的解释。
+- `-n`：禁用输出尾随换行。
 
 ## egrep
 
@@ -17593,844 +17038,787 @@ echo [-ne] [string ...]
 
 反斜杠特殊字符包括：
 
-- \b: 退格
-- \f: 换页
-- \n: 换行
-- \r: 回车
-- \t: 水平制表
-- \\ 反斜杠
+- `\b`：退格
+- `\f`：换页
+- `\n`：换行
+- `\r`：回车
+- `\t`：水平制表
+- `\\` 反斜杠
 
-描述
+## 描述
 
 搜索文件中匹配模式的行并显示这些行。
 
-语法
+## 语法
 
 ```
-egrep [-bcclnvwx] [-number] [-e pattern] [-f file] [--byte-offset]
---context] [--count] [--regexp=pattern] [--file=file] [--ignore-case]
---files-without-match] [--files-with-match] [--line-number]
---revert-match] [--word-regexp] [--line-regexp] [pattern]
+egrep [-bcclnvwx] [-number] [-e pattern] [-f file] [--byte-offset] --context] [--count] [--regexp=pattern] [--file=file] [--ignore-case] --files-without-match] [--files-with-match] [--line-number] --revert-match] [--word-regexp] [--line-regexp] [pattern]
 ```
 
-重要标志和选项
+## 重要标志和选项
 
-- -number: 显示带有指定数量尾随上下文的匹配行。
-- -b--byte-offset: 在每行前打印偏移量。
-- -c--count: 匹配行数（结合 -v 使用时输出总数）。
-- -C--context: 显示带有领先和尾随上下文的匹配行。
-- -e pattern--regexp=pattern: 使用指定的正则表达式而不是参数提供的。
-- -f file--file: 使用指定的文件而不是参数提供的。
-- -I--ignore-case: 忽略模式和所搜索文件的大小写。
-- -l--files-with-match: 不显示每行匹配项，仅显示包含至少一个正则表达式匹配的文件名。
-- -L--files-without-match: 不显示每行匹配项，显示无正则表达式匹配的文件名。
-- -n--line-number: 在每个输出行前加上文件行号。
-- -v--revert-match: 显示非匹配行而不是匹配行。
-- -w--word-regexp: 仅显示匹配正则表达式的完整单词。
-- -x--line-regexp: 仅显示匹配正则表达式的完整行。
+- `-number`：显示带有指定数量尾随上下文的匹配行。
+- `-b`/`--byte-offset`：在每行前打印偏移量。
+- `-c`/`--count`：匹配行数（结合 `-v` 使用时输出总数）。
+- `-C`/`--context`：显示带有领先和尾随上下文的匹配行。
+- `-e pattern`/`--regexp=pattern`：使用指定的正则表达式而不是参数提供的。
+- `-f file`/`--file`：使用指定的文件而不是参数提供的。
+- `-I`/`--ignore-case`：忽略模式和所搜索文件的大小写。
+- `-l`/`--files-with-match`：不显示每行匹配项，仅显示包含至少一个正则表达式匹配的文件名。
+- `-L`/`--files-without-match`：不显示每行匹配项，显示无正则表达式匹配的文件名。
+- `-n`/`--line-number`：在每个输出行前加上文件行号。
+- `-v`/`--revert-match`：显示非匹配行而不是匹配行。
+- `-w`/`--word-regexp`：仅显示匹配正则表达式的完整单词。
+- `-x`/`--line-regexp`：仅显示匹配正则表达式的完整行。
 
-## false
+# false
 
-描述
+## 描述
 
 什么都不做并失败状态。
 
-语法
+## 语法
 
+```
 false
+```
 
-## fdisk
+# fdisk
 
-描述
+## 描述
 
-提供操作分区表的工具。默认情况下，fdisk 准备好处理当前设备，除非作为参数指定了不同的设备。
+提供操作分区表的工具。默认情况下，`fdisk` 准备好处理当前设备，除非作为参数指定了不同的设备。
 
-语法
+## 语法
 
+```
 fdisk [-1] [-s partition] [device]
+```
 
-- -1: 列出 /dev/hda、/dev/hdb 以及 /dev/sda 到 /dev/sdh 的分区并退出。
-- -s partition: 在标准输出返回指定分区的大小并退出。
+- `-1`：列出 `/dev/hda`、`/dev/hdb` 以及 `/dev/sda` 到 `/dev/sdh` 的分区并退出。
+- `-s partition`：在标准输出返回指定分区的大小并退出。
 
-## fgrep
+# fgrep
 
-描述
+## 描述
 
 搜索匹配模式的行并显示这些行。模式被解释为固定字符串列表，而不是正则表达式。字符串由换行符分隔，可以匹配任意字符串。
 
-语法
+## 语法
 
 ```
-fgrep [-BccILnvwx] [-number] [-e pattern] [-f file] [--byte-offset]
---context] [--count] [--regexp=pattern] [--file=file] [--ignore-case]
---files-without-match] [--files-with-match] [--line-number]
---revert-match] [--word-regexp] [--line-regexp] [pattern]
---file ...]
+fgrep [-BccILnvwx] [-number] [-e pattern] [-f file] [--byte-offset] --context] [--count] [--regexp=pattern] [--file=file] [--ignore-case] --files-without-match] [--files-with-match] [--line-number] --revert-match] [--word-regexp] [--line-regexp] [pattern] --file ...]
 ```
 
+- `-c`/`--count`：不显示匹配的行，而是输出匹配表达式的行总数（当与 `-v` 结合使用时，显示不匹配行的总数）。
+- `-C`/`--context`：显示匹配的行，并在其前后各显示两行上下文（这与 `-2` 相同）。
+- `-e pattern`/`--regex=pattern`：使用指定的模式，而不是作为参数提供。
+- `-f file`/`//file`：使用指定文件中找到模式，而不是作为参数提供。
+- `-I`/`--ignore-case`：忽略模式和所搜索文件的大小写。
+- `-l`/`--files-with-matches`：不显示每行匹配的内容，而是显示每个包含至少一个匹配项的文件名。
+- `-L`/`--files-without-match`：不显示每行匹配的内容，而是显示每个不包含模式匹配项的文件名。
+- `-n`/`--line-number`：在每个输出行前加上其在文件中的行号。
+- `-v`/`--revert-match`：显示不匹配的行而不是匹配的行。
+- `-w`/`//word-regexp`：仅显示那些匹配项为完整单词的行。
+- `-x`/`--line-regexp`：仅显示那些匹配项为完整行的行。
 
+# file
 
+## 描述
 
+确定文件的类型。
 
-- -c--count: 不显示匹配的行，而是输出匹配表达式的行总数（当与 -v 结合使用时，显示不匹配行的总数）。
-- -C--context: 显示匹配的行，并在其前后各显示两行上下文（这与 -2 相同）。
-- -e pattern--regex=pattern: 使用指定的模式，而不是作为参数提供。
-- -f file//file: 使用指定文件中找到模式，而不是作为参数提供。
-- -I--ignore-case: 忽略模式和所搜索文件的大小写。
-- -l--files-with-matches: 不显示每行匹配的内容，而是显示每个包含至少一个匹配项的文件名。
-- -L--files-without-match: 不显示每行匹配的内容，而是显示每个不包含模式匹配项的文件名。
-- -n--line-number: 在每个输出行前加上其在文件中的行号。
-- -v--revert-match: 显示不匹配的行而不是匹配的行。
-- -w//word-regexp: 仅显示那些匹配项为完整单词的行。
-- -x--line-regexp: 仅显示那些匹配项为完整行的行。
+## 语法
 
-## file
+```
+file [-zl] [-f file] file ...
+```
 
-描述 确定文件的类型。
+## 重要标志和选项
 
-语法 file [-zl] [-f file] file ...
+- `-f file`：从指定文件中读取要检查的文件列表。这些文件将在检查作为参数提供的文件之前被检查。
+- `-L`：跟踪符号链接。
+- `-z`：尝试查看压缩文件内部的文件类型。
 
-重要标志和选项
-- -f file: 从指定文件中读取要检查的文件列表。这些文件将在检查作为参数提供的文件之前被检查。
-- -L: 跟踪符号链接。
-- -z: 尝试查看压缩文件内部的文件类型。
+# find
 
-## find
+## 描述
 
-描述 在指定路径下查找符合命令行选项所指示的所有标准的文件，并执行这些选项指示的任何操作。如果未指定路径，则在当前目录下进行搜索。
+在指定路径下查找符合命令行选项所指示的所有标准的文件，并执行这些选项指示的任何操作。如果未指定路径，则在当前目录下进行搜索。
 
-语法 find [path ...] [options]
+## 语法
 
-重要标志和选项
-- -amin minutes: 查找最后访问时间为指定分钟数以前的文件。
-- -anewer file: 查找访问时间比指定文件修改时间更晚的文件。
-- -atime days: 查找最后访问时间为指定天数（24小时）以前的文件。
-- -cmin minutes: 查找状态最后更改时间为指定分钟数以前的文件。
-- -cewer file: 查找状态最后更改时间比指定文件修改时间更晚的文件。
-- -ctime days: 查找状态更改时间为指定天数（24小时）以前的文件。
-- -empty: 查找空文件或目录。
-- -exec command \;: 执行指定的命令。字符串 ( ) 被替换为当前找到的文件，并对每个找到的文件重复命令。
-- -gid gid: 查找具有指定数字 GID 的文件。
-- -group group: 查找指定组的文件。
-- -iname pattern: 查找名称不区分大小写匹配指定模式的符号链接。
-- -iname pattern: 查找名称不区分大小写匹配指定模式的文件。
-- -ipath pattern: 查找路径不区分大小写匹配指定模式的文件。
-- -iname pattern: 查找名称不区分大小写匹配指定模式的符号链接（重复项）。
-- -maxdepth levels: 在指定路径下最多进入指定的层数。
-- -mindepth levels: 在开始测试之前，在指定路径下至少进入指定的层数。
-- -mmin minutes: 查找最后修改时间为指定分钟数以前的文件。
-- -mount: 不进入任何位于当前文件系统之外的目录。
-- -mtime days: 查找最后修改时间为指定天数（24小时）以前的文件。
-- -name pattern: 查找名称区分大小写匹配指定模式的文件。
-- -newer file: 查找修改时间比指定文件更晚的文件。
-- -nogroup: 查找数字 GID 不对应任何现有组的文件。
-- -ouser: 查找数字 UID 不对应任何现有用户的文件。
-- -ok command \;: 在提示用户后，对每个找到的文件执行指定的命令。字符串 [] 被替换为当前替换的文件。
-- -path pattern: 查找路径区分大小写匹配指定模式的文件。
-- -perm mode: 查找权限完全匹配指定模式的文件。如果使用 +mode，则匹配任何指定的权限位；
-- -print: 打印所有找到的完整文件名。
-- -regex: 查找名称匹配指定正则表达式的文件。
-- -size [bckw]: 查找指定单位下指定大小的文件。单位有 b（512 字节块）、c（字节）、k（千字节）和 w（2 字节字）。
-- -type type: 查找匹配指定类型的文件。类型包括 d（目录）、f（普通文件）和 l（符号链接）。
-- -uid uid: 查找指定 UID 的文件。
-- -user username: 查找由指定用户名或 UID 拥的文件。
+```
+find [path ...] [options]
+```
+
+## 重要标志和选项
+
+- `-amin minutes`：查找最后访问时间为指定分钟数以前的文件。
+- `-anewer file`：查找访问时间比指定文件修改时间更晚的文件。
+- `-atime days`：查找最后访问时间为指定天数（24小时）以前的文件。
+- `-cmin minutes`：查找状态最后更改时间为指定分钟数以前的文件。
+- `-cewer file`：查找状态最后更改时间比指定文件修改时间更晚的文件。
+- `-ctime days`：查找状态更改时间为指定天数（24小时）以前的文件。
+- `-empty`：查找空文件或目录。
+- `-exec command \;`：执行指定的命令。字符串 `( )` 被替换为当前找到的文件，并对每个找到的文件重复命令。
+- `-gid gid`：查找具有指定数字 `GID` 的文件。
+- `-group group`：查找指定组的文件。
+- `-iname pattern`：查找名称不区分大小写匹配指定模式的符号链接。
+- `-iname pattern`：查找名称不区分大小写匹配指定模式的文件。
+- `-ipath pattern`：查找路径不区分大小写匹配指定模式的文件。
+- `-iname pattern`：查找名称不区分大小写匹配指定模式的符号链接（重复项）。
+- `-maxdepth levels`：在指定路径下最多进入指定的层数。
+- `-mindepth levels`：在开始测试之前，在指定路径下至少进入指定的层数。
+- `-mmin minutes`：查找最后修改时间为指定分钟数以前的文件。
+- `-mount`：不进入任何位于当前文件系统之外的目录。
+- `-mtime days`：查找最后修改时间为指定天数（24小时）以前的文件。
+- `-name pattern`：查找名称区分大小写匹配指定模式的文件。
+- `-newer file`：查找修改时间比指定文件更晚的文件。
+- `-nogroup`：查找数字 `GID` 不对应任何现有组的文件。
+- `-ouser`：查找数字 `UID` 不对应任何现有用户的文件。
+- `-ok command \;`：在提示用户后，对每个找到的文件执行指定的命令。字符串 `[]` 被替换为当前替换的文件。
+- `-path pattern`：查找路径区分大小写匹配指定模式的文件。
+- `-perm mode`：查找权限完全匹配指定模式的文件。如果使用 `+mode`，则匹配任何指定的权限位；
+- `-print`：打印所有找到的完整文件名。
+- `-regex`：查找名称匹配指定正则表达式的文件。
+- `-size [bckw]`：查找指定单位下指定大小的文件。单位有 `b`（512 字节块）、`c`（字节）、`k`（千字节）和 `w`（2 字节字）。
+- `-type type`：查找匹配指定类型的文件。类型包括 `d`（目录）、`f`（普通文件）和 `l`（符号链接）。
+- `-uid uid`：查找指定 `UID` 的文件。
+- `-user username`：查找由指定用户名或 `UID` 拥的文件。
 
 ## finger
 
-当提供分钟和天数等数字时间信息时，通常必须精确匹配。在数字前加 + 可匹配任何大于指定数字的值，在值前加 - 可匹配任何小于该数字的值。
+当提供分钟和天数等数字时间信息时，通常必须精确匹配。在数字前加 `+` 可匹配任何大于指定数字的值，在值前加 `-` 可匹配任何小于该数字的值。
 
-在本地系统或远程系统上查询用户的指定信息。本地系统通过用户名或姓指定用户，远程系统通过 username@host 指定用户。如果本地系统未指定用户，则显示所有登录的用户。
+在本地系统或远程系统上查询用户的指定信息。本地系统通过用户名或姓指定用户，远程系统通过 `username@host` 指定用户。如果本地系统未指定用户，则显示所有登录的用户。
 
-## free
+# free
 
-描述 显示空闲内存的报告。
+## 描述
 
-语法 free [-b|-k|[-m] [-s] [-t]
+显示空闲内存的报告。
 
-重要标志和选项
-- b: 以字节显示内存。
-- k: 以千字节显示内存（默认）。
-- m: 以兆字节显示内存。
-- s: 用指定的分隔符分隔报告。
-- t: 显示总计。
+## 语法
 
-## gpasswd
+```
+free [-b|-k|[-m] [-s] [-t]
+```
 
-描述 管理 /etc/group。
+## 重要标志和选项
 
-语法 gpasswd [-adM-R] user group
+- `b`：以字节显示内存。
+- `k`：以千字节显示内存（默认）。
+- `m`：以兆字节显示内存。
+- `s`：用指定的分隔符分隔报告。
+- `t`：显示总计。
 
-重要标志和选项
-- a: 将用户添加到组。
-- d: 从组中删除用户。
-- M: 指定一个或多个属于该组的用户。
-- r: 删除组密码。
-- R: 禁用对组的访问。
+# gpasswd
 
-## grep
+## 描述
 
-描述 在文件中查找匹配指定模式的行。
+管理 `/etc/group`。
 
-语法 grep [options] pattern [file ...]
+## 语法
 
-重要标志和选项
-- b--byte-offset: 在每个匹配前打印字节偏移。
-- c--count: 不显示匹配的行，而是输出匹配表达式的行总数（当与 -v 结合使用时，显示不匹配行的总数）。
-- C--context: 显示匹配的行，并在其前后各显示两行上下文（这与 -2 相同）。
-- e pattern--regex=pattern: 使用指定的模式，而不是作为参数提供。
-- E--extended-regexp: 将模式视为扩展正则表达式（类似于 egrep）。
-- f file//file: 使用指定文件中找到模式，而不是作为参数提供。
-- F--fixed-strings: 将模式视为一组换行分隔的字符串，其中必须有一个匹配。这与 fgrep 相同。
-- G--basic-regexp: 将模式视为基础正则表达式。
-- i--ignore-case: 忽略模式和所搜索文件的大小写。
-- l--files-with-matches: 不显示每行匹配的内容，而是显示每个包含至少一个匹配项的文件名。
-- L--files-without-match: 不显示每行匹配的内容，而是显示每个不包含模式匹配项的文件名。
-- n--line-number: 在每个输出行前加上其在文件中的行号。
-- v--revert-match: 显示不匹配的行而不是匹配的行。
-- w//word-regexp: 仅显示那些匹配项为完整单词的行。
-- x--line-regexp: 仅显示那些匹配项为完整行的行。
+```
+gpasswd [-adM-R] user group
+```
 
-# Notes
+## 重要标志和选项
 
-grep 使用的正则表达式语法可以在 grep man 手页中找到。
+- `a`：将用户添加到组。
+- `d`：从组中删除用户。
+- `M`：指定一个或多个属于该组的用户。
+- `r`：删除组密码。
+- `R`：禁用对组的访问。
+
+# grep
+
+## 描述
+
+在文件中查找匹配指定模式的行。
+
+## 语法
+
+```
+grep [options] pattern [file ...]
+```
+
+## 重要标志和选项
+
+- `b`/`--byte-offset`：在每个匹配前打印字节偏移。
+- `c`/`--count`：不显示匹配的行，而是输出匹配表达式的行总数（当与 `-v` 结合使用时，显示不匹配行的总数）。
+- `C`/`--context`：显示匹配的行，并在其前后各显示两行上下文（这与 `-2` 相同）。
 
 
 
+- `e pattern--regex=pattern`: 使用指定的模式，而不是作为参数提供。
+- `E--extended-regexp`: 将模式视为扩展正则表达式（类似于 `egrep`）。
+- `f file//file`: 使用指定文件中找到模式，而不是作为参数提供。
+- `F--fixed-strings`: 将模式视为一组换行分隔的字符串，其中必须有一个匹配。这与 `fgrep` 相同。
+- `G--basic-regexp`: 将模式视为基础正则表达式。
+- `i--ignore-case`: 忽略模式和所搜索文件的大小写。
+- `l--files-with-matches`: 不显示每行匹配的内容，而是显示每个包含至少一个匹配项的文件名。
+- `L--files-without-match`: 不显示每行匹配的内容，而是显示每个不包含模式匹配项的文件名。
+- `n--line-number`: 在每个输出行前加上其在文件中的行号。
+- `v--revert-match`: 显示不匹配的行而不是匹配的行。
+- `w//word-regexp`: 仅显示那些匹配项为完整单词的行。
+- `x--line-regexp`: 仅显示那些匹配项为完整行的行。
 
+### Notes
+`grep` 使用的正则表达式语法可以在 `grep` man 手页中找到。
 
-# groupadd
+# `groupadd`
 
-描述
-
+## 描述
 创建一个新组。
 
-语法
-
+## 语法
+```
 groupadd [-g gid] [-o] [-r] group
+```
 
-重要标志和选项
+## 重要标志和选项
+- `-f`: 当尝试添加已存在的组时防止程序退出。在这种情况下，该组不会被修改。
+- `-g gid`: 使用指定的 GID 作为组的 ID，而不是自动分配值。
+- `-o`: 表示组 ID（GID）不需要是唯一的。
+- `-r`: 添加一个组 ID 小于 499 的系统账户。
 
-- -f: 当尝试添加已存在的组时防止程序退出。在这种情况下，该组不会被修改。
-- -g gid: 使用指定的 GID 作为组的 ID，而不是自动分配值。
-- -o: 表示组 ID（GID）不需要是唯一的。
-- -r: 添加一个组 ID 小于 499 的系统账户。
+# `groupdel`
 
-# groupdel
-
-描述
-
+## 描述
 删除一个组。
 
-语法
-
+## 语法
+```
 groupdel group
+```
 
-重要标志和选项
-
+## 重要标志和选项
 无
 
-# groupmod
+# `groupmod`
 
-描述
-
+## 描述
 修改现有组。
 
-语法
-
+## 语法
+```
 groupmod [-g gid] [-n group] group
+```
 
-重要标志和选项
+## 重要标志和选项
+- `-g gid`: 将指定组的 GID 改为新的 GID。如果指定了 `-o`，此值必须是唯一的。
+- `-n group`: 将指定组的组名改为新的组名。
+- `-o`: 表示组 ID（GID）不需要是唯一的。
 
-- -g gid: 将指定组的 GID 改为新的 GID。如果指定了 -o，此值必须是唯一的。
-- -n group: 将指定组的组名改为新的组名。
-- -o: 表示组 ID（GID）不需要是唯一的。
+# `groups`
 
-# groups
+## 描述
+打印一个或多个用户所属的组。如果没有指定用户，则显示运行命令的用户所属的组。
 
-描述打印一个或多个用户所属的组。如果没有指定用户，则显示运行命令的用户所属的组。
-
-语法
-
+## 语法
+```
 groups [username ...]
+```
 
-重要标志和选项
-
+## 重要标志和选项
 无
 
-# grpck
+# `grpck`
 
-描述
+## 描述
+检查组文件（如 `/etc/group` 或 `/etc/gshadow`）的完整性。如果没有指定文件，则检查默认文件。
 
-检查组文件（如 /etc/group 或 /etc/gshadow）的完整性。如果没有指定文件，则检查默认文件。
-
-语法
-
+## 语法
 ```
 grpck [-r] [group shadow]
 ```
 
-重要标志和选项
+## 重要标志和选项
+- `-r`: 以只读模式运行，不允许对文件进行任何修改。
 
--r: 以只读模式运行，不允许对文件进行任何修改。
+## `gunzip`
 
-## gunzip
+## 描述
+解压使用 `gzip` 命令压缩的文件（以及 `compress` 命令和 `zip` 命令压缩的文件）。
 
-描述
-
-解压使用 gzip 命令压缩的文件（以及 compress 命令和 zip 命令压缩的文件）。
-
-语法
-
+## 语法
 ```
 gunzip [-cflrt] [--stdout] [--force] [--list] [--recursive] [--test] [name ...]
 ```
 
-重要标志和选项
+## 重要标志和选项
+- `-c`/`--stdout`: 将输出写入标准输出，保持原始文件不变。默认情况下，`gunzip` 会用解压后的文件替换原始压缩文件。
+- `-f`/`--force`: 当相应文件已存在且将被压缩文件覆盖时，强制解压。
+- `-l`/`--list`: 在不解压的情况下列出压缩文件中的文件。
+- `-r`/`--recursive`: 递归解压，进入目录结构并解压命令行指定目录的子目录下的所有文件。
+- `-t`/`--test`: 测试压缩文件的完整性。
 
-- -c/stdout: 将输出写入标准输出，保持原始文件不变。默认情况下，gunzip 会用解压后的文件替换原始压缩文件。
-- -f/force: 当相应文件已存在且将被压缩文件覆盖时，强制解压。
-- -l/list: 在不解压的情况下列出压缩文件中的文件。
-- -r/recursive: 递归解压，进入目录结构并解压命令行指定目录的子目录下的所有文件。
-- -t/test: 测试压缩文件的完整性。
+# `gzexe`
 
-# gzexe
+## 描述
+创建一个可执行的压缩文件。如果你压缩了 `gzexe`，你可以像运行未压缩的文件一样运行它。该文件将直接解压到内存中执行，而硬盘上的版本保持压缩状态。
 
-描述
-
-创建一个可执行的压缩文件。如果你压缩了 gzexe，你可以像运行未压缩的文件一样运行它。该文件将直接解压到内存中执行，而硬盘上的版本保持压缩状态。
-
-语法
-
+## 语法
 ```
 gzexe [-d] [name ...]
 ```
 
-重要标志和选项
+## 重要标志和选项
+- `-d`: 解压指定的文件而不是压缩它们。
 
--d: 解压指定的文件而不是压缩它们。
+## 注意
+当压缩压缩一个名为 `filename` 的文件时，原始未压缩的文件将被复制为 `filename-`，压缩文件将保留文件名。一旦你测试了压缩执行文件确认其工作正常，就可以删除未压缩的副本。
 
-注意
+## `gzip`
 
-当压缩压缩一个名为 filename 的文件时，原始未压缩的文件将被复制为 filename-，压缩文件将保留文件名。一旦你测试了压缩执行文件确认其工作正常，就可以删除未压缩的副本。
+## 描述
+使用 Lempel-Ziv 编码压缩文件。生成的文件通常会替换原始未压缩文件，并带有 `.gz` 扩展名。
 
-## gzip
-
-描述使用 Lempel-Ziv 编码压缩文件。生成的文件通常会替换原始未压缩文件，并带有 .gz 扩展名。
-
-语法
-
+## 语法
 ```
-gzip [--cdflrt] [--decompress] [--uncompress] [--stdout] [--to-stdout]
---force] [--list] [--recursive] [--test] [name ...]
+gzip [--cdflrt] [--decompress] [--uncompress] [--stdout] [--to-stdout] --force] [--list] [--recursive] [--test] [name ...]
 ```
 
-重要标志和选项
+## 重要标志和选项
+- `-stdout`/`--to-stdout`: 写入标准输出，保持文件不变。默认情况下，`gzip` 会用压缩后的文件替换原始未压缩文件。
+- `--decompress`/`--uncompress`: 解压指定的文件（类似于 `gzip`），而不是压缩它们。
+- `-f`/`--force`: 当文件已存在且将被压缩文件覆盖时，强制压缩。
+- `--list`: 列出压缩文件中的文件。
+- `-r`/`--recursive`: 递归压缩，进入目录结构并压缩作为参数指定的目录子目录下的所有文件。
+- `-t`/`--test`: 测试压缩文件的完整性。
 
-- -stdout/--to-stdout: 写入标准输出，保持文件不变。默认情况下，gzip 会用压缩后的文件替换原始未压缩文件。
-- --decompress/--uncompress: 解压指定的文件（类似于 gzip），而不是压缩它们。
-- -f/--force: 当文件已存在且将被压缩文件覆盖时，强制压缩。
-- --list: 列出压缩文件中的文件。
-- -r/--recursive: 递归压缩，进入目录结构并压缩作为参数指定的目录子目录下的所有文件。
-- -t/--test: 测试压缩文件的完整性。
+# `halt`
 
-# halt
+## 描述
+停止系统。如果系统不在运行级别 0 或 6，则通过调用 `shutdown` 命令实现。
 
-描述
-
-停止系统。如果系统不在运行级别 0 或 6，则通过调用 shutdown 命令实现。
-
-语法
-
+## 语法
 ```
 halt [-n] [-w] [-d] [-f] [-i]
 ```
 
-重要标志和选项
+## 重要标志和选项
+- `-d`: 不将停止操作记录到 `/var/log/wtmp`。默认情况下，停止不在此文件中。
+- `-F`: 强制停止或重启，而不调用 `shutdown`。
+- `-i`: 在停止之前关闭网络接口。
+- `-n`: 在停止之前不同步文件系统。
+- `-w`: 将停止记录写入 `/var/log/wtmp`，但实际上不会停止系统。
 
-- -d: 不将停止操作记录到 /var/log/wtmp。默认情况下，停止不在此文件中。
-- -F: 强制停止或重启，而不调用 shutdown。
-- -i: 在停止之前关闭网络接口。
-- -n: 在停止之前不同步文件系统。
-- -w: 将停止记录写入 /var/log/wtmp，但实际上不会停止系统。
+## 警告
+使用此命令时需要小心。`-n` 标志（在不同步磁盘的情况下停止系统）特别需要关注，因为在卸载文件系统之前不同步它们可能会损坏存储在上面的数据。
 
-警告
+# `head`
 
-使用此命令时需要小心。-n 标志（在不同步磁盘的情况下停止系统）特别需要关注，因为在卸载文件系统之前不同步它们可能会损坏存储在上面的数据。
+## 描述
+显示一个或多个文件的开头部分。默认情况下，除非另有指定，否则显示每个文件的前10 行。如果没有提供文件名，则从标准输入读取数据并显示数据的第一部分。
 
-# head
-
-描述
-
-显示一个或多个文件的开头部分。默认情况下，除非另有指定，否则显示每个文件的前10 行。如果没有提供文件名，则从标准输入读取数据并显示数据的第一部分，跟随
-
-语法
-
+## 语法
 ```
 head [-c bytes] [-n line] [-v] [file ...]
 ```
 
-- -c bytes: 显示每个文件的前 n 字节。
-- -n line: 显示每个文件的前 n 行。
-- -v: 始终打印头部。
+- `-c bytes`: 显示每个文件的前 n 字节。
+- `-n line`: 显示每个文件的前 n 行。
+- `-v`: 始终打印头部。
 
-# head
+# `hostname`
 
-描述
-
-显示一个或多个文件的开头部分。默认情况下，除非另有指定，否则显示每个文件的前10 行。如果没有提供文件名，则从标准输入读取数据并显示数据的第一部分，跟随
-
-语法
-
-```
-head [-c bytes] [-n line] [-v] [file ...]
-```
-
-- -c bytes: 显示每个文件的前 n 字节。
-- -n line: 显示每个文件的前 n 行。
-- -v: 始终打印头部。
-
-# hostname
-
-描述
-
+## 描述
 显示或设置主机名。如果没有提供参数，则显示当前主机名。
 
-语法
-
+## 语法
 ```
 hostname [-a] [-b] [-f] [-h]
 ```
 
-- -a: 打印所有信息。
-- -b: 不使用 DNS 名称。
-- -f: 打印完全域名。
-- -h: 打印短主机名。
-- [name]: 设置主机名。
+- `-a`: 打印所有信息。
+- `-b`: 不使用 DNS 名称。
+- `-f`: 打印完全域名。
+- `-h`: 打印短主机名。
+- `[name]`: 设置主机名。
 
-# id
+# `id`
 
-描述显示真实有效组 ID。如果没有指定用户，则为当前用户显示。
+## 描述
+显示真实有效组 ID。如果没有指定用户，则为当前用户显示。
 
-语法
-
+## 语法
 ```
 id [username] [-u] [-g] [-D]
 ```
 
-- -u: 只打印用户 ID。
-- -g: 只打印组 ID。
-- -D: 打印所有信息。
-- -n: 使用数字而不是名称。
+- `-u`: 只打印用户 ID。
+- `-g`: 只打印组 ID。
+- `-D`: 打印所有信息。
+- `-n`: 使用数字而不是名称。
 
 # Appendix C • Linux 命令 Reference
 
-# ifconfig
+# `ifconfig`
 
 配置网络接口，或在未提供选项时显示其状态。如果没有提供参数，则显示所有接口的状况。
 
-语法
-
+## 语法
 ```
 ifconfig interface options
 ```
 
-- interface: 指定接口名称（例如 eth0 或 eth1）。
-- up: 激活接口。
-- down: 禁用接口。
-- netmask address: 设置接口的网络子掩码。
-- broadcast address: 设置接口的广播地址。
-- pointpoint address: 为接口启用对点模式，意味着两台机器之间的直接链路。同时也设置另一端的地址。
-- address: 指定接口的主机名或 IP 地址。这是要求的。
+- `interface`: 指定接口名称（例如 `eth0` 或 `eth1`）。
+- `up`: 激活接口。
+- `down`: 禁用接口。
+- `netmask address`: 设置接口的网络子掩码。
+- `broadcast address`: 设置接口的广播地址。
+- `pointpoint address`: 为接口启用对点模式，意味着两台机器之间的直接链路。同时也设置另一端的地址。
+- `address`: 指定接口的主机名或 IP 地址。这是要求的。
 
-# ifdown
+# `ifdown`
 
-禁用指定的接口，如 eth0 或 eth1。
+禁用指定的接口，如 `eth0` 或 `eth1`。
 
-语法
-
+## 语法
 ```
 ifdown interface
 ```
 
-重要标志和选项
-
+## 重要标志和选项
 无
 
-# ifport
+# `ifport`
 
 指定网络接口的传输器类型。
 
-语法
-
+## 语法
 ```
 ifport interface type
 ```
 
-重要标志和选项
+## 重要标志和选项
+`type`: 指定传输器类型。可能的类型包括：`auto`（自动选择）；`10baseT`（双线以太网）；`10base2`（同轴电以太网）；`aui`（AUI接口）；`100baseT`（双线快速以太网）。
 
-type: 指定传输器类型。可能的类型包括：auto（自动选择）；10baseT（双线以太网）；10base2（同轴电以太网）；aui（AUI接口）；100baseT（双线快速以太网）。
+# `ifup`
 
-# ifup
+启用指定的接口，如 `eth0` 或 `eth1`。
 
-启用指定的接口，如 eth0 或 eth1。
-
-语法
-
+## 语法
 ```
 ifup interface
 ```
 
-重要标志和选项
-
+## 重要标志和选项
 无
 
-# insmod
+# `insmod`
 
 将加载模块安装到当前内核中。
 
-语法
-
+## 语法
 ```
 insmod [-fpsxX] [-o module_name] object_file [symbol=value ...]
 ```
 
-重要标志和选项
+## 重要标志和选项
+- `f`: 当内核版本与预期内核版本不匹配时尝试加载模块。
+- `o module`: 显式命名模块，而不是基于模块的对象文件命名。
+- `p`: 探测模块以确保其已加载。
+- `s`: 将活动写入系统日志守护进程而不是标准输出。
+- `x`: 不导出模块的外部符号。
+- `X`: 导出模块的外部符号（这是默认值）。
 
-- f: 当内核版本与预期内核版本不匹配时尝试加载模块。
-- o module: 显式命名模块，而不是基于模块的对象文件命名。
-- p: 探测模块以确保其已加载。
-- s: 将活动写入系统日志守护进程而不是标准输出。
-- x: 不导出模块的外部符号。
-- X: 导出模块的外部符号（这是默认值）。
-
-# kbd_mode
+# `kbd_mode`
 
 显示或设置键盘模式。
 
-语法
-
+## 语法
 ```
 kbd_mode [-a]|[-u|-k|-s]
 ```
 
-
-
-
-
 # 868 附录 C • Linux 命令参考
 
-## killall
+## `killall`
 
 向所有具有共同进程名的进程发送信号。
-`killall [-eiw] [-signal] process ...`
-`killall -1`
 
-重要标志位和选项
+```
+killall [-eiw] [-signal] process ...
+killall -1
+```
 
-- -e: 对于长度超过 15 个字符的进程名，强制程序向信号发送给一个精确匹配的进程。
-- -i: 在向每个进程发送信号前请求确认。
-- -l: 显示信号名称列表。
-- -w: 等待所有被杀掉的进程退出。这意味着如果某个进程未能退出，killall 可能会无限等待。
+## 重要标志位和选项
+- `-e`: 对于长度超过 15 个字符的进程名，强制程序向信号发送给一个精确匹配的进程。
+- `-i`: 在向每个进程发送信号前请求确认。
+- `-l`: 显示信号名称列表。
+- `-w`: 等待所有被杀掉的进程退出。这意味着如果某个进程未能退出，`killall` 可能会无限等待。
 
-## ksys
+## `ksys`
 
-描述
-
+## 描述
 显示关于导出的内核符号的信息，包括地址、名称和定义它的模块。
 
-语法
+## 语法
+```
+ksys [-a] [-m]
+```
 
-`ksys [-a] [-m]`
+## 重要标志位和选项
+- `-a`: 显示所有符号，包括来自实际内核的符号。
+- `-m`: 显示模块信息，包括模块的地址和大小。
 
-重要标志位和选项
+## `last`
 
-- -a: 显示所有符号，包括来自实际内核的符号。
-- -m: 显示模块信息，包括模块的地址和大小。
+## 描述
+根据 `/var/log/wtmp` 的内容，显示用户登录和注销的历史记录。如果指定了特定的 tty（如 `tty0` 或 `tty1`），则只显示这些登录记录。
 
-## last
+## 语法
+```
+last [-R] [-number] [-n] [-adj] [name ...] [tty ...]
+```
 
-描述
+## 重要标志位和选项
+- `-a`: 强制在最后一列中显示主机名。
+- `-d`: 在远程登录的情况下，将所有 IP 地址作为主机名显示。
+- `-n number`/`-number`: 指定要显示的历史记录行数。
+- `-R`: 在报告中抑制对主机名的显示。
+- `-x`: 使系统关机和运行级别的变化与登录/注销记录一同显示。
 
-根据 /var/log/wtmp 的内容，显示用户登录和注销的历史记录。如果指定了特定的 tty（如 tty0 或 tty1），则只显示这些登录记录。
+## `ldd`
 
-语法
-
-`last [-R] [-number] [-n] [-adj] [name ...] [tty ...]`
-
-重要标志位和选项
-
-- -a: 强制在最后一列中显示主机名。
-- -d: 在远程登录的情况下，将所有 IP 地址作为主机名显示。
-- -n number/-number: 指定要显示的历史记录行数。
-- -R: 在报告中抑制对主机名的显示。
-- -x: 使系统关机和运行级别的变化与登录/注销记录一同显示。
-
-## ldd
-
-描述
-
+## 描述
 显示一个或多个程序的共享库依赖项。
 
-语法
+## 语法
+```
+ldd [-dr] program ...
+```
 
-`ldd [-dr] program ...`
+## 重要标志位和选项
+- `-d`: 在执行重定位后报告缺失的函数。
+- `-r`: 在执行重定位后报告缺失的数据对象和函数。
 
-重要标志位和选项
+## `less`
 
-- -d: 在执行重定位后报告缺失的函数。
-- -r: 在执行重定位后报告缺失的数据对象和函数。
-
-## less
-
-描述
-
+## 描述
 一次一个屏幕地显示文本文件，允许搜索和反向滚动。
 
-语法
-
+## 语法
 ```
 less [-aeGGIInrsS] file ...
 ```
 
-重要标志位和选项
+## 重要标志位和选项
+- `-a`: 强制搜索从屏幕上最后一行之后开始。默认情况下，搜索包含可见文本。
+- `-e`: 使 `less` 在第二次遇到文件末尾时退出。否则，用户必须使用 `"q"` 命令退出。
+- `-E`: 使 `less` 在第一次遇到文件末尾时退出。
+- `-G`: 抑制对搜索到的字符串进行高亮。
+- `-i`: 使搜索区分大小写。如果搜索模式包含大写字母，此选项将被忽略。
+- `-I`: 即使搜索模式包含大写字母，也使搜索区分大小写。
+- `-N`: 在每行的开头显示行号。
+- `-r`: 使用脱字符符号显示原始控制字符（例如，Ctrl+A 为 `^`）。
+- `-s`: 将连续的空行压缩成单个空行。
+- `-S`: 将宽于屏幕的行截断，而不是换到下一行。
 
-- -a: 强制搜索从屏幕上最后一行之后开始。默认情况下，搜索包含可见文本。
-- -e: 使 less 在第二次遇到文件末尾时退出。否则，用户必须使用 "q" 命令退出。
-- -E: 使 less 在第一次遇到文件末尾时退出。
-- -G: 抑制对搜索到的字符串进行高亮。
-- -i: 使搜索区分大小写。如果搜索模式包含大写字母，此选项将被忽略。
-- -I: 即使搜索模式包含大写字母，也使搜索区分大小写。
-- -N: 在每行的开头显示行号。
-- -r: 使用脱字符符号显示原始控制字符（例如，Ctrl+A 为 ^）。
-- -s: 将连续的空行压缩成单个空行。
-- -S: 将宽于屏幕的行截断，而不是换到下一行。
+## `lilo`
 
-## lilo
-
-描述
-
+## 描述
 安装 Linux 启动器。
 
-语法
-
+## 语法
 ```
 lilo [C file] [-d decisecond] [-q] [-D label] [-u device]
 ```
 
-重要标志位和选项
+## 重要标志位和选项
+- `-C`: 指定启动启动器使用的特定配置文件。默认配置文件为 `/etc/lilo.conf`。
+- `-d deciseconds`: 指定在启动默认内核时在 LILO 提示符处等待的秒数。
+- `-D label`: 使用指定标签的内核作为默认内核，而不是配置文件中的第一个内核。
 
-- -C: 指定启动启动器使用的特定配置文件。默认配置文件为 /etc/lilo.conf。
-- -d deciseconds: 指定在启动默认内核时在 LILO 提示符处等待的秒数。
-- -D label: 使用指定标签的内核作为默认内核，而不是配置文件中的第一个内核。
+## `loadkeys`
 
-## loadkeys
+- `-q`: 显示当前映射的文件列表以及要启动的内核。
+- `-u device`: 卸载特定设备的启动器。
 
-- -q: 显示当前映射的文件列表以及要启动的内核。
-- -u device: 卸载特定设备的启动器。
-
-## listalias
+## `listalias`
 
 | 描述 | |
 | --- | --- |
 | 语法 | 显示用户和系统别名。如果提供了正则表达式，则只显示匹配表达式的别名。 |
 
-`listalias [-s\||-u] [regular-expression]`
+```
+listalias [-s\||-u] [regular-expression]
+```
 
-- -s: 只显示系统别名。
-- -u: 只显示用户别名。
+- `-s`: 只显示系统别名。
+- `-u`: 只显示用户别名。
 
 | 重要标志位和选项 | |
 
-## ln
+## `ln`
 
 | 描述 | |
 | --- | --- |
 | 语法 | 在文件之间创建链接。当最后一个参数是目录时，每个源文件都会链接到指定目录中同名的文件中。 |
 
-`ln [-bis] [--backup] [--interactive] [--symbolic] source [destination]`
+```
+ln [-bis] [--backup] [--interactive] [--symbolic] source [destination]
+ln [-bis] [--backup] [--interactive] [--symbolic] source ... directory
+```
 
-`ln [-bis] [--backup] [--interactive] [--symbolic] source ... directory`
-
-- -b/-backup: 对正要删除的文件创建备份。
-- -i/-interactive: 如果需要删除目标文件，则进行提示。
-- -s/-symbolic: 创建符号链接而非硬链接。
+- `-b`/`--backup`: 对正要删除的文件创建备份。
+- `-i`/`--interactive`: 如果需要删除目标文件，则进行提示。
+- `-s`/`--symbolic`: 创建符号链接而非硬链接。
 
 | 重要标志位和选项 | |
 
-## loadkeys
+## `loadkeys`
 
 | 描述 | |
 | --- | --- |
 | 语法 | 从一个或多个指定的文件加载组合键翻译表。如果没有指定文件，则从标准输入读取信息。 |
 
 ```
-loadkeys [-c --clearcompose] [-d --default] [-m --mktable]
-[-s --clearstrings] [file ...]
+loadkeys [-c --clearcompose] [-d --default] [-m --mktable] [-s --clearstrings] [file ...]
 ```
 
-- -c --clearcompose: 清除当前映射。如果指定的文件为空，则清空。
-- -d --default: 加载默认值。
-- -m --mktable: 打印表格。
-- -s --clearstrings: 清除字符串。
+- `-c --clearcompose`: 清除当前映射。如果指定的文件为空，则清空。
+- `-d --default`: 加载默认值。
+- `-m --mktable`: 打印表格。
+- `-s --clearstrings`: 清除字符串。
 
 | 重要标志位和选项 | |
 
-## logger
+## `logger`
 
 | 描述 | |
 | --- | --- |
 | 语法 | 将目放入系统日志。如果没有指定消息，则将标准输入发送到系统日志。 |
 
-语法
-
+## 语法
 ```
 logger [-is] [-f file] [-p priority] [-t tag] [message ...]
 ```
 
-重要标志位和选项
+## 重要标志位和选项
+- `-f file`: 记录指定的文件。
+- `-i`: 在每行处放置进程 ID。
+- `-p priority`: 指明条目的优先级。
+- `-s`: 除系统日志外记录消息。
+- `-t tag`: 用指定的标签标记每行内容。
 
-- -f file: 记录指定的文件。
-- -i: 在每行处放置进程 ID。
-- -p priority: 指明条目的优先级。
-- -s: 除系统日志外记录消息。
-- -t tag: 用指定的标签标记每行内容。
+## `login`
 
-## login
-
-描述
-
+## 描述
 登录系统。
 
-语法
-
+## 语法
 ```
 login username
 ```
 
-重要标志位和选项
-
+## 重要标志位和选项
 无
 
-## logname
+## `logname`
 
-描述
-
+## 描述
 显示用户的用户名。
 
-语法
-
+## 语法
 ```
 logname
 ```
 
-重要标志位和选项
-
+## 重要标志位和选项
 无
 
-## logrotate
+## `logrotate`
 
-描述
-
+## 描述
 轮换日志文件，然后压缩存档。
 
-语法
-
+## 语法
 ```
 logrotate [-s--state file] configfile
 ```
 
-重要标志位和选项
+## 重要标志位和选项
+- `-s--state file`: 使用指定的状态文件而不是 `/var/lib/logrotate.status`。
 
-- -s--state file: 使用指定的状态文件而不是 /var/lib/logrotate.status。
+## `lpd`
 
-## lpd
-
-描述
-
+## 描述
 运行打印池守护进程以控制连接到打印机的打印。如果指定了端口号，它将覆盖默认端口以监听请求。
 
-语法
-
+## 语法
 ```
 lpr [-1] [port]
 ```
 
-重要标志位和选项
+## 重要标志位和选项
+- `-1`: 记录有效的网络请求。
 
-- -1: 记录有效的网络请求。
+## `lpq`
 
-## lpq
-
-描述
-
+## 描述
 检查并显示打印池队列的当前状态。如果没有指定打印机，则查询默认打印机。通常，除非给出特定的作业号，否则将显示查询打印机的所有作业。如果指定了用户，将为查询打印机显示这些用户的作业。
 
-语法
-
+## 语法
 ```
 lpq [-1] [-Pprinter] [job, ...] [user, ...]
 ```
 
-重要标志位和选项
+## 重要标志位和选项
+- `-1`: 打印组成作业条目的所有信息，而不只是一行。
+- `-Pprinter`: 查询指定的打印机。
 
-- -1: 打印组成作业条目的所有信息，而不只是一行。
-- -Pprinter: 查询指定的打印机。
-
-## lpr
+## `lpr`
 
 将一个或多个文件打印到指定的打印池。如果没有指示文件，则将标准输入发送到打印池。如果没有指定打印机，数据将发送到默认打印机。
 
-语法
-
+## 语法
 ```
-lpr [-Pprinter] [-number] [-C class] [-j job] [-i [numcols]]
-[-hlrs] [file ...]
+lpr [-Pprinter] [-number] [-C class] [-j job] [-i [numcols]] [-hlrs] [file ...]
 ```
 
-重要标志位和选项
-
-- -number: 指定每个文件的打印份数。默认为一份。
-- -C class: 在页头页上指定指定的类名代替主机名。
-- -h: 抑制打印页头页。
-- -i [numcols]: 指定输出应按指定的空格数进行缩进，如果没有指定数字，则缩进 8 个字符。
-- -j job: 在页头页上打印指定的作业名称代替文件名。
-
-
+## 重要标志位和选项
+- `-number`: 指定每个文件的打印份数。默认为一份。
+- `-C class`: 在页头页上指定指定的类名代替主机名。
+- `-h`: 抑制打印页头页。
 
 
 
 # 附录 C • Linux 命令参考
 
-- -l: 允许打印控制字符，同时抑制分页符。
-- -m: 在打印任务完成后向用户发送电子邮件。
-- -Pprinter: 打印到指定的打印机。
-- -r: 在打印文件后删除这些文件。
-- -s: 创建指向正在打印的文件的符号链接，而不是将文件复制到池化目录。这在打印极大型文件时非常有用。
+进入`/path/to/xxx`目录，找到`xxx.json`。
 
-# lprm
+## lprm
 
-描述
-
+### 描述
 从指定的打印队列中删除一个或多个作业。如果未指定打印机，将尝试从默认打印队列中删除作业。如果指定了用户名，将删除该用户的所有作业，除非指定了特定作业。
 
-语法
-
+### 语法
 ```
 lprm [-Pprinter] [job ... ] [user ...]
 ```
 
-重要标志和选项
-
-- -Pprinter: 从指定的打印机池化队列中删除作业。
+### 重要标志和选项
+- `-i [numcols]`: 指定输出应按指定的空格数进行缩进，如果没有指定数字，则缩进 8 个字符。
+- `-j job`: 在页头页上打印指定的作业名称代替文件名。
+- `-l`: 允许打印控制字符，同时抑制分页符。
+- `-m`: 在打印任务完成后向用户发送电子邮件。
+- `-Pprinter`: 打印到指定的打印机。
+- `-r`: 在打印文件后删除这些文件。
+- `-s`: 创建指向正在打印的文件的符号链接，而不是将文件复制到池化目录。这在打印极大型文件时非常有用。
+- `-Pprinter`: 从指定的打印机池化队列中删除作业。
 
 ## ls
 
-描述
-
+### 描述
 显示文件和目录列表。如果未指定文件或目录，则显示当前目录的内容。默认情况下，内容按字母顺序排序。
 
-语法
-
+### 语法
 ```
 ls [-aclrRsStux] [--all] [--time=time] [--time=status] [--directory]
  [--format=long] [--format=verbose] [-reverse] [--recursive] [--size]
@@ -18438,615 +17826,905 @@ ls [-aclrRsStux] [--all] [--time=time] [--time=status] [--directory]
  [--time=use] [--extension] [file ...]
 ```
 
-重要标志和选项
+### 重要标志和选项
+- `-a` `--all`: 列出目录中的所有文件，包括以 "." 开头的文件。
+- `-c` `--time=time,--time=status`: 按文件时间对条目排序。
+- `-d` `--directory`: 仅列目录目录，不显示目录内容。默认列出目录内容。
+- `-l` `--format=long,--format=verbose`: 以长格式列出文件，包括文件类型、权限、所有者和。
+- `-r` `--reverse`: 反序显示文件。
+- `-R` `--recursive`: 递归列出所有子目录的内容。
+- `-s` `--size`: 以千字节（KB）显示文件大小。
+- `-S` `--sort=size`: 按文件大小对条目排序，从最大的文件开始。
+- `-t` `--sort=time`: 按时间戳对条目排序，从最新的文件开始。
+- `-u` `/time=atime/` `--time=access` `--time=use`: 按最后访问时间对条目排序。
+- `-X` `/sort=extension`: 按文件扩展名的字母顺序对文件排序。
 
-- -a--all: 列出目录中的所有文件，包括以 "." 开头的文件。
-- -c--time=time,--time=status: 按文件时间对条目排序。
-- -d--directory: 仅列目录目录，不显示目录内容。默认列出目录内容。
-- -l--format=long,--format=verbose: 以长格式列出文件，包括文件类型、权限、所有者和。
-- -r--reverse: 反序显示文件。
-- -R--recursive: 递归列出所有子目录的内容。
-- -s--size: 以千字节（KB）显示文件大小。
-- -S--sort=size: 按文件大小对条目排序，从最大的文件开始。
-- -t--sort=time: 按时间戳对条目排序，从最新的文件开始。
-
-- -u//time=atime/--time=access/--time=use: 按最后访问时间对条目排序。
-- -X//sort=extension: 按文件扩展名的字母顺序对文件排序。
-
-# lsdev
+## lsdev
 
 | 描述 | 显示已安装硬件的信息 |
 | :--- | :--- |
-| 语法 | lsdev |
+| 语法 | `lsdev` |
 | 重要标志和选项 | 无 |
 
-# lsmod
+## lsmod
 
 | 描述 | 显示已加载模块列表 |
 | :--- | :--- |
-| 语法 | lsmod |
+| 语法 | `lsmod` |
 | 重要标志和选项 | 无 |
 
-# mail
+## mail
 
 | 描述 | 发送和接收电子邮件。除非通过标准输入提供，否则用户将被提示输入消息文本。此外，在发送消息时可以通过标志提供主题等其他信息，或者由程序提示这些信息。如果没有指定任何选项或参数，将打开当前用户的信箱进行读取。 |
 | 语法 | `mail [-s subject] [-c address,...] [-b address,...] address mail -f [mailbox] mail -u [user]` |
-| 重要标志和选项 | -b address,...: 指定应接收发出消息盲抄送的地址列表。<br>- -c address,...: 指定应接收发出消息抄送的地址列表。<br>- -f [mailbox]: 从你的收件箱或指定的信箱读取邮件。<br>- -s subject: 指定发出消息的主题行。<br>- -u user: 打开用户的收件箱进行读取。 |
+| 重要标志和选项 | `-b address,...`: 指定应接收发出消息盲抄送的地址列表。<br>- `-c address,...`: 指定应接收发出消息抄送的地址列表。<br>- `-f [mailbox]`: 从你的收件箱或指定的信箱读取邮件。<br>- `-s subject`: 指定发出消息的主题行。<br>- `-u user`: 打开用户的收件箱进行读取。 |
 
-备注：使用 mail 读取消息的机制在 mail 的帮助页中进行了讨论。
+备注：使用 `mail` 读取消息的机制在 `mail` 的帮助页中进行了讨论。
 
-# mailq
+## mailq
 
-描述 显示出站邮件队列的内容。
+### 描述
+显示出站邮件队列的内容。
 
-语法 mailq
+### 语法
+```
+mailq
+```
 
-重要标志和选项 无
+### 重要标志和选项
+无
 
-# mailto
+## mailto
 
-描述 向一个或多个接收者发送电子邮件。如果命令行上未指定接收者，用户将收到提示输入接收者。如果没有提供标准输入，用户将收到提示输入消息内容。
+### 描述
+向一个或多个接收者发送电子邮件。如果命令行上未指定接收者，用户将收到提示输入接收者。如果没有提供标准输入，用户将收到提示输入消息内容。
 
-语法 mailto [-a character-set] [-c address,...] [-s subject] [recipient]
+### 语法
+```
+mailto [-a character-set] [-c address,...] [-s subject] [recipient]
+```
 
-- -a character-set: 指定备用字符集，例如 ISO-8859-8。默认是 US-ASCII。
-- -c address,...: 指定抄送地址。
-- -s subject: 指定消息的主题行。如果主题超过一个单词，请用引号将其括起来。
+- `-a character-set`: 指定备用字符集，例如 `ISO-8859-8`。默认是 `US-ASCII`。
+- `-c address,...`: 指定抄送地址。
+- `-s subject`: 指定消息的主题行。如果主题超过一个单词，请用引号将其括起来。
 
-备注：要完成消息撰写，请使用 Ctrl+D 或在空行上单独输入 a。
+备注：要完成消息撰写，请使用 `Ctrl+D` 或在空行上单独输入 `a`。
 
 ## man
 
-描述 显示指定命令的帮助页。
+### 描述
+显示指定命令的帮助页。
 
-语法 Man command
+### 语法
+```
+Man command
+```
 
-重要标志和选项 command: 指定要显示的命令的帮助页。
+### 重要标志和选项
+`command`: 指定要显示的命令的帮助页。
 
-# mattrib
+## mattrib
 
-描述 更改 MS-DOS 文件系统（如 DOS 软磁盘）上的文件属性。这类似于 DOS ATTRIB 命令。
+### 描述
+更改 MS-DOS 文件系统（如 DOS 软磁盘）上的文件属性。这类似于 DOS `ATTRIB` 命令。
 
-语法 mattrib [-a+a] [-h+h] [-r+r] [-s+s] mdosfile [mdosfile ...]
+### 语法
+```
+mattrib [-a+a] [-h+h] [-r+r] [-s+s] mdosfile [mdosfile ...]
+```
 
-- +a|-a: 设置或取消归档位。
-- +h|-h: 设置或取消隐藏位。
+- `+a|-a`: 设置或取消归档位。
+- `+h|-h`: 设置或取消隐藏位。
+- `+r |-r`: 设置或取消只读位。
+- `+s |-s`: 设置或取消系统位。
 
-# mcopy
+在减号前使用 `+` 来取消设置。
 
-- +r |-r: 设置或取消只读位。
-- +s |-s: 设置或取消系统位。
+## mcopy
 
-在减号前使用 + 来取消设置。
+## badblocks
 
-# badblocks
+### 描述
+检查磁盘是否存在坏块。如果发现任何坏块，将对其进行标记。
 
-描述 检查磁盘是否存在坏块。如果发现任何坏块，将对其进行标记。
+### 语法
+```
+badblocks drive:
+```
 
-语法 badblocks drive:
+### 重要标志和选项
+无
 
-重要标志和选项 无
+## cd
 
-# cd 更改当前目录。如果未指定目录，则使用主目录。
+更改当前目录。如果未指定目录，则使用主目录。
 
-语法 cd [directory]
+### 语法
+```
+cd [directory]
+```
 
-重要标志和选项 无
+### 重要标志和选项
+无
 
-# copy 将文件和目录从一个位置复制到另一个位置。
+## copy
 
-语法 copy [options] source destination
+将文件和目录从一个位置复制到另一个位置。
 
-重要标志和选项 无
+### 语法
+```
+copy [options] source destination
+```
 
-# move 移动文件和目录。
+### 重要标志和选项
+无
 
-语法 move [options] source destination
+## move
 
-重要标志和选项 无
+移动文件和目录。
 
-# delete 删除文件或目录。
+### 语法
+```
+move [options] source destination
+```
 
-语法 delete [options] target
+### 重要标志和选项
+无
 
-重要标志和选项 无
+## delete
 
-# rename 重命名文件或目录。
+删除文件或目录。
 
-语法 rename old_name new_name
+### 语法
+```
+delete [options] target
+```
 
-重要标志和选项 无
+### 重要标志和选项
+无
 
-# chmod 文件或目录的权限。
+## rename
 
-语法 chmod [mode] file
+重命名文件或目录。
 
-重要标志和选项 无
+### 语法
+```
+rename old_name new_name
+```
 
-# chown 更改文件或目录的所有者。
+### 重要标志和选项
+无
 
-语法 chown [owner] file
+## chmod
 
-重要标志和选项 无
+文件或目录的权限。
 
-# chgrp 更改文件或目录的组。
+### 语法
+```
+chmod [mode] file
+```
 
-语法 chgrp [group] file
+### 重要标志和选项
+无
 
-重要标志和选项 无
+## chown
 
-# grep 在文件中搜索模式。
+更改文件或目录的所有者。
 
-语法 grep [options] pattern [file ...]
+### 语法
+```
+chown [owner] file
+```
 
-重要标志和选项 无
+### 重要标志和选项
+无
 
-# sort 对文件进行排序。
+## chgrp
 
-语法 sort [options] file
+更改文件或目录的组。
 
-重要标志和选项 无
+### 语法
+```
+chgrp [group] file
+```
 
-# wc 统计行数、单词数和字节数。
+### 重要标志和选项
+无
 
-语法 wc [options] [file ...]
+## grep
 
-重要标志和选项 无
+在文件中搜索模式。
 
-# cat 显示文件的内容。
+### 语法
+```
+grep [options] pattern [file ...]
+```
 
-语法 cat [options] file
+### 重要标志和选项
+无
 
-重要标志和选项 无
+## sort
 
-# head 输出每个文件的开头部分。
+对文件进行排序。
 
-语法 head [options] file
+### 语法
+```
+sort [options] file
+```
 
-重要标志和选项 无
+### 重要标志和选项
+无
 
-# tail 输出每个文件的结尾部分。
+## wc
 
-语法 tail [options] file
+统计行数、单词数和字节数。
 
-重要标志和选项 无
+### 语法
+```
+wc [options] [file ...]
+```
 
-# diff 逐行比较文件。
+### 重要标志和选项
+无
 
-语法 diff [options] file1 file2
+## cat
 
-重要标志和选项 无
+显示文件的内容。
 
-# find 在层次结构中搜索文件。
+### 语法
+```
+cat [options] file
+```
 
-语法 find [path] [expression]
+### 重要标志和选项
+无
 
-重要标志和选项 无
+## head
 
-# awk 模式扫描处理语言。
+输出每个文件的开头部分。
 
-语法 awk [options] program [file ...]
+### 语法
+```
+head [options] file
+```
 
-重要标志和选项 无
+### 重要标志和选项
+无
 
-# tar 用于创建和操作归档文件的磁带工具。
+## tail
 
-语法 tar [options] archive-file
+输出每个文件的结尾部分。
 
-重要标志和选项 无
+### 语法
+```
+tail [options] file
+```
 
-# zip 压缩文件。
+### 重要标志和选项
+无
 
-语法 zip [options] archive.zip
+## diff
 
-重要标志和选项 无
+逐行比较文件。
 
-# unzip 解压缩文件。
+### 语法
+```
+diff [options] file1 file2
+```
 
-语法 unzip [options] archive.zip
+### 重要标志和选项
+无
 
-重要标志和选项 无
+## find
 
-# gzip 压缩文件。
+在层次结构中搜索文件。
 
-语法 gzip [options] file
+### 语法
+```
+find [path] [expression]
+```
 
-重要标志和选项 无
+### 重要标志和选项
+无
 
-# gunzip 解压缩文件。
+## awk
 
-语法 gunzip [options] file.gz
+模式扫描处理语言。
 
-重要标志和选项 无
+### 语法
+```
+awk [options] program [file ...]
+```
 
-# bzip2 压缩文件。
+### 重要标志和选项
+无
 
-语法 bzip2 [options] file
+## tar
 
-重要标志和选项 无
+用于创建和操作归档文件的磁带工具。
 
-# bunzip2 解压缩文件。
+### 语法
+```
+tar [options] archive-file
+```
 
-语法 bunzip2 file.bz2
+### 重要标志和选项
+无
 
-重要标志和选项 无
+## zip
 
-# ssh 安全外壳程序。
+压缩文件。
 
-语法 ssh [options] host
+### 语法
+```
+zip [options] archive.zip
+```
 
-重要标志和选项 无
+### 重要标志和选项
+无
 
-# scp 安全远程复制程序。
+## unzip
 
-语法 scp [options] source destination
+解压缩文件。
 
-重要标志和选项 无
+### 语法
+```
+unzip [options] archive.zip
+```
 
-# sftp 安全文件传输程序。
+### 重要标志和选项
+无
 
-语法 sftp [options] host
+## gzip
 
-重要标志和选项 无
+压缩文件。
 
-# rsync 远程和本地文件工具。
+### 语法
+```
+gzip [options] file
+```
 
-语法 rsync [options] source destination
+### 重要标志和选项
+无
 
-重要标志和选项 无
+## gunzip
 
-# ftp 文件传输协议。
+解压缩文件。
 
-语法 ftp [options] host
+### 语法
+```
+gunzip [options] file.gz
+```
 
-重要标志和选项 无
+### 重要标志和选项
+无
 
-# ssh-agent 身份验证代理。
+## bzip2
 
-语法 ssh-agent [options]
+压缩文件。
 
-重要标志和选项 无
+### 语法
+```
+bzip2 [options] file
+```
 
-# ssh-keygen 生成 SSH 密钥对。
+### 重要标志和选项
+无
 
-语法 ssh-keygen [options]
+## bunzip2
 
-重要标志和选项 无
+解压缩文件。
 
-# ssh-add 管理 ssh-agent 中的密钥。
+### 语法
+```
+bunzip2 file.bz2
+```
 
-语法 ssh-add [options]
+### 重要标志和选项
+无
 
-重要标志和选项 无
+## ssh
 
-# ssh-copy 从 ssh-agent 中移除密钥。
+安全外壳程序。
 
-语法 ssh-copy [options]
+### 语法
+```
+ssh [options] host
+```
 
-重要标志和选项 无
+### 重要标志和选项
+无
 
-# journal 查询系统日志。
+## scp
 
-语法 journal [options]
+安全远程复制程序。
 
-重要标志和选项 无
+### 语法
+```
+scp [options] source destination
+```
 
-# systemctl 控制 systemd 。
+### 重要标志和选项
+无
 
-语法 systemctl [command]
+## sftp
 
-重要标志和选项 无
+安全文件传输程序。
 
-# dmesg 显示内核消息。
+### 语法
+```
+sftp [options] host
+```
 
-语法 dmesg [options]
+### 重要标志和选项
+无
 
-重要标志和选项 无
+## rsync
 
-# top 显示 Linux 进程。
+远程和本地文件工具。
 
-语法 top
+### 语法
+```
+rsync [options] source destination
+```
 
-重要标志和选项 无
+### 重要标志和选项
+无
 
-# htop 交互式进程查看器。
+## ftp
 
-语法 htop
+文件传输协议。
 
-重要标志和选项 无
+### 语法
+```
+ftp [options] host
+```
 
-# ps 报告当前进程的快照。
+### 重要标志和选项
+无
 
-语法 ps [options]
+## ssh-agent
 
-重要标志和选项 无
+身份验证代理。
 
-# df 显示空磁盘空间。
+### 语法
+```
+ssh-agent [options]
+```
 
-语法 df [options]
+### 重要标志和选项
+无
 
-重要标志和选项 无
+## ssh-keygen
 
-# du 显示磁盘占用情况。
+生成 SSH 密钥对。
 
-语法 du [options]
+### 语法
+```
+ssh-keygen [options]
+```
 
-重要标志和选项 无
+### 重要标志和选项
+无
 
-# free 显示空内存量。
+## ssh-add
 
-语法 free [options]
+管理 `ssh-agent` 中的密钥。
 
-重要标志和选项 无
+### 语法
+```
+ssh-add [options]
+```
 
-# uptime 显示系统运行时间。
+### 重要标志和选项
+无
 
-语法 uptime
+## ssh-copy
 
-重要标志和选项 无
+从 `ssh-agent` 中移除密钥。
 
-# date 显示或设置系统日期。
+### 语法
+```
+ssh-copy [options]
+```
 
-语法 date [options]
+### 重要标志和选项
+无
 
-重要标志和选项 无
+## journal
 
-# calendar 显示日历。
+查询系统日志。
 
-语法 calendar [options]
+### 语法
+```
+journal [options]
+```
 
-重要标志和选项 无
+### 重要标志和选项
+无
 
-# hostname 显示或设置系统主机名。
+## systemctl
 
-语法 hostname [options]
+控制 `systemd` 。
 
-重要标志和选项 无
+### 语法
+```
+systemctl [command]
+```
 
-# uname 打印内核和系统信息。
+### 重要标志和选项
+无
 
-语法 uname [options-a]
+## dmesg
 
-重要标志和选项 无
+显示内核消息。
 
-# mount 挂载文件系统。
+### 语法
+```
+dmesg [options]
+```
 
-语法 mount [options] device directory
+### 重要标志和选项
+无
 
-重要标志和选项 无
+## top
 
-# unmount 卸载文件系统。
+显示 Linux 进程。
 
-语法 unmount [options] device
+### 语法
+```
+top
+```
 
-重要标志和选项 无
+### 重要标志和选项
+无
 
-# fdisk 分区表操作器。
+## htop
 
-语法 fdisk device
+交互式进程查看器。
 
-重要标志和选项 无
+### 语法
+```
+htop
+```
 
-# parted 操作分区表。
+### 重要标志和选项
+无
 
-语法 parted [options] device
+## ps
 
-重要标志和选项 无
+报告当前进程的快照。
 
+### 语法
+```
+ps [options]
+```
 
+### 重要标志和选项
+无
 
+## df
 
+显示空磁盘空间。
 
-## 附录 C • Linux 命令参考
+### 语法
+```
+df [options]
+```
 
-- -L label: 设置指定的卷标标签。
-- -m percentage: 指定为超级用户预留块的百分比。默认设置为 5 百比。
+### 重要标志和选项
+无
+
+## du
+
+显示磁盘占用情况。
+
+### 语法
+```
+du [options]
+```
+
+### 重要标志和选项
+无
+
+## free
+
+显示空内存量。
+
+### 语法
+```
+free [options]
+```
+
+### 重要标志和选项
+无
+
+## uptime
+
+显示系统运行时间。
+
+### 语法
+```
+uptime
+```
+
+### 重要标志和选项
+无
+
+## date
+
+显示或设置系统日期。
+
+### 语法
+```
+date [options]
+```
+
+### 重要标志和选项
+无
+
+## calendar
+
+显示日历。
+
+### 语法
+```
+calendar [options]
+```
+
+### 重要标志和选项
+无
+
+## hostname
+
+显示或设置系统主机名。
+
+### 语法
+```
+hostname [options]
+```
+
+### 重要标志和选项
+无
+
+## uname
+
+打印内核和系统信息。
+
+### 语法
+```
+uname [options-a]
+```
+
+### 重要标志和选项
+无
+
+## mount
+
+挂载文件系统。
+
+### 语法
+```
+mount [options] device directory
+```
+
+### 重要标志和选项
+无
+
+## unmount
+
+卸载文件系统。
+
+### 语法
+```
+unmount [options] device
+```
+
+### 重要标志和选项
+无
+
+## fdisk
+
+分区表操作器。
+
+### 语法
+```
+fdisk device
+```
+
+### 重要标志和选项
+无
+
+## parted
+
+操作分区表。
+
+### 语法
+```
+parted [options] device
+```
+
+### 重要标志和选项
+无
+
+# 附录 C • Linux 命令参考
+
+- `-L label`: 设置指定的卷标标签。
+- `-m percentage`: 指定为超级用户预留块的百分比。默认设置为 5 百比。
 
 ## mkfs
 
 ### 描述
-
 创建一个文件系统（类似于在 DOS 中格式化驱动器）。可以指定文件系统的块数。
 
 ### 语法
-
 ```
 mkfs [-t ftype] [-c] [-l file] device [blocks]
 ```
 
 ### 重要标志和选项
-
-- -c: 在格式化之前检查设备是否存在坏块。
-- -f file: 从指定的文件读取该设备的坏块列表。
-- -t ftype: 指定要创建的文件系统类型。如果在 /etc/fstab 中未为设备找到其他替代方案，则默认文件系统类型为 minix。
+- `-c`: 在格式化之前检查设备是否存在坏块。
+- `-f file`: 从指定的文件读取该设备的坏块列表。
+- `-t ftype`: 指定要创建的文件系统类型。如果在 `/etc/fstab` 中未为设备找到其他替代方案，则默认文件系统类型为 `minix`。
 
 ## mkpasswd
 
 ### 描述
-
 生成随机密码，并可选地将其分配给用户。
 
 ### 语法
-
 ```
 mkpasswd [-2] [-1 number] [-d number] [-c number] [-C number]
 [-p file] [user]
 ```
 
 ### 重要标志和选项
+- `-2`: 在标准美式键盘上打字时，强制字符在左右手之间交替。
+- `-c number`: 指定密码中小写字母的最小数量。
+- `-C number`: 指定密码中大写字母的最小数量。
+- `-d number`: 指定密码中数字的最小数量。
+- `-1 number`: 指定密码的字符数。
+- `-p file`: 指定用于设置密码的程序。默认是 `/etc/passwd`，如果缺失，则为 `/bin/passwd`。
 
-- -2: 在标准美式键盘上打字时，强制字符在左右手之间交替。
-- -c number: 指定密码中小写字母的最小数量。
-- -C number: 指定密码中大写字母的最小数量。
-- -d number: 指定密码中数字的最小数量。
-- -1 number: 指定密码的字符数。
-- -p file: 指定用于设置密码的程序。默认是 /etc/passwd，如果缺失，则为 /bin/passwd。
-
-## 注意事项
-
-使用 -2 标志会让普通观察者难以看出用户正在输入的内容。但这可能让密码猜测程序更容易猜出密码。
+### 注意事项
+使用 `-2` 标志会让普通观察者难以看出用户正在输入的内容。但这可能让密码猜测程序更容易猜出密码。
 
 ## mkswap
 
 ### 描述
-
 将设备设置为交换区域。可以按所需的块数指定文件系统的大小。
 
 ### 语法
-
 ```
 mkswap [-c] device [blocks]
 ```
 
 ### 重要标志和选项
+- `-c`: 在创建交换文件系统之前检查设备是否存在坏块。
 
-- -c: 在创建交换文件系统之前检查设备是否存在坏块。
-
-## 注意事项
-
-也可以创建交换文件而不是交换分区。更多信息请参阅 mkswap 手页。
+### 注意事项
+也可以创建交换文件而不是交换分区。更多信息请参阅 `mkswap` 手页。
 
 ## label
 
 ### 描述
-
 为 MS-DOS 文件系统（如软磁盘）打上标签。如果没有提供标签，将提示用户输入标签。
 
 ### 语法
-
 ```
 label [-cs] drive:label
 ```
 
 ### 重要标志和选项
-
-- -c: 在不提示用户的情况下清除当前标签。
-- -s: 显示当前标签。
+- `-c`: 在不提示用户的情况下清除当前标签。
+- `-s`: 显示当前标签。
 
 ## mmd
 
 ### 描述
-
 在 MS-DOS 文件系统（如软磁盘）上创建一个或多个目录。
 
 ### 语法
-
 ```
 mmd msdosdirectory [msdosirectory ...]
 ```
 
 ### 重要标志和选项
-
 无
 
 ## mmove
 
 ### 描述
-
 移动（也重命名）MS-DOS 文件或目录。如果最后一个参数是目录，则将所有源文件移动到目标目录中。
 
 ### 语法
-
 ```
 mmove sourcefile targetfile
 ```
-
 ```
 mmove sourcefile [sourcefile ...] targetdirectory
 ```
 
 ### 重要标志和选项
-
 无
 
 ## modprobe
 
 ### 描述
-
 根据模式或指定的模块对象文件加载一个或多个可加载模块。
 
 ### 语法
-
 ```
 modprobe module.o [symbol=value] ...
 ```
-
 ```
 modprobe -t tag pattern
 ```
-
 ```
 modprobe -a -t tag pattern
 ```
-
 ```
 modprobe -l [-t tag] pattern
 ```
-
 ```
 modprobe -r module
 ```
-
 ```
 modprobe -c
 ```
 
 ### 重要标志和选项
-
-- -a: 加载所有模块，而不是第一个加载成功的模块。
-- -c: 显示配置信息。
-- -l: 列出指定类型的模块。
-- -r module: 卸载指定的模块栈。
-- -t tag: 仅加载标记有指定标签的模块。
+- `-a`: 加载所有模块，而不是第一个加载成功的模块。
+- `-c`: 显示配置信息。
+- `-l`: 列出指定类型的模块。
+- `-r module`: 卸载指定的模块栈。
+- `-t tag`: 仅加载标记有指定标签的模块。
 
 ## more
 
 ### 描述
-
 显示一个或多个屏幕的内容，并允许在文件中搜索并跳转到任意位置。
 
 ### 语法
-
 ```
 more [-d1fs] [-number] [+number] [file ...]
 ```
 
 ### 重要标志和选项
+- `-number`: 设置每屏幕的行数。
+- `+number`: 指定显示时的起始行。
+- `-d`: 在每个屏幕结束时提示用户。
+- `-f`: 导致长行不折叠并被计为单行。
+- `-l`: 防止 `Ctrl+L` 被视为换页符。
+- `-s`: 将多个空行压缩为单个空行。
 
-- -number: 设置每屏幕的行数。
-- +number: 指定显示时的起始行。
-- -d: 在每个屏幕结束时提示用户。
-- -f: 导致长行不折叠并被计为单行。
-- -l: 防止 Ctrl+L 被视为换页符。
-- -s: 将多个空行压缩为单个空行。
+### 注意事项
+关于查看文件时可以使用的命令详情，请参阅 `more` 手页。
 
-## 注意事项
-
-关于查看文件时可以使用的命令详情，请参阅 more 手页。## mount
+## mount
 
 ### 描述
-
 将文件系统挂载到指定的目录。
 
 ### 语法
-
 ```
 mount -a [-rw] [-t vfstype]
-
+```
+```
 mount [-rw] [-o options [,...]] device|-o dir
-
+```
+```
 mount [-rw] [-t vfstype] [-o options] device dir
 ```
 
 ### 重要标志和选项
+- `-a`: `/etc/fstab` 中的所有文件系统。如果用 `-t` 指定了类型，则加载 `/etc/fstab` 中指定类型的文件系统。
+- `-o`: 见下文。
+- `-r`: 以只读模式挂载文件系统。这等同于 `-o ro`。
+- `-t vfstype`: 指定文件系统类型。
+- `-w`: 以读写模式挂载文件系统。这等同于 `-o rw`。
 
-- -a:  /etc/fstab 中的所有文件系统。如果用 -t 指定了类型，则加载 /etc/fstab 中指定类型的文件系统。
-- -o: 见下文。
-- -r: 以只读模式挂载文件系统。这等同于 -o ro。
-- -t vfstype: 指定文件系统类型。
-- -w: 以读写模式挂载文件系统。这等同于 -o rw。
-
--t 可能的文件类型包括：
+`-t` 可能的文件类型包括：
 
 | vfat | ufs |
 | ext | proc |
@@ -19055,13 +18733,14 @@ mount [-rw] [-t vfstype] [-o options] device dir
 | smbfs | cpfs |
 | ums | affs |
 
-## 注意事项
-
-关于 -o 标志的选项列表，请参阅 mount 手页。
+### 注意事项
+关于 `-o` 标志的选项列表，请参阅 `mount` 手页。
 
 ## mrd
 
 ### 描述
+
+
 
 删除一个或多个目录。
 
@@ -19079,7 +18758,7 @@ mrd msdosdirectory [...]
 
 ### 描述
 
-重命名文件。类似于 REN 命令，不同之处它也可以重命名目录。
+重命名文件。类似于 `REN` 命令，不同之处它也可以重命名目录。
 
 ### 语法
 
@@ -19095,7 +18774,7 @@ mren oldname newname
 
 ### 描述
 
-显示一个或多个文件的内容。类似于 TYPE 命令。
+显示一个或多个文件的内容。类似于 `TYPE` 命令。
 
 ### 语法
 
@@ -19105,8 +18784,8 @@ mtype [-ts] msdosfile [...]
 
 ### 重要标志和选项
 
-- -s: 从数据中移除高位。
-- -t: 转换 DOS 。
+- `-s`: 从数据中移除高位。
+- `-t`: 转换 DOS 。
 
 ## mv
 
@@ -19117,16 +18796,15 @@ mtype [-ts] msdosfile [...]
 ### 语法
 
 ```
-mv [-bfiu] [--backup] [--force] [--update]
-[source destination]
+mv [-bfiu] [--backup] [--force] [--update] [source destination]
 ```
 
 ### 重要标志和选项
 
-- -b: 对移动的文件进行备份。
-- -f: 在不提示的情况下覆盖现有文件。
-- -i: 在覆盖现有文件时提示。
-- -u: 如果现有文件有更新的时间，则不覆盖。
+- `-b`: 对移动的文件进行备份。
+- `-f`: 在不提示的情况下覆盖现有文件。
+- `-i`: 在覆盖现有文件时提示。
+- `-u`: 如果现有文件有更新的时间，则不覆盖。
 
 ## netstat
 
@@ -19137,18 +18815,17 @@ mv [-bfiu] [--backup] [--force] [--update]
 ### 语法
 
 ```
-netstat [-Mnrs] [-c] [-i interface] [--interface interface]
-[--mascade] [--route] [--statistics]
+netstat [-Mnrs] [-c] [-i interface] [--interface interface] [--mascade] [--route] [--statistics]
 ```
 
 ### 重要标志和选项
 
-- -c: 每秒显示一次信息，Ctrl+C中断。
-- -i [interface]/--interface Interface: 显示指定接口的信息，如果没有指定则显示所有接口。
-- -M//mascade: 显示伪装会话。
-- -n: 显示数字地址而不是主机名、端口或用户名。
-- -r//route: 显示内核路由表。
-- -s//statistics: 显示网络统计。
+- `-c`: 每秒显示一次信息，Ctrl+C中断。
+- `-i [interface]`/`--interface Interface`: 显示指定接口的信息，如果没有指定则显示所有接口。
+- `-M`/`--mascade`: 显示伪装会话。
+- `-n`: 显示数字地址而不是主机名、端口或用户名。
+- `-r`/`--route`: 显示内核路由表。
+- `-s`/`--statistics`: 显示网络统计。
 
 ## newusers
 
@@ -19168,40 +18845,36 @@ newusers [file]
 
 ## 注意事项
 
-newusers 命令的文件格式与 /etc/passwd 文件相同，但有以下例外：
+`newusers` 命令的文件格式与 `/etc/passwd` 文件相同，但有以下例外：
 
 - 密码不应加密。它们在创建用户账户时会被加密。
 - 如果指定的组不存在，则将创建新组。
 - 如果用户主目录不存在，则将创建一个新的；如果该名称已存在，则将其所有权更改为新用户。
 - 由于此文件将包含明文密码，因此确保其始终保持安全至关重要。
 
-
-
-
-
 ## nsdomainname
 
 描述 | 显示当前的 NIS 域名。
 
-语法 | nsdomainname
+语法 | `nsdomainname`
 
 重要标志和选项 | 无
 
 ## nslookup
 
-描述 | 查询 DNS 名称服务器。可以在交互模式下运行。如果没有提供主机名，程序将进入交互模式。默认情况下，使用 /etc/resolv.conf 中指定的 DNS 服务器，除非指定了其他服务器。如果您想在不使用指定主机名的情况下指定服务器，必须提供一个 `-` 来代替主机名。
+描述 | 查询 DNS 名称服务器。可以在交互模式下运行。如果没有提供主机名，程序将进入交互模式。默认情况下，使用 `/etc/resolv.conf` 中指定的 DNS 服务器，除非指定了其他服务器。如果您想在不使用指定主机名的情况下指定服务器，必须提供一个 `-` 来代替主机名。
 
-语法 | nslookup [host|server]
+语法 | `nslookup [host|server]`
 
 重要标志和选项 | 无
 
-备注 | 欲了解有关交互模式下可用命令的说明，请参阅 nslookup 页面。
+备注 | 欲了解有关交互模式下可用命令的说明，请参阅 `nslookup` 页面。
 
 ## passwd
 
 描述 | 修改用户密码。当由 root 用户运行时，可以通过提供用户名作为参数来更改特定用户的密码。
 
-语法 | passwd [username]
+语法 | `passwd [username]`
 
 重要标志和选项 | 无
 
@@ -19209,10 +18882,10 @@ newusers 命令的文件格式与 /etc/passwd 文件相同，但有以下例外�
 
 描述 | 合并一个或多个文件的对应行。将对应的行顺序打印在同一行中，用制表符分隔，并以换行符结束文件。如果未提供名称，则从标准输入读取内容。
 
-语法 | paste [-s] [-delim-list] [--serial] [--delimiters list] [file ...]
+语法 | `paste [-s] [-delim-list] [--serial] [--delimiters list] [file ...]`
 
-- --delim: 指定使用一个分隔符来代替默认字符。如果列表中有多个字符，则这些字符将连续顺序使用，在使用完最后一个字符后将返回列表中的第一个字符。
-- --serial: 先粘贴一个文件的行，紧接着粘贴下一个文件的行，而不是每个文件取出一行。
+- `--delim`: 指定使用一个分隔符来代替默认字符。如果列表中有多个字符，则这些字符将连续顺序使用，在使用完最后一个字符后将返回列表中的第一个字符。
+- `--serial`: 先粘贴一个文件的行，紧接着粘贴下一个文件的行，而不是每个文件取出一行。
 
 重要标志和选项 | 无
 
@@ -19225,12 +18898,12 @@ newusers 命令的文件格式与 /etc/passwd 文件相同，但有以下例外�
 语法
 
 ```
-`pathchk [-p] [-portability] file ...`
+pathchk [-p] [-portability] file ...
 ```
 
-重要标志和选项
+### 重要标志和选项
 
-- -p|--portability: 根据 POSIX.1 标准测试每个文件的长度，而不是实际文件系统的长度限制。还会检查文件名中所用字符的可移植性。
+- `-p`/`--portability`: 根据 POSIX.1 标准测试每个文件的长度，而不是实际文件系统的长度限制。还会检查文件名中所用字符的可移植性。
 
 ## pidof
 
@@ -19241,14 +18914,14 @@ newusers 命令的文件格式与 /etc/passwd 文件相同，但有以下例外�
 语法
 
 ```
-`pidof [-s] [-x] [-o pid] [-o pid ...] program [program ...]`
+pidof [-s] [-x] [-o pid] [-o pid ...] program [program ...]
 ```
 
-重要标志和选项
+### 重要标志和选项
 
-- -o pid: 从返回列表中省略指定的进程 ID。
-- -s: 仅返回单个 PID。
-- -x: 返回运行命名脚本的 shell 以及命名程序的 PID。
+- `-o pid`: 从返回列表中省略指定的进程 ID。
+- `-s`: 仅返回单个 PID。
+- `-x`: 返回运行命名脚本的 shell 以及命名程序的 PID。
 
 ## ping
 
@@ -19259,53 +18932,70 @@ newusers 命令的文件格式与 /etc/passwd 文件相同，但有以下例外�
 语法
 
 ```
-`ping [-R] [-c number] [-d] [-i seconds] host`
+ping [-R] [-c number] [-d] [-i seconds] host
+```
+
+### 重要标志和选项
+
+- `-c number`: 在发送指定数量的数据包后停止发送。
+- `-d`: 按数据包返回的速度输出数据包，或每秒输出 100 次。生成的包包频率越高。此选项只能由 root 用户使用，因为它会产生极高的网络流量。使用此选项时应小心。
+- `-i seconds`: 指定发送每个数据包之间等待的秒数。默认为一秒。此选项不能与 `-f` 一起使用。
+- `-R`: 记录数据包经过的路由，并显示返回数据包的路由缓冲区。
+
+## pppstats
+
+描述 | 显示 PPP 活动的统计数据。
+
+语法 | `pppstats [-a] [-v] [-r] [-z] [-c count] [-w secs] [interface]`
+
+重要标志和选项 | 无
+
+## ps
+
+描述 | 显示当前运行进程的状态报告。给定一个特定的进程 ID 作为参数，`ps` 会显示该特定进程的信息。在没有选项或参数的情况下，`ps` 会显示当前用户的进程。
+
+语法 | `ps [umaxwrf] [axx] [pid ...]`
+
+重要标志和选项 | 
+- `a`: 除了当前用户的进程外，还显示其他用户的进程。
+- `f`: 以树状显示进程，显示哪些进程是其他进程的子进程。
+- `l`: 以长格式显示信息。
+- `m`: 在报告中显示内存信息。
+- `r`: 仅显示正在运行的进程。
+- `txx`: 仅显示由 xx 指定 tty 控制的进程。
+- `u`: 以用户格式显示信息，包括格式的用户名和启动时间。
+- `w`: 以宽输出模式显示信息，防止命令被截断以适应单行。对于每个包含在选项中的 w，都会提供额外的一行来显示命令。最多可以使用 100 个 w。
+- `x`: 显示没有控制终端的进程。
+
+## pwck
+
+检查密码文件是否存在错误和问题。检查所有条目的格式，以确保每个字段都显示有效信息。此外，还会发现重复条目，并允许用户删除格式不正确或重复的条目。如果没有指定密码或 shadow 文件，将使用默认的 `/etc/passwd` 和 `/etc/shadow`。
+
+语法
+
+```
+pwck [-r] [passwordfile shadowfile]
 ```
 
 重要标志和选项
 
-- -c number: 在发送指定数量的数据包后停止发送。
-- -d: 按数据包返回的速度输出数据包，或每秒输出 100 次。生成的包包频率越高。此选项只能由 root 用户使用，因为它会产生极高的网络流量。使用此选项时应小心。
-- -i seconds: 指定发送每个数据包之间等待的秒数。默认为一秒。此选项不能与 -f 一起使用。
-- -R: 记录数据包经过的路由，并显示返回数据包的路由缓冲区。
-
-## pppstats
-
-| 描述 | 显示 PPP 活动的统计数据。 |
-| --- | --- |
-| 语法 | pppstats [-a] [-v] [-r] [-z] [-c count] [-w secs] [interface] |
-| 重要标志和选项 | 无 |
-
-## ps
-
-| 描述 | 显示当前运行进程的状态报告。给定一个特定的进程 ID 作为参数，ps 会显示该特定进程的信息。在没有选项或参数的情况下，ps 会显示当前用户的进程。 |
-| --- | --- |
-| 语法 | ps [umaxwrf] [axx] [pid ...] |
-| 重要标志和选项 | * a: 除了当前用户的进程外，还显示其他用户的进程。 * f: 以树状显示进程，显示哪些进程是其他进程的子进程。 * 1: 以长格式显示信息。 * m: 在报告中显示内存信息。 * r: 仅显示正在运行的进程。 * txx: 仅显示由 xx 指定 tty 控制的进程。 * u: 以用户格式显示信息，包括格式的用户名和启动时间。 * w: 以宽输出模式显示信息，防止命令被截断以适应单行。对于每个包含在选项中的 w，都会提供额外的一行来显示命令。最多可以使用 100 个 w。 * x: 显示没有控制终端的进程（这对于查看在启动过程中启动且仍在运行的守护进程很有用）。 |
-
-## pwck
-
-检查密码文件是否存在错误和问题。检查所有条目的格式，以确保每个字段都显示有效信息。此外，还会发现重复条目，并允许用户删除格式不正确或重复的条目。如果没有指定密码或 shadow 文件，将使用默认的 /etc/passwd 和 /etc/shadow。
-
-语法
-
-pwck [-r] [passwordfile shadowfile]
-
-重要标志和选项
-
-- r: 以只读模式执行，因此不对密码文件进行任何更改但会执行检查。
+- `-r`: 以只读模式执行，因此不对密码文件进行任何更改但会执行检查。
 
 ## pwconv
 
 描述
 
-将密码文件的条目复制到 shadow 文件，并与现有 shadow 合并。新的密码文件将名为 passwd，shadow 文件名为 shadow。
+将密码文件的条目复制到 shadow 文件，并与现有 shadow 合并。新的密码文件将名为 `passwd`，shadow 文件名为 `shadow`。
 
 语法
 
+```
 pwconv
+```
 
 重要标志和选项
+
+无
 
 ## pwd
 
@@ -19315,7 +19005,9 @@ pwconv
 
 语法
 
+```
 pwd
+```
 
 重要标志和选项
 
@@ -19325,11 +19017,13 @@ pwd
 
 描述
 
-从 shadow 文件恢复密码。新的密码文件将名为 passwd。
+从 shadow 文件恢复密码。新的密码文件将名为 `passwd`。
 
 语法
 
+```
 unconv
+```
 
 重要标志和选项
 
@@ -19339,7 +19033,7 @@ unconv
 
 描述
 
-扫描文件系统的用户或组磁盘使用情况，并将结果输出到两个文件：quota.user 和 quota.group。
+扫描文件系统的用户或组磁盘使用情况，并将结果输出到两个文件：`quota.user` 和 `quota.group`。
 
 语法
 
@@ -19349,9 +19043,9 @@ quotacheck [-g] [-u] [-a|filesystem]
 
 重要标志和选项
 
-- -a: 检查 /etc/fstab 中的所有文件系统。
-- -g: 检查组 ID 目录。
-- -u: 检查用户 ID 目录。
+- `-a`: 检查 `/etc/fstab` 中的所有文件系统。
+- `-g`: 检查组 ID 目录。
+- `-u`: 检查用户 ID 目录。
 
 ## quotaoff
 
@@ -19365,9 +19059,9 @@ quotaoff [-g] [-u] [-a|filesystem]
 
 重要标志和选项
 
-- -a: 禁用 /etc/fstab 中所有文件系统的配额。
-- -g: 禁用指定文件系统的组配额。
-- -u: 禁用指定文件系统的用户配额。
+- `-a`: 禁用 `/etc/fstab` 中所有文件系统的配额。
+- `-g`: 禁用指定文件系统的组配额。
+- `-u`: 禁用指定文件系统的用户配额。
 
 ## quotaon
 
@@ -19381,13 +19075,9 @@ quotaon [-g] [-u] [-a|filesystem]
 
 重要标志和选项
 
-- -a: 启用 /etc/fstab 中所有文件系统的配额。
-- -g: 启用指定文件系统的组配额。
-- -u: 启用指定文件系统的用户配额。
-
-
-
-
+- `-a`: 启用 `/etc/fstab` 中所有文件系统的配额。
+- `-g`: 启用指定文件系统的组配额。
+- `-u`: 启用指定文件系统的用户配额。
 
 ## repquota
 
@@ -19398,14 +19088,14 @@ quotaon [-g] [-u] [-a|filesystem]
 语法
 
 ```
-repquota [-gu] [-a]filesystem ...
+repquota [-gu] [-a] filesystem ...
 ```
 
 重要标志和选项
 
-- - a: 显示 /etc/fstab 中所有文件系统的报告。
-- g: 显示指定文件系统的组使用配额报告。
-- u: 显示指定文件系统的用户使用配额报告。
+- `-a`: 显示 `/etc/fstab` 中所有文件系统的报告。
+- `-g`: 显示指定文件系统的组使用配额报告。
+- `-u`: 显示指定文件系统的用户使用配额报告。
 
 ## rlogin
 
@@ -19421,9 +19111,9 @@ rlogin [-Kx] [-l username] host
 
 重要标志和选项
 
-- - K: 关闭所有 Kerberos 认证。
-- l username: 表示连接应该以指定用户的用户身份登录，而不是以运行 rlogin 的用户身份登录。
- - x: 在登录到远程系统期间，对所有数据开启 DES 加密。
+- `-K`: 关闭所有 Kerberos 认证。
+- `-l username`: 表示连接应该以指定用户的用户身份登录，而不是以运行 `rlogin` 的用户身份登录。
+- `-x`: 在登录到远程系统期间，对所有数据开启 DES 加密。
 
 ## rm
 
@@ -19439,9 +19129,9 @@ rm [-firR] [--force] [--interactive] [--recursive] file|directory ...
 
 重要标志和选项
 
-- - f/-force: 删除文件时不会提示用户请求权限。如果作为 root 用户使用，这是非常危险的。
-- i/-interactive: 在删除每个文件之前始终会提示用户。
-- r/-R/--recursive: 递归删除目录的内容。
+- `-f`/`--force`: 删除文件时不会提示用户请求权限。如果作为 root 用户使用，这是非常危险的。
+- `-i`/`--interactive`: 在删除每个文件之前始终会提示用户。
+- `-r`/`-R`/`--recursive`: 递归删除目录的内容。
 
 ## rmdir
 
@@ -19457,7 +19147,7 @@ rmdir [-p] [-parents] directory ...
 
 重要标志和选项
 
-- - p/-parents: 只要删除该目录会导致父目录变为空，就会删除该目录以及命令行上指定的所有父目录。
+- `-p`/`--parents`: 只要删除该目录会导致父目录变为空，就会删除该目录以及命令行上指定的所有父目录。
 
 ## rmmod
 
@@ -19473,8 +19163,8 @@ rmmod [-as] module ...
 
 重要标志和选项
 
-- -a: 未使用的模块。
-- -s: 将所有输出发送到系统日志而不是显示。
+- `-a`: 未使用的模块。
+- `-s`: 将所有输出发送到系统日志而不是显示。
 
 ## route
 
@@ -19491,13 +19181,13 @@ route del [-net|-host] targetaddress [gw Gw] [netmask Nm] [[dev]] If
 
 重要标志和选项
 
-- -add: 表示正在添加路由。
-- -del: 表示正在删除路由。
-- [dev]: 强制路由连接到指定的接口。
-- -gw Gw: 指定路由的网关。
-- -host: 表示目标是一个主机。
-- -net: 表示目标是一个网络。
-- netmask Nm: 指定路由的子网掩码。
+- `-add`: 表示正在添加路由。
+- `-del`: 表示正在删除路由。
+- `[dev]`: 强制路由连接到指定的接口。
+- `-gw Gw`: 指定路由的网关。
+- `-host`: 表示目标是一个主机。
+- `-net`: 表示目标是一个网络。
+- `netmask Nm`: 指定路由的子网掩码。
 
 ## rsh
 
@@ -19513,9 +19203,9 @@ rsh [-Kx] [-1 username] hostname [command]
 
 重要标志和选项
 
-- -K: 禁用 Kerberos 认证。
-- -1 username: 尝试以与运行用户不同的用户连接到远程主机。
-- -x: 为两个主机之间发送的所有数据启用 DES 加密。
+- `-K`: 禁用 Kerberos 认证。
+- `-1 username`: 尝试以与运行用户不同的用户连接到远程主机。
+- `-x`: 为两个主机之间发送的所有数据启用 DES 加密。
 
 ## runlevel
 
@@ -19547,10 +19237,10 @@ rup [-dhlt] [host ...]
 
 重要标志和选项
 
-- -d: 显示每个主机的本地时间。
-- -h: 按主机名排序项。
-- -l: 按平均负载排序项。
-- -t: 按运行时间排序项。
+- `-d`: 显示每个主机的本地时间。
+- `-h`: 按主机名排序项。
+- `-l`: 按平均负载排序项。
+- `-t`: 按运行时间排序项。
 
 ## rusers
 
@@ -19566,7 +19256,7 @@ rusers [-l] [hostname ...]
 
 重要标志和选项
 
-- -l: 以长格式显示结果，包括用户名、主机名、用户使用的 tty 以及登录时间等其他信息。
+- `-l`: 以长格式显示结果，包括用户名、主机名、用户使用的 tty 以及登录时间等其他信息。
 
 ## rwho
 
@@ -19586,35 +19276,39 @@ rwho
 
 ## rwhod
 
-| 描述 | 回答来自 rwhod 客户端的请求。 |
-| :--- | :--- |
-| 语法 | rwhod |
-| 重要标志和选项 | 无 |
+描述 | 回答来自 `rwhod` 客户端的请求。
+
+语法 | `rwhod`
+
+重要标志和选项 | 无
 
 ## setclock
 
-| 描述 | 将计算机的硬件时设置为当前系统时的值。 |
-| :--- | :--- |
-| 语法 | setclock |
-| 重要标志和选项 | 无 |
+描述 | 将计算机的硬件时设置为当前系统时的值。
+
+语法 | `setclock`
+
+重要标志和选项 | 无
 
 ## setkeycodes
 
-| 描述 | 将键映射加载到扫描码到键码映射表中。参数成对提供，第一个参数是键的扫描码，第二个参数是与其关联的键码。 |
-| :--- | :--- |
-| 语法 | setkeycodes scancode keycode ... |
-| 重要标志和选项 | 无 |
-| 注意 | 要了解如何指定扫描码和键码，请参阅 setkeycodes 手页。 |
+描述 | 将键映射加载到扫描码到键码映射表中。参数成对提供，第一个参数是键的扫描码，第二个参数是与其关联的键码。
+
+语法 | `setkeycodes scancode keycode ...`
+
+重要标志和选项 | 无
+
+注意 | 要了解如何指定扫描码和键码，请参阅 `setkeycodes` 手页。
 
 ## showkey
 
-| 描述 | 显示键盘生成的扫描码和键码。在按下键后，程序将保持活动 10 秒。 |
-| :--- | :--- |
-| 语法 | showkey [-sk --scancodes --keycodes] |
-| 重要标志和选项 | |
+描述 | 显示键盘生成的扫描码和键码。在按下键后，程序将保持活动 10 秒。
 
-- -k/--keycodes: 显示键码。
-- -s/--scancodes: 显示扫描码。
+语法 | `showkey [-sk --scancodes --keycodes]`
+
+重要标志和选项 |
+- `-k`/`--keycodes`: 显示键码。
+- `-s`/`--scancodes`: 显示扫描码。
 
 ## showmount
 
@@ -19630,8 +19324,8 @@ showmount [-ade] [--exports] [host]
 
 重要标志和选项
 
-- -a/-all: 显示目录。
-- -e/exports: 显示服务器。
+- `-a`/`-all`: 显示目录。
+- `-e`/`exports`: 显示服务器。
 
 ## shutdown
 
@@ -19647,14 +19341,14 @@ shutdown [-rkh] [time]
 
 重要标志和选项
 
-- -c: 取消正在运行的关机。
-- -h: 关机后停止。
-- -k: 发送警告但不关机。
-- -r: 重启。
+- `-c`: 取消正在运行的关机。
+- `-h`: 关机后停止。
+- `-k`: 发送警告但不关机。
+- `-r`: 重启。
 
 注意
 
-时间可以指定为 HH:MM 或分钟。
+时间可以指定为 `HH:MM` 或分钟。
 
 ## sort
 
@@ -19670,14 +19364,14 @@ sort [-cu] [-t separator] [-o file] [-T tempdir] [-bdfMnr] [file ...]
 
 重要标志和选项
 
-- -b: 排序忽略忽略空格。
-- -f: 在排序过程中将小字母转换为大写。
-- -k POS1[-POS2]: 指定作为键的字段。字段从 POS1 开始到 POS2 或行结束。字段和字符位置从零开始。
-- -M: 排序月份。也就是说，任何以零或空格后跟三个字母的字符串将转换为大写并按缩写月份名排序。
-- -n: 数值比较字符串，假设字符串以零或空格后跟一个可选符号然后是数字。
-- -o f1: 将结果输出到文件而不是标准输出。
-- -t: 指定分隔符应作为每行查找排序键的字段。
-- -u: 当两行相等时，仅输出第一行。
+- `-b`: 排序忽略忽略空格。
+- `-f`: 在排序过程中将小字母转换为大写。
+- `-k POS1[-POS2]`: 指定作为键的字段。字段从 POS1 开始到 POS2 或行结束。字段和字符位置从零开始。
+- `-M`: 排序月份。也就是说，任何以零或空格后跟三个字母的字符串将转换为大写并按缩写月份名排序。
+- `-n`: 数值比较字符串，假设字符串以零或空格后跟一个可选符号然后是数字。
+- `-o f1`: 将结果输出到文件而不是标准输出。
+- `-t`: 指定分隔符应作为每行查找排序键的字段。
+- `-u`: 当两行相等时，仅输出第一行。
 
 ## su
 
@@ -19685,61 +19379,62 @@ sort [-cu] [-t separator] [-o file] [-T tempdir] [-bdfMnr] [file ...]
 
 在不同的用户和组 ID 下运行新的 shell。如果没有指定用户，则 shell 将以 root 用户身份运行。
 
-
-
-
-
 # 附录 C Linux 命令参考
 
 语法
 
+```
 su [-flmp] [-c command] [-s shell] [--login] [--fast] [--preserve-environment] [--command=command] [--shell=shell] [] [user]
+```
 
 重要标志和选项
 
-- -c command/--command=command: 将指定的命令作为单行命令行传递给 shell，而不是在交互模式下运行它。
-- -f/fast: 将 -f 选项传递给 shell。在 C 和扩展 C Shell (csh) 中，该选项禁用文件名扩展。
-- -l/--login: 强制新 shell 成为登录 shell（login shell）。这意味着将设置新的环境变量，更改路径，并将当前目录切换到用户的家目录。
-- -m/p/--preserve-environment: 防止 HOME、USER、LOGNAME 和 SHELL 环境变量发生发生变化。
-- -s shell/shell=shell: 运行指定的 shell，而不是密码文件中包含的默认 shell。
+- `-c command`/`--command=command`: 将指定的命令作为单行命令行传递给 shell，而不是在交互模式下运行它。
+- `-f`/`fast`: 将 `-f` 选项传递给 shell。在 C 和扩展 C Shell `csh` 中，该选项禁用文件名扩展。
+- `-l`/`--login`: 强制新 shell 成为登录 shell。 这意味着将设置新的环境变量，更改路径，并将当前目录切换到用户的家目录。
+- `-m`/`p`/`--preserve-environment`: 防止 HOME、USER、LOGNAME 和 SHELL 环境变量发生发生变化。
+
+
+
+- `-s shell/shell=shell`: 运行指定的 shell，而不是密码文件中包含的默认 shell。
 
 # sync
 
-描述
+## 描述
 
 将磁盘缓存保存到物理磁盘。这强制将任何更改的信息保存到磁盘。
 
-语法
+## 语法
 
-sync
+`sync`
 
-重要标志和选项
+## 重要标志和选项
 
 无
 
 # tail
 
-描述
+## 描述
 
 显示一个或多个文件的最后部分。默认情况下，除非另有指定，否则显示每个文件的最后 10 行。如果没有提供文件名，则从标准输入读取数据，并对每个文件遵循相同的规则显示数据的最后部分。
 
-语法
+## 语法
 
-tail [-c number [bkm]] [-n number] [-q] [--bytes number[bkm]] [--lines number] [-quiet] [--silent] [file ...]
+`tail [-c number [bkm]] [-n number] [-q] [--bytes number[bkm]] [--lines number] [-quiet] [--silent] [file ...]`
 
-重要标志和选项
+## 重要标志和选项
 
-- -c/--bytes number: 显示每个文件末尾指定的字节数。可选地，数字后面可以跟上 b（512 字节块）、k（千字节）或 m（兆字节）。
-- -n/--lines number: 显示每个文件末尾指定的行数。
-- -q/--quiet: 在处理多个文件时防止打印文件名头。
+- `-c`/`--bytes number`: 显示每个文件末尾指定的字节数。可选地，数字后面可以跟上 `b`（512 字节块）、`k`（千字节）或 `m`（兆字节）。
+- `-n`/`--lines number`: 显示每个文件末尾指定的行数。
+- `-q`/`--quiet`: 在处理多个文件时防止打印文件名头。
 
 ## tar
 
-描述
+## 描述
 
 为一个或多个文件或目录创建一个归档文件。
 
-语法
+## 语法
 
 ```
 tar [-crtuxz] [-f tarfile] [--file tarfile] [--create] [--delete]
@@ -19747,126 +19442,126 @@ tar [-crtuxz] [-f tarfile] [--file tarfile] [--create] [--delete]
 [--extract] [--gzip] [--gunzip] file|directory ...
 ```
 
-重要标志和选项
+## 重要标志和选项
 
-- --create: 创建新的归档。
-- --delete: 从现有归档中删除文件。
-- -f tarfile|--tarfile: 指定正在创建或从之读取的归档文件名。
-- --preserve: 保持归档文件中权限和顺序不变。
-- -r/--append: 将文件添加到现有归档中。
-- --same-owner: 表示提取出的文件保留其原始所有者。
-- -t/--list: 显示归档内容的列表。
-- -u/--update:仅将比归档中副本更新的文件添加到现有归档中。
-- -x/--extract/--get: 从现有归档中提取文件。
-- -z/--gzip/--gunzip: 在归档和解压缩时通过 gzip 过滤归档。
+- `--create`: 创建新的归档。
+- `--delete`: 从现有归档中删除文件。
+- `-f tarfile`/`--tarfile`: 指定正在创建或从之读取的归档文件名。
+- `--preserve`: 保持归档文件中权限和顺序不变。
+- `-r`/`--append`: 将文件添加到现有归档中。
+- `--same-owner`: 表示提取出的文件保留其原始所有者。
+- `-t`/`--list`: 显示归档内容的列表。
+- `-u`/`--update`: 仅将比归档中副本更新的文件添加到现有归档中。
+- `-x`/`--extract`/`--get`: 从现有归档中提取文件。
+- `-z`/`--gzip`/`--gunzip`: 在归档和解压缩时通过 `gzip` 过滤归档。
 
 # timeconfig
 
-描述
+## 描述
 
 配置时间参数。如果指定了时区，系统区域将更改指定的时区。否则，显示可用时区的列表。
 
-语法
+## 语法
 
 ```
 timeconfig [--utc] [timezone]
 ```
 
-- --utc: 假设系统时钟运行在世界时/格林尼治标准时间。
+- `--utc`: 假设系统时钟运行在世界时/格林尼治标准时间。
 
 # timed
 
-描述
+## 描述
 
 运行时间服务器守护进程，它可以与本地网络上其他机器的时间进行同步。
 
-语法
+## 语法
 
 ```
 timed [-M] [-i network] [-n network]
 ```
 
-重要标志和选项
+## 重要标志和选项
 
-- -i network: 指定服务器所属的网络，覆盖 timed 做的任何默认选择。
-- -M: 准备在主服务器崩溃时接任主时间服务器的工作。
-- -n network: 将指定的网络添加到有效网络列表中。
+- `-i network`: 指定服务器所属的网络，覆盖 `timed` 做的任何默认选择。
+- `-M`: 准备在主服务器崩溃时接任主时间服务器的工作。
+- `-n network`: 将指定的网络添加到有效网络列表中。
 
 # timedc
 
-控制 timed 守护进程。
+控制 `timed` 守护进程。
 
-语法
+## 语法
 
-timedc [clockdiff host ...|msite [host ...]|election host]
+`timedc [clockdiff host ...|msite [host ...]|election host]`
 
-重要标志和选项
+## 重要标志和选项
 
-- - clockdiff host ...: 计算系统时钟与指定主机时间之间的差异。
-- election host: 重置选举计时器，并确保从从机（slaves）中选出一个时间主。
-- msite [host ...]: 显示指定主机或多个主机的主时间服务器。如果未指定主机，则显示当前系统的主服务器。
+- `- clockdiff host ...`: 计算系统时钟与指定主机时间之间的差异。
+- `election host`: 重置选举计时器，并确保从从机（slaves）中选出一个时间主。
+- `msite [host ...]`: 显示指定主机或多个主机的主时间服务器。如果未指定主机，则显示当前系统的主服务器。
 
 # top
 
 显示系统中运行进程的定期更新的报告。
 
-语法
+## 语法
 
-top [d delay] [q] [c] [S] [s]
+`top [d delay] [q] [c] [S] [s]`
 
-重要标志和选项
+## 重要标志和选项
 
-- - c: 显示进程的命令行而不是命令名。
-- d delay: 指定更新之间的延迟，单位为秒。
-- q: 在无延迟的情况下进行更新。如果 root 用户带此选项运行 top，top 将以最高的优先级运行。
-- s: 以安全模式运行，防止使用危险的交互命令。
-- S: 统计将以累积方式显示。也就是说，应该作为进程及其死亡子进程的总和报告 CPU 时间。
+- `- c`: 显示进程的命令行而不是命令名。
+- `d delay`: 指定更新之间的延迟，单位为秒。
+- `q`: 在无延迟的情况下进行更新。如果 `root` 用户带此选项运行 `top`，`top` 将以最高的优先级运行。
+- `s`: 以安全模式运行，防止使用危险的交互命令。
+- `S`: 统计将以累积方式显示。也就是说，应该作为进程及其死亡子进程的总和报告 CPU 时间。
 
-注释
+## 注释
 
-top 运行时可以使用命令列表以及各种字段的描述
+`top` 运行时可以使用命令列表以及各种字段的描述
 
 # touch
 
 在不改变文件内容的情况下更改文件的时间戳。如果文件不存在，将创建它。
 
-语法
+## 语法
 
 ```
 touch [-acm] [-t MMDDhhmm[.CCYY][ss]] [--atime] [--mtime] file ...
 ```
 
-重要标志和选项
+## 重要标志和选项
 
-- -a/--atime: 仅更改访问时间。
-- c 不创建不存在的文件。
-- -m/--mtime: 仅更改修改时间。
-- -t MMDDhhmm[.CCYY][ss]: 将时间设置为指定的月、日、小时和分钟。
+- `-a`/`--atime`: 仅更改访问时间。
+- `c` 不创建不存在的文件。
+- `-m`/`--mtime`: 仅更改修改时间。
+- `-t MMDDhhmm[.CCYY][ss]`: 将时间设置为指定的月、日、小时和分钟。
 
 # traceroute
 
 显示到达远程主机的路由。
 
-语法
+## 语法
 
 ```
 traceroute [-ir] host
 ```
 
-重要标志和选项
+## 重要标志和选项
 
-- -i: 指定发送数据包的网络接口。这对于具有多个网络接口的系统有用。
-- -r: 跳过常规路由并尝试直接发送主机。
+- `-i`: 指定发送数据包的网络接口。这对于具有多个网络接口的系统有用。
+- `-r`: 跳过常规路由并尝试直接发送主机。
 
 # true
 
 什么都不做并返回成功的退出状态。
 
-语法
+## 语法
 
-true
+`true`
 
-重要标志和选项
+## 重要标志和选项
 
 无
 
@@ -19874,92 +19569,87 @@ true
 
 卸载已挂载的文件系统。通过名称、目录名或网络路径指定文件系统。
 
-语法
+## 语法
 
-umount -r device|directory|path ...
+`umount -r device|directory|path ...`
 
-重要标志和选项
+## 重要标志和选项
 
--r 如果卸载失败，尝试以只读模式重新挂载文件系统。
+`-r` 如果卸载失败，尝试以只读模式重新挂载文件系统。
 
 # uname
 
 显示指定的系统信息。未提供选项时显示操作系统名称。当请求多个信息时，显示顺序始终为：操作系统、网络主机名、操作系统发布、操作系统版本和机器类型。
 
-语法
+## 语法
 
-uname [-snrmva] [-sysename] [-nodename] [--release] [--machine] [--all]
+`uname [-snrmva] [-sysename] [-nodename] [--release] [--machine] [--all]`
 
-重要标志和选项
+## 重要标志和选项
 
-- -a/-all: 显示所有信息。
-- -m/-machine: 显示机器类型（即硬件类型）。
-- -n/-nodename: 显示机器的网络主机名。
-- -r/-release: 显示操作系统发布。
-- -s/-sysename: 显示操作系统名称。这是未指定选项时的默认操作。
-- -v: 显示操作系统的版本。
+- `-a`/`-all`: 显示所有信息。
+- `-m`/`-machine`: 显示机器类型（即硬件类型）。
+- `-n`/`-nodename`: 显示机器的网络主机名。
+- `-r`/`-release`: 显示操作系统发布。
+- `-s`/`-sysename`: 显示操作系统名称。这是未指定选项时的默认操作。
+- `-v`: 显示操作系统的版本。
 
 # uncompress
 
-使用 compress 程序解压缩文件。如果没有指定文件，则将解压缩标准输入。
+使用 `compress` 程序解压缩文件。如果没有指定文件，则将解压缩标准输入。
 
-语法
+## 语法
 
-uncompress [-c] [file ...]
+`uncompress [-c] [file ...]`
 
-重要标志和选项
+## 重要标志和选项
 
--c: 将解压缩的数据发送到标准输出，而不是覆盖旧的压缩文件。
+`-c`: 将解压缩的数据发送到标准输出，而不是覆盖旧的压缩文件。
 
 # unzip
 
 处理并提取 ZIP 归档。
 
-语法
+## 语法
 
-unzip [-cflptuz] [-d exdir] file[.zip]
+`unzip [-cflptuz] [-d exdir] file[.zip]`
 
-重要标志和选项
+## 重要标志和选项
 
-- -c: 将文件提取到标准输出，并在提取每个文件时打印其文件名。
+- `-c`: 将文件提取到标准输出，并在提取每个文件时打印其文件名。
+- `-dexdir`: 将压缩包解压到指定的目录而不是当前目录。
+- `-f`: 仅提取比现有文件版本更新的文件。
+- `-l`: 在不解压的情况下显示压缩包的内容。
+- `-p`: 将文件提取到标准输出，而不发送文件名等任何其他数据。
+- `-t`: 测试压缩包内文件的完整性。
+- `-u`: 提取比现有文件版本更新的文件，以及解压目录中不存在的文件。
+- `-z`: 显示压缩包注释。
 
-
-
-
-
-- -dexdir: 将压缩包解压到指定的目录而不是当前目录。
-- -f: 仅提取比现有文件版本更新的文件。
-- -l: 在不解压的情况下显示压缩包的内容。
-- -p: 将文件提取到标准输出，而不发送文件名等任何其他数据。
-- -t: 测试压缩包内文件的完整性。
-- -u: 提取比现有文件版本更新的文件，以及解压目录中不存在的文件。
-- -z: 显示压缩包注释。
-
-这是一个支持许多修饰的强大程序。详情请参见 unzip 的 man 页面。
+这是一个支持许多修饰的强大程序。详情请参见 `unzip` 的 man 页面。
 
 ## Notes
 
 # uptime
 
-描述
+## 描述
 
 显示系统运行的时间。
 
-语法
+## 语法
 
-uptime
+`uptime`
 
-重要标志和选项
+## 重要标志和选项
 
 无
 
 # useradd
 
-描述
+## 描述
 
 向系统添加一个用户。或者，也可以更改新用户的默认值。如果未提供任何选项，程序将显示新用户的当前默认值。
 
-语法
+## 语法
 
 ```
 useradd [-d home_dir] [-e expire_date] [-f inactive_time]
@@ -19971,46 +19661,46 @@ useradd [-d default_group] [-b default_home] [-f default_inactive]
 [-e expiration] [-s shell]
 ```
 
-重要标志和选项
+## 重要标志和选项
 
-- -b default_home: 将家目录前缀设置为指定的路径。仅在配合 -d 时使用。
-- -d home_dir: 为用户使用指定的家目录而不是默认目录。
-- -D: 表示更改新用户的值，而不是创建一个新用户。
+- `-b default_home`: 将家目录前缀设置为指定的路径。仅在配合 `-d` 时使用。
+- `-d home_dir`: 为用户使用指定的家目录而不是默认目录。
+- `-D`: 表示更改新用户的值，而不是创建一个新用户。
 
 ## 附录 C • Linux 命令参考
 
-- -expire_date: 指定账户的有效期。数据以 MM/DD/YY 格式提供。当使用 -D 时，-e 将用于设置所有新密码的默认有效期，格式为天数而非日期格式。
-- -inactive_time: 表示密码过期后，应在过指定时间后才永久禁用该密码。当使用 -D 时，-f 将用于设置密码过期后禁用的默认时间。
-- -initial_group: 为用户指定默认登录组。当与 -D 配合时，-g 将为所有新用户指定默认组。
-- -G group,...: 指定用户应该所属的其他组。
-- -shell: 为用户指定默认 shell。如果不提供，将使用新用户的默认 shell。当与 -D 配合时，-s 将为所有新用户指定默认 shell。
-- -uid [-o]: 为用户指定用户 ID 而不是自动分配。除非使用 -o 标志，否则该值必须唯一。
+- `-expire_date`: 指定账户的有效期。数据以 `MM/DD/YY` 格式提供。当使用 `-D` 时，`-e` 将用于设置所有新密码的默认有效期，格式为天数而非日期格式。
+- `-inactive_time`: 表示密码过期后，应在过指定时间后才永久禁用该密码。当使用 `-D` 时，`-f` 将用于设置密码过期后禁用的默认时间。
+- `-initial_group`: 为用户指定默认登录组。当与 `-D` 配合时，`-g` 将为所有新用户指定默认组。
+- `-G group,...`: 指定用户应该所属的其他组。
+- `-shell`: 为用户指定默认 shell。如果不提供，将使用新用户的默认 shell。当与 `-D` 配合时，`-s` 将为所有新用户指定默认 shell。
+- `-uid [-o]`: 为用户指定用户 ID 而不是自动分配。除非使用 `-o` 标志，否则该值必须唯一。
 
 # userdel
 
-描述
+## 描述
 
 删除用户账户。
 
-语法
+## 语法
 
 ```
 userdel [-r] user
 ```
 
-重要标志和选项
+## 重要标志和选项
 
--r: 删除用户的家目录。请记住，当删除帐户时，用户拥有的任何家目录之外的其他文件不会被删除。这些文件必须手动删除。例如，这些文件可能包括用户的邮箱。
+`-r`: 删除用户的家目录。请记住，当删除帐户时，用户拥有的任何家目录之外的其他文件不会被删除。这些文件必须手动删除。例如，这些文件可能包括用户的邮箱。
 
 ## Notes
 
 # usermod
 
-描述
+## 描述
 
 修改现有账户的设置。
 
-语法
+## 语法
 
 ```
 usermod [-d home_dir [-m]] [-e expire_date] [-f inactive_time]
@@ -20018,115 +19708,115 @@ usermod [-d home_dir [-m]] [-e expire_date] [-f inactive_time]
 [-u uid [-o]] login
 ```
 
-重要标志和选项
+## 重要标志和选项
 
-- -d home_dir [-m]: 按指定更改用户的家目录，如果使用了 -m 选项，将当前家目录移动到新位置。
-- -expire_date: 为账户设置新的有效期，之后该账户将被禁用。日期应为 MM/DD/YY 格式。
-- -f inactive_days: 为密码过期后永久禁用的天数提供新设置。
-- -g initial_group: 为用户定义一个新的登录组。
-- -G group[...]: 指定用户应该是哪些其他组的成员。如果用户当前是此列表中组的成员，他们将从该组中移除。
-- -l login_name: 更改用户名。
-- -s shell: 按指定更改用户的默认 shell。
-- -u uid: 按指定更改用户 ID。
+- `-d home_dir [-m]`: 按指定更改用户的家目录，如果使用了 `-m` 选项，将当前家目录移动到新位置。
+- `-expire_date`: 为账户设置新的有效期，之后该账户将被禁用。日期应为 `MM/DD/YY` 格式。
+- `-f inactive_days`: 为密码过期后永久禁用的天数提供新设置。
+- `-g initial_group`: 为用户定义一个新的登录组。
+- `-G group[...]`: 指定用户应该是哪些其他组的成员。如果用户当前是此列表中组的成员，他们将从该组中移除。
+- `-l login_name`: 更改用户名。
+- `-s shell`: 按指定更改用户的默认 shell。
+- `-u uid`: 按指定更改用户 ID。
 
 # users
 
-描述
+## 描述
 
-显示系统上当前用户的名称。这通常通过查看 /etc/utmp 的内容找到。如果指定了文件，程序将在该文件中查找信息。
+显示系统上当前用户的名称。这通常通过查看 `/etc/utmp` 的内容找到。如果指定了文件，程序将在该文件中查找信息。
 
-语法
+## 语法
 
-users [file]
+`users [file]`
 
-重要标志和选项
+## 重要标志和选项
 
 无
 
 # udecode
 
-描述
+## 描述
 
-解码由 udecode 创建的 ASCII 文件，还原原始二进制文件。默认情况下，解码后的文件名为将是编码文件的原始名称。如果没有文件需要解码，则对标准输入进行解码。
+解码由 `udecode` 创建的 ASCII 文件，还原原始二进制文件。默认情况下，解码后的文件名为将是编码文件的原始名称。如果没有文件需要解码，则对标准输入进行解码。
 
-语法
+## 语法
 
-udecode [-o outputfile] [file ...]
+`udecode [-o outputfile] [file ...]`
 
-重要标志和选项
+## 重要标志和选项
 
-- -o outputfile: 为生成的解码文件指定备用名称。
+- `-o outputfile`: 为生成的解码文件指定备用名称。
 
 # uencode
 
-描述
+## 描述
 
 将二进制文件编码为可以在无法使用二进制的地方的形式（例如某些邮件软件）。如果未提供文件，则对标准输入进行编码。
 
-语法
+## 语法
 
-uencode [file]
+`uencode [file]`
 
-重要标志和选项
+## 重要标志和选项
 
 无
 
 # vipw
 
-描述
+## 描述
 
 编辑系统密码。
 
-语法
+## 语法
 
-vipw
+`vipw`
 
 # vmstat
 
-描述
+## 描述
 
 报告有关虚拟内存的统计信息。
 
-语法
+## 语法
 
-vmstat [delay] [count]
+`vmstat [delay] [count]`
 
-重要标志和选项
+## 重要标志和选项
 
-- -delay: 间隔。
-- -count: 报告次数。
+- `-delay`: 间隔。
+- `-count`: 报告次数。
 
 # wc
 
 打印字节数、字符数和行数。
 
-语法
+## 语法
 
-wc [-c] [-l] [-w] [file ...]
+`wc [-c] [-l] [-w] [file ...]`
 
-重要标志和选项
+## 重要标志和选项
 
-- -c: 打印字节数。
-- -l: 打印行数。
-- -w: 打印单词数。
+- `-c`: 打印字节数。
+- `-l`: 打印行数。
+- `-w`: 打印单词数。
 
 # whereis
 
 尝试定位二进制、源代码和 man 文件。
 
-语法
+## 语法
 
-whereis [-b] [-m] [-s] [command ...]
+`whereis [-b] [-m] [-s] [command ...]`
 
-重要标志和选项
+## 重要标志和选项
 
-- -b: 仅搜索二进制文件。
-- -m: 仅搜索 man 页面。
-- -s: 仅搜索源代码。
+- `-b`: 仅搜索二进制文件。
+- `-m`: 仅搜索 man 页面。
+- `-s`: 仅搜索源代码。
 
 ## Notes
 
-whereis 命令至少会在以下目录中查找其尝试定位的程序：
+`whereis` 命令至少会在以下目录中查找其尝试定位的程序：
 
 ```
 /bin
@@ -20173,170 +19863,209 @@ whereis 命令至少会在以下目录中查找其尝试定位的程序：
 /usr/g++-include
 ```
 
-
 ## which
 
-描述
-显示一个或多个程序的完整路径。只有位于 PATH环境变量指定的路径上的程序才会被显示。
+## 描述
 
-语法
+显示一个或多个程序的完整路径。只有位于 `PATH` 环境变量指定的路径上的程序才会被显示。
+
+## 语法
+
 ```
 which program ...
 ```
 
-重要标志和选项
+## 重要标志和选项
+
 无
 
 ## whoami
 
-描述
+## 描述
+
 显示当前有效的用户 ID。
 
-语法
+## 语法
+
 ```
 whoami
 ```
 
-重要标志和选项
+## 重要标志和选项
+
 无
 
 ## ypdomainname
 
-描述
+## 描述
+
 显示系统的 NIS 域名。
 
-语法
+## 语法
+
 ```
 ypdomainname
 ```
 
-重要标志和选项
+## 重要标志和选项
+
 无
 
 ## zcat
 
-描述
+## 描述
+
 解压一个或多个压缩文件，并将结果显示到标准输出。如果未指定任何文件，则对标准输入进行解压并显示。
 
-语法
+## 语法
+
 ```
 zcat [-f] [file ...]
 ```
 
-重要标志和选项
-- -f/--force: 强制解压，即使对应的文件已存在且将被将被解压后的文件覆盖。
+## 重要标志和选项
+
+- `-f`/`--force`: 强制解压，即使对应的文件已存在且将被将被解压后的文件覆盖。
 
 ## zgrep
 
-描述
+## 描述
+
 在一个或多个压缩文件中搜索指定的模式。
 
-语法
+## 语法
+
 ```
 zgrep [options] pattern file ...
 ```
 
-重要标志和选项
+## 重要标志和选项
+
 无
-关于可能条目的列表以及对模式语法的讨论，请参考 grep 命令。
+
+关于可能条目的列表以及对模式语法的讨论，请参考 `grep` 命令。
 
 ## zip
 
-描述
+## 描述
+
 从一个或多个文件和目录创建 ZIP 存档。
 
-语法
+## 语法
+
 ```
 zip [-EffGmrSu@] [zipfile [file1 file2 ...]]
 ```
 
-重要标志和选项
-- @: 从标准输入接受要归档的文件列表。
-- -e: 在提示密码后对存档进行加密。从存档中提取文件时需要该密码。
-- -F: 仅当文件比当前存档中的文件新时，才替换现有存档中的条目。
-- -F: 尝试修复损坏的存档。
-- -g: 向现有存档添加文件。
-- -m: 将文件移动到存档中，一旦进入存档，将其从其原始位置删除。
-- -r: 递归处理目录，将子目录中的所有文件添加到存档。
-- -S: 在存档中包含系统和隐藏文件。
-- -u: 如果文件比当前存档中的文件新，或者该文件在存档中不存在，则替换现有存档中的条目。
+## 重要标志和选项
+
+- `@`: 从标准输入接受要归档的文件列表。
+- `-e`: 在提示密码后对存档进行加密。从存档中提取文件时需要该密码。
+- `-F`: 仅当文件比当前存档中的文件新时，才替换现有存档中的条目。
+- `-F`: 尝试修复损坏的存档。
+- `-g`: 向现有存档添加文件。
+- `-m`: 将文件移动到存档中，一旦进入存档，将其从其原始位置删除。
+- `-r`: 递归处理目录，将子目录中的所有文件添加到存档。
+- `-S`: 在存档中包含系统和隐藏文件。
+- `-u`: 如果文件比当前存档中的文件新，或者该文件在存档中不存在，则替换现有存档中的条目。
 
 说明
-zip 命令提供了许多其他选项，这些选项对程序的行为有细微且有时有影响。更多细节请咨询 zip 页面。
+
+`zip` 命令提供了许多其他选项，这些选项对程序的行为有细微且有时有影响。更多细节请咨询 `zip` 页面。
 
 ## zipgrep
 
-描述
-使用 egrep 在 ZIP 存档中的一个或多个文件中搜索模式。如果未指定存档中的文件，则搜索存档中的所有文件。
+## 描述
 
-语法
+使用 `egrep` 在 ZIP 存档中的一个或多个文件中搜索模式。如果未指定存档中的文件，则搜索存档中的所有文件。
+
+## 语法
+
 ```
 zipgrep [egrepoptions] pattern zipfile ...
 ```
 
-重要标志和选项
+## 重要标志和选项
+
 无
-关于 egrep 和 zipgrep 模式语法的完整讨论，请参考 egrep 命令。
+
+关于 `egrep` 和 `zipgrep` 模式语法的完整讨论，请参考 `egrep` 命令。
 
 ## zipinfo
 
-描述
+## 描述
+
 显示 ZIP 存档的详细信息，包括加密状态、压缩类型、创建存档使用的操作系统等。默认情况下，存档中每个文件的信息也会分行列出。如果未指定 ZIP 文件，将处理标准输入。
 
-语法
+## 语法
+
 ```
 zipinfo [-i12M] zipfile[.zip] [file ...]
 ```
 
-重要标志和选项
-- -1: 列出文件名，每个一行。
-- -2: 仅列出文件名，包括头部、尾部和注释。
-- -1: 以长格式列表信息（类似于 ls -1）。
-- -M: 以类似于 more 的方式一次一页显示信息。
+## 重要标志和选项
+
+- `-1`: 列出文件名，每个一行。
+- `-2`: 仅列出文件名，包括头部、尾部和注释。
+- `-1`: 以长格式列表信息（类似于 `ls -1`）。
+- `-M`: 以类似于 `more` 的方式一次一页显示信息。
 
 ## zmore
 
-描述
-一次一屏幕显示压缩文本文件的内容，搜索方式与 more 命令相同。如果未指定文件，将使用标准输入。
+## 描述
 
-语法
+一次一屏幕显示压缩文本文件的内容，搜索方式与 `more` 命令相同。如果未指定文件，将使用标准输入。
+
+## 语法
+
 ```
 zmore [file ...]
 ```
 
-重要标志和选项
+## 重要标志和选项
+
 无
 
 说明
-查看 zmore man 以获取查看文件的完整命令列表。
+
+查看 `zmore` man 以获取查看文件的完整命令列表。
 
 ## znew
 
-描述
-将使用 compress压缩的文件（.Z 文件）转换为 gzip 使用的格式（.gz 文件）。如果未指定文件，将处理标准输入。
+## 描述
 
-语法
+将使用 `compress` 压缩的文件（`.Z` 文件）转换为 `gzip` 使用的格式（`.gz` 文件）。如果未指定文件，将处理标准输入。
+
+## 语法
+
 ```
 znew [-ft9K] [file.Z ...]
 ```
 
-重要标志和选项
-- -9: 使用最佳但速度最慢的压缩方法。
-- -f: 即使 .gz 文件已存在也强制压缩。
-- -K: 如果 .Z 文件比新的 .gz 文件小，则保留 .Z 文件。
-- -t: 在删除原始 .Z 文件之前测试新的 .gz 文件。
+
+
+# 重要标志和选项
+
+- `-9`: 使用最佳但速度最慢的压缩方法。
+- `-f`: 即使 `.gz` 文件已存在也强制压缩。
+- `-K`: 如果 `.Z` 文件比新的 `.gz` 文件小，则保留 `.Z` 文件。
+- `-t`: 在删除原始 `.Z` 文件之前测试新的 `.gz` 文件。
 
 # 附录
-# D
 
-## GNU 通用公共许可证
+## D
+
+### GNU 通用公共许可证
 
 版本 2，1991年6月
+
 版权所有 (C) 1989, 1991 Free Software Foundation, Inc.
+
 675 Mass Ave, Cambridge, MA 02139, USA
+
 允许复制和分发本许可证文件的逐字副本，但不允许对其进行修改。
 
-## 序言
+#### 序言
 
 大多数软件的许可证旨在剥夺你共享和更改它的自由。相比之下，GNU 通用公共许可证旨在保证你共享和更改自由软件的自由——确保软件对所有用户都是免费的。本通用公共许可证适用于自由软件基金会的大多数软件，以及任何其他作者承诺使用它的程序。（某些其他自由软件基金会受 GNU 库通用公共许可证的保护。）你可以将其应用于你的程序，
 
@@ -20344,11 +20073,9 @@ znew [-ft9K] [file.Z ...]
 
 为了保护你的权利，我们需要确保没有人禁止你拥有这些权利或要求你放弃这些权利。例如，当你分发程序的副本（无论是免费还是收费），你必须为每份副本发布适当的版权公告和免责声明，并给程序的其他接收者提供本许可证的副本。你可以对传输副本的物理行为收取费用，并根据选择提供费用保护。我们通过两个步骤保护你的权利：(1) 复制软件，(2) 提供此许可证，允许你复制、分发和/或修改软件。
 
-content]
-
 最后，任何自由程序都受到软件专利的威胁。我们希望避免程序分发者单独获得专利许可，从而使程序变为专有。为了防止这一点，我们明确表示任何专利都必须供所有人自由使用，或者完全不许可。
 
-## 复制、分发和修改条款
+#### 复制、分发和修改条款
 
 0. 本许可证适用于任何包含版权所有者声明可根据本通用公共许可证分发的程序或其他工作。下文的“程序”是指任何此类程序；“基于程序的工作”是指版权法意义上的程序或其衍生作品；即包含程序或其部分、无论是逐字还是经过修改和/或翻译成另一种语言的作品（此处翻译不受限制地包含在修改术语中）。每个被许可者被称为“你”。复制、分发和修改之外的活动不受本许可证限制；它们在许可范围之外。运行程序的行为不受限制，程序的输出仅在它构成基于程序的工作时受涵盖。这取决于程序的行为。
 
@@ -20356,13 +20083,10 @@ content]
 
 2. 你可以修改你的程序副本或程序的任何部分，从而形成基于程序的工作，并复制和分发此类工作。
 
-
 根据上述第 1 节的条款进行修改或开展工作，前提是您必须满足以下所有条件：
 
 - a) 你必须使经修改后的文件带有显著的通知，说明你更改了这些文件以及更改日期。
-
 - b) 你必须确保你分发或发布的任何（全部或部分）包含或源自本程序及其任何部分的工作，都根据本许可协议的条款作为一个整体向所有第三方免费提供许可。
-
 - c) 如果经修改的程序在运行时通常以交互式方式读取命令，则你必须使其在以最普通的方式启动进行此类交互式使用时，打印或显示一份公告，其中包含适当的版权声明、无免责声明（或者，写明你提供担保），并说明用户可以在这些条件下重新分发该程序，同时告知用户如何查看本许可协议的副本。（例外：如果程序是交互式的，但通常不打印公告，则不要求你基于程序所做的工作打印公告）。
 
 这些要求适用于整个修改后的作品。如果该作品中可识别的章节并非源自本程序，并且可以被合理地认为是独立的独立作品，那么本许可协议及其条款不适用于您将其作为独立作品分发时的章节。但当您将相同章节作为基于程序的作品的整体部分进行分发时，整体的分发必须遵守本许可协议的条款，该协议对其他被许可者的权限扩展到整个作品，从而扩展到每一个部分，无论其由编写。
@@ -20371,14 +20095,12 @@ content]
 
 此外，仅仅在存储或分发介质上将并非基于程序的作品（或与基于程序的作品）聚合在一起，并不会使其他作品进入本许可协议的范范围。
 
-## 复制、分发和修改的条款与条件 917
+#### 复制、分发和修改的条款与条件
 
 3. 您可以在第 1 节和第 2 节的条款以目标代码或可执行格式复制并分发程序（或根据第 2 节基于程序的作品），前提是你执行以下操作之一：
 
 - a) 附带完整的相应的机器可读源代码，且必须根据上述第 1 节和第 2 节的条款在通常用于软件交换的介质上分发；或，
-
 - b) 附带一份有效期至少为三年的书面报价，承诺向任何第三方收取不高于你物理执行源代码分发成本的费用，提供一份完整的机器可读源代码副本，该副本将根据上述第 1 节和第 2 节的条款在通常用于软件交换的介质上分发；或，
-
 - c) 附带你收到的作为分发相应源代码报价的报价。（这种替代方案仅允许非商业性分发，且仅适用于你根据上述 b 小节以目标代码或可执行格式接收程序并带有此类报价的情况。）
 
 作品的源代码意味着对该作品进行修改时该作品的首选形式。对于可执行作品，完整的源代码意味着其包含的所有模块的所有源代码，加上任何相关的接口文件，以及用于控制编译和安装可执行文件的脚本。然而，作为一个特殊例外，源代码不需要包含通常与运行可执行文件的操作系统的主要组件（编译器、内核等）一并分发的任何内容（源代码或二进制形式），除非该组件本身随可执行文件一起提供。
@@ -20387,7 +20109,7 @@ content]
 
 4. 除非本许可协议明确规定，否则你不得复制、修改、分许可或分发程序。任何复制、修改、分许可或分发程序的尝试尝试都是无效的，并将自动终止你根据本许可协议享有的权利。然而，根据本许可从你处获得副本或权利的方，只要这些方符合规定，其许可就不会被终止。
 
-## 复制、分发和修改的条款与条件 917（继续）
+#### 复制、分发和修改的条款与条件（继续）
 
 5. 你不要求接受本许可，因为你尚未签署。但是，没有其他规定授予你修改或分发程序或其衍生作品的许可。如果你不接受本许可，这些行为是法律禁止的。因此，通过修改或分发程序（或任何基于程序的作品），你表示你接受本许可，以及其所有关于复制、分发或修改程序或基于程序作品的条款和条件。
 
@@ -20403,10 +20125,9 @@ content]
 
 10. 如果你希望将程序的部分整合到分发条件不同的自由程序中，请写信作者请求许可。对于自由软件会版权的软件，请写信自由软件会；我们有时会对此破例。我们的决定将受两个目标的指导：维护我们自由软件的所有衍生品的自由状态，以及促进软件的共享和重用。
 
-## 免责
+#### 免责
 
 11. 由于程序是免费许可的，在法律允许范围内，程序不提供担保。除非另有书面说明，版权所有者和/或其他方提供
-
 
 本程序“按现状”提供，不提供任何形式的保证，无论是明示还是隐含的，包括但不限于对商品销性和特定用途的适用性的暗示保证。有关程序质量和性能的全部风险由您承担。如果程序证明有缺陷，您将承担所有必要的服务、维修或修正的费用。
 
@@ -20414,7 +20135,7 @@ content]
 
 条款和条件结束
 
-## 附录：如何将这些条款应用于您的新程序
+#### 附录：如何将这些条款应用于您的新程序
 
 如果您开发了一个新程序，并希望它能对公众产生最大的用，实现这一点的最佳方法是使其成为可以根据这些条款进行分发和更改的自由软件。
 
@@ -20427,6 +20148,7 @@ Copyright (C) 199 <作者姓名>
 ```
 
 使其根据自由软件基金会发布的 GNU 通用许可协议的条款进行；可以是该许可的第 2 版本，或（根据您的选择）任何更高版本。
+
 本程序的分发是希望它是有用的，但不提供任何保证；甚至没有对商品销性或特定用途的适用性的暗示保证。更多细节请参阅 GNU 通用许可协议。
 
 您应该在收到本程序的同时收到了一份 GNU 通用许可协议的副本；如果没有，请写信至 Free Software Foundation, Inc., 675 Mass Ave, Cambridge, MA 02139, USA。
@@ -20444,19 +20166,20 @@ Copyright (C) 199 <作者姓名>
 Yoodyne, Inc. 此处放弃对 James Hacker 编写的 Gnomovision' 程序（该涉及编译器）的所有版权权益。
 
 <Ty Coon 的签名>, 1989年4月1日
+
 Ty Coon, Vice 主席
 
 本 GNU 通用许可协议不允许将您的程序整合到专有程序中。如果您的程序是一个子程序库，您可能认为允许专有应用程序与该库链接会更有用。如果您想这样做，请使用 GNU 库通用许可协议代替本许可协议。
 
 ## 附录
 
-## E
+### E
 
-## 非 Intel 硬件上的 Linux
+#### 非 Intel 硬件上的 Linux
 
 Linux 适用于除 Intel x86 和奔腾微处理器以外的许多硬件平台。本附录作为对当前可用的一些主要的、有趣的非 Intel 版本的 Linux 的快速概述。要获得可用 Linux 端口完整列表，请咨询 Linux Online 的硬件端口项目：http://www.linux.org/projects/ports.html。
 
-## 适用于 Compaq Alpha 处理器的 Linux
+#### 适用于 Compaq Alpha 处理器的 Linux
 
 Compaq 的 Alpha CPU 被广泛赞誉为 RISC CPU 的典范，提供了市场上最快的处理器之一。
 
@@ -20466,13 +20189,13 @@ Alpha Linux 运行在许多基于 Compaq Alpha 的系统上，从低端的通用
 
 Red Hat 提供了一个适用于 Alpha 的 Red Hat Linux 版本。
 
-## 嵌入式 Linux
+#### 嵌入式 Linux
 
 ELKS（嵌入式 Linux 内核子集）项目旨在为嵌入式系统创建一个 Linux 版本，例如旧的 8086 和 80286 类 PC、掌上电脑和嵌入式控制系统。该项目提供的当前 Linux 版本运行在 PC 上，完整系统大约需要 400 到 512K 的内存。
 
 当前版本远未完备，仅提供启动、使用虚拟控制台、访问软磁盘和运行集合的能力。这是一个开发系统，但它突显了现代技术的灵活性。ELKS 项目地址为 http://www.elks.org.uk。
 
-## 适用于 Motorola 68x 处理器的 Linux
+#### 适用于 Motorola 68x 处理器的 Linux
 
 Linux/68k 是 Linux 的一个移植，旨在运行在 Motorola 6820 至 6860 CPU 上，这些 CPU 常见于许多机器中，包括：
 
@@ -20493,7 +20216,7 @@ Linux/68k 是 Linux 的一个移植，旨在运行在 Motorola 6820 至 6860 CPU
 - NeXT 工作站
 - Sun 3/50, 3/60
 
-## 适用于 MIPS 处理器的 Linux
+#### 适用于 MIPS 处理器的 Linux
 
 Linux/MIPS 是 Linux 的一个移植，旨在运行在配备 MIPS 处理器的系统上，包括：
 
@@ -20504,7 +20227,7 @@ Linux/MIPS 是 Linux 的一个移植，旨在运行在配备 MIPS 处理器的�
 
 当前版本被认为是稳定的，包含了网络和 NFS 支持，但在某些机器的板载设备支持方面存在缺陷。虽然不是最新的（当前版本基于 Linux 内核 2.1.73），您仍然可以从项目的网站上组合出一个完整的发行版。
 
-## 适用于 Power Macintosh 的 Linux
+#### 适用于 Power Macintosh 的 Linux
 
 MkLinux 是一项尝试在原生运行于 Power Macintosh 系列计算机的 Open Group Mach 微内核上运行 Linux。微内核架构的设计旨在便于操作系统的移植，重点在于驱动微内核本身。
 
@@ -20512,12 +20235,9 @@ Apple Computer 全面支持 MkLinux 项目，该项目网站为 http://www.mklin
 
 其他针对 Power Macintosh 的项目包括 PowerPC 发行版（将在本附录后关于 PowerPC 处理器的部分进行讨论）和 Powermac/Linux（http://www.cs.wis.edu/~tesch/linux_info/）。这两个项目都是原生于 PowerPC 处理器的 Linux 版本，而不是层在微内核之上。Powermac/Linux 代码曾是一个独立项目，现已与 PowerPC Linux 开发的 LinuxPPC 源码合并，产生了一个适用于 PowerPC 的单一 Linux 版本。
 
-
-
-
 Apple 将此称为 Darwin 的 Linux 版本扩展到了其最新的 Mac OS 操作系统。虽然 Mac OS 内核基于另外两个 Unix 克隆版本（Carnegie-Mellon 的 Mach 3.0 和伯克利标准发行版 4.4-lite），但它仍然包含了大量的 Linux 软件。
 
-## 用于 PowerPC 处理器的 Linux
+#### 用于 PowerPC 处理器的 Linux
 
 在支持 PowerPC 处理器族的 Linux 方面取得了巨大进展。LinuxPPC 项目（http://www.linuxppc.org/）由 PowerPC Linux 管理和开发。它提供了一个稳定且完整的发行版，可以运行各种 Power Macintosh 计算机、Amiga 的 Power-Up 系统、Be Inc. 的 BeBox、基于 PowerPC 的 IBM RS/6000、PReP 和 CHRP 系统，以及来自 Umax 的工作站。
 
@@ -20532,11 +20252,11 @@ Apple 将此称为 Darwin 的 Linux 版本扩展到了其最新的 Mac OS 操作
 
 目前有一个项目正在开发一个 Mac OS 模拟器，以便在 PowerPC 上的 Linux 上运行，就像 Wine 尝试为 Intel x86 CPU  Linux 开发 Windows 模拟器一样。其成果之一就是最近发布的 Mac OS X。
 
-## 用于 SPARC 处理器的 Linux
+#### 用于 SPARC 处理器的 Linux
 
 UltraLinux（http://www.ultralinux.org/），以前称为 S/Linux，是一个将 Linux 移植到太阳公司 SPARC 和 UltraSPARC 处理器的项目。目前，该端口相当稳定，甚至支持最新的基于 UltraSPARC 的 64 位工作站。截至本文编写时，Slackware 和 Debian 都拥有最新发行版的 SPARC 版本。
 
-## 索引
+#### 索引
 
 读者注：在本索引中，**粗体**页码表示该主题的主要讨论。*斜体*页码表示插图。
 
@@ -20548,14 +20268,17 @@ UltraLinux（http://www.ultralinux.org/），以前称为 S/Linux，是一个将
 - 访问资源
   - 在 Apache 中, 778–781
   - 在 formail 中, 803–804
-  - 在远程文件系统中, 651–652, 652
-  - 在 Windows 网络中, 667–672
+
+
+
+- 在远程文件系统中, 651–652, 652
+- 在 Windows 网络中, 667–672
 - 帐户设置, 557–559, 557, 559
 - 账户向导, 553–558, 554–556
 - KPPP 中的计数选项, 521
 - 账户，配置, 64–65
 - 账户标签页, 502–521, 552
-- acm.o 模块, 442
+- `acm.o` 模块, 442
 - 动作图标, 157–158
 - 启动时交互选项, 638
 - 分区中的 Actual 字段, 58
@@ -20564,7 +20287,7 @@ UltraLinux（http://www.ultralinux.org/），以前称为 S/Linux，是一个将
 
 ## A
 
-- AddModule 指令, 768–769
+- `AddModule` 指令, 768–769
 - 通人簿实用, 265
 - 地址
   - 广播, 504–505
@@ -20573,9 +20296,9 @@ UltraLinux（http://www.ultralinux.org/），以前称为 S/Linux，是一个将
   - 网关, 505
   - IP. 见 IP 地址
   - 即插用, 722–423
-- AddType 条目, 773–774
+- `AddType` 条目, 773–774
 - 管理工具, 22, 266–267. 另见系统管理
-- Adventure Shell (ash), 376
+- Adventure Shell (`ash`), 376
 - Afterstep 窗口管理器, 94, 104, 105
 - 警报 alerts, 415
 - 别名命令, 381–382
@@ -20588,15 +20311,15 @@ UltraLinux（http://www.ultralinux.org/），以前称为 S/Linux，是一个将
 - 网络接口卡的别名选项, 631
 - 网络安全中的 ALL 关键字, 654
 - 允许任何用户 (去)激活接口选项, 639
-- allow 指令, 771–780
-- AllowMouseOpenFail 指令, 276
-- AllowNonLocalInIn 指令, 276
-- AllowNonLocalXVidtune 指令, 275
-- AllowOverride 指令, 771
+- `allow` 指令, 771–780
+- `AllowMouseOpenFail` 指令, 276
+- `AllowNonLocalInIn` 指令, 276
+- `AllowNonLocalXVidtune` 指令, 275
+- `AllowOverride` 指令, 771
 - Alpha 处理器, 924
 - 备用标记, 337
 - 添加新 Internet 连接向导, 516–519, 516–518
-- AddHandler 条目, 773–774
+- `AddHandler` 条目, 773–774
 - 添加
   - 组, 365, 366, 401–402
   - 打印机, 349–350, 350
@@ -20621,7 +20344,7 @@ UltraLinux（http://www.ultralinux.org/），以前称为 S/Linux，是一个将
 - 启动和停止, 775–776
 - 用户中的, 776–777
 - Web APIs (应用程序接口)
-  -  服务器, 728–729
+  - 服务器, 728–729
   - 使用 AOLServer, 734
   - 使用 FastTrack, 736
   - 外观类别, 215
@@ -20684,27 +20407,27 @@ UltraLinux（http://www.ultralinux.org/），以前称为 S/Linux，是一个将
   - 在 Netscape 中, 803–804, 804
 - PAP, 523, 527
 
-##身份验证对话框—括号 ([])
+## 身份验证对话框—括号 ([])
 
 - 身份验证对话框, 803, 804
-- AuthGroupFile 指令, 777, 803
-- AuthName 指令, 778, 803
+- `AuthGroupFile` 指令, 777, 803
+- `AuthName` 指令, 778, 803
 - Authorization Required错误, 804
-- AuthType 指令, 779, 803
-- AuthFile 指令, 778, 803
+- `AuthType` 指令, 779, 803
+- `AuthFile` 指令, 778, 803
 - 自动重复速率设置, 214
 - 自动化网络配置, 648
-- AutoRepeat 指令, 279
+- `AutoRepeat` 指令, 279
 - 任务控制中的, 386–388
 - 模式扩展中的, 389–393
 - 方向中的, 379–380
-- .bashrc 文件, 378
+- `.bashrc` 文件, 378
 - 批命令, 842–843
 - 电池监控器章节, 260
 - b 警告, 260
 - 波特率设置, 517
-- BaudRate 指令, 281
-- bc 命令, 843
+- `BaudRate` 指令, 281
+- `bc` 命令, 843
 - Berkeley 文件夹, 551
 - Berners-Lee, Tim, 535
 - 最佳 Linux 发行版, 824
@@ -20749,8 +20472,8 @@ UltraLinux（http://www.ultralinux.org/），以前称为 S/Linux，是一个将
   - Blue 发行版, 823
   - blue.swt 站点, 223
   - Boa Web 服务器, 732–733
-  - BoardName 指令, 286
-  - body_attributes 程序, 797–798
+  - `BoardName` 指令, 286
+  - `body_attributes` 程序, 797–798
   - boot 目录, 57, 473
   - boot 磁盘, 69, 69
   - boot.img 文件, 41
@@ -20786,9 +20509,8 @@ UltraLinux（http://www.ultralinux.org/），以前称为 S/Linux，是一个将
 - 在 Konqueror 中浏览, 246–247
 - 浏览 Web 帮助章节, 550
 - Buddy List 侧边栏, 544
-- BusID 指令, 286
+- `BusID` 指令, 286
 - 按钮标签页, 205
-
 - cat 命令, 531, 844
 - cd 命令
   - 在 Linux 中, 308
@@ -20848,14 +20570,14 @@ UltraLinux（http://www.ultralinux.org/），以前称为 S/Linux，是一个将
 - 抄送，电子邮件, 570, 580–581
 - 星号 (*) 在模式扩展中的, 390–391
 
-
-
-
 ## Chips & Technologies 显卡与芯片组—通用桌面环境 (Common Desktop Environment)
 
 Chips & Technologies 显卡与芯片组, 97
+
 芯片组指令, 286
+
 ### 芯片组
+
 - 安装信息对于, 36
 - 在 X Windows 配置中, 123, 128, 132, 138
 - 在 XF86Config 中, 286
@@ -20865,7 +20587,9 @@ Chips & Technologies 显卡与芯片组, 97
 - 选择窗口, 519, 519
 - ChordMiddle 指令, 282
 - own 命令, 847
+
 ### Cirrus Logic 显卡与芯片组, 97
+
 - 类
   - 用于 IP 地址的, 502
   - 在 X resources 中, 296–297
@@ -20960,427 +20684,949 @@ Chips & Technologies 显卡与芯片组, 97
   - 在 Netscape 中, 569–574, 569–574
   - 在 pine 中, 579–581, 579
 - compress 命令, 847–848
-- 压缩文件
-  - 转换, 911
-  - 显示内容, 911
-  - 可执行的, 863
-- 包含文件
-  - 使用 compress 的, 847–848
-  - 使用 gzip 的, 321–323, 864
-  - 使用 tar 的, 318–323
-- 以太网网络的计算机名称, 636
-- 条件文档, 732
-- Connect Linux 发行版, 821
-- 配置菜单, 用户帐户摘要, 手动
-- 组定义, 364
-- 网卡的配置模式, 631
-- 配置帐户, 64–65
-- 身份验证
-- Apache Web 服务器, 779–774
-- 编译选项。详见编译
-- 电子邮件, 553–559, 554
-- 真, 589–590
-- 以太网网络, 644–648
-- 防火墙
-  - 自定义设置, 705–707
-  - 安装期间, 702–703
-  - 安装后, 707–709
-  - 用于高安全性的, 704–705
-  - 用于中等安全性的, 705
-  - 可信设备, 704
-- GNOME。详见 GNOME 桌面环境
-- KDE, 251–263, 252–255
-- kdm, 232–237, 234–236
-- 内核, 479–480
-- 字符界面, 483–488, 484–485
-- 命令行接口, 481–483, 482
-- 图形界面, 482–492, 491
-- 选项, 480–481
-- Konqueror, 247–248, 247
-- 域网 (LANs), 617–621, 618
-- Linux 配置工具
-- 方法, 367–368, 368–447, 450
-- 鼠标, 54
-- 打印机队列, 594
-- 打印机, 348–349, 349–350
-- 添加打印机, 352–352
-- 驱动程序, 352–352, 353
-- 队列设置, 350–352
-- 路由器, 716–719
-- Samba, 660–666
-- sendmail, 810–814
-- Sound Blast, 458–462, 459
-- 时间参数, 899
-- 时区, 64
-- X Windows, 67–68
-- 准备, 123–126
-- 测试, 140–142, 141
-- 使用 Xfigurator, 126–134, 126–133
-- XF86Config 文件, 270–289
-- 确认—日期
-  - 用于文件删除, 338–339
-  - 用于覆盖, 331, 335, 341
-- 连接选项, 525
-- .crypt 扩展名, 849
-- cryptdir 命令, 849
-- Crypto 设置, 259
-- csh shell, 374–375
-- 当前目录
-  - 更改, 308
-  - 内容, 308–310
-  - 名称, 307–389
-- 光标
-  - 图形, 515–552, 516–521
-  - 手动, 522–529
-  - KDE 状态信息, 884–885
-  - 重置, 847
-- 在 xterm 中, 176
-- 自定义按钮, 163
-- 自定义安装, 55
-- GNOME 中的自定义模式, 163, 164
-- 自定义 X 配置, 68
-- Customizing Nestle 6 帮助部分, 550
-- 硬盘柱, 38, 58
-- X vs. Microsoft Windows 控制中心, 95–96
-- 控制选项卡, 357
-- 转换压缩文件, 911
-- Cookies 协调世界时 (UTC), 64
-- Copies And Folders 设置, 557
-- 复制对话框, 165, 165
-- 复制文件
-  - 使用 cp 的, 330–337, 848
-  - 在 GNOME 中, 165, 165
-  - 在 KDE 中, 244
-  - 使用 mcpry 的, 877
-- GNU 通用许可证条款, 915–919
-- 密码, 889
-- 远程, 891
-- Corel Linux 发行版, 20–21
-- 计数
-  - fdisk 中的 d 命令, 84
-  - 在 cp 中, 335
-  - 在 infinity, 598
-  - 在 zip 中, 321
-  - 在 httpd 中, 775
-  - 在 useradd 中, 398
-  - useradd 中的 D 标志, 398–399
-- 破折线项目, 906–907
-- 国家与语言设置, 259
-- cp 命令, 330–337, 348
-- xterm 中的 cr 标志, 176
-- 创建模式参数, 662
-- 创建 Pages 帮助部分, 550
-- 系统日志中的关键消息, 415
-- 罗罗地亚发行版, 818
-- 守护进程, 409–413
-- crontab 命令, 411–413, 849
-- crontab 文件, 409, 411–413
-- 数据位, 449
-- 数据接口 (D) 导入位置, 192
-- 数据库应用程序, 8
-- 使用 AOLServer 的数据库连接, 734
-- 数据库, 606–607
-- 日期时间部分, 261
-- date 命令, 849–850
-- 复制文件的日期, 331, 333
-- dc 命令--拨号连接
-  - 显示, 849
-  - 文件修改, 310
-  - 在作业调度中, 410–411
-  - 来自远程主机, 891
-  - 搜索, 313
-  - 设置, 369–370, 369–850
-  - 用于 touch, 342, 901
-- dc 命令, 850
-- de Icaza, Miguel, 190
-- Debian/GNU 发行版, 20
-- Debian 发行版, 825
-- 系统日志中的调试消息, 415
-- 消息, 414
-- 用于...的指令, 275
-- 解压缩文件, 863
-- cryptdir, 850
-- 解压缩文件, 850
-- 默认服务器, 605
-- GNOME 中的默认编辑器, 209, 210
-- 默认网关, 509, 640
-- 默认路由, 526
-- 默认值, 398–399
-- 碎片化硬盘, 49
-- def 命令, 669
-- 自动重复, 214
-- 对于...的选项, 525
-- 删除...的帐户, 364
-- 删除小工具, 155
-- 删除目录, 343
-- 删除打印机队列, 874
-- 删除调度作业, 842
-- 删除用户, 364
-- 删除, 364, 400, 401, 904
-- 拒绝服务 (DoS) 攻击, 701
-- 拒绝指令, 780
-- 依赖库, 869–870
-- 模块, 851
-- depmod 命令, 472, 851
-- 深度指令, 288
-- 深度选项, 158
-- 默认按钮, 163
-- 默认桌面, 156
-- 默认桌面, 156
-- 桌面背景, 203–204, 204
-- 桌面部分, 204–208, 207–257
-- 桌面切换对话框, 231
-- 桌面
-  - 背景的, 203–204, 204–206
-  - KDE 的, 238–242, 262–263
-  - 用于 207–208, 207–208
-  - 虚拟的, 156
-  - Windows 应用程序, 108–111, 109
-- 详细模式在 GNOME, 163, 164
-- 硬件, 49
-- 调制调器, 439–440, 439–440
-- 确定文件类型, 188
-- /dev 目录, 57, 440–442
-- /dev/input/mice 文件, 453–454
-- develop.kode.org 网站, 228
-- GNOME 面板中的开发菜单, 151
-- 开发性版本, 473
-- 派生设备, 281
-- 分区设备字段, 57–58
-- XF86Config 中的设备部分, 285–286
-- 设备选项卡, 521
-- deev 部分, 254
-- df 命令, 851
-- DHCP (动态主机配置协议), 619, 704–705
-- 拨号选项, 520
-- 拨号脚本, 529–530
-- 拨号上网连接, 512
-  - 使用 mdeltree 的, 878
-  - 使用 mrd 的, 883
-  - 使用 rm 的, 338–339, 892
-- 电子邮件消息, 578
-  - 在 GNOME 中, 165
-  - 使用 mdel 的, 878
-  - 使用 rm 的, 337–338, 892
-- 组, 403, 862
-- 分区, 61, 84
 
 
 
+# 压缩文件
+- 转换, 911
+- 显示内容, 911
+- 可执行的, 863
 
-## xclock 中的数字标志—显示
+# 包含文件
+- 使用 `compress` 的, 847–848
+- 使用 `gzip` 的, 321–323, 864
+- 使用 `tar` 的, 318–323
 
-- xclock 中的数字标志, 196
-- 数字音效编辑器, 465
-- 数字用户用户回线 (DSL), 452
-- Linux 中的 dir 命令, 851–852
-- smbclient, 669
-- 直接内存访问 (DMA) 和即插即用，用于声卡，33, 459–460
-- 目录
-  - 使用 Apache, 778–781
-  - 归档, 318–319, 899
-  - 更改, 308, 877
-  - 复制, 333, 848
-  - 创建
-    - 使用 mkdir, 342, 879
-    - 使用 mmd, 881
-  - 删除
-    - 使用 mdtree, 878
-    - 使用 mr, 893
-    - 使用 rm, 338–339, 892
-    - 使用 rmd, 343
-  - 显示内容
-    - 使用 dir, 851–852
-    - 使用 ls, 308–310, 874–875
-    - 使用 mdir, 878
-  - 目录名, 307–308, 889
-  - DNS 域名, 852
-  - 传真, 596, 597
-    - 使用 cat, 844
-  - 压缩, 911
-    - 使用 dir, 851–852
-  - 第一部分, 865
-    - 在 GNOME 中, 161–163, 163–664
-  - 最后部分, 898
-    - 使用 ls, 308–310, 874–875
-    - 使用 mdir, 878
-  - 文本文件, 310–312, 870–882
-- 空闲内存, 860
-- 组, 366–367, 336
-- IP 路由表, 893
-- 内核环形缓冲区, 852
-- 键盘模式, 867
-- 已加载模块, 876
-- 已登录用户, 894
-- NIS 域名, 886
-- 分区表, 82, 82
-  - efax 的, 590
-  - 在 GNOME 显示中, 161
-  - 在 ls 列表列表中, 310
-  - 挂载
-    - 用于 DOSEmu, 686–687
-    - 远程, 652–653, 652
-  - 所有权, 845, 847
-  - 权限, 844
-  - 重定向, 668–687
-  - 重命名, 884
-  - 共享, 648–651, 663–664
-  - 顶层, 577
-- <Directory> 标签, 771
-- DirectoryIndex 条目, 772
-- DisableModInDev 条目, 275
-- DisableVidModExtension 条目, 275
--禁用
-  - 防火墙, 649
-  - 接口, 866
-  - 用户, 363
-- 磁盘缓存，保存, 898
-- 磁盘驱动器, 55–59, 72
-- 磁盘 Druid 工具，在 GNOME 中, 162
-- XF86Config 中的面板, 287–288
-- 显示
-  - 别名, 871
-  - 架构, 840
-  - 归档内容, 319–320
-  - crontab 内容, 413
-  - 日期和时间, 849–850
-  - 目录内容
+# 以太网网络的计算机名称
+636
 
-## 发行版—动态主机配置协议 (DHCP)
+# 条件文档
+732
 
-- 进程, 888, 900
-- 远程系统状态, 893
-- 路由, 901
-- 扫描码和键码, 895
-- 串口端口状态, 897
-- 系统信息, 902
-- 系统运行级别, 894
-- 文本, 854–855
-- 文件类型, 857, 884
-- 用户名, 872
-- 用户, 362, 363, 894, 906
-- 发行版, 14–16
-- 输入, 620
-- 域参数, 661
-- domainname 命令, 853
-- 域名
-  - 使用 Apache, 780–781
-  - 以太网配置, 636
-  - 在 resolv.conf 中, 645
-- DontZap 目录, 275
-- Dntzoom 目录, 275
-- DOS 应用程序, 8–9, 676–687, 684–685
-- DoS (拒绝服务) 攻击, 701
-- dos 命令, 685
-- DOS 分区, 61, 84
-- DOSE 应用程序, 677
-  - 命令, 685–686
-  - 配置, 677–684
-  - 安装, 677
-  - 挂载, 682–687
-  - 在 Windows 窗口中, 685, 685
-  - 在 termw 窗口中, 684, 685
-  - dosemu.conf 文件, 678–684
-- IP 地址中的点 (.), 501
-- 命令中的双引号 (") , 329
-- 下载
-  - Caldera OpenLinux, 18–19
-  - Core, 201
-  - Debian/GNU, 220
-  - GNU 公共许可条款, 915–919
-  - KDE, 227
-  - 非英语, 818–827
-  - Red Hat, 17, 21–24
-  - S.U.S. Linux, 19–20
-  - Slack, 17–18
-  - 来源, 831–832
-- DMA (直接内存访问) 和即插即用, 423
-  - 用于声卡, 36, 459–460
-  - 通道, 254
-  - dmesg, 514, 852
-  - DNS (域名系统), 505, 528, 621, 704
-    - 显示域名, 852
-    - 查询, 852–853, 886
-    - dns 命令, 852–853
-    - Want to Enable?, 选项, 135
-    - Want to Boot?, 选项, 135
-    - Handlers 部分, 209–211, 210
-    - 文档, 182–183, 323–326, 324–326
-    - Root 条目, 770
-  - 域名系统 (DNS), 505, 628, 704
-    - 显示域名, 852
-    - 查询, 852–853
-    - 域名
-      - Apache, 736–739, 737
-      - efax, 587–588
-      - Lynx 浏览器, 560
-      - 来源, 835
-    - 页脚, 568
-    - GNOME 面板, 219
-    - 分区字段, 588
-    - 驱动
-      - 用于设备, 286
-      - 用于鼠标, 281
-      - 用于过滤器系统, 432–434, 432–433
-      - 在发行版中, 15
-      - 打印机, 352–354, 352
-      - Sound Blaster 声卡, 458
-  - drivers.img 文件, 461
-  - dsl (数字用户线), 452
-  - du 命令, 853–854
-  - 动态主机配置协议 (DHCP), 619, 704–705
+# Connect Linux 发行版
+821
 
-## flag
+# 配置菜单
+用户帐户摘要, 手动
 
-- 加密
-  - 组, 366–367, 366
-  - 在 crontab 中, 411–412
-  - 在 xterm 中, 178
-- 分区, 60–61
-- 电子邮件
-  - 声音, 465
-  - 消息计数, 878
-  - 系统密码文件, 906
-  - 邮箱箱, 550–551
-  - 用户, 362, 363, 904–905
-  - 在 GNOME 控制中心, 210
-  - 编写, 569–574, 569–574
-  - KDE 中的编辑器, 240
-  - 配置, 553–559, 554–559
-  - efpag 程序, 586–587
-  - 转发, 573–574, 573–574
-  - 安装, 587–588
-  - 接收传真, 使用 598
-  - IMAP4 邮件, 在 552–553
-  - POP3 邮件, 在 551–552
-  - efax stop 命令, 598
-  - 正在, 567–569, 567–568
-  - efix 程序, 590–591
-  - 回复, 573–574, 573
-- egcs 编译器, 476
-- 通知, 843
-- egrep 命令, 855–886
-- 离线阅读器, 566–574
-- eject 命令, 686
-- 在线程序, 574–575
-- ELKS (嵌入式 Linux 内核子集), 924
-  - 在 pine 中, 574–577, 576–577
-  - 邮件程序, 574
-  - 编写, 579–581, 579–581
-- 电子邮件设置, 259
-- 文件夹列表, 577, 577
-- 嵌入式 Linux, 924
-- 转发, 582, 583
-- 嵌入式 Linux 内核子集 (ELKS), 924
-  - 消息索引在, 577–578, 578–579
-- 系统日志中的紧急消息, 415
-- 空文件，创建, 341–342
-- 队列, 876
-- Emulate3Buttons 指令, 281
-- 发送和接收, 875–886
-- Emulate3Timeout 指令, 282
-- e2fsck 命令, 854
-- emomouse.command, 686
+# 组定义
+364
+
+# 网卡的配置模式
+631
+
+# 配置帐户
+64–65
+
+# 身份验证
+
+# Apache Web 服务器
+779–774
+
+# 编译选项
+详见编译
+
+# 电子邮件
+553–559, 554
+
+# 真
+589–590
+
+# 以太网网络
+644–648
+
+# 防火墙
+- 自定义设置, 705–707
+- 安装期间, 702–703
+- 安装后, 707–709
+- 用于高安全性的, 704–705
+- 用于中等安全性的, 705
+- 可信设备, 704
+
+# GNOME
+详见 GNOME 桌面环境
+
+# KDE
+251–263, 252–255
+
+# kdm
+232–237, 234–236
+
+# 内核
+479–480
+
+# 字符界面
+483–488, 484–485
+
+# 命令行接口
+481–483, 482
+
+# 图形界面
+482–492, 491
+
+# 选项
+480–481
+
+# Konqueror
+247–248, 247
+
+# 域网 (LANs)
+617–621, 618
+
+# Linux 配置工具
+
+# 方法
+367–368, 368–447, 450
+
+# 鼠标
+54
+
+# 打印机队列
+594
+
+# 打印机
+348–349, 349–350
+
+# 添加打印机
+352–352
+
+# 驱动程序
+352–352, 353
+
+# 队列设置
+350–352
+
+# 路由器
+716–719
+
+# Samba
+660–666
+
+# sendmail
+810–814
+
+# Sound Blast
+458–462, 459
+
+# 时间参数
+899
+
+# 时区
+64
+
+# X Windows
+67–68
+
+# 准备
+123–126
+
+# 测试
+140–142, 141
+
+# 使用 Xfigurator
+126–134, 126–133
+
+# XF86Config 文件
+270–289
+
+# 确认—日期
+- 用于文件删除, 338–339
+- 用于覆盖, 331, 335, 341
+
+# 连接选项
+525
+
+# `.crypt` 扩展名
+849
+
+# `cryptdir` 命令
+849
+
+# Crypto 设置
+259
+
+# `csh` shell
+374–375
+
+# 当前目录
+- 更改, 308
+- 内容, 308–310
+- 名称, 307–389
+
+# 光标
+- 图形, 515–552, 516–521
+- 手动, 522–529
+- KDE 状态信息, 884–885
+- 重置, 847
+
+# 在 `xterm` 中
+176
+
+# 自定义按钮
+163
+
+# 自定义安装
+55
+
+# GNOME 中的自定义模式
+163, 164
+
+# 自定义 X 配置
+68
+
+# Customizing Nestle 6 帮助部分
+550
+
+# 硬盘柱
+38, 58
+
+# X vs. Microsoft Windows 控制中心
+95–96
+
+# 控制选项卡
+357
+
+# 转换压缩文件
+911
+
+# Cookies 协调世界时 (UTC)
+64
+
+# Copies And Folders 设置
+557
+
+# 复制对话框
+165, 165
+
+# 复制文件
+- 使用 `cp` 的, 330–337, 848
+- 在 GNOME 中, 165, 165
+- 在 KDE 中, 244
+- 使用 `mcpry` 的, 877
+
+# GNU 通用许可证条款
+915–919
+
+# 密码
+889
+
+# 远程
+891
+
+# Corel Linux 发行版
+20–21
+
+# 计数
+- `fdisk` 中的 `d` 命令, 84
+- 在 `cp` 中, 335
+- 在 `infinity`, 598
+- 在 `zip` 中, 321
+- 在 `httpd` 中, 775
+- 在 `useradd` 中, 398
+- `useradd` 中的 `D` 标志, 398–399
+
+# 破折线项目
+906–907
+
+# 国家与语言设置
+259
+
+# `cp` 命令
+330–337, 348
+
+# `xterm` 中的 `cr` 标志
+176
+
+# 创建模式参数
+662
+
+# 创建 Pages 帮助部分
+550
+
+# 系统日志中的关键消息
+415
+
+# 罗罗地亚发行版
+818
+
+# 守护进程
+409–413
+
+# `crontab` 命令
+411–413, 849
+
+# `crontab` 文件
+409, 411–413
+
+# 数据位
+449
+
+# 数据接口 (D) 导入位置
+192
+
+# 数据库应用程序
+8
+
+# 使用 AOLServer 的数据库连接
+734
+
+# 数据库
+606–607
+
+# 日期时间部分
+261
+
+# `date` 命令
+849–850
+
+# 复制文件的日期
+331, 333
+
+# `dc` 命令--拨号连接
+- 显示, 849
+- 文件修改, 310
+- 在作业调度中, 410–411
+- 来自远程主机, 891
+- 搜索, 313
+- 设置, 369–370, 369–850
+- 用于 `touch`, 342, 901
+
+# `dc` 命令
+850
+
+# de Icaza, Miguel
+190
+
+# Debian/GNU 发行版
+20
+
+# Debian 发行版
+825
+
+# 系统日志中的调试消息
+415
+
+# 消息
+414
+
+# 用于...的指令
+275
+
+# 解压缩文件
+863
+
+# `cryptdir`
+850
+
+# 解压缩文件
+850
+
+# 默认服务器
+605
+
+# GNOME 中的默认编辑器
+209, 210
+
+# 默认网关
+509, 640
+
+# 默认路由
+526
+
+# 默认值
+398–399
+
+# 碎片化硬盘
+49
+
+# `def` 命令
+669
+
+# 自动重复
+214
+
+# 对于...的选项
+525
+
+# 删除...的帐户
+364
+
+# 删除小工具
+155
+
+# 删除目录
+343
+
+# 删除打印机队列
+874
+
+# 删除调度作业
+842
+
+# 删除用户
+364
+
+# 删除
+364, 400, 401, 904
+
+# 拒绝服务 (DoS) 攻击
+701
+
+# 拒绝指令
+780
+
+# 依赖库
+869–870
+
+# 模块
+851
+
+# `depmod` 命令
+472, 851
+
+# 深度指令
+288
+
+# 深度选项
+158
+
+# 默认按钮
+163
+
+# 默认桌面
+156
+
+# 默认桌面
+156
+
+# 桌面背景
+203–204, 204
+
+# 桌面部分
+204–208, 207–257
+
+# 桌面切换对话框
+231
+
+# 桌面
+- 背景的, 203–204, 204–206
+- KDE 的, 238–242, 262–263
+- 用于 207–208, 207–208
+- 虚拟的, 156
+- Windows 应用程序, 108–111, 109
+
+# 详细模式在 GNOME
+163, 164
+
+# 硬件
+49
+
+# 调制调器
+439–440, 439–440
+
+# 确定文件类型
+188
+
+# `/dev` 目录
+57, 440–442
+
+# `/dev/input/mice` 文件
+453–454
+
+# `develop.kode.org` 网站
+228
+
+# GNOME 面板中的开发菜单
+151
+
+# 开发性版本
+473
+
+# 派生设备
+281
+
+# 分区设备字段
+57–58
+
+# XF86Config 中的设备部分
+285–286
+
+# 设备选项卡
+521
+
+# `deev` 部分
+254
+
+# `df` 命令
+851
+
+# DHCP (动态主机配置协议)
+619, 704–705
+
+# 拨号选项
+520
+
+# 拨号脚本
+529–530
+
+# 拨号上网连接
+512
+
+# 使用 `mdeltree` 的
+878
+
+# 使用 `mrd` 的
+883
+
+# 使用 `rm` 的
+338–339, 892
+
+# 电子邮件消息
+578
+
+# 在 GNOME 中
+165
+
+# 使用 `mdel` 的
+878
+
+# 使用 `rm` 的
+337–338, 892
+
+# 组
+403, 862
+
+# 分区
+61, 84
+
+# `xclock` 中的数字标志—显示
+
+# `xclock` 中的数字标志
+196
+
+# 数字音效编辑器
+465
+
+# 数字用户用户回线 (DSL)
+452
+
+# Linux 中的 `dir` 命令
+851–852
+
+# `smbclient`
+669
+
+# 直接内存访问 (DMA) 和即插即用，用于声卡
+33, 459–460
+
+# 目录
+- 使用 Apache, 778–781
+- 归档, 318–319, 899
+- 更改, 308, 877
+- 复制, 333, 848
+- 创建
+  - 使用 `mkdir`, 342, 879
+  - 使用 `mmd`, 881
+- 删除
+  - 使用 `mdtree`, 878
+  - 使用 `mr`, 893
+  - 使用 `rm`, 338–339, 892
+  - 使用 `rmd`, 343
+- 显示内容
+  - 使用 `dir`, 851–852
+  - 使用 `ls`, 308–310, 874–875
+  - 使用 `mdir`, 878
+- 目录名, 307–308, 889
+- DNS 域名, 852
+- 传真, 596, 597
+  - 使用 `cat`, 844
+- 压缩, 911
+  - 使用 `dir`, 851–852
+- 第一部分, 865
+  - 在 GNOME 中, 161–163, 163–664
+- 最后部分, 898
+  - 使用 `ls`, 308–310, 874–875
+  - 使用 `mdir`, 878
+- 文本文件, 310–312, 870–882
+
+# 空闲内存
+860
+
+# 组
+366–367, 336
+
+# IP 路由表
+893
+
+# 内核环形缓冲区
+852
+
+# 键盘模式
+867
+
+# 已加载模块
+876
+
+# 已登录用户
+894
+
+# NIS 域名
+886
+
+# 分区表
+82, 82
+
+# `efax` 的
+590
+
+# 在 GNOME 显示中
+161
+
+# 在 `ls` 列表列表中
+310
+
+# 挂载
+- 用于 DOSEmu, 686–687
+- 远程, 652–653, 652
+
+# 所有权
+845, 847
+
+# 权限
+844
+
+# 重定向
+668–687
+
+# 重命名
+884
+
+# 共享
+648–651, 663–664
+
+# 顶层
+577
+
+# `<Directory>` 标签
+771
+
+# `DirectoryIndex` 条目
+772
+
+# `DisableModInDev` 条目
+275
+
+# `DisableVidModExtension` 条目
+275
+
+# 禁用
+- 防火墙, 649
+- 接口, 866
+- 用户, 363
+
+# 磁盘缓存，保存
+898
+
+# 磁盘驱动器
+55–59, 72
+
+# 磁盘 Druid 工具，在 GNOME 中
+162
+
+# XF86Config 中的面板
+287–288
+
+# 显示
+- 别名, 871
+- 架构, 840
+- 归档内容, 319–320
+- `crontab` 内容, 413
+- 日期和时间, 849–850
+- 目录内容
+
+# 发行版—动态主机配置协议 (DHCP)
+
+# 进程
+888, 900
+
+# 远程系统状态
+893
+
+# 路由
+901
+
+# 扫描码和键码
+895
+
+# 串口端口状态
+897
+
+# 系统信息
+902
+
+# 系统运行级别
+894
+
+# 文本
+854–855
+
+# 文件类型
+857, 884
+
+# 用户名
+872
+
+# 用户
+362, 363, 894, 906
+
+# 发行版
+14–16
+
+# 输入
+620
+
+# 域参数
+661
+
+# `domainname` 命令
+853
+
+# 域名
+- 使用 Apache, 780–781
+- 以太网配置, 636
+- 在 `resolv.conf` 中, 645
+
+# `DontZap` 目录
+275
+
+# `Dntzoom` 目录
+275
+
+# DOS 应用程序
+8–9, 676–687, 684–685
+
+# DoS (拒绝服务) 攻击
+701
+
+# `dos` 命令
+685
+
+# DOS 分区
+61, 84
+
+# DOSE 应用程序
+677
+- 命令, 685–686
+- 配置, 677–684
+- 安装, 677
+- 挂载, 682–687
+- 在 Windows 窗口中, 685, 685
+- 在 termw 窗口中, 684, 685
+- `dosemu.conf` 文件, 678–684
+
+# IP 地址中的点 (.)
+501
+
+# 命令中的双引号 (")
+329
+
+# 下载
+- Caldera OpenLinux, 18–19
+- Core, 201
+- Debian/GNU, 220
+- GNU 公共许可条款, 915–919
+- KDE, 227
+- 非英语, 818–827
+- Red Hat, 17, 21–24
+- S.U.S. Linux, 19–20
+- Slack, 17–18
+- 来源, 831–832
+
+# DMA (直接内存访问) 和即插即用
+423
+- 用于声卡, 36, 459–460
+
+# 通道
+254
+
+# `dmesg`
+514, 852
+
+# DNS (域名系统)
+505, 528, 621, 704
+- 显示域名, 852
+- 查询, 852–853, 886
+- `dns` 命令, 852–853
+
+# Want to Enable?
+选项, 135
+
+# Want to Boot?
+选项, 135
+
+# Handlers 部分
+209–211, 210
+
+# 文档
+182–183, 323–326, 324–326
+
+# Root 条目
+770
+
+# 域名系统 (DNS)
+505, 628, 704
+- 显示域名, 852
+- 查询, 852–853
+
+# 域名
+- Apache, 736–739, 737
+- `efax`, 587–588
+- Lynx 浏览器, 560
+- 来源, 835
+
+# 页脚
+568
+
+# GNOME 面板
+219
+
+# 分区字段
+588
+
+# 驱动
+- 用于设备, 286
+- 用于鼠标, 281
+- 用于过滤器系统, 432–434, 432–433
+- 在发行版中, 15
+- 打印机, 352–354, 352
+- Sound Blaster 声卡, 458
+
+# `drivers.img` 文件
+461
+
+# `dsl` (数字用户线)
+452
+
+# `du` 命令
+853–854
+
+# 动态主机配置协议 (DHCP)
+619, 704–705
+
+# `flag`
+
+# 加密
+- 组, 366–367, 366
+- 在 `crontab` 中, 411–412
+- 在 `xterm` 中, 178
+
+# 分区
+60–61
+
+# 电子邮件
+- 声音, 465
+- 消息计数, 878
+- 系统密码文件, 906
+- 邮箱箱, 550–551
+- 用户, 362, 363, 904–905
+- 在 GNOME 控制中心, 210
+- 编写, 569–574, 569–574
+- KDE 中的编辑器, 240
+- 配置, 553–559, 554–559
+
+# `efpag` 程序
+586–587
+
+# 转发
+573–574, 573–574
+
+# 安装
+587–588
+
+# 接收传真, 使用 598
+
+# IMAP4 邮件, 在 552–553
+
+# POP3 邮件, 在 551–552
+
+# `efax` stop 命令
+598
+
+# 正在
+567–569, 567–568
+
+# `efix` 程序
+590–591
+
+# 回复
+573–574, 573
+
+# `egcs` 编译器
+476
+
+# 通知
+843
+
+# `egrep` 命令
+855–886
+
+# 离线阅读器
+566–574
+
+# `eject` 命令
+686
+
+# 在线程序
+574–575
+
+# ELKS (嵌入式 Linux 内核子集)
+924
+- 在 `pine` 中, 574–577, 576–577
+- 邮件程序, 574
+- 编写, 579–581, 579–581
+
+# 电子邮件设置
+259
+
+# 文件夹列表
+577, 577
+
+# 嵌入式 Linux
+924
+
+# 转发
+582, 583
+
+# 嵌入式 Linux 内核子集 (ELKS)
+924
+- 消息索引在, 577–578, 578–579
+
+# 系统日志中的紧急消息
+415
+
+# 空文件，创建
+341–342
+
+# 队列
+876
+
+# `Emulate3Buttons` 指令
+281
+
+# 发送和接收
+875–886
+
+# `Emulate3Timeout` 指令
+282
+
+# `e2fsck` 命令
+854
+
+# `emomouse.command`
+686
+
+
+
 - EasyLinux, 819
   - Autoside 选项, 153
   - Kerberos 选项, 65
@@ -21413,6 +21659,7 @@ Chips & Technologies 显卡与芯片组, 97
   - 行, 382–384
 - 在安全, 699
 - 在 Zeus, 735
+
 ## 导出
 
 - KDE 窗口, 232
@@ -21429,6 +21676,7 @@ Chips & Technologies 显卡与芯片组, 97
 - ESware 发行版, 822
 
 等待,
+
 ## 发行版—动态主机配置协议 (DHCP)
 
 - 进程, 888, 900
@@ -21445,16 +21693,16 @@ Chips & Technologies 显卡与芯片组, 97
 - 发行版, 14–16
 - 输入, 620
 - 域参数, 661
-- domainname 命令, 853
+- `domainname` 命令, 853
 - 域名
   - 使用 Apache, 780–781
   - 以太网配置, 636
-  - 在 resolv.conf 中, 645
+  - 在 `resolv.conf` 中, 645
 - DontZap 目录, 275
 - Dntzoom 目录, 275
 - DOS 应用程序, 8–9, 676–687, 684–685
 - DoS (拒绝服务) 攻击, 701
-- dos 命令, 685
+- `dos` 命令, 685
 - DOS 分区, 61, 84
 - DOSE 应用程序, 677
   - 命令在, 685–686
@@ -21463,7 +21711,7 @@ Chips & Technologies 显卡与芯片组, 97
   - 挂载, 682–687
   - 在 Windows 窗口中, 685, 685
   - 在 termw 窗口中, 684, 685
-  - dosemu.conf 文件, 678–684
+  - `dosemu.conf` 文件, 678–684
 - IP 地址中的点 (.), 501
 - 命令中的双引号 (") , 329
 - 下载
@@ -21480,11 +21728,11 @@ Chips & Technologies 显卡与芯片组, 97
 - DMA (直接内存访问) 和即插即用, 423
   - 用于声卡, 36, 459–460
   - 通道, 254
-  - dmesg, 514, 852
+  - `dmesg`, 514, 852
   - DNS (域名系统), 505, 528, 621, 704
     - 显示域名, 852
     - 查询, 852–853, 886
-    - dns 命令, 852–853
+    - `dns` 命令, 852–853
     - Want to Enable?, 选项, 135
     - Want to Boot?, 选项, 135
     - Handlers 部分, 209–211, 210
@@ -21508,9 +21756,9 @@ Chips & Technologies 显卡与芯片组, 97
       - 在发行版中, 15
       - 打印机, 352–354, 352
       - Sound Blaster 声卡, 458
-  - drivers.img 文件, 461
-  - dsl (数字用户线), 452
-  - du 命令, 853–854
+  - `drivers.img` 文件, 461
+  - `dsl` (数字用户线), 452
+  - `du` 命令, 853–854
   - 动态主机配置协议 (DHCP), 619, 704–705
 
 ## flag
@@ -21542,9 +21790,9 @@ Chips & Technologies 显卡与芯片组, 97
   - 回复, 573–574, 573
 - egcs 编译器, 476
 - 通知, 843
-- egrep 命令, 855–886
+- `egrep` 命令, 855–886
 - 离线阅读器, 566–574
-- eject 命令, 686
+- `eject` 命令, 686
 - 在线程序, 574–575
 - ELKS (嵌入式 Linux 内核子集), 924
   - 在 pine 中, 574–577, 576–577
@@ -21562,7 +21810,7 @@ Chips & Technologies 显卡与芯片组, 97
 - Emulate3Buttons 指令, 281
 - 发送和接收, 875–886
 - Emulate3Timeout 指令, 282
-- e2fsck 命令, 854
+- `e2fsck` 命令, 854
 - emomouse.command, 686
 - EasyLinux, 819
   - Autoside 选项, 153
@@ -21596,6 +21844,7 @@ Chips & Technologies 显卡与芯片组, 97
   - 行, 382–384
 - 在安全, 699
 - 在 Zeus, 735
+
 ## 导出
 
 - KDE 窗口, 232
@@ -21611,21 +21860,23 @@ Chips & Technologies 显卡与芯片组, 97
 - 激进指令, 276
 - ESware 发行版, 822
 
-
-
-
-
 # 导出文件—文件系统
 
 导出文件, 648–651
+
 扩展文件系统
+
 格式化, 879
+
 状态, 854
+
 扩展分区, 824
+
 可扩展 Shell (es), 376
+
 扩展
 
-fdisk 程序, 55–56, 80–82, 81, 856
+`fdisk` 程序, 55–56, 80–82, 81, 856
 - 在其中添加分区, 82, 83
 - 在其中更改分区类型, 83–84
 - 提交更改, 84–85
@@ -21641,11 +21892,16 @@ fdisk 程序, 55–56, 80–82, 81, 856
 - 提取存档内容, 320–321
 
 FEATURE 指令, 813
+
 Festival 语音合成系统, 465
 - xterm 中的 -f 标志, 175
-grep 命令, 856–857
+
+`grep` 命令, 856–857
+
 KDE 中的文件浏览部分, 253
-file 命令, 857
+
+`file` 命令, 857
+
 GNOME 中的文件管理器, 151, 152, 159–160
 - 启动, 160–161
 
@@ -21672,26 +21928,44 @@ GNOME 中的文件管理器, 151, 152, 159–160
 - 在 httpd 中, 775
 - 在 rm 中, 339
 - tar 中的 f 选项, 318
+
 级列表, 416
-false 命令, 856
+
+`false` 命令, 856
+
 FastCGI 模块, 730
+
 FastTrack Web 服务器, 733–734
+
 FAT32 分区, 84
+
 收藏菜单, 149
+
 传应答命令, 597–598
+
 传真文件, 589–590
+
 传真命令, 592
+
 传真打印命令, 597
+
 传真程序, 591–593
+
 传真队列命令, 596
+
 传真接收命令, 595–596
+
 传真发送命令, 591–592
+
 传真查看命令, 596
+
 传真, 586
 - 保存命令, 194
+
 文件服务器, 604
 - 专用的, 605
 - 以及对等点文件共享, 605–606
+
 文件系统
 - 创建, 880
 - 目录, 881
@@ -21700,13 +21974,15 @@ FAT32 分区, 84
 - 打印机队列, 593–595
 - 接收, 595–598, 597
 - 发送, 590–592
-faxlpr 脚本, 594–595
+
+`faxlpr` 脚本, 594–595
 
 # 文件名--防火墙配置工具 941
 
 - 挂载, 883
 - 在其中移动文件, 881
 - 卸挂载, 901–902
+
 文件名
 - 完成, 380–381
 - 锁定, 341–342
@@ -21714,8 +21990,8 @@ faxlpr 脚本, 594–595
 - 移动
 - 在 GNOME 中, 166
 - 在 KDE 中, 244
-- 使用 wmmove, 881
-- 使用 mv, 340–341, 884
+- 使用 `wmmove`, 881
+- 使用 `mv`, 340–341, 884
 - 覆盖, 331–332
 - 所有权, 334–335, 845, 847
 - 权限, 334, 846
@@ -21726,6 +22002,7 @@ faxlpr 脚本, 594–595
 - 重命名, 340–341, 884
 - 扩展, 344
 - 性, 887
+
 文件
 - 别名, 845
 - 存档, 899
@@ -21733,65 +22010,70 @@ faxlpr 脚本, 594–595
 - 属性, 876–887
 - 合并, 844
 - 压缩
-- 使用 compress, 847–848
-- 使用 gzip, 321–323, 864
-- 使用 tar, 318–323
+- 使用 `compress`, 847–848
+- 使用 `gzip`, 321–323, 864
+- 使用 `tar`, 318–323
 - 复制
-- 使用 cp, 330–338
+- 使用 `cp`, 330–338
 - 在 GNOME 中, 165, 165
 - 在 KDE 中, 244
-- 使用 mcopy, 877
+- 使用 `mcopy`, 877
 - 创建, 341–342
 - 解压, 863
 - 解密, 850
 - 搜索
-- 使用 find, 313–314, 357–859
+- 使用 `find`, 313–314, 357–859
 - 在 GNOME 中, 166–167, 166–167
-- 使用 locate, 314–315
+- 使用 `locate`, 314–315
 - 哪里, 315
-- 使用 egrep, 855–856
-- 使用 grep, 856–857
-- 使用 grep, 315–317, 860–861
+- 使用 `egrep`, 855–856
+- 使用 `grep`, 856–857
+- 使用 `grep`, 315–317, 860–861
 - 共享, 648–653, 652
 - 排序, 896–897
 - 删除
 - 在 GNOME 中, 165
-- 使用 md, 878
-- 使用 rm, 337–338, 892
-- 使用 cat, 844
+- 使用 `md`, 878
+- 使用 `rm`, 337–338, 892
+- 使用 `cat`, 844
 - 压缩的, 911
-- 使用 dir, 851–852
+- 使用 `dir`, 851–852
 - 第一部分, 865
 - 在 GNOME 中, 161–163, 163–164
 - 最后部分, 898
-- 使用 ls, 308–310, 874–875
-- 使用 dir, 778
+- 使用 `ls`, 308–310, 874–875
+- 使用 `dir`, 778
 - 文本文件, 310–312, 882
 - 加密, 849
 - 类型, 857, 884
 - 解压, 902, 909
 - 在 Windows 中, 160–167, 163–164
 - 在 XF6 部分, 272–274
+
 文件部分
 - 过滤器
 - 用于 forex, 593
+
 防火墙, 701–702, 710–711, 711
 - 在 Jigsaw 中, 731
 - 打印, 428–438, 430–434
-- find 命令, 313–314, 357–859
+- `find` 命令, 313–314, 357–859
 - 查找对话框, 194–195, 195
 - 查找文件对话框, 166–167
 - 查找。搜索
-- finger 命令, 859
-finger.exe 工具, 43–45
-firewall-config 工具, 709
+- `finger` 命令, 859
+
+`finger.exe` 工具, 43–45
+
+`firewall-config` 工具, 709
 - 可执行压缩的, 863
 - 在 KDE 中, 242–251, 243–247, 251, 253
 - 链接, 383, 37
 
- 防火墙配置—FWWM 窗口管理器
+防火墙配置—FWWM 窗口管理器
 
 防火墙配置屏幕, 703–705, 703, 707, 708
+
 防火墙, 701–702, 710–711, 711
 - 配置
 - 自定义设置, 705–707
@@ -21800,482 +22082,753 @@ firewall-config 工具, 709
 - 安装后, 707–709, 708
 - 中等安全, 705
 - 信任设备, 704
+
 第一页第一打印选项, 549
+
 文件的第一部分，显示, 865
+
 等宽字体, 181
+
 标志
 - 备用, 337
 - 用于 Unix 命令, 172–174
+
 颜色平坦模式, 235
+
 flick，视频, 126
+
 软磁盘访问选项, 691
+
 软磁盘
 - 坏块开启, 877
 - 格式化, 879
 - 安装自, 40–41
 - xterm 中的 -Fn 标志, 180–181
+
 焦点行为，类别, 215
+
 焦点策略, 242, 258
+
 pine 中的文件夹列表, 577, 577
 - GNOME 显示中的文件夹, 162
+
 FontPath 目录, 273
+
 字体
 - 在 KDE 中, 258
 - 在 xF86Config, 273
 - 在 xterm 中, 179–181, 180–181
+
 标签字体, 235
+
 前景颜色
 - 在 xclock 中, 197, 198
 - 在 xterm 中, 175, 176
+
 前景命令, 386
+
 格式化
 - 文件系统, 879–880
 - 软磁盘, 879
 - 分区, 62
+
 表单程序, 786–788
-- body_attributes, 797–798
-- check_email 例程, 797
-- check_required 例程, 791–792
-- check_url 例程, 788
-- error 例程, 798–802
-- get_date 例程, 788–789
-- parse_form 例程, 789–791
-- return_html 例程, 792–794
-- send_mail 例程, 795–797
+- `body_attributes`, 797–798
+- `check_email` 例程, 797
+- `check_required` 例程, 791–792
+- `check_url` 例程, 788
+- `error` 例程, 798–802
+- `get_date` 例程, 788–789
+- `parse_form` 例程, 789–791
+- `return_html` 例程, 792–794
+- `send_mail` 例程, 795–797
+
 Gnumeric 中的公式, 193
+
 前进按钮
+
+
+
 - 在 GNOME 中, 162
+
 - 在 Netscape 中, 573
+
 转发邮件消息
+
 - 在 Netscape 中, 573–574, 575
+
 - 在 pine 中, 582, 583
+
 框架类型, 158
+
 - 在 Jigsaw 中, 860
-- free 命令, 860
+
+- `free` 命令, 860
+
 - 用于分区的, 58
+
 免费软件, 4–10
+
 磁盘上的免费, 851
+
 免费系统, 466
+
 FreeType 支持, 98
+
 法国发行, 818–819
+
 FTP
+
 - 作为 LAN 源, 623–624
+
 - 端口, 506, 706
+
 - 设置, 623, 623
+
 - 名称字段, 623
-ftp.org 站点, 103
+
+`ftp.org` 站点, 103
+
 全名, 361
+
 全文本搜索
+
 - 使用 AOL, 734
+
 - 使用 N, 732
+
 在 Gnumeric 中, 193
+
 FVWM 窗口管理器, 100–102
 
- g
+g
 
--g 标志
+-`g` 标志
 
 处理程序, 209–211, 210–211
+
 多媒体部分, 212, 212–213
+
 外设部分, 213–215, 214–215
+
 Sawfish 窗口管理器, 215–216, 217
+
 在, 217
+
 用户界面选项, 217–218
+
 桌面在, 159–160, 159
+
 文件管理器在, 160
+
 启动, 160–161
+
 菜单选项在, 164–167, 165–167
+
 窗口在, 161–163, 163–164
+
 安装, 146–147
+
 面板在, 148–149, 148–219
+
 小部件在, 154–156, 154–156
+
 抽屉用于, 219
+
 启动器用于, 220, 220
+
 logbutt 用于, 219
+
 操作, 153, 154
+
 属性, 221–222, 221–222
+
 系统菜单在, 149–151, 149–151
+
 启动, 146–148, 147
+
 窗口在, 157–158
-gnome-lock 工具, 203
-gnRMP 工具, 230
+
+`gnome-lock` 工具, 203
+
+`gnRMP` 工具, 230
+
 GNU 许可证, 9–10
+
 复制、分发和修改条款, 915–919
+
 用于新程序, 920–921
+
 序言, 914–915
+
 保证, 919–920
+
 Gnumeric 程序, 190–193, 191–192
+
 德国发行版，德语键盘布局, 53
-get date 例程, 778–789
+
+`get date` 例程, 778–789
+
 Ghostscript 打印机, 425–426
+
 Gimp (通用图像处理程序), 184–185
+
 捕捉窗口在, 189–190, 189
+
 裁剪图像在, 188, 188
+
 打开图像在, 186, 186
+
 保存图像在, 186–187, 187
-全局环境部分在 httpd.conf, 768–769
-[global] 扩展, 960–661
-GMT (格林尼治时间), 64, 369–370
-GMT (格林尼治时间), 64, 369–370
-桌面在, 159–160, 159
-文件管理器在, 160
-启动, 160–161
-菜单选项在, 164–167, 165–167
-窗口在, 161–163, 163–164
-安装, 146–147
-面板在, 148–149, 148–219
-小部件在, 154–156, 154–156
-抽屉用于, 219
-启动器用于, 220, 220
-logbutt 用于, 219
-操作, 153, 154
-属性用于, 221–222, 221–222
-系统菜单在, 149–151, 149–151
-启动, 146–148, 147
-窗口在, 157–158
-gnome-lock 工具, 203
-gnRMP 工具, 230
-GNU 许可证, 9–10
-复制、分发和修改条款, 915–919
-用于新程序, 920–921
-序言, 914–915
-保证, 919–920
-Gnumeric 程序, 190–193, 191–192
-德国发行版，德语键盘布局, 53
-get date 例程, 778–789
-Ghostscript 打印机, 425–426
-Gimp (通用图像处理程序), 184–185
-捕捉窗口在, 189–190, 189
-裁剪图像在, 188, 188
-打开图像在, 186, 186
-保存图像在, 186–187, 187
-全局环境部分在 httpd.conf, 768–769
-[global] 扩展, 960–661
-GMT (格林尼治时间), 64, 369–370
-GMT (格林尼治时间), 64, 369–370
-桌面在, 159–160, 159
-文件管理器在, 160
-启动, 160–161
-菜单选项在, 164–167, 165–167
-窗口在, 161–163, 163–164
-安装, 146–147
-面板在, 148–149, 148–219
-小部件在, 154–156, 154–156
-抽屉用于, 219
-启动器用于, 220, 220
-logbutt 用于, 219
-操作, 153, 154
-属性用于, 221–222, 221–222
-系统菜单在, 149–151, 149–151
-启动, 146–148, 147
-窗口在, 157–158
-gnome-lock 工具, 203
-gnRMP 工具, 230
-GNU 许可证, 9–10
-复制、分发和修改条款, 915–919
-用于新程序, 920–921
-序言, 914–915
-保证, 919–920
-Gnumeric 程序, 190–193, 191–192
 
+全局环境部分在 `httpd.conf`, 768–769
 
+`[global]` 扩展, 960–661
 
+GMT (格林尼治时间), 64, 369–370
 
-## 帮助按钮—I/O 地址 945
+GMT (格林尼治时间), 64, 369–370
+
+帮助按钮—I/O 地址 945
 
 - 在 GNOME 控制中心中, 218
+
 - 在 GNOME 面板中, 151, 152
+
 - 在 Gnumeric 中, 193
+
 - 在 KDE 中, 253, 254
+
 - 在 Netscape 6 中, 549–550, 549
+
 - 在 xman 中, 324–325
+
 - 帮助按钮, 485
+
 - 帮助内容命令, 549
+
 - 帮助标签页, 253, 254
+
 - 惠普打印机, 226
+
 - 高安全性，配置防火墙, 704–375
+
 - 历史
+
     - 查询, 852–853
+
     - 在 TCP/IP 中, 501
-- hosts 文件, 636–647, 646
-- hosts.allow 文件, 653–654, 700, 720
-- hosts.deny 文件, 653–654, 700, 720
+
+- `hosts` 文件, 636–647, 646
+
+- `hosts.allow` 文件, 653–654, 700, 720
+
+- `hosts.deny` 文件, 653–654, 700, 720
+
 - 热插拔, 424
+
 - HP 打印机, 426
-- htacces 文件, 771, 778
-- httpd 中的 HTML 目录, 771–773
+
+- `htacces` 文件, 771, 778
+
+- `httpd` 中的 HTML 目录, 771–773
+
 - Gnumeric 生成的 HTML 文件导入位置, 191
+
 - HTML 文件, 162, 782–784
-- htpassword 命令, 776–778
+
+- `htpassword` 命令, 776–778
+
 - HTTP (超文本传输协议), 506, 624–625, 625, 726
+
     - 命令, 384–386
+
     - Linux 的, 4–5
+
     - 登录, 087
+
 - 历史选项, 158
+
     - - xclock 中的 -hl 标志, 196
+
 - 主页按钮, 163
+
 - 主目录
+
     - 创建, 397
+
     - 默认, 404
-    - /home 目录, 57, 79
+
+    - `/home` 目录, 57, 79
+
 - 主目录字段, 361
+
 - HTTP 设置窗口, 625, 625, 725
-- httpapache.org 网站, 730, 736, 772
-- httpd 命令, 775–776
-- httpd.conf, 730–767
+
+- `httpapache.org` 网站, 730, 736, 772
+
+- `httpd` 命令, 775–776
+
+- `httpd.conf`, 730–767
+
     - 全中的全局环境部分, 768–769
+
     - 中的主服务器配置部分, 769–774
-- hwconf 文件, 439
+
+- `hwconf` 文件, 439
+
 - Helixax 程序, 586
+
 - 超文本传输协议 (HTTP), 506, 624–625, 726
+
 - 连字符 (-)
-    - home.netscape.com, 539
-    - [homes] 节, 661–662, 665
-    - yahoo.ncaac.ui.edu 网站, 731
-    - help.math.nwu.edu 网站, 732
+
+    - `home.netscape.com`, 539
+
+    - `[homes]` 节, 661–662, 665
+
+    - `yahoo.ncaac.ui.edu` 网站, 731
+
+    - `help.math.nwu.edu` 网站, 732
+
 - 水平渐变选项和
+
     - 桌面背景的, 204
+
     - kdm 颜色中的, 235
+
 - 水平同步范围, 125, 129–131, 130, 383
-- HorizSync 指令, 283
-- host.conf 文件, 528, 646
+
+- `HorizSync` 指令, 283
+
+- `host.conf` 文件, 528, 646
+
 - 主机名和 IP 设备节, 630
+
 - 主机名标签, 630
+
 - 主机表, 637, 637
-- hostname 命令, 865
-- hosts 和主机名
-    - 在 exports 文件中, 650
+
+- `hostname` 命令, 865
+
+- `hosts` 和主机名
+
+    - 在 `exports` 文件中, 650
+
     - 用于局域网 (LANs), 620, 636–637, 637
+
     - 名称, 865
-- for 标志, 173
-    - 在 ls 列表列表中, 310
+
+- `for` 标志, 173
+
+    - 在 `ls` 列表列表中, 310
+
     - 在模式扩展中, 390–393
+
     - - i 标志
-        - 在 cp 中, 331, 335
-        - 在 mv 中, 341
-        - 在 rm 中, 338–339
-    - smbclient 中的 - 标志, 668
+
+        - 在 `cp` 中, 331, 335
+
+        - 在 `mv` 中, 341
+
+        - 在 `rm` 中, 338–339
+
+    - `smbclient` 中的 - 标志, 668
+
 - I/O 地址
+
     - 用于介质, 444–445
+
     - 用于网卡的, 38
+
     - 以及即插用, 422–423
+
     - 用于声卡的, 36
 
-## 网络接口卡的 I/O 端口选项—安装
+网络接口卡的 I/O 端口选项—安装
 
 - 网络接口卡的 I/O 端口选项, 632
+
 - Icepack Linux 发行版, 819
+
 - 图标按钮, 163
+
 - gnome 窗口中的图标, 157–158
-- id 命令, 865–866
+
+- `id` 命令, 865–866
+
 - 标识符指令
+
     - 用于设备, 286
+
     - 用于键盘, 279
+
     - 用于模式, 283
+
     - 用于显示器, 283
+
     - 用于鼠标, 281
+
     - 用于屏幕, 287
+
     - 用于服务器布局, 289
-- ifconfig 命令, 526, 629, 644–645, 866
-- ifdown 命令, 866
-- ifport 命令, 867
+
+- `ifconfig` 命令, 526, 629, 644–645, 866
+
+- `ifdown` 命令, 866
+
+- `ifport` 命令, 867
+
 - , 75
+
 - Gimp 程序, 184–193, 184
+
 - Gnumeric 程序, 190–193, 191
+
     - 在 KDE 中, 263
+
     - 在 Lynx 中, 562–563
+
     - 用于 网站, 783
+
     - Images-As-Links 模式, 563
+
     - Images 目录, 41
+
     - IMAP v4 服务器, 506, 555–553, 556
+
     - 在 Gnumeric 中导入文件, 191–192
+
     - Inbox 选项, 158
+
     - Inbox 文件夹, 568
-    - include 指令, 812
+
+    - `include` 指令, 812
+
     - Reply 中的选项, 582
+
     - 防火墙配置中的, 705–706
+
     - GNOME, 146–147
+
     - 用于 FTP 源, 623–624, 624
+
     - 用于 NFS 源, 622–623, 623
+
     - 用于 Web 服务器, 624–625, 625
+
     - 账户配置中的, 64–65
+
     - 身份验证配置中的, 65
+
     - 引导磁盘创建, 19, 69
+
     - 兼容性检查, 34–35
+
     - 分区格式化, 62
+
     - 硬盘分区, 55–61, 56
+
     - 硬盘准备, 42–45
+
     - 硬件信息信息, 35–39
+
     - 键盘控制中的, 51–52, 51
+
     - 键盘类型中的, 53–54
+
     - 语言选择, 52, 52
+
     - ILO 设置, 62–63
+
     - 方法, 39–41
+
     - 鼠标配置, 54
+
     - 在多个分区上, 77–80
+
     - 网络配置中的, 63
+
     - 软件包选择, 66–67, 66
+
     - 进程, 68
+
     - 重启中的, 69–70
+
     - 要求, 30–34
+
     - , 48–50, 49
+
     - 时区配置中的, 64
+
     - 与升级对比, 54–55
+
     - X Windows 配置中的, 67–68
+
     - 可加载模块, 867
+
     - Netscape, 6, 539–541
+
     - 网卡模块, 715–716
+
     - 网络接口卡, 629–633, 630–631, 633
 
 - VMware 上的操作系统, 689–692, 690–691
+
 - PPP, 514–515
+
 - Samba, 658–660
-- sendmail 配置文件, 811
+
+- `sendmail` 配置文件, 811
+
 - VMware, 688–689
+
 - X Windows
+
     - 来自 CD-ROM, 116–119
+
     - 来自 Internet, 119–123, 120
 
 - 即时消息帮助章节, 550
+
 - 接口配置协议选项, 639
+
 - 接口类型对话框, 637–638, 638
+
 - 接口
+
     - 用于 APS Filter 系统, 434–435, 434
+
     - 配置, 866
+
     - 启用, 867
+
 - GUI. 参见 X Windows 
+
     - 用于局域网 (LANs), 638–640, 638–639, 644–645
+
     - 类型收发器, 867
+
     - 在 X Windows 与 Microsoft Windows 中, 93–95, 94
+
     - 内部 IDSN 适配器, 441
 
 - Internet. 另见 浏览器：网页；服务器
+
 - 在 上构建网站, 782–804, 782, 786
+
     - 连接
+
         - 图形化, 515–522, 516–521
+
         - 手动, 522–529
+
 - 用于 DNS 服务, 528
+
 - 挂起连接, 528–529
+
 - Linux 上的资源, 830–835
+
 - 用于 PPP, 512–515
+
 - 脚本, 529–531
+
 - 工具, 8
+
 - X Windows, 119–123, 120
 
 - Internet 分配数字, 703
+
 - Internet 连接框, 516
+
 - 中断, 254
+
 - 内网
+
     - 要求, 33–34
+
     - 服务器, 607–608
+
     - IO-端口节, 254
+
     - 接口卡的 IP 地址选项, 631
+
     - IP 地址, 501–502
+
     - 广播, 504–505
+
     - 网关, 650
-    - 在 hosts 文件中, 646
+
+    - 在 `hosts` 文件中, 646
+
     - 在 IPv6 中, 503–504
+
         - 用于局域网 (LANs), 619–621, 636–737
+
         - 子网掩码, 502–503
+
         - 用于网络接口卡的, 631
+
         - 用于 PPP 连接, 523
-        - resolve.conf, 528
+
+        - `resolve.conf`, 528
+
         - 用于路由器, 713–714
-        - 在 smbclient 中, 668
+
+        - 在 `smbclient` 中, 668
+
         - IP 伪装, 714, 716
+
         - KPPP 中的 IP 选项, 520
+
     - IP 路由表. 参见 路由表
-    - ipands, 707, 709
-    - ip Web 服务器, 733–734
-    - iptables 命令, 719
+
+    - `ipands`, 707, 709
+
+    - `ip` Web 服务器, 733–734
+
+    - `iptables` 命令, 719
+
     - IPv6, 503–504
+
     - IPX HOWTO, 673
+
     - 接口卡的 Irqn 选项, 632
+
 - IRQ
+
     - 用于调制解调器, 444–445
+
     - 用于网卡的, 38, 632
+
     - 以及即插用, 422–423
+
     - 用于声卡的, 369–450
+
     - ISA (工业标准架构) 设备以及即插用, 423
+
     - ISDN 调制解调器和适配器, 450–451
+
         - 要求, 33
+
         - 路由器, 609–612
+
         - ef iso 标志, 598
+
     - ISO 镜像文件, 75–77
+
     - ISP 账户, 553
+
     - PPP 连接, 517–519, 518
-        - 用于 lpr 的标志, 595
+
+        - 用于 `lpr` 的标志, 595
+
     - 日语发行版, 820
 
-## 日语键盘模型—键盘
+日语键盘模型—键盘
 
 - 日语键盘模型, 53
+
 - Java 语言, 727
+
 - Java Web 服务器, 734–735
+
 - 直接打印机队列, 351
+
 - Jigsaw Web 服务器, 731
+
 - Quick Browser 中, 248–250, 249
+
 - 音控制设置中的, 260–261
+
 - 启动, 230–231, 231
+
 - 系统事件中的, 261
+
 - 系统信息中的, 254–255
+
 - 更新, 229–230
+
 - 工具中的, 237–238, 263–267, 264–267
+
 - 网页浏览设置中的, 227–228
+
 - 编写应用程序, 261–262
+
     - 在 Bash 中, 366–388
+
     - 运行, 841
+
     - 使用 at, 841
+
     - 批处理使用, 842–843
-    - 使用 crond 和 crontab, 409–413, 849
-- jobs 命令, 387
+
+    - 使用 `crond` 和 `crontab`, 409–413, 849
+
+- `jobs` 命令, 387
+
 - Joliet 记录, 75
+
 - KDE IO Slave 节, 255
+
 - KDE 菜单, 149
-- kderc 文件, 232
+
+- `kderc` 文件, 232
+
 - dkm 图形登录, 232–237, 234–236
+
 - Kerberos 身份认证, 65
+
 - 内核, 22–23
+
     - 备份, 477–478
+
     - 更改, 471
+
     - 编译选项: 参见 编译
+
     - 配置, 479–480
-- kbd_mode 命令, 867–868
-- kbdrate 命令, 868
+
+- `kbd_mode` 命令, 867–868
+
+- `kbdrate` 命令, 868
+
 - KChart 工具, 266
+
 - KDE 桌面环境, 24
-- KDE (K Desktop Environment) 窗口管理器, 109–110, 109
-    - 字符界面中, 483–488
-    - 484–485, 477–488
-    - 命令行界面中, 481–483, 482
-    - 图形界面中, 488–492, 489–491
-    - 选项, 480–481
-    - 开发, 5
-    - 发行版, 15
-    - 模块, 471–473
-    - 获取, 478–479
-    - PPP, 513–514
-    - 重新编译, 473–474, 492–493
-    - 源软件包, 475–476
-    - 测试, 494
-    - 窗口, 241–242
-    - 配置, 251–262, 252, 254, 256–257
-    - 控制中心中的, 251–252, 254, 256–257
-    - 桌面用于, 238–242, 239, 262–263
-    - 发行版, 227
-    - 退出, 232
-    - 文件中的, 242–251, 243–249
-    - 需要的文件, 228–229
-    - 图形登录中的, 232–237, 234–236
-    - 硬件设置中的, 258–259
-    - 历史, 226–227
-    - 启动应用程序, 240–241
-    - 链接文件中的, 250–251, 262–263
-    - 外观的, 255–258, 256–257
-    - 菜单中的, 262–263
 
 
 
+# KDE (K Desktop Environment) 窗口管理器, 109–110, 109
+
+- 字符界面中, 483–488
+- 484–485, 477–488
+- 命令行界面中, 481–483, 482
+- 图形界面中, 488–492, 489–491
+- 选项, 480–481
+- 开发, 5
+- 发行版, 15
+- 模块, 471–473
+- 获取, 478–479
+- PPP, 513–514
+- 重新编译, 473–474, 492–493
+- 源软件包, 475–476
+- 测试, 494
+- 窗口, 241–242
+- 配置, 251–262, 252, 254, 256–257
+- 控制中心中的, 251–252, 254, 256–257
+- 桌面用于, 238–242, 239, 262–263
+- 发行版, 227
+- 退出, 232
+- 文件中的, 242–251, 243–249
+- 需要的文件, 228–229
+- 图形登录中的, 232–237, 234–236
+- 硬件设置中的, 258–259
+- 历史, 226–227
+- 启动应用程序, 240–241
+- 链接文件中的, 250–251, 262–263
+- 外观的, 255–258, 256–257
+- 菜单中的, 262–263
 
 # kill 命令—库
 
@@ -22286,6 +22839,7 @@ settings for, 214, 214
 USB, 454
 
 ## LANs (局域网)
+
 - 配置, 617–621, 618
 - 以太网。参见以太网网络
 - FTP 源, 623–624, 624
@@ -22301,8 +22855,8 @@ USB, 454
 - Laser5 Linux 发行版, 820
 - 在 X Windows 配置中, 136–137, 136
 - 在 XP8Config 中, 277–280
-- kill 命令, 388, 868
-- killall 命令, 868–869
+- `kill` 命令, 388, 868
+- `killall` 命令, 868–869
 - KIrator 工具, 266
 - Kimball, Spencer, 184
 - kipper.crm.umn.edu 网站, 466
@@ -22313,16 +22867,16 @@ USB, 454
 - 配置, 247–248, 247
 - 文件属性, 245–246, 245
 - Organizer 时间管理器, 264–265, 265
-- Korn Shell (ksh), 376
+- Korn Shell (`ksh`), 376
 - KPackage 工具, 230, 267, 267
 - KPPP 工具, 519–522, 519–521
 - Kpresent 工具, 265
 - krio 播放器, 465–466
 - krio.sourceforge.net 网站, 466
 - KSpread 工具, 265, 266
-- kyms 命令, 869
+- `kyms` 命令, 869
 - Kudzu 工具, 439–440, 439–440
-- kwm 窗口管理器, 227
+- `kwm` 窗口管理器, 227
 - KWord 工具, 265
 - 上一个命令, 869
 - 最后页优先打印选项, 549
@@ -22337,28 +22891,28 @@ USB, 454
 - Linuxconf, 355–356, 357
 - 布局菜单，按命令排序, 166
 - LBA (逻辑块地址), 63
-- lcd 命令, 669
+- `lcd` 命令, 669
 - LDAP (轻量级目录访问协议), 65
-- lld 命令, 869–870
+- `lld` 命令, 869–870
 - 保留账户数据, 364
 - LeftAlt 指令, 279
 - Lempel-Ziv 加密, 847–848, 864
 - lena.fr 网站, 926
-- less 命令, 311–312, 870
-- 小于符号 (<)
+- `less` 命令, 311–312, 870
+- 小于符号 (`<`)
 - 在内核配置中, 481, 486
 - 用于重定向, 380
 - Lesstif 项目, 113
 - Lesstift 窗口管理器, 95
-- /lib 成员目录, 473, 716
+- `/lib` 成员目录, 473, 716
 - 库
 - 依赖项, 869–870
-- fdisk 中的 L 命令, 83
-- -l 标志
+- `fdisk` 中的 L 命令, 83
+- `-l` 标志
 - 在 crab 中, 413
 - 在 fax 中, 591, 593
-- 是 ls, 309
-- smclient 中的 -L 标志, 868
+- 是 `ls`, 309
+- `smclient` 中的 `-L` 标志, 868
 - 标签, 881
 - 安装中的语言, 52, 52, 268
 
@@ -22370,11 +22924,13 @@ USB, 454
 - 用于 Linux: 参见 GNU 通用公共许可证
 - 用于 VMware, 688-689
 - 轻量级目录访问协议 (LDAP), 65
+
 ## LILO 启动顺序
+
 - 配置, 477-478
 - 在安装中, 62-63
-- lilo 命令模式, 870-871
-- lilo.cord 文件, 477-478, 493
+- `lilo` 命令模式, 870-871
+- `lilo.cord` 文件, 477-478, 493
 - KDE 中的链接文件, 250–251, 252–263
 - 链接文件, 343, 871
 - 链接
@@ -22392,21 +22948,21 @@ USB, 454
 - Linux Software Map, 9
 - Linux交换分区, 59–60, 84
 - linux-x 库, 120
-- linuxconf-auth 命令, 630
-- linuxconf 配置, 630–633, 630–631
+- `linuxconf-auth` 命令, 630
+- `linuxconf` 配置, 630–633, 630–631
 - 用于组, 364–367, 365
 - , 355–356, 357
 - 用于调制解调器, 367–368, 358
 - 模块, 357, 358
 - 保存并退出, 367, 367
-- 用于时间和和日期, 369–370, 369
+- 用于调时间和和日期, 369–370, 369
 - 用于用户, 358–364, 359–360
 - LinuxMap 网站, 116
 - Linux PPC 项目, 927
 - LinuxWare 发行版, 21
 - 模块选项卡, 357, 358
 - Netscape Mail 窗口中的列表, 568, 568
-- listalias 命令, 871
+- `listalias` 命令, 871
 - 在 displaying-LiveWire 环境中, 734
 - 命令, 343, 871
 - 条目, 637
@@ -22428,8 +22984,8 @@ USB, 454
 - 键映射, 895
 - 可加载模块, 882
 - X 资源数据库, 297–298
-- loadkeys 命令, 871
-- LoadModule 指令, 768–769
+- `loadkeys` 命令, 871
+- `LoadModule` 指令, 768–769
 - 局域网 (Ser)
 - 本地 hosts 文件, 637, 646
 - 网络安全中的 LOCAL KEYWORD, 654
@@ -22444,14 +23000,14 @@ USB, 454
 - 锁定文件, 341–342
 - 目录, 590
 - 注销菜单, 150–151
-- logger 命令, 872
+- `logger` 命令, 872
 - 将用户登录组, 885
 - 逻辑块地址 (LBA), 63
 
 # 逻辑 HTML 文—mbadblocks 命令
 
 - 逻辑 HTML 文, 732
-- login 命令, 872
+- `login` 命令, 872
 - Login Manager 对话框, 234–235, 234–235
 - Login Manager 部分, 261
 - 登录字段, 360
@@ -22465,76 +23021,76 @@ USB, 454
 - 历史, 869
 - PPP, 523–525
 - 远程主机, 892
-- logname 命令, 872
+- `logname` 命令, 872
 - GNOME 面板注销按钮, 219
 - 注销选项, 232
-- logtrate 命令, 781, 882
+- `logtrate` 命令, 781, 882
 - 日志, 414–419
 - 在 Apache 中, 781
 - 消息级别, 415–418
 - 滚动, 417–419, 872
-- lokkit 工具, 707–709, 708
+- `lokkit` 工具, 707–709, 708
 - 外观选项, 242
 - 日志回设备, 645
 - 低电量关键部分, 260
 - 低水位警告部分, 260
-- lp 打印机队列, 437
-- lpd 程序, 873
-- lpd 队列, 351
-- lIq 命令, 873
-- Ipr 命令, 438, 595, 873–874
-- Irm 命令, 874
-- Ircfig 命令, 716
-- Iredir 命令, 686–687
-- Irp.Owcz.site, 719
+- `lp` 打印机队列, 437
+- `lpd` 程序, 873
+- `lpd` 队列, 351
+- `lIq` 命令, 873
+- `lpr` 命令, 438, 595, 873–874
+- `lrm` 命令, 874
+- `lrcfig` 命令, 716
+- `lredir` 命令, 686–687
+- `lRp.Owcz.site`, 719
 - 命令, 308–310, 874
-- Isdev 命令, 875
-- Ismod 命令, 472, 875
+- `lsdev` 命令, 875
+- `lsmod` 命令, 472, 875
 - lynx.browser.org 网站, 536, 560
-- lynxc.cfg 文件, 562
+- `lynxc.cfg` 文件, 562
 - Lynx Web 浏览器, 536, 559–560
 - 下载, 560
 - 图像, 562–563
-- fdisk 中的 m 命令, 81
+- `fdisk` 中的 m 命令, 81
 - 在 fax 中, 591, 593
 - 在内核配置中, 481, 887
-- m4 程序, 810
+- `m4` 程序, 810
 - Macintosh 系统, 926
 - 过滤器, 428–438, 430
 - mail.mail
 - Mail 和新闻部分, 550
-- mail 命令, 875
-- mail 服务器, 808–814
+- `mail` 命令, 875
+- `mail` 服务器, 808–814
 - Mail (SMTP) 端口, 706
 - 邮件传输代理 (MTAs), 808–814
 - 邮件用户代理 (MUAs), 808
 - 邮箱, 550–551
 - MAIL 指令, 813
 - 邮件列表, 832–833
-- mailq 命令, 876
-- mailto 命令, 876
+- `mailq` 命令, 876
+- `mailto` 命令, 876
 - 主服务器部分, 769–774
 - 主版本号, 473
-- make 命令
+- `make` 命令
 - 构建, 471
 - 重新编译内核, 471, 776
-- Makefile 文件, 471, 589, 589
-- man 页面, 182–183, 323–326, 324–326, 876
+- `Makefile` 文件, 471, 589, 589
+- `man` 页面, 182–183, 323–326, 324–326, 876
 - Mandrank 发行版, 825
 - manual.gimp.org 网站, 185
 - mars_nwe 程序, 672–673
 - 主引导记录, LILO 中, 62
 - Matched 类别, 214
 - Mattis, Peter, 184
-- mattrib 命令, 876–877
-- mbadblocks 命令, 877
+- `mattrib` 命令, 876–877
+- `mbadblocks` 命令, 877
 
 # 952 mcd 命令—部分
 
-- mcd 命令, 877
-- mcopy 命令, 877
-- model 命令, 878
-- deltree 命令, 878
+- `mcd` 命令, 877
+- `mcopy` 命令, 877
+- `model` 命令, 878
+- `deltree` 命令, 878
 - 防火墙用于, 705
 - 内存空, 860
 - 要求, 31–32
@@ -22553,21 +23109,21 @@ USB, 454
 - 消息启动, 852
 - e-mail。参见 e-mail
 - 系统日志中, 415–418
-- messages 命令, 878
+- `messages` 命令, 878
 - Meta 类别, 214
 - metalab.unc 网站, 376, 588
 - Metro Link 加载, 98
 - Metro-X 服务器, 99, 879
-- mformat 命令, 829
-- mget 命令, 669
-- mmgetty+sendfax 程序, 586
+- `mformat` 命令, 829
+- `mget` 命令, 669
+- `mmgetty+sendfax` 程序, 586
 - mice。参见
 - mice 文件, 453–454
 - Microlux 发行版, 818
 - Microsoft Windows 与 Windows, 93–96, 94–95
 - Midi 部分, 260
 - Mime 类型条, 210, 210
-- miniprocom 程序, 447–450–450
+- `miniprocom` 程序, 447–450–450
 - 最小化和最大化类别, 214
 - 小版本号, 473
 - MIPS HOWTO, 97
@@ -22577,18 +23133,18 @@ USB, 454
 - 杂杂标签卡, 205, 206
 - 混合器部分, 260
 - MiXViews 音频编辑器, 465
-- mkdir 命令, 342
+- `mkdir` 命令, 342
 - 在 Linux 中, 879
-- 在 smclient 中, 669
-- mkdosfs 命令, 879
-- mke2fs 命令, 879–880
-- mkfs 命令, 880
+- 在 `smclient` 中, 669
+- `mkdosfs` 命令, 879
+- `mke2fs` 命令, 879–880
+- `mkfs` 命令, 880
 - MkLinux 项目, 926
-- mkpasswd 命令, 881
-- mkswap 命令, 881
-- mlabel 命令, 881
-- mmd 命令, 881
-- mmove 命令, 881
+- `mkpasswd` 命令, 881
+- `mkswap` 命令, 881
+- `mlabel` 命令, 881
+- `mmd` 命令, 881
+- `mmove` 命令, 881
 - MNIS 发行版, 818–819
 - dmnt 目录, 370
 - Modelines 项, 284
@@ -22597,32 +23153,28 @@ USB, 454
 - Modern HOWTO, 450
 - Model 标签卡, 521
 
-
-
-
-
 # 修改日期—多桌面
 
 - 修改日期
 - 复制文件的修改日期，331, 333
-- touch 命令用于，342, 901
+- `touch` 命令用于，342, 901
 - 手动修改此调制解调器选项 (Modify This Modem Manually)，517
 - 修改 (modifying)。参见 changing；472, 882
-- modprobe 命令，
+- `modprobe` 命令，
 - 模块模块的内核配置选项，480–481
 - 模块部分 (Module section)，276–277
-- ModulePath 指令，273
+- `ModulePath` 指令，273
 - 模块 (modules)
 - 依赖关系在，851
 - 显示，875
-- 在 httpd.conf 中，768–769
+- 在 `httpd.conf` 中，768–769
 - 安装，867
 - 用于内核，471–473
 - 用于 Linuxconf，357, 358
 - 加载，882
 - 卸载，893
 - 模块文件，716
-- modules.conf 文件，439
+- `modules.conf` 文件，439
 - MONDO Pack，16
 - 监控目录 (Monitor director)，287
 - 监控部分 (Monitor section)，282–283
@@ -22632,11 +23184,11 @@ USB, 454
 - 同步范围用于，125–126, 129–131, 130–131, 137, 137, 282–283
 - 在 X Windows 配置中，124, 128–131
 - 在 X86Config 中，287
-- more 命令，310–311, 882
+- `more` 命令，310–311, 882
 - Mosaic Web 服务器，538, 538
 - Motif (dwm) 开发环境，111–113, 112
 - 摩托罗拉 680x 处理器，925
-- mount 命令，75–76, 651–652, 883
+- `mount` 命令，75–76, 651–652, 883
 - 挂载点字段 (Mount Point field)，653
 - 挂载点分区选项 (Mount Point partitioning option)，56
 - 挂载守护进程 (mount daemon)，648
@@ -22655,79 +23207,83 @@ USB, 454
 - 在 X Windows 配置中，124–125, 135–136
 - 在 X86Config 中，280–282
 - 鼠标部分 (Mouse section)，259
-- dousedev.o 模块，453
-- 苹果的移动选项 (Move option for apples)，155
+- `dousedev.o` 模块，453
+
+
+
+# 苹果的移动选项 (Move option for apples)，155
+
 - 移动 (moving)
 - GNOME 面板中的小组件，155
 - 文件 (files)
 - 在 GNOME 中，166
 - 在 KDE 中，244
-- 使用 mmove，881
-- 使用 mv，340–341, 884
+- 使用 `mmove`，881
+- 使用 `mv`，340–341, 884
 - 移动与缩放分类 (Moving and Resizing category)，214
 - MpegTV 播放 1.0，465
-- mput 命令，669
-- mrd 命令，883
-- mrmd 命令，884
+- `mput` 命令，669
+- `mrd` 命令，883
+- `mrmd` 命令，884
 - 分区的 MS-OS 模式，41
 - MTAs (邮件传输代理)，808–814
-- mtype 命令，884
+- `mtype` 命令，884
 - mUAs (邮件用户代理)，808
 - 多头服务器 (multi-headed servers)
-- 对加速 X 的支持，99
-- 对 Metro-X 的支持，99
+  - 对加速 X 的支持，99
+  - 对 Metro-X 的支持，99
 - 多媒体 (multimedia)
-- 音频 CD-ROM，464–464, 462
-- 在 GNOME 控制中心中，212, 212–213
-- sphone 系统，466
-- 声卡，458–462, 459–461
-- 音频编辑器，465
-- 音频播放器，465–466
-- 语音合成 (speech synthesis)
-- 视频/音频播放器，465–466
+  - 音频 CD-ROM，464–464, 462
+  - 在 GNOME 控制中心中，212, 212–213
+  - sphone 系统，466
+  - 声卡，458–462, 459–461
+  - 音频编辑器，465
+  - 音频播放器，465–466
+  - 语音合成 (speech synthesis)
+  - 视频/音频播放器，465–466
 - 多媒体菜单 (Multimedia menu)，151
 - 多个桌面，241
 
 # 多文件—网络接口
 
 - 多个文件 (multiple files)
-- 复制，332–333
-- 删除，338
-- 传真，592–593
-- 移动，340–341
+  - 复制，332–333
+  - 删除，338
+  - 传真，592–593
+  - 移动，340–341
 - 多语言发行版，823–827
 - 多分区，安装在，77–80
 - 多任务处理 (multitasking)，6–7
 - 多线程 (multithreaded)，7
-- mv 命令，340–341, 884
-- mwm (Motif 窗口管理器) 开发环境，111–113, 112
+- `mv` 命令，340–341, 884
+- `mwm` (Motif 窗口管理器) 开发环境，111–113, 112
 - 我的侧边栏目录页 (My Sidebar Directory page)，543
-- netdate 命令，370
+- `netdate` 命令，370
 - NetFax 程序，586
 - 网卡的子网掩码选项，632
 - 子网掩码 (netmasks)，502–503
 - Netscape 6，539, 539
-- 访问 Web 在，541–542, 542
-- 邮件中，566–567
-- 编写，569–574, 569–574
-- 配置用于，533–559, 557–559
-- 转发 (forwarding)，573–574, 574
-- IMAP 邮件服务器，552–553
-- 邮件邮箱 (mailboxes)，550–551
-- POP3 邮件服务器，552–553
-- 读取，567–569, 568
-- 回复，573–574, 573
-- 帮助在，549–550
-- 安装，539–541
-- 打开 Web 页面，545–546, 545–546
-- 打印 Web 页面，547–549, 547–548
-- 返回 Web 页面，546–547, 546–547
-- 侧边栏 (sidebars) 在，543–545, 543–545
+  - 访问 Web 在，541–542, 542
+  - 邮件中，566–567
+  - 编写，569–574, 569–574
+  - 配置用于，533–559, 557–559
+  - 转发 (forwarding)，573–574, 574
+  - IMAP 邮件服务器，552–553
+  - 邮件邮箱 (mailboxes)，550–551
+  - POP3 邮件服务器，552–553
+  - 读取，567–569, 568
+  - 回复，573–574, 573
+  - 帮助在，549–550
+  - 安装，539–541
+  - 打开 Web 页面，545–546, 545–546
+  - 打印 Web 页面，547–549, 547–548
+  - 返回 Web 页面，546–547, 546–547
+  - 侧边栏 (sidebars) 在，543–545, 543–545
 - Netscape Mail，568–569, 568
 - Netscape 插件 (Plugins)，262
 - Netscape Web 账户，553
-- netstat 命令，884–885
-- smbclient 中的 name 标志，668
+- `netstat` 命令，884–885
+- `smbclient` 中的 name 标志，668
 - 名称服务端口 (Name service)，506
 - 备份文件，336
 - 邮件，553–555, 554
@@ -22735,99 +23291,99 @@ USB, 454
 - Gimp 图像，188
 - 组 (groups)，401
 - 主机 (hosts)，665
-- nameserver 设置，645
+- `nameserver` 设置，645
 - LAN 的 nameservers，620, 635–636, 645–648
 - 查询，886
-- 在 resolv.conf 中，645
+- 在 `resolv.conf` 中，645
 - TCP/IP 中，505
 - 导航列表，385–386
-- 使用 less，312
-- nice，577–508
+- 使用 `less`，312
+- `nice`，577–508
 - NaviPress Web 服务器，734
 - NCP 队列，351
-- ncurses 程序，672–683
-- nice httpd Web 服务器，730–731
-- nice 包，484
+- `ncurses` 程序，672–683
+- `nice` `httpd` Web 服务器，730–731
+- `nice` 包，484
 - 网卡的 Net 设备选项，432
 - 网络地址转换 (network address translation)，714
 - 网络配置框 (network Configurator dialog box)，634–640, 635–641
-- network_direct.conf，719
+- `network_direct.conf`，719
 - 网络文件系统 (NFS)
-- 与防火墙，623
-- 作为 LAN 源，622–623, 622–623
-- 用于共享文件，652
+  - 与防火墙，623
+  - 作为 LAN 源，622–623, 622–623
+  - 用于共享文件，652
 - 网卡 (network interface cards)，619
-- 用于以太网，629–633, 630–631
-- 安装信息用于，38
-- 阻塞 (stalling)，629–633, 630–631
-- 模块用于，715–716
+  - 用于以太网，629–633, 630–631
+  - 安装信息用于，38
+  - 阻塞 (stalling)，629–633, 630–631
+  - 模块用于，715–716
 - 网络接口 (network interfaces)
-- 配置，866
-- 禁用，866
-- 启用，867
-- 用于以太网，638–640, 638–639
-- 收发器类型 (transceiver type)，867
+  - 配置，866
+  - 禁用，866
+  - 启用，867
+  - 用于以太网，638–640, 638–639
+  - 收发器类型 (transceiver type)，867
 
 # 网络掩码—打开
 
 - 子网掩码，620, 632
-- network-scripts 文件，439
+- `network-scripts` 文件，439
 - 路由器网络设置，716–719
 - Networking HOWTO，644
 - 网络选项，691，另另以太网
 - LAN (局域网)
-- 在安装中，623
-- 在 KDE 中，258
+  - 在安装中，623
+  - 在 KDE 中，258
 - Novell，672–683
 - 路由在，507–509, 507–508
 - 状态信息用于，884–885
 - TCP/IP 中，500–505
 - Windows
-- 在上面访问资源，667–672
-- 与共享资源，658–666
+  - 在上面访问资源，667–672
+  - 与共享资源，658–666
 - 新账户窗口，520, 520
 - 新消息图标，569
 - 新虚拟磁盘选项，690
-- newgrp 命令，885
+- `newgrp` 命令，885
 - 新闻侧边栏，544
 - 新闻滚动功能 (News Ticker feature)，259
 - 新闻组账户，553
 - 新组 (newsgroups)，35, 83–832
-- users 命令，885
+- `users` 命令，885
 - 基于 NeSTEP 的窗口管理器，104, 105
 - NFS (网络文件系统)
-- 与防火墙，649
-- 作为 LAN 源，622–623, 622–623
-- 用于共享文件，652
+  - 与防火墙，649
+  - 作为 LAN 源，622–623, 622–623
+  - 用于共享文件，652
 - NFS 卷规格对话框，652–653, 652
-- nfssd 守护进程，648
-- nisdomainname 命令，886
-- nmbd 文件，660
+- `nfssd` 守护进程，648
+- `nisdomainname` 命令，886
+- `nmbd` 文件，660
 - 无时钟选项，68
-- noipft 选项，526
+- `noipft` 选项，526
 - 非英语发行版，818–827
 - 非英语网站，834
 - 非 Intel 硬件
-- DEC Alpha 处理器，924
-- 嵌入系统，924
-- 信息源，834
-- MIPS 处理器，926
-- 摩托罗拉 680x 处理器，925
-- Power Macintosh，926–927
-- SPARC 处理器，927
+  - DEC Alpha 处理器，924
+  - 嵌入系统，924
+  - 信息源，834
+  - MIPS 处理器，926
+  - 摩托罗拉 680x 处理器，925
+  - Power Macintosh，926–927
+  - SPARC 处理器，927
 - 可调用配置选项，480–481
 - NoPM 指令，276
 - 启动时间 (Not at Boot)，653
 - 系统日志中的通知 (notice messages in system)，415
 - Novell 网络，672–683
 - Novell 打印队列，351
-- nslookup 命令，643, 886
-- ntp 命令，370
-- nsys 命令，649
+- `nslookup` 命令，643, 886
+- `ntp` 命令，370
+- `nsys` 命令，649
 - 符号 (#)
-- 导出 (exports)，650
-- 在 smb.conf 中，664
-- 在 X86Config 中，272
+  - 导出 (exports)，650
+  - 在 `smb.conf` 中，664
+  - 在 X86Config 中，272
 - 开放 (open extension)，473, 634
 - 对象代码 (object code)，473
 - 离线时间 (off time)，276
@@ -22841,7 +23397,7 @@ USB, 454
 - Open Web 对话框，545, 446
 - Open With 对话框，245, 263, 264
 - OpenGL 语言，98
-- 在 pine 中打开列表，577, 508
+- 在 `pine` 中打开列表，577, 508
 - Gimp 图像，186, 186
 - 远程系统上的 shells，893
 - Web 页面，545, 545–561, 561
@@ -22849,13 +23405,13 @@ USB, 454
 # OpenLinux 发行版—论文
 
 - OpenLinux 发行版，18–19
-- OpenLook 窗口管理器 (olwm)，103, 104
+- OpenLook 窗口管理器 (`olwm`)，103, 104
 - Opera 浏览器，537, 537
 - 操作系统，5–6
 - ，8–9
 - 在 VMware 上安装，689–692, 690–691
 - 多任务处理，6–7
-- opt 目录，57, 79
+- `opt` 目录，57, 79
 - 选项方向 (Option direction)，277, 286
 - 选项标志 (options flags for)，173–174
 - 指令 (directives)，771
@@ -22868,139 +23424,175 @@ USB, 454
 - 所有权更改，845, 847
 - 复制的文件，333–335
 - 删除的用户文件，400–401
-- 搜索文件， 313
+- 搜索文件，313
 - 面板属性对话框 (Panel Properties dialog box)，153, 154, 221–222, 221–222
 - GNOME 中的面板。参见 GNOME 桌面环境
 - KDE 桌面上，233, 239, 257
 - AP 认证，523, 527
-- ap-secrets 文件，527
+- `ap-secrets` 文件，527
 - 打印纸，435
 - 大小，354
 - 并行端口，434–435, 441
 - 奇偶系统 (parity systems)，449
-- parse_form 例程，789–791
+- `parse_form` 例程，789–791
 - 分区，42–55, 59–60
-- 添加，59–60
-- 删除，61, 84
-- 编辑，60–61
-- 用于 fdisk，80–85, 81, 856
-- 格式化，62
-- 空闲空间，851
-- 多分区，安装在，77–80
-- 重置，61
+  - 添加，59–60
+  - 删除，61, 84
+  - 编辑，60–61
+  - 用于 `fdisk`，80–85, 81, 856
+  - 格式化，62
+  - 空闲空间，851
+  - 多分区，安装在，77–80
+  - 重置，61
 - 分区部分 (Partitions section)，255
-- p shell，376
+- `p` shell，376
 - 密码命令，399–400, 886
 - 密码文件，397
 - 密码文件，编辑，906
 - 密码 (passwords)
-- fdisk 中的 p 命令，82
-- lpr 中的 -P 标志，438
+  - `fdisk` 中的 `p` 命令，82
+  - `lpr` 中的 `-P` 标志，438
 - 软件包 (packages)，21–22
-- 用于 LAN，616–617
-- 选择，66–67, 66
+  - 用于 LAN，616–617
+  - 选择，66–67, 66
 - 数据包过滤防火墙，701, 710–711, 355
 - 数据包的光源路由，901
 - 页面大小选项 (Page Size option)，354
 - 面板菜单，150
 - 添加面板菜单 (Add To Panel menu)
-- Drawer 命令，219
-- 启动器命令 (Launcher command)，228
-- 注销按钮命令 (Log Out Button command)，329
-- 面板对象标签 (Panel Objects tab)，205
+  - Drawer 命令，219
+  - 启动器命令 (Launcher command)，228
+  - 注销按钮命令 (Log Out Button command)，329
+  - 面板对象标签 (Panel Objects tab)，205
 - 在 Apache 中，776–777
 - 更改，399–400, 886, 906
 - 检查，888–889
 - 复制
-- 在加密文件中，849
-- 生成，280, 860
-- 组，402, 860
-- 在 KDE 中，258–259
-- 在 AP 认证中，523, 527
-- 在 PPP 登录中，524–525
-- 恢复，889
-- 屏幕保护程序，206
-- 安全，698–699
-- 影子 (shadow)，65
-- 用于 smclient，668
-- 用户，361–362, 323, 399–400, 806
-
-
-
-
+  - 在加密文件中，849
+  - 生成，280, 860
+  - 组，402, 860
+  - 在 KDE 中，258–259
+  - 在 AP 认证中，523, 527
+  - 在 PPP 登录中，524–525
+- 密码
+  - 恢复，889
+  - 屏幕保护程序，206
+  - 安全，698–699
+  - 影子 (shadow)，65
+  - 用于 `smclient`，668
+  - 用户，361–362, 323, 399–400, 806
 
 # paste 命令—PowerPC 处理器 957
 
-paste 命令, 886
-$PATH 环境变量, 379
-path 参数, 662
-pathchk 命令, 887
+`paste` 命令, 886
+
+`$PATH` 环境变量, 379
+
+`path` 参数, 662
+
+`pathchk` 命令, 887
+
 paths
 - 检查, 887
 - 用于命令, 305
 - 显示, 909
 - 用于模块, 273
-- 在 smb.conf 中, 662
-- 模式
-- 使用 egrep, 855–856
+- 在 `smb.conf` 中, 662
+
+模式
+- 使用 `egrep`, 855–856
 - 扩展, 389–393
-- 使用 fgrep, 856–857
-- 使用 egrep, 315–317, 860–861
-- 使用 zgrep, 909–910
-- 使用 zipgrep, 910
+- 使用 `fgrep`, 856–857
+- 使用 `egrep`, 315–317, 860–861
+- 使用 `zgrep`, 909–910
+- 使用 `zipgrep`, 910
 
 PCI（外设互连总）设备, 423
+
 PCI 章节, 255
+
 PCI（打印机控制语言）, 425
+
 PCMCIA 章节, 255
-pcmciadd.img 文件, 41
-pdksh shell, 376
+
+`pcmciadd.img` 文件, 41
+
+`pdksh` shell, 376
+
 点对点文件, 605–606
-作业调度中的百分号 (%), 411
+
+作业调度中的百分号 (%)，411
+
 外设互连总线 (PCI) 设备, 423
+
 外设设备章节, 213–215, 214–215
+
 Perl 语言, 228–727
+
 权限
 - 更改, 846
 - 针对拷贝的文件, 334
-- 使用 find, 313
+- 使用 `find`, 313
+
 个性化章节, 255
+
 PGP 加密, 699
+
 电话系统, 666
+
 物理安全, 699
+
 选择颜色窗口, 204, 204
-pico 编辑器, 581–582
-pidof 命令, 887
+
+`pico` 编辑器, 581–582
+
+`pidof` 命令, 887
+
 PIDs（进程标识符）, 888
-pine 邮件程序, 574–577, 576–577
+
+`pine` 邮件程序, 574–577, 576–577
 - 撰写邮件, 579–581, 579–581
 - 文件夹列表, 577, 577
 - 转发邮件, 582, 583
 - 消息索引, 577–578, 577–579
 - 回复邮件, 582, 583
-ping 命令, 641–443, 887
+
+`ping` 命令, 641–443, 887
+
 管道符
-- 使用 grep, 317
-- 使用 more, 311
+- 使用 `grep`, 317
+- 使用 `more`, 311
+
 Pixmap 背景, 221–222
+
 放置类别, 214
+
 纯文本提示符, 523–526
+
 平台支持, 222
+
 播放列表, 463–464, 463–464
+
 即插即用, 422–424, 438–446
+
 Gimp 插件, 185
+
 点对点协议 (PPP), 512–513
 - 连接至
-- 图形化, 515–522, 516–521
-- 手动, 522–529
+  - 图形化, 515–522, 516–521
+  - 手动, 522–529
 - 安装, 513–514
 - 在内核中, 513–514
+
 XF86Config 中的指针, 280–282
+
 PO3 邮件服务器, 506, 551–552, 555–556
+
 端口项, 769
+
 端口, 440–443
 - 用于防火墙, 703–707
-- 在 httpd.conf 中, 769
+- 在 `httpd.conf` 中, 769
 - 用于调制解调器, 368, 444
 - 用于网络接口卡, 632
 - 以及即插即用, 422–423
@@ -23008,44 +23600,69 @@ PO3 邮件服务器, 506, 551–552, 555–556
 - 用于声卡, 459–460
 - 状态, 897
 - 在 TCP/IP 中, 506
+
 葡萄牙语发行版, 821
+
 PostScript 打印机, 352, 425
+
 井号 (#)
-- 在 exports 文件中, 650
-- 在 smb.conf 中, 664
+- 在 `exports` 文件中, 650
+- 在 `smb.conf` 中, 664
 - 在 XF86Config 中, 272
+
 电源控制章节, 260
+
 Power Macintosh, 926–927
+
 电源管理, 207
+
 PowerPC 处理器, 927
 
 # PPP（点对点协议)—提示符
 
 PPP（点对点协议）, 512–513
 - 连接至
-- 图形化, 515–522, 516–521
-- 手动, 522–529
+  - 图形化, 515–522, 516–521
+  - 手动, 522–529
 - 安装, 514–515
 - 在内核中, 513–514
-pppd 程序, 514, 522–528
-ppatconf 命令, 888
+
+`pppd` 程序, 514, 522–528
+
+`ppatconf` 命令, 888
+
 偏好菜单, 242
+
 保留大小参数, 662
+
 主 DNS 服务器, 621
+
 网络接口卡的主主机名 + 域名选项, 631
+
 打印 A4 Postscript 测试页, 354
+
 打印 ASCII 测试页, 354
+
 打印命令, 547
+
 打印对话框, 547–549, 547–548
+
 打印文件命令, 670
+
 打印 Postscript 测试页, 354
+
 打印服务器, 606
+
 可打印参数, 662
-printconfig.file, 349, 426–427, 436–437
-- 在 smb.conf 中, 662
-- 在 smb 中, 670–671
-printconfig.local 文件, 349
+
+`printconfig.file`, 349, 426–427, 436–437
+- 在 `smb.conf` 中, 662
+- 在 `smb` 中, 670–671
+
+`printconfig.local` 文件, 349
+
 打印名称参数, 660
+
 打印实用程序, 23, 348–349
 - 添加打印机, 349–350, 350
 - 替代方案, 355
@@ -23053,7 +23670,9 @@ printconfig.local 文件, 349
 - 用于管理打印机, 352
 - 队列设置, 350–352, 350
 - 测试, 354
+
 打印语言 (PCL), 425
+
 打印队列
 - 在 APS 过滤器系统中, 437–438
 - 删除作业, 874
@@ -23062,895 +23681,1481 @@ printconfig.local 文件, 349
 - 远程, 670
 - 设置, 350–352, 350
 - 状态, 873
+
 打印
 - 配置, 348–349, 349–350
 - 添加打印机, 349–350, 350
 - 驱动程序, 352–354, 352–353
 - 队列设置, 350–352, 350
 - 测试, 354
+
+
+
 - 过滤器, 428–438, 430–434
-printconfig file, 426–427
-- 在 smb.conf 中, 662–663, 665
-- 用于 smbclient, 670
+
+`printconfig` file, 426–427
+
+- 在 `smb.conf` 中, 662–663, 665
+
+- 用于 `smbclient`, 670
+
 - 支持, 425–426
+
 打印机章节, 662–663, 665
+
 - 标记, 597
+
 - 文件, 873–874
+
 - 组, 862
+
 - Web 页面, 547–549, 547–548
-printmode 参数, 660
-printmode 命令, 670
+
+`printmode` 参数, 660
+
+`printmode` 命令, 670
+
 打印工具, 355
+
 - 用于 优先级章节, 207
+
 - 私有访问，共享目录, 664
-- 在 smb.conf 中的私有章节, 665–666
+
+- 在 `smb.conf` 中的私有章节, 665–666
+
 进程标识 (PIDs), 388, 887
+
 进程
+
 - 杀死, 868–869
+
 - 报告, 900
+
 - 状态, 888
+
 处理器章节, 255
+
 处理器
+
 - 需求, 31–32
+
 - 用于路由器, 712–713
+
 - 在 XFree 中, 98
+
 专业认证来源, 831
+
 编程语言应用, 8
+
 程序菜单, 149, 151
-prompt 命令, 669
+
+`prompt` 命令, 669
+
 提示符
+
 - 登录, 407–408, 523–526
+
 - 重置, 847
-smbclient, 669
+
+`smbclient`, 669
 
 # properties—读取邮件 959
 
 属性
+
 - 小组件, 155
+
 - 文件, 245–246, 246
+
 - 在 GNOME 面板中, 221–222, 221–222
+
 属性对话框, 245–246, 246
+
 等宽字体, 180, 181
+
 协议指令
+
 - 用于键盘, 279
+
 - 用于 鼠标, 281
+
 代理章节, 262
+
 代理防火墙, 702
+
 代理服务器, 624
-ps 命令, 888
+
+`ps` 命令, 888
+
 - 用于后台作业, 388
-- 用于 pppd, 528
+
+- 用于 `pppd`, 528
+
 - 公共访问，用于共享目录, 663
+
 公有域软件, 9
+
 公共参数, 662
-smb.conf 中的公有章节, 663, 665
-put 命令, 669
-pck 命令, 888–889
-pwconv 命令, 889
-pwd 命令, 307–308, 889
-punconv 命令, 889
+
+`smb.conf` 中的公有章节, 663, 665
+
+`put` 命令, 669
+
+`pck` 命令, 888–889
+
+`pwconv` 命令, 889
+
+`pwd` 命令, 307–308, 889
+
+`punconv` 命令, 889
+
 Python 语言, 228
 
 队列
+
 - 邮件, 572–573, 572–573, 876
+
 - 传真, 593–595
+
 打印机
+
 - 在 APS 过滤器系统中, 437–438
+
 - 删除作业, 874
+
 - 打印到, 548–549
+
 - 远程, 670
+
 - 设置, 350–352, 350
+
 - 状态, 873
+
 调度, 842
+
 快速浏览器, 245–249
+
 静默时间, 208, 208
-smclient 中的 quit 命令, 669–670
+
+`smclient` 中的 `quit` 命令, 669–670
+
 图形界面中的“不保存退出”选项, 491
-quota 命令, 889–890
-quoteck 命令, 890
-quotaoff 命令, 890
-quotan 命令, 890
+
+`quota` 命令, 889–890
+
+`quoteck` 命令, 890
+
+`quotaoff` 命令, 890
+
+`quotan` 命令, 890
+
 引号, 377
 
 # R
 
-q 命令在 fdisk 中, 895
-qmail MTA, 810
+`q` 命令在 `fdisk` 中, 895
+
+`qmail` MTA, 810
+
 Qt 工具包, 227–228
+
 查询
+
 - DNS 服务器, 886
+
 - 主机, 852–853
+
 问号 (?)
+
 - 基于字符的界面, 488
-- 在 fdisk 中, 881
+
+- 在 `fdisk` 中, 881
+
 - 文件名扩展, 344
-- 在 less 中, 332
+
+- 在 `less` 中, 332
+
 - 模式扩展, 390
-queue 命令, 670
 
-r 标记
-- 在 crontab 中, 413
-- 在 rm 中, 338–339
+`queue` 命令, 670
+
+`r` 标记
+
+- 在 `crontab` 中, 413
+
+- 在 `rm` 中, 338–339
+
 - 用户用户, 400
-- 在 cp 中, 333
+
+- 在 `cp` 中, 333
+
 RAM 磁盘, 714
+
 RAMDAC, 36
+
 范围, 410
+
 Raw Print 驱动, 352
-raw print 队列, 437–438
-printconfig file, 426–427
-- 在 smb.conf 中, 662–663, 665
-- 用于 smbclient, 670
+
+`raw print` 队列, 437–438
+
+`printconfig` file, 426–427
+
+- 在 `smb.conf` 中, 662–663, 665
+
+- 用于 `smbclient`, 670
+
 - 支持, 425–426
+
 打印机章节, 662–663, 665
+
 - 标记, 597
+
 - 文件, 873–874
+
 - 组, 862
+
 - Web 页面, 547–549, 547–548
-printmode 参数, 660
-printmode 命令, 670
+
+`printmode` 参数, 660
+
+`printmode` 命令, 670
+
 打印工具, 355
+
 - 用于 优先级章节, 207
+
 - 私有访问，共享目录, 664
-- 在 smb.conf 中的私有章节, 665–666
+
+- 在 `smb.conf` 中的私有章节, 665–666
+
 进程标识符 (PIDs), 388, 887
+
 进程
+
 - 杀死, 868–869
+
 - 报告, 900
+
 - 状态, 888
+
 处理器章节, 255
+
 处理器
+
 - 需求, 31–32
+
 - 用于路由器, 712–713
+
 - 在 XFree 中, 98
+
 专业认证来源, 831
+
 编程语言应用, 8
+
 程序菜单, 149, 151
-prompt 命令, 669
+
+`prompt` 命令, 669
+
 提示符
+
 - 登录, 407–408, 523–526
+
 - 重置, 847
-smbclient, 669
 
-# properties—读取邮件 959
-
-属性
-- 小组件, 155
-- 文件, 245–246, 246
-- 在 GNOME 面板中, 221–222, 221–222
-属性对话框, 245–246, 246
-等宽字体, 180, 181
-协议指令
-- 用于键盘, 279
-- 用于 鼠标, 281
-代理章节, 262
-代理防火墙, 702
-代理服务器, 624
-ps 命令, 888
-- 用于后台作业, 388
-- 用于 pppd, 528
-- 公共访问，用于共享目录, 663
-公有域软件, 9
-公共参数, 662
-smb.conf 中的公有章节, 663, 665
-put 命令, 669
-pck 命令, 888–889
-pwconv 命令, 889
-pwd 命令, 307–308, 889
-punconv 命令, 889
-Python 语言, 228
-
-队列
-- 邮件, 572–573, 572–573, 876
-- 传真, 593–595
-打印机
-- 在 APS 过滤器系统中, 437–438
-- 删除作业, 874
-- 打印到, 548–549
-- 远程, 670
-- 设置, 350–352, 350
-- 状态, 873
-调度, 842
-快速浏览器, 245–249
-静默时间, 208, 208
-smclient 中的 quit 命令, 669–670
-图形界面中的“不保存退出”选项, 491
-quota 命令, 889–890
-quoteck 命令, 890
-quotaoff 命令, 890
-quotan 命令, 890
-引号, 377
-
-# R
-
-q 命令在 fdisk 中, 895
-qmail MTA, 810
-Qt 工具包, 227–228
-查询
-- DNS 服务器, 886
-- 主机, 852–853
-问号 (?)
-- 基于字符的界面, 488
-- 在 fdisk 中, 881
-- 文件名扩展, 344
-- 在 less 中, 332
-- 模式扩展, 390
-queue 命令, 670
-
-r 标记
-- 在 crontab 中, 413
-- 在 rm 中, 338–339
-- 用户用户, 400
-- 在 cp 中, 333
-RAM 磁盘, 714
-RAMDAC, 36
-范围, 410
-Raw Print 驱动, 352
-raw print 队列, 437–438
-printconfig file, 426–427
-- 在 smb.conf 中, 662–633, 665
-- 用于 smbclient, 670
-- 支持, 425–426
-打印机章节, 662–663, 665
-- 标记, 597
-- 文件, 873–874
-- 组, 862
-- Web 页面, 547–549, 547–548
-printmode 参数, 660
-printmode 命令, 670
-打印工具, 355
-- 用于 优先级章节, 207
-- 私有访问，共享目录, 664
-- 在 smb.conf 中的私有章节, 665–666
-进程标识符 (PIDs), 388, 887
-进程
-- 杀死, 868–869
-- 报告, 900
-- 状态, 888
-处理器章节, 255
-处理器
-- 需求, 31–32
-- 用于路由器, 712–713
-- 在 XFree 中, 98
-专业认证来源, 831
-编程语言应用, 8
-程序菜单, 149, 151
-prompt 命令, 669
-提示符
-- 登录, 407–408, 523–526
-- 重置, 847
-smbclient, 669
+`smbclient`, 669
 
 # RealPlayer sound player—routes and routing tables
 
 in pine, 578, 779
+
 RealPlayer sound player, 466
-reboot in installation, 69–70
+
+`reboot` in installation, 69–70
+
 building kernel, 471, 473–474, 492–493
-recompiling kernel, 471, 473–474, 492–493
-recurse command, 669
+
+`recompiling` kernel, 471, 473–474, 492–493
+
+`recurse` command, 669
+
 Red Directory field, 624
+
 redirecting
+
 - directories, 686–687
+
 I/O, 379–380
+
 Redundant Arrays of Inexpensive Disks (RAID), 431
+
 Registered Ports, 703
+
 regular expressions
-- 使用 egrep, 855–886
-- 使用 alias, 871
+
+- 使用 `egrep`, 855–886
+
+- 使用 `alias`, 871
+
 Re Patrick, 35
+
 remote copying, 891
+
 remote directories, 609–652, 652
+
 remote distributions of files, 891
+
 remote hosts, logins to, 992
+
 remote systems and resources
+
 accessing, 651–652, 652
+
 mailboxes, 550–551
+
 shell on, 893
+
 status of, 893
+
 Remove From Panel, 155
+
 removing deleting
+
 renaming files, 340–341, 881, 884
+
 repeat rate, keyboard, 279, 868
+
 Replace dialog box, 195
+
 reply addresses, 558
+
 Reply button, 573
+
 Reply to All Recipients option, 582
+
 replying to e-mail messages
+
 - 在 Netscape, 573–574, 573
+
 - 在 pine, 582, 583
-repquota command, 892
+
+`repquota` command, 892
+
 Requested field for partitioning, 58
-require directive, 779, 803
+
+`require` directive, 779, 803
+
 Render Postgres option, 354
+
 Rescan buffer, 162
+
 resetting partitions, 61
+
 resolution
+
 - 在文件, 591, 593
+
 - 在 Windows配置, 133, 139
-resolv.conf 文件, 528, 645–646
+
+`resolv.conf` 文件, 528, 645–646
+
 resources, Linux, 830–835
+
 Restore Session When Logging In Next Time, 232
-return_html routine, 792–794
+
+`return_html` routine, 792–794
+
 returning to Web pages, 546, 546–547
+
 reverse-polish notation counters, 850
-rgb.txt 文件, 174
-RgbPath目录, 273
+
+`rgb.txt` 文件, 174
+
+`RgbPath`目录, 273
+
 rich headers, 580, 580
+
 RightAlt directive, 279
+
 RightCtl directive, 279
+
 login admin command, 892
-rm 命令, 337–338, 892
-rmdir 命令, 343
+
+`rm` 命令, 337–338, 892
+
+`rmdir` 命令, 343
+
 in Linux, 892
+
 is smclient, 669
-rmmod 命令, 472, 893
+
+`rmmod` 命令, 472, 893
+
 Rock Ridge extensions, 175
-/root directory, 577
+
+`/root` directory, 577
+
 Root Directory option, 249
+
 root partitions, 60
+
 root users
+
 - 用于命令行界面, 481
+
 - 在 Linuxconf 中, 356
+
 - 在 NFS 系统中, 652
-- 用于 su, 307
-- 用于 x86config, 131
-rotelogs 实用程序, 781
+
+- 用于 `su`, 307
+
+- 用于 `x86config`, 131
+
+`rotelogs` 实用程序, 781
+
 rotating logs, 417–419, 781, 872
-route 命令, 893
-route add 命令, 647
+
+`route` 命令, 893
+
+`route add` 命令, 647
+
 routers, 609–612, 610–611
+
 configuring, 716–719
+
 trying, 713, 711
+
 network card modules for, 715–716
+
 network settings for, 716–719
+
 operating environments for, 713–714
+
 s security for, 709–710, 719
+
 starting, 714–715
-
-
-
-
 
 ## RP3 工具—搜索
 
 - 编辑, 893
+
 - 另存工作簿对话框, 192, 192
+
 - 保存
+
   - 局域网 (LANs), 639–640, 640–641, 647
+
   - PPP 连接, 526
+
 - 磁盘缓存, 898
+
 - 状态信息, 884–885
+
 - 传真, 596
+
 - RP3 工具, 515–519, 516–519
-- gedit 中的文件, 194
-- rpc.mount 进程, 648
+
+- `gedit` 中的文件, 194
+
+- `rpc.mount` 进程, 648
+
 - Gimp 图像, 186–187, 187
-- rpc.nfs 进程, 648
+
+- `rpc.nfs` 进程, 648
+
 - Linuxconf 设置, 367, 367
-- rpm 扩展, 118
+
+- `rpm` 扩展, 118
+
 - 路由器设置, 720
-- rpm 程序, 216–117, 475–476
+
+- `rpm` 程序, 216–117, 475–476
+
 - Sawfish 窗口管理器, 108, 108, 215–216, 217
-- rsh 命令, 893
-- /sbin 目录, 75
+
+- `rsh` 命令, 893
+
+- `/sbin` 目录, 75
+
 - 在终端运行选项, 220
-- sbclient 文件, 660
+
+- `sbclient` 文件, 660
+
 - 运行级别, 406
+
 - SC/xspace 文件导入位置, 192
+
 - 显示, 894
+
 - 可缩放壁纸选项, 236–237
+
 - 设置, 845–846
+
 - 扫描码到键码映射表, 895
+
 - 运行菜单, 149, 150
+
 - 调度任务
+
   - 运行程序对话框, 149, 150
-  - 使用 at, 841
+
+  - 使用 `at`, 841
+
   - 配置向导选项, 869
-  - 使用 batch, 842–843
-- runlevel 命令, 894
-- 配合 crond 和 coulomb, 409–413, 813
-- rup 命令, 893
+
+  - 使用 `batch`, 842–843
+
+- `runlevel` 命令, 894
+
+- 配合 `crond` 和 `coulomb`, 409–413, 813
+
+- `rup` 命令, 893
+
 - 科学计算器, 198
-- rust 命令, 894
-- scopes.real.com, 466
+
+- `rust` 命令, 894
+
+- `scopes.real.com`, 466
+
 - 俄罗斯发行版, 222
+
 - 屏幕, 清除, 289
+
 - Screen 指令, 289
-- rwho 命令, 894
-- rwhod 命令, 895
+
+- `rwho` 命令, 894
+
+- `rwhod` 命令, 895
+
 - 屏幕保护程序, 206–207, 256, 257
 
 ## S
 
-- cp 中的 -S 标志, 336–337
+- `cp` 中的 `-S` 标志, 336–337
+
 - Screen 章节, 286–287
-- minicom 中的 -s 标志, 447
+
+- `minicom` 中的 `-s` 标志, 447
+
 - 截图对话框, 190–190, 189
+
 - S.U.E. Linux 发行版, 190–20, 826
+
 - Sversaversaver, 257, 257
+
 - ScriptAlias, 773
+
 - Samba, 658
+
 - 脚本语言, 727–728
+
 - 互联网连接脚本, 529–531
+
   - 配置, 660–666
+
   - 安装, 658–660
+
   - 运行, 666
+
 - ScrollLock 指令, 279
+
 - SCSI 适配器要求, 33–34
+
 - SCSI 章节, 255
-- samba-client-package, 659
+
+- `samba-client-package`, 659
+
 - Netscape 6 中的搜索字段, 545, 545
-- samba-common-package, 659
-- search.netscape.com, 543
+
+- `samba-common-package`, 659
+
+- `search.netscape.com`, 543
+
 - Samba 状态章节, 255
+
 - 搜索侧栏, 543, 543
+
 - SampleRate 指令, 281
+
 - 搜索
+
   - 卫星模式, 452
+
   - 使用 AOLServer, 734
+
   - 保存并退出选项, 491
+
   - 在命令历史列表中, 385–386
+
   - 将配置保存到备用文件, 488
-  - 使用 egrep, 855–886
-  - 使用 find, 313–314, 857–859
+
+  - 使用 `egrep`, 855–886
+
+  - 使用 `find`, 313–314, 857–859
+
   - 保存图像对话框, 187, 188
-  - 在 gedit 中, 194–195, 195
+
+  - 在 `gedit` 中, 194–195, 195
+
   - 在 GNOME 中, 166–167, 166–167
-  - 使用 grep, 315–317, 860–861
-  - 使用 less, 314, 820
-  - 使用 locate, 314–315
-  - 使用 more, 311, 882
+
+  - 使用 `grep`, 315–317, 860–861
+
+  - 使用 `less`, 314, 820
+
+  - 使用 `locate`, 314–315
+
+  - 使用 `more`, 311, 882
+
   - 在 Netscape 6 中, 543, 543
+
   - 进程 ID, 887
+
   - 使用 whereas, 315
+
   - 使用 W, 732
-  - 使用 zgrep, 909–910
-  - 使用 zipgrep, 910
-- seawall.sourceforge.net 网站, 719
+
+  - 使用 `zgrep`, 909–910
+
+  - 使用 `zipgrep`, 910
+
+- `seawall.sourceforge.net` 网站, 719
+
 - 备用 DNS 服务器, 621
+
 - 秒延迟设置, 190
+
 - X86Config 中的章节, 271–272
+
 - Sections 菜单, 320, 325
+
 - 扇区, 磁盘, 38
+
 - Secure Shell (SSH) 端口, 706
+
 - Secure Socks Layer (SSL) 支持
-  - 在 FastTrack, 734
-  - 在 Zeus, 735
-  - 安全
-  - 在 CGI, 728
-  - 防火墙, 701–709, 703
-  - 在 httpd.conf, 769–770
-  - 在 Java, 735
-  - 网络, 653–654, 699–702
-  - 路由器, 709–710, 719
-  - 在 smb.conf, 660
-  - 单机系统, 698–699
-  - 使用 Stronghold, 733
-  - 在 Zeus, 735
-- Security HOWTO, 702
+
+
+
+- 在 `FastTrack`, 734
+
+- 在 `Zeus`, 735
+
+- 安全
+
+- 在 `CGI`, 728
+
+- 防火墙, 701–709, 703
+
+- 在 `httpd.conf`, 769–770
+
+- 在 `Java`, 735
+
+- 网络, 653–654, 699–702
+
+- 路由器, 709–710, 719
+
+- 在 `smb.conf`, 660
+
+- 单机系统, 698–699
+
+- 使用 `Stronghold`, 733
+
+- 在 `Zeus`, 735
+
+- `Security HOWTO`, 702
+
 - 安全参数, 660
-- Select 按钮, 485
+
+- `Select` 按钮, 485
+
 - 颜色对话框, 235, 236
-- Select Individual Packages, 66
+
+- `Select Individual Packages`, 66
+
 - 字体对话框, 235
+
 - 调制调器对话框, 516
+
 - 选择
+
   - 邮件, 578
+
   - 软件包, 66–67
-  - 分号 () 在 smb.conf, 664
-  - 使用 EOT 选项, 354
-  - 使用 Later 命令, 572
-  - 使用 Unsent 命令, 572
-  - 使用 Windows 选项, 158
+
+  - 分号 `()` 在 `smb.conf`, 664
+
+  - 使用 `EOT` 选项, 354
+
+  - 使用 `Later` 命令, 572
+
+  - 使用 `Unsent` 命令, 572
+
+  - 使用 `Windows` 选项, 158
+
 - 发送
+
   - 邮件, 572, 875–876
+
   - 传真, 590–592
-  - sendmail.cf 文件, 810–811, 813
-  - sendmail 邮件系统, 551
-  - sendmail MTA, 809–814
-  - Sent 文件夹, 568
-- 串口设备 HOWTO, 445
+
+  - `sendmail.cf` 文件, 810–811, 813
+
+  - `sendmail` 邮件系统, 551
+
+  - `sendmail` `MTA`, 809–814
+
+  - `Sent` 文件夹, 568
+
+- 串口设备 `HOWTO`, 445
+
   - 模型, 441–442, 444, 447–448
+
   - 打印, 434–435
-- server 字段, 653
-- server 参数, 661
-- 服务器解析的 HTML, 774
+
+- `server` 字段, 653
+
+- `server` 参数, 661
+
+- 服务器解析的 `HTML`, 774
+
 - 服务器端包含, 734
+
 - 服务器脚本, 730
-- ServerAdmin 条目, 770
-- ServerFlags 章节, 274–276
-- ServerLayout 子章节, 288–289
-- ServerName 条目, 770
-- ServerRoot 条目, 768
+
+- `ServerAdmin` 条目, 770
+
+- `ServerFlags` 章节, 274–276
+
+- `ServerLayout` 子章节, 288–289
+
+- `ServerName` 条目, 770
+
+- `ServerRoot` 条目, 768
+
 - 服务器
+
   - 应用, 608–609
+
   - 数据库, 606–607
+
   - 文件, 604
-  - 在 httpd.conf 中, 768
+
+  - 在 `httpd.conf` 中, 768
+
   - 内网, 607–608
+
   - 打印, 606
-  - Web 服务器; Web 服务器
-  - 在 Windows 中, 96–100, 99, 128
-- ServerType 条目, 768
+
+  - `Web` 服务器; `Web` 服务器
+
+  - 在 `Windows` 中, 96–100, 99, 128
+
+- `ServerType` 条目, 768
+
 - 纸, 354
-- xterm 窗口, 176–178, 177–178
+
+- `xterm` 窗口, 176–178, 177–178
+
 - 服务
-  - GNOME 面板, 153
-  - 在 TCP/IP 中, 506
+
+  - `GNOME` 面板, 153
+
+  - 在 `TCP/IP` 中, 506
+
   - 文件, 666
-- Services 菜单, 649
-- Skip X 配置 选项, 68
-- Slackware 发行版, 17–18
-- 斜杠 (/)
+
+- `Services` 菜单, 649
+
+- `Skip X` 配置 选项, 68
+
+- `Slackware` 发行版, 17–18
+
+- 斜杠 `/`
+
   - 目录, 57
-- Sessions 标签, 237
-- setclock 命令, 895
-- setkeycodes 命令, 895
-- GNOME 中的设置菜单, 151, 202
-- sh shell, 374–375
-- smalta, 809
-- smb.conf 文件, 660–666
-- smb restart 命令, 666
-- smb Share Queue, 351
-- smb start 命令, 666
-- smb stop 命令, 666
-- shadow 密码, 65, 889
+
+- `Sessions` 标签, 237
+
+- `setclock` 命令, 895
+
+- `setkeycodes` 命令, 895
+
+- `GNOME` 中的设置菜单, 151, 202
+
+- `sh` `shell`, 374–375
+
+- `smalta`, 809
+
+- `smb.conf` 文件, 660–666
+
+- `smb restart` 命令, 666
+
+- `smb Share Queue`, 351
+
+- `smb start` 命令, 666
+
+- `smb stop` 命令, 666
+
+- `shadow` 密码, 65, 889
+
 - 队列共享名称, 351
+
 - 共享库依赖, 869–870
+
 - 文件
-  - smbclient 程序, 667–670
-  - smbd 文件, 659
-  - smbfs 文件, 671–672
-  - smbbmount 程序, 672
-  - smbprint 脚本, 670–671
-- sMP (对称多处理), 23
-- sSMTP (简单邮件传输协议), 506, 808
-- smtpTP 服务器, 556
-  - 使用 Unix 网络, 648–653, 652
-  - 使用 Windows 网络, 658–666
+
+  - `smbclient` 程序, 667–670
+
+  - `smbd` 文件, 659
+
+  - `smbfs` 文件, 671–672
+
+  - `smbbmount` 程序, 672
+
+  - `smbprint` 脚本, 670–671
+
+- `sMP` (对称多处理), 23
+
+- `sSMTP` (简单邮件传输协议), 506, 808
+
+- `smtpTP` 服务器, 556
+
+  - 使用 `Unix` 网络, 648–653, 652
+
+  - 使用 `Windows` 网络, 658–666
+
 - 壳, 374
+
   - 比较, 374–377
+
   - 在远程系统上, 893
+
   - 为用户, 361
+
 - 快捷, 命令别名, 381–382
+
 - 快捷分类, 214
-- sndconfig 程序, 459–461, 459–461
+
+- `sndconfig` 程序, 459–461, 459–461
+
 - 软件
+
   - 免费, 4–10
+
   - 调制器, 446–447
+
   - 介质, 438
+
 - 桌面背景纯色, 204
-- sort By 对话框, 166, 166
-- sort 命令, 896
+
+- `sort By` 对话框, 166, 166
+
+- `sort` 命令, 896
+
 - 排序
+
   - 显示箭头, 317
+
   - 显示隐藏选项, 244
-  - showkey 命令, 895
-  - showmount 命令, 894
+
+  - `showkey` 命令, 895
+
+  - `showmount` 命令, 894
+
 - 单任务处理, 392
+
 - 单窗口选项, 158
+
 - 签名文件, 558
-- 引号 (])
-  - 在 GNOME 中, 166–167, 166–167
-  - 使用 grep, 315–317, 860–861
-  - 使用 less, 314, 820
-  - 使用 locate, 314–315
-  - 使用 more, 311, 882
-  - 使用 whereas, 315
-  - 使用 W, 732
-  - 使用 zgrep, 909–910
-  - 使用 zipgrep, 910
+
+- 引号 `]`
+
+  - 在 `GNOME` 中, 166–167, 166–167
+
+  - 使用 `grep`, 315–317, 860–861
+
+  - 使用 `less`, 314, 820
+
+  - 使用 `locate`, 314–315
+
+  - 使用 `more`, 311, 882
+
+  - 使用 `whereas`, 315
+
+  - 使用 `W`, 732
+
+  - 使用 `zgrep`, 909–910
+
+  - 使用 `zipgrep`, 910
+
 - 大小, 310
+
 - 同步, 899–900
-- syslog conf 文件, 416–418
-- syslog 进程, 415–418
+
+- `syslog conf` 文件, 416–418
+
+- `syslog` 进程, 415–418
+
 - 系统管理
+
   - 组, 401–403
+
   - 任务调度, 409–413
+
   - 日志, 414–419
+
   - 关机, 408
+
   - 系统启动, 403–409
+
   - 为用户, 396–401
+
 - 将配置保存到文件选项, 392
-- 系统 Bell 章节, 261
+
+- 系统 `Bell` 章节, 261
+
 - 系统 事件章节, 261
-
-
-
-
-
 
 # 系统信息—timeconfig 命令
 
-- 显示，902
-- 在 KDE 中，254–255
-- 系统日志，415–418, 872
-- 系统菜单，149–151, 149, 260
-- 系统密码文件，906
-- 系统运行级别
-    - 显示，894
-    - 设置，845–846
-- 系统启动，403–409
+- 显示, 902
 
-- 终端外壳（Terminal Shell）选项，240
-- 二进制 DNS 服务器，621
-- APS Filter 系统的测试页面，435–436
-- “测试此配置”选项，68
+- 在 `KDE` 中, 254–255
+
+- 系统日志, 415–418, 872
+
+- 系统菜单, 149–151, 149, 260
+
+- 系统密码文件, 906
+
+- 系统运行级别
+
+    - 显示, 894
+
+    - 设置, 845–846
+
+- 系统启动, 403–409
+
+- 终端外壳 `Terminal Shell` 选项, 240
+
+- 二进制 `DNS` 服务器, 621
+
+- `APS Filter` 系统的测试页面, 435–436
+
+- “测试此配置”选项, 68
+
 - 测试
-    - 内核，494
-    - 调制解器，447–450, 447–725
-    - 网络，641–644
-- 打印机配置，354
-- X Windows 配置，140–142, 141
-- 文本显示，854–855
+
+    - 内核, 494
+
+    - 调制解器, 447–450, 447–725
+
+    - 网络, 641–644
+
+- 打印机配置, 354
+
+- `X Windows` 配置, 140–142, 141
+
+- 文本显示, 854–855
 
 # T
 
-- fdisk 中的命令，83
-- smclient 中的 -T 标志，668
-- Tab 键
-    - - 用于文件名补全，380–381
-    - 在安装中，51
-- Tab 窗口管理器 (twm)，102–103, 103
-- tail 命令，898
-- 磁带驱动要求，34
-- tar 命令，318–323, 899
-- KDE 中的任务栏，227, 229, 258
-- Tasklist 小部件，156, 156
-- Netscape 中的任务，667
-- TCP/IP (传输控制协议/网际协议)，500)
-    - 广播地址，504–505
-    - 用于以太网网络，634–640, 635–641
-    - 网关地址，505
-    - IP 地址，501–502
-    - 名称解析服务器，505
-    - 端口，506
-    - 子网划分和掩码，502–353
-    - 带有防火墙的 TCP/IP 端口，703–707
-- tsh shell，355–377
-- Telnet 端口，706
-- Telnet 服务，506
-- [temp] 节，665
-- 模板文件夹，568
-- KDE 中的终端模拟器，240
+- `fdisk` 中的命令, 83
 
-- 文本文件导入位置，191
+- `smclient` 中的 `-T` 标志, 668
+
+- `Tab` 键
+
+    - - 用于文件名补全, 380–381
+
+    - 在安装中, 51
+
+- `Tab` 窗口管理器 (`twm`), 102–103, 103
+
+- `tail` 命令, 898
+
+- 磁带驱动要求, 34
+
+- `tar` 命令, 318–323, 899
+
+- `KDE` 中的任务栏, 227, 229, 258
+
+- `Tasklist` 小部件, 156, 156
+
+- `Netscape` 中的任务, 667
+
+- `TCP/IP` (传输控制协议/网际协议), 500)
+
+    - 广播地址, 504–505
+
+    - 用于以太网网络, 634–640, 635–641
+
+    - 网关地址, 505
+
+    - `IP` 地址, 501–502
+
+    - 名称解析服务器, 505
+
+    - 端口, 506
+
+    - 子网划分和掩码, 502–353
+
+    - 带有防火墙的 `TCP/IP` 端口, 703–707
+
+- `tsh` `shell`, 355–377
+
+- `Telnet` 端口, 706
+
+- `Telnet` 服务, 506
+
+- `[temp]` 节, 665
+
+- 模板文件夹, 568
+
+- `KDE` 中的终端模拟器, 240
+
+- 文本文件导入位置, 191
+
 - 文本文件
+
     - 显示
-        - 使用 less，311–312, 870
-        - 使用 more，310–311, 822
-        - 在 GNOME 中显示，162
-    - 对行进行排序，896–897
-    - 文本输入字段，51
-    - 文本安装，49
-- 纯文本打印机驱动程序，352
-- 文本处理器，8
-    - 编辑，193–194, 195
-    - 在 KDE 中，240, 263, 264
-- PPP 登录提示，523–526
-- 文本网页浏览器，536, 559–563, 561
-- 桌面主题，207–208, 207
-- 三键鼠标仿真，135
-- TIFF 文件，592
-- 平铺墙选项，236–237
+
+        - 使用 `less`, 311–312, 870
+
+        - 使用 `more`, 310–311, 822
+
+        - 在 `GNOME` 中显示, 162
+
+    - 对行进行排序, 896–897
+
+    - 文本输入字段, 51
+
+    - 文本安装, 49
+
+- 纯文本打印机驱动程序, 352
+
+- 文本处理器, 8
+
+    - 编辑, 193–194, 195
+
+    - 在 `KDE` 中, 240, 263, 264
+
+- `PPP` 登录提示, 523–526
+
+- 文本网页浏览器, 536, 559–563, 561
+
+- 桌面主题, 207–208, 207
+
+- 三键鼠标仿真, 135
+
+- `TIFF` 文件, 592
+
+- 平铺墙选项, 236–237
+
 - 时间
-    - 用于时钟，196–197
-    - 显示，849–850
-    - 在作业调度中，410–411, 841–843
-    - 参数，899
-    - 来自远程主机的，891
-    - 设置，369–370, 849–850
-    - 同步时间，899–900
-- 系统运行时间，903
-- KDE 中的时间管理，264–265, 265
-- 时区，64, 899
-- timeconfig 命令，899
+
+    - 用于时钟, 196–197
+
+    - 显示, 849–850
+
+    - 在作业调度中, 410–411, 841–843
+
+    - 参数, 899
+
+    - 来自远程主机, 891
+
+    - 设置, 369–370, 849–850
+
+    - 同步时间, 899–900
+
+- 系统运行时间, 903
+
+- `KDE` 中的时间管理, 264–265, 265
+
+- 时区, 64, 899
+
+- `timeconfig` 命令, 899
 
 # timed 命令—USB (通用串行端口)
 
-- timed 命令，899–900
-- timedc 命令，900
-- 栏，157
-- 今日提示侧边栏，545, 545
-- 切换选项，158
-- Tom's 窗口管理器 (twm)，102–103, 103
+- `timed` 命令, 899–900
+
+- `timedc` 命令, 900
+
+- 栏, 157
+
+- 今日提示侧边栏, 545, 545
+
+- 切换选项, 158
+
+- `Tom's` 窗口管理器 (`twm`), 102–103, 103
+
 - 工具栏
-    - 在 gedit 中，194
-    - 在 Gimp 中，185, 185
-    - 在 GNOME 中，162–163
-    - 在 Netscape 6 中，546, 546
-    - 设置，217
-    - 工具箱按钮，202
-    - 顶部程序，178, 179, 900
-- Torvalds, Linus，5
-    - 分区的 Total 字段，58
-    - touch 命令，342, 901
-    - traceroute 命令，901
-    - 收发器类型，867
-    - 菜单，裁剪与调整大小命令，188
-    - 翻译表，871
-- 传输控制协议/网际协议。参见 TCP/IP (Transmission Control Protocol)/Internet Protocol)
-- 垃圾桶，568
-- true 命令，901
-- 可信设备，配置防火墙，704
-- 支持，97, 226
-- twm (Tab Window管理器)，102–103
-- 双色渐变背景，204
-- 分区的 Type 字段，58
+
+    - 在 `gedit` 中, 194
+
+    - 在 `Gimp` 中, 185, 185
+
+    - 在 `GNOME` 中, 162–163
+
+    - 在 `Netscape 6` 中, 546, 546
+
+    - 设置, 217
+
+    - 工具箱按钮, 202
+
+    - 顶部程序, 178, 179, 900
+
+- `Torvalds, Linus`, 5
+
+    - 分区的 `Total` 字段, 58
+
+    - `touch` 命令, 342, 901
+
+    - `traceroute` 命令, 901
+
+    - 收发器类型, 867
+
+    - 菜单, 裁剪与调整大小命令, 188
+
+    - 翻译表, 871
+
+- 传输控制协议/网际协议。参见 `TCP/IP (Transmission Control Protocol)/Internet Protocol)`
+
+- 垃圾桶, 568
+
+- `true` 命令, 901
+
+- 可信设备, 配置防火墙, 704
+
+- 支持, 97, 226
+
+- `twm` (`Tab Window`管理器), 102–103
+
+- 双色渐变背景, 204
+
+- 分区的 `Type` 字段, 58
+
 - 文件类型
-    - 显示，857, 884
-    - 搜索，313
-    - shell 中的 标志，668
-    - umount 命令，901–902
-    - uname 命令，494, 902
-    - uncompress 命令，902
-    - 解压缩文件，902, 909
-- 未定义指令，813
-- 了解隐私节，550
-- 通用资源定位符 (URLs)
-    - 在文件关联中，211, 211
-    - 打开网页，545, 561
-- 通用串行端口 (USB)
-    - 安装信息，38–39
-    - 用于键盘，454
-    - 用于调制解器，442–444
-    - 用于鼠标，452–454
-    - 即插即用，424
-    - 用于打印，434–435
-    - Unix，4, 572–174
-    - unix.com 命令，686
-    - Unix/网络打印机连接，435
-    - UNIX 打印队列，351
-    - 解载模块，893
-    - 解载文件系统，901–902
-    - 禁止选项，67
-    - unzip 命令，902–903
-    - Up 按钮，162
-    - 在 KDE 中，229–230
-    - 内核，474–475
-    - 升级对比安装，54–55
-    - uptime 命令，903
-    - URL 处理程序项，211, 211
-- URLs (通用资源定位符)
-    - 在文件关联中，211, 211
-    - 打开网页，545, 561
+
+    - 显示, 857, 884
+
+    - 搜索, 313
+
+    - `shell` 中的 标志, 668
+
+    - `umount` 命令, 901–902
+
+    - `uname` 命令, 494, 902
+
+    - `uncompress` 命令, 902
+
+    - 解压缩文件, 902, 909
+
+- 未定义指令, 813
+
+- 了解隐私节, 550
+
+- 通用资源定位符 (`URLs`)
+
+    - 在文件关联中, 211, 211
+
+    - 打开网页, 545, 561
+
+- 通用串行端口 (`USB`)
+
+    - 安装信息, 38–39
+
+    - 用于键盘, 454
+
+    - 用于调制解器, 442–444
+
+    - 用于鼠标, 452–454
+
+    - 即插即用, 424
+
+    - 用于打印, 434–435
+
+    - `Unix`, 4, 572–174
+
+    - `unix.com` 命令, 686
+
+    - `Unix/网络`打印机连接, 435
+
+    - `UNIX` 打印队列, 351
+
+    - 解载模块, 893
+
+    - 解载文件系统, 901–902
+
+    - 禁止选项, 67
+
+    - `unzip` 命令, 902–903
+
+    - `Up` 按钮, 162
+
+    - 在 `KDE` 中, 229–230
+
+    - 内核, 474–475
+
+    - 升级对比安装, 54–55
+
+    - `uptime` 命令, 903
+
+    - `URL` 处理程序项, 211, 211
+
+- `URLs` (通用资源定位符)
+
+    - 在文件关联中, 211, 211
+
+    - 打开网页, 545, 561
 
 # 使用图形登录选项—Viewport 指令
 
-- 使用图形登录选项，68
-- 使用线性模式选项，63
-- 使用匿名 FTP 或代理选项，624
-- 使用剩余空间选项，59
-- 使用影子密码选项，65
-- 分区的 Used 字段，58–59
-- 用户账户创建屏幕，359, 360
-- 安全中的用户账户，299
-- User Agent 节，262
-- User 项，769–770
-- 节，217–218
-- 用户参数，661
-- useradd 命令，397–399, 903–904
-- userdel 命令，400–401, 904
-- UserDir 项，772
-- usermod 命令，904–905
+- 使用图形登录选项, 68
 
-- UTC (协调世界时)，64
+- 使用线性模式选项, 63
+
+- 使用匿名 `FTP` 或代理选项, 624
+
+- 使用剩余空间选项, 59
+
+- 使用影子密码选项, 65
+
+- 分区的 `Used` 字段, 58–59
+
+- 用户账户创建屏幕, 359, 360
+
+- 安全中的用户账户, 299
+
+- `User Agent` 节, 262
+
+- `User` 项, 769–770
+
+- 节, 217–218
+
+- 用户参数, 661
+
+- `useradd` 命令, 397–399, 903–904
+
+- `userdel` 命令, 400–401, 904
+
+- `UserDir` 项, 772
+
+- `usermod` 命令, 904–905
+
+- `UTC` (协调世界时), 64
+
 - 实用程序菜单
-    - 在 GNOME 面板中，151
-    - 在 KDE 中
-- 地址簿命令，265
-- 个人时间跟踪命令，264
-- decode 命令，905
-- encode 命令，905
-    - cp 中的 V 标志，336
-    - fax 中的 v 标志，591
-- tar 中的 v 选项，318
-- /var 目录，357
-- /var/lock 目录，590
-- /var/log/fax 目录，590
-- /var/spool/fax 目录，590
-- VendorName 指令，286
-- 带有冗 模式的传真信息，591
-- 版本号，473
-- 版本，5
-- 使用 more 的垂直线 (1)，311
+
+    - 在 `GNOME` 面板中, 151
+
+    - 在 `KDE` 中
+
+- 地址簿命令, 265
+
+- 个人时间跟踪命令, 264
+
+- `decode` 命令, 905
+
+- `encode` 命令, 905
+
+    - `cp` 中的 `V` 标志, 336
+
+    - `fax` 中的 `v` 标志, 591
+
+- `tar` 中的 `v` 选项, 318
+
+- `/var` 目录, 357
+
+- `/var/lock` 目录, 590
+
+- `/var/log/fax` 目录, 590
+
+- `/var/spool/fax` 目录, 590
+
+- `VendorName` 指令, 286
+
+- 带有冗 模式的传真信息, 591
+
+- 版本号, 473
+
+- 版本, 5
+
+- 使用 `more` 的垂直线 (1), 311
+
 - 垂直渐变选项和模式
-    - 用于桌面背景，204
-    - 在 km颜色中，235
+
+    - 用于桌面背景, 204
+
+    - 在 `km`颜色中, 235
+
 - 垂直同步范围 125–126, 129–131, 131, 137
-- VertRefresh 命令，283
-- 视频/音频播放器，465
+
+- `VertRefresh` 命令, 283
+
+- 视频/音频播放器, 465
+
 - 显卡
-    - 在安装中，68
-    - 安装信息，36
-    - 要求，32
-    - 用于 Windows，118–123, 124, 127–128, 132–133, 138–139
-    - XFConfig:255–286
-    - 显存，36, 68, 124, 131, 132, 39
-- VideoRam，286
-- 菜单，View Mode 命令，244
-- 参见 Viewport 指令，288
+
+    - 在安装中, 68
+
+    - 安装信息, 36
+
+    - 要求, 32
+
+    - 用于 `Windows`, 118–123, 124, 127–128, 132–133, 138–139
+
+    - `XFConfig:255–286`
+
+    - 显存, 36, 68, 124, 131, 132, 39
+
+- `VideoRam`, 286
+
+- 菜单, `View Mode` 命令, 244
+
+- 参见 `Viewport` 指令, 288
+
 - 虚拟机 5
-- VMW Express，688
-- VMW 技术，687–688
-- VMW Workstation，688
-- Volker, Patrick，17–18
-- 音量控制，463
-- 网站，728–804, 782, 784, 786
-- 常用端口，703
-- What's 相关侧边栏，544, 544
-- where 命令，315, 907–908
-- whoami 命令，909
-- 小部件，256
+
+- `VMW Express`, 688
+
+- `VMW` 技术, 687–688
+
+- `VMW Workstation`, 688
+
+- `Volker, Patrick`, 17–18
+
+- 音量控制, 463
+
+- 网站, 728–804, 782, 784, 786
+
+- 常用端口, 703
+
+- `What's` 相关侧边栏, 544, 544
+
+- `where` 命令, 315, 907–908
+
+- `whoami` 命令, 909
+
+- 小部件, 256
+
 - 通配符
 
 # Windows 网络
 
-- 访问资源，667–672
-- 共享资源，658–666
-- Windows/NT (Samba) 打印机连接选项，435
-- Windows 打印队列，351
-- Windows Shares，262
-- Wine 应用，692–694
-- w 命令
-    - 在 fdisk 中，85
-    - 在 Linux 中，906
-    - linux 中的 w 标志，598
-    - smclient 中的 -W 标志，668
-- W3C Web 服务器，731
-- 壁纸，204, 236–237
-- 壁纸标签页，236, 255
-- 系统日志中的警告信息，415
-- GNU 公共许可证中的保证，919–920
-- wc 命令，906–907
-- 网页浏览器，534–535
-- Amaya，535, 535
-- Lynx，536, 536, 559–563
-- Mosaic，538, 538
-- 参见 Netscape 6
-- Opera，537, 537
-- 网页浏览节，261–262
+- 访问资源, 667–672
+
+- 共享资源, 658–666
+
+- `Windows/NT (Samba)` 打印机连接选项, 435
+
+- `Windows` 打印队列, 351
+
+- `Windows Shares`, 262
+
+- `Wine` 应用, 692–694
+
+- `w` 命令
+
+    - 在 `fdisk` 中, 85
+
+    - 在 `Linux` 中, 906
+
+    - `linux` 中的 `w` 标志, 598
+
+    - `smclient` 中的 `-W` 标志, 668
+
+- `W3C Web` 服务器, 731
+
+- 壁纸, 204, 236–237
+
+- 壁纸标签页, 236, 255
+
+- 系统日志中的警告信息, 415
+
+- `GNU` 公共许可证中的保证, 919–920
+
+- `wc` 命令, 906–907
+
+- 网页浏览器, 534–535
+
+- `Amaya`, 535, 535
+
+- `Lynx`, 536, 536, 559–563
+
+- `Mosaic`, 538, 538
+
+- 参见 `Netscape 6`
+
+- `Opera`, 537, 537
+
+- 网页浏览节, 261–262
+
 - 网页
-    - 来自 KDE，246–247
-    - 打开，545–546, 561
-    - 打印，547–549, 547–548
-    - 使用 cp，332
-    - 使用 find，314
-    - 使用 Find File，167
-    - 使用 grep，316
-- Win4Lin 程序，692
-- 窗口管理器选择器，208, 209
+
+    - 来自 `KDE`, 246–247
+
+    - 打开, 545–546, 561
+
+    - 打印, 547–549, 547–548
+
+    - 使用 `cp`, 332
+
+    - 使用 `find`, 314
+
+    - 使用 `Find File`, 167
+
+    - 使用 `grep`, 316
+
+- `Win4Lin` 程序, 692
+
+- 窗口管理器选择器, 208, 209
+
 - 窗口管理器
-    - KDE。参见 KDE (K Desktop Environment) 窗口管理器
+
+    - `KDE`。参见 `KDE (K Desktop Environment)` 窗口管理器
+
 - 窗口
-    - 在 GNOME 中，157–158
-    - 在 Konqueror 中，244
-    - 在 xterm 中，176–178, 177–178
-- Windows 95 分区，84
-- Windows 应用
-    - 用于 VMware，687–692, 690–691
-    - 用于 Wine，692–694
-- Windows 兼容软件，9
 
+    - 在 `GNOME` 中, 157–158
 
+    - 在 `Konqueror` 中, 244
 
+    - 在 `xterm` 中, 176–178, 177–178
 
+- `Windows 95` 分区, 84
+
+- `Windows` 应用
+
+    - 用于 `VMware`, 687–692, 690–691
+
+    - 用于 `Wine`, 692–694
+
+- `Windows` 兼容软件, 9
 
 ## www.velinux.org 站点—XkbDisable 指令
 
-- www.velinux.org 站点, 820
-- www.vmware.com 站点, 287–689
-- www.w3.org 站点, 535, 731
-- www.washington.edu 站点, 575
-- www.winehq.com, 692–693
-- www.worldwide.com 站点, 786
-- www.xfree86.org 站点, 120, 120
-- www.ximian.com 站点, 190
-- www.xinetd.org 站点, 701
-- www.xinside.com 站点, 100, 218
-- www.xnet.com 站点, 160
-- www.zeus.co.uk 站点, 735
+- `www.velinux.org` 站点, 820
+
+- `www.vmware.com` 站点, 287–689
+
+- `www.w3.org` 站点, 535, 731
+
+
+
+# 索引
+
+- `www.washington.edu` 站点, 575
+- `www.winehq.com`, 692–693
+- `www.worldwide.com` 站点, 786
+- `www.xfree86.org` 站点, 120, 120
+- `www.ximian.com` 站点, 190
+- `www.xinetd.org` 站点, 701
+- `www.xinside.com` 站点, 100, 218
+- `www.xnet.com` 站点, 160
+- `www.zeus.co.uk` 站点, 735
 - 于服务器, 96–100, 99
 - 源码于, 835
 - 启动序列中的, 289–296
@@ -23959,153 +25164,147 @@ starting, 714–715
 - 显卡用于, 36
 - 窗口管理器中的, 100–108, 101–108
 - X 资源用于, 297–298
-- X86Config 文件, 270–285
-- 术语。Se xterm 程序
-- X86Config 文件, 453–454
-- Xclients 文件, 231
-- Xclients 文件, 293–296
-- xclock 程序, 196–197, 196–197
-- xconfigurator 工具, 23, 97, 118, 126–134, 126–133
-- Xdefaults 文件, 297–298
-- xdos 命令, 685
-- x866config 文件, 140–140–139
-- X86Config 文件, 139, 270–272, 439
-- Device 段, 285–286
-- Files 段, 272–274
-- InputDevice 段
-    - 用于键盘, 277–280
-    - 用于指针, 280–284
-- Modes 段, 283–284
-- Module 段, 276–277
-- Monitor 段, 282–283
-- Screen 段, 286–287
-- ServerFlags 文件, 274–276
-- xfdd 程序, 181, 182
-- XFree86, 23–24
-- XFree86 HOWTO, 142
-- XFree86 服务器, 97–98
+- `X86Config` 文件, 270–285
+- 术语。Se `xterm` 程序
+- `X86Config` 文件, 453–454
+- `Xclients` 文件, 231
+- `Xclients` 文件, 293–296
+- `xclock` 程序, 196–197, 196–197
+- `xconfigurator` 工具, 23, 97, 118, 126–134, 126–133
+- `Xdefaults` 文件, 297–298
+- `xdos` 命令, 685
+- `x866config` 文件, 140–140–139
+- `X86Config` 文件, 139, 270–272, 439
+- `Device` 段, 285–286
+- `Files` 段, 272–274
+- `InputDevice` 段
+  - 用于键盘, 277–280
+  - 用于指针, 280–284
+- `Modes` 段, 283–284
+- `Module` 段, 276–277
+- `Monitor` 段, 282–283
+- `Screen` 段, 286–287
+- `ServerFlags` 文件, 274–276
+- `xfdd` 程序, 181, 182
+- `XFree86`, 23–24
+- `XFree86` HOWTO, 142
+- `XFree86` 服务器, 97–98
 - 配置
-    -使用 Configurator, 126–134, 126–133
-    - 使用 x86config, 140–140,139
-- XFree86 网页, 119,120
-- XFree86.ix386 文件, 118–119
-- Xinerama 指令, 276
-- xinxedd 数据, 700–701
-- xintric 文件, 290–293
-- Xinstall.sh 脚本, 121
-- XkbDisable 指令, 279
-
-X 资源数据库
-    - 加载, 298
-    - 操作, 296–297
-    - 设置, 297–298
-- X-Server 段, 255
+  - 使用 Configurator, 126–134, 126–133
+  - 使用 `x86config`, 140–140,139
+- `XFree86` 网页, 119,120
+- `XFree86.ix386` 文件, 118–119
+- `Xinerama` 指令, 276
+- `xinxedd` 数据, 700–701
+- `xintric` 文件, 290–293
+- `Xinstall.sh` 脚本, 121
+- `XkbDisable` 指令, 279
+- X 资源数据库
+  - 加载, 298
+  - 操作, 296–297
+  - 设置, 297–298
+- `X-Server` 段, 255
 - X Windows 应用程序, 80
-    - 计算器中的, 18, 198
-    - 作为客户端-服务器框架, 90–92, 91–92
-    - 钟表中的, 196–197
-    - 颜色中的, 133, 139, 174–175
-    - 配置, 67–68
-    - 准备工作, 123–126
-    - 测试, 140–142, 141
-    - 使用 Configurator, 126–134, 126–133
-    - 使用 x86config, 140–140,139
-- X86Config 文件, 270–285
+  - 计算器中的, 18, 198
+  - 作为客户端-服务器框架, 90–92, 91–92
+  - 钟表中的, 196–197
+  - 颜色中的, 133, 139, 174–175
+  - 配置, 67–68
+  - 准备工作, 123–126
+  - 测试, 140–142, 141
+  - 使用 Configurator, 126–134, 126–133
+  - 使用 `x86config`, 140–140,139
+- `X86Config` 文件, 270–285
 - 桌面环境中的, 108–111, 109
 - DOS 应用程序中的, 685, 685
 - 文件管理中的, 160–167, 163–167
 - GNOME 中. 相同的 Gnome 桌面
 - 图形中的
-    - Gimp 程序, 183–193, 184–189
-    - Gnumeric 程序, 190–193, 191–192
-    - 互联网上, 119–120
-    - 对比 Microsoft Windows, 93–96, 94–95
+  - `Gimp` 程序, 183–193, 184–189
+  - `Gnumeric` 程序, 190–193, 191–192
+  - 互联网上, 119–120
+  - 对比 Microsoft Windows, 93–96, 94–95
 - Motif 用于, 111–113, 112
 - Red Hat CD, 106–119
-
-XkbKeymap 指令—zsh shell
-
-- XkbKeymap 指令, 280
-
-Y
-
-- XkbLayout 指令, 279
-- Yggrasil 发行版, 21
-- XkbModel 指令, 279
-- XkbOptions 指令, 28
-- xloadimage 程序, 596, 597
-- xlsfonts 程序, 179
-- xman 程序, 323–326
-
-Z
-- xrdb 命令, 298
-- Z Shell (zsh), 376
-- zcat 命令, 909
+- `XkbKeymap` 指令—`zsh` shell
+- `XkbKeymap` 指令, 280
+- Y
+- `XkbLayout` 指令, 279
+- `Yggrasil` 发行版, 21
+- `XkbModel` 指令, 279
+- `XkbOptions` 指令, 28
+- `xloadimage` 程序, 596, 597
+- `xlsfonts` 程序, 179
+- `xman` 程序, 323–326
+- Z
+- `xrdb` 命令, 298
+- Z Shell (`zsh`), 376
+- `zcat` 命令, 909
 - Zeus Web 服务器, 735
-- zgrep 命令, 909–910
-- zip 命令, 910
+- `zgrep` 命令, 909–910
+- `zip` 命令, 910
 - ZIP 文件
-- XRRules 指令, 208
-- xterm 程序, 170–171
-    - 颜色中的, 175, 176
-    - 自定义, 172
-    - 用于 DOS 应用程序, 684–685
-    - 字体中的, 179–181, 180
-    - 提取, 902–903
+- `XRRules` 指令, 208
+- `xterm` 程序, 170–171
+  - 颜色中的, 175, 176
+  - 自定义, 172
+  - 用于 DOS 应用程序, 684–685
+  - 字体中的, 179–181, 180
+  - 提取, 902–903
 - GNOME 显示, 162
-- zipgrep 命令, 910
-- zipinfo 命令, 911
-- zmore 命令, 911
-- znew 命令, 911
-- zooming 指令用于, 275
-- zsh shell, 376
-- man pages 用于, 182–183
+- `zipgrep` 命令, 910
+- `zipinfo` 命令, 911
+- `zmore` 命令, 911
+- `znew` 命令, 911
+- `zooming` 指令用于, 275
+- `zsh` shell, 376
+- `man` pages 用于, 182–183
 - windows 中的, 176–178, 177
-- xvidtune 客户端, 275
+- `xvidtune` 客户端, 275
 
-CD-ROM 上有什么？
+## CD-ROM 上有什么？
 
-本书包含一张 CD-ROM。光盘包含了由 Red Hat, Inc. 出版的 Red Hat Linux，您可以根据软件许可使用。由于空间限制，官方 Red Hat Linux 中的某些组件可用。官方 Red Hat Linux，您可以通过 Red Hat 网站（www.redhat.com）或其免费热线 888 获取技术支持。
+本书包含一张 CD-ROM。光盘包含了由 Red Hat, Inc. 出版的 Red Hat Linux，您可以根据软件许可使用。由于空间限制，官方 Red Hat Linux 中的某些组件可用。官方 Red Hat Linux，您可以通过 Red Hat 网站（`www.redhat.com`）或其免费热线 888 获取技术支持。
 
-系统要求
+### 系统要求
 
 - Pentium II CPU 或相当设备（虽然 Red Hat Linux 7.1 可以运行在 486 或 Pentium 系统上，但性能可能不理想）。
 - 32MB RAM 或更多（你会注意到内存显著提升）。
 - 至少 1GB 磁盘空间；工作站或笔记本配置需要 1.5GB（3GB 或更多将极大提高你的自由度）。
-- CD-ROM（首选 ATAPI/IDE 或 SCSI 驱动器——现代 Intel 兼容设备。如果您有关于 Red Hat Linux 7.1 的兼容性问题，请检查 redhat.com 兼容列表）。
+- CD-ROM（首选 ATAPI/IDE 或 SCSI 驱动器——现代 Intel 兼容设备。如果您有关于 Red Hat Linux 7.1 的兼容性问题，请检查 `redhat.com` 兼容列表）。
 - 支持的显卡和显示器。查看 Red Hat 的兼容列表。
 
-软件支持
+### 软件支持
 
 补充软件及其任何报价可能由特定所有者支持。可以使用适当文件或媒体上其他地方列出的信息获取可用支持。如果制造商或其他所有者停止支持或拒绝任何报价，SYBEX 不承担责任。有关软件的通知仅供您参考。SYBEX 不是所有者的代理或委托人，不对软件提供任何支持负责，也不对所有者负责。
 
-在线 Linux 资源
+### 在线 Linux 资源
 
-- Freshmeat http://www.freshmeat.net/
-- The GNOME Project http://www.gnome.org/
-- JustLinux http://www.justlinux.com/
-- The K Desktop Environment http://www.kde.org/
-- KernelNewbies http://www.kernelnewbies.org/
-- LinuxApps http://www.linuxapps.com/
-- Linux.com http://www.linux.com/
-- Linuxberg http://www.linuxberg.com/
-- The Linux Documentation Project http://www.linuxdoc.org/
-- Linux Games http://www.linuxgames.com/
-- Linux HeadQuarters http://www.linuxhq.com/
-- Linux International http://www.li.org/
-- Linux Journal http://www.linuxjournal.com/
-- The Linux Kernel Archives http://www.kernel.org/
-- LinuxMall http://www.linuxmall.com/
-- Linux Online http://www.linux.org/
-- Linux Professional Institute http://www.lpi.org/
-- The Linux Show http://www.linuxshow.com/
-- LinuxStart http://www.linuxstart.com/
-- Linux Today http://www.linxtoday.com/
-- Linux Web Ring http://www.linuxwebring.org/
-- LWN.net http://www.lwn.net/
-- LinuxWorld.com http://www.linuxworld.com/
-- Slashdot http://www.slashdot.org/
-- Linux and GNU Certification http://www.linuxcertification.org/
+- Freshmeat `http://www.freshmeat.net/`
+- The GNOME Project `http://www.gnome.org/`
+- JustLinux `http://www.justlinux.com/`
+- The K Desktop Environment `http://www.kde.org/`
+- KernelNewbies `http://www.kernelnewbies.org/`
+- LinuxApps `http://www.linuxapps.com/`
+- Linux.com `http://www.linux.com/`
+- Linuxberg `http://www.linuxberg.com/`
+- The Linux Documentation Project `http://www.linuxdoc.org/`
+- Linux Games `http://www.linuxgames.com/`
+- Linux HeadQuarters `http://www.linuxhq.com/`
+- Linux International `http://www.li.org/`
+- Linux Journal `http://www.linuxjournal.com/`
+- The Linux Kernel Archives `http://www.kernel.org/`
+- LinuxMall `http://www.linuxmall.com/`
+- Linux Online `http://www.linux.org/`
+- Linux Professional Institute `http://www.lpi.org/`
+- The Linux Show `http://www.linuxshow.com/`
+- LinuxStart `http://www.linuxstart.com/`
+- Linux Today `http://www.linxtoday.com/`
+- Linux Web Ring `http://www.linuxwebring.org/`
+- LWN.net `http://www.lwn.net/`
+- LinuxWorld.com `http://www.linuxworld.com/`
+- Slashdot `http://www.slashdot.org/`
+- Linux and GNU Certification `http://www.linuxcertification.org/`
 
 ## Mastering Red Hat Linux 7.1
 
@@ -24139,15 +25338,18 @@ CD-ROM 上有什么？
 
 ### 随附 CD 特色
 
-本书包含一张 CD-ROM。光盘包含了由 Red Hat, Inc. 出版的 Red Hat Linux，您可以根据软件许可使用。由于空间限制，官方 Red Hat Linux 中的某些组件不可用。官方 Red Hat Linux，您可以从 Red Hat 获取完整的 Red Hat 发行版、Red Hat 文档，并可能包括 Red Hat Linux 的技术支持。您还可以通过 Red Hat 网站（www.redhat.com）或其免费热线 888 获取技术支持。
+本书包含一张 CD-ROM。光盘包含了由 Red Hat, Inc. 出版的 Red Hat Linux，您可以根据软件许可使用。由于空间限制，官方 Red Hat Linux 中的某些组件不可用。官方 Red Hat Linux，您可以从 Red Hat 获取完整的 Red Hat 发行版、Red Hat 文档，并可能包括 Red Hat Linux 的技术支持。您还可以通过 Red Hat 网站（`www.redhat.com`）或其免费热线 888 获取技术支持。
 
 关于作者：Arman Danesh 正在温哥华西大学攻读计算机科学高级学位。曾担任瑞士 Landdegg 学院的 MIS 经理，负责 Linux 桌面安装和多个服务器，Arman 编写了多本书，包括 *Mastering Core*、*Mastering Linux, Second Edition* 和 *Mastering ColdFusion*，这三本书均由 Sybex 出版。他还为《早晨报》撰写关于互联网的文章，并担任 Juxt Publishing Limited 的编辑。
 
 访问我们的网站获取更多信息。
-www.sybex.com
-www.sybetexrainer.com
+
+`www.sybex.com`
+
+`www.sybetexrainer.com`
 
 | US $49.99
-CAN $79.95
-UK UK $36.96 |
 
+CAN $79.95
+
+UK UK $36.96 |

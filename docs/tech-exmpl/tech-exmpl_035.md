@@ -1,12 +1,13 @@
+
 # 二叉树最大路径和程序
 
 > 原文：[`techbyexample.com/binary-tree-maximum-path-sum/`](https://techbyexample.com/binary-tree-maximum-path-sum/)
 
-# **概览**
+## 概览
 
 给定一个二叉树，目标是找到该二叉树中的最大路径和。二叉树中的路径是指一系列彼此相连的节点，每个节点在最大路径和中只能出现一次。
 
-**示例 1**
+### 示例 1
 
 ![](img/9a87d6b2a88fc41ddf4f755bc080acdf.png)
 
@@ -15,7 +16,7 @@ Output: 16
 Maximum Sum Path is: 4->2->1->3->6
 ```
 
-**示例 2**
+### 示例 2
 
 ![](img/6c1876d0d5a5830a4bbf871b9fa3cdc9.png)
 
@@ -24,23 +25,19 @@ Output: 14
 Maximum Sum Path is: 5->3->6
 ```
 
-该方法的思路是在每个节点跟踪以下四个值。
+该方法的思路是在每个节点跟踪以下四个值：
 
-+   a = root.Val
+- `a = root.Val`
+- `b = root.Val + leftSubTreeMaxSum`
+- `c = root.Val + rightSubTreeMaxSum`
+- `d = root.Val + leftSubTreeMaxSum + rightSubTreeMaxSum`
 
-+   b = root.Val + leftSubTreeMaxSum
+然后：
 
-+   c = root.Val + rightSubTreeMaxSum
+- 给定节点的最大路径和是`(a, b, c, d)`中的最大值。
+- 递归调用中的返回值将是`(a, b, c)`中的最大值。为什么？这是因为只有`a`、`b`或`c`的路径才是父节点可以考虑的路径，`d`不能考虑，因为它成为了无效路径。通过上面示例二的二叉树来理解这个问题。路径`5->3->6`不能包括父节点`-5`，因为它成为了无效路径。
 
-+   d = root.Val + leftSubTreeMaxSum + rightSubTreeMaxSum
-
-然后
-
-+   给定节点的最大路径和是**(a,b,c,d)**中的最大值。
-
-+   递归调用中的返回值将是**(a,b,c)**中的最大值。为什么？这是因为只有 a、b 或 c 的路径才是父节点可以考虑的路径，d 不能考虑，因为它成为了无效路径。通过上面示例二的二叉树来理解这个问题。路径**5->3->6**不能包括父节点**-5**，因为它成为了无效路径。
-
-# **程序**
+## 程序
 
 以下是相应的程序代码：
 
@@ -137,4 +134,4 @@ func main() {
 14
 ```
 
-另外，查看我们的系统设计教程系列 – [系统设计教程系列](https://techbyexample.com/system-design-questions/)
+另外，查看我们的系统设计教程系列：[系统设计教程系列](https://techbyexample.com/system-design-questions/)

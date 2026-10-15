@@ -1,15 +1,8 @@
+
 # 学习 Python、Java、JavaScript、C、C++、C#、CSS、HTML、jQuery、MySQL、SQL、Linux、Perl、PHP 或 XML：300+ 份免费教材、100+ 份速查表、100+ 份 vi 快速链接
 
-
-
-
-
-
-
-
-
-
 ## 献辞
+
 献给所有勤工作的介绍作者和 Dr. Links 网页搜索团队
 
 ## 缩写词
@@ -27,6 +20,7 @@
 | XML | 可扩展标记语言 |
 
 ## 关于作者
+
 Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的博士学位（R 语言的诞生地）。他曾在两所公立大学授课，现在致力于帮助学生取得优异成绩。[Dr. Links](https://www.amazon.com/s/ref=dp_byline_sr_ebooks_1?ie=UTF8&text=Dr+Web+Links&search-alias=digital-text&field-author=Dr+Web+Links&sort=relevancerank）及其团队还有类似的书籍：
 
 - [大学生物课程](https://www.amazon.com/dp/B07HMT7KSY)
@@ -37,9 +31,10 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 - [护理学院指南](https://www.amazon.com/dp/B07JLBZZNT)
 
 ## 序言
+
 如你可能所知，互联网包含大量优秀的计算机编程学习材料，适用于学生、教师、专业人士以及想要精通编程或编码的人。这些资源包括：许多开放/可访问的教科书、优秀的参考指南以及视频课程/教程。挑战在于，这些资源分散、杂乱，并充满了广告和浏览干扰。大多数情况下，即使运气好，也需要多次点击才能获得良好的网页材料。因此，在网上寻找可以免费阅读或下载的关键计算机编程材料是非常令人沮丧且耗时的。这正是本书大用用场，它让你更接近互联网提供的相关且有趣的链接。
 
-这些链接可以帮助你进行补充阅读，找到更多示例案例、代码、备查表，并在学习或使用 `python`,`java`,`javascript`,`C`,`C++`,`C#`,`CSS`,`HTML`,`jQuery`,`MySQL`,`SQL`,`LINUX`,`Perl`,`PHP`,`Ruby`,`BASH`,`D`,`Unix` 和 `XML` 时享受乐趣。最重要的是，这本书可以节省大量的金钱。
+这些链接可以帮助你进行补充阅读，找到更多示例案例、代码、备查表，并在学习或使用`python`、`java`、`javascript`、`C`、`C++`、`C#`、`CSS`、`HTML`、`jQuery`、`MySQL`、`SQL`、`LINUX`、`Perl`、`PHP`、`Ruby`、`BASH`、`D`、`Unix`和`XML`时享受乐趣。最重要的是，这本书可以节省大量的金钱。
 
 在我的整个教育过程中（从本科到博士），我发现比较学习材料以及解决更多问题是促进理解的最佳方式之一。本书将引导你这样做。
 
@@ -57,38 +52,28 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 预计本书将引导你找到实用的学习资源，这对增强你对任何语言的理解将非常有帮助。
 
 ## 如何使用本书
+
 `Python 3` 安排如下：
 
 ## 链接集 1. Python, Java, JavaScript, C, C++, C#...现在就可以下载的备查表和参考指南
+
 `python-sheet.00206.jpeg`
 
 ## 链接集 2. 关于 Python, Java, JavaScript, C, C++, C# 及其他 13 种编程语言的可访问/下载教科书
+
 `python`
-`
-`
-``
 
 ## 链接集 3. 你可以访问下载额外书籍的计算机编程书籍网络数据库
+
 `python`
-`
-`
-`
 
 ## 链接集 4. 你喜欢的优秀 Youtube 频道和其他相关视频
+
 `python`
-`
-`
-`
 
 ## 链接集 5. 你可以探索的计算机编程在线论坛
+
 `python`
-`
-`
-`
-
-
-
-
 
 ## Python 速表
 
@@ -176,28 +161,30 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 - [HTML5 视觉速表](https://cdn.woorkup.com/wp-content/uploads/2016/01/HTML5-Visual-Cheat-Sheet1.pdf)
 - [CSS3 快速参考指南](https://cloud.netlify.com/assets/344dbf88-fdf9-42bb-adb4-46f01eedd629/d7fb67af-5180-463d-b58a-bf4a220d5d0/css3-cheat-sheet.pdf)
 
-
-
-
-
 ## 参考指南
 
 ### Java
+
 - [Java 参考指南](http://overapi.com/java)
 - [Java 编程速查表](https://introcs.cs.princeton.edu/java/11cheatsheet/)
 - [JAVA 语法速查表](http://lesliefranke.com/sandbox/ref/javacheatsheet.html)
 
 ### Javascript
+
 - [Javascript 快速参考卡](http://www.cheat-sheets.org/saved-copy/jsquick.pdf)
 - [JavaScript 与浏览器对象快速参考](http://web-algarve.com/books/JS%20AJAX%20jquery%20&%20angular/JS%20&%20visual%20objects%20QuickRef.pdf)
 - [javascript 速查表](http://web-algarve.com/books/JS%20AJAX%20jquery%20&%20angular/javascript%20QuickRef.pdf)
 - [Javascript 快速参考卡](http://web-algarve.com/books/JS%20AJAX%20jquery%20&%20angular/jsquick%20QuickRef.pdf)
 - [JavaScript 速查表](https://www.cheatography.com/davechild/cheat-sheets/javascript/pdf_bw/)
+
+
+
 - [JavaScript 速查表](https://htmlcheatsheet.com/js/)
 - [JavaScript 速查表（入门必备）](https://websitesetup.org/wp-content/uploads/2018/04/wsu-js-cheat-sheet.pdf)
 - [javascript 参考指南](http://overapi.com/javascript)
 
 ### jQuery
+
 - [jQuery 1.5 视觉化速查表](http://index-of.co.uk/Cheat-Sheet/jQuery-1.5-Visual-Cheat-Sheet.pdf)
 - [jQuery 1.5 视觉化速查表](http://web-algarve.com/books/JS%20AJAX%20jquery%20&%20angular/jQuery-1.5%20QuickRef.pdf)
 - [jquery_online 快速参考](http://web-algarve.com/books/JS%20AJAX%20jquery%20&%20angular/jquery_online%20QuickRef.pdf)
@@ -209,6 +196,7 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 - [jQuery 快速 API 参考](https://oscarotero.com/jquery/)
 
 ### MySQL
+
 - [MySQL 参考指南](http://overapi.com/mysql)
 - [MySQL 速查表](http://www.dusun-think.net/dosya/czyayin/mysqlcheatsheet.pdf)
 - [MySQL 核心速查表](https://www.cheatography.com/guslong/cheat-sheets/essential-mysql/pdf_bw/)
@@ -219,11 +207,13 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 - [MySQL 速查表](https://appletree.or.kr/quick_reference_cards/Databases-SQL-NoSQL/mysql-reference-sheet.pdf)
 
 ### Perl
+
 - [Perl 快速参考卡](http://index-of.co.uk/Cheat-Sheet/Perl%20Quick%20Reference%20Card%20%5bjjohnbokma%5d.pdf)
 - [Perl 正则表达式快速参考卡](http://index-of.co.uk/Cheat-Sheet/Perl%20Regular%20Expression%20Quick%20Reference%20Card%20%5bIain%20Truskett%5d.pdf)
 - [Perl 正则表达式快速参考](http://index-of.co.uk/Cheat-Sheet/Perl%20Regular%20Expression%20Quick%20Reference%20v1.04.pdf)
 
 ### PHP
+
 - [PHP 速查表](http://index-of.co.uk/Cheat-Sheet/php_cheat_sheet%20%5bDave%20Child%5d.pdf)
 - [PHP 参考表](https://www.dreamincode.net/downloads/ref_sheets/php_reference_sheet.pdf)
 - [PHP 参考表（进阶版）](https://www.dreamincode.net/downloads/ref_sheets/php_reference_sheet.pdf)
@@ -252,10 +242,6 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 
 **注意**：如果你电脑或设备的浏览器设置过强，会将某些链接标记为危险。为了避免这种误报，请使用不同的浏览器（例如 Internet Explorer）；在 Windows 浏览器中复制粘贴！如果你仍然收到警报，请发送邮件给我：`weblinks@gmail.com`。
 
-
-
-
-
 | 作者 | 书名 | 年度 |
 | :--- | :--- | :--- |
 | Gary J. Bronson | [工程师与科学家的 C 语言：使用 ANSI C 的编程入门](http://index-of.es/C++/C%20for%20Engineers%20and%20Scientists%20-%20An%20Introduction%20to%20Programming%20With%20ANSI%20C.pdf) | 1993 |
@@ -266,12 +252,16 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 | Ben Klemens | [21 世纪 C 语言](https://doc.lagout.org/programmation/C/21st%20Century%20C%20%5BKlemens%202012-11-05%5D.pdf) | 2013 |
 | Paul Deitel and Harvey Deitel | [C 语言程序设计](https://drive.uqu.edu.sa/_/ajshaor/files/Scientific/Deitel-C_%20How%20to%20Program,%207th.pdf) | 2013 |
 | Tim Bailey | [C 语言编程与软件设计入门](http://www-personal.acfr.usyd.edu.au/tbailey/ctext/ctext.pdf) | NF |
-| C# | ü | ü |
+
+### C#
+
+| 作者 | 书名 | 年度 |
+| :--- | :--- | :--- |
 | Svetlin Nakov and Veselin Kolev | [使用 C# 的计算机编程基础](http://ksuweb.kennesaw.edu/~rgesick1/Fundamentals-of-Computer-Programming-with-CSharp-Nakov-eBook-v2013.pdf) | 2013 |
 | Andrew Stellman and Jennifer Greene | [从上开始学 C#](https://robot.bolink.org/ebooks/Head%20First%20CSharp%202e%20May%202010.pdf) | 2010 |
-| ü | [链接 2](https://doc.lagout.org/programmation/CSharp/Head%20First%20CSharp%202nd%20Edition%20May%202010.pdf) | ü |
+| 同上 | [链接 2](https://doc.lagout.org/programmation/CSharp/Head%20First%20CSharp%202nd%20Edition%20May%202010.pdf) | 同上 |
 | Jesse Liberty | [C# 编程](http://index-of.es/Programming/CSharp/O'Reilly%20-%20Programming%20C%23%202nd%20Edition.pdf) | 2002 |
-| ü | [链接 2](https://doc.lagout.org/programmation/CSharp/Programming_C%23.pdf) | ü |
+| 同上 | [链接 2](https://doc.lagout.org/programmation/CSharp/Programming_C%23.pdf) | 同上 |
 | Jay Hilyard and Stephen Teilhet | [C# 3.0 菜谱](http://index-of.es/Programming/CSharp/O'Reilly%20C%23%203.0%20Cookbook%20(3rd%20Edition).pdf) | 2008 |
 | Bradley L. Jones | [Sams 21 天自学 C# 语言](http://ceit.aut.ac.ir/~shiry/lecture/programming/Sams%20-%20Teach%20Yourself%20the%20C%20sharpLanguage%20in%2021%20Days.pdf) | 2004 |
 | Eric Gunnerson | [程序员者的 C# 入门](https://doc.lagout.org/programmation/CSharp/APress%20A%20Programmer%27s%20Introduction%20to%20C%23.pdf) | 2000 |
@@ -279,13 +269,22 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 | Stephen Randy Davis and Chuck Sphar | [傻呆版 C# 2005](https://doc.lagout.org/programmation/CSharp/C%23%202005%20for%20Dummies.pdf) | 2006 |
 | Paul Deitel and Harvey Deitel | [Visual C# 2012 程序设计](http://cache3.pdfdrive.com/dl.php?id=1943714&h=c0d85ec4d92f71d8b90a2f11) | 2012 |
 | John Sharp | [微软 C# 2012 教程](http://zeus.nyf.hu/~bajalinov/VS_C_2012_Step.pdf) | 2012 |
-| C++ | ü | ü |
+
+### C++
+
+| 作者 | 书名 | 年度 |
+| :--- | :--- | :--- |
 | Bjarne Stroustrup | [C++ 语言](https://robot.bolink.org/ebooks/The%20C++%20Language%20Bjarne%20Stroustrup.pdf) | 1997 |
-| ü | [链接 2](http://index-of.es/C++/Addison%20Wesley%20-%20C++%20Programming%20Third%20Edition.pdf) | ü |
+| 同上 | [链接 2](http://index-of.es/C++/Addison%20Wesley%20-%20C++%20Programming%20Third%20Edition.pdf) | 同上 |
 | C. Pozrikidis | [C++ 编程入门](https://robot.bolink.org/ebooks/Introduction%20to%20C++%20Programming%20and%20Graphics.pdf) | 2007 |
 | Alan Parker | [C++ 中的算法与数据结构](https://robot.bolink.org/ebooks/CRC%20Press%20-%20Algorithms%20Data%20Structures%20in%20C++.pdf) | 1993 |
 | Herbert Schildt | [C++：完全参考](http://amarblog.yolasite.com/resources/pdf++) | 2003 |
 | Stanley B. Lippman | [必备 C++](http://index-of.es/C++/Addison%20Wesley%20-%20C++.pdf) | 2002 |
+
+
+
+| 作者 | 标题 | 年份 |
+| :--- | :--- | :--- |
 | Nicolai M. Josuttis | [C++ 标准库：教程与参考](http://index-of.es/C++/Addison%20Wesley%20-%20C++%20Standard%20Library.pdf) | 1999 |
 | Stephen Prata | [C++ Primer Plus](http://index-of.es/C++/Addison%20Wesley%20-%20C++Plus) | 2012 |
 | Ivor Horton | [入门 Visual C++](http://index-of.es/C++/Beginning%20C++.pdf) | 2005 |
@@ -298,10 +297,6 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 | Nicholas A. Solter and Scott J. Kleper | [专业 C++](http://index-of.es/C++/Professional%20CPP.pdf) | 2005 |
 | Vladimir Kushnir | [安全 C++](http://index-of.es/C++/Safe%20cpp.pdf) | 2012 |
 | Matthew Telles | [傻呆版 C++技巧](http://index-of.es/C++/Wiley%20Publishing%20-%20C++%20Timesaving%20Techniques%20for%20Dummies.pdf) | 2005 |
-
-
-
-
 
 | 作者 | 标题 | 年份 |
 | :--- | :--- | :--- |
@@ -328,6 +323,9 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 | Bruce Lawson and Remy Sharp | [初识 HTML5](http://index-of.es/HTML/Introducing%20HTML5) | 2011 |
 | Jesse Cravens and Jeff Burtoft | [HTML5 技巧](http://web-algar.com/books/HTML5%20Hacks) | 2013 |
 | Brian P. Hogan | [HTML5 和 CSS3](http://web-algar.com/books/HTML5%20and%20CSS3) | 2013 |
+
+| 作者 | 标题 | 年份 |
+| :--- | :--- | :--- |
 | Wikibooks.org | [Java 编程](https://robot.bolink.org/ebooks/Java%20Programming) | 2011 |
 | Brian D. Eurbanks | [Wicked Java：代码、开源库和创意](https://robot.bolink.org/ebooks/Wicked%20Java%20Code,%20Open-Source%20Libraries,%20and%20Ideas) | 25 |
 | James Gosling et al. | [Java 规范](https://robot.bolink.org/ebooks/The%20Java%20Specification) | 2011 |
@@ -358,15 +356,17 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 | Marijn Haverbek | [Eloquent JavaScript：现代编程](http://art.yale.edu/file_columns/0000/9186/eloquent_javascript) | 2014 |
 | Marijn Haverbek | [Eloquent JavaScript：现代编程](https://eloquentjavascript.net/) | 2018 |
 | Mark Myer | [更智能的学习 JavaScript：一种利用技术减少一半努力的方法](https://www.cpp.edu/~jcmcgar/513_2016/ASmarterWayLearnJavaScript) | 2013 |
-| Herbert Schildt | [Java™ 2：完全参考，第五版](https://robot.bolink.org/ebooks/Java%20-%20Complete%20Reference%205e) | 2002 |
-| Barry Burd | [Java Dummies 第 6 版](https://doc.lagout.org/programmation/Java/Java%20for%20Dummies%20%286th%20ed.%29%20%5BBurd%202014-03-31%5D.pdf) | 2014 |
 
 
 
+# Java 技术书籍参考列表
 
+## 一、Java 基础
 
 | 作者 | 书名 | 年份 |
 | :--- | :--- | :--- |
+| Herbert Schildt | [Java™ 2：完全参考，第五版](https://robot.bolink.org/ebooks/Java%20-%20Complete%20Reference%205e) | 2002 |
+| Barry Burd | [Java Dummies 第 6 版](https://doc.lagout.org/programmation/Java/Java%20for%20Dummies%20%286th%20ed.%29%20%5BBurd%202014-03-31%5D.pdf) | 2014 |
 | Herbert Schildt | [Java：学者指南](https://robot.bolink.org/ebooks/Java%20A%20Beginners%20Guide%203e%20McGrawHill.pdf) | 2005 |
 | Jonathan Knudsen | [Java 2D 图形](https://robot.bolink.org/ebooks/Java%202D%20Graphics.pdf) | 2001 |
 | Michael Morrison | [浅浅学 JavaScript](https://robot.bolink.org/ebooks/Head%20First%20Java%20Script.pdf) | 2008 |
@@ -386,6 +386,11 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 | Doug Lowe | [傻呆书 Java 全上手书](http://1.droppdf.com/files/1lTSh/java-all-in-one-for-dummies-4th-edition-doug-lowe.pdf) | 2014 |
 | Mark Watson | [Java 编程：10 分钟解决方案](https://doc.lagout.org/programmation/Java/Java%20Programming_%2010-Minute%20Solutions%20%5BWatson%202003-12-30%5D.pdf) | 2004 |
 | Rogers Cadenhead | [21 天自自学会 Java](http://file.allitebooks.com/20151230/Java%20in%2021%20Days,%20Sams%20Teach%20Yourself%20(Covering%20Java%208),%207th%20Edition.pdf) | 2016 |
+
+## 二、JavaScript 与 jQuery
+
+| 作者 | 书名 | 年份 |
+| :--- | :--- | :--- |
 | Danny Goodman | [JavaScript 圣经，黄金版](http://www3.dsi.uminho.pt/iiee/JavaScript%20Gold.pdf) | 2001 |
 | Danny Goodman et al. | [JavaScript 圣经，第 7 版](https://bit.ly/zDhECr) | 2010 |
 | Danny Goodman | [JavaScript 示例](https://doc.lagout.org/programmation/JavaScript%20Examples%20Essential%20Companion%20Javascript%20[Goodman%20001-08%5D) | 2001 |
@@ -398,10 +403,20 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 | Jonathan Chaffer and Karl Swedberg | [学习 jQuery](https://web-algarve.com/books/JS%20AJAX%20jquery%20&%20angular/Learning%24th%20Edition) | 2013 |
 | Leon Revill | [jQuery 2.0 食南](http://web-algarve.com/books/JS%20AJAX%20jquery%20&%20angular/jQuery%2.0.Cookbook) | 2014 |
 | Arun K. Pande | [jQuery 2 解决方案](http://web-algarve.com/books/JS%20AJAX%20jquery%20&%20angular/jQuery%20Recipes) | NF |
+
+## 三、Linux 编程
+
+| 作者 | 书名 | 年份 |
+| :--- | :--- | :--- |
 | LINUX 编程 | ü | ü |
 | Neil Matthew and Richard Stones | [专业 Linux](https://robot.bolink.org/ebooks/Wrox%20Professional%20Linux.pdf) | 2004 |
 | Neil Matthew and Richard Stones | [入门 Linux](https://robot.bolink.org/ebooks/Wrox%20Beginning%20Linux%23e.pdf) | 2004 |
 | Daniel J. Barrett | [Linux 口袋指南](https://the-eye.eu/public/Humble/linuxguide_3dedition.pdf) | 2016 |
+
+## 四、MySQL
+
+| 作者 | 书名 | 年份 |
+| :--- | :--- | :--- |
 | MySQL | ü | ü |
 | Seyed M.M. Saied and Hugh E. Williams | [学习 MySQL](https://robot.bolink.org/ebooks/Learning%20MySQL.pdf) | 2007 |
 | Mark Maslakowski | [21 天自自学会 MySQL](http://www.webbasedprogramming.com/MySQL/Teach%20Yourself%20MySQL%20in%2021%20Days.pdf) | 2000 |
@@ -413,16 +428,18 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 | George Reese | [MySQL 口袋参考](http://index-of.es/EBooks/O'Reilly%20-%20MySQL%20Pocket%20Reference%20ndEdition%20Jul%2007.pdf) | 2007 |
 | ü | [链接 2](http://web-algarve.com/books/MySQL%20&%20PHP/mysql%20pocket%20reference%20edition.pdf) | ü |
 | ü | [链接 3](http://web-algarve.com/books/JS%20AJAX%20jquery%20&%20angular/mysql%20pocket%20reference%20edition.pdf) | ü |
+
+## 五、Perl
+
+| 作者 | 书名 | 年份 |
+| :--- | :--- | :--- |
 | Perl | ü | ü |
 | Ellen Siever et al. | [Perl 壳指南](http://index-of.es/Perl/O'Reilly%20-%20Perl%20In%20Nutshell.pdf) | 1998 |
 | Brian D. Foy | [精通 Perl](http://index-of.es/Perl/O'Reilly%20-%20Mastering%20Perl(2009).pdf) | 2007 |
 | Paul Gruhn | [图解 Perl 基础](http://index-of.es/Perl_Basics.pdf) | NF |
 | David Till | [21 天自自学会 Perl 5](http://index-of.es/Perl/Teach%20Yourself%20Perl%205%20In%2021%20Days.pdf) | NF |
-| PHP | ü | ü |
 
-
-
-
+## 六、PHP 与 MySQL
 
 | 作者 | 书名 | 年度 |
 | :--- | :--- | :--- |
@@ -438,6 +455,11 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 | Ellie Quigley | [PHP & MySQL 实例](https://robot.bolink.org/ebooks/PHP%20and%20MySQL%20by%20Example.pdf) | 2007 |
 | Brett McLaughlin | [PHP & MySQL: 缺失手册](https://robot.bolink.org/ebooks/PHP%20and%20MySQL%20The%20Missing%20Manual.pdf) | 2012 |
 | Steve Suehring 和 Janet Valade | [自学者教程 PHP MySQL JavaScript 和 HTML5 五合一](https://robot.bolink.org/ebooks/PHP%20MySQL%20JavaScript%20and%20HTML5%20All-in-One%20For%20Dummies%20Small.pdf) | 2013 |
+
+
+
+| 作者 | 书籍 | 年份 |
+|---|---|---|
 | ü | [链接 2](https://khmerbamboo.files.wordpress.com/2014/09/php-mysql-javascript-html5-all-in-one-for-dummies.pdf) | ü |
 | Robin Nixon | [学习 PHP, MySQL, JavaScript 和 CSS](https://robot.bolink.org/ebooks/PHP%20MySQL%20JavaScript%20And%20CSS%202e.pdf) | 2012 |
 | Robin Nixon | [学习 PHP, MySQL 和 JavaScript](https://robot.bolink.org/ebooks/Learning%20PHP,%20MySQL,%20and%20JavaScript%20-%20Robin%20Nixon.pdf) | 2009 |
@@ -445,7 +467,9 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 | W. Jason Gilmore | [PHP 和 MySQL 入门: 从入门到专业](http://minitorn.tlu.ee/~jaagup/kool/java/kursused/14/webpr/beginning_php_and_mysql_from_novice_to_professional_4th_edition.pdf) | 2010 |
 | Larry ULLman | [用于动态网站的 PHP 和 MySQL](http://personal.graceland.edu/~aallshou/classwork/csit2100/GFX-PHP.and.MySQL.for.Dynamic.Web.Sites.Visual.QuickPro.Guide.4th.Edition.pdf) | 2012 |
 | Lynn Beighley 和 Michael Morrison | [Head First PHP & MySQL](http://web-algarve.com/books/MySQL%20&%20PHP/Head%20First%20PHP%20&%20MySQL.pdf) | 2009 |
+
 | Python | ü | ü |
+|---|---|---|
 | John M. Zelle | [Python 编程: 计算机科学导论](https://mybiostats.files.wordpress.com/2015/03/python-programming-an-introduction-to-computer-science.pdf) | 2002 |
 | ü | [链接 2](https://robot.bolink.org/ebooks/Python%20Programming-An%20Introduction%20Science.pdf) | ü |
 | Jennifer Campbell 等人 | [实用编程: 科学入门](https://robot.bolink.org/ebooks/Practical%20Programming%20Introduction%20Science%20Using%20Python.pdf) | 2009 |
@@ -481,11 +505,6 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 | David Mertz | [Python 中的函数式编程](http://mmc.geofica.unam.mx/femp/Lenguajes/Python/functional-programming-python.pdf) | 2015 |
 | Al Sweigart | [Python 自动化无琐任务](http://1.droppdf.com/files/5iHzx/automate-the-boring-stuff-with-python-2015-.pdf) | 2015 |
 | Gopi Subramanian | [Python 数据科学食谱](http://file.allitebooks.com/20151124/Python%20Data%20Science%20Cookbook.pdf) | 2015 |
-
-
-
-
-
 | Igor Milovanović 等人. | [Python 数据可视化菜谱](http://file.allitebooks.com/20151216/Python%20Data%20Visualization%20Cookbook,%20Second%20Edition.pdf) | 2015 |
 | Brett Slatkin | [高效 Python：编写更好 Python 的 59 种方法](https://arisuchan.jp/%CE%BB/src/1498628824511-0.pdf) | 2015 |
 | Luciano Ramalho | [流利的 Python](http://1.droppdf.com/files/X06AR/fluent-python-2015-.pdf) | 2014 |
@@ -503,35 +522,50 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 | Jason R. Briggs | [少儿 Python](https://the-eye.eu/public/HumbleBundle/pythonids_14900541) | 2013 |
 | Mahesh Venkitalam | [Python 游场](https://the-eye.eu/public/HumbleBundle/pythonplayground_geekforthecurious) | 2016 |
 | Eric Matthes | [Python 速教程](https://the-eye.eu/public/HumbleBundle/pythoncourse_updated) | 2016 |
+
 | Ruby | ü |
+|---|---|
 | Peter Cooper | [入门 Ruby：从新手到专业人士](http://index-of-es/Ruby/Begining-Ruby-1.9) | 2009 |
 | Huw Collingbourne | [Ruby 之书](http://index-of-es/Ruby/BookofRuby) | 2009 |
+
 | SQL | ü | ü |
+|---|---|---|
 | Paul Weinberg 等人. | [SQL 完全参考指南](https://robot.bolink.org/ebooks/SQL%20-%20Complete%20Reference%20e) | 2010 |
 | James R. Groff 等人. | [SQL - 完全参考](https://robot.bolink.org/ebooks/SQL%20-%20Complete%20Reference%203) | 2009 |
 | Lynn Beighley | [入门 SQL](https://robot.bolink.org/ebooks/Head%20First%20SQL%20By%20Beighley) | 2007 |
 | ü | [链接 2](http://web-algarve.com/books/MySQL%20&%20PHP/Head%20First%20SQL) | ü |
+
+
+
 | Dušan Petković | [Microsoft SQL Server 2008：初学者指南](https://robot.bolink.org/ebooks/Beginners%20Guide%20to%20SQL%20Server%2008.pdf) | 2008 |
+
 | Andy Oppel and Robert Sheldon | [SQL：学者指南](https://doc.lagout.org/programmation/Databases/SQL-%20A%20Beginner’s%20Guide,%203rd%20Edition.pdf) | 2009 |
+
 | Allen G. Taylor | [自 way 教程 SQL](http://file.allitebooks.com/20151213/SQL%20For%20Dummies,%208th%20Edition.pdf) | 2013 |
+
 | Allen G. Taylor | [自 way 教程 SQL 合集](https://drive.google.com/uc?export=download&id=1xn0dCF05QnL7soEWkvDup) | 2011 |
+
 | Alex Kriegel | [探索 SQL：初学者实践指南](https://www.pdfdrive.com/download.pdf?id=156844262&h=518bb68b99413e64f218be06a0af5) | 2011 |
+
 | Ryan Stephens 等人. | [24 小时自学 SQL](http://file.allitebooks.com/20151224/SQL%20in%2024%20Hours,%20Sams%20Teach%20Yourself,%206th%20Edition.pdf) | 2016 |
+
 | Jonathan Gennick | [SQL 口手册](https://isidore.co/calibre/get/pdf/6535) | 2011 |
+
 | Alan Beaulieu | [学习 SQL](http://www.r-5.org/files/books/computers/languages/sql/mysql/Alan_Beaulieu-Learning_SQL-EN.pdf) | 2009 |
+
 | Unix | ü | ü |
+
 | Kay A. Robbins and Steven Robbins | [Unix™ 系统编程：通信、并发与线程](https://robot.bolink.org/ebooks/Unix%20Systems%20Programming%20-%20Communication,%20Concurrency,%20and%20Threads.pdf) | 2003 |
+
 | W. Richard Stevens and Stephen A. Rago | [Unix 环境下的高级编程](http://file.allitebooks.com/20151213/Advanced%20Programming%20in%20the%20UNIX%20Environment) | |
 
-
-
-
-
 ### C 语言编程
+
 - [初学者 C 语言视频教程](https://www.youtube.com/playlist?list=PLfVsf4Bjg79CZ5kHTiQHcm-l2q8j06ofd)
 - [C 语言编程教程 [ 基础 ]](https://www.youtube.com/playlist?list=PLfVsf4Bjg79A_LrMgUr5DUkT4IBAAb1it)
 
 ### C#
+
 - [C# 教程](https://youtu.be/lisiwUZJXqQ)
 - [C# 编程教程 Visual Studio](https://www.youtube.com/playlist?list=PLS1QulWo1RIZrmdggzEKbhnfvCMHtT-Sa)
 - [初学者 C# 教程（零基础）](https://www.youtube.com/playlist?list=PLS1QulWo1RIZWLRQfMwDjdknN5cV7LM9m)
@@ -541,6 +575,7 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 - [初学者 C# 教程](https://www.youtube.com/playlist?list=PLAC325451207E3105)
 
 ### C++
+
 - [C++ 编程](https://youtu.be/Rub-JsjMhWY)
 - [初学者 C++ 教程 - 完整课程](https://youtu.be/vLnPwxZdW4Y)
 - [C++ 从基础到进阶教程](https://youtu.be/mUQZ1qmKlLY)
@@ -553,21 +588,25 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 - [C++ 从基础到进阶教程](https://youtu.be/mUQZ1qmKlLY)
 
 ### CSS
+
 - [零基础 CSS 速成班](https://youtu.be/yfoY53QXEnI)
 - [初学者 CSS 教程](https://www.youtube.com/playlist?list=PLr6-GrHUlVf8JIgLcu3sHigvQjTw_aC9C)
 - [CSS 视频教程](https://www.youtube.com/playlist?list=PL07454EA7FF8D28AB)
 
 ### D
+
 - [D 语言语言](https://www.youtube.com/playlist?list=PLW0ahWDuXZ9w0brZKNFXMkT4Db57Sb-gf)
 - [D 编程语言](https://www.youtube.com/playlist?list=PLBF7AE87D0F93C02D)
 
 ### HTML
+
 - [HTML5 教程播放列表](https://www.youtube.com/playlist?list=PL081AC329706B2953)
 - [初学者 HTML5 教程](https://www.youtube.com/playlist?list=PLS1QulWo1RIbU9SCKLXBou3-p6LZye5L_)
 - [HTML5 教程](https://www.youtube.com/playlist?list=PL1A2CSdiySGIlme1vVXbXBZpK1aDb4TBG)
 - [HTML 教程](https://www.youtube.com/playlist?list=PLWKjhJtqVAbnSe1qUNMG7AbPmjIG54u88)
 
 ### HTML & CSS
+
 - [初学者 HTML 和 CSS 教程](https://www.youtube.com/playlist?list=PLS1QulWo1RIbPrLaiosApdbbTwk-xMlIa)
 - [HTML & CSS](https://www.youtube.com/playlist?list=PLillGF-RfqbZTASqIqdvm1R5mLrQq79CU)
 - [HTML 和 CSS 教程](https://www.youtube.com/playlist?list=PL0eyrZgxdwhwNC5ppZo_dYGVjerQY3xYU)
@@ -577,6 +616,7 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 - [HTML5 和 CSS3 初学者](https://www.youtube.com/playlist?list=PLAFE1C18AE)
 
 ### Java
+
 - [Java 视频教程](https://www.youtube.com/playlist?list=PLE7E8B5F6C9)
 - [初学者 Java 教程](https://www.youtube.com/playlist?list=PL9ooVr1h0B4auWwNg4F)
 - [Java（初学者）编程教程](https://.youtube.com/playlist?list=PLS1QulWo1RIj7j)
@@ -585,38 +625,39 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 - [2018 零基础 Java 基础](https://youtu.be/YMvQSI6pQ)
 
 ### JavaScript
-- [JavaScript 教程](https://www.youtube.com/playlist?list=PL7f00H8)
 
+- [JavaScript 教程](https://www.youtube.com/playlist?list=PL7f00H8)
 - [JavaScript 教程](https://youtu.be/fju9iiGs)
 - [学者  教程](https://www.youtube.com/playlist?list=PL96ZX_55)
 - [ [   httpshttps.....playlistplaylistplaylistplaylistplaylist
 -----playlistlistPLs0zWlo6DY)
 - [初学者 JavaScript 教程](https://www.youtube.com/playlist?list=PL410R-6DYDY)
--
-)
-- [  教程](https://youtu.be/Wgh98sF6))
+- [  教程](https://youtu.be/Wgh98sF6)
 - [  教程](https://youtu.be/Bv5c-T)
 - [JavaScript 教程](https://www.youtube.com/playlist?list=PL41lfR-6DnOph)
 
 ### JQuery
+
 - [JQuery 视频教程](https://www.youtube.com/playlist?list=PL7f00H8)
--
 - [JQuery 教程](https://www.youtube.com/playlist?list=PL442FA2C127377F07)
 - [初学者 JQuery 教程](https://www.youtube.com/playlist?list=PLS1QulWo1RIZc4GM_E04HCPEd_xpcagg)
 - [JQuery 前到后](https://www.youtube.com/playlist?list=PLillGF-Rfqbap2IB6ZS4BBBcYPagAjpjn)
 - [初学者 JQuery 教程](https://www.youtube.com/playlist?list=PL41lfR-6DnOph)
 
 ### LINUX Programming
+
 - [LINUX 完整课程：从入门到高级用户](https://youtu.be/wBp0Rb-Zjak)
 - [LINUX 编程](https://www.youtube.com/playlist?list=PL442F07U9A)
 
 ### MySQL
+
 - [MySQL 教程](https://youtu.be/yPu6V5by4)
 - [初学者 MySQL 教程](https://www.youtube.com/playlist?list=PLS1QulWo1RIahlYDqZb81)
 - [初学者 MySQL](https://www.youtube.com/playlist?list=PL41lfR-6DnOokJfmY)
 - [MySQL 课程](https://www.youtube.com/playlist?list=PL5e7G88U9A)
 
 ### Perl
+
 - [Perl 教程](https://youtu.be/WEghIXs8F6)
 - [Perl 6 教程](https://youtu.be/l0zPwhgWTM)
 - [Perl 教程](https://www.youtube.com/playlist?list=PL_RGaFnxSHWpqRBcStwV0NwMA3nXMh5GC)
@@ -624,6 +665,7 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 - [Perl 编程](https://www.youtube.com/playlist?list=PL4DE79AEF93C8E4C7)
 
 ### PHP
+
 - [PHP 编程](https://youtu.be/7TF00hJI78Y)
 - [PHP 教程播放列表](https://www.youtube.com/playlist?list=PL442FA2C127377F07)
 - [初学者 PHP 教程（零基础）](https://www.youtube.com/playlist?list=PLS1QulWo1RIZc4GM_E04HCPEd_xpcagg)
@@ -631,12 +673,6 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 - [初学者 PHP 教程](https://www.youtube.com/playlist?list=PL41lfR-6DnOphKZdzukiMDU5B6i_JLY8w)
 
 ### Python
-
-
-
-
-
-## Python 
 
 - [Python 编程](https://youtu.be/N4mEzFDjqtA)
 - [Python 教程](https://www.youtube.com/playlist?list=PL-osiE80TeTt2d9bfVyTiXJA-UTHn6WwU)
@@ -653,6 +689,11 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 - [针对初者的 Python 教程（适合零基础）](https://www.youtube.com/playlist?list=PLS1QulWo1RIaJECMeUT4LFwJ-ghgoSH6n)
 - [针对初者的 Python 3 教程](https://www.youtube.com/playlist?list=PLS1QulWo1RIYt4e0WnBp-ZjCNq8X0FX0J)
 - [学习 Python - 初学者完整课程](https://youtu.be/rfscVS0vtbw)
+
+
+
+## Python 资源
+
 - [针对初者的 Python 教程](https://www.youtube.com/playlist?list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3)
 - [初初编程者的 Python 实战介绍](https://youtu.be/rkx5_MRAV3A)
 - [Python 教程](https://www.youtube.com/playlist?list=PLTjRvDozrdlxj5wgH4qkvwSOdHLOCx10f)
@@ -694,7 +735,7 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 - [针对初者的 XML 教程](https://youtu.be/yUw-aTOAw8)
 - [学习 XML](https://www.youtube.com/playlist?list=PL-sysBkJAYtSn0Cs7Z6X3bYWItdW5WP)
 
-## 链接集 5 你可以探索的计算机编程在线论坛
+## 链接集 5：你可以探索的计算机编程在线论坛
 
 ![](img/image00198.jpeg)
 
@@ -702,23 +743,23 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 
 ### 论坛（点击探索）
 
-- [stackoverflow.com](https://stackoverflow.com/)
-- [dreamincode.net](https://www.dreamincode.net/forums/76-programming-help/)
-- [codecall.net](http://forum.codecall.net/)
-- [linuxquestions.org](https://www.linuxquestions.org/questions/programming-9/)
-- [codeguru.com](http://forums.coduru.com/)
-- [devshed.com](http://forums.devshed.com/)
-- [quora.com](https://www.quora.com/topic/Computer-Programming)
-- [hackforums.net](https://hackforums.net/forumdisplay.php?fid=5)
-- [stackexchange.com](https://softwareengineering.stackexchange.com/)
-- [devshed.com/beginner-programming](http://forums.devshed.com/beginner-programming-16/)
-- [python-forum](https://python-forum.io/)
-- [go4expert.com](https://www.go4expert.com/forums/python/)
-- [freecodecamp.org](https://www.freecodecamp.org/forum/t/python-for-beginner/169628/4)
-- [javaprogrammingforums](http://www.javaprogrammingforums.com/)
-- [cplusplus.com](http://www.cplusplus.com/forum/general/)
-- [cboard.cprogramming](https://cboard.cprogramming.com/)
-- [codoproject.com](https://www.codoproject.com/Forums/1580226/JavaScript.aspx)
+- [`stackoverflow.com`](https://stackoverflow.com/)
+- [`dreamincode.net`](https://www.dreamincode.net/forums/76-programming-help/)
+- [`codecall.net`](http://forum.codecall.net/)
+- [`linuxquestions.org`](https://www.linuxquestions.org/questions/programming-9/)
+- [`codeguru.com`](http://forums.coduru.com/)
+- [`devshed.com`](http://forums.devshed.com/)
+- [`quora.com`](https://www.quora.com/topic/Computer-Programming)
+- [`hackforums.net`](https://hackforums.net/forumdisplay.php?fid=5)
+- [`stackexchange.com`](https://softwareengineering.stackexchange.com/)
+- [`devshed.com/beginner-programming`](http://forums.devshed.com/beginner-programming-16/)
+- [`python-forum`](https://python-forum.io/)
+- [`go4expert.com`](https://www.go4expert.com/forums/python/)
+- [`freecodecamp.org`](https://www.freecodecamp.org/forum/t/python-for-beginner/169628/4)
+- [`javaprogrammingforums`](http://www.javaprogrammingforums.com/)
+- [`cplusplus.com`](http://www.cplusplus.com/forum/general/)
+- [`cboard.cprogramming`](https://cboard.cprogramming.com/)
+- [`codoproject.com`](https://www.codoproject.com/Forums/1580226/JavaScript.aspx)
 
 ---
 
@@ -726,19 +767,15 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 
 在本书出版时，所有链接都是有效的。请注意，任何在线文档都可能存在错误，因此请自行决定使用。对于您对书中链接指向的每个网站内容的使用，我不承担任何责任。其他人或机构的讲义笔记或录制视频不能替代您去听课。请记住，我不拥有这些链接内容的版权。如果版权所有者希望删除删除链接，请立即联系我。
 
+![`C:\Users\boamponsem\Dropbox\BOOK PROJECT\LINKS MINING\PUBLISHED\CHEMISTRY\BOOK 1\UPLOAD\FINAL COVER.jpg`](https://www.amazon.com/dp/B07GZ8T)
 
+![`C:\Users\boamponsem\Dropbox\BOOK PROJECT\LINKS MINING\PHYSICS\BOOK 2_how to study\KINDLE\cover.jpg`](https://www.amazon.com/dp/B07F76N)
 
+[`www.amazon.com/dp/B07F76N8QH`](https://www.amazon.com/dp/B07F76N8QH)（Kindle）
 
+[`www.amazon.com/dp/1983311022`](https://www.amazon.com/dp/1983311022)（平装版）
 
-![C:\Users\boamponsem\Dropbox\BOOK PROJECT\LINKS MINING\PUBLISHED\CHEMISTRY\BOOK 1\UPLOAD\FINAL COVER.jpg](https://www.amazon.com/dp/B07GZ8T)
-
-![C:\Users\boamponsem\Dropbox\BOOK PROJECT\LINKS MINING\PHYSICS\BOOK 2_how to study\KINDLE\cover.jpg](https://www.amazon.com/dp/B07F76N)
-
-[`www.amazon.com/dp/B07F76N8QH`](https://www.amazon.com/dp/B07F76N8QH) (Kindle)
-
-[`www.amazon.com/dp/1983311022`](https://www.amazon.com/dp/1983311022) (平装版)
-
-![C:\Users\boamponsem\Dropbox\BOOK PROJECT\LINKS MINING\PHYSICS\BOOK 1_links\UPLOAD\COVER 1\University_Physics (2).jpg](img/image00203.jpeg)
+![`C:\Users\boamponsem\Dropbox\BOOK PROJECT\LINKS MINING\PHYSICS\BOOK 1_links\UPLOAD\COVER 1\University_Physics (2).jpg`](img/image00203.jpeg)
 
 ![](img/image00204.jpeg)
 
@@ -747,4 +784,3 @@ Dr. Web Links 是一位亚马逊畅销书的笔名，他拥有奥克兰大学的
 ![](img/image00205.jpeg)
 
 1
-

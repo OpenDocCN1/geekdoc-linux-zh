@@ -1,32 +1,19 @@
+
 # 全 Linux 邮件服务器解决方案构建指南：虚拟域与用户
 
+作者：Hedaya Mahmood Alasooly  
+邮箱：`Hedaya_alasooly@yahoo.com`
 
+指导老师：Hidaia Alassouli 博士  
+学生姓名：Khumalo, Khumbulani V.
 
+## 摘要
 
-
-
-
-
-作者
-
-Hedaya Mahmood Alasooly
-Hedaya_alasooly@yahoo.com
-
-
-指导老师：
-Hidaia Alassouli 博士
-
-学生姓名
-Khumalo, Khumbulani V.
-
-### 摘要
-
-如今，一个系统托管多个域名已很常见，例如，uniswa.com 和 mtn.com 或 acme.com 可能运行在同一台主机机器上，但表现得就像运行在三个不同的主机上一样。一个系统通常有一个规范域名，它有其通常或本地域名，而额外的域名被配置为虚拟域名。
+如今，一个系统托管多个域名已很常见，例如，`uniswa.com` 和 `mtn.com` 或 `acme.com` 可能运行在同一台主机机器上，但表现得就像运行在三个不同的主机上一样。一个系统通常有一个规范域名，它有其通常或本地域名，而额外的域名被配置为虚拟域名。
 
 这项工作的目的是创建一个基于 `Postfix` 的邮件服务器解决方案，该方案基于虚拟用户和域名，即存储在 MySQL 数据库中的用户和域名。目标是实现完全虚拟化的用户和域名。`bob@uniswa.com != bob@acme.com`。这意味着为每个域名创建一个独立的命名空间。
 
 它还将演示 `Courier-Imap` (IMAP/POP3) 的安装和配置，使其能够通过 `Postfix` 使用的同一个 MySQL 数据库进行身份验证。生成的 `postfix` 服务器具备配额管理功能，而这是 `Postfix` 默认并不包含的；该项目将演示如何适当地修补 `postfix`。密码以加密形式存储在数据库中。该工作还涵盖了 `Mail Scanner`、`SpamAssassin` 和 `ClamAv` 的安装，以便对邮件进行垃圾邮件和病毒扫描。MySQL 数据库的管理可以通过基于 Web 的工具 `Postfixadmin` 完成，也可以在 `MySQL` 终端中手动完成。`Postfixadmin` 是一个为 `Postfix` 创建的 Web 端管理工具，用于处理存储在 MySQL 中的 `Postfix` 风格的虚拟域名和用户。安装了基于 Web 的 `squirrelmail` 邮件客户端，以便用户通过互联网从世界任何地方检查邮件。所有安装均在 Fedora 5 Linux 机器上完成。
-
 
 ## 1. 引言
 
@@ -34,19 +21,19 @@ Khumalo, Khumbulani V.
 
 项目由以下部分组成：
 
-* 安装 `Postfix`。
-* 安装 `Courier-IMAP`（如果你想使用 `Courier` 作为 IMAP）。
-* 创建 MySQL 表。
-* 填充数据库。
-* 创建 `Postfix-Mysql` 配置文件。
-* 安装 `Postfixadmin`。
-* 安装 `MailScanner`。
-* 安装 `ClamAV`。
-* 创建虚拟用户和虚拟目录。
-* 配置 `Postfix`。
-* `Courier-IMAP` 配置。
-* 配置 `Squirrelmail`。
-* 测试配置。
+- 安装 `Postfix`。
+- 安装 `Courier-IMAP`（如果你想使用 `Courier` 作为 IMAP）。
+- 创建 MySQL 表。
+- 填充数据库。
+- 创建 `Postfix-Mysql` 配置文件。
+- 安装 `Postfixadmin`。
+- 安装 `MailScanner`。
+- 安装 `ClamAV`。
+- 创建虚拟用户和虚拟目录。
+- 配置 `Postfix`。
+- `Courier-IMAP` 配置。
+- 配置 `Squirrelmail`。
+- 测试配置。
 
 ## 2. 项目描述
 
@@ -54,21 +41,21 @@ Khumalo, Khumbulani V.
 
 这项工作的主要目标是创建一个支持多个域名的邮件服务器，例如接收 `bob@mtn.com` 和 `bob@acme.com` 的邮件。当邮件服务器设置完成后，它必须能够：
 
-* 为用户接收并存储邮件。
-* 支持配额管理以将邮箱保持在合理范围内。
-* 让用户通过 IMAP 和 POP3 获取邮件。
-* 接收并转发邮件。
-* 提供一个 Web 邮件界面进行阅读。
-* 检测病毒和垃圾邮件并进行过滤。
+- 为用户接收并存储邮件。
+- 支持配额管理以将邮箱保持在合理范围内。
+- 让用户通过 IMAP 和 POP3 获取邮件。
+- 接收并转发邮件。
+- 提供一个 Web 邮件界面进行阅读。
+- 检测病毒和垃圾邮件并进行过滤。
 
 ### 2.2 系统概述
 
 该项目描述了如何创建一个虚拟域名和虚拟用户的邮件服务器（用户无法登录系统，他们仅存在于数据库中）。成功设置服务器需要具备以下组件的基础知识：
 
-* `MySQL`（创建数据库、授予用户访问权限），这是一个存储域名、用户帐户和邮件转发信息的数据库系统。
-* `SMTP` (`Postfix`)，这是邮件服务器之间发送邮件消息的协议。
-* `POP3`, IMAP，这里使用的类型是 `Courier-IMAP`，替代方案可以是 `dovecot`，这是一个提供邮件目录访问的服务器。
-* `Fedora` (Linux)，理解一般的系统管理、使用文本编辑器、命令行以及读取日志文件。
+- `MySQL`（创建数据库、授予用户访问权限），这是一个存储域名、用户帐户和邮件转发信息的数据库系统。
+- `SMTP` (`Postfix`)，这是邮件服务器之间发送邮件消息的协议。
+- `POP3`, IMAP，这里使用的类型是 `Courier-IMAP`，替代方案可以是 `dovecot`，这是一个提供邮件目录访问的服务器。
+- `Fedora` (Linux)，理解一般的系统管理、使用文本编辑器、命令行以及读取日志文件。
 
 帐户存储在 MySQL 数据库中。域名将具有独立的命名空间，例如，`bob@acme.com` 和 `bob@mtn.com` 的邮件将进入不同的邮箱。因此，安排将为每个虚拟账户设置独立的邮箱。
 
@@ -84,44 +71,40 @@ Khumalo, Khumbulani V.
 
 邮件服务器将在 Fedora core 5 操作系统中使用以下软件包创建：
 
-* `Postfix` - `2.2.8-1.2`。
-* `MySQL` - `5.0.18-2.1`。
-* `Courier – Imap` – `4.4.1-1.5`。
-* `Courier – Authlib` – `0.62.1-1.fc5`。
-
-
-
-
-
-* `Squirrelmail` – `1.4.6.tar.bz2`
-* `PostfixAdmin` – `2.3.3.tar.gz`
-* Fedora core 5 默认带的 `Apache2`。
-* `Mail Scanner-4.84.3-1.rpm.tar.gz`。
-* `Install-Clam-0.96.5-SA-3.3.1` 或任何 `clamav` 软件包。
-* Fedora core 5 默认带的 `SpamAssassin`。
-* `Fedora core 5`（操作系统）。
-* `Compaq 610 笔记本 Intel core Duo 3GHz 2GB RAM 320 GB HDD`。
+- `Postfix` - `2.2.8-1.2`。
+- `MySQL` - `5.0.18-2.1`。
+- `Courier – Imap` – `4.4.1-1.5`。
+- `Courier – Authlib` – `0.62.1-1.fc5`。
+- `Squirrelmail` – `1.4.6.tar.bz2`
+- `PostfixAdmin` – `2.3.3.tar.gz`
+- Fedora core 5 默认带的 `Apache2`。
+- `Mail Scanner-4.84.3-1.rpm.tar.gz`。
+- `Install-Clam-0.96.5-SA-3.3.1` 或任何 `clamav` 软件包。
+- Fedora core 5 默认带的 `SpamAssassin`。
+- `Fedora core 5`（操作系统）。
+- `Compaq 610 笔记本 Intel core Duo 3GHz 2GB RAM 320 GB HDD`。
 
 所有使用的软件包均为 `i386` 类型。假设 Fedora core 5 和 `Mozilla Fire Fox` 已成功安装，并启用了 `HTTP` 和 `SMTP` 支持，同时关闭了防火墙。
 
-## 3. 邮件服务器软件包的主要安装与配置：
+## 3. 邮件服务器软件包的主要安装与配置
 
 该项目涵盖以下部分：
-* 安装 `Postfix`。
-* 安装 `Courier-IMAP`（如果你想使用 `Courier` 作为 `IMAP/POP` 服务器）。
-* 创建数据库表。
-* 为数据库填充部分数据。
-* 创建 `Postfix-Mysql` 配置文件。
-* 安装 `Postfixadmin`。
-* 安装 `MailScanner`。
-* 安装 `ClamAV` 和 `SpamAssassin`。
-* 创建虚拟用户和虚拟目录。
-* 配置 `MailScanner`。
-* 配置 `Postfix`。
-* `Courier-IMAP` 配置。
-* 配置 `Squirrellmail`。
 
-### 3.1 安装 Postfix：
+- 安装 `Postfix`。
+- 安装 `Courier-IMAP`（如果你想使用 `Courier` 作为 `IMAP/POP` 服务器）。
+- 创建数据库表。
+- 为数据库填充部分数据。
+- 创建 `Postfix-Mysql` 配置文件。
+- 安装 `Postfixadmin`。
+- 安装 `MailScanner`。
+- 安装 `ClamAV` 和 `SpamAssassin`。
+- 创建虚拟用户和虚拟目录。
+- 配置 `MailScanner`。
+- 配置 `Postfix`。
+- `Courier-IMAP` 配置。
+- 配置 `Squirrellmail`。
+
+### 3.1 安装 Postfix
 
 Postfix 不带配额（quota）和 `MySQL` 数据库支持，因此为了支持这些功能，需要获取 `Postfix` 源码包和 `Postfix` 配额补丁，进行解压，并按照下文所示编辑补丁的规范文件。对 `Postfix` 进行补丁后，获取一个针对特定运行环境的新 `Postfix` 软件包。然后安装新的 `Postfix`。
 
@@ -153,7 +136,7 @@ rpm - ivh postfix - 2.2.8-1.2.i386.rpm
 
 安装所需的依赖项取决于系统中安装的软件包，因此你应该下载并安装这些依赖，然后尝试重新安装 `postfix`。
 
-### 3.2 Postfix 的初始配置：
+### 3.2 Postfix 的初始配置
 
 要配置 `Postfix`，需要在 `/etc/postfix/main.cf` 文件中编辑并取消以下行的注释。`Postfix` 将识别服务器的全限定域名和本地域名。同时指定服务器发送邮件时使用的出站域名、允许接收的以太网接口以及允许在本地登录的邮件客户端 IP 地址。
 
@@ -186,7 +169,7 @@ Hi testing
 quit
 ```
 
-### 3.3 安装 MySQL 软件包：
+### 3.3 安装 MySQL 软件包
 
 从 Fedora 自带的 `RPMS` 安装 `MySQL`、`mysql-devel`、`mysql-server`、`mysql-client` 软件包以及任何依赖包。例如安装 `mysql`：
 
@@ -194,7 +177,7 @@ quit
 rpm -ivh mysql*
 ```
 
-### 3.4 创建表：
+### 3.4 创建表
 
 在 `MySQL` Shell 中，创建 `Postfix` 对应的 `admin` 用户并授予权限，以便 `Postfix` 配置和虚拟域名。
 
@@ -203,6 +186,7 @@ mysql
 ```
 
 （创建 `postfix` 数据库）
+
 ```sql
 CREATE DATABASE postfix;
 USE postfix;
@@ -278,10 +262,6 @@ CREATE TABLE log (
 );
 ```
 
-
-
-
-
 `mailbox` 表存储了所有虚拟用户（即邮箱地址，因为邮箱地址和用户名相同）、密码（加密形式）以及每个邮箱箱的配额值。`mailbox` 表的结构如下：
 
 ```sql
@@ -289,6 +269,8 @@ CREATE TABLE mailbox ( username varchar(255) NOT NULL default '', password varch
 ```
 
 虚拟假期（Virtual Vacation）是通过一个接收邮件的本地 shell 账户实现的。邮件随后由 Perl 脚本处理，该脚本会将假期回复消息发给发送者。`vacation` 表的结构如下：
+
+
 
 ```sql
 CREATE TABLE vacation (email varchar (255) NOT NULL default”, subject varchar (255) NOT NULL default”, body text NOT NULL default”, cache text NOT NULL default”, domain varchar (255) NOT NULL default”, Created datetime NOT NULL default ‘0000-00-00 00:00:00’, Active tinyint (1) NOT NULL default ‘1’, PRIMARY KEY (email), KEY email (email), TYPE = MYISAM COMMENT =’Postfix Admin – virtual vacation’;
@@ -300,7 +282,7 @@ CREATE TABLE vacation (email varchar (255) NOT NULL default”, subject varchar 
 CREATE TABLE transport (username varchar (255) NOT NULL default”, domain varchar (255) NOT NULL default”, destination varchar (255) NOT NULL default”, Created datetime NOT NULL default ‘0000-00-00 00:00:00’, Modified datetime default ‘0000-00-00 00:00:00’, active tinyint (1) NOT NULL default ‘1’, PRIMARY KEY (domain));
 ```
 
-### 3.5 为数据库填充数据：
+### 3.5 为数据库填充数据
 
 接下来，必须向 Postfix 数据库中填充一些数据，否则这些数据仍然可以通过 `Postfixadmin` 进行填充。
 
@@ -312,12 +294,13 @@ INSERT INTO mailbox (username, password, name, quota, maildir) VALUES (‘user@u
 quit;
 ```
 
-### 3.6 创建 Postfix-MysSql 配置：
+### 3.6 创建 Postfix-MysSql 配置
 
-必须告诉 Postfix 在哪里查找数据库中的所有信息。因此，必须创建六个访问文本并在 `etc/main.cf` 文件中进行映射，以允许 postfix 读取 MySQL 表格。
+必须告诉 Postfix 在哪里查找数据库中的所有信息。因此，必须创建六个访问文本并在 `etc/main.cf` 文件中进行映射，以允许 Postfix 读取 MySQL 表格。
 
-创建 `/etc/postfix/mysql/mysql_virtual_alias_maps.cf`
-```
+创建 `/etc/postfix/mysql/mysql_virtual_alias_maps.cf`：
+
+```text
 user = postfix
 password = postfix
 host = localhost
@@ -325,18 +308,21 @@ dname = postfix
 query =SELECT go to FROM alias WHERE address =’%s’ AND active =1
 ```
 
-创建 `/etc/postfix/mysql/mysql_virtual_domains_maps.cf`
-```
+创建 `/etc/postfix/mysql/mysql_virtual_domains_maps.cf`：
+
+```text
 user = postfix
 password = postfix
 host = localhost
 dname = postfix
 query = SELECT domain FROM domain WHERE domain = ‘%s’
 ```
+
 # 备份 MX 转发时使用的优化查询
 
-创建 `/etc/postfix/mysql/mysql_virtual_mailbox_maps.cf`
-```
+创建 `/etc/postfix/mysql/mysql_virtual_mailbox_maps.cf`：
+
+```text
 user = postfix
 password = postfix
 host = localhost
@@ -344,8 +330,9 @@ dname = postfix
 query =SELECT maildir FROM mailbox WHERE username =’%s’ AND active =1
 ```
 
-创建 `/etc/postfix/mysql/mysql_virtual_mailbox_limit_maps.cf`
-```
+创建 `/etc/postfix/mysql/mysql_virtual_mailbox_limit_maps.cf`：
+
+```text
 user = postfix
 password = postfix
 host = localhost
@@ -353,8 +340,9 @@ dname = postfix
 query =SELECT quota FROM mailbox WHERE username =’%s’
 ```
 
-创建 `/etc/postfix/mysql/mysql_relay_domains_maps.cf`
-```
+创建 `/etc/postfix/mysql/mysql_relay_domains_maps.cf`：
+
+```text
 user = postfix
 password = postfix
 host = localhost
@@ -362,8 +350,9 @@ dname = postfix
 query =SELECT domain FROM domain WHERE domain=’%s’ backupmx = ‘1’
 ```
 
-创建 `/etc/postfix/mysql/transport_maps.cf`
-```
+创建 `/etc/postfix/mysql/transport_maps.cf`：
+
+```text
 user = postfix
 password = postfix
 host = localhost
@@ -374,11 +363,11 @@ where_ field =domain
 additional_conditions= and active = ‘true’
 ```
 
-### 3.7 创建虚拟用户和虚拟目录：
+### 3.7 创建虚拟用户和虚拟目录
 
-系统可以存储数千个用户的邮箱箱。所有这些用户都是虚拟用户，其中没有任何一个是是 Linux 系统用户。你可能不想为每个用户分配唯一的 `UID`（用户 ID），因此让我们创建一个 Linux 用户，它将成为所有邮箱箱的所有者。
+系统可以存储数千个用户的邮箱箱。所有这些用户都是虚拟用户，其中没有任何一个是 Linux 系统用户。你可能不想为每个用户分配唯一的 `UID`（用户 ID），因此让我们创建一个 Linux 用户，它将成为所有邮箱箱的所有者。
 
-创建一个 id 为 `89` 且名为 `/vmail` 文件夹的虚拟 postfix 用户，并使其拥有邮件。该用户被赋予读写邮件权限。
+创建一个 ID 为 `89` 且名为 `/vmail` 文件夹的虚拟 Postfix 用户，并使其拥有邮件。该用户被赋予读写邮件权限。
 
 ```bash
 # mkdir /vmail
@@ -386,7 +375,7 @@ additional_conditions= and active = ‘true’
 #chmod –R 771 /vmail
 ```
 
-### 3.8 使用 MySQL maps 配置 Postfix：
+### 3.8 使用 MySQL maps 配置 Postfix
 
 六个 MySQL maps 配置文件已经创建，现在是时候设置 Postfix `main.cf` 文件了，以便 Postfix 能够查询 MySQL 数据库以获取虚拟邮箱箱和域名。打开 `main.cf` 文件。
 
@@ -394,9 +383,9 @@ additional_conditions= and active = ‘true’
 # gedit /etc/postfix/main.cf
 ```
 
-然后将以下代码段添加到 `main.cf`
+然后将以下代码段添加到 `main.cf`：
 
-```
+```text
 virtual_mailbox_domains = mysql:/etc/postfix/mysql/mysql_virtual_domains_maps.cf
 virtual_alias_maps =mysql:/etc/postfix/mysql/mysql_virtual_alias_maps.cf
 virtual_mailbox_maps =mysql:/etc/postfix/mysql/mysql_virtual_mailbox_maps.cf
@@ -404,7 +393,7 @@ virtual_mailbox_maps =mysql:/etc/postfix/mysql/mysql_virtual_mailbox_maps.cf
 
 然后为投递到虚拟邮箱箱目录的用户分配 ID 和组 ID，并声明邮箱箱限制。
 
-```
+```text
 virtual_gid_maps = static: 89
 virtual_mailbox_limit =51200000
 virtual _ uid_maps = static: 89
@@ -413,7 +402,8 @@ virtual_ transport =virtual
 ```
 
 这些配置是为了支持配额而做的：
-```
+
+```text
 virtual_create_maildirsize =yes
 virtual_mailbox_extended =yes
 virtual_mailbox_limit_maps= mysql:/etc/postfix/mysql/mysql_virtual_mailbox_limit_maps.cf
@@ -422,13 +412,13 @@ virtual_maildir_limit_message =Sorry, the user’s maildir has overdrawn his dis
 virtual_overquota_bounce =yes
 ```
 
-### 3.9 安装 Courier-IMAP 和 Courier-authlib：
+### 3.9 安装 Courier-IMAP 和 Courier-authlib
 
 POP3 服务允许服务器托管电子邮件账户，并包含了管理服务器、域名和邮箱箱的工具。POP3 服务在服务器上执行消息下载和请求处理任务，其中消息下载包括将消息从文件系统中的文件夹传输到客户端，而请求处理则根据 POP3 协议执行，该协议定义了服务器如何响应从电子邮件客户端发送的请求。
 
 SMTP 服务接收来自其他域的邮件，将其保存到 `Queue` 文件夹中，并通知 SMTP 投递服务邮件已到达。投递服务随后会将邮件移动到 POP3 邮件存储中，以便供 POP3 电子邮件客户端下载。
 
-要安装 Courier–Imap，必须创建一个除 Root 用户之外的普通系统用户，因为 root 用户无法成功构建此包。
+要安装 Courier–IMAP，必须创建一个除 Root 用户之外的普通系统用户，因为 root 用户无法成功构建此包。
 
 ```bash
 #useradd test (创建一个名为 test 的用户)
@@ -464,16 +454,16 @@ SMTP 服务接收来自其他域的邮件，将其保存到 `Queue` 文件夹中
 # gedit courier-imap.spec
 ```
 
-将以下行更改为将其放在更标准的地方（例如 /etc ）
+将以下行更改为将其放在更标准的地方（例如 `/etc`）：
 
-```
+```text
 %define _sysconfdir /etc/courier
 %define _mandir /usr/share/man
 %define _prefix /etc/courier
 %define _localstatedir /var/run
 ```
 
-```
+```text
 %configure
 --with-redhat
 --enable-workaround-for-imap-client-bugs
@@ -483,10 +473,6 @@ SMTP 服务接收来自其他域的邮件，将其保存到 `Queue` 文件夹中
 #%{__make} check
 ```
 
-
-
-
-
 编辑完成后，将 `courier-imap.spec` 文件拷贝到 `/home/test/rpm/SPECS` 目录。在构建 `courier-imap` 之前，需要安装 `courier–authlib` 软件包（用于身份验证）。下载 `courier-authlib-0.62.1.tar.bz2` 或任何可用版本并保存到 `SOURCES` 目录。解压并编辑规格文件，然后将其拷贝到 `/home/test/rpm/SPECS` 目录，以 root 身份在 `i386` 目录中构建并安装。
 
 ```bash
@@ -495,7 +481,7 @@ cd /home/rpm/SOURCES
 tar xjf courier-authlib-0.59.1.tar.bz2
 ```
 
-### 安装 courier-authlib
+#### 安装 courier-authlib
 
 ```bash
 cd $HOME/rpm/SPECS
@@ -505,7 +491,7 @@ cd /home/test/rpm/RPMS/i356/
 rpm-ivh courier-authlib-*
 ```
 
-系统会提示 `libtool-itdl-devel` 依赖项失败，请下载并安装任何其他所需的依赖项。如果你想让 `courier-imap` 支持这些功能，你应该安装 `i386` 文件夹中找到的所有 `courier-authlib` 软件包。你会在那里找到以下软件包：`courier_authlib`, `courier_authlib_devel`, `courier_authlib_debuginfo`, `courier_authlib_userdb`, `courier_authlib_mysql`, `courier_authlib_pgsql`, `courier_authlib_userdb_ldab`。
+系统会提示 `libtool-itdl-devel` 依赖项失败，请下载并安装任何其他所需的依赖项。如果你想让 `courier-imap` 支持这些功能，你应该安装 `i386` 文件夹中找到的所有 `courier-authlib` 软件包。你会在那里找到以下软件包：`courier_authlib`、`courier_authlib_devel`、`courier_authlib_debuginfo`、`courier_authlib_userdb`、`courier_authlib_mysql`、`courier_authlib_pgsql`、`courier_authlib_userdb_ldab`。
 
 以用户 `test` 构建 `courier–imap` 软件包并以 root 用户身份安装。
 
@@ -526,13 +512,14 @@ service courier-authlib restart
 service courier-imap restart
 ```
 
-### 3.10 Courier-IMAP 配置：
+### 3.10 Courier-IMAP 配置
 
-要告诉 Courier 它应该针对 MySQL 数据库进行身份验证，首先编辑 `/etc/authlib/authdaemonrc` 并更改 `authmodulelist` 的值，使其从 mysql 数据库读取。
+要告诉 Courier 它应该针对 MySQL 数据库进行身份验证，首先编辑 `/etc/authlib/authdaemonrc` 并更改 `authmodulelist` 的值，使其从 MySQL 数据库读取。
 
 `authmodulelist = “authmysql”`
 
 `Courier- Imap` 的 `imapd` 文件 `/etc/courier/imapd` 包含类似下面的行：
+
 `IMAP_CAPABILITY =”IMAP4rev 1 UIDPLUS CHILDREN NAMESPACE THREAD = ORDEREDSUBJECT THREAD= REFERENCES SORT QUOTA IDLE"`
 
 修改 `/etc/authlib` 目录下的 `authmysqlrc` 文件，并添加这些行：
@@ -585,9 +572,9 @@ retr (msg no)
 quit
 ```
 
-### 3.11 配置 Postfixadmin：
+### 3.11 配置 Postfixadmin
 
-Postfix 将允许管理员添加、删除和编辑邮箱以及完整域名。此基于 Web 的应用程序允许管理员访问 postfix 的 MySQL 配置并直接进行编辑。安装 Postfixadmin 的前提是安装 Apache。从 `http://high5.net` 下载 Postfix 包并保存到 apache 目录 `/var/www/html` 中，然后解压。
+Postfix 将允许管理员添加、删除和编辑邮箱以及完整域名。此基于 Web 的应用程序允许管理员访问 Postfix 的 MySQL 配置并直接进行编辑。安装 Postfixadmin 的前提是安装 Apache。从 `http://high5.net` 下载 Postfix 包并保存到 Apache 目录 `/var/www/html` 中，然后解压。
 
 ```bash
 tar –zxvf postfixadmin-*.tar.gz
@@ -596,118 +583,151 @@ tar –zxvf postfixadmin-*.tar.gz
 在 `config.inc.php` 文件中执行以下配置。
 
 第一件事是告诉 Postfix 你已经配置了该应用程序。
+
 `$CONF['configured'] = true;`
 
-然后定义 postfix admin 版本的完整 URL。
-`$CONF ['postfix_admin_url'] = 'http: //uniswa.com/postfixadmin’;`
+然后定义 Postfix admin 版本的完整 URL。
+
+
+
+`$CONF['postfix_admin_url'] = 'http://uniswa.com/postfixadmin';`
 
 接下来是设置数据库连接。
 
 ```php
-$CONF ['database_type'] = 'mysql';
-$CONF ['database_host'] = 'localhost';
-$CONF ['database_user'] = 'postfixadmin';
-$CONF ['database_password'] = 'postfixadmin';
-$CONF ['database_name'] = 'postfix';
-$CONF ['database_prefix'] = **;
+$CONF['database_type'] = 'mysql';
+$CONF['database_host'] = 'localhost';
+$CONF['database_user'] = 'postfixadmin';
+$CONF['database_password'] = 'postfixadmin';
+$CONF['database_name'] = 'postfix';
+$CONF['database_prefix'] = '';
 ```
 
 所有问题将报告到的以及发送给所有人的邮箱地址。
-`$CONF ['admin_email'] = 'postmaster@example.com';`
+
+`$CONF['admin_email'] = 'postmaster@example.com';`
 
 这用于向 Postfix 发送邮件以便邮箱。
-`$CONF ['smtp_server'] = 'localhost';`
-`$CONF ['smtp_port'] = 'localhost';`
+
+`$CONF['smtp_server'] = 'localhost';`
+
+`$CONF['smtp_port'] = 'localhost';`
 
 此部分定义了使用的加密方法。
-`$CONF ['encrypt'] = 'md5';`
+
+`$CONF['encrypt'] = 'md5';`
 
 密码所需的最小长度。
-`$CONF ['min_password_length'] = 5;`
+
+`$CONF['min_password_length'] = 5;`
 
 管理员的默认密码。
-`$CONF ['default_password'] = '';`
+
+`$CONF['default_password'] = '';`
 
 此消息将发送给每个新建的邮箱。
-`$CONF ['welcome_text'] = EOM
+
+`$CONF['welcome_text'] = EOM
+
 Hi,
+
 Welcome to your new account.
+
 EOM;`
 
 生成的设置密码。
-`$CONF ['setup_password'] = 5;`
+
+`$CONF['setup_password'] = 5;`
 
 该设置将创建管理员数据库。
-`$CONF ['setup_password'] = 'YES';`
 
-setupadmin 的路径。
-`$CONF ['domain_path'] = 'YES';`
+`$CONF['setup_password'] = 'YES';`
+
+`setupadmin` 的路径。
+
+`$CONF['domain_path'] = 'YES';`
 
 邮箱中的域名。
-`$CONF ['domain_in_mailbox'] = 'YES';`
+
+`$CONF['domain_in_mailbox'] = 'YES';`
 
 管理员的别名。
-`$CONF ['aliases'] = 'YES';`
+
+`$CONF['aliases'] = 'YES';`
 
 已设置邮箱。
-`$CONF ['mailboxes'] = 'YES';`
+
+`$CONF['mailboxes'] = 'YES';`
 
 用户的配额。
-`$CONF ['maxquota'] = '10';`
+
+`$CONF['maxquota'] = '10';`
 
 配额的倍数。
-`$CONF ['quota_multiplier'] = '10';`
+
+`$CONF['quota_multiplier'] = '10';`
 
 用户的域名。
-`$CONF ['domain'] = 'YES';`
+
+`$CONF['domain'] = 'YES';`
 
 传输选项。
-`$CONF ['transport_options'] = array ('virtual', 'local', 'relay');`
+
+`$CONF['transport_options'] = array('virtual', 'local', 'relay');`
 
 默认传输。
-`$CONF ['transport_default'] = 'virtual';`
+
+`$CONF['transport_default'] = 'virtual';`
 
 别名的控制。
-`$CONF ['control'] = 'YES';`
+
+`$CONF['control'] = 'YES';`
 
 管理员控制。
-`$CONF ['alias_control_admin'] = 'YES';`
+
+`$CONF['alias_control_admin'] = 'YES';`
 
 设置。
-`$CONF ['setup'] = 'YES';`
+
+`$CONF['setup'] = 'YES';`
 
 密码的哈希值。
-`$CONF ['hash'] = 'md5';`
+
+`$CONF['hash'] = 'md5';`
 
 域名的控制。
-`$CONF ['domain_control'] = 'YES';`
+
+`$CONF['domain_control'] = 'YES';`
 
 别名的设置。
-`$CONF ['alias_setup'] = 'YES';`
+
+`$CONF['alias_setup'] = 'YES';`
 
 域名的路径。
-`$CONF ['domain_path'] = 'YES';`
+
+`$CONF['domain_path'] = 'YES';`
 
 别名的哈希值。
-`$CONF ['alias_hash'] = 'md5';`
+
+`$CONF['alias_hash'] = 'md5';`
 
 用户的控制。
-`$CONF ['user_control'] = 'YES';`
+
+`$CONF['user_control'] = 'YES';`
 
 用户的设置。
-`$CONF ['user_setup'] = 'YES';`
+
+`$CONF['user_setup'] = 'YES';`
 
 用户的路径。
-`$CONF ['user_path'] = 'YES';`
+
+`$CONF['user_path'] = 'YES';`
 
 用户的哈希值。
-`$CONF ['user_hash'] = 'md5';`
 
+`$CONF['user_hash'] = 'md5';`
 
-
-
-
-1. 从 `www.squirrelmail.org` 下载 `squirrelmail`。例如下载 `squirrelmail-1.4.6.tar.bz2` 或其他版本。
+1. 从 `www.squirrelmail.org` 下载` squirrelmail`。例如下载 `squirrelmail-1.4.6.tar.bz2` 或其他版本。
 
 2. 解压 `squirrelmail`。
 
@@ -719,7 +739,7 @@ setupadmin 的路径。
 
 8. 创建目录 `/var/www/html/squirrelmail/attach` 和 `/var/www/html/squirrelmail/data`，并更改它们的所有权。
 
-```
+```bash
 chown –R apache data
 chgrp- R apache data
 chown – R apache attach
@@ -730,14 +750,14 @@ chmod 730 attach
 
 9. 从 squirrel 网站下载配额使用插件到 `/var/www/html/squirrelmail/plugins`。
 
-```
+```bash
 cd /var/www/hml/squirrelmail/plugins
 tar –zxvf quota_usage-1.3-1.2.7.tar.gz
 ```
 
 10. 进入 `quota_usage` 目录，将 `config.php.sample` 复制为 `config.php` 并编辑 `config.php`，根据需要进行调整。
 
-```
+```bash
 cd quota_usage
 cp config.php.sample config.php
 ```
@@ -749,13 +769,16 @@ cp config.php.sample config.php
 ```
 
 - 选择 `2.` Server Setting Change Domain:
+
 - 选择 `4.` General Option，将附件目录更改为 `.../attach/`，将数据目录更改为 `.../data/`
-- 选择 `8.` Plug- in，添加包括 `quota _usage` 在内的所有插件
+
+- 选择 `8.` Plug-in，添加包括 `quota_usage` 在内的所有插件
+
 - 选择 `S` 保存配置。
 
 10. 重启 `httpd` 服务。
 
-```
+```bash
 service httpd restart
 ```
 
@@ -773,16 +796,25 @@ Postfix 将所有入邮件放入等待队列（hold queue），这样 Mailscanne
 
 以下是你需要在 MailScanner 配置文件中更改的选项：
 
-- %org-name% = yoursite
-- Run As User = postfix
-- Run As Group = postfix
-- Incoming Queue Dir = `/var/spool/postfix/hold`
-- Outgoing Queue Dir = /var/spool/postfix/incoming
-- MTA = postfix
-- Virus Scanning = yes
-- Virus Scanners = clamav
-- Spam List = spamhaus.org spamcop.net ORDB-RBL
-- Use SpamAssassin = yes
+- `%org-name%` = `yoursite`
+
+- `Run As User` = `postfix`
+
+- `Run As Group` = `postfix`
+
+- `Incoming Queue Dir` = `/var/spool/postfix/hold`
+
+- `Outgoing Queue Dir` = `/var/spool/postfix/incoming`
+
+- `MTA` = `postfix`
+
+- `Virus Scanning` = `yes`
+
+- `Virus Scanners` = `clamav`
+
+- `Spam List` = `spamhaus.org spamcop.net ORDB-RBL` （原文如此）
+
+- `Use SpamAssassin` = `yes`
 
 正确安装 ClamAV 和 SpamAssassin 的最佳方法是通过 `www.mailscanner.info` 中专门为此目的准备的包。从 `http://www.mailscanner.info/files/4/install-Clam-0.88.7-SA-3.1.7.tar.gz` 下载该包或任何版本。
 
@@ -827,7 +859,7 @@ header_checks = regexp:/etc/postfix/header_checks
 
 你需要确保用户 `postfix` 可以写入 `/var/spool/MailScanner/incoming` 和 `/var/spool/MailScanner/quarantine`：
 
-```
+```bash
 chown postfix.postfix /var/spool/MailScanner/incoming
 chown postfix.postfix /var/spool/MailScanner/quarantine
 ```
@@ -844,7 +876,7 @@ service MailScanner start
 
 要测试配置，进入根目录并执行以下步骤：
 
-```
+```bash
 service postfix reload
 authdaemond restart
 service courier-authlib restart
@@ -871,10 +903,6 @@ quit
 
 然后打开 Mozilla Firefox 并访问 `http://project.uniswa.com/squirrelmail/`，使用图形化界面 `squirrelmail` 测试邮件服务器，如图 4.3、图 4.4、图 4.5、图 4.6 和图 4.7 所示。
 
-
-
-
-
 # ISBN: 978-3-7487-5107-6
 
 ## BookRix 出版出版信息
@@ -882,4 +910,3 @@ quit
 感谢您选择在 BookRix.com 购买本书。我们邀请您再次访问 [BookRix.com](https://www.bookrix.com/) 对此[书籍](https://www.bookrix.com/_ebook-dr-hedaya-mahmood-alasooly-building-full-linux-mail-server-solution-with-virtual-domains-and-users) 进行评价。在这里，您可以与其他读者讨论，发现更多[书籍](https://www.bookrix.com/books.html)，甚至自己成为一名作者。
 
 再次感谢您对我们 BookRix 社区的支持。
-

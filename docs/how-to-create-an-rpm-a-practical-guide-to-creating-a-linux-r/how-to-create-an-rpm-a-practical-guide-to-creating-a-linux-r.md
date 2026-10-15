@@ -1,22 +1,9 @@
+
 # 如何创建 RPM：Linux RPM 创建实用指南
-
-
-
-
-
-
-
-
-
 
 ![](img/e1630953eac5dd6e22589b3a1ae13d96_1_0.png)
 
-
-
-
 献给我的妻子 Jackie。
-
-
 
 # 本书使用的格式规范
 
@@ -95,10 +82,6 @@ RPM 软件包的创建通常被 IT 行业的许多人视为一种“黑术”，
 
 RPM 内部对配置文件的特殊处理是另一个优势——因为 RPM 知道哪些文件是文档、哪些是执行文件、哪些是配置文件，它可以对它们进行特殊对待并更智能地处理它们。
 
-
-
-
-
 # YUM
 
 Yum（以及它更新的替代品 DNF）是一个与 RPM 仓库工作的工具，它能够计算 RPM 之间所有的依赖关系，并安装或升级用户请求安装的 RPM 及其所有依赖项。本章将展示 `rpm-build` 软件包本身的安装，如果你想查看其工作原理，它还包括自动下载 `rpm-build` 的依赖项。
@@ -125,9 +108,9 @@ Yum（以及它更新的替代品 DNF）是一个与 RPM 仓库工作的工具�
 
 ## 第 2 步：下载镜像
 
-为了本书的内容，我提供了一个 CentOS 6.7 VirtualBox 镜像，你可以从 http://bit.ly/rpmbuild 下载——这是一个 346M 的 CentOS 6.7 镜像，已安装了 rpmbuild 软件包，并配置了 EPEL 仓库但尚未启用——如果你想使用 EPEL 软件包，只需编辑 /etc/yum.repos.d/epel.repo，将第一个 [epel] 节中的 `enabled=0` 改为 `enabled=1` 即可。
+为了本书的内容，我提供了一个 CentOS 6.7 VirtualBox 镜像，你可以从 http://bit.ly/rpmbuild 下载——这是一个 346M 的 CentOS 6.7 镜像，已安装了 rpmbuild 软件包，并配置了 EPEL 仓库但尚未启用——如果你想使用 EPEL 软件包，只需编辑 `/etc/yum.repos.d/epel.repo`，将第一个 `[epel]` 节中的 `enabled=0` 改为 `enabled=1` 即可。
 
-root 密码为 `rpm`，尽管你不需要使用 root 账户来创建 RPM；系统配置了一个名为 `rpm` 的用户；密码为 `rpm`。/etc/sudoers 文件也配置为允许 rpm 用户通过 sudo 访问 root 账户（需要密码提示）。
+root 密码为 `rpm`，尽管你不需要使用 root 账户来创建 RPM；系统配置了一个名为 `rpm` 的用户；密码为 `rpm`。`/etc/sudoers` 文件也配置为允许 rpm 用户通过 sudo 访问 root 账户（需要密码提示）。
 
 该镜像配置了 8GB 的根磁盘，设置为根据需要扩展，尽管它会在虚拟机内部增加更多文件。因此，理想情况下，你应该在安装它的设备上留出最多 8GB 的空间。
 
@@ -160,6 +143,8 @@ Last login: Wed Aug 26 17:56:35 2015
 ## 第 4 步：安装 rpm-build
 
 如果你已经下载了 VirtualBox，可以跳过此步；如果你已有系统但未安装 rpm-build 软件包，则需要安装它。请注意，虽然提供了 rpmbuild 程序（不带连字符），但软件包名为 rpm-build（带连字符）。请参考附录 C 获取如何从本地 DVD 镜像设置仓库。
+
+
 
 ```
 [root@packaging ~] yum -y install rpm-build
@@ -207,6 +192,7 @@ Running transaction check
 Running transaction check
 -- Package perl-Pod-Escapes.x86_64 1:1.04-141.el86 will be installed
 -- Finished Dependency Resolution
+```
 
 ## Dependencies Resolved
 
@@ -229,10 +215,6 @@ elutils.x86_64 0:161-3.el6 base 237 k |
 | xz.x86_64 0:4.999.9-0.5.beta.20091007git.el6 base 137 k |
 | xz-lzma-compat.x86_64 0:4.999.9-0.5.beta.20091007git.el base 16 k |
 
-
-
-
-
 ## 下载软件包：
 
 | (1/14) | elfutils-0.161-3.el6 | 27 KB | 00:00 |
@@ -254,13 +236,13 @@ elutils.x86_64 0:161-3.el6 base 237 k |
 
 warning: rmpts_HdrFromHeader: Verify VSA/RSA Signature, key ID c01b5b9de:nkey
 
-正在从 /etc/pki/rpm/RPM-GPG-KEY-CentOS-6 获取密钥
+正在从 `/etc/pki/rpm/RPM-GPG-KEY-CentOS-6` 获取密钥
 
 导入密钥 C01b5b9de:
 用户 ID : CentOS-6 (CentOS 6 官方签名密钥) <centos-key@centos.org>
 软件包 centos-release-6.7.el6.102.3.x86_64 (anaconda-CentOS15080422.x86_64/7)
 
-来自： /etc/pki/rpm/RPM-GPG-KEY-CentOS-6
+来自： `/etc/pki/rpm/RPM-GPG-KEY-CentOS-6`
 正在运行 rpm_check_debug
 正在运行事务测试
 事务成功
@@ -331,7 +313,7 @@ mkdir -p ~/rpmbuild/BUILD ~/rpmbuild/RPGS ~/rpmbuild/RPMS ~/rpmbuild/SOURCES
 cd ~/rpmbuild
 ```
 
-现在我们将创建一个 spec 文件。该文件是 RPM 的核心，告诉 rpmbuild 如何构建软件包。
+现在我们将创建一个 spec 文件。该文件是 RPM 的核心，告诉 `rpmbuild` 如何构建软件包。
 
 ```bash
 vi my-rpm.spec
@@ -345,18 +327,17 @@ Version: 1.0
 Release: 1
 Summary: 这是一个测试 RPM
 License: none
-
 Description:
 我的测试 RPM
 ```
 
-保存 spec 文件后，我们将运行 rpmbuild 来创建 RPM：
+保存 spec 文件后，我们将运行 `rpmbuild` 来创建 RPM：
 
 ```bash
 rpmbuild -bb my-rpm.spec
 ```
 
-这将 RPM 文件创建在 ~/rpmbuild/RPMS/ 目录下。
+这将 RPM 文件创建在 `~/rpmbuild/RPMS/` 目录下。
 
 现在我们可以使用 `rpm -q` 命令检查该 RPM 文件：
 
@@ -368,13 +349,9 @@ rpm -q ~/rpmbuild/RPMS/x86_64/my-rpm-1.0-1.x86_64.rpm
 
 # 第 3 章：rpmbuild 的输出
 
-rpmbuild 命令的输出将显示它构建软件包时正在执行的步骤。以下是输出示例：
+`rpmbuild` 命令的输出将显示它构建软件包时正在执行的步骤。以下是输出示例：
 
 （请参见上方的输出）
-
-
-
-
 
 ## 第 3 章：创建一个实用的二进制 RPM
 
@@ -396,55 +373,72 @@ rpmbuild 命令的输出将显示它构建软件包时正在执行的步骤。�
 /usr/share/doc/ethtool-3.5/COPYING
 /usr/share/doc/ethtool-3.5/ChangeLog
 /usr/share/doc/ethtool-3.5/LICENSE
-/usr/share/doc/ethtool-3.5/NEWS
-/usr/share/doc/ethtool-3.5/README
-/usr/share/man/man8/ethtool.8.gz
 ```
 
-除了二进制文件本身（`/usr/sbin/ethtool` 只是 `/sbin/ethtool` 的链接，以你想奇的话）和 `ethtool.8.gz` 帮助页外，`/usr/share/doc` 中还有一组典型的文本文件随程序。spec 文件中的 `License` 字段不需要过于详细，只需让人们知道软件包是在哪种许可下分发的即可。
+
+
+`/usr/share/doc/ethtool-3.5/NEWS`
+
+`/usr/share/doc/ethtool-3.5/README`
+
+`/usr/share/man/man8/ethtool.8.gz`
+
+```
+```
+
+除了二进制文件本身（`/usr/sbin/ethtool`只是`/sbin/ethtool`的链接，以你想奇的话）和`ethtool.8.gz`帮助页外，`/usr/share/doc`中还有一组典型的文本文件随程序。spec文件中的`License`字段不需要过于详细，只需让人们知道软件包是在哪种许可下分发的即可。
 
 ## 构建软件包（第二次）
 
-对于我的 RPM 的第二个版本，更新第一个 spec 文件，并添加更多细节。
+对于我的RPM的第二个版本，更新第一个spec文件，并添加更多细节。
 
-> 如果你下载了我的镜像，可以在 `files/chapter3/take2.spec` 找到更新后的文件，也可以从 http://build/howtocreaterpm 的 "files" 压缩包中下载（所有这些文件都是）。
+> 如果你下载了我的镜像，可以在`files/chapter3/take2.spec`找到更新后的文件，也可以从http://build/howtocreaterpm的"files"压缩包中下载（所有这些文件都是）。
 
 我们应该添加几行描述——这通常是一个段落，比单行格式允许更详细地描述软件包。
 
-由于这本书是文档的，我还会说我的 RPM 本身是文档包组的一部分。你的 RPM 可能是 `Applications/System`、`Amusements/Games` 或其他——类别列表请参见附录 E。
+由于这本书是文档的，我还会说我的RPM本身是文档包组的一部分。你的RPM可能是`Applications/System`、`Amusements/Games`或其它——类别列表请参见附录E。
 
-我还会添加一个 `License` 和 `Vendor`。我将 `Release` 从 1 增加到了 2。`Release` 必须始终是一个整数，每当你从软件版本发布新版本时，它就会增加。如果软件本身发生了变化，那么 `Version` 也需要更新。你可以这样理解 Releases 和 Versions：
+我还会添加一个`License`和`Vendor`。我将`Release`从1增加到了2。`Release`必须始终是一个整数，每当你从软件版本发布新版本时，它就会增加。如果软件本身发生了变化，那么`Version`也需要更新。你可以这样理解Releases和Versions：
 
 | Event | Version | Release | RPM Name |
 | :--- | :--- | :--- | :--- |
 | 发布新软件 | 1.0 | 1 | name-1.0-1 |
-| 软件更新到版本 1.1 | 1.1 | 1 | name-1.1-1 |
-| 版本 1.1 使用更好的描述重新打包 | 1.1 | 2 | name-1.1-2 |
-| 软件更新到版本 1.2 | 1.2 | 1 | name-1.2-1 |
-| 版本 1.2 使用更新的依赖重新打包 | 1.2 | 2 | name-1.2-2 |
-| 版本 1.2 使用符号符号链接重新打包 | 1.2 | 3 | name-1.2-3 |
+| 软件更新到版本1.1 | 1.1 | 1 | name-1.1-1 |
+| 版本1.1使用更好的描述重新打包 | 1.1 | 2 | name-1.1-2 |
+| 软件更新到版本1.2 | 1.2 | 1 | name-1.2-1 |
+| 版本1.2使用更新的依赖重新打包 | 1.2 | 2 | name-1.2-2 |
+| 版本1.2使用符号符号链接重新打包 | 1.2 | 3 | name-1.2-3 |
 | 软件更新到 | 1.3 | 1 | name-1.3-1 |
 
-生成的 `my-first-rpm-1.0-2.spec` 文件现在像这样（我在构建机器的 `/etc/hosts` 中了主机名，这样我们在构建新 RPM 时就不会报错）。
+生成的`my-first-rpm-1.0-2.spec`文件现在像这样（我在构建机器的`/etc/hosts`中了主机名，这样我们在构建新RPM时就不会报错）。
 
 ```
 Name: my-first-rpm
+
 Release: 2
+
 Summary: This is my first RPM
+
 License: GPLv2
+
 Version: 1.0
+
 Vendor: Steve Parker
+
 Group: Documentation
 ```
 
 ```
 %description
-这是我的第一个 RPM 包。我可以在这里更详细地描述它。通常将这些部分格式化为 80 列，以便在任何屏幕上轻松阅读。
+
+这是我的第一个RPM包。我可以在这里更详细地描述它。通常将这些部分格式化为80列，以便在任何屏幕上轻松阅读。
 ```
 
 ```
 %files
-我们准备好构建软件包的第二个版本了。回到 rpmbuild：```
+
+我们准备好构建软件包的第二个版本了。回到rpmbuild：
+```
 
 ```
 [rpmpackaging SPECS]$ rpmbuild -bb \
@@ -478,12 +472,13 @@ read on any screen.
 
 ## 添加一些文件
 
-这个 RPM 仍然毫无用处，因为它仍然不包含任何文件。创建一个小的 shell 脚本，
+这个RPM仍然毫无用处，因为它仍然不包含任何文件。创建一个小的shell脚本，
 
-> 再次，`my-first-program`（及其配置文件 `first-program.conf`）可以在 `files/chapter3/take3` 中找到，或者从 http://bit.ly/howcreaterpm 下载。
+> 再次，`my-first-program`（及其配置文件`first-program.conf`）可以在`files/chapter3/take3`中找到，或者从http://bit.ly/howcreaterpm下载。
 
 ```
 #!/bin/bash
+
 set USER_NAME
 CONFIG=/etc/first-program.conf
 [ -f $CONFIG ] && \
@@ -491,23 +486,23 @@ CONFIG=/etc/first-program.conf
 echo "This is a very simple script as an example of a packaged program."
 ```
 
-像许多程序一样，它使用一个配置文件 `/etc/first-program.conf`：
+像许多程序一样，它使用一个配置文件`/etc/first-program.conf`：
 
-- 这是 `first-program` 的配置文件。
-- 你可以在这里定义 `USER_NAME` 变量，例如：
+- 这是`first-program`的配置文件。
+- 你可以在这里定义`USER_NAME`变量，例如：
 - `USER_NAME=Fred`
 
-它还有一些配套文档，一个 README 文件：
+它还有一些配套文档，一个README文件：
 
 这是一个非常简单的程序。
-如果在 `/etc/first-program.conf` 中定义了 `USER_NAME`，它将通过你的名字向你问好。
+如果在`/etc/first-program.conf`中定义了`USER_NAME`，它将通过你的名字向你问好。
 它将显示一条消息。
 
-由于这是一个 GPL2 许可程序，我还提取了之前在 `ethtool` 包中看到的 `COPYING` 和 `LICENSE` 文件。这是 GPL 许可软件的要求；如果你在打包某些现有软件，它应该带有其所需的任何许可文件。如果你在打包自己的软件，你应该为你选择的许可提供任何必要的文档。
+由于这是一个GPL2许可程序，我还提取了之前在`ethtool`包中看到的`COPYING`和`LICENSE`文件。这是GPL许可软件的要求；如果你在打包某些现有软件，它应该带有其所需的任何许可文件。如果你在打包自己的软件，你应该为你选择的许可提供任何必要的文档。
 
-由于我们更改了实际软件（第一次添加了一些内容！），`Version` 增加了，`Release` 号重置为 1。因此这是版本 2.0，Release 1，也表示为 `my-first-rpm-2.0-1`。
+由于我们更改了实际软件（第一次添加了一些内容！），`Version`增加了，`Release`号重置为1。因此这是版本2.0，Release1，也表示为`my-first-rpm-2.0-1`。
 
-我们 spec 文件的第三次迭代如下：
+我们spec文件的第三次迭代如下：
 
 | Name: | my-first-rpm |
 | Release: | 1 |
@@ -518,10 +513,7 @@ echo "This is a very simple script as an example of a packaged program."
 | Group: | Documentation |
 
 %description
-这是我的第一个 RPM 包。我可以在这里更详细地描述它。通常将这些部分格式化为 80 列宽，以便在任何屏幕上轻松阅读。
-
-
-
+这是我的第一个RPM包。我可以在这里更详细地描述它。通常将这些部分格式化为80列宽，以便在任何屏幕上轻松阅读。
 
 可在任何屏幕上阅读。
 
@@ -534,13 +526,13 @@ echo "This is a very simple script as an example of a packaged program."
 %doc %name-%version/LICENSE
 ```
 
-我们将在下方的“构建软件包”部分讨论 %config 和 %doc 指令，尽管我确定你已经猜出它们的含义！
+我们将在下方的“构建软件包”部分讨论`%config`和`%doc`指令，尽管我确定你已经猜出它们的含义！
 
 ## 放置文件
 
-为了将这些文件包含在 RPM 中，我们需要将它们放入 $HOME/rpmbuild/BUILDROOT 目录。至少，前两个文件是这样的；稍后我们将查看文档文件。
+为了将这些文件包含在RPM中，我们需要将它们放入`$HOME/rpmbuild/BUILDROOT`目录。至少，前两个文件是这样的；稍后我们将查看文档文件。
 
-从名为 `files/chapter3/take3` 目录下的文件开始，将它们从所在地复制到名为 `rpmbuild/BUILDROOT/$name-$version-release.arch` 的目录中。在这种情况下，它是 `$HOME/rpmbuild/BUILDROOT/my-first-rpm-2.0-1.x86_64`。我们创建一个文件系统的模拟根目录，它将用于创建软件包：
+从名为`files/chapter3/take3`目录下的文件开始，将它们从所在地复制到名为`rpmbuild/BUILDROOT/$name-$version-release.arch`的目录中。在这种情况下，它是`$HOME/rpmbuild/BUILDROOT/my-first-rpm-2.0-1.x86_64`。我们创建一个文件系统的模拟根目录，它将用于创建软件包：
 
 ```
 [rpmpackaging take3] pwd
@@ -561,7 +553,7 @@ my-first-rpm-2.0-1.x86_64/usr/bin/
 [rpmpackaging take3] $
 ```
 
-文档文件是另一回事，因为我们没有在文件系统中指定指定它们的去向——`%{name}-%{version}/README` 是相对路径，而不是绝对路径（它不以 "/" 开头）。当构建 RPM 时，`%docdir` 默认决定位置（`/usr/share/doc`），但它可以位于任何地方。对于这些文件，我们将它们放入 BUILD 目录，因为那是 RPM 期望找到它们的地方：
+文档文件是另一回事，因为我们没有在文件系统中指定指定它们的去向——`%{name}-%{version}/README`是相对路径，而不是绝对路径（它不以"/"开头）。当构建RPM时，`%docdir`默认决定位置（`/usr/share/doc`），但它可以位于任何地方。对于这些文件，我们将它们放入BUILD目录，因为那是RPM期望找到它们的地方：
 
 ```
 $ pwd
@@ -571,7 +563,7 @@ $ cp COPYING ~/rpmbuild/BUILD/my-first-rpm-2.0/
 $ cp LICENSE ~/rpmbuild/BUILD/my-first-rpm-2.0/
 ```
 
-现在整个树结构看起来像这样（上一次构建的 1.0-1 rpm 文件仍然显示在这里）：
+现在整个树结构看起来像这样（上一次构建的1.0-1rpm文件仍然显示在这里）：
 
 ```
 [rpmpackaging take3] cd ~/rpmbuild/
@@ -585,7 +577,7 @@ $ cp LICENSE ~/rpmbuild/BUILD/my-first-rpm-2.0/
 
 ## 构建软件包（第三步）
 
-我们现在准备好返回 `files/chapter3/take3` 目录并构建我们的软件包。输出内容比之前多得多，因此我再次对行进行编号，以便我们详细讨论：
+我们现在准备好返回`files/chapter3/take3`目录并构建我们的软件包。输出内容比之前多得多，因此我再次对行进行编号，以便我们详细讨论：
 
 | 行 | 文本 |
 |---|---|
@@ -614,39 +606,57 @@ $ cp LICENSE ~/rpmbuild/BUILD/my-first-rpm-2.0/
 | 23 | + exit 0 |
 | 24 | [rpm@packaging take3]$ |
 
-文档文件是另一回事，因为我们没有在文件系统中指定指定它们的去向——`%{name}-%{version}/README` 是相对路径，而不是绝对路径（它不以 "/" 开头）。当构建 RPM 时，`%docdir` 默认决定位置（`/usr/share/doc`），但它可以位于任何地方。对于这些文件，我们将它们放入 BUILD 目录，因为那是 RPM 期望找到它们的地方：
+文档文件是另一回事，因为我们没有在文件系统中指定指定它们的去向——`%{name}-%{version}/README`是相对路径，而不是绝对路径（它不以"/"开头）。当构建RPM时，`%docdir`默认决定位置（`/usr/share/doc`），但它可以位于任何地方。对于这些文件，我们将它们放入BUILD目录，因为那是RPM期望找到它们的地方：
 
 ## 不要清理！
 
-由于我们仔细将文件放在了那里，而且在现实生活中我们可能需要创建几次 RPM 达到要求，我们可以通过在 spec 中添加自己的 `%clean` 部分来停止这样做。让我们最后更新一次 spec 文件。
+由于我们仔细将文件放在了那里，而且在现实生活中我们可能需要创建几次RPM达到要求，我们可以通过在spec中添加自己的`%clean`部分来停止这样做。让我们最后更新一次spec文件。
 
 ```spec
 Name: my-first-rpm
+
 Release: 2
-Summary: 这是这是我的第一个 RPM
+
+Summary: 这是这是我的第一个RPM
+
 License: GPLv2
+
 Version: 2.0
+
 Vendor: Steve
+
 Group: Documentation
 
 %description
-这是我的 RPM 软件包。我可以在这里详细描述 RPM。
+
+这是我的RPM软件包。我可以在这里详细描述RPM。
 
 %clean
+
 echo "在此不进行清理。"
 
 %files
+
 /usr/bin/my-first-program
-%config /etc/my-first-program.conf
-%doc %name-%version/README
-%doc %name-%version/LICENSE
 ```
 
+
+
+`%config /etc/my-first-program.conf`
+
+`%doc %name-%version/README`
+
+`%doc %name-%version/LICENSE`
+
+```
 我们可以移除重新配置的根目录并再次创建软件包：
+```
 
 ```
 [rpmpackaging take3] $ rpmbuild -bb my-first-spec-2.0-2.spec
+
 [ 'you've seen the output already; committed this time ]
+
 [rpmpackaging take3] $
 ```
 
@@ -654,16 +664,16 @@ echo "在此不进行清理。"
 
 ```
 $ rpm -iv ~/rpm/build/x86_64/my-first-rpm-2.0-2.x86_64.rpm
+
 ########################################### [100%]
 Preparing...
+
 [rpmpackaging take3] $
 ```
 
-
-
-
 ```bash
 [rpmpackaging taking] cd - /rpmbuild/BUILDROOT
+
 [rpmpackaging rebuild] find . -type \
 /my-first-rpm-2.0-1.x64/usr/share/doc/my-first-rpm-2.0/LICENSE
 /my-first-rpm-2.0-1.x64/usr/share/doc/my-first-rpm-2.0/README
@@ -676,13 +686,13 @@ Preparing...
 [rpmpackaging rebuild]
 ```
 
-值得注意的是，尽管我们采取了措施来禁用该功能，但自动清理 BUILDROOT 目录是 rpmbuild 应该执行的正确操作，因为它假设我们正在使用它的所有功能，而且我们不希望留下之前构建中可能损坏的产物。我们在这里所做的是创建 RPM 的一种“坏习惯”捷径，但这种方法对于许多用途来说是**足够好 (Good Enough™)**，我发现像 `my-first-rpm-2.0-1.spec` 这样的 spec 文件几乎可以作为一个快速组装 RPM 包的有用模板。再进行三个微调——权限、安装脚本和日志——将使其变得更具实用性。这些将在接下来的三个章节中介绍。
+值得注意的是，尽管我们采取了措施来禁用该功能，但自动清理 BUILDROOT 目录是 `rpmbuild` 应该执行的正确操作，因为它假设我们正在使用它的所有功能，而且我们不希望留下之前构建中可能损坏的产物。我们在这里所做的是创建 RPM 的一种“坏习惯”捷径，但这种方法对于许多用途来说是**足够好 (Good Enough™)**，我发现像 `my-first-rpm-2.0-1.spec` 这样的 spec 文件几乎可以作为一个快速组装 RPM 包的有用模板。再进行三个微调——权限、安装脚本和日志——将使其变得更具实用性。这些将在接下来的三个章节中介绍。
 
 ## 第 4 章：权限 (Permissions)
 
-默认情况下，打包文件的权限将与它们在你的 BUILDROOT 目录中的权限完全相同，就像 tar 命令一样。这在某种程度上是可以接受的，但文件的所有者可能是你自己的用户名，这可能不是你想要的。
+默认情况下，打包文件的权限将与它们在你的 BUILDROOT 目录中的权限完全相同，就像 `tar` 命令一样。这在某种程度上是可以接受的，但文件的所有者可能是你自己的用户名，这可能不是你想要的。
 
-当你没有提供任何直接要求时，可以通过在 %files 指令之后使用 `%defattr` 参数来指定文件的默认权限。你可以使用 `%attr` 指令对任何给定的文件覆盖此设置。例如，要将默认权限设置为 0755，所有者为 root，组为 root，但让配置文件的权限为 0644，你可以在 spec 文件中使用以下内容：
+当你没有提供任何直接要求时，可以通过在 `%files` 指令之后使用 `%defattr` 参数来指定文件的默认权限。你可以使用 `%attr` 指令对任何给定的文件覆盖此设置。例如，要将默认权限设置为 `0755`，所有者为 `root`，组为 `root`，但让配置文件的权限为 `0644`，你可以在 spec 文件中使用以下内容：
 
 ```
 %files
@@ -720,7 +730,7 @@ $ ls -l /etc/my-first-program.config
 
 默认情况下，这些脚本由 shell 使用 `-e` 选项执行，但你可以通过在 spec 指令中添加 `-p <interpreter>` 来定义任何其他解释器，例如：`%post -p /usr/bin/python`。注意：`-e` 选项意味着脚本中的任何命令失败，它将立即以非零状态码（表示失败）退出，而不处理任何后续操作。在 RPM 脚本中运行运行的命令设置完整路径是一个好主意；RPM 默认设置一组非常受限的目录：`/sbin:/bin:/usr/sbin:/usr/bin`。
 
-通过创建一个如下的简单 .spec 文件，可以看到不同脚本是在安装的哪个阶段执行的。使用 "rpmbuild -bb my-first-rpm-4.0-1.spec" 构建它（假设 my-first-rpm-4.0.spec 是该 spec文件的文件名）：
+通过创建一个如下的简单 .spec 文件，可以看到不同脚本是在安装的哪个阶段执行的。使用 "`rpmbuild -bb my-first-rpm-4.0-1.spec`" 构建它（假设 `my-first-rpm-4.0.spec` 是该 spec文件的文件名）：
 
 ```spec
 Name: my-first-rpm
@@ -730,11 +740,9 @@ License: GPL
 Version: 4.0
 Vendor: Steve
 Group: Documentation
-
 %description
 这是我的第一个 RPM 包。我可以在这里更详细地描述它。
 将这些部分格式化为 80 列宽是正常的，这样在任何屏幕上都可以轻松阅读。
-
 %preun
 echo "In the %preun pre-uninstall script now."
 ```
@@ -751,7 +759,7 @@ echo "In the %preun pre-uninstall script now."
 
 ### 安装前脚本 (Preinstall Script)
 
-在安装 RPM 中的任何文件之前，`%pre` 脚本会运行。它可以通过配置文件无法实现的方式准备系统。例如，httpd 包可以创建一个用户账户的预安装脚本。
+在安装 RPM 中的任何文件之前，`%pre` 脚本会运行。它可以通过配置文件无法实现的方式准备系统。例如，`httpd` 包可以创建一个用户账户的预安装脚本。
 
 标准情况下，如果安装脚本以某种方式失败，RPM 将不会安装。这并不是我们想要的行为，所以有多种方法可以绕过——一种方法是认为创建用户账户失败是一个严重问题，但不至于导致无法安装软件。在这种情况下，`%pre` 脚本可能如下：
 
@@ -784,13 +792,9 @@ echo "In the %preun pre-uninstall script now."
 /sbin/chkconfig --del httpd
 ```
 
-
-
-
-
 ### 卸载后脚本 (Post Uninstall Script)
 
-卸载后脚本 (%postun) 完成了最后一步。它在所有文件都被删除后执行，因此有时会运行 `/sbin/ldconfig` 来更新系统关于已删除库文件的信息。有时也会运行 Red Hat 的 update-alternatives 脚本，例如这个来自 antlr RPM 的示例：
+卸载后脚本 (`%postun`) 完成了最后一步。它在所有文件都被删除后执行，因此有时会运行 `/sbin/ldconfig` 来更新系统关于已删除库文件的信息。有时也会运行 Red Hat 的 `update-alternatives` 脚本，例如这个来自 `antlr` RPM 的示例：
 
 ```
 %postuninstall
@@ -801,11 +805,11 @@ fi
 
 这里有一个条件语句。请继续查看下一节以了解 `$1` 变量在这些脚本中的含义。
 
-# 安装计数 – 升级 RPM
+## 安装计数 – 升级 RPM
 
 上一个示例展示了 `$1` 变量。它会被传递给你所有的脚本，表示当前安装了该 RPM 的副本数量（可能同时安装了多个版本，例如一个库的 32 位和 64 位版本）。通过修改上方的 spec 脚本，我们可以轻松地看到在不同场景下该值是多少。
 
-暂不考虑 RPM 的多架构问题，考虑一个典型的单架构 RPM。当你第一次安装一个新的 RPM 时，当安装脚本运行时，$1（安装变量）将为 0 (0)。初始安装期间不会运行卸载脚本，因此它们在下表中显示为“n/a”。当你升级时，安装脚本的值将为 2，卸载脚本的值将为 1。当你移除 RPM 时，卸载脚本中的该值将为 0（pre- 和 post- 脚本在卸载时不运行，因此它们同样是“n/a”）。
+暂不考虑 RPM 的多架构问题，考虑一个典型的单架构 RPM。当你第一次安装一个新的 RPM 时，当安装脚本运行时，`$1`（安装变量）将为 0 (0)。初始安装期间不会运行卸载脚本，因此它们在下表中显示为“n/a”。当你升级时，安装脚本的值将为 2，卸载脚本的值将为 1。当你移除 RPM 时，卸载脚本中的该值将为 0（pre- 和 post- 脚本在卸载时不运行，因此它们同样是“n/a”）。
 
 | 操作 | pre | post | preun | postun |
 | --- | --- | --- | --- | --- |
@@ -845,7 +849,7 @@ $ rpm -bb my-first-rpm-4.0-1.spec
 
 现在，当我们安装、升级和移除更新后的 RPM 时，我们可以看到计数的变化：
 
-# 安装：
+### 安装：
 
 ```
 [rpm@packaging SPECS]$ sudo rpm -ivh \
@@ -860,7 +864,7 @@ In the %post postinstall script now. (1 copies installed)
 [rpm@packaging SPECS]$
 ```
 
-# 升级：
+### 升级：
 
 现在，将 `my-first-rpm-4.0-2.spec` 复制为 `my-first-rpm-4.0-3.spec`，并将 Release 从 2 增加到 3，这样我们就可以创建它。使用 `rpm -Uvh` 构建新 RPM 并进行升级：
 
@@ -878,7 +882,7 @@ In the %preun pre-uninstall script now. (1 copies installed)
 In the %postun post-uninstall script now. (1 copies installed)
 ```
 
-# 移除：
+### 移除：
 
 ```
 [rpm@packaging SPECS]$ sudo rpm -e my-first-rpm
@@ -890,7 +894,7 @@ In the %postun post-uninstall script now. (0 copies installed)
 [rpm@packaging SPECS]$
 ```
 
-# 第 6 章：ChangeLog
+## 第 6 章：ChangeLog
 
 最后的一件事是向 spec 文件添加一个 `ChangeLog`。这是一个非常有用的部分，可以记录更改了什么、什么时候做的以及是谁做的。`ChangeLog` 的格式如下：
 
@@ -904,13 +908,11 @@ In the %postun post-uninstall script now. (0 copies installed)
 
 请注意按日期倒序排列条目。
 
-
-
-
-
-# 第 7 章：替换配置文件
+## 第 7 章：替换配置文件
 
 在升级软件时，正在安装的新软件版本可能会在它的配置文件中引入新条目，甚至是一个完全全新的格式。如果用户没有更改过配置，升级将简单地将旧的默认配置文件替换为新的默认版本。如果用户在安装软件包后自定义了配置文件，RPM 将面临进退两难的境地：删除用户的更改是错误的，但更新后的 RPM 需要为新版本的软件安装新文件，否则用户将无法看到新的配置文件，以便其与现有的文件进行比较。
+
+
 
 此外，还有一项性限制，即 RPM 在安装、删除或升级时，绝不应与用户进行交互。这是因为 RPM 可能会由安装程序（例如 Red Hat 的 Anaconda 脚本）启用。因此，像 Debian 软件包那样停下来并询问用户想要保留哪种配置，对于 RPM 来说并不是一个可行方案。
 
@@ -922,10 +924,6 @@ In the %postun post-uninstall script now. (0 copies installed)
 
 然而，这并不是最好的做法。
 
-
-
-
-
 ## 选择从 Google Drive 下载的 RPM.ova 文件
 
 ![](img/e1630953eac5dd6e22589b3a1ae13d96_69_0.png)
@@ -936,7 +934,7 @@ In the %postun post-uninstall script now. (0 copies installed)
 
 ![](img/e1630953eac5dd6e22589b3a1ae13d96_69_1.png)
 
-**不要点击“重新初始化所有网卡的 MAC 地址” – 如果你点击了它，你将需要为这些 MAC 地址更新 /etc/udev 和 /etc/sysconfig/network-scripts 中的条目。点击 Import（导入）。**
+**不要点击“重新初始化所有网卡的 MAC 地址” – 如果你点击了它，你将需要为这些 MAC 地址更新 `/etc/udev` 和 `/etc/sysconfig/network-scripts` 中的条目。点击 Import（导入）。**
 
 ![](img/e1630953eac5dd6e22589b3a1ae13d96_69_2.png)
 
@@ -948,11 +946,11 @@ In the %postun post-uninstall script now. (0 copies installed)
 
 ![](img/e1630953eac5dd6e22589b3a1ae13d96_70_1.png)
 
-你现在可以使用 root 账户和默认密码 rpm 进行登录。机器应该已经启动并通过 DHCP 获取了 IP 地址；这里显示的 IP 地址为 192.168.1.30（最后一行）。如果在“eth0:” 段落下没有“inet”行，你需要分配静态 IP 地址。有关分配静态 IP 地址的详情，请参附录 B。
+你现在可以使用 root 账户和默认密码 `rpm` 进行登录。机器应该已经启动并通过 DHCP 获取了 IP 地址；这里显示的 IP 地址为 192.168.1.30（最后一行）。如果在“eth0:” 段落下没有“inet”行，你需要分配静态 IP 地址。有关分配静态 IP 地址的详情，请参附录 B。
 
 ## 附录 B：配置静态 IP 地址
 
-如果你让虚拟机具有静态 IP 地址，请以 root 用户登录，进入 /etc/sysconfig/network-scripts 目录并查看那里的 ifcfg-eth0 文件：
+如果你让虚拟机具有静态 IP 地址，请以 root 用户登录，进入 `/etc/sysconfig/network-scripts` 目录并查看那里的 `ifcfg-eth0` 文件：
 
 ```bash
 [root@packaging ~]# cd /etc/sysconfig/network-scripts
@@ -968,7 +966,7 @@ GATEWAY=192.168.1.1
 DNS=192.168.1.1
 ```
 
-特别注意最后几行；它们可能适合你的环境，或者你可能需要不同的值来适应网络。复制 ifcfg-eth0 文件（这是系统启动时在为 eth0 设备实际读取的文件），并根据情况进行编辑：
+特别注意最后几行；它们可能适合你的环境，或者你可能需要不同的值来适应网络。复制 `ifcfg-eth0` 文件（这是系统启动时在为 eth0 设备实际读取的文件），并根据情况进行编辑：
 
 ```bash
 [root@packaging ~]# cp ifcfg-eth0 ifcfg-eth0
@@ -976,7 +974,7 @@ cp: overwrite ifcfg-eth0
 [root@packaging ~]# vi ifcfg-eth0
 ```
 
-假设你熟悉 vi 编辑器，请继续设置适用于你网络对应的值，并重启网络服务：
+假设你熟悉 `vi` 编辑器，请继续设置适用于你网络对应的值，并重启网络服务：
 
 ```bash
 [root@packaging ~]# service network restart
@@ -989,22 +987,33 @@ Bringing up interface eth0: Determining IP information for eth0... done. [ OK ]
 
 ## 附录 C：为 rpm-build 配置存储库
 
-要安装第 1 章中的 rpm-build 包，你需要安装以下 RPM 包：
+要安装第 1 章中的 `rpm-build` 包，你需要安装以下 RPM 包：
 
-- rpm-build
-- elfutils
-- gdb
-- patch
-- perl
-- perl-pluggable
-- perl-simple
-- perl-libs
-- perl-version
-- redhat-config
-- unzip
-- xz
+- `rpm-build`
 
-既然你正在阅读这本书，毫无疑问你知道不需要自己去寻找所有的 RPM。如果你正在使用我的 VirtualBox 镜像，一切都应该配置好为连接互联网以下载所需的 RPM。你也可以通过 VirtualBox 设备 → CD/DVD 菜单提供来自宿主机的物理 DVD 或 ISO 镜像，然后通过“mount /dev/sr0 /media/cdrom” 命令将其挂载到 /media/cdrom：
+- `elfutils`
+
+- `gdb`
+
+- `patch`
+
+- `perl`
+
+- `perl-pluggable`
+
+- `perl-simple`
+
+- `perl-libs`
+
+- `perl-version`
+
+- `redhat-config`
+
+- `unzip`
+
+- `xz`
+
+既然你正在阅读这本书，毫无疑问你知道不需要自己去寻找所有的 RPM。如果你正在使用我的 VirtualBox 镜像，一切都应该配置好为连接互联网以下载所需的 RPM。你也可以通过 VirtualBox 设备 → CD/DVD 菜单提供来自宿主机的物理 DVD 或 ISO 镜像，然后通过“`mount /dev/sr0 /media/cdrom`” 命令将其挂载到 `/media/cdrom`：
 
 ```bash
 [root@packaging ~]# mount /dev/sr0 /media/cdrom
@@ -1025,9 +1034,9 @@ RPM-GPG-KEY-CentOS-Testing-6
 Packages
 ```
 
-在 CentOS 上，你可以通过编辑 /etc/yum.repos.d/CentOS-Media.repo 并设置 "enabled=1"，然后像第 1 章所示运行“yum -y rpm-build”命令来使用 DVD 存储库安装包。
+在 CentOS 上，你可以通过编辑 `/etc/yum.repos.d/CentOS-Media.repo` 并设置 "`enabled=1`"，然后像第 1 章所示运行“`yum -y rpm-build`”命令来使用 DVD 存储库安装包。
 
-要在 CentOS 或其他基于 RPM 的发行版中通用启用存储库，你可以创建或编辑 /etc/yum.repos.d/ 中的文件。它们必须赋予 .repo 扩展名，例如 CentOS-Base.repo。如下如下：
+要在 CentOS 或其他基于 RPM 的发行版中通用启用存储库，你可以创建或编辑 `/etc/yum.repos.d/` 中的文件。它们必须赋予 `.repo` 扩展名，例如 `CentOS-Base.repo`。如下如下：
 
 ```ini
 [base]
@@ -1039,9 +1048,9 @@ enabled=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-CentOS-6
 ```
 
-"enabled=1" 标志表示该存储库已启用；"enabled=0" 表示它已配置但未未使用。
+"`enabled=1`" 标志表示该存储库已启用；"`enabled=0`" 表示它已配置但未未使用。
 
-$release, $basearch 和其他变量由 RPM 从当前安装的操作系统版本中获取。
+`$release`, `$basearch` 和其他变量由 RPM 从当前安装的操作系统版本中获取。
 
 ## 旁白：创建你自己的存储库
 
@@ -1056,7 +1065,7 @@ gpgcheck=0
 enabled=1
 ```
 
-为了使此工作，你可以向 /local/rpms 目录填充相关文件，然后运行 createrepo /local 命令来更新元数据：
+为了使此工作，你可以向 `/local/rpms` 目录填充相关文件，然后运行 `createrepo /local` 命令来更新元数据：
 
 ```bash
 [root@packaging ~]# createrepo /local
@@ -1066,7 +1075,7 @@ Gathering metadata
 Saving metadata
 ```
 
-你可以在 repodata/ 中看到新创建的元数据：
+你可以在 `repodata/` 中看到新创建的元数据：
 
 ```bash
 [root@packaging ~]# ls repodata/
@@ -1074,37 +1083,63 @@ Saving metadata
 
 ## 附录 D：软件包组
 
-组通常（但并非总是）以二级格式提供，例如 Applications/Editors 或 Development/Tools。常用的组有：
+组通常（但并非总是）以二级格式提供，例如 `Applications/Editors` 或 `Development/Tools`。常用的组有：
 
 - Amusements/Games
+
 - Amusements/Graphics
+
 - Applications/Archiving
+
 - Applications/Communications
+
 - Applications/Databases
+
 - Applications/Editors
+
 - Applications/Emulators
+
 - Applications/Engineering
+
 - Applications/File
+
 - Applications/Internet
+
 - Applications/Multimedia
+
 - Applications/Productivity
+
 - Applications/Publishing
+
 - Applications/System
+
 - Development/Debuggers
+
 - Development/Languages
+
 - Development/Libraries
+
 - Development/System
+
 - Development/Tools
+
 - Public Keys
+
 - System Environment/Base
+
 - System Environment/Daemons
+
 - System Environment/Kernel
+
 - System Environment/Libraries
+
 - System Environment/Shells
+
 - User Interface/Desktops
+
 - User Interface/X
 
-你可以使用类似 rpm -q --qf '%{group}' packagename 的命令来列出软件包所属的组：
+你可以使用类似 `rpm -q --qf '%{group}' packagename` 的命令来列出软件包所属的组：
 
 ```bash
 [root@packaging ~]$ rpm -q --qf '%{name} is in the "%group}" group\n' bash
@@ -1125,10 +1160,6 @@ http://docs.fedoraproject.org/en-US/Fedora_Draft_Documentation/0.1/html/RPM_Guid
 
 http://www.ucs.cam.ac.uk/docs/course-notes/unix-courses/archived/earlier/rpmbuild/files/rpmbuild.pdf – 一个创建 RPM 的示例示例。
 
-
-
-
-
 # 感谢！
 
 感谢购买本书，并一直读到最后！我希望这本书对你来说是有用的、信息量丰富的且有所帮助。
@@ -1138,24 +1169,29 @@ http://www.ucs.cam.ac.uk/docs/course-notes/unix-courses/archived/earlier/rpmbuil
 你可能想提到的点：
 
 - 这本书适合哪些群群，
+
 - 你从书中收获了什么，
+
 - 你如何看待这种写作风格，
+
 - 你是否预计在未来再次阅读书中的部分，
+
 - 这对你来说是否是一次高效的时间利用
 
 # 反馈
 
-我们随时欢迎任何反馈。请通过 rpm@steve-parker.org 与我联系并提供意见。
+我们随时欢迎任何反馈。请通过 `rpm@steve-parker.org` 与我联系并提供意见。
 
 # 作者其他作品
 
 Steve Parker 《Shell Scripting Tutorial》的作者 - 请在此处查看：http://steve-parker.org/sh/sh.shtml，该书也提供电子书和纸质版：只需在 Amazon 上搜索“Shell Scripting Tutorial”即可。
 
 ISBN-10: 1499546653
+
 ISBN-13: 978-1499546651
 
 Steve Parker 还是 Wiley 出籍《Shell Scripting- Expert Recipes for Linux, Bash and more》的作者。
 
 ISBN-10: 1118024486
-ISBN-13: 978-1118024485
 
+ISBN-13: 978-1118024485

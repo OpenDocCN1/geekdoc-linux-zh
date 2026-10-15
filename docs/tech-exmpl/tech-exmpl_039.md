@@ -1,19 +1,20 @@
+
 # 帕斯卡三角形程序
 
 > 原文：[`techbyexample.com/program-for-pascals-triangle/`](https://techbyexample.com/program-for-pascals-triangle/)
 
-## **概述**
+## 概述
 
-目标是打印帕斯卡三角形的 n 行，n 的值作为输入传递给程序
+目标是打印帕斯卡三角形的`n`行，`n`的值作为输入传递给程序。
 
-**示例 1**
+### 示例 1
 
 ```go
 Input: numRows = 4
 Output: [[1],[1,1],[1,2,1],[1,3,3,1]]
 ```
 
-**示例 2**
+### 示例 2
 
 ```go
 Input: numRows = 5
@@ -24,9 +25,9 @@ Output: [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
 
 这里的思路是使用动态规划。
 
-# **程序**
+## 程序
 
-以下是相应的程序
+以下是相应的程序：
 
 ```go
 package main
@@ -77,7 +78,7 @@ func main() {
 }
 ```
 
-**输出：**
+### 输出
 
 ```go
 [1] [1 1] [1 2 1] [1 3 3 1]]

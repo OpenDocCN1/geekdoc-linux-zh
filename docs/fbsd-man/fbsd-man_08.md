@@ -1,54 +1,55 @@
+
 # 索引
 
-### 符号
+## 符号
 
--CURRENT，追踪开发分支
+`-CURRENT`，追踪开发分支
 
--STABLE，追踪开发分支
+`-STABLE`，追踪开发分支
 
-.k5login，用户配置文件： .k5login 和 .k5users
+`.k5login`，用户配置文件： `.k5login` 和 `.k5users`
 
-.k5users，用户配置文件： .k5login 和 .k5users
+`.k5users`，用户配置文件： `.k5login` 和 `.k5users`
 
-.rhosts，Dump 和 Restore
+`.rhosts`，Dump 和 Restore
 
-/boot/kernel.old，建立并安装一个定制的内核
+`/boot/kernel.old`，建立并安装一个定制的内核
 
-/etc，分区规划
+`/etc`，分区规划
 
-/etc/gettytab，/etc/gettytab
+`/etc/gettytab`，`/etc/gettytab`
 
-/etc/groups，组
+`/etc/groups`，组
 
-/etc/login.conf，限制用户使用系统资源
+`/etc/login.conf`，限制用户使用系统资源
 
-/etc/mail/access，sendmail 配置
+`/etc/mail/access`，sendmail 配置
 
-/etc/mail/aliases，sendmail 配置
+`/etc/mail/aliases`，sendmail 配置
 
-/etc/mail/local-host-names，sendmail 配置
+`/etc/mail/local-host-names`，sendmail 配置
 
-/etc/mail/mailer.conf，sendmail 配置
+`/etc/mail/mailer.conf`，sendmail 配置
 
-/etc/mail/mailertable，sendmail 配置
+`/etc/mail/mailertable`，sendmail 配置
 
-/etc/mail/sendmail.cf，sendmail 配置
+`/etc/mail/sendmail.cf`，sendmail 配置
 
-/etc/mail/virtusertable，sendmail 配置
+`/etc/mail/virtusertable`，sendmail 配置
 
-/etc/remote，我如何输入这些 AT 命令?
+`/etc/remote`，我如何输入这些 AT 命令?
 
-/etc/ttys，/etc/ttys
+`/etc/ttys`，`/etc/ttys`
 
-/usr，分区规划
+`/usr`，分区规划
 
-/usr/bin/login，快速预览
+`/usr/bin/login`，快速预览
 
-/usr/local/etc，应用程序配置
+`/usr/local/etc`，应用程序配置
 
-/usr/share/skel，添加用户
+`/usr/share/skel`，添加用户
 
-/var，分区规划
+`/var`，分区规划
 
 10 base 2，单独的 ISDN 桥/路由器
 
@@ -74,7 +75,7 @@
 
 主引导记录 (MBR)，The Boot Manager
 
-主机，/etc/hosts
+主机，`/etc/hosts`
 
 主机名，主机名
 
@@ -126,45 +127,45 @@ NOTES，配置文件
 
 内核选项
 
-cpu，配置文件
+`cpu`，配置文件
 
-device pf，PF 内核选项
+`device pf`，PF 内核选项
 
-device pflog，PF 内核选项
+`device pflog`，PF 内核选项
 
-device pfsync，PF 内核选项
+`device pfsync`，PF 内核选项
 
-ident，配置文件
+`ident`，配置文件
 
-IPDIVERT，内核选项
+`IPDIVERT`，内核选项
 
-IPFILTER，内核选项
+`IPFILTER`，内核选项
 
-IPFILTER_DEFAULT_BLOCK，内核选项
+`IPFILTER_DEFAULT_BLOCK`，内核选项
 
-IPFILTER_LOG，内核选项
+`IPFILTER_LOG`，内核选项
 
-IPFIREWALL，内核选项
+`IPFIREWALL`，内核选项
 
-IPFIREWALL_DEFAULT_TO_ACCEPT，内核选项
+`IPFIREWALL_DEFAULT_TO_ACCEPT`，内核选项
 
-IPFIREWALL_VERBOSE，内核选项
+`IPFIREWALL_VERBOSE`，内核选项
 
-IPFIREWALL_VERBOSE_LIMIT，内核选项
+`IPFIREWALL_VERBOSE_LIMIT`，内核选项
 
-IPSEC，理解 IPsec
+`IPSEC`，理解 IPsec
 
-IPSEC_DEBUG，理解 IPsec
+`IPSEC_DEBUG`，理解 IPsec
 
-MROUTING，多播路由
+`MROUTING`，多播路由
 
-MSDOSFS，配置文件
+`MSDOSFS`，配置文件
 
-NFS，配置文件
+`NFS`，配置文件
 
-NFS_ROOT，配置文件
+`NFS_ROOT`，配置文件
 
-SMP，配置文件
+`SMP`，配置文件
 
 机器，配置文件
 
@@ -302,7 +303,7 @@ operator，系统帐户
 
 打印服务器
 
-Windows 客户机，为 Microsoft® Windows® 客户机提供文件和打印服务 (Samba)
+Windows 客户机，为 Microsoft® Windows® 客户机提供文件和打印服务 (Samba)
 
 打印机，打印机设置
 
@@ -322,7 +323,7 @@ Windows 客户机，为 Microsoft® Windows® 客户机提供文件和打印服
 
 UNIX 客户机，NFS 是如何工作的
 
-Windows 客户机，为 Microsoft® Windows® 客户机提供文件和打印服务 (Samba)
+Windows 客户机，为 Microsoft® Windows® 客户机提供文件和打印服务 (Samba)
 
 文件权限，权限
 
@@ -354,7 +355,7 @@ Joliet，mkisofs
 
 内核配置，建立无盘内核
 
-只读的 /usr，运行时 /usr 是只读在
+只读的 `/usr`，运行时 `/usr` 是只读在
 
 日志，通过 GEOM 实现 UFS 日志
 
@@ -548,7 +549,7 @@ vi，文本编辑器
 
 配置，基本配置
 
-邮件列表，重新编译 “world”
+邮件列表，重新编译 "world"
 
 邮件服务器，邮件服务器
 
@@ -568,7 +569,7 @@ sendmail，邮件主机上使用的服务程序
 
 重宿 主机，重宿主机(Dual Homed Hosts)
 
-重新编译 world，重新编译 “world”
+重新编译 world，重新编译 "world"
 
 防火墙，FreeBSD 能做些什么？，防火墙，过滤/数据整形防火墙
 
@@ -582,27 +583,27 @@ PF，OpenBSD Packet Filter (PF) 和 ALTQ
 
 限制 TCP 带宽延迟积
 
-net.inet.tcp.inflight.enable，TCP 带宽迟延(Bandwidth Delay Product)
+`net.inet.tcp.inflight.enable`，TCP 带宽迟延(Bandwidth Delay Product)
 
 限制用户使用系统资源，限制用户使用系统资源
 
-coredumpsize，限制用户使用系统资源
+`coredumpsize`，限制用户使用系统资源
 
-cputime，限制用户使用系统资源
+`cputime`，限制用户使用系统资源
 
-filesize，限制用户使用系统资源
+`filesize`，限制用户使用系统资源
 
-maxproc，限制用户使用系统资源
+`maxproc`，限制用户使用系统资源
 
-memorylocked，限制用户使用系统资源
+`memorylocked`，限制用户使用系统资源
 
-memoryuse，限制用户使用系统资源
+`memoryuse`，限制用户使用系统资源
 
-openfiles，限制用户使用系统资源
+`openfiles`，限制用户使用系统资源
 
-sbsize，限制用户使用系统资源
+`sbsize`，限制用户使用系统资源
 
-stacksize，限制用户使用系统资源
+`stacksize`，限制用户使用系统资源
 
 配额，限制用户使用系统资源
 
@@ -610,7 +611,7 @@ stacksize，限制用户使用系统资源
 
 默认路由，实例，默认路由
 
-### A
+## A
 
 Abacus，Abacus
 
@@ -636,7 +637,7 @@ problems，使用和调试 FreeBSD ACPI，常见问题
 
 问题，从 ACPI 中获取调试输出信息
 
-Acrobat Reader，Acrobat Reader®
+Acrobat Reader，Acrobat Reader®
 
 adduser，管理员级设置
 
@@ -674,7 +675,7 @@ AUDIT，概述
 
 AutoPPP，mgetty 和 AutoPPP
 
-### B
+## B
 
 backup floppies，能够使用软盘来备份数据吗
 
@@ -718,7 +719,7 @@ configuration (配置)，引导加载器配置
 
 Boot Manager，引导问题，引导管理器和各引导阶段
 
-boot-loader，第三阶段，/boot/loader
+boot-loader，第三阶段，`/boot/loader`
 
 BOOTP
 
@@ -732,7 +733,7 @@ BSD partitions，使用 sysinstall(8)
 
 bsdlabel，在出现灾难前，出现灾难后
 
-### C
+## C
 
 CARP，Common Address Redundancy Protocol (CARP， 共用地址冗余协议)
 
@@ -780,11 +781,11 @@ contributors，FreeBSD 开发模式
 
 core team，FreeBSD 开发模式
 
-coredumpsize，限制用户使用系统资源
+`coredumpsize`，限制用户使用系统资源
 
 cpio，cpio
 
-cputime，限制用户使用系统资源
+`cputime`，限制用户使用系统资源
 
 cron，使用 FreeBSD-CURRENT，使用 FreeBSD-STABLE
 
@@ -808,7 +809,7 @@ CVS
 
 cvsup，使用 FreeBSD-CURRENT，使用 FreeBSD-STABLE
 
-### D
+## D
 
 DCE，术语
 
@@ -844,133 +845,135 @@ disks
 
 encrypting，加密磁盘分区
 
-memory，网络、内存和 和以及映像文件为介质的虚拟文件系统
 
-disks (磁盘)
 
-file-backed (采用文件作为介质)，以映像文件为介质的文件系统
+`memory`，网络、内存以及映像文件为介质的虚拟文件系统
+
+`disks` (磁盘)
+
+`file-backed` (采用文件作为介质)，以映像文件为介质的文件系统
 
 内存文件系统，以内存为介质的文件系统
 
-Django，Django
+`Django`，Django
 
-DNS，主机名，MS Extensions，使用电子邮件，Mail for Your Domain，纵览
+`DNS`，主机名，`MS Extensions`，使用电子邮件，`Mail for Your Domain`，纵览
 
 记录，域文件
 
-DNS 服务器，FreeBSD 能做些什么？
+`DNS` 服务器，FreeBSD 能做些什么？
 
-documentation package (见 Updating and Upgrading)
+`documentation package` (见 Updating and Upgrading)
 
-domain name，只需做一次的事情
+`domain name`，只需做一次的事情
 
-DOS，准备引导介质，BIOS 磁盘编号，内核和文件系统
+`DOS`，准备引导介质，`BIOS` 磁盘编号，内核和文件系统
 
-DoS 攻击 (见 拒绝服务攻击 (DoS))
+`DoS` 攻击 (见 拒绝服务攻击 (DoS))
 
-DSL，过滤/数据整形防火墙
+`DSL`，过滤/数据整形防火墙
 
-DSP，常见问题
+`DSP`，常见问题
 
-DTE，术语
+`DTE`，术语
 
-DTrace，概述
+`DTrace`，概述
 
-DTrace support (见 DTrace)
+`DTrace support` (见 DTrace)
 
-dump，Dump 和 Restore
+`dump`，Dump 和 Restore
 
-DVD
+`DVD`
 
-burning，创建和使用光学介质(DVD)
+`burning`，创建和使用光学介质(DVD)
 
-DVD+RW，使用 DVD+RW
+`DVD+RW`，使用 DVD+RW
 
-DVD-RAM，使用 DVD-RAM
+`DVD-RAM`，使用 DVD-RAM
 
-DVD-RW，使用 DVD-RW
+`DVD-RW`，使用 DVD-RW
 
-DVD-Video，刻录 DVD-Video
+`DVD-Video`，刻录 DVD-Video
 
 ### E
 
-editors
+`editors`
 
-ee，文本编辑器
+`ee`，文本编辑器
 
-ee，文本编辑器
+`ee`，文本编辑器
 
-ELF，高级主题
+`ELF`，高级主题
 
 标记，高级主题
 
-emacs，文本编辑器
+`emacs`，文本编辑器
 
-email，FreeBSD 能做些什么？，概述
+`email`，FreeBSD 能做些什么？，概述
 
-environment variables (环境变量)，Shells
+`environment variables` (环境变量)，Shells
 
-Etherboot，使用 Etherboot 准备启动程序
+`Etherboot`，使用 Etherboot 准备启动程序
 
-Ethernet，配置 slip.hosts
+`Ethernet`，配置 `slip.hosts`
 
-Ethernet (以太网)
+`Ethernet` (以太网)
 
-MAC address (MAC 地址)，slip.login Configuration
+`MAC address` (MAC 地址)，`slip.login` Configuration
 
-execution class loader，高级主题
+`execution class loader`，高级主题
 
-Experts Exchange，谁在使用 FreeBSD?
+`Experts Exchange`，谁在使用 FreeBSD?
 
 ### F
 
-failover (故障转移)，链路聚合与故障转移
+`failover` (故障转移)，链路聚合与故障转移
 
-fdisk，添加磁盘
+`fdisk`，添加磁盘
 
-fec，链路聚合与故障转移
+`fec`，链路聚合与故障转移
 
-fetchmail，使用 fetchmail
+`fetchmail`，使用 fetchmail
 
-File Systems，概述
+`File Systems`，概述
 
-File Systems Support (见 File Systems)
+`File Systems Support` (见 File Systems)
 
-filesize，限制用户使用系统资源
+`filesize`，限制用户使用系统资源
 
-finger，确保以 root 用户权限运行的服务器和 suid/sgid 可执行程序的安全
+`finger`，确保以 root 用户权限运行的服务器和 suid/sgid 可执行程序的安全
 
-Firefox，Firefox
+`Firefox`，Firefox
 
-firewall (防火墙)，防火墙
+`firewall` (防火墙)，防火墙
 
-Flash，Firefox 与 Adobe® Flash® 插件
+`Flash`，Firefox 与 Adobe® Flash® 插件
 
-floppy disks，能够使用软盘来备份数据吗
+`floppy disks`，能够使用软盘来备份数据吗
 
-flow control protocol，串口
+`flow control protocol`，串口
 
-fonts
+`fonts`
 
-anti-aliased，Anti-Aliased 字体
+`anti-aliased`，Anti-Aliased 字体
 
-spacing，Anti-Aliased 字体
+`spacing`，Anti-Aliased 字体
 
-Fonts
+`Fonts`
 
-LCD screen，Anti-Aliased 字体
+`LCD screen`，Anti-Aliased 字体
 
-fonts (字体)
+`fonts` (字体)
 
-TrueType，TrueType® 字体
+`TrueType`，TrueType® 字体
 
-FORTRAN，我应该安装哪个转换过滤器？
+`FORTRAN`，我应该安装哪个转换过滤器？
 
-Free Software Foundation，FreeBSD 的简要历史，最新的 FreeBSD 发行版本
+`Free Software Foundation`，FreeBSD 的简要历史，最新的 FreeBSD 发行版本
 
-FreeBSD Project
+`FreeBSD Project`
 
-goals，FreeBSD 项目目标
+`goals`，FreeBSD 项目目标
 
 开发模式，FreeBSD 开发模式
 
@@ -980,123 +983,123 @@ FreeBSD 项目
 
 历史，FreeBSD 的简要历史
 
-freebsd-update (见 updating-upgrading)
+`freebsd-update` (见 updating-upgrading)
 
 Free 软件基金会，GNU Info 文件
 
-FreshMeat，寻找您要的应用程序
+`FreshMeat`，寻找您要的应用程序
 
-FreshPorts，寻找您要的应用程序
+`FreshPorts`，寻找您要的应用程序
 
-FTP
+`FTP`
 
-anonymous，匿名 FTP
+`anonymous`，匿名 FTP
 
-anonymous (匿名)，配置其他网络服务
+`anonymous` (匿名)，配置其他网络服务
 
-passive mode，选择您要使用的安装介质
+`passive mode`，选择您要使用的安装介质
 
-via a HTTP proxy，选择您要使用的安装介质
+`via a HTTP proxy`，选择您要使用的安装介质
 
 匿名，配置，维护
 
-FTP 服务器，FreeBSD 能做些什么？，文件传输协议 (FTP)
+`FTP` 服务器，FreeBSD 能做些什么？，文件传输协议 (FTP)
 
 ### G
 
-GEOM，概述，RAID0 - 条带，RAID1 - 镜像，RAID3 - 使用专用校验设备的字节级条带，为磁盘设备添加卷标，通过 GEOM 实现 UFS 日志
+`GEOM`，概述，RAID0 - 条带，RAID1 - 镜像，RAID3 - 使用专用校验设备的字节级条带，为磁盘设备添加卷标，通过 GEOM 实现 UFS 日志
 
 GEOM 磁盘框架 (见 GEOM)
 
-getty，快速预览
+`getty`，快速预览
 
-Ghostscript，模拟 PostScript® 在非 PostScript® 打印机上
+`Ghostscript`，模拟 PostScript® 在非 PostScript® 打印机上
 
-GIMP，GIMP
+`GIMP`，GIMP
 
-GNOME，有关 GNOME
+`GNOME`，有关 GNOME
 
-GNU Compiler Collection，FreeBSD 能做些什么？
+`GNU Compiler Collection`，FreeBSD 能做些什么？
 
-GNU General Public License (GPL)，FreeBSD 项目目标
+`GNU General Public License` (GPL)，FreeBSD 项目目标
 
-GNU Lesser General Public License (LGPL)，FreeBSD 项目目标
+`GNU Lesser General Public License` (LGPL)，FreeBSD 项目目标
 
-GNU toolchain，安装 Linux® ELF 二进制程序
+`GNU toolchain`，安装 Linux® ELF 二进制程序
 
-GnuCash，GnuCash
+`GnuCash`，GnuCash
 
-Gnumeric，Gnumeric
+`Gnumeric`，Gnumeric
 
-GQview，GQview
+`GQview`，GQview
 
-Greenman, David，FreeBSD 的简要历史
+`Greenman, David`，FreeBSD 的简要历史
 
-Grimes, Rod，FreeBSD 的简要历史
+`Grimes, Rod`，FreeBSD 的简要历史
 
-gv，gv
+`gv`，gv
 
-gzip，可以压缩备份吗
+`gzip`，可以压缩备份吗
 
 ### H
 
-HAST
+`HAST`
 
 高可用性 (high availability)，高可用性存储 (HAST)
 
-HCI，主控制器接口 (HCI)
+`HCI`，主控制器接口 (HCI)
 
-header pages，启用后台打印： 文件 /etc/printcap ，报头页
+`header pages`，启用后台打印： 文件 `/etc/printcap`，报头页
 
-HP-UX，它是什么？
+`HP-UX`，它是什么？
 
-HPLIP，替换标准后台打印
+`HPLIP`，替换标准后台打印
 
-Hubbard, Jordan，FreeBSD 的简要历史
+`Hubbard, Jordan`，FreeBSD 的简要历史
 
-hw.ata.wc，hw.ata.wc
+`hw.ata.wc`，hw.ata.wc
 
 ### I
 
-I/O 端口，常见问题
+`I/O` 端口，常见问题
 
-IEEE，pax
+`IEEE`，pax
 
-IMAP，使用电子邮件，通过 POP 和 IMAP 访问远程的邮件
+`IMAP`，使用电子邮件，通过 POP 和 IMAP 访问远程的邮件
 
-init，引导问题，Init：进程控制及初始化
+`init`，引导问题，Init：进程控制及初始化
 
-installation，概述
+`installation`，概述
 
-floppies，创建安装软盘
+`floppies`，创建安装软盘
 
-from MS-DOS，从 MS-DOS® 分区安装
+`from MS-DOS`，从 MS-DOS® 分区安装
 
-from QIC/SCSI Tape，创建一个安装磁带
+`from QIC/SCSI Tape`，创建一个安装磁带
 
-headless (serial console)，在一个没有显示器或键盘的系统上安装 FreeBSD
+`headless (serial console)`，在一个没有显示器或键盘的系统上安装 FreeBSD
 
-network
+`network`
 
-FTP，选择您要使用的安装介质，为 FreeBSD 安装盘建立局域网 FTP 站点
+`FTP`，选择您要使用的安装介质，为 FreeBSD 安装盘建立局域网 FTP 站点
 
-NFS，通过 NFS 安装之前
+`NFS`，通过 NFS 安装之前
 
-troubleshooting，故障排除
+`troubleshooting`，故障排除
 
-installation (安装)
+`installation` (安装)
 
-network (网络)
+`network` (网络)
 
-Ethernet (以太网)，通过网络安装
+`Ethernet` (以太网)，通过网络安装
 
-parallel (并口， PLIP)，通过网络安装
+`parallel` (并口， PLIP)，通过网络安装
 
-serial (串口， PPP)，通过网络安装
+`serial` (串口， PPP)，通过网络安装
 
 Intel i810 显示芯片，配置 Intel® i810 显示芯片组
 
-Internet Systems Consortium (ISC)，什么是 DHCP？
+`Internet Systems Consortium` (ISC)，什么是 DHCP？
 
 Internet 连接共享，概要
 
@@ -1106,11 +1109,11 @@ IP 别名，虚拟主机
 
 IP 子网，简介
 
-IPCP，PPP 和动态 IP 地址
+`IPCP`，PPP 和动态 IP 地址
 
-ipf，IPF
+`ipf`，IPF
 
-IPFILTER
+`IPFILTER`
 
 内核选项，内核选项
 
@@ -1126,9 +1129,9 @@ IPFILTER
 
 记录日志，IPMON
 
-ipfstat，IPFSTAT
+`ipfstat`，IPFSTAT
 
-IPFW
+`IPFW`
 
 内核选项，内核选项
 
@@ -1142,23 +1145,23 @@ IPFW
 
 记录日志，记录防火墙消息
 
-ipmon，IPMON
+`ipmon`，IPMON
 
-ipnat，IPNAT
+`ipnat`，IPNAT
 
-IPsec，IPsec 上的 VPN
+`IPsec`，IPsec 上的 VPN
 
-AH，理解 IPsec
+`AH`，理解 IPsec
 
-ESP，理解 IPsec
+`ESP`，理解 IPsec
 
-IPX/SPX，单独的 ISDN 桥/路由器
+`IPX/SPX`，单独的 ISDN 桥/路由器
 
-IRQ，常见问题
+`IRQ`，常见问题
 
-ISA，配置系统
+`ISA`，配置系统
 
-ISDN，过滤/数据整形防火墙，ISDN
+`ISDN`，过滤/数据整形防火墙，ISDN
 
 单独的 桥/路由器，单独的 ISDN 桥/路由器
 
@@ -1166,21 +1169,21 @@ ISDN，过滤/数据整形防火墙，ISDN
 
 ISO 9660，介绍
 
-ISP，前提条件，PPP 和静态 IP 地址
+`ISP`，前提条件，PPP 和静态 IP 地址
 
 ### J
 
-jails，Jails
+`jails`，Jails
 
-Jolitz, Bill，FreeBSD 的简要历史
+`Jolitz, Bill`，FreeBSD 的简要历史
 
 ### K
 
-KDE，KDE
+`KDE`，KDE
 
-display manager，KDE 显示管理器
+`display manager`，KDE 显示管理器
 
-Kerberos5
+`Kerberos5`
 
 历史，历史
 
@@ -1196,87 +1199,87 @@ Kerberos5
 
 限制和不足，缓解 Kerberos 的限制
 
-Kermit，使用 pppd 作为客户端，使用 pppd 作为客户端
+`Kermit`，使用 pppd 作为客户端，使用 pppd 作为客户端
 
-kern.cam.scsi_delay，SCSI_DELAY (kern.cam.scsi_delay)
+`kern.cam.scsi_delay`，SCSI_DELAY (kern.cam.scsi_delay)
 
-kern.ipc.somaxconn，kern.ipc.somaxconn
+`kern.ipc.somaxconn`，kern.ipc.somaxconn
 
-kern.maxfiles，kern.maxfiles
+`kern.maxfiles`，kern.maxfiles
 
-kernel
+`kernel`
 
-configuration，内核配置
+`configuration`，内核配置
 
-drivers / modules / subsystems，内核驱动，子系统和模块
+`drivers / modules / subsystems`，内核驱动，子系统和模块
 
-kernel options
+`kernel options`
 
-COMPAT_LINUX，配置 Linux® 二进制兼容模式
+`COMPAT_LINUX`，配置 Linux® 二进制兼容模式
 
-SCSI_DELAY，SCSI_DELAY (kern.cam.scsi_delay)
+`SCSI_DELAY`，SCSI_DELAY (kern.cam.scsi_delay)
 
-kernel.old，Loader 示例
+`kernel.old`，Loader 示例
 
-keymap，控制台设置
+`keymap`，控制台设置
 
-KLD (kernel loadable object)，使用 Windows® NDIS 驱动程序
+`KLD` (kernel loadable object)，使用 Windows® NDIS 驱动程序
 
-KMyMoney，KMyMoney
+`KMyMoney`，KMyMoney
 
-KOffice，KOffice
+`KOffice`，KOffice
 
-Konqueror，Konqueror
+`Konqueror`，Konqueror
 
 ### L
 
-L2CAP，逻辑连接控制和适配协议(L2CAP)
+`L2CAP`，逻辑连接控制和适配协议(L2CAP)
 
-lacp，链路聚合与故障转移
+`lacp`，链路聚合与故障转移
 
-lagg，链路聚合与故障转移
+`lagg`，链路聚合与故障转移
 
-LCD screen，Anti-Aliased 字体
+`LCD screen`，Anti-Aliased 字体
 
-LCP，mgetty 和 AutoPPP
+`LCP`，mgetty 和 AutoPPP
 
-LDAP，安全配置
+`LDAP`，安全配置
 
-LibreOffice，LibreOffice
+`LibreOffice`，LibreOffice
 
-Linux，它是什么？
+`Linux`，它是什么？
 
-ELF binaries，安装 Linux® ELF 二进制程序
+`ELF binaries`，安装 Linux® ELF 二进制程序
 
 Linux 二进制兼容模式，概述
 
-LISA，哪个备份程序最好？
+`LISA`，哪个备份程序最好？
 
-livefs CD，在出现灾难前
+`livefs CD`，在出现灾难前
 
-loadbalance (负载均衡)，链路聚合与故障转移
+`loadbalance` (负载均衡)，链路聚合与故障转移
 
-loader，Loader 程序流程
+`loader`，Loader 程序流程
 
 loader 配置，Loader 程序流程
 
-locale，使用本地化语言，Shell 启动文件方法
+`locale`，使用本地化语言，Shell 启动文件方法
 
-localization (本地化)
+`localization` (本地化)
 
-Greek (希腊语)，希腊语本地化
+`Greek` (希腊语)，希腊语本地化
 
-login name，前提条件
+`login name`，前提条件
 
-LPD spooling system，概述
+`LPD spooling system`，概述
 
-LPRng，替换标准后台打印
+`LPRng`，替换标准后台打印
 
-ls，权限
+`ls`，权限
 
 ### M
 
-MAC，概要
+`MAC`，概要
 
 文件系统防火墙策略，MAC bsdextended 模块
 
@@ -1300,119 +1303,119 @@ MAC 端口访问控制表策略，MAC portacl 模块
 
 MAC 进程分区策略，MAC partition (分区) 模块
 
-MacOS，生成一个一次性密码
+`MacOS`，生成一个一次性密码
 
-make，编译基本系统
+`make`，编译基本系统
 
-make.conf，检查 /etc/make.conf
+`make.conf`，检查 `/etc/make.conf`
 
-Master Boot Record (MBR)，引导问题
+`Master Boot Record` (MBR)，引导问题
 
-maxproc，限制用户使用系统资源
+`maxproc`，限制用户使用系统资源
 
-MD5，DES、 Blowfish、 MD5， 以及 Crypt
+`MD5`，DES、 Blowfish、 MD5， 以及 Crypt
 
-memorylocked，限制用户使用系统资源
+`memorylocked`，限制用户使用系统资源
 
-memoryuse，限制用户使用系统资源
+`memoryuse`，限制用户使用系统资源
 
-mencoder，mencoder
+`mencoder`，mencoder
 
-mergemaster，mergemaster
+`mergemaster`，mergemaster
 
-mgetty，mgetty 和 AutoPPP
+`mgetty`，mgetty 和 AutoPPP
 
-Microsoft Windows，BIOS 磁盘编号，使用 Windows® NDIS 驱动程序，为 Microsoft® Windows® 客户机提供文件和打印服务 (Samba)
+`Microsoft Windows`，BIOS 磁盘编号，使用 Windows® NDIS 驱动程序，为 Microsoft® Windows® 客户机提供文件和打印服务 (Samba)
 
-device drivers (设备驱动)，使用 Windows® NDIS 驱动程序
+`device drivers` (设备驱动)，使用 Windows® NDIS 驱动程序
 
-MIME，本地化设置，Shell 启动文件方法
+`MIME`，本地化设置，Shell 启动文件方法
 
-modem，Modem 和线缆，使用 pppd 作为客户端，前提条件，ISDN 终端适配器
+`modem`，Modem 和线缆，使用 pppd 作为客户端，前提条件，ISDN 终端适配器
 
-mod_perl
+`mod_perl`
 
-Perl，mod_perl
+`Perl`，mod_perl
 
-mod_php
+`mod_php`
 
-PHP，mod_php
+`PHP`，mod_php
 
-mount，在一个没有显示器或键盘的系统上安装 FreeBSD，在一个没有显示器或键盘的系统上安装 FreeBSD，出现灾难后
+`mount`，在一个没有显示器或键盘的系统上安装 FreeBSD，在一个没有显示器或键盘的系统上安装 FreeBSD，出现灾难后
 
-mountd，NFS 是如何工作的
+`mountd`，NFS 是如何工作的
 
-moused，控制台设置
+`moused`，控制台设置
 
-MPlayer
+`MPlayer`
 
-making，创建 MPlayer
+`making`，创建 MPlayer
 
 使用，使用 MPlayer
 
-MS-DOS，疑难问题，生成一个一次性密码
+`MS-DOS`，疑难问题，生成一个一次性密码
 
-MX record，疑难解答，疑难解答
+`MX record`，疑难解答，疑难解答
 
-MX 记录，Email 和 DNS，基本配置，域文件
+`MX` 记录，Email 和 DNS，基本配置，域文件
 
-MySQL，编译 I18N 程序
+`MySQL`，编译 I18N 程序
 
 ### N
 
-nameserver，前提条件，只需做一次的事情
+`nameserver`，前提条件，只需做一次的事情
 
-NAT，FreeBSD 能做些什么？，NAT，过滤/数据整形防火墙，概要
+`NAT`，FreeBSD 能做些什么？，NAT，过滤/数据整形防火墙，概要
 
 以及 IPFILTER，IPNAT
 
 以及 IPFW，一个 NAT 和带状态规则集的例子
 
-natd，概要
+`natd`，概要
 
-NDIS，使用 Windows® NDIS 驱动程序
+`NDIS`，使用 Windows® NDIS 驱动程序
 
-NDISulator，使用 Windows® NDIS 驱动程序
+`NDISulator`，使用 Windows® NDIS 驱动程序
 
-net.inet.ip.portrange.*，net.inet.ip.portrange.*
+`net.inet.ip.portrange.*`，net.inet.ip.portrange.*
 
-Net/2，FreeBSD 的简要历史，FreeBSD 的简要历史
+`Net/2`，FreeBSD 的简要历史，FreeBSD 的简要历史
 
-NetApp，谁在使用 FreeBSD?
+`NetApp`，谁在使用 FreeBSD?
 
-NetBIOS，MS Extensions，全局配置
+`NetBIOS`，MS Extensions，全局配置
 
-NetBSD，最新的 FreeBSD 发行版本，它是什么？
+`NetBSD`，最新的 FreeBSD 发行版本，它是什么？
 
-Netcraft，谁在使用 FreeBSD?
+`Netcraft`，谁在使用 FreeBSD?
 
-netgroups，使用 Netgroups，使用 Netgroups
+`netgroups`，使用 Netgroups，使用 Netgroups
 
-network printing，网络打印，安装在远程主机上的打印机
+`network printing`，网络打印，安装在远程主机上的打印机
 
-newfs，出现灾难后
+`newfs`，出现灾难后
 
-newsyslog.conf，newsyslog.conf
+`newsyslog.conf`，newsyslog.conf
 
-NFS，网络、内存和 和以及映像文件为介质的虚拟文件系统，通过 NFS 使用磁盘配额，网络文件系统（NFS）
+`NFS`，网络、内存以及映像文件为介质的虚拟文件系统，通过 NFS 使用磁盘配额，网络文件系统（NFS）
 
-configuration，配置 NFS
+`configuration`，配置 NFS
 
-export examples，配置 NFS
+`export examples`，配置 NFS
 
-mounting，配置 NFS
+`mounting`，配置 NFS
 
-server (服务)，NFS 是如何工作的
+`server` (服务)，NFS 是如何工作的
 
-uses，实际应用
+`uses`，实际应用
 
 安装多台机器，跟踪多台机器
 
 无盘操作，配置 TFTP 和 NFS 服务器
 
-nfsd，NFS 是如何工作的
+`nfsd`，NFS 是如何工作的
 
-NIS，它是什么？
+`NIS`，它是什么？
 
 主服务器，机器类型
 
@@ -1432,41 +1435,41 @@ NIS，它是什么？
 
 服务器配置，配置 NIS 主服务器
 
-NIS+，安全配置
+`NIS+`，安全配置
 
-NOTES，配置文件
+`NOTES`，配置文件
 
-Novell，FreeBSD 的简要历史
+`Novell`，FreeBSD 的简要历史
 
-ntalk，确保以 root 用户权限运行的服务器和 suid/sgid 可执行程序的安全
+`ntalk`，确保以 root 用户权限运行的服务器和 suid/sgid 可执行程序的安全
 
-NTP，通过 NTP 进行时钟同步
+`NTP`，通过 NTP 进行时钟同步
 
-ntp.conf，一般配置
+`ntp.conf`，一般配置
 
-ntpd，纵览
+`ntpd`，纵览
 
 选择服务器，选择合适的 NTP 服务器
 
 配置，配置您的机器
 
-ntpdate，基本配置
+`ntpdate`，基本配置
 
-null-modem cable，串口，Null-modem 线缆，串口控制台的设置
+`null-modem cable`，串口，Null-modem 线缆，串口控制台的设置
 
-null-modem 线，在一个没有显示器或键盘的系统上安装 FreeBSD
+`null-modem` 线，在一个没有显示器或键盘的系统上安装 FreeBSD
 
 ### O
 
-OBEX，OBEX 对象推送 (OBEX Object Push - OPUSH) 层面
+`OBEX`，OBEX 对象推送 (OBEX Object Push - OPUSH) 层面
 
-OpenBSD，最新的 FreeBSD 发行版本，它是什么？
+`OpenBSD`，最新的 FreeBSD 发行版本，它是什么？
 
-openfiles，限制用户使用系统资源
+`openfiles`，限制用户使用系统资源
 
-OpenOffice.org，OpenOffice.org
+`OpenOffice.org`，OpenOffice.org
 
-OpenSSH，OpenSSH
+`OpenSSH`，OpenSSH
 
 启用，启用 sshd
 
@@ -1478,75 +1481,75 @@ OpenSSH，OpenSSH
 
 隧道，SSH 隧道
 
-OpenSSL
+`OpenSSL`
 
 生成证书，生成证书
 
-Opera，Opera
+`Opera`，Opera
 
-OS/2，疑难问题，专用模式
+`OS/2`，疑难问题，专用模式
 
-OSPF，建立路由器
+`OSPF`，建立路由器
 
 ### P
 
-packages，概述
+`packages`，概述
 
-deleting，删除一个软件包
+`deleting`，删除一个软件包
 
-installing，一个 package 的安装
+`installing`，一个 package 的安装
 
-managing，软件包的管理
+`managing`，软件包的管理
 
-page accounting，lpf： 一个文本过滤器
+`page accounting`，lpf： 一个文本过滤器
 
-Pair Networks，谁在使用 FreeBSD?
+`Pair Networks`，谁在使用 FreeBSD?
 
-PAP，前提条件，PPP 和静态 IP 地址，PAP 和 CHAP 验证
+`PAP`，前提条件，PPP 和静态 IP 地址，PAP 和 CHAP 验证
 
-parity，串口，检测串口打印机
+`parity`，串口，检测串口打印机
 
-partitions，磁盘组织，添加磁盘
+`partitions`，磁盘组织，添加磁盘
 
-passwd 命令，passwd 命令
+`passwd` 命令，passwd 命令
 
-password，前提条件，PAP 和 CHAP 验证
+`password`，前提条件，PAP 和 CHAP 验证
 
-pax，pax
+`pax`，pax
 
-PCI，配置系统
+`PCI`，配置系统
 
-PCL，检测打印机的通讯，疑难问题
+`PCL`，检测打印机的通讯，疑难问题
 
-PDF
+`PDF`
 
-查看器，Acrobat Reader®，gv，Xpdf
+查看器，Acrobat Reader®，gv，Xpdf
 
-pgp keys，PGP 公钥
+`pgp keys`，PGP 公钥
 
-pkg_add，一个 package 的安装，一个 package 的安装
+`pkg_add`，一个 package 的安装，一个 package 的安装
 
-pkg_delete，删除一个软件包
+`pkg_delete`，删除一个软件包
 
-pkg_info，软件包的管理
+`pkg_info`，软件包的管理
 
-pkg_version，软件包的管理
+`pkg_version`，软件包的管理
 
-PLIP，并口电缆 IP (PLIP)
+`PLIP`，并口电缆 IP (PLIP)
 
-POP，使用电子邮件，通过 POP 和 IMAP 访问远程的邮件
+`POP`，使用电子邮件，通过 POP 和 IMAP 访问远程的邮件
 
-Portaudit，监视第三方安全问题
+`Portaudit`，监视第三方安全问题
 
-portmanager，使用 Portmanager 来升级 Ports
+`portmanager`，使用 Portmanager 来升级 Ports
 
-portmap，您应该知道的术语和进程
+`portmap`，您应该知道的术语和进程
 
-portmaster，使用 Portmaster 升级 Ports
+`portmaster`，使用 Portmaster 升级 Ports
 
-ports，概述
+`ports`，概述
 
-disk-space，Ports 和磁盘空间
+`disk-space`，Ports 和磁盘空间
 
 升级，升级 Ports
 
@@ -1554,442 +1557,908 @@ disk-space，Ports 和磁盘空间
 
 安装，安装 Ports
 
-Ports Collection，配置 Linux® 二进制兼容模式
+`Ports Collection`，配置 Linux® 二进制兼容模式
 
-Portsnap (见 Updating and Upgrading)
+`Portsnap` (见 Updating and Upgrading)
 
-portupgrade，使用 Portupgrade 来更新 Ports
+`portupgrade`，使用 Portupgrade 来更新 Ports
 
-POSIX，pax，本地化设置
+`POSIX`，pax，本地化设置
 
-PostScript，端口和连接电缆，检测打印机的通讯
 
-emulating，模拟 PostScript® 在非 PostScript® 打印机上
 
-查看器，gv
+# PostScript、端口和连接电缆
 
-PPP，概述，前提条件，疑难解答，ISDN 终端适配器
+- **检测打印机的通讯**：与打印机的通讯检测相关，涉及端口和连接电缆。
 
-client，使用 pppd 作为客户端
+# emulating
 
-configuration，最后的系统配置
+模拟 `PostScript®` 在非 `PostScript®` 打印机上。
 
-configuration (配置)，PPP 自动化配置
+# 查看器
 
-kernel PPP，设立内核级 PPP
+`gv`
 
-Microsoft extensions，MS Extensions
+# PPP
 
-NAT，使用 PPP 网络地址翻译
+## 概述
 
-over ATM，使用 ATM 上的 PPP (PPPoA)
+PPP 协议概述。
 
-over Ethernet，使用基于以太网的 PPP(PPPoE)
+## 前提条件
 
-PPPoE，概述
+PPP 连接的前提条件。
 
-receiving incoming calls，接收拨入
+## 疑难解答
 
-server，设立内核级 PPP
+PPP 连接问题的疑难解答。
 
-troubleshooting，PPP 连接故障排除
+## ISDN 终端适配器
 
-user PPP，PPP 和静态 IP 地址
+与 ISDN 终端适配器相关的 PPP 配置。
 
-with dynamic IP addresses，PPP 和动态 IP 地址
+## client
 
-with static IP addresses，PPP 和静态 IP 地址
+使用 `pppd` 作为客户端。
 
-内核级 PPP，概述
+## configuration
 
-用户级 PPP，概述
+最后的系统配置。
 
-PPP shells，动态 IP 用户的 PPP Shell，静态 IP 用户的 Shell
+## configuration (配置)
 
-PPPoA (见 基于 ATM 的 PPP)
+PPP 自动化配置。
 
-PPPoE (见 PPP, over Ethernet (以太网上的 PPP))
+## kernel PPP
 
-print jobs，介绍，建立后台打印队列目录，在 PostScript® 打印机上打印纯文本任务，控制提交的任务大小，检查任务
+设立内核级 PPP。
 
-controlling，控制提交的任务大小
+## Microsoft extensions
 
-printer spool，建立后台打印队列目录
+`MS Extensions`。
 
-printers
+## NAT
 
-capabilities，启用后台打印： 文件 /etc/printcap
+使用 PPP 网络地址翻译。
 
-network，网络打印，安装在远程主机上的打印机
+## over ATM
 
-parallel，端口和连接电缆，检测并口打印机
+使用 ATM 上的 PPP (`PPPoA`)。
 
-restricting access to，限制打印机的使用
+## over Ethernet
 
-serial，端口和连接电缆，检测串口打印机，配置后台打印通讯参数，在 PostScript® 打印机上打印纯文本任务
+使用基于以太网的 PPP (`PPPoE`)。
 
-usage，使用打印机
+## PPPoE
 
-USB，端口和连接电缆
+概述。
 
-printing，概述，打印任务
+## receiving incoming calls
 
-filters，安装文本过滤器，过滤器，过滤器是怎样工作的
+接收拨入。
 
-apsfilter，自动转换： 一种替代转换过滤器的方法
+## server
 
-header pages，不打印报头页
+设立内核级 PPP。
 
-procmail，使用 procmail
+## troubleshooting
 
-pw，管理员级设置
+PPP 连接故障排除。
 
-pw 命令，pw 命令
+## user PPP
 
-Python，Django
+PPP 和静态 IP 地址。
+
+## with dynamic IP addresses
+
+PPP 和动态 IP 地址。
+
+## with static IP addresses
+
+PPP 和静态 IP 地址。
+
+# 内核级 PPP
+
+概述。
+
+# 用户级 PPP
+
+概述。
+
+# PPP shells
+
+动态 IP 用户的 PPP Shell，静态 IP 用户的 Shell。
+
+# PPPoA
+
+(见 基于 ATM 的 PPP)
+
+# PPPoE
+
+(见 PPP, over Ethernet (以太网上的 PPP))
+
+# print jobs
+
+## 介绍
+
+打印任务介绍。
+
+## 建立后台打印队列目录
+
+创建后台打印队列目录。
+
+## 在 PostScript® 打印机上打印纯文本任务
+
+在 `PostScript®` 打印机上打印纯文本任务。
+
+## 控制提交的任务大小
+
+控制打印任务的大小。
+
+## 检查任务
+
+检查打印任务。
+
+## controlling
+
+控制提交的任务大小。
+
+## printer spool
+
+建立后台打印队列目录。
+
+# printers
+
+## capabilities
+
+启用后台打印： 文件 `/etc/printcap`。
+
+## network
+
+网络打印，安装在远程主机上的打印机。
+
+## parallel
+
+端口和连接电缆，检测并口打印机。
+
+## restricting access to
+
+限制打印机的使用。
+
+## serial
+
+端口和连接电缆，检测串口打印机，配置后台打印通讯参数，在 `PostScript®` 打印机上打印纯文本任务。
+
+## usage
+
+使用打印机。
+
+## USB
+
+端口和连接电缆。
+
+# printing
+
+## 概述
+
+打印概述。
+
+## 打印任务
+
+打印任务相关。
+
+# filters
+
+## 安装文本过滤器
+
+安装文本过滤器。
+
+## 过滤器
+
+过滤器相关。
+
+## 过滤器是怎样工作的
+
+过滤器的工作机制。
+
+## apsfilter
+
+自动转换： 一种替代转换过滤器的方法。
+
+## header pages
+
+不打印报头页。
+
+# procmail
+
+使用 `procmail`。
+
+# pw
+
+管理员级设置。
+
+# pw 命令
+
+`pw` 命令。
+
+# Python
+
+`Django`。
 
 ### R
 
-RAID，访问瓶颈
+# RAID
 
-CCD，连接磁盘驱动器配置 (CCD)
+## 访问瓶颈
 
-hardware，硬件 RAID
+RAID 的访问瓶颈问题。
 
-software，连接磁盘驱动器配置 (CCD) ， Vinum 卷管理，磁盘容量太小
+## CCD
 
-Vinum， Vinum 卷管理
+连接磁盘驱动器配置 (`CCD`)。
 
-RAID-1，数据的完整性
+## hardware
 
-RAID-5，数据的完整性
+硬件 RAID。
 
-RAID3，RAID3 - 使用专用校验设备的字节级条带
+## software
 
-Rambler，谁在使用 FreeBSD?
+连接磁盘驱动器配置 (`CCD`)，Vinum 卷管理，磁盘容量太小。
 
-rc files
+## Vinum
 
-rc.serial，串口配置，/etc/rc.d/serial
+Vinum 卷管理。
 
-rc 文件，资源配置 (rc)
+# RAID-1
 
-rc.conf，核心配置
+数据的完整性。
 
-rebuilding world
+# RAID-5
 
-timings，耗时
+数据的完整性。
 
-resolv.conf，/etc/resolv.conf
+# RAID3
 
-resolver (解析器)，术语
+`RAID3` - 使用专用校验设备的字节级条带。
 
-restore，Dump 和 Restore
+# Rambler
 
-reverse DNS (反向 DNS)，术语
+谁在使用 `FreeBSD`?
 
-RFCOMM，RFCOMM 协议
+# rc files
 
-RIP，建立路由器
+## rc.serial
 
-rlogind，确保以 root 用户权限运行的服务器和 suid/sgid 可执行程序的安全
+串口配置，`/etc/rc.d/serial`。
 
-rmuser，删除用户
+## rc 文件
 
-root partition，出现灾难后
+资源配置 (`rc`)。
 
-root zone (根域)，术语
+## rc.conf
 
-roundrobin (轮转)，链路聚合与故障转移
+核心配置。
 
-routed，最后的系统配置
+# rebuilding world
 
-rpcbind，NFS 是如何工作的，您应该知道的术语和进程
+## timings
 
-RS-232C cables，术语，标准 RS-232C 线缆
+耗时。
 
-rshd，确保以 root 用户权限运行的服务器和 suid/sgid 可执行程序的安全
+# resolv.conf
 
-Ruby on Rails，Ruby on Rails
+`/etc/resolv.conf`。
+
+# resolver (解析器)
+
+术语。
+
+# restore
+
+`Dump` 和 `Restore`。
+
+# reverse DNS (反向 DNS)
+
+术语。
+
+# RFCOMM
+
+`RFCOMM` 协议。
+
+# RIP
+
+建立路由器。
+
+# rlogind
+
+确保以 `root` 用户权限运行的服务器和 `suid/sgid` 可执行程序的安全。
+
+# rmuser
+
+删除用户。
+
+# root partition
+
+出现灾难后。
+
+# root zone (根域)
+
+术语。
+
+# roundrobin (轮转)
+
+链路聚合与故障转移。
+
+# routed
+
+最后的系统配置。
+
+# rpcbind
+
+`NFS` 是如何工作的，您应该知道的术语和进程。
+
+# RS-232C cables
+
+术语，标准 `RS-232C` 线缆。
+
+# rshd
+
+确保以 `root` 用户权限运行的服务器和 `suid/sgid` 可执行程序的安全。
+
+# Ruby on Rails
+
+`Ruby on Rails`。
 
 ### S
 
-Samba 服务器，为 Microsoft® Windows® 客户机提供文件和打印服务 (Samba)
+# Samba 服务器
 
-sandboxes，确保以 root 用户权限运行的服务器和 suid/sgid 可执行程序的安全
+为 `Microsoft® Windows®` 客户机提供文件和打印服务 (`Samba`)。
 
-sbsize，限制用户使用系统资源
+# sandboxes
 
-scp，安全复制
+确保以 `root` 用户权限运行的服务器和 `suid/sgid` 可执行程序的安全。
 
-screenmap，控制台设置
+# sbsize
 
-SCSI，BIOS 磁盘编号
+限制用户使用系统资源。
 
-SDL，测定视频的性能
+# scp
 
-SDP，服务发现协议 (SDP)
+安全复制。
 
-security，安全
+# screenmap
 
-后门，介绍
+控制台设置。
 
-确保 FreeBSD 的安全，确保 FreeBSD 的安全
+# SCSI
 
-窃取用户帐户，介绍
+`BIOS` 磁盘编号。
 
-sendmail，确保以 root 用户权限运行的服务器和 suid/sgid 可执行程序的安全，最后的系统配置，sendmail 配置
+# SDL
 
-serial console，在一个没有显示器或键盘的系统上安装 FreeBSD，设置串口控制台
+测定视频的性能。
 
-serial port，检测串口打印机
+# SDP
 
-shared libraries，手动安装额外的库
+服务发现协议 (`SDP`)。
 
-shells，Shells
+# security
 
-shutdown，关机 (shutdown) 过程
+## 安全
 
-single-user mode，Loader 示例
+安全相关。
 
-skeleton directory，添加用户
+## 后门
 
-slices，磁盘组织，添加磁盘
+介绍。
 
-SLIP，概述，使用 SLIP，内核配置，配置 slip.hosts
+## 确保 FreeBSD 的安全
 
-client (客户端)，设置 SLIP 客户端
+确保 `FreeBSD` 的安全。
 
-connecting with，创建一个 SLIP 连接
+## 窃取用户帐户
 
-routing，路由考虑
+介绍。
 
-server，设置 SLIP 服务器
+# sendmail
 
-SMTP，最后的系统配置，基本配置
+确保以 `root` 用户权限运行的服务器和 `suid/sgid` 可执行程序的安全，最后的系统配置，`sendmail` 配置。
 
-Soft Updates，Soft Updates
+# serial console
 
-详细资料，Soft Updates 的详细资料
+在一个没有显示器或键盘的系统上安装 `FreeBSD`，设置串口控制台。
 
-Solaris，高级主题，它是什么？
+# serial port
 
-Sony Japan，谁在使用 FreeBSD?
+检测串口打印机。
 
-spreadsheet
+# shared libraries
 
-Abacus，Abacus
+手动安装额外的库。
 
-KMyMoney，KMyMoney
+# shells
 
-SQL 数据库，安全配置
+Shells。
 
-SSH
+# shutdown
 
-sshd，启用 SSH 登录
+关机 (`shutdown`) 过程。
 
-ssh，Kerberos 和 SSH 的访问问题
+# single-user mode
 
-sshd，确保以 root 用户权限运行的服务器和 suid/sgid 可执行程序的安全
+`Loader` 示例。
 
-SSL，mod_ssl
+# skeleton directory
 
-stacksize，限制用户使用系统资源
+添加用户。
 
-static IP address (静态 IP 地址)，前提条件
+# slices
 
-static routes，静态路由
+磁盘组织，添加磁盘。
 
-su，确保 root 和维护人员帐户的安全 ，使用 sysinstall(8)
+# SLIP
 
-Subversion (见 SVN)
+## 概述
 
-SunOS，建立并安装一个定制的内核，选择 NIS 域名
+`SLIP` 协议概述。
 
-SVN
+## 使用 SLIP
 
-代码库，FreeBSD 开发模式
+使用 `SLIP`。
 
-swap (交换区)
+## 内核配置
 
-encrypting (加密)，对交换区进行加密
+`SLIP` 内核配置。
 
-symbolic links，手动安装额外的库
+## 配置 slip.hosts
 
-sysctl，sysctl.conf，用 sysctl 进行调整，确保内核中内核设备、直接访问设备和文件系统的安全
+配置 `slip.hosts`。
 
-sysctl.conf，sysctl.conf
+## client (客户端)
 
-sysinstall，控制台设置，FreeBSD 集成
+设置 `SLIP` 客户端。
 
-adding disks，使用 sysinstall(8)
+## connecting with
 
-syslog，维护
+创建一个 `SLIP` 连接。
 
-syslog.conf，syslog.conf
+## routing
 
-sysutils/cdrtools，介绍
+路由考虑。
+
+## server
+
+设置 `SLIP` 服务器。
+
+# SMTP
+
+最后的系统配置，基本配置。
+
+# Soft Updates
+
+`Soft Updates`。
+
+## 详细资料
+
+`Soft Updates` 的详细资料。
+
+# Solaris
+
+高级主题，它是什么？
+
+# Sony Japan
+
+谁在使用 `FreeBSD`?
+
+# spreadsheet
+
+## Abacus
+
+`Abacus`。
+
+## KMyMoney
+
+`KMyMoney`。
+
+# SQL 数据库
+
+安全配置。
+
+# SSH
+
+## sshd
+
+启用 `SSH` 登录。
+
+## ssh
+
+`Kerberos` 和 `SSH` 的访问问题。
+
+## sshd
+
+确保以 `root` 用户权限运行的服务器和 `suid/sgid` 可执行程序的安全。
+
+# SSL
+
+`mod_ssl`。
+
+# stacksize
+
+限制用户使用系统资源。
+
+# static IP address (静态 IP 地址)
+
+前提条件。
+
+# static routes
+
+静态路由。
+
+# su
+
+确保 `root` 和维护人员帐户的安全 ，使用 `sysinstall(8)`。
+
+# Subversion
+
+(见 SVN)
+
+# SunOS
+
+建立并安装一个定制的内核，选择 `NIS` 域名。
+
+# SVN
+
+## 代码库
+
+`FreeBSD` 开发模式。
+
+# swap (交换区)
+
+## encrypting (加密)
+
+对交换区进行加密。
+
+# symbolic links
+
+手动安装额外的库。
+
+# sysctl
+
+`sysctl.conf`，用 `sysctl` 进行调整，确保内核中内核设备、直接访问设备和文件系统的安全。
+
+# sysctl.conf
+
+`sysctl.conf`。
+
+# sysinstall
+
+控制台设置，`FreeBSD` 集成。
+
+## adding disks
+
+使用 `sysinstall(8)`。
+
+# syslog
+
+维护。
+
+# syslog.conf
+
+`syslog.conf`。
+
+# sysutils/cdrtools
+
+介绍。
 
 ### T
 
-tape media，用磁带机备份
+# tape media
 
-AIT，AIT
+用磁带机备份。
 
-DDS (4mm) tapes，4mm (DDS: Digital Data Storage)
+## AIT
 
-DLT，DLT
+`AIT`。
 
-Exabyte (8mm) tapes，8mm (Exabyte)
+## DDS (4mm) tapes
 
-QIC tapes，4mm (DDS: Digital Data Storage)
+`4mm (DDS: Digital Data Storage)`。
 
-QIC-150，QIC
+## DLT
 
-tar，可以压缩备份吗，tar
+`DLT`。
 
-TCP Wrappers，TCP Wrappers，NIS 的安全性
+## Exabyte (8mm) tapes
 
-TCP/IP networking，前提条件，配置 slip.hosts
+`8mm (Exabyte)`。
 
-TCP/IP 网络，FreeBSD 能做些什么？
+## QIC tapes
 
-TELEHOUSE America，谁在使用 FreeBSD?
+`4mm (DDS: Digital Data Storage)`。
 
-telnetd，确保以 root 用户权限运行的服务器和 suid/sgid 可执行程序的安全
+## QIC-150
 
-TeX，为什么要用后台打印，格式与转换选项
+`QIC`。
 
-printing DVI files，为什么安装转换过滤器?
+# tar
 
-TFTP
+可以压缩备份吗，`tar`。
 
-无盘操作，配置 TFTP 和 NFS 服务器
+# TCP Wrappers
 
-timeout，PPP 和静态 IP 地址
+`TCP Wrappers`，`NIS` 的安全性。
 
-traceroute，问题解答
+# TCP/IP networking
 
-troff，过滤器是怎样工作的
+前提条件，配置 `slip.hosts`。
 
-Tru64 UNIX，初始化 NIS 映射
+# TCP/IP 网络
 
-TrueType 字体，TrueType® 字体
+`FreeBSD` 能做些什么？
 
-ttyu，串口配置
+# TELEHOUSE America
 
-tunefs，Soft Updates
+谁在使用 `FreeBSD`?
+
+# telnetd
+
+确保以 `root` 用户权限运行的服务器和 `suid/sgid` 可执行程序的安全。
+
+# TeX
+
+为什么要用后台打印，格式与转换选项。
+
+## printing DVI files
+
+为什么安装转换过滤器?
+
+# TFTP
+
+## 无盘操作
+
+配置 `TFTP` 和 `NFS` 服务器。
+
+# timeout
+
+`PPP` 和静态 IP 地址。
+
+# traceroute
+
+问题解答。
+
+# troff
+
+过滤器是怎样工作的。
+
+# Tru64 UNIX
+
+初始化 `NIS` 映射。
+
+# TrueType 字体
+
+`TrueType®` 字体。
+
+# ttyu
+
+串口配置。
+
+# tunefs
+
+`Soft Updates`。
 
 ### U
 
-U.C. Berkeley，FreeBSD 能做些什么？，FreeBSD 的简要历史，FreeBSD 的简要历史，最新的 FreeBSD 发行版本
+# U.C. Berkeley
 
-UDP，它如何工作
+`FreeBSD` 能做些什么？，`FreeBSD` 的简要历史，`FreeBSD` 的简要历史，最新的 `FreeBSD` 发行版本。
 
-Unicode，内核和文件系统
+# UDP
 
-UNIX，权限，前提条件
+它如何工作。
 
-Updating and Upgrading，FreeBSD 更新，Portsnap： 一个 Ports Collection 更新工具，使用文档 Ports
+# Unicode
 
-USB
+内核和文件系统。
 
-disks，USB 存储设备
+# UNIX
 
-USENET，FreeBSD 能做些什么？
+权限，前提条件。
 
-UUCP，疑难解答
+# Updating and Upgrading
+
+`FreeBSD` 更新，`Portsnap`： 一个 `Ports Collection` 更新工具，使用文档 Ports。
+
+# USB
+
+## disks
+
+`USB` 存储设备。
+
+# USENET
+
+`FreeBSD` 能做些什么？
+
+# UUCP
+
+疑难解答。
 
 ### V
 
-vfs.hirunningspace，vfs.hirunningspace
+# vfs.hirunningspace
 
-vfs.vmiodirenable，vfs.vmiodirenable
+`vfs.hirunningspace`。
 
-vfs.write_behind，vfs.write_behind
+# vfs.vmiodirenable
 
-vi，文本编辑器
+`vfs.vmiodirenable`。
 
-Vinum，磁盘容量太小
+# vfs.write_behind
 
-串连，访问瓶颈
+`vfs.write_behind`。
 
-条带，访问瓶颈
+# vi
 
-镜像，数据的完整性
+文本编辑器。
 
-vipw，管理员级设置
+# Vinum
 
-virtual disks，网络、内存和 和以及映像文件为介质的虚拟文件系统
+## 串连
 
-vm.swap_idle_enabled，vm.swap_idle_enabled
+访问瓶颈。
 
-VPN，理解 IPsec
+## 条带
 
-创建，情景： 两个网络，一个家庭的网络和一个公司的网络。 都接入了 Internet，并且通过这条 VPN 就像在同一个网络一样。
+访问瓶颈。
+
+## 镜像
+
+数据的完整性。
+
+## 磁盘容量太小
+
+磁盘容量太小。
+
+# vipw
+
+管理员级设置。
+
+# virtual disks
+
+网络、内存和映像文件为介质的虚拟文件系统。
+
+# vm.swap_idle_enabled
+
+`vm.swap_idle_enabled`。
+
+# VPN
+
+## 理解 IPsec
+
+理解 `IPsec`。
+
+## 创建
+
+情景： 两个网络，一个家庭的网络和一个公司的网络。 都接入了 `Internet`，并且通过这条 `VPN` 就像在同一个网络一样。
 
 ### W
 
-Walnut Creek CDROM，FreeBSD 的简要历史
+# Walnut Creek CDROM
 
-Weathernews，谁在使用 FreeBSD?
+`FreeBSD` 的简要历史。
 
-web servers
+# Weathernews
 
-dynamic，动态网站
+谁在使用 `FreeBSD`?
 
-web 服务器，FreeBSD 能做些什么？
+# web servers
 
-安全，mod_ssl
+## dynamic
 
-配置，Apache HTTP 服务器
+动态网站。
 
-wheel，确保 root 和维护人员帐户的安全
+# web 服务器
 
-widescreen flatpanel configuration，添加宽屏平板显示器
+`FreeBSD` 能做些什么？
 
-Williams, Nate，FreeBSD 的简要历史
+## 安全
 
-Windows，生成一个一次性密码
+`mod_ssl`。
 
-Windows NT，它是什么？
+## 配置
 
-Windows 驱动程序，使用 Windows® NDIS 驱动程序
+`Apache HTTP` 服务器。
 
-wireless networking (无线网络)，无线网络
+# wheel
+
+确保 `root` 和维护人员帐户的安全。
+
+# widescreen flatpanel configuration
+
+添加宽屏平板显示器。
+
+# Williams, Nate
+
+`FreeBSD` 的简要历史。
+
+# Windows
+
+生成一个一次性密码。
+
+# Windows NT
+
+它是什么？
+
+# Windows 驱动程序
+
+使用 `Windows® NDIS` 驱动程序。
+
+# wireless networking (无线网络)
+
+无线网络。
 
 ### X
 
-X Display Manager，概要
+# X Display Manager
 
-X Window 系统，FreeBSD 能做些什么？，FreeBSD 能做些什么？
+概要。
 
-Accelerated-X，FreeBSD 能做些什么？
+# X Window 系统
 
-X11，配置 X11
+`FreeBSD` 能做些什么？，`FreeBSD` 能做些什么？
 
-X11 True Type 字体服务器，显示字体
+## Accelerated-X
 
-X11 tuning，配置 X11
+`FreeBSD` 能做些什么？
 
-X11 输入方法(XIM)，输入非英语字符
+# X11
 
-XML，Anti-Aliased 字体
+配置 `X11`。
 
-Xorg，配置 X11
+# X11 True Type 字体服务器
 
-xorg.conf，配置 X11
+显示字体。
 
-Xpdf，Xpdf
+# X11 tuning
 
-XVideo，测定视频的性能
+配置 `X11`。
+
+# X11 输入方法(XIM)
+
+输入非英语字符。
+
+# XML
+
+`Anti-Aliased` 字体。
+
+# Xorg
+
+配置 `X11`。
+
+# xorg.conf
+
+配置 `X11`。
+
+# Xpdf
+
+`Xpdf`。
+
+# XVideo
+
+测定视频的性能。
 
 ### Y
 
-Yahoo!，谁在使用 FreeBSD?
+# Yahoo!
 
-Yandex，谁在使用 FreeBSD?
+谁在使用 `FreeBSD`?
+
+# Yandex
+
+谁在使用 `FreeBSD`?
 
 ### Z
 
-zip drive，配置文件
+# zip drive
+
+配置文件。

@@ -1,3 +1,4 @@
+
 # 如何在 CentOS 8 上安装 LEMP——安装 Linux、Nginx、MySQL、PHP
 
 > 原文：<https://blog.eldernode.com/install-lemp-on-centos-8/>
@@ -23,13 +24,13 @@ sudo dnf install nginx
 要启用并启动服务器，请在安装完成后运行以下命令。
 
 ```
-sudo systemctl start nginx 
+sudo systemctl start nginx
 ```
 
 如果 firewalld 处于活动状态，运行以下命令以允许外部访问端口 80 (HTTP):
 
 ```
-sudo firewall-cmd --permanent --add-service=http 
+sudo firewall-cmd --permanent --add-service=http
 ```
 
 要使更改生效，请重新加载防火墙配置
@@ -76,16 +77,16 @@ sudo mysql_secure_installation
 sudo dnf install php-fpm php-mysqlnd
 ```
 
-完成安装后，您应该编辑 /etc/php-fpm.d/www.conf 文件来调整一些设置。为了方便编辑这些文件，你需要安装 nano 。
+完成安装后，您应该编辑`/etc/php-fpm.d/www.conf`文件来调整一些设置。为了方便编辑这些文件，你需要安装 nano 。
 
 ```
-sudo dnf install nano 
+sudo dnf install nano
 ```
 
-然后，使用 nano 或您选择的编辑器打开/etc/PHP-fpm . d/www . confc配置文件:
+然后，使用 nano 或您选择的编辑器打开配置文件:
 
 ```
-sudo nano /etc/php-fpm.d/www.conf 
+sudo nano /etc/php-fpm.d/www.conf
 ```
 
 确保将这两个值从 apache 更改为 Nginx:
@@ -116,21 +117,21 @@ sudo systemctl restart nginx
 sudo chown -R noodi.noodi /usr/share/nginx/html/
 ```
 
-在 /usr/share/nginx/html 目录下创建一个名为info.php的新 PHP 文件:
+在`/usr/share/nginx/html`目录下创建一个名为`info.php`的新 PHP 文件:
 
 ```
-nano /usr/share/nginx/html/info.php  
+nano /usr/share/nginx/html/info.php
 ```
 
 要查看服务器上运行的当前 PHP 环境的信息，请使用下面的 PHP 代码。
 
 ```
-<?php    phpinfo(); 
+<?php    phpinfo();
 ```
 
-将此内容复制到您的info.php文件中，并务必保存。
+将此内容复制到您的`info.php`文件中，并务必保存。
 
-要测试您的 web 服务器是否正确显示 PHP 脚本生成的内容，请使用您的浏览器并访问您的服务器主机名或 IP 地址，然后输入 /info.php :
+要测试您的 web 服务器是否正确显示 PHP 脚本生成的内容，请使用您的浏览器并访问您的服务器主机名或 IP 地址，然后输入`/info.php`:
 
 ```
 http://server_host_or_IP/info.php

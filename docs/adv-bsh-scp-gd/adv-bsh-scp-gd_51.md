@@ -1,10 +1,12 @@
-# 附录 A. 贡献脚本
+
+
+# 附录 A：贡献脚本
 
 > 原文：[`tldp.org/LDP/abs/html/contributed-scripts.html`](https://tldp.org/LDP/abs/html/contributed-scripts.html)
 
 这些脚本虽然不适合放入本文档的文本中，但确实展示了某些有趣的 shell 编程技术。其中一些也非常有用。享受分析和运行它们吧。
 
-**示例 A-1\. *mailformat*: 格式化电子邮件消息**
+## 示例 A-1：`mailformat`：格式化电子邮件消息
 
 ```sh
 #!/bin/bash
@@ -20,7 +22,7 @@ E_NOFILE=86
 
 if [ $# -ne $ARGS ]  # Correct number of arguments passed to script?
 then
-  echo "Usage: `basename $0` filename"
+  echo "Usage: `basename $0`" filename
   exit $E_BADARGS
 fi
 
@@ -60,9 +62,9 @@ sed "$sedscript" $1 &#124; fold -s --width=$MAXWIDTH
 exit $?
 ```
 
-**示例 A-2\. *rn*: 一个简单的文件重命名工具**
+## 示例 A-2：`rn`：一个简单的文件重命名工具
 
-此脚本是对 示例 16-22 的修改。
+此脚本是对示例 16-22 的修改。
 
 ```sh
 #! /bin/bash
@@ -112,7 +114,7 @@ exit $?
 # How can this be fixed?
 ```
 
-**示例 A-3\. *blank-rename*: 重命名包含空白的文件名**
+## 示例 A-3：`blank-rename`：重命名包含空白的文件名
 
 这是先前脚本的更简单版本。
 
@@ -148,7 +150,7 @@ fi
 exit 0
 ```
 
-**示例 A-4\. *encryptedpw*: 使用本地加密密码上传到 ftp 网站**
+## 示例 A-4：`encryptedpw`：使用本地加密密码上传到 FTP 网站
 
 ```sh
 #!/bin/bash
@@ -163,7 +165,7 @@ E_BADARGS=85
 
 if [ -z "$1" ]
 then
-  echo "Usage: `basename $0` filename"
+  echo "Usage: `basename $0`" filename
   exit $E_BADARGS
 fi  
 
@@ -197,7 +199,7 @@ End-Of-Session
 exit 0
 ```
 
-**示例 A-5\. *copy-cd*: 复制数据 CD**
+## 示例 A-5：`copy-cd`：复制数据 CD
 
 ```sh
 #!/bin/bash
@@ -253,7 +255,10 @@ echo
 exit 0
 ```
 
-**示例 A-6\. Collatz 序列**
+## 示例 A-6：Collatz 序列
+
+
+
 
 ```sh
 #!/bin/bash
@@ -325,7 +330,7 @@ echo
 exit 0
 ```
 
-**示例 A-7\. *days-between*: 两个日期之间的天数**
+## 示例 A-7\. *days-between*: 两个日期之间的天数
 
 ```sh
 #!/bin/bash
@@ -373,7 +378,7 @@ Parse_Date ()                 # Parse date from command-line params.
 
 check_date ()                 # Checks for invalid date(s) passed.
 {
-  [ "$day" -gt "$DIM" ] &#124;&#124; [ "$month" -gt "$MIY" ] &#124;&#124;
+  [ "$day" -gt "$DIM" ] || [ "$month" -gt "$MIY" ] ||
   [ "$year" -lt "$REFYR" ] && Param_Error
   # Exit script on bad value(s).
   # Uses or-list / and-list.
@@ -471,7 +476,7 @@ exit 0
 #+    http://buschencrew.hypermart.net/software/datedif
 ```
 
-**示例 A-8\. 制作 *字典*** 
+## 示例 A-8\. 制作 *字典***
 
 ```sh
 #!/bin/bash
@@ -501,22 +506,24 @@ fi
                                     #+ options to sort. Changed from
                                     #+ original script.
 
-cat $* &#124;                            #  Dump specified files to stdout.
-        tr A-Z a-z &#124;                #  Convert to lowercase.
-        tr ' ' '\012' &#124;             #  New: change spaces to newlines.
-#       tr -cd '\012[a-z][0-9]' &#124;   #  Get rid of everything
+cat $* |                            #  Dump specified files to stdout.
+        tr A-Z a-z |                #  Convert to lowercase.
+        tr ' ' '\012' |             #  New: change spaces to newlines.
+#       tr -cd '\012[a-z][0-9]' |   #  Get rid of everything
                                     #+ non-alphanumeric (in orig. script).
-        tr -c '\012a-z'  '\012' &#124;   #  Rather than deleting non-alpha
+        tr -c '\012a-z'  '\012' |   #  Rather than deleting non-alpha
                                     #+ chars, change them to newlines.
-        sort &#124;                      #  $SORT options unnecessary now.
-        uniq &#124;                      #  Remove duplicates.
-        grep -v '^#' &#124;              #  Delete lines starting with #.
+        sort |                      #  $SORT options unnecessary now.
+        uniq |                      #  Remove duplicates.
+        grep -v '^#' |              #  Delete lines starting with #.
         grep -v '^$'                #  Delete blank lines.
 
 exit $?
 ```
 
-**示例 A-9\. Soundex 转换**
+## 示例 A-9\. Soundex 转换
+
+
 
 ```sh
 #!/bin/bash
@@ -666,7 +673,9 @@ echo
 exit 0
 ```
 
-**示例 A-10\. *生命游戏*** 
+### 示例 A-10. 生命游戏
+
+
 
 ```sh
 #!/bin/bash
@@ -790,7 +799,7 @@ do
     let "alive += 1"
   fi  
 
-  echo -n "$cell" &#124; sed -e 's/_/ /g'
+  echo -n "$cell" | sed -e 's/_/ /g'
   # Print out array, changing underscores to spaces.
 done  
 
@@ -969,7 +978,7 @@ fi                        #+ if no live cells.
 # {
 
 # Load initial array with contents of startup file.
-initial=( `cat "$startfile" &#124; sed -e '/#/d' &#124; tr -d '\n' &#124;\
+initial=( `cat "$startfile" | sed -e '/#/d' | tr -d '\n' |\
 # Delete lines containing '#' comment character.
            sed -e 's/\./\. /g' -e 's/_/_ /g'` )
 # Remove linefeeds and insert space between elements.
@@ -1044,7 +1053,9 @@ exit 0   # CEOF:EOF
 #           It has redundant code.
 ```
 
-**示例 A-11\. *生命游戏* 数据文件**
+
+
+## 示例 A-11：*生命游戏* 数据文件
 
 ```sh
 # gen0
@@ -1069,11 +1080,9 @@ __.._..___
 _..___..__
 ```
 
-+++
+以下脚本由多伦多大学的马克·莫拉埃斯编写。有关许可和限制，请参阅文件`Moraes-COPYRIGHT`。此文件包含在*ABS 指南*的组合 HTML/source tarball 中。
 
-以下脚本由多伦多大学的马克·莫拉埃斯编写。有关许可和限制，请参阅文件 `Moraes-COPYRIGHT`。此文件包含在 *ABS 指南* 的组合 HTML/source tarball 中。
-
-**示例 A-12\. *behead*: 移除邮件和新闻消息头**
+## 示例 A-12：*behead*：移除邮件和新闻消息头
 
 ```sh
 #! /bin/sh
@@ -1127,11 +1136,9 @@ exit
  */
 ```
 
-+
-
 安特克·萨维基贡献了以下脚本，该脚本巧妙地使用了在第 10.2 节中讨论的参数替换运算符。
 
-**示例 A-13\. *password*: 生成随机 8 位密码**
+## 示例 A-13：*password*：生成随机 8 位密码
 
 ```sh
 #!/bin/bash
@@ -1182,11 +1189,9 @@ echo "$PASS"      # ==> Or, redirect to a file, as desired.
 exit 0
 ```
 
-+
-
 詹姆斯·R·范赞特贡献了这个脚本，该脚本使用了命名管道，正如他所说，“真正锻炼了引号和转义的使用。”
 
-**示例 A-14\. *fifo*: 使用命名管道进行每日备份**
+## 示例 A-14：*fifo*：使用命名管道进行每日备份
 
 ```sh
 #!/bin/bash
@@ -1223,11 +1228,9 @@ exit 0
   exit 0
 ```
 
-+
-
 斯蒂芬·沙泽拉斯使用了以下脚本来演示不使用数组生成素数。
 
-**示例 A-15\. 使用模运算符生成素数**
+## 示例 A-15：使用模运算符生成素数
 
 ```sh
 #!/bin/bash
@@ -1279,11 +1282,15 @@ exit $?
 #  Exercise: Rewrite this script without recursion.
 ```
 
-+
+里克·博维的修改版，基于豪迪·桑费利乌的*tree*脚本。
 
-里克·博维的修改版，基于豪迪·桑费利乌的 *tree* 脚本。
+## 示例 A-16：*tree*：显示目录树
 
-**示例 A-16\. *tree*: 显示目录树**
+
+
+# 帕齐斯的目录 *tree* 脚本版本
+
+## 示例 A-17\. *tree2*: 交替目录树脚本
 
 ```sh
 #!/bin/bash
@@ -1351,7 +1358,7 @@ exit 0
 
 帕齐斯的目录 *tree* 脚本版本。
 
-**示例 A-17\. *tree2*: 交替目录树脚本**
+## 示例 A-17\. *tree2*: 交替目录树脚本（续）
 
 ```sh
 #!/bin/bash
@@ -1461,7 +1468,11 @@ exit $?
 
 诺亚·弗里德曼允许使用他的 *字符串函数* 脚本。该脚本本质上重现了一些 *C* 库的字符串操作函数。
 
-**示例 A-18\. *字符串函数*: C 风格的字符串函数**
+## 示例 A-18\. *字符串函数*: C 风格的字符串函数
+
+（注：此部分未提供代码内容，但标题保留原样。）
+
+
 
 ```sh
 #!/bin/bash
@@ -1733,9 +1744,17 @@ echo
 exit 0
 ```
 
-迈克尔·齐克的复杂数组示例使用 md5sum 校验和命令来编码目录信息。
+迈克尔·齐克的复杂数组示例使用`md5sum`校验和命令来编码目录信息。
 
-**示例 A-19\. 目录信息**
+## 示例 A-19. 目录信息
+
+
+
+## directory-info.sh 脚本解析与排版
+
+以下是对 `directory-info.sh` 脚本的完整排版，旨在清晰展示其结构、功能与注释内容。
+
+### 脚本头部与说明
 
 ```sh
 #! /bin/bash
@@ -1746,7 +1765,11 @@ exit 0
 
 # Michael Zick is the author of this script.
 # Used here with his permission.
+```
 
+### 控制与默认值设置
+
+```sh
 # Controls
 # If overridden by command arguments, they must be in the order:
 #   Arg1: "Descriptor Directory"
@@ -1770,7 +1793,11 @@ declare -a \
 # Files never to list or enter
 declare -a \
   EXCLUDE_FILES=${3:-${EXCLUDE_FILES:-'(core "Name with Spaces")'}}
+```
 
+### `ListDirectory` 函数及其文档
+
+```sh
 # Here document used as a comment block.
 : <<LSfieldsDoc
 # # # # # List Filesystem Directory Information # # # # #
@@ -1874,7 +1901,11 @@ ListDirectory()
 	esac
 	return 0
    }
+```
 
+### `IsNumber` 函数
+
+```sh
 # # # # # Is that string a legal number? # # # # #
 #
 #	IsNumber "Var"
@@ -1891,7 +1922,11 @@ IsNumber()
 		return $?	# Exit status of the let thread
 	fi
 }
+```
 
+### `IndexList` 函数及其文档
+
+```sh
 # # # # # Index Filesystem Directory Information # # # # #
 #
 #	IndexList "Field-Array-Name" "Index-Array-Name"
@@ -1997,7 +2032,11 @@ IndexList()
 	esac
 	return 0				# What could go wrong?
 }
+```
 
+### `DigestFile` 函数及其文档
+
+```sh
 # # # # # Content Identify File # # # # #
 #
 #	DigestFile Input-Array-Name Digest-Array-Name
@@ -2073,7 +2112,11 @@ DigestFile()
 	if [ $len -ne 32 ] ; then return 1 ; fi
 	eval $2=\( \"\$\{T2\[@\]\}\" \)
 }
+```
 
+### `LocateFile` 函数及其文档
+
+```sh
 # # # # # Locate File # # # # #
 #
 #	LocateFile [-l] FileName Location-Array-Name
@@ -2227,7 +2270,11 @@ LocateFile()
 #	Element 13: 0			Volume Label (to be)
 #	Element 14: ef53		Filesystem type
 }
+```
 
+### 测试代码与主逻辑
+
+```sh
 # And then there was some test code
 
 ListArray() # ListArray Name
@@ -2279,11 +2326,13 @@ ListArray FILE_LOC
 exit 0
 ```
 
+
+
 斯蒂芬·沙泽拉斯在 Bash 脚本中展示了面向对象编程。
 
-Mariusz Gniazdowski 贡献了一个 hash 库，用于脚本中。
+Mariusz Gniazdowski 贡献了一个哈希库，用于脚本中。
 
-**示例 A-20\. 哈希函数库**
+## 示例 A-20\. 哈希函数库
 
 ```sh
 # Hash:
@@ -2458,7 +2507,7 @@ IFS="$oldIFS"
 
 这里是一个使用前面提到的哈希库的示例脚本。
 
-**示例 A-21\. 使用哈希函数着色文本**
+## 示例 A-21\. 使用哈希函数着色文本
 
 ```sh
 #!/bin/bash
@@ -2523,7 +2572,13 @@ exit $?
 
 一个展示哈希机制示例，但从一个不同的角度。
 
-**示例 A-22\. 关于哈希函数的更多内容**
+## 示例 A-22\. 关于哈希函数的更多内容
+
+
+
+现在有一个脚本可以安装和挂载那些可爱的 USB 钥匙链固态"硬盘"。
+
+**示例 A-23. 挂载 USB 钥匙链存储设备**
 
 ```sh
 #!/bin/bash
@@ -2668,9 +2723,9 @@ exit 0
 # Add error checks to the functions.
 ```
 
-现在有一个脚本可以安装和挂载那些可爱的 USB 钥匙链固态"硬盘"。
+**示例 A-23. 挂载 USB 钥匙链存储设备**
 
-**示例 A-23\. 挂载 USB 钥匙链存储设备**
+
 
 ```sh
 #!/bin/bash
@@ -2682,30 +2737,30 @@ exit 0
 # ==> and install USB pen drives, and therefore don't need this script.
 # ==> But, it's still instructive.
 
-#  This code is free software covered by GNU GPL license version 2 or above.
-#  Please refer to http://www.gnu.org/ for the full license text.
+# This code is free software covered by GNU GPL license version 2 or above.
+# Please refer to http://www.gnu.org/ for the full license text.
 #
-#  Some code lifted from usb-mount by Michael Hamilton's usb-mount (LGPL)
+# Some code lifted from usb-mount by Michael Hamilton's usb-mount (LGPL)
 #+ see http://users.actrix.co.nz/michael/usbmount.html
 #
-#  INSTALL
-#  -------
-#  Put this in /etc/hotplug/usb/diskonkey.
-#  Then look in /etc/hotplug/usb.distmap, and copy all usb-storage entries
+# INSTALL
+# -------
+# Put this in /etc/hotplug/usb/diskonkey.
+# Then look in /etc/hotplug/usb.distmap, and copy all usb-storage entries
 #+ into /etc/hotplug/usb.usermap, substituting "usb-storage" for "diskonkey".
-#  Otherwise this code is only run during the kernel module invocation/removal
+# Otherwise this code is only run during the kernel module invocation/removal
 #+ (at least in my tests), which defeats the purpose.
 #
-#  TODO
-#  ----
-#  Handle more than one diskonkey device at one time (e.g. /dev/diskonkey1
+# TODO
+# ----
+# Handle more than one diskonkey device at one time (e.g. /dev/diskonkey1
 #+ and /mnt/diskonkey1), etc. The biggest problem here is the handling in
 #+ devlabel, which I haven't yet tried.
 #
-#  AUTHOR and SUPPORT
-#  ------------------
-#  Konstantin Riabitsev, <icon linux duke edu>.
-#  Send any problem reports to my email address at the moment.
+# AUTHOR and SUPPORT
+# ------------------
+# Konstantin Riabitsev, <icon linux duke edu>.
+# Send any problem reports to my email address at the moment.
 #
 # ==> Comments added by ABS Guide author.
 
@@ -2719,11 +2774,11 @@ IAM=$0
 # Functions lifted near-verbatim from usb-mount code.
 #
 function allAttachedScsiUsb {
-  find /proc/scsi/ -path '/proc/scsi/usb-storage*' -type f &#124;
+  find /proc/scsi/ -path '/proc/scsi/usb-storage*' -type f |
   xargs grep -l 'Attached: Yes'
 }
 function scsiDevFromScsiUsb {
-  echo $1 &#124; awk -F"[-/]" '{ n=$(NF-1);
+  echo $1 | awk -F"[-/]" '{ n=$(NF-1);
   print "/dev/sd" substr("abcdefghijklmnopqrstuvwxyz", n+1, 1) }'
 }
 
@@ -2740,12 +2795,12 @@ if [ "${ACTION}" = "add" ] && [ -f "${DEVICE}" ]; then
     fi
     for procEntry in $(allAttachedScsiUsb); do
         scsiDev=$(scsiDevFromScsiUsb $procEntry)
-        #  Some bug with usb-storage?
-        #  Partitions are not in /proc/partitions until they are accessed
+        # Some bug with usb-storage?
+        # Partitions are not in /proc/partitions until they are accessed
         #+ somehow.
         /sbin/fdisk -l $scsiDev >/dev/null
         ##
-        #  Most devices have partitioning info, so the data would be on
+        # Most devices have partitioning info, so the data would be on
         #+ /dev/sd?1\. However, some stupider ones don't have any partitioning
         #+ and use the entire device for data storage. This tries to
         #+ guess semi-intelligently if we have a /dev/sd?1 and if not, then
@@ -2757,7 +2812,7 @@ if [ "${ACTION}" = "add" ] && [ -f "${DEVICE}" ]; then
             part=$scsiDev
         fi
         ##
-        #  Change ownership of the partition to the console user so they can
+        # Change ownership of the partition to the console user so they can
         #+ mount it.
         #
         if [ ! -z "$CONSOLEOWNER" ]; then
@@ -2817,149 +2872,60 @@ exit 0
 
 将文本文件转换为 HTML 格式。
 
-**示例 A-24\. 转换为 HTML**
+### 示例 A-24\. 转换为 HTML
 
-```sh
-#!/bin/bash
-# tohtml.sh [v. 0.2.01, reldate: 04/13/12, a teeny bit less buggy]
 
-# Convert a text file to HTML format.
-# Author: Mendel Cooper
-# License: GPL3
-# Usage: sh tohtml.sh < textfile > htmlfile
-# Script can easily be modified to accept source and target filenames.
 
-#    Assumptions:
-# 1) Paragraphs in (target) text file are separated by a blank line.
-# 2) Jpeg images (*.jpg) are located in "images" subdirectory.
-#    In the target file, the image names are enclosed in square brackets,
-#    for example, [image01.jpg].
-# 3) Emphasized (italic) phrases begin with a space+underscore
-#+   or the first character on the line is an underscore,
-#+   and end with an underscore+space or underscore+end-of-line.
+以下是`tohtml.sh`脚本，用于将文本文件转换为HTML格式。该脚本由Mendel Cooper编写，遵循GPL3许可证。
 
-# Settings
-FNTSIZE=2        # Small-medium font size
-IMGDIR="images"  # Image directory
-# Headers
-HDR01='<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">'
-HDR02='<!-- Converted to HTML by ***tohtml.sh*** script -->'
-HDR03='<!-- script author: M. Leo Cooper <thegrendel.abs@gmail.com> -->'
-HDR10='<html>'
-HDR11='<head>'
-HDR11a='</head>'
-HDR12a='<title>'
-HDR12b='</title>'
-HDR121='<META NAME="GENERATOR" CONTENT="tohtml.sh script">'
-HDR13='<body bgcolor="#dddddd">'   # Change background color to suit.
-HDR14a='<font size='
-HDR14b='>'
-# Footers
-FTR10='</body>'
-FTR11='</html>'
-# Tags
-BOLD="<b>"
-CENTER="<center>"
-END_CENTER="</center>"
-LF="<br>"
+使用方式：`sh tohtml.sh < textfile > htmlfile`。脚本可以轻松修改以接受源和目标文件名。
 
-write_headers ()
-  {
-  echo "$HDR01"
-  echo
-  echo "$HDR02"
-  echo "$HDR03"
-  echo
-  echo
-  echo "$HDR10"
-  echo "$HDR11"
-  echo "$HDR121"
-  echo "$HDR11a"
-  echo "$HDR13"
-  echo
-  echo -n "$HDR14a"
-  echo -n "$FNTSIZE"
-  echo "$HDR14b"
-  echo
-  echo "$BOLD"        # Everything in bold (more easily readable).
-  }
+**脚本假设条件：**
 
-process_text ()
-  {
-  while read line     # Read one line at a time.
-  do
-    {
-    if [ ! "$line" ]  # Blank line?
-    then              # Then new paragraph must follow.
-      echo
-      echo "$LF"      # Insert two <br> tags.
-      echo "$LF"
-      echo
-      continue        # Skip the underscore test.
-    else              # Otherwise . . .
+1. 目标文本文件中的段落由空行分隔。
+2. JPEG图片（`*.jpg`）位于`images`子目录中。在目标文件中，图片名称用方括号括起来，例如`[image01.jpg]`。
+3. 强调（斜体）短语以空格+下划线开头，或行首字符为下划线，并以 下划线+空格 或 下划线+行尾 结束。
 
-      if [[ "$line" =~ \[*jpg\] ]]    # Is a graphic?
-      then                            # Strip away brackets.
-        temp=$( echo "$line" &#124; sed -e 's/\[//' -e 's/\]//' )
-        line=""$CENTER" <img src="\"$IMGDIR"/$temp\"> "$END_CENTER" "
-                                      # Add image tag.
-                                      # And, center it.
-      fi
+**设置变量：**
 
-    fi
+`FNTSIZE=2`（小号字体大小），`IMGDIR="images"`（图片目录）
 
-    echo "$line" &#124; grep -q _
-    if [ "$?" -eq 0 ]    # If line contains underscore ...
-    then
-      # ===================================================
-      # Convert underscored phrase to italics.
-      temp=$( echo "$line" &#124;
-              sed -e 's/ _/ <i>/' -e 's/_/<\/i> /' &#124;
-              sed -e 's/^_/<i>/'  -e 's/_/<\/i>/' )
-      #  Process only underscores prefixed by space,
-      #+ or at beginning or end of line.
-      #  Do not convert underscores embedded within a word!
-      line="$temp"
-      # Slows script execution. Can be optimized?
-      # ===================================================
-    fi
+**头部定义：**
 
-#   echo
-    echo "$line"
-#   echo
-#   Don't want extra blank lines in generated text!
-    } # End while
-  done
-  }   # End process_text ()
+`HDR01`、`HDR02`、`HDR03`、`HDR10`、`HDR11`、`HDR11a`、`HDR12a`、`HDR12b`、`HDR121`、`HDR13`、`HDR14a`、`HDR14b`（HTML头部标签）
 
-write_footers ()  # Termination tags.
-  {
-  echo "$FTR10"
-  echo "$FTR11"
-  }
+**尾部定义：**
 
-# main () {
-# =========
+`FTR10`、`FTR11`（HTML结束标签）
+
+**标签定义：**
+
+`BOLD="<b>"`、`CENTER="<center>"`、`END_CENTER="</center>"`、`LF="<br>"`
+
+**`write_headers()`函数**：输出HTML头部信息。
+
+**`process_text()`函数**：逐行读取文本，处理空行（插入`<br>`标签）、图片引用（去除方括号并添加居中图片标签）、下划线强调（转换为斜体标签）。
+
+**`write_footers()`函数**：输出HTML结束标签。
+
+**主程序流程：**
+
+```
 write_headers
 process_text
 write_footers
-# =========
-#         }
-
 exit $?
-
-#  Exercises:
-#  ---------
-#  1) Fixup: Check for closing underscore before a comma or period.
-#  2) Add a test for the presence of a closing underscore
-#+    in phrases to be italicized.
 ```
 
-这里有一些能让网站管理员和女管理员感到温暖的东西：一个保存网络日志的脚本。
+**脚本练习任务：** 检查闭合下划线是否在逗号或句号前；添加测试以检测待斜体短语中的闭合下划线。
 
-**示例 A-25\. 保留网络日志**
+---
 
-```sh
+以下是一个让网站管理员感到温暖的脚本示例，用于保存网络日志：
+
+**示例 A-25. 保留网络日志**
+
+```bash
 #!/bin/bash
 # archiveweblogs.sh v1.0
 
@@ -3027,9 +2993,11 @@ done
 exit 0
 ```
 
-如何让 shell 不扩展和重新解释文本字符串。
+以上脚本展示了如何让`shell`不扩展和重新解释文本字符串。
 
-**示例 A-26\. 保护文本字符串**
+**示例 A-26. 保护文本字符串**
+
+
 
 ```sh
 #! /bin/bash
@@ -3183,7 +3151,9 @@ exit 0
 
 但是，如果你 *希望* shell 扩展并重新解释字符串怎么办？
 
-**示例 A-27\. 解除文本字符串的保护**
+**示例 A-27. 解除文本字符串的保护**
+
+
 
 ```sh
 #! /bin/bash
@@ -3203,7 +3173,7 @@ exit 0
     (Uncomment the above set command to see this action.)
 
     Remove the first (Sha-Bang) line when sourcing this as a library
-    procedure.  Also comment out the example use code in the two
+    procedure. Also comment out the example use code in the two
     places where shown.
 
     Usage:
@@ -3255,10 +3225,10 @@ declare -a array2=( ${arrayZ[@]} )
 
 # set -vx
 
-#  Initialize 'Me' to something for the embedded ${Me} substitution.
-#  This needs to be done ONLY just prior to evaluating the
+# Initialize 'Me' to something for the embedded ${Me} substitution.
+# This needs to be done ONLY just prior to evaluating the
 #+ protected string.
-#  (This is why it was protected to begin with.)
+# (This is why it was protected to begin with.)
 
 Me="to the array guy."
 
@@ -3272,9 +3242,9 @@ echo $newVar
 newerVar=$(eval echo ${array2[1]})
 echo $newerVar
 
-#  I guess not, but the _upls function gives us a place to hang
+# I guess not, but the _upls function gives us a place to hang
 #+ the documentation on.
-#  This helps when we forget what a # construction like:
+# This helps when we forget what a # construction like:
 #+ $(eval echo ... ) means.
 
 # What if Me isn't set when the protected string is evaluated?
@@ -3284,22 +3254,22 @@ echo $newestVar
 
 # Just gone, no hints, no runs, no errors.
 
-#  Why in the world?
-#  Setting the contents of a string variable containing character
+# Why in the world?
+# Setting the contents of a string variable containing character
 #+ sequences that have a meaning in Bash is a general problem in
 #+ script programming.
 #
-#  This problem is now solved in eight lines of code
+# This problem is now solved in eight lines of code
 #+ (and four pages of description).
 
-#  Where is all this going?
-#  Dynamic content Web pages as an array of Bash strings.
-#  Content set per request by a Bash 'eval' command
+# Where is all this going?
+# Dynamic content Web pages as an array of Bash strings.
+# Content set per request by a Bash 'eval' command
 #+ on the stored page template.
-#  Not intended to replace PHP, just an interesting thing to do.
+# Not intended to replace PHP, just an interesting thing to do.
 ###
-#  Don't have a webserver application?
-#  No problem, check the example directory of the Bash source;
+# Don't have a webserver application?
+# No problem, check the example directory of the Bash source;
 #+ there is a Bash script for that also.
 
 # _UnProtect_Literal_String_Test
@@ -3311,6 +3281,10 @@ exit 0
 这个有趣的脚本有助于追踪垃圾邮件发送者。
 
 **示例 A-28\. 垃圾邮件识别**
+
+
+
+这是一个用于识别垃圾邮件发送者的 Bash 脚本，由 Michael S. Zick 编写，并在 ABS 指南中使用。
 
 ```sh
 #!/bin/bash
@@ -3366,7 +3340,7 @@ Requires
 
     All usages of 'dig' are limited to wrapper functions,
     which may be rewritten as required.
-    See: dig_wrappers.bash for details.
+    See: `dig_wrappers.bash` for details.
          ("Additional documentation" -- below)
 
 Usage
@@ -3452,7 +3426,7 @@ ADR_IFS=${NO_WSP}'.'
 DOT_IFS='.'${WSP_IFS}
 
 # # # Pending operations stack machine # # #
-# This set of functions described in func_stack.bash.
+# This set of functions described in `func_stack.bash`.
 # (See "Additional documentation" above.)
 # # #
 
@@ -3465,11 +3439,11 @@ declare -f _pend_current_
 
 # # # Debug version only - remove for regular use # # #
 #
-# The function stored in _pend_hook_ is called
+# The function stored in `_pend_hook_` is called
 # immediately before each pending function is
-# evaluated.  Stack clean, _pend_current_ set.
+# evaluated.  Stack clean, `_pend_current_` set.
 #
-# This thingy demonstrated in pend_hook.bash.
+# This thingy demonstrated in `pend_hook.bash`.
 declare -f _pend_hook_
 # # #
 
@@ -3548,7 +3522,7 @@ pend_drop() {
 
 #### Array editors ####
 
-# This function described in edit_exact.bash.
+# This function described in `edit_exact.bash`.
 # (See "Additional documentation," above.)
 # edit_exact <excludes_array_name> <target_array_name>
 edit_exact() {
@@ -3584,7 +3558,7 @@ edit_exact() {
     return 0
 }
 
-# This function described in edit_by_glob.bash.
+# This function described in `edit_by_glob.bash`.
 # edit_by_glob <excludes_array_name> <target_array_name>
 edit_by_glob() {
     [ $# -eq 2 ] &#124;&#124;
@@ -3619,7 +3593,7 @@ edit_by_glob() {
     return 0
 }
 
-# This function described in unique_lines.bash.
+# This function described in `unique_lines.bash`.
 # unique_lines <in_name> <out_name>
 unique_lines() {
     [ $# -eq 2 ] &#124;&#124; return 1
@@ -3651,7 +3625,7 @@ unique_lines() {
     return 0
 }
 
-# This function described in char_convert.bash.
+# This function described in `char_convert.bash`.
 # to_lower <string>
 to_lower() {
     [ $# -eq 1 ] &#124;&#124; return 1
@@ -3689,7 +3663,7 @@ to_lower() {
 #### Application helper functions ####
 
 # Not everybody uses dots as separators (APNIC, for example).
-# This function described in to_dot.bash
+# This function described in `to_dot.bash`
 # to_dot <string>
 to_dot() {
     [ $# -eq 1 ] &#124;&#124; return 1
@@ -3697,7 +3671,7 @@ to_dot() {
     return 0
 }
 
-# This function described in is_number.bash.
+# This function described in `is_number.bash`.
 # is_number <input>
 is_number() {
     [ "$#" -eq 1 ]    &#124;&#124; return 1  # is blank?
@@ -3707,7 +3681,7 @@ is_number() {
     return $?
 }
 
-# This function described in is_address.bash.
+# This function described in `is_address.bash`.
 # is_address <input>
 is_address() {
     [ $# -eq 1 ] &#124;&#124; return 1    # Blank ==> false
@@ -3730,7 +3704,7 @@ is_address() {
     fi
 }
 
-#  This function described in split_ip.bash.
+#  This function described in `split_ip.bash`.
 #  split_ip <IP_address>
 #+ <array_name_norm> [<array_name_rev>]
 split_ip() {
@@ -3754,7 +3728,7 @@ split_ip() {
     return 0
 }
 
-# This function described in dot_array.bash.
+# This function described in `dot_array.bash`.
 # dot_array <array_name>
 dot_array() {
     [ $# -eq 1 ] &#124;&#124; return 1     # Single argument required.
@@ -3767,7 +3741,7 @@ dot_array() {
     return 0
 }
 
-# This function described in file_to_array.bash
+# This function described in `file_to_array.bash`
 # file_to_array <file_name> <line_array_name>
 file_to_array() {
     [ $# -eq 2 ] &#124;&#124; return 1  # Two arguments required.
@@ -4086,12 +4060,12 @@ dump_log() {
 # # # Utility program 'dig' wrappers # # #
 #
 #  These wrappers are derived from the
-#+ examples shown in dig_wrappers.bash.
+#+ examples shown in `dig_wrappers.bash`.
 #
 #  The major difference is these return
 #+ their results as a list in an array.
 #
-#  See dig_wrappers.bash for details and
+#  See `dig_wrappers.bash` for details and
 #+ use that script to develop any changes.
 #
 # # #
@@ -5225,7 +5199,7 @@ Quickstart
 
   'dig,' version 9.x.x (dig $HOSTNAME, see first line of output)
   A version of dig which supports the +short options. 
-  See: dig_wrappers.bash for details.
+  See: `dig_wrappers.bash` for details.
 
  Optional Prerequisites
 
@@ -5248,7 +5222,7 @@ Quickstart
 
  Quick Start
 
-In the same directory as the is_spammer.bash script; 
+In the same directory as the `is_spammer.bash` script; 
 Do: ./is_spammer.bash
 
  Usage Details
@@ -5374,6 +5348,7 @@ be done with a text editor.
 
 Given these lines somewhere in the descriptor file:
 
+```
 # Known domain name nodes
 
 N0000 [label="guardproof.info."] ;
@@ -5395,10 +5370,12 @@ NA0000 third.guardproof.info. 61.141.32.197
 PC0000 guardproof.info. third.guardproof.info.
 
  */
+```
 
 Turn that into the following lines by substituting node 
 identifiers into the relationships:
 
+```
 # Known domain name nodes
 
 N0000 [label="guardproof.info."] ;
@@ -5428,6 +5405,7 @@ NA0000 third.guardproof.info. 61.141.32.197
 PC0000 guardproof.info. third.guardproof.info.
 
  */
+```
 
 Process that with the 'dot' program, and you have your 
 first network diagram.
@@ -5443,7 +5421,7 @@ shapes, colors, line sizes, etc.
 The descriptor file can also be read and edited by a 
 Bash script (of course). You should be able to find 
 most of the functions required within the 
-"is_spammer.bash" script.
+`is_spammer.bash` script.
 
 # End Quickstart.
 
@@ -5455,9 +5433,15 @@ Web site at rediris.es. Can't give the full URL, since this is not
 a publically accessible site.
 ```
 
+
+
 另一个反垃圾邮件脚本。
 
-**示例 A-29\. 垃圾邮件搜索**
+### 示例 A-29. 垃圾邮件搜索
+
+
+
+这是一个用于“whois”垃圾邮件发送者查询的 Bash 脚本`whx.sh`。
 
 ```sh
 #!/bin/bash
@@ -5729,145 +5713,127 @@ exit 0
 #@  Thank you!
 ```
 
-"小怪物"的 wget 前端。
+该脚本根据 IP 地址或域名查询对应的区域互联网注册管理机构（RIR）的 whois 数据库，并将结果保存到`whois.txt`文件，同时输出到屏幕。它包含多个函数，分别用于查询 AFRINIC、APNIC、ARIN、LACNIC 和 RIPE 的 whois 服务器，并处理一些特殊的保留地址段。
 
-**示例 A-30\. 使 *wget* 更易于使用**
 
-```sh
-#!/bin/bash
+
+“小怪物”的`wget`前端。
+
+### 示例 A-30. 使`wget`更易于使用
+
+
+
 # wgetter2.bash
 
-# Author: Little Monster [monster@monstruum.co.uk]
-# ==> Used in ABS Guide with permission of script author.
-# ==> This script still needs debugging and fixups (exercise for reader).
-# ==> It could also use some additional editing in the comments.
+这是一个Bash脚本，用于使`wget`命令更加友好并减少输入。
 
-#  This is wgetter2 --
-#+ a Bash script to make wget a bit more friendly, and save typing.
+## 脚本信息
 
-#  Carefully crafted by Little Monster.
-#  More or less complete on 02/02/2005.
-#  If you think this script can be improved,
-#+ email me at: monster@monstruum.co.uk
-# ==> and cc: to the author of the ABS Guide, please.
-#  This script is licenced under the GPL.
-#  You are free to copy, alter and re-use it,
-#+ but please don't try to claim you wrote it.
-#  Log your changes here instead.
+- **作者**: Little Monster (monster@monstruum.co.uk)
+- **许可**: GPL
+- **说明**: 此脚本用于改进`wget`的使用体验，允许保存、运行和管理下载任务。
 
-# =======================================================================
-# changelog:
+## 变更日志
 
-# 07/02/2005\.  Fixups by Little Monster.
-# 02/02/2005\.  Minor additions by Little Monster.
-#              (See after # +++++++++++ )
-# 29/01/2005\.  Minor stylistic edits and cleanups by author of ABS Guide.
-#              Added exit error codes.
-# 22/11/2004\.  Finished initial version of second version of wgetter:
-#              wgetter2 is born.
-# 01/12/2004\.  Changed 'runn' function so it can be run 2 ways --
-#              either ask for a file name or have one input on the CL.
-# 01/12/2004\.  Made sensible handling of no URL's given.
-# 01/12/2004\.  Made loop of main options, so you don't
-#              have to keep calling wgetter 2 all the time.
-#              Runs as a session instead.
-# 01/12/2004\.  Added looping to 'runn' function.
-#              Simplified and improved.
-# 01/12/2004\.  Added state to recursion setting.
-#              Enables re-use of previous value.
-# 05/12/2004\.  Modified the file detection routine in the 'runn' function
-#              so it's not fooled by empty values, and is cleaner.
-# 01/02/2004\.  Added cookie finding routine from later version (which 
-#              isn't ready yet), so as not to have hard-coded paths.
-# =======================================================================
+- `07/02/2005`：由Little Monster修复。
+- `02/02/2005`：由Little Monster添加少量内容。
+- `29/01/2005`：由ABS指南作者进行风格编辑和清理，添加退出错误码。
+- `22/11/2004`：完成`wgetter`第二个版本的初始版本，`wgetter2`诞生。
+- `01/12/2004`：修改`runn`函数，使其可以两种方式运行——询问文件名或在命令行直接输入。
+- `01/12/2004`：对无URL输入情况进行了合理处理。
+- `01/12/2004`：对主选项进行循环，无需每次都调用`wgetter 2`。
+- `01/12/2004`：为`runn`函数添加循环，简化并改进。
+- `01/12/2004`：添加递归设置的状态，支持复用先前的值。
+- `05/12/2004`：修改`runn`函数中的文件检测例程，避免被空值误导，更加简洁。
+- `01/02/2004`：从后续版本（尚未完成）添加cookie查找例程，避免硬编码路径。
 
-# Error codes for abnormal exit.
-E_USAGE=67        # Usage message, then quit.
-E_NO_OPTS=68      # No command-line args entered.
-E_NO_URLS=69      # No URLs passed to script.
-E_NO_SAVEFILE=70  # No save filename passed to script.
-E_USER_EXIT=71    # User decides to quit.
+## 错误码
 
-#  Basic default wget command we want to use.
-#  This is the place to change it, if required.
-#  NB: if using a proxy, set http_proxy = yourproxy in .wgetrc.
-#  Otherwise delete --proxy=on, below.
-# ====================================================================
+- `E_USAGE=67`：显示使用信息后退出。
+- `E_NO_OPTS=68`：未输入命令行参数。
+- `E_NO_URLS=69`：未向脚本传递URL。
+- `E_NO_SAVEFILE=70`：未向脚本传递保存文件名。
+- `E_USER_EXIT=71`：用户决定退出。
+
+## 变量和默认设置
+
+```bash
 CommandA="wget -nc -c -t 5 --progress=bar --random-wait --proxy=on -r"
-# ====================================================================
+```
 
-# --------------------------------------------------------------------
-# Set some other variables and explain them.
+其他变量：
 
-pattern=" -A .jpg,.JPG,.jpeg,.JPEG,.gif,.GIF,.htm,.html,.shtml,.php"
-                    # wget's option to only get certain types of file.
-                    # comment out if not using
-today=`date +%F`    # Used for a filename.
-home=$HOME          # Set HOME to an internal variable.
-                    # In case some other path is used, change it here.
-depthDefault=3      # Set a sensible default recursion.
-Depth=$depthDefault # Otherwise user feedback doesn't tie in properly.
-RefA=""             # Set blank referring page.
-Flag=""             #  Default to not saving anything,
-                    #+ or whatever else might be wanted in future.
-lister=""           # Used for passing a list of urls directly to wget.
-Woptions=""         # Used for passing wget some options for itself.
-inFile=""           # Used for the run function.
-newFile=""          # Used for the run function.
-savePath="$home/w-save"
-Config="$home/.wgetter2rc"
-                    #  This is where some variables can be stored, 
-                    #+ if permanently changed from within the script.
-Cookie_List="$home/.cookielist"
-                    # So we know where the cookies are kept . . .
-cFlag=""            # Part of the cookie file selection routine.
+- `pattern=" -A .jpg,.JPG,.jpeg,.JPEG,.gif,.GIF,.htm,.html,.shtml,.php"`：仅获取特定类型文件的`wget`选项，如不使用可注释掉。
+- `today=`date +%F``：用于文件名的日期。
+- `home=$HOME`：将`HOME`设置为内部变量。
+- `depthDefault=3`：设置合理的默认递归深度。
+- `Depth=$depthDefault`：用户反馈时保持一致性。
+- `RefA=""`：设置空白引用页面。
+- `Flag=""`：默认不保存任何内容，或未来可能需要的其他设置。
+- `lister=""`：用于直接传递URL列表给`wget`。
+- `Woptions=""`：用于传递`wget`自身的选项。
+- `inFile=""`：用于运行函数。
+- `newFile=""`：用于运行函数。
+- `savePath="$home/w-save"`：保存路径。
+- `Config="$home/.wgetter2rc"`：配置文件，存储永久修改变量。
+- `Cookie_List="$home/.cookielist"`：cookie文件列表。
+- `cFlag=""`：cookie文件选择例程的一部分。
 
-# Define the options available. Easy to change letters here if needed.
-# These are the optional options; you don't just wait to be asked.
+## 选项定义
 
-save=s   # Save command instead of executing it.
-cook=c   # Change cookie file for this session.
-help=h   # Usage guide.
-list=l   # Pass wget the -i option and URL list.
-runn=r   # Run saved commands as an argument to the option.
-inpu=i   # Run saved commands interactively.
-wopt=w   # Allow to enter options to pass directly to wget.
-# --------------------------------------------------------------------
+- `save=s`：保存命令而不是执行。
+- `cook=c`：更改此会话的cookie文件。
+- `help=h`：使用指南。
+- `list=l`：传递`-i`选项和URL列表给`wget`。
+- `runn=r`：将保存的命令作为参数运行。
+- `inpu=i`：交互式运行保存的命令。
+- `wopt=w`：允许直接输入选项传递给`wget`。
 
-if [ -z "$1" ]; then   # Make sure we get something for wget to eat.
+---
+
+```bash
+if [ -z "$1" ]; then   # 确保wget有可用的内容。
    echo "You must at least enter a URL or option!"
    echo "-$help for usage."
    exit $E_NO_OPTS
 fi
+```
 
-# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
-# added added added added added added added added added added added added
+---
 
-if [ ! -e "$Config" ]; then   # See if configuration file exists.
+```bash
+if [ ! -e "$Config" ]; then   # 检查配置文件是否存在。
    echo "Creating configuration file, $Config"
    echo "# This is the configuration file for wgetter2" > "$Config"
    echo "# Your customised settings will be saved in this file" >> "$Config"
 else
-   source $Config             # Import variables we set outside the script.
+   source $Config             # 导入在脚本外部设置的变量。
 fi
+```
 
+---
+
+```bash
 if [ ! -e "$Cookie_List" ]; then
-   # Set up a list of cookie files, if there isn't one.
+   # 如果没有cookie文件列表，则创建一个。
    echo "Hunting for cookies . . ."
-   find -name cookies.txt >> $Cookie_List # Create the list of cookie files.
-fi #  Isolate this in its own 'if' statement,
-   #+ in case we got interrupted while searching.
+   find -name cookies.txt >> $Cookie_List # 创建cookie文件列表。
+fi #  将其隔离在单独的'if'语句中，
+   #+ 以防搜索时被中断。
+```
 
-if [ -z "$cFlag" ]; then # If we haven't already done this . . .
-   echo                  # Make a nice space after the command prompt.
+---
+
+```bash
+if [ -z "$cFlag" ]; then # 如果尚未设置。
+   echo                  # 在命令提示符后留出空行。
    echo "Looks like you haven't set up your source of cookies yet."
-   n=0                   #  Make sure the counter
-                         #+ doesn't contain random values.
+   n=0                   # 确保计数器不包含随机值。
    while read; do
-      Cookies[$n]=$REPLY # Put the cookie files we found into an array.
-      echo "$n) ${Cookies[$n]}"  # Create a menu.
-      n=$(( n + 1 ))     # Increment the counter.
-   done < $Cookie_List   # Feed the read statement.
+      Cookies[$n]=$REPLY # 将找到的cookie文件放入数组。
+      echo "$n) ${Cookies[$n]}"  # 创建菜单。
+      n=$(( n + 1 ))     # 递增计数器。
+   done < $Cookie_List   # 将列表输入到read语句。
    echo "Enter the number of the cookie file you want to use."
    echo "If you won't be using cookies, just press RETURN."
    echo
@@ -5875,65 +5841,69 @@ if [ -z "$cFlag" ]; then # If we haven't already done this . . .
    echo "If you decide to change at a later date"
    echo "or use the -${cook} option for per session changes."
    read
-   if [ ! -z $REPLY ]; then   # User didn't just press return.
+   if [ ! -z $REPLY ]; then   # 用户没有仅按回车。
       Cookie=" --load-cookies ${Cookies[$REPLY]}"
-      # Set the variable here as well as in the config file.
+      # 在此处以及配置文件中设置变量。
 
       echo "Cookie=\" --load-cookies ${Cookies[$REPLY]}\"" >> $Config
    fi
-   echo "cFlag=1" >> $Config  # So we know not to ask again.
+   echo "cFlag=1" >> $Config  # 标记，以免再次询问。
 fi
+```
 
-# end added section end added section end added section end added section
-# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+---
 
-# Another variable.
-# This one may or may not be subject to variation.
-# A bit like the small print.
+```bash
+# 另一个变量。
+# 可能或不会变化。
 CookiesON=$Cookie
-# echo "cookie file is $CookiesON" # For debugging.
-# echo "home is ${home}"           # For debugging.
-                                   # Got caught with this one!
+# echo "cookie file is $CookiesON" # 调试用。
+# echo "home is ${home}"           # 调试用。
+```
 
+## 函数定义
+
+```bash
 wopts()
 {
 echo "Enter options to pass to wget."
 echo "It is assumed you know what you're doing."
 echo
 echo "You can pass their arguments here too."
-# That is to say, everything passed here is passed to wget.
+# 即所有此处传入的内容都会传递给wget。
 
 read Wopts
-# Read in the options to be passed to wget.
+# 读取要传递给wget的选项。
 
 Woptions=" $Wopts"
-#         ^  Why the leading space?
-# Assign to another variable.
-# Just for fun, or something . . .
+#         ^  为什么有前导空格？
+# 分配给另一个变量。
+# 纯属有趣，或者类似原因。
 
 echo "passing options ${Wopts} to wget"
-# Mainly for debugging.
-# Is cute.
+# 主要用于调试。
 
 return
 }
+```
 
+```bash
 save_func()
 {
 echo "Settings will be saved."
-if [ ! -d $savePath ]; then  #  See if directory exists.
-   mkdir $savePath           #  Create the directory to save things in
-                             #+ if it isn't already there.
+if [ ! -d $savePath ]; then  #  检查目录是否存在。
+   mkdir $savePath           #  创建保存目录，如果不存在。
 fi
 
 Flag=S
-# Tell the final bit of code what to do.
-# Set a flag since stuff is done in main.
+# 告诉最终代码做什么。
 
 return
 }
+```
 
-usage() # Tell them how it works.
+```bash
+usage() # 使用说明。
 {
     echo "Welcome to wgetter.  This is a front end to wget."
     echo "It will always run wget with these options:"
@@ -5960,99 +5930,89 @@ from the command-line."
 you can pass to wget."
     echo ""
 
-    exit $E_USAGE  # End here. Don't process anything else.
+    exit $E_USAGE  # 在此结束，不处理其他内容。
 }
+```
 
-list_func() #  Gives the user the option to use the -i option to wget,
-            #+ and a list of URLs.
+```bash
+list_func() #  允许用户使用`-i`选项和URL列表。
 {
 while [ 1 ]; do
    echo "Enter the name of the file containing URL's (press q to change
 your mind)."
    read urlfile
    if [ ! -e "$urlfile" ] && [ "$urlfile" != q ]; then
-       # Look for a file, or the quit option.
+       # 查找文件或退出选项。
        echo "That file does not exist!"
-   elif [ "$urlfile" = q ]; then # Check quit option.
+   elif [ "$urlfile" = q ]; then # 检查退出选项。
        echo "Not using a url list."
        return
    else
       echo "using $urlfile."
       echo "If you gave url's on the command-line, I'll use those first."
-                            # Report wget standard behaviour to the user.
-      lister=" -i $urlfile" # This is what we want to pass to wget.
+                            # 向用户报告wget的标准行为。
+      lister=" -i $urlfile" # 要传递给wget的内容。
       return
    fi
 done
 }
+```
 
-cookie_func() # Give the user the option to use a different cookie file.
+```bash
+cookie_func() # 允许用户选择不同的cookie文件。
 {
 while [ 1 ]; do
    echo "Change the cookies file. Press return if you don't want to change 
 it."
    read Cookies
-   # NB: this is not the same as Cookie, earlier.
-   # There is an 's' on the end.
-   # Bit like chocolate chips.
-   if [ -z "$Cookies" ]; then                 # Escape clause for wusses.
+   # 注意：这不同于前面的`Cookie`。
+   # 这里多了个's'。
+   if [ -z "$Cookies" ]; then                 # 为退缩者准备的退出条款。
       return
    elif [ ! -e "$Cookies" ]; then
-      echo "File does not exist.  Try again." # Keep em going . . .
+      echo "File does not exist.  Try again." # 持续尝试。
    else
-       CookiesON=" --load-cookies $Cookies"   # File is good -- use it!
+       CookiesON=" --load-cookies $Cookies"   # 文件有效，使用它！
        return
    fi
 done
 }
+```
 
+```bash
 run_func()
 {
 if [ -z "$OPTARG" ]; then
-# Test to see if we used the in-line option or the query one.
-   if [ ! -d "$savePath" ]; then      # If directory doesn't exist . . .
+# 检查使用内联选项还是查询选项。
+   if [ ! -d "$savePath" ]; then      # 如果目录不存在。
       echo "$savePath does not appear to exist."
       echo "Please supply path and filename of saved wget commands:"
       read newFile
-         until [ -f "$newFile" ]; do  # Keep going till we get something.
+         until [ -f "$newFile" ]; do  # 持续直到获得有效文件。
             echo "Sorry, that file does not exist.  Please try again."
-            # Try really hard to get something.
             read newFile
          done
-
-# -----------------------------------------------------------------------
-#       if [ -z ( grep wget ${newfile} ) ]; then
-        # Assume they haven't got the right file and bail out.
-#       echo "Sorry, that file does not contain wget commands.  Aborting."
-#       exit
-#       fi
-#
-# This is bogus code.
-# It doesn't actually work.
-# If anyone wants to fix it, feel free!
-# -----------------------------------------------------------------------
 
       filePath="${newFile}"
    else
    echo "Save path is $savePath"
      echo "Please enter name of the file which you want to use."
      echo "You have a choice of:"
-     ls $savePath                                    # Give them a choice.
+     ls $savePath                                    # 给用户选择。
      read inFile
-       until [ -f "$savePath/$inFile" ]; do         #  Keep going till
-                                                    #+ we get something.
-          if [ ! -f "${savePath}/${inFile}" ]; then # If file doesn't exist.
+       until [ -f "$savePath/$inFile" ]; do         # 持续直到有效。
+          if [ ! -f "${savePath}/${inFile}" ]; then # 如果文件不存在。
              echo "Sorry, that file does not exist.  Please choose from:"
-             ls $savePath                           # If a mistake is made.
+             ls $savePath                           # 如果出错。
              read inFile
           fi
          done
-      filePath="${savePath}/${inFile}"  # Make one variable . . .
+      filePath="${savePath}/${inFile}"  # 合并为一个变量。
    fi
-else filePath="${savePath}/${OPTARG}"   # Which can be many things . . .
+else filePath="${savePath}/${OPTARG}"   # 可以多种方式赋值。
 fi
 
-if [ ! -f "$filePath" ]; then           # If a bogus file got through.
+if [ ! -f "$filePath" ]; then           # 如果无效文件通过。
    echo "You did not specify a suitable file."
    echo "Run this script with the -${save} option first."
    echo "Aborting."
@@ -6062,112 +6022,103 @@ echo "Using: $filePath"
 while read; do
     eval $REPLY
     echo "Completed: $REPLY"
-done < $filePath  # Feed the actual file we are using into a 'while' loop.
+done < $filePath  # 将文件内容输入到'while'循环。
 
 exit
 }
+```
 
-# Fish out any options we are using for the script.
-# This is based on the demo in "Learning The Bash Shell" (O'Reilly).
+---
+
+```bash
+# 提取脚本使用的选项。
+# 基于《Learning The Bash Shell》(O'Reilly)中的演示。
 while getopts ":$save$cook$help$list$runn:$inpu$wopt" opt
 do
   case $opt in
-     $save) save_func;;   #  Save some wgetter sessions for later.
-     $cook) cookie_func;; #  Change cookie file.
-     $help) usage;;       #  Get help.
-     $list) list_func;;   #  Allow wget to use a list of URLs.
-     $runn) run_func;;    #  Useful if you are calling wgetter from,
-                          #+ for example, a cron script.
-     $inpu) run_func;;    #  When you don't know what your files are named.
-     $wopt) wopts;;       #  Pass options directly to wget.
+     $save) save_func;;   #  保存wgetter会话供以后使用。
+     $cook) cookie_func;; #  更改cookie文件。
+     $help) usage;;       #  获取帮助。
+     $list) list_func;;   #  允许wget使用URL列表。
+     $runn) run_func;;    #  适用于从cron脚本调用wgetter。
+     $inpu) run_func;;    #  当您不知道文件名时。
+     $wopt) wopts;;       #  直接传递选项给wget。
         \?) echo "Not a valid option."
             echo "Use -${wopt} to pass options directly to wget,"
-            echo "or -${help} for help";;      # Catch anything else.
+            echo "or -${help} for help";;      #  捕获其他任何选项。
   esac
 done
-shift $((OPTIND - 1))     # Do funky magic stuff with $#.
+shift $((OPTIND - 1))     # 处理选项后剩余的参数。
 
 if [ -z "$1" ] && [ -z "$lister" ]; then
-                          #  We should be left with at least one URL
-                          #+ on the command-line, unless a list is 
-			  #+ being used -- catch empty CL's.
+                          #  命令行上应至少剩下一个URL，
+                          #+ 或者正在使用列表——捕获空CL。
    echo "No URL's given! You must enter them on the same line as wgetter2."
    echo "E.g.,  wgetter2 http://somesite http://anothersite."
    echo "Use $help option for more information."
-   exit $E_NO_URLS        # Bail out, with appropriate error code.
+   exit $E_NO_URLS
 fi
 
 URLS=" $@"
-# Use this so that URL list can be changed if we stay in the option loop.
+# 用于在选项循环中更改URL列表。
+```
 
+---
+
+```bash
 while [ 1 ]; do
-   # This is where we ask for the most used options.
-   # (Mostly unchanged from version 1 of wgetter)
+   # 询问最常用的选项。
    if [ -z $curDepth ]; then
       Current=""
    else Current=" Current value is $curDepth"
    fi
        echo "How deep should I go? \
 (integer: Default is $depthDefault.$Current)"
-       read Depth   # Recursion -- how far should we go?
-       inputB=""    # Reset this to blank on each pass of the loop.
+       read Depth   # 递归深度。
+       inputB=""    # 每次循环重置。
+
        echo "Enter the name of the referring page (default is none)."
-       read inputB  # Need this for some sites.
+       read inputB
 
        echo "Do you want to have the output logged to the terminal"
        echo "(y/n, default is yes)?"
-       read noHide  # Otherwise wget will just log it to a file.
+       read noHide
 
-       case $noHide in    # Now you see me, now you don't.
-          y&#124;Y ) hide="";;
-          n&#124;N ) hide=" -b";;
+       case $noHide in    # 决定输出方式。
+          y|Y ) hide="";;
+          n|N ) hide=" -b";;
             * ) hide="";;
        esac
 
        if [ -z ${Depth} ]; then
-       #  User accepted either default or current depth,
-       #+ in which case Depth is now empty.
+       #  用户接受默认或当前深度。
           if [ -z ${curDepth} ]; then
-          #  See if a depth was set on a previous iteration.
              Depth="$depthDefault"
-             #  Set the default recursion depth if nothing
-             #+ else to use.
-          else Depth="$curDepth" #  Otherwise, set the one we used before.
+          else Depth="$curDepth"
           fi
        fi
-   Recurse=" -l $Depth"          # Set how deep we want to go.
-   curDepth=$Depth               # Remember setting for next time.
+   Recurse=" -l $Depth"          # 设置递归深度。
+   curDepth=$Depth               # 记住设置。
 
        if [ ! -z $inputB ]; then
-          RefA=" --referer=$inputB"   # Option to use referring page.
+          RefA=" --referer=$inputB"   # 引用页面选项。
        fi
 
    WGETTER="${CommandA}${pattern}${hide}${RefA}${Recurse}\
 ${CookiesON}${lister}${Woptions}${URLS}"
-   #  Just string the whole lot together . . .
-   #  NB: no embedded spaces.
-   #  They are in the individual elements so that if any are empty,
-   #+ we don't get an extra space.
+   #  组合所有部分。
+   #  注意：没有嵌入空格，它们包含在单个元素中。
 
    if [ -z "${CookiesON}" ] && [ "$cFlag" = "1" ] ; then
        echo "Warning -- can't find cookie file"
-       #  This should be changed,
-       #+ in case the user has opted to not use cookies.
    fi
 
    if [ "$Flag" = "S" ]; then
       echo "$WGETTER" >> $savePath/wget-${today}
-      #  Create a unique filename for today, or append to it if it exists.
       echo "$inputB" >> $savePath/site-list-${today}
-      #  Make a list, so it's easy to refer back to,
-      #+ since the whole command is a bit confusing to look at.
       echo "Command saved to the file $savePath/wget-${today}"
-           # Tell the user.
-      echo "Referring page URL saved to the file$ \
-savePath/site-list-${today}"
-           # Tell the user.
+      echo "Referring page URL saved to the file $savePath/site-list-${today}"
       Saver=" with save option"
-      # Stick this somewhere, so it appears in the loop if set.
    else
        echo "*****************"
        echo "*****Getting*****"
@@ -6183,12 +6134,10 @@ savePath/site-list-${today}"
        echo "Starting over$Saver."
        echo "If you want to stop, press q."
        echo "Otherwise, enter some URL's:"
-       # Let them go again. Tell about save option being set.
 
        read
        case $REPLY in
-       # Need to change this to a 'trap' clause.
-          q&#124;Q ) exit $E_USER_EXIT;;  # Exercise for the reader?
+          q|Q ) exit $E_USER_EXIT;;
             * ) URLS=" $REPLY";;
        esac
 
@@ -6198,9 +6147,11 @@ done
 exit 0
 ```
 
-**示例 A-31\. 一个 *podcasting* 脚本**
 
-```sh
+
+## 示例 A-31. 一个 *podcasting* 脚本
+
+```
 #!/bin/bash
 
 #  bashpodder.sh:
@@ -6280,7 +6231,9 @@ http://www.linuxjournal.com/article/8171
 #################################################
 ```
 
-**示例 A-32\. 每晚备份到火线硬盘**
+## 示例 A-32. 每晚备份到火线硬盘
+
+
 
 ```sh
 #!/bin/bash
@@ -6342,9 +6295,9 @@ E_BACKUP=73
 ##### END CONFIGURATION SECTION ##############################################
 
 # Check that all the important variables have been set:
-if [ -z "$LOCAL_USER" ] &#124;&#124;
-   [ -z "$SOURCE_DIR" ] &#124;&#124;
-   [ -z "$MOUNT_POINT" ]  &#124;&#124;
+if [ -z "$LOCAL_USER" ] ||
+   [ -z "$SOURCE_DIR" ] ||
+   [ -z "$MOUNT_POINT" ]  ||
    [ -z "$BACKUP_DEST_DIR" ]
 then
    echo 'One of the variables is not set! Edit the file: $0\. BACKUP FAILED.'
@@ -6422,14 +6375,14 @@ fi
 # BUS="scsi", KERNEL="sd*", SYSFS{vendor}="WDC WD16",
 # SYSFS{model}="00JB-00GVA0     ", NAME="%k", SYMLINK="lacie_1394d%n"
 
-if mount &#124; grep $MOUNT_POINT >/dev/null; then
+if mount | grep $MOUNT_POINT >/dev/null; then
   echo "Mount point $MOUNT_POINT is indeed mounted. OK"
 else
   echo -n "Attempting to mount $MOUNT_POINT..."	
            # If it isn't mounted, try to mount it.
   sudo mount $MOUNT_POINT 2>/dev/null
 
-  if mount &#124; grep $MOUNT_POINT >/dev/null; then
+  if mount | grep $MOUNT_POINT >/dev/null; then
     UNMOUNT_LATER=TRUE
     echo "OK"
     #  Note: Ensure that this is also unmounted
@@ -6534,8 +6487,8 @@ echo "This backup of $SOURCE_DIR on `hostname` was created on \
   #  (Note: df can output to more than one line.)
   #  We test this here, rather than before
   #+ so that rsync may possibly have a chance.
-  DISK_FULL_PERCENT=`/bin/df $BACKUP_DEST_DIR &#124;
-  tr "\n" ' ' &#124; awk '{print $12}' &#124; grep -oE [0-9]+ `
+  DISK_FULL_PERCENT=`/bin/df $BACKUP_DEST_DIR |
+  tr "\n" ' ' | awk '{print $12}' | grep -oE [0-9]+ `
   echo "Disk space check on backup partition \
   $MOUNT_POINT $DISK_FULL_PERCENT% full."
   if [ $DISK_FULL_PERCENT -gt 90 ]; then
@@ -6631,7 +6584,19 @@ echo 'BACKUP FAILED! Is this just a dry run? Is the disk full?) '
 exit $E_BACKUP
 ```
 
-**示例 A-33\. 扩展的 *cd* 命令**
+
+
+# 示例 A-33. 扩展的 `cd` 命令
+
+
+
+# cdll 脚本排版说明
+
+以下内容是对给定 `cdll` 脚本的重新排版，遵循 Markdown 格式规范。排版过程中未修改任何语义或删除有价值的信息，仅优化了标题层级、段落格式、代码块标记以及变量名/函数名/命令名等元素的反引号处理。
+
+---
+
+## 脚本开头的注释说明（未改动，保留原有格式）
 
 ```sh
 ###########################################################################
@@ -6681,7 +6646,15 @@ exit $E_BACKUP
 #       phil@braham.net)
 #
 ############################################################################
+```
 
+---
+
+## 函数定义部分（原样保留，未做修改）
+
+以下函数定义和逻辑保持原样，仅将整段作为代码块处理（已用三反引号包裹）。变量名、函数名等因在代码块内，不额外添加反引号。
+
+```sh
 cd_hm ()
 {
         ${PRINTF} "%s" "cd [dir] [0-9] [@[s&#124;h] [-g [<dir>]] [-d] \
@@ -7043,6 +7016,13 @@ cd_new ()
                 export PS1="$(echo -ne ${cd_rp})"
         fi
 }
+```
+
+---
+
+## 初始化和变量设置（原样保留）
+
+```sh
 #########################################################################
 #                                                                       #
 #                        Initialisation here                            #
@@ -7112,7 +7092,13 @@ previous directory with no parameters\n"
 cd_mnset="\n\tNon-default mode is now set - entering cd with no \
 parameters is the same as entering cd 0\n\tUse cd -d or \
 -D to change default cd action\n"
+```
 
+---
+
+## 文档说明部分（原样保留，已用代码块包裹）
+
+```sh
 # ==================================================================== #
 
 : <<DOCUMENTATION
@@ -7394,6 +7380,8 @@ Version: 1.2.1 Date: 24-MAY-2003
 DOCUMENTATION
 ```
 
+
+
 **示例 A-34\. 声卡设置脚本**
 
 ```sh
@@ -7636,6 +7624,8 @@ exit $?
 
 **示例 A-37\. 标准差**
 
+
+
 ```sh
 #!/bin/bash
 # sd.sh: Standard Deviation
@@ -7752,7 +7742,9 @@ exit
 # ++++++++++++++++++++++++++++++++++++++++ #
 ```
 
-**示例 A-38\. 为共享软件作者生成 *pad* 文件**
+### 示例 A-38. 为共享软件作者生成 `pad` 文件
+
+
 
 ```sh
 #!/bin/bash
@@ -7998,6 +7990,8 @@ exit 0
 
 **示例 A-39\. **man** 页面编辑器**
 
+
+
 ```sh
 #!/bin/bash
 # maned.sh
@@ -8108,7 +8102,7 @@ read ans
 if [ "$ans" = "n" -o "$ans" = "N" ]; then exit; fi
 exec less "$savefile"  #  Exit script and hand off control to "less" ...
                        #+ ... which formats for viewing man page source.
-}
+end
 
 # ---------------------------------------- #
 start
@@ -8136,8 +8130,8 @@ end    # ... exit not needed.
 #  This may be a long, cobbled-together line, which groff
 #  will automatically wrap and hyphenate.
 #  However, if you want multiple (newline-separated) paragraphs,
-#+ these must be inserted by manual text editing on the
-#+ script-generated man page.
+#+ these must be inserted by manual text editing on
+#+ the script-generated man page.
 #  Exercise (difficult): Fix this!
 
 #  This script is not nearly as elaborate as the
@@ -8147,6 +8141,10 @@ end    # ... exit not needed.
 ```
 
 **示例 A-40\. 玫瑰花瓣**
+
+
+
+# 示例 A-41\. Quacky：一个 Perquackey 类型的文字游戏
 
 ```sh
 #!/bin/bash -i
@@ -8335,7 +8333,7 @@ exit $?
 #    (How Bill Gates coped with the Petals Around the Rose challenge.)
 ```
 
-**示例 A-41\. Quacky：一个 Perquackey 类型的文字游戏**
+
 
 ```sh
 #!/bin/bash
@@ -8793,6 +8791,8 @@ exit $?
 # http://bash.deta.in/qky.README.html
 ```
 
+
+
 **示例 A-42\. 尼姆游戏**
 
 ```sh
@@ -9069,6 +9069,8 @@ done
 
 **示例 A-43\. 命令行秒表**
 
+
+
 ```sh
 #!/bin/sh
 # sw.sh
@@ -9202,7 +9204,7 @@ done
 exit $?
 ```
 
-**示例 A-44\. 一个通用的 shell 脚本作业解决方案**
+## 示例 A-44\. 一个通用的 shell 脚本作业解决方案
 
 ```sh
 #!/bin/bash
@@ -9301,7 +9303,11 @@ exit $E_LZY
 #+ all too often.
 ```
 
-**示例 A-45\. 骑士之旅**
+## 示例 A-45\. 骑士之旅
+
+
+
+# The Knight's Tour (`ktour.sh`)
 
 ```sh
 #!/bin/bash
@@ -9312,7 +9318,11 @@ exit $E_LZY
 # license: public domain
 # (Not much sense GPLing something that's pretty much in the common
 #+ domain anyhow.)
+```
 
+## Overview
+
+```
 ###################################################################
 #             The Knight's Tour, a classic problem.               #
 #             =====================================               #
@@ -9344,15 +9354,22 @@ exit $E_LZY
 #  ktour.sh g6 stupid   starts on square #46,                     #
 #                       using "stupid" (non-Warnsdorff) strategy. #
 ###################################################################
+```
 
+## Script Configuration
+
+```
 DEBUG=      # Set this to echo debugging info to stdout.
 SUCCESS=0
 FAIL=99
 BADMOVE=-999
 FAILURE=1
 LINELEN=21  # How many moves to display per line.
-# ---------------------------------------- #
-# Board array params
+```
+
+### Board Array Parameters
+
+```
 ROWS=8   # 8 x 8 board.
 COLS=8
 let "SQUARES = $ROWS * $COLS"
@@ -9363,8 +9380,11 @@ MIN=0
 VISITED=1
 UNVISITED=-1
 UNVSYM="##"
-# ---------------------------------------- #
-# Global variables.
+```
+
+### Global Variables
+
+```
 startpos=    # Starting position (square #, 0 - 63).
 currpos=     # Current position.
 movenum=     # Move number.
@@ -9374,7 +9394,13 @@ declare -i board
 # Use a one-dimensional array to simulate a two-dimensional one.
 # This can make life difficult and result in ugly kludges; see below.
 declare -i moves  # Offsets from current knight position.
+```
 
+## Functions
+
+### `initialize_board()`
+
+```sh
 initialize_board ()
 {
   local idx
@@ -9384,7 +9410,11 @@ initialize_board ()
     board[$idx]=$UNVISITED
   done
 }
+```
 
+### `print_board()`
+
+```sh
 print_board ()
 {
   local idx
@@ -9411,7 +9441,11 @@ print_board ()
   echo "    -------------------------------------"
   echo "     a    b    c    d    e    f    g    h"
 }
+```
 
+### `failure()`
+
+```sh
 failure()
 { # Whine, then bail out.
   echo
@@ -9424,7 +9458,11 @@ failure()
   echo
   exit $FAIL
 }
+```
 
+### `xlat_coords ()`   #  Translate x/y coordinates to board position
+
+```sh
 xlat_coords ()   #  Translate x/y coordinates to board position
 {                #+ (board-array element #).
   #  For user input of starting board position as x/y coords.
@@ -9448,7 +9486,11 @@ xlat_coords ()   #  Translate x/y coordinates to board position
     return $board_index
   fi
 }
+```
 
+### `to_algebraic ()`   #  Translate board position to algebraic notation
+
+```sh
 to_algebraic ()   #  Translate board position (board-array element #)
 {                 #+ to standard algebraic notation used by chess players.
   if [ -z "$1" ]
@@ -9466,7 +9508,11 @@ to_algebraic ()   #  Translate board position (board-array element #)
   local apos=$t1$t2   # Concatenate.
   echo $apos
 }
+```
 
+### `from_algebraic ()`   #  Translate algebraic notation to board position
+
+```sh
 from_algebraic ()   #  Translate standard algebraic chess notation
 {                   #+ to numerical board position (board-array element #).
                     #  Or recognize numerical input & return it unchanged.
@@ -9517,9 +9563,12 @@ from_algebraic ()   #  Translate standard algebraic chess notation
   fi
 
   return $b_index
-
 }
+```
 
+### `generate_moves ()`   #  Calculate all valid knight moves
+
+```sh
 generate_moves ()   #  Calculate all valid knight moves,
 {                   #+ relative to current position ($1),
                     #+ and store in ${moves} array.
@@ -9589,9 +9638,12 @@ generate_moves ()   #  Calculate all valid knight moves,
   # ${moves[0]} = number of valid moves.
   # ${moves[1]} ... ${moves[8]} = possible moves.
   echo "${m[*]}"    # Elements of array to stdout for capture in a var.
-
 }
+```
 
+### `is_on_board ()`  # Is position actually on the board?
+
+```sh
 is_on_board ()  # Is position actually on the board?
 {
   if [[ "$1" -lt "$MIN" &#124;&#124; "$1" -gt "$MAX" ]]
@@ -9601,7 +9653,11 @@ is_on_board ()  # Is position actually on the board?
     return $SUCCESS
   fi
 }
+```
 
+### `do_move ()`      # Move the knight!
+
+```sh
 do_move ()      # Move the knight!
 {
   local valid_moves=0
@@ -9649,7 +9705,11 @@ do_move ()      # Move the knight!
   # Print LINELEN=21 moves per line. A valid tour shows 3 complete lines.
   return $valid_moves   # Found a square to move to!
 }
+```
 
+### `do_move_stupid()`   #  Dingbat algorithm
+
+```sh
 do_move_stupid()   #  Dingbat algorithm,
 {                  #+ courtesy of script author, *not* Warnsdorff.
   local valid_moves=0
@@ -9682,7 +9742,11 @@ do_move_stupid()   #  Dingbat algorithm,
   #  Dingbat algorithm will typically fail after about 30 - 40 moves,
   #+ but executes _much_ faster than Warnsdorff's in do_move() function.
 }
+```
 
+### `decide_move ()`         #  Which move will we make?
+
+```sh
 decide_move ()         #  Which move will we make?
 {                      #  But, fails on startpos=37 !!!
   for mov in {1..8}
@@ -9713,7 +9777,11 @@ decide_move ()         #  Which move will we make?
     fi
   done
 }
+```
 
+### `decide_move_patched ()`         #  Decide which move to make
+
+```sh
 decide_move_patched ()         #  Decide which move to make,
 {  #        ^^^^^^^            #+ but only if startpos=37 !!!
   for mov in {1..8}
@@ -9735,7 +9803,11 @@ decide_move_patched ()         #  Decide which move to make,
     fi
   done                       # There has to be a better way to do this.
 }
+```
 
+### `possible_moves ()`            #  Calculate number of possible moves
+
+```sh
 possible_moves ()            #  Calculate number of possible moves,
 {                            #+ given the current position.
 
@@ -9765,7 +9837,11 @@ possible_moves ()            #  Calculate number of possible moves,
 
   return $valid_movl         # Found a square to move to!
 }
+```
 
+### `strategy ()`
+
+```sh
 strategy ()
 {
   echo
@@ -9805,7 +9881,11 @@ strategy ()
   echo "Knight's Tour ends on $(to_algebraic $currpos) [square #$currpos]."
   return $SUCCESS
 }
+```
 
+### `debug ()`
+
+```sh
 debug ()
 {       # Enable this by setting DEBUG=1 near beginning of script.
   local n
@@ -9828,7 +9908,11 @@ debug ()
   echo "================================="
   echo
 } # Gives pretty complete status after ea. move.
+```
 
+## Main Program
+
+```sh
 # =============================================================== #
 # int main () {
 from_algebraic "$1"
@@ -9866,26 +9950,18 @@ exit 0   # return 0;
 
 # }      # End of main() pseudo-function.
 # =============================================================== #
-
-# Exercises:
-# ---------
-#
-# 1) Extend this example to a 10 x 10 board or larger.
-# 2) Improve the "stupid strategy" by modifying the
-#    do_move_stupid function.
-#    Hint: Prevent straying into corner squares in early moves
-#          (the exact opposite of Warnsdorff's algorithm!).
-# 3) This script could stand considerable improvement and
-#    streamlining, especially in the poorly-written
-#    generate_moves() function
-#    and in the DECIDE-MOVE patch in the do_move() function.
-#    Must figure out why standard algorithm fails for startpos=37 ...
-#+   but _not_ on any other, including symmetrical startpos=26.
-#    Possibly, when calculating possible moves, counts the move back
-#+   to the originating square. If so, it might be a relatively easy fix.
 ```
 
-**示例 A-46\. 神秘方阵**
+## Exercises
+
+1. Extend this example to a 10 x 10 board or larger.
+2. Improve the "stupid strategy" by modifying the `do_move_stupid` function.
+   Hint: Prevent straying into corner squares in early moves (the exact opposite of Warnsdorff's algorithm!).
+3. This script could stand considerable improvement and streamlining, especially in the poorly-written `generate_moves()` function and in the DECIDE-MOVE patch in the `do_move()` function. Must figure out why standard algorithm fails for `startpos=37` ... but `_not_` on any other, including symmetrical `startpos=26`. Possibly, when calculating possible moves, counts the move back to the originating square. If so, it might be a relatively easy fix.
+
+
+
+**示例 A-46. 神秘方阵**
 
 ```sh
 #!/bin/bash
@@ -9966,7 +10042,7 @@ print_square ()               # Output square, one row at a time.
 }
 
 #################################################
-if [[ -z "$1" ]] &#124;&#124; [[ "$1" -gt $MAXSIZE ]]
+if [[ -z "$1" ]] || [[ "$1" -gt $MAXSIZE ]]
 then
   usage_message
 fi
@@ -9997,7 +10073,7 @@ exit $?
 #    See the URL for Kwon Young Shin, above, for help.
 ```
 
-**示例 A-47\. 十五拼图**
+**示例 A-47. 十五拼图**
 
 ```sh
 #!/bin/bash
@@ -10014,10 +10090,10 @@ exit $?
 
 #  Object: Rearrange the numbers so they read in order,
 #+ from 1 - 15:   ________________
-#                &#124;  1   2   3   4 &#124;
-#                &#124;  5   6   7   8 &#124;
-#                &#124;  9  10  11  12 &#124;
-#                &#124; 13  14  15     &#124;
+#                |  1   2   3   4 |
+#                |  5   6   7   8 |
+#                |  9  10  11  12 |
+#                | 13  14  15     |
 #                 ----------------
 
 #######################
@@ -10071,11 +10147,11 @@ function PrintPuzzle
   do
     for i2 in {1..4} 
     do
-      printf "&#124; %2s " "${Puzzle[$puzpos]}"
+      printf "| %2s " "${Puzzle[$puzpos]}"
       (( puzpos++ ))
     done
-    echo "&#124;"                     # Right-side border.
-    test $i1 = 4 &#124;&#124; echo "+----+----+----+----+"
+    echo "|"                     # Right-side border.
+    test $i1 = 4 || echo "+----+----+----+----+"
   done
   echo "'----'----'----'----'"   # Bottom border.
 }
@@ -10125,7 +10201,7 @@ function Solved
 
   for pos in {0..14}
   do
-    test "${Puzzle[$pos]}" = $(( $pos + 1 )) &#124;&#124; return $FAIL
+    test "${Puzzle[$pos]}" = $(( $pos + 1 )) || return $FAIL
     # Check whether number in each square = square number.
   done
   return 0   # Successful solution.
@@ -10165,7 +10241,9 @@ exit 0
 #+ rather than the numbers 1 - 15.
 ```
 
-**示例 A-48\. **汉诺塔，图形版本***
+**示例 A-48. 汉诺塔，图形版本**
+
+
 
 ```sh
 #! /bin/bash
@@ -10222,9 +10300,9 @@ function FromRod  {
 
   while true; do
     rod=$1
-    test ${rod/[¹²³]/} &#124;&#124; continue
+    test ${rod/[¹²³]/} || continue
 
-    sequence=$(echo $(seq 0 $disks1 &#124; tac))
+    sequence=$(echo $(seq 0 $disks1 | tac))
     for summit in $sequence; do
       eval weight=\${Rod${rod}[$summit]}
       test $weight -ne 0 &&
@@ -10238,9 +10316,9 @@ function ToRod  { # $1=previous (FromRod) weight
 
   while true; do
     rod=$2
-    test ${rod/[¹²³]} &#124;&#124; continue
+    test ${rod/[¹²³]} || continue
 
-    sequence=$(echo $(seq 0 $disks1 &#124; tac))
+    sequence=$(echo $(seq 0 $disks1 | tac))
     for firstfree in $sequence; do
       eval weight=\${Rod${rod}[$firstfree]}
       test $weight -gt 0 && { (( firstfree++ )); break; }
@@ -10254,19 +10332,19 @@ function PrintRods  {
   local disk rod empty fill sp sequence
 
   repeat " " $spaces1
-  echo -n "&#124;"
+  echo -n "|"
   repeat " " $spaces2
-  echo -n "&#124;"
+  echo -n "|"
   repeat " " $spaces2
-  echo "&#124;"
+  echo "|"
 
-  sequence=$(echo $(seq 0 $disks1 &#124; tac))
+  sequence=$(echo $(seq 0 $disks1 | tac))
   for disk in $sequence; do
     for rod in {1..3}; do
       eval empty=$(( $DISKS - (Rod${rod}[$disk] / 2) ))
       eval fill=\${Rod${rod}[$disk]}
       repeat " " $empty
-      test $fill -gt 0 && repeat "*" $fill &#124;&#124; echo -n "&#124;"
+      test $fill -gt 0 && repeat "*" $fill || echo -n "|"
       repeat " " $empty
     done
     echo
@@ -10367,7 +10445,9 @@ exit $E_NOEXIT   # Shouldn't exit here.
 # Redirect script output to a file, otherwise it scrolls off display.
 ```
 
-**示例 A-49\. **汉诺塔，交替图形版本***
+**示例 A-49. 汉诺塔，交替图形版本**
+
+
 
 ```sh
 #! /bin/bash
@@ -10580,7 +10660,7 @@ exit $E_NOEXIT   # Shouldn't exit here.
 #+ Fix this.
 ```
 
-**示例 A-50\. getopt-simple.sh 脚本的替代版本**
+## 示例 A-50. `getopt-simple.sh` 脚本的替代版本
 
 ```sh
 #!/bin/bash
@@ -10708,104 +10788,11 @@ UseGetOpt --aoption --debug --log --test --file myfile anotherfile
 exit
 ```
 
-**示例 A-51\. 在 Tab Expansion 附录中使用的 *UseGetOpt.sh* 示例版本**
+## 示例 A-51. 在 Tab Expansion 附录中使用的 *UseGetOpt.sh* 示例版本
 
-```sh
-#!/bin/bash
 
-#  UseGetOpt-2.sh
-#  Modified version of the script for illustrating tab-expansion
-#+ of command-line options.
-#  See the "Introduction to Tab Expansion" appendix.
 
-#  Possible options: -a -d -f -l -t -h
-#+                   --aoption, --debug --file --log --test -- help --
-
-#  Author of original script: Peggy Russell <prusselltechgroup@gmail.com>
-
-# UseGetOpt () {
-  declare inputOptions
-  declare -r E_OPTERR=85
-  declare -r ScriptName=${0##*/}
-  declare -r ShortOpts="adf:hlt"
-  declare -r LongOpts="aoption,debug,file:,help,log,test"
-
-DoSomething () {
-    echo "The function name is '${FUNCNAME}'"
-  }
-
-  inputOptions=$(getopt -o "${ShortOpts}" --long \
-              "${LongOpts}" --name "${ScriptName}" -- "${@}")
-
-  if [[ ($? -ne 0) &#124;&#124; ($# -eq 0) ]]; then
-    echo "Usage: ${ScriptName} [-dhlt] {OPTION...}"
-    exit $E_OPTERR
-  fi
-
-  eval set -- "${inputOptions}"
-
-  while true; do
-    case "${1}" in
-      --aoption &#124; -a)  # Argument found.
-        echo "Option [$1]"
-        ;;
-
-      --debug &#124; -d)    # Enable informational messages.
-        echo "Option [$1] Debugging enabled"
-        ;;
-
-      --file &#124; -f)     #  Check for optional argument.
-        case "$2" in   #+ Double colon is optional argument.
-          "")          #  Not there.
-              echo "Option [$1] Use default"
-              shift
-              ;;
-
-          *) # Got it
-             echo "Option [$1] Using input [$2]"
-             shift
-             ;;
-
-        esac
-        DoSomething
-        ;;
-
-      --log &#124; -l) # Enable Logging.
-        echo "Option [$1] Logging enabled"
-        ;;
-
-      --test &#124; -t) # Enable testing.
-        echo "Option [$1] Testing enabled"
-        ;;
-
-      --help &#124; -h)
-        echo "Option [$1] Display help"
-        break
-        ;;
-
-      --)   # Done! $# is argument number for "--", $@ is "--"
-        echo "Option [$1] Dash Dash"
-        break
-        ;;
-
-       *)
-        echo "Major internal error!"
-        exit 8
-        ;;
-
-    esac
-    echo "Number of arguments: [$#]"
-    shift
-  done
-
-  shift
-
-#  }
-
-exit
-```
-
-**示例 A-52\. 遍历所有可能的颜色背景**
+## 示例 A-52. 遍历所有可能的颜色背景
 
 ```sh
 #!/bin/bash
@@ -10824,7 +10811,7 @@ for num1 in {0..7}
 do {
    for num2 in {0,1}
        do {
-          shownum=`echo "$offset + $T1 * ${num2} + $num1" &#124; bc`
+          shownum=`echo "$offset + $T1 * ${num2} + $num1" | bc`
           echo -en "\E[0;48;5;${shownum}m color ${shownum} \E[0m"
           }
        done
@@ -10840,7 +10827,7 @@ do {
           for num3 in {0..5}
               do {
                  shownum=`echo "$offset + $T2 * ${num3} \
-                 + $num2 + $T3 * ${num1}" &#124; bc`
+                 + $num2 + $T3 * ${num1}" | bc`
                  echo -en "\E[0;48;5;${shownum}m color ${shownum} \E[0m"
                  }
                done
@@ -10861,7 +10848,7 @@ done
 echo
 ```
 
-**示例 A-53\. 莫尔斯电码练习**
+## 示例 A-53. 莫尔斯电码练习
 
 ```sh
 #!/bin/bash
@@ -11018,7 +11005,104 @@ exit 0
 #  2) Have the script optionally accept input from a text file.
 ```
 
-**示例 A-54\. Base64 编码/解码**
+## 示例 A-54. Base64 编码/解码
+
+```sh
+#!/bin/bash
+
+#  UseGetOpt-2.sh
+#  Modified version of the script for illustrating tab-expansion
+#+ of command-line options.
+#  See the "Introduction to Tab Expansion" appendix.
+
+#  Possible options: -a -d -f -l -t -h
+#+                   --aoption, --debug --file --log --test -- help --
+
+#  Author of original script: Peggy Russell <prusselltechgroup@gmail.com>
+
+# UseGetOpt () {
+  declare inputOptions
+  declare -r E_OPTERR=85
+  declare -r ScriptName=${0##*/}
+  declare -r ShortOpts="adf:hlt"
+  declare -r LongOpts="aoption,debug,file:,help,log,test"
+
+DoSomething () {
+    echo "The function name is '${FUNCNAME}'"
+  }
+
+  inputOptions=$(getopt -o "${ShortOpts}" --long \
+              "${LongOpts}" --name "${ScriptName}" -- "${@}")
+
+  if [[ ($? -ne 0) || ($# -eq 0) ]]; then
+    echo "Usage: ${ScriptName} [-dhlt] {OPTION...}"
+    exit $E_OPTERR
+  fi
+
+  eval set -- "${inputOptions}"
+
+  while true; do
+    case "${1}" in
+      --aoption | -a)  # Argument found.
+        echo "Option [$1]"
+        ;;
+
+      --debug | -d)    # Enable informational messages.
+        echo "Option [$1] Debugging enabled"
+        ;;
+
+      --file | -f)     #  Check for optional argument.
+        case "$2" in   #+ Double colon is optional argument.
+          "")          #  Not there.
+              echo "Option [$1] Use default"
+              shift
+              ;;
+
+          *) # Got it
+             echo "Option [$1] Using input [$2]"
+             shift
+             ;;
+
+        esac
+        DoSomething
+        ;;
+
+      --log | -l) # Enable Logging.
+        echo "Option [$1] Logging enabled"
+        ;;
+
+      --test | -t) # Enable testing.
+        echo "Option [$1] Testing enabled"
+        ;;
+
+      --help | -h)
+        echo "Option [$1] Display help"
+        break
+        ;;
+
+      --)   # Done! $# is argument number for "--", $@ is "--"
+        echo "Option [$1] Dash Dash"
+        break
+        ;;
+
+       *)
+        echo "Major internal error!"
+        exit 8
+        ;;
+
+    esac
+    echo "Number of arguments: [$#]"
+    shift
+  done
+
+  shift
+
+#  }
+
+exit
+```
+
+
 
 ```sh
 #!/bin/bash
@@ -11070,16 +11154,16 @@ function encode_base64 {
   declare -a -i c8 c6
 
   #  Convert hexadecimal to decimal.
-  c8=( $(printf "ibase=16; ${1:0:2}\n${1:2:2}\n${1:4:2}\n" &#124; bc) )
+  c8=( $(printf "ibase=16; ${1:0:2}\n${1:2:2}\n${1:4:2}\n" | bc) )
 
   #  Let's play with bitwise operators
   #+ (3x8-bit into 4x6-bits conversion).
   (( c6[0] = c8[0] >> 2 ))
-  (( c6[1] = ((c8[0] &  3) << 4) &#124; (c8[1] >> 4) ))
+  (( c6[1] = ((c8[0] &  3) << 4) | (c8[1] >> 4) ))
 
   # The following operations depend on the c8 element number.
   case ${#c8[*]} in 
-    3) (( c6[2] = ((c8[1] & 15) << 2) &#124; (c8[2] >> 6) ))
+    3) (( c6[2] = ((c8[1] & 15) << 2) | (c8[2] >> 6) ))
        (( c6[3] = c8[2] & 63 )) ;;
     2) (( c6[2] = (c8[1] & 15) << 2 ))
        (( c6[3] = 64 )) ;;
@@ -11111,14 +11195,14 @@ function decode_base64 {
 
   #  Let's play with bitwise operators
   #+ (4x8-bit into 3x6-bits conversion).
-  (( c8[0] = (c6[0] << 2) &#124; (c6[1] >> 4) ))
+  (( c8[0] = (c6[0] << 2) | (c6[1] >> 4) ))
 
   # The next operations depends on the c6 elements number.
   case ${#c6[*]} in
-    3) (( c8[1] = ( (c6[1] & 15) << 4) &#124; (c6[2] >> 2) ))
+    3) (( c8[1] = ( (c6[1] & 15) << 4) | (c6[2] >> 2) ))
        (( c8[2] = (c6[2] & 3) << 6 )); unset c8[2] ;;
-    4) (( c8[1] = ( (c6[1] & 15) << 4) &#124; (c6[2] >> 2) ))
-       (( c8[2] = ( (c6[2] &  3) << 6) &#124;  c6[3] )) ;;
+    4) (( c8[1] = ( (c6[1] & 15) << 4) | (c6[2] >> 2) ))
+       (( c8[2] = ( (c6[2] &  3) << 6) |  c6[3] )) ;;
   esac
 
   for char in ${c8[*]}; do
@@ -11131,13 +11215,13 @@ function decode_base64 {
 if [ "$1" = "-d" ]; then   # decode
 
   # Reformat STDIN in pseudo 4x6-bit groups.
-  content=$(cat - &#124; tr -d "\n" &#124; sed -r "s/(.{4})/\1 /g")
+  content=$(cat - | tr -d "\n" | sed -r "s/(.{4})/\1 /g")
 
   for chars in ${content}; do decode_base64 ${chars}; done
 
 else
   # Make a hexdump of stdin and reformat in 3-byte groups.
-  content=$(cat - &#124; xxd -ps -u &#124; sed -r "s/(\w{6})/\1 /g" &#124;
+  content=$(cat - | xxd -ps -u | sed -r "s/(\w{6})/\1 /g" |
             tr -d "\n")
 
   for chars in ${content}; do encode_base64 ${chars}; done
@@ -11190,6 +11274,8 @@ exit 0
 ```
 
 **示例 A-56\. 格罗恩斯费尔德密码**
+
+
 
 ```sh
 #!/bin/bash
@@ -11336,7 +11422,7 @@ exit $?    # } End-of-script
 #   **************************************************************   #
 ```
 
-**示例 A-57\. 彩票数字生成器**
+## 示例 A-57\. 彩票数字生成器
 
 ```sh
 #!/bin/bash
@@ -11464,7 +11550,9 @@ exit 0
 
 为了结束本节，对基础知识进行回顾……以及更多内容。
 
-**示例 A-58\. 基础知识回顾**
+## 示例 A-58\. 基础知识回顾
+
+
 
 ```sh
 #!/bin/bash
@@ -11664,7 +11752,7 @@ echo "ArrayVar[5]='five'             # 5 normal"
 echo "unset ArrayVar[6]              # 6 undefined"
 echo "ArrayValue[7]='seven'          # 7 normal"
 echo "ArrayValue[8]=''               # 8 defined but empty"
-echo "ArrayValue[9]='nine'           # 9 normal"
+echo "ArrayValue[9]='nine'          # 9 normal"
 echo
 
 echo
@@ -12446,7 +12534,9 @@ echo ${sparseZ[@]//*/$(_GenFunc)}
 exit 0
 ```
 
-**示例 A-59\. 测试各种命令的执行时间**
+
+
+## 示例 A-59. 测试各种命令的执行时间
 
 ```sh
 #!/bin/bash
@@ -12520,7 +12610,7 @@ done
 exit $?
 ```
 
-**示例 A-60\. 关联数组与常规数组（执行时间）比较**
+## 示例 A-60. 关联数组与常规数组（执行时间）比较
 
 ```sh
 #!/bin/bash

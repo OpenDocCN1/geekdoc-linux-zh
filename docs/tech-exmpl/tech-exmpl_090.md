@@ -1,13 +1,13 @@
+
 # 计算一个数的幂的程序
 
 > 原文：[`techbyexample.com/program-power-number/`](https://techbyexample.com/program-power-number/)
 
-## **概述**
+## 概述
 
 目标是计算给定整数的幂。将有两个输入
 
 +   数字本身 — 数字可以是正数也可以是负数，还可以是浮动数
-
 +   幂 — 幂可以是正数也可以是负数
 
 示例
@@ -20,7 +20,7 @@ Input: Num:2, Power:-4
 Output: 0.0625
 ```
 
-## **程序**
+## 程序
 
 这里是相应的程序。
 

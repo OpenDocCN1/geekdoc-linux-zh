@@ -1,31 +1,35 @@
-# 如何在 Windows Server 2016 上添加第二个 IP-elder node
+
+# 如何在 Windows Server 2016 上添加第二个 IP
 
 > 原文：<https://blog.eldernode.com/add-second-ip-on-windows-server-2016/>
 
 ![How to add second IP on Windows Server 2016](img/a7dc6c3c0ea018afab47c4cf8f6d34e9.png)
 
-之前你已经知道了在 Ubuntu 和 Debian 上添加第二个 IP。那么我们来回顾一下如何在 Windows Server 2016 上添加第二个 IP。选择您最理想的 [Windows VPS](https://eldernode.com/windows-vps/) 服务器软件包。 
+之前你已经知道了在 Ubuntu 和 Debian 上添加第二个 IP。那么我们来回顾一下如何在 Windows Server 2016 上添加第二个 IP。选择您最理想的 `Windows VPS` 服务器软件包。
 
 当您的 Windows 服务器连接到两个独立的网络，而这两个网络没有相互路由连接时，需要配置第二个 IP。在这种情况下，您需要在网络设置中添加第二个 IP 地址。
 
 在本教程中，我们将了解如何在网络设置中添加多个 IP 地址。
 
-**注意:** 在 Windows Server 2008、2012 及其家族中可以使用下面的教程。
+**注意：** 在 Windows Server 2008、2012 及其家族中可以使用下面的教程。
 
 ## 如何在 Windows Server 2016 上添加第二个 IP
 
 **1-** 首先，登录你的 Windows 桌面环境。
 
-**2-** 然后按 Winkey + R 打开 **Run** 窗口。
+**2-** 然后按 `Winkey + R` 打开 **Run** 窗口。
 
-**3-** 在此窗口中，输入短语 ncpa.cpl 返回**网络连接**窗口。
+**3-** 在此窗口中，输入短语 `ncpa.cpl` 返回**网络连接**窗口。
 
 ![How to add second ip on windows server 2016-1](img/cd1c66e22aa13e9938274925eba21e3f.png)
 
-请注意，打开网络适配器设置的方法是快速访问方法。要访问您的网络接口设置，请执行以下操作:
-**a.** 右键单击 **Windows 任务栏中的网络连接b .
-**b .**单击打开网络和共享中心
-**c.** 从页面右侧选择更改适配器设置**
+请注意，打开网络适配器设置的方法是快速访问方法。要访问您的网络接口设置，请执行以下操作：
+
+**a.** 右键单击 **Windows 任务栏中的网络连接**。
+
+**b.** 单击打开网络和共享中心。
+
+**c.** 从页面右侧选择**更改适配器设置**。
 
 **4-** **在需要添加第二个 IP 地址的界面上右键**，选择属性。
 
@@ -39,9 +43,9 @@
 
 ![How to add second ip on windows server 2016-4](img/4fd33caecc2e3629eab7cafbd4e892da.png)
 
-**注意:** 只有手动设置第一个 IP 地址，才能设置第二个 IP 地址。
+**注意：** 只有手动设置第一个 IP 地址，才能设置第二个 IP 地址。
 
-**7-** 进入**高级**环节后，点击添加。输入 IP 地址以及网络的子网掩码，最后点击 OK 。
+**7-** 进入**高级**环节后，点击添加。输入 IP 地址以及网络的子网掩码，最后点击 OK。
 
 如有必要，您将能够在同一窗口中添加新的**默认网关**来访问您的新网络。
 

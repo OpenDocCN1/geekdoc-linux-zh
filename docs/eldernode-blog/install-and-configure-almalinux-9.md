@@ -1,3 +1,4 @@
+
 # 教程安装和配置 AlmaLinux 9 - Eldernode 博客
 
 > 原文：<https://blog.eldernode.com/install-and-configure-almalinux-9/>
@@ -6,15 +7,15 @@
 
 在社区的支持下，CloudLinux company 停止了 CentOS 8 的开发，创建了 AlmaLinux 作为 CentOS 的可行替代方案。AlmaLinux 是 CentOS 的一个替代品，有一个通用的版本，使用过 Linux Enterprise 的人都很欢迎它。在本文中，我们将教你如何安装和配置 AlmaLinux 9 。如果你想购买 **[Linux VPS](https://eldernode.com/linux-vps/)** 服务器，请查看 [Eldernode](https://eldernode.com/) 网站上提供的软件包。
 
-## **如何安装配置 AlmaLinux 9**
+## 如何安装配置 AlmaLinux 9
 
-### **alma Linux 简介 9**
+### AlmaLinux 简介 9
 
 AlmaLinux 是与 RHEL 和 CentOS 兼容的二进制文件，是 CentOS 的替代品。它是由开源社区开发的开源、免费的企业级操作系统。此外，这个操作系统有一个错误跟踪系统，允许用户报告他们的操作系统中的错误。CloudLinux 团队已经创建了 AlmaLinux，它提供共享托管服务，并且拥有自己的商业 Linux 发行版 CloudLinux OS。AlmaLinux 操作系统由一个名为 AlmaLinux OS 基金会的非营利组织管理。
 
 在这篇来自 [Linux 教程](https://blog.eldernode.com/tag/linux/)系列的文章的续篇中，我们将一步步教你如何安装和配置 AlmaLinux 9。
 
-### **如何下载 AlmaLinux 9**
+### 如何下载 AlmaLinux 9
 
 在做任何事情之前，你应该**下载 AlmaLinux** ISO 镜像。为此，请访问 [AlmaLinux ISO 链接](https://mirrors.almalinux.org/isos.html)官方网站并选择合适的版本。点击它开始下载:
 
@@ -32,7 +33,7 @@ AlmaLinux 是与 RHEL 和 CentOS 兼容的二进制文件，是 CentOS 的替代
 
 然后插入安装介质并**重启**你的电脑。请注意，BIOS 应该配置为从 USB 安装介质引导。为此，您可以将介质设置为第一引导优先级。
 
-### **如何用 AlmaLinux 9** 引导系统
+### 如何用 AlmaLinux 9 引导系统
 
 系统重新启动后，将出现以下页面。选择**安装 AlmaLinux 9.0** :
 
@@ -60,7 +61,7 @@ AlmaLinux 是与 RHEL 和 CentOS 兼容的二进制文件，是 CentOS 的替代
 
 ![Disk-Partitioning-Summary in installing almalinux - Tutorial Install and Configure AlmaLinux 9](img/942b9895acd92983475d687884a9e9e8.png)
 
-### **如何在 Almalinux 9 上配置用户设置**
+### 如何在 AlmaLinux 9 上配置用户设置
 
 你应该配置**用户设置**以 root 密码开始。为此，点击**根密码**:
 
@@ -74,7 +75,7 @@ AlmaLinux 是与 RHEL 和 CentOS 兼容的二进制文件，是 CentOS 的替代
 
 ![AlmaLinux-User-Account](img/9a7fb3300e7a89f3c22577da0b28417d.png)
 
-## **如何安装 AlmaLinux 9**
+## 如何安装 AlmaLinux 9
 
 现在是时候**安装 AlmaLinux 9** 了。为此，点击**开始安装**:
 
@@ -86,7 +87,7 @@ AlmaLinux 是与 RHEL 和 CentOS 兼容的二进制文件，是 CentOS 的替代
 
 ![AlmaLinux-9-Install-Completed](img/7a6ee898b21b60b022e934eb1b776776.png)
 
-### **如何登录 AlmaLinux 9**
+### 如何登录 AlmaLinux 9
 
 首先，你应该选择 grub 菜单中的第一个选项，然后按**回车:**
 

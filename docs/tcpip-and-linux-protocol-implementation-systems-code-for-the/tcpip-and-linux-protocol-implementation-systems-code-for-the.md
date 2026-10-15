@@ -1,311 +1,423 @@
+
 # TCP/IP 与 Linux 协议实现：Linux 系统的系统代码
 
+## 图书馆
 
-
-
-
-
-
-
-# 图书馆
 戈尔韦-马约理工学院
 
+## Wiley 网络委员会系列
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# Wiley 网络委员会系列
-
-# 网络委员会
+## 网络委员会
 
 系列编辑：
 
 Scott Bradner
+
 哈佛大学高级技术顾问
 
 Vinton Cerf
+
 MCI WorldCom 高级总裁
 
 Lyman Chapin
+
 BBN/GTE 首席科学家
 
-# 系列丛书：
+## 系列丛书：
 
 - 高速网络：高带宽低延迟通信的系统化方法
+
 James P. G. Sternbenz, Joseph D. Touch ISBN: 0-471-33036-1
 
 - PKI 规划：部署公钥基础设施的最佳实践指南
+
 Russ Hough, Tim Polk ISBN: 0-471-39702-4
 
 - 理解基于策略的网络
+
 Dave Kositur ISBN: 0-471-38804-1
 
 - 通过电缆提供互联网连接：突破接入屏障
+
 Mark E. Laauch, David J. Farber, Stephen D. Dukes ISBN: 0-471-38950-1
 
 - NAT 手册：实现和管理网络地址转换
+
 Bill Dutcher ISBN: 0-471-39089-5
 
 - WAN 幸存指南：VPN 和多服务网络的策略
+
 Howard C. Berkowitz ISBN: 0-471-38428-3
 
 - ISP 幸存指南：运营竞争性 ISP 的策略
+
 Geoff Houston ISBN: 0-471-31499-4
 
 - 实现 IPsec：为 VPN、内网和外网提供安全
+
 Elizabeth Kaufman, Andrew Newman ISBN: 0-471-34467-2
 
 - 互联网性能指南：多服务网络的 QoS 策略
+
 Geoff Houston ISBN: 0-471-37808-9
 
 - ISP 责任幸存指南：管理版权、缓存和隐私的策略
+
 Tim Casey ISBN: 0-471-37748-1
 
 - VPN 应用指南：企业网络的真实解决方案
+
 Dave McDys ISBN: 0-471-31775-0
 
 - 融合网络与服务：互联网互连与 PSTN
+
 Igor Fayberg, Hui-Lan Lu, and Lawrence Gabuz ISBN: 0-471-35644-1
 
 更多信息，请访问网络委员会网站：www.wiley.com/networking
 
-
-
-
-
-
-
-
-
-
 后记 885
+
 术语表 887
+
 参考文献 903
+
 索引 911
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 | | | |
+
 |---|---|---|
-| 6.366 | IPv6—输出: linux/net/ipv6/output.c | 458 |
-| 6.367 | IPv6—输出: linux/net/ipv6/output.c | 459 |
-| 6.368 | IPv6—转发: linux/net/ipv6/output.c | 459 |
-| 6.369 | IPv6—转发: linux/net/ipv6/output.c | 460 |
-| 6.370 | IPv6—转发: linux/net/ipv6/output.c | 461 |
-| 6.371 | IPv6—套接封装选项: linux/net/ipv6.sockglue.c | 462 |
-| 6.372 | IPv6—套接封装设置选项: linux/net/ipv6/sockglue.c | 462 |
-| 6.373 | IPv6—套接封装设置选项: linux/net/ipv6/sockglue.c | 463 |
-| 6.374 | IPv6—套接封装选项: linux/net/ipv6/sockglue.c | 464 |
-| 6.375 | IPv6—套接封装选项: linux/net/ipv6/sockglue.c | 465 |
-| 6.376 | IPv6—套接封装选项: linux/net/ipv6/sockglue.c | 466 |
-| 6.377 | IPv6—套接封装选项: linux/net/ipv6/sockglue.c | 467 |
-| 6.378 | IPv6 流标签创建: linux/net/ipv6/flowlabel.c | 468 |
-| 6.379 | IPv6 流标签创建: linux/net/ipv6/flowlabel.c | 469 |
-| 6.380 | IPv6 流标签创建: linux/net/ipv6/flowlabel.c | 469 |
 
+| 6.366 | IPv6—输出: `linux/net/ipv6/output.c` | 458 |
 
+| 6.367 | IPv6—输出: `linux/net/ipv6/output.c` | 459 |
 
+| 6.368 | IPv6—转发: `linux/net/ipv6/output.c` | 459 |
 
+| 6.369 | IPv6—转发: `linux/net/ipv6/output.c` | 460 |
 
-# 图表列表
+| 6.370 | IPv6—转发: `linux/net/ipv6/output.c` | 461 |
+
+| 6.371 | IPv6—套接封装选项: `linux/net/ipv6.sockglue.c` | 462 |
+
+| 6.372 | IPv6—套接封装设置选项: `linux/net/ipv6/sockglue.c` | 462 |
+
+| 6.373 | IPv6—套接封装设置选项: `linux/net/ipv6/sockglue.c` | 463 |
+
+| 6.374 | IPv6—套接封装选项: `linux/net/ipv6/sockglue.c` | 464 |
+
+| 6.375 | IPv6—套接封装选项: `linux/net/ipv6/sockglue.c` | 465 |
+
+| 6.376 | IPv6—套接封装选项: `linux/net/ipv6/sockglue.c` | 466 |
+
+| 6.377 | IPv6—套接封装选项: `linux/net/ipv6/sockglue.c` | 467 |
+
+| 6.378 | IPv6 流标签创建: `linux/net/ipv6/flowlabel.c` | 468 |
+
+| 6.379 | IPv6 流标签创建: `linux/net/ipv6/flowlabel.c` | 469 |
+
+| 6.380 | IPv6 流标签创建: `linux/net/ipv6/flowlabel.c` | 469 |
+
+## 图表列表
 
 - 7.26 确定 MSS 499
+
 - 7.27 发送循环开始 500
+
 - 7.28 查找拷贝数据空间 (i) 502
+
 - 7.29 查找拷贝数据空间 (ii) 502
-- 7.30 tcp_send 的剩余部分 503
-- 7.31 tcp_send 的剩余部分 504
+
+- 7.30 `tcp_send` 的剩余部分 503
+
+- 7.31 `tcp_send` 的剩余部分 504
+
 - 7.32 将 socket 缓冲区写入网络 505
+
 - 7.33 我们应该发送吗 506
+
 - 7.34 构建 TCP 头部 (i) 506
+
 - 7.35 构建 TCP 头部 (ii) 508
+
 - 7.36 构建 TCP 头部 (iii) 509
+
 - 7.37 TCP 数据包校验和 509
+
 - 7.38 TCP 层接收数据包 (i) 510
+
 - 7.39 TCP 层接收数据包 (ii) 511
+
 - 7.40 一种优化 512
+
 - 7.41 在已连接上接收 socket 缓冲区 (i) 513
+
 - 7.42 在已连接上接收 socket 缓冲区 (ii) 514
+
 - 7.43 在已连接上接收 socket 缓冲区 (iii) 515
+
 - 7.44 在已连接上接收 socket 缓冲区 (iv) 516
+
 - 7.45 在已连接上接收 socket 缓冲区 (v) 517
+
 - 7.46 TCP 序列号检查 518
+
 - 7.47 TCP 接收窗口确定 518
+
 - 7.48 ACK 发送代码 518
+
 - 7.49 处理确认号 (i) 519
+
 - 7.50 处理确认号 (ii) 520
+
 - 7.51 处理并入队传入数据 (i) 523
+
 - 7.52 处理并入队传入数据 (ii) 524
+
 - 7.53 处理并入队传入数据 (iii) 525
+
 - 7.54 处理并入队传入数据 (iv) 527
+
 - 7.55 定器初始化 528
+
 - 7.56 TCP 拥塞避免 528
+
 - 7.57 记录需要选择性确认乱序段的需求 (i) 529
+
 - 7.58 记录需要选择性确认乱序段的需求 (ii) 530
+
 - 7.59 记录需要发送 dsack 531
+
 - 7.60 构建 TCP 选项字段（时间戳和 sack） 532
+
 - 7.61 检查是否存在拒绝 sack 的接收端 533
+
 - 7.62 PAWS 检查 533
+
 - 7.63 往返时间估计 (i) 534
+
 - 7.64 往返时间估计 (ii) 534
+
 - 7.65 往返时间估计 (iii) 536
+
 - 7.66 构建选项 SYN 数据包 536
+
 - 7.67 解析 WINDOW 选项 537
+
 - 8.1 哈希表 548
-- 8.2 IP 地址、掩码和路由公告：linux(2.4.net/ipv4/tcp_input.c 550
+
+- 8.2 IP 地址、掩码和路由公告：`linux/2.4.net/ipv4/tcp_input.c` 550
+
 - 8.3 FIB（快速路由信息库）552
-- 8.4 FIB 路由表条目：linux/include/net/ip_fib.h 553
-- 8.5 FIB 下跳数据结构：linux/include/net/ip.fib.h 553
-- 8.6 主 FIB 结构：linux/include/net/ipv4/fib.c 554
-- 8.7 FIB 查找结果结构：linux/include/net/ip_fib.h 555
-- 8.8 FIB 通用结束接口：linux/include/net/ip_fib.h 555
-- 8.9 FIB 结束——设置表：linux/net/ipv4/fib_frontend.c 556
-- 8.10 FIB 结束——刷新表：linux/net/ipv4/fib_frontend.c 556
-- 8.11 FIB 结束 PROC FS 接口：linux/net/ipv4/fib_frontend.c 557
-- 8.12 FIB 结束——设备地址：linux/net/ipv4/fib_frontend.c 557
-- 8.13 FIB 结束——按地址类型：linux/net/ipv4/fib_frontend.c 558
+
+- 8.4 FIB 路由表条目：`linux/include/net/ip_fib.h` 553
+
+- 8.5 FIB 下跳数据结构：`linux/include/net/ip.fib.h` 553
+
+- 8.6 主 FIB 结构：`linux/include/net/ipv4/fib.c` 554
+
+- 8.7 FIB 查找结果结构：`linux/include/net/ip_fib.h` 555
+
+- 8.8 FIB 通用结束接口：`linux/include/net/ip_fib.h` 555
+
+- 8.9 FIB 结束——设置表：`linux/net/ipv4/fib_frontend.c` 556
+
+- 8.10 FIB 结束——刷新表：`linux/net/ipv4/fib_frontend.c` 556
+
+- 8.11 FIB 结束 PROC FS 接口：`linux/net/ipv4/fib_frontend.c` 557
+
+- 8.12 FIB 结束——设备地址：`linux/net/ipv4/fib_frontend.c` 557
+
+- 8.13 FIB 结束——按地址类型：`linux/net/ipv4/fib_frontend.c` 558
+
 - 8.14 FIB 结束——检查地址合理 i：
-- 8.15 FIB 结束——检查地址合理 ii：linux/net/ipv4/fib_frontend.c 559
-- 8.16 FIB 结束——ioctl 处理程序：linux/net/ipv4/fib_frontend.c 560
-- 8.17 FIB 结束——路由查找/添加/删除：linux/net/ipv4/fib_frontend.c 561
-- 8.18 FIB 结束——转储 FIB：linux/net/ipv4/fib_frontend.c 562
-- 8.19 FIB 结束——内核间路由消息：linux/net/ipv4/fib_frontend.c 563
-- 8.20 FIB 结束——内核间路由消息：linux/net/ipv4/fib_frontend.c 563
-- 8.21 FIB 结束——内核间路由消息：linux/net/ipv4/fib_frontend.c 564
-- 8.22 FIB 结束——按接口添加：linux/net/ipv4/fib_frontend.c 564
-- 8.23 FIB 结束——按接口删除 i：linux/net/ipv4/fib_frontend.c 565
-- 8.24 FIB 结束——按接口删除 ii：linux/net/ipv4/fib_frontend.c 565
-- 8.25 FIB 结束——事件处理：linux/net/ipv4/fib_frontend.c 566
-- 8.26 FIB 结束——事件处理：linux/net/ipv4/fib_frontend.c 566
-- 8.27 FIB 结束——初始化：linux/net/ipv4/fib_frontend.c 567
-- 8.28 FIB 语义——遍历 FIB：linux/net/ipv4/fib_semantics.c 568
-- 8.29 FIB 语义——路由属性：linux/net/ipv4/fib_semantics.c 568
-- 8.30 FIB 语义——路由属性：linux/net/ipv4/fib_semantics.c 569
-- 8.31 FIB 语义——释放跳信息：linux/net/ipv4/fib_semantics.c 569
-- 8.32 FIB 语义——查找：linux/net/ipv4/fib_semantics.c 570
-- 8.33 FIB 语义——设置默认：linux/net/ipv4/fib_semantics.c 571
-- 8.34 FIB 语义——添加下跳并获取：linux/net/ipv4/fib_semantics.c 571
-- 8.35 FIB 语义——下跳匹配：linux/net/ipv4/fib_semantics.c 572
-- 8.36 FIB 语义——下跳匹配：linux/net/ipv4/fib_semantics.c 573
-- 8.37 FIB 语义——大局：linux/net/ipv4/fib_semantics.c 573
-- 8.38 FIB 语义——检查下跳：linux/net/ipv4/fib_semantics.c 574
-- 8.39 FIB 语义——检查下跳：linux/net/ipv4/fib_semantics.c 575
-- 8.40 FIB 语义——创建条目 i：linux/net/ipv4/fib_semantics.c 576
-- 8.41 FIB 语义——创建条目 i：linux/net/ipv4/fib_semantics.c 576
-- 8.42 FIB 语义——创建条目 ii：linux/net/ipv4/fib_semantics.c 577
-- 8.43 FIB 语义——创建条目 iii：linux/net/ipv4/fib_semantics.c 578
-- 8.44 FIB 语义——创建条目 iv：linux/net/ipv4/fib_semantics.c 578
-- 8.45 FIB 语义——合理匹配？linux/net/ipv4/fib_semantics.c 579
-- 8.46 FIB 语义——合理匹配？linux/net/ipv4/fib_semantics.c 580
-- 8.47 FIB 语义——转储工具 i：linux/net/ipv4/fib_semantics.c 580
-- 8.48 FIB 语义——转储工具 ii：linux/net/ipv4/fib_semantics.c 580
-- 8.49 FIB 语义——转储工具 iii：linux/net/ipv4/fib_semantics.c 581
-- 8.50 FIB 语义——转换 RT 请求：linux/net/ipv4/fib_semantics.c 582
-- 8.51 FIB 语义——导出到 RT 条目 i：linux/net/ipv4/fib_semantics.c 583
-- 8.52 FIB 语义——导出到 RT 条目 ii：linux/net/ipv4/fib_semantics.c 584
-- 8.53 FIB 语义——地址或接口关闭时：linux/net/ipv4/fib_semantics.c 585
-- 8.54 FIB 语义——地址或接口关闭时：linux/net/ipv4/fib_semantics.c 585
-- 8.55 FIB 语义——地址或接口开启时：linux/net/ipv4/fib_semantics.c 586
-- 8.56 FIB 语义——多路径情况：linux/net/ipv4/fib_semantics.c 587
-- 8.57 FIB 语义——多路径情况 ii：linux/net/ipv4/fib_semantics.c 587
-- 8.58 FIB 语义——PROC FS 接口：linux/net/ipv4/fib_semantics.c 588
-- 8.59 FIB 规则——全局：linux/net/ipv4/fib_rules.c 589
-- 8.60 FIB 规则——i：linux/net/ipv4/fib_rules.c 590
-- 8.61 FIB 规则——工具：linux/net/ipv4/fib_rules.c 590
-- 8.62 FIB 规则——新规则：linux/net/ipv4/fib_rules.c 591
-- 8.63 FIB 规则——新规则：linux/net/ipv4/fib_rules.c 591
-- 8.64 FIB 规则——新规则：linux/net/ipv4/fib_rules.c 592
-- 8.65 FIB 规则——工具：linux/net/ipv4/fib_rules.c 592
-- 8.66 FIB 规则——挂：linux/net/ipv4/fib_rules.c 593
-- 8.67 FIB 规则——查找：linux/net/ipv4/fib_rules.c 593
-- 8.68 FIB 规则——查找：linux/net/ipv4/fib_rules.c 594
-- 8.69 FIB 规则——初始：linux/net/ipv4/fib_rules.c 595
-- 8.70 FIB 规则——初始化：linux/net/ipv4/fib_rules.c 595
-- 8.71 FIB 规则——初始化：linux/net/ipv4/fib_rules.c 596
-- 8.72 FIB 规则——类型：linux/net/ipv4/fib_rules.c 597
-- 8.73 FIB 规则——类型：linux/net/ipv4/fib_rules.c 597
-- 8.74 FIB 规则——内：linux/net/ipv4/fib_rules.c 598
-- 8.75 FIB 规则——内：linux/net/ipv4/fib_rules.c 598
-- 8.76 FIB 规则——内：linux/net/ipv4/fib_rules.c 599
-- 8.77 FIB 规则——区域函数：linux/net/ipv4/fib_rules.c 600
-- 8.78 FIB 规则——哈希函数：linux/net/ipv4/fib_rules.c 601
-- 8.79 FIB 规则——死条目：linux/net/ipv4/fib_rules.c 602
-- 8.80 FIB 规则——选择条目：linux/net/ipv4/fib_rules.c 603
-- 8.81 FIB 规则——选择条目：linux/net/ipv4/fib_rules.c 604
-- 8.82 FIB 规则——插入条目 i：linux/net/ipv4/fib_rules.c 605
-- 8.83 FIB 规则——插入条目 ii：linux/net/ipv4/fib_rules.c 605
-- 8.84 FIB 规则——插入条目 iii：linux/net/ipv4/fib_rules.c 606
-- 8.85 FIB 规则——插入条目 iv：linux/net/ipv4/fib_rules.c 607
-- 8.86 FIB 规则——插入条目 v：linux/net/ipv4/fib_rules.c 608
-- 8.87 FIB 规则——插入条目 vi：linux/net/ipv4/fib_rules.c 609
-- 8.88 FIB 规则——删除条目 i：linux/net/ipv4/fib_rules.c 610
-- 8.89 FIB 规则——删除条目 ii：linux/net/ipv4/fib_rules.c 610
-- 8.90 FIB 规则——删除条目 iii：linux/net/ipv4/fib_rules.c 611
+
+- 8.15 FIB 结束——检查地址合理 ii：`linux/net/ipv4/fib_frontend.c` 559
+
+- 8.16 FIB 结束——ioctl 处理程序：`linux/net/ipv4/fib_frontend.c` 560
+
+- 8.17 FIB 结束——路由查找/添加/删除：`linux/net/ipv4/fib_frontend.c` 561
+
+- 8.18 FIB 结束——转储 FIB：`linux/net/ipv4/fib_frontend.c` 562
 
 
 
+- 8.19 FIB 结束——内核间路由消息：`linux/net/ipv4/fib_frontend.c` 563
 
+- 8.20 FIB 结束——内核间路由消息：`linux/net/ipv4/fib_frontend.c` 563
+
+- 8.21 FIB 结束——内核间路由消息：`linux/net/ipv4/fib_frontend.c` 564
+
+- 8.22 FIB 结束——按接口添加：`linux/net/ipv4/fib_frontend.c` 564
+
+- 8.23 FIB 结束——按接口删除 i：`linux/net/ipv4/fib_frontend.c` 565
+
+- 8.24 FIB 结束——按接口删除 ii：`linux/net/ipv4/fib_frontend.c` 565
+
+- 8.25 FIB 结束——事件处理：`linux/net/ipv4/fib_frontend.c` 566
+
+- 8.26 FIB 结束——事件处理：`linux/net/ipv4/fib_frontend.c` 566
+
+- 8.27 FIB 结束——初始化：`linux/net/ipv4/fib_frontend.c` 567
+
+- 8.28 FIB 语义——遍历 FIB：`linux/net/ipv4/fib_semantics.c` 568
+
+- 8.29 FIB 语义——路由属性：`linux/net/ipv4/fib_semantics.c` 568
+
+- 8.30 FIB 语义——路由属性：`linux/net/ipv4/fib_semantics.c` 569
+
+- 8.31 FIB 语义——释放跳信息：`linux/net/ipv4/fib_semantics.c` 569
+
+- 8.32 FIB 语义——查找：`linux/net/ipv4/fib_semantics.c` 570
+
+- 8.33 FIB 语义——设置默认：`linux/net/ipv4/fib_semantics.c` 571
+
+- 8.34 FIB 语义——添加下跳并获取：`linux/net/ipv4/fib_semantics.c` 571
+
+- 8.35 FIB 语义——下跳匹配：`linux/net/ipv4/fib_semantics.c` 572
+
+- 8.36 FIB 语义——下跳匹配：`linux/net/ipv4/fib_semantics.c` 573
+
+- 8.37 FIB 语义——大局：`linux/net/ipv4/fib_semantics.c` 573
+
+- 8.38 FIB 语义——检查下跳：`linux/net/ipv4/fib_semantics.c` 574
+
+- 8.39 FIB 语义——检查下跳：`linux/net/ipv4/fib_semantics.c` 575
+
+- 8.40 FIB 语义——创建条目 i：`linux/net/ipv4/fib_semantics.c` 576
+
+- 8.41 FIB 语义——创建条目 i：`linux/net/ipv4/fib_semantics.c` 576
+
+- 8.42 FIB 语义——创建条目 ii：`linux/net/ipv4/fib_semantics.c` 577
+
+- 8.43 FIB 语义——创建条目 iii：`linux/net/ipv4/fib_semantics.c` 578
+
+- 8.44 FIB 语义——创建条目 iv：`linux/net/ipv4/fib_semantics.c` 578
+
+- 8.45 FIB 语义——合理匹配？`linux/net/ipv4/fib_semantics.c` 579
+
+- 8.46 FIB 语义——合理匹配？`linux/net/ipv4/fib_semantics.c` 580
+
+- 8.47 FIB 语义——转储工具 i：`linux/net/ipv4/fib_semantics.c` 580
+
+- 8.48 FIB 语义——转储工具 ii：`linux/net/ipv4/fib_semantics.c` 580
+
+- 8.49 FIB 语义——转储工具 iii：`linux/net/ipv4/fib_semantics.c` 581
+
+- 8.50 FIB 语义——转换 RT 请求：`linux/net/ipv4/fib_semantics.c` 582
+
+- 8.51 FIB 语义——导出到 RT 条目 i：`linux/net/ipv4/fib_semantics.c` 583
+
+- 8.52 FIB 语义——导出到 RT 条目 ii：`linux/net/ipv4/fib_semantics.c` 584
+
+- 8.53 FIB 语义——地址或接口关闭时：`linux/net/ipv4/fib_semantics.c` 585
+
+- 8.54 FIB 语义——地址或接口关闭时：`linux/net/ipv4/fib_semantics.c` 585
+
+- 8.55 FIB 语义——地址或接口开启时：`linux/net/ipv4/fib_semantics.c` 586
+
+- 8.56 FIB 语义——多路径情况：`linux/net/ipv4/fib_semantics.c` 587
+
+- 8.57 FIB 语义——多路径情况 ii：`linux/net/ipv4/fib_semantics.c` 587
+
+- 8.58 FIB 语义——PROC FS 接口：`linux/net/ipv4/fib_semantics.c` 588
+
+- 8.59 FIB 规则——全局：`linux/net/ipv4/fib_rules.c` 589
+
+- 8.60 FIB 规则——i：`linux/net/ipv4/fib_rules.c` 590
+
+- 8.61 FIB 规则——工具：`linux/net/ipv4/fib_rules.c` 590
+
+- 8.62 FIB 规则——新规则：`linux/net/ipv4/fib_rules.c` 591
+
+- 8.63 FIB 规则——新规则：`linux/net/ipv4/fib_rules.c` 591
+
+- 8.64 FIB 规则——新规则：`linux/net/ipv4/fib_rules.c` 592
+
+- 8.65 FIB 规则——工具：`linux/net/ipv4/fib_rules.c` 592
+
+- 8.66 FIB 规则——挂：`linux/net/ipv4/fib_rules.c` 593
+
+- 8.67 FIB 规则——查找：`linux/net/ipv4/fib_rules.c` 593
+
+- 8.68 FIB 规则——查找：`linux/net/ipv4/fib_rules.c` 594
+
+- 8.69 FIB 规则——初始：`linux/net/ipv4/fib_rules.c` 595
+
+- 8.70 FIB 规则——初始化：`linux/net/ipv4/fib_rules.c` 595
+
+- 8.71 FIB 规则——初始化：`linux/net/ipv4/fib_rules.c` 596
+
+- 8.72 FIB 规则——类型：`linux/net/ipv4/fib_rules.c` 597
+
+- 8.73 FIB 规则——类型：`linux/net/ipv4/fib_rules.c` 597
+
+- 8.74 FIB 规则——内：`linux/net/ipv4/fib_rules.c` 598
+
+- 8.75 FIB 规则——内：`linux/net/ipv4/fib_rules.c` 598
+
+- 8.76 FIB 规则——内：`linux/net/ipv4/fib_rules.c` 599
+
+- 8.77 FIB 规则——区域函数：`linux/net/ipv4/fib_rules.c` 600
+
+- 8.78 FIB 规则——哈希函数：`linux/net/ipv4/fib_rules.c` 601
+
+- 8.79 FIB 规则——死条目：`linux/net/ipv4/fib_rules.c` 602
+
+- 8.80 FIB 规则——选择条目：`linux/net/ipv4/fib_rules.c` 603
+
+- 8.81 FIB 规则——选择条目：`linux/net/ipv4/fib_rules.c` 604
+
+- 8.82 FIB 规则——插入条目 i：`linux/net/ipv4/fib_rules.c` 605
+
+- 8.83 FIB 规则——插入条目 ii：`linux/net/ipv4/fib_rules.c` 605
+
+- 8.84 FIB 规则——插入条目 iii：`linux/net/ipv4/fib_rules.c` 606
+
+- 8.85 FIB 规则——插入条目 iv：`linux/net/ipv4/fib_rules.c` 607
+
+- 8.86 FIB 规则——插入条目 v：`linux/net/ipv4/fib_rules.c` 608
+
+- 8.87 FIB 规则——插入条目 vi：`linux/net/ipv4/fib_rules.c` 609
+
+- 8.88 FIB 规则——删除条目 i：`linux/net/ipv4/fib_rules.c` 610
+
+- 8.89 FIB 规则——删除条目 ii：`linux/net/ipv4/fib_rules.c` 610
+
+- 8.90 FIB 规则——删除条目 iii：`linux/net/ipv4/fib_rules.c` 611
 
 # 图表列表 xxxv
 
-- 8.91 通过哈希快速访问 FIB—刷新条目：linux/net/ipv4/fib_hash.c 612
-- 8.92 访问 FIB—PROC FS 访问：linux/net/ipv4/fib_hash.c 612
-- 8.93 访问 FIB—RT 访问 i：linux/net/ipv4/fib_hash.c 613
-- 8.94 访问 FIB—RT 访问 ii：linux/net/ipv4/fib_hash.c 614
-- 8.95 访问 FIB—RT 访问 iii：linux/net/ipv4/fib_hash.c 614
-- 8.96 访问 FIB—RT 访问 iv：linux/net/ipv4/fib_hash.c 615
-- 8.97 访问 FIB—初始化：linux/net/ipv4/fib_hash.c 615
+
+
+# xxx 图表列表
+
+- 8.91 通过哈希快速访问 FIB—刷新条目：`linux/net/ipv4/fib_hash.c` 612
+- 8.92 访问 FIB—PROC FS 访问：`linux/net/ipv4/fib_hash.c` 612
+- 8.93 访问 FIB—RT 访问 i：`linux/net/ipv4/fib_hash.c` 613
+- 8.94 访问 FIB—RT 访问 ii：`linux/net/ipv4/fib_hash.c` 614
+- 8.95 访问 FIB—RT 访问 iii：`linux/net/ipv4/fib_hash.c` 614
+- 8.96 访问 FIB—RT 访问 iv：`linux/net/ipv4/fib_hash.c` 615
+- 8.97 访问 FIB—初始化：`linux/net/ipv4/fib_hash.c` 615
 - 8.98 IGMP 618
 - 8.99 PIM SM 619
-- 8.100 路由接口 i：linux/include/net/route.h 625
-- 8.101 路由接口 ii：linux/include/net/route.h 626
-- 8.102 路由接口 iii：linux/include/net/route.h 626
-- 8.103 基础路由维护：linux/net/ipv4/route.c 627
-- 8.104 基础路由维护操作：linux/net/ipv4/route.c 628
-- 8.105 路由维护 API：linux/net/core/rtnetlink.c 628
-- 8.106 路由 API 哈希键：linux/include/net/route.h 629
-- 8.107 路由 API 表：linux/include/net/route.h 629
-- 8.108 路由输出查找：linux/net/ipv4/route.c 630
-- 8.109 路由查找 i—源情况：linux/net/ipv4/route.c 631
-- 8.110 路由查找 ii—关闭情况：linux/net/ipv4/route.c 632
-- 8.111 路由查找—环回缓存：linux/net/ipv4/route.c 633
-- 8.112 路由查找—全 FIB 查找：linux/net/ipv4/route.c 633
-- 8.113 路由查找—边界情况：linux/net/ipv4/route.c 634
-- 8.114 路由路由—边界请求：linux/net/ipv4/route.c 634
-- 8.115 路由路由—请求请求：linux/net/ipv4/route.c 634
-- 8.116 路由路由请求—清理引用 (put)：linux/net/ipv4/route.c 635
-- 8.117 路由路由请求—清理引用 (put)：linux/net/ipv4/route.c 636
+- 8.100 路由接口 i：`linux/include/net/route.h` 625
+- 8.101 路由接口 ii：`linux/include/net/route.h` 626
+- 8.102 路由接口 iii：`linux/include/net/route.h` 626
+- 8.103 基础路由维护：`linux/net/ipv4/route.c` 627
+- 8.104 基础路由维护操作：`linux/net/ipv4/route.c` 628
+- 8.105 路由维护 API：`linux/net/core/rtnetlink.c` 628
+- 8.106 路由 API 哈希键：`linux/include/net/route.h` 629
+- 8.107 路由 API 表：`linux/include/net/route.h` 629
+- 8.108 路由输出查找：`linux/net/ipv4/route.c` 630
+- 8.109 路由查找 i—源情况：`linux/net/ipv4/route.c` 631
+- 8.110 路由查找 ii—关闭情况：`linux/net/ipv4/route.c` 632
+- 8.111 路由查找—环回缓存：`linux/net/ipv4/route.c` 633
+- 8.112 路由查找—全 FIB 查找：`linux/net/ipv4/route.c` 633
+- 8.113 路由查找—边界情况：`linux/net/ipv4/route.c` 634
+- 8.114 路由路由—边界请求：`linux/net/ipv4/route.c` 634
+- 8.115 路由路由—请求请求：`linux/net/ipv4/route.c` 634
+- 8.116 路由路由请求—清理引用 (put)：`linux/net/ipv4/route.c` 635
+- 8.117 路由路由请求—清理引用 (put)：`linux/net/ipv4/route.c` 636
 - 9.1 保证有界延迟和利用率 647
 - 9.2 网络层次结构 649
 - 9.3 将流量混合到单根线路上 650
@@ -317,373 +429,430 @@ Igor Fayberg, Hui-Lan Lu, and Lawrence Gabuz ISBN: 0-471-35644-1
 - 9.9 qdisc 调调用图结构 663
 - 9.10 队列规则细粒度结构—通过过滤器进行分类 665
 - 9.11 队列规则应用过滤器 666
-- 9.12 分类器：linux/net/sched/cls_api.c 666
+- 9.12 分类器：`linux/net/sched/cls_api.c` 666
 
 # xxx 图表列表
 
-- 9.13 分类器 i：linux/net/sched/cls.api.c 667
-- 9.14 分类器 ii：linux/net/sched/cls.api.c 667
-- 9.15 分类器 iii：linux/net/sched/cls.api.c 668
-- 9.16 分类器 iv：linux/net/sched/cls.api.c 668
-- 9.17 分类器 v：linux/net/sched/cls.api.c 669
-- 9.18 分类器 vi：linux/net/sched/cls.api.c 669
-- 9.19 分类器 vii：linux/net/sched/cls.api.c 670
-- 9.20 分类器 viii：linux/net/sched/cls.api.c 671
-- 9.21 分类器 ix：linux/net/sched/cls.api.c 671
-- 9.22 分类器 x：linux/net/sched/cls.api.c 672
-- 9.23 分类器 xi：linux/net/sched/cls.api.c 672
-- 9.24 分类器—dump 输出：linux/net/sched/cls.api.c 673
-- 9.25 分类器—dump 输出：linux/net/sched/cls.api.c 673
-- 9.26 分类器—dump 输出：linux/net/sched/cls.api.c 674
-- 9.27 分类器—初始化：linux/net/sched/cls_u32.c 675
-- 9.28 通用 32 位分类器数据：linux/net/sched/cls_u32.c 675
-- 9.29 API—分类器 i：linux/net/sched/cls_u32.c 676
-- 9.30 API—分类器 ii：linux/net/sched/cls_u32.c 677
-- 9.31 API—查找函数：linux/net/sched/cls_u32.c 678
-- 9.32 API—杂项支持：linux/net/sched/cls_u32.c 679
-- 9.33 API—初始化：linux/net/sched/cls_u32.c 679
-- 9.34 API—删除键：linux/net/sched/cls_u32.c 680
-- 9.35 API—删除分类器：linux/net/sched/cls_u32.c 681
-- 9.36 API—新键：linux/net/sched/cls_u32.c 682
-- 9.37 API—设置参数：linux/net/sched/cls_u32.c 683
-- 9.38 API—更改参数：linux/net/sched/cls_u32.c 684
-- 9.39 API—更改参数：linux/net/sched/cls_u32.c 685
-- 9.40 API—遍历树：linux/net/sched/cls_u32.c 686
-- 9.41 API—RTNetlink 通信：linux/net/sched/cls_u32.c 687
-- 9.42 API—TC 操作：linux/net/sched/cls_u32.c 688
-- 9.43 RSVP 打开：linux/net/sched/cls_rvp.h 689
-- 9.44 RSVP—结构：linux/net/sched/cls_rvp.h 690
-- 9.45 RSVP—策略函数：linux/net/sched/cls_rvp.h 690
-- 9.46 RSVP—分类器 i：linux/net/sched/cls_rvp.h 691
-- 9.47 RSVP—分类器 ii：linux/net/sched/cls_rvp.h 692
-- 9.48 RSVP—杂项函数：linux/net/sched/cls_rvp.h 693
-- 9.49 RSVP—删除：linux/net/sched/cls_rvp.h 694
-- 9.50 RSVP—销毁：linux/net/sched/cls_rvp.h 694
-- 9.51 RSVP—通用位：linux/net/sched/cls_rvp.h 695
+- 9.13 分类器 i：`linux/net/sched/cls.api.c` 667
+- 9.14 分类器 ii：`linux/net/sched/cls.api.c` 667
+- 9.15 分类器 iii：`linux/net/sched/cls.api.c` 668
+- 9.16 分类器 iv：`linux/net/sched/cls.api.c` 668
+- 9.17 分类器 v：`linux/net/sched/cls.api.c` 669
+- 9.18 分类器 vi：`linux/net/sched/cls.api.c` 669
+- 9.19 分类器 vii：`linux/net/sched/cls.api.c` 670
+- 9.20 分类器 viii：`linux/net/sched/cls.api.c` 671
+- 9.21 分类器 ix：`linux/net/sched/cls.api.c` 671
+- 9.22 分类器 x：`linux/net/sched/cls.api.c` 672
+- 9.23 分类器 xi：`linux/net/sched/cls.api.c` 672
+- 9.24 分类器—dump 输出：`linux/net/sched/cls.api.c` 673
+- 9.25 分类器—dump 输出：`linux/net/sched/cls.api.c` 673
+- 9.26 分类器—dump 输出：`linux/net/sched/cls.api.c` 674
+- 9.27 分类器—初始化：`linux/net/sched/cls_u32.c` 675
+- 9.28 通用 32 位分类器数据：`linux/net/sched/cls_u32.c` 675
+- 9.29 API—分类器 i：`linux/net/sched/cls_u32.c` 676
+- 9.30 API—分类器 ii：`linux/net/sched/cls_u32.c` 677
+- 9.31 API—查找函数：`linux/net/sched/cls_u32.c` 678
+- 9.32 API—杂项支持：`linux/net/sched/cls_u32.c` 679
+- 9.33 API—初始化：`linux/net/sched/cls_u32.c` 679
+- 9.34 API—删除键：`linux/net/sched/cls_u32.c` 680
+- 9.35 API—删除分类器：`linux/net/sched/cls_u32.c` 681
+- 9.36 API—新键：`linux/net/sched/cls_u32.c` 682
+- 9.37 API—设置参数：`linux/net/sched/cls_u32.c` 683
+- 9.38 API—更改参数：`linux/net/sched/cls_u32.c` 684
+- 9.39 API—更改参数：`linux/net/sched/cls_u32.c` 685
+- 9.40 API—遍历树：`linux/net/sched/cls_u32.c` 686
+- 9.41 API—RTNetlink 通信：`linux/net/sched/cls_u32.c` 687
+- 9.42 API—TC 操作：`linux/net/sched/cls_u32.c` 688
+- 9.43 RSVP 打开：`linux/net/sched/cls_rvp.h` 689
+- 9.44 RSVP—结构：`linux/net/sched/cls_rvp.h` 690
+- 9.45 RSVP—策略函数：`linux/net/sched/cls_rvp.h` 690
+- 9.46 RSVP—分类器 i：`linux/net/sched/cls_rvp.h` 691
+- 9.47 RSVP—分类器 ii：`linux/net/sched/cls_rvp.h` 692
+- 9.48 RSVP—杂项函数：`linux/net/sched/cls_rvp.h` 693
+- 9.49 RSVP—删除：`linux/net/sched/cls_rvp.h` 694
+- 9.50 RSVP—销毁：`linux/net/sched/cls_rvp.h` 694
+- 9.51 RSVP—通用位：`linux/net/sched/cls_rvp.h` 695
 
 # 图表列表 xxxvii
 
 | 编号 | 描述 | 页码 |
 | :--- | :--- | :--- |
-| 9.52 | RSVP—回收或生成隧道：linux/net/sched/cls_rvsp.h 696 |
-| 9.53 | RSVP—更改参数 i：linux/net/sched/cls_rvsp.h 697 |
-| 9.54 | RSVP—更改参数 ii：linux/net/sched/cls_rvsp.h 697 |
-| 9.55 | RSVP—更改参数 iii：linux/net/sched/cls_rvsp.h 698 |
-| 9.56 | RSVP—更改参数 iv：linux/net/sched/cls_rvsp.h 699 |
-| 9.57 | RSVP—更改参数 v：linux/net/sched/cls_rvsp.h 700 |
-| 9.58 | RSVP—遍历 RSVP 树：linux/net/sched/cls_rvsp.h 700 |
-| 9.59 | RSVP 分类器 API—结构：linux/net/sched/cls_rvsp.c 701 |
-| 9.60 | 路由分类器 API—结构：linux/net/sched/cls_route.c 701 |
-| 9.61 | 路由分类器 API—包含去的函数：linux/net/sched/cls_route.c 702 |
-| 9.62 | 路由分类器 API—分类器函数 i：linux/net/sched/cls_route.c 703 |
-| 9.63 | 路由分类器 API—分类器函数 ii：linux/net/sched/cls_route.c 704 |
-| 9.64 | 路由分类器 API—分类器函数 iii：linux/net/sched/cls_route.c 705 |
-| 9.65 | 路由分类器 API—杂项：linux/net/sched/cls_route.c 705 |
-| 9.66 | 路由分类器 API—删除分类器：linux/net/sched/cls_route.c 706 |
-| 9.67 | 路由分类器 API—删除条目：linux/net/sched/cls_route.c 707 |
-| 9.68 | 防火墙分类器 API—结构：linux/net/sched/cls_fw.c 708 |
-| 9.69 | 防火墙分类器 API—分类器：linux/net/sched/cls_fw.c 708 |
-| 9.70 | 防火墙分类器 API—杂项：linux/net/sched/cls_fw.c 709 |
-| 9.71 | 防火墙分类器 API—删除分类器：linux/net/sched/cls_fw.c 710 |
-| 9.72 | 防火墙分类器 API—删除分类器：linux/net/sched/cls_fw.c 710 |
-| 9.73 | 防火墙分类器 API—更改分类器：linux/net/sched/cls_fw.c 711 |
-| 9.74 | 防火墙分类器 API—更改分类器 ii：linux/net/sched/cls_fw.c 711 |
-| 9.75 | 防火墙分类器 API—更改分类器 iii：linux/net/sched/cls_fw.c 712 |
-| 9.76 | 防火墙分类器 API—更改分类器 iv：linux/net/sched/cls_fw.c 712 |
-| 9.77 | TC 分类器 API—定义：linux/net/sched/cls_tindex.c 713 |
-| 9.78 | TC 分类器 API—查找：linux/net/sched/cls_tindex.c 714 |
-| 9.79 | TC 分类器 API—分类器：linux/net/sched/cls_tindex.c 715 |
-| 9.80 | TC 分类器 API—杂项：linux/net/sched/cls_tindex.c 715 |
-| 9.81 | TC 分类器 API—删除分类器：linux/net/sched/cls_tindex.c 716 |
-| 9.82 | TC 分类器 API—销分类器：linux/net/sched/cls_tindex.c 717 |
-| 9.83 | TC 分类器 API—更改分类器 i：linux/net/sched/cls_tindex.c 717 |
-| 9.84 | TC 分类器 API—更改分类器 ii：linux/net/sched/cls_tindex.c 718 |
-| 9.85 | TC 分类器 API—更改分类器 iii：linux/net/sched/cls_tindex.c 719 |
-| 9.86 | TC 分类器 API—更改分类器 iv：linux/net/sched/cls_tindex.c 719 |
-| 9.87 | 调度器 API i：linux/net/sched/sch_api.c 721 |
-| 9.88 | 调度器 API—辅助例程：linux/net/sched/sch_api.c 722 |
-| 9.89 | 调度器 API—所有队列规则：linux/net/sched/sch_api.c 723
+| 9.52 | RSVP—回收或生成隧道：`linux/net/sched/cls_rvsp.h` 696 |
+| 9.53 | RSVP—更改参数 i：`linux/net/sched/cls_rvsp.h` 697 |
+| 9.54 | RSVP—更改参数 ii：`linux/net/sched/cls_rvsp.h` 697 |
+| 9.55 | RSVP—更改参数 iii：`linux/net/sched/cls_rvsp.h` 698 |
+| 9.56 | RSVP—更改参数 iv：`linux/net/sched/cls_rvsp.h` 699 |
+| 9.57 | RSVP—更改参数 v：`linux/net/sched/cls_rvsp.h` 700 |
+| 9.58 | RSVP—遍历 RSVP 树：`linux/net/sched/cls_rvsp.h` 700 |
+| 9.59 | RSVP 分类器 API—结构：`linux/net/sched/cls_rvsp.c` 701 |
+| 9.60 | 路由分类器 API—结构：`linux/net/sched/cls_route.c` 701 |
+
+
+
+| 9.61 | 路由分类器 API—包含去的函数：`/linux/net/sched/cls_route.c` 702 |
+
+| 9.62 | 路由分类器 API—分类器函数 i：`/linux/net/sched/cls_route.c` 703 |
+
+| 9.63 | 路由分类器 API—分类器函数 ii：`/linux/net/sched/cls_route.c` 704 |
+
+| 9.64 | 路由分类器 API—分类器函数 iii：`/linux/net/sched/cls_route.c` 705 |
+
+| 9.65 | 路由分类器 API—杂项：`/linux/net/sched/cls_route.c` 705 |
+
+| 9.66 | 路由分类器 API—删除分类器：`/linux/net/sched/cls_route.c` 706 |
+
+| 9.67 | 路由分类器 API—删除条目：`/linux/net/sched/cls_route.c` 707 |
+
+| 9.68 | 防火墙分类器 API—结构：`/linux/net/sched/cls_fw.c` 708 |
+
+| 9.69 | 防火墙分类器 API—分类器：`/linux/net/sched/cls_fw.c` 708 |
+
+| 9.70 | 防火墙分类器 API—杂项：`/linux/net/sched/cls_fw.c` 709 |
+
+| 9.71 | 防火墙分类器 API—删除分类器：`/linux/net/sched/cls_fw.c` 710 |
+
+| 9.72 | 防火墙分类器 API—删除分类器：`/linux/net/sched/cls_fw.c` 710 |
+
+| 9.73 | 防火墙分类器 API—更改分类器：`/linux/net/sched/cls_fw.c` 711 |
+
+| 9.74 | 防火墙分类器 API—更改分类器 ii：`/linux/net/sched/cls_fw.c` 711 |
+
+| 9.75 | 防火墙分类器 API—更改分类器 iii：`/linux/net/sched/cls_fw.c` 712 |
+
+| 9.76 | 防火墙分类器 API—更改分类器 iv：`/linux/net/sched/cls_fw.c` 712 |
+
+| 9.77 | TC 分类器 API—定义：`/linux/net/sched/cls_tindex.c` 713 |
+
+| 9.78 | TC 分类器 API—查找：`/linux/net/sched/cls_tindex.c` 714 |
+
+| 9.79 | TC 分类器 API—分类器：`/linux/net/sched/cls_tindex.c` 715 |
+
+| 9.80 | TC 分类器 API—杂项：`/linux/net/sched/cls_tindex.c` 715 |
+
+| 9.81 | TC 分类器 API—删除分类器：`/linux/net/sched/cls_tindex.c` 716 |
+
+| 9.82 | TC 分类器 API—销分类器：`/linux/net/sched/cls_tindex.c` 717 |
+
+| 9.83 | TC 分类器 API—更改分类器 i：`/linux/net/sched/cls_tindex.c` 717 |
+
+| 9.84 | TC 分类器 API—更改分类器 ii：`/linux/net/sched/cls_tindex.c` 718 |
+
+| 9.85 | TC 分类器 API—更改分类器 iii：`/linux/net/sched/cls_tindex.c` 719 |
+
+| 9.86 | TC 分类器 API—更改分类器 iv：`/linux/net/sched/cls_tindex.c` 719 |
+
+| 9.87 | 调度器 API i：`/linux/net/sched/sch_api.c` 721 |
+
+| 9.88 | 调度器 API—辅助例程：`/linux/net/sched/sch_api.c` 722 |
+
+| 9.89 | 调度器 API—所有队列规则：`/linux/net/sched/sch_api.c` 723
 
 # xxxiii 图表列表
 
 | 编号 | 描述 | 页码 |
 | :--- | :--- | :--- |
-| 9.90 | 调度器 API—注册/注销队列规则：linux/net/sched/sch_api.c 723 |
-| 9.91 | 调度器 API—按句柄查找队列规则：linux/net/sched/sch_api.c 724 |
-| 9.92 | 调度器 API—按名称查找队列规则：linux/net/sched/sch_api.c 724 |
-| 9.93 | 调度器 API—按速率查找队列规则：linux/net/sched/sch_api.c 725 |
-| 9.94 | 调度器 API—空速率表条目：linux/net/sched/sch_api.c 725 |
-| 9.95 | 调度器 API—为唯一句柄分配队列规则：linux/net/sched/sch_api.c 726 |
-| 9.96 | 调度器 API—将队列规则关联到设备：linux/net/sched/sch_api.c 726 |
-| 9.97 | 调度器 API—将子队列规则关联到父类：linux/net/sched/sch_api.c 727 |
-| 9.98 | 调度器 API—分配并初始化新队列规则：linux/net/sched/sch_api.c 728 |
-| 9.99 | 调度器 API—分配并初始化新队列规则：linux/net/sched/sch_api.c 728 |
-| 9.100 | 调度器 API—分配并初始化新队列规则：linux/net/sched/sch_api.c 729 |
-| 9.101 | 调度器 API—修改新队列规则：linux/net/sched/sch_api.c 729 |
-| 9.102 | 调度器 API—检测队列操作图中的循环：linux/net/sched/sch_api.c 730 |
-| 9.103 | 调度器 API—销毁队列规则条目：linux/net/sched/sch_api.c 731 |
-| 9.104 | 调度器 API—销毁队列规则条目：linux/net/sched/sch_api.c 731 |
-| 9.105 | 调度器 API—更改队列规则：linux/net/sched/sch_api.c 732 |
-| 9.106 | 调度器 API—更改队列规则：linux/net/sched/sch_api.c 733 |
-| 9.107 | 调度器 API—更改队列规则：linux/net/sched/sch_api.c 734 |
-| 9.108 | 调度器 API—通过 RT 报告：linux/net/sched/sch_api.c 735 |
-| 9.109 | 调度器 API—通知 RTNetlink 消息：linux/net/sched/sch_api.c 735 |
-| 9.110 | 调度器 API—通知 RTNetlink：linux/net/sched/sch_api.c 736 |
-| 9.111 | 调度器 API—向 RT 导出统计信息：linux/net/sched/sch_api.c 736 |
-| 9.112 | 调度器 API—流量控制：linux/net/sched/sch_api.c 737 |
-| 9.113 | 调度器 API—流量控制：linux/net/sched/sch_api.c 738 |
-| 9.114 | 调度器 API—流量控制：linux/net/sched/sch_api.c 738 |
-| 9.115 | 调度器 API—流量控制：linux/net/sched/sch_api.c 739 |
-| 9.116 | 调度器 API—向 RTNetlink 通知流量控制：linux/net/sched/sch_api.c 739 |
-| 9.117 | 调度器 API—包调度：linux/net/sched/sch_api.c 740 |
-| 9.118 | 调度器 API—包调度滴答：linux/net/sched/sch_api.c 741 |
-
-
-
-
+| 9.90 | 调度器 API—注册/注销队列规则：`/linux/net/sched/sch_api.c` 723 |
+| 9.91 | 调度器 API—按句柄查找队列规则：`/linux/net/sched/sch_api.c` 724 |
+| 9.92 | 调度器 API—按名称查找队列规则：`/linux/net/sched/sch_api.c` 724 |
+| 9.93 | 调度器 API—按速率查找队列规则：`/linux/net/sched/sch_api.c` 725 |
+| 9.94 | 调度器 API—空速率表条目：`/linux/net/sched/sch_api.c` 725 |
+| 9.95 | 调度器 API—为唯一句柄分配队列规则：`/linux/net/sched/sch_api.c` 726 |
+| 9.96 | 调度器 API—将队列规则关联到设备：`/linux/net/sched/sch_api.c` 726 |
+| 9.97 | 调度器 API—将子队列规则关联到父类：`/linux/net/sched/sch_api.c` 727 |
+| 9.98 | 调度器 API—分配并初始化新队列规则：`/linux/net/sched/sch_api.c` 728 |
+| 9.99 | 调度器 API—分配并初始化新队列规则：`/linux/net/sched/sch_api.c` 728 |
+| 9.100 | 调度器 API—分配并初始化新队列规则：`/linux/net/sched/sch_api.c` 729 |
+| 9.101 | 调度器 API—修改新队列规则：`/linux/net/sched/sch_api.c` 729 |
+| 9.102 | 调度器 API—检测队列操作图中的循环：`/linux/net/sched/sch_api.c` 730 |
+| 9.103 | 调度器 API—销毁队列规则条目：`/linux/net/sched/sch_api.c` 731 |
+| 9.104 | 调度器 API—销毁队列规则条目：`/linux/net/sched/sch_api.c` 731 |
+| 9.105 | 调度器 API—更改队列规则：`/linux/net/sched/sch_api.c` 732 |
+| 9.106 | 调度器 API—更改队列规则：`/linux/net/sched/sch_api.c` 733 |
+| 9.107 | 调度器 API—更改队列规则：`/linux/net/sched/sch_api.c` 734 |
+| 9.108 | 调度器 API—通过 RT 报告：`/linux/net/sched/sch_api.c` 735 |
+| 9.109 | 调度器 API—通知 RTNetlink 消息：`/linux/net/sched/sch_api.c` 735 |
+| 9.110 | 调度器 API—通知 RTNetlink：`/linux/net/sched/sch_api.c` 736 |
+| 9.111 | 调度器 API—向 RT 导出统计信息：`/linux/net/sched/sch_api.c` 736 |
+| 9.112 | 调度器 API—流量控制：`/linux/net/sched/sch_api.c` 737 |
+| 9.113 | 调度器 API—流量控制：`/linux/net/sched/sch_api.c` 738 |
+| 9.114 | 调度器 API—流量控制：`/linux/net/sched/sch_api.c` 738 |
+| 9.115 | 调度器 API—流量控制：`/linux/net/sched/sch_api.c` 739 |
+| 9.116 | 调度器 API—向 RTNetlink 通知流量控制：`/linux/net/sched/sch_api.c` 739 |
+| 9.117 | 调度器 API—包调度：`/linux/net/sched/sch_api.c` 740 |
+| 9.118 | 调度器 API—包调度滴答：`/linux/net/sched/sch_api.c` 741
 
 # 图表列表 xxx
 
 | --- | --- |
 | --- | --- |
-| 9.119 调度器 API—数据包调度计时: linux/net/sched/sch_api.c | 742 |
-| 9.120 调度器 API—数据调度初始化: linux/net/sched/sch_api.c | 742 |
-| 9.121 调度器 API—数据调度初始化: linux/net/sched/sch_api.c | 743 |
-| 9.122 调度器 API—数据调度初始化: linux/net/sched/sch_api.c | 743 |
-| 9.123 数据包调度器接口—QDisc 遍历器定义: linux/include/net/pkt_sched.h | 744 |
-| 9.124 数据包调度器接口—QDisc 类操作: linux/include/net/pkt_sched.h | 745 |
-| 9.125 调度器接口—QDisc 操作: linux/include/net/pkt_sched.h | 745 |
-| 9.126 数据包调度器接口—QDisc 结构: linux/include/net/pkt_sched.h | 746 |
-| 9.127 数据包调度器接口—QDisc 操作: linux/include/net/pkt_sched.h | 746 |
-| 9.128 数据包调度器接口—计时注释: linux/include/net/pkt_sched.h | 747 |
-| 9.129 调度器 API ii: linux/net/sched/sch_api.c | 748 |
-| 9.130 调度器 API—更多讨论: linux/net/sched/sch_api.c | 748 |
-| 9.131 调度器 API—更多讨论: linux/net/sched/sch_api.c | 749 |
-| 9.132 调度器 API—更多讨论: linux/net/sched/sch_api.c | 749 |
-| 9.133 调度器 API—更多讨论: linux/net/sched/sch_api.c | 749 |
-| 9.134 通用调度器—队列规则行注释: linux/net/sched/sch_generic.c | 750 |
-| 9.135 通用调度器 i: linux/net/sched/sch_generic.c | 751 |
-| 9.136 通用调度器 ii: linux/net/sched/sch_generic.c | 752 |
-| 9.137 通用调度器 ii: linux/net/sched/sch_generic.c | 752 |
-| 9.138 通用调度器—看门狗定时器: linux/net/sched/sch_generic.c | 753 |
-| 9.139 通用调度器—noop调度器: linux/net/sched/sch_generic.c | 754 |
-| 9.140 通用调度器—操作操作: linux/net/sched/sch_generic.c | 755 |
-| 9.141 通用调度器—PFIFO 操作: linux/net/sched/sch_generic.c | 756 |
-| 9.142 通用调度器—PFIFO 声明: linux/net/sched/sch_generic.c | 756 |
-| 9.143 通用调度器—PFIFO 声明: linux/net/sched/sch_generic.c | 757 |
-| 9.144 通用调度器—创建默认项: linux/net/sched/sch_generic.c | 758 |
-| 9.145 CBQ—初始注释 i: linux/net/sched/sch_cbq.c | 758 |
-| 9.146 CBQ—初始注释 ii: linux/net/sched/sch_cbq.c | 759 |
-| 9.147 CBQ—类结构定义 i: linux/net/sched/sch_cbq.c | 759 |
-| 9.148 CBQ—类结构定义 ii: linux/net/sched/sch_cbq.c | 760 |
-| 9.149 CBQ—类结构定义 ii: linux/net/sched/sch_cbq.c | 760 |
-| 9.150 CBQ-类结构定义 iii: linux/net/sched/sch/cbq.c | 760 |
-| 9.151 CBQ-类结构定义 iv: linux/net/sched/sch/cbq.c | 761 |
-| 9.152 CBQ—调度数据转发: linux/net/sched/sch/cbq.c | 761 |
-| 9.153 CBQ-分类器 i: linux/net/sched/sch/cbq.c | 762 |
-| 9.154 CBQ-分类器 ii: linux/net/sched/sch/cbq.c | 763 |
-| 9.155 CBQ-重分类器: 一个类: linux/net/sched/sch/cbq.c | 763 |
-| 9.156 CBQ—激活或去激活一个类: linux/net/sched/sch/cbq.c | 764 |
-| 9.157 CBQ—激活或去激活一个类: linux/net/sched/sch/cbq.c | 764 |
-| 9.158 CBQ—标记顶层: linux/net/sched/sch/cbq.c | 765 |
-| 9.159 CBQ—入队: linux/net/sched/sch/cbq.c | 765 |
-| 9.160 CBQ—超限: linux/net/sched/sch/cbq.c | 766 |
-| 9.161 CBQ—超限: linux/net/sched/sch/cbq.c | 768 |
-| 9.162 CBQ—超限: 重分类: linux/net/sched/sch/cbq.c | 768 |
-| 9.163 CBQ—超限: 延迟: linux/net/sched/sch/cbq.c | 768 |
-| 9.164 CBQ—超限: 低优先级或丢弃: linux/net/sched/sch/cbq.c | 769 |
-| 9.165 CBQ—看门狗定时器: linux/net/sched/sch/cbq.c | 770 |
-| 9.166 CBQ—惩罚: linux/net/sched/sch/cbq.c | 770 |
-| 9.167 CBQ—惩罚: linux/net/sched/sch/cbq.c | 771 |
-| 9.168 CBQ—重塑: linux/net/sched/sch/cbq.c | 771 |
-| 9.169 CBQ—更新顶层占用: linux/net/sched/sch/cbq.c | 772 |
-| 9.170 CBQ—更新层占用: linux/net/sched/sch/cbq.c | 773 |
-| 9.171 CBQ—更新层占用 ii: linux/net/sched/sch/cbq.c | 773 |
-| 9.172 CBQ—更新层占用 iii: linux/net/sched/sch/cbq.c | 774 |
-| 9.173 CBQ—动作: linux/net/sched/sch/cbq.c | 774 |
-| 9.174 CBQ—按优先级出队 i: linux/net/sched/sch/cbq.c | 775 |
-| 9.175 CBQ—按优先级出队 ii: linux/net/sched/sch/cbq.c | 776 |
-| 9.176 CBQ—按优先级出队 iii: linux/net/sched/sch/cbq.c | 777 |
-| 9.177 CBQ—按优先级出队 iv: linux/net/sched/sch/cbq.c | 777 |
-| 9.178 CBQ—出队 i: linux/net/sched/sch/cbq.c | 778 |
-| 9.179 CBQ—主出队 i: linux/net/sched/sch/cbq.c | 778 |
-| 9.180 CBQ—主出队: linux/net/sched/sch/cbq.c | 779 |
-| 9.181 CBQ—主出队函数: linux/net/sched/sch/cbq.c | 779 |
-| 9.182 CBQ—维护函数: linux/net/sched/sch/cbq.c | 780 |
-| 9.183 CBQ—初始化 i: linux/net/sched/sch/cbq.c | 780 |
-| 9.184 CBQ—初始化 ii: linux/net/sched/sch/cbq.c | 781 |
-| 9.185 CBQ—初始化 iii: linux/net/sched/sch/cbq.c | 781 |
-| 9.186 CBQ—移植和修剪类 i: linux/net/sched/sch/cbq.c | 782 |
-| 9.187 CBQ—移植和修剪类 ii: linux/net/sched/sch/cbq.c | 782 |
-| 9.188 CBQ—移植和修剪类 iii: linux/net/sched/sch/cbq.c | 783 |
-| 9.189 CBQ: linux/net/sched/sch/cbq.c | 783 |
-| 9.190 CBQ: linux/net/sched/sch/cbq.c | 784 |
-| 9.191 CBQ: linux/net/sched/sch/cbq.c | 785 |
-| 9.192 CBQ: linux/net/sched/sch/cbq.c | 786 |
-| 9.193 CBQ: linux/net/sched/sch/cbq.c | 787 |
-| 9.194 从 QDisc 中删除 CBQ: linux/net/sched/sch/cbq.c | 787 |
-| 9.195 Clark/Shenker/Zhang 调度: linux/net/sched/sch_sz.c | 788 |
-| 9.196 CSZ 符号: linux/net/sched/sch_sz.c | 789 |
-| 9.197 CSZ离开时间: linux/net/sched/sch_sz.c | 790 |
-| 9.198 CSZ—轮次: linux/net/sched/sch_sz.c | 790 |
-| 9.199 CSZ—轮次: linux/net/sched/sch_sz.c | 791 |
-| 9.200 CSZ 讨论: linux/net/sched/sch_sz.c | 791 |
-| 9.201 CSZ 讨论: linux/net/sched/sch_sz.c | 792 |
-| 9.202 FIFO 队列数据: linux/net/sched/sch_fifo.c | 792 |
-| 9.203 FIFO 队列入队: linux/net/sched/sch_fifo.c | 793 |
-| 9.204 FIFO 队列重入: linux/net/sched/sch_fifo.c | 793 |
-| 9.205 FIFO 队列出队: linux/net/sched/sch_fifo.c | 793 |
-| 9.206 FIFO 队列丢弃: linux/net/sched/sch_fifo.c | 793 |
-| 9.207 FIFO 队列重置: linux/net/sched/sch_fifo.c | 793 |
-| 9.208 FIFO 队列入队: linux/net/sched/sch_fifo.c | 794 |
-| 9.209 FIFO 队列重入: linux/net/sched/sch_fifo.c | 794 |
-| 9.210 FIFO 队列出队: linux/net/sched/sch_fifo.c | 794 |
-| 9.211 FIFO 队列初始化: linux/net/sched/sch_fifo.c | 794 |
-| 9.212 估计器-通用块注释: linux/net/sched/sch_fifo.c | 795 |
-| 9.213 估计器-数据: linux/net/sched/sch_fifo.c | 796 |
-| 9.214 估计器-运行时: linux/net/sched/sch_fifo.c | 796 |
-| 9.215 估计器-运行时: linux/net/sched/sch_fifo.c | 797 |
-| 9.216 调度器 i: linux/net/sched/sch_fifo.c | 798 |
-| 9.217 调度器 ii: linux/net/sched/sch_fifo.c | 798 |
-| 9.218 调度器 iii: linux/net/sched/sch_fifo.c | 799 |
-| 9.219 调度器 iv: linux/net/sched/sch_fifo.c | 799 |
-| 9.220 调度器 v: linux/net/sched/sch_fifo.c | 799 |
-| 9.221 调度器 vi: linux/net/sched/sch_fifo.c | 800 |
-| 9.222 调度器 vii: linux/net/sched/sch_fifo.c | 801 |
-| 9.223 入口流量数据: linux/net/sched/sch_fifo.c | 801 |
-| 9.224 入口流量树: linux/net/sched/sch_fifo.c | 802 |
-| 9.225 入口流量变化: linux/net/sched/sch_fifo.c | 802 |
-| 9.226 入口流量变化: linux/net/sched/sch_fifo.c | 803 |
-| 9.227 入口流量丢: linux/net/sched/sch_fifo.c | 803 |
-| 9.228 入口流量丢: linux/net/sched/sch_fifo.c | 803 |
-| 9.229 入口流量丢: linux/net/sched/sch_fifo.c | 804 |
-| 9.230 入口流量丢: linux/net/sched/sch_fifo.c | 804 |
-| 9.231 入口流量函数: linux/net/sched/sch_fifo.c | 804 |
-| 9.232 优先级函数: linux/net/sched/sch_fifo.c | 805 |
-| 9.233 优先级: linux/net/sched/sch_fifo.c | 805 |
-| 9.234 优先级: linux/net/sched/sch_fifo.c | 806 |
-| 9.235 优先级: linux/net/sched/sch_fifo.c | 806 |
-| 9.236 优先级: linux/net/sched/sch_fifo.c | 807 |
-| 9.237 优先级: linux/net/sched/sch_fifo.c | 807 |
-| 9.238 优先级: linux/net/sched/sch_fifo.c | 808 |
-| 9.239 优先级: linux/net/sched/sch_fifo.c | 808 |
-| 9.240 优先级: linux/net/sched/sch_fifo.c | 809 |
-| 9.241 优先级: linux/net/sched/sch_fifo.c | 809 |
-| 9.242 优先级: linux/net/sched/sch_fifo.c | 810 |
-| 9.243 优先级: linux/net/sched/sch_fifo.c | 810 |
-| 9.244 优先级: linux/net/sched/sch_fifo.c | 811 |
-| 9.245 优先级: linux/net/sched/sch_fifo.c | 811 |
-| 9.246 优先级: linux/net/sched/sch_fifo.c | 812 |
-| 9.247 优先级: linux/net/sched/sch_fifo.c | 812 |
-| 9.248 优先级: linux/net/sched/sch_fifo.c | 813 |
-| 9.249 优先级: linux/net/sched/sch_fifo.c | 813 |
-| 9.250 优先级: linux/net/sched/sch_fifo.c | 814 |
-| 9.251 优先级: linux/net/sched/sch_fifo.c | 814 |
-| 9.252 优先级: linux/net/sched/sch_fifo.c | 815 |
-| 9.253 优先级: linux/net/sched/sch_fifo.c | 815 |
-| 9.254 优先级: linux/net/sched/sch_fifo.c | 816 |
-| 9.255 优先级: linux/net/sched/sch_fifo.c | 816 |
-| 9.256 优先级: linux/net/sched/sch_fifo.c | 817 |
-| 9.257 优先级: linux/net/sched/sch_fifo.c | 817 |
-| 9.258 优先级: linux/net/sched/sch_fifo.c | 818 |
-| 9.259 优先级: linux/net/sched/sch_fifo.c | 818 |
-| 9.260 优先级: linux/net/sched/sch_fifo.c | 819 |
-| 9.261 优先级: linux/net/sched/sch_fifo.c | 819 |
-| 9.262 优先级: linux/net/sched/sch_fifo.c | 820 |
+| 9.119 调度器 API—数据包调度计时: `/linux/net/sched/sch_api.c` | 742 |
+| 9.120 调度器 API—数据调度初始化: `/linux/net/sched/sch_api.c` | 742 |
+| 9.121 调度器 API—数据调度初始化: `/linux/net/sched/sch_api.c` | 743 |
+| 9.122 调度器 API—数据调度初始化: `/linux/net/sched/sch_api.c` | 743 |
+| 9.123 数据包调度器接口—QDisc 遍历器定义: `/linux/include/net/pkt_sched.h` | 744 |
+| 9.124 数据包调度器接口—QDisc 类操作: `/linux/include/net/pkt_sched.h` | 745 |
+
+
+
+| 9.125 调度器接口—`QDisc` 操作: `linux/include/net/pkt_sched.h` | 745 |
+| 9.126 数据包调度器接口—`QDisc` 结构: `linux/include/net/pkt_sched.h` | 746 |
+| 9.127 数据包调度器接口—`QDisc` 操作: `linux/include/net/pkt_sched.h` | 746 |
+| 9.128 数据包调度器接口—计时注释: `linux/include/net/pkt_sched.h` | 747 |
+| 9.129 调度器 API ii: `linux/net/sched/sch_api.c` | 748 |
+| 9.130 调度器 API—更多讨论: `linux/net/sched/sch_api.c` | 748 |
+| 9.131 调度器 API—更多讨论: `linux/net/sched/sch_api.c` | 749 |
+| 9.132 调度器 API—更多讨论: `linux/net/sched/sch_api.c` | 749 |
+| 9.133 调度器 API—更多讨论: `linux/net/sched/sch_api.c` | 749 |
+| 9.134 通用调度器—队列规则行注释: `linux/net/sched/sch_generic.c` | 750 |
+| 9.135 通用调度器 i: `linux/net/sched/sch_generic.c` | 751 |
+| 9.136 通用调度器 ii: `linux/net/sched/sch_generic.c` | 752 |
+| 9.137 通用调度器 ii: `linux/net/sched/sch_generic.c` | 752 |
+| 9.138 通用调度器—看门狗定时器: `linux/net/sched/sch_generic.c` | 753 |
+| 9.139 通用调度器—noop调度器: `linux/net/sched/sch_generic.c` | 754 |
+| 9.140 通用调度器—操作操作: `linux/net/sched/sch_generic.c` | 755 |
+| 9.141 通用调度器—PFIFO 操作: `linux/net/sched/sch_generic.c` | 756 |
+| 9.142 通用调度器—PFIFO 声明: `linux/net/sched/sch_generic.c` | 756 |
+| 9.143 通用调度器—PFIFO 声明: `linux/net/sched/sch_generic.c` | 757 |
+| 9.144 通用调度器—创建默认项: `linux/net/sched/sch_generic.c` | 758 |
+| 9.145 CBQ—初始注释 i: `linux/net/sched/sch_cbq.c` | 758 |
+| 9.146 CBQ—初始注释 ii: `linux/net/sched/sch_cbq.c` | 759 |
+| 9.147 CBQ—类结构定义 i: `linux/net/sched/sch_cbq.c` | 759 |
+| 9.148 CBQ—类结构定义 ii: `linux/net/sched/sch_cbq.c` | 760 |
+| 9.149 CBQ—类结构定义 ii: `linux/net/sched/sch_cbq.c` | 760 |
+| 9.150 CBQ-类结构定义 iii: `linux/net/sched/sch/cbq.c` | 760 |
+| 9.151 CBQ-类结构定义 iv: `linux/net/sched/sch/cbq.c` | 761 |
+| 9.152 CBQ—调度数据转发: `linux/net/sched/sch/cbq.c` | 761 |
+| 9.153 CBQ-分类器 i: `linux/net/sched/sch/cbq.c` | 762 |
+| 9.154 CBQ-分类器 ii: `linux/net/sched/sch/cbq.c` | 763 |
+| 9.155 CBQ-重分类器: 一个类: `linux/net/sched/sch/cbq.c` | 763 |
+| 9.156 CBQ—激活或去激活一个类: `linux/net/sched/sch/cbq.c` | 764 |
+| 9.157 CBQ—激活或去激活一个类: `linux/net/sched/sch/cbq.c` | 764 |
+| 9.158 CBQ—标记顶层: `linux/net/sched/sch/cbq.c` | 765 |
+| 9.159 CBQ—入队: `linux/net/sched/sch/cbq.c` | 765 |
+| 9.160 CBQ—超限: `linux/net/sched/sch/cbq.c` | 766 |
+| 9.161 CBQ—超限: `linux/net/sched/sch/cbq.c` | 768 |
+| 9.162 CBQ—超限: 重分类: `linux/net/sched/sch/cbq.c` | 768 |
+| 9.163 CBQ—超限: 延迟: `linux/net/sched/sch/cbq.c` | 768 |
+| 9.164 CBQ—超限: 低优先级或丢弃: `linux/net/sched/sch/cbq.c` | 769 |
+| 9.165 CBQ—看门狗定时器: `linux/net/sched/sch/cbq.c` | 770 |
+| 9.166 CBQ—惩罚: `linux/net/sched/sch/cbq.c` | 770 |
+| 9.167 CBQ—惩罚: `linux/net/sched/sch/cbq.c` | 771 |
+| 9.168 CBQ—重塑: `linux/net/sched/sch/cbq.c` | 771 |
+| 9.169 CBQ—更新顶层占用: `linux/net/sched/sch/cbq.c` | 772 |
+| 9.170 CBQ—更新层占用: `linux/net/sched/sch/cbq.c` | 773 |
+| 9.171 CBQ—更新层占用 ii: `linux/net/sched/sch/cbq.c` | 773 |
+| 9.172 CBQ—更新层占用 iii: `linux/net/sched/sch/cbq.c` | 774 |
+| 9.173 CBQ—动作: `linux/net/sched/sch/cbq.c` | 774 |
+| 9.174 CBQ—按优先级出队 i: `linux/net/sched/sch/cbq.c` | 775 |
+| 9.175 CBQ—按优先级出队 ii: `linux/net/sched/sch/cbq.c` | 776 |
+| 9.176 CBQ—按优先级出队 iii: `linux/net/sched/sch/cbq.c` | 777 |
+| 9.177 CBQ—按优先级出队 iv: `linux/net/sched/sch/cbq.c` | 777 |
+| 9.178 CBQ—出队 i: `linux/net/sched/sch/cbq.c` | 778 |
+| 9.179 CBQ—主出队 i: `linux/net/sched/sch/cbq.c` | 778 |
+| 9.180 CBQ—主出队: `linux/net/sched/sch/cbq.c` | 779 |
+| 9.181 CBQ—主出队函数: `linux/net/sched/sch/cbq.c` | 779 |
+| 9.182 CBQ—维护函数: `linux/net/sched/sch/cbq.c` | 780 |
+| 9.183 CBQ—初始化 i: `linux/net/sched/sch/cbq.c` | 780 |
+| 9.184 CBQ—初始化 ii: `linux/net/sched/sch/cbq.c` | 781 |
+| 9.185 CBQ—初始化 iii: `linux/net/sched/sch/cbq.c` | 781 |
+| 9.186 CBQ—移植和修剪类 i: `linux/net/sched/sch/cbq.c` | 782 |
+| 9.187 CBQ—移植和修剪类 ii: `linux/net/sched/sch/cbq.c` | 782 |
+| 9.188 CBQ—移植和修剪类 iii: `linux/net/sched/sch/cbq.c` | 783 |
+| 9.189 CBQ: `linux/net/sched/sch/cbq.c` | 783 |
+| 9.190 CBQ: `linux/net/sched/sch/cbq.c` | 784 |
+| 9.191 CBQ: `linux/net/sched/sch/cbq.c` | 785 |
+| 9.192 CBQ: `linux/net/sched/sch/cbq.c` | 786 |
+| 9.193 CBQ: `linux/net/sched/sch/cbq.c` | 787 |
+| 9.194 从 `QDisc` 中删除 CBQ: `linux/net/sched/sch/cbq.c` | 787 |
+| 9.195 Clark/Shenker/Zhang 调度: `linux/net/sched/sch_sz.c` | 788 |
 
 
 
 # 图表列表 xiii
 
-- 9.263 RED—初始化：linux/net/sched/sch_red.c 823
-- 9.264 令牌桶过滤器队列—序言：linux/net/sched/sch_tbf.c 823
-- 9.265 令牌桶过滤器队列—算法：linux/net/sched/sch_tbf.c 824
-- 9.266 令牌桶过滤器队列—数据：linux/net/sched/sch_tbf.c 825
-- 9.267 TBF—入队：linux/net/sched/sch_tbf.c 825
-- 9.268 TBF—重入与丢弃：linux/net/sched/sch_tbf.c 826
-- 9.269 TBF—看门狗：linux/net/sched/sch_tbf.c 826
-- 9.270 TBF—出队：linux/net/sched/sch_tbf.c 827
-- 9.271 TBF—出队：linux/net/sched/sch_tbf.c 827
-- 9.272 TBF—重置：linux/net/sched/sch_tbf.c 828
-- 9.273 TBF—更改：linux/net/sched/sch_tbf.c 828
-- 9.274 TBF—初始化：linux/net/sched/sch_tbf.c 829
-- 9.275 TBF—销毁：linux/net/sched/sch_ingress.c 830
-- 9.276 入站队列—入站钩子：linux/net/sched/sch_ingress.c 830
-- 9.277 入站队列—操作与初始化：linux/net/sched/sch_ingress.c 831
-- 9.278 入站队列—销毁：linux/net/sched/sch_prio.c 832
-- 9.279 优先级队列：linux/net/sched/sch_prio.c 832
-- 9.280 优先级分类器：linux/net/sched/sch_prio.c 833
-- 9.281 优先级入队：linux/net/sched/sch_prio.c 833
-- 9.282 优先级请求与出队：linux/net/sched/sch_prio.c 833
-- 9.283 优先级丢弃：linux/net/sched/sch_prio.c 834
-- 9.284 优先级—调整：linux/net/sched/sch_prio.c 835
-- 9.285 随机公平队列调度器—序言：linux/net/sched/sch_sfq.c 836
-- 9.286 随机公平队列调度器—序言（续）：linux/net/sched/sch_sfq.c 837
-- 9.287 优先级队列调度器：linux/net/sched/sch_prio.c 837
-- 9.288 随机公平队列调度器—序言：linux/net/sched/sch_sfq.c 838
-- 9.289 SFQ—数据结构：linux/net/sched/sch_sfq.c 839
-- 9.290 SFQ—队列哈希函数：linux/net/sched/sch_sfq.c 840
-- 9.291 SFQ—队列递减/递增函数：linux/net/sched/sch_sfq.c 841
-- 9.292 SFQ—队列丢弃函数：linux/net/sched/sch_sfq.c 842
-- 9.293 SFQ—入队函数：linux/net/sched/sch_sfq.c 842
-- 9.294 SFQ—重入函数：linux/net/sched/sch_sfq.c 843
-- 9.295 SFQ—出队函数：linux/net/sched/sch_sfq.c 844
-- 9.296 SFQ—重置：linux/net/sched/sch_sfq.c 845
-- 9.297 SFQ—扰动队列：linux/net/sched/sch_sfq.c 845
-- 9.298 流量均衡/负载均衡队列—序言：linux/net/sched/sch_teql.c 846
+- 9.196 CSZ 符号: `/linux/net/sched/sch_sz.c` 789
+- 9.197 CSZ离开时间: `/linux/net/sched/sch_sz.c` 790
+- 9.198 CSZ—轮次: `/linux/net/sched/sch_sz.c` 790
+- 9.199 CSZ—轮次: `/linux/net/sched/sch_sz.c` 791
+- 9.200 CSZ 讨论: `/linux/net/sched/sch_sz.c` 791
+- 9.201 CSZ 讨论: `/linux/net/sched/sch_sz.c` 792
+- 9.202 FIFO 队列数据: `/linux/net/sched/sch_fifo.c` 792
+- 9.203 FIFO 队列入队: `/linux/net/sched/sch_fifo.c` 793
+- 9.204 FIFO 队列重入: `/linux/net/sched/sch_fifo.c` 793
+- 9.205 FIFO 队列出队: `/linux/net/sched/sch_fifo.c` 793
+- 9.206 FIFO 队列丢弃: `/linux/net/sched/sch_fifo.c` 793
+- 9.207 FIFO 队列重置: `/linux/net/sched/sch_fifo.c` 793
+- 9.208 FIFO 队列入队: `/linux/net/sched/sch_fifo.c` 794
+- 9.209 FIFO 队列重入: `/linux/net/sched/sch_fifo.c` 794
+- 9.210 FIFO 队列出队: `/linux/net/sched/sch_fifo.c` 794
+- 9.211 FIFO 队列初始化: `/linux/net/sched/sch_fifo.c` 794
+- 9.212 估计器-通用块注释: `/linux/net/sched/sch_fifo.c` 795
+- 9.213 估计器-数据: `/linux/net/sched/sch_fifo.c` 796
+- 9.214 估计器-运行时: `/linux/net/sched/sch_fifo.c` 796
+- 9.215 估计器-运行时: `/linux/net/sched/sch_fifo.c` 797
+- 9.216 调度器 i: `/linux/net/sched/sch_fifo.c` 798
+- 9.217 调度器 ii: `/linux/net/sched/sch_fifo.c` 798
+- 9.218 调度器 iii: `/linux/net/sched/sch_fifo.c` 799
+- 9.219 调度器 iv: `/linux/net/sched/sch_fifo.c` 799
+- 9.220 调度器 v: `/linux/net/sched/sch_fifo.c` 799
+- 9.221 调度器 vi: `/linux/net/sched/sch_fifo.c` 800
+- 9.222 调度器 vii: `/linux/net/sched/sch_fifo.c` 801
+- 9.223 入口流量数据: `/linux/net/sched/sch_fifo.c` 801
+- 9.224 入口流量树: `/linux/net/sched/sch_fifo.c` 802
+- 9.225 入口流量变化: `/linux/net/sched/sch_fifo.c` 802
+- 9.226 入口流量变化: `/linux/net/sched/sch_fifo.c` 803
+- 9.227 入口流量丢: `/linux/net/sched/sch_fifo.c` 803
+- 9.228 入口流量丢: `/linux/net/sched/sch_fifo.c` 803
+- 9.229 入口流量丢: `/linux/net/sched/sch_fifo.c` 804
+- 9.230 入口流量丢: `/linux/net/sched/sch_fifo.c` 804
+- 9.231 入口流量函数: `/linux/net/sched/sch_fifo.c` 804
+- 9.232 优先级函数: `/linux/net/sched/sch_fifo.c` 805
+- 9.233 优先级: `/linux/net/sched/sch_fifo.c` 805
+- 9.234 优先级: `/linux/net/sched/sch_fifo.c` 806
+- 9.235 优先级: `/linux/net/sched/sch_fifo.c` 806
+- 9.236 优先级: `/linux/net/sched/sch_fifo.c` 807
+- 9.237 优先级: `/linux/net/sched/sch_fifo.c` 807
+- 9.238 优先级: `/linux/net/sched/sch_fifo.c` 808
+- 9.239 优先级: `/linux/net/sched/sch_fifo.c` 808
+- 9.240 优先级: `/linux/net/sched/sch_fifo.c` 809
+- 9.241 优先级: `/linux/net/sched/sch_fifo.c` 809
+- 9.242 优先级: `/linux/net/sched/sch_fifo.c` 810
+- 9.243 优先级: `/linux/net/sched/sch_fifo.c` 810
+- 9.244 优先级: `/linux/net/sched/sch_fifo.c` 811
+- 9.245 优先级: `/linux/net/sched/sch_fifo.c` 811
+- 9.246 优先级: `/linux/net/sched/sch_fifo.c` 812
+- 9.247 优先级: `/linux/net/sched/sch_fifo.c` 812
+- 9.248 优先级: `/linux/net/sched/sch_fifo.c` 813
+- 9.249 优先级: `/linux/net/sched/sch_fifo.c` 813
+- 9.250 优先级: `/linux/net/sched/sch_fifo.c` 814
+- 9.251 优先级: `/linux/net/sched/sch_fifo.c` 814
+- 9.252 优先级: `/linux/net/sched/sch_fifo.c` 815
+- 9.253 优先级: `/linux/net/sched/sch_fifo.c` 815
+- 9.254 优先级: `/linux/net/sched/sch_fifo.c` 816
+- 9.255 优先级: `/linux/net/sched/sch_fifo.c` 816
+- 9.256 优先级: `/linux/net/sched/sch_fifo.c` 817
+- 9.257 优先级: `/linux/net/sched/sch_fifo.c` 817
+- 9.258 优先级: `/linux/net/sched/sch_fifo.c` 818
+- 9.259 优先级: `/linux/net/sched/sch_fifo.c` 818
+- 9.260 优先级: `/linux/net/sched/sch_fifo.c` 819
+- 9.261 优先级: `/linux/net/sched/sch_fifo.c` 819
+- 9.262 优先级: `/linux/net/sched/sch_fifo.c` 820
+
+- 9.263 RED—初始化：`/linux/net/sched/sch_red.c` 823
+- 9.264 令牌桶过滤器队列—序言：`/linux/net/sched/sch_tbf.c` 823
+- 9.265 令牌桶过滤器队列—算法：`/linux/net/sched/sch_tbf.c` 824
+- 9.266 令牌桶过滤器队列—数据：`/linux/net/sched/sch_tbf.c` 825
+- 9.267 TBF—入队：`/linux/net/sched/sch_tbf.c` 825
+- 9.268 TBF—重入与丢弃：`/linux/net/sched/sch_tbf.c` 826
+- 9.269 TBF—看门狗：`/linux/net/sched/sch_tbf.c` 826
+- 9.270 TBF—出队：`/linux/net/sched/sch_tbf.c` 827
+- 9.271 TBF—出队：`/linux/net/sched/sch_tbf.c` 827
+- 9.272 TBF—重置：`/linux/net/sched/sch_tbf.c` 828
+- 9.273 TBF—更改：`/linux/net/sched/sch_tbf.c` 828
+- 9.274 TBF—初始化：`/linux/net/sched/sch_tbf.c` 829
+
+
+
+- 9.275 TBF—销毁：`linux/net/sched/sch_ingress.c` 830
+
+- 9.276 入站队列—入站钩子：`linux/net/sched/sch_ingress.c` 830
+
+- 9.277 入站队列—操作与初始化：`linux/net/sched/sch_ingress.c` 831
+
+- 9.278 入站队列—销毁：`linux/net/sched/sch_prio.c` 832
+
+- 9.279 优先级队列：`linux/net/sched/sch_prio.c` 832
+
+- 9.280 优先级分类器：`linux/net/sched/sch_prio.c` 833
+
+- 9.281 优先级入队：`linux/net/sched/sch_prio.c` 833
+
+- 9.282 优先级请求与出队：`linux/net/sched/sch_prio.c` 833
+
+- 9.283 优先级丢弃：`linux/net/sched/sch_prio.c` 834
+
+- 9.284 优先级—调整：`linux/net/sched/sch_prio.c` 835
+
+- 9.285 随机公平队列调度器—序言：`linux/net/sched/sch_sfq.c` 836
+
+- 9.286 随机公平队列调度器—序言（续）：`linux/net/sched/sch_sfq.c` 837
+
+- 9.287 优先级队列调度器：`linux/net/sched/sch_prio.c` 837
+
+- 9.288 随机公平队列调度器—序言：`linux/net/sched/sch_sfq.c` 838
+
+- 9.289 SFQ—数据结构：`linux/net/sched/sch_sfq.c` 839
+
+- 9.290 SFQ—队列哈希函数：`linux/net/sched/sch_sfq.c` 840
+
+- 9.291 SFQ—队列递减/递增函数：`linux/net/sched/sch_sfq.c` 841
+
+- 9.292 SFQ—队列丢弃函数：`linux/net/sched/sch_sfq.c` 842
+
+- 9.293 SFQ—入队函数：`linux/net/sched/sch_sfq.c` 842
+
+- 9.294 SFQ—重入函数：`linux/net/sched/sch_sfq.c` 843
+
+- 9.295 SFQ—出队函数：`linux/net/sched/sch_sfq.c` 844
+
+- 9.296 SFQ—重置：`linux/net/sched/sch_sfq.c` 845
+
+- 9.297 SFQ—扰动队列：`linux/net/sched/sch_sfq.c` 845
+
+- 9.298 流量均衡/负载均衡队列—序言：`linux/net/sched/sch_teql.c` 846
 
 # 图表
 
 | 图表 | 页码 |
 | :--- | :--- |
-| 9.299 TE 数据：linux/net/sched/sch_teql.c | 846 |
-| 9.300 TE 入队、重入、出队：linux/net/sched/sch_teql.c | 847 |
-| 9.301 TE 、销毁：linux/net/sched/sch_teql.c | 848 |
-| 9.302 TE 初始化：linux/net/sched/sch_teql.c | 849 |
-| 9.303 TE 设备解析：linux/net/sched/sch_teql.c | 849 |
-| 9.304 TE 设备传输 i：linux/net/sched/sch_teql.c | 850 |
-| 9.305 TE 设备传输 ii：linux/net/sched/sch_teql.c | 851 |
-| 9.306 TE 设备传输 iii：linux/net/sched/sch_teql.c | 852 |
-| 9.307 TE 设备打开：linux/net/sched/sch_teql.c | 852 |
-| 9.308 TE 设备关闭与统计：linux/net/sched/sch_teql.c | 853 |
-| 9.309 TE 设备 mtu：linux/net/sched/sch_teql.c | 853 |
-| 9.310 TE 设备主初始化：linux/net/sched/sch_teql.c | 854 |
-| 9.311 TE 设备注册：linux/net/sched/sch_teql.c | 854 |
-| 9.312 性能分析—计时器：linux/net/core/profile.c | 855 |
-| 9.313 性能分析—空接口：linux/net/core/profile.c | 856 |
-| 9.314 性能分析—空接口：linux/net/core/profile.c | 856 |
-| 9.315 性能分析—空统计与初始化：linux/net/core/profile.c | 857 |
-| 9.316 性能分析—注销：linux/net/core/profile.c | 858 |
-| 9.317 ATM 调度—作者：linux/net/sched/sch_atm.c | 859 |
-| 9.318 ATM 调度—序言：linux/net/sched/sch_atm.c | 859 |
-| 9.319 ATM 调度—数据结构：linux/net/sched/sch_atm.c | 859 |
-| 9.320 ATM 调度—查找流 i：linux/net/sched/sch_atm.c | 860 |
-| 9.321 ATM 调度—流树：linux/net/sched/sch_atm.c | 860 |
-| 9.322 ATM 调度—查找流：linux/net/sched/sch_atm.c | 860 |
-| 9.323 ATM 调度—销毁过滤器：linux/net/sched/sch_atm.c | 861 |
-| 9.324 ATM 调度—销毁所有过滤器：linux/net/sched/sch_atm.c | 862 |
-| 9.325 ATM 调度—弹出 VC：linux/net/sched/sch_atm.c | 862 |
-| 9.326 ATM 调度—更改 ATM 参数 i：linux/net/sched/sch_atm.c | 863 |
-| 9.327 ATM 调度—更改 ATM 参数 ii：linux/net/sched/sch_atm.c | 863 |
-| 9.328 ATM 调度—更改 ATM 参数 iii：linux/net/sched/sch_atm.c | 864 |
-| 9.329 ATM 调度—删除 TCF：linux/net/sched/sch_atm.c | 865 |
-| 9.330 ATM 调度—遍历 TC：linux/net/sched/sch_atm.c | 866 |
-| 9.331 ATM 调度—查找 TCF：linux/net/sched/sch_atm.c | 866 |
-| 9.332 ATM 调度—入队 i：linux/net/sched/sch_atm.c | 866 |
-| 9.333 ATM 调度—入队 ii：linux/net/sched/sch_atm.c | 867 |
-| 9.334 ATM 调度—入队 iii：linux/net/sched/sch_atm.c | 867 |
-| 9.335 ATM 调度—出队：linux/net/sched/sch_atm.c | 868 |
-| 9.336 ATM 调度—出队：linux/net/sched/sch_atm.c | 869 |
-| 9.337 ATM 调度—重入：linux/net/sched/sch_atm.c | 869 |
-| 9.338 ATM 调度—丢弃：linux/net/sched/sch_atm.c | 870 |
-| 9.339 ATM 调度—初始化：linux/net/sched/sch_atm.c | 870 |
-| 9.340 TC—主：tc/tc.c | 871 |
+| 9.299 TE 数据：`linux/net/sched/sch_teql.c` | 846 |
+| 9.300 TE 入队、重入、出队：`linux/net/sched/sch_teql.c` | 847 |
+| 9.301 TE 、销毁：`linux/net/sched/sch_teql.c` | 848 |
+| 9.302 TE 初始化：`linux/net/sched/sch_teql.c` | 849 |
+| 9.303 TE 设备解析：`linux/net/sched/sch_teql.c` | 849 |
+| 9.304 TE 设备传输 i：`linux/net/sched/sch_teql.c` | 850 |
+| 9.305 TE 设备传输 ii：`linux/net/sched/sch_teql.c` | 851 |
+| 9.306 TE 设备传输 iii：`linux/net/sched/sch_teql.c` | 852 |
+| 9.307 TE 设备打开：`linux/net/sched/sch_teql.c` | 852 |
+| 9.308 TE 设备关闭与统计：`linux/net/sched/sch_teql.c` | 853 |
+| 9.309 TE 设备 mtu：`linux/net/sched/sch_teql.c` | 853 |
+| 9.310 TE 设备主初始化：`linux/net/sched/sch_teql.c` | 854 |
+| 9.311 TE 设备注册：`linux/net/sched/sch_teql.c` | 854 |
+| 9.312 性能分析—计时器：`linux/net/core/profile.c` | 855 |
+| 9.313 性能分析—空接口：`linux/net/core/profile.c` | 856 |
+| 9.314 性能分析—空接口：`linux/net/core/profile.c` | 856 |
+| 9.315 性能分析—空统计与初始化：`linux/net/core/profile.c` | 857 |
+| 9.316 性能分析—注销：`linux/net/core/profile.c` | 858 |
+| 9.317 ATM 调度—作者：`linux/net/sched/sch_atm.c` | 859 |
+| 9.318 ATM 调度—序言：`linux/net/sched/sch_atm.c` | 859 |
+| 9.319 ATM 调度—数据结构：`linux/net/sched/sch_atm.c` | 859 |
+| 9.320 ATM 调度—查找流 i：`linux/net/sched/sch_atm.c` | 860 |
+| 9.321 ATM 调度—流树：`linux/net/sched/sch_atm.c` | 860 |
+| 9.322 ATM 调度—查找流：`linux/net/sched/sch_atm.c` | 860 |
+| 9.323 ATM 调度—销毁过滤器：`linux/net/sched/sch_atm.c` | 861 |
+| 9.324 ATM 调度—销毁所有过滤器：`linux/net/sched/sch_atm.c` | 862 |
+| 9.325 ATM 调度—弹出 VC：`linux/net/sched/sch_atm.c` | 862 |
+| 9.326 ATM 调度—更改 ATM 参数 i：`linux/net/sched/sch_atm.c` | 863 |
+| 9.327 ATM 调度—更改 ATM 参数 ii：`linux/net/sched/sch_atm.c` | 863 |
+| 9.328 ATM 调度—更改 ATM 参数 iii：`linux/net/sched/sch_atm.c` | 864 |
+| 9.329 ATM 调度—删除 TCF：`linux/net/sched/sch_atm.c` | 865 |
+| 9.330 ATM 调度—遍历 TC：`linux/net/sched/sch_atm.c` | 866 |
+| 9.331 ATM 调度—查找 TCF：`linux/net/sched/sch_atm.c` | 866 |
+| 9.332 ATM 调度—入队 i：`linux/net/sched/sch_atm.c` | 866 |
+| 9.333 ATM 调度—入队 ii：`linux/net/sched/sch_atm.c` | 867 |
+| 9.334 ATM 调度—入队 iii：`linux/net/sched/sch_atm.c` | 867 |
+| 9.335 ATM 调度—出队：`linux/net/sched/sch_atm.c` | 868 |
+| 9.336 ATM 调度—出队：`linux/net/sched/sch_atm.c` | 869 |
+| 9.337 ATM 调度—重入：`linux/net/sched/sch_atm.c` | 869 |
+| 9.338 ATM 调度—丢弃：`linux/net/sched/sch_atm.c` | 870 |
+| 9.339 ATM 调度—初始化：`linux/net/sched/sch_atm.c` | 870 |
+| 9.340 TC—主：`tc/tc.c` | 871 |
 | 10.1 伪装路由器 | 778 |
 | 10.2 伪装示例 | 779 |
 | 10.3 使用防火墙的端口转发 | 880 |
 | 10.4 代理缓存 | 880 |
 | 10.5 透明代理缓存 | 881 |
-| 10.6 可能的钩子位置 | 882 |
+| 10.6 可能的钩子位置 | 882
 
 # 表列表
 
@@ -701,12 +870,21 @@ Igor Fayberg, Hui-Lan Lu, and Lawrence Gabuz ISBN: 0-471-35644-1
 | 4.3 其他 Socket API 调用 | 95 |
 | 4.4 其他 Socket API 调用 | 96 |
 | 4.5 TCP Sysctl | 97 |
+
+
+
 | 4.6 TCP setsockopt 选项 | 97 |
+
 | 4.7 TCP ioctl 选项 | 98 |
+
 | 7.1 adye TCP 公式中的术 | 538 |
+
 | 8.1 多组播地址 | 618 |
+
 | 9.1 Parekh TCP 公式中的术 | 647 |
+
 | 9.2 弹性应用 | 653 |
+
 | 9.3 不弹性应用 | 654 |
 
 # 前言
@@ -721,10 +899,7 @@ Linux 提供了构建客户端、服务器和全功能路由器所需的所有�
 
 现在许多财富 100 强公司使用 Linux 作为服务器，不仅是在技术领域，还涉及银行、医疗保健以及你能想象的任何其他业务。其中一些公司也开始将 Linux 用作路由器平台。鉴于其开放性以及在功能和性能上的表现，这种趋势在未来几年内将继续增长。
 
-
-
-
-借助 Linux 文档项目（Linux Documentation Project）的课程，以及各种工具（ctags 和 vi、etags 和 emacs、红帽源码导航器、grep、ls-R、find 等——所有让类 Unix 系统成为系统开发者首选工具的那些），我们将围绕代码进行学习。
+借助 Linux 文档项目（Linux Documentation Project）的课程，以及各种工具（`ctags` 和 `vi`、`etags` 和 `emacs`、红帽源码导航器、`grep`、`ls-R`、`find` 等——所有让类 Unix 系统成为系统开发者首选工具的那些），我们将围绕代码进行学习。
 
 # 路线图、大纲与结构
 
@@ -737,20 +912,21 @@ Linux 提供了构建客户端、服务器和全功能路由器所需的所有�
 - **数据结构。** 我们通过示例展示了协议状态和数据包数据的存储方式。
 - **数据线格式。** 我们展示了数据包在传输/转发/接收时的格式。
 - **算法/代码。** 详细说明了处理用户、网络和定时器事件的规则。
-- **进程。** 说明了涉及通信的任务set的演进过程。
+- **进程。** 说明了涉及通信的任务 `set` 的演进过程。
 - **操作。** 我们涵盖了系统管理员、网络管理员和普通用户执行的一系列动作。
 
 大多数章节的结构涵盖了这五个视角，并通过一个故事将它们连接在一起——以 Linux 实现的例，互联网协议架构中某些组件活动的生命周期。
 
 # 致谢
 
-本书献给 li 的追随者。
+本书献给 `li` 的追随者。
 
-感谢 Orion Hodson、Tristan Henderson、Panos Gevros 以及其他（虚拟）G11 的成员，感谢 Adam Greenhaigh、Julia Schnabul、John Andrews 和 Tony Mancill 提供的反馈。特别感谢 Carsten Heinz 卓越的列表风格，并协助我修正了对 "said" 一词过于天真的用法。感谢 Jamal Hadi Salim 提供关于 SMP 转发的信息，感谢 T'so 对安全提出的有帮助意见。
+感谢 Orion Hodson、Tristan Henderson、Panos Gevros 以及其他（虚拟）G11 的成员，感谢 Adam Greenhaigh、Julia Schnabul、John Andrews 和 Tony Mancill 提供的反馈。特别感谢 Carsten Heinz 卓越的列表风格，并协助我修正了对 `"said"` 一词过于天真的用法。感谢 Jamal Hadi Salim 提供关于 SMP 转发的信息，感谢 T'so 对安全提出的有帮助意见。
 
 当然，如果没有代码作者在实现、修复 Bug 和性能调优方面的英勇努力，我们将一无所有。参考文献的末尾附有一份我们所查看代码的实现者列表。
 
 Jon Crowcroft
+
 iain Phillips
 
 # 互联网协议概述
@@ -759,7 +935,9 @@ iain Phillips
 
 **图 1.1** 注释，什么注释：`linux/net/khtttpd/waitheaders.c.`
 
+```
 /* WONDERFUL. NO COMMENTS. --ANK */
+```
 
 ## 1.1 路线图
 
@@ -781,10 +959,6 @@ iain Phillips
 - **主机。** 主机是连接到设备。
 - **中间设备。** 中间设备是处理或路由流量的设备。
 - **中间系统。** 中间系统是协调主机之间事务的系统。
-
-
-
-
 
 # TCP/IP 与 Linux 协议实现
 
@@ -816,17 +990,19 @@ iain Phillips
 
 这些风格和习惯在不同社区之间存在；然而，在 Linux 系统中，对于代码如何编写、布局和集成有一些相当强的共识。开源系统开发方法的关键优势之一是人们通过示例进行学习。Linux 内核还从对准入发布版本的内容的强力中央控制中获益。另一种模型适用于现在世界上大量的 Linux 发行版公司，在那里由这些组织来维护一致性。
 
+
+
 更重要的是，通常在过去的几年里，面向对象（OO）设计和编程的实践已经变得广泛。一段时间内曾向 C++ 甚至 Objective C 的的趋势，但事实证明它们比必要的更复杂。对于应用程序（以及高级网络）编程，Java 现在处于主导地位。然而，这些技术可以在 C 中中手动应用，我们将看到这在整个 Linux 内核代码中广泛存在。事实上，有一种观点认为，优秀的程序员在面向对象编程中使用模式一直是常态。
 
 例如，对于一个模块化的内核，需要用一组标准方法（或函数、参数及其类型）对代码打包，并且修改该模块内部的手段很少——这允许了设备驱动程序、层内的协议，甚至是更大的操作系统功能单元，如文件系统和调度器。在设计时，这导致了更安全的代码。在实现时，这导致了扩展性。在构建（链接）时，这允许系统进行静态配置。最后在运行时，这允许系统按需进行动态配置。这意味着系统可以按需进行格式化。这种设计，通常是有规律的。
 
-### C 风格
+## C 风格
 
 在 C 语言中存在几种不同的风格。由于书中有很多示例，我们认为没有必要在这里详细说明风格，而是讨论其背后的原因（经验之）。
 
 **可读性（Readability）。** 标准的布局有助于人们阅读代码（并希望发现错误）。它还允许人们共享编辑器（通常是 emacs）。并不是所有程序员都有 21 英寸显示器——友好的做法是让代码适应屏幕/窗口宽度。
 
-### 互联网协议概览
+## 互联网协议概览
 
 在内核代码中，日志记录是绝对必需的。模块开头的一行注释是不够的，除非处处都有作者的指示。
 
@@ -840,7 +1016,7 @@ iain Phillips
 
 在理想世界中，所有代码都有独立的文档辅助，并且与代码同时编写（例如由极端编程风格要求的）。此类文档应包含使用示例和测试输出示例。遗憾并不完美。
 
-### C 结构、内存与线缆格式
+## C 结构、内存与线缆格式
 
 复合数据结构（如 C 记录）在特定机器架构上使用特定编译器编译时，其字段在内存中的布局是已知的，这是非常有用的。这允许系统和通信程序员能够将外部数据映射到内存中反之亦然（通常通过传递给设备驱动程序中某些控制寄存器的缓冲区）。
 
@@ -848,14 +1024,11 @@ iain Phillips
 
 - 1. **数据包格式定义。** 互联网协议的处理（并非偶然）设计和定义通常使用现代计算机方便的、数据类型：字节（八位），和
 
-
-
-
 # TCP/IP 与 Linux 协议实现
 
 16 位、32 位和 64 位字。大多数数据包头都是这些字的聚合体（在整本书中我们将看到 IP、TCP 以及许多其他协议）。确保我们能够方便、正确且高效地访问和操作这些字段，是我们正尝试做好的第一件事——通常，数据包头被定义为 C 头文件中的结构体（structure）。
 
-这种方法中的缺陷在于 C 编译器和机器架构在细微细节上的差异——例如字节、短字和长字的字节序（endianness）。这些差异通常通过在单一位置使用函数或宏来隐藏，这些函数或宏可以在传输前或识别到包后立即使用，从而允许程序员在代码的大部分区域将 C 字段视为原生数据对象（例如用于算术）。
+这种方法中的缺陷在于 C 编译器和机器架构在细微细节上的差异——例如字节、短字和长字的字节序（endianess）。这些差异通常通过在单一位置使用函数或宏来隐藏，这些函数或宏可以在传输前或识别到包后立即使用，从而允许程序员在代码的大部分区域将 C 字段视为原生数据对象（例如用于算术）。
 
 - 2. 运行规则（例如，状态机，或协议的语言/语法）。这通常可以直接映射到实现的核心中（大多数处理数据包的 TCP 代码是直接根据 RFC 逐行编写的）。
 
@@ -865,10 +1038,11 @@ iain Phillips
 
 C 语言对某些高级编程方法表示了一定的允许。通常，我们将代码保留在目录层次结构中（Linux 内核代码布局见第 2.4 节）。在给定的目录中，我们保留特定抽象层的代码。特定源文件中的函数集合（C 术语中称为模块；不要与 Linux 动态加载术语中的模块 混淆）执行密切相关的函数——几乎在字面上就是一个对象。为了让对象更具通用性，C 提供了一种简单但极其高效且强大的函数指针机制。对函数的引用可以作为另一个参数传递——这允许我们编写相当通用的代码，仅在调用时填充细节。在 Linux 中，将此类接口封装在一个带有标准指针集合的详细函数集合的数据结构中是很常见的——由于 C 是一种函数原型，这可以被做得相当安全（尽管程序员可以自由搞乱它，在内核编程时会产生灾难性的后果——这是学习自律的好方法）。
 
-### 互联网协议概览
+## 互联网协议概览
 
 | 应用 | 获取网页 |
 |---|---|
+
 | 网络 | 发送一个数据包，接收一个数据包 |
 | 信号 | 0001101010001010101001010010010101010101011111101 |
 
@@ -900,6 +1074,7 @@ C 语言对某些高级编程方法表示了一定的允许。通常，我们将
 
 | 0 1 2 3 | 4 5 6 7 | 8 9 0 1 | 2 3 4 5 | 6 7 8 9 | 0 1 2 3 | 4 5 6 7 | 8 9 0 1 |
 |---|---|---|---|---|---|---|---|
+
 | 版本 | IHL | 服务类型 | 总长度 | | | | |
 | 标识 | 标志 | 分片偏移 | | | | | |
 | 生存时间 | 协议 | 头部校验 | | | | |
@@ -946,26 +1121,42 @@ C 语言对某些高级编程方法表示了一定的允许。通常，我们将
 示图 1.6 RFC 风格的 IP 头部定义。
 
 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 1
+
 +----------------------------------------------------------------+
+
 |               Source Port               |      Destination Port      |
+
 +----------------------------------------------------------------+
+
 |                        Sequence Number                        |  |
+
 +----------------------------------------------------------------+
+
 |                    Acknowledgment Number                    |  |
+
 +----------------------------------------------------------------+
+
 | Data | U|Q|A|P|R|I|S|F|                               |             | 
+
 | Offset | Reserved | R|C|I|S|I|S|Y|I|X|      Window       |             |
+
 +----------------------------------------------------------------+
+
 |                    Checksum                    |      Urgent Pointer      |  |
+
 +----------------------------------------------------------------+
+
 |                        Options                        |           Padding           |  |
+
 +----------------------------------------------------------------+
+
 |                                 data                               |  |
+
 +----------------------------------------------------------------+
 
 这在 C 语言中定义如下：
 
-图 1.7 TCP 头部定义：linux/include/linux/tcp.h。
+图 1.7 TCP 头部定义：`linux/include/linux/tcp.h`。
 
 ```c
 struct tcphdr {
@@ -1013,20 +1204,11 @@ TCP 数据包被封装在 IP 包中，对于 IP 路由底层来说，它实际�
 
 只要 IP 能将 TCP 负载从一个主机传输到另一个主机，并能将 TCP 负载传回，这就是 TCP 对 IP 层的最小要求。
 
-TCP 头部中包含什么？嗯，首先需要的是某种识别运行 TCP 连接的用途或应用程序的方法，因此我们需要某种方法来区分载有 TCP 负载的 IP 包。为了实现这一点，TCP 头部包含 16 位的*端口*（ports），同时用于源和目的。这使得 IP 层和 TCP 层软件能够执行多路复用，即在任何主机与任何其他主机之间支持大量的可区分会话。目的字段中的已知端口标识应用程序，而源字段中的动态分配端口则允许在任意对主机之间使用同一个应用程序的多个实例。
+TCP 头部中包含什么？嗯，首先需要的是某种识别运行 TCP 连接的用途或应用程序的方法，因此我们需要某种方法来区分载有 TCP 负载的 IP 包。为了实现这一点，TCP 头部包含 16 位的`端口`（ports），同时用于源和目的。这使得 IP 层和 TCP 层软件能够执行多路复用，即在任何主机与任何其他主机之间支持大量的可区分会话。目的字段中的已知端口标识应用程序，而源字段中的动态分配端口则允许在任意对主机之间使用同一个应用程序的多个实例。
 
 ## 14 TCP/IP 与 Linux 协议实现
 
-为了确保语义正确，数据包包含序列号（sequence numbers）。序列号的目的是允许接收方重新排序数据包，并检测数据流中的任何间隙。序列号是段中第一个字节的数字。确认号（acknowled number）是接收方期望接收的下一个字节数字。窗口大小是接收方在不确认的情况下愿意接受的字节数。选项字段（options field）用于提供额外信息，如最大窗口缩放和选择性确认。校验和（checksum）用于检测头部和数据中的错误。紧急指针（urgent pointer）指向紧急数据的末尾。填充（padding）用于使头部成为 4 字节的倍数。
-
-TCP 头部中包含什么？嗯，首先需要的是某种识别运行 TCP 连接的用途或应用程序的方法，因此我们需要某种方法来区分载有 TCP 负载的 IP 包。为了实现这一点，TCP 头部包含 16 位的*端口*，同时用于源和目的。这使得 IP 层和 TCP 层软件能够执行多路复用，即在任何主机与任何其他主机之间支持大量的可区分会话。目的字段中的已知端口标识应用程序，而源字段中的动态分配端口则允许在任意对主机之间使用同一个应用程序的多个实例。
-
-为了确保语义正确，数据包包含序列号。序列号的目的是允许接收方重新排序数据包，并检测数据流中的任何间隙。序列号是段中第一个字节的数字。确认号是接收方期望接收的下一个字节数字。窗口大小是接收方在不确认的情况下愿意接受的字节数。选项字段用于提供额外信息，如最大窗口缩放和选择性确认。校验和用于检测头部和数据中的错误。紧急指针指向紧急数据的末尾。填充用于使头部成为 4 字节的倍数。
-
-（注：原文后续部分存在大量重复段落，根据指令“不要重复输出原文”的要求，此处仅保留核心语义的完整性翻译。）
-
-
-
+为了确保语义正确，数据包包含序列号（`sequence numbers`）。序列号的目的是允许接收方重新排序数据包，并检测数据流中的任何间隙。序列号是段中第一个字节的数字。确认号（`acknowled number`）是接收方期望接收的下一个字节数字。窗口大小是接收方在不确认的情况下愿意接受的字节数。选项字段（`options field`）用于提供额外信息，如最大窗口缩放和选择性确认。校验和（`checksum`）用于检测头部和数据中的错误。紧急指针（`urgent pointer`）指向紧急数据的末尾。填充（`padding`）用于使头部成为 4 字节的倍数。
 
 在处理该层时，该层协议的数据包头。
 
@@ -1043,6 +1225,8 @@ TCP 头部中包含什么？嗯，首先需要的是某种识别运行 TCP 连�
 互联网上的主机数量每八个月增长约 100%，我们写下的任何数字（例如，当我输入这段话时，现在大约有 5000 万台公共计算机，可能有 2 亿台私有联网计算机）在你读完这句话之前就会过时。
 
 1976 年典型的链路速度为 56 Kbps，但现在广域网中 622 Mbps 并不罕见，人们正在开发太比特级路由器。
+
+
 
 英国国家级机构网络访问的具体示例，如英国国家大学网络 SuperJANET，在 1980 年为 64 Kbps，1990 年为 2 Mbps，1995 年为 15 Mbps，2001 年为 1 Gbps，目前正在部署 2 到 10 Gbps，并将于 2002 年完成部署。然而，请注意，摩尔定律使得计算机速度很好地追踪了这种性能。不仅如此，商品 PC 的价格也在下降，因此将其用作网络系统、路由器或中间盒是一个双赢的。
 
@@ -1104,10 +1288,6 @@ TCP 头部中包含什么？嗯，首先需要的是某种识别运行 TCP 连�
 
 何时分配 SLA？这可以在订阅时、按用户/用户组/站点/客户进行，并且可以是多字段的、基于策略的，或者在组织内部针对应用程序/用户/用户组。
 
-
-
-
-
 # TCP/IP 与 Linux 协议实现
 
 表 1.1 集成服务与差异化服务
@@ -1120,11 +1300,13 @@ TCP 头部中包含什么？嗯，首先需要的是某种识别运行 TCP 连�
 | 范围 | 端到端 | 边缘到边缘 |
 
 我们可以使用网络管理内置工具静态地绘制行为聚合图，或者可能使用 RSVP 动态地绘制。
+
 由于 DS 代码点可能被不同的服务提供商使用，而不同的提供商使用相同的 PHB（逐跳点行为）可能会有不同的行为，因此我们必须定义边缘到端的语义。目前的问题是缺乏对称性：诸如 TCP 等协议（理想情况下）需要对称的 QoS。最后，用于多播的、以支持多方对称通信的差异化服务目前尚未定义。
 
 ## 1.7 总结
 
 在本章中，我们概述了互联网协议族的设计概览。在不可靠的 IP 层和可靠的 TCP 层之间进行功能划分，这种设计理念的有趣之处在于它非常契合了技术的发展。链路和物理层系统不断演进，以极高的性能和低廉的成本（对于局域网以及长途链路和交换机都是），只要我们不期望它们在位或数据包尺度上掩盖故障。相反，TCP 等端到端协议被设计并实现在所有常见的操作系统中，为最终用户提供所需的通信语义。这种划分还导致了程序员熟悉的、二十年的优化技术被应用于 IP 路由和转发层，以及端到端协议，使得现在在价格廉的的计算机上，我们甚至不需要使用大量的 CPU 或内存资源，就能获得每秒数千兆比特的性能。
+
 在下一章中，我们将游览 Linux 操作系统，查看其通用特征，然后在书的其他部分回来查看 TCP、IP 及其它们所有的亲朋好友。
 
 > 这种设计也可能具有天文数字般的盲目运气。
@@ -1161,63 +1343,59 @@ echo '16i[q]sa[1n0=aln100%1n100/snlbx]baA0D4D465452snlbxq' |dc-Submitted by Simo
 
 设计和构建此类软件有几种不同的方法。在最简单的情况下，每个操作系统都是常用函数库的集合。操作系统通常包含许多实用程序（操作和管理应用程序）。然而，使操作系统与其他代码集合区别化之处在于，操作系统的大部分代码是硬件和应用程序之间的接口。
 
+
+
 服务由一组软件层提供，这些层统一了公共元素并隐藏了底层硬件的特有细节。访问硬件需要使用特定的指令和内存地址，系统可能希望防止普通用户意外干扰这些内容。硬件可能会随时自主地唤醒并尝试访问内存或中断处理器——这对于用户界面硬件（鼠标、键盘）和网络接口尤为如此。虽然用户程序（应用程序）越来越多地由熟悉事件驱动编程范式的程序员实现，但要设计管理大量竞争事件流的系统仍然很困难——协作多任务作为日常程序管理系统资源的可行方法已成为过去。这一角色在很大程度上由操作系统的内核承担。应用程序在很大程度上免受这种复杂性的影响。
 
-不同的操作系统设计时考虑了不同类型的用户。这意味着在最通用的三个通用操作系统中，Unix、Windows 和 macOS 在开发过程中承受了不同的压力。这导致了服务提供方式的很大不同。
+不同的操作系统设计时考虑了不同类型的用户。这意味着在最通用的三个通用操作系统中，`Unix`、`Windows` 和 `macOS` 在开发过程中承受了不同的压力。这导致了服务提供方式的很大不同。
 
 # Linux 操作系统简介
 
-主要区别在于系统最初是为支持单用户还是多用户而设计的；用户是技术专家还是对开发不感兴趣的人；以及用户是否有多媒体需求。macOS 和 Windows 历史上都针对单用户系统，而 Unix 一直针对技术人员、工程师或科学家。Unix 运行在大型计算系统，也运行在小型桌面系统上。对于服务的另一种类比是考虑汽车；在汽车中，你有一个用户考虑的操作系统——导航工具、加速门、制车器等等；你有一个维护工程师考虑的操作系统——轮胎压力、引擎管理系统、燃料供应等等；一个技师考虑的悬挂、制动系统等等。每个都有其位置。在某些系统设计中，投入更多在用户端，而在另一些（越野车）则更多在工程端。在很大程度上，最近 Linux 工作试图跨越这一分界并涵盖这两个领域，通过对应用程序和图形的支持。从根本上说，操作系统的内核根于对硬件的有效利用，以实现这些目标之一。
+主要区别在于系统最初是为支持单用户还是多用户而设计的；用户是技术专家还是对开发不感兴趣的人；以及用户是否有多媒体需求。`macOS` 和 `Windows` 历史上都针对单用户系统，而 `Unix` 一直针对技术人员、工程师或科学家。`Unix` 运行在大型计算系统，也运行在小型桌面系统上。对于服务的另一种类比是考虑汽车；在汽车中，你有一个用户考虑的操作系统——导航工具、加速门、制车器等等；你有一个维护工程师考虑的操作系统——轮胎压力、引擎管理系统、燃料供应等等；一个技师考虑的悬挂、制动系统等等。每个都有其位置。在某些系统设计中，投入更多在用户端，而在另一些（越野车）则更多在工程端。在很大程度上，最近 `Linux` 工作试图跨越这一分界并涵盖这两个领域，通过对应用程序和图形的支持。从根本上说，操作系统的内核根于对硬件的有效利用，以实现这些目标之一。
 
+## 2.2.1 多用户
 
+自20世纪70年代以来，一直有一句说法：“`UNIX`中一切皆文件”。这句话的意思是，系统上任何对象的标准抽象都是通过对“文件”这一概念的重载提供的。
 
+当然，通常文件存储在磁盘上。文件组织在文件系统中（`Linux`支持几种不同的文件系统），文件系统由一种组织存储设备的方法（文件存储器）、一种在命名层次结构中组织文件的方法（目录、目录下的文件等）以及在文件内部格式化数据文件的方法（`UNIX`传统上保持其尽可能简单）。`UNIX`通过文件名空间来命名，从而统一了系统中许多对象的视图，并提供了对设备、设备（在现代`UNIX`系统中指进程）以及简单存储数据的访问。这使得系统程序员的任务变得更加简单——与其他家族的操作系统相比，它的接口更少。我们将在整本书中看到，它是如何使通信设施的使用变得简单的。我们还看到，在某些情况下，这种统一是需要代价的——有时文件与其他其它类型对象之间的类比会使系统调用接口的使用产生其他某些奇怪的方式，这在某些参数的使用上得到了体现。
 
+文件系统的一个重要方面是文件的所有权标识。在任何文件中，无论是普通文本文件、目录、设备句柄，甚至是进程，都有字段显示文件的所有权以及与不同用户（用户、组、其他）关联的权限。这些数据与文件一起存储在磁盘上，并在程序打开文件时保留在内存中——存储所有这些数据的数据结构被称为 `inode`（索引节点）。在万物的根源，所有文件都有一个 `inode` 号。
 
-### 2.2.1 多用户
+用户与系统传统的交互是通过命令行界面（`shell`）进行的。当然，在现代系统中，我们期望使用图形用户界面（`GUI`）。`UNIX`上实现此点的底层系统是 `X-Windows`，20年来，它一直为运行在远程系统上的程序提供网络图形界面。在多任务系统中，`GUI`派上了用场——许多类用户经常结合并重叠多个松散关联的任务（例如：编辑和预览信件，或者编程、调试和查看文档，或者浏览网页并做笔记）。窗口系统结合任务系统对于现代用户来说是至关重要的。让我们进一步观察任务。
 
-自20世纪70年代以来，一直有一句说法：“UNIX中一切皆文件”。这句话的意思是，系统上任何对象的标准抽象都是通过对“文件”这一概念的重载提供的。
+## 2.2.2 多任务
 
-当然，通常文件存储在磁盘上。文件组织在文件系统中（Linux支持几种不同的文件系统），文件系统由一种组织存储设备的方法（文件存储器）、一种在命名层次结构中组织文件的方法（目录、目录下的文件等）以及在文件内部格式化数据文件的方法（UNIX传统上保持其尽可能简单）。UNIX通过文件名空间来命名，从而统一了系统中许多对象的视图，并提供了对设备、设备（在现代UNIX系统中指进程）以及简单存储数据的访问。这使得系统程序员的任务变得更加简单——与其他家族的操作系统相比，它的接口更少。我们将在整本书中看到，它是如何使通信设施的使用变得简单的。我们还看到，在某些情况下，这种统一是需要代价的——有时文件与其他其它类型对象之间的类比会使系统调用接口的使用产生其他某些奇怪的方式，这在某些参数的使用上得到了体现。
+主街上的商店销售的计算机每秒可以执行近10亿次指令。然而，在大多数时间里，用户坐在电脑前（或拿着笔记本电脑）思考接下来要写什么。在此期间，计算机完全可以继续做一些有用的事情。在计算早期的《Linux操作系统导论》时代，人们会将一些有用的功能在空闲循环中硬连接到操作系统中，例如计算π的后几百万位小数。现在，我们用灵活的方式做同样的事情——例如，屏幕保护程序可能会从世界各射电望远镜下载数据，并在噪声中寻找某些有意义的信号（寻找地外生命，或 SETI）。多任务是操作系统提供同时为多个主服务的幻象的能力。作为用户，最容易看到的这种幻象就是你在执行某些后台任务，如打印。这两个任务——一个前台任务（如编辑器）和一个后台任务（如打印）是由系统通过在程序之间交替执行的，运行其中一个的一部分，另一个的一部分，以此类推。已启动但未完成的程序被称为进程。所有进程都有一个进程 ID（`PID`）。
 
-文件系统的一个重要方面是文件的所有权标识。在任何文件中，无论是普通文本文件、目录、设备句柄，甚至是进程，都有字段显示文件的所有权以及与不同用户（用户、组、其他）关联的权限。这些数据与文件一起存储在磁盘上，并在程序打开文件时保留在内存中——存储所有这些数据的数据结构被称为 inode（索引节点）。在万物的根源，所有文件都有一个 inode 号。
-
-用户与系统传统的交互是通过命令行界面（shell）进行的。当然，在现代系统中，我们期望使用图形用户界面（GUI）。UNIX上实现此点的底层系统是 X-Windows，20年来，它一直为运行在远程系统上的程序提供网络图形界面。在多任务系统中，GUI派上了用场——许多类用户经常结合并重叠多个松散关联的任务（例如：编辑和预览信件，或者编程、调试和查看文档，或者浏览网页并做笔记）。窗口系统结合任务系统对于现代用户来说是至关重要的。让我们进一步观察任务。
-
-### 2.2.2 多任务
-
-主街上的商店销售的计算机每秒可以执行近10亿次指令。然而，在大多数时间里，用户坐在电脑前（或拿着笔记本电脑）思考接下来要写什么。在此期间，计算机完全可以继续做一些有用的事情。在计算早期的《Linux操作系统导论》时代，人们会将一些有用的功能在空闲循环中硬连接到操作系统中，例如计算π的后几百万位小数。现在，我们用灵活的方式做同样的事情——例如，屏幕保护程序可能会从世界各射电望远镜下载数据，并在噪声中寻找某些有意义的信号（寻找地外生命，或 SETI）。多任务是操作系统提供同时为多个主服务的幻象的能力。作为用户，最容易看到的这种幻象就是你在执行某些后台任务，如打印。这两个任务——一个前台任务（如编辑器）和一个后台任务（如打印）是由系统通过在程序之间交替执行的，运行其中一个的一部分，另一个的一部分，以此类推。已启动但未完成的程序被称为进程。所有进程都有一个进程 ID（PID）。
-
-一个每秒周期足够以这种方式欺骗用户，并且有足够内存来存放多个进程代码和数据的系统是相对简单的。核心思想是可以通过对任何瞬间（在一条指令和下一条指令之间）的进程状态和代码拍摄快照来描述进程——这个快照被称为上下文（context）。操作系统可以将运行中程序的上下文保存到内存中的某些特殊位置，通过恢复另一个进程的上下文切换到另一个进程——这只是将另一个进程所有的最后值加载到所有寄存器中，并将CPU程序计数器设置为下一个地址以开始获取代码。在执行这种上下文切换的操作系统部分，是由调度器（scheduler）负责的。当有多个进程可供选择时，调度器可能会利用各种账目数据在Linux的基础上做出决策。这对于实时系统等专家来说（例如工厂中的物理过程控制系统，其中时间至关重要）非常有用。
+一个每秒周期足够以这种方式欺骗用户，并且有足够内存来存放多个进程代码和数据的系统是相对简单的。核心思想是可以通过对任何瞬间（在一条指令和下一条指令之间）的进程状态和代码拍摄快照来描述进程——这个快照被称为上下文（`context`）。操作系统可以将运行中程序的上下文保存到内存中的某些特殊位置，通过恢复另一个进程的上下文切换到另一个进程——这只是将另一个进程所有的最后值加载到所有寄存器中，并将CPU程序计数器设置为下一个地址以开始获取代码。在执行这种上下文切换的操作系统部分，是由调度器（`scheduler`）负责的。当有多个进程可供选择时，调度器可能会利用各种账目数据在`Linux`的基础上做出决策。这对于实时系统等专家来说（例如工厂中的物理过程控制系统，其中时间至关重要）非常有用。
 
 多任务对于为开放平台提供整洁的编程抽象是至关重要的，在这些平台上，用户可以在窗口环境中运行不同的应用程序。在构建网络服务器时，多任务也是不可或缺的。现在，一台服务器（例如Web服务器）可能几乎同时接收许多请求，并需要以许多不同的方式调度处理服务器。实现有多种方法，但多任务系统确实是最简单的方法之一。我们将在本书的后面看到，由于某些原因，通用多任务对于高吞吐量的Web服务来说有时太慢了。
 
-通用服务器在网络业务中非常常见——它们提供许多网络服务，如网络时间（通过网络时间协议）以同步远程计算机的时钟、网络打印、电子邮件、日志、文件服务等。在UNIX系统上提供有用服务的通用术语是守护进程（daemon）。
+通用服务器在网络业务中非常常见——它们提供许多网络服务，如网络时间（通过网络时间协议）以同步远程计算机的时钟、网络打印、电子邮件、日志、文件服务等。在`UNIX`系统上提供有用服务的通用术语是守护进程（`daemon`）。
 
-进程与用户关联，就像文件一样。在UNIX中，进程以祖先-后代的方式创建，从启动时的原始TCP/IP和Linux实现进程开始。子进程继承父身份。要更改身份，进程可以设置其用户ID，尽管这听起来很严酷，但实际上非常通用。内核还跟踪时间。例如，文件系统提供了目录的层次结构组织。这对于用户和应用程序来说是一种导航辅助。为了简洁，当前工作目录是与进程关联的状态的一部分。为了简单（但有效）的控制方法，UNIX允许进程更改其对文件系统根的视图。进程启动时带有三个指向外部的标准通道：输入、输出和错误。这些与控制终端或tty相关联（当然，进程可以自由脱离控制终端以便在后台运行）。由同一终端控制的一组进程被共同管理。在网络中，由于可以管理该组的状态，特别是通过使用信号（signals）。信号为操作系统通知进程某项事件提供了一种方法。这源于任务中抛出异常（软件中断）的需求：一个极端的例子是，许多UNIX系统可以在电源耗尽时使用信号通知所有进程。现在，信号被用于许多异步通信，还有更正常的文件、管道和套接字通信工具，我们将看到更多。
+进程与用户关联，就像文件一样。在`UNIX`中，进程以祖先-后代的方式创建，从启动时的原始TCP/IP和`Linux`实现进程开始。子进程继承父身份。要更改身份，进程可以设置其用户ID，尽管这听起来很严酷，但实际上非常通用。内核还跟踪时间。例如，文件系统提供了目录的层次结构组织。这对于用户和应用程序来说是一种导航辅助。为了简洁，当前工作目录是与进程关联的状态的一部分。为了简单（但有效）的控制方法，`UNIX`允许进程更改其对文件系统根的视图。进程启动时带有三个指向外部的标准通道：输入、输出和错误。这些与控制终端或`tty`相关联（当然，进程可以自由脱离控制终端以便在后台运行）。由同一终端控制的一组进程被共同管理。在网络中，由于可以管理该组的状态，特别是通过使用信号（`signals`）。信号为操作系统通知进程某项事件提供了一种方法。这源于任务中抛出异常（软件中断）的需求：一个极端的例子是，许多`UNIX`系统可以在电源耗尽时使用信号通知所有进程。现在，信号被用于许多异步通信，还有更正常的文件、管道和套接字通信工具，我们将看到更多。
 
-内核和用户进程可以使用信号与另一个进程进行通信（尽管是突然的）。如果一个进程希望以文明的方式与同一机器上的另一个进程进行通信，有几种选择。如果程序员想要记录通信内容，简单的方法是使用文件。更常见的方法是使用一对类文件通道，称为管道（pipe）。最后，程序员可以使用全功能的通信通道作为套接字（socket），它可以用于纯本地的、或跨机器的进程间通信。
+内核和用户进程可以使用信号与另一个进程进行通信（尽管是突然的）。如果一个进程希望以文明的方式与同一机器上的另一个进程进行通信，有几种选择。如果程序员想要记录通信内容，简单的方法是使用文件。更常见的方法是使用一对类文件通道，称为管道（`pipe`）。最后，程序员可以使用全功能的通信通道作为套接字（`socket`），它可以用于纯本地的、或跨机器的进程间通信。
 
 总结来说，我们可以从下方视角看作操作系统上下文，或者从上方视角看作应用程序/用户上下文。这些观点就像双重人格，或者潜意识和意识.¹
 
 一个关于系统调用的奇幻模型可能是让科托的电影《奥菲斯与欧律狄珀》传说中的视觉隐喻，当诗人通过镜子进入地狱追随真爱时。
 
-
-
-
-
-### 2.2.3 多设备支持
+## 2.2.3 多设备支持
 
 现代计算机支持极其大量的设备。除了传统的键盘、屏幕和存储设备外，我们还有各种网络接口类型，包括固定和无线接口，以及许多多媒体设备（音频、视频捕获、3D 等）。
 
-在最底层，操作系统需要管理设备的输入和输出。在匹配操作系统与不同硬件所需的函数上，存在着令人惊讶的共性。与任何操作系统相关的代码中很大一部分都是设备驱动程序。设备驱动程序隐藏了特定硬件的细节，并为应用程序提供标准的编程接口。Linux 支持模块概念，这允许按需加载设备的代码。
+在最底层，操作系统需要管理设备的输入和输出。在匹配操作系统与不同硬件所需的函数上，存在着令人惊讶的共性。与任何操作系统相关的代码中很大一部分都是设备驱动程序。设备驱动程序隐藏了特定硬件的细节，并为应用程序提供标准的编程接口。`Linux` 支持模块概念，这允许按需加载设备的代码。
 
-所有的 UNIX 系统都通过称为主设备号（major number）和次设备号（minor number）的唯一数字来识别设备类型。主设备号由机构分配，而次设备号根据需要分配（例如，通过配置）。Linux 将设备分为三大类：
+所有的 `UNIX` 系统都通过称为主设备号（`major number`）和次设备号（`minor number`）的唯一数字来识别设备类型。主设备号由机构分配，而次设备号根据需要分配（例如，通过配置）。`Linux` 将设备分为三大类：
 
 - 字符设备（Character）。这些设备通常是串行线路（传统用于键盘类型输入，但也包括并行接口、鼠标、声卡、帧缓冲区等）。
 - 块设备（Block）。这些用于存储类设备（软磁盘、硬盘和光盘）。大多数文件系统都支持这些设备。
-- 网络设备（Network）。这是一个特殊情况，Linux 在处理设备类型上与其他系统不同，因为网络是本书的一个主要主题，稍后会详细讨论。
+- 网络设备（Network）。这是一个特殊情况，`Linux` 在处理设备类型上与其他系统不同，因为网络是本书的一个主要主题，稍后会详细讨论。
 
 字符设备、块设备与网络设备之间的关键区别在于，网络设备通常有另一个智能端，而不仅仅是笨的计算机。
+
+
 
 是什么让设备变得相似？向设备读写数据的能力是共有的。是什么让设备变得不同？许多因素，从性能（数据速率、延迟等）到最重要的是管理复杂性。
 
@@ -1227,15 +1405,15 @@ echo '16i[q]sa[1n0=aln100%1n100/snlbx]baA0D4D465452snlbxq' |dc-Submitted by Simo
 
 现在我们引入中断的概念。在 I/O 上下文中，中断在计算机科学中同样重要。中断关乎将通道的一端与一个短描述符相关联。在文件系统中，这是通过挂载设备到层次结构的根部来实现的。在驱动命名空间中，驱动程序通过主设备号与特定设备相关联。进程通过 `/proc` 机制与进程标识符相关联。在通信领域，我们通过某些地址系统将通道与端点相关联，这一点稍后会讨论。
 
-在底层，设备驱动程序可以使用多种不同的编程技术在内存与设备之间移动数据。简单的技术称为轮询（polling），依赖于持续访问设备以查看数据是否已就绪。在实际系统中，很少设备是这样工作的。更常见的情况是设备具有一定的智能，可以使用中断通知处理器数据已就绪。不同的处理器家族具有不同的硬件技术来提供中断处理设施。通常大多数系统提供一定数量的通道；在 PC 上，这些被称为中断请求，或 IRQ。设备数量可能多于 IRQ，在这种情况下设备必须共享中断，并且对处理器进行编程以区分哪个设备触发了中断。每个 IRQ 都关联一个中断服务程序（ISR）。通常，操作系统会将代码安装在中断向量指向的一组地址处。
+在底层，设备驱动程序可以使用多种不同的编程技术在内存与设备之间移动数据。简单的技术称为轮询（polling），依赖于持续访问设备以查看数据是否已就绪。在实际系统中，很少设备是这样工作的。更常见的情况是设备具有一定的智能，可以使用中断通知处理器数据已就绪。不同的处理器家族具有不同的硬件技术来提供中断处理设施。通常大多数系统提供一定数量的通道；在 PC 上，这些被称为中断请求，或 `IRQ`。设备数量可能多于 `IRQ`，在这种情况下设备必须共享中断，并且对处理器进行编程以区分哪个设备触发了中断。每个 `IRQ` 都关联一个中断服务程序（`ISR`）。通常，操作系统会将代码安装在中断向量指向的一组地址处。
 
 # Linux 操作系统简介
 
 将中断想象为一个带有若干副作用的非请求性过程调用。这些副作用是非常重要的（例如，它们涉及将处理器模式从用户态切换到内核态）。我们稍来看它们是如何工作的，以及我们如何同步进程、内核任务和中断处理程序。许多设备具有足够的智能，通过控制器在内存之间移动数据——这被称为直接访问（direct access），通常由设备驱动程序设置，以减轻 CPU 的负担，并在正常工作与 I/O 工作之间实现某种程度的并行性。大多数快速设备（块设备和网络设备）都是这样工作的。
 
-Linux 在中断处理方面还有一个“杀手锏”。中断服务程序有一个必须响应设备的关键时间，至少起初是这样。然而，可能有很多家务性工作可以在更空闲的时间完成。Linux 的 ISR 将后续工作调度到所谓的“下半部分（bottom half）”。下半部分程序通常涉及将数据移动到应用程序空间、重新调度进程等。系统会扫描下半部分程序列表，并在系统调用的最后阶段显式调用任何就绪的程序。在对称多处理器 Linux 中，下半部分已使用更通用的机制进行了重新设计，我们稍后会介绍。
+Linux 在中断处理方面还有一个“杀手锏”。中断服务程序有一个必须响应设备的关键时间，至少起初是这样。然而，可能有很多家务性工作可以在更空闲的时间完成。Linux 的 `ISR` 将后续工作调度到所谓的“下半部分（bottom half）”。下半部分程序通常涉及将数据移动到应用程序空间、重新调度进程等。系统会扫描下半部分程序列表，并在系统调用的最后阶段显式调用任何就绪的程序。在对称多处理器 Linux 中，下半部分已使用更通用的机制进行了重新设计，我们稍后会介绍。
 
-中断会改变处理器模式（通常是从用户态到内核态），因此允许 ISR 中的代码访问特权资源，这使其成为实现系统调用的理想方式。系统调用也因这个原因被称为陷阱（traps）：它们就像一个从用户空间通往内核这个地窖的陷门。大多数 UNIX 实现通过一个 IRQ 对所有系统调用进行中断，然后使用跳转表访问实际的系统调用代码。系统调用会严格检查参数的有效性（例如，数据缓冲区地址及其长度，读写操作必须位于用户进程的地址空间内）。必要时，系统调用可能会取消用户进程调度。
+中断会改变处理器模式（通常是从用户态到内核态），因此允许 `ISR` 中的代码访问特权资源，这使其成为实现系统调用的理想方式。系统调用也因这个原因被称为陷阱（traps）：它们就像一个从用户空间通往内核这个地窖的陷门。大多数 UNIX 实现通过一个 `IRQ` 对所有系统调用进行中断，然后使用跳转表访问实际的系统调用代码。系统调用会严格检查参数的有效性（例如，数据缓冲区地址及其长度，读写操作必须位于用户进程的地址空间内）。必要时，系统调用可能会取消用户进程调度。
 
 ### 2.2.4 从输入/输出到进程间通信
 
@@ -1244,9 +1422,6 @@ Linux 在中断处理方面还有一个“杀手锏”。中断服务程序有�
 例如，至少有四种可以被系统调用访问的东西，但它们并不都是文件：
 
 - 文件（File）。文件是存储设备上的字节数组。在 UNIX 的世界观中，我们可以打开、关闭、读取和写入它。Linux 中有大量的代码用于在各种不同的存储设备上支持文件。
-
-
-
 
 具有多种目标的设备，包括对外部操作系统的支持和性能目标。
 
@@ -1266,6 +1441,7 @@ Linux 在中断处理方面还有一个“杀手锏”。中断服务程序有�
 
 在迁移到另一个平台时（如果你愿意的话），底层内存管理、时间管理和调度器的某些部分需要注意，以帮助记忆哪些是和不是移植的。Linux 定义了一组用于内核（以及其他地方）的 C 类型。这些类型构建在 POSIX 定义和特定架构类型之上。
 
+```
 /* 这允许 1024 个文件描述符：如果 NR_OPEN 增长超过该值，你必须更改它。但对于“真实”单元来说，1024 似乎足够，所以希望这是一个不需要的限制。 */
 
 /* 注意 POSIX 定义 fd_clear(fd) 在 <sys/time.h>（因此在 <linux/time.h>）中——但这里是更有逻辑的地方，通过在 <sys/time.h> 中设置占位符来解决。 */
@@ -1273,69 +1449,101 @@ Linux 在中断处理方面还有一个“杀手锏”。中断服务程序有�
 /* 这些宏可能定义在 <gnu/types.h> 中。但我们总是使用这里的。 */
 
 #undef __NFDBITS
+
 #define __NFDBITS (8 * sizeof(unsigned long))
 
 #undef __FD_SETSIZE
+
 #define __FD_SETSIZE 1024
 
 #undef __FDSET_LONGS
+
 #define __FDSET_LONGS ((__FD_SETSIZE / __NFDBITS))
 
 #undef __FDMASK
+
 #define __FDMASK ((1UL << __NFDBITS))
 
 typedef struct {
+
     unsigned long fds_bits[__FDSET_LONGS];
+
 } __kernel_fd_set;
+```
 
 # TCP/IP Linux 协议实现
 
+```
 /* 信号处理程序的类型。 */
+
 typedef void (*__kernel_handler_t)(int);
 
 /* SYSV IPC key 的类型。 */
+
 typedef int __kernel_key_t;
 
 /* i86 ASM 头文件接口 C 类型定义：linux/include/asm-i86/types.h。 */
+
 typedef unsigned short mode_t;
 
 /* __ 是可以的：它不会污染 POSIX 命名空间。在导出到用户空间的头文件使用这些 */
+
 typedef __signed__char __s8;
+
 typedef unsigned char __u8;
 
 typedef __signed__short __s16;
+
 typedef unsigned short __u16;
 
 typedef __signed__int __s32;
+
 typedef unsigned int __u32;
 
 #if defined(__GNUC__) && defined(__STRICT_ANSI__)
+
 typedef __signed__long long __s64;
+
 typedef unsigned long long __u64;
+
 #endif
 
 /* 这些不会导出到内核之外，以避免命名空间冲突 */
+
 #ifdef __KERNEL__
+
 typedef signed char __s8;
+
 typedef unsigned char __u8;
 
 typedef signed short __s16;
+
 typedef unsigned short __u16;
 
 typedef signed int __s32;
-typedef unsigned int __u32;
 
+typedef unsigned int __u32;
+```
+
+
+
+```c
 typedef signed long long __s64;
+
 typedef unsigned long long __u64;
 
 #define BITS_PER_LONG 32
 
 /* DMA 地址是 32 位的。 */
+
 typedef u32 dma_addr_t;
+```
 
 # Linux 操作系统简介
 
-/* 内核 C 类型定义：kernel/include/linux/types.h。 */
+/* 内核 C 类型定义：`kernel/include/linux/types.h`。 */
+
+```c
 typedef __kernel_fd_set fd_set;
 typedef __kernel_dev_t dev_t;
 typedef __kernel_ino_t ino_t;
@@ -1345,62 +1553,68 @@ typedef __kernel_off_t off_t;
 typedef __kernel_pid_t pid_t;
 typedef __kernel_fd_t fd_set;
 typedef __kernel_key_t key_t;
+```
 
-/* __xx 是可以的：它不会污染 POSIX 命名空间。在导出到用户空间的头文件使用这些 */
+/* `__xx` 是可以的：它不会污染 POSIX 命名空间。在导出到用户空间的头文件使用这些 */
+
+```c
 typedef __signed__char __s8;
 typedef unsigned char __u8;
-
 typedef __signed__short __s16;
 typedef unsigned short __u16;
-
 typedef __signed__int __s32;
 typedef unsigned int __u32;
+```
 
+```c
 #if defined(__GNUC__) && defined(__STRICT_ANSI__)
+
 typedef __signed__long long __s64;
 typedef unsigned long long __u64;
+
 #endif
+```
 
 /* 这些不会导出到内核之外，以避免命名空间冲突 */
+
+```c
 #ifdef __KERNEL__
+
 typedef signed char __s8;
 typedef unsigned char __u8;
-
 typedef signed short __s16;
 typedef unsigned short __u16;
-
 typedef signed int __s32;
 typedef unsigned int __u32;
-
 typedef signed long long __s64;
 typedef unsigned long long __u64;
+
 #endif
+```
 
 /* 以下定义也受单独的定义保护： */
+
+```c
 typedef __kernel_size_t size_t;
 typedef __kernel_ssize_t ssize_t;
-
 /* __kernel_ptrdiff_t ptrdiff_t; */
 typedef __kernel_time_t time_t;
-
 /* __kernel_clock_t clock_t; */
 /* __kernel_caddr_t caddr_t; */
-
 /* __kernel_uid_t uid_t */
 typedef __kernel_gid_t gid_t;
-
 /* __kernel_loff_t loff_t 定义在 include/arch/types.h。 */
 typedef __kernel_uid_t uid_t;
 typedef __kernel_gid_t gid_t;
+```
 
 /* 这里是更有逻辑的地方。 */
+
+```c
 typedef __kernel_loff_t loff_t;
+```
 
-
-
-
-
-# Linux 操作系统简介 35
+## Linux 操作系统简介 35
 
 ```
 112 typedef __u64 u_int64_t;
@@ -1412,13 +1626,13 @@ typedef __kernel_loff_t loff_t;
 
 操作系统的一个非常重要的部分是它必须管理一组操作任务。在现代系统中，这些任务包括 I/O 处理器（至少是具备 DMA 能力的设备，还包括带有内部调度器的复杂磁盘控制器），可能还有多个并发运行操作系统不同部分的处理器。在任何情况下，传统的做法都是为应用程序程序员提供并发的“幻象”，使得不同的应用程序进程看起来是按顺序运行的，而内核服务则以一种看起来是独立的方式、但实际上是交替执行的方式运行。这使得许多类型的应用程序编程变得简单得多，同时有效地利用了计算资源。例如，一个文字处理器仅仅是一个程序，它似乎以顺序的方式控制从用户键盘输入、使用鼠标到屏幕的所有输入输出，以及文件的所有输入输出。实际上，计算机可能同时执行许多其他任务，既为了这个特定的用户（例如打印、备份等），也为了其他用户服务。事实上，将设备和文件系统的访问细节分解为更小的步骤可以发现，这些操作并不都是顺序的。在单处理器上发生的情况是，单个虚拟机的幻象是由调度器提供的在不同的用户进程之间切换（在内核中，是一个可以在不同中断上下文之间切换的派遣程序）。这被称为交替执行。当计算机拥有多个处理器时（即使是单处理器，但带有智能的独立 I/O，如 DMA，我们稍后会详细介绍），那么并发就是真实而非幻象的。在不修改全部或大部分内核代码的情况下，向系统添加更多处理器将导致整体任务集性能的潜在提升（最好情况下随 CPU 数量近乎线性增长，尽管不一定对单个进程如此）。
 
-当访问相同数据的代码段以任意方式交替执行时，需要在某些位点对数据的访问进行控制（即序列化），以维护数据的一致性。内核黑客经常提到“竞态条件”（race conditions），即并发的代码进程在某些情况下（但并非所有情况）使数据处于不一致的状态。这些错误很难调试，因为它们只发生在交替执行的某些组合中（在许多组合中的几种），并且严重取决于时机。即使是引入简单的跟踪或调试代码也可能让它们消失。访问相同数据的潜在并发代码段被称为关键区域（critical regions），并需要隔离。此外，
+当访问相同数据的代码段以任意方式交替执行时，需要在某些位点对数据的访问进行控制（即序列化），以维护数据的一致性。内核黑客经常提到“竞态条件”（`race conditions`），即并发的代码进程在某些情况下（但并非所有情况）使数据处于不一致的状态。这些错误很难调试，因为它们只发生在交替执行的某些组合中（在许多组合中的几种），并且严重取决于时机。即使是引入简单的跟踪或调试代码也可能让它们消失。访问相同数据的潜在并发代码段被称为关键区域（`critical regions`），并需要隔离。此外，
 
 ## TCP/IP 和 Linux 协议实现
 
 我们还需要对通过全局变量进行的进程间通信进行特定的同步。
 
-为此，Linux 提供了了一系列原语。这些原语取决于是在控制用户进程的并发还是内核的并发。
+为此，Linux 提供了一系列原语。这些原语取决于是在控制用户进程的并发还是内核的并发。
 
 在操作系统的最高层（与用户进程同步），用户进程调度层需要一个 `sleep_on`（可中断的）和一个 `wakeup` 函数。
 
@@ -1432,44 +1646,36 @@ typedef __kernel_loff_t loff_t;
 
 | 单处理器要求 | 非 SMP 实现 |
 | :--- | :--- |
-| spinlock irq | cli() |
-| spin unlock irq | sti() |
-| spinlock irqsave | save flags, cli() |
-| spin unlock irqstore | restore flags, sti() |
-| read lock irq | cli() |
-| read unlock irq | sti() |
-| read lock irqsave | save flags, cli() |
-| read unlock irqstore | restore flags, sti() |
-| write lock irq | cli() |
-| read unlock irq | sti() |
-| write lock irqsave | save flags, cli() |
-| write unlock irqstore | restore flags, sti() |
+| `spinlock irq` | `cli()` |
+| `spin unlock irq` | `sti()` |
+| `spinlock irqsave` | `save flags, cli()` |
+| `spin unlock irqstore` | `restore flags, sti()` |
+| `read lock irq` | `cli()` |
+| `read unlock irq` | `sti()` |
+| `read lock irqsave` | `save flags, cli()` |
+| `read unlock irqstore` | `restore flags, sti()` |
+| `write lock irq` | `cli()` |
+| `read unlock irq` | `sti()` |
+| `write lock irqsave` | `save flags, cli()` |
+| `write unlock irqstore` | `restore flags, sti()` |
 
 （注：由于原文中表格下方存在大量重复的文本，已根据指令“不要重复输出原文”的原则在翻译时进行了去重处理，仅保留表格内容及核心描述。）
 
-此外，我们还需要对通过全局变量进行的进程间通信进行特定的同步。为此，Linux 提供了了一系列原语。这些原语取决于是在控制用户进程的并发还是内核的并发。
 
-在操作系统的最高层（与用户进程同步），用户进程调度层需要一个 `sleep_on`（可中断的）和一个 `wakeup` 函数。
 
-用户进程（当 CPU 处于用户模式时）可以任何时候被中断（这是预期的），而且一个设备可以中断自身或另一个设备的中断服务程序。在内核模式下，中断不会发生在具有相同或较低优先级的例程内部。在最底层，支持此点的基本要求是原子操作（例如，至少在单处理器架构中，一个不可中断的单次测试并设置操作）。不同的硬件架构提供略有不同的原子指令，因此 Linux 提供了一组宏来隐藏这一点。
+# Linux操作系统简介
 
 对于内核关键区域，我们可以将函数分为两种方法——第一种简单地禁用中断，使代码串行；第二种提供同步。
 
 内核级锁在中断级别工作，并可以为读、写函数分开。自旋版本在 SMP 环境的多个处理器上工作，并采用忙等待。为了最大化并发，提供了分离的读锁和写锁。`cli` 和 `sti` 分别清除和设置中断。
 
-### 2.2.7 内存管理
+## 2.2.7 内存管理
 
 Linux 内核的内存模型（通常）简单如下：Linux 使用平坦的 32 位地址空间（4GB），而不是让分段可见。然而，这只是模型。在实践中，我们无法为内核和每个进程分配 4GB 内存，因此我们需要使用分页机制将线性地址映射到实际空间。此外，某些硬件架构（例如 Intel）强制要求使用分段地址。分段地址是。
 
 Linux 进程（与大多数操作系统一样）在加载时由静态分配的内存构建，用于文本（代码）、数据和栈。然而，它们也可以动态地分配内存。
 
 内核也由一组静态分配的内存（在引导/启动时）构建，用于内核代码、数据以及动态内存。然而，由于两个原因，内核必须更动态地管理内存。首先，我们不断有进程加载、启动和停止。其次，我们
-
-
-
-
-
-# Linux操作系统简介
 
 进程对内存的需求可能超过机器的物理内存。
 
@@ -1489,16 +1695,16 @@ Linux 进程（与大多数操作系统一样）在加载时由静态分配的�
 
 除了标准的多用户、多任务 UNIX（正如你预期的那样的）之外，Linux 2 还支持：
 
--   **平台独立性。** 多种处理器架构（例如 Intel、ARM、Alpha、Motorola 以及许多）。
--   **多处理器。** 对称多处理器运行。
--   **复杂的调度。** 多个用户进程调度器（两类实时调度器，其中某些比时间分片更智能，并且既支持运行结束也支持标准的 UNIX 语义）。
--   **高效的执行启动。** 写时复制（Copy on write）按需加载可执行文件（即 `fork` 不使用内存，`exec` 不使用内存，`mmap` 映射文件但在需要新数据页之前不请求分页）。
--   **高效的应用内存利用。** 共享库（使得进程更小且运行更快）。
--   **高效的系统内存利用。** 模块（运行时可加载内核代码——例如，大多数备用调度器和文件系统代码在需要时才会存在）。
--   **复杂的文件系统。** 多种备用文件系统（例如 UNIX、NFS、EFT、DOS、NTFS 和 Samba）。
--   **二进制兼容性。** 多种执行格式。
--   **工业级桌面兼容性。** 多种执行格式。
--   **国际化。** 多语言支持。
+- **平台独立性。** 多种处理器架构（例如 Intel、ARM、Alpha、Motorola 以及许多）。
+- **多处理器。** 对称多处理器运行。
+- **复杂的调度。** 多个用户进程调度器（两类实时调度器，其中某些比时间分片更智能，并且既支持运行结束也支持标准的 UNIX 语义）。
+- **高效的执行启动。** 写时复制（Copy on write）按需加载可执行文件（即 `fork` 不使用内存，`exec` 不使用内存，`mmap` 映射文件但在需要新数据页之前不请求分页）。
+- **高效的应用内存利用。** 共享库（使得进程更小且运行更快）。
+- **高效的系统内存利用。** 模块（运行时可加载内核代码——例如，大多数备用调度器和文件系统代码在需要时才会存在）。
+- **复杂的文件系统。** 多种备用文件系统（例如 UNIX、NFS、EFT、DOS、NTFS 和 Samba）。
+- **二进制兼容性。** 多种执行格式。
+- **工业级桌面兼容性。** 多种执行格式。
+- **国际化。** 多语言支持。
 
 在 16 MB 内存上，它将运行 X（KDE, 等）。这包括 WINE（Windows 模拟器）。
 
@@ -1516,68 +1722,66 @@ Linux 进程（与大多数操作系统一样）在加载时由静态分配的�
 
 由于开源的设计，这在内核层中是免费的。如果你愿意，你可以在内核时完成这一点。
 
-
-
-
-
 理解源代码树的目录结构至关重要。它非常简单。假设我们处于源码树的顶端（无论你将其放在文件系统的何种位置），它看起来是这样的：
 
 ## 2.4 源码目录树结构
 
-| arch/ | 依赖于处理器硬件模型的平台代码 |
+| `arch/` | 依赖于处理器硬件模型的平台代码 |
 |---|---|
-| drivers/ | 设备特定相关代码 |
-| fs/ | 文件系统代码 |
-| include/ | 头文件 |
-| init/ | 内核启动代码 |
-| kernel/ | 进程、模块、调度器的核心代码 |
-| lib/ | 通用内核支持函数 |
-| mm/ | 内存管理代码 |
-| net/ | 网络代码 |
+| `drivers/` | 设备特定相关代码 |
+| `fs/` | 文件系统代码 |
+| `include/` | 头文件 |
+| `init/` | 内核启动代码 |
+| `kernel/` | 进程、模块、调度器的核心代码 |
+| `lib/` | 通用内核支持函数 |
+| `mm/` | 内存管理代码 |
+| `net/` | 网络代码 |
 
 在这些目录中，本书主要涉及一个主要的 `net/` 子目录中的代码，以及 `include/` 和 `driver/` 子目录中特定的网络子目录。
 
 ## 2.5 源码网络子目录树结构
 
-| core/ | 设备访问、过滤、netlink、socket 胶接层等通用代码 |
-| ipv4/ | IP 版本 4 代码、TCP 代码、UDP 代码、ICMP、IGMP 和转发表代码。 |
-| ipv6/ | 与 IPv4 相同，但针对 IPv6 |
-| sched/ | 用于输出链路资源管理的包调度，支持 IP 或非 IP |
-| packet/ | 原始数据包访问协议族，位于 IP 以下或非 IP |
-| httpd/ | 将将 HTTP 应用程序放入内核的误导尝试 |
-| sunrpc/ | Sun 远程过程调用实现（用于 NFS） |
-| wanrouter/ | 支持多协议路由器 |
-| netlink/ | 协议管理协议 socket 代码 |
-| ethernet/ | 通用以太网代码（在 ../dev/ 中的特定以太网卡） |
-| 802/ | 通用 IEEE 802 链路层协议代码 |
-| atm/ | 通用异步传输模式网络/链路代码，包括 MPOA 和 IP 特有内容 |
+| `core/` | 设备访问、过滤、netlink、socket 胶接层等通用代码 |
+| `ipv4/` | IP 版本 4 代码、TCP 代码、UDP 代码、ICMP、IGMP 和转发表代码。 |
+| `ipv6/` | 与 IPv4 相同，但针对 IPv6 |
+| `sched/` | 用于输出链路资源管理的包调度，支持 IP 或非 IP |
+| `packet/` | 原始数据包访问协议族，位于 IP 以下或非 IP |
+| `httpd/` | 将将 HTTP 应用程序放入内核的误导尝试 |
+| `sunrpc/` | Sun 远程过程调用实现（用于 NFS） |
+| `wanrouter/` | 支持多协议路由器 |
+| `netlink/` | 协议管理协议 socket 代码 |
+| `ethernet/` | 通用以太网代码（在 ../dev/ 中的特定以太网卡） |
+| `802/` | 通用 IEEE 802 链路层协议代码 |
+| `atm/` | 通用异步传输模式网络/链路代码，包括 MPOA 和 IP 特有内容 |
 
 Linux 操作系统导论 43
 
 ## 表 2.5 延续
 
-| ax25/ | 业余数据包无线 X.25 链路协议代码，位于 IP 以下 |
-| x25/ | 广域网 x.25 协议网络代码，位于 IP 以下或非 IP |
-| rose/ | 远程操作服务代码--位于 x.25 之上的层，非 IP |
-| lapb/ | 链路接入程序，平衡链路层协议代码，位于 IP 以下 |
-| netrom/ | netrom IP 设备代码 |
-| bridge/ | 位于 IP 层下的 EE 802.1d 网桥实现 |
-| ipx/ | Novell 的 IPX 协议（非 IP） |
-| unix/ | UNIX 域 socket 代码--见第 4 章，非 IP |
-| irda/ | 红外数字访问--那种 IR 非 IP 设备 |
-| decnet/ | DECNET（旧的数字设备公司非 IP 协议套件） |
-| econet/ | ECON--廉价且实用的（非 IP）网络 |
-| appletalk/ | 用于使用原生（非 IP）协议与 Mac 通信 |
+| `ax25/` | 业余数据包无线 X.25 链路协议代码，位于 IP 以下 |
+| `x25/` | 广域网 x.25 协议网络代码，位于 IP 以下或非 IP |
+| `rose/` | 远程操作服务代码--位于 x.25 之上的层，非 IP |
+| `lapb/` | 链路接入程序，平衡链路层协议代码，位于 IP 以下 |
+| `netrom/` | netrom IP 设备代码 |
+| `bridge/` | 位于 IP 层下的 EE 802.1d 网桥实现 |
+| `ipx/` | Novell 的 IPX 协议（非 IP） |
+| `unix/` | UNIX 域 socket 代码--见第 4 章，非 IP |
+| `irda/` | 红外数字访问--那种 IR 非 IP 设备 |
+| `decnet/` | DECNET（旧的数字设备公司非 IP 协议套件） |
+| `econet/` | ECON--廉价且实用的（非 IP）网络 |
+| `appletalk/` | 用于使用原生（非 IP）协议与 Mac 通信 |
 
 再向下深入一层，让我们看看表 2.6 所示的 IPv4 目录。
 
 ## 表 2.6 IPv4 子目录结构
 
-| linux/ipv4/netfilter/ | 包含 IPv4 特定的过滤代码--见第 10 章 |
+| `linux/ipv4/netfilter/` | 包含 IPv4 特定的过滤代码--见第 10 章 |
 
 ## 2.5 进程的一生
 
-进程的生命始于一个位于磁盘上的编译程序，以及一个想要运行该程序的用户。通过与系统交互（通过某些程序，例如 shell，或者通过 cron），用户通知系统他们希望此程序运行。
+
+
+进程的生命始于一个位于磁盘上的编译程序，以及一个想要运行该程序的用户。通过与系统交互（通过某些程序，例如 `shell`，或者通过 `cron`），用户通知系统他们希望此程序运行。
 
 进程运行在它自己的内存地址空间中，该空间由一组页组成，并在用户模式下随 CPU 运行。进程可以扩展其内存（通过 `malloc()` 使用 `sbrk` 调用）并共享内存（见第 4 章 IPC）。它还可以映射文件。
 
@@ -1595,7 +1799,7 @@ Linux 操作系统导论 43
 
 **图 2.6 系统调用**
 
-## 2.7 调度器 i: linux/kernel/sched.c
+### 2.7 调度器 i: `linux/kernel/sched.c`
 
 ```c
 #endif /* CONFIG_SMP
@@ -1627,7 +1831,7 @@ need_sched:
         goto scheduling;
 ```
 
-## 2.8 调度器 ii: linux/kernel/sched.c
+### 2.8 调度器 ii: `linux/kernel/sched.c`
 
 ```c
 release_kernel_lock(prev, this_cpu);
@@ -1643,7 +1847,7 @@ sched_data = &sched_data[this_cpu].schedule_data;
 spin_lock_irq(&runqueue_lock);
 ```
 
-## 2.9 调度器 iii: linux/kernel/sched.c
+### 2.9 调度器 iii: `linux/kernel/sched.c`
 
 ```c
 /* 将耗尽的进程移到最后... */
@@ -1679,7 +1883,7 @@ still_running:
         if (can_schedule(p, this_cpu))
 ```
 
-## 2.10 调度器 iv: linux/kernel/sched.c
+### 2.10 调度器 iv: `linux/kernel/sched.c`
 
 ```c
 int weight = goodness(p, this_cpu, prev->active_mm);
@@ -1726,7 +1930,7 @@ sched_data->last_schedule = get_cycles();
 #endif /* CONFIG_SMP
 ```
 
-## 2.11 调度器 v: linux/kernel/sched.c
+### 2.11 调度器 v: `linux/kernel/sched.c`
 
 ```c
 kstat_context_switch();
@@ -1754,11 +1958,11 @@ prepare_switch({
 if (!prev->mm) {
 ```
 
-
-
-
-
 # 48 TCP/IP 与 Linux 协议实现
+
+
+
+# Linux 操作系统简介
 
 ```c
 prev->active_mm = NULL;
@@ -1773,7 +1977,7 @@ switch_to(prev, next, prev);
 same_process;
 ```
 
-图 2.12 调度器 v：linux/kernel/sched.c。
+图 2.12 调度器 v：`linux/kernel/sched.c`。
 
 ```c
 reacquire_kernel_lock(current);
@@ -1811,7 +2015,7 @@ BUG();
 return;
 ```
 
-# Linux 操作系统简介
+## 图 2.13 调度器尾部：`linux/kernel/sched.c`
 
 ```c
 690 }
@@ -1829,11 +2033,9 @@ return;
    if (!q)
 ```
 
-# 图 2.13 调度器尾部：linux/kernel/sched.c。
-
-- * 快速路径直接穿透。我们必须在检查 prev->state 之前
-* 清除 has_cpu 以避免唤醒竞态 - 因此我们
-* 也必须防止任务提前退出的情况。
+- 快速路径直接穿透。我们必须在检查 `prev->state` 之前
+- 清除 `has_cpu` 以避免唤醒竞态 - 因此我们
+- 也必须防止任务提前退出的情况。
 
 ```c
 task_lock(prev);
@@ -1872,7 +2074,7 @@ spin_lock_irqsave(&runqueue_lock, flags);
 
 # TCP/IP 与 Linux 协议实现
 
-# 图 2.14 唤醒通用代码：linux/kernel/sched.c。
+## 图 2.14 唤醒通用代码：`linux/kernel/sched.c`
 
 ```c
 346 static inline void wake_up_process_synchronous(struct task_struct * p)
@@ -1898,7 +2100,7 @@ spin_lock_irqsave(&runqueue_lock, flags);
 369 signed long schedule_timeout(signed long timeout)
 ```
 
-# 图 2.15 睡眠代码：linux/kernel/sched.c。
+## 图 2.15 睡眠代码：`linux/kernel/sched.c`
 
 ```c
 803 {
@@ -1912,7 +2114,7 @@ spin_lock_irqsave(&runqueue_lock, flags);
 812     return;
 ```
 
-# 图 2.16 Linux 系统入口代码保存与恢复：arch/i386/kernel/entry.S
+## 图 2.16 Linux 系统入口代码保存与恢复：`arch/i386/kernel/entry.S`
 
 ```assembly
 86  #define SAVE_ALL
@@ -1966,6 +2168,8 @@ spin_lock_irqsave(&runqueue_lock, flags);
 
 ![](img/06c11ba85c1c24aa63e12682ebd106_0.png)
 
+
+
 ```assembly
 136 ENTRY(call) # 我们通过 call gates 获取不同的栈布局，
 137     pushl
@@ -2000,7 +2204,7 @@ Linux 中的文件有多种类型。对虚拟文件系统的讨论超出了本�
 
 还有内存映射文件的可能性，这意味着随后的随机访问将高效得多（除非发生分页系统的抖动）。
 
-文件存在于文件系统中，文件系统是在磁盘被格式化和分区时创建的。每个分区由超级块（superblocks）和普通块组成的双向链表进行布局。
+文件存在于文件系统中，文件系统是在磁盘被格式化和分区时创建的。每个分区由超级块（`superblocks`）和普通块组成的双向链表进行布局。
 
 ## 2.7 操作系统的一天
 
@@ -2010,16 +2214,13 @@ Linux 中的文件有多种类型。对虚拟文件系统的讨论超出了本�
 
 当你开启机器时，硬件会产生一个特殊信号，该信号应该传播到所有设备、内存和处理器以引起上电复位。这会将一切设置到已知状态，以便在软件启动时可以对情况做出某些假设。
 
-
-
-
 从（选择或配置的）启动设备配置（或选择）的操作系统。
 
 最后，引导程序更改某些系统设置并跳转到新加载的代码，该代码将通过操作系统的特定初始化。
 
 我们开始。
 
-# 图 2.18 Linux 内核启动代码 i：linux/init/main.c。
+### 图 2.18 Linux 内核启动代码 i：linux/init/main.c。
 
 ```c
 498  }
@@ -2046,7 +2247,7 @@ Linux 中的文件有多种类型。对虚拟文件系统的讨论超出了本�
 519          char *command_line;
 ```
 
-# 图 2.19 Linux 内核启动代码 ii：linux/init/main.c。
+### 图 2.19 Linux 内核启动代码 ii：linux/init/main.c。
 
 ```c
 523  unsigned long messages;
@@ -2065,7 +2266,7 @@ Linux 中的文件有多种类型。对虚拟文件系统的讨论超出了本�
 536      sched_init();
 ```
 
-# Linux 操作系统简介 55
+### Linux 操作系统简介 55
 
 ```c
 537 time_init();
@@ -2095,7 +2296,7 @@ Linux 中的文件有多种类型。对虚拟文件系统的讨论超出了本�
 561 #ifdef CONFIG_BLK_DEV_INITRD
 ```
 
-图 2.20 Linux 内核启动代码 iii：linux/init/main.c
+### 图 2.20 Linux 内核启动代码 iii：linux/init/main.c
 
 ```c
 563 if (initrd_start && !initrd_behavior_start_ok &&
@@ -2124,7 +2325,7 @@ Linux 中的文件有多种类型。对虚拟文件系统的讨论超出了本�
 586 signals_init();
 ```
 
-# 56 TCP/IP 和 Linux 协议实现
+### 56 TCP/IP 和 Linux 协议实现
 
 ```c
 587 bds_init();
@@ -2146,8 +2347,12 @@ Linux 中的文件有多种类型。对虚拟文件系统的讨论超出了本�
 ## 2.8 设备驱动程序的一天
 
 设备是一个带有一组标准例的通用对象。它初始化后，有一组用于输入和输出的标准函数，以及中断处理程序。
+
+
+
 在这里我们查看三种设备类型，以及它们在驱动程序上线时如何让操作系统感知。
-> 图 2.21 字符设备注册：linux/fs/devices.c。
+
+> 图 2.21 字符设备注册：`linux/fs/devices.c`。
 
 ```c
 100 if (major == 0) {
@@ -2170,7 +2375,7 @@ Linux 中的文件有多种类型。对虚拟文件系统的讨论超出了本�
 117     write_unlock(&chdevs_lock);
 ```
 
-# Linux 操作系统简介 57
+## Linux 操作系统简介 57
 
 ```c
 119 return -EBUSY;
@@ -2197,7 +2402,7 @@ Linux 中的文件有多种类型。对虚拟文件系统的讨论超出了本�
 141 /*
 ```
 
-图 2.22 设备注册：linux/fs/block_dev.c。
+图 2.22 设备注册：`linux/fs/block_dev.c`。
 
 ```c
 478 len = sprintf(p, "% devices:\n");
@@ -2225,92 +2430,144 @@ Linux 中的文件有多种类型。对虚拟文件系统的讨论超出了本�
 502 }
 503 #endif
 505 **
+```
 
-# 58 TCP/IP 和 Linux 协议实现
+## 58 TCP/IP 和 Linux 协议实现
 
 ```c
 504 ret = blkdevs[major].bdops;
+
 505 
+
 506 return ret;
+
 507 }
+
 508
+
 509 int register_blkdev(unsigned int major, const char * name, struct block_device_operations
 *bdops)
+
 510 {
 ```
 
-图 2.23 Linux 网络设备注册 i：linux/net/core/dev.c。
+图 2.23 Linux 网络设备注册 i：`linux/net/core/dev.c`。
 
 ```c
 2151 /*
 2152  * 查看调用者在论论哪个接口。
 2153  */
+
 2154
+
 2155 switch(cmd);
+
 2156 {
+
 2157     /*
 2158     * 这些 ioctl 调用：
 2159     * - 所有人都可以执行。
 2160     * - 是原子的且不需要锁。
 2161     * - 返回一个值
 2162     */
+
 2163     case SIOCGIFFLAGS:
+
 2164     case SIOCGIMETRIC:
+
 2165     case SIOCGIFMTU:
+
 2166     case SIOCGIFADDR:
+
 2167     case SIOCGIFSLAVE:
+
 2168     case SIOCGIFMAP:
+
 2169     case SIOCGIFINDEX:
+
 2170     case SIOCGIFLEN:
+
 2171     dev_load(ifr.name);
+
 2172     write_lock(&dev_base_lock);
+
 2173     ret = dev_ifctl(&ifr, cmd);
+
 2174     read_unlock(&dev_base_lock);
+
 2175     if (ret) {
+
 2176         colon = ':';
+
 2177         if (copy_to_user(arg, &ifr, sizeof(struct))
 2178             return -EFAULT;
+
 2179     }
 2180     return ret;
+
 2181 }
+
 2182
+
 2183 /* - 需要超级用户权限。
 2184     * - 需要严格序列化。
 2185     * - 不返回一个值
 2186 */
 ```
 
-# Linux 操作系统简介 59
+## Linux 操作系统简介 59
 
-# 图 2.24 网络设备注册 ii：linux/net/core/dev.c。
+### 图 2.24 网络设备注册 ii：`linux/net/core/dev.c`。
 
 ```c
 case SIOCSIFFLAGS:
+
 case SIOCSFIMRIC:
+
 case SIOCSITMU:
+
 case SIOCSIMAP:
+
 case SIOCSIHWAND:
+
 case SIOCSIFLAVE:
+
 case SIOCADDMULTI:
+
 case SIOCDELMULTI:
+
 case SIOCSIROADCAST:
+
 case SIOCSIFTQLEN:
+
 case SIOCSIFNAME:
+
 case SIOCGETTOOL:
+
 if (!capable(CAP_NET_ADMIN)) {
+
     return -EPERM;
+
 }
+
 dev_load(ifr.ifr_name);
+
 dev_probe_lock();
+
 tnl_lock();
+
 ret = dev_ifsloc(&ifr, cmd);
+
 tnl_unlock();
+
 dev_probe_unlock();
+
 return ret;
+
 }
 ```
 
-# 图 2.25 网络设备注册 iii：linux/net/core/dev.c。
+### 图 2.25 网络设备注册 iii：`linux/net/core/dev.c`。
 
 ```c
 case SIOCDGIFEM:
@@ -2320,6 +2577,7 @@ case SIOCSIFMEM:
     /* 设置设备的内存缓冲区。在我们的案例中不适用 */
 case SIOCSIFLINK:
     return -EINVAL;
+
 /*
    未知或私有的 ioctl。
 */
@@ -2334,23 +2592,29 @@ default:
         if (ret & copy_to_user(user, &ifr, sizeof(struct)))
             return -EFAULT;
     }
-    return ret;
-}
 ```
-
-```c
-#ifdef WIRELESS_EXT
-    /* 处理无线扩展 */
-    if (cmd >= SIOCSIFIRST && cmd <= SIOCSIWLAST)
-```
-
-
 
 
 
 # TCP/IP 与 Linux 协议实现
 
 ```c
+return ret;
+}
+```
+
+```c
+#ifdef WIRELESS_EXT
+
+    /* 处理无线扩展 */
+
+    if (cmd >= SIOCSIFIRST && cmd <= SIOCSIWLAST)
+```
+
+# 图 2.26 Linux 网络设备注册 v: linux/net/core/dev.c
+
+```c
+/**
 * 如果命令是'设置参数'或
 * '获取编码参数'，检查用户
 * 是否权执行该操作 //
@@ -2371,7 +2635,7 @@ return ret;
 return -EINVAL;
 ```
 
-# 图 2.26 Linux 网络设备注册 v: linux/net/core/dev.c。
+# 图 2.27 Linux 网络设备注册 v: linux/net/core/dev.c
 
 ```c
 /**
@@ -2388,7 +2652,7 @@ int dev_new_index(void) {
 static int dev_boot_phase = 1;
 ```
 
-# 图 2.27 Linux 网络设备注册 v: linux/net/core/dev.c。
+# 图 2.28 网络设备注册 v: linux/net/core/dev.c
 
 ```c
 /**
@@ -2419,7 +2683,7 @@ int register_netdev(struct net_device *dev) {
 #endif
 ```
 
-# 图 2.28 网络设备注册 v: linux/net/core/dev.c。
+# 图 2.29 Linux 网络设备注册 v: linux/net/core/dev.c
 
 ```c
 if (dev_boot_phase) {
@@ -2428,18 +2692,14 @@ if (dev_boot_phase) {
         if (ret)
             return ret;
     #endif /* CONFIG_NET_DIVERT */
-
     /* 这不是一个 bug，我不确定所有在 netdev 模块
     启动之前初始化的设备是否相同。 */
-
      现在它们被链到设备启动列表并在稍后探测。如果一个模块
     在 netdev 之前初始化，但假设 dev->init 确实是由
     register_netdev() 引起的，那么它将失败。 */
-
     /* 所以这条消息应该打印一段时间。
     /*
     printk(KERN_INFO, "early initialization of device %s is deferred\n", dev->name);
-
     /* 检查是否存在，并追加到链的末尾 */
     for (dp=&dev->base, d=(**dp); dp!= NULL; dp=&dp->next) {
         if (d == dev && strnc(d->name, dev->name) == 0) {
@@ -2451,18 +2711,16 @@ if (dev_boot_phase) {
     *dp = dev;
     dev_hold(dev);
     write_unlock_bh(&dev_base_lock);
-
     /*
     * 注册时的默认初始状态是
     * 设备已存在。
     */
     set_bit(__LINK_STATE_PRESENT, &dev->state);
-
     return 0;
 }
 ```
 
-# 图 2.29 Linux 网络设备注册 v: linux/net/core/dev.c。
+# 图 2.29 Linux 网络设备注册 v: linux/net/core/dev.c
 
 ```c
 #ifdef CONFIG_NET_DIVERT
@@ -2470,17 +2728,13 @@ if (dev_boot_phase) {
     if (ret)
         return ret;
 #endif /* CONFIG_NET_DIVERT */
-
     dev->iflink = -1;
-
     /* 初始化，如果此函数处于状态 */
     if (dev->init && dev->init(dev) != 0)
         return -EIO;
-
     dev->ifindex = dev_new_index();
     if (dev->iflink == -1)
         dev->iflink = dev->ifindex;
-
     /* 检查是否存在，并追加到链的末尾 */
     for (dp=&dev->base, d=(**dp); dp!= NULL; dp=&dp->next) {
         if (d == dev && strnc(d->name, dev->name) == 0) {
@@ -2492,34 +2746,32 @@ if (dev_boot_phase) {
     *dp = dev;
     dev_hold(dev);
     write_unlock_bh(&dev_base_lock);
-
     /*
     * 注册时的默认初始状态是
     * 设备已存在。
     */
     set_bit(__LINK_STATE_PRESENT, &dev->state);
-
     return 0;
 }
 ```
 
-# Linux 系统简介## 2.9 模块的一天
+
+
+# Linux 系统简介
+
+## 2.9 模块的一天
 
 今天 Linux 最受推崇的功能之一是它在不需要服务器进程的情况下实现了微内核的灵活性。这是通过模块实现的，如图 2.3 所示。
 
-模块是加载到内核的代码。这是通过一个简单的接口实现的，该接口通过导出符号（参见 /proc/ksyms）和模块依赖来工作。处理交叉依赖并不科学——这是当你编译并链接使用多个库的应用程序时，加载器每天都在做的事情。
+模块是加载到内核的代码。这是通过一个简单的接口实现的，该接口通过导出符号（参见 `/proc/ksyms`）和模块依赖来工作。处理交叉依赖并不科学——这是当你编译并链接使用多个库的应用程序时，加载器每天都在做的事情。
 
-在 /sbin 中有一些管理模块的应用程序，如 insmod、rmmod 和 modprobe。前两个可以手动（通过脚本）添加或删除模块。后者实际上是由内核调用的（因此使用模块的内核需要一个带有 /sbin 的文件系统，以便运行此外部程序来管理模块依赖。）
+在 `/sbin` 中有一些管理模块的应用程序，如 `insmod`、`rmmod` 和 `modprobe`。前两个可以手动（通过脚本）添加或删除模块。后者实际上是由内核调用的（因此使用模块的内核需要一个带有 `/sbin` 的文件系统，以便运行此外部程序来管理模块依赖。）
 
 ## 2.10 SMP
 
 Linux 支持对称多处理（SMP）。这意味着如果你有一个多处理器系统，Linux 内核将代表进程在多个处理器上执行。这并不科学，但它确实让关键区域之间的互锁变得稍微复杂了一些。它也让系统的性能分析（特别是大型文件、Web 或路由器服务器系统）变得复杂得多。这是一个可以写一整本书的主题。
 
 模块最激进用法的一个例子是 MIT Click 项目 [26]，它完全作为一个模块集合实现了一个基于组件的路由器，通过编程语言进行配置，并通过内核模块机制进行安装。
-
-
-
-
 
 # Linux 操作系统简介 65
 
@@ -2531,48 +2783,83 @@ Linux 支持对称多处理（SMP）。这意味着如果你有一个多处理�
 
 ```
 extern struct softnet_data softnet_data(NR_CPUS);
+
 #define HAVE_NETIF_QUEUE
+
 static inline void _netif_schedule(struct net_device *dev)
+
 {
+
     if (!test_and_set_bit(LINK_STATE_XOFF, &dev->state)) {
+
         unsigned long flags;
+
         int cpu = sm_processor_id();
 
         local_irq_save(flags)
+
         dev->next_scheduled = softnet_data[cpu].output_queue = dev;
+
         _cpu_raise_softirq(cpu, NET_SOFTXIRQ);
+
         local_irq_restore(flags)
+
     }
+
 }
+
 static inline void schedule(struct net_device *dev)
+
 {
+
     if (!test_bit(LINK_STATE_XOFF, &dev->state)) {
+
         _netif_schedule(dev);
+
     }
+
 }
+
 static inline void netif_start_queue(struct net_device *dev)
+
 {
+
     clear_bit(LINK_STATE_XOFF, &dev->state);
+
     netif_schedule(dev);
+
 }
+
 static inline void netif_stop_queue(struct net_device *dev)
+
 {
+
     set_bit(LINK_STATE_XOFF, &dev->state);
+
 }
+
 static inline int netif_queue_stopped(struct net_device *dev)
+
 {
 ```
 
 ```
 516 return test_bit(__LINK_STATE_XOFF, &dev->state);
+
 517 }
+
 }
 
 519 static inline int netif_running(struct net_device *dev)
+
 {
+
 521 return test_bit(__LINK_STATE_START, &dev->state);
+
 522 }
 ```
+
+
 
 ### 2.10.1 应用支持
 
@@ -2599,23 +2886,19 @@ static inline int netif_queue_stopped(struct net_device *dev)
 
 在下一章中，我们将对整个协议栈进行一次垂直切分，以查看它们是如何结合在一起的，并对书中其他主题进行快速概览。
 
-
-
-
-
 # 第 3 章
 
 # 数据包的短暂生命
 
 > “给予比收受更快乐。”
-——传统谚语
+> ——传统谚语
 
 > “发送时要保守，接收时要慷慨。”
-——乔恩·波斯尔 (Jon Postel)
+> ——乔恩·波斯尔 (`Jon Postel`)
 
 ## 3.1 路线图
 
-在本章中，我们将对 Linux 中构建和发送数据包，以及在远端接收并解码数据包的过程进行轻量级的结构化梳理。我们将通过三个不同的示例来实现，每个示例从三个不同的视角来看：首先，我们观察通过 TCP 连接传输某些数据（例如 HTTP 下载的一部分）；然后，我们观察 UDP 数据包交换（例如 DNS 查询的一部分）；最后，我们观察一个单向 RTP 流。这些视角分别从源代码、执行过程和线缆（wire）角度来看。在最后一种情况下，我们还将路由器视为线缆的一部分，并更详细地探讨其运行机制：查看一个扩展案例，涉及捕捉某些音频、将其放入 RTP 包中、调用 socket API 发送数据包、通过 socket 内核代码（skbuffs 等）、添加 UDP 头部、防火墙过滤检查以及组播。然后，数据包穿越链路（SLIP 或 PPP）到达同样运行 Linux 并开启 diffserv 的路由器——因此我们能够看到数据包如何在数据包队列代码中被 WRR 或其他调度器调度，通过以太网转发，最后由驱动程序接收，在 IP 层进行多路复用，并向上通过 UDP TCP/IP 和 Linux 协议实现传递给被调度的进程，最后由该进程读取 socket 并输出音频。
+在本章中，我们将对 Linux 中构建和发送数据包，以及在远端接收并解码数据包的过程进行轻量级的结构化梳理。我们将通过三个不同的示例来实现，每个示例从三个不同的视角来看：首先，我们观察通过 TCP 连接传输某些数据（例如 HTTP 下载的一部分）；然后，我们观察 UDP 数据包交换（例如 DNS 查询的一部分）；最后，我们观察一个单向 RTP 流。这些视角分别从源代码、执行过程和线缆（wire）角度来看。在最后一种情况下，我们还将路由器视为线缆的一部分，并更详细地探讨其运行机制：查看一个扩展案例，涉及捕捉某些音频、将其放入 RTP 包中、调用 socket API 发送数据包、通过 socket 内核代码（`skbuffs` 等）、添加 UDP 头部、防火墙过滤检查以及组播。然后，数据包穿越链路（SLIP 或 PPP）到达同样运行 Linux 并开启 diffserv 的路由器——因此我们能够看到数据包如何在数据包队列代码中被 WRR 或其他调度器调度，通过以太网转发，最后由驱动程序接收，在 IP 层进行多路复用，并向上通过 UDP TCP/IP 和 Linux 协议实现传递给被调度的进程，最后由该进程读取 socket 并输出音频。
 
 这是一种结合了许多 RFC 和相关互联网文档来解释网络通信的方法，通过一个操作示例和对整个协议栈的自顶向下视图，一次性扩展了对单一协议的理解。
 因此，我们还以快速通道的技术水平对对书的其余部分进行了快速介绍。
@@ -2663,10 +2946,6 @@ static inline int netif_queue_stopped(struct net_device *dev)
 # 接收
 
 在下面的图中我们尝试展示相反的过程——从线缆上传输的未请求数据帧，向上传递给一个应用程序，该应用程序实际上已经预设了很快可能想要接收某些数据。
-
-
-
-
 
 # 数据包的短暂生命 75
 
@@ -2718,31 +2997,51 @@ TCP（以及 UDP）输入随后会进行进一步的数据包检查，更新状�
 
 在这里处于 socket 胶合层（glue），然后是 TCP 工作——在源码发行版中（与本章讨论的其他代码一样），它位于（2.4 版本）内核发行树的 `linux/net/ipv4/` 目录下。下方引用的代码提取如图 3.3 所示。
 
+
+
+`inet_sendmsg()`
+
+`skb->prot->sendmsg()` ...
+
+`tcp_ipv4.c`：
+
+```c
+struct proto tcp_proto {
 ```
-inet_sendmsg())
-skb->prot->sendmsg() ...
-tcp_ipv4.c:
-struct proto tcp_proto { 
-tcp.c:
-tcp_sendmsg()
-tcp_output.c:
-tcp_send_skb()
-tcp_transmit_skb()
-err = tp->af_specific-xmit(skb);
-maps to ip.queue_xmit
+
+`tcp.c`：
+
+`tcp_sendmsg()`
+
+`tcp_output.c`：
+
+`tcp_send_skb()`
+
+`tcp_transmit_skb()`
+
+`err = tp->af_specific-xmit(skb);`
+
+maps to `ip.queue_xmit`
+
 ```
 
 然后在 `tcp_transmit_skb()` 中，管理了状态/头部的变化。这在第 7 章中讨论。
 
-图 3.3 填充某些关键字段：linux/net/ipv4/tcp_output.c。
+图 3.3 填充某些关键字段：`linux/net/ipv4/tcp_output.c`。
 
 ```
 th = (struct tcphdr *)skb_push(skb, tcp_header_size);
+
 skb->th = th;
+
 skb_set_window(w, skb);
+
 /* 构建 TCP 头部并计算校验和。 */
+
 th->source = skb->port;
+
 th->dest = skb->port;
+
 th->seq = htons(th->seq);
 ```
 
@@ -2753,11 +3052,8 @@ th->seq = htons(th->seq);
 ```c
 ip_output_c:
 ```
+
 （注：OCR 提供的文本在代码块中存在大量重复内容，已清理以恢复逻辑流。）
-
-
-
-
 
 # TCP/IP 与 Linux 协议实现
 
@@ -2769,20 +3065,20 @@ ip_output_c:
 1066  #ifdef RAND_LIE
 1067      rd = net_random();
 1068      rq = rd % netdev_max_backlog;
-1069          if (rq < avg_blog) /* 不幸的队列队列 *//
+1069          if (rq < avg_blog) /* 不幸的队列队列 */
 1070              softnet_data[cpu].cng_level = NET_RX_HIGH;
 1071  #endif
 1072  else if (avg_blog > no_cong) {
 1073      softnet_data[cpu].cng_level = NET_RX_LOW;
-1074  else /* 没有 no_cong *//
+1074  else /* 没有 no_cong */
 1075      softnet_data[cpu].cng_level = NET_RX_SUCCESS;
 1076  softnet_data[cpu].avg_blog = avg_blog;
 1077  }
 ```
 
-网络设备中断通过 linux/net/core/dev.c 中的 `net_devices` 结构体调用 `netif_rx()` 函数。
+网络设备中断通过 `linux/net/core/dev.c` 中的 `net_devices` 结构体调用 `netif_rx()` 函数。
 
-# 图 3.7 网络设备驱动 Rx iii：linux/net/core/dev.c。
+# 图 3.7 网络设备驱动 Rx iii：`linux/net/core/dev.c`。
 
 ```c
 1135  enqueue:
@@ -2795,8 +3091,8 @@ ip_output_c:
 1142  #endif
 1143      return softnet_data[cpu].cng_level;
 
-1144
 1145  }
+
 1146  if (queue->throttle) {
 1147      queue->throttle = 0;
 1148  #ifdef CONFIG_NET_HW_FLOWCONTROL
@@ -2804,8 +3100,10 @@ ip_output_c:
 1150          netdev_wakeup();
 1151  #endif
 1152  }
+
 1153      goto enqueue;
 1154  }
+
 1156  if (queue->throttle == 0) {
 1157      queue->throttle = 1;
 1158      netdev_rx_stat[this->cpu].throttled++;
@@ -2828,7 +3126,7 @@ return NET_RX_DROP;
 ```
 }
 
-# 图 3.8 网络设备驱动 RX iv：linux/net/core/dev.c。
+# 图 3.8 网络设备驱动 RX iv：`linux/net/core/dev.c`。
 
 /* 将 skb 交付给旧协议，这些协议没有经过良好的线程化，
 或者无法理解共享 skb。
@@ -2890,7 +3188,7 @@ IPv4 情况，相关的输入在 `tcp_ipv4.c` 中编码，它查找我们是否�
 
 在 `core/sock.c` 中，我们看到由于 `sk->ready = sock_def_readable()...` 触发了主要。
 
-# 图 3.9 Socket 接收：struct sock *sk, int len linux/net/core/sock.c。
+# 图 3.9 Socket 接收：`struct sock *sk, int len` `linux/net/core/sock.c`。
 
 ```c
 void sock_def_readable(struct sock *sk, int len)
@@ -2899,9 +3197,11 @@ void sock_def_readable(struct sock *sk, int len)
   if (sk->sleep & wake_active(sk))
     wake_up_interruptible(sk->sleep);
   sk_wake_async(sk, U_IN);
-  read_unlock(sk->callback_lock);
-}
 ```
+
+
+
+`read_unlock(sk->callback_lock);`
 
 ## 3.2.9 链路上
 
@@ -2915,7 +3215,7 @@ void sock_def_readable(struct sock *sk, int len)
 
 在 `udp.c` 中，感兴趣的函数是用于输出的 `udp_sendmsg()`。
 
-# 图 3.10 UDP 输出：linux/ipv4/udp.c。
+#### 图 3.10 UDP 输出：linux/ipv4/udp.c。
 
 ```c
 if (msg->msg_name) {
@@ -2960,19 +3260,15 @@ if (msg->msg_name) {
 
 ## 84 TCP/IP 与 Linux 协议实现
 
-# 图 3.11 UDP 输出：linux/ipv4/udp.c。
+#### 图 3.11 UDP 输出：linux/ipv4/udp.c。
 
 ```c
 if (ipc.opt && ipc.opt->is_strict)) {
 ```
 
-
-
-
-
 # TCP/IP 与 Linux 协议实现
 
-```
+``` 
 718      sin->sin_addr.s_addr = skb->nh->iph->saddr;
 719      memset(sin->sin_zero, 0, sizeof(sin->sin_zero));
 720  }
@@ -3007,7 +3303,7 @@ if (ipc.opt && ipc.opt->is_strict)) {
 749 }
 ```
 
-# 3.3.3 在线路上传输
+### 3.3.3 在线路上传输
 
 16:11:35.321380 brams.cs.ucl.ac.uk.1904 > bells.cs.ucl.ac.uk.domain 60803 (43)
 16:11:35.323169 bells.cs.ucl.ac.uk.domain > brams.cs.ucl.ac.uk.1904: 60803* 1/2 (172)
@@ -3024,7 +3320,7 @@ if (ipc.opt && ipc.opt->is_strict)) {
 
 发送过程与单播相同，接收端的情况必须处理一种可能：即可能有多个进程等待组播包的副本。接收尾部是否有不同，正如我们在 `udp.v4_mcast_deliver()` 中看到的。
 
-图 3.15 UDP 接收组播：linux/net/ipv4/udp.c。
+#### 图 3.15 UDP 接收组播：linux/net/ipv4/udp.c。
 
 ```
 read_lock(&udp_hash_lock);
@@ -3047,8 +3343,11 @@ free_skb(skb);
 read_unlock(&udp_hash_lock);
 ```
 
+
+
 # 3.4.1 在线路上传输
 
+```
 16:25.49.74720 d230-17.uregon.edu.1025 > 224.2.163.188.2384 udp 332
 16:25.49.79001 hocus.cs.ucl.ac.uk > 224.1.127.255 igmp nreport 224.1.127.255 [1]
 16:25.49.82979 d230-17.uregon.edu.1025 > 224.2.163.188.234 udp
@@ -3060,28 +3359,29 @@ read_unlock(&udp_hash_lock);
 16:25.51.21101 d230-17.uregon.edu.1025 > 224.2.163.188.234 udp
 16:25.50.27045 d230-17.uregon.edu.1025 > 224.2.163.188.234 udp
 16:25.27.26215 Ez.Stanford.edu.332 * 224.2.163.188
+```
 
 # TCP/IP 与 Linux 协议实现
 
-# 3.4.2 但路径上有路由器...
+## 3.4.2 但路径上有路由器...
 
 我们知道要去哪里，但不知道如何到达那里——路径上的某些东西会有帮助。关于 Linux 作为路由器的更多细节，请参见第 8 章和第 9 章。Linux 作为一个路由器工作得很好。基本上，你需要考虑输入，然后是输出，在 `route.c` 中发现了数据包，验证源地址，判断它是用于组播、环回还是其他，并将其添加到最近路由的哈希表中。`ip_forward` 执行各种检查（路由选项等）、处理、分片并在必要时生成 ICMP 错误，然后调用 `NF_HOOK`（过滤器工作，再次参见第 10 章），调度调用 `ip_forward_finish`，它检查快速路由决策，然后执行 `ip_send(skb)`。然后 `ip_send()` 执行分片，并调用 `ip_finish()`。
 
 ## 3.5 追踪的三种视图
 
-作为实际 API 的示例，包括另一种用于获取 ICMP 访问的原始套字，让我们看看 ping 程序的追踪，如图 3.16 所示。
+作为实际 API 的示例，包括另一种用于获取 ICMP 访问的原始套字，让我们看看 `ping` 程序的追踪，如图 3.16 所示。
 
 **图 3.16 ping 的使用。**
-PING bells.cs.ucl.ac.uk (128.16.6.31) from 128.16.6.226 : 56(84) bytes of data.
-64 bytes from bells.cs.ucl.ac.uk (128.16.6.31): icmp_seq=0 ttl=255 time=819
+`PING bells.cs.ucl.ac.uk (128.16.6.31) from 128.16.6.226 : 56(84) bytes of data.`
+`64 bytes from bells.cs.ucl.ac.uk (128.16.6.31): icmp_seq=0 ttl=255 time=819`
 
 **图 3.17 ping 的链路视图。**
-10:38:11.70142 0:c0:4f:d3:c3 0:20:af:b1:e6: ip 98: ovavu.cs.ucl.ac.uk > brahms.cs.ucl.ac.uk.: icmp: echo request
-10:38:11.70270 0:20:af:b1:e6 0:c0:4f:d3:c3 ip 98: brahms.cs.ucl.ac.uk > ovavu.cs.uac.ac.uk.: icmp: echo reply
+`10:38:11.70142 0:c0:4f:d3:c3 0:20:af:b1:e6: ip 98: ovavu.cs.ucl.ac.uk > brahms.cs.ucl.ac.uk.: icmp: echo request`
+`10:38:11.70270 0:20:af:b1:e6 0:c0:4f:d3:c3 ip 98: brahms.cs.ucl.ac.uk > ovavu.cs.uac.ac.uk.: icmp: echo reply`
 
 # 数据包的短暂生命
 
-（最后）在此追踪中，你还可以看到查找目标 IP 地址的阶段，因为 ping 命令（如上）给了一个 DNS 名称——对于所考虑的系统，可以将其配置为本地查找、`/etc/hosts` 查找或 DNS 查找，并有一套当某种类型查找失败时的后续操作序列。
+在此追踪中，你还可以看到查找目标 IP 地址的阶段，因为 `ping` 命令（如上）给了一个 DNS 名称——对于所考虑的系统，可以将其配置为本地查找、`/etc/hosts` 查找或 DNS 查找，并有一套当某种类型查找失败时的后续操作序列。
 
 图 3.18 ping 的追踪。
 
@@ -3126,27 +3426,33 @@ PING bells.cs.ucl.ac.uk (128.16.6.31) from 128.16.6.226 : 56(84) bytes of data.
 38 recvfrom(3, "E\x70\x61\x78\x31\x73\x60\x60\x63\x42...", 192, 0, {family=AF_INET, sin_port=htons(4288), sin_addr=addr(128.16.5.31)}, [16]) = 84
 39 gettimeofday(960371553,407464, NULL) = 0
 40 uname({"linux", node=ovavu.cs.ucl.ac.uk", ...}) = 0
-41 socket(PF_INET, SOCK_DGRAM, IPPROTO_UDP, NULL) = 0
-42 connect(4, {family=AF_INET, sin_port=htons(53), sin_addr=addr(128.16.5.31)}, [16]) = 0
-43 recvfrom(4, "\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31in...", 42, 1024, 0, {family=AF_INET, sin_port=htons(53), sin_addr=addr(128.16.5.31)}, [16]) = 215
-44 time(NULL) = 960371553
-45 poll({fd=4, events=POLLIN, revents=POLLIN}, 5000) = 1
-46 recvfrom(4, "\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31in", 42", 1024, 0, {family=AF_INET, sin_port=htons(53), sin_addr=addr(128.16.5.31)}, [16])
 ```
 
 
 
+```
+41 socket(PF_INET, SOCK_DGRAM, IPPROTO_UDP, NULL) = 0
+
+42 connect(4, {family=AF_INET, sin_port=htons(53), sin_addr=addr(128.16.5.31)}, [16]) = 0
+
+43 recvfrom(4, "\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31in...", 42, 1024, 0, {family=AF_INET, sin_port=htons(53), sin_addr=addr(128.16.5.31)}, [16]) = 215
+
+44 time(NULL) = 960371553
+
+45 poll({fd=4, events=POLLIN, revents=POLLIN}, 5000) = 1
+
+46 recvfrom(4, "\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31\x31in", 42", 1024, 0, {family=AF_INET, sin_port=htons(53), sin_addr=addr(128.16.5.31)}, [16])
+```
 
 # 第 4 章
-
-# 进程间通信
+## 进程间通信
 
 > “套接字科学家”
 > - 职位描述在某次 IETF 会议上见过。
 
-## 4.1 路线图
+### 4.1 路线图
 
-在本章中，我们将介绍为进程间通信（IPC）提供的编程接口。幸运的是，应用程序程序员的事实标准是一种真正的跨平台能力，泛称为套接字（sockets），它甚至已扩展到了微软的 Windows 系统，尽管它起源于 20 世纪 80 年代初的 BBN 和 Berkeley UNIX 系。
+在本章中，我们将介绍为进程间通信（IPC）提供的编程接口。幸运的是，应用程序程序员的事实标准是一种真正的跨平台能力，泛称为套接字（`sockets`），它甚至已扩展到了微软的 Windows 系统，尽管它起源于 20 世纪 80 年代初的 BBN 和 Berkeley UNIX 系。
 
 还有其他在单系统中运行的 IPC 机制，由于它们不依赖于 TCP/IP 协议，我们不再进行深入介绍。这些机制通常使用起来更简单，在某些情况下，如果程序员只想在已知仅位于同一台计算机上（永远）的进程之间实现本地通信，它们可能更高效。这些其他机制包括：
 
@@ -3154,7 +3460,7 @@ PING bells.cs.ucl.ac.uk (128.16.6.31) from 128.16.6.226 : 56(84) bytes of data.
 
 - 命名管道（Named pipes）或 FIFOs。FIFO 规避了管道没有显式名称的局限性，因此，除了创建管道的进程的祖先/后代树中相关的进程外，其他进程无法访问文件描述符副本（尽管它们不占用任何实际的文件大小磁盘块）。打开和创建 FIFO 的 VFS 函数与标准管道不同，事实上，命名管道或 FIFO 是以创建设备文件的方式通过 `mkfifo()` 创建的。
 
-- 共享内存（Shared memory）。Linux 包含了所谓的 System V 机制，这些源自 AT&T UNIX 系统开发树。共享内存段是进程可以分配并用于与其他任意进程通信的三种 IPC 资源之一。在内存在防止跨进程-内存保护域边界的数据拷贝方面非常高效，尽管 Linux 的写时复制（copy-on-write）语义可能意味着套接字的效率几乎相当。System V 信号量的一个优点是它们纯洁地分离了同步（通过信号量、消息和批量内存使用实现）。共享内存机制还包括访问权限机制，其所有权结构直接建立在文件系统访问权限以及 {所有者, 组, 其他} 和 {读, 写} 权限上。
+- 共享内存（Shared memory）。Linux 包含了所谓的 System V 机制，这些源自 AT&T UNIX 系统开发树。共享内存段是进程可以分配并用于与其他任意进程通信的三种 IPC 资源之一。在内存在防止跨进程-内存保护域边界的数据拷贝方面非常高效，尽管 Linux 的写时复制（`copy-on-write`）语义可能意味着套接字的效率几乎相当。System V 信号量的一个优点是它们纯洁地分离了同步（通过信号量、消息和批量内存使用实现）。共享内存机制还包括访问权限机制，其所有权结构直接建立在文件系统访问权限以及 {所有者, 组, 其他} 和 {读, 写} 权限上。
 
 - 信号量（Semaphores）。信号量用于将一组进程置于有序的执行序列中，以维持共享内存段的一致性。它们为使用共享内存的用户进程提供了与内核线程内核信号量相同的功能。显然，执行信号量操作通常会挂起调用进程，直到相关的信号量变空。
 
@@ -3162,13 +3468,13 @@ PING bells.cs.ucl.ac.uk (128.16.6.31) from 128.16.6.226 : 56(84) bytes of data.
 
 在本章的剩余部分中，我们将重点介绍套接字 API 的概述及其实现，并涵盖套接字的管理、控制和生命周期。
 
-## 4.2 Socket API
+### 4.2 Socket API
 
 我们在第 2 章中讨论讨论了为什么应用程序程序员访问内核服务的接口不是简单地实现为子程序库。这对于传输层的 API 尤为如此，它将网络应用程序程序员与网络层错误、处理错误恢复和时序问题的复杂性隔离开来，并强制对端到端会话末端的独立失败模式进行正确处理。
 
-内核需要控制对网络设备等共享（也称为复用）资源的访问。传输、网络层和链路层协议需要访问所有内存（mmu/dma 等）。内核决定资源共享的调度。因此，我们通过系统调用限制了不那么熟练的程序员对这些复杂性的访问。系统调用是陷阱（traps）、异常或软件中断，并使用特殊指令更改进程模式。一旦进入内核空间，我们就可以决定做什么并取消调度一个进程（或不取消，例如，像 `getpid()` 这样简单的系统调用）。实现 socket API 的函数调用集与系统调用之间并不一定存在一对一的映射。在不同的 UNIX 版本中，由于历史原因，这些调用是通过单个调用映射还是通过一组较小的实际系统调用映射。这受到不同硬件架构支持向量软件（vectored software）或类似机制的影响（在 2.4 内核的 i386 族上有 221 次调用）。
+内核需要控制对网络设备等共享（也称为复用）资源的访问。传输、网络层和链路层协议需要访问所有内存（`mmu`/`dma` 等）。内核决定资源共享的调度。因此，我们通过系统调用限制了不那么熟练的程序员对这些复杂性的访问。系统调用是陷阱（`traps`）、异常或软件中断，并使用特殊指令更改进程模式。一旦进入内核空间，我们就可以决定做什么并取消调度一个进程（或不取消，例如，像 `getpid()` 这样简单的系统调用）。实现 socket API 的函数调用集与系统调用之间并不一定存在一对一的映射。在不同的 UNIX 版本中，由于历史原因，这些调用是通过单个调用映射还是通过一组较小的实际系统调用映射。这受到不同硬件架构支持向量软件（vectored software）或类似机制的影响（在 2.4 内核的 i386 族上有 221 次调用）。
 
-## 4.3 实际的 Socket API
+### 4.3 实际的 Socket API
 
 实际的 socket API 类似于图 4.1 所示。
 
@@ -3180,37 +3486,39 @@ PING bells.cs.ucl.ac.uk (128.16.6.31) from 128.16.6.226 : 56(84) bytes of data.
 4 5 int socket(int domain, int type, int protocol);
 ```
 
-`socket()` 调用用于建立通信的端点。它返回一个文件描述符，并根据类型（type）设置状态。事实上，套接字是根据后续的套接字调用进行设置的。对于给定的域（domain），由类型和协议（protocol）参数指定的套接字支持的协议族见表 4.1。
+
+
+`socket()`调用用于建立通信的端点。它返回一个文件描述符，并根据类型（`type`）设置状态。事实上，套接字是根据后续的套接字调用进行设置的。对于给定的域（`domain`），由类型和协议（`protocol`）参数指定的套接字支持的协议族见表 4.1。
 
 ### 表 4.1 支持的协议族
 
 | 协议族 | 用途 |
 |---|---|
-| AF_UNIX | 本地 |
-| AF_INET | IPv4 |
-| AF_INET6 | IPv6 |
-| AF_NETLINK | IPX |
-| AF_X25 | X25 |
-| AF_ATM | ATM |
-| AF_APPLET | AppleTalk |
-| AF_PACKET | 套接字 |
+| `AF_UNIX` | 本地 |
+| `AF_INET` | IPv4 |
+| `AF_INET6` | IPv6 |
+| `AF_NETLINK` | IPX |
+| `AF_X25` | X25 |
+| `AF_ATM` | ATM |
+| `AF_APPLET` | AppleTalk |
+| `AF_PACKET` | 套接字 |
 
-`socket()` 调用可以创建一个端点。通常情况下，对于给定的域，由套接字类型定义的语义族见表 4.2。
+`socket()`调用可以创建一个端点。通常情况下，对于给定的域，由套接字类型定义的语义族见表 4.2。
 
 ### 表 4.2 Linux 套接字语义
 
 | 类型 | 语义 |
 |---|---|
-| SOCK_STREAM | 可靠（面向连接）、双工字节流 |
-| SOCK_DGRAM | 无连接、不可靠的数据包 |
-| SOCK_SEQPACK | 数据包交付，类似于流 |
-| SOCK_RAW | 原始 |
-| SOCK_RDM | 类似于流的数据包 |
-| SOCK_PACKET | 已弃用（类似 raw） |
+| `SOCK_STREAM` | 可靠（面向连接）、双工字节流 |
+| `SOCK_DGRAM` | 无连接、不可靠的数据包 |
+| `SOCK_SEQPACK` | 数据包交付，类似于流 |
+| `SOCK_RAW` | 原始 |
+| `SOCK_RDM` | 类似于流的数据包 |
+| `SOCK_PACKET` | 已弃用（类似 raw） |
 
-`socket()` 调用的最后一个参数指示特定的协议。通常情况下，对于给定的域和给定的语义，只有一个协议。
+`socket()`调用的最后一个参数指示特定的协议。通常情况下，对于给定的域和给定的语义，只有一个协议。
 
-`fcntl()` 可以设置套接字，使得输入调用通常是阻塞的（即不从内核返回），直到操作完成；或者立即返回并指示结果。随后，使用 `poll()` 或 `select()` 允许检查是否有输入（最多到指定的时间）。`fcntl()` 也可以设置进程组来接收输入和输出事件，而无需在读取例程中显式调用。我们将在本章后面展示这两种机制的示例。
+`fcntl()`可以设置套接字，使得输入调用通常是阻塞的（即不从内核返回），直到操作完成；或者立即返回并指示结果。随后，使用`poll()`或`select()`允许检查是否有输入（最多到指定的时间）。`fcntl()`也可以设置进程组来接收输入和输出事件，而无需在读取例程中显式调用。我们将在本章后面展示这两种机制的示例。
 
 socket API 的其他例程见表 4.3。
 
@@ -3218,73 +3526,70 @@ socket API 的其他例程见表 4.3。
 
 | 函数 | 用途 |
 |---|---|
-| bind | 将套接字与本地名称或地址关联 |
-| connect | 将套接字描述符与远端关联（对面向连接的协议有副作用） |
-| listen | 等待来自任何远端的连接建立 |
-| accept | 同意来自特定远端的连接请求 |
-| shutdown | 关闭该套接字的协议状态 |
-| getname | 从套接字描述符映射到绑定的本地名称（地址） |
-| setsockopt | 请求某些非默认套接字参数设置 |
-| getsopt | 查询某些套接字参数的状态 |
-| ioctl | 描述符的通用系统调用 |
-| send | 在套接字上发送缓冲区数据 |
-| recv | 在套接字上接收最多一个缓冲区的数据 |
-| read/readv | 向缓冲区(s)读取某些数据 |
-| write/writev | 从缓冲区(s)发送某些数据 |
-| select | 检查套接字描述符的 I/O 状态 |
-| socketpair | 管道（等效） |
-| getprotoent | 见 /etc/protocols |
+| `bind` | 将套接字与本地名称或地址关联 |
+| `connect` | 将套接字描述符与远端关联（对面向连接的协议有副作用） |
+| `listen` | 等待来自任何远端的连接建立 |
+| `accept` | 同意来自特定远端的连接请求 |
+| `shutdown` | 关闭该套接字的协议状态 |
+| `getname` | 从套接字描述符映射到绑定的本地名称（地址） |
+| `setsockopt` | 请求某些非默认套接字参数设置 |
+| `getsopt` | 查询某些套接字参数的状态 |
+| `ioctl` | 描述符的通用系统调用 |
+| `send` | 在套接字上发送缓冲区数据 |
+| `recv` | 在套接字上接收最多一个缓冲区的数据 |
+| `read`/`readv` | 向缓冲区(s)读取某些数据 |
+| `write`/`writev` | 从缓冲区(s)发送某些数据 |
+| `select` | 检查套接字描述符的 I/O 状态 |
+| `socketpair` | 管道（等效） |
+| `getprotoent` | 见`/etc/protocols` |
 
-
-
-
-下表说明了可以通过 `setsocket()` 或 `getsockopt()` 设置或检索的 socket 选项及其用途。
+下表说明了可以通过`setsocket()`或`getsockopt()`设置或检索的 socket 选项及其用途。
 
 ## 表 4.4 其他 Socket API 调用
 
 | SOCKET 选项 | 用途 |
 | --- | --- |
-| SO_KEEPPALIVE | 设置对远端的协议探测（pinging） |
-| SO_OOBINLINE | 将带外数据传递移动到带内数据流 |
-| SO_RCVLOWAT AND SO_SNDLOWAT | 在套接字从协议层获取数据（或将数据传递给协议层）之前设置接收（或发送）低水位——始终为 1 |
-| SO_RCVTIMEO AND SO_SNDTIMEO | 更改报告错误之前的超时时间——在 Linux 中是固定的协议设置 |
-| SO_BSDCOMPAT | 用于错误仿真 |
-| SO_PASSCRED | PF_UNIX 域特定 |
-| SO_PEERCRED | PF_UNIX 域特定 |
-| SO_BINDDEVICE | 在多网卡机器上，允许限制数据包的发送和接收接口 |
-| SO_DEBUG | 适用于具有足够（root）权限的进程，可以调试 |
-| SO_REUSEADDR | 在 PF_INET 中，允许多个进程 `bind()` 到给定端口——对多播非常有用 |
-| SO_TYPE | 报告（无法设置）套接字的协议类型（同上） |
-| SO_DROROUTE | 仅允许本地通信 |
-| SO_BROADCAST | 设置广播地址 |
-| SO_SNDBUF | 配置 socket 发送最大缓冲区大小 |
-| SO_RCVBUF | 配置 socket 接收最大缓冲区空间 |
-| SO_LINGER | 规定 `close()` 如何阻塞以等待处理队列的消息 |
-| SO_PRIORITY | 设置与 socket 关联的优先级——详情请参见第 9 章 |
-| SO_ERROR | 返回错误详情 |
-| SO_ATTACH_FILTER | 这些是 CONFIG.FILTER socket 选项——参见第 10 章 (libpcap) |
-| SO_DETACH_FILTER | 与 SO_ATTACH_FILTER相同 |
+| `SO_KEEPPALIVE` | 设置对远端的协议探测（pinging） |
+| `SO_OOBINLINE` | 将带外数据传递移动到带内数据流 |
+| `SO_RCVLOWAT` AND `SO_SNDLOWAT` | 在套接字从协议层获取数据（或将数据传递给协议层）之前设置接收（或发送）低水位——始终为 1 |
+| `SO_RCVTIMEO` AND `SO_SNDTIMEO` | 更改报告错误之前的超时时间——在 Linux 中是固定的协议设置 |
+| `SO_BSDCOMPAT` | 用于错误仿真 |
+| `SO_PASSCRED` | PF_UNIX 域特定 |
+| `SO_PEERCRED` | PF_UNIX 域特定 |
+| `SO_BINDDEVICE` | 在多网卡机器上，允许限制数据包的发送和接收接口 |
+| `SO_DEBUG` | 适用于具有足够（root）权限的进程，可以调试 |
+| `SO_REUSEADDR` | 在 PF_INET 中，允许多个进程`bind()`到给定端口——对多播非常有用 |
+| `SO_TYPE` | 报告（无法设置）套接字的协议类型（同上） |
+| `SO_DROROUTE` | 仅允许本地通信 |
+| `SO_BROADCAST` | 设置广播地址 |
+| `SO_SNDBUF` | 配置 socket 发送最大缓冲区大小 |
+| `SO_RCVBUF` | 配置 socket 接收最大缓冲区空间 |
+| `SO_LINGER` | 规定`close()`如何阻塞以等待处理队列的消息 |
+| `SO_PRIORITY` | 设置与 socket 关联的优先级——详情请参见第 9 章 |
+| `SO_ERROR` | 返回错误详情 |
+| `SO_ATTACH_FILTER` | 这些是 CONFIG.FILTER socket 选项——参见第 10 章 (`libpcap`) |
+| `SO_DETACH_FILTER` | 与`SO_ATTACH_FILTER`相同 |
 
-当建立 socket 并指定协议后，还有进一步特定协议的参数可以配置。通常，这些参数通过 `sysctl()` 接口设置。这些的示例主要是 TCP 特有的参数——其中一些列在下表中。它们的内部实现在第 7 章中讨论。工作通过 `/proc` 接口进行（详见 `/proc/sys/net/ipv4/`）。
+当建立 socket 并指定协议后，还有进一步特定协议的参数可以配置。通常，这些参数通过`sysctl()`接口设置。这些的示例主要是 TCP 特有的参数——其中一些列在下表中。它们的内部实现在第 7 章中讨论。工作通过`/proc`接口进行（详见`/proc/sys/net/ipv4/`）。
 
 ## 表 4.5 TCP Sysctls
 
 | TCP | 用途 |
 | --- | --- |
-| tcp_window_scaling | 启用 RFC 1323 TCP 窗口缩放 |
-| tcp_sack | 启用 RFC 2018 TCP SACK |
-| tcp_timestamps | 启用 RFC 1323 TCP 时间戳 |
-| tcp_fin_timeout | 在 FIN 之前强制关闭套接字之前的延迟 |
-| tcp_keepalive_probes | 最大 TCP 保活探测次数 |
-| tcp_keepalive_time | 在空闲连接上发送探测包前的秒数 |
-| tcp_max_ka_probes | 发送多少次保活探测 |
-| tcp_stdurg | 启用对 TCP 紧急指针字段的严格 RFC 793 解析 |
-| tcp_synccookies | 启用 TCP cookies——内核必须在编译时带有 CONFIG.SYN_COOKIES——第 10 章 |
-| tcp_max_syn_backlog | 每个套接字的 backlog 队列长度 |
-| tcp_retries1 | SYN ACK 重传的最大计数 |
-| tcp_retries2 | 在已建立连接中重传数据包的最大计数 |
-| tcp_syn_retries | SYN（重）试用的最大计数 |
-| tcp_retrans.collapse | 在重传期间尝试发送全大小数据包 |
+| `tcp_window_scaling` | 启用 RFC 1323 TCP 窗口缩放 |
+| `tcp_sack` | 启用 RFC 2018 TCP SACK |
+| `tcp_timestamps` | 启用 RFC 1323 TCP 时间戳 |
+| `tcp_fin_timeout` | 在 FIN 之前强制关闭套接字之前的延迟 |
+| `tcp_keepalive_probes` | 最大 TCP 保活探测次数 |
+| `tcp_keepalive_time` | 在空闲连接上发送探测包前的秒数 |
+| `tcp_max_ka_probes` | 发送多少次保活探测 |
+| `tcp_stdurg` | 启用对 TCP 紧急指针字段的严格 RFC 793 解析 |
+| `tcp_synccookies` | 启用 TCP cookies——内核必须在编译时带有 CONFIG.SYN_COOKIES——第 10 章 |
+| `tcp_max_syn_backlog` | 每个套接字的 backlog 队列长度 |
+| `tcp_retries1` | SYN ACK 重传的最大计数 |
+| `tcp_retries2` | 在已建立连接中重传数据包的最大计数 |
+| `tcp_syn_retries` | SYN（重）试用的最大计数 |
+| `tcp_retrans.collapse` | 在重传期间尝试发送全大小数据包 |
 
 此外，还有 socket 级别的参数。见表 4.6。
 
@@ -3292,63 +3597,74 @@ socket API 的其他例程见表 4.3。
 
 | TCP 特有 SETSOCKOPT | 用途 |
 | --- | --- |
-| TCP_NODELAY | 禁用 Nagle 算法——数据包将尽快发送 |
-| TCP_MAXSEG | 为连接配置最大段长度 (MSS) |
-| TCP_CORK | 切换部分帧的发送——与 Nagle 算法几乎相反 |
+| `TCP_NODELAY` | 禁用 Nagle 算法——数据包将尽快发送 |
+| `TCP_MAXSEG` | 为连接配置最大段长度 (MSS) |
+| `TCP_CORK` | 切换部分帧的发送——与 Nagle 算法几乎相反 |
 
 # TCP/IP 和 Linux 协议实现
 
-还有几个 TCP 特有的 `ioctl()`，如表 4.7 所示。
+还有几个 TCP 特有的`ioctl()`，如表 4.7 所示。
 
 **表 4.7** ioctl 选项
 
 | TCP 特有 SETSOCKOPT | 用途 |
-| --- | --- |
-| FIONREAD | 返回接收缓冲区中已队列但未读的数据量 |
-| SIOCATMARK | 当所有紧急数据已接收时返回真 |
-| TIOCUTQ | 返回 socket 队列中未发送的数据量 |
+|---|---|
+| `FIONREAD` | 返回接收缓冲区中已队列但未读的数据量 |
+| `SIOCATMARK` | 当所有紧急数据已接收时返回真 |
+| `TIOCUTQ` | 返回 socket 队列中未发送的数据量 |
 
 ## 4.4 使用 Socket API
 
 独立进程之间的通信涉及将数据从一个地址空间移动到另一个地址空间——在过去，这被称为跨越保护边界。由于由于，各种通信设施命名在“域（domain）”一词的混淆用法下（它与域名系统*完全没有*关系）。
 
-图 4.2 中的示例 C 代码说明了 INET 域 socket 的使用，它具有流式语义。这基本上利用了内核中的 TCP 代码——在例例中，通信是在父子进程之间进行的，因此 socket 仅被用来替换管道（pipe）。
+图 4.2 中的示例 C 代码说明了 INET 域 socket 的使用，它具有流式语义。这基本上利用了内核中的 TCP 代码——在例例中，通信是在父子进程之间进行的，因此 socket 仅被用来替换管道（`pipe`）。
 
 **图 4.2** Socket 编程 i—main: pix/sock.c。
 
 ```c
 #include <stdio.h>
+
 #include <sys/types.h>
+
 #include <sys/socket.h>
+
 #include <netinet/in.h>
+
 #include <unistd.h>
+
 #include <stdlib.h>
+```
+
+
+
+```c
 #include <string.h>
+
 #include <errno.h>
+
 #include <sys/wait.h>
+
 #include <netdb.h>
 
 int main(int argc, char *argv[])
+
 {
+
     int sockfd, child;
     struct sockaddr_in addr;
     char buffer[128];
-
     if (argc < 2) {
         printf("usage: %s <port>\n", argv[0]);
         exit(1);
     }
-
     sockfd = socket(AF_INET, SOCK_STREAM, 0);
     if (sockfd < 0) {
         perror("socket");
         exit(1);
     }
-
     addr.sin_family = AF_INET;
     addr.sin_addr.s_addr = INADDR_ANY;
     addr.sin_port = htons(atoi(argv[1]));
-
     if ((child = fork()) == 0) {
         /* 子进程：客户端 */
         if (connect(sockfd, (struct sockaddr *)&addr, sizeof(addr)) < 0) {
@@ -3364,14 +3680,12 @@ int main(int argc, char *argv[])
             exit(1);
         }
         printf("Server listening on port %s...\n", argv[1]);
-        
         socklen_t len = sizeof(addr);
         int client_fd = accept(sockfd, (struct sockaddr *)&addr, &len);
         if (client_fd < 0) {
             perror("accept");
             exit(1);
         }
-        
         int n = read(client_fd, buffer, sizeof(buffer) - 1);
         if (n > 0) {
             buffer[n] = '\0';
@@ -3384,12 +3698,8 @@ int main(int argc, char *argv[])
     return 0;
 }
 ```
-（注：由于原文文本存在大量乱码和重复的结构片段，上述翻译已基于上下文对逻辑进行了修复性整合，以确保符合文档工程师的专业标准。）
 
-
-
-
-## 102 TCP/IP 与 Linux 协议实现
+# 102 TCP/IP 与 Linux 协议实现
 
 ```c
 23 gettimeofday(&then,(struct timezone *0);
@@ -3402,18 +3712,18 @@ int main(int argc, char *argv[])
 30 }
 ```
 
-除了 select() ，许多系统还实现了 poll() 调用。
+除了 `select()` ，许多系统还实现了 `poll()` 调用。
 
-**图 4.6** poll().
+**图 4.6** `poll()`.
 
 ```c
 1 #include <sys/poll.h>
 2 int poll(struct pollfd *ufds, unsigned int nfds, int timeout);
 ```
 
-poll() 是 select 的一种变体。它指定了一个类型如下所示的 `nfds` 结构体数组。
+`poll()` 是 `select` 的一种变体。它指定了一个类型如下所示的 `nfds` 结构体数组。
 
-**图 4.7** pollfd.
+**图 4.7** `pollfd`.
 
 ```c
 1 struct pollfd {
@@ -3423,20 +3733,19 @@ poll() 是 select 的一种变体。它指定了一个类型如下所示的 `nfd
 5 };
 ```
 
-timeout 以毫秒为单位，而不是像 select() 中那样复杂的结构。
+`timeout` 以毫秒为单位，而不是像 `select()` 中那样复杂的结构。
 
 ### 4.4.2 非阻塞 I/O
 
 在某些情况下，我们并不感兴趣等待输出是否已经完成，而是希望启动它。在其他情况下，程序员可能希望在数据已就绪时立即读取尽可能多的数据，如果还没有数据则不等待。为了这个目的，提供了非阻塞 I/O，它通过设置与文件描述符相关的进程数据中的标志位来触发。
 
-图 4.8 NBIO: pix/nbio.c。
+图 4.8 NBIO: `pix/nbio.c`。
 
 ```c
 setnb()
 {
     int on = 1;
     int iret;
-
     if ((iret=ioctl(0, FNBIO, (char *) &on) < 0)
         check(iret, "ioctl FNBIO error");
 }
@@ -3461,32 +3770,26 @@ setnb()
 ```c
 #include    <signal.h>
 #include    <fcntl.h>
-
 #define BUFFERSIZE 4096
 int     sigflag; /* 必须是全局变量！ */
 int sigio_handler()
 {
     sigflag = 1;      /* 只设置标志并返回 */
 }
-
 int main()
 {
     int     n, fret;
     char    buff[BUFFERSIZE];
-
     signal(SIGIO, sigio_handler);
     fret=fcntl(0, F_SETOWN, getpid());
     check(fret, "F_SETOWN error");
-
     fret=fcntl(0, F_SETFL, FASYNC);
     check(fret, "F_SETFL FASYNC error");
-
 /* 这将异步变成了一个在 sigpause ... 中阻塞的循环 ... */
     for (;;) {
         sigblock(sigmask(SIGIO));
         while (sigflag == 0)
             pause(0);      /* 等待信号 */
-
         /*
         * 如果 sigflag != 0，我们就在这里。此外，我们知道
         * SIGIO 信号当前处于阻塞状态。
@@ -3498,18 +3801,19 @@ int main()
             check(fret, "read error");
         } else if (n == 0)
             exit(0);      /* EOF */
-
         sigflag = 0;      /* 关闭我们的标志 */
         sigsetmask(0);    /* 并重新启用信号 */
     }
 }
 ```
 
+
+
 # 替代编程模型
 
 Java 等其他语言内置了并发机制，如线程。对于事件处理程序，使用这些机制进行编程可能非常优雅。
 
-### 4.4.4 系统包含头文件
+## 4.4.4 系统包含头文件
 
 在前面的示例中有几个头文件对于所有 socket 编程都是通用的，并提供了用于 socket 系统层的类型定义。这些文件位于源码树的 `/usr/include/netinet` 中。
 
@@ -3517,7 +3821,9 @@ Java 等其他语言内置了并发机制，如线程。对于事件处理程序
 
 ```c
 /* 描述互联网 (IP) socket 地址的结构体 */
+
 #define SOCK_SIZE__ 16    /* sizeof(struct sockaddr) */
+
 struct sockaddr_in {
     sa_family_t      sin_family;    /* 地址族 */
     unsigned short   sin_port;      /* 端口号 */
@@ -3553,10 +3859,6 @@ struct sockaddr_in6 {
 #define sin6_zero         __pad          /* 用于 BSD UNIX 编译 -FVK */
 ```
 
-
-
-
-
 # 协议实现框架 109
 
 | 应用 | 用户 A | 用户 B |
@@ -3584,8 +3886,8 @@ struct sockaddr_in6 {
 
 来自不同地方的代码交织会有各种问题。三个著名问题：
 
-- **死锁。** $a$ 拥有 $x$ 并需要 $y$，$b$ 拥有 $y$ 并需要 $x$ 才能继续，如图 5.2 所示。
-- **活锁。** $x$ 和 $y$ 的一系列交易，但任何一方都没有获得必要的完整资源集，如图 5.3 所示。
+- **死锁。** `$a$` 拥有 `$x$` 并需要 `$y$`，`$b$` 拥有 `$y$` 并需要 `$x$` 才能继续，如图 5.2 所示。
+- **活锁。** `$x$` 和 `$y$` 的一系列交易，但任何一方都没有获得必要的完整资源集，如图 5.3 所示。
 - **公平性。** 这将在第 9 章中进一步讨论。
 
 如果一个进程、线程、任务或驱动程序获得了更多的 CPU（或内存总线，或资源拥塞处）机会，我们就遇到了所谓的“不公平”。
@@ -3615,7 +3917,7 @@ struct sockaddr_in6 {
 
 Linux 现在已几乎完全具备对称多处理器能力。共享数据的原子访问必须跨进程进行保护，因为任何层（例如驱动中断、软件中断、系统调用处理程序）可能运行在任何处理器上。
 
-在第 2 章中，我们讨论了这种所需的互斥支持，即称为自旋锁（spinlock）的技术。对于输入和输出，这是 Linux 内核过去几年演进过程中所有通信代码的相对简单（局部）更改，使得我们在多处理器硬件系统中极大增强了性能。性能增强的剩余领域是 SMP 转发，但如前所述，这目前是一个未来的课题。
+在第 2 章中，我们讨论了这种所需的互斥支持，即称为自旋锁（`spinlock`）的技术。对于输入和输出，这是 Linux 内核过去几年演进过程中所有通信代码的相对简单（局部）更改，使得我们在多处理器硬件系统中极大增强了性能。性能增强的剩余领域是 SMP 转发，但如前所述，这目前是一个未来的课题。
 
 # 5.3 自下而上：中断、DMA 等
 
@@ -3625,7 +3927,7 @@ Linux 现在已几乎完全具备对称多处理器能力。共享数据的原�
 
 图 5 任务队列结构——版权声明：linux/include/linux/tqueue.h。
 
-```
+```c
 /*
 * tqueue.h --- Linux 任务队列处理。
 * 
@@ -3639,26 +3941,36 @@ Linux 现在已几乎完全具备对称多处理器能力。共享数据的原�
  */
 
 #ifndef _LINUX_TQUEUE_H
-#define LINUX_TQUEUE_H
-
+#define _LINUX_TQUEUE_H
 #include <linux/spinlock.h>
 #include <linux/list.h>
 #include <asm/bitops.h>
 #include <asm/system.h>
-
 /*
 * 新建议的下半部分
-* (C) 1994 Kai Petzke, wpp@marie.physik.tu-berlin.de
-*
-* 优势：
-* 下半部分通过链表实现。你可以拥有任意数量。
-* 调用下半部分不再需要扫描位域。
-* 支持链式半部分。
-*
-* 注意：
-* 下半部分按照它们链接到列表的相反顺序调用。
- */
 ```
+
+
+
+* (C) 1994 Kai Petzke, wpp@marie.physik.tu-berlin.de
+
+*
+
+* 优势：
+
+* 下半部分通过链表实现。你可以拥有任意数量。
+
+* 调用下半部分不再需要扫描位域。
+
+* 支持链式半部分。
+
+*
+
+* 注意：
+
+* 下半部分按照它们链接到列表的相反顺序调用。
+
+ */
 
 ![](img/06c11ba8be5c1c24aa633e12618e2ebd_167_0.png)
 
@@ -3666,7 +3978,7 @@ Linux 现在已几乎完全具备对称多处理器能力。共享数据的原�
 
 在图 5.5 中可以看到描述任务队列的核心结构定义：
 
-# 图 5.5 任务队列结构：tqueue.h。
+## 图 5.5 任务队列结构：`tqueue.h`。
 
 ```
 struct tq_struct {    /* 活动 bh 的链表 */
@@ -3674,34 +3986,32 @@ struct list_head list;    /* 必须初始化为 */
 unsigned long sync;        /* 调用它的函数 */
 void (*routine)(void *);    /* 传递它的参数 */
 void *data;                };
-
 typedef struct list_head task_queue;
 #define DECLARE_TASK_QUEUE(q) LIST_HEAD(q)
 #define TQ_ACTIVE(q)          (!list_empty(&q))
-
 extern task_queue tq_timer, tq_mediates, tq_disk;
 ```
 
 现在我们必须支持旧中断，因为大量代码仍然基于这种旧的 Linux 构造体。
 
-# 图 5.6 TQ 到延迟处理/bh 的映射.. linux/include/tqueue.h.
+## 图 5.6 TQ 到延迟处理/bh 的映射.. `linux/include/tqueue.h`.
 
 +   /*
 * 要实现你的活动下半部分列表，请使用以下
 * 使用定义：
-* DECLARE_TASK_QUEUE(my_task);
+* `DECLARE_TASK_QUEUE(my_task);`
 struct tq_struct my_task = {
 routine: (void (*)(void *))my_routine,
 data: &my_data
 };
 
 * 要在列表中激活一个下半部分，使用：
-* queue_task(&my_task, &my_tqueue);
+* `queue_task(&my_task, &my_tqueue);`
 * 稍后运行已队列的任务使用
-* run_task_queue(&my_tqueue);
+* `run_task_queue(&my_tqueue);`
 
 * 这允许你进行延迟处理。例如，你可以
-* 有名为 tq_timer 的任务队列，它在定时器
+* 有名为 `tq_timer` 的任务队列，它在定时器
 * 中断中执行。
 */
 
@@ -3713,7 +4023,7 @@ data: &my_data
 
 在头文件中（与相关结构体定义的相同位置）定义一些内联函数是常见的做法。
 
-图 5.7 TQ 内联函数、队列和运行：linux/include/linux/tqueue.h。
+## 图 5.7 TQ 内联函数、队列和运行：`linux/include/linux/tqueue.h`。
 
 ```c
 75 extern spinlock_t tqueue_lock;
@@ -3747,7 +4057,7 @@ data: &my_data
 
 现在，让我们看看这里用到的软中断（soft IRQ）机制。
 
-图 5.8 软中断——主版权所有权等：linux/kernel/softirq.c。
+## 图 5.8 软中断——主版权所有权等：`linux/kernel/softirq.c`。
 
 ```c
 1 /*
@@ -3776,7 +4086,7 @@ data: &my_data
 
 在接下来的提取中，注释明确了 SMP 与软中断的交互并不是一个被充分理解的性能领域。
 
-## 图 5.9 软中断——主注释：linux/kernel/softirq.c。
+## 图 5.9 软中断——主注释：`linux/kernel/softirq.c`。
 
 ```c
 /*
@@ -3785,6 +4095,7 @@ data: &my_data
 - 即使软中断被序列化，只有本地 CPU 被标记为执行。因此，我们得到了某种弱形式的 CPU 绑定。
 - 尽管仍然不清楚，这会产生更好的局部性还是不会。
 - 这些软中断不会被全局 cli() 和 start_bb_atomic() 掩码（出于某些原因）。因此，仍在使用全局锁的旧代码禁止使用软中断，而必须插入获取全局锁的接口例程。例如，查看 Bms 的实现。
+
 示例：
 - NET RX 软中断。它是多线程的，不需要全局序列化。
 - NET TX 软中断。它触发软件网络设备队列，因此它在逻辑上按每个设备进行序列化，但这种序列化对普通代码是不可见的。
@@ -3795,7 +4106,7 @@ data: &my_data
 
 这里是实际对软中断操作的代码，并将其分给适当的处理器。
 
-## 图 5.10 软中断——处理器 i：linux/kernel/softirq.c。
+## 图 5.10 软中断——处理器 i：`linux/kernel/softirq.c`。
 
 ```c
 static struct softirq_action softirq_vec[32] __cacheline_aligned;
@@ -3807,7 +4118,6 @@ if (in_interrupt())
     return;
 
 local_bh_disable();
-
 local_irq_disable();
     mask = softirq_mask(cpu);
     active = softirq_active(cpu) & mask;
@@ -3815,14 +4125,11 @@ local_irq_disable();
 if (active) {
     struct softirq_action *h;
     restart:
-
     /* 在启用中断前重置活动位 */
     softirq_active(cpu) &= active;
     local_irq_enable();
-
     h = softirq_vec;
     mask &= active;
-
     do {
         if (active & 1)
             h->action(h);
@@ -3834,30 +4141,31 @@ if (active) {
 
 这部分随后确保了我们不会嵌套硬中断和软中断，否则会导致糟糕的后果。
 
-图 5.11 软中断——处理器 ii：linux/kernel/softirq.c。
+## 图 5.11 软中断——处理器 ii：`linux/kernel/softirq.c`。
 
 ```c
 local_irq_disable();
-
 active = softirq_active(cpu);
 if ((active & mask) != 0)
     goto retry;
-
 local_bh_enable();
-
 /* 带有本地中断禁用的状态。关闭无限递归窗口至关重要，
-同时可以帮助本地 bh 计数并受到保护。现在我们处于无防备状态。 */
-return;
 
-retry:
-    goto restart;
-```
+
+
+同时可以帮助本地 `bh` 计数并受到保护。现在我们处于无防备状态。*/
+
+`return`;
+
+`retry`:
+
+    `goto restart`;
 
 ## 协议实现
 
 本节启动了软中断向量。
 
-图 5.12 软中断——设置：linux/kernel/softirq.c。
+图 5.12 软中断——设置：`linux/kernel/softirq.c`。
 
 ```c
 static spinlock_t softirq_mask_lock = SPIN_LOCK_LOCKED;
@@ -3865,11 +4173,9 @@ static spinlock_t softirq_mask_lock = SPIN_LOCK_LOCKED;
 void open_softirq(int nr, void (*action)(struct softirq_action), void *data) {
      unsigned long flags;
      int i;
-
      spin_lock_irqsave(&softirq_mask_lock, flags);
      softirq_vec[nr].data = data;
      softirq_vec[nr].action = action;
-
      for (i=0; i<NR_CPUS; i++)
         softirq_mask[i] |= (1<<nr);
      spin_unlock_irrestore(&softirq_mask_lock, flags);
@@ -3880,15 +4186,15 @@ void open_softirq(int nr, void (*action)(struct softirq_action), void *data) {
 
 正如我们在第 2 章中提到的，Linux 最近用软中断替换了延迟下半部机制，因为软中断在 SMP 系统中是按处理器执行的。
 
-图 5.13 软中断——tasklet 执行：linux/kernel/softirq.c。
+图 5.13 软中断——tasklet 执行：`linux/kernel/softirq.c`。
 
 ```c
 /* Tasklets */
 struct tasklet_head tasklet_vec[NR_CPUS] __cacheline_aligned;
+
 static void do_softirq() {
 	int cpu = smp_processor_id();
 	struct tasklet_struct *list;
-
 	local_irq_disable();
 // ... (省略)
 	list = tasklet_vec[cpu];
@@ -3910,7 +4216,6 @@ if (atomic_read(&t->count) == 0) {
     }
 }
 task
-
 _unlock_wait(t);
 clear_
 taskLET__EDED, 1.);
@@ -3920,25 +4225,20 @@ taskLET__EDED, 1.);
 
 过去，我们有下半部。我们仍然有许多基于这些编写的遗留代码，因此代码必须从任务框架调用。它遵循第 2 章概述的序列化规则。
 
-图 5.16 软中断——下半部代码处理器：linux/kernel/softirq.c。
+图 5.16 软中断——下半部代码处理器：`linux/kernel/softirq.c`。
 
 ```c
 /* 旧式 BH */
 static void (*bb_base[32])(void);
 struct tasklet_struct bb_task_vec[32];
-
 /* BH 被全局自旋 global_bb_lock 序列化。
 int cpu = smp_processor_id();
 // ... (省略)
 ```
 
-
-
-
-
 # TCP/IP 与 Linux 协议实现
 
-```
+```c
 252     if (!hardirq_trylock(cpu))
 253         goto resched_unlock;
 254
@@ -3957,11 +4257,11 @@ int cpu = smp_processor_id();
 267 }
 ```
 
-这会将 bh_ 安装到 tasklet 队列中。
+这会将 `bh_` 安装到 `tasklet` 队列中。
 
-**图 5.17** 用于旧版下半部（bottom-half）代码的软中断处理程序：linux/kernel/softirq.c。
+**图 5.17** 用于旧版下半部（bottom-half）代码的软中断处理程序：`linux/kernel/softirq.c`。
 
-```
+```c
 269 void init_bh(int nr, void (*routine)(void))
 270 {
 271     bb_base[nr] = routine;
@@ -3975,11 +4275,11 @@ int cpu = smp_processor_id();
 279 }
 ```
 
-这设置了整个中断（IRQ）和 tasklet 系统并开始运行。
+这设置了整个中断（IRQ）和 `tasklet` 系统并开始运行。
 
-**图 5.18** 软中断——初始化软中断并运行 tasklet：linux/kernel/softirq.c。
+**图 5.18** 软中断——初始化软中断并运行 `tasklet`：`linux/kernel/softirq.c`。
 
-```
+```c
 281 void _init_softirq_init()
 282 {
 283     int i;
@@ -3992,7 +4292,7 @@ int cpu = smp_processor_id();
 289 open_softirq(HI_SOFTIRQ, tasklet_bi_action, NULL);
 ```
 
-```
+```c
 290 }
 291
 292 void __run_task_queue(task_queue *list)
@@ -4023,15 +4323,17 @@ int cpu = smp_processor_id();
 317 }
 ```
 
+
+
 # 5.4 设备级，自下而上，向上一个级别
 
 从通用中断向上移动一级，我们来看网络设备支持。
 
 多年来，操作系统为各类设备提供了标准的抽象/接口，使得高层操作系统（以及应用程序）软件可以在所有设备上通用。UNIX 传统上将设备分为两类：（通常是低速率、交互式和串口设备）和块设备（磁盘、显示器等）。可以将网络设备挤入块模式范式中，但这样做非常混乱。Linux 添加了第三种设备——网络设备。这在第 2 章中进行了详细讨论。
 
-通常，设备有一个名称以将其放置在文件命名空间中，但还有一个标识符：UNIX 有主设备/次设备号。驱动程序是一个带有set入口点（函数/方法）的结构（类）。在启动（或模块加载）时，通过调用其 `init()` 函数初始化设备——这会重置设备、安装所有相关的中断处理程序等。然后它会向操作系统注册。在其余时间内，我们通过 `open`、`close`、`queue_xmit` 以及中断/通知来管理设备的 I/O。
+通常，设备有一个名称以将其放置在文件命名空间中，但还有一个标识符：UNIX 有主设备/次设备号。驱动程序是一个带有`set`入口点（函数/方法）的结构（类）。在启动（或模块加载）时，通过调用其`init()`函数初始化设备——这会重置设备、安装所有相关的中断处理程序等。然后它会向操作系统注册。在其余时间内，我们通过`open`、`close`、`queue_xmit`以及中断/通知来管理设备的 I/O。
 
-# TCP/IP 与 Linux 协议实现
+## TCP/IP 与 Linux 协议实现
 
 设备驱动程序细节管理如下特定内容：
 
@@ -4039,17 +4341,9 @@ int cpu = smp_processor_id();
 - DMA 和定时器的使用
 - 中断（IRQ）等
 
-注意输入和输出的不对称性——输出是被请求的，而输入是意外到达的（即在这一层，我们永远无法通过轮询输入来合理地实现设备驱动程序）。输入会导致数据包排队，并调用 `netif_rx()` 来确定分发给哪个高层协议函数。
+注意输入和输出的不对称性——输出是被请求的，而输入是意外到达的（即在这一层，我们永远无法通过轮询输入来合理地实现设备驱动程序）。输入会导致数据包排队，并调用`netif_rx()`来确定分发给哪个高层协议函数。
 
-传统的缓存接口是通过 `ioctl()` 调用实现的。这允许人们设置和获取许多网络特定的设备控制参数——例如：
-
-- 链路开启/关闭
-- 广播地址
-- ARP（见第 6 章）
-- MTU
-- 统计信息等
-
-我们可以通过执行 `ifconfig <dev>` 命令 own看到这一点。命令 `netstat -i` 将告诉你有拥有哪些设备。我们将在第 6 章进一步讨论此。地址解析是通过 `ioctl()` 调用实现的，这允许人们设置和获取许多网络特定的设备控制参数——例如：
+传统的缓存接口是通过`ioctl()`调用实现的。这允许人们设置和获取许多网络特定的设备控制参数——例如：
 
 - 链路开启/关闭
 - 广播地址
@@ -4057,86 +4351,11 @@ int cpu = smp_processor_id();
 - MTU
 - 统计信息等
 
-我们可以通过执行 `ifconfig <dev>` 命令看到这一点。命令 `netstat -i` 将告诉你有拥有哪些设备。我们将在第 6 章进一步讨论此。地址解析是通过 `ioctl()` 调用实现的，这允许人们设置和获取许多网络特定的设备控制参数——例如：
+我们可以通过执行`ifconfig <dev>`命令看到这一点。命令`netstat -i`将告诉你有拥有哪些设备。我们将在第 6 章进一步讨论此。地址解析是通过`ioctl()`调用实现的。
 
-- 链路开启/关闭
-- 广播地址
-- ARP（见第 6 章）
-- MTU
-- 统计信息等
+### 软中断处理程序
 
-我们可以通过执行 `ifconfig <dev>` 命令看到这一点。命令 `netstat -i` 将告诉你有拥有哪些设备。我们将在第 6 章进一步讨论此。地址解析是通过 `ioctl()` 调用实现的，这允许人们设置和获取许多网络特定的设备控制参数——例如：
-
-- 链路开启/关闭
-- 广播地址
-- ARP（见第 6 章）
-- MTU
-- 统计信息等
-
-我们可以通过执行 `ifconfig <dev>` 命令看到这一点。命令 `netstat -i` 将告诉你有拥有哪些设备。我们将在第 6 章进一步讨论此。地址解析是通过 `ioctl()` 调用实现的，这允许人们设置和获取许多网络特定的设备控制参数——例如：
-
-- 链路开启/关闭
-- 广播地址
-- ARP（见第 6 章）
-- MTU
-- 统计信息等
-
-我们可以通过执行 `ifconfig <dev>` 命令看到这一点。命令 `netstat -i` 将告诉你有拥有哪些设备。我们将在第 6 章进一步讨论此。地址解析是通过 `ioctl()` 调用实现的，这允许人们设置和获取许多网络特定的设备控制参数——例如：
-
-- 链路开启/关闭
-- 广播地址
-- ARP（见第 6 章）
-- MTU
-- 统计信息等
-
-我们可以通过执行 `ifconfig <dev>` 命令看到这一点。命令 `netstat -i` 将告诉你有拥有哪些设备。我们将在第 6 章进一步讨论此。地址解析是通过 `ioctl()` 调用实现的，这允许人们设置和获取许多网络特定的设备控制参数——例如：
-
-- 链路开启/关闭
-- 广播地址
-- ARP（见第 6 章）
-- MTU
-- 统计信息等
-
-我们可以通过执行 `ifconfig <dev>` 命令看到这一点。命令 `netstat -i` 将告诉你有拥有哪些设备。我们将在第 6 章进一步讨论此。地址解析是通过 `ioctl()` 调用实现的，这允许人们设置和获取许多网络特定的设备控制参数——例如：
-
-- 链路开启/关闭
-- 广播地址
-- ARP（见第 6 章）
-- MTU
-- 统计信息等
-
-（注：由于原始文本中存在大量重复段落，此处翻译已根据“不要重复输出原文”的原则进行去重，仅保留核心逻辑部分的翻译。）
-
-地址解析是通过 `ioctl()` 调用实现的，这允许人们设置和获取许多网络特定的设备控制参数——例如：
-
-- 链路开启/关闭
-- 广播地址
-- ARP（见第 6 章）
-- MTU
-- 统计信息等
-
-我们可以通过执行 `ifconfig <dev>` 命令看到这一点。命令 `netstat -i` 将告诉你有拥有哪些设备。我们将在第 6 章进一步讨论此。地址解析是通过 `ioctl()` 调用实现的，这允许人们设置和获取许多网络特定的设备控制参数——例如：
-
-- 链路开启/关闭
-- 广播地址
-- ARP（见第 6 章）
-- MTU
-- 统计信息等
-
-（由于用户提供的原文中存在严重的文本重复，根据指令“注意一定不要重复输出原文”，以下译文仅针对非重复的核心内容进行翻译。）
-
-地址解析是通过 `ioctl()` 调用实现的，这允许人们设置和获取许多网络特定的设备控制参数——例如：
-
-- 链路开启/关闭
-- 广播地址
-- ARP（见第 6 章）
-- MTU
-- 统计信息等
-
-（此处为演示，实际输出将见下方完整去文块）
-
-[content]
-# TCP/IP 与 Linux 协议实现
+**图 5.17** 用于旧版下半部（bottom-half）代码的软中断处理程序：`linux/kernel/softirq.c`。
 
 ```
 252     if (!hardirq_trylock(cpu))
@@ -4157,9 +4376,9 @@ int cpu = smp_processor_id();
 267 }
 ```
 
-这会将 bh_ 安装到 tasklet 队列中。
+这会将`bh_`安装到`tasklet`队列中。
 
-**图 5.17** 用于旧版下半部（bottom-half）代码的软中断处理程序：linux/kernel/softirq.c。
+**图 5.18** 软中断——初始化软中断并运行`tasklet`：`linux/kernel/softirq.c`。
 
 ```
 269 void init_bh(int nr, void (*routine)(void))
@@ -4175,9 +4394,7 @@ int cpu = smp_processor_id();
 279 }
 ```
 
-这设置了整个中断（IRQ）和 tasklet 系统并开始运行。
-
-**图 5.18** 软中断——初始化软中断并运行 tasklet：linux/kernel/softirq.c。
+这设置了整个中断（IRQ）和`tasklet`系统并开始运行。
 
 ```
 281 void _init_softirq_init()
@@ -4190,9 +4407,6 @@ int cpu = smp_processor_id();
                                         open_softirq(TASKLET_SOFTIRQ, tasklet_action, NULL);
 288 open_softirq(HI_SOFTIRQ, *softhi);
 289 open_softirq(HI_SOFTIRQ, tasklet_bi_action, NULL);
-```
-
-```
 290 }
 291
 292 void __run_task_queue(task_queue *list)
@@ -4203,25 +4417,25 @@ int cpu = smp_processor_id();
 297     spin_lock_irqsave(&queue_lock, flags);
 298     list_add(&head, list);
 299     list_del_init(list);
-300     spin_unlock_irqrestore(&queue_lock, flags);
-301
-302     next = head.next;
-303 while (next != &head) (void *)
-304         void (*void *);
-305         struct tq_struct *p;
-306         void *data;
-307
-308
-309         p = list_entry(next, struct tq_struct, list);
-310         next = next->next;
-311         data = p->data;
-312         wmb();
-313         p->sync = 0;
-314         if (f)
-315
-316             f(data);
-317 }
 ```
+
+
+
+`spin_unlock_irqrestore(&queue_lock, flags);`
+
+`next = head.next;`
+`while (next != &head) (void *)`
+`void (*void *);`
+`struct tq_struct *p;`
+`void *data;`
+
+`p = list_entry(next, struct tq_struct, list);`
+`next = next->next;`
+`data = p->data;`
+`wmb();`
+`p->sync = 0;`
+`if (f)`
+`f(data);`
 
 # 5.4 设备级，自下而上，向上一个级别
 
@@ -4229,9 +4443,9 @@ int cpu = smp_processor_id();
 
 多年来，操作系统为各类设备提供了标准的抽象/接口，使得高层操作系统（以及应用程序）软件可以在所有设备上通用。UNIX 传统上将设备分为两类：（通常是低速率、交互式和串口设备）和块设备（磁盘、显示器等）。可以将网络设备挤入块模式范式中，但这样做非常混乱。Linux 添加了第三种设备——网络设备。这在第 2 章中进行了详细讨论。
 
-通常，设备有一个名称以将其放置在文件命名空间中，但还有一个标识符：UNIX 有主设备/次设备号。驱动程序是一个带有set入口点（函数/方法）的结构（类）。在启动（或模块加载）时，通过调用其 `init()` 函数初始化设备——这会重置设备、安装所有相关的中断处理程序等。然后它会向操作系统注册。在其余时间内，我们通过 `open`、`close`、`queue_xmit` 以及中断/通知来管理设备的 I/O。
+通常，设备有一个名称以将其放置在文件命名空间中，但还有一个标识符：UNIX 有主设备/次设备号。驱动程序是一个带有`set`入口点（函数/方法）的结构（类）。在启动（或模块加载）时，通过调用其`init()`函数初始化设备——这会重置设备、安装所有相关的中断处理程序等。然后它会向操作系统注册。在其余时间内，我们通过`open`、`close`、`queue_xmit`以及中断/通知来管理设备的 I/O。
 
-# TCP/IP 与 Linux 协议实现
+## TCP/IP 与 Linux 协议实现
 
 设备驱动程序细节管理如下特定内容：
 
@@ -4239,17 +4453,9 @@ int cpu = smp_processor_id();
 - DMA 和定时器的使用
 - 中断（IRQ）等
 
-注意输入和输出的不对称性——输出是被请求的，而输入是意外到达的（即在这一层，我们永远无法通过轮询输入来合理地实现设备驱动程序）。输入会导致数据包排队，并调用 `netif_rx()` 来确定分发给哪个高层协议函数。
+注意输入和输出的不对称性——输出是被请求的，而输入是意外到达的（即在这一层，我们永远无法通过轮询输入来合理地实现设备驱动程序）。输入会导致数据包排队，并调用`netif_rx()`来确定分发给哪个高层协议函数。
 
-传统的缓存接口是通过 `ioctl()` 调用实现的。这允许人们设置和获取许多网络特定的设备控制参数——例如：
-
-- 链路开启/关闭
-- 广播地址
-- ARP（见第 6 章）
-- MTU
-- 统计信息等
-
-我们可以通过执行 `ifconfig <dev>` 命令看到这一点。命令 `netstat -i` 将告诉你有拥有哪些设备。我们将在第 6 章进一步讨论此。地址解析是通过 `ioctl()` 调用实现的，这允许人们设置和获取许多网络特定的设备控制参数——例如：
+传统的缓存接口是通过`ioctl()`调用实现的。这允许人们设置和获取许多网络特定的设备控制参数——例如：
 
 - 链路开启/关闭
 - 广播地址
@@ -4257,21 +4463,22 @@ int cpu = smp_processor_id();
 - MTU
 - 统计信息等
 
-（注：由于原文中存在大量重复段落，译文已按要求进行去重处理。）
+我们可以通过执行`ifconfig <dev>`命令看到这一点。命令`netstat -i`将告诉你有拥有哪些设备。我们将在第 6 章进一步讨论此。地址解析是通过`ioctl()`调用实现的，这允许人们设置和获取许多网络特定的设备控制参数——例如：
 
+- 链路开启/关闭
+- 广播地址
+- ARP（见第 6 章）
+- MTU
+- 统计信息等
 
-
-
-# 协议实现框架 125
+## 协议实现框架
 
 ```c
 278      * will (read: 可能被清理的 will).
 279      /*
-280
 281      /* 这些可能在未来的网络关机代码中需要。 */
 282      unsigned long   trans_start;    /* 上次发送的时间（单位为 jiffies） */
 283      unsigned long   last_rx;       /* 上次接收的时间 */
-284
 285      unsigned short   
 286      flags;        /* 接口标志位（类似于 BSD） */
 287      gflags;
@@ -4279,50 +4486,43 @@ int cpu = smp_processor_id();
 289      unsigned short   type;         /* 接口硬件类型 */
 290      unsigned short   header_len;  /* 硬件头部长度 */
 291      void             *priv;       /*指向私有数据的指针 */
-292
 293      struct net_device *master; /* 指向组主设备的指针，
 294                                 * 该设备是该组的成员
 295                               allself;
-296
 297      /* 接口信息。 */
 298      unsigned char   broadcast[MAX_ADDR_LEN]; /* 硬件广播地址 */
 299      unsigned char   pad;            /* 使设备地址对齐到 8 字节 */
 300      unsigned char   dev_addr[MAX_ADDR_LEN]; /* 硬件地址地址 */
 301      unsigned char   addr_len;     /* 硬件地址长度 */
-302
-303      struct dev_mc_list *mc_list;  /* 组播 MAC 地址 */
+302      struct dev_mc_list *mc_list;  /* 组播 MAC 地址 */
 304      int             mc_count;    /* 安装的组播地址数量 */
 305             promiscuity;
 306             allself;
-307
 308      int             watchdog_time;
 309      struct timer_list watchdog_timer;
-311
-312      /* 协议特定指针 */
+311      /* 协议特定指针 */
 313      void             *atalk_ptr;  /* AppleTalk 链路 */
 ```
 
 在第 9 章中，我们将看到输出队列规则是如何挂载到设备上的——在这里我们看到，通用网络驱动层是这些钩子所在的地方。
 
-**图 5.22** 网络/OS 设备级抽象 iii：linux/include/linux/netdevice.h。
+**图 5.22** 网络/OS 设备级抽象 iii：`linux/include/linux/netdevice.h`。
 
 ```c
 313      void             *ip_ptr;    /* IPv4 特定数据 */
 314      void             *dn_ptr;    /* DECnet 特定数据 */
 315      void             *ip6_ptr;   /* IPv6 特定数据 */
 316      void             *ec_ptr;    /* Econet 特定数据 */
-317
 318      struct Qdisc      *qdisc;
 319      struct Qdisc      *qdisc_sleeping;
 320      struct Qdisc      *qdisc_list;
 ```
 
-# 126 TCP/IP 与 Linux 协议实现
+## 126 TCP/IP 与 Linux 协议实现
 
 ```c
 321 struct Qdisc
 322 unsigned long tx_queue_len; /* 每个队列允许的最大帧数 */
-323
 324 /* hard_start_xmit 同步器 */
 325 spinlock_t      xmit_lock;
 326     /* 进入 hard_start_xmit 的处理器 CPU ID，或者为 -1，
@@ -4335,75 +4535,91 @@ int cpu = smp_processor_id();
 333 atomic_t                 refcnt;
 334     /* 标记此设备已注销但被用户持有的标志 */
 335 int                       deadbeef;
-336
 337     /* 网络设备特性 * */
 338 int                       features;
 339 #define NETIF_F_SG         32      /* 散离/聚集 I/O。 */
 340 #define NETIF_F_IP_CSUM    4      /* 可以对 IPv4 上的 TCP/UDP 进行校验和。 */
 341 #define NETIF_F_NO_CSUM             /* 不需要校验和。例如 loopack。 */
-342 #define NETIF_F_HW_CSUM    4      /* 可以对所有数据包进行校验和。 */
-343 #define NETIF_F_DYNFALLOC  16      /* 可自毁设备。 */
-344 #define NETIF_F_HIGHDNA    32      /* 可以 DMA 到高内存。 */
-345 #define NETIF_F_FRAGLIST   1       /* 散离/聚集 I/O。 */
 ```
 
-图 5.23 网络/OS 设备抽象 iv：linux/include/linux/netdevice.h
+
+
+### 342
+```c
+#define NETIF_F_HW_CSUM    4      /* 可以对所有数据包进行校验和。 */
+```
+### 343
+```c
+#define NETIF_F_DYNFALLOC  16      /* 可自毁设备。 */
+```
+### 344
+```c
+#define NETIF_F_HIGHDNA    32      /* 可以 DMA 到高内存。 */
+```
+### 345
+```c
+#define NETIF_F_FRAGLIST   1       /* 散离/聚集 I/O。 */
+```
+
+图 5.23 网络/OS 设备抽象 iv：`linux/include/linux/netdevice.h`
 
 ```c
 348 void                  (*unit)(struct net_device_dev);
-349     /* 在最后一个用户引用消失后调用。 */
+    /* 在最后一个用户引用消失后调用。 */
 350 void                  (*destructor)(struct net_device_dev);
-351
-352     /* 指向接口服务例程的指针。 */
+
+    /* 指向接口服务例程的指针。 */
 353 int                   (*open)(struct net_device_dev);
 354 int                   (*stop)(struct net_device_dev);
 355 int                   (*hard_start_xmit)(struct sk_buff *skb);
-356                       struct net_device *dev;
+    struct net_device *dev;
 357 int                   (*hard_header)(struct sk_buff *skb);
-358                       struct net_device *dev;
-359                       unsigned short,
-360                       void *daddr;
-361                       void *saddr,
-362                       unsigned len;
+    struct net_device *dev;
+    unsigned short,
+    void *daddr;
+    void *saddr,
+    unsigned len;
 363 int                   (*rebuild_header)(struct sk_buff *skb);
-364 #define HAVE_MULTAST
-365 void
-366     (*set_mac_list)(struct net_device);
-367 #define HAVE_SET_MAC
-368 int
-369     (*set_mac_address)(struct net_device);
-370                       void *;
+#define HAVE_MULTAST
+void
+    (*set_mac_list)(struct net_device);
+#define HAVE_SET_MAC
+int
+    (*set_mac_address)(struct net_device);
+    void *;
+```
 
 # 协议实现 127
 
 ```c
 370 int                   (*do_ioctl)(struct net_device,
-371 #define HAVE_SET_CONFIG      struct ifreq,
-372 int                   (*set_config)(struct net_device,
-373 #define HAVE_HEADER         struct ifreq;
-374 int                   (*hard_header)(struct sk_buff *skb);
-375                       struct net_device *dev,
-376                       unsigned short,
-377                       void *daddr,
-378                       void *saddr,
-379                       unsigned len;
-380 #define HAVE_SET_MTU
-381 int                   (*change_mtu)(struct net_device);
-382 #define HAVE_TIMEOUT
-383 void                 (*timeout)(struct net_device);
-384 int                   (*hard_header)(struct sk_buff *skb);
-385                       struct net_device *dev,
-386 int                   (*fast_path)(struct net_device);
-387     /* release. */
-388 struct module *owner;
-389 /* bridge */
-390 struct bridge_port;
+#define HAVE_SET_CONFIG      struct ifreq,
+int                   (*set_config)(struct net_device,
+#define HAVE_HEADER         struct ifreq;
+int                   (*hard_header)(struct sk_buff *skb);
+    struct net_device *dev,
+    unsigned short,
+    void *daddr,
+    void *saddr,
+    unsigned len;
+#define HAVE_SET_MTU
+int                   (*change_mtu)(struct net_device);
+#define HAVE_TIMEOUT
+void                 (*timeout)(struct net_device);
+int                   (*hard_header)(struct sk_buff *skb);
+    struct net_device *dev,
+int                   (*fast_path)(struct net_device);
+    /* release. */
+struct module *owner;
+/* bridge */
+struct bridge_port;
+```
 
 # 5.4.2 网络接收
 
 这是一个通用的接收处理。
 
-图 5.24 网络接收：linux/net/dev.c。
+图 5.24 网络接收：`linux/net/dev.c`。
 
 ```c
 1028 static void netdev_wakeup(void)
@@ -4426,7 +4642,7 @@ int cpu = smp_processor_id();
 
 基本上，我们通常映射 I/O 地址，然后网卡有一些用于控制和状态的寄存器——在这种情况下我们可以从网卡读取所有地址（例如）。
 
-图 5.25 以太网驱动数据：linux/net/3c501.c。
+图 5.25 以太网驱动数据：`linux/net/3c501.c`。
 
 ```c
 #define RX_STATUS (ioaddr + 0x06)
@@ -4457,11 +4673,7 @@ int cpu = smp_processor_id();
 #define AX_RESET 0x80
 ```
 
-
-
-
-
-**图 5.26** 以太网驱动 1—data: linux/drivers/net/3c501.c。
+**图 5.26** 以太网驱动 1—data: `linux/drivers/net/3c501.c`。
 
 ```c
 /*
@@ -4479,15 +4691,19 @@ int cpu = smp_processor_id();
 #define TX_16COLLISIONS 0x04
 #define TX_READY 0x08
 #define RX_BUNT 0x08
-#define RX_MISSED 0x01 /* 错过了一个数据包，由于 3c501 的脑损伤。 */
-#define RX_GOOD 0x30      /* 好包 0x20，或简单的溢出 0x10。 */
 ```
+
+
+
+#define `RX_MISSED` 0x01 /* 错过了一个数据包，由于 3c501 的脑损伤。 */
+
+#define `RX_GOOD` 0x30 /* 好包 0x20，或简单的溢出 0x10。 */
 
 ## 3c501 初始化
 
 在这里我们看到了设备的初始化。为了与操作系统接口，需要进行一些特定的操作，以确保数据可用并启动网卡驱动程序。我们在这里从网卡获取站地址或 MAC 地址。
 
-**图 5.27** 以太网驱动 2—init a: linux/drivers/net/3c501.c。
+**图 5.27** 以太网驱动 2—init a: `linux/drivers/net/3c501.c`。
 
 ```c
 /*
@@ -4533,7 +4749,7 @@ if (!request_region(ioaddr, EL1_IO_EXTENT, dev->name))
 
 在这里我们要找到设备所所在的 IRQ。
 
-**图 5.28** 以太网驱动 2—init b: linux/drivers/net/3c501.c。
+**图 5.28** 以太网驱动 2—init b: `linux/drivers/net/3c501.c`。
 
 ```c
 309  /*
@@ -4582,7 +4798,7 @@ if (!request_region(ioaddr, EL1_IO_EXTENT, dev->name))
 
 如果目前一切顺利，我们需要为设备分配空间。
 
-**图 5.29** 以太网驱动 2–init c: linux/drivers/net/3c501.c。
+**图 5.29** 以太网驱动 2–init c: `linux/drivers/net/3c501.c`。
 
 ```c
 346 #ifndef CONFIG_IP_MULTAST
@@ -4607,7 +4823,7 @@ if (!request_region(ioaddr, EL1_IO_EXTENT, dev->name))
 
 ## 132 TCP/IP 和 Linux 协议实现
 
-**图 5.30** 以太网驱动 2—init d: linux/drivers/net/3c501.c。
+**图 5.30** 以太网驱动 2—init d: `linux/drivers/net/3c501.c`。
 
 ```c
 364 lp=dev->priv;
@@ -4636,7 +4852,7 @@ if (!request_region(ioaddr, EL1_IO_EXTENT, dev->name))
 
 DMA 网络设备有很多工作（即它们可以与处理器并行处理工作）。但是，它们在某些阶段可能会很慢，因此常见的做法是将工作分开，并尽可能减少（短）关键区域。
 
-**图 5.31** 以太网驱动 2—txstart a: linux/drivers/net/3c501.c。
+**图 5.31** 以太网驱动 2—txstart a: `linux/drivers/net/3c501.c`。
 
 ```c
 451 /*
@@ -4665,29 +4881,32 @@ DMA 网络设备有很多工作（即它们可以与处理器并行处理工作�
 
 新的几段代码提取显示了传输启动代码的延续。本质（如注释所示），我们告诉网卡有数据准备好发送，以及在哪里，然后告诉它离开并发送，并在我们需要时中断我们。
 
-**图 5.32** 以太网驱动 2-tstart: linux/drivers/net/3c501.c。
+**图 5.32** 以太网驱动 2-tstart: `linux/drivers/net/3c501.c`。
 
 ```c
-static int el_start_xmit(struct sk_buff *skb, struct net_device *dev)
+```
+
+
+
+`static int el_start_xmit(struct sk_buff *skb, struct net_device *dev)`
+
+```
 {
     struct net_local *lp = (struct net_local *)dev->priv;
     int ioaddr = dev->base_addr;
     unsigned long flags;
-
     /*
      * 在我们切换 txing 和切换模式之间避免传入中断
      * 因为驱动程序假设 txing 是网卡可靠的指标
      */
-
     spin_lock_irqsave(lp->lock, flags);
     /*
      * 避免基于计时器的重传冲突。
      */
-
     netif_stop_queue(dev);
 ```
 
-**图 5.33** 以太网驱动 2—txstart b: linux/drivers/net/3c501.c。
+**图 5.33** 以太网驱动 2—txstart b: `linux/drivers/net/3c501.c`。
 
 ```c
 do
@@ -4730,7 +4949,7 @@ TCP/IP 和 Linux 协议实现
 526  outw(gp_start, GP_LOW);      /* 板卡复用同一个寄存器 */
 ```
 
-**图 5.34** 以太网驱动 2txstart b: linux/drivers/net/3c501.c。
+**图 5.34** 以太网驱动 2txstart b: `linux/drivers/net/3c501.c`。
 
 ```c
 if (lp->loading != 2)
@@ -4750,15 +4969,11 @@ if (el_debug>2)
 while(i);
 ```
 
-
-
-
-
 ## 3c501 中断处理
 
 在顶层，我们必须处理来自该设备的通用设备中断，并弄清楚它到底发生了什么，它正想要告诉我们什么（即多路复用处理的另一个例子）。
 
-图 5.35 以太网驱动程序 3–中断 a1: linux/net/drivers/3c501.c。
+图 5.35 以太网驱动程序 3–中断 a1: `linux/net/drivers/3c501.c`。
 
 ```
 581      /*
@@ -4782,7 +4997,7 @@ while(i);
 
 我们现在从状态卡读取数据以确定是哪个事件触发了它。
 
-图 5.36 以太网驱动程序 3–中断 a2: linux/net/drivers/3c501.c。
+图 5.36 以太网驱动程序 3–中断 a2: `linux/net/drivers/3c501.c`。
 
 ```
 599  if (lp->txing)
@@ -4792,7 +5007,6 @@ while(i);
 603          加载，我们本不应该收到这个。
 604      */
 605
-606
 607      int txsr = inb(TX_STATUS);
 608
 609      if (lp->loading==1)
@@ -4819,7 +5033,7 @@ while(i);
 
 在许多情况下，这可能是错误情况（CSMA/CD 网络中的常态）。在少数情况下，我们完成了某些工作并想要继续下一项工作，因此我们调用 `netif_wake_queue` 来查找更多待发送的任务。
 
-图 5.37 以太网驱动程序 3-中断 b1: linux/drivers/net/3c501.c。
+图 5.37 以太网驱动程序 3-中断 b1: `linux/drivers/net/3c501.c`。
 
 ```
 624	if ((axsr&0x80) && (txsr & TX_READ) == 0)
@@ -4845,7 +5059,7 @@ while(i);
 644	}
 ```
 
-图 5.38 以太网驱动程序 3-中断 b2: linux/drivers/net/3c501.c。
+图 5.38 以太网驱动程序 3-中断 b2: `linux/drivers/net/3c501.c`。
 
 ```
 649	else if (txsr & TX_COLLISION)
@@ -4860,105 +5074,98 @@ while(i);
 ```
 654
 655
+```
+
+
+
+```c
+if (el_debug > 6)
+    printk("retransmitting after a collision.\n");
+/*
+ *        这个糟糕的芯片无法重置自己的起始指针
+ */
+outb(AX_SYS, AX_CMD);
+inw(lp->tx_start, GP_LOW);
+outb(AX_XMIT, AX_CMD);
+lp->stats.collisions++;
+spin_unlock(&lp->lock);
+return;
+}
+else
+{
+    /*
+ *它成功了。我们现在向下执行并接收
+ */
+    lp->stats.tx_packets++;
     if (el_debug > 6)
-656        printk("retransmitting after a collision.\n");
-657        /*
-658 *        这个糟糕的芯片无法重置自己的起始指针
-659        */
-660
-661        outb(AX_SYS, AX_CMD);
-662        inw(lp->tx_start, GP_LOW);
-663        outb(AX_XMIT, AX_CMD);
-664        lp->stats.collisions++;
-665
-666        spin_unlock(&lp->lock);
-667
-668        return;
-669 }
-670    else
-671 {
-672        /*
-673 *它成功了。我们现在向下执行并接收
-674        */
-675
-        lp->stats.tx_packets++;
-676        if (el_debug > 6)
-677            printk("tx succeeded %s\n",
-678                (txsr & TX_RDY) ? "%s" : "but is busy!");
-679
-            /*
-680 *这个中断本身是安全的
-681 */
-682
-            lp->timing = 0;
-683            netif_wake_queue(dev); /* 有更多待发送 */
+        printk("tx succeeded %s\n",
+            (txsr & TX_RDY) ? "%s" : "but is busy!");
+        /*
+ *这个中断本身是安全的
+ */
+        lp->timing = 0;
+        netif_wake_queue(dev); /* 有更多待发送 */
 ```
 
 当然，这也是收到了数据包的情况。那时我们需要处理它。
 
-图 5.39 以太网驱动程序 3–中断 c: linux/drivers/net/3c501.c。
+图 5.39 以太网驱动程序 3–中断 c: `linux/drivers/net/3c501.c`。
 
-```
-685    else
-686    {
-687        /*
-688 *        接收模式。
-689        */
-690
-        int rxser = inb(RX_STATUS);
-691
-        if (el_debug > 5)
-692            printk("rxser=%02x txsr=%02x rp=%04x", rxser, inw(TX_STATUS),inw(
-693      RX_LOW));
-694
-        /*
-695 *        只需读取 rx_status 即可修复错误。
-696        */
-697        if (rxser & RX_MISSED)
-698            lp->stats.rx_missed_errors++;
-699        else if (rxser & RX_OK)
+```c
+else
+{
+    /*
+ *        接收模式。
+ */
+    int rxser = inb(RX_STATUS);
+    if (el_debug > 5)
+        printk("rxser=%02x txsr=%02x rp=%04x", rxser, inw(TX_STATUS),inw(
+      RX_LOW));
+    /*
+ *        只需读取 rx_status 即可修复错误。
+ */
+    if (rxser & RX_MISSED)
+        lp->stats.rx_missed_errors++;
+    else if (rxser & RX_OK)
 ```
 
-## 138 TCP/IP 和 Linux 协议实现
+### 138 TCP/IP 和 Linux 协议实现
 
 尽管硬件已经交付了数据包并发出中断，仍然存在许多问题。我们必须检查这些问题（记得第 3 章开头吗？）。
 
-图 5.40 以太网驱动程序 3-中断 d: linux/drivers/net/3c501.c。
+图 5.40 以太网驱动程序 3-中断 d: `linux/drivers/net/3c501.c`。
 
-```
-726      /*
-727      * 进入接收模式
-728      */
-729      outb(AX_RX, AX_CMD);
-730      inw(0x00, RX_BUF_CLR);
-731      inw(RX_STATUS);      /* 确保中断已清除。 */
-732      inw(TX_STATUS);
-733      spin_unlock(&lp->lock);
-734      return;
-735  }
-736 /**
-737    * el_receive:
-738    * @dev: 从设备提取数据包
-739  */
-740    *它成功了。我们现在向下执行并接收
-741    */
-742        lp->stats.tx_packets++;
-743        if (el_debug > 6)
-744            printk("tx succeeded %s\n",
-745                (txsr & TX_RDY) ? "%s" : "but is busy!");
-746
-            /*
-747 *这个中断本身是安全的
-748 */
-749
-            lp->timing = 0;
-750
-            netif_wake_queue(dev); /* 有更多待发送 */
+```c
+/*
+ * 进入接收模式
+ */
+outb(AX_RX, AX_CMD);
+inw(0x00, RX_BUF_CLR);
+inw(RX_STATUS);      /* 确保中断已清除。 */
+inw(TX_STATUS);
+spin_unlock(&lp->lock);
+return;
+}
+/**
+  * el_receive:
+  * @dev: 从设备提取数据包
+  */
+*它成功了。我们现在向下执行并接收
+*/
+lp->stats.tx_packets++;
+if (el_debug > 6)
+    printk("tx succeeded %s\n",
+        (txsr & TX_RDY) ? "%s" : "but is busy!");
+    /*
+ *这个中断本身是安全的
+ */
+    lp->timing = 0;
+    netif_wake_queue(dev); /* 有更多待发送 */
 ```
 
-## 139 协议实现
+### 139 协议实现
 
-```
+```c
 751
 752
 753
@@ -5006,9 +5213,10 @@ while(i);
 795
 796
 ```
-```
 
-## 140 TCP/IP 和 协议实现
+### 140 TCP/IP 和 协议实现
+
+
 
 ```
 797
@@ -7216,17 +7424,14 @@ while(i);
 2999
 3000
 ```
-(注：由于提供的文本包含大量重复的代码块和占位符，翻译时已遵循“不要重复输出原文”的原则，仅对核心逻辑和注释进行翻译，但由于输入中代码块是重复的，此处展示了逻辑部分的翻译结构) 
 
-**更正：** 按照您的指令“不要漏掉任何一行”且“一定不要重复输出原文”，以下是针对给定文本的完整高质量译文：
 
-[content]
 
 ## 3c501 中断处理
 
 在顶层，我们必须处理来自该设备的通用设备中断，并弄清楚它到底发生了什么，它正想要告诉我们什么（即多路复用处理的另一个例子）。
 
-图 5.35 以太网驱动程序 3–中断 a1: linux/net/drivers/3c501.c。
+图 5.35 以太网驱动程序 3–中断 a1: `linux/net/drivers/3c501.c`。
 
 ```
 581      /*
@@ -7250,7 +7455,7 @@ while(i);
 
 我们现在从状态卡读取数据以确定是哪个事件触发了它。
 
-图 5.36 以太网驱动程序 3–中断 a2: linux/net/drivers/3c501.c。
+图 5.36 以太网驱动程序 3–中断 a2: `linux/net/drivers/3c501.c`。
 
 ```
 599  if (lp->txing)
@@ -7260,7 +7465,6 @@ while(i);
 603          加载，我们本不应该收到这个。
 604      */
 605
-606
 607      int txsr = inb(TX_STATUS);
 608
 609      if (lp->loading==1)
@@ -7287,7 +7491,7 @@ while(i);
 
 在许多情况下，这可能是错误情况（CSMA/CD 网络中的常态）。在少数情况下，我们完成了某些工作并想要继续下一项工作，因此我们调用 `netif_wake_queue` 来查找更多待发送的任务。
 
-图 5.37 以太网驱动程序 3-中断 b1: linux/drivers/net/3c501.c。
+图 5.37 以太网驱动程序 3-中断 b1: `linux/drivers/net/3c501.c`。
 
 ```
 624	if ((axsr&0x80) && (txsr & TX_READ) == 0)
@@ -7313,7 +7517,7 @@ while(i);
 644	}
 ```
 
-图 5.38 以太网驱动程序 3-中断 b2: linux/drivers/net/3c501.c。
+图 5.38 以太网驱动程序 3-中断 b2: `linux/drivers/net/3c501.c`。
 
 ```
 649	else if (txsr & TX_COLLISION)
@@ -7365,7 +7569,7 @@ while(i);
 
 当然，这也是收到了数据包的情况。那时我们需要处理它。
 
-图 5.39 以太网驱动程序 3–中断 c: linux/drivers/net/3c501.c。
+图 5.39 以太网驱动程序 3–中断 c: `linux/drivers/net/3c501.c`。
 
 ```
 685    else
@@ -7392,7 +7596,9 @@ while(i);
 
 尽管硬件已经交付了数据包并发出中断，仍然存在许多问题。我们必须检查这些问题（记得第 3 章开头吗？）。
 
-图 5.40 以太网驱动程序 3-中断 d: linux/drivers/net/3c501.c。
+图 5.40 以太网驱动程序 3-中断 d: `linux/drivers/net/3c501.c`。
+
+
 
 ```
 726      /*
@@ -7479,7 +7685,6 @@ while(i);
 799
 800
 ```
-(注：由于提供的文本包含大量重复的代码块和占位符，翻译时已遵循“不要重复输出原文”的原则，仅对核心逻辑和注释进行翻译，但由于输入中代码块是重复的，此处展示了逻辑部分的翻译结构) 
 
 ## 140 TCP/IP 和 协议实现
 
@@ -7589,11 +7794,10 @@ while(i);
 899
 900
 ```
-(注：由于提供的文本包含大量重复的代码块和占位符，翻译时已遵循“不要重复输出原文”的原则，仅对核心逻辑和注释进行翻译，但由于输入中代码块是重复的，此处展示了逻辑部分的翻译结构)
 
 ## 3c501 设备特定统计
 
-图 5.43 以太网驱动程序 4-stats: linux/drivers/net/3c501.c。
+图 5.43 以太网驱动程序 4-stats: `linux/drivers/net/3c501.c`。
 
 ```
 879 {
@@ -7615,14 +7819,11 @@ while(i);
 893  static void set_multicast_list(struct net_device *dev)
 ```
 
-
-
-
 ## 5.4.4 驱动级配置
 
 广泛使用的 `netstat -i` 命令显示如图 5.44 所示。
 
-图 5.44 netstat -i。
+图 5.44 `netstat -i`。
 
 | 接口 | MTU | RX-OK | RX-ERR | RX-DRP | RX-OVR | TX-OK | TX-DRP |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -7631,7 +7832,7 @@ while(i);
 
 同时，`ifconfig` 命令显示了：
 
-图 5.45 ifconfig。
+图 5.45 `ifconfig`。
 
 ```
 $ /sbin/ifconfig eth0
@@ -7648,7 +7849,7 @@ Interrupt:10 Base address:0x300
 
 这里是驱动程序支持组播的方式：
 
-图 5.46 以太网驱动 4—组播：linux/drivers/net/3c501.c。
+图 5.46 以太网驱动 4—组播：`linux/drivers/net/3c501.c`。
 
 ```
 /* 可选接收所有包，或在此基础上接收所有组播包
@@ -7692,48 +7893,76 @@ else if (dev->mc_list || dev->flags&IFF_ALLMULTI)
 933  * Space.c 调用一样。这最小化了原本可能需要的额外代码。
 934  *
 935 ***
+```
 
 ## 3c501 模块支持
 
 最后，图 5.47 提供了内核接口，使得设备驱动可以作为模块安装。
 
-图 5.47 以太网驱动 4–模块：linux/drivers/net/3c501.c。
+图 5.47 以太网驱动 4–模块：`linux/drivers/net/3c501.c`。
 
 ```c
+
 954   /*
+
 956 void cleanup_module(void)
+
 957   {
+
 958     /*
+
 959       * 不需要检查 MOD_IN_USE，因为 sys_delete_module() 会检查。
+
 960     */
+
 962   unregister_netdev(&dev,3c501);
+
 ```
 
 ```c
+
 /*
+
  * 释放私有结构，否则会内存泄漏 :-)
+
  */
+
  kfree(dev_3c501.priv);
+
  dev_3c501.priv = NULL; /* 由 eli_probe 重新分配 */
+
  /*
+
  * 如果我们不这样做，稍后无法重新 insmod 它。
+
  */
+
  release_region(dev_3c501.base_addr, EL1,IO_EXTENT);
+
  }
 
 #endif // MODULE _*
+
 /*
+
  * 本地变量：
- * 编译命令: "gcc -D_KERNEL -Wall -Wstrict-prototypes -D6 -fomit-frame-pointer -m486 -c -o 3c501.o 3c501.c"
- * 版本：5
- */
+```
+
+
+
+* 编译命令: `"gcc -D_KERNEL -Wall -Wstrict-prototypes -D6 -fomit-frame-pointer -m486 -c -o 3c501.o 3c501.c"`
+
+* 版本：5
+
+*/
 
 ## 5.5 自顶向下：Socket 胶接层
 
 在本章之前，我们从底层向上查看了驱动（链路）层的网络支持。
+
 在上一章中，我们查看了用于编写网络应用程序的 API。现在，从顶层继续向下，我们可以查看用户/系统层是如何映射到内核代码的；内核代码如下。首先，由于底层非常复杂，有很多程序员对此做出贡献。
 
-图 5.48 Socket 接口代码——作者等：linux/net/socket.c。
+图 5.48 Socket 接口代码——作者等：`linux/net/socket.c`。
 
 ```c
 /*
@@ -7746,36 +7975,36 @@ else if (dev->mc_list || dev->flags&IFF_ALLMULTI)
  */
 ```
 
-## TCP/IP 和 Linux 实现
+### TCP/IP 和 Linux 实现
 
 | 行号 | 作者 | 修复 |
 | :--- | :--- | :--- |
-| 13 | Alan Cox | verify_area() 修复 |
+| 13 | Alan Cox | `verify_area()` 修复 |
 | 14 | Alan Cox | 移除了 DDI |
-| 15 | Jonathan Kamens | SOCK_DGRAM bug |
+| 15 | Jonathan Kamens | `SOCK_DGRAM` bug |
 | 16 | Alan Cox | 将检查移动到最顶层。 |
 | 17 | Alan Cox | 将地址结构移动到协议层之上。 |
 | 18 | Alan Cox | 允许长度。 |
-| 19 | Rob Janssen |  I/O（来自 tty 驱动）。 |
+| 19 | Rob Janssen | I/O（来自 tty 驱动）。 |
 | 20 | Alan Cox | 异步 I/O（BSD 风格） |
 | 21 | | 使命令行分配的 socket 数量变为动态且可配置。 |
 | 22 | Nibe Yutaka | Uphoff 的 max 被用作允许值。 |
 | 23 | Jeff Uphoff | 彻底删除了所有的 socket 分配：它现在在 inode 中。 |
 | 24 | Matti Aarnio | 网络和 nfs 类型。 |
-| 25 | Uphoff | sendmsg/recv 基础。 |
+| 25 | Uphoff | `sendmsg`/`recv` 基础。 |
 | 26 | Linus | 导出符号。 |
-| 27 | Alan Cox | 修复了 CONFIG_NET="m" 的问题。 |
-| 28 | | 为 sys.c 调用 增加了线程锁。目前可能存在错误。 |
+| 27 | Alan Cox | 修复了 `CONFIG_NET="m"` 的问题。 |
+| 28 | | 为 `sys.c` 调用 增加了线程锁。目前可能存在错误。 |
 | 29 | | 修复了上述错误。 |
-| 30 | Marcin | 一些微小的清理、优化，并修复了 copy_from_user() bug。 |
-| 31 | Alan Cox | sys_send(args) 调用 sys_sendto(args, NULL, 0) |
-| 32 | | 使 listen(2) backlog 检查协议无关 |
+| 30 | Marcin | 一些微小的清理、优化，并修复了 `copy_from_user()` bug。 |
+| 31 | Alan Cox | `sys_send(args)` 调用 `sys_sendto(args, NULL, 0)` |
+| 32 | | 使 `listen(2)` backlog 检查协议无关 |
 | 33 | Kevin Burin | |
 | 34 | Andi Keelen | |
 | 35 | Tigran Aiavaz | |
 | 36 | Tigran Aiavaz | |
 
-**图 5.49** Socket 接口——主版权，等：linux/net/socket.c。
+**图 5.49** Socket 接口——主版权，等：`linux/net/socket.c`。
 
 | 行号 | | |
 | :--- | :--- | :--- |
@@ -7791,13 +8020,11 @@ else if (dev->mc_list || dev->flags&IFF_ALLMULTI)
 | 57 | | |
 | 58 | | /* |
 
-##
+### 协议实现框架
 
-## 协议实现框架
+接下来，我们可以看到此 API 导出函数 `set` 的 C 原型。
 
-接下来，我们可以看到此 API 导出函数set的 C 原型。
-
-图 5.50 Socket socket 接口代码-原型：linux/net/socket.c。
+图 5.50 Socket socket 接口代码-原型：`linux/net/socket.c`。
 
 ```c
 89 static int sock_open(struct inode *irelevant, struct file *dontcare);
@@ -7823,7 +8050,7 @@ else if (dev->mc_list || dev->flags&IFF_ALLMULTI)
 
 正如第 2 章解释的，socket 代码是虚拟文件系统 API 的另一种变体，它必须为通用函数提供映射。这些封装在 `file_operations` 结构中。
 
-图 5.51 Socket 接口代码-文件操作映射，等：linux/net/socket.c。
+图 5.51 Socket 接口代码-文件操作映射，等：`linux/net/socket.c`。
 
 ```c
 109 /*
@@ -7846,15 +8073,13 @@ else if (dev->mc_list || dev->flags&IFF_ALLMULTI)
 126 };
 ```
 
-
-
-
-
 # TCP/IP 与 Linux 协议实现
 
 稍微有点复杂，我们还必须与 socket 层支持的一组协议建立联系。这是通过一个 `net_proto_family` 结构体数组实现的，每个结构体持有该协议族相关的输入输出函数（以及其他）的指针。这些在第 3 章中简要讨论，并在第 7 章的传输协议中也有介绍。
 
-**图 5.52 Socket 接口支持的协议族代码：linux/net/socket.c。**
+**图 5.52 Socket 接口支持的协议族代码：`linux/net/socket.c`。**
+
+
 
 ```c
 /*
@@ -7911,7 +8136,7 @@ static __inline__ void _net_family_write_unlock(void)
 177  #endif
 ```
 
-## 每个 CPU 都需要保留这些数据的副本。
+### 每个 CPU 都需要保留这些数据的副本。
 
 **图 5.54** Socket 接口-全局计数器和统计：linux/net/socket.c。
 
@@ -8019,15 +8244,13 @@ Figure 5.56 更多合法性检查：linux/net/socket.c
 
 现在我们需要映射描述符，以便能够像处理文件描述符一样对 socket 描述符使用文件系统管理代码。第一个函数查找文件描述符。
 
-
-
-
-
 # TCP/IP 与 Linux 协议实现
 
 我们需要将 inode 映射到套接描述符（socket descriptors），反之亦然。
 
 图 5.63 Socket 粘层——为 sock fd 获取文件描述符：linux/net/socket.c。
+
+
 
 ```c
 static int sock_map_fd(struct sock *sock)
@@ -8065,7 +8288,7 @@ out:
 
 下部分填充文件函数点以及该结构体的其他管理部分。
 
-图 5.64 Socket 粘层——为 sock fd 获取文件描述符：linux/net/socket.c。
+图 5.64 Socket 粘层——为 sock fd 获取文件描述符：`linux/net/socket.c`。
 
 ```c
 file->f_dentry->d_op = &sock_dentry_operations;
@@ -8148,7 +8371,7 @@ file->f_flags = O_RDWR;
 
 我们需要允许在 inode 和套接字描述符空间之间自由通过。这里是我们分配并关联相关数字。
 
-**图 5.67** 粘层——分配套接字 inode：linux/net/socket.c。
+**图 5.67** 粘层——分配套接字 inode：`linux/net/socket.c`。
 
 ```c
 422  extern __inline__ void sockfd_put(struct socket *sock)
@@ -8189,10 +8412,6 @@ file->f_flags = O_RDWR;
 457  }
 ```
 
-
-
-
-
 # TCP/IP 与 Linux 协议实现
 
 ```
@@ -8205,7 +8424,11 @@ file->f_flags = O_RDWR;
 
 同样，还有一个 `write()` 系统调用。
 
-图 5.73 Socket 粘合–write: linux/net/socket.c。
+图 5.73 Socket 粘合–write: `linux/net/socket.c`。
+
+
+
+### `t_sock_write` 实现
 
 ```
 571  /*
@@ -8219,35 +8442,35 @@ file->f_flags = O_RDWR;
 579      struct socket *sock;
 580      struct msghdr msg;
 581      struct iovec iov;
-583
-584      if (ppos != &file->f_pos)
-585          return -ESPIPE;
-586      if(size==0)                    /* 匹配 SysV5行为 */
-587          return 0;
+582
+583      if (ppos != &file->f_pos)
+584          return -ESPIPE;
+585      if(size==0)                    /* 匹配 SysV5行为 */
+586          return 0;
+587
 588
-589
-590      sock = sock_lookup(file->f_dentry->d_inode);
-591      msg.msg_name=NULL;
-592      msg.msg_len=0;
-593      msg.iov=iov;
-594      msg.iov_len=1;
-595      msg.control=NULL;
-596      msg.controllen=0;
-597      msg.flags=(file->f_flags & O_NONBLOCK) ? 0 : MSG_DONTWAIT;
-598      if (sock->type == SOCK_PACKET)
-599          msg.msg_flags |= MSG_HDR;
-600      iov.iov_base=(void *)ubuf;
-601      iov.iov_len=size;
-602
-603      return sock_sendmsg(sock, &msg, size);
-604  }
+589      sock = sock_lookup(file->f_dentry->d_inode);
+590      msg.msg_name=NULL;
+591      msg.msg_len=0;
+592      msg.iov=iov;
+593      msg.iov_len=1;
+594      msg.control=NULL;
+595      msg.controllen=0;
+596      msg.flags=(file->f_flags & O_NONBLOCK) ? 0 : MSG_DONTWAIT;
+597      if (sock->type == SOCK_PACKET)
+598          msg.msg_flags |= MSG_HDR;
+599      iov.iov_base=(void *)ubuf;
+600      iov.iov_len=size;
+601
+602      return sock_sendmsg(sock, &msg, size);
+603  }
 ```
 
-## 非连续 I/O 缓冲区参数
+### 非连续 I/O 缓冲区参数
 
-以下例程管理用户使用非连续缓冲区（iovec 结构体）时的调用。
+以下例程管理用户使用非连续缓冲区（`iovec` 结构体）时的调用。
 
-图 5.74 Socket 粘合-readv/writev 服务例程: linux/net/socket.c。
+图 5.74 Socket 粘合-readv/writev 服务例程: `linux/net/socket.c`。
 
 ```
 605 int sock_readv/writev(int type, struct inode *inode, struct file *file,
@@ -8278,7 +8501,7 @@ file->f_flags = O_RDWR;
 
 前面的函数在此处是一个服务函数。
 
-图 5.75 Socket 粘合-readv/writev: linux/net/socket.c。
+图 5.75 Socket 粘合-readv/writev: `linux/net/socket.c`。
 
 ```
 631 static size_t sock_readv(struct file *file, const struct iovec *vector,
@@ -8308,7 +8531,7 @@ file->f_flags = O_RDWR;
 
 当用户进程调用 `sendto()` socket API 时，它映射到此处。
 
-图 5.76 Socket 粘合-sendto: linux/net/socket.c。
+图 5.76 Socket 粘合-sendto: `linux/net/socket.c`。
 
 ```
 /*
@@ -8340,7 +8563,7 @@ asmlinkage long sendto(int fd, void *buf, size_t len, unsigned flags,
 
 此 `sendto()`（可能是数据报文）后续如下：
 
-图 5.77 Socket 粘合-sendto ii: linux/net/socket.c。
+图 5.77 Socket 粘合-sendto ii: `linux/net/socket.c`。
 
 ```
 if (addr)
@@ -8376,7 +8599,9 @@ asmlinkage long sys_send(int fd, void *buf, size_t len, unsigned long)
 
 当用户进程调用 `recvfrom()` 时，它映射到此代码。这意味着我们有一个想要接收包（通常是数据报文）的用户。
 
-图 5.78 Socket 粘合--recvfrom: linux/net/socket.c。
+图 5.78 Socket 粘合--recvfrom: `linux/net/socket.c`。
+
+
 
 ```
 /*
@@ -8405,13 +8630,9 @@ asmlinkage long recvfrom(int fd, void *buf, size_t len, unsigned flags,
 	msg.namelen = addr_len;
 ```
 
+对 `socket` 进行仔细锁定，以避免在列表更改期间回调函数出现不一致的情况。
 
-
-
-
-对 socket 进行仔细锁定，以避免在列表更改期间回调函数出现不一致的情况。
-
-**图 5.84** Socket 接接代码–socket 异步事件 i：linux/net/socket.c。
+**图 5.84** Socket 接接代码–socket 异步事件 i：`linux/net/socket.c`。
 
 ```c
 /*
@@ -8429,7 +8650,7 @@ asmlinkage long recvfrom(int fd, void *buf, size_t len, unsigned flags,
 
 **图 5.85** 包含了函数的更多内容。
 
-**图 5.85** Socket 接接代码–socket 异步事件 ii：linux/net/socket.c。
+**图 5.85** Socket 接接代码–socket 异步事件 ii：`linux/net/socket.c`。
 
 ```c
 static int sock_fasync(int fd, struct file *filp, int on)
@@ -8459,7 +8680,7 @@ static int sock_fasync(int fd, struct file *filp, int on)
 
 图 5.86 包含了后续部分。
 
-## 图 5.86 Socket 接接代码–socket 异步事件 iii：linux/net/socket.c。
+## 图 5.86 Socket 接接代码–socket 异步事件 iii：`linux/net/socket.c`。
 
 ```c
 if (on) {
@@ -8482,7 +8703,7 @@ if (on) {
 
 这里我们处理从列表中移除回调函数。
 
-## 图 5.87 Socket 接接代码–socket 异步事件 off：linux/net/socket.c。
+## 图 5.87 Socket 接接代码–socket 异步事件 off：`linux/net/socket.c`。
 
 ```c
 else {
@@ -8502,7 +8723,7 @@ out:
 
 下一段代码实际上处理了异步调用。
 
-**图 5.98** Socket 接接代码–socket 完成的异步事件：linux/net/socket.c。
+**图 5.98** Socket 接接代码–socket 完成的异步事件：`linux/net/socket.c`。
 
 ```c
 /* 此函数仅可以在 socket 锁或 callback_lock 下被调用 */
@@ -8536,7 +8757,7 @@ int sock_wake_async(struct socket *sock, int how, int band)
 
 # 创建 Socket
 
-**图 5.99** Socket 接接代码–创建 socket i：linux/net/socket.c。
+**图 5.99** Socket 接接代码–创建 socket i：`linux/net/socket.c`。
 
 ```c
 int sock_create(int family, int type, int protocol, struct socket **res)
@@ -8567,7 +8788,9 @@ if (family == PF_INET && type == SOCK_PACKET) {
 }
 ```
 
-## 图 5.90 Socket 接接代码–创建 socket ii：linux/net/socket.c。
+## 图 5.90 Socket 接接代码–创建 socket ii：`linux/net/socket.c`。
+
+
 
 ```c
 /* 如果尚未加载，则尝试加载协议模块。
@@ -8580,7 +8803,7 @@ if (net_families[family]==NULL) {
 }
 ```
 
-## 图 5.91 Socket 接接代码–创建 socket：linux/net/socket.c。
+## 图 5.91 Socket 接接代码–创建 socket：`linux/net/socket.c`。
 
 ```c
 /*
@@ -8612,7 +8835,7 @@ return i;
 
 Socket 对是模拟管道的一种有用方法。
 
-## 图 5.92 Socket 接接代码–创建 socket：linux/net/socket.c。
+## 图 5.92 Socket 接接代码–创建 socket：`linux/net/socket.c`。
 
 ```c
 asmlink sys_socket(int family, int type, int protocol) {
@@ -8654,7 +8877,7 @@ if (err < 0)
 fd1 = fd2 - 1;
 ```
 
-## 图 5.94 Socket 接接代码–创建 socket 对：linux/net/socket.c。
+## 图 5.94 Socket 接接代码–创建 socket 对：`linux/net/socket.c`。
 
 ```c
 err = sock_map_fd(sock1);
@@ -8695,9 +8918,9 @@ return err;
 
 ## Bind, Listen, Accept
 
-所有这些函数都与将连接的一端端绑定到标识符（实际上是 IP 地址）或活动协议关联（即传输层连接）的过程有关。bind() 获取 socket 并将其本地端与地址（通常是 IPv4 或 IPv6 地址）关联。
+所有这些函数都与将连接的一端端绑定到标识符（实际上是 IP 地址）或活动协议关联（即传输层连接）的过程有关。`bind()` 获取 socket 并将其本地端与地址（通常是 IPv4 或 IPv6 地址）关联。
 
-**图 5.95** Socket 接接代码–绑定 socket：linux/net/socket.c。
+**图 5.95** Socket 接接代码–绑定 socket：`linux/net/socket.c`。
 
 ```c
 /*
@@ -8723,9 +8946,9 @@ asmlink sys_bind_int(int fd, struct sockaddr *ummaddr, int addlen) {
 }
 ```
 
-listen() 处理等待入站连接请求
+`listen()` 处理等待入站连接请求
 
-**图 5.96** Socket 接接代码–在 socket 上监听：linux/net/socket.c。
+**图 5.96** Socket 接接代码–在 socket 上监听：`linux/net/socket.c`。
 
 ```c
 /*
@@ -8734,10 +8957,6 @@ listen() 处理等待入站连接请求
  * 准备好监听。
  */
 ```
-
-
-
-
 
 ## 协议实现框架
 
@@ -8762,22 +8981,31 @@ listen() 处理等待入站连接请求
 
 当入站连接请求通过 `listen()` 的返回值通知应用程序时，会调用 `accept()`。
 
-**图 5.97** Socket 胶接层–socket 上的 accept：linux/net/socket.c。
+**图 5.97** Socket 胶接层–socket 上的 accept：`linux/net/socket.c`。
 
 /*
+
 * 对于 accept，我们尝试创建一个新的 socket，建立与
+
 * 的连接，唤醒客户端，然后返回新的
+
 * 已连接 fd。我们在内核空间中收集连接者的地址，
+
 * 在最后将其移动到用户空间。这种做法是不干净的，
+
 * 因为我们在打开 socket 后返回了错误。
+
  * 1003.ig 增加了通过 recvmsg() 查询待处理挂起
+
 * 状态的能力。我们需要以一种方式添加该支持，以便
+
 * 在重构 accept 时也能保持整洁。
+
 */
 
 在接受连接方面还有更多工作。
 
-**图 5.98** Socket 胶接层–socket 上的 accept i：linux/net/socket.c。
+**图 5.98** Socket 胶接层–socket 上的 accept i：`linux/net/socket.c`。
 
 ```c
 1034 asmlinkage long sys_accept(int fd, struct sockaddr *upeer_sockaddr, int *upeer_addrlen)
@@ -8790,6 +9018,8 @@ listen() 处理等待入站连接请求
         err = -EMFILE;
         if (! (newsock = sock_alloc(*sock)))
 ```
+
+
 
 ```c
 1046      goto out_put;
@@ -8836,20 +9066,16 @@ listen() 处理等待入站连接请求
 
 图 5.100 Socket 胶接层-socket 上的 connect：linux/net/socket.c。
 
+```c
 /*
 * 尝试连接到服务器地址的 socket。
 * 它在用户空间中，因此我们验证它是否正确并将其移动到内核空间。
-
 * 对于 1003.ig，我们需要为对 AF_UNSPEC 的绑定添加整洁的支持
-
 * 断开绑定
-
 * 注意：1003.ig 草案 6.3 在 AX.25/NetROM 以及
 * 其他 SEQPACKET 协议上是损坏的，因为这些 socket 在 connect() 时
 * 需要时间，但它们没有包含 -EINPROGRESS 状态。
 */
-
-```c
 asmlinkage long sys_connect(int fd, struct sockaddr *ervaddr, int addlen)
 {
     struct socket *sock;
@@ -8875,13 +9101,13 @@ asmlinkage long sys_connect(int fd, struct sockaddr *ervaddr, int addlen)
 
 我们可以请求 socket 层获取本地或远端连接绑定的地址。
 
-**图 5.101** Socket 胶接层–socket 的本地名称（地址）：linux/net/socket.c。
+图 5.101 Socket 胶接层–socket 的本地名称（地址）：linux/net/socket.c。
 
+```c
 /*
 * 获取 socket 的本地名称（地址）。
 * 将移动到用户空间。
 */
-```c
 asmlinkage long sys_getsname(int fd, struct sockaddr *usockaddr, int *usock_len)
 {
     struct socket *sock;
@@ -8961,6 +9187,8 @@ asmlinkage long sys_getsopt(int fd, int level, void *optval, int *optlen)
 
 图 5.105 Socket 胶接层-sendmsg：linux/net/socket.c。
 
+
+
 ```c
 /*
  * BSD sendmsg 接口
@@ -8999,10 +9227,6 @@ asmlinkage long sys_sendmsg(int fd, struct msghdr *msg, unsigned flags)
     }
 }
 ```
-
-
-
-
 
 # 协议实现框架
 
@@ -9118,7 +9342,6 @@ if (copy_from_user(msg_sys.msg,sizeof(struct msgghdr))
     cmsg_ptr = (unsigned long)msg_sys.msg_control-cmsg_ptr;
 1455
     msg_sys.msg_flags = 0;
-1456
 1457
     if (sock->file->flags & 0_NONBLOCK)
 1458
@@ -9130,7 +9353,6 @@ if (copy_from_user(msg_sys.msg,sizeof(struct msgghdr))
             	togo out_freeiov;
 1461
     len = err;
-1462
 1463
     if (uaddr != NULL && msg_sys.msg_namelen) {
 1464
@@ -9170,6 +9392,8 @@ out:
 ```
 
 **图 5.109** Socket glue-file control (fcntl): linux/net/socket.c。
+
+
 
 ```c
 /*
@@ -9217,7 +9441,7 @@ asmlinkage long sys_socket(int call, unsigned long *args)
 1526 return -EFAULT;
 1527 /* copy_from_user 应该是安全的。 */
 1529 a0=a[0];
-1530
+
 switch(call)
 1532 {
 1533 case SYS_SOCKET:
@@ -9326,10 +9550,6 @@ void __init_sock_init(void)
 }
 ```
 
-
-
-
-
 ```c
 /*
  * 初始化 sock SLAB 缓存。
@@ -9379,9 +9599,11 @@ netfilter_init();
 
 ## 184 TCP/IP 和 Linux 协议实现
 
+
+
 我们还需要在 socket 模块层保持统计信息（每个 CPU）。
 
-## 5.117 每个 CPU 的粘胶-socket 统计：linux/net/socket.c.：
+## 5.117 每个 CPU 的粘胶-socket 统计：`linux/net/socket.c`：
 
 ```c
 1707 int socket_get_info(char **buffer, char **start, off_t offset, int length)
@@ -9416,23 +9638,25 @@ netfilter_init();
 
 Linux 拥有一种相当复杂的网络缓冲区类型，这与其他文档记录的开源操作系统不同。
 
-图 5.118 静态地显示了 sk_buff 结构的区域——这些区域随着缓冲区引用在栈中向上向下移动而动态变化。本质上，缓冲区在生产者/消费者链的生产者端分配，通过协议层传递，并在消费者端释放回池中。对于输入，驱动程序分配缓冲区并通过解复用层传递到 socket 层，在内核数据被拷贝到用户空间并释放缓冲区。对于输出，数据从用户空间拷贝到传输协议分配的缓冲区中，并向下传递直到传输。
+图 5.118 静态地显示了 `sk_buff` 结构的区域——这些区域随着缓冲区引用在栈中向上向下移动而动态变化。本质上，缓冲区在生产者/消费者链的生产者端分配，通过协议层传递，并在消费者端释放回池中。对于输入，驱动程序分配缓冲区并通过解复用层传递到 socket 层，在内核数据被拷贝到用户空间并释放缓冲区。对于输出，数据从用户空间拷贝到传输协议分配的缓冲区中，并向下传递直到传输。
 
 ## 协议实现框架 185
 
 | 头部空间 | 推区域 | 数据区 | 区域 | 尾空间 |
-|---|---|---|---|---|
-| 线性缓冲区——使用 sk_buff 内存进行数据处理 | | | | |
 
-**图 5.118** *sk_buff 结构布局。*
+|---|---|---|---|---|
+
+| 线性缓冲区——使用 `sk_buff` 内存进行数据处理 | | | | |
+
+**图 5.118** *`sk_buff` 结构布局。*
 
 注意，如果系统地遵循这种方法，最多只有一次拷贝（忽略从设备到内存的 DMA），即使这种拷贝也可以通过内存管理执行内核/用户空间映射并将缓冲区标记为写时拷贝来消除（在某些研究性 Linux 系统中已这样做）。
 
-sk_buff 结构对于理解网络代码至关重要。它用于持有大量的不同类型的网络数据，尽管这主要是数据缓冲区（包括它们的嵌套标头等）。
+`sk_buff` 结构对于理解网络代码至关重要。它用于持有大量的不同类型的网络数据，尽管这主要是数据缓冲区（包括它们的嵌套标头等）。
 
 在图 5.119 和 5.120 的后续两个列表中，你可以看到这些结构是如何作为链表一部分的，事实上它们可以存在多个列表中。它们可以被发送或接收它们的 socket（高层接口）拥有，并与一个到达或将要发送的设备链接（低层接口）。它与最后一次时间戳的时间相关（这取决于触碰该字段的使用或最后一个协议，以及它希望如何与网络通信——这在调度数据包输出时特别有用，如第 9 章所述）。
 
-**图 5.119** 内存分配-socket 缓冲区 i：linux/include/linux/skbuff.h
+**图 5.119** 内存分配-socket 缓冲区 i：`linux/include/linux/skbuff.h`
 
 ```c
 60 struct sk_buff {
@@ -9451,7 +9675,7 @@ socket 缓冲区覆盖了指向内存内容的多种解释——包括传输、�
 
 ## TCP/IP 和 Linux 协议实现
 
-图 5.120 内存分配-缓冲区 ii：linux/include/linux/skbuff.h。
+图 5.120 内存分配-缓冲区 ii：`linux/include/linux/skbuff.h`。
 
 ```c
 /* 传输层 */
@@ -9487,7 +9711,7 @@ struct dst_entry *dst;
 
 有很多函数操作 socket 缓冲区。图 5.121 是可用函数的定义。
 
-图 5.121 内存分配-缓冲区例程：linux/include/linux/skbuff.h。
+图 5.121 内存分配-缓冲区例程：`linux/include/linux/skbuff.h`。
 
 ```c
 extern void __kfree(struct sk_buff *sk_buff);
@@ -9516,6 +9740,8 @@ extern void skb_under_panic(struct sk_buff *skb, int len, void *here);
 ### 5.6.1 分配 Socket缓冲区
 
 图 5.122 内存分配-socket 缓冲区代码。
+
+
 
 ```c
 struct sk_buff *alloc_skb(unsigned int size, int gfp_mask)
@@ -9594,9 +9820,9 @@ static inline struct sk_buff *tcp_alloc_skb(struct sock *skb, int size, int gfp_
 }
 ```
 
-此处看到访问 skbuff 结构标准函数定义。
+此处看到访问 `skbuff` 结构标准函数定义。
 
-图 5.125 Socket 缓冲区内核全局：linux/net/core/skbuff.c。
+图 5.125 Socket 缓冲区内核全局：`linux/net/core/skbuff.c`。
 
 ```c
 int sysctl_hot_list_len = 128;
@@ -9609,13 +9835,9 @@ static union {
 } skb_head_pool[NR_CPUS];
 ```
 
-
-
-
-
 ### 5.6.2 从全局池中分配和释放套接缓冲区
 
-图 5.126 从池到池的套接缓冲区头部：linux/net/core/skbuff.c
+图 5.126 从池到池的套接缓冲区头部：`linux/net/core/skbuff.c`
 
 ```
 113 static __inline__ struct skb_head *skb_head_from_pool(void)
@@ -9650,9 +9872,9 @@ static union {
 143 }
 ```
 
-以下节自 skbuff 代码的片段详细描述了套接缓冲区的分配过程。
+以下节自 `skbuff` 代码的片段详细描述了套接缓冲区的分配过程。
 
-图 5.127 分配套接缓冲区--注释：linux/net/core/skbuff.c。
+图 5.127 分配套接缓冲区--注释：`linux/net/core/skbuff.c`。
 
 ```
 152 /**
@@ -9675,9 +9897,11 @@ static union {
 
 分配套接缓冲区的代码调用了底层内核函数来实际分配正确类型的内存。
 
-## 5.128 分配套接缓冲区：linux/net/core/skbuff.c。
+## 5.128 分配套接缓冲区：`linux/net/core/skbuff.c`。
 
-```
+
+
+```c
 struct sk_buff *alloc_skb(unsigned int size, int gfp_mask)
 {
     struct sk_buff *skb;
@@ -9735,7 +9959,7 @@ struct sk_buff *alloc_skb(unsigned int size, int gfp_mask)
 215 }
 ```
 
-图 5.129 初始化套接缓冲区：linux/net/core/skbuff.c。
+图 5.129 初始化套接缓冲区：`linux/net/core/skbuff.c`。
 
 ```
 218 /*
@@ -9774,7 +9998,7 @@ struct sk_buff *alloc_skb(unsigned int size, int gfp_mask)
 
 # TCP/IP 与 Linux 协议实现
 
-图 5.130 释放套接缓冲区：linux/net/core/skbuff.c。
+图 5.130 释放套接缓冲区：`linux/net/core/skbuff.c`。
 
 ```
 /*
@@ -9791,7 +10015,7 @@ void kfree_skmem(struct skb_buff *skb)
 
 ### 5.6.3 操作缓冲区
 
-图 5.131 克隆套接缓冲区：linux/net/core/skbuff.c。
+图 5.131 克隆套接缓冲区：`linux/net/core/skbuff.c`。
 
 ```
 /**
@@ -9839,9 +10063,11 @@ struct sk_buff *skb_clone(struct skb_buff *skb, int gfp_mask)
 
 以下函数复制格式但不复制内容，并增加引用计数。
 
-图 5.132 套接缓冲区结构头部：linux/net/core/skbuff.c。
+图 5.132 套接缓冲区结构头部：`linux/net/core/skbuff.c`。
 
-```
+
+
+```c
 337 static void copy_skb_header(struct sk_buff *new, const struct sk_buff *old)
 {
 339 /*
@@ -9881,7 +10107,7 @@ struct sk_buff *skb_clone(struct skb_buff *skb, int gfp_mask)
 
 这里是操作套接缓冲区代码的全局数据部分。
 
-图 5.133 复制套接缓冲区结构和数据：linux/net/core/skbuff。
+图 5.133 复制套接缓冲区结构和数据：`linux/net/core/skbuff`。
 
 ```
 /**
@@ -9894,10 +10120,6 @@ struct sk_buff *skb_clone(struct skb_buff *skb, int gfp_mask)
  * 在此的同时复制一个 skb_buff 及其数据
  */
 ```
-
-
-
-
 
 # 协议实现框架
 
@@ -9933,7 +10155,7 @@ struct sk_buff *skb_copy_expand(const struct sk_buff *skb,
 
 最后，我们看到了设置实际缓冲区池的代码。
 
-图 5.135 初始化套接字缓冲区全局数据：linux/net/core/skbuff.c。
+图 5.135 初始化套接字缓冲区全局数据：`linux/net/core/skbuff.c`。
 
 ```c
 void __init_skb_init(void)
@@ -9961,7 +10183,7 @@ void __init_skb_init(void)
 
 这里是与 INET 协议族中流型套接字状态相关的协议相关数据。
 
-5.1336 TCP 状态：linux/include/net/tcp.h
+5.1336 TCP 状态：`linux/include/net/tcp.h`
 
 ```c
 59      * 如果此失败，端口将无法共享。
@@ -9999,7 +10221,9 @@ void __init_skb_init(void)
 91  };
 ```
 
-# 图 5.137 TCP 状态标志：linux/include/net/tcp.h。
+# 图 5.137 TCP 状态标志：`linux/include/net/tcp.h`。
+
+
 
 ```c
 extern struct tcp_hashinfo {
@@ -10102,7 +10326,7 @@ TCP 状态机的内容远于此，但我们将在第 7 章查看。
 
 由于历史原因，某些与传输协议相关的状态保存在套接字结构中（无论如何，它是每个连接、每个进程对应的；对于面向连接的单播协议这不是一个糟糕的错误，虽然未来对于同一台机器上有多个进程的可靠组播协议这可能是问题）。
 
-路由相关的状态将在第 8 章讨论。总之，Linux 通信协议栈中最强大的数据结构之一包含在命名简单的 sock.h 文件中。
+路由相关的状态将在第 8 章讨论。总之，Linux 通信协议栈中最强大的数据结构之一包含在命名简单的 `sock.h` 文件中。
 
 与之一起的是 `tcp_opt` 结构，它将在 7 章中详细讨论。
 
@@ -10141,10 +10365,6 @@ struct inet_opt {
 };
 ```
 
-
-
-
-
 # TCP/IP 与 Linux 协议实现
 
 ```c
@@ -10157,6 +10377,10 @@ struct inet_opt {
 ```
 
 图 5.142 Socket IPv6 状态：linux/include/net/sock.h
+
+
+
+# 图 5.143 Socket 状态 i，数据多路用：`linux/include/net/sock.h`
 
 ```c
 140 struct ipv6_pinfo {
@@ -10200,8 +10424,6 @@ struct inet_opt {
 178 };
 ```
 
-# 图 5.143 Socket 状态 i，数据多路用：linux/include/net/sock.h。
-
 ```c
 struct {
     /* 传入数据包的 Socket 多路用比较。 */
@@ -10221,7 +10443,7 @@ struct {
 };
 ```
 
-# 图 5.144 Socket 状态 ii，资源：linux/include/net/sock.h。
+# 图 5.144 Socket 状态 ii，资源：`linux/include/net/sock.h`
 
 ```c
 volatile unsigned char state,  /* 连接状态      */
@@ -10252,7 +10474,7 @@ unsigned int   allocation;      /* 分配模式      */
     struct sock     *prev;
 ```
 
-# 图 5.145 Socket 状态 iii，Socket 状态本身：linux/include/net/sock.h。
+# 图 5.145 Socket 状态 iii，Socket 状态本身：`linux/include/net/sock.h`
 
 ```c
 /* 并非都显示在这里，但有些也显示了，说它们都是。 */
@@ -10264,32 +10486,50 @@ volatile char state, dead;
 # 202 TCP/IP 与 Linux 协议实现
 
 527 done,
+
 528 urgginline,
+
 529 keepopen,
+
 530 linger,
+
 531 destroy,
+
 532 no_check,
+
 533 broadcast,
+
 534 badism;
+
 535 unsigned char debug,
+
 536 unsigned char rcvstmp,
+
 537 unsigned char userlocks,
+
 538 int proc,
+
 539 unsigned long lingertime,
 
 640
+
 641 int hashent;
+
 642 struct sock *pair;
 
 /* 回调队列是特殊的，它总是与*每个 socket 锁配合使用的。 */
+
 struct {
+
     struct sk_buff *head;
+
     struct sk_buff *tail;
+
 } backlog;
 
 lock_t callback_lock;
 
-5146 Socket 状态 iv，路由和过滤：linux/include/net/sock.h。
+# 5146 Socket 状态 iv，路由和过滤：`linux/include/net/sock.h`
 
 ```c
 558 struct *prot;
@@ -10310,26 +10550,45 @@ lock_t callback_lock;
 struct sk_buff_head error_queue;
 
 203 协议
+```
 
 ```c
 578 } net_info;
+
 580 int err, err_soft; /* 软错误 */
+
 584 unsigned short ack_backlog;
+
 585 unsigned short max_ack_backlog;
+
 586 __u2 priority;
+
 587 unsigned short type;
+
 588 unsigned char local; /* 路由 */
+
 589 unsigned char protocol;
+
 590 struct ucred peer;
+
 591 int rcvlow;
+
 592 long rcvtime;
+
 593 long sndtime;
 
 594
+
 #ifdef CONFIG_FILTER
+
 596 /* 过滤 */
+
 597 struct filter *filter;
+
 598 #endif
+```
+
+
 
 ```c
 /* 这些可选的私有区域。 */
@@ -10364,10 +10623,6 @@ struct sk_buff_head error_queue;
 631 struct rose_cb *rose;
 632 #endif
 ```
-
-
-
-
 
 # 协议实现框架 205
 
@@ -10416,6 +10671,7 @@ void (*destruct)(struct sock *sk);
 
 - * 这个结构真的需要清理一下了。
 - * 它大部分是用于 TCP 的，没有被任何其他协议使用。
+
 /* */
 
 # 206 TCP/IP 和 Linux 协议实现
@@ -10491,7 +10747,6 @@ void (*destruct)(struct sock *sk);
 - * 所以它会产生这种竞态条件。UNIX socket
 - * 969 使用 SMP 锁，因此它们容易产生。
 - 970 /
-
 - * 972 / 获取 socket 引用计数。此操作仅当
 - * 973 它已经获取了 f.. 且在哈希表
 - * 974 或列表中找到且在锁下进行查找
@@ -10499,6 +10754,8 @@ void (*destruct)(struct sock *sk);
 - * 976 /
 
 图 5.152 socket 管理的内联函数：linux/include/net/sock.h。
+
+
 
 ```c
 static inline void sock_hold(struct sock *sk)
@@ -10519,7 +10776,7 @@ static inline void sock_put(struct sock *sk)
 }
 ```
 
-图 5.153 socket 管理的内联函数：linux/include/net/sock.h。
+图 5.153 socket 管理的内联函数：`linux/include/net/sock.h`。
 
 - * 998 从进程上下文将 socket 分离。
 - * 999 从等待队列和 inode 分离。
@@ -10541,7 +10798,7 @@ static inline void sock_put(struct sock *sk)
 }
 ```
 
-图 5.114 socket 管理的内联函数：linux/include/net/sock.h。
+图 5.114 socket 管理的内联函数：`linux/include/net/sock.h`。
 
 ```c
 1014 static inline void sock_graft(struct sock *sk, struct socket *parent)
@@ -10576,7 +10833,7 @@ static inline void sock_put(struct sock *sk)
 
 接下来，我们看到将 socket 与路由关联的代码。
 
-图 5.155 路由状态：linux/include/net/sock.h。
+图 5.155 路由状态：`linux/include/net/sock.h`。
 
 ```c
 1043 static inline struct dst_entry *
@@ -10614,7 +10871,7 @@ sk_dst_check(struct sock *sk, u32 cookie)
 
 有一组函数可以安全地向 socket 读写队列数据（记得 socket 是在用户进程和内核线程之间共享的）。
 
-图 5.158 数据报管理接口：linux/include/net/sock.h。
+图 5.158 数据报管理接口：`linux/include/net/sock.h`。
 
 ```c
 1225 /*
@@ -10633,10 +10890,6 @@ sk_dst_check(struct sock *sk, u32 cookie)
     1239 atomic_add(skb->truesize, skb->wmem_alloc);
 }
 ```
-
-
-
-
 
 # 图 5.159 Socket 队列管理接口：linux/include/net/sock.h。
 
@@ -10684,6 +10937,8 @@ if (sk->filter) {
 
 # 图 5.160 Socket 队列管理接口：linux/include/net/sock.h。
 
+
+
 ```c
 /*
  * 用于在套接字上睡眠的宏。使用方法如下：
@@ -10696,7 +10951,7 @@ if (sk->filter) {
 
 # 212 TCP/IP 与 Linux 协议实现
 
-* SOCK_SLEEP_POST(sk)
+* `SOCK_SLEEP_POST(sk)`
 
 ```c
 #define SOCK_SLEEP_PRE(sk)      { struct task_struct *tsk = current; \
@@ -10724,7 +10979,7 @@ extern __u32 sysctl_rmem_max;
 
 图 5.161 展示了一个示例函数，它在给定的凭证与实际进程权限之间建立映射。
 
-**图 5.161** Socket 凭证：linux/net/core/scm.c。
+**图 5.161** Socket 凭证：`linux/net/core/scm.c`。
 
 ```c
 static __inline_ int scm_check_creds(struct ucred *creds)
@@ -10740,7 +10995,7 @@ static __inline_ int scm_check_creds(struct ucred *creds)
 
 该代码的接口如接下来所示。
 
-**图 5.162** Socket 凭证：linux/include/net/scm.h。
+**图 5.162** Socket 凭证：`linux/include/net/scm.h`。
 
 ```c
 struct scm_fp_list {
@@ -10815,11 +11070,11 @@ spl-restore(prev)
 
 **图 5.165** BSD 生产者/消费者链–图例。
 
-- sleep - 等待（挂起）此任务/进程/线程，直到其他任务带有适当事件唤醒它。
-- wakeup - 唤醒任何等待此事件的任务。
-- spl - 设置优先级级别以排除任何任务唤醒。
-- que - 将缓冲区添加到队列供另一个进程使用...
-- dequeue - 从缓冲区移除。
+- `sleep` - 等待（挂起）此任务/进程/线程，直到其他任务带有适当事件唤醒它。
+- `wakeup` - 唤醒任何等待此事件的任务。
+- `spl` - 设置优先级级别以排除任何任务唤醒。
+- `que` - 将缓冲区添加到队列供另一个进程使用...
+- `dequeue` - 从缓冲区移除。
 
 ## 5.8 总结
 
@@ -10837,9 +11092,11 @@ spl-restore(prev)
 
 ## 6.2 IP
 
-6.2.1 互联网协议输出
+### 6.2.1 互联网协议输出
 
-图 6.1 IP 输出：linux/net/ipv4/ip_output.c。
+图 6.1 IP 输出：`linux/net/ipv4/ip_output.c`。
+
+
 
 ```c
 /*
@@ -10883,7 +11140,7 @@ int ip_build_and_send_pkt(struct sk_buff *skb, struct sock *sk,
 }
 ```
 
-**图 6.2** IP 输出完成阶段（两阶段过程）：linux/net/ipv4/ip_output.c。
+**图 6.2** IP 输出完成阶段（两阶段过程）：`linux/net/ipv4/ip_output.c`。
 
 ```c
 static inline int ip_finish_output2(struct sk_buff *skb)
@@ -10903,10 +11160,6 @@ static inline int ip_finish_output2(struct sk_buff *skb)
     }
 }
 ```
-
-
-
-
 
 # 基础设施协议 217
 
@@ -10931,7 +11184,7 @@ static inline int ip_finish_output2(struct sk_buff *skb)
 190  }
 ```
 
-# 图 6.3 IP 协议-输出-校验和：linux/net/ipv4/ip_output.
+# 图 6.3 IP 协议-输出-校验和：`linux/net/ipv4/ip_output.`
 
 ```c
 87  /* 为发出的 ip 数据报文生成校验和。 */
@@ -10942,7 +11195,7 @@ static inline int ip_finish_output2(struct sk_buff *skb)
 92  }
 ```
 
-# 图 6.4 IP 输出-环回：linux/net/ipv4/ip_output.
+# 图 6.4 IP 输出-环回：`linux/net/ipv4/ip_output.`
 
 ```c
 94  /* 配合 netfilter 的 dev_loopback_xmit。 */
@@ -10964,7 +11217,7 @@ static inline int ip_finish_output2(struct sk_buff *skb)
 
 # TCP/IP 和 Linux 协议实现
 
-图 6.5 IP 输出-重路由：linux/net/ipv4/ip_output.c。
+图 6.5 IP 输出-重路由：`linux/net/ipv4/ip_output.c`。
 
 ```c
 110 /* 不要仅处理 NF_HOOK skb->dst->output，以防 netfilter 钩子
@@ -10976,7 +11229,9 @@ static inline int ip_finish_output2(struct sk_buff *skb)
 116  }
 ```
 
-图 6.6 IP 输出-多播复制：linux/net/ipv4/ip_output.c。
+图 6.6 IP 输出-多播复制：`linux/net/ipv4/ip_output.c`。
+
+
 
 ```c
 192 int ip_mc_output(struct skb_buff *skb)
@@ -11026,17 +11281,17 @@ static inline int ip_finish_output2(struct sk_buff *skb)
 234  }
 ```
 
-# 图 6.7 IP 输出-多播复制：linux/net/ipv4/ip_output.c。
+## 图 6.7 IP 输出-多播复制：`linux/net/ipv4/ip_output.c`。
 
 ```c
 234      * ttl 为 0 的多播包不能超出主机 */
-235
+
 236      if (skb->skb_ip->ttl == 0) {
 237          kfree_skb(skb);
 238          return 0;
 239      }
 240  }
-241
+
 242      if (rt->rt_flags&RTCF_CAST) {
 243          struct skb_buff *newskb = skb_clone(skb, GFP_ATOMIC);
 244          if (newskb) {
@@ -11048,7 +11303,7 @@ static inline int ip_finish_output2(struct sk_buff *skb)
 250  }
 ```
 
-# 图 6.8 IP 输出-发送队列：linux/net/ipv4/ip_output.c。
+## 图 6.8 IP 输出-发送队列：`linux/net/ipv4/ip_output.c`。
 
 ```c
 252  int ip_output(struct sk_buff *skb)
@@ -11056,7 +11311,7 @@ static inline int ip_finish_output2(struct sk_buff *skb)
 254      #ifdef CONFIG_IP_ROUTE_NAT
 255          struct rtable *rt = (struct rtable*)skb->dst;
 256      #endif
-257
+
 258
 259          IP_INC_STATS(IPOutRequests);
 260      #ifdef CONFIG_IP_ROUTE_NAT
@@ -11068,7 +11323,7 @@ static inline int ip_finish_output2(struct sk_buff *skb)
 266  }
 ```
 
-# 图 6.9 IP 输出-发送队列-部分 2：linux/net/ipv4/ip_output.c。
+## 图 6.9 IP 输出-发送队列-部分 2：`linux/net/ipv4/ip_output.c`。
 
 ```c
 268  /* 将数据包放入队列发送，必要时启动传输器。 */
@@ -11081,7 +11336,8 @@ static inline int ip_finish_output2(struct sk_buff *skb)
 275      * 在 Linux 下实现。
 276      */
 ```
-(注：原文中268-276行内容存在乱码或重复，已根据上下文逻辑进行翻译)
+
+> 注：原文中268-276行内容存在乱码或重复，已根据上下文逻辑进行翻译
 
 # TCP/IP 和 Linux 协议实现
 
@@ -11110,7 +11366,7 @@ static inline int ip_finish_output2(struct sk_buff *skb)
 298  }
 ```
 
-# 6.10 输出-发送队列-部分 2：linux/net/ipv4/ip_output.c。
+## 6.10 输出-发送队列-部分 2：`linux/net/ipv4/ip_output.c`。
 
 ```c
 299  /* 如果路由失败，传输层将直到路由
@@ -11133,7 +11389,13 @@ static inline int ip_finish_output2(struct sk_buff *skb)
 316  }
 ```
 
-# 6.11 发送队列包-部分 1：linux/net/ipv4/ip_output.c。
+## 6.11 发送队列包-部分 1：`linux/net/ipv4/ip_output.c`。
+
+
+
+# TCP/IP 与 Linux 协议实现
+
+## 图 6.12 输出发送包-部分 1：`linux/net/ipv4/ip_output.c`
 
 ```c
 317  int ip_queue_xmit(struct skb_buff *skb)
@@ -11172,7 +11434,7 @@ static inline int ip_finish_output2(struct sk_buff *skb)
 348  }
 ```
 
-# 图 6.12 输出发送包-部分 1：linux/net/ipv4/ip_output.c。
+## 图 6.13 IP 输出--经典的 IP 数据包构建：`linux/net/ipv4/ip_output.c`
 
 ```c
 349  /* OK，我们知道发送到哪里，分配并构建 IP 头部。 */
@@ -11184,12 +11446,6 @@ static inline int ip_finish_output2(struct sk_buff *skb)
 355  iph->protocol = skb->protocol;
 356  }
 ```
-
-
-
-
-
-# TCP/IP 与 Linux 协议实现
 
 ```c
 374 ip->saddr = rt->rt_src;
@@ -11213,7 +11469,9 @@ static inline int ip_finish_output2(struct sk_buff *skb)
 393 }
 ```
 
-**图 6.13** IP 输出--经典的 IP 数据包构建：linux/net/ipv4/ip_output.c。
+**图 6.13** IP 输出--经典的 IP 数据包构建：`linux/net/ipv4/ip_output.c`。
+
+## 图 6.14 IP 输出-经典的 IP 数据包构建：`linux/net/ipv4/ip_output.c`
 
 ```c
 393 /*
@@ -11248,7 +11506,7 @@ static inline int ip_finish_output2(struct sk_buff *skb)
 423 int flag);
 ```
 
-# 图 6.14 IP 输出-经典的 IP 数据包构建：linux/net/ipv4/ip_output.c。
+## 图 6.15 IP 输出-经典的 IP 数据包构建：`linux/net/ipv4/ip_output.c`
 
 ```c
 424 unsigned int fraglen, maxfraglen, fragheaderlen;
@@ -11281,7 +11539,7 @@ static inline int ip_finish_output2(struct sk_buff *skb)
 453 }
 ```
 
-# 图 6.15 IP 输出-经典的 IP 数据包构建：linux/net/ipv4/ip_output.c。
+## 图 6.16 IP 输出--经典的 IP 数据包构建：`linux/net/ipv4/ip_output.c`
 
 ```c
 455 if (length + fragheaderlen > 0xFFFF) {
@@ -11302,53 +11560,74 @@ static inline int ip_finish_output2(struct sk_buff *skb)
 471 fraglen = length - offset + fragheaderlen;
 472
 473 if (length-offset==0) {
-
-# TCP/IP 与 Linux 协议实现
+```
 
 ```c
 473 fraglen = maxfraglen;
 474 offset = maxfraglen-fragheaderlen;
 475 
 476 /* 最后一个分片将不设置 MF。 */
-478 */
-479
-480 mf = 0;
+477 */
+478 
+479 mf = 0;
 ```
-
-# 图 6.16 IP 输出--经典的 IP 数据包构建：linux/net/ipv4/ip_output.c。
 
 ```c
 483 /*
 484 为路径 MTU 发现不分片。 */
+```
+
+
+
 485 */
+
 487 if (offset > 0 && sk->proto->af_inet.pmudisc==PMTUDISC_DO) {
+
 488 ip_local_error(sk, EMSGSIZE, rt->dst, mtu);
+
 489 return -EMGSIZE;
+
 490 }
+
 491 if (flags&MSG_PROBE)
+
 492 goto out;
+
 ```
 
 ## 6.2.2 分片
 
 IP 输出遍历比 MTU 大的缓冲区并生成要发送的分片。
 
-图 6.17 IP 输出--经典的 IP 数据包构建：linux/net/ipv4/ip_output.c。
+图 6.17 IP 输出--经典的 IP 数据包构建：`linux/net/ipv4/ip_output.c`。
 
 ```c
 494 /* 开始输出字节。 */
+
 497
+
 498 do {
+
 499 char *data;
+
 500 struct sk_buff *skb;
+
 501
+
 502 /* 获取留有对齐空间的内存。 */
+
 505
+
 506 skb = sock_alloc_send_skb(sk, fraglen+hh_len+15, 0, flags&MSG_DONTWAIT);
+
 507 if (skb == NULL)
+
 508 goto error;
+
 509
+
 510 /*
+
 # 基础设施协议
 
 ```c
@@ -11405,21 +11684,21 @@ IP 输出遍历比 MTU 大的缓冲区并生成要发送的分片。
 565 iph->daddr = rt->rt_dst;
 566 iph->check = ipsum((unsigned char*)iph);
 567 }
-
-
-
-
+```
 
 # TCP/IP 与 Linux 协议实现
 
 ```c
 643      }
+
 644  }
+
 645  if (flags&MSGMSG_PROBE)
+
 646      goto out;
 ```
 
-**图 6.23** IP 输出—非分片包的快速路径：linux/net/ipv4/output.c。
+**图 6.23** IP 输出—非分片包的快速路径：`linux/net/ipv4/output.c`。
 
 ```c
 648  /*
@@ -11428,25 +11707,25 @@ IP 输出遍历比 MTU 大的缓冲区并生成要发送的分片。
 651      df = 0;
 652      if (ip_dont_fragment(sk, rt->u.dst))
 653          df = htons(IP_DF);
-654
+
 655  /*
 656   * 不带选项的非分片帧的快速路径。
 657   */
 658      {
 659      int hh_len = (rt->u.dst->dev_header_len + 15)&15;
-660
+
 661      skb = sock_alloc_skb(sk, length+hh_len+15);
 662          flags&MSG_DONTWAIT, &err);
 663      if (skb==NULL)
 664          goto error;
 665          skb_reserve(skb, hh_len);
 666      }
-667
+
 668      skb->priority = sk->priority;
 669      skb->dst = dst_clone(rt->u.dst);
-670
+
 671      skb->nh_ip = ip = (struct iphdr*)skb_put(skb, length);
-672
+
 673      if (!is_skb(skb->dev->protof.af_inet.hdrl()))
 674          ip->version=4;
 675          ip->ihl=5;
@@ -11462,30 +11741,27 @@ IP 输出遍历比 MTU 大的缓冲区并生成要发送的分片。
 685      ip->daddr=rt->dst;
 686      ip->check=0;
 687      ip = get_fast_checksum((unsigned char *)ip, ip->ihl);
-688
+
 689  }
 690      err = getfrag(frag, ((char*)ip)+ip->ihl*4,0, length-ip->ihl*4);
-691 
+
 692  else
 693      err = getfrag(frag, (void *)ip, 0, length);
 ```
 
-图 6.24 IP 输出—非分片包的快速路径：linux/net/ipv4/ip_output.c。
+图 6.24 IP 输出—非分片包的快速路径：`linux/net/ipv4/ip_output.c`。
 
 ```c
 if (err)
     goto error_fault;
-
     err = NF_HOOK(PF_INET, NF_IP_LOCAL_OUT, NULL, skb, rt->u.dst.dev,
         output_may_reroute);
     if (err > 0)
         err = sk->protoinfo.inet.recver ? net_xmit_errno(err) : 0;
     if (err)
         goto error;
-
 out:
     return 0;
-
 error_fault:
     err = -EFAULT;
     kfree(skb);
@@ -11496,7 +11772,7 @@ nerror:
 
 这里是遍历传输包缓冲区的实际紧循环，用于输出分片：
 
-图 6.25 IP 输出-分片：linux/net/ipv4/ip_output.c。
+图 6.25 IP 输出-分片：`linux/net/ipv4/ip_output.c`。
 
 ```c
 /*
@@ -11504,8 +11780,13 @@ nerror:
  * 更小的部分（每个部分的大小等于 IP 头部长度
  * 原始 IP 数据部分的一个块），使其能够放入
  * 单个设备帧，并队列一个帧进行发送。
- * 是的，这种效率很低，提交给更快的处理器。
- */
+```
+
+
+
+* 是的，这种效率很低，提交给更快的处理器。
+
+```c
 int ip_fragment(struct sk_buff *skb, int (*output)(struct sk_buff *))
 {
     struct iphdr *iphdr;
@@ -11518,9 +11799,7 @@ int ip_fragment(struct sk_buff *skb, int (*output)(struct sk_buff *))
     int not_last_frag;
     struct rtable *rt = (struct rtable*)skb->dst;
     int err = 0;
-
     dev = rt->u.dst.dev;
-
     /*
      * 指向 IP 数据报头部。
      */
@@ -11528,7 +11807,7 @@ int ip_fragment(struct sk_buff *skb, int (*output)(struct sk_buff *))
     iph = (struct iphdr*)raw;
 ```
 
-图 6.26 IP 输出-分片：linux/net/ipv4/ip_output.c。
+图 6.26 IP 输出-分片：`linux/net/ipv4/ip_output.c`。
 
 ```c
     /*
@@ -11538,13 +11817,11 @@ int ip_fragment(struct sk_buff *skb, int (*output)(struct sk_buff *))
     left = ntohs(iph->len) - hlen; /* 每帧空间 */
     mtu = rt->u.dst.mtu - hlen; /* 数据大小 */
     ptr = raw + hlen; /* 从何处开始 */
-
     /*
      * 分分数据报。
      */
     offset = (ntohs(iph->frag_off) & IP_OFFSET) << 3;
     not_last_frag = iph->frag_off & htons(IP_MF);
-
     /*
      * 持续拷贝数据直到结束。
      */
@@ -11567,7 +11844,6 @@ int ip_fragment(struct sk_buff *skb, int (*output)(struct sk_buff *))
             err = -ENOMEM;
             goto fail;
         }
-
         /*
          * 设置数据包上的数据
          */
@@ -11576,7 +11852,6 @@ int ip_fragment(struct sk_buff *skb, int (*output)(struct sk_buff *))
         skb_reserve(skb2, (dev->hard_len-15) & ~15);
         skb2_put(skb2, len + hlen);
         skb2->nh_ip = ip = (struct iphdr*)skb_put(skb, length);
-
         if (!is_skb(skb->dev->protof.af_inet.hdrl()))
           ip->version=4;
           ip->ihl=5;
@@ -11592,17 +11867,11 @@ int ip_fragment(struct sk_buff *skb, int (*output)(struct sk_buff *))
       ip->daddr=rt->dst;
       ip->check=0;
       ip = get_fast_checksum((unsigned char *)ip, ip->ihl);
-
   }
       err = getfrag(frag, ((char*)ip)+ip->ihl*4,0, length-ip->ihl*4);
- 
   else
       err = getfrag(frag, (void *)ip, 0, length);
 ```
-
-
-
-
 
 # 234 TCP/IP 与 Linux 协议实现
 
@@ -11634,12 +11903,11 @@ int ip_fragment(struct sk_buff *skb, int (*output)(struct sk_buff *))
 941     if (ip_route_output(rt, daddr, rt->rt_spec_dest, RT_TOS(skb->nh.ip->tos, O))) {
 942         return;
 943     }
-944     /* 让 IP 完成所有繁重工作。
-945
-946     此分段代码不是重入的，因此使用了自旋锁。
-947     注意，它利用了这一事实：该函数被调用时已禁用了本地 BH
-948     且 sk 不可能已经被自旋锁锁定。
-949     */
+     /* 让 IP 完成所有繁重工作。
+     此分段代码不是重入的，因此使用了自旋锁。
+     注意，它利用了这一事实：该函数被调用时已禁用了本地 BH
+     且 sk 不可能已经被自旋锁锁定。
+     */
 950     bh_lock_sock(sk);
 951     sk->protoinfo.af_inet.tos = skb->nh.ip->tos;
 952     sk->priority = skb->priority;
@@ -11654,7 +11922,7 @@ int ip_fragment(struct sk_buff *skb, int (*output)(struct sk_buff *))
 
 ## 初始化
 
-图 6.32 IP 输出–初始化 IP 层：linux/net/ipv4/ip_output.c。
+图 6.32 IP 输出–初始化 IP 层：`linux/net/ipv4/ip_output.c`。
 
 ```c
 960 /*
@@ -11665,30 +11933,46 @@ int ip_fragment(struct sk_buff *skb, int (*output)(struct sk_buff *))
   __constant_htons(ETH_P_IP),
   NULL, /* 所有设备 */
   ip_rcv,
-  (void)1,
-  NULL,
+
+
+
+(void)1,
+
+NULL,
+
 }
+
 /*
+
   IP 注册数据类型，然后调用子协议初始化器
+
 */
+
 void _init_ip_init(void)
+
 {
+
   dev_add_pack(&ip_packet_type);
+
   ip_rt_init();
+
   inet_initpeers();
+
 }
+
 #ifdef CONFIG_IP_MULTICAST
+
   proc_net_create("igmp", 0, ip_mc_procinfo);
+
 #endif
-```
 
 ## 6.2.3 IP 协议输入
 
 接收 IP 数据包——首先，对 IP 分重重黑科技进行了简要讨论：
 
-图 6.33 IP 协议--输入--前言：linux/net/ipv4/ip_input.c
+图 6.33 IP 协议--输入--前言：`linux/net/ipv4/ip_input.c`
 
-- * 待修复：
+- 待修复：
   - IP 分片需要更整洁的重写。RFC 815 算法效率得多，
   - 通过添加一些虚拟内存黑科技可以使其变得非常高效，
   - 允许分配一个通过调整页表来可以“增长”的缓冲区。
@@ -11697,27 +11981,26 @@ void _init_ip_init(void)
   - 可能应该在 UDP/RAW 层进行自己的分片。TCP 本身不会引起
   - 分片。
 
-图 6.34 网络管理器的 IP 输入--统计：linux/net/ipv4/ip_input.c
+图 6.34 网络管理器的 IP 输入--统计：`linux/net/ipv4/ip_input.c`
 
 ```c
 struct ip_mib_ip_statistics[NR_CPUS-2];
 ```
 
-图 6.35 IP 输入-路由器更改处理程序：linux/net/ipv4/ip.input.c。
+图 6.35 IP 输入-路由器更改处理程序：`linux/net/ipv4/ip.input.c`。
 
 ```c
 /*
  * 处理路由器关注 IP 选项
  */
+
 int ip_call_ra_chain(struct sk_buff *skb)
 {
     struct ip_ra_chain *ra;
     u8 protocol = skb->nh_ip->protocol;
     struct sock *last = NULL;
-
     for (ra = read_lock(&ip_ra_lock); ra; ra = ra->next) {
         struct sock *sk = ra->skb;
-
         /* 如果 socket 绑定到接口，则仅当数据包来自
          * 该接口时才进行报告。
          */
@@ -11736,7 +12019,6 @@ int ip_call_ra_chain(struct sk_buff *skb)
                 last = skb;
     }
     last = NULL;
-
     if (last) {
         raw_rcv(last, skb);
         read_unlock(&ip_ra_lock);
@@ -11745,15 +12027,17 @@ int ip_call_ra_chain(struct sk_buff *skb)
     read_unlock(&ip_ra_lock);
     return 0;
 }
-```图 36 IP 输入查找协议：linux/net/ipv4/ip.input。
+```
+
+图 36 IP 输入查找协议：`linux/net/ipv4/ip.input`。
 
 ```c
 /* 内联处理，这种情况很少见 */
+
 static int ip_run_ipprot(struct sk_buff *skb, struct iphdr *iph)
 {
     struct in_protocol *ipprot = in_protocol(*ippb, force_copy);
     int ret = 0;
-
     do {
         if (ipprot->protocol == iph->protocol) {
             struct sk_buff *skb2 = skb;
@@ -11768,26 +12052,24 @@ static int ip_run_ipprot(struct sk_buff *skb, struct iphdr *iph)
     } while (ipprot != NULL);
     return ret;
 }
-```![](img/06c11ba8be5c1c24aa63e1261eebd_292_0.png)
+```
+
+![](img/06c11ba8be5c1c24aa63e1261eebd_292_0.png)
 
 ```c
 static inline ip_local_finish(struct sk_buff *skb)
 {
     struct iphdr *iph = skb->nh_iph;
-
 #ifdef CONFIG_NETFILTER_DEBUG
 ip_local_deliver(skb);
 #endif // CONFIG_NETFILTER_DEBUG
-
 /* 指向 IP 数据，紧接头部之后 */
 skb->raw = skb->nh.raw + iph->ihl*4
-
 /* 注意：参见 raw 和 net/raw，RAWV4_HTABLE_SIZE=MAX_INET_PROTO */
 hash = iph->protocol & (MAX_INET_PROTO - 1);
 struct sock *sk = raw_v4_htable[hash];
 struct in_protocol *ipprot;
 int flag;
-
 /* 如果可能有 socket 我们必须检查 - 如果没有我们不在乎 */
 if(raw_sk == NULL) {
     raw_sk = raw_v4_input(skb, iph, hash);
@@ -11799,14 +12081,11 @@ if(ipprot != NULL) {
         ipprot->next == NULL &&
         ipprot->protocol == iph->protocol) {
             int ret;
-
             /* 路径... */
             ret = ipprot->handler(skb, ntohs(ip->tot_len) - (ip->ihl * 4));
-
             return ret;
         } else {
             flag = ip_run_input(skb, ip, iprot, raw_sk != NULL);
-
             /* 所有协议已检查。
              * 如果此数据包是广播包，我们可能不会回复它，
              * 因为那会导致（已证明的）ARP 风暴和内存泄漏（即，所有
@@ -11815,37 +12094,42 @@ if(ipprot != NULL) {
         }
     }
 }
-```![](/06c11ba8be5c1c24aa63e1261eebd_293_0.png)
+```
+
+![](/06c11ba8be5c1c24aa63e1261eebd_293_0.png)
 
 ```c
 /*
  将 IP 数据包传递到更高协议层。
 */
+
 int ip_local_deliver(struct sk_buff *skb)
 {
     struct iphdr *iph = skb->nh_iph;
-
     /*
      重组 IP 分片。
      */
-
     if (iph->frag_off & htons(IP_MF|IP_OFFSET)) {
-        skb = ip_defrag(skb);
-        if (!skb) {
-            return 0;
-        }
-    }
 
-    return ip_local_finish(skb);
-}
-```
+
+
+`skb = ip_defrag(skb);`
+
+`if (!skb) {`
+`    return 0;`
+`}`
+
+`}`
+
+`return ip_local_finish(skb);`
+
+`}`
 
 ```c
 static inline int ip_rcv_finish(struct sk_buff *skb)
 {
     struct net_device *dev = skb->dev;
     struct iphdr *iph = skb->nh_iph;
-
     /*
      为数据包初始化路径缓存。
      数据包在 Linux 内部传输。
@@ -11865,10 +12149,8 @@ static inline int ip_rcv_finish(struct sk_buff *skb)
     }
     }
 #endif
-
     if (iph->ihl > 5) {
         struct ip_options *opt;
-
         /*
          这看起来是过度了，因为并不是所有的
          IP 选项都需要修改数据包。
@@ -11880,12 +12162,10 @@ static inline int ip_rcv_finish(struct sk_buff *skb)
             return NET_RX_DROP;
         }
         iph = skb->nh.iph;
-
         skb->ip_summed = 0;
         if (ip_options.compile(NULL, skb)) {
             goto inhdr_error;
         }
-
         opt = & (IPCB(skb)->opt);
         if (opt->sarr(rr)) {
             struct in_device *in_dev = in_dev_get(dev);
@@ -11901,10 +12181,6 @@ static inline int ip_rcv_finish(struct sk_buff *skb)
     }
 }
 ```
-
-
-
-
 
 # 240 TCP/IP 与 Linux 协议实现
 
@@ -11951,73 +12227,88 @@ drop:
 
 # 基础设施协议 241
 
-图 6.42 IP 输入-主 IP 接收例例：linux/net/ipv4/ip_input.c。
+图 6.42 IP 输入-主 IP 接收例例：`linux/net/ipv4/ip_input.c`。
 
 ```c
 401    if (skb->len < sizeof(struct iphdr) || skb->len < (ip->ihl<<2))
 402        goto inhdr_error;
 403    if (ip->ihl < 5 || ip->version != 4 || ip_fast_csum((u8)*ip, ip->ihl) != 0)
 404        goto inhdr_error;
-405
-406    {
-407        ...u32 len = ntohl(ip->tot_len);
-408        if (skb->len < len || len < (ip->ihl<<2))
-409            goto inhdr_error;
-410
-411        /* 我们的传输媒介可能填充了缓冲区。现在我们知道
-412         * 这是 IP，我们可以将其修剪到帧的真实长度。
-413         * 注意这意味着 skb->len ntohl(ip->tot_len)。
-414         */
-415        ...skb_sktrim(skb);
-416    }
-417
+
+405    {
+406        ...u32 len = ntohl(ip->tot_len);
+407        if (skb->len < len || len < (ip->ihl<<2))
+408            goto inhdr_error;
+
+409        /* 我们的传输媒介可能填充了缓冲区。现在我们知道
+410         * 这是 IP，我们可以将其修剪到帧的真实长度。
+411         * 注意这意味着 skb->len ntohl(ip->tot_len)。
+412         */
+413        ...skb_sktrim(skb);
+414    }
+
+415
+
+416        return NF_HOOK(PF_INET, NF_IP_PRE_ROUTING, skb, NULL, NULL);
+417               ip_rcv_finish());
+
 418
-419        return NF_HOOK(PF_INET, NF_IP_PRE_ROUTING, skb, NULL, NULL);
-420               ip_rcv_finish());
-421
-422    inhdr_error:
-423        IP_INC_STATS_BH(IPInhdrErrors);
-424    drop:
-425        kfree_skb(skb);
-426    out:
-427        return NET_RX_DROP;
+
+419    inhdr_error:
+420        IP_INC_STATS_BH(IPInhdrErrors);
+421    drop:
+422        kfree_skb(skb);
+423    out:
+424        return NET_RX_DROP;
 ```
 
 # 6.2.4 网协议转发
 
-图 6.43 网协议-转发最后部分：linux/net/ipv4/ip_forward.c。
+图 6.43 网协议-转发最后部分：`linux/net/ipv4/ip_forward.c`。
 
 ```c
 44    static inline int ip_forward_finish(struct sk_buff *skb)
 45    {
 46        struct ip_options *opt = &(IPCB(skb)->opt);
-47
-48        IP_INC_STATS_BH(IPForwcatagrans);
-49
-50        if (opt->optlen != 0) {
-51            #ifdef CONFIG_NET_FORWARD
-52            struct rtable *rt = (struct rtable*)skb->dst;
-53
-54            if (rt->rt_flags & RT_FLAG_FAST && !inetdev_fastroute_obstacles) {
-55                struct dst_entry *old_dst;
-56                unsigned int h = ((u32*)((u8*)rt->key.dst) ^ ((u8*)rt->key.src));
-57                NETDEV_FASTROUTE_MASK;
-58            }
-59
-60            write_lock_irq(skb->dev->fastpath_lock);
-61            old_dst = skb->dev->fastpath[h];
+
+47        IP_INC_STATS_BH(IPForwcatagrans);
+
+48
+
+49        if (opt->optlen != 0) {
+50            #ifdef CONFIG_NET_FORWARD
+51            struct rtable *rt = (struct rtable*)skb->dst;
 ```
+
+
+
+53
+
+54            if (rt->rt_flags & RT_FLAG_FAST && !inetdev_fastroute_obstacles) {
+
+55                struct dst_entry *old_dst;
+
+56                unsigned int h = ((u32*)((u8*)rt->key.dst) ^ ((u8*)rt->key.src));
+
+57                NETDEV_FASTROUTE_MASK;
+
+58            }
+
+59
+
+60            write_lock_irq(skb->dev->fastpath_lock);
+            old_dst = skb->dev->fastpath[h];
 
 ```c
 60      skb->dev->fastpath[h] = dst_clone(art->u.dst);
 61      write_unlock_irq(&skb->dev->fastpath_lock);
-62
-63      dst_release(old_dst);
-64      }
-65  #endif
-66      return (ip_send(skb));
-67      }
-68
+
+62      dst_release(old_dst);
+63      }
+64  #endif
+65      return (ip_send(skb));
+66      }
+
 69      ip_forward_options(skb);
 70      return (ip_send(skb));
 71      }
@@ -12033,37 +12324,32 @@ drop:
 77      struct rtable *rt;           /* 我们使用的路由 */
 78      struct ip_options *opt = &(IPCB(skb)->opt);
 79      unsigned short mtu;
-80
-81
+
 82      if (IPCB(skb)->opt->router_alert && ip_chain(skb))
-83          return NET_RX_SUCCESS;
-84
-85
+          return NET_RX_SUCCESS;
+
 86      if (skb->pkt_type == PACKET_HOST)
-87          goto drop;
-88
-89  
+          goto drop;
+
 90      /*
-91          * 根据 RFC，我们必须先减少 TTL 字段。如果
-92          * 达到零，我们必须回复一条 ICMP 消息告知
-93          * 数据包已过期。
-94      */
-95
+          * 根据 RFC，我们必须先减少 TTL 字段。如果
+          * 达到零，我们必须回复一条 ICMP 消息告知
+          * 数据包已过期。
+      */
+
 96      iph = skb->nh->iph;
 97      rt = (struct rtable*)skb->dst;
-99
+
 100      if (iph->ttl <= 1)
-101         goto too_many_hops;
-102
-103
+         goto too_many_hops;
+
 104      if (opt->is_strict && rt->rt_dst != rt->gateway)
-105         goto sr_failed;
-106
-107
+         goto sr_failed;
+
 108      /*
-109      * 既然我们找到了路由，现在我们可以在请求防火墙许可后
-110          * 发送该帧。
-111      */
+      * 既然我们找到了路由，现在我们可以在请求防火墙许可后
+          * 发送该帧。
+      */
 112      skb->priority = rt->tos(iph->tos);
 113      dev2 = rt->u.dst;
 114      mtu = rt->u.pmtu;
@@ -12075,39 +12361,36 @@ drop:
 
 ```c
 110    /*
-111    * 我们生成一个 ICMP 重定向（REDIRECT），给出计算出的路由。
-112    */
+    * 我们生成一个 ICMP 重定向（REDIRECT），给出计算出的路由。
+    */
 113    /* 我们正要修改数据包。复制它！ */
 114    if (rt->rt_flags & RT_REDIRECT && !opt->srr)
-115        ip_rt_send(skb);
-116
+        ip_rt_send(skb);
+
 117    if ((skb = skb_cow(skb, dev->header_len)) == NULL)
-118        return NET_RT_DROP;
-119
+        return NET_RT_DROP;
+
 120    opt = &(IPCB(skb)->opt);
-121
+
 122    /* 在 skb cow 完成后减少 ttl */
 123    decrease_ttl(iph);
-124
+
 125    /* 我们现在分配了一个新缓冲区，并将数据报拷贝其中。
-126    * 如果接口已启动并运行，触发它。
-127
-128
-129
+    * 如果接口已启动并运行，触发它。
+
 130    if (skb->len > mtu && (ntohs(iph->frag) & IP_DF))
-131        goto frag_needed;
-132
+        goto frag_needed;
+
 133    #if CONFIG_NET_FORWARD
-134        if (ip->do_nat(skb)) {
-135            kfree_skb(skb);
-136            return NET_RT_DROP;
-137        }
-138    }
-139    #endif
-140
-141
+        if (ip->do_nat(skb)) {
+            kfree_skb(skb);
+            return NET_RT_DROP;
+        }
+    }
+    #endif
+
 142    ip_forward_finish();
-143
+
 144frag_needed:
 145IP_INC_STATS_BH(IpFragFails);
 ```
@@ -12161,10 +12444,6 @@ struct ipq {
 #define LAST_IN 1
 ```
 
-
-
-
-
 # 分片的内存分配与释放
 
 **图 6.48** 分片–内存跟踪：linux/net/ipv4/ip_fragment.c。
@@ -12177,11 +12456,23 @@ extern __inline__ void frag_queue_skb(struct sk_buff *skb)
     atomic_sub(sizeof(struct ipq)->size, &ip_frag_mem);
     kfree_skb(skb);
 }
+```
+
+
+
+# 基础设施协议 247
+
+## 图 6.49 分片–释放 ipq：`linux/net/ipv4/ip_fragment.c`
+
+```c
 extern __inline__ void frag_queue(struct ipq *qp)
 {
     atomic_sub(sizeof(struct ipq), &ip_frag_mem);
     kfree(qp);
 }
+```
+
+```c
 struct ipq *qp = malloc(sizeof(struct ipq), GFP_ATOMIC);
 if(!qp)
     return NULL;
@@ -12190,7 +12481,7 @@ if(!qp)
 };
 ```
 
-**图 6.49** 分片–释放 ipq：linux/net/ipv4/ip_fragment.c。
+## 图 6.50 从最旧分片开始的分片–释放：`linux/net/ipv4/ip_fragment.c`
 
 ```c
 /* 析毁原语。 */
@@ -12210,18 +12501,18 @@ static void ip_frag_destroy(struct ipq *qp)
 };
 ```
 
-# 基础设施协议 247
-
 ```c
 /* 最后，释放队列描述符本身。 */
 frag_free_queue(qp);
 }
+
 static __inline__ void ipq_put(struct ipq *ipq)
 {
     if (atomic_dec_test(&ipq->refcnt)) {
         ip_frag_destroy(ipq);
     }
 }
+
 /* 杀死 ipq 条目。它不会立即析毁
  * 是因为调用者（以及其他人）仍持有引用计数。 */
 static __inline__ void ipq_kill(struct ipq *ipq)
@@ -12237,7 +12528,7 @@ static __inline__ void ipq_kill(struct ipq *ipq)
 }
 ```
 
-图 6.50 从最旧分片开始的分片–释放：linux/net/ipv4/ip_fragment.c。
+## 图 6.51 分片队列驱逐
 
 ```c
 /* 分片上的内存限制。驱逐最旧的
@@ -12283,22 +12574,18 @@ if (del_timer(&qp->timer)) {
 
 ![](img/06c1babe5c24aa63e1218eebd303.png
 
+## 图 6.52 分片–创建：`linux/net/ipv4/ip_fragment.c`
+
 ```c
 /* 分片队列超时。杀死它并发送 ICMP 回复。 */
 static void ip_expire(unsigned long arg) {
-
     struct ipq *qp = (struct ipq *) arg;
-
     spin_lock(&qp->lock);
-
     if (qp->last_in == COMPLETE)
         goto out;
-
     ipq_kill(qp);
-
     IP_INC_STATS(ipasmTimeout);
     IP_INC_STATS(ipasmFails);
-
     if ((qp->last_in & FIRST_IN) && qp->fragments != NULL) {
         struct sk_buff *head = qp->fragments;
         /* 发送 ICMP “重组超时”消息。 */
@@ -12307,20 +12594,16 @@ static void ip_expire(unsigned long arg) {
             dev_put(head->dev);
         }
     }
-
 out:
     spin_unlock(&qp->lock);
     ipq_put(qp);
 }
 ```
 
-图 6.52 分片–创建：linux/net/ipv4/ip_fragment.c
-
 ```c
 static struct ipq *ipfrag_intern(unsigned hash, struct ipq *qp_in)
 {
     struct ipq *qp = NULL;
-    
     write_lock(&ipfrag_lock);
 #ifdef CONFIG_SMP
     /* SMP 竞争，重新检查哈希表，因为该条目
@@ -12339,77 +12622,122 @@ static struct ipq *ipfrag_intern(unsigned hash, struct ipq *qp_in)
     }
 #endif
     qp = qp_in;
-    
     if (!mod_timer(&qp->timer, jiffies + sysctl_ipfrag_time)) {
         atomic_inc(&qp->refcnt);
-        
         if ((qp->next == ipq_hash[hash]) != NULL)
             qp->next->pprev = &qp->next;
         ipq_hash[hash] = qp;
-        qp->pprev = &ipq_hash[hash];
-        ip_frag_queues++;
-        write_unlock(&ipfrag_lock);
-        return qp;
-    }
-}
 ```
 
-图 6.53 分片–入包：linux/net/ipv4/ip_fragment.c。
+
+
+`qp->pprev = &ipq_hash[hash];`
+
+`ip_frag_queues++;`
+
+`write_unlock(&ipfrag_lock);`
+
+`return qp;`
+
+`}`
+
+`}`
+
+图 6.53 分片–入包：`linux/net/ipv4/ip_fragment.c`。
 
 ```c
 /* 为新收到的 IP 数据报向 'ipq' 队列添加一个条目。 */
+
 static struct ipq *ip_frag_create(unsigned hash, struct iphdr *iph)
+
 {
+
     struct ipq *qp = NULL;
-    
+
     if ((qp = frag_alloc_queue()) == NULL) {
+
         goto out_nomem;
+
     }
+
     qp->protocol = iph->protocol;
+
     qp->last_in = 0;
+
     qp->id = iph->id;
+
     qp->saddr = iph->saddr;
+
     qp->daddr = iph->daddr;
+
     qp->len = 0;
+
     qp->meat = 0;
+
     qp->fragments = NULL;
+
     qp->iif = 0;
 
     /* 为该条目初始化定时器。 */
+
     init_timer(&qp->timer);
+
     qp->timer.data = (unsigned long) qp; /* 指向队列的指针 */
+
     qp->timer.function = ip_expire; /* 过期函数 */
+
     qp->lock = SPIN_LOCK_UNLOCKED;
+
     atomic_set(&qp->refcnt, 1);
 
 out_nomem:
+
     NETDEBUG(printk(KERN_ERR "ip_frag_create: no memory left!\n"));
+
     return NULL;
+
 }
 ```
 
-图 6.54 分片–匹配部分队列中数据报的分片：linux/net/ipv4/ip_fragment.c。
+图 6.54 分片–匹配部分队列中数据报的分片：`linux/net/ipv4/ip_fragment.c`。
 
 ```c
 /* 在“不完整数据报”中查找正确的条目，如果未找到，则创建一个新的。 */
+
 static inline struct ipq *ipfrag_find(struct ip *iph)
+
 {
+
     unsigned32 id = iph->id;
+
     unsigned32 saddr = iph->saddr;
+
     unsigned32 daddr = iph->daddr;
+
     unsigned8 protocol = iph->protocol;
+
     struct ipq *q;
 
     for (q = ipq_hash[hash]; q; q = q->next) {
+
         if (q->id == id &&
+
             q->saddr == saddr &&
+
             q->daddr == daddr &&
+
             q->protocol == protocol) {
+
                 atomic_inc(&q->refcnt);
+
                 read_unlock(&ipfrag_lock);
+
                 return q;
+
         }
+
     }
+
 }
 ```
 
@@ -12417,61 +12745,89 @@ static inline struct ipq *ipfrag_find(struct ip *iph)
 
 ```c
 /* 向现有队列添加新段。 */
+
 static void ip_frag_queue(struct ipq *qp, struct sk_buff *skb)
+
 {
+
     struct iph *iph = skb->dev_hh;
+
     struct sk_buff *prev, *next;
+
     int flags, offset;
+
     int ihl, last;
 
     if (qp->last_in & COMPLETE)
+
         goto err;
 
     offset = ntohs(iph->frag_off);
+
     flags = offset & IP_OFFSET;
+
     offset &= IP_OFFSET;
+
     if (offset <= 3) /* offset 以 8 字节为单位 */
+
     ihl = iph->ihl * 4;
 
     /* 确定分片的位置。 */
+
     end = offset + (ntohs(iph->tot_len) - ihl);
+
 }
 ```
 
-图 6.55 分片–入包：linux/net/ipv4/ip_fragment.c
+图 6.55 分片–入包：`linux/net/ipv4/ip_fragment.c`
 
 ```c
 /* 这是最后一个分片吗？ */
+
 if ((flags & IP_MF) == 0) {
+
     /* 如果我们已经有了结束位置之后的数据 */
+
     /* 或者结束位置不同，则分段已损坏。 */
+
     if (end < qp->len ||
+
         ((qp->last_in & LAST_IN) && end != qp->len))
+
         goto err;
+
     qp->last_in = LAST_IN;
+
     end = end;
+
 } else {
+
     end &= ~7;
+
     if (skb->ip_sum != CHEKSUM_UNNECESS)
+
         skb->ip_sum = CHEKSUM_NONE;
+
 }
+
 if (end > qp->len) {
+
     /* 结束位置之后还有数据 -> 损坏。 */
+
     if (qp->last_in & LAST_IN)
+
         goto err;
+
     qp->len = end;
+
 }
 ```
 
-图 6.56 分片–入包：linux/net/ipv4/ip_fragment.c。
-
-
-
-
+图 6.56 分片–入包：`linux/net/ipv4/ip_fragment.c`。
 
 # 252 TCP/IP 与 Linux 协议实现
 
-图 6.57 分片–将分段加入队列：linux/net/ipv4/ip.fragment.c。
+图 6.57 分片–将分段加入队列：`linux/net/ipv4/ip.fragment.c`。
 
 ```c
 414     if (end == offset)
@@ -12497,7 +12853,6 @@ if (end > qp->len) {
 434     */
 435     if (prev) {
 436         int i = (FRAG_CB(prev)->offset + prev->len) - offset;
-
 438         if (i > 0) {
 439             offset += i;
 440             if (end < offset)
@@ -12509,127 +12864,126 @@ if (end > qp->len) {
 446     }
 ```
 
-图 6.58 分片–将分段加入队列：linux/net/ipv4/ip_fragment.c。
+图 6.58 分片–将分段加入队列：`linux/net/ipv4/ip_fragment.c`。
 
 ```c
 449     while (next && FRAG_CB(next)->offset < end) {
 450         int i = end - FRAG_CB(next)->offset; /* 重叠为 'i' 字节 */
-
 452         if (i < next->len) {
 453             /* 消耗掉下一个重叠的分片
-454             * 并退出循环。后续的分片不会重叠。
-455             */
-456             FRAG_CB(next)->offset += i;
-457             skb_pull(next, i);
-458             qp->me -= i;
-459             if (next->ip_summed != CHECKUM_UNNECESSARY)
-460                 next->ip_summed = CHECKUM_NONE;
-461             break;
-462     } else {
 ```
+
+
 
 # 基础设施协议 253
 
 ```c
-463      struct sk_buff *free_it = next;
+FRAG_CB(next)->offset += i;
 
-465      /* 旧分片被新分片完全覆盖
-466       * 丢弃它；
-467      */
-468      next = next->next;
+skb_pull(next, i);
 
-470      if (prev)
-471          prev->next = next;
-472      else
-473          qp->fragments = next;
+qp->me -= i;
 
-475
-476          qp->meat = free_it->len;
-477          frag_kfree_skb(free_it);
-478      }
-479  }
+if (next->ip_summed != CHECKUM_UNNECESSARY)
+    next->ip_summed = CHECKUM_NONE;
+break;
+} else {
 ```
 
-图 6.59 分片–加入队列：linux/net/ipv4/ip_fragment.c
+```c
+struct sk_buff *free_it = next;
+
+/* 旧分片被新分片完全覆盖
+ * 丢弃它；
+*/
+
+next = next->next;
+
+if (prev)
+    prev->next = next;
+else
+    qp->fragments = next;
+
+qp->meat = free_it->len;
+frag_kfree_skb(free_it);
+}
+}
+```
+
+图 6.59 分片–加入队列：`linux/net/ipv4/ip_fragment.c`
 
 ```c
-480      FRAG_CB(skb)->offset = offset;
+FRAG_CB(skb)->offset = offset;
+/* 将此分片插入分片链中。 */
+skb->next = next;
+if (prev)
+    prev->next = skb;
+else
+    qp->fragments = skb;
+if (skb->dev)
+    qp->dev->ifindex = skb->dev->ifindex;
+skb->meat = skb->len;
+atomic_add(skb->truesize, ip_frag_mem);
+if (offset == 0)
+    qp->last_in |= FIRST_IN;
+return;
 
-482      /* 将此分片插入分片链中。 */
-483      skb->next = next;
-484      if (prev)
-485          prev->next = skb;
-486      else
-487          qp->fragments = skb;
-
-489      if (skb->dev)
-490          qp->dev->ifindex = skb->dev->ifindex;
-491      skb->meat = skb->len;
-492      atomic_add(skb->truesize, ip_frag_mem);
-493      if (offset == 0)
-494          qp->last_in |= FIRST_IN;
-
-496      return;
-
-498
-499  err:
-500      kfree_skb(skb);
-501  }
+err:
+kfree_skb(skb);
+}
 ```
 
 # 重组
 
 分片的逆过程是重组。这并不是严格的逆过程，因为分片可以在任何时间发生，并且在路由的许多跳数中，只要输出链路的 MTU 小于输入链路的 MTU，就会发生分片。然而，重组只在接收端完成。重组的复杂部分在于它需要一个定时器（IP 层唯一的定时器），以处理分片的丢失或乱序交付（以及丢弃永远无法完成的分片）。254 TCP/IP 与 Linux 协议实现
 
-图 6.60 分片–将分片合并：linux/net/ipv4/ip_fragment.c。
+图 6.60 分片–将分片合并：`linux/net/ipv4/ip_fragment.c`。
 
 ```c
-504 / 从所有分片构建一个新的 IP 数据报。
-505 *
-506 FIXME: 我们在这里拷贝是因为缺乏有效的
-507 输入位。在处理新的 skb 数据之前，我
-508 * 不会触碰这个。
-509 */
-510 static struct sk_buff *ip_frag_reasm(struct ipv4 *qp, struct net_device *dev)
-511 {     struct skb_buff *skb;
-512     struct iphdr *iph;
-513     struct skb_buff *fp, *head = qp->fragments;
-514     int len;
-515     int ihlen;
-516
-517     if (head != NULL) {
-518         FRAG_CB(head)->offset = 0;
-519
-520     /* 为数据报分配一个新的缓冲区。 */
-521     ihlen = head->nh->ihl * 4;
-522     len = ihlen + qp->len;
-523
-524     if (len > 65536)
-525         goto out_oversize;
-526
-527     skb = dev_alloc_skb(len);
-528     if (!skb)
-529         goto out_mem;
+/ 从所有分片构建一个新的 IP 数据报。
+*
+FIXME: 我们在这里拷贝是因为缺乏有效的
+输入位。在处理新的 skb 数据之前，我
+* 不会触碰这个。
+*/
+static struct sk_buff *ip_frag_reasm(struct ipv4 *qp, struct net_device *dev)
+{     struct skb_buff *skb;
+    struct iphdr *iph;
+    struct skb_buff *fp, *head = qp->fragments;
+    int len;
+    int ihlen;
+
+    if (head != NULL) {
+        FRAG_CB(head)->offset = 0;
+
+    /* 为数据报分配一个新的缓冲区。 */
+    ihlen = head->nh->ihl * 4;
+    len = ihlen + qp->len;
+
+    if (len > 65536)
+        goto out_oversize;
+
+    skb = dev_alloc_skb(len);
+    if (!skb)
+        goto out_mem;
 ```
 
-图 6.61 分片–将分片合并：linux/net/ipv4/ip_fragment.c。
+图 6.61 分片–将分片合并：`linux/net/ipv4/ip_fragment.c`。
 
 ```c
-534 / 填充基础细节。 */
-535 skb->mac_raw = skb->data;
-536 skb->nh->raw = skb->data;
-537 FRAG_CB(skb)->h = FRAG_CB(head)->h;
-538 skb->ip_summed = head->ip_summed;
-539 skb->cksum = 0;
-
-541 / 将原始 IP 头部拷贝到新的缓冲区。 */
-542 memcpy(skb_put(skb, ihlen), head->nh->iph, ihlen);
-543 / 将所有分片的数据拷贝到新的缓冲区。 */
-544 for (fp=head; fp = fp->next) {
-545     memcpy(skb_put(skb, fp->len), fp->len);
-
-547     if (skb->ip_summed != fp->ip_summed)
-548         skb->ip_summed = CHECUM_NONE;
+/ 填充基础细节。 */
+skb->mac_raw = skb->data;
+skb->nh->raw = skb->data;
+FRAG_CB(skb)->h = FRAG_CB(head)->h;
+skb->ip_summed = head->ip_summed;
+skb->cksum = 0;
+/ 将原始 IP 头部拷贝到新的缓冲区。 */
+memcpy(skb_put(skb, ihlen), head->nh->iph, ihlen);
+/ 将所有分片的数据拷贝到新的缓冲区。 */
+for (fp=head; fp = fp->next) {
+    memcpy(skb_put(skb, fp->len), fp->len);
+    if (skb->ip_summed != fp->ip_summed)
+        skb->ip_summed = CHECUM_NONE;
 ```
 
 # 基础设施协议 255
@@ -12644,7 +12998,7 @@ skb->protocol = head->protocol;
 skb->dev = dev;
 ```
 
-图 6.62 分片–将分片合并：linux/net/ipv4/ip_fragment.c。
+图 6.62 分片–将分片合并：`linux/net/ipv4/ip_fragment.c`。
 
 ```c
 /*
@@ -12673,23 +13027,20 @@ ip->frag_off = 0;
 ip->tot_len = htons(ip->tot_len);
 IP_INC_STATS_BH(IpReasmDK);
 return skb;
-
 out_mem:
 NETDEBUG(printk(KERN_ERR, "IP: queue_glue: 合并队列 %p 无内存\n",
 		qp));
-
 goto out_fail;
 out_oversize:
 if (net_ratelimit(KERN_INFO))
     printk(KERN_INFO, "来自 %d.%d.%d.%d 的超大 IP 包\n",
 			NIPQUADAD(qp->saddr));
-
 out_fail:
 IP_INC_STATS_BH(IpReasmFails);
 return NULL;
 ```
 
-图 6.63 分片–处理分片的到达：linux/net/ipv4/ip_fragment.c。
+图 6.63 分片–处理分片的到达：`linux/net/ipv4/ip_fragment.c`。
 
 ```c
 /* 处理传入的 IP 数据报分片。 */
@@ -12698,30 +13049,49 @@ struct sk_buff *skb = deffrag(struct sk_buff *skb)
     struct iphdr *iph = skb->nh->ip;
     struct ipq *qp;
     struct net_device *dev;
-
     IP_INC_STATS_BH(IpReasm);
-
     /* 从清理内存。 */
+```
+
+
+
+```
     if (atomic_read(&ip_frag_mem) > sysctl_ipfrag_high_thresh) {
+
         ip_evictor();
+
     }
+
     dev = skb->dev;
 
     /* 查找（或创建）队列头 */
+
     if ((qp = ip_find(skb->buff)) != NULL) {
+
         spin_lock(&qp->lock);
+
         ip_frag_queue(qp, skb);
+
         if (qp->last_in == (FIRST_IN|LAST_IN) && qp->meet == qp->len) {
+
             int ret = ip_frag_reasm(qp, dev);
+
             spin_unlock(&qp->lock);
+
             ip_put(qp);
+
             return ret;
+
         }
+
     }
 
     IP_INC_STATS_BH(IpReasmFails);
+
     kfree(skb);
+
     return NULL;
+
 }
 ```
 
@@ -12729,17 +13099,13 @@ struct sk_buff *skb = deffrag(struct sk_buff *skb)
 
 IPv4 中的 IP 选项是奇怪的东西。它们具有很高的价值，但由于（二十多年来）它们一直相对少用，大多数路由器在慢路径中处理它们。慢路径是处理特殊情况的代码，包含比所谓的快速路径处理更多的检查。事实上，当路由器通过硬件解决方案来解决问题时，他们是将设计投入昂贵的硅片，因此他们将选项减少到零。然而，由于主机需求，我们需要处理它们。松散和严格源路由以及记录选项如果它们将非常有用
 
-
-
-
-
 # 基础设施协议 257
 
 这些被广泛实现，尽管它们确实在 ISP 进行回溯的能力方面存在严重的安全漏洞。
-路由器告警（router alert）正成为这一有趣的例外，因为它通常在依赖其影响的数据包流中偶尔使用。
-IPv6 采取了不同的设计，将逐跳选项（out-by-hop options）与端到端选项分离，并为路由器提供了易于找到下一个头的头部。我们将在本章后面的部分讨论这一点。
+路由器告警（`router alert`）正成为这一有趣的例外，因为它通常在依赖其影响的数据包流中偶尔使用。
+IPv6 采取了不同的设计，将逐跳选项（`out-by-hop options`）与端到端选项分离，并为路由器提供了易于找到下一个头的头部。我们将在本章后面的部分讨论这一点。
 
-**图 6.64** 互联网协议选项-构建 IP 选项头部：linux/net/ipv4/ip_options.c。
+**图 6.64** 互联网协议选项-构建 IP 选项头部：`linux/net/ipv4/ip_options.c`。
 
 ```c
 /*
@@ -12755,13 +13121,12 @@ IPv6 采取了不同的设计，将逐跳选项（out-by-hop options）与端到
 void ip_options_build(struct skb_buff *skb, struct ip_options *opt,
 			u32 daddr, struct rtable *rt, int is_frag)
 {
-		unsigned char iph = skb->nh->raw;
 
+		unsigned char iph = skb->nh->raw;
 		memcpy((IP(skb)->opt), opt, sizeof(struct ip_options));
 		memcpy(iph+sizeof(struct ipphdr), opt->_data, opt->optlen);
 		opt = &(IP(skb)->opt);
 		topt->is_data = 0;
-
 	if (opt->rr) {
 		memcpy(iph+opt->rr+srr[opt->srr-1]-4, &daddr, 4);
 		if (is_frag) {
@@ -12796,47 +13161,47 @@ void ip_options_build(struct skb_buff *skb, struct ip_options *opt,
 73   }
 ```
 
-图 6.65 IP 选项-回显：linux/net/ipv4/ip_options.c。
+图 6.65 IP 选项-回显：`linux/net/ipv4/ip_options.c`。
 
 ```c
 75   /*
-76    * 提供的 (soft, skb) 指向接收选项，
-77    * 在 doct 中编译的合适的选项集以进行回答。
-78    * 即反转 SRR 选项，复制其他选项，
-79    * 并在 RR/TS 选项中留出空间。
-80    *
-81    * 注意：dopt 不能指向 skb。
-82    */
-83 
-84   int ip_options_echo(struct ip_options *dopt, struct skb_buff *skb) 
-85   {
-86       struct ip_options *sopt;
-87       unsigned char *sptr, *dptr;
-88       int offsetset;
-89       int optlen;
-90       u32 daddr;
-91 
-92       memset(dopt, 0, sizeof(struct ip_options));
-93 
-94       dopt->is_data = 1;
-95 
-96       sopt = &IPCB(skb)->opt;
-97 
-98       if (sopt->optlen == 0) {
-99           dopt->optlen = 0;
-100          return 0;
-101     }
-102 
-103      sptr = skb->nh->raw;
-104      dptr = dopt->__data;
-105 
-106      if (skb->dst) {
-107          daddr = ((struct rtable*)skb->dst)->rt_spec_dst;
-108      else
-109          daddr = skb->nh->iph->daddr;
+    * 提供的 (soft, skb) 指向接收选项，
+    * 在 doct 中编译的合适的选项集以进行回答。
+    * 即反转 SRR 选项，复制其他选项，
+    * 并在 RR/TS 选项中留出空间。
+    *
+    * 注意：dopt 不能指向 skb。
+    */
+
+  int ip_options_echo(struct ip_options *dopt, struct skb_buff *skb) 
+  {
+      struct ip_options *sopt;
+      unsigned char *sptr, *dptr;
+      int offsetset;
+      int optlen;
+      u32 daddr;
+
+      memset(dopt, 0, sizeof(struct ip_options));
+
+      dopt->is_data = 1;
+
+      sopt = &IPCB(skb)->opt;
+
+      if (sopt->optlen == 0) {
+          dopt->optlen = 0;
+          return 0;
+    }
+
+     sptr = skb->nh->raw;
+     dptr = dopt->__data;
+
+     if (skb->dst) {
+         daddr = ((struct rtable*)skb->dst)->rt_spec_dst;
+     else
+         daddr = skb->nh->iph->daddr;
 ```
 
-图 6.66 IP 选项-回显：linux/net/ipv4/ip_options.c。
+图 6.66 IP 选项-回显：`linux/net/ipv4/ip_options.c`。
 
 ```c
 if (sopt->rr) {
@@ -12865,7 +13230,11 @@ if (sopt->rr) {
 129      memcpy(dptr, sptr+sopt->ts, optlen);
 ```
 
-图 6.67 IP 选项-回显：linux/net/ipv4/ip_options.c。
+
+
+# 260 TCP/IP 与 Linux 协议实现
+
+### 6.67 IP 选项-回显：`linux/net/ipv4/ip_options.c`
 
 ```c
 130  if (offset <= optlen) {
@@ -12902,15 +13271,12 @@ if (sopt->rr) {
 161  }
 ```
 
-# 260 TCP/IP 与 Linux 协议实现
-
-### 6.68 IP-回显：linux/net/ipv4/ip_options.c。
+### 6.68 IP-回显：`linux/net/ipv4/ip_options.c`
 
 ```c
 if (sopt->rr) {
     unsigned char * start = sptr+sopt->rr;
     u32 faddr;
-
     optlen = start[1];
     offset = start[2];
     doffset = 0;
@@ -12945,7 +13311,9 @@ if (sopt->rr) {
     return 0;
 ```
 
-### 6.69 IP 选项-分片中的选项清零：linux/net/ipv4/ip.options.c。
+# 基础设施协议 261
+
+### 6.69 IP 选项-分片中的选项清零：`linux/net/ipv4/ip.options.c`
 
 ```c
 /*
@@ -12960,8 +13328,6 @@ void ip_options_fragment(struct skb_buff *skb) {
     struct ip_options *opt = &(IP(skb)->opt);
     int l1 = opt->optlen;
 ```
-
-# 基础设施协议 261
 
 ```c
 212 int optlen;
@@ -12981,16 +13347,11 @@ void ip_options_fragment(struct skb_buff *skb) {
 226     }
 ```
 
-*(注：由于文本中存在大量重复的代码段落和描述，已根据“不要重复输出原文”的原则进行了去重处理和翻译)*
-
-
-
-
-
 # 基础设施协议 263
 
 ```c
 }
+
 /* 注意: 参考 RFC-1812 5.2.4.1 */
 if (opt->*srr) {
     pp_ptr = optptr;
@@ -13013,7 +13374,7 @@ break;
 
 路由记录（Route record）：
 
-图 6.73 IP 选项验证入站数据包头部选项：linux/net/ipv4/ip.options.c。
+图 6.73 IP 选项验证入站数据包头部选项：`linux/net/ipv4/ip.options.c`
 
 ```c
 case IPOPT_RR:
@@ -13040,15 +13401,19 @@ case IPOPT_RR:
     optptr[2] += 4;
     opt->*rr_neededaddr = 1;
 }
-opt->*rr = optptr - iph;
-break;
 ```
+
+
+
+`opt->*rr = optptr - iph;`
+
+`break;`
 
 # 264 TCP/IP 与 Linux 协议实现
 
-时间戳选项处理：
+## 时间戳选项处理
 
-图 6.74 IP 选项验证入站数据包头部选项：linux/net/ipv4/ip.options.c。
+图 6.74 IP 选项验证入站数据包头部选项：`linux/net/ipv4/ip.options.c`。
 
 ```c
 case IPOPT_TIMESTAMP:
@@ -13096,7 +13461,7 @@ case IPOPT_TIMESTAMP:
         }
 ```
 
-# 图 6.75 IP 验证入站数据包头部选项：linux/net/ipv4/options.c。
+# 图 6.75 IP 验证入站数据包头部选项：`linux/net/ipv4/options.c`
 
 ```c
 382            case IPOPT_TS_PRESPEC:
@@ -13149,9 +13514,9 @@ case IPOPT_TIMESTAMP:
 
 # 266 TCP/IP 与 Linux 实现
 
-路由器警告处理：
+## 路由器警告处理
 
-图 6.76 IP 选项结束处理：linux/net/ipv4/ip_options.c。
+图 6.76 IP 选项结束处理：`linux/net/ipv4/ip_options.c`。
 
 ```c
 427             case IPOPT_RA:
@@ -13178,15 +13543,25 @@ case IPOPT_TIMESTAMP:
 448     if (!pp_ptr)
 449             return 0;
 450     }
+```
+
+
+
+# 基础设施协议 267
+
+## 图 6.77 IP 选项-undo 函数：`linux/net/ipv4/ip_options.c`
+
+```c
 451 error:
+
 452     if (skb) {
+
 453         icmp_send(skb, ICMP_PARAMETER, 0, htons(pp_ptr-iph));
+
 454     }
 455     return -EINVAL;
 456 }
 ```
-
-图 6.77 IP 选项-undo 函数：linux/net/ipv4/ip_options.c。
 
 ```c
 460     /*
@@ -13203,7 +13578,7 @@ case IPOPT_TIMESTAMP:
 471             unsigned char *optptr = opt->data+opt->rraddr-sizeof(struct iph);
 ```
 
-# 基础设施协议 267
+## 图 6.78 IP 选项-为选项分配空间：`linux/net/ipv4/ip_options.c`
 
 ```c
 473    optptr[2] -= 4;
@@ -13224,7 +13599,7 @@ case IPOPT_TIMESTAMP:
 488    }
 ```
 
-图 6.78 IP 选项-为选项分配空间：linux/net/ipv4/ip_options.c。
+## 图 6.79 IP 选项-获取：`linux/net/ipv4/ip_options.c`
 
 ```c
 491 int ip_options_get(struct ip_options **opt, unsigned char *data, int optlen, int user)
@@ -13259,7 +13634,7 @@ case IPOPT_TIMESTAMP:
 520     }
 ```
 
-# 图 6.79 IP 选项-转发：例如，路由记录：linux/net/ipv4/ip.options.c。
+## 图 6.79 IP 选项-转发：例如，路由记录：`linux/net/ipv4/ip.options.c`
 
 ```c
 521 void ip_forward_options(struct sk_buff *skb)
@@ -13310,18 +13685,23 @@ case IPOPT_TIMESTAMP:
 
 
 
-
-
-# 图 6.80 IP 选项-接收 SSR 并处理：linux/net/ipv4/ip.options.c
+# 图 6.80 IP 选项-接收 SSR 并处理：`linux/net/ipv4/ip.options.c`
 
 ```c
 struct ip_options *opt = &(IPCB(skb)->opt);
+
 int arrspace, srtptr;
+
 u32 nexthop;
+
 struct iphdr *iph = skb->nh->iph;
+
 unsigned char *optr = skb->nh->raw+opt->sr;
+
 struct rtable *rt = (struct rtable*)skb->dst;
+
 struct rtable *rt2;
+
 int err;
 
 if (!opt->srr)
@@ -13329,6 +13709,7 @@ if (!opt->srr)
 
 if (skb->pkt_type == PACKET_HOST)
     return -EINVAL;
+
 if (rt->rt_type == RTN_UNICAST)
     if (opt->is_stricteroute)
         return 0;
@@ -13339,7 +13720,7 @@ if (rt->rt_type != RTN_LOCAL)
     return -EINVAL;
 ```
 
-# 图 6.81 IP 选项-接收 SSR 并处理：linux/net/ipv4/ip.options.c
+# 图 6.81 IP 选项-接收 SSR 并处理：`linux/net/ipv4/ip.options.c`
 
 ```c
 for (rrptr=optptr[2], rrspace = optptr[1]; rrptr <= rrspace; rrptr += 4) {
@@ -13374,7 +13755,7 @@ return 0;
 
 ## 6.2.7 网协议套接字胶层 (Internet Protocol Socket Glue)
 
-图 6.82 网协议-套接字胶层-一些剩余常量：linux/net/ipv4/ip_sockglue.c。
+图 6.82 网协议-套接字胶层-一些剩余常量：`linux/net/ipv4/ip_sockglue.c`。
 
 ```c
 #define IP_CMSG_PKTINFO 1
@@ -13384,7 +13765,7 @@ return 0;
 #define IP_CMSG_REOPTOPS 16
 ```
 
-图 6.83 IP 套接字胶层-各种 CMS5G：linux/net/ipv4/ip_sockglue.c。
+图 6.83 IP 套接字胶层-各种 CMS5G：`linux/net/ipv4/ip_sockglue.c`。
 
 ```c
 /*
@@ -13406,7 +13787,7 @@ static void ip_cmsg_recv_pktinfo(struct msghdr *msg, struct sk_buff *skb)
 }
 ```
 
-图 6.84 IP 套接字胶层-各种 CMS5G：linux/net/ipv4/ip_sockglue.c。
+图 6.84 IP 套接字胶层-各种 CMS5G：`linux/net/ipv4/ip_sockglue.c`。
 
 ```c
 static void ip_cmsg_recv_ttl(struct msghdr *msg, struct sk_buff *skb)
@@ -13423,52 +13804,49 @@ static void ip_cmsg_recv_ttl(struct msghdr *msg, struct sk_buff *skb)
 82 {
 83     put_cmsg(msg, SOL_IP, IP_TOS, 1, &skb->nh->iph->tos);
 84 }
-85
+
 86 static void ip_cmsg_rec_opts(struct msghdr *msg, struct sk_buf *skb)
 87 {
 88     if (IPCB(skb)->opt.optlen == 0)
 89         return;
-90
-91
+
 92     put_cmsg(msg, SOL_IP, IP_RECVOPTS, ipcb(skb)->optlen, skb->nh->iph->i1);
 93 }
-94
-95
+
 96 void ip_cmsg_rec_retops(struct msghdr *msg, struct sk_buf *skb)
 97 {
 98     unsigned char optbuf[size_of(struct ip_options) + 40];
 99     struct ip_options *opt = (struct ip_options)optbuf;
-100
+
 101    if (IPCB(skb)->optlen == 0)
 102        return;
-103
+
 104    if (ip_options_echo(opt, skb)) {
 105        msg->msg_flags |= MSG_TR;
 106        return;
 107    }
 108    ip_options_undo(opt);
-109
+
 110    put_cmsg(msg, SOL_IP, opt->data);
 ```
 
-> 图 6.85 IP 套接字胶层—字段 CMSG 到正确位置：linux/net/ipv4/ip_sockglue.c。
+> 图 6.85 IP 套接字胶层—字段 CMSG 到正确位置：`linux/net/ipv4/ip_sockglue.c`。
 
 ```c
 113 void ip_cmsg_recv(struct msghdr *msg, struct sk_buf *skb)
 114 {
 115     unsigned flags = skb->skb_proto_info.cmsg_flags;
-116
+
 117     /* 按频率排序 */
 118     if (flags & 1)
 119         ip_cmsg_rec_pktinfo(msg, skb);
 120     if ((flags>>1) == 0)
-121
+
 122     if (flags & 2)
 123         ip_cmsg_rec_ttl(msg, skb);
 124     if ((flags>>2) == 0)
 125         return;
-126
-127
+
 128     if (flags & 4)
 129         ip_cmsg_rec_tos(msg, skb);
 130     if ((flags>>3) == 0)
@@ -13479,14 +13857,26 @@ static void ip_cmsg_recv_ttl(struct msghdr *msg, struct sk_buff *skb)
 # 272 TCP/IP 和 Linux 协议实现
 
 ```c
+```
+
+
+
 132    if (flags & 8)
+
 133        ip_cmsg_recv_opts(msg, skb);
+
 134    if ((flags>>4) == 0)
+
 135        return;
+
 136
+
 137    if (flags & 16)
+
 138        ip_cmsg_rec_retops(msg, skb);
+
 139 }
+
 ```
 
 图 6.8 IP 套接字胶层–发送 CMSG：linux/net/ipv4/ip_sockglue.c。
@@ -13540,15 +13930,14 @@ static void ip_cmsg_recv_ttl(struct msghdr *msg, struct sk_buff *skb)
 // 这是用户层的问题，取决于它将对它们做什么。
 // 我不知道它将如何对它们进行伪装或 NAT 处理，
 // 接收者应该足够转发请求以到达目的地。
+
 static void ip_ra_control(struct sock *sk, unsigned char ra, void (*destructor)(struct sock))
 {
 	struct ip_ra_chain *new_ra, *rap;
 	rwlock_t ip_ra_lock = RW_LOCKED;
-
 	if (sk->type == SOCK_RAW || sk->num == IPPROTO_RAW)
 		return -EINVAL;
 	new_ra = kmalloc(sizeof(new_ra), GFP_KERNEL);
-
 	write_lock(&ip_ra_lock);
 	for (rap = &ip_ra_chain; *rap != NULL; ra++) {
 		if (ra->sk == sk) {
@@ -13560,7 +13949,6 @@ static void ip_ra_control(struct sock *sk, unsigned char ra, void (*destructor)(
 			}
 			rap = ra->next;
 			unlock_bh(&ip_ra_lock);
-
 		if (destructor) {
 				destructor(sk);
 				sock_put(sk);
@@ -13572,14 +13960,12 @@ static void ip_ra_control(struct sock *sk, unsigned char ra, void (*destructor)(
 		unlock_bh(&ip_ra_lock);
 		return -ENOBUFS;
 	}
-
 	new_ra->sk = sk;
 	new_ra->destructor = destructor;
 	new_ra->next = ra;
 	*rap = new_ra;
 	sock_hold(sk);
 	unlock_bh(&ip_ra_lock);
-
 	return 0;
 }
 ```
@@ -13591,14 +13977,11 @@ void ip_icmp_error(struct *sk, struct sk_buff *skb, int err,
 u16 port, u32 info, unsigned *payload)
 {
 	struct_externr_skb *serr;
-
 	if (!sk->info.af_inet.recverr)
 		return;
-
 	skb = skb_clone(skb, GFP_ATOMIC);
 	if (!skb)
 		return;
-
 	serr = SKB_EXT_ERR(skb);
 	serr->ee.errno = err;
 	serr->ee.origin = SO_EE_ORIGIN_ICMP;
@@ -13609,10 +13992,8 @@ u16 port, u32 info, unsigned *payload)
 	serr->ee.ee_data = 0;
 	serr->daddr_from = (unsigned *)&((struct *) (skb->h->icmph+1)) - skb->nh.raw;
 	serr->port = port;
-
 	skb->b.raw = payload;
 	skb_pull(skb, payload - skb->data);
-
 	if (sock_queue_err_skb(sk, skb))
 		kfree_skb(skb);
 }
@@ -13629,10 +14010,6 @@ void ip_local_error(struct *sk, int err, u32 daddr, u16 port, u32 info)
 }
 ```
 
-
-
-
-
 # 基础设施协议 275
 
 ```c
@@ -13640,15 +14017,23 @@ void ip_local_error(struct *sk, int err, u32 daddr, u16 port, u32 info)
 272
 273 return;
 274
+```
+
+
+
+```c
 275 skb = alloc_skb(sizeof(struct iphdr), GFP_ATOMIC);
+
 276 if (!skb)
+
 277
+
 278 return;
 279 ip = (struct iphdr*)skb_put(skb, sizeof(struct iphdr));
 280 skb->nh->ip = ip;
 281 ip->daddr = daddr;
-282
-283
+
+
 284 serr = SKB_EXT_ERR(skb);
 285 serr->ee_errno = serr;
 286 serr->ee_origin = SO_EE_ORIGIN_LOCAL;
@@ -13657,12 +14042,12 @@ void ip_local_error(struct *sk, int err, u32 daddr, u16 port, u32 info)
 289 serr->ee_info = info;
 290 serr->ee_data_offset = (u8*)kiph->daddr - skb->nh->raw;
 291 skb->port = port;
-292
-293
+
+
 294 skb->h.raw = skb->tail;
 295 skb_pull(skb, skb->tail - skb->data);
-296
-297
+
+
 298 if (sock_queue_err(sk, skb))
 299 kfree_skb(skb);
 300 }
@@ -13685,7 +14070,7 @@ void ip_local_error(struct *sk, int err, u32 daddr, u16 port, u32 info)
 312     } errhdr;
 313     int err;
 314     int copied;
-315
+
 316     err = -EAGAIN;
 317     skb = skb_dequeue(&skb->error_queue);
 318     if (skb == NULL)
@@ -13766,7 +14151,7 @@ return err;
 
 ## 设置套字选项
 
-在上一章中，我们看到了处理套字选项的通用套字层。这里是该函数中针对 IP 的部分。其他协议族有此代码的不同实例：图 6.93 IP 套字胶水setsockopt 入口：linux/net/ipv4/ip_sockglue.c。
+在上一章中，我们看到了处理套字选项的通用套字层。这里是该函数中针对 IP 的部分。其他协议族有此代码的不同实例：图 6.93 IP 套字胶水`setsockopt`入口：`linux/net/ipv4/ip_sockglue.c`。
 
 ```c
 /*
@@ -13789,7 +14174,7 @@ ip_setsockopt(struct sock *sk, int level, char *optval, int len)
         val = (int)ucval;
 ```
 
-图 6.94 IP 套字胶水setsockopt 入口：linux/net/ipv4/ip_sockglue.c。
+图 6.94 IP 套字胶水`setsockopt`入口：`linux/net/ipv4/ip_sockglue.c`。
 
 ```c
 /* optlen=0 等同于 val = 0 */
@@ -13811,18 +14196,28 @@ switch (optname) {
             struct tcp_opt *opt = &sk->proto_info.tcp;
             if (defined(CONFIG_IPV6) && defined(CONFIG_IPV6_MODULE))
                 if (sk->family == PF_INET)
-                    if ((sk->state & (TCP_LIST | TCP_CLOSE)) && sk->addr == LOOPBACK_IPV6) {
-                            if (opt)
-                                tp->ext_header_len = opt->optlen;
-                                tcp_sync(sk, tp->pmtu_cookie);
-#endif
-            if (defined(CONFIG_IPV6) && defined(CONFIG_IPV6_MODULE))
-        }
-    }
-    opt = xchg(&sk->proto_info.af_inet.opt, opt);
+```
+
+
+
+```c
+if ((sk->state & (TCP_LIST | TCP_CLOSE)) && sk->addr == LOOPBACK_IPV6) {
+
     if (opt)
-        free(opt);
-    break;
+
+        tp->ext_header_len = opt->optlen;
+
+        tcp_sync(sk, tp->pmtu_cookie);
+
+#endif
+
+    if (defined(CONFIG_IPV6) && defined(CONFIG_IPV6_MODULE))
+}
+}
+opt = xchg(&sk->proto_info.af_inet.opt, opt);
+if (opt)
+    free(opt);
+break;
 }
 ```
 
@@ -13901,10 +14296,6 @@ case IP_REPTINFO:
 543     struct net_device *dev = NULL;
 ```
 
-
-
-
-
 # 基础架构协议 281
 
 ```c
@@ -13961,65 +14352,100 @@ sk->protoinfo.af_inet.mc_addr = mreq->imr_address.s_addr;
 593    case IP_DROP_MEMBERSHIP:
 594    {
 595            struct ip_mrq mrq;
-596
 597        if (option < sizeof(struct ip_mrq))
 598            goto e_inval;
-599
-600        err = -EFAULT;
+599        err = -EFAULT;
 601        if (option > sizeof(struct ip_mrq)) {
 602            if (copy_from_user(&mrq, optval, sizeof(mrq)))
 603                break;
 604        } else {
 605            memset(&mrq, 0, sizeof(mrq));
-606            if (copy_from_user(&mrq, optval, sizeof(struct ip_mrq)))
-607                break;
-608        }
-609
-610        if (option == IP_ADD_MEMBERSHIP)
-611            err = ip_mc_join_group(sk, &mrq);
-612        else
-613            err = ip_mc_leave_group(sk, &mrq);
-614        break;
-615    }
-616    case IP_ROUTER_RA_ALERT:
-617        err = ip_ra_control(sk, val ? 1 : 0, NULL);
-618        break;
-619
-620    case IP_PREBIND:
-621        if (option < 1)
-622            goto e_inval;
-623        sk->proto->af_inet.freebind = !!val;
-624        break;
-625
-626        default:
-627        #ifdef CONFIG_NETFILTER
-628            err = setsockopt(sk, PF_INET, optname, optval,
-629            optlen);
-630        #else
-631            err = -ENOPOPT;
-632        #endif
-633        break;
-634    }
-635    release_sock(sk);
-636    return err;
-637
-e_inval:
-638    release_sock(sk);
-639    return -EINVAL;
-640}
 ```
+
+
+
+606            if (`copy_from_user(&mrq, optval, sizeof(struct ip_mrq))`)
+
+607                break;
+
+608        }
+
+609
+
+610        if (`option == IP_ADD_MEMBERSHIP`)
+
+611            err = `ip_mc_join_group(sk, &mrq)`;
+
+612        else
+
+613            err = `ip_mc_leave_group(sk, &mrq)`;
+
+614        break;
+
+615    }
+
+616    case `IP_ROUTER_RA_ALERT`:
+
+617        err = `ip_ra_control(sk, val ? 1 : 0, NULL)`;
+
+618        break;
+
+619
+
+620    case `IP_PREBIND`:
+
+621        if (`option < 1`)
+
+622            goto e_inval;
+
+623        sk->proto->af_inet.freebind = !!val;
+
+624        break;
+
+625
+
+626        default:
+
+627        #ifdef `CONFIG_NETFILTER`
+
+628            err = `setsockopt(sk, PF_INET, optname, optval, optlen)`;
+
+629        #else
+
+630            err = `-ENOPOPT`;
+
+631        #endif
+
+632        break;
+
+633    }
+
+634    `release_sock(sk)`;
+
+635    return err;
+
+636
+
+e_inval:
+
+638    `release_sock(sk)`;
+
+639    return `-EINVAL`;
+
+640}
 
 # 获取 Socket 选项
 
 获取 Socket 选项只是设置的反逆过程：
 
-图 6.101 IP glue-getsockopt 用于 IP：linux/net/ipv4/ip_sockglue.c。
+图 6.101 IP glue-getsockopt 用于 IP：`linux/net/ipv4/ip_sockglue.c`。
 
 ```c
 /*
  * 获取选项。注意仅供参考。IP 选项的 GET 获取的是
  * 收到的。SET 设置的是发送的。
  */
+
 int ip_getsockopt(struct *sk, int level, int optname, char *optval, int *len)
 {
     int val;
@@ -14036,7 +14462,7 @@ int ip_getsockopt(struct *sk, int level, int optname, char *optval, int *len)
 }
 ```
 
-图 6.102 IP glue-getsockopt 用于 IP：linux/net/ipv4/ip_sockglue.c。
+图 6.102 IP glue-getsockopt 用于 IP：`linux/net/ipv4/ip_sockglue.c`。
 
 ```c
 switch(optname) {
@@ -14081,7 +14507,7 @@ case IP_MTU_DISCOVER:
         break;
 ```
 
-图 6.103 IP socket-getsock 入口用于 IP：linux/net/ipv4/ip_sockglue.c。
+图 6.103 IP socket-getsock 入口用于 IP：`linux/net/ipv4/ip_sockglue.c`。
 
 # 基础架构协议 285
 
@@ -14095,13 +14521,11 @@ case IP_MULTICAST_LOOP:
 case IP_MULTICAST_IF:
     val = sk->protoinfo->af_inet.mc_if;
 ...
-
-
-
+```
 
 ## 288 TCP/IP 和 Linux 协议实现
 
-图 6.108 ARP 邻居操作：linux/net/ipv4/arp.c。
+图 6.108 ARP 邻居操作：`linux/net/ipv4/arp.c`。
 
 ```
 160 static struct neigh_ops arp_direct_ops = =
@@ -14130,7 +14554,11 @@ case IP_MULTICAST_IF:
 
 ![](img/06c11ba8be5c1c24aa633e12618e2ebd_343_0.png)
 
-图 6.109 ARP 表结构：linux/net/ipv4/arp.c。
+图 6.109 ARP 表结构：`linux/net/ipv4/arp.c`。
+
+
+
+## 图 6.110 ARP 映射 MAC-类型/IEEE-类型：`linux/net/ipv4/arp.c`
 
 ```
 184 struct neigh_table arp_tbl = =
@@ -14151,7 +14579,7 @@ case IP_MULTICAST_IF:
 199 };
 ```
 
-图 6.110 ARP 映射 MAC-类型/IEEE-类型：linux/net/ipv4/arp.c。
+## 图 6.111 ARP 哈希函数：`linux/net/ipv4/arp.c`
 
 ```
 201 int arp_nc_map(u32 addr, u8 *haddr, struct net_device *dev, int dir)
@@ -14176,7 +14604,7 @@ case IP_MULTICAST_IF:
 219 }
 ```
 
-## 图 6.111 ARP 哈希函数：linux/net/ipv4/arp.c。
+## 图 6.112 ARP 条条目：`linux/net/ipv4/arp.c`
 
 ```
 222 static u32 arp_hash(const void *pkey, const struct net_device *dev)
@@ -14193,7 +14621,7 @@ case IP_MULTICAST_IF:
 233 }
 ```
 
-## 图 6.112 ARP 条条目：linux/net/ipv4/arp.c。
+## 图 6.113 ARP 构建条目：`linux/net/ipv4/arp.c`
 
 ```
 235 static int arp_constructor(struct neighbour *neighbor)
@@ -14228,8 +14656,9 @@ case IP_MULTICAST_IF:
 264      我没有做，因为这个驱动在
 265      旧范式下不起工作。
 266      */
-## 图 6.113 ARP 构建条目：linux/net/ipv4/arp.c。
+```
 
+```
 270  #if 1
 271      /* 所以……这些设备是没救的。
 272      我唯一能说的是
@@ -14257,160 +14686,163 @@ case IP_MULTICAST_IF:
 294      ;}
 295  #endif
 296      if (neigh->type == RTN_MULTICAST) {
-298          neigh->state = NUD_NARP;
-299          arp_mc_map(addr, neigh->ha, dev, 1);
-300      } else if (dev->flags& (IFF_NOARP|IFF_LOOPBACK)) {
-301          neigh->state = NUD_NARP;
-302          memcpy(neigh->ha, dev->addr, dev->addr_len);
-303  } else if (neigh->type == RTN_BROADCAST || dev->flags&IFF_POPOINT) {
-304     neigh->nud_state = NUD_ARP;
-305     memcpy(neigh->ha, dev->broadcast, dev->addr_len);
-306  }
-307  if (dev->hard_header_cache)
-308      neigh->ops = &arp_hh_ops;
-309  else
-310     neigh->ops = &arp_generic_ops;
-311     if (neigh->nud_state&NUD_VALID) {
-312         neigh->output = neigh->ops->connected_output;
-313     else
-314         neigh->output = neigh->ops->output;
-315     }
-316  return 0;
-317 }
+297          neigh->state = NUD_NARP;
+298          arp_mc_map(addr, neigh->ha, dev, 1);
+299      } else if (dev->flags& (IFF_NOARP|IFF_LOOPBACK)) {
+300          neigh->state = NUD_NARP;
+301          memcpy(neigh->ha, dev->addr, dev->addr_len);
+302  } else if (neigh->type == RTN_BROADCAST || dev->flags&IFF_POPOINT) {
+303     neigh->nud_state = NUD_ARP;
+304     memcpy(neigh->ha, dev->broadcast, dev->addr_len);
+305  }
+306  if (dev->hard_header_cache)
+307      neigh->ops = &arp_hh_ops;
+308  else
+309     neigh->ops = &arp_generic_ops;
+310     if (neigh->nud_state&NUD_VALID) {
+311         neigh->output = neigh->ops->connected_output;
+312     else
+313         neigh->output = neigh->ops->output;
+314     }
+315  return 0;
+316 }
+```
 
-## 图 6.114 ARP错误报告：linux/net/ipv4/arp.c。
+## 图 6.114 ARP错误报告：`linux/net/ipv4/arp.c`
 
 ```
 319 static void arp_error_report(struct neighbour *neigh, struct sk_buff *skb) {
+
 320
+
 321     dst_link_failure(skb);
+
 322     kfree_skb(skb);
+
 323 }
 ```
 
+
+
 ## ARP 请求
 
-## 图 6.115 ARP 请求（谁有）：linux/net/ipv4/arp.c。
+### 图 6.115 ARP 请求（谁有）：`linux/net/ipv4/arp.c`。
 
-```
-325 static void arp_solicit(struct neighbour *neigh, struct sk_buff *skb) {
-326
-327     u32 saddr;
-328     u8 *dst_ha = NULL;
-329     struct net_device *dev = neigh->dev;
-330     u32 target = (*u32*)neigh->primary_key;
-331     int probes = atomic_read(&neigh->probes);
-332
-333     if (skb && int_addr_state(skb->neigh->saddr) == RTN_LOCAL) {
-334         saddr = skb->neigh->saddr;
-335     else
-336         saddr = inet_select_addr(dev, target, RT_SCOPE_LINK);
-337
-338     if ((probes -= neigh->parms->ucast_probes) < 0) {
-339         if ((neigh->nud_state&NUD_VALID)) {
-340             print(KERN_DEBUG "在 INVALID 状态下尝试 uast 探测");
-341             dst_ha = neigh->ha;
-342             read_lock(&neigh->lock);
-343         } else if (probes -= neigh->parms->ucast_probes) < 0) {
-344             #ifdef CONFIG_ARPP
-345             neigh_alloc(neigh);
-346 #endif
-347             return;
-348         }
-349     arp_send(ARP_REQUEST, ETH_ARP, dev, saddr,
-350             dst_ha, dev->addr, NULL);
-351
-352     if (dst_ha)
-353         read_unlock(&neigh->lock);
-354 }
-```
+```c
+static void arp_solicit(struct neighbour *neigh, struct sk_buff *skb) {
 
-## 图 6.116 ARP 内置过期：linux/net/ipv4/arp.c。
+    u32 saddr;
+    u8 *dst_ha = NULL;
+    struct net_device *dev = neigh->dev;
+    u32 target = (*u32*)neigh->primary_key;
+    int probes = atomic_read(&neigh->probes);
 
-```
-356 /* 过期函数 */
-357 /* 在缓存中查找 ARP 映射。如果未找到，发送请求。
-358 * 这是一个丑陋的例程：它没有使用 skb->dst，
-359 * 即使它存在。假设 skb->dev 被虚拟设备篡改了。
-360 只有损坏的设备可以使用此函数，它已被计划移除。
-361 */
-362 static int arp_set_predefined(int addr_hint, unsigned char *haddr, u32 paddr, struct net_device *dev)
-363
-364 switch (addr_hint) {
-365     case RTN_LOCAL:
-366         printk(KERN_DEBUG "ARP: 为自己的地址调用");
-367         memcpy(haddr, dev->addr, dev->addr_len);
-368         return 1;
-369     case RTN_MULTICAST:
-370         arp_mc_map(paddr, haddr, dev, 1);
-371         return 1;
-372     case RTN_BROADCAST:
-373         memcpy(haddr, dev->broadcast, dev->addr_len);
-374         return 1;
-375 }
-376 return 0;
+    if (skb && int_addr_state(skb->neigh->saddr) == RTN_LOCAL) {
+        saddr = skb->neigh->saddr;
+    else
+        saddr = inet_select_addr(dev, target, RT_SCOPE_LINK);
 
-377 int arp_find(unsigned char *haddr, struct sk_buff *skb) {
-378     struct net_device *dev = skb->dev;
-379     u32 paddr;
-380     struct neighbour *neigh;
-381
-382     if (!skb->dst) {
-383         printk(KERN_DEBUG "arp_find 被调用时 dst=NULL");
-384         kfree_skb(skb);
-385         return 1;
-386     }
-387     paddr = ((struct rtable*)skb->dst)->rt_gateway;
-388
-389     if (arp_preset(inet_addr_type(paddr), haddr, paddr, dev)) {
-390         return 0;
-391     }
-392     n = _neigh_lookup(arp_tbl, paddr, dev, 1);
-393
-394     if (n) {
-395         n->used = jiffies;
-396         if (n->ud_state==NUD_VALID && neigh_event_send(n, skb) == 0) {
-397             read_lock(n->lock);
-398             memcpy(haddr, n->dev, n->addr_len);
-399             read_unlock(n->lock);
-400             neigh_release(n);
-401             return 0;
-402         }
-403         else
-404             kfree_skb(skb);
-405             return 1;
-406     }
-407 }
-408 /* 过期函数结束 */
+    if ((probes -= neigh->parms->ucast_probes) < 0) {
+        if ((neigh->nud_state&NUD_VALID)) {
+            print(KERN_DEBUG "在 INVALID 状态下尝试 uast 探测");
+            dst_ha = neigh->ha;
+            read_lock(&neigh->lock);
+        } else if (probes -= neigh->parms->ucast_probes) < 0) {
+            #ifdef CONFIG_ARPP
+            neigh_alloc(neigh);
+            #endif
+            return;
+        }
+    arp_send(ARP_REQUEST, ETH_ARP, dev, saddr,
+            dst_ha, dev->addr, NULL);
+
+    if (dst_ha)
+        read_unlock(&neigh->lock);
+}
 ```
 
-## 图 6.118 ARP – 将地址绑定到邻居：linux/net/ipv4/arp.c。
+### 图 6.116 ARP 内置过期：`linux/net/ipv4/arp.c`。
 
+```c
+/* 过期函数 */
+/* 在缓存中查找 ARP 映射。如果未找到，发送请求。
+ * 这是一个丑陋的例程：它没有使用 skb->dst，
+ * 即使它存在。假设 skb->dev 被虚拟设备篡改了。
+ 只有损坏的设备可以使用此函数，它已被计划移除。
+ */
+static int arp_set_predefined(int addr_hint, unsigned char *haddr, u32 paddr, struct net_device *dev)
+
+switch (addr_hint) {
+    case RTN_LOCAL:
+        printk(KERN_DEBUG "ARP: 为自己的地址调用");
+        memcpy(haddr, dev->addr, dev->addr_len);
+        return 1;
+    case RTN_MULTICAST:
+        arp_mc_map(paddr, haddr, dev, 1);
+        return 1;
+    case RTN_BROADCAST:
+        memcpy(haddr, dev->broadcast, dev->addr_len);
+        return 1;
+}
+return 0;
+int arp_find(unsigned char *haddr, struct sk_buff *skb) {
+    struct net_device *dev = skb->dev;
+    u32 paddr;
+    struct neighbour *neigh;
+
+    if (!skb->dst) {
+        printk(KERN_DEBUG "arp_find 被调用时 dst=NULL");
+        kfree_skb(skb);
+        return 1;
+    }
+    paddr = ((struct rtable*)skb->dst)->rt_gateway;
+
+    if (arp_preset(inet_addr_type(paddr), haddr, paddr, dev)) {
+        return 0;
+    }
+    n = _neigh_lookup(arp_tbl, paddr, dev, 1);
+
+    if (n) {
+        n->used = jiffies;
+        if (n->ud_state==NUD_VALID && neigh_event_send(n, skb) == 0) {
+            read_lock(n->lock);
+            memcpy(haddr, n->dev, n->addr_len);
+            read_unlock(n->lock);
+            neigh_release(n);
+            return 0;
+        }
+        else
+            kfree_skb(skb);
+            return 1;
+    }
+}
+/* 过期函数结束 */
 ```
-421 int arp_bind_neigh(struct dst_entry *dst)
-422 {
-423 struct net_device *dev = dst->dev;
-424 struct neighbour *n = dst->neighbour;
-426 if (dev == NULL) {
-427 return -EINVAL;
-428 }
-429 u32 nexthop=((struct rtable*)dst)->rt_gateway;
-430 if (dev->flags & (IFF_LOOPBACK|IFF_POINTPOINT)) {
-431 nexthop = 0;
-432 n = _neigh_lookup_errno(dev);
-433 #ifndef CONFIG_ATM_ATM
-435 dev->type == ARPHRD_ATM ? &clip_tbl : &arp_tbl, nexthop, dev);
-436 #endif
+
+### 图 6.118 ARP – 将地址绑定到邻居：`linux/net/ipv4/arp.c`。
+
+```c
+int arp_bind_neigh(struct dst_entry *dst)
+{
+struct net_device *dev = dst->dev;
+struct neighbour *n = dst->neighbour;
+if (dev == NULL) {
+return -EINVAL;
+}
+u32 nexthop=((struct rtable*)dst)->rt_gateway;
+if (dev->flags & (IFF_LOOPBACK|IFF_POINTPOINT)) {
+nexthop = 0;
+n = _neigh_lookup_errno(dev);
+#ifndef CONFIG_ATM_ATM
+dev->type == ARPHRD_ATM ? &clip_tbl : &arp_tbl, nexthop, dev);
+#endif
 ```
-
-
-
 
 # TCP/IP 与 Linux 协议实现
 
-# 发送 ARP
+## 发送 ARP
 
-图 6.119 ARP--发送一个 ARP 消息：linux/net/ipv4/arp.c。
+### 图 6.119 ARP--发送一个 ARP 消息：`linux/net/ipv4/arp.c`。
 
 ```c
 /*
@@ -14434,21 +14866,37 @@ void arp_send(int itype, int ptype, u32 dest_ip);
      * 分配缓冲区
      */
     skb = alloc_skb(sizeof(struct arphdr) + 2*(dev->addr_len+4)
-        + dev->hard_header_len + 15, GFP_ATOMIC);
-    if (skb == NULL)
-        return;
-    skb_reserve(skb, dev->hard_header_len+15);
-    skb->raw = skb->data;
-    arp = (struct arphdr *)skb_put(skb, sizeof(struct arphdr) + 2*(dev->addr_len+4));
-    arp->dev = dev;
-    skb->protocol = constant_htons(ETH_P_ARP);
-    if (src_hw == NULL)
-        src_hw = dev->dev_addr;
-    if (dest_hw == NULL)
-        dest_hw = dev->broadcast;
 ```
 
-图 6.120 ARP--发送一个 ARP 消息：linux/net/ipv4/arp.c。
+
+
+```c
++ dev->hard_header_len + 15, GFP_ATOMIC);
+
+if (skb == NULL)
+
+    return;
+
+skb_reserve(skb, dev->hard_header_len+15);
+
+skb->raw = skb->data;
+
+arp = (struct arphdr *)skb_put(skb, sizeof(struct arphdr) + 2*(dev->addr_len+4));
+
+arp->dev = dev;
+
+skb->protocol = constant_htons(ETH_P_ARP);
+
+if (src_hw == NULL)
+
+    src_hw = dev->dev_addr;
+
+if (dest_hw == NULL)
+
+    dest_hw = dev->broadcast;
+```
+
+图 6.120 ARP--发送一个 ARP 消息：`linux/net/ipv4/arp.c`。
 
 ```c
 /*
@@ -14468,7 +14916,6 @@ if (dev->hard_header)
  * ARP 硬件类型应该匹配设备类型，FDDI 除外，
  * FDDI（根据 RFC 1390）应该始终等于 1（以太网 Ethernet）。
  */
-
 /*
  * 处处都是异常。AX.25 使用 AX.25 PID 值而不是
  * DIX 协议代码。将这些使定义为设备结构体字段。
@@ -14478,13 +14925,11 @@ switch (dev->type) {
         arp->ar_hr = htons(dev->type);
         arp->ar_pro = constant_htons(ETH_P_IP);
         break;
-
 #if defined (CONFIG_AX25) || defined (CONFIG_AX25_MODULE)
     case ARPHD_AX25:
         arp->ar_hr = constant_htons(ARPHD_AX25);
         arp->ar_pro = constant_htons(AX25_P_IP);
         break;
-
 #if defined (CONFIG_NETROM) || defined (CONFIG_NETROM_MODULE)
     case ARPHD_NETROM:
         arp->ar_hr = constant_htons(ARPHD_NETROM);
@@ -14492,14 +14937,12 @@ switch (dev->type) {
         break;
 #endif
 #endif
-
 #if defined (CONFIG_FDDI)
     case ARPHD_FDDI:
         arp->ar_hr = constant_htons(ARPHD_ETHER);
         arp->ar_pro = constant_htons(ETH_P_IP);
         break;
 #endif
-
 #if defined (CONFIG_TR)
     case ARPHD_IEEE802_TR:
         arp->ar_hr = constant_htons(ARPHD_IEEE802);
@@ -14509,7 +14952,7 @@ switch (dev->type) {
 }
 ```
 
-图 6.121 ARP–发送一个 ARP 消息：linux/net/ipv4/arp.c。
+图 6.121 ARP–发送一个 ARP 消息：`linux/net/ipv4/arp.c`。
 
 ```c
 arp->ar_bln = dev->addr_len;
@@ -14538,8 +14981,8 @@ out:
 
 # ARP 接收
 
-图 6.122 ARP–接收一个 ARP 消息：linux/net/ipv4/arp.c。
-图 6.123 ARP–接收一个 ARP 消息：linux/net/ipv4/arp.c。
+图 6.122 ARP–接收一个 ARP 消息：`linux/net/ipv4/arp.c`。
+图 6.123 ARP–接收一个 ARP 消息：`linux/net/ipv4/arp.c`。
 
 ```c
 int arp_rcv(struct sk_buff *skb, struct net_device *dev, int type)
@@ -14548,11 +14991,9 @@ int arp_rcv(struct sk_buff *skb, struct net_device *dev, int type)
     unsigned char *arp_ptr;
     unsigned char *target_hw;
     u32 target_ip;
-
     arp = (struct arphdr *)skb->data;
     if (skb->len < sizeof(struct arphdr) + 2*(dev->addr_len+4))
         goto out;
-
     arp_ptr = (unsigned char *)(arp+1);
     memcpy(arp_ptr, dev->dev_addr, dev->addr_len);
     arp_ptr += dev->addr_len;
@@ -14573,8 +15014,6 @@ out:
 
 *(注：由于原文文本在 ARP 接收部分存在代码截断和逻辑混乱，翻译时已根据代码结构进行了逻辑性对齐和还原，确保了文档的可读性)*
 
-
-
 # 300 TCP/IP 与 Linux 协议实现
 
 ```c
@@ -14585,7 +15024,6 @@ out:
 738         in_dev->arp_parms->proxy_delay == 0) {
 739             arp_send(ARPOP_REPLY,ETH_P_ARP,sip,dip,tip,sha,dev->addr,
 740                 sha);
-
 741     } else {
 742         neigh_enqueue(arp_tbl, in_dev->arp_parms, skb);
 743             in_dev_put(in_dev);
@@ -14602,43 +15040,57 @@ out:
 ```c
 751 /* 更新我们的 ARP 表 */
 752 n = __neigh_lookup(arp_tbl, zip, dip, 0);
-
 754 #ifdef CONF_IP_ACCEPT_UNSOLICATED_ARP
 755 /* 默认不接受未请求的 ARP 响应。
 756 某些设备可能需要启用此选项（strip 是一个候选设备）
 758 */
 759 if (n == NULL &&
-760     arp->ar_op == __constant_htons(ARPOP_REPLY) &&
-761     inet_addr_type(sip) == RTN_UNICAST)
-762         n = __neigh_lookup(arp_tbl, zip, dip, -1);
 
-764 #endif
 
-766 if (n) {
-767     int state = NUD_REACHABLE;
-768     override = 0;
 
-770 /* 如果连续收到多个不同的 ARP 回复，
-771 使用第一个。当有多个代理
-772 代理活跃时，这是可能的。获取第一个回复可以防止
-773 ARP 抖动并选择最快的路由器。
-774 */
-775 if (jiffies - n->updated >= n->parms->locktime)
-776     override = 1;
+`760`     `arp->ar_op == __constant_htons(ARPOP_REPLY) &&`
 
-778 /* 广播回复和请求包
-779 不断言邻居的可达性。
-780 */
-781 if ((arp->ar_op == __constant_htons(ARPOP_REPLY)) &&
-782     skb->pkt_type == PACKET_HOST) {
+`761`     `inet_addr_type(sip) == RTN_UNICAST)`
+
+`762`         `n = __neigh_lookup(arp_tbl, zip, dip, -1);`
+
+`764` `#endif`
+
+`766` `if (n) {`
+
+`767`     `int state = NUD_REACHABLE;`
+
+`768`     `override = 0;`
+
+`770` /* 如果连续收到多个不同的 ARP 回复，
+
+`771` 使用第一个。当有多个代理
+
+`772` 代理活跃时，这是可能的。获取第一个回复可以防止
+
+`773` ARP 抖动并选择最快的路由器。
+
+`774` */
+
+`775` `if (jiffies - n->updated >= n->parms->locktime)`
+
+`776`     `override = 1;`
+
+`778` /* 广播回复和请求包
+
+`779` 不断言邻居的可达性。
+
+`780` */
+
+`781` `if ((arp->ar_op == __constant_htons(ARPOP_REPLY)) &&`
+
+`782`     `skb->pkt_type == PACKET_HOST) {`
+
 ```
-
-```c
 783         state = NUD_STALE;
 784         neigh_update(n, sha, state, override, 1);
 785         neigh_release(n);
 786  }
-
 788  out:
 789      kfree_skb(skb);
 790      if (in_dev)
@@ -14648,33 +15100,28 @@ out:
 794 }
 ```
 
-## ARP 用户接口
+### ARP 用户接口
 
-**图 6.129** ARP--用户接口 (proc, ioctl)—创建一个缓存条目：linux/net/ip4/arp.c。
+**图 6.129** ARP--用户接口 (proc, ioctl)—创建一个缓存条目：`linux/net/ip4/arp.c`。
 
 ```c
 799 /*
 800  * 用户级接口 (ioctl, /proc)
 801 */
-
 802  /*
 803   * 设置（创建）一个 ARP 缓存条目。
 804   */
-
 806 int arp_req_set(struct arpreq *r, struct net_device *dev)
 807 {
 808     u32 ip = ((struct sockaddr_in *) &r->arp_pa)->sin_addr.s_addr.addr;
 809     struct neighbour *neigh;
 810     int err;
-
 812     if (r->arp_flags & ATF_PUB) { ((struct sockaddr_in *) &r->arp_netmask)->sin_addr.s_addr;
 813         u32 mask = mask & 0xFFFFFFFF;
-
 815             return -EINVAL;
 816         if (!dev && !(r->arp_flags & ATF_COM)) {
 817             dev = dev_get_hwaddr(r->arp_ha.sa_family, r->arp_ha.sa_data);
 818             if (dev)
-
 820                 return -ENODEV;
 821     }
 822     if (mask) {
@@ -14698,7 +15145,7 @@ out:
 835  }
 ```
 
-图 6.130 ARP 用户接口 (proc, ioctl)—创建一个缓存条目：linux/net/ipv4/arp.c。
+图 6.130 ARP 用户接口 (proc, ioctl)—创建一个缓存条目：`linux/net/ipv4/arp.c`。
 
 ```c
 837      if (r->arp_flags & ATF_PERM)
@@ -14715,7 +15162,6 @@ out:
 848      if (r->arp_ha.sa_family != dev->type)
 849          return -EINVAL;
 
-850
 neigh = neigh_lookup(arp_tbl, ip, dev);
 851  err = PTR_ERR(neigh);
 852  if (!IS_ERR(neigh)) {
@@ -14725,14 +15171,13 @@ neigh = neigh_lookup(arp_tbl, ip, dev);
 856  err = neigh_update(neigh, (r->arp_flags & ATF_COM) ?
 857          r->arp_ha.sa_data : NULL, state, 1, 0);
 
-859
 neigh_release(neigh);
 861  }
 862  return err;
 863 }
 ```
 
-图 6.131 ARP—用户接口—更改 ARP 标志：linux/net/ipv/arp.c。
+图 6.131 ARP—用户接口—更改 ARP 标志：`linux/net/ipv/arp.c`。
 
 ```c
 864  static unsigned arp_state_to_flags(struct neighbour *neigh)
@@ -14746,7 +15191,7 @@ neigh_release(neigh);
 872  }
 ```
 
-图 6.132 ARP—接口—获取 ARP 条目：linux/net/ipv4/arp.c。
+图 6.132 ARP—接口—获取 ARP 条目：`linux/net/ipv4/arp.c`。
 
 ```c
 878 static int arp_req_get(struct arpreq *r, struct net_device *dev)
@@ -14754,7 +15199,6 @@ neigh_release(neigh);
 880     u32 ip = ((struct sockaddr_in *)&r->arp_pa)->sin_addr.s_addr;
 881     struct neighbour *neigh;
 882     int err = -ENXIO;
-
 884          neigh = neigh_lookup(arp_tbl, ip, dev);
 885     if (!IS_ERR(neigh)) {
 886         read_lock(&neigh);
@@ -14766,10 +15210,16 @@ neigh_release(neigh);
 892         err = 0;
 893     }
 894     return err;
-895 }
 ```
 
-图 6.133 ARP—接口—删除 ARP 条目：linux/net/4/arp.c。
+
+
+## 图 6.133 ARP—接口—删除 ARP 条目：`linux/net/4/arp.c`
+
+```c
+895 }
+
+```
 
 ```c
 898 int arp_req_delete(struct arpreq *r, struct net_device *dev)
@@ -14777,28 +15227,27 @@ neigh_release(neigh);
 900     int err;
 901     u32 ip = ((struct sockaddr_in *)&r->arp_pa)->sin_addr.s_addr;
 902     struct neighbour *neigh;
-
-904     if (r->arp_flags & ATF_PUB) {
-905         u32 mask = ((struct sockaddr_in *)r->arp_netmask)->sin_addr.s_addr;
-906         if (mask == 0xFFFFFFFF) {
-907             neigh = neigh_delete(arp_tbl, ip, dev);
-908             if (mask == 0) {
-909                 if (dev == NULL) {
-910                     ipv4_devconf.proxy_arp = 0;
-911                     return 0;
-912                 }
-913                 if (in_dev_get(dev)) {
-914                     __in_dev_get(dev)->cnf.proxy_arp = 0;
-915                     return 0;
-916                 }
-917                 return -ENXIO;
-918             }
-919             return -EINVAL;
-920         }
+903     if (r->arp_flags & ATF_PUB) {
+904         u32 mask = ((struct sockaddr_in *)r->arp_netmask)->sin_addr.s_addr;
+905         if (mask == 0xFFFFFFFF) {
+906             neigh = neigh_delete(arp_tbl, ip, dev);
+907             if (mask == 0) {
+908                 if (dev == NULL) {
+909                     ipv4_devconf.proxy_arp = 0;
+910                     return 0;
+911                 }
+912                 if (in_dev_get(dev)) {
+913                     __in_dev_get(dev)->cnf.proxy_arp = 0;
+914                     return 0;
+915                 }
+916                 return -ENXIO;
+917             }
+918             return -EINVAL;
+919         }
 }
 ```
 
-图 6.134 ARP—用户接口—删除一个 ARP 条目：linux/net/ipv4/arp.c。
+## 图 6.134 ARP—用户接口—删除一个 ARP 条目：`linux/net/ipv4/arp.c`
 
 ```c
 if (dev == NULL) {
@@ -14812,6 +15261,7 @@ if (dev == NULL) {
         return -EINVAL;
     }
 }
+
 err = -ENXIO;
 neigh = neigh_lookup(arp_tbl, ip, dev);
 if (neigh) {
@@ -14822,7 +15272,7 @@ neigh_release(neigh);
 return err;
 ```
 
-图 6.135 ARP—用户接口—ioctl 入口：linux/net/ipv4/arp.c。
+## 图 6.135 ARP—用户接口—ioctl 入口：`linux/net/ipv4/arp.c`
 
 ```c
 int ioctl(unsigned int cmd, void *arg) {
@@ -14873,15 +15323,17 @@ int ioctl(unsigned int cmd, void *arg) {
 }
 ```
 
-图 6.137 ARP—用户接口—procs 入口—写入表：linux/net/ipv4/arp.c。
+## 图 6.137 ARP—用户接口—procs 入口—写入表：`linux/net/ipv4/arp.c`
 
 ```c
 /*
  * 将 ARP 缓存的内容写入 PROCS 文件。
  */
+
 #ifndef CONFIG_PROC_FS
 static int arp_get_info(char *buffer, char **start, off offset, int length) { return 0; }
 #else
+
 #if defined(CONFIG_AX25) || defined(CONFIG_AX26_MODULE)
 static char *ax25asc2(ax25_address *a, char *buf)
 #endif
@@ -14890,27 +15342,21 @@ static int arp_get_info(char *buffer, char **start, off offset, int length)
 {
 ```
 
-
-
-
-
 # TCP/IP 与 Linux 协议实现
 
-```
+```c
 1022  int len=0;
 1023  off_t pos=0;
 1024  int size;
 1025  char hbuffer[HBUFFERLEN];
 1026  int i,j,k;
 1027  const hexbuf[] = "0123456789ABCDEF";
-1028
+
 1029  size = sprintf(buffer,"IP address HW type Flags HW address Mask Device="%s");
 
-1030
 1031  pos+=size;
 1032  len+=size;
 
-1033
 1034  for(i=0; i<NEIGH_HASHMASK; i++) {
 1035    struct neighbour *n;
 1036    read_lock_bh(&arp_tbl[i]);
@@ -14918,15 +15364,15 @@ static int arp_get_info(char *buffer, char **start, off offset, int length)
 1038      struct net_dev *dev = n->dev;
 1039      int intype = dev->type;
 
-1040
 1041      /* 不要将用户的 "arp -a" 与魔术项混淆 */
 1042      if ((n->nud_state&NUD_NOARP))
 1043        continue;
 1044  }
 
-1045
 1046  read_lock(kn->lock);
 ```
+
+
 
 ![](img/06c11ba8be5c1c24aa633e12618e2ebd_361_0.png)
 
@@ -14944,14 +15390,12 @@ static int arp_get_info(char *buffer, char **start, off offset, int length)
 1057    hbuffer[k++]=hexbuf[n->ha[j]]>>4];
 1058    hbuffer[k++]=hexbuf[n->ha[j]&15];
 1059    hbuffer[k++]=';';
-
 1060
 1061  }
 1062  hbuffer[k--]=0;
 1063  }
 1064  #if defined(CONFIG_AX25) || defined(CONFIG_AX25_MODULE)
 1065  #endif
-
 1066
 1067  {
 1068    char tbuffer[16];
@@ -14979,7 +15423,7 @@ goto done;
 read_unlock_bb(&arp_tbl.lock);
 ```
 
-# 图 6.139 ARP--用户接口--进程入口点--表：linux/net/ipv4-arp.c.
+# 图 6.139 ARP--用户接口--进程入口点--表：linux/net/ipv4-arp.c
 
 ```
 for (i=0; i<=PNEIGH_HASHMASK; i++) {
@@ -14987,7 +15431,6 @@ for (i=0; i<=PNEIGH_HASHMASK; i++) {
   for (arp_tbl->phaas_buckets[i]; n; n=n->next) {
     struct net_dev *dev = n->dev;
     int hatype = dev ? dev->type : 0;
-
     char tbuf[16];
     sprintf(tbuf, "%hu,%xu,%xu,%xu+(%hu", NIPQUAD((u32)n->key));
     size = snprintf(buffer+len, "-16s 0x%02x-0x%02x * %s\n",
@@ -15000,7 +15443,6 @@ for (i=0; i<=PNEIGH_HASHMASK; i++) {
 }
 len += size;
 pos += size;
-
 if (pos <= offset) {
 len=0;
 if (pos >= offset+length) {
@@ -15011,7 +15453,6 @@ goto done;
 
 ```
 1121 done:
-
 1122
      *start = buffer-len-(pos-offset);  /* 数据起始 */
 1124 len = pos-offset;      /* 偏移 */
@@ -15020,13 +15461,12 @@ goto done;
 1127     if (len<0)
 1128         len = 0;
 1129         return len;
-
 1130 
 }
 1131 #endif
 ```
 
-图 6.140 ARP-接口关闭：linux/net/ipv4/arp.c.
+# 图 6.140 ARP-接口关闭：linux/net/ipv4/arp.c
 
 ```
 1133 /* 注意，它不在通知链上。
@@ -15040,7 +15480,7 @@ goto done;
 
 # ARP 初始化与用法
 
-图 6.141 ARP-初始化：linux/net/ipv4/arp.c.
+# 图 6.141 ARP-初始化：linux/net/ipv4/arp.c
 
 ```
 1147 static struct packet_type arp_packet_type =
@@ -15054,9 +15494,7 @@ goto done;
 1155 void __init_arp(void)
 1156 {
      neigh_table_init(&arp_tbl);
-
 1158     dev_add(&arp_packet_type);
-
 1159
      proc_create("arp", 0, arp_get_info);
 1161 #ifdef CONFIG_SYSCTL
@@ -15065,7 +15503,7 @@ goto done;
 1164 }
 ```
 
-图 6.142 ARP-X25字符串转换：linux/net/ipv4/arp.c.
+# 图 6.142 ARP-X25字符串转换：linux/net/ipv4/arp.c
 
 ```
 1170 #ifdef CONFIG_FS
@@ -15097,17 +15535,18 @@ goto done;
 1204 #endif
 ```
 
+
+
+# TCP/IP 与 Linux 协议实现
+
 ## 6.4 网络层调试–ICMP
 
-图 6.143 ICMP，主机要求符合性：linux/net/ipv4/icmp.c.
+图 6.143 ICMP，主机要求符合性：`linux/net/ipv4/icmp.c`.
 
 - RFC 1122（主机要求 – 通信层）状态：（有很多关于 ICMP 的规则）
 - 3.2.2（通用 ICMP 内容）
 - 必须丢弃未知类型。（OK）
 - 必须复制违规包的前 8 个字节
-
-# TCP/IP 与 Linux 协议实现
-
 - 在发送 ICMP 错误时。（废弃）—— RFC 1812
 - 必须将 ICMP 错误传递到协议层。（OK）
 - 应发送 TOS = 0 的 ICMP 错误。（废弃）-- RFC 1812）
@@ -15118,14 +15557,14 @@ goto done;
 - 非初始分片（OK）
 - 源地址不是单个主机的数据报。（OK）
 - 3.2.2.1（目标不可达）
-- 所有规则都支配 IP 层，并在 ip.c 中处理，而非此处。
+- 所有规则都支配 IP 层，并在 `ip.c` 中处理，而非此处。
 - 3.2.2.2（重定向）
 - 主机不发送 ICMP_REDICTS。（OK）
 - 响应主机或网络重定向时必须更新路由表。
 -（主机 OK，网络废弃）
 - 如果重定向不是来自直接连接的网关，应丢弃（OK —— 我们丢弃它不是我们的旧网关，这足够了）
 
-图 6.144 ICMP，主机增强符合性：linux/net/ipv4/icmp.c.
+图 6.144 ICMP，主机增强符合性：`linux/net/ipv4/icmp.c`.
 
 - 3.2.2.3（源塞交通）
 - 必须将入的 SOURCE_QUENCH 传递到传输层（OK）
@@ -15148,7 +15587,7 @@ goto done;
 - 应在内核中处理以实现“最小变性”
 - 应丢弃广播请求。（OK，请参见一致性问题）
 
-# 基础设施协议 311
+## 基础设施协议 311
 
 - 3.2.2.9（地址请求/回复）
 - 可以实现（OK）
@@ -15156,20 +15595,16 @@ goto done;
 - 应丢弃广播请求。（OK，请参见一致性问题）
 - 必须向请求相同的源地址进行回复。（符合 ECHO 的（尚未实现））
 
-
-
-
-
 # TCP/IP 与 Linux 协议实现
 
-图 6.146 ICMP，路由器需求合规性：linux/net/ipv4/icmp.c。
+图 6.146 ICMP，路由器需求合规性：`linux/net/ipv4/icmp.c`。
 
 - 4.3.2.8 (速率限制)
 - SHOULD 能够限制错误消息速率 (OK)
 - SHOULD 允许扩展速率限制 (OK，在源码中)
 - SHOULD 发送消息
 - 4.3.3.1 (目标不可达)
-- 所有的规则都管理 IP 层，并在 i.p 中处理，而非在此处处理。
+- 所有的规则都管理 IP 层，并在 `i.p` 中处理，而非在此处处理。
 - 4.3.3.2 (重定向)
 - 如果正在运行路由协议或在接口上启用了转发，则 MAY 忽略 ICMP 重定向 (OK -- 已忽略)
 - 4.3.3.3 (源点扇塞)
@@ -15182,7 +15617,7 @@ goto done;
 - MUST 为所有未被消息覆盖的错误生成这些 (OK)
 - MUST 包含所指的值的原始值 (OK)
 
-图 6.147 ICMP，路由器需求合规性：linux/net/ipv4/icmp.c。
+图 6.147 ICMP，路由器需求合规性：`linux/net/ipv4/icmp.c`。
 
 - 4.3.3.6 (回显请求)
 - MUST 实现回显服务器功能 (OK)
@@ -15219,13 +15654,13 @@ goto done;
 - 215 MUST 使用 AMRQ 的内容来确定正确的 AM (OK)
 - 216 在配置地址后进行广播 AMRQ (OK -- 未执行)
 - 217 如果未通过提取选项设置，MUST NOT 广播 AMRQ (OK，无选项)
-- 218 MUST 使用 <NetPrefix> -1 ) 形式的广播地址 (OK)
+- 218 MUST 使用 `<NetPrefix> -1 )` 形式的广播地址 (OK)
 - 219 4.3.3.1 (路由器公告与请求)
 - 220 MUST 在所有网络上支持路由器发现协议的路由器部分
 - 221 支持广播或多播寻址。(OK -- 由 gated 完成)
 - 222 MUST 具有相应默认值的配置参数 (OK)
 
-# 图 6.148 CMP，路由器需求合规性：linux/ipv4/icmp.c。
+# 图 6.148 CMP，路由器需求合规性：`linux/ipv4/icmp.c`。
 
 - 223 5.2.7.1 (目标不可达)
 - 224 MUST 生成 DU (OK)
@@ -15253,35 +15688,41 @@ goto done;
 
 现在查看与 ICMP 关联的数据。
 
-图 6.149 ICMP 全局数据：linux/net/ipv4/icmp.c。
+图 6.149 ICMP 全局数据：`linux/net/ipv4/icmp.c`。
 
 ```
-288 struct icmp_mib icmp_statistics/*WR_CPUS*/
-290 /* 来自目标的错误消息数组。 */
-291 /* RFC 1222: 3.2.1 规定 UNREACH, HOSTUNREACH 和 SR 必须视为瞬态元素。 */
-292
-293 struct icmp_err icmp_err_convert[] = {
-294 {UNREACH, 0}, /* ICMP_REACH */
-295 {HOSTUNREACH, 0}, /* ICMP_HOST_REACH */
-296 {EMPROTO, 0}, /* ICMP_PROT_REACH */
-297 {ECHOINFIUSED, 1}, /* ICMP_PORT_REACH */
-298 {MSGSIZE, 0}, /* ICMP_FRAG_NEEDED */
-299 {EPOPTOUNS, 0}, /* ICMP_SR_FAILED */
-300 {UNREACH, 1}, /* ICMP_HOST_UNKNOWN */
-301 {ECHOSTOWN, 1}, /* ICMP_HOST_ISOLATED */
-302 {ENET, 1}, /* ICMP_NET */
-303 {ECHOUNREACH, 1}, /* ICMP_HOST */
-304 {EUNREACH, 1}, /* ICMP_RETOS */
-305 {HOSTUNREACH, 1}, /* ICMP_PKT */
-306 {UNREACH, 1}, /* ICMP_FILTERED */
-307 {UNREACH, 1}, /* ICMP_VIOLATION */
-308 {UNREACH, 1}, /* ICMP_CUTOFF */
-309 };
-310 /* echo 的控制参数
-311 int sysctl_echo_ignore_all = 0;
-312 int sysctl_echo_ignore_broadcasts = 0;
-313 int sysctl_echo_ignore_bogus_responses = 0;
 ```
+
+
+
+288 `struct icmp_mib` `icmp_statistics`/*WR_CPUS*/
+
+290 /* 来自目标的错误消息数组。 */
+
+291 /* RFC 1222: 3.2.1 规定 UNREACH, HOSTUNREACH 和 SR 必须视为瞬态元素。 */
+
+293 `struct icmp_err` `icmp_err_convert[]` = {
+294 {`UNREACH`, 0}, /* ICMP_REACH */
+295 {`HOSTUNREACH`, 0}, /* ICMP_HOST_REACH */
+296 {`EMPROTO`, 0}, /* ICMP_PROT_REACH */
+297 {`ECHOINFIUSED`, 1}, /* ICMP_PORT_REACH */
+298 {`MSGSIZE`, 0}, /* ICMP_FRAG_NEEDED */
+299 {`EPOPTOUNS`, 0}, /* ICMP_SR_FAILED */
+300 {`UNREACH`, 1}, /* ICMP_HOST_UNKNOWN */
+301 {`ECHOSTOWN`, 1}, /* ICMP_HOST_ISOLATED */
+302 {`ENET`, 1}, /* ICMP_NET */
+303 {`ECHOUNREACH`, 1}, /* ICMP_HOST */
+304 {`EUNREACH`, 1}, /* ICMP_RETOS */
+305 {`HOSTUNREACH`, 1}, /* ICMP_PKT */
+306 {`UNREACH`, 1}, /* ICMP_FILTERED */
+307 {`UNREACH`, 1}, /* ICMP_VIOLATION */
+308 {`UNREACH`, 1}, /* ICMP_CUTOFF */
+309 };
+
+310 /* echo 的控制参数 */
+311 `int` `sysctl_echo_ignore_all` = 0;
+312 `int` `sysctl_echo_ignore_broadcasts` = 0;
+313 `int` `sysctl_echo_ignore_bogus_responses` = 0;
 
 # 基础设施协议 313
 
@@ -15292,10 +15733,9 @@ goto done;
  */
 struct inode icmp_inode;
 struct socket *icmp_socket=&icmp_inode.u.socket;
-
 static int icmp_xmit_holder = -1;
-
 图 6.150 ICMP 全局数据：linux/net/ipv4/icmp.c。
+```
 
 ```
 /*
@@ -15347,10 +15787,6 @@ static inline_ void icmp_xmit_unlock(void)
     local_bb_enable();
 }
 ```
-
-
-
-
 
 # TCP/IP 与 Linux 协议实现
 
@@ -15417,7 +15853,9 @@ static inline_ void icmp_xmit_unlock(void)
 }
 ```
 
-**图 6.154** ICMP/SNMP 统计计数器：linux/net/ipv4/icmp.c。
+图 6.154 ICMP/SNMP 统计计数器：linux/net/ipv4/icmp.c。
+
+
 
 ```c
 /*
@@ -15433,7 +15871,7 @@ static void icmp_out_count(int type)
 }
 ```
 
-**图 6.155** ICMP 校验：linux/net/ipv4/icmp.c。
+### 图 6.155 ICMP 校验：`linux/net/ipv4/icmp.c`
 
 ```c
 static void icmp_out_count(int type)
@@ -15475,7 +15913,9 @@ icmp((struct icmphdr *)to;
 icmp->checksum = csum_fold(csum);
 return 0;
 }
-# 图 6.156 ICMP 回复：linux/net/ipv4.c
+```
+
+### 图 6.156 ICMP 回复：`linux/net/ipv4.c`
 
 ```c
 void icmp_reply(struct icmp_bwm *icmp_param, struct sk_buff *skb) {
@@ -15483,19 +15923,15 @@ void icmp_reply(struct icmp_bwm *icmp_param, struct sk_buff *skb) {
     struct icmp_pc *ipc;
     struct rtable *rt = (struct rtable*)skb->dst;
     u32 daddr;
-
     if (!ip_options(&icmp_param->replyopts, skb)) {
         return 0;
     }
-
     if (!icmp_xmit_lock()) {
         return 0;
     }
-
     icmp_param->icmp->checksum=0;
     icmp_param->csum=0;
     icmp_out_count(icmp_param->type);
-
     sk->proto=skb->nh->tos;
     daddr = rt->src;
     ipc->opt = NULL;
@@ -15517,7 +15953,9 @@ ip_put(rt);
 out:
   icmp_xmit_unlock(bh());
 }
-# 6157 ICMP 发送：linux/net/ipv4/icmp.c
+```
+
+### 图 6.157 ICMP 发送：`linux/net/ipv4/icmp.c`
 
 ```c
 void icmp_send(struct sk_buff *skb_in, int type, int code, unsigned long info)
@@ -15543,11 +15981,10 @@ if (rt->rt_flags&(RTC_BROADCAST|RTC_MULTICAST))
 /* 仅对分片 0 回复。为了效率，我们重新排列了掩码。 */
 if (iph->frag_off&htons(IP_OFFSET))
   return;
-
 /* 避免递归 ICMP 错误 */
 ```
 
-# 图 6.158 ICMP 发送：linux/net/ipv4/icmp.c。
+### 图 6.158 ICMP 发送：`linux/net/ipv4/icmp.c`
 
 ```c
 /*
@@ -15590,7 +16027,9 @@ if (icmp_xmit_lock()) {
       ip->tos;
 ```
 
-# 图 6.159 ICMP 发送：linux/net/ipv4/icmp.c。
+### 图 6.159 ICMP 发送：`linux/net/ipv4/icmp.c`
+
+
 
 ```c
 /*
@@ -15602,7 +16041,7 @@ if (!ip_route_output(&art, icmp_param->replyopts.faddr, saddr, RT_TOS(skb->nh->t
   goto out;
 ```
 
-# 图 6.160 ICMP 发送：linux/net/ipv4/icmp.c。
+# 图 6.160 ICMP 发送：`linux/net/ipv4/icmp.c`。
 
 ```c
 if (!icmpv4_allow(rt, type, code))
@@ -15614,10 +16053,6 @@ room = rt->dst.pmtu;
 if (room > 576)
   room = 576;
 ```
-
-
-
-
 
 ## 32 TCP/IP 和 Linux 协议实现
 
@@ -15641,7 +16076,7 @@ if (room > 576)
 
 ## 正确处理不可达消息：
 
-图 6.161 ICMP 不可达：linux/net/ipv4/icmp.
+图 6.161 ICMP 不可达：`linux/net/ipv4/icmp`.
 
 ```c
 687 /*
@@ -15668,7 +16103,7 @@ if (room > 576)
 710 iph = (struct iphdr *)(icmp + 1);7711 dp = (unsigned char*)iph;
 ```
 
-### 图 6.162 ICMP 不可达：linux/net/ipv4/icmp.c。
+### 图 6.162 ICMP 不可达：`linux/net/ipv4/icmp.c`。
 
 ```c
 if (icmp->type==ICMP_DEST_UNREACH) {
@@ -15710,13 +16145,18 @@ if (icmp->type==ICMP_DEST_UNREACH) {
 }
 ```
 
-### 图 6.163 ICMP 不可达：linux/net/ipv4/icmp.c。
+### 图 6.163 ICMP 不可达：`linux/net/ipv4/icmp.c`。
 
 /*
+
 * 向我们的底层层抛出
+
 * RFC 1122: 3.2.2 必须从传递的头部中提取协议 ID。
+
 * RFC 1122: 3.2.2 将 ICMP 不可达消息传递给传输层。
+
 * RFC 1122: 3.2.2 将 ICMP 超时消息传递给传输层。
+
 * 某些路由器发送错误的响应帧。如果你看到此消息，检查你的网络掩码是否匹配两端，让另一端修复。
 
 ```c
@@ -15743,46 +16183,73 @@ if (icmp->type==ICMP_DEST_UNREACH) {
 780 read_unlock(&raw_v4_lock);
 ```
 
-ICMP 不可达：linux/net/ipv4/icmp.c。
+ICMP 不可达：`linux/net/ipv4/icmp.c`。
 
 /* 在在我们执行时它不会改变。调用者已获得 BR_NETPROTO_LOCK 所以我们安全。 */
+
 796 ipprot = (struct inet_protocol *)inet_protos[hash];
+
 797 while (ipprot != NULL) {
+
 798     struct inet_protocol *nextip;
+
 799     nextip = (struct inet_protocol *)ipprot->nextip;
+
 800     /* 将其传递给需要它的人。 */
+
 801     if (iph->protocol == ipprot->protocol && ipprot->err_handler) {
+
+
+
+### 图 6.163 ICMP 重定向：`linux/net/ipv4/icmp.c`。
+
+```c
 802         ipprot->err_handler(skb, dp, len);
+
 803     ipprot = nextip;
+
 804 }
 
       struct iphdr *iph;
+
       unsigned long ip;
 
       if (len < sizeof(struct iphdr)) {
+
           ICMP_INC_STATS_BH(IcmpInErrors);
+
           return;
+
       }
 
       /* 获取导致重定向的数据包拷贝头部
+
       iph = (struct iphdr *) (iph + 1);
+
       ip = iph->daddr;
 
       switch(icmp->code & 7) {
+
           case ICMP_REDDIR_NET:
+
           case ICMP_REDDIR_NET:
+
               /* 根据 RFC 建议，现在作为主机重定向处理。 */
+
               case ICMP_REDDIR_HOST:
+
               case ICMP_REDDIR_HOST:
+
                   ip_rt_redirect(skb->nh.iph->saddr, ip, icmp->un->gateway, iph->saddr, iph->tos, skb->dev);
+
                   break;
+
           break;
+
   }
 ```
 
-### 图 6.163 ICMP 重定向：linux/net/ipv4/icmp.c。
-
-### 图 6.166 ICMP 回显：linux/net/ipv4/icmp.c。
+### 图 6.166 ICMP 回显：`linux/net/ipv4/icmp.c`。
 
 ```c
 /*
@@ -15814,13 +16281,9 @@ static void icmp_echo(struct icmphdr *icmpph, struct sk_buff *skb, int len)
 }
 ```
 
-
-
-
-
 ## 328 TCP/IP 与 Linux 协议实现
 
-图 6.169 ICMP 地址回复：linux/net/ipv4/icmp.c。
+### 图 6.169 ICMP 地址回复：`linux/net/ipv4/icmp.c`。
 
 ```c
 /*
@@ -15860,7 +16323,7 @@ static void icmp_address_reply(struct icmphdr *icmphdr, struct sk_buff *skb, int
 }
 ```
 
-图 6.170 ICMP 丢弃：linux/net/ipv4/icmp.c。
+### 图 6.170 ICMP 丢弃：`linux/net/ipv4/icmp.c`。
 
 ```c
 static void icmp_discard(struct icmphdr *icmphdr, struct sk_buff *skb, int len)
@@ -15868,7 +16331,9 @@ static void icmp_discard(struct icmphdr *icmphdr, struct sk_buff *skb, int len)
 }
 ```
 
-### 图 6.171 接收通用 ICMP 数据包：linux/net/ipv4/icmp.c。
+### 图 6.171 接收通用 ICMP 数据包：`linux/net/ipv4/icmp.c`。
+
+
 
 ```c
 1005 int icmp_rcv(struct sk_buff *skb, unsigned short len)
@@ -15926,18 +16391,18 @@ static void icmp_discard(struct icmphdr *icmphdr, struct sk_buff *skb, int len)
 
 ## 330 TCP/IP 与 Linux 协议实现
 
-图 6.172 ICMP 统计信息：linux/net/ipv4/icmp.c。
+图 6.172 ICMP 统计信息：`linux/net/ipv4/icmp.c`。
 
 ```c
 1061 static unsigned long dummy;
-1062 /*
+/*
 1063   * 可配置速率限制；
 1064   * 应该检查这些默认值是否正确。
 1065   * 注意这些值与路由 GC 有交互，
 1066   * 如果你设置得太高，它们不会生效，因为
 1067   * 目的项过期过早。当缓存
 1068   过大时也会发生这种情况。
-1069   */
+*/
 1070 int sysctl_icmp_destunreach_time = 1*HZ;
 1071 int sysctl_icmp_timeceeded_time = 1*HZ;
 1072 int sysctl_icmp_paramprob_time = 1*HZ;
@@ -15969,6 +16434,7 @@ static void icmp_discard(struct icmphdr *icmphdr, struct sk_buff *skb, int len)
 1101   &icmp_statistics[0].ImpInParambs, &icmp_statistics[0].ImpInParambs, icmp_unreach, &1
 1102   sysctl_icmp_paramprob_time,
 1103   /* TIMESTAMP (13) */
+```
 
 ## 基础设施协议 331
 
@@ -15983,6 +16449,11 @@ static void icmp_discard(struct icmphdr *icmphdr, struct sk_buff *skb, int len)
 1109      /* INFO REPLY (16) */
 1110      { &dummy, icmp_discard, 0 },
 1111      /* ADDR MASK (17) */
+```
+
+
+
+```c
 1112      { icmp_statistics[0].IcmpOutAddrMasks, &icmp_statistics[0].IcmpInAddrMasks, icmp_address, 0,
 ```
 
@@ -16027,10 +16498,6 @@ static void icmp_discard(struct icmphdr *icmphdr, struct sk_buff *skb, int len)
 1143      }
 ```
 
-
-
-
-
 # 图 6.176 IGMP 配置多播接口：linux/net/ipv4/igmp.c。
 
 ```c
@@ -16058,12 +16525,11 @@ static void icmp_discard(struct icmphdr *icmphdr, struct sk_buff *skb, int len)
 149     spin_unlock_bh(im->lock);
 150     }
 151 }
-152 
 153     /* 必须在锁定 im->lock 的情况下调用 */
 154 void igmp_start_timer(struct ip_mc_list *im, int max_delay)
 155 {
 156     int tv=rand() % max_delay;
-157 
+157
 158     im->tm_running=1;
 159     if (!mod_timer(im->timer, jiffies+tv+2)) {
 160         atomic_dec(im->refcnt);
@@ -16123,13 +16589,15 @@ static void icmp_discard(struct icmphdr *icmphdr, struct sk_buff *skb, int len)
 287 }
 ```
 
+
+
 ## IGMP 传输
 
-# 图 6.179 IGMP发送报告：linux/net/ipv4/igmp.c。
+### 图 6.179 IGMP发送报告：`linux/net/ipv4/igmp.c`。
 
 ```c
 185 #define IGMP_SIZE(sizeof(struct igmphdr)+sizeof(struct iphdr)) hook
-186
+
 187     /* 不要只处理 NO_BOOK skb->dst->output，以防 netfilter hook 
 188      更改了路由; */
 189 static inline int
@@ -16162,7 +16630,9 @@ static void icmp_discard(struct icmphdr *icmphdr, struct sk_buff *skb, int len)
 216         ip_rt_put(rt);
 217         return -1;
 218     }
-# 图 6.180 IGMP发送报告：linux/net/ipv4/igmp.c。
+```
+
+### 图 6.180 IGMP发送报告：`linux/net/ipv4/igmp.c`。
 
 ```c
 219     skb->dst = &rt->u.dst;
@@ -16196,7 +16666,7 @@ static void icmp_discard(struct icmphdr *icmphdr, struct sk_buff *skb, int len)
 
 ## IGMP 接收
 
-# 图 6.181 IGMP接收：linux/net/ipv4/igmp.c。
+### 图 6.181 IGMP接收：`linux/net/ipv4/igmp.c`。
 
 ```c
 248 static void igmp_heard_report(struct in_device *dev, u32 group)
@@ -16217,7 +16687,7 @@ static void icmp_discard(struct icmphdr *icmphdr, struct sk_buff *skb, int len)
 263 }
 ```
 
-# 图 6.182 IGMP收到查询：linux/net/ipv4/igmp.c。
+### 图 6.182 IGMP收到查询：`linux/net/ipv4/igmp.c`。
 
 ```c
 267 static void igmp_heard_query(struct in_device *dev, unsigned char max_resp_time,
@@ -16256,7 +16726,9 @@ static void icmp_discard(struct icmphdr *icmphdr, struct sk_buff *skb, int len)
 300 }
 ```
 
-img/06c1ba8be5c246339e218.png
+`img/06c1ba8be5c246339e218.png`
+
+
 
 ```c
 344 int igmp_rcv(struct sk_buff *skb, unsigned short len)
@@ -16295,7 +16767,7 @@ img/06c1ba8be5c246339e218.png
 
 ### 6.5.2 管理组/接口
 
-## 6.184 IGMP 接口添加和删除：linux/net/ipv4/igmp.c。
+## 6.184 IGMP 接口添加和删除：`linux/net/ipv4/igmp.c`。
 
 ```c
 398 static void ip_mc_filter_add(struct in_device *in_dev, u32 addr)
@@ -16328,11 +16800,7 @@ img/06c1ba8be5c246339e218.png
 425 }
 ```
 
-
-
-
-
-# 图 6.185 IGMP 组添加或退出：linux/net/ipv4/igmp.c。
+### 图 6.185 IGMP 组添加或退出：`linux/net/ipv4/igmp.c`。
 
 ```c
 427  static void igmp_group_dropped(struct ip_mc_list *im)
@@ -16369,9 +16837,9 @@ img/06c1ba8be5c246339e218.png
 465  }
 ```
 
-# 用户/组管理层
+## 用户/组管理层
 
-# 图 6.186 IGMP套字加入组：linux/net/ipv4/igmp.c。
+### 图 6.186 IGMP套字加入组：`linux/net/ipv4/igmp.c`。
 
 ```c
 477  void ip_mc_inc_group(struct device *dev, u32 addr)
@@ -16380,7 +16848,7 @@ img/06c1ba8be5c246339e218.png
 481    ASSERT_RTNL();
 ```
 
-# 340 TCP/IP 和 Linux 协议实现
+### 340 TCP/IP 和 Linux 协议实现
 
 ```c
 483   for (im=in_dev->dev; im; im=im->next) {
@@ -16421,7 +16889,11 @@ img/06c1ba8be5c246339e218.png
 }
 ```
 
-> 图 6.187 IGMP套字离开组：linux/ipv4/igmp.c。
+> 图 6.187 IGMP套字离开组：`linux/ipv4/igmp.c`。
+
+
+
+# 基础设施协议 341
 
 ```c
 524 int ip_mc_dec_group(struct in_device *in_dev, u32 addr)
@@ -16438,10 +16910,7 @@ img/06c1ba8be5c246339e218.png
 535                 write_unlock(&in_dev->lock);
 ```
 
-# 基础设施协议 341
-
 ```c
-
 igmp_group_dropped(i);
 if (in_dev->dev->flags & IFF_UP)
     ip_rt_multicast_event(in_dev);
@@ -16455,7 +16924,7 @@ break;
 return -ESBUSCH;
 ```
 
-# 图 6.188 IGMP套字加入组：linux/net/ipv4/igmp.c。
+## 图 6.188 IGMP套字加入组：`linux/net/ipv4/igmp.c`。
 
 ```c
 int sysctl_igmp_max_memberships = IP_MAX_MEMBERS;
@@ -16486,7 +16955,7 @@ int ip_mc_join_group(struct sock *sk, struct ip_mreq *imr)
 
 # TCP/IP 和 Linux 协议实现
 
-# 图 6.189 IGMP套字加入组：linux/net/ipv4/igmp.c。
+## 图 6.189 IGMP套字加入组：`linux/net/ipv4/igmp.c`。
 
 ```c
 iml = (struct ip_mc_socklist*)kmalloc(sk, sizeof(*iml), GFP_KERNEL);
@@ -16522,7 +16991,7 @@ if (iml) {
 return err;
 ```
 
-图 6.190 IGMP：linux/net/ipv4/igmp.c。
+图 6.190 IGMP：`linux/net/ipv4/igmp.c`。
 
 ```c
 int ip_mc_leave_group(struct sock *sk, struct ip_mreq *imr)
@@ -16561,7 +17030,7 @@ int ip_mc_leave_group(struct sock *sk, struct ip_mreq *imr)
   }
 ```
 
-图 6.191 IGMP套字关闭或开启：linux/net/ipv4/igmp.c。
+## 图 6.191 IGMP套字关闭或开启：`linux/net/ipv4/igmp.c`。
 
 ```c
 void ip_mc_drop_socket(struct sock *sk)
@@ -16576,7 +17045,7 @@ void ip_mc_drop_socket(struct sock *sk)
 
 # 影响组状态的设备事件
 
-图 6.192 IGMP套字关闭或开启：linux/net/ipv4/igmp.c。
+## 图 6.192 IGMP套字关闭或开启：`linux/net/ipv4/igmp.c`。
 
 ```c
 void ip_mc_down(struct in_device *in_dev)
@@ -16606,7 +17075,11 @@ igmp_group_added(iml);
 }
 ```
 
-图 6.193 IGMP 销毁设备：linux/ipv4/igmp.c。
+## 图 6.193 IGMP 销毁设备：`linux/ipv4/igmp.c`。
+
+
+
+# 基础设施协议 345
 
 ```c
 void ip_mc_destroy_dev(struct device *in_dev)
@@ -16626,7 +17099,7 @@ void ip_mc_destroy_dev(struct device *in_dev)
 }
 ```
 
-图 6.194 IGMP 查找设备：linux/ipv4/igmp.c。
+## 图 6.194 IGMP 查找设备：`linux/ipv4/igmp.c`
 
 ```c
 static struct in_dev *ip_mc_find_dev(struct imr_req *imr)
@@ -16637,12 +17110,6 @@ static struct in_dev *ip_mc_find_dev(struct imr_req *imr)
 
     if (imr->im_address.s_addr) {
 ```
-
-
-
-
-
-# 基础设施协议 345
 
 ```c
 610      dev = ip_dev_find(imr->im_address.s_addr);
@@ -16687,7 +17154,7 @@ static struct in_dev *ip_mc_find_dev(struct imr_req *imr)
 1074  };
 ```
 
-## 6.196 IGMP–检查地址是否在任何接口上被使用：linux/net/ipv4/igmp.c.
+## 6.196 IGMP–检查地址是否在任何接口上被使用：`linux/net/ipv4/igmp.c`
 
 ```c
 752  int ip_check_mc(struct in_dev *dev, u32 mc_addr)
@@ -16706,7 +17173,7 @@ return 1;
     }
 ```
 
-图 6.197 IGMP-procs-报告成员关系，等：linux/net/ipv4/igmp.c.
+## 图 6.197 IGMP-procs-报告成员关系，等：`linux/net/ipv4/igmp.c`
 
 ```c
 int ip_mc_proinfo(char *buffer, char **start, off_t offset, int length)
@@ -16734,7 +17201,7 @@ int ip_mc_proinfo(char *buffer, char **start, off_t offset, int length)
     read_lock(&in_dev->lock);
 ```
 
-图 6.198 IGMP-procs-报告成员关系，等：linux/net/ipv4/igmp.c.
+## 图 6.198 IGMP-procs-报告成员关系，等：`linux/net/ipv4/igmp.c`
 
 ```c
 for (im = in_dev->mc_list; im; im = im->next) {
@@ -16772,7 +17239,9 @@ done:
 
 ### 6.5.3 组播转发
 
-图 1.199 组播支持数据：linux/net/ipv4/ipmr.c.
+## 图 1.199 组播支持数据：`linux/net/ipv4/ipmr.c`
+
+
 
 ```c
 64  #if defined(CONFIG_IP_PIM_V1) || defined(CONFIG_IP_PIM)
@@ -16794,7 +17263,8 @@ done:
 84  #define VIF_EXISTS(idx) (vif_table[idx].dev != NULL)
 86  int mroute_do_assert = 0;                      /* PIM 中设置 */
 87  int mroute_do_pim = 0;
-89  static struct mfc_cache *mfc_cache_array[MFC_LINES]; /* 转发缓存 */```
+89  static struct mfc_cache *mfc_cache_array[MFC_LINES]; /* 转发缓存 */
+```
 
 # 348 TCP/IP 协议实现
 
@@ -16804,22 +17274,31 @@ done:
 93
 94     /* 用于未解析队列的特殊自旋锁 */
 95 spinlock_t _fc_unres_lock = SPIN_LOCK_UNL;
+```
 
 ## 6.200 组组播路由数据：linux/net/ipv4/ipmr.c.
 
 ```c
 97 /* 我们返回原始方案。已解析的哈希表
+
 98     仅在进程上下文中更改并通过弱锁
+
 99     mrt_lock 保护。未解析的队列
+
 100    通过自旋锁 mfc_unres_lock 保护。
+
 101 在这种情况下，数据路径没有互斥锁。
+
 103     */
+
 105 net_cache_t *mrt_cache;
+
 107 static int ipmr_forward(struct sk_buff *skb
+```
 
 ## 组播虚拟接口支持
 
-图 6.201 IPMR–new vif tunnel：linux/net/ipv4/ipmr.c.
+### 图 6.201 IPMR–new vif tunnel：linux/net/ipv4/ipmr.c.
 
 ```c
 117 static
@@ -16934,13 +17413,13 @@ static struct net_device *ipmr_vif(struct vifctl *vif)
 }
 ```
 
-
-
-
-
 # TCP/IP 与 Linux 协议实现
 
 ## 6.205 IPMR–add vif: linux/net/ipv4/ipmr.c.
+
+
+
+## 6.206 IPMR–add a vif: linux/net/ipv4/ipmr.c.
 
 ```c
 static int vif_add(struct vifct *vifc, int mrtsock)
@@ -16980,8 +17459,6 @@ static int vif_add(struct vifct *vifc, int mrtsock)
         return -EINVAL;
     }
 ```
-
-## 6.206 IPMR–add a vif: linux/net/ipv4/ipmr.c.
 
 ```c
 if ((dev = __in_dev_get(dev)) == NULL)
@@ -17066,29 +17543,47 @@ if (atomic_read(&cache_resolve_queue_len) != 0) {
     spin_lock_bh(&mfc_unres_lock);
     spin_unlock_bh(&mfc_unres_lock);
 }
+```
 
 ## 6.208 IPMR–destroy stale cache: linux/net/ipv4/ipmr.c.
 
 ```c
 /* 销毁未解析的条目，杀死队列中的 skbs 并向 netlink 报告错误 */
+
 static void ipmr_destroy_unres(struct mfc_cache *c)
+
 {
+
     struct sk_buff *skb;
 
     atomic_dec(&cache_resolve_len);
+
     while ((skb = skb_dequeue(&c->mfc_unres.unresolved))) {
+
 #ifdef CONFIG_NETLINK
+
     if (skb->nh->version == 0) {
+
         struct nlmsgdr *nlh = (struct nlmsgdr*)skb_pull(skb, sizeof(struct iphdr));
+
         nlh->nlmsg_type = NLMSG_ERROR;
+
         nlh->len = NLMSG_LENGTH(sizeof(struct iphdr));
+
         skb_trim(skb, nlh->len);
+
         ((struct nlmsgerr*)HDR(nlh))->error = -ETIMEDOUT;
+
     }
+
         netlink_unicast(printk, NETLINK_CB(skb).dst_pid, MSG_DONTWAIT);
+
     }
+
 #endif
+
     kfree_skb(skb);
+
 }
 
 kmem_cache_free(mrt_cache, c);
@@ -17098,36 +17593,67 @@ kmem_cache_free(mrt_cache, c);
 
 ```c
 /* 处理所有未解析队列的定时器 */
+
 void ipmr_expire_process(unsigned long dummy)
+
 {
+
     unsigned long now;
+
     unsigned long expires;
+
     struct mfc_cache *c, **cp;
 
     if (!spin_trylock(&mfc_unres_lock)) {
+
         mod_timer(&ipmr_expire_timer, jiffies/10);
+
         return;
+
     }
+
     if (atomic_read(&cache_resolve_len) == 0)
+
         goto out;
 
     now = jiffies;
+
     expires = 10+HZ;
+```
+
+
+
+```c
     cp = &mfc_unres_queue;
+
     while ((*cp) != NULL) {
+
         long interval = c->mfc_unres.expires - now;
+
         if (interval < 0) {
+
             expires = interval;
+
             cp = &c->next;
+
             continue;
+
         }
+
         *cp = c->next;
+
     }
+
     if (atomic_read(&cache_resolve_len)) {
+
         mod_timer(&ipmr_expire_timer, jiffies + expires);
+
     }
+
 out:
+
     spin_unlock(&mfc_unres_lock);
+
 }
 ```
 
@@ -17135,6 +17661,7 @@ out:
 
 ```c
 /* 填充列表。在 mrt_lock 下调用 */
+
 static void ipmr_update_thresholds(struct mfc_cache *cache, unsigned char *ttls)
 {
     int vfi;
@@ -17163,7 +17690,9 @@ static struct mfc_cache *ipmr_cache_find(__u32 origin, __u32 mcastgrp)
     }
     return c;
 }
+
 /* 分配多组条目 */
+
 static struct mfc_cache *ipmr_cache_alloc(struct mfc_cache *rt_cache, GFP_KERNEL)
 {
     if(c==NULL)
@@ -17178,10 +17707,10 @@ static struct mfc_cache *ipmr_cache_alloc(struct mfc_cache *rt_cache, GFP_KERNEL
 
 ```c
 /* 一个缓存条目从队列进入了解析状态 */
+
 static void ipmr_cache_resolve(struct mfc_cache *uc, struct mfc_cache *c)
 {
     struct sk_buff *skb;
-
     /*
      * 让待处理的条目通过我们的路由器
      */
@@ -17214,6 +17743,7 @@ static void ipmr_cache_resolve(struct mfc_cache *uc, struct mfc_cache *c)
  但 mrouted 期望如下：
 * 在 mrt_lock 下调用。
 */
+
 static int ipmr_cache_report(struct sk_buff *pkb, vifi_t vifi, int insert)
 {
     struct sk_buff *skb = pkb;
@@ -17221,7 +17751,6 @@ static int ipmr_cache_report(struct sk_buff *pkb, vifi_t vifi, int insert)
     struct igmphdr *igmp = igmp;
     struct igmpmsg *msg;
     int ret;
-
 #ifdef CONFIG_IP_PISM
     if (assert == IGMPMSG_WHOLEPT)
         skb = kmalloc_headroom(pkt, sizeof(struct iphdr));
@@ -17230,7 +17759,6 @@ else
     skb = alloc_skb(128, GFP_ATOMIC);
     if(!skb)
         return -ENOMBUFS;
-
 #ifdef CONFIG_IP_PISM
     if (assert == IGMPMSG_WHOLEPT)
         /* 很丑，但对于这个接口我们没有选择。
@@ -17249,51 +17777,83 @@ else
 }
 ```
 
-
-
-
-
 # 基础设施协议 359
 
 ```c
 571  skb->nh_iph = (struct iphdr*)skb_put(skb, ihl);
 572  memcc(skb->data,data, ihl);
 573  skb->nh_iph->protocol = 0;
-574                              /* 标记内核这是一个路由添加条目操作 */
-575  msg = (struct igmpmsg*)skb->nh_iph;
-576  msg->im_vif = vifi;
-577  skb->dst = dst_clone(pkt->dst);
-578
-579  /*
-580      添加我们的头部信息
-581  */
-582
-583  igmp=(struct igmphdr*)skb_put(skb,sizeof(struct igmphdr));
-584  igmp->type =
-585  msg->im_msgtype = assert;
-586  igmp->code = 0;
-587  skb->nh_iph->tot_len=htons(skb->len);      /* 修正长度 */
-588  skb->b_raw = skb->raw;
-589  }
-590
-591  if (struct_socket == NULL) {
-592      free_skb(skb);
-593      return -EINVAL;
-594  }
-595
-596  /*
-597      投递给 mrouted
-598  */
-599  if ((ret=route_rcv_skb(mrouted_socket,skb))<0) {
-600      if (net->ratelimit()) {
-601          print(KERN_WARNING "mrouted: pending queue full, dropping entries.\n");
-602          free_skb(skb);
-603      }
-604  }
-605
-606  return ret;
-607}
 ```
+
+
+
+574                              /* 标记内核这是一个路由添加条目操作 */
+
+575  msg = (struct igmpmsg*)skb->nh_iph;
+
+576  msg->im_vif = vifi;
+
+577  skb->dst = dst_clone(pkt->dst);
+
+578
+
+579  /*
+
+580      添加我们的头部信息
+
+581  */
+
+582
+
+583  igmp=(struct igmphdr*)skb_put(skb,sizeof(struct igmphdr));
+
+584  igmp->type =
+
+585  msg->im_msgtype = assert;
+
+586  igmp->code = 0;
+
+587  skb->nh_iph->tot_len=htons(skb->len);      /* 修正长度 */
+
+588  skb->b_raw = skb->raw;
+
+589  }
+
+590
+
+591  if (struct_socket == NULL) {
+
+592      free_skb(skb);
+
+593      return -EINVAL;
+
+594  }
+
+595
+
+596  /*
+
+597      投递给 mrouted
+
+598  */
+
+599  if ((ret=route_rcv_skb(mrouted_socket,skb))<0) {
+
+600      if (net->ratelimit()) {
+
+601          print(KERN_WARNING "mrouted: pending queue full, dropping entries.\n");
+
+602          free_skb(skb);
+
+603      }
+
+604  }
+
+605
+
+606  return ret;
+
+607}
 
 # 多播组转发与查找
 
@@ -17303,30 +17863,30 @@ else
 612 static int
 613 ipmr_cache_unresolved(vifi_t vifi, struct sk_buff *skb)
 614 {
-615
+
 616     int err;
 617     struct mfc_cache *c;
-618
+
 619     spin_lock_bh(&mfc_cache->lock);
 620     for (c=mfc_unres->queue; c; c=c->next) {
 621         if (c->mfc_castgroup == skb->nh_iph->daddr &)
 621    c->mfc_origin == skb->nh.ip->saddr
 622    break;
-623
+
 624  }
 625  if (c == NULL) {
 626      /*
 627       * 如果允许，则创建一个新条目
 628      */
-629
+
 630      if (atomic_read(&cache_resolve_queue_len)>=10 ||
 631              (c=ipmr_cache_alloc_unres())==NULL) {
 632              spin_unlock_bh(&mfc_unres_lock);
-633
+
 634              kfree_skb(skb);
 635              return -ENOMBUFS;
 636      }
-637
+
 638      /*
 639       * 填充新的缓存条目
 640      */
@@ -17334,6 +17894,7 @@ else
 642          c->mfc_origin=skb->nh.ip->saddr;
 643          c->mfc_castgrp=skb->nh.ip->daddr;
 > 图 6.216 IPMR-queue 等解析的发送数据包：linux/net/ipv4/ipmr.c。
+```
 
 ```c
 645    /*
@@ -17352,6 +17913,7 @@ else
 658      mfc_unres_queue = c;
 659      mod_timer(&ipmr_expire_timer, c->mfc_unres.expires);
 660  }
+```
 **图 6.217** IPMR–queue 等解析的发送数据包：linux/net/ipv4/ipmr.c。
 
 ```c
@@ -17363,7 +17925,6 @@ if (c->mfc_unres.resolved.qlen > 3) {
     skb_queue_tail(&c->mfc_unres.resolved, skb);
     err = 0;
 }
-
 spin_unlock_bh(&mfc_unres_lock);
 return err;
 ```
@@ -17376,7 +17937,6 @@ return err;
 int ipmr_mfc_delete(struct mfctl *mfc) {
     int line;
     struct mfc_cache *c, **cp;
-
     line = HASH(mfc->mfc_castgrp.s_addr, mfc->mfc_origin.s_addr);
     for (cp=mfc_cache_array[line]; *cp != NULL; cp = &(*cp)->next) {
         if (c->mfc_origin == mfc->mfc_origin.s_addr &&
@@ -17386,7 +17946,6 @@ int ipmr_mfc_delete(struct mfctl *mfc) {
             write_unlock_bh(&mrt_lock);
         }
     }
-
     kmem_cache_free(mrt_cache, c);
     return 0;
 }
@@ -17415,22 +17974,43 @@ int ipmr_mfc_add(struct mfctl *mfc, int mrtsock) {
             c->mfc_flags |= MFC_STATIC;
             write_unlock_bh(&mrt_lock);
             return 0;
+```
+
+
+
+```
         }
+
     }
+
     if (!MULTICAST(mfc->mfc_castgrp.s_addr))
+
         return -EINVAL;
+
     if (!ipmr_cache_alloc())
+
         return -ENOMEM;
+
     c->mfc_origin=mfc->mfc_origin.s_addr;
+
     c->mfc_castgrp=mfc->mfc_castgrp.s_addr;
+
     c->mfc_parent=mfc->mfc_parent;
+
     ipmr_update_thresholds(c, mfc->mfc_ttl);
+
     if (mrtsock)
+
         c->mfc_flags = MFC_STATIC;
+
     write_lock_bh(&mrt_lock);
+
     c->next = mfc_cache_array[line];
+
     mfc_cache_array[line] = c;
+
     write_unlock_bh(&mrt_lock);
+
 }
 ```
 
@@ -17453,7 +18033,6 @@ for (cp=mfc_unres_queue; (uc=*cp) != NULL;
         }
     }
 }
-
 if (uc) {
     spin_unlock_bh(&mfc_unres_lock);
     ipmr_cache_resolve(uc, c);
@@ -17484,14 +18063,13 @@ static void mrtsock_destruct(struct socket *sk) {
 
 **图 6.222** IPMR–setsockopt处理器：linux/net/ipv4/ipmr.c。
 
-* Socket 选项和虚拟接口操作。整个虚拟接口系统是一个堆，但遗憾 BSD 是那样做的。也许有一天有了正确的 MSDP/PIM 路由器我们就可以清理它。
+*Socket 选项和虚拟接口操作。整个虚拟接口系统是一个堆，但遗憾 BSD 是那样做的。也许有一天有了正确的 MSDP/PIM 路由器我们就可以清理它。*
 
 ```c
 int ip_mroute_setsockopt(struct socket *sk, int optname, char *optval, int optlen) {
     int ret;
     struct if vif;
     struct mfc mfc;
-
     if (optname==MRT_INIT) {
         if (route_socket && capable(CAP_NET_ADMIN))
             return -EACCES;
@@ -17566,21 +18144,20 @@ int ip_mroute_setsockopt(struct socket *sk, int optname, char *optval, int optle
             v=(v)?1:0;
             rtnl_lock();
             if (v != route_do_pim) {
-                route_do_pim = v;
-                route_do_assert = v;
-            }
-#endif
-#ifdef CONFIG_IP_PIMSM_V2
-            if (route_do_pim)
-                inet_add_protocol(&pim_protocol);
 ```
 
 
 
-
-
+```c
+route_do_pim = v;
+route_do_assert = v;
+}
+#endif
+#ifdef CONFIG_IP_PIMSM_V2
+if (route_do_pim)
+inet_add_protocol(&pim_protocol);
+```
 # 366 TCP/IP 和 Linux 协议实现
-
 ```c
 946      else
 947      inet_del_protocol(&pim_protocol);
@@ -17591,7 +18168,6 @@ int ip_mroute_setsockopt(struct socket *sk, int optname, char *optval, int optle
 952      return 0;
 953  }
 954  #endif
-
 956      /*
 957      * 无效命令，或你无法设置的
 958      * MRT_VERSION。
@@ -17603,7 +18179,6 @@ int ip_mroute_setsockopt(struct socket *sk, int optname, char *optval, int optle
 ```
 
 ![](img/06c11ba8be5c1c24aa633e12618e2ebd_421_0.png)
-
 ```c
 967  int ip_mroute_getsockopt(struct sock *sk, int optname,char *optval,int *optlen)
 968  {
@@ -17616,10 +18191,8 @@ int ip_mroute_setsockopt(struct socket *sk, int optname, char *optval, int optle
 975  #endif
 976      optname!=MRT_ASSERT)
 977          return -ENOPROTOOPT;
-
 979      if(get_user(ol,optlen))
 980          return -EFAULT;
-
 982      ol=min(ol,sizeof(int));
 983      if(put_user(ol,optlen)) // 注意：此处原文可能可能有误
 984          return -EFAULT;
@@ -17640,7 +18213,6 @@ int ip_mroute_setsockopt(struct socket *sk, int optname, char *optval, int optle
 ### 6.5.4 组播传输
 
 图 2.226 IPMR: linux/net/ipv4/ipmr.c。
-
 ```c
 1002    int ipmr_ioctl(struct sock *sk, int cmd, unsigned long arg)
 1003    {
@@ -17694,7 +18266,6 @@ read_unlock(&rmt_lock);
 # TCP/IP 和 Linux 协议实现
 
 图 6.227 IPMR–封装: linux/net/ipv4/ipmr.c。
-
 ```c
 /*
  * 通过附加有效的 IPIP 头头部对数据包进行封装
@@ -17713,22 +18284,30 @@ static void _encap(struct sk_buff *skb, u32 saddr, u32 daddr)
     iph->protocol = IPPROTO_IPIP;
     iph->id = 5;
     iph->tot_len = htons(skb->len);
-    iph_select_ident(iph,skb->dst);
-    ip_send_check(iph);
-    skb->h_iph = skb->nh->iph;
-#ifdef CONFIG_NETFILTER
-    nf_conntrack_put(skb->nfct);
-    skb->nfct = NULL;
-#endif
 ```
 
-图 6.228 IPMR–转发: linux/net/ipv4/ipmr.c。
+
+
+`iph_select_ident(iph, skb->dst);`
+
+`ip_send_check(iph);`
+
+`skb->h_iph = skb->nh->iph;`
+
+#ifdef `CONFIG_NETFILTER`
+
+`nf_conntrack_put(skb->nfct);`
+
+`skb->nfct = NULL;`
+
+#endif
+
+### 图 6.228 IPMR–转发: linux/net/ipv4/ipmr.c
 
 ```c
 static inline int ipmr_finish(struct sk_buff *skb)
 {
     struct dst_entry *dst = skb->dst;
-
     if (skb->len <= dst->mtu)
         return dst->output(skb);
     else
@@ -17736,7 +18315,7 @@ static inline int ipmr_finish(struct sk_buff *skb)
 }
 ```
 
-图 6.229 IPMR–传输处理器: linux/net/ipv4/ipmr.c。
+### 图 6.229 IPMR–传输处理器: linux/net/ipv4/ipmr.c
 
 ```c
 /*
@@ -17750,10 +18329,8 @@ static void _ip_queue_xmit(struct sk_buff *skb, struct mfc_cache *c, int vifi, i
     struct rtable *rt;
     int encap = 0;
     struct sk_buff *skb2;
-
     if (vif->dev == NULL)
         return;
-
 #ifdef CONFIG_IP_PIM
     if (vif->flags & VIF_REGISTER) {
         vif->pkt_out+=skb->len; // 等等，此处有错误但保留了上下文
@@ -17776,7 +18353,6 @@ static void _ip_queue_xmit(struct sk_buff *skb, struct mfc_cache *c, int vifi, i
         if (ip_route_output(rt, iph->daddr, 0, RT_T(iph->tos), vif->link))
             return;
     }
-
     dev = rt->u.dev;
     if (skb->len+encap > rt->u.mtu & nto(frag_off) & IP_DF) {
         /* 不要分片。遗憾的是，IPv4 不
@@ -17786,7 +18362,6 @@ static void _ip_queue_xmit(struct sk_buff *skb, struct mfc_cache *c, int vifi, i
         return;
     }
     encap += dev->hard_len;
-
     if (skb->headroom < encap || skb_cloned(skb) || !last) {
         skb2 = realloc_headroom(skb, encap+15);
     } else if (atomic_read(&skb->users) != 1) {
@@ -17801,12 +18376,11 @@ static void _ip_queue_xmit(struct sk_buff *skb, struct mfc_cache *c, int vifi, i
     }
 ```
 
-图 6.231 IPMR-传输处理器: linux/net/ipv4/ipmr.c。
+### 图 6.231 IPMR-传输处理器: linux/net/ipv4/ipmr.c
 
 ```c
     vif->pkt_out++;
     vif->bytes_out+=skb->len;
-
     dst_release(skb2->dst);
     skb2->dst = &rt->u.dst;
     ip = skb2->nh->ip;
@@ -17819,19 +18393,14 @@ static void _ip_queue_xmit(struct sk_buff *skb, struct mfc_cache *c, int vifi, i
         ((struct ip_tunnel)*vif->dev->priv)->stat_tx.packets++;
         ((struct ip_tunnel)*vif->dev->priv)->stat_tx.bytes+=skb2->len;
     }
-
     IPCB(skb2)->flags |= IPSKB_FORWARDED;
 ```
 
-+ * RFC 1584 教导，DVMRP/PIM 路由器在本地交付数据包
+* `RFC 1584` 教导，DVMRP/PIM 路由器在本地交付数据包
 * 不仅是为了转发，而且是在所有输出接口上转发之后。
 * 如果这一点很明确，如果路由器运行组播应用
-* 对于 (S,G) 将无法工作，因为它们的默认组播路由
+* 对于 `(S,G)` 将无法工作，因为它们的默认组播路由
 * 指向错误的接口。
-
-
-
-
 
 # TCP/IP 与 Linux 协议实现
 
@@ -17847,7 +18416,7 @@ static void _ip_queue_xmit(struct sk_buff *skb, struct mfc_cache *c, int vifi, i
 1273  }
 ```
 
-图 6.234 IPMR-转发：linux/net/ipv4/ipmr.c。
+### 图 6.234 IPMR-转发：linux/net/ipv4/ipmr.c
 
 ```c
 1275  vif_table[vif].pkt_in++;
@@ -17870,7 +18439,9 @@ static void _ip_queue_xmit(struct sk_buff *skb, struct mfc_cache *c, int vifi, i
 1295  }
 ```
 
-图 6.235 IPMR-处理待转发的多播数据包：linux/net/ipv4/ipmr.c。
+
+
+图 6.235 IPMR-处理待转发的多播数据包：`linux/net/ipv4/ipmr.c`。
 
 ```c
 1298  /*
@@ -17880,7 +18451,6 @@ static void _ip_queue_xmit(struct sk_buff *skb, struct mfc_cache *c, int vifi, i
 1303  {
 1304      struct mfc_cache *cache;
 1305      int local = ((struct rtable*)skb->dst)->rt_flags&RTCTF_LOCAL;
-
 1308      /* 数据包在转发后被回环，不应再次
 1309          转发，但仍可以在本地进行交付。
 1310      */
@@ -17913,17 +18483,17 @@ if (!local) {
 }
 ```
 
-**图 6.236** IPMR—处理待转发的多播数据包：linux/net/ipv4/ipmr.c
+**图 6.236** IPMR—处理待转发的多播数据包：`linux/net/ipv4/ipmr.c`
 
 ```c
 read_lock(&mrt_lock);
 cache = ipmr_cache_find(skb->nh->ip->saddr, skb->nh->ip->daddr);
+
 /*
     没有可用的缓存项
 */
 if (cache==NULL) {
     int vif;
-
     if (local) {
         struct skb *skb2 = skb_clone(skb, GFP_ATOMIC);
         ip_local_deliver(skb);
@@ -17959,10 +18529,11 @@ if (cache==NULL) {
 1377 kfree_skb(skb);
 1378 return 0;
 1379 }
+```
 
 ### 6.5.5 PIM 特性
 
-图 6.237 IPMR–PIM vi处理器：linux/net/ipv4/ipmr.c。
+图 6.237 IPMR–PIM vi处理器：`linux/net/ipv4/ipmr.c`。
 
 ```c
 1381 #ifdef CONFIG_IP_PIM_VI
@@ -17989,15 +18560,19 @@ if (cache==NULL) {
 1409 kfree_skb(skb);
 1410 return -EINVAL;
 1411 }
+```
 
-# 图 6.238 IPMR–PIM v1 处理器：linux/net/ipv4/ipmr.c。
+# 图 6.238 IPMR–PIM v1 处理器：`linux/net/ipv4/ipmr.c`。
 
 ```c
 read_lock(rt_num_lock);
+
 if (reg_vif_num >= 0)
     reg_dev = vif_table[reg_vif_num].dev;
+
 if (reg_dev)
     dev_hold(reg_dev);
+
 unlock_lock(rt_num_lock);
 
 if (reg_dev == NULL) {
@@ -18021,13 +18596,12 @@ skb->dst = NULL;
 nf_conrack_put(skb->nfct);
 skb->nfct = NULL;
 #endif
-
 netif_rx(skb);
 dev_put(reg_dev);
 return 0;
 ```
 
-# 图 6.239 IPMR–PIM v2 处理器：linux/net/ipv4/ipmr.c。
+# 图 6.239 IPMR–PIM v2 处理器：`linux/net/ipv4/ipmr.c`。
 
 ```c
 #ifdef CONFIG_IP_PIM_V2
@@ -18036,16 +18610,22 @@ int pim_rcv(struct skb_buff *skb, unsigned short len)
     struct pimrehdr *pim = (struct pimrehdr*)skb->h_raw;
     struct iphdr *encap;
     struct net_device *reg_dev = NULL;
-
     if (len < sizeof(pim) + sizeof(encap) ||
         (pim->type != (PIM_VERSION_4) ||
         (pim->flags & PIM_NULL_REGISTER) ||
-        (ip_checksum((void*)pim, sizeof(*pim)) != 0 &&
-        ip_checksum((void*)pim, len))) {
-        kfree_skb(skb);
-        return -EINVAL;
-    }
 ```
+
+
+
+`(ip_checksum((void*)pim, sizeof(*pim)) != 0 &&`
+
+`ip_checksum((void*)pim, len))) {`
+
+`kfree_skb(skb);`
+
+`return -EINVAL;`
+
+`}`
 
 ```c
 1462 /* 检查内层数据包是否指向多播组 */
@@ -18058,7 +18638,7 @@ int pim_rcv(struct skb_buff *skb, unsigned short len)
 }
 ```
 
-图 6.240 IPMR–v2 处理器：linux/net/ipv4/ipmr.c。
+图 6.240 IPMR–v2 处理器：`linux/net/ipv4/ipmr.c`。
 
 ```c
 read_lock(&rt_lock);
@@ -18067,12 +18647,10 @@ if (reg_vif_num >= 0)
 if (reg_dev)
     dev_hold(reg_dev);
 unlock_lock(rt_lock);
-
 if (reg_dev == NULL) {
     kfree_skb(skb);
     return -EINVAL;
 }
-
 skb->mac_raw = skb->h_raw;
 skb_pull(skb, (unsigned char*)encap - skb->data);
 skb->nh_ip = (struct iphdr*)skb->data;
@@ -18089,7 +18667,6 @@ skb->dst = NULL;
 nf_conrack_put(skb->nfct);
 skb->nfct = NULL;
 #endif
-
 netif_rx(skb);
 dev_put(reg_dev);
 return 0;
@@ -18098,7 +18675,7 @@ return 0;
 
 # 路由器到内核管理
 
-图 6.241 IPMR–RTNetlink 路由：linux/net/ipv4/ipmr.c。
+图 6.241 IPMR–RTNetlink 路由：`linux/net/ipv4/ipmr.c`。
 
 ```c
 static int
@@ -18109,7 +18686,6 @@ ipmr_fill_route(struct sk_buff *skb, struct mfc_cache *c, struct rtmsg *rtm)
     struct net_device *dev = vif_table[c->mfc_parent].dev;
     u8 *b = skb->tail;
     struct rtattner *mp_head;
-
     if (dev) {
         RTA_PUT(skb, RTA_IIF, 4, &dev->index);
         mp_head = (struct rtattner*)skb_put(skb, RTA_ALIGN(0));
@@ -18135,7 +18711,7 @@ skb_trim(skb, skb - skb->data);
 }
 ```
 
-# 图 6.242 IPMR–RTNetlink 获取路由：linux/net/ipv4/ipmr.c。
+# 图 6.242 IPMR–RTNetlink 获取路由：`linux/net/ipv4/ipmr.c`。
 
 ```c
 int ipmr_get_route(struct sk_buff *skb, struct rtmsg *rtm, int *nowait)
@@ -18149,30 +18725,23 @@ int ipmr_get_route(struct sk_buff *skb, struct rtmsg *rtm, int *nowait)
         struct net_device *dev;
 ```
 
-
-
-
 # 378 TCP/IP 与 Linux 协议实现
 
 ```c
 1564      int vif;
-1565
 1566      if (!nowait) {
 1567          read_unlock(&kmrt_lock);
 1568          return -EAGAIN;
 1569}
-1570
 1571      dev = skb->dev;
 1572      if (dev == NULL || (vif == ipmr_find_dev(dev)) < 0) {
 1573          read_unlock(&kmrt_lock);
 1574          return -ENODEV;
 1575}
-1576
 1577      skb->nh->vif = skb_push(skb, sizeof(struct iphdr));
 1578      skb->nh->ip->saddr = sizeof(struct iphdr);
 1579      skb->nh->ip->daddr = rt->rt_dest;
 1580      skb->nh->ip->version = 0;
-
 1582      err = ipmr_cache_unresolved(vif, skb);
 1583          read_unlock(&kmrt_lock);
 1584      return err;
@@ -18190,25 +18759,25 @@ int ipmr_get_route(struct sk_buff *skb, struct rtmsg *rtm, int *nowait)
 1594      off_t begin=0;
 1595      int size;
 1596      int ct;
-
-1597
 1598      len += sprintf(buffer,
-1599               "%Interface BytesIn PktsIn BytesOut PktsOut Flags Local Remote\n",
-1600               pos=len;
 
-1602
-1603      read_lock(&kmrt_lock);
-1604      for (ct=0;ct<maxif;ct++)
-1605        {
-1606            char *name = "none";
-1607            vif=&vif_table[ct];
-1608            if(VIF_EXISTS(ct))
-1609              continue;
-1610            if (vif->dev)
-1611                name = vif->dev->name;
-```
+
 
 # 基础设施协议 379
+
+```c
+"%Interface BytesIn PktsIn BytesOut PktsOut Flags Local Remote\n",
+pos=len;
+read_lock(&kmrt_lock);
+for (ct=0;ct<maxif;ct++)
+  {
+      char *name = "none";
+      vif=&vif_table[ct];
+      if(VIF_EXISTS(ct))
+        continue;
+      if (vif->dev)
+          name = vif->dev->name;
+```
 
 ```c
 size = sprintf(buffer+len, "%2d-%10s %x1d %x1d %x1d %08x %08x %08x\n",
@@ -18234,7 +18803,7 @@ if (len<length) {
 return len;
 ```
 
-图 2.244 IPMR–procs mfc reporting：linux/net/ipv4/ipmr.c。
+图 2.244 IPMR–procs mfc reporting：`linux/net/ipv4/ipmr.c`。
 
 ```c
 static int ipmr_mfc_info(char *buffer, char **start, off_t offset, int length)
@@ -18245,11 +18814,9 @@ static int ipmr_mfc_info(char *buffer, char **start, off_t offset, int length)
     off_t begin=0;
     int size;
     int ct;
-
     len += sprintf(buffer,
         "Group Origin Ifn Pkts Bytes Wrong Oifs\n",
         pos=len);
-
     read_unlock(&zrt_lock);
     for (ct=0;ct<MFC_LINES;ct++) {
         for(mfc=mfc_array[ct]; mfc; mfc=mfc->next) {
@@ -18267,53 +18834,54 @@ static int ipmr_mfc_info(char *buffer, char **start, off_t offset, int length)
 # 380 TCP/IP 与 Linux 协议实现
 
 ```c
-1661 mfc->mfc_parent,
-1662 mfc->mfc_un.res.pkt,
-1663 mfc->mfc_un.res.bytes,
-1664 mfc->mfc_un.res.wrong_if;
-1665 for(n=mfc->mfc_un.res.minv;n<mfc->mfc_un.res.maxv;n++)
-1666 {
-1667 if(VIP_Exists(n) && mfc->mfc_un.res.ttl[n] < 256)
-1668 size += sprintf(buffer+len, "%X2d-%3d", n, mfc->mfc_un.res.ttl[n]);
-1669 size += sprintf(buffer+len, "In");
-1670 len+=size;
-1671 pos+=offset;
-1672 if(pos<offset) {
-1673 len=0;
-1674 begin=pos;
-1675 }
-1676 if(pos>offset+length)
-1677 goto done;
-1678 }
-1679 }
+mfc->mfc_parent,
+mfc->mfc_un.res.pkt,
+mfc->mfc_un.res.bytes,
+mfc->mfc_un.res.wrong_if;
+for(n=mfc->mfc_un.res.minv;n<mfc->mfc_un.res.maxv;n++)
+{
+if(VIP_Exists(n) && mfc->mfc_un.res.ttl[n] < 256)
+size += sprintf(buffer+len, "%X2d-%3d", n, mfc->mfc_un.res.ttl[n]);
+size += sprintf(buffer+len, "In");
+len+=size;
+pos+=offset;
+if(pos<offset) {
+len=0;
+begin=pos;
+}
+if(pos>offset+length)
+goto done;
+}
+}
+```
 
-图 6.245 IPMR-procs from mfc reporting：linux/net/ipv4/ipmr.c。
+图 6.245 IPMR-procs from mfc reporting：`linux/net/ipv4/ipmr.c`。
 
 ```c
-1683 spin_lock_bh(mfc_un_lock);
-1684 for(mfc=mfc_un_queue; mfc; mfc=mfc->next)
-1685 size = sprintf(buffer+len, "%08X %X-3d %8ld %8d\n",
-1686 (unsigned long)mfc->mfc_castgrp,
-1687 (unsigned long)mfc->mfc_origin,
-1688 -1,
-1689 (long)mfc->mfc_un.res.qlen,
-1690 OL);
-1691 len+=size;
-1692 pos+=size;
-1693 if(pos<offset) {
-1694 len=0;
-1695 begin=pos;
-1696 }
-1697 if(pos>offset+length)
-1698 break;
-1699 }
-1700 spin_unlock_bh(mfc_un_lock);
-1701 done:
-1702 read_unlock(kmrt_lock);
-1703 *start=buffer+(offset-begin);
-1704 len=(offset-begin);
-1705 if(len>length)
-1706 len=length;
+spin_lock_bh(mfc_un_lock);
+for(mfc=mfc_un_queue; mfc; mfc=mfc->next)
+size = sprintf(buffer+len, "%08X %X-3d %8ld %8d\n",
+(unsigned long)mfc->mfc_castgrp,
+(unsigned long)mfc->mfc_origin,
+-1,
+(long)mfc->mfc_un.res.qlen,
+OL);
+len+=size;
+pos+=size;
+if(pos<offset) {
+len=0;
+begin=pos;
+}
+if(pos>offset+length)
+break;
+}
+spin_unlock_bh(mfc_un_lock);
+done:
+read_unlock(kmrt_lock);
+*start=buffer+(offset-begin);
+len=(offset-begin);
+if(len>length)
+len=length;
 ```
 
 ```c
@@ -18326,7 +18894,7 @@ return len;
 
 ## 6.5.6 IP IP 组播
 
-图 6.246—初始组播：linux/net/ipv4/ipmr.c。
+图 6.246—初始组播：`linux/net/ipv4/ipmr.c`。
 
 ```c
 #ifndef CONFIG_IPISM_V2
@@ -18367,7 +18935,9 @@ void __init_ip_mr_init(void) {
 
 网络地址翻译在地址不足的地方非常流行，也经常作为简单站点安全的一部分，特别是与防火墙配合使用。
 
-图 6.247 互联网协议–简单 NAT：linux/net/ipv4/ip_nat.dumb.c。
+
+
+### 图 6.247 互联网协议–简单 NAT：`linux/net/ipv4/ip_nat.dumb.c`。
 
 ```c
 46 int
@@ -18412,7 +18982,7 @@ void __init_ip_mr_init(void) {
 85     }
 ```
 
-图 6.248 互联网协议–简单 NAT：linux/net/ipv4/ip_nat.dumb.c。
+### 图 6.248 互联网协议–简单 NAT：`linux/net/ipv4/ip_nat.dumb.c`。
 
 ```c
 86 case IPPROTO_ICMP:
@@ -18440,12 +19010,8 @@ void __init_ip_mr_init(void) {
 108        ciph->daddr = ip->daddr;
 109        updated = 1;
 110    }
-111}
+}
 ```
-
-
-
-
 
 # 384 TCP/IP 与 Linux 协议实现
 
@@ -18482,77 +19048,83 @@ void __init_ip_mr_init(void) {
 
 ### 6.8.1 IP in IP 隧道
 
-**6.251** IP in IP 隧道——序言：linux/net/ipv4/ipip.c。
+**6.251** IP in IP 隧道——序言：`linux/net/ipv4/ipip.c`。
 
-```c
-29    / tunnel.c: 一个 IP 隧道驱动程序
-30
-31    该驱动程序的目的是提供一个 IP 隧道，
-32    通过该隧道，你可以透明地跨子网传输网络流量。
-33
-34    此程序参考了 Nick Holloway 的虚拟驱动程序而编写
-35    感谢这些极佳的代码！
-36
-37        -Sam Latinga (alouken@cs.ucdav.edu) 02/01/95
-38
-39    微调：
-40    清理了代码并添加了一些针对 1.3.0 之前的调整。
-41    dev->hard_header/hard_header_len 更改为不使用头部。
-42    调整了注释/破坏性更改。
-43    使隧道在错误报告时使用 dev->name tunnel。
-44 添加了 tx_dropped 统计量
-45
 
-46 -Alan Cox (Alan.Cox@linux.org) 95年3月21日
-47
-48 重构：
-49    更改为除了隧道的多点地址外，还隧道到
-50    目标网关
-51
-52    几乎完全重写
-53    注意：目前尚未进行防火墙或 ICMP 处理。
-54
-55 -Sam Lanting (slouken@cs.udavis.edu) 96年1月13日
-56 */
 
 # 图 6.252 互联网协议改进规则：linux/net/ipv4/ipip.c
 
+```c
+29    / tunnel.c: 一个 IP 隧道驱动程序
+
+    该驱动程序的目的是提供一个 IP 隧道，
+    通过该隧道，你可以透明地跨子网传输网络流量。
+
+    此程序参考了 Nick Holloway 的虚拟驱动程序而编写
+    感谢这些极佳的代码！
+
+        -Sam Latinga (alouken@cs.ucdav.edu) 02/01/95
+
+    微调：
+    清理了代码并添加了一些针对 1.3.0 之前的调整。
+    dev->hard_header/hard_header_len 更改为不使用头部。
+    调整了注释/破坏性更改。
+    使隧道在错误报告时使用 dev->name tunnel。
+ 添加了 tx_dropped 统计量
+
+-Alan Cox (Alan.Cox@linux.org) 95年3月21日
+
+重构：
+    更改为除了隧道的多点地址外，还隧道到
+    目标网关
+
+    几乎完全重写
+    注意：目前尚未进行防火墙或 ICMP 处理。
+
+-Sam Lanting (slouken@cs.udavis.edu) 96年1月13日
+*/
+```
+
+```c
 /* 
 58 我希望在编写隧道驱动程序时知道的事宜：
-59
-60    当调用 tunnel_xmit() 函数时，skb 包含了
-61    要发送的数据包（以及大量额外信息），dev 
-62    包含了我们正在使用的隧道设备。
-63
-64    当我们接收到一个数据包时，我们预期在源地址
-65    填入我们的源 IP 地址。
-66
-67    分配、拷贝和释放缓冲区的正确方法是什么？
-68    在你分配后，它是一个从零开始的“0”内存块。
-69    如果你稍后想向缓冲区添加头部，
-70    你必须调用 skb_reserve(skb, amount) 预留
-71    所需的内存。然后调用
-72    skb_put(skb, amount) 返回缓冲区
-73    结束空间的指针。
-74    skb->len 返回通过 skb_put() 分配
-75    剩余的空间。如果你需要更多空间，可以再次
-76    调用 skb_put 你需的空间。
-77    你可以通过 skb_tailroom(skb) 
-78    发现可以分配多少空间。
-79
-80    现在，为了添加头部，调用 skb_push(skb, header_len)。
-81    这会在缓冲区开头创建空间并返回
-82    该新空间的指针。如果你需要剥离
-83    缓冲区的头部（减去主数据），调用
-84    skb_pull(skb, header_len)。
-85    记住，在调用 skb_put() 之前
-86    必须预留空间
-87*/
-88
-89    这个版本的 net/ipv4/ipip.c 是
-90    net/ipv4/gre.c 的拷贝
-91    注释请参见 net/ipv4/gre.c -- 以及
-92  */
+
+    当调用 tunnel_xmit() 函数时，skb 包含了
+    要发送的数据包（以及大量额外信息），dev 
+    包含了我们正在使用的隧道设备。
+
+    当我们接收到一个数据包时，我们预期在源地址
+    填入我们的源 IP 地址。
+
+    分配、拷贝和释放缓冲区的正确方法是什么？
+    在你分配后，它是一个从零开始的“0”内存块。
+    如果你稍后想向缓冲区添加头部，
+    你必须调用 skb_reserve(skb, amount) 预留
+    所需的内存。然后调用
+    skb_put(skb, amount) 返回缓冲区
+    结束空间的指针。
+    skb->len 返回通过 skb_put() 分配
+    剩余的空间。如果你需要更多空间，可以再次
+    调用 skb_put 你需的空间。
+    你可以通过 skb_tailroom(skb) 
+    发现可以分配多少空间。
+
+    现在，为了添加头部，调用 skb_push(skb, header_len)。
+    这会在缓冲区开头创建空间并返回
+    该新空间的指针。如果你需要剥离
+    缓冲区的头部（减去主数据），调用
+    skb_pull(skb, header_len)。
+    记住，在调用 skb_put() 之前
+    必须预留空间
+*/
+```
+
+```c
+    这个版本的 net/ipv4/ipip.c 是
+    net/ipv4/gre.c 的拷贝
+    注释请参见 net/ipv4/gre.c -- 以及
+ */
+```
 
 # TCP/IP 与 Linux 协议实现
 
@@ -18560,19 +19132,33 @@ void __init_ip_mr_init(void) {
 
 ```c
 #define HASH_SIZE 16
+
 #define HASH(addr) (((addr)>>4)
+
 static int ipip_tunnel_init(struct net_device *dev);
+
 static struct net_device ipip_fb_dev = {
+
     "tun0", 0, 0, 0, 0, NULL, ipip_tunnel_init
+
 };
+
 static struct ip_tunnel ipip_fb_dev = {
+
     NULL, &ipip_fb_dev, 0, 0, 0, "tun0"},
+
 };
+
 static struct ip_tunnel tunnels_r1[HASH_SIZE];
+
 static struct ip_tunnel tunnels_r[HASH_SIZE];
+
 static struct ip_tunnel tunnels_l1[HASH_SIZE];
+
 static struct ip_tunnel tunnels_wc[1];
+
 static struct ip_tunnel tunnels[4] = {tunnels_wc, tunnels_r};
+
 static rwlock_t ipip_lock = RW_LOCKED;
 ```
 
@@ -18584,7 +19170,6 @@ static struct ip_tunnel ipip_tunnel_lookup(u32 remote, u32 local)
     unsigned h0 = HASH(remote);
     unsigned h1 = HASH(local);
     struct ip_tunnel *t;
-
     for (t = tunnels_r1[h0]; t; t = t->next) {
         if (local == t->parms.saddr && (t->dev->flags&IFF_UP)
             remote == t->parms.saddr && (t->dev->flags&IFF_UP)
@@ -18600,7 +19185,6 @@ static struct ip_tunnel ipip_tunnel_lookup(u32 remote, u32 local)
     }
     if ((t = tunnels_wc[0]) != NULL && (t->dev->flags&IFF_UP)
         return t;
-
     return NULL;
 }
 ```
@@ -18614,7 +19198,6 @@ static struct ip_tunnel **ipip_bucket(struct ip_tunnel *t)
     u32 local = t->parms.saddr;
     unsigned h = 0;
     int prio = 0;
-
     if (remote) {
         prio = 2;
         h = HASH(remote);
@@ -18657,125 +19240,127 @@ static void ipip_tunnel_link(struct ip_tunnel *t)
 
 ```c
 208      struct ip_tunnel *ipip_tunnel_locate(struct ip_tunnel *parms, int create)
-209      {
-210          u32 remote = parms->daddr;
-211          u32 local = parms->saddr;
-212          struct ip_tunnel *t, **tp, *nt;
-213          struct net_device *dev = dev;
-214          unsigned char h = 0;
-215          int prio = 0;
-216
-217          if (remote) {
-218              prio = 2;
-219              h = HASH(remote);
-220          }
-221          if (local) {
-222              prio = 1;
-223              h = HASH(local);
-224          }
-225          for (tp = tunnels[prio][h]; (t = *tp) != NULL; tp = t->next) {
-226              if (local == t->parms.saddr && remote == t->parms.daddr)
-227                  return t;
-228          }
-229          if (create) {
-230              return NULL;
-231
-232              MOD_INC_USE_COUNT;
-233              dev = kmalloc(sizeof(*dev) + sizeof(*t), GFP_KERNEL);
-234              if (dev == NULL) {
-235                  MOD_DEC_USE_COUNT;
-236                  return NULL;
-237              }
-238      }
 ```
 
-# 图 6.258 IP in ip-locate 隧道：linux/net/ipv4/ipip.c。
+
+
+### 6.258 IP in ip-locate 隧道：`linux/net/ipv4/ipip.c`。
 
 ```c
-239      dev->priv = (void*)(dev+1);
-240      nt = (struct ip_tunnel*)dev->priv;
-241      nt->dev = dev;
-242      dev->init = ipip_tunnel_init;
-243      dev->features |= NETIF_F_DYNALLOC;
-244      memcpy(nt->parms, parms, sizeof(*parms));
-245      strncpy(dev->name, parms->name, IFNAMSIZ);
-246      if (dev->name[0] == 0) {
-247          int i;
-248          for (i=0; i<100; i++) {
-249              sprintf(dev->name, "tun%d", i);
-250              if (dev_get_by_name(dev->name) == NULL)
-251                  break;
-252          }
-253          if (i==100)
-254              goto failed;
-255      }
-256      memcpy(parms->name, dev->name, IFNAMSIZ);
-257  }
-258}
+{
+    u32 remote = parms->daddr;
+    u32 local = parms->saddr;
+    struct ip_tunnel *t, **tp, *nt;
+    struct net_device *dev = dev;
+    unsigned char h = 0;
+    int prio = 0;
+
+    if (remote) {
+        prio = 2;
+        h = HASH(remote);
+    }
+    if (local) {
+        prio = 1;
+        h = HASH(local);
+    }
+    for (tp = tunnels[prio][h]; (t = *tp) != NULL; tp = t->next) {
+        if (local == t->parms.saddr && remote == t->parms.daddr)
+            return t;
+    }
+    if (create) {
+        return NULL;
+
+        MOD_INC_USE_COUNT;
+        dev = kmalloc(sizeof(*dev) + sizeof(*t), GFP_KERNEL);
+        if (dev == NULL) {
+            MOD_DEC_USE_COUNT;
+            return NULL;
+        }
+    }
+}
 ```
 
-
-
-
+```c
+dev->priv = (void*)(dev+1);
+nt = (struct ip_tunnel*)dev->priv;
+nt->dev = dev;
+dev->init = ipip_tunnel_init;
+dev->features |= NETIF_F_DYNALLOC;
+memcpy(nt->parms, parms, sizeof(*parms));
+strncpy(dev->name, parms->name, IFNAMSIZ);
+if (dev->name[0] == 0) {
+    int i;
+    for (i=0; i<100; i++) {
+        sprintf(dev->name, "tun%d", i);
+        if (dev_get_by_name(dev->name) == NULL)
+            break;
+    }
+    if (i==100)
+        goto failed;
+}
+memcpy(parms->name, dev->name, IFNAMSIZ);
+}
+}
+```
 
 # 基础设施协议 389
 
 ```c
-257 if (register_net_device(dev) < 0)
-258 goto failed;
-259
-260 dev_hold(dev);
-261 ipip_tunnel_link(nt);
-262 /* 在此处不要减少 MOD_USE_COUNT。 */
-263 return nt;
-264
-265 failed:
-266
-267 kfree(dev);
-268 MOD_DEC_USE_COUNT;
-269 return NULL;
-270 }
+if (register_net_device(dev) < 0)
+    goto failed;
+
+dev_hold(dev);
+ipip_tunnel_link(nt);
+/* 在此处不要减少 MOD_USE_COUNT。 */
+return nt;
+
+failed:
+
+kfree(dev);
+MOD_DEC_USE_COUNT;
+return NULL;
+}
 ```
 
-### 6.259 IP 在 IP 中的初始化和销毁隧道: linux/net/ipv4/ipip.c.
+### 6.259 IP 在 IP 中的初始化和销毁隧道: `linux/net/ipv4/ipip.c`.
 
 ```c
-271 static void ipip_tunnel_destructor(struct net_device *dev)
-272 {
-273 if (dev == &ipip_fb_tunnel_dev) {
-274 MOD_DEC_USE_COUNT;
-275 }
-276 }
-277
-278 static void ipip_tunnel_uninit(struct net_device *dev)
-279 {
-280 if (dev == &ipip_fb_tunnel_dev) {
-281 write_lock_bb(&ipip_lock);
-282 tunnels_wc[0] = NULL;
-283 write_unlock_bb(&ipip_lock);
-284 dev_put(dev);
-285 else {
-286 ipip_tunnel_unlink((struct ip_tunnel*)dev->priv);
-287 dev_put(dev);
-288 }
-289 }
+static void ipip_tunnel_destructor(struct net_device *dev)
+{
+    if (dev == &ipip_fb_tunnel_dev) {
+        MOD_DEC_USE_COUNT;
+    }
+}
+
+static void ipip_tunnel_uninit(struct net_device *dev)
+{
+    if (dev == &ipip_fb_tunnel_dev) {
+        write_lock_bb(&ipip_lock);
+        tunnels_wc[0] = NULL;
+        write_unlock_bb(&ipip_lock);
+        dev_put(dev);
+    } else {
+        ipip_tunnel_unlink((struct ip_tunnel*)dev->priv);
+        dev_put(dev);
+    }
+}
 ```
 
 # IP IP 隧道中的 ICMP
 
-### 6.260 IP 在 IP 中的 ICMP 错误处理: linux/net/ipv4/ipip.c.
+### 6.260 IP 在 IP 中的 ICMP 错误处理: `linux/net/ipv4/ipip.c`.
 
 ```c
-291 void ipip_err(struct sk_buff *skb, unsigned char *dp, int len)
-292 {
-293 #ifdef I_WISH_WORLD_WERE_FECT
-294
-295 /* 真不该 :( 所有的路由器（Linux 除外）只返回
-296 8 字节的数据包负载。这意味着在真实的互联网中
-297 精确转发 ICMP 是绝对不可行的。
-298 */
-299 struct iphdr *iphdr = (struct iphdr)*dp;
-300 int type = skb->h->icmp->type;
+void ipip_err(struct sk_buff *skb, unsigned char *dp, int len)
+{
+#ifdef I_WISH_WORLD_WERE_FECT
+
+/* 真不该 :( 所有的路由器（Linux 除外）只返回
+8 字节的数据包负载。这意味着在真实的互联网中
+精确转发 ICMP 是绝对不可行的。
+*/
+struct iphdr *iphdr = (struct iphdr)*dp;
+int type = skb->h->icmp->type;
 ```
 
 # TCP/IP 和 Linux 协议实现
@@ -18786,14 +19371,13 @@ struct ip_tunnel *t;
 /*
 if (len < sizeof(struct ipphdr))
     return;
-
 switch (type) {
     default:
     case ICMP_PARAMETER_PROB: /* 注：此处应为 PROB */
         return;
 ```
 
-图 2.621 IP 在 IP–ICMP 错误处理: linux/net/ipv4/ipip.c.
+图 2.621 IP 在 IP–ICMP 错误处理: `linux/net/ipv4/ipip.c`.
 
 ```c
 case ICMP_DEST_UNREACH:
@@ -18816,26 +19400,30 @@ case ICMP_TIME_EXCEEDED:
         return;
     break;
 }
-
 read_lock(&ip_lock);
 t = ip_tunnel_lookup(ip->hdr, ip->saddr);
 if (t == NULL && t->parms.iphdr.addr == 0)
     goto out;
 if (t->parms.ttl == 0 && type == ICMP_TIME_EXCEEDED)
     goto out;
-
 if (jiff - t->err_time < IPT_ERR_TIM)
     t->err_count++;
 else
     t->err_count = 1;
-    t->err_time = jiff;
-out:
-read_unlock(&ip_lock);
-return;
 ```
 
-# 基础设施协议 391
 
+
+`t->err_time = jiff;`
+
+out:
+
+`read_unlock(&ip_lock);`
+
+return;
+
+```
+# 基础设施协议 391
 ```c
 351 struct iphdr *eiph = (struct iphdr)*dp;
 352 int hlen = iph->ihl<<2;
@@ -18848,25 +19436,24 @@ return;
 359 struct sk_buff *skb2;
 360 struct rtable *rt;
 ```
-
 图 6.262 IP 在 IP-ICMP 错误处理: linux/net/ipv4/ipip.c.
 
 ```c
 362 if (hlen < sizeof(struct iphdr))
 363 return;
 364 eiph = (struct iphdr*)(dp + hlen);
-365 
+
 switch (type) {
 367 default:
 368 return;
 369 case ICMP_PARAMETER_PROB:
 370 if (skb->h->icmp->un.gateway < hlen)
 371 return;
-372 
-373 /*
-374  ... 这个家伙在封装包内部
-375 发现了一些奇怪的东西。他是个傻瓜，我们能做什么？
-376  */
+
+/*
+374 ... 这个家伙在封装包内部
+发现了一些奇怪的东西。他是个傻瓜，我们能做什么？
+*/
 377 rel_type = ICMP_PARAMETER_PROB;
 378 rel_info = skb->h->icmp->un.gateway - hlen;
 379 break;
@@ -18874,37 +19461,30 @@ switch (type) {
 381 switch (code) {
 382 case ICMP_SR_FAILED:
 383 case ICMP_POH_UNREACH:
-384 
-385 /* 不可能的事件。 */
+
+/* 不可能的事件。 */
 386 return;
 387 case ICMP_FRAG_NEEDED:
-388 /* 这是唯一必要的东西 :-) */
+/* 这是唯一必要的东西 :-) */
 389 rel_info = ntohs(skb->h->icmp->un.mtu);
 390 if (hlen < hlen+8)
 391 return;
 392 rel_info = hlen;
-393 /* BSD 在自然界中不存在。 */
+/* BSD 在自然界中不存在。 */
 394 if (rel_info > ntohs(eiph->tot_len))
 395 return;
 396 break;
 397 default:
-398 /* 其他所有都被翻译为 HOST_UNREACH。
-399 rfc2003 包含了关于 NET_UNREACH 的“深度思考”，
-400 我认为它仅仅是污染。--ANK */
-401 */
-
-# 392 TCP/IP 和 Linux 协议实现
-
-```c
+/* 其他所有都被翻译为 HOST_UNREACH。
+rfc2003 包含了关于 NET_UNREACH 的“深度思考”，
+我认为它仅仅是污染。--ANK */
 401 rel_type = ICMP_DEST_UNREACH;
 402 rel_code = ICMP_HOST_UNREACH;
 403 break;
 404 }
 405 break;
 ```
-
-图 2.623 IP 在 IP–ICMP 错误处理: linux/net/ipv4/ip.c.
-
+# 392 TCP/IP 和 Linux 协议实现
 ```c
 406 case ICMP_TIME_EXCEEDED:
 407 if (code != ICMP_EXC_TTL)
@@ -18912,7 +19492,6 @@ switch (type) {
 409 break;
 410 }
 ```
-
 图 2.624 IP 在 IP–ICMP 错误处理: linux/net/ipv4/ip.c +
 
 ```c
@@ -18924,13 +19503,13 @@ switch (type) {
 417 skb2->dst = NULL;
 418 skb_pull(skb, skb->data - (struct ip*)eiph);
 419 skb2->nh->raw = skb2->data;
-420 /* 尝试猜测入站接口 */
+/* 尝试猜测入站接口 */
 421 if (ip_route_output(rt, eiph->saddr, 0, eiph->tos, skb2->dev)) {
 422 kfree_skb(skb2);
 423 return;
 424 }
 425 skb2->dev = rt->u.dst;
-426 /* 路由“入站”包 */
+/* 路由“入站”包 */
 427 if (rt->flags & RTF_LOCAL) {
 428 ip_put(rt);
 429 if (rt == NULL)
@@ -18944,19 +19523,16 @@ switch (type) {
 437 }
 438 }
 ```
-
 # 基础设施协议 391
-
 439 /* 减少入站包的引用计数。 */
-440 
+
 441 failed:
-442 
+
 443 kfree(dev);
 444 MOD_DEC_USE_COUNT;
 445 return NULL;
 446 }
 ```
-
 图 6.625 IP 在 IP-ICMP 错误处理: linux/net/ipv4/ipip.c.
 
 ```c
@@ -18967,7 +19543,6 @@ static inline void ipip_ecn_decapsulate(struct iphdr *iph, struct sk_buff *skb) 
     IP_ECN_set_ce(iph);
 }
 ```
-
 图 6.627 IP 在 IP 中的接收代码: linux/net/ipv4/ipip.c.
 
 ```c
@@ -18988,26 +19563,20 @@ int ipip_rcv(struct sk_buff *skb, unsigned short len) {
 }
 ```
 
-
-
-
-
 # 基础设施协议 395
-
 ```c
 536 struct ipphdr *iph;               /* 我们新的 IP 头部 */
 537 int      max_headroom;             /* 需要的额外头部空间 */
 538 u32      dst = tiph->daddr;
 539 int      mtu;
-540 
+
 541 if (tunnel->recursion++) {
 542     tunnel->stat.collisions++;
 543     goto tx_error;
-544 
-545 }
+544 }
 546 if (skb->protocol != __constant_16__(constant_htons(ETH_P_IP)) {
 547     goto tx_error;
-548 
+548 }
 549 if (toski) {
 550     tos = old_iph->tos;
 551 }
@@ -19018,11 +19587,16 @@ int ipip_rcv(struct sk_buff *skb, unsigned short len) {
 556         goto tx_error;
 557     }
 558     if ((dst = rt->rt_gateway) == 0) {
+```
+
+
+
 559         goto tx_error_icmp;
+
 560     }
 ```
 
-## 6.270 ip-transmit 代码中的 IP：linux/net/ipv4/ipip.c.
+## 6.270 ip-transmit 代码中的 IP：`linux/net/ipv4/ipip.c`
 
 ```c
 562 if (ip_route_output(rt, dst, tiph->saddr, RT_TOS(tos), tunnel->parms.link)) {
@@ -19074,7 +19648,6 @@ int ipip_rcv(struct sk_buff *skb, unsigned short len) {
  * 好的，现在我们看看是否可以原样将其装入缓冲区。
  */
 max_header = ((struct dev_hard_len)+15) + sizeof(struct iphdr);
-
 if (skb->headroom(skb) > max_header || skb_cloned(skb) || skb_shared(skb)) {
     struct skb_buff *new_skb = skb_realloc_head(skb, max_header);
     if (new_skb) {
@@ -19130,6 +19703,7 @@ iph->ihl = sizeof(struct iphdr)>>2;
 659 tunnel->recursion--;
 660 return 0;
 661 }
+```
 
 # IP 隧道管理
 
@@ -19173,6 +19747,10 @@ iph->ihl = sizeof(struct iphdr)>>2;
 695             err = -EFAULT;
 696 		if (copy_from_user(&p
 ```
+
+
+
+# 402 TCP/IP 与 Linux协议实现
 
 ```c
 if (t) {
@@ -19320,12 +19898,6 @@ int __init ipip_fb_tunnel_init(struct net_device *dev)
 }
 ```
 
-
-
-
-
-# 402 TCP/IP 与 Linux协议实现
-
 ```c
 870 dev_hold(dev);
 871 tunnels_wc[0] = ipip_fb_tunnel;
@@ -19344,51 +19916,58 @@ int __init ipip_fb_tunnel_init(struct net_device *dev)
 
 # 6.8.2 GRE 隧道
 
-图 6.281 GRE 隧道——开场：linux/net/ipv4/ip_gre.c。
+图 6.281 GRE 隧道——开场：`linux/net/ipv4/ip_gre.c`。
 
 问题与解决方案
 
-- 1. 最重要的问题是检测本地死循环。它们会导致传输中的主机锁死，这会通过栈溢出被“解决”，或者如果启用了队列，则会在 net_bh 中发生无限循环。
+- 1. 最重要的问题是检测本地死循环。它们会导致传输中的主机锁死，这会通过栈溢出被“解决”，或者如果启用了队列，则会在 `net_bh` 中发生无限循环。
+- 我们无法在路由安装期间跟踪死循环，这是不可行的。最通用的解决方案是保留 `skb->encapsulation` 计数器（某种本地 ttl），并在过期时静默丢弃包。这是最佳解决方案，但它抑制了在所有 `skb` 中维护变量，即使没有使用隧道。
 
-- 我们无法在路由安装期间跟踪死循环，这是不可行的。最通用的解决方案是保留 `skb->encapsulation` 计数器（某种本地 ttl），并在过期时静默丢弃包。这是最佳解决方案，但它抑制了在所有 skb 中维护变量，即使没有使用隧道。
 
-- 当前解决方案：t-recursion（t-递归）打破了死循环。它看起来像 `dev->flush` 标志，但我倾向于使用新变量，因为语义不同。有一天，当 `hard_start_xmit` 支持多线程时，我们将必须使用 `skb->encapsulation`。
 
-图 6.282 GRE 隧道——开场：linux/net/ipv4/ip_gre.c。
+- 当前解决方案：`t-recursion`（t-递归）打破了死循环。它看起来像 `dev->flush` 标志，但我倾向于使用新变量，因为语义不同。有一天，当 `hard_start_xmit` 支持多线程时，我们将必须使用 `skb->encapsulation`。
 
-- 2. 网络协议不会杀死路由器，但真的会杀死网络。在这种情况下，如果我们将 IP 跳数限制（hop limit）从被封装的数据包复制到上层头部，它起到了“t-递归”的作用。这非常好，但它引入了两个问题：
+图 6.282 GRE 隧道——开场：`linux/net/ipv4/ip_gre.c`。
 
-- 路由协议（带有 ttl=i 的数据包，如 OSPF, RIP2）在隧道上无法工作。
+- 2. 网络协议不会杀死路由器，但真的会杀死网络。在这种情况下，如果我们将 IP 跳数限制（`hop limit`）从被封装的数据包复制到上层头部，它起到了“t-递归”的作用。这非常好，但它引入了两个问题：
+
+- 路由协议（带有 `ttl=i` 的数据包，如 `OSPF`, `RIP2`）在隧道上无法工作。
 
 # 403 基础设施协议
 
-77 traceroute 无法工作。我计划从隧道中继 ICMP，
-78 这样 traceroute 输出就能提供更多信息。
+77 `traceroute` 无法工作。我计划从隧道中继 `ICMP`，
+
+78 这样 `traceroute` 输出就能提供更多信息。
+
 79 这个想法似乎是错误的：
-80 现在只有 Linux 遵循 rfc8192（是的，Linux 现在是唯一的真正的路由器——），所有的路由器（我这里以及附近的路由器）
+
+80 现在只有 Linux 遵循 `rfc8192`（是的，Linux 现在是唯一的真正的路由器——），所有的路由器（我这里以及附近的路由器）
+
 82 只返回 8 字节的有效负载。结束了。
 
-83 因此，如果我们想让 UDP 工作或让 traceroute 输出合理的内容，
+83 因此，如果我们想让 `UDP` 工作或让 `traceroute` 输出合理的内容，
+
 84 我们应该寻找其他解决方案。
 
 85 解决方案之一是解析数据包以检测由我们的节点创建的内部封装。这是困难的甚至是不可能的，特别是考虑到分片。简而言之，它完全没有丢失。
 
-86 当前解决方案：解决方案出乎意料地简单，我们对预配置了跳数的隧道强制设置 DF 标志，仅此而已。嗯，它并不能完全消除问题，但网络流量的指数级增长变成了线性增长（在 mtu 被裁剪的地方），并且隧道 mtu 降低到 <，此时循环停止。
+86 当前解决方案：解决方案出乎意料地简单，我们对预配置了跳数的隧道强制设置 `DF` 标志，仅此而已。嗯，它并不能完全消除问题，但网络流量的指数级增长变成了线性增长（在 `mtu` 被裁剪的地方），并且隧道 `mtu` 降低到 <，此时循环停止。
 
-87 是的，如果存在一个在封装具有 DF 标志的数据包时并不强制执行 DF 的路由器，那就不好。但这不是我们的问题！没有人能指责我们，我们已经尽了所能。即使被注入网络中，即使是静态路由，你也是无辜的 :-)
+87 是的，如果存在一个在封装具有 `DF` 标志的数据包时并不强制执行 `DF` 的路由器，那就不好。但这不是我们的问题！没有人能指责我们，我们已经尽了所能。即使被注入网络中，即使是静态路由，你也是无辜的 :-)
 
-88 3. 真的，ipv4/ipip.c、ipv4/ip_gre.c 和 ipv6/sit.c 包含几乎相同的代码。将它们整合在一起会很好，但目前还不清楚如何让它们模块化。sit 是 IPv6 的不可组成部分，ipip 和 gre 天生上是模块化的。我们可以将共同部分（哈希表、ioctl 等）提取到单独模块中（ip_tunnel.c/06c1ba8be5c1c4aa63e1261e2ebd_0.png）。
+88 3. 真的，`ipv4/ipip.c`、`ipv4/ip_gre.c` 和 `ipv6/sit.c` 包含几乎相同的代码。将它们整合在一起会很好，但目前还不清楚如何让它们模块化。`sit` 是 IPv6 的不可组成部分，`ipip` 和 `gre` 天生上是模块化的。我们可以将共同部分（哈希表、`ioctl` 等）提取到单独模块中（`ip_tunnel.c/06c1ba8be5c1c4aa63e1261e2ebd_0.png`）。
 
 ```c
-116 static int ipgre_tunnel_init(struct net_device *dev);
-118 /* Fallback 隧道：无源、目的地、无密钥、无选项
-120 static int ipgre_fb_tunnel_init(struct net_device *dev);
-122 static struct net_device ipgre_fb_tunnel_dev = {
-123 "gre0", 0x0, 0x0, 0x0, 0, 0, NULL, ipgre_tunnel_init,
-124 };
-126 static struct ip_tunnel ipgre_fb_tunnel = {
-127 NULL, &ipgre_fb_tunnel_dev, {0}, 0, 0, 0, 0, "gre0"},
-128 };
+static int ipgre_tunnel_init(struct net_device *dev);
+
+/* Fallback 隧道：无源、目的地、无密钥、无选项
+static int ipgre_fb_tunnel_init(struct net_device *dev);
+static struct net_device ipgre_fb_tunnel_dev = {
+"gre0", 0x0, 0x0, 0x0, 0, 0, NULL, ipgre_tunnel_init,
+};
+static struct ip_tunnel ipgre_fb_tunnel = {
+NULL, &ipgre_fb_tunnel_dev, {0}, 0, 0, 0, 0, "gre0"},
+};
 ```
 
 # 404 TCP/IP 与 Linux协议实现
@@ -19415,7 +19994,7 @@ static struct ip_tunnel *tunnel[4][HASH_SIZE];
 #define tunnels_wc (tunnels[0])
 
 static rwlock_t ipgre_lock;
-```图 6.284 GRE 隧道哈希函数：linux/net/ipv4/ip_gre.c。
+```图 6.284 GRE 隧道哈希函数：`linux/net/ipv4/ip_gre.c`。
 
 /* 给定 */
 
@@ -19439,7 +20018,7 @@ if (ipgre_fb_tunnel->flags&IFF_UP) {
     return &ipgre_fb_tunnel;
 }
 return NULL;
-```图 6.285 GRE 隧道——哈希桶：linux/net/ipv4/ip_gre.c
+```图 6.285 GRE 隧道——哈希桶：`linux/net/ipv4/ip_gre.c`
 
 ```c
 static struct ip_tunnel **ipgre_bucket(struct ip_tunnel *t) {
@@ -19457,7 +20036,7 @@ static struct ip_tunnel **ipgre_bucket(struct ip_tunnel *t) {
     }
     return tunnels[prio][h];
 }
-```图 6.286 GRE 隧道——link/unlink 项：linux/net/ipv4/ip.gre.c
+```图 6.286 GRE 隧道——link/unlink 项：`linux/net/ipv4/ip.gre.c`
 
 ```c
 static void ipgre_tunnel_link(struct ip_tunnel *t) {
@@ -19481,6 +20060,8 @@ static void ipgre_tunnel_unlink(struct ip_tunnel *t) {
 ```
 
 # 406 TCP/IP 与 Linux协议实现
+
+
 
 ```c
 static struct ip_tunnel *ipgre_tunnel_locate(struct ip_tunnel *parms, int create) {
@@ -19572,10 +20153,6 @@ static void ipgre_tunnel_init(struct net_device *dev) {
 
 图 6.289 GRE 隧道-接收用：linux/net/ipv4/ip_gre.c。
 
-
-
-
-
 # 408 TCP/IP 与 Linux 协议实现
 
 ```c
@@ -19637,6 +20214,8 @@ static void ipgre_tunnel_init(struct net_device *dev) {
 
 # 图 6.291 GRE 隧道接收用例：linux/net/ipv4/ip_gre.c
 
+
+
 ```c
 if (tunnel->parms.i_flags&GRE_SEQ) {
     if ((flags&GRE_SEQ)) {
@@ -19667,13 +20246,17 @@ return(0);
 }
 icmp_send(skb, ICMP_DEST_UNACH, ICMP_PROTO_UNACH, 0);
 drop:
+```
 
 # 图 6.292 GRE 隧道发送封装：linux/net/ipv4/ip_gre.c
 
 ```c
 /* 需要这个封装器是因为 NFHOOK 获取了地址 */
+
 static inline int do_ip_send(struct sk_buff *skb) {
+
     return send(skb);
+
 }
 ```
 
@@ -19681,57 +20264,93 @@ static inline int do_ip_send(struct sk_buff *skb) {
 
 ## GRE 隧道中的数据传输
 
-图 6.293 GRE 隧道传输用例：linux/net/ipv4/ip_gre.c。
+图 6.293 GRE 隧道传输用例：`linux/net/ipv4/ip_gre.c`。
 
 ```c
 static int ipgre_tunnel_xmit(struct sk_buff *skb, struct net_device *dev) {
+
   struct ip_tunnel *tunnel = (struct ip_tunnel*)dev->priv;
+
   struct net_device_stats *stats = &tunnel->stat;
+
   struct iphdr *old_iph = skb->iph;
+
   struct iphdr *tip;
+
   u8 tos;
+
   u16 df;                                     /* 往目标主机 */
+
   struct rtable *idev;                        /* 往设备 */
+
   struct iphdr *tip;                          /*  IP 头 */
+
   int max_headroom;                           /* 需要额外的头 */
+
   int gre_hlen;
+
   u32 dt;
+
   int mtu;
 
   if (tunnel->collisions) {
+
     tunnel->stat.collisions++;
+
     goto tx_error;
+
   }
 
   if (dev->hard_header) {
+
     gre_hlen = 0;
+
     tip = (struct iphdr*)skb->data;
+
   } else {
+
     gre_hlen = tunnel->hlen;
+
     tip = tunnel->parms->iph;
+
   }
 
   if ((dst = tip->daddr) == 0) {
+
     /* 隧道 */
+
     if (skb->dst == NULL) {
+
       tunnel->stat.fifo_errors++;
+
       goto tx_error;
+
     }
+
   }
 ```
 
-图 6.294 GRE 隧道传输用例：linux/net/ipv4/ip_gre.c。
+图 6.294 GRE 隧道传输用例：`linux/net/ipv4/ip_gre.c`。
 
 ```c
 if ((skb->protocol == htonsons(ETH_P_IP)) {
+
   rt = (struct rtable*)skb->dst;
+
   if ((dst = rt->gateway) == 0) {
+
     goto tx_error_icmp;
+
   }
+
 }
+
 #ifdef CONFIG_IPV6
+
 else if (skb->protocol == htonsons(ETH_P_IPV6)) {
+
   struct in6_addr *addr6;
+
   int addr_type;
 ```
 
@@ -19739,53 +20358,91 @@ else if (skb->protocol == htonsons(ETH_P_IPV6)) {
 
 ```c
   if (neigh == NULL) {
+
     goto tx_error;
+
   }
+
   addr6 = (struct in6_addr*)&neigh->primary_key;
+
   addr_type = ipv6_addr_type(addr6);
+
   if (addr_type == IPv6_ADDR_ANY) {
+
     addr6 = skb->nh->ipv6->daddr;
+
     addr_type = ipv6_addr_type(addr6);
+
   }
+
   if ((addr_type & IPv6_ADDR_COMPAT) == 0) {
+
     goto tx_error_icmp;
+
   }
+
   dst = skb->s_addr[3];
+
 }
+
 #endif
+
   else {
+
     goto tx_error;
+
   }
 
   tos = tip->tos;
+
   if (tos) {
+
     if (skb->protocol == htonsons(ETH_P_IP)) {
+
       tos = old_iph->tos;
+
       tos &= 1;
+
     }
+
   }
+
   if (ip_route_output(rt, dst->saddr, RT_COS(tos), tunnel->parms.link)) {
+
     tunnel->stat.carrier_errors++;
+
     goto tx_error;
+
   }
 
   tdev = rt->u.dst.dev;
+
   if (tdev == dev) {
+
     ip_rt_put(rt);
+
     tunnel->stat.collisions++;
+
     goto tx_error;
+
   }
+
 }
 ```
 
-图 6.295 GRE 隧道传输用例：linux/net/ipv4/ip_frag.gre。
+图 6.295 GRE 隧道传输用例：`linux/net/ipv4/ip_frag.gre`。
 
 ```c
 df = tip->frag_off;
+
 mtu = rt->u.dst.pmtu - tunnel->hlen;
+
 if (skb->protocol == htonsons(ETH_P_IP)) {
+
   skb->dst->pmtu = mtu;
+
 }
+
 df = (old_iph->frag_off & htonsons(IP_DF));
 ```
 
@@ -19793,31 +20450,54 @@ df = (old_iph->frag_off & htonsons(IP_DF));
 
 ```c
     if ((old_iph->frag_off & htonsons(IP_DF))) {
+
         mtu < ntohl(old_iph->to_len);
+
         icmp_send(skb, ICMP_DEST_UNACH, ICMP_FRAG_NEEDED, mtu);
+
         ip_rt_put(rt);
+
         goto tx_error;
+
     }
+
     #ifdef CONFIG_IPV6
+
     else if (skb->protocol == htonsons(ETH_P_IPV6)) {
+
         struct rt_info *rt6 = (struct rt_info*)skb->dst;
+
         if (rt6->dst->pmtu == IPv6_MIN_MTU) {
+
             if ((tunnel->iph.daddr & MULTICAST)) {
+
                 rt6->flags |= RTF_MODIFIED;
+
                 skb->dst->pmtu = mtu;
+
             }
+
         }
+
     }
+
     if (mtu > IPv6_MIN_MTU <= skb->len - tunnel->hlen + gre_hlen) {
+
         icmp_send(skb, ICMP_V6_PKT_TO_BIG, 0, mtu);
+
         ip_rt_put(rt);
-        goto tx_error;
-    }
-#endif
 ```
 
-图 6.296 GRE 隧道传输用例：linux/net/ipv4/ip.gre。
 
+
+        goto tx_error;
+
+    }
+
+#endif
+
+```
+图 6.296 GRE 隧道传输用例：`linux/net/ipv4/ip.gre`。
 ```c
     if (tunnel->err_count > 0) {
         if (jiffies - tunnel->err_time < IPTIME_TIMEOUT) {
@@ -19842,7 +20522,6 @@ df = (old_iph->frag_off & htonsons(IP_DF));
 ```
 
 # 413 基础设施协议
-
 ```c
 if (skb->skb) {
     skb_set_owner_v(new_skb, skb);
@@ -19855,8 +20534,7 @@ dst_release(skb);
 skb->dst = &rt->dst;
 ```
 
-# 图 6.297 GRE 隧道传输用例：gre.c。
-
+# 图 6.297 GRE 隧道传输用例：`gre.c`。
 ```c
 /*
  * 下推并安装 IPIP 头。
@@ -19869,7 +20547,6 @@ iph->protocol = IPPROTO_GRE;
 iph->tos = ip_gre_encapsulate(tos, old_iph, skb);
 iph->daddr = rt_dst;
 iph->saddr = rt_src;
-
 if ((iph->ttl == old_iph->ttl) == 0) {
     if (skb->protocol == htonsons(ETH_P_IP))
         iph->ttl = old_iph->ttl;
@@ -19881,13 +20558,11 @@ else if (skb->protocol == htonsons(ETH_P_IPV6))
 else
     iph->ttl = sysctl_ip_default_ttl;
 }
-
 if ((u16*)iph->i[0]) == tunnel->pars.flags;
     ((u16*)iph->i[1]) = skb->protocol;
 ```
 
-# 图 6.298 GRE 隧道传输用例：gre.c。
-
+# 图 6.298 GRE 隧道传输用例：`gre.c`。
 ```c
 if (tunnel->pars.flags&GRE_KEY(GRE_CSUM)) {
     u32 *ptr = (u32*)(((u8*)iph) + tunnel->hlen - 4);
@@ -19899,19 +20574,14 @@ if (tunnel->pars.flags&GRE_KEY(GRE_CSUM)) {
 }
 ```
 
-
-
-
-
 # 414 TCP/IP 与 Linux 协议实现
-
 ```c
 850      } 
 851      if (tunnel->parms.o_flags&GRE_KEY) {
 852          *ptr = tunnel->parms.o_key;
 853          ptr--;
 854      }
-855      
+      
 856      if (tunnel->parms.o_flags&GRE_CSUM) {
 857          *ptr = 0;
 858          *(u16*)ptr = compute_csum(void*)(ipb+1), skb->len - sizeof(struct
@@ -19944,12 +20614,11 @@ if (tunnel->pars.flags&GRE_KEY(GRE_CSUM)) {
 
 当 ICMP 消息从隧道内部或外部产生时，需要对其产生原因进行仔细映射。
 
-**图 6.299** 隧道--错误/ICMP 案例：linux/net/ipv4/ip_gre.c。
-
+**图 6.299** 隧道--错误/ICMP 案例：`linux/net/ipv4/ip_gre.c`。
 ```c
 316  void ipgre_err(struct sk_buff *skb, unsigned char *dp, int len)
 317  {
-318      #ifdef I_IF_WISH_WORD_PER_PERFECT
+      #ifdef I_IF_WISH_WORD_PER_PERFECT
 320      /* 遗憾的是：-( 所有路由器（除 Linux 之外）只返回
 321          8 字节的包载负载。这意味着在真实的互联网中
 322          精确中继 ICMP 是绝对不可行的。
@@ -19978,7 +20647,12 @@ if (tunnel->pars.flags&GRE_KEY(GRE_CSUM)) {
 348          grehlen += 4;
 349          }
 350      }
-352      /* 如果只返回了 8 字节，密钥消息将被丢弃 */
+      /* 如果只返回了 8 字节，密钥消息将被丢弃 */
+```
+
+
+
+```c
 353      if (len < grehlen) {
 354          return;
 356      switch (type) {
@@ -19990,16 +20664,16 @@ if (tunnel->pars.flags&GRE_KEY(GRE_CSUM)) {
 362      switch (code) {
 363      case ICMP_SR_FAILED:
 364      case ICMP_PORT_REACH:
-365          /* 不可能事件。 */
-366          return;
+          /* 不可能事件。 */
+          return;
 367      case ICMP_FRAG_NEEDED:
-368          /* 软状态 pmtu 由 IP 核心维护。 */
-369          return;
+          /* 软状态 pmtu 由 IP 核心维护。 */
+          return;
 370      default:
-371          /* 其他所有情况都被转换为 HOST_REACH，
-372          rfc2003 包含了关于 NET_REACH 的“深度思考”，
-373          我认为它们只是以太网污染。
-374      */
+          /* 其他所有情况都被转换为 HOST_REACH，
+          rfc2003 包含了关于 NET_REACH 的“深度思考”，
+          我认为它们只是以太网污染。
+      */
 375  break;
 376  break;
 377  case ICMP_TIME_EXEDED:
@@ -20008,18 +20682,15 @@ if (tunnel->pars.flags&GRE_KEY(GRE_CSUM)) {
 380  break;
 381  }
 ```
-
-图 6.301 GRE 隧道--错误/ICMP 案例：linux/net/ipv4/ip_gre.c。
+图 6.301 GRE 隧道--错误/ICMP 案例：`linux/net/ipv4/ip_gre.c`。
 
 ```c
 read_lock(&ipgre_lock);
-t = ipgre_tunnel_lookup(iph->daddr, iph->saddr, (flags&GRE_KEY) ? 7 * ((u32*)p) + (grehlen>>2) : 0;
+t = ipgre_tunnel_lookup(iph->daddr, iph->saddr, (flags&GRE_KEY) ? 7 * ((u32*)p) + (grehlen>>2) : 0);
 if (t->parms == NULL || t->parms.daddr == 0 || MULTICAST(t->parms.daddr))
 goto out;
-
 if (t->parms.ttl == 0 && type == ICMP_TIME_EXEDED)
 goto out;
-
 if (jiffies - t->err_time < TUNNEL_TIMEOUT)
 t->err_count++;
 else
@@ -20097,7 +20768,7 @@ switch (type) {
 }
 ```
 
-图 6.304 GRE 隧道--错误/ICMP 案例：linux/net/ipv4/ip_gre.c。
+图 6.304 GRE 隧道--错误/ICMP 案例：`linux/net/ipv4/ip_gre.c`。
 
 ```c
 /* 准备伪 skb 馈给 icmp_seed */
@@ -20134,31 +20805,47 @@ if (rt->rt_flags&RTCF_LOCAL) {
 /* 更改此路由的 mtu */
 if (type == ICMP_DEST_REACH && code == ICMP_FRAG_NEEDED) {
   if (rel_info && skb2->dst->pmtu) {
-    free_skb(skb2);
-    return;
-  }
-  skb2->dst->pmtu = rel_info;
-  rel_info = btom(rel_info);
-} else if (type == ICMP_TIME_EXEDED) {
-  struct ip_tunnel *t = (struct tunnel*)skb2->dev;
-  if (t->parms.iph) {
-    rel_type = ICMP_DEST_REACH;
-    rel_code = ICMP_HOST_REACH;
-  } 
-  icmp_send(skb2, rel_type, rel_info);
-  free_skb(skb2);
-}
-#endif
-}
 ```
 
 
 
+```c
+    free_skb(skb2);
 
+    return;
+
+  }
+
+  skb2->dst->pmtu = rel_info;
+
+  rel_info = btom(rel_info);
+
+} else if (type == ICMP_TIME_EXEDED) {
+
+  struct ip_tunnel *t = (struct tunnel*)skb2->dev;
+
+  if (t->parms.iph) {
+
+    rel_type = ICMP_DEST_REACH;
+
+    rel_code = ICMP_HOST_REACH;
+
+  } 
+
+  icmp_send(skb2, rel_type, rel_info);
+
+  free_skb(skb2);
+
+}
+
+#endif
+
+}
+```
 
 ## GRE ioctl
 
-图 6.307 GRE 隧道--ioctl 入口处理器: linux/net/ipv4/ip.gre。
+图 6.307 GRE 隧道--ioctl 入口处理器: `linux/net/ipv4/ip.gre`。
 
 ```c
 static int
@@ -20187,7 +20874,7 @@ ipgre_tunnel_ioctl(struct net_device *dev, struct ifreq *ifr, int cmd)
     }
 ```
 
-图 6.308 GRE 隧道--ioctl 入口处理器: linux/net/ipv4/ip.gre。
+图 6.308 GRE 隧道--ioctl 入口处理器: `linux/net/ipv4/ip.gre`。
 
 ```c
 case SIOCDTUNNEL:
@@ -20195,11 +20882,9 @@ case SIOCGETTUNNEL:
     err = -EPERM;
     if (!capable(CAP_NET_ADMIN))
         goto done;
-
     err = -EFAULT;
     if (copy_from_user(&p, ifr->ifr_ifru.data, sizeof(p)))
         goto done;
-
     err = -EINVAL;
     if (p.ip.version == 4 || p.ip.protocol == IPPROTO_GRE)
         p.ip.ihl = 5 | (p.ip.frag_off & ~constant_htons(IP_DF)) |
@@ -20207,17 +20892,15 @@ case SIOCGETTUNNEL:
             goto done;
     if (p.ip.ttl)
         p.ip.frag_off = ~constant_htons(IP_DF);
-
 if (p.i_flags&GRE_KEY)
-
 928 p.i_key = 0;
 929 if (!p.o_flags&GRE_KEY)
 930 p.o_key = 0;
-931
+
 932 t = ipgre_tunnel_locate(&p, cmd == SIOCADDTUNNEL);
 ```
 
-**图 6.309** GRE 隧道--ioctl 入口处理器: linux/net/ipv4/ip_gre.c。
+**图 6.309** GRE 隧道--ioctl 入口处理器: `linux/net/ipv4/ip_gre.c`。
 
 ```c
 934 if (dev != &ipgre_fb_tunnel_dev && cmd == SIOCGTUNNEL && &&)
@@ -20230,13 +20913,14 @@ if (p.i_flags&GRE_KEY)
 941 } else {
 942 unsigned nflags=0;
 944
+
 944 t = (struct ip_tunnel*)dev->priv;
-945
+
 946 if (MULTICAST(p.iph.daddr)) 
 947 nflags = IFF_BROADCAST;
 948 else if (p.iph.daddr)
 949 nflags = IFF_POINTTOPOINT;
-950
+
 951 if ((dev->flags)&(IFF_POINTTOPOINT|IFF_BROADCAST)) {
 952 err = -EINVAL;
 953 break;
@@ -20249,12 +20933,12 @@ if (p.i_flags&GRE_KEY)
 960 memcopy(dev->dev_addr, &p.iph.saddr, 4);
 961 memcopy(dev->broadcast, &p.iph.daddr, 4);
 962 ipgre_tunnel_link(t);
-963
+
 964 netdev_state_change(dev);
 965 }
 ```
 
-**图 6.310** GRE 隧道--ioctl 入口处理器: linux/net/ipv4/ip_gre.c。
+**图 6.310** GRE 隧道--ioctl 入口处理器: `linux/net/ipv4/ip_gre.c`。
 
 ```c
 967 if (t) {
@@ -20297,7 +20981,7 @@ done:
 
 ## GRE 广播
 
-**图 6.311** GRE 隧道--广播支持: linux/net/ipv4/ip_gre.c。
+**图 6.311** GRE 隧道--广播支持: `linux/net/ipv4/ip_gre.c`。
 
 ```c
 #ifdef CONFIG_IPGRE_BROADCAST
@@ -20306,44 +20990,66 @@ done:
 只要组播路由已调好。
 我以前没想过这个，
 所以我得把 ORD_IPGRE 设置为一个随机值。
-我印象 Cisco 可以实现类似的功能，
-但这个功能在 IOS 中显然缺失了（@）。
-1033 设置 10.66.66/24 和 fec0:6666:6666::0 作为虚拟网络
-1034 使用 224.66.66.66。如果你有 mbone 的访问权限，可以跟我玩玩 :-
-1035
-1036 ping -t 255 224.66.66.66
-1037 mbone 没有响应。
-1038
-1040 ip tunnel add mode 224.66.66.66。如果你有 mbone 的访问权限，可以跟我玩玩 :-
-1041 ip tunnel add mode 224.66.66.66。如果你有 mbone 的访问权限，可以跟我玩玩 :-
-1042 ip tunnel add mode 224.66.66.66。如果你有 mbone 的访问权限，可以跟我玩玩 :-
-1043 ip tunnel add mode 224.66.66.66。如果你有 mbone 的访问权限，可以跟我玩玩 :-
-1044 ip tunnel add mode 224.66.66.66。如果你有 mbone 的访问权限，可以跟我玩玩 :-
-1045 ip tunnel add mode 224.66.66.66。如果你有 mbone 的访问权限，可以跟我玩玩 :-
-1046 ip tunnel add mode 224.66.66.66。如果你有 mbone 的访问权限，可以跟我玩玩 :-
-1047 ip tunnel add mode 224.66.66.66。如果你有 mbone 的访问权限，可以跟我玩玩 :-
-...（省略重复内容）...
-312 GRE tunnels--broadcast support: linux/net/ipv4/ip_gre.c linux/net/ipv4/ip_gre.c。
-...（省略重复内容）...
-1078 <你的真实地址>
-...（省略重复内容）...
-ipheader(struct net_device *dev)
 ```
 
 
 
+我印象 Cisco 可以实现类似的功能，
+
+但这个功能在 IOS 中显然缺失了（@）。
+
+1033 设置 10.66.66/24 和 fec0:6666:6666::0 作为虚拟网络
+
+1034 使用 224.66.66.66。如果你有 mbone 的访问权限，可以跟我玩玩 :-
+
+1035
+
+1036 `ping -t 255 224.66.66.66`
+
+1037 mbone 没有响应。
+
+1038
+
+1040 `ip tunnel add mode 224.66.66.66`。如果你有 mbone 的访问权限，可以跟我玩玩 :-
+
+1041 `ip tunnel add mode 224.66.66.66`。如果你有 mbone 的访问权限，可以跟我玩玩 :-
+
+1042 `ip tunnel add mode 224.66.66.66`。如果你有 mbone 的访问权限，可以跟我玩玩 :-
+
+1043 `ip tunnel add mode 224.66.66.66`。如果你有 mbone 的访问权限，可以跟我玩玩 :-
+
+1044 `ip tunnel add mode 224.66.66.66`。如果你有 mbone 的访问权限，可以跟我玩玩 :-
+
+1045 `ip tunnel add mode 224.66.66.66`。如果你有 mbone 的访问权限，可以跟我玩玩 :-
+
+1046 `ip tunnel add mode 224.66.66.66`。如果你有 mbone 的访问权限，可以跟我玩玩 :-
+
+1047 `ip tunnel add mode 224.66.66.66`。如果你有 mbone 的访问权限，可以跟我玩玩 :-
+
+...（省略重复内容）...
+
+312 GRE tunnels--broadcast support: `linux/net/ipv4/ip_gre.c` `linux/net/ipv4/ip_gre.c`。
+
+...（省略重复内容）...
+
+1078 <你的真实地址>
+
+...（省略重复内容）...
+
+`ipheader(struct net_device *dev)`
 
 ## 426 TCP/IP 和 Linux 协议实现
 
 ```c
 struct rtable *rt;
+
 if (!ip_route_output(&rt, ip->daddr, ip->saddr, RT_TOS(ip->tos), tunnel->parms.
 link)) {
  tdev = rt->u.dst;
  ip_rt_put(rt);
 }
-dev->flags |= IFF_POINTTOPOINT;
 
+dev->flags |= IFF_POINTTOPOINT;
 #ifdef CONFIG_IPRE_BROADCAST
 if (MULTICAST(ip->daddr)) {
  if (ip->saddr) {
@@ -20355,7 +21061,6 @@ dev->flags |= IFF_BROADCAST;
 }
 }
 #endif
-
 if (tdev && tunnel->parms.link) {
  tdev = _dev_get_by_index(tunnel->parms.link);
 }
@@ -20364,7 +21069,6 @@ if (tdev) {
  mtu = dev->mtu;
 }
 dev->ifflink = tunnel->parms.link;
-
 /* 预计算 GRE 选项长度 */
 if (tunnel->parms.o_flags&(GRE_CSUM|GRE_KEY|GRE_SEQ)) {
  if (tunnel->parms.o_flags&GRE_CSUM)
@@ -20381,17 +21085,15 @@ return 0;
 }
 ```
 
-图 6.317 GRE隧道——隧道初始化：linux/net/ipv4/ip_gre.c。
+图 6.317 GRE隧道——隧道初始化：`linux/net/ipv4/ip_gre.c`。
 
-图 6.318 GRE隧道——模块初始化：linux/net/ipv4/ip_gre.c。
+图 6.318 GRE隧道——模块初始化：`linux/net/ipv4/ip_gre.c`。
 
 ```c
 #ifdef MODULE
 static int ipre_fb_tunnel_open(struct net_device *dev)
 {
-
     MOD_INC_USE_COUNT;
-
 ****
 ```
 
@@ -20407,27 +21109,23 @@ static int ipre_fb_tunnel_open(struct net_device *dev)
 1215      return 0;
 1216      }
 1217  #endif
-
 1218
 1219  int __init_ipgre_fb_tunnel_init(struct net_device *dev)
 1220  {
 1221      struct ip_tunnel *tunnel = (struct ip_tunnel*)dev->priv;
 1222      struct ipphr *iphdr;
-
 1223
 1224      ipgre_tunnel_init_gen(dev);
 1225  #ifdef MODULE
 1226      dev->open       = ipgre_fb_tunnel_open;
 1227      dev->stop       = ipgre_fb_tunnel_close;
 1228  #endif
-
 1229
 1230      struct iphdr = #ipgre_fb_tunnel.parms.iphdr;
 1231      iphdr->version  = 4;
 1232      iphdr->protocol = IPPROTO_GRE;
 1233      iphdr->hl        = 6;
 1234      tunnel->hlen    = sizeof(struct iphdr) + 4;
-
 1235
 1236      dev_hold(dev);
 1237      tunnels[0]   =ipgre_fb_tunnel;
@@ -20435,7 +21133,7 @@ static int ipre_fb_tunnel_open(struct net_device *dev)
 1239  }
 ```
 
-**图 6.319 GRE隧道协议设置：linux/net/ipv4/ipgre.c。**
+图 6.319 GRE隧道协议设置：`linux/net/ipv4/ipgre.c`。
 
 ```c
 1242  static struct inet_protocol ipgre_protocol = {
@@ -20475,15 +21173,21 @@ static int ipre_fb_tunnel_open(struct net_device *dev)
 1274     return 0;
 1275 }
 1276 #ifdef MODULE
-1277 
-1278 void cleanup_module(void)
-1279 {
-1280     if ( inet_del_protocol(&ipgre_protocol) < 0 )
-1281         printk(KERN_INF "ipgre: 无法移除协议\n");
-1282 
-1283     unregister_netdev(&ipgre_fb_tunnel_dev);
-1284 }
+```
+
+
+
+`1278 void cleanup_module(void)`
+
+```
+{
+    if ( inet_del_protocol(&ipgre_protocol) < 0 )
+        printk(KERN_INF "ipgre: 无法移除协议\n");
+
+    unregister_netdev(&ipgre_fb_tunnel_dev);
+}
 #endif
+```
 
 ## 6.9 IPv6 版本
 
@@ -20493,11 +21197,8 @@ static int ipre_fb_tunnel_open(struct net_device *dev)
 
 ```c
 /* IPv6 头部 */
-* IPv6 固定头部
-* 
-* 注意：这里的写法是错误的。flow_lbl 的前 4 位
-* 现在与 priority 结合，形成了“类”。
-```c
+/* IPv6 固定头部 */
+/* 注意：这里的写法是错误的。flow_lbl 的前 4 位 现在与 priority 结合，形成了“类”。 */
 struct ipv6hdr {
     if defined(__LITTLE_ENDIAN_BITFIELD)
         __u8 priority:4,
@@ -20516,7 +21217,7 @@ struct ipv6hdr {
 };
 ```
 
-INET  族的 IPv6 接口头部：
+INET 族的 IPv6 接口头部：
 
 ```c
 #define SIN6_LEN 24
@@ -20539,7 +21240,7 @@ INET  族的 IPv6 接口头部：
 
 430 TCP/IP 和 Linux 协议实现
 
-图 6.322 IPv6 地址族信息：linux/include/net/ipv6.h。
+图 6.322 IPv6 地址族信息：`linux/include/net/ipv6.h`。
 
 ```c
 #define IPv6_DEFAULT_HOPLIMIT 64
@@ -20586,7 +21287,7 @@ INET  族的 IPv6 接口头部：
 #define IPv6_ADDR_9 0x1f
 ```
 
-图 6.323 IPv6 分片头部：linux/include/ipv6.h。
+图 6.323 IPv6 分片头部：`linux/include/ipv6.h`。
 
 ```c
 struct frag_hdr {
@@ -20596,7 +21297,7 @@ struct frag_hdr {
 };
 ```
 
-图 6.324 IPv6 接口头部：linux/include/net/ipv6.h。
+图 6.324 IPv6 接口头部：`linux/include/net/ipv6.h`。
 
 ```c
 struct in6_ifaddr {
@@ -20611,18 +21312,16 @@ struct in6_ifaddr {
 };
 ```
 
-图 6.325 IPv6 组播结构：linux/include/net/if_inet6.h。
+图 6.325 IPv6 组播结构：`linux/include/net/if_inet6.h`。
 
 ```c
 struct ipv6_socklist {
     struct in6_addr addr;
     int ifindex;
 };
-
 #define MAF_RUNNING 0x01
 #define MAF_LAST 0x02
 #define MAF_LOADED 0x04
-
 struct ifmc {
     struct in6_addr m_addr;
     struct in6_ifaddr *idev;
@@ -20634,7 +21333,7 @@ struct ifmc {
 };
 ```
 
-图 6.326 IPv6 设备配置：linux/include/net/if_inet6.h。
+图 6.326 IPv6 设备配置：`linux/include/net/if_inet6.h`。
 
 ```c
 struct ipv6_devconf {
@@ -20648,12 +21347,11 @@ struct ipv6_devconf {
     int rtr_solicits;
     int rtr_solicit_interval;
     int rtr_solicit_delay;
-
     void *sysctl();
 };
 ```
 
-图 6.327 IPv6 设备数据：linux/include/net/if_inet6.h。
+图 6.327 IPv6 设备数据：`linux/include/net/if_inet6.h`。
 
 ```c
 struct inet6_dev {
@@ -20663,15 +21361,21 @@ struct inet6_dev {
     rlock_t lock;
     atomic_t refcnt;
     unsigned32 if_flags;
-    int dead;
-
-    struct neigh_parms *nd_parms;
-    struct inet6_dev *next;
-    struct ipv6_devconf cnf;
-};
 ```
 
-图 6.328 以太网到 IPv6 映射：linux/include/net/if_inet6.h。
+
+
+`int dead;`
+
+`struct neigh_parms *nd_parms;`
+
+`struct inet6_dev *next;`
+
+`struct ipv6_devconf cnf;`
+
+};
+
+图 6.328 以太网到 IPv6 映射：`linux/include/net/if_inet6.h`。
 
 ```c
 static inline void ipv6_eth_mc_map(struct in6_addr *addr, char *buf)
@@ -20684,10 +21388,6 @@ static inline void ipv6_eth_mc_map(struct in6_addr *addr, char *buf)
 }
 ```
 
-
-
-
-
 # 基础设施协议 433
 
 118
@@ -20698,7 +21398,6 @@ buf[0]= 0x33;
 120
 buf[1]= 0x33;
 ```
-
 ```
 121
 122
@@ -20709,7 +21408,7 @@ buf[1]= 0x33;
 
 ## 6.9.2 IPv6 API
 
-图 6.329 IPv6 API–地址族：linux/include/linux/in6.h。
+图 6.329 IPv6 API–地址族：`linux/include/linux/in6.h`。
 
 ```
 26  /*
@@ -20741,7 +21440,7 @@ buf[1]= 0x33;
 49  };
 ```
 
-图 6.330 IPv6 API–多播程序员接口：linux/include/linux/in6.h。
+图 6.330 IPv6 API–多播程序员接口：`linux/include/linux/in6.h`。
 
 ```
 51  struct ipv6_mreq {
@@ -20757,7 +21456,7 @@ buf[1]= 0x33;
 
 流标签（Flow labels）由应用程序程序员设置——其操作方法在 IPRoute2 文档中描述。
 
-**图 6.331** IPv6 API—流标签程序员接口：linux/include/linux/in6.h。
+**图 6.331** IPv6 API—流标签程序员接口：`linux/include/linux/in6.h`。
 
 ```
 59 struct in6_flowlabel_req
@@ -20772,14 +21471,11 @@ buf[1]= 0x33;
 68     __u32 _fl_pad;
 69     /* IPv6_PKTOPTIONS 格式的选项 */
 70 };
-
 72 #define IPv6_FL_A_GET 0
 73 #define IPv6_FL_A_PUT 1
 74 #define IPv6_FL_A_RENEW 2
-
 76 #define IPv6_FL_F_CREATE 1
 77 #define IPv6_FL_F_EXCL 2
-
 79 #define IPv6_FL_S_NONE 0
 80 #define IPv6_FL_S_EXCL 1
 81 #define IPv6_FL_S_PROCESS 2
@@ -20793,7 +21489,7 @@ buf[1]= 0x33;
 
 IPv6 地址可以具有不同的范围，例如环回（loopback）、链路本地（link local）等。
 
-**图 6.332** 地址配置器——确定地址类型：linux/net/ipv6/addrconf.c。
+图 6.332 地址配置器——确定地址类型：`linux/net/ipv6/addrconf.c`。
 
 ```
 126 int ipv6_addr_type(struct in6_addr *addr)
@@ -20805,7 +21501,6 @@ IPv6 地址可以具有不同的范围，例如环回（loopback）、链路本�
 131
 132     /* 将前三位不同的所有地址
 ```
-
 ```
 133      000 和 111 视为单播地址。
 134  /*
@@ -20836,7 +21531,7 @@ IPv6 地址可以具有不同的范围，例如环回（loopback）、链路本�
 
 可以是单播、多播或任播（anycast）。它也可以兼容 IPv4。
 
-**图 6.33** 地址配置器-地址：linux/net/ipv6/addrconf.c。
+图 6.33 地址配置器-地址：`linux/net/ipv6/addrconf.c`。
 
 ```
 158  if ((st & __constant_htonl(0xFFC00000)) == __constant_htonl(0xFE800000)) {
@@ -20847,26 +21542,16 @@ IPv6 地址可以具有不同的范围，例如环回（loopback）、链路本�
 163  }
 164  if ((addr->s6_addr2[0] | addr->s6_addr2[1]) == 0) {
 165      if (addr->ind6.u.s6_addr2[2] == 0) {
-166          return IPv6_ADDR_ANY;
-167      }
-168
-169      if (addr->s6_addr2[3] == __constant_htonl(0x00000001)) {
-170          return (IPv6_ADDR_LOOPBACK | IPv6_ADDR_UNICAST);
-171      }
-172
-173      return (IPv6_ADDR_COMPAT4 | IPv6_ADDR_UNICAST);
-174  }
-175  if (addr->s6_addr2[2] == __constant_htonl(0x000ffff)) {
-176      return IPv6_ADDR_MAPPED;
-177  }
-178  return IPv6_ADDR_RESERVED;
 
-TCP/IP 和 Linux 协议实现
+
+
+### TCP/IP 和 Linux 协议实现
 
 设备上线时分配地址，离线时释放。
+
 发送数据包时，我们还需要仔细选择地址。
 
-**图 6.334** 选择 IPv6 源地址目的地址：linux/net/ipv6/addrconf.c。
+**图 6.334** 选择 IPv6 源地址目的地址：`linux/net/ipv6/addrconf.c`。
 
 ```
 /*
@@ -20900,7 +21585,7 @@ int ipv6_get_saddr(struct dst_entry *dst,
     }
 ```
 
-**图 6.335** 选择 IPv6 源地址目的地址：linux/net/ipv6/addrconf.c。
+**图 6.335** 选择 IPv6 源地址目的地址：`linux/net/ipv6/addrconf.c`。
 
 ```
 /*
@@ -20935,7 +21620,7 @@ read_unlock(&idev->lock);
 read_unlock(&addrconf_lock);
 ```
 
-**图 6.336** 选择 IPv6 源地址目的地址：linux/net/ipv6/addrconf.c。
+**图 6.336** 选择 IPv6 源地址目的地址：`linux/net/ipv6/addrconf.c`。
 
 ```
 if (scope == IFA_LINK)
@@ -20968,7 +21653,7 @@ out:
 
 多播地址管理与 IPv4 没有太大不同。还有隧道地址。通常我们根据局域网接口的 MAC 地址和路由前缀来构建。
 
-**图 6.338** 导出 IPv6 地址的 EU64 位：linux/net/ipv6/addrconf.c。
+**图 6.338** 导出 IPv6 地址的 EU64 位：`linux/net/ipv6/addrconf.c`。
 
 ```
 static int ipv6_generate_ui64(struct ui *eui, struct net_dev *dev)
@@ -20989,15 +21674,11 @@ static int ipv6_generate_ui64(struct ui *eui, struct net_dev *dev)
 }
 ```
 
-
-
-
-
 # 基础设施协议 439
 
 单播地址可以从 LAN 设备地址开始。随后可以添加一个基于路由的前缀。
 
-图 6.339 添加前缀路由：linux/net/ipv6/addrconf.c。
+**图 6.339** 添加前缀路由：`linux/net/ipv6/addrconf.c`。
 
 ```c
 static void
@@ -21024,7 +21705,37 @@ addrconf_prefix_route(struct in6_addr *pfx, int plen, struct net_device *dev,
 }
 ```
 
-图 6.340 添加前缀路由：linux/net/ipv6/addrconf.c。
+**图 6.340** 添加前缀路由：`linux/net/ipv6/addrconf.c`。
+
+```
+166          return IPv6_ADDR_ANY;
+
+167      }
+
+168
+
+169      if (addr->s6_addr2[3] == __constant_htonl(0x00000001)) {
+
+170          return (IPv6_ADDR_LOOPBACK | IPv6_ADDR_UNICAST);
+
+171      }
+
+172
+
+173      return (IPv6_ADDR_COMPAT4 | IPv6_ADDR_UNICAST);
+
+174  }
+
+175  if (addr->s6_addr2[2] == __constant_htonl(0x000ffff)) {
+
+176      return IPv6_ADDR_MAPPED;
+
+177  }
+
+178  return IPv6_ADDR_RESERVED;
+```
+
+
 
 ```c
 void addrconf_prefix_rcv(struct net_device *dev, u32 *opt, int len)
@@ -21057,7 +21768,7 @@ if (addr_type & (IPV6_ADDR_MULTICAST|IPV6_ADDR_LINKLOCAL)) {
 }
 ```
 
-**6.341** 添加前缀路由：linux/net/ipv6/addrconf.c。
+## 6.341 添加前缀路由：`linux/net/ipv6/addrconf.c`
 
 ```c
 valid_lft = ntohl(pinfo->valid);
@@ -21076,7 +21787,7 @@ if (in6_dev == NULL) {
 }
 ```
 
-**6.342** 添加前缀路由：linux/net/ipv6/addrconf.c。
+## 6.342 添加前缀路由：`linux/net/ipv6/addrconf.c`
 
 ```c
 /*
@@ -21099,7 +21810,7 @@ rt = rt6_lookup(&pinfo->prefix, NULL, dev->ifindex, i);
 if (rt & (&rt6_flags & (RTF_GATEWAY | RTF_DEFAULT)) == 0)) {
 ```
 
-# 6.343 添加前缀路由：linux/net/ipv6/addrconf.c。
+## 6.343 添加前缀路由：`linux/net/ipv6/addrconf.c`
 
 ```c
 if (rt->rt6_flags&RTF_EXPIRES) {
@@ -21146,26 +21857,42 @@ if (pinfo->prefix_len == (sizeof(struct in6_addr) - 3)) {
 printk(KERN_DEBUG, "addrconf: prefix with wrong length %d\n", pinfo->prefix_len);
 in6_dev_put(6_dev);
 return;
+```
 
-# 6.344 添加前缀路由：linux/net/ipv6/addrconf.c。
+## 6.344 添加前缀路由：`linux/net/ipv6/addrconf.c`
 
 ```c
+
 ok:
+
 ifp = ipv6_get_ifaddr(dev);
+
 if (ifp == NULL && valid_lft) {
+
     ipv6_add(in6, &addr, plen);
+
     if (ifp == NULL) {
+
         ipv6_free_ifaddr(ifp);
+
         return;
+
     }
+
     dad_start(ifp);
-}
-if (ifp && valid_lft == 0) {
-    ipv6_del(ifp);
-    ifp = NULL;
+
 }
 
-# 6.345 添加前缀路由：linux/net/ipv6/addrconf.c。
+if (ifp && valid_lft == 0) {
+
+    ipv6_del(ifp);
+
+    ifp = NULL;
+
+}
+```
+
+## 6.345 添加前缀路由：`linux/net/ipv6/addrconf.c`
 
 ```c
 if (ifp) {
@@ -21188,9 +21915,12 @@ if (ifp) {
 # IPv6 地址管理
 
 地址通过计时器管理。
+
 也可以手动管理。有很多参数可以通过系统控制：
 
-# 图 6.346 addrconf_sysctl：linux/net/ipv6/addrconf.c。
+## 图 6.346 addrconf_sysctl：`linux/net/ipv6/addrconf.c`
+
+
 
 ```c
 static struct addrconf_sysctl {
@@ -21213,7 +21943,7 @@ static struct addrconf_sysctl {
 };
 ```
 
-# 图 6.347 addrconf_sysctl：linux/net/ipv6/addrconf.c。
+# 图 6.347 addrconf_sysctl：`linux/net/ipv6/addrconf.c`。
 
 ```c
     {NET_IPV6_ACCEPT_REDIRECTS, "accept_redirects",
@@ -21233,10 +21963,6 @@ static struct addrconf_sysctl {
     &proc_dvec;};
 ```
 
-
-
-
-
 # 基础设施协议 445
 
 ```
@@ -21249,7 +21975,7 @@ static struct addrconf_sysctl {
 
 本质上，如果网络支持广播，则使用它来传播消息以发现哪些节点在线。此类消息的一个示例是邻居公告（neighbor advertisement）。它类似于 ARP，但使用了 ICMPv6 消息格式。我们只看这一个——其他的构造也类似。
 
-图 6.349 IPv6 邻居公告：linux/net/ipv6/ndisc.c。
+# 图 6.349 IPv6 邻居公告：`linux/net/ipv6/ndisc.c`。
 
 ```
 317 /*
@@ -21301,7 +22027,7 @@ static struct addrconf_sysctl {
 359  msg->icmp6.icmp6_checksum = 0;
 ```
 
-图 6.350 IPv6 邻居公告：linux/net/ipv6/ndisc.c。
+# 图 6.350 IPv6 邻居公告：`linux/net/ipv6/ndisc.c`。
 
 ```
 361  msg->icmp6.icmp6_unused = 0;
@@ -21338,7 +22064,7 @@ static struct addrconf_sysctl {
 
 入站消息可能包括路由器公告，例如：
 
-图 6.351 IPv6 路由器发现：linux/net/ipv6/ndisc.c。
+# 图 6.351 IPv6 路由器发现：`linux/net/ipv6/ndisc.c`。
 
 ```
 569  static void ndis_router_discovery(struct skb_buff *skb)
@@ -21354,6 +22080,10 @@ static struct addrconf_sysctl {
 ```
 
 # 基础设施协议 447
+
+
+
+# 448 TCP/IP 与 Linux 协议实现
 
 ```
 579
@@ -21392,7 +22122,7 @@ static struct addrconf_sysctl {
 612  if (rt == NULL && lifetime == 0) {
 ```
 
-# 448 TCP/IP 与 Linux 协议实现
+# 图 6.353 IPv6 路由器发现：linux/net/ipv6/ndisc.c。
 
 ```
 630  if (neigh == NULL) {
@@ -21411,14 +22141,12 @@ static struct addrconf_sysctl {
 643  }
 ```
 
-图 6.353 IPv6 路由器发现：linux/net/ipv6/ndisc.c。
-
 ```
 646  if (rt)
 647      rt->rt6_expires = jiffies(HZ * lifetime);
 648
 649    if (ra_msg->icmp6.icmp6_hop_limit)
-650      in_dev->cnf.hop_limit = ra_msg->icmp6_hop_limit;
+650      in_dev->cnf.hop_limit = ra_msg->icmp6.icmp6_hop_limit;
 651
 652      /*
 653        更新可达时间和重传计时器
@@ -21511,9 +22239,11 @@ static struct addrconf_sysctl {
 
 与 IPv4 类似，IPv6 输入在分用包时调用（见第 3 和第 4 章）。它到达这里：
 
-图 6.356 IPv6 接收：linux/net/ipv6/ip6.c。
+图 6.356 IPv6 接收：`linux/net/ipv6/ip6.c`。
 
-```
+
+
+```c
 54  int ipv6_rc(struct skb_buff *skb, struct net_device *dev, struct packet_type *pt)
 55  {
 56      struct ipv6hdr *hdr;
@@ -21539,9 +22269,6 @@ static struct addrconf_sysctl {
 76
 77              pkt_len = ntohs(hdr->payload_len);
 ```
-
-
-
 
 # 图 6.357 IPv6 接收：linux/net/ipv6/ipv6_input.c。
 
@@ -21580,13 +22307,13 @@ static inline int ip6_rcv_finish(struct skb *skb) {
 }
 ```
 
-# 6.9.6 IPv6 输出
+## 6.9.6 IPv6 输出
 
 输出非常直接。像往常一样，我们需要通过网络过滤器钩子。
 
 # TCP/IP 和 Linux 协议实现
 
-图 6.359 IPv6-输出：linux/net/ipv6/ipv6_output.c。
+### 图 6.359 IPv6-输出：linux/net/ipv6/ipv6_output.c。
 
 ```c
 int ipv6_output(struct skb_buff *skb)
@@ -21621,7 +22348,7 @@ int ipv6_output(struct skb_buff *skb)
 
 然后，实际工作在真正的传输中完成。
 
-图 6.360 IPv6-xmit：linux/net/ipv6/ipv6_output.c。
+### 图 6.360 IPv6-xmit：linux/net/ipv6/ipv6_output.c。
 
 ```c
 int ipv6_xmit(struct skb_buff *skb, struct net_device *dev, struct *opt)
@@ -21663,7 +22390,13 @@ if (opt->opt_flen) {
 hdr->nh->ipv6 = (struct ipv6hdr*)skb_push(skb, sizeof(struct ipv6hdr));
 ```
 
-图 6.361 IPv6-output：linux/net/ipv6/output.c。
+### 图 6.361 IPv6-output：linux/net/ipv6/output.c。
+
+
+
+等待，文中说“数据包的构建比 IPv6 选项结构要复杂一点。”
+
+# 图 6.362 IPv6-output：linux/net/ipv6/ip6_output.c
 
 ```c
 /* Fill the IPv6 header */
@@ -21678,9 +22411,7 @@ if (np) {
     hdr->nextdr = proto;
 ```
 
-等待，文中说“数据包的构建比 IPv6 选项结构要复杂一点。”
-
-# 图 6.362 IPv6-output：linux/net/ipv6/ip6_output.c。
+# 基础设施协议 457
 
 ```c
 int ip6_build_xmit(struct sock *sk, inet_getfrag_t getfrag, const void *data, {
@@ -21709,11 +22440,6 @@ int ip6_build_xmit(struct sock *sk, inet_getfrag_t getfrag, const void *data, {
             /* more frag on */
             fraghdr2->frag_off = htons(frag_off | 1);
 ```
-
-
-
-
-# 基础设施协议 457
 
 ```c
 554   return -ETUNREACH;
@@ -21786,88 +22512,89 @@ int ip6_build_xmit(struct sock *sk, inet_getfrag_t getfrag, const void *data, {
 
 图 6.366 IPv6-output：linux/net/ipv6/ipv6_output.c。
 
+
+
 ```c
 617  if (pktlen <= mtu) {
 618      struct sk_buff *skb;
 619      struct ipv6hdr *hdr;
 620      struct net_device *dev = dst->dev;
-621
-622      err = 0;
-623      if (flags&MSG_PROBE)
-624          goto out;
-625
-626      skb = sock_alloc_skb(sk, pktlen + 15 +
-627                               dev->header_len, 0);
-628                               flags & MSG_DONTWAIT, &err);
-629
-630      if (skb == NULL) {
-631          IP6_INC_STATS(IP6_Discards);
-632          goto out;
-633      }
-634
-635      skb->dst = dst_clone(dst);
-636
-637      skb_reserve(skb, (dev->header_len + 15) & ~15);
-638
-639      hdr = (struct ipv6hdr *)skb->tail;
-640      skb->ipv6 = hdr;
-641
-642      if (!sk->protinfo->af_inet.hdrincl) {
-643          ipv6_build_frag(1, sk, fl);
-644          jumbolen = sizeof(struct ipv6hdr) * pktlen;
-644
-646
-647      if (opt && jumbo) {
-648          *prev_hdr = &hdr->nexthdr;
-649          prev_hdr = ipv6_build_nfrag_opts(sk, prev_hdr, final_dst,
-650           jumbolen);
-651          if (opt && ipv6_frag_opts(sk, prev_hdr, opt)) {
-652              ipv6_build_frag_opts;
-653          }
-654      }
-655  ```
 
-图 6.367 IPv6-output：linux/net/ipv6/ip6_output.c。
+621      err = 0;
+622      if (flags&MSG_PROBE)
+623          goto out;
+
+624      skb = sock_alloc_skb(sk, pktlen + 15 +
+625                               dev->header_len, 0);
+626                               flags & MSG_DONTWAIT, &err);
+
+627      if (skb == NULL) {
+628          IP6_INC_STATS(IP6_Discards);
+629          goto out;
+630      }
+
+631      skb->dst = dst_clone(dst);
+
+632      skb_reserve(skb, (dev->header_len + 15) & ~15);
+
+633      hdr = (struct ipv6hdr *)skb->tail;
+634      skb->ipv6 = hdr;
+
+635      if (!sk->protinfo->af_inet.hdrincl) {
+636          ipv6_build_frag(1, sk, fl);
+637          jumbolen = sizeof(struct ipv6hdr) * pktlen;
+638
+
+639      if (opt && jumbo) {
+640          *prev_hdr = &hdr->nexthdr;
+641          prev_hdr = ipv6_build_nfrag_opts(sk, prev_hdr, final_dst,
+642           jumbolen);
+643          if (opt && ipv6_frag_opts(sk, prev_hdr, opt)) {
+644              ipv6_build_frag_opts;
+645          }
+646      }
+```
+图 6.367 IPv6-output：`linux/net/ipv6/ip6_output.c`。
 
 ```c
 654      skb_put(skb, length);
 655      err = getfrag(data, &hdr->saddr,
 656                            ((char *)hdr) + (pktlen - length,
 657                            opt, length);
-658
-659      if (!err) {
-660          IP6_INC_STATS(IP6_OutRequests);
-661          err = NF_HOOK(PF_INET6, NF_OUT, skb, dst->dev,
-662                          ip6_may_reroute);
-663      } else {
-664          err = -EFAULT;
-665          kfree_skb(skb);
-666      }
-667  } if (sk->protinfo->af_inet.hdrincl || jumbolen ||
-668      np->ptmsudic == IPv6_PTMSUDIC_DO) {
-669          ipv6_local_error(sk, EMSGSIZE, mtu);
-670          err = -EMSGSIZE;
-671          goto out;
-672  }
-673
-674  err = ip6_frag_xmit(sk, data, dst, fl, opt, final_dst, hlimit,
-675                               flags, length, mtu);
-676                                 
-677  
-678  /*
-679   cleanup
-680   */
-681  out:
-682      ip6_dst_store(sk, dst, fl->nl_u.ipv6.daddr == np->daddr : NULL);
-683      if (err > 0) {
-684          err = np->verr ? net_to_errno(err) : 0;
-685      return err;
-686  }
+
+658      if (!err) {
+659          IP6_INC_STATS(IP6_OutRequests);
+660          err = NF_HOOK(PF_INET6, NF_OUT, skb, dst->dev,
+661                          ip6_may_reroute);
+662      } else {
+663          err = -EFAULT;
+664          kfree_skb(skb);
+665      }
+666  } if (sk->protinfo->af_inet.hdrincl || jumbolen ||
+667      np->ptmsudic == IPv6_PTMSUDIC_DO) {
+668          ipv6_local_error(sk, EMSGSIZE, mtu);
+669          err = -EMSGSIZE;
+670          goto out;
+671  }
+
+672  err = ip6_frag_xmit(sk, data, dst, fl, opt, final_dst, hlimit,
+673                               flags, length, mtu);
+
+674  
+675  /*
+676   cleanup
+677   */
+678  out:
+679      ip6_dst_store(sk, dst, fl->nl_u.ipv6.daddr == np->daddr : NULL);
+680      if (err > 0) {
+681          err = np->verr ? net_to_errno(err) : 0;
+682      return err;
+683  }
 ```
 
-# 6.9.7 IPv6 Forward Function
+### 6.9.7 IPv6 Forward Function
 
-图 6.368 IPv6-forward：linux/net/ipv6/ip6_output.c。
+图 6.368 IPv6-forward：`linux/net/ipv6/ip6_output.c`。
 
 ```c
 720  int ip6_forward(struct sk_buff *skb)
@@ -21875,10 +22602,10 @@ int ip6_build_xmit(struct sock *sk, inet_getfrag_t getfrag, const void *data, {
 722      struct dst_entry *dst = skb->dst;
 723      struct ipv6hdr *hdr = skb->nh->ipv6;
 724      struct inet6_skb_param *opt = *(struct inet6_skb_param*)skb->cb;
-725
-726      if (ipv6_devconf.forwarding == 0 && !opt->srcrt)
-727          goto drop;
-728  }
+
+725      if (ipv6_devconf.forwarding == 0 && !opt->srcrt)
+726          goto drop;
+727  }
 ```
 
 # 4460 TCP/IP and Linux Implementation
@@ -21908,7 +22635,9 @@ if (hdr->hop_limit < 1) {
 }
 ```
 
-图 6.369 IPv6-forward：linux/net/ipv6/ip6_output.c。
+图 6.369 IPv6-forward：`linux/net/ipv6/ip6_output.c`。
+
+
 
 ```c
 /* IPv6 未提到这一点，但很明显
@@ -21951,11 +22680,7 @@ if (!err) {
 
 Socket粘接代码与 IPv4 有不同，因为 Socket 选项也不同，正如你预期的。以下是一个片段：
 
-
-
-
-
-# 基础设施协议 463
+## 基础设施协议 463
 
 ```c
 if (sk->protocol == IPPROTO_TCP) {
@@ -21999,7 +22724,7 @@ if (sk->protocol == IPPROTO_TCP) {
     goto e_inval;
 ```
 
-图 6.373 IPv6 socket 设置套接选项：linux/net/ipv6/ipv6_glue.c。
+图 6.373 IPv6 socket 设置套接选项：`linux/net/ipv6/ipv6_glue.c`。
 
 ```c
     case IPv6_PKTINFO:
@@ -22042,7 +22767,9 @@ if (sk->protocol == IPPROTO_TCP) {
 
 数据包选项：
 
-**图 6.374** IPv6 socket 设置套接选项：linux/net/ipv6/ipv6_sockglue.c。
+图 6.374 IPv6 socket 设置套接选项：`linux/net/ipv6/ipv6_sockglue.c`。
+
+
 
 ```c
   case IPv6_PKTOOPTIONS:
@@ -22100,7 +22827,7 @@ done:
 
 多播参数：
 
-图 6.375 IPv6 socket 设置选项：linux/net/ipv6_sockglue.c。
+图 6.375 IPv6 socket 设置选项：`linux/net/ipv6_sockglue.c`。
 
 ```c
   case IPv6_UNICAST_HOPS:
@@ -22145,7 +22872,7 @@ done:
 
 # 多播成员：
 
-**图 6.376** IPv6 socket 设置套接选项：linux/net/ipv6/ipv6sockglue.c。
+图 6.376 IPv6 socket 设置套接选项：`linux/net/ipv6/ipv6sockglue.c`。
 
 ```c
   case IPv6_ADD_MEMBERSHIP:
@@ -22167,7 +22894,7 @@ done:
 
 # 路径参数：
 
-**图 6.377** IPv6 socket 设置套接选项：linux/net/ipv6/ipv6sockglue.c。
+图 6.377 IPv6 socket 设置套接选项：`linux/net/ipv6/ipv6sockglue.c`。
 
 ```c
   case IPv6_ROUTER_ALERT:
@@ -22218,6 +22945,8 @@ done:
 ```
 
 # 基础设施协议 467
+
+
 
 ```c
     if (val < 0 || val > 2)
@@ -22271,7 +23000,7 @@ IPv6 标签是 IPv6 的一个独特特性，可以用于快速路由，正如第
 
 以下是标签管理的片段：
 
-图 6.378 IPv6 流标签创建：linux/net/ipv6/flowglue.c。
+图 6.378 IPv6 流标签创建：`linux/net/ipv6/flowglue.c`。
 
 ```c
 static struct ip6_flowlabel
@@ -22289,7 +23018,7 @@ goto;
 memset(fl, 0, sizeof(*fl));
 ```
 
-图 6.379 IPv6 流标签创建：linux/net/ipv6_sockglue.c。
+图 6.379 IPv6 流标签创建：`linux/net/ipv6_sockglue.c`。
 
 ```c
 olen = -optlen - CMSG_ALIGN(sizeof(*freq));
@@ -22317,11 +23046,7 @@ if (err)
 goto;
 ```
 
-
-
-
-
-# 图 6.380 IPv6 流标签的创建：linux/net/ipv6/ipv6_flowlabel.c。
+# 图 6.380 IPv6 流标签的创建：`linux/net/ipv6/ipv6_flowlabel.c`。
 
 ```c
 321 fl->expires = jiffies;
@@ -22362,7 +23087,7 @@ goto;
 
 IPv6 拥有许多扩展头部——为了说明其中可能存在的内容，让我们来看用于为 ICMP 跳过这些扩展头的函数，ICMP 根本不想考虑它们：
 
-# 图 6.381 IPv6 扩展头部：linux/net/ipv6/exthdrs.c。
+# 图 6.381 IPv6 扩展头部：`linux/net/ipv6/exthdrs.c`。
 
 ```c
 700 /*
@@ -22379,34 +23104,54 @@ IPv6 拥有许多扩展头部——为了说明其中可能存在的内容，让
 # TCP/IP 和 Linux 协议实现
 
 - * 接收者例如，不能通过扫描数据包来寻找
+
 * 特殊类型的扩展头部，并在处理之前的头部之前
+
 * 处理该头部。
 
 - * 我们恰恰是这样做。这是一个协议缺陷。在看到一个
+
 * 未知的丢弃并带错误的 TLV 选项后，我们无法判断它是否为
+
 * ICMP 错误消息（不应该在响应 ICMP 
+
 * 错误消息时发送错误）。
 
 - * 但我没有看到其他方法可以做到这一点。当 Linux 实现
+
 * ESP（可能还有 AUTH）头部时，这可能需要重新检查。
 
 - * --AK
+
 * 此函数解析（可能被截断的）长度为 "len" 的扩展头部 
+
 * "hdr"，其中 "nexthdr" 初始指向某个地方，
+
 * 在那里可以找到第一个头部的类型。
 
 - * 它跳过所有已知的扩展头部，并返回不可解析区域
+
 * 起始处的指针，即第一个未知类型的头部。
+
 * 如果 nexthdr 不为空，则 nexthdr 由该头部的类型/协议更新。
 
 - * 注意：如果数据包以 NEXTHDR_NONE 结束，
+
 * 可能返回指向数据包末尾的指针；
+
 * 如果最后一个识别的头部被截断，所有解析的
+
 * 返回 NULL。
+
 * 第一个头部被跳过，后续的
+
 * 被视为不可解析的 ESP 或者是普通的载负载协议。
+
 * 注意还有对 AUTH 头的特殊处理。得益于 Ipsec。
+
 * --ANK (9826)
+
+
 
 ```c
 u8 ipv6_skip_exthdr(struct ipv6_opt_hdr *hdr, u8 nexthdr, int len)
@@ -22424,7 +23169,7 @@ u8 ipv6_skip_exthdr(struct ipv6_opt_hdr *hdr, u8 nexthdr, int len)
 	}
 ```
 
-图 6.382 IPv6 扩展头部：linux/net/ipv6/exthdr.c。
+图 6.382 IPv6 扩展头部：`linux/net/ipv6/exthdr.c`。
 
 ```c
 757    hdrlen = 8;
@@ -22442,9 +23187,9 @@ u8 ipv6_skip_exthdr(struct ipv6_opt_hdr *hdr, u8 nexthdr, int len)
 769    return (u8*)hdr;
 ```
 
-## 6.9.11 简单 Internet 
+## 6.9.11 简单 Internet
 
-SIT 类似于 GRE 隧道：**图 6.383** SIT：linux/net/ipv6/sit.c。
+SIT 类似于 GRE 隧道：**图 6.383** SIT：`linux/net/ipv6/sit.c`。
 
 ```c
 54  /*此版本的 ipv6/sit.c 克隆自 net/ipv4/ip.c
@@ -22502,18 +23247,15 @@ static struct ip_tunnel *ipv6_tunnel_lookup(u32 remote, u32 local)
 
 ## 6.9.12 对 IPv6 传输层的影响
 
-通常情况下，IPv6 对传输层及以上层的影响尽可能小。由于 TCP 和 UDP 校验和伪头部包含了 IP 头部的一部分（包括地址），因此必须对其修改。linux/net/ipv6/tcp_ipv6.c 和 linux/net/ipv6/udp.c 模块包含了相关的更改。这些更改是相对较小的。
+通常情况下，IPv6 对传输层及以上层的影响尽可能小。由于 TCP 和 UDP 校验和伪头部包含了 IP 头部的一部分（包括地址），因此必须对其修改。`linux/net/ipv6/tcp_ipv6.c` 和 `linux/net/ipv6/udp.c` 模块包含了相关的更改。这些更改是相对较小的。
 
 ## 6.10 总结
 
 在本章中，我们讨论了传输层。网络是由链路构建的，IPv6 已经设计并实现。任何需要维护通信的信息必须由端系统主机存储。在下一章中，我们将查看 TCP、UDP 和 RTP 等协议在这些基础之上的运行。
 
-
-
-
 网络层（如路由器）将使用 IP 地址信息将数据包路由到主机。随后，主机必须处理数据包，并最终将携带的数据路由到适当的软件进程。正如帆船需要同时知道目的国家和卸货港一样，端口被用于识别数据的目的地。端口是传输层的信息。在 TCP/IP 协议族中，端口号是 16 位的数值。
 
-许多主机提供了一系列服务器软件进程，例如 Web 服务器。这些服务器在所谓的“已知端口”上监听潜在的数据包或连接。服务名称与端口号之间的映射存储在 `/etc/services` 文件中。如图 7.1 所示。每行由一个服务名称（如 ftp）、一个端口号和一个协议组成。
+许多主机提供了一系列服务器软件进程，例如 Web 服务器。这些服务器在所谓的“已知端口”上监听潜在的数据包或连接。服务名称与端口号之间的映射存储在 `/etc/services` 文件中。如图 7.1 所示。每行由一个服务名称（如 `ftp`）、一个端口号和一个协议组成。
 
 图 7.1 `/etc/services` 文件的示例。
 
@@ -22556,6 +23298,8 @@ UDP 数据报包含一个 8 字节的头部，并封装在 IP 数据报中。当
 
 图 7.2 连接结构与函数 (i)。
 
+
+
 ```
 922 struct proto_ops inet_stream_ops = {
 923     family: PF_INET,
@@ -22581,7 +23325,6 @@ UDP 数据报包含一个 8 字节的头部，并封装在 IP 数据报中。当
 ```
 
 UDP 在 IP 数据报层之上提供的传输层功能是多路复用和用于初步错误检查的校验和。
-
 虽然 UDP 具有传输不可靠的缺点，但它还无法适应网络状况。如果网络负载过高导致无法进行通信，UDP 连接将会很差，并且对网络上的其他流量产生不利影响。本章后面描述的 TCP 传输提供了这些额外功能。
 
 ### 7.3.4 传输层连接
@@ -22589,17 +23332,15 @@ UDP 在 IP 数据报层之上提供的传输层功能是多路复用和用于初
 本节描述了将传输层连接到下方网络层的函数。
 
 Socket 到传输层
-
 Socket 的生命周期包括创建、操作和关闭。本节描述了用户空间调用如何通过内核传递。Socket 状态维护在多个结构中：
+- `struct socket`，这是一个与协议无关的结构。
+- `struct sock`，包含传输层信息。
 
-- struct socket，这是一个与协议无关的结构。
-- struct sock，包含传输层信息。
+主 socket 代码位于 `net/socket.c`。该文件中的函数被编码为调用与创建的 socket 类型特定的函数。当创建 socket（`socket` 调用）时，会调用 `sys_socket`，它分配 socket 并将 socket 映射到文件描述符。该描述符被传回用户进程以供后续操作。
 
-主 socket 代码位于 net/socket.c。该文件中的函数被编码为调用与创建的 socket 类型特定的函数。当创建 socket（`socket` 调用）时，会调用 `sys_socket`，它分配 socket 并将 socket 映射到文件描述符。该描述符被传回用户进程以供后续操作。
+`net_families` 数组允许我们看到此结构和其他结构是如何初始化的。`net_families` 数组在内核启动时在 `ipv4/inet.c` 中初始化。该函数是启动代码的一部分。其中一个函数是将 socket 族注册到哈希表中。
 
-`net_families` 数组允许我们看到此结构和其他结构是如何初始化的。`net_families` 数组在内核启动时在 ipv4/inet.c 中初始化。该函数是启动代码的一部分。其中一个函数是将 socket 族注册到哈希表中。
-
-总结上述，协议族 (PF_INET) 已注册。创建的每个 socket 拥有一套 socket 操作。每个 socket 创建的拥有一套 socket 协议（TCP 或 UDP）。这套协议函数通过 socket 描述符被找到。在 socket 描述符处，通过将 socket 映射到 socket 结构。在整个代码中，会调用这些函数。这 7.3 连接结构与函数 (ii)。
+总结上述，协议族 (`PF_INET`) 已注册。创建的每个 socket 拥有一套 socket 操作。每个 socket 创建的拥有一套 socket 协议（TCP 或 UDP）。这套协议函数通过 socket 描述符被找到。在 socket 描述符处，通过将 socket 映射到 socket 结构。在整个代码中，会调用这些函数。这 7.3 连接结构与函数 (ii)。
 
 ```
 struct proto udp_prot = {
@@ -22663,9 +23404,6 @@ struct tcp_func_ipv4_specific = {
 
 `af_specific` 结构包含了与网络层之间传递数据的函数。当 socket 初始化时，它被设置为 `ipv4_specific`。图 7.3。
 
-
-
-
 # TCP/IP 与 Linux 协议实现
 
 > 图 7.5 DNS 查询的追踪。
@@ -22689,6 +23427,8 @@ Socket 结构体通过 `sk_alloc` 调用进行分配。每个 socket 都维护�
 
 > 图 7.6 udp 连接函数 linux(2.4.4/net/ipv4/udp)。
 
+
+
 ```
 711 int udp_connect(struct *sk, struct sockaddr *uaddr, int addr_len)
 712 {
@@ -22696,6 +23436,7 @@ Socket 结构体通过 `sk_alloc` 调用进行分配。每个 socket 都维护�
 714     struct rtable *rt;
 715     int err;
 716
+
 717
 718     if (addr_len < sizeof(*usin))
 719         return -EINVAL;
@@ -22730,7 +23471,7 @@ if (err) {
 
 ## 7.6 DNS 查询
 
-域名系统服务（DNS）负责将地址转换为互联网地址。本章未详细描述该服务的实现，但我们将使用 DNS 查询作为使用 UDP 传输的应用示例。在 C 语言中，`gethostbyname` 函数是该协议的编程接口。我们编写了一个简单的程序执行查询并将其输出到屏幕上，观察到图 7.5 中的追踪输出。该输出经过编辑，仅显示与 DNS 请求和响应相关的信息。在这里，对 `socket` 的调用创建了一个数据报（即 UDP）socket 并将其连接到 DNS 服务器。由于 UDP 是一种基于数据报的协议，这不能简单地更新操作系统中的结构，而是产生网络流量。发送到该 socket 的任何未地址的数据报将使用此连接信息进行转发。随后形成并发送 DNS 数据包。程序必须等待回复，并在如果没有收到回复时准备好超时。最终一条消息可用，`recvfrom` 调用其进行读取。随后关闭 socket。
+域名系统服务（DNS）负责将地址转换为互联网地址。本章未详细描述该服务的实现，但我们将使用 DNS 查询作为使用 UDP 传输的应用示例。在 C 语言中，`gethostbyname`函数是该协议的编程接口。我们编写了一个简单的程序执行查询并将其输出到屏幕上，观察到图 7.5 中的追踪输出。该输出经过编辑，仅显示与 DNS 请求和响应相关的信息。在这里，对`socket`的调用创建了一个数据报（即 UDP）socket 并将其连接到 DNS 服务器。由于 UDP 是一种基于数据报的协议，这不能简单地更新操作系统中的结构，而是产生网络流量。发送到该 socket 的任何未地址的数据报将使用此连接信息进行转发。随后形成并发送 DNS 数据包。程序必须等待回复，并在如果没有收到回复时准备好超时。最终一条消息可用，`recvfrom`调用其进行读取。随后关闭 socket。
 
 > 图 7.7 UDP 查询断开连接函数 linux(2.4.4/net/ipv4/udp.c}。
 
@@ -22764,15 +23505,15 @@ int udp_disconnect(struct sock *sk, int flag) {
 771  }
 ```
 
-我们可以追踪此请求通过 Linux 内核到达 IP 层的路径，然后从 IP 层返回响应。socket 首先被创建并连接（`udp_connect`，见图 7.6），由于是数据报 socket，这不会产生跨网络流量，而是修改内核结构。具体而言，为此目的地址创建一个路由表条目并将其添加到 socket 结构体中。应用程序构建 DNS 数据包并通过 `sendmsg` 调用传递给内核。这发生在 `net/ipv4/udp`。`sendmsg` 的操作之一是计算 UDP 校验。该校验在接收端提供了基本的错误检查，并针对整个 UDP 数据包和某些 IP 层字段（伪头部）进行计算。校验值是待检查的所有 16 位字的取反。这被插入校验字段中。在接收端，栈可以将这些值相加，表示数据包正确。数据包通过 `ip_build_xmit()` 调用传递传递。注意 `ip_build_xmit()` 的第二个参数是一个函数指针，取决于是否要计算数据包的校验。无论何种情况，该函数的目的是从用户空间拷贝数据，并在数据拷贝时必要时计算校验。进一步的优化是直接从用户空间将数据拷贝到接口适配器。图 7.8 显示了 UDP 头的构建和数据包的最终传输。请求穿越互联网到达一个或多个服务器，最终接收到响应。协议对其处理并缓冲。通过 `udp_recv` 调用到达 UDP 层。该函数存储在 `inet_protocol` 结构中（第 4 章）。`udp_recv` 首先验证数据包（`udp_checksum_init`）。如果检查通过且数据包是组播或广播包，则使用 `udp_v4_mcast` 进行。否则，搜索数据包的 socket（`udp_v4_lookup`）。该函数位于图 7.9。
+我们可以追踪此请求通过 Linux 内核到达 IP 层的路径，然后从 IP 层返回响应。socket 首先被创建并连接（`udp_connect`，见图 7.6），由于是数据报 socket，这不会产生跨网络流量，而是修改内核结构。具体而言，为此目的地址创建一个路由表条目并将其添加到 socket 结构体中。应用程序构建 DNS 数据包并通过`sendmsg`调用传递给内核。这发生在`net/ipv4/udp`。`sendmsg`的操作之一是计算 UDP 校验。该校验在接收端提供了基本的错误检查，并针对整个 UDP 数据包和某些 IP 层字段（伪头部）进行计算。校验值是待检查的所有 16 位字的取反。这被插入校验字段中。在接收端，栈可以将这些值相加，表示数据包正确。数据包通过`ip_build_xmit()`调用传递传递。注意`ip_build_xmit()`的第二个参数是一个函数指针，取决于是否要计算数据包的校验。无论何种情况，该函数的目的是从用户空间拷贝数据，并在数据拷贝时必要时计算校验。进一步的优化是直接从用户空间将数据拷贝到接口适配器。图 7.8 显示了 UDP 头的构建和数据包的最终传输。请求穿越互联网到达一个或多个服务器，最终接收到响应。协议对其处理并缓冲。通过`udp_recv`调用到达 UDP 层。该函数存储在`inet_protocol`结构中（第 4 章）。`udp_recv`首先验证数据包（`udp_checksum_init`）。如果检查通过且数据包是组播或广播包，则使用`udp_v4_mcast`进行。否则，搜索数据包的 socket（`udp_v4_lookup`）。该函数位于图 7.9。
 
 如果找到了 socket 但未找到数据，可能是由于错误包，或者是尝试与未绑定的端口通信。对于前者，校验失败将导致数据包静默丢弃；对于后者，向发送者返回 ICMP 端口不可达消息（见图 7.10）。
 
-UDP（以及 TCP）校验在整个段和伪头部（包括某些 IP 层字段、地址等）上执行。如果 IP 校验未能发现错误，这提供了额外的完整性。出于性能考虑，校验在数据包从用户空间拷贝到内核时计算（见 `linux/net/core/iov`）。
+UDP（以及 TCP）校验在整个段和伪头部（包括某些 IP 层字段、地址等）上执行。如果 IP 校验未能发现错误，这提供了额外的完整性。出于性能考虑，校验在数据包从用户空间拷贝到内核时计算（见`linux/net/core/iov`）。
 
-当应用程序准备通过 `recv`、`recvfrom` 或 `recvmsg` 接收消息时，使用 `udp.c` 调用 `udp_recv()`。在这里，如果有数据报，则从数据报层（`sk_recv_datagram`）提取并拷贝到用户空间。传输时，在拷贝数据时进行校验，如果失败则返回错误。之后，数据包的源地址被放在 `sockaddr` 结构中，拷贝到 `recvmsg` 的参数。
+当应用程序准备通过`recv`、`recvfrom`或`recvmsg`接收消息时，使用`udp.c`调用`udp_recv()`。在这里，如果有数据报，则从数据报层（`sk_recv_datagram`）提取并拷贝到用户空间。传输时，在拷贝数据时进行校验，如果失败则返回错误。之后，数据包的源地址被放在`sockaddr`结构中，拷贝到`recvmsg`的参数。
 
-当应用程序完成 socket 操作，将调用 `close`。这作为 `sock_release` 传递给内核，内核调用协议 `inet_release` 的释放操作。这又调用关闭操作 `udp_close`，进而调用 `inet_sock_release`。在这里，socket 使用的资源开始释放回系统。需要注意的是，尽管此机器已完成 socket 及其通信，网络中可能仍有包到达。系统处于可以处理的状态。
+当应用程序完成 socket 操作，将调用`close`。这作为`sock_release`传递给内核，内核调用协议`inet_release`的释放操作。这又调用关闭操作`udp_close`，进而调用`inet_sock_release`。在这里，socket 使用的资源开始释放回系统。需要注意的是，尽管此机器已完成 socket 及其通信，网络中可能仍有包到达。系统处于可以处理的状态。
 
 # 图 7.8 构建并发送 UDP 数据包（来自 udp_sendmsg）。
 
@@ -22787,11 +23528,8 @@ ufh.check = 0;
 ```
 
 > /* RFC1122: OK. 提供校验设施（必须），必须按照 /
+
 /* 4.1.3.4。应用程序可以通过 getsockopt() 进行配置 */
-
-
-
-
 
 # 484 TCP/IP 与 Linux 协议实现
 
@@ -22799,7 +23537,9 @@ ufh.check = 0;
 
 546
 
-```
+
+
+```c
 547    err = ip_build_zsum(sk,
 548                               (sk->no_check == UDP_CSUM_NO必要?
 549                                 udp_getfrag_nosum
@@ -22811,14 +23551,14 @@ ufh.check = 0;
 
 553
 
-```
+```c
 554    out:
 555        ip_rt_put(rt);
 556        if (free)
 557            if (err) {
 ```
 
-```
+```c
 558                UDP_INC_STATUS_USER(UdpOutDatagrams);
 559                return len;
 560            }
@@ -22829,21 +23569,21 @@ ufh.check = 0;
 
 # 图 7.9 UDP 查找 socket 函数 (linux2.4.net/ipv4/udp.c.)
 
-```
+```c
 211    struct sock *udp_v4_lookup_longway(u32 saddr, u16 sport, u32 daddr, u16 dport, int dif)
 ```
 
-```
+```c
 212    {
 ```
 
-```
+```c
 213        struct sock *sk, *result = NULL;
 214        unsigned short hnum = ntohs(dport);
 215        int badaddr = -1;
 ```
 
-```
+```c
 217        for(sk = udp_hash[hnum & (UDP_HTABLE_SIZE)]; sk != NULL; sk = sk->next) {
 218            if(sk->num == hnum) {
 219                int score = 0;
@@ -22872,7 +23612,7 @@ ufh.check = 0;
 
 # 传输 485
 
-```
+```c
 242      break;
 243      } else if(score > badness) {
 244          result = sk;
@@ -22886,7 +23626,7 @@ ufh.check = 0;
 
 # 图 7.10 查找后的 UDP 动作 (linux-2.4.4/net/ipv4/udp.c).
 
-```
+```c
 899 if (udp_checksum_init(skb, uh, ulen, saddr, daddr) < 0)
 900     goto csum_error;
 901
@@ -22921,9 +23661,9 @@ ufh.check = 0;
 
 # 486 TCP/IP 与 Linux 协议实现
 
-图 7.12 使用 Lynx 浏览器的跟踪输出。
+## 图 7.12 使用 Lynx 浏览器的跟踪输出。
 
-```
+```bash
 1 connect(3,(sin_family=AF_INET,sin_port=htons(80),sin_addr=inet_addr("x.x.x.x")), 16) = 0
 2 ioctl(3,FIONBIO,[0])
 3   = 0
@@ -22949,14 +23689,16 @@ ufh.check = 0;
 
 ## 7.4 传输控制协议
 
-在多路复用中，TCP 提供了可靠性、流量控制等传输层服务。此处描述及其在 Linux 中的实现。
+在多路复用中，`TCP`提供了可靠性、流量控制等传输层服务。此处描述及其在 Linux 中的实现。
 
 ### 7.4.1 功能
 
 应用程序发送的数据完全按顺序到达，不会丢失，并且可能会出错。这些目标通过多种方式实现：
 
-- 首先，每个段都以与 UDP的方式进行校验。如果数据包失败，接收栈将将其丢弃。
+- 首先，每个段都以与`UDP`的方式进行校验。如果数据包失败，接收栈将将其丢弃。
+
 - 其次，每个传输段都需要确认。如果确认在预定间隔后未到达，则重传该段。
+
 - 第三，给每个数据包分配一个序列号。如果两个数据包的值相同，则检测到重复。序列号还能检测乱序到达并允许接收栈进行排序，从而减少重传。
 
 ### 可靠性
@@ -22964,29 +23706,43 @@ ufh.check = 0;
 滑动窗口确保数据属于以下类别之一：
 
 - 已发送并已确认的数据。
+
 - 已发送但未确认的数据。
+
 - 可以发送但尚未发送的数据。
-- 尚无法发送的数据。
+
+
+
+尚无法发送的数据。
 
 中间代表接收者愿意的数据。这些数据被窗口——滑动窗口覆盖。当收到边缘数据的确认时，整个窗口向右移动，将更多数据引入可以发送的类别。
 
 ### 流量控制
 
-流量控制使用滑动窗口机制（见图 7.11）。在简单的情况下，发送者等待每个包确认后再发送下一个包。这在带宽利用上是无效的，但实现相对简单。例如，两个地理隔离且往返时间为 5 ms 的点，每 5 ms 只允许发送一个新包，其有效带宽仅为 (1000 × 8)/.005 = 1.6 Mbps，即可用带宽的 1.6%。
+流量控制使用滑动窗口机制（见图 7.11）。在简单的情况下，发送者等待每个包确认后再发送下一个包。这在带宽利用上是无效的，但实现相对简单。例如，两个地理隔离且往返时间为 5 ms 的点，每 5 ms 只允许发送一个新包，其有效带宽仅为 `(1000 × 8)/.005 = 1.6 Mbps`，即可用带宽的 1.6%。
 
 # 图 7.13 浏览器会话的 tcpflow 输出。
 
 从客户端到服务器
-+1 GET /test/test.html HTTP/1.0
-2 Host: server
-3 Accept: text/html, text/plain, application/aac-binhex40, application/mword, application/pdf, application/vnd.ms-xrl, application/postscript, application/x-dvi, application/frame-audio/midi, image/, video/, video/jpeg, application/pgp
-4 Accept: application/pgp, application/pdf, message/partial, message/external-body, application/postscript, x-b2, application/android-index, text/richtext, text-enriched, x-run-attachmentaudio-file, postscript-file, default, mail-file
-5 Accept: sun-desktop-message, application/x-metanell-patch, application/mword, image/png, text/agml, video/peg, image/jpeg, image/tiff, image/x-rb, image/png, image/x-bitmap, image/x-rms, image/gif, application/postscript, /*;q=0.01
-6 Accept-Encoding: gzip, compress
-7 Accept-Language: en
-8 User-Agent: Lynx/2.8.4.dev.16 libwww-FM/2.14 SSL-MM/1.4.1 OpenSSL/0.9.6
+
++1 `GET /test/test.html HTTP/1.0`
+
+2 `Host: server`
+
+3 `Accept: text/html, text/plain, application/aac-binhex40, application/mword, application/pdf, application/vnd.ms-xrl, application/postscript, application/x-dvi, application/frame-audio/midi, image/, video/, video/jpeg, application/pgp`
+
+4 `Accept: application/pgp, application/pdf, message/partial, message/external-body, application/postscript, x-b2, application/android-index, text/richtext, text-enriched, x-run-attachmentaudio-file, postscript-file, default, mail-file`
+
+5 `Accept: sun-desktop-message, application/x-metanell-patch, application/mword, image/png, text/agml, video/peg, image/jpeg, image/tiff, image/x-rb, image/png, image/x-bitmap, image/x-rms, image/gif, application/postscript, /*;q=0.01`
+
+6 `Accept-Encoding: gzip, compress`
+
+7 `Accept-Language: en`
+
+8 `User-Agent: Lynx/2.8.4.dev.16 libwww-FM/2.14 SSL-MM/1.4.1 OpenSSL/0.9.6`
 
 从服务器到客户端
+
 ```
 1 HTTP/1.1 200 OK
 2 Date: Thu, 17 May 2001 10:15:15 GMT
@@ -23007,10 +23763,6 @@ ufh.check = 0;
 22 </body>
 23 </html>
 ```
-
-
-
-
 
 # 传输 489
 
@@ -23066,21 +23818,23 @@ timestamp 187462286 69053329,nop,wcale O (DF) 31220
 
 # 拥塞控制
 
-在之前关于流量控制的讨论中，我们回顾了发送速度过快的系统可能会遇到网络相关问题。如果一个与网络具有高带宽连接的发送者正在向接收者发送数据，而路径上的某处存在低带宽链路，那么一旦发送者开始以超过低带宽链路的承受的速度发送就会导致丢包。这被称为拥塞。当多个连接共享一条链路并尝试尽可能地利用可用带宽时，也会发生拥塞。TCP 拥塞控制确保了在上述两种情况下的，TCP 连接都能获得可用带宽的公平份额。在这些情况下，对“公平”的定义通常是一个备有争议的话题。
+在之前关于流量控制的讨论中，我们回顾了发送速度过快的系统可能会遇到网络相关问题。如果一个与网络具有高带宽连接的发送者正在向接收者发送数据，而路径上的某处存在低带宽链路，那么一旦发送者开始以超过低带宽链路的承受的速度发送就会导致丢包。这被称为拥塞。当多个连接共享一条链路并尝试尽可能地利用可用带宽时，也会发生拥塞。`TCP` 拥塞控制确保了在上述两种情况下的，`TCP` 连接都能获得可用带宽的公平份额。在这些情况下，对“公平”的定义通常是一个备有争议的话题。
 
-拥塞控制在待传输数据使用了另一个窗口。这个窗口被称为拥塞窗口（congestion window），它控制可以发送到网络且未收到确认的数据量。当网络未拥塞时，拥塞窗口增大；当检测到拥塞时则减小。目前，拥塞是通过检测丢包来识别的。显式拥塞通知（ECN）是一种技术，通过返回数据流中的 TCP 头部设置来检测网络拥塞并识别发送端。
+拥塞控制在待传输数据使用了另一个窗口。这个窗口被称为拥塞窗口（`congestion window`），它控制可以发送到网络且未收到确认的数据量。当网络未拥塞时，拥塞窗口增大；当检测到拥塞时则减小。目前，拥塞是通过检测丢包来识别的。显式拥塞通知（`ECN`）是一种技术，通过返回数据流中的 `TCP` 头部设置来检测网络拥塞并识别发送端。
 
-拥塞窗口大小的增加和减少在 RFC 2581 中有规定。TCP 连接可以处于两种状态之一：慢启动或拥塞避免。
+拥塞窗口大小的增加和减少在 `RFC 2581` 中有规定。`TCP` 连接可以处于两种状态之一：慢启动或拥塞避免。
 
 # TCP/IP 与 Linux 协议实现
 
-在慢启动阶段，每发送等量于拥塞窗口大小的数据后，拥塞窗口的大小就会翻倍，直到达到一个阈值。之后，进入拥塞避免阶段，此时拥塞窗口按最大段大小（MSS）的值增加。如果在任何点检测到丢包，则该阈值被设置为当前窗口大小的一半，且拥塞窗口大小被设置为 MSS。连接返回慢启动。这是 TCP TAHOE。TCP RENO 是一种增强方案，它在连接开始时减小阈值，但会将拥塞窗口设置为该阈值并进入拥塞避免阶段。
+在慢启动阶段，每发送等量于拥塞窗口大小的数据后，拥塞窗口的大小就会翻倍，直到达到一个阈值。之后，进入拥塞避免阶段，此时拥塞窗口按最大段大小（`MSS`）的值增加。如果在任何点检测到丢包，则该阈值被设置为当前窗口大小的一半，且拥塞窗口大小被设置为 `MSS`。连接返回慢启动。这是 `TCP TAHOE`。`TCP RENO` 是一种增强方案，它在连接开始时减小阈值，但会将拥塞窗口设置为该阈值并进入拥塞避免阶段。
 
 ### 7.4.2 HTTP 请求
 
-我们使用 HTTP 请求的示例来说明 Linux 协议栈中的 TCP 操作。该请求是来自本地 Web 服务器的单个 HTML 页面。图 7.12 显示了 Web 浏览器（在此例中为 lynx）跟踪输出的版本。图 7.13 显示了 tcpflow 的输出，tcpflow 是一个从嗅探的数据包中打印应用层数据的程序。图 7.16 显示了该操作的 tcpdump 输出。
+我们使用 `HTTP` 请求的示例来说明 Linux 协议栈中的 `TCP` 操作。该请求是来自本地 Web 服务器的单个 `HTML` 页面。图 7.12 显示了 Web 浏览器（在此例中为 `lynx`）跟踪输出的版本。图 7.13 显示了 `tcpflow` 的输出，`tcpflow` 是一个从嗅探的数据包中打印应用层数据的程序。图 7.16 显示了该操作的 `tcpdump` 输出。
 
 # 图 7.14 服务端进程的跟踪。
+
+
 
 ```
 1 socket(AF_INET, SOCK_STREAM, IPPROTO_TCP) = 3
@@ -23100,200 +23854,225 @@ timestamp 187462286 69053329,nop,wcale O (DF) 31220
 15 ...
 ```
 
-# 图 7.15 TCP 头部。
+# 图 7.15 TCP 头部
 
 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 |
+
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+
 | 源端口 | 目的端口 | | | | | | | | | | | | | | | | | | | | | | | | | | |
+
 | 序列号 | | | | | | | | | | | | | | | | | | | | | | | | | |
+
 | 确认号 | | | | | | | | | | | | | | | | | | | | | | | | |
+
 | 数据 | 窗口 | | | | | | | | | | | | | | | | | | | | |
+
 | 偏移量 | 预留 | | | | | | | | | | | | | | | | | | | | | |
+
 | | | 紧急指针 | | | | | | | | | | | | | | | | | | | | |
+
 | 选项 | 填充 | | | | | | | | | | | | | | | | | | | | | |
+
 | | | 数据 | | | | | | | | | | | | | | | | | | | | |
 
-# 图 7.16 TCP 状态（来自 RFC 793）。
+# 图 7.16 TCP 状态（来自 RFC 793）
 
-- LISTEN 表示等待来自任何远程 TCP 和端口的连接请求。
-- SYN-SENT 表示发送连接请求后等待匹配的连接请求。
-- SYN-RECEIVED 表示在接收并发送连接请求后等待连接确认。
-- ESTABLISHED 表示连接已建立，接收到的数据可以交付给用户。这是连接传输数据的正常状态。
-- FIN-WAIT-1 表示等待远程 TCP 的连接终止请求，或之前发送连接的确认。
-- FIN-WAIT-2 表示等待远程 TCP 的连接终止请求。
-- CLOSE-WAIT 表示等待本地用户的连接终止请求。
-- CLOSING 表示等待之前发送到远程 TCP 的连接请求确认（包括对其终止请求的确认）。
-- TIME-WAIT 表示等待足够的时间通过以确保远程 TCP 已收到其连接请求的确认。
-- CLOSED 表示没有任何连接状态。
+- `LISTEN` 表示等待来自任何远程 TCP 和端口的连接请求。
+- `SYN-SENT` 表示发送连接请求后等待匹配的连接请求。
+- `SYN-RECEIVED` 表示在接收并发送连接请求后等待连接确认。
+- `ESTABLISHED` 表示连接已建立，接收到的数据可以交付给用户。这是连接传输数据的正常状态。
+- `FIN-WAIT-1` 表示等待远程 TCP 的连接终止请求，或之前发送连接的确认。
+- `FIN-WAIT-2` 表示等待远程 TCP 的连接终止请求。
+- `CLOSE-WAIT` 表示等待本地用户的连接终止请求。
+- `CLOSING` 表示等待之前发送到远程 TCP 的连接请求确认（包括对其终止请求的确认）。
+- `TIME-WAIT` 表示等待足够的时间通过以确保远程 TCP 已收到其连接请求的确认。
+- `CLOSED` 表示没有任何连接状态。
 
-为了跟踪服务端进程的执行 trace，我们将使用 nc 程序。首先，我们将 nc 设置为端口 5656  TCP 监听器，并使用 Telnet 会话连接它。然后关闭会话。nc 会话产生的 trace 如图 7.17 所示。
+为了跟踪服务端进程的执行 trace，我们将使用 `nc` 程序。首先，我们将 `nc` 设置为端口 `5656` TCP 监听器，并使用 `Telnet` 会话连接它。然后关闭会话。`nc` 会话产生的 trace 如图 7.17 所示。
 
-# 图 7.17 TCP 连接状态图（来自 RFC 793）。
+# 图 7.17 TCP 连接状态图（来自 RFC 793）
 
 ![](img/06c11ba8be5c1c24aa633e1261e2ebd_547_0.png)
 
-仔细检查图 7.17，我们可以看到前三个包是建立连接的三次握手，接四个包是数据传输（每个方向一个包及其确认），最后三个包是关闭连接。注意，第一个 FIN 包的确认是随载在客户端的 FIN 之上的。
+仔细检查图 7.17，我们可以看到前三个包是建立连接的三次握手，接四个包是数据传输（每个方向一个包及其确认），最后三个包是关闭连接。注意，第一个 `FIN` 包的确认是随载在客户端的 `FIN` 之上的。
 
-从图 7.12 中奇怪的输出中，我们可以看到 socket 上的重要操作顺序是 connect、write、read 和 close（此时 socket 已经创建完成）。
+从图 7.12 中奇怪的输出中，我们可以看到 `socket` 上的重要操作顺序是 `connect`、`write`、`read` 和 `close`（此时 `socket` 已经创建完成）。
 
-在服务端侧（见图 7.14），重要操作是 socket、bind、listen、accept、read 和 close。大多数服务器还会响应 read 操作进行写入。
+在服务端侧（见图 7.14），重要操作是 `socket`、`bind`、`listen`、`accept`、`read` 和 `close`。大多数服务器还会响应 `read` 操作进行写入。
 
-### 7.4.3 TCP 头部
+## 7.4.3 TCP 头部
 
 TCP 头部包含大量字段，如图 7.15 所示。
 
-图 7.18 赋值给 tp。
+图 7.18 赋值给 `tp`。
 
 ```
 struct tcp_opt *tp = &(sk->tp_pinfo.af_tcp);
 ```
 
-### 7.4.4 TCP 实现
+## 7.4.4 TCP 实现
 
 TCP 栈必须响应许多外部和内部生成的事件。这些是：
 
-- **用户请求**。通过 socket 层作为 connect、send、recv、close 等调用传入。
+- **用户请求**。通过 `socket` 层作为 `connect`、`send`、`recv`、`close` 等调用传入。
 - **网络事件**。数据包到达时从网络层传入。
 - **时间事件**。通过内核运行定时器的中断传入。
 
-# 文件 linux/net/ipv4/tcp*.c
+# 文件 `linux/net/ipv4/tcp*.c`
 
-与 UDP 不同，TCP 需要为每个连接维护状态。在 UDP 中，要发送的消息通过内核进入单个（可能是分段的）数据包。在 TCP 中，由于需要维护可靠性、流量控制和拥塞控制，数据必须进行缓存，并存储有关连接当前状态的信息。这是在进程控制块（PCB）中完成的。
+与 `UDP` 不同，`TCP` 需要为每个连接维护状态。在 `UDP` 中，要发送的消息通过内核进入单个（可能是分段的）数据包。在 `TCP` 中，由于需要维护可靠性、流量控制和拥塞控制，数据必须进行缓存，并存储有关连接当前状态的信息。这是在进程控制块（`PCB`）中完成的。
+
+## 7.4.5 TCP 状态
+
+TCP 可以处于多种状态。这些状态在图 7.16 所示。连接建立和释放的过程如图 7.17 所示的状态转移图进行控制。这直接复制自 `RFC 793`，该文档详细说明了这些状态之间的转换。
+
+图 7.19 `tcp_opt` (i)。
 
 
 
+```c
+    struct tcp_opt {
+        int         tcp_header_len; /* 要发送的 tcp 头部字节数  */
+    /*
+            头部预测标志
+            0x5710 << 16 + snd_wind 以网络字节序
+        /*
+            __u32      pred_flags;
 
+            /*
+        按适当名称定义的 RFC793 变量。这意味着你可以
+        并排阅读代码和规范（然后会笑……）
+        参见 RFC793 和 RFC1122。RFC 中用大写字母这些这些。
+    /*
+            __u32      rcv_nxt;    /* 我们下一个想要接收的  */
+            __u32      snd_nxt;    /* 我们发送的下一个序列          */
 
-### 7.4.5 TCP 状态
+            __u32      snd_una;    /* 我们想要确认的第一个字节       */
+            __u32      snd_sml;    /* 最近传输的小包的最后一个字节 */
+            __u32      rcv_tstamp;  /* 上次接收 ACK 的时间戳（用于保活检测） */
+            __u32      ltsime;    /* 上次发送数据包的时间戳（用于重启窗口） */
 
-TCP 可以处于多种状态。这些状态在图 7.16 所示。连接建立和释放的过程如图 7.17 所示的状态转移图进行控制。这直接复制自 RFC 793，该文档详细说明了这些状态之间的转换。
-
-图 7.19 tcp_opt (i)。
-
-```
-248     struct tcp_opt {
-249         int         tcp_header_len; /* 要发送的 tcp 头部字节数  */
-250     /*
-251             头部预测标志
-252             0x5710 << 16 + snd_wind 以网络字节序
-254             /*
-255             __u32      pred_flags;
-256 
-257             /*
-258         按适当名称定义的 RFC793 变量。这意味着你可以
-259         并排阅读代码和规范（然后会笑……）
-260         参见 RFC793 和 RFC1122。RFC 中用大写字母这些这些。
-261     /*
-262             __u32      rcv_nxt;    /* 我们下一个想要接收的  */
-263             __u32      snd_nxt;    /* 我们发送的下一个序列          */
-264 
-265             __u32      snd_una;    /* 我们想要确认的第一个字节       */
-266             __u32      snd_sml;    /* 最近传输的小包的最后一个字节 */
-267             __u32      rcv_tstamp;  /* 上次接收 ACK 的时间戳（用于保活检测） */
-268             __u32      ltsime;    /* 上次发送数据包的时间戳（用于重启窗口） */
-269 
-270     /* 延迟 ACK 控制数据 *  */
-271         struct {
-272             __u8       pending;    /* ACK 待处理中                 */
-273             __u8       quick;      /* 计划的快速 ACK 数量  */
-274             __u8       pingpong;   /* 会话是交互性的      */
-275             __u8       blocked;    /* 延迟 ACK 被套接字阻塞；*  */
-276             __u32      ato;        /* 软时钟预测刻度  */
-277             unsigned long timeout; /* 当前计划的超时   */
-278             __u32      lrcvtime;   /* 上次接收数据包的时间戳*/
-279             __u16      last_seg_size; /* 上一个进入段的大小  */
-280             __u16      rcv_msw;     /* 用于延迟 ACK 决策的 MSS  */
-281         };
-283         /* 直接复制到用户空间的数据 *  */
-284         struct {
-285             struct sk_buf_head *prequeue;
-286             int                memory;
-287             struct task_struct *task;
+    /* 延迟 ACK 控制数据 *  */
+        struct {
+            __u8       pending;    /* ACK 待处理中                 */
+            __u8       quick;      /* 计划的快速 ACK 数量  */
+            __u8       pingpong;   /* 会话是交互性的      */
+            __u8       blocked;    /* 延迟 ACK 被套接字阻塞；*  */
+            __u32      ato;        /* 软时钟预测刻度  */
+            unsigned long timeout; /* 当前计划的超时   */
+            __u32      lrcvtime;   /* 上次接收数据包的时间戳*/
+            __u16      last_seg_size; /* 上一个进入段的大小  */
+            __u16      rcv_msw;     /* 用于延迟 ACK 决策的 MSS  */
+        };
+        /* 直接复制到用户空间的数据 *  */
+        struct {
+            struct sk_buf_head *prequeue;
+            int                memory;
+            struct task_struct *task;
 ```
 
 # 图 7.20 tcp_opt(ii)。
 
 ```
-288             struct iovec      *iov;
-289             int               len;
-290     } upcopy; 
-292             u32 snd_wll;      /* 窗口更新序列 */
-293             u32 snd_wnd;      /* 我们期望接收的窗口 */
-294             u32 max_window;   /* 从对方处看到的最大窗口 */
-295             u32 pmtu_coque;   /* 套接字最后看到的 pmtu */
-296             u16 msms_cache;    /* 缓存的有效 mss，不包含 SACKS */
-297             u16 msms_clamp;    /* 连接建立时协商的最大 mss */
-298             u16 ext_header_len; /* 网络协议开销（IPv4/IPv6 选项） */
-299             u32 ca_state;      /* 重传机状态 */
-300             u32 retransmits;   /* 未恢复的 RTO 超时次数。 */
-301             u32 reordering;    /* 数据包重排序指标。 */
-302             u32 queue_shrunk; /* 写队列最近收缩过。 */
-303             u32 defer_accept;  /* 用户在 accept() 之后等待某些数据）。 */
-305     /* RTT 测量 */
-307             u32 backoff;       /* 退避 */
-308             u32 srtt;          /* 平滑往返时间 << 3 */
-309             u32 mdev;          /* 中值偏差 */
-310             u32 mdev_max;      /* 上一个 rtt 期间的最大 mdev */
-311             u32 rttvar;        /* 平滑 rttvar */
-312             u32 rtt_seq;       /* 更新 rttvar 的序列号 */
-313             u32 rto;           /* 重传超时 */
-315             u32 packets_out;   /* “飞行”中的包 */
-316             u32 left_out;      /* 离开网络的数据 */
-317             u32 retrans_out;   /* 重传的包 */
-320     /*
-321     * 慢启动和拥塞控制 */
-323             u32 snd_hresh;    /* 慢启动阈值 */
-324             u32 snd_cwnd;      /* 拥塞窗口 */
-325             u16 snd_cnt;       /* 线性增长 */
-326             u16 snd_clamp;    /* 不超过此值 */
-327             u32 snd_used;      /* snd_cwnd */
+        struct iovec      *iov;
+        int               len;
+} upcopy; 
+        u32 snd_wll;      /* 窗口更新序列 */
+        u32 snd_wnd;      /* 我们期望接收的窗口 */
+        u32 max_window;   /* 从对方处看到的最大窗口 */
+        u32 pmtu_coque;   /* 套接字最后看到的 pmtu */
+        u16 msms_cache;    /* 缓存的有效 mss，不包含 SACKS */
+        u16 msms_clamp;    /* 连接建立时协商的最大 mss */
+        u16 ext_header_len; /* 网络协议开销（IPv4/IPv6 选项） */
+        u32 ca_state;      /* 重传机状态 */
+        u32 retransmits;   /* 未恢复的 RTO 超时次数。 */
+        u32 reordering;    /* 数据包重排序指标。 */
+        u32 queue_shrunk; /* 写队列最近收缩过。 */
+        u32 defer_accept;  /* 用户在 accept() 之后等待某些数据）。 */
+    /* RTT 测量 */
+        u32 backoff;       /* 退避 */
+        u32 srtt;          /* 平滑往返时间 << 3 */
+        u32 mdev;          /* 中值偏差 */
+        u32 mdev_max;      /* 上一个 rtt 期间的最大 mdev */
+        u32 rttvar;        /* 平滑 rttvar */
+        u32 rtt_seq;       /* 更新 rttvar 的序列号 */
+        u32 rto;           /* 重传超时 */
+        u32 packets_out;   /* “飞行”中的包 */
+        u32 left_out;      /* 离开网络的数据 */
+        u32 retrans_out;   /* 重传的包 */
+    /*
+    * 慢启动和拥塞控制 */
+        u32 snd_hresh;    /* 慢启动阈值 */
+        u32 snd_cwnd;      /* 拥塞窗口 */
+        u16 snd_cnt;       /* 线性增长 */
+        u16 snd_clamp;    /* 不超过此值 */
+        u32 snd_used;      /* snd_cwnd */
+```
 
 ### 7.4.6 结构
 
-这些由状态机协调。`tcp_opt` 结构是一个联合体，其值在 RFC 793 中描述，并在下文中插图。
+这些由状态机协调。`tcp_opt`结构是一个联合体，其值在 RFC 793 中描述，并在下文中插图。
 
 图 7.21 tcp_opt (iii)。
 
 ```
-329             __u32 snd_tval;            /* 时间戳值 */
-330             u32 snd_hresh;    /* 慢启动阈值 */
-331             u32 snd_cwnd;      /* 拥塞窗口 */
-332             struct timer_list timeout; /* 重传 */
-333             
-335             struct timer_list delack;   /* 延迟 ACK */
-336             
-337             struct sk_buf_head *out_order; /* AF_specific */
-338             
-339             struct page *page;          /* AF_specific */
-340             struct tcp_info *info;      /* AF_specific */
-341             
-342             u32 rcv_wnd;             /* 当前接收窗口 */
-343             u32 rcv_wup;             /* 窗口更新 rcv_nxt */
-344             u32 write_seq;          /* 发送端尾部 */
-345             pushed_seq;               /* 最后推送的序列，需要通信 */
-346             u32 copied_seq;          /* 未读数据的头部 */
-347             
-348             
-349             */通常在 SYN 包上）。
-350             
-351             char tst_op;            /* SYN 包上的 TIMESTAMP */
-352             wscale_ok;               /* SYN 包上的 Wscale */
-353             sack_ok;               /* SYN 包上的 SACK */
-354             char saw_tsam;             /* 上一个包的 SAW TIMESTAMP */
-355             u32 snd_wnd;             /* 发送端的窗口缩放 */
-356             u32 rcv_wnd;             /* 接收端的窗口缩放 */
-357             __u8 nonage;               /* 禁用 Neigh 算法？ */
-358             keepalive_probes;         /* 允许的保活探测次数 */
-359             
-360             __u32 rcv_tval;            /* 时间戳值 */
-361             __u32 rcv_tsec;            /* 时间戳回显 */
-362             __u32 ts_recent;           /* 下一个回显的时间戳 */
-363             long ts_recent_stamp;      /* 我们存储 ts_recent 的时间（用于老化） */
-364             
-365             
-366             Sacks data;                /* 用户在 ioctl 中请求的 ms */
-367             __u16 user_msgs;           /* */
-368             __u8 dsack;                /* D-SACK 已计划 */ */
+        __u32 snd_tval;            /* 时间戳值 */
+
+        u32 snd_hresh;    /* 慢启动阈值 */
+
+        u32 snd_cwnd;      /* 拥塞窗口 */
+
+        struct timer_list timeout; /* 重传 */
+
+        
+
+        struct timer_list delack;   /* 延迟 ACK */
+
+        
+
+        struct sk_buf_head *out_order; /* AF_specific */
+
+        
+
+        struct page *page;          /* AF_specific */
+
+        struct tcp_info *info;      /* AF_specific */
+
+        
+
+        u32 rcv_wnd;             /* 当前接收窗口 */
+
+        u32 rcv_wup;             /* 窗口更新 rcv_nxt */
+
+        u32 write_seq;          /* 发送端尾部 */
+
+        pushed_seq;               /* 最后推送的序列，需要通信 */
+```
+
+
+
+`346` `u32 copied_seq;`          /* 未读数据的头部 */
+
+*/通常在 SYN 包上）。
+
+`char tst_op;`            /* SYN 包上的 TIMESTAMP */
+`wscale_ok;`               /* SYN 包上的 Wscale */
+`sack_ok;`               /* SYN 包上的 SACK */
+`char saw_tsam;`             /* 上一个包的 SAW TIMESTAMP */
+`u32 snd_wnd;`             /* 发送端的窗口缩放 */
+`u32 rcv_wnd;`             /* 接收端的窗口缩放 */
+`__u8 nonage;`               /* 禁用 Neigh 算法？ */
+`keepalive_probes;`         /* 允许的保活探测次数 */
+
+`__u32 rcv_tval;`            /* 时间戳值 */
+`__u32 rcv_tsec;`            /* 时间戳回显 */
+`__u32 ts_recent;`           /* 下一个回显的时间戳 */
+`long ts_recent_stamp;`      /* 我们存储 ts_recent 的时间（用于老化） */
+
+`Sacks data;`                /* 用户在 ioctl 中请求的 ms */
+`__u16 user_msgs;`           /* */
+`__u8 dsack;`                /* D-SACK 已计划 */ */
 
 图 7.22 tcp_opt (iv)。
 
@@ -23302,10 +24081,6 @@ TCP 可以处于多种状态。这些状态在图 7.16 所示。连接建立和�
 369      struct tcp_sack_block duplicate_sack[1]; /* D-SACK 块 */
 370      struct tcp_sack_block selective_acks[4]; /* SACKS 本身*/ /*
 ```
-
-
-
-
 
 # 传输 497
 
@@ -23324,8 +24099,8 @@ TCP 可以处于多种状态。这些状态在图 7.16 所示。连接建立和�
 384    __u32 high_seq;            /* 拥塞发生时的 snd_nxt ***/
 
 387    __u32 retrans_stamp;       /* 上次重传的时间戳,* /
-388                         /* 也用于 SYN-SENT 状态以记录 */
-389                         /* 第一个 SYN 的标记。               */
+                         /* 也用于 SYN-SENT 状态以记录 */
+                         /* 第一个 SYN 的标记。               */
 390    __u32 undo_marker;         /* 追踪此处开始重传。 */
 391    int undo_retrans;          /* 撤销重传的次数 */
 392    __u32 urg_seq;             /* 请求的序列指针 ***/
@@ -23366,6 +24141,8 @@ rwlock_t               syn_wait_lock;
 # 498 TCP/IP 和 Linux 协议实现
 
 图 7.24 tcp.skb.cb 结构。
+
+
 
 ```c
 // 这是发送数据包队列引擎用于将
@@ -23409,7 +24186,7 @@ struct tcp_skb_cb {
 };
 ```
 
-# 图 7.25 tcp_sendmsg 的开始。
+# 图 7.25 `tcp_sendmsg` 的开始。
 
 ```c
 1008 int tcp_sendmsg(struct sock *sk, struct msghdr *msg, int size) {
@@ -23449,7 +24226,7 @@ struct tcp_skb_cb {
         goto do_error;
 ```
 
-# 图 7.26  MSS。
+# 图 7.26 MSS。
 
 ```c
 /* 计算有效 MSS，考虑 SACK 和 IP 选项，
@@ -23465,86 +24242,151 @@ static __inline__ unsigned int tcp_current_mss(struct sock *sk)
 ```
 
 if (sk && dst->pstu != pmtu) {
+
     mss_now = tp->mss_caches;
+
 }
+
 ```
-
-
-
 
 # 502 TCP/IP 与 Linux 协议实现
 
-图 7.28 寻找拷贝数据的空间 (i)。
+## 图 7.28 寻找拷贝数据的空间 (i)。
 
 ```c
+
 /* 如果要拷贝到哪里？ */
+
 if (skb_tailroom(skb) > 0) {
+
     /* skb 头部还有空间。太棒了！ */
+
     if (copy > skb_tailroom(skb)) {
+
         copy = skb_tailroom(skb);
+
         if ((err == skb_add_data(skb, from, copy)) != 0)
+
             goto do_fault;
+
     }
+
 } else {
+
     int merge = 0;
+
     int i = skb_shinfo(skb)->nr_frags;
+
     struct page *page = TCP_PAGE(skb);
+
     int off = -TCP_OFF(sk);
+
     if (can_coalesce(skb, i, page, off) && off != PAGE_SIZE) {
+
         /* 我们可以扩展最后一个页碎片。 */
+
         merge = 1;
+
     } else if (i == MAX_SKB_FRAGS) {
+
         if (i == 0 && !(sk->route_cache&NETIF_F_SG)) {
+
              /* 需要添加新碎片，但无法做到
+
              * 因为接口不是 SG（散聚集），
+
              * 或者因为所有页槽都已满。
+
              */
+
             tcp_mark_push(tp, skb);
+
             goto next_segment;
+
         }
+
     } else if (page) {
+
         /* 如果页被缓存，将偏移量
+
          * 对齐到 L1 缓存边界
+
          */
+
         off = (off+L1_CACHE_BYTES-1)&(L1_CACHE_BYTES-1);
+
         if (off == PAGE_SIZE) {
+
             put_page(page);
+
             TCP_PAGE(skb) = page = NULL;
+
         }
+
     }
+
 }
+
 if (!page) {
+
     /* 分配新的缓存页。 */
+
     if (!(page=tcp_alloc_page(skb))
+
         goto wait_for_memory;
+
 }
+
 off = 0;
+
 ```
 
-图 7.29 寻找拷贝数据的空间 (ii)。
+## 图 7.29 寻找拷贝数据的空间 (ii)。
 
 ```c
+
 if (copy > PAGE_SIZE-off) {
+
     copy = PAGE_SIZE-off;
+
 }
+
 /* 拷贝数据的时间。我们接近结尾了！ */
+
 err = tcp_copy_to_page(sk, from, skb, page, off, copy);
+
 if (err)
+
 goto do_error;
+
 /* 更新 skb。 */
+
 if (merge) {
+
     skb_shinfo(skb)->frags[i-1].size += copy;
+
 } else {
-    full_page_desc(sk, i, page, off, copy);
-    if (TCP_PAGE(sk)) {
-        get_page(page);
-    } else if (off + copy < PAGE_SIZE) {
-        get_page(page);
-        TCP_PAGE(sk) = page;
-    }
-}
-TCP_OFF(sk) = off+copy;
 ```
+
+
+
+`full_page_desc(sk, i, page, off, copy);`
+
+```c
+if (TCP_PAGE(sk)) {
+
+    get_page(page);
+
+} else if (off + copy < PAGE_SIZE) {
+
+    get_page(page);
+
+    TCP_PAGE(sk) = page;
+
+}
+```
+
+`TCP_OFF(sk) = off+copy;`
 
 现在我们遍历消息块并构建分段。由于 TCP 是面向字节的，块可以被拆分和合并，以尽可能实现完整的分段。检查写队列末端的第一个套接缓冲区（socket buffer）。如果它不存在（例如因为它已经传输并被确认）或者它是满的，则分配一个新的套接缓冲区。如果有空间，则计算剩余空间。到图 7.27 结束，`copy` 包含了可以添加到此 `sk_buff` 中的字节数。
 
@@ -23612,6 +24454,7 @@ out_err:
 
 # 图 7.32 将套接缓冲区写入网络。
 
+```c
 /* 这将数据包写入网络。它为我们推进 send_head。如果没有分段在途中且我们已经队列了分段，但由于 SWS 或或其他问题无法发送，则返回 1。 */
 int tcp_write_mit(struct socket *sk) {
     struct tcp_opt *opt = &(sk->tp->pinfo);
@@ -23652,6 +24495,7 @@ int tcp_write_mit(struct socket *sk) {
 
 图 7.33 是否需要。
 
+```c
 /* 检查带有 SKB（通常是 tp->send_head）的数据是否应该放在线路上。 */
 static __inline int tcp_scnd_test(struct tcp_opt *tp, struct sk_buff *skb,
     unsigned cur_ms, int nonagle)
@@ -23669,13 +24513,13 @@ static __inline int tcp_scnd_test(struct tcp_opt *tp, struct sk_buff *skb,
     TCP_SKB_CB(skb)->flags & TCPCB_FLAG_FIN) &&
     !after(TCP_SKB_CB(skb)->end_seq, tp->snd_una + tp->snd_snd));
 }
-
-
-
+```
 
 # 508 TCP/IP 与 Linux 协议实现
 
 图 7.35 构建 TCP 头部 (ii)。
+
+
 
 ```
 227 skb_set_owner_w(skb, sk);
@@ -23866,21 +24710,33 @@ return -ENOMBUFS;
 #undef SYSCTL_FLAG_TSTAMPS
 #undef SYSCTL_FLAG_WSCALE
 #undef SYSCTL_FLAG_SACK
+```
 
-tcp_transmit_skb 是构建包含任何选项字段的 TCP 头部的函数，通过 `tp->af_specific->send_check()` 调用数据包校验，映射到 `tcp_v4_send_check`，并通过 `tp->af_specific->queue_xmit(skb)` 传输缓冲区。注意传递的缓冲区意味着原始数据已保存在重传所需的缓冲区副本中。
+`tcp_transmit_skb` 是构建包含任何选项字段的 TCP 头部的函数，通过 `tp->af_specific->send_check()` 调用数据包校验，映射到 `tcp_v4_send_check`，并通过 `tp->af_specific->queue_xmit(skb)` 传输缓冲区。注意传递的缓冲区意味着原始数据已保存在重传所需的缓冲区副本中。
 
 # 图 7.37 TCP 数据包校验和。
 
 ```
 /* 此程序计算 IPv4 TCP 校验和。 */
+
 void tcp_v4_send_check(struct sk_buff *sk, struct tcpcb *th, int len,
+
     struct sk_buff *skb) {
+
 if (sk->ip_sum == CHECKSUM_HDR) {
+
     th->check = tcp_v4_check(th, len, sk->saddr, sk->daddr, 0);
+
     skb->csum = offsetof(struct tcpcb, check);
+
 } else {
+
     th->check = tcp_v4_check(th, len, sk->saddr, sk->daddr,
+
     csum_partial((char *)th, th->doff<<2, skb->csum));
+
+}
+
 }
 ```
 
@@ -23888,37 +24744,59 @@ if (sk->ip_sum == CHECKSUM_HDR) {
 
 ```
 int tcp_v4_rcv(struct sk_buff *skb)
+
 {
+
     struct tcphdr *th;
+
     struct sock *sk;
+
     int ret;
+
     if (skb->pkt_type != PACKET_HOST)
+
         goto discard_it;
+
     /* 如果是坏的则计数 */
+
     TCP_INC_STATS_BH(tcpInSeg);
+
     if (!skb->may_pull(skb, sizeof(tcphdr)))
+
         goto discard_it;
+
     th = skb->h;
+
     if (th->doff < sizeof(tcphdr)/4)
+
         goto bad_packet;
+
     if (!skb->may_pull(skb, th->doff+4))
+
         goto discard_it;
+
     /* 我认为这里需要解释。
+
      * 数据包长度和 doff 已通过消除 th->doff 的头部情况验证。
+
      * 所以我们推迟了检查。 */
+
     if ((skb->ip_sum != CHECKSUM_UNNECARY &&
+
         tcp_v4_checksum_init(skb) < 0))
+
         goto bad_packet;
+
     th = sk->th;
+
     TCP_CB(skb)->seq = ntohl(th->seq);
+
     TCP_CB(skb)->next_seq = TCP_CB(skb)->seq + th->syn + th->fin +
+
         sk->len -= th->doff+4;
+
     TCP_CB(skb)->ack_seq = ntohl(th->ack_seq);
 ```
-
-
-
-
 
 # 514 TCP/IP 与 Linux 协议实现
 
@@ -23949,45 +24827,69 @@ if (tcp_header_len <= sizeof(struct tcphdr) + TCPOTLEN_ALIGNED) {
 ```c
 /* 没有？慢速路径！ */
 if (*ptr <= (TCPOPT_OPT << 24) | (TCPOPT_OPT << 16))
-    | (TCPOPT_TIMESTAMP | TCPOTLEN_TIMESTAMP))
-    goto slow_path;
+```
+
+
+
+```c
+| (TCPOPT_TIMESTAMP | TCPOTLEN_TIMESTAMP))
+
+goto slow_path;
 
 tp->saw_timestamp = 1;
+
 ++ptr;
+
 tp->rcv_tsval = ntohl(ptr);
+
 ++ptr;
+
 tp->rcv_tsecr = ntohl(ptr);
 ```
 
 ```c
 /* 如果 PAWS 失败，在慢速路径中更仔细地检查 */
+
 if ((s32) > (tp->rcv_ts - tp->ts_recent) < 0)
+
     goto slow_path;
 ```
 
 ```c
 /* 预测包定义在窗口内。
+
  * seq = rcv_next <= rcv_wup <= rcv_next.
+
  * 因此，检查 seq->rcv_wup 简化为：
+
 if (tp->rcv_next != tp->rcv_wup)
+
     tcp_store_ts_recent(tp);
 }
 ```
 
 ```c
 if (len <= tcp_header_len) {
+
     /* 批量数据传输：发送端 */
+
     if (len == tcp_header_len) {
+
         /* 我们知道这样的包在进入时
+
          * 已经过校验和。 */
+
         tcp_ack(sk, skb);
+
         __kfree(skb);
+
         tcp_data_send_check(sk);
+
         return 0;
     }
 ```
 
-第一个包的头部信息（来自 th->）被复制到数据缓冲区 `TCP_SKB_CB` 块中。然后找到该包的 socket（见第 7.4.7 节）。现在，socket 缓冲区要么进入 socket 队列（backlog）供进程处理，要么进入 `tcp_v4_do_recv`。如果当前用户进程是拥有该 socket 的进程，则 fig:tcppreque 提供了优化（见图 7.40）。
+第一个包的头部信息（来自 `th->`）被复制到数据缓冲区 `TCP_SKB_CB` 块中。然后找到该包的 socket（见第 7.4.7 节）。现在，socket 缓冲区要么进入 socket 队列（`backlog`）供进程处理，要么进入 `tcp_v4_do_recv`。如果当前用户进程是拥有该 socket 的进程，则 `fig:tcppreque` 提供了优化（见图 7.40）。
 
 # 图 7.43 在已建立的连接上接收 socket 缓冲区 (iii)。
 
@@ -23998,38 +24900,29 @@ if (len <= tcp_header_len) {
 3303      }
 3304  } else {
 3305      int eaten = 0;
-
 3307      if (tp->ucpy.task == current &&
 3308              tp->copied_seq == tp->rcv_ntx &&
 3309              len - tcp_header_len <= tp->ucpy.len &&
 3310              sk->lock.users()) {
 3311              eaten = 1;
-
 3313              NET_INC_STAT_BH(TCPPHitsToUser);
-
 3315              __set_current_state(TASK_RUNNING);
 3317              if (tp->copy_to_lovec(sk, tcp, tcp_header_len))
 3319                  goto csum_error;
-
 3320                  __skb_pull(sk,tcp_header_len);
-
 3321                  tp->rcv_ntx = TCP_SKB_CB(sk)->end_seq;
 3323      } else {
 3324          if (tcp->checksum_complete(sk, skb))
 3325              goto csum_error;
-
 3327              if ((int)sk->truize > sk->alloc)
 3328                  goto step5;
-
 3330              NET_INC_STAT_BH(TCPPHits);
 3332              /* 批量数据传输：接收端 */
 3333              __skb_pull(skb,tcp_header_len);
 3334              __skb_queue_tail(sk->receive_queue, skb);
 3335              tp_set_owner(sk, skb);
 3336              tp->rcv_ntx = TCP_SKB_CB(sk)->end_seq;
-
 3338      }
-
 3340      tp_event_data_recv(sk, tp, skb);
 3341      if (TCP_SKB_CB(sk)->ack_seq != tp->snd_una) {
 3342              /* 好的，快快路径中的一个小包... */
@@ -24040,9 +24933,7 @@ if (len <= tcp_header_len) {
 ```c
 if (!ack_scheduled(tp))
     goto no_ack;
-
 }
-
 if (eaten) {
 ```
 
@@ -24059,7 +24950,6 @@ if (tcp_im_quickack_mode(tp)) {
 else {
     __tcp_ack_snd_check(sk, 0);
 }
-
 no_ack:
 if (eaten) {
     __kfree(skb);
@@ -24067,7 +24957,6 @@ if (eaten) {
     sk->data_ready(sk, 0);
     return 0;
 }
-
 low_path:
 if (len < (th->doopt<<2) || tcp_checksum_complete(sk, skb)) {
     goto csum_error;
@@ -24085,10 +24974,12 @@ if (tcp_fast_parse_options(sk, th, tp) && tp->saw_timestamp &&
 }
 /* 如果 PAWS 失败，则接受重置。
 ts_recent 更新必须在我们确定包在窗口内后进行。 */
+```
 
-# 传输 517
+## 传输 517
 
 /* 标准慢速路径。 */
+```c
 if (!tcp_sequence(tp, TCP_SKB_CB(sk)->seq, TCP_SKB_CB(sk)->end_seq)) {
     /* RFC 793, 第37页：“除了 SYN-SENT 状态外，所有的重置
      * (RST) 段都通过检查它们的 SEQ 来验证。
@@ -24096,8 +24987,15 @@ if (!tcp_sequence(tp, TCP_SKB_CB(sk)->seq, TCP_SKB_CB(sk)->end_seq)) {
      * 则应回复一个确认（除非 RST 位
      * 已设置，此时丢弃该段）” */
 }
+```
 
 # 图 7.45 在已建立的连接上接收 socket 缓冲区 (v)。
+
+
+
+# TCP/IP 与 Linux 实现
+
+## 图 7.46 TCP 序列检查
 
 ```c
 if (th->rst) {
@@ -24134,10 +25032,6 @@ discard:
 }
 ```
 
-# TCP/IP 与 Linux 实现
-
-# 图 7.46 TCP 序列检查。
-
 ```c
 /* 检查序列号的有效性。
  * 如果段在截断窗口后符合窗口，则段控制
@@ -24160,7 +25054,7 @@ static inline int tcp_sequence(struct tcp_opt *tp, u32 seq, u32 end_seq) {
      */
 ```
 
-# 图 7.47 接收窗口。
+## 图 7.47 接收窗口
 
 ```c
 /* 计算我们正在广告的接收窗口。
@@ -24176,7 +25070,7 @@ static inline u32 tcp_receive_window(struct tcp_opt *tp) {
 }
 ```
 
-# 图 7.48 ACK 发送。
+## 图 7.48 ACK 发送
 
 ```c
 /* 检查是否需要发送 ACK。 */
@@ -24203,7 +25097,7 @@ static inline void tcp_ack_snd_check(struct sock *sk) {
 }
 ```
 
-# 图 7.49 处理确认 (i)。
+## 图 7.49 处理确认 (i)
 
 ```c
 /* 此例程处理传入的 sack，但不处理发出的。 */
@@ -24221,10 +25115,6 @@ static int tcp_ack(struct sock *sk, struct sk_buff *skb, int flag) {
     }
 }
 ```
-
-
-
-
 
 # TCP/IP 与 Linux 协议实现
 
@@ -24270,7 +25160,9 @@ tcp_update_window(struct tcp_opt *tp, u32 ack, u32 ack_seq, u32 win)
 }
 ```
 
-**7.50** 处理确认 (ii)。
+## 7.50 处理确认 (ii)
+
+
 
 ```c
 /* 更新我们的发送窗口。 
@@ -24391,7 +25283,9 @@ static int tcp_ack_struct(struct sock *sk, struct sk_buff *skb, int flag)
 1987  }
 ```
 
-发生乱序包，会发送重复 ACK 并调用 `tcp_dup()`。如果成功，调用 `tcp_ack_snd_check`，且 `tcp_ack_snd_check` 会发送立即 ACK 或调度延迟 ACK（图 48）。
+发生乱序包，会发送重复 `ACK` 并调用 `tcp_dup()`。如果成功，调用 `tcp_ack_snd_check`，且 `tcp_ack_snd_check` 会发送立即 `ACK` 或调度延迟 `ACK`（图 48）。
+
+
 
 ```c
 2524 void tcp_data_queue(struct sock *sk, struct sk_buff *skb)
@@ -24399,32 +25293,32 @@ static int tcp_ack_struct(struct sock *sk, struct sk_buff *skb, int flag)
 2526       struct tcph *th = skb->h->th;
 2527       struct tcp_opt *tp = &(sk->tp_pinfo.af_tcp);
 2528       int eaten = -1;
-2529
+
 2530       th = skb->h->th;
 2531      __skb_pull(skb, th->dff);
-2532
+
 2533      if (skb->len == 0 && !th->fin)
-2534          goto drop;
-2535
+          goto drop;
+
 2536      TCP_ECN_accept_wr(tp, skb);
-2537
+
 2538      if (tp->dsack) {
 2539           tp->dsack = 0;
 2540           tp->eff_sacks = min(tp->num_sacks, tp->stamp_ok);
-2541       }
-2542       /* 将数据交付给用户。
-2543            有序包进入接收队列。
-2544            乱序的包进入乱序队列。
-2545        */
+       }
+       /* 将数据交付给用户。
+            有序包进入接收队列。
+            乱序的包进入乱序队列。
+        */
 2546       if (TCP_SKB_CB(skb)->seq == tp->rcv_cnt) {
 2547           if (tcp_receive_window(tp) == 0)
-2548               goto out_of_window;
-2549   }
+               goto out_of_window;
+  }
 ```
 
 当收到确认包时，会调用 `tcp_ack`（见图 49–50）。
 
-**图 7.52** 处理和入队数据 (ii)。
+`图 7.52` 处理和入队数据 (ii)。
 
 ```c
 2579      tcp_set_owner_r(sk, skb);
@@ -24435,38 +25329,39 @@ static int tcp_ack_struct(struct sock *sk, struct sk_buff *skb, int flag)
 2584          tcp_event_data_recv(sk, tp, skb);
 2585          if (tp->fin)
 2586              tp_fin(sk, sk, th);
-2587
+
 2588      if (skb->queue_len(tp->out_order_queue)) {
 2589          tp_of_queue(sk);
-2590
-2591              /* RFC 2851. 4.2. 当队列中的
-2592                 * 空隙被填充时，应该发送立即 ACK。
-2593              */
+
+              /* RFC 2851. 4.2. 当队列中的
+                 * 空隙被填充时，应该发送立即 ACK。
+              */
 2594              if (skb->queue_len(tp->out_order_queue) == 0)
-2595                  tp->ack_pingpong = 0;
-2596
-2597      }
+                  tp->ack_pingpong = 0;
+
+      }
 ```
 
 ```c
 2599    if(tp->num_sacks)
 2600        tcp_sack_remove(tp);
-2601
+
 2602        tcp_fast_path_check(sk, tp);
-2603
+
 2604        if (eaten > 0) {
 2605            _kfree_skb(skb);
-2606        else if (!sk->dead)
+        else if (!sk->dead)
 2607            sk->data_ready(sk, 0);
 2608            return;
-2609        }
+        }
 2610
+
 2611 if (after(TCP_SKB_CB(skb)->end_seq, tp->rcv_nxt))
 2612     /* 重传，次常见的情况。强制发送立即确认。 */
 2613     NET_IN_STATS_BR(DelayedACKLost);
 2614     tcp_enter_quickack_mode(tp);
 2615     tcp_dsack_set(tp, TCP_SKB_CB(skb)->end_seq, TCP_SKB_CB(skb)->end_seq);
-2616
+
 2617  out_of_window:
 2618     tcp_schedule_ack(tp);
 2619  drop:
@@ -24477,40 +25372,38 @@ static int tcp_ack_struct(struct sock *sk, struct sk_buff *skb, int flag)
 2624     /* 窗口外。例如零接收探测。 */
 2625     if (!before(TCP_SKB_CB(skb)->seq, tp->rcv_nxt+tcp_receive_window(tp)))
 2626     goto out_of_window;
-2627
+
 2628     tcp_enter_quickack_mode(tp);
-2629
+
 2630 if (before(TCP_SKB_CB(skb)->seq, tp->rcv_nxt)) {
 2631         /* 部分数据包，seq rcv_next < end_seq */
 2632         SOCK_DEBUG(sk, "partial packet: rcv_next %X seq %X - %X\n",
 2633             tp->rcv_nxt, TCP_SKB_CB(skb)->seq);
-2634         }
-2635 }
+         }
+}
 ```
 
-图 7.53 处理和入队传入数据 (iii)。
+`图 7.53` 处理和入队传入数据 (iii)。
 
 ```c
 2634     TCP_SKB_CB(skb)->end_seq);
-2635
+
 2636     tp_dsack_set(tp, TCP_SKB_CB(skb)->seq, tp->rcv_nxt);
-2637
+
 2638     /* 如果窗口关闭，丢弃包尾部。在
-2639         * 记住上一行为头部做的 D-SACK 后。
-2640         */
+         * 记住上一行为头部做的 D-SACK 后。
+         */
 2641         if (!tp_receive_window(tp))
 2642             goto out_of_window;
 2643         goto queue_and_out;
 2644     }
-2645
+
 2646     TCP_ECH_check_ca(tp, skb);
 ```
 
-
-
-
-
 ## 526 TCP/IP 和 Linux协议实现
+
+
 
 ```c
 if (atomic_read(&sk)->rmem_alloc + skb) != sk->rcvbuf) {
@@ -24564,7 +25457,7 @@ if (atomic_read(&sk)->rmem_alloc + skb) != sk->rcvbuf) {
 
 该函数的剩余部分处理乱序到达的情况。
 
-## 图 7.54 处理和入队输入数据 (iv)。
+### 图 7.54 处理和入队输入数据 (iv)。
 
 ```c
 2689    /* Find place to insert this segment. */
@@ -24608,7 +25501,9 @@ if (atomic_read(&sk)->rmem_alloc + skb) != sk->rcvbuf) {
 2727    }}
 ```
 
-## 图 7.55 定器初始化。
+### 图 7.55 定器初始化。
+
+
 
 ```c
 40 /
@@ -24725,23 +25620,19 @@ if (atomic_read(&sk)->rmem_alloc + skb) != sk->rcvbuf) {
 
 ## 528 TCP/IP 和 Linux协议实现
 
-
-
-
-
 # 530 TCP/IP 与 Linux 协议实现
 
 TCP 通常由连接远端的确认信号（ACKs）或用户数据进行驱动。然而，在某些情况下，需要定时器来维持运行。TCP 中有三个主要的定时器：
 
 - 重传定时器——如果数据包未被确认则触发重传使用此定时器；当对方的接收窗口为零时，也使用它来持续探测并为窗口增长提供机会。
-
-- 延迟确认定时器（delayed ACK timer）——用于发送延迟确认，如果尚未因为其他原因发送过。
-
-- 存活定时器（keep-alive timer）——用于在空闲连接上维持极低水平的流量。
+- 延迟确认定时器（`delayed ACK timer`）——用于发送延迟确认，如果尚未因为其他原因发送过。
+- 存活定时器（`keep-alive timer`）——用于在空闲连接上维持极低水平的流量。
 
 这些函数位于 `tcp_timer.c` 中（见图 7.55）。
 
 图 7.58 记录选择性确认乱序分段的需求 (ii)。
+
+
 
 ```c
 /* 这些例程在乱序数据包到达时更新 SACK 块，
@@ -24801,7 +25692,7 @@ sack2->end_seq = tmp;
 
 在发送缓冲区时，会检查拥塞窗口以及其他项。
 
-如果连接窗口小于慢启动阈值（sstresh），则连接处于慢启动状态。如果较大，则处于拥塞规避状态。拥塞窗口的大小根据此状态以不同的方式增加。图 7.56 显示了拥塞窗口的增长。这通过 `tcp_ack` 在每次收到 ACK 时调用一次。
+如果连接窗口小于慢启动阈值（`sstresh`），则连接处于慢启动状态。如果较大，则处于拥塞规避状态。拥塞窗口的大小根据此状态以不同的方式增加。图 7.56 显示了拥塞窗口的增长。这通过 `tcp_ack` 在每次收到 ACK 时调用一次。
 
 > 图 7.59 记录发送 dsack 所需节点。
 
@@ -24814,8 +25705,8 @@ sack2->end_seq = tmp;
 2316			else
 2317				NET_IC_STATS_BH(TCPDSACKofofSent);
 2318
-2319
-			p->dsack = seq;
+
+2319			p->dsack = seq;
 2320			p->duplicate_sack[0].start_seq = seq;
 2321			p->duplicate_sack[0].end_seq = end_seq;
 2322			p->eff_sacks = min(tp->num_sacks+1, 4-tp->tstamp_ok);
@@ -24835,9 +25726,9 @@ sack2->end_seq = tmp;
 
 书中描述的现代 TCP/IP 实现采用了名为 SACK 的确认。SACK 使用 TCP 选项来表示无法被确认的接收段，因为 ACK 中会存在空隙。`tcp_opt` 结构在 SACK 中使用了以下变量：
 
-- eff_sacks——要发送的 sacks 数量。
-- select_acks——sack 块数组（每个 sack 块包含起始和结束序列号）。
-- dsack——关于此的信息。
+- `eff_sacks`——要发送的 sacks 数量。
+- `select_acks`——sack 块数组（每个 sack 块包含起始和结束序列号）。
+- `dsack`——关于此的信息。
 
 这些由 TCP 接收函数设置（见图 7.57–7.59），并用于生成的包（见图 7.60）。
 
@@ -24877,6 +25768,8 @@ sack2->end_seq = tmp;
 
 # 图 7.61 检查 sack-reneging 接收端。
 
+
+
 ```c
 1028 static int tcp_check_sack_reneging(struct sock *sk, struct tcp_opt *tp)
 1029 {
@@ -24901,7 +25794,7 @@ sack2->end_seq = tmp;
 1048 }
 ```
 
-# 图 7.62 PAWS 检查。
+# 图 7.62 PAWS 检查
 
 ```c
 1797 static inline int tcp_paws_check(struct tcp_opt *tp, int rest)
@@ -24926,7 +25819,7 @@ sack2->end_seq = tmp;
 
 # 534 TCP/IP 与 Linux 协议实现
 
-# 图 7.63 往时间估计 (i)。
+# 图 7.63 往时间估计 (i)
 
 ```c
 /* 以下来自 Jacobson 88 年的 SIGCOMM 论文。
@@ -24953,7 +25846,7 @@ static __inline__ void tcp_rtt_estimator(struct tcp_opt *tp, __32 mrtt)
 }
 ```
 
-# 图 7.64 往时间估计 (ii)。
+# 图 7.64 往时间估计 (ii)
 
 ```c
 if (m == 0)
@@ -24967,10 +25860,6 @@ if (tp->rtt != 0) { /* m 现在是 rtt 误差 */
     }
 }
 ```
-
-
-
-
 
 # 传输 535
 
@@ -25005,17 +25894,19 @@ if (tp->rtt != 0) { /* m 现在是 rtt 误差 */
 478  }
 ```
 
-当一个段被 TCP 确认机制确认时，它们已被 SACKed 的这一事实就不再需要记录了。
+当一个段被 TCP 确认机制确认时，它们已被 `SACKed` 的这一事实就不再需要记录了。
 
 # 防止序列号回绕保护–PAWS
 
-这是 RFC 1323 中描述的高性能 TCP 扩展。在高带宽远距离链路中，存在序列计数在网络中仍有有效旧段时发生回绕的危险。PAWS 算法通过使用时间戳选项防止这种情况，该选项携带一个非递增的整数。基本思想是，如果一个段的时间戳小于最近收到的某个时间戳，则丢弃该段。tcp_opt 中的以下变量被使用：
+这是 `RFC 1323` 中描述的高性能 TCP 扩展。在高带宽远距离链路中，存在序列计数在网络中仍有有效旧段时发生回绕的危险。`PAWS` 算法通过使用时间戳选项防止这种情况，该选项携带一个非递增的整数。基本思想是，如果一个段的时间戳小于最近收到的某个时间戳，则丢弃该段。`tcp_opt` 中的以下变量被使用：
 
-- rcv_tsval—此段中的时间戳
-- ts_recent—最近收到的时间戳
-- ts_recent_stamp—ts_recent 变得的时间
+- `rcv_tsval`—此段中的时间戳
+- `ts_recent`—最近收到的时间戳
+- `ts_recent_stamp`—`ts_recent` 变得的时间
 
-# 图 7.65 往返估计 (iii)。
+# 图 7.65 往返估计 (iii)
+
+
 
 ```c
 /* 在不进行回退的情况下计算 rto。这是上述 Van Jacobson
@@ -25052,7 +25943,7 @@ tp->rto = (tp->rtt >> 3) + tp->rttvar;
 
 为了在带宽利用率方面从 TCP 连接中获得更多，需要一种准确的方法来确定用于超时的往返时间。该机制在 Stevens [8] 中描述，并在图 7.63-7.64 中展示了实现。
 
-# 图 7.66 在 SYN 包上构建选项。
+## 图 7.66 在 SYN 包上构建选项。
 
 ```c
 /* 为 SYN 或 SYN_ACK 包构建 tcp 选项标头。
@@ -25062,7 +25953,7 @@ tp->rto = (tp->rtt >> 3) + tp->rttvar;
  */
 ```
 
-# 传输 537
+## 传输 537
 
 ```c
 1441 static inline void tcp_syn_build_options(__u32_ptr, int mss, int ts, int sack,
@@ -25102,68 +25993,66 @@ tp->rto = (tp->rtt >> 3) + tp->rttvar;
 1474 )
 ```
 
-# 图 7.67 往返估计 (iv)。
+## 图 7.67 往返估计 (iv)。
 
-# 窗口缩放
+## 窗口缩放
 
 SYN 包上的窗口缩放允许该值如 RFC 1323 所示进行扩展。随着带宽和距离的不断增加，这不再足够（见图 7.67）。
-
-
-
 
 这些协议还具有自组织修复服务器机制。这些将再次改变流量模式。
 
 类似的演变也发生在来自互联网广播和电视网站的流媒体多媒体流量中，对于 RealAudio 和 Video（此类服务中最常用的产品）而言，其目标显然是实现类似于 TCP 的自适应。
 
-## 7.5 管理
+### 7.5 管理
 
 Linux 上的以下命令可监控传输层。
 
 - Netstat—可以显示活动连接；例如 `netstat -a` 将显示所有活动和监听状态的连接。
 - Tcpdump—可以通过在驱动程序层级将系统设置为混杂模式（即“识别所有帧为我所有”），并在线路上追踪数据包，然后通过过滤器传递给可以进一步处理或将其转储到屏幕的应用程序。
-- ethereal (www.ethereal.com)—将提供网络流量的图形化显示。
+- ethereal (`www.ethereal.com`)—将提供网络流量的图形化显示。
 
-## 7.6 TCP vs. UDP
+### 7.6 TCP vs. UDP
 
 正如我们所讨论过的，TCP 解决了 UDP 的许多问题，但代价是什么？TCP 是一个比 UDP 重得多的协议。事实上，仅仅从这本书的页数就能看出，在描述和实现 TCP 需要投入多少精力。然而，在某些情况下，UDP 是更好的传输机制。这些情况包括内存和资源有限的情况，例如无盘工作站上的初始离线网络操作，此时运行在 UDP 之上的 TFTP（简单文件传输协议）实现可以通过几字节 ROM 代码和极小的 RAM 需求来实现。在其他情况下，使用 UDP 可能会带来优势，即当轻量级特性可以提供性能优势时。这里的例子是局域网上的 DNS，当需要快速名称解析时，在局域网环境中通常有足够的资源来确保通信的成功。当有其他机制负责分段带宽时，也可以使用 UDP，例如通过 RSVP 建立的会话进行通信。实时协议（RTP）是一种设计用于互联网上传输实时流量（如视频和音频）的协议。它使用 UDP 作为传输机制。
 
-## 7.7 RTP–实时协议
+### 7.7 RTP–实时协议
 
 RTP 协议设计用于在互联网上传输多媒体流。RTP 是传输层协议还是应用层协议是一个常见的争论点。支持 RTP 是应用层协议的理由是：RTP 数据包封装在 UDP 段（传输层服务）中，且 RTP 通常在用户空间实现。相反的论点则是：RTP 为应用层提供了若干额外的服务，这些是同步和成帧。RFC 1889 描述了 RTP，其他多个 RFC 描述了特定媒体类型的不同负载格式。RTP 通常实现为用户库而非在内核中，因此它超出了本工作的范畴。
 
-## 7.8 编写新的传输层
+### 7.8 编写新的传输层
 
 如果你正在开发一种使用 IP 作为网络层并使用 sockets 作为应用 API 的新传输层，那么将其与现有协议栈链接只需编写适当的链接函数并填充函数持有结构即可（见第 7.3.4 节）。
 
-## 7.9 总结
+### 7.9 总结
 
 本章检查了传输协议及其实现。传输层提供的功能，即多路复用、可靠性、流和拥塞控制、同步和成帧，都经过了检查并详细说明了它们的实现。对流行的传输协议 TCP、UDP 和 RTP 进行了比较，并给出了如何编写自己的传输层的说明。
 
 ![](img/06c11ba8be5c1c24aa633e12618e2ebd_596_0.png)
 
 > “我不确定这种像患了牛病的扭曲饼一样创建路由图的能力是否真的是一项有市场的技能。”
+
 —Steve Levin
 
-## 8.1 路线图
+# 8.1 路线图
 
 本章关于互联网底层架构和路径查找。在这里我们讨论了如何互连不同类型的链路，并在完成后，如何在复杂的拓扑结构中找到从 A 到 B 的路径。Linux 支持多种路由协议；运行在 PC 或其他硬件平台上的 Linux 系统被广泛用作低到中性能路由器的低成本解决方案（尽管并不完全廉价——可以轻松支持 100 BaseT 和 OC3 广网链路，而且没有明显的理由不构建达到 Gbps 级别的路由器）。
 
+
+
 路由器有两个主要组件：转发和路由。转发任务在每个数据包上执行，涉及在转发表中查找目的（以及数据包中可能的其他数据），并使用结果决定在哪个接口上传输数据包。这是一个内核过程。路由任务涉及构建和维护转发表的业务，并异步异步执行，通常由用户空间进程执行。互联网中使用了多种路由协议，但基本任务是相同的。
 
-在本章中，我们将回顾路由系统的组件，然后查看 Linux 内核对转发信息库（FIB）的支持以及如何从用户空间的路由协议获取。
+在本章中，我们将回顾路由系统的组件，然后查看 Linux 内核对转发信息库（`FIB`）的支持以及如何从用户空间的路由协议获取。
 
 ## 8.2 引言
 
-路由系统将寻找路径的工作从端系统中转移出来。就像邮政服务一样，端用户和系统只知道接收者的位置（地址）以便从那里获取信息。端系统通过接收地址来发现地址。通常，端用户使用 DNS 名称，在名称服务器系统中查找，结果是应用软件获得一个 IP 地址。端软件随后使用该地址作为与远端通信的句柄。互联网协议层的基础（在端路由器和链路中）共同协作，根据 IP 数据包中的目的地址将数据包递送到正确的位置。路由系统可以选择地查询 IP 头中的其他字段以提供增强服务。地图必须以某种方式构建，实现这一点有多种方法。
+路由系统将寻找路径的工作从端系统中转移出来。就像邮政服务一样，端用户和系统只知道接收者的位置（地址）以便从那里获取信息。端系统通过接收地址来发现地址。通常，端用户使用 `DNS` 名称，在名称服务器系统中查找，结果是应用软件获得一个 `IP` 地址。端软件随后使用该地址作为与远端通信的句柄。互联网协议层的基础（在端路由器和链路中）共同协作，根据 `IP` 数据包中的目的地址将数据包递送到正确的位置。路由系统可以选择地查询 `IP` 头中的其他字段以提供增强服务。地图必须以某种方式构建，实现这一点有多种方法。
 
 **转发决策频率。** 转发决策发生得最频繁。我们可以为每个数据包单独决定采取哪条路由，或者为一组数据包固定决策，甚至为某个特定用户的若干数据包（可能是某些配置的时间）固定决策。无论转发系统如何工作，似乎我们都不想执行任何复杂的计算，而且我们特别想为了转发一个数据包而与任何其他路由器进行任何信息交换。
 
 关于世界的信息可以以无限的速度传播。在物理传输系统（例如邮政服务或汽车的高速公路系统）中，可以通过通信网络中的无线电发送远程状况信息，链路的状态在某种程度上只有当用户自己的数据传输时才能获。换句话说，我们对世界世界的信息是过时的。这意味着频繁更改我们使用的路由是没有意义的。在一种极端情况下，我们可以通过某些配置工具或网络管理手动固定数据包采取的路由。事实上，在网络某些没有其他选择的部分，有效地执行这样做是非常常见的——这被称为设置默认路由。当深入网络更深处时，这就没有意义了，因为网络中存在其他可选的可能路径，如果我们的（默认）选择链路或路径故障，无法使用它们将是很遗憾的。因此，通常只在端系统或非多主备的站点接入路由器上配置固定路由甚至是默认路由。
 
-**路由计算频率。** 我们可以在每当有一个新流时（例如，新的 TCP 会话或新的 Web 下载）就重新计算路由。如果流的持续时间很长，这可能有意义，因为我们可能还可以进行一些聪明的负载均衡，前提是我们能够告诉世界其他部分我们的新流以及我们正在考虑它的哪些路径。在实践中，在互联网上流是短寿的，因此大多数当前的路由协议都不考虑基于短期信息重新计算路由。更常见的是基于以下两个因素之一执行路由计算：
-
+**路由计算频率。** 我们可以在每当有一个新流时（例如，新的 `TCP` 会话或新的 Web 下载）就重新计算路由。如果流的持续时间很长，这可能有意义，因为我们可能还可以进行一些聪明的负载均衡，前提是我们能够告诉世界其他部分我们的新流以及我们正在考虑它的哪些路径。在实践中，在互联网上流是短寿的，因此大多数当前的路由协议都不考虑基于短期信息重新计算路由。更常见的是基于以下两个因素之一执行路由计算：
 - 进入路由计算的数据；目前，这被认为某种黑术。
-
 进行定期的刷新（软状态刷新）也是有用的，以确保每个人对世界有一致的视图。
 
 **路由更新数据源。** 路由计算的输入数据可以从中央监控系统递送到每个路由器，或者从路由器的邻居节点逐跳传递，或者由每个路由器向区域内所有其他路由器泛洪信息。每种方法都有其优点。中央系统可能会故障，导致路由器无法更新，但中央系统减轻了路由器的负载。逐跳宣告是简单的，但会导致不一致性。泛洪方法可以实现一致的视图，但对路由更新需要流量控制。
@@ -25172,51 +26061,43 @@ RTP 协议设计用于在互联网上传输多媒体流。RTP 是传输层协议
 
 如果使用泛洪方法从或向管理节点分发路由数据，或者从每个路由器向区域内所有路由器分发，则必须限制泛洪不产生环。这可能涉及简化的基线路由计算（例如，首先在所有（路由器）之间构建一棵生成树）。
 
-
-路由计算位置。在积累了关于网络状态的信息后，我们需要计算最佳路径。这可以在中心节点上完成，并将实际的路径信息分发到中心和每个路由器；或者更现实的做法是，可以在每个路由器上自主完成。CPU 功率是廉价的。内存也相当廉价。因此，通过在每个路由器上分发（并在某种程度上实际上是复制）路由计算，来利用其时性和与其他节点故障的独立性优势，是明有意义的。
+路由计算位置。在积累了关于网络状态的信息后，我们需要计算最佳路径。这可以在中心节点上完成，并将实际的路径信息分发到中心和每个路由器；或者更现实的做法是，可以在每个路由器上自主完成。`CPU` 功率是廉价的。内存也相当廉价。因此，通过在每个路由器上分发（并在某种程度上实际上是复制）路由计算，来利用其时性和与其他节点故障的独立性优势，是明有意义的。
 
 路由更新数据语义。路由更新携带了链路状态信息。在最简单的情况下，这是一个二进的/不可用（binary/down）的指示。然而，越来越多的网络运营商希望根据更复杂的指标来选择路由。这些测量可以包括传播延迟、当前平均队列延迟、链路容量、货币成本、丢包统计以及许多其他可能性。
 
-在特殊情况下，路由系统的设计采取了其他反直觉的方法。例如，在自构无线网络中，有时会使用随机路由。在计算资源极其有限的系统（例如 CPU、内存）中，会使用“热薯豆路由”（hot potato routing），即根据当前的本地信息转发数据包，例如选择当前队列最短的输出链路。
+在特殊情况下，路由系统的设计采取了其他反直觉的方法。例如，在自构无线网络中，有时会使用随机路由。在计算资源极其有限的系统（例如 `CPU`、内存）中，会使用“热薯豆路由”（hot potato routing），即根据当前的本地信息转发数据包，例如选择当前队列最短的输出链路。
 
-在实践中，目前 Internet 路由很大程度上是分布式且自适应的。转发决策（频繁）在很大程度上与路由计算（偶尔）解耦。这些设计选择使得转发任务相对简单，但路由协议和路由信息基础（RIB）以及转发信息基础（FIB）映射计算任务相对复杂。还需要完成其他几个任务：
-
+在实践中，目前 Internet 路由很大程度上是分布式且自适应的。转发决策（频繁）在很大程度上与路由计算（偶尔）解耦。这些设计选择使得转发任务相对简单，但路由协议和路由信息基础（`RIB`）以及转发信息基础（`FIB`）映射计算任务相对复杂。还需要完成其他几个任务：
 邻居发现。路由器启动时，要么配置了关于链路末端谁故障的信息，要么必须通过探测或监听来发现这些信息。
+状态。路由器维持对其邻居状态的认知，通常通过定期发送“你好”（`hello`）来实现——这有时会经过身份验证。该操作的具体细节是特定路由协议的一部分。
+分布。路由器之间进行协作。它们相互交换关于网络状态以及彼此的视图。在具体细节上，实际上有两种不同的方法。一种常见、廉价且简单的方法被称为“距离矢量”（`distance-vector`）。每个路由器告诉其邻居它到目前为止所知道和学到的所有信息。这将在章稍后讨论。更受尊重的方法被称为“链路状态”（`link-state`）。在这里，每个路由器向域内或区域内的所有其他路由器泛洪其所负责的链路状态报告。
 
-状态。路由器维持对其邻居状态的认知，通常通过定期发送“你好”（hello）来实现——这有时会经过身份验证。该操作的具体细节是特定路由协议的一部分。
+### 路由 545
 
-分布。路由器之间进行协作。它们相互交换关于网络状态以及彼此的视图。在具体细节上，实际上有两种不同的方法。一种常见、廉价且简单的方法被称为“距离矢量”（distance-vector）。每个路由器告诉其邻居它到目前为止所知道和学到的所有信息。这将在章稍后讨论。更受尊重的方法被称为“链路状态”（link-state）。在这里，每个路由器向域内或区域内的所有其他路由器泛洪其所负责的链路状态报告。
-
-## 路由 545
-
-扩展性。随着 Internet 的增长，链路、路由器 CPU 和内存系统的潜在负载也随之增长。由于过去二十年网络增长呈指数级，这对于网络服务提供商或运营商来说并不是好兆。幸运的是，存在几种技术可以减少网络路由和转发系统的负载。
-
+扩展性。随着 Internet 的增长，链路、路由器 `CPU` 和内存系统的潜在负载也随之增长。由于过去二十年网络增长呈指数级，这对于网络服务提供商或运营商来说并不是好兆。幸运的是，存在几种技术可以减少网络路由和转发系统的负载。
 - 层次化寻址。大多数网络采用某种层次化寻址。在许多网络（如邮政系统和电话网络）中，使用的地址长度是可变的。只需要引用地址中必要的部分，使其在使用的区域内具有唯一性。然而，在构建全球路由时，必须使用完整地址。当给同一城市的其他人寄信件时，作者不需要引用城市名或国名；当世界邮局构建其路由表以便将信件投递到世界任何地方时，它们需要能够区分伦敦的唐宁街 10 号、剑桥的唐宁街 10 号，以及美国纽约州纽约的唐宁街 10 号。
-
-在 Internet 中，地址是固定长度的，但使用了“无类网域间路由”（classless interdomain routing）技术在固定长度字段内提供层次化地址。这依赖于将路由区域内使用的地址与可变掩码关联，并在构建世界地图时将掩码作为地址交换。我们将在下文详细介绍此。
-
+在 Internet 中，地址是固定长度的，但使用了“无类网域间路由”（`classless interdomain routing`）技术在固定长度字段内提供层次化地址。这依赖于将路由区域内使用的地址与可变掩码关联，并在构建世界地图时将掩码作为地址交换。我们将在下文详细介绍此。
 - 层次化路由。在大型网络中，通常网络不同区域的连通性各不相同。如果一个区域仅通过单链路连接到世界其他部分（单宿根），那么似乎没有必要扰扰世界其他部分。
 
-## 546 TCP/IP 协议实现
+### 546 TCP/IP 协议实现
 
 路由表构建。对于路由守护进程如何构建其路由信息基础是一个内部问题。条目基本上会列出所有路由器，以及所有可能的目的前缀，以及已知但当前不可达的目的。这种任务最通用的数据结构将是节点（路由器）和边（链路）的图，并在边上标记用于做出路由（或转发）决策的各种指标。与任何节点和边关联的是信息的来源以及接收信息的时间。当然，在实践中，由于所有信息都来自或通过邻居到达，这些数据可以构建在较小的数据结构周围，例如邻居列表和更新列表，并为每个更新提供单一时间目——这实际上取决于路由协议的粒度。
 
-转发表计算。在每个更新周期结束时，路由守护进程执行计算以推导出新的转发信息基础（FIB）。然后将其下载到转发引擎中——在 Linux 术中，内核 FIB 由路由进程更新。这可以是且通常是手动的。
+转发表计算。在每个更新周期结束时，路由守护进程执行计算以推导出新的转发信息基础（`FIB`）。然后将其下载到转发引擎中——在 `Linux` 术中，内核 `FIB` 由路由进程更新。这可以是且通常是手动的。
 
 在距离矢量算法中，数据分布就是计算。路由器接收来自邻居的目的地指标向量，如果新值更好，则简单替换下一跳转发条目。
 
-在状态协议中，需要更复杂的程序从路由更新集中推导出转发表。在路由泛洪周期结束，通过汇总所有更新来构建网络图。随后，可以使用 Dijkstra 著名的图遍历算法从当前路由器对所有其他路由器（以及连接这些路由的网络）进行搜索。这找到了从这里到那里指标最低的路径。如果需要考虑不同指标的路径（或用于负载均衡或快速故障转移的多路径），则可以多次调用算法。
+在状态协议中，需要更复杂的程序从路由更新集中推导出转发表。在路由泛洪周期结束，通过汇总所有更新来构建网络图。随后，可以使用 `Dijkstra` 著名的图遍历算法从当前路由器对所有其他路由器（以及连接这些路由的网络）进行搜索。这找到了从这里到那里指标最低的路径。如果需要考虑不同指标的路径（或用于负载均衡或快速故障转移的多路径），则可以多次调用算法。
 
-通常，我们可以想象这种情况极少发生在整个路由系统。大多数更新可能只导致图的局部发生变化，并且存在几种技术可以增量计算，并将 CPU 降至最低。
+通常，我们可以想象这种情况极少发生在整个路由系统。大多数更新可能只导致图的局部发生变化，并且存在几种技术可以增量计算，并将 `CPU` 降至最低。
 
-转发是简单的。然而，由于该过程通常涉及一种被称为“最长匹配”（longest match）的算法，查找过程变得复杂。
+转发是简单的。然而，由于该过程通常涉及一种被称为“最长匹配”（`longest match`）的算法，查找过程变得复杂。
+
+由于无类网域间路由（`CIDR`），已经使用了多种数据结构来保持此过程的快速，并保持相关的转发表较小，我们将在本章中描述目前 `Linux` 中使用的那种结构。
 
 
 
-
-由于无类网域间路由（CIDR），已经使用了多种数据结构来保持此过程的快速，并保持相关的转发表较小，我们将在本章中描述目前 Linux 中使用的那种结构。
-
-本章的其余部分将讨论 Linux 中简单的转发和路由。更复杂的路由协议并不包含在任何标准版本中，而是由网络社区提供的独立产品（例如 GateD）。未来，我们希望这种情况可能会改变，因为开源已经产生了一些高质量的路由协议守护进程。
+本章的其余部分将讨论 Linux 中简单的转发和路由。更复杂的路由协议并不包含在任何标准版本中，而是由网络社区提供的独立产品（例如 `GateD`）。未来，我们希望这种情况可能会改变，因为开源已经产生了一些高质量的路由协议守护进程。
 
 对路由协议设计的完整讨论超出了本书的范畴。
 
@@ -25228,7 +26109,7 @@ RTP 协议设计用于在互联网上传输多媒体流。RTP 是传输层协议
 
 每个数据包到达时都带有关于它想去哪里以及想如何被处理的信息。在 IPv4 数据包中，我们可以在转发表中查找的最简单数据就是目的地址。
 
-IPv4 地址长度为 32 位。这使得简单的表查找变得有些不现实。如果表中的每个条目都有下一跳的 32 位 IP 地址（忽略其他重要信息），那么每台路由器都需要 $4 * 2^{32}$ 字节的内存。在其他网络协议世界中，例如面向连接的数据包网络，采用了这种方法，因为转发每个数据包时使用的条目数量限于最大并发连接数，而这通常是一个较小的数字。事实上，我们稍后会看到多协议标签交换（MPLS）如何利用这种思想。它的额外优点是高效的（返回数据的单次访问周期时间）。这意味着它具有低成本硬件实现的潜力。如果我们知道我们正在构建的硬件具有有限的接口，下一跳可以通过这些接口到达，我们可以将表的大小限制在可处理的范围内。然而，这不符合互联网通用性、灵活性或软件实现的哲学，而这正是我们在这里主要关心的。
+IPv4 地址长度为 32 位。这使得简单的表查找变得有些不现实。如果表中的每个条目都有下一跳的 32 位 IP 地址（忽略其他重要信息），那么每台路由器都需要 `$4 * 2^{32}$` 字节的内存。在其他网络协议世界中，例如面向连接的数据包网络，采用了这种方法，因为转发每个数据包时使用的条目数量限于最大并发连接数，而这通常是一个较小的数字。事实上，我们稍后会看到多协议标签交换（MPLS）如何利用这种思想。它的额外优点是高效的（返回数据的单次访问周期时间）。这意味着它具有低成本硬件实现的潜力。如果我们知道我们正在构建的硬件具有有限的接口，下一跳可以通过这些接口到达，我们可以将表的大小限制在可处理的范围内。然而，这不符合互联网通用性、灵活性或软件实现的哲学，而这正是我们在这里主要关心的。
 
 沿着扁坦（即非结构化） 32 位地址的思路，程序员在遇到这类问题时，第一个想法是查看哈希表。
 
@@ -25238,7 +26119,7 @@ IPv4 地址长度为 32 位。这使得简单的表查找变得有些不现实�
 
 **图 8.1** 哈希表。
 
-将从可能的 32 位值或 $2^{32}$ 个条目映射到一个较小的标识符空间。例如，如果我们知道世界上只有 65,536 个分配的网络号，我们可以拥有一个具有超过100,000 个条目的表（为了安全起见多几个），并选择哈希函数为取模；在这种情况下，取模 $2^{16}$。
+将从可能的 32 位值或 `$2^{32}$` 个条目映射到一个较小的标识符空间。例如，如果我们知道世界上只有 65,536 个分配的网络号，我们可以拥有一个具有超过100,000 个条目的表（为了安全起见多几个），并选择哈希函数为取模；在这种情况下，取模 `$2^{16}$`。
 
 IP 地址并不是以完美、均匀的随机分布分配的，因此不可避免地会导致哈希表条目发生*冲突*或冲撞（见图 8.1）。这些通过对冲突的条目进行链链*链表*来解决。这还需要一个标记来表示该条目是一个独立条目，还是链的一部分。
 
@@ -25246,21 +26127,13 @@ IP 地址并不是以完美、均匀的随机分布分配的，因此不可避�
 
 当然，情况比这更复杂；IP 地址实际上被结构化为几部分。IPv4 单播地址分为两部分。取决于使用的方案，IPv6 地址可能会有更多组件。IP 多组播地址是另一回事，我们将在本章稍后查看 IP 多组播。
 
-现在，让我们将 IPv4 视为一个*网络*部分和一个*主机*部分，共同组成完整的 32 位。在历史上，一个站点被分配一个从三类地址空间之一提取的 IPv4 网络地址。这种想法是通常有三种不同规模的网络：核心网络如 ARPANET 和 SATNET——会被赋予 8 位网络地址（A 类），且最多只有 256 个；站点网络如 Berkeley、MIT、UCLA 和 UCL——会被赋予 16 位网络地址（B 类），且可以有 65,536 个，每个有 65,536 个主机；最后，会有本地网络，只有 256 个主机——但最多可以 $2^{24}$ 个，即 16,777,216 个 C 类网络。
+现在，让我们将 IPv4 视为一个*网络*部分和一个*主机*部分，共同组成完整的 32 位。在历史上，一个站点被分配一个从三类地址空间之一提取的 IPv4 网络地址。这种想法是通常有三种不同规模的网络：核心网络如 ARPANET 和 SATNET——会被赋予 8 位网络地址（A 类），且最多只有 256 个；站点网络如 Berkeley、MIT、UCLA 和 UCL——会被赋予 16 位网络地址（B 类），且可以有 65,536 个，每个有 65,536 个主机；最后，会有本地网络，只有 256 个主机——但最多可以 `$2^{24}$` 个，即 16,777,216 个 C 类网络。
 
 这种方法有两个大问题。首先，并不是“一刀切”，但事实上，三种尺寸也不适用于所有；许多网络的拓扑允许本地连接超过 256 个主机，但如果给它们 C 类地址，它们将受到限制。其次，地址空间的管理变得困难。
 
 无类网域间路由（CIDR）的引入允许了更灵活的分配。已经使用了多种数据结构来保持此过程的快速并保持相关的转发表较小，我们将在本章中描述目前 Linux 中使用的那种。
 
-本章的其余部分将讨论 Linux 中简单的转发和路由。更复杂的路由协议并不包含在任何标准版本中，而是由网络社区提供的独立产品（例如 GateD）。未来，我们希望这种情况可能会改变，因为开源已经产生了一些高质量的路由协议守护进程。
-
-对路由协议设计的完整讨论超出了本书的范畴。
-
-在下一节中，我们将查看 Linux 内核对转发信息的支持。
-
 **树与字典树。** 传统的 BSD UNIX 转发表方法是保留三层信息：主机、路由和默认。搜索涉及哈希主机表，如果发生未命中，则哈希路由表，最后，如果失败，则搜索默认网关列表。BSD UNIX 4.3 开发了基数树。它们是 Patricia 树的一种——字典树只是这种在内部节点和叶子节点都存储信息的树结构的名称。BSD UNIX 4.3 基数树是二叉树，从根节点开始存储前缀地址和掩码。沿着树向下移动时，会匹配更多位。如果不匹配，另一个分支持有所需的条目。这种结构可以导致转发表查找时间的高效平均性能，量在 ln(条目数量) 级，对于大型路由表来说这是一个巨大的收益（例如，对于 65,536 个路由条目，平均为
-
-
 
 # 路由 551
 
@@ -25277,6 +26150,7 @@ IP 地址并不是以完美、均匀的随机分布分配的，因此不可避�
 ## 8.3.2 FIB 目的
 
 从系统发送的每个数据包都要查询转发表。
+
 条目通过 IP 目的地址索引，并必须存储该地址及关联掩码，以及可能用于条目超时的信息和指标（metrics）。查找条目的返回值通常是下一跳 IP 路由器。然后使用本地路由（即链路级机制）将数据包递送到下一个 IP 跳跃。
 
 Linux 中的转发表数据结构相当复杂，而且在效率方面也处于前沿水平。
@@ -25297,7 +26171,15 @@ Linux 中的转发表数据结构相当复杂，而且在效率方面也处于�
 
 # 图 8.4 FIB 路由表属性条目：linux/include/net/ip/fib.h。
 
-```
+本章的其余部分将讨论 Linux 中简单的转发和路由。更复杂的路由协议并不包含在任何标准版本中，而是由网络社区提供的独立产品（例如 `GateD`）。未来，我们希望这种情况可能会改变，因为开源已经产生了一些高质量的路由协议守护进程。
+
+对路由协议设计的完整讨论超出了本书的范畴。
+
+在下一节中，我们将查看 Linux 内核对转发信息的支持。
+
+
+
+``` 
 21 struct kern_rta
 22 {
 23     void            *rta_dst;
@@ -25317,7 +26199,7 @@ Linux 中的转发表数据结构相当复杂，而且在效率方面也处于�
 
 如前所述，在经过漫长的智能查找转发信息库条目后，最终结果是下一跳。这个数据结构（见图 8.5）相对简单；我们要么被告知下一跳网关的 IP 地址，或者是输出设备——如果我们有一个点对点链路，只需要输出设备即可，此时下一跳地址无关。Linux 还支持多路径路由，我们可以在多个链路之间负载均衡。它还指示了到目的地的范围（scope）。
 
-# 图 8.5 FIB 下一跳数据结构：linux/include/net/ip/fib.h.
+# 图 8.5 FIB 下一跳数据结构：`/linux/include/net/ip/fib.h`
 
 ```
 37 struct fib_nh
@@ -25341,7 +26223,7 @@ FIB 信息不仅仅是一个下一跳。还有其他数据，如图 8.6 所示�
 
 # 554 TCP/IP 实现
 
-图 8.6 主结构：linux/include/net/ip_fib.h。
+图 8.6 主结构：`/linux/include/net/ip_fib.h`
 
 ```
 57 struct fib_info
@@ -25371,25 +26253,17 @@ FIB 信息不仅仅是一个下一跳。还有其他数据，如图 8.6 所示�
 81 };
 ```
 
-如前所述，查找转发信息库条目后的最终结果是下一跳。这个数据结构（见图 8.5）相对简单；我们要么被告知下一跳网关的 IP 地址，或者是输出设备——如果我们有一个点对点链路，只需要输出设备即可，此时下一跳地址无关。Linux 还支持多路径路由，我们可以在多个链路之间负载均衡。它还指示了到目的地的范围（scope）。
-
-如前所述，查找转发信息库条目后的最终结果是下一跳。这个数据结构（见图 8.5）相对简单；我们要么被告知下一跳网关的 IP 地址，或者是输出设备——如果我们有一个点对点链路，只需要输出设备即可，此时下一跳地址无关。Linux 还支持多路径路由，我们可以在多个链路之间负载均衡。它还指示了到目的地的范围（scope）。
-
-如前所述，查找转发信息库条目后的最终结果是下一跳。这个数据结构（见图 8.5）相对简单；我们要么被告知下一跳网关的 IP 地址，或者是输出设备——如果我们有一个点对点链路，只需要输出设备即可，此时下一跳地址无关。Linux 还支持多路径路由，我们可以在多个链路之间负载均衡。它还指示了到目的地的范围（scope）。
-
-如前所述，查找转发信息库条目后的最终结果是下一跳。这个数据结构（见图 8.5）相对简单；我们要么被告知下一跳网关的 IP 地址，或者是输出设备——如果我们有一个点对点链路，只需要输出设备即可，此时下一跳地址无关。Linux 还支持多路径路由，我们可以在多个链路之间负载均衡。它还指示了到目的地的范围（scope）。
-
-如前所述，查找转发信息库条目后的最终结果是下一跳。这个数据结构（见图 8.5）相对简单；我们要么被告知下一跳网关的 IP 地址，或者是输出设备——如果我们有一个点对点链路，只需要输出设备即可，此时下一跳地址无关。Linux 还支持多路径路由，我们可以在多个链路之间负载均衡。它还指示了到目的地的范围（scope）。
-
 # 路由 555
 
 整体结构（见图 8.6）是复杂的。通常，`fib_result` 类型（见图 8.7）相对简单；我们要么被告知下一跳网关的 IP 地址，或者是输出设备——如果我们有一个点对点链路，只需要输出设备即可，此时下一跳地址无关。Linux 还支持多路径路由，我们可以在多个链路之间负载均衡。它还指示了到目的地的范围（scope）。
 
 `fib_table` 结构是 FIB 的更通用的接口，包括指向各种访问函数的指针，因此可以通过路由来编写新的 FIB 函数。
 
-# 8.8 FIB 通用接口：linux/include/net/ip/fib.h。
+# 8.8 FIB 通用接口：`/linux/include/net/ip/fib.h`
 
-```
+
+
+```c
 struct fib_table
 {
     unsigned char tb_id;
@@ -25418,10 +26292,7 @@ struct fib_table
 
 ## 8.3.5 FIB 代码
 
-FIB 的实现分为四个主要部分。有一个前端（fib_front），它是 FIB 的外部可见接口。然后是 `fib_rules` 模块，它实现了我们选择下一跳的一组方法——我们可能会根据策略或指标进行区分，也可以根据最长匹配区分。第三，我们有 `fib_semantics` 模块，它处理关于下一跳真正含义的晦奥定义——在图 8.37 的注释中有详细描述。最后，是 `fib_hash` 模块，它实现了本章较早描述的一组哈希函数。
-
-
-
+FIB 的实现分为四个主要部分。有一个前端（`fib_front`），它是 FIB 的外部可见接口。然后是 `fib_rules` 模块，它实现了我们选择下一跳的一组方法——我们可能会根据策略或指标进行区分，也可以根据最长匹配区分。第三，我们有 `fib_semantics` 模块，它处理关于下一跳真正含义的晦奥定义——在图 8.37 的注释中有详细描述。最后，是 `fib_hash` 模块，它实现了本章较早描述的一组哈希函数。
 
 ```c
 int_dump_fib(struct sk_buff *skb, struct netlink_callback *cb)
@@ -25450,10 +26321,7 @@ int_dump_fib(struct sk_buff *skb, struct netlink_callback *cb)
 }
 ```
 
-
-
-
-# 路由 563
+### 路由 563
 
 ```
 cb->args[0] = t;
@@ -25461,7 +26329,7 @@ return skb->len;
 }
 ```
 
-# 图 8.19 FIB 前端-内核态路由消息：linux/net/ipv4/fib-frontend.c。
+### 图 8.19 FIB 前端-内核态路由消息：`linux/net/ipv4/fib-frontend.c`
 
 ```c
 /* 准备并提供内核态路由请求。
@@ -25472,7 +26340,7 @@ netlink 已经锁定的情况下。
 */
 ```
 
-# 图 8.20 FIB 前端-内核态路由消息：linux/net/ipv4/fib-frontend.c。
+### 图 8.20 FIB 前端-内核态路由消息：`linux/net/ipv4/fib-frontend.c`
 
 ```c
 static void fib_magic(int cmd, int type, u32 dst, int dst_len, struct in_ifaddr *ifa)
@@ -25503,9 +26371,9 @@ static void fib_magic(int cmd, int type, u32 dst, int dst_len, struct in_ifaddr 
     req.rtm.type = type;
 ```
 
-# 564 TCP/IP 与 Linux 协议实现
+### 564 TCP/IP 与 Linux 协议实现
 
-# 图 8.21 FIB 前端-内核态路由消息：linux/net/ipv4/fib.frontend.c。
+### 图 8.21 FIB 前端-内核态路由消息：`linux/net/ipv4/fib.frontend.c`
 
 ```c
 rta_dst = &dst;
@@ -25519,7 +26387,9 @@ if (cmd == RTM_NEWROUTE) {
 }
 ```
 
-# 图 8.22 按接口地址的 FIB 前端：linux/net/ipv4/fib.frontend.c。
+### 图 8.22 按接口地址的 FIB 前端：`linux/net/ipv4/fib.frontend.c`
+
+
 
 ```c
 static void fib_add_ifaddr(struct if_addr *ifa) {
@@ -25563,7 +26433,7 @@ RTN_UNICAST, prefix, ifa->ifa_prefixlen);
 
 # 路由 565
 
-# 图 8.23 按接口地址的 FIB 前端项：linux/net/ipv4/fib-frontend.c。
+# 图 8.23 按接口地址的 FIB 前端项：`linux/net/ipv4/fib-frontend.c`。
 
 ```c
 static void fib_del_ifaddr(struct in_ifaddr *ifa)
@@ -25635,12 +26505,13 @@ static void fib_del_ifaddr(struct in_ifaddr *ifa)
     #undef BRD_OK
     #undef BRDO_OK
     #undef BRIG_OK
+```
 
-# 图 8.24 按接口地址的 FIB 前端：linux/net/ipv4/fib-frontend.c。
+# 图 8.24 按接口地址的 FIB 前端：`linux/net/ipv4/fib-frontend.c`。
 
 # 事件处理器
 
-# 图 8.25 FIB 前端处理器：linux/net/ipv4/fib-frontend.c。
+# 图 8.25 FIB 前端处理器：`linux/net/ipv4/fib-frontend.c`。
 
 ```c
 static void fib_disable_ip(struct net_device *dev, int force)
@@ -25653,7 +26524,7 @@ static void fib_disable_ip(struct net_device *dev, int force)
 }
 ```
 
-# 图 8.26 FIB 前端处理器：linux/net/ipv4/fib-frontend.c。
+# 图 8.26 FIB 前端处理器：`linux/net/ipv4/fib-frontend.c`。
 
 ```c
 static int fib_inet_event(struct notifier_block *this, unsigned long event, void *ptr)
@@ -25661,24 +26532,43 @@ static int fib_inet_event(struct notifier_block *this, unsigned long event, void
     struct in_ifaddr *ifa = (struct in_ifaddr*)ptr;
     switch (event) {
         case NETDEV_UP:
-            fib_add_ifaddr(ifa);
-            rt_cache_flush(-1);
-        case NETDEV_DOWN:
-            if (ifa->ifa_dev && ifa->ifa_list == NULL) {
-                /* 最后一个地址从此接口删除。
-                   禁用 IP。 */
-                fib_disable_ip(ifa->ifa_dev, 1);
-            } else {
-                fib_del_ifaddr(ifa);
-                rt_cache_flush(-1);
-            }
-            break;
-    }
-    return NOTIFY_DONE;
+```
+
+
+
+```c
+fib_add_ifaddr(ifa);
+
+rt_cache_flush(-1);
+
+case NETDEV_DOWN:
+
+if (ifa->ifa_dev && ifa->ifa_list == NULL) {
+
+/* 最后一个地址从此接口删除。
+
+禁用 IP。 */
+
+fib_disable_ip(ifa->ifa_dev, 1);
+
+} else {
+
+fib_del_ifaddr(ifa);
+
+rt_cache_flush(-1);
+
+}
+
+break;
+
+}
+
+return NOTIFY_DONE;
+
 }
 ```
 
-# 图 8.27 FIB 前端处理器：linux/net/ipv4/fib-frontend.c。
+# 图 8.27 FIB 前端处理器：`linux/net/ipv4/fib-frontend.c`
 
 ```c
 static int fib_netdev_event(struct notifier_block *this, unsigned long event, void *ptr)
@@ -25714,7 +26604,7 @@ static int fib_netdev_event(struct notifier_block *this, unsigned long event, vo
 
 # TCP/IP 与 Linux 协议实现
 
-# 图 8.28 FIB 前端初始化：linux/net/ipv4/fib-frontend.c。
+# 图 8.28 FIB 前端初始化：`linux/net/ipv4/fib-frontend.c`
 
 ```c
 void __init_fib_init(void)
@@ -25729,7 +26619,6 @@ void __init_fib_init(void)
     else
         fib_rules_init();
     #endif
-
     register_netdev_notifier(&fib_netdev_notifier);
     register_inetaddr_notifier(&fib_inetaddr_notifier);
 }
@@ -25737,41 +26626,29 @@ void __init_fib_init(void)
 
 # 语义-这一切意味着
 
-# 图 8.29 FIB 语义-遍历 FIB 条目的宏：linux/net/ipv4/fib_semantics.c。
+# 图 8.29 FIB 语义-遍历 FIB 条目的宏：`linux/net/ipv4/fib_semantics.c`
 
 ```c
-   static struct fib_info *fib_info_list;
-   static rwlock_t fib_info_lock = RW_LOCK_UNLOCKED;
-   int fib_info_cnt;
-
-   #define for_fib_info(fi) { struct fib_info *fi; \
-     for (fi = fib_info_list; fi; fi = fi->next)
-
+static struct fib_info *fib_info_list;
+static rwlock_t fib_info_lock = RW_LOCK_UNLOCKED;
+int fib_info_cnt;
+#define for_fib_info(fi) { struct fib_info *fi; \
+  for (fi = fib_info_list; fi; fi = fi->next)
 #endif for_fib_info()
-
-   #ifdef CONFIG_IP_ROUTE_PATH_MULTIPATH
+#ifdef CONFIG_IP_ROUTE_PATH_MULTIPATH
 #else
-   #define for_nexthops(fi) { int nh; const struct fib_nh *nh = nh; \
-     for (nhsel=0, nh = nh; nh < (fi)->fib_nhs; nh++, nhsel++)
-
-   #define change_nexthops(fi) { int nhsel; struct fib_nh *nh; \
-     for (nhsel=0, nh = (struct fib_nh*)((fi)->fib_nh); nh < (fi)->fib_nhs; nh++, nhsel++)
-
+#define for_nexthops(fi) { int nh; const struct fib_nh *nh = nh; \
+  for (nhsel=0, nh = nh; nh < (fi)->fib_nhs; nh++, nhsel++)
+#define change_nexthops(fi) { int nhsel; struct fib_nh *nh; \
+  for (nhsel=0, nh = (struct fib_nh*)((fi)->fib_nh); nh < (fi)->fib_nhs; nh++, nhsel++)
 #else /* CONFIG_IP_ROUTE_PATH_MULTIPATH */
-
-   /* 希望 gcc 会优化它并消除空循环 */
-
-   #define for_nexthops(fi) { int nhsel=0; const struct fib_nh *nh = (fi)->fib_nh; \
-     for (nhsel=0; nhsel < 1; nhsel++)
-
-   #define change_nexthops(fi) { int nhsel=0; struct fib_nh *nh = (struct fib_nh*)
-     ((fi)->fib_nh); \
-     for (nhsel=0; nhsel < 1; nhsel++) }
+/* 希望 gcc 会优化它并消除空循环 */
+#define for_nexthops(fi) { int nhsel=0; const struct fib_nh *nh = (fi)->fib_nh; \
+  for (nhsel=0; nhsel < 1; nhsel++)
+#define change_nexthops(fi) { int nhsel=0; struct fib_nh *nh = (struct fib_nh*)
+  ((fi)->fib_nh); \
+  for (nhsel=0; nhsel < 1; nhsel++) }
 ```
-
-
-
-
 
 74
 
@@ -25781,7 +26658,7 @@ void __init_fib_init(void)
 
 77 #define endfor_nethops(fi) }
 
-# 图 8.30 FIB 语义-初始路由属性属性：linux/net/ipv4/fib-semantics.c。
+# 图 8.30 FIB 语义-初始路由属性属性：`linux/net/ipv4/fib-semantics.c`
 
 ```c
 static struct
@@ -25809,9 +26686,15 @@ static struct
 };
 ```
 
-# 图 8.31 FIB 语义-以及释放下一跳信息：linux/net/ipv4/fib-semantics.c。
+# 图 8.31 FIB 语义-以及释放下一跳信息：`linux/net/ipv4/fib-semantics.c`
 
 /* 释放一个下一跳信息记录 */
+```c
+```
+
+
+
+# 50 TCP/IP 和 Linux 协议实现
 
 ```c
 void free_fib_info(struct fib_info *fi)
@@ -25829,12 +26712,10 @@ void free_fib_info(struct fib_info *fi)
     fib_info->cnt--;
     kfree(fi);
 }
-void free_fib_release_info(struct fib_info *fi)
 ```
 
-# 50 TCP/IP 和 Linux 协议实现
-
 ```c
+void free_fib_release_info(struct fib_info *fi)
 {
     write_lock(&fib_info->lock);
     if (fi && --fi->fib_treeref == 0) {
@@ -25858,7 +26739,6 @@ void free_fib_release_info(struct fib_info *fi)
 extern _inline_ int nh_comp(const struct_fib *fi, const struct_fib *ofi)
 {
     const struct_fib *nh *ohnh = ofi->fib_nh;
-
     for_each_nextthops(fi) {
         if (nh->nh_oif != onh->nh_oif ||
             nh->nh_gw != onh->nh_gw ||
@@ -25897,7 +26777,7 @@ extern _inline_ struct fib_info *fib_find_info(const struct_fib *nfi)
 }
 ```
 
-# 图 8.33 FIB 语义--设置默认值：linux/net/ipv4/fib.semantics.c。
+## 图 8.33 FIB 语义--设置默认值：linux/net/ipv4/fib.semantics.c
 
 ```c
 /* 检查网关是否已配置
@@ -25919,7 +26799,6 @@ int ip_fib_check_default(u32 gw, struct net_device *dev)
     read_unlock(&fib_info);
     return -1;
 }
-
 #ifdef CONFIG_IP_ROUTE_MULTIPATH
 static u32 fib_get_attr(struct rtattr *attr, int attrlen, int type)
 {
@@ -25930,7 +26809,7 @@ static u32 fib_get_attr(struct rtattr *attr, int attrlen, int type)
     }
 ```
 
-# 图 8.34 FIB 语义--添加下一跳并获取下一跳数：linux/net/ipv4/fib.semantics.c。
+## 图 8.34 FIB 语义--添加下一跳并获取下一跳数：linux/net/ipv4/fib.semantics.c
 
 ```c
 return 0;
@@ -25965,13 +26844,25 @@ fib_get_nhs(struct fib_info *fi, const struct rtattr *rta, const struct rtmsg *r
         nh->nh_weight = nhp->rtnh_hops + 1;
         if (attrlen) {
             nh->nh_gw = fib_get_attr32(RTNH_DATA(nhp), attrlen, RTA_GATEWAY);
+```
+
+
+
+```c
 #ifdef CONFIG_NET_CLS_ROUTE
+
             nh->nhclassid = fib_get_attr32(RTNH_DATA(nhp), attrlen, RTA_FLOW);
+
 #endif
+
         }
+
         nhp = RTNH_NEXT(nhp)
+
     } endfor_nexthops(fi);
+
     return 0;
+
 }
 ```
 
@@ -25998,7 +26889,7 @@ int fib_nh_match(struct rta *msg, struct nlmsghdr *nlb, struct kern_rta *rta,
 }
 ```
 
-# 图 8.36 FIB 语义--下一跳：linux/net/ipv4/fib_semantics.c。
+## 图 8.36 FIB 语义--下一跳：`linux/net/ipv4/fib_semantics.c`
 
 ```c
 #ifdef CONFIG_ROUTE_MULTIPATH
@@ -26007,11 +26898,9 @@ if (rta->rta_map == NULL) {
 }
 nhp = RTA_DATA(rta->rta_map);
 nhlen = RTA_PAYLOAD(rta->rta_map);
-
 for_nexthops(fi) {
     int attrlen = nhlen - sizeof(struct rtnop);
     u32 gw;
-
     if (attrlen < 0 || (nhlen == nhp->rtnh_len) < 0)
         return -EINVAL;
     if (nhp->rtnh_index && nhp->rtnh_index != fi->fib_nh->of)
@@ -26038,7 +26927,7 @@ return 0;
 
 下面的注释解释了它是如何工作的：
 
-# 图 8.37 FIB 语义--大图：linux/net/ipv4/fib_semantics.c。
+## 图 8.37 FIB 语义--大图：`linux/net/ipv4/fib_semantics.c`
 
 ```c
 /*
@@ -26054,13 +26943,12 @@ d) 如果我们使用隧道路由，网关可能不在链上。
 */
 ```
 
-# 8.38 FIB 语义--检查下一跳：linux/net/ipv4/fib_semantics.c。
+## 8.38 FIB 语义--检查下一跳：`linux/net/ipv4/fib_semantics.c`
 
 ```c
 static int fib_check_nh(const struct rtmsg *rtmsg, struct fib_info *fi, struct fib_nh *nh)
 {
 	int err;
-
 	if (nh->gw) {
 		struct rt_key key;
 		struct fib_result res;
@@ -26070,17 +26958,12 @@ static int fib_check_nh(const struct rtmsg *rtmsg, struct fib_info *fi, struct f
 		}
 		#endif
 		struct net_device *dev;
-
 		if (r->scope >= RT_SCOPE_LINK) {
 			return -EINVAL;
 		}
 	}
 }
 ```
-
-
-
-
 
 # 路由 575
 
@@ -26104,13 +26987,12 @@ key.oif = nh->nh_oif;
 key.scope = r->rtm_scope + 1;
 ```
 
-### 8.39 FIB 语义——检查下一跳：linux/net/ipv4/fib_semantics.c
+### 8.39 FIB 语义——检查下一跳：`linux/net/ipv4/fib_semantics.c`
 
 ```c
 * 这并不是必须的，但需要稍微思考 /
 if (key.scope < RT_SCOPE_LINK)
     key.scope = RT_SCOPE_LINK;
-
 if ((err = fib_lookup(&key, &res)) != 0)
     return err;
     nh->nh_scope = res.scope;
@@ -26138,19 +27020,24 @@ else {
 
 # TCP/IP 与 Linux 协议实现
 
-# 创建新的 FIB 条目
+## 创建新的 FIB 条目
 
-图 8.40 FIB 语义——创建 FIB 条目 i：linux/net/ipv4/fib_semantics.c。
+### 图 8.40 FIB 语义——创建 FIB 条目 i：`linux/net/ipv4/fib_semantics.c`
 
 ```c
 410 struct fib_info *
 411 fib_create_info(const struct rtm_msg *rtmsg, struct kern_rta,
-412                    const struct nlmsghdr *nlh, int *errp)
+                    const struct nlmsghdr *nlh, int *errp)
 413 {
 414     int err = err;
 415     struct fib_info *fi = NULL;
 416     struct fib_info *ofi;
 417     #ifdef CONFIG_IP_ROUTE_MULTIPATH
+```
+
+
+
+```c
 418         int nhs = 1;
 419     else
 420         const int nhs = 1;
@@ -26160,9 +27047,7 @@ else {
 424     if (fi->probes[rtmsg->rtm_type].scope > rta->rta_scope)
 425         goto err_inv;
 426
-427
-428
-     #ifdef CONFIG_IP_ROUTE_MULTIPATH
+428     #ifdef CONFIG_IP_ROUTE_MULTIPATH
 429         if (rta->rta_mp)
 430             nhs = fib_count_nexthops(rta->rta_mp);
 431             if (nhs == 0)
@@ -26171,7 +27056,7 @@ else {
 434     #endif
 ```
 
-图 8.41 FIB 语义——创建 FIB 条目 i：linux/net/ipv4/fib_semantics.c。
+图 8.41 FIB 语义——创建 FIB 条目 i：`linux/net/ipv4/fib_semantics.c`。
 
 ```c
 435 fi = kmalloc(sizeof(*fi)+nhs*sizeof(struct fib_nh), GFP_KERNEL);
@@ -26196,7 +27081,6 @@ else {
 454             if (flavor == RTA_MAX)
 455                 goto err_inv;
 456             fi->metrics[flavor-1] = (unsigned*)RTA_DATA(attr);
-457     }
 ```
 
 # 路由 575
@@ -26208,7 +27092,7 @@ else {
 461     memcpy(fi->fib_pref, rta->rta_pref, 4);
 ```
 
-图 8.42 FIB 语义--FIB 条目 ii：linux/net/ipv4/fib_semantics.c。
+图 8.42 FIB 语义--FIB 条目 ii：`linux/net/ipv4/fib_semantics.c`。
 
 ```c
 if (rta->rta_mp) {
@@ -26263,15 +27147,13 @@ if (fib->props[rta->rtm_type].error) {
 
 # 758 TCP/IP 与 Linux 协议实现
 
-图 8.43 FIB 语义——创建 FIB 条目 iii：linux/net/ipv4/fib_semantics.c。
+图 8.43 FIB 语义——创建 FIB 条目 iii：`linux/net/ipv4/fib_semantics.c`。
 
 ```c
 if (rta->rtm_scope == RT_SCOPE_HOST)
     goto err_inv;
-
 if (rta->rtm_scope == RT_SCOPE_HOST) {
     struct fib_nh *nh = fi->fib_nh;
-
     /* 添加了本地地址 */
     if (nh == NULL || nh->nh_gw)
         goto err_inv;
@@ -26286,14 +27168,13 @@ if (rta->rtm_scope == RT_SCOPE_HOST) {
         goto failure;
     end_nexthops(fi);
 }
-
 if (rta->rtm_type == RTN_LOCAL || rta->rta_dst == NULL)
     memcmp(fi->fib_presrc, rta->rta_dst, 4);
     if (inet_addr_type(fi->fib_presrc) != RTN_LOCAL)
         goto err_inv;
 ```
 
-图 8.44 FIB 语义——创建 FIB 条目 iv：linux/net/ipv4/fib_semantics.c。
+图 8.44 FIB 语义——创建 FIB 条目 iv：`linux/net/ipv4/fib_semantics.c`。
 
 ```c
 link_it:
@@ -26303,7 +27184,6 @@ link_it:
         ofi->fib_treeref++;
         return ofi;
     }
-
     fi->fib_treeref++;
     atomic_inc(&fi->fib_clref);
     write_lock(&fi->fib_info_lock);
@@ -26314,9 +27194,11 @@ link_it:
     fib_info_list = fi;
     write_unlock(&fi->fib_info_lock);
     return fi;
+```
+
+
 
 err_inv;
-```
 
 ```c
 err = -EINVAL;
@@ -26331,7 +27213,7 @@ if (fi) {
 
 # 查询 FIB 条目
 
-图 8.45 FIB 语义——有意义的匹配？：linux/net/ipv4/fib_semantics.c。
+图 8.45 FIB 语义——有意义的匹配？：`linux/net/ipv4/fib_semantics.c`。
 
 ```c
 int
@@ -26365,7 +27247,7 @@ fib_semantic_match(int type, struct fib_info *fi, const struct rt_key *key, stru
 
 # 访问 FIB 统计信息
 
-图 8.46 FIB 语义——有意义的匹配？：linux/net/ipv4/fib_semantics.c。
+图 8.46 FIB 语义——有意义的匹配？：`linux/net/ipv4/fib_semantics.c`。
 
 ```c
 #ifdef CONFIG_IP_ROUTE_MULTIPATH
@@ -26389,7 +27271,7 @@ return -EINVAL;
 }
 ```
 
-图 8.47 FIB 语义--dump：linux/net/ipv4/fib_semantics.c。
+图 8.47 FIB 语义--dump：`linux/net/ipv4/fib_semantics.c`。
 
 ```c
 /* 查找到目的地的源地址 */
@@ -26398,7 +27280,7 @@ u32 __fib_res_pref(struct fib_result *res)
 }
 ```
 
-图 8.48 FIB 语义--dump ii：linux/net/ipv4/fib_semantics.c。
+图 8.48 FIB 语义--dump ii：`linux/net/ipv4/fib_semantics.c`。
 
 ```c
 int;
@@ -26441,7 +27323,7 @@ if (fi->fib_nh->nh_oif)
   RTM_PUT(skb, RTA_OIF, sizeof(int), &fi->fib_nh->nh_oif);
 ```
 
-图 8.49 fib 语义-dump iii：linux/net/ipv4/fib_semantics.c。
+图 8.49 fib 语义-dump iii：`linux/net/ipv4/fib_semantics.c`。
 
 ```c
 #ifdef CONFIG_IP_ROUTE_MULTIPATH
@@ -26451,7 +27333,6 @@ if (fi->fib_nh > 1) {
   if (skb_tailroom(skb) < RTA_ALIGN(0))
     goto rtattr_failure;
   mp_head = (struct rtattr*)skb_put(skb, RTA_SPACE(0));
-
   for (...)
     if (skb_tailroom(skb) < RTA_ALIGN(RTA_ALIGN(sizeof(*nmp)) + 4))
       goto rtattr_failure;
@@ -26465,11 +27346,6 @@ if (fi->fib_nh > 1) {
   }
 endif_next(fi);
 ```
-```
-
-
-
-
 
 # TCP/IP 与 Linux 协议实现
 
@@ -26492,6 +27368,8 @@ endif_next(fi);
 
 ![](img/06c11ba8be5c1c24aa633e12618e2ebd_637_0.png)
 
+
+
 ```c
 705  int
 706  fib_convert_rtentry(int cmd, struct nlmshdr *nl, struct nl *attr, struct rtmsg *rtm,
@@ -26501,10 +27379,10 @@ endif_next(fi);
 710         u32 *ptr;
 711      memset(rtm, 0, sizeof(*rtm));
 712      memset(rta, 0, sizeof(*rta));
-713
+
 714      if (r->rt_dst->family != AF_INET)
 715          return -EAFNOSUPPORT;
-716
+
 717      /* 检查掩码有效性：
 718          a) 必须是连续的。
 719          b) 目的地址的所有主机位必须清零。
@@ -26545,17 +27423,17 @@ endif_next(fi);
 749 }
 ```
 
-**图 8.51** FIB 语义-导出到 RT 项 i linux/net/ipv4/fib_semantics.c。
+图 8.51 FIB 语义-导出到 RT 项 i `linux/net/ipv4/fib_semantics.c`。
 
 ```c
 751 rta->rtma_dst_len = plen;
 752 rta->rtma_dst = ptr;
-753
+
 754 if (r->rtm_metric) {
 755     *(u32*)rta->rt_pad3 = r->metric - 
 756     rta->priority = (u32)rta->rt_pad3;
 757 }
-758
+
 759 if (r->flags&RTMF_REJECT) {
 760     rta->rtm_scope = RT_SCOPE_HOST;
 761     rta->rtm_type = RTM_UNREACHABLE;
@@ -26563,12 +27441,12 @@ endif_next(fi);
 763 }
 764 rta->rtm_scope = RT_SCOPE_NG_WHERE;
 765 rta->rtm_type = RTM_UNICAST;
-766
+
 767 if (r->rtm_dev) {
 768     char *colon;
 769     struct net_device *dev;
 770     char devname[IFNAMSIZZ];
-771
+
 772     if (copy_from_user(devname, r->rtm_dev, IFNAMSIZZ-1)) {
 773         return -EFAULT;
 774 }
@@ -26591,64 +27469,96 @@ endif_next(fi);
 791             break;
 792                 if (ifa == NULL)
 793                     return -ENODEV;
-794
+
 795                 rta->gw = rta->rta_local = &ifa->ifa_local;
 796     }
-**图 8.52** FIB 语义–导出到 RT 项 ii linux/net/ipv4/fib_semantics.c。
+```
+
+图 8.52 FIB 语义–导出到 RT 项 ii `linux/net/ipv4/fib_semantics.c`。
 
 ```c
 797 ptr = ((struct sockaddr_in*)&r->rt_gateway)->sin_addr.s_addr;
+
 798 if (r->rt_gateway.sa_family == AF_INET && ptr) {
+
 799     rta->gw = ptr;
+
 800     if (r->rt_flags&RTF_GATEWAY && rta_type(ptr) == RTM_UNICAST)
+
 801         rta->rtm_scope = RT_SCOPE_UNIVER;
+
 802     }
+
 803 if (cmd == SIOCDELROUTE);
+
 804     return 0;
-805
+
 806     if (r->rt_flags&RTF_GATEWAY && &rta->gw == NULL) {
+
 807     return -EINVAL;
-808
+
 809     if (r->rtm_scope == RT_SCOPE_NOWHERE)
+
 810         rta->rtm_scope = RT_SCOPE_LINK;
-811
+
 812     if (r->rt_flags&(RTF_MTU|RTF_WINDOW|RTF_IFF)) {
+
 813         struct rta *rta;
+
 814         struct rta *mx = calloc(RTA_LENGTH(3)+RTA_LENGTH(4), GFP_KERNEL);
+
 815         if (mx == NULL)
+
 816             return -ENOMEM;
+
 817         rta->rta_mx = mx;
+
 818         mx->rta_type = RTA_METRICS;
+
 819         mx->rta_len = RTA_LENGTH(0);
+
 820         if (r->rt_flags&RTF_MTU) {
-821             rec = (void*)((char*)mx + RTA_ALIGN(mx->rta_len));
-822             rec->rta_type = RTA_ADV;
-823             rec->rta_len += RTA_LENGTH(4);
-824             (u32*)rta_DATA(rec) = r->rtm_mtu;
-825         }
-826
-827         if (r->rt_flags&RTF_WINDOW) {
-828             rec = (void*)((char*)mx + RTA_ALIGN(mx->rta_len));
-829             rec->rta_type = RTA_WINDOW;
-830             rec->rta_len += RTA_LENGTH(4);
-831             mx->rta_len += RTA_LENGTH(4);
-832             (u32*)rta_DATA(rec) = r->rtm_window;
-833         }
-834         if (r->rt_flags&RTF_IFF) {
-835             rec = (void*)((char*)mx + RTA_ALIGN(mx->rta_len));
-836             rec->rta_type = RTA_RTT;
-837             rec->rta_len += RTA_LENGTH(4);
-838             mx->rta_len += RTA_LENGTH(4);
-839             (u32*)rta_DATA(rec) = r->rtm_irtt;
-840     }
-841 }
-842 (u32*)rta_DATA(rec) = r->rtm_scope;
-843 return 0;
-844 }
+```
+
+
+
+```c
+rec = (void*)((char*)mx + RTA_ALIGN(mx->rta_len));
+
+rec->rta_type = RTA_ADV;
+
+rec->rta_len += RTA_LENGTH(4);
+
+(u32*)rta_DATA(rec) = r->rtm_mtu;
+```
+
+```c
+if (r->rt_flags&RTF_WINDOW) {
+    rec = (void*)((char*)mx + RTA_ALIGN(mx->rta_len));
+    rec->rta_type = RTA_WINDOW;
+    rec->rta_len += RTA_LENGTH(4);
+    mx->rta_len += RTA_LENGTH(4);
+    (u32*)rta_DATA(rec) = r->rtm_window;
+}
+```
+```c
+if (r->rt_flags&RTF_IFF) {
+    rec = (void*)((char*)mx + RTA_ALIGN(mx->rta_len));
+    rec->rta_type = RTA_RTT;
+    rec->rta_len += RTA_LENGTH(4);
+    mx->rta_len += RTA_LENGTH(4);
+    (u32*)rta_DATA(rec) = r->rtm_irtt;
+}
+```
+```c
+(u32*)rta_DATA(rec) = r->rtm_scope;
+return 0;
+}
+```
 
 # 接口状态变化，更新 FIB
 
-**图 8.53** FIB 语义--更新地址或接口下降 i linux/net/ipv4/fib_semantics.c。
+**图 8.53** FIB 语义--更新地址或接口下降 i `linux/net/ipv4/fib_semantics.c`。
 
 ```c
 /*
@@ -26657,7 +27567,7 @@ endif_next(fi);
 */
 ```
 
-**图 8.54** FIB 语义--更新地址或接口下降 ii linux/net/ipv4/fib_semantics.c。
+**图 8.54** FIB 语义--更新地址或接口下降 ii `linux/net/ipv4/fib_semantics.c`。
 
 ```c
 int fib_sync_down(u32 local, struct net_device *dev, int force)
@@ -26698,7 +27608,7 @@ int fib_sync_down(u32 local, struct net_device *dev, int force)
  }
 ```
 
-**图 8.55** FIB 语义–更新地址或接口上线：linux/net/ipv4/fib-semantics.c。
+**图 8.55** FIB 语义–更新地址或接口上线：`linux/net/ipv4/fib-semantics.c`。
 
 ```c
 /*
@@ -26732,46 +27642,65 @@ int fib_sync_down(u32 local, struct net_device *dev, int force)
               nh->nh_flags &= ~RTNH_F_DEAD;
             }
         }
-
-
-
+```
 
 # 多路径路由 587
 
-图 8.56 FIB 语义--多路径情况 i：linux/net/ipv4/fib_semantics.c。
+图 8.56 FIB 语义--多路径情况 i：`linux/net/ipv4/fib_semantics.c`。
 
 ```c
 /*
+
 该算法并不是最优的，但它提供了非常
+
 公平的加权路由分布。
+
 */
+
 void fib_select_multipath(const struct rt_key *key, struct fib_result *res) {
+
     struct fib_info *fi = res->fi;
+
     int w;
 
     if (fi->fib_power <= 0) {
+
         int power = 0;
+
         change_nexthops(fi);
+
         if ((nh->nh_flags&RTNH_F_DEAD)) {
+
             power += nh->nh_weight;
+
             nh->nh_power = nh->nh_weight;
+
         }
+
     } endfor_nexthops(fi);
+
     fi->fib_power = power;
 
     if (power <= 0) {
+
         printk(KERN_CRIT "impossible 777\n");
+
         return;
+
     }
+
     #endif
 
 /* w 应该是随机数 [0..fi->fib_power-1],
+
    它是一个相当糟糕的近似。
+
 */
+
 w = jiffies %fi->fib_power;
 ```
 
-图 8.57 FIB 语义--多路径情况 ii：linux/net/ipv4/fib_semantics.c。
+图 8.57 FIB 语义--多路径情况 ii：`linux/net/ipv4/fib_semantics.c`。
 
 ```c
 change_nexthops(fi) {
@@ -26796,162 +27725,280 @@ return;
 }
 ```
 
+
+
 ## FIB 接口
 
 除了 RTlink 之外，我们还有 proc 接口模块：
 
-FIB 8.58 FIB 语义：linux/net/ipv4/fib_semantics.c。
+FIB 8.58 FIB 语义：`linux/net/ipv4/fib_semantics.c`。
 
 ```c
+
 static unsigned fib_flag_trans(int type, int dead, u32 mask, struct fib_info *fi)
+
 {
+
     static unsigned type2[RT_MAX] = {
+
         0, 0, 0, 0, 0, 0, RT_REJECT, RT_REJECT, 0, 0
+
     };
+
     unsigned flags = type2[type];
 
     if (fi && fi->fib_nh->gw)
+
         flags |= RT_GATEWAY;
+
     if (mask == 0FFFFFF)
+
         flags |= RT_HOST;
+
     if (dead)
+
         flags |= RT_UP;
+
     return flags;
+
 }
 
 void fib_node_get_info(int type, int dead, struct fib_info *fi, u32 mask, char *buffer)
+
 {
+
     int len;
+
     unsigned flags = fib_flag_trans(type, dead, mask, fi);
 
     if (fi) {
+
         len = sprintf(buffer, "%08X\t%08X\t%04X\t%u\t%08X\t%u\t%u\t%u",
+
             fi->fib_dev, fi->fib_dev, ":%s", prefix,
+
             fi->fib_nh->gw, 0, 0, fi->fib_priority,
+
             mask, fi->fib_mss, fi->fib_window);
+
     } else {
+
         len = sprintf(buffer, "%08X\t%08X\t%04X\t%u\t%08X\t%u\t%u\t%u",
+
             prefix, 0,
+
             flags, 0, 0,
+
             mask, 0, 0);
+
     }
+
     memset(buffer+len, ' ', 127-len);
+
     buffer[127] = '\n';
+
 }
+
 ```
 
 ## FIB 规则
 
-图 8.59 FIB 规则-全局：linux/net/ipv4/fib_rules.c。
+图 8.59 FIB 规则-全局：`linux/net/ipv4/fib_rules.c`。
 
 ```c
+
 struct fib_rule {
+
     struct fib_rule *r_next;
+
     atomic_t r_clref;
+
     u32 r_preference;
+
     unsigned char *r_table;
+
     unsigned char *r_action;
+
     unsigned char *r_dst_len;
+
     unsigned char *r_src_len;
+
     u32 r_src;
+
     u32 r_dmask;
+
     u32 r_dst;
+
     u32 r_dstmask;
+
     u32 r_srcmap;
+
     u8 r_flags;
+
     u8 r_tos;
+
     #ifdef CONFIG_IPCONF_ROUTE_FWMARK
+
         u32 r_fwmark;
+
     #endif
+
     int r_index;
+
     #ifdef CONFIG_NET_CLS_ROUTE
+
         u32 r_classid;
+
     #endif
+
     char r_ifname[IFNAMSIZ];
+
     int r_read;
+
 };
+
 ```
 
 ```c
+
 static struct fib_rule default_rule = { NULL, ATOMIC_INIT(2), 0x7FF, RT_TABLE_DEFAULT,
+
                RT_UNICAST, };
 
 static struct fib_rule main_rule = { &default_rule, ATOMIC_INIT(2), 0x7FE, RT_TABLE_MAIN,
+
                RT_UNICAST, };
 
 static struct fib_rule local_rule = { &main_rule, ATOMIC_INIT(2), 0, RT_TABLE_LOCAL,
+
                RT_UNICAST, };
 
 static struct fib_rule *fib_rules = &local_rule;
 
 rwlock_t fib_rules_lock = RW_LOCK_UNOCKED;
+
 ```
 
-图 8.60 FIB 规则：linux/net/ipv4/fib_rules.c。
+图 8.60 FIB 规则：`linux/net/ipv4/fib_rules.c`。
 
 ```c
+
 int inet_nm_delroute(struct sk_buff *skb, struct nlghdr *hdr, void *arg)
+
 {
+
     struct rttattr *rta = *arg;
+
     struct rtm_msg *rtmsg = NLMSG_DATA(hdr);
+
     struct fib_rule *rp, *rrp;
+
     int err = -ESRCH;
-    
+
     for (rrp = &fib_rules; rrp != NULL; rrp = rrp->r_next) {
+
         if ((rta[RTA_SRC-1]) && memcmp(RTA_DATA(rta[RTA_SRC-1]), rta->r_src, 4) == 0) &&
+
             rtm_to_src_len == rta->src_len &&
+
             rtm_to_dst_len == rta->dst_len &&
+
             ((rta[RTA_DST-1]) && memcmp(RTA_DATA(rta[RTA_DST-1]), rta->r_dst, 4) == 0) &&
+
             rtm_to_tos == rta->r_tos &&
+
             #ifdef CONFIG_IPCONF_ROUTE_FWMARK
+
             ((rta[RTA_PROTOINFO-1]) && memcmp(RTA_DATA(rta[RTA_PROTOINFO-1]), rta->r_fwmark, 4) == 0) &&
+
             #endif
+
             ((rta->rtm_type == rta->rtm_type && rta->r_action) &&
+
             ((rta[RTA_PRIORITY-1]) && memcmp(RTA_DATA(rta[RTA_PRIORITY-1]), rta->r_preference, 4) == 0) &&
+
             ((rta[RTA_IFF-1]) && memcmp(RTA_DATA(rta[RTA_IFF-1]), rta->r_ifname, 4) == 0) &&
+
             (rta->rtm_table && (r && rta->rtm_table == rta->r_table))) {
+
             err = -EPERM;
+
             if (r == &local_rule) {
+
                 break;
+
             }
+
             write_lock_bh(&fib_rules_lock);
+
             *rp = r->r_next;
+
             r->r_dead = 1;
+
             write_unlock_bh(&fib_rules_lock);
+
             fib_rule_put(r);
+
             err = 0;
+
             break;
+
         }
+
     }
+
     return err;
+
 }
+
 ```
 
-图 8.61 FIB 工具：linux/net/ipv4/fib_rules.c。
+图 8.61 FIB 工具：`linux/net/ipv4/fib_rules.c`。
 
 ```c
+
 /* 分配新表 id */
+
 static struct fib_table *fib_empty_table(void)
+
 {
+
     int id;
+
     for (id = 1; id <= RT_TABLE_MAX; id++)
+
         if (fib_tables[id] == NULL)
+
             return _fib_new_table(id);
+```
+
+
+
+```c
     return NULL;
+
 }
 
 void fib_rule_put(struct fib_rule *r)
+
 {
+
     if (atomic_dec(&r->r_clref)) {
+
         if (r->r_dead)
+
             kfree(r);
+
     } else {
+
         printk("Freeing alive rule %p\n", r);
+
     }
+
 }
 ```
 
-图 8.62 FIB 规则--新规则：linux/net/ipv4/fib_rules.c。
+## 图 8.62 FIB 规则--新规则：linux/net/ipv4/fib_rules.c
 
 ```c
 int inet_rtms_newrule(struct sk_buff *skb, struct nlghdr *hdr, void *arg)
@@ -26960,13 +28007,10 @@ int inet_rtms_newrule(struct sk_buff *skb, struct nlghdr *hdr, void *arg)
     struct rtm_msg *rtm = NLMSG_DATA(hdr);
     struct fib_rule *r, *new_r, *rp;
     unsigned char table_id;
-
     if (rtm->rtm_src_len > 32 || rtm->dst_len > 32 || rtm->tos & IPTOS_MASK)
         return -EINVAL;
-
     if (RTA(RTA_IFF-1) & RTA_PAYLOAD(RTA_IFF-1) != IFNAMSIZ)
         return -EINVAL;
-
     table_id = rtm->rtm_table;
     if (table_id == RT_TABLE_UNSPEC) {
         struct fib_table *table;
@@ -26979,7 +28023,7 @@ int inet_rtms_newrule(struct sk_buff *skb, struct nlghdr *hdr, void *arg)
 }
 ```
 
-图 8.63 FIB 规则--新规则：linux/net/ipv4/fib_rules.c。
+## 图 8.63 FIB 规则--新规则：linux/net/ipv4/fib_rules.c
 
 ```c
 new_r = kmalloc(sizeof(*new_r), GFP_KERNEL);
@@ -27008,7 +28052,7 @@ if (rta[RTA_PRIORITY-1])
 new_r->rtm_table = table_id;
 ```
 
-## 592 TCP/IP 与 Linux 协议实现
+### 592 TCP/IP 与 Linux 协议实现
 
 ```c
 struct net_dev *dev;
@@ -27021,68 +28065,46 @@ if (dev)
 }
 ```
 
-
-
-
-
 # 路由 593
 
-241
-
-241
 ```c
 int addrtype = inet_addr(r->r_scrmap);
 ```
 
-242
 ```c
 if (addrtype == RTN_NAT) {
 ```
 
-243
 ```c
 /* 数据包来自转换后的源；记住它 */
 ```
 
-244
 ```c
 saddr = (saddr->r->r_scrmap) | r->r_scrmap);
 ```
 
-245
 ```c
 * flags = RTCF_SNAT;
 ```
 
-246
 ```c
 } else if (addrtype == RTN_LOCAL | r->r_scrmap == 0) {
 ```
 
-247
 ```c
 /* 数据包来自掩码源；记住它 */
 ```
 
-248
 ```c
 saddr = r->r_scrmap;
 ```
 
-249
-250
 ```c
 * flags = RTCF_MASQ;
 ```
 
-251
-252
-253
-254
-
 ![](img/06c11ba8be5c1c24aa633e12618e2ebd_648_0.png)
 
-256
 ```c
 #ifndef CONFIG_NET_CLS_ROUTE
 u32 fib_rules_tclass(struct fib_result *res)
@@ -27094,8 +28116,6 @@ u32 fib_rules_tclass(struct fib_result *res)
 #endif
 ```
 
-264
-266
 ```c
 static void fib_rules_detach(struct net_device *dev)
 {
@@ -27110,7 +28130,6 @@ static void fib_rules_detach(struct net_device *dev)
 }
 ```
 
-279
 ```c
 static void fib_rules_attach(struct net_device *dev)
 ```
@@ -27123,10 +28142,8 @@ int fib_lookup(const struct rt_key *key, struct fib_result *res)
     int err;
     struct fib_rule *r, *policy;
     struct fib_table *tb;
-
     u32 daddr = key->dst;
     u32 saddr = key->src;
-
     FRprintk("Lookup %u.%u.%u.%u -> %u.%u.%u.%u\n",
         NIPQUAD(key->dst), NIPQUAD(key->src));
     read_lock(&fib_rules_lock);
@@ -27137,55 +28154,115 @@ int fib_lookup(const struct rt_key *key, struct fib_result *res)
             (r->tos && r->tos != key->tos) ||
             #endif
             #ifdef CONFIG_IP_ROUTE_FWMARK
-            (r->fwmark && r->fwmark != key->fwmark) ||
-            #endif
-            (r->ifindex && r->ifindex != key->ifindex))
-            continue;
-    #endif
-    FRprintk("tb %d r %d\n", r->table, r->action);
-    switch (r->action) {
-        case RTN_UNICAST:
-        case RTN_NAT:
-            policy = r;
-            break;
-        case RTN_UNREACHABLE:
+```
+
+
+
+# 图 8.68 FIB 规则——查找规则：`linux/net/ipv4/fib.rules.c`
+
+```c
+(r->fwmark && r->fwmark != key->fwmark) ||
+
+#endif
+
+(r->ifindex && r->ifindex != key->ifindex))
+    continue;
+
+#endif
+
+FRprintk("tb %d r %d\n", r->table, r->action);
+
+switch (r->action) {
+    case RTN_UNICAST:
+    case RTN_NAT:
+        policy = r;
+        break;
+    case RTN_UNREACHABLE:
+        read_unlock(&fib_rules_lock);
+        return -ENETUNREACH;
+    default:
+        case RTN_BLACKHOLE:
             read_unlock(&fib_rules_lock);
-            return -ENETUNREACH;
-        default:
-            case RTN_BLACKHOLE:
-                read_unlock(&fib_rules_lock);
-                return -EINVAL;
-            case RTN_PROHIBIT:
-                read_unlock(&fib_rules_lock);
-                return -EACCES;
-    }
+            return -EINVAL;
+        case RTN_PROHIBIT:
+            read_unlock(&fib_rules_lock);
+            return -EACCES;
+}
 }
 ```
 
-# 图 8.68 FIB 规则——查找规则：linux/net/ipv4/fib.rules.c
+# 图 8.69 FIB 规则：`linux/net/ipv4/fib.rules.c`
 
 ```c
 if ((tb = fib_get_table(res->r_table)) == NULL)
     continue;
-    err = tb_lookup(tb, key, res);
-    if (err == 0) {
-        res->r = policy;
-        if (policy) {
-            atomic_inc(&policy->r_clentref);
-            read_unlock(&fib_rules_lock);
-            return 0;
-        }
-        if (err < 0 && err != -EAGAIN) {
-            read_unlock(&fib_rules_lock);
-            return err;
-        }
+err = tb_lookup(tb, key, res);
+if (err == 0) {
+    res->r = policy;
+    if (policy) {
+        atomic_inc(&policy->r_clentref);
+        read_unlock(&fib_rules_lock);
+        return 0;
     }
-    fprintf("FAILURE\n");
-    read_unlock(&fib_rules_lock);
-    return -ETUNREACH;
+    if (err < 0 && err != -EAGAIN) {
+        read_unlock(&fib_rules_lock);
+        return err;
+    }
+}
+fprintf("FAILURE\n");
+read_unlock(&fib_rules_lock);
+return -ETUNREACH;
 ```
 
-# 图 8.69 FIB 规则：linux/net/ipv4/fib.rules.c
+# TCP/IP 协议实现
+
+## 图 8.70 FIB 规则初始化：`linux/net/ipv4/fib_rules.c`
+
+```c
+__inline int net_fill_rule(struct sk_buff *skb,
+                           struct fib_rule *r,
+                           struct netlink_callback *cb)
+{
+    struct rtmsg *rtm;
+    struct nlmsghdr *nlsh;
+    unsigned char *b = skb->tail;
+    nlsh = NLMSG_PUT(skb, NETLINK_GEN(cb), cb->nlmsg_seq, RTM_RULE, sizeof(struct rtmsg));
+    rtm = NLMSG_DATA(nlsh);
+    rtm->rtm_family = AF_INET;
+    rtm->rtm_dst_len = r->r_dst_len;
+    rtm->rtm_src_len = r->r_src_len;
+    rtm->rtm_tos = r->r_tos;
+#ifdef CONFIG_ROUTE_FWMARK
+    if (r->r_fwmark) {
+        RTA_PUT(skb, RTA_PROTOINFO, 4, &r->r_fwmark);
+    }
+#endif
+    rtm->rtm_table = r->r_table;
+    rtm->rtm_scope = 0;
+    rtm->rtm_types = r->r_action;
+    rtm->rtm_flags = r->r_flags;
+    if (r->r_dst_len)
+        RTA_PUT(skb, RTA_DST, 4, &r->r_dst);
+    if (r->r_src_len)
+        RTA_PUT(skb, RTA_SRC, 4, &r->r_src);
+    if (r->r_ifname[0])
+        RTA_PUT(skb, RTA_IF, IFNSIZ, &r->r_ifname);
+    if (r->r_preference)
+        RTA_PUT(skb, RTA_PRIORITY, 4, &r->r_preference);
+    if (r->r_srcmp)
+        RTA_PUT(skb, RTA_GATEWAY, 4, &r->r_srcmp);
+#ifdef CONFIG_NET_CLS
+    if (r->r_classid)
+        RTA_PUT(skb, RTA_FLOW, 4, &r->r_classid);
+#endif
+    nlsh->nlmsg_len = skb->tail - b;
+    return skb->len;
+nlmsg_failure:
+rtattr_failure:
+    skb_put(skb, b - skb->tail);
+    return -1;
+}
+```
 
 ```c
 void fib_select_default(const struct rt_key *key, struct fib_result *res)
@@ -27197,6 +28274,7 @@ void fib_select_default(const struct rt_key *key, struct fib_result *res)
                 tb->select_default(tb, key);
         }
 }
+
 static int fib_rules_event(struct notifier_block *this, unsigned long event, void *ptr)
 {
     struct net_device *dev = ptr;
@@ -27206,6 +28284,7 @@ static int fib_rules_event(struct notifier_block *this, unsigned long event, voi
         fib_rules_attach(dev);
     return NOTIFY_DONE;
 }
+
 struct notifier_block fib_rules = {
     fib_rules_event,
     NULL,
@@ -27213,60 +28292,7 @@ struct notifier_block fib_rules = {
 };
 ```
 
-# TCP/IP 协议实现
-
-# 图 8.70 FIB 规则初始化：linux/net/ipv4/fib_rules.c
-
-```c
-__inline int net_fill_rule(struct sk_buff *skb,
-                               struct fib_rule *r,
-                               struct netlink_callback *cb)
-{
-    struct rtmsg *rtm;
-    struct nlmsghdr *nlsh;
-    unsigned char *b = skb->tail;
-
-    nlsh = NLMSG_PUT(skb, NETLINK_GEN(cb), cb->nlmsg_seq, RTM_RULE, sizeof(struct rtmsg));
-    rtm = NLMSG_DATA(nlsh);
-    rtm->rtm_family = AF_INET;
-    rtm->rtm_dst_len = r->r_dst_len;
-    rtm->rtm_src_len = r->r_src_len;
-    rtm->rtm_tos = r->r_tos;
-    #ifdef CONFIG_ROUTE_FWMARK
-    if (r->r_fwmark) {
-        RTA_PUT(skb, RTA_PROTOINFO, 4, &r->r_fwmark);
-    }
-    #endif
-    rtm->rtm_table = r->r_table;
-    rtm->rtm_scope = 0;
-    rtm->rtm_types = r->r_action;
-    rtm->rtm_flags = r->r_flags;
-
-    if (r->r_dst_len)
-        RTA_PUT(skb, RTA_DST, 4, &r->r_dst);
-    if (r->r_src_len)
-        RTA_PUT(skb, RTA_SRC, 4, &r->r_src);
-    if (r->r_ifname[0])
-        RTA_PUT(skb, RTA_IF, IFNSIZ, &r->r_ifname);
-    if (r->r_preference)
-        RTA_PUT(skb, RTA_PRIORITY, 4, &r->r_preference);
-    if (r->r_srcmp)
-        RTA_PUT(skb, RTA_GATEWAY, 4, &r->r_srcmp);
-    #ifdef CONFIG_NET_CLS
-    if (r->r_classid)
-        RTA_PUT(skb, RTA_FLOW, 4, &r->r_classid);
-    #endif
-    nlsh->nlmsg_len = skb->tail - b;
-    return skb->len;
-
-nlmsg_failure:
-rtattr_failure:
-    skb_put(skb, b - skb->tail);
-    return -1;
-}
-```
-
-# 图 8.71 FIB 初始化：linux/net/ipv4/fib.rules.c
+## 图 8.71 FIB 初始化：`linux/net/ipv4/fib.rules.c`
 
 ```c
 int int_dump_rules(struct sk_buff *skb, struct netlink_callback *cb)
@@ -27283,23 +28309,27 @@ int int_dump_rules(struct sk_buff *skb, struct netlink_callback *cb)
     }
     read_unlock(&fib_rules_lock);
     cb->args[0] = idx;
+```
+
+
+
     return skb->len;
+
 }
 
 /* CONFIG_RTLINK */
+
 void __init fib_rules_init(void)
 {
     register_netdev(&fib_rules_notifier);
 }
-```
 
 # 查找——让它快起来！
 
-# 图 8.72 通过哈希表访问 FIB——类型 i：linux/net/ipv4/fib.c
+## 图 8.72 通过哈希表访问 FIB——类型 i：linux/net/ipv4/fib.c
 
 ```c
 static kmem_cache *f_hash;
-
 /*
 这些奇怪的类型仅仅为了强制进行严格检查。
 当字节顺序变为自然长度时，
@@ -27308,13 +28338,12 @@ static kmem_cache *f_hash;
 typedef struct {
     u32 datum;
 } fn_key_t;
-
 typedef struct {
     u32 datum;
 } fn_hash_idx_t;
 ```
 
-# 图 8.73 通过哈希表访问 FIB——类型 ii：linux/net/ipv4/fib.c
+## 图 8.73 通过哈希表访问 FIB——类型 ii：linux/net/ipv4/fib.c
 
 ```c
 struct fn_zone
@@ -27322,16 +28351,13 @@ struct fn_zone
     struct fn_zone *fz_next;    /* 下一个空闲区域 */
     struct fib_node **fz_hash;  /* 哈希表指针 */
     int             fz_zent;      /* 条目数量 */
-
     int             fz_divisor;   /* 哈希除数      */
     u32             fz_hashmask;  /* (1<fz_divisor) - 1 */
     #define FZ_HASHMASK(fz) ((fz)->fz_hashmask)
-
     int             fz_order;   /* 区域顺序        */
     u32             fz_mask;
     #define FZ_MASK(fz)     ((fz)->fz_mask)
 };
-
 struct fib_hash
 {
     struct fn_zone *fn_zones[33];
@@ -27339,7 +28365,7 @@ struct fib_hash
 };
 ```
 
-# 图 8.74 通过哈希表访问 FIB——inline 函数 i：linux/net/ipv4/fib_hash__hash.c
+## 图 8.74 通过哈希表访问 FIB——inline 函数 i：linux/net/ipv4/fib_hash__hash.c
 
 ```c
 static __inline_u32 fib_hash_idx_t fn_hash(struct fn_key_t key, struct fn_zone *fz)
@@ -27350,11 +28376,7 @@ static __inline_u32 fib_hash_idx_t fn_hash(struct fn_key_t key, struct fn_zone *
 }
 ```
 
-
-
-
-
-# 路由 599
+## 路由 599
 
 ```c
 115 b -= (b)>>5;
@@ -27385,19 +28407,11 @@ static __inline_u32 fib_hash_idx_t fn_hash(struct fn_key_t key, struct fn_zone *
 ```
 
 ```c
-122
-```
-
-```c
 123 static __inline_ fn_key_t fz_key(u32 dst, struct fn_zone *fz)
 ```
 
 ```c
 124 {
-```
-
-```c
-125
 ```
 
 ```c
@@ -27508,24 +28522,20 @@ static __inline_u32 fib_hash_idx_t fn_hash(struct fn_key_t key, struct fn_zone *
 152 #define FZ_MAX_DIVISOR 1024
 ```
 
-8.75 通过哈希内联函数快速访问 FIB：ii: linux/net/ipv4/fib_hash.c。
+### 8.75 通过哈希内联函数快速访问 FIB：ii: linux/net/ipv4/fib_hash.c。
 
 ```c
 154 #define CONFIG_IP_ROUTE_LARGE_TABLES
 ```
 
 ```c
-155
-```
-
-```c
 /* 调用此函数时必须持有 fib hash 锁。 */
 157 static __inline_ void fn_rebuild_zone(struct fn_zone *fz,
-158 struct fib_node **old_ht,
-159 int old_divisor)
-160 {
-161 int i;
-162 struct fib_node *f, *fp, *next;
+struct fib_node **old_ht,
+int old_divisor)
+{
+int i;
+struct fib_node *f, *fp, *next;
 ```
 
 ```c
@@ -27544,14 +28554,13 @@ for (i=0; i<old_divisor; i++) {
 } // 缺少括号
 ```
 
-# **8.76** 通过哈希内联函数快速访问 FIB：iii: linux/net/ip4/fib_hash.c
+## 8.76 通过哈希内联函数快速访问 FIB：iii: linux/net/ip4/fib_hash.c
 
 ```c
 static void fn_rehash_zone(struct fn_zone *fz) {
     struct fib_node **ht, **old_ht;
     int old_divisor, new_divisor;
     u32 new_hashmask;
-
     old_divisor = fz->fz_divisor;
     switch (old_divisor) {
         case 16:
@@ -27566,31 +28575,44 @@ static void fn_rehash_zone(struct fn_zone *fz) {
             printk(KERN_CRIT, "route.c: bad divisor %d\n", old_divisor);
             return;
     }
-
 #if RT_CACHE_DEBUG > 2
-    printk("fn_rehash_zone: hash for %d grows from %d\n", fz->fz_order, old_divisor);
+```
+
+
+
+`printk("fn_rehash_zone: hash for %d grows from %d\n", fz->fz_order, old_divisor);`
+
 #endif
 
-    ht = kmalloc(new_divisor*sizeof(struct fib_node), GFP_KERNEL);
-    
-    if (ht) {
-        memset(ht, 0, new_divisor*sizeof(struct fib_node));
-        write_lock(&fz->hash_lock);
-        old_ht = fz->fz_hash = ht;
-        fz->fz_mask = new_hashmask;
-        fz->fz_divisor = new_divisor;
-        fn_rebuild_zone(fz, old_ht, old_divisor);
-        write_unlock(&fz->hash_lock);
-        kfree(old_ht);
-    }
+`ht = kmalloc(new_divisor*sizeof(struct fib_node), GFP_KERNEL);`
+
+if (ht) {
+
+    memset(ht, 0, new_divisor*sizeof(struct fib_node));
+
+    write_lock(&fz->hash_lock);
+
+    old_ht = fz->fz_hash = ht;
+
+    fz->fz_mask = new_hashmask;
+
+    fz->fz_divisor = new_divisor;
+
+    fn_rebuild_zone(fz, old_ht, old_divisor);
+
+    write_unlock(&fz->hash_lock);
+
+    kfree(old_ht);
+
+}
+
 #endif // CONFIG_IP_ROUTE_LARGE_TABLES
-```
 
 ## 区域信息
 
 接下来我们需要查找正确的区域：
 
-### 图 8.77 FIB 哈希区域访问函数：linux/net/ipv4/fib_hash.c。
+### 图 8.77 FIB 哈希区域访问函数：linux/net/ipv4/fib_hash.c
 
 ```c
 static void fn_free_node(struct fib_node *f) {
@@ -27625,7 +28647,6 @@ static struct fn_zone *new_zone(struct fn_hash *table, int z) {
         if (table->fn_zones[i])
             break;
     }
-
     write_unlock(&table->hash_lock);
     if (i == 32) {
         /* 没有更特定的掩码，我们是第一个。 */
@@ -27645,7 +28666,7 @@ static struct fn_zone *new_zone(struct fn_hash *table, int z) {
 
 然后我们查找实际条目：
 
-**图 8.78** 快速查找 FIB 函数：linux/net/ipv4/fib_hash.c。
+### 图 8.78 快速查找 FIB 函数：linux/net/ipv4/fib_hash.c
 
 ```c
 static int
@@ -27653,12 +28674,10 @@ hash_lookup(struct fib_table *bt, const struct rt_key *key, struct fib_result *r
     int err;
     struct fn_zone *fz;
     struct fn_hash *t = (struct fn_hash*)bt->tb_data;
-
     read_lock(&t->hash_lock);
     for (fz = t->fn_zone_list; fz = fz->fz_next) {
         struct fn_node *f;
         fn_key_t k = fz->key(key->dst, fz);
-
         for (f = fz->fn_chain(k, fz); f; f = f->fn_next) {
             if (!fn_key_eq(k, f->key))
                 if (fn_key_le(k, f->key))
@@ -27671,13 +28690,10 @@ hash_lookup(struct fib_table *bt, const struct rt_key *key, struct fib_result *r
             continue;
         #endif
         f->fn_state = FN_S_ACCESSED;
-
         if (f->fn_state&FN_S_ZOMBIE)
             continue;
-
         if (f->fn_scope < key->scope)
             continue;
-
         err = fib_semantic_match(f->fn_type, FIB_INFO(f), key, res);
         if (err == 0) {
             res->type = f->fn_type;
@@ -27691,18 +28707,13 @@ hash_lookup(struct fib_table *bt, const struct rt_key *key, struct fib_result *r
 }
 ```
 
-
-
-
-
-图 8.81 通过哈希表快速访问 FIB--选择默认条目：linux/net/ipv4/fib_hash.c
+### 图 8.81 通过哈希表快速访问 FIB--选择默认条目：linux/net/ipv4/fib_hash.c
 
 ```c
 if (order<0 || fi==NULL) {
     fn_hash_last_dflt = -1;
     goto out;
 }
-
 if ((fib_detect_death(fi, order, &last_resort, &last_idx)) {
     if (res->fi) {
         fib_info_put(res->fi);
@@ -27712,7 +28723,6 @@ if ((fib_detect_death(fi, order, &last_resort, &last_idx)) {
     fn_hash_last_dflt = order;
     goto out;
 }
-
 if (last_idx >= 0) {
     if (res->fi) {
         fib_info_put(res->fi);
@@ -27728,35 +28738,45 @@ out:
 
 ## 添加 FIB 条目
 
-现在看添加（更新）条目的的情况。
+现在看添加（更新）条目的情况。
 
-图 8.82 通过哈希表快速访问 FIB--插入条目 i：linux/net/ipv4/fib_hash.c。
+### 图 8.82 通过哈希表快速访问 FIB--插入条目 i：linux/net/ipv4/fib_hash.c
 
 ```c
 #define FIB_SCAN(f, fp) \
 for ( : ; (fp = *(fp)) != NULL; fp = &(fp)->fn_next)
-
 #define FIB_SCAN_KEY(f, fp, key) \
+```
+
+
+
 for ( : ; (fp = *(fp)) != NULL && fn_key_eq(fp)->fn_key, key); fp = &(fp)->fn_next)
 
 #ifndef CONFIG_ROUTE_TOS
+
 #define FIB_SCAN_TOS(f, fp, key, tos) FIB_SCAN_KEY(f, fp, key)
+
 #else
+
 #define FIB_SCAN_TOS(f, fp, key, tos) \
 for ( : ; (fp = *(fp)) != NULL && fn_key_eq(fp)->fn_key, key) && (fp)->tos == (tos); fp = &(fp)->fn_next)
     (fp)->tos = (tos);
 #endif
-```
 
 ## TCP/IP 和 Linux 协议实现
 
 ```c
 #ifdef CONFIG_RTNETLINK
+
 static void rmsg_fib(struct fib_node*, int, int,
     struct nmsgghdr *n, struct netlink_ekb_parms *);
+
 #else
+
 #define rmsg_fib(a, b, c, d)
+
 #endif
+
 static int
 fn_hash_insert(struct fib_table *tb, struct rmsg *r, struct rta rta,
     struct nmsgghdr *n, struct netlink_ekb_parms *req)
@@ -27765,7 +28785,6 @@ fn_hash_insert(struct fib_table *tb, struct rmsg *r, struct rta rta,
     struct fib_node *new_f, *fp, **del_fp;
     struct fn_zone *fz;
     struct fib_info *info = fi;
-
     int z = r->rtm_dst_len;
     int type = r->rtm_type;
 #ifdef CONFIG_IP_ROUTE_TOS
@@ -27808,7 +28827,6 @@ fz->fz_divisor < FZ_MAX_DIVISOR &&
     fn_rehash_zone(fz);
 #endif
 fp = fz_chain_p(key, fz);
-
 /*
  * 扫描列表以找到相同目的地的路由
  */
@@ -27816,7 +28834,6 @@ FIB_SCAN(fp, fp) {
     if (fn_key_leq(key, fp)->fn_key)
         break;
 }
-
 #ifdef CONFIG_IP_ROUTE_TOS
 /*
  * 找到相同目的地和 tos 的路由。
@@ -27842,7 +28859,6 @@ fn_key_eq(f->fn_key, key) {
     f = *fp;
     goto create;
 }
-
 FIB_SCAN_TOS(f, fp, key, tos) {
     if (fi->fib_priority <= FIB_INFO(f)->fib_priority)
     break;
@@ -27866,7 +28882,6 @@ if (f &&
         err = -EXIST;
         if (n->nlmsg_flags&NLM_F_EXCL)
             goto out;
-
    if (n->nlmsg_flags&NLM_F_REPLACE) {
         del_fp = fp;
         fp = &f->fn_next;
@@ -27922,7 +28937,13 @@ write_unlock_bh(&fib_hash_lock);
 fz->nent++;
 ```
 
-图 8.7 通过哈希表快速访问 FIB--插入条目 vi：linux/net/ipv4/fib_hash.c。
+
+
+# TCP/IP 和 Linux 协议实现
+
+## 删除 FIB 条目
+
+图 8.7 通过哈希表快速访问 FIB--插入条目 `vi`：`linux/net/ipv4/fib_hash.c`。
 
 ```c
 if (del_fp) {
@@ -27948,11 +28969,7 @@ return err;
 }
 ```
 
-## TCP/IP 和 Linux 协议实现
-
-## 删除 FIB 条目
-
-图 8.88 通过哈希表快速访问 FIB--删除条目：linux/net/ipv4/fib_hash.c。
+图 8.88 通过哈希表快速访问 FIB--删除条目：`linux/net/ipv4/fib_hash.c`。
 
 ```c
 static int
@@ -27963,20 +28980,17 @@ fn_hash_delete(struct fib_table *tb, struct rmag *r, struct rta *rta,
     struct fib_node *fp = *del_fp, fp;
     int z = r->rtm_dest_len;
     struct fn_zone *fz;
-
     fn_key_t key;
     if (!matched)
         #if (CONFIG_IP_ROUTE_TOS)
             u8 tos = r->rtm_tos;
         #endif
-
     dprint("%d).delete: %d %08x/%d\n", tb->ib_id, r->rtm_type, rta->rta_dst ?
             *(u32*)rta_dst, 0, rta->rta_ois ? *rta->rta_ois : -1);
     if (z > 0)
         return -EINVAL;
     if ((fz = fn_hash_zones[z]) == NULL)
         return -ESRCH;
-
     fn_key_0(key);
     if (rta->rta_dst) {
         u32 dst;
@@ -27985,9 +28999,7 @@ fn_hash_delete(struct fib_table *tb, struct rmag *r, struct rta *rta,
             return -EINVAL;
             key = fn_key(dst, fz);
     }
-
     fp = fz_chain_p(fp, fz);
-
     FIB_SCAN(f, fp) {
         if (fn_key_leq(key, fp)->fn_key)
             break;
@@ -27997,7 +29009,7 @@ fn_hash_delete(struct fib_table *tb, struct rmag *r, struct rta *rta,
 }
 ```
 
-图 8.89 通过哈希表快速访问 FIB--删除条目：linux/net/ipv4/fib_hash.c.
+图 8.89 通过哈希表快速访问 FIB--删除条目：`linux/net/ipv4/fib_hash.c`.
 
 ```c
 #ifdef CONFIG_IP_ROUTE_TOS
@@ -28008,7 +29020,7 @@ fn_hash_delete(struct fib_table *tb, struct rmag *r, struct rta *rta,
 #endif
 ```
 
-## 路由
+### 路由
 
 ```c
 matched = 0;
@@ -28021,11 +29033,9 @@ FIB_SCAN_TOS(f, fp, key, tos) {
 }
 ```
 
-
-
 # TCP/IP 与 Linux 协议实现
 
-> **图 8.91** 通过哈希-冲刷条目快速访问 FIB：linux/net/ipv4/fib_hash.c。
+> **图 8.91** 通过哈希-冲刷条目快速访问 FIB：`linux/net/ipv4/fib_hash.c`。
 
 ```c
 711 extern __inline__ int
@@ -28071,7 +29081,7 @@ FIB_SCAN_TOS(f, fp, key, tos) {
 
 # 管理
 
-> **图 8.92** 访问 FIB–PROC fs 访问：linux/net/ipv4/fib_hash.c。
+> **图 8.92** 访问 FIB–PROC fs 访问：`linux/net/ipv4/fib_hash.c`。
 
 ```c
 755 static int fn_hash_get_info(struct fib_table *tb, char *buffer, int first, int count)
@@ -28090,27 +29100,43 @@ for (fz=table->zone_list; fz; fz=fz->next) {
   if (fz->fz_next == 0) 
     continue;
     if (pos + fz->fz_next <= first) {
-      pos += fz->fz_next;
-      continue;
-    }
-    for (i=0; i < maxslot; i++, fp++) {
-      for (f=fp; f; f=f->next) {
-        if (++pos < first) {
-          continue;
-          fib_node_get_info(f->fn_type, f->fn_state&FN_S_ZOMBIE, FIB_INFO(f), fz_prefix(f->fn_key, fz), FZ_MASK(fz, buffer));
-          buffer = 128;
-          if (++n >= count)
-            goto out;
-      }
-      }
-    }
-}
-out:
-read_unlock(&fib->hash_lock);
-return n;
 ```
 
-图 8.93 访问 FIB–RT访问 i：linux/net/ipv4/fib_hash.c。
+
+
+## 图 8.93 访问 FIB–RT访问 i：linux/net/ipv4/fib_hash.c
+
+```c
+pos += fz->fz_next;
+
+continue;
+
+}
+
+for (i=0; i < maxslot; i++, fp++) {
+
+  for (f=fp; f; f=f->next) {
+
+    if (++pos < first) {
+
+      continue;
+      fib_node_get_info(f->fn_type, f->fn_state&FN_S_ZOMBIE, FIB_INFO(f), fz_prefix(f->fn_key, fz), FZ_MASK(fz, buffer));
+
+      buffer = 128;
+
+      if (++n >= count)
+        goto out;
+  }
+
+  }
+}
+
+out:
+
+read_unlock(&fib->hash_lock);
+
+return n;
+```
 
 ```c
 extern __inline int 
@@ -28136,7 +29162,7 @@ struct fib_node *f)
 818 cb->args[3] = i;
 819 return -1;
 820 }
-821 
+
 822 cb->args[3] = i;
 823 return skb->len;
 824 }
@@ -28150,7 +29176,8 @@ struct fib_node *f)
 828     struct fib_table *tb,
 829     struct fn_zone *fz
 830 {
-831     int h, s_h;
+    int h, s_h;
+
 833     s_h = cb->args[2];
 834 for (h=0; h < fz->fz_divisor; h++) {
 835     if (h < s_h) continue;
@@ -28202,17 +29229,14 @@ static void rtmsg_fib(int event, struct fib_node *f, int z, int tb_id,
     struct skb_buff *skb;
     u32 pid = req ? req->pid : 0;
     int size = NLMSG_SIZE(struct rtmsg) + 256;
-
     skb = alloc_skb(size, GFP_KERNEL);
     if (!skb)
         return;
-
     if (fib_dump_info(skb, pid, n->nmsg_seq, event, tb_id,
         f->fn_type, f->fn_scope, f->fn_key, f->fn_tos,
         FIB_INFO(f)) < 0)
         kfree_skb(skb);
         return;
-
     NETLINK_CB(skb)->dst_groups = RTGRP_IPV_ROUTE;
     if (n->nmsg_flag&NLM_ECHO)
         atomic_inc(&skb->users);
@@ -28237,59 +29261,62 @@ static void rtmsg_fib(int event, struct fib_node *f, int z, int tb_id,
 907     fib_hash_kmem = kmem_create("ip_fib", sizeof(struct fib_node),
 908         0, SLAB_CACHE_ALIGN, GFP_KERNEL);
 909     if (fib_hash_kmem)
-910         fib_hash_kmem = kmem_create("ip_fib", sizeof(struct fib_node),
-911             0, SLAB_CACHE_ALIGN, GFP_KERNEL);
-912 }
-913 
-914 struct fib_table *init_fib_hash(int id)
-915 {
-916     struct fib_table *tb;
-917     struct fn_hash *table;
-918     int found = 0;
-919;
-920     fib_hash_zombies = 0;
-921     if (fib_hash_kmem == NULL)
-922         return;
-923     fib_hash_kmem = kmem_create("ip_fib", sizeof(struct fib_node),
-924             0, SLAB_CACHE_ALIGN, GFP_KERNEL);
-925     }
-926     table = (struct fn_hash*)id;
-927     struct fn_zone *fz;
-928     for (fz = table->fz_list; fz; fz = fz->fz_next) {
-929         int i;
-930         int tmp = 0;
-931         for (i=fz->fz_divisor-1; i>=0; i--)
-932             tmp += fn_list_flush(&fz->fz_hash[i], fz->fz_order, table);
-933             fz->fz_nent = tmp;
-934             found += tmp;
-935     }
-936     return found;
-937 }
-938 
-939 struct fib_table *fib_hash_init(int id)
-940 {
-941     struct fib_table *tb;
-942     struct fn_hash *table;
-943     int found = 0;
-944;
-945     fib_hash_zombies = 0;
-946     if (fib_hash_kmem == NULL)
-947         return NULL;
-948     table = (struct fn_hash*)id;
-949     struct fn_zone *fz;
-950     for (fz = table->fz_list; fz; fz = fz->fz_next) {
-951         int i;
-952         int tmp = 0;
-953         for (i=fz->fz_divisor-1; i>=0; i--)
-954             tmp += fn_list_flush(&fz->fz_hash[i], fz->fz_order, table);
-955             fz->fz_nent = tmp;
-956             found += tmp;
-957     }
-958     return found;
-959 }
 ```
 
 
+
+```c
+fib_hash_kmem = kmem_create("ip_fib", sizeof(struct fib_node),
+    0, SLAB_CACHE_ALIGN, GFP_KERNEL);
+}
+
+struct fib_table *init_fib_hash(int id)
+{
+    struct fib_table *tb;
+    struct fn_hash *table;
+    int found = 0;
+
+    fib_hash_zombies = 0;
+    if (fib_hash_kmem == NULL)
+        return;
+    fib_hash_kmem = kmem_create("ip_fib", sizeof(struct fib_node),
+        0, SLAB_CACHE_ALIGN, GFP_KERNEL);
+    }
+    table = (struct fn_hash*)id;
+    struct fn_zone *fz;
+    for (fz = table->fz_list; fz; fz = fz->fz_next) {
+        int i;
+        int tmp = 0;
+        for (i=fz->fz_divisor-1; i>=0; i--)
+            tmp += fn_list_flush(&fz->fz_hash[i], fz->fz_order, table);
+            fz->fz_nent = tmp;
+            found += tmp;
+    }
+    return found;
+}
+
+struct fib_table *fib_hash_init(int id)
+{
+    struct fib_table *tb;
+    struct fn_hash *table;
+    int found = 0;
+
+    fib_hash_zombies = 0;
+    if (fib_hash_kmem == NULL)
+        return NULL;
+    table = (struct fn_hash*)id;
+    struct fn_zone *fz;
+    for (fz = table->fz_list; fz; fz = fz->fz_next) {
+        int i;
+        int tmp = 0;
+        for (i=fz->fz_divisor-1; i>=0; i--)
+            tmp += fn_list_flush(&fz->fz_hash[i], fz->fz_order, table);
+            fz->fz_nent = tmp;
+            found += tmp;
+    }
+    return found;
+}
+```
 
 
 
@@ -28340,26 +29367,14 @@ MAC 地址的格式如表 8.1 所示。IANA 执行了 MAC 地址分配，其算�
 当然的，由于动态成员关系，我们可能会发现某个站点的突然获得了一个组的成员，而该站点之前已从源树中删除了该组。我们必须以某种方式允许树重新生长，这是通过使用密集路由器之间的新消息——剪枝消息来实现的。在某些方面，这只是将 IGMP 加入的想法（如嫁接消息扩展了 IGMP 离开的想法）扩展到了源。
 
 - EGP2——EGP 是外部网关协议，1980 年代的代间机制。
-
 - BGP2, BGP3, BGP4, 以及 BGP——BGP 是边界网关协议，允许 ISP 宣告其无论是入口、出口还是中转的路由信息。BGP3 到 BGP4 的演进包含了无类网间路由（CIDR）。
-
 - DVMP——DVMP 是距离向量组播路由协议，现在主要是密集模式（泛洪和剪枝）机制。
-
 - MSDP——MSDP 是组播源分发协议，是目前我们最接近的组播间协议。它在指定的路由器之间分发一个源的存在，用于另一个域的接收者。
-
 - RIP6——RIP6 是为了支持 IPv6 地址空间和地址分配方案而重新工程化的 RIP。
-
 - ICMP 和 IGMP——GateD 支持 ICMP 和 IGMP，但然后如果它运行在 Linux 上，这些是内核原生的。
-
 - IS-IS——IS-IS 是中间系统，源自 DECnet，由 ISO 引入的链路状态协议。
-
 - RIPv1 和 RIPv2——RIP 是路由信息协议，它是距离向量算法。
-
 - OSPFv1 和 OSPFv2——OSPF 是开放最短路径优先，它是链路状态协议，并具有良好的扩展性。
-
-
-
-
 
 ## 8.6.2 路由控制与流量控制维护
 
@@ -28373,7 +29388,7 @@ MAC 地址的格式如表 8.1 所示。IANA 执行了 MAC 地址分配，其算�
 
 让我们回顾一下用户空间与内核之间的通信。在第 1 章中，我们查看了系统调用如何允许用户进程使用内核服务。然而，内核是用户进程访问外部资源（文件系统、与其他计算机的通信、用户输入/输出等）的便捷通道。
 
-此处的不同在于，Linux 没有像其他 UNIX 系统那样使用简单的内核内存映射。虽然它提供了 `/proc` 文件系统，这比早期读取 `/dev/kmem` 的方案方便得多，但它需要一种在内核和用户空间之间双向通信的协议。该方案始于 cmsg 机制，它允许应用程序访问与数据包或 socket 关联的数据，这些数据不是 socket 负载的一部分。例如，标准的 socket 接口（第 4 章和第 9 章描述）不允许访问入站数据包 IP 头的 TTL 字段，但对于某些应用程序来说这是重要的，或者至少是有用的。随后，开发了一种名为 netlink 的更通用机制，它允许创建新类型的 socket (PF_NETLINK)，用于应用程序空间（例如带有 asGateD 的路由守护进程）与内核空间之间的通信。这提供了一个不可靠的消息协议，在此之上，特定应用程序必须构建自身的可靠性（以及流量和资源控制）。它还包含了对回调的支持基础。目前的接口是 rtnetlink。
+此处的不同在于，Linux 没有像其他 UNIX 系统那样使用简单的内核内存映射。虽然它提供了 `/proc` 文件系统，这比早期读取 `/dev/kmem` 的方案方便得多，但它需要一种在内核和用户空间之间双向通信的协议。该方案始于 cmsg 机制，它允许应用程序访问与数据包或 socket 关联的数据，这些数据不是 socket 负载的一部分。例如，标准的 socket 接口（第 4 章和第 9 章描述）不允许访问入站数据包 IP 头的 TTL 字段，但对于某些应用程序来说这是重要的，或者至少是有用的。随后，开发了一种名为 netlink 的更通用机制，它允许创建新类型的 socket (`PF_NETLINK`)，用于应用程序空间（例如带有 asGateD 的路由守护进程）与内核空间之间的通信。这提供了一个不可靠的消息协议，在此之上，特定应用程序必须构建自身的可靠性（以及流量和资源控制）。它还包含了对回调的支持基础。目前的接口是 rtnetlink。
 
 > ¹ 事实上，路由协议是点对点应用的最佳示例。在最近 gutella 出现之前，几乎所有其他应用程序都是基于客户端-服务器的。路由是本质上最基本的分布式应用程序。
 
@@ -28383,20 +29398,27 @@ rtnetlink 消息由一个 netlink 消息头和附加的属性组成。有一组�
 
 ```
 rtnetlink_socket = =
+
     socket(PF_NETLINK, int socket_type, NETLINK_ROUTE);
 
     int RTA_OK(struct rtattr *rta, int rtabuflen);
-    void RTA_DATA(struct rtattr *rta);
-    unsigned int RTA_PAYLOAD(struct rtattr *rta);
-    struct rtattr RTA_NEXT(struct rtattr *rta, unsigned int
-    rtabuflen);
-    unsigned int RTA_LENGTH(unsigned int length);
-    unsigned int RTA_SPACE(unsigned int length);
 ```
+
+
+
+`void RTA_DATA(struct rtattr *rta);`
+
+`unsigned int RTA_PAYLOAD(struct rtattr *rta);`
+
+`struct rtattr RTA_NEXT(struct rtattr *rta, unsigned int rtabuflen);`
+
+`unsigned int RTA_LENGTH(unsigned int length);`
+
+`unsigned int RTA_SPACE(unsigned int length);`
 
 以下是一个使用创建 rtnetlink 消息设置设备 MTU 的示例：
 
-```
+```c
 struct c {
     struct nlmsghdr nh;
     struct ifinfomsg if;
@@ -28423,7 +29445,7 @@ send(rtnetlink_sk, &req, req.n.nlms_len);
 
 某些 rtnetlink 消息在初始头之后有可选属性：
 
-```
+```c
 struct rtattr {
     unsigned short rta_len; /* 选项长度 */
     unsigned short rta_type; /* 选项类型 */
@@ -28431,43 +29453,39 @@ struct rtattr {
 };
 ```
 
-这些属性应该仅使用 RTA_* 宏或 libnetlink 进行。以下是所有消息类型：
+这些属性应该仅使用 `RTA_*` 宏或 `libnetlink` 进行。以下是所有消息类型：
 
-- RTM_NEWLINK, RTM_DELINK, RTM_GETLINK. 创建、删除或获取特定接口的信息。
-- RTM_NEWADDR, RTM_DELADDR, RTM_GETADDR. 添加、删除或接收与接口关联的 IP 地址信息。
-- RTM_NEWROUTE, RTM_DELROUTE, RTM_GETROUTE. 创建、删除或接收网络路由信息。
-- RTM_NEIGH, RTM_DELNEIGH, RTM_GETIGH. 添加、删除或接收邻居条目信息。
-- RTM_NEWRULE, RTM_DELRULE, RTM_GETRULE. 添加、删除或检索路由规则。
-- RTM_NEWQISC, RTM_DELQISC, RTM_GETQISC. 添加、删除或获取队列接口。
-- RTM_NEWTCLASS, RTM_DELTCLASS, RTM_GETCLASS. 添加、删除或获取流量类。
-- RTM_NEWFILTER, RTM_DELFILTER, RTM_GETFILTER. 添加、删除或接收流量过滤器信息。
+- `RTM_NEWLINK`, `RTM_DELINK`, `RTM_GETLINK`. 创建、删除或获取特定接口的信息。
+- `RTM_NEWADDR`, `RTM_DELADDR`, `RTM_GETADDR`. 添加、删除或接收与接口关联的 IP 地址信息。
+- `RTM_NEWROUTE`, `RTM_DELROUTE`, `RTM_GETROUTE`. 创建、删除或接收网络路由信息。
+- `RTM_NEIGH`, `RTM_DELNEIGH`, `RTM_GETIGH`. 添加、删除或接收邻居条目信息。
+- `RTM_NEWRULE`, `RTM_DELRULE`, `RTM_GETRULE`. 添加、删除或检索路由规则。
+- `RTM_NEWQISC`, `RTM_DELQISC`, `RTM_GETQISC`. 添加、删除或获取队列接口。
+- `RTM_NEWTCLASS`, `RTM_DELTCLASS`, `RTM_GETCLASS`. 添加、删除或获取流量类。
+- `RTM_NEWFILTER`, `RTM_DELFILTER`, `RTM_GETFILTER`. 添加、删除或接收流量过滤器信息。
 
 ## 处理 RTNetlink 调用的代码
 
-```
+```c
 #define RTO_ONLINK   0x01
 #define RTO_PROXY    0x80000000
 #define RTO_CONN     0
-
 struct rt_key {
     __u32           dst;
     __u32           arc;
     int             iif;
     int             oif;
-    #ifdef CONFIG_IP_ROUTE_FWMARK
-        __u32          fmark;
-    #endif
+#ifdef CONFIG_IP_ROUTE_FWMARK
+    __u32          fmark;
+#endif
     __u8            tos;
 };
-
 struct in_device;
-```## TCP/IP 协议
+```
+
+## TCP/IP 协议
 
 （此处省略大量重复的代码结构定义，根据要求不翻译代码块内容，保持格式）
-
-
-
-
 
 # 图 8.104 基础路由维护操作：linux/net/ipv4/route.c。
 
@@ -28486,6 +29504,7 @@ struct in_device;
 151      ipv4_link_failure,
 152      sizeof(struct rtable),
 153  };
+
 155  #ifdef CONFIG_INET_ECN
 156  #define ECN_OR_COST(class) TC_PRIO_##class
 157  #else
@@ -28516,12 +29535,13 @@ struct in_device;
 
 ```c
 53 DECLARE_MUTEX(rtnl_sem);
-54
+
 55  void rtn_lock(void)
 56  {
 57      rtnl_shlock();
 58      rtnl_exlock();
 59  }
+
 61  void rtn_unlock(void);
 ```
 
@@ -28545,9 +29565,11 @@ struct rt_key {
 };
 ```
 
+
+
 该表如下面的所示。
 
-图 8.107 路由 API 表：linux/include/net/route.h。
+图 8.107 路由 API 表：`linux/include/net/route.h`。
 
 ```c
 struct rtable {
@@ -28556,7 +29578,6 @@ struct rtable {
         struct rtable      rt_next;
     } u;
 ```
-
 630 TCP/IP 和 Linux 协议实现
 
 ```c
@@ -28565,12 +29586,12 @@ unsigned            rt_type;
 __u32               rt_dst; /* 路径目的 */
 __u32               rt_src;  /* 路径源 */
 int                 rt_iif;
-    /* 邻居信息 *
-    __u32               rt_gateway;
-    /* 缓存查找键 *
+/* 邻居信息 *
+__u32               rt_gateway;
+/* 缓存查找键 *
 struct rt_key       key;
-    /* 杂缓存信息 *
-    __u32               rt_spec_dst; /* RFC1122 特定目的地 */
+/* 杂缓存信息 *
+__u32               rt_spec_dst; /* RFC1122 特定目的地 */
 struct inet_peer   peer; /* 长连接对端信息 */
 #ifdef CONFIG_IP_ROUTE_NAT
     __u32               rt_src_map;
@@ -28578,7 +29599,7 @@ struct inet_peer   peer; /* 长连接对端信息 */
 #endif
 ```
 
-图 8.108 路由查找：linux/net/ipv4/route.c
+图 8.108 路由查找：`linux/net/ipv4/route.c`
 
 ```c
 int ip_route_output_key(struct rtable **rp, const struct rt_key *key)
@@ -28611,7 +29632,7 @@ int ip_route_output_key(struct rtable **rp, const struct rt_key *key)
 
 # 631 路由
 
-图 8.109 路由查找：linux/net/ipv4/route.c。
+图 8.109 路由查找：`linux/net/ipv4/route.c`。
 
 ```c
 int ip_route_output_slow(struct rtable **rp, const struct rt_key *oldkey)
@@ -28625,7 +29646,6 @@ int ip_route_output_slow(struct rtable **rp, const struct rt_key *oldkey)
     int free_res = 0;
     int err;
     u32 tos;
-
     tos = oldkey->tos & (IP_TOS_MASK|RT_ONLINK);
     key.dst = oldkey->dst;
     key.src = oldkey->src;
@@ -28642,7 +29662,7 @@ int ip_route_output_slow(struct rtable **rp, const struct rt_key *oldkey)
 #endif
 ```
 
-图 8.110 路由查找源源情况：linux/net/ipv4/route.c。
+图 8.110 路由查找源源情况：`linux/net/ipv4/route.c`。
 
 ```c
 if (oldkey->src) {
@@ -28650,16 +29670,13 @@ if (oldkey->src) {
   || BADCLASS(oldkey->src)
   || ZERONET(oldkey->src))
     return -EINVAL;
-
   /* 等同于 in_addr_type(saddr) == RTN_LOCAL */
   dev_out = ip_dev_find(oldkey->src);
   if (dev_out == NULL)
     return -EINVAL;
-
   /* 我删除了这里关于 dev_out == rth->oif 的代码。
   它有三个错误的原因：
   1. 如果 saddr 被分配给多个接口，ip_dev_find(saddr) 可能会返回错误的结果。```
-
 # 632 TCP/IP 和 Linux 协议实现
 
 2. 此外，我们允许带有另一个接口的 saddr 发送数据包。
@@ -28674,10 +29691,8 @@ if (oldkey->oif == 0
     // 使用环回地址构建多播路径（路由缓存不知道 ttl 为零，
     // 数据包不会离开主机，路由是有效的）。
     // 幸运的是，这个黑科技是一个很好的替代方案。
-
     key_oif = dev_out->ifindex;
     goto make_route;
-
     if (dev_out);
     dev_put(dev_out);
     dev_out = NULL;
@@ -28695,13 +29710,9 @@ if (oldkey->oif) {
                 return -EINVAL;
 ```
 
-
-
-
-
 # 634 TCP/IP 与 Linux 实现
 
-图 8.114 路由查找--边缘情况：linux/net/ipv4/route.c。
+图 8.114 路由查找--边缘情况：`linux/net/ipv4/route.c`。
 
 ```c
 1749    free_res = 1;
@@ -28710,38 +29721,69 @@ if (oldkey->oif) {
 1752
 1753    if (res.type == RTN_LOCAL) {
 1754        if (!key.src)
+```
+
+
+
+# 636 TCP/IP 与 Linux 协议实现
+
+```c
 1755            key.src = key.dst;
+
 1756        if (dev_out)
+
 1757            dev_put(dev_out);
+
 1758            dev_out = &loopback_dev;
+
 1759            dev_hold(dev_out);
+
 1760            key.oif = dev_out->ifindex;
+
 1761        if (res.fi)
+
 1762            fib_info_put(res.fi);
+
 1763            res.fi = NULL;
+
 1764        flags |= RTCF_LOCAL;
+
 1765        goto make_route;
+
 1766    }
 ```
 
 ```c
 1769 #ifdef CONFIG_IP_ROUTE_MULTIPATH
+
 1770     if (res.fi->fib_hnbs > 1 && key.oif == 0)
+
 1771         fib_select_default(&key, &res);
+
 1772 else
+
 1773 #endif
+
 1774     if (res.prefixlen==0 && res.type == RTN_UNICAST && key.oif == 0)
+
 1775         fib_select_default(&key, &res);
+
 1776     if (key.src)
+
 1777         key.src = FIB_RES_PREFSRC(res);
+
 1778     if (dev_out)
+
 1779         dev_put(dev_out);
+
 1780         dev_out = FIB_RES_DEV(res);
+
 1781         dev_hold(dev_out);
+
 1782         key.oif = dev_out->ifindex;
 ```
 
-图 8.115 路由查找路由请求：linux/net/ipv4/route.c。
+图 8.115 路由查找路由请求：`linux/net/ipv4/route.c`。
 
 ```c
 1786    make_route:
@@ -28799,27 +29841,23 @@ rth->key.oif = oldkey->oif;
 ```
 
 1832
-**图 8.116** 路由查找请求-清理引用（put）：linux/net/ipv4/route.c。
+**图 8.116** 路由查找请求-清理引用（put）：`linux/net/ipv4/route.c`。
 
 ```c
 #ifdef CONFIG_ROUTE_FWMARK
 rth->key.fwmark = oldkey->fwmark;
 #endif
-
 rth->rt_dst = key_dst;
 rth->rt_src = key_src;
 #ifdef CONFIG_IP_ROUTE_NAT
 rth->rt_dst_map = key_dst;
 rth->rt_src_map = key_src;
 #endif
-
 rth->rt_iif = oldkey->oif ? dev_out->index;
 rth->u.dst.dev = dev_out;
 dev_hold(dev_out);
 rth->rt_gateway = key_dst;
 ```
-
-# 636 TCP/IP 与 Linux 协议实现
 
 ```c
 rth->rt_spec_dst = key.src;
@@ -28830,7 +29868,7 @@ if (flags&RTCF_LOCAL) {
 }
 ```
 
-图 8.17 路由查找请求-清理引用（put）：linux/net/ipv4/route.c。
+图 8.17 路由查找请求-清理引用（put）：`linux/net/ipv4/route.c`。
 
 ```c
 if (flags&RTCF_BROADCAST|RTCF_MULTICAST) {
@@ -28866,7 +29904,9 @@ if (res.type == RTN_MULTICAST) {
     link/ether 00:1c:4f:4f:8a:33 brd ff:ff:ff:ff:ff
 ```
 
-这里，`lo` 是回环接口，`eth0` 是以太网接口`<BROADCAST,MULTICAST,UP,LOWER>` 表示该接口支持广播、多播、已启动且物理层就绪。
+
+
+这里，`lo` 是回环接口，`eth0` 是以太网接口，`<BROADCAST,MULTICAST,UP,LOWER>` 表示该接口支持广播、多播、已启动且物理层就绪。
 
 要为接口添加一个 IP 地址：
 `ip addr add 192.168.1.10/24 dev eth0`
@@ -28879,10 +29919,6 @@ if (res.type == RTN_MULTICAST) {
 
 `ip` 命令通过统一的接口使得复杂的 Linux 网络栈的管理变得更加直观和强大。
 
-
-
-
-
 # 路由 639
 
 禁止、本地、广播、丢弃、NAT、任播和多组播。NAT 在第 10 章中解释。
@@ -28894,6 +29930,10 @@ src <address> | realm realm <n> | mtu <n> | window <n> | rtt <n> | rttvar
 <n> | ssthresh <n> | cwnd <n> | advmss <n> | nexthop <next hop> scope
 <scope val> | protocol <rtproto> | online | equalize |}
 ```
+
+
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
 
 这里唯一的内容是 `rtproto`，它描述了如何通过重定向、内核配置、启动时的静态添加或路由器发现来获取路由，以及多路径参数 `equalization`（均衡）。管理多组播地址。`mroute`。管理多组播路由缓存实体。这两个与单播地址和路由管理命令选项相似。
 
@@ -28916,11 +29956,8 @@ src <address> | realm realm <n> | mtu <n> | window <n> | rtt <n> | rttvar
 本章介绍互联网如何控制流量。与互联网流量相关的关键概念是“流”（flow）的概念。流是从源（或相关源集合）到接收者（或接收者集合）的数据包序列。最简单的实例是单个 TCP 连接。更复杂的流可能是虚拟专用网络，它可能被实现为从一组站点的一组路径集合，需要一些整体资源（最小速率，但对任何特定数据包或 TCP 连接没有特定处理）。总体流量管理有三种主要模型：
 
 - 端到端流量管理分为自适应和非自适应——自适应应用程序和用户使用拥塞避免技术（例如由 TCP 实现的，如第 7 章所示）。TCP 对从数据包丢失产生的拥塞信号或从显式拥塞通知产生的信号做出反应。这些信号是路由器通过在本章中看到的队列管理程序生成的。
-
 - 非自适应应用程序和用户仅在有数据时发送他们拥有的——通常视频、音频和游戏应用是非自适应的，并使用 UDP（通常在其上方运行 RTP）来携带数据包。这些应用程序需要某种针对其需求进行工程设计的网络路径。这可以通过在安装时提供足够的路径，或者在需要路径时附近进行某种动态资源预留来实现。资源预留要求流量在路由器中获得某种优先调度。我们将在本章中研究这一点。资源预留使用如 RSVP 之类的信号协议进行，或者通过电话、传真或联系网络提供者进行带外完成，后者使用网络管理来配置相关路径上的路由器。这在这些路由器中建立了与需要这种优先处理的源和目的相关的状态。
-
 - **边缘到边缘。** 目前网络在核心部分拥有大量容量是常有的。
-
 - **逐跳。** 实现不同流采取不同处理的基础构建块是给定跳数或路由器内的实际转发处理。路由器可以对数据包序列采用多种不同的调度或队列算法。默认调度是 FIFO，即*先进先出*。默认队列管理程序是丢弃到达满队列队列的数据包。
 
 队列有许多实现方式。例如，路由器可以在输入或输出端排队，或者发生混合情况。大多数系统（包括 Linux 在内）都是输出队列。还有其他程序来监控队列占用情况、决定在过载时做什么、标记或丢弃表现不良的流量、重新调整数据包序列以减少其突发性（*整形* shaping），并与其他路由器协调这些操作以提供一致且公平的服务。本章涵盖了目前 Linux 内核中描述的这些转发方面。
@@ -28928,10 +29965,6 @@ src <address> | realm realm <n> | mtu <n> | window <n> | rtt <n> | rttvar
 ## 9.2 引言
 
 原生 IP 的问题在于它仅提供尽力而为（best-effort）的服务。当我们说尽力而为时，真实意思是该服务不提供保证。在实践中，由任意链路和路由器组成且具有任意流量混合的网络路径其性能是不可预测的。可用容量（无论是每秒比特还是每秒数据包）会随每个数据包而变化。在每个跳数以及终端的延迟也会随每个数据包而变化。在实践中，情况并非性能不可预测，而是大多数应用程序使用 TCP 进行端到端服务，TCP 提供了可靠性和拥塞避免，如第 7 章所示。影响给定用户可用资源的流量变化主要有两个贡献因素：首先，当连接开始时，它们会迅速扩展速率；其次，在一天中的某些时间，有大量连接在大致同一时间开始（或结束）。尽管如此，存在短连接和长连接的混合，俗称为“老鼠”和“大象”，连接总数变化缓慢。这意味着网络中心的流量变化相对缓慢，除非存在相关事件。
-
-
-
-
 
 # 转发 645
 
@@ -28964,18 +29997,6 @@ IP FIB（转发信息表）存储了根据目的 IP 前缀确定下一跳流量�
 
 互联网社区的重大争论之一是关于 QoS 要求。目前还并不清楚用户将使用什么（并为什么付费）。在早期，迈向增强服务的第一步是定义集成服务数据包网络（ISPN）。在这里，定义了一组标准的 QoS 服务水平，并附有详细的服务类型描述。服务接口包括一个名为 RSVP 的复杂信令协议，我们稍后会简要介绍。从带外的角度来看，它是与用户数据包分开发送的。在电信术语中，它是*带内的*，因为它与用户数据通过相同的电缆传输，但它是用户数据的额外内容。这种信令协议被假设是通名为接入控制的网络级机制的接口。准入控制基本上是一个决策函数，它利用来自信令请求的信息，结合当前和最近的网络状况信息，来计算请求的服务是否可以满足。如果是，预留（或*调用*）将被接受或准入；否则将的拒绝。在 IP 网络中，如果预留被拒绝，这不会阻止任何人。
 
-为了访问这些增强服务，我们需要考虑端系统应用接口、远程路由器级别的带内信令、带外信令或管理。最重要的是，任何新机制都不应过度威胁互联网的可扩展性，以至于不值得提供。QoS 链的另一端是，对于控制使用的服务，必须有激励或定价方案。
-
-在实践中，IP 运行在链路之上，互联网中采用了许多不同的链路级技术。以其原生形式，这些链路层技术在性能保证方面提供了广泛的不同能力。例如，裸露的以太网局域网是非确定性延迟。另一方面，点对点串行线具有由两个部分组成的已知延迟：序列化数据包的时间以及数据包在链路穿越距离上的传播时间。
-
-互联网本质上是异质的（极其异质的！）。没有通用的二层，因此如果不定义任何 IP 级机制与任何提供比尽力而为增强服务的路径中的每条链路层之间的映射，就不存在对 QoS 的良好界定的支持。
-
-互联网社区的重大争论之一是关于 QoS 要求。目前还并不清楚用户将使用什么（并为什么付费）。在早期，迈向增强服务的第一步是定义集成服务数据包网络（ISPN）。在这里，定义了一组标准的 QoS 服务水平，并附有详细的服务类型描述。服务接口包括一个名为 RSVP 的复杂信令协议，我们稍后会简要介绍。从带外的角度来看，它是与用户数据包分开发送的。在电信术语中，它是*带内的*，因为它与用户数据通过相同的电缆传输，但它是用户数据的额外内容。这种信令协议被假设是通名为接入控制的网络级机制的接口。准入控制基本上是一个决策函数，它利用来自信令请求的信息，结合当前和最近的状况信息，来计算请求的服务是否可以满足。如果是，预留（或*调用*）将被接受或准入；否则将的拒绝。在 IP 网络中，如果预留被拒绝，这不会阻止任何人。
-
-在实践中，IP 运行在链路之上，互联网中采用了许多不同的链路级技术。以其原生形式，这些链路层技术在性能保证方面提供了广泛的不同能力。例如，裸露的以太网局域网是非确定性延迟。另一方面，点对点串行线具有由两个部分组成的已知延迟：序列化数据包的时间以及数据包在链路穿越距离上的传播时间。
-
-互联网本质上是异质的（极其异质的！）。没有通用的二层，因此如果不定义任何 IP 级机制与任何提供比尽力而为增强服务的路径中的每条链路层之间的映射，就不存在对 QoS 的良好界定的支持。
-
 ## 9.2.2 保证服务的准入测试
 
 互联网社区的重大争论之一是关于 QoS 要求。目前还并不清楚用户将使用什么（并为什么付费）。在早期，迈向增强服务的第一步是定义集成服务数据包网络（ISPN）。在这里，定义了一组标准的 QoS 服务水平，并附有详细的服务类型描述。服务接口包括一个名为 RSVP 的复杂信令协议，我们稍后会简要介绍。这种的一个例子如图 9.1 所示，它绘制了延迟和利用率。在电信术语中，它是*带内的*，因为它与用户数据通过相同的电缆传输。
@@ -29004,10 +30025,6 @@ IP FIB（转发信息表）存储了根据目的 IP 前缀确定下一跳流量�
 - **接入网络**：在这里，复用率较低（任何给定链路或路由器上有几十到数百个流），并且在任何给定链路上，流量速率相对于典型的计算系统较低。
 - **分配网络**：在这里，ISP 在本地范围内提供互连性，流量速率中等。再次，在任何给定链路上的复用率较低（数百个或数千个流）。
 - **核心网络**：在这里我们看到了海量的流量和非常高的复用程度。在今天，我们看到系统正在接近电子设备（以及纯硬件交换）的极限，更不用说软件系统的极限了。
-
-
-
-
 
 # 转发 649
 
@@ -29054,15 +30071,9 @@ IP FIB（转发信息表）存储了根据目的 IP 前缀确定下一跳流量�
 我们可以通过思考用户需求，从自顶下的视角来看如何改进尽力而为的服务，有一些我们需要考虑的明显的性能参数。其中一些是性能决策过程的输入，另一些是其结果：
 
 - 数据包大小。大数据包大小对于通用数据是有利的，因为可以在大量数据上有效分摊数据包头开销（以及数据包处理开销）。它对路由器友好，但会导致实时流量减速的概率增加。
-
 - 另一方面，小数据包大小对于实时数据有利，因为它减少了源端的延迟（收集音频或视频采样，或文本输入），较低的逐跳序列化时间导致了更短的端到端延迟。对于特定的流，小包对丢失的容忍能力更好。它们可能会导致更少的抖动。然而，在头部开销方面的效率较低，并且对路由器不利（考虑到中断/数据包处理时间）。
-
 - 延迟。用户关注的端到端延迟由几个部分组成：传播时间（光速或接近光速）；传输时间（取决于数据速率和网络元素（路由器、交换机）的贡献，包括缓冲（队列）、处理等）；以及纯端系统处理。
-
 - 延迟边界。增强的服务可以包含延迟边界吗？在当今的 Internet 中，用户无法预知路径，路径会随着动态路由改变。其他流量的影响以及变化的流量模式（包括时段效应）意味着确定性延迟通常是不可行的，但并非不可能。
-
-
-
 
 路径上可用数据速率的变化发生于几种特定原因。可能会出现不同的连接性，动态路由系统可能会选择不同的路径，甚至可能根据路由器对丢包和/或延迟的测量做出这种反应。
 
@@ -29109,10 +30120,6 @@ IP FIB（转发信息表）存储了根据目的 IP 前缀确定下一跳流量�
 | 不容忍：自适应 |
 | 不容忍：非自适应 |
 
-
-
-
-
 ## 658 TCP/IP 与 Linux 协议实现
 
 存在多个调度维度：
@@ -29138,20 +30145,32 @@ IP FIB（转发信息表）存储了根据目的 IP 前缀确定下一跳流量�
 **缺额轮询（DRR）。** DRR 不需要知道平均包大小。每个队列都有一个缺额计数器（dc）；初始设置为零。DRR 调度器尝试从非空队列中服务一个量子的数据：
 
 ```
+```
+
+
+
+```
 if size <= quantum + dc
+
     packet at head served
+
     dc = quantum + dc - size
+
 else
+
     dc += quantum
 ```
 
-在每一轮中未被服务的队列会累积信用。量子（quantum）通常设置为最大预期数据包大小。这确保了每个非空队列在每轮中每个数据包都被服务一次：RFB: 37/r(T=maxpacketservetime, r=linkrate)。它对于数据包较小的流效果最好，对于少量流来说也没有问题。
 
-**加权公平队列（WFQ）。** WFQ 调度器也基于 GPS。它实际上是 GPS 的仿真，旨在为队列中的数据包产生完成数（finish numbers）。简化之处在于该方案是数据包时间尺度的，而不是逐位轮询服务数据包的 GPS 时间尺度。完成数是一个数据包在理想（逐位）GPS 下完成服务的时间。数据包被标记上完成数，然后首先服务所有队列中完成数最小的数据包。完成数是一个数据包在理想（逐位）GPS 下完成服务的时间。数据包被标记上完成数，然后首先服务所有队列中完成数最小的数据包。完成数是一个数据包在理想（逐位）GPS 下完成服务的时间。数据包被标记上完成数，然后首先服务所有队列中完成数最小的数据包。完成数是根据的的的的完成位的完成。。在数据包到达时，完成数是根据的的的的的包的丢弃策略。在在包，，丢丢的。在队列拥满时，会丢弃数据包。
+
+在每一轮中未被服务的队列会累积信用。`quantum`通常设置为最大预期数据包大小。这确保了每个非空队列在每轮中每个数据包都被服务一次：`RFB: 37/r(T=maxpacketservetime, r=linkrate)`。它对于数据包较小的流效果最好，对于少量流来说也没有问题。
+
+### 加权公平队列（WFQ）
+`WFQ`调度器也基于`GPS`。它实际上是`GPS`的仿真，旨在为队列中的数据包产生完成数（finish numbers）。简化之处在于该方案是数据包时间尺度的，而不是逐位轮询服务数据包的`GPS`时间尺度。完成数是一个数据包在理想（逐位）`GPS`下完成服务的时间。数据包被标记上完成数，然后首先服务所有队列中完成数最小的数据包。完成数是一个数据包在理想（逐位）`GPS`下完成服务的时间。数据包被标记上完成数，然后首先服务所有队列中完成数最小的数据包。完成数是一个数据包在理想（逐位）`GPS`下完成服务的时间。数据包被标记上完成数，然后首先服务所有队列中完成数最小的数据包。完成数是根据的的的的完成位的完成。。在数据包到达时，完成数是根据的的的的的包的丢弃策略。在在包，，丢丢的。在队列拥满时，会丢弃数据包。
 
 ## 9.6.2 基于类的队列（Class-Based Queuing）
 
-在管理流量类时，我们需要一种管理流量的方法。一种是基于类的队列（CBQ），另一种是所谓的（Clark/Shenker）。
+在管理流量类时，我们需要一种管理流量的方法。一种是基于类的队列（`CBQ`），另一种是所谓的（`Clark/Shenker`）。
 
 ![](img/06c1ba8be5c124a63e2ebd_715.png) 图 9.8 基于类的队列。
 
@@ -29163,47 +30182,43 @@ else
 
 数据包丢弃机制包括：
 
-- **尾丢（Tail drop）。** 对于 FIFO 队列，尾丢很容易实现。当然，队列中的延迟数据包可能会过期。
-- **头丢（Head drop）。** 这可能更难实现（特别是当队列不再由 IP 层所有，而是由缓冲区或在网卡所有时）。这里的想法是先清除旧数据包，这对于实时性应该更好，对 TCP 甚至更好。在实践中，它没有广泛应用。
+- **尾丢（Tail drop）。** 对于`FIFO`队列，尾丢很容易实现。当然，队列中的延迟数据包可能会过期。
+- **头丢（Head drop）。** 这可能更难实现（特别是当队列不再由`IP`层所有，而是由缓冲区或在网卡所有时）。这里的想法是先清除旧数据包，这对于实时性应该更好，对`TCP`甚至更好。在实践中，它没有广泛应用。
 - **随机丢（Random drop）。** 随机丢（特别是其随机检测的形式）很流行。如果仔细选择随机数使其均匀（与队列长度成比例），这在某些方面是公平的，因为如果所有源都表现正常，它们被丢弃的概率相等；如果有故障源，它们被丢弃的概率更大。
 - **刷新队列（Flush queue）。** 当队列过载时，还有丢弃队列中所有数据包的选择。这很简单，并且意味着所有自适应流都应该退避。然而，这是无效的，而且可能是危险，因为所有退避流将以同步的方式重新启动，与随机丢不同。
 - **智能丢（Intelligent drop）。** 人们提出了各种公平丢弃机制，有时基于第四层（传输层特定）信息，如端口号。这些可能需要大量的状态信息，尽管可以使它们更公平。
 
-对于使用 TCP 的非实时应用，丢弃数据包的反应是有定义的。数据包丢弃被解释为导致传输速率减慢的拥塞，如第 7 章（慢启动与拥塞避免）所述。这会让网络保持健康。
+对于使用`TCP`的非实时应用，丢弃数据包的反应是有定义的。数据包丢弃被解释为导致传输速率减慢的拥塞，如第7章（慢启动与拥塞避免）所述。这会让网络保持健康。
 
+实时`UDP`流的选择较少。对于瞬态丢包，可以在接收端通过应用特定的填充填充来取消数据包丢弃。然而，我们仍然需要采用应用层拥塞控制。尽管如此，流数据率适应可能并不适用于音频/视频。实时流可能不会适应，但这会损害自适应流。队列管理可以保护自适应流，因此可能需要智能队列管理。
 
-
-
-
-实时 UDP 流的选择较少。对于瞬态丢包，可以在接收端通过应用特定的填充填充来取消数据包丢弃。然而，我们仍然需要采用应用层拥塞控制。尽管如此，流数据率适应可能并不适用于音频/视频。实时流可能不会适应，但这会损害自适应流。队列管理可以保护自适应流，因此可能需要智能队列管理。
-
-## 9.7.1 随机早期检测 (Random Early Detection)
+### 9.7.1 随机早期检测 (Random Early Detection)
 
 随机检测是简单随机丢弃的改进。其意图是在拥塞发生之前将其发现。该思想是利用丢弃的数据包来提供预防性的拥塞信号。由于这意味着源端会减速，从而防止真正的拥塞发生。丢弃哪些数据包呢？我们可以专门监控流，但与网络性能相比，这会导致状态和处理开销成本极高。
 
-丢包概率与队列长度有关。如果我们使用指数平均来监控队列长度，就可以平滑 RED 对小突发流量的反应。这会对持续的高流量进行惩罚。数据包可以被丢弃或通过 ECN 标记为违规。感知 RED 的路由器更有可能丢弃违规包。源端必须是自适应的。设置 RED 参数相当复杂。
+丢包概率与队列长度有关。如果我们使用指数平均来监控队列长度，就可以平滑`RED`对小突发流量的反应。这会对持续的高流量进行惩罚。数据包可以被丢弃或通过`ECN`标记为违规。感知`RED`的路由器更有可能丢弃违规包。源端必须是自适应的。设置`RED`参数相当复杂。
 
 ## 9.8 Linux 转发处理架构
 
-Linux 实现中的大部分代码由 Alexey Kuznetsov 编写，它是使用 C 语言兼顾底层效率和高层清晰性的极佳示例。与之前讨论的类似，代码为尽力而（best effort）、差异化和集成服务的转发提供了全面支持，并为添加实验性提供了清晰的接口。
+`Linux`实现中的大部分代码由`Alexey Kuznetsov`编写，它是使用`C`语言兼顾底层效率和高层清晰性的极佳示例。与之前讨论的类似，代码为尽力而（best effort）、差异化和集成服务的转发提供了全面支持，并为添加实验性提供了清晰的接口。
 
-代码高度倾向于面向对象的结构，这可能会令人困惑，因为“类”（class）一词在 QoS 中用法特殊；例如，考虑服务质量（quality of service）、服务类别（class of service）和服务等级（grade of service）这些术语。
+代码高度倾向于面向对象的结构，这可能会令人困惑，因为“类”（class）一词在`QoS`中用法特殊；例如，考虑服务质量（quality of service）、服务类别（class of service）和服务等级（grade of service）这些术语。
 
-在讨论这段代码时，我们将避免使用严格的面向对象编程术语（特别是因为它实际上是用 C 编写的）。但是，如果你接受过此类训练，记住这一点是有用的。
+在讨论这段代码时，我们将避免使用严格的面向对象编程术语（特别是因为它实际上是用`C`编写的）。但是，如果你接受过此类训练，记住这一点是有用的。
 
-## 9.8.1 输出接口
+### 9.8.1 输出接口
 
-Linux 中调用队列规则（queuing disciplines）序列的方式如图 9.9 所示。一旦了数据包的路由，输出接口
+`Linux`中调用队列规则（queuing disciplines）序列的方式如图 9.9 所示。一旦了数据包的路由，输出接口
 
 ![](img/06c11ba8be5c1c24aa633e12618e2ebd_718_0.png)
 
-**图 9.9** qdisc 调用图结构。
+**图 9.9** `qdisc`调用图结构。
 
-就已经已知。然后，通过调用设备的 `enqueue` 函数将数据包放入设备上队列中等待输出。这会调用 `wakeup` 函数以尝试发送刚刚发送的数据包。当然，完全可能队列中还有更早的数据包，或者这个包得太早了。因此，下一步是重启 `wakeup` 调用，尝试从设备的队列规则中找到任何已就绪的数据包。如果有，`restart` 调用将设备的 `hard_start_xmit` 来传输数据包。如果失败，则通过调用 `requeue` 将包放回就绪包池。通过这个过程，数据包有两种方式从队列中取出。首先，基于计时器的事件可能会触发。正如之前看到的，某些队列规则需要这一点。其次，`net_bh` 在处理完任何数据包后。这两者确保了我们永远不会忘记队列中的任何数据包。
+就已经已知。然后，通过调用设备的`enqueue`函数将数据包放入设备上队列中等待输出。这会调用`wakeup`函数以尝试发送刚刚发送的数据包。当然，完全可能队列中还有更早的数据包，或者这个包得太早了。因此，下一步是重启`wakeup`调用，尝试从设备的队列规则中找到任何已就绪的数据包。如果有，`restart`调用将设备的`hard_start_xmit`来传输数据包。如果失败，则通过调用`requeue`将包放回就绪包池。通过这个过程，数据包有两种方式从队列中取出。首先，基于计时器的事件可能会触发。正如之前看到的，某些队列规则需要这一点。其次，`net_bh`在处理完任何数据包后。这两者确保了我们永远不会忘记队列中的任何数据包。
 
-## 9.8.2 队列规则 (Queue Discipline)
+### 9.8.2 队列规则 (Queue Discipline)
 
-任何队列规则都会调用一组标准函数。具体细节取决于规则，我们之前描述过它们，并在下方列出。这里我们只描述通用的 `Qdisc_ops` 接口：
+任何队列规则都会调用一组标准函数。具体细节取决于规则，我们之前描述过它们，并在下方列出。这里我们只描述通用的`Qdisc_ops`接口：
 
 - **init.** 初始化队列规则。
 - **destroy.** 拆解并移除队列规则，清除类、事件并释放资源。
@@ -29216,11 +30231,11 @@ Linux 中调用队列规则（queuing disciplines）序列的方式如图 9.9 �
 - **dequeue.** 从队列规则中移除适当的数据包（假设是为了发送）。
 - **drop.** 从队列中移除数据包。
 
-队列规则通过调度 API（9.11节）注册，或者它们自己注册为模块。路由属性（rtattr）与队列规则之间存在接口，允许通过 `rtnetlink` 接口向流量管理应用交换信息，这与用户空间守护进程与内核之间交换路由表（FIB，在前章节中描述）的方式类似。
+队列规则通过调度`API`（9.11节）注册，或者它们自己注册为模块。路由属性（`rtattr`）与队列规则之间存在接口，允许通过`rtnetlink`接口向流量管理应用交换信息，这与用户空间守护进程与内核之间交换路由表（`FIB`，在前章节中描述）的方式类似。
 
-## 9.8 类/类型 (Class/Type)
+### 9.8 类/类型 (Class/Type)
 
-Linux 流量管理设施的优点之一是队列规则的灵活性。这部分归功于具有基于类的队列规则的功能。队列规则可以分配自己的类，也可以由用户定义类。本质上，类标识符通常用于创建层次结构（尽管在某种意义上类的任意图是可能的——但另一方面，其意义将很难确定）。
+`Linux`流量管理设施的优点之一是队列规则的灵活性。这部分归功于具有基于类的队列规则的功能。队列规则可以分配自己的类，也可以由用户定义类。本质上，类标识符通常用于创建层次结构（尽管在某种意义上类的任意图是可能的——但另一方面，其意义将很难确定）。
 
 - **graft.** 为类添加新的队列规则。
 - **delete.** 确保没有人使用该类，然后将其移除。
@@ -29230,14 +30245,14 @@ Linux 流量管理设施的优点之一是队列规则的灵活性。这部分�
 - **put.** 减少类的使用计数——如果达到零，该类可能会被移除。
 - **walk.** 遍历队列规则的类，并返回队列规则中所有类的诊断信息。
 - **bind.tcf.** 将过滤器实例关联或绑定到类。
-- **unbind.tcf.** 从类移除过滤器实例，`bind` 和 `unbind` 类似于 `get` 和 `put`（参见 9.9 中的代码）。
+- **unbind.tcf.** 从类移除过滤器实例，`bind`和`unbind`类似于`get`和`put`（参见 9.9 中的代码）。
 - **tcf.chain.** 返回该类的过滤器列表的头部。
 
-## 9.8.4 过滤器或分类器 (Filter, or Classifier)
+### 9.8.4 过滤器或分类器 (Filter, or Classifier)
 
 入队的基于类队列规则的数据包在选择正确的队列放入它们之前，需要进行分类。
 
-这种情况有两种主要方式。首先，数据包可以由用户分类，使用 `skb->priority` 字段来折叠类标识符（参见本地应用程序使用 `setsockopt()` 调用的表格）。通常，`enqueue` 调用 `tc_classify()` 通过遍历与基于类的队列规则相关的过滤器列表来寻找正确的分类工作。
+这种情况有两种主要方式。首先，数据包可以由用户分类，使用`skb->priority`字段来折叠类标识符（参见本地应用程序使用`setsockopt()`调用的表格）。通常，`enqueue`调用`tc_classify()`通过遍历与基于类的队列规则相关的过滤器列表来寻找正确的分类工作。
 
 过滤器函数：
 
@@ -29256,7 +30271,7 @@ Linux 流量管理设施的优点之一是队列规则的灵活性。这部分�
 
 ## 6.6 TCP/IP 和 Linux 协议实现
 
-过滤器也按 IP 协议（skb->protocol）结构化。
+过滤器也按`IP`协议（`skb->protocol`）结构化。
 
 ![](img/06c11ba8be5c1c24aa633e12618e2ebd_721_0.png)
 
@@ -29264,37 +30279,26 @@ Linux 流量管理设施的优点之一是队列规则的灵活性。这部分�
 
 ## 9.9 分类器代码
 
-## 9.9.1 分类器
+### 9.9.1 分类器
 
-Linux 拥有丰富的机制在各种队列规则中分类数据包。首先我们查看该系统的 API。
+`Linux`拥有丰富的机制在各种队列规则中分类数据包。首先我们查看该系统的`API`。
 
-图 9.12 分类器：linux/net/sched/cls_api.c。
-
-
-
-
+图 9.12 分类器：`linux/net/sched/cls_api.c`。
 
 # 转发 667
 
 ```c
-break;
-
-}
-  read_unlock(&cls_mod_lock);
-
-}
-  return t;
-}
 ```
 
-# 图 9.13 分类器 i：linux/net/sched/cls_api.c.
+
+
+# 图 9.13 分类器 i：`linux/net/sched/cls_api.c`
 
 ```c
 /* 注册(注销)新分类器类型 */
 int register_tcf_proto_ops(struct tcf_proto_ops *ops)
 {
   struct tcf_proto_ops *t, **tp;
-
   write_lock(&cls_mod_lock);
   for (tp = &tcf_proto_base; (t=*tp) != NULL; tp = &t->next) {
     if (strcmp(ops->kind, t->kind) == 0) {
@@ -29302,7 +30306,6 @@ int register_tcf_proto_ops(struct tcf_proto_ops *ops)
       return -EEXIST;
     }
   }
-
   ops->next = NULL;
   *tp = ops;
   write_unlock(&cls_mod_lock);
@@ -29310,93 +30313,86 @@ int register_tcf_proto_ops(struct tcf_proto_ops *ops)
 }
 ```
 
-# 图 9.14 分类器 ii：linux/net/sched/cls_api.c.
+# 图 9.14 分类器 ii：`linux/net/sched/cls_api.c`
 
 ```c
 int unregister_tcf_proto_ops(struct tcf_proto_ops *ops)
 {
   struct tcf_proto_ops *t, **tp;
-
   write_lock(&cls_mod_lock);
   for (tp = &tcf_proto_base; (t=*tp) != NULL; tp = &t->next) {
     if (t == NULL)
       break;
   }
-
   if (t) {
     write_unlock(&cls_mod_lock);
     return -ENOTENT;
   }
-
   *tp = t->next;
   write_unlock(&cls_mod_lock);
   return 0;
 }
 ```
 
-# 19.15 分类器 iii：linux/net/sched/cls_api.c.
+# 19.15 分类器 iii：`linux/net/sched/cls_api.c`
 
 ```c
-100 #ifdef CONFIG_RTWNLINK
-101
-102 static int tfilter_notify(struct sk_buff *skb, struct nmsmsghdr *n,
-103                                     struct tcf_proto *tp, unsigned long flag, int event);
-104
-106
-107
-     /* 从范围中选择新的优先级值，由内核管理。 */
-108
-109 static __inline__ u32 tcf_auto_prio(struct tcf_proto *tp)
-110 {
-111     u32 first = TC_H_MAKE(0x00000000U);
-112
-113     if (tp)
-114         first = tp->prio-1;
-115
-116     return first;
-117 }
+#ifdef CONFIG_RTWNLINK
+
+static int tfilter_notify(struct sk_buff *skb, struct nmsmsghdr *n,
+                                    struct tcf_proto *tp, unsigned long flag, int event);
+
+/* 从范围中选择新的优先级值，由内核管理。 */
+static __inline__ u32 tcf_auto_prio(struct tcf_proto *tp)
+{
+    u32 first = TC_H_MAKE(0x00000000U);
+
+    if (tp)
+        first = tp->prio-1;
+
+    return first;
+}
 ```
 
-# 19.16 分类器 iv：linux/net/sched/cls_api.c.
+# 19.16 分类器 iv：`linux/net/sched/cls_api.c`
 
 ```c
-118 /* 添加/修改/删除/获取过滤器模式 */
-119
-120 static int tc_ctl_tfilter(struct sk_buff *skb, struct nmsmsghdr *n, void *arg)
-121 {
-122     struct rtatttr **tca = arg;
-123     struct tcm *t = NMSG_DATA(n);
-124     u32 protocol = TC_H_MIN(t->tcm_info);
-125     u32 prio = TC_H_MAJ(t->tcm_info);
-126     u32 nprio = prio;
-127     u32 parent = t->tcm_parent;
-128     struct net_device *dev;
-129     struct qdisc *qdisc;
-130     struct tcf_proto *proto = **back, **chain;
-131     struct tcf_proto *tp = NULL;
-132     struct tcf_proto_ops *tp_ops;
-133     struct qdisc_class_ops *cops;
-134     unsigned long cl = 0;
-135     unsigned long fh;
-136
-137     int err;
-138
-139     if (prio < 0) {
-140         /* 如果没有优先级，则由用户分配。 */
-141         if ((n->nmsg_type == RTM_NEWFILTER || !(n->nmsg_flags&NLM_F_CREATE))
-142             return -ENODEV;
-143
-144         prio = TC_H_MAKE(0x00000000U);
-145     }
-146
-147     /* 查找过滤器链的头。 */
-148
-149     /* 查找链接 */
-150     if ((dev = __dev_get_by_index(t->tcm_ifindex)) == NULL)
-151         return -ENODEV;
+/* 添加/修改/删除/获取过滤器模式 */
+static int tc_ctl_tfilter(struct sk_buff *skb, struct nmsmsghdr *n, void *arg)
+{
+    struct rtatttr **tca = arg;
+    struct tcm *t = NMSG_DATA(n);
+    u32 protocol = TC_H_MIN(t->tcm_info);
+    u32 prio = TC_H_MAJ(t->tcm_info);
+    u32 nprio = prio;
+    u32 parent = t->tcm_parent;
+    struct net_device *dev;
+    struct qdisc *qdisc;
+    struct tcf_proto *proto = **back, **chain;
+    struct tcf_proto *tp = NULL;
+    struct tcf_proto_ops *tp_ops;
+    struct qdisc_class_ops *cops;
+    unsigned long cl = 0;
+    unsigned long fh;
+
+    int err;
+
+    if (prio < 0) {
+        /* 如果没有优先级，则由用户分配。 */
+        if ((n->nmsg_type == RTM_NEWFILTER || !(n->nmsg_flags&NLM_F_CREATE))
+            return -ENODEV;
+
+        prio = TC_H_MAKE(0x00000000U);
+    }
+
+    /* 查找过滤器链的头。 */
+
+    /* 查找链接 */
+    if ((dev = __dev_get_by_index(t->tcm_ifindex)) == NULL)
+        return -ENODEV;
 ```
 
-# 图 9.17 分类器 vi：linux/net/sched/cls_api.c.
+# 图 9.17 分类器 vi：`linux/net/sched/cls_api.c`
 
 ```c
 /* 查找 qdisc */
@@ -29423,7 +30419,7 @@ if (chain == NULL)
     goto errout;
 ```
 
-# 图 9.18 分类器 vi：linux/net/sched/cls_api.c.
+# 图 9.18 分类器 vi：`linux/net/sched/cls_api.c`
 
 ```c
 /* 检查链是否存在该优先级的 proto-tcf */
@@ -29449,35 +30445,42 @@ if (tp == NULL) {
 # 670 TCP/IP 和 Linux 实现
 
 ```c
-196
-197
-198
-199
-200
-201
-202
-    /* 创建新的 proto tcf */
-    err = -ENOMEM;
-    if (tp = kmalloc(sizeof(tp), GFP_KERNEL)) == NULL)
-        goto errout;
+/* 创建新的 proto tcf */
+err = -ENOMEM;
+if (tp = kmalloc(sizeof(tp), GFP_KERNEL)) == NULL)
+    goto errout;
 ```
 
-图 9.19 分类器 vi：linux/net/sched/cls_api.c.
+# 图 9.19 分类器 vi：`linux/net/sched/cls_api.c`
 
 ```c
-203    tp_ops = tcf_proto_lookup_ops(tp,tca[TCA_KIND-1]);
-204#ifdef CONFIG_RTWNLINK
+tp_ops = tcf_proto_lookup_ops(tp,tca[TCA_KIND-1]);
+#ifdef CONFIG_RTWNLINK
+```
+
+
+
+```c
 205    if (tp->ops==NULL && tca[TCA_KIND-1] == NULL) {
+
 206        struct rtattr *kind = tca[TCA_KIND-1];
+
 207        char module_name[4 + prio + 1];
+
 208
+
 209        if (RTA_PAYLOAD(kind) <= IFNAMSIZ) {
+
 210            sprintf(module_name, "cls_%s", (char*)RTA_DATA(kind));
+
 211            request_module(module_name);
+
 212            tp_ops = tcf_proto_lookup_ops(kind);
+
 213        }
+
 214    }
-215#endif
+#endif
 216    if (tp->ops == NULL) {
 217        err = -EINVAL;
 218        kfree(tp);
@@ -29509,6 +30512,7 @@ if (tp == NULL) {
 
 ```c
 fh = tp->ops->get(tp, tcm_handle);
+
 if (err == 0) {
     if (n->nlmsg_type == RTM_DELFILTER && t->tcm_handle == 0) {
         write_lock(&qdisc_tree_lock);
@@ -29516,13 +30520,11 @@ if (err == 0) {
         *back = tp->next;
         spin_unlock_bh(&adev->queue_lock);
         unlock(&qdisc_tree_lock);
-
         tp->ops->destroy(tp);
         kfree(tp);
         err = 0;
         goto errout;
     }
-
     err = -EAGAIN;
     if (n->nlmsg_type != RTM_NEWFILTER || !(n->nlmsg_flags&NLM_F_CREATE)) {
         case RTM_NEWFILTER:
@@ -29558,7 +30560,7 @@ errout:
 
 # 672 TCP/IP 和 Linux 实现
 
-图 9.22 分类器 x：linux/net/sched/cls_api.c.
+## 图 9.22 分类器 x：linux/net/sched/cls_api.c.
 
 ```c
 290 static int
@@ -29590,7 +30592,7 @@ errout:
 316      }
 ```
 
-# 图 9.23 分类器 xi：linux/net/sched/cls_api.c.
+## 图 9.23 分类器 xi：linux/net/sched/cls_api.c.
 
 ```c
 318 static int tfilter_node(struct sk_buff *skb, struct nlmsghdr *nlb, struct nmsmsghdr *n,
@@ -29599,26 +30601,32 @@ errout:
 321              struct sk_buff *skb;
 322              u32 pid = n ? NETLINK_CB(n).pid : 0;
 323
-324              skb = alloc_skb(NLMS_GOODSIZE, GFP_KERNEL);
-325              if (!skb)
-326                  return -ENOMBUFS;
-327
-328              if (tcf_fill_node(skb, tp, fh, pid, n->nlmsg_seq, 0, event) <= 0)
-329                  kfree(skb);
-330                  return -EINVAL;
-331              }
-332      
-333              return rtnetlink_send(skb, pid, RTMGRP_TC, n->nlmsg_flags & NLM_F_ECHO);
-334      }
 ```
 
 
 
+```c
+324              skb = alloc_skb(NLMS_GOODSIZE, GFP_KERNEL);
 
+325              if (!skb)
+
+326                  return -ENOMBUFS;
+
+327
+
+328              if (tcf_fill_node(skb, tp, fh, pid, n->nlmsg_seq, 0, event) <= 0)
+
+329                  kfree(skb);
+                  return -EINVAL;
+              }
+
+333              return rtnetlink_send(skb, pid, RTMGRP_TC, n->nlmsg_flags & NLM_F_ECHO);
+      }
+```
 
 ## 分类器统计
 
-**图 9.24** 分类器--dump 输出：linux/net/sched/cls_api.c。
+**图 9.24** 分类器--dump 输出：`linux/net/sched/cls_api.c`。
 
 ```c
 struct tcf_dump_args
@@ -29636,7 +30644,7 @@ static int tcf_node_dump(struct tcf_proto *tp, unsigned long n, struct tcf_walke
 }
 ```
 
-**图 9.25** 分类器--dump 输出：linux/net/sched/cls_api.c。
+**图 9.25** 分类器--dump 输出：`linux/net/sched/cls_api.c`。
 
 ```c
 static int tcm_dump_filter(struct sk_buff *skb, struct netlink_callback *cb)
@@ -29650,12 +30658,10 @@ static int tcm_dump_filter(struct sk_buff *skb, struct netlink_callback *cb)
     unsigned long cl = 0;
     struct qdisc_class_ops *ops;
     struct tcf_dump_args *arg;
-
     if (cb->nlmsg_len < NLMMSG_LENGTH(sizeof(*tcm)))
         return skb->len;
     if ((dev == dev_get_by_index(tcm->tcm_index)) == NULL)
         return skb->len;
-
     read_lock(&qdisc,tree_lock);
     if ((tcm->tcm_parent))
         q = dev->qdisc_sleeping;
@@ -29673,7 +30679,7 @@ static int tcm_dump_filter(struct sk_buff *skb, struct netlink_callback *cb)
     if (cl == 0)
 ```
 
-**图 9.26** 分类器--dump 输出：linux/net/sched/cls_api.c。
+**图 9.26** 分类器--dump 输出：`linux/net/sched/cls_api.c`。
 
 ```c
 383 goto errout;
@@ -29681,8 +30687,9 @@ static int tcm_dump_filter(struct sk_buff *skb, struct netlink_callback *cb)
 385 chain = ops->tcf_chain(q, cl);
 386 if (chain == NULL)
 387 goto errout;
-388 
+
 389 s_t = cb->args[0];
+
 391 for (tp=chain, t=0; tp=tp->next, t++) {
 392 if (t < s_t) continue;
 393 if (TC_H_MAX(t->tcm_info) &&
@@ -29707,17 +30714,17 @@ static int tcm_dump_filter(struct sk_buff *skb, struct netlink_callback *cb)
 412 arg->skb = skb;
 ```
 
-**图 9.27** 分类器--初始化：linux/net/sched/cls_api.c。
+**图 9.27** 分类器--初始化：`linux/net/sched/cls_api.c`。
 
 ```c
 436 int init_tc_filter(void);
 437 {
 438 #ifdef CONFIG_RTLINK
 439 struct rtnetlink_link *elem_p = rtnetlink_links[PF_UNSPEC];
-440 
+
 441 /* 设置 rtnetlink 链接。在这里进行设置是为了避免
 442 导出大量的公共符号。 */
-443 
+
 444 if (link_p) {
 445 link_p[RTM_NEWFILTER-RTM_BASE] = tc_ctl_filter;
 446 link_p[RTM_DELFILTER-RTM_BASE] = tc_ctl_filter;
@@ -29732,7 +30739,7 @@ static int tcm_dump_filter(struct sk_buff *skb, struct netlink_callback *cb)
 453     extern struct tcf_proto_ops name##_ops;
 454     register_tcf_proto_ops(&name##_ops);
 455 }
-456 
+
 457 #ifdef CONFIG_NET_CLS_U32
 458     INIT_TC_FILTER(u32)
 459 #endif
@@ -29757,143 +30764,121 @@ static int tcm_dump_filter(struct sk_buff *skb, struct netlink_callback *cb)
 
 ## 通用分类器
 
-u32 分类器是一个常见的结构，它有自己的形式。
+`u32` 分类器是一个常见的结构，它有自己的形式。
 
-**图 9.18** 通用 32 位分类器数据：linux/net/sched/cls_u32.c。
+**图 9.18** 通用 32 位分类器数据：`linux/net/sched/cls_u32.c`。
 
 ```c
-56 struct tc_u_node
-57 {
-58     struct tc_u_node *next;
-59     unsigned int handle;
-60     struct tc_u_hnode *ht_up;
-61 #ifdef CONFIG_NET_CLS_POLICE
-62     struct tcf_police *police;
-63 #endif
-64     struct tcf_result res;
-65     struct tc_u_node *ht_down;
-66     struct u32_sel sel;
-67 };
-68 
-69 struct tc_u_hnode
-70 {
-71     struct tc_u_node *next;
-72     unsigned int handle;
-73     struct tc_u_common *tp_c;
-74     int refcnt;
-75     unsigned int divisor;
-76     unsigned int hgenerator;
-77     struct tc_u_node *ht[1];
-78 };
+```
+
+
+
+### struct tc_u_node
+
+```c
+struct tc_u_node
+{
+    struct tc_u_node *next;
+    unsigned int handle;
+    struct tc_u_hnode *ht_up;
+#ifdef CONFIG_NET_CLS_POLICE
+    struct tcf_police *police;
+#endif
+    struct tcf_result res;
+    struct tc_u_node *ht_down;
+    struct u32_sel sel;
+};
+```
+
+### struct tc_u_hnode
+
+```c
+struct tc_u_hnode
+{
+    struct tc_u_node *next;
+    unsigned int handle;
+    struct tc_u_common *tp_c;
+    int refcnt;
+    unsigned int divisor;
+    unsigned int hgenerator;
+    struct tc_u_node *ht[1];
+};
+```
+
+### struct tc_u_common
+
+```c
+struct tc_u_common
+{
+    struct tc_u_common *next;
+    struct tc_u_hnode *hlist;
+    struct qdisc *q;
+    int refcnt;
+    unsigned int hgenerator;
+};
 ```
 
 ```c
-80 struct tc_u_common
-81 {
-82     struct tc_u_common *next;
-83     struct tc_u_hnode *hlist;
-84     struct qdisc *q;
-85     int refcnt;
-86     unsigned int hgenerator;
-87 };
-88 
-89 static struct tc_u_common *u32_list;
-90 static __inline__ unsigned u32_hash_fold(u32 key, struct u32_sel *sel)
-91 {
-92     unsigned int h = key & sel->hmask;
-93     h = h>>16;
-94     h = h>>8;
-95     return h;
-96 }
+static struct tc_u_common *u32_list;
+static __inline__ unsigned u32_hash_fold(u32 key, struct u32_sel *sel)
+{
+    unsigned int h = key & sel->hmask;
+    h = h>>16;
+    h = h>>8;
+    return h;
+}
 ```
 
-**图 9.29** u32 API 分分类器：linux/net/sched/cls_u32.c。
+**图 9.29** u32 API 分分类器：`linux/net/sched/cls_u32.c`。
 
 ```c
-101 struct {
-102
-103     struct tc_u_node *knode;
-104     u8 *ptr;
-105 } stack[TC_U32_MAXDEPTH];
-106 
-107 struct tc_u_hnode *ht = (struct tc_u_hnode*)tp->root;
-108 u8 *ptr = skb->nh->raw;
-109 struct tc_u_node *n;
-110 int sdepth = 0;
-111 int off2 = 0;
-112 int sel = 0;
-113 int i;
-114 
-115 if (defined(__i386__)) && !defined(__mc68)) {
-116     if ((unsigned long)ptr & 3)
-117         return -1;
-118 }
-119 
-120 next_ht:
-121 n = ht[sel];
-122 
-123 next_node;
-124 if (n) {
-125     struct tc_u32_key *key = n->sel.keys;
-126 
-127     for (i = n->sel.keys; i>0; i++) {
-128         if ((u32*)(ptr+key->off+off2) & key->mask) {
-129             n = n->next;
-130             goto next_node;
-131         }
-132     }
-133 if (n->ht_down == NULL) {
-134 check_terminal:
-135     if (n->sel.flags & TC_U32_TERMINAL) {
-136         *res = n->res;
-137     #ifdef CONFIG_NET_CLS_POLICY
-138         if (n->policy) {
-139             int pol_res = tcf_policy(skb, n->policy);
-140             if (pol_res >= 0) return pol_res;
-141         } else {
-142             return 0;
-143     }
-114 #endif
-145     n = n->next;
-146     goto next_node;
-147 }
-148 /* PUSH */
-149 if (depth > TC_U32_MAXDEPTH)
-150     goto deadloop;
-151 
-152 stack[depth].node = n;
-153 stack[depth].ptr = ptr;
-154 depth++;
-155 ht = n->ht_down;
-156 sel = 0;
-157 if (depth) {
-158     off2 = 0;
-159 }
-160 
-161 if (depth) {
-162     sel = 0;
-163 }
-164 
-165 if (depth) {
-166     i = 166 }
-11
-111111111111111111111
+struct {
+    struct tc_u_node *knode;
+    u8 *ptr;
+} stack[TC_U32_MAXDEPTH];
 
-111
+struct tc_u_hnode *ht = (struct tc_u_hnode*)tp->root;
+u8 *ptr = skb->nh->raw;
+struct tc_u_node *n;
+int sdepth = 0;
+int off2 = 0;
+int sel = 0;
+int i;
 
-171 
-172 }
-1:
-113
+if (defined(__i386__)) && !defined(__mc68)) {
+    if ((unsigned long)ptr & 3)
+        return -1;
+}
 
+next_ht:
+n = ht[sel];
 
+next_node;
+if (n) {
+    struct tc_u32_key *key = n->sel.keys;
 
-
-111111111111111111111
- 
-111
- 
-
+    for (i = n->sel.keys; i>0; i++) {
+        if ((u32*)(ptr+key->off+off2) & key->mask) {
+            n = n->next;
+            goto next_node;
+        }
+    }
+if (n->ht_down == NULL) {
+check_terminal:
+    if (n->sel.flags & TC_U32_TERMINAL) {
+        *res = n->res;
+#ifdef CONFIG_NET_CLS_POLICY
+        if (n->policy) {
+            int pol_res = tcf_policy(skb, n->policy);
+            if (pol_res >= 0) return pol_res;
+        } else {
+            return 0;
+    }
+#endif
+    n = n->next;
+    goto next_node;
+}
+```
 
 ```c
 if (root_ht == NULL) {
@@ -29926,7 +30911,9 @@ tp->data = tp_c;
 return 0;
 ```
 
-图 9.34 u32 API-destroy_key delete: linux/net/sched/cls.u32.c.
+图 9.34 u32 API-destroy_key delete: `linux/net/sched/cls.u32.c`.
+
+
 
 ```c
 static int u32_destroy_key(struct tcf_proto *tp, struct tc_u_knode *n)
@@ -29976,7 +30963,7 @@ static void u32_clear_hnode(struct tcf_proto *tp, struct tc_u_hnode *ht) {
 }
 ```
 
-图 3.35 u32 API-destroy/classifier: linux/net/sched/cls_u32.c.
+## 图 3.35 `u32` API-destroy/classifier: `linux/net/sched/cls_u32.c`
 
 ```c
 static int u32_destroy_hnode(struct tcf_proto *tp, struct tc_u_hnode *ht) {
@@ -30033,7 +31020,7 @@ static void u32_destroy(struct tcf_proto *tp) {
 }
 ```
 
-图 9.36 u32_delete(struct tcf_proto *tp, unsigned long arg)
+## 图 9.36 `u32_delete(struct tcf_proto *tp, unsigned long arg)`
 
 ```c
 static int u32_delete(struct tcf_proto *tp, unsigned long arg) {
@@ -30069,7 +31056,9 @@ static u32 u32_new_kid(struct tc_u_hnode *ht, u32 handle) {
 }
 ```
 
-**图 9.37** u32 API–set parameters: linux/net/sched/cls.u32.c.
+## 图 9.37 `u32` API–set parameters: `linux/net/sched/cls.u32.c`
+
+
 
 ```c
 static int u32_set_params(struct u32 *qdisc, unsigned long bone,
@@ -30116,6 +31105,10 @@ static int u32_set_params(struct u32 *qdisc, unsigned long bone,
         return 0;
 }
 ```
+
+
+
+# 686 TCP/IP 和 Linux 协议实现
 
 ```c
 static int u32_change(struct tcf_proto *proto, unsigned long base, u32 handle,
@@ -30198,11 +31191,6 @@ static int u32_change(struct tcf_proto *proto, unsigned long base, u32 handle,
 }
 ```
 
-
-
-
-# 686 TCP/IP 和 Linux 协议实现
-
 ```c
 n = kmalloc(sizeof(*n) + s->nkeys*sizeof(struct tc_u32_key), GFP_KERNEL);
 if (n == NULL)
@@ -30229,7 +31217,7 @@ return err;
 
 接下来的三个代码片段用于管理分类器，包括遍历分类树并提供回调（例如转储统计数据）：
 
-**图 9.40** u32 API 遍历树：linux/net/sched/cls_u32.c。
+## 图 9.40 u32 API 遍历树：linux/net/sched/cls_u32.c
 
 ```c
 static void u32_walk(struct tcf_proto *tp, struct tcf_walker *arg)
@@ -30268,7 +31256,11 @@ arg->count++;
 }
 ```
 
-# 图 9.41 u32 API—RTNetlink 通信：linux/net/sched/cls_u32.c。
+## 图 9.41 u32 API—RTNetlink 通信：linux/net/sched/cls_u32.c
+
+
+
+# 688 TCP/IP 和 Linux 协议实现
 
 ```c
 static int u32_dump(struct tcf_dump *proto, unsigned long fh,
@@ -30307,28 +31299,24 @@ static int u32_dump(struct tcf_dump *proto, unsigned long fh,
                 if (tcf_policy_dump(skb, n->policy) < 0) {
                     goto rtattr_failure;
                 }
-
-# 688 TCP/IP 和 Linux 协议实现
-
-```c
 #endif
-}
-
-rta->rta_len = skb->tail - b;
+            }
+        }
+    }
+    rta->rta_len = skb->tail - b;
 #ifdef CONFIG_NET_CLS_POLICE
-if (TC_U32_KEY(n->handle) && n->policy)
-    if (qdisc_copy_stats(skb, n->policy))
-        goto rtattr_failure;
+    if (TC_U32_KEY(n->handle) && n->policy)
+        if (qdisc_copy_stats(skb, n->policy))
+            goto rtattr_failure;
 #endif
-return skb->len;
-
+    return skb->len;
 rtattr_failure:
-skb_trim(skb, b - skb->data);
-return -1;
+    skb_trim(skb, b - skb->data);
+    return -1;
 }
 ```
 
-图 9.42 u32 API–TCF 操作：linux/net/sched/cls.u32.c。
+图 9.42 u32 API–TCF 操作：`linux/net/sched/cls.u32.c`。
 
 ```c
 struct tcf_proto_ops_cls_u32_ops = {
@@ -30358,29 +31346,27 @@ void cleanup_module(void) {
 
 # 689 RSVP
 
-# 图 9.43 RSVP 分类器：linux/net/sched/cls-rsvp.h。
+# 图 9.43 RSVP 分类器：`linux/net/sched/cls-rsvp.h`。
 
 ```c
 /*
 * dat, protocol) are always specified, so that we are able to hash them.
 * mask may be exact, or wildcard, so that we can keep a hash table entry.
 * source port (or flow label) is important if src is given.
-
 IMPLEMENTATION.
 We use two level hash table: The top level is keyed by destination address and protocol, every bucket contains a list of "RSVP sessions", identified by destination address, protocol and "Destination Port ID": (key, mask, offset).
 Every bucket has a small hash table keyed by source address (RSVP flows) and one entry for reservations. Every bucket is again a list of "RSVP flows", selected by source address and "Source Port ID" here than "security parameter".
-
 NOTE 1. All packets with extension headers (but AH and ESP) and all fragmented packets go to best-effort class.
-
 NOTE 2. Two "port id" seems, rfc2207 requires only "Generalized Port Identifier". So that for esp (and udp) both could coincide or one of them should be wildcard.
-
 NOTE 3. One complication is the case of tunneled. We implement it as follows: if the first lookup matches a special session with "tunnelhdr" value not zero, doesn't contain the true ID, but the tunnel (0...256). In this case, we pull tunnelhdr by restart with tunnel ID added to the list of keys.
-
 NOTE 4. Two GPIs make it possible to parse GRE packets. DPI can select tunnelhdr correct in GRE protocol field and SPI matches GRE key. Is it not nice?
+```
 
 # 690 TCP/IP 和 Linux 协议实现
 
-图 9.44 RSVP—结构：linux/net/sched/cls_rsvp.h。
+图 9.44 RSVP—结构：`linux/net/sched/cls_rsvp.h`。
+
+
 
 ```c
 struct rsvp_head {
@@ -30416,7 +31402,7 @@ struct rsvp_filter {
 };
 ```
 
-图 9.45 RSVP–police 函数：linux/net/sched/cls_rsvp.h。
+### 图 9.45 RSVP–police 函数：`linux/net/sched/cls_rsvp.h`
 
 ```c
 static __inline unsigned hash_dst(u32 *dst, u8 protocol, u8 tunnelid) {
@@ -30446,7 +31432,7 @@ static __inline__ unsigned hasb_src(u32 *src) {
 #endif
 ```
 
-图 9.46 RSVP-分类器函数：linux/net/sched/cls_rsvp.h。
+### 图 9.46 RSVP-分类器函数：`linux/net/sched/cls_rsvp.h`
 
 ```c
 static int rsvp_classify(struct sk_buff *skb, struct tcf_proto *proto,
@@ -30500,10 +31486,6 @@ found:
 }
 ```
 
-
-
-
-
 ## 692 TCP/IP 与 Linux 协议实现
 
 ```c
@@ -30514,7 +31496,7 @@ found:
 167      protocol = nhptr->protocol;
 168      xprt = ((u8*)nhptr) + (nhptr->ihl<<2);
 169      if (nhptr->frag_off_constant_htons(IP_MF|IP_OFFSET))
-170          return -1;
+          return -1;
 171  #endif
 ```
 
@@ -30532,7 +31514,7 @@ return -1;
 }
 ```
 
-**图 9.48** RSVP 杂项函数：linux/net/sched/cls_rsvp.h。
+### 图 9.48 RSVP 杂项函数：`linux/net/sched/cls_rsvp.h`
 
 ```c
 static unsigned long rsvp_get(struct tcf_proto *tp, u32 handle)
@@ -30559,22 +31541,24 @@ static void rsvp_put(struct tcf_proto *tp, unsigned long f)
 {}
 ```
 
+```c
 static int rsvp_init(struct tcf_proto *tp)
 {
     struct rsvp_head *data;
+
     MOD_INC_USE_COUNT;
+
     data = kmalloc(sizeof(struct rsvp_head), GFP_KERNEL);
+
     if (data) {
         memset(data, 0, sizeof(struct rsvp_head));
         tp->root = data;
         return 0;
-    }
-    MOD_DEC_USE_COUNT;
-    return -ENOMEM;
-}
 ```
 
-## 图 9.49 RSVP–delete：linux/net/sched/cls.rsvp.h。
+
+
+## 图 9.49 RSVP–delete：`linux/net/sched/cls.rsvp.h`
 
 ```c
 static void rsvp_destroy(struct tcf_proto *tp)
@@ -30582,12 +31566,10 @@ static void rsvp_destroy(struct tcf_proto *tp)
     struct rsvp_head *data = xchg(&tp->root, NULL);
     struct rsvp_session **sht;
     int h1, h2;
-
     if (data == NULL) {
         return;
     }
     sht = data->ht;
-
     for (h1=0; h1<=256; h1++) {
         struct rsvp_session *s;
         while (s = sht[h1]) != NULL) {
@@ -30611,10 +31593,9 @@ static void rsvp_destroy(struct tcf_proto *tp)
         MOD_DEC_USE_COUNT;
     }
 }
-}
 ```
 
-## 图 9.50 RSVP–destroy：linux/net/sched/cls.rsvp.h。
+## 图 9.50 RSVP–destroy：`linux/net/sched/cls.rsvp.h`
 
 ```c
 static int rsvp_delete(struct tcf_proto *tp, unsigned long arg)
@@ -30624,7 +31605,6 @@ static int rsvp_delete(struct tcf_proto *tp, unsigned long arg)
     struct rsvp_session **sp;
     struct rsvp_session *s = f->sess;
     int i;
-
     for (fp = &f->ht[(h>>8)&0xFF]; fp; fp = &(*fp)->next) {
         if (*fp == f) {
 ```
@@ -30632,46 +31612,47 @@ static int rsvp_delete(struct tcf_proto *tp, unsigned long arg)
 ## 转发 695
 
 ```c
-310      unsigned long cl;
-312      tcf_tree_lock(tp);
-313      *fp = f->next;
-315      tcf_tree_unlock(tp);
-317      if ((cl = cls_set_class(tp, &res->class, 0)) != 0
-              tp->q->ops->cl->unbind_tcf(tp->q, cl);
-320  #ifdef CONFIG_NET_CLS_POLICY
-322      tcf_police_release(f->police);
-325          kfree(f);
-327          /* 移除树节点 */
-329          for (i=0; i<16; i++) {
-330              if (s)
-331                  return 0;
-333              /* 会话没有会流 */
-334              for (sp = &f->ht[i]);
-335                  ) {
-336                      if (*sp == f) {
-337                          tcf_tree_lock(tp);
-338                          *sp = s->next;
-339                          tcf_tree_unlock(tp);
-341                          kfree(f);
-342                          return 0;
-344                  }
-345              }
-347      return 0;
-350  #endif
+unsigned long cl;
+tcf_tree_lock(tp);
+*fp = f->next;
+tcf_tree_unlock(tp);
+if ((cl = cls_set_class(tp, &res->class, 0)) != 0
+    tp->q->ops->cl->unbind_tcf(tp->q, cl);
+#ifdef CONFIG_NET_CLS_POLICY
+tcf_police_release(f->police);
+kfree(f);
+/* 移除树节点 */
+for (i=0; i<16; i++) {
+    if (s)
+        return 0;
+/* 会话没有会流 */
+for (sp = &f->ht[i]);
+    ) {
+        if (*sp == f) {
+            tcf_tree_lock(tp);
+            *sp = s->next;
+            tcf_tree_unlock(tp);
+            kfree(f);
+            return 0;
+        }
+    }
+}
+return 0;
+#endif
 ```
 
-图 9.51 RSVP–通用位：linux/net/sched/cls_rsvp.h。
+## 图 9.51 RSVP–通用位：`linux/net/sched/cls_rsvp.h`
 
 ```c
-351 static unsigned gen_handle(struct tcf_proto *tp, unsigned salt)
+static unsigned gen_handle(struct tcf_proto *tp, unsigned salt)
 {
-353      struct rsvp_head *data = tp->root;
-354      int i = 0xFFFF;
-356      while (i-- > 0) {
-357          u32 h;
-358          if ((data->generator += 0x1000) == 0
-359              data->generator = 0x1000;
-360              h = data->generator ^ salt;
+    struct rsvp_head *data = tp->root;
+    int i = 0xFFFF;
+    while (i-- > 0) {
+        u32 h;
+        if ((data->generator += 0x1000) == 0
+            data->generator = 0x1000;
+            h = data->generator ^ salt;
 ```
 
 ## 696 TCP/IP 与 Linux 协议实现
@@ -30715,7 +31696,6 @@ static void tunnel_recycle(struct rsvp_head *data)
     }
 }
 }
-
 static u32 gen_tunnel(struct rsvp_head *data)
 {
     int i;
@@ -30728,132 +31708,209 @@ static u32 gen_tunnel(struct rsvp_head *data)
 }
 ```
 
-
-
-
-
 # 前向 699
 
 ```c
-505      goto errrout;
-506  dst = RTA_DATA(tb[TCA_RSVP_DST-1]);
-507  hi = hash_dst(dst, pinfo ? pinfo->protocol ? pinfo->tunnelid : 0);
-
-509  err = -ENOMEM;
-510  if ((f->handle = gen_handle(tp, hi | (h2<<8))) == 0
-511      goto errrout;
+goto errrout;
+dst = RTA_DATA(tb[TCA_RSVP_DST-1]);
 ```
+
+
+
+507  `hi = hash_dst(dst, pinfo ? pinfo->protocol ? pinfo->tunnelid : 0);`
+
+509  `err = -ENOMEM;`
+
+510  `if ((f->handle = gen_handle(tp, hi | (h2<<8))) == 0`
+
+511      `goto errrout;`
+
+```c
 
 # 图 9.56 RSVP 更改参数 iv: linux/net/sched/cls_rsvp.h.
 
 ```c
+
 513  if (f->tunnelhdr) {
+
 514      err = -EINVAL;
+
 515      if (f->res_class > 255)
+
 516          goto errrout;
 
 518      err = -ENOMEM;
+
 519      if (f->res_class == 0 &&
+
 520          f->res_class = gen_tunnel(data)) == 0
+
 521          goto errrout;
+
 522  }
 
 524  for (sp = &data->ht[1]; sp != NULL; sp = s->next(sp)) {
+
 525      if (dst[RSVP_DST_LEN-1] == s->dst[RSVP_DST_LEN-1] &&
+
 526          pinfo->protocol == s->protocol &&
+
 527          memcmp(pinfo->dpi, &s->dpi, sizeof(s->dpi)) == 0
+
 #if RSVP_DST_LEN == 4
+
 529      && dst[0] == s->dst[0]
+
 530      && dst[1] == s->dst[1]
+
 531      && dst[2] == s->dst[2];
+
 532  #endif
+
 533  } && pinfo->tunnelid == s->tunnelid) {
 
 535      insert:
+
 536          /* OK，我们找到了合适的会话 */
 
 538          fp = &s->ht[2];
 
 540          f->sems = s;
+
 541          if (f->tunnel) == 0
+
 542              cls_class(tp, f->res_class, q->ops-tp->cls_ops->bind_tcf
+
 544                             (tp->q, base, f->res_class));
 
 545  #ifdef CONFIG_NET_CLS_POLICE
+
 546      if (tb[TCA_RSVP_POLICE]) {
+
 547          f->police = tcf_policy_locate(tb[TCA_RSVP_POLICE-1],
+
 548                             tca(TCA_RATE-1));
+
 549      }
+
 550  #endif
 
 552      for (fp = &s->ht[2]; fp; fp = &(fp)->next) {
+
 553          if ((fp)->spi.mask&spi->mask) != f->spi.mask)
+
 554              break;
+
 555}
+
 556      f->next = *fp;
+
 ```
 
 # 700 TCP/IP 和 Linux 协议实现
 
 ```c
+
 wmb();
+
 *fp = f;
+
 *arg = (unsigned long)f;
+
 return 0;
+
 ```
 
 # 图 9.57 RSVP 更改参数 v: linux/net/sched/cls.rsvp.h.
 
 ```c
+
 /* 未找到会话。创建一个新的。 */
+
 err = -ENBUFS;
+
 s = kmalloc(sizeof(struct rsvp_session), GFP_KERNEL);
+
 if (s == NULL)
+
 goto error;
+
 memset(s, 0, sizeof(*s));
+
 nmove(s->dst, dst, sizeof(s->dst));
+
 s->dpi = pinfo->dpi;
+
 s->protocol = pinfo->protocol;
+
 s->tunnel = pinfo->tunnel;
+
 for (sp = &data->ht[hi]; sp; sp = &(sp->sp)->next) {
+
 	if ((sp)->dpi.mask&s->dpi.mask) != s->dpi.mask)
+
 	break;
+
 }
+
 s->next = *sp;
+
 wmb();
+
 *sp = s;
+
 goto insert;
 
 errout:
+
 if (f)
+
 kfree(f);
+
 return err;
+
 ```
 
 # 图 9.58 RSVP 遍历 RSVP 树: linux/net/sched/cls.rsvp.h.
 
 ```c
+
 static void rsvp_walk(struct tcf_proto *tp
+
 ```
 
 # 前向 701
 
 ```c
+
 for (hi = 0; hi <= 16; hi++) {
+
     struct rsvp_filter *f;
 
     for (f = s->ht[hi]; f = f->next) {
+
         if (arg->count < arg->skip) {
+
             arg->count++;
+
             continue;
+
         }
+
         if (arg->fn(tp, (unsigned long)arg, arg) < 0) {
+
             arg->stop = 1;
+
             break;
+
         }
+
         arg->count++;
+
     }
+
 }
+
 ```
 
 为什么，为什么（alexey?）所有这些内容都在头文件中而不是 C 文件中：
@@ -30861,7 +31918,9 @@ for (hi = 0; hi <= 16; hi++) {
 图 5.59 RSVP 分类器 API: linux/net/sched/cls_rsvp.c.
 
 ```c
+
 #include "cls_rsvp.h"
+
 ```
 
 该文件仅包含了上面的头文件。
@@ -30877,281 +31936,336 @@ for (hi = 0; hi <= 16; hi++) {
 - 3. "to ANY" 的优先级高于 "to XXX"
 
 ```c
+
 struct route_fastmap {
+
     struct route4_filter *filter;
+
     u32 id;
+
     int if;
+
 };
+
 ```
 
 # 702 TCP/IP 和 Linux 协议实现
 
 ```c
+
 53 struct route4_head
+
 54 {
+
 55     struct route4_fastmap fastmap[16];
+
 56     struct route4_bucket *table[256+1];
+
 57 };
 
 59 struct route4_bucket
+
 60 {
+
 61     struct route4_filter *ht[16+16+1];
+
 62     };
+
 ```
 
 ```c
+
 63 
+
 64 route4_filter
+
 65 {
+
 66     struct route4_filter *next;
+
 67     u32 id;
+
 68     int iif;
+
 69     
+
 70     struct tcf_result res;
+
 71     #ifdef CONFIG_NET_CLS_POLICE
+
 72     struct tcf_police *police;
+
 73     #endif
+
 ```
 
 ```c
+
 74 
+
 75     u32 iif;
+
 76     struct route4_bucket *bkt;
+
 77 };
+
 79 #define ROUTE_FAILURE((struct route4_filter)-L)
+
 ```
 
 图 9.61 路由分类器 API–包含策略器的函数: linux/net/sched/cls.c.
 
 ```c
+
 81 static __inline_ int route4_fastmap_hash(u32 id, int iif)
+
 82 {
+
 83     return id;
+
 84 }
+
 ```
 
 ```c
+
 86 static void route4_reset_fastmap(struct net_device *dev, struct route4_head *head, u32 iif)
+
 87 {
-88     spin_lock_bh(dev->queue_lock);
-89     memset(head->fastmap, 0, sizeof(head->fastmap));
-90     spin_unlock_bh(dev->queue_lock);
-91 }
 ```
 
-```c
-93 static void __inline_
-94 route4_set_fastmap(struct route4_head *head, u32 id, int iif)
-95 {
-96     struct route4_filter *f;
-97 
-98     int h = route4_fastmap_hash(id, iif);
-99     head->fastmap[h].id = id;
-100    head->fastmap[h].iif = iif;
-101    head->fastmap[h].filter = f;
-102 }
-```
 
-```c
-103 static __inline_ int route4_to(u32 id)
-104 {
-105     return id;
-106 }
-108 static __inline_ int route4_from(u32 id)
-109 {
-110     return (id>>16)&0xFF;
-111 }
-```
-
-```c
-113 static __inline_ int route4_iif(int iif)
-114 {
-115     return 16 + ((iif>>16);
-116 }
-118 static __inline_ int route4_wild(void)
-119 {
-120     return 32;
-121 }
-```
-
-```c
-123 #ifdef CONFIG_NET_CLS_POLICE
-124 #define IF_ROUTE_POLICE
-125 if (f->polices)
-126     int pol_res = tcf_police(skb, f->police);
-127     if (pol_res >= 0) return pol_res;
-128     dont_cache = i;
-129     continue;
-130 } (dont_cache)
-132 #else
-133 #define IF_ROUTE_POLICE
-134 #endif
-```
-
-图 9.62 路由分类器 API–分类器函数 i: linux/net/sched/cls_route.c.
-
-```c
-137 static int route4_classify(struct sk_buff *skb, struct tcf_proto *tp, struct *tp
-138     struct tcf_result *res)
-140 {
-141     struct route4_head *head = (struct route4_head*)tp->root;
-142     struct dst_entry *dst;
-143     struct route4_bucket *b;
-144     struct route4_filter *f;
-145     #ifdef CONFIG_NET_CLS_POLICE
-146     int dont_cache = 0;
-147 #endif
-148     u32 id, h;
-149     int iif;
-151     if ((dst = skb->dst) == NULL)
-152     goto failure;
-153     id = dst->classid;
-154     if (head == NULL)
-```
 
 # 704 TCP/IP 和 Linux 协议实现
 
 ```c
-155     goto failure;
-156     *f = f;
-157     
-158     int h = route4_fastmap_hash(id, iif);
-159     head->fastmap[h].id = id;
-160     head->fastmap[h].iif = iif;
-161     head->fastmap[h].filter = f;
-162 }
+spin_lock_bh(dev->queue_lock);
+
+memset(head->fastmap, 0, sizeof(head->fastmap));
+
+spin_unlock_bh(dev->queue_lock);
+}
 ```
 
-图 9.63 路由分类器 API–分类器函数 ii: linux/net/sched/cls_route.c.
+```c
+static void __inline_
+route4_set_fastmap(struct route4_head *head, u32 id, int iif)
+{
+    struct route4_filter *f;
+
+    int h = route4_fastmap_hash(id, iif);
+    head->fastmap[h].id = id;
+    head->fastmap[h].iif = iif;
+    head->fastmap[h].filter = f;
+}
+```
 
 ```c
-172     restart;
-173     if ((b = head->ht[h])) != NULL)
-174     }
-175 
-177     for (f = b; f = f->next) {
-178         if (f->id == id) {
-179             *res = f;
-180             break;
-181         }
-182     }
-183 
-184     for (f = b; f = f->next) {
-185         if (f->iif == iif) {
-186             *res = f;
-187             break;
-188         }
-189     }
-190 
-191     if (!res) {
-192         f = kmalloc(sizeof(struct route4_filter), GFP_KERNEL);
-193         if (!f) {
-194             goto error;
-195         }
-196         memset(f, 0, sizeof(*f));
-197         f->id = id;
-198         f->iif = iif;
-199         f->next = b->next;
-200         b->next = f;
-201     }
-202     return res;
-203 }
-204 
-205 error:
-206     if (f)
-207     kfree(f);
-208     return -1;
-209 }
+static __inline_ int route4_to(u32 id)
+{
+    return id;
+}
+
+static __inline_ int route4_from(u32 id)
+{
+    return (id>>16)&0xFF;
+}
+```
+
+```c
+static __inline_ int route4_iif(int iif)
+{
+    return 16 + ((iif>>16);
+}
+
+static __inline_ int route4_wild(void)
+{
+    return 32;
+}
+```
+
+```c
+#ifdef CONFIG_NET_CLS_POLICE
+#define IF_ROUTE_POLICE
+if (f->polices)
+    int pol_res = tcf_police(skb, f->police);
+    if (pol_res >= 0) return pol_res;
+    dont_cache = i;
+    continue;
+} (dont_cache)
+#else
+#define IF_ROUTE_POLICE
+#endif
+```
+
+图 9.62 路由分类器 API–分类器函数 i: `linux/net/sched/cls_route.c`.
+
+```c
+static int route4_classify(struct sk_buff *skb, struct tcf_proto *tp, struct *tp
+    struct tcf_result *res)
+{
+    struct route4_head *head = (struct route4_head*)tp->root;
+    struct dst_entry *dst;
+    struct route4_bucket *b;
+    struct route4_filter *f;
+    #ifdef CONFIG_NET_CLS_POLICE
+    int dont_cache = 0;
+    #endif
+    u32 id, h;
+    int iif;
+
+    if ((dst = skb->dst) == NULL)
+    goto failure;
+    id = dst->classid;
+    if (head == NULL)
+```
+
+```c
+goto failure;
+*f = f;
+
+int h = route4_fastmap_hash(id, iif);
+head->fastmap[h].id = id;
+head->fastmap[h].iif = iif;
+head->fastmap[h].filter = f;
+}
+```
+
+图 9.63 路由分类器 API–分类器函数 ii: `linux/net/sched/cls_route.c`.
+
+```c
+restart;
+if ((b = head->ht[h])) != NULL)
+}
+
+for (f = b; f = f->next) {
+    if (f->id == id) {
+        *res = f;
+        break;
+    }
+}
+
+for (f = b; f = f->next) {
+    if (f->iif == iif) {
+        *res = f;
+        break;
+    }
+}
+
+if (!res) {
+    f = kmalloc(sizeof(struct route4_filter), GFP_KERNEL);
+    if (!f) {
+        goto error;
+    }
+    memset(f, 0, sizeof(*f));
+    f->id = id;
+    f->iif = iif;
+    f->next = b->next;
+    b->next = f;
+}
+return res;
+}
+
+error:
+if (f)
+kfree(f);
+return -1;
+}
 ```
 
 # 图 9.64 路由分类器 API–分类器函数 iii: linux/net/sched/cls_route.c.
 
 ```c
-211     if (h < 256) {
-212         #ifndef CONFIG_NET_CLS_POLICE
-213             route4_reset_fastmap(head, id, iif);
-214         #endif
-215     } else {
-216         /* 哈希表处理逻辑 */
-217     }
-218     
-219 }
+if (h < 256) {
+    #ifndef CONFIG_NET_CLS_POLICE
+        route4_reset_fastmap(head, id, iif);
+    #endif
+} else {
+    /* 哈希表处理逻辑 */
+}
+    
+}
 ```
-
-
-
-
 
 ## 706 TCP/IP 和 Linux 协议实现
 
 ```c
-253  h1 = to_hash(handle);
-254  if (h1 > 256)
-255      return 0;
-256
-257  h2 = frcm_hash(handle)>>16;
-258  if (h2 > 32)
-259          return 0;
-260
-261  if ((b = head->table[h1]) != NULL) {
-262      for (f = b->ht[h2]; f = f->next)
-263          if (f->handle == handle)
-264                  return (unsigned long)f;
-265
-266      return 0;
-267  }
-268
-269  static void route4_put(struct tcf_proto *tp, unsigned long f)
-271  }
-272
-273  static int route4_init(struct tcf_proto *tp)
-274  {
-275      MOD_INC_USE_COUNT;
-276      return 0;
-277  }
+h1 = to_hash(handle);
+if (h1 > 256)
+    return 0;
+
+h2 = frcm_hash(handle)>>16;
+if (h2 > 32)
+        return 0;
+
+if ((b = head->table[h1]) != NULL) {
+    for (f = b->ht[h2]; f = f->next)
+        if (f->handle == handle)
+                return (unsigned long)f;
+
+    return 0;
+}
+
+static void route4_put(struct tcf_proto *tp, unsigned long f)
+}
+
+static int route4_init(struct tcf_proto *tp)
+{
+    MOD_INC_USE_COUNT;
+    return 0;
+}
 ```
 
-> **图 9.66** 路由分类器 API-销毁路由分类器：linux/net/sched/cls_route.c。
+> **图 9.66** 路由分类器 API-销毁路由分类器：`linux/net/sched/cls_route.c`。
 
 ```c
-279  static void route4_destroy(struct tcf_proto *tp)
-280  {
-281      struct route4_head *head = xchg(&tp->root, NULL);
-282      int h1, h2;
-283
-284      if (h1 == NULL) {
-285          MOD_DEC_USE_COUNT;
-286          return;
-287      }
-288
-289      for (h1=0; h1<=256; h1++) {
-290          struct route4_bucket *b;
-291
-292          if ((b = head->table[h1]) != NULL) {
-293              for (h2=0; h2<=32; h2++) {
-294                  struct route4_filter *f;
-295
-296                  while ((f = b->ht[h2]) != NULL) {
-297                      unsigned long cl;
-298
-299                      b->ht[h2] = f->next;
-300                      if ((cl = _cls_set_class(&f->res.class, 0)) != 0)
-301                          tp->q->ops->cl_ops->unbind_tcf(tp->q, cl);
-302                  }
-303  #ifdef CONFIG_NET_CLS_POLICE
-303 tcf_police_release(f->police);
-304 #endif
-305 kfree(f);
-306 }
-307 kfree(b);
-308 }
-309 }
-310 kfree(head);
-311 MCD_DEC_USE_COUNT;
-312 }
+static void route4_destroy(struct tcf_proto *tp)
+{
+    struct route4_head *head = xchg(&tp->root, NULL);
+    int h1, h2;
+
+    if (h1 == NULL) {
 ```
 
-> **图 9.67** 路由分类器 API–删除(struct tcf_proto *tp, unsigned long arg) linux:/net/sched/cls_route.c。
+
+
+```c
+285          MOD_DEC_USE_COUNT;
+
+286          return;
+
+287      }
+
+288
+
+289      for (h1=0; h1<=256; h1++) {
+290          struct route4_bucket *b;
+
+291          if ((b = head->table[h1]) != NULL) {
+292              for (h2=0; h2<=32; h2++) {
+293                  struct route4_filter *f;
+
+294                  while ((f = b->ht[h2]) != NULL) {
+295                      unsigned long cl;
+
+296                      b->ht[h2] = f->next;
+297                      if ((cl = _cls_set_class(&f->res.class, 0)) != 0)
+298                          tp->q->ops->cl_ops->unbind_tcf(tp->q, cl);
+299                  }
+300  #ifdef CONFIG_NET_CLS_POLICE
+301  tcf_police_release(f->police);
+302  #endif
+303  kfree(f);
+304 }
+305 kfree(b);
+306 }
+307 }
+308 kfree(head);
+309 MCD_DEC_USE_COUNT;
+310 }
+```
+
+> **图 9.67** 路由分类器 API–删除(`struct tcf_proto *tp`, `unsigned long arg`) `linux:/net/sched/cls_route.c`。
 
 ```c
 315 static int route4_delete(struct tcf_proto *tp, unsigned long arg)
@@ -31161,76 +32275,78 @@ struct route_fastmap {
 319     unsigned long h = f->handle;
 320     struct route4_bucket *bkt;
 321     int i;
-322 
-323     if (!head || !f)
-324         return -EINVAL;
-325 
-326     b = f->bkt;
-327     for (fp = &b->bt[hash(h)->16]; fp &= &(fp)->next) {
-328         if (*fp == f) {
-329             unsigned long cl;
-330 
-331             tcf_tree_lock(tp);
-333             *fp = f->next;
-334             tcf_tree_unlock(tp);
-335 
-336             route4_reset_fastmap(tp->q->dev, head, f->id);
-337 
-338         if ((cl == cls_set_class(tp, &f->class, 0)) != 0)
-339             tp->q->ops->cl_ops->unbind_tcf(tp->q, cl);
-340 }
-341 #ifdef CONFIG_NET_CLS_POLICE
-342     tcf_police_release(f->police);
-343 #endif
-344     kfree(f);
-345 
-346     /* 清除树 */
-347 
-348     for (i=0; i<=32; i++)
-349         if (b->ht[i])
-350             return 0;
-351 
-352     /* OK, 会话没有流 */
-353     tcf_tree_lock(tp);
-354 head->table[to_hash(h)] = NULL;
-355 tcf_tree_unlock(tp);
-356 
-357 kfree(b);
-358 return 0;
-359     }
-360 
-361 return 0;
-362 }
+
+322     if (!head || !f)
+323         return -EINVAL;
+
+324     b = f->bkt;
+325     for (fp = &b->bt[hash(h)->16]; fp &= &(fp)->next) {
+326         if (*fp == f) {
+327             unsigned long cl;
+
+328             tcf_tree_lock(tp);
+
+329             *fp = f->next;
+330             tcf_tree_unlock(tp);
+
+331             route4_reset_fastmap(tp->q->dev, head, f->id);
+
+332         if ((cl == cls_set_class(tp, &f->class, 0)) != 0)
+333             tp->q->ops->cl_ops->unbind_tcf(tp->q, cl);
+334 }
+335 #ifdef CONFIG_NET_CLS_POLICE
+336     tcf_police_release(f->police);
+337 #endif
+338     kfree(f);
+
+339     /* 清除树 */
+
+340     for (i=0; i<=32; i++)
+341         if (b->ht[i])
+342             return 0;
+
+343     /* OK, 会话没有流 */
+344     tcf_tree_lock(tp);
+345 head->table[to_hash(h)] = NULL;
+346 tcf_tree_unlock(tp);
+
+347 kfree(b);
+348 return 0;
+349     }
+
+350 return 0;
+351 }
 ```
 
 ## 防火墙分类器
 
 该分类器基于防火墙规则。
 
-> **图 9.68** 防火墙分类器–结构：linux/net/sched/cls_fw.c。
+> **图 9.68** 防火墙分类器–结构：`linux/net/sched/cls_fw.c`。
 
 ```c
 44 struct fw_head
 44 {
 45     struct fw_filter *ht[256];
 46 };
-47 
-48 struct fw_filter
-49 {
-50     struct fw_filter *next;
-51     u32 id;
-52     struct tcf_result res;
-53     #ifdef CONFIG_NET_CLS_POLICE
-54         struct tcf_police *police;
-55     #endif
-56 };
-57 
-58 static __inline_ int fw_hash(u32 handle)
-59 {
-60     return handle&xFF;
-61 }
 
-> **图 9.69** 防火墙分类器 API–分类：linux/net/sched/cls_fw.c。
+47 struct fw_filter
+48 {
+49     struct fw_filter *next;
+50     u32 id;
+51     struct tcf_result res;
+52     #ifdef CONFIG_NET_CLS_POLICE
+53         struct tcf_police *police;
+54     #endif
+55 };
+
+56 static __inline_ int fw_hash(u32 handle)
+57 {
+58     return handle&xFF;
+59 }
+```
+
+> **图 9.69** 防火墙分类器 API–分类：`linux/net/sched/cls_fw.c`。
 
 ```c
 63 static int fw_classify(struct sk_buff *skb, struct tcf_proto *tp,
@@ -31269,7 +32385,7 @@ if (id && (TC_H(id) == 0 || !(TC_H(id-tp->q->handle)))) {
 return -1;
 ```
 
-> **图 9.70** 防火墙分类器-杂项：linux/net/sched/cls_fw.c。
+> **图 9.70** 防火墙分类器-杂项：`linux/net/sched/cls_fw.c`。
 
 ```c
 static unsigned long fw_get(struct tcf_proto *tp, u32 handle)
@@ -31290,7 +32406,11 @@ static int fw_init(struct tcf_proto *tp)
 }
 ```
 
-> **图 9.71** 防火墙分类器 API–销毁：linux/net/sched/cls_fw.c。
+> **图 9.71** 防火墙分类器 API–销毁：`linux/net/sched/cls_fw.c`。
+
+
+
+# 转发 713
 
 ```c
 static void fw_destroy(struct tcf_proto *tp)
@@ -31322,7 +32442,7 @@ static void fw_destroy(struct tcf_proto *tp)
 }
 ```
 
-> **图 9.72** 防火墙分类器 API–删除：linux/net/sched/cls_fw.c。
+> **图 9.72** 防火墙分类器 API–删除：`linux/net/sched/cls_fw.c`。
 
 ```c
 static int fw_delete(struct tcf_proto *tp, unsigned long arg)
@@ -31358,7 +32478,7 @@ static int fw_delete(struct tcf_proto *tp, unsigned long arg)
 
 ## 修改分类器
 
-> **图 9.73** 防火墙分类器 API–修改 i：linux/net/sched/cls_fw.c。
+> **图 9.73** 防火墙分类器 API–修改 i：`linux/net/sched/cls_fw.c`。
 
 ```c
 static int fw_change(struct tcf_proto *tp, unsigned long base,
@@ -31378,7 +32498,7 @@ static int fw_change(struct tcf_proto *tp, unsigned long base,
 }
 ```
 
-> **图 9.74** 防火墙分类器 API–修改 ii：linux/net/sched/cls_fw.c。
+> **图 9.74** 防火墙分类器 API–修改 ii：`linux/net/sched/cls_fw.c`。
 
 ```c
 if ((f = (struct fw_filter*)arg) == NULL) {
@@ -31401,7 +32521,7 @@ if (tb[RCA_FW_POLICE]) {
 #endif
 ```
 
-> **图 9.75** 防火墙分类器 API–修改 iii：linux/net/sched/cls_fw.c。
+> **图 9.75** 防火墙分类器 API–修改 iii：`linux/net/sched/cls_fw.c`。
 
 ```c
     if (handle)
@@ -31437,13 +32557,7 @@ if (tb[RCA_FW_POLICE]) {
     }
 ```
 
-> **图 9.76** 防火墙分类器 API–修改 iv：linux/net/sched/cls_fw.c。
-
-
-
-
-
-# 转发 713
+> **图 9.76** 防火墙分类器 API–修改 iv：`linux/net/sched/cls_fw.c`。
 
 ```c
 f->next = head->ht[fw_hash(handle)];
@@ -31472,9 +32586,11 @@ if (f)
 
 # TC 分类器
 
-这些分类器遵循流量控制（traffic control）规则。
 
-图 9.77 TC 分类器 API--定义：linux/net/sched/cls_tindex.c。
+
+这些分类器遵循流量控制（`traffic control`）规则。
+
+图 9.77 TC 分类器 API--定义：`linux/net/sched/cls_tindex.c`。
 
 ```c
 /*
@@ -31532,7 +32648,7 @@ struct tcinderx_data {
 };
 ```
 
-图 9.78 TC 分类器 API–查找：linux/net/sched/cls_tcinder.c。
+图 9.78 TC 分类器 API–查找：`linux/net/sched/cls_tcinder.c`。
 
 ```c
 static struct tcinder_filter_result *lookup(struct tcinder_data *p, __u16 key)
@@ -31551,7 +32667,7 @@ static struct tcinder_filter_result *lookup(struct tcinder_data *p, __u16 key)
 }
 ```
 
-图 9.79 TC 分类器 API–分类：linux/net/sched/cls_tcinder.c。
+图 9.79 TC 分类器 API–分类：`linux/net/sched/cls_tcinder.c`。
 
 ```c
 static int tcinder_classify(struct sk_buff *skb, struct tcf_proto *tp,
@@ -31591,7 +32707,7 @@ return 0;
 }
 ```
 
-**图 9.80** TC 分类器 API–杂：linux/net/sched/cls_tcindex.c。
+图 9.80 TC 分类器 API–杂：`linux/net/sched/cls_tcindex.c`。
 
 ```c
 static unsigned long tcindex_get(struct tcf_proto *tp, u32 handle)
@@ -31624,7 +32740,11 @@ static int tcindex_init(struct tcf_proto *tp)
 }
 ```
 
-图 9.81 TC 分类器 API–删除：linux/net/sched/cls_tindex.c。
+图 9.81 TC 分类器 API–删除：`linux/net/sched/cls_tindex.c`。
+
+
+
+# 9.82 TC 分类器 API–销毁：`linux/net/sched/cls_tindex.c`
 
 ```c
 static int tcindex_delete(struct tcf_proto *tp, unsigned long arg)
@@ -31668,8 +32788,6 @@ found:
 }
 ```
 
-# 9.82 TC 分类器 API–销毁：linux/net/sched/cls_tindex.c。
-
 ```c
 static void tcindex_destroy_element(struct tcf_proto *tp,
                                      struct tcindex_filter_result *r)
@@ -31712,7 +32830,7 @@ static void tcindex_destroy_element(struct tcf_proto *tp,
 }
 ```
 
-# 9.83 TC 分类器 API–更改：linux/net/sched/cls_tindex.c。
+# 9.83 TC 分类器 API–更改：`linux/net/sched/cls_tindex.c`
 
 ```c
 static int tcindex_change(struct tcf_proto *tp,
@@ -31755,11 +32873,7 @@ static int tcindex_change(struct tcf_proto *tp,
 }
 ```
 
-
-
-
-
-# 图 9.85 TC分类器 API–更改分类器 iii：linux/net/sched/cls_tcincindex.c。
+# 图 9.85 TC分类器 API–更改分类器 iii：`linux/net/sched/cls_tcincindex.c`
 
 ```c
 if (p->perfect && p->b) {
@@ -31798,7 +32912,9 @@ if (!r) {
 DPRINTK("r=%p\n\n", r);
 ```
 
-# 图 9.86 TC分类器 API–更改分类器 iv：linux/net/sched/cls_tcincindex.c。
+# 图 9.86 TC分类器 API–更改分类器 iv：`linux/net/sched/cls_tcincindex.c`
+
+
 
 ```c
 if (cl) {
@@ -31813,45 +32929,68 @@ if (cl) {
 ```
 
 #ifdef CONFIG_NET_CLS_POLICE
+
 if (tb[CA_TCINCINDEX_POLICE-1]) {
+
     tcf_tree_lock(tp);
+
     police = xchg(&r->police, police);
+
     tcf_tree_unlock(tp);
+
     tcf_police_release(police);
+
 }
+
 #endif
 
 if (r = &new_filter_result) {
+
     return 0;
+
 }
+
 f = kmalloc(sizeof(struct tcindex_filter), GFP_KERNEL);
+
 if (!f) {
+
     return -ENOMEM;
+
 }
+
 f->key = handle;
+
 f->result = new_filter_result;
+
 f->next = NULL;
+
 for (walk = p->h + (handle & p->hash); walk; walk = walk->next) {
+
     /* nothing */
+
 }
+
 wmb();
+
 *walk = f;
+
 return 0;
+
 ```
 
 # 10 队列调度 (Queuing Discipline)
 
 Linux 2.4 支持多种队列调度，从简单的调度器到复杂的多级系统。当前列表如下：
 
-- **FIFO**: 代表默认的尽力而服务。
-- **Priority**：一种众知的队列管理技术，用于在速率自适应（TCP 友好）流之间分配公平性。
-- **广义 RED (Generalized RED)**：RED 的特殊版本。
-- **差异化服务标记 (Differentiated service marker)**：队列调度器需要进行标记而非丢弃。
-- **随机公平队列 (SFQ)**：一种近似实现公平性的技术。
-- **令牌桶 (Token bucket)**：令牌桶策略策略队列。
-- **流量均衡器 (FQ)**：流量均衡是特殊的。
-- **CBQ**：将其他队列调度组合到一个结构中的技术。这通常是层次化的。
-- **CSZ**：David Clark、Scott Shenker 和 Linia Zhang 进行了最早的一些集成服务研究。
+- `FIFO`: 代表默认的尽力而服务。
+- `Priority`：一种众知的队列管理技术，用于在速率自适应（TCP 友好）流之间分配公平性。
+- `广义 RED (Generalized RED)`：RED 的特殊版本。
+- `差异化服务标记 (Differentiated service marker)`：队列调度器需要进行标记而非丢弃。
+- `随机公平队列 (SFQ)`：一种近似实现公平性的技术。
+- `令牌桶 (Token bucket)`：令牌桶策略策略队列。
+- `流量均衡器 (FQ)`：流量均衡是特殊的。
+- `CBQ`：将其他队列调度组合到一个结构中的技术。这通常是层次化的。
+- `CSZ`：David Clark、Scott Shenker 和 Linia Zhang 进行了最早的一些集成服务研究。
 
 # 11 调度器框架框架 (Scheduler Framework)
 
@@ -31859,43 +32998,52 @@ Linux 2.4 支持多种队列调度，从简单的调度器到复杂的多级系�
 
 ## 11.1 调度 API
 
-### 图 9.87 调度器 API：linux/net/sched/sch_api.c。
+### 图 9.87 调度器 API：`linux/net/sched/sch_api.c`。
 
 ```c
+
 /*
+
 简要回顾。
 
 该文件由两个不相关的部分组成：
+
 1. 队列调度器管理器前端。
+
 2. 流量类管理器前端。
 
 通常，队列调度（qdisc）是一个黑盒，它能够顺序入队数据包并在设备准备好发送内容时出队数据包，其时间由内部隐藏的算法决定。qdisc 分为两类：
+
 - "qdiscs"，从外部不可见其内部结构。
+
 - "schedulers"，它们使用“数据包分类器”（参见 cls_api.c）将所有数据包划分到“流量类”。
 
 反过来，类（classes）可能在其上附带子 qdisc（作为规则、队列等）等等等。
+
 该文件中函数的目标是将用户以句柄（handles）形式提供的信息转换为更易理解的内核形式，进行一些合理性检查和所有 qdisc 共有的工作，并提供 rtnlink 通知。
 
 所有的智能工作都在 qdisc 模块内部完成。
 
 每种调度策略都有两个主要的函数：入队（enqueue）和出队（dequeue）。
+
+*/
 ```
 
 ### TCP/IP 和 Linux 协议的 dequeue 实现
 
 ```c
-dequeue 返回一个待发送的 skb。允许返回 NULL，但这并不意味着队列为空，只是意味着该调度策略此时不想发送任何内容。只有当 q->q.len == 0 时，队列才真正为空。对于具有多个队列的复杂策略，q->q 不是真实的数据包队列，但 q->q.len 必须是有效的。
-```
 
+dequeue 返回一个待发送的 skb。允许返回 NULL，但这并不意味着队列为空，只是意味着该调度策略此时不想发送任何内容。只有当 q->q.len == 0 时，队列才真正为空。对于具有多个队列的复杂策略，q->q 不是真实的数据包队列，但 q->q.len 必须是有效的。
+
+```
 ### enqueue
 
-如果数据包成功入队，enqueue 返回 0。如果数据包（当前或另一个）被丢弃，它返回一个非零错误代码。
-- **NET_MIT_DROP**: 此数据包被丢弃。预期操作：不要退避，等待队列清空。
-- **NET_MIT_CN**: 可能此数据包已入队，但另一个被丢弃了。预期操作：退避或忽略。
-- **NET_MIT_POLICED**: 被策略丢弃。预期操作：退避或向实时应用报告错误。
-```
+如果数据包成功入队，`enqueue` 返回 0。如果数据包（当前或另一个）被丢弃，它返回一个非零错误代码。
+- `NET_MIT_DROP`: 此数据包被丢弃。预期操作：不要退避，等待队列清空。
+- `NET_MIT_CN`: 可能此数据包已入队，但另一个被丢弃了。预期操作：退避或忽略。
+- `NET_MIT_POLICED`: 被策略丢弃。预期操作：退避或向实时应用报告错误。
 
-# 图 9.88 调度器 API—辅助函数：linux/net/sched/sch_api.c。
+# 图 9.88 调度器 API—辅助函数：`linux/net/sched/sch_api.c`。
 
 ```c
 辅助函数：
@@ -31910,7 +33058,7 @@ dequeue 返回一个待发送的 skb。允许返回 NULL，但这并不意味着
 static rwlock_t qdisc_lock = RW_LOCKED;
 ```
 
-# 图 9.89 调度器 API–所有调度策略：linux/net/sched/sch_api.c。
+# 图 9.89 调度器 API–所有调度策略：`linux/net/sched/sch_api.c`。
 
 ```c
 ************************************
@@ -31919,10 +33067,6 @@ static rwlock_t qdisc_lock = RW_LOCKED;
 /* 所有已安装队列调度策略列表。 */
 static struct qdisc_ops *qdisc_base = NULL;
 ```
-
-
-
-
 
 ## 724 TCP/IP 和 Linux 协议实现
 
@@ -31933,7 +33077,7 @@ static struct qdisc_ops *qdisc_base = NULL;
 188 }
 ```
 
-图 9.91 调度 API–通过句柄查找队列：linux/net/sched/sch_api.c。
+图 9.91 调度 API–通过句柄查找队列：`linux/net/sched/sch_api.c`。
 
 ```c
 190 /* 我们知道 handle。在所有附加到设备的 qdisc 中查找 qdisc
@@ -31969,7 +33113,7 @@ static struct qdisc_ops *qdisc_base = NULL;
 220 }
 ```
 
-图 9.92 调度 API–通过名称查找队列：linux/net/sched/sch_api.c。
+图 9.92 调度 API–通过名称查找队列：`linux/net/sched/sch_api.c`。
 
 ```c
 224 struct Qdisc_ops *qdisc_lookup_ops(struct rattr *kind)
@@ -31991,7 +33135,9 @@ return q;
 }
 ```
 
-## 9.93 调度 API–通过速率完成队列：linux/net/sched/sch_api.c。
+
+
+## 9.93 调度 API–通过速率完成队列：`linux/net/sched/sch_api.c`
 
 ```c
 struct qdisc_rate_table *qdisc_get_rtab(struct tc_ratespec *r, struct rtattr *tab)
@@ -32021,7 +33167,7 @@ struct qdisc_rate_table *qdisc_get_rtab(struct tc_ratespec *r, struct rtattr *ta
 }
 ```
 
-## 9.94 调度 API–释放速率表项：linux/net/sched/sch_api.c。
+## 9.94 调度 API–释放速率表项：`linux/net/sched/sch_api.c`
 
 ```c
 void qdisc_put_rtab(struct qdisc_rate_table *rtab, struct **rtab);
@@ -32041,7 +33187,7 @@ void qdisc_put_rtab(struct qdisc_rate_table *rtab, struct **rtab);
 }
 ```
 
-## 图 9.95 调度 API–将队列分配到唯一的句柄：linux/net/sched/sch...
+## 图 9.95 调度 API–将队列分配到唯一的句柄：`linux/net/sched/sch...`
 
 ```c
 u32 qdisc_alloc_handle(struct net_device *dev)
@@ -32062,7 +33208,7 @@ void qdisc_free_handle(u32 *handle);
 }
 ```
 
-## 图 9.96 调度 API–将队列到设备：linux/net/sched/sch...
+## 图 9.96 调度 API–将队列到设备：`linux/net/sched/sch...`
 
 ```c
 /* 挂载队列到设备 */
@@ -32091,11 +33237,11 @@ dev_graft(struct net_device *dev, struct Qdisc *new)
 }
 ```
 
-## 9.97 调度 API–将队列到类：linux/net/sched/sch_api.c。
+## 9.97 调度 API–将队列到类：`linux/net/sched/sch_api.c`
 
 （注：此处代码逻辑翻译）
 
-## 9.98 调度 API–分配并初始化新队列：linux/net/sched/api.c。
+## 9.98 调度 API–分配并初始化新队列：`linux/net/sched/api.c`
 
 ```c
 /*
@@ -32169,19 +33315,9 @@ err_out:
 }
 ```
 
+# 图 9.103 调度器 API--删除队列调度项：`linux/net/sched/sch-api.c`
 
 
-
-529
-}
-
-530
-return 0;
-
-531
-}
-
-# 图 9.103 调度器 API--删除队列调度项：linux/net/sched/sch-api.c.
 
 ```c
 537 static int tc_get_qdisc(struct sk_buff *skb, struct nlmsghdr *n, void *arg)
@@ -32310,91 +33446,13 @@ return 0;
 644      else {
 ```
 
-```c
-645   if (q == NULL)
-646       goto create_n_graft;
-647
-648   /* 这个魔法测试需要解释。
-649    * 我们知道，已经有一个子节点
-650      挂载到了这个父节点上，并且有两种选择：
-651      * 要么修改它，要么创建/嫁接一个节点。
-652      * 1. 只有在设置了 CREATE 和 REPLACE 标志时，我们才允许
-653      创建/嫁接。
-654    *
-655      * 2. 如果设置了 EXCL，即请求表示
-656      不预期 qdisc_tcm_handle 存在
-657      且存在，我们也选择创建/嫁接。
-658    *
-659
-      * 3. 最后一种情况是未设置标志。
-660      * 遗憾，这是 API 的缺陷，我们
-661      无法决定。
-662      * 目前，如果用户提供的 KIND
-663      不匹配，我们选择创建/嫁接。
-664    *
-665      if ((n->nlmsg_flags & NLM_F_CREATE) &&
-666          (n->nlmsg_flags & NLM_F_REPLACE) &&
-667          (n->nlmsg_flags & NLM_F_EXCL) ||
-668                  (tca[TCA_KIND-1] && rtatt_strcmp(tca[TCA_KIND-1], q->ops->id))) {
-669              goto create_n_graft;
-671
-674
-} {
 
-``````c
-677    if (tcm->tcm_handle)
-678        return -EINVAL;
-679        q = qdisc_lookup(dev, tcm->tcm_handle);
-680  }
-```
-
-```c
-682    /* 修改 qdisc 参数 */
-683    if (q == NULL)
-684        return -ENOENT;
-685    if (n->nlmsg_flags & NLM_F_EXCL)
-686        return -EEXIST;
-687    if (tca[TCA_KIND-1] && rtattr_strcmp(tca[TCA_KIND-1], q->ops->id)) {
-688        return -EINVAL;
-689    err = qdisc_change(q, tca);
-690    if (err == 0)
-691        qdisc_notify(skb, n, clid, NULL);
-692    return err;
-693 create_graft:
-695    if (!(n->nlmsg_flags & NLM_F_CREATE))
-696        return -ENOTSUP;
-697    if (clid == TCA_H_INGRESS)
-698        q = qdisc_create(dev, tcm->parent, tca);
-699    else
-700        q = qdisc_create(dev, tcm->tcm_handle, tca);
-701    if (q == NULL)
-702        return err;
-704 graft: {
-705    if (p) {
-706        struct qdisc *old_q = NULL;
-707        err = qdisc_graft(dev, p, clid, q, &old_q);
-708        if (err) {
-709            if (q) {
-710                spin_lock_bh(&dev->queue_lock);
-711                qdisc_destroy(q);
-712                spin_unlock_bh(&dev->queue_lock);
-713            }
-714            return err;
-715        }
-716        qdisc_notify(skb, n, clid, old_q);
-717    if (old_q) {
-718        spin_lock_bh(&dev->queue_lock);
-719        qdisc_destroy(old_q);
-720        spin_unlock_bh(&dev->queue_lock);
-721    }
-722
-    return 0;
-723  }
 
 # 转发
+
 # RTnetlink 到调度器接口
 
-图 9.108 调度器 API-通过 RT 报告统计：linux/net/sched/sch_api.c.
+图 9.108 调度器 API-通过 RT 报告统计：`linux/net/sched/sch_api.c`.
 
 ```c
 int qdisc_copy_stats(struct sk_buff *skb, struct nlmsghdr *n)
@@ -32410,7 +33468,7 @@ rtattr_failure:
 }
 ```
 
-# 图 9.109 调度器 API-消息：linux/net/sched/sch_api.c.
+# 图 9.109 调度器 API-消息：`linux/net/sched/sch_api.c`.
 
 ```c
 static int tc_fill_qdisc(struct sk_buff *skb, struct qdisc *q, u32 clid, u32 seq, int flags, int event)
@@ -32462,7 +33520,90 @@ rtattr_failure:
 }
 ```
 
-# 图 9.110 调度器 API-notify RTnetlink：linux/net/sched/sch_api.c.
+# 图 9.110 调度器 API-notify RTnetlink：`linux/net/sched/sch_api.c`.
+
+```c
+if (q == NULL)
+    goto create_n_graft;
+
+/* 这个魔法测试需要解释。
+ * 我们知道，已经有一个子节点
+   挂载到了这个父节点上，并且有两种选择：
+   * 要么修改它，要么创建/嫁接一个节点。
+   * 1. 只有在设置了 CREATE 和 REPLACE 标志时，我们才允许
+   创建/嫁接。
+   *
+   * 2. 如果设置了 EXCL，即请求表示
+   不预期 qdisc_tcm_handle 存在
+   且存在，我们也选择创建/嫁接。
+   *
+   * 3. 最后一种情况是未设置标志。
+   * 遗憾，这是 API 的缺陷，我们
+   无法决定。
+   * 目前，如果用户提供的 KIND
+   不匹配，我们选择创建/嫁接。
+   *
+   if ((n->nlmsg_flags & NLM_F_CREATE) &&
+       (n->nlmsg_flags & NLM_F_REPLACE) &&
+       (n->nlmsg_flags & NLM_F_EXCL) ||
+       (tca[TCA_KIND-1] && rtatt_strcmp(tca[TCA_KIND-1], q->ops->id))) {
+       goto create_n_graft;
+   }
+```
+
+```c
+if (tcm->tcm_handle)
+    return -EINVAL;
+q = qdisc_lookup(dev, tcm->tcm_handle);
+```
+
+```c
+/* 修改 qdisc 参数 */
+if (q == NULL)
+    return -ENOENT;
+if (n->nlmsg_flags & NLM_F_EXCL)
+    return -EEXIST;
+if (tca[TCA_KIND-1] && rtattr_strcmp(tca[TCA_KIND-1], q->ops->id)) {
+    return -EINVAL;
+}
+err = qdisc_change(q, tca);
+if (err == 0)
+    qdisc_notify(skb, n, clid, NULL);
+return err;
+
+create_graft:
+if (!(n->nlmsg_flags & NLM_F_CREATE))
+    return -ENOTSUP;
+if (clid == TCA_H_INGRESS)
+    q = qdisc_create(dev, tcm->parent, tca);
+else
+    q = qdisc_create(dev, tcm->tcm_handle, tca);
+if (q == NULL)
+    return err;
+
+graft:
+if (p) {
+    struct qdisc *old_q = NULL;
+    err = qdisc_graft(dev, p, clid, q, &old_q);
+    if (err) {
+        if (q) {
+            spin_lock_bh(&dev->queue_lock);
+            qdisc_destroy(q);
+            spin_unlock_bh(&dev->queue_lock);
+        }
+        return err;
+    }
+    qdisc_notify(skb, n, clid, old_q);
+    if (old_q) {
+        spin_lock_bh(&dev->queue_lock);
+        qdisc_destroy(old_q);
+        spin_unlock_bh(&dev->queue_lock);
+    }
+    return 0;
+}
+```
+
+
 
 ```c
 static int tc_notify(struct sk_buff *skb, struct nlmsghdr *n, u32 clid, struct qdisc *q)
@@ -32503,7 +33644,7 @@ err_out:
 }
 ```
 
-# 图 9.111 调度器 API-向 RT 导出统计：linux/net/sched/sch_api.c.
+# 图 9.111 调度器 API-向 RT 导出统计：`linux/net/sched/sch_api.c`.
 
 ```c
 static int tc_dump_qdisc(struct sk_buff *skb, struct netlink_callback *cb)
@@ -32527,9 +33668,6 @@ static int tc_dump_qdisc(struct sk_buff *skb, struct netlink_callback *cb)
                     continue;
 ```
 
-
-
-
 ```c
 817   cb->nlh->nlmsg_seq, NLM_F_MULTI, RTM_NEWQDISC) <= 0) {
 818       read_unlock(&qdisc_tree_lock);
@@ -32549,7 +33687,7 @@ static int tc_dump_qdisc(struct sk_buff *skb, struct netlink_callback *cb)
 832 }
 ```
 
-图 9.112 调度器 API–流量控制：linux/net/sched/sch_api.c。
+# 图 9.112 调度器 API–流量控制：`linux/net/sched/sch_api.c`。
 
 ```c
 842 static int tc_ctl_class(struct sk_buff *skb, struct nlmsghdr *n, void *arg)
@@ -32577,16 +33715,16 @@ static int tc_dump_qdisc(struct sk_buff *skb, struct netlink_callback *cb)
 864   parent = X:Y - 其中 X:0 是 qdisc（调度队列）。
 865   */
 866 
-866   handle = 0:0 - 从内核池生成句柄。
-867   handle = 0:Y - 类为 X:Y，其中 X:0 是 qdisc。
-868   handle = X:Y - 清空。
-869   handle = X:0 - 根类。
-870   */
+867   handle = 0:0 - 从内核池生成句柄。
+868   handle = 0:Y - 类为 X:Y，其中 X:0 是 qdisc。
+869   handle = X:Y - 清空。
+870   handle = X:0 - 根类。
+871   */
 ```
 
 # 738 TCP/IP 与 Linux 协议实现
 
-**图 9.113 调度器 API–流量类控制：linux/net/sched/sch_api.c。**
+## 图 9.113 调度器 API–流量类控制：`linux/net/sched/sch_api.c`。
 
 ```c
 /* 步骤 1. 确定 qdisc 句柄 X:0 */
@@ -32612,7 +33750,7 @@ if (pid == TC_H_ROOT) {
             qid = dev->qdisc_sleeping->handle;
 ```
 
-**图 9.114 调度器 API–流量类控制：linux/net/sched/sch_api.c。**
+## 图 9.114 调度器 API–流量类控制：`linux/net/sched/sch_api.c`。
 
 ```c
 /* 尝试获取类 * */
@@ -32635,6 +33773,11 @@ if (cl == 0) {
 
 # 向前 739
 
+
+
+# 9.115 调度器 API–流量控制
+`linux/net/sched/sch_api.c`
+
 ```c
 case RTM_NEWTCLASS:
     err = -EEXIST;
@@ -32655,7 +33798,8 @@ default:
 }
 ```
 
-图 9.115 调度器 API–流量控制：linux/net/sched/sch_api.c 
+# 9.116 调度器 API–流量报告到 Netlink
+`linux/net/sched/sch_api.c`
 
 ```c
 new_cl = cl;
@@ -32668,8 +33812,6 @@ out:
     return err;
 }
 ```
-
-图 9.116 调度器 API–流量报告到 Netlink：linux/net/sched/sch_api.c。
 
 ```c
 static int tc_dump_class(struct sk_buff *skb, struct netlink_callback *cb) {
@@ -32719,7 +33861,8 @@ static int tc_dump_class(struct sk_buff *skb, struct netlink_callback *cb) {
 
 代码现在执行包调度。
 
-# 9.117 调度器 API–包调度：linux/net/sched/sch_api.c。
+# 9.117 调度器 API–包调度
+`linux/net/sched/sch_api.c`
 
 ```c
 int psched_us_per_tick = 1;
@@ -32812,8 +33955,6 @@ int __init psched_calibrate_clock(void) {
 
 
 
-
-
 ```c
 1179 psched_us_per_tick = 1000000;
 1180 #ifdef PSCHED_WATCHER
@@ -32840,7 +33981,7 @@ int __init psched_calibrate_clock(void) {
 1201 }
 ```
 
-# 图 9.121 调度器 API–数据包调度初始化：linux/net/sched/sched.api.
+# 图 9.121 调度器 API–数据包调度初始化：`linux/net/sched/sched.api.`
 
 ```c
 #define INIT_QDIS(name) {\\
@@ -32852,7 +33993,7 @@ INIT_QDIS(pfifo);
 INIT_QDIS(bfifo);
 ```
 
-# 图 9.122 调度器 API–数据包调度初始化：linux/net/sched/sched.api.
+# 图 9.122 调度器 API–数据包调度初始化：`linux/net/sched/sched.api.`
 
 ```c
 #ifdef CONFIG_NET_SCH_CBQ
@@ -32910,7 +34051,7 @@ INIT_QDIS(hfsc);
 
 # 9.11.2 调度器框架
 
-9.123 数据包调度接口-QDisc 遍历定义：linux/include/net/pkt.sched.h.
+## 9.123 数据包调度接口-QDisc 遍历定义：`linux/include/net/pkt.sched.h.`
 
 ```c
 20
@@ -32923,7 +34064,7 @@ INIT_QDIS(hfsc);
 27 };
 ```
 
-# 图 9.124 数据包调度接口–QDisc 类操作：linux/include/net/pkt-sched.h.
+# 图 9.124 数据包调度接口–QDisc 类操作：`linux/include/net/pkt-sched.h.`
 
 ```c
 struct Qdisc_class_ops
@@ -32949,29 +34090,50 @@ struct Qdisc_class_ops
     *rtnetlink_function
     int (*dump)(struct Qdisc *, unsigned long, struct sk_buff *skb, struct
                tmsg);
-# 图 9.125 调度器接口–QDisc 操作：linux/include/net/pkt-sched.h.
+```
+
+# 图 9.125 调度器接口–QDisc 操作：`linux/include/net/pkt-sched.h.`
 
 ```c
+
 struct qdisc_class_ops(
+
     struct qdisc_ops *next;
+
     struct qdisc_class_ops *cl_ops;
+
     char id[IFNAMSIZ];
+
     int priv_size;
+
     int
+
     int (*enqueue)(struct sk_buff *, struct qdisc);
+
     int (*dequeue)(struct qdisc);
+
     int (*requeue)(struct sk_buff *, struct qdisc);
+
     int (*drop)(struct qdisc *);
 
     int (*init)(struct qdisc *, struct rtattr *arg);
+
     void (*reset)(struct qdisc);
+
     void (*destroy)(struct qdisc);
+
     int (*change)(struct qdisc *, struct rtattr *arg);
 
     int (*dump)(struct qdisc *, struct sk_buff *arg);
+```
 
 # 746 TCP/IP 和 Linux 协议实现
-# 图 9.126 调度器接口–QDisc 结构：linux/include/net/pkt.sched.h.
+
+# 图 9.126 调度器接口–QDisc 结构：`linux/include/net/pkt.sched.h.`
+
+
+
+# 图 9.127 调度器接口–QDisc 操作：`linux/include/net/pkt.sched.h`
 
 ```c
 struct qdisc
@@ -32998,7 +34160,7 @@ struct qdisc
     struct qdisc *parent;
     char data[0];
 };
-# 图 9.127 调度器接口–QDisc 操作：linux/include/net/pkt.sched.h.
+```
 
 ```c
 struct qdisc_rate_table
@@ -33052,7 +34214,7 @@ static inline unsigned long cls_set_class(unsigned long *clp, unsigned long cl)
 }
 ```
 
-# 图 9.128 调度器接口--时钟注释：linux/include/net/pkt_sched.h.
+# 图 9.128 调度器接口--时钟注释：`linux/include/net/pkt_sched.h`
 
 ```c
 /*
@@ -33060,15 +34222,15 @@ static inline unsigned long cls_set_class(unsigned long *clp, unsigned long cl)
     普通 IP 数据包大小为 512 字节，因此：
     0.5KB/Msec = 5ms，所以我们对 10Mbit 以太网使用 5usec 定时器。
     10nsec -> <50Kbit/sec。
-
-结果：不是 QoS 路由器的良好选择：情况并没有那么糟糕，因为我们可以在最关键的地方通过对网络数据流进行积分来评估人工时钟。```
+结果：不是 QoS 路由器的良好选择：情况并没有那么糟糕，因为我们可以在最关键的地方通过对网络数据流进行积分来评估人工时钟。
+*/
+```
 
 # 748 TCP/IP 和 Linux 协议实现
 
-注意：我们不使用 gettimeofday。
-原因是，当它与 gettimeofday 不一致时，它会返回无效的时间戳，且在 net_hb 激活时该戳不会更新。
+注意：我们不使用 `gettimeofday`。原因是，当它与 `gettimeofday` 不一致时，它会返回无效的时间戳，且在 `net_hb` 激活时该戳不会更新。
 
-因此，在 alpha 和带有 rtsc 的 pentium 处理器上使用 PSCHED_CLOCK_SOURCE = PSCHED_CPU。在其他架构上使用 PSCHED_JIFFIES。
+因此，在 alpha 和带有 `rtsc` 的 pentium 处理器上使用 `PSCHED_CLOCK_SOURCE = PSCHED_CPU`。在其他架构上使用 `PSCHED_JIFFIES`。
 
 ```c
 /*
@@ -33076,9 +34238,9 @@ static inline unsigned long cls_set_class(unsigned long *clp, unsigned long cl)
  */
 ```
 
-任何时钟源返回的时间间隔单位接近微秒。使用 PSCHED_GETTIMOFDAY 源时为微秒，否则为了最小化计算开销而选择其他。以分子/分母形式的使用/内部单位比例可以通过 /proc/net/sched 读取。
+任何时钟源返回的时间间隔单位接近微秒。使用 `PSCHED_GETTIMOFDAY` 源时为微秒，否则为了最小化计算开销而选择其他。以分子/分母形式的使用/内部单位比例可以通过 `/proc/net/sched` 读取。
 
-# 图 9.129 调度器 API：linux/net/sched/sch_api.c.
+# 图 9.129 调度器 API：`linux/net/sched/sch_api.c`
 
 ```c
 #ifdef CONFIG_RTNETLINK
@@ -33089,158 +34251,182 @@ static int tclass_notify(struct sk_buff *buff, struct nlmsghdr *n,
 #endif
 ```
 
-# 图 9.130 调度器 API–讨论：linux/net/sched/sch_api.c.
+# 图 9.130 调度器 API–讨论：`linux/net/sched/sch_api.c`
 
 ```c
 /*
 短期回顾。
-
 该文件包含两个相互关联的部分：
-
 +   1. 队列规则管理器前端。
 2. 流量类管理器前端。
-
 通常，队列规则（qdisc）是一个黑盒，它能够顺序入队数据包，并在设备准备好发送时按照隐藏算法规定的时间出队。
-
 qdisc 被分为两类：
-
 +   - “队列”，从外部看不到其内部结构。
 - “调度器”，将所有数据包分发到“流量类”。
+*/
 ```
-
-
-
-
 
 # 转发 749
 
-69 使用“数据包分类器”（查看 cls_api.c）
+69 使用“数据包分类器”（查看 `cls_api.c`）
 
-70 反之，类可能挂载了子 qdiscs（如规则、队列等）等等等。
+70 反之，类可能挂载了子 `qdiscs`（如规则、队列等）等等等。
 
-# 图 9.131 调度器 API--更多讨论：linux/net/sched/sch_api.c。
+# 图 9.131 调度器 API--更多讨论：`linux/net/sched/sch_api.c`
 
-该文件中函数的目的是是将真实用户以句柄（handles）形式提供的信息转换为内核更易理解的格式，进行一些完整性检查以及所有 qdisc 共同的部分工作，并提供 rtnlink 通知。
+该文件中函数的目的是是将真实用户以句柄（handles）形式提供的信息转换为内核更易理解的格式，进行一些完整性检查以及所有 `qdisc` 共同的部分工作，并提供 `rtnlink` 通知。
 
-所有的实际智能工作都在 qdisc 模块内部完成。
+所有的实际智能工作都在 `qdisc` 模块内部完成。
 
-# 图 9.132 调度器 API--更多讨论：linux/net/sched/sch_api.c。
+# 图 9.132 调度器 API--更多讨论：`linux/net/sched/sch_api.c`
 
-每个调度策略有两个主要的函数：入队（enqueue）和出（dequeue）。
+每个调度策略有两个主要的函数：入队（`enqueue`）和出（`dequeue`）。
 
 ### ---dequeue ---
 
-dequeue 通常返回一个要发送的 skb。它允许返回 NULL，但这并不意味着队列为空，只是意味着该调度策略这次不想发送任何内容。
+`dequeue` 通常返回一个要发送的 `skb`。它允许返回 `NULL`，但这并不意味着队列为空，只是意味着该调度策略这次不想发送任何内容。
 
-如果 q->qq.len == 0，则队列为空。对于具有多个 q->qq.len 的复杂调度策略，q->qq.len 并不是真实的包队列，但是 q->qq.len 必须是有效的。
+如果 `q->qq.len == 0`，则队列为空。对于具有多个 `q->qq.len` 的复杂调度策略，`q->qq.len` 并不是真实的包队列，但是 `q->qq.len` 必须是有效的。
 
 ### ---enqueue ---
 
-如果数据包成功入队，enqueue 返回 0。如果数据包（当前或另一个）被丢弃，它返回零错误代码。
+如果数据包成功入队，`enqueue` 返回 `0`。如果数据包（当前或另一个）被丢弃，它返回零错误代码。
 
 ```
 NET_XIT_DROP - 此数据包丢弃
 ```
-```
+
 预期操作：不要退避，而是等待队列清空。
-```
 
 ```
 NET_XIT_CN - 可能此数据包入队了，但另一个丢弃了。
 ```
 
-```
 预期操作：退避或忽略
-```
 
 ```
 NET_XIT_POLICED - 被策略丢弃。
 ```
 
-```
 预期操作：退避或向实时应用报告错误。
-```
 
-# 图 9.133 调度器 API--更多讨论：linux/net/sched/sch_api.c。
+# 图 9.133 调度器 API--更多讨论：`linux/net/sched/sch_api.c`
 
 辅助函数：
 
 ### ---enqueue ---
 
-重新入队已出队的数据包。它用于非标准或有 Bug 的设备，这些设备在 dev->tbusy=0 时输出可能有所不同。
+重新入队已出队的数据包。它用于非标准或有 Bug 的设备，这些设备在 `dev->tbusy=0` 时输出可能有所不同。
 
 # 750 TCP/IP Linux 协议实现
 
 ```c
 ---reset
 将 qdisc 恢复初始状态：清除所有缓冲区，清除所有定时器、计数器（统计信息外）等。
-
 ---init
 初始化新创建的 qdisc。
-
 ---destroy
-销毁由 init 和 qdisc 生命周期期间分配的资源。
+```
+
+
+
+销毁由 `init` 和 `qdisc` 生命周期期间分配的资源。
 
 ---change
-更改 qdisc 参数。
-```
+
+更改 `qdisc` 参数。
 
 # 通用调度器
 
 这是一个通用的调度器示例，旨在帮助澄清 API。
 
-**图 9.134** 通用调度器–队列调度策略锁注释：linux/net/sched/sch.generic.c。
+**图 9.134** 通用调度器–队列调度策略锁注释：`linux/net/sched/sch.generic.c`。
 
 ```c
+
 /*
+
 * 符合 GPL 2 许可证，或（根据您的选择）任何后续版本。
+
 * 作者: Alexey Kuznetsov, <kuznet@ms2.inr.ac.ru>
+
 * Jamil Hadi Salim, <hadis@nertelnetworks.com> 990601
+
 * 入口支持
+
  */
+
 ```
 
 ```c
+
 #include <asm/access.h>
+
 #include <asm/system.h>
+
 #include <asm/bitop.h>
+
 #include <linux/config.h>
+
 #include <linux/types.h>
+
 #include <linux/kernel.h>
+
 #include <linux/sched.h>
+
 #include <linux/string.h>
+
 #include <linux/mm.h>
+
 #include <linux/socket.h>
+
 #include <linux/sockio.h>
+
 #include <linux/in.h>
+
 #include <linux/errno.h>
+
 #include <linux/interrupt.h>
+
 #include <linux/netdevice.h>
+
 #include <linux/skbuff.h>
+
 #include <linux/rtnetlink.h>
+
 #include <linux/init.h>
+
 #include <net/sock.h>
+
 #include <net/pkt_sched.h>
+
 /* 主传输队列。 */
+
 /* 主 qdisc 结构锁。 */
-```然而，对数据的修改必须额外由 dev->queue_lock 保护。
+
+```
+然而，对数据的修改必须额外由 `dev->queue_lock` 保护。
 
 思路是：
-- enqueue, dequeue 通过顶层设备自旋锁 dev->queue_lock 序列。
-- 树遍历受 read_lock(qdisc_tree_lock) 保护。
+- `enqueue`, `dequeue` 通过顶层设备自旋锁 `dev->queue_lock` 序列。
+- 树遍历受 `read_lock(qdisc_tree_lock)` 保护。
 - 树的更新仅在信号量下进行，因此此锁可能在关闭本地中断的情况下使用。
 
-qdisc_tree_lock 必须在 dev->queue_lock **之前** 获取！
+`qdisc_tree_lock` 必须在 `dev->queue_lock` **之前** 获取！
 
 ```c
+
 /*
+
 lock_t qdisc_tree_lock = RW_LOCK_UNLOCKED;
+
 dev->queue_lock 序列化对设备和 qdisc 指针的访问。
 
 dev->xmit_lock 序列化对设备的访问。
+
 dev->queue_lock 和 dev->xmit_lock 是互斥的，如果一个被获取，另一个必须释放。 */
 
-**图 9.135** 通用调度器：linux/net/sched/sch_generic.c。
+**图 9.135** 通用调度器：`linux/net/sched/sch_generic.c`。
 
 ```c
 /* 设备触发。
@@ -33252,48 +34438,81 @@ dev->queue_lock 和 dev->xmit_lock 是互斥的，如果一个被获取，另一
 
 注意：在本地禁用 dev->queue_lock 时调用。 */
 
-# 图 9.136 通用调度器 i：linux/net/sched/sch_generic.c。
+# 图 9.136 通用调度器 i：`linux/net/sched/sch_generic.c`。
 
 ```c
+
 int qdisc_restart(struct net_device *dev)
+
 {
+
     struct qdisc *q = dev->qdisc;
+
     struct sk_buff *skb;
 
     /* 出队包 */
+
     if ((skb = q->dequeue(q)) != NULL) {
+
         if (spin_try_lock(&dev->xmit_lock)) {
+
             /* 记住驱动被我们获取 */
+
             dev->xmit_owner = processor_id();
+
             /* 释放队列 */
+
             spin_unlock(&dev->queue_lock);
+
             if (netif_queue_stopped(dev)) {
+
                 dev_queue_xmit(skb, dev);
 
                 if (dev->hard_start_xmit(skb, dev) == 0) {
+
                     dev->xmit_owner = -1;
+
                     spin_unlock(&dev->xmit_lock);
+
                 }
+
             }
+
         }
+
     }
+
     /* 释放驱动 */
+
     dev->xmit_owner = -1;
+
     spin_unlock(&dev->xmit_lock);
+
     spin_lock(&dev->queue_lock);
+
     q = dev->qdisc;
+
 } else {
+
     /* 所以，有人获取了驱动。
+
     /* 当 hard_start_xmit() 递归时，我们通过检查 xmit owner 并检测到丢弃了包。 */
+
     if (dev->xmit_owner == processor_id()) {
+
         dev_kfree_skb(skb);
+
         if (!ratelimit())
+
             printk(KERN_DEBUG, "Dead loop on netdevice %s, fix it!", dev->name);
+
         return -1;
+
     }
+
     dev->xmit_stat[processor_id]++;
 
-# 图 9.137 通用调度器 ii：linux/net/sched/sch_generic.c。
+# 图 9.137 通用调度器 ii：`linux/net/sched/sch_generic.c`。
 
 ```c
 /* 设备踢：
@@ -33306,54 +34525,90 @@ q->ops->requeue(skb, q);
 netif_schedule(dev)
 return 1;
 
-# 图 9.138 通用调度器--定时狗定时器：linux/net/sched/sch_generic.c。
+# 图 9.138 通用调度器--定时狗定时器：`linux/net/sched/sch_generic.c`。
 
 ```c
+
 static void dev_watchdog(unsigned long arg)
+
 {
+
     struct net_device *dev = (struct net_device*)arg;
 
     spin_lock(&dev->xmit_lock);
+
     if (dev->qdisc != NULL_qdisc) {
+
         if (netif_dev_present(dev) &&
+
         netif_running(dev) &&
+
         netif_carrier_ok(dev)) {
+
             if (netif_queue_stopped(dev) > dev->watchdog_timeout) {
+
                 if (jiffies - dev->hard_start_xmit(dev) > dev->watchdog_timeout)
+
                     printk(KERN_INFO "NETDEV WATCHDOG: %s: timed out\n", dev->name);
+
                     dev_tx_timeout(dev);
+
             }
+
         }
+
         if (!mod_timer(dev->watchdog_timer, jiffies + dev->watchdog_timeout))
+
             dev_hold(dev);
+
     }
+
     spin_unlock(&dev->xmit_lock);
+
     dev_put(dev);
+
 }
 
 static void dev_watchdog_init(struct net_device *dev)
+
 {
+
     init_timer(dev->watchdog_timer);
+
     dev->watchdog_timer.data = (unsigned long)dev;
+
     dev->watchdog_timer.function = dev_watchdog;
+
 }
 
 void __netdev_watchdog_up(struct net_device *dev)
-{
-    if (dev->xmit_timeout) {
-        if (dev->watchdog_timeout <= 0)
-            dev->watchdog_timeout = 5HZ;
-        if (mod_timer(&dev->watchdog_timeout, jiffies + dev->watchdog_timeout))
-            dev_hold(dev);
-    }
-}
 
+{
+
+    if (dev->xmit_timeout) {
+
+        if (dev->watchdog_timeout <= 0)
+
+
+
+`dev->watchdog_timeout = 5HZ;`
+
+```c
+if (mod_timer(&dev->watchdog_timeout, jiffies + dev->watchdog_timeout))
+    dev_hold(dev);
+}
+}
+```
+
+```c
 static void dev_watchdog_up(struct net_device *dev) {
     spin_lock_bh(&dev->xmit_lock);
     __netdev_watchdog_up(dev);
     spin_unlock_bh(&dev->xmit_lock);
 }
+```
 
+```c
 static void dev_watchdog_down(struct net_device *dev) {
     spin_lock_bh(&dev->xmit_lock);
     if (dev->watchdog_timer)
@@ -33364,10 +34619,6 @@ static void dev_watchdog_down(struct net_device *dev) {
 
 # 图 9.139 通用调度器-noop 调度器：linux/net/sched/generic.c。
 
-
-
-
-
 # 图 9.140 通用调度器——操作：linux/net/sched/sch_generic.c。
 
 ```c
@@ -33376,7 +34627,6 @@ struct qdisc_ops nop_qdisc_ops = {
     NULL,
     "noop",
     0,
-
     noop_enqueue,
     noop_dequeue,
     noop_requeue,
@@ -33392,7 +34642,6 @@ struct qdisc_ops noqueue_qdisc_ops = {
     NULL,
     "noqueue",
     0,
-
     noop_enqueue,
     noop_dequeue,
     noop_requeue,
@@ -33412,24 +34661,19 @@ struct qdisc_ops noqueue_qdisc = {
 ```c
 static const u8 prioband[TC_PRIO_MAX+1] =
     { 1, 2, 2, 2, 1, 2, 0, 0, 1, 1, 1, 1, 1, 1, 1 };
-
 /* 3 带 PFIFO 队列：旧样式，但应该比
    generic prio+fifo 组合快一点。 */
-
 static int
     pfifo_fast_enqueue(struct sk_buff *skb, struct qdisc *qdisc)
 {
     struct sk_buff_head *list;
-
     list = ((struct sk_buff_head*)qdisc)->data +
            prioband[skb->priority&TC_PRIO_MAX];
-
     if (list->qlen < skb->dev->tx_queue_len) {
         __skb_dequeue_tail(list, skb);
         qdisc->qlen++;
         return 0;
     }
-
     qdisc->stats.drops++;
     kfree(skb);
     return NET_XMIT_DROP;
@@ -33445,7 +34689,6 @@ pfifo_fast_dequeue(struct qdisc *qdisc)
     int prio;
     struct sk_buff_head *list = ((struct sk_buff_head*)qdisc)->data;
     struct sk_buff *skb;
-
     for (prio = 0; prio < 3; prio++) {
         skb = __skb_dequeue(list);
         if (skb) {
@@ -33455,12 +34698,10 @@ pfifo_fast_dequeue(struct qdisc *qdisc)
     }
     return NULL;
 }
-
 static int
     pfifo_fast_request(struct sk_buff *skb, struct qdisc *qdisc)
 {
     struct sk_buff_head *list;
-
     list = ((struct sk_buff_head*)qdisc)->data +
            prioband[skb->priority&TC_PRIO_MAX];
 ```
@@ -33473,7 +34714,6 @@ static int
 319   qdisc->qlen++;
 320   return 0;
 321 }
-322
 ```
 
 ```c
@@ -33508,25 +34748,22 @@ static int
 
 ```c
 347 static qdisc_ops pfifo_fast_ops = {
-348
 349   NULL,
 350   NULL,
 351   "pfifo_fast",
 352   3 * sizeof(struct sk_buff_head),
-353
 354   pfifo_fast_enqueue,
 355   pfifo_fast_dequeue,
 356   pfifo_fast_requeue,
 357   NULL,
-358
 359   pfifo_fast_init,
 360   pfifo_fast_reset,
-361 };
+};
 ```
 
 # 758 TCP/IP 与 Linux 协议实现
 
-图 9.144 通用调度器—创建默认：linux/net/sched/sch_generic.c
+# 图 9.144 通用调度器—创建默认：linux/net/sched/sch_generic.c
 
 ```c
 struct qdisc *qdisc_create(struct net_device *dev, struct qdisc_ops *ops)
@@ -33541,138 +34778,10 @@ struct qdisc *qdisc_create(struct net_device *dev, struct qdisc_ops *ops)
     sch->enqueue = ops->enqueue;
     sch->dequeue = ops->dequeue;
     sch->dev = dev;
-    sch->stats.lock = &dev->queue_lock;
-    atomic_set(&sch->refcnt, 1);
-    if (ops->init || ops->init(sch, NULL) == 0)
-        return sch;
-    kfree(sch);
-    return NULL;
-}
 ```
 
-# 转发 757
 
-```c
-317
-318   __skb_queue_head(list, skb);
-319   qdisc->qlen++;
-320   return 0;
-321 }
-322
-```
 
-```c
-323 static void
-324   pfifo_fast_reset(struct qdisc* qdisc)
-325 {
-326
-327   int prio;
-328   struct sk_buff_head *list = ((struct sk_buff_head*)qdisc)->data;
-329
-330   for (prio=0; prio < 3; prio++)
-331     skb_queue_purge(list,prio);
-332     qdisc->qlen = 0;
-333 }
-```
-
-```c
-334 static pfifo_fast_init(struct qdisc *qdisc, struct rt_opt *opt)
-335 {
-336   int i;
-337   struct sk_buff_head *list;
-338   list = ((struct sk_buff_head*)qdisc)->data;
-339
-340   for (i=0; i<3; i++)
-341     skb_queue_head_init(list+i);
-342
-343   return 0;
-344 }
-```
-
-# 图 9.143 通用调度器—FIFO 声明：linux/net/sched/sch_generic.c。
-
-```c
-347 static qdisc_ops pfifo_fast_ops = {
-348
-349   NULL,
-350   NULL,
-351   "pfifo_fast",
-352   3 * sizeof(struct sk_buff_head),
-353
-354   pfifo_fast_enqueue,
-355   pfifo_fast_dequeue,
-356   pfifo_fast_requeue,
-357   NULL,
-358
-359   pfifo_fast_init,
-360   pfifo_fast_reset,
-361 };
-```
-
-# 转发 757
-
-```c
-317
-318   __skb_queue_head(list, skb);
-319   qdisc->qlen++;
-320   return 0;
-321 }
-322
-```
-
-```c
-323 static void
-324   pfifo_fast_reset(struct qdisc* qdisc)
-325 {
-326
-327   int prio;
-328   struct sk_buff_head *list = ((struct sk_buff_head*)qdisc)->data;
-329
-330   for (prio=0; prio < 3; prio++)
-331     skb_queue_purge(list,prio);
-332     qdisc->qlen = 0;
-333 }
-```
-
-```c
-334 static pfifo_fast_init(struct qdisc *qdisc, struct rt_opt *opt)
-335 {
-336   int i;
-337   struct sk_buff_head *list;
-338   list = ((struct sk_buff_head*)qdisc)->data;
-339
-340   for (i=0; i<3; i++)
-341     skb_queue_head_init(list+i);
-342
-343   return 0;
-344 }
-```
-
-# 图 9.143 通用调度器—FIFO 声明：linux/net/sched/sch_generic.c。
-
-```c
-347 static qdisc_ops pfifo_fast_ops = {
-348
-349   NULL,
-350   NULL,
-351   "pfifo_fast",
-352   3 * sizeof(struct sk_buff_head),
-353
-354   pfifo_fast_enqueue,
-355   pfifo_fast_dequeue,
-356   pfifo_fast_requeue,
-357   NULL,
-358
-359   pfifo_fast_init,
-360   pfifo_fast_reset,
-361 };
-```
-
-(注：由于提供的文本中存在大量重复和截断内容，上述翻译严格遵循指令逻辑对给定片段进行了处理，但由于输入文本包含多个重复的示例代码和段落，此处按逻辑顺序进行翻译。)
-
-**重新整理完整逻辑内容的翻译：**
-
-[content]
 # 图 9.140 通用调度器——操作：linux/net/sched/sch_generic.c。
 
 ```c
@@ -33681,27 +34790,28 @@ struct qdisc_ops nop_qdisc_ops = {
     NULL,
     "noop",
     0,
-
     noop_enqueue,
     noop_dequeue,
     noop_requeue,
 };
+
 struct qdisc_ops nop_qdisc = {
     noop_enqueue,
     noop_dequeue,
     TCQ_F_BUILTIN,
     &noop_qdisc_ops,
 };
+
 struct qdisc_ops noqueue_qdisc_ops = {
     NULL,
     NULL,
     "noqueue",
     0,
-
     noop_enqueue,
     noop_dequeue,
     noop_requeue,
 };
+
 struct qdisc_ops noqueue_qdisc = {
     NULL,
     noop_dequeue,
@@ -33717,24 +34827,19 @@ struct qdisc_ops noqueue_qdisc = {
 ```c
 static const u8 prioband[TC_PRIO_MAX+1] =
     { 1, 2, 2, 2, 1, 2, 0, 0, 1, 1, 1, 1, 1, 1, 1 };
-
 /* 3 带 PFIFO 队列：旧样式，但应该比
    generic prio+fifo 组合快一点。 */
-
 static int
     pfifo_fast_enqueue(struct sk_buff *skb, struct qdisc *qdisc)
 {
     struct sk_buff_head *list;
-
     list = ((struct sk_buff_head*)qdisc)->data +
            prioband[skb->priority&TC_PRIO_MAX];
-
     if (list->qlen < skb->dev->tx_queue_len) {
         __skb_dequeue_tail(list, skb);
         qdisc->qlen++;
         return 0;
     }
-
     qdisc->stats.drops++;
     kfree(skb);
     return NET_XMIT_DROP;
@@ -33750,40 +34855,93 @@ pfifo_fast_dequeue(struct qdisc *qdisc)
     int prio;
     struct sk_buff_head *list = ((struct sk_buff_head*)qdisc)->data;
     struct sk_buff *skb;
-
     for (prio = 0; prio < 3; prio++) {
         skb = __skb_dequeue(list);
         if (skb) {
-            qdisc->qlen--;
-            return skb;
-        }
-    }
-    return NULL;
-}
-
-static int
-    pfifo_fast_request(struct sk_buff *skb, struct qdisc *qdisc)
-{
-    struct sk_buff_head *list;
-
-    list = ((struct sk_buff_head*)qdisc)->data +
-           prioband[skb->priority&TC_PRIO_MAX];
 ```
 
 # 转发 757
 
+```c
+__skb_queue_head(list, skb);
+qdisc->qlen++;
+return 0;
+}
+```
+
+```c
+static void
+  pfifo_fast_reset(struct qdisc* qdisc)
+{
+  int prio;
+  struct sk_buff_head *list = ((struct sk_buff_head*)qdisc)->data;
+  for (prio=0; prio < 3; prio++)
+    skb_queue_purge(list,prio);
+    qdisc->qlen = 0;
+}
+```
+
+```c
+static pfifo_fast_init(struct qdisc *qdisc, struct rt_opt *opt)
+{
+  int i;
+  struct sk_buff_head *list;
+  list = ((struct sk_buff_head*)qdisc)->data;
+  for (i=0; i<3; i++)
+    skb_queue_head_init(list+i);
+  return 0;
+}
+```
+
+# 图 9.143 通用调度器—FIFO 声明：linux/net/sched/sch_generic.c。
+
+```c
+static qdisc_ops pfifo_fast_ops = {
+  NULL,
+  NULL,
+  "pfifo_fast",
+  3 * sizeof(struct sk_buff_head),
+  pfifo_fast_enqueue,
+  pfifo_fast_dequeue,
+  pfifo_fast_requeue,
+  NULL,
+  pfifo_fast_init,
+  pfifo_fast_reset,
+};
+```
+
+
+
+# 转发 757
+
+```c
+qdisc->qlen--;
+
+return skb;
+}
+}
+return NULL;
+}
+```
+
+```c
+static int
+pfifo_fast_request(struct sk_buff *skb, struct qdisc *qdisc)
+{
+struct sk_buff_head *list;
+list = ((struct sk_buff_head*)qdisc)->data +
+prioband[skb->priority&TC_PRIO_MAX];
+```
 ```c
 317
 318   __skb_queue_head(list, skb);
 319   qdisc->qlen++;
 320   return 0;
 321 }
-322
 ```
-
 ```c
 323 static void
-324   pfifo_fast_reset(struct qdisc* qdisc)
+  pfifo_fast_reset(struct qdisc* qdisc)
 325 {
 326
 327   int prio;
@@ -33794,7 +34952,6 @@ static int
 332     qdisc->qlen = 0;
 333 }
 ```
-
 ```c
 334 static pfifo_fast_init(struct qdisc *qdisc, struct rt_opt *opt)
 335 {
@@ -33809,29 +34966,26 @@ static int
 344 }
 ```
 
-# 图 9.143 通用调度器—FIFO 声明：linux/net/sched/sch_generic.c。
+## 图 9.143 通用调度器—FIFO 声明：`linux/net/sched/sch_generic.c`
 
 ```c
 347 static qdisc_ops pfifo_fast_ops = {
-348
 349   NULL,
 350   NULL,
 351   "pfifo_fast",
 352   3 * sizeof(struct sk_buff_head),
-353
 354      ifo_fast_enqueue,
 355   pfifo_fast_dequeue,
 356   pfifo_fast_requeue,
 357   NULL,
-358
 359   pfifo_fast_init,
 360   pfifo_fast_reset,
-361 };
+};
 ```
 
 # 758 TCP/IP 与 Linux 协议实现
 
-图 9.144 通用调度器—创建默认：linux/net/sched/sch_generic.c
+## 图 9.144 通用调度器—创建默认：`linux/net/sched/sch_generic.c`
 
 ```c
 struct qdisc *qdisc_create(struct net_device *dev, struct qdisc_ops *ops)
@@ -33855,10 +35009,7 @@ struct qdisc *qdisc_create(struct net_device *dev, struct qdisc_ops *ops)
 }
 ```
 
-
-
-
-# 图 9.151 CBQ类结构定义 iv：linux/net/sched/sch_cbq.c。
+## 图 9.151 CBQ类结构定义 iv：`linux/net/sched/sch_cbq.c`
 
 ```c
 psched_time_t      undertime;
@@ -33874,7 +35025,7 @@ struct cbq_class   *defaults[TC_PRID_MAX+1];
 };
 ```
 
-# 图 9.152 CBQ–调度数据转发：linux/net/sched/sch_cbq.c。
+## 图 9.152 CBQ–调度数据转发：`linux/net/sched/sch_cbq.c`
 
 ```c
 struct cbq_sched_data
@@ -33905,7 +35056,7 @@ u32               generator;
 
 # 实际分类器
 
-# 图 9.153 CBQ–分类器：linux/net/sched/cbq.c。
+## 图 9.153 CBQ–分类器：`linux/net/sched/cbq.c`
 
 /* 分类数据包。该过程相当复杂，它允许我们透明地结合链路共享和优先级。具体来说，你可以将链路共享规则（例如基于路由的）放在 CBQ 的根节点，以便其解析为拆分节点。然后数据包根据逻辑优先级进行分类，或者在拆分节点上附加更具体的分类器。 */
 
@@ -33918,29 +35069,42 @@ static struct cbq_class cbq_classifier(struct sk_buff *skb, struct qdisc *sch)
     struct cbq_class *cl = NULL;
     u32 prio = skb->priority;
     struct tc_result *res;
-
     /* 步骤1. 如果 skb->priority 指向我们的类之一，则使用它。 */
     if (TC_HJ(prio) == 0 && (cl = cbq_class_lookup(q, prio)) != NULL)
         return cl;
-
     for (;;) {
         int result = 0;
-        defmap = head->defaults;
+```
 
-        /* 步骤2. 应用分类器。 */
-        if (head->filter_list (res = tc_classify(skb, filter_list, &res)) < 0)
-            goto fallback;
 
-        if ((cl = (void*)res->class) != NULL) {
-            if (TC_HMJ(res->class))
-                cl = cbq_class_lookup(q, res->class);
-            else if ((cl = defmap[res->class&TC_PRIO_MAX]) != NULL)
-                cl = defmap[TC_PRIO_BESTEFFORT];
-        }
 
-        if (cl == NULL || cl->level >= head->level)
-            goto fallback;
-    }
+```c
+defmap = head->defaults;
+
+/* 步骤2. 应用分类器。 */
+
+if (head->filter_list (res = tc_classify(skb, filter_list, &res)) < 0)
+
+    goto fallback;
+
+if ((cl = (void*)res->class) != NULL) {
+
+    if (TC_HMJ(res->class))
+
+        cl = cbq_class_lookup(q, res->class);
+
+    else if ((cl = defmap[res->class&TC_PRIO_MAX]) != NULL)
+
+        cl = defmap[TC_PRIO_BESTEFFORT];
+
+}
+
+if (cl == NULL || cl->level >= head->level)
+
+    goto fallback;
+
+}
+
 }
 ```
 
@@ -33948,24 +35112,39 @@ static struct cbq_class cbq_classifier(struct sk_buff *skb, struct qdisc *sch)
 
 ```c
 #ifdef CONFIG_NET_CLS_POLICE
+
     switch (result) {
+
         case TC_POLICE_RECLASSIFY:
+
             return cbq_reclassify(skb, cl);
+
         case TC_POLICE_SHOT:
+
             return NULL;
+
     }
+
 }
+
 #endif
+
 if (cl->level == 0)
+
     return cl;
 
 /* 步骤3. 如果分类器选择了链路共享类，则应用特定代理的分类器。重复此过程直到遇到叶子节点。 */
+
 head = cl;
 
 fallback:
+
 cl = head;
+
 /* 步骤4. 未成功... */
+
 if (TC_HMJ(prio) == 0 && !(cl = head->defaults[prio&TC_PRIO_MAX]) && !(cl = head->defaults[TC_PRIO_BESTEFFORT]))
+
     return head;
 
 return cl;
@@ -33975,14 +35154,19 @@ return cl;
 
 ```c
 static struct cbq_class *cbq_reclassify(struct sk_buff *skb, struct cbq_class *this)
+
 {
+
     struct cbq_class *cl, *new;
 
     for (cl = this->tparent; cl; cl = cl->tparent)
+
         if ((new = cl->defaults[TC_PRIO_BESTEFFORT]) != NULL && new != this)
+
             return new;
 
 return NULL;
+
 }
 ```
 
@@ -33990,6 +35174,7 @@ return NULL;
 
 # 图 9.156 CBQ–激活或去激活类：linux/net/sched/sch_cbq.c。
 
+```c
 /* 数据包刚入队空类。cbq_activate_class 将其添加到对应优先级活动列表的末尾。 */
 static __inline_ void cbq_activate_class(struct cbq_class *cl)
 {
@@ -34007,35 +35192,58 @@ static __inline_ void cbq_activate_class(struct cbq_class *cl)
         cl->next_alive = cl;
         q->activemask |= (1<<prio);
     }
+}
 ```
 
 # 图 9.157 CBQ–激活或去激活类：linux/net/sched/sch_cbq.c。
 
+```c
 /* 从活动链中取消链接。注意此过程直接在轮询调度中执行。 */
+
 static void cbq_deactivate_class(struct cbq_class *this)
+
 {
+
     struct cbq_sched_data *q = (struct cbq_sched_data*)this->qdisc->data;
+
     int prio = cl->priority;
+
     struct cbq_class *cl;
+
     struct cbq_class *cl_prev = q->active[prio];
 
     do {
+
         cl = cl_prev->next_alive;
+
         if (cl == this) {
+
             cl_prev->next_alive = cl->next_alive;
+
             cl->next_alive = NULL;
 
             if (cl == q->active[prio]) {
+
                 q->active[prio] = NULL;
+
                 q->activemask &= ~(1<<prio);
+
                 return;
+
             }
+
             }
+
             cl = cl_prev->next_alive;
+
             return;
+
         }
+
     } while (cl_prev != q->active[prio]);
+
 }
+```
 
 # 标记类
 
@@ -34080,6 +35288,8 @@ static int cbq_enqueue(struct sk_buff *skb, struct qdisc *sch)
 
 # TCP/IP 和 Linux 协议实现
 
+
+
 ```c
 q->rx_class = cl;
 #endif
@@ -34108,7 +35318,7 @@ if (cl) {
 }
 ```
 
-# 图 9.160 CBQ–重新队列：linux/net/sched/sch_cbq.c。
+# 图 9.160 CBQ–重新队列：`linux/net/sched/sch_cbq.c`。
 
 ```c
 static int cbq_requeue(struct sk_buff *skb, struct *disc, struct *sch)
@@ -34148,10 +35358,6 @@ static int cbq_requeue(struct sk_buff *skb, struct *disc, struct *sch)
 }
 ```
 
-
-
-
-
 # 转发 767
 
 ```c
@@ -34165,7 +35371,7 @@ static int cbq_requeue(struct sk_buff *skb, struct *disc, struct *sch)
 
 这里是超限函数。
 
-# 9.161 CBQ–超限：linux/net/sched/cbq.c。
+## 9.161 CBQ–超限：`linux/net/sched/cbq.c`。
 
 ```c
 /* 超限动作 *
@@ -34205,7 +35411,7 @@ if (q->toplevel == TC_CBQ_MAXLEVEL) {
     psched_tiff_t base_delay = q->wd_expires;
 ```
 
-# 768 TCP/IP 和 Linux 协议实现
+## 768 TCP/IP 和 Linux 协议实现
 
 ```c
 499
@@ -34223,7 +35429,7 @@ if (q->toplevel == TC_CBQ_MAXLEVEL) {
 511}
 ```
 
-图 9.162 CBQ-超限：校正：linux/net/sched/sch_cbq.c。
+### 图 9.162 CBQ-超限：校正：`linux/net/sched/sch_cbq.c`。
 
 ```c
 513  /* T_TC_CBQ_OVL_RCLASSIC: 当层级结构中的类超限时，
@@ -34247,7 +35453,11 @@ if (q->toplevel == TC_CBQ_MAXLEVEL) {
 531  }
 ```
 
-图 9.163 CBQ-超限：延迟：linux/net/sched/sch_cbq.c。
+### 图 9.163 CBQ-超限：延迟：`linux/net/sched/sch_cbq.c`。
+
+
+
+# 768 TCP/IP 和 Linux 协议实现
 
 ```c
 534  /* T_TC_CBQ_OVL_DELAY: 延迟直到其低于下限 */
@@ -34262,38 +35472,31 @@ if (q->toplevel == TC_CBQ_MAXLEVEL) {
 543
 544          delay += cl->offtime;
 545
-546          delay (5->
-
-55555555555555555555->->->0)
-549          delay (cl->->->->->->ew->->log;
-550          if (cl->avglide < 0minimum
-551              delay -=clcl->avglide)
- (55->avglide)
-5->55->55
-5if (cl->avglide) 0)5555cl->avglide =->->0;
-55
-          if (cl->avglide < cl->minimum)
-556              cl->avglide = cl->minimum;
-557          if (delay < 0)
-558              delay = 1;
-559          PSCHED_TADD(q->now, delay, cl->undertime);
-
-560
-561    cl->stats.operations++;
-562    cl->delayed = 1;
-563 }
-if (q->wd_expires == 0 || q->wd_expires > delay)
-564    q->wd_expires = delay;
-
-565 /* 脏活！必须根据实际可用速率
-566    调度唤醒，而不是根据叶速率，
-567    因为后者可能非常微小（甚至为零）。*/
-if (q->toplevel == TC_CBQ_MAXLEVEL) {
-568    struct cbq_class *b;
-569    psched_tiff_t base_delay = q->wd_expires;
+546          /*
+          类进入睡眠，这样它没有机会执行 avglide。让我们忘记它吧 8)
+          顺便说一下 cbq-2.0 在这个地方非常糟糕，显然他们忘记了通过 cl->ewma_log 进行位移。
+          */
+547          if (cl->avglide < 0)
+              delay -= (-cl->avglide) >> ((-cl->avglide) >> cl->ewma_log);
+548          if (cl->avglide < cl->minimum)
+              cl->avglide = cl->minimum;
+549          if (delay < 0)
+              delay = 1;
+550          PSCHED_TADD(q->now, delay, cl->undertime);
+551
+552          cl->stats.operations++;
+553          cl->delayed = 1;
+554      }
+555      if (q->wd_expires == 0 || q->wd_expires > delay)
+556          q->wd_expires = delay;
+557
+558      /* 脏活！必须根据实际可用速率调度唤醒，而不是根据叶速率，因为后者可能非常微小（甚至为零）。*/
+559      if (q->toplevel == TC_CBQ_MAXLEVEL) {
+560          struct cbq_class *b;
+561          psched_tiff_t base_delay = q->wd_expires;
 ```
 
-# 768 TCP/IP 和 Linux 协议实现
+图 9.162 CBQ-超限：校正：`linux/net/sched/sch_cbq.c`。
 
 ```c
 499
@@ -34303,7 +35506,7 @@ if (q->toplevel == TC_CBQ_MAXLEVEL) {
 503          if (delay <= 0) {
 504              delay = 1;
 505              base_delay = delay;
-506
+506          }
 507      }
 508  }
 509  q->wd_expires = delay;
@@ -34311,83 +35514,27 @@ if (q->toplevel == TC_CBQ_MAXLEVEL) {
 511}
 ```
 
-图 9.162 CBQ-超限：校正：linux/net/sched/sch_cbq.c。
+图 9.163 CBQ-超限：延迟：`linux/net/sched/sch_cbq.c`。
 
 ```c
-513  /* T_TC_CBQ_OVL_RCLASSIC: 当层级结构中的类超限时，
-514  通过偏移时间对其进行惩罚
-515  */
-516  static void cbq_ovl_rclassic(struct cbq_class *cl)
-517  {
-518      struct cbq_shared_data *q = (struct cbq_shared_data *q)->cl->qdisc->data;
-519      struct cbq_class *this = cl;
-520
-521      do {
-522          if (cl->level > q->tolevel) {
-523              cl = NULL;
-524              break;
-525          }
-526      } while ((cl = cl->borrow) != NULL);
-527
-528      if (cl == NULL) {
-529          cl = this;
-530          cbq_ovl_classic(cl);
-531  }
+513  /* T_TC_CBQ_OVL_RCLASSIC: 当层级结构中的类超限时，通过偏移时间对其进行惩罚 */
+514  static void cbq_ovl_rclassic(struct cbq_class *cl)
+515  {
+516      struct cbq_shared_data *q = (struct cbq_shared_data *q)->cl->qdisc->data;
+517      struct cbq_class *this = cl;
+518
+519      do {
+520          if (cl->level > q->tolevel) {
+521              cl = NULL;
+522              break;
+523          }
+524      } while ((cl = cl->borrow) != NULL);
+525
+526      if (cl == NULL) {
+527          cl = this;
+528          cbq_ovl_classic(cl);
+529      }
 ```
-
-图 9.163 CBQ-超限：延迟：linux/net/sched/sch_cbq.c。
-
-```c
-534  /* T_TC_CBQ_OVL_DELAY: 延迟直到其低于下限 */
-535
-536  static void cbq_ovl_delay(struct cbq_class *cl)
-537  {
-538      struct cbq_shared_data *q = (struct cbq_shared_data *q)->cl->qdisc->data;
-539      psched_tdiff.t delay = PSCHED_TDIFF(cl->undertime, q->now);
-540
-541      if (!cl->deloaded) {
-542          unsigned long sched = jiffies;
-543
-544          delay += cl->offtime;
-545
-546          delay (5->
-55555555555555555555->->->
-547555555555
-/*
-类进入睡眠，这样它没有机会
-        执行 avglide。让我们忘记它吧 8)
-        顺便说一下 cbq-2.0 在这个地方
-        非常糟糕，显然他们忘记了通过 cl->ewma_log 进行位移。
-*/
-548        if (cl->avglide < 0)
-            delay -= (-cl->avglide) >> ((-cl->avglide) >> cl->ewma_log);
-        if (cl->avglide < cl->minimum)
-            cl->avglide = cl->minimum;
-        if (delay < 0)
-            delay = 1;
-        PSCHED_TADD(q->now, delay, cl->undertime);
-
-550    cl->stats.operations++;
-551    cl->delayed = 1;
-}
-if (q->wd_expires == 0 || q->wd_expires > delay)
-    q->wd_expires = delay;
-
-552 /* 脏活！必须根据实际可用速率
-53    调度唤醒，而不是根据叶速率，
-54    因为后者可能非常微小（甚至为零）。*/
-if (q->toplevel == TC_CBQ_MAXLEVEL) {
-    struct cbq_class *b;
-    psched_tiff_t base_delay = q->wd_expires;
-```
-
-[/content]
-
-**注：** 抱歉，由于你提供的原始文本中存在大量的重复和乱码字符（我注意到文本中出现了多次重复的代码块和错误的字符组合），我已根据逻辑对内容进行了清理和翻译。
-
-以下是清理后的中文译文：
-
-[content]
 
 # 转发 767
 
@@ -34402,7 +35549,11 @@ if (q->toplevel == TC_CBQ_MAXLEVEL) {
 
 这里是超限函数。
 
-# 9.161 CBQ–超限：linux/net/sched/cbq.c。
+# 9.161 CBQ–超限：`linux/net/sched/cbq.c`
+
+
+
+# 768 TCP/IP 和 Linux 协议实现
 
 ```c
 /* 超限动作 *
@@ -34442,7 +35593,7 @@ if (q->toplevel == TC_CBQ_MAXLEVEL) {
     psched_tiff_t base_delay = q->wd_expires;
 ```
 
-# 768 TCP/IP 和 Linux 协议实现
+## 图 9.162 CBQ-超限：校正：linux/net/sched/sch_cbq.c
 
 ```c
 499
@@ -34460,7 +35611,7 @@ if (q->toplevel == TC_CBQ_MAXLEVEL) {
 511}
 ```
 
-图 9.162 CBQ-超限：校正：linux/net/sched/sch_cbq.c。
+## 图 9.163 CBQ-超限：延迟：linux/net/sched/sch_cbq.c
 
 ```c
 513  /* T_TC_CBQ_OVL_RCLASSIC: 当层级结构中的类超限时，
@@ -34484,7 +35635,7 @@ if (q->toplevel == TC_CBQ_MAXLEVEL) {
 531  }
 ```
 
-图 9.163 CBQ-超限：延迟：linux/net/sched/sch_cbq.c。
+## 图 9.170 CBQ--更新每一层的占用情况 i: linux/net/sched/sch_cbq.c
 
 ```c
 534  /* T_TC_CBQ_OVL_DELAY: 延迟直到其低于下限 */
@@ -34500,10 +35651,7 @@ if (q->toplevel == TC_CBQ_MAXLEVEL) {
 544          delay += cl->offtime;
 ```
 
-
 然后我们将此操作传播到每一层。
-
-# 图 9.170 CBQ--更新每一层的占用情况 i: linux/net/sched/sch_cbq.c.
 
 ```c
 static void
@@ -34544,7 +35692,7 @@ cbcq_update(struct cbq_sched_data *q)
 }
 ```
 
-# 图 9.171 CBQ--更新每一层的占用情况 ii: linux/net/sched/sch_cbq.c.
+## 图 9.171 CBQ--更新每一层的占用情况 ii: linux/net/sched/sch_cbq.c
 
 ```c
 if (avglide < cl->minwidth)
@@ -34576,7 +35724,9 @@ PSCHED_DIFF(idle);
 PSCHED_ADD(q->now, idle, cl->undertime);
 ```
 
-# 图 9.172 CBQ--更新每一层的占用情况: linux/net/sched/sch_cbq.c.
+## 图 9.172 CBQ--更新每一层的占用情况: linux/net/sched/sch_cbq.c
+
+
 
 ```c
 } else {
@@ -34643,8 +35793,9 @@ int deficit;
 cl_tail = cl_prev = q->active[prio];
 cl = cl_prev->next_alive;
 do
+```
 
-```正在出队列的数据包是哪一个？
+正在出队列的数据包是哪一个？
 
 # 图 9.174 CBQ--按优先级调度 i: linux/net/sched/sch_cbq.c.
 
@@ -34777,7 +35928,9 @@ cbq_dequeue_i(struct qdisc *sch)
 }
 ```
 
-# 图 9.179 CBQ–主出队列函数: linux/net/sched/sch_cbq.c.
+
+
+# 图 9.179 CBQ–主出队列函数: `linux/net/sched/sch_cbq.c`
 
 ```c
 static struct sk_buff *
@@ -34811,10 +35964,7 @@ cbq_dequeue(struct qdisc *sch)
 }
 ```
 
-
-
-
-# 图 9.180 CBQ-main 出队函数：linux/net/sched/sch_cbq.c.
+# 图 9.180 CBQ-main 出队函数：`linux/net/sched/sch_cbq.c`
 
 ```c
 for (;;) {
@@ -34850,7 +36000,7 @@ for (;;) {
 }
 ```
 
-# 图 9.181 CBQ-main 出队函数：linux/net/sched/sch_cbq.c.
+# 图 9.181 CBQ-main 出队函数：`linux/net/sched/sch_cbq.c`
 
 ```c
 /* 调度器中没有包，或者没有人想把包交给我们 :-
@@ -34872,7 +36022,7 @@ if (sch->qlen) {
 }
 ```
 
-# 图 9.182 CBQ-维护函数：linux/net/sched/sch_cbq.c.
+# 图 9.182 CBQ-维护函数：`linux/net/sched/sch_cbq.c`
 
 ```c
 /* CBQ 类维护程序 */
@@ -34898,7 +36048,7 @@ static void cbq_adjust_levels(struct cbq_class *this)
 
 我们初始化 CBQ 机制。
 
-# 图 9.183 CBQ-初始化 CBQ i：linux/net/sched/sch_cbq.c.
+# 图 9.183 CBQ-初始化 CBQ i：`linux/net/sched/sch_cbq.c`
 
 ```c
 static int cbq_init(struct cbq_class *tb, struct qdisc *qdisc, struct rtattr *opt)
@@ -34922,7 +36072,7 @@ static int cbq_init(struct cbq_class *tb, struct qdisc *qdisc, struct rtattr *op
 }
 ```
 
-# 图 9.184 CBQ-初始化 CBQ ii：linux/net/sched/sch_cbq.c.
+# 图 9.184 CBQ-初始化 CBQ ii：`linux/net/sched/sch_cbq.c`
 
 ```c
 q->link.refcnt = 1;
@@ -34946,7 +36096,9 @@ if (!(q->link.q = qdisc_create_dflt(sch->dev, &pfifo_qdisc_ops))) {
 }
 ```
 
-# 图 9.185 CBQ-初始化 CBQ iii：linux/net/sched/sch_cbq.c.
+# 图 9.185 CBQ-初始化 CBQ iii：`linux/net/sched/sch_cbq.c`
+
+
 
 ```c
 init_timer(&q->wd_timer);
@@ -34970,7 +36122,7 @@ if (tb[TC_CBQ_LSSOPT]) {
 
 现在我们管理整个系统。
 
-# 图 9.186 CBQ-剪入与裁剪类 i：linux/net/sched/sch_cbq.c.
+## 图 9.186 CBQ-剪入与裁剪类 i：`linux/net/sched/sch_cbq.c`
 
 ```c
 static int cbq_graft(struct Qdisc *sch, unsigned long arg, struct Qdisc *new,
@@ -34999,7 +36151,7 @@ static int cbq_graft(struct Qdisc *sch, unsigned long arg, struct Qdisc *new,
 }
 ```
 
-# 图 9.187 CBQ-剪入与裁剪类 ii：linux/net/sched/sch_cbq.c.
+## 图 9.187 CBQ-剪入与裁剪类 ii：`linux/net/sched/sch_cbq.c`
 
 ```c
 static struct Qdisc *cbq_leaf(struct Qdisc *sch, unsigned long arg)
@@ -35019,7 +36171,7 @@ static unsigned long cbq_get(struct Qdisc *sch, u32 classid)
 }
 ```
 
-# 图 9.188 CBQ-剪入与裁剪类 iii：linux/net/sched/sch_cbq.c.
+## 图 9.188 CBQ-剪入与裁剪类 iii：`linux/net/sched/sch_cbq.c`
 
 ```c
 static void cbq_destroy_filters(struct cbq_class *cl)
@@ -35043,7 +36195,7 @@ static void cbq_destroy_class(struct cbq_class *cl)
 }
 ```
 
-# 图 9.189 CBQ：linux/net/sched/sch_cbq.c.
+## 图 9.189 CBQ：`linux/net/sched/sch_cbq.c`
 
 ```c
 static int
@@ -35092,7 +36244,11 @@ cbq_change_class(struct Qdisc *sch, u32 classid, u32 parent, struct rtattr *tca,
     }
 ```
 
-# 图 9.190 CBQ：linux/net/sched/sch_cbq.c.
+## 图 9.190 CBQ：`linux/net/sched/sch_cbq.c`
+
+
+
+# 图 9.191 CBQ: linux/net/sched/cbq.c。
 
 ```c
     /* Change class parameters */
@@ -35117,39 +36273,63 @@ cbq_change_class(struct Qdisc *sch, u32 classid, u32 parent, struct rtattr *tca,
 }
 ```
 
-
-
-
 1845
+
 if (tb[TCA_CBQ_OVI_STRATEGY-1]) {
+
 1846
+
     cbq_set_overlimit(cl, RTA_DATA(tb[TCA_CBQ_OVL_STRATEGY-1]));
+
 1847
+
 #ifdef CONFIG_NET_CLS_POLICE
+
 1848
+
     if (tb[TCA_CBQ_POLICE-1]) {
+
 1849
+
         cbq_set_policy(cl, RTA_DATA(tb[TCA_CBQ_POLICE-1]));
+
     }
+
 1850
+
 1851
+
     if (tb[TCA_CBQ_FOPT-1]) {
+
 1852
+
         cbq_set_fopt(cl, RTA_DATA(tb[TCA_CBQ_FOPT-1]));
+
     }
+
 1853
+
 #endif
+
 1854
+
 1855
+
     cbq_activate_class(cl);
+
 1856
+
 1857
+
 1858
+
     sch_tree_unlock(sch);
+
 1859
+
 1860
 
-# 图 9.191 CBQ: linux/net/sched/cbq.c。
+# 图 9.192 CBQ: linux/net/sched/sch_cbq.c。
 
 ```c
 #ifdef CONFIG_NET_CLS_RATE
@@ -35197,8 +36377,7 @@ if (classid) {
         classid = classid->qhgenerator;
     }
 }
-
-# 图 9.192 CBQ: linux/net/sched/sch_cbq.c。
+```
 
 parent = &q->link;
 if (parentid) {
@@ -35270,117 +36449,195 @@ if (tb[TCA_RATE-1]) {
 #endif
 return 0;
 }
-
 failure:
 qdisc_put_rtab(rtab);
 return err;
 }
 ```
-(注：由于提供的原文中包含大量代码重复和逻辑片段，上述翻译已严格遵循“不要重复输出原文”的原则，仅对代码中的注释和结构性描述进行了处理。根据您的要求，针对特定文本内容的完整翻译如下：)
 
-[content]
-# 图 9.191 CBQ: linux/net/sched/cbq.c。
 
-```c
-#ifdef CONFIG_NET_CLS_RATE
-if (tb[TCA_RATE-1]) {
-    qdisc_kill_estimator(cl->stats);
-    qdisc_new_estimator(cl->stats, tb[TCA_RATE-1]);
+
+`qdisc_new_estimator(cl->stats, tb[TCA_RATE-1]);`
+
 }
+
 #endif
+
 return 0;
+
 }
 
 if (parentid == TC_H_ROOT) {
+
     return -EINVAL;
+
 }
+
 return -EINVAL;
 
 if (tb[TCA_CBQ_WRROPT-1] == NULL || tb[TCA_CBQ_RATE-1] == NULL) {
+
 if (tb[TCA_CBQ_LSSOPT-1] == NULL) {
+
     return -EINVAL;
-}
-}
-rtab = qdisc_get_rtab(RTA_DATA(tb[TCA_CBQ_RATE-1]), tb[TCA_CBQ_RTAB-1]);
-if (rtab == NULL) {
-    return -EINVAL;
-}
-if (classid) {
-    err = -EINVAL;
-    if (TC_H_MAJ(classid->sch->handle) || cbq_class_lookup(q, classid)) {
-        goto failure;
-    } else {
-        int i;
-        classid = TC_H_MAKE(sch->handle, 0x8000);
-        for (i=0; i<0x8000; i++) {
-            if ((q->hgenerator) >= 0x8000) {
-                q->hgenerator = 1;
-            }
-            if (cbq_class_lookup(q, classid|q->hgenerator) == NULL) {
-                break;
-            }
-        }
-        err = -ENOSR;
-        if (i >= 0X0000) {
-            goto failure;
-        }
-        classid = classid->qhgenerator;
-    }
+
 }
 
-# 图 9.192 CBQ: linux/net/sched/sch_cbq.c。
+}
+
+rtab = qdisc_get_rtab(RTA_DATA(tb[TCA_CBQ_RATE-1]), tb[TCA_CBQ_RTAB-1]);
+
+if (rtab == NULL) {
+
+    return -EINVAL;
+
+}
+
+if (classid) {
+
+    err = -EINVAL;
+
+    if (TC_H_MAJ(classid->sch->handle) || cbq_class_lookup(q, classid)) {
+
+        goto failure;
+
+    } else {
+
+        int i;
+
+        classid = TC_H_MAKE(sch->handle, 0x8000);
+
+        for (i=0; i<0x8000; i++) {
+
+            if ((q->hgenerator) >= 0x8000) {
+
+                q->hgenerator = 1;
+
+            }
+
+            if (cbq_class_lookup(q, classid|q->hgenerator) == NULL) {
+
+                break;
+
+            }
+
+        }
+
+        err = -ENOSR;
+
+        if (i >= 0X0000) {
+
+            goto failure;
+
+        }
+
+        classid = classid->qhgenerator;
+
+    }
+
+}
+
+# 图 9.192 CBQ: `linux/net/sched/sch_cbq.c`。
 
 parent = &q->link;
+
 if (parentid) {
+
     parent = cbq_class_lookup(q, parentid);
+
     err = -EINVAL;
+
     if (parent == NULL) {
+
         goto failure;
+
     }
-}
-err = -ENOMEM;
-cl = kmalloc(size(*cl), GFP_KERNEL);
-if (cl == NULL) {
-    goto failure;
-}
-memset(cl, 0, size(*cl));
-cl->R_tab = rtab;
-rtab = NULL;
-if ((cl->qdisc = qdisc_create(sch->dev, &pifo_qdisc_ops))) {
-    cl->node = knop_qdisc;
-    cl->classid = classid;
-    cl->tparent = parent;
-    cl->qdisc = sch;
-    cl->allot = parent->allot;
-    cl->quantum = cl->allot;
-    cl->weight = cl->rate;
-    cl->stats.lock = sch->dev->queue_lock;
-}
-sch_tree_lock(sch);
-cbq_link_class(cl);
-cl->borrow = cl->tparent;
-if (cl->tparent == &q->link) {
-    cl->share = cl->tparent;
-}
-cbq_adjust_levels(parent);
-cl->minidle = -0x7FFFF;
-rtab_set_les(cl, RTA_DATA(tb[TCA_CBQ_LSOPTT-1]));
-cbq_set_rr(cl, RTA_DATA(tb[TCA_CBQ_WRROPT-1]));
-if (cl->locked) {
-    cl->ewma_log = q->link.ewma_log;
-    if (cl->maxidle==0) {
-        cl->maxidle = q->link.maxidle;
-    }
-    if (cl->avpkt==0) {
-        cl->avpkt = q->link.avpkt;
-    }
-    cl->overlimit = cbq_classic;
-    if (tb[TCA_CBQ_OVL_STRATEGY-1]) {
-        cbq_overlimit(cl, RTA_DATA(tb[TCA_CBQ_OVL_STRATEGY-1]));
-    }
+
 }
 
-# 图 9.193 CBQ: linux/net/sched/sch_cbq.c。
+err = -ENOMEM;
+
+cl = kmalloc(size(*cl), GFP_KERNEL);
+
+if (cl == NULL) {
+
+    goto failure;
+
+}
+
+memset(cl, 0, size(*cl));
+
+cl->R_tab = rtab;
+
+rtab = NULL;
+
+if ((cl->qdisc = qdisc_create(sch->dev, &pifo_qdisc_ops))) {
+
+    cl->node = knop_qdisc;
+
+    cl->classid = classid;
+
+    cl->tparent = parent;
+
+    cl->qdisc = sch;
+
+    cl->allot = parent->allot;
+
+    cl->quantum = cl->allot;
+
+    cl->weight = cl->rate;
+
+    cl->stats.lock = sch->dev->queue_lock;
+
+}
+
+sch_tree_lock(sch);
+
+cbq_link_class(cl);
+
+cl->borrow = cl->tparent;
+
+if (cl->tparent == &q->link) {
+
+    cl->share = cl->tparent;
+
+}
+
+cbq_adjust_levels(parent);
+
+cl->minidle = -0x7FFFF;
+
+rtab_set_les(cl, RTA_DATA(tb[TCA_CBQ_LSOPTT-1]));
+
+cbq_set_rr(cl, RTA_DATA(tb[TCA_CBQ_WRROPT-1]));
+
+if (cl->locked) {
+
+    cl->ewma_log = q->link.ewma_log;
+
+    if (cl->maxidle==0) {
+
+        cl->maxidle = q->link.maxidle;
+
+    }
+
+    if (cl->avpkt==0) {
+
+        cl->avpkt = q->link.avpkt;
+
+    }
+
+    cl->overlimit = cbq_classic;
+
+    if (tb[TCA_CBQ_OVL_STRATEGY-1]) {
+
+        cbq_overlimit(cl, RTA_DATA(tb[TCA_CBQ_OVL_STRATEGY-1]));
+
+    }
+
+}
+
+# 图 9.193 CBQ: `linux/net/sched/sch_cbq.c`。
 
 ```c
 #ifdef CONFIG_NET_CLS_POLICE
@@ -35406,13 +36663,10 @@ qdisc_put_rtab(rtab);
 return err;
 }
 ```
-
-
-
 
 # 790 TCP/IP 与 Linux 协议实现
 
-## 9.197 CSZ 离开时间：linux/net/sched/sch_csz.c。
+## 9.197 CSZ 离开时间：`linux/net/sched/sch_csz.c`。
 
 我们计算到数据包最后一个比特位发送所需的时间：
 
@@ -35421,6 +36675,7 @@ E_a^i(t) = \{ m_a(t) - \delta_a(t) / r_a \},
 ```
 
 其中 $\delta_a(t)$ 是自 $t_i$ 以来排出的比特位数量。
+
 我们对所有队列中的数据包求值 $E_a^i$，然后找到 $E_a^i$ 最小的数据包并发送它。
 
 这听起来很不错，但直接实现该算法是完全不可行的。坦率地说，如果流速率是按比例缩放的，这些方程有非常简单的解。
@@ -35431,14 +36686,16 @@ E_a^i(t) = \{ m_a(t) - \delta_a(t) / r_a \},
 d E_a(t) / dt = \{ d \delta_a(t) / dt \} \{ i / r_a \} =
 B / \sum(in \in A) r_a
 ```
+
 其初始条件为
+
 ```
 E_a^i(t_i) = \{ m_a(t_i) / r_a \}.
 ```
 
 让我们引入一个辅助函数 $R(t)$：
 
-## 9.198 CSZ--轮：linux/net/sched/sch_csz.c。
+## 9.198 CSZ--轮：`linux/net/sched/sch_csz.c`。
 
 ```
 --- 轮数。
@@ -35446,8 +36703,11 @@ E_a^i(t_i) = \{ m_a(t_i) / r_a \}.
 
 因此，当 $S_a$ 不改变时，$R(t)$（轮数）是时间的单调递增线性函数
 ```
+
 d R(t) / dt = \{ i / \sum(in \in A) r_a \}
-```
+
+
+
 当 $S_a$ 变化时它是连续的。
 
 核心旋转在于，数量 $F_a^i R(t) = F_a(t)/R(t)$ 完全不依赖于时间！$R(t)$ 不依赖于流，因此 $F_a$ 可以在数据包到达时计算一次，我们不需要重新计算 $S_a$ 数字和排序队列。
@@ -35457,7 +36717,7 @@ d R(t) / dt = \{ i / \sum(in \in A) r_a \}
 
 流上的最大完成数被称为流的完成数，最小的“流起始数”。相应地，当且仅当 $F_a \leq R$ 时，流是活跃的。
 
-## 9.199 CSZ-轮：linux/net/sched/sch_csz.c。
+## 9.199 CSZ-轮：`linux/net/sched/sch_csz.c`。
 
 当长度为 $L_i$ 比特的数据包在时间 $t_i$ 到达 $s$ 时，我们计算 $F_a^i$ 为：
 
@@ -35468,7 +36728,7 @@ $F_a^i = F_a + \{L_i / B \cdot r_a\}$
 
 这些方程完成了算法规范。
 
-## 9.200 CSZ 讨论：linux/net/sched/sch_csz.c。
+## 9.200 CSZ 讨论：`linux/net/sched/sch_csz.c`。
 
 它看起来相当复杂，但求解这些方程有一个简单的程序。参见 `csz_update()` 过程，它是 S. Keshav 论文第 3 章《公平队列的高效实现》中算法的泛化。
 
@@ -35476,7 +36736,7 @@ $F_a^i = F_a + \{L_i / B \cdot r_a\}$
 
 - 我们实现了 CSZ 最简单的变体，即流-i 是一个显式的带宽优先级流。这并不好，但为了实现 CSZ，除了“出队（dequeue）”还需要“查看（peek）”操作。我不想这样做，除非是绝对必要的。
 
-## 9.201 CSZ 讨论：linux/net/sched/sch_csz.c。
+## 9.201 CSZ 讨论：`linux/net/sched/sch_csz.c`。
 
 - 令牌桶过滤的原始级支持也出现了。它直接与 CSZ 冲突，尽管互联网已经遍布全球 :-) “网络边缘”确实存在。
 
@@ -35506,7 +36766,7 @@ bfio_enqueue(struct sk_buff *skb, struct Qdisc *sch)
 }
 ```
 
-# 图 9.204 FIFO 队列调度器--重队：linux/net/sched/sch_fifo.c。
+# 图 9.204 FIFO 队列调度器--重队：`linux/net/sched/sch_fifo.c`。
 
 ```c
 static int
@@ -35530,7 +36790,7 @@ struct sk_buff *skb;
 }
 ```
 
-# 图 9.206 FIFO 调度器--丢弃：linux/net/sched/sch_fifo.c。
+# 图 9.206 FIFO 调度器--丢弃：`linux/net/sched/sch_fifo.c`。
 
 ```c
 static int
@@ -35544,8 +36804,9 @@ fifo_drop(struct Qdisc)
     }
     return 0;
 }
+```
 
-# 图 9.207 FIFO 调度器--重置：linux/net/sched/sch_fifo.c。
+# 图 9.207 FIFO 调度器--重置：`linux/net/sched/sch_fifo.c`。
 
 ```c
 {
@@ -35570,7 +36831,7 @@ fifo_drop(struct Qdisc)
 
 然后我们也有那些函数的版本。
 
-# 图 9.208 FIFO 队列调度器--重队：linux/net/sched/sch_fifo.c。
+# 图 9.208 FIFO 队列调度器--重队：`linux/net/sched/sch_fifo.c`。
 
 ```c
 static int
@@ -35595,7 +36856,7 @@ pfifo_enqueue(struct sk_buff *skb, struct qdisc *sch)
 }
 ```
 
-# 图 9.209 FIFO 队列调度器--重队：linux/net/sched/sch_fifo.c。
+# 图 9.209 FIFO 队列调度器--重队：`linux/net/sched/sch_fifo.c`。
 
 ```c
 static int
@@ -35607,7 +36868,7 @@ pfifo_requeue(struct sk_buff *skb, struct qdisc *sch)
 }
 ```
 
-# 图 9.210 FIFO 队列调度器--出队：linux/net/sched/sch_fifo.c。
+# 图 9.210 FIFO 队列调度器--出队：`linux/net/sched/sch_fifo.c`。
 
 ```c
 static struct sk_buff *
@@ -35617,7 +36878,7 @@ pfifo_dequeue(struct qdisc *sch)
 }
 ```
 
-# 图 9.211 FIFO 队列调度器--初始化：linux/net/sched/sch_fifo.c。
+# 图 9.211 FIFO 队列调度器--初始化：`linux/net/sched/sch_fifo.c`。
 
 ```c
 {
@@ -35641,26 +36902,26 @@ pfifo_dequeue(struct qdisc *sch)
 这就是系统如何估计速率的。
 
 /* 此代码并非旨在用于统计收集，
-   它的目的是为控制负载服务提供基础。
-   如果你只需要统计数据，请运行一个定期读取计数器的级守护进程。 */
 
-我们在 $A=(1\ll1)$ 秒内测量速率并评估 EWMA：
+
+
+它的目的是为控制负载服务提供基础。
+
+如果你只需要统计数据，请运行一个定期读取计数器的级守护进程。*/
+
+我们在 `$A=(1\ll1)$` 秒内测量速率并评估 EWMA：
 
 ```
 avrate = avrate*(1-W) + rate=W
 ```
 
-其中 $W$ 被选择为 2 的负幂：$W = 2^{-ewma\_log}$
+其中 `$W$` 被选择为 2 的负幂：`$W = 2^{-ewma\_log}$`
 
 产生的时间常数是：
 
 ```
 T = A/-ln(1-W)
 ```
-
-
-
-
 
 # 转发 797
 
@@ -35699,7 +36960,7 @@ mod_timer(&elist[idx].timer, jiffies + ((HZ/4)<idx));
 read_unlock(&est_lock);
 ```
 
-# 9.215 速率估计器–添加用于估计的运行时定时器：linux/net/sched/estimator.c。
+# 9.215 速率估计器–添加用于估计的运行时定时器：`linux/net/sched/estimator.c`
 
 ```c
 int qdisc_new_estimator(struct tc_stats *stats, struct rattr *opt)
@@ -35746,7 +37007,7 @@ int qdisc_new_estimator(struct tc_stats *stats, struct rattr *opt)
 170  }
 ```
 
-**图 9.216** 速率估计器–用于估计的定时器例程：linux/net/scheduler.c。
+**图 9.216** 速率估计器–用于估计的定时器例程：`linux/net/scheduler.c`
 
 ```c
 172  void qdisc_kill_estimator(struct tc_stats *stats)
@@ -35778,9 +37039,9 @@ int qdisc_new_estimator(struct tc_stats *stats, struct rattr *opt)
 197  }
 ```
 
-**在这里我们看到了流量整形器函数的实现样式。**
+在这里我们看到了流量整形器函数的实现样式。
 
-**图 9.217** 流量整形器 i：linux/net/sched/police.c。
+**图 9.217** 流量整形器 i：`linux/net/sched/police.c`
 
 ```c
 34  #define L2T(p,L) ((p)->R_tab->data(L)->p)->R_tab->rate.cell_log)
@@ -35829,7 +37090,9 @@ int qdisc_new_estimator(struct tc_stats *stats, struct rattr *opt)
 69 }
 ```
 
-**图 9.218** 流量整形器 ii–销毁：linux/net/sched/police.c。
+
+
+# 图 9.218 流量整形器 ii–销毁：`linux/net/sched/police.c`
 
 ```c
 73 void tcf_police_destroy(struct tcf_police *p)
@@ -35856,368 +37119,503 @@ int qdisc_new_estimator(struct tc_stats *stats, struct rattr *opt)
 93     }
 94     BUG_ON(0);
 95 }
+```
 
-# 9.210 流量整形器 iii–查找：linux/net/sched/police.c。
+# 9.210 流量整形器 iii–查找：`linux/net/sched/police.c`
 
 ```c
+
 struct tcf_police *tcf_police_locate(struct rttattr *rta, struct rattr *opt)
+
 {
+
     unsigned h;
+
     struct tcf_police *p;
+
     struct qdisc_estimator *est;
+
     struct tc_estimator *param;
 
     h = tcf_police_hash(rta->index);
+
     read_lock_bh(&police_lock);
+
     for (p = tcf_police_ht[h]; p; p = p->next) {
+
         if (p->index == rta->index) {
+
             read_unlock_bh(&police_lock);
+
             return p;
+
         }
+
     }
+
     read_unlock_bh(&police_lock);
 
     return NULL;
+
 }
 
 struct tcf_police *tcf_police_new(struct rttattr *rta, struct rattr *opt)
+
 {
+
     struct tcf_police *p;
+
     struct qdisc_estimator *est;
 
     p = kmalloc(sizeof(*p), GFP_KERNEL);
+
     if (!p)
+
         return NULL;
 
     p->index = rta->index;
+
     p->R_tab = rta->R_tab;
+
     p->P_tab = rta->P_tab;
+
     p->interval = rta->interval;
+
     p->ewma_log = rta->ewma_log;
 
     write_lock_bh(&police_lock);
+
     p->next = tcf_police_ht[h];
+
     tcf_police_ht[h] = p;
+
     write_unlock_bh(&police_lock);
 
     return p;
+
 }
+
 ```
 
-
-
-
-
-# 图 9.225 入站队列-树处理：linux/net/sched/sch_ingress.c。
+# 图 9.225 入站队列-树处理：`linux/net/sched/sch_ingress.c`
 
 ```c
+
 56 static int ingress_graft(struct Qdisc *sch, unsigned long arg,
+
 57                              struct Qdisc *new,struct Qdisc *old)
+
 58 {
+
 59     #ifdef DEBUG_INGRESS
+
 60         struct ingress_qdisc_data *p = PRIV(sch);
+
 61     #endif
+
 62 
+
 63     DPRINTK("ingress_graft(sch %p,[qdisc %p],new %p,old %p)\n",
+
 64             sch, p, new, old);
+
 65     DPRINTK("\n ingress_graft: You cannot add qdiscs to classes");
+
 66     return 1;
+
 67 }
+
 68 
+
 70 static struct Qdisc *ingress_leaf(struct Qdisc *sch, unsigned long arg)
+
 71 {
+
 72     return NULL;
+
 73 }
+
 74 
+
 76 static unsigned long int ingress_get(struct Qdisc *sch,u32 classid)
+
 77 {
+
 78     #ifdef DEBUG_INGRESS
+
 79         struct ingress_qdisc_data *p = PRIV(sch);
+
 80     #endif
+
 81     DPRINTK("\ningress_get(sch %p,[qdisc %p],classid %x)\n", sch, p, classid);
+
 82     return TC_R_MIN(classid) + 1;
+
 83 }
+
 84 
+
 86 static unsigned long int ingress_bind_filter(struct Qdisc *sch,
+
 87                               unsigned long parent,u32 classid)
+
 88 {
+
 89     return ingress_get(sch, classid);
+
 90 }
+
 91 
+
 93 static void ingress_put(struct Qdisc *sch, unsigned long cl)
+
 94 {
+
 95 }
+
 ```
 
 ## 804 TCP/IP 与 Linux 协议实现
 
 ## 转发
 
-图 9.226 入站队列-更改参数：linux/net/sched/sch_ingress.c。
+# 图 9.226 入站队列-更改参数：`linux/net/sched/sch_ingress.c`
 
 ```c
+
 98 static int ingress_change(struct qdisc *sch, u32 classid, u32 parent,
+
 99               struct rtattr **tca, unsigned long *arg)
+
 100 {
+
 101     #ifdef DEBUG_INGRESS
+
 102     struct ingress_qdisc_data *p = PRIV(sch);
+
 103     #endif
+
 104     DPRINTK("ingress_change(sch %xp, [qdisc %xp],class %x, parent %x, %arg)",
+
 105             arg%02lx\n", sch, p, classid, parent, arg);
+
 106     DPRINTK("No effect, sch_ingress doesn't maintain classes at the moment");
+
 107     return 0;
+
 108 }
+
 ```
 
-图 9.227 入站队列遍历树：linux/net/sched/sch_ingress.c。
+# 图 9.227 入站队列遍历树：`linux/net/sched/sch_ingress.c`
 
 ```c
+
 112 static void ingress_walk(struct qdisc *sch,struct qdisc_data *walker)
+
 113 {
+
 114     #ifdef DEBUG_INGRESS
+
 115     struct ingress_qdisc_data *p = PRIV(sch);
+
 116     #endif
+
 117     DPRINTK("ingress_walk(sch %xp, [qdisc %xp].walker %xp)\n", sch, p, walker);
+
 118     DPRINTK("No effect, sch_ingress doesn't maintain classes at the moment");
+
 119 }
-122 static struct tcf_proto **ingress_find_tcf(struct qdisc *sch,unsigned long cl)
-123 {
-125     struct ingress_qdisc_data *p = PRIV(sch);
-126     return &p->filter_list;
-127 }
 ```
 
-图 9.228 入站队列入队：struct_qdisc:linux/net/sched/sch_ingress.c。
+
+
+## 图 9.228 入站队列入队：`struct_qdisc:linux/net/sched/sch_ingress.c`
 
 ```c
-133 static int ingress_enqueue(struct sk_buffer *skb,struct qdisc *sch)
-134 {
-135     struct ingress_qdisc_data *p = PRIV(sch);
-136     struct tcf_result *res;
-137     int result;
-139     DPRINTK("ingress_enqueue(skb %xp, [qdisc %xp])\n", skb, sch);
-140     result = tc_classify(skb, p->filter_list, &res);
-142     /
-143     DPRINTK("Xd class 0x%04x\n", result, classid);
-144 /*
-145     * 与普通的 "enqueue" 函数不同，ingress_enqueue 返回一个
-146     * 防火墙 FW 码。
-147     */
-148     switch (result) {
-149     #ifdef CONFIG_NET_CLS_POLICE
-150         case TC_POLICY_SHOT:
-149     result = NF_DROP;
-150     break;
-151     case TC_POLICE_RECLASSI: /* 此处标记 DSCP ? */
-152     case TC_POLICE_OK:
-153     case TC_POLICE_UNSPEC:
-154     default:
-155     result = NF_ACCEPT;
-156     break;
-157     #endif
-158 };
-159 
-160     skb->tc_index = TC_H_MIN(res.classid);
-161     return result;
-162 }
+static struct tcf_proto **ingress_find_tcf(struct qdisc *sch,unsigned long cl)
+{
+    struct ingress_qdisc_data *p = PRIV(sch);
+    return &p->filter_list;
+}
 ```
 
-## 图 9.229 入站队列-出队：linux/net/sched/sch.ingress.c。
+## 图 9.229 入站队列-出队：`linux/net/sched/sch.ingress.c`
 
 ```c
-165 static struct sk_buff *ingress_dequeue(struct qdisc *sch)
-166 {
-167     /*
-168 
-169 struct ingress_qdisc_data *p = PIV(sch);
-170 D2PRINTK("ingress_dequeue(sch xp, [qdisc xp])\n",sch,schb,PRIV(sch));
-171 */
-172 return NULL;
-173 }
+static struct sk_buff *ingress_dequeue(struct qdisc *sch)
+{
+    /*
+    struct ingress_qdisc_data *p = PIV(sch);
+    D2PRINTK("ingress_dequeue(sch xp, [qdisc xp])\n",sch,schb,PRIV(sch));
+    */
+    return NULL;
+}
 ```
 
-## 图 9.230 入站队列-重入：linux/net/sched/sch.ingress.c。
+## 图 9.230 入站队列-重入：`linux/net/sched/sch.ingress.c`
 
 ```c
-175 static int ingress_requeue(struct sk_buff *skb,struct qdisc *sch)
-176 {
-177
-178
-179 struct ingress_qdisc_data *p = PIV(sch);
-180 D2PRINTK("ingress_requeue(skb xp, [qdisc xp])\n",skb,sch,PRIV(sch));
-181 return 0;
-183 }
+static int ingress_requeue(struct sk_buff *skb,struct qdisc *sch)
+{
+    struct ingress_qdisc_data *p = PIV(sch);
+    D2PRINTK("ingress_requeue(skb xp, [qdisc xp])\n",skb,sch,PRIV(sch));
+    return 0;
+}
 ```
 
-## 图 9.231 入站队列-丢弃：linux/net/sched/sch.ingress.c。
+## 图 9.231 入站队列-丢弃：`linux/net/sched/sch.ingress.c`
 
 ```c
-184 static int ingress_drop(struct qdisc *sch)
-185 {
-186 #ifdef DEBUG_RX_INGRESS
-187
-188 struct ingress_qdisc_data *p = PIV(sch);
-189 #endif
-190 D2PRINTK("ingress_drop(sch xp, [qdisc xp])\n",sch, p);
-191 return 0;
-192 }
+static int ingress_drop(struct qdisc *sch)
+{
+#ifdef DEBUG_RX_INGRESS
+    struct ingress_qdisc_data *p = PIV(sch);
+#endif
+    D2PRINTK("ingress_drop(sch xp, [qdisc xp])\n",sch, p);
+    return 0;
+}
 ```
 
-## 9.3.3 区分服务 (Differentiated Services)
+### 9.3.3 区分服务 (Differentiated Services)
 
 区分服务基于数据标记。根据各种过滤器进行标记，然后根据行为进行处理。
 
-### 9.3.2 区分服务标记数据：linux/net/sched/dms.c。
+#### 9.3.2 区分服务标记数据：`linux/net/sched/dms.c`
 
 ```c
-30 #define PRIV(sch) ((struct dmsark_qdisc_data *)(sch)->data
-31 
-32 /*
-33  * class       标记
-34  * n/a
-35  * x:0           使用项 [0]
-36  * x:y           使用项 [y]
-37  * indices     
-38  * indices-1  使用项 [1]
-39  */
-40 
-41 struct dmsark_qdisc_data {
-42     struct qdisc         *q;
-43     struct tcf_proto      *filter_list;
-44     __u8                *mask;
-45     __u8                *value;
-46     __u16               indices;
-47     __u16               default;
-48 };
+#define PRIV(sch) ((struct dmsark_qdisc_data *)(sch)->data
+
+/*
+ * class       标记
+ * n/a
+ * x:0           使用项 [0]
+ * x:y           使用项 [y]
+ * indices     
+ * indices-1  使用项 [1]
+ */
+
+struct dmsark_qdisc_data {
+    struct qdisc         *q;
+    struct tcf_proto      *filter_list;
+    __u8                *mask;
+    __u8                *value;
+    __u16               indices;
+    __u16               default;
+};
 ```
 
-### 9.3.3 区分服务标记函数：linux/net/sched/sch_ingress.c。
+#### 9.3.3 区分服务标记函数：`linux/net/sched/sch_ingress.c`
 
 ```c
-56 /* 操作 */
-57 
-58 static int dmsark_graft(struct qdisc *sch, unsigned long arg,
-59                              struct Qdisc *new,struct Qdisc *old)
-60 {
-61     #ifdef DEBUG_INGRESS
-62         struct ingress_qdisc_data *p = PRIV(sch);
-63     #endif
-64 
-65     DPRINTK("ingress_graft(sch %p,[qdisc %p],new %p,old %p)\n",
-66             sch, p, new, old);
-67     DPRINTK("\n ingress_graft: You cannot add qdiscs to classes");
-68     return 1;
-69 static struct Qdisc *ingress_leaf(struct qdisc *sch, unsigned long arg)
-70 {
-71     return NULL;
-72 } static unsigned long int ingress_get(struct qdisc *sch,u32 classid)
-73 {
-74     #ifdef DEBUG_INGRESS
-75         struct ingress_qdisc_data *p = PRIV(sch);
-76     #endif
-77     DPRINTK("\ningress_get(sch %p,[qdisc %p],classid %x)\n", sch, p, classid);
-78     return TC_R_MIN(classid) + 1;
-79 } static unsigned long int ingress_bind_filter(struct Qdisc *sch,
-80                               unsigned long parent,u32 classid)
-81 {
-82     return ingress_get(sch, classid);
-83 } static void ingress_put(struct Qdisc *sch, unsigned long cl)
-84 {
-85 }
-86 static int ingress_change(struct qdisc *sch, u32 classid, u32 parent,
-87               struct rtattr **tca, unsigned long *arg)
-88 {
+/* 操作 */
+
+static int dmsark_graft(struct qdisc *sch, unsigned long arg,
+                             struct Qdisc *new,struct Qdisc *old)
+{
+    #ifdef DEBUG_INGRESS
+        struct ingress_qdisc_data *p = PRIV(sch);
+    #endif
+
+    DPRINTK("ingress_graft(sch %p,[qdisc %p],new %p,old %p)\n",
+            sch, p, new, old);
+    DPRINTK("\n ingress_graft: You cannot add qdiscs to classes");
+    return 1;
+}
+static struct Qdisc *ingress_leaf(struct qdisc *sch, unsigned long arg)
+{
+    return NULL;
+}
+static unsigned long int ingress_get(struct qdisc *sch,u32 classid)
+{
+    #ifdef DEBUG_INGRESS
+        struct ingress_qdisc_data *p = PRIV(sch);
+    #endif
+    DPRINTK("\ningress_get(sch %p,[qdisc %p],classid %x)\n", sch, p, classid);
+    return TC_R_MIN(classid) + 1;
+}
+static unsigned long int ingress_bind_filter(struct Qdisc *sch,
+                              unsigned long parent,u32 classid)
+{
+    return ingress_get(sch, classid);
+}
+static void ingress_put(struct Qdisc *sch, unsigned long cl)
+{
+}
+static int ingress_change(struct qdisc *sch, u32 classid, u32 parent,
+              struct rtattr **tca, unsigned long *arg)
+{
+```
+
+
+
+```
 89     #ifdef DEBUG_INGRESS
+
 90         struct ingress_qdisc_data *p = PRIV(sch);
+
 91     #endif
+
 92     DPRINTK("ingress_change(sch %xp, [qdisc %xp],class %x, parent %x, %arg)",
+
 93             arg%02lx\n", sch, p, classid, parent, arg);
+
 94     DPRINTK("No effect, sch_ingress doesn't maintain classes at the moment");
+
 95     return 0;
+
 96 }
+
 97 static void ingress_walk(struct qdisc *sch,struct qdisc_data *walker)
+
 98 {
+
 99     #ifdef DEBUG_INGRESS
+
 100     struct ingress_qdisc_data *p = PRIV(sch);
+
 101     #endif
+
 102     DPRINTK("ingress_walk(sch %xp, [qdisc %xp].walker %xp)\n", sch, p, walker);
+
 103     DPRINTK("No effect, sch_ingress doesn't maintain classes at the moment");
+
 104 }
+
 105 static struct tcf_proto **ingress_find_tcf(struct qdisc *sch,unsigned long cl)
+
 106 {
+
 107     struct ingress_qdisc_data *p = PRIV(sch);
+
 108     return &p->filter_list;
+
 109 }
+
 110 static int ingress_enqueue(struct sk_buffer *skb,struct qdisc *sch)
+
 111 {
+
 112     struct ingress_qdisc_data *p = PRIV(sch);
+
 113     struct tcf_result *res;
+
 114     int result;
+
 115     DPRINTK("ingress_enqueue(skb %xp, [qdisc %xp])\n", skb, sch);
+
 116     result = tc_classify(skb, p->filter_list, &res);
+
 117     /
+
 118     DPRINTK("Xd class 0x%04x\n", result, classid);
+
 119     /*
+
 120     * 与普通的 "enqueue" 函数不同，ingress_enqueue 返回一个
+
 121     * 防火墙 FW 码。
+
 122     */
+
 123     switch (result) {
+
 124     #ifdef CONFIG_NET_CLS_POLICE
+
 125         case TC_POLICY_SHOT:
+
 126     result = NF_DROP;
+
 127     break;
+
 128     case TC_POLICE_RECLASSI: /* 此处标记 DSCP ? */
+
 129     case TC_POLICE_OK:
+
 130     case TC_POLICE_UNSPEC:
+
 131     default:
+
 132     result = NF_ACCEPT;
+
 133     break;
+
 134     #endif
+
 135 };
+
 136 
+
 137     skb->tc_index = TC_H_MIN(res.classid);
+
 138     return result;
+
 139 }
+
 140 static struct sk_buff *ingress_dequeue(struct qdisc *sch)
+
 141 {
+
 142     /*
+
 143 
+
 144 struct ingress_qdisc_data *p = PIV(sch);
+
 145 D2PRINTK("ingress_dequeue(sch xp, [qdisc xp])\n",sch,schb,PRIV(sch));
+
 146     */
+
 147 return NULL;
+
 148 }
+
 149 static int ingress_requeue(struct sk_buff *skb,struct qdisc *sch)
+
 150 {
+
 151
+
 152
+
 153 struct ingress_qdisc_data *p = PIV(sch);
+
 154 D2PRINTK("ingress_requeue(skb xp, [qdisc xp])\n",skb,sch,PRIV(sch));
+
 155 return 0;
+
 156 }
+
 157 static int ingress_drop(struct qdisc *sch)
+
 158 {
+
 159 #ifdef DEBUG_RX_INGRESS
+
 160
+
 161 struct ingress_qdisc_data *p = PIV(sch);
+
 162 #endif
+
 163 D2PRINTK("ingress_drop(sch xp, [qdisc xp])\n",sch, p);
+
 164 return 0;
+
 165 }
 ```
-
-
-
-
 
 # 图 9.237 Marker--find: linux/net/sched/sch_dmark.c.
 
 ```
 166 static struct tcf_proto *dmaskark_find_tcf(struct qdisc *sch,unsigned long cl)
+
 167 {
+
 168     struct dmaskark_qdisc_data *p = PRIV(sch);
 
 170     return &p->filter_list;
+
 171 }
 ```
 
@@ -36225,26 +37623,45 @@ struct tcf_police *tcf_police_new(struct rttattr *rta, struct rattr *opt)
 
 ```
 177 int dmask_enqueue(struct sk_buff *skb,struct qdisc *sch)
+
 178 {
+
 179     struct dmaskark_qdisc_data *p = PRIV(sch);
+
 180     struct tcf_result *res;
+
 181     int result;
+
 182     int ret;
+
 184     printk("dmask_enqueue(%p, %p, [qdisc %p])\n",skb,sch,p);
 
 185     if (p->set_tc_index) {
+
 186         switch (htons(skb->h->h_proto)) {
+
 187             case constant_htons(ETH_P_IP):
+
 188                 skb->tc_index = ipv4_get_dsfield(skb->nh);
+
 189                 break;
+
 190             case constant_htons(ETH_P_IPV6):
+
 191                 skb->tc_index = ipv6_get_dsfield(skb->nh);
+
 192                 break;
+
 193             default:
+
 194                 skb->tc_index = 0;
+
 195                 break;
+
 196         }
+
 197     }
+
 199 
 ```
 
@@ -36252,25 +37669,46 @@ struct tcf_police *tcf_police_new(struct rttattr *rta, struct rattr *opt)
 
 ```
 198 result = TC_POLICE_OK; /* 为了好性性 */
+
 199 if (TC_H_MAX(skb->priority) == sch->priority) {
+
 200     skb->tc_index = TC_H_MIN(skb->priority);
+
 201 } else {
+
 202     result = tcf_classify(skb,p->filter_list,res);
+
 203     printk("Result %d Class 0x%04x\n",result,res->classid);
+
 204     switch (result) {
+
 205         #ifdef CONFIG_NET_CLS_POLICY
-206             case TC_POLICE_SHOT:
-207                 kfree_skb(skb);
-208                 break;
-209         #if 0
-210             case TC_POLICE_RECLASSIFY:
-211                 /* FIXME: 这里应该做什么 **/
-212         #endif
-213     #endif
-214     case TC_POLICE_OK;
+```
+
+
 
 # TCP/IP 和 Linux 协议实现
 
+```c
+206             case TC_POLICE_SHOT:
+
+207                 kfree_skb(skb);
+
+208                 break;
+
+209         #if 0
+
+210             case TC_POLICE_RECLASSIFY:
+
+211                 /* FIXME: 这里应该做什么 **/
+212         #endif
+
+213     #endif
+
+214     case TC_POLICE_OK;
+```
+
+```c
 215 skb->tc_index = TC_H_MIN(res->classid);
 216 break;
 217 case TC_POLICE_UNSPEC:
@@ -36298,7 +37736,7 @@ struct tcf_police *tcf_police_new(struct rttattr *rta, struct rattr *opt)
 
 ![](img/06c11ba8be5c1c24aa633e1261e2ebd_865_0.png)
 
-```
+```c
 240 static struct sk_buff *dsmark_dequeue(struct qdisc *qdisc)
 241 {
 242     struct dsmark_qdisc_data *p = PRIV(qdisc);
@@ -36334,7 +37772,7 @@ struct tcf_police *tcf_police_new(struct rttattr *rta, struct rattr *opt)
 
 # 图 9.241 Marker-requeue: linux/net/sched/sch_dmark.c.
 
-```
+```c
 static int dsmark_requeue(struct sk_buff *skb,struct qdisc *sch,
 {
     int ret;
@@ -36347,10 +37785,11 @@ static int dsmark_requeue(struct sk_buff *skb,struct qdisc *sch,
     sch->q->qlen++;
     return 0;
 }
+```
 
 # 图 9.242 Marker-drop: linux/net/sched/sch_dmark.c.
 
-```
+```c
 static int dsmark_drop(struct qdisc *sch)
 {
     struct dsmark_qdisc_data *p = PRIV(sch);
@@ -36359,17 +37798,18 @@ static int dsmark_drop(struct qdisc *sch)
     }
     sch->q->qlen--;
 }
+```
 
 # 图 9.243 Marker-init: linux/net/sched/dsmark.c.
 
-```
+```c
 int dsmark_init(struct qdisc *sch, struct rattr *opt)
 {
 ```
 
 # 图 9.244 Marker-reset: linux/net/sched/dsmark.c.
 
-```
+```c
 static void dsmark_reset(struct qdisc *sch)
 {
     struct dsmark_qdisc_data *p = PRIV(sch);
@@ -36380,12 +37820,11 @@ static void dsmark_reset(struct qdisc *sch)
 
 # 图 9.245 Marker-destroy: linux/net/sched/sch_dmark.c.
 
-```
+```c
 static void dsmark_destroy(struct qdisc *sch)
 {
     struct dsmark_qdisc_data *p = PRIV(sch);
     struct tcf_proto *tp;
-
     while (p->filter_list) {
         tp = p->filter_list;
         p->filter_list = tp->next;
@@ -36398,7 +37837,7 @@ static void dsmark_destroy(struct qdisc *sch)
 
 # 图 9.246 Marker-dump: linux/net/sched/sch_dmark.c.
 
-```
+```c
 static int dsmark_dump(struct qdisc *sch, unsigned long cl, struct sk_buff *skb, struct tcm *tcm)
 {
     struct dsmark_qdisc_data *p = PRIV(sch);
@@ -36408,14 +37847,10 @@ static int dsmark_dump(struct qdisc *sch, unsigned long cl, struct sk_buff *skb,
 
 # 图 9.247 Marker-dump: linux/net/sched/sch_dmark.c.
 
-```
+```c
 static int dsmark_dump(struct qdisc *sch, struct sk_buff *skb)
 {
 ```
-
-
-
-
 
 # 814 TCP/IP 与 Linux 协议实现
 
@@ -36425,20 +37860,33 @@ static int dsmark_dump(struct qdisc *sch, struct sk_buff *skb)
 413 RTA_PUT(skb,TCA_DSMARK_INDICES,sizeof(u16),&p->indexes);
 414 if (p->default_index)
 415 RTA_PUT(skb,TCA_DSMARK_DEFAULT_INDEX,sizeof(u16));
+```
+
+
+
 416 p->default_index;
+
 417 if (p->set_tc_index)
+
 418 RTA_PUT(skb,TCA_DSMARK_SET_TC_INDEX,0, NULL);
+
 419 rta->rta_len = skb->tail-b;
+
 420 return skb->len;
 
 421
+
 422 rattr_failure;
+
 423 skb_trim(skb,b-skb->data);
+
 424 return -1;
+
 425 }
+
 ```
 
-> 图 9.248 标记操作注册：linux/net/sched/sch_dmark.c
+> 图 9.248 标记操作注册：`linux/net/sched/sch_dmark.c`
 
 ```c
 430 static struct Qdisc_class_ops dmark_class_ops =
@@ -36450,31 +37898,26 @@ static int dsmark_dump(struct qdisc *sch, struct sk_buff *skb)
 436 dmark_change,              /* change */
 437 dmark_delete,              /* delete */
 438 dmark_walk,                /* walk */
-
 439
 440 dmark_find_tcf,            /* tcf_chain */
 441 dmark_bind_filter,         /* bind_tcf */
 442 dmark_put,                 /* unbind_tcf */
-
 443
 444 #ifdef RT_RTELINK
 445 dmark_dump_class,          /* dump */
 446 #endif
 447 };
-
 449 struct Qdisc_ops dmark_qdisc_ops =
 450 {
 451 NULL,                      /* next * */
 452 &dmark_class_ops,          /* cl_ops */
 453 "dmark",
 454 sizeof(struct dmark_qdisc_data),
-
 455
 456 dmark_enqueue,            /* enqueue */
 457 dmark_dequeue,            /* dequeue */
 458 dmark_requeue,            /* requeue */
 459 dmark_drop,               /* drop */
-
 460
 461 dmark_init,               /* init */
 462 dmark_reset,              /* reset */
@@ -36489,13 +37932,11 @@ static int dsmark_dump(struct qdisc *sch, struct sk_buff *skb)
 466 dsmark_dump /* dump */
 467 #endif
 468 };
-
 470 471 #ifdef MODULE
 472 int init_module(void)
 473 {
 474 return register_qdisc(&dsmark_qdisc_ops);
 475 }
-
 477
 478 void cleanup_module(void)
 479 {
@@ -36507,23 +37948,23 @@ static int dsmark_dump(struct qdisc *sch, struct sk_buff *skb)
 
 随机早期检测是几种可扩展的队列管理技术之一。
 
-**图 9.249** 随机早期检测 (RED) 队列——引言：linux/net/sched/sch_red.c。
+**图 9.249** 随机早期检测 (`RED`) 队列——引言：`linux/net/sched/sch_red.c`。
 
 ```c
 44 #define RED_ECT 0x02
 45 #define RED_ECN_CE 0x01
 
-46
 47 /* 随机早期检测 (RED) 算法。
-48
+
 50
 51 来源：Sally Floyd 和 Van Jacobson, "Random Early Detection Gateways
 52 for Congestion Avoidance", 1993, IEEE Transactions on Networking.
 53
 54 该文件实现了论文图 17 所示描述的 RED 算法“无量纲”版本。
+
 56
 57 简要描述。
-58
+
 59
 60 当新包到达时，我们计算平均队列长度：
 61
@@ -36532,11 +37973,10 @@ static int dsmark_dump(struct qdisc *sch, struct sk_buff *skb)
 64 W 是滤波器时间常数（选择为 2^-(Wlog)），它控制
 65 算法的惯性。为了允许更大的突发流量，应该减小 W。
 ```
-```
 
 # 816 TCP/IP 与 Linux 协议实现
 
-图 9.250 RED 队列行为：linux/net/sched/sch_red.c。
+图 9.250 `RED` 队列行为：`linux/net/sched/sch_red.c`。
 
 ```
 if (avg > th_max) -> 数据包标记（丢弃）。
@@ -36560,9 +38000,7 @@ limit - 字节（必须 > qth_max + burst）
 实际上，如果 RED 工作正常，这个限制永远不会被达到。
 ```
 
-```
-
-图 9.251 RED 队列参数：linux/net/sched/sch_red.c。
+图 9.251 `RED` 队列参数：`linux/net/sched/sch_red.c`。
 
 ```c
 qth_min - 字节（应为 < qth_max/2）
@@ -36570,27 +38008,24 @@ qth_max - 字节（应至少为 2*qth_max 且为最小限制）
 Wlog - 位 (<32) log(1/W)。
 Plog - 位 (<32)
 Plog 通过公式与 max_P 相关：
-
 max_P = (qth_max-qth_min)/Plog;
-
 例如：如果 qth_max=128K，th_min=32K，则 Plog
 对应
 max_P=0.02。
 ```
 
-图 9.252 RED 队列备注：linux/net/sched/sch_red.c。
+图 9.252 `RED` 队列备注：`linux/net/sched/sch_red.c`。
 
 ```
 if (avg > th_max) -> 标记丢弃。
 if (avg < th_min) -> 通过。
 if (th_min < avg < th_max) 我们计算概率：
 Pb = max_P (avg - th_min)/(th_max-th_min)
-
 备注：
 W 的上界。
 ```
 
-图 9.253 RED 调度器数据：linux/net/sched/sch_red.c。
+图 9.253 `RED` 调度器数据：`linux/net/sched/sch_red.c`。
 
 ```c
 struct red_sched_data {
@@ -36613,32 +38048,48 @@ u8 Stab[256];
 
 # 9.5 显式拥塞通知
 
-显式拥塞通知 (ECN) 是丢弃包的替代方案。
+显式拥塞通知 (`ECN`) 是丢弃包的替代方案。
 
-图 9.254 RED–ECN 处理：linux/net/sched/sch_red.c。
+图 9.254 `RED`–`ECN` 处理：`linux/net/sched/sch_red.c`。
 
 ```c
 static int
 red_ecn_mark(struct sk_buff *skb) {
     if (skb->cbed)
         return 0;
-
     switch (skb->protocol) {
         case __htons(ETH_P_IP):
             {
                 u8 tos = ... // 省略
+```
+
+
+
+```
                 if (!(tos & RED_ECT))
+
                     return 0;
+
                 if (tos & RED_ECN_CE)
+
                     return 0;
+
                 if (tos & RED_ECE)
+
                     return 0;
+
                 // 设置标记...
+
             }
+
             break;
+
         // ...
+
     }
+
     return 1;
+
 }
 ```
 
@@ -36653,11 +38104,9 @@ static int
 red_enqueue(struct sk_buff *skb, struct qdisc* sch) {
     struct red_sched_data *q = (struct red_sched_data*)sch->data;
     struct time_t now;
-
     if (PSCH_IS_PASTER(q->qidlestart)) {
         long us_idle;
         int shift;
-
         PSCH_GET_TIME(now);
         us_idle = PSCH_DIFF_SAFE(now, q->qidlestart, q->Sc_max, 0);
         PSCH_SET_PASTER(q->qidlestart);
@@ -36669,15 +38118,13 @@ red_enqueue(struct sk_buff *skb, struct qdisc* sch) {
  SF+VJ 提议通过 m = idtime/(average_pkt_size/bandwidth)
  虚拟包来模拟突发空闲时间，即
  qave == (i-w);
-
  这似乎是一个复杂的解决方案（例如我们必须预计算表
 以便在合理时间内进行计算），我认为这里可以使用更简单的模型，
  但这是实验领域。
  */
 }
 ```
-
-```图 9.256 RED–入队 ii：linux/net/sched/sch_red.c。
+图 9.256 RED–入队 ii：linux/net/sched/sch_red.c。
 
 ```c
 shift = q->Stab[us_idle]>>q->Scell_log;
@@ -36700,12 +38147,9 @@ else
     q->qave >>= 1;
 ```
 
-
-
-
 # 920 TCP/IP 与 Linux 协议实现
 
-```
+```c
 q->qave 是一个在 Wlog 带有小数点的定点数。
 上述公式等于浮点数
 版本：
@@ -36714,10 +38158,9 @@ qave = qave*(i-W) + sch->stats.backlog*W;
             */
 }
 ```
-
 图 9.257 RED-enqueue iii: linux/net/sched/sch_red.c。
 
-```
+```c
 if (q->qave < q->qth_min) {
     q->qcount = -1;
 enqueue:
@@ -36750,7 +38193,7 @@ n
 
 图 9.258 RED-enqueue i: linux/net/sched/sch_red.c。
 
-```
+```c
 if (++q->qcount) {
     /* 下面使用的公式引起了问题。
 OK. qr 是 O.Rmask 范围内的随机数。
@@ -36761,28 +38204,38 @@ is.s. 0..(Plog)。如果我们使用浮点
 
 # 转发 821
 
-考虑到 qave 在 Wlog 带有小数点，且 Plog 与 max_P 关：
-max_P = (qth_max_qth_min)/2;Plog; 以下两行
+考虑到 `qave` 在 `Wlog` 带有小数点，且 `Plog` 与 `max_P` 关：
+
+`max_P = (qth_max_qth_min)/2;Plog;` 以下两行
+
 具有以下浮点等效于：
 
-```
+```c
 max_P*(qth_min/qth_max_qth_min) < rnd/count
 ```
 
 有任何问题？--ANK (880924)
+
 */
+
 if ((q->qave - q->qth_min)>>q->Wlog)+q->count < q->qR)
+
     goto enqueue;
+
     q->count = 0;
+
     q->qR = net_random()&q->Rmask;
+
     sch->stats.overlimits++;
+
     goto mark;
 
 q->qR = net_random()&q->Rmask;
+
 goto enqueue;
 ```
 
-```
+```c
 drop:
 	skfree_skb(skb);
 sch->stats.drop++;
@@ -36792,13 +38245,12 @@ return NET_XMIT_CN;
 
 图 9.259 RED–requeue and dequeue: linux/net/sched/sched_red.c。
 
-```
+```c
 static int
 red_dequeue(struct sk_buff *skb, struct qdisc *sch)
 {
 	struct red_sched_data *q = (struct red_sched_data*)sch->data;
 	PSCHED_SET_PASTERPERFECT(q->qidlestart);
-
 	__skb_queue_head(sch->q, skb);
 	sch->stats.backlog += skb->len;
 	return 0;
@@ -36821,9 +38273,9 @@ red_dequeue(struct qdisc *sch)
 
 # 822 TCP/IP 与 Linux 协议实现
 
-# 图 9.260 RED–drop: linux/net/sched/sch_red.c。
+## 图 9.260 RED–drop: linux/net/sched/sch_red.c。
 
-```
+```c
 static int
 red_drop(struct qdisc *skb)
 {
@@ -36842,14 +38294,15 @@ red_drop(struct qdisc *skb)
 }
 ```
 
+
+
 # 图 9.261 RED–reset: linux/net/sched/sch_red.c。
 
-```
+```c
 static void red_reset(struct qdisc *sch)
 {
     struct red_sched_data *q = (struct red_sched_data *)skb;
     struct sk_buff *skb;
-
     while ((skb = skb_dequeue(sch->q)) != NULL) {
         kfree(skb);
         sch->stats.backlog = 0;
@@ -36862,7 +38315,7 @@ static void red_reset(struct qdisc *sch)
 
 # 图 9.262 RED–change: linux/net/sched/sch_red.c。
 
-```
+```c
 atomic int red_change(struct qdisc *sch, struct rtattr *opt)
 {
     struct red_sched_data *q = (struct red_sched_data *)opt->data;
@@ -36875,27 +38328,27 @@ atomic int red_change(struct qdisc *sch, struct rtattr *opt)
         return -EINVAL;
     ctl = RTA_DATA(tb[TCA_RED_PARMS]);
     sch_tree_lock(sch);
-
 ```
-q->flags = ctl->flags;
-q->Wlog = ctl->Wlog;
-q->Plog = ctl->Plog;
-q->Rmask = ctl->Plog < 32 ? (1<<ctl->Plog) - 1 : 0;
-q->Scell = ctl->Scell;
-q->Scell_max = (255<<q->Scell);
-q->qth_min = ctl->qth_min<<ctl->Wlog;
-q->qth_max = ctl->qth_max<<ctl->Wlog;
-q->limit = ctl->limit;
-q->count = -1;
-    PSCHED_SET_PASTERFECT(q->qidlestart);
-    sch_tree_unlock(sch);
-return 0;
+
+`q->flags = ctl->flags;`
+`q->Wlog = ctl->Wlog;`
+`q->Plog = ctl->Plog;`
+`q->Rmask = ctl->Plog < 32 ? (1<<ctl->Plog) - 1 : 0;`
+`q->Scell = ctl->Scell;`
+`q->Scell_max = (255<<q->Scell);`
+`q->qth_min = ctl->qth_min<<ctl->Wlog;`
+`q->qth_max = ctl->qth_max<<ctl->Wlog;`
+`q->limit = ctl->limit;`
+`q->count = -1;`
+    `PSCHED_SET_PASTERFECT(q->qidlestart);`
+    `sch_tree_unlock(sch);`
+`return 0;`
 }
 ```
 
-图 9.263 RED-init: linux/net/sched/sch_red.c。
+# 图 9.263 RED-init: linux/net/sched/sch_red.c。
 
-```
+```c
 static int red_init(struct qdisc *sch, struct rtattr *opt)
 {
     int err;
@@ -36917,33 +38370,39 @@ GRED 是 RED 的通用版本，包含了针对不符合 TCP 的位惩罚（RED i
 
 # 824 TCP/IP 与 Linux 协议实现
 
-数据流满足速率 R 和深度 B 的 TBF，如果对于对于任何时间间隔 $t$，传输的比特数未超过 $B + R*(t-t_i)$。
+数据流满足速率 `R` 和深度 `B` 的 TBF，如果对于对于任何时间间隔 `$t$`，传输的比特数未超过 `$B + R*(t-t_i)$`。
 
-该定义的包化版本：在 $t_i$ 服务的大小为 $s_i$ 的数据包满足 TBF，如果对于 $i<k$：
-$s_i+...+s_k \le B + R*(k-t_i)$。
+该定义的包化版本：在 `$t_i$` 服务的大小为 `$s_i$` 的数据包满足 TBF，如果对于 `$i<k$`：
+
+`$s_i+...+s_k \le B + R*(k-t_i)$`。
 
 算法。
 
-让 $N(t_i)$ 最初为 $B/R$，N(t)$ 随时间连续增长：
-$N(t+\delta) = \min(B/R, N(t) + \delta)$
+让 `N(t_i)` 最初为 `B/R`，N(t)$ 随时间连续增长：
 
-如果队列中的第一个包长度为 $S$，它只有在时间 $t^*$ 可以传输：当 $S/R \le N(t^*)$ 时，在这种情况下 $N(t_*) = N(t_*) - S/R$。
+`N(t+\delta) = \min(B/R, N(t) + \delta)`
 
-实际上，QoS 需要应用两个 TBF。其中一个控制稳定突发大小，另一个速率为 $P$（峰值速率）深度为 $M$（等于链路 MTU），在较小的时间尺度上限制突发。
+如果队列中的第一个包长度为 `S`，它只有在时间 `t^*` 可以传输：当 `S/R \le N(t^*)` 时，在这种情况下 `N(t_*) = N(t_*) - S/R`。
 
-很容易看出 $P=R, B=M$。如果 $P$ 为无限，则 TBF 等于单个。
+实际上，QoS 需要应用两个 TBF。其中一个控制稳定突发大小，另一个速率为 `P`（峰值速率）深度为 `M`（等于链路 MTU），在较小的时间尺度上限制突发。
+
+很容易看出 `P=R, B=M`。如果 `P` 为无限，则 TBF 等于单个。
 
 当 TBF 在重塑模式工作时，延迟估计为：
-$lat = \max ((L-B)/R, (L-M)/P)$
 
-这意味着对于深度为 $B$，最大速率是
-$R_{crit} = B*HZ$
-例如，对于 10Mbit 以太网和 $HZ=100$，最小允许的 $B$ 是 10KB。注意峰值速率 TBF 要严格得多；当 MTU 为 1500 时
-$P_{crit} = 150KB/sec$。因此，如果你需要更大的峰值速率，请使用 $HZ=1000$ :-)
+`lat = \max ((L-B)/R, (L-M)/P)`
+
+这意味着对于深度为 `B`，最大速率是
+
+`R_{crit} = B*HZ`
+
+例如，对于 10Mbit 以太网和 `HZ=100`，最小允许的 `B` 是 10KB。注意峰值速率 TBF 要严格得多；当 MTU 为 1500 时
+
+`P_{crit} = 150KB/sec`。因此，如果你需要更大的峰值速率，请使用 `HZ=1000` :-)
 
 # 图 9.266 令牌桶过滤器队列--linux/net/sched/sched_tbf.c。
 
-```
+```c
 struct tbf_sched_data {
     /* 参数 */
     u32 limit; /* 最大队列长度：字节 */
@@ -36966,7 +38425,7 @@ struct tbf_sched_data {
 
 # 图 9.267 TBF-enqueue:linux/net/sched/sched_tbf.c。
 
-```
+```c
 static int
 tbf_enqueue(struct sk_buff *skb, struct qdisc *disc)
 {
@@ -36981,10 +38440,6 @@ tbf_enqueue(struct sk_buff *skb, struct qdisc *disc)
     return 0;
 }
 ```
-
-
-
-
 
 # 826 TCP/IP 与 Linux 协议实现
 
@@ -37006,7 +38461,9 @@ return NET_XMIT_DROP;
 }
 ```
 
-图 9.268 TBF—重队与丢弃：linux/net/sched/sch_tbf.c。
+# 图 9.268 TBF—重队与丢弃：linux/net/sched/sch_tbf.c。
+
+
 
 ```c
 static int
@@ -37031,7 +38488,7 @@ btbf_drop(struct Qdisc* sch)
 }
 ```
 
-图 9.269 TBF—看门狗：linux/net/sched/sch_tbf.c。
+图 9.269 TBF—看门狗：`linux/net/sched/sch_tbf.c`。
 
 ```c
 static void tbf_watchdog(unsigned long arg)
@@ -37043,7 +38500,7 @@ static void tbf_watchdog(unsigned long arg)
 }
 ```
 
-# 图 9.270 TBF-出队列：linux/net/sched/sch_tbf.c。
+# 图 9.270 TBF-出队列：`linux/net/sched/sch_tbf.c`。
 
 ```c
 static struct sk_buff *
@@ -37079,7 +38536,7 @@ tbf_dequeue(struct qdisc *q)
 }
 ```
 
-# 图 9.271 TBF-出队列：linux/net/sched/sch_tbf.c。
+# 图 9.271 TBF-出队列：`linux/net/sched/sch_tbf.c`。
 
 ```c
 if ((toks-ptoks) > 0) {
@@ -37109,8 +38566,11 @@ if (neif_queue_stopped(sch->dev)) {
 # 828 TCP/IP 与 Linux 协议实现
 
 实际上，如果将流拆分为独立的
+
 子流，这将是一个非常好的解决方案。
+
 这是所有 FQ 算法的核心思想
+
 （参考 CSZ, HPQ, HFSC）
 
 ```c
@@ -37123,7 +38583,7 @@ return NULL;
 }
 ```
 
-# 图 9.272 tbf-重置：linux/net/sched/sch_tbf.c。
+# 图 9.272 tbf-重置：`linux/net/sched/sch_tbf.c`。
 
 ```c
 static void
@@ -37140,7 +38600,7 @@ btbf_reset(struct disc *sch)
 }
 ```
 
-# 图 9.273 tbf-修改：linux/net/sched/sch_tbf.c。
+# 图 9.273 tbf-修改：`linux/net/sched/sch_tbf.c`。
 
 ```c
 static int tbf_change(struct disc *sch, struct rtattr *opt)
@@ -37163,6 +38623,10 @@ static int tbf_change(struct disc *sch, struct rtattr *opt)
   goto done;
 }
 ```
+
+
+
+# 图 9.274 TBF-init：`/linux/net/sched/sch_tbf.c`
 
 ```c
 if (qopt->peakrate.rate) {
@@ -37207,8 +38671,6 @@ return err;
 }
 ```
 
-# 图 9.274 TBF-init：linux/net/sched/sch_tbf.c。
-
 ```c
 static int tbf_init(struct qdisc *sch, struct rtattr *opt) {
     int err;
@@ -37235,7 +38697,7 @@ if ((err = tbf_change(sch, opt)) != 0) {
 return err;
 ```
 
-图 9.275 TBF—destroy：linux/net/sched/sch_tbf.c。
+## 图 9.275 TBF—destroy：`/linux/net/sched/sch_tbf.c`
 
 ```c
 static void tbf_destroy(struct qdisc *sch) {
@@ -37253,7 +38715,7 @@ static void tbf_destroy(struct qdisc *sch) {
 
 # 9.13.8 Ingress Queuing
 
-图 9.276 Ingress queuing—ingress hook：linux/net/sched/sch.ingress.c。
+## 图 9.276 Ingress queuing—ingress hook：`/linux/net/sched/sch.ingress.c`
 
 ```c
 static unsigned int
@@ -37332,7 +38794,9 @@ return err;
 }
 ```
 
-# 图 9.277 Ingress queuing-operations：linux/net/sched/sch.ingress.c。
+## 图 9.277 Ingress queuing-operations：`/linux/net/sched/sch.ingress.c`
+
+
 
 ```c
 static struct nf_ops ingress_ops = {
@@ -37399,7 +38863,7 @@ MOD_DEC_USE_COUNT;
 
 优先级队列是实现流量差异化最简单的方法之一。
 
-图 9.279 优先级队列：linux/net/sched/sch_prio.c。
+图 9.279 优先级队列：`linux/net/sched/sch_prio.c`。
 
 ```c
 struct prio_sched_data
@@ -37411,11 +38875,7 @@ struct prio_sched_data
 }
 ```
 
-
-
-
-
-## 图 9.280 优先级分类器：linux/net/sched/sch.prio.c。
+## 图 9.280 优先级分类器：`linux/net/sched/sch.prio.c`
 
 ```c
 50 static __inline__ unsigned prio_classifier(struct sk_buff *skb, struct qdisc *disc) {
@@ -37439,7 +38899,7 @@ struct prio_sched_data
 68 }
 ```
 
-## 图 9.281 优先级入队：linux/net/sched/sch.prio.c。
+## 图 9.281 优先级入队：`linux/net/sched/sch.prio.c`
 
 ```c
 69 static int
@@ -37449,19 +38909,19 @@ struct prio_sched_data
 73     struct qdisc *qdisc;
 74     int ret;
 75     qdisc = q->queues[prio_class(skb, sch)];
-76 
-77     if ((ret = qdisc->enqueue(skb, qdisc)) == 0) {
-78         sch->stats.bytes += skb->len;
-79         sch->stats.packets++;
-80         sch->q.qlen++;
-81         return 0;
-82     }
-83     sch->stats.drops++;
-84     return ret;
-85 }
+
+76     if ((ret = qdisc->enqueue(skb, qdisc)) == 0) {
+77         sch->stats.bytes += skb->len;
+78         sch->stats.packets++;
+79         sch->q.qlen++;
+80         return 0;
+81     }
+82     sch->stats.drops++;
+83     return ret;
+84 }
 ```
 
-## 图 9.282 优先级重入与出队：linux/net/sched/sch.prio.c。
+## 图 9.282 优先级重入与出队：`linux/net/sched/sch.prio.c`
 
 ```c
 88 static int
@@ -37472,38 +38932,42 @@ struct prio_sched_data
 94  int ret;
 95 
 96  qdisc = q->queues[prio_classify(skb, sch)];
-97 
-98  if ((ret = qdisc->ops->requeue(skb, qdisc)) == 0) {
-99      sch->q.qlen++;
-100     return 0;
-101  }
-102  sch->stats.drops++;
-103  return ret;
-104 }
-105 
-106 
-107  static struct sk_buff *buff =
-108  prio_dequeue(struct qdisc* sch)
-109  {
-110     struct sk_buff *skb;
-111     struct prio_sched_data *q = (struct prio_sched_data*)sch->data;
-112     int prio;
-113     struct qdisc *qdisc;
-114 
-115     for (prio = 0; prio < q->bands; prio++) {
-116         qdisc = q->queues[prio];
-117         skb = qdisc->dequeue(qdisc);
-118         if (skb) {
-119             sch->q.qlen--;
-120             return skb;
-121         }
-122     }
-123     return NULL;
-124 
-125 }
+
+97  if ((ret = qdisc->ops->requeue(skb, qdisc)) == 0) {
+98      sch->q.qlen++;
+99     return 0;
+100  }
+101  sch->stats.drops++;
+102  return ret;
+103 }
+104 
+
+105  static struct sk_buff *buff =
+106  prio_dequeue(struct qdisc* sch)
+107  {
+108     struct sk_buff *skb;
+109     struct prio_sched_data *q = (struct prio_sched_data*)sch->data;
+110     int prio;
+111     struct qdisc *qdisc;
+112 
+113     for (prio = 0; prio < q->bands; prio++) {
+114         qdisc = q->queues[prio];
+115         skb = qdisc->dequeue(qdisc);
+116         if (skb) {
+117             sch->q.qlen--;
+118             return skb;
+119         }
+120     }
+121     return NULL;
+122 
+123 }
 ```
 
-## 图 9.283 优先级丢弃：linux/net/sched/sch_prio.c。
+## 图 9.283 优先级丢弃：`linux/net/sched/sch_prio.c`
+
+
+
+## 这是为了显示如何调整优先级 图 9.284 调整：`linux/net/sched/sch.prio.c`。
 
 ```c
 127  static int
@@ -37522,8 +38986,7 @@ struct prio_sched_data
 140     }
 141     return 0;
 142 }
-
-## 这是为了显示如何调整优先级 图 9.284 调整：linux/net/sched/sch.prio.c。
+```
 
 ```c
 169 static prio_tune(struct qdisc *sch, struct rattr *opt)
@@ -37560,54 +39023,48 @@ struct prio_sched_data
 200 }
 ```
 
-## 9.13.10 随机队列
+### 9.13.10 随机队列
 
-**图 9.285 随机队列调度器介绍：linux/net/sched/sch.sfq.c。**
+**图 9.285 随机队列调度器介绍：`linux/net/sched/sch.sfq.c`。**
 
 ```c
 /* 随机队列算法。 */
+```
 
-Source:
-Paul E. McKinney "Stochastic Queuing",
-IEEE INFOCOMM'90 Proceedings, San Francisco,1990.
-
-Paul E. McKinney "Stochastic Queuing",
-"Interworking: Research and Experience", v.2, 1991, p.113-131.
-
-See also:
-M. Shreedhar and George Vhese "Efficient Fair
+`Source:`  
+Paul E. McKinney "Stochastic Queuing",  
+IEEE INFOCOMM'90 Proceedings, San Francisco,1990.  
+Paul E. McKinney "Stochastic Queuing",  
+"Interworking: Research and Experience", v.2, 1991, p.113-131.  
+See also:  
+M. Shreedhar and George Vhese "Efficient Fair  
 Queuing with Deficit Robin", Proc. SIGCOMM 95.
 
-这就是通常所说的 (W)FQ。
+这就是通常所说的 `(W)FQ`。  
 它不使用任何时间戳机制，而是按轮询顺序处理队列。
 
-优点：
-
+优点：  
 - 它非常廉价。CPU 和内存需求都是极小的。
 
-缺点：
-
-- “随机” -> 它不是 100% 公平的。当发生哈希冲突时，多个流被视为一个。
-
+缺点：  
+- “随机” -> 它不是 100% 公平的。当发生哈希冲突时，多个流被视为一个。  
 - “轮询” -> 它引入的延迟基于时钟的方案大，且不应用于隔离交互式流量。这意味着，该调度器应该作为 CBQ 或 FQ 的叶节点，将交互式流量放在更高的优先级。
 
 我们在顶层仍然需要真正的 WFQ，但对尽力传输流量使用 WFQ 完全没有意义：SFQ 在此方面更优。
 
-## 9.13.12 随机队列（接上页）
+### 9.13.12 随机队列（接上页）
 
-**图 9.286 随机队列调度器介绍：linux/net/sched/sch.sfq.continued.**
+**图 9.286 随机队列调度器介绍：`linux/net/sched/sch.sfq.continued.`**
 
 ```c
 /* 接上页。 */
-
-实现：
-该实现将队列长度限制为 128；MTU 限制为 1500；哈希桶数量为 1024。
-这些限制的唯一目标是让所有数据放入一个 4k 页面。sfq_sched_data 结构
-以反缓存的方式组织：一个桶的所有数据分布在不同的位置。这并不好，
-但它允许将其放入 4K。
 ```
 
-## 图 9.287 优先级队列：linux/net/sched/sch.prio.c。
+实现：  
+该实现将队列长度限制为 128；MTU 限制为 1500；哈希桶数量为 1024。  
+这些限制的唯一目标是让所有数据放入一个 4k 页面。`sfq_sched_data` 结构以反缓存的方式组织：一个桶的所有数据分布在不同的位置。这并不好，但它允许将其放入 4K。
+
+### 图 9.287 优先级队列：`linux/net/sched/sch.prio.c`。
 
 ```c
 /*
@@ -37624,10 +39081,7 @@ Queuing with Deficit Robin", Proc. SIGCOMM 95.
  * 增加这些值是可能的，但在运行中是不行的。 */
 ```
 
-
-
-
-# 图 9.289 SFQ--数据结构: linux/net/sched/sch_sfq.c.
+# 图 9.289 SFQ--数据结构: `linux/net/sched/sch_sfq.c`.
 
 ```c
 #define SFQ_DEPTH             128
@@ -37665,7 +39119,11 @@ struct sfq_sched_data
 
 # TCP/IP 和 Linux 协议实现
 
-图 2.290 SFQ-队列哈希函数: linux/net/sched/sch_sfq.c.
+图 2.290 SFQ-队列哈希函数: `linux/net/sched/sch_sfq.c`.
+
+
+
+# 图 9.291 SFQ-队列递减/递增函数: `linux/net/sched/sch_sfq.c`.
 
 ```c
 static __inline__unsigned sfq_fold_hash(struct sfq_sched_data *q, u32 h, u32 hi)
@@ -37717,7 +39175,7 @@ static unsigned sfq_hash(struct sfq_sched_data *q, struct sk_buff *skb)
 }
 ```
 
-# 图 9.291 SFQ-队列递减/递增函数: linux/net/sched/sch_sfq.c.
+# 图 9.292 SFQ--dequeue 函数: `linux/net/sched/sch_sfq.c`.
 
 ```c
 extern __inline_ void sfq_link(struct sfq_sched_data *q, sfq_index x)
@@ -37763,7 +39221,7 @@ extern __inline_ void sfq_inc(struct sfq_sched_data *q, sfq_index x)
 }
 ```
 
-# 图 9.292 SFQ--dequeue 函数: linux/net/sched/sch_sfq.c.
+# 图 9.293 SFQ--dequeue 函数: `linux/net/sched/sch_sfq.c`.
 
 ```c
 static int sfq_drop(struct qdisc *q)
@@ -37803,7 +39261,9 @@ static int sfq_drop(struct qdisc *q)
 }
 ```
 
-# 图 9.293 SFQ--enqueue 函数: linux/net/sched/sch_sfq.c.
+# 图 9.293 SFQ--enqueue 函数: `linux/net/sched/sch_sfq.c`.
+
+
 
 ```c
 static int
@@ -37841,7 +39301,7 @@ sfq_enqueue(struct sk_buff *skb, struct qdisc *q)
 }
 ```
 
-# 2.194 SFQ-requeue 函数: linux/net/sched/sch_sfq.c.
+## 2.194 SFQ-requeue 函数: `linux/net/sched/sch_sfq.c`.
 
 ```c
 static int
@@ -37881,7 +39341,7 @@ sfq_requeue(struct sk_buff *skb, struct qdisc *sch)
 
 # 844 TCP/IP 和 Linux 协议实现
 
-# 图 2.95 SFQ-dequeue 函数: linux/net/sched/sch_sfq.c.
+## 图 2.95 SFQ-dequeue 函数: `linux/net/sched/sch_sfq.c`.
 
 ```c
 static struct sk_buff *
@@ -37899,11 +39359,7 @@ sfq_dequeue(struct qdisc *sch)
 }
 ```
 
-
-
-
-
-# 转发 845
+## 转发 845
 
 ```c
 /* 取数据包 */
@@ -37930,7 +39386,7 @@ if (q->qs[a].qlen == 0) {
 return skb;
 ```
 
-# 图 9.296 SFQ重置: linux/net/sched/sch_sfq.c.
+## 图 9.296 SFQ重置: `linux/net/sched/sch_sfq.c`.
 
 ```c
 static void
@@ -37942,7 +39398,7 @@ fsq_reset(struct qdisc *sch)
 }
 ```
 
-# 图 9.297 SFQ扰动队列: linux/net/sched/sch_sfq.c.
+## 图 9.297 SFQ扰动队列: `linux/net/sched/sch_sfq.c`.
 
 ```c
 static void sfq_perturbation(unsigned long arg)
@@ -37960,9 +39416,9 @@ static void sfq_perturbation(unsigned long arg)
 
 # 846 TCP/IP 与 Linux 协议实现
 
-# 9.13.13 链路均衡
+## 9.13.13 链路均衡
 
-**图 9.298** 流量均衡/负载均衡队列初始化备注: linux/net/sched/sch_teql.c.
+### 图 9.298 流量均衡/负载均衡队列初始化备注: `linux/net/sched/sch_teql.c`.
 
 ```text
 /
@@ -37972,7 +39428,7 @@ static void sfq_perturbation(unsigned long arg)
 --------------------
 ```
 
-加载此模块后，你将发现一个新设备 teqlN 以及一个同名的新 qdisc。要将从设备加入均衡器，你只需要在设备上（例如 f）设置该 qdisc 即可。
+加载此模块后，你将发现一个新设备 `teqlN` 以及一个同名的新 `qdisc`。要将从设备加入均衡器，你只需要在设备上（例如 `f`）设置该 `qdisc` 即可。
 
 ```bash
 # tc q add dev eth0 teql0
@@ -37983,11 +39439,15 @@ static void sfq_perturbation(unsigned long arg)
 
 适用性：
 
-- 1. 从设备必须是活动设备，即，如果你想对隧道（tunnels）等虚拟设备进行均衡，它们必须产生 tbus 信号并生成 eci 事件，请使用普通的 eci。
+- 1. 从设备必须是活动设备，即，如果你想对隧道（tunnels）等虚拟设备进行均衡，它们必须产生 `tbus` 信号并生成 `eci` 事件，请使用普通的 `eci`。
+
 - 2. 该设备对物理从设备的特性没有限制，例如，它将完美地均衡 900Mbps 的线路和 100Gbps 的以太网：-- 当然，链路速度的巨大差异会导致由于数据包严重重排序而产生的均衡链路无法连接。我估计“10倍”的有效差异不大。
+
 - 3. 如果从设备需要地址解析，则只有使用邻居缓存（IPv4/IPv6）的协议可以在均衡链上工作。其他协议仍然允许直接使用从设备，这不会破坏负载均衡，尽管原生从设备流量具有最高优先级。/*
 
-**图 9.299** TE 数据: linux/net/sched/sch_teql.c.
+### 图 9.299 TE 数据: `linux/net/sched/sch_teql.c`.
+
+
 
 ```c
 struct teql_master
@@ -38089,9 +39549,9 @@ struct teql_sched_data
 133 }
 ```
 
-# TCP/IP 与 Linux 协议实现
+## TCP/IP 与 Linux 协议实现
 
-图 9.301 TE释放、重置、销毁: linux/net/sched/sch_teql.c.
+### 图 9.301 TE释放、重置、销毁: linux/net/sched/sch_teql.c.
 
 ```c
 135 static __inline_void
@@ -38148,11 +39608,15 @@ struct teql_sched_data
 
 ```c
 178 MOD_DEC_COUNT;
+```
 
- 图 9.302 TE 初始化: linux/net/sched/sch_teql.c.
+### 图 9.302 TE 初始化: linux/net/sched/sch_teql.c.
 
 ```c
 184 static int teql_qdisc_init(struct qdisc *sch, struct rtattr *opt)
+```
+
+```c
 185 {
 186 struct net_device *dev = sch->dev;
 187 struct teql_master *m = (struct teql_master*)opt->ops;
@@ -38192,12 +39656,24 @@ struct teql_sched_data
 213 m->dev->mtu = dev->mtu;
 214 }
 215 q->next = NEXT_SLAVE(m->slaves);
+
+
+
+# 图 9.303 TE 网络设备解析: `linux/net/sched/sch_teql.c`.
+
+```c
 216 NEXT_SLAVE(m->slaves) = sch;
+
 217 } else {
+
 218 q->next = sch;
+
 219 m->slaves = sch;
+
 220 m->dev->mtu = dev->mtu;
+
 221 m->dev->flags = (m->dev->flags&FMASK) | (dev->flags&FMASK);
+
 222 }
 ```
 
@@ -38207,7 +39683,7 @@ struct teql_sched_data
 226 }
 ```
 
-# 图 9.303 TE 网络设备解析: linux/net/sched/sch_teql.c.
+# 图 9.303 TE 网络设备例程
 
 ```c
 230 /* *teql* 网络设备例程 */
@@ -38250,8 +39726,9 @@ struct teql_sched_data
 262 neigh_release(n);
 263 return (skb_res == NULL) ? -EAGAIN : 1;
 264 }
+```
 
-# 图 9.304 TE 网络设备传输: linux/net/sched/sch_teql.c.
+# 图 9.304 TE 网络设备传输: `linux/net/sched/sch_teql.c`.
 
 ```c
 275 static int teql_master_transmit(struct sk_buff *skb, struct skb, struct net_device *dev)
@@ -38266,39 +39743,28 @@ struct teql_sched_data
 284 start = master->slaves;
 ```
 
-
-
-
-
 # 转发 851
 
-285
-
-286
 restart:
 
-287
-nores = 0;
-
-288
-busy = 
+```c
+287 nores = 0;
+288 busy = 
 if ((q = start) == NULL)
     goto drop;
 ```
 
-# 图 9.305 TE 网络设备传输 ii: linux/net/sched/sch_teql.c.
+# 图 9.305 TE 网络设备传输 ii: `linux/net/sched/sch_teql.c`.
 
 ```c
 do {
     struct net_device *slave = q->dev;
-
     if (slave->q_sleeping == q)
         continue;
     if (netif_queue_stopped(slave) || !netif_running(slave)) {
         busy = 1;
         continue;
     }
-
     switch (teql_resolve(&slave, skb, res, slave)) {
         case 0:
             if (spin_trylock(&slave->xmit_lock)) {
@@ -38313,23 +39779,19 @@ do {
                     master->stats.tx_bytes += len;
                     return 0;
                 }
-
                 slave->xmit_lock_owner = -1;
                 spin_unlock(&slave->xmit_lock);
             }
-
             if (netif_queue_stopped(dev))
                 busy = 1;
             break;
         case 1:
             master->slaves = NEXT_SLAVE(q);
             return 0;
-
         default:
             nores = 1;
             break;
     }
-
     _skb_pull(skb, skb->nh.raw - skb->data);
 } 
 while ((q = NEXT_SLAVE(q)) != start);
@@ -38337,7 +39799,7 @@ while ((q = NEXT_SLAVE(q)) != start);
 
 # 852 TCP/IP 和 Linux 协议实现
 
-图 9.306 TE 网络设备传输 iii: linux/net/sched/sch_teql.c.
+# 图 9.306 TE 网络设备传输 iii: `linux/net/sched/sch_teql.c`.
 
 ```c
 if (nores && skb_res == NULL) {
@@ -38349,7 +39811,6 @@ if (busy) {
     return 1;
 }
 master->stats.tx_errors++;
-
 drop:
     master->stats.tx.dropped++;
     dev_kfree_skb(skb);
@@ -38357,7 +39818,7 @@ drop:
 }
 ```
 
-图 9.307 TE 网络设备打开: linux/net/sched/sch_teql.c.
+# 图 9.307 TE 网络设备打开: `linux/net/sched/sch_teql.c`.
 
 ```c
 static int teql_master_open(struct net_device *dev) {
@@ -38365,7 +39826,6 @@ static int teql_master_open(struct net_device *dev) {
     struct teql_master *m = (void*)dev->priv;
     int mtu = 0xFFFF;
     unsigned flags = IFF_NOARP|IFF_MULTICAST;
-
     if (m->slave == NULL) {
         return -EUNATCH;
     }
@@ -38375,34 +39835,46 @@ static int teql_master_open(struct net_device *dev) {
         struct net_device *slave = q->dev;
         if (slave == NULL) {
             return -EUNATCH;
+```
+
+
+
+```c
         }
 
         if (slave->mtu < mtu) {
             mtu = slave->mtu;
         }
+
         if (slave->hard_header_len > LL_MAX_HEADER) {
             return -EINVAL;
         }
+
         /* 如果所有的从设备都是广播型，主设备就是广播型
            如果所有的从设备都是点对点，主设备就是点对点
            否则，主设备是多点链路 (NBMA) */
-        if ((slave->flags&IFF_INTOPOINT)) {
+
+        if ((slave->flags & IFF_INTOPOINT)) {
             flags &= ~IFF_INTOPOINT;
         }
-        if ((slave->flags&IFF_BROADCAST)) {
-            flags &= ~IFF_BROADCAST;
 
-# 转发 853
+        if ((slave->flags & IFF_BROADCAST)) {
+            flags &= ~IFF_BROADCAST;
+        }
+```
+
+### 转发
 
 ```c
-if ((slave->flags&IFF_MULTICAST))
+if ((slave->flags & IFF_MULTICAST))
     flags &= ~IFF_MULTICAST;
 } while ((q = NEXT_SLAVE(q)) != m->slaves)
 m->dev->mtu = mtu;
-m->dev->flags = (m->dev->flags&~MASK) | flags;
+m->dev->flags = (m->dev->flags & ~MASK) | flags;
 netif_start_queue(qm->dev);
 MOD_INC_USE_COUNT;
 return 0;
+```
 
 # 图 9.308 TE 网络设备关闭和统计: linux/net/sched/sch_teql.c.
 
@@ -38413,6 +39885,7 @@ static int teql_master_close(struct net_dev *dev)
   MOD_DEC_USE_COUNT;
   return 0;
 }
+
 static struct net_dev_stats *teql_master_stats(struct net_dev *dev)
 {
   struct teql_master *m = (void*)dev->priv;
@@ -38443,7 +39916,7 @@ static int teql_master_mtu(struct net_dev *dev, int new_mtu)
 
 # TCP/IP 和 Linux 协议实现
 
-图 9.310 TE 网络设备初始化: linux/net/sched/sch_teql.c.
+# 图 9.310 TE 网络设备初始化: linux/net/sched/sch_teql.c.
 
 ```c
 426 static int teql_master_init(struct net_device *dev)
@@ -38460,6 +39933,7 @@ static int teql_master_mtu(struct net_dev *dev, int new_mtu)
 437 dev->hard_header_len = LL_MAX_HEADER;
 438 return 0;
 }
+
 441 static struct teql_master the_master = {
 442 {
 443 NULL,
@@ -38518,7 +39992,7 @@ void cleanup_module(void) {
 
 # 9.13.14 性能分析
 
-图 9.312 性能计时器: linux/net/core/profile.c.
+# 图 9.312 性能计时器: linux/net/core/profile.c.
 
 ```c
 atomic_t net_profile_active;
@@ -38551,13 +40025,19 @@ void alpha_tick(unsigned long dummy) {
 147 struct net_device_stats *stats;
 
 149 stats = (struct net_device_stats *)dev->priv;
-150 stats->tx_packets++;
-151 stats->tx_bytes+=skb->len;
-
-153 dev_kfree_skb(skb);
-154 return 0;
-155 }
 ```
+
+
+
+150 `stats->tx_packets++`;
+
+151 `stats->tx_bytes+=skb->len`;
+
+153 `dev_kfree_skb(skb)`;
+
+154 `return 0`;
+
+155 `}`
 
 ```c
 166 static int whitehole_open(struct net_device *dev)
@@ -38567,7 +40047,6 @@ void alpha_tick(unsigned long dummy) {
 170 add_timer(&whitehole_timer);
 171 return 0;
 }
-
 174 static int whitehole_close(struct net_device *dev)
 175 {
 176 del_timer(&whitehole_timer);
@@ -38575,31 +40054,17 @@ void alpha_tick(unsigned long dummy) {
 }
 ```
 
-
-
-
-
-```
+```c
 iph (struct iphdr*)skb_put(skb, sizeof(*iph));
-
 skb->mac_row = ((u char*)iph) - 14;
-
 memcpy(&whole_iph, iph, sizeof(*iph));
-
 skb->protocol = __constant_htons(ETH_P_IP);
-
 skb->dev = __whitehole_dev;
-
 skb->pkt_type = PACKET_HOST;
-
 stats->rx_bytes += sklen;
-
 netif_rx(skb);
-
 whitehole_count--;
-
 } while (dev, dropping == 0 && &whitehole_count > 0) {
-
     if (whitehole_count > 0) {
         whitehole_timer.expires = jiffies + 1;
         add_timer(&whitehole_timer);
@@ -38607,7 +40072,7 @@ whitehole_count--;
 }
 ```
 
-# 图 9.315 性能分析--黑洞状态与初始化：linux/net/core/profile.c。
+# 图 9.315 性能分析--黑洞状态与初始化：linux/net/core/profile.c
 
 ```c
 static struct net_device_stats *whitehole_get_stats(struct net_device *dev)
@@ -38615,7 +40080,6 @@ static struct net_device_stats *whitehole_get_stats(struct net_device *dev)
     struct net_device_stats *stats = (struct net_device_stats *)dev->priv;
     return stats;
 }
-
 int __whitehole_init(struct net_device *dev)
 {
     dev->priv = kmalloc(sizeof(struct net_device_stats), GFP_KERNEL);
@@ -38640,7 +40104,7 @@ int __whitehole_init(struct net_device *dev)
 }
 ```
 
-# 图 9.316 性能分析–黑洞–注册/注销：linux/net/core/profile.c。
+# 图 9.316 性能分析–黑洞–注册/注销：linux/net/core/profile.c
 
 ```c
 239 int net_profile_register(struct net_profile_slot *slot)
@@ -38695,16 +40159,16 @@ int __whitehole_init(struct net_device *dev)
 
 ATM 是一种特殊情况，由网络层完成工作，但我们可以使用 Almesberger [1] 提供的整洁接口。
 
-# 图 9.317 ATM调度–作者：linux/net/sched/sch_atm.c。
+# 图 9.317 ATM调度–作者：linux/net/sched/sch_atm.c
 
-- * net/sched/sch_atm.c - ATM VC 选择“队列规则”
-- * 1998-2000 由 Almesberger, EPFL 编写
+- `net/sched/sch_atm.c` - ATM VC 选择“队列规则”
+- 1998-2000 由 Almesberger, EPFL 编写
 
-# 图 9.318 ATM调度–引言说明：linux/net/sched/sch_atm.c。
+# 图 9.318 ATM调度–引言说明：linux/net/sched/sch_atm.c
 
-- * ATM 队列规则为分类器（即“过滤器”）提供了框架
+- ATM 队列规则为分类器（即“过滤器”）提供了框架
 
-# 图 9.319 ATM调度–数据结构：linux/net/sched/sch_atm.c。
+# 图 9.319 ATM调度–数据结构：linux/net/sched/sch_atm.c
 
 ```c
 #define PRTY(x) ((struct atm_qdisc_data *)(x))
@@ -38715,30 +40179,46 @@ ATM 是一种特殊情况，由网络层完成工作，但我们可以使用 Alm
 struct atm_flow_data {
 	struct qdisc *qdisc; /* FIFO, TBF 等 */
 	struct list_head *filter_list;
-	struct atm_vc *vcc; /* VC; 关闭时为 NULL */
-	void (*old)(struct atm_vc *vcc, struct sk_buff *skb); /* 链链 */
-	struct_qdisc_data *parent; /* 父 qdisc */
-	struct socket *socket; /* 用于关闭 */
-	u32 classid; /* 类型 ID */
-	int ref; /* 引用计数 */
-};
-```
+
+
 
 # TCP/IP 和 Linux 实现
 
 ```c
+struct atm_vc *vcc; /* VC; 关闭时为 NULL */
+
+void (*old)(struct atm_vc *vcc, struct sk_buff *skb); /* 链链 */
+
+struct_qdisc_data *parent; /* 父 qdisc */
+
+struct socket *socket; /* 用于关闭 */
+
+u32 classid; /* 类型 ID */
+
+int ref; /* 引用计数 */
+
+};
+```
+
+```c
 struct tc_stats;
+
 struct atm_flow_data *next;
+
 struct atm_flow_data *excess; /* 用于溢出流量；设置为实例 */
+
 int hdr_len;
+
 unsigned char hdr[]; /* 头部数据；必须放在最后 */
+
 struct atm_qdisc_data { /* 此处分类 skbs */
 ```
 
-# 图 9.320 ATM调度–查找流：linux/net/sched/sch_atm.c。
+## 图 9.320 ATM调度–查找流：`linux/net/sched/sch_atm.c`
 
 ```c
 /* 类/流操作 */
+
 static int find_flow(struct atm_qdisc_data *qdisc, struct atm_flow_data *flow)
 {
     struct atm_flow_data *walk;
@@ -38758,7 +40238,7 @@ static inline struct atm_flow_data *lookup(struct qdisc *sch, u32 classid)
 }
 ```
 
-# 图 9.321 ATM调度–流树：linux/net/sched/sch_atm.c。
+## 图 9.321 ATM调度–流树：`linux/net/sched/sch_atm.c`
 
 ```c
 static int atm_tc_graft(struct qdisc *sch, unsigned long arg, struct qdisc *new, struct qdisc *old)
@@ -38781,7 +40261,7 @@ static struct qdisc *atm_tc_leaf(struct qdisc *sch, unsigned long cl)
 }
 ```
 
-# 图 9.322 ATM调度–查找流：linux/net/sched/sch_atm.c。
+## 图 9.322 ATM调度–查找流：`linux/net/sched/sch_atm.c`
 
 ```c
 static unsigned long atm_tc_get(struct qdisc *sch, u32 classid)
@@ -38801,7 +40281,7 @@ static unsigned long atm_tc_bind(struct qdisc *sch, unsigned long parent, u32 cl
 }
 ```
 
-# 图 9.323 ATM调度–销毁过滤器：linux/net/sched/sch_atm.c。
+## 图 9.323 ATM调度–销毁过滤器：`linux/net/sched/sch_atm.c`
 
 ```c
 static void destroy_filters(struct atm_flow_data *flow)
@@ -38815,7 +40295,7 @@ static void destroy_filters(struct atm_flow_data *flow)
 }
 ```
 
-# 图 9.324 ATM弹出：linux/net/sched/sch_atm.c。
+## 图 9.324 ATM弹出：`linux/net/sched/sch_atm.c`
 
 ```c
 static void atm_sch_pop(struct atm_vc *vcc, struct sk_buff *skb)
@@ -38826,32 +40306,24 @@ static void atm_sch_pop(struct atm_vc *vcc, struct sk_buff *skb)
 }
 ```
 
-
-
-
-
 # 86 TCP/IP 和 Linux 协议实现
 
 ```c
 else {
     if (RTA_PAYLOAD(tb(TCA_ATM_EXCESS-1)) != sizeof(u32))
         return -EINVAL;
-
     excess = (struct atm_flow_data *) *atm_tc_get(sch,
         (u32 *) *RTA_DATA(tb(TCA_ATM_EXCESS-1)));
     if (!excess)
         return -ENOENT;
-
     DPRINTK("atm_tc_change: type %d, payload %d, hdr_len %d\n",
         opt->rta_type, RTA_PAYLOAD(opt), hdr_len);
-
     if ((sock = socketfd(fd, &error))) return error; /* f_count++ */
     DPRINTK("atm_tc_change: count %u\n", f_count[sock-file]);
     if (sock->ops->family == PF_ATMSVC && sock->ops->family == PF_ATMPVC) {
         error = -EPROTOTYPE;
         goto err_out;
     }
-
     /* = 800 should check if the socket is really operational or we'll crash */
     on (vcc->send())
         if (class) {
@@ -38860,46 +40332,60 @@ else {
                 error = -EINVAL;
                 goto err_out;
             }
-
             if (find_flow(p, flow)) {
                 error = -EEXIST;
+```
+
+
+
+```c
                 goto err_out;
+
             }
+
         }
 
     DPRINTK("atm_tc_change: new id %x,%s\n", classid);
+
     flow = malloc((struct atm_flow_data *)hdr_len, GFP_KERNEL);
+
     DPRINTK("atm_tc_change: flow %p\n", flow);
+
     if (!flow) {
+
         error = -ENOMEM;
+
     }
 
 err_out:
+
     memset(flow, 0, sizeof(*flow));
+
     flow->filter_list = NULL;
+
     if (!(flow->q = qdisc_create_dft(sch->dev, pfiface, qdisc_ope)))
+
         flow->q = &noop_qdisc;
 ```
 
-图 9.328 ATM 调度更改 ATM 参数 iii：linux/net/sched/atm.mc。
+图 9.328 ATM 调度更改 ATM 参数 iii：`/linux/net/sched/atm.mc`。
 
 ```c
 else {
     int i;
     unsigned long cl;
-
     for (i = 1; i < 0x8000; i++) {
         class = TCA_H_MAKE(sch->handle, 0x8000 | i);
         if (!(cl = atm_tc_get(sch,class))) break;
         atm_tc_put(sch,cl);
     }
-
     DPRINTK("atm_tc_change: new id %x,%s\n", classid);
     flow = malloc((struct atm_flow_data *)hdr_len, GFP_KERNEL);
     DPRINTK("atm_tc_change: flow %p\n", flow);
     if (!flow) {
         error = -ENOMEM;
     }
+}
 ```
 
 # 转发 865
@@ -38933,7 +40419,7 @@ else {
 337  }
 ```
 
-图 9.329 ATM 调度删除 TC：linux/net/sched/sch_atm.c。
+图 9.329 ATM 调度删除 TC：`/linux/net/sched/sch_atm.c`。
 
 ```c
 340 static int atm_tc_delete(struct qdisc *sch,unsigned long arg)
@@ -38959,9 +40445,10 @@ else {
 ```
 
 # 866 TCP/IP 和 Linux 协议实现
+
 这里有更通用的层。
 
-图 9.330 ATM 调度遍历：linux/net/sched/sch_atm.c。
+图 9.330 ATM 调度遍历：`/linux/net/sched/sch_atm.c`。
 
 ```c
 362 static void atm_tc_walk(struct qdisc *sch,struct qdisc_walker *walker)
@@ -38980,7 +40467,7 @@ else {
 375     walker->count++;
 ```
 
-图 9.331 ATM 调度查找：linux/net/sched/sch_atm.c。
+图 9.331 ATM 调度查找：`/linux/net/sched/sch_atm.c`。
 
 ```c
 380 static struct tcf_proto **atm_tc_find_tcf(struct qdisc *sch,unsigned long cl)
@@ -38993,23 +40480,39 @@ else {
 387 }
 ```
 
-图 9.332 ATM 调度入 i：linux/net/sched/sch_atm.c。
+图 9.332 ATM 调度入 i：`/linux/net/sched/sch_atm.c`。
 
 ```c
 393 static int atm_tc_enqueue(struct sk_buff *kb,struct qdisc *sch)
 394  {
-395     struct atm_qdisc_data *p = PRIV(sch);
-396     struct atm_flow_data *flow = NULL;
-397     struct tcf_result res;
-398     int result;
-399
-400     int ret = -NET_POSIX_INIT;
-401     DPRINTK("atm_tc_enqueue(sch %p, qdisc %p])\n",sch,kb,p);
-402     result = TCF_POLICY_OK;
-403     if ((TC_H_MAJ(sch->flow_data += *)) = atm_tc_get(sch,kb->priority)) {
-404         for (flow = p->flows; flow = flow->next)
-405             if (flow->filter_list) {
-406                 result = tc_classify(kb,flow->filter_list,
+```
+
+
+
+`395` `struct atm_qdisc_data *p = PRIV(sch);`
+
+`396` `struct atm_flow_data *flow = NULL;`
+
+`397` `struct tcf_result res;`
+
+`398` `int result;`
+
+`399`
+
+`400` `int ret = -NET_POSIX_INIT;`
+
+`401` `DPRINTK("atm_tc_enqueue(sch %p, qdisc %p])\n",sch,kb,p);`
+
+`402` `result = TCF_POLICY_OK;`
+
+`403` `if ((TC_H_MAJ(sch->flow_data += *)) = atm_tc_get(sch,kb->priority)) {`
+
+`404` `for (flow = p->flows; flow = flow->next)`
+
+`405` `if (flow->filter_list) {`
+
+`406` `result = tc_classify(kb,flow->filter_list,`
+
 ```
 
 # 转发 867
@@ -39087,10 +40590,6 @@ else {
 464 }
 ```
 
-
-
-
-
 # 转发 869
 
 ```c
@@ -39110,7 +40609,7 @@ else {
 517 }
 ```
 
-9.336 ATM 调度–TC 出队列: linux/net/sched/sch_atm.c
+### 9.336 ATM 调度–TC 出队列: linux/net/sched/sch_atm.c
 
 ```c
 520 static struct skb_buff *atm_tc_dequeue(struct qdisc *sch, struct qdisc *sch)
@@ -39125,7 +40624,7 @@ else {
 529 }
 ```
 
-9.337 ATM 调度–TC 入队列: linux/net/sched/sch_atm.c.
+### 9.337 ATM 调度–TC 入队列: linux/net/sched/sch_atm.c.
 
 ```c
 532 static int atm_tc_requeue(struct skb_buff *skb, struct qdisc *sch)
@@ -39145,23 +40644,36 @@ else {
 
 # 870 TCP/IP 与 Linux 协议实现
 
-图 9.338 ATM 调度–TC 丢包: linux/net/sched/sch_atm.c.
+### 图 9.338 ATM 调度–TC 丢包: linux/net/sched/sch_atm.c.
 
 ```c
 549 static atm_tc_drop(struct qdisc *sch)
 550 {
+```
+
+
+
+```c
 551     struct atm_qdisc_data *p = PRIV(sch);
+
 552     struct atm_flow_data *flow;
+
 553
+
 554     DPRINTK("atm_tc_drop(sch %p)\n", sch, p);
+
 555     for (flow = p->flows; flow; flow = flow->next)
+
 556         if (flow->q->ops->drop && flow->q->ops->drop(flow->q))
+
 557             return i;
+
 558
+
 559 }
 ```
 
-图 9.339 ATM 调度–初始化: linux/net/sched/sch_atm.c.
+图 9.339 ATM 调度–初始化: `linux/net/sched/sch_atm.c`.
 
 ```c
 714 #ifndef MIDDLE
@@ -39179,15 +40691,19 @@ else {
 
 # 9.14 管理转发处理/信息–TC 命令
 
-Linux 现在拥有精密的（且复杂的）流量控制设施——这些可以通过一些分布式资源预留或流量工程算法进行管理，或者在每个站点手动设置。TC 命令是一个应用程序，允许你在此特定的 Linux 系统上配置这些设施。
+Linux 现在拥有精密的（且复杂的）流量控制设施——这些可以通过一些分布式资源预留或流量工程算法进行管理，或者在每个站点手动设置。`TC` 命令是一个应用程序，允许你在此特定的 Linux 系统上配置这些设施。
 
 ### 9.14.1 流量控制–使用工具
 
 ```sh
 #!/bin/sh
+
 TC=/src/iproute2/tc
+
 DEV="deveth0"
+
 efrate="2Mbit"
+
 MTU="1.5KB"
 ```
 
@@ -39240,7 +40756,7 @@ burst 90 avpkt 1000 bandwidth 1Mbit probability 3
 
 # 9.14.2 流量控制–工具如何实现
 
-图 9.340 TC-main: tc/tc.c.
+图 9.340 TC-main: `tc/tc.c`.
 
 ```c
 37 void *BODY;
@@ -39252,7 +40768,7 @@ burst 90 avpkt 1000 bandwidth 1Mbit probability 3
 
 # 9.14.3 TC 用法
 
-tc 命令的用法相当复杂，因为可以设置三种类型的对象。如前所述，我们有一个过滤器类型（filter）、一个类（class），以及带有其参数的实际队列规则（queuing discipline）。通常，人们使用 tc 为设备选择一种队列规则，然后在设备上附加过滤器以将数据包引导到适当的队列。在更复杂的情况下，这通过 CBQ 或 CSZ 以及类标识符和过滤器进行递归。
+`tc` 命令的用法相当复杂，因为可以设置三种类型的对象。如前所述，我们有一个过滤器类型（`filter`）、一个类（`class`），以及带有其参数的实际队列规则（`queuing discipline`）。通常，人们使用 `tc` 为设备选择一种队列规则，然后在设备上附加过滤器以将数据包引导到适当的队列。在更复杂的情况下，这通过 `CBQ` 或 `CSZ` 以及类标识符和过滤器进行递归。
 
 ```bash
 tc [ OPTIONS ] OBJECT { COMMAND | help }
@@ -39262,7 +40778,7 @@ OPTIONS := [statistics] | [details] | [rate]
 
 # TC Qdisc 命令
 
-如本章其余部分讨论的，队列规则目前是 { atm | [p|b]fifo | tbf | prio | hfsc | hpfq | sfq | cbq | csz | red | gred | ingress, 等. } 之一。
+如本章其余部分讨论的，队列规则目前是 { `atm` | `[p|b]fifo` | `tbf` | `prio` | `hfsc` | `hpfq` | `sfq` | `cbq` | `csz` | `red` | `gred` | `ingress`, 等. } 之一。
 
 ```bash
 tc qdisc [ add | del | replace | change | get ] dev STRING
@@ -39271,40 +40787,40 @@ tc qdisc [ add | del | replace | change | get ] dev STRING
 [ KIND ] [ help | OPTIONS ]
 ```
 
-我们可以带 handle 添加一个基础队列规则，或者作为类层级中的子节点（通常之前由 CBQ 或 CSZ 定义），或者可以作为一个估计器（estimator）。一个例外情况是入站（ingress）队列。
+我们可以带 `handle` 添加一个基础队列规则，或者作为类层级中的子节点（通常之前由 `CBQ` 或 `CSZ` 定义），或者可以作为一个估计器（`estimator`）。一个例外情况是入站（`ingress`）队列。
 
 估计器获取一个间隔和一个时间常数，估计值在此常数上衰减。这用于监控队列占用情况，而无需运行过多的循环。
 
 当我们添加或修改给定的队列规则时，还有一些需要设置的配置参数。每个队列规则可以大致如下进行配置：
 
-atm。IP over ATM 可以在类层级中设置参数。这些包括使用的 ATM 类型以及 VC 类（在 ATM 意义上，即 UBR、VBR 等）。ATM 层参数如 SDU（数据包大小，9280 字节）以及任何 ATM 地址信息（例如使用 E164 或 ISO 地址来识别链路下一跳，即 ATM VC 端点）。
+`atm`。IP over ATM 可以在类层级中设置参数。这些包括使用的 ATM 类型以及 VC 类（在 ATM 意义上，即 UBR、VBR 等）。ATM 层参数如 SDU（数据包大小，9280 字节）以及任何 ATM 地址信息（例如使用 E164 或 ISO 地址来识别链路下一跳，即 ATM VC 端点）。
 
 # 转发
 
-atm (pvc <addr> | svc <addr> [ sap <sap> ] | qos <qos> [ sndbuf <bytes> ] | hdr <hex> | excess ( <class id> | clp )
+`atm` (`pvc <addr>` | `svc <addr>` [ `sap <sap>` ] | `qos <qos>` [ `sndbuf <bytes>` ] | `hdr <hex>` | `excess` ( `<class id>` | `clp` ))
 
-fifo 取一个参数，即队列长度。
+`fifo` 取一个参数，即队列长度。
 
 ```bash
 [p|b]fifo [limit <n>]
 ```
 
-tbf。令牌桶过滤器接收队列长度、限制和延迟（微秒），或者基于缓冲区和突发长度的突发规格，以及速率参数。它还可以接受 MTU 参数和最大路径单元包大小参数。
+`tbf`。令牌桶过滤器接收队列长度、限制和延迟（微秒），或者基于缓冲区和突发长度的突发规格，以及速率参数。它还可以接受 MTU 参数和最大路径单元包大小参数。
 
 ```bash
 tbf limit <bytes> burst <bytes>/<bytes> rate kbps [ mtu <bytes>/<bytes> ]
 ```
 
-prio。优先级队列通过若干频段（bands）进行配置，然后是标识符映射（以便稍后在过滤器）。
+`prio`。优先级队列通过若干频段（`bands`）进行配置，然后是标识符映射（以便稍后在过滤器）。
 
 ```bash
 prio bands <n> priomap <P1> <P2> ...
 ```
 
-hfsc。分层公平服务曲线不在当前发布版本中。
-hpfq。在编写时，分层数据公平队列尚在发布版本中。
+`hfsc`。分层公平服务曲线不在当前发布版本中。
+`hpfq`。在编写时，分层数据公平队列尚在发布版本中。
 
-sfq。随机公平队列可以通过扰动和量子来设置，这些是输入到。
+`sfq`。随机公平队列可以通过扰动和量子来设置，这些是输入到。
 
 ```bash
 sfq [ perturb <seconds> ] [ quantum <bytes> ]
@@ -39312,26 +40828,35 @@ sfq [ perturb <seconds> ] [ quantum <bytes> ]
 
 
 
-
 过滤器根据 RSVP 流规范设置，在特定的无符号 32 位标识符上、根据路由分类器、或作为防火墙过滤器设置。过滤器具有并可以具有父节点、优先级、偏好，并且可能还有协议，同时也可能额外添加一个估计器。
 
 ## 9.15 BSD
 
-最近发布的 BSD UNIX 增加了由日本 Wide Project 的 Kenjiro Cho 开发的基于类的队列机制（CBQ）。该系统早于 Linux 系统，且与其非常相似，但在其当前形式下通用性较差。与 Linux 代码一样，它包含一个分类器、一个队列策略和一个节流系统（被称为调节器）。这些组件的流水线与 Linux 的 CBQ 结构相同，但通用性较差之处在于其顺序不可重编程的。
+最近发布的 BSD UNIX 增加了由日本 Wide Project 的 Kenjiro Cho 开发的基于类的队列机制（`CBQ`）。该系统早于 Linux 系统，且与其非常相似，但在其当前形式下通用性较差。与 Linux 代码一样，它包含一个分类器、一个队列策略和一个节流系统（被称为调节器）。这些组件的流水线与 Linux 的 `CBQ` 结构相同，但通用性较差之处在于其顺序不可重编程的。
 
 熟悉 BSD 网络设备输出接口的读者会立即看出它是如何接入的：
 
 ```
 if_output()
+
 calls
+
 if_output()
+
 which
+
 classifies
+
 enqueues
+
 if_start()
+
 dequeues a packet and
+
 regulates it
 ```
+
+
 
 其他函数管理队列参数，例如最大长度。有多种可能的调节器，但默认的是令牌桶调节器，它具有与 Linux 类似的速率和桶大小。
 
@@ -39389,15 +40914,15 @@ NAT 是一种翻译 IP 数据报文部分的方案——特别是源和目的地
 
 ### 10.3.1 引言
 
-netfilter 代码允许在数据包流中放置钩子（hooks）。如果我们考虑一台作为路由器的 Linux 设备，则钩子可以放在以下位置（见图 10.6）：
+`netfilter` 代码允许在数据包流中放置钩子（hooks）。如果我们考虑一台作为路由器的 Linux 设备，则钩子可以放在以下位置（见图 10.6）：
 
-- 1. 输入之后，路由阶段之前（NF_IP_PRE_ROUTING）
-2. 输入之后，如果数据包是面向本地机器的（NF_IP_LOCAL_IN）
-3. 如果数据包要被转发（NF_IP_FORWARD）
-4. 数据包输出之前（NF_IP_POST_ROUTING）
-5. 如果数据包是在本地创建的（NF_IP_LOCAL_OUT）
+- 1. 输入之后，路由阶段之前（`NF_IP_PRE_ROUTING`）
+- 2. 输入之后，如果数据包是面向本地机器的（`NF_IP_LOCAL_IN`）
+- 3. 如果数据包要被转发（`NF_IP_FORWARD`）
+- 4. 数据包输出之前（`NF_IP_POST_ROUTING`）
+- 5. 如果数据包是在本地创建的（`NF_IP_LOCAL_OUT`）
 
-netfilter 允许在过滤钩处执行以下操作：
+`netfilter` 允许在过滤钩处执行以下操作：
 
 - ACCEPT（接受）：表示允许数据包继续；即，调用下一个钩子。
 - DROP（丢弃）：数据包应被内核丢弃。
@@ -39409,19 +40934,16 @@ netfilter 允许在过滤钩处执行以下操作：
 
 图 10.6 可能的钩子位置。
 
-
-
-
 ## 10.3.2 IP Tables
 
-iptables 是一种可以将一组规则应用于所选数据包的机制。Linux 内核包含了一组支持以下功能的默认表：
+`iptables` 是一种可以将一组规则应用于所选数据包的机制。Linux 内核包含了一组支持以下功能的默认表：
 
 - 过滤 (Filtering)
 - 修改 (Mangling)
 - 连接跟踪 (Connection tracking)
 - NAT
 
-以过滤为例，请参考 net/ipv4/netfilter/iptables_filter.c。此处构建了一个结构体，它挂钩在 NF_IP_LOCAL_IN、NF_IP_FORWARD 和 NF_IP_LOCAL_OUT 上。随后，在用户空间的控制下向表中添加规则，以指示哪些数据包匹配并应该被丢弃。
+以过滤为例，请参考 `net/ipv4/netfilter/iptables_filter.c`。此处构建了一个结构体，它挂钩在 `NF_IP_LOCAL_IN`、`NF_IP_FORWARD` 和 `NF_IP_LOCAL_OUT` 上。随后，在用户空间的控制下向表中添加规则，以指示哪些数据包匹配并应该被丢弃。
 
 ### 10.3.3 总结
 
@@ -39514,73 +41036,6 @@ CIDR (无类域间路由)。地址聚合——目前用于紧凑基于目的的�
 
 类 (Class，也称为配置 profile、模板 template)（参见通用端口规范）。流量类是一种合同类型；合同是一种合同类型加上该类型参数的一组值。合同
 
-
-
-
-
-# 术语表
-
-type 指定了接入控制的参数；例如：
-
-- 1. 尽力而为（Best Effort）——没有参数（源地址和目的地址、ToS 和优先级外）。
-- 2. 控制负载（Controlled Load）——指定一个对于源端（汇点）看起来像轻负载网络且具有指定平均速率的合约。允许具有较高突发速率的流与当前处于较低速率的流之间进行容量借用。在短时间范围内对这种控制是选择调度算法的因素之一（见 schedule）。
-- 3. 保证服务（Guaranteed Service）——这非常像 ATM CBR 合约，但也像 VBR 速率——它指定了延迟边界以及吞吐量参数。这些实际上是端到端和逐跳实现的，因此与 CDV 参数有所不同，CDV 是一种流量行为规范，而不是合约请求。
-- 4. 闲隙（Slack）——RSVP 中的术语，用于分配路径沿线跳跃的波动。
-- 5. 控制延迟（Controlled Delay）——此参数及后续两个参数是提议的服务合约。
-- 6. 承诺速率（Committed Rate）。
-- 7. 预测（Predictive）。
-
-**分类器（Classifier）。** 一种规则的实现，用于判断数据包的来源并将其分配到一个类。
-
-**拥塞（Congestion）。** 网络及其提供的负载的一种状态，其中流量部分或大部分未被有效利用——例如，流量跨越链路到达瓶颈，结果仅被丢弃。在具有预留的多业务网络中，可以指高呼叫阻塞概率——实际上，这仅仅是资源稀缺。
-
-**回退（Crankback）。** 一种技术，使流建立过程沿着部分流路径递归回溯，直到第一个可以确定通往目的地替代路径的节点。
-
-**CSMA（载波监听多路访问）。** 共享介质网络调制的构建块。
-
-**CSZ（Clark, Shenker, and Zhang）。** CBQ 的替代模型。
-**cwnd**（拥塞窗口）。这是第 7 章讨论的 TCP 拥塞避免算法中的重要参数。
-
-**守护进程（Daemon）。** 始终运行的 UNIX 用户空间进程，用于处理各种服务请求并增强内核级功能。
-
-**数据报（Datagram）。** 一个 IP 数据包。
-**DECnet。** 数字设备公司旧的网络架构。
-
-**目的地路由（Destination routing）。** 目前为互联网中的每个数据包选择路由的标准方法——使用目的地址来查找从网络网格图（网络拓扑图）出的最短路径（根据某些指标，如跳数计数、最高吞吐量、最低延迟或任何指标），网格图可能具有多个潜在路径。为了选择多条路径，可以使用外部状态（例如随机数、来自其他源的流量负载），但这可能导致数据包到达目的地时严重乱序。要使用多条路径，需要根据其他信息区分流——例如，源，或者源加上 To（加上优先级（加上 QoS））或泛化端口信息。或者，可以安装一个与这些信息关联的快速查找键，无论它是什么——例如，通过信令协议，或者通过对流存在性的隐式识别、通过标签或流标签安装协议来安装。此类标签可能是特定跳跃的。
-
-**DHCP（动态主机配置协议）。** 用于在计算机连接到新网络时对其进行重新配置。
-
-**DMA（直接内存访问）。** 意味着 I/O 设备可以在不涉及 CPU 的情况下从内存发送和接收数据。
-
-**DNS（域名系统）。** 将人类易用的计算机和服务的名称映射为 IP 地址的服务。
-
-**DRR（差额轮询）。** 加权公平队列（Weighted Fair Queuing）的一种常见且高效的近似。
-
-**DVMVRP（距离矢量组播路由协议）。** 一种已弃用的 IP 多组播路由协议。
-
-**E.164。** ATM 网络中使用的地址标准。
-
-**ECN（显式拥塞通知）。** 一种通过显式（二进制）标记 IP 数据包，向端系统反馈有关互联网路由器处发生拥塞的信息的方法。
-
-**ECONET。** 低性能、低带宽网络。
-
-**EGP（外部网关协议）。** 跨域路由协议。（注：此处对应原文重复部分已重新对应翻译）
-
-**E.164。** ATM 网络中使用的地址标准。
-
-**ECN（显式拥塞通知）。** 一种通过显式（二进制）标记 IP 数据包，向端系统反馈有关互联网路由器处发生初始拥塞的信息的方法。
-
-**ECONET。** 低性能、低带宽网络。
-
-**EGP（外部网关协议）。** 跨域路由协议。（注：此处原文重复部分已重新对应翻译）
-
-...（此处由于原文中存在大量重复段落，已根据“不要重复输出原文”原则处理，以下为去重后的逻辑完整译文）
-
-*注：由于您提供的原文中包含大量重复段落（如 E.164, ECN, ECONET 等重复多次），以下是整理后的去重逻辑完整译文：*
-
-[content]
-# 术语表
-
 type 指定了接入控制的参数；例如：
 
 - 1. 尽力而为（Best Effort）——没有参数（源地址和目的地址、ToS 和优先级外）。
@@ -39642,9 +41097,6 @@ type 指定了接入控制的参数；例如：
 **Flow label（流标签）。** IPv6 字段。
 
 **IP flow（或简称为流）。** 从源到目的地的（单播或组播）具有关联服务质量的 IP 数据包流。
-
-
-
 
 # 894 术语表
 
@@ -39785,10 +41237,6 @@ Resvear。预留拆除 RSVP 控制消息删除预留状态。
 **RIP（路由信息协议）。** 一种用于中规模网络的简单有效的域内路由协议。
 **路由（ToS, QoS, QoR）。** 服务类型是 IPv4 头部中为人知的字段——某些实现甚至设置它。某些转发软件（例如 slip 驱动程序）使用它，但路由器。QoS 指考虑网络拓扑、边缘成本和流量条件的路由。QoR 指基于固定参数的路由。
 
-
-
-
-
 # 术语表
 
 RTT（往返时间）。TCP 流的一个关键性能参数。
@@ -39900,9 +41348,6 @@ Van 实施了这一算法三次：
 - [23] “Operating System Concepts,”
 - [24] “Computer Organisation and Design,”
 
-
-
-
 [25] 计算机网络：自上而下的方法面向互联网，J. Kurose, K. Ross, Addison Wesley, 2001.
 
 [26] “点击模块化路由器，”Eddie Kohler, Robert Morris, Benjie Chen, John Jammotti, and M. Frans Kaashe, ACM Transactions on Computer Systems Vol. 18, No. 3, pp. 263–297, 2000年8月
@@ -39967,17 +41412,30 @@ RFC 是关于互联网协议族的、著名的“请求意见”（Request for C
 # 代码作者
 
 ```
+
+
+
 <chexum@bankinf.banki.hu>
+
 <Tim_Alpaerts@toyota-motor-europe.com>
+
 Aage Kvalnes <aage@cs.uit.no>
+
 Adam Sulmicki <adam@cfar.umd.edu>
+
 Al Longyear <longyear@netcom.com>
+
 Alan Cox <alan.cox@linux.org>
+
 Alexey Kuznetsov <kuznet@ms2.inr.ac.ru>
+
 Andrey V. Savochkin <saw@msu.ru>
+
 Arnaldo Carvalho de Melo <acme@connectiva.com.br>
+
 Arnt Gulbrandsen@nvg.unit.no>
-```
+
+
 
 # 参考文献
 
@@ -39991,9 +41449,6 @@ Alexey Kuznetsov <kuznet@ms2.inr.ac.ru>
 Andrey V. Savochkin <saw@msu.ru>
 Arnaldo Carvalho de Melo <acme@connectiva.com.br>
 Arnt Gulbrandsen@nvg.unit.no
-
-
-
 
 ## 索引
 
@@ -40246,10 +41701,6 @@ Arnt Gulbrandsen@nvg.unit.no
 - 发送者选择顺序, 892
 - 外部网关协议, 见 EGPs (外部网关协议)
 
-
-
-
-
 # 924
 
 # 索引
@@ -40495,10 +41946,6 @@ Arnt Gulbrandsen@nvg.unit.no
     - 异步, 103–5
     - 非阻塞, 102–3
     - IOO 缓冲区管理, 158–62
-
-
-
-
 
 # 索引 917
 
@@ -40811,10 +42258,6 @@ linux/net/sched/ipv4/tcp_output.c, 77
 linux/net/sched/ipv4/udp.h, 83–87
 linux/net/sched/ipv4/udpconf.c, 43–47
 
-
-
-
-
 # 920
 # 索引
 
@@ -41113,9 +42556,6 @@ linux/net/sched/ipv4/udpconf.c, 43–47
     - 主机路由, 627–93
     - EGWs (内部网关协议), 545–46
     - IP 命令, 527–38
-
-
-
 
 扩展性
 - 描述, 545
@@ -41436,9 +42876,6 @@ WRR (加权轮询), 658–591
 X
 x25/(广域 X-25 网络代码), 403
 
-
-
-
 这本卓越的著作应当命名为《TCP/IP 图解！》。作者用清晰易懂的语言和图表，带领读者开启了一场关于“网络”上 Linux 的程序员梦想之旅。如果你需要了解它是如何工作的，这本书应该是你图书馆中必备的读物。
 
 文顿·策夫 (Vinton Cerf)
@@ -41482,3 +42919,5 @@ ISBN 0-471-40882-4 9000
 JOHN WILEY & SONS, INC. 纽约 • 奇切斯特 • 韦因斯坦 · 布里斯班 • 新加坡 • 多伦多
 
 ![](img/06c11ba8be5c1c24aa633e12618e2ebd_987_0.png)
+
+```

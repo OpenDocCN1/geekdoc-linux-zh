@@ -1,3 +1,4 @@
+
 # 读取
 
 应用程序可以通过以下两种方法之一接收和读取传入的 WebSocket 流量：
@@ -12,21 +13,17 @@ libcurl 可以传递完整的片段或部分片段，这取决于何时通过网
 
 ## `curl_ws_recv`
 
-如果设置了仅连接选项，则在将 WebSocket 设置到远程主机后，传输结束，从那时起应用程序需要调用 `curl_ws_recv()` 来读取 WebSocket 数据，并调用 `curl_ws_send()` 来发送它。
+如果设置了仅连接选项，则在将 WebSocket 设置到远程主机后，传输结束，从那时起应用程序需要调用`curl_ws_recv()`来读取 WebSocket 数据，并调用`curl_ws_send()`来发送它。
 
-`curl_ws_recv` 函数具有以下原型：
+`curl_ws_recv`函数具有以下原型：
 
-```sh
+```
 CURLcode curl_ws_recv(CURL *curl, void *buffer, size_t buflen,
                       size_t *recv, struct curl_ws_frame **meta);
 ```
 
-`curl` - 转移的句柄
-
-`buffer` - 指向一个缓冲区的指针，用于接收 WebSocket 数据
-
-`buflen` - 缓冲区的大小（以字节为单位）
-
-`recv` - 返回时存储在 **buffer** 中的数据的大小（以字节为单位）
-
-`meta` - 获取一个指向包含 接收帧信息 的结构的指针。
+- `curl` - 转移的句柄
+- `buffer` - 指向一个缓冲区的指针，用于接收 WebSocket 数据
+- `buflen` - 缓冲区的大小（以字节为单位）
+- `recv` - 返回时存储在`buffer`中的数据的字节大小
+- `meta` - 获取一个指向包含接收帧信息结构的指针

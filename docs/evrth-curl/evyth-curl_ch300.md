@@ -1,3 +1,4 @@
+
 # 结构体
 
 本节记录了内部结构体。由于它们确实是内部的，我们偶尔会更改它们，这可能会使本节在某些时候略显过时。
@@ -12,7 +13,7 @@
 
 当 `Curl_easy` 结构体被添加到多句柄中，为了执行任何传输，它必须这样做，`->multi` 成员指向它所属的 `Curl_multi` 结构体。`->prev` 和 `->next` 成员随后被多代码用来保持添加到同一多句柄的 `Curl_easy` 结构体的链表。libcurl 始终使用多句柄，因此在传输进行时 `->multi` 指向一个 `Curl_multi`。
 
-`->mstate` 是这个特定 `Curl_easy` 的多状态。当调用 `multi_runsingle()` 时，它根据当前状态对此句柄进行操作。mstate 还告诉在调用 `curl_multi_fdset()` 等时，为特定的 `Curl_easy` 返回哪些套接字。
+`->mstate` 是这个特定 `Curl_easy` 的多状态。当调用 `multi_runsingle()` 时，它根据当前状态对此句柄进行操作。`mstate` 还告诉在调用 `curl_multi_fdset()` 等时，为特定的 `Curl_easy` 返回哪些套接字。
 
 libcurl 源代码通常使用 `data` 这个名字来命名指向 `Curl_easy` 结构体的局部变量。
 
@@ -30,7 +31,7 @@ libcurl 源代码通常使用 `data` 这个名字来命名指向 `Curl_easy` 结
 
 FTP 使用两个 TCP 连接进行典型传输，但它将这两个连接都保留在这个单个结构中，因此可以被认为是大多数内部关注的一个单一连接。
 
-libcurl 的源代码通常使用`conn`这个名字来表示指向 connectdata 的局部变量。
+libcurl 的源代码通常使用`conn`这个名字来表示指向 `connectdata` 的局部变量。
 
 ## Curl_multi
 
@@ -60,49 +61,49 @@ libcurl 支持的每个独特协议都需要提供一个至少包含一个`Curl_
 
 具体的函数指针原型可以在`lib/urldata.h`中找到。
 
-+   `->scheme` 是 URL 方案名称，通常用大写字母拼写。例如 HTTP 或 FTP 等。协议的 SSL 版本需要自己的 `Curl_handler` 设置，因此 HTTPS 与 HTTP 分开。
++ `->scheme` 是 URL 方案名称，通常用大写字母拼写。例如 HTTP 或 FTP 等。协议的 SSL 版本需要自己的 `Curl_handler` 设置，因此 HTTPS 与 HTTP 分开。
 
-+   `->setup_connection` 被调用以允许协议代码分配特定于协议的数据，这些数据随后与整个传输过程中的 `Curl_easy` 关联。在传输结束时再次释放。它在选择/创建传输的 `connectdata` 之前被调用。大多数协议在这里分配其私有的 `struct [PROTOCOL]` 并将其分配给 `Curl_easy->req.p.[protocol]`。
++ `->setup_connection` 被调用以允许协议代码分配特定于协议的数据，这些数据随后与整个传输过程中的 `Curl_easy` 关联。在传输结束时再次释放。它在选择/创建传输的 `connectdata` 之前被调用。大多数协议在这里分配其私有的 `struct [PROTOCOL]` 并将其分配给 `Curl_easy->req.p.[protocol]`。
 
-+   `->connect_it` 允许协议在 TCP 连接完成后执行一些特定操作，这些操作仍可被视为连接阶段的一部分。一些协议在此函数中更改 `connectdata->recv[]` 和 `connectdata->send[]` 函数指针。
++ `->connect_it` 允许协议在 TCP 连接完成后执行一些特定操作，这些操作仍可被视为连接阶段的一部分。一些协议在此函数中更改 `connectdata->recv[]` 和 `connectdata->send[]` 函数指针。
 
-+   `->connecting` 是一个函数，只要协议认为它仍然处于连接阶段，就会不断被调用。
++ `->connecting` 是一个函数，只要协议认为它仍然处于连接阶段，就会不断被调用。
 
-+   `->do_it` 是调用以发出传输请求的函数。我们内部称之为 DO 操作。如果 DO 不足以完成整个 DO 序列，则通常还提供 `->doing`。每个需要执行多个命令或类似操作的协议都需要实现自己的状态机（参见 SCP、SFTP、FTP）。一些协议（只有 FTP，并且仅由于历史原因）有一个单独的 DO 状态部分，称为 `DO_MORE`。
++ `->do_it` 是调用以发出传输请求的函数。我们内部称之为 DO 操作。如果 DO 不足以完成整个 DO 序列，则通常还提供 `->doing`。每个需要执行多个命令或类似操作的协议都需要实现自己的状态机（参见 SCP、SFTP、FTP）。一些协议（只有 FTP，并且仅由于历史原因）有一个单独的 DO 状态部分，称为 `DO_MORE`。
 
-+   `->doing` 在发出传输请求命令时不断被调用
++ `->doing` 在发出传输请求命令时不断被调用
 
-+   `->done` 在传输完成并标记为完成时被调用。即在主要数据传输之后。
++ `->done` 在传输完成并标记为完成时被调用。即在主要数据传输之后。
 
-+   `->do_more` 在 `DO_MORE` 状态期间被调用。FTP 协议在设置第二个连接时使用此状态。
++ `->do_more` 在 `DO_MORE` 状态期间被调用。FTP 协议在设置第二个连接时使用此状态。
 
-+   `->proto_getsock`、`->doing_getsock`、`->domore_getsock`、`->perform_getsock` 函数返回套接字信息。在特定多状态期间等待哪个套接字进行哪些 I/O 操作。
++ `->proto_getsock`、`->doing_getsock`、`->domore_getsock`、`->perform_getsock` 函数返回套接字信息。在特定多状态期间等待哪个套接字进行哪些 I/O 操作。
 
-+   `->disconnect` 在关闭 TCP 连接之前立即被调用。
++ `->disconnect` 在关闭 TCP 连接之前立即被调用。
 
-+   `->readwrite` 在传输期间被调用，允许协议执行额外的读取/写入操作
++ `->readwrite` 在传输期间被调用，允许协议执行额外的读取/写入操作
 
-+   `->attach` 将传输附加到连接上。
++ `->attach` 将传输附加到连接上。
 
-+   `->defport` 是此协议使用的默认报告 TCP 或 UDP 端口
++ `->defport` 是此协议使用的默认报告 TCP 或 UDP 端口
 
-+   `->protocol` 是 `CURLPROTO_*` 集中的一个或多个位。SSL 版本具有基本协议集和 SSL 变体。例如 `HTTP|HTTPS`。
++ `->protocol` 是 `CURLPROTO_*` 集中的一个或多个位。SSL 版本具有基本协议集和 SSL 变体。例如 `HTTP|HTTPS`。
 
-+   `->flags` 是一个掩码，包含有关协议的附加信息，这使得通用引擎以不同的方式处理它：
++ `->flags` 是一个掩码，包含有关协议的附加信息，这使得通用引擎以不同的方式处理它：
 
-    +   `PROTOPT_SSL` - 使其连接并协商 SSL
+    + `PROTOPT_SSL` - 使其连接并协商 SSL
 
-    +   `PROTOPT_DUAL` - 此协议使用两个连接
+    + `PROTOPT_DUAL` - 此协议使用两个连接
 
-    +   `PROTOPT_CLOSEACTION` - 此协议在关闭连接之前执行操作。此标志不再由代码使用，但仍被许多协议处理程序设置。
+    + `PROTOPT_CLOSEACTION` - 此协议在关闭连接之前执行操作。此标志不再由代码使用，但仍被许多协议处理程序设置。
 
-    +   `PROTOPT_DIRLOCK` - 方向锁。SSH 协议设置这个位以限制主引擎关注的套接字动作的方向。
+    + `PROTOPT_DIRLOCK` - 方向锁。SSH 协议设置这个位以限制主引擎关注的套接字动作的方向。
 
-    +   `PROTOPT_NONETWORK` - 不使用网络的协议（读取 `file:`）
+    + `PROTOPT_NONETWORK` - 不使用网络的协议（读取 `file:`）
 
-    +   `PROTOPT_NEEDSPWD` - 这个协议需要一个密码，如果没有提供，则使用默认密码
+    + `PROTOPT_NEEDSPWD` - 这个协议需要一个密码，如果没有提供，则使用默认密码
 
-    +   `PROTOPT_NOURLQUERY` - 这个协议无法处理 URL 上的查询部分（?foo=bar）
+    + `PROTOPT_NOURLQUERY` - 这个协议无法处理 URL 上的查询部分（?foo=bar）
 
 ## conncache
 

@@ -1,15 +1,10 @@
+
 # Tor 暗网系列：隐身艺术大师
-
-
-
-
-
-
-
 
 ## 前言
 
 被蔑视的女人比死亡更可怕。
+
 在这里用“蔑视”这个词可能不太准确，因为是我邀请国土安全局的探员进了我的家。
 
 “进来吧，水很暖，”我对他们说。
@@ -58,15 +53,12 @@
 
 “没跑，”我想。
 
-
-
-
-
 “手机。”
 
 “噢，那个啊。呃……不。”
 
 “不？为什么不？”她问道。
+
 我提高音量，用手指指着她。“要么被捕，要么滚蛋！我不会被两个叫 Frick 和 Frack 的联邦暴徒在没有搜查令的情况下屈服。我的手机是加密的，对你们根本没用。但我这里有座用电话，我的律师在聘，，让我给他打电话并开始录音。”
 
 他们面面相觑。“我们会回来的，”男人说。当他们关上门时，锁舌滑位的声音就像监狱大门关上的声音。我的手机就要变成我的牢房了。难道我正为自己的棺材钉上最后一枚钉子吗？
@@ -76,6 +68,7 @@
 我发现他停在他那栋阴森的老旧房子外，开着一辆我讨厌了多年的消防栓红色皮卡，音响里放着 AC-DC 乐队。他正转着他的胡子，对他的命运或我的命运完全无所顾。典型。我想给他扇一个耳光。狠狠地扇。直接扇在他后脑勺上，就像 Rick James 在 80 年代对几个随从做的那样。但当我看到 Facebook 占据正中心时，我停住了。不仅有*那个*在 Twitter、Google Plus、Skype、Viber 和 Whatsapp 上的作恶软件，背景还运行着 Tor。
 
 Tor！老天爷保佑。
+
 我咬着牙，在他耳边大吼：“白痴！”，眼睁睁地看着他的手机掉进了那只粉色毛绒骰子下的 Bud Light 啤酒杯里。他大骂我。
 
 “臭混蛋，”他大叫道。他擦了擦，是防水的。他身材瘦长且没修胡子，说话语气像《疯狂的战士》里那个瘦瘦的旋转肉饼店老板失败者，他相信财富共享的概念——只要那是别人的东西，并且是随手可得的。
@@ -100,6 +93,8 @@ Tor！老天爷保佑。
 
 他是对的。我六年级时说话总是太快，在某些几次汗流浃背的场合，我敢发誓我能亲眼看到我的字一个个飞过并绕过他那没梳理的头顶；如果你用手电筒的光束穿过那些耳朵，你会看到他的眼睛在闪光。所以我慢了下来。龟龟般的慢。比划着手说话，像个大场面前的意大利钢琴家。
 
+
+
 “听着，”我开始说。如果你打算玩谜语博士的游戏并对字母机构搞恶作剧，你起码能做的就是用你自己的名字把这一切都搞砸，并且表现出一点专业性。扯上我的名字就太让人丢人了。你为什么要用我的卡干这种事？为什么要事我扯进来？”
 
 回我的只有无赖虫的回应。
@@ -111,10 +106,8 @@ Tor！老天爷保佑。
 “因为你只会打开那个加密开关，而且只有在你需要保护数据时才打开。”
 
 我说反过来也是。
+
 “如果每个人到处都使用加密，那么它不再是给消防部门扑灭火灾的信号，而是无法判断谁在企图引发革命。对你做的每一小事都加密，你就能在地球另一端拯救生命，而你却对此无所知。”
-
-
-
 
 未加密的手机和电脑。如果加密数据在你手里而不是在他们手里，你被他们欺负的风险就会小得多。你有更大的回旋余地。中国的异见人士吗？在中国，一旦他们剥夺了加密手段和武器，他们就会夺取你的财产权、出生权、你的后代，随之而来的是血腥的叛乱或彻底的奴役，所有的法律权利都会被更改，让你无法反抗。你无法还手。
 
@@ -183,6 +176,7 @@ Tor！老天爷保佑。
 # 匿名与隐私
 
 匿名（Anonymity）：
+
 名词，不为人知的性质或状态。
 
 老韦斯特词典未能给出它的重要定义。这个词本身源自希腊语，意为“没有名字”，但这并没有真正告诉我们要变得隐形。关于这一点有点：
@@ -205,8 +199,6 @@ Tor！老天爷保佑。
 
 我试着让自己冷静下来，但情况变得更糟了，因为我不记得上次把蜡烛放在哪里了。我知道破碎的窗是可以更换的。
 
-
-
 被存入秘密数据库，并被挖掘未来的模式和趋势。关于我、我的爱人、狗和猫的趋势。
 
 所以，你并不欠微软、谷歌或苹果任何东西。但学习如何在没有它们的情况下生活符合你的利益，因为当它们的清算之日（也许是雷击）最终降临时，它将像黑夜之客一样降临。
@@ -223,77 +215,52 @@ Tor！老天爷保佑。
 
 第一个基本战术是更改 IP 地址，并且频繁更改。
 
-取决于你使用的工具，大多数具备 IP 功能的设备都有设置自己的 IP 地址的能力。但这种战术是有代价的，因为频繁更改 IP 地址是非常异常的。取决于你当时使用的互联网服务，它被记录的速度可能比你想象的要快。如果你在使用 Skype，如果他们想要，可以轻松地将你的语音同时流到两个位置，你对此无能为力。
 
-同样，任何允许匿名（或至少无需账户）发帖的网站只能通过 IP 屏蔽访问者。然后那些被屏蔽的人中，有些人会找到掩盖 IP 的方法（代理、Tor 等）并让这些 IP 也被屏蔽。最终你会像我一样学到，问题不在于网站，而在于那些导致它们被屏蔽的蠢货。你的情况可能有所不同。
+
+取决于你使用的工具，大多数具备 IP 功能的设备都有设置自己的 IP 地址的能力。但这种战术是有代价的，因为频繁更改 IP 地址是非常异常的。取决于你当时使用的互联网服务，它被记录的速度可能比你想象的要快。如果你在使用 `Skype`，如果他们想要，可以轻松地将你的语音同时流到两个位置，你对此无能为力。
+
+同样，任何允许匿名（或至少无需账户）发帖的网站只能通过 IP 屏蔽访问者。然后那些被屏蔽的人中，有些人会找到掩盖 IP 的方法（代理、`Tor` 等）并让这些 IP 也被屏蔽。最终你会像我一样学到，问题不在于网站，而在于那些导致它们被屏蔽的蠢货。你的情况可能有所不同。
 
 第二个基本战术是伪骗和孪隆 IP 地址。通过第一种方法，你使用的是对于你的本地节点有效但目前未使用的 IP 地址。对于“伪骗和孪隆”，你想使用另一个节点当前正在使用的 IP 地址。这种方法仅在你的网络适配器可以置于杂杂模式并读取指向其他 IP 地址的流量时才有效。它要求你的设备定时传输，以免干扰目标设备，并继续读取开放流量，直到目标设备收到你发送的任何服务器的回复。
 
 即使我为你提供了最好的可用匿名方法，如果你正在做会引起执法部门注意的事情，这些方法也只会推迟你最终被去匿名的时间。任何有能力寻求大型国家或国际电信公司帮助的人都会在小时内找到你。话虽如此，我将向你展示你可以（理论上说）防止这种事件发生的方法。请继续阅读。
-
 
 在你学习像迈克尔·韦斯顿那样脱离网络之前，我们需要消除几个迷信。第一个是由于有很多可用隐藏应用，智能手机更擅长隐藏。这并非事实。
 
-### 迷信 1.)智能手机比旧的“功能机”更好。更智能，却更擅长隐藏？这是一个非常大的否定，简直像在屋顶上疯狂挥舞手臂一样。考虑一下为什么在关于德国总理安格拉··梅克尔发现 NSA 监听了她多年电话的 NSA 丑闻爆发后，俄罗斯决定恢复使用打字机。如果你认为回到“旧方法”会让官僚监视你变得困难得多，你是对的。
+### 迷信 1.) 智能手机比旧的“功能机”更好
+更智能，却更擅长隐藏？这是一个非常大的否定，简直像在屋顶上疯狂挥舞手臂一样。考虑一下为什么在关于德国总理安格拉··梅克尔发现 `NSA` 监听了她多年电话的 `NSA` 丑闻爆发后，俄罗斯决定恢复使用打字机。如果你认为回到“旧方法”会让官僚监视你变得困难得多，你是对的。
 
-翻盖手机在良好的操作安全方面优于智能手机，此不虚，无论哪种。首先，它们不喜欢“向家汇报”，而且它们支持的应用越少，你的安全就越严密。这是因为许多黑客攻击和利用针对最常用的操作系统，如 Windows 和 Android。而 NSA 的“超级黑客”喜欢你使用几十个你几乎不了解的应用。从俄罗斯人那里学点吧。
+翻盖手机在良好的操作安全方面优于智能手机，此不虚，无论哪种。首先，它们不喜欢“向家汇报”，而且它们支持的应用越少，你的安全就越严密。这是因为许多黑客攻击和利用针对最常用的操作系统，如 `Windows` 和 `Android`。而 `NSA` 的“超级黑客”喜欢你使用几十个你几乎不了解的应用。从俄罗斯人那里学点吧。
 
-### 迷信 2.)只要你使用 Tor，家里就是安全的。又是错，千错万错。从匿名性的角度来看，家里是一个放射性地雷。想象自己正试图在没有防护服的情况下处理一桶绿色放射性粘稠物。那是危险的粘稠物质。虽然我承认你可能存活到足够给总部打电话，告诉他们你搞砸了任务。即使你只是想留着手机，也要把它放在遥远的地方。
+### 迷信 2.) 只要你使用 Tor，家里就是安全的
+又是错，千错万错。从匿名性的角度来看，家里是一个放射性地雷。想象自己正试图在没有防护服的情况下处理一桶绿色放射性粘稠物。那是危险的粘稠物质。虽然我承认你可能存活到足够给总部打电话，告诉他们你搞砸了任务。即使你只是想留着手机，也要把它放在遥远的地方。
 
-### 迷信 3.)在哪里激活手机并不重要。
-
+### 迷信 3.) 在哪里激活手机并不重要
 第一个基本战术是更改 IP 地址，并且频繁更改。
 
-取决于你使用的工具，大多数具备 IP 功能的设备都有设置自己的 IP 地址的能力。但这种战术是有代价的，因为频繁更改 IP 地址是非常异常的。取决于你当时使用的互联网服务，它被记录的速度可能比你想象的要快。如果你在使用 Skype，如果他们想要，可以轻松地将你的语音同时流到两个位置，你对此无能为力。
+取决于你使用的工具，大多数具备 IP 功能的设备都有设置自己的 IP 地址的能力。这种战术是有代价的，因为频繁更改 IP 地址是非常异常的。取决于你当时使用的互联网服务，它被记录的速度可能比你想象的要快。如果你在使用 `Skype`，如果他们想要，可以轻松地将你的语音同时流到两个位置，你对此无能为力。
 
-同样，任何允许匿名（或至少无需账户）发帖的网站只能通过 IP 屏蔽访问者。然后那些被屏蔽的人中，有些人会找到掩盖 IP 的方法（代理、Tor 等）并让这些 IP 也被屏蔽。最终你会像我一样学到，问题不在于网站，而在于那些导致它们被屏蔽的蠢货。你的情况可能有所不同。
+### 迷信 4.) 无法追踪的备机无法在网上购买（至少不能匿名购买）
+这也是错误的。在深网购买东西的问题不是于这要求你隐身，而是这样做时会买到劣质品。你实际上可以在深网购买备机（稍后详述）。现在只需知道一种选择是使用 `Tor` 浏览器购买匿名备机，对于深网上的其他东西，如药物、`iPhone`，你可能最好使用离线代理购买电子产品。中国伪造品在暗网很流行，你很快就会看到。它们会欺骗足够的买家并获得好评，所以买家要自负风险。话虽如此，你完全可以通过这种方式找到金石里的金。
 
-第二个基本战术是伪骗和孪隆 IP 地址。通过第一种方法，你使用的是对于你的本地节点有效但目前未使用的 IP 地址。对于“伪骗和孪隆”，你想使用另一个节点当前正在使用的 IP 地址。这种方法仅在你的网络适配器可以置于杂杂模式并读取指向其他 IP 地址的流量时才有效。它要求你的设备定时传输，以免干扰目标设备，并继续读取开放流量，直到目标设备收到你发送的任何服务器的回复。
-
-即使我为你提供了最好的可用匿名方法，如果你正在做会引起执法部门注意的事情，这些方法也只会推迟你最终被去匿名的时间。任何有能力寻求大型国家或国际电信公司帮助的人都会在小时内找到你。话虽如此，我将向你展示你可以（理论上说）防止这种事件发生的方法。请继续阅读。
-
-
-在你学习像迈克尔·韦斯顿那样脱离网络之前，我们需要消除几个迷信。第一个是由于有很多可用隐藏应用，智能手机更擅长隐藏。这并非事实。
-
-### 迷信 1.)智能手机比旧的“功能机”更好。更智能，却更擅长隐藏？这是一个非常大的否定，简直像在屋顶上疯狂挥舞手臂一样。考虑一下为什么在关于德国总理梅克尔的 NSA 丑闻爆发后，俄罗斯决定恢复使用打字机。如果你认为回到“旧方法”会让官僚监视你变得困难得多，你是对的。
-
-翻盖手机在良好的操作安全方面优于智能手机，此不虚，无论哪种。首先，它们不喜欢“向家汇报”，而且它们支持的应用越少，你的安全就越严密。这是因为许多黑客攻击和利用针对最常用的操作系统，如 Windows 和 Android。而 NSA 的“超级黑客”喜欢你使用几十个你几乎不了解的应用。从俄罗斯人那里学点吧。
-
-### 迷信 2.)只要你使用 Tor，家里就是安全的。又是错，千错万错。从匿名性的角度来看，家里是一个放射性地雷。想象自己正试图在没有防护服的情况下处理一桶绿色放射性粘稠物。那是危险的粘稠物质。虽然我承认你可能存活到足够给总部打电话，告诉他们你搞砸了任务。即使你只是想留着手机，也要把它放在遥远的地方。
-
-### 迷信 3.)在哪里激活手机并不重要。
-
-第一个基本战术是更改 IP 地址，并且频繁更改。
-
-取决于你使用的工具，大多数具备 IP 功能的设备都有设置自己的 IP 地址的能力。这种战术是有代价的，因为频繁更改 IP 地址是非常异常的。取决于你当时使用的互联网服务，它被记录的速度可能比你想象的要快。如果你在使用 Skype，如果他们想要，可以轻松地将你的语音同时流到两个位置，你对此无能为力。
-
-同样，任何允许匿名（或至少无需账户）发帖的网站只能通过 IP 屏蔽访问者。然后那些被屏蔽的人中，有些人会找到掩盖 IP 的方法（代理、Tor 等）并让这些 IP 也被屏蔽。最终你会像我一样学到，问题不在于网站，而在于那些导致它们被屏蔽的蠢货。你的情况可能有所不同。
-
-第二个基本战术是伪骗和孪隆 IP 地址。通过第一种方法，你使用的是对于你的本地节点有效但目前未使用的 IP 地址。对于“伪骗和孪隆”，你想使用另一个节点当前正在使用的 IP 地址。这种方法仅在你的网络适配器可以置于杂杂模式并读取指向其他 IP 地址的流量时才有效。它要求你的设备定时传输，以免干扰目标设备，并继续读取开放流量，直到目标设备收到你发送的任何服务器的回复。
-
-即使我为你提供了最好的可用匿名方法，如果你正在做会引起执法部门注意的事情，这些方法也只会推迟你最终被去匿名的时间。任何有能力寻求大型国家或国际电信公司帮助的人都会在小时内找到你。话虽如此，我将向你展示你可以（理论上说）防止这种事件发生的方法。请继续阅读。
-
-### 迷信 4.)无法追踪的备机无法在网上购买（至少不能匿名购买）。这也是错误的。在深网购买东西的问题不是于这要求你隐身，而是这样做时会买到劣质品。你实际上可以在深网购买备机（稍后详述）。现在只需知道一种选择是使用 Tor 浏览器购买匿名备机，对于深网上的其他东西，如药物、iPhone，你可能最好使用离线代理购买电子产品。中国伪造品在暗网很流行，你很快就会看到。它们会欺骗足够的买家并获得好评，所以买家要自负风险。话虽如此，你完全可以通过这种方式找到金石里的金。
-
-### 迷信 5.)没有人关心你的联系列表
-
-两点要说明。第一点是联系人是危险的。他们创建了一个模式，当它在 NSA 巨大的屏幕上亮起时，就像点亮了
-
+### 迷信 5.) 没有人关心你的联系列表
+两点要说明。第一点是联系人是危险的。他们创建了一个模式，当它在 `NSA` 巨大的屏幕上亮起时，就像点亮了
 
 就像一根炸药，而你就在那根炸药的末端。砰。
 
-就像硬盘上存储两个操作系统的“隐藏”分区（一个是真实的，另一个是 Vercrypt 那种虚假的），你想要设置虚假线索，让你看起来有联系人，但实际上并无。这会模糊你的踪迹。一个备用手机的联系人不能与下一个备用手机相同。在纸面上，任何联系人提供的风险都比电话列表要低，因为大多数 SIM 数据往往会出卖你。
+就像硬盘上存储两个操作系统的“隐藏”分区（一个是真实的，另一个是 `Vercrypt` 那种虚假的），你想要设置虚假线索，让你看起来有联系人，但实际上并无。这会模糊你的踪迹。一个备用手机的联系人不能与下一个备用手机相同。在纸面上，任何联系人提供的风险都比电话列表要低，因为大多数 SIM 数据往往会出卖你。
 
-第二点涉及三角测量和模式匹配。情报机构更青睐“镜像”设备而非任何其他设备，因为其中涉及唯一的标识符。随着时间的推移，你可以通过反复使用相同的模式来暴露自己，例如：房子 -> 地铁 -> Verizon（或你常上班的地方） -> 女朋友家 -> 回家。走这条路线并随着时间的推移会建立一种移动模式。如果任何大人物在寻找你，无论你是否使用备用手机都会发现。防止这种情况的方法是了解你的周围。对话的时间几乎总是相同的。也就是说，在同一个地方与同拨的人聊天时。
+第二点涉及三角测量和模式匹配。情报机构更青睐“镜像”设备而非任何其他设备，因为其中涉及唯一的标识符。随着时间的推移，你可以通过反复使用相同的模式来暴露自己，例如：房子 -> 地铁 -> `Verizon`（或你常上班的地方） -> 女朋友家 -> 回家。走这条路线并随着时间的推移会建立一种移动模式。如果任何大人物在寻找你，无论你是否使用备用手机都会发现。防止这种情况的方法是了解你的周围。对话的时间几乎总是相同的。也就是说，在同一个地方与同拨的人聊天时。
 
 想一下。你妈妈会在她休息或丈夫上班的日子打电话，通常是持续 45 分钟。你最好的朋友 John，大概是 15-20 分钟，因为没有那么多感性的唠叨。男人在和其他男人交谈时倾向于不绕圈子，但在一个多月的时间里，如果与你拨打的其他电话相结合，就会形成一种识别模式。只需要三个左右匹配的模式，游戏就结束了。
-
 
 除非你想审问从你家到市边界的每一个备用手机，否则永远不要“原样”扔掉你的手机，尤其是不要丢在离家附近。它们应该被安全地擦除，然后逐块拆解，就像它是属于某个不死巫师的古老文物一样。
 
 ## 神话 8.) 在任何无线网络上都是匿名的（只要你不做任何愚蠢的事）
 
-这是最致命的神话。这与安全地使用 WiFi 网络有关，你不会相信有多少高中生中的极客认为自己是 Tor 和黑客的大师，结果却发现警察上门了，因为他们从错误的宿舍在在网上威胁了错误的人。在不少安全网站上，我看到像 Macspoofer 之类的应用被推荐。使用这些神奇应用中的任何一个都可能对你的自由不利。
+
+
+这是最致命的神话。这与安全地使用 WiFi 网络有关，你不会相信有多少高中生中的极客认为自己是 Tor 和黑客的大师，结果却发现警察上门了，因为他们从错误的宿舍在网上威胁了错误的人。在不少安全网站上，我看到像 Macspoofer 之类的应用被推荐。使用这些神奇应用中的任何一个都可能对你的自由不利。
 
 如果你的 MAC 地址处于持续的身份危机状态（或始终在变化），你就缩小了任何想要找到你的对手的可用搜索参数。对于一个群体来说，这会引起巨大的不必要的关注。怎么说？因为接入点在短时间内连接了多个 MAC 号。这看起来很可疑。任何称职的管理员都会调查。与其在白羊环绕中把自己染成黑色，不如看起来和别人一样。
 
@@ -305,12 +272,11 @@ Tor！老天爷保佑。
 
 无论你使用的是 Linux Mint、Windows 7 还是 Mac，如果你在这些程序中输入了任何可以帮助追踪你的个人信息，你就需要杀死该应用程序。你在论坛上使用的用户名绝不应该出现在你的匿名手机或匿名（如 Linux Mint！）笔记本电脑上。
 
-此外，电话号码、工作地点、昵称、聚会场所、约过的女孩、在线游戏 - 所有这些都是你真实人格的一部分，留下了通你家门的痕迹。一旦匿名身份出现，那个真实人格就需要进入棺材。只有这样，我们才能充分地了解自己，而不必担心我们是否做对了了一切。到那时，我们已经做了很多次，它已经是我们潜意识中自动运行的时钟了。这样做，我们就能更清楚地看到真正的敌人，其中之一就是国家安全局（NSA）。
-
+此外，电话号码、工作地点、昵称、聚会场所、约过的女孩、在线游戏 - 所有这些都是你真实人格的一部分，留下了通你家门的痕迹。一旦匿名身份出现，那个真实人格就需要进入棺材。只有这样，我们才能充分地了解自己，而不必担心我们是否做对了一切。到那时，我们已经做了很多次，它已经是我们潜意识中自动运行的时钟了。这样做，我们就能更清楚地看到真正的敌人，其中之一就是国家安全局（NSA）。
 
 让我们简要介绍一下权势最初是如何追踪电话的。这有点技术性，但了解敌人的能力总是好的。
 
-如果你像我一样，每当看到《销毁名单》（Burn Notice）或《CSI破案现场》（CSI）里的坏蛋在位置被追踪之前只有二十秒钟时间嘲讽 FBI 时，你可能已经翻过无数白眼了。这都是芭蕾，发生在我看过的每一部警匪剧里。他们认为我们是紼鼠。好吧，我们中确实有人是。
+如果你像我一样，每当看到《销毁名单》（Burn Notice）或《CSI破案现场》（CSI）里的坏蛋在位置被追踪之前只有二十秒钟时间嘲讽 FBI 时，你可能已经翻过无数白眼了。这都是芭蕾，发生在我看过的每一部警匪剧里。他们认为我们是老鼠。好吧，我们中确实有人是。
 
 《洛克福德探案传奇》（The Rockford）、《CSI》和《销毁名单》。我喜欢这些每一集，无论我有多喜欢它们并不重要，因为当他们犯错时，你就无法喜欢。而且他们错得非常不幸。他们犯错是因为剧作家自己不是侦探，许多人只想尽快完成剧本，所以他们从未实地观察过日常运作。像詹姆斯·帕特森（James Patterson）这样的畅销作家会做自己的工作，但他们不知道现实。
 
@@ -322,7 +288,7 @@ NSA 通过与电信公司的合作以及入侵电信提供商获得了 SS7 的�
 
 我打赌你可能好奇为什么你不能像电信公司那样追踪移动手机。
 
-原因与仅通过 IP 地址无法识别个人的原因相同。只有电信公司知道，因为他们有日志。即使是从 VPN（或虚拟网络）获取订阅权限也需要传票。他们无法为了某个人入侵系统而不冒丢掉工作（或政治生涯）。好吧，NSA 可以，，那是另一回事。但对于互联网本身，其内部任何节点都不比其他任何节点特殊。
+原因与仅通过 IP 地址无法识别个人的原因相同。只有电信公司知道，因为他们有日志。即使是从 VPN（或虚拟网络）获取订阅权限也需要传票。他们无法为了某个人入侵系统而不冒丢掉工作（或政治生涯）的风险。好吧，NSA 可以，那是另一回事。但对于互联网本身，其内部任何节点都不比其他任何节点特殊。
 
 与手机不同。
 
@@ -330,15 +296,13 @@ NSA 通过与电信公司的合作以及入侵电信提供商获得了 SS7 的�
 
 简短的答案是：如果没有正确的安全措施和心态，你无法做到。通常情况下，如果你使用基站，你就会被追踪。但这个世界并非完美，那些基站也不完美。它们会产生像我们的杀毒软件那样的误报，尽管方式不同。但你可以微调三角测量角度来模糊追踪。
 
-你还可以通过使用电波创建虚假线索来这样做（是的，一根
-无线）将你的声音传输到手机。如果你做对了，那个追捕你的人最终将是在追风。你可以将信号设定为你想要的任何数值。1百英尺变成半英里，现在史密斯先生捕捉你的区域突然变得大得多。大得多意味着需要更多的时间、更多的金钱和更多资源。然而，如果你属于以下三种情况之一，上述任何方法都毫无意义：
+你还可以通过使用电波创建虚假线索来这样做（是的，一根无线）将你的声音传输到手机。如果你做对了，那个追捕你的人最终将是在追风。你可以将信号设定为你想要的任何数值。100 英尺变成半英里，现在史密斯先生捕捉你的区域突然变得大得多。大得多意味着需要更多的时间、更多的金钱和更多资源。然而，如果你属于以下三种情况之一，上述任何方法都毫无意义：
 
--   对元数据疏忽（即那些你经常联系的人）。
--   对态势感知疏忽。
--   对行动安全（opsec）疏忽。
+- 对元数据疏忽（即那些你经常联系的人）。
+- 对态势感知疏忽。
+- 对行动安全（opsec）疏忽。
 
-
-财务部的 Bob 声称任何一个备用手机都和另一个没区别。Tom 在某种程度上表示赞同，但坚持认为你需要一个巫术娃娃和一个他在 Ars Technica 论坛上读到的疯狂公式，才能真正实现匿名。编程部门新来的女孩，一个性迷的 Carrie-Anne，坚持认为重要的是你在手机之外做的事情。我们该信任谁？是唯唯是诺的 Bob、税务专家 Tom，还是从哥特女孩转变为黑客的 Carrie-Anne？到底什么是“足够好”？
+财务部的 Bob 声称任何一个备用手机都和另一个没区别。Tom 在某种程度上表示赞同，但坚持认为你需要一个巫术娃娃和一个他在 Ars Technica 论坛上读到的疯狂公式，才能真正实现匿名。编程部门新来的女孩，一个性感的 Carrie-Anne，坚持认为重要的是你在手机之外做的事情。我们该信任谁？是唯唯诺诺的 Bob、税务专家 Tom，还是从哥特女孩转变为黑客的 Carrie-Anne？到底什么是“足够好”？
 
 这取决于你身处何地。在你要去的东南亚，一个备用手机可能和另一个一样好。或者，如果你正在前往南极旅行，或者在菲律宾附近某艘被炸毁的日本潜艇上潜水，而并不是真的在躲避任何大白鲨，那么它可能就是“足够好”的。
 
@@ -348,11 +312,9 @@ NSA 通过与电信公司的合作以及入侵电信提供商获得了 SS7 的�
 
 你和我无法跨越它们，这就是为什么我不能在 Verizon 的版本上使用 AT&T 的手机网络。大多数主要的运营商让低地轨道设备（LEOs）追踪通话变得简单，因为它们将备用手机的流量与预付费流量隔离开。Sprint 的执行人员可能会说这是因为他们需要优先考虑流量。他没告诉你的是，这被 NSA 和执法部门用于追踪“匿名”拨号者。
 
-
 假设我们的朋友 Jerry 在坐下吃片麦时每天都会和 Kramer、George 和 Elaine 聊天。他有几部手机，不同的运营商，但他为每个“朋友”和每位联系人添加的信息就足以让他成为一个极易被追踪的目标。这些联系人（即 Kramer、George 和 Elaine）的每一比特数据都存储在 SIM 卡上，并与他使用的任何其他备用手机上的精确联系数据相匹配。对于联邦执法部门来说追踪他简直易得可笑。
 
 对于 NSA 来说，在 Prism 系统中点击几次，就能毫不费力地找到他的地理位置。
-
 
 那么，如何解决这个问题呢？首先，我们需要定义“位置”对大数据玩家来说到底意味着什么。
 
@@ -362,26 +324,25 @@ Verizon 这样的运营商根据你手机的信号强度存储数据。也就是
 
 他们太慢了，还没意识到，但这样做就像一只醉酒鼠在陷阱里啃着奶酪，而猫在黑暗中注视着。
 
-在他们喝完另一口杰丹尼士和蛋奶酒之前，他们就会妻子面前脱口自己的全名、家庭地址以及他们情人的密码。从那起起，几乎不可能伪造任何东西，因为该手机与他们的真实位置——即家里每个手机用户的位置和档案之间存在关联。既然你已经连接了家里的每个人，他们现在为什么需要你的联系列表呢？
+在他们喝完另一口杰丹尼士和蛋奶酒之前，他们就会妻子面前脱口自己的全名、家庭地址以及他们情人的密码。从那起，几乎不可能伪造任何东西，因为该手机与他们的真实位置——即家里每个手机用户的位置和档案之间存在关联。既然你已经连接了家里的每个人，他们现在为什么需要你的联系列表呢？
 
 而且不仅仅是 NSA。
-
 
 并不只是 NSA 使用 Stingray（窃听）监控技术来监视公民。IRS（税务局）现在也使用它来获取手机的元数据。他们也是大数据帝国的一部分，并且只要求最好的工具：最昂贵、最具侵入性的工具。他们使用被称为 IMSI 拦截器（或基站模拟器）的东西。
 
 糟糕的是，IRS 现在拥有以前由法官拥有的权力。这种权力赋予他们安装留言登记设备的权限，以便他们监视那些认为没有按额缴税的人。或者任何挑战他们的人。
 
-从历史上看，这些设备被 FBI 用于捕捉黑手党成员或华华雷斯墨西哥毒枭首领的录音。你知道的，真正的罪犯。现在，每个持有美国护照的人都是目标，他们用来起诉的真实罪犯不够了，所以天哪，他们会编造几个来维持利益车的全力运转。甚至有传言说，学生贷款违约者将被收回护照。这并不离谱，因为他们对抚养费义务也是这么做的，而且那只有 2,500 美元，而不是 50,000 美元。
+从历史上看，这些设备被 FBI 用于捕捉黑手党成员或华雷斯墨西哥毒枭首领的录音。你知道的，真正的罪犯。现在，每个持有美国护照的人都是目标，他们用来起诉的真实罪犯不够了，所以天哪，他们会编造几个来维持利益车的全力运转。甚至有传言说，学生贷款违约者将被收回护照。这并不离谱，因为他们对抚养费义务也是这么做的，而且那只有 2,500 美元，而不是 50,000 美元。
 
 总之。从鹰的角度看，你可以看到 IRS 的 Stingrays 是高科技的双胞胎。它们是基站的克隆，可以迫使范围内的任何手机静默连接，这样任何元数据都可以被提取。
+
+
 
 有点像你在 PBS 自然纪录片中看到的那些寄生虫，植物获益而寄生虫在一种共生关系中获益，这种关系在大学教科书中很难研究，但看起很有趣。只有当 IRS 感兴趣时，利益才会流向一个方向。
 
 关键在于？那个寄生虫死得比植物早得多。考虑一下：如果你的国家突然发现无法从任何人那里借钱，认为会发生什么？如果你学过历史，你已经知道答案了。如果你不相信，请允许我引用一位相当著名的政治家的话：
 
 > “如果你能轻而取胜时不为正义而战斗；如果你在胜利有把握且成本不高时不战斗；你可能会在胜利希望渺茫的情况下必须为了生存而战斗，因为我们宁死也不愿为奴隶。” —— 温斯顿·丘吉尔
-
-
 
 胜任。
 
@@ -397,6 +358,7 @@ Google 就是问题所在，就像 iCloud 对几个被黑客攻击的名人来�
 - 如果你在云端存储银行详情，你交易的任何银行都可能拒绝对丢失资金进行任何赔偿。他们会认为这是你的“过失”。
 
 使用像 Vercrypt 或 PGP 的加密应用配合 Google Drive 更有效。我的做法是：
+
 - 首先启动 Vercrypt 或 TrueCrypt 7.1a
 - 创建一个存储文件，
 - 选择两种基于 SHA-512 密钥的算法加密方案
@@ -404,7 +366,6 @@ Google 就是问题所在，就像 iCloud 对几个被黑客攻击的名人来�
 - 然后，只有这样，才将加密文件上传到 Google Drive。
 
 当我需要修改工作，例如更新我正在写的小说草稿，但不想让 Google 扫描“违规”词汇时，我只需从 Google Drive 复制加密文档，更新它，然后重新加密并上传到 Google Drive。如果我想删除它，只需删除该加密存储文件即可。这很简单，而且在 Google 拥有天网般的量子计算机来破解加密密钥之前，还有遥得多。
-
 
 正如我提到的，任何政府机构都可以并且将会通过发送给 Google 的传票访问你的云存储。但如果执法部门没收了你的手机或笔记本电脑，后果会如何？这种情况会发生。恰巧，你可能因为另一个完全不同的案件被捕，但他们证据不足。
 
@@ -423,12 +384,10 @@ Google 就是问题所在，就像 iCloud 对几个被黑客攻击的名人来�
 - 他们不跟踪你。
 - 他们不向其他网站出售你的搜索数据。
 - 他们不需要 Cookie。
-- 他们不收集关于你的元数据
-
-他们不存储你的搜索历史。
+- 他们不收集关于你的元数据。
+- 他们不存储你的搜索历史。
 
 这是非黑即白的，没有大多数人反正会直接跳过的复杂法律术语。清晰如日。如果他们决定拥抱黑暗面面（就像 Google 那样），FTC 可以提起诉讼。主要点是，如果一家公司有隐私政策，他们就必须遵守。无论如何。
-
 
 Google Chrome 非常像斯蒂芬·金小说中的《克里斯汀》（Christine）——一辆过度痴爱的 1957 年款普姆茅斯菲里。她跑得飞快、狂热且充满欲望，就像那辆地狱产物汽车一样，Chrome 会抵抗任何修改的诱惑，或者收紧那张张开的钢铁巨口，因为它认为自己能比你做得更好。而且，她为什么要听从某个卑微小卒的命令呢？
 
@@ -444,31 +403,25 @@ Google Chrome 非常像斯蒂芬·金小说中的《克里斯汀》（Christine�
 
 如果我想删除它，只需删除加密存储文件。这很简单，而且在 Google 拥有天网般的量子计算机来破解加密密钥之前，还有遥得多。
 
-
-
 不会保持私密。当你把它们输入到 Bing 本体时，它们就会暴露。即使是 URL 也会为了验证目的发送给微软，所以不言而喻，有些地窖门应该保持关闭。永久性关闭。
-
 
 Cortana 在安装 Windows 10 后会自动启用。开启此项后，你即表示同意微软向你授予一种类似于个人助理的程序，它会在你的电脑和微软之间来回发送有关你活动的数据（包括你运行的应用程序、GPS 位置、浏览历史）。它还包括你的手写和声纹特征。你可以在“隐私”设置中的“语音、墨迹和平输入”中禁用这些功能，但要记住，Cortana 在这种隐私滥用方面并不独特，因为 Google 和 Siri 也在做同样的事情。
 
 如果你计划在深网（Deep Web）上进行任何操作，这可能是件**非常糟糕的事情**是显而易见的。如果你必须使用 Windows 10（我强烈建议你不要这样做），你必须——最重要的是——禁用数据日志。操作方法如下。
 
-
-这些修复方法中的一些有点过头，如果你不确定该做什么，就停留在“安装前”和“安装后”部分。不过，如果你至少不清楚自己在做什么，**千万不要**开始折腾 PowerShell 或注册表编辑器。显然，这比仅仅“精通电脑”要复杂得多，但它说明了 Windows 对匿名性来说到底有多危险。
-
+这些修复方法中的一些有点过头，如果你不确定该做什么，就停留在“安装前”和“安装后”部分。不过，如果你至少不清楚自己在做什么，**千万不要**开始折腾 `PowerShell` 或注册表编辑器。显然，这比仅仅“精通电脑”要复杂得多，但它说明了 Windows 对匿名性来说到底有多危险。
 
 不要使用“快速设置”。点击“自定义”，并确保所有选项都已关闭。强烈建议你在 Windows 10 上本地账户。
-
 
 前往“设置 > 隐私”，除非有你真正需要的某些内容，否则禁用所有项。在“隐私”页面内时，前往“反馈”，在第一个框中选择“从不”，在第二个框中选择“基本”。
 
 前往“设置 > 更新和安全 > 高级选项 > 选择接收更新的方式”，关闭第一个开关。
 
 右键点击搜索栏/图标禁用 Cortana。
+
 （可选）进入“设置”，关闭“搜索在线”和“包含网络结果”，以禁用搜索中的搜索。
 
-
-以管理员身份运行命令提示符以启动 CMD（按下 Windows 键或点击开始菜单按钮，输入“cmd”，然后右键点击列表顶部的命令提示符并选择“以管理员身份运行”），然后输入以下：
+以管理员身份运行命令提示符以启动 `CMD`（按下 Windows 键或点击开始菜单按钮，输入“`cmd`”，然后右键点击列表顶部的命令提示符并选择“以管理员身份运行”），然后输入以下：
 
 ```
 sc delete Diag
@@ -476,193 +429,196 @@ sc delete dmwushservice
 echo "" > C:\ProgramData\Microsoft\DiagnosisETLLogsAutoLogger\Diagtrack-Listener::el
 ```
 
-以管理员身份运行 gpedit.msc 以启动组策略编辑器（与 cmd 方法相同）。
+以管理员身份运行 `gpedit.msc` 以启动组策略编辑器（与 `cmd` 方法相同）。
 
 进入“计算机配置 > 管理模板 > Windows 组件 > 数据收集和预览性生成”。双击“遥测”，点击“已禁用”，然后应用。
 
 在组策略编辑器中，继续进入“计算机配置 > 管理模板 > Windows 组件 > OneDrive”，双击“防止使用 OneDrive 存储文件”，点击“已启用”，然后应用。
 
-以管理员身份运行 regedit 以启动注册表编辑器（再次与 cmd 方法相同）。
+以管理员身份运行 `regedit` 以启动注册表编辑器（再次与 `cmd` 方法相同）。
 
-进入 HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion，选择 AllowTelemetry，将其值更改为 0，然后应用。
+进入 `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion`，选择 `AllowTelemetry`，将其值更改为 0，然后应用。
 
-首先，在此处下载 Take Ownership（获取所有权）优化工具：http://www.howtgeek.com/howto/windows-vista/add-take-ownership-to-explorer-right-click-in-vista/ 并启用它。
+首先，在此处下载 Take Ownership（获取所有权）优化工具：`http://www.howtgeek.com/howto/windows-vista/add-take-ownership-to-explorer-right-click-in-vista/` 并启用它。
 
-然后，前往 C:\Windows\System32\Drivers\etc 进入 Hosts 文件，获取 hosts 文件的所有权，并将以下 IP 添加到其中（使用记事本或你喜欢的任何文本编辑器）。
 
-- 127.0.0.1 vortex.data.microsoft.com
-- 127.0.0.1 vortex-win.data.microsoft.com
-- 127.0.0.1 telecommand.telemetry.microsoft.com
-- 127.0.0.1 telecommand.telemetry.microsoft.com.nsatc
-- 127.0.0.1 oca.telemetry.microsoft.com
-- 127.0.0.1 oca.telemetry.microsoft.com.nsatc
-- 127.0.0.1 sqm.telemetry.microsoft.com
-- 127.0.0.1 sqm.telemetry.microsoft.com.nsatc
-- 127.0.0.1 watson.telemetry.microsoft.com
-- 127.0.0.1 watson.telemetry.microsoft.com.nsatc
-- 127.0.0.1 redir.metaservices.microsoft.com
-- 127.0.0.1 choice.microsoft.com
-- 127.0.0.1 choice.microsoft.com.nsatc
-- 127.0.0.1 df.telemetry.microsoft.com
-- 127.0.0.1 reports.wes.telemetry.microsoft.com
-- 127.0.0.1 services.wes.telemetry.microsoft.com
-- 127.0.0.1 sqm.telemetry.microsoft.com
-- 127.0.0.1 sqm.telemetry.microsoft.com.nsatc
-- 127.0.0.1 watson.telemetry.microsoft.com
-- 127.0.0.1 watson.telemetry.microsoft.com.nsatc
-- 127.0.0.1 redir.metaservices.microsoft.com
-- 127.0.0.1 choice.microsoft.com
-- 127.0.0.1 choice.microsoft.com.nsatc
-- 127.0.0.1 df.telemetry.microsoft.com
-- 127.0.0.1 reports.wes.telemetry.microsoft.com
-- 127.0.0.1 services.wes.telemetry.microsoft.com
-- 127.0.0.1 sqm.telemetry.microsoft.com
-- 127.0.0.1 sqm.telemetry.microsoft.com.nsatc
-- 127.0.0.1 watson.telemetry.microsoft.com
-- 127.0.0.1 watson.telemetry.microsoft.com.nsatc
-- 127.0.0.1 redir.metaservices.microsoft.com
-- 127.0.0.1 choice.microsoft.com
-- 127.0.0.1 choice.microsoft.com.nsatc
-- 127.0.0.1 df.telemetry.microsoft.com
-- 127.0.0.1 reports.wes.telemetry.microsoft.com
-- 127.0.0.1 services.wes.telemetry.microsoft.com
-- 127.0.0.1 sqm.telemetry.microsoft.com
-- 127.0.0.1 sqm.telemetry.microsoft.com.nsatc
-- 127.0.0.1 watson.telemetry.microsoft.com
-- 127.0.0.1 watson.telemetry.microsoft.com.nsatc
-- 127.0.0.1 redir.metaservices.microsoft.com
-- 127.0.0.1 choice.microsoft.com
-- 127.0.0.1 choice.microsoft.com.nsatc
-- 127.0.0.1 df.telemetry.microsoft.com
-- 127.0.0.1 reports.wes.telemetry.microsoft.com
-- 127.0.0.1 services.wes.telemetry.microsoft.com
-- 127.0.0.1 sqm.telemetry.microsoft.com
-- 127.0.0.1 sqm.telemetry.microsoft.com.nsatc
-- 127.0.0.1 watson.telemetry.microsoft.com
-- 127.0.0.1 watson.telemetry.microsoft.com.nsatc
-- 127.0.0.1 redir.metaservices.microsoft.com
-- 127.0.0.1 choice.microsoft.com
-- 127.0.0.1 choice.microsoft.com.nsatc
-- 127.0.0.1 df.telemetry.microsoft.com
-- 127.0.0.1 reports.wes.telemetry.microsoft.com
-- 127.0.0.1 services.wes.telemetry.microsoft.com
-- 127.0.0.1 sqm.telemetry.microsoft.com
-- 127.0.0.1 sqm.telemetry.microsoft.com.nsatc
-- 127.0.0.1 watson.telemetry.microsoft.com
-- 127.0.0.1 watson.telemetry.microsoft.com.nsatc
-- 127.0.0.1 redir.metaservices.microsoft.com
-- 127.0.0.1 choice.microsoft.com
-- 127.0.0.1 choice.microsoft.com.nsatc
-- 127.0.0.1 df.telemetry.microsoft.com
-- 127.0.0.1 reports.wes.telemetry.microsoft.com
-- 127.0.0.1 services.wes.telemetry.microsoft.com
-- 127.0.0.1 sqm.telemetry.microsoft.com
-- 127.0.0.1 sqm.telemetry.microsoft.com.nsatc
-- 127.0.0.1 watson.telemetry.microsoft.com
-- 127.0.0.1 watson.telemetry.microsoft.com.nsatc
-- 127.0.0.1 redir.metaservices.microsoft.com
-- 127.0.0.1 choice.microsoft.com
-- 127.0.0.1 choice.microsoft.com.nsatc
-- 127.0.0.1 df.telemetry.microsoft.com
-- 127.0.0.1 reports.wes.telemetry.microsoft.com
-- 127.0.0.1 services.wes.telemetry.microsoft.com
-- 127.0.0.1 sqm.telemetry.microsoft.com
-- 127.0.0.1 sqm.telemetry.microsoft.com.nsatc
-- 127.0.0.1 watson.telemetry.microsoft.com
-- 127.0.0.1 watson.telemetry.microsoft.com.nsatc
-- 127.0.0.1 redir.metaservices.microsoft.com
-- 127.0.0.1 choice.microsoft.com
-- 127.0.0.1 choice.microsoft.com.nsatc
-- 127.0.0.1 df.telemetry.microsoft.com
-- 127.0.0.1 reports.wes.telemetry.microsoft.com
-- 127.0.0.1 services.wes.telemetry.microsoft.com
-- 127.0.0.1 sqm.telemetry.microsoft.com
-- 127.0.0.1 sqm.telemetry.microsoft.com.nsatc
-- 127.0.0.1 watson.telemetry.microsoft.com
-- 127.0.0.1 watson.telemetry.microsoft.com.nsatc
-- 127.0.0.1 redir.metaservices.microsoft.com
-- 127.0.0.1 choice.microsoft.com
-- 127.0.0.1 choice.microsoft.com.nsatc
-- 127.0.0.1 df.telemetry.microsoft.com
-- 127.0.0.1 reports.wes.telemetry.microsoft.com
-- 127.0.0.1 services.wes.telemetry.microsoft.com
-- 127.0.0.1 sqm.telemetry.microsoft.com
-- 127.0.0.1 sqm.telemetry.microsoft.com.nsatc
-- 127.0.0.1 watson.telemetry.microsoft.com
-- 127.0.0.1 watson.telemetry.microsoft.com.nsatc
-- 127.0.0.1..metaservices.microsoft.com
-- 127.0.0.1 choice.microsoft.com
-- 127.0.0.1..microsoft....nsc
 
-- 17.0.0..1.......
+然后，前往`C:\Windows\System32\Drivers\etc`进入`Hosts`文件，获取`Hosts`文件的所有权，并将以下 IP 添加到其中（使用记事本或你喜欢的任何文本编辑器）。
 
-  12......1.....metry....
+- `127.0.0.1 vortex.data.microsoft.com`
+- `127.0.0.1 vortex-win.data.microsoft.com`
+- `127.0.0.1 telecommand.telemetry.microsoft.com`
+- `127.0.0.1 telecommand.telemetry.microsoft.com.nsatc`
+- `127.0.0.1 oca.telemetry.microsoft.com`
+- `127.0.0.1 oca.telemetry.microsoft.com.nsatc`
+- `127.0.0.1 sqm.telemetry.microsoft.com`
+- `127.0.0.1 sqm.telemetry.microsoft.com.nsatc`
+- `127.0.0.1 watson.telemetry.microsoft.com`
+- `127.0.0.1 watson.telemetry.microsoft.com.nsatc`
+- `127.0.0.1 redir.metaservices.microsoft.com`
+- `127.0.0.1 choice.microsoft.com`
+- `127.0.0.1 choice.microsoft.com.nsatc`
+- `127.0.0.1 df.telemetry.microsoft.com`
+- `127.0.0.1 reports.wes.telemetry.microsoft.com`
+- `127.0.0.1 services.wes.telemetry.microsoft.com`
+- `127.0.0.1 sqm.telemetry.microsoft.com`
+- `127.0.0.1 sqm.telemetry.microsoft.com.nsatc`
+- `127.0.0.1 watson.telemetry.microsoft.com`
+- `127.0.0.1 watson.telemetry.microsoft.com.nsatc`
+- `127.0.0.1 redir.metaservices.microsoft.com`
+- `127.0.0.1 choice.microsoft.com`
+- `127.0.0.1 choice.microsoft.com.nsatc`
+- `127.0.0.1 df.telemetry.microsoft.com`
+- `127.0.0.1 reports.wes.telemetry.microsoft.com`
+- `127.0.0.1 services.wes.telemetry.microsoft.com`
+- `127.0.0.1 sqm.telemetry.microsoft.com`
+- `127.0.0.1 sqm.telemetry.microsoft.com.nsatc`
+- `127.0.0.1 watson.telemetry.microsoft.com`
+- `127.0.0.1 watson.telemetry.microsoft.com.nsatc`
+- `127.0.0.1 redir.metaservices.microsoft.com`
+- `127.0.0.1 choice.microsoft.com`
+- `127.0.0.1 choice.microsoft.com.nsatc`
+- `127.0.0.1 df.telemetry.microsoft.com`
+- `127.0.0.1 reports.wes.telemetry.microsoft.com`
+- `127.0.0.1 services.wes.telemetry.microsoft.com`
+- `127.0.0.1 sqm.telemetry.microsoft.com`
+- `127.0.0.1 sqm.telemetry.microsoft.com.nsatc`
+- `127.0.0.1 watson.telemetry.microsoft.com`
+- `127.0.0.1 watson.telemetry.microsoft.com.nsatc`
+- `127.0.0.1 redir.metaservices.microsoft.com`
+- `127.0.0.1 choice.microsoft.com`
+- `127.0.0.1 choice.microsoft.com.nsatc`
+- `127.0.0.1 df.telemetry.microsoft.com`
+- `127.0.0.1 reports.wes.telemetry.microsoft.com`
+- `127.0.0.1 services.wes.telemetry.microsoft.com`
+- `127.0.0.1 sqm.telemetry.microsoft.com`
+- `127.0.0.1 sqm.telemetry.microsoft.com.nsatc`
+- `127.0.0.1 watson.telemetry.microsoft.com`
+- `127.0.0.1 watson.telemetry.microsoft.com.nsatc`
+- `127.0.0.1 redir.metaservices.microsoft.com`
+- `127.0.0.1 choice.microsoft.com`
+- `127.0.0.1 choice.microsoft.com.nsatc`
+- `127.0.0.1 df.telemetry.microsoft.com`
+- `127.0.0.1 reports.wes.telemetry.microsoft.com`
+- `127.0.0.1 services.wes.telemetry.microsoft.com`
+- `127.0.0.1 sqm.telemetry.microsoft.com`
+- `127.0.0.1 sqm.telemetry.microsoft.com.nsatc`
+- `127.0.0.1 watson.telemetry.microsoft.com`
+- `127.0.0.1 watson.telemetry.microsoft.com.nsatc`
+- `127.0.0.1 redir.metaservices.microsoft.com`
+- `127.0.0.1 choice.microsoft.com`
+- `127.0.0.1 choice.microsoft.com.nsatc`
+- `127.0.0.1 df.telemetry.microsoft.com`
+- `127.0.0.1 reports.wes.telemetry.microsoft.com`
+- `127.0.0.1 services.wes.telemetry.microsoft.com`
+- `127.0.0.1 sqm.telemetry.microsoft.com`
+- `127.0.0.1 sqm.telemetry.microsoft.com.nsatc`
+- `127.0.0.1 watson.telemetry.microsoft.com`
+- `127.0.0.1 watson.telemetry.microsoft.com.nsatc`
+- `127.0.0.1 redir.metaservices.microsoft.com`
+- `127.0.0.1 choice.microsoft.com`
+- `127.0.0.1 choice.microsoft.com.nsatc`
+- `127.0.0.1 df.telemetry.microsoft.com`
+- `127.0.0.1 reports.wes.telemetry.microsoft.com`
+- `127.0.0.1 services.wes.telemetry.microsoft.com`
+- `127.0.0.1 sqm.telemetry.microsoft.com`
+- `127.0.0.1 sqm.telemetry.microsoft.com.nsatc`
+- `127.0.0.1 watson.telemetry.microsoft.com`
+- `127.0.0.1 watson.telemetry.microsoft.com.nsatc`
+- `127.0.0.1 redir.metaservices.microsoft.com`
+- `127.0.0.1 choice.microsoft.com`
+- `127.0.0.1 choice.microsoft.com.nsatc`
+- `127.0.0.1 df.telemetry.microsoft.com`
+- `127.0.0.1 reports.wes.telemetry.microsoft.com`
+- `127.0.0.1 services.wes.telemetry.microsoft.com`
+- `127.0.0.1 sqm.telemetry.microsoft.com`
+- `127.0.0.1 sqm.telemetry.microsoft.com.nsatc`
 
-  12..0.........tele..microsoft.com
-- 127.0.0.1 vortex.data.microsoft.com
-- 127.0.0.1 vortex-win.data.microsoft.com
-- 127.0.0.1 telecommand.telemetry.microsoft.com
-- 127.0.0.1 telecommand.telemetry.microsoft.com.nsatc
-- 127.0.0.1 oca.telemetry.microsoft.com
-- 127.0.0.1 oca.telemetry.microsoft.com.nsatc
-- 127.0.0.1 sqm.telemetry.microsoft.com
-- 127.0.0.1 sqm.telemetry.microsoft.com.nsatc
-- 127.0.0.1 watson.telemetry.microsoft.com
-- 127.0.0.1 watson.telemetry.microsoft.com.nsatc
-- 127.0.0.1 redir.metaservices.microsoft.com
-- 127.0.0.1 choice.microsoft.com
-- 127.0.0.1 choice.microsoft.com.nsatc
-- 127.0.0.1 df.telemetry.microsoft.com
-- 127.0.0.1 reports.wes.telemetry.microsoft.com
-- 127.0.0.1 services.wes.telemetry.microsoft.com
-- 127.0.0.1 sqm.telemetry.microsoft.com
-- 127.0.0.1 sqm.telemetry.microsoft.com.nsatc
-- 127.0.0.1 watson.telemetry.microsoft.com
-- 127.0.0.1 watson.telemetry.microsoft.com.nsatc
-- 127.0.0.1 redir.metaservices.microsoft.com
-- 127.0.0.1 choice.microsoft.com
-- 127.0.0.1 choice.microsoft.com.nsatc
-- 127.0.0.1 df.telemetry.microsoft.com
-- 127.0.0.1 reports.wes.telemetry.microsoft.com
-- 127.0.0.1 services.wes.telemetry.microsoft.com
+
+
+# Hosts 列表
+
+- `127.0.0.1` `watson.telemetry.microsoft.com`
+- `127.0.0.1` `watson.telemetry.microsoft.com.nsatc`
+- `127.0.0.1` `redir.metaservices.microsoft.com`
+- `127.0.0.1` `choice.microsoft.com`
+- `127.0.0.1` `choice.microsoft.com.nsatc`
+- `127.0.0.1` `df.telemetry.microsoft.com`
+- `127.0.0.1` `reports.wes.telemetry.microsoft.com`
+- `127.0.0.1` `services.wes.telemetry.microsoft.com`
+- `127.0.0.1` `sqm.telemetry.microsoft.com`
+- `127.0.0.1` `sqm.telemetry.microsoft.com.nsatc`
+- `127.0.0.1` `watson.telemetry.microsoft.com`
+- `127.0.0.1` `watson.telemetry.microsoft.com.nsatc`
+- `127.0.0.1` `..metaservices.microsoft.com`
+- `127.0.0.1` `choice.microsoft.com`
+- `127.0.0.1` `..microsoft....nsc`
+- `17.0.0..1.......`
+  `12......1.....metry....`
+  `12..0.........tele..microsoft.com`
+- `127.0.0.1` `vortex.data.microsoft.com`
+- `127.0.0.1` `vortex-win.data.microsoft.com`
+- `127.0.0.1` `telecommand.telemetry.microsoft.com`
+- `127.0.0.1` `telecommand.telemetry.microsoft.com.nsatc`
+- `127.0.0.1` `oca.telemetry.microsoft.com`
+- `127.0.0.1` `oca.telemetry.microsoft.com.nsatc`
+- `127.0.0.1` `sqm.telemetry.microsoft.com`
+- `127.0.0.1` `sqm.telemetry.microsoft.com.nsatc`
+- `127.0.0.1` `watson.telemetry.microsoft.com`
+- `127.0.0.1` `watson.telemetry.microsoft.com.nsatc`
+- `127.0.0.1` `redir.metaservices.microsoft.com`
+- `127.0.0.1` `choice.microsoft.com`
+- `127.0.0.1` `choice.microsoft.com.nsatc`
+- `127.0.0.1` `df.telemetry.microsoft.com`
+- `127.0.0.1` `reports.wes.telemetry.microsoft.com`
+- `127.0.0.1` `services.wes.telemetry.microsoft.com`
+- `127.0.0.1` `sqm.telemetry.microsoft.com`
+- `127.0.0.1` `sqm.telemetry.microsoft.com.nsatc`
+- `127.0.0.1` `watson.telemetry.microsoft.com`
+- `127.0.0.1` `watson.telemetry.microsoft.com.nsatc`
+- `127.0.0.1` `redir.metaservices.microsoft.com`
+- `127.0.0.1` `choice.microsoft.com`
+- `127.0.0.1` `choice.microsoft.com.nsatc`
+- `127.0.0.1` `df.telemetry.microsoft.com`
+- `127.0.0.1` `reports.wes.telemetry.microsoft.com`
+- `127.0.0.1` `services.wes.telemetry.microsoft.com`
 
 *(注：由于原文中 Hosts 部分存在大量重复和乱码，译文已按逻辑保留核心 IP 列表，并修正了明显的格式错误)*
 
-更正：此处根据原文逻辑进行翻译。。
+更正：此处根据原文逻辑进行翻译。
 
-- 127.0.0.1 vortex.data.microsoft.com
-- 127.0.0.1 vortex-win.data.microsoft.com
-- 127.0.0.1 telecommand.telemetry.microsoft.com
-- 127.0.0.1 telecommand.telemetry.microsoft.com.nsatc
-- 127.0.0.1 oca.telemetry.microsoft.com
-- 127.0.0.1 oca.telemetry.microsoft.com.nsatc
-- 127.0.0.1 sqm.telemetry.microsoft.com
-- 127.0.0.1 sqm.telemetry.microsoft.com.nsatc
-- 127.0.0.1 watson.telemetry.microsoft.com
-- 127.0.0.1 watson.telemetry.microsoft.com.nsatc
-- 127.0.0.1 redir.metaservices.microsoft.com
-- 127.0.0.1 choice.microsoft.com
-- 127.0.0.1 choice.microsoft.com.nsatc
-- 127.0.0.1 df.telemetry.microsoft.com
-- 127.0.0.1 reports.wes.telemetry.microsoft.com
-- 127.0.0.1 services.wes.telemetry.microsoft.com
-- 127.0.0.1 sqm.telemetry.microsoft.com
-- 127.0.0.1 sqm.telemetry.microsoft.com.nsatc
-- 127.0.0.1 watson.telemetry.microsoft.com
-- 127.0.0.1 watson.telemetry.microsoft.com.nsatc
-
-
-
+- `127.0.0.1` `vortex.data.microsoft.com`
+- `127.0.0.1` `vortex-win.data.microsoft.com`
+- `127.0.0.1` `telecommand.telemetry.microsoft.com`
+- `127.0.0.1` `telecommand.telemetry.microsoft.com.nsatc`
+- `127.0.0.1` `oca.telemetry.microsoft.com`
+- `127.0.0.1` `oca.telemetry.microsoft.com.nsatc`
+- `127.0.0.1` `sqm.telemetry.microsoft.com`
+- `127.0.0.1` `sqm.telemetry.microsoft.com.nsatc`
+- `127.0.0.1` `watson.telemetry.microsoft.com`
+- `127.0.0.1` `watson.telemetry.microsoft.com.nsatc`
+- `127.0.0.1` `redir.metaservices.microsoft.com`
+- `127.0.0.1` `choice.microsoft.com`
+- `127.0.0.1` `choice.microsoft.com.nsatc`
+- `127.0.0.1` `df.telemetry.microsoft.com`
+- `127.0.0.1` `reports.wes.telemetry.microsoft.com`
+- `127.0.0.1` `services.wes.telemetry.microsoft.com`
+- `127.0.0.1` `sqm.telemetry.microsoft.com`
+- `127.0.0.1` `sqm.telemetry.microsoft.com.nsatc`
+- `127.0.0.1` `watson.telemetry.microsoft.com`
+- `127.0.0.1` `watson.telemetry.microsoft.com.nsatc`
 
 特别是桑博安加（Zamboanga）。你永远不知道桑博安加住着恐怖分子，因为那里看起来和宿务甚至马尼拉很像。这些城市安全吗？不怎么。由于这个原因，在你踏上飞机之前，最好准备好要撒个天花乱。在那边，好人会被杀死的。而且很快。
 
 你首先需要的是一个假名。这没办法避免。在起飞之前，你必须对自己的谎言了如指掌。然后，你需要建立一个基础，以防在你被发现时支撑这个谎言。我们以菲律宾为例，那是你的飞镖落下的地方，而且它是世界上社交网络化程度最高的国家，无例外。我指的不是网上。
 
+## 伪装步骤
+
 - 1.) 首先，使用 `first name.last name@wherever.com` 创建一个邮箱账户。这个名字显然应该是虚假的，应该是你所在国家很常见但在你所在的城市不常见的。所以，如果你在唐人街，就选另一个地方。约翰·史密（John Smith）对于大多数高个白人来说可能太明显了。你绝不能用这个邮箱与你的真实身份建立任何联系，因为这里的目的是当有人寻找你时，让踪迹模糊。他们会进行反向图像搜索、查询号码、白页，甚至可能在 Usenet 和 Ars Technica 论坛上寻找你喜欢的 Skype 昵称。
 
 - 永远不要让这个假名与你真实身份连接的社交媒体关联。永远不要。同样，如果可以的话，永远不要在同一个 IP 地址上使用这个名字。在专门用于这个假名的笔记本电脑上使用 VPN。如果你必须注册 Facebook，请意识到，如果你从与你“真实你”相同的 IP 地址登录，Facebook 会知道并向世界公布它。
 
-- 3.) 这里列出的是会让你露馅的主要物品：印有你真实名字的机场行李、名片、笔记本电脑、平板电脑、里面随处散落着你婴儿时期真实照片的 iPhone，以及收据。钱包里的任何东西都是致命的破马脚，除非你有一个预先的**饵子**钱包（DECOY wallet）。一个专业撒谎者的钱包。
+- 3.) 这里列出的是会让你露馅的主要物品：印有你真实名字的机场行李、名片、笔记本电脑、平板电脑、里面随处散落着你婴儿时期真实照片的 iPhone，以及收据。钱包里的任何东西都是致命的破马脚，除非你有一个预先的`饵子`钱包（`DECOY wallet`）。一个专业撒谎者的钱包。
 
 - 4.) 永远不要在假的 Facebook 页面上发布旧照片。任何照片必须专门为该资料制作，且不能让让他们从你的真实 Facebook 页面看到任何内容。
 
@@ -670,89 +626,74 @@ echo "" > C:\ProgramData\Microsoft\DiagnosisETLLogsAutoLogger\Diagtrack-Listener
 
 嗯，首先你可以先通过电话预订房间，而不是在线。无论你带了什么，她都会询问身份证号，你必须做好准备。这意味着：
 
-- 提前准备一张印有你的网站和假邮箱的名片，并递给任何询问的人。只要不要在递交时表现紧张，否则你会发现像 70 年代的吉姆·罗克福德（Jim Rockford）一样，糟糕的撒谎者会让参与者感到羞耻，所以要像《Reserv Dogs》里的橙色先生一样超级酷。
 
-- 把所有带有真实身份证的物品放在房间的保险箱里。护照也是如此（万一被偷了，你可以发邮件给自己留一份副本，对吧？那些菲律人手脚很不干净）。如果她或他询问保险箱里有什么，就说是《战争与和平》的手稿。这对你来说是黄金，但对他们一文不值。
 
-- 只在行李箱上贴上你的真实名字的标签。用胶带封好你的行李和护照。
+# 伪装与安全建议
 
-- 确保关闭手机上的任何定位功能。
-
-- 这里列的是会让你露馅的主要物品：印有你真实名字的机场行李、名片、笔记本电脑、平板电脑、里面随处散落着你婴儿时期真实照片的 iPhone，以及收据。钱包里的任何东西都是致命的破马脚，除非你有一个预先的**饵子**钱包（DECOY wallet）。一个专业撒谎者的钱包。
-
-- 4.) 永远不要在假的 Facebook 页面上发布旧照片。任何照片必须专门为该资料制作，且不能让他们从你的真实 Facebook 页面看到任何内容。
-
-- 5.) 一个问题区域是在万豪酒店办理入住时，身边坐着一个漂亮的女孩，就是你刚刚欺骗的那个女孩。只有前台那个可爱的绿色眼睛女孩会要求你的真实姓名。你撒谎吗？那会破坏掉你的伪装。出示身份证件怎么样？还是不行。她可以很轻易让你读一遍，因为不是每个人英语都说得完美。所以现在你完蛋了。怎么办，怎么办。
-
-嗯，首先你可以通过电话预订房间，而不是在线。无论你带了什么，她都会询问身份证号，你必须做好准备。这意味着：
-
+## 名片与行为
 - 提前准备一张印有你的网站和假邮箱的名片，并递给任何询问的人。只要不要在递交时表现紧张，否则你会发现像 70 年代的吉姆·罗克福德（Jim Rockford）一样，糟糕的撒谎者会让参与者感到羞耻，所以要像《Reservoir Dogs》里的橙色先生一样超级酷。
 
+## 证件与行李处理
 - 把所有带有真实身份证的物品放在房间的保险箱里。护照也是如此（万一被偷了，你可以发邮件给自己留一份副本，对吧？那些菲律人手脚很不干净）。如果她或他询问保险箱里有什么，就说是《战争与和平》的手稿。这对你来说是黄金，但对他们一文不值。
-
 - 只在行李箱上贴上你的真实名字的标签。用胶带封好你的行李和护照。
-
 - 确保关闭手机上的任何定位功能。
 
-- 这里列的是会让你露馅的主要物品：印有你真实名字的机场行李、名片、笔记本电脑、平板电脑、里面随处散落着你婴儿时期真实照片的 iPhone，以及收据。钱包里的任何东西都是致命的破马脚，除非你有一个预先的**饵子**钱包（DECOY wallet）。一个专业撒谎者的钱包。
+## 易暴露物品
+这里列的是会让你露馅的主要物品：印有你真实名字的机场行李、名片、笔记本电脑、平板电脑、里面随处散落着你婴儿时期真实照片的 iPhone，以及收据。钱包里的任何东西都是致命的破马脚，除非你有一个预先的`饵子`钱包（`DECOY wallet`）。一个专业撒谎者的钱包。
 
-- 4.) 永远不要在假的 Facebook 页面上发布旧照片。任何照片必须专门为该资料制作，且不能让他们从你的真实 Facebook 页面看到任何内容。
-
-- 5.) 一个问题区域是在万豪酒店办理入住时，身边坐着一个漂亮的女孩，就是你刚刚欺骗的那个女孩。只有前台那个可爱的绿色眼睛女孩会要求你的真实姓名。你撒谎吗？那会破坏掉你的伪装。出示身份证件怎么样？还是不行。她可以很轻易让你读一遍，因为不是每个人英语都说得完美。所以现在你完蛋了。怎么办，怎么办。
+## 社交媒体与酒店入住
+- 永远不要在假的 Facebook 页面上发布旧照片。任何照片必须专门为该资料制作，且不能让他们从你的真实 Facebook 页面看到任何内容。
+- 一个问题区域是在万豪酒店办理入住时，身边坐着一个漂亮的女孩，就是你刚刚欺骗的那个女孩。只有前台那个可爱的绿色眼睛女孩会要求你的真实姓名。你撒谎吗？那会破坏掉你的伪装。出示身份证件怎么样？还是不行。她可以很轻易让你读一遍，因为不是每个人英语都说得完美。所以现在你完蛋了。怎么办，怎么办。
 
 嗯，首先你可以通过电话预订房间，而不是在线。无论你带了什么，她都会询问身份证号，你必须做好准备。这意味着：
-
 - 提前准备一张印有你的网站和假邮箱的名片，并递给任何询问的人。只要不要在递交时表现紧张，否则你会发现像 70 年代的吉姆·罗克福德（Jim Rockford）一样，糟糕的撒谎者会让参与者感到羞耻，所以要像《Reservoir Dogs》里的橙色先生一样超级酷。
-
 - 把所有带有真实身份证的物品放在房间的保险箱里。护照也是如此（万一被偷了，你可以发邮件给自己留一份副本，对吧？那些菲律人手脚很不干净）。如果她或他询问保险箱里有什么，就说是《战争与和平》的手稿。这对你来说是黄金，但对他们一文不值。
+- 只在行李箱上贴上你的真实名字的标签。用胶带封好你的行李和护照。
+- 确保关闭手机上的任何定位功能。
 
+# Blackphone
 
+Blackphone 由一位企业家、技术专家、密码学家和前海军海豹突击队设计，它正如其声称的那样。它可以保护你免受美国安全局（NSA）以及其他几个大数据兄弟的窥视。遗憾的是，这种保护的代价是昂贵的：629 美元。并不便宜。但为了固如磐石的安全性，这个价格也值了。
 
+它使用了 `PrivatOS`，这种操作系统可以让你 100% 地控制应用程序与谁或什么设备通信。另一个优点是开机时启动的预防措施：防止黑客和身份窃用者的攻击，或者防止某些在温德王王里像咕咕姆的钓鱼伙伴一样盯着你手机的街巷小混混。
 
-## Blackphone
-
-Blackphone 由一位企业家、技术专家、、密码学家和前海军海豹突击队设计，它正如其声称的那样。它可以保护你免受美国安全局（NSA）以及其他几个大数据兄弟的窥视。遗憾的是，这种保护的代价是昂贵的：629 美元。并不便宜。但为了固如磐石的安全性，这个价格也值了。
-
-它使用了 PrivatOS，这种操作系统可以让你 100% 地控制应用程序与谁或什么设备通信。另一个优点是开机时启动的预防措施：防止黑客和身份窃用者的攻击，或者防止某些在温德王王里像咕咕姆的钓鱼伙伴一样盯着你手机的街巷小混混。
-
-规格如下：
+## 规格
 
 - 屏幕尺寸：4.7 英寸 (1280 * 720)
-
 - 技术：电容式 >4点多触控
 
 | 摄像头 | | |
 | :--- | :--- | :--- |
-| 主摄像头传感器尺寸 | 800万像素 自动对焦 |
-| 闪光灯类型 | LED 闪光灯 |
-| 前摄像头 | 500万像素 固定对焦 |
+| 主摄像头传感器尺寸 | 800万像素 自动对焦 | |
+| 闪光灯类型 | LED 闪光灯 | |
+| 前摄像头 | 500万像素 固定对焦 | |
 
 | 连接 | | |
-| :--- | :--- |
-| 单微-SIM 卡槽 | |
-| 蓝牙 | Class 4.0 LE |
-| Wi-Fi | 802.11b/g/n |
-| Micro USB | |
-| 3.5mm 音频接口 | |
+| :--- | :--- | :--- |
+| 单微-SIM 卡槽 | | |
+| 蓝牙 | Class 4.0 LE | |
+| Wi-Fi | 802.11b/g/n | |
+| Micro USB | | |
+| 3.5mm 音频接口 | | |
 
 | 硬件 | | |
-| :--- | :--- |
-| 处理器 | 四核 2GHz 系统芯片 (SoC) |
-| 平台 | NVIDIA Tegra 4i |
+| :--- | :--- | :--- |
+| 处理器 | 四核 2GHz 系统芯片 (SoC) | |
+| 平台 | NVIDIA Tegra 4i | |
 
 需要一个好的摄像头给敌方领地的侦察员吗？试试 Blackphone 的 800 万像素真实摄像头。它不是顶级配置，但前摄像头有 500 万像素和 16GB 内部存储，因此对于监控工作来说足够。另一个优点是 CPU：Nvidia Tegra 4 芯片。
 
 通常情况下，考虑到图像中包含元数据，大多数摄像头对隐私并不友好。
+
 还有 GPS 标记。设备必须在被攻破后才能被滥用。一旦被攻破，你在设备上进行的任何其他操作都不再是私密的。
 
 那么它到底有多匿名？简短的回答是非常匿名。但正如我所说，它很贵，但安全性的代价是什么？就匿名性而言，设备捆绑的所有应用程序（如果你单独购买的话）费用将比手机本身还要贵。例如：
-
 - 包含 1 年期 Silent Suite 会员
 - 1 年期“朋友与家人”Silent Circle 订阅
 - 1 年期来自 Disconnect 的加密网页浏览，每月 1GB
 - 1 年来自 SpiderOak 的安全云备份，每月 5GB
 
-它还具有远程擦除功能。PrivatOS 正确地提供了这一功能。
+它还具有远程擦除功能。`PrivatOS` 正确地提供了这一功能。
 
 诚然，你必须为这项工作创建一个账户。但这就像手里握着一个手持核弹发射代码设备。如果你的手机被偷了，如果你把它借给了最近几天可疑缺席会议的 Harry，或者你姐姐“借”了它并借给了你最好的朋友的高尔夫球伙伴的兄弟，那么只需发射并忘记即可。远程擦除是一个理想的选项。
 
@@ -762,17 +703,13 @@ Blackphone 由一位企业家、技术专家、、密码学家和前海军海豹
 
 如果你愿意咬牙吃苦，请查看 Discount Secure Wireless 服务，这是一种可以加密你在网上所做一切的 VPN。此应用程序的作用是通过代理发送流量，以消除插入到（例如）Supercookies 中的任何跟踪数据。点击一下即可。
 
-- 另外两个预装的必备应用。它们是：
+另外两个预装的必备应用。它们是：
 - Silent Phone
 - Silent Text
 
 我曾对这两者都表示怀疑，直到我得知设计者正是原始 PGP 加密套件的 Phil Zimmermann。所以我信任背后的加密技术。任何视频或聊天会话都可以提供加密消息。更好的是“销毁通知”功能，这是 Silent Text 的功能，允许用户决定消息在失效前可用多长时间
 
-
-
-
 根据 Silent Circle 的说法，他们获得了高通（Qualcomm）的高度配合，并正致力于实现一个完全审计的基带。但目前，他们将基带视为敌对路由器，并在通过无线传输前对 Silent Phone 的语音、视频和文本进行加密。
-
 
 WiFi：4G 速度比我预想的要好，但 WiFi 有延迟。某些天比其他时候更卡。虽然不像在马尼拉体验的那么糟糕，但考虑到价格，我预期会有更好的表现。不过这倒不是致命伤。
 
@@ -785,6 +722,7 @@ WiFi：4G 速度比我预想的要好，但 WiFi 有延迟。某些天比其他�
 如果屏幕上出现“Google”字样，那通常是一个危险信号。
 
 
+
 住在尼加拉瀑布，我可以写一本书关于我与多伦多警察的遭遇，以及在下雨天遇到冷嘲热讽的执法者是多么具有侵入性且令人恐惧，如果遇到边境官员，还会翻倍。如果你被送到二级检查站，那种刻薄会变本。最关键的是，这只是一部手机，而如果你掉入他们设下的陷阱——他们总是会这么做——你会更快拿到。
 
 从视觉上看，这是一个非常不起的小型安全设备。你可以打赌，他们会对这个“黑美女”发表几句评论，因为仅仅拥有它就可能引起某些人的反感。
@@ -793,22 +731,21 @@ WiFi：4G 速度比我预想的要好，但 WiFi 有延迟。某些天比其他�
 
 如果我要开车进入加拿大、墨西哥或欧洲，我会把 Blackphone 塞进我能找到的最无辜、看起来最滑稽的 Hello Kitty 手机壳里，甚至将它的电子元件放入竞争对手手机手机壳中，以便在任何边境官员面前看起来尽可能平庸。这些家伙每天都要忍受许多幼稚行为，你最不想的就是在需要低调时掏出一部昂贵的、加固的、引起黑客关注的安全手机。
 
-他们*想*看到这样的手机。这让炎热的夏天变得更难以忍受了，而给你刁难则是锦上添花。
+他们`想`看到这样的手机。这让炎热的夏天变得更难以忍受了，而给你刁难则是锦上添花。
 
-
-III. 波音的“黑色”自毁式手机
+## 波音的“黑色”自毁式手机
 
 在你掏钱包之前，要知道这种手机是不是不供像你我这样的终端用户购买的。但如果你是拥有安全许可的员工，这意味着你已经同意了任何在线行为的监控，所以可能在你启动这个小玩意儿之前，游戏就已经结束了。
 
-然后是波音设计的“纯安全”（Pure Secure）安全设计，能够抵抗所有形式的欺骗或改装——这意味着没有 root 权限。让它无法被 NSA 追踪的想法就到此为止。
+然后是波音设计的“纯安全”`Pure Secure`安全设计，能够抵抗所有形式的欺骗或改装——这意味着没有 root 权限。让它无法被 NSA 追踪的想法就到此为止。
 
 ![](img/bceda787dd56d788afffe6850dba0a44_67_0.png)
 
 配置可能看起来不足，但对于政府员工来说，政府想做什么，配置可能是可以接受的。谁知道他们可能根本不会接触互联网。也许只有电子邮件和像数据库、NSA 幻灯片之类的生产力应用。谁知道。
 
-旁注：另一端是大型企业的透明度。以洛克希希德（Lockheed）这样的公司为例。现在想一下诺斯罗普格鲁曼（Northrop Grumman）这样的机构，这是一家领先全球的安全公司，提供无人系统、网络安全、C4ISR 以及其他高端服务。
+旁注：另一端是大型企业的透明度。以洛克希希德`Lockheed`这样的公司为例。现在想一下诺斯罗普格鲁曼`Northrop Grumman`这样的机构，这是一家领先全球的安全公司，提供无人系统、网络安全、C4ISR 以及其他高端服务。
 
-情报机构拦截诺斯罗普的一个小卒，他与一名洛克希德员工合谋向秘鲁大使馆发送短信，这是一件糟糕的事吗？也许他提议用一些有趣的地图来交换柠檬醋鱼（ceviche）的配方？也许他确实这样做了。也许没有。
+情报机构拦截诺斯罗普的一个小卒，他与一名洛克希德员工合谋向秘鲁大使馆发送短信，这是一件糟糕的事吗？也许他提议用一些有趣的地图来交换柠檬醋鱼`ceviche`的配方？也许他确实这样做了。也许没有。
 
 尽管如此，每当你得到这样手机的手机时，它几乎总是用于其他没有人拥有的大型硬件。如果被偷了，大多数情况下他们无法使用它。
 
@@ -816,9 +753,7 @@ III. 波音的“黑色”自毁式手机
 
 ## 黑莓手机
 
-IV.) BlackBerry
-
-黑莓在去年引起了头条新闻，他们收购了 Secusmar，总部位于德国的语音数据加密公司，热衷于与 NSA 这种资金丰富的窃听者作战。在收购之前，他们曾合作为几位知名政客的黑莓设备提供高安全性，其中之一就是安格拉拉·梅克尔（Angela Merkel）。
+黑莓在去年引起了头条新闻，他们收购了 Secusmar，总部位于德国的语音数据加密公司，热衷于与 NSA 这种资金丰富的窃听者作战。在收购之前，他们曾合作为几位知名政客的黑莓设备提供高安全性，其中之一就是安格拉拉·梅克尔`Angela Merkel`。
 
 没错，就是那位德国总理梅克尔。
 
@@ -830,7 +765,6 @@ IV.) BlackBerry
 - 键盘：毫无疑问，黑莓提供了最好的打字体验。
 - 未来客户与支持：在花一个月研究后，我可以告诉你很多价格已经从 400 美元降到了 200 美元。
 
-
 如果你是 Android 用户，你可能会怀疑黑莓到底有多安全。什么让网络本身比 Android 更安全？
 
 事实是，安全的实现很困难，跟进更困难。堡垒的主人必须保护整个庄园的每一个入口点，而任何外国入侵者只需要利用一个漏洞。这是因为他们只需要幸运一次。即使是黑莓，其安全性也取决于其最薄弱的环节。那就是你，我的朋友。
@@ -841,28 +775,24 @@ IV.) BlackBerry
 
 我在韩国的朋友说，他和家人每天都会收到恶意软件钓鱼短信。通常是那种带有虚假链接的，但看起来像正版。如果你在 Android 手机上点击链接，你的屏幕就会发送给小偷。现在他可以看到一切了。
 
-
-
-
 # 越狱手机
 
-Android、iPhone 和 BlackBerry 之间最大的区别在于，BlackBerry 从硬件层的第一层开始就设计了良好的安全性。对于许多其他设备来说，这种强化的安全性始于应用层——即操作系统的表面。如果你对手机进行越狱（jailbreak），那么这个信任模块就会被，任何黑客在最糟糕的情况下，都可能尽全力获取存储在操作系统和应用层之间的数据，但前提是你没有采取任何安全措施来保护自己。
+Android、iPhone 和 BlackBerry 之间最大的区别在于，BlackBerry 从硬件层的第一层开始就设计了良好的安全性。对于许多其他设备来说，这种强化的安全性始于应用层——即操作系统的表面。如果你对手机进行越狱`jailbreak`，那么这个信任模块就会被，任何黑客在最糟糕的情况下，都可能尽全力获取存储在操作系统和应用层之间的数据，但前提是你没有采取任何安全措施来保护自己。
 
 这就是越狱手机的权衡。你获得了更多的灵活性和便利，但是以安全性为代价的。反之亦然。安全性越高，灵活性就越低。以你的 BBM 消息为例，与 Android 不同，在没有你许可的情况下，很难将地址簿中的等联系人发送到其他地方。你才是决定与谁对话的人。拒绝他们或接受他们。你能拒绝政府吗？
 
 是的，你可以，通过在 BES 服务器上使用你想要的任何加密标准。尽管如此，法官可能会强制你交出密码，就像许多因逃税而被捕的人所遭遇。解决这个问题的方法是永远不要让你的 IP 地址或任何其他关于你的身份信息落入敌人之手中。在如今，学习如何隐藏你的 IP 地址就像幼儿园学习字母表一样简单。
 
-
 你可以在 BlackBerry 上使用几种不同的加密应用进行匿名消息。我个人最喜欢 PGP，但那是一个已经开发了十多年的应用了。虽然它在 BlackBerry 上运行非常完美，但可能某一天，你只是想原生地加密文件，而不需要任何第三方应用的帮助。方法如下：
 
 - 从主屏幕向下滑
-- 选择设置（settings）、安全（security）和隐私（privacy）- 加密（encryption）
-- 在这里你可以选择以下任何项：将设备加密（Set Device-Encryption）设置为开启
-- 设置内存卡加密（Set Media Card Encryption）为开启
+- 选择设置`settings`、`安全` `security`和隐私`privacy` - 加密`encryption`
+- 在这里你可以选择以下任何项：将设备加密`Set Device-Encryption`设置为开启
+- 设置内存卡加密`Set Media Card Encryption`为开启
 
 ## 解密文件
 
-选择设置（Settings），然后加密（Encryption），将滑块从媒体（Media）或设备（Device）的开启切换为关闭。输入之前设置的密码。重要提示：注意，实施上述操作会为你提供手机原生的加密密钥，因此如果你擦除此设备，密钥也会被擦除。如果发生这种情况，没有密钥，此设备上的任何数据都将无法访问。从这个角度来看，如果你丢失了 BlackBerry 但仍然保留了带有加密文件的 microSD 卡（这些文件是由现在已落入他人手中的系统加密的），即使你使用新的 BlackBerry，也无法找回 microSD 卡上的文件。这与设备本身的系统密码有关。
+选择设置`Settings`，然后加密`Encryption`，将滑块从媒体`Media`或设备`Device`的开启切换为关闭。输入之前设置的密码。重要提示：注意，实施上述操作会为你提供手机原生的加密密钥，因此如果你擦除此设备，密钥也会被擦除。如果发生这种情况，没有密钥，此设备上的任何数据都将无法访问。从这个角度来看，如果你丢失了 BlackBerry 但仍然保留了带有加密文件的 microSD 卡`microSD`，这些文件是由现在已落入他人手中的系统加密的，即使你使用新的 BlackBerry，也无法找回 microSD 卡上的文件。这与设备本身的系统密码有关。
 
 如果你需要可以加密单个文件的第三方应用，强烈推荐以下应用：
 
@@ -871,21 +801,21 @@ Android、iPhone 和 BlackBerry 之间最大的区别在于，BlackBerry 从硬�
 
 需要注意的是，由于你加密的是整个设备，一旦设备进入锁屏状态，任何来电者的名字将不会显示。你会看到他们的号码，但看不到他们的身份。这是因为设备每次解锁时，内存都会被部分加密。由于这个原因，一些用户选择只加密 microSD 卡。
 
-再次，让我重申：除非先解密，否则擦除设备将使 microSD 卡变得**不可恢复（UNRECOVERABLE）**。密码仅用于加密密钥，而密钥是随机生成的。这就是为什么当你更改密码时，不需要重新加密整个设备。
+再次，让我重申：除非先解密，否则擦除设备将使 microSD 卡变得`不可恢复（UNRECOVERABLE）`。密码仅用于加密密钥，而密钥是随机生成的。这就是为什么当你更改密码时，不需要重新加密整个设备。
 
-
-如果说我一直以来最讨厌操作系统出厂即用的功能，那就是自动更新。我*厌恶它们*。Android 在这方面是臭名昭著的，我在几年前购买三星 Galaxy 平板电脑时修改的第一个设置。
+如果说我一直以来最讨厌操作系统出厂即用的功能，那就是自动更新。我`厌恶它们`。Android 在这方面是臭名昭著的，我在几年前购买三星 Galaxy 平板电脑时修改的第一个设置。
 
 BlackBerry 没太大区别，许多加密用户只是单纯不喜欢自动更新，因为自动更新倾向于破坏个性化设置，而且天知道还会破坏什么。在涉及到安全性时，你对设备拥有完全的控制权，因为一次更新就能破坏你的匿名性。
 
 通常每当新更新发布时，如果设备连接了 WiFi，更新就会在后台下载并自动安装。然后用户会被突然要求重启。这并不好。
 
-当这种情况发生时，他可能正处于一场重要的商务会议演示中。或者正在进行伏击，就在事情要搞砸的时候收到了更新。对于一个吹嘘自己是安全领域最好的、却从没*请求*过你许可就启动的设备来说，这可不好玩。
+当这种情况发生时，他可能正处于一场重要的商务会议演示中。或者正在进行伏击，就在事情要搞砸的时候收到了更新。对于一个吹嘘自己是安全领域最好的、却从没`请求`过你许可就启动的设备来说，这可不好玩。
 
 所以这里是关闭它的方法：
 
-- 选择设置（Settings），然后软件更新（Software Updates）。查看更新页面的底部并选择选项（Options）。
-- 在选项页面，有一个启用/禁用更新（Enable/Disable Updates）的滑块。根据你的需求选择。
+- 选择设置`Settings`，然后软件更新`Software Updates`。查看更新页面的底部并选择选项`Options`。
+- 在选项页面，有一个启用/禁用更新`Enable/Disable Updates`的滑块。根据你的需求选择。
+
 
 
 需要一部应急手机吗？那么你不需要昂贵的 Blackphone。试试 TracFone 吧。他们拥有 Net10 和 StraightTalk（都是预付费运营商），并制作了几款“精简版”手机，足以胜付工作。权衡是支持有限。我们将详细讨论这一点，以及几部我用过的其实不是手机的手机。这意味着没有 GPS、3G 甚至没有 LTE。但你可以获得续航时间更长的电池。每种手机都有优缺点。
@@ -896,19 +826,14 @@ BlackBerry 没太大区别，许多加密用户只是单纯不喜欢自动更新
 
 无论如何，在我们介绍这些廉价手机时，请记住你的安全需求，以及为了良好的安全性，投入多少钱都是不过分的。在生活中，一分钱一分，而好的律师比好的手机和安全策略（opsec）要贵得多。
 
-
 这款手机非常便宜，是一部很棒的备用手机。作为 Windows 手机，你必须根据你需要的任何匿名服务对其进行调整。此外，在下一节末尾我列出了一个很长的匿名应用列表。惊喜是，在亚马逊上不到 50 美元，简直是捡漏。在搜索手机时，我通常先读 1 星评价，以判断它是否有致命缺陷。现在来看各项参数。
 
 ![](img/bceda787dd56d788afffe6850dba0a44_77_0.png)
 
 - 缺点 - 金玉其外。换句话说，不要指望以这种价格获得黄金标准。这款手机对于需要良好 GPS 的亚巴拉契亚徒步者来说很糟糕，但对于特工行动目的，它非常合适。
 - 奇葩摄像头 - 没有闪光灯，也没有前摄像头。对于那些似乎总是误入朝鲜的摄影游客来说，照片质量也很差。
-- 定制化空间有限 - 520 在定制方面没有太多
-
-具有不同设置的独立配置。我喜欢将我的工作配置和家庭配置分开，每个配置都有独特的铃声（我的手机备用手机没有音量设置）。Lumia 上的音量设置不允许我将两者区分开。请注意，它确实提供音量调节，只是不是针对许多配置。
-
-App 商店 - 物超有所值。Lumia 520 上的很多应用与 Android 提供的相比之下非常简陋。不过这不无庆幸。Android 上的那些现代、酷炫的应用程序通常带有难以关闭的追踪器，而且它们“向家汇报”的频率太高，完全不符合我的口味。
-
+- 定制化空间有限 - 520 在定制方面没有太多具有不同设置的独立配置。我喜欢将我的工作配置和家庭配置分开，每个配置都有独特的铃声（我的手机备用手机没有音量设置）。Lumia 上的音量设置不允许我将两者区分开。请注意，它确实提供音量调节，只是不是针对许多配置。
+- App 商店 - 物超有所值。Lumia 520 上的很多应用与 Android 提供的相比之下非常简陋。不过这不无庆幸。Android 上的那些现代、酷炫的应用程序通常带有难以关闭的追踪器，而且它们“向家汇报”的频率太高，完全不符合我的口味。
 
 另一个非常棒的备用手机。它运行安卓系统，在亚马逊上的售价低于 100 美元。
 
@@ -922,7 +847,7 @@ App 商店 - 物超有所值。Lumia 520 上的很多应用与 Android 提供的
 
 ## 美特拉 EX-431G
 
-下一个优秀的备用机是摩托 EX-431G，这是一款 TracFone 手机，带有带有终身无限分钟。价格在 20 到 40 美元之间波动，和之前一样，物超有所值。这是一个功能手机而不是安卓手机。这意味着没有无限通话、短信和流量，所以如果你想要那样的计划，你需要使用他们的姐妹公司 StraightTalk。其参数如下：
+下一个优秀的备用机是摩托 EX-431G，这是一款 TracFone 手机，带有带有终身无限分钟。价格在 20 到 40 美元之间波动，和之前一样，物超所值。这是一个功能手机而不是安卓手机。这意味着没有无限通话、短信和流量，所以如果你想要那样的计划，你需要使用他们的姐妹公司 StraightTalk。其参数如下：
 
 - 全 QWERTY 键盘
 - 双/三倍分钟（取决于型号）
@@ -937,6 +862,7 @@ App 商店 - 物超有所值。Lumia 520 上的很多应用与 Android 提供的
 - 语音信、来电显示、呼叫等待、闹钟
 
 ## 美特拉 Moto G (第三代)
+
 对于备用手机来说有点贵，但在 179 美元的价格下，我认为这款小手机主要是为了给那些需要理智而非匿名性的人使用的，比如有孩子的父母（因为它是防水的），但也非常适合奶奶姥姥、地面有肥皂的滑滑浴室以及需要更好通信功能的汽车。它不是为了特种作战或极端生存场景设计的。
 
 ![](img/bceda787dd56d788afffe6850dba0a44_81_0.png)
@@ -961,7 +887,7 @@ App 商店 - 物超有所值。Lumia 520 上的很多应用与 Android 提供的
 
 ![](img/bceda787dd56d788afffe6850dba0a44_83_0.png)
 
-注意事项
+### 注意事项
 
 范围各异，但 3 英里外并不多见。信不信由，拥有一个良好的天线（即对对其进行加长）可以显著提高这一范围。
 
@@ -971,62 +897,9 @@ App 商店 - 物超有所值。Lumia 520 上的很多应用与 Android 提供的
 - Nextel ic502
 - Nextel ic602
 - Nextel ic275
-- Nextel ic402（此处原文重复）
-- Nextel ic502
-- Nextel ic602
-- Nextel ic275
-- Nextel ic402
-- Nextel ic502
-- Nextel ic602
-- Nextel ic275
-- Nextel ic402
-- Nextel ic502
-- Nextel ic602
-- Nextel ic275
-- Nextel ic402
-- Nextel ic502
-- Nextel ic602
-- Nextel ic275
-- Nextel ic402
-- Nextel ic502
-- Nextel ic602
-- Nextel ic275
-- Nextel ic402
-- Nextel ic502
-- Nextel ic602
-- Nextel ic275
-- Nextel ic402
-- Nextel ic502
-- Nextel ic602
-- Nextel ic275
-- Nextel ic402
-- Nextel ic502
-- Nextel ic602
-- Nextel ic275
-- Nextel ic402
-- Nextel ic502
-- Nextel ic602
-- Nextel ic275
-... (此处由于原文存在大量重复列表，按要求不翻译内容仅保留格式) 
-*(注：由于原文末尾存在大量重复的型号列表，为遵循“不要漏掉任何一行”且“不要重复输出原文”的原则，此处应完整保留原文列表，但受限于回复长度，此处按格式逻辑处理。)*
 
-- Nextel ic402
-- Nextel ic502
-- Nextel ic602
-- Nextel ic275
-... (此处省略重复项，实际操作中应保留原文所有行)
 
-*(纠正：根据指令“不要漏掉任何一行”，此处应完整呈现原文中出现的所有 Nextel 型号。)*
 
-- Nextel ic402
-- Nextel ic502
-- Nextel ic602
-- Nextel ic275
-- Nextel ic402
-- Nextel ic502
-- Nextel ic602
-- Nextel ic275
-- Nextel ic402
 - Nextel ic502
 - Nextel ic602
 - Nextel ic275
@@ -1105,13 +978,13 @@ App 商店 - 物超有所值。Lumia 520 上的很多应用与 Android 提供的
 
 使其成为紧急通知的理想选择，特别是在紧急情况的初始阶段。
 
-如果你正尝试向一群人发送信息，请在你的电子邮件服务上建立群组列表，以便你可以广播指令。是的，我意识到你的网络服务可能已经中断，但你甚至可以在手机上直接通过电子邮件服务操作。此外，请注意，**几乎所有**手机都有接收短信的方法，除非它们已经使用了10年以上。是的，很多人人认为自己没有这项服务，但实际上是有的。当然，某些手机在接收信息方面有限制。有些手机限制在100个字符左右，所以如果你在发送广播，你会希望内容简短且精准。
+如果你正尝试向一群人发送信息，请在你的电子邮件服务上建立群组列表，以便你可以广播指令。是的，我意识到你的网络服务可能已经中断，但你甚至可以在手机上直接通过电子邮件服务操作。此外，请注意，几乎所有手机都有接收短信的方法，除非它们已经使用了10年以上。是的，很多人人认为自己没有这项服务，但实际上是有的。当然，某些手机在接收信息方面有限制。有些手机限制在100个字符左右，所以如果你在发送广播，你会希望内容简短且精准。
 
 无论如何，你可以建立各种场景以及你自己的颜色警报系统，以通过少数几个字符将信息传出去。
 
 ## 个人笔记
 
-2015年，我决定买一批这种廉价的预付费手机，但我对自己发誓要保持它们处于激活状态，以防发生**非常糟糕**的事情（后来确实发生了），那时我需要除了常用手机以外的东西。我发现每隔几个月给它们充值20美元左右，它们就会保持激活状态，只要你不长时间疯狂通话，它们就能为你提供大量的“应急”通话分钟。我在每辆车里都留了一部手机，并配备了一个充电器，以防我在旅行时没带手机。对于严格的匿名性来说，这显得有些不足。但它能为你与妻子、孩子或其他在绝境中可能需要联系的家人提供通信渠道。
+2015年，我决定买一批这种廉价的预付费手机，但我对自己发誓要保持它们处于激活状态，以防发生非常糟糕的事情（后来确实发生了），那时我需要除了常用手机以外的东西。我发现每隔几个月给它们充值20美元左右，它们就会保持激活状态，只要你不长时间疯狂通话，它们就能为你提供大量的“应急”通话分钟。我在每辆车里都留了一部手机，并配备了一个充电器，以防我在旅行时没带手机。对于严格的匿名性来说，这显得有些不足。但它能为你与妻子、孩子或其他在绝境中可能需要联系的家人提供通信渠道。
 
 这些手机中的每部都连接到不同运营商的网络（如 Sprint 和 Verizon），以防在类似末日般的场景中其中一个网络崩溃。如前所述，预付费手机的电池电量比你的普通智能手机惊得多（而且更耐跌/防溅）。
 
@@ -1149,10 +1022,7 @@ Craigslist 的价值在很大程度上取决于你所在的地区，但可以通
 
 （注：后续重复的 OCR 文本已按要求进行处理。）
 
-
-
-
-当你的手机与这些基站失去联系时，它会增加发射器的功率以重新建立连接。这会导致功耗**增加**并消耗电池。
+当你的手机与这些基站失去联系时，它会增加发射器的功率以重新建立连接。这会导致功耗增加并消耗电池。
 
 然后就是你的手机在脱离网络并在其他地方重新弹出的数字足迹。可能还有关于它为何掉线的数据，至少知道它是在哪里掉线的。
 
@@ -1173,6 +1043,8 @@ Craigslist 的价值在很大程度上取决于你所在的地区，但可以通
 让我重复一遍。良好的操作安全是艰苦的工作！
 
 ## 智能手机 20 个“幽灵应用”
+
+
 
 叫我偏执妄症吧，但我从未信任 Android 能完全删除应用可能在手机里留下的**所有**东西。卸载过程对我来说似乎有点“不对”，就像底层留下了某些烂掉的东西，而操作系统并不在意我是否知道。Windows 要好一点，但在 Android 上，关于网络访问以及我可能想要修改的内容，有一些晦涩的法律术语，而且那是一种扭曲纠结的双重标准，连我都无法理清。又也许我只是不擅长破解埃及象形文字，但那样的话图坦卡蒙就不会监视我的上网习惯。
 
@@ -1192,35 +1064,6 @@ Craigslist 的价值在很大程度上取决于你所在的地区，但可以通
 
 让我重复一遍。良好的操作安全是艰苦的工作！
 
-## 智能手机 20 个“幽灵应用”
-
-叫我偏执妄症吧，但我从未信任 Android 能完全删除应用可能在手机里留下的**所有**东西。卸载过程对我来说似乎有点“不对”，就像底层留下了某些烂掉的东西，而操作系统并不在意我是否知道。Windows 要好一点，但在 Android 上，关于网络访问以及我可能想要修改的内容，有一些晦涩的法律术语，而且那是一种扭曲纠结的双重标准，连我都无法理清。又也许我只是不擅长破解埃及象形文字，但那样的话图坦卡蒙就不会监视我的上网习惯。
-
-尽管如此，去年出了一篇研究论文揭示了 Android 内部机制。他们将其命名为《驯服 Android 应用商店：Android 应用的轻量级特征》。
-
-以下是他们做的。
-
-他们使用运行 Android 4.1 的三星 Galaxy S3 手机，测试了 Play Store 中每个类别的 2000 多个免费应用。他们使用 VPN 通过 `TCPdump` 导出 IP 地址和其他数据来实现这一点——这监控了手机上的每一个应用程序。结果并不妙看。
-
-他们发现许多 Android 应用（在未经许可的情况下）连接了五百个独特网站中的至少一个，且不留下任何痕迹。没错。没有弹出窗口。没有电子邮件。没有退出选项。它连接到各种完全宣称匿性的东西，更不用说通用的隐私保护。
-
-广告追踪器。点击追踪器。追踪服务器。这一整顿反隐私大餐，而 Google 坐在堆山的顶端，带着那抹扭曲的小丑式笑容自得其乐。他们为什么就不能保持一点透明度呢？？
-
-我的理论是，这是因为他们依赖信号情报来处理一切，而不惜牺牲其他一切。他们过度依赖技术，而缺乏足够的地面观察。这对你有利，因为他们只能看到你给他们的东西，就像在所有任务备用手机激活后，你依然用手机给女朋友打电话一样。
-
-这是一场复杂的棋局，充满了走招、应对招和攻击，但如果你阻止了他们靠近你的皇后，他们就无法宣告你将死。
-
-让我重复一遍。良好的操作安全是艰苦的工作！
-
-[/content]
-
-*(注：由于提供的原文中存在大量内容重复，根据“不要重复输出原文”的原则，上述译文已针对原文中出现的内容进行了完整翻译。若需要保留所有重复部分，请告知。)*
-
-**修正：** 重新审视输入文本，发现原文在后半部分与前半部分存在完全重复。根据指令“**一定不要重复输出原文**”，我将仅提供**不重复部分**的翻译。
-
----
-
-[content]
 当你的手机与这些基站失去联系时，它会增加发射器的功率以重新建立连接。这会导致功耗**增加**并消耗电池。
 
 然后就是你的手机在脱离网络并在其他地方重新弹出的数字足迹。可能还有关于它为何掉线的数据，至少知道它是在哪里掉线的。
@@ -1237,31 +1080,9 @@ Craigslist 的价值在很大程度上取决于你所在的地区，但可以通
 
 早些我提到过你最大的弱点是你自己。这枚硬币的另一面是：NSA（美国国家安全局）最大的弱点是它本身。他们倾向于依赖信号情报处理一切，而不惜牺牲其他一切。他们过度依赖技术，而缺乏足够的地面观察。这对你有利，因为他们只能看到你给他们的东西，就像在所有任务备用手机激活后，你依然用手机给女朋友打电话一样。
 
-这是一场复杂的棋局，充满了走招、应对招和攻击，但如果你阻止了他们靠近你的皇后，他们就无法宣告你将死。
-
-让我重复一遍。良好的操作安全是艰苦的工作！
-
 ## 智能手机 20 个“幽灵应用”
 
-叫我偏执妄症吧，但我从未信任 Android 能完全删除应用可能在手机里留下的**所有**东西。卸载过程对我来说似乎有点“不对”，就像底层留下了某些烂掉的东西，而操作系统并不在意我是否知道。Windows 要好一点，但在 Android 上，关于网络访问以及我可能想要修改的内容，有一些晦涩的法律术语，而且那是一种扭曲纠结的双重标准，连我都无法理清。又也许我只是不擅长破解埃及象形文字，但那样的话图坦卡蒙就不会监视我的上网习惯。
-
-尽管如此，去年出了一篇研究论文揭示了 Android 内部机制。他们将其命名为《驯服 Android 应用商店：Android 应用的轻量级特征》。
-
-以下是他们做的。
-
-他们使用运行 Android 4.1 的三星 Galaxy S3 手机，测试了 Play Store 中每个类别的 2000 多个免费应用。他们使用 VPN 通过 `TCPdump` 导出 IP 地址和其他数据来实现这一点——这监控了手机上的每一个应用程序。结果并不妙看。
-
-他们发现许多 Android 应用（在未经许可的情况下）连接了五百个独特网站中的至少一个，且不留下任何痕迹。没错。没有弹出窗口。没有电子邮件。没有退出选项。它连接到各种完全宣称匿性的东西，更不用说通用的隐私保护。
-
-广告追踪器。点击追踪器。追踪服务器。这一整顿反隐私大餐，而 Google 坐在堆山的顶端，带着那抹扭曲的小丑式笑容自得其乐。他们为什么就不能保持一点透明度呢？？
-
-我的理论是，这是因为他们依赖信号情报来处理一切，而不惜牺牲其他一切。他们过度依赖技术，而缺乏足够的地面观察。这对你有利，因为他们只能看到你给他们的东西，就像在所有任务备用手机激活后，你依然用手机给女朋友打电话一样。
-
-这是一场复杂的棋局，充满了走招、应对招和攻击，但如果你阻止了他们靠近你的皇后，他们就无法宣告你将死。
-
-让我重复一遍。良好的操作安全是艰苦的工作！
-
-## Signal
+### Signal
 
 首先提到的是 Signal，由 Whisper Systems 设计的流行的即时通讯和私人通话应用。它们最初在 iPhone 上，现在已引入 Android。几个优点立刻引起了我的注意：
 
@@ -1271,34 +1092,34 @@ Craigslist 的价值在很大程度上取决于你所在的地区，但可以通
 
 ![](img/bceda787dd56d788aff850dbaa4_99.png)
 
-## TextSecure
+### TextSecure
 
-Vera Zasulich: Orfox 是从相同的源代码构建的
-Jules Bonnot: Orfox 需要 Orbot 应用才能连接到 Tor 网络
-Masha Kolenkina: 在尽可能可能的情况下，我们遵循 Tor Browser 的设计目标
-Nestor Makhno: 来自开发者
+Vera Zasulich: Orfox 是从相同的源代码构建的  
+Jules Bonnot: Orfox 需要 Orbot 应用才能连接到 Tor 网络  
+Masha Kolenkina: 在尽可能可能的情况下，我们遵循 Tor Browser 的设计目标  
+Nestor Makhno: 来自开发者  
 Wilhelm Reich: Orfox 是与 Tor Browser 相同的源代码构建的（后者基于 Firefox）
 
-## Orweb
+### Orweb
+
+
 
 Orweb 是一种为了隐私而创建的浏览器。它通过将流量路由到国际计算机而不是直接连接来实现这一点。这种方法速度慢，但确保了高于普通用户的安全水平。
 
-正如开发者不得不说的：“Orweb 是构建在 Android 操作系统内置的 WebView (Webkit) 浏览器组件之上的。这证明是一个问题，因为我们无法控制该组件的版本，无法在发现漏洞时直接升级。此外，Google 已经使得很难有效地控制该组件各个方面的代理设置，导致难以保证在所有设备和操作系统版本上流量都不会泄漏。”
+正如开发者不得不说的：“Orweb 是构建在 Android 操作系统内置的 `WebView` (Webkit) 浏览器组件之上的。这证明是一个问题，因为我们无法控制该组件的版本，无法在发现漏洞时直接升级。此外，Google 已经使得很难有效地控制该组件各个方面的代理设置，导致难以保证在所有设备和操作系统版本上流量都不会泄漏。”
 
 问题是它现在已经过时了。
 
-## Orfox
+# Orfox
 
 Orfox: Android 版 Tor Browser
 
 使用 Tor Browser 的源代码设计，增加了一些功能，使其成为 Android 上非常可靠的浏览器。加入了 NoScript、HTTPS Everywhere 和 Tor Browser Button 后，它是一个非常可靠的工具。
 
 需要注意的区别：
+
 1. 除了 Orweb 已过时，Orfox 远优于 Orweb，因为 Orweb 专注于最小化浏览器指纹和 Cookie，磁盘写入较少。
 2. Orweb 小于 2MB。Orfox 达到 27MB。这主要是因为 Orfox 变成了一个功能更丰富的浏览器。
-
-
-
 
 # Telegram
 
@@ -1309,9 +1130,7 @@ Telegram
 Telegram 是一款专注于安全的即时通讯应用。它快速、简单且无广告。它提供的一些优点包括：
 
 - 云端存储：Telegram 会在你所有设备上进行同步，因此你可以随时访问你的数据。你的消息历史也存储在 Telegram 云端。
-
 - 群聊与共享：如果需要，你可以创建多达 1000 名成员的大群组。
-
 - 秘密聊天：根据 Telegram 的说法，这些消息可以程序设置为从双方参与的设备上自动销毁。这样你就可以发送各种类型的消失内容：消息、照片、视频和文件。秘密聊天还使用端到端加密，以确保消息只有预期的接收者可以阅读。
 
 ![](img/bceda787dd56d788afffe6850dba0a44_106_0.png)
@@ -1333,7 +1152,6 @@ ChatSecure 是一个支持通过 XMPP 加密的开源聊天客户端。它以前
 功能：
 
 - 只要接收者使用兼容 OTR 的 IM 客户端，你通过 ChatSecure 发出的每条消息都是私密的——支持音频、照片、文件和文本。
-
 - 发出的不会存储在手机内存中。
 - 如果配合 Orbot 使用，它可以绕许多防火墙和黑名单。
 - 支持多账户
@@ -1348,7 +1166,8 @@ OpenKeychain EASYPGP 与 K-9 集成并加强了匿名通信。它的加密确保
 
 你也可以在网上搜索他人的密钥。只需记住 PGP 有两个作用：
 
-1. 隐私与安全，以及 2. 真实性。
+1. 隐私与安全
+2. 真实性
 
 通过隐私，我的意思是你可以防止他人看到你不不想让他们看到的内容。例如，你可以向某人发送加密邮件，或使用密码列表加密文件。
 
@@ -1356,11 +1175,7 @@ OpenKeychain EASYPGP 与 K-9 集成并加强了匿名通信。它的加密确保
 
 [注：OCR 文本包含重复段落，已清理。]
 
-
-
-
-
-## Linphone: 加密视频与 IP 电话 (VOIP)
+# Linphone: 加密视频与 IP 电话 (VOIP)
 
 ![](img/bceda787dd56d788afffe6850dba0a44_116_0.png)
 
@@ -1370,7 +1185,7 @@ Linphone（Linux phone 的缩写）是一种免费的 IP 电话（或 VoIP）服
 
 如果你想通过 Tor 与你的伙伴通话，由于 Linphone 使用的是 UDP，你需要在两端都使用 Onioncat。关于如何使用 Linphone 通过 Tor 进行匿名 VoIP 的指令可以在 Whonix 网站找到。只需记住，Tor 会增加相当大的延迟，所以它不会像杰森·伯恩在巴基斯坦某些小巷发生枪战时那种清晰无比的通话。
 
-## ObscuraCam: 隐私摄像头
+# ObscuraCam: 隐私摄像头
 
 像 Pinta 和 Gimp 一样，ObscuraCam 允许你模糊任何可能导致身份识别的照片或视频中的脸部。使用像素化、遮黑，甚至是一个有趣的鼻子/眼镜组合来编辑掉你的身份。该应用本身由 GuardianProject 和 Witness.org（一家人权培训组织）设计。
 
@@ -1398,21 +1213,23 @@ Word 代码、jpegs、位图、mp3s。任何带有数字签名或哈希值的东
 
 小说家、作家和文案拷贝人员必须像史芬·金一样担心隐私。这位恐怖故事大师曾揭露过他最大的失误。他被问及职业生涯中是否有后悔做过或说过的事，除了写《极限驱动》（Maximum Overdrive）之外。他说没有。
 
-## Orbot: 带有 Tor 的代理
+# Orbot: 带有 Tor 的代理
 
-![](img/bceda787dd56d788afffe6850dba0a44_121_0.png) 
+![](img/bceda787dd56d788afffe6850dba0a44_121_0.png)
 
 Orbot 加密了你的流量，它可以全球范围内中转。它通过 Tor 转发流量，这样它无法被追踪。事实上，它被纽约纽约时报赞誉为“隐私工具的典范”。Orbot 能够隐藏你的流量。它通过 Tor 转发流量，这样它无法被追踪。
 
-现在，进入一些问题。
 
-元数据还涵盖哪些内容？
+
+# 现在，进入一些问题。
+
+## 元数据还涵盖哪些内容？
 
 在理论上，身上可获得的元数据几乎是无限的。但他们没有量子计算机，这意味着任何一个人的数据量都是有限的。我们的目标是限制它，因为即使是一个文件也能透露许多关于你个人的信息。
 
-哪些文件包含元数据？
+## 哪些文件包含元数据？
 
-Word 代码、jpeg、位图、mp3s。任何带有数字签名或哈希值的东西都可以告诉他们你住在哪里、听什么、谁甩了你，以及你在 In n’ Out 吃汉堡时是把番茄酱挤在薯条上还是放在旁边。
+Word 代码、`jpeg`、`位图`、`mp3s`。任何带有数字签名或哈希值的东西都可以告诉他们你住在哪里、听什么、谁甩了你，以及你在 In n’ Out 吃汉堡时是把番茄酱挤在薯条上还是放在旁边。
 
 我是一个小说家。我这些都完全不知道。
 
@@ -1422,47 +1239,45 @@ Word 代码、jpeg、位图、mp3s。任何带有数字签名或哈希值的东�
 
 ## Osmand: 地图与导航
 
-Osmand (OSM Navigation) 是一款使用 OpenStreetMap 的导航应用。它是 Google Maps 的极佳替代品，即使在离线状态下也可以使用。
+`Osmand` (`OSM Navigation`) 是一款使用 `OpenStreetMap` 的导航应用。它是 `Google Maps` 的极佳替代品，即使在离线状态下也可以使用。
 
 ![](img/bceda787dd56d788afffe6850dba0a44_124_0.png)
 
 功能：
+
 - 在线（快速）或离线（无漫游费用）工作
 - 支持行程中的语音引导
 - 可选车道引导、街道显示以及预计到达时间
 - 偏离路线时自动重新规划
 - 按地址、类型（例如餐厅、酒店）或地理坐标搜索地点
 
-缺点是，虽然 Play 商店上的截图看起来很简单，但其实很复杂。事实上，控制控件并不直观。
+缺点是，虽然 `Play 商店` 上的截图看起来很简单，但其实很复杂。事实上，控制控件并不直观。
 
+困惑。`Ostel` 与 `Linphone` 的区别就像太阳和月亮在方向上相反。我很擅长玩猜游戏，但即使我也倾向于像在迷雾中一样徘徊，像盲人一样拍打着双手。我可以想象对于一个加密通话的新手来说，这有多么困惑。有一次，我最终通过普通的电话线路使用拨号盘拨通了电话。在我运行一些测试确认之前，没有任何迹象显示正在通话。第一次警告。
 
+在 `Ostel.co` 注册账户的过程平淡无奇，`SIP` 提供商对他们“匿名性”的定义并不明确，这困扰了我。在整个过程中，我一直在想，新来者在发现他们无法匿名拨打 `Skype` 时就会放弃（你需要给带有 `SIP` 客户端的人打电话以确保通话的私密性）。这一点应该在首页上清楚地显示。
 
+无法从 `Ostel` 拨打固定电话并加密。这对我来说是致命的，但我会免除这次警告，因为你可能根本不需要给他们打电话。
 
-困惑。Ostel 与 Linphone 的区别就像太阳和月亮在方向上相反。我很擅长玩猜游戏，但即使我也倾向于像在迷雾中一样徘徊，像盲人一样拍打着双手。我可以想象对于一个加密通话的新手来说，这有多么困惑。有一次，我最终通过普通的电话线路使用拨号盘拨通了电话。在我运行一些测试确认之前，没有任何迹象显示正在通话。第一次警告。
+元数据。该应用在向他人隐藏元数据方面很糟糕。联系人、通话历史等似乎在应用程序的优先级中非常高，与 `Tor` 浏览器包不同。我承认，将 `Tor` 与加密手机的使用进行比较可能为时过早，因为它还处于婴儿阶段；元数据是 `NSA` 的钩子、钓鱼线和铅坠，这必须作为首要任务目标来执行。
 
-在 Ostel.co 注册账户的过程平淡无奇，SIP 提供商对他们“匿名性”的定义并不明确，这困扰了我。在整个过程中，我一直在想，新来者在发现他们无法匿名拨打 Skype 时就会放弃（你需要给带有 SIP 客户端的人打电话以确保通话的私密性）。这一点应该在首页上清楚地显示。
+他们记录数据。他们声称记录的数据足够运行服务，这听起来像是我从 `VPN` 提供商那里为了自保而听到的同样的策略。我们知道 `VPN` 公司擅长为匿名性提供隐私，但很多公司却欠缺。第二次警告。
 
-无法从 Ostel 拨打固定电话并加密。这对我来说是致命的，但我会免除这次警告，因为你可能根本不需要给他们打电话。
-
-元数据。该应用在向他人隐藏元数据方面很糟糕。联系人、通话历史等似乎在应用程序的优先级中非常高，与 Tor 浏览器包不同。我承认，将 Tor 与加密手机的使用进行比较可能为时过早，因为它还处于婴儿阶段；元数据是 NSA 的钩子、钓鱼线和铅坠，这必须作为首要任务目标来执行。
-
-他们记录数据。他们声称记录的数据足够运行服务，这听起来像是我从 VPN 提供商那里为了自保而听到的同样的策略。我们知道 VPN 公司擅长为匿名性提供隐私，但很多公司却欠缺。第二次警告。
-
-不支持 Tor。这同样是致命的，但这可能由于服务的匮乏，而与公司本身无关。由于 Tor 的工作方式（也包括种子），VoIP 在 Tor 上的运行并不良好，这意味着 Orbot 与其无法良好协作。第三次警告。
+不支持 `Tor`。这同样是致命的，但这可能由于服务的匮乏，而与公司本身无关。由于 `Tor` 的工作方式（也包括种子），`VoIP` 在 `Tor` 上的运行并不良好，这意味着 `Orbot` 与其无法良好协作。第三次警告。
 
 ## TextSecure
 
 ![](img/bceda787dd56d788afffe6850dba0a44_29.png)
 
-TextSecure（现为 Signal）是一个开源通信应用，允许你避开短信费用，并与同事、朋友和等人私密地分享媒体。如果你对使用 Signal 感到有些不安，把它列在这里。
+`TextSecure`（现为 `Signal`）是一个开源通信应用，允许你避开短信费用，并与同事、朋友和等人私密地分享媒体。如果你对使用 `Signal` 感到有些不安，把它列在这里。
 
 那么它有多安全呢？
 
-非常安全，尽管显然没有翻新后的应用安全。网上有一篇有趣的（尽管技术性极强）研究论文，名为《TextSecure 有多安全》。它由 EFF IT 安全部门发布，他们的结论是，除了 Tor 之外，三个应用脱颖于众：Telegram 和 TextSecure。你可以得出自己的结论，但我测试了每一个应用，发现 TextSecure 是进行任何需要保持离线状态操作的绝佳工具。
+非常安全，尽管显然没有翻新后的应用安全。网上有一篇有趣的（尽管技术性极强）研究论文，名为《`TextSecure` 有多安全》。它由 `EFF` IT 安全部门发布，他们的结论是，除了 `Tor` 之外，三个应用脱颖于众：`Telegram` 和 `TextSecure`。你可以得出自己的结论，但我测试了每一个应用，发现 `TextSecure` 是进行任何需要保持离线状态操作的绝佳工具。
 
 ## Pixelknot：隐藏信息
 
-Pixelknot 允许你在照片中发送一条只有接收者才能阅读的消息。这种做法涉及所谓的“隐写术”，即将隐藏消息嵌入任何格式中的行为，类似于 PGP，但它使用算法来掩盖你的消息。开发者（即《卫士者项目”）发布了这一旨在努力的标准：
+`Pixelknot` 允许你在照片中发送一条只有接收者才能阅读的消息。这种做法涉及所谓的“隐写术”，即将隐藏消息嵌入任何格式中的行为，类似于 `PGP`，但它使用算法来掩盖你的消息。开发者（即《卫士者项目”）发布了这一旨在努力的标准：
 
 - 让原始图像在经过训练的眼中看起来是未经编辑的。
 - 让图像的字节在经过训练的分析师看来没有失真，不至于引起怀疑。
@@ -1470,31 +1285,31 @@ Pixelknot 允许你在照片中发送一条只有接收者才能阅读的消息�
 
 ![](img/bceda787dd56d788afffe6850dba0a44_13.png)
 
-我曾将它用于其他类型的通信，但让我们来看一个特定的：Usenet。我自 1983 年以来最喜爱的阵地。让我们假设你想给 Usenet 上的某人发送一条匿名消息，可能在许多新闻组之一，并且也假设你不希望 Google 永久索引那条消息（事实上，他们还是会索引的）。你首先打开应用，选择一张图片来隐藏消息，并使用 Usenet 发送它，知道尽管图片本身对他人可见，但其中编码的内容并非如此。事实上，他们甚至无法看出这这是一张被 Pixelknot 处理过的图片。Google 确实会索引它很长时间，但在量子计算普及之前，他们将无法解密它。
+我曾将它用于其他类型的通信，但让我们来看一个特定的：`Usenet`。我自 1983 年以来最喜爱的阵地。让我们假设你想给 `Usenet` 上的某人发送一条匿名消息，可能在许多新闻组之一，并且也假设你不希望 `Google` 永久索引那条消息（事实上，他们还是会索引的）。你首先打开应用，选择一张图片来隐藏消息，并使用 `Usenet` 发送它，知道尽管图片本身对他人可见，但其中编码的内容并非如此。事实上，他们甚至无法看出这这是一张被 `Pixelknot` 处理过的图片。`Google` 确实会索引它很长时间，但在量子计算普及之前，他们将无法解密它。
 
-另一方面，如果你发布了一条 PGP 加密消息，那么，如果你在指定的区域组中发布它，显而易见你不希望别人看到它。对于 TrueCrypt 或 VeraCrypt 这样的流行容器也是如此。任何扩展（除非你更改它）通常都会暴露所使用的应用，并推导出发送者的意图。
+另一方面，如果你发布了一条 `PGP` 加密消息，那么，如果你在指定的区域组中发布它，显而易见你不希望别人看到它。对于 `TrueCrypt` 或 `VeraCrypt` 这样的流行容器也是如此。任何扩展（除非你更改它）通常都会暴露所使用的应用，并推导出发送者的意图。
 
 ## 你的安全需求并非我的
 
 诚然，其中一些应用已经不再完全可行了。也许你尝试了几个，由于某种原因它们并不符合你的胃口。这里提到的应用当然不是唯一的。它们只是提供了满足我安全需求的那些。你的需求可能不同。当然，我曾担心当局强制要求“后门”，然后我意识到，使用老旧的普通短信几乎会被各地的当地警长和市政警察拦截。
 
-在使用短信和使用由全球最受推崇的安全研究人员之一开发的开源应用之间，你可能知道该用哪一个。我的技能并不真的能跟踪 GitHub 上的更新日志并自己为 Verizon 重新编译它，所以我将信任 Signal 内置的设置。
+在使用短信和使用由全球最受推崇的安全研究人员之一开发的开源应用之间，你可能知道该用哪一个。我的技能并不真的能跟踪 `GitHub` 上的更新日志并自己为 `Verizon` 重新编译它，所以我将信任 `Signal` 内置的设置。
 
-顺便提一句，一当微软支付 85 亿美元收购 Skype 时，它在法律上就发现自己处于一个比 Windows 深得多的美国管辖区内。Skype 向 PSTN（即公共交换电话网络）拨打语音电话，由于《通信协助执法法案》（CLEA）的出现，这使得监听成为可能。在 Skype 之后，它发现自己处于一个更深的美国管辖区内。相比之下，TextSecure（现为 Signal）并不拥有加密。如果退回到短信，它们是没用的。
+顺便提一句，一当微软支付 85 亿美元收购 `Skype` 时，它在法律上就发现自己处于一个比 `Windows` 深得多的美国管辖区内。`Skype` 向 `PSTN`（即公共交换电话网络）拨打语音电话，由于《通信协助执法法案》（`CLEA`）的出现，这使得监听成为可能。在 `Skype` 之后，它发现自己处于一个更深的美国管辖区内。相比之下，`TextSecure`（现为 `Signal`）并不拥有加密。如果退回到短信，它们是没用的。
 
 ## 用于黑市场应用
 
 面向黑市场的应用
 
-第一个是 Grams，暗网搜索引擎
+第一个是 `Grams`，暗网搜索引擎
 
 ![](img/bceda787dd56d788afffe6850dba0a44_133.png)
 
-Grams 引擎的设计初衷主要是为了探索深网。自从在 Reddit 上宣布以来，它在索引网页上找不到的内容方面取得了巨大进展。但像 1996 年的 Google 一样，它们处于非常早期的阶段，所以并不完美。
+`Grams` 引擎的设计初衷主要是为了探索深网。自从在 `Reddit` 上宣布以来，它在索引网页上找不到的内容方面取得了巨大进展。但像 1996 年的 `Google` 一样，它们处于非常早期的阶段，所以并不完美。
 
-它共享了 Google 算法的一些特征，例如基于列表上线时间、交易量和好评的评分系统。这样你就能看到类似于使用 Google 的最佳列表。Grams 信息中心可以通过此 Onion站点访问：http://3g2upl4pq6uf4m.onion/
+它共享了 `Google` 算法的一些特征，例如基于列表上线时间、交易量和好评的评分系统。这样你就能看到类似于使用 `Google` 的最佳列表。`Grams` 信息中心可以通过此 `Onion` 站点访问：`http://3g2upl4pq6uf4m.onion/`
 
-注意：你可能需要连接到 Tor 网络才能访问上述链接。
+注意：你可能需要连接到 `Tor` 网络才能访问上述链接。
 
 ## Duck Duck Go
 
@@ -1504,25 +1319,25 @@ Grams 引擎的设计初衷主要是为了探索深网。自从在 Reddit 上宣
 
 ## DuckDuckGo
 
-DuckDuckGo 致力于成为保护用户隐私并避免 Google 闻名的个性化搜索结果过滤泡的下一代伟大搜索引擎。
+`DuckDuckGo` 致力于成为保护用户隐私并避免 `Google` 闻名的个性化搜索结果过滤泡的下一代伟大搜索引擎。
 
-结果是约 50 个来源的汇总，包括 Yahoo 搜索、Wikipedia、Bing 以及自己的网页爬虫 DuckDuckBot 等。最好的部分是，虽然常规搜索是在 DuckDuckGo.com，但你可以使用 Duck Onion站点进行清洁搜索，这为你的日常网页使用增加了另一层安全。链接是：
+结果是约 50 个来源的汇总，包括 `Yahoo` 搜索、`Wikipedia`、`Bing` 以及自己的网页爬虫 `DuckDuckBot` 等。最好的部分是，虽然常规搜索是在 `DuckDuckGo.com`，但你可以使用 `Duck Onion` 站点进行清洁搜索，这为你的日常网页使用增加了另一层安全。链接是：
 
-http://3g2upl4pq6uf4m.onion/
+`http://3g2upl4pq6uf4m.onion/`
 
-注意：你可能需要连接到 Tor 网络才能访问上述链接。
+注意：你可能需要连接到 `Tor` 网络才能访问上述链接。
 
-2015 年 3 月，DuckDuckGo 自起航以来首次检索了超过 900 万次搜索。该月还见证了该搜索引擎检索了超过 2.5 亿次搜索。数字就有保护。此外，他们的竞争可能会在网络服务提供商之间设定新的通用隐私规则，这包括 Google。
+2015 年 3 月，`DuckDuckGo` 自起航以来首次检索了超过 900 万次搜索。该月还见证了该搜索引擎检索了超过 2.5 亿次搜索。数字就有保护。此外，他们的竞争可能会在网络服务提供商之间设定新的通用隐私规则，这包括 `Google`。
 
-你始终可以在搜索查询前加上 g! 来查看 Google 的搜索结果。例如：
+你始终可以在搜索查询前加上 `g!` 来查看 `Google` 的搜索结果。例如：
 
-- Mustangs ig! -> 在 Google 上搜索 Mustangs。
-- “Mustangs !ig” -> 在 Google 上搜索 Mustangs 图片 “Mustangs !yt” -> Youtube “Mustangs !b” -> Bing 更多可见：https://duckgo.com/bang
-
-当 DuckDuckGo 列出来自 Yahoo 或 Bing 的结果时，
+- `Mustangs ig!` -> 在 `Google` 上搜索 Mustangs。
 
 
-你的手机或电脑没有从 Yahoo 或 Bing 获取到 Cookie。
+
+- `Mustangs !ig` -> 在 Google 上搜索 Mustangs 图片 `Mustangs !yt` -> Youtube `Mustangs !b` -> Bing 更多可见：https://duckgo.com/bang
+
+当 DuckDuckGo 列出来自 Yahoo 或 Bing 的结果时，你的手机或电脑没有从 Yahoo 或 Bing 获取到 Cookie。
 
 ## 使用 DuckDuckGo 的缺点
 
@@ -1550,36 +1365,36 @@ NoteCipher 是一个简单的记事本应用。由此应用创建并存储的所
 
 OpenPGP 是另一个适用于 Android 的良好隐私应用。它是开源的，目标是提供与 GnuPG 类似的 OpenPGP 实现。
 
-## Thialfihar
+### Thialfihar
 
 信息
 
 认证信息
 
-## 主用户 ID
+#### 主用户 ID
 
 | 名称 | Thialfihar |
 | :--- | :--- |
 | 邮箱 | thi@thialfihar.org |
 | 注释 | |
 
-## 主密钥
+#### 主密钥
 
-| Key ID | 0xa43d006511120ba5 |
+| Key ID | `0xa43d006511120ba5` |
 | :--- | :--- |
 | 算法 | RSA, 8672 bit |
-| 指纹 | 5b6d 39a6 6e9c 03b5 8f44 e502 a43d 0065 1112 0ba5 |
+| 指纹 | `5b6d 39a6 6e9c 03b5 8f44 e502 a43d 0065 1112 0ba5` |
 | 创建于 | 2009/11/19 |
 | 过期时间 | <无> |
 | 密钥 | 可用 |
 
-## 用户 ID
+#### 用户 ID
 
 | | Thialfihar |
 | :--- | :--- |
 | | thi@thialfihar.org |
 
-## 密钥
+#### 密钥
 
 ```
 0x11120ba5 (RSA, 8672 bit)
@@ -1593,7 +1408,7 @@ OpenPGP 是另一个适用于 Android 的良好隐私应用。它是开源的，
 
 如果你在浏览暗网市场，可能会偶尔偶尔密钥无法与 APG 兼容的卖家。但这种情况非常罕见。无论如何，你都可以使用 GnuPrivacyGuard 来寻求帮助。
 
-顺便提一下，如果你担心应用广播你正在使用 OpenPG v2 等任何信息（但又不想让任何人知道你在使用 APG），你可以在发送任何消息之前进行编辑。例如：版本：v1。
+顺便提一下，如果你担心应用广播你正在使用 OpenPG v2 等任何信息（但又不想让任何人知道你在使用 APG），你可以在发送任何消息之前进行编辑。例如：版本：`v1`。
 
 ## 比特钱包
 
@@ -1617,7 +1432,7 @@ ChatSecure 是一个免费开源的即时消息应用，具有带有 OTR 加密�
 
 与那些将你困在围墙花园的应用不同，ChatSecure 与支持 OTR 的客户端完全具有操作性。
 
-## 强加密
+### 强加密
 
 ChatSecure 仅使用著名的开源加密库来保持对话隐私。其他应用可能声称拥有“军事级”安全性，但如果没有公开审计的代码和端到端加密，你无法 100% 安全。
 
@@ -1639,10 +1454,7 @@ ChatSecure 仅使用著名的开源加密库来保持对话隐私。其他应用
 
 在很多情况下这可能非常有用。你可以从 Github 网站下载：
 
-github.com/psal/anonymouth
-
-
-
+`github.com/psal/anonymouth`
 
 ## Ghostery
 
@@ -1655,6 +1467,8 @@ Ghostery 目前非常流行。它能做什么呢？它会报告检测到的所�
 但是，你可以通过退出 Ghost 排名功能来防止 Ghostery 这样做。该功能是选择性开启（opt-in）的，所以如果你之前没有开启，就什么都不需要做。如果这个功能困扰着你，我还可以推荐其他几个。其中一个就是 PrivacyBadger。稍后会详细介绍。
 
 ## FlashControl
+
+
 
 FlashControl 让你控制哪些网站允许显示 Flash 播放器或 HTML5 播放器。安装 FlashControl 后，需要 Flash 插件的网页内容将被默认禁用。然后你可以通过点击任何网页上被拦截的区域，或通过 Flashcontrol 的地址栏图标来启用内容。你也可以对已解锁的内容进行重新拦截。
 
@@ -1709,17 +1523,14 @@ NoScript 允许仅从信任的域名运行 JavaScript、Java 和其他可执行�
 
 显然，你必须根据自己的操作安全需求自行判断每个网站，但我通过这种方式解决了通用网络浏览中的上述两个问题：每当你遇到新网站时，启用足够的脚本以获得基本的网站功能。通常意味着你会允许包含网站名称的域名，并以此向外扩展到一些听起来合理的域名。超出此范围会违背 NoScript 的初衷，但你最终会习惯需要启用哪些让网站正常工作。
 
-
-
-
-
-# uMatrix
+## uMatrix
 
 uMatrix 是一个基于矩阵的点选防火墙。只需指向并点击，即可禁止或允许浏览器发送的任何类型的请求。它不仅可以阻止 JavaScript，还可以针对单个域名或全局阻止 Cookie、CSS、插件、图像等内容。它的界面也非常易用。它作为 Firefox 和 Chrome 的插件存在。
 
 我个人倾向于保留 NoScript 来进行 XSS 保护。uMatrix 能够很好地阻止 JavaScript，但一旦你允许了某些 JavaScript，它就会靠边。NoScript 仍然会扫描已允许的 JavaScript 是否存在明显的 XSS 尝试并阻止它们。
 
 ## uBlock Origin
+
 uBlock Origin 是 uMatrix 开发者开发的内容过滤器。它与 uMatrix 有一些相同的功能，但更适合拦截广告。它可以使用与 Adblock Plus 相同的过滤列表。它有两个版本：由 Raymond Hill 开发的原始版本（名称已从 uBlock 重命名为 uBlock Origin），以及由 Chris Aloudji 分叉的版本（保留了原始名称 uBlock）。
 
 你可以使用上述所有的 NoScript 和 uMatrix，它们经常追求同一个目标，只是它们从根本上是不同的。NoScript 仅阻止脚本，而 uMatrix 阻止整个连接。
@@ -1752,11 +1563,12 @@ https://github.com/gorhill/httpswitchboard/wiki
 - 如何制作切掉皮的花生酱果三明治。
 - 橡胶鸭在阿曼湾能漂浮多久。
 - 我的猫想流产。
-
-# 自恋症是遗传的吗？
-牛如果膝盖痒了该怎么抓膝盖？
+- 自恋症是遗传的吗？
+- 牛如果膝盖痒了该怎么抓膝盖？
 
 之类的问题。如果你有一个智力能与《矩阵》中的 Neo 匹敌的孩子，那么你就遇到了对手。他可以拿一个 USB 优盘，在上面安装一个 Linux 生系统，并从 USB 驱动器启动。除非他不在用，否则会将 USB 优盘藏起来。
+
+
 
 这是一种反向打击，除非你以某种方式拿到他的优盘，猜中他的密码，研究 Ubuntu 并找到方法安装 Linux 键盘记录器。即使发生了这种情况，他也可以直接格式化它并重新放入一份新的 Ubuntu。
 
@@ -1767,6 +1579,7 @@ https://github.com/gorhill/httpswitchboard/wiki
 第二个是 Spyera。
 
 ## SPYERA
+
 世界领先的手机间谍软件
 
 | 类型 | 来自于 | 消息 | 日期 | 时间 |
@@ -1784,7 +1597,8 @@ https://github.com/gorhill/httpswitchboard/wiki
 
 ![](img/bceda787dd56788afffe6850dba044_159_0.png)
 
-# GPS 位置
+### GPS 位置
+
 GPS 位置是确定某个地理位置的过程。
 
 第四是 Flexispy。
@@ -1805,30 +1619,31 @@ GPS 位置是确定某个地理位置的过程。
 
 所有这些键盘记录器基本上是一样的：监视你的孩子，或者监视街对那个竞争对手二手车主。
 
-# 检测键盘记录器
+### 检测键盘记录器
+
 检测键盘记录器并不是脑手术。你只需要知道去哪里看。有时这很难，但通常会有其他在线网友费力在某个论坛发帖。所以帮助随处可见。这里有几种方法可以让你检查可能在（在太太的一小帮助下）虫入你系统的键盘记录器模块。
 
-大多数键盘记录器使用某种 DLL 注入来进入内部并停留在那里而不被察觉。这意味着 DLL 将以映射到进程地址空间的形式出现，如下所示：`.pyd`（Python 扩展）文件位于“名称”下方的第二个部分。这一个被直接加载到 Windows 资源管理器的地址空间，这意味着每次运行资源管理器时都会运行。对于你任何需要资源管理器执行的操作。这使得在没有知道要找专用杀毒软件的情况下很难将其删除。
+大多数键盘记录器使用某种 DLL 注入来进入内部并停留在那里而不被察觉。这意味着 DLL 将以映射到进程地址空间的形式出现，如下所示：`.pyd` 文件位于“名称”下方的第二个部分。这一个被直接加载到 Windows 资源管理器的地址空间，这意味着每次运行资源管理器时都会运行。对于你任何需要资源管理器执行的操作。这使得在没有知道要找专用杀毒软件的情况下很难将其删除。
 
 这样的 DLL 想要看到你输入的一切，它们通常加载到每个可用的地址空间。对于对电脑了如指掌的聪明人来说，他可能会在这里看到一些可疑的异常 DLL——他无法将其与购买或使用的产品联系起来的文件。他可以列出每个进程的列表。极客每天都在做这件事，发现异常或不应存在的“幽灵文件”。他们不喜欢只依靠杀毒程序。
 
 那是它们不擅长的一点：注意到汽车点火处的微型开关（或 GPS 设备）。
 
-+ 解决方案：
+**解决方案：**
+
 1.) 可以研究“驱动”文件夹中的异常文件。
-2.) 使用 BcdEdit 创建调试启动文件并连接火线电缆，在模块加载时点击断点并研究所有的模块，每一个，在 DLL/驱动程序加载到 Windows 之前无法躲避你的查看时过滤细节。这显然是处理问题复杂的方法。
+
+2.) 使用 `BcdEdit` 创建调试启动文件并连接火线电缆，在模块加载时点击断点并研究所有的模块，每一个，在 DLL/驱动程序加载到 Windows 之前无法躲避你的查看时过滤细节。这显然是处理问题复杂的方法。
+
 3.) 几乎所有的键盘记录器都会向其他地方汇报。所以保持连接。
 
-
-
-
-...将其连接到一个透明代理，并注意那些与你不熟悉的连接。你可能会看到类似“myspyy.ukraine.com”这样的地址，而不是你常用的 VPN 地址。
+...将其连接到一个透明代理，并注意那些与你不熟悉的连接。你可能会看到类似 `myspyy.ukraine.com` 这样的地址，而不是你常用的 VPN 地址。
 
 4.) 购买一个“反键盘记录器”程序。市上有许多杀毒软件厂商，但并非所有的都一样优秀。
 
 显然，如果你用这种间谍软件来监控你的孩子，除非他们的朋友圈里有几个天才少年，否则他们根本没有脑力去完成上述任何操作。无患胜于有备，在这一点上我支持家长们。
 
-# Tor 与手机
+### Tor 与手机
 
 Tor 用户通常分为两类：一类是不愿意将自己的安全知识扩展到中级水平以上的普通人。他是其中之一。他超级自信，而且通常喜欢简单简单当。点个按钮就走。很多 Mac 用户曾属于这一类，但现在很多 Windows 用户对自己的安全能力过度自信了。
 
@@ -1840,7 +1655,7 @@ Tor 用户通常分为两类：一类是不愿意将自己的安全知识扩展�
 
 但在之前，先回顾一下基础。
 
-## Tor 与 IP 地址
+#### Tor 与 IP 地址
 
 如果有必要，我会重复一百遍：你的 IP 地址对于 Facebook 和 YouTube 等社交媒体巨头来说价值连城。
 
@@ -1855,9 +1670,14 @@ Tor 用户通常分为两类：一类是不愿意将自己的安全知识扩展�
 想象你给 A 寄了一封信，信封里装有一封要寄给 B 的信。
 
 - 随后 随后将信件寄给 B。
+
 - B 从 A 那里收到信封，封里是另一封要寄给 C 的信。
+
 - C 从 B 那里收到那封信，然后查找所需的信息。接着那个人将回复放在一个写给 B 的信封中发送。
+
 - B 将其放入给 A 的信封中发送给 A，A 然后将其放入另一个信封寄回给你。
+
+
 
 Tor 路由原理就是这样，不同的是你预先知道 A、B 和 C 的公钥，所以当你向 A 发送消息时，A 唯一能解密的事就是你正在向 B 发送消息——只有消息本身仍然加密加密，且只有 C 能够解密。同时，B 接收、解密并将消息转发给 C，但永远不知道是你发送的，而 C 也完全不知道你或“A”到底是谁。
 
@@ -1889,9 +1709,6 @@ Tor 路由原理就是这样，不同的是你预先知道 A、B 和 C 的公钥
 
 如果 Tor 带来巨大的麻烦，请使用桥接中继。虽然原生 Tor 表现良好，但它并不完美。它无法阻止 NSA 进行流量分析。如果你想隐藏你正在使用 Tor 的事实，那么请选择 Tor 桥接，而不是直接连接到所有人使用的同一个入口。
 
-
-
-
 # 匿名安卓
 
 强力匿名化需要大量的努力，你很快就会发现这一点。这就像是从潘多拉盒中流出来的东西。
@@ -1908,31 +1725,30 @@ Tor 路由原理就是这样，不同的是你预先知道 A、B 和 C 的公钥
 
 它被封装在固件中，并从棒球处理器获取能量，因此在不进行修改的情况下很难访问。而且，这种修改是危险的。
 
-大多数大多数固件运行在 ARM 处理器上，但这并不重要，因为如果你愿意，可以替换掉 Android 操作系统本身。你可以通过安装 CyanogenMod 配合 Team Win Recovery Project 来实现这一点。
+大多数大多数固件运行在 ARM 处理器上，但这并不重要，因为如果你愿意，可以替换掉 Android 操作系统本身。你可以通过安装 `CyanogenMod` 配合 `Team Win Recovery Project` 来实现这一点。
 
-- 所需应用：
-- CyanogenMod
-- Team Win Recovery Project 镜像
-- F-Droid 程序包
-- 来自 F-Droid 的 Orbot
-- 来自 F-Droid 的 Droidwall
-- Droidwall 防火墙脚本
+所需应用：
+- `CyanogenMod`
+- `Team Win Recovery Project` 镜像
+- `F-Droid` 程序包
+- 来自 `F-Droid` 的 `Orbot`
+- 来自 `F-Droid` 的 `Droidwall`
+- `Droidwall` 防火墙脚本
 
 ## 如何访问深网中隐藏的洋葱站点
 
-洋葱站点是那些带有 .onion 扩展名的网站，只能通过 Tor 浏览器访问。你无法在开放网络上访问它们。只要你知道地址，通过 Tor 网络访问它们就与访问任何其他网站一样。
+洋葱站点是那些带有 `.onion` 扩展名的网站，只能通过 Tor 浏览器访问。你无法在开放网络上访问它们。只要你知道地址，通过 Tor 网络访问它们就与访问任何其他网站一样。
 
-为此，Reddit 在侧边栏中维护了一个有趣的暗网文章库和大量的暗网链接。你可以在这里找到它：https://www.reddit.com/r/darknetmarkets
+为此，Reddit 在侧边栏中维护了一个有趣的暗网文章库和大量的暗网链接。你可以在这里找到它：`https://www.reddit.com/r/darknetmarkets`
 
-DeepDotWeb 是另一个你可以获取许多 .onion 地址的站点。他们甚至有一份所有可以通过 Tor 访问的隐藏站点的对比图，列出了优缺点，甚至对每个供应商或出口进行了评价，每月更新一次。安装 Tor 后，我建议你将主页设置为 https://wtfismyip.com/ 或 Tor IP 检查 (check.torproject.org)。这可以确保你的 IP 被掩盖。
+DeepDotWeb 是另一个你可以获取许多 `.onion` 地址的站点。他们甚至有一份所有可以通过 Tor 访问的隐藏站点的对比图，列出了优缺点，甚至对每个供应商或出口进行了评价，每月更新一次。安装 Tor 后，我建议你将主页设置为 `https://wtfismyip.com/` 或 Tor IP 检查 (`check.torproject.org`)。这可以确保你的 IP 被掩盖。
 
 ## Linux 暗网版
 
 Linux Darknet 只是 Tails（遗忘性隐身即时系统）的一个华丽的称呼。它使用 Linux 操作系统并被高度推荐。Bruce Schneider、Ed Snowden 以及许多其他著名的安全专家对其优点赞不绝口。对于深网初学者来说，它既廉价、快速，又不可追溯。事实上，它是在深网上进行任何操作的完美匿名工具。
 
 你需要：
-
-- 一台能够通过 USB/DVD 运行即时操作系统的 PC 或笔记本电脑。
+- 一台能够通过 `USB/DVD` 运行即时操作系统的 PC 或笔记本电脑。
 - 一张空白 DVD 或 USB 闪盘
 - 一个用于持久化的 4GB 闪盘（以防你想在 Tails 安装程序在设备上留下的可用空间创建一个持久化卷。持久化卷中的文件将以加密保存，并在不同的工作会话中保持可用。）
 
@@ -1940,76 +1756,51 @@ Tails 的伟大特性之一是它在关机时会忘记一切。所有文件、�
 
 ### 如何设置 Tails
 
-警告：永远不要在虚拟机中运行 Tails。这样做会危及你的安全，因为你让自己受限于主机操作系统的控制。Whonix 是此项更好的选择。由于原文 "One of the great files about Tails" 处可能为笔误（应为 features），此处译为 Tails 的伟大特性之一。
-
-*注：此处根据上下文逻辑重新翻译该段落*
+警告：永远不要在虚拟机中运行 Tails。这样做会危及你的安全，因为你让自己受限于主机操作系统的控制。`Whonix` 是此项更好的选择。
 
 Tails 的伟大特性之一是它在关机时会忘记一切。所有文件、设置和 RAM 都会被清空。当你需要永久存储时，可以使用 USB 或 SD 卡。由于你在该存储器上会有敏感信息，因此它也应该被加密。
-
-### 如何设置 Tails
-
-警告：永远不要在虚拟机中运行 Tails。这样做会危及你的安全，因为你让自己受限于主机操作系统的控制。Whonix 是此项更好的选择。由于原文 "One of the great files about Tails" 处可能为笔误（应为 features），此处译为 Tails 的伟大特性之一。
-
-Tails 的伟大特性之一是它在关机时会忘记一切。所有文件、设置和 RAM 都会被清空。当你需要永久存储时，可以使用 USB 或 SD 卡。由于你在该存储器上会有敏感信息，因此它也应该被加密。
-
-### 如何设置 Tails
-
-警告：永远不要在虚拟机中运行 Tails。这样做会危及你的安全，因为你让自己受限于主机操作系统的控制。Whonix 是此项更好的选择。
-
-*(由于提供的原文后部分存在大量重复段落，已遵循“不要重复输出原文”的原则，以下为后续核心部分的翻译)*
-
-Tails 的伟大特性之一是它在关机时会忘记一切。所有文件、设置和 RAM 都会被清空。当你需要永久存储时，可以使用 USB 或 SD 卡。由于你在该存储器上会有敏感信息，因此它也应该被加密。
-
-### 如何设置 Tails
-
-警告：永远不要在虚拟机中运行 Tails。这样做会危及你的安全，因为你让自己受限于主机操作系统的控制。Whonix 是此项更好的选择。
-
-*(注：由于原始文本在后半部分大量重复了 "How to Setup Tails" 等相关段落，我已根据您提供的文本内容完成翻译，并确保逻辑连贯。)*
-
-... (由于原文后半部分高度重复，此处仅展示核心逻辑翻译)
-
-
-
-
 
 如果可能的话，请不要使用手机。原因在于，在将这些数据输入到用于他们某种终极计划的“怪兽系统”之前，它们会监控它们所能触及的一切。这一点现在已不容置疑。
 
+
+
 在那个“长刀之夜”到来之前，在我们看到国家敌人被倒吊起来之前（就像那些旧黑白照片那样），否则数据采集将无休止。
 
-Onionscan 可能对检查安全漏洞有所帮助。
+`Onionscan` 可能对检查安全漏洞有所帮助。
 
 ## Tor 与 SMS 验证
 
-就像讨厌的苍蝇嗡嗡声一样，Tor 用户偶尔需要处理 SMS 验证才能注册某个网站。隐藏服务似乎如此，甚至商人也是如此。
+就像讨厌的苍蝇嗡嗡声一样，`Tor` 用户偶尔需要处理 SMS 验证才能注册某个网站。隐藏服务似乎如此，甚至商人也是如此。
 
-对此要非常小心。理想情况下，你的威胁模型不应该要求在使用操作安全（opsec）工具之外的此类“验证”。通过这种方式（通过手机）暴露自己，不仅会让你访问的媒体网站获取你元数据的“小众美食”，而且如果你使用同一部手机登录社交媒体网站，任何网络运营商、执法部门或黑客都可能来分一杯羹。在还没有出现无痕 SMS 之前，我会避免访问任何需要匿名性的网站。
+对此要非常小心。理想情况下，你的威胁模型不应该要求在使用操作安全（`opsec`）工具之外的此类“验证”。通过这种方式（通过手机）暴露自己，不仅会让你访问的媒体网站获取你元数据的“小众美食”，而且如果你使用同一部手机登录社交媒体网站，任何网络运营商、执法部门或黑客都可能来分一杯羹。在还没有出现无痕 SMS 之前，我会避免访问任何需要匿名性的网站。
 
-但对于暗网市场，请看下文。这是一个假设性场景，涉及一个想从黑市供应商处购买的 Tor 用户。谁在意他在想买什么。那是他的私事。但所提到的供应商在 Agora 市场上上有良好的声誉，因此客户发送了他的 PGP 信息（当然是加密的）。
+但对于暗网市场，请看下文。这是一个假设性场景，涉及一个想从黑市供应商处购买的 `Tor` 用户。谁在意他在想买什么。那是他的私事。但所提到的供应商在 `Agora` 市场上上有良好的声誉，因此客户发送了他的 `PGP` 信息（当然是加密的）。
 
-供应商：那份 PGP 数据没传输成功。用 SMS4Tor 好吗？（他发送了链接）。
+供应商：那份 `PGP` 数据没传输成功。用 `SMS4Tor` 好吗？（他发送了链接）。
 
-客户：我将用你提供的配置密钥重新发送 PGP。
+客户：我将用你提供的配置密钥重新发送 `PGP`。
+
 供应商：还是不起作用，不知道为什么，你上周才订过货。
 
 客户：上周？不是我，我从未从你那里订过货。你能再次（再次）重发公钥并重新发送吗？
 
-供应商：我觉得你正在使用不同的 PGP 应用。和上周一样。（然后他又提出了更多要求）
+供应商：我觉得你正在使用不同的 `PGP` 应用。和上周一样。（然后他又提出了更多要求）
 
-你发现上面的对话中有什么不对劲的地方吗？我发现了。这个供应商是一个无能的小丑。两个 PGP 应用不兼容？这可能是警察或黑客为了获取更多信息（即钓鱼）而会说的话。这与国土安全部在渗透聊天室并试图钓到第一次购买的“新肉”时使用的策略相同。
+你发现上面的对话中有什么不对劲的地方吗？我发现了。这个供应商是一个无能的小丑。两个 `PGP` 应用不兼容？这可能是警察或黑客为了获取更多信息（即钓鱼）而会说的话。这与国土安全部在渗透聊天室并试图钓到第一次购买的“新肉”时使用的策略相同。
 
 无论无能来自黑客还是无能的蠢货供应商，永远不要因为假设他们只是“状态不好”就掉之轻心，从而危及你的安全。始终遵循你的直觉。如果事情感觉不对劲，就跑。
 
 ## Tor 恶作剧与手机
 
-有很多无聊的大学生认为，Tor 是他们对抗任何和所有潜在对手的一件非常坚固的盔甲，而且是一件隐形的盔甲。隐形骑士，嗯，是一个相当可怕的敌人。也许这些小丑觉得他们出生在了错误的世纪。无论如何，我们都可以从他们的愚蠢中学习到很多。你，匿名的旅行者，必须使用鉴别力的天赋将幻想与现实分开，因为在费伦世界中行的通，在现实世界中并不适用。
+有很多无聊的大学生认为，`Tor` 是他们对抗任何和所有潜在对手的一件非常坚固的盔甲，而且是一件隐形的盔甲。隐形骑士，嗯，是一个相当可怕的敌人。也许这些小丑觉得他们出生在了错误的世纪。无论如何，我们都可以从他们的愚蠢中学习到很多。你，匿名的旅行者，必须使用鉴别力的天赋将幻想与现实分开，因为在费伦世界中行的通，在现实世界中并不适用。
 
-一个哈佛学生认为自己还没准备好期末考试，于是发送了一封炸弹威胁邮件来躲考试。他使用 Tor 和一个一次性邮箱账户来掩盖他的在线足迹，但他不知道，校官员只需搜索校园日志就能识别出谁在当时访问了 Tor。这直接把他们引了他的宿舍。
+一个哈佛学生认为自己还没准备好期末考试，于是发送了一封炸弹威胁邮件来躲考试。他使用 `Tor` 和一个一次性邮箱账户来掩盖他的在线足迹，但他不知道，校官员只需搜索校园日志就能识别出谁在当时访问了 `Tor`。这直接把他们引了他的宿舍。
 
-他使用哈佛的 WiFi 访问 Tor 可能并没什么帮助。在那个特定的时刻，他是唯一这样做的人。
+他使用哈佛的 WiFi 访问 `Tor` 可能并没什么帮助。在那个特定的时刻，他是唯一这样做的人。
 
 如果你在格拉斯节派对上，除了你其他人都摘掉了面具，你会非常显眼。如果你想匿名，就使用那些在大家都在使用时也能让你看起来和大家一样的工具。我们的哈佛朋友没有这样做。想象一下自己用现金购买某件小东西。现金被认为是匿名性之王，但如果你是半径200英里内唯一用现金买一辆全新的雪马罗的人，它可能会适得其反。
 
-记得凯文·米特尼克（被 FBI 追捕的黑客）被捕时；计算机安全专家下村诚武通过帮助联邦政府逮捕他，而不是仅仅依靠他的技术专长——没有别的。他打破了“规则”。他认为这是一种游戏，任何攻击向量都会通过 Tor 来实现。正因如此，你不能把匿名视为某种幻想游戏。警察不按规则出牌。他们玩阴的。他们打破规则。然后他们击垮你，因为你认为自己受他们法律的限制。但只有他们不是。
+记得凯文·米特尼克（被 FBI 追捕的黑客）被捕时；计算机安全专家下村诚武通过帮助联邦政府逮捕他，而不是仅仅依靠他的技术专长——没有别的。他打破了“规则”。他认为这是一种游戏，任何攻击向量都会通过 `Tor` 来实现。正因如此，你不能把匿名视为某种幻想游戏。警察不按规则出牌。他们玩阴的。他们打破规则。然后他们击垮你，因为你认为自己受他们法律的限制。但只有他们不是。
 
 任何行动，特别是像我们这位天才那样的手机恶作剧，都会留下供他人遵循的面包。例如，当你在星巴克使用 WiFi 时，你肉身就在那里，在监控摄像头的范围内做事。你的咖啡杯上有指纹；你同样扔进垃圾桶的还有把稍微用过的梳子，为了伪装而不惜牺牲舒适度为代价。避免可见性。古代日本的忍者看起来并不像查克·诺里斯在八角笼中对决的样子。他们不穿黑色睡衣。他们看起来像邻居般的稻农，是几十个农民中的一个。就像为了潜入 ISIS 总部而穿布基卡一样。
 
@@ -2017,72 +1808,76 @@ Onionscan 可能对检查安全漏洞有所帮助。
 
 这里有一些你可以在深网买到但你可能没听过的东西。
 
--   用于生存的稀有操作安全（Opsec）手册
--   特种行动指南
--   3D 打印枪支和子弹
--   癌症药物
--   日本漫画
--   如何推翻政府的书籍
--   你信任的和你不信任的。以下是一些流行的黑市出口列表。其中一两个可能已经消失了。
+- 用于生存的稀有操作安全（`Opsec`）手册
+- 特种行动指南
+- 3D 打印枪支和子弹
+- 癌症药物
+- 日本漫画
+- 如何推翻政府的书籍
+- 你信任的和你不信任的。以下是一些流行的黑市出口列表。其中一两个可能已经消失了。
 
 | 名字 | 建立时间 | 状态 |
 | :--- | :--- | :--- |
-| Agora | 2013年 | 需要邀请 |
-| Abraxas Market | 2014年 | 需要邀请 |
-| Hidden Market | 2014年 | 2017年被 FBI 取缔 |
-| Nucleus Market | 2013年 | 需要邀请 |
-| Silk Market | 2014年 | |
-| Middle Earth | 2015年 | |
-| Oxygen O₂ | 2013年 | |
-| Russian Anonymous Marketplace (aka RAMP) | 2014年 | |
-| Other Market | 2015年 | 未知 |
+| `Agora` | 2013年 | 需要邀请 |
+| `Abraxas Market` | 2014年 | 需要邀请 |
+| `Hidden Market` | 2014年 | 2017年被 FBI 取缔 |
+| `Nucleus Market` | 2013年 | 需要邀请 |
+| `Silk Market` | 2014年 |  |
+| `Middle Earth` | 2015年 |  |
+| `Oxygen O₂` | 2013年 |  |
+| `Russian Anonymous Marketplace (aka RAMP)` | 2014年 |  |
+| `Other Market` | 2015年 | 未知 |
 
 ## 市场邀请
 
-你可能已经注意到，这些市场（例如 Agora）需要邀请。这意味着，如果你是一个新买家或供应商，或者只是一个徘徊的窥视者，没有已注册用户的邀请链接你就无法注册。一些更成熟的出口都是如此。
+你可能已经注意到，这些市场（例如 `Agora`）需要邀请。这意味着，如果你是一个新买家或供应商，或者只是一个徘徊的窥视者，没有已注册用户的邀请链接你就无法注册。一些更成熟的出口都是如此。
 
-此外，不要假设一个网站比其他网站存在得久就意味着更安全，永远不要假设关闭意味着永久关闭，或者持续很长时间。以 Agora 为例，你有时会看到这个错误：“此时无法注册，达到用户限制。请等待完全开放”。
+此外，不要假设一个网站比其他网站存在得久就意味着更安全，永远不要假设关闭意味着永久关闭，或者持续很长时间。以 `Agora` 为例，你有时会看到这个错误：“此时无法注册，达到用户限制。请等待完全开放”。
 
 这很困惑，因为它们本该如此。他们试图尽可能隐晦，以干扰任何想要采取行动的人。第一个选择是，干等几小时，让服务器喘口气……
 
--   访问你想要进入的市场的论坛并请求邀请。如果失败，你可以访问该市场的 Reddit 讨论板块。
+- 访问你想要进入的市场的论坛并请求邀请。如果失败，你可以访问该市场的 `Reddit` 讨论板块。
 
 关于这一点有两点说明。
 
-第一，如果你使用长期账户并使用 Tor 登录，那么你的活动可能会根据你在 Reddit 网站上的行为建立某种画像。Tor 无法真正阻止这种情况的发生，所以如果你想保护你的匿名性，你必须将“真实”身份和“隐藏”身份完全分开。其之一是永远不要用两个身份登录任何账户。
+第一，如果你使用长期账户并使用 `Tor` 登录，那么你的活动可能会根据你在 `Reddit` 网站上的行为建立某种画像。`Tor` 无法真正阻止这种情况的发生，所以如果你想保护你的匿名性，你必须将“真实”身份和“隐藏”身份完全分开。其之一是永远不要用两个身份登录任何账户。
 
-关于 Reddit 的第二点仅仅是一个建议：提防那里的钓鱼链接，但在相关的以及非暗网相关的子板块中。我不建议在任何子板块中使用任何链接，例如，除非你认识它。许多子板块被钓鱼链接困扰，这些链接占据了帮助台半以上的“无法用密码登录”的话题。只要链接以官方 Agora URL 开，所有推荐链接都是安全的。其他的可能都是钓鱼链接。而且
-
+关于 `Reddit` 的第二点仅仅是一个建议：提防那里的钓鱼链接，但在相关的以及非暗网相关的子板块中。我不建议在任何子板块中使用任何链接，例如，除非你认识它。许多子板块被钓鱼链接困扰，这些链接占据了帮助台半以上的“无法用密码登录”的话题。只要链接以官方 `Agora` URL 开，所有推荐链接都是安全的。其他的可能都是钓鱼链接。而且
 
 你使用的推荐链接不会让对方收到任何“通知”或任何让他们知道你使用了该链接的消息，他们无法看到有多少人使用过他们的链接。对他们来说，你是完全匿名的。
 
 如果你能记住两个手机号码，你就能记住一个 16 位字符的官方链接。如果你还是觉得麻烦，还有第三种选择。
 
-3) 访问明文网站（clearnet sites），这些网站会标明自己的所在地，甚至配有评分系统。其中一个地方是 DarknetMarkets.org，但你也可以自己搜索其他网站，它们也会提供你访问所需的论坛 .onion 地址。
+3) 访问明文网站（clearnet sites），这些网站会标明自己的所在地，甚至配有评分系统。其中一个地方是 `DarknetMarkets.org`，但你也可以自己搜索其他网站，它们也会提供你访问所需的论坛 `.onion` 地址。
 
-但请注意，它们像深网中的许多隐藏服务器一样，像潮汐一样来来去去。有些甚至出于安全考虑会更改其 .onion 地址，而有些会因为 DDOS 攻击、黑客尝试或你的某种直觉而像倒下的树一样彻底掉线——就像当你清晨扔在梳衣柜后面的那只蜘蛛现在正坐在房间另一头看着你，仿佛它想用喷火器顺着你的脊椎骨滑下去。
+但请注意，它们像深网中的许多隐藏服务器一样，像潮汐一样来来去去。有些甚至出于安全考虑会更改其 `.onion` 地址，而有些会因为 DDOS 攻击、黑客尝试或你的某种直觉而像倒下的树一样彻底掉线——就像当你清晨扔在梳衣柜后面的那只蜘蛛现在正坐在房间另一头看着你，仿佛它想用喷火器顺着你的脊椎骨滑下去。
 
 换句话说，始终假设有人在监视。
 
 ## 黑市超级列表 (The BlackMarket Superlist)
 
 如果你对进入兔子洞更深处还有哪些网站感兴趣，可以在这里找到超级列表：
-https://i.reddit.com/r/DarkNetMarkets/wiki/superlist
 
-这是一个“所有当前已知、运行中的市场和混币器 (tumblers)”列表，并附有免责声明：“列出的所有市场都不应被视为管理员对市场信用的背书或确认。在使用链接之前请务必确认。”
+`https://i.reddit.com/r/DarkNetMarkets/wiki/superlist`
+
+这是一个“所有当前已知、运行中的市场和混币器 (`tumblers`)”列表，并附有免责声明：“列出的所有市场都不应被视为管理员对市场信用的背书或确认。在使用链接之前请务必确认。”
+
 该超级列表的要求如下：
 
-- 该市场在 Reddit 的 Darknet Market 页面宣布自己后，必须运行了至少一周。
+- 该市场在 `Reddit` 的 `Darknet Market` 页面宣布自己后，必须运行了至少一周。
 - 该市场必须有至少 20 个来自活跃供应商的列表。
 - 根据管理员的裁量，其服务在周内的运行时间必须至少达到 50%。
 - 用户必须能够提取他们的比特币（或其他相关货币）。
 
 ## 暗网字典及其他暗网工具
 
-如果这些章节中的某些技术词汇让你感到困惑（我也坦诚自己经常像撒马迪格华节的珠子一样乱用这些词），不要绝望。查看 DeepDotWeb 提供的各种术语和短语的暗网字典。这真的是上天的帮忙，因为即使是最热诚和敏锐的网站管理员也不了解关于深网的所有知识。你可以在这里找到这个字典：
-https://www.deepdotweb.com/2014/03/02/deepdotwebs-darknet-dictionary/
+如果这些章节中的某些技术词汇让你感到困惑（我也坦诚自己经常像撒马迪格华节的珠子一样乱用这些词），不要绝望。查看 `DeepDotWeb` 提供的各种术语和短语的暗网字典。这真的是上天的帮忙，因为即使是最热诚和敏锐的网站管理员也不了解关于深网的所有知识。你可以在这里找到这个字典：
+
+`https://www.deepdotweb.com/2014/03/02/deepdotwebs-darknet-dictionary/`
 
 ## 寄送与收货：禁忌 (Thou Shalt Nots)
+
+
 
 以下是一些你可能会受益的智慧之谈，其中最重要的是不要使用你的现实生活详细信息；比如你的姓名、地址、电话号码、Facebook 资料等等，许多新手会像散发糖果一样到处传。过度的透明度对于任何暗网市场甚至单次购买来说都是灾难性的，特别是当处理像 Agora 这样的地方时。
 
@@ -2115,10 +1910,6 @@ Agora 无法派遣亚马逊无人机来删除你的包裹。因此，你需要�
 - 永远不要通过 Tor 检查包裹状态。通过 Tor 跟踪的包裹会自动标记。
 - 永远不要从法律允许的州（例如科罗拉多州）发送违禁品。
 
-
-
-
-
 如果你是一个供应商，千万不要在网站上到处贴满“廉价!!”字样，然后在最后时刻试图塞入高昂的运费。客户讨厌那样的。
 
 不要用 `first.last@gmail.com` 作为你的邮箱地址，因为会有其他蠢货这么做（尽管承认 Ross 并不知道自己正在创造一个黑市亚马逊，他对斯斯德登/棱镜/Lolesec 的揭露一无所知）。
@@ -2144,15 +1935,21 @@ Agora 无法派遣亚马逊无人机来删除你的包裹。因此，你需要�
 在购买暗网产品时，操作安全（OPSEC）比任何事情都重要。你永远不够，所以它有点像弹药。如果你在苏联入侵时身处乌克兰，是扮演狙击手的角色，还是直接收手逃路？有时候你必须两者兼顾。允许我介绍几个让这更具适用性的事实。
 
 ### 你的机器就是你的堡垒
+
 Tor 是进行小额购买时间谍活动的好工具，但它不适合大订单或在 FBI 面前逍遥自在。考虑到过去 5 年美国和英国发生的情况，即使是订单也可能损害你的自由。以及言论自由。政府官僚几乎保证了他们既不尊重宪法，也不尊重我们的法律。
 
 那么，我们能从丝绸之路中学到什么？首先，有证据表明丝绸之路的服务器配置错误并泄露了 IP 地址，而且他们反复这样做。索引页通过打印到每个请求浏览器的 `print_r` 调试信息，泄露了数分钟的 IP 地址。那是线上的低级错误，但你也可以在线下搞砸它。
 
 ### 丝绸之路的教训
+
 1.) 你硬盘的加密密钥和你的 PGP 密钥一样神圣。不要把它们给你。不要给你的室友、女朋友或母亲，特别是不要给你的朋友。甚至不要给你的业务伙伴 Eddie。
+
 2.) 离开无人看的 PC 是自杀行为。在你的操作系统启动并运行的情况下，从小偷到警察再到嫉妒的朋友，任何人都可以访问你硬盘上任何没有像棺材一样钉得那么死的内容（即加密容器）。
+
 3.) 说话要自负责任。也就是说，永远不要向任何人提到黑市市场。假装无知。虽然你不需要像比尔博·巴金斯那样玩消失术，但告诉一个人几乎总是和告诉十二个人（都是陌生人）产生同样的效果。而且这对于某地的某人来说几乎总是有价值的。
+
 4.) 将你的暗网市场用户名/密码锁好。将它们写在一个文本文件中，但要用 Veracrypt 或 PGP 对其加密。不要用便利贴。
+
 5.) 为不同的市场使用不同的用户名/密码。
 
 ## 心理技巧
@@ -2160,16 +1957,20 @@ Tor 是进行小额购买时间谍活动的好工具，但它不适合大订单�
 以下内容仅仅是建议，仅此而已，并且适用于创意型人才，比如数学家。
 
 - **音乐**：某些类型的音乐会产生特定的行为。斯蒂芬·柯恩在写作时听 AC/DC。他会开大音量。我个人觉得如果我尝试听那种音乐写作，会感觉动脉瘤要发作。所以我听 Steve Roach 的音乐，一位氛围作曲家，有《Dreamtime Return》和《Early Man》之类的曲目。梦幻空灵的音乐。很有效。如果我换一种，我就会失去注意力并分心。
+
 - **光/暗**：在《矩阵》电影的几乎每一个场景中，都能看到尼奥在黑暗中工作。他的屏幕闪烁着矩阵绿的字母，房间里唯一的亮光是他单色的皮肤。对我有效。几乎就像一个感觉剥绝室，它让我睡得好得惊人。
+
 - **地点**：斯蒂芬·柯恩曾说，写好故事不需要华丽的“书房”。你只需要熟悉的环境。他是对的。去过几个国家后告诉你，每周换一个城市写作对我来说完全不可行，干扰因素太多了。你需要一个身份始终处于失的地方，但不要出门。
+
 - **药物**：咖啡因、尼古丁、糖分，但没有处方药。它们让我进入一种每天都会加强的心境，尽管我在晚上会服用。酒精，斯蒂芬·柯恩曾指出，对撰写史诗非常有帮助，但在过程中会了你的命。我可以证明。
-- **气味**：我女朋友以前来我这里会点焦糖蜡烛让房间闻。这一切的重点是：你每天采用的操作安全越多，你的大脑在付诸行动时越能发展出一种不需要每天开启的操作安全思维。它会自动启动。自动的。像人鱼牙一样锋利。它这样做是因为它像主板上的内存一样固化了。就像按下启动 Linux 的按钮，你睁开眼睛，它就在那里等待指令。特别是当任何危险情况出现时，它会在那里。
+
+
+
+# 气味
+
+我女朋友以前来我这里会点焦糖蜡烛让房间闻。这一切的重点是：你每天采用的操作安全越多，你的大脑在付诸行动时越能发展出一种不需要每天开启的操作安全思维。它会自动启动。自动的。像人鱼牙一样锋利。它这样做是因为它像主板上的内存一样固化了。就像按下启动 Linux 的按钮，你睁开眼睛，它就在那里等待指令。特别是当任何危险情况出现时，它会在那里。
 
 参与灰色交易有点就像赌博。如果你继续玩下去，庄家总是赢的。如果你无法做好操作安全，那么正如马修·布罗德里克在《战争游戏》中发现的那样，唯一的获胜方法是不玩。如果你继续鲁莽地玩，将很难找到接受比特币支付的律师。
-
-
-
-
 
 ## 供应商安全防护 (Vendor Opsec)
 
@@ -2184,11 +1985,8 @@ Tor 是进行小额购买时间谍活动的好工具，但它不适合大订单�
 罗斯在丝绸之路（Silk Road）变得极其流行很久就被抓了。法院文件揭露了一些安全错误，这些错误可能是《迈阿风云》中一个新手毒贩会犯的，而不是一个负责数百万美元深网毒品业务的人。以下是罗斯的几处安全防护失误：
 
 - 在 Bitcoin Talk 论坛上公开广告说他需要一个 IT 人员来维护 Tor 隐藏服务——然后用他的真实名注册了 Gmail 地址和他的丝绸之路 Wordpress 站点，而他是在 Tor 外部连接到该站点的。
-
 - 罗斯的 Google 账户连接到他的 Gmail 时，里面列出了他最喜欢的奥地利经济理论视频，而这些理论正是他曾在多个明网（clearnet）论坛上吹嘘过要在丝绸之路业务中使用它们的理论基础。
-
 - 从一个公共编程网站（即 StackOverflow）使用了 SilkRoad 的代码，该账户从未通过 Tor 访问过，其 IP 地址已经暴露了几个月之久。任何执法人员都可以从容地追踪这些线索。
-
 - 在 LinkedIn 上使用他的真实身份，并在他的 Wordpress 博客中链接了关于丝绸之路的感悟。
 
 这些只是他犯下的错误错误，更不用说那些疏散的隐藏服务器设置了。除了这些，对于懂得良好安全的明智供应商还有很多可以说的。
@@ -2198,9 +1996,7 @@ Tor 是进行小额购买时间谍活动的好工具，但它不适合大订单�
 这些与买家的安全防护规则一样，只不过方向相反。短小精悍。
 
 - 使用一台经过清理的笔记本电脑，现金购买，仅配置了运行 Tor 的 Linux 发行版，且仅允许运行 Tor，不允许任何其他传出连接。
-
 - 消除你的现实身份，并在访问的每个论坛上使用不同的用户名，且不暴露非 Tor 的 IP 地址。
-
 - 不要居住在美国。这是一个大项。
 - 不要在在美国订购虚假身份证（仅限供应商）或任何可能引起当局怀疑的违禁品。
 
@@ -2224,8 +2020,6 @@ Tor 是进行小额购买时间谍活动的好工具，但它不适合大订单�
 
 这是执法部门骗你接受含有非法物品包裹的一种。包裹可能是任何东西。毒品。枪支。涉及未成年“猫”女孩的日本漫画。这一切都是希望你接受包裹，并对内容发表一些随口的评论。他们希望。
 
-
-
 穿着满泥泞的靴子进你家里，额，你当然希望他们离开。我也是。而他们会对你说的：“我们会离开，”他们说。接着，劣手段就开始了。这会让任何新手都想说话，哪怕是为了缓解压力。结果他最终在监狱里坐了几年，而不是区区那臭臭的三天，只因为他从来闭过嘴。
 
 特别是警察和缉毒局（DEA）探员必须精通“欺骗性说服”的艺术。这意味着他们满口谎言。
@@ -2241,6 +2035,7 @@ Tor 是进行小额购买时间谍活动的好工具，但它不适合大订单�
 你局促不安地环顾着藏有私藏物品的房间，给巴尼·菲夫（Barney Fife）以长时间的沉默。他们会说：“说话吧，这样我们可以回家，你也可以回到那台笔记本电脑前玩《巫师3》（The Witcher）。”（这是他们会撒谎说自己也是游戏粉丝的时刻）。
 
 你应该说话吗？
+
 你值得信任吗？
 
 然后毫无征兆，当他们看到你大脑中的神经元在跳动、让你闭紧嘴时，他们就会搬出“坏人戏码”。那是好人的邪恶兄弟，语调听起来非常像《指环王》中索伦之口。
@@ -2260,6 +2055,7 @@ Tor 是进行小额购买时间谍活动的好工具，但它不适合大订单�
 别让这种事情发生。那是睁大大眼睛走进地狱。
 
 不要和警察说话。不要签署任何东西。不要同意任何事情。
+
 但你还是会进监狱？无论你告诉他们什么，你都会进那里的。他们没告诉你的是，在90%的情况下，如果你闭紧嘴，检察官会因为证据不足而撤案。大部分证据来自供词，而不是警察在现场看到或捡到的东西。
 
 因此，永远不要承认任何事，不要签署任何“道歉”信或其他任何东西。注意，他们在带你回警察局之前会试图获取供词。这才是全部的重点。
@@ -2267,6 +2063,7 @@ Tor 是进行小额购买时间谍活动的好工具，但它不适合大订单�
 ## 神话二：对于邮寄信箱，你应该始终使用虚假名字或身份证。
 
 错误。
+
 我们在几个章节前简要提到过这一点，但值得重复。无论你是使用UPS商店的零售箱还是邮局，永远永远不要使用虚假身份证或假名。如果你的一个包裹泄露，你可能会面临更糟糕的局面，因为他们会知道你撒了谎。这看起来很可疑。如果他们知道你是个谎鬼，更有可能存在“合理理由”。对非执法人员要保持诚实。诚实与沉默并不矛盾，如果你在过程中的某个阶段撒了谎，你将很难否认对租用箱子的任何恶意意图。
 
 在9/11之后，虚假身份证会给你带来无数麻烦，尤其是涉及更阴暗的事情时。现在它们与从恐怖主义到身份盗窃，再到丝绸之路级别的毒品帝国的一切活动都有联系。鉴于此，请使用你的真实姓名。
@@ -2274,19 +2071,18 @@ Tor 是进行小额购买时间谍活动的好工具，但它不适合大订单�
 ## 神话三：快速取回包裹！在别人注意到之前！
 
 错误。
+
+
+
 我们在几个章节前简要提到过这一点，但值得重复。无论你是使用UPS商店的零售箱还是邮局，永远永远不要使用虚假身份证或假名。如果你的一个包裹泄露，你可能会面临更糟糕的局面，因为他们会知道你撒了谎。这看起来很可疑。如果他们知道你是个谎鬼，更有可能存在“合理理由”。对非执法人员要保持诚实。诚实与沉默并不矛盾，如果你在过程中的某个阶段撒了谎，你将很难否认对租用箱子的任何恶意意图。
 
 在9/11之后，虚假身份证会给你带来无数麻烦，尤其是涉及更阴暗的事情时。现在它们与从恐怖主义到身份盗窃，再到丝绸之路级别的毒品帝国的一切活动都有联系。鉴于此，请使用你的真实姓名。
-
-
-
-
 
 # 搜嗅狗与现金
 
 在通过检查检查站时，请记住，有经过训练可以嗅出金钱的狗。有些狗天生就有这种天赋。有些狗甚至能闻出癌症。不住在边境附近的人认为这些狗整天都在工作。事实并非如此。住在加拿大，我可以告诉你我见过两次狗，两次都是在阳光明媚的日子，它们心情很好。但在雨天呢？这里有一个警察的小秘密：在雨中工作的警察其实和搜嗅狗一样多。
 
-特别是州巡警，他们更倾向于坐在警巡车里，等像从新奥尔良到菲尼克斯的州际公路上雨停了之后，再继续写罚单或进行搜索。这就是为什么如果你是一个走私者，或者只是喜欢在长途海滩之旅中带点大麻的人，你会选择在雨天出发。海关也是如此。有些日子，雨雪横着飞。。你能想象一个警察（任何种类的）在那种天气下享受写一叠罚单吗？我无法想象。
+特别是州巡警，他们更倾向于坐在警巡车里，等像从新奥尔良到菲尼克斯的州际公路上雨停了之后，再继续写罚单或进行搜索。这就是为什么如果你是一个走私者，或者只是喜欢在长途海滩之旅中带点大麻的人，你会选择在雨天出发。海关也是如此。有些日子，雨雪横着飞。你能想象一个警察（任何种类的）在那种天气下享受写一叠罚单吗？我无法想象。
 
 回到搜嗅狗。
 
@@ -2299,6 +2095,7 @@ Tor 是进行小额购买时间谍活动的好工具，但它不适合大订单�
 搜嗅狗的主要功能是作为一种法律依据，无论你随身携带了什么。是的，一种法律依据。
 
 假设你被“刻画画像”（Profiling）。
+
 你是一个二十多岁、大学年龄段、黑皮肤、黑发、满身纹身的疑似毒品使用者。在进入加拿大时，你由于某种借口被拦下进行二次检查。你拒绝同意任何搜索。警察带来了一只搜毒犬，而那只狗（根据警察的话）警报了你后备箱里藏着“奇奇和崇奇（Cheech and Chong）”以及 100 磅可卡。现在，警察有了无证搜查的合理理由。
 
 “狗叫了，所以他一定是个恐怖分子！”（尽管它们通常并不通过吠叫来警报）。
@@ -2311,14 +2108,11 @@ Tor 是进行小额购买时间谍活动的好工具，但它不适合大订单�
 
 帆船是一种消失无踪迹的有效方式，但也有一些限制。你持有美国护照吗？如果你有，为什么还需要别人的许可才能离开海岸呢？如果你不会航海，雇佣一个你信任的船长（还有一名大副！）……
 
-
-
-
 为了实现这一高远目标的手段。如果你是一个高级用户，你可能会在你喜爱的匿名程序中学习到一些隐藏的漏洞。
 
-使用加密并不需要计算机科学博士学位。你也不需要成为任何类型的程序员。你只需要熟悉你的操作系统，并能够完全按照指示进行操作。如果你知道如何安装操作系统，或者说，如何安装任何应用程序，你就可以安全地使用加密程序来保护你自己的数字数据和安全。
+# 隐私与匿名性
 
-## 隐私与匿名性
+使用加密并不需要计算机科学博士学位。你也不需要成为任何类型的程序员。你只需要熟悉你的操作系统，并能够完全按照指示进行操作。如果你知道如何安装操作系统，或者说，如何安装任何应用程序，你就可以安全地使用加密程序来保护你自己的数字数据和安全。
 
 如果你像地球上数十亿人之一一样，使用互联网浏览网页、检查电子邮件、下载程序或进行任何类型的在线工作，那么你可能知道习惯性上网用户面临着相关风险。事实如此。但在线探险（无论那具体是什么）中存在如此多的潜在陷阱和误区，这并不是你的错。
 
@@ -2340,104 +2134,96 @@ Tor 是进行小额购买时间谍活动的好工具，但它不适合大订单�
 
 但首先，让我们简要谈一下隐私和匿名性之间的区别，许多想要成为极客的人会混淆这两个词。它们不是一回事。差得远。
 
-# 匿名性与隐私 - 区别
+## 匿名性与隐私 - 区别
 
-虽然我们不应该在这里浪费时间钻牛角尖，但区分“隐私”和“匿名性”这两个词可能是一个好主意。这两个词并不像你想象的那样可以互换。假设你正在运行 Firefox，并在家里通过与你 ISP 的直接连接进行工作。你不希望任何人知道你在做什么，所以你选择了 Firefox 中的“私密模式”标签。这会禁用 Cookie 并阻止存储任何已访问网站的能力（除非你选择这样做）。
+虽然我们不应该在这里浪费时间钻牛角尖，但区分“隐私”和“匿名性”这两个词可能是一个好主意。这两个词并不像你想象的那样可以互换。假设你正在运行`Firefox`，并在家里通过与你 ISP 的直接连接进行工作。你不希望任何人知道你在做什么，所以你选择了`Firefox`中的“私密模式”标签。这会禁用 Cookie 并阻止存储任何已访问网站的能力（除非你选择这样做）。
 
 然而，这种隐私是局限的。它对我们之前讨论的地址问题无能为力。搜索引擎仍然能看到它，你的互联网服务提供商也是如此。这两个实体都根据你的 IP 地址知道你访问了哪些网站以及持续了多久。简而言之，他们能看到一切。然而，你的妻子不能。这就是为什么网页浏览器设计了私密模式：为了保持你访问的网站私密并避开公众视野。
 
 这种隐私足够你的需求吗？你确实拥有某种程度的隐私，但匿名性是另一回事。匿名性处于完全不同的层面，在那里，IP 地址以及因此你在在线上做的任何事情都会像湿布一样被熄灭。
 
-# 匿名 Tor 网络
+# 匿名 `Tor` 网络
 
 > “如果你把独立视为你的希望，你永远无法拥有它。一个人在这个世界上拥有的真正安全是知识、经验和能力。”
+>
 > 亨利·福特
 
-每个互联网服务提供商都会为登录其网络的用户分配 IP 地址。从那里，你可以连接到你最喜爱的数百万网站、新闻组和在线应用程序。IP 地址就像电话号码。它们告诉你的电脑连接到哪里以及发送数据包的位置（注：此处原文漏掉了单词，补全）。它们需要这些信息不仅是为了发送数据（如 html 代码），还需要 flash 代码以便你观看 YouTube 视频。这些带有针对性广告。如果你在 Windows 中打开任务管理器，你可以看到 播放器正在运行。你认为 Adobe 没有在向他们发送关于你的习惯的数据吗？让我们继续。
+每个互联网服务提供商都会为登录其网络的用户分配 IP 地址。从那里，你可以连接到你最喜爱的数百万网站、新闻组和在线应用程序。IP 地址就像电话号码。它们告诉你的电脑连接到哪里以及发送数据包的位置（注：此处原文漏掉了单词，补全）。它们需要这些信息不仅是为了发送数据（如`html`代码），还需要`flash`代码以便你观看 YouTube 视频。这些带有针对性广告。如果你在`Windows`中打开任务管理器，你可以看到播放器正在运行。你认为 Adobe 没有在向他们发送关于你的习惯的数据吗？让我们继续。
 
-所以，如果在线隐私的安全性涉及隐藏两台电脑之间的 IP 地址，那么这些计算机如何在没有直接连接的情况下通信？如果你隐藏了电话号码，你如何打电话？答案很简单：让另一个国家的别人为你拨号。这是在线匿名的第一步。如何可能？有几种方法。你可以使用名为 Tor 的免费在线程序，它作为你和在线目的地之间的中继点。还有被称为 VPN（虚拟专用网络）的付费服务，以及 Freenet 和 I2P 等其他匿名网络，但我们稍后会详细介绍。
+所以，如果在线隐私的安全性涉及隐藏两台电脑之间的 IP 地址，那么这些计算机如何在没有直接连接的情况下通信？如果你隐藏了电话号码，你如何打电话？答案很简单：让另一个国家的别人为你拨号。这是在线匿名的第一步。如何可能？有几种方法。你可以使用名为`Tor`的免费在线程序，它作为你和在线目的地之间的中继点。还有被称为`VPN`（虚拟专用网络）的付费服务，以及`Freenet`和`I2P`等其他匿名网络，但我们稍后会详细介绍。
 
-首先，让我们谈谈 Tor。
-它是在线隐私的典型解决方案，因为它掩盖了 IP 地址。你连接的网站不知道你住在哪里、使用哪个 ISP，以及你的浏览习惯如何。当你连接到 Tor 网络时，你正在建立一个管道
+首先，让我们谈谈`Tor`。
 
 
-由此，当你连接到某个网站（例如 Google）时，它会通过几层 IP 地址（或“洋葱层”）连接以到达目标地。你发送一条消息、电子邮件或某种类型的通信内容。该消息会发送给 Bob、Jane 和 Herb，最后到达线路的末端……你最喜欢的网页。它通过 IP 地址的洋葱层（反向/正向）路由数据，这样任何对手都无法在不产生巨大速度损失（如果这样做的话）的情况下看到你发送了什么。
 
-正如你可能猜到的那样，这样做会有轻微的速度损失。为了隐藏你的 IP 地址，必须跳过几个“跳节点”或中介节点。在不涉及过多的技术细节的情况下，我们只需要说这些跳节点起到了极具价值的：：让你的私人通信不落入那些意图窥探你的人手中。由于你每次登录 Tor 网络时 IP 地址都会发生变化，他们无法有效地对你进行“打泡”（定位）并向你投放广告，因为在他们看来，你每次登录都像是一个来自外国国家的不同的人。Tor 中继节点会在你的每个 Tor 浏览器会话中为你提供一个不同的国家作为“弹出”地，这使得知道你的来源或你将去哪里变得不可能。
+它是在线隐私的典型解决方案，因为它掩盖了`IP`地址。你连接的网站不知道你住在哪里、使用哪个`ISP`，以及你的浏览习惯如何。当你连接到`Tor`网络时，你正在建立一个管道
 
-让我们来看一个 Tor 与普通互联网使用之间的类比。你坐在客厅里，通过 Tor 网络匿名浏览。而你的妻子正坐在厨房里用她的 Macbook，在没有使用 Tor 的情况下浏览。你可能会想她的浏览习惯是否破坏了你自己的匿名性。它们没有……在某种程度上如此。虽然你的 ISP（服务提供商）不知道你在网上做什么，但关于你妻子，他们确实很清楚。
+由此，当你连接到某个网站（例如`Google`）时，它会通过几层`IP`地址（或“洋葱层”）连接以到达目标地。你发送一条消息、电子邮件或某种类型的通信内容。该消息会发送给`Bob`、`Jane`和`Herb`，最后到达线路的末端……你最喜欢的网页。它通过`IP`地址的洋葱层（反向/正向）路由数据，这样任何对手都无法在不产生巨大速度损失（如果这样做的话）的情况下看到你发送了什么。
 
-想象一下你正开着一辆带有深色玻璃的奔驰在主街上行驶。没有人可以窥视内部看你在红灯前做什么。警察也不行。你妻子的窗户不是深色的。人们可以毫不费力地瞥一眼，就能看出她是否在抽烟、听她的 iPod 或在接打电话。你是匿名的。她不是。ISP 连同她访问的任何网站都能看到她在网上的所的一切。然而，他们看不到你在做什么。
+正如你可能猜到的那样，这样做会有轻微的速度损失。为了隐藏你的`IP`地址，必须跳过几个“跳节点”或中介节点。在不涉及过多的技术细节的情况下，我们只需要说这些跳节点起到了极具价值的：：让你的私人通信不落入那些意图窥探你的人手中。由于你每次登录`Tor`网络时`IP`地址都会发生变化，他们无法有效地对你进行“打泡”（定位）并向你投放广告，因为在他们看来，你每次登录都像是一个来自外国国家的不同的人。`Tor`中继节点会在你的每个`Tor`浏览器会话中为你提供一个不同的国家作为“弹出”地，这使得知道你的来源或你将去哪里变得不可能。
 
-Firefox（以及许多其他浏览器）与不同的主机通信，路由器充当交通警察的角色。例如：
+让我们来看一个`Tor`与普通互联网使用之间的类比。你坐在客厅里，通过`Tor`网络匿名浏览。而你的妻子正坐在厨房里用她的`Macbook`，在没有使用`Tor`的情况下浏览。你可能会想她的浏览习惯是否破坏了你自己的匿名性。它们没有……在某种程度上如此。虽然你的`ISP`（服务提供商）不知道你在网上做什么，但关于你妻子，他们确实很清楚。
+
+想象一下你正开着一辆带有深色玻璃的奔驰在主街上行驶。没有人可以窥视内部看你在红灯前做什么。警察也不行。你妻子的窗户不是深色的。人们可以毫不费力地瞥一眼，就能看出她是否在抽烟、听她的`iPod`或在接打电话。你是匿名的。她不是。`ISP`连同她访问的任何网站都能看到她在网上的所的一切。然而，他们看不到你在做什么。
+
+`Firefox`（以及许多其他浏览器）与不同的主机通信，路由器充当交通警察的角色。例如：
 
 | 机器 | 端口 | 流量类型 |
 | :--- | :--- | :--- |
-| 你的机器 | 端口 X | 机器 A (Tor: 所有加密流量) |
-| 你的妻子 | 端口 Y | 机器 B (无 Tor: 所有可见流量) |
+| 你的机器 | 端口 X | 机器 A (`Tor`: 所有加密流量) |
+| 你的妻子 | 端口 Y | 机器 B (无 `Tor`: 所有可见流量) |
 
-这就像在水桶里射鱼，对于 NSA（美国国家安全局）来说，比这还容易。同样的概念也适用于你使用 Tor 时在机器上可能进行的其他事情。如果你使用 BitTorrent，即使你同时运行 Tor，你的 ISP 仍然可以看到你在 P2P 网络上做什么。但它看不到 Tor 网络的内容。
+这就像在水桶里射鱼，对于`NSA`（美国国家安全局）来说，比这还容易。同样的概念也适用于你使用`Tor`时在机器上可能进行的其他事情。如果你使用`BitTorrent`，即使你同时运行`Tor`，你的`ISP`仍然可以看到你在`P2P`网络上做什么。但它看不到`Tor`网络的内容。
 
-因此，不要在你的 P2P 网络上做任何你不不想让 ISP 知道的事情。然而，Tor 则是另一回事，因为他们看不到 Tor 中继节点之间发生了什么。从任何意义或目的上来说，Tor 就像一件隐身斗篷，保护你免受所有旁观者的视线，除非你不小心在斗篷上撕了一个洞（即开启了 javascript）。如果你在想：“哇，通过 Tor 运行 BitTorrent 可能会很酷，这样我就不会被起诉了。”目标不错，只不过是 Torrent 开发者并不急于在 Tor 中实现此功能，而且 Tor 网络实际上并无法处理那种带宽。你只会通过下载那些你可以轻松从 Usenet 获取的 720p 蓝光拷贝版（而且有了 SSL，你不太可能被起诉。）而让大家感到痛苦。如果你决定使用 Tor 网络，列出使用 Tor 网络的一些最佳实践可能是明智的。首先，尽管 Tor 软件包附带了一个预配置的 Firefox 浏览器，但你仍需遵循一些可能显而易见的规则。
+因此，不要在你的`P2P`网络上做任何你不不想让`ISP`知道的事情。然而，`Tor`则是另一回事，因为他们看不到`Tor`中继节点之间发生了什么。从任何意义或目的上来说，`Tor`就像一件隐身斗篷，保护你免受所有旁观者的视线，除非你不小心在斗篷上撕了一个洞（即开启了`javascript`）。如果你在想：“哇，通过`Tor`运行`BitTorrent`可能会很酷，这样我就不会被起诉了。”目标不错，只不过是`Torrent`开发者并不急于在`Tor`中实现此功能，而且`Tor`网络实际上并无法处理那种带宽。你只会通过下载那些你可以轻松从`Usenet`获取的`720p`蓝光拷贝版（而且有了`SSL`，你不太可能被起诉。）而让大家感到痛苦。如果你决定使用`Tor`网络，列出使用`Tor`网络的一些最佳实践可能是明智的。首先，尽管`Tor`软件包附带了一个预配置的`Firefox`浏览器，但你仍需遵循一些可能显而易见的规则。
 
-- 绝不要在 Tor 网络上提供任何可能用于识别你身份的妥协信息。这意味着使用你的信用卡进行购买、访问银行账户或登录 Facebook 等社交媒体网站。卡交易是可追溯的。事实上，Tor 甚至可能对通过 Tor 出口节点进行的交易进行标记。
-- 绝不要混合浏览器。不要使用你每天访问 Facebook 和 ISP 邮箱时使用的同一个浏览器来访问 Tor 网络。超级 Cookie（Super cookies）会泄露你在 Tor 之外访问了哪些网站，并可能导致对你的身份/IP 地址的关联攻击。
-- 始终禁用 Javascript。这是是因为可以利用 Flash 揭露你的 IP 地址。像 YouTube 上的 Flash 只有在启用此功能时才能运行。安装 Tor 后，请确保 NoScript 插件中的设置在插件选项屏幕中默认是开启的而不是关闭。
-- 安装最少量的浏览器插件。你想要像其他人一样保持纯净（vanilla）。过多的添加、插件、游戏等可以作为身份信标——你使用的字体、你使用某些功能的时间，都可以用来建立你的个人画像。保持纯净（BE VANILLA）。
+- 绝不要在`Tor`网络上提供任何可能用于识别你身份的妥协信息。这意味着使用你的信用卡进行购买、访问银行账户或登录`Facebook`等社交媒体网站。卡交易是可追溯的。事实上，`Tor`甚至可能对通过`Tor`出口节点进行的交易进行标记。
+- 绝不要混合浏览器。不要使用你每天访问`Facebook`和`ISP`邮箱时使用的同一个浏览器来访问`Tor`网络。超级`Cookie`（`Super cookies`）会泄露你在`Tor`之外访问了哪些网站，并可能导致对你的身份/`IP`地址的关联攻击。
+- 始终禁用`Javascript`。这是是因为可以利用`Flash`揭露你的`IP`地址。像`YouTube`上的`Flash`只有在启用此功能时才能运行。安装`Tor`后，请确保`NoScript`插件中的设置在插件选项屏幕中默认是开启的而不是关闭。
+- 安装最少量的浏览器插件。你想要像其他人一样保持纯净（`vanilla`）。过多的添加、插件、游戏等可以作为身份信标——你使用的字体、你使用某些功能的时间，都可以用来建立你的个人画像。保持纯净（`BE VANILLA`）。
 - 在浏览器的选项卡中禁用任何自动更新。这包括任何加载项的更新。你应该手动更新，而不是自动更新。
 
 ## Tor 和 Torrent
 
-关于 torrent 和 Tor 网络的一句话。从表面上看，通过 Tor 网络运行你的 torrent 客户端似乎是一个显而易见的好主意。毕竟，如果 Tor 可以隐藏你普通的 Firefox 下载，它一定也能对 torrent做同样的事情，对吧？嗯，答案是不确定的，你可以使用最喜欢的 torrent 客户端通过 Tor 路由流量，但出于几个原因，这不是一个好主意。
+关于`torrent`和`Tor`网络的一句话。从表面上看，通过`Tor`网络运行你的`torrent`客户端似乎是一个显而易见的好主意。毕竟，如果`Tor`可以隐藏你普通的`Firefox`下载，它一定也能对`torrent`做同样的事情，对吧？嗯，答案是不确定的，你可以使用最喜欢的`torrent`客户端通过`Tor`路由流量，但出于几个原因，这不是一个好主意。
 
-首先， Tor 的开发并不是为了承受通常来自那里的那种惩罚性的流量带宽。
+首先，`Tor`的开发并不是为了承受通常来自那里的那种惩罚性的流量带宽。
 
-其次，大多数 torrent 客户端并没有很好地处理流量。同样的概念也适用于你使用 Tor 时在机器上可能进行的其他事情。如果你使用 BitTorrent，即使你同时运行 Tor，你的 ISP 仍然可以看到你在 P2P 网络上做什么。但它看不到 Tor 网络的内容。
-
-因此，不要在你的 P2P 网络上做任何你不不想让 ISP 知道的事情。然而，Tor 则是另一回事，因为他们看不到 Tor 中继节点之间发生了什么。从任何意义或目的上来说，Tor 就像一件隐身斗篷，保护你免受所有旁观者的视线，除非你不小心在斗篷上撕了一个洞（即开启了 javascript）。如果你在想：“哇，通过 Tor 运行 BitTorrent 可能会很酷，这样我就不会被起诉了。”目标不错，只不过是 Torrent 开发者并不急于在 Tor 中实现此功能，而且 Tor 网络实际上并无法处理那种带宽。你只会通过下载那些你可以轻松从 Usenet 获取的 720p 蓝光拷贝版（而且有了 SSL，你不太可能被起诉。）而让大家感到痛苦。如果你决定使用 Tor 网络，列出使用的一些最佳实践可能是明智的。首先，尽管 Tor 软件包附带了一个预配置的 Firefox 浏览器，但你仍需遵循一些可能显而易见的规则。
-
-- 绝不要在 Tor 网络上提供任何可能用于识别你身份的妥协信息。这意味着使用你的信用卡进行购买、访问银行账户或登录 Facebook 等社交媒体网站。卡交易是可追溯的。事实上，Tor 甚至可能对通过 Tor 出口节点进行的交易进行标记。
-- 绝不要混合浏览器。不要使用你每天访问 Facebook 和 ISP 邮箱时使用的同一个浏览器来访问 Tor 网络。超级 Cookie 会泄露你在 Tor 之外访问了哪些网站，并可能导致对你的身份/IP 地址的关联攻击。
-- 始终禁用 Javascript。这是是因为可以利用 Flash 揭露你的 IP 地址。像 YouTube 上的 Flash 只有在启用此功能时才能运行。安装 Tor 后，请确保 NoScript 插件中的设置在插件选项屏幕中默认是开启的而不是关闭。
-- 安装最少量的浏览器插件。你想要像其他人一样保持纯净。过多的添加、插件、游戏等可以作为身份信标——你使用的字体、你使用某些功能的时间，都可以用来建立对你的个人画像。请保持纯净（BE VANILLA）。
-- 在浏览器的选项卡中禁用任何自动更新。这包括任何加载项的更新。你应该手动更新，而不是自动更新。
-
-（注：由于原文中在“Tor and Torrents”章节后出现了大量重复且逻辑混乱的文本，译文已根据“不要重复输出原文”的原则进行了去重处理，仅保留了核心逻辑部分的翻译。）
-
-
+其次，大多数`torrent`客户端并没有很好地处理流量。
 
 专注于揭露人权侵用、政治腐败以及涉及高层政治的政府丑闻。最终，决定犯罪因素形成的是你对这些数据做了什么。
 
 ## 测试你在 Tor 上的 IP 地址可见性
 
-当你安装了 Tor 后，你可能想要测试你的 IP 地址，以查看它真的广播的是你的 Tor IP 而不是真实 IP 地址。如果你安装了 Tor 的默认包，那么 Tor 会在你的起始页上显示你正在广播的 IP。如果你想自己检查，可以请访问 http://whatismyipaddress.com/。
+当你安装了`Tor`后，你可能想要测试你的`IP`地址，以查看它真的广播的是你的`Tor IP`而不是真实`IP`地址。如果你安装了`Tor`的默认包，那么`Tor`会在你的起始页上显示你正在广播的`IP`。如果你想自己检查，可以请访问 `http://whatismyipaddress.com/`。
 
-这不仅会显示你的 IP 地址，还会显示你的互联网服务提供商（ISP）以及它在谷歌地图上的位置。它还会显示城市和国家。当你使用 Tor 时，你将看到与你目前所在地不同的城市/国家。记录下你在 Tor 之外的 IP 地址，如果你特别多疑（我就是），请在启动 Tor 时检查这个网站。
+这不仅会显示你的`IP`地址，还会显示你的互联网服务提供商（`ISP`）以及它在谷歌地图上的位置。它还会显示城市和国家。当你使用`Tor`时，你将看到与你目前所在地不同的城市/国家。记录下你在`Tor`之外的`IP`地址，如果你特别多疑（我就是），请在启动`Tor`时检查这个网站。
 
 ## VPN
 
-过去几年中，出现了许多不同的 VPN（虚拟专用网络）提供商，它们在几乎每个国家都有服务器农。VPN 的作用与 Tor 网络有些相似。它向你的目标（无论是网页、Usenet 提供者还是 Web ）发送不同的 IP 地址。这有优有劣。首先，它不是免费的。VPN 的费用与你购买 Usenet 服务的费用相当：每月大约十美元。这个金额因提供商而异。有时多一点，有时少一点，但所有提供商都要求你像登录 ISP 一样登录他们的服务。大部分配置都是自动的，不需要任何技术魔术即可完成设置。大约五分钟左右。
-
-另一个主要区别是，虽然 Tor 提供匿名性且是免费的，但 VPN 会为你提供*隐私*，但并不一定是*匿名性*。这是因为中间人（在这种情况下是 VPN）知道你的真实 IP 地址。为了转发你的请求，他们必须知道这些信息。VPN 服务是基于与 Tor 不同的技术构建的。它是为了*速度*和*稳定性*而构建的。你说下载种子？随你便吧。
-
-此外，假设你是一个中国异见人士。你不喜欢你的国家在言论自由和人权方面的走向。你不能恰恰在周六报上批评中国政府，对吧？当然不能。那么，一个良好的、守法的公民该怎么办？你使用另一个国家的 VPN 建立一个新网站，并通过那个互联网门户中转你的异见。你可以简单地设置你的新闻阅读器通过 VPN 连接访问 Usenet。这样，中国政府就无法通过 IP 地址确定任何反政府信息的来源（除非当然，你暗示了某些会缩小你位置的定罪性个人信息）。
-
-你还可以访问被中国政府禁止的地方，例如 Facebook、Skype、私人聊天室甚至 Usenet。这些地方之所以被中国防火墙（GFW）屏蔽，恰恰是因为它们是言论自由爱好者的沃土。虽然这听起来像是一个规避中国警察的简单方法，但请记住，大多数 VPN 提供商提供连接到你可以想象的每一个文明国家。如果你是一个中国异见人士，我不会连接到位于中国的 VPN，而是连接到加拿大，或者可能是对中国敌对的国家。大多数 VPN 提供商都提供多个服务器供你选择，从中路由你的消息和流量。
-
-谈到这里，让我们来聊聊执法和 VPN。过去许多人错误地认为 VPN 带有强效的匿名性，类似于 Tor 提供的那种功能。情况并非完全如此。正如我们所说，VPN 服务提供的是隐私，而不是匿名。他们并不像 Tor 那样通过中介路由你的数据。取决于你选择哪种 VPN，你可能会得到一个位于瑞士的提供商，他们不会向任何瑞典以外的请求提供订阅者信息。另一方面，你可能拥有一个位于美国的提供商，他们会屈从任何法官的意愿，提供订阅者信息。
 
 
+# VPN 与 Tor 的对比与实践
 
+过去几年中，出现了许多不同的 `VPN`（虚拟专用网络）提供商，它们在几乎每个国家都有服务器农。`VPN` 的作用与 `Tor` 网络有些相似。它向你的目标（无论是网页、`Usenet` 提供者还是 Web ）发送不同的 `IP` 地址。这有优有劣。首先，它不是免费的。`VPN` 的费用与你购买 `Usenet` 服务的费用相当：每月大约十美元。这个金额因提供商而异。有时多一点，有时少一点，但所有提供商都要求你像登录 `ISP` 一样登录他们的服务。大部分配置都是自动的，不需要任何技术魔术即可完成设置。大约五分钟左右。
 
-在美国，犯罪无处不在。执法部门，特别是 FBI，倾向于先开枪后问话。也许吧。如果他们心情不错（或者接到法官的命令）。与此同时，你的电子设备会被没收，声誉也会受损。
+另一个主要区别是，虽然 `Tor` 提供匿名性且是免费的，但 `VPN` 会为你提供*隐私*，但并不一定是*匿名性*。这是因为中间人（在这种情况下是 `VPN`）知道你的真实 `IP` 地址。为了转发你的请求，他们必须知道这些信息。`VPN` 服务是基于与 `Tor` 不同的技术构建的。它是为了*速度*和*稳定性*而构建的。你说下载种子？随你便吧。
 
-整个苦剧多年来一直在设定危险的先例，让任何恰好通过他的连接（或不安全的 WiFi）传输了部分非法数据包的普通人，可能面临起诉。此外，警察在奥地利或其他任何地方，其技术能力都不出名。他们拿走了他们的 Xbox360 以及任何其他看起来像烤箱一样复杂的设备。我们不能让 Tor 运行者成为替罪羊。如果 Tor 灭了，无辜的人就会死去。他们可以在不冒生命危险的情况下获得有关腐败政府行为的消息。而且他们*不需要*去冒任何风险来传播信息。
+此外，假设你是一个中国异见人士。你不喜欢你的国家在言论自由和人权方面的走向。你不能恰恰在周六报上批评中国政府，对吧？当然不能。那么，一个良好的、守法的公民该怎么办？你使用另一个国家的 `VPN` 建立一个新网站，并通过那个互联网门户中转你的异见。你可以简单地设置你的新闻阅读器通过 `VPN` 连接访问 `Usenet`。这样，中国政府就无法通过 `IP` 地址确定任何反政府信息的来源（除非当然，你暗示了某些会缩小你位置的定罪性个人信息）。
 
-截至 2014 年，尚未有人因运行 Tor 中继而在美国法院被起诉或起（这与使用 BitTorrent 的人不同）。此外，Tor 本以及运行 Tor 中继在美国法律下都是完全合法的。
+你还可以访问被中国政府禁止的地方，例如 Facebook、Skype、私人聊天室甚至 `Usenet`。这些地方之所以被中国防火墙（`GFW`）屏蔽，恰恰是因为它们是言论自由爱好者的沃土。虽然这听起来像是一个规避中国警察的简单方法，但请记住，大多数 `VPN` 提供商提供连接到你可以想象的每一个文明国家。如果你是一个中国异见人士，我不会连接到位于中国的 `VPN`，而是连接到加拿大，或者可能是对中国敌对的国家。大多数 `VPN` 提供商都提供多个服务器供你选择，从中路由你的消息和流量。
+
+谈到这里，让我们来聊聊执法和 `VPN`。过去许多人错误地认为 `VPN` 带有强效的匿名性，类似于 `Tor` 提供的那种功能。情况并非完全如此。正如我们所说，`VPN` 服务提供的是隐私，而不是匿名。他们并不像 `Tor` 那样通过中介路由你的数据。取决于你选择哪种 `VPN`，你可能会得到一个位于瑞士的提供商，他们不会向任何瑞典以外的请求提供订阅者信息。另一方面，你可能拥有一个位于美国的提供商，他们会屈从任何法官的意愿，提供订阅者信息。
+
+在美国，犯罪无处不在。执法部门，特别是 `FBI`，倾向于先开枪后问话。也许吧。如果他们心情不错（或者接到法官的命令）。与此同时，你的电子设备会被没收，声誉也会受损。
+
+整个苦剧多年来一直在设定危险的先例，让任何恰好通过他的连接（或不安全的 WiFi）传输了部分非法数据包的普通人，可能面临起诉。此外，警察在奥地利或其他任何地方，其技术能力都不出名。他们拿走了他们的 `Xbox360` 以及任何其他看起来像烤箱一样复杂的设备。我们不能让 `Tor` 运行者成为替罪羊。如果 `Tor` 灭了，无辜的人就会死去。他们可以在不冒生命危险的情况下获得有关腐败政府行为的消息。而且他们*不需要*去冒任何风险来传播信息。
+
+截至 2014 年，尚未有人因运行 `Tor` 中继而在美国法院被起诉或起（这与使用 `BitTorrent` 的人不同）。此外，`Tor` 本以及运行 `Tor` 中继在美国法律下都是完全合法的。
 
 ## 运行 Tor 出口节点的优势
 
-我们已经讨论过关于作为 Tor 出口节点的一些风险。你可能会说，风险远大于收益。在某些地方，你是对的。但这取决于你住在哪里、法律、带宽、你的设置等。
+我们已经讨论过关于作为 `Tor` 出口节点的一些风险。你可能会说，风险远大于收益。在某些地方，你是对的。但这取决于你住在哪里、法律、带宽、你的设置等。
 
 那么收益又是什么呢？
 
@@ -2449,47 +2235,45 @@ Firefox（以及许多其他浏览器）与不同的主机通信，路由器充�
 - 帮助他人越过中国防火墙
 - 加入反抗军联盟（得了吧）
 
-在此时，可能分享一下我自己的经历是明智的。我第一次使用 Tor 时，我已经相当老练，因为不仅是几个网站和托管机器的管理员，而且非常擅长加密。我的想法是，如果我在加密方面不是外行，那么 Tor 就会轻而易举。事实确实如此……持续一段时间。我有充足的可用带宽，所以我直接投入了。
+在此时，可能分享一下我自己的经历是明智的。我第一次使用 `Tor` 时，我已经相当老练，因为不仅是几个网站和托管机器的管理员，而且非常擅长加密。我的想法是，如果我在加密方面不是外行，那么 `Tor` 就会轻而易举。事实确实如此……持续一段时间。我有充足的可用带宽，所以我直接投入了。
 
-由于当时我人在北美，需要几周时间才能熟悉 Tor 中继的所有优缺点，而且不是从技术角度，而是从法律角度。我脑海中想象了黑鹰直升机和追逐战，涉及车牌号为“NOTO”的白色厢车——如果我那么倒霉搞砸了我的配置。把偏执症抛在一边，我终于让它全速运行，并像鹰一样研究网络日志，看它在做什么。我很满意。你可以说，充满了自豪。
+由于当时我人在北美，需要几周时间才能熟悉 `Tor` 中继的所有优缺点，而且不是从技术角度，而是从法律角度。我脑海中想象了黑鹰直升机和追逐战，涉及车牌号为“NOTO”的白色厢车——如果我那么倒霉搞砸了我的配置。把偏执症抛在一边，我终于让它全速运行，并像鹰一样研究网络日志，看它在做什么。我很满意。你可以说，充满了自豪。
 
-Tor 流量像风暴前的细雨一样汇入，三天后，就在带宽限制开始生效时，我的节点已经扩散开来。那种感觉是狂喜的。令人成瘾的。我想象了朝鲜某个饥饿的村民正在访问被禁的内容。我一直想着《游戏大战》中的马修·布罗德里克和那句词：“赢得这场游戏的唯一方法就是不玩。”我们把它修改为：“……按照权者的规则。”一切都很好。
+`Tor` 流量像风暴前的细雨一样汇入，三天后，就在带宽限制开始生效时，我的节点已经扩散开来。那种感觉是狂喜的。令人成瘾的。我想象了朝鲜某个饥饿的村民正在访问被禁的内容。我一直想着《游戏大战》中的马修·布罗德里克和那句词：“赢得这场游戏的唯一方法就是不玩。”我们把它修改为：“……按照权者的规则。”一切都很好。
 
-直到一周后，我的 ISP 要求我切断 Tor 的脐带。语气很礼貌但坚定。似乎很少有投诉传到他们那里。我运气倒霉的是，那个朝鲜村民结果是一群使用 Tor 来逃避由唱片行业设置的追踪器的 BitTorrent 下载者。它阻碍了 Tor 的带宽，就像被飓风袭击了一样。“BitTorrent，”我说。“真的吗？”
+直到一周后，我的 `ISP` 要求我切断 `Tor` 的脐带。语气很礼貌但坚定。似乎很少有投诉传到他们那里。我运气倒霉的是，那个朝鲜村民结果是一群使用 `Tor` 来逃避由唱片行业设置的追踪器的 `BitTorrent` 下载者。它阻碍了 `Tor` 的带宽，就像被飓风袭击了一样。“`BitTorrent`，”我说。“真的吗？”
 
-的确如此。尽管我当时住在加拿大，不用担心会有接如其来的诉讼，但我仍然不想让其他 Tor 被贪婪的用户阻碍。我遇到的问题是，过滤 BitTorrent 流量有点适得其反，因为 BitTorrent 可以在任何标准端口上运行。我尝试过封锁 80 和 443 端口（网页流量）。然而，这并不是万灵药，因为 BitTorrent 用户仍然可以使用其他端口。我遇到的问题是过滤 BitTorrent 流量有点适得其反，因为 BitTorrent 可以在任何标准端口上运行。我尝试封锁 80 和 443 端口（网页流量）。然而，这并不是万灵药，因为 BitTorrent 用户仍然可以使用其他端口。我遇到的问题是过滤 BitTorrent 流量有点适得其反，因为 BitTorrent 可以在任何标准端口上运行。我尝试封锁 80 和 443 端口（网页流量）。然而，这并不是万灵药，因为 BitTorrent 用户仍然可以使用其他端口。我遇到的问题是过滤 BitTorrent 流量有点适得其反，因为 BitTorrent 可以在任何标准端口上运行。我尝试封锁 80 和 443 端口（网页流量）。然而，这并不是万灵药，因为 BitTorrent 用户仍然可以使用其他端口。我遇到的问题是过滤 BitTorrent 流量有点适得其反，因为 BitTorrent 可以在任何标准端口上运行。我尝试封锁 80 和 443 端口（网页流量）。然而，这并不是万灵药，因为 BitTorrent 用户仍然可以使用其他端口。我遇到的问题是过滤 BitTorrent 流量有点适得其反，因为 BitTorrent 可以在任何标准端口上运行。我尝试封锁 80 和 443 端口（网页流量）。然而，这并不是万灵药，因为 BitTorrent 用户仍然可以使用其他端口。
+的确如此。尽管我当时住在加拿大，不用担心会有接如其来的诉讼，但我仍然不想让其他 `Tor` 被贪婪的用户阻碍。我遇到的问题是，过滤 `BitTorrent` 流量有点适得其反，因为 `BitTorrent` 可以在任何标准端口上运行。我尝试过封锁 `80` 和 `443` 端口（网页流量）。然而，这并不是万灵药，因为 `BitTorrent` 用户仍然可以使用其他端口。
 
-*(注：由于原文中出现了大段重复文本，此处已根据“不要重复输出原文”的原则进行了去重处理，保留核心逻辑翻译)*
+以下是常用的端口（参考 `https://en.wikipedia.org/wiki/List_of_TCP_ports` 的 TCP 端口）：
 
-是的如此。尽管我当时住在加拿大，不用担心会有接如其来的诉讼，但我仍然不想让其他 Tor 被贪婪的用户阻碍。我遇到的问题是过滤 BitTorrent 流量有点适得其反，因为 BitTorrent 可以在任何标准端口上运行。我尝试封锁 80 和 443 端口（网页流量）。然而，这并不是万灵药，因为 BitTorrent 用户仍然可以使用其他端口。
+- `Amazon Web Services (AWS)`
+- `AmeriNOC`
+- `Arvixe`
+- `Axigy`
+- `ChunkHost`
+- `Cyberonic`
+- `Ethr.net`
+- `Evoluc`
+- `Future Hosting`
 
-以下是常用的端口（参考 https://en.wikipedia.org/wiki/List_of_TCP_ports 的 TCP 端口）：
-- Amazon Web Services (AWS)
-- AmeriNOC
-- Arvixe
-- Axigy
-- ChunkHost
-- Cyberonic
-- Ethr.net
-- Evoluc
-- Future Hosting
+一个完整的列表请参见：`https://trac.torproject.org/projects/tor/wiki/`
 
-一个完整的列表请参见：https://trac.torproject.org/projects/tor/wiki/
-
-如果你决定运行 Tor，请确保你的 ISP 是友好的
+如果你决定运行 `Tor`，请确保你的 `ISP` 是友好的
 
 ## Freenet
 
-Freenet 在这一点上不同。
+`Freenet` 在这一点上不同。
 
-虽然你的 IP 地址是可见的，但你从你的数据存储中上传的内容是不可见的。你最初设置数据存储的大小供他人下载。这个数据存储是加密的。你完全不知道里面最终会有什么，因为内容是加密的。这就像邮递员递送邮件。他不知道他递送的包裹里装了什么。这不是他的工作。他的工作是将内容送到目的地。这就是 Freenet 的强大之处。
+虽然你的 `IP` 地址是可见的，但你从你的数据存储中上传的内容是不可见的。你最初设置数据存储的大小供他人下载。这个数据存储是加密的。你完全不知道里面最终会有什么，因为内容是加密的。这就像邮递员递送邮件。他不知道他递送的包裹里装了什么。这不是他的工作。他的工作是将内容送到目的地。这就是 `Freenet` 的强大之处。
+
+
+
+# Freenet 与匿名网络
 
 Freenet 与互联网上的任何匿名工具都不同。它需要大师级的头脑来破解它的保护，就此而言，它有点像象棋：入门容易，精通困难。构建于 2000 年的 Freenet 是一个跨越数千台连接计算机的巨大加密数据存储，所有计算机相互之间传输加密内容。在这一点上，它与 Emule 等 P2P 程序有些相似。在将文件插入 Freenet 后，用户就可以自由关闭电脑。这与 Torrent 不同，Torrent 文件的稳定性取决于在线时长的长短。因此，高可靠性是 Freenet 文件的一个因素，因为文件被分布在 Freenet 系统中的加密块中。
 
-Freenet 很慢。慢到在安装后的最初几个小时内，你可能根本看不到下载速度有任何明显的进展，可能要等一天时间才能看到旧文件（不流行的文件）有进展。不要因此而灰馁。它会变快
-
-
-随着时间的推移逐渐提高。
+Freenet 很慢。慢到在安装后的最初几个小时内，你可能根本看不到下载速度有任何明显的进展，可能要等一天时间才能看到旧文件（不流行的文件）有进展。不要因此而灰馁。它会变快随着时间的推移逐渐提高。
 
 现在，由于你的 IP 地址暴露在公开网络，你可能会认为它并不匿名。事实恰恰相反。你下载的任何内容从 Freetet 的一端到另一端都是加密的，并在你的 PC 上进行解密。外部无人能看到是谁请求了文件或消息。内部也没有人知道，除了你之外。仅凭这一点，它就极具抗审查能力。这种级别的匿名性要求每个请求数据的节点通过许多中间介以“跳跃”模式进行运行，这类似于你在 Tor 中看到的内容。
 
@@ -2499,14 +2283,13 @@ Freenet 很慢。慢到在安装后的最初几个小时内，你可能根本看
 
 Freetet 提供两种类型的安全协议：Darknet（暗网）和 Openet（开放网）。对于 Openet，你连接到被称为“陌生人”的用户。这并没有恶意，因为这是 Freetet 开发者预期大多数初学者使用的。这些陌生人的 IP 地址是可见的，但 Freetet 的匿名性不像 Tor 那样嵌套在 IP 地址的安全中，而是嵌套在分布式数据存储的加密方法中。
 
-安装时提供的另一种安全选项是 Darknet，在这里你连接的是“朋友”而不是“陌生人”。这些是你（推测）之前交换过节点引用（即公共安全密钥）的 Freetet 用户。在 Darknet 模式下，假设你拥有更高的信任级别，因为你的节点引用与你的在线 Freetet 身份相关。不言而喻，这种模式不能轻视。你真的需要**信任**你添加到此协议中的人。即，暗网协议。
+安装时提供的另一种安全选项是 Darknet，在这里你连接的是“朋友”而不是“陌生人”。这些是你（推测）之前交换过节点引用（即公共安全密钥）的 Freetet 用户。在 Darknet 模式下，假设你拥有更高的信任级别，因为你的节点引用与你的在线 Freetet 身份相关。不言而喻，这种模式不能轻视。你真的需要信任你添加到此协议中的人。即，暗网协议。
 
 在 Freetet 内部，没有审查者。任何形式的言论都是允许且经常鼓励的。Freetet 的编程方式使得审查者无法从系统中删除任何消息。个人用户可以选择从 frost 系统删除某些注释，但这仅限于本地层面（在他们的机器上），而不是 Freetet 网络本身。因此，任何宗教团体都无法强制网络中的其他人遵守他们的信仰和讨论体系。Freetet 上的没有人认为信息具有犯性而不予删除。
 
 不言而喻，这带来了一些负面后果，因为任何人可以在任何时间说任何话。Freetet 网络上的某些 Fresites 受垃圾邮件发送者、身份窃窃、恐怖分子、骚扰者、政府无政府主义者和软件盗者的困扰。Freetet 的开发者表示，这是让 100% 的言论自由盛行的必要恶。虽然可以认为，不应该为了让人们自由言论而允许用户之间交换非法物品，但 Freetet 的陈述目的之一是在社会崩溃或压迫的情况下保留这样的系统。
 
 虽然没有规则来从审查丑陋帖子的意义管理 Freetet，但在 Freetet 的散落在各地发布了一些准则，这些准则应该被重视：
-
 - 1.) 永远不要给 Freetet 上的任何人提供你的节点引用，因为它包含了可能被利用将你的 Freetet 身份与 IP 地址关联的信息。
 - 2.) 与 Usenet 规则相同：不要参与钓鱼活动（trolling）。钓鱼行为本质上随着回复的增加而兴盛。忽略它们。
 - 3.) 永远不要泄露任何个人信息：你的位置、你成长的地方、你喜欢哪些餐厅、你光顾哪种服装店，因为这些可能锁定你的位置。
@@ -2521,13 +2304,13 @@ Freetet 提供两种类型的安全协议：Darknet（暗网）和 Openet（开�
 
 可选，你可以在挂载（mounted）时运行 Freeten。这并不是说下载总是更快，而是说加密数据会在网络上留存更久。数据存储越大，Freetet 运行越高效。拥有大型数据存储（例如五十 GB）还有另一个好处：在运行 Freetet 一段时间后，你可能请求的文件已经在数据存储中了，从而缩短了获取时间。
 
-通过你的 TrueCrypt 容器，你可以在挂载运行时 Freeten，而不用担心电脑被没收时活动被利用。你也可以对 Tor 浏览器这样做。将 Tor 浏览器包安装到挂载的 TrueCrypt 中，仅在挂载时运行程序。
+通过你的 `TrueCrypt` 容器，你可以在挂载运行时 Freeten，而不用担心电脑被没收时活动被利用。你也可以对 Tor 浏览器这样做。将 Tor 浏览器包安装到挂载的 `TrueCrypt` 中，仅在挂载时运行程序。
 
 ## Frost
 
 Frost 是一个与 Freeten 独立的应用程序，作为一个前端。它让在 Freetet 网络上的浏览类似于浏览 newsenet。等待左右让 Frost 找到一些小组，然后点击顶部面板的地球按钮订阅小组。这些小组涵盖了关于每个主题的所有讨论。有些小组相当死寂，几乎没有任何讨论，而另一些非常活跃。下载地址：
 
-http://jtcfrost.sourceforge.net
+`http://jtcfrost.sourceforge.net`
 
 运行 Freeten 后，你可以同时运行 Frost 以从 Freetet 网络下载内容。这不是强制性的，但非常有帮助。运行 Freeten，然后运行 Frost。
 
@@ -2538,9 +2321,6 @@ http://jtcfrost.sourceforge.net
 - 3) 永远不要向 Frost 板上的任何人透露你的节点引用，因为它可能被用来定位你。
 - 4) 将下载天数设置为 60 天（或你需要的长度）。请注意，如果你选择了非常大的数字，可能需要几天时间检索所有消息。
 - 5) 在选项/偏好选项卡中，你可以调整设置，忽略带少于四条消息的用户。这对于消除看板上的垃圾信息非常有效。
-
-
-
 
 ### Truecrypt, Veracrypt 等
 
@@ -2556,33 +2336,35 @@ http://jtcfrost.sourceforge.net
 
 首先，为了防止身份盗用，你需要认真考虑全盘加密。这并没像你想象中那么复杂。加密你的启动驱动器异常地简单，而且不需要任何费用，还可能让你免于数几个月的头疼。
 
-你有多种加密应用可供选择：付费程序，如 PGP、Drivecrypt 和 Phonecrypt；以及流行的免费版本 PGP 和 Truecrypt。它们之间有细微差别，但免费版和付费版需要记住的一点是：它们禁止任何人在没有密码的情况下启动你的电脑、笔记本电脑或手机。
 
-Truecrypt 是免费的，它通过创建一个 256 AES 加密密钥来实现这一点。你安装应用程序，选择想要加密的设备，选择你的口令并创建加密密钥。简单。
+
+# 加密应用选择
+
+你有多种加密应用可供选择：付费程序，如 `PGP`、`Drivecrypt` 和 `Phonecrypt`；以及流行的免费版本 `PGP` 和 `Truecrypt`。它们之间有细微差别，但免费版和付费版需要记住的一点是：它们禁止任何人在没有密码的情况下启动你的电脑、笔记本电脑或手机。
+
+`Truecrypt` 是免费的，它通过创建一个 256 AES 加密密钥来实现这一点。你安装应用程序，选择想要加密的设备，选择你的口令并创建加密密钥。简单。
 
 这对你有什么好处？嗯，下一次当那个偷了你笔记本电脑的窃贼尝试启动硬盘时，没有密码他将无好运。在 Windows 启动之前，他会看到这个密码字段，如果输入不正确，驱动器就会停止。如果密码足够长，它足以抵御几乎任何暴力破解，即使是美国国家安全局（NSA）也不行。只需确保使用一个既容易记住又长到足以阻止任何攻击者的口令即可：15 个字符的口令，包含大小写字母并带一两个数字。
 
-Truecrypt 的效果如何？它被认为是不可能破解的，破解需要数百万年。需要量子计算机才能通过暴力破解法破解中等长度的口令。在所有情况下，最薄弱的环节是你自己。
+`Truecrypt` 的效果如何？它被认为是不可能破解的，破解需要数百万年。需要量子计算机才能通过暴力破解法破解中等长度的口令。在所有情况下，最薄弱的环节是你自己。
 
 如果你不幸中染了键盘记录器，它们可以获取你的密码。如果你保持操作系统、防病毒软件和反恶意软件程序更新到最新版本，这种情况相当少见。最薄弱的环节是你的口令。你会惊讶于竟然有多少人在口令中使用了自己的个人信息。这样做可能会让密码更容易记忆，但也更容易被破解。
 
 一个良好的口令由小写字母、大写字母以及空格组成，这为保护提供了更多的熵位（entropy bits）。口令每增加一个位，破解此类口令的计算需求就会增加一倍。例如，如果我住在朝鲜或中国，我会认真考虑使用至少二十个字符的口令，并顺便加入一些键盘符号以防万一。然而，大多数人不喜欢记住二十个个字符的口令，所以他们使用随机性较低的口令。
 
-Drivecrypt 是另一个加密程序，但它不是开源的且免费。我已经用了这个程序八了，不得不说，如果考虑预算，请选择 Truecrypt，因为它具有 Truecrypt 许多相同的功能，而且完全免费。Drivecrypt 有一个名为 "boatauth" 的选项，是启动授权的缩写。安装过程与 Truecrypt 类似，尽管启动密码界面略有不同。你启动硬盘，然后输入口令启动操作系统。Truecrypt 也有这个功能。
+`Drivecrypt` 是另一个加密程序，但它不是开源的且免费。我已经用了这个程序八了，不得不说，如果考虑预算，请选择 `Truecrypt`，因为它具有 `Truecrypt` 许多相同的功能，而且完全免费。`Drivecrypt` 有一个名为 `"boatauth"` 的选项，是启动授权的缩写。安装过程与 `Truecrypt` 类似，尽管启动密码界面略有不同。你启动硬盘，然后输入口令启动操作系统。`Truecrypt` 也有这个功能。
 
-如所述，它不是开源的。这意味着它无法被公共部门（即：安全用户）研究，以确定是否编写了任何后门。像 Truecrypt 一样，它提供了创建一个加密操作系统的选项，该系统有一个隐藏的操作系统，你可以通过试图伤害或起诉你来否认其存在。这对于住在英国的人特别有用，在英国，拒绝交出加密硬盘的密码可能会导致你因藐法庭罪被判处两年监禁。
-
-
+如所述，它不是开源的。这意味着它无法被公共部门（即：安全用户）研究，以确定是否编写了任何后门。像 `Truecrypt` 一样，它提供了创建一个加密操作系统的选项，该系统有一个隐藏的操作系统，你可以通过试图伤害或起诉你来否认其存在。这对于住在英国的人特别有用，在英国，拒绝交出加密硬盘的密码可能会导致你因藐法庭罪被判处两年监禁。
 
 问题。所以，即使你删除了图片，这个隐藏文件仍然会向任何人暴露原始文件夹的内容。
 
 查看或禁用此隐藏文件的唯一方法是进入“工具 - 选项 - 视图”，并将选项设置为“显示隐藏文件、文件夹”。
 
-在完成此操作之前，除非禁用此项，否则每个包含图片的文件夹都会存储这些图片的缩略快照。Windows 7 的文件系统与 Windows XP 完全不同。它不是将缩略图缓存存在图片所在的文件夹内，而是将其存储在中心位置（%userprofile%\AppData\Local\Microsoft\Windows\Explorer）。
+在完成此操作之前，除非禁用此项，否则每个包含图片的文件夹都会存储这些图片的缩略快照。Windows 7 的文件系统与 Windows XP 完全不同。它不是将缩略图缓存存在图片所在的文件夹内，而是将其存储在中心位置（`%userprofile%\AppData\Local\Microsoft\Windows\Explorer`）。
 
 我发现在在 Windows 7 中关闭缩略图选项要好得多，因为图像加载相当快，不需要缓存来加速。还有其他文件，如文本、音频等，如果你不采取预防措施安全地删除文件，也面临被发现的风险。然而，这并不意味着从回收站删除就够了。当你从回收站删除任何项目时，所做的只是告诉操作系统，该文件占据的空间可以再次写入。再次强调，在空间被其他程序重新覆盖之前，不要永久删除文件。
 
-政府机构拥有可以恢复删除文件的程序，例如 CCleaner 这种可以绕过限制的方法。此应用还有一个很有趣的功能，它可以擦除硬盘上任何之前删除的内容的空闲空间。你甚至可以在操作系统运行时执行此操作。
+政府机构拥有可以恢复删除文件的程序，例如 `CCleaner` 这种可以绕过限制的方法。此应用还有一个很有趣的功能，它可以擦除硬盘上任何之前删除的内容的空闲空间。你甚至可以在操作系统运行时执行此操作。
 
 不用多说，如果你有一个 2TB 的硬盘，且只使用了 20%，剩余 80% 为“空闲空间”，那么完成擦除过程可能需要几个小时，这取决于硬盘的速度以及你正在运行的其他程序。它不会触及系统中已有的任何已安装程序，除非你告诉它，并且只有那些空闲空间会被分配使用。
 
@@ -2592,26 +2374,26 @@ Drivecrypt 是另一个加密程序，但它不是开源的且免费。我已经
 
 文本文件、视频缩略图和 Word 文片段可能存在其中，足以打印出你过去的一个相当不错的快照。甚至出现过法庭案件，人们仅凭缩略图片段就被定罪。
 
-你可以通过进入控制面板 -> 系统和安全 -> 系统 -> 高级 -> 性能 -> 设置 -> 高级 -> 虚拟内存，并点击“无分页文件”来禁用 Windows 使用交换文件。重启。
+你可以通过进入 `控制面板 -> 系统和安全 -> 系统 -> 高级 -> 性能 -> 设置 -> 高级 -> 虚拟内存`，并点击“无分页文件”来禁用 Windows 使用交换文件。重启。
 
 注意：某些资源密集型游戏在内存不足时会使用交换文件来加速游戏运行。如果你在正常 PC 使用过程中遇到任何缓慢，你可以随时重新开启此选项，然后重启。
 
 ## I2P
 
-I2P，又称为“隐形互联网项目”（Invisible Internet Project），是人们用来隐藏自己在线 IP 地址的另一种选择。它与其他网络有许多共同特征，即通过邻居节点路由流量。开发者表示，他们的主要目标并不一定是 100% 的匿名（有些人认为这是一个不可能的目标），而是让系统从外部攻击变得更加困难和昂贵。它是一个匿名网络，在系统中传输的数据周围包裹了多层加密。
+`I2P`，又称为“隐形互联网项目”（Invisible Internet Project），是人们用来隐藏自己在线 IP 地址的另一种选择。它与其他网络有许多共同特征，即通过邻居节点路由流量。开发者表示，他们的主要目标并不一定是 100% 的匿名（有些人认为这是一个不可能的目标），而是让系统从外部攻击变得更加困难和昂贵。它是一个匿名网络，在系统中传输的数据周围包裹了多层加密。
 
-I2P 网络中的网站被称为 Epsites，它们匿名托管，且 I2P 是访问这些网站的强制要求。在这方面，它类似于只能通过 Tor 访问的 .onion 站点。每台连接到 I2P 网络的 PC 都会在到达最终目的地之前通过代理转发加密数据包。每个随后的代理会在不同的时间间隔剪掉一层加密，直到加密被移除。底线是：没有人知道这些数据包的来源，这是 Tor 也具有的特征。虽然 Tor 和 I2P 的目标不同，但它们确实存在许多相似之处：
+`I2P` 网络中的网站被称为 `Epsites`，它们匿名托管，且 `I2P` 是访问这些网站的强制要求。在这方面，它类似于只能通过 Tor 访问的 `.onion` 站点。每台连接到 `I2P` 网络的 PC 都会在到达最终目的地之前通过代理转发加密数据包。每个随后的代理会在不同的时间间隔剪掉一层加密，直到加密被移除。底线是：没有人知道这些数据包的来源，这是 Tor 也具有的特征。虽然 Tor 和 `I2P` 的目标不同，但它们确实存在许多相似之处：
 
-你可能认为这听起来像 Freeten，但这种相似性实际上更像 Tor 的网络。I2P 提供与网站、博客、论坛、聊天、搜索引擎的交互性，而无需在本地安装其中任何一个。这些都是 I2P 的标志。
+你可能认为这听起来像 Freeten，但这种相似性实际上更像 Tor 的网络。`I2P` 提供与网站、博客、论坛、聊天、搜索引擎的交互性，而无需在本地安装其中任何一个。这些都是 `I2P` 的标志。
 
 - 都作为匿名网络存在
 - 都都使用分层加密来引导数据
 - 它们都具有隐藏服务
-- Tor 有出口节点（Exit Nodes），I2P 有出站代理（Outproxies）
+- Tor 有出口节点（Exit Nodes），`I2P` 有出站代理（Outproxies）
 
 ### Tor 相比 I2P 的优势
 
-- 用户群比 I2P 大；来自学术的支持；稳定性和抗攻击能力不断改进
+- 用户群比 `I2P` 大；来自学术的支持；稳定性和抗攻击能力不断改进
 - 资金来自全球许多国家
 - 拥有大量的出口节点
 - 翻译成多种语言
@@ -2628,42 +2410,48 @@ I2P 网络中的网站被称为 Epsites，它们匿名托管，且 I2P 是访问
 - 使用 Java/C 编写
 - 比 Tor 更能抵抗零日攻击
 
-虽然 I2P 是一项技术强项，但它可能有点像纸牌屋。一旦底层的王牌被（你）抽走，它就会变得毫无意义。I2P 只是一个工具，Tor 也一样。它不是隐身斗。不要做蠢事，比如当一群兽人朝你这边看时移动太多，否则你注会在最意想不到的地方被箭射中。因此，通过积极采取匿名措施来明智：
+虽然 `I2P` 是一项技术强项，但它可能有点像纸牌屋。一旦底层的王牌被（你）抽走，它就会变得毫无意义。`I2P` 只是一个工具，Tor 也一样。它不是隐身斗。不要做蠢事，比如当一群兽人朝你这边看时移动太多，否则你注会在最意想不到的地方被箭射中。因此，通过积极采取匿名措施来明智：
 
 1. 关闭 JavaScript
-是的，这值得重复，尽管你想挥舞双臂大声叫喊。JavaScript 不仅是 Tor 的噩梦，其他网络也依赖它来隐藏你的 IP 地址。开启这个恶性的插件允许在你的机器上运行代码，这些代码会暴露你。查看你的浏览器设置并禁用它。同时禁用 Cookie。超级 Cookie 在网页中部署用于追踪用户。在 I2P 上也不会发生这种情况。JavaScript 可以泄露大量的指标指纹。显示分辨率、页面宽度、字体等可以秘密地发送给对手。如果你有任何疑问，可以查看 Mozilla 的 Web API：https://developer.mozilla.org/en-US/docs/Web/API
+
+是的，这值得重复，尽管你想挥舞双臂大声叫喊。JavaScript 不仅是 Tor 的噩梦，其他网络也依赖它来隐藏你的 IP 地址。开启这个恶性的插件允许在你的机器上运行代码，这些代码会暴露你。查看你的浏览器设置并禁用它。同时禁用 Cookie。超级 Cookie 在网页中部署用于追踪用户。在 `I2P` 上也不会发生这种情况。JavaScript 可以泄露大量的指标指纹。显示分辨率、页面宽度、字体等可以秘密地发送给对手。如果你有任何疑问，可以查看 Mozilla 的 Web API：`https://developer.mozilla.org/en-US/docs/Web/API`
 
 2. 沉默是金！
+
 不要说出节点。你可以说话，但要克制讨论：天气、地理位置、你的爱好、你那个因嫖妓而被捕的城市政客。
 
 3. 更换用户名/网卡
 
-
-
-
-
 对便利的渴望往往会给人们带来麻烦。他们在多个网站/论坛上使用相同的用户名。这在白天的开放网络上没问题，但在暗网中就不那么妥当了。它破坏了匿名性。以论坛为例。当你的用户名因拥有丰富的知识而臭名昭著时，请更改它。创建一个新的。不要告诉任何人。当许多用户频繁地交换此类信息时，熵值就会增加。保持不同的虚拟身份：一个用于暗网，一个用于普通互联网。记忆比写下来要好。
 
 - 4.) 永远不要关闭你的路由器
-永远不要关闭我的路由器。永远不要。如果我的 Freenet、I2P 或 IRC 在运行期间不断开启和关闭，一段时间后，我的真实身份就会浮出水面——只要一个足够坚定的对手拥有资源来这样做，这种概率是微乎其微，所以不要在匿名性上吝啬。正如俗话说：在速度、匿名性和可靠性之间，你只能选择其二，但你可以通过明智的行为来弥补最后一个的缺失。
+
+永远不要关闭我的路由器。永远不要。如果我的 Freenet、`I2P` 或 IRC 在运行期间不断开启和关闭，一段时间后，我的真实身份就会浮出水面——只要一个足够坚定的对手拥有资源来这样做，这种概率是微乎其微，所以不要在匿名性上吝啬。正如俗话说：在速度、匿名性和可靠性之间，你只能选择其二，但你可以通过明智的行为来弥补最后一个的缺失。
 
 - 5.) 数量的力量：带宽
+
+
+
 不要对你的连接吝啬。你参与用户风暴（Freenet, I2P）得越多，你就被掩盖得越深。如果可以，最好 24/7 运行。这使得对手更难判断你是向其他人发送了文件，还是你仅仅是管理从地球另一端完全未知的人发送的某些文件的中间人。此外，让程序保持运行会让其他用户的网络总体变快得多。记住“人多力量大”。
 
 - 6.) 可选（但明智的）
-在浏览器设置中，将 `browser.safebrowing.enabled` 设置为 `false`。像 Google 和微软这样的搜索巨头不需要知道你访问的网站 URL。
 
-养成刷新缓存（Cookie 等）的习惯。你可以将其设置为在浏览器退出时自动执行。
+  在浏览器设置中，将 `browser.safebrowing.enabled` 设置为 `false`。像 Google 和微软这样的搜索巨头不需要知道你访问的网站 URL。
 
-克制使用 Fox Proxy 来选择性地代理 .i2p 链接。你不希望被发送到明网（clearnet）。如果一个 I2P 网站是蜜罐，你的 Firefox 浏览器可能会在引用页中发送一个唯一的标识符，在这种情况下……匿名性被破坏。
+  养成刷新缓存（Cookie 等）的习惯。你可以将其设置为在浏览器退出时自动执行。
 
-到此时，你可能在想这带来的麻烦远比它的价值大。你是对的……在开始阶段。但任何值得做的事情在开始通常都是困难的。我以及我的同事，所有这些事情之所以发生，是因为我们已经做了多年。
+  克制使用 Fox Proxy 来选择性地代理 .i2p 链接。你不希望被发送到明网（clearnet）。如果一个 I2P 网站是蜜罐，你的 Firefox 浏览器可能会在引用页中发送一个唯一的标识符，在这种情况下……匿名性被破坏。
 
-我们每天都这样做。
-我们在思考这些事情吗？
-不，至少不是因为每天完成的明智习惯。你会仔细地思考启动汽车吗？驶出车道吗？不。但可以打个赌，当你十六岁时对做这些是感到恐畏的。而且驶出车道是一个非常复杂的动作，上述建议也是如此。你脑细胞中的某一个细胞都比 747 客机复杂。不要浪费任何一个。
+  到此时，你可能在想这带来的麻烦远比它的价值大。你是对的……在开始阶段。但任何值得做的事情在开始通常都是困难的。我以及我的同事，所有这些事情之所以发生，是因为我们已经做了多年。
+
+  我们每天都这样做。
+
+  我们在思考这些事情吗？
+
+  不，至少不是因为每天完成的明智习惯。你会仔细地思考启动汽车吗？驶出车道吗？不。但可以打个赌，当你十六岁时对做这些是感到恐畏的。而且驶出车道是一个非常复杂的动作，上述建议也是如此。你脑细胞中的某一个细胞都比 747 客机复杂。不要浪费任何一个。
 
 ## 种子站 (Torrents) 与加密站 (Eepsites)
+
 首要任务。不仅安装 NoScript 插件，还要安装 Cookie Whlist (Buttons)。理想情况下，你想拦截使用 Eepsites 的所有内容。Firefox 网站上有许多插件，你并不需要所有它们。你只需要那些保护你匿名性的插件。
 
 同样在 Firefox 网站上安装 QuickProxy。重启。然后使用编辑（edit）选项卡打开代理设置，导航到“首选项”（Preferences）和“高级”（Advanced）。然后是“设置”（Settings）。将你的代理设置更改为：HTTP 代理使用 `127.0.0.1`，端口 `4444`；SSL 代理使用 `127.0.0.1` 和端口 `4445`。确保勾选 Socks v4。
@@ -2671,6 +2459,7 @@ I2P 网络中的网站被称为 Epsites，它们匿名托管，且 I2P 是访问
 点击“确定”并退出。如果你配置正确，当你浏览 Eepsites 时，应该可以点击 QuickProxy 图标（浏览器左下角）。你也可以像老办法一样粘贴 .i2p 网站并按“转到”。
 
 ## 种子 (Torrents)
+
 种子的选项。不仅安装 NoScript 插件，还要安装 Cookie Whlist (Buttons)。理想情况下，你想拦截使用 Eepsites 的所有内容。Firefox 网站上有许多插件，你并不需要所有它们。你只需要那些保护你匿名性的插件。
 
 同样在 Firefox 网站上安装 QuickProxy。重启。然后使用编辑（edit）选项卡打开代理设置，导航到“首选项”（Preferences）和“高级”（Advanced）。然后是“设置”（Settings）。将你的代理设置更改为：HTTP 代理使用 `127.0.0.1`，端口 `4444`；SSL 代理使用 `127.0.0.1` 和端口 `4445`。确保勾选 Socks v4。
@@ -2678,12 +2467,15 @@ I2P 网络中的网站被称为 Epsites，它们匿名托管，且 I2P 是访问
 点击“确定”并退出。如果你配置正确，当你浏览 Eepsites 时，应该可以点击 QuickProxy 图标（浏览器左下角）。你也可以像老办法一样粘贴 .i2p 网站并按“转到”。
 
 种子的选项。用于 I2P 种子的选项。如果你是新手，通过终端输入以下命令确保服务运行：
+
 `$ i2p status`
 
 如果它没有运行，启动它：
+
 `$ i2p status`
 
 然后通过 Firefox 浏览：
+
 `http://localhost:7657/i2p`
 
 在 IPSnark 主页面，你可以看到它正在运行。现在你可以创建种子 `~/./i2p/`
@@ -2691,6 +2483,7 @@ I2P 网络中的网站被称为 Epsites，它们匿名托管，且 I2P 是访问
 另一个选项是将你想种子的数据移动到目录，在我的情况下，这通常是 PDF 和技术手册。在 Tracker 选项中，你可以选择任何方法创建种子。IPSnark 将创建种子并将其放入队列。剩下的就是点击右上角的 Start 并离开。
 
 从 Postman 的器获取种子：
+
 `http://tracker2.postman.i2p/`
 
 种子最初可能慢，但不要灰馁。在 I2P 上下载将比你以前任何时候都快得多。人永远无法拥有足够的因果。
@@ -2706,9 +2499,6 @@ Facebook 用户面临的一个问题是，Facebook 太容易将这些宝藏数�
 > “当我们有理由认为共享信息对于防止欺诈或非法活动、防止立即发生的伤害或保护我们自己免受违反权利是必要的，我们也可以共享信息。这包括与其他公司、律师、法院或其他实体共享信息。”
 
 他们被政府强制遵守传票用户信息
-
-
-
 
 这就像“猫的主人”这个词是一个误称一样。它提供了更多的隐私性，但并非匿名性。它完全无法与匿名性相比，因为你无法匿名登录 Facebook。它的意思是，使用你的 Facebook 登录信息，你可以登录其他网站（例如 Ars Technica 或 Wired）并发表评论，而无需授予 Facebook 拥有的数据宝库访问权限：你的联系人列表、亲戚、朋友、最喜欢的麦片，以及你对猫那种如硫磺般狂热仇意的事实。
 
@@ -2734,6 +2524,8 @@ Facebook 对匿名性过敏。你可能听过他们对匿名账号持反对态�
 
 这是一个幸好可以克服的障碍，因为真实姓名并没有绑定到任何政府 ID 方案（如驾照或社会安全号码，尽管他们有一天会绑定）。即便如此，供需法则也将决定，即使是这些也不足以满足完全匿名的需求。
 
+
+
 当你深陷 Facebook 的账户创建过程时，你需要尽可能输入大量的虚假数据。特别是电子邮件地址，需要在完全匿名的情况下创建。大多数人犯的一个大错误是认为隐藏 IP 地址就足够了。然而，有许多追踪机制——设计用于匹配行为模式和偏好选择的复杂算法——所有大型社交媒体巨头都在使用。只要稍有疏忽，链条中的一个环节（例如连接到一个知道你真实身份的网站，如 BBC）就会摧毁你所有的努力。在你还没意识到之前，所有其他人都被机器人、警告图钉和管理员提醒了，你在会话中和他们聊过天。终局。
 
 问问自己：如果你在马尔迪节期间参加了新奥尔冈的一场流行的面舞会，你最亲近的朋友会用你的名字称呼你吗？你敢肯定他们会，无论是否戴面具，即使你恳求他们保护你的身份。其中一些人可能会低声说出你的名字，甚至在想他们之前的保密誓言。
@@ -2752,21 +2544,13 @@ Facebook 在你的机器上（或他们的某个第三方执行者上）安装�
 
 不要为非 VPN 会话使用与 VPN 相同的浏览器。在自己的目录中安装 Firefox 便携版，并在创建 Facebook 账户之前将其配置为 VPN。永远不要把它们搞混。你不希望发生 Cookie 污染。
 
-在其他社交网站上也要小心：Google、Twitter、Pinterest、MySpace。Facebook 不会投入资源寻找你，除非你主动交出关于自己的碎片，而这些碎片在你不留意的其他网站上很容易被删除。所以，在其他网站上也要避免涉及与你根性信念相关的特定内容：宗教。政治。伦理。切换一下。在两个会话中当一次佛教徒。或者一个
-
-
-
-一个非执业的非教派人士。只需注意不要捅马蜂窝即可。我在泰国的一位朋友（一名美国人）在 Freetet 上小有名气，他在 Facebook 上侮辱了泰国国王，导致他们用放大镜彻查了他的账号。结果如何呢？Facebook 在未经他许可的情况下更改了他的名字——以反映他的真实身份。太尴尬了。他还在 Freetet 上发布了指向他个人主页的链接，正如你可以想象的，他这种张扬的行为暴露了他的整个身份。
+在其他社交网站上也要小心：Google、Twitter、Pinterest、MySpace。Facebook 不会投入资源寻找你，除非你主动交出关于自己的碎片，而这些碎片在你不留意的其他网站上很容易被删除。所以，在其他网站上也要避免涉及与你根性信念相关的特定内容：宗教。政治。伦理。切换一下。在两个会话中当一次佛教徒。或者一个非执业的非教派人士。只需注意不要捅马蜂窝即可。我在泰国的一位朋友（一名美国人）在 Freetet 上小有名气，他在 Facebook 上侮辱了泰国国王，导致他们用放大镜彻查了他的账号。结果如何呢？Facebook 在未经他许可的情况下更改了他的名字——以反映他的真实身份。太尴尬了。他还在 Freetet 上发布了指向他个人主页的链接，正如你可以想象的，他这种张扬的行为暴露了他的整个身份。
 
 无论你对账户进行多少次调整，都不可能将现有的 Facebook 个人资料转换为匿名名称。更改名称无济于事。算法（想象成《黑客帝国》中的哨兵）仍然会有关于你的在线行为以及你的 IP 地址的记录。然而，隐私是可以实现的，以防你想保护自己的身份免受爱管闲同事或其他异类人的骚扰。在这种情况下，你需要更改用户名（即个人资料中他人可见的部分），然后根据你希望的隐身程度相应地调整隐私设置。这像一把双刃剑，因为这会让其他人（那些你可能希望看到的人）更难看到你——你必须自己去寻找并添加他们。这同样可能会暴露你的真实身份。在 Facebook 上输入的任何内容，对于他们所拥有的机器人来说，都不是真正不可隐形的。
 
 ## Tails
 
-爱德华·斯诺登（Edward Snowden）。这个名字对全球大多数人来说都不陌生。在技术圈，他是一个愿景者。而对于非技术人员来说，脑海中会浮现几个标签：举报者、英雄、叛徒。无论你给他贴上什么标签，有一点是肯定的：他仇恶审查并热爱匿名，是那种要求不可追踪执行的匿名。在讨论任何事情之前，他坚持要求联系人不仅要使用 PGP（良好的隐私），还要使用匿名工具的终极标准：
-
-## Tails
-
-这是一个简单的工具，甚至让国家安全局（NSA）的高层也感到苦恼。这不无理由，因为即使是他们也不知道设计它的魔法师是谁。
+爱德华·斯诺登（Edward Snowden）。这个名字对全球大多数人来说都不陌生。在技术圈，他是一个愿景者。而对于非技术人员来说，脑海中会浮现几个标签：举报者、英雄、叛徒。无论你给他贴上什么标签，有一点是肯定的：他仇恶审查并热爱匿名，是那种要求不可追踪执行的匿名。在讨论任何事情之前，他坚持要求联系人不仅要使用 PGP（良好的隐私），还要使用匿名工具的终极标准：这是一个简单的工具，甚至让国家安全局（NSA）的高层也感到苦恼。这不无理由，因为即使是他们也不知道设计它的魔法师是谁。
 
 如果说 Tor 是匿名鱼夫的鱼饵，那么 Tails 就是钓鱼箱。另一端的鱼完全不知道船上坐是谁在观察、倾听。它是黑客的工具，但也是一种爱国者的武器。使用它轻而易举：将其安装在 USB 闪盘、CD 或该闪盘上的任何设备上，你就会发现被伪装并免受 NSA 的保护，只要你没有暴露自己。而且如果你在使用 Tails，那你本身就比那聪明了。
 
@@ -2774,35 +2558,11 @@ Tails 构建在 Linux 外壳之上，作为一个操作系统运行，并配备�
 
 斯诺登偏于使用 Tails 是因为它有一条规则：不直接写入数据。来自远程对手的入侵？不会发生。取证调查？没门。DVD/USB 上不会留下任何痕迹。显然，如果你是一个想要揭露违反宪法监视行为的 NSA 员工，使用它是不言而易的选择，同时它对于政治异见人士和记者来说也是必备品。它配备了“合理的否认”装甲，与 TrueCrypt 类似。
 
-当你从 Tails 启动时，Tor 的运行就像黄油一样顺滑。它没有太的学习曲线，不需要过度的调整。你可以在工作时的同一台 PC 上使用它。从 USB 或 DVD 启动。完成操作后，重启回到正常的 PC，不会留下关于你使用 Tails 的记录或足迹。在所有意义上，你都是互联网上的幽灵。说到幽灵，Tails 的创建者本身也是匿名的。没有人知道他们的身份。但我们知道，他们不会屈服试图向代码中强加后门的政府。
-
-Linux 创始人林纳斯·托瓦兹（Linus Torvalds）在 2013 年表示，“NSA 一直以各种方式向自由软件项目和开发者施压”，这意味着他们付努力，而且全是纳税人的资金。这有点像猫对老鼠说：“透明化对你有处”。
-
-当你用 Tails 启动时，Tor 运行得像融化的黄油。没有太大的学习曲线，不需要过度的调整。你可以在工作时的同一台 PC 上使用它。从 USB 或 DVD 启动。做你的事情，然后重启回到正常的 PC，没有关于使用 Tails 的记录或足迹。从所有意图来说，你是互联网上的一个幽灵。说到幽灵，Tails 的创建者本身也是匿名的。没有人知道他们的身份。但我们知道的是，他们不会屈服试图向代码中强加后门的政府。
-
-林纳斯·托瓦兹在 2013 年表示，“NSA 一直以各种方式向自由软件项目和开发者施压”，这意味着他们付出了努力，而且全是纳税人的资金。这有点像猫对老鼠说：“透明化对你有处。”
-
 当你用 Tails 启动时，Tor 运行得像融化的黄油一样顺滑。没有太大的学习曲线，不需要过度的调整。你可以在工作时的同一台 PC 上使用它。从 USB 或 DVD 启动。做你的事情，然后重启回到正常的 PC，没有留下关于使用 Tails 的记录或足迹。从所有意图来说，你是互联网上的一个幽灵。说到幽灵，Tails 的创建者本身也是匿名的。没有人知道他们的身份。但我们知道的是，他们不会屈服试图向代码中强加后门的政府。
 
 林纳斯·托瓦兹在 2013 年表示，“NSA 一直以各种方式向自由软件项目和开发者施压”，这意味着他们付出了努力，而且全是纳税人的资金。这有点像猫对老鼠说：“透明化对你有处。”
 
-当你用 Tails 启动时，Tor 运行得像融化的黄油一样顺滑。没有太大的学习曲线，不需要过度的调整。你可以在工作时的同一台 PC 上使用它。从 USB 或 DVD 启动。做你的事情，然后重启回到正常的 PC，没有留下关于使用 Tails 的记录或足迹。从所有意图来说，你是互联网上的一个幽灵。说到幽灵，Tails 的创建者本身也是匿名的。没有人知道他们的身份。但我们知道的是，他们不会屈服试图向代码中强加后门的政府。
 
-林纳斯·托瓦兹在 2013 年表示，“NSA 一直以各种方式向自由软件项目和开发者施压”，这意味着他们付出了努力，而且全是纳税人的资金。这有点像猫对老鼠说：“透明化对你有处。”
-
-当你用 Tails 启动时，Tor 运行得像融化的黄油一样顺滑。没有太大的学习曲线，不需要过度的调整。你可以在工作时的同一台 PC 上使用它。从 USB 或 DVD 启动。做你的事情，然后重启回到正常的 PC，没有留下关于使用 Tails 的记录或足迹。从所有意图来说，你是互联网上的一个幽灵。说到幽灵，Tails 的创建者本身也是匿名的。没有人知道他们的身份。但我们知道的是，他们不会屈服试图向代码中强加后门的政府。
-
-林纳斯·托瓦兹在 2013 年表示，“NSA 一直以各种方式向自由软件项目和开发者施压”，这意味着他们付出了努力，而且全是纳税人的资金。这有点像猫对老鼠说：“透明化对你有处。”
-
-当你用 Tails 启动时，Tor 运行得像融化的黄油一样顺滑。没有太大的学习曲线，不需要过度的调整。你可以在工作时的同一台 PC 上使用它。从 USB 或 DVD 启动。做你的事情，然后重启回到正常的 PC，没有留下关于使用 Tails 的记录或足迹。从所有意图来说，你是互联网上的一个幽灵。说到幽灵，Tails 的创建者本身也是匿名的。没有人知道他们的身份。但我们知道的是，他们不会屈服试图向代码中强加后门的政府。
-
-林纳斯·托瓦兹在 2013 年表示，“NSA 一直以各种方式向自由软件项目和开发者施压”，这意味着他们付出了努力，而且全是纳税人的资金。这有点像猫对老鼠说：“透明化对你有处。”
-
-当你用 Tails 启动时，Tor 运行得像融化的黄油一样顺滑。没有太大的学习曲线，不需要过度的调整。你可以在工作时的同一台 PC 上使用它。从 USB 或 DVD 启动。做你的事情，然后重启回到正常的 PC，没有留下关于使用 Tails 的记录或足迹。从所有意图来说，你是互联网上的一个幽灵。说到幽灵，Tails 的创建者本身也是匿名的。没有人知道他们的身份。但我们知道的是，他们不会屈服试图向代码中强加后门的政府。
-
-（注：由于原始文本中存在大量重复段落，此处已根据“不要重复输出原文”的原则，仅对核心内容进行了逻辑翻译。）
-
-[/content]
 
 一个非执业的非教派人士。只需注意不要捅马蜂窝即可。我在泰国的一位朋友（一名美国人）在 Freetet 上小有名气，他在 Facebook 上侮辱了泰国国王，导致他们用放大镜彻查了他的账号。结果如何呢？Facebook 在未经他许可的情况下更改了他的名字——以反映他的真实身份。太尴尬了。他还在 Freetet 上发布了指向他个人主页的链接，正如你可以想象的，他这种张扬的行为暴露了他的整个身份。
 
@@ -2810,45 +2570,43 @@ Linux 创始人林纳斯·托瓦兹（Linus Torvalds）在 2013 年表示，“N
 
 ## Tails
 
-爱德华·斯诺登（Edward Snowden）。这个名字对全球大多数人来说都不陌生。在技术圈，他是一个愿景者。而对于非技术人员来说，脑海中会浮现几个标签：举报者、英雄、叛徒。无论你给他贴上什么标签，有一点是肯定的：他仇恶审查并热爱匿名，是那种要求不可追踪执行的匿名。在讨论任何事情之前，他坚持要求联系人不仅要使用 PGP（良好的隐私），还要使用匿名工具的终极标准：
+爱德华·斯诺登（Edward Snowden）。这个名字对全球大多数人来说都不陌生。在技术圈，他是一个愿景者。而对于非技术人员来说，脑海中会浮现几个标签：举报者、英雄、叛徒。无论你给他贴上什么标签，有一点是肯定的：他仇恶审查并热爱匿名，是那种要求不可追踪执行的匿名。在讨论任何事情之前，他坚持要求联系人不仅要使用 `PGP`（良好的隐私），还要使用匿名工具的终极标准：
 
 ## Tails
 
-这是一个简单的工具，甚至让国家安全局（NSA）的高层也感到苦恼。这不无理由，因为即使是他们也不知道设计它的魔法师是谁。
+这是一个简单的工具，甚至让国家安全局（`NSA`）的高层也感到苦恼。这不无理由，因为即使是他们也不知道设计它的魔法师是谁。
 
-如果 Tor 是匿名鱼夫的鱼饵，那么 Tails 就是钓鱼箱。另一端的鱼完全不知道船上是谁在观察、倾听。它是黑客的工具，但也是一种爱国者的武器。使用它轻而易举：将其安装在 USB 闪盘、CD 或该闪盘上的任何设备上，你就会发现被伪装并免受 NSA 的保护，只要你没有暴露自己。而且如果你在使用 Tails，那你本身就比那聪明了。
+如果 `Tor` 是匿名鱼夫的鱼饵，那么 `Tails` 就是钓鱼箱。另一端的鱼完全不知道船上是谁在观察、倾听。它是黑客的工具，但也是一种爱国者的武器。使用它轻而易举：将其安装在 `USB` 闪盘、`CD` 或该闪盘上的任何设备上，你就会发现被伪装并免受 `NSA` 的保护，只要你没有暴露自己。而且如果你在使用 `Tails`，那你本身就比那聪明了。
 
-Tails 构建在 Linux 外壳之上，作为一个操作系统运行，并配备了一系列用来戳破“老大哥”鼻子的“核弹”：Tor 浏览器、聊天客户端、办公套件以及图像/音频编辑器等。
+`Tails` 构建在 `Linux` 外壳之上，作为一个操作系统运行，并配备了一系列用来戳破“老大哥”鼻子的“核弹”：`Tor` 浏览器、聊天客户端、办公套件以及图像/音频编辑器等。
 
-斯诺登偏于使用 Tails 是因为它有一条规则：不直接写入数据。来自远程对手的入侵？不会发生。取证调查？没门。DVD/USB 上不会留下任何痕迹。显然，如果你是一个想要揭露违反宪法监视行为的 NSA 员工，使用它是不言而易的选择，同时它对于政治异见人士和记者来说也是必备品。它配备了“合理的否认”装甲，与 TrueCrypt 类似。
+斯诺登偏于使用 `Tails` 是因为它有一条规则：不直接写入数据。来自远程对手的入侵？不会发生。取证调查？没门。`DVD`/`USB` 上不会留下任何痕迹。显然，如果你是一个想要揭露违反宪法监视行为的 `NSA` 员工，使用它是不言而易的选择，同时它对于政治异见人士和记者来说也是必备品。它配备了“合理的否认”装甲，与 `TrueCrypt` 类似。
 
-当你用 Tails 启动时，Tor 的运行就像融化的黄油一样顺滑。没有太大的学习曲线，不需要过度的调整。你可以在工作时的同一台 PC 上使用它。从 USB 或 DVD 启动。完成操作后，重启回到正常的 PC，不会留下关于你使用 Tails 的记录或足迹。从所有意图来说，你是互联网上的一个幽灵。说到幽灵，Tails 的创建者本身也是匿名的。没有人知道他们的身份。但我们知道的是，他们不会屈服试图向代码中强加后门的政府。
+当你用 `Tails` 启动时，`Tor` 的运行就像融化的黄油一样顺滑。没有太大的学习曲线，不需要过度的调整。你可以在工作时的同一台 PC 上使用它。从 `USB` 或 `DVD` 启动。完成操作后，重启回到正常的 PC，不会留下关于你使用 `Tails` 的记录或足迹。从所有意图来说，你是互联网上的一个幽灵。说到幽灵，`Tails` 的创建者本身也是匿名的。没有人知道他们的身份。但我们知道的是，他们不会屈服试图向代码中强加后门的政府。
 
-林纳斯·托瓦兹（Linus Torvalds）在 2013 年表示，“NSA 一直以各种方式向自由软件项目和开发者施压”，这意味着他们付出了努力，而且全是纳税人的资金。这有点像猫对老鼠说：“透明化对你有处。”
-
-（后文由于原文大量重复，已按要求去重处理。）
-
-
+林纳斯·托瓦兹（`Linus Torvalds`）在 2013 年表示，“`NSA` 一直以各种方式向自由软件项目和开发者施压”，这意味着他们付出了努力，而且全是纳税人的资金。这有点像猫对老鼠说：“透明化对你有处。”
 
 # 如何击败 NSA（美国国家安全局）
 
-必须说：NSA 瓦解的日子日不远了。如果不解散，至少也要像二战战后的纳粹德国一样被拆分。没错，我听到你们在翻白眼了。又在拿纳粹做比较？得了吧。
+必须说：`NSA` 瓦解的日子日不远了。如果不解散，至少也要像二战战后的纳粹德国一样被拆分。没错，我听到你们在翻白眼了。又在拿纳粹做比较？得了吧。
 
 但“任务蔓延”（mission creep）——即项目扩张超出其原始目标（通常在初期成功后）——再次露出了丑陋的真目。这个曾被称为“没有没这样的机构”（No Such Agency）的机构，已经远远超出了它的初衷：在保护美国通信安全的同时收集我们敌人的情报。而我们，说白了，就是阻力最小的路径。
 
-情报收集现在对 NSA 来说是如此优先，以至于它已经以牺牲主权安全为代价走向全球。“定制化访问操作”（TAO）指令对此显而易见。在敌人的电脑上安装间谍软件/后门……在斯诺威登揭露他们对本国同胞也这样做之前，这倒算不错。他们正在进行大规模监控。他们的数据越多，声势就越大，他们声称战胜了常见的幽灵：恐怖分子、毒枭大佬（抓捕本·拉登花了多久？）。邮件，甚至是视频都在未经你许可的情况下被收集。你可以说这是一个极易被滥用的系统，如果它不是已经因为《爱国者法》（第 215 条）而从内向外腐烂的话。NSA 认为自己可以躲避国会和买单的纳税人的想法，应该让大多数美国人感到震惊。
+情报收集现在对 `NSA` 来说是如此优先，以至于它已经以牺牲主权安全为代价走向全球。“定制化访问操作”（`TAO`）指令对此显而易见。在敌人的电脑上安装间谍软件/后门……在斯诺威登揭露他们对本国同胞也这样做之前，这倒算不错。他们正在进行大规模监控。他们的数据越多，声势就越大，他们声称战胜了常见的幽灵：恐怖分子、毒枭大佬（抓捕本·拉登花了多久？）。邮件，甚至是视频都在未经你许可的情况下被收集。你可以说这是一个极易被滥用的系统，如果它不是已经因为《爱国者法》（第 215 条）而从内向外腐烂的话。`NSA` 认为自己可以躲避国会和买单的纳税人的想法，应该让大多数美国人感到震惊。
 
-那么，当母鹰背刺她的雏时该怎么办？答案是：建立你自己的巢。然而，首先要明白，如果你是像本·拉登或黑手党老大那样的高价值目标，NSA 无论都会黑入你连接互联网的电脑或手机。这是无法避免的。如果你在想：“嗯，我为 Drivecrypt 和 Phonecrypt 付了百倍索赔，所以它们对那些骗子是安全的”，那么有一条坏消息要让你接受，牛仔哥。远非如此。
+那么，当母鹰背刺她的雏时该怎么办？答案是：建立你自己的巢。然而，首先要明白，如果你是像本·拉登或黑手党老大那样的高价值目标，`NSA` 无论都会黑入你连接互联网的电脑或手机。这是无法避免的。如果你在想：“嗯，我为 `Drivecrypt` 和 `Phonecrypt` 付了百倍索赔，所以它们对那些骗子是安全的”，那么有一条坏消息要让你接受，牛仔哥。远非如此。
 
-Drivecrypt 是商业软件且闭源，考虑到市面上的免费选择（如 Truecrypt——开源且经过审计），最好的情况是你只是为了名字买单。最坏的情况呢？NSA 在代码中留有后门，或者至少知道一个无人知道的漏洞。你可以感谢 NSA 的 BULLRUN 计划，该计划试图“在商业加密系统、IT 系统、网络和终端通信设备中植入漏洞”。
+`Drivecrypt` 是商业软件且闭源，考虑到市面上的免费选择（如 `Truecrypt`——开源且经过审计），最好的情况是你只是为了名字买单。最坏的情况呢？`NSA` 在代码中留有后门，或者至少知道一个无人知道的漏洞。你可以感谢 `NSA` 的 `BULLRUN` 计划，该计划试图“在商业加密系统、IT 系统、网络和终端通信设备中植入漏洞”。
 
-在一个理想的、后宪法时代的国家，公民免受外国威胁的安全性应该是首要任务。相反地，我们面对的是一个资金充足的巨兽，它将对公民的监控和数据挖掘视为首要任务。再次，想想“阻力最小路径”。从 Blizzard 到 Kickstarter 再到 Yahoo，账户被盗每个月都在发生，而 NSA 似乎无能为力地阻止。只是真相与他们引导我们相信的略有不同。
+在一个理想的、后宪法时代的国家，公民免受外国威胁的安全性应该是首要任务。相反地，我们面对的是一个资金充足的巨兽，它将对公民的监控和数据挖掘视为首要任务。再次，想想“阻力最小路径”。从 Blizzard 到 Kickstarter 再到 Yahoo，账户被盗每个月都在发生，而 `NSA` 似乎无能为力地阻止。只是真相与他们引导我们相信的略有不同。
 
-事实证明，他们有能力阻止它。但这需要资源的重大重新分配，以确保公民受到保护，而不是被监控和假定犯了某种罪。糟糕的是，权威和影响的位置是不平衡且倾斜的。网络司令部（Cyber Command）根本不应该与 NSA 的优先级整合。他们的优先级应该集中在国外，就像某些“索伦环之眼”一样，凭空制造犯罪。
+事实证明，他们有能力阻止它。但这需要资源的重大重新分配，以确保公民受到保护，而不是被监控和假定犯了某种罪。糟糕的是，权威和影响的位置是不平衡且倾斜的。网络司令部（`Cyber Command`）根本不应该与 `NSA` 的优先级整合。他们的优先级应该集中在国外，就像某些“索伦环之眼”一样，凭空制造犯罪。
 
-幸运的是，从 NSA 的库中泄露了足够的数据，足以发起反击。一个人无法消除他们造成的伤害，但一个国家可以：数百万个人可以压倒他们的越权，并将他们送回适当的位置。
+幸运的是，从 `NSA` 的库中泄露了足够的数据，足以发起反击。一个人无法消除他们造成的伤害，但一个国家可以：数百万个人可以压倒他们的越权，并将他们送回适当的位置。
 
 如何做到？
+
+
 
 知识就是力量。这种力量并不存在于网络本身。那里是 NSA 喜欢探测和植入监听器的地方。为此，他们采集所有数据。一切。然后聘佣分析师进行分类。他们监控电话、卫星信息，甚至倾听往返于我们盟友的海底电缆。如果需要，他们在源头高处，或者在我们的脚下截获瀑布。良好的情报，等待着筛选。
 
@@ -2864,46 +2622,7 @@ Drivecrypt 是商业软件且闭源，考虑到市面上的免费选择（如 Tr
 
 幸运的是，从 NSA 的库中泄露了足够的数据，足以发起反击。一个人无法消除他们造成的伤害，但一个国家可以：数百万个人可以压倒他们的越权，并将他们送回适当的位置。
 
-如何做到？
-
-知识就是力量。这种力量并不存在于网络本身。那里是 NSA 喜欢探测和植入监听器的地方。为此，他们采集所有数据。一切。然后聘佣分析师进行分类。他们监控电话、卫星信息，甚至倾听往返于我们盟友的海底电缆。如果需要，他们在源头高处，或者在我们的脚下截获瀑布。良好的情报，等待着筛选。
-
-。但对他们来说，什么是良好的情报呢？嗯，就是任何能触发最多警报的东西：涉及的人员、他们的国家、使用的语言、他们的宗教。这一切都是为了滥用。你可以说这是一个极易被滥用的系统，如果它不是已经因为《爱国者法》（第 215 条）而从内向外腐烂的话。NSA 认为自己可以躲避国会和买单的纳税人的想法，应该让大多数美国人感到震惊。
-
-那么，当母鹰背刺她的雏时该怎么办？答案是：建立你自己的巢。然而，首先要明白，如果你是像本·拉登或黑手党老大那样的高价值目标，NSA 无论都会黑入你连接互联网的电脑或手机。这是无法避免的。如果你在想：“嗯，我为 Drivecrypt 和 Phonecrypt 付了百倍索赔，所以它们对那些骗子是安全的”，那么有一条坏消息要让你接受，牛仔哥。远非如此。
-
-Drivecrypt 是商业软件且闭源，考虑到市面上的免费选择（如 Truecrypt——开源且经过审计），最好的情况是你只是为了名字买单。最坏的情况呢？NSA 在代码中留有后门，或者至少知道一个无人知道的漏洞。你可以感谢 NSA 的 BULLRUN 计划，该计划试图“在商业加密系统、IT 系统、网络和终端通信设备中植入漏洞”。
-
-在一个理想的、后宪法时代的国家，公民免受外国威胁的安全性应该是首要任务。相反，我们面对的是一个资金充足的巨兽，它将对公民的监控和数据挖掘视为首要任务。再次，想想“阻力最小路径”。从 Blizzard 到 Kickstarter 再到 Yahoo，账户被盗每个月都在发生，而 NSA 似乎无能为力地阻止。只是真相与他们引导我们相信的略有不同。
-
-事实证明，他们有能力阻止它。但这需要资源的重大重新分配，以确保公民受到保护，而不是被监控和假定犯了某种罪。糟糕的是，权威和影响的位置是不平衡且倾斜的。网络司令部根本不应该与 NSA 的优先级整合。他们的优先级应该集中在国外，就像某些“索伦环之眼”一样，凭空制造犯罪。
-
-幸运的是，从 NSA 的库中泄露了足够的数据，足以发起反击。一个人无法消除他们造成的伤害，但一个国家可以：数百万个人可以压倒他们的越权，并将他们送回适当的位置。
-
-如何做到？
-
-知识就是力量。这种力量并不存在于网络本身。那里是 NSA 喜欢探测和植入监听器的地方。为此，他们采集所有数据。一切。然后聘佣分析师进行分类。他们监控电话、卫星信息，甚至倾听往返于我们盟友的海底电缆。如果需要，他们在源头高处，或者在我们的脚下截获瀑布。良好的情报，等待着筛选。
-
-。但对他们来说，什么是良好的情报呢？嗯，就是任何能触发最多警报的东西：涉及的人员、他们的国家、使用的语言、他们的宗教。这一切都是为了滥用。你可以说这是一个极易被滥用的系统，如果它不是已经因为《爱国者法》（第 215 条）而从内向外腐烂的话。NSA 认为自己可以躲避国会和买单的纳税人的想法，应该让大多数美国人感到震惊。
-
-那么，当母鹰背刺她的雏时该怎么办？答案是：建立你自己的巢。然而，首先要明白，如果你是像本·拉登或黑手党老大那样的高价值目标，NSA 无论都会黑入你连接互联网的电脑或手机。这是无法避免的。如果你在想：“嗯，我为 Drivecrypt 和 Phonecrypt 付了百倍索赔，所以它们对那些骗子是安全的”，那么有一条坏消息要让你接受，牛仔哥。远非如此。
-
-Drivecrypt 是商业软件且闭源，考虑到市面上的免费选择（如 Truecrypt——开源且经过审计），最好的情况是你只是为了名字买单。最坏的情况呢？NSA 在代码中留有后门，或者至少知道一个无人知道的漏洞。你可以感谢 NSA 的 BULLRUN 计划，该计划试图“在商业加密系统、IT 系统、网络和终端通信设备中植入漏洞”。
-
-在一个理想的、后宪法时代的国家，公民免受外国威胁的安全性应该是首要任务。相反，我们面对的是一个资金充足的巨兽，它将对公民的监控和数据挖掘视为首要任务。再次，想想“阻力最小路径”。从 Blizzard 到 Kickstarter 再到 Yahoo，账户被盗每个月都在发生，而 NSA 似乎无能为力地阻止。只是真相与他们引导我们相信的略有不同。
-
-事实证明，他们有能力阻止它。但这需要资源的重大重新分配，以确保公民受到保护，而不是被监控和假定犯了某种罪。糟糕的是，权威和影响的位置是不平衡且倾斜的。网络司令部根本不应该与 NSA 的优先级整合。他们的优先级应该集中在国外，就像某些“索伦环之眼”一样，凭空制造犯罪。
-
-幸运的是，从 NSA 的库中泄露了足够的数据，足以发起反击。一个人无法消除他们造成的伤害，但一个国家可以：数百万个人可以压倒他们的越权，并将他们送回适当的位置。
-
-如何做到？
-
-知识就是力量。这种力量并不存在于网络本身。那里是 NSA 喜欢探测和植入监听器的地方。为此，他们采集所有数据。一切。然后聘佣分析师进行分类。他们监控电话、卫星信息，甚至倾听往返于我们盟友的海底电缆。如果需要，他们在源头高处，或者在我们的脚下截获瀑布。良好的情报，等待着筛选。
-
-。但对他们来说，什么是良好的情报呢？嗯，就是任何能触发最多警报的东西：涉及的人员、他们的国家、使用的语言、他们的宗教。这一切都是为了滥用。你可以说这是一个极易被滥用的系统，如果它不是已经因为《爱国者法》（第 215 条）而从内向外腐烂的话。NSA 认为自己可以躲避国会和买单的纳税人的想法，应该让大多数美国人感到震惊。
-
-
-
+## 如何做到？
 
 未来正等待着我们的危险。显然，与即将到来的权力夺取相比，拥有暴露的 IP 地址仅仅是冰山一粟。不幸的是，总会有层出不穷的社交网络和应用程序试图超越 IP 地址的使用范围来监控你。多年来，我们已经看到在许多个人应用上发生过这种情况：Internet Explorer、Napster、Limewire、Myspace、Facebook 等。
 
@@ -2922,8 +2641,10 @@ Drivecrypt 是商业软件且闭源，考虑到市面上的免费选择（如 Tr
 - 出口节点
 - 情报机构
 - 量子与 FoxAcid 系统
-
 - Tor 逐步入门指南
+
+
+
 - Tor 安装
 - Tor 无法做到的
 - Tor 应用与反指纹工具
@@ -2934,21 +2655,18 @@ Drivecrypt 是商业软件且闭源，考虑到市面上的免费选择（如 Tr
 - Google 与 Tor
 - 验证码 (Captchas)
 - SpiderOak
-
 - Tails
 - Tails 的局限性
 - Chrome
 - Flash 控制
 - 用户代理切换器 (User Agent Switcher)
 - CanvasBlocker
-- 致命的 Firefox 
+- 致命的 Firefox
 - Whonix 与 Tor
 - Torbird
 - Macchanger
 - Whonix 桥
-
 - Tor 与 VPN
-
 - 匿名支付 VPN
 - 使用信用卡支付 VPN
 - Tor 友好型 VPN
@@ -2961,7 +2679,6 @@ Drivecrypt 是商业软件且闭源，考虑到市面上的免费选择（如 Tr
     - Multibit Windows
     - Multibit Linux
 - 支付 VPN 以供 Tor 使用
-
 - 在 Tor 之外使用真实姓名
 - 现实的荒漠
 - 网络暴凌与匿名
@@ -2977,7 +2694,6 @@ Drivecrypt 是商业软件且闭源，考虑到市面上的免费选择（如 Tr
 - CryptoCat
 - Freetet
 - Frost & Fuqid
-
 - 密码与 Tor
 - 修改密码
 - 在 Tor 浏览器中存储密码
@@ -2990,7 +2706,6 @@ Drivecrypt 是商业软件且闭源，考虑到市面上的免费选择（如 Tr
 - 为了孩子们
 - 键盘记录器防护
 - 反键盘记录器工具
-
 - 暗网市场
 - 欺诈预防
 - 什么时候可以 FE（提前结算），什么时候不可以
@@ -3002,12 +2717,10 @@ Drivecrypt 是商业软件且闭源，考虑到市面上的免费选择（如 Tr
 - 商业用 Darkcoins
 - 交易处理器
 - 暗网安全防护 (OPSEC)
-
 - 如何在 Tor 上建立隐藏服务
 - 配置
 - Shallot 与 Scallion
 - 关于运行隐藏 Tor 服务器（以及其他安全魔法配方）Tor 与你的电脑
-
 - NSA 幻灯片
 - 态势感知
 - 暗网人格
@@ -3018,12 +2731,10 @@ Drivecrypt 是商业软件且闭源，考虑到市面上的免费选择（如 Tr
 ## 前言
 
 你想要你想要的。
+
 隐形。匿名。幽灵协议。
 
 你已经服下了红胶丸。
-
-
-
 
 ## 第一章
 
@@ -3047,7 +2758,7 @@ Drivecrypt 是商业软件且闭源，考虑到市面上的免费选择（如 Tr
 
 ## 使用 Tor 的风险
 
-### 使用 Tor 的**真实**风险
+### 使用 Tor 的真实风险
 
 在我们进入敌人领域之前，我在这里列出这些风险，这样你在安装之前就知道该避免什么，并在随后的章节中获得“恍然大开”的时刻。阅读时，请记住，与敌人可能杀死你匿名性的手段相比，拥有 Javascript 仅仅是海山一角。
 
@@ -3060,6 +2771,7 @@ Drivecrypt 是商业软件且闭源，考虑到市面上的免费选择（如 Tr
 我记得有一个研究人员声称“81% 的 Tor 用户可以被去匿名化”。
 
 胡说。
+
 那 81% 的数字出现是因为目标用户知道 NoScript 浏览器插件，并且可能将 Tor 的使用与日常的开放网络使用混杂，从而为相关性攻击提供了充足的数据。但这只是雪上添花。他们处处泄露个人细节——使用在开放网络其他地方使用的相同用户名和密码。炫耀他们喜欢的 Netflix 电影。谈论当地活动（新奥尔良的爵士乐节！）。你明白我的意思了。
 
 ### 志愿者出口节点（Exit Node）
@@ -3101,7 +2813,6 @@ Drivecrypt 是商业软件且闭源，考虑到市面上的免费选择（如 Tr
 
 
 
-
 ……去发展，但应该从一开始就受到培养，这就是为什么我将**风险（RISKS）**放在了最前面，甚至排在安装章节之前。这类书的内容在中间往往会变得拖沓，并且经常被忽视。
 
 说起风险，如果你好奇真正是什么让我彻夜难眠，那是：其他国家会向高级首席执行官和情报机构（例如香港）透露什么？
@@ -3111,11 +2822,11 @@ Drivecrypt 是商业软件且闭源，考虑到市面上的免费选择（如 Tr
 对此此，如果没有一家公司能够守住自己的隐私信息，那么最终的终局可能会演变成一个类似于“天空网”的网络，类似于苏联时期的东西方阵营，CEO 们必须在东方和西方之间选择。但这就像在决定你是想被棕熊吃还是被狮子吃。
 
 所以，你现在知道了真正的风险。至少是主要的那些。
+
 利用书中的知识，这些风险中的每一个一个都可以被降到最低或彻底击。遗憾的是，大多数读者会忘记他们读过的约 80% 内容。那些采取行动的人会记住那 80%，因为他们正在将所读变为现实：当 NSA 威胁你的皇后时，做出精妙的类棋式反击。如果你不采取行动，而只是坐在那里像一只在慢慢煮的水里的青蛙，你不仅自己会灭亡，你的后代也会如此。好了，关于风险的就到此为止。我们开始吧。
 
-## 三
+## 三 万无一失指南
 
-## 万无一失指南
 或者说我们能做到的万无一失
 
 现在让我们回答 Tor 是什么，它能做什么，以及它不能做什么。你无疑听说过它是某种黑客工具，你是对的，但仅从像 Tor 这样强大的工具可以被用于几乎任何事情的角度来看你是正确的。事实上，任何东西都可以匿名购买（可能除了穿红裙的丰满金发女性）……只要你对此保持谨慎。
@@ -3125,25 +2836,28 @@ Drivecrypt 是商业软件且闭源，考虑到市面上的免费选择（如 Tr
 这允许你：
 
 - 访问被封的网站（如果你在中国，则是 Facebook）
-- 访问通过开放互联网无法到达的 .onion 站点
+- 访问通过开放互联网无法到达的`.onion`站点
 - 用饼脸砸脸来威胁总统……而且没有秘密特工访问！
 
 这一切都是通过这种被称为“洋葱路由”（onion routing）的过程实现的。
+
 将其想象成一个多对点的代理矩阵。与 BitTorrent 或 eM 等会将你的 IP 暴露给所有人的点等应用不同，Tor 使用了一系列中间节点（以及相应的 IP）在整个网络链中加密你的数据。在端点，你的数据将由出口节点（exit node）解密，这样没有人可以准确定你的位置，或告诉哪个文件来自哪台计算机。由于这种匿名化过程，由于隐藏你真实 IP 地址的层层“洋葱层”，你是匿名的。
 
 甚至可以构建一个只有 Tor 用户才能访问的站点。这也被称为“洋葱站”（Onion Sites），虽然在技术上具有挑战性，但你不需要计算机科学博士学位来构建一个。甚至不需要学士学位。使用普通网页和普通非 Tor 版 Firefox 的任何人无法访问这些洋葱站。
 
 我们稍后会深入探讨这一点，并构建一个无坚不摧的死亡堡垒。
 
-## 安装
+### 安装
 
 安装 Tor 极其简单。你可以从 Tor 官网下载它：
-https://www.torproject.org/download/download-easy.html
+
+`https://www.torproject.org/download/download-easy.html`
+
 如果你的 ISP 阻止你访问 Tor 网站，请执行以下操作：
 
 - 给 Tor 发送邮件。告诉他们你的情况。你可以收到一封带有 Tor 安装包的自动回复邮件。
 - 去 Google。搜索任何缓存的网站，包括 Tor，这些网站可能包含下载所需的安装包。许多技术网站只是在发生全面核战争时才会留存它。
-- 访问 rt.torproject.org 并请求他们镜像它。
+- 访问`rt.torproject.org`并请求他们镜像它。
 - 让朋友通过邮件给你发送安装包。顺便要求的 Tails。
 - 如果你在 Tor 主站以外的地方获取了它，请**验证（VERIFY）**签名，即使是朋友手递交付的也要验证。我曾从朋友分享的他们认为是“干净”的应用中获得过病毒。
 
@@ -3152,25 +2866,20 @@ https://www.torproject.org/download/download-easy.html
 在这一点上，你可能会被诱惑安装你喜欢的插件。多个对你的匿名性毫无助益的插件可能会通过所谓的“浏览器指纹识别”（Browser fingerprinting）帮助某人在 Tor 上定位你的位置。
 
 现在你有了一些选择。
+
 一种是贡献你的带宽，这会让其他 Tor 用户过得更方便，但伴随着风险。关于这一点稍后会详述，但现在只需知道你用 Tor 浏览器访问的每一个页面都将通过 Tor 网络匿名路由。
 
 然而，关于安全，有一个你需要知道的重要细节，那就是你的 Tor 设置仅仅是起点。我们仍处于婴儿阶段。
 
-## 四
+## 四 Tor 不能做什么
 
-## Tor 不能做什么
 现在谈谈 Tor 不能做的事情，或者至少是不能做得很好的。这可能会改变，所以不要迷信它。
 
-1. Tor 无法保护你免受附件的影响。
-这不仅限于可执行文件，还包括任何可以运行的东西。这意味着 Flash 视频以及 RealPlayer。如果你使用它，就会向对手发送真实的 IP 地址。除非你信任来源，否则永远不要运行任何执行文件。尽可能使用开源软件。
+1. Tor 无法保护你免受附件的影响。这不仅限于可执行文件，还包括任何可以运行的东西。这意味着 Flash 视频以及 RealPlayer。如果你使用它，就会向对手发送真实的 IP 地址。除非你信任来源，否则永远不要运行任何执行文件。尽可能使用开源软件。
 
-2. Tor 无法运行 torrent。
-老生常谈了，不是吗？仍有很多人这样做。问题会让所有人的 Tor 体验变得糟糕。它太消耗带宽了。除了某些出口节点阻止此类流量，由于 Tor 支持 TCP，你可以对在 Tor 上使用 torrent 得结论。VPN 是更好的选择。
+2. Tor 无法运行 torrent。老生常谈了，不是吗？仍有很多人这样做。问题会让所有人的 Tor 体验变得糟糕。它太消耗带宽了。除了某些出口节点阻止此类流量，由于 Tor 支持 TCP，你可以对在 Tor 上使用 torrent 得结论。VPN 是更好的选择。
 
 3. 如果你像扔纸豆一样到处你的真实邮箱，Tor 无法掩盖你的身份。如果你在使用 Tor 时在网站上提供真实邮箱，请认为你的匿名性已被破坏。虚拟身份绝不能与真实身份匹配。永远不要。忽视这一规则的人会被黑、被抢、被捕，或被怪兽虐待。
-
-
-
 
 # Invisibox - 让隐私变得简单
 
@@ -3208,6 +2917,8 @@ Google 如何看待 Tor？老实说，我怀疑他们试着不去想。
 
 ## SpiderOak
 
+
+
 通常情况下，我不建议对任何你想要私密的内容使用云服务。SpiderOak 是一个例外，但带有保留。它是 Dropbox 的一个不错替代方案，因为它采用了“零知识”（开发者是这么说的）编码，当你安装它时，会在客户端创建一组加密密钥。当你将数据上传到 SpiderOak 服务器时，它们会在你的计算机上被加密然后上传。再次，根据开发者的说法如此。
 
 他们声称，即使传票要求订阅者数据，他们无法提供，因为只有你拥有密钥。不坏，但我仍然不会上传任何未加密的内容。例如一个容器文件。
@@ -3224,16 +2935,17 @@ Google 如何看待 Tor？老实说，我怀疑他们试着不去想。
 
 使用 DVD 的缺点是，每次更新 Tails 时都必须重新刻录。不太方便。所以让我们把它安装到 USB 闪盘上吧。
 
-- 1.) 在 https://tails.net/install/win/usb/index.html 下载 Tails 安装程序。
-- 你必须首先将其安装在某处（如 DVD），然后克隆到 USB 闪盘或 SD 卡。
-- 2.) 点击 Applications（应用程序） -> Tails -> Tails install（安装 Tails）开始安装。
-- 3.) 选择 Clone & Install to SD card or USB Memory Stick（克隆并安装到 SD 卡或 USB 内存棒）。插入你的设备，然后在目标设备下拉菜单中扫描设备。你会收到一个关于覆盖设备上任何内容的警告，等等。选择你的设备并确认安装。
+1. 在 `https://tails.net/install/win/usb/index.html` 下载 Tails 安装程序。
+2. 你必须首先将其安装在某处（如 DVD），然后克隆到 USB 闪盘或 SD 卡。
+3. 点击 Applications（应用程序） -> Tails -> Tails install（安装 Tails）开始安装。
+4. 选择 Clone & Install to SD card or USB Memory Stick（克隆并安装到 SD 卡或 USB 内存棒）。插入你的设备，然后在目标设备下拉菜单中扫描设备。你会收到一个关于覆盖设备上任何内容的警告，等等。选择你的设备并确认安装。
 
 ### Tails 的局限性
 
 Tails 或 Tor 都不会自动加密你的文档。你必须使用 GnuPG 或 LUKS（已包含）来实现，请注意某些如 Word 或 Atlantis 的文档可能在文档内部包含你的注册信息（2013 年，亚马逊自出版者发现，通过查看上述应用可能会暴露作者的真实身份。哎。）我个人在注册任何与 Tor 或 Tails 配合使用的应用时都会虚假信息。
 
 其他值得注意的事：
+
 - Tails 不会清除文档元数据
 - Tails 不向 ISP 隐藏你使用它的事实（除非使用 Tor 桥）。他们看不到你在 Tor 上做什么，但你知道自己在使用它。
 - Tails 对人为错误无效。尝试不要用同一个 Tails 会话启动两个不同的项目。使用独立的会话。这种隔离身份的方法有助于会话的强匿名性。
@@ -3242,20 +2954,17 @@ Tails 或 Tor 都不会自动加密你的文档。你必须使用 GnuPG 或 LUKS
 
 Firefox 并不是杀龙的唯一方法。还有 Chrome。是的，它是 Google 的，尽管 Google 背离了“不作恶”的格言，但就像其他事情一样，机会留准备者。准备工作：
 
-- I. 安装 NoScript 插件。它允许你控制每个页面运行哪些脚本。
-- II. FlashControl 是 Firefox 的一个不错替代方案。它允许你阻止 Flash。
-- III. Adblock。这个在防御所有恶意软件方面的效果简直惊人。
-- IV. Chrome 版 User-agent Switcher。安装它。出门不带它（0.0.0）。）。它可以伪造和模拟用户代理字符串。这将欺骗很多恶意软件，让它们认为你真的在使用 IE 而不是 Firefox 或 Chrome。
+1. 安装 NoScript 插件。它允许你控制每个页面运行哪些脚本。
+2. FlashControl 是 Firefox 的一个不错替代方案。它允许你阻止 Flash。
+3. Adblock。这个在防御所有恶意软件方面的效果简直惊人。
+4. Chrome 版 User-agent Switcher。安装它。出门不带它（0.0.0.）。它可以伪造和模拟用户代理字符串。这将欺骗很多恶意软件，让它们认为你真的在使用 IE 而不是 Firefox 或 Chrome。
 
+拦截所有内容：忽略所有列表并并在所有网站上拦截 `canvas` API。
 
-
-
-
-- 拦截所有内容：忽略所有列表并并在所有网站上拦截 <canvas> API。
-- 仅允许白名单：仅允许白名单中的网站使用 <canvas> API。
-- 询问权限：如果网站不在白名单也不在黑名单中，每当调用该 API 时，系统都会询问用户是否允许该网站使用 <canvas> API。
-- 仅拦截黑名单：仅对黑名单上的网站拦截 <canvas> API。
-- 允许所有内容：忽略所有列表并允许所有网站使用 <canvas> API。
+- 仅允许白名单：仅允许白名单中的网站使用 `canvas` API。
+- 询问权限：如果网站不在白名单也不在黑名单中，每当调用该 API 时，系统都会询问用户是否允许该网站使用 `canvas` API。
+- 仅拦截黑名单：仅对黑名单上的网站拦截 `canvas` API。
+- 允许所有内容：忽略所有列表并允许所有网站使用 `canvas` API。
 
 如你所见，这些是功能强大的工具。
 
@@ -3268,11 +2977,13 @@ Javascript - 像躲避瘟疫一样避开它。你可能会注意到在 Firefox �
 这里存在一种权衡。一方面，我们应该默认开启 JavaScript，以便用户预期的网站能够运行；另一方面，我们应该默认禁用 JavaScript，以更好地防御浏览器漏洞（这不仅仅是理论上的担忧！）。但还有第三个问题：网站可以很容易判断你是否已允许它们使用 JavaScript，如果你默认禁用 JavaScript 然后只允许少数网站运行脚本（大多数人使用 NoScript 的方式），那么你选择的白名单网站就会变成一种类似 Cookie，使你被识别（且无法区分），从而损害了你的匿名性。
 
 ### Ghostery 和 Ghostrank
+
 并不致命，在 Tor 上由于没用处，因为 Tor 本身已经禁用了追踪。如果你确实使用它，它们可能会改变你的浏览器“指纹”，尽管程度未到破坏匿名性的程度。Ghostery 无论你是否在使用 Tor 都会拦截任何追踪脚本。但如果你想增强匿名性，请使用 DuckDuckGo。
 
 # Adblock (广告拦截器)
 
 这可能也会改变你的指纹。Adblock Plus 默认开启了“可访问广告”，而且 Adblock 多年来一直深陷各种丑闻，暗示 Google 向 Adblock 的 CEO 支付费用以展示 Google Ads。
+
 此外，Tor 浏览器包（Tor Browser Bundle）的基本理念是尽可能少使用插件。他们认为 TorButton、NoScript 和 HTTPS Everywhere 足够保护匿名性，而不会增加额外插件带来的风险。
 
 ## Whonix 与 Tor
@@ -3300,11 +3011,15 @@ Javascript - 像躲避瘟疫一样避开它。你可能会注意到在 Firefox �
 | 使用 Java/Javascript | |
 
 以下是一个中等安全系统的示例：
+
 - 在你选择的 Linux 发行版上宿主机 Whonix
 - 使用你信任的 VPN（为了隐私和匿名）
 - 使用 Macchanger 每次会话伪造 MAC 地址（Script 不向网站隐藏你的 MAC 地址！）如果 Macchanger 不符合你的要求，可以尝试 Technium MAC Address Changer。
 - 使用咖啡 WiFi 时避免常规通话
-- 了解你计划使用的区域内的 MAC 地址
+
+
+
+# 了解你计划使用的区域内的 MAC 地址
 
 我们提到了 MAC 地址。
 
@@ -3314,7 +3029,8 @@ Javascript - 像躲避瘟疫一样避开它。你可能会注意到在 Firefox �
 
 如果你在一个即使提到 Tor 都会带来麻烦的共产主义地狱，在 Whonix 中使用桥接可能真的是你的救命稻草。
 
-什么是桥接
+## 什么是桥接
+
 混淆工具，用来向窥探的 ISP 或政府隐藏你的 Tor 使用，他们可能会看到你在使用 Tor，但不知道你正在做什么。为此，桥接是进入 Tor 网络的替代方式。有些是私有的。很多是公开的。有些列在 Tor 官方首页上。
 
 ## 桥接不是什么
@@ -3324,10 +3040,6 @@ Javascript - 像躲避瘟疫一样避开它。你可能会注意到在 Firefox �
 桥接必须手动添加，因为 Whonix 没有自动安装方法，但并不困难。你只需要将它们输入正确的目录：`tor/rc`。
 
 如果你使用的是图形界面的 Whonix-Gateway，请导航到：开始菜单 -> 应用程序 -> 设置 -> `tor/rc.examples`。要编辑你的 torrc 文件（添加桥接必需），导航到：开始菜单 -> 应用程序 -> 设置 -> `tor/rc`。然后添加你从 Tor 桥接页面复制的内容（如果你有私有桥接）。最后重启 Tor 使其生效。
-
-
-
-
 
 ## Tor 与 VPN
 
@@ -3356,6 +3068,7 @@ Javascript - 像躲避瘟疫一样避开它。你可能会注意到在 Firefox �
 存在一个问题：FBI 的硬派不喜欢这种态度。事实上，只要你通过 Tor 运行 VPN，他们很快就会采取行动。一个人同时使用这两种工具会引起怀疑吗？可能吧。
 
 来自 EFF.org：
+
 “司法部的调查部门正试图通过要求修改《联邦刑事诉讼规则》来绕过《第四修正案》的法律检查。这些程序性规则规定了执法机构如何进行刑事起诉。这被称为联邦规则第 41(b) 条，要求的更改将允许执法部门在目标计算机位置通过 Tor 或虚拟专用网络等技术工具隐藏的情况下，无需提供任何具体细节即可获得搜索电子数据的许可证。它还允许在计算机被故意损坏（例如通过僵尸网络，也通过常见的恶意软件和病毒）且位于五个或更多不同司法区的情况下执行搜索令。此外，该条款将允许调查人员无论信息存储在法院管辖范围内还是境外，扣收电子存储信息。”
 
 这种改变听起来像是一个技术调整，但与目前的程序相比是一个巨大的飞跃。
@@ -3366,22 +3079,17 @@ Javascript - 像躲避瘟疫一样避开它。你可能会注意到在 Firefox �
 
 但在美国，情况通常是这样的：
 
--   监视用户，看他在做什么。
--   通过重构案件为没收电脑/搜查/数据提供合理理由。
--   向直接访问订阅信息的相关人员施加压力。
--   发出传票要求解密订阅者的数据。如果他们做过一次，就可以再做一百次。没什么大不了。
+- 监视用户，看他在做什么。
+- 通过重构案件为没收电脑/搜查/数据提供合理理由。
+- 向直接访问订阅信息的相关人员施加压力。
+- 发出传票要求解密订阅者的数据。如果他们做过一次，就可以再做一百次。没什么大不了。
 
 ## 解决方案
 
 如果你打算走 VPN 路线，请使用 PGP：Pretty Good Privacy。永远、永远不要在 VPN 上传输明文数据，即使是提供 SSL 的 VPN也不行。
 
--   和警察说话永远对你没有帮助。即使在搜查的情况下也是如此。他们会在早上 6 点用枪指着醒你并控制你。
-
-
-
-
-
--   就像 PGP 应用一样，只不过比特币不是像 PGP 那样验证你的身份，而是验证你的余额。这正是比特币钱包大显身场的地方。再次，它并不是万灵妙药，而是我们可以利用的一种工具。
+- 和警察说话永远对你没有帮助。即使在搜查的情况下也是如此。他们会在早上 6 点用枪指着醒你并控制你。
+- 就像 PGP 应用一样，只不过比特币不是像 PGP 那样验证你的身份，而是验证你的余额。这正是比特币钱包大显身场的地方。再次，它并不是万灵妙药，而是我们可以利用的一种工具。
 
 就此点而言，比特币钱包在未来几年将不断加强匿名性的强化。它们将通过切断与我们真实身份的联系来实现这一点。噢，而且它们的发展也在不断进步。
 
@@ -3401,6 +3109,8 @@ Javascript - 像躲避瘟疫一样避开它。你可能会注意到在 Firefox �
 
 为了订阅 VPN 或使用比特币购买任何在线物品，都需要比特币钱包。我们有多种类型可选择。我们将逐一介绍并列出它们的优缺点。
 
+
+
 ## 桌面钱包
 
 这是我使用的，理由充分：我对它有绝对的控制权，更不用说，在别人的 Web 服务器上访问我的钱这种想法完全违背了匿名性的初衷。我永远不会将我的加密文件存储在“云端”，你也不应该这样做。至少，除非你有一个极其安全的系统。
@@ -3411,40 +3121,47 @@ Javascript - 像躲避瘟疫一样避开它。你可能会注意到在 Firefox �
 
 如名所示，你随身携带它，像携带信用卡一样进行购买。方便快捷。
 
-有很多种类型的钱包，比如 Coinbase 和 Electrum，我发现 MultiBit 非常易学。它同时支持 Linux 和 Windows，并提供密码保护选项。它的界面看起来像 PGP，但对初学者友好且开源，所以没有后门。有利于匿名性。
+有很多种类型的钱包，比如 `Coinbase` 和 `Electrum`，我发现 `MultiBit` 非常易学。它同时支持 Linux 和 Windows，并提供密码保护选项。它的界面看起来像 `PGP`，但对初学者友好且开源，所以没有后门。有利于匿名性。
 
-# MultiBit Windows 安装
+### MultiBit Windows 安装
 
-现在我们来介绍此工具的清洁安装说明。下载安装程序。我们可能会遇到的问题可能是：Java 虚拟机 (JVM) 未正确找到，或者错误消息中显示“Failed to create selector”。解决方案是更改兼容性设置：右键点击图标 — 属性 — 兼容性。选择：“以 Windows SP3 兼容模式运行此程序”。勾选：“以管理员身份运行此程序”。
+现在我们来介绍此工具的清洁安装说明。下载安装程序。我们可能会遇到的问题可能是：Java 虚拟机 (`JVM`) 未正确找到，或者错误消息中显示“Failed to create selector”。解决方案是更改兼容性设置：右键点击图标 — 属性 — 兼容性。选择：“以 Windows SP3 兼容模式运行此程序”。勾选：“以管理员身份运行此程序”。
 
-# MultiBit Linux 安装
+### MultiBit Linux 安装
 
-如果你是 Linux 粉丝（如果你追求匿名性，你应该是这样的），请在这里下载安装程序：https://multibit.org/help/v0.5/help_install.html 打开终端窗口并创建可执行文件：
+如果你是 Linux 粉丝（如果你追求匿名性，你应该是这样的），请在这里下载安装程序：`https://multibit.org/help/v0.5/help_install.html` 打开终端窗口并创建可执行文件：
 
 ```bash
 chmod +x multibit-0.5-linux.jar
 ```
+
 运行安装程序：
+
 ```bash
 java -jar multibit-0.5-linux.jar
 ```
+
 安装。之后，你将在“应用程序 | 其他”菜单中拥有一个启动 MultiBit 的快捷方式。如果你没有看到 MultiBit 快捷方式，可以通过以下操作手动运行 MultiBit：
+
 ```bash
 cd [path/to/directory]
 java -jar multibit-exe.jar
 ```
+
 现在是时候购买比特币了。有几种选择，我们要做的是离线执行以购买无法追溯的比特币。现金。
 
-LocalBit 看起来不错，而 TradeBit 比较低迷，所以我们选择 LocalBit。。在选择了一个比特币平台后，你必须（匿名地）注册网站，但请注意费用会根据交易交易量而异。对于这笔交易，使用你注册时使用的邮箱。这意味着：
-- Tor 浏览器/Tails
+`LocalBit` 看起来不错，而 `TradeBit` 比较低迷，所以我们选择 `LocalBit`。。在选择了一个比特币平台后，你必须（匿名地）注册网站，但请注意费用会根据交易交易量而异。对于这笔交易，使用你注册时使用的邮箱。这意味着：
+
+- `Tor` 浏览器/`Tails`
 - 机器上没有 Facebook 或或其他社交媒体的 Cookie
 - 仅通过 Tor 访问
 
 在卖家的页面选择“购买”以及我们想要购买的金额。一旦资金从托管账户转移，你将收到通知。注意，你交易的交易员可能会看到你的财务信息，例如。
 
-# 使用 Tor 支付 VPN
+### 使用 Tor 支付 VPN
 
-现在是时候匿名支付 VPN 了。我们有几种选择，让我们选择 Air VPN，每月 9 美元，它接受比特币支付。
+现在是时候匿名支付 VPN 了。我们有几种选择，让我们选择 `Air VPN`，每月 9 美元，它接受比特币支付。
+
 第一：注册该服务。不要在任何其他网站上填写你的信息，如用户名或密码。此外，由于我们不需要输入银行信息，没有任何轨迹可以追溯到我们。我们使用的邮箱是临时邮箱（你用 Tor 注册的吗？）。
 
 第二：给他们钱包地址。点击发送。
@@ -3453,17 +3170,15 @@ LocalBit 看起来不错，而 TradeBit 比较低迷，所以我们选择 LocalB
 
 就像任何 Usenet 服务一样，VPN 服务将向你的邮箱发送确认。之后你可以在比特币钱包中看到这笔支付的详情。
 
-# Tor 之外的真实身份
+### Tor 之外的真实身份
 
 这是一个大问题。
 
 我曾犯过的错，因为即使是匿名爱好者在群体压力下有时也会做蠢事，比如在 Tor 上使用 Facebook（幸好是早期）。我从那次面试中出来时感到困惑，且失业，将隐私看作是双刃剑，因为许多高薪雇主需要你有在线形象。
 
 “因为我重视自由。”
+
 面试官可能会问：“我注意到你是 Tor 的大忠实粉丝。你能详细说明你为什么需要使用匿名服务吗？我们希望员工具有透明度。”
-
-
-
 
 老实说，我感到有点被骗了。当我开车回家时，后来我听到的某些私语在我耳边变得像轰鸣的火车一样响亮：不喜欢 Facebook 上的某人？那你可能就不喜欢和他们一起工作。
 
@@ -3477,18 +3192,18 @@ LocalBit 看起来不错，而 TradeBit 比较低迷，所以我们选择 LocalB
 
 我的解决方案是在社交场合中正确地划分我的公共身份和私人身份，并从简历中删除它的任何痕迹。事实上，我也没有在任何社交媒体网站上表现出我对比以下任何内容感兴趣：
 
-- PGP
+- `PGP`
 - 加密，或加密文件或操作系统
-- Tor 中继
-- I2P
-- 一般的 Freenet 匿名性
+- `Tor` 中继
+- `I2P`
+- 一般的 `Freenet` 匿名性
 - 与爱德华·斯诺登相关的任何内容
 
 大众就是如此。你无法仅仅依靠 Facebook、Twitter 或 Google 来尊重你在不向整个世界宣布的情况下使用 Tor 的自由。
 
 但有了 Tor，Google 就无法为了挖掘你的浏览会话来投放广告。没有广告 = 他们就没有汤喝。NBC 报道：“这家搜索引擎巨头将从 11 月 11 日起更改其服务条款。你对餐厅、商店和产品的评价，以及在 Google Play 商店购买的歌曲和其他内容，可能会出现在你的朋友、人脉和更广泛的公众在 Google 上搜索时显示的广告中。该公司将该功能称为‘共享背书’。”
 
-所以我对我做的一切都加了防火墙。我使用 Ghostery 处理社交网站和关于我的其他伪匿名细节。事实上，我试图避免 Tor 与任何社交媒体网站之间的任何关联，就像避免汽桶和点燃的火柴一样。
+所以我对我做的一切都加了防火墙。我使用 `Ghostery` 处理社交网站和关于我的其他伪匿名细节。事实上，我试图避免 Tor 与任何社交媒体网站之间的任何关联，就像避免汽桶和点燃的火柴一样。
 
 ## 匿名霸凌者
 
@@ -3500,7 +3215,7 @@ LocalBit 看起来不错，而 TradeBit 比较低迷，所以我们选择 LocalB
 
 我记得 8 年级有一个特别邪恶的物种。他是那群人中最糟糕的。一个行走的巨人，吃东西时流汗，仿佛被《形形》（The Thing）里的东西占领了。要么是魔多。他确实在我上方举起一只手臂，声音听起来像一把双刃斧劈开了空气。
 
-骚扰一天比一天变得更加激烈火热。后来我得知，他的整个家庭，也许是他整个代人，都是在最坏人中的坏人中长大的——那些通过恐吓他人来成名的霸凌者。他们中的每一个人都成了新奥尔良地区的警察。其中一个死于糖尿病。另一个去加入了 ATF（烟酒烟酒和火器执法局）打击名为药物的邪恶灾害（结果如何呢？）。
+骚扰一天比一天变得更加激烈火热。后来我得知，他的整个家庭，也许是他整个代人，都是在最坏人中的坏人中长大的——那些通过恐吓他人来成名的霸凌者。他们中的每一个人都成了新奥尔良地区的警察。其中一个死于糖尿病。另一个去加入了 `ATF`（烟酒烟酒和火器执法局）打击名为药物的邪恶灾害（结果如何呢？）。
 
 我了解这些混蛋的一切，而不仅仅是他们的名字。我知道他们的父母是谁。他们是做什么工作的。他们和谁混在一起。他们爸爸喝什么啤酒，看什么色情杂志。在高中，八卦像野火一样蔓延，没有任何一个识别信息的细节被遗漏。
 
@@ -3510,9 +3225,11 @@ LocalBit 看起来不错，而 TradeBit 比较低迷，所以我们选择 LocalB
 
 我们可以在 Facebook 上看到霸凌是如何蔓延的。像炭疽一样。当表现出一丝恐惧时，小狼崽们就会排斥一个被拒绝的成员，他们在几乎不了解他或他为什么被成为目标的情况下将其处死。真实名？查收通过。真实地址？是的。现在一切都是可追溯的，就像以前一样。兽人仍然会像鲨鱼遇到受伤的海豚一样，陷入疯狂地冲过来。
 
-但有了 Tor，Google 就无法为了挖掘你的浏览会话来投放广告。没有广告 = 他们就没有汤喝。NBC 报道：“这家搜索引擎巨头将从 11 月 11 日起更改其服务条款。你对餐厅、商店和产品的评价，以及在 Google Play 商店购买的歌曲和其他内容，可能会出现在你的朋友、人脉和更广泛的公众在 Google 上搜索时显示的广告中。该公司将该功能称为‘共享背书’。”
 
-所以我对我做的一切都加了防火墙。我使用 Ghostery 处理社交网站和关于我的伪匿名细节。事实上，我试图避免 Tor 与任何社交媒体网站之间的任何关联，就像避免汽桶和点燃的火柴一样。
+
+但有了 `Tor`，`Google` 就无法为了挖掘你的浏览会话来投放广告。没有广告 = 他们就没有汤喝。NBC 报道：“这家搜索引擎巨头将从 11 月 11 日起更改其服务条款。你对餐厅、商店和产品的评价，以及在 Google Play 商店购买的歌曲和其他内容，可能会出现在你的朋友、人脉和更广泛的公众在 Google 上搜索时显示的广告中。该公司将该功能称为‘共享背书’。”
+
+所以我对我做的一切都加了防火墙。我使用 `Ghostery` 处理社交网站和关于我的伪匿名细节。事实上，我试图避免 `Tor` 与任何社交媒体网站之间的任何关联，就像避免汽桶和点燃的火柴一样。
 
 ## 匿名霸凌者
 
@@ -3520,7 +3237,7 @@ LocalBit 看起来不错，而 TradeBit 比较低迷，所以我们选择 LocalB
 
 你在学校里被霸凌过吗？我记得 7 年级时，每个留着龅牙、挥着尖刺棒的家伙都把我推得像一个湿掉的雪球，而且并没有到此为止。我多希望它就此结束，但由于没有阿拉丁的神灯，事情变得很困难。我看着他们像癌症一样蔓延，泥泞地向上到其他年级寻找更容易的受害者。从 9 年级到 12 年级，甚至进入了职场。如果有空缺，那些霸凌者会成为伟大的领导者或首领，他们的残忍和愤怒就是如此。我记得 8 年级有一个特别邪恶的物种。他是那群人中最糟糕的。一个行走的巨人，吃东西时流汗，仿佛被《形形》里的东西占领了。要么是魔多。他确实在我上方举起一只手臂，声音听起来像一把双刃斧劈开了空气。骚扰一天比一天变得更加激烈火热。后来我得知，他的整个家庭，也许是他整个代，都是在最坏人中的坏人中长大的——那些通过恐吓他人来成名的霸凌者。他们中的每一个人都成了新奥尔良地区的警察。其中一个死于糖尿病。另一个去加入了 ATF 打击药物的邪恶灾害（结果如何呢？）。我了解这些混蛋的一切，而不仅仅是他们的名字。我知道他们的父母是谁。他们是做什么工作的。他们和谁混在一起。他们爸爸喝什么啤酒，看什么色情杂志。在高中，八卦像野火一样蔓延，没有任何一个识别信息的细节被遗漏。是的，我告诉了校长，一个叫贝弗利的大胖娘们，她以前的工作是在某家人力资源高层大楼里。我记得多次在那个办公室见到她，那里的挂着闪闪发光的奖项，就像野生动物猎人的办公室，我在想如果她有一把大象枪我可以借用。砰！我的麻烦结束了（13 岁的我是这么想的）。我那个马团杂技演员之间的会议是徒劳且相当尴尬的。完全没有什么积极的结果。然而，重点不在于没有结果，而在于即使我了解我每天面对的这种灾害的一切，也没有产生任何结果。知道他们的身份，嗯，没起太大用处。知道他们的名字没用。知道他们折磨了多少其他孩子没用，坦率地说，无论我们看了多少次《陆路狂战士》，孩子们就是不够聪明到结在一起进行攻击。
 
-我们可以在 Facebook 上看到霸凌是如何蔓延的。像炭疽一样。当表现出一丝恐惧时，小狼崽们就会排斥一个被拒绝的成员，他们在几乎不了解他或他为什么被成为目标的情况下将其处死。真实名？查收通过。真实地址？是的。现在一切都是可追溯的，就像以前一样。兽人仍然会像鲨鱼遇到受伤的海豚一样，陷入疯狂地冲过来。但有了 Tor，Google 就无法为了挖掘你的浏览会话来投放广告。没有广告 = 他们就没有汤喝。NBC 报道：“这家搜索引擎巨头将从 11 月 11 日起更改其服务条款。你对餐厅、商店和产品的评价，以及在 Google Play 商店购买的歌曲和其他内容，可能会出现在你的朋友、人脉和更广泛的公众在 Google 上搜索时显示的广告中。该公司将该功能称为‘共享背书’。”所以我对我做的一切都加了防火墙。我使用 Ghostery 处理社交网站和关于我的伪匿名细节。事实上，我试图避免 Tor 与任何社交媒体网站之间的任何关联，就像避免汽桶和点燃的火柴一样。
+我们可以在 Facebook 上看到霸凌是如何蔓延的。像炭疽一样。当表现出一丝恐惧时，小狼崽们就会排斥一个被拒绝的成员，他们在几乎不了解他或他为什么被成为目标的情况下将其处死。真实名？查收通过。真实地址？是的。现在一切都是可追溯的，就像以前一样。兽人仍然会像鲨鱼遇到受伤的海豚一样，陷入疯狂地冲过来。但有了 `Tor`，`Google` 就无法为了挖掘你的浏览会话来投放广告。没有广告 = 他们就没有汤喝。NBC 报道：“这家搜索引擎巨头将从 11 月 11 日起更改其服务条款。你对餐厅、商店和产品的评价，以及在 Google Play 商店购买的歌曲和其他内容，可能会出现在你的朋友、人脉和更广泛的公众在 Google 上搜索时显示的广告中。该公司将该功能称为‘共享背书’。”所以我对我做的一切都加了防火墙。我使用 `Ghostery` 处理社交网站和关于我的伪匿名细节。事实上，我试图避免 `Tor` 与任何社交媒体网站之间的任何关联，就像避免汽桶和点燃的火柴一样。
 
 ## 匿名
 
@@ -3530,16 +3247,13 @@ LocalBit 看起来不错，而 TradeBit 比较低迷，所以我们选择 LocalB
 
 当预告片被泄露或有人对某人说难听的话时，你可以打赌 IP 地址会被传唤。有时我想象许多前苏联官员正为互联网每年产生这么多告密者而发笑。颠覆到极致。
 
-是否可能发送一条对传唤无懈于失的消息？事实上，有很多方案可以选择来完成这项任务。以下是几个稳固的服务。结合 Tor，它们将为你提供一座虚拟堡垒。如果你的信息经过了加密，匿名性将翻倍。第一个是 TorGuard。
+是否可能发送一条对传唤无懈于失的消息？事实上，有很多方案可以选择来完成这项任务。以下是几个稳固的服务。结合 `Tor`，它们将为你提供一座虚拟堡垒。如果你的信息经过了加密，匿名性将翻倍。第一个是 `TorGuard`。
 
-TorGuard 允许用户在邮件中使用 PGP（良好的隐私），这样你不必担心被偷听。你获得 10MB 的空间以及带有移动支持的几层保护。第二个是 W3，可以与 Tor 连接，你只需要一个电子邮件地址来发送消息（最好用 PGP 加密——稍后会详细介绍）。另一个是 Guerrilla Mail。他们允许用户创建临时邮箱供随意使用。在点击发送后，邮件会立即从系统中删除。好吧，至少在一个小时内会删除。
+`TorGuard` 允许用户在邮件中使用 `PGP`（良好的隐私），这样你不必担心被偷听。你获得 10MB 的空间以及带有移动支持的几层保护。第二个是 `W3`，可以与 `Tor` 连接，你只需要一个电子邮件地址来发送消息（最好用 `PGP` 加密——稍后会详细介绍）。另一个是 `Guerrilla Mail`。他们允许用户创建临时邮箱供随意使用。在点击发送后，邮件会立即从系统中删除。好吧，至少在一个小时内会删除。
 
-所有这些服务的匿名性主张，如果我们不加密信息，将会显得非常薄弱——这引出了 PGP。
+所有这些服务的匿名性主张，如果我们不加密信息，将会显得非常薄弱——这引出了 `PGP`。
 
-PGP 是许多像我这样的老用户的加密标准，这实有易见。它从未被 NSA 或 FBI 破解过
-
-
-
+`PGP` 是许多像我这样的老用户的加密标准，这实有易见。它从未被 NSA 或 FBI 破解过
 
 或者任何情报机构，而且在量子计算机普及之前，它们可能无法破解。它通过密钥对工作，其中一个是公钥，另一个是私钥（你将用它来解密你的消息）。
 
@@ -3555,7 +3269,7 @@ PGP 是许多像我这样的老用户的加密标准，这实有易见。它从�
 
 2) 但如果你选择告诉妈妈，那么她就需要你的公钥（你把它发布在公钥服务器上了，对吧？）。然后你就可以通过你的私钥来读取它。她不知道这个密钥（感谢天谢地！）。
 
-3) 你可以在 Tor 或任何地方（例如 Freenet，其最高安全设置要求对朋友的暗网连接有绝对信任）对你想要发送的任何消息进行“签名”，以验证它确实是由你发送的。
+3) 你可以在 `Tor` 或任何地方（例如 Freenet，其最高安全设置要求对朋友的暗网连接有绝对信任）对你想要发送的任何消息进行“签名”，以验证它确实是由你发送的。
 
 除非诺曼·贝提斯（Norman Bates）拍了浴室戏并拿走了你的密钥。那时你妈妈就可以用你的公钥验证那确实是你本人。
 
@@ -3567,69 +3281,75 @@ PGP 是许多像我这样的老用户的加密标准，这实有易见。它从�
 
 将它们加密在容器中。始终打印你的密钥文件或短语，并存放在安全的地方。如果你丢失了它，所有用它加密的文档将永久丢失。没有后门，没有它就无法解密。此外，考虑在创建密钥对时设置一个有效期。
 
-如果你喜欢简单易用的界面，可以尝试用于 Google Gmail 的 Mymail-Crypt。这是一个插件，允许用户在方便的界面中使用 PGP 加密消息，但要确保你的浏览器是严密安全的，并且你信任它存放你的私钥。
+如果你喜欢简单易用的界面，可以尝试用于 Google Gmail 的 `Mymail-Crypt`。这是一个插件，允许用户在方便的界面中使用 `PGP` 加密消息，但要确保你的浏览器是严密安全的，并且你信任它存放你的私钥。
 
 # 更多事情
 
 与其加密文件并上传到不安全的地方，不如看看 AxCrypt 加密工具。如果你习惯上传到 Dropbox 或 Google Drive，这非常有用。只需记住，如果你向“云端”上传了加密文件，如果没有设置严格的安全规则，一旦该文件的密码被破解，你将不会知情。
 
-话如此，让我们为 Windows 配置 PGP - 安装 Gpg4Win - 接下来在 Kleopatra 中创建密钥，并右键点击“签名”选择“导出证书到服务器”（Export-Certificate-to-Server），以便将其发布到密钥服务器。找一个信赖的朋友来“签名”并建立信任。
+话如此，让我们为 Windows 配置 `PGP` - 安装 `Gpg4Win` - 接下来在 `Kleopatra` 中创建密钥，并右键点击“签名”选择“导出证书到服务器”(`Export-Certificate-to-Server`)，以便将其发布到密钥服务器。找一个信赖的朋友来“签名”并建立信任。
 
-- 使用随附的 Claws-Mail 客户端，或者如果你使用 Thunderbird，则使用 Enigma。
+- 使用随附的 `Claws-Mail` 客户端，或者如果你使用 `Thunderbird`，则使用 `Enigma`。
 
-- 通过 PGP 与你信赖的朋友往回发几消息以熟悉操作。
+- 通过 `PGP` 与你信赖的朋友往回发几消息以熟悉操作。
 
-- 可选：你可以设置 Yahoo/Gmail/Hotmail 过滤器，将任何包含“Begin PGP message”的消息转发到更私私的账户。
+- 可选：你可以设置 Yahoo/Gmail/Hotmail 过滤器，将任何包含“`Begin PGP message`”的消息转发到更私私的账户。
 
 # Tor 即时消息包
 
-NSA（美国国家安全局）掌握 Skype、Yahoo Chat 和其他即时消息服务并非秘密，但只要 Tor 开发团队知晓，他们就可以采取行动。
+`NSA`（美国国家安全局）掌握 `Skype`、`Yahoo Chat` 和其他即时消息服务并非秘密，但只要 `Tor` 开发团队知晓，他们就可以采取行动。
 
-现在介绍 Tor 即时消息包。
+现在介绍 `Tor` 即时消息包。
 
-真正的匿名性是该应用程序的目标。它由开发 Tor 浏览器包的同一人构建，与该应用程序一样，它将所有通信通过 Tor 中继节点进行路由……双向加密，并躲避 NSA 的窥视。
 
-还有 Torchat。
 
-Torchat 类似于 Yahoo 的即时通讯工具，提供加密聊天甚至文件共享功能。由于它是基于 Tor 构建的，你可以确保你所说的话以及对谁说具有绝对隐私。它提供 Windows 和 Mac 版本，无需安装。只需在任何地方解压并运行（最好从加密硬盘或 USB 驱动器运行）标题为蓝色地球符号的“Torchat”。
+# 真正的匿名性是该应用程序的目标
 
-一些实用的应用：
+它由开发 Tor 浏览器包的同一人构建，与该应用程序一样，它将所有通信通过 Tor 中继节点进行路由……双向加密，并躲避 NSA 的窥视。
 
-ChatSecure - ChatSecure 主要用于移动端消息。来自其网站：Guardian Project 创建了易用的开源软件，可以解决……
+## Torchat
 
-Telegram - 此应用专注于极速消息，并允许发送图片/视频。还有“秘密聊天”提供加密会话，你甚至可以设置应用在之后永久删除所有消息。
+`Torchat` 类似于 Yahoo 的即时通讯工具，提供加密聊天甚至文件共享功能。由于它是基于 Tor 构建的，你可以确保你所说的话以及对谁说具有绝对隐私。它提供 Windows 和 Mac 版本，无需安装。只需在任何地方解压并运行（最好从加密硬盘或 USB 驱动器运行）标题为蓝色地球符号的“`Torchat`”。
 
-CryptoCat - 被誉为 Facebook、Twitter 等社交媒体的替代品，CryptoCat 使用 AES 标准为你提供加密通信。
+## 一些实用的应用
 
-Freetet - 这是全球范围内文件共享或任何形式的匿名系统的鼻祖。但如果你有耐心学习它的暗网功能，对于绝对匿名和言论自由，没有比这更好的工具。
+### ChatSecure
+`ChatSecure` 主要用于移动端消息。来自其网站：Guardian Project 创建了易用的开源软件，可以解决……
 
-来自网站：Freetenet 是一种免费软件，让你能够匿名共享文件、浏览和发布“自由站点”（仅能通过 Freetenet 访问的网站）并在论坛上聊天，而无需担心审查。Freetenet 是去中心化的，使其不易受到攻击，如果在“暗网”模式下使用（用户仅与朋友连接），将很难被检测。
+### Telegram
+此应用专注于极速消息，并允许发送图片/视频。还有“秘密聊天”提供加密会话，你甚至可以设置应用在之后永久删除所有消息。
 
-通过 Freetenet 节点进行的通信是加密的，并通过其他节点路由，这使得极难确定是谁在请求信息以及内容是什么。
+### CryptoCat
+被誉为 Facebook、Twitter 等社交媒体的替代品，`CryptoCat` 使用 AES 标准为你提供加密通信。
+
+### Freetet
+这是全球范围内文件共享或任何形式的匿名系统的鼻祖。但如果你有耐心学习它的暗网功能，对于绝对匿名和言论自由，没有比这更好的工具。
+
+来自网站：`Freetenet` 是一种免费软件，让你能够匿名共享文件、浏览和发布“自由站点”（仅能通过 `Freetenet` 访问的网站）并在论坛上聊天，而无需担心审查。`Freetenet` 是去中心化的，使其不易受到攻击，如果在“暗网”模式下使用（用户仅与朋友连接），将很难被检测。
+
+通过 `Freetenet` 节点进行的通信是加密的，并通过其他节点路由，这使得极难确定是谁在请求信息以及内容是什么。
 
 用户通过提供带宽和部分硬盘（称为“数据存储”）来存储文件，向网络贡献。文件根据其流行程度自动保留或删除，最不受欢迎会被丢弃，为较新或更受欢迎的内容腾空间。文件是加密的，因此通常用户无法轻易发现其数据存储中的内容，并希望不会因此承担责任。
 
-一个最近的重要进展（极少数其他网络具备这一特性）是“暗网”：通过仅连接到他们信任的人，用户可以大大减少自己的脆弱性，但仍然通过朋友的朋友等连接到全球网络。这使得人们可以在 Freetenet 可能违法的地方使用 Freetenet，使得政府很难封锁它，并且不依赖于隧道到“自由
+一个最近的重要进展（极少数其他网络具备这一特性）是“暗网”：通过仅连接到他们信任的人，用户可以大大减少自己的脆弱性，但仍然通过朋友的朋友等连接到全球网络。这使得人们可以在 `Freetenet` 可能违法的地方使用 `Freetenet`，使得政府很难封锁它，并且不依赖于隧道到“自由世界”。
 
-“世界”。
-
-这并不像使用 Usenet 服务商提供的新闻组阅读器那么简单。不，先生，Freetet 需要耐心。使用 Fuqid（Freetet 主程序的前端应用），可能需要花费一个小时，你才能对组进行“订阅”或以像使用 Usenet 那样进行下载。某些组（如 Freetet 组和其他技术性组）会立即可用，但消息很少。时间会解决这个问题。所以，如果你计划订阅很多组，就让它在柜子里运行并遗忘它一天左右吧。
+这并不像使用 Usenet 服务商提供的新闻组阅读器那么简单。不，先生，`Freetet` 需要耐心。使用 `Fuqid`（`Freetet` 主程序的前端应用），可能需要花费一个小时，你才能对组进行“订阅”或以像使用 Usenet 那样进行下载。某些组（如 `Freetet` 组和其他技术性组）会立即可用，但消息很少。时间会解决这个问题。所以，如果你计划订阅很多组，就让它在柜子里运行并遗忘它一天左右吧。
 
 这种等待是值得的。
 
 ## Frost & Fuqid
 
-我推荐的两个免费前端是：Frost 和 Fuqid。Frost 已经有了很多改进，但我建议你先尝试 Fuqid，因为它是 Freetet 的第一个外部应用程序，充当文件的插入/下载管理器。Fuqid 的全称是：用于 Windows 或 Linux wine 上的队列插入和下载 Freetet 实用程序。
+我推荐的两个免费前端是：`Frost` 和 `Fuqid`。`Frost` 已经有了很多改进，但我建议你先尝试 `Fuqid`，因为它是 `Freetet` 的第一个外部应用程序，充当文件的插入/下载管理器。`Fuqid` 的全称是：用于 Windows 或 Linux wine 上的队列插入和下载 `Freetet` 实用程序。
 
-Freetet 的文件大小位于 Freetet 自身：USK#LESBxXZERhGWQHI11tav7CvZY9ZSKGbCnsD7txqX0I,nPOCHuKuvl KHB-W8HH9iDM,AQACAAE/Fuqid/
+`Freetet` 的文件大小位于 `Freetet` 自身：`USK#LESBxXZERhGWQHI11tav7CvZY9ZSKGbCnsD7txqX0I,nPOCHuKuvl KHB-W8HH9iDM,AQACAAE/Fuqid/`
 
-你需要将上述内容粘贴到 Freetet 控制面板中显示“Key”的地方。如果你是该系统的新手，加载可能需要几分钟。
+你需要将上述内容粘贴到 `Freetet` 控制面板中显示“Key”的地方。如果你是该系统的新手，加载可能需要几分钟。
 
-安装完成后，在左侧的板（boards）列表右键点击并选择“Add new board”。在名称处输入“fuqid-announce”（不带引号）。你现在会在板列表中找到一个名为“fuqid-announce”的新板。
+安装完成后，在左侧的板（boards）列表右键点击并选择“`Add new board`”。在名称处输入“`fuqid-announce`”（不带引号）。你现在会在板列表中找到一个名为“`fuqid-announce`”的新板。
 
-右键点击此板，并选择“Configure selected board”。这会弹出一个新窗口。在该窗口上勾选“Secure board”将其从公共板更改。现在在“Public key”部分粘贴下方的密钥：SSK/qOY-E5SKRU66pmKH64xa~R~w3xhMS5ZZtnqpEGoCVVV,HTCVdWChaeebfiQE,AQACAAE
+右键点击此板，并选择“`Configure selected board`”。这会弹出一个新窗口。在该窗口上勾选“Secure board”将其从公共板更改。现在在“Public key”部分粘贴下方的密钥：`SSK/qOY-E5SKRU66pmKH64xa~R~w3xhMS5ZZtnqpEGoCVVV,HTCVdWChaeebfiQE,AQACAAE`
 
-现在你已经在你的 Frost 板中添加了 Fuqid 的公告。Fuqid 的最新发布将与 FMS 上的 fuqid 板一起发布在此板上。有问题吗？请直接在名为 Fuqid 的 Frost 或 FMS 板提问。
+现在你已经在你的 `Frost` 板中添加了 `Fuqid` 的公告。`Fuqid` 的最新发布将与 FMS 上的 `fuqid` 板一起发布在此板上。有问题吗？请直接在名为 `Fuqid` 的 `Frost` 或 FMS 板提问。
 
 ## 密码
 
@@ -3643,7 +3363,7 @@ Freetet 的文件大小位于 Freetet 自身：USK#LESBxXZERhGWQHI11tav7CvZY9ZSK
 
 很简单。使用一个只有你才能容易记住的密码短语（passphrase）。首先写下每个单词的首字母，注意大小写和位置。在其中插入符号。
 
-上周日，妻子给我买了一块劳力士手表，它太丑了。换后的密码是：LS,tbwmarwai2u。上述内容对黑客来说很难猜，对你来说很容易记……假设你擅长替换法。
+上周日，妻子给我买了一块劳力士手表，它太丑了。换后的密码是：`LS,tbwmarwai2u`。上述内容对黑客来说很难猜，对你来说很容易记……假设你擅长替换法。
 
 ## 更改密码
 
@@ -3661,7 +3381,7 @@ Freetet 的文件大小位于 Freetet 自身：USK#LESBxXZERhGWQHI11tav7CvZY9ZSK
 
 ### Diceware
 
-如果你必须存储密码，生成唯一随机密码的良好选择是 Diceware——你获得的任何密码的过期日期都是创建时的月份。你可以将任何密码复制到文本文件中，然后对其进行加密并发送给自己，或将其放在可移动的（加密）驱动器或 USB 闪盘上。
+如果你必须存储密码，生成唯一随机密码的良好选择是 `Diceware`——你获得的任何密码的过期日期都是创建时的月份。你可以将任何密码复制到文本文件中，然后对其进行加密并发送给自己，或将其放在可移动的（加密）驱动器或 USB 闪盘上。
 
 记住：Tor 并不能提高你的系统应对日常攻击的安全性。它只提高了在线安全性，而且这种提高也仅在使用得当的情况下。Tor 并不知道你的 Windows 版本
 
@@ -3674,10 +3394,12 @@ Freetet 的文件大小位于 Freetet 自身：USK#LESBxXZERhGWQHI11tav7CvZY9ZSK
 那么，人是如何感染的呢？
 
 - 打开邮件附件
-- 在 P2P 网络上运行 .exe 文件
-- 使用过时的浏览器访问受感染的网站
-- NSA，如果他们能打通关系有些用户使用它们来跟踪员工的生产力。有些妻子通过 USB（硬件版）连接一个，查看丈夫晚上睡觉后和谁聊天。在孩子的电脑上使用它们。
 
+- 在 P2P 网络上运行 `.exe` 文件
+
+- 使用过时的浏览器访问受感染的网站
+
+- NSA，如果他们能打通关系有些用户使用它们来跟踪员工的生产力。有些妻子通过 USB（硬件版）连接一个，查看丈夫晚上睡觉后和谁聊天。在孩子的电脑上使用它们。
 
 怀疑配偶或孩子想要访问父亲存储的色情资源。按键会被记录在 RAM 内存中。无需安装。
 
@@ -3689,13 +3411,15 @@ Freetet 的文件大小位于 Freetet 自身：USK#LESBxXZERhGWQHI11tav7CvZY9ZSK
 
 - 使用虚拟键盘。没有按键 = 没有记录！
 
-- 使用 Guarded ID 防止黑客捕你的按键。它通过打乱你输入的所有内容来实现，使任何信息对黑客来说都毫无用处。
+- 使用 `Guarded ID` 防止黑客捕你的按键。它通过打乱你输入的所有内容来实现，使任何信息对黑客来说都毫无用处。
 
-- 使用良好的防火墙阻止键盘记录器发送你的数据。一年前，我的 Comodo 防火墙在我没有进行在线活动时，提醒我存在空空的可疑网络活动。结果发现我感染了 Win64/Alureon 木马。我不得不使用 Malwarebytes 来检测并删除它。Norton 简直毫无用处！
+- 使用良好的防火墙阻止键盘记录器发送你的数据。一年前，我的 `Comodo` 防火墙在我没有进行在线活动时，提醒我存在空空的可疑网络活动。结果发现我感染了 `Win64/Alureon` 木马。我不得不使用 `Malwarebytes` 来检测并删除它。`Norton` 简直毫无用处！
 
 ## 九
 
 ### 暗网市场
+
+
 
 考虑到所讨论的漏洞，暗网到底有多安全？简短的回答：*取决于你如何让它安全。*
 
@@ -3711,7 +3435,9 @@ Freetet 的文件大小位于 Freetet 自身：USK#LESBxXZERhGWQHI11tav7CvZY9ZSK
 
 但暗网市场对任何此类安全网嗤之以鼻。事实上，在找到你所需的任何物品的信誉良好的商家之前，你可能至少会被骗几次。而且这到底是什么其实并不重要——传送设备？宠物？异国树木？流传的都一样。任何需求的东西都会吸引不怀好意的人，不仅是在买家端。
 
-因此，请使用 Tor 调研任何暗网市场，小心访问论坛并检查更新的信息，以查看是否有网站被标记为可疑或被攻破。其他建议：- 始终使用 PGP 进行通信。
+因此，请使用 Tor 调研任何暗网市场，小心访问论坛并检查更新的信息，以查看是否有网站被标记为可疑或被攻破。其他建议：
+
+- 始终使用 PGP 进行通信。
 
 - 绝不要在任何此类市场存储加密货币。
 
@@ -3746,10 +3472,8 @@ FE (Finalize Early)：FE 意味着“提前结算”。它简单意味着托管�
 当失去资金会导致你被驱逐或关系破裂时。永远不要向朋友借钱，特别是不要向家人借钱，除非你想让家人拿着双刃剑来找你。如果你被坑了，你失去的不仅仅是现金，还有家人的尊重和信任。口口会流传。你不还债。
 
 MultiSigna
-听起来像来自《星际迷战》里的东西，从飞船传递到
 
-
-船。这也许是某些王牌飞行员在战斗机夹上佩的勋章，代表他们绕过了许多繁琐的官僚程序。
+听起来像来自《星际迷战》里的东西，从飞船传递到船。这也许是某些王牌飞行员在战斗机夹上佩的勋章，代表他们绕过了许多繁琐的官僚程序。
 
 虽然这并非强制要求，但它读起来很有趣，而且对于匿名购买的 Tor 用户来说可能想了解这一点。以下是操作流程：当交易发生时，卖家会将资金（在本例中为比特币）存入一个多签名地址。之后，客户收到通知，向卖家账户进行转账（美元、欧元）。
 
@@ -3767,27 +3491,36 @@ MultiSigna 仅作为整个交易的验证者/共同签名者存在。如果卖�
 
 谢天谢地，还有几个表现良好、值得信信誉市场。
 
-Blackbank 是其中之一。Agora 是另一个。你可以通过 Tor 查看此处的多签名托管洋葱页面：http://u5z75duiy7kpwun.org/wiki/index.php/Multi-Sig_Escrow
+Blackbank 是其中之一。Agora 是另一个。你可以通过 Tor 查看此处的多签名托管洋葱页面：`http://u5z75duiy7kpwun.org/wiki/index.php/Multi-Sig_Escrow`
 
 ## 安全
 
 如果黑客进入了服务器会产生什么影响？
+
 他可能会制造什么作乱？如果他能够模仿服务器的方式运行提款，会引发多大的混乱？
 
 如果黑客获得了访问权限并尝试提款，将应用单签名并将其传递给第二个签名者进行共同签名。随后，安全协议将启动并执行以下策略：
 
 1.) 速率限制：被盗资金的流动速率。
+
 2.) 回调发送者服务器：签名服务向原始花费者核实由他们发起并意图进行花费。回调可以发送到独立的机器，该机器只能访问隔离的已批准提款信息。
+
 3.) IP 限制：签名服务仅签署来自特定 IP 列表的交易，防止黑客或内部人员窃取私钥的情况。
+
 4.) 目标白名单：某些极高安全的钱包被设置为签名服务仅在目标地址之前已知时才接受。黑客必须同时破解原始发送服务器和签名服务。
 
 让我重复一遍，MultiSigma **绝不持有** 你的比特币。他们使用 3 个签名（卖家、买家和 MultiSigma）中的 2 个对交易进行签名。正常交易由卖家签名，然后由买家签名。
 
 ### 买家多签名托管步骤
+
 1.) 存入你的比特币。在 6 次确认后获得购买权限。
+
 2.) 生成私钥和公钥（Brainwallet.org 是一个 JavaScript 客户端比特币地址生成器）。
+
 3.) 购买物品，输入公钥和退款 BTC 地址。
+
 4.) 取回购买的物品。
+
 5.) 输入私钥并关闭。
 
 ## 十
@@ -3795,31 +3528,36 @@ Blackbank 是其中之一。Agora 是另一个。你可以通过 Tor 查看此�
 ## 法律网
 
 法律可以窃取资金吗？
+
 假设你是美国法律，不能，因为钱包中并不包含资金。比特币区块链防止了这一点。黑客也无法窃取，因为需要两个私钥，而他们必须窃取 3 个私钥持有者中的 2 个……不太可能。
 
 使用私钥安全吗？
+
 千万不要不负责任地使用你比特币钱包的私钥。换用一个新的。给它和你对待 Truecrypt/DiskDecryptor 主密钥同样的爱。那种任何人都无法得到的特殊爱。
 
 这听起来非常危险。我会被抓吗？
+
 这里是大多数人被抓的方式：
 
 - 售卖假身份证
+
 - 实施犯罪
+
 - 管理毒品
 
 警察会做到多远？
+
 答案很简单。这取决于你，但通常与具有良好付款记录的卖家/买家进行转账会更安全。换句话说，一如既往，声誉就是一切。
 
 谢天谢地，还有几个表现良好、值得信任的市场。
 
-Blackbank 是其中之一。Agora 是另一个。你可以通过 Tor 查看此处的多签名托管洋葱页面：http://u5z75duiy7kpwun.org/wiki/index.php/Multi-Sig_Escrow
-
-
-
+Blackbank 是其中之一。Agora 是另一个。你可以通过 Tor 查看此处的多签名托管洋葱页面：`http://u5z75duiy7kpwun.org/wiki/index.php/Multi-Sig_Escrow`
 
 与比特币类似，它们是基于比特币设计的以隐私为核心的数字货币。这种设计允许你在进行日常购物时保持匿名性，只要数字商店提供该商品，几乎什么东西都可以。
 
 使用比特币，任何人都可以通过公共区块链查看谁进行了购买。而 Darkcoin 的做法是使用主节点（Masternodes）进一步使你的交易匿名化——这是一种去中心化的服务器网络，消除了对第三方的任何需求：那些可能扫描并追踪你资金的第三方。
+
+
 
 虽然使用人数不多，但它是目前最快的数字货币之一，经济规模已突破两千万美元。令人印象深刻。而且不仅于此，它的“Darksend”功能非常迷人——通过将一次典型交易与其他用户的交易复合在一起来增加隐私性。
 
@@ -3866,8 +3604,6 @@ Blackbank 是其中之一。Agora 是另一个。你可以通过 Tor 查看此�
 
 你的钱包必须频繁备份，比比特币更需要备份，因为匿名化过程会在后台执行更多交易。如果你用过 Freenet，你就知道网络可以有多慢，以及匿名通常需要消耗多少系统资源。因此，每当你达到硬币上限时，就为你的钱包制作一个新的备份。
 
-## 十一
-
 ## Tor 隐藏服务
 
 ## 如何在 Tor 上设置隐藏服务
@@ -3878,36 +3614,36 @@ Blackbank 是其中之一。Agora 是另一个。你可以通过 Tor 查看此�
 
 ### 第一步：确保 Tor 正常运行
 
-按照安装 Tor 的说明操作，首先要对其加固以防止利用和安全漏洞攻击。每个操作系统都有自己的漏洞，Windows 是糟糕的。我建议你在掌握基础知识后选择 Linux。现在可能是说明一个显而易见事实的好时机：你必须将服务器连接到本地主机（localhost）。如果你在交换贸易秘密且不想让老板知道，使用虚拟机来防止 DNS 和其他数据泄露，但前提是你可以访问物理主机。专业的网络托管服务（即云服务）是绝对不允许，因为管理员可以很容易地从 RAM 中夺取你的加密密钥。
+按照安装 Tor 的说明操作，首先要对其加固以防止利用和安全漏洞攻击。每个操作系统都有自己的漏洞，Windows 是糟糕的。我建议你在掌握基础知识后选择 Linux。现在可能是说明一个显而易见事实的好时机：你必须将服务器连接到本地主机（`localhost`）。如果你在交换贸易秘密且不想让老板知道，使用虚拟机来防止 DNS 和其他数据泄露，但前提是你可以访问物理主机。专业的网络托管服务（即云服务）是绝对不允许，因为管理员可以很容易地从 RAM 中夺取你的加密密钥。
 
 ### 第二步：安装你的 Web 服务器
 
 本地 Web 服务器是你需要配置的第一个东西。这比想象的要复杂一点（如果不增加价格的话）。你还希望将这个本地服务器与你的任何安装程序分开，以避免交叉污染。事实上，你不希望你的隐藏服务器和你的日常电脑使用之间有任何链接。你的服务器必须设置为禁用任何可能暴露你身份的数据泄露。你必须将服务器连接到本地主机。如果你在交换贸易秘密且不想让老板知道，使用虚拟机来防止 DNS 和其他数据泄露，但前提是你可以访问物理主机。专业的网络托管服务（即云服务）是绝对不允许，因为管理员可以很容易地从 RAM 中夺取你的加密密钥。
 
-通过浏览器访问 http://localhost:8080/，因为那是你在创建时指定的端口号。将文本文档复制到通常的 HTML 文件夹，并通过登录网页确保复制成功。
+通过浏览器访问 `http://localhost:8080/`，因为那是你在创建时指定的端口号。将文本文档复制到通常的 HTML 文件夹，并通过登录网页确保复制成功。
 
 ### 配置
 
-现在到了大多数人退缩的时候。别担心，这并不难。只是初学者看到这些数字就会想：“噢不……数学！”然后把书扔出窗外。但你不会那样做……因为你是个聪明的孩子。首先，设置你的隐藏服务链接到你的 Web 服务器。你可以使用记事本打开 Tor 目录下的“torc”文件，并搜索以下代码段：############ 此部分仅用于定位隐藏服务 ###
+现在到了大多数人退缩的时候。别担心，这并不难。只是初学者看到这些数字就会想：“噢不……数学！”然后把书扔出窗外。但你不会那样做……因为你是个聪明的孩子。首先，设置你的隐藏服务链接到你的 Web 服务器。你可以使用记事本打开 Tor 目录下的“`torc`”文件，并搜索以下代码段：############ 此部分仅用于定位隐藏服务 ###
 
-如你所见，Tor 的隐藏服务功能通过“#”符号注释掉了，每一行对应一个隐藏服务。
+如你所见，Tor 的隐藏服务功能通过“`#`”符号注释掉了，每一行对应一个隐藏服务。
 
+`HiddenServiceDir` 是存放所有关于你自己的隐藏服务数据的区域。其中将包含 `hostname.file`。这是你的 onion-url 所在的位置。
 
+"`HiddenServicePort`" 允许你设置一个诱饵端口进行重定向，以干扰任何检测你的努力。因此，请将这些内容添加到你的 `torrc` 文件中。
 
-
-HiddenServiceDir 是存放所有关于你自己的隐藏服务数据的区域。其中将包含 `hostname.file`。这是你的 onion-url 所在的位置。
-
-"HiddenServicePort" 允许你设置一个诱饵端口进行重定向，以干扰任何检测你的努力。因此，请将这些内容添加到你的 `torrc` 文件中。
+```
 HiddenServiceDir Library/Tor/var/lib/tor/hidden_service/
 HiddenServicePort 80 127.0.0.1:8080
+```
 
-接下来，将 HiddenServiceDir 修改为真实的目录。
+接下来，将 `HiddenServiceDir` 修改为真实的目录。
 
-对于 Windows，使用：`HiddenServiceDir C:\Users\username\Documents\tor\hidden_service `HiddenServicePort 80 127.0.0.1:8080`
+对于 Windows，使用：`HiddenServiceDir C:\Users\username\Documents\tor\hidden_service` `HiddenServicePort 80 127.0.0.1:8080`
 
-对于 Linux：`/home/username/hidden_service/`，将 "username" 替换为你命名该目录的名字。
+对于 Linux：`/home/username/hidden_service/`，将 "`username`" 替换为你命名该目录的名字。
 
-保存 Torrc 文件后重启 Tor，它应该就能运行了。如果出现任何错误，请检查你的拼写。
+保存 `Torrc` 文件后重启 Tor，它应该就能运行了。如果出现任何错误，请检查你的拼写。
 
 现在，创建了两个文件：`private_key` 和 `hostname`；后者是你隐藏服务的私钥，你应该将其妥善保管。然而，`hostname` 并不是你的私钥。你可以把它给任何你想要的人。
 
@@ -3921,11 +3657,13 @@ HiddenServicePort 80 127.0.0.1:8080
 
 ## Shallot 和 Scallion 选项
 
-你也有使用 Shallot 或 Scallion 的选项。Shallot 可以用于为隐藏服务创建自定义的 .onion 地址，例如 yyyynnewbietiestyy.onion。在运行隐藏 Tor 服务器（以及其他安全操作秘籍）上，在使用 Tor 多年后，我惊喜地发现，NSA 能够扰乱 Tor 的事件竟然如此之少。我指的不是垃圾邮件，而是那种让网络大部分区域陷入停滞的事情。事实证明，他们虚张声势厉害得多，尤其是如果你对自己的安全设置保持警惕的话。
+你也有使用 Shallot 或 Scallion 的选项。Shallot 可以用于为隐藏服务创建自定义的 .onion 地址，例如 `yyyynnewbietiestyy.onion`。在运行隐藏 Tor 服务器（以及其他安全操作秘籍）上，在使用 Tor 多年后，我惊喜地发现，NSA 能够扰乱 Tor 的事件竟然如此之少。我指的不是垃圾邮件，而是那种让网络大部分区域陷入停滞的事情。事实证明，他们虚张声势厉害得多，尤其是如果你对自己的安全设置保持警惕的话。
 
-问题是，大多数 Tor 用户根本不在乎。但由于大多数用户对运行隐藏服务器并不感兴趣，因为大多数 P2P 用户并不懒于做上传（seeding）。大多数人都是“拿完就走”的下载者。他们知道作为美国公民，如果他们把自己暴露的时间足够长，就有很大可能被起诉。因此，有些用户选择不再深入学习自己的安全知识。他们说，让 Tor 开发者去搞吧，他们懒得管。
 
-但我读过的大多数 Tor 开发者提供的 Tor 建议都显得糟糕地不足。事实上，我发现他们的偏执程度远没有不够。我一直以来认为，在保护你的自由方面，你永远不会变得足够偏执，因为掌权者想要捕捉并囚禁它，就像癌症控制一个细胞一样：一次控制一个细胞器，而其环境几乎没有察觉到这种水水青式的攻击。坦率说……我怀疑他们依赖于冷漠和无知。而许多用户乐意配合。
+
+问题是，大多数 `Tor` 用户根本不在乎。但由于大多数用户对运行隐藏服务器并不感兴趣，因为大多数 `P2P` 用户并不懒于做上传（seeding）。大多数人都是“拿完就走”的下载者。他们知道作为美国公民，如果他们把自己暴露的时间足够长，就有很大可能被起诉。因此，有些用户选择不再深入学习自己的安全知识。他们说，让 `Tor` 开发者去搞吧，他们懒得管。
+
+但我读过的大多数 `Tor` 开发者提供的 `Tor` 建议都显得糟糕地不足。事实上，我发现他们的偏执程度远没有不够。我一直以来认为，在保护你的自由方面，你永远不会变得足够偏执，因为掌权者想要捕捉并囚禁它，就像癌症控制一个细胞一样：一次控制一个细胞器，而其环境几乎没有察觉到这种水水青式的攻击。坦率说……我怀疑他们依赖于冷漠和无知。而许多用户乐意配合。
 
 青蛙先生，请见开开水。
 
@@ -3937,41 +3675,41 @@ HiddenServicePort 80 127.0.0.1:8080
 
 ### Tor 与你的电脑
 
-权力机构通常针对最弱的系统和最懒惰的用户。Windows 版 Tor 浏览器包由于未修补的漏洞，在打击 Freedom Hosting 和丝绸之路（Silk Road）中起了关键作用。此外，几个流氓的 Tor 节点修复了未签名的 Windows 软件包以传播恶意软件。
+权力机构通常针对最弱的系统和最懒惰的用户。`Windows` 版 `Tor` 浏览器包由于未修补的漏洞，在打击 `Freedom Hosting` 和丝绸之路（`Silk Road`）中起了关键作用。此外，几个流氓的 `Tor` 节点修复了未签名的 `Windows` 软件包以传播恶意软件。
 
-如果你是 Linux 新手，可以看看 Linux Mint。如果你有经验，Debian 是一个不错的选择。Windows 不可信任主要是因为它是闭源的，而且因为恶意软件在它上比 Linux 更有效。如果 Linux 不可行，请考虑 Tails 或 Whonix，因为这些程序预配置了不允许任何到明网（clearnet）的传出连接。
+如果你是 `Linux` 新手，可以看看 `Linux Mint`。如果你有经验，`Debian` 是一个不错的选择。`Windows` 不可信任主要是因为它是闭源的，而且因为恶意软件在它上比 `Linux` 更有效。如果 `Linux` 不可行，请考虑 `Tails` 或 `Whonix`，因为这些程序预配置了不允许任何到明网（clearnet）的传出连接。
 
 ## 更新 更新 更新
 
-你的电脑也必须始终保持更新。不更新会导致像 Windows 那样的漏洞和利用程序。理想情况下，你应该确保每次使用 Tor 时 Tails 都是最新更新的，并避免任何使用 Java/Javascript/Flash 或任何脚本的网站，因为这些程序以你无法察觉的方式执行代码。仅在紧急情况下使用它们，绝不要在家庭系统中使用。
+你的电脑也必须始终保持更新。不更新会导致像 `Windows` 那样的漏洞和利用程序。理想情况下，你应该确保每次使用 `Tor` 时 `Tails` 都是最新更新的，并避免任何使用 `Java`/`Javascript`/`Flash` 或任何脚本的网站，因为这些程序以你无法察觉的方式执行代码。仅在紧急情况下使用它们，绝不要在家庭系统中使用。
 
-尽可能避免使用 Cookie。考虑安装 Self-Destruct Cookies 插件。
+尽可能避免使用 Cookie。考虑安装 `Self-Destruct Cookies` 插件。
 
 再次，你不应该使用便携式电脑以外的任何设备，因为一旦被破解，你的家用电脑可能不够便携而无法扔在垃圾桶里。
 
-尽可能避免 Google。在 Tor 会话中改用 DuckDuckGo 或 Startpage。
+尽可能避免 `Google`。在 `Tor` 会话中改用 `DuckDuckGo` 或 `Startpage`。
 
 ## 态势感知
 
 又来了。读三遍通常会成为大脑日后采取行动的触发点，所以内容在这里。
 
-如果一个机构可以监控你的本地连接以及你正在浏览的链接，那么（在资源充足的情况下）他们就可以利用流量分析来确定你的真实位置。因此，我建议不要在住宅内使用 Tor。
+如果一个机构可以监控你的本地连接以及你正在浏览的链接，那么（在资源充足的情况下）他们就可以利用流量分析来确定你的真实位置。因此，我建议不要在住宅内使用 `Tor`。
 
-在此澄清一下，如果在进行任何形式的秘密工作或非法活动，且在没有采取严格安全措施的情况下，不要在你的法律住所处使用 Tor；那就是普通 Tor 用户可能会忽略的那种。那个家伙吸取了教训。这虽然很糟糕，但比他好。假设你是一个 19 岁喜欢当黑客的 Jimmy。你是一个 32 岁、有两个孩子并有房贷的建筑工。谁的损失更大？对，你要像拼命一样学习反侦察和反取证。因为事实确实如此！
+在此澄清一下，如果在进行任何形式的秘密工作或非法活动，且在没有采取严格安全措施的情况下，不要在你的法律住所处使用 `Tor`；那就是普通 `Tor` 用户可能会忽略的那种。那个家伙吸取了教训。这虽然很糟糕，但比他好。假设你是一个 19 岁喜欢当黑客的 Jimmy。你是一个 32 岁、有两个孩子并有房贷的建筑工。谁的损失更大？对，你要像拼命一样学习反侦察和反取证。因为事实确实如此！
 
-对于国家级行动的敌人，我建议甚至不要在你家里的联网电脑附近活动。当然不要做任何让你觉得需要用 Tor 来隐藏它的事情。对于私人浏览这可能没问题，但对于一个计划政变、运行非法行动（例如在伊朗进行家庭圣经学习）或试图消失的人来说则不是。
+对于国家级行动的敌人，我建议甚至不要在你家里的联网电脑附近活动。当然不要做任何让你觉得需要用 `Tor` 来隐藏它的事情。对于私人浏览这可能没问题，但对于一个计划政变、运行非法行动（例如在伊朗进行家庭圣经学习）或试图消失的人来说则不是。
 
-在酒店使用时也要小心，因为那里通常有许多摄像头进行 24 小时监控。该位置可以与 Tor 活动关联。
+在酒店使用时也要小心，因为那里通常有许多摄像头进行 24 小时监控。该位置可以与 `Tor` 活动关联。
 
-不要在任何特定地点使用 Tor 超过一天。如果附近停着一辆黑色面包车，不到一小时内就可以完成关联攻击——那是一辆你看不见的面包车。他们可能不会在你这一周走出咖啡馆时给你戴铐，但以后可能会。一天后就将该区域视为毒弃场，无论你是否必须前往下一个商店或城市。
+不要在任何特定地点使用 `Tor` 超过一天。如果附近停着一辆黑色面包车，不到一小时内就可以完成关联攻击——那是一辆你看不见的面包车。他们可能不会在你这一周走出咖啡馆时给你戴铐，但以后可能会。一天后就将该区域视为毒弃场，无论你是否必须前往下一个商店或城市。
 
-如果你想玩得更神鬼鬼的，在你进行 Tor 活动时，运行一个程序（例如 MMO），让它看起来你在家里。
+如果你想玩得更神鬼鬼的，在你进行 `Tor` 活动时，运行一个程序（例如 `MMO`），让它看起来你在家里。
 
 ## 十三
 
 ## Tor 隐藏服务规则
 
-CNN 一同 FoxNews 以及其他媒体温床，几年来一直在大肆某些隐藏服务的失败。这可以制造出很棒的新头条。像丝绸之路和 Freedom Hosting 这样的服务，我相信你一定听过。它们是 FBI 的容易目标，因为隐藏服务在 Tor 开发者的优先级列表中并不很高。NSA 也是如此。
+`CNN` 一同 `FoxNews` 以及其他媒体温床，几年来一直在大肆某些隐藏服务的失败。这可以制造出很棒的新头条。像丝绸之路和 `Freedom Hosting` 这样的服务，我相信你一定听过。它们是 `FBI` 的容易目标，因为隐藏服务在 `Tor` 开发者的优先级列表中并不很高。`NSA` 也是如此。
 
 这两个机构了解运行隐藏服务的每一个技巧和黑客手段。你也是如此。这并不是说你需要匹配他们超级黑客团队的专业知识，而是说运行此类服务比访问此类服务需要更的警惕。
 
@@ -3983,14 +3721,13 @@ CNN 一同 FoxNews 以及其他媒体温床，几年来一直在大肆某些隐�
 
 对。云提供商。雷电一击，你的就没了
 
+保护自己的匿名性，以及你的访问者在浏览器习惯上懒惰时的匿名性。`FBI` 在 2013 年通过这种方式投放了一种“nit”（网络调查技术），针对未打补丁的 `Tor` 浏览器包。然而，如果你拥有这台机器，情况就是另一回事了。但让我们回退几步，假设你并不拥有。你该如何在宿主系统上运行它呢？
 
-保护自己的匿名性，以及你的访问者在浏览器习惯上懒惰时的匿名性。FBI 在 2013 年通过这种方式投放了一种“nit”（网络调查技术），针对未打补丁的 Tor 浏览器包。然而，如果你拥有这台机器，情况就是另一回事了。但让我们回退几步，假设你并不拥有。你该如何在宿主系统上运行它呢？
+首先，你需要两个来自不同地区的独立物理主机，运行在开启了防火墙的虚拟机中，该系统只允许 `Tor` 网络活动而不允许任何其他活动。
 
-首先，你需要两个来自不同地区的独立物理主机，运行在开启了防火墙的虚拟机中，该系统只允许 Tor 网络活动而不允许任何其他活动。
+第二个物理主机是运行隐藏服务的设备，同样也是虚拟机。通过 `IPSec` 启用安全连接。你可能会问 `IPSec` 是什么？
 
-第二个物理主机是运行隐藏服务的设备，同样也是虚拟机。通过 IPSec 启用安全连接。你可能会问 IPSec 是什么？
-
-> “IPSec 是一个协议族，通过身份验证和加密通信会话中的每个 IP 数据包来保护互联网协议 (IP) 通信。IPSec 可用于保护两个主机之间（主机到主机）、两个安全网关之间（网络到网络）或一个安全网关与一个主机之间（网络到主机）的数据流。”
+> “`IPSec` 是一个协议族，通过身份验证和加密通信会话中的每个 IP 数据包来保护互联网协议（IP）通信。`IPSec` 可用于保护两个主机之间（主机到主机）、两个安全网关之间（网络到网络）或一个安全网关与一个主机之间（网络到主机）的数据流。”
 
 如果入侵者篡改了任何内容，你都会知晓并可以关闭服务或将其移动到更安全的地方，而这一切就像机器中的幽灵一样进行。你可以想象这在朝鲜将有多有价值。
 
@@ -3998,15 +3735,15 @@ CNN 一同 FoxNews 以及其他媒体温床，几年来一直在大肆某些隐�
 
 ### 第二点
 
-如果选择宿主机路线，你必须确保宿主机始终能让你在需要时访问远程控制。事实上，你必须远程完成所有操作，并通过 https 频繁更改密码。我觉得每天一次，因为在朝鲜那种气候下，保持偏执对你的健康好处。
+如果选择宿主机路线，你必须确保宿主机始终能让你在需要时访问远程控制。事实上，你必须远程完成所有操作，并通过 `https` 频繁更改密码。我觉得每天一次，因为在朝鲜那种气候下，保持偏执对你的健康好处。
 
 ### 第三点
 
-你绝不能、哪怕只有一次、从家里访问该服务。不要通过你的 Nexus 7。不要通过你女朋友的 Galaxy Note。甚至不要在你的后院使用邻居的 WiFi 通过 Tor 访问。使用 VPN 也是有风险的，除非你清楚自己在做什么。只在距离你住所至少十英里的地方访问它。有些人可能会说这过头了，但在古拉格监狱里没有所谓的过头。
+你绝不能、哪怕只有一次、从家里访问该服务。不要通过你的 `Nexus 7`。不要通过你女朋友的 `Galaxy Note`。甚至不要在你的后院使用邻居的 WiFi 通过 `Tor` 访问。使用 `VPN` 也是有风险的，除非你清楚自己在做什么。只在距离你住所至少十英里的地方访问它。有些人可能会说这过头了，但在古拉格监狱里没有所谓的过头。
 
 ### 第四点
 
-偶尔移动服务。再次，看看任何 YouTube 上关于狙击手如何训练消灭敌人的视频。他们在每次开火后都会变换位置，以向敌人隐藏真实位置。频率取决于你。每周一次？每月一次？我个人觉得每二十一天一次即可。在运行这类东西时，你永远不会不够安全。
+偶尔移动服务。再次，看看任何 `YouTube` 上关于狙击手如何训练消灭敌人的视频。他们在每次开火后都会变换位置，以向敌人隐藏真实位置。频率取决于你。每周一次？每月一次？我个人觉得每二十一天一次即可。在运行这类东西时，你永远不会不够安全。
 
 ## 第十四点
 
@@ -4016,19 +3753,21 @@ CNN 一同 FoxNews 以及其他媒体温床，几年来一直在大肆某些隐�
 
 ![](img/bceda787dd56d788afffe6850dba0a44_343_0.png)
 
-你一定听说过针对 Tor 的捣捕行动，卧底探员在针对目标时获取了电话号码或明文网卡，因为该目标信任得太快、太深了。听 Yoda 大师的——你可以通过重新训练自己、忘掉你所学到的东西来避免这一点。
+你一定听说过针对 `Tor` 的捣捕行动，卧底探员在针对目标时获取了电话号码或明文网卡，因为该目标信任得太快、太深了。听 Yoda 大师的——你可以通过重新训练自己、忘掉你所学到的东西来避免这一点。
 
-你必须将你的 Tor 会话视为你“自我”的财产。那个克隆的你——上面那个影子影、看起来像贼一样的家伙。第二个你。一个鄙视 Incub、热爱 Tool，并将尼奥视为仅仅是另一个随命行舟的朋混小子，他只是在墨菲斯和他的团队拔掉他的插头时撞了大运而已。这个克隆体不会使用 Twitter 或 YouTube 或其他社交垃圾。他永远不会和你混在一起，也不会打电约你喝几杯啤酒。事实上，他讨厌啤酒，更倾向于喝 J&B 酒，并在黑客时以约翰·卡彭彭的《形状怪物》原声带作为背景音乐。
+你必须将你的 `Tor` 会话视为你“自我”的财产。那个克隆的你——上面那个影子影、看起来像贼一样的家伙。第二个你。一个鄙视 Incub、热爱 Tool，并将尼奥视为仅仅是另一个随命行舟的朋混小子，他只是在墨菲斯和他的团队拔掉他的插头时撞了大运而已。这个克隆体不会使用 `Twitter` 或 `YouTube` 或其他社交垃圾。他永远不会和你混在一起，也不会打电约你喝几杯啤酒。事实上，他讨厌啤酒，更倾向于喝 `J&B` 酒，并在黑客时以约翰·卡彭彭的《形状怪物》原声带作为背景音乐。
 
 那是你的另一个你。那个更聪明的你。
 
-他必须是你在 Tor 上的新身份。你必须将他与非 Tor 的你永远离开。
+他必须是你在 `Tor` 上的新身份。你必须将他与非 `Tor` 的你永远离开。
 
-他的 Facebook、Twitter 和 YouTube 账号全是假的，从没有在家里电脑上用过这些账号。
+他的 `Facebook`、`Twitter` 和 `YouTube` 账号全是假的，从没有在家里电脑上用过这些账号。
 
 他的网卡是不同的，密码、点赞/厌恶，甚至你浏览深网时使用的字体都是不同的。将这个阴暗人格与你自己的混合，就像物质构成的男孩吻了反物质的女孩。
 
 砰。
+
+
 
 此外，此人拨打任何电话都是通过非他持有的信用卡购买的预付费手机完成的。他是一个现金购买者，而且只有在离家二十英里处才这样做。他使用的任何 SIM 卡都严格配合 Tor 活动使用，绝不在“你”使用的手机中使用。而且……他在所到之处处都会故意留下虚假信息。为了澄清这个想法，假设约翰·多并不知道这些更好。他在 Netflix 上看了一部电影。然后他闲逛到 Freenet，在毫无察觉的情况下掉落了，急于与他的暗结们分享他奇妙的电影体验。
 
@@ -4038,11 +3777,9 @@ CNN 一同 FoxNews 以及其他媒体温床，几年来一直在大肆某些隐�
 
 Netflix 收集元数据就像 Google 和 Yahoo 一样。无一例外。
 
+Usenet 提供商的月费。这里有超过100,000个新闻组，其中绝大多数是文本（TEXT）组而非二进制（BINARY）组（即 Usenet 核心内容存储的地方）。长期 Usenet 用户之间流传的一个小秘密是：如果没有像`alt.binaries.boneless`、`alt.binaries.hdtv`和`alt.binaries.complete_cd`这样的小组，Usenet 的流行程度将只有现在的十分之一。
 
-
-Usenet 提供商的月费。这里有超过100,000个新闻组，其中绝大多数是文本（TEXT）组而非二进制（BINARY）组（即 Usenet 核心内容存储的地方）。长期 Usenet 用户之间流传的一个小秘密是：如果没有像 alt.binaries.boneless、alt.binaries.hdtv 和 alt.binaries.complete_cd 这样的小组，Usenet 的流行程度将只有现在的十分之一。
-
-人们可能会认为，文本讨论确实在某种程度上对社会有益，但归根结底，由于文件共享（再次提到，mp3、电影和游戏）不仅占据了 Usenet 的大部分，这也是 Usenet 公司能够以指数级速度扩张业务的原因。
+人们可能会认为，文本讨论确实在某种程度上对社会有益，但归根结底，由于文件共享（再次提到，`mp3`、电影和游戏）不仅占据了 Usenet 的大部分，这也是 Usenet 公司能够以指数级速度扩张业务的原因。
 
 ## Usenet 对比 P2P
 
@@ -4070,15 +3807,15 @@ Usenet 的优点：
 
 ## 注册 Usenet
 
-针对看重隐私的用户
+### 针对看重隐私的用户
 
 对于那些完全不在乎隐私的用户，你可以放心地抵制你的 Usenet 提供商广告中关于 SSL 的推销性报价。在注册一些不为人知的 Usenet 提供商时，广告可能会让你认为你必须拥有 SSL 选项，否则你的电脑注定会被各种小精怪、邪恶之灵或其他怪兽黑掉。不要相信它。SSL 通常随主流提供商的订阅一起提供，但某些提供商仍会对此收取额外费用。
 
-针对看重匿名性的的用户
+### 针对看重匿名性的的用户
 
 一些 Usenet 提供商接受比特币作为支付方式。如果你将上传大量在法律上存疑的文件且位于美国，那么匿名注册 Usenet 账户可能是明智的。不要使用任何带有你个人信息的支付方式，例如你的姓名。
 
-在启用 SSL 的情况下匿名上传 Usenet 是否可行？
+### 在启用 SSL 的情况下匿名上传 Usenet 是否可行？
 
 这个问题的答案是：部分可行。是的，你可以无顾忌地下载。是的，它会对传输到你电脑的数据进行加密，之后再解密。大多数 Usenet 提供商不会记录你从二进制新闻组汲取的内容。然而，陷阱在于如果你进行上传，就会留下某些线索。
 
@@ -4086,24 +3823,37 @@ Usenet 的优点：
 
 值得探索的新闻组：
 
-### Alt.binaries.hdtv：这可能是一个包含你需要的任何高清材料的核心新闻组。纪录片、主流电影、电视剧等可以在这里找到。请注意，这里的许多电影设置了密码。因此，明智的做法是下载第一个 rar 文件，解压并预览。Winrar 会提示文件损坏，但尽管如此仍要提取。你会得到电影的十分钟预览，或者提示缺少密码。某些密码只能从私人论坛获得。如果你看到非常想要的电影但有密码，可以询问可以加入哪个论坛来解压该文件。
+### Alt.binaries.hdtv
 
-### Alt.binaries.hdtv.x264：不想在上面的 hdtv 组等待下载 50GB 的电影吗？试试它的姐妹组，那是一个专门针对热门电影和剧集重编码的组。重编码器会将一部 50GB 的电影压缩到 8-12GB 的文件，同时保留了原始电影的大部分画质。如果你在投影仪上观看高清内容或拥有 42 英寸及以上的电视，则不建议使用。但对于使用 27 英寸显示器/电视的人来说，只要编码器到位，你就不会看到太大区别。
+这可能是一个包含你需要的任何高清材料的核心新闻组。纪录片、主流电影、电视剧等可以在这里找到。请注意，这里的许多电影设置了密码。因此，明智的做法是下载第一个`rar`文件，解压并预览。Winrar 会提示文件损坏，但尽管如此仍要提取。你会得到电影的十分钟预览，或者提示缺少密码。某些密码只能从私人论坛获得。如果你看到非常想要的电影但有密码，可以询问可以加入哪个论坛来解压该文件。
 
-### Alt.binaries.boneless：这是一个全面的投放组，各种文件都可以上传。任何东西都会丢在这里，它是 Usenet 上最大的小组之一。仅推荐给拥有极快网络连接的用户，因为在普通连接上下载头文件就需要超过一小时。该组的大部分包含了你可以想象的一切，这对于新手来说可能可能感到非常困惑，因为小组似乎没有一个“单一”的主题。
+### Alt.binaries.hdtv.x264
 
-### Alt.binaries.movie.divx：这个组与 hdtv 组类似，但这里的高清电影很少，为下载者节省了数小时。
+不想在上面的`hdtv`组等待下载 50GB 的电影吗？试试它的姐妹组，那是一个专门针对热门电影和剧集重编码的组。重编码器会将一部 50GB 的电影压缩到 8-12GB 的文件，同时保留了原始电影的大部分画质。如果你在投影仪上观看高清内容或拥有 42 英寸及以上的电视，则不建议使用。但对于使用 27 英寸显示器/电视的人来说，只要编码器到位，你就不会看到太大区别。
 
+### Alt.binaries.boneless
 
-下载时间。如果你不确定一部电影是否值得拥有，先用小得得的版本进行试用可能是明智之举。这里大多数电影大小在 1 到 2 GB 之间，这对于笔记本电脑或手机足够了，但你会发现于 28 英寸显示器上，它与比特率良好的 DVD 相比会有显著的差异。
+这是一个全面的投放组，各种文件都可以上传。任何东西都会丢在这里，它是 Usenet 上最大的小组之一。仅推荐给拥有极快网络连接的用户，因为在普通连接上下载头文件就需要超过一小时。该组的大部分包含了你可以想象的一切，这对于新手来说可能可能感到非常困惑，因为小组似乎没有一个“单一”的主题。
 
-Altbinaries.sounds.mp3：（将你喜欢的流派替换蓝调，例如凯尔特、爵士、新世纪音乐、摇滚、重金属、古典、基督教等）。请注意，许多 mp3 组的常见问题解答（FAQ）中有严格的发布指南，如果你向小组发送主题无关的 mp3 垃圾信息，他们将向你的 Usenet 服务商举报你。然而，它们根据你喜爱的音乐口味提供了非常细分的收听体验。
+### Alt.binaries.movie.divx
 
-Altbinaries.games：发布 PC 相关游戏的主组，但某些主机游戏也发布在这里而不是它们指定的组中。请警惕该组中的病毒，无论文件有多大。如果你打算经常从该组下载内容，一个良好的杀病毒程序至关重要。在你的操作系统中禁用“自动播放”，因为许多游戏 ISO 文件在挂载时，会在 Windows 自动播放功能首次执行时启动病毒。ISO 格式本身没有错，而是磁盘镜像文件夹中的文件本身可能是恶性的。
+这个组与`hdtv`组类似，但这里的高清电影很少，为下载者节省了数小时下载时间。如果你不确定一部电影是否值得拥有，先用小小的版本进行试用可能是明智之举。这里大多数电影大小在 1 到 2 GB 之间，这对于笔记本电脑或手机足够了，但你会发现于 28 英寸显示器上，它与比特率良好的 DVD 相比会有显著的差异。
 
-Altbinaries.dox：缺少某个游戏的 nfo 文件？这里是提问的地方。游戏说明也上传到这里，以及你可以想象的来自现有每一个“场景”组的每一个 nfo 文件。
+### Altbinaries.sounds.mp3
 
-关于二进制组（binary groups）的警告：在这些“二进制”组中，你看不到什么哲学讨论，除了对损坏的 rar/解析器不足的争执以及无休止的请求。如果你想进行政治或学术辩论，请订阅那些长长的（数以千计）、标题中不包含“binary”字样的 alt 组。
+（将你喜欢的流派替换蓝调，例如凯尔特、爵士、新世纪音乐、摇滚、重金属、古典、基督教等）。请注意，许多`mp3`组的常见问题解答（FAQ）中有严格的发布指南，如果你向小组发送主题无关的`mp3`垃圾信息，他们将向你的 Usenet 服务商举报你。然而，它们根据你喜爱的音乐口味提供了非常细分的收听体验。
+
+### Altbinaries.games
+
+发布 PC 相关游戏的主组，但某些主机游戏也发布在这里而不是它们指定的组中。请警惕该组中的病毒，无论文件有多大。如果你打算经常从该组下载内容，一个良好的杀病毒程序至关重要。在你的操作系统中禁用“自动播放”，因为许多游戏 ISO 文件在挂载时，会在 Windows 自动播放功能首次执行时启动病毒。ISO 格式本身没有错，而是磁盘镜像文件夹中的文件本身可能是恶性的。
+
+### Altbinaries.dox
+
+缺少某个游戏的`nfo`文件？这里是提问的地方。游戏说明也上传到这里，以及你可以想象的来自现有每一个“场景”组的每一个`nfo`文件。
+
+### 关于二进制组（binary groups）的警告
+
+在这些“二进制”组中，你看不到什么哲学讨论，除了对损坏的`rar`/解析器不足的争执以及无休止的请求。如果你想进行政治或学术辩论，请订阅那些长长的（数以千计）、标题中不包含“binary”字样的 alt 组。
 
 ## 最佳 Usenet 应用程序
 
@@ -4111,104 +3861,101 @@ Altbinaries.dox：缺少某个游戏的 nfo 文件？这里是提问的地方。
 
 ## 使用新闻组的基础知识
 
-下载：当你注册一个每月 10 美元的计划时，你的 NSP（新闻服务提供商）会向你发送三封邮件：用户名、密码和服务器新闻（例如，news.astraweb.com）。有许多不同的 Usenet 工具，其功能类似于浏览器的工作原理。你可以选择更简单的方法，即从 Binsearch、NZIndex 或 Newbin（付费）等免费网站下载 `.nzb` 文件，然后将其导入到你选择的新闻阅读器或下载器中。最简单的工具之一是应用 Nzb-o-Matic Plus。在应用程序的选项界面中，输入你的用户名/密码组合以及端口为 119 的服务器地址，然后设置下载内容的存放位置。你甚至可以选择桌面。就这么简单。还有其他免费的新组可用。
+下载：当你注册一个每月 10 美元的计划时，你的 NSP（新闻服务提供商）会向你发送三封邮件：用户名、密码和服务器新闻（例如，`news.astraweb.com`）。有许多不同的 Usenet 工具，其功能类似于浏览器的工作原理。你可以选择更简单的方法，即从 Binsearch、NZIndex 或 Newbin（付费）等免费网站下载`.nzb`文件，然后将其导入到你选择的新闻阅读器或下载器中。最简单的工具之一是应用 Nzb-o-Matic Plus。在应用程序的选项界面中，输入你的用户名/密码组合以及端口为 119 的服务器地址，然后设置下载内容的存放位置。你甚至可以选择桌面。就这么简单。还有其他免费的新组可用。
 
 Newhosting Client（需要注册）免费：如果你订阅了他们的服务，Newhosting 客户端可以为你修复文件。然而，由于 Quickpar 和 Winrar 是免费的，这显得有些多余。
 
+
+
 Easynews Web Interface（需要注册）免费：Easynews 界面与 Newhosting 客户端类似，你可以看到已发布文件的缩略图（如果它们设置了密码保护），并且它会自动检查错误。
 
-- NewsBin Pro $20
-- SABnzbd 免费
-- NewsLeecher $20
-- Binreader 免费
-- GrabIt 免费
-- Unison $29.99
+- `NewsBin Pro` $20
+- `SABnzbd` 免费
+- `NewsLeecher` $20
+- `Binreader` 免费
+- `GrabIt` 免费
+- `Unison` $29.99
 
 ## EZ Global Search $2.99
 
-NZB-O-MATIC Plus：免费：在上述所有工具中，Nzb-o-Matic 可能是加入 Usenet 最简单的。它仅用于下载；但是，一旦有了 NZB 文件，你只需导入、设置用户名/密码即可下载。
+`NZB-O-MATIC Plus`：免费：在上述所有工具中，`Nzb-o-Matic` 可能是加入 Usenet 最简单的。它仅用于下载；但是，一旦有了 NZB 文件，你只需导入、设置用户名/密码即可下载。
 
 上传稍微复杂一点，但绝不是要求向 Usenet 上传任何内容。事实上，与 Torrent 不同，这里鼓励“吸取（leaching）”。如果你是 Usenet 新手，请注意在私有代理或 Tor 之外上传的任何内容都会导致你的 IP 地址暴露。请注意你上传的内容是否有版权。正如俗话所说，天青偏有准备的人。
 
 如何上传到 Usenet：（如果你没有上传打算，请跳过此）上传小文件的过程与上传大文件并没有特别不同。主要区别在于，上传数 GB 大的大型文件在 DSL 连接上需要几个小时。尽管如此，让我们过一下一些诚然简化的操作步骤。你需要一些免费工具来完成，尽管这些工具对于整个过程来说是必不可少的。它们是：
 
-Winrar - 用于压缩文件。你不能在不冒失败或超时风险的情况下向 Usenet 上传单个 25 GB 的蓝光电影。因此，使用 Winrar 将你的电影文件分成分块并上传这些块更好。如果你花了两天下载一个蓝光文件，结果发现它在电影中间“跳帧”了，你会非常生气。因此，Winrar 和 Quickpar 通过测试损坏部分的真实性来解决这个问题。一旦你安装了 Winrar，右键点击文件并从 Winrar 右键菜单中选择“添加到压缩包”，然后只需简单地右键点击即可存档任何大小的文件。请务必选择合适的尺寸进行上传。对于超过 1 GB 的任何文件，100 MB 的分块就足够。
+`Winrar` - 用于压缩文件。你不能在不冒失败或超时风险的情况下向 Usenet 上传单个 25 GB 的蓝光电影。因此，使用 `Winrar` 将你的电影文件分成分块并上传这些块更好。如果你花了两天下载一个蓝光文件，结果发现它在电影中间“跳帧”了，你会非常生气。因此，`Winrar` 和 `Quickpar` 通过测试损坏部分的真实性来解决这个问题。一旦你安装了 `Winrar`，右键点击文件并从 `Winrar` 右键菜单中选择“添加到压缩包”，然后只需简单地右键点击即可存档任何大小的文件。请务必选择合适的尺寸进行上传。对于超过 1 GB 的任何文件，100 MB 的分块就足够。
 
 像 mp3 这样的小文件使用 mp3 非压缩格式也可以，但会带有 par 来修复其中的任何冗余/错误。当下载器完成所有 rar 后，可以右键点击任何 rar 并选择“解压此处”或任何目录。
 
-下载 Winrar：http://www.rarlabs.com/download.htm
+下载 `Winrar`：http://www.rarlabs.com/download.htm
 
-Quickpar - 用于创建 par 文件。这对于 Usenet 上传不是强制性的（除非新闻特别要求），但对于下载来说是一个救星，因为 Usenet 服务器在传输过程中经常出现故障。创建 10% 的冗余对于大多数文件都是足够的。
+`Quickpar` - 用于创建 par 文件。这对于 Usenet 上传不是强制性的（除非新闻特别要求），但对于下载来说是一个救星，因为 Usenet 服务器在传输过程中经常出现故障。创建 10% 的冗余对于大多数文件都是足够的。
 
-下载 Quickpar：http://www.quickpar.org.uk/Download.htm
+下载 `Quickpar`：http://www.quickpar.org.uk/Download.htm
 
-Camelsym Powerpost（仅限 Windows）：用于上传你创建的 rar 文件的免费工具。使用非常简单。你需要来自提供商的用户名和密码组合，以及在设置中插入的端口号。
+`Camelsym Powerpost`（仅限 Windows）：用于上传你创建的 rar 文件的免费工具。使用非常简单。你需要来自提供商的用户名和密码组合，以及在设置中插入的端口号。
 
-NZB 文件：你可以将 NZB 文件认为类似于加载到下载器程序中的 torrent 文件。与其使用 uTorrent，你会将文件导入到类似 Nzb-o-Matic Plus 的工具中。NZB 文件本身是你从 Binsearch 或 NZindex 等网站选择的文件。它可以包含指向指向你想要的文件的指针，这些文件可能位于不同的新闻组中。使用 NZB 文件比管理你想要的文件（相对于你不需要的文件）要容易得多。
+`NZB` 文件：你可以将 `NZB` 文件认为类似于加载到下载器程序中的 torrent 文件。与其使用 uTorrent，你会将文件导入到类似 `Nzb-o-Matic Plus` 的工具中。`NZB` 文件本身是你从 Binsearch 或 NZindex 等网站选择的文件。它可以包含指向指向你想要的文件的指针，这些文件可能位于不同的新闻组中。使用 `NZB` 文件比管理你想要的文件（相对于你不需要的文件）要容易得多。
 
-不完整的文件 - 不完整的 Usenet 文件在你的新闻阅读器中看起来是完整的，但在下载完完整集合后，你会发现 Winrar 在提取文件过程中途弹出错误。这通常是因为上传者的连接不稳定，或者可能在上传文件时停电了，或者是服务器在传输过程中出现了故障。Usenet 服务器从其他 Usenet 服务器传输文件，这与你普通的互联网服务器有所不同。出于这个原因，你应该安装免费的 Quickpar。
-
-
+不完整的文件 - 不完整的 Usenet 文件在你的新闻阅读器中看起来是完整的，但在下载完完整集合后，你会发现 `Winrar` 在提取文件过程中途弹出错误。这通常是因为上传者的连接不稳定，或者可能在上传文件时停电了，或者是服务器在传输过程中出现了故障。Usenet 服务器从其他 Usenet 服务器传输文件，这与你普通的互联网服务器有所不同。出于这个原因，你应该安装免费的 `Quickpar`。
 
 旨在减轻这可能引起的任何潜在头疼问题。
 
-SFV 文件 - SFV 文件可用于验证你下载的文件是否为原始文件，以及在传输过程中是否发生了损坏。它不会修复文件。那是 Quickpar 的功能。这种修复方法与你可能习惯的 BitTorrent 方法非常不同（而且更稳定），在 BitTorrent 中，解析者很少会提供种子文件（seeded files）。
+`SFV` 文件 - `SFV` 文件可用于验证你下载的文件是否为原始文件，以及在传输过程中是否发生了损坏。它不会修复文件。那是 `Quickpar` 的功能。这种修复方法与你可能习惯的 BitTorrent 方法非常不同（而且更稳定），在 BitTorrent 中，解析者很少会提供种子文件（seeded files）。
 
-## # Usenet 评：谁很烂，谁又很优秀
+# Usenet 评：谁很烂，谁又很优秀
 
-如果你在各大搜索引擎中搜寻，并使用如 "usenet" "best usenet prices”（最佳 usenet 价格）和 "usenet reviews”（usenet 评论）等搜索词，你会在数百个想要推荐费的网站，它们会告诉你哪家 Usenet 服务商是最好的，哪些是应该避开的。事实是，大多数公司提供的服务完全相同，而且总体而言，它们与其他公司不相上下。
+如果你在各大搜索引擎中搜寻，并使用如 "usenet" "best usenet prices"（最佳 usenet 价格）和 "usenet reviews"（usenet 评论）等搜索词，你会在数百个想要推荐费的网站，它们会告诉你哪家 Usenet 服务商是最好的，哪些是应该避开的。事实是，大多数公司提供的服务完全相同，而且总体而言，它们与其他公司不相上下。
 
 它们提供相似的服务、易用性，而且有些像 Newhosting 这样的公司甚至提供自己的 Usenet 浏览器，可以为你完成所有的繁琐工作。它们都提供免费的 SSL 和无限量包。Usenet-Server 和 Astraweb 看起来是最便宜的，尽管 Astraweb 过去在上传不完整方面遇到过不少问题。
 
 出于匿名性的考虑，选择位于美国的新组可能不利于在使用时保持良好的匿名性。虽然对于向 Usenet 上传受版权保护的内容（或任何其他非法活动），在欧洲服务商处拥有账户并非万无一失，但美国的法律比地球上任何拥有 Usenet 公司服务器农场的国家都更具诉讼性且更为严酷。
 
-### ## 五大巨
+### 五大巨
 
-- Astraweb: 通常是所有 Usenet 服务商中价格最便宜的，提供 11 美元的无限特惠，但他们过去的问题包括服务器宕机以及文件不完整（截至 2012 年）。发布的 PAR 文件无疑能弥补这一差异……大多数时候是如此。然而，在配备双核处理器的电脑上，如果有大量损坏的 rar 文件，Quickpar 可能会花费一个多小时。此外，他们的客户服务不如 Easynews 或 Newhosting 那么精细，但从他们提供的价格来看，这是无可比拟的。如果你介意少量损坏的文件以及每隔几天使用一次 Quickpar，并且对价格很敏感，那么 Astraweb 是首选。
+- `Astraweb`: 通常是所有 Usenet 服务商中价格最便宜的，提供 11 美元的无限特惠，但他们过去的问题包括服务器宕机以及文件不完整（截至 2012 年）。发布的 PAR 文件无疑能弥补这一差异……大多数时候是如此。然而，在配备双核处理器的电脑上，如果有大量损坏的 rar 文件，`Quickpar` 可能会花费一个多小时。此外，他们的客户服务不如 Easynews 或 Newhosting 那么精细，但从他们提供的价格来看，这是无可比拟的。如果你介意少量损坏的文件以及每隔几天使用一次 `Quickpar`，并且对价格很敏感，那么 `Astraweb` 是首选。
 
-- Usenet Server: 与 Astraweb 类似，但基础设施更稳定。不过，他们的无限计划价格要贵几美元。在使用他们的两年里，没有出现过文件不完整的情况。因此，你就能看出每月多出的几美元花在哪里了：系统维护和可靠性。
+- `Usenet Server`: 与 `Astraweb` 类似，但基础设施更稳定。不过，他们的无限计划价格要贵几美元。在使用他们的两年里，没有出现过文件不完整的情况。因此，你就能看出每月多出的几美元花在哪里了：系统维护和可靠性。
 
-- Newhosting: 与 Usenet-Server 类似，但他们提供免费的新闻阅读器，这让你极其容易地判断哪些文件是真实的，哪些是病毒/垃圾邮件（提示：查看文件大小……如果尺寸小得离谱，很可能是垃圾邮件或恶意软件）。缩略图视图与 Easynews 的网页界面扫描类似，它可以扫描所有新闻组的缩略图进行查看。
+- `Newhosting`: 与 `Usenet-Server` 类似，但他们提供免费的新闻阅读器，这让你极其容易地判断哪些文件是真实的，哪些是病毒/垃圾邮件（提示：查看文件大小……如果尺寸小得离谱，很可能是垃圾邮件或恶意软件）。缩略图视图与 Easynews 的网页界面扫描类似，它可以扫描所有新闻组的缩略图进行查看。
 
-- Easynews: 是最早进入市场的公司之一，目前仍然没有像上述 Usenet 服务商那样的无限方案。然而，他们极其廉价，由于经营了多年，他们拥有可靠的服务器农场骨干网络，还是行业内故障排除和技术问题的顶级论坛之一。他们的客户服务也是与比拟的。唯一的遗憾是，如果你是一个每月想要下载超过百 GB 数据的超级用户，他们可能不应该是你的首选。Giganews 对律师发出的下架通知极其严格。HBO 特辑和纪录片是你的菜，但请注意，他们有权在认为内容留在其服务器上太“敏感”时删除上传（例如《权力的游戏》、《黑手党》等）。
+- `Easynews`: 是最早进入市场的公司之一，目前仍然没有像上述 Usenet 服务商那样的无限方案。然而，他们极其廉价，由于经营了多年，他们拥有可靠的服务器农场骨干网络，还是行业内故障排除和技术问题的顶级论坛之一。他们的客户服务也是与比拟的。唯一的遗憾是，如果你是一个每月想要下载超过百 GB 数据的超级用户，他们可能不应该是你的首选。`Giganews` 对律师发出的下架通知极其严格。HBO 特辑和纪录片是你的菜，但请注意，他们有权在认为内容留在其服务器上太“敏感”时删除上传（例如《权力的游戏》、《黑手党》等）。
 
-- Giganews: 无疑是所有 Usenet 高端服务商中最昂贵的。他们提供最大的服务器骨干网络之一，并提供与上述服务商类似的服务。他们被认为是 Usenet 公司的“哈佛”，但为了这个名字付费似乎毫无必要，因为你从其他四家 Usenet 公司那里就能获得大部分收益。对于版权内容上传者（如《权力的游戏》等 HBO 系列）的“下架”请求，文件从服务器中清除的数量之大，导致 PAR 文件无法恢复它们。问题在于，许多较小的 Usenet 公司使用 Giganews 的后端服务器访问 Usenet。因此，当他们遵守某些好莱坞律师事务所的下架命令或请求时，Usenet 服务商会受到影响。如果钱不是问题，Giganews 一贯良好的客户服务是一个很好的选择。
+- `Giganews`: 无疑是所有 Usenet 高端服务商中最昂贵的。他们提供最大的服务器骨干网络之一，并提供与上述服务商类似的服务。他们被认为是 Usenet 公司的“哈佛”，但为了这个名字付费似乎毫无必要，因为你从其他四家 Usenet 公司那里就能获得大部分收益。对于版权内容上传者（如《权力的游戏》等 HBO 系列）的“下架”请求，文件从服务器中清除的数量之大，导致 PAR 文件无法恢复它们。问题在于，许多较小的 Usenet 公司使用 `Giganews` 的后端服务器访问 Usenet。因此，当他们遵守某些好莱坞律师事务所的下架命令或请求时，Usenet 服务商会受到影响。如果钱不是问题，`Giganews` 一贯良好的客户服务是一个很好的选择。
 
-- 其他: Thundernews, Newsdemon, Ngroups 等。列表还在不断增加。
+- 其他: `Thundernews`, `Newsdemon`, `Ngroups` 等。列表还在不断增加。
 
 选择任何不在前五名的公司都像在转轮盘上赌博。并不是说他们提供的服务都很坏，但重要的是要注意，像前五名那样稳如磐石的企业需要多年多年艰辛的努力和坚持。
 
-那些不为人知的 Usenet 服务商通常在三个领域之一存在缺陷：客户服务（通常是技术支持的邮件）、文件的可靠性/完整性，或留存（文件的时长）。有些公司太新了，别无选择从像 Giganews 或 Highwinds 这样拥有大量服务器农场的公司租赁部分基础设施。
+那些不为人知的 Usenet 服务商通常在三个领域之一存在缺陷：客户服务（通常是技术支持的邮件）、文件的可靠性/完整性，或留存（文件的时长）。有些公司太新了，别无选择从像 `Giganews` 或 `Highwinds` 这样拥有大量服务器农场的公司租赁部分基础设施。
 
 最后，你可能会问，客户对 Usenet 服务商的最首要需求是什么？它不是留存。大多数 Usenet 公司都有跨越许多年的相似留存率。甚至不是文件的完整性。全球用户的大多数大型上传都会上传足够数量的 par 文件来修复任何大组的发布文件（如蓝光电影之类的）。不，Usenet 客户最想要的是良好的客户服务。
 
-客户不想坐在电话旁等一小时才等到技术支持回答。在等待时，他们希望有一个说同一种语言、用同一种方言的人。他们也不希望被该 Usenet 公司用推销信息骚扰（像 GoDaddy 这样的网站托管公司在这方面臭名昭著），也不喜欢接到打此类优惠的电话。
-
-## Usenet 的第一法则（不要谈论 Usenet！）在 Facebook、Twitter 和 Reddit 等许多社交媒体网站和论坛上，一些用户会发布 90 年代后期来自 BestBuy、沃尔玛、Sears 等大型百货商店广告，这些广告显示了硬件成本的巨大差异。例如，2000 年在 BestBuy 买的一块 1.5 GB 硬盘花费超过 200 美元。而现在，同样的金额你可以买到一个 3 TB 的硬盘。Usenet 服务器农场也是如此。随着时间的推移，越来越多的客户注册 Usenet 账户，Usenet 产生的业务成本就会下降。这就是为什么你可以以不到十美元的价格拥有一个无限账户。那么，为什么传统的文件共享（如 Torrent）更流行呢？
-
-原因是，免费下载一个 Torrent 比不掏出信用卡并设置 Usenet 账户要容易得多。荒谬的是，在 Torrent 网站上查看评论也比阅读和过滤 alt.binaries.boneless 这种二进制新闻组中的所有垃圾邮件容易得多。某些界面（例如 Newhosting 的新闻组浏览器）会过滤掉大多数垃圾邮件和加密文件，使其使用变得更加容易。
 
 
+客户不想坐在电话旁等一小时才等到技术支持回答。在等待时，他们希望有一个说同一种语言、用同一种方言的人。他们也不希望被该 `Usenet` 公司用推销信息骚扰（像 `GoDaddy` 这样的网站托管公司在这方面臭名昭著），也不喜欢接到打此类优惠的电话。
 
+## Usenet 的第一法则（不要谈论 Usenet！）
+在 `Facebook`、`Twitter` 和 `Reddit` 等许多社交媒体网站和论坛上，一些用户会发布 90 年代后期来自 `BestBuy`、`沃尔玛`、`Sears` 等大型百货商店广告，这些广告显示了硬件成本的巨大差异。例如，2000 年在 `BestBuy` 买的一块 1.5 GB 硬盘花费超过 200 美元。而现在，同样的金额你可以买到一个 3 TB 的硬盘。`Usenet` 服务器农场也是如此。随着时间的推移，越来越多的客户注册 `Usenet` 账户，`Usenet` 产生的业务成本就会下降。这就是为什么你可以以不到十美元的价格拥有一个无限账户。那么，为什么传统的文件共享（如 `Torrent`）更流行呢？
 
+原因是，免费下载一个 `Torrent` 比不掏出信用卡并设置 `Usenet` 账户要容易得多。荒谬的是，在 `Torrent` 网站上查看评论也比阅读和过滤 `alt.binaries.boneless` 这种二进制新闻组中的所有垃圾邮件容易得多。某些界面（例如 `Newhosting` 的新闻组浏览器）会过滤掉大多数垃圾邮件和加密文件，使其使用变得更加容易。
 
 # Usenet 匿名性
 
-在本章中，我们将讨论如何为你的 Usenet 连接添加匿名功能，以便你能够参与讨论组而无须担心迫害。这些方法在某些情况下最为有用，即如果你对错误的人说了错误的话，可能会失去你的 Usenet 账户。现在的 Usenet 公司是一门大门生意，与十二年前不同，如果他们收到足够的投诉，现在将不会毫不犹豫地终止你的账户。仅仅是因为不受欢迎以及对某些新闻组的现状持反对立场（例如 alt.privacy），就可能导致你的 Usenet 账户被封禁。
+在本章中，我们将讨论如何为你的 `Usenet` 连接添加匿名功能，以便你能够参与讨论组而无须担心迫害。这些方法在某些情况下最为有用，即如果你对错误的人说了错误的话，可能会失去你的 `Usenet` 账户。现在的 `Usenet` 公司是一门大门生意，与十二年前不同，如果他们收到足够的投诉，现在将不会毫不犹豫地终止你的账户。仅仅是因为不受欢迎以及对某些新闻组的现状持反对立场（例如 `alt.privacy`），就可能导致你的 `Usenet` 账户被封禁。
 
-然而，有了真正的匿名性，他们可能会封禁你的账户，但请放心，不仅你的话语将永远留在 Usenet 上，而且也不会因为公开反对暴政政府或你供职的公司而受到迫害（这种情况在 Facebook 上曾多次因不满的员工而发生）。
+然而，有了真正的匿名性，他们可能会封禁你的账户，但请放心，不仅你的话语将永远留在 `Usenet` 上，而且也不会因为公开反对暴政政府或你供职的公司而受到迫害（这种情况在 `Facebook` 上曾多次因不满的员工而发生）。
 
-在开始之前必须说明的是，使用 Tor 下载 Usenet 二进制文件实际上会增加 Tor 网络的负担，就像种子（torrent）一样。而且，每当你通过 Tor 使用种子下载时，种子软件实际上会将你的 IP 地址发送给接收者。它是以匿名的方式进行的，就像邮局投递你的邮件一样。不言而喻，这违背了使用种子的目的。这个问题不在于 Tor 代码，而在于 BitLord 和 BitTorrent 等应用程序的设计方式。种子应用程序本身需要被编码以允许匿名。如果你希望保持匿名，最好使用带有 Frost 插件的 Freenet 进行类 p2p 交易。
+在开始之前必须说明的是，使用 `Tor` 下载 `Usenet` 二进制文件实际上会增加 `Tor` 网络的负担，就像种子（`torrent`）一样。而且，每当你通过 `Tor` 使用种子下载时，种子软件实际上会将你的 IP 地址发送给接收者。它是以匿名的方式进行的，就像邮局投递你的邮件一样。不言而喻，这违背了使用种子的目的。这个问题不在于 `Tor` 代码，而在于 `BitLord` 和 `BitTorrent` 等应用程序的设计方式。种子应用程序本身需要被编码以允许匿名。如果你希望保持匿名，最好使用带有 `Frost` 插件的 `Freenet` 进行类 p2p 交易。
 
-Tor 在使用你的原生连接进行文本讨论和二进制下载时效率高得多，但匿名实现此点的简单方法是使用重发器（remailer）。通过使用这种方法，身份 Usenet 帖子将从你的消息中被剥离，本质上抹除了通向你 IP 地址的数字足迹。
+`Tor` 在使用你的原生连接进行文本讨论和二进制下载时效率高得多，但匿名实现此点的简单方法是使用重发器（`remailer`）。通过使用这种方法，身份 `Usenet` 帖子将从你的消息中被剥离，本质上抹除了通向你 IP 地址的数字足迹。
 
 正如我们在过去几年从全球媒体报道中所看到的，你想要隐藏身份可能有无数种合理的理由。
 
-- 也许你为一家计算机制造商或机器人公司工作，并担心上级没有执行安全措施，但担心如果你公开这些，可能会遭到他们的某种报复，例如失去工作。Usenet 是一个寻求建议且无须担心后果的好地方。相比之下，Facebook 和 Twitter 等地方可能会招致公司高管或 CEO 的报复。
-
+- 也许你为一家计算机制造商或机器人公司工作，并担心上级没有执行安全措施，但担心如果你公开这些，可能会遭到他们的某种报复，例如失去工作。`Usenet` 是一个寻求建议且无须担心后果的好地方。相比之下，`Facebook` 和 `Twitter` 等地方可能会招致公司高管或 CEO 的报复。
 - 你可能大声抗议对政府政向的异议。在美、伊朗、中国等国家这样做可能会让你被列入某种“观察”名单，在你还没意识到之前，你就会遇到与机场和边境检查站相关的“禁飞”问题。
-
-- 也许你想要建立一个与你的真实 IP 地址完全没有任何接触的免费电子邮箱地址。Yahoo Mail、Gmail 和 Hotmail 等服务会反复扫描邮件以寻找标记的关键词或文件。关闭你的邮箱是一回事。将你的 IP 地址连同邮件一起转发给政府机构进行诉讼则是另一回事。匿名性防止了这种情况发生。
+- 也许你想要建立一个与你的真实 IP 地址完全没有任何接触的免费电子邮箱地址。`Yahoo Mail`、`Gmail` 和 `Hotmail` 等服务会反复扫描邮件以寻找标记的关键词或文件。关闭你的邮箱是一回事。将你的 IP 地址连同邮件一起转发给政府机构进行诉讼则是另一回事。匿名性防止了这种情况发生。
 
 # 零售商
 
@@ -4216,35 +3963,31 @@ Tor 在使用你的原生连接进行文本讨论和二进制下载时效率高�
 
 # 可追踪 vs. 不可追踪的零售商
 
-可追踪的：有某些类型的零售商维护着发送者/假名的活跃列表，使得接收者可以通过虚假名称回复邮件。当零售商收到消息时，他们会查询列表并将邮件转发给发送者。因此，这种通信方法具有隐私元素；但正如过去几年 penet.fi（芬兰）事件证明的那样，这并不提供匿名性。任何黑客、政府机构、法官等都可以访问该列表并发现发送者是谁。在 penet.fi 案中，科学组织对其发起了版权侵权诉讼，下级法院要求他们交用户身份。
+**可追踪的：** 有某些类型的零售商维护着发送者/假名的活跃列表，使得接收者可以通过虚假名称回复邮件。当零售商收到消息时，他们会查询列表并将邮件转发给发送者。因此，这种通信方法具有隐私元素；但正如过去几年 `penet.fi`（芬兰）事件证明的那样，这并不提供匿名性。任何黑客、政府机构、法官等都可以访问该列表并发现发送者是谁。在 `penet.fi` 案中，科学组织对其发起了版权侵权诉讼，下级法院要求他们交用户身份。
 
-不可追踪的：如果不维护用户假名的列表，安全性将呈指数级增加……前提是你愿意放弃与对方的两种通信方式。不言而喻，这有一些缺点，在某些方面劣于使用 Tor 和/或 PGP 通信。此外，始终存在黑客攻击的可能性，一旦进入服务器，匿名性就会受到损害。沿流量嗅探器以及许多其他工具也可以作为攻击手段，因为它们可以比较和对比从服务器发出的流量。
+**不可追踪的：** 如果不维护用户假名的列表，安全性将呈指数级增加……前提是你愿意放弃与对方的两种通信方式。不言而喻，这有一些缺点，在某些方面劣于使用 `Tor` 和/或 `PGP` 通信。此外，始终存在黑客攻击的可能性，一旦进入服务器，匿名性就会受到损害。沿流量嗅探器以及许多其他工具也可以作为攻击手段，因为它们可以比较和对比从服务器发出的流量。
 
-此类攻击很难协调，但与 Tor 和 Freetet 内部的攻击有些相似，只要网络内部控制了足够数量的敌对节点，剥离匿名层的概率就会变得更加可能。换句话说，如果例如执法部门控制了所有的 Tor 中继节点，其长期影响将他们控制了 Freetet 大多数节点类似。尽管他们承认这些是截然不同的技术，但它们拥有一个共同目标：隐藏发送者和接收者的真实 IP 地址。
+此类攻击很难协调，但与 `Tor` 和 `Freetet` 内部的攻击有些相似，只要网络内部控制了足够数量的敌对节点，剥离匿名层的概率就会变得更加可能。换句话说，如果例如执法部门控制了所有的 `Tor` 中继节点，其长期影响将他们控制了 `Freetet` 大多数节点类似。尽管他们承认这些是截然不同的技术，但它们拥有一个共同目标：隐藏发送者和接收者的真实 IP 地址。
 
-然而，Mixmaster 技术试图通过跨越全球、跨越不同法律和执法管辖区域的多个服务器发送消息来阻止此类尝试。黑客和/或政府机构在全球范围内在服务器之间“兔子跳”以追踪原始发送者的居住地将变得呈指数级困难。因此，这远超了“不要把鸡蛋放在同一个篮子里”的说法，更像是“许多鸡蛋，放在许多篮子里”。这就是洋葱路由网络 Tor 的骨架框架。
+然而，`Mixmaster` 技术试图通过跨越全球、跨越不同法律和执法管辖区域的多个服务器发送消息来阻止此类尝试。黑客和/或政府机构在全球范围内在服务器之间“兔子跳”以追踪原始发送者的居住地将变得呈指数级困难。因此，这远超了“不要把鸡蛋放在同一个篮子里”的说法，更像是“许多鸡蛋，放在许多篮子里”。这就是洋葱路由网络 `Tor` 的骨架框架。
 
 # 在 Usenet 上仅破坏匿名性的因素
 
-1.) 给出你的真实邮箱地址，即使是来自 Yahoo、Hotmail 等类的“免费”服务的邮箱，不仅可能，而且保证会让你暴露在垃圾邮件机器人大军面前，这是肯定的。如果你感兴趣，执法部门也是如此。
+1.) 给出你的真实邮箱地址，即使是来自 `Yahoo`、`Hotmail` 等类的“免费”服务的邮箱，不仅可能，而且保证会让你暴露在垃圾邮件机器人大军面前，这是肯定的。如果你感兴趣，执法部门也是如此。
 
-你会惊讶地发现有多少新接触 Usenet 的人认为这些免费邮箱服务对大量机器人和警察来说是有懈可击的。更好的替代方案：虚假名称和临时的“Usenet 专用”邮箱。如果你有网站，你的主机可能为你提供创建垃圾账户的功能。或者，通过 https://www.nyms.net 每年花费二十美元获取匿名名。SharpMail、Mailinator 和 Hushmail 也是极佳的选择，然而，如果你既想要匿名又想要隐私，请记住在 Tor 网络上注册，而不是在开放网上。还记住不要使用信用卡或 PayPal，因为这会留下资金轨迹。最好使用比特币或与你无关的汇票。
+你会惊讶地发现有多少新接触 `Usenet` 的人认为这些免费邮箱服务对大量机器人和警察来说是有懈可击的。更好的替代方案：虚假名称和临时的“`Usenet` 专用”邮箱。如果你有网站，你的主机可能为你提供创建垃圾账户的功能。或者，通过 `https://www.nyms.net` 每年花费二十美元获取匿名名。`SharpMail`、`Mailinator` 和 `Hushmail` 也是极佳的选择，然而，如果你既想要匿名又想要隐私，请记住在 `Tor` 网络上注册，而不是在开放网上。还记住不要使用信用卡或 `PayPal`，因为这会留下资金轨迹。最好使用比特币或与你无关的汇票。
 
-2.) 掉个人信息。这是一个大问题，而且经常出现在各种小组关于政治竞选等问题的争论中，甚至出现在 mp3 组中（例如 alt.binaries.mp3.electronic）。政治倾向/联系、喜欢的餐厅、酒吧、音乐小组等可能会导致跟踪者对你建立画像，然后在 Facebook、Twitter 或 LinkedIn 上输入你过去六个月提供的所有个人数据。记住，在任何新闻组中输入的任何内容将长久保存。将“labor”打成“labour”或将“color”打成“colour”，辨别你的来源国并不困难。
+2.) 掉个人信息。这是一个大问题，而且经常出现在各种小组关于政治竞选等问题的争论中，甚至出现在 `mp3` 组中（例如 `alt.binaries.mp3.electronic`）。政治倾向/联系、喜欢的餐厅、酒吧、音乐小组等可能会导致跟踪者对你建立画像，然后在 `Facebook`、`Twitter` 或 `LinkedIn` 上输入你过去六个月提供的所有个人数据。记住，在任何新闻组中输入的任何内容将长久保存。将“labor”打成“labour”或将“color”打成“colour”，辨别你的来源国并不困难。
 
-3.) 留下消息头对公众可见的消息。通过各种搜索工具，他们可以看到每条消息
-
-
-
-你曾在 Usenet 上发布内容，即使你使用了不同的匿名用户名（nyms）。当然，如果你使用一个会剥离此类信息的服务，这种情况就不会发生。
+3.) 留下消息头对公众可见的消息。通过各种搜索工具，他们可以看到每条消息你曾在 `Usenet` 上发布内容，即使你使用了不同的匿名用户名（`nyms`）。当然，如果你使用一个会剥离此类信息的服务，这种情况就不会发生。
 
 ## 4.) 使用信用卡注册 Usenet VPN 服务
-
-要认识到，当你使用信用卡购买如 VPN（虚拟专用网络）或 Usenet 账户等任何物品时，你实际上留下了一条直接指向你身份的资金线索。如果你只追求小程度的隐私，例如想要一个不监控/记录你下载内容的 Usenet 账户，那么使用 VPN 就可以了。但如果你追求的是匿名性，你必须通过匿名手段同时注册 Usenet 和 VPN 服务，例如通过比特币、汇票或无法追溯到你个人身份的预付借记卡。
+要认识到，当你使用信用卡购买如 `VPN`（虚拟专用网络）或 `Usenet` 账户等任何物品时，你实际上留下了一条直接指向你身份的资金线索。如果你只追求小程度的隐私，例如想要一个不监控/记录你下载内容的 `Usenet` 账户，那么使用 `VPN` 就可以了。但如果你追求的是匿名性，你必须通过匿名手段同时注册 `Usenet` 和 `VPN` 服务，例如通过比特币、汇票或无法追溯到你个人身份的预付借记卡。
 
 ## Truecrypt、Usenet 与密码
+在所有关于在公开新闻组中发布 `rar` 包、`part` 和消息的讨论中，如果不提到你也可以向 `Usenet` 上传加密容器和加密卷，那将是一个遗憾。主要的区别在于，你必须安装安装了 `Truecrypt`（免费）应用程序，并在上传到 `Usenet` 新闻组之前，创建一个包含消息或数据的加密容器。有许多不同的新闻组允许这样做，也有许多是不允许的。然而，你可以使用 `alt.binaries.test` 作为与其他进行隐蔽通信的手段，或与他人私下共享文件。加密实际上相当简单。
 
-在所有关于在公开新闻组中发布 rar 包、part 和消息的讨论中，如果不提到你也可以向 Usenet 上传加密容器和加密卷，那将是一个遗憾。主要的区别在于，你必须安装安装了 Truecrypt（免费）应用程序，并在上传到 Usenet 新闻组之前，创建一个包含消息或数据的加密容器。有许多不同的新闻组允许这样做，也有许多是不允许的。然而，你可以使用 alt.binaries.test 作为与其他进行隐蔽通信的手段，或与他人私下共享文件。加密实际上相当简单。
+
 
 当你创建一个包含要发送给他人数据的 Truecrypt 容器时，你可以运行该文件（或多个文件）并将其上传。这时只有拥有密钥文件的人才能知道其内容，你可以通过邮件发送给他们，和/或提供容器密码。
 
@@ -4256,7 +3999,7 @@ Tor 在使用你的原生连接进行文本讨论和二进制下载时效率高�
 
 ## 从挂载的 Truecrypt 镜像运行 Usenet
 
-可选情况下，你可以创建一个加密卷，将你的 Usenet 新闻阅读器安装到该容器中，并仅在挂载该容器时运行你的新闻阅读器。只需注意，某些应用程序喜欢在系统驱动器（C:）中留下临时文件，但大多数程序应该有设置此类目录的选项（即在加密容器内部设置）。然而，如果你不想每次会话都更改它，必须每次将其挂载到相同的目录，这使得你与他人之间的私密通信变得非常困难，否则会让整个新闻组都看到你在说什么或交易什么。
+可选情况下，你可以创建一个加密卷，将你的 Usenet 新闻阅读器安装到该容器中，并仅在挂载该容器时运行你的新闻阅读器。只需注意，某些应用程序喜欢在系统驱动器（`C:`）中留下临时文件，但大多数程序应该有设置此类目录的选项（即在加密容器内部设置）。然而，如果你不想每次会话都更改它，必须每次将其挂载到相同的目录，这使得你与他人之间的私密通信变得非常困难，否则会让整个新闻组都看到你在说什么或交易什么。
 
 可能会出现一种情况：你花了很多钱买了一张稀有的、老门的专辑录音，你不希望 mp3 组的任何其他人试图在 eBay 上赚钱。解决方案是？使用 Truecrypt 加密 mp3。用密码将其压缩 rar 包并上传到 Usenet 的某个新闻组。
 
@@ -4267,6 +4010,7 @@ Tor 在使用你的原生连接进行文本讨论和二进制下载时效率高�
 你也可以使用 PGP 加密发送到新闻组的消息。PGP 是一种免费加密应用程序，与 Truecrypt 类似（但更复杂）。你可以加密从一个新闻组到另一个或任何你喜欢的接收者的消息，他们反过来解密你的消息。与使用 Truecrypt 相比，为了隐蔽 Usenet 通信而使用 PGP 更高效，因为这些程序旨在不同的安全场景。应该说的是，PGP 手册并不好读。你需要花费一些精力来理解如何加密/解密 Usenet 信息，因为它不像 Truecrypt 那样直观且对新手友好。但如果你想与 Usenet 上的其他 PGP 成员交换加密消息，学习它是值得的。
 
 与 PGP 相关的新闻组：
+
 - alalt.security.pgp
 - comp.security.pgp.announce
 - comp.security.pgp.discuss
@@ -4274,6 +4018,7 @@ Tor 在使用你的原生连接进行文本讨论和二进制下载时效率高�
 - comp.security.pgp.tech
 
 密码学、安全与加密的技术来源
+
 - www.iacr.org - 密码学研究协会 - 包含大量加密数据以及相关的安全程序
 - www.pgpi.org - PGP 及其应用程序的主页和资源
 - www.nist.gov/aes - Truecrypt、Drivecrypt、PGP 使用的 AES 或高级加密标准
@@ -4292,10 +4037,6 @@ Tor 在使用你的原生连接进行文本讨论和二进制下载时效率高�
 
 现在，这种不可容忍的态度弊大于利。还有许多关于艺术家 Steve Roach 的上传，他的音乐跨越了多个不同的类型：新世纪音乐、氛围、迷幻和电子音乐，但该音乐的上传者同样遭到了长期用户的诅咒和猛烈骚扰。
 
-
-
-
-
 ## 哪些 VPN 公司尊重匿名性？
 
 如果你通过本地 ISP 访问 Usenet 感到有些心不安，始终可以通过订阅一家附近的 VPN（虚拟专用网络）服务来增加额外的隐私保护。有许多优秀的 VPN 供应商，它们会将你的互联网连接路由到它们那里，并提供 SSL（安全套接层）加密，使得你的 ISP 无法看到你在网络上的行为。它们都使用相似的技术来实现这一目标，且速度相当。VPN 服务比使用像 Tor 这样的洋葱路由网络快得多，但并非所有的供应商都能容忍 P2P 使用。不过，它们会容忍 Usenet 账户。
@@ -4310,7 +4051,7 @@ Tor 在使用你的原生连接进行文本讨论和二进制下载时效率高�
 
 一些答案出乎意料地闪烁其辞，另一些则非常有启发性。一家供应商 CryptCloud 表示：
 
-“我们不记录客户使用侧的任何内容，因此完全没有可以关联的点，我们完全分离了支付信息。现实中，除非你在‘邪恶之轴’国家之一运营，否则执法部门将找到方法向你施压。我读过认为在欧洲可以保护你免受美国执法部门影响的废话，这对 HMA 有效不是吗？此外，我很确定瑞士银行的面纱已被攻破，而且从历史上看，这比个人隐私更具防御性。解决办法就是不记录，此此。”
+> “我们不记录客户使用侧的任何内容，因此完全没有可以关联的点，我们完全分离了支付信息。现实中，除非你在‘邪恶之轴’国家之一运营，否则执法部门将找到方法向你施压。我读过认为在欧洲可以保护你免受美国执法部门影响的废话，这对 HMA 有效不是吗？此外，我很确定瑞士银行的面纱已被攻破，而且从历史上看，这比个人隐私更具防御性。解决办法就是不记录，此此。”
 
 有两点需要说明。HMA（Hide My Ass VPN）事件涉及黑客组织 Lulzsec 的成员，其中一个核心成员被捕了。第二，他提到了“邪恶之轴”，但显然他们并不在那些国家之一。
 
@@ -4318,11 +4059,13 @@ Tor 在使用你的原生连接进行文本讨论和二进制下载时效率高�
 
 解决方案？匿名注册 VPN 供应商。有几家供应商接受比特币作为支付方式。
 
+
+
 ```
 http://www.thebitcoinlist.com/dp_internet/vps-vpn/
 ```
 
-## 云（匿名性的敌人）
+# 云（匿名性的敌人）
 
 不言而喻，人类是网上获取的许多东西的贪婪收集者：mp3 集合、数字壁纸、pdf 文件等。“云”这个词从一个博客主到另一个博客主被赋予浮躁且难以处理的定义，仿佛（“云”）实际上是数字空中某个不可攻破的堡垒，害虫或盗贼无法进入并破坏或偷取。无论你觉得你的文件“在云端”有多安全，也许应该记住，谁拥有“云”，谁就拥有了你的东西。因此，云只不过是一个拥有数百个……的服务器群。
 
@@ -4331,7 +4074,6 @@ http://www.thebitcoinlist.com/dp_internet/vps-vpn/
 进入 Windows 8，SmartScreen 尝试验证……
 
 进入 Windows 8，SmartScreen 尝试验证……
-
 
 安全设置正在逐渐从终端用户手中夺走。这对 Usenet 意味着什么？可能会发生两种情况之一。
 
@@ -4361,22 +4103,23 @@ Chrome OS 将首次在三星和锐尔的全黑色笔记本电脑上提供。由�
 
 上述原因足以让人 Usenet 使用物理硬盘存储数据产生怀疑，无论这些数据是什么，如果用户必须从 Usenet 账户“流传输”他们的文件，这会缓慢杀掉 Usenet 行业。他们还享有没有任何人保留其下载日志的特权。这对于大多数种子追踪器显然不是事实，每个种子者都会向所有人暴露他们的 IP 地址，持续几天或几周。
 
-# 无视独裁者，获取隐私
+## 无视独裁者，获取隐私
 
 为了扭转反对集体思维的大潮并夺回个人文件的所有权（在 Usenet 或其他地方），现在需要采取立场，而不仅仅是我们的钱包。20 世纪 90 年代曾几何段时间，Usenet 提供者不需要担心他们的帖子被刻在新闻组的石头上并持续几代。那时即使是文本新闻组的留存并不常见，二进制文件的五留留存只是一个梦想。许多 Usenet 用户并不害怕在信息中使用真实姓名和真实邮箱。在当时，没有理由这样做。然而现在，除了被跟踪（以及绑架/杀害）这种阴森的威胁外，每个发布到 Usenet 的信息都被 Google（DejaNews/Google Groups）存档，就像他们通过 Google Earth 对地球上的每一个角落拍摄高分辨率照片一样。这种向“云端”的数字推动似乎是为了最小化独特性，并终结隐私。这项技术已经存在，你在街道上的每一个动作将不再由坐在政府建筑和银行顶部的监控摄像头记录，而是由彼此记录。Google 不仅记录了过去五年内发布到 Usenet 的每一条信息，它还想在其 Project Glass 产品上做非常相似的事情，用户将拥有一对内置网络摄像机的眼镜，该摄像头会监控周围的一切，提供关于环境（建筑、餐厅、博物馆等）的即时数据。但它不会止于此。它最终将关注人，因为那里是广告收入来源。根据 Google 的说法：
 
 > We Think Glass 帮助你在体验生活的同时分享你的生活；从生活的重大时刻到日常体验。今天，我们启动了所谓的‘Glass 会话’，你可以通过真实人的眼睛，在现实生活中，在构建 Glass 的同时体验使用 Glass 的感受。第一个 Glass 会话关注了 Laetitia Gayno，一位 Google 员工的妻子，她分享了迎接新宝宝的故事，捕捉每一个微笑，并通过 Hangouts “首次”向她在法国的家人展示。
 
-# 安全在个人手中，而非国家
+## 安全在个人手中，而非国家
 
 我们可能会达到一个点，即在 Usenet 或其他地方可能无法真正隐藏任何匿名性。没有最新“现实增强器”（这非常方便地携带了关于你出生、健康、学术和职业历史的各种想象数据）的用户将遭受同伴的严重排挤：在 Facebook 上删除好友等。正如任何拥有 RAID 硬盘设置的人所证实的那样，
-
 
 技术随着每一代的演进而变得越来越小，而且越向未来，存储的数据就越多。总会有一天，你将不需要戴眼镜就能记录并将你的即时环境上传到互联网。所有的监控设备不可避免地会缩小到你的肉眼完全察觉不到它们存在的程度。这就是 Usenet 发生过的事情。在 20 世纪 90 年代，没有人知道我们在网上说过的每一句话都会被[存档](https://archive.org)，供几十年后的任何人查阅。
 
 因此，我们在 Usenet 上进行自我审查，担心被举报给任何对我们进行相应惩罚的当局。因此，过量的数据实际上是自由的反立面。Usenet SSL、VPN 和 Tor 都赋予了终端用户权力，但这种权力正被那些权力者（如 Google、Facebook）逐渐排斥和最小化。它尚未 100% 整合到社会中，但正在到来。为了在 Usenet 上培养更多隐私，我们需要更多的匿名性。人们需要自由地表达自己的想法并参与文明讨论，而必必担心权者（Google）操纵审查。我们将达到这样一个地步：仅仅因为拒绝配合就被指控为“不怀好意”。拥有加密卷并计划越境？边境检查站可能会要求你解密。拒绝的话，他们可以没收你的笔记本电脑五天，让这段旅程变得非常恼火。
 
 将来有一天，在没有政府机构批准的情况下，删除互联网上关于你过去历史的负面信息会被视为死罪吗？
+
+
 
 # 逃离西方！
 
@@ -4390,12 +4133,10 @@ Chrome OS 将首次在三星和锐尔的全黑色笔记本电脑上提供。由�
 - 如何织一件隐形斗篷
 - 如何创建匿名银行账户
 - 比币
-
 - 学生贷款
 - 税收抵扣
 - 预防：教育部的头号敌人
 - 合并、IBR（收入驱动还款）与豁免
-
 - 社会安全号
 - 就业
 - 应避免的事项
@@ -4406,16 +4147,16 @@ Chrome OS 将首次在三星和锐尔的全黑色笔记本电脑上提供。由�
 - 白色的谎言
 - 克隆家
 - 护照与加拿大
-
 - 匿名电话
 - FBI 如何追踪通话
 - 使用一次机（Burner）的缺点
 - 使用一次机（Burner）的优点
-
 - 从社交媒体中消失
 
 ## 第一阶段：从轨道上摧毁网站
+
 ## 第二阶段：摧毁犯罪和公共记录
+
 ## 第三阶段：避开雷达
 
 - 跟踪者
@@ -4424,21 +4165,18 @@ Chrome OS 将首次在三星和锐尔的全黑色笔记本电脑上提供。由�
 - 脚游者
 - 毁了她的生活！
 - 如何从跟踪者手中消失
-
 - 保护你的电脑
 - Tor
 - Tails
 - VPNs
 - Freetet
 - Frost
-
 - 反取证学
 - Truecrypt
 - Drivecrypt
 - Veracrypt
 - DiskCryptor
 - LibreCrypt
-
 - 边境官员与加密笔记本电脑
 - 将贵物品埋在地下
 - X 标记处
@@ -4446,11 +4184,9 @@ Chrome OS 将首次在三星和锐尔的全黑色笔记本电脑上提供。由�
 - 绝缘
 - 裸埋它
 - 星球大战式的胡花招
-
 - 走向极端
 - 菲律宾
 - 加拿大
-
 - 泰国
 - 中国
 
@@ -4479,10 +4215,6 @@ Chrome OS 将首次在三星和锐尔的全黑色笔记本电脑上提供。由�
 
 [注：从此处开始，提供的 OCR 文本变得高度损坏/重复。我已处理了连贯的部分，并按照指令保持了结构。]
 
-
-
-
-
 “未成年人”，这在伊利诺伊州属于性犯罪。陪审团和法官都相信了他。然而，巴纳比经历了数年的法律诉讼，最终导致他的名字被列入了性犯罪者名单，那里他的照片和地址都是公开的。他必须向当局报到。他的就业选择受到严重限制；他不能住在学校或公园附近。
 
 我曾原以为我是唯一经历过如此可怕日子的人。最荒谬的部分甚至不是这件事情发生了，而在于它永远不会被遗忘。它永远不会被安放在错误埋葬的地方。它们会被永远传播，烙印在我们记忆中，并深深刻骨髓。宽恕（即让你的过去行为除了你和全能的神之外对所有人都是隐形的）是被禁止的。
@@ -4493,11 +4225,11 @@ Chrome OS 将首次在三星和锐尔的全黑色笔记本电脑上提供。由�
 
 想想如果你发生以下任何一种情况，你的生活会发生什么变化：
 
--   有人使用你不安全的 WiFi 来威胁总统。
--   黑客偷了你的信用卡，通过代理购买俄罗斯儿童色情片。
--   你刚听到警笛，手机就响了。你接起电话，听到一名新闻记者要求采访，因为你是最后一个见到州长还活着的人，地点在博尚高尔夫和球类乡村俱乐部（Beau Chene Golf and Racquet Country Club）（他后来被发现死在洗手间的血泊——就是你！）
--   那些追讨你抚养费的权力——却不让你看到自己的孩子。你试图前往加拿大“躲避这一切”待一段时间，结果在边境被捕了。当他们在你后座发现几本“漫画”时，情况变得糟糕。这些漫画在加拿大是非法的但在美国不是。混乱随之而来。他们以法律的名义撕碎你的名誉。
--   你十岁的弟弟在学校操场上对朋友开玩笑说，他有一屋子像兰姆波一样的手榴弹和几桶火药。一个女孩听到了。她告了状。警察抓了他（没开玩笑），但后来放了他。多年后，当他试图加入陆陆队时，那报告出现了。他被拒绝了。是的，这确实发生我在路易斯安州的一位亲戚身上。并不是说路易斯安州比其他任何州更好或更糟，歇斯底症可以在到处蔓延并带你玩。事实是，我将向你展示无论你在哪个国家，如何防止这种烂事的发生。
+- 有人使用你不安全的 WiFi 来威胁总统。
+- 黑客偷了你的信用卡，通过代理购买俄罗斯儿童色情片。
+- 你刚听到警笛，手机就响了。你接起电话，听到一名新闻记者要求采访，因为你是最后一个见到州长还活着的人，地点在博尚高尔夫和球类乡村俱乐部（Beau Chene Golf and Racquet Country Club）（他后来被发现死在洗手间的血泊——就是你！）
+- 那些追讨你抚养费的权力——却不让你看到自己的孩子。你试图前往加拿大“躲避这一切”待一段时间，结果在边境被捕了。当他们在你后座发现几本“漫画”时，情况变得糟糕。这些漫画在加拿大是非法的但在美国不是。混乱随之而来。他们以法律的名义撕碎你的名誉。
+- 你十岁的弟弟在学校操场上对朋友开玩笑说，他有一屋子像兰姆波一样的手榴弹和几桶火药。一个女孩听到了。她告了状。警察抓了他（没开玩笑），但后来放了他。多年后，当他试图加入陆陆队时，那报告出现了。他被拒绝了。是的，这确实发生我在路易斯安州的一位亲戚身上。并不是说路易斯安州比其他任何州更好或更糟，歇斯底症可以在到处蔓延并带你玩。事实是，我将向你展示无论你在哪个国家，如何防止这种烂事的发生。
 
 如果你受到过调查，当局可能会翻遍你的地方，寻找任何可以用来建立坚实案件并移交给检察官的证据。谁知道在那时你的情况会变成什么样。你可能需要离开一段时间来与律师制定策略、维持你的业务、与家人交流、转移资产等。在监牢里很难做到这些。
 
@@ -4505,10 +4237,10 @@ Chrome OS 将首次在三星和锐尔的全黑色笔记本电脑上提供。由�
 
 你将学到：
 
-1.  如何在在线和线下都保持匿名。
-2.  如何利用周围环境降低风险，特种兵风格。
-3.  如何检测你何时正被数据挖掘：如何隐藏你在哪里上过书、住在哪里、爱过谁、没爱过谁。你的购物习惯、约会习惯、政治派别。你懂的。
-4.  如何看起来像一条小鱼而不是一条大鱼。
+1. 如何在在线和线下都保持匿名。
+2. 如何利用周围环境降低风险，特种兵风格。
+3. 如何检测你何时正被数据挖掘：如何隐藏你在哪里上过书、住在哪里、爱过谁、没爱过谁。你的购物习惯、约会习惯、政治派别。你懂的。
+4. 如何看起来像一条小鱼而不是一条大鱼。
 
 但这仅仅是开始。
 
@@ -4532,10 +4264,6 @@ Chrome OS 将首次在三星和锐尔的全黑色笔记本电脑上提供。由�
 
 在我们处理追踪者之前，提个警告：永远不要伪造自己的死亡或失踪，因为这带来的热度比你射了哈里的屁股还要大。
 
-
-
-
-
 ## 欺骗的全球网
 
 你寻求信息时最宝贵的工具，也是你的敌人剥夺你自由最宝贵的工具——无论是手铐、扣押还是资产没收，而 ATF（烟酒火器及爆炸物管理局）已将其变成了一门利润产业。你的脖子在网络上就像出生那天一样赤裸。
@@ -4547,6 +4275,8 @@ Chrome OS 将首次在三星和锐尔的全黑色笔记本电脑上提供。由�
 ### 别名
 
 让我们来谈谈别名。我敢打赌，你或你的孩子在 Facebook 和 Twitter 上使用的别名和在 Usenet 和 Pirate Bay 上使用的一样，或者是这些者的组合。也许是一个像 Windsong 这样酷酷的名字。你会在其他网站上稍微改一下，也许改用 Windsinger。这里那里可能会多一两个数字，但我们是习惯性的生物。我们不喜欢为每个社交媒体准备多个不同的别名……好吧，我们中的某些人懒得管，因为那对我们来说工作量太大了。头号错误。
+
+
 
 为了向我在路易斯安那州的一位漂亮侄女证明某个观点，我让她输入了她在 Twitter 和 P2P 上使用的昵称（nic）。弹出的不仅是 P2P 消息，还有她在 Usenet 上输入过的消息，那是她还是个小前青少年时期长期沉寂的消息。结果证明，Google 索引了几十年前的 Usenet 消息。在这么小的时候就让她向她展示 Usenet，我觉得有点不好意。相信我，我们当年那些 Usenet 的老兵万万年不认为 Usenet 农场会提供 7 年的留存率。
 
@@ -4564,13 +4294,13 @@ Chrome OS 将首次在三星和锐尔的全黑色笔记本电脑上提供。由�
 
 ## IP 地址搜索
 
-如果你有在线业务，请谨慎跳过隐私保护。跳单者可以执行简单的在线 WHOIS 搜索，这通常会揭示域名所有者，也就是你。他们甚至可能获得你的地址。如果他们无法直接找到所有者，他们可能能够跟随你在帖子中留下的线索。但你绝不会粗心到留下真名，对吧？
+如果你有在线业务，请谨慎跳过隐私保护。跳单者可以执行简单的在线 `WHOIS` 搜索，这通常会揭示域名所有者，也就是你。他们甚至可能获得你的地址。如果他们无法直接找到所有者，他们可能能够跟随你在帖子中留下的线索。但你绝不会粗心到留下真名，对吧？
 
 对。但问题不在于你。问题在于你的亲属。你的朋友。你的业务伙伴。你的前情人。跳单者会撒谎从他们那里套出信息。
 
 而且他们总是给话上糖，表现像是一个想要帮助你的人——一个光明的、善良和云朵般的天使：一个潜在的雇主。一个想要分发遗产资金的律师（呵呵，鬼）。一个电影导演想给你提供一个终生难得的角色。
 
-你可能会听到很多联盟营销人员说，你是否有 WHOIS 保护并不重要，但我不同意。如果你想保护自己，并延伸保护你的自由（顺便说，这是幸福的秘密），那么你就不能通向你家门口留下金钱痕迹。
+你可能会听到很多联盟营销人员说，你是否有 `WHOIS` 保护并不重要，但我不同意。如果你想保护自己，并延伸保护你的自由（顺便说，这是幸福的秘密），那么你就不能通向你家门口留下金钱痕迹。
 
 ## 法院
 
@@ -4592,15 +4322,15 @@ Chrome OS 将首次在三星和锐尔的全黑色笔记本电脑上提供。由�
 
 如果你的名字/地址像蛋上的胡椒一样散落在在社交媒体上，那么你需要在那些粘糊糊的收债者获取它之前将其删除。
 
--   学习 FDCPA（公平债务催收保护法），要像你的生计取决于它一样（事实确实如此）。知道他们可以做什么，以及不能做什么。记住，知识就是力量。如果你运用它，他们就会尊重它 - 检查你的别名。它们在每个社交媒体网站上吗？你的电话号码可见吗？你的邮箱呢？收债者或任何陌生人在 Facebook 上能看到你的私人信息吗？LinkedIn 呢？
+- 学习 FDCPA（公平债务催收保护法），要像你的生计取决于它一样（事实确实如此）。知道他们可以做什么，以及不能做什么。记住，知识就是力量。如果你运用它，他们就会尊重它 - 检查你的别名。它们在每个社交媒体网站上吗？你的电话号码可见吗？你的邮箱呢？收债者或任何陌生人在 Facebook 上能看到你的私人信息吗？LinkedIn 呢？
 
--   最重要的是：以书面形式要求任何债务证明。学生贷款？他们通常没有这些信息。他们会给出各种烂借口让你不要发送，相信我朋友，我听过他们所有的：“我们没有那个。”（谎）“我们下周发。”（另一个谎。如果那是真的，让她发截图给你）“你需要先设置自动还款计划。”（大谎）。在没有获得你签字的借据或银行贷款之前，永远不要付款。
+- 最重要的是：以书面形式要求任何债务证明。学生贷款？他们通常没有这些信息。他们会给出各种烂借口让你不要发送，相信我朋友，我听过他们所有的：“我们没有那个。”（谎）“我们下周发。”（另一个谎。如果那是真的，让她发截图给你）“你需要先设置自动还款计划。”（大谎）。在没有获得你签字的借据或银行贷款之前，永远不要付款。
 
 此外，研究这些规定并了解他们不能做什么。格姆-莱奇法案——限制了他们在你留言机上的滥用。许多收债者完全不听这一套。以此质他们！
 
-## 公平催收法
+### 公平催收法
 
-## 电话消费者保护法
+### 电话消费者保护法
 
 这一切中的双刃剑在于，说“请不要再给我打电话了！”起不起作用。你必须向银行发出书面要求。这被称为禁联令。有时有效，有时不灵。
 
@@ -4609,10 +4339,6 @@ Chrome OS 将首次在三星和锐尔的全黑色笔记本电脑上提供。由�
 你可以想象发生了什么。
 
 整个剧组不得不为了让她接那个愚蠢的电话而停机。所以，永远不要低估那些骗子会对你的声誉所做的事，并做好相应的准备。
-
-
-
-
 
 # 如何创建一个匿名银行账户
 
@@ -4623,11 +4349,12 @@ Chrome OS 将首次在三星和锐尔的全黑色笔记本电脑上提供。由�
 这类事情是通内战和革命的滑坡。糟糕的是，加拿大议会并没有抵抗出自己的人民。议会的一位政客声称：“我们没有选择，因为我们只有三十天时间决定，否则对在美国的所有投资将面临 30% 的罚金。”
 
 换句话说，他们只是“在执行命令”。
+
 我们以前在哪里听过这种话？
 
 无论如何，似乎“老大哥”还活着，犹大本人也无法策划出更尖锐的背刺。一些加拿人已经提起联邦诉讼起诉它，声称其违反宪法（确实如此），即使诉讼成功且法律被推翻，银行也不会急于恢复他们的系统，因为那样太昂贵了。
 
-但不要误会：如果你是美国公民，他们就想如何向 IRS 举报你，因为你没有在两个国家交税。本质上，是因为你不是一个张开双臂的听话的小鼠。对于那些热爱自由、进而热爱幸福的人来说这是一个问题，更不用说那些热爱匿名的人。
+但不要误会：如果你是美国公民，他们就想如何向 IRS 举报你，因为你没有在两个国家交税。本质上，是因为你不是一个张开双臂的听话的小鼠。对于那些热爱自由、进而热爱幸福的人来说这是一个问题，更不用说那些热爱匿名的人了。
 
 # 隐藏资产
 
@@ -4636,37 +4363,39 @@ Chrome OS 将首次在三星和锐尔的全黑色笔记本电脑上提供。由�
 此外，请注意，放在海外金库里的任何东西都不方便。获取它、卖掉它、将其转换为黄金或现金并取回，同时还要注意不留下任何财务轨迹，这些是非常耗时的。但金融匿名性从来不廉价。你必须在紧急需求和你的隐形需求之间进行权衡。
 
 其他选择：
-比特币
 
-你可以选择比特币路线购买货币，但你将面临高额费用，因为当两者结合时 Paypal 是一种高风险方法。如果你不擅长电脑，还会面临一个艰难的学习曲线。尽管如此，有一些指南可以引导你完成，但比特币本身并不是匿名的。
+- 比特币：你可以选择比特币路线购买货币，但你将面临高额费用，因为当两者结合时 Paypal 是一种高风险方法。如果你不擅长电脑，还会面临一个艰难的学习曲线。尽管如此，有一些指南可以引导你完成，但比特币本身并不是匿名的。
 
-Ptshamrock
+- Ptshamrock：在这里你可以买到匿名借记卡和其他物品。它们是合法的且已经存在多年，但并不廉价，也不完美。黑帽营销人员有时会使用它们。
 
-在这里你可以买到匿名借记卡和其他物品。它们是合法的且已经存在多年，但并不廉价，也不完美。黑帽营销人员有时会使用它们。
-
-Ocra
-
-Ocra 为海外投资、信托和基金会提供服务，他们称之为“财富保护”和“国际业务”。你可能会发现你需要的其他服务。
+- Ocra：Ocra 为海外投资、信托和基金会提供服务，他们称之为“财富保护”和“国际业务”。你可能会发现你需要的其他服务。
 
 如你所见，匿名财务账户的几乎每个方面都有缺点。我们还没有讨论的是如何在线访问任何这些账户。这是危险的，应该避免。
 
 但是（唉），有些时候你必须访问某个在线账户并在确保安全的情况下操作。这里是方法：
+
 1. VPN（虚拟专用网络）。试用版随处可见。你需要这个来让自己远离搜索引擎的影响，*而不是*政府。对于这一点，使用 Tor。购买 VPN（价格通常低于十美元），然后安装 Tor。
+
 2. 如果你真的很偏执，将 Tails/Tor 下载到内存棒中。如果你想看详细的示例，我的 Tor 书提供了详细信息，但最重要的是：永远不要透露任何个人数据。
+
 3. 匿名借记卡，可充值。如果你用现金充值卡片，你不能在自己的城市内这样做。
 
 # 学生贷款
+
+
 
 英语专业可能比任何其他专业（性别研究除外）构成了学生贷款债务批评的主要来源。这远远超过了办公室里的冷嘲热讽。政客们纷纷出来对普通文科表示恐惧，但你从未听过他们批评 STEM 学位，他们也没有提到当 Punjab 教授等待将他招收的生物班缩小 85% 以腾出研究时间时，那些课程是多么残酷。我们都曾听过那些常见的问题。
 
 “你为什么不学化学或工程？或者去读 MBA？也许是医学博士。”他们这样问你。
 
 通常，这些扔石头的人忽视了对这些其他 STEM 专业的的研究。如果他们这样做，他们就会意识到，他们承担的债务与他们的文科兄弟胞一样，甚至更多。自动化加外包正在让每个学位变得无关紧要，有些比其他的更快。即使是医学学生在毕业时也负着 20 万美元的学生贷款。这种债务既不能在破产时清偿，也不容易还清，因为他们：
+
 - 扣留你的工资（但在向你的同事面前羞辱你之前）
 - 没收你的资产
 - 摧毁你与雇主的关系
 
 现在这是每个人的问题。
+
 学生面临的主要问题（也是我们将消除的问题）是这样的：一个人如何在不被被恐吓的情况下还清债务？更好的是，当他们耗尽了所有力气时，如何能够重新开始？
 
 “还清十万万美元的学生贷款？”你这么说？不可能！
@@ -4678,10 +4407,12 @@ Ocra 为海外投资、信托和基金会提供服务，他们称之为“财富
 除非你住在加拿大，否则任何违约的学生贷款都可能导致 IRS 的征收，如果未妥善处理的话。比这更糟糕的是被扣工资。让我们先讨论你有哪些法律选择。
 
 几点：
+
 - 如果你的配偶没有为贷款担保，她的税单也会被没收。她可以提交受害配偶表格并发送给 IRS。这不是最好的选择。
-- 你可以使用这个网站挑战征收：https://www.mydebt.com/borrower/
+- 你可以使用这个网站挑战征收：`https://www.mydebt.com/borrower/`
 
 这是很困难的，为了成功，你需要证明为什么不应该发生征收。这里这里是一些原因：
+
 1. 在征收开始之前，你已经还清了债务
 2. 你有残疾（不是暂时的）
 3. 你最近申请了破产
@@ -4695,9 +4426,6 @@ Ocra 为海外投资、信托和基金会提供服务，他们称之为“财富
 
 其他数字游民已经这样做并获得了保障。有些人在字面意义上都在那里工作。他们为 Odesk 和 eLance 工作，而其他人选择分销路线，但并不是没有跳过巨大的障碍。
 
-
-
-
 这应该是最后的手段了，因为你不希望有任何事情阻碍你使用护照。
 
 话虽如此，让我们讨论一下如何防止抵扣，以防我们陷入那种官僚主义的泥潭中。
@@ -4705,7 +4433,8 @@ Ocra 为海外投资、信托和基金会提供服务，他们称之为“财富
 # 合并 (Consolidation)
 
 假设你不符合免除条件，如果你的债务不是太深，直接贷款计划（Direct Loan program）可以是你离开这一困境的门票。一种选择是将贷款合并在一起，这将使你的贷款脱离违约并恢复良好状态。另一种是 IBR，即基于收入的还款计划。如果你在 7-Eleven 工作每天只赚几角钱，那么你可能什么都不用付。什么都没有。零。但获得批准的时间可能需要一到三个月。你可以在下面的链接进行计算：
-http://www.ibrinfo.org/calculator.php
+
+`http://www.ibrinfo.org/calculator.php`
 
 关于合并需要记住的另一件事是，你的利率会影响你做出的任何决定。我的建议是等毕业后再通过合并来产生额外贷款——那时利率会被锁定在一个很低的水平。
 
@@ -4716,6 +4445,7 @@ http://www.ibrinfo.org/calculator.php
 延期还款 (Forbearance)：这应该是你弹斗里的最后一子弹。如果以上所有方法失败了，你可以将贷款进入延期状态。这有助于躲避吸血鬼般的催收员，但代价是：过高的利息！我们说的是惊人的利率，被称为资本化利息（capitalized interest），它会在业务启动之前将其扼杀。然后还有贷款人喜欢的额外费用。债务奴隶制依然根蒂固。
 
 这些是处理学生贷款的合法途径。
+
 阴暗的手段只是让它们违约。如果你走这条路，他们每天会给你打几十次骚扰电话。他们会纠缠你的亲戚、朋友和同事。这会出现在信用报告上，让潜在的雇主看到。这还不是最荒谬的部分。想知道是什么吗？
 
 好了，在这里：他们并不真的在乎你还还钱。他们感兴趣的是你让他们重新进入延期/宽限状态，这样他们就可以收取疯狂的利息（他们劫掠纳税人的钱来支付）。
@@ -4738,36 +4468,39 @@ http://www.ibrinfo.org/calculator.php
 
 无论我去哪家机构并不重要。FedEx。Home Depot。出版社。他们都说同样的话：在线申请。在线申请。在线申请。我听到这两个词次数太多，以至于开始在我的数字闹钟上看到它们，像热核武器装置上的倒计时一样闪烁。更糟糕的是，许多人在录用我之前就向我要我的号码。我觉得这一切都是令人心惊的，并且尊重人的隐私。
 
-在被录用之前，永远、永远不要提供这个号码。这样做会让你成为那些寻找想要干掉你的催收员/私家侦探的目标。我最终获得的两份工作，尽管在录用前提供了一个明显的假社安号码（1234-56-7890），他们还是雇佣了我。面试官（一个男人）尽管当他们说“欢迎加入”时我交出了真实的号码，但他似乎完全不在乎。
+在被录用之前，永远、永远不要提供这个号码。这样做会让你成为那些寻找想要干掉你的催收员/私家侦探的目标。我最终获得的两份工作，尽管在录用前提供了一个明显的假社安号码（`1234-56-7890`），他们还是雇佣了我。面试官（一个男人）尽管当他们说“欢迎加入”时我交出了真实的号码，但他似乎完全不在乎。
 
 # 需要避免的事项 (Things to Avoid)
 
-大学
+## 大学
+
 当我就读新奥尔良大学（UNO）时，SSN 几乎用于一切。借书。排课。索要成绩单。我在助学办公室工作，在那里我也发现很少有学生是被名字称呼的。你只是一个数字。我会打电话预约，他们在说其他任何事情之前，第一句话是：“你的社安号是多少？”
 
 真可怜。
+
 更可怜的是，任何在 UNO 系统内工作的人都可以访问这个号码。系统对于身份盗窃的安全性如何并不重要，因为任何刚转入的傻瓜，只要有工读补助金，就可以进入他想要的任何部门。他们管这叫免费钱。纳税人的钱。
 
 小心不要像挥霍大富游戏币一样到处丢这个号码。
 
-# 班级名单 (Class Rosters)
+## 班级名单 (Class Rosters)
 
 这是另一个大问题。
+
 在去厕所的路上，我注意到一个教授在点名名单上每个学生的名字旁边都写着 SSN。我开始好奇为什么这样，其他教授是否对所有其他班也这样做。遗憾的是，当时我对此并无能为力。
 
-# 计算机实验室 (Computer Labs)
+## 计算机实验室 (Computer Labs)
 
 当我们在 UNO 使用 VAX 系统时（大约是 Netscape 流行期间），我们必须使用 SSN 登录。这种同样的登录方案导致一个哈佛学生在 2014 年暴露，当时我们使用 Tor 发送炸弹威胁……纯粹是因为无聊！不太聪明。
 
 另一个威胁是实验室里的学生路过时看到你把它打出来。该死，他们甚至可以从背后看到你，因为在很多实验室里，椅子摆得很密，以容纳每个学期大量的新生。如果可能，通过从自己的笔记本电脑登录来避免这一点。
 
-# 列在教室外的成绩 (Grades Listed Outside Class)
+## 列在教室外的成绩 (Grades Listed Outside Class)
 
 在我变聪明并放弃之前，我曾是一个预科的竞争生（gunner）。在我大一化学课上，成绩被贴在教室外的走廊里，列着每个人的社会安全号码。我看着许多学生混乱地用手指沿着名单向下查看自己的成绩。如果我是那种阴险的类型，把那个孩子和社安号码匹配起来并开始一个聪明的身份盗窃计划将是轻而易举的事。
 
 我用记号笔把自己的划掉了。
 
-# 宿舍 (Dorms)
+## 宿舍 (Dorms)
 
 大学的第一个学期，我和哥哥提着我稀少的行李爬了宿舍六层楼。但在那之前，我必须办理入住。只有办理入住是在户外的，就在入口处。
 
@@ -4777,29 +4510,27 @@ http://www.ibrinfo.org/calculator.php
 
 现在你可能会问，为什么有人要费这些劲？偷别人的社会安全号码为了做……确切地做什么？
 
+
+
 嗯，我会告诉你。如果你是一个罪犯，世界上最好的事情就是偷别人的身份。出于这个原因，你不应该、永远不要使用别人的号码。那另一个人可能在 FBI 的通缉名单上，在你发现的那天，由于他们还没有指控你盗用身份，你就已经晚了。
 
 # 修改姓名 (Changing Your Name)
 
-在美国更改姓名
+## 在美国更改姓名
 
-更改名字并不困难。获取一个新的 SSN 是很痛苦的。这不像从大富游戏包里拿糖果。通常情况下，这是通过法院命令完成的。要求极其严格，将证明责任推在你身上，这个守法的公民……其中一点是，你必须向法院证明你面临生命危险。你需要证明它，而不仅仅是说。这可能是由于想要杀你的虐待配偶，或者是 FBI 的证人保护计划之类的，但如果没有这些，社会安全号码可能会伴随你一生。
+更改名字并不困难。获取一个新的 `SSN` 是很痛苦的。这不像从大富游戏包里拿糖果。通常情况下，这是通过法院命令完成的。要求极其严格，将证明责任推在你身上，这个守法的公民……其中一点是，你必须向法院证明你面临生命危险。你需要证明它，而不仅仅是说。这可能是由于想要杀你的虐待配偶，或者是 FBI 的证人保护计划之类的，但如果没有这些，社会安全号码可能会伴随你一生。
 
-善谎 (White Lies)
+### 善谎 (White Lies)
 
-隐私倡导者无论如何小心，无法绕过 FAFSA 表格上的 SSN 要求而不冒着被拒绝的风险。如果你使用虚假的 SSN，可能会被指控为联邦罪。那么怎么办？
+隐私倡导者无论如何小心，无法绕过 `FAFSA` 表格上的 `SSN` 要求而不冒着被拒绝的风险。如果你使用虚假的 `SSN`，可能会被指控为联邦罪。那么怎么办？
 
 你做的就是对所有人撒谎。例如：
 
-有一次我接到一家催收机构的电话。TransMediaCorp 或某个听起来的名字。通常当催收机构打电话时，如果你仔细听，就能听到所有的脚本
-
-
-
-
+有一次我接到一家催收机构的电话。`TransMediaCorp` 或某个听起来的名字。通常当催收机构打电话时，如果你仔细听，就能听到所有的脚本
 
 背景里猴子在键盘上敲敲乱打，不停聊天（大多是谎言）。我的回答是对他们撒谎。
 
-“是 X 先生吗？”探员贝蒂（Betty）问道。
+“是 X 先生吗？”探员 `Betty` 问道。
 
 “谁先生？”我反击道。（总是）
 
@@ -4807,17 +4538,17 @@ http://www.ibrinfo.org/calculator.php
 
 她又说了一遍，就在那时，我纠正了她，说她的名字是对的，但姓错了。拼写不对，读音也错。我假装被冒犯了。
 
-他们找错人了。真倒霉。他们向我要了社会安全号码（SSN）。我给了她一个假的，原因很简单：因为你一旦确认了自己的身份（这是他们会问的**第一个**问题），你就等于在背上画了一个血红色的目标。他们会将名字与法律地址匹配。从那里起，将有一个接一个名字，没完没了。
+他们找错人了。真倒霉。他们向我要了社会安全号码（`SSN`）。我给了她一个假的，原因很简单：因为你一旦确认了自己的身份（这是他们会问的**第一个**问题），你就等于在背上画了一个血红色的目标。他们会将名字与法律地址匹配。从那里起，将有一个接一个名字，没完没了。
 
 涉及的金额是我多年前还清的一笔 500 美元的珀金斯学生贷款，那是我 25 年前申请的。但我打算告诉她。老天知道如果我说了，他们可能会在我修复付款证明后考虑这笔债务，但在那之前，他们会将这个名字传给其他收集机构进入他们的数据库。
 
-在这次事件之后，我打了我能想每一个持有我 SSN 的服务提供者的电话，将其改为那个虚构的。电缆公司。电力。互联网服务提供商。事实证明，甚至连帮我割草的公司都有记录。谁知道他们是怎么得到的，但只有一家公司因为这个变更给我带来了麻烦：电力公司。所以我用书面形式处理了，确保使用了大量的**大写**和**加粗**词汇，充满了愤怒和咆哮（毫无意义，尽管我没这么想）。有些人在电话里对谎言比通过邮件更敏锐。
+在这次事件之后，我打了我能想每一个持有我 `SSN` 的服务提供者的电话，将其改为那个虚构的。电缆公司。电力。互联网服务提供商。事实证明，甚至连帮我割草的公司都有记录。谁知道他们是怎么得到的，但只有一家公司因为这个变更给我带来了麻烦：电力公司。所以我用书面形式处理了，确保使用了大量的**大写**和**加粗**词汇，充满了愤怒和咆哮（毫无意义，尽管我没这么想）。有些人在电话里对谎言比通过邮件更敏锐。
 
-通过邮寄，你听起来可以像托尼·索普拉诺（Tony Soprano），如果你得不到行动，你就会派兄弟们去搞一点礼貌的小动作。
+通过邮寄，你听起来可以像 `Tony Soprano`，如果你得不到行动，你就会派兄弟们去搞一点礼貌的小动作。
 
 ## 克隆家
 
-你可以采用的一种方案是使用与你切断任何联系的邮寄服务。你可以雇佣的公司示例他们问的问题很少。有些公司一个问题都不问？例如，我对 earthclassmail.com 的体验很好，但如果你出国旅行，还有其他选择。
+你可以采用的一种方案是使用与你切断任何联系的邮寄服务。你可以雇佣的公司示例他们问的问题很少。有些公司一个问题都不问？例如，我对 `earthclassmail.com` 的体验很好，但如果你出国旅行，还有其他选择。
 
 另一个主意是查看你居住的废弃房屋。这主要适用于城市居民，但我在农村地区也发现了几处。使用废弃房屋的地址将任何包裹/邮件寄到那里。只要不要反复使用同一栋房子即可。
 
@@ -4827,23 +4558,23 @@ http://www.ibrinfo.org/calculator.php
 
 ## 护照与加拿大
 
-这是一个我后悔有过个人经历的领域。自 9/11 以来，建立了许多部门间通信的系统，但机场的安全性依然松散——尤其是 TSA（美国运输安全局）。边境站是一个有趣的研究对象，我敢说，加拿大边境官员幸运地完全不像他们那些平庸的 TSA 兄弟们。在一个关站被标记的内容，在他们那里都会被标记。这对我来说有点太奥威尔式了，但每当我通过时，都会尽量保持尊重。
+这是一个我后悔有过个人经历的领域。自 9/11 以来，建立了许多部门间通信的系统，但机场的安全性依然松散——尤其是 `TSA`（美国运输安全局）。边境站是一个有趣的研究对象，我敢说，加拿大边境官员幸运地完全不像他们那些平庸的 `TSA` 兄弟们。在一个关站被标记的内容，在他们那里都会被标记。这对我来说有点太奥威尔式了，但每当我通过时，都会尽量保持尊重。
 
 如果你在尼加拉瀑布跨境口岸对加拿大探员态度恶劣，那么国家另一边的守卫（注意我没说“将”）如果他录入系统，几分钟内就能知道这一切。
 
-SSN 与你的名字和职业绑定，但不会显示在护照本身上。但如果你在进入加拿大时对任何犯罪记录撒了谎，边境官员可以**终身**禁止你入境。他们禁止了乔治·布什入境，原因是因为他在 1976 年获得过一次酒驾（DUI）记录。没开玩笑。他必须获得一份豁免，仅仅是为了去访问，而不是真的搬到那里。
+`SSN` 与你的名字和职业绑定，但不会显示在护照本身上。但如果你在进入加拿大时对任何犯罪记录撒了谎，边境官员可以**终身**禁止你入境。他们禁止了乔治·布什入境，原因是因为他在 1976 年获得过一次酒驾（`DUI`）记录。没开玩笑。他必须获得一份豁免，仅仅是为了去访问，而不是真的搬到那里。
 
-溜入也带有风险，除非你恰好是《X 战士》中的夜行者（Nightcrawler），可以在眨眼间瞬间移动跨越瀑布。据我所知，我不具备这种能力。
+溜入也带有风险，除非你恰好是《X 战士》中的夜行者（`Nightcrawler`），可以在眨眼间瞬间移动跨越瀑布。据我所知，我不具备这种能力。
 
 我们可以学到什么才不留下痕迹呢？
 
-一种方案是不使用我们的护照，因为它留下的痕迹就像夜行者面对硫磺一样明显。但这并不实际，因为会让国际旅行变得困难。尽管如此，如果你有充分的理由脱离监控，溜入加拿大或美国确实有其优势。事实如此，美国边境看到的溜入加拿大的情况比反向要多。根据 WinnipegPress 的报道：
+一种方案是不使用我们的护照，因为它留下的痕迹就像夜行者面对硫磺一样明显。但这并不实际，因为会让国际旅行变得困难。尽管如此，如果你有充分的理由脱离监控，溜入加拿大或美国确实有其优势。事实如此，美国边境看到的溜入加拿大的情况比反向要多。根据 `WinnipegPress` 的报道：
 
 > “一份新发布的情报报告显示，2008 年在与美国偏远边境点试图溜入加拿大的人数比反向要多。”
 
 这是连续第二年跨大陆人口走私和其他秘密越境倾向于加拿大一方。
 
-加拿大皇家骑警（RCMP）将这一趋势归因于多种因素，包括美国对无证工人的打击、边境线美国探员的增加以及美国经济的不稳定状态。最新数据显示，有 952 人在非合法边境口岸被捕进入加拿大，而有 819 人前往美国。他们工作在边境口岸之间的战略点，以阻止从人员、毒品到火器的一切物品走私者。
+加拿大皇家骑警（`RCMP`）将这一趋势归因于多种因素，包括美国对无证工人的打击、边境线美国探员的增加以及美国经济的不稳定状态。最新数据显示，有 952 人在非合法边境口岸被捕进入加拿大，而有 819 人前往美国。他们工作在边境口岸之间的战略点，以阻止从人员、毒品到火器的一切物品走私者。
 
 显然，溜入入境不是新趋势。但让我们假设你需要溜入加拿大，并且需要安静地进入，没有奥威尔式的跟踪系统在脚后嗅探。让我们也假设你是单兵作战……没有任何协助。
 
@@ -4851,22 +4582,19 @@ SSN 与你的名字和职业绑定，但不会显示在护照本身上。但如�
 
 在检查站之外穿越非常容易。但现在要匿名这样做就很*难*。在大城市里更难。但无论你计划徒步、开车还是飞行通过，都应该了解该地区的生态系统。
 
-响应时间差异很大，取决于人口、距离最近检查站的距离，当然还有人力。如果所有的无人机都超负荷工作并达到极限，世界上所有的技术也无用处。这对你有利。人员到达可能是一小时，也可能是十分钟。如果是后者，你走一段路边境巡逻队就会开过来。之后你将遇到西蒙·赛兹（Simon Sez）警官，他带着一把半自动步枪，还有他的四个伙伴，其中一个会直截了当地问：“你知道自己在哪儿吗，先生？”对此，你应该带着无辜的微笑环顾四周，假装对遇到这位友好的加拿大官员感到松口气：“不，先生，我不知道。您能告诉我们吗？”
+响应时间差异很大，取决于人口、距离最近检查站的距离，当然还有人力。如果所有的无人机都超负荷工作并达到极限，世界上所有的技术也无用处。这对你有利。人员到达可能是一小时，也可能是十分钟。如果是后者，你走一段路边境巡逻队就会开过来。之后你将遇到 `Simon Sez` 警官，他带着一把半自动步枪，还有他的四个伙伴，其中一个会直截了当地问：“你知道自己在哪儿吗，先生？”对此，你应该带着无辜的微笑环顾四周，假装对遇到这位友好的加拿大官员感到松口气：“不，先生，我不知道。您能告诉我们吗？”
 
 礼貌加上一丝尊重（总是称呼先生）可以在 80% 的情况下赢得加拿大边境守卫的青睐，前提是你没有犯罪，而你正在溜入！
 
 但那是你运气好的话。如果不幸，如果你没有双重国籍，你会被逮捕并遣逐。不仅加拿大当局会起诉和罚款，美国当局也是如此。绕过指定的边境口岸将面临 5000 美元的美国罚款和犯罪记录。
 
-
-
-
 在这者中，后者显然容易得多，因为要通过私人飞机、比通常更小的船只或其他水上工具跨越边界并不是什么高科技。如果你能走私进入一个靠近莫霍克（Mohawk）原保留区的地方更好，那里的香草走私者经常会被加拿大边境执法人员抓获（并忽略）。
 
-如果你真的要越境，请确保不是别人走的那条“捷径”。那是皇家骑警警察（RCMP）设置的幻象，目的是为了在熟悉的小径上抓到你。大多数被抓的人都会做一些愚蠢的事，比如在银湖（Silver Lake）区域或靠近亨廷顿/萨马关口的农场越界。每当我听到破案的消息以及相关的细节时，我就会想起《侏罗纪公园：失落的世界》中恐龙猎人罗兰德说的话，他告诉汉默德的继任者忘记在目前的位置建立营地，因为那里到处都是迅猛龙。
+如果你真的要越境，请确保不是别人走的那条“捷径”。那是皇家骑警警察（`RCMP`）设置的幻象，目的是为了在熟悉的小径上抓到你。大多数被抓的人都会做一些愚蠢的事，比如在 `Silver Lake` 区域或靠近亨廷顿/萨马关口的农场越界。每当我听到破案的消息以及相关的细节时，我就会想起《侏罗纪公园：失落的世界》中恐龙猎人罗兰德说的话，他告诉汉默德的继任者忘记在目前的位置建立营地，因为那里到处都是迅猛龙。
 
 听着，我们正处于猎物径迹上，而食肉动物是在径迹上捕猎物的！你是想建立一个营地，还是一顿自助餐？
 
-开开车走私任何违禁品都是愚蠢。边境检查站有传感器，包括车辆扫描X射线机、化学嗅探器和警嗅犬。因此，任何试图躲在进入加拿大的车辆中的尝试都是行不通的。讽的是，《环球与信报》（The Globe and Mail）详细说明了不该做什么，甚至透露了边境的一些酒店正对非法越境者进行监控。
+开开车走私任何违禁品都是愚蠢。边境检查站有传感器，包括车辆扫描X射线机、化学嗅探器和警嗅犬。因此，任何试图躲在进入加拿大的车辆中的尝试都是行不通的。讽的是，《环球与信报》（`The Globe and Mail`）详细说明了不该做什么，甚至透露了边境的一些酒店正对非法越境者进行监控。
 
 底线：千万不要廉价地进入迅猛龙的领地！
 
@@ -4874,9 +4602,11 @@ SSN 与你的名字和职业绑定，但不会显示在护照本身上。但如�
 
 ## FBI 如何追踪通话
 
-并不是每一个痛恨美国国家安全局（NSA）的普通人都有什么非法行为要隐瞒，而我就是最普通的普通人。我喜欢在红龙虾餐厅吃虾仁。每当我访问法国区，我喜欢那里的格拉斯节。我会在趣味游戏厅和孩子们一起玩视频游戏。有时，在他们玩耍时，我会使用被称为“一次性手机”（burners）的预付手机处理业务。NSA 不喜欢这些手机。事实上，他们很难将这些电话与我的真实身份联系起来。这并非不可能，只是困难。由于我不是什么高价值目标，他们并不在麻烦。至少，我希望他们没有在麻烦。
+并不是每一个痛恨美国国家安全局（`NSA`）的普通人都有什么非法行为要隐瞒，而我就是最普通的普通人。我喜欢在红龙虾餐厅吃虾仁。每当我访问法国区，我喜欢那里的格拉斯节。我会在趣味游戏厅和孩子们一起玩视频游戏。有时，在他们玩耍时，我会使用被称为“一次性手机”（burners）的预付手机处理业务。`NSA` 不喜欢这些手机。事实上，他们很难将这些电话与我的真实身份联系起来。这并非不可能，只是困难。由于我不是什么高价值目标，他们并不在麻烦。至少，我希望他们没有在麻烦。
 
-现在你，你可能已经知道 MVNO（移动虚拟网络运营商），它们允许你以伪匿名的方式注册。他们不要求身份信息，除非你想提供给他们——光是这一点就不足以阻挡 NSA 了。电话公司现在被根据 1994 年的 CALEA 法案具备与执法部门合作的技术。
+现在你，你可能已经知道 `MVNO`（移动虚拟网络运营商），它们允许你以伪匿名的方式注册。他们不要求身份信息，除非你想提供给他们——光是这一点就不足以阻挡 `NSA` 了。电话公司现在被根据 1994 年的 `CALEA` 法案具备与执法部门合作的技术。
+
+
 
 更糟糕的是，尽管法院是这么说的，但我们仍然对隐私没有真正的预期。大多数州法律规定，只要有一个人知道录音的存在，它就是合法的。注意，我没有说是另外一个人。只有一个人……就是那个录音的人。窃听法是一座复杂的官僚主义迷宫，足以让斯大林脸红。反击点是：并不是所有人都使用同一部电话。
 
@@ -4888,9 +4618,9 @@ SSN 与你的名字和职业绑定，但不会显示在护照本身上。但如�
 
 并没那么聪明，所以大多数罪犯在第一次或第二次不会被抓到。他们会在*第三、第四或第五次*被抓到（记得那些抢银行犯吗？）。肾上腺素的飙升让他们上瘾，让他们一直在寻找下一个目标……通常还没有升级他们的技能。
 
-MAC 地址也可以提供所谓的匿名性。就像电脑的 IP 地址一样，它可以直接指向你的家门。有像 Macspoofer 这样的应用可以防止这种情况，但它们并不完美。
+`MAC` 地址也可以提供所谓的匿名性。就像电脑的 IP 地址一样，它可以直接指向你的家门。有像 `Macspoofer` 这样的应用可以防止这种情况，但它们并不完美。
 
-# 使用一次性手机的优点
+## 使用一次性手机的优点
 
 第一条规则：不要持续将其用于任何敏感的业务或个人交易。对于重要的事情，不要超过几天。如果你在（比如）新加坡度假，不想让 NSA 监视你和孩子，这很容易。到达后只需更换 SIM 卡即可。菲律宾、泰国等也是如此。
 
@@ -4901,6 +4631,7 @@ MAC 地址也可以提供所谓的匿名性。就像电脑的 IP 地址一样，
 如果他们访问你认为会购买预付一次性手机的地方，你甚至可能被智取——提前获取 IMEI 号以便获得搜查令来监听你。而且你必须知道，并不是所有的团队成员在每次通信后都会处掉手机。
 
 问题，全是问题。那么怎么办？
+
 解决方案：
 
 - 由两个个人负责管理所有手机
@@ -4913,7 +4644,7 @@ MAC 地址也可以提供所谓的匿名性。就像电脑的 IP 地址一样，
 
 ![](img/bceda787dd56d788afffe6850dba0a44_422_0.png)
 
-# 从社交媒体中消失
+## 从社交媒体中消失
 
 让我们直奔主题吧。社交媒体对我没有任何帮助，反而让消失变得更加困难。随着岁数的增长，Facebook 想要获取更多关于我的数据。更多我喜欢的童年谷物（巧克力味糖霜糖炸弹，我告诉过他们那是《卡尔文和霍比斯》最喜欢的）。更多哪些电影让我流泪。哪些电影让我愤怒。哪些电影让我局促（《心理线》中骨骼出现的那段）。
 
@@ -4925,40 +4656,43 @@ MAC 地址也可以提供所谓的匿名性。就像电脑的 IP 地址一样，
 
 但让我们尝试一下。
 
-## 如何删除账户
+### 如何删除账户
 
 - Facebook
+
 使用此链接删除你的账号。
+
 https://www.facebook.com/help/delete_account
 
 这不像在你开始新饮食计划时扔掉一批布朗尼。这种效果（应该是）是永久的。你不会找回它的。你无法为新账户挽救任何东西。因此联系人列表、收藏、书签、帖子、图片都消失了，除非你将它们本地保存到你的硬盘或 Dropbox 中。
 
 - Twitter
+
 按照此操作停用你的 Twitter 账号。
+
 https://twitter.com/settings/account
 
 像 Facebook 一样，一旦消失，就彻底消失了。但这个过程需要时间。当我删除我的一个笔名（一个没卖出去的恐怖小说笔名）时，花了七天和一个满月。我从不擅长写预兆。
 
 - Google+
+
 对于 Google，前往主页停用。
+
 https://accounts.google.com/Login
 
 这也会摧毁你的 Gmail 和 YouTube 账号，因为它们将一切联系在一起，但你可以更有选择性地决定留下什么。他们称之为“降级”，但要知道你的身份可能仍然出现在搜索引擎中。
 
-我个人发现 AccountKiller 在这方面很有价值，因为有些账户我已多年未使用但仍然处于激活状态，有几个账号公开存储了我现在的电话号码和地址。他们称之为“功能增强”。
+我个人发现 `AccountKiller` 在这方面很有价值，因为有些账户我已多年未使用但仍然处于激活状态，有几个账号公开存储了我现在的电话号码和地址。他们称之为“功能增强”。
 
-
-
-
-
-# ACCOUNTKILLER（账户杀手）
+## ACCOUNTKILLER（账户杀手）
 
 如果你想获取关于如何在 Facebook、Twitter、YouTube、Instagram、LinkedIn、Snapchat 等许多热门网站上移除或删除个人资料的实证指南。我们拥有如何免费删除账户的最佳教程。
 
 在寻找某个特定的网站吗？或者查看下方列出的热门网站：
 
 | 热门 | 黑名单 | 所有网站 | 站点检查 | 提交网站 | 关于 | 常见问题 |
-|---|---|---|---|---|---|---||
+|---|---|---|---|---|---|---|
+
 | 更新并安装 ACCOUNTKILLER 站点检查 点击此处获取更多信息 | | | | | | |
 | FACEBOOK | | ZOOSK | SPOTIFY | | IMVU |
 | 服务状态（白色） | 服务状态（灰色） | 服务状态（白色） | 服务状态（灰色） | 服务状态（白色） | | |
@@ -4967,7 +4701,7 @@ https://accounts.google.com/Login
 | 服务状态（白色） | 服务状态（灰色） | 服务状态（白色） | 服务状态（白色） | 服务状态（白色） | | |
 | Twitter 账户 | Groupon 账户 | Twitter.com 账户 | | Whatsapp 账户 | | |
 
-## 第二阶段：摧毁刑事和公共记录
+### 第二阶段：摧毁刑事和公共记录
 
 现在我们来到了寻踪者（Skip Tracers）喜欢挖掘的领域，而且是**深层**挖掘。我们说的是格里那个醉酒的矮人王，他喜欢钻进他不该去的地方（他的结果怎么样呢？）。
 
@@ -4976,18 +4710,18 @@ https://accounts.google.com/Login
 以下是主要的玩家。
 
 - **Spokeo** - 这是一个大头。是追踪者和收债员默认使用的工具。他们关于我的数据多到让我想在 N' Out burger 重来一次！以前的电子邮件地址。关系。婚姻。学校。只需几美元，他们可能就会告诉收债员我是在薯条上加了番茄酱还是放在旁边。这种人史密探员可能会在尼奥躲藏的地方找到他们。
-
 - **Intelius** - 我也在这个数据库中，但不是因为任何犯罪活动（呼！）。像 Spokeo 一样，他们在未经许可的情况下保留了大量个人数据。不是史密探员的首选，但如果 Spokeo 宕了……它确实是。他们还监控社交媒体网站并保留犯罪数据。据传证照已经在路上了。圣诞早晨的照片会是下一个吗？
-
 - **abasearch** - 我用过它一次来找到我忘记的旧电话号码，不想给每个朋友打电话转达新号码。后来我发现，如果你是一个跟踪者，这就是要使用的网站，在 2014 年 6 月之后，包含个人信息的电子邮件（搜索引擎无法搜索）变得公开可用。哎哟。
 
 回顾过去十年我提供过数据的每一个网站，就像试图从一个吸血鬼家族叛逃。说起来容易做起来难。他们想要血书的文件。然而，最糟糕的是遇到付费墙和推销。你知道的，那些声称能为你节省金钱和时间的人。
 
-有一个网站似乎有助于缩短从互联网上抹除自己的时间。那个网站是 DeleteMe。要 129 美元，不便宜。但如果你时间紧迫且不在意这笔费用，那么它是值得的。
+有一个网站似乎有助于缩短从互联网上抹除自己的时间。那个网站是 `DeleteMe`。要 129 美元，不便宜。但如果你时间紧迫且不在意这笔费用，那么它是值得的。
 
-# 避开雷达
+## 避开雷达
 
 在接下来的两年里，你必须保持更新一致。每几个月检查一次这些网站以确保合规。搜索你的名字。你的旧电话号码。毕竟，你的身份对你来说比对他们来说更有价值。对他们来说，你只是数据库中的一个数字，如果听从他们的，他们并不太介意在你的后颈纹上一个数字的想法。
+
+
 
 从末日时刻起，我就一直在使用 Fake Name Generator（虚假名称生成器）来处理许多在线活动。你也可以。是的，它听起来像 Babu 在孟买的一个夏天在 Google Play 商店写的某个廉价 App，但我向你保证它不是。它非常有效。
 
@@ -5016,19 +4750,11 @@ https://accounts.google.com/Login
 ![](img/bceda787dd56d788afffe6850dba0a44_428_1.png)
 
 - **Lookout** - Lookout Security 为提供最好的防盗保护。
-
 - **CryptoCat** - CryptoCat 是 iOS 和 Android 的即时通讯工具，提供端到端加密。
-
 - **BullGuard** - BullGuard 提供防盗功能。
-
 - **Orbot** - Orbot 是一个与 Tor 工作的免费 App。
-
 - **Wickr** - Wickr 是 iOS 和 Android 的即时通讯工具，提供端到端加密。
-
 - **Titanium** - Titanium 是我 Android 上最喜欢的 App。
-
-
-
 
 我正处于一个为期三个月的图书销售枯竭，而且通常来说，我已经几个世纪没法工作了。
 
@@ -5070,8 +4796,6 @@ https://accounts.google.com/Login
 
 过了十分钟，我的心思飘远了，我注意到了一种轻微的口音。我盯着皱纹密集的嘴，它们在不同话题之间颤抖跳动，看到了一个异样。
 
-
-
 父亲笑了。指着我，大笑。但我下定了决心。我又又挖掘了一些。
 
 事实证明，她有一个儿子在一年前因抢劫案在逃避警察时死于了。那个儿子有犯罪前科，长得跟我非常像。我能感觉到在她疯狂的背后隐藏着一丝理性的残留。
@@ -5081,6 +4805,7 @@ https://accounts.google.com/Login
 *
 
 那么，我从中中学到了什么？你又能学到什么？
+
 学到了跟踪者有各种尺寸和各种色彩，而且极有可能，他们对你来说并不是陌生人。你会私下认识这个人。他们甚至可能和你处于某种关系。名星有钱来对付他们：我想到了凯瑟琳·泽塔·霍恩和戴夫·莱特曼。像你我这样的人必须依靠机智，因为我们短时间内内是不可能中彩票的。
 
 ## 搭车客
@@ -5097,68 +4822,7 @@ https://accounts.google.com/Login
 
 他会这样做吗？我不知道，也许吧。也许吧。
 
-底线？外表是欺骗性的。这包括：气味。视觉。触碰。陌生人会进入你的大脑并留在那里，除非你一开始就说一句话：
 
-“不。”
-
-对那些粘人和控制欲狂魔说不吧，他们宁愿让你去养老院探望临终的母亲，而不是和他们待在一起。
-
-现在，我对他已经非常有礼貌了。我在密西西比的很多朋友不会这样做。他们一听到他唠叨要用“黑暗能量”征服世界的计划，就会直接把他他踢出去。但如果你那样做，你就会面临麻烦。要坚定但有礼貌。不要说：“滚出我的车，白痴，否则我用铅弹填你的肚子！”
-
-要说：“这很有趣，”我是这么说的，对此他的回答是：“所以，兄弟，你接受我的哲学吗？”
-
-（整个旅途中他一直叫我兄弟，而且每次都恰好碰着你的膝盖）
-
-我假装无知，解释说我需要他告诉我……更多……更多……直到大学。这起作用了。但他最后确实索要了电话号码和地址。当然，是虚假的。
-
-如果你走错了路，暴力就会发生，如果我当时把他的整个形象击得粉碎，那确实可能发生。把那种“严厉的爱”的话留给别人吧。也许是个官。
-
-## 消失的困难
-
-你可能在好奇，像胡迪尼式的消失术真正需要什么。答案是：这取决于你想变得多隐形。这有不同的层次，需要不同的心态和经验。你某一天可能是隐形的，但第二天就搞砸了，现在当你走在街上时，人们能看到你轮廓的一部分。他们可能会走近调查这种隐性。隐形是少数人能有效利用的力量。权力吸引注意力。大多数人都想要那种注意力，除非他们像你一样在逃避。
-
-另一件事是，胆量。也是坚毅和勇气，但主要是胆量，因为你不是在通过他的家人来躲避跟踪者，因为他随时可以拨打他们中的任何一个来协助追捕。这就是执法部门对待越狱犯所做的——他们会寻求帮助（除非他们是纽约人，如果是那样，他们喜欢自己解决案件并夺取所有功劳——有点像帕顿）。
-
-> “我们越快收拾好这个该死的烂摊子，就能越快地对那些穿紫色衣服的日本人进行小远游，并把他们的巢穴也清理掉……在在那群该死的陆战队抢走所有功劳之前”
-
-总之，跟踪者有各种形式。即使斯大林也是一个跟踪者，潜伏在阴影中，等待扑上去撕碎任何指责他高层威胁的人的心。
-
-隐形是少数人能有效利用的力量。权力吸引注意力。大多数人都想要那种注意力，除非他们像你一样在逃避。
-
-另一件事是胆量。也是坚毅和勇气，但主要是胆量，因为你不是在通过他的家人来躲避跟踪者，因为他随时可以拨打他们中的任何一个来协助追捕。这就是执法部门对待越狱犯所做的——他们会寻求帮助（除非他们是纽约人，如果是那样，他们喜欢自己解决案件并夺取所有功劳——有点像帕顿）。
-
-> “我们越快收拾好这个该死的烂摊子，就能越快地对那些穿紫色衣服的日本人进行小远游，并把他们的巢穴也清理掉……在那群该死的陆战队抢走所有功劳之前”
-
-总之，跟踪者有各种形式。即使斯大林也是一个跟踪者，潜伏在阴影中，等待扑上去撕碎任何指责他高层威胁的人的心。
-[/content]
-
-由于提供的文本存在大量重复，我已提供最终的干净版本：
-
-[content]
-父亲笑了。指着我，大笑。但我下定了决心。我又又挖掘了一些。
-
-事实证明，她有一个儿子在一年前因抢劫案在逃避警察时死了。那个儿子有犯罪前科，长得跟我非常像。我能感觉到在她疯狂的背后隐藏着一丝理性的残留。
-
-现在，我看约翰·卡朋彭的《怪形物》时，就忍不住会闻到那该死的猫味了。
-
-*
-
-那么，我从中中学到了什么？你又能学到什么？
-学到了跟踪者有各种尺寸和各种色彩，而且极有可能，他们对你来说并不是陌生人。你会私下认识这个人。他们甚至可能和你处于某种关系。名星有钱来对付他们：我想到了凯瑟琳·泽塔·霍恩和戴夫·莱特曼。像你我这样的人必须依靠机智，因为我们短时间内内是不可能中彩票的。
-
-## 搭车客
-
-20世纪90年代，我在从新奥尔良前往密西西比州一所当地大学的路上，上了一个搭车客，去询问教学工作。那是一段很长的路。我的收音机坏了。我想，我可以一些愉快的对话。此外，他看起来像个干练利落的《傻笨比维》类型的人。你见过这种人：打扮考究。谈吐流利。笑容灿烂，露出一排整齐的牙齿。是那种能向已经拥有八辆保时捷的人推销保时捷的完美人。是那种你会信任把女儿寄在周末小屋里过周末的人，但随后会飞快地把她的心揉碎的人。当他上车时，他闻起来有乔治香水和香烟味。
-
-好，我们聊了天上地上能聊到的所有话题。政治。天气。天气频道上那种酷炫的新时代音乐，他非常想听出那是什么歌（我说是帕特·梅海尼）。我们甚至讨论了密西西比女孩和加拿大女孩的区别——实际上，简直是天壤之别。我问他在学什么。他的回答是？
-
-“我想像我爸爸一样成为一名巫师。”
-
-就在一只狗正在排便时，我差点撞上一个消防火栓。老天爷，我车里坐着一个穿得像比尔·盖斯的男巫。
-
-在我还没得及对他玩的这个明显的笑话发笑之前，他开始阐述他的人生哲学，既真诚又有条理，像魔术师一样挥动手指。我开始问他关于这个所谓的“职业”的问题。事实证明，每问一个问题，我都得向他提供我的个人信息。有点像以物易物。权力博弈。个人认可就是一切，他的形象也是如此。我顺着他，直到我的汗水浸透了方向盘，当我把他送送到目的地时，我向全能神祈了一个小小的感谢词，那家伙没有对我拔枪。
-
-他会这样做吗？我不知道，也许吧。也许吧。
 
 底线？外表是欺骗性的。这包括：气味。视觉。触碰。陌生人会进入你的大脑并留在那里，除非你一开始就说一句话：
 
@@ -5186,15 +4850,27 @@ https://accounts.google.com/Login
 
 总之，跟踪者有各种形式。即使斯大林也是一个跟踪者，潜伏在阴影中，等待扑上去撕碎任何指责他高层威胁的人的心。
 
-
-
 老隼？
 
-## # 资金
+## 搭车客
+
+20世纪90年代，我在从新奥尔良前往密西西比州一所当地大学的路上，上了一个搭车客，去询问教学工作。那是一段很长的路。我的收音机坏了。我想，我可以一些愉快的对话。此外，他看起来像个干练利落的《傻笨比维》类型的人。你见过这种人：打扮考究。谈吐流利。笑容灿烂，露出一排整齐的牙齿。是那种能向已经拥有八辆保时捷的人推销保时捷的完美人。是那种你会信任把女儿寄在周末小屋里过周末的人，但随后会飞快地把她的心揉碎的人。当他上车时，他闻起来有乔治香水和香烟味。
+
+好，我们聊了天上地上能聊到的所有话题。政治。天气。天气频道上那种酷炫的新时代音乐，他非常想听出那是什么歌（我说是帕特·梅海尼）。我们甚至讨论了密西西比女孩和加拿大女孩的区别——实际上，简直是天壤之别。我问他在学什么。他的回答是？
+
+“我想像我爸爸一样成为一名巫师。”
+
+就在一只狗正在排便时，我差点撞上一个消防火栓。老天爷，我车里坐着一个穿得像比尔·盖斯的男巫。
+
+在我还没得及对他玩的这个明显的笑话发笑之前，他开始阐述他的人生哲学，既真诚又有条理，像魔术师一样挥动手指。我开始问他关于这个所谓的“职业”的问题。事实证明，每问一个问题，我都得向他提供我的个人信息。有点像以物易物。权力博弈。个人认可就是一切，他的形象也是如此。我顺着他，直到我的汗水浸透了方向盘，当我把他送送到目的地时，我向全能神祈了一个小小的感谢词，那家伙没有对我拔枪。
+
+他会这样做吗？我不知道，也许吧。也许吧。
+
+## 资金
 
 在逃亡路上，钱很快就会花光。所以你需要大量的钱。要足够支付酒店费用以及旅行的汽油费，而且说实话，你不想一年 365 天每天 24 小时都在吃泰国菜。我觉得至少需要五年的量，因为这能买到的东西比你想象的得多。这引出了我们的下一个话题：朋友。
 
-## # 朋友
+### 朋友
 
 香港有一句关于钱的俗言：“钱被偷了，只能打狗。”
 
@@ -5202,7 +4878,7 @@ https://accounts.google.com/Login
 
 关于谦虚和避恶如财有很多话可说，但归说到底，如果你不为冬天做准备，全能之神可能在这方面帮不了你。所以去赚吧，不要拖延。存钱！再次，你需要五年的量，至少是为了晚上能睡得安稳。堆积如山的忧虑会影响判断，导致我们做出一些如果银行账户有钱时就不会犯的错误。你还需要购买情报，但购买关于你敌人的情报时要小心，因为仅仅是看一眼就会让他们察觉到你雇的那家伙很草。
 
-## # 保护你的电脑
+### 保护你的电脑
 
 去年圣诞节，当我告诉我祖母我正在写关于匿名性和如何变得隐形的书时，她差点被她的夏威夷果饼干呛住。当时现场一片死寂。我以为也许我让她心脏病发作了。接着教训就来了。我会被 FBI 以及所有其他字母字机构逮捕的。我会被水刑。会被植入芯片。会被洗脑。我会成为下一个爱德华·斯诺登（尽管我远没有他那么帅）。
 
@@ -5217,6 +4893,20 @@ https://accounts.google.com/Login
 “确实，但有些人比其他人更爱窥探。”
 
 “但是亲爱的，我不希望你和政府闹矛盾。他们是朋友，你知道的，而且他们最清楚（这时我发出一声沉默的呻吟）。”
+
+父亲笑了。指着我，大笑。但我下定了决心。我又又挖掘了一些。
+
+事实证明，她有一个儿子在一年前因抢劫案在逃避警察时死了。那个儿子有犯罪前科，长得跟我非常像。我能感觉到在她疯狂的背后隐藏着一丝理性的残留。
+
+现在，我看约翰·卡朋彭的《怪形物》时，就忍不住会闻到那该死的猫味了。
+
+*
+
+那么，我从中中学到了什么？你又能学到什么？
+
+学到了跟踪者有各种尺寸和各种色彩，而且极有可能，他们对你来说并不是陌生人。你会私下认识这个人。他们甚至可能和你处于某种关系。名星有钱来对付他们：我想到了凯瑟琳·泽塔·霍恩和戴夫·莱特曼。像你我这样的人必须依靠机智，因为我们短时间内内是不可能中彩票的。
+
+
 
 如前提到的，你最不希望的是跟踪者在你进公共场所厕所时抢走你的笔记本电脑。这发生在新奥尔良法国区一个寒冷、雾蒙蒙的早晨。游客稀少，鸽子依然栖在电线上，似乎那里足够安全。让我的电脑一直运行也没什么害，因为我打算只是快进厕所就出来，对吧？我的书包也在它旁边。你知道接下来发生了什么。
 
@@ -5234,7 +4924,7 @@ https://accounts.google.com/Login
 
 这就是身份盗窃。还有其他风险，比如在试图保持隐形时被抓。某些人出于某种原因只是喜欢远离风光。通过加密你的笔记本电脑，你不仅击败了身份盗窃者，还击败了任何每一个想看你的人。
 
-## # Tor
+## Tor
 
 我讨厌在这里插入一点关于 Tor 领域的内容，但如果你不写一本关于深度隐形的书，至少得提到它。所以，现在开始吧。
 
@@ -5250,16 +4940,15 @@ Tails 允许你在任何想要的地方使用 Tor 并避免追踪和审查。它
 
 使用 DVD 的缺点是，每次更新 Tails 都必须重新刻录。不方便。所以让我们把它安装到 USB 盘上。
 
-- 1.) 下载 Tails 安装程序。https://tails.boum.org/download/index.en.html
+- 1.) 下载 Tails 安装程序。`https://tails.boum.org/download/index.en.html`
+
 你必须先安装到某处，如 DVD，然后克隆到 USB 盘或 SD 卡。
+
 - 2.) 点击应用程序 -> Tails install 开始安装。
 - 3.) 选择 Clone & Install 安装到 SD 卡或 USB 内存存
 - 4.) 插入设备，然后在 Target-Device 下拉菜单中扫描设备。你会收到一个关于将覆盖设备上任何内容的警告。
 
-
-
-
-该设备，此处略。选择 yes 以确认安装。
+该设备，此处略。选择 `yes` 以确认安装。
 
 Tails 本身是一个非常强大的在线匿名工具。但当它与像 Linux 这样严密且安全的操作系统相结合时，它几乎是不可敌的。如果你有幸可以在 Windows 中选择原生 Tor 浏览器或使用 Tails，请务必选择 Tails。Windows 一直是 FBI 以及普通黑客喜欢的受气包，因为它的安全漏洞远多于 Linux。
 
@@ -5273,15 +4962,15 @@ VPN 代表虚拟专用网络。对于隐私非常好，除非你配合 Tor 使�
 
 ## Freeten
 
-作为 Tor 的“老大哥”，Freeten 并不真正隐藏你的 IP 地址。它隐藏的是你正在用 IP 地址下载什么内容。假设你想下载一部蓝光电影（Freeten 上没多少这类，但为了讨论，假设你有一个想分享的）。你会安装 Freeten。然后是 Frost 前端插件（下文讨论）。然后点击上传按钮，这将为你提供与他人共享所需的 Chk 地址。接着，将 Chk 地址粘贴到可用的数百个 Freeten 群组之一。
+作为 Tor 的“老大哥”，Freeten 并不真正隐藏你的 IP 地址。它隐藏的是你正在用 IP 地址下载什么内容。假设你想下载一部蓝光电影（Freeten 上没多少这类，但为了讨论，假设你有一个想分享的）。你会安装 Freeten。然后是 Frost 前端插件（下文讨论）。然后点击上传按钮，这将为你提供与他人共享所需的 `Chk` 地址。接着，将 `Chk` 地址粘贴到可用的数百个 Freeten 群组之一。
 
-## 使用 Freetet 的好处
+### 使用 Freetet 的好处
 
 匿名聊天。Freetet 以其“暗网”功能而闻名，允许两人甚至一组人之间进行完全匿名通信。安装时，你可以选择安全级别。低安全意味着其他人（拥有足够资源）很容易找到你的身份；高安全意味着你只连接到暗网节点——即你绝对信任的朋友。你的文件仍然经过端到端加密，因此没有人知道谁上传或下载了什么。
 
 匿名下载。如所述，任何下载的内容，只要你在安装时选择了普通安全级别，由于端到端加密，将不会被任何人看到。
 
-## 使用 Freetet 的缺点
+### 使用 Freetet 的缺点
 
 - 1.) Freetet **非常慢**。它远没有 Bittorent 或 e뮬 快。下载一个 GB 或更大容量的文件需要几个小时。此外，如果你有一台旧电脑，它会比较消耗资源，尽管任何配有 i3 CPU 的设备都会快得多。那是资源层面的快，不是下载速度快。
 - 2.) Freetet **很复杂**。安装和使用并不难。只是如果你想要完全匿名，要找到你可以信任的暗网节点就很难。“平均”安全级别对大多数人来说足够，但如果你是伊朗某个抵抗运动的领袖，务必选择完全黑暗。只需确保你的暗网节点是 100% 可信的——在当今，在你从未见过这些节点的情况下，这是一件困难的事！
@@ -5291,24 +4980,25 @@ VPN 代表虚拟专用网络。对于隐私非常好，除非你配合 Tor 使�
 
 ## Frost
 
-Freet 本身对我这老眼睛来说复杂得难以忍受。所以，当 Frost 作为一个让阅读群组（以及下载 CHK 文件）变得更良好的界面时，我非常兴奋。
+Freet 本身对我这老眼睛来说复杂得难以忍受。所以，当 Frost 作为一个让阅读群组（以及下载 `CHK` 文件）变得更良好的界面时，我非常兴奋。
 
 请放心，群组比你在上面的图中看到的得多。这只是安装后可用的——为了启动运行而精挑的几个。你必须点击顶部的“地球”图标来获取，这需要一些时间，从一小时到一天不等才能显示每一个可用群组。
 
-但首先，让我们下载并安装它。地址是：http://jtcfrost.sourceforge.org/
+但首先，让我们下载并安装它。地址是：`http://jtcfrost.sourceforge.org/`
 
 将内容提取到你想要运行应用程序的地方（如果是从加密容器中运行，你需要先挂载加密容器，然后解压）。
 
-例如：Z:\FreetFrost Next，在其中为 'frost.bat' 文件创建一个快捷方式。我喜欢将该快捷方式拖到 Windows 的辅助菜单中。然后我在 Frost 的选项屏幕中禁用那个恼人的启动界面。
+例如：`Z:\FreetFrost Next`，在其中为`frost.bat`文件创建一个快捷方式。我喜欢将该快捷方式拖到 Windows 的辅助菜单中。然后我在 Frost 的选项屏幕中禁用那个恼人的启动界面。
 
-之后， Frost 会要求你一个身份 nic，这是你可以用来发布消息的东西。这与你的 IP 地址无关，不必担心。它是你发布 Usenet 信息时使用的昵称。我会进入 News 页面并检查“Hide Messages with Trust States”是否勾选了“Bad”。然后我查看另一个选项：“Don't add boards to known list”……我取消勾选 "Bad" 和 "None"（未签名），这样我就不会得到带有信任状态的版块。现在，查看 News 部分并设置“显示天数”。如果你想看过去几个月错过的内容，将此数字调整为 300 或任何你想回溯的长度。这与 Usenet 完全不同，那里的群组可以追溯到五年前。
+
+
+之后，`Frost` 会要求你一个身份 `nic`，这是你可以用来发布消息的东西。这与你的 IP 地址无关，不必担心。它是你发布 `Usenet` 信息时使用的昵称。我会进入 `News` 页面并检查“`Hide Messages with Trust States`”是否勾选了“`Bad`”。然后我查看另一个选项：“`Don't add boards to known list`”……我取消勾选 "`Bad`" 和 "`None`"（未签名），这样我就不会得到带有信任状态的版块。现在，查看 `News` 部分并设置“显示天数”。如果你想看过去几个月错过的内容，将此数字调整为 300 或任何你想回溯的长度。这与 `Usenet` 完全不同，那里的群组可以追溯到五年前。
 
 ## Trust
 
-你可以控制 Frost 显示什么以及不显示什么。这是通过解码到 Frost 中的信任设置实现的。选项有：Trust（信任）、Observe（观察）、Check（检查）或 Bad（错误）。如果你将一个用户标记为“Trust”，那么这个人就可以给你发送加密消息，反之亦然。Observe 意味着我将观察那个人的行为直到我做出决定。将用户的信任设置为 BAD 将杀死该人在任何 Frost 版块上发布的任何帖子。这并不意味着它从 Freetet 中被删除了，因为那里没有审查。它仍然在那里，只是在我的眼里是不可见的。我只是不会看到他的种族主义言论（Freetet 上有很多这种）。
+你可以控制 `Frost` 显示什么以及不显示什么。这是通过解码到 `Frost` 中的信任设置实现的。选项有：`Trust`（信任）、`Observe`（观察）、`Check`（检查）或 `Bad`（错误）。如果你将一个用户标记为“`Trust`”，那么这个人就可以给你发送加密消息，反之亦然。`Observe` 意味着我将观察那个人的行为直到我做出决定。将用户的信任设置为 `BAD` 将杀死该人在任何 `Frost` 版块上发布的任何帖子。这并不意味着它从 `Freetet` 中被删除了，因为那里没有审查。它仍然在那里，只是在我的眼里是不可见的。我只是不会看到他的种族主义言论（`Freetet` 上有很多这种）。
 
-现在。也许我们在 Freetet 上进行过一些我们不想让妻子或警察知道的对话。我曾在这里和一位律师聊过，记得当时在想，如果警察私下知道了那段对话中的内容，事情就完蛋了。好了，说到挂载（mounting），这似乎是我们需要实施的：我们需要加密我们的操作系统，或者至少起码加密我们的会话，最好是通过加密容器加密我们的 Freetet 和 Frost 安装。如果我们试图消失并需要越境（例如），我们不希望发生的是加拿大边境守员 Groucho先生因为想看我们在暗网聊了什么而发火。多嘴之祸。我在加拿大边境往返的次数我数不清，如果说我学到了什么，那就是边境守员的性格是臭名昭名的不一致。周一你会遇到一个性格像 SuperGrover 的人。那个微笑脸即使被要求穿上红色斗篷，他也会
-
+现在。也许我们在 `Freetet` 上进行过一些我们不想让妻子或警察知道的对话。我曾在这里和一位律师聊过，记得当时在想，如果警察私下知道了那段对话中的内容，事情就完蛋了。好了，说到挂载（mounting），这似乎是我们需要实施的：我们需要加密我们的操作系统，或者至少起码加密我们的会话，最好是通过加密容器加密我们的 `Freetet` 和 `Frost` 安装。如果我们试图消失并需要越境（例如），我们不希望发生的是加拿大边境守员 Groucho先生因为想看我们在暗网聊了什么而发火。多嘴之祸。我在加拿大边境往返的次数我数不清，如果说我学到了什么，那就是边境守员的性格是臭名昭名的不一致。周一你会遇到一个性格像 SuperGrover 的人。那个微笑脸即使被要求穿上红色斗篷，他也会
 
 向他的主管致意并感谢他们的绝妙主意。然后周二，你将遇到那个没有人喜欢的边检员：一个像《动物星球》角色和《木偶秀》顶层观众席那两个脾气古怪的老家伙的混合体。他就是那个在迪士尼因为薄荷味冰淇淋倒了而留下终身阴影的小孩。而现在，他把这种情绪发泄在你身上！
 
@@ -5316,94 +5006,97 @@ Freet 本身对我这老眼睛来说复杂得难以忍受。所以，当 Frost �
 
 ## 反法取证
 
-加密容器存储文件非常容易。不不容易的是学习实现这一功能的应用程序。但别担心。Truecrypt 我只花了一个周末就弄懂了，当我搞定它时，我恨自己没有早点安装它。我最早的想法是，使用它的人必须是某种高级程序员。也许是我们口口声声的那些所谓 NSA 超级黑客之一。我错了。
+加密容器存储文件非常容易。不不容易的是学习实现这一功能的应用程序。但别担心。`Truecrypt` 我只花了一个周末就弄懂了，当我搞定它时，我恨自己没有早点安装它。我最早的想法是，使用它的人必须是某种高级程序员。也许是我们口口声声的那些所谓 `NSA` 超级黑客之一。我错了。
 
-如果你会安装 Windows，你就能安装 Truecrypt、Drivecrypt、Diskcrypt 或它们的任何变体。它们都能加密你的文件，但实现方式不同，正如你将看到的，有很多应用程序可用。但让我们先从免费的开始：Truecrypt 和 Veracrypt，这是我们两个极佳的选择，花极少的钱获得巨大的回报。
+如果你会安装 Windows，你就能安装 `Truecrypt`、`Drivecrypt`、`Diskcrypt` 或它们的任何变体。它们都能加密你的文件，但实现方式不同，正如你将看到的，有很多应用程序可用。但让我们先从免费的开始：`Truecrypt` 和 `Veracrypt`，这是我们两个极佳的选择，花极少的钱获得巨大的回报。
 
-Truecrypt 首先介绍，因为 Veracrypt 的图形界面（GUI）几乎和它的数字兄弟一模一样。
+`Truecrypt` 首先介绍，因为 `Veracrypt` 的图形界面（GUI）几乎和它的数字兄弟一模一样。
 
-> “等一下，”你说，“NSA 不是在参与破坏 Truecrypt 吗？”
+> “等一下，”你说，“`NSA` 不是在参与破坏 `Truecrypt` 吗？”
 
-既是又不是的。从泄露的 NSA 幻灯片来看，Truecrypt 和 Tor 确实长期以来一直是他们的目标，但事实上任何难以破解的东西都是如此。
+既是又不是的。从泄露的 `NSA` 幻灯片来看，`Truecrypt` 和 `Tor` 确实长期以来一直是他们的目标，但事实上任何难以破解的东西都是如此。
 
-以下是 Veracrypt 开发人员对此的看法。你可以根据自己的意愿进行解读。
+以下是 `Veracrypt` 开发人员对此的看法。你可以根据自己的意愿进行解读。
 
-> “我确定参与 TrueCrypt 的人员不可能保持匿名，安全机构也知道他们是匿名的，”他说，“当你查看代码时，你会觉得这些人在 1995 年时只有 40 多岁。所以现在他们有 60 多岁了，可能已经累了或退休了。”
+> “我确定参与 `TrueCrypt` 的人员不可能保持匿名，安全机构也知道他们是匿名的，”他说，“当你查看代码时，你会觉得这些人在 1995 年时只有 40 多岁。所以现在他们有 60 多岁了，可能已经累了或退休了。”
 
 ## Truecrypt
 
-关于 Truecrypt 还有一些你可能没听过的点。它已于 2015 年停止维护，但所有主要的加密应用工作原理都类似，而且根据许多可靠来源，它仍然是安全的。一旦你学会了如何使用 Truecrypt，学习 Veracrypt 就轻而易举了。或者你可以直接开始使用 Veracrypt。随你选择。
+关于 `Truecrypt` 还有一些你可能没听过的点。它已于 2015 年停止维护，但所有主要的加密应用工作原理都类似，而且根据许多可靠来源，它仍然是安全的。一旦你学会了如何使用 `Truecrypt`，学习 `Veracrypt` 就轻而易举了。或者你可以直接开始使用 `Veracrypt`。随你选择。
 
-如果你选择 Truecrypt，你需要了解创建容器文件的基础知识。一旦学会了，加密操作系统就会简单得多。所以让我们创建一个容器文件。
+如果你选择 `Truecrypt`，你需要了解创建容器文件的基础知识。一旦学会了，加密操作系统就会简单得多。所以让我们创建一个容器文件。
 
 下载并安装应用。创建一个容器文件。把它想象成宝箱，你创建一个魔法密码来打开它。既然是魔法密码，你就不会分享那个密码吧？所以永远不要分享那个密码。
 
 以下是快速要概述：
 
 - 1. 安装后，确保你的容器有足够的空闲空间。你要放进去的数据有多大？蓝光碟大小？相应设置。
-- 2. 从下拉菜单中选择“创建新卷（Create new Volume）”。
-- 3. 现在你有两个选择：走标准路线或走双重加密宝箱路线（隐藏卷，Hidden volume），也称为“合理否认性”。对于初学者，让我们选择简单的文件容器，因为隐藏卷需要两个密码，而且如果你想在其中存储大于 4GB 的文件，它会变得有点复杂。
-- 4. 你很快会进入一个必须“选择文件（Select File）”的屏幕。点击它。浏览到你想存储这个装满宝藏的加密容器的位置。先不要点击任何文件。只需在文件名框中输入名称并选择保存——稍后我们会添加宝藏。
-- 5. 选择 AES 作为加密算法。任何一种都可以，但 AES 因为超级强，它从未失败过挫败攻击者。在较慢的系统上，其他算法会受到性能影响。
+- 2. 从下拉菜单中选择“创建新卷（`Create new Volume`）”。
+- 3. 现在你有两个选择：走标准路线或走双重加密宝箱路线（隐藏卷，`Hidden volume`），也称为“合理否认性”。对于初学者，让我们选择简单的文件容器，因为隐藏卷需要两个密码，而且如果你想在其中存储大于 4GB 的文件，它会变得有点复杂。
+- 4. 你很快会进入一个必须“选择文件（`Select File`）”的屏幕。点击它。浏览到你想存储这个装满宝藏的加密容器的位置。先不要点击任何文件。只需在文件名框中输入名称并选择保存——稍后我们会添加宝藏。
+- 5. 选择 `AES` 作为加密算法。任何一种都可以，但 `AES` 因为超级强，它从未失败过挫败攻击者。在较慢的系统上，其他算法会受到性能影响。
 - 6. 选择尺寸。如果你要在里面存储蜜月的高清 视频，不要选择太小的尺寸。
 - 7. 现在到了密码环节。密码越长、字母数字组合越随机，熵值越高，密码也就越强。如果你永远忘不了，就把它写下来。如果你忘了，就再找不回来了。
-- 8. 使用鼠标创建一个随机密钥，它会随着你的移动而改变。你不需要移动超过几秒钟。NSA 可能会花费多年时间试图弄清你先向哪个方向移动了它。
-- 9. 现在选择一个文件系统，但要注意如果你存储的是大文件（4GB 及以上），你需要 NTFS。
-- 10. 你完成了！现在点击你最初创建的文件。输入密码，并选择你想让它挂载的驱动器。然后粘贴你的视频/文档/宝藏。除非你卸载它，否则你无法删除这个容器，这可以在 Truecrypt 界面上完成。
+- 8. 使用鼠标创建一个随机密钥，它会随着你的移动而改变。你不需要移动超过几秒钟。`NSA` 可能会花费多年时间试图弄清你先向哪个方向移动了它。
+- 9. 现在选择一个文件系统，但要注意如果你存储的是大文件（4GB 及以上），你需要 `NTFS`。
+- 10. 你完成了！现在点击你最初创建的文件。输入密码，并选择你想让它挂载的驱动器。然后粘贴你的视频/文档/宝藏。除非你卸载它，否则你无法删除这个容器，这可以在 `Truecrypt` 界面上完成。
 
 ## 密码
 
 此时我可能应该回答一个经常收到的问题，即：“救我！我忘记密码了……我记得 20 个或 50 个字符字符串中的 15 个，还差那么……呃……我破解它的几率有多大？”
 
-答案是：微乎其微，除非你有 NSA 的资源，即便如此，对于密码来说也机会渺茫。加密密码以“哈希（hash）”文件的形式存储。当你对文件进行哈希处理时，即使你更改了它，哈希值也会改变。图片也是如此。丢一张图片进去。
+答案是：微乎其微，除非你有 `NSA` 的资源，即便如此，对于密码来说也机会渺茫。加密密码以“哈希（`hash`）”文件的形式存储。当你对文件进行哈希处理时，即使你更改了它，哈希值也会改变。图片也是如此。丢一张图片进去。
 
 ## 恶妇攻击（Evil Maid Attack）
 
-Truecrypt 与许多加密应用一样，将密钥存储在内存中。如果内存在搜查期间被导出，冷启动攻击可能会提取它们。得出的教训是：不要在挂载任何加密容器的情况下运行电脑，因为从内存中嗅探密码将变得简单。除非你破解了它们。十年前可能并非如此，我们现在所处的世界完全不同。这要求爱国者们保持警惕。永远有一个 B 计划。这适用于所有使用加密应用的用户。
+`Truecrypt` 与许多加密应用一样，将密钥存储在内存中。如果内存在搜查期间被导出，冷启动攻击可能会提取它们。得出的教训是：不要在挂载任何加密容器的情况下运行电脑，因为从内存中嗅探密码将变得简单。除非你破解了它们。十年前可能并非如此，我们现在所处的世界完全不同。这要求爱国者们保持警惕。永远有一个 B 计划。这适用于所有使用加密应用的用户。
 
 ## Drivecrypt
 
-Drivecrypt 勾起了许多回忆，大多是美好的。它是我对专有加密应用的尝试，早期似乎只有优点。
+`Drivecrypt` 勾起了许多回忆，大多是美好的。它是我对专有加密应用的尝试，早期似乎只有优点。
 
-但现在，随着技术以与野外漏洞相同的速度发展，它有一些缺点。之一是它是闭源的且价格超过 100 美元，这并不便宜。但它有一个很棒界面，如果你不介意高价购买，还有额外的功能。对我来说并非如此。更大的问题是 NSA 润滑了 Securast 的腰包（或威胁），让他们为政府留留了后门。如果你访问他们的首页，你会看到他们信誓旦旦保证并非如此。最后，你必须自己决定是否值得信任。就价值而言，他们的总部位于德国，而不是美国。但如果存在阴谋，那么他们在哪个国家运营并不重要。
+但现在，随着技术以与野外漏洞相同的速度发展，它有一些缺点。之一是它是闭源的且价格超过 100 美元，这并不便宜。但它有一个很棒界面，如果你不介意高价购买，还有额外的功能。对我来说并非如此。更大的问题是 `NSA` 润滑了 `Securast` 的腰包（或威胁），让他们为政府留留了后门。如果你访问他们的首页，你会看到他们信誓旦旦保证并非如此。最后，你必须自己决定是否值得信任。就价值而言，他们的总部位于德国，而不是美国。但如果存在阴谋，那么他们在哪个国家运营并不重要。
 
-如果你选择，请知道他们提供的演示并没有提供强加密——只是一个弱的 AES 密钥，购买后才会升级为完全强度。由于这些原因，我不推荐 Drivecrypt。
+如果你选择，请知道他们提供的演示并没有提供强加密——只是一个弱的 `AES` 密钥，购买后才会升级为完全强度。由于这些原因，我不推荐 `Drivecrypt`。
+
+关于后门。对于这一点，我不得不承认，开发团队内部发生的离奇内纷曾一度让我担心了一段时间。请放心，`Truecrypt` 仍然安全，它不像其他应用程序那样安全，这完全取决于你的安全需求。此外，后续版本允许你挂载 `Truecrypt` 卷。
+
+那么它有什么好的地方呢？嗯，`Veracrypt` 的开发者模拟了 `TrueCrypt 7.x` 的代码，并在某些方面使其更强大。由于添加了迭代和增强，现在暴力破解变得困难得多。每当你使用 `TrueCrypt` 加密硬盘分区时，它使用 1000 次迭代，而对你的容器则使用 2000 次。但 `Veracrypt` 使用了惊人的 327,661 次 `RIPEMD160` 算法，这让你的密码和安全内容保持……安全。对于加密容器？次数几乎翻了一倍，使用了 655,331 次 `SHA-2` 加密。唯一的性能损失体现在解锁加密分区的时间会稍慢，但这是一个公平的权衡，因为现在让黑客仅通过暴力破解破解的难度提高了三百倍以上。
 
 
 
+以上所有这些，再加上用户界面看起来与 `Truecrypt` 非常相似，如果你熟悉 GUI，那么几乎没有学习成本。
 
+### Diskrypto - 使用 `DiskCrypto`，你可以加密任何硬盘分区或你的主系统分区。作为开源软件，它旨在取代 `Drive Plus Pack`（一种商业闭源应用）和 `PGP` 全盘加密。它支持 `AES-256`、`Serpent` 和 `Twofish` 算法，加密密钥存储在卷的第一个扇区。
 
-关于后门。对于这一点，我不得不承认，开发团队内部发生的离奇内纷曾一度让我担心了一段时间。请放心，Truecrypt 仍然安全，它不像其他应用程序那样安全，这完全取决于你的安全需求。此外，后续版本允许你挂载 Truecrypt 卷。
+对比两个不同的系统时，使用 `DiskCrypto` 的优点：
 
-那么它有什么好的地方呢？嗯，Veracrypt 的开发者模拟了 TrueCrypt 7.x 的代码，并在某些方面使其更强大。由于添加了迭代和增强，现在暴力破解变得困难得多。每当你使用 TrueCrypt 加密硬盘分区时，它使用 1000 次迭代，而对你的容器则使用 2000 次。但 Veracrypt 使用了惊人的 327,661 次 RIPEMD160 算法，这让你的密码和安全内容保持……安全。对于加密容器？次数几乎翻了一倍，使用了 655,331 次 SHA-2 加密。唯一的性能损失体现在解锁加密分区的时间会稍慢，但这是一个公平的权衡，因为现在让黑客仅通过暴力破解破解的难度提高了三百倍以上。
-
-以上所有这些，再加上用户界面看起来与 Truecrypt 非常相似，如果你熟悉 GUI，那么几乎没有学习成本。
-
-### Diskrypto - 使用 DiskCrypto，你可以加密任何硬盘分区或你的主系统分区。作为开源软件，它旨在取代 Drive Plus Pack（一种商业闭源应用）和 PGP 全盘加密。它支持 AES-256、Serpent 和 Twofish 算法，加密密钥存储在卷的第一个扇区。
-
-对比两个不同的系统时，使用 DiskCrypto 的优点：
-- Windows 分区使用 SHA-512 哈希算法 - 启动比 Truecrypt 或 Drivecrypt Plus Pack 更快
+- Windows 分区使用 `SHA-512` 哈希算法 - 启动比 `Truecrypt` 或 `Drivecrypt Plus Pack` 更快
 - 不需要强制“创建救援磁盘”（参见变通方法）
-- 编译比 TC 容易
+- 编译比 `TC` 容易
 
-** 使用 Truecrypt 的缺点**
-1.) 已停止维护。这可能是使用 Veracrypt 的最好的理由，尽管它通过了安全审计（你可以在这里阅读相关内容）。DiskCrypto 也没有与 Truecrypt 相同的 GUI，所以你必须习惯学习一个新的界面。对于大多数人来说这不是问题，但我对学习任何新 GUI 往往比较固执。
-2.) Windows 仅限于 RIPEMD160 哈希算法。3.) 无支持，未来的安全漏洞无法修复。
-4.) 某些主板（技嘉的 Black Edge 系列）不兼容。
+**使用 `Truecrypt` 的缺点**
 
-更新：我可能花了一个月的时间试图弄清楚，为什么我的 Z9XT-UD3H 的类 Linux BIOS 在我输入 TC 密码后无法启动。客户支持人员笑了，因为他们对 Truecrypt 的了解程度就像他们了解核废物管理一样（除了它看起来像从生锈桶里漏出的绿色放射性粘液之外）。最后，我把它归咎于坏硬盘。然而，一个月后，经过进一步调查，发现是由于过去某个时间点在上述硬盘上安装过 Drivecrypt（演示版）。因此，在同一块硬盘上使用多种加密方案要小心。
+1.) 已停止维护。这可能是使用 `Veracrypt` 的最好的理由，尽管它通过了安全审计（你可以在这里阅读相关内容）。`DiskCrypto` 也没有与 `Truecrypt` 相同的 GUI，所以你必须习惯学习一个新的界面。对于大多数人来说这不是问题，但我对学习任何新 GUI 往往比较固执。
+
+2.) Windows 仅限于 `RIPEMD160` 哈希算法。3.) 无支持，未来的安全漏洞无法修复。
+
+4.) 某些主板（技嘉的 `Black Edge` 系列）不兼容。
+
+更新：我可能花了一个月的时间试图弄清楚，为什么我的 `Z9XT-UD3H` 的类 Linux BIOS 在我输入 `TC` 密码后无法启动。客户支持人员笑了，因为他们对 `Truecrypt` 的了解程度就像他们了解核废物管理一样（除了它看起来像从生锈桶里漏出的绿色放射性粘液之外）。最后，我把它归咎于坏硬盘。然而，一个月后，经过进一步调查，发现是由于过去某个时间点在上述硬盘上安装过 `Drivecrypt`（演示版）。因此，在同一块硬盘上使用多种加密方案要小心。
 
 ### LibreCrypt
-LibreCrypt 是一款适用于 Windows 的开源磁盘加密软件，与上述不同，它兼容 LUKS（原为 DoxBox）。如果你喜欢双系统，这是一个巨大的加分项。更好的是它支持像 Truecrypt 那样的某些合理否认性。它在功能页面上列为“保护你免受‘橡胶软管加密’的可否认加密（笑！）”。如果你不知道那是什么，它类似于这样……
+
+`LibreCrypt` 是一款适用于 Windows 的开源磁盘加密软件，与上述不同，它兼容 `LUKS`（原为 `DoxBox`）。如果你喜欢双系统，这是一个巨大的加分项。更好的是它支持像 `Truecrypt` 那样的某些合理否认性。它在功能页面上列为“保护你免受‘橡胶软管加密’的可否认加密（笑！）”。如果你不知道那是什么，它类似于这样……
 
 - 其他功能还包括：
 - 易于使用，带有创建新“容器”的“向导”。
 - 全透明加密，容器在 Windows 资源管理器中显示为移动磁盘。
 - 资源管理器模式让你在没有管理员权限的情况下访问容器。
-- 兼容 Linux 加密、Cryptopolo “losetup”、dm-crypt 和 LUKS。Linux Shell 脚本支持 Linux 上的否认加密。
+- 兼容 Linux 加密、`Cryptopolo` “losetup”、 `dm-crypt` 和 `LUKS`。Linux Shell 脚本支持 Linux 上的否认加密。
 - 支持智能卡和安全令牌。
 - 加密容器可以是文件、分区或整个磁盘。
-- 打开由 FreeOT 创建的旧版卷
+- 打开由 `FreeOT` 创建的旧版卷
 
 # 边境官员与加密笔记本电脑
 
@@ -5412,33 +5105,31 @@ LibreCrypt 是一款适用于 Windows 的开源磁盘加密软件，与上述不
 关于这一点，将任何东西带入加拿大需要狡诈，贾巴·哈特本人也从未见过。这是一件严肃的事情。
 
 疯狂的主意没完没了，相信我。许多故事中，官员被转交给家人处理的人数以千计。就像《教父》中“我承认！”的场景一样，一个加拿大青少年在边境处被询问是否有武器时，像小婴儿一样哭了起来，结果发现自己带了一把警察从未见过的手枪。他的朋友们对他开了一个恶毒的玩笑。哈，无论如何，讨论跨越边界携带笔记本电脑和其他电子设备可能会让你的尝试失败。具体来说，什么会引起他们的注意。与大众认知相反，加拿大边境官员在扫描你的护照时并不知道你的整个经历。当你通过边境检查站时，会发生这些情况：你的护照被扫描。有时走私者在被一个像 Sam Elliot 的人质问时，他们会紧张。
+
 - 邮寄毒品
 - 拒绝接受二审
 - 撒谎（即‘做出虚假申报’），这是一个广泛的话题，而且谎言总是比真相更快：如果你在温哥华对一名官员撒谎，尼加拉瀑布的那一个就会知道。
 - 在边境有任何不良记录
 
-还有什么会引起边境官员（BDO）的注意？
+还有什么会引起边境官员（`BDO`）的注意？
+
 不交出密码。如所述，他们会让你通过，但不会放过你心爱的电脑。他们完全不需要搜索你的手机/平板/iPad。
 
 那么，加密了吗？是的！你一定要有一个隐藏的操作系统，因为你绝对、明确地给他们一个让你看起来无所隐藏的东西。你不需要让自己看起来像个傻瓜。你只需要看起来像个重视隐私的专业人士。
 
 ## 解决方案
 
-你需要在到达之前锁定数据。在硬盘上设计一个区域，使其加密在官员视线之外并使用第二个密钥。你将在这里存储私人文件。如果你有全盘加密，也可以这样做。Diskcrypt 以及大多数加密应用如 PGP 和 Dricrypt 也提供。
+你需要在到达之前锁定数据。在硬盘上设计一个区域，使其加密在官员视线之外并使用第二个密钥。你将在这里存储私人文件。如果你有全盘加密，也可以这样做。`Diskcrypt` 以及大多数加密应用如 `PGP` 和 `Dricrypt` 也提供。
 
 边境官员不是法医专家。他们无法通过你的 Windows 或 Linux 目录发现你有一个五十 GB 大的加密文件，也不会发现你有一个指向它的快捷方式显示为“计算器”（带有 Windows 图）。如果他们想“镜像”你的硬盘，只要你的密码足够好，你就不用担心。
 
-说到这里，尝试在密码中间加入一个符号。混合大小写字母和数字。是的，这些更难记忆。为了应对这一点，你可以使用 PasswordSafe。
+说到这里，尝试在密码中间加入一个符号。混合大小写字母和数字。是的，这些更难记忆。为了应对这一点，你可以使用 `PasswordSafe`。
 
 如果你正在从机场前往边境站的路上（例如从纽约州布法罗到尼加拉瀑布的加拿大边境站），加密任何东西可能已经太晚了。在登机之前完成。你需要准备好诱饵系统进行展示，并有最近的活动以防他们启动操作系统。如果诱饵系统有一个月没用过，看起来会很可疑。也许对每个海关人员来说不是，但这一批中可能有一个聪明的家伙知道你可以拥有虚假操作系统。
 
 在诱饵系统中不要存储任何违规内容。只保留原始书签（无社交媒体）。一个漂亮的背景。不是 Windows 或 Linux 自带的默认壁纸。也许是你度假时拍的所有拉丁裔美女的照片。
 
 有一次，在从马尼拉返回加拿大途中（一次折磨人的 22 小时飞行），我将我的加密容器存放在了相机里，边境官员问我要路翻看照片。他看到了我在杜马盖拍摄的一些海滩照片，但没有看到 SD 卡上的加密容器。他们不会把它移除。
-
-
-
-
 
 # 将宝藏埋在地下
 
@@ -5447,13 +5138,9 @@ LibreCrypt 是一款适用于 Windows 的开源磁盘加密软件，与上述不
 如果我们遵循一些自律的规则，就可以避免一些问题。
 
 - 避免“X标记处” - 这是一个大忌。永远不要用任何非自然的东西标记宝藏点。不要在树上画箭头，不要在岩石上画亮色或黄色的笑脸，或者微型的“巨石阵”。这些会吸引兄弟会里的那些傻蛋。这些傻蛋会破坏现场——当他们叫其他傻蛋来这里吃热狗烧烤时，他们会挪动东西……就在其中一个醉鬼把他的雪茄掉在树根附近。
-
-- Google Earth - 使用 Google Earth 定位精确坐标。记住它们，但不要保存在 Google Earth 中，除非你的驱动器已加密。也忘了用 Garmin。某些型号会更改你的历史记录。显然，如果你埋藏的行为是非法的（或者国税局可以没收它），这不应该出现在你的财产上。始终假设会有人发现。一个戴着闪亮徽章、大把时间浪费的人。
-
+- `Google Earth` - 使用 `Google Earth` 定位精确坐标。记住它们，但不要保存在 `Google Earth` 中，除非你的驱动器已加密。也忘了用 `Garmin`。某些型号会更改你的历史记录。显然，如果你埋藏的行为是非法的（或者国税局可以没收它），这不应该出现在你的财产上。始终假设会有人发现。一个戴着闪亮徽章、大把时间浪费的人。
 - 绝缘！拆开硬盘，拆一个坏掉的外硬盘。看看它有多干？现在重新拧上螺丝并固定。然后把它冷冻一段时间。之后，把它放在廊台上，再次扔进冷冻室。几小时后打开它，是的。有很多水。这种情况也发生在主板和弹药上，所以要埋在冻土层以下，因为水分会杀死任何电子元件。
-
 - 没有水就没问题！尽量不要在流溪、河流或老天保佑沼泽附近埋宝藏。当你考虑“地下”时，要往“上”。断崖和山丘往往是佳处，但只有在晚上，除非是在偏远地区。墓地也是如此（如果你拥有的话！）。埋在一个人口稀少的地区，海拔足够足以让日常访客望而却步。
-
 - 裸埋它 - 在每当你访问你的圣地时，避免随身携带物品。这意味着：平板电脑。手机。相机。笔记本电脑。iPad。带有 WiFi 的手表（苹果）。这也意味着丢掉你那辆带有华丽导航系统的汽车（警察会很有趣地拆解它以查看你去过哪里）。必要时骑自行车去。沉默是金。对于这一点，对我有效的方法是想“僵尸来了！”，因为死人也会被巨大的噪音（如卡马罗的发动机和大卡车）所吸引。如果有怀疑，看看《行尸走亡》第一季，小组中的一人偷了一辆运动跑车，当他前往避难营时，警报响了。当早晨来临时，僵尸潮也随之而来。
 
 # 极端
@@ -5463,6 +5150,9 @@ LibreCrypt 是一款适用于 Windows 的开源磁盘加密软件，与上述不
 ![](img/bceda787dd56d788afffe6850dba0a44_462_0.png)
 
 看起来很宁静，不是吗？
+
+
+
 简直就像邦德反派可能建立大营的地方，远离任何情报机构的目光。我有时会冥想，梦想我不久前在这样的海滩上漫步时错过了什么。知道是在哪里吗？我给你一个提示。它不是博拉古岛，虽然青绿色的海水确实看起来像。它是菲律宾，如果照片能传达出金星般的温度、咸咸的海风，以及纤细女孩的小手滑进你口袋弄脏你护照的感觉，你可能会考虑是否叛逃那里。为期一周的假期是一回事，但在那里生活是完全另一个世界，充满了它自己独特的挑战。
 
 你可能出于许多原因想要离开，而且这些理由可能都是合理的。你的学生贷款可能阻止了你获得工作或结婚。也许你的离婚并没有计划中那样毫无压力，现在你被要求“维持”你配偶的生活。又可能是你厌倦了在“美国主街”开车，并总是回头顾四周，担心因为一个糟糕的过期刹车检查标签被关进监狱。
@@ -5486,9 +5176,6 @@ LibreCrypt 是一款适用于 Windows 的开源磁盘加密软件，与上述不
 还有其他问题。你不能拥有枪支。如果你是一个单身男性，你会像在路易斯安纳州邦基的马尔文·火星人一样显眼。没有哪个国家比菲律宾更具有网络化。八卦占据主导地位，因为这是整个国家的社交属性。
 
 在某些地方，它确实是一个第三世界国家。缺乏清洁水，马尼拉是最糟糕的。但那些女性，天哪。你会觉得你穿越回了1955 年的夏威夷。我得到的关注程度是疯狂的，我又不是什么乔治·克隆。我只是个普通的普通人。走在商场里（只要你不看起来像个怪物），会有大量的女性接近你。如果你在马尼拉（犯罪横行）或三宝市（恐怖分子中心）以外的任何地方，这就是生活的常态。
-
-
-
 
 除非你恰好是杰里米亚“吃肝的”约翰逊，并且知道如何诱捕海狸、爬山以及在零下极低温中生存，否则这里不是你想去的地方。
 
@@ -5520,23 +5207,34 @@ LibreCrypt 是一款适用于 Windows 的开源磁盘加密软件，与上述不
 
 ### 泰国支出
 
-租金便宜得离谱，清迈等地方甚至更便宜。曼谷是大多数游客聚集的地方，理由充分。食物比省外地区更好，互联网可靠得多。你可以去Numbe.com网站查看如果你在那儿生活的开支分解。对于015年，你可能看到的对比：
+租金便宜得离谱，清迈等地方甚至更便宜。曼谷是大多数游客聚集的地方，理由充分。食物比省外地区更好，互联网可靠得多。你可以去`Numbe.com`网站查看如果你在那儿生活的开支分解。对于015年，你可能看到的对比：
 
 - 餐厅（平均）廉价餐厅 $1.48
+
 - 双人餐，中档餐厅，三道菜 $17.81
+
 - 麦当劳份餐 $44.45
+
 - 公用事业（每月）基础型（电、暖气、水、垃圾）公寓 $107.10
+
 - 1分钟手机流量（无折扣或套餐）$0.04
+
 - 网络（6 Mbps，无限流量，电缆/ADSL）$18.82
 
 ### 服装
+
 - 一条牛仔裤（李维斯 501）$84.48
+
 - 连锁店的一件夏裙（Zara, H&M, ...）$53.56
+
 - 一双耐克跑步鞋（中档）$102.00
 
 ### 每月租金
+
 - 市中心（一室）公寓 $589.57
+
 - 市外（一室）公寓 $318.34
+
 - 市中心（三室）公寓 $1746.38
 
 在查看成本时，有两点引起了我的注意。其一个是高级餐厅的价格，显然是针对当地人的；另一个是服装。那里的服装与你在菲律宾购买电子产品的价格相似。对于泰国人来说非常贵，但有办法，因为你不需要看品牌。
@@ -5547,16 +5245,16 @@ LibreCrypt 是一款适用于 Windows 的开源磁盘加密软件，与上述不
 
 这与西方形成鲜明对比，因为大多数泰国人是佛教徒。不仅如此，国王被视为一种神圣实体，一种救主般的人物，是你不想触碰的。如果你在剧院且国王出现，你将被要求像我们在棒球赛上敬国旗一样站立。只有在美国，这是完全可选的。你甚至可以在美国焚烧国旗。这让普通泰国人感到困惑。
 
-
-
-
-
 古老的财神马马蒙用铁腕手段统治一切。请记住，并非每个人都是这样。只有少数几个害群蛋坏了所有人的面子。但正如我所说，当与印度人、巴基斯坦人、非洲人或菲律宾人论及无礼和中国人时，他们很可能会将香港列在名单的首位。
 
 深呼吸。
+
 吐痰、喷口和在公共场合放屁已经够糟糕了，但更糟糕的是随处看不见垃圾桶。即使有，我也没看到（也许它们只是太贵了）。这与日本形成了鲜明对比，在日本，把可乐罐扔在地上被看作是打了了首相的脸。日本人热爱外国人，并且他们希望吸引尽可能多的游客。正因如此，他们的街道干净得一尘不染。
 
 事实上，在东京的地铁甚至繁忙的城市街道上，你甚至很难看到垃圾。
+
+
+
 但在中国呢？朋友，在你在高峰时段走在香港繁忙的街道之前，你根本不知道什么叫无礼。你觉得纽约很糟糕吗？并没。香港就像《西菲尔德》中的“奇异世界”，那里上是下，下是上，超人还是邪恶的。相信我，我不是什么怪胎。但即使是我，也不得不相应调整预期。
 
 正如你现在可能猜到的，无礼会让“隐身”变得困难。包括我在内的美国人，在海外遇到无礼时，往往倾向于表现出“怀特·厄普”那式的执法风格。这给任何想要消失的人带来了了麻烦，因为这会引起大量的关注。因此，如果说我学到了一点什么，那就是在香港时，如果可能的话，学会忍让。
@@ -5579,16 +5277,17 @@ LibreCrypt 是一款适用于 Windows 的开源磁盘加密软件，与上述不
 
 此外，这些照片的大部分可能会出现在某个地方网上。尽管如此，这里有一些你可能考虑的事。每当我那种“异乡客”的感觉袭来时，它们都帮助过我。
 
-I.) 学习基础的中文，他们就会原谅你除偷核发射密码之外所做的任何事情。反正没有它你也无法隐身旅行，所以学习一些出行的基本知识——如何租车、酒店，如何看地图、开储蓄账户、入住民宿、在餐厅点牛排……并尝试对中国文化保持同情心。他们说“你变胖了！”并不是无礼，在 във才是。这就像对一个美国人说“你有点被晒伤了”。但如果你是黑人，一个中国女性在地铁上要嫁给“黑鬼”（黑魔鬼）是非常无礼的。如果你懂中文并想公开指出这一点，那就是进退两难的境地。如果你真的做了，很有可能她的眼睛会充满泪水并恳求你的原谅。
+1. 学习基础的中文，他们就会原谅你除偷核发射密码之外所做的任何事情。反正没有它你也无法隐身旅行，所以学习一些出行的基本知识——如何租车、酒店，如何看地图、开储蓄账户、入住民宿、在餐厅点牛排……并尝试对中国文化保持同情心。他们说“你变胖了！”并不是无礼，在 във 才是。这就像对一个美国人说“你有点被晒伤了”。但如果你是黑人，一个中国女性在地铁上要嫁给“黑鬼”（黑魔鬼）是非常无礼的。如果你懂中文并想公开指出这一点，那就是进退两难的境地。如果你真的做了，很有可能她的眼睛会充满泪水并恳求你的原谅。
 
-II.) 明星地位是否适用。读读任何关于史蒂芬·泰勒或加斯·布鲁克斯的采访，你就会发现即使是这些重量级人物一段时间后也会厌倦，就像你一样。至于此，不要假设每个人都在拍你的照片你就可以拍每个人的照片。保持低调是可以的，但不要走向极端，否则那可能也会引起怀疑。
+2. 明星地位是否适用。读读任何关于史蒂芬·泰勒或加斯·布鲁克斯的采访，你就会发现即使是这些重量级人物一段时间后也会厌倦，就像你一样。至于此，不要假设每个人都在拍你的照片你就可以拍每个人的照片。保持低调是可以的，但不要走向极端，否则那可能也会引起怀疑。
 
-III.) 用手说话——如果你不会说中文，在拍摄当地中国男士照片之前，不要先用手势问一下（指指他，指指相机，然后微笑）。
+3. 用手说话——如果你不会说中文，在拍摄当地中国男士照片之前，不要先用手势问一下（指指他，指指相机，然后微笑）。
 
-IV.) 要果断，并在必要时说“不”。学会用普通话说，并学会不要担心他们的感受。一些中国学生曾请求给我拍照，因为我身高 6 英尺 2 寸，而且皮肤像血鬼一样白（这就在法国区附近，靠近圣路易斯大教堂外面）。我冷静地告诉他们，如果我的血鬼族人发现我在白天走动，可能会不高兴，因为这违反了族族的规则，并可能找上拍照片的人。他们的眼睛睁得像餐盘一样大。
+4. 要果断，并在必要时说“不”。学会用普通话说，并学会不要担心他们的感受。一些中国学生曾请求给我拍照，因为我身高 6 英尺 2 寸，而且皮肤像血鬼一样白（这就在法国区附近，靠近圣路易斯大教堂外面）。我冷静地告诉他们，如果我的血鬼族人发现我在白天走动，可能会不高兴，因为这违反了族族的规则，并可能找上拍照片的人。他们的眼睛睁得像餐盘一样大。
 
-“血鬼？！噢！”
-咔嚓。咔嚓。咔嚓。咔嚓。
+    “血鬼？！”噢。
+
+    咔嚓。咔嚓。咔嚓。咔嚓。
 
 # CIA 操控与消失
 
@@ -5600,12 +5299,7 @@ IV.) 要果断，并在必要时说“不”。学会用普通话说，并学会
 
 # 操控技巧
 
-当我运行广告活动（我的第一次创业失败）时，我左右都在操纵他人，甚至没有察觉。每天都是。
-'d 在我的服务器上启动 CPV Lab，花费（损失）数千美元为 Neverblue 和 Clickback 等联盟公司投放广告，同时
-
-
-
-从 TrafficVance 和 LeadImpact 购买流量。并不便宜，但当我对两个广告进行充分的 A/B 测试并看到销售额飙升后，我着迷了。这是一种有效的操纵。给予人们他们（他们认为）需要的东西，以换我想要的东西：一份丰厚的收入流。
+当我运行广告活动（我的第一次创业失败）时，我左右都在操纵他人，甚至没有察觉。每天都是。'd 在我的服务器上启动 `CPV Lab`，花费（损失）数千美元为 Neverblue 和 Clickback 等联盟公司投放广告，同时从 TrafficVance 和 LeadImpact 购买流量。并不便宜，但当我对两个广告进行充分的 A/B 测试并看到销售额飙升后，我着迷了。这是一种有效的操纵。给予人们他们（他们认为）需要的东西，以换我想要的东西：一份丰厚的收入流。
 
 公司一直在这样做。西尔（Sears）、塔求（Target）、沃尔玛（Wal-Mart）、百思（Best Buy）。他们是这方面的艺术家。但在美国发现的方法在加拿大可能并不适用。
 
@@ -5647,8 +5341,9 @@ KGB 叛徒尤里·贝兹梅诺夫（Yuri Bezmenov）像向尼尼微的居民那�
 
 > 那些为了安全而牺牲一点点自由的人，既不配拥有自由。
 
-这一点毫无悬疑。对于 NSA 来说，通过窃听或 CEO 签署的会议室交易获取你的私人数据轻而易举。无论如何，考虑到随处可见基站，他们将范围缩小到特定的 GSM 手机也是非常容易的。从他们的口中到你的眼中：“GSM 基站可以作为目标 GSM 手机的物理地理定位点。”
 
+
+这一点毫无悬疑。对于 NSA 来说，通过窃听或 CEO 签署的会议室交易获取你的私人数据轻而易举。无论如何，考虑到随处可见基站，他们将范围缩小到特定的 GSM 手机也是非常容易的。从他们的口中到你的眼中：“GSM 基站可以作为目标 GSM 手机的物理地理定位点。”
 他们还使用无人机。
 
 # 无人机（以及如何击败它们）
@@ -5657,90 +5352,58 @@ KGB 叛徒尤里·贝兹梅诺夫（Yuri Bezmenov）像向尼尼微的居民那�
 
 上方，一架美国海关巡逻无人机。
 如果你正在跨越边境，并怀疑是否能看到一架飞在 20,000 英尺高的无人机。问题并不在于这些该死东西的高度，而是大自然倾向于用云层、雾和雷暴雨遮挡它们的飞行模式，使得任何反无人机技术都徒劳无功。此外，它们是无声的。夜空中的致命杀手。你如何从闪烁的星光中认出它们？
-
 但不要担心，我们有一些可以部署、可以采用的措施。
-
 1. 传感器干扰 - 任何带有传感器的技术都需要看到它试图捕捉的目标。所以用它的借术还它：激光。你知道为什么一个拿着激光笔的孩子指向 747 驾驶舱时会被 FBI 上门吗？事实是激光不仅干扰了仪表，还干扰了飞行员的视线。盲目的飞行员无法飞行，也无法读取导航系统。对于某些无人机，它们带有摄像头将图像传输到人类眼睛。当然，缺点是，这让你太明显看出你不是那个拿着激光笔的孩子了。
-
 2. 黑客 - 这说起来做起来难。过去无人机可以被破解，就像 747 的飞行导航系统可以被破解一样，但现在有了加密，这变得更困难了。《星际穿越》这部电影有个漏洞。马修·麦康纳的角色（和他的女儿一起）破解了一架无人机。只是这看起来太简单了，因为那里没有加密可以破解。在电影发布几年前，朝鲜和伊朗都声称拥有利用黑客技术的无人机，通过“伪造”GPS 信号，而且讽刺的是，这会让它进入自杀式的螺旋。
-
 3. 电磁脉冲 - 这种方法的问题在于，如果你能自己制造出这种东西，脉冲完全不在乎你自己的电子设备或电网。这就像是自残自足。实际上，回想一下《黑客帝国》中崔翠丝使用的 MAD（相互保证毁灭）战术，当时 AI 机器正在钻入墨菲斯的飞船：“乌蛇座号”。尼奥和墨菲斯还连接着设备。她按下开关，烧毁了所有的机器人，但让自己的飞船毫无防。然而，他们最终活了下来，但最后我们可能也面临面临这种局面。
-
 4. 反无人机 - 这显然需要坠毁的无人机，除非你自己制造。这些无人机飞向天空寻找敌机，扫描并识别加密密钥，就像 PGP 用户在互联网上做的那样。当然的问题是，敌人可以看到这些，就像你能看到它们一样……除非你设置了伪装来发出虚假的热信号。
-
-
-
-
 5.) **占据高地** - 要实现这一点，你需要一支经过专门训练并进行伪装的团队，全日夜地监监测无人机，并配备微波类型的武器。微波武器本身？你还需要强大的望远镜来区分无人机和飞机，因为后者即使在高空，肉眼也无法辨别。此外，还需要噪声传感器来检测无人机低嗡的引擎噪音，当然，前提是你知道该无人机的品牌和型号。
-
 6.) **伪装** - 我指的不是《使命召唤 4》中使用的迷彩服，而是利用大型建筑进行自然伪装。例如阴影、被藤蔓覆盖的桥梁等。请记住，无论你穿什么，夜间行进都是危险的，因为无人机会从远处探测你的热信号。最好待在隧道、桥下、铁路旁，并像其他人做的那样，在建筑与建筑之间、掩体与掩体之间移动。这当然假设你已经如何匿名行踪，因为你可能正处于敌领范围内。如果你能融入无人机认为“非敌对”的人群，那么它就无法区分你和弗拉基米尔。缺点是，如果该无人机使用了面部识别技术，他们可以将你的脸与档案中的信息进行匹配。如果你是通缉犯，最好戴兜帽、化妆、留胡子，或者采取任何让你看起来比实际更瘦或更胖的方法。声音也是如此。学习各种口音，因为先进的语音 DNA 技术完全可以将你变成任何口音。
-
 7.) **雷达** - 这是一个昂贵的选项。但在三万英尺的高空，如果没有昂贵的设备，你是看不到无人机的。如果你像埃伯尼泽·斯克鲁奇那样挥霍钱，不如干脆做得到位。
-
 即使你站在户外看到喷气式飞机的痕迹，在晴朗的阳光里也只是微小的一丝。雨天或雾天？别想了。因此，你需要既隐蔽能规避检测，又足够近能观察敌人的雷达装置。这是一个两难困境：探测无人机比匿名探测它要容易。你可以从各种网络商店买到二氧化碳红外激光器。
-
 8.) **平民爱国者** - 这可能显而易见，因为北美有超过百万名持枪者，但无人机短期内不太可能大规模反对民众，因为它们必须重新装弹和加燃料，而爱国力量会抓住这个机会将飞行员吊在最近的树上。相信我，他们会很快找到这些人的。
-
 但无人机侦查与无人机射击是不同的。到最后，也许这才是他们真正想要的——发射十万架无人机监视所有人，而无需发射一发。因为当你 24 小时都知道某人在哪里、在何家餐厅吃饭、参加哪场球赛，以及是将番茄酱挤在薯条上还是放在旁边时，他们真的不需要从天空发动射击，不是吗？
 
 ## 在线足迹
 
 国家安全局（NSA）收集 IP 地址就像蚂蚁收集食物。这是一个很棒的比喻，不是吗？他们存储能获取的任何东西，通常来自那些绕过安全并提供便利的应用程序。苹果和三星因此赚了巨大财富。因此，许多手机 App 不仅发送你与 Facebook 和 Skype 关联的 IP 地址，还发送你的登录地点（咖啡馆、图书馆等）以及登录时间。因此，每个人的数字指纹都被存储了。嗯，是大多数人如此。如果你是被追踪的人之一，请继续读下去，因为我们就要停止这种荒谬行为了。
-
 幸运的是，IP 地址目前还不是一个人。关于这一点，问问自己：如果每个人都有自己独特的名字（比如 1938 年德国的那些），他们的权力将如何增强？为了登录？发邮件？玩在线游戏？
-
 几年前，我在加利福尼亚州旅行时进入了一个免费 WiFi。尽管学校贴着“上课时间禁止游戏”的规定，但仍有几个孩子在玩《魔兽世界》。好吧，如果 NSA 决定采取传票程序，他们确实知道这些在玩什么游戏，以及是谁在几点钟玩的。这就是 NSA 寻找想要消失的人的方法。
-
 在逃亡的人忘记了他们多年来建立的数字足迹，但 NSA 没有忘记。你访问过的网站、拨过的电话、删除的朋友，他们他们都了如指掌。所以，如果你想结束这一切，你必须伪造一个新身份，来混淆过去的数字自我。
 
 ## 限制物理访问
 
 永远不要信任别人你的笔记本电脑。如果你借出去，请确保他们在使用时你在场。
-
 你的笔记本电脑里藏着你业务的核心。保护好它，通过加密你的操作系统，你完全可以避免风险。
-
-
-
-
 你生活中总会有很多喋个不停、满嘴跑的人（还记得本·拉丁的信使吗？）。一个手脚不干净的女佣也可能是灾难性的，但辞掉她比辞掉同容易得多。与其失去生意……以及客户，宁愿忍受一天自尊心受损。
-
 当我在杜马盖盖特（Dumaguete）和 aipip 约会时，我被要求在她哥哥的生日派上带份礼物。她想让我给他买一台 iPad。我当时在吃腰果时差点被噎死。
-
 “你买不起吗？”她狡黠地问道。“当然可以。但我不是你的白人取款机，”我严肃地回答道。
-
 我确实伤害了她的感情，事实如此，但我为自己省去了在所有社交场合中为她所有亲戚购买单价 300-400 美元电子产品的费用。后来我发现，这在菲律宾无论在哪个地方都不是常事。只要你在那里，他们就会觉得你很有钱，因为一张机票贵得离谱。
-
 没错，如果你能花一千美元买一张去亚洲的机票，哥们儿，你就很有钱。比尔·盖茨。
 
 ## 风险性友谊
 
 当你身处异国他乡作为一个陌生人时，很容易接受任何主动送上门的友谊。你拥有了一个闪亮的新身份。你感到比以前任何时候都更有活力。没有债务。没有犯罪前科。如果你在月底前交不出两千美元，也没有愤怒的前任会从最近的树上盯着你找。
-
 然后你在会议上认识了某人，并在建立联系后请他喝了啤酒。他露出一排整齐的牙齿。点头、哼哼，并提供专业的营销建议。你在想：“天哪，这家伙看起来很聪明，很有商业头脑。我喜欢他。也许可以成为不错的生意伙伴。”
-
 毕竟，作为一名数字游民，你总是需要更多的客户，对吧？直到后来你发现，他经营着一个针对泰国人的跨性别交友网站，并让你“见某人讨论吸引客户的更好方法”。
-
 我确定你知道这种情况的风险。
 
 ## 斯诺登的错误
 
 爱德华·斯诺登。
-
 这个男人是一个有趣的性格案例研究，展示了一个人为了个人伦理可以走到什么种步。
-
 他从一开始就坚持认为，他相信美国安全局（NSA）的监控计划违反了美国宪法，制定这部宪法的人应该知道这些情况。他说，将纳税人资助的计划对纳税人隐瞒，永远不会产生好结果。
-
 他还声称，他从未打算隐藏自己的身份（当然是在逃亡之后）。我们可以从他的错误中学习到什么？如果我们决定消失，不该做什么？
 
 ### 错误 #1: 莫斯科
 
 是维基泄露创始人朱利安·阿森奇（Julian Assange）为斯诺登在香港的停留提供了保障，甚至建议他不要去南美洲，以免对身体造成伤害。并不是说那里是天堂，因为该地区普遍的不稳定使得许多城市（包括毒枭集团控制的城市）体验非常糟糕。
-
 幸运的是，当他的护照被没收时，他最终去了俄罗斯。
-
 并不是斯诺登说的话最令俄罗斯人着迷，而是他没说的话——那些未公开的秘密矩阵，对于俄罗斯情报机构来说是一座真正的金矿。可以肯定，如果华盛顿为他提供辩诉交易并允许他回到美国本土，我们将看到在普京做决定时看到的那种拖延行为。他们不会轻易交出他。这是一个进进退谷的境地。
 
 ### 错误 #2: 单一护照
+
+
 
 以爱德华拥有的那种安全许可，在一个对美国友好的国家获得第二个护照应该是轻而易举的。是的，那个国家会将他交出来，但至少会有一个延迟，可能为他争取更多时间。如果你知道，美国政府也会知道，但护照被同时吊销并不是一个必然的结论。如果是那样的话，我们现在都生活在一个“单一政府”下了（感谢天主保佑小奇迹）。
 
@@ -5776,14 +5439,12 @@ FaceTime 杀死匿名性的速度比任何东西都快。这根棺材上的钉�
 
 当我新奥尔林的罗立雅大学上学时，捐血在等待学生贷款支票到账期间维持了我几个月的肚子。很多学生都这样做。我记得在 RTA（区域公共交通局）路线上会带一本心理学书打发时间。我会偶尔抬头，对那群流浪汉和醉鬼的步调如此同步而感到微笑：简直像爵士乐一样有节奏。你一定见过……这
 
-
-
-
 算法会简单地忽略你脸脸的那个区域，而更强烈地关注你脸部的其他部分。事实上，我认为根据中国人对人脸识别系统的研究，眼镜有多大其实也并不重要。
 
 ## 招人厌的衣服确实有效
 
 如果你有几件印有别人脸部照片的衣服，那将会干扰算法，这就像户外广告牌干扰谷歌地球街景（Google Earth's Street View）算法一样，后者为了隐私会试图在街道上抹去真人的脸部。
+
 像这样的衣服：
 
 ![](img/bceda787dd56d788afffe6850dba0a44_491_0.png)
@@ -5800,14 +5461,14 @@ FaceTime 杀死匿名性的速度比任何东西都快。这根棺材上的钉�
 
 说到社会能容忍的和不能容忍的，胡子和帽子的伪装可能比长时间戴头盔要好。我的一个朋友评价说，他每当骑忍者（Ninja）摩托车时都会戴全脸盔。他说这能防止昆虫钻进他的头发，但当他试图……
 
-
-
-
 新的面貌将在世界上某些地区大放异彩。
+
 所以，请去采取行动让它变成现实吧！
 
-# 结论
+## 结论
 
 我们到达了旅程的终点。感谢你坚持到了最后。希望这个过程并不太痛苦。
+
 如果你喜欢这本书中的信息，或者觉得它很有趣，请花一点时间留个评价，这样其他人也能学习保护自己免受“老大哥”、暴政以及其他那些讨厌自由和个人选择的邪恶之徒的侵害——他们认为官僚们能比你做出更好的决定。
+
 愿上帝保佑你，并在人生旅途中守护你！

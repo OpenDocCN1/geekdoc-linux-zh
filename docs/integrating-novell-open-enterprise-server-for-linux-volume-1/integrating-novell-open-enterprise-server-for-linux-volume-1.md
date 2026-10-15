@@ -1,243 +1,99 @@
-# Novell Open Enterprise Server for Linux 集成指南  1
 
-
-
-
-
-
-
-
+# Novell Open Enterprise Server for Linux 集成指南 1
 
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_0_0.png)
 
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_0_1.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - OpenSSH 与 OES Linux ................................................................................................................. 3-6
 - 如何使用 SSH 命令 ................................................................................ 3-11
-
-
 - 如何在 OES NetWare 上开始使用 NRM ............................................................ 3-21
 - 如何配置组和组操作 ....................................................... 3-48
 - Novell Remote Manager (NRM) ......................................................................................... 3-58
+
 ### 目标 3 使用 Novell iMonitor 监控 OES 上的 eDirectory 树 ................................................... 3-59
 - Novell OES iMonitor 特性 .......................................................... 3-60
 - 如何访问 iMonitor ...................................................................................................... 3-62
 - 练习 3-3 检查您的 eDirectory 状态 ..........................................................
-
-
 - 如何访问 iManager ....................................................................................... 3-68
 - 如何配置 RBS 角色 ................................................................................ 3-73
 - 如何自定义 Novell iManager ........................................................ 3-77
+
 ### 练习 3-5 定制 Novell iManager ................................................................ 3-85
 练习 3-6 检查您的 OES 服务器健康状况 ................................................ 3-99
-
-
-
-
-
-
 - 如何使用 YaST 在 OES Linux 上配置 DNS ................................................................ 4-4
 - 如何在 OES Linux 上测试 DNS ................................................................................. 4-11
 - 练习 4-1 使用 YaST 在 DA1 Linux 服务器上配置 DNS ............................................ 4-12
+
 ### 目标 2 在 Novell OES Linux 上配置 DHCP 服务器 ................................................ 4-13
 - 如何使用 YaST 在 OES Linux 上配置 DHCP ............................................................ 4-13
 - 练习 4-2 使用 YaST 在 DA1 Linux 服务器上配置 DHCP ............................................ 4-16
 摘要 ..................................................................................................................................................... 4-17
-
-
-
-
-
 - 在您的网络中配置 NTP ................................................................ 5-11
-
-
-
-
-
 - OES 文件存储规划 ........................................................ 5-34
-
-
-
-
 - 如何在 OES Linux 中使用 NSSUMU 管理工具 .. 5-54
 - 如何为 OES Linux 上的 NSS 卷分配文件系统权限 ............................................ 5-57
+
 ### 目标 7 使用服务器合并工具迁移 NSS 卷 ................................................... 5-62
 - 准备源服务器和目标服务器 ............... 5-67
-
-
-
-
-
-
-
-
 - 目标 2 描述通用密码（Universal Password）的用途和架构 . . . . . 6-5
 - 通用密码安全 . . . . . . . . . . . . . . . . . . 6-7
-
-
 - 摘要 ................................................................................................................................................................................................................................................................................................................................................................................................................. . . . . . . . . . . . . . . . . . . . . . 7-57
-
-
-
-
-
-
 - iFolder 对企业带来的优势 ... 8-3
 - 企业级服务器共享 ... 8-8
 - iFolder 的关键组件 ... 8-11
-
 - iFolder 数据和同步考虑因素 ... 8-26
-
 - 前提条件和安装指南 ... 8-32
 - 如何配置 iFolder 企业服务器 ... 8-43
 - 如何为 iManager 安装 Novell iFolder 3 插件 ... 8-51
 - 如何置备用户和 iFolder 服务 ... 8-57
-
-
 - 启动、停止和重启 iFolder 服务 ... 8-73
 - 恢复单个文件或目录 ... 8-75
 - 修改 iFolder LDAP 设置 ... 8-83
 - 配置 iFolder 用户 ... 8-92
-
-
 - 管理 iFolders ... 8-125
 - 练习 8-2 在 Windows XP 专业版和 SLED 10 工作站上使用 iFolder 3.x ... 8-144
 
-#  ... 8-145
-
-
-
-
+# ... 8-145
 - 如何访问 eGuide 客户端 ... 9-8
-
-
-
-
-
-
-
-
-
-
-
-
 - OES NetWare 上的 Novell NetStorage ................................................................................. 10-9
-- NetStorage 的工作原理 ....................................................................................................... 10-11
 
-+ 目标 2 实现和管理 NetStorage ................................................................................... 10-15
+
+
+## 目录
+
+### 第 10 节 NetStorage
+
+- NetStorage 的工作原理 ....................................................................................................... 10-11
+- 目标 2 实现和管理 NetStorage ................................................................................... 10-15
 - 如何从 Novell iManager 管理 NetStorage ................................................................................ 10-17
 - 如何查看或修改目录和文件属性及权限 ................................................................ 10-25
 - 如何清理和恢复已删除的文件 ................................................................................ 10-28
 - 练习 10-1 配置和使用 NetStorage ................................................................... 10-34
-总结 ...................................................................................................................................................................... 10-35
-## 第 11 节  Novell OES 实施方案
-目标 ................................................................................................................................. . . . . . . . 11-1
+- 总结 ...................................................................................................................................................................... 10-35
 
+### 第 11 节 Novell OES 实施方案
 
+- 目标 ................................................................................................................................. . . . . . . . 11-1
 - 确定每台服务器的 ........................................................................................................................ 11-22
-+ 目标 7 在开始之前决定安装选项 ..................................................................................... . . . . 11-24
+- 目标 7 在开始之前决定安装选项 ..................................................................................... . . . . 11-24
 - 从光盘或通过网络安装 ............................................................................................................ 11-24
+- 总结 ........................................................................................................................................................................ . . . . 11-29
 
-总结 ........................................................................................................................................................................ . . . . 11-29
+### 附录
 
-
-描述目录的目的 ............................................................................................................................................................ . A-3
-
-+ eDirectory 的作用和优势 ................................................................. . . . . A-10
-+ eDirectory 的作用 ................................................................. . . . . . . . . . . . A-10
-+ eDirectory 的历史 ................................................................. . . . . . . . . . . A-11
-+ eDirectory 数据库 ................................................................................................ A-13
-+ eDirectory 应用支持 ................................................................................... A-14
-+ eDirectory 组件 ..................................................................................................... A-16
-- 对象示例 (Object Example) ................................................................................................................................. . . . . . . . . . . . A-18
-+ eDirectory 对象类 (Object Classes) ..................................................................................................... A-20
+- 描述目录的目的 ............................................................................................................................................................ . A-3
+- eDirectory 的作用和优势 ................................................................. . . . . A-10
+- eDirectory 的作用 ................................................................. . . . . . . . . . . A-10
+- eDirectory 的历史 ................................................................. . . . . . . . . . A-11
+- eDirectory 数据库 ................................................................................................ A-13
+- eDirectory 应用支持 ................................................................................... A-14
+- eDirectory 组件 ..................................................................................................... A-16
+- 对象示例 (Object Example) ................................................................................................................................. . . . . . . . . . . A-18
+- eDirectory 对象类 (Object Classes) ..................................................................................................... A-20
 - 树对象 (Tree Object) ................................................................................................................................. . . . . A-21
 
 # 索引
-
-
-
-
 
 ## 简介
 
@@ -267,27 +123,21 @@ Integrating Novell Open Enterprise for Linux 课程 (3077) 帮助你学习如何
 你用于 Integrating Novell Open Enterprise Server for Linux 课程的套包包含以下内容：
 
 - Integrating Novell Open Enterprise Server for Linux 授权课程教材（第 1 卷和第 2 卷）。这是一份印刷课程手册，包含了教学和参考内容。
-
 - Integrating Novell Open Enterprise Server for Linux 练习册。这是一份印刷手册，包含了练习题以及设置自学环境的说明。
-
 - 3077 课程 CD。此 CD 包含 PDF 格式的课程手册、PDF 格式的练习册以及一个自读文件。
 
 此外，还有几个包含以下内容的文件夹：
 
 - exercises。此文件夹包含用于课程练习的文件。
-
 - OES_docs。此文件夹包含课程手册中引的所有 Novell OES 文档。
-
 - setup。此文件夹包含设置环境所需的所有文件（VMware 虚拟机除外）。
-
 - 3077 VMware Servers DVD。此 DVD 包含了课程练习使用的 DA1 Linux 服务器和 DA2 NetWare 服务器。
 
+
+
 - 3077 VMware SLED 10 Workstation DVD。此 DVD 包含了课程练习使用的 SUSE Linux Enterprise Desktop 10 工作站。
-
 - Novell OES SP2 CDs。你将在课程练习中使用这些 CD 升级到 Novell Open Enterprise Server (OES) 并安装 Novell OES 服务。
-
 它们包括：
-
 - Novell OES SP2 NetWare 安装 CD 1
 - Novell OES SP2 NetWare 安装 CD 2
 - Novell OES SP2 Linux 安装 CD 1
@@ -299,7 +149,6 @@ Integrating Novell Open Enterprise for Linux 课程 (3077) 帮助你学习如何
 ## 课程设计
 
 以下提供了有关课程设计的信息，帮助你评估该课程是否提供了你所需的 Novell OES 培训（无论是课堂环境形式还是自学形式）：
-
 - 课程目标
 - 课程对象
 - 预备知识
@@ -307,10 +156,9 @@ Integrating Novell Open Enterprise for Linux 课程 (3077) 帮助你学习如何
 - Novell Open Enterprise Server 培训路径
 - 课堂日程
 
-## 课程目标
+### 课程目标
 
 本课程的总体目标是让你准备能够在有限的、非关键生产环境中安装或迁移 Novell OES 服务，且对以下内容的变动较少：
-
 - 评估 Novell 服务对客户和员工的价值。
 - 评估硬件和软件要求。
 - 在 Linux 上执行基础管理任务。
@@ -321,45 +169,36 @@ Integrating Novell Open Enterprise for Linux 课程 (3077) 帮助你学习如何
 - 从 NetWare 迁移数据和服务。
 - 在 OES Linux 上安装 Novell OES 服务。
 
-## 课程对象
+### 课程对象
 
 我们预计本课程的受众包括：
-
 - 系统管理员、集成商和工程师
 - 销商/合作伙伴技术支持
 - 新客户
-
 - OES 员工人员
 
 Integrating Novell Open Enterprise Server for Linux 课程的主要目标受众是需要评估、管理或实施服务的资深 Novell 管理员。
-
 Integrating Novell Open Enterprise Server for Linux 课程的次要目标受众是不熟悉 eDirectory 但具有 Linux 平台经验的新客户。
 
-## 预备知识
+### 预备知识
 
 在开始此课程之前，我们建议你对以下内容有一定的了解：
-
 - CompTIA A+ 目标
 - CompTIA Network+ 目标
 - Novell eDirectory 基础（课程 3017）目标
 - 或同等的网络和 eDirectory 经验（在 NetWare、Linux 或 Windows 上）
 
 我们还建议（但不强制）以下内容：
-
 - 通过培训、测试或工作经验获得 eDirectory 8.7.3 或更高版本的某些经验
 - 在企业或学术等计算环境中或通过培训课程获得任何 Linux 桌面或服务器的基础经验（例如 3071 - SUSE Linux Enterprise Server 10 基础）
 
 你不需要具备大量的 Linux 知识即可成功完成课程中的练习。但是，你需要记住，要在生产环境的 OES Linux 服务器上充分地管理 Novell OES 服务，你需要具备同于认证 Linux 专业人员 (CLP) 级别的 SUSE Linux Enterprise Server 9 或 10 知识。
 
-## Novell Open Enterprise Server 培训路径
+### Novell Open Enterprise Server 培训路径
 
 Integrating Novell Open Enterprise Server for Linux 课程是一个更大路径的一部分，为需要设计或实施 Novell OES 解决方案的人员提供了额外的学习体验。
 
-
-
-
-
-## 课堂议程
+### 课堂议程
 
 本课程设计为期 5 天，基本议程安排如下：
 
@@ -396,7 +235,6 @@ Integrating Novell Open Enterprise Server for Linux 课程是一个更大路径�
 ## 练习指南
 
 以下信息提供了帮助您充分利用课程所提供练习的指南：
-
 - VMware 与练习
 - 练习规范
 - 自学设置
@@ -404,56 +242,45 @@ Integrating Novell Open Enterprise Server for Linux 课程是一个更大路径�
 - Web 浏览器工具和应用程序
 - 场景
 
-## VMware 与练习
+### VMware 与练习
 
 VMware Workstation 软件允许您在单台物理计算机上同时创建并运行多个 x86 虚拟计算机。每台虚拟机都可以启动并运行自己的操作系统，例如 NetWare、Windows 和 Linux。
-
 VMware Player 是一款免费的虚拟机软件，可以运行其他 VMware 产品创建的虚拟机，但您无法用它创建新的虚拟机。
-
 本课程提供了若干 VMware 虚拟机，您可以在 Windows XP 专业版物理计算机上运行它们。
-
 为了完成课程中的练习，您可以使用 VMware Workstation 或 VMware Player。在课堂环境中，您可能会使用其中一种。
-
 以下指南将帮助您在进行课程练习使用 VMware 时获得良好的体验：
-
 - 如何进入和退出 VMware
 - 如何使用 VMware 快照功能
 - 如何使用 VMware Player
 
-## 如何进入和退出 VMware
+### 如何进入和退出 VMware
 
 在使用 VMware 虚拟机时，您可以通过按下 Ctrl+Shift+Alt 将鼠标和键盘控制权释放到宿主机桌面。
-
 要将鼠标和键盘控制权返回 VMware 虚拟机，请按 Ctrl+G 或选择 VMware 窗口。
-
 > 在 VMware 虚拟机中按下 Ctrl+Alt+Insert 等同于按下 Ctrl+Alt+Delete。
 
-## 如何使用 VMware 快照功能
+### 如何使用 VMware 快照功能
 
 如果您正在使用 VMware Workstation 5.x 在 Windows XP 专业版宿主机上运行虚拟机，可以使用快照功能将虚拟机硬盘的当前状态捕为文件，然后通过选择快照文件返回到该状态。
-
 > 因为快照仅保存硬盘上一个状态与当前状态之间的差异，因此快照文件较小。
-
 快照功能在完成练习时非常有用。在成功完成练习后，您可以对虚拟机的当前状态拍摄快照。如果您在下一个练习中遇到问题，可以通过恢复到之前的快照来重新开始。
-
 为了在课程练习中使用快照功能，您需要知道如何执行以下操作：
-
 - 拍摄练习快照
 - 返回到之前的练习快照
 
 如果某个练习涉及多台虚拟机（例如 DA1-LINUX、DA2-NETWARE 和 DA-WS1-SLED），请确保在练习结束时对每台虚拟机都拍摄快照。
-
 如果您在课堂环境中，教师可能已经在您的 DA-HOST Windows XP 专业版工作站上提供了练习快照。
 
-## 拍摄练习快照
+#### 拍摄练习快照
 
 要在练习结束时为虚拟机拍摄快照，请执行以下操作：
-
 1. 确保您的鼠标光标已从虚拟机窗口释放（您通常按下 Ctrl+Shift+Alt），并且您已关闭虚拟机。
-
 在拍摄之前关闭虚拟机可以节省空间，因为 VMware 仅捕获虚拟硬盘（.vmdk 文件）的当前状态，而不是整个硬盘和内存中的内容。
-
 在拍摄之前关闭虚拟机还可以确保快照是干净的，并帮助您避免某些系统在快照后出现的问题，例如处理速度降低。
+
+
+
+## 从 VMware Workstation 拍摄快照
 
 2. 从 VMware Workstation 菜单中，选择 虚拟机 > 快照 > 拍摄快照。
 
@@ -463,9 +290,9 @@ VMware Player 是一款免费的虚拟机软件，可以运行其他 VMware 产�
 
 我们建议输入练习的名称。例如，如果您刚刚完成了练习 1-1，可以使用该名称。
 
-4. 在“描述 (Description)”字段中，输入虚拟机的*描述*（例如*在练习 1-2 开始使用此虚拟机*）。
+4. 在“描述 (Description)”字段中，输入虚拟机的描述（例如在练习 1-2 开始使用此虚拟机）。
 
-5. 完成后，点击**确定 (OK)**。
+5. 完成后，点击确定 (OK)。
 
 快照文件存储在存储虚拟机文件的目录中。
 
@@ -475,7 +302,7 @@ VMware Player 是一款免费的虚拟机软件，可以运行其他 VMware 产�
 
 1. 确保虚拟机正在运行，或者显示了虚拟机标签页。
 
-2. 确保您的鼠标光标已从虚拟机窗口释放（您通常按下 Ctrl+Shift+Alt）。
+2. 确保您的鼠标光标已从虚拟机窗口释放（您通常按下 `Ctrl+Shift+Alt`）。
 
 3. 从 VMware Workstation 菜单中，选择 虚拟机 > 快照 > 管理器。
 
@@ -487,13 +314,14 @@ VMware Player 是一款免费的虚拟机软件，可以运行其他 VMware 产�
 
 4. 选择要开始的练习快照。例如，如果您想从练习 1-2 开始，将选择该快照。注意快照树下方显示了快照的全名和描述。
 
-5. 选择快照后，点击**转到 (Go To)**。
+5. 选择快照后，点击转到 (Go To)。
 
 弹出警告消息，指示如果恢复快照，当前状态将丢失。
 
 6. 执行以下操作之一：
-- 如果当前状态不重要，点击**是 (Yes)** 继续。
-- 如果您在恢复到快照之前想保存当前状态，点击**否 (No)**；然后通过选择**拍摄快照 (Take Snapshot)** 保存当前状态。
+
+- 如果当前状态不重要，点击是 (Yes) 继续。
+- 如果您在恢复到快照之前想保存当前状态，点击否 (No)；然后通过选择拍摄快照 (Take Snapshot) 保存当前状态。
 
 ## 如何使用 VMware Player
 
@@ -505,10 +333,6 @@ VMware Player 是 VMware 提供的免费下载软件，用于运行在 VMware Wo
 
 - VMware Player 和 VMware Workstation 的安装：您无法在同一台计算机上安装 VMware Player 和 VMware Workstation。如果有 VMware Workstation 5.x，我们建议在 DA-HOST Windows 专业版工作站上安装并使用它。
 - 标签与窗口：虽然可以使用 VMware Player 同时运行多个虚拟机，但每台虚拟机都需要不同的窗口中打开。然而，VMware Workstation 允许您在 VMware Workstation 窗口中打开多个虚拟机，并在虚拟机之间切换标签。
-
-
-
-
 
 ## 引言
 
@@ -542,7 +366,7 @@ Intro-17
 
 以下描述了最常见的约定：
 
-- *斜体/粗体文本*。这是对你独特情况的引用，例如你服务器的主机名。
+- 斜体/粗体文本。这是对你独特情况的引用，例如你服务器的主机名。
 
 例如，如果你的服务器主机名为 DA3，且你看到以下内容：
 
@@ -556,9 +380,9 @@ hostname.da.com
 DA3.da.com
 ```
 
-- 10.200.200.x 或 DAx。这是分配给你的 OES NetWare 服务器的 IP 地址或主机名。
+- `10.200.200.x` 或 `DAx`。这是分配给你的 OES NetWare 服务器的 IP 地址或主机名。
 
-例如，如果你的 IP 地址是 10.200.200.3，且你看到以下内容：
+例如，如果你的 IP 地址是 `10.200.200.3`，且你看到以下内容：
 
 ```
 10.200.200.x
@@ -570,13 +394,12 @@ DA3.da.com
 10.200.200.3
 ```
 
-- **选择（Select）**。*select* 一词在练习步骤中用于指示各种操作，包括点击界面上的按钮和选择菜单项。
+- 选择（Select）。`select` 一词在练习步骤中用于指示各种操作，包括点击界面上的按钮和选择菜单项。
+- 输入并输入（Enter and Type）。`enter` 和 `type` 词具有不同的含义。
 
-- **输入并输入（Enter and Type）**。*enter* 和 *type* 词具有不同的含义。
+`enter` 意味着在字段中输入文本或在命令行提示符处输入文本并按回车键。`type` 意味着输入文本但不按回车键。
 
-*enter* 意味着在字段中输入文本或在命令行提示符处输入文本并按回车键。*type* 意味着输入文本但不按回车键。
-
-如果你被要求 type 一个值值，请确保不要按回车键，否则可能会启动一个你尚未准备好启动的进程。
+如果你被要求 `type` 一个值值，请确保不要按回车键，否则可能会启动一个你尚未准备好启动的进程。
 
 # 自学环境设置
 
@@ -615,20 +438,20 @@ DA3.da.com
 “你决定设置以下 2 台服务器来模拟生产环境：”
 
 - DA2-NETWARE。一台 NetWare 6.5 SP1 服务器允许你测试将现有服务从 NetWare 迁移到 OES Linux。
-
 - DA1-LINUX。一台 Novell Open Enterprise Server 9 Linux 服务器，你将其作为迁移服务和安装新服务的目标服务器。
 
 此外，你决定使用以下设备来管理和测试 OES：
 
 - DA-HOST。一台 Windows XP 专业版工作站，用作管理工作站并测试桌面使用。
-
 - DA1-SLED。一台 SUSE Linux Enterprise Desktop 10 工作站，用于测试桌面使用。
 
 “在测试完当前需求后，管理层希望你报告结果并提出建议，包括对数据资源访问方式的必要调整。”
 
 # 课程反馈
 
-你的反馈对 Novell 教育至关重要。要对课程提供反馈，请访问网络服务 http://www.novell.com/training/contactus.html。
+
+
+你的反馈对 Novell 教育至关重要。要对课程提供反馈，请访问网络服务 `http://www.novell.com/training/contactus.html`。
 
 # 第一节 评估并升级到 Novell Enterprise Server（注：修正为 Open Enterprise Server）
 
@@ -654,11 +477,7 @@ DA3.da.com
 
 你还学习了如何将现有的 NetWare 6.5 服务器升级为 OES NetWare 服务器。
 
-有关计划 Novell OES 迁移的完整细节，请参考《Novell OES SP2 规划与实施指南》（implgde.pdf）。你可以通过 http://www.novell.com/documentation/oes 或从 3077 课程光盘上的 OES_Docs 目录访问该指南。
-
-
-
-
+有关计划 Novell OES 迁移的完整细节，请参考《Novell OES SP2 规划与实施指南》(`implgde.pdf`)。你可以通过 `http://www.novell.com/documentation/oes` 或从 3077 课程光盘上的 `OES_Docs` 目录访问该指南。
 
 ## 目标 1
 
@@ -683,47 +502,43 @@ Novell Open Enterprise Server (OES) 是一种强大的产品和技术组合，�
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_41_0.png)
 
 > 由于 Novell OES 服务同时运行在 NetWare 和 SLES 9 上，您可以：
-- 选择最符合您组织需求的平台组合。
-- 将开源和灵活性与企业级、可靠、安全的网络服务相结合。
-- 依靠 Novell 支持来帮助您保持网络按照组织预期的方式运行。
+> - 选择最符合您组织需求的平台组合。
+> - 将开源和灵活性与企业级、可靠、安全的网络服务相结合。
+> - 依靠 Novell 支持来帮助您保持网络按照组织预期的方式运行。
 
 要评估 Novell Open Enterprise Server (OES)，您需要了解以下内容：
-
 - 为什么要升级到 Novell OES
 - Novell OES 特性
 
 从 Novell Enterprise Services 1.0 到 Novell Open Enterprise Services 并没有直接的升级路径。
 
-## 为什么要升级到 Novell OES
+### 为什么要升级到 Novell OES
 
 在考虑升级到 Novell OES 时，您可能会遇到以下问题：
-
 - 我们如何能保持与目前 NetWare 服务相同的服务水平？
 - 如果我们内部缺乏 Linux 技能，如何从 Linux 中获得更多价值？
 - 我们如何在不影响最终用户的情况下迁移到 Linux？
 - 我们如何在不彻底重组 IT 部门的情况下迁移到 Linux？
 
 请记住，您可以：
-
 - 以非破坏性的方式将 Linux 添加到您的环境中
 - 在不更换软件的情况下最大化硬件投资
 - 提振您的 IT 员工活力并吸引新的 IT 人才
 - 通过获取 Linux 上的新应用程序来保护您的 NetWare 投资
 
 此外，部署 Novell OES 允许您执行以下操作：
-
 - 扩展 Novell 网络服务的使用
 - 从受信任的供应商处添加 Linux
 - 通过共存降低管理成本
 - 减少支持的操作系统的数量
 
-有关更多信息，请参阅《将您的业务升级到 Novell Enterprise Server》升级指南（upgrade_guide.pdf）。
+有关更多信息，请参阅《将您的业务升级到 Novell Enterprise Server》升级指南（`upgrade_guide.pdf`）。
 
-您可以通过 http://www.novell.com/collateral/4821012/4821012.pdf 或 3077 课程 CD 上的 OES_Docs 目录访问该指南。
+您可以通过 `http://www.novell.com/collateral/4821012/4821012.pdf` 或 3077 课程 CD 上的 `OES_Docs` 目录访问该指南。
 
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_42_0.png)
 
-## 扩展 Novell 网络服务的使用
+### 扩展 Novell 网络服务的使用
 
 投资 NetWare 一直意味着更高的可靠性、更少的支持问题、支持开放标准、更少的硬件获得更高的性能、可以根据您的方便添加的升级，以及公平的许可实践，从而让您保留对购买内容的所有权。
 
@@ -731,7 +546,7 @@ iFolder、iPrint、NSS 和集群等功能是说服许多人选择 NetWare 作为
 
 Novell OES 延长了您的 NetWare 安装寿命，并让您的投资最大化。您可以使用 OES 在您的网络中引入 Linux 和新服务，而无需拆除并更换。
 
-## 从受信任的供应商处添加 Linux
+### 从受信任的供应商处添加 Linux
 
 对于 NetWare 客户来说，Novell OES 的优势之一是有添加企业级 Linux 操作系统的机会，为任何工作负载提供价值。
 
@@ -747,7 +562,7 @@ Novell Linux 还提供受信任的服务和支持，以确保您的 Novell OES �
 
 Novell 为各种规模的公司提供 OES 支持。这种支持通过培训和认证、咨询、继续教育、24x7x365 技术支持、硬件和软件合作伙伴关系、工程专业知识以及全球解决方案合作伙伴网络来提供。
 
-## 通过共存降低管理成本
+### 通过共存降低管理成本
 
 Novell OES 帮助您管理支持多种脚本语言的混合环境。
 
@@ -755,7 +570,7 @@ Novell OES 帮助您管理支持多种脚本语言的混合环境。
 
 此外，Novell OES 允许您运行现有服务而无需突然进行迁移。通过 Novell OES，您可以按照自己的节奏和方式引入 Linux 以及您熟悉的服务。它还通过吸引具有 Linux 知识的人才来扩展您团队的能力。
 
-## 减少支持的操作系统的数量
+### 减少支持的操作系统的数量
 
 许多 NetWare 客户在他们的环境中运行多种平台（包括 Windows NT）。这些客户正处于十字路口。截至 2005 年，微软不再为 Windows NT 提供非安全热补丁或技术支持。
 
@@ -765,11 +580,9 @@ Novell OES 帮助您管理支持多种脚本语言的混合环境。
 
 随着 Windows Vista 的到来，具有成本意识的 IT 执行必须做出平台投资决策：长期投资 Windows 或从 Linux 和开源中获得灵性和效益。
 
+
+
 Novell OES 提供了一种替代方案，通过扩展 Linux 的优势来满足您最迫切的 IT 基础设施和应用需求。Novell OES 能够解决 Windows 安全问题。而且 Novell OES 与 Windows 服务器和客户端具有良好的互操作性，便于从 Windows NT 迁移。它还可以与现有的 Windows NT/2000 服务器以及 Active Directory 集成。当您准备好从微软 迁移时，它将提供您所需的工具和专业知识，以便高效升级到提供更多选择的环境。
-
-
-
-
 
 ## 管理接口与服务
 
@@ -781,9 +594,9 @@ Novell OES 提供了一种替代方案，通过扩展 Linux 的优势来满足�
 
 大多数此类管理接口的访问通过 eDirectory 控制。然而，少数几个接口（例如 SLES 9 服务器上的 YaST）需要本地身份验证。
 
-要查看所有 OES 实用程序和工具的完整列表，请参阅《Novell OES SP2计划与实施指南》(impgde.pdf) 第 91 页的“OES 实用程序和工具”。
+要查看所有 OES 实用程序和工具的完整列表，请参阅《Novell OES SP2计划与实施指南》(`impgde.pdf`) 第 91 页的“OES 实用程序和工具”。
 
-你可以通过 http://www.novell.com/documentation/oes 或从你的 3077 课程 CD 中的 OES_Docs 目录访问该指南。
+你可以通过 `http://www.novell.com/documentation/oes` 或从你的 3077 课程 CD 中的 `OES_Docs` 目录访问该指南。
 
 ## 身份与目录服务
 
@@ -815,9 +628,9 @@ eDirectory 旨在提供简单、强大且灵活的网络资源管理（包括 eD
 
 OES 包含了 Identity Manager 组合版，带有所需的驱动程序，允许同步存储在 Active Directory 域、NT 域和 eDirectory 树中的身份信息。
 
-> 了解更多信息，请参阅《Novell OES SP2计划与实施指南》(implpgde.pdf) 第 111 页的“使用 Identity Manager 组合版”。
+> 了解更多信息，请参阅《Novell OES SP2计划与实施指南》(`implpgde.pdf`) 第 111 页的“使用 Identity Manager 组合版”。
 
-你可以通过 http://www.novell.com/documentation/oes 或从你的 3077 课程 CD 中的 OESDocs 目录访问该指南。
+你可以通过 `http://www.novell.com/documentation/oes` 或从你的 3077 课程 CD 中的 `OESDocs` 目录访问该指南。
 
 ## 基础设施服务
 
@@ -846,9 +659,9 @@ OES 网络服务需要若干底层基础设施服务来支持以下内容：
 
 这些服务（虚拟办公室除外）将在本课程后面的部分进行更详细的解释。
 
-有关虚拟办公室的更多信息，请参阅《Novell OES 虚拟办公室配置指南》(virtualoffice.pdf)。
+有关虚拟办公室的更多信息，请参阅《Novell OES 虚拟办公室配置指南》(`virtualoffice.pdf`)。
 
-你可以通过 http://www.novell.com/documentation/oes 或从你的 3077 课程 CD 中的 OES_Docs 目录访问该指南。
+你可以通过 `http://www.novell.com/documentation/oes` 或从你的 3077 课程 CD 中的 `OES_Docs` 目录访问该指南。
 
 ## 决定安装哪些 OES 服务
 
@@ -864,38 +677,18 @@ OES 网络服务需要若干底层基础设施服务来支持以下内容：
 
 以下总结了每个平台上可用的服务和技术支持，以及服务提供方式的差异。
 
-如果你对未列出的服务或技术感兴趣，或者需要查看列出服务的文档，请查看 OES 文档网站（http://www.novell.com/documentation/oes）上的 A–Z 列表。
+如果你对未列出的服务或技术感兴趣，或者需要查看列出服务的文档，请查看 OES 文档网站（`http://www.novell.com/documentation/oes`）上的 A–Z 列表。
 
 | 表格 1-1 | 服务 | OES Linux | OES Netware |
-| :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- |
 | AFP (Apple 文件协议) | 否 | - NFAP |
 | Apache 服务器 | 是 - 标准 Linux | 是 - 开源产品的 NetWare 端口 |
 | 归档与版本服务 (Novell) | 否 | 是 |
 | 备份 (SMS) | 是 | 是 |
 | 集群 | 是 | 是 |
 | CIFS (Windows 文件服务) | 是 - Samba | 是 - NFAP |
-
 | 服务 | OES Linux | OES NetWare |
-| :--- | :--- | :--- |
-| DFS (Novell 分布式文件服务) | 否 | 是 |
-| DHCP | 是 | 是 |
-| DNS | 是 | 是 |
-| eDirectory 8.7.3 | 是 | 是 |
-| eDirectory 证书服务器 | 是 | 是 |
-| eGuide (黄页) | 是 | 是 |
-| FTP 服务器 | 是 | 是 |
-| 健康监控 | 是 | 是 |
-
-| 服务 | OES Linux | OES NetWare |
-| :--- | :--- | :--- |
-| 服务 | OES Linux | OES NetWare |
-| :--- | :--- | :--- |
-| AFP (Apple 文件协议) | 否 | - NFAP |
-| Apache 服务器 | 是 - 标准 Linux | 是 - 开源产品的 NetWare 端口 |
-| 归档与版本服务 (Novell) | 否 | 是 |
-| 备份 (SMS) | 是 | 是 |
-| 集群 | 是 | 是 |
-| CIFS (Windows 文件服务) | 是 - Samba | 是 - NFAP |
+| :--- | :--- | :--- | :--- |
 | DFS (Novell 分布式文件服务) | 否 | 是 |
 | DHCP | 是 | 是 |
 | DNS | 是 | 是 |
@@ -905,9 +698,27 @@ OES 网络服务需要若干底层基础设施服务来支持以下内容：
 | FTP 服务器 | 是 | 是 |
 | 健康监控 | 是 | 是 |
 | 服务 | OES Linux | OES NetWare |
-| :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- |
 | 服务 | OES Linux | OES NetWare |
-| :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- |
+| AFP (Apple 文件协议) | 否 | - NFAP |
+| Apache 服务器 | 是 - 标准 Linux | 是 - 开源产品的 NetWare 端口 |
+| 归档与版本服务 (Novell) | 否 | 是 |
+| 备份 (SMS) | 是 | 是 |
+| 集群 | 是 | 是 |
+| CIFS (Windows 文件服务) | 是 - Samba | 是 - NFAP |
+| DFS (Novell 分布式文件服务) | 否 | 是 |
+| DHCP | 是 | 是 |
+| DNS | 是 | 是 |
+| eDirectory 8.7.3 | 是 | 是 |
+| eDirectory 证书服务器 | 是 | 是 |
+| eGuide (黄页) | 是 | 是 |
+| FTP 服务器 | 是 | 是 |
+| 健康监控 | 是 | 是 |
+| 服务 | OES Linux | OES NetWare |
+| :--- | :--- | :--- | :--- |
+| 服务 | OES Linux | OES NetWare |
+| :--- | :--- | :--- | :--- |
 | RADIUS | 是 - Novell | 是 - Novell |
 | Samba | 是 - 定制 | 否 |
 | Search (QuickFinder) | 是 | 是 |
@@ -935,10 +746,12 @@ OES 网络服务需要若干底层基础设施服务来支持以下内容：
 
 以下总结了每个平台上可用的服务和技术支持，以及服务提供方式的差异。
 
-如果你对未列出的服务或技术感兴趣，或者需要查看列出服务的文档，请查看 OES 文档网站（http://www.novell.com/documentation/oes）上的 A–Z 列表。
+如果你对未列出的服务或技术感兴趣，或者需要查看列出服务的文档，请查看 OES 文档网站（`http://www.novell.com/documentation/oes`）上的 A–Z 列表。
+
+
 
 | 表格 1-1 | 服务 | OES Linux | OES Netware |
-| :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- |
 | AFP (Apple 文件协议) | 否 | - NFAP |
 | Apache 服务器 | 是 - 标准 Linux | 是 - 开源产品的 NetWare 端口 |
 | 归档与版本服务 (Novell) | 否 | 是 |
@@ -954,9 +767,9 @@ OES 网络服务需要若干底层基础设施服务来支持以下内容：
 | FTP 服务器 | 是 | 是 |
 | 健康监控 | 是 | 是 |
 | 服务 | OES Linux | OES NetWare |
-| :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- |
 | 服务 | OES Linux | OES NetWare |
-| :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- |
 | RADIUS | 是 - Novell | 是 - Novell |
 | Samba | 是 - 定制 | 否 |
 | Search (QuickFinder) | 是 | 是 |
@@ -969,10 +782,6 @@ OES 网络服务需要若干底层基础设施服务来支持以下内容：
 | NetWare 文件 | 否 | 是 |
 | 虚拟办公室 (协作) | 是 | 是 |
 | WAN 管理器 (for eDirectory) | 否 | 是 |
-
-
-
-
 
 ## 哪种 OES 平台适合我的服务？
 
@@ -1053,6 +862,9 @@ OES 网络服务需要若干底层基础设施服务来支持以下内容：
 | NCP 服务器 | 访问 NCP 管理指南 (ncp.pdf) 第 9 页的“NCP 的优势”。 |
 | NetStorage | NetStorage 提供 CIFS/SMB 连接。NetWare 使用 NCP。 |
 | NICI (Novell 国际密码学) | 无。 |
+
+
+
 | NMAS (Novell 认证服务) | 无功能差异。 |
 
 ### 表 1-3 服务说明和参考
@@ -1060,14 +872,14 @@ OES 网络服务需要若干底层基础设施服务来支持以下内容：
 | 服务 | 说明和参考 |
 | --- | --- |
 | Novell 客户端 (Linux 和 Windows) 与 NCP 无功能差异。 |
-| Novell 聚类服务 | 访问 Linux 版 OES Novell 聚类服务 1.8.2 管理指南 (cluster_admin_lx.pdf) 第 9 页的“产品功能”。<br>访问 NetWare 版 OES Novell 聚类服务 1.8.2 管理指南 (cluster_admin.pdf) 第 9 页的“产品功能”。 |
+| Novell 聚类服务 | 访问 Linux 版 OES Novell 聚类服务 1.8.2 管理指南 (`cluster_admin_lx.pdf`) 第 9 页的“产品功能”。<br>访问 NetWare 版 OES Novell 聚类服务 1.8.2 管理指南 (`cluster_admin.pdf`) 第 9 页的“产品功能”。 |
 | Novell 许可服务 | Linux 不可用。 |
-| NSS (Novell 存储服务) | 访问 OES 存储服务文件系统指南 (nss_enu.pdf) 第 73 页的“共存与迁移问题”。 |
+| NSS (Novell 存储服务) | 访问 OES 存储服务文件系统指南 (`nss_enu.pdf`) 第 73 页的“共存与迁移问题”。 |
 | Nsure 审计 | Linux可用。 |
 | NTPv3 | 访问 Novell OES，“时间同步”，5-4。 |
-| OpenSSH | 访问 OpenSSH 管理指南 (openssh.pdf) 第 10 页的“平台特性”。 |
+| OpenSSH | 访问 OpenSSH 管理指南 (`openssh.pdf`) 第 10 页的“平台特性”。 |
 | PAM (插件认证模块) | NetWare 不可用。认证与 eDirectory 完全集成。 |
-| Pervasive.SQL | 访问 Pervasive.SQL 的在线文档：http://www.pervasive.com/support/technical/online_manuals.asp |
+| Pervasive.SQL | 访问 Pervasive.SQL 的在线文档：`http://www.pervasive.com/support/technical/online_manuals.asp` |
 | PKI (公共密钥基础设施) | 无功能差异。 |
 | 打印 | 访问 iPrint。 |
 
@@ -1078,26 +890,22 @@ OES 网络服务需要若干底层基础设施服务来支持以下内容：
 | RADIUS | 无功能差异 (NMAS)。 |
 | QuickFinder | 访问搜索。 |
 | Samba | Linux 解决方案，NetWare 使用原生文件协议。 |
-| 搜索 (QuickFinder) | 在索引文件系统时，QuickFinder 引擎仅索引它有权访问。在 NetWare 上，它对所有挂载卷具有完全访问权限。在 Linux 上，它仅权访问 www 组中 dell 用户的文件。更多信息请参阅 Novell QuickFinder Server 4.2 管理指南 (qserver.pdf) 第 156 页的“安全特性”和第 81 页的“为 Linux-NSS 卷生成索引”。 |
-| 服务资源管理 (eDirectory) | NetWare  eDirectory 管理资源。例如，你可以查看和修改系统信息、管理 NetWare 卷上的文件和文件夹、清理删除的文件、分配卷空间以及创建对象以方便管理。更多信息请参阅 Novell eDirectory 8.7.3 管理指南 (edir873.pdf) 第 87 页的“管理对象”。当前 Linux 版 eDirectory 不支持服务器资源管理。 |
-
-
-
-
+| 搜索 (QuickFinder) | 在索引文件系统时，QuickFinder 引擎仅索引它有权访问。在 NetWare 上，它对所有挂载卷具有完全访问权限。在 Linux 上，它仅权访问 www 组中 dell 用户的文件。更多信息请参阅 Novell QuickFinder Server 4.2 管理指南 (`qserver.pdf`) 第 156 页的“安全特性”和第 81 页的“为 Linux-NSS 卷生成索引”。 |
+| 服务资源管理 (eDirectory) | NetWare  eDirectory 管理资源。例如，你可以查看和修改系统信息、管理 NetWare 卷上的文件和文件夹、清理删除的文件、分配卷空间以及创建对象以方便管理。更多信息请参阅 Novell eDirectory 8.7.3 管理指南 (`edir873.pdf`) 第 87 页的“管理对象”。当前 Linux 版 eDirectory 不支持服务器资源管理。 |
 
 ## 表 1-3 服务说明与参考
 
 | 服务 | 解释与参考 |
 |---|---|
-| SLP (Novell SLP) (OpenSLP) | 请参阅《Novell SUSE Server Administration Guide》(sles_admin.pdf) 第 308 页的“SLP Support in SUSE LINUX”。<br>访问网页 http://www.novell.com/documentation/edir87/edir87/data/a2iimc.html 查阅“Implementing the Service Location Protocol”。<br>另请访问网页 http://www.openslp.com 查看 OpenSLP 项目主页。<br>默认情况下，NetWare 使用 Novell SLP，该服务在位于 eDirectory 上下文（context）中的目录代理（DAs）之间提供同步。这提供了超越本地网络范围的服务信息。<br>或者，您也可以为 eDirectory 实现 OpenSLP。但请注意，OpenSSL 不支持 DA 同步。<br>Linux 上的 OpenSLP 未经过定制以提供 DA 同步功能。 |
-| 软件 RAID RAID | 请参阅《OES Novell Storage Services File System Administration Guide》(nss_enu.pdf) 第 117 页的“Understanding Software RAID Devices”。 |
+| SLP (Novell SLP) (OpenSLP) | 请参阅《Novell SUSE Server Administration Guide》(`sles_admin.pdf`) 第 308 页的“SLP Support in SUSE LINUX”。<br>访问网页 `http://www.novell.com/documentation/edir87/edir87/data/a2iimc.html` 查阅“Implementing the Service Location Protocol”。<br>另请访问网页 `http://www.openslp.com` 查看 OpenSLP 项目主页。<br>默认情况下，NetWare 使用 Novell SLP，该服务在位于 eDirectory 上下文（context）中的目录代理（DAs）之间提供同步。这提供了超越本地网络范围的服务信息。<br>或者，您也可以为 eDirectory 实现 OpenSLP。但请注意，OpenSSL 不支持 DA 同步。<br>Linux 上的 OpenSLP 未经过定制以提供 DA 同步功能。 |
+| 软件 RAID RAID | 请参阅《OES Novell Storage Services File System Administration Guide》(`nss_enu.pdf`) 第 117 页的“Understanding Software RAID Devices”。 |
 | 存储管理服务 (SMS) | 无功能差异。 |
 | TCP/IP | 无功能差异。 |
 | Timesync | Linux 不可用，但两个 OES 平台均支持 NTPv3。 |
-| Tomcat | 请访问网页 http://www.novell.com/documentation/oes/web_tomcat/data/ahydran.html#ahydran 上的“Administration Instance vs. Public Instance of Tomcat on NetWare”。 |
+| Tomcat | 请访问网页 `http://www.novell.com/documentation/oes/web_tomcat/data/ahydran.html#ahydran` 上的“Administration Instance vs. Public Instance of Tomcat on NetWare”。 |
 | NetWare 传统文件系统 | Linux 不可用。 |
 | 虚拟办公室（协作） | 无功能差异。 |
-| WAN 流量管理器 | 请参阅《Novell eDirectory 8.7.3 Administration Guide》(endir873.pdf) 第 229 页的“WAN Traffic Manager”。 |
+| WAN 流量管理器 | 请参阅《Novell eDirectory 8.7.3 Administration Guide》(`endir873.pdf`) 第 229 页的“WAN Traffic Manager”。 |
 
 ### 目标 3
 
@@ -1116,9 +924,9 @@ OES 网络服务需要若干底层基础设施服务来支持以下内容：
 - 在开始前检查您的安装选项
 - 如何通过升级保护获取 OES
 
-有关安装和升级到 Novell OES 的详细信息，请参阅《Novell OES SP2 Planning and Implementation Guide》(implpgde.pdf) 第 55 页的“Installing OES”和第 61 页的“Upgrading to OES”。
+有关安装和升级到 Novell OES 的详细信息，请参阅《Novell OES SP2 Planning and Implementation Guide》(`implpgde.pdf`) 第 55 页的“Installing OES”和第 61 页的“Upgrading to OES”。
 
-您可以通过 http://www.novell.com/documentation/oes 或从您的 3077 课程光盘中的 OES_Docs 目录 访问该指南。
+您可以通过 `http://www.novell.com/documentation/oes` 或从您的 3077 课程光盘中的 `OES_Docs` 目录 访问该指南。
 
 ## 规划 eDirectory
 
@@ -1157,6 +965,8 @@ Novell eDirectory 是 OES 网络服务和安全的内核。在规划 eDirectory 
 |---|---|
 | Windows NT | NT Domain（通过 Identity Manager 同步用户） |
 
+
+
 Linux 目前没有已知的 eDirectory 共存问题。然而，以下是 NetWare 的共存问题：
 
 - 在 NetWare 上，使用 Deployment Manager 检查树
@@ -1181,13 +991,9 @@ Linux 目前没有已知的 eDirectory 共存问题。然而，以下是 NetWare
 
 为了确保您的 eDirectory 树满足需求，请时间规划以下内容：
 
-- eDirectory 结构：设计良好的树为服务器、用户等提供了容器。它还针对地理分散位置之间的高效数据传输进行了优化。更多信息请参阅《eDirectory 8.7.3 Administration Guide》(edir73.pdf) 第 67 页的“Designing Your Novell eDirectory Network”。
+- eDirectory 结构：设计良好的树为服务器、用户等提供了容器。它还针对地理分散位置之间的高效数据传输进行了优化。更多信息请参阅《eDirectory 8.7.3 Administration Guide》(`edir73.pdf`) 第 67 页的“Designing Your Novell eDirectory Network”。
 - 时间同步：eDirectory 要求所有 OES 服务器（包括 NetWare 和 Linux）进行时间同步。更多信息请参阅第 5-4 页的“Configure Time Synchronization on Novell OES”。
-- 分区和副本：eDirectory 允许对树进行分区以实现扩展性。分区的副本（副本）提供了树内的容错能力。安装到 eDirectory 树中的前 3 台服务器会自动接收根分区的副本。您可能想要创建额外的分区和副本。更多信息请参阅《eDirectory 8.7.3 Administration Guide》(edir73.pdf) 第 113 页的“Managing Partitions and Replicas”。
-
-
-
-
+- 分区和副本：eDirectory 允许对树进行分区以实现扩展性。分区的副本（副本）提供了树内的容错能力。安装到 eDirectory 树中的前 3 台服务器会自动接收根分区的副本。您可能想要创建额外的分区和副本。更多信息请参阅《eDirectory 8.7.3 Administration Guide》(`edir73.pdf`) 第 113 页的“Managing Partitions and Replicas”。
 
 # 评估服务器需求
 
@@ -1198,11 +1004,12 @@ OES Linux 和 OES NetWare 都有特定的硬件和软件要求。
 - OES Linux 服务器
 - OES NetWare 服务器
 
-# OES Linux 服务器
+## OES Linux 服务器
 
 在开始安装 Novell OES for Linux 之前，您需要了解以下内容：
 
 字体 软件要求
+
 - 硬件要求
 
 ### 软件要求
@@ -1219,7 +1026,7 @@ OES Linux 和 OES NetWare 都有特定的硬件和软件要求。
 | 内存 | 512 MB |
 | 空闲磁盘空间 | 6 GB 可用的未分区磁盘空间 |
 
-# 视格 1-5 组件最低要求
+## 表 1-5 组件最低要求
 
 | 组件 | 最低要求 |
 | --- | --- |
@@ -1235,7 +1042,7 @@ OES Linux 和 OES NetWare 都有特定的硬件和软件要求。
 
 如果您计划将系统投入生产环境并让用户保持满意，您应该使用符合或超过以下推荐要求的硬件：
 
-# 视格 1-6 组件推荐要求
+## 表 1-6 组件推荐要求
 
 | 组件 | 推荐要求 |
 | --- | --- |
@@ -1243,7 +1050,7 @@ OES Linux 和 OES NetWare 都有特定的硬件和软件要求。
 | 内存 | 1 GB RAM |
 | 磁盘空间 | 10 GB 可用的未分区磁盘空间。取决于您选择哪些 OES 组件以及如何使用它们，可能需要额外的磁盘空间。 |
 
-# 集成 Novell Open Enterprise Server for Linux（继续） 视格 1-6 组件推荐要求
+### 集成 Novell Open Enterprise Server for Linux（继续） 表 1-6 组件推荐要求
 
 | 组件 | 推荐要求 |
 | --- | --- |
@@ -1259,7 +1066,7 @@ OES Linux 和 OES NetWare 都有特定的硬件和软件要求。
 
 例如，如果您计划部署 iFolder，您可能需要更多的磁盘空间。
 
-# OES NetWare 服务器
+## OES NetWare 服务器
 
 OES NetWare 运行在以下最低系统要求：
 
@@ -1322,13 +1129,13 @@ OES NetWare 运行在以下最低系统要求：
 
 在许多情况下，您目前运行的服务将影响实施 OES 的方法。在某些情况下，有特定的路径可以遵循，以便 OES 集成过程尽可能顺利。
 
-Novell 已投入大量精力识别可能会遇到的服务共存和迁移问题。然而，我们无法预测您可能拥的所有组合。
+Novell 已投入大量精力识别可能会遇到的服务共存和迁移问题。然而，我们无法预测您可能拥有的所有组合。
 
 因此，我们打算每次 OES 产品发布后继续开发共存和迁移信息，并定期更新 Web 文档。
 
 一些常见问题见《Novell OES SP2 实施与规划指南》第 55 页的“安装/升级/迁移注意事项”。
 
-有关与现有 NetWare 和 Linux 网络共存的详细信息以及迁移说明，请参阅 Novell OES 共存与迁移指南 (coexist-mig)。
+有关与现有 NetWare 和 Linux 网络共存的详细信息以及迁移说明，请参阅 Novell OES 共存与迁移指南 (`coexist-mig`)。
 
 ## 开始之前查看您的安装选项
 
@@ -1339,23 +1146,20 @@ Novell 已投入大量精力识别可能会遇到的服务共存和迁移问题�
 - 尽可能使用预定义的服务器类型（模式）
 - 如果您想在单驱动器 Linux 服务器上安装 NSS
 
-# OES Linux 安装概述
+## OES Linux 安装概述
 
 安装 OES Linux 所需的软件和网络准备如下：
 
 ### 图 1-7
+
+
 
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_77_0.png)
 
 OES Linux 包括两种安装选项，两者都在《OES for Linux 安装指南》中有记录：
 
 - CD 安装。您可以使用从 Novell 授权经销商处获得的 CD 进行安装，也可以从下载的 ISO 镜像文件创建 CD。
-
-
-
-
-
--   **网络安装。** 如果网络上可以使用剩余的 ISO 文件，则仅需第一张 CD 进行安装。
+- **网络安装。** 如果网络上可以使用剩余的 ISO 文件，则仅需第一张 CD 进行安装。
 
 此选项可以避免您在安装过程中在服务器上更换 CD。
 
@@ -1371,20 +1175,20 @@ OES Linux 包括两种安装选项，两者都在《OES for Linux 安装指南�
 
 OES NetWare 包含两种安装方式，这两种方式在《OES for NetWare 安装指南》中均有介绍：
 
--   **CD 安装。** 您可以使用从 Novell 授权经销商处获取的 CD 进行安装，也可以从下载的 ISO 镜像文件创建 CD。
--   **网络安装。** 如果您已经准备好带有 Novell 客户端的 DOS 分区并将 CD 文件复制到网络，则可以从网络进行安装。
+- **CD 安装。** 您可以使用从 Novell 授权经销商处获取的 CD 进行安装，也可以从下载的 ISO 镜像文件创建 CD。
+- **网络安装。** 如果您已经准备好带有 Novell 客户端的 DOS 分区并将 CD 文件复制到网络，则可以从网络进行安装。
 
 此选项可以避免您在安装过程中在服务器上更换 CD。
 
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_80_0.png)
 
-有关详细的安装说明，请参阅*OES NetWare 安装指南* (install_nw.pdf) 第 27 页的“安装 OES NetWare”。
+有关详细的安装说明，请参阅*OES NetWare 安装指南* (`install_nw.pdf`) 第 27 页的“安装 OES NetWare”。
 
 ## 尽可能使用预定义的服务器类型（模式）
 
 两个 OES 平台都包含预定义的服务器安装选项，这些选项仅会安装提供特定组网络服务所需的组件。
 
-在 OES Linux 安装中，这些安装选项被称为*服务器类型* (server types)；在 OES NetWare 安装中，这些安装选项被称为*模式* (patterns)。
+在 OES Linux 安装中，这些安装选项被称为*服务器类型* (`server types`)；在 OES NetWare 安装中，这些安装选项被称为*模式* (`patterns`)。
 
 例如，如果您想安装一个支持基于 Web 的、用户可配置的协作环境的 OES 服务器，应该在 OES 安装期间选择 Virtual Office 服务器类型。
 
@@ -1405,8 +1209,10 @@ OES Linux 安装中提供以下服务器类型：
 
 OES NetWare 安装中提供以下模式：
 
-### 表 1-8 | 服务器模式 | 描述 |
-| :--- | :--- | :--- |
+### 表 1-8
+
+| 服务器模式 | 描述 |
+| :--- | :--- |
 | Customized NetWare Server | 允许您在服务器上选择所需的可选产品。 |
 | Basic NetWare File Server | 仅安装基础 NetWare，不含额外产品。 |
 | Pre-Migration Server | 创建一个可以使用 NetWare 迁移向导在以后迁移的服务器。 |
@@ -1418,7 +1224,6 @@ OES NetWare 安装中提供以下模式：
 | QuickFinder Server | 安装搜索服务器，允许用户在 Web 站点和附加文件系统中查找所需信息。 |
 | Network Attached Storage (NAS) Server | 为您的网络安装多文件协议存储。 |
 | Novell iPrint Server | 安装打印系统，安装工作站打印机驱动程序并提供对本地打印机和具有连接连接远程打印机的访问。 |
-
 | **服务器模式** | **描述** |
 | :--- | :--- |
 | Apache/Tomcat Server | 安装 Apache Web 服务器和 Jakarta-Tomcat Servlet 容器，用于托管动态的应用驱动型 Web 站点。 |
@@ -1448,20 +1253,20 @@ OES NetWare 安装中提供以下模式：
 
 要获取更多信息并启动升级过程，请执行以下操作：
 
-1. 使用您的 Novell 账户登录 Novell 网站 (http://www.novell.com/nps)。
+1. 使用您的 Novell 账户登录 Novell 网站 (`http://www.novell.com/nps`)。
 2. 选择 Care 图标进入 Customer Care 页面。
 3. 按照 Customer Care 页面上的说明获取升级。
 
 ### 如何购买 OES
 
-如果您决定购买 OES，请访问 Novell 购买 OES 页面 http://www.novell.com/products/openentererver/howbuy.html。
+如果您决定购买 OES，请访问 Novell 购买 OES 页面 `http://www.novell.com/products/openentererver/howbuy.html`。
 
 购买 OES 后将获得：
 
 - 用于启用 OES 服务器接收在线更新（包括最新支持包）的激活码。
 - 用于安装 OES NetWare 的许可证文件。
 
-购买 OES 后，可以在 Novell 支持网站 http://support.novell.com/filefinder 上免费获取 OES NetWare 支持包。
+购买 OES 后，可以在 Novell 支持网站 `http://support.novell.com/filefinder` 上免费获取 OES NetWare 支持包。
 
 作为购买过程的一部分，了解 1-48 页“Novell OES 许可”下的内容非常重要。
 
@@ -1473,29 +1278,26 @@ OES NetWare 安装中提供以下模式：
 - OES NetWare 许可
 - OES Linux 许可
 
-联系您的 Novell 客户经理或合作伙伴，或访问 www.novell.com/oes 获取详细定价信息。适用某些限制和条款。
+联系您的 Novell 客户经理或合作伙伴，或访问 `www.novell.com/oes` 获取详细定价信息。适用某些限制和条款。
 
 ### OES 许可模型
 
 所有 OES 许可都是基于用户连接购买的。每个平台授权安装的服务器数量不同如下：
 
--   **OES NetWare 服务器。** 唯一的许可限制是网络上的用户连接数。
+- **OES NetWare 服务器。** 唯一的许可限制是网络上的用户连接数。
 
 您可以安装任意数量的 OES NetWare 服务器为这些用户提供服务。
 
+
+
 例如，如果您的 OES 许可是 100 个用户连接，您可以安装任意数量的 OES NetWare 服务器。最多 100 个用户可以连接并使用 OES NetWare 服务器提供的服务。
 
-
-
-
-
--   OES Linux 服务器。同样的限制也适用于您网络上允许的用户连接数。
+- OES Linux 服务器。同样的限制也适用于您网络上允许的用户连接数。
 
 然而，与 OES NetWare 不同，您被授权安装的 OES Linux 服务器数量也受到限制，具体如下：
 
--   对于前 50 个授权用户连接，您被授权每 10 个连接安装一台 OES Linux 服务器。
-
--   在超过前 50 个用户连接后，您被授权每 50 个连接安装一台 OES Linux 服务器。
+- 对于前 50 个授权用户连接，您被授权每 10 个连接安装一台 OES Linux 服务器。
+- 在超过前 50 个用户连接后，您被授权每 50 个连接安装一台 OES Linux 服务器。
 
 例如，如果您的 OES 许可适用于 100 个用户连接，则您被授权安装最多六台 OES Linux 服务器（前 50 个连接对应五台，剩余 50 个连接对应一台）。
 
@@ -1505,19 +1307,19 @@ OES NetWare 安装中提供以下模式：
 
 当您安装或升级 NetWare 时，服务器安装程序会自动安装 Novell 许可服务 (NLS)。
 
-在树树中安装第一个 NetWare 服务器期间，系统会提示您输入许可/密钥文件对（*nlf 和 *.nfk）。
+在树树中安装第一个 NetWare 服务器期间，系统会提示您输入许可/密钥文件对（`*nlf` 和 `*.nfk`）。
 
 安装 OES 后，您可以使用 Novell iManager 在您的 eDirectory 树中安装和管理许可证书，并监控 NetWare 的使用情况。您还可以监控启用了 Novell 许可服务的产品的使用情况。
 
-更多信息，请参阅《NetWare 的 OES 许可服务管理指南》(nlsadmin.pdf) 第 13 页的“Novell 许可服务的工作原理”。
+更多信息，请参阅《NetWare 的 OES 许可服务管理指南》(`nlsadmin.pdf`) 第 13 页的“Novell 许可服务的工作原理”。
 
-您可以通过 http://www.novell.com/documentation/oes 或从 3077 课程 CD 上的 OES_Docs 目录访问该指南。
+您可以通过 http://www.novell.com/documentation/oes 或从 3077 课程 CD 上的 `OES_Docs` 目录访问该指南。
 
 ## OES Linux 许可
 
-与在 NetWare 平台上安装 OES 不同，在 Linux 平台上安装 OES 不需要许可/密钥文件对（*.nlf 和 *.nfk）。
+与在 NetWare 平台上安装 OES 不同，在 Linux 平台上安装 OES 不需要许可/密钥文件对（`*.nlf` 和 `*.nfk`）。
 
-然而，您在任何一个平台上安装 OES 时，都必须接受最终用户许可协议 (EULA)。您使用 OES 产品的权利限于 EULA 中规定的权利。
+然而，您在任何一个平台上安装 OES 时，都必须接受最终用户许可协议 (`EULA`)。您使用 OES 产品的权利限于 `EULA` 中规定的权利。
 
 > 违反 Novell 许可协议和知识产权的行为将受到法律的最严厉追究。
 
@@ -1531,19 +1333,19 @@ OES NetWare 安装中提供以下模式：
 
 如果您的迁移计划包括升级到 OES NetWare，您需要执行以下操作：
 
--   查看 OES NetWare 升级指南选项
--   检查系统要求
--   确定要安装的服务
--   验证升级到 OES NetWare 的权限
--   使用部署管理器（Deployment Manager）准备网络
--   准备计算机
--   启动原地服务器升级（In-Place Server Upgrade）
--   完成 OES NetWare 服务器升级
--   完成安装后任务
+- 查看 OES NetWare 升级指南选项
+- 检查系统要求
+- 确定要安装的服务
+- 验证升级到 OES NetWare 的权限
+- 使用部署管理器（Deployment Manager）准备网络
+- 准备计算机
+- 启动原地服务器升级（In-Place Server Upgrade）
+- 完成 OES NetWare 服务器升级
+- 完成安装后任务
 
-有关安装或升级到 NetWare 的更多细节，请参阅《NetWare Novell Open Enterprise Server 安装指南》(install-nw.pdf)。
+有关安装或升级到 NetWare 的更多细节，请参阅《NetWare Novell Open Enterprise Server 安装指南》(`install-nw.pdf`)。
 
-您可以通过 http://www.novell.com/documentation/oes 或从 3077 课程 CD 上的 OES_Docs 目录访问该指南。
+您可以通过 http://www.novell.com/documentation/oes 或从 3077 课程 CD 上的 `OES_Docs` 目录访问该指南。
 
 ## 检查 OES NetWare 升级指南选项
 
@@ -1555,25 +1357,21 @@ Novell 不再区分 NetWare 6.5 支持包安装和 OES NetWare 安装。NetWare 
 
 当您安装或升级到 NetWare 的 OES SP2 时，有以下更新后的产品供您安装：
 
--   Novell iManager 2.5。此 iManager 的跨平台版本允许您同时管理 OES NetWare 和 OES Linux 服务器。2.5 版本还包含了增强的性能和一个不再管理 Virtual Office 1.0 的新管理界面。记住，iManager 取决于安装或升级的 Apache2 Web 服务器和 Tomcat 4 Servlet 容器。有关自 2.0.2 版本之后的其他更改，请参阅《Novell iManager 2.5 管理指南》(imanager_admin_25.pdf) 第 7 页的“2.5 版本的新特性”。您可以通过 http://www.novell.com/documentation/oes 或从 3077 课程 CD  OES_Docs 目录访问该指南。
-
--   Novell QuickFinder™ Server 4.2（取代 NetWare Search Server）。QuickFinder 是一个 Web 和文件搜索引擎，包含了多项新功能和增强。
+- Novell iManager 2.5。此 iManager 的跨平台版本允许您同时管理 OES NetWare 和 OES Linux 服务器。2.5 版本还包含了增强的性能和一个不再管理 Virtual Office 1.0 的新管理界面。记住，iManager 取决于安装或升级的 Apache2 Web 服务器和 Tomcat 4 Servlet 容器。有关自 2.0.2 版本之后的其他更改，请参阅《Novell iManager 2.5 管理指南》(`imanager_admin_25.pdf`) 第 7 页的“2.5 版本的新特性”。您可以通过 http://www.novell.com/documentation/oes 或从 3077 课程 CD `OES_Docs` 目录访问该指南。
+- Novell QuickFinder™ Server 4.2（取代 NetWare Search Server）。QuickFinder 是一个 Web 和文件搜索引擎，包含了多项新功能和增强。
 
 # 评估并升级到 Novell Open Server
 
 如果您在现有的 Search Server 上安装 QuickFinder Server，QuickFinder 会识别旧安装并迁移配置。然而，在进行搜索之前，您必须重新生成旧索引。
 
-更多细节，请参阅《Novell QuickFinder Server 4.2 管理指南》(qfadmin.pdf)。
+更多细节，请参阅《Novell QuickFinder Server 4.2 管理指南》(`qfadmin.pdf`)。
 
-您可以通过 http://www.novell.com/documentation/oes 或从 3077 课程 CD 上的 OES_Docs 目录访问该指南。
+您可以通过 http://www.novell.com/documentation/oes 或从 3077 课程 CD 上的 `OES_Docs` 目录访问该指南。
 
--   Virtual Office。OES SP2 不包含 Virtual Office。升级到 OES SP2 的现有 Virtual Office 安装将继续运行。如果您正在创建新服务器并安装 Virtual Office，请使用 OES SP1 安装；然后更新服务器到 OES SP2。OES SP1 CD 可从 Novell 支持网站 http://support.novell.com/tools/csp/oes 获取。在 OES SP1 中，Virtual Office 的管理界面从 iManager 中移除并整合到了 Virtual Office 中。
-
--   iManager 2.5。如果您想从 iManager 2.0.2 升级到 2.5，需要使用 NetWare 6.5 SP5 叠加 CD。在从 NetWare 5.1 或 6.0 升级之前，您应该备份任何自定义的服务器配置文件。升级后可以恢复。您还应注意 OES NetWare 中的以下组件已移除，不再可以选择安装：
-
--   Novell Nterprise™ Branch Office™ Rsync Server。NBO Branch Office - Central Office Server 的模式安装已移除。您可以升级现有的 NBO Central Office Server，但无法安装新的。
-
--   Novell Nsure® UDDI Server。在之前的 NetWare 6.5 中，此组件与 exND™ J2EE Web 服务器、Apache/Tomcat 服务器以及 Novell Nsure Audit Starter Pack 模式一起安装。仅删除了 UDDI Server 组件，其余三个模式可用。除非文档另有说明，NetWare 6.5 的所有可用产品和功能在 OES NetWare 中继续可用。
+- Virtual Office。OES SP2 不包含 Virtual Office。升级到 OES SP2 的现有 Virtual Office 安装将继续运行。如果您正在创建新服务器并安装 Virtual Office，请使用 OES SP1 安装；然后更新服务器到 OES SP2。OES SP1 CD 可从 Novell 支持网站 http://support.novell.com/tools/csp/oes 获取。在 OES SP1 中，Virtual Office 的管理界面从 iManager 中移除并整合到了 Virtual Office 中。
+- iManager 2.5。如果您想从 iManager 2.0.2 升级到 2.5，需要使用 NetWare 6.5 SP5 叠加 CD。在从 NetWare 5.1 或 6.0 升级之前，您应该备份任何自定义的服务器配置文件。升级后可以恢复。您还应注意 OES NetWare 中的以下组件已移除，不再可以选择安装：
+  - Novell Nterprise™ Branch Office™ Rsync Server。NBO Branch Office - Central Office Server 的模式安装已移除。您可以升级现有的 NBO Central Office Server，但无法安装新的。
+  - Novell Nsure® UDDI Server。在之前的 NetWare 6.5 中，此组件与 exND™ J2EE Web 服务器、Apache/Tomcat 服务器以及 Novell Nsure Audit Starter Pack 模式一起安装。仅删除了 UDDI Server 组件，其余三个模式可用。除非文档另有说明，NetWare 6.5 的所有可用产品和功能在 OES NetWare 中继续可用。
 
 以下是 OES NetWare 的服务器部署选项：
 
@@ -1582,8 +1380,6 @@ Novell 不再区分 NetWare 6.5 支持包安装和 OES NetWare 安装。NetWare 
 | 在标准硬件上新安装 OES NetWare | 您有新的服务器级 PC 硬件，并想首次在其安装 OES NetWare。 |
 | OES NetWare 的无人安装 | 您想使用响应文件运行 OES NetWare 的无人或静默安装。 |
 | 将现有 NetWare 服务器原地升级到 OES NetWare | 您有现有的 NetWare 5 或更高版本的服务器，并想在本地升级到 OES NetWare。 |
-
-
 
 
 
@@ -1629,7 +1425,7 @@ Novell 不再区分 NetWare 6.5 支持包安装和 OES NetWare 安装。NetWare 
 虽然 OES NetWare 可以在最低限的硬件系统要求下运行（参见*OES NetWare 安装 Guide*），但为了获得性能，Novell 建议如下：
 
 - 带有双路 Pentium III、Pentium III Xeon、Pentium 4 或 Intel Xeon 700 MHz 或更高处理器的服务器级 PC
-- 1 GB 内存。某些 OES NetWare 安装选项（模式化部署）有特定的处理器和内存 要求。
+- 1 GB 内存。某些 OES NetWare 安装选项（模式化部署）有特定的处理器和内存要求。
 - 符合 VESA 1.2 标准的高分辨率显示适配器
 - 具有 1 GB 可用空间的启动分区
 
@@ -1656,6 +1452,7 @@ Novell 不再区分 NetWare 6.5 支持包安装和 OES NetWare 安装。NetWare 
 ## 确定要安装的服务
 
 作为 OES 交付的网络服务包括：
+
 - 目录服务
 - 文件服务
 - 打印服务
@@ -1668,6 +1465,7 @@ Novell 不再区分 NetWare 6.5 支持包安装和 OES NetWare 安装。NetWare 
 如果你想安装支持所有功能的 Web 服务器，建议在 OES 安装期间选择模式化安装。
 
 OES 中可用的模式化安装类型包括：
+
 - 自定义 NetWare
 - 基础 NetWare
 - 预迁移 NetWare
@@ -1688,11 +1486,11 @@ OES 中可用的模式化安装类型包括：
 
 有关每种模式安装的详细信息，请参阅《Novell Open Enterprise Server Guide》第 36 页。
 
-你可以访问 http://www.novell.com/documentation/oes
+你可以访问 `http://www.novell.com/documentation/oes`
 
 ## 验证升级到 OES NetWare 的权限
 
-要将 eDirectory 树中的第一个 NetWare 6.0 或更早服务器升级到 OES NetWare，你必须拥有 eDirectory 树的[Root]权限（通常是 Admin 用户）。
+要将 eDirectory 树中的第一个 NetWare 6.0 或更早服务器升级到 OES NetWare，你必须拥有 eDirectory 树的 `[Root]` 权限（通常是 Admin 用户）。
 
 如果你正在将现有 NDS/eDirectory 树中的第一个 NetWare 服务器升级到 OES NetWare，请确保先运行 Deployment Manager，以使树与 OES NetWare 的 eDirectory 版本兼容。这需要访问具有 Root 分区写权限的服务器。
 
@@ -1704,22 +1502,18 @@ OES 中可用的模式化安装类型包括：
 
 - 安装服务器容器的管理员权限
 - eDirectory 树安全对象的读取权限
-- 位于安全容器的组织 CA对象的 NDSPKI:私钥属性读取权限
-- 位于安全容器 KAP 对象的 W0 对象权限
+- 位于安全容器的组织 CA 对象的 `NDSPKI:私钥` 属性读取权限
+- 位于安全容器 KAP 对象的 `W0` 对象权限
 
 这些权限通常通过将所有管理员用户放入组或角色，然后将上述权限分配给组或角色来实现。
 
-你选择与 OES NetWare 一起安装的某些产品需要自身的架构扩展。目前，只有具有[Root]权限的管理员才能扩展 eDirectory 树的架构；子管理员没有足够的权限。
+你选择与 OES NetWare 一起安装的某些产品需要自身的架构扩展。目前，只有具有 `[Root]` 权限的管理员才能扩展 eDirectory 树的架构；子管理员没有足够的权限。
 
 绕过此限制的一种方法是让根管理员安装选择了所有产品的 OES NetWare 服务器。这将处理所有可能的服务器配置的架构扩展。子管理员随后可以安装或升级后续的 OES NetWare 服务器，而无需担心架构扩展。
 
 然而，扩展 OES 产品和服务架构的更简单的方法是在 Deployment Manager 中运行架构更新（Schema Update）任务。该任务将扩展为你 NetWare 和 Linux 平台选择的 OES 产品架构。
 
 默认情况下，安装在 eDirectory 分区中的前三个服务器将自动获得该分区的副本。
-
-
-
-
 
 例如，在向现有网络中引入 OES NetWare 服务器（通过新安装或升级旧服务器）之前，您应该运行 Novell 部署管理器（Deployment Manager），以确保您的网络——特别是 eDirectory——已已准备就绪。
 
@@ -1736,29 +1530,36 @@ OES 中可用的模式化安装类型包括：
   - 搜索 eDirectory/NDS 版本的树
   - 为新的 eDirectory 准备
   - 在 NetWare 4 服务器上生成 GUIDs
-  - 为升级准备服务器
-  - 为升级准备集群
-  - 更新证书颁发机构对象
-  - 为通用密码准备
-  - 为 CIFS/AFP 准备
-  - 验证 NICI 密钥
-  - Schema 更新
 
-- 安装/升级选项
-  - 安装 NetWare 6.5
-  - 自动化安装
-  - 升级到 NetWare 6.5
-  - 合并或迁移服务器
 
-- 安装后
-  - 创建附加卷
-  - 安装 NetWare 6.5 产品
+
+## 为升级准备
+
+- 为升级准备服务器
+- 为升级准备集群
+- 更新证书颁发机构对象
+- 为通用密码准备
+- 为 CIFS/AFP 准备
+- 验证 NICI 密钥
+- Schema 更新
+
+## 安装/升级选项
+
+- 安装 NetWare 6.5
+- 自动化安装
+- 升级到 NetWare 6.5
+- 合并或迁移服务器
+
+## 安装后
+
+- 创建附加卷
+- 安装 NetWare 6.5 产品
 
 评估并升级到 Novell Open Enterprise Server
 
-有关使用部署管理器的详细信息，请参阅《Novell Open Enterprise Server for NetWare 安装指南》(install-nw.pdf)第18页的“准备部署管理器”。
+有关使用部署管理器的详细信息，请参阅《Novell Open Enterprise Server for NetWare 安装指南》(`install-nw.pdf`)第18页的“准备部署管理器”。
 
-您可以从 3077 课程 CD 上的 OES_Docs 目录通过 http://www.novell.com/documentation/oes/ 访问该指南。
+您可以从 3077 课程 CD 上的 `OES_Docs` 目录通过 `http://www.novell.com/documentation/oes/` 访问该指南。
 
 # 准备计算机
 
@@ -1771,23 +1572,21 @@ OES 中可用的模式化安装类型包括：
 例如，如果服务器正在运行 ZENworks for Servers 2，则您在将服务器升级到 OES NetWare 之前必须安装 ZENworks for Servers 3。
 
 运行在待升级服务器上的任何应用程序、产品或服务（例如病毒扫描软件或备份软件）都应在开始升级之前关闭。
-
 - 验证有效的 DOS 分区。您的 NetWare 服务器使用 DOS 分区启动计算机并加载 NetWare。
 
 许多现有的 NetWare 启动文件将被新的 OES NetWare 文件替换。此外，DOS 分区的空间必须超过最小可用空间以容纳新的 OES NetWare 文件。
 
 如果 DOS 分区没有足够的可用空间，则无法升级服务器。您必须创建一个新的 DOS 分区并安装服务器。
 
-有关创建新 DOS 分区的详细信息，请参阅《Novell Open Enterprise Server for NetWare 安装指南》(install-nw.pdf)第29页的“创建和格式化引导分区”。
+有关创建新 DOS 分区的详细信息，请参阅《Novell Open Enterprise Server for NetWare 安装指南》(`install-nw.pdf`)第29页的“创建和格式化引导分区”。
 
-您可以从 http://www.novell.com/documentation/oes 或 3077 课程 CD 上的 OES_Docs 目录访问该指南。
+您可以从 `http://www.novell.com/documentation/oes` 或 3077 课程 CD 上的 `OES_Docs` 目录访问该指南。
 
 如果您的计算机不符合最低要求，可以尝试使用 NetWare 迁移向导将数据迁移到另一台计算机。
 
-有关 NetWare 迁移向导完整信息，请参阅《Novell Server Consolidation and Migration Toolkit 1.1 管理指南》(scmt1.pdf)。
+有关 NetWare 迁移向导完整信息，请参阅《Novell Server Consolidation and Migration Toolkit 1.1 管理指南》(`scmt1.pdf`)。
 
-您可以从 http://www.novell.com/documentation/oes 或 3077 课程 CD 上的 OES_Docs 目录访问该指南。
-
+您可以从 `http://www.novell.com/documentation/oes` 或 3077 课程 CD 上的 `OES_Docs` 目录访问该指南。
 - 找到 NetWare 许可证文件。如果您是从 NetWare 6.5 之前的版本升级到 OES NetWare，则必须从您的 Novell 授权经销商处购买新的许可证文件。
 
 确保许可证文件位于 NetWare 安装程序可以访问的位置，例如位于软磁盘上或服务器的 DOS 分区上。
@@ -1815,11 +1614,12 @@ NetWare 安装程序在升级期间会检测已安装的许可证，并提示您
 1. 从您想要升级的 NetWare 服务器上，插入 Novell OES NetWare 安装 CD 1（操作系统）。
 2. 在系统提示符处，验证 CD 是否已自动挂载为 NetWare卷。
 3. 如果 CD 未自动挂载，请执行以下操作之一：
-    * 在 NetWare 6.5 服务器上，在系统提示符处输入 `LOADVD.NSS`。
-    * 或
-     在 NetWare 6.0 服务器上，在系统提示符处输入 `LOAD9660.NSS`。
-    * 或
-     在 NetWare 5 服务器上，在系统提示符处输入 `LOADROM.NLM`。
+   * 在 NetWare 6.5 服务器上，在系统提示符处输入 `LOADVD.NSS`。
+   * 或
+   在 NetWare 6.0 服务器上，在系统提示符处输入 `LOAD9660.NSS`。
+   * 或
+   在 NetWare 5 服务器上，在系统提示符处输入 `LOADROM.NLM`。
+
 如果 CD 仍未挂载，请重启服务器。
 4. 从服务器 GUI，选择 Novell；然后选择 Install。
 5. 在已安装产品页面，选择 Add。
@@ -1835,7 +1635,6 @@ NetWare 安装程序在升级期间会检测已安装的许可证，并提示您
 如果发生失败状态，将显示运行的检查摘要，指示每个运行检查的成功、警告或失败状态。
 
 成功或警告状态允许继续升级。失败状态将停止升级，直到您解决问题。
-
 10. 要查看详细的健康检查日志，选择 View Log。
 11. 要继续升级，选择 Next。
 
@@ -1846,16 +1645,9 @@ NetWare 安装程序在升级期间会检测已安装的许可证，并提示您
 在 OES NetWare 服务器升级期间，会显示多个配置对话框。以下主题为主要对话框提供了指南：
 
 - 备份服务器文件
-
 - 组件
-
 - eDirectory 登录和摘要
-
 - Novell 模块身份验证服务 (NMAS)
-
-
-
-
 
 ### 备份服务器文件
 
@@ -1907,6 +1699,8 @@ NetWare 安装程序在升级期间会检测已安装的许可证，并提示您
 
 图 1-13
 
+
+
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_108_0.png)
 
 在提供的字段中输入你的名称和密码；然后选择“确定（OK）”。
@@ -1917,7 +1711,7 @@ NetWare 安装程序在升级期间会检测已安装的许可证，并提示您
 
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_109_0.png)
 
-验证 eDirectory 摘要页面上的信息是否准确；然后记录管理员密码和任何其他相关信息，并点击**下一步（Next）**。
+验证 eDirectory 摘要页面上的信息是否准确；然后记录管理员密码和任何其他相关信息，并点击`下一步（Next）`。
 
 ## Novell 模块身份服务 (NMAS)
 
@@ -1931,17 +1725,17 @@ Novell 模块身份服务页面允许你选择想要安装到 eDirectory 的登�
 
 当你选择一种登录方法时，“描述（Description）”框会出现该组件的描述。
 
-有关登录方法的更多信息，请参阅《Novell Modular Authentication Services (NMAS) 2.4 管理指南》(admin_nmas.pdf) 第 17 页的“管理登录和登录后方法及序列”。
+有关登录方法的更多信息，请参阅《Novell Modular Authentication Services (NMAS) 2.4 管理指南》(`admin_nmas.pdf`) 第 17 页的“管理登录和登录后方法及序列”。
 
-你可以通过 http://www.novell.com/documentation/oes 或从你 3077 课程 ID 光盘中的 OES_Docs 目录访问该指南。
+你可以通过 `http://www.novell.com/documentation/oes` 或从你 `3077` 课程 ID 光盘中的 `OES_Docs` 目录访问该指南。
 
-NDS 登录和挑战-响应（Challenge-Response）方法是默认安装的。如果你想安装 eDirectory 中的所有登录方法，请选择**全选（Select All）**。如果你想清除所有选择（两个默认方法外），请选择**清除选择（Select Clear）**。
+NDS 登录和挑战-响应（Challenge-Response）方法是默认安装的。如果你想安装 eDirectory 中的所有登录方法，请选择`全选（Select All）`。如果你想清除所有选择（两个默认方法外），请选择`清除选择（Select Clear）`。
 
 ## 完成安装后任务
 
 在安装或升级到 Novell OES NetWare 之后，你应该安装最新的软件更新。你还可以安装额外的产品或服务，并配置它们以便在新环境中运行。
 
-《NetWare Novell Open Enterprise 安装指南》(install-nw.pdf) 的第 4 章涵盖了以下等安装后任务：
+《NetWare Novell Open Enterprise 安装指南》(`install-nw.pdf`) 的第 4 章涵盖了以下等安装后任务：
 
 - 安装 NetWare
 - 更新 NSS 卷
@@ -1950,7 +1744,7 @@ NDS 登录和挑战-响应（Challenge-Response）方法是默认安装的。如
 - 安装额外产品
 - 部署 eDirectory 8.8
 
-你可以通过 http://www.novell.com/documentation/oes 访问指南，或从你 3077 课程光盘中的 OES_Docs 目录访问。
+你可以通过 `http://www.novell.com/documentation/oes` 访问指南，或从你 `3077` 课程光盘中的 `OES_Docs` 目录访问。
 
 > 我们将在课程中讨论适当的话题（如 NSS 卷）时，涵盖这些部分安装后任务。
 
@@ -1989,10 +1783,6 @@ NDS 登录和挑战-响应（Challenge-Response）方法是默认安装的。如
 
 在本节中，你将介绍用于从 KDE 桌面管理你的 OES Linux 服务器的一些基本工具和界面。
 
-
-
-
-
 ## 目标 1
 
 ## 从 KDE 桌面管理 OES Linux 服务器
@@ -2010,25 +1800,25 @@ KDE 是 Linux 中最常用的图形化桌面环境之一。该桌面环境在安
 
 ## 什么是 root 用户
 
-当你在 KDE 桌面上执行某些任务，以及在本课程中执行许多与系统和网络相关的任务时，你需要以 *root* 身份进行验证。这是超级用户的名称，即系统的管理员。
+当你在 KDE 桌面上执行某些任务，以及在本课程中执行许多与系统和网络相关的任务时，你需要以 `root` 身份进行验证。这是超级用户的名称，即系统的管理员。
 
-与普通用户不同（普通用户可能具有或不具有执行系统中某些操作的权限），root 拥有执行任何操作的无限权限：更改系统配置、安装程序以及设置新硬件。
+与普通用户不同（普通用户可能具有或不具有执行系统中某些操作的权限），`root` 拥有执行任何操作的无限权限：更改系统配置、安装程序以及设置新硬件。
 
-如果用户忘记密码或遇到其他系统问题，root 可以提供帮助。root 账户应仅用于系统管理、维护和修复。
+如果用户忘记密码或遇到其他系统问题，`root` 可以提供帮助。`root` 账户应仅用于系统管理、维护和修复。
 
-对于与系统管理、维护和修复*不*相关的任务，常规性地以 root 登录是非常危险的：一个错误就可能导致许多系统文件不可挽回的损失。
+对于与系统管理、维护和修复*不*相关的任务，常规性地以 `root` 登录是非常危险的：一个错误就可能导致许多系统文件不可挽回的损失。
 
 ## 如何登录
 
 当你的 OES Linux 服务器启动并准备好工作时，会弹出以下登录对话框：
 
-图 2-1
+### 图 2-1
 
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_119_0.png)
 
-输入用户名（如 admin）和密码后，会出现以下 KDE 桌面环境，并带有欢迎对话框：
+输入用户名（如 `admin`）和密码后，会出现以下 KDE 桌面环境，并带有欢迎对话框：
 
-图 2-2
+### 图 2-2
 
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_119_1.png)
 
@@ -2036,7 +1826,7 @@ KDE 是 Linux 中最常用的图形化桌面环境之一。该桌面环境在安
 
 你可以阅读这些信息，也可以通过选择窗口右上角的 X 按钮关闭对话框：
 
-图 2-3
+### 图 2-3
 
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_120_0.png)
 
@@ -2044,7 +1834,7 @@ KDE 是 Linux 中最常用的图形化桌面环境之一。该桌面环境在安
 
 当你准备好注销系统时，点击底部面板上的第一个（左侧）图标打开 KDE 菜单：
 
-图 2-4
+### 图 2-4
 
 | 最常用的应用程序 |
 | :--- |
@@ -2073,25 +1863,25 @@ KDE 是 Linux 中最常用的图形化桌面环境之一。该桌面环境在安
 
 ## 集成 Novell Linux 企业服务器
 
-在 KDE 菜单底部，选择**注销**项。你也可以右键点击桌面背景，并在弹出菜单中选择相同的选项。
+在 KDE 菜单底部，选择`注销`项。你也可以右键点击桌面背景，并在弹出菜单中选择相同的选项。
 
-选择注销后，会出现一个确认对话框。如果你再次选择**注销**，你将注销，登录屏幕将重新出现，允许你或他人登录。
+选择注销后，会出现一个确认对话框。如果你再次选择`注销`，你将注销，登录屏幕将重新出现，允许你或他人登录。
 
 ## 如何关机和重启 Linux 系统
 
-如果你处于登录界面，可以通过打开**菜单**并选择以下选项之一来关闭或重启计算机：
+如果你处于登录界面，可以通过打开`菜单`并选择以下选项之一来关闭或重启计算机：
 
-- **会话类型**。你可以选择 KDE 以外的窗口管理器。在本课程中，我们仅涵盖 KDE（默认的窗口管理器）。
+- `会话类型`。你可以选择 KDE 以外的窗口管理器。在本课程中，我们仅涵盖 KDE（默认的窗口管理器）。
+- `重启 X 服务器`。你可以重启负责图形用户界面的程序。记住，你可以在没有图形用户界面的情况下执行许多管理任务。
+- `关机`。如果你选择此选项，系统会询问你是想关机还是重启计算机：
 
-- **重启 X 服务器**。你可以重启负责图形用户界面的程序。记住，你可以在没有图形用户界面的情况下执行许多管理任务。
+### 图 2-5
 
-- **关机**。如果你选择此选项，系统会询问你是想关机还是重启计算机：
 
-图 2-5
 
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_121_0.png)
 
-出于安全考虑，你必须输入 root 密码，因为只有 root 允许重启或关闭计算机。
+出于安全考虑，你必须输入 `root` 密码，因为只有 `root` 允许重启或关闭计算机。
 
 如果你选择“关闭计算机”并点击确定，Linux 将关闭所有正在运行的（系统）程序。
 
@@ -2108,17 +1898,17 @@ KDE 是 Linux 中最常用的图形化桌面环境之一。该桌面环境在安
 KDE 桌面环境包含以下组件：
 
 - 桌面
-- KDE 控制面板 (Kicker)
+- KDE 控制面板 (`Kicker`)
 - KDE 菜单
 - 虚拟桌面
 
-## 桌面
+### 桌面
 
 在桌面上，你只能看到少数图标。你可以通过这些图标启动应用程序。
 
 你可以通过拖动来移动图标。
 
-### KDE 控制面板 (Kicker)
+### KDE 控制面板 (`Kicker`)
 
 通过点击桌面底部的 KDE 控制面板（也称为 *Kicker*）来操作桌面：
 
@@ -2164,11 +1954,7 @@ KDE 菜单中的子菜单由一个小箭头标记。将光标悬停在菜单项�
 
 每个虚拟桌面都可以托管无限数量的应用程序。使用这些虚拟桌面，你可以轻松地组织你的工作。
 
-
-
-
-
-# Konqueror 窗口分为三个部分，具有以下特征：
+## Konqueror 窗口分为三个部分，具有以下特征：
 
 图 2-9
 
@@ -2180,13 +1966,13 @@ KDE 菜单中的子菜单由一个小箭头标记。将光标悬停在菜单项�
 
 一旦你在左窗口中选择了一个目录，该目录的内容（文件视图）将显示在右窗口中。
 
-你可以使用多种方法在文件系统中导航。工具栏左侧的三个箭头代表最简单的方法。当前位置可以在 URL 面板的文本窗口中看到（在上面的示例中为 /home/tux/）。
+你可以使用多种方法在文件系统中导航。工具栏左侧的三个箭头代表最简单的方法。当前位置可以在 URL 面板的文本窗口中看到（在上面的示例中为 `/home/tux/`）。
 
-如果你选择指向向上的箭头，将从当前目录移动到上一级目录（从 /home/tux/ 移动到 /home/）。指向左侧的箭头将你带回之前访问的位置。你可以使用右箭头前进。
+如果你选择指向向上的箭头，将从当前目录移动到上一级目录（从 `/home/tux/` 移动到 `/home/`）。指向左侧的箭头将你带回之前访问的位置。你可以使用右箭头前进。
 
 你可以通过在文件视图中选择目录来打开它并查看其内容。如果你选择一个普通文件，KDE 会尝试打开它或启动一个程序来打开它。
 
-点击工具栏中的房屋图标将直接带你进入自己的家目录（例如 /home/tux/）。
+点击工具栏中的房屋图标将直接带你进入自己的家目录（例如 `/home/tux/`）。
 
 第二种导航方法由导航区域提供。如果你在导航区域中选择一个目录，其内容将显示在文件视图中。
 
@@ -2198,7 +1984,7 @@ KDE 菜单中的子菜单由一个小箭头标记。将光标悬停在菜单项�
 
 ## 练习 2-1 从 KDE 桌面管理你的 OES Linux 服务器
 
-在本次练习中，你将学习一些可以在 KDE 桌面执行的  OES Linux 服务器管理任务：
+在本次练习中，你将学习一些可以在 KDE 桌面执行的 OES Linux 服务器管理任务：
 
 - 登录和注销 KDE 桌面
 - 使用 Konqueror 文件管理器
@@ -2211,31 +1997,31 @@ KDE 菜单中的子菜单由一个小箭头标记。将光标悬停在菜单项�
 
 ## 使用 YaST 执行管理任务
 
-YaST 是一种基于 Linux 的图形化实用程序，它极大简化了 SUSE LINUX Enterprise Server 9 (SLES 9) 服务器组件的安装和配置。YaST 的名称代表 Setup Tool（设置工具）。
+`YaST` 是一种基于 Linux 的图形化实用程序，它极大简化了 SUSE LINUX Enterprise Server 9 (`SLES 9`) 服务器组件的安装和配置。`YaST` 的名称代表 Setup Tool（设置工具）。
 
-Novell 将 OES Linux 安装集成到 SUSE YaST 程序中。
+Novell 将 OES Linux 安装集成到 SUSE `YaST` 程序中。
 
-要了解 YaST 如何与 OES Linux 工作，你需要了解以下内容：
+要了解 `YaST` 如何与 OES Linux 工作，你需要了解以下内容：
 
-- YaST 与 OES Linux 安装
-- YaST 与 OES Linux 配置
+- `YaST` 与 OES Linux 安装
+- `YaST` 与 OES Linux 配置
 - 向 OES Linux 中添加 Novell OES 服务
 - SuSeconfig 的作用
 
 ### YaST 与 OES Linux 安装
 
-当你安装 OES Linux 时，YaST 实用程序会在过程的第二步启动。YaST 会引导你逐步完成安装，与 NetWare 安装的 GUI 部分非常相似。
+当你安装 OES Linux 时，`YaST` 实用程序会在过程的第二步启动。`YaST` 会引导你逐步完成安装，与 NetWare 安装的 GUI 部分非常相似。
 
-Novell OES 安装使用 YaST 让你同时安装 SLES 9 和 OES 服务。也可以先安装 SLES 9 组件，以后使用 YaST 安装 OES 服务。
+Novell OES 安装使用 `YaST` 让你同时安装 `SLES 9` 和 OES 服务。也可以先安装 `SLES 9` 组件，以后使用 `YaST` 安装 OES 服务。
 
 要了解更多关于安装选项，你需要知道以下内容：
 
 - OES Linux 安装选项
-- SLES 9 仅限安装选项
+- `SLES 9` 仅限安装选项
 
-## OES Linux 安装选项
+#### OES Linux 安装选项
 
-YaST 安装中的软件选择部分显示如下：
+`YaST` 安装中的软件选择部分显示如下：
 
 图 2-10
 
@@ -2245,7 +2031,7 @@ YaST 安装中的软件选择部分显示如下：
 
 - Novell Cluster Services
 - Novell iFolder 2.x
-- Novell Storage Services (NSS)
+- Novell Storage Services (`NSS`)
 
 如果你需要这三个服务中的任何一个，Novell 建议在初始 OES 安装完成后安装它们。
 
@@ -2257,25 +2043,27 @@ YaST 安装中的软件选择部分显示如下：
 - Novell Print Server
 - Novell Management Server
 
-你也可以使用 YaST 将现有的 SLES 9 服务器升级为 OES Linux。
+你也可以使用 `YaST` 将现有的 `SLES 9` 服务器升级为 OES Linux。
 
 有关每个 Novell OES 安装选项的详情，请参阅《Novell Open Enterprise Server Installation Guide for Linux》第 10 页的“Decide What Type of Server You Are Installing”。
 
-你可以通过 http://www.novell.com/documentation/oes 或你 3077 课程 CD 中的 OES_Docs 目录访问该指南。
+你可以通过 `http://www.novell.com/documentation/oes` 或你 3077 课程 CD 中的 `OES_Docs` 目录访问该指南。
 
 ### SLES 9 仅限安装选项
 
-YaST 软件选择列表中的前四项是 SLES 9 仅限选项。如果你选择其中一个选项，你将不会安装任何 Novell 组件。
+`YaST` 软件选择列表中的前四项是 `SLES 9` 仅限选项。如果你选择其中一个选项，你将不会安装任何 Novell 组件。
 
 有关每个 Novell OES 安装选项的详情，请参阅《Novell Open Enterprise Server Installation Guide for Linux》第 10 页的“Decide What Type of Server You Are Installing”。
 
-你可以通过 http://www.novell.com/documentation/oes 或你 3077 课程 CD 中的 OES_Docs 目录访问该指南。
+你可以通过 `http://www.novell.com/documentation/oes` 或你 3077 课程 CD 中的 `OES_Docs` 目录访问该指南。
 
 ### YaST 与 OES Linux 安装
 
-当你安装 OES Linux 时，YaST 实用程序会在过程的第二步启动。YaST 会引导你逐步完成安装，与 NetWare 安装的 GUI 部分非常相似。
+当你安装 OES Linux 时，`YaST` 实用程序会在过程的第二步启动。`YaST` 会引导你逐步完成安装，与 NetWare 安装的 GUI 部分非常相似。
 
-Novell OES 安装使用 YaST 让你同时安装 SLES 9 和 OES 服务。也可以先安装 SLES 9 组件，以后使用 YaST 安装 OES 服务。
+Novell OES 安装使用 `YaST` 让你同时安装 `SLES 9` 和 OES 服务。也可以先安装 `SLES 9` 组件，以后使用 `YaST` 安装 OES 服务。
+
+
 
 ### YaST 与 OES Linux 配置
 
@@ -2301,10 +2089,6 @@ Novell 将 OES Linux 安装集成到 SUSE YaST 程序中。
 - Novell Management Server
 
 ### SuSeconfig 的作用
-
-
-
-
 
 例如，如果 `SMTPD_LISTEN_REMOTE` 设置为“yes”，则 `/etc/postfix/main.c` 中的变量 `INET_INTERFACES` 将由脚本 `/sbin/SuSeConfig` 以及 `/sbin/conf.d` 下的脚本设置为“all”。
 
@@ -2381,7 +2165,7 @@ dna5 login:
 
 从这里您可以输入用户名和密码。系统将启动一个默认 shell（参见 2-26 页的“OES 服务器上的 Bash Shell”），并带有命令行提示符（在 Linux 中称为 shell prompt）。
 
-要退出 shell 并返回登录，输入 exit。
+要退出 shell 并返回登录，输入 `exit`。
 
 除了使用虚拟控制台外，您还可以从 KDE 桌面 Kicker 中选择以下图标来启动终端仿真器（称为 Konsole）：
 
@@ -2407,15 +2191,15 @@ dna5 login:
 
 UNIX 族操作系统有多种 shell，其中包括：
 
-- Bourne shell (sh)
-- Bourne Again Shell (bash)
-- Korn shell (ksh)
-- C Shell (csh)
-- TC Shell (tcsh)
+- Bourne shell (`sh`)
+- Bourne Again Shell (`bash`)
+- Korn shell (`ksh`)
+- C Shell (`csh`)
+- TC Shell (`tcsh`)
 
-Linux 的默认 shell 通常是 bash。
+Linux 的默认 shell 通常是 `bash`。
 
-要退出 shell 并返回登录，输入 exit。
+要退出 shell 并返回登录，输入 `exit`。
 
 ### 如何启动和退出 Shell
 
@@ -2423,9 +2207,9 @@ Linux 的默认 shell 通常是 bash。
 
 - 登录虚拟控制台
 - 打开像 Konsole 这样的终端仿真器
-- 使用 su - 命令切换到 root
+- 使用 `su -` 命令切换到 root
 
-要离开 shell，输入命令 **exit**。
+要离开 shell，输入命令 `exit`。
 
 ### 命令和文件名补全
 
@@ -2435,52 +2219,57 @@ shell 支持命令和文件名的补全功能。只需输入命令的前几个�
 
 ### 历史功能
 
-Bash 将您输入的命令存储在一个文件中，以便您方便访问。您可以通过输入命令 **history** 来显示文件内容。
+Bash 将您输入的命令存储在一个文件中，以便您方便访问。您可以通过输入命令 `history` 来显示文件内容。
 
 可以使用方向键显示历史缓存中存储的命令（一次一个）。向上箭头显示上一个命令；向下箭头显示下一个命令。找到所需的命令后，根据需要对其进行编辑；然后按 **Enter** 执行。
-
-
-
-
 
 然而，某些文件的内容非常详尽，无法一次性在屏幕上显示。在这种情况下，你可以使用管道（pipe）将输出重定向到另一个命令，通过它可以控制显示的文本。
 
 例如，`more` 命令和 `less` 命令允许你在文本显示在屏幕上时进行翻页和滚动：
 
+```
 # cat httpd.conf | more
+```
 
 在使用 `more` 或 `less` 命令时，你可以继续滚动（使用空格键 Spacebar），直到到达文件末尾并返回到 shell 提示符。
 
 你也可以随时通过输入 `q` 退出显示并返回到 shell 提示符。
 
-# 帮助页 (Man Pages)
+### 帮助页 (Man Pages)
 
 获取 Bash shell 在线帮助的最重要命令是 `man`（manual 或 man page 的缩写）。
 
+```
 # 以下是命令 `man` 手册页的第一页（通过输入 `man man` 显示）：
 
 man(1) Manual pager utils man(1)
 
 名称
+
 man - 在线参考手册的接口
+```
 
-用法摘要
-man [-c|-w][-tT device] [-adhu7V] [-m system[...]] [-L
-locale] [-p string] [-M path] [-P pager] [-r prompt] [-S
-list] [-e extension] [section] page ...
-man [-7] [-tT device] [-p string] [-P pager] [-r
-prompt file ...
-man -k [apropos options] regex ...
-man -f [whatis options] page ...
 
-描述
-man 是系统的手册页分页器。传递给 `man` 的每个页参数通常是程序、实用程序或函数的名称。然后会查找并显示与这些参数相关联的手册页。如果提供了章节（section），它将引导 `man` 仅在该手册章节中查找。默认操作是在所有可用章节中搜索，遵循预定义的顺序，并仅显示找到的第一页，即使该页在多个章节中都存在。
+
+# 用法摘要
+
+`man [-c|-w][-tT device] [-adhu7V] [-m system[...]] [-L locale] [-p string] [-M path] [-P pager] [-r prompt] [-S list] [-e extension] [section] page ...`
+
+`man [-7] [-tT device] [-p string] [-P pager] [-r prompt file ...`
+
+`man -k [apropos options] regex ...`
+
+`man -f [whatis options] page ...`
+
+## 描述
+
+`man` 是系统的手册页分页器。传递给 `man` 的每个页参数通常是程序、实用程序或函数的名称。然后会查找并显示与这些参数相关联的手册页。如果提供了章节 `section`，它将引导 `man` 仅在该手册章节中查找。默认操作是在所有可用章节中搜索，遵循预定义的顺序，并仅显示找到的第一页，即使该页在多个章节中都存在。
 
 手册页按以下章节组织：
 
 | 表格 2-2 | 章节 | 内容 |
 |---|---|---|
-| 1 | | 可执行程序和 shell 命令 (commands) |
+| 1 | | 可执行程序和 shell 命令 `commands` |
 | 2 | | 系统调用 |
 | 3 | | 函数和库例程 |
 | 4 | | 设备文件 |
@@ -2495,11 +2284,15 @@ man 是系统的手册页分页器。传递给 `man` 的每个页参数通常是
 
 例如，输入以下内容显示关于 `more` 命令的一般信息：
 
+```
 man 1 more
+```
 
 输入以下内容显示关于命令 `cronab` 配置文件的信息（它也名为 `cronab`）：
 
+```
 man 5 cronab
+```
 
 如果你在没有章节编号的情况下输入 `man` 命令（例如 `man more`），默认将显示第 1 手册页。
 
@@ -2513,42 +2306,38 @@ man 5 cronab
 
 ## vi 编辑器
 
-文本编辑器仍用于许多系统管理任务以及编程。在 Linux 中，vi 脱颖而出，它提供了舒适的编辑功能，并且比许多支持鼠标的编辑器更符合人体工程学。
+文本编辑器仍用于许多系统管理任务以及编程。在 Linux 中，`vi` 脱颖而出，它提供了舒适的编辑功能，并且比许多支持鼠标的编辑器更符合人体工程学。
 
-vi 编辑器有三种操作模式：插入模式、命令模式和扩展模式。在 vi 中，键盘键具有不同的功能，取决于当前模式。
+`vi` 编辑器有三种操作模式：插入模式、命令模式和扩展模式。在 `vi` 中，键盘键具有不同的功能，取决于当前模式。
 
-启动时，vi 通常被设置为命令模式。要学习的第一点是在模式之间切换：
+启动时，`vi` 通常被设置为命令模式。要学习的第一点是在模式之间切换：
 
 - **从命令模式到插入模式。** 要从命令模式切换到插入模式，请从以下选项选择：
-  - 按 **A** 追加 (append)。
-  - 按 **I** 插入 (insert)。
-  - 按 **O** 在当前模式下另起一行。
-
-- **从插入模式到命令模式。** 按 `Esc` 键从插入模式切换到命令模式。vi 编辑器无法在插入模式下终止。
-
-- **从命令模式到扩展模式。** 要从命令模式切换到扩展模式，请按冒号（:`）键。扩展模式（或 ex 模式）类似于一个独立的行行编辑器，可用于各种简单和复杂的任务。
-
+  - 按 `A` 追加 `append`。
+  - 按 `I` 插入 `insert`。
+  - 按 `O` 在当前模式下另起一行。
+- **从插入模式到命令模式。** 按 `Esc` 键从插入模式切换到命令模式。`vi` 编辑器无法在插入模式下终止。
+- **从命令模式到扩展模式。** 要从命令模式切换到扩展模式，请按冒号 `:` 键。扩展模式（或 `ex` 模式）类似于一个独立的行行编辑器，可用于各种简单和复杂的任务。
 - **从扩展模式到命令模式。** 在扩展模式下执行命令后，编辑器会自动返回命令模式。如果你决定不在扩展模式下执行任何命令，请删除冒号。编辑器将返回命令模式。
 
 在不先切换到命令模式的情况下，无法从插入模式直接切换到扩展模式。
 
-与其他编辑器一样，vi 有自己的程序终止程序。你**不能**在插入模式下终止 vi。首先，按 `Esc` 退出插入模式。
+与其他编辑器一样，`vi` 有自己的程序终止程序。你**不能**在插入模式下终止 `vi`。首先，按 `Esc` 退出插入模式。
 
 随后，你有两个选择：
 
-- 1. **不保存退出。** 要不保存更改而终止编辑器，请执行以下操作：
-  - a. 按冒号（:`）键。vi 编辑器窗口底部会出现冒号（:`）。你现在处于扩展模式，此时你按的任何键将出现在冒号右侧。
-  - b. 输入以下内容：**q!** 输入 `q` 表示你想退出程序。感叹号 (!) 会导致 vi 忽略对当前打开文件的任何更改。
+1. **不保存退出。** 要不保存更改而终止编辑器，请执行以下操作：
+   - a. 按冒号 `:` 键。`vi` 编辑器窗口底部会出现冒号 `:`。你现在处于扩展模式，此时你按的任何键将出现在冒号右侧。
+   - b. 输入以下内容：`q!` 输入 `q` 表示你想退出程序。感叹号 `!` 会导致 `vi` 忽略对当前打开文件的任何更改。
+2. **保存并退出。** 你有几种选项可以保存更改并终止编辑器。
+   - 在命令模式下，输入以下内容：`zz`
+   - 在命令模式下，输入以下内容：`wq`
 
-- 2. **保存并退出。** 你有几种选项可以保存更改并终止编辑器。
-  - 在命令模式下，输入以下内容：**zz**
-  - 在命令模式下，输入以下内容：**wq**
+在命令模式下，输入冒号 `:` 进入扩展模式。`w` 表示写入，`q` 表示退出。
 
-在命令模式下，输入冒号（:`）进入扩展模式。`w` 表示写入，`q` 表示退出。
+### Ctrl 键 `Ctrl`
 
-### Ctrl 键 (Ctrl)
-
-在 vi 中，Ctrl 键可以执行某些命令。以下是一些常用的 Ctrl 组合键：
+在 `vi` 中，`Ctrl` 键可以执行某些命令。以下是一些常用的 `Ctrl` 组合键：
 
 | 组合键 | 功能 |
 |---|---|
@@ -2567,20 +2356,17 @@ vi 编辑器有三种操作模式：插入模式、命令模式和扩展模式�
 | Ctrl + w | 向上滚动 |
 | Ctrl + s | 向下滚动 |
 
-
-
-
-- head. 此命令将文件的前 10 行打印到屏幕上。
+- `head`. 此命令将文件的前 10 行打印到屏幕上。
 
 ## Bash 命令网络参考
 
-除了使用帮助页面（man pages）获取每个 Bash 命令的信息外，以下是互联网上推荐的 Bash 命令参考资料：
+除了使用帮助页面 `man pages` 获取每个 Bash 命令的信息外，以下是互联网上推荐的 Bash 命令参考资料：
 
-- http://www.onlamp.com/linux/cmd/
+- `http://www.onlamp.com/linux/cmd/`
 
 该页面作为 O'Reilly Network 的一部分，提供了数百个 Linux 命令的字母顺序列表。选择一个命令以查看有关该命令的信息。
 
-- http://www.ss64.com/bash/
+- `http://www.ss64.com/bash/`
 
 Linux Bash 命令行的 A-Z 索引，每个命令都包含简要描述。您可以选择一个命令来显示更多信息。
 
@@ -2588,87 +2374,89 @@ Linux Bash 命令行的 A-Z 索引，每个命令都包含简要描述。您可�
 
 如果您是正在将服务器和业务迁移到 OES Linux 的 NetWare 管理员，您可能希望为您常用的 NetWare 命令寻找 Linux 对应项。
 
-此目标旨在帮助您理解 NetWare 和 Linux 之间的一些相似与差异，并通过提供常用 NetWare 命令及其在 OES Linux 中等效命令的表格，帮助您开始使用 OES Linux。对于某些 NetWare 命令，OES Linux 命令行没有提供替代方案，而是通过 OES 管理工具（如 iManager、Novell Remote Manager (NRM) 或 YaST）的功能提供。
+此目标旨在帮助您理解 NetWare 和 Linux 之间的一些相似与差异，并通过提供常用 NetWare 命令及其在 OES Linux 中等效命令的表格，帮助您开始使用 OES Linux。对于某些 NetWare 命令，OES Linux 命令行没有提供替代方案，而是通过 OES 管理工具（如 `iManager`、`Novell Remote Manager (NRM)` 或 `YaST`）的功能提供。
 
 ## 集成用于 Linux 的 Novell Open Enterprise Server
 
-要获取常用 NetWare 命令的完整 Linux 对应列表，请参阅《Novell OES SP2 Planning and Implementation Guide》(implgde.pdf) 第 239 页的“Appendix A: Linux Tips for NetWare Administrators”。
+要获取常用 NetWare 命令的完整 Linux 对应列表，请参阅《Novell OES SP2 Planning and Implementation Guide》`implgde.pdf` 第 239 页的“Appendix A: Linux Tips for NetWare Administrators”。
 
-您可以通过 http://www.novell.com/documentation/oes 或从 3077 课程 CD 中的 OES_Docs 目录访问该指南。
+您可以通过 `http://www.novell.com/documentation/oes` 或从 3077 课程 CD 中的 `OES_Docs` 目录访问该指南。
 
-以下列了一些常用的 NetWare 命令（NW 命令）及其 OES Linux 对应命令（LX 命令）：
+以下列了一些常用的 NetWare 命令 `NW` 命令及其 OES Linux 对应命令 `LX` 命令：
 
 | NW 命令 | 用途 | LX 命令 | Note |
 | :--- | :--- | :--- | :--- |
-| BIND | 将通信协议链接到网卡及其 LAN 驱动程序。 | ethtool mii-tool ifconfig | 更多信息，请参见与每个命令相关的帮助页面。 |
-| CLS | 清除控制屏幕并将控制台提示符移到屏幕顶部。 | clear | 更多信息，请参见 clear 帮助页面。 |
-| CONFIG | 您可以查看以下内容：NetWare 服务器名称 | hostname cat /etc/hostname | 更多信息，请参见与 hostname 和 cat 命令相关的帮助页面。服务器名称默认也会出现在 shell 提示符中。 |
+| BIND | 将通信协议链接到网卡及其 LAN 驱动程序。 | `ethtool` `mii-tool` `ifconfig` | 更多信息，请参见与每个命令相关的帮助页面。 |
+| CLS | 清除控制屏幕并将控制台提示符移到屏幕顶部。 | `clear` | 更多信息，请参见 `clear` 帮助页面。 |
+| CONFIG | 您可以查看以下内容：NetWare 服务器名称 | `hostname` `cat /etc/hostname` | 更多信息，请参见与 `hostname` 和 `cat` 命令相关的帮助页面。服务器名称默认也会出现在 shell 提示符中。 |
 | CONFIG (续) | 内部网络编号（服务器 ID） | | Linux 上没有内部网络编号。 |
-| | 服务器运行时间 | uptime | 更多信息，请参见 uptime 帮助页面。 |
-| | 已加载的 LAN 驱动程序 | ismod ifconfig | 列出加载到内存中的模块，但不包括模块版本。ifconfig 显示网卡配置。 |
-| | 驱动版本号 | modinfo dmesg /var/log/boot.msg | | 更多信息，请参见与每个命令相关的帮助页面。 |
-| | 硬件设置 | ismod ifconfig | 列出加载到内存中的模块，但不包括版本。ifconfig 显示网卡配置。 |
-| | 节点（站）地址 | ifconfig | 未来，ip 将替换此命令。 |
-| | 布线方案的外部网络编号 | | | |
-| CONFIG (续) | 板卡名称 | yast | 此信息可以在 YaST > Hardware > Hardware Information 中找到。如需获取 YaST 帮助，请在 shell 提示符处输入 -h |
-| | 帧类型 | | | |
-| | 每个网卡的网络协议 | | | |
-| | 服务器的 eDirectory 树和 bindery 上文 | ndsstat | | |
-| Dismount | 使用户无法访问该卷。 | umount | mount 让您挂载 Linux 卷挂载点。对于 NCP 卷，请使用 ncpcon。 |
-| Down | 执行有序机。 | init 0 shutdown now | 更多信息，请参见相应的帮助页面。 |
+| | 服务器运行时间 | `uptime` | 更多信息，请参见 `uptime` 帮助页面。 |
+| | 已加载的 LAN 驱动程序 | `ismod` `ifconfig` | 列出加载到内存中的模块，但不包括模块版本。`ifconfig` 显示网卡配置。 |
+| | 驱动版本号 | `modinfo` `dmesg` `/var/log/boot.msg` | | 更多信息，请参见与每个命令相关的帮助页面。 |
+| | 硬件设置 | `ismod` `ifconfig` | 列出加载到内存中的模块，但不包括版本。`ifconfig` 显示网卡配置。 |
+
+
+
+### 节点信息
+
+| 节点（站）地址 | `ifconfig` | 未来，`ip` 将替换此命令。 |
+| 布线方案的外部网络编号 | | |
+| CONFIG (续) | 板卡名称 | `yast` | 此信息可以在 YaST > Hardware > Hardware Information 中找到。如需获取 YaST 帮助，请在 shell 提示符处输入 `-h` |
+| 帧类型 | | | |
+| 每个网卡的网络协议 | | | |
+| 服务器的 eDirectory 树和 bindery 上文 | `ndsstat` | | |
+
+| Dismount | 使用户无法访问该卷。 | `umount` | `mount` 让您挂载 Linux 卷挂载点。对于 NCP 卷，请使用 `ncpcon`。 |
+| Down | 执行有序机。 | `init 0 shutdown now` | 更多信息，请参见相应的帮助页面。 |
 | DSDi | 管理 eDirectory；检查树健康；诊断问题。 | | 此功能通过 iMonitor 提供。 |
-| DSTRACE | 捕获并保存后台进程和事件。 | ndstr | 捕获并保存后台进程和事件。 |
-| EDITUTIL | 像在服务器上一样访问所有 eDirectory 后端实用。 | editutil | 更多信息请输入 editutil -h。 |
-| EDIT | 在引导、DOS、USB 或 NetWare 分区上创建或修改文本文件。 | vi | 如需帮助，请输入 vi -h 或 man vim。 |
-| HELP | 查看命令的描述和语法。 | man command | | | |
-| ICE | 导入/导出 LDIF 文件；迁移 LDAP 数据；比较并更新架构；使用模板将信息加载到 eDirectory。 | ice | | |
-| IFCONFIG | 配置网络接口。 | ifconfig ethtool yast | ifconfig 对网卡进行某些配置，但更改不是永久的。相反，使用 ethtool 进行修改。或使用 YaST 配置网卡。 |
-| iMonitor | 监控 eDirectory 及其包含的服务器。 | | 通常通过 MONITOR 获取大部分信息在 Novell Remote Manager (NRM) 中可用。要访问 NRM，请在 Web 浏览器中访问 https://server:8009。 |
-| INETCFG | 为 IPX、IP 和 AppleTalk 设置并自定义 Internet 配置 | ettool mii-tool | 详情请参见相关页面。 |
-| LIST DEVICES | 显示服务器上的存储设备列表，并在服务器的媒体数据库中注册新设备。 | cat /dev ls /dev yast | Linux 有许多设备，每个设备都包含您可以通过“遍历 /proc 系统”查看的信息。您也可以在 YaST > System > Partitioner 中显示分区，但注意在不进行更改的情况下退出。 |
-| MAP (DOS 工作站) | 查看驱动器映射；创建或更改网络或搜索驱动器映射；将驱动器映射到虚拟根目录（适用于必须使用根目录的应用程序）。 | | mount 同时用于本地和远程挂载点——文件系统（本地或远程）与服务器上目录之间的连接。您通过访问本地目录来访问文件系统（本地或远程）。Linux 不使用驱动器号。 |
+| DSTRACE | 捕获并保存后台进程和事件。 | `ndstr` | 捕获并保存后台进程和事件。 |
+| EDITUTIL | 像在服务器上一样访问所有 eDirectory 后端实用。 | `editutil` | 更多信息请输入 `editutil -h`。 |
+| EDIT | 在引导、DOS、USB 或 NetWare 分区上创建或修改文本文件。 | `vi` | 如需帮助，请输入 `vi -h` 或 `man vim`。 |
+| HELP | 查看命令的描述和语法。 | `man command` | |
+| ICE | 导入/导出 LDIF 文件；迁移 LDAP 数据；比较并更新架构；使用模板将信息加载到 eDirectory。 | `ice` | |
+| IFCONFIG | 配置网络接口。 | `ifconfig ethtool yast` | `ifconfig` 对网卡进行某些配置，但更改不是永久的。相反，使用 `ethtool` 进行修改。或使用 YaST 配置网卡。 |
+| iMonitor | 监控 eDirectory 及其包含的服务器。 | | 通常通过 MONITOR 获取大部分信息在 Novell Remote Manager (NRM) 中可用。要访问 NRM，请在 Web 浏览器中访问 `https://server:8009`。 |
+| INETCFG | 为 IPX、IP 和 AppleTalk 设置并自定义 Internet 配置 | `ettool mii-tool` | 详情请参见相关页面。 |
+| LIST DEVICES | 显示服务器上的存储设备列表，并在服务器的媒体数据库中注册新设备。 | `cat /dev ls /dev yast` | Linux 有许多设备，每个设备都包含您可以通过“遍历 /proc 系统”查看的信息。您也可以在 YaST > System > Partitioner 中显示分区，但注意在不进行更改的情况下退出。 |
+| MAP (DOS 工作站) | 查看驱动器映射；创建或更改网络或搜索驱动器映射；将驱动器映射到虚拟根目录（适用于必须使用根目录的应用程序）。 | | `mount` 同时用于本地和远程挂载点——文件系统（本地或远程）与服务器上目录之间的连接。您通过访问本地目录来访问文件系统（本地或远程）。Linux 不使用驱动器号。 |
 | MAP (DOS 工作站) (续) | | | 但是如果您安装了 NCP 服务器，Novell 客户端可以将驱动器映射到 OES Linux 服务器上的 NCP 卷。 |
-| | 显示操作系统可以访问的安装内存总量。 | top /proc/meminfo | Linux 本身没有 memory 命令。然而，top 命令可以为您提供有关已安装、可用、被缓冲区占用等信息的良好开始。如果您想查看 GUI 显示，必须运行 KDE 图形界面并使用 KDE System Guard。 |
-| | 查看服务器统计数据和活动。 | | 通常通过 MONITOR 获取大部分信息在 Novell Remote Manager (NRM) 中可用。要访问 NRM，请在 Web 浏览器中访问 https://server:8009。 |
-| LOAD | 将可加载模块 (NLMs) 链接到操作系统。 | | Linux 不使用 load 和 run 命令。通常，要执行文件只需输入文件名或路径/文件名。大多数服务运行在 /etc/init.d。 |
-
-
-
-
+| 显示操作系统可以访问的安装内存总量。 | `top /proc/meminfo` | Linux 本身没有 `memory` 命令。然而，`top` 命令可以为您提供有关已安装、可用、被缓冲区占用等信息的良好开始。如果您想查看 GUI 显示，必须运行 KDE 图形界面并使用 KDE System Guard。 |
+| 查看服务器统计数据和活动。 | | 通常通过 MONITOR 获取大部分信息在 Novell Remote Manager (NRM) 中可用。要访问 NRM，请在 Web 浏览器中访问 `https://server:8009`。 |
+| LOAD | 将可加载模块 (NLMs) 链接到操作系统。 | | Linux 不使用 `load` 和 `run` 命令。通常，要执行文件只需输入文件名或路径/文件名。大多数服务运行在 `/etc/init.d`。 |
 
 ### 表 2-4 NW 命令用途与 LX 命令备注
 
 | NW 命令用途 | LX 命令 | 备注 |
 | --- | --- | --- |
-| 服务器 (Server，网络树名称上的服务器名称) | ndsstat | 更多信息请参阅 ndsstat 页面。另请参阅 Linux 版 OES Novell Remote Manager 管理指南。 |
-| 服务器运行时间 (Server Up Time) | uptime | 更多信息请参阅 uptime 手页。另请参阅 Linux 版 OES Novell Remote Manager 管理指南。 |
-| 容量 (Volumes) | ncpcon | 更多信息请参阅 ncpcon 手页。 |
+| 服务器 (Server，网络树名称上的服务器名称) | `ndsstat` | 更多信息请参阅 `ndsstat` 页面。另请参阅 Linux 版 OES Novell Remote Manager 管理指南。 |
+| 服务器运行时间 (Server Up Time) | `uptime` | 更多信息请参阅 `uptime` 手页。另请参阅 Linux 版 OES Novell Remote Manager 管理指南。 |
+| 容量 (Volumes) | `ncpcon` | 更多信息请参阅 `ncpcon` 手页。 |
 
 ### (续接) 表 2-4 NW 命令用途与 LX 命令备注
 
 | NW 命令 | 用途 | LX 命令 | 备注 |
 | --- | --- | --- | --- |
-| MOUNT | 使卷对用户可用。 | mount (用于传统的 Linux 卷) | 对于 NSS 卷，在 nssmu 中，选择卷，然后按 F7。 |
-| | | nscon (对 NSS 卷使用 mount 选项) | 对于加密的 NSS 卷，在系统重启后的首次挂载时，需要 nssmu 工具来挂载加密卷，因为你必须输入加密密码来激活卷。 |
-| | | nssmu (重启后对加密 NSS 卷进行首次挂载) | 之后，你可以在 nsscon 中使用 mount 命令。 |
-| | | | nssmu 工具随 Novell Storage Services RPM 安装。 |
+| MOUNT | 使卷对用户可用。 | `mount` (用于传统的 Linux 卷) | 对于 NSS 卷，在 `nssmu` 中，选择卷，然后按 F7。 |
+| | | `nscon` (对 NSS 卷使用 mount 选项) | 对于加密的 NSS 卷，在系统重启后的首次挂载时，需要 `nssmu` 工具来挂载加密卷，因为你必须输入加密密码来激活卷。 |
+| | | `nssmu` (重启后对加密 NSS 卷进行首次挂载) | 之后，你可以在 `nsscon` 中使用 `mount` 命令。 |
+| | | | `nssmu` 工具随 Novell Storage Services RPM 安装。 |
 
 ### 表 2-4 NW 命令用途与 LX 命令备注
 
 | 名称 | 用途 | LX 命令 | 备注 |
 | --- | --- | --- | --- |
-| | 显示服务器名称。 | hostname | 服务器名称默认显示在 shell 提示符中。你也可以通过 shell 提示符输入 cat /etc/hosts 来查看 /etc/hosts文件的内容。 |
-| NETSTAT | 监控网络状态。 | netstat | 更多信息请参阅 netstat 手页。 |
-| Nlookup | 诊断 DNS 设置问题或应用程序问题。 | dig | nslookup 命令在 Linux 上已弃用。 |
-| NSS | 命令行管理 NSS。 | nsscon | nss 工具随 Novell Storage Services RPM 安装。 |
-| NSSMU | 管理服务器上的 NSS 存储媒体。 | nssmu | nss 工具随 Novell Storage Services RPM 安装。 |
+| | 显示服务器名称。 | `hostname` | 服务器名称默认显示在 shell 提示符中。你也可以通过 shell 提示符输入 `cat /etc/hosts` 来查看 `/etc/hosts` 文件的内容。 |
+| NETSTAT | 监控网络状态。 | `netstat` | 更多信息请参阅 `netstat` 手页。 |
+| Nlookup | 诊断 DNS 设置问题或应用程序问题。 | `dig` | `nslookup` 命令在 Linux 上已弃用。 |
+| NSS | 命令行管理 NSS。 | `nsscon` | `nss` 工具随 Novell Storage Services RPM 安装。 |
+| NSSMU | 管理服务器上的 NSS 存储媒体。 | `nssmu` | `nss` 工具随 Novell Storage Services RPM 安装。 |
 
 | 表 2-4 | NW 命令 | 用途 | LX 命令 | 备注 |
-| --- | --- | --- | --- |
-| | NWCONFIG | 管理服务器并安装额外产品。 | yast | Yeast 是用于安装 OES Linux 和 OES 服务的工具。许多配置参数与 NetWare 类似。如需 YaST 帮助，在 shell 提示符输入 yast-h。 |
-| | NWTrace | 打印数据包到达网络主机的路由。 | traceroute | 更多信息请参阅 traceroute 手页。 |
-| | PING | 向你内部网络上的 IP 节点发送互联网控制协议 (ICMP) 回显请求包。 | ping | 更多信息请参阅 ping 手页。 |
-| | PROTOCOL | 查看已注册的协议；注册额外的协议和帧类型。 | ifconfig | 更多信息请参阅 ifconfig 手页。 |
+| --- | --- | --- | --- | --- |
+| | NWCONFIG | 管理服务器并安装额外产品。 | `yast` | Yeast 是用于安装 OES Linux 和 OES 服务的工具。许多配置参数与 NetWare 类似。如需 YaST 帮助，在 shell 提示符输入 `yast-h`。 |
+| | NWTrace | 打印数据包到达网络主机的路由。 | `traceroute` | 更多信息请参阅 `traceroute` 手页。 |
+| | PING | 向你内部网络上的 IP 节点发送互联网控制协议 (ICMP) 回显请求包。 | `ping` | 更多信息请参阅 `ping` 手页。 |
+| | PROTOCOL | 查看已注册的协议；注册额外的协议和帧类型。 | `ifconfig` | 更多信息请参阅 `ifconfig` 手页。 |
 
 ## 为 Linux 的 Novell Open Enterprise Server
 
@@ -2676,82 +2464,116 @@ Linux Bash 命令行的 A-Z 索引，每个命令都包含简要描述。您可�
 
 | NW 命令 | 用途 | LX 命令 | 备注 |
 |---|---|---|---|
-| RCONAG6 | 允许远程控制台访问服务器。 | | Novell Remote Manager 有安全控制台。你也可以使用 SSH（或用于 GUI 访问的 VNC）。Telnet 不安全，不建议使用。 |
-| RCONPRXY | 允许 RConsoleJ 访问目标服务器。 | | Novell Remote Manager 有安全控制台。你也可以使用 SSH（或用于 GUI 访问的 VNC）。Telnet 不安全，不建议使用。 |
+| RCONAG6 | 允许远程控制台访问服务器。 | | Novell Remote Manager 有安全控制台。你也可以使用 `SSH`（或用于 GUI 访问的 `VNC`）。`Telnet` 不安全，不建议使用。 |
+| RCONPRXY | 允许 RConsoleJ 访问目标服务器。 | | Novell Remote Manager 有安全控制台。你也可以使用 `SSH`（或用于 GUI 访问的 `VNC`）。`Telnet` 不安全，不建议使用。 |
+
+
+
 | RConsoleJ | 远程控制 NetWare 服务器。 | | Novell Remote Manager 有安全控制台。你也可以使用 SSH（或用于 GUI 访问的 VNC）。Telnet 不安全，不建议使用。 |
 
 | 表 2-4 | NW 命令 | 用途 | LX 命令 | 备注 |
+
 | --- | --- | --- | --- |
-| (续) | REBUILD | 恢复损坏的 Novell Storage Services (NSS) 池。 | ravui ravview fscck | ravui 和 ravview 工具作为 Novell Storage Services NSS 的部分安装。使用 ravui 重建或验证 Linux 上处于维护状态的 NSS 池。使用 ravview 将指定的 NSS 重建或验证文件导出为人类可读的文件格式。如需 ravui 和 ravview 的帮助，请使用 -h 。关于 fscck 的更多信息，请查看 fscck 页面。 |
-| REINITIALIZE SYSTEM | 启用执行 netinfo.cfg 文件命令以来进行的配置更改。 | rcnetwork restart | 如需帮助，在 shell 提示符输入 rcnetwork -h。 |
+
+| (续) | REBUILD | 恢复损坏的 Novell Storage Services (NSS) 池。 | `ravui` `ravview` `fscck` | `ravui` 和 `ravview` 工具作为 Novell Storage Services NSS 的部分安装。使用 `ravui` 重建或验证 Linux 上处于维护状态的 NSS 池。使用 `ravview` 将指定的 NSS 重建或验证文件导出为人类可读的文件格式。如需 `ravui` 和 `ravview` 的帮助，请使用 `-h` 。关于 `fscck` 的更多信息，请查看 `fscck` 页面。 |
+
+| REINITIALIZE SYSTEM | 启用执行 `netinfo.cfg` 文件命令以来进行的配置更改。 | `rcnetwork restart` | 如需帮助，在 shell 提示符输入 `rcnetwork -h`。 |
 
 ### 表 2-4 NW 命令用途与 LX 命令备注
 
 | NW 命令 | 用途 | LX 命令 | 备注 |
+
 | --- | --- | --- | --- |
-| RESET NETWORK ADAPTER | 手动重置网络适配器。 | ifdown ifup | 更多信息请参阅相应的手页。 |
-| RESET NETWORK INTERFACE | 重启使用 SHUTDOWN NETWORK INTERFACE 命令关闭的逻辑板。 | ifdown ifup | 更多信息请参阅相应的手页。 |
-| RESET SERVER | 关闭服务器并立即重启。 | init 6 shutdown -r now | 更多信息请参阅相应的手页。 |
-| Restart Server | 关闭服务器并立即重启。 | init 6 shutdown -r now | 更多信息请参阅相应的手页。 |
-| RIGHTS | 查看或修改文件、目录和卷的用户或组权限。 | rights | rights 命令仅适用于 NSS 系统。 |
-| ROUTE | 通过源路由桥传递帧（数据包）。 | route | 更多信息请参阅 route 手页。 |
+
+| RESET NETWORK ADAPTER | 手动重置网络适配器。 | `ifdown` `ifup` | 更多信息请参阅相应的手页。 |
+
+| RESET NETWORK INTERFACE | 重启使用 SHUTDOWN NETWORK INTERFACE 命令关闭的逻辑板。 | `ifdown` `ifup` | 更多信息请参阅相应的手页。 |
+
+| RESET SERVER | 关闭服务器并立即重启。 | `init 6` `shutdown -r now` | 更多信息请参阅相应的手页。 |
+
+| Restart Server | 关闭服务器并立即重启。 | `init 6` `shutdown -r now` | 更多信息请参阅相应的手页。 |
+
+| RIGHTS | 查看或修改文件、目录和卷的用户或组权限。 | `rights` | `rights` 命令仅适用于 NSS 系统。 |
+
+| ROUTE | 通过源路由桥传递帧（数据包）。 | `route` | 更多信息请参阅 `route` 手页。 |
 
 ### 表 2-4 NW 命令用途与 LX 命令备注
 
 | NW 命令 | 用途 | LX 命令 | 备注 |
+
 |---|---|---|---|
-| SCAN ALL | 扫描服务器上所有 SCSI 适配器的 LUN 或指定 SCSI 适配器的 LUN。 | isci | isci 默认未安装。安装后，输入 isci 并按 Tab 键查看相关命令。 |
-| SCAN FOR NEW DEVICES | 扫描 SCSI 适配器的 LUN0并将设备注册到媒体管理器以便操作系统可以使用。 | | isci 默认未安装。安装后，输入 isci 并按 Tab 键查看相关命令。启动后添加的 EVMS 管理设备可以通过 **i > Storage > Scan for Devices.** 进行扫描。 |
+
+| SCAN ALL | 扫描服务器上所有 SCSI 适配器的 LUN 或指定 SCSI 适配器的 LUN。 | `isci` | `isci` 默认未安装。安装后，输入 `isci` 并按 `Tab` 键查看相关命令。 |
+
+| SCAN FOR NEW DEVICES | 扫描 SCSI 适配器的 LUN0并将设备注册到媒体管理器以便操作系统可以使用。 | | `isci` 默认未安装。安装后，输入 `isci` 并按 `Tab` 键查看相关命令。启动后添加的 EVMS 管理设备可以通过 `i > Storage > Scan for Devices.` 进行扫描。 |
 
 ## 为 Linux 的 Novell Open Enterprise Server
 
 (续接) 表 2-4 NW 命令用途与 LX 命令备注
 
 | NW 命令 | 用途 | 备注 |
+
 |---|---|---|
+
 | SECURE CONSOLE | 防止从启动目录以外的目录加载 NLM；防止进入操作系统调试器；防止更改服务器日期和时间。 | Linux 中不存在通过命令安全控制台的概念。你应该始终限制对 Linux 控制台的物理和远程访问，永远离开 root 会话。 |
+
 | Server | | 这大致等于运行的 Linux 内内核。没有直接对应项。Linux 使用 GRUB 引导器启动。Linux 与可启动 DOS 分区（如果存在）没有直接连接。 |
 
 | NW 命令 | 用途 | LX 命令 | 备注 |
+
 | --- | --- | --- | --- |
-| SET | 查看并配置操作系统参数。 | | Linux 中没有直接映射。你可以使用 export 命令设置环境变量。更多信息请参阅 export 手页。要使配置持久，必须编辑服务相关的配置文件。 |
-| SPEED | 显示处理器运行速度。 | cat /proc/cpuinfo | 更多信息请参阅 cat 手页。 |
-| SWAP | 显示交换文件信息、添加或删除交换文件并指定交换文件的参数。 | mkswap, swaponoff | 更多信息请参阅相应的手页。 |
 
+| SET | 查看并配置操作系统参数。 | | Linux 中没有直接映射。你可以使用 `export` 命令设置环境变量。更多信息请参阅 `export` 手页。要使配置持久，必须编辑服务相关的配置文件。 |
 
+| SPEED | 显示处理器运行速度。 | `cat /proc/cpuinfo` | 更多信息请参阅 `cat` 手页。 |
 
-
+| SWAP | 显示交换文件信息、添加或删除交换文件并指定交换文件的参数。 | `mkswap`, `swaponoff` | 更多信息请参阅相应的手页。 |
 
 ## 表 2-4 NW 命令用途 LX 命令说明
 
 | 目的 | 命令 | 备注 |
+
 | :--- | :--- | :--- | :--- |
-| TCPCON | 监控 TCP/IP 活动、配置和统计信息、已知路由以及陷阱日志。使用 SNMP 访问任何支持 TCP/IP 管理基础 (MIB) 的远程协议栈中的 TCP/IP 信息。 | netstat | 更多信息请参考 netstat man 页面。 |
-| TIME | 显示日期、时间、夏令时间以及时间同步信息。 | date | 更多信息请参考 date man 页面。 |
+
+| TCPCON | 监控 TCP/IP 活动、配置和统计信息、已知路由以及陷阱日志。使用 SNMP 访问任何支持 TCP/IP 管理基础 (MIB) 的远程协议栈中的 TCP/IP 信息。 | `netstat` | 更多信息请参考 `netstat` man 页面。 |
+
+| TIME | 显示日期、时间、夏令时以及时间同步信息。 | `date` | 更多信息请参考 `date` man 页面。 |
+
 | TIMESYNC | | | Timesync 是 NetWare 时间协议，在 NetWare 服务器上兼容并可用 NTP 替换。 |
 
 ## 表 2-4 NW 命令用途 LX 命令说明
 
 | NW 命令 | 目的 | LX 命令 | 备注 |
+
 | :--- | :--- | :--- | :--- |
-| UNBIND | 从网卡的 LAN 驱动程序中移除通信协议；禁用特定板卡的通信。 | ifdown | 更多信息请参考 ifdown 页面。 |
-| UNLOAD | 卸载之前使用 LOAD 命令加载的模块。 | | 对于 OES 服务，请使用服务的停止脚本：/etc/init.d/service stop |
-| VERIFY | 验证 NSS 池中的块。 | ravsu verify poolname ravview | ravsu 和 review 工具作为 Novell Storage Services NSS 的一部分安装。<br><br>使用 ravsu 工具可以确定您是否需要重建池来修复 NSS 卷问题。<br><br>使用 ravview 查看输出结果。<br><br>如需帮助，请带有 -h 选项输入任一对应命令。 |
+
+| UNBIND | 从网卡的 LAN 驱动程序中移除通信协议；禁用特定板卡的通信。 | `ifdown` | 更多信息请参考 `ifdown` 页面。 |
+
+| UNLOAD | 卸载之前使用 LOAD 命令加载的模块。 | | 对于 OES 服务，请使用服务的停止脚本：`/etc/init.d/service stop` |
+
+| VERIFY | 验证 NSS 池中的块。 | `ravsu verify poolname` `ravview` | `ravsu` 和 `review` 工具作为 Novell Storage Services NSS 的一部分安装。<br><br>使用 `ravsu` 工具可以确定您是否需要重建池来修复 NSS 卷问题。<br><br>使用 `ravview` 查看输出结果。<br><br>如需帮助，请带有 `-h` 选项输入任一对应命令。 |
 
 ## 集成用于 Linux 的 Novell Open Enterprise Server
 
 (续) 表 2-4 NW 命令用途 LX 命令说明
 
 | 版本 | 目的 | 命令 | 备注 |
+
 | --- | --- | --- | --- |
-| | 从系统提示符查看文件服务器版本、许可信息和版权声明。 | uname -a ndsstat | 有关 uname 命令的更多信息，请参考 man 页面。ndsstat 的帮助请参考 ndsstat -hn。 |
-| VIEW | 从 NetWare 控制台查看文件内容。 | cat | 更多信息请参考 cat man 页面。 |
-| VOLUME | 列出已挂载的卷。 | mount | mount 命令显示所有可用系统（包括本地和远程）。nsscon 工具中的 volume 命令列出 OES Linux 上的 NSS 卷。nsscon 工具随 Novell Storage Services RPMs 安装。 |
+
+| | 从系统提示符查看文件服务器版本、许可信息和版权声明。 | `uname -a` `ndsstat` | 有关 `uname` 命令的更多信息，请参考 man 页面。`ndsstat` 的帮助请参考 `ndsstat -hn`。 |
+
+| VIEW | 从 NetWare 控制台查看文件内容。 | `cat` | 更多信息请参考 `cat` man 页面。 |
+
+| VOLUME | 列出已挂载的卷。 | `mount` | `mount` 命令显示所有可用系统（包括本地和远程）。`nsscon` 工具中的 `volume` 命令列出 OES Linux 上的 NSS 卷。`nsscon` 工具随 Novell Storage Services RPMs 安装。 |
 
 | 表 2-4 | NW 命令 | 目的 | LX 命令 | 备注 |
+
 |---|---|---|---|---|
-| VREPAIR | 修复 NetWare 传统卷上的卷问题；从目录表中删除命名空间条目。 | fsck | 更多信息请参考 fsck man 页面。 |
-| XNTPD | 与符合 NTPv3 标准的服务器同步时间。 | xntpd | 更多信息请参考 xntpd man 页面。 |
+
+| VREPAIR | 修复 NetWare 传统卷上的卷问题；从目录表中删除命名空间条目。 | `fsck` | 更多信息请参考 `fsck` man 页面。 |
+
+| XNTPD | 与符合 NTPv3 标准的服务器同步时间。 | `xntpd` | 更多信息请参考 `xntpd` man 页面。 |
 
 ## 练习 2-3 从命令提示符管理 OES Linux 服务器
 
@@ -2767,17 +2589,19 @@ Linux Bash 命令行的 A-Z 索引，每个命令都包含简要描述。您可�
 
 《集成用于 Linux 的 Novell Open Enterprise Server》教程手册表 2-4 将 NetWare 命令与 OES Linux 中的对应命令或功能进行了比较。
 
+
+
 在本次练习中，我们将向你介绍 OES Linux 中的一些基本命令，然后帮助你将当前在 NetWare 中使用的命令与在 OES Linux 中完成相同任务所需的命令进行比较。
 
 你将执行以下操作：
 
-- 在 OES Linux 中使用 bash shell。
+- 在 OES Linux 中使用 `bash` shell。
 - 在 OES Linux 中执行 NetWare 任务。
 - 探索额外的 OES Linux 命令。
 
 练习 2-3 从命令提示符管理 OES Linux 服务器位于《集成用于 Linux 的 Novell Open Enterprise Server》工作集的第 2-43 页。
 
-## 目标 4
+# 目标 4
 
 ## 管理 Linux 文件系统
 
@@ -2788,13 +2612,13 @@ Linux 文件系统（泛而言，任何 UNIX 系统）与其他操作系统有�
 - Linux 文件系统类型
 - 文件系统的分层结构
 - FHS (文件系统层次结构)
-- 根目录 (/)
+- 根目录 (`/`)
 - 存储设备
 - 文件系统挂载点
-- 用户目录 (/home/)
+- 用户目录 (`/home/`)
 - 文件名限制
 
-## Linux 文件系统类型
+### Linux 文件系统类型
 
 OES Linux 支持多种原生 Linux 文件系统。你可以根据对你的企业最重要的标准和特征来选择文件系统。
 
@@ -2802,55 +2626,51 @@ OES Linux 支持多种原生 Linux 文件系统。你可以根据对你的企业
 
 在管理 OES Linux 时，你应该对三种常用 Linux 文件系统的相对优势有基本的了解：
 
-- Ext2
-- Ext3
-- ReiserFS
+- `Ext2`
+- `Ext3`
+- `ReiserFS`
 
-### Ext2
+#### Ext2
 
-Ext2 是三种最常用文件系统中最寿命最长、测试最充分的。在日志型文件系统出现之前，ext2 因其能够成功处理系统停机以防止数据丢失而广受欢迎。
+`Ext2` 是三种最常用文件系统中最寿命最长、测试最充分的。在日志型文件系统出现之前，`ext2` 因其能够成功处理系统停机以防止数据丢失而广受欢迎。
 
-Ext2 不是日志型文件系统。它使用 e2fsck（文件系统检查）工具来分析文件系统数据，将元数据带入一致状态，并将待处理的文件块写入 lost+found 目录。
+`Ext2` 不是日志型文件系统。它使用 `e2fsck`（文件系统检查）工具来分析文件系统数据，将元数据带入一致状态，并将待处理的文件块写入 `lost+found` 目录。
 
-与日志型文件系统相比，e2fsck 分析整个文件系统，而不仅仅是最近修改的元数据。这比检查日志系统的数据慢得多。
+与日志型文件系统相比，`e2fsck` 分析整个文件系统，而不仅仅是最近修改的元数据。这比检查日志系统的数据慢得多。
 
-取决于文件系统的大小，文件系统检查可能需要一小时或更，因此对于需要高可用性的服务器不建议选择 ext2。
+取决于文件系统的大小，文件系统检查可能需要一小时或更，因此对于需要高可用性的服务器不建议选择 `ext2`。
 
-另一方面，由于 ext2 不维护日志，它使用的内存更少，运行速度快于日志型文件系统。
+另一方面，由于 `ext2` 不维护日志，它使用的内存更少，运行速度快于日志型文件系统。
 
-### Ext3
+#### Ext3
 
-Ext3 基于 ext2。Ext3 文件系统可以很容易构建在 ext2 文件系统之上。主要的区别是 ext3 支持日志。
+`Ext3` 基于 `ext2`。`Ext3` 文件系统可以很容易构建在 `ext2` 文件系统之上。主要的区别是 `ext3` 支持日志。
 
-Ext3 具有以下主要优势：
+`Ext3` 具有以下主要优势：
 
-- 轻松升级 ext2。Ext3 基于 ext2 代码并共享其磁盘和元数据格式，因此从 ext2 升级非常简单。
+- 轻松升级 `ext2`。`Ext3` 基于 `ext2` 代码并共享其磁盘和元数据格式，因此从 `ext2` 升级非常简单。
 
-从 ext2 升级到 ext3 只需要几分钟。也非常安全，因为不需要从头创建整个文件系统。
+从 `ext2` 升级到 `ext3` 只需要几分钟。也非常安全，因为不需要从头创建整个文件系统。
 
-自定义的可靠性与性能。其他日志型文件系统遵循“仅元数据”日志方法。这意味着你的元数据始终保持一致状态，但无法自动保证文件系统数据本身如此。
+- 自定义的可靠性与性能。其他日志型文件系统遵循“仅元数据”日志方法。这意味着你的元数据始终保持一致状态，但无法自动保证文件系统数据本身如此。
 
-Ext3 设计用于同时兼顾元数据和数据。这种“照顾”程度是可以自定义的。
+`Ext3` 设计用于同时兼顾元数据和数据。这种“照顾”程度是可以自定义的。
 
-在 data=journal 模式下，Ext3 提供最大的可靠性（即数据完整性），但由于元数据和数据都要记录，性能会降低。
+在 `data=journal` 模式下，`Ext3` 提供最大的可靠性（即数据完整性），但由于元数据和数据都要记录，性能会降低。
 
-在 data=ordered 模式下，ext3 确保数据和元数据的完整性，但仅对元数据使用日志。这比数据日志模式安全，但在不牺牲性能的情况下为元数据和数据提供了一致性。
+在 `data=ordered` 模式下，`ext3` 确保数据和元数据的完整性，但仅对元数据使用日志。这比数据日志模式安全，但在不牺牲性能的情况下为元数据和数据提供了一致性。
 
-在 data=writeback 模式下，ext3 在元数据提交日志后写入主文件系统。此选项优化了性能，但在崩溃恢复后可能会导致文件中出现旧数据，同时维持内部文件系统的完整性。
+在 `data=writeback` 模式下，`ext3` 在元数据提交日志后写入主文件系统。此选项优化了性能，但在崩溃恢复后可能会导致文件中出现旧数据，同时维持内部文件系统的完整性。
 
-除非另有说明，ext3 默认配置为 data=ordered 模式。
+除非另有说明，`ext3` 默认配置为 `data=ordered` 模式。
 
-### ReiserFS
+#### ReiserFS
 
-ReiserFS 是一种日志文件系统，作为 ext2 的替代方案引入。与 ext2 相比，它的优势在于更好的磁盘空间利用率、更好的磁盘访问性能和更快的崩溃恢复。
+`ReiserFS` 是一种日志文件系统，作为 `ext2` 的替代方案引入。与 `ext2` 相比，它的优势在于更好的磁盘空间利用率、更好的磁盘访问性能和更快的崩溃恢复。
 
-ReiserFS 的缺点是（类似于数据-writeback 模式下的 ext3）通过关注元数据来优化性能，但可能导致数据本身变得不可靠。
+`ReiserFS` 的缺点是（类似于数据-writeback 模式下的 `ext3`）通过关注元数据来优化性能，但可能导致数据本身变得不可靠。
 
-OES Linux 默认使用 ReiserFS 文件系统格式化卷。
-
-
-
-
+OES Linux 默认使用 `ReiserFS` 文件系统格式化卷。
 
 # 文件系统的分级结构
 
@@ -2866,12 +2686,12 @@ Linux 文件系统基于分级文件系统，可以用树的形式来描述。
 
 这棵树中的文件通过其路径唯一定义。路径指的是指向该文件的目录名称。
 
-各个目录名之间的分隔符是斜杠 ("/")。路径可以通过两种方式指定：
+各个目录名之间的分隔符是斜杠 (`"/"`)。路径可以通过两种方式指定：
 
 - 从当前目录开始的相对路径
 - 从整个系统树根目录开始的绝对路径
 
-绝对路径始终以斜杠 (/) 开头，这是根目录的符号，如下所示：
+绝对路径始终以斜杠 (`/`) 开头，这是根目录的符号，如下所示：
 
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_180_0.png)
 
@@ -2883,50 +2703,50 @@ Linux 文件系统的结构在《文件系统层次标准》(FHS) 中描述。FH
 
 FHS 并没有规定所有细节。在某些领域，它允许你有自己的定义。FHS 定义了一个双层层次结构：
 
-- 顶层目录（紧邻根目录 "/" 之下）。
-- 第二层，/usr/ 和 /var 下的目录。
+- 顶层目录（紧邻根目录 `"/"` 之下）。
+- 第二层，`/usr/` 和 `/var` 下的目录。
 
 一些重要的默认 FHS Linux 目录包括：
 
-- /etc。此目录包含配置文件。
-- /dev。此目录包含引用系统中硬件的特殊链接文件。例如，/dev/fd0 软磁盘 A。第一个 IDE 硬盘由 /dev/hda 引用。
-- /usr。此目录包含程序文件。
-- /var。此目录包含数据，如打印槽目录、日志文件、手册页和其他临时文件。
-- /tmp。此目录存储运行应用程序创建的临时文件。
-- /home。此目录包含用户家目录。
-- /root。这是根用户的家目录。
-- /bin。此目录包含基本的命令行实用程序，如 vi, rpm, ls, mkdir, more, mv, grep 和 tar。
-- /sbin。此目录包含基本的系统可执行文件，如 fsck, grub, mkfs, arp, fdisk 和 ifconfig。
-- /mnt。此目录用于使用 Samba 或 NFS 挂载设备或远程文件系统。在某些 Linux 发行版（如红帽）中，它也被用于挂载可移动设备。
-- /media。此目录用于某些 Linux 发行版（如 SUSE Linux）中挂载可移动设备。
+- `/etc`。此目录包含配置文件。
+- `/dev`。此目录包含引用系统中硬件的特殊链接文件。例如，`/dev/fd0` 软磁盘 A。第一个 IDE 硬盘由 `/dev/hda` 引用。
+- `/usr`。此目录包含程序文件。
+- `/var`。此目录包含数据，如打印槽目录、日志文件、手册页和其他临时文件。
+- `/tmp`。此目录存储运行应用程序创建的临时文件。
+- `/home`。此目录包含用户家目录。
+- `/root`。这是根用户的家目录。
+- `/bin`。此目录包含基本的命令行实用程序，如 `vi`, `rpm`, `ls`, `mkdir`, `more`, `mv`, `grep` 和 `tar`。
+- `/sbin`。此目录包含基本的系统可执行文件，如 `fsck`, `grub`, `mkfs`, `arp`, `fdisk` 和 `ifconfig`。
+- `/mnt`。此目录用于使用 Samba 或 NFS 挂载设备或远程文件系统。在某些 Linux 发行版（如红帽）中，它也被用于挂载可移动设备。
+- `/media`。此目录用于某些 Linux 发行版（如 SUSE Linux）中挂载可移动设备。
 
 你可以在 http://www.pathname.com/fhs/ 找到 FHS 的信息。
 
-## 根目录 (/)
+## 根目录 (`/`)
 
 根目录是指文件系统树的最高层。通常这里只位于目录（而不是文件）。当系统启动时，该目录所在的分区是第一个挂载的分区。
 
 由于内核无法完成操作系统的所有任务，因此系统启动时运行的所有程序必须在该分区上可用（它们不能位于另一个分区上）。
 
-以下目录必须与根目录位于同一个分区上：/bin/、/dev/、/etc/、/lib/ 和 /sbin/。
+以下目录必须与根目录位于同一个分区上：`/bin/`、`/dev/`、`/etc/`、`/lib/` 和 `/sbin/`。
 
 ## 存储设备
 
-安装在计算机中的物理存储设备通过存储在设备目录 (/dev) 中的设备节点进行管理。
+安装在计算机中的物理存储设备通过存储在设备目录 (`/dev`) 中的设备节点进行管理。
 
 设备节点按照以下约定命名：
 
-- /dev/fd0。第一个软盘驱动。
-- /dev/hda。第一个 IDE 硬盘。
-- /dev/hdb。第二个 IDE 硬盘。
-- /dev/sda。第一个 SCSI 硬盘。
-- /dev/sdb。第二个 SCSI 硬盘。
+- `/dev/fd0`。第一个软盘驱动。
+- `/dev/hda`。第一个 IDE 硬盘。
+- `/dev/hdb`。第二个 IDE 硬盘。
+- `/dev/sda`。第一个 SCSI 硬盘。
+- `/dev/sdb`。第二个 SCSI 硬盘。
 
 设备目录不仅包含每个存储设备的设备节点，还包含每个连接到系统的网络接口和 SCSI 控制器的设备节点。
 
 > 有关 Linux 设备的详情，请参阅 SLES 9 管理与安装指南第 223 页上的“使用 udev 的动态设备节点”（sles_admin.pdf）。
 
-你可以通过 http://www.novell.com/documentation/oes 或从 3077 课程 CD 中的 OES_Docs 目录访问该指南。
+你可以通过 http://www.novell.com/documentation/oes 或从 3077 课程 CD 中的 `OES_Docs` 目录访问该指南。
 
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_182_0.png)
 
@@ -2934,83 +2754,80 @@ FHS 并没有规定所有细节。在某些领域，它允许你有自己的定�
 
 在你打算挂载文件系统的点，必须存在一个目录。该目录被称为挂载点。挂载的文件系统的完整目录结构可以在该目录下方。
 
-例如，/（根）目录是 Linux 服务器上主文件系统的挂载点。
+例如，`/`（根）目录是 Linux 服务器上主文件系统的挂载点。
 
-其他文件系统（如其他硬盘分区、通过网络来自其他计算机的目录或可移动介质（软盘、CD-ROM、可移动硬盘））可以在任何点挂载到 /（根）文件系统。
+其他文件系统（如其他硬盘分区、通过网络来自其他计算机的目录或可移动介质（软盘、CD-ROM、可移动硬盘））可以在任何点挂载到 `/`（根）文件系统。
 
 这与在 Windows 服务器或工作站上映射驱动器具有相同的目的。
 
 然而，在 Linux 服务器或工作站上，你不需要映射驱动器来访问其他文件系统。你只需在指定位置挂载文件系统即可。这种这种方法可以访问其他文件系统。要理解挂载文件系统的基础，需要：
 
 - 如何挂载文件系统
-- 可移动介质挂载点 (/media/*)
-- 临时挂载文件系统的挂载点 (/mnt/)
-- 配置文件
+- 可移动介质挂载点 (`/media/*`)
+- 临时挂载文件系统的挂载点 (`/mnt/`)
 
-# 如何挂载文件系统
 
-为了挂载文件系统，使用 mount 命令并指定设备和挂载的目录。
 
-文件系统可以使用 umount 命令再次移除。
+# 配置文件
 
-如果在执行 mount 命令时不包含任何选项，程序将尝试多种文件系统格式。如果你想指定特定的文件系统，请使用 -t 选项。
+## 如何挂载文件系统
+
+为了挂载文件系统，使用 `mount` 命令并指定设备和挂载的目录。
+
+文件系统可以使用 `umount` 命令再次移除。
+
+如果在执行 `mount` 命令时不包含任何选项，程序将尝试多种文件系统格式。如果你想指定特定的文件系统，请使用 `-t` 选项。
 
 如果内核不支持该文件系统，命令将终止，你会收到错误消息。在这种情况下，你必须编译支持该文件系统格式的新内核。
-
-
-
-
 
 每个字段为挂载文件系统提供了以下信息：
 
 - **字段 1.** 设备设备文件的名称。
 - **字段 2.** 挂载点——文件系统应该挂载的目录。此处指定的目录必须已经存在。
-- **字段 3.** 文件系统类型（例如 ext2 或 reiserfs）。
-- **字段 4.** 挂载选项。多个挂载选项之间用逗号分隔（例如 fs=cdffs,prod,nousid）。
+- **字段 3.** 文件系统类型（例如 `ext2` 或 `reiserfs`）。
+- **字段 4.** 挂载选项。多个挂载选项之间用逗号分隔（例如 `fs=cdffs,prod,nousid`）。
+例如，针对 `(/dev/cdrom)` 的选项 `ro` 和 `nodev` 意味着驱动器是只读的 (`ro`)，并且 CD 上的设备文件不会被文件系统解释为设备文件 (`nodev`)。
+- **字段 5.** 表示该文件系统是否由备份工具 `dump` 映像备份。`0` 表示不备份。
+- **字段 6.** 表示系统启动时对文件系统进行检查（使用 `fsck` 实用）的顺序：
+  - `0`：不需要检查的文件系统
+  - `1`：根目录
+  - `2`：所有其他可修改的文件系统系统
 
-例如，针对 (/dev/cdrom) 的选项 **ro** 和 **nodev** 意味着驱动器是只读的 (**ro**)，并且 CD 上的设备文件不会被文件系统解释为设备文件 (nodev)。
+虽然 `/etc/fstab` 列出了目录树中的文件系统及其挂载点，但 `/etc/mtab` 文件列出了当前挂载的文件系统及其挂载点。
 
-- **字段 5.** 表示该文件系统是否由备份工具 dump 映像备份。**0** 表示不备份。
-- **字段 6.** 表示系统启动时对文件系统进行检查（使用 *fsck* 实用）的顺序：
-  - 0：不需要检查的文件系统
-  - 1：根目录
-  - 2：所有其他可修改的文件系统系统
+`mount` 和 `umount` 命令修改 `/etc/mtab` 文件并影响挂载文件系统的状态。
 
-虽然 /etc/fstab 列出了目录树中的文件系统及其挂载点，但 /etc/mtab 文件列出了当前挂载的文件系统及其挂载点。
+内核还保留了 `/proc/mounts` 信息，列出了所有当前挂载的分区。
 
-mount 和 ummount 命令修改 /etc/mtab 文件并影响挂载文件系统的状态。
+为了故障排除，如果 `/proc/mounts` 和 `/etc/mtab` 信息之间存在冲突，`/proc/mounts` 数据始终比 `/etc/mtab` 更新、更可靠。
 
-内核还保留了 /proc/mounts 信息，列出了所有当前挂载的分区。
-
-为了故障排除，如果 /proc/mounts 和 /etc/mtab 信息之间存在冲突，/proc/mount 数据始终比 /etc/mtab 更新、更可靠。
-
-## 用户目录 (/home/)
+### 用户目录 (/home/)
 
 Linux 系统上的每个用户都有自己的自己的区域，用于创建和删除文件。该区域被称为用户的家目录。当用户登录时，他处于自己的家目录中。
 
-个人配置文件可以在用户的家目录中找到。这些配置文件是隐藏文件，因为它们通常不会被 ls 命令显示。所有这些文件名以点（.）开头。
+个人配置文件可以在用户的家目录中找到。这些配置文件是隐藏文件，因为它们通常不会被 `ls` 命令显示。所有这些文件名以点（`.`）开头。
 
 以下是用户家目录中最重要的文件：
 
 | 文件 | 说明 |
 |---|---|
-| .profile | 用户的私有登录脚本 |
-| .bash_history | Bash 配置 |
-| .bashrc | 之前在 Bash 中运行的命令列表 |
+| `.profile` | 用户的私有登录脚本 |
+| `.bash_history` | Bash 配置 |
+| `.bashrc` | 之前在 Bash 中运行的命令列表 |
 
-如果没有特殊设置，所有用户的家目录都位于 /home/ 目录下。用户的家目录也可以通过快捷方式 "~" 访问，因此 ~/bashrc 指向用户家目录下的 .bashrc 文件。
+如果没有特殊设置，所有用户的家目录都位于 `/home/` 目录下。用户的家目录也可以通过快捷方式 `"~"` 访问，因此 `~/bashrc` 指向用户家目录下的 `.bashrc` 文件。
 
-在许多情况下，/home/ 目录位于不同的分区上，甚至可以位于不同的计算机上（带有家目录的中心化管理）。
+在许多情况下，`/home/` 目录位于不同的分区上，甚至可以位于不同的计算机上（带有家目录的中心化管理）。
 
-## 文件名限制
+### 文件名限制
 
-Linux 中的文件名最长可达 255 个字符。它可以包含任意数量的特殊字符（例如 "_" 或 "-"）。某些特殊字符（例如美元符号 "$"、分号 ":" 或空格）具有特定的含义。如果你想使用这些字符之一，必须在它前面加上一个反斜杠 (\) 以掩码其含义。可以使用变音符号、带有变音符号的字母或其他国家特定的字符。然而，如果这些字符在其他国家的键盘上不存在，则在与其他国家交换数据时可能会导致问题。Linux 区分大写和小写。例如，Invoice 和 INVOICE 标识为三个不同的文件。
+Linux 中的文件名最长可达 255 个字符。它可以包含任意数量的特殊字符（例如 `"_"` 或 `"-"`）。某些特殊字符（例如美元符号 `"$"`、分号 `":"` 或空格）具有特定的含义。如果你想使用这些字符之一，必须在它前面加上一个反斜杠 (`\`) 以掩码其含义。可以使用变音符号、带有变音符号的字母或其他国家特定的字符。然而，如果这些字符在其他国家的键盘上不存在，则在与其他国家交换数据时可能会导致问题。Linux 区分大写和小写。例如，`Invoice` 和 `INVOICE` 标识为三个不同的文件。
 
-## 文件系统权限
+### 文件系统权限
 
 使用 OES Linux 服务器进行网络存储时，本地权限的配置通常会参与其中。在通过 Novell eDirectory 配置并测试文件系统访问之前，你必须熟悉管理传统 (POSIX) 文件和目录权限的基础知识。你需要了解以下内容：
 
-## 权限和值
+#### 权限和值
 
 你可以为文件或目录分配以下权限：
 
@@ -3018,7 +2835,7 @@ Linux 中的文件名最长可达 255 个字符。它可以包含任意数量的
 - **写入 (w)。** 此权限允许修改文件。它允许在目录内创建或删除文件。
 - **执行 (x)。** 此权限允许执行文件。它允许访问目录。
 
-你可以使用命令 ls -l 来显示当前目录的内容，以及为每个文件或子目录分配的权限。例如，输入 ls -l 会显示 myfile.txt 的以下权限：
+你可以使用命令 `ls -l` 来显示当前目录的内容，以及为每个文件或子目录分配的权限。例如，输入 `ls -l` 会显示 `myfile.txt` 的以下权限：
 
 | | 所有者 | 组 | 其他人 | ls -l |
 |---|---|---|---|---|
@@ -3034,7 +2851,7 @@ Linux 中的文件名最长可达 255 个字符。它可以包含任意数量的
 你也可以从管理器或浏览器工具查看权限。例如，你可以使用 Konquer 中的详细视图来查看每个目录或文件的权限、所有者和组：
 
 | 名称 | 大小 | 类型 | 修改时间 | 权限 |
-|---|---|---|---|
+|---|---|---|---|---|
 | bin | 48 B | 目录 | 2004-07-09 08:22 | rwxr-xr-x |
 | Desktop | 376 B | 目录 | 2004-07-24 08:31 | rwxr-xr-- |
 | Documents | 80 B | 目录 | 2004-07-09 08:22 | rwxr-xr-- |
@@ -3042,28 +2859,28 @@ Linux 中的文件名最长可达 255 个字符。它可以包含任意数量的
 | snapshot1.png | 51.7 KB | 图像 | 2004-07-26 13:19 | rw-r-- |
 | snapshot2.png | 14.5 KB | 图像 | 2004-07-24 14:44 | rw-r-- |
 
-## 如何从命令行设置权限
+### 如何从命令行设置权限
 
 可以通过以下命令从命令行修改文件或目录的权限和所有权：
 
-- chmod
-- chown 和 chgrp
+- `chmod`
+- `chown` 和 `chgrp`
 
-## chmod
+#### chmod
 
-你可以使用此命令添加、删除或分配给文件或目录的权限。文件所有者和 root 使用此命令。
+你可以使用此命令添加、删除或分配给文件或目录的权限。文件所有者和 `root` 使用此命令。
 
-以下是使用 chmod 命令的示例：
+以下是使用 `chmod` 命令的示例：
 
 | 表 2-6 | chmod 命令 |  |
 | --- | --- | --- |
-| | chmod u+x | 所有者被赋予执行权限。r 和 w 权限保持不变。 |
-| | chmod g=rw | 所有组都可以读取和写入。如果成员之前有执行权限，则会被移除。 |
-| | chmod u=rwx | 所有者获得所有权限。 |
-| | chmod u=rwx,g=rw,o=r | 所有者拥有所有权限，组拥有读写权限，其他人拥有读取权限。 |
-| | chmod +x | 所有用户（所有者、组和其他）都获得执行权限，取决于 umask。 |
+| | `chmod u+x` | 所有者被赋予执行权限。r 和 w 权限保持不变。 |
+| | `chmod g=rw` | 所有组都可以读取和写入。如果成员之前有执行权限，则会被移除。 |
+| | `chmod u=rwx` | 所有者获得所有权限。 |
+| | `chmod u=rwx,g=rw,o=r` | 所有者拥有所有权限，组拥有读写权限，其他人拥有读取权限。 |
+| | `chmod +x` | 所有用户（所有者、组和其他）都获得执行权限，取决于 `umask`。 |
 
-例如，输入以下 chmod 命令允许组内所有用户写入 file.txt。
+例如，输入以下 `chmod` 命令允许组内所有用户写入 `file.txt`。
 
 ```
 geeko@earth:~ > ls -al hello.txt
@@ -3073,6 +2890,30 @@ geeko@earth:~ > ls -al hello.txt
 -rw-rw--r-- 1 geeko users 0 2004-04-06 12:40 hello.txt
 ```
 
+如下图所示：
+
+### 图 2-20
+
+![](img/1dca8e8a8784dadffa032dcfe0460e55_192_0.png)
+
+以下是使用 `chmod` 配合数值的示例：
+
+## 表 2-7
+
+| chmod 命令 | 说明 |
+|---|---|
+| `chmod 754 hello.txt` | 所有者拥有所有权限，组具有读取和执行权限，其他用户具有读取权限。 |
+| `chmod 777 hello.txt` | 所有用户（用户、组和其他用户）均获得所有权限。 |
+
+这些命令更改分配给文件或目录的所有者或组。
+
+作为 `root` 用户，你可以使用以下语法通过 `chown` 命令更改文件的用户和组所属关系：
+
+```
+chown new_user.new_group file
+```
+
+## 在 Linux 上集成 Novell Open Enterprise Server
 
 
 
@@ -3086,14 +2927,14 @@ geeko@earth:~ > ls -al hello.txt
 
 ## 表 2-7
 
-| chmod 命令 | 说明 |
+| `chmod` 命令 | 说明 |
 |---|---|
-| chmod 754 hello.txt | 所有者拥有所有权限，组具有读取和执行权限，其他用户具有读取权限。 |
-| chmod 777 hello.txt | 所有用户（用户、组和其他用户）均获得所有权限。 |
+| `chmod 754 hello.txt` | 所有者拥有所有权限，组具有读取和执行权限，其他用户具有读取权限。 |
+| `chmod 777 hello.txt` | 所有用户（用户、组和其他用户）均获得所有权限。 |
 
 这些命令更改分配给文件或目录的所有者或组。
 
-作为 root 用户，你可以使用以下语法通过 `chown` 命令更改文件的用户和组所属关系：
+作为 `root` 用户，你可以使用以下语法通过 `chown` 命令更改文件的用户和组所属关系：
 
 ```
 chown new_user.new_group file
@@ -3101,7 +2942,9 @@ chown new_user.new_group file
 
 ## 在 Linux 上集成 Novell Open Enterprise Server
 
-例如，在下面的示例中，root 将文件 hello.txt 的所有权从 geeko 更改为用户 newbie：
+例如，在下面的示例中，`root` 将文件 `hello.txt` 的所有权从 `geeko` 更改为用户 `newbie`：
+
+
 
 ```
 earth:/tmp # ls -la hello.txt
@@ -3124,7 +2967,7 @@ chown new_user_file
 chown new_group_file
 ```
 
-例如，以下命令用于限制 list.txt 访问权限为 advanced 组的成员：
+例如，以下命令用于限制 `list.txt` 访问权限为 `advanced` 组的成员：
 
 ```
 earth:/tmp # ls -la list.txt
@@ -3135,191 +2978,9 @@ earth:/tmp # ls -la list.txt
 earth:/tmp #
 ```
 
-尽管组已经更改，但所有者权限保持不变（所有者和 root 仍然可以访问该文件）。
+尽管组已经更改，但所有者权限保持不变（所有者和 `root` 仍然可以访问该文件）。
 
-作为 root 用户，你还可以使用以下语法通过 `chgrp` 命令更改文件的组所属关系：
-
-```
-chgrp new_group_file
-```
-
-普通用户只能使用 `chown` 命令将其自己的文件更改到新组，如下所示：
-
-```
-chown new_group_file
-```
-
-2-78 严禁复制本手册的全部或部分内容或分发此类副本。版本 1。如怀疑有复制行为，请拨打 1-800-PIRATES。*
-
-当然，用户也可以对 `chgrp` 执行相同操作，如下所示：
-
-```
-chgrp new_group_file
-```
-
-## 如何从 GUI 界面设置权限
-
-除了使用命令（如 `chmod` 或 `chown`）外，你还可以从 GUI 界面（通常是文件浏览器）修改文件或目录的权限。
-
-例如，你可以通过以下步骤使用 KDE 中的 Konqueror 更改权限：
-
-- 1. 启动 **Konqueror**；然后浏览到**文件**或**目录**（不要打开它）。
-- 2. 右键点击你想修改的**文件**或**目录**；然后选择**Properties**（属性）。
-- 3. 选择 **Permissions**（权限）选项卡。
-
-## 类似下面的对话框：
-
-图 2-21
-
-![](img/1dca8e8a8784dadffa032dcfe0460e55_195_0.png)
-
-出现以下内容：
-
-### 图 2-22
-
-![](img/1dca8e8a8784dadffa032dcfe0460e55_196_0.png)
-
-- b. 选择你想要设置的权限，然后选择 OK 完成。
-- c. 当你完成文件或目录的权限配置时，选择 OK 保存配置。
-
-> 有关 Linux POSIX 和 NSS 目录及文件属性的详细信息，请参阅《Novell Open Enterprise Server File Systems Management Guide》(stor_filesys.pdf) 第 42 页的“Access Control for NSS on Linux”。
-
-你可以从 http://www.novell.com/documentation/oes 或从你 3077 Course CD 上的 OES_Docs 目录访问指南。
-
-## 练习 2-4
-
-## 管理 Linux 文件和目录
-
-尽管你可能已经熟悉管理 NetWare 和 Windows 文件系统，但如果你是 Linux 新手，管理 Linux 文件系统可能会很具有挑战性。
-
-在本节的之前的练习中，你已经学习了一些基本的 Linux 文件系统管理任务。
-
-在本次练习中，你通过执行以下操作来扩展基础知识：
-
-- 挂载和卸载文件系统
-- 设置 Linux 文件和目录权限
-
-练习 2-4 “Manage Linux Files and Directories”位于《Integrating Novell Open Enterprise Server for Linux》中。
-
-### 1. 从桌面管理 Linux 文件和目录
-
-除了使用命令（如 `chmod` 或 `chown`）外，你还可以从 GUI 界面（通常是文件浏览器）修改文件或目录的权限。
-
-例如，你可以通过以下步骤使用 KDE 中的 Konqueror 更改权限：
-
-- 1. 启动 **Konqueror**；然后浏览到**文件**或**目录**（不要打开它）。
-- 2. 右键点击你想修改的**文件**或**目录**；然后选择**Properties**（属性）。
-- 3. 选择 **Permissions**（权限）选项卡。
-
-出现类似下面的对话框：
-
-图 2-21
-
-![](img/1dca8e8a8784dadffa032dcfe0460e55_195_0.png)
-
-出现以下内容：
-
-### 图 2-22
-
-![](img/1dca8e8a8784dadffa032dcfe0460e55_196_0.png)
-
-- b. 选择你想要设置的权限，然后选择 OK 完成。
-- c. 当你完成文件或目录的权限配置时，选择 OK 保存配置。
-
-> 有关 Linux POSIX 和 NSS 目录及文件属性的详细信息，请参阅《Novell Open Enterprise Server File Systems Management Guide》(stor_filesys.pdf) 第 42 页的“Access Control for NSS on Linux”。
-
-你可以从 http://www.novell.com/documentation/oes 或从你 3077 Course CD 上的 OES_Docs 目录访问指南。
-
-### 1. 从桌面管理 Linux 文件和目录
-
-除了使用命令（如 `chmod` 或 `chown`）外，你可以从 GUI 界面（通常是文件浏览器）修改文件或目录的权限。
-
-例如，你可以通过以下步骤使用 KDE 中的 Konqueror 更改权限：
-
-- 1. 启动 **Konqueror**；然后浏览到**文件**或**目录**（不要打开它）。
-- 2. 右键点击你想修改的**文件**或**目录**；然后选择**Properties**（属性）。
-- 3. 选择 **Permissions**（权限）选项卡。
-
-### 1. 管理 Linux 文件和目录
-
-除了使用命令（如 `chmod` 或 `chown`）外，你可以从 GUI 界面（通常是文件浏览器）修改文件或目录的权限。
-
-例如，你可以通过以下步骤使用 KDE 中的 Konqueror 更改权限：
-
-- 1. 启动 **Konqueror**；然后浏览到**文件**或**目录**（不要打开它）。
-- 2. 右键点击你想修改的**文件**或**目录**；然后选择**Properties**（属性）。
-- 3. 选择 **Permissions**（权限）选项卡。
-
-（注：提供的文本包含大量的重复和碎片化部分。我已根据提供的片段清理了逻辑流。）
-[/content]
-
-等等，再次查看原始文本，有很多重复块和伪影。我将提供一个严格遵循指令且不包含源文件中冗余信息的干净版本。
-
-[注：由于用户提供的输入文本包含大量重复的 OCR 错误，以下是基于其逻辑结构合并后的最终翻译内容。]
-
-[content]
-如下图所示：
-
-### 图 2-20
-
-![](img/1dca8e8a8784dadffa032dcfe0460e55_192_0.png)
-
-以下是使用 `chmod` 配合数值的示例：
-
-## 表 2-7
-
-| chmod 命令 | 说明 |
-|---|---|
-| chmod 754 hello.txt | 所有者拥有所有权限，组具有读取和执行权限，其他用户具有读取权限。 |
-| chmod 777 hello.txt | 所有用户（用户、组和其他用户）均获得所有权限。 |
-
-这些命令更改分配给文件或目录的所有者或组。
-
-作为 root 用户，你可以使用以下语法通过 `chown` 命令更改文件的用户和组所属关系：
-
-```
-chown new_user.new_group file
-```
-
-## 在 Linux 上集成 Novell Open Enterprise Server
-
-例如，在下面的示例中，root 将文件 hello.txt 的所有权从 geeko 更改为用户 newbie：
-
-```
-earth:/tmp # ls -la hello.txt
--rw-r--r-- 1 geeko users 0 2004-04-06 12:43 hello.txt
-earth:/tmp # chown newbie.users hello.txt
-earth:/tmp # ls -la hello.txt
--rw-r--r-- 1 newbie users 0 2004-04-06 12:43 hello.txt
-earth:/tmp #
-```
-
-要仅更改所有者（不更改组），请使用以下命令：
-
-```
-chown new_user_file
-```
-
-要更改组（不更改用户），请使用以下命令：
-
-```
-chown new_group_file
-```
-
-例如，以下命令用于限制 list.txt 访问权限为 advanced 组的成员：
-
-```
-earth:/tmp # ls -la list.txt
--rw-r--r-- 1 geeko users 0 2004-04-06 12:43 list.txt
-earth:/tmp # chown .advanced list.txt
-earth:/tmp # ls -la list.txt
--rw-r--r-- 1 geeko advanced 0 2004-04-06 12:43 list.txt
-earth:/tmp #
-```
-
-尽管组已经更改，但所有者权限保持不变（所有者和 root 仍然可以访问该文件）。
-
-作为 root 用户，你还可以使用以下语法通过 `chgrp` 命令更改文件的组所属关系：
+作为 `root` 用户，你还可以使用以下语法通过 `chgrp` 命令更改文件的组所属关系：
 
 ```
 chgrp new_group_file
@@ -3341,11 +3002,11 @@ chgrp new_group_file
 
 除了使用命令（如 `chmod` 或 `chown`）外，你还可以从 GUI 界面（通常是文件浏览器）修改文件或目录的权限。
 
-例如，你可以通过以下步骤使用 KDE 中的 Konqueror 更改权限：
+例如，你可以通过以下步骤使用 KDE 中的 `Konqueror` 更改权限：
 
-- 1. 启动 **Konqueror**；然后浏览到**文件**或**目录**（不要打开它）。
-- 2. 右键点击你想修改的**文件**或**目录**；然后选择**Properties**（属性）。
-- 3. 选择 **Permissions**（权限）选项卡。
+- 1. 启动 `Konqueror`；然后浏览到文件或目录（不要打开它）。
+- 2. 右键点击你想修改的文件或目录；然后选择 `Properties`（属性）。
+- 3. 选择 `Permissions`（权限）选项卡。
 
 ## 类似下面的对话框：
 
@@ -3359,12 +3020,12 @@ chgrp new_group_file
 
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_196_0.png)
 
-- b. 选择你想要设置的权限，然后选择 OK 完成。
-- c. 当你完成文件或目录的权限配置时，选择 OK 保存配置。
+- b. 选择你想要设置的权限，然后选择 `OK` 完成。
+- c. 当你完成文件或目录的权限配置时，选择 `OK` 保存配置。
 
-> 有关 Linux POSIX 和 NSS 目录及文件属性的详细信息，请参阅《Novell Open Enterprise Server File Systems Management Guide》(stor_filesys.pdf) 第 42 页的“Access Control for NSS on Linux”。
+> 有关 Linux POSIX 和 NSS 目录及文件属性的详细信息，请参阅《Novell Open Enterprise Server File Systems Management Guide》(`stor_filesys.pdf`) 第 42 页的“Access Control for NSS on Linux”。
 
-你可以从 http://www.novell.com/documentation/oes 或从你 3077 Course CD 上的 OES_Docs 目录访问指南。
+你可以从 `http://www.novell.com/documentation/oes` 或从你 3077 Course CD 上的 `OES_Docs` 目录访问指南。
 
 ## 练习 2-4
 
@@ -3385,11 +3046,11 @@ chgrp new_group_file
 
 除了使用命令（如 `chmod` 或 `chown`）外，你还可以从 GUI 界面（通常是文件浏览器）修改文件或目录的权限。
 
-例如，你可以通过以下步骤使用 KDE 中的 Konqueror 更改权限：
+例如，你可以通过以下步骤使用 KDE 中的 `Konqueror` 更改权限：
 
-- 1. 启动 **Konqueror**；然后浏览到**文件**或**目录**（不要打开它）。
-- 2. 右键点击你想修改的**文件**或**目录**；然后选择**Properties**（属性）。
-- 3. 选择 **Permissions**（权限）选项卡。
+- 1. 启动 `Konqueror`；然后浏览到文件或目录（不要打开它）。
+- 2. 右键点击你想修改的文件或目录；然后选择 `Properties`（属性）。
+- 3. 选择 `Permissions`（权限）选项卡。
 
 ## 类似下面的对话框：
 
@@ -3403,17 +3064,14 @@ chgrp new_group_file
 
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_196_0.png)
 
-- b. 选择你想要设置的权限，然后选择 OK 完成。
-- c. 当你完成文件或目录的权限配置时，选择 OK 保存配置。
+- b. 选择你想要设置的权限，然后选择 `OK` 完成。
+- c. 当你完成文件或目录的权限配置时，选择 `OK` 保存配置。
 
-> 有关 Linux POSIX 和 NSS 目录及文件属性的详细信息，请参阅《Novell Open Enterprise Server File Systems Management Guide》(stor_filesys.pdf) 第 42 页的“Access Control for NSS on Linux”。
+> 有关 Linux POSIX 和 NSS 目录及文件属性的详细信息，请参阅《Novell Open Enterprise Server File Systems Management Guide》(`stor_filesys.pdf`) 第 42 页的“Access Control for NSS on Linux”。
 
-你可以从 http://www.novell.com/documentation/oes 或从你 3077 Course CD 上的 OES_Docs 目录访问指南。
+你可以从 `http://www.novell.com/documentation/oes` 或从你 3077 课程 CD 上的 `OES_Docs` 目录访问指南。
 
-
-
-
-##（续）表 3-1 文件描述
+## （续）表 3-1 文件描述
 
 | 文件 | 描述 |
 | --- | --- |
@@ -3443,9 +3101,9 @@ Novell iMonitor 通过 Web 浏览器为您 eDirectory 树中的所有服务器�
 
 尽管这些工具之间存在某些功能上的重叠，但您主要使用 NRM 管理服务器，使用 iMonitor 从 eDirectory 角度检查服务器，并使用 iManager 配置和管理 Novell OES 服务。
 
-> 如需查看所有可用管理工具的完整详细列表，请参阅《Novell OES SP2 规划与实施》(implldg.pdf) 第 91 页的“管理工具和接口概述”。
+> 如需查看所有可用管理工具的完整详细列表，请参阅《Novell OES SP2 规划与实施》(`implldg.pdf`) 第 91 页的“管理工具和接口概述”。
 
-您可以从 http://www.novell.com/documentation/oes 或从 3077 课程 CD 上的 OES_Docs 目录访问该指南。
+您可以从 `http://www.novell.com/documentation/oes` 或从 3077 课程 CD 上的 `OES_Docs` 目录访问该指南。
 
 3-4 严禁复制本手册的全部或部分或发行此类副本。版本 1 如怀疑存在复制，请拨打 1-800-PIRATES。
 
@@ -3453,53 +3111,55 @@ Novell iMonitor 通过 Web 浏览器为您 eDirectory 树中的所有服务器�
 
 ## 使用 OpenSSH 远程管理 OES 服务器
 
-许多 telnet、login、ftp 以及其他程序的用户可能没有意识到他们的密码和数据是以未加密的形式在互联网上传输的。
+许多 `telnet`、`login`、`ftp` 以及其他程序的用户可能没有意识到他们的密码和数据是以未加密的形式在互联网上传输的。
 
-OpenSSH 是一个开源 SSH（安全外壳）软件包，它可以加密所有流量（包括密码），以有效消除窃听、连接劫持和其他网络层攻击。
+`OpenSSH` 是一个开源 SSH（安全外壳）软件包，它可以加密所有流量（包括密码），以有效消除窃听、连接劫持和其他网络层攻击。
 
-此外，OpenSSH 还提供了多种安全的隧道隧道功能。
+此外，`OpenSSH` 还提供了多种安全的隧道隧道功能。
 
-Novell OES 在 OES Linux 和 OES NetWare 上都提供了 OpenSSH 包。为了有效使用 OpenSSH 远程对 OES 服务器执行基本管理任务，您需要了解以下内容：
+
+
+# Novell OES 在 OES Linux 和 OES NetWare 上都提供了 OpenSSH 包。为了有效使用 OpenSSH 远程对 OES 服务器执行基本管理任务，您需要了解以下内容：
 
 - OpenSSH 的优势
 - OpenSSH 与 OES Linux
 - OpenSSH 与 OES NetWare
 - 如何使用 SSH 命令
 
-### OpenSSH 的优势
+## OpenSSH 的优势
 
 以下是将 OpenSSH 与 Novell OES 集成的某些优势简要列表：
 
 - 您可以从远程安全地访问并复制 OES Linux 或 OES NetWare 服务器上主目录中的文件，而无需使用浏览器或专有客户端。
-- 您可以使用 ssh 实用程序远程访问网络中的任何服务器，并在其网络中的其他服务器之间相互复制文件和目录。
-- 您可以将 ssh 实用程序命令放入脚本文件中以自动化许多例行任务。
+- 您可以使用 `ssh` 实用程序远程访问网络中的任何服务器，并在其网络中的其他服务器之间相互复制文件和目录。
+- 您可以将 `ssh` 实用程序命令放入脚本文件中以自动化许多例行任务。
 - 由于 SSH 客户端协议已移植到 NetWare，您可以使用远程客户端或来自运行 NetWare 6.5 的网络远程服务器上的 SSH 命令将文件从一个服务器复制到另一个服务器。
 - SSH 协议允许您连接到服务器并自动发送命令，因此服务器将运行该命令并断开连接。这意味着可以使用自动化过程。
 - SSH 协议无论您是在防火墙外还是内部，都能提供跨越互联网的数据传输和通信的安全性。您可以相信黑客无法访问您的数据。
 
-### OpenSSH 与 OES Linux
+## OpenSSH 与 OES Linux
 
-OpenSSH 软件包默认安装在 OES Linux (SLES 9) 上。随后，ssh、scp 和 sftp 程序将作为 telnet、rlogin、rsh、rcp 和 ftp 的替代方案。
+`OpenSSH` 软件包默认安装在 OES Linux (SLES 9) 上。随后，`ssh`、`scp` 和 `sftp` 程序将作为 `telnet`、`rlogin`、`rsh`、`rcp` 和 `ftp` 的替代方案。
 
-以下 OpenSSH 信息专门适用于 OES Linux：
+以下 `OpenSSH` 信息专门适用于 OES Linux：
 
 - 如何配置 SSH 服务器
 - SSH 服务器命令
 - 如何配置 SSH 客户端
 
-有关 OpenSSH 和 OES Linux 的完整信息，请参阅《SUSE LINUX Enterprise Server 9 管理指南》(sles_admin.pdf) 第 444 页的“SSH — Secure Shell，安全的替代方案”。
+有关 OpenSSH 和 OES Linux 的完整信息，请参阅《SUSE LINUX Enterprise Server 9 管理指南》(`sles_admin.pdf`) 第 444 页的“SSH — Secure Shell，安全的替代方案”。
 
-您可以从 http://www.novell.com/documentation/oes 或从 3077 课程 CD 上的 OES_Docs 目录访问该指南。
+您可以从 `http://www.novell.com/documentation/oes` 或从 3077 课程 CD 上的 `OES_Docs` 目录访问该指南。
 
 ### 如何配置 SSH 服务器
 
-OpenSSH 服务器的配置文件为 /etc/ssh/sshd_config。配置文件中一些常用的选项包括以下：
+`OpenSSH` 服务器的配置文件为 `/etc/ssh/sshd_config`。配置文件中一些常用的选项包括以下：
 
 | 表 3-2 | 选项 | 描述 |
 |--- |--- |--- |
-| | AllowUsers | 允许指定的用户进行 SSH 登录 |
-| | DenyUsers | 禁止指定的用户进行 SSH 登录 |
-| | Protocol | 指定支持的协议版本。（默认：2） |
+| | `AllowUsers` | 允许指定的用户进行 SSH 登录 |
+| | `DenyUsers` | 禁止指定的用户进行 SSH 登录 |
+| | `Protocol` | 指定支持的协议版本。（默认：2） |
 
 有关 SSH 服务器配置选项的更多信息，请输入 `man sshd`。
 
@@ -3509,10 +3169,10 @@ OpenSSH 服务器的配置文件为 /etc/ssh/sshd_config。配置文件中一些
 
 | 表 3-3 | 程序/命令 | 描述 |
 |--- |--- |--- |
-| | /usr/sbin/sshd | 这是 SSH 守护进程（通过 /etc/init.d/sshd 控制）。 |
-| | ssh-keyscan | 此命令从 SSH 服务器收集公主机密钥。它将其显示在标准输出上。该输出可以与 /etc/ssh/known_hosts 文件中的密钥进行比较并包含其中。 |
+| | `/usr/sbin/sshd` | 这是 SSH 守护进程（通过 `/etc/init.d/sshd` 控制）。 |
+| | `ssh-keyscan` | 此命令从 SSH 服务器收集公主机密钥。它将其显示在标准输出上。该输出可以与 `/etc/ssh/known_hosts` 文件中的密钥进行比较并包含其中。 |
 
-在标准的 OES Linux 安装中，SSH 守护进程在运行级别 3 和 5 中自动启动。在以下 ssh-keyscan 示例中，从计算机 DA10 读取密钥：
+在标准的 OES Linux 安装中，SSH 守护进程在运行级别 3 和 5 中自动启动。在以下 `ssh-keyscan` 示例中，从计算机 DA10 读取密钥：
 
 ```
 geeko@DA50:~> ssh-keyscan DA10
@@ -3521,15 +3181,15 @@ geeko@DA50:~> ssh-keyscan DA10
 
 ### 如何配置 SSH 客户端
 
-通过编辑 /etc/ssh/ssh_config 配置 SSH 客户端。如果您希望仅接受以前输入过的服务器，则需要客户端配置 (~/.ssh/config) 中的 `StrictKeyChecking` 选项设置为 `Yes`。这将防止客户端在不检查的情况下输入新密钥。
+通过编辑 `/etc/ssh/ssh_config` 配置 SSH 客户端。如果您希望仅接受以前输入过的服务器，则需要客户端配置 (`~/.ssh/config`) 中的 `StrictKeyChecking` 选项设置为 `Yes`。这将防止客户端在不检查的情况下输入新密钥。
 
-在 SSH 2.0 及更高版本中，`StrictKeyChecking` 允许三个值：Yes、No 和 Ask。默认设置为 ask，这意味着在输入新密钥时会请求许可。
+在 SSH 2.0 及更高版本中，`StrictKeyChecking` 允许三个值：`Yes`、`No` 和 `Ask`。默认设置为 ask，这意味着在输入新密钥时会请求许可。
 
 有关 SSH 配置的更多信息，请输入 `man ssh`。
 
-### OpenSSH 与 OES NetWare
+## OpenSSH 与 OES NetWare
 
-OES NetWare  OpenSSH 使用 Novell 国际基础设施 (NICI) 技术提供的加密，而不是 SSL 实现 128 位（及更高）加密，并且包含更少的软件缺陷。在 NetWare 6.5 中，Novell 集成了 OpenSSH 版本 3.7p1。通过此安全外壳，具有管理员权限的用户可以使用 SSH 实用程序远程访问网络中的任何服务器并复制文件和目录。
+OES NetWare `OpenSSH` 使用 Novell 国际基础设施 (`NICI`) 技术提供的加密，而不是 SSL 实现 128 位（及更高）加密，并且包含更少的软件缺陷。在 NetWare 6.5 中，Novell 集成了 `OpenSSH` 版本 3.7p1。通过此安全外壳，具有管理员权限的用户可以使用 SSH 实用程序远程访问网络中的任何服务器并复制文件和目录。
 
 在 OES NetWare 上使用 OpenSSH，您还需要了解以下内容：
 
@@ -3537,43 +3197,39 @@ OES NetWare  OpenSSH 使用 Novell 国际基础设施 (NICI) 技术提供的加�
 - OES NetWare上的 OpenSSH 实用程序
 - 特有的 OES NetWare OpenSSH 特性
 
-有关 OpenSSH 和 OES NetWare 的完整信息，请参阅《Novell OES OpenSSH NetWare 管理指南》(openssh.psf)。
+有关 OpenSSH 和 OES NetWare 的完整信息，请参阅《Novell OES OpenSSH NetWare 管理指南》(`openssh.psf`)。
 
-
-
-
-
-## OES NetWare  OpenSSH 工具
+### OES NetWare OpenSSH 工具
 
 与 NetWare 6.5 集成的 OpenSSH 套件包含以下内容：
 
-- 替换 login 和 telnet 的 ssh 程序
-- scp (替换 rcp)
-- sftp (ftp 的替代方案)
-- sshd (软件包的服务器端)
-- 其他如 ssh-keygen 或 sftp-server 等基本实用
+- 替换 `login` 和 `telnet` 的 `ssh` 程序
+- `scp` (替换 `rcp`)
+- `sftp` (`ftp` 的替代方案)
+- `sshd` (软件包的服务器端)
+- 其他如 `ssh-keygen` 或 `sftp-server` 等基本实用
 
-OpenSSH 支持 SSH 协议版本 1.3、1.5 和 2.0。
+`OpenSSH` 支持 SSH 协议版本 1.3、1.5 和 2.0。
 
-## OES NetWare OpenSSH 特有功能
+### OES NetWare OpenSSH 特有功能
 
 以下工具和功能是 OES NetWare OpenSSH 实现特有的：
 
-- **OpenSSH Manager。** 任何属于 sshadmin-Administrators 组的用户都获得授予访问 OpenSSH Manager 的权限，以修改 OpenSSH 服务器的配置。
+- `OpenSSH Manager`。任何属于 `sshadmin-Administrators` 组的用户都获得授予访问 OpenSSH Manager 的权限，以修改 OpenSSH 服务器的配置。
 
-可以通过浏览器通过 ssl 连接端口 2200 访问 OpenSSH Manager。此工具允许执行各种任务，如查看 ssh 连接、轻松更改 sshd_config 文件以及设置日志偏好。
+可以通过浏览器通过 ssl 连接端口 2200 访问 OpenSSH Manager。此工具允许执行各种任务，如查看 ssh 连接、轻松更改 `sshd_config` 文件以及设置日志偏好。
 
-- **SSH 日志守护进程。** 该代理生成日志文件，包含来自所有 ssh 类型 NLM™ 程序（如 ssh、ssh、sftp 或 scp）的所有日志和错误。
+- `SSH 日志守护进程`。该代理生成日志文件，包含来自所有 ssh 类型 NLM™ 程序（如 `ssh`、`ssh`、`sftp` 或 `scp`）的所有日志和错误。
 
-- **身份验证。** OpenSSH 通过 LDAP 使用密码身份验证。此验证从 Novell eDirectory 收集用户的所有凭据。
+- `身份验证`。`OpenSSH` 通过 LDAP 使用密码身份验证。此验证从 Novell eDirectory 收集用户的所有凭据。
 
-- **sshlogd.nlm (sys:\system)**
+- `sshlogd.nlm` (`sys:\system`)
 
 用户身份验证后，如果在 eDirectory 中进行了配置，则当前工作目录将是其主目录；否则，他们将位于连接的服务器卷的根目录。
 
-用户可以像使用 ftp 一样导航到该服务器上的任何在 eDirectory 中已分配权限的目录。
+用户可以像使用 `ftp` 一样导航到该服务器上的任何在 eDirectory 中已分配权限的目录。
 
-ssh localhost 命令在 OES NetWare 服务器上不起作用；但 scp localhost 和 sftp localhost 命令可以工作。
+`ssh localhost` 命令在 OES NetWare 服务器上不起作用；但 `scp localhost` 和 `sftp localhost` 命令可以工作。
 
 ## 如何使用 SSH 命令
 
@@ -3589,61 +3245,82 @@ OES Linux 包含一个带有 X Server 桌面环境的 SSH 客户端。在运行�
 
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_212_0.png)
 
-有关所有 SSH 命令的完整信息和列表，请参考《SUSE LINUX Enterprise Server 9 管理指南》(sles_admin.pdf) 和《Novell OES OpenSSH for NetWare 管理指南》(openssh.pdf)。
+有关所有 SSH 命令的完整信息和列表，请参考《SUSE LINUX Enterprise Server 9 管理指南》(`sles_admin.pdf`) 和《Novell OES OpenSSH for NetWare 管理指南》(`openssh.pdf`)。
 
-你可以通过 http://www.novell.com/documentation/oes 或从 3077 课程 CD  OES_Docs 目录访问这些指南。
+你可以通过 `http://www.novell.com/documentation/oes` 或从 3077 课程 CD `OES_Docs` 目录访问这些指南。
 
-## SSH 命令
+### SSH 命令
 
 在工作站上下载符合 SSH 标准的客户端后，你可以使用以下命令在运行 OpenSSH 服务器的 OES 服务器上完成基本任务：
 
 | 表 3-4 | 命令 | 描述 |
 | :--- | :--- | :--- |
-| | ssh | 连接并登录到指定的服务器（主机名）。你必须向远程机器提供身份（例如 ssh admin@10.0.0.1）。 |
-| | sshd | 控制守护进程如何记录你的登录。 |
-| | sftp | 使用类似 FTP 的命令执行安全文件传输，该命令可在 SSH1 和 SSH2 协议上运行。 |
-| | scp | 在网络上的主机之间复制文件。它使用 SSH1 进行数据传输，并使用与 SSH1 相同的身份验证并提供相同的安全性。 |
-| | | 如果身份验证需要，Scp 会提示输入密码或短语。 |
+| | `ssh` | 连接并登录到指定的服务器（主机名）。你必须向远程机器提供身份（例如 `ssh admin@10.0.0.1`）。 |
+| | `sshd` | 控制守护进程如何记录你的登录。 |
+
+
+
+| | `sftp` | 使用类似 FTP 的命令执行安全文件传输，该命令可在 SSH1 和 SSH2 协议上运行。 |
+
+| | `scp` | 在网络上的主机之间复制文件。它使用 SSH1 进行数据传输，并使用与 SSH1 相同的身份验证并提供相同的安全性。 |
+
+| | | 如果身份验证需要，`Scp` 会提示输入密码或短语。 |
 
 ## SSH 命令选项
 
-从 SSH 客户端开始，你可以配合 ssh 命令使用以下基本选项：
+从 SSH 客户端开始，你可以配合 `ssh` 命令使用以下基本选项：
 
 | 表 3-5 | 选项 | 描述 |
-| :--- | :--- | :--- |
-| | -b bind_address | 指定从多个地址或别名地址的机器传输的本地 IP 地址。 |
-| | -C | 启用压缩。 |
-| | -D port | 启用动态应用层端口转发。 |
-| | -f | 身份验证后进入到后台运行。 |
 
-##（续）表 3-5 选项描述
+| :--- | :--- | :--- |
+
+| | `-b` `bind_address` | 指定从多个地址或别名地址的机器传输的本地 IP 地址。 |
+
+| | `-C` | 启用压缩。 |
+
+| | `-D` `port` | 启用动态应用层端口转发。 |
+
+| | `-f` | 身份验证后进入到后台运行。 |
+
+## （续）表 3-5 选项描述
 
 | 选项 | 描述 |
+
 | :--- | :--- |
-| -g | 允许远程主机连接到转发的端口。 |
-| -l username | 使用指定的用户名登录。 |
-| -L listen-port:host:port | 将本地端口转发到远程地址。这导致 ssh 在端口上监听连接，并通过连接到 host:port 将它们转发到另一端。 |
-| -p port | 连接到指定的端口。服务器必须在相同的端口上。 |
-| -q | 不显示任何警告消息。 |
-| -R listenport:host:port | 将远程端口转发到本地地址。导致 ssh 在端口上监听连接，并通过连接到 host:port 将它们转发到另一端。 |
-| -x | 禁用 X11 连接转发（默认）。 |
-| -X | 启用 X11 连接转发。 |
+
+| `-g` | 允许远程主机连接到转发的端口。 |
+
+| `-l` `username` | 使用指定的用户名登录。 |
+
+| `-L` `listen-port:host:port` | 将本地端口转发到远程地址。这导致 `ssh` 在端口上监听连接，并通过连接到 `host:port` 将它们转发到另一端。 |
+
+| `-p` `port` | 连接到指定的端口。服务器必须在相同的端口上。 |
+
+| `-q` | 不显示任何警告消息。 |
+
+| `-R` `listenport:host:port` | 将远程端口转发到本地地址。导致 `ssh` 在端口上监听连接，并通过连接到 `host:port` 将它们转发到另一端。 |
+
+| `-x` | 禁用 X11 连接转发（默认）。 |
+
+| `-X` | 启用 X11 连接转发。 |
 
 ## SSH 命令示例
 
 以下是在 OES Linux 命令提示符中使用 SSH 客户端命令的一些示例：
 
-- **root@DA2:-> ssh da4.da.com**
+- `root@DA2:-> ssh da4.da.com`
+
   在此示例中，用户 root 登录计算机 da4.da.com。
-- **root@DA2:-> ssh -l admin da4.da.com**
-- **root@DA2:-> ssh -l admin da4.da.com**
+
+- `root@DA2:-> ssh -l admin da4.da.com`
+
+- `root@DA2:-> ssh -l admin da4.da.com`
+
   在此示例中，用户 root 登录计算机 da4.da.com。
-- **root@DA2:-> ssh -l admin da4.da.com**
-- **root@DA2:-> ssh -l admin da4.da.com**
 
+- `root@DA2:-> ssh -l admin da4.da.com`
 
-
-
+- `root@DA2:-> ssh -l admin da4.da.com`
 
 ## 集成 Linux 版本的 Novell Open Enterprise Server
 
@@ -3662,39 +3339,69 @@ OES Linux 包含一个带有 X Server 桌面环境的 SSH 客户端。在运行�
 以下比较了 OES NetWare 和 OES Linux 上主要 NRM 特性的可用性：
 
 | 表 3-6 | 任务 | OES 平台 |
+
 |---|---|---|
+
 | 监控和管理您的服务器健康状况： | | |
+
 | 监控一个或多个服务器的健康状态。 | NetWare/Linux | |
+
 | 构建一个可以对其执行组操作的服务器组。 | NetWare/Linux | |
+
 | 访问 Novell eDirectory 健康检查和故障排除工具。 | NetWare | |
+
 | 访问服务器和配置日志。 | NetWare/Linux | |
+
 | 配置您的服务器： | | |
+
 | 管理磁盘分区。 | NetWare | |
+
 | 访问服务器控制台屏幕。 | NetWare/Linux | |
+
 | 查看所有硬件适配器、硬件资源和处理器数据的信息。 | NetWare/Linux | |
+
 | 上传并替换 NLM 程序、LAN 驱动程序或磁盘驱动程序。 | NetWare | |
+
 | 上传、访问和替换文件 | NetWare/Linux | |
+
 | 监控系统磁盘空间和内存资源。 | NetWare/Linux（仅限内存） | |
+
 | 访问卷和 DOS 分区上的文件。 | NetWare | |
+
 | 管理服务器连接。 | NetWare | |
+
 | 配置 Set 参数。 | NetWare | |
+
 | 为运行控制台命令设置计划。 | NetWare | |
+
 | 关闭、重启或重置服务器。 | NetWare/Linux | |
+
 | 排除服务器问题： | | |
+
 | 查找 CPU 占用者。 | NetWare | |
+
 | 运行并查看一个或多个服务器的清单报告。 | NetWare | |
+
 | 查找高内存占用用户。 | NetWare/Linux | |
+
 | 从源头追踪。 | NetWare | |
+
 | 定位服务器进程占用者。 | NetWare | |
+
 | 查找磁盘空间占用者。 | NetWare | |
+
 | 查看谁正在使用打开的文件。 | Linux | |
+
 | 监控服务器进程。 | | |
 
 当你在服务器上安装并加载了其他产品和实用程序时，你可以通过 NRM 执行附加任务：
 
 - 管理和监控 Novell Cluster Services™
+
 - 监控 IPP 打印服务健康
+
 - 管理 IP 地址
+
 - 监控 Novell 许可证 (NetWare)
 
 ## 共存与兼容性问题
@@ -3709,50 +3416,67 @@ OES Linux 包含一个带有 X Server 桌面环境的 SSH 客户端。在运行�
 
 - OES 包含的 NRM 版本只能运行在 NetWare 6.5 SP3 服务器上。
 
-- 未运行 owcimod 模块或未运行 NetWare 6 或 6.5 的 Linux 服务器只能报告 Up/Down（开启/关闭）状态。
+- 未运行 `owcimod` 模块或未运行 NetWare 6 或 6.5 的 Linux 服务器只能报告 Up/Down（开启/关闭）状态。
 
 - 下表总结了 NetWare 版 NRM 与各种操作系统的兼容性：
 
 | 表 3-7 | 监控类型 | 操作系统 | 兼容版本 |
+
 | --- | --- | --- | --- |
+
 | | Ping | 任意 | 不适用 |
+
 | | NRM | NetWare | - NetWare  OES - NetWare 6.5 SP3 |
+
 | NRM | Linux | - SUSE® LINUX  OES 可获取完整健康状态 - SUSE LINUX Enterprise Server 9 SP1 只能获取 Up/Down 状态 |
 
 ## 如何在 OES NetWare 上使用 NRM
 
-NRM (portal.nlm) 提供了 NetWare 上 Monitor 的所有功能，以及服务器控制台上可用其他实用程序的一些功能；然而，NRM 通过 Web 浏览器提供了这些功能。
+`NRM` (`portal.nlm`) 提供了 NetWare 上 Monitor 的所有功能，以及服务器控制台上可用其他实用程序的一些功能；然而，NRM 通过 Web 浏览器提供了这些功能。
 
 要在 OES NetWare 上使用 NRM，你需要熟悉以下内容：
 
 - NRM 优势
+
 - OES NetWare 服务器上的管理任务
+
 - OES SP1 和 SP2 中 NetWare 6.5 版 NRM 的新特性
+
 - 系统要求
+
 - 如何登录 NetWare 版 NRM
+
 - 如何退出 NetWare 版 NRM
 
 ## 集成 Linux 版本的 Novell Open Enterprise Server
 
 - 重启 NRM 或 HTTP 接口
+
 - 访问并管理其他 NetWare 服务器
+
 - OES NetWare 上的 NRM 局限性
 
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_223_0.png)
 
-有关 OES NetWare 上的 NRM 的完整信息，请参阅《Novell NetWare 远程管理指南》(remotemgr.pdf)。
+有关 OES NetWare 上的 NRM 的完整信息，请参阅《Novell NetWare 远程管理指南》(`remotemgr.pdf`)。
 
-你可以从 http://www.novell.com/documentation/ 或从 3077 课程 CD 上的 OES_Docs 目录访问该指南。
+你可以从 `http://www.novell.com/documentation/` 或从 3077 课程 CD 上的 `OES_Docs` 目录访问该指南。
 
 ## NRM 优势
 
 在 OES NetWare 上使用 NRM 而非 Monitor 或 RConsole 进行服务器管理具有以下优势：
 
 - 比其他管理工具更快速地访问信息。
+
 - 默认安装在所有 NetWare 服务器上，且大多数操作不需要特殊配置。
+
 - 不需要特殊的客户端。
+
 - 提供图形化界面，使诊断信息更易理解、更易管理。
+
 - 提供其他实用程序中未包含的功能。
+
+
 
 ## OES NetWare 服务器上的管理任务
 
@@ -3801,16 +3525,11 @@ NRM (portal.nlm) 提供了 NetWare 上 Monitor 的所有功能，以及服务器
 | 访问 | 左侧导航框架包含可折叠的类别，并在下次登录时被记住。这允许你显示最常用的 Novell Remote Manager 功能，并隐藏不常用的功能。 | SP1 |
 | 配置 | 控制对 Novell Remote Manager 的访问。 | SP1 |
 | 诊断服务器 | 健康监控页面上添加了“故障地址空间计数”健康项。通过此健康项，你可以 | SP2 |
-
 - 查看故障地址空间的健康状态。
 - 访问故障地址空间计数页面，你可以在其中：
 - 查看服务器上加载的所有地址空间的故障信息
 - 清除特定地址**的故障计数
 - 访问特定空间的地址空间信息页面
-
-
-
-
 
 ##（续）表 3-8
 
@@ -3832,9 +3551,9 @@ NRM (portal.nlm) 提供了 NetWare 上 Monitor 的所有功能，以及服务器
 | 管理服务器，卷（主页） | 查看每个卷的所有打开文件列表，并关闭到特定文件的多个连接。 | SP1 |
 | 管理服务器，卷（主页） | 不可用分区现在显示在“卷管理（主页）”页面。 | SP1 |
 
-> 有关为 OES SP1 的 NRM 添加的新功能的更多细节，请参阅《Novell 远程管理器用于 NetWare 管理指南》（remotemgr.pdf）第 17 页的“新功能”章节。
+> 有关为 OES SP1 的 NRM 添加的新功能的更多细节，请参阅《Novell 远程管理器用于 NetWare 管理指南》（`remotemgr.pdf`）第 17 页的“新功能”章节。
 
-你可以通过 http://www.novell.com/documentation/oes 或从你的 3077 课程光盘 OES_Docs 目录访问该指南。
+你可以通过 `http://www.novell.com/documentation/oes` 或从你的 3077 课程光盘 `OES_Docs` 目录访问该指南。
 
 ## 系统要求
 
@@ -3842,7 +3561,7 @@ NRM (portal.nlm) 提供了 NetWare 上 Monitor 的所有功能，以及服务器
 
 - NetWare 5.1 或更高版本
 - Mozilla Firefox 1.0、Microsoft Internet Explorer 6 或更高版本、Mozilla 1.7（适用于 SLES 9 SP1 和 Linux Professional 9.2）、KDE 3.2 Konqueror（功能受限）、NetWare 服务器浏览器或 Safari 1.2（功能受限；字体文本为中等或更小）
-- 服务器上的 portal 和 httpstk NLM 程序。
+- 服务器上的 `portal` 和 `httpstk` NLM 程序。
 
 这些文件在所有 NetWare 安装过程中都会默认加载到 `autoexec.ncf` 文件中。
 
@@ -3883,7 +3602,7 @@ load httpptk.nlm/hosts:1 /SSL/keyfile:"SSL CertificateIP"
 
 为了访问远程管理服务器所需的所有页面，你需要以具有服务器对象“超级管理员”（Supervisor）权限的用户身份登录。这通常是 Admin 用户或具有与 Context 用户等权限的用户。
 
-> 如果 `autoexec.nlm` 文件中删除了 `Set Bindery Context =` 行，或者未更改默认目录（defaultDirectory）上下文，请输入你登录用户的的完整上下文（context）。
+> 如果 `autoexec.nlm` 文件中删除了 `Set Bindery Context =` 行，或者未更改默认目录（`defaultDirectory`）上下文，请输入你登录用户的的完整上下文（context）。
 
 如果你以没有超级管理员权限的用户登录，你将只能看到你有访问权限的卷、目录和文件。
 
@@ -3895,50 +3614,47 @@ load httpptk.nlm/hosts:1 /SSL/keyfile:"SSL CertificateIP"
 
 ## 重启 NRM 或 HTTP 接口
 
-当你对 OES NetWare 进行了需要重启 portal.nlm 或 httpstk.nlm 的更改后，请确保选择“重启”（Restart）按钮。系统将弹出消息询问是否重启（这将临时禁用实用程序）。重置完成后，页面将刷新到带有更改设置配置页面。如果你更改了端口设置，请在访问 NRM 时使用新数字。
+当你对 OES NetWare 进行了需要重启 `portal.nlm` 或 `httpstk.nlm` 的更改后，请确保选择“重启”（Restart）按钮。系统将弹出消息询问是否重启（这将临时禁用实用程序）。重置完成后，页面将刷新到带有更改设置配置页面。如果你更改了端口设置，请在访问 NRM 时使用新数字。
 
 配置页面的功能会跟踪依赖这些 NLM 的插件模块，并卸载重新加载所有所需的模块。
 
 ## 集成 Linux 版 Novell 企业级服务器（续）
 
-如果你在服务器控制台上卸载 portal.nlm 或 httpstk.nlm，可能会遇到已建立的模块依赖（如 timesync、libc、tcpstats 和 nwusage）问题，导致 NLM 可能无法卸载。
+如果你在服务器控制台上卸载 `portal.nlm` 或 `httpstk.nlm`，可能会遇到已建立的模块依赖（如 `timesync`、`libc`、`tcpstats` 和 `nwusage`）问题，导致 NLM 可能无法卸载。
 
-如果你成功卸载了模块，必须在 portal.nlm 后手动加载依赖模块。
+
+
+如果你成功卸载了模块，必须在 `portal.nlm` 后手动加载依赖模块。
 
 ## 访问和管理其他 NetWare 服务器
 
-要访问 eDirectory 树中加载了 NRM 的其他 NetWare 服务器，选择“管理服务器”>“服务器列表”。服务器列表通过 SLP 提供。
+要访问 `eDirectory` 树中加载了 `NRM` 的其他 NetWare 服务器，选择“管理服务器”>“服务器列表”。服务器列表通过 `SLP` 提供。
 
-服务器名称旁问号图标表示 portal.nlm 正在检查其可用性。如果该服务器位于当前树中，问号图标将变为服务器图标；如果不在当前树中，则会被移除。
+服务器名称旁问号图标表示 `portal.nlm` 正在检查其可用性。如果该服务器位于当前树中，问号图标将变为服务器图标；如果不在当前树中，则会被移除。
 
 要刷新列表，请再次选择“服务器列表”加载页面，然后使用常规浏览器功能刷新列表。
 
 ## NRM 在 OES NetWare 局限性
 
-以下是 NRM 的已知局限性，可能在当前版本中无法解决：
+以下是 `NRM` 的已知局限性，可能在当前版本中无法解决：
 
-- 字符显示问题。在此版本中，NetWare 版 NRM 取决于所监控服务器的代码页（语言）。文件或文件夹名称中任何不属于服务器本地或原生字符集的字符都无法显示。
-
-
-
-
-[content]
+- 字符显示问题。在此版本中，NetWare 版 `NRM` 取决于所监控服务器的代码页（语言）。文件或文件夹名称中任何不属于服务器本地或原生字符集的字符都无法显示。
 
 例如，如果名称包含服务器代码页/字符集之外的字符，你可能会看到文件列表中的项目显示为空项。
 
-尽管包含这些字符名称的文件和文件夹可以创建或迁移到服务器，但在解决此限制（在未来的版本中）之前，无法通过 NetWare 上的 Novell Remote Manager (NRM) 工具使用它们。
+尽管包含这些字符名称的文件和文件夹可以创建或迁移到服务器，但在解决此限制（在未来的版本中）之前，无法通过 NetWare 上的 Novell Remote Manager (`NRM`) 工具使用它们。
 
-- **使用组操作。** 目前在《针对 OES 的 Novell Remote Manager 管理指南》中记录为 Novell Remote Manager 中可用的某些服务器组报告和操作，在升级到 NetWare 6.5 SP3 或 OES SP1 后将不可用。
+- 使用组操作。目前在《针对 OES 的 Novell Remote Manager 管理指南》中记录为 Novell Remote Manager 中可用的某些服务器组报告和操作，在升级到 NetWare 6.5 SP3 或 OES SP1 后将不可用。
 
-随着 NRM 的服务器组功能在 NetWare 和 Linux 平台上不断开发，组报告和组操作功能将在未来的支持包发布中变为可用时恢复。在下一次版本发布之前，可能还会通过 Novell 支持网站以可下载模块的形式提供修复程序。
+随着 `NRM` 的服务器组功能在 NetWare 和 Linux 平台上不断开发，组报告和组操作功能将在未来的支持包发布中变为可用时恢复。在下一次版本发布之前，可能还会通过 Novell 支持网站以可下载模块的形式提供修复程序。
 
 文档尚未更新以删除对这些功能的描述和说明，因为这些功能将会被恢复的。
 
-- **来自 NRM 的 Novell iManager 链接。** 当你选择页头框架中的按钮访问 iManager 时，iManager 将接管当前浏览器窗口，而不是在 NRM 窗口之上打开新窗口。
+- 来自 `NRM` 的 Novell `iManager` 链接。当你选择页头框架中的按钮访问 `iManager` 时，`iManager` 将接管当前浏览器窗口，而不是在 `NRM` 窗口之上打开新窗口。
 
-使用浏览器的后退按钮返回 NRM，或为 NRM 打开另一个浏览器窗口。相同的功能也适用于“管理 eDirectory”标题下的 NDS iMonitor 和 DS Trace 链接。
+使用浏览器的后退按钮返回 `NRM`，或为 `NRM` 打开另一个浏览器窗口。相同的功能也适用于“管理 eDirectory”标题下的 `NDS iMonitor` 和 `DS Trace` 链接。
 
-- **可用的服务器健康状态。** “可用内存”（Available Memory）服务器健康项目默认配置了阈值，这些阈值是根据服务器总内存的百分比计算的。
+- 可用的服务器健康状态。“可用内存”（Available Memory）服务器健康项目默认配置了阈值，这些阈值是根据服务器总内存的百分比计算的。
 
 从 OES SP2 开始，对服务器的内存处理进行了调整，允许这些阈值取更低，因此“可疑”（Suspect）和“严重”（Critical）层级的默认值已更改。
 
@@ -3949,31 +3665,30 @@ load httpptk.nlm/hosts:1 /SSL/keyfile:"SSL CertificateIP"
 要将“可用内存”健康项的阈值调整为新默认值，请执行以下操作：
 
 - 从 Novell Remote Manager，选择 诊断服务器（Diagnose Server） > 健康监（Health Monitor）。
-
 - 选择 阈值配置（Threshold Configuration） > 可用内存（Available Memory） > 恢复默认值（Restore Default Values） > 好。
 
 ## 如何在 OES Linux 上启动 NRM
 
-Linux NRM 是一种基于浏览器的工具，你可以从远程管理一个或多个 OES Linux 或 OES NetWare 服务器。
+Linux `NRM` 是一种基于浏览器的工具，你可以从远程管理一个或多个 OES Linux 或 OES NetWare 服务器。
 
-你可以使用 Linux 版 NRM 监控服务器状况、更改服务器配置或执行调试任务。
+你可以使用 Linux 版 `NRM` 监控服务器状况、更改服务器配置或执行调试任务。
 
-在 OES Linux 上使用 NRM 之前，你需要熟悉以下内容：
+在 OES Linux 上使用 `NRM` 之前，你需要熟悉以下内容：
 
 - OES Linux 服务器上的管理任务
 - 系统要求
 
 ## 如何访问 OES Linux 版 NRM
 
-- 如何启动或停止 Httpstkd
+- 如何启动或停止 `Httpstkd`
 - 如何查看 HTTP 日志
-- 如何从 NRM 管理 OES Linux 服务器
+- 如何从 `NRM` 管理 OES Linux 服务器
 
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_234_0.png)
 
-有关用于 Linux 的 NRM 的完整信息，请参考《针对 Linux 的 Novell Remote Manager 管理指南》(remotem_lx.pdf)。
+有关用于 Linux 的 `NRM` 的完整信息，请参考《针对 Linux 的 Novell Remote Manager 管理指南》(`remotem_lx.pdf`)。
 
-你可以从 http://www.novell.com/documentation/oes 或从 3077 课程 CD  OES_Docs 目录访问此指南。
+你可以从 http://www.novell.com/documentation/oes 或从 3077 课程 CD `OES_Docs` 目录访问此指南。
 
 ## OES Linux 服务器上的管理任务
 
@@ -3983,21 +3698,19 @@ Linux NRM 是一种基于浏览器的工具，你可以从远程管理一个或�
   - 监控一个或多个服务器的健康状态。
   - 构建一组共同监控的服务器和项目。
   - 访问服务器和配置日志。
-
 - 配置你的服务器：
   - 查看所有硬件适配器、硬件资源和处理器数据的信息。
   - 上传并替换文件。
   - 监控内存资源。
   - 访问文件。
   - 关闭或重置服务器。
-
 - 排除服务器问题：
   - 查找高内存占用用户。
   - 监控服务器进程。
 
 ## OES SP1 和 SP2 中 OES Linux 版 NRM 的更新
 
-以下列出了 OES SP1 和 SP2 中 OES Linux 版 NRM 中更新的功能：
+以下列出了 OES SP1 和 SP2 中 OES Linux 版 `NRM` 中更新的功能：
 
 | 特性 | 功能 | 支持包 |
 | :--- | :--- | :--- |
@@ -4022,24 +3735,30 @@ Linux NRM 是一种基于浏览器的工具，你可以从远程管理一个或�
 | 查看文件系统（主页） | 左侧导航框架包含你登录时记录的折叠项。这让你显示最常用的 Novell 功能并隐藏不常用的。 | SP1 |
 | 查看文件系统（主页） | 在主页上，你可以查看每个挂载物理设备的可用空间。不显示虚拟空间。卸载按钮已移动到此页面。 | SP2 |
 
-有关 OES SP1 之前添加到 NRM 的新功能的更多细节，请参《针对 Linux 的 Novell Remote Manager 管理指南》第 15 页。
+有关 OES SP1 之前添加到 `NRM` 的新功能的更多细节，请参《针对 Linux 的 Novell Remote Manager 管理指南》第 15 页。
 
-你可以从 http://www.novell.com/documentation/oes 或从 3077 课程 CD OES_Docs 目录访问该指南。
+你可以从 http://www.novell.com/documentation/oes 或从 3077 课程 CD `OES_Docs` 目录访问该指南。
 
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_237.png)
 
 ## 系统要求
 
-运行用于 Linux 的 NRM 的系统要求如下：
+运行用于 Linux 的 `NRM` 的系统要求如下：
+
+
 
 - Mozilla Firefox 1.0、Microsoft Internet Explorer 6 或更高版本、Mozilla 1.7 (SLES 9 SP1 和 Linux Professional 9.2)、KDE 3.2 Konqueror（功能限制）或 Safari 1.2（功能限制）
-- 服务器上加载并运行 httptkd 模块。
+
+- 服务器上加载并运行 `httptkd` 模块。
 
 当你在 Linux 上安装 Novell OES 软件选择的任何组件或以下任何选择时，该模块将安装并带有默认配置：
 
 - Novell iFolder®
+
 - Novell iPrint
+
 - Novell Quickfinder™
+
 - Novell Virtual Office
 
 ## 开始使用
@@ -4047,6 +3766,7 @@ Linux NRM 是一种基于浏览器的工具，你可以从远程管理一个或�
 你可以通过以下步骤登录用于 OES Linux 的 NRM：
 
 - 1. 从你的工作站或桌面打开一个支持的浏览器。
+
 - 2. 通过在地址（URL）字段中输入以下内容，将浏览器指向你要管理的服务器：
 
 ```
@@ -4059,38 +3779,37 @@ http://server_IP_address:8008
 http://10.200.200.4:8008
 ```
 
-
-
-
-
-## 3. 接受 SSL 证书。
+### 3. 接受 SSL 证书。
 
 你必须在浏览器中启用 SSL 2.0 和 SSL 3.0（如果可用）；否则浏览器将显示错误，指示无法显示页面。
 
-## 4. 当登录对话框出现时，输入用户名和密码。
+### 4. 当登录对话框出现时，输入用户名和密码。
 
-以用户 root 身份、本地 Linux 用户身份，或者以一个已启用 Linux 用户管理 (LUM) 的 eDirectory 用户（例如 Admin）身份登录。
+以用户 `root` 身份、本地 Linux 用户身份，或者以一个已启用 Linux 用户管理 (LUM) 的 eDirectory 用户（例如 `Admin`）身份登录。
 
 如果你的目录树中启用了 LUM 并且在本地服务器上安装并配置了它，你就可以使用 eDirectory 凭据登录 NRM。
 
-如果你以本地 Linux 用户或非 Admin eDirectory 用户的身份登录，你只能看到该登录用户有权查看的信息。
+如果你以本地 Linux 用户或非 `Admin` eDirectory 用户的身份登录，你只能看到该登录用户有权查看的信息。
 
 以 eDirectory 用户身份登录 NRM 时，请记住以下几点：
 
-- 用户要以 Admin 用户或等效用户身份登录，必须：
+- 用户要以 `Admin` 用户或等效用户身份登录，必须：
+
   - 关联到拥有对 UNIX Workstation 对象的 Entry Rights（条目权限）属性具有 Supervisor（管理员）权限的组
+
   - 或者
+
   - 对 eDirectory 树中代表 Linux 服务器的 NCP™ 对象的 Entry Rights（条目权限）具有 Supervisor（管理员）权限
 
 拥有这些对象之一的 Supervisor（管理员）权限的 eDirectory 用户，其权限等同于 Linux 服务器上的 Root 用户。
 
-如果本地服务器上安装了 eDirectory 和 LUM，eDirectory 中的管理员用户可以使用完全限定名称（例如 admin.sle.da）登录 NRM，因为该用户默认启用了 LUM。
+如果本地服务器上安装了 eDirectory 和 LUM，eDirectory 中的管理员用户可以使用完全限定名称（例如 `admin.sle.da`）登录 NRM，因为该用户默认启用了 LUM。
 
-- 非 Admin 用户若要使用 eDirectory 凭据登录，他们必须启用 LUM。
+- 非 `Admin` 用户若要使用 eDirectory 凭据登录，他们必须启用 LUM。
 
 启用了 LUM 的用户在 iManager 的修改用户页面上有一个 Linux 选项卡，并且有一个与 Linux 服务器的 UNIX Workstation 对象关联的 eDirectory 对象。
 
-你可以使用 iManager 或 LUM 命令行工具 namuseradd 为用户启用 LUM。
+你可以使用 iManager 或 LUM 命令行工具 `namuseradd` 为用户启用 LUM。
 
 登录后，你的 NRM 会话将保持开启，直到你关闭工作站上的所有浏览器窗口。
 
@@ -4098,50 +3817,56 @@ http://10.200.200.4:8008
 
 在 Linux 上安装 Novell OES 时，NRM 会默认安装并启动。
 
-启动和停止 NRM/Linux 组件的脚本位于 /etc/init.d/novell-httpptstkd。
+启动和停止 NRM/Linux 组件的脚本位于 `/etc/init.d/novell-httpptstkd`。
 
-你使用以下命令来管理 novell-httpptstkd 守护进程：
+你使用以下命令来管理 `novell-httpptstkd` 守护进程：
 
 | 命令 | 动作 |
 | --- | --- |
-| rcnovell-httpptstkd status | 显示守护进程的当前状态。 |
-| /etc/init.d/novell-httpptstkd | |
-| rcnovell-httpptstkd start | 启动守护进程。 |
-| /etc/init.d/novell-httpptstkd | |
+| `rcnovell-httpptstkd status` | 显示守护进程的当前状态。 |
+| `/etc/init.d/novell-httpptstkd` |  |
+| `rcnovell-httpptstkd start` | 启动守护进程。 |
+| `/etc/init.d/novell-httpptstkd` |  |
 
 ## 集成 Linux Novell Open Enterprise Server
 
 | (续) 表 3-10 命令 | 动作 |
 | --- | --- |
-| rcnovell-httptkd stop | 停止守护进程。 |
-| 或 | |
-| /etc/init.d/novell-httptkd stop | |
+| `rcnovell-httptkd stop` | 停止守护进程。 |
+| 或 |  |
+| `/etc/init.d/novell-httptkd stop` |  |
 
 ## 如何查看 HTTP 日志
 
-NRM 配置选项页面包含一个指向 /var/log/messages 文件中所有 HTTPSTK 相关消息的链接。
+NRM 配置选项页面包含一个指向 `/var/log/messages` 文件中所有 HTTPSTK 相关消息的链接。
 
 这些信息对于查看某些非常有价值，例如谁通过 NRM 登录、他们何时登录、查看了哪些页面以及日志失败的情况。
 
 你可以通过以下步骤查看日志的最后 100 条目或整个日志：
 
 1. 选择 NRM 页面顶部的配置图标。
+
 2. 在 HTTP 日志标题下，选择“查看最后 100 条日志记录”或“查看完整日志”。
 
-对此文件的记录由 Syslog 选项控制。要从默认更改这些选项，请编辑 /etc/sysconfig/syslog 文件。
+对此文件的记录由 Syslog 选项控制。要从默认更改这些选项，请编辑 `/etc/sysconfig/syslog` 文件。
 
 ## 如何从 NRM 管理 OES Linux 服务器
 
 NRM for Linux 中的 Manage Linux 部分包含以下选项：
 
 - VNC 控制台
+
 - 查看内核模块
+
 - 查看内存信息
+
 - 关机/重启
+
 - 查看包信息
+
 - 查看进程信息
 
-## VNC 控制台
+### VNC 控制台
 
 如果服务器上配置了 VNC 服务，你可以通过选择导航框架中 Manage Linux 标题下的 **VNC Consoles** 链接来访问 VNC 控制台屏幕；然后在 VNC 控制台屏幕页面上选择 **1024 X 728** 按钮。
 
@@ -4162,34 +3887,35 @@ NRM for Linux 中的 Manage Linux 部分包含以下选项：
 ## 集成 Linux Novell Open Enterprise Server
 
 (续) 表 3-11 任务步骤
+
 | 任务 | 步骤 |
 |---|---|
 | 刷新你当前查看的屏幕。 | 选择 **Refresh** 按钮。 |
 
-## 查看内核模块
+### 查看内核模块
 
 View Kernel Modules 选项显示内核模块列表页面：
 
 ![](img/1dca8e8874dad032fe046055_243.png)
 
-## 内核模块列表
+#### 内核模块列表
 
 | 内核模块 | 内存计数 | 模块信息 |
 |---|---|---|
-| lp | 11172 | |
-| parport_pc | 35648 | |
-| parport | 37832 | |
-| nebrdv | 9360 | |
-| nssla | 60196 | |
-| nssmanager | 94200 | |
-| nssiss | 100848 | |
-| nssmal | 20344 | |
-| nss | 116640 | |
-| ndpmod | 34744 | |
-| nss | 249108 | |
-| nsslibrary | 673792 | |
-| nsslinxb | 31880 | |
-| nss | 109424 | |
+| lp | 11172 |  |
+| parport_pc | 35648 |  |
+| parport | 37832 |  |
+| nebrdv | 9360 |  |
+| nssla | 60196 |  |
+| nssmanager | 94200 |  |
+| nssiss | 100848 |  |
+| nssmal | 20344 |  |
+| nss | 116640 |  |
+| ndpmod | 34744 |  |
+| nss | 249108 |  |
+| nsslibrary | 673792 |  |
+| nsslinxb | 31880 |  |
+| nss | 109424 |  |
 | linuxmpk | 33778 | 5 |
 | nss | 5241156 | 7 |
 | linuxmpk | 109424 | 10 |
@@ -4198,9 +3924,9 @@ View Kernel Modules 选项显示内核模块列表页面：
 
 打印此页面可在未来对系统进行更改或升级时作为参考。
 
-此页面显示的信息等同于 Ismod 命令的信息以及查看 /proc/modules 文件的信息。
+此页面显示的信息等同于 `Ismod` 命令的信息以及查看 `/proc/modules` 文件的信息。
 
-## 查看内存信息
+### 查看内存信息
 
 View Memory Information 选项显示内存页面：
 
@@ -4211,6 +3937,9 @@ View Memory Information 选项显示内存页面：
 | 使用中 | 523,161,600 正在使用的 RAM |
 | 未使用 | 7,598,080 空闲且可用的 RAM |
 | 临时磁盘缓冲区 | 35,684,252 磁盘缓冲器的临时存储 |
+
+
+
 | 文件系统缓存 | 94,707,712 从磁盘读取文件的临时存储 |
 | 总系统内存 | 661,151,744 总可用 RAM |
 | 交换空间使用中 | 138,780,672 移动到磁盘的内存 |
@@ -4221,22 +3950,25 @@ View Memory Information 选项显示内存页面：
 - 物理内存的已用和未使用量
 - 缓冲区中的内存量
 - 文件系统缓存使用的内存量
-该值通过从 PageCache（磁盘缓存）中减去 SwapCache 得到
+
+该值通过从 `PageCache`（磁盘缓存）中减去 `SwapCache` 得到
+
 - 系统可以使用的内存总量
+
 该值通过从内核二进制代码减去物理 RAM 得到
+
 - 交换空间的使用和可用量
 
-Total File Size 链接显示交换文件信息页面，提供服务器上每个交换文件名、交换空间类型以及总大小和使用大小（以 KB 为单位）的快速快照，包括以下信息：在使用多个交换文件且某些文件优于其他文件（例如它们位于较快的硬盘上）时，优先级列非常有用。
-
+`Total File Size` 链接显示交换文件信息页面，提供服务器上每个交换文件名、交换空间类型以及总大小和使用大小（以 KB 为单位）的快速快照，包括以下信息：在使用多个交换文件且某些文件优于其他文件（例如它们位于较快的硬盘上）时，优先级列非常有用。
 
 优先级越低，越可能会使用交换文件（swap file）。
 
 - Active（活动）列显示 Yes（是）或 No（否）状态，表示交换文件是否激活。选择链接可以开启或关闭列表设备的交换功能。
 - 两个额外的链接可以开启或关闭所有设备的交换功能。
 
-如果您为设备添加了交换文件，则需要在 /etc/fstab 文件中添加条目，以使 swap 或 swapoff 链接正常工作。
+如果您为设备添加了交换文件，则需要在 `/etc/fstab` 文件中添加条目，以使 `swap` 或 `swapoff` 链接正常工作。
 
-此信息也存在于 /proc/swaps 文件。
+此信息也存在于 `/proc/swaps` 文件。
 
 ## 关机/重启 (Down/Restart)
 
@@ -4273,7 +4005,7 @@ View Package Information 选项显示包信息页面：
 
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_246_0.png)
 
-|  way | 分组 | 版本 |
+| way | 分组 | 版本 |
 | :--- | :--- | :--- |
 | 3diag | System/Base | 0.716 |
 | aaa_base | System/Fhs | 9 |
@@ -4303,7 +4035,8 @@ View Package Information 选项显示包信息页面：
 | 查看已安装包的更详细信息。 | 选择名称列下对应包的链接。 |
 | 移除已安装的包。 | 选择名称列下对应包的链接；选择 Remove（移除）。 |
 | 安装下载到主机的新包。 | 选择 **Install**（安装）并浏览到您上传包的位置。选择该包；然后选择 **Install**。 |
-| 所选包的文件路径将传输到包安装页面上的 RPM File Path 字段。当您在 View Package Information 页面选择 Install 按钮时，NRM 会尝试使用 Linux RPM 实用程序安装指定的 RPM 文件。 |
+
+所选包的文件路径将传输到包安装页面上的 `RPM File Path` 字段。当您在 View Package Information 页面选择 Install 按钮时，`NRM` 会尝试使用 Linux `RPM` 实用程序安装指定的 RPM 文件。
 
 3-46 严禁复制本手册的全部或部分内容分发此类副本。如怀疑有复制行为，请拨打 1-800-PIRATES。版本 1
 
@@ -4352,7 +4085,7 @@ View Process Information 选项显示进程信息页面：
 
 Novell Remote Manager 允许您为 Linux 服务器或 NetWare 服务器配置项组，并为运行操作的服务器提供各种统计数据。预配置的监控项包括：
 
-- 单个服务器或服务器组的 NRM 健康状态
+- 单个服务器或服务器组的 `NRM` 健康状态
 - 特定端口的 Ping
 - IP 连接性
 - LDAP 目录搜索
@@ -4366,31 +4099,34 @@ Novell Remote Manager 允许您为 Linux 服务器或 NetWare 服务器配置项
 
 图标可以代表单个项或一组项。
 
-Groups 功能在 NRM 的 OES NetWare 和 OES Linux 版本中均可用。在本目标中您将学习以下配置任务：
+Groups 功能在 `NRM` 的 OES NetWare 和 OES Linux 版本中均可用。在本目标中您将学习以下配置任务：
 
 - 构建并配置分组
 - 保存分组
 - 访问现有分组
 - 删除分组
 
-## 集成 Linux 版 Novell Open Enterprise Server (Integrating Novell Open Enterprise Server for Linux)
 
-有关从 NRM 配置 Groups 的完整信息，请参阅 Novell Remote Manager for NetWare Administration Guide (remotemrg.pdf) 第 113 页的“Using Group and Group Operations”，或 Novell Remote Manager Administration Guide (remotem_lx.pdf) 第 63 页的“Using Group Operations”。
 
-您可以通过 http://www.novell.com/documentation/oes 或您的 307 课程 CD 中的 OES_Docs 目录访问这些指南。
+# 集成 Linux 版 Novell Open Enterprise Server (Integrating Novell Open Enterprise Server for Linux)
+
+有关从 NRM 配置 Groups 的完整信息，请参阅 Novell Remote Manager for NetWare Administration Guide (`remotemrg.pdf`) 第 113 页的“Using Group and Group Operations”，或 Novell Remote Manager Administration Guide (`remotem_lx.pdf`) 第 63 页的“Using Group Operations”。
+
+您可以通过 `http://www.novell.com/documentation/oes` 或您的 307 课程 CD 中的 `OES_Docs` 目录访问这些指南。
 
 ## 构建并配置分组 (Build and Configure a Group)
 
 构建并配置一个新的监控组，请执行以下操作：
 
-1. 从 NRM Web 页面的左侧选择 Configure New Group（配置新分组）。
+1. 从 NRM Web 页面的左侧选择 `Configure New Group`（配置新分组）。
+
 2. 右键点击 Group Monitoring 页面。
 
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_251_0.png)
 
 如果您的浏览器不支持右键功能，请双击页面右上角的 Reports 图标。
 
-3. 选择 Add Item（添加项）。
+3. 选择 `Add Item`（添加项）。
 
 出现 Add New Monitor Item 页面：
 
@@ -4411,6 +4147,7 @@ Groups 功能在 NRM 的 OES NetWare 和 OES Linux 版本中均可用。在本�
 严禁复制本手册的全部或部分内容分发此类副本。如怀疑有复制行为，请拨打 1-800-PIRATES。
 
 版本 1
+
 3-50
 
 以下描述了可用选项：
@@ -4429,11 +4166,7 @@ Groups 功能在 NRM 的 OES NetWare 和 OES Linux 版本中均可用。在本�
 | **TCP/IP 服务查询 (TCP/IP Service Query) 或 TCP/IP 端口查询 (TCP/IP Port Query)。** 显示指定 TCP/IP 服务的响应。此查询尝试与指定的地址和端口建立 TCP 连接。 |
 | 返回的状态只有绿色（良好，表示连接成功）和红色（错误，表示连接未成功）。 |
 
-
-
-
-
-# 为 Linux 集成 Novell Open Enterprise Server
+## 为 Linux 集成 Novell Open Enterprise Server
 
 | 选项 | 描述 |
 | --- | --- |
@@ -4446,6 +4179,7 @@ Groups 功能在 NRM 的 OES NetWare 和 OES Linux 版本中均可用。在本�
 | 文本背景颜色 | 默认器透明。您可以从下拉列表中选择任何其他颜色。 |
 
 4. 完成后，选择**添加**（Add）；然后将监控项拖动到所需的位置（在地图上）。
+
 5. 对每个添加的项重复步骤 3 和 4。
 
 6. （可选）您可以更改以下任何一个组配置：
@@ -4472,18 +4206,12 @@ Groups 功能在 NRM 的 OES NetWare 和 OES Linux 版本中均可用。在本�
 
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_254_0.png)
 
-# 以下描述了可用选项：
+## 以下描述了可用选项：
 
 | 选项 | 描述 |
 | --- | --- |
-| 显示 | 显示页面选项允许您控制以下内容：
-- **监控页面标题。** 指定一个在页面生成时显示在监控页面顶部页眉区域的标题。
-- **刷新率。** 指定两次向服务器进行状态查询之间的秒数。
-- **背景图形。** 从下拉列表中选择一个图形，显示在监控项上。
-如果您想显示被监控项的特定位置，此选项将非常有帮助。
-如果您想添加自定义图形，请将其添加到 `sys:\login/nrmgroupmaps` 目录（OES NetWare）或 `/opt/novell/nrm/NRMGroupMaps` 目录（OES Linux）。 |
-| 电子邮件 | 电子邮件通知选项控制在服务器健康发生变化时如何以及何时发送电子邮件通知。
-电子邮件通知将通过在 `/etc/opt/novell/http3kd.conf` 文件（OES Linux）中设置的邮件服务器或在“电子邮件通知配置”页面设置的邮件服务器（OES NetWare）发送到邮件通知列表中的地址。 |
+| 显示 | 显示页面选项允许您控制以下内容：<br>- **监控页面标题。** 指定一个在页面生成时显示在监控页面顶部页眉区域的标题。<br>- **刷新率。** 指定两次向服务器进行状态查询之间的秒数。<br>- **背景图形。** 从下拉列表中选择一个图形，显示在监控项上。<br>如果您想显示被监控项的特定位置，此选项将非常有帮助。<br>如果您想添加自定义图形，请将其添加到 `sys:\login/nrmgroupmaps` 目录（OES NetWare）或 `/opt/novell/nrm/NRMGroupMaps` 目录（OES Linux）。 |
+| 电子邮件 | 电子邮件通知选项控制在服务器健康发生变化时如何以及何时发送电子邮件通知。<br>电子邮件通知将通过在 `/etc/opt/novell/http3kd.conf` 文件（OES Linux）中设置的邮件服务器或在“电子邮件通知配置”页面设置的邮件服务器（OES NetWare）发送到邮件通知列表中的地址。 |
 
 8. 完成后，选择**应用**（Apply）。
 
@@ -4493,14 +4221,14 @@ Groups 功能在 NRM 的 OES NetWare 和 OES Linux 版本中均可用。在本�
 
 10. （可选）如果您想使用该组，必须通过执行以下 3 步骤来保存它：
 
-# 保存组
+## 保存组
 
 如果您想监控所有状态，可以通过以下方式访问您的 eDirectory 树中的组并保存其配置：
 
 - 保存组到本地服务器
 - 保存组并关联 eDirectory 对象
 
-# 保存组到本地服务器
+### 保存组到本地服务器
 
 执行操作：
 
@@ -4508,14 +4236,14 @@ Groups 功能在 NRM 的 OES NetWare 和 OES Linux 版本中均可用。在本�
 2. 在组字段中输入您想要关联的服务器的名称，或者从列表中选择该组名称。
 3. 选择“保存组”。
 
-# 保存组并关联 eDirectory 对象
+### 保存组并关联 eDirectory 对象
 
 当您在您的 eDirectory 树中查看这些服务器时，可以使用以下方式保存组并访问配置：
 
 - 保存组到本地服务器
 - 保存组并关联 eDirectory 对象
 
-# 为 Linux 集成 Novell Open Enterprise Server
+## 为 Linux 集成 Novell Open Enterprise Server
 
 例如，当服务器无法正常工作时，在 eDirectory 对象中存储组配置是重要的。
 
@@ -4523,7 +4251,11 @@ Groups 功能在 NRM 的 OES NetWare 和 OES Linux 版本中均可用。在本�
 
 1. 在查看您创建或编辑的组时，右键点击监控页面；然后选择“组配置”。
 2. 在“此对象”字段中指定您想要关联的组对象。
+
+
+
 您可以通过选择浏览图标或输入组的完整名称来浏览该组。
+
 3. 完成后，选择“应用”。
 
 # 访问现有组
@@ -4532,6 +4264,7 @@ Groups 功能在 NRM 的 OES NetWare 和 OES Linux 版本中均可用。在本�
 
 1. 从 NRM 导航框架（左侧）选择“选择组”。
 2. 从服务器页面从下拉列表中选择所需的组。
+
 在此版本中，即使页面上存在该选项，浏览之前保存的组文件也不工作。
 
 3. 选择“构建”。
@@ -4567,20 +4300,17 @@ iMonitor 允许您以分区、副本或服务器为基础深入查看 eDirectory
 - 如何访问 iMonitor
 - Novell 远程管理器集成
 
-
-
-
 集成 Linux 版 Novell 企业服务器
 
-有关 iMonitor 2.1 的完整信息，请参阅位于《Novell eDirectory 8.7.3 Administration Guide》(edir873.pdf) 第 163 页的“Novell iMonitor 2.1”。
+有关 iMonitor 2.1 的完整信息，请参阅位于《Novell eDirectory 8.7.3 Administration Guide》`edir873.pdf` 第 163 页的“Novell iMonitor 2.1”。
 
-您可以通过 http://www.novell.com/documentation/oes 或 3077 课程 CD 上的 OES_Docs 目录访问此指南。
+您可以通过 `http://www.novell.com/documentation/oes` 或 3077 课程 CD 上的 `OES_Docs` 目录访问此指南。
 
 # Novell OES iMonitor 功能
 
 iMonitor 的功能主要关注服务器，这意味着它们关注单个 eDirectory 代理的健康状况（运行在本地服务器上副本的 NDS 实例），而不是整个 eDirectory 树。
 
-iMonitor 2.1（包含在 Novell OES 中）提供以下功能：
+`iMonitor 2.1`（包含在 Novell OES 中）提供以下功能：
 
 - eDirectory 健康状况摘要：
     - 同步信息
@@ -4607,11 +4337,11 @@ iMonitor 2.1（包含在 Novell OES 中）提供以下功能：
 
 您在 iMonitor 中可以查看的信息基于以下因素：
 
-- **您已建立的身份。** 您的身份 eDirectory 权限将应用于您在 iMonitor 中提出的每一次请求。
+- 您已建立的身份。您的身份 eDirectory 权限将应用于您在 iMonitor 中提出的每一次请求。
 
 例如，您必须以服务器管理员或您尝试访问 DSRepair 页面的服务器上的控制台操作员身份登录。
 
-- **您正在监控的 eDirectory 代理版本。** 新版本的 NDS 和 eDirectory 具有旧版本没有的功能和选项。
+- 您正在监控的 eDirectory 代理版本。新版本的 NDS 和 eDirectory 具有旧版本没有的功能和选项。
 
 您可以使用 iMonitor 监控 NetWare 4.11 或更高版本的所有 NDS 和 eDirectory。
 
@@ -4622,10 +4352,10 @@ iMonitor 2.1（包含在 Novell OES 中）提供以下功能：
 - Mozilla Firefox 1.0、Microsoft Internet Explorer 5.5 或更高版本、Mozilla 1.7（SLES 9 和 Linux Professional 9.2），或 Netscape 7.02 或更高版本
 - Novell eDirectory 8.7.1 或更高版本
 
-iMonitor 2.1 运行在以下平台上：
+`iMonitor 2.1` 运行在以下平台上：
 
 - NetWare 5.1 Support Pack 4 或更高版本
-- Novell iMonitor 放置在 autoexec.ncf 中。
+- Novell iMonitor 放置在 `autoexec.ncf` 中。
 - Windows NT, 2000 和 2003 Server（无 SSL）
 - Linux
 - Solaris
@@ -4643,28 +4373,34 @@ iMonitor 2.1 运行在以下平台上：
 
 对于 NetWare 和 Windows，iMonitor 会在 eDirectory 运行时自动加载。
 
-在 Linux、 Solaris、AIX 和 HP-UX 上，您可以使用 **ndsimonitor -l** 命令加载 iMonitor。
+在 Linux、 Solaris、AIX 和 HP-UX 上，您可以使用 `ndsimonitor -l` 命令加载 iMonitor。
 
-它也可以在重启 eDirectory 服务器之前通过在 /etc/ndsimon.conf 文件中添加 **ndsimonitor** 来自动加载（如 OES Linux 所示）。
+它也可以在重启 eDirectory 服务器之前通过在 `/etc/ndsimon.conf` 文件中添加 `ndsimonitor` 来自动加载（如 OES Linux 所示）。
 
 # 如何访问 iMonitor
 
 要访问 Novell iMonitor，请执行以下操作：
 
 1. 确保 iMonitor 可执行文件在 eDirectory 服务器上运行。
+
    如果您在 OES Linux 服务器上安装了 eDirectory，或者将 OES Linux 安装到现有 eDirectory 树中，则 iMonitor 已经在 OES Linux 服务器上运行。
+
 2. 打开支持的 Web 浏览器。
+
 3. 在地址（URL）字段中，输入以下内容：
+
 `http://server_IP_address:httpstack_port/nds`
 
 iMonitor 可用端口如下：
-- OES NetWare：**8008**（非安全）和 **8009**（安全）
-- OES Linux：**8028**（非安全）和 **8030**（安全）
+
+- OES NetWare：`8008`（非安全）和 `8009`（安全）
+- OES Linux：`8028`（非安全）和 `8030`（安全）
 
 例如，如果服务器 IP 地址为 10.0.0.4 且 httpstack 端口号为 8030（OES Linux 服务器上的安全端口），您将输入：
+
 `https://10.0.0.4:8030/nds`
 
-如果您忘记了分配给 iMonitor 的哪些端口（非安全和 SSL），您可以在 shell 提示符处输入 `ndsconfig get | grep` 来查找并显示来自 ndsconfig 文件的信息。
+如果您忘记了分配给 iMonitor 的哪些端口（非安全和 SSL），您可以在 shell 提示符处输入 `ndsconfig get | grep` 来查找并显示来自 `ndsconfig` 文件的信息。
 
 您还可以在任何可以使用服务器 IP 地址、IPX 地址或区分名称的地方使用 DNS 名称。
 
@@ -4674,16 +4410,17 @@ iMonitor 可用端口如下：
 http://prv-gromit.provo.novell.com/nds?server=prv-igloo.provo.novell.com
 ```
 
-等同于 http://prv-gromit.provo.novell.com/nds?server=IP_or_IPX address
+等同于 `http://prv-gromit.provo.novell.com/nds?server=IP_or_IPX address`
 
-或 http://prv-gromit.provo.novell.com/nds?server=cn=prvigloo,ou=ds,ou=dev=novell,t=novell_inc
+或 `http://prv-gromit.provo.novell.com/nds?server=cn=prvigloo,ou=ds,ou=dev=novell,t=novell_inc`
 
 如果可用 eDirectory HTTPS 栈，您可以通过 HTTPS 使用 iMonitor。
 
 - 从登录页面开始，输入用户名和密码。
-  要访问所有功能，您需要以 Admin 或等同管理员的身份登录。
-  如果您在树中有多个 Admin 用户对象。
 
+  要访问所有功能，您需要以 Admin 或等同管理员的身份登录。
+
+  如果您在树中有多个 Admin 用户对象。
 
 例如，如果你的服务器 IP 地址为 10.0.0.4，请输入以下内容：
 
@@ -4712,11 +4449,15 @@ https://10.0.0.4/nps/iManager
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_271_0.png)
 
 你仅可以访问你拥有权限的功能。
+
+
+
 要完全访问所有 Novell iManager 功能，你必须以树管理员的身份登录。
 
-如果 eDirectory 安装在默认端口 524 之外的端口上运行，你可以在指定端口的同时使用 eDirectory 服务器的 IP 地址或 DNS 名称进行登录。
+如果 eDirectory 安装在默认端口 `524` 之外的端口上运行，你可以在指定端口的同时使用 eDirectory 服务器的 IP 地址或 DNS 名称进行登录。
 
 如果你使用树名称登录，则不需要指定端口。
+
 树名称（Tree Name）字段的可能值为树名、服务器 IP 地址和服务器 DNS 名称。
 
 3-70 严禁复制本手册的全部或部分内容或分发副本。如报告疑似复制行为，请拨打 1-800-PIRATES。版本 1
@@ -4731,13 +4472,13 @@ https://10.0.0.4/nps/iManager
 
 iManager 提供以下访问模式：
 
-- **无限制访问（Unrestricted Access）。** 这是 RBS 配置之前的默认模式。它显示所有安装的角色和任务。
+- **无限制访问（Unrestricted Access）**。这是 RBS 配置之前的默认模式。它显示所有安装的角色和任务。
 
 尽管所有角色和任务都可见，但经过验证的用户仍需要必要的权限来使用这些任务。
 
-- **分配访问（Assigned Access）。** 仅显示分配给验证用户的角色和任务。此模式充分利用了 RBS 技术。
+- **分配访问（Assigned Access）**。仅显示分配给验证用户的角色和任务。此模式充分利用了 RBS 技术。
 
-- **集合所有者访问（Collection Owner Access）。** 显示集合中安装的所有角色和任务。
+- **集合所有者访问（Collection Owner Access）**。显示集合中安装的所有角色和任务。
 
 此模式允许你使用集合中的所有角色和任务，即使没有分配特定权限。使用此模式必须先安装 RBS。
 
@@ -4770,7 +4511,6 @@ iManager 允许你为用户分配特定的职责，并向他们提供必要的�
 
 - 5. 从 iManager 配置欢迎页，点击下一步（Next）继续。
 - 6. 按照提示和对话框完成初始配置并更新模块。
-
 - 7. 模块更新后，选择关闭（Close）。
 
 # 如何配置 RBS 角色
@@ -4787,10 +4527,15 @@ RBS 角色对象创建了用户与任务之间的关联。管理员通过让用�
 
 - 直接作为用户分配
 - 通过组和动态组分配
+
 如果用户是分配给角色的组或动态组的成员，则该用户具有该角色的访问权限。
+
 - 通过组织角色分配
+
 如果用户是分配了角色的组织角占用者，则该用户具有该角色的访问权限。
+
 - 通过容器分配
+
 用户可以与角色关联多次，每次关联具有不同的范围。这可以包括树的根节点。如果未选择此选项，则权限受限于容器。
 
 RBS 配置页面提供了对 RBS 对象的完全控制。它是管理和配置 RBS 的中心位置。
@@ -4821,8 +4566,8 @@ RBS 配置页面允许你列出并修改 RBS 对象，并提供有关 RBS 系统
 
 RBS 配置页面出现以下标签：
 
-- **2.x 集合。** 这是当前的 RBS 对象集合。
-- **1.x 集合。** 这是旧的 RBS 对象集合，你可以将其删除或迁移到 2.x。
+- **2.x 集合**。这是当前的 RBS 对象集合。
+- **1.x 集合**。这是旧的 RBS 对象集合，你可以将其删除或迁移到 2.x。
 
 如果你选择**迁移（Migrate）**，向导将引导你完成迁移过程。
 
@@ -4841,13 +4586,10 @@ RBS 配置页面出现以下标签：
 
 在此练习中，你使用 iManager 为 DA-CORP eDirectory 树配置角色和任务
 
-   - 配置基于角色的服务
+- 配置基于角色的服务
 - 修改 Help Desk 角色
 
 练习 3-4 配置基于角色的服务位于《在 Linux 上集成 Novell 开放企业服务器》工作手册第 3-20 页。
-
-
-
 
 # 如何自定义 Novell iManager
 
@@ -4857,7 +4599,7 @@ Novell iManager 配置页面上的以下选项允许您根据个人需求自定�
 - 外观外观 (Look and Feel)
 - 插件工作室 (Plug-In Studio)
 
-# 收藏
+## 收藏
 
 iManager 页面顶部的收藏按钮（金色星号）显示了您最常用的任务：
 
@@ -4893,7 +4635,7 @@ iManager 页面顶部的收藏按钮（金色星号）显示了您最常用的�
 4. （可选）在登录后选择“将我的收藏设为初始视图”后，可以将收藏页面设置为您的默认视图。
 5. 完成后，选择确定。
 
-# 外观外观
+## 外观外观
 
 您可以使用外观外观配置页面来自定义 iManager 界面的显示。
 
@@ -4901,6 +4643,7 @@ iManager 页面顶部的收藏按钮（金色星号）显示了您最常用的�
 
 1. 从 iManager 页面顶部，选择配置图标。
 2. 从左侧面板，选择 iManager 服务器 -> 配置 iManager。
+
 出现配置 iManager 页面，带有多个选项卡。
 
 3. 选择外观（Look and feel）选项卡。
@@ -4910,28 +4653,45 @@ iManager 页面顶部的收藏按钮（金色星号）显示了您最常用的�
 # 图 3-18
 
 - 配置 iManager
+
 iManager 设置适用于 Web 服务器配置。设置保存在 `config.xml` 文件中。
+
 - 安全  日志事件 身份验证 | RBS | 其他
+
 - 组织可以通过更改这些用户界面元素来自定义 iManager 的“外观”。
 
 | 标题名称： |
 | 数字航空公司 |
 | 页头外观 |
+
+
+
 | 替换图像必须与下方列出的尺寸完全一致，以保持专业外观。从背景图像末复制的填充宽切片（此处仅为提高可见性而进行拉伸）代表在背景图像和标志图像之间水平创建一个无缝页头。 |
+
 | 背景图像 | 填充图像 | 标志图像 |
+
 | Novella iManager | | N |
+
 | 尺寸：499 x 80 像素 | 3 x 80 像素 | 60 x 80 像素 |
-| 注意：每个位置路径必须以 "/nps/" 开头 |
-| 背景图像位置：/portal/modules/fw/iManager_3_Head.gif |
+
+| 注意：每个位置路径必须以 `/nps/` 开头 |
+
+| 背景图像位置：`/portal/modules/fw/iManager_3_Head.gif` |
 
 从外观外观配置页面，您可以使用以下选项：
 
 - **标题栏名称。** 在此文本框中输入您的组织名称。它将出现在 Web 浏览器标题栏中，取代默认文本 Novell iManager。
+
 - **图像。** 标题栏包含三个图像：
+
   - 页头背景图像
+
   - 页头填充图像
+
   - 页头品牌
+
 您自己的图像必须符合界面给出的尺寸。
+
 将这些文件存储在 `nps/portal/modules/fw/images` 中。在相应的文本字段中输入每个图像的路径。
 
 为 Linux 集成 Open Novell Enterprise Server
@@ -4953,8 +4713,11 @@ iManager 设置适用于 Web 服务器配置。设置保存在 `config.xml` 文�
 **图 3-19**
 
 | 已安装的自定义插件 |
+
 | 新建 | 编辑 | 删除 | 操作 |
+
 | 类型 ID 位置 |
+
 | | | PA-TASKS custom.Role Based Service 2.DigitalAir |
 
 您可以使用插件工作室为您最常用的操作动态创建任务。您还可以编辑或删除任务。
@@ -4970,14 +4733,17 @@ iManager 设置适用于 Web 服务器配置。设置保存在 `config.xml` 文�
 要使用插件工作室，您需要知道如何执行操作：
 
 - 创建插件任务
+
 - 编辑插件任务
+
 - 删除插件任务
 
-# 创建插件任务
+## 创建插件任务
 
 要创建一个新任务，请执行以下操作：
 
 1. 从 iManager 配置页面，选择 **基于角的服务 > 插件工作室**。
+
 2. 选择新建。
 
 任务生成将引导您完成构建任务的步骤：
@@ -4995,6 +4761,7 @@ iManager 设置适用于 Web 服务器配置。设置保存在 `config.xml` 文�
 - 闪烁红色图标表示必填字段。
 
 选择图标添加可用值；然后选择确定。
+
 图标停止闪烁。
 
 - 下箭头允许您更改控件。
@@ -5004,6 +4771,7 @@ iManager 设置适用于 Web 服务器配置。设置保存在 `config.xml` 文�
 - 第三个图标删除属性。
 
 - **控件。** 此框列出了您的属性选择。
+
 - **插件属性。** 在插件属性下方，页面左侧为插件分配 ID，并将任务分配给 RBS 集合。
 
 打开对象选择器找到 RBS 集合。将任务分配给角色。您分配的角色决定了它在角色和任务屏幕上的显示位置。
@@ -5012,27 +4780,26 @@ iManager 设置适用于 Web 服务器配置。设置保存在 `config.xml` 文�
 
 - 完成后，选择**安装**（页面顶部）。
 
-iManager 将动态生成 .xml 文件、.jsp 文件以及执行任务的 Java 文件，并将其安装到系统中。
+iManager 将动态生成 `.xml` 文件、`.jsp` 文件以及执行任务的 Java 文件，并将其安装到系统中。
 
-# 编辑插件任务
+## 编辑插件任务
 
 要编辑插件任务，请执行以下操作：
 
 1. 从 iManager 配置页面，选择 **基于角的服务 > 插件工作室**。
+
 2. 选择任务；然后选择**编辑**。
+
 3. 修改 3-81 页“创建插件任务”中描述的设置；然后选择**安装**。
 
 会出现确认消息，指示插件已成功创建并安装。
 
-
-
-
-
-# 删除插件任务
+## 删除插件任务
 
 要删除插件任务，请执行以下操作：
 
 - 在 iManager 的配置（Configure）页面中，选择**基于角的服务 > 插件工作室 (Role-Based Services > Plug-in Studio)**。
+
 - 选择该任务；然后选择**删除 (Delete)**。
 
 会出现警告消息，询问您是否确定要删除该插件。
@@ -5046,7 +4813,9 @@ iManager 将动态生成 .xml 文件、.jsp 文件以及执行任务的 Java 文
 在本次练习中，您将通过以下操作学习如何自定义 iManager 以满足您的特定管理需求：
 
 - 创建 iManager 收藏夹
+
 - 自定义 iManager 的外观和感受
+
 - 使用插件工作室自定义 iManager
 
 “练习 3-5 自定义 Novell iManager”位于您的《Linux 上的 Novell Open Enterprise Server 集成》工作手册的第 3-25 页。
@@ -5080,46 +4849,67 @@ HMS 包含一个 iManager 插件，该插件提供了通过 OpenWBEM 监控 Linu
 要执行基本的健康监控服务任务，您需要了解：
 
 - Novell HMS 组件
+
 - 健康监控类型
+
 - 平台兼容性
+
 - 如何访问 HMS
+
 - 如何配置健康监控
+
 - 如何将服务器添加到组
+
 - 如何查看服务器健康状态快速摘要
+
 - 如何查看服务器健康详情
+
 - 如何比较服务器健康详情
 
 有关健康监控服务的完整信息，请参阅《健康监控服务管理指南》(server_health.pdf)。
 
 您可以通过 http://www.novell.com/documentation/oes 或 3077 课程 CD 上的 OES_Docs 目录访问此指南。
 
-# Novell HMS 组件
+## Novell HMS 组件
 
 Novell OES 中的健康监控服务包含多个组件。最重要的描述如下：
 
 | 表格 3-17 | 组件 | 描述 |
+
 |---|---|---|
+
 | CIM | 通用信息模型 (CIM) 是一种概念信息模型，允许使用标准方法管理异构网络。CIM 有两部分：CIM 规范和 CIM 架构。 | |
+
 | CIMOM | 通用信息模型对象管理器 (CIMOM) 是一个 CIM 对象管理器，更具体地说，是一个根据 WBEM 标准管理对象的应用程序。 | |
+
 | OES | OES 包含了来自 OpenWBEM 项目的 CIMOM。 | |
+
 | Providers | 提供程序插进 OpenWBEM 以扩展其功能。每个提供程序对 CIM 架构的一个或多个方面进行实例化。Novell LIFE 提供程序包括某些 HMS 提供程序和一组基础配套 Novell 架构。 | |
+
+
+
 | iManager 中的监控服务器链接 | iManager 的健康监控插件，一个用于监控服务器健康的接口。 | |
 
 # 健康监控类型
 
 HMS 提供以下监控类型：
 
-- 稳健的健康监控。稳健的健康监控提供以下类别的系统统计数据：
-  - 内存
-  - 操作系统
-  - 进程/线程
-  - 网络
+## 稳健的健康监控
+
+稳健的健康监控提供以下类别的系统统计数据：
+
+- 内存
+- 操作系统
+- 进程/线程
+- 网络
 
 要使用此类健康监控，代理模块必须在被监控的服务器上运行，以便获取状态。
 
 您还必须对被监控的服务器进行身份验证，以便查看健康状态、编辑或更改您想要查看的监控类型。
 
-简易服务器状态。此监控根据对至少一个以下标准端口的连接尝试，监控服务器是运行状态还是关闭状态：
+## 简易服务器状态
+
+此监控根据对至少一个以下标准端口的连接尝试，监控服务器是运行状态还是关闭状态：
 
 - 7 (Echo)
 - 13 (Time)
@@ -5152,17 +4942,17 @@ HMS 提供以下监控类型：
 
 访问访问，请执行以下操作：
 
-- 1. 打开并登录 iManager。
+1. 打开并登录 iManager。
 
 如果您以 Admin 用户或具有 Admin 等权限的用户登录 iManager，可以执行所有可用健康监控服务任务。
 
 如果您以非 Admin 用户登录 iManager，则必须具有足够的权限监控服务器。HMS 对象必须已创建，且您对 HMS 对象拥有以下权限：
+- `[所有属性权限]` 比较/读取/写入
+- `[条目权限]` 浏览/创建/重命名/删除
 
-- [所有属性权限] 比较/读取/写入
-- [条目权限] 浏览/创建/重命名/删除
+2. （条件性）如果尚未选择，请选择角色和任务（Roles and Tasks）视图。
 
-- 2. （条件性）如果尚未选择，请选择角色和任务（Roles and Tasks）视图。
-- 3. 从左框架中选择服务器 (Servers) > 监控服务器 (Monitor Servers)。
+3. 从左框架中选择服务器 (Servers) > 监控服务器 (Monitor Servers)。
 
 从这里您可以配置并显示 OES 服务器的统计数据。
 
@@ -5183,20 +4973,16 @@ HMS 在 iManager 与被监控的各种 OpenWBEM CIMOM 代理之间的通信使�
 
 执行以下操作：
 
-- 1. 在容器字段中，输入以下内容之一：
-  输入您想要维护服务器列表的容器对象的完整区分名 (DN)，或 CIM 对象已存在的容器名称。
+1. 在容器字段中，输入以下内容之一：
+输入您想要维护服务器列表的容器对象的完整区分名 (`DN`)，或 CIM 对象已存在的容器名称。
 
+## 为 Linux 集成 Novell 企业级服务器
 
-
-
-
-# 为 Linux 集成 Novell 企业级服务器
-
--   使用对象选择器图标定位并选择该容器。
+- 使用对象选择器图标定位并选择该容器。
 
 请确保您选择的 eDirectory 树中的容器，让所有负责管理健康服务的用户都拥有权限访问并对其进行更改。
 
--   2. 选中后，点击“确定”。
+2. 选中后，点击“确定”。
 
 CIM、HMS 和 ServerList 对象将创建在您的树中，如下所示：
 
@@ -5228,48 +5014,40 @@ CIM、HMS 和 ServerList 对象将创建在您的树中，如下所示：
 
 要向组中添加服务器，请执行以下操作：
 
--   1. 从“服务器”页面，选择“添加”。
+1. 从“服务器”页面，选择“添加”。
+
 出现以下内容：
 
 图 3-25
 
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_294_1.png)
 
--   2. 在以下字段中输入相应信息：
-
--   **服务器名称。** 为要添加的服务器输入一个名称。
+2. 在以下字段中输入相应信息：
+- **服务器名称。** 为要添加的服务器输入一个名称。
 您可能希望其与服务器的实际主机名匹配。
-
--   **IP 地址/DNS 名称。** 为要添加的服务器输入 IP 地址或 DNS 名称。
-
+- **IP 地址/DNS 名称。** 为要添加的服务器输入 IP 地址或 DNS 名称。
 此信息必须与服务器的实际 IP 地址或 DNS 名称匹配。如果地址或名称不正确，监控软件将无法定位服务器并返回健康状况。
-
--   **描述。** 为要添加的服务器输入描述。
-
+- **描述。** 为要添加的服务器输入描述。
 您可能希望输入有关操作系统版本或正在运行的软件类型的数据，以便能够快速识别列出的不同服务器。
 
--   3. 选择您在此服务器上执行的监控类型：
-
--   **健壮健康监控。** 此类型监控以下类别别中的统计数据：
-
--   内存
--   操作系统
--   进程/线程
--   网络
--   CPU
+3. 选择您在此服务器上执行的监控类型：
+- **健壮健康监控。** 此类型监控以下类别别中的统计数据：
+  - 内存
+  - 操作系统
+  - 进程/线程
+  - 网络
+  - CPU
 
 被监控的服务器必须运行 `ocwond` 模块，以便获取健壮数据。
 
 在此版本的健康监控服务中：
-
--   过滤监控哪些统计数据是不可配置的。
--   Linux 上监控项目的阈值配置是不可配置的。
-
+- 过滤监控哪些统计数据是不可配置的。
+- Linux 上监控项目的阈值配置是不可配置的。
 对于在 NetWare 上监控的项目，已设置默认值，可以通过 NRM 进行更改。
 
--   **简单服务器状态。** 这仅根据对指定端口的连接尝试来监控服务器是运行中还是已关闭。
+- **简单服务器状态。** 这仅根据对指定端口的连接尝试来监控服务器是运行中还是已关闭。
 
--   完成后，选择“确定”。
+完成后，选择“确定”。
 
 您将返回到“服务器”页面。
 
@@ -5293,8 +5071,9 @@ CIM、HMS 和 ServerList 对象将创建在您的树中，如下所示：
 
 当您想要查看服务器健康状况详情时，您必须对该服务器进行身份验证。
 
--   1. 选择您想要查看的服务器名称链接。
--   2. （条件性）如果收到提示，请登录服务器。
+1. 选择您想要查看的服务器名称链接。
+
+2. （条件性）如果收到提示，请登录服务器。
 
 如果服务器的健康状况显示“无身份验证”图标，系统将提示您登录服务器。
 
@@ -5312,7 +5091,7 @@ CIM、HMS 和 ServerList 对象将创建在您的树中，如下所示：
 
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_298_0.png)
 
--   3. 选择以下链接之一来查看健康详情：
+3. 选择以下链接之一来查看健康详情：
 
 # 表 3-19
 
@@ -5329,8 +5108,10 @@ CIM、HMS 和 ServerList 对象将创建在您的树中，如下所示：
 | 网络 | 网卡整体状态以及关于局域网流量、发送和接收错误、冲突的详细统计数据。 |
 | CPU | 系统每个处理器的 CPU 状态。 |
 
--   4. （可选）要获取每个状态的描述和建议操作，访问页面上的在线帮助。
--   5. 完成后，选择“确定”。
+
+
+- 4. （可选）要获取每个状态的描述和建议操作，访问页面上的在线帮助。
+- 5. 完成后，选择“确定”。
 
 选中了您想要查看详情的服务器，您也可以点击相应的链接。
 
@@ -5338,10 +5119,10 @@ CIM、HMS 和 ServerList 对象将创建在您的树中，如下所示：
 
 要比较多个服务器的视图或查看一个服务器的多个页面，请执行以下操作：
 
--   1. 显示您想要监控的视图链接。
--   2. 右键点击该链接。
--   3. 在新窗口或标签页中打开链接。
--   4. 调整视图的大小和位置。
+- 1. 显示您想要监控的视图链接。
+- 2. 右键点击该链接。
+- 3. 在新窗口或标签页中打开链接。
+- 4. 调整视图的大小和位置。
 
 对每个视图重复这些步骤。
 
@@ -5357,10 +5138,6 @@ CIM、HMS 和 ServerList 对象将创建在您的树中，如下所示：
 | :--- | :--- |
 | 1. 使用 OpenSSH 远程管理 OES 服务器 | Novell OES 在 OES Linux 和 OES NetWare 上都提供了 OpenSSH 包。<br><br>为了有效使用 OpenSSH 远程执行基本任务，您需要了解：<br>- OpenSSH 的优势<br>- OpenSSH 与 OES Linux<br>- OpenSSH 与 OES NetWare<br>- 如何使用 SSH 命令 |
 | 2. 使用 Novell 远程管理器 (NRM) 管理 OES 服务器 | Novell 远程管理器 (NRM) 是一种基于浏览器的工具，您可以使用它从远程管理一个或多个 OES NetWare 或 OES Linux 服务器。<br><br>在此目标中，您学习了关于 NRM 的以下内容：<br>- 混合 OES 服务器环境中的环境<br>- 如何在 OES NetWare 上开始使用 NRM<br>- 如何在 OES Linux 上开始使用 NRM<br>- 如何配置组和组操作 |
-
-
-
-
 
 ## 目标
 
@@ -5394,7 +5171,7 @@ Novell iManager 是一个基于 Web 的管理控制台，它允许你在任何�
 - 2.5 版本的新功能
 - 如何访问 iManager
 - 如何初始配置 RBS
-- 如何配置 RBS 
+- 如何配置 RBS
 - 如何自定义 iManager
 - 如何监控服务器健康
 - Novell OES 中的 iManager 问题
@@ -5405,7 +5182,7 @@ Novell iManager 是一个基于 Web 的管理控制台，它允许你在任何�
 
 版本 1
 
-# 第 4  在 Novell OES Linux 服务器上实现 DNS/DHCP
+# 第 4 在 Novell OES Linux 服务器上实现 DNS/DHCP
 
 在本节中，您将学习如何在 Novell OES Linux 服务器上配置 DNS/DHCP。
 
@@ -5447,27 +5224,29 @@ OES Linux 同样使用符合 BIND 标准的 DNS 服务器。
 
 OES Linux DNS 服务器不支持 OES NetWare DNS 服务器提供的动态重新配置和 SNMP 陷阱。它没有与 iDirectory 或 Novell DNS/DHCP 管理控制集成。
 
-有关 OES Linux 上 DNS 的详情，请参阅《SUSE Linux Enterprise Server 9 管理指南》(sles_admin.pdf) 第 310 页的“DNS - Domain Name Service”。您可以通过 http://www.novell.com/documentation/oes 或课程 CD 中的 OES_Docs 目录访问该指南。
+有关 OES Linux 上 DNS 的详情，请参阅《SUSE Linux Enterprise Server 9 管理指南》(`sles_admin.pdf`) 第 310 页的“DNS - Domain Name Service”。您可以通过 `http://www.novell.com/documentation/oes` 或课程 CD 中的 `OES_Docs` 目录访问该指南。
 
-有关 OES NetWare 上 DNS 的详情，请参阅《NetWare Novell DNS/DHCP 服务管理指南》(dhcp_enu.pdf) 第 71 页的“Configure DNS”。您可以通过 http://www.novell.com/documentation/oes 或课程 CD 中的 OES_Docs 目录访问该指南。
+有关 OES NetWare 上 DNS 的详情，请参阅《NetWare Novell DNS/DHCP 服务管理指南》(`dhcp_enu.pdf`) 第 71 页的“Configure DNS”。您可以通过 `http://www.novell.com/documentation/oes` 或课程 CD 中的 `OES_Docs` 目录访问该指南。
 
 # 如何使用 YaST 在 OES Linux 上配置 DNS
 
 在 OES Linux 上配置 DNS 服务器的过程是通过 YaST 实用程序完成的。
 
-要开始此过程，启动 YaST 并选择 **网络服务 > DNS 服务器**。如果尚未安装 bind 包，系统将提示您安装它们并插入包含安装文件的 CD。
+要开始此过程，启动 YaST 并选择 **网络服务 > DNS 服务器**。如果尚未安装 `bind` 包，系统将提示您安装它们并插入包含安装文件的 CD。
 
-首次通过 YaST 访问 DNS 服务器时，将执行 DNS 服务器安装过程。在此过程中，您配置了某些 DNS 服务器设置，这些设置会被写入 /etc/named.conf。
+首次通过 YaST 访问 DNS 服务器时，将执行 DNS 服务器安装过程。在此过程中，您配置了某些 DNS 服务器设置，这些设置会被写入 `/etc/named.conf`。
 
 在安装所需的包后，会出现一个适用于 DNS 服务器的转发器设置页面：
 
 转发器 (Forwarders)
+
 要允许守护进程在连接建立时更新转发器，请设置守护进程转发器。要手动更新，请设置手动转发器。要添加新转发器，选择 IP 地址并点击添加；要删除已配置的转发器，选择它并点击删除
 
 配置好转发器设置后，第二个页面允许您定义 DNS 区域：
 
 DNS 区域
-使用此项管理 DNS 区域。要添加新区域，选择其区域名称和区域类型并点击添加。要添加反向区域，为网络输入 IP 地址的一部分，后跟 .192.168.in-addr.arpa。要删除已配置的区域，选择它并点击删除。要编辑区域，选择它并点击编辑区域...
+
+使用此项管理 DNS 区域。要添加新区域，选择其区域名称和区域类型并点击添加。要添加反向区域，为网络输入 IP 地址的一部分，后跟 `.192.168.in-addr.arpa`。要删除已配置的区域，选择它并点击删除。要编辑区域，选择它并点击编辑区域...
 
 # 集成 Linux 版 Open Novell Enterprise Server
 
@@ -5487,22 +5266,25 @@ DNS 区域
 
 YaST 及其自动化配置使其成为方便的工具。但您仍然需要熟悉以下配置和设置 DNS 服务的文件：
 
-- /etc/named.conf
-- /var/lib/named/
 
-# /etc/named.conf
 
-配置 DNS 服务器基本行为的文件是 /etc/named.conf。在基本情况下，此文件包含两个部分：
+# `/etc/named.conf`
 
-- 选项 (Options)。named.conf 的选项部分包含与 4-1 和 4-3 所示配置选择相关的设置。
+配置 DNS 服务器基本行为的文件是 `/etc/named.conf`。在基本情况下，此文件包含两个部分：
+
+## 选项 (Options)
+
+`named.conf` 的选项部分包含与 4-1 和 4-3 所示配置选择相关的设置。
 
 您在此部分中配置的选项具有以下作用：
 
-- 指明保存区域配置文件的默认目录；/var/lib/named/。
+- 指明保存区域配置文件的默认目录；`/var/lib/named/`。
 - 适用于 DNS 服务的行为。
 - 允许您输入适用于所有托管区域的全局指令。
 
-- 区域声明 (Zone Declarations)。named.conf 的区域声明部分用于为 DNS 服务器创建区域。这些声明包含以下内容：
+## 区域声明 (Zone Declarations)
+
+`named.conf` 的区域声明部分用于为 DNS 服务器创建区域。这些声明包含以下内容：
 
 - 区域名称。
 - 区域类型。
@@ -5510,15 +5292,11 @@ YaST 及其自动化配置使其成为方便的工具。但您仍然需要熟悉
 
 安装 DNS 服务会默认创建三个区域：
 
-- **localhost**。解析 127.0.0.1 的主区域。
-- **0.0.127-in-addr.arpa**。localhost 的主反向查找区域。
-- **hint**。一个用点（“””）标识的区域。
+- `localhost`。解析 127.0.0.1 的主区域。
+- `0.0.127-in-addr.arpa`。`localhost` 的主反向查找区域。
+- `hint`。一个用点（“””）标识的区域。
 
-您在 YaST 中创建的任何其他区域都定义在 named.conf 的区域声明部分。如果您熟悉其要求和语法，也可以手动编辑此文件。
-
-
-
-
+您在 YaST 中创建的任何其他区域都定义在 `named.conf` 的区域声明部分。如果您熟悉其要求和语法，也可以手动编辑此文件。
 
 ## 为 Linux 集成 Novell 企业级服务器
 
@@ -5528,19 +5306,19 @@ YaST 及其自动化配置使其成为方便的工具。但您仍然需要熟悉
 
 如果您手动编辑此文件，更改在重启 DNS 服务之前将不会生效。要重新启动服务，请输入以下命令：
 
-- /etc/init.d/named restart
+- `/etc/init.d/named restart`
 - 或
-- rcnamed restart
+- `rcnamed restart`
 
-## /var/lib/named/
+# `/var/lib/named/`
 
 OES Linux 上的 DNS 服务配置为将区域配置文件放置在 `/var/lib/named`。该目录位置在 `/etc/named.conf` 的 options 部分中指定。
 
 三个默认区域的区域配置文件位于此目录。它们的命名如下：
 
-- localhost.zone
-- 127.0.0.zone
-- root.hint
+- `localhost.zone`
+- `127.0.0.zone`
+- `root.hint`
 
 如果您在 YaST 中创建了 da.com 区域，它会将 da.com 的配置信息写入 `/var/lib/named/da.zone`。
 
@@ -5556,25 +5334,23 @@ OES Linux 上的 DNS 服务配置为将区域配置文件放置在 `/var/lib/nam
 
 您可以在 OES Linux 服务器上使用以下命令：
 
-- nslookup。`nslookup` 命令在 OES Linux 上的用法与在 NetWare 上一样。区别在于 `nslookup` 命令在 Linux 上已弃用。`nslookup` 被 **dig** 命令取代了。
+- `nslookup`。`nslookup` 命令在 OES Linux 上的用法与在 NetWare 上一样。区别在于 `nslookup` 命令在 Linux 上已弃用。`nslookup` 被 `dig` 命令取代了。
+- `dig`。`dig` 命令的功能与 `nslookup` 非常相似。`dig` 的基本语法为
 
-- **dig**。`dig` 命令的功能与 `nslookup` 非常相似。`dig` 的基本语法为
-
-**dns_name***
+`dns_name*`
 
 例如，为了确保 da1.da.com 被解析为正确的 IP 地址，请输入：
 
-**dig da1.da.com**
+`dig da1.da.com`
 
-与 `nslookup` 不同，`dig` 不能用于验证反向查找解析。相反，可以使用 *host* 命令来实现此目的。
+与 `nslookup` 不同，`dig` 不能用于验证反向查找解析。相反，可以使用 `host` 命令来实现此目的。
+- `host`。`host` 命令允许您验证名称服务器上的 `in-addr.addr` 区域是否配置正确。`host` 的基本语法为
 
-- **host**。`host` 命令允许您验证名称服务器上的 `in-addr.addr` 区域是否配置正确。`host` 的基本语法为
-
-**host IP_address***
+`host IP_address*`
 
 例如，要测试 10.200.200.1 是否被解析为正确的 DNS 名称，请输入：
 
-**host10.200.200.1**
+`host10.200.200.1`
 
 ## 使用 YaST 在 DA1 Linux 服务器上配置 DNS
 
@@ -5643,16 +5419,14 @@ range 192.168.1.10 192.168.1.200;
 
 如果您手动配置此文件，在通过以下命令重启 DHCP 守护进程之前，更改将不会生效：
 
-- /etc/init.d/dhcpd restart
-- rcnamed restart
+- `/etc/init.d/dhcpd restart`
+- `rcnamed restart`
 
 ## 练习 4-2 使用 YaST 在 DA1 Linux 服务器上配置 DHCP
 
 除了在 DA1 Linux 服务器上运行 DNS 外，您还希望运行一个 DHCP 服务器。目前，您在 DA2 NetWare 服务器上运行 DHCP。
 
 在此练习中，您将使用 YaST 在 OES Linux 服务器上配置并启动 DHCP 服务器，然后关闭 DA2 NetWare 服务器上的 DHCP 服务。
-
-
 
 
 
@@ -5663,7 +5437,7 @@ range 192.168.1.10 192.168.1.200;
 ## 目标
 
 - 1. 在 Novell OES 上配置时间同步
-- 2. 使用 ndsconfig 配置 eDirectory
+- 2. 使用 `ndsconfig` 配置 eDirectory
 - 3. 配置 eDirectory 用户访问 OES Linux 服务器
 - 4. 描述 Novell OES 存储解决方案
 - 5. 使用 NCP 服务器提供文件访问
@@ -5677,9 +5451,10 @@ Novell Open Enterprise Services (OES) 提供了多种文件存储选项，这些
 本节讨论了将 NSS 卷从 NetWare 服务器迁移到 OES Linux 服务器的过程。在执行此过程之前，你应该了解以下内容：
 
 字体 NSS 迁移（NetWare 到 OES Linux）的要求
+
 - NSS 迁移场景
 
-# NSS 迁移（NetWare 到 OES Linux）的要求
+### NSS 迁移（NetWare 到 OES Linux）的要求
 
 在开始 NSS 迁移之前，必须满足若干项要求。本节将讨论这些要求以及它们在成功迁移中所起的作用。
 
@@ -5691,7 +5466,7 @@ NSS 迁移要求包括以下内容的存在及其正确配置：
 
 本节还讨论了 Open Enterprise Server 的通用存储解决方案（针对 NetWare 和 Linux）以及特定的 NSS 基础概念。
 
-# NSS 迁移场景
+### NSS 迁移场景
 
 本节相关的 NSS 迁移练习基于这样一个场景：网络管理员想要将用户数据（在 NSS 卷上）从 NetWare 移动到 Linux，而无需了解或对其进行任何操作。
 
@@ -5702,9 +5477,7 @@ NSS 迁移要求包括以下内容的存在及其正确配置：
 - 使用服务器收敛工具进行迁移
 - 修改登录脚本
 
-## 目标 1
-
-## 在 Novell OES 上配置时间同步
+## 目标 1 在 Novell OES 上配置时间同步
 
 在该目标中，你将学习如何使用网络时间协议 (NTP) 为网络中的所有服务器维护一个共同的时间。
 
@@ -5715,7 +5488,7 @@ DA1 Linux 服务器使用网络时间协议 (NTP)，你应该能够执行以下�
 - 识别网络时间协议基础
 - 在你的网络上配置 NTP
 
-## 识别网络时间协议基础
+### 识别网络时间协议基础
 
 随着 eDirectory 环境不断扩展以包含混合操作系统环境，时间同步变得越来越依赖于 NTP。
 
@@ -5723,11 +5496,11 @@ DA1 Linux 服务器使用网络时间协议 (NTP)，你应该能够执行以下�
 
 - 什么是 NTP
 - 层级 (Stratum)
-- ntpdate
-- xntpd
-- ntptrace
+- `ntpdate`
+- `xntpd`
+- `ntptrace`
 
-## 什么是 NTP
+### 什么是 NTP
 
 该目标旨在教你 NTP 分发版中包含的一些基本概念和程序。它并不是设计来教你关于 NTP 的所有知识。有关 NTP 的更多信息，请访问 www.ntp.org。
 
@@ -5745,7 +5518,7 @@ NTP 时间消费者可以与符合 NTP 规范的操作系统配合。
 
 NTP 不仅能校正时间，它还能跟踪一致的时间变化，并自动调整客户端的时间漂移。它允许减少网络流量，即使在网络中断时也能保持客户端时钟稳定。
 
-## 层级 (Stratum)
+### 层级 (Stratum)
 
 NTP 引入了层级（Stratum）的概念。Stratum x 用于标记服务器在 NTP 树层级结构中的位置。
 
@@ -5767,9 +5540,9 @@ stratum-2 和 stratum-1 服务器之间的差异通常非常小，对于大多�
 
 图 5-1 (generally_only_one_server_communicates_with_external_this_reduces_network_traffic_across_wans.png
 
-## ntpdate
+### `ntpdate`
 
-NTP 分发包含了 ntpdate 程序，用于在提供者和消费者之间进行时间同步。
+NTP 分发包含了 `ntpdate` 程序，用于在提供者和消费者之间进行时间同步。
 
 要对客户端进行一次性更新，请在控制台输入以下内容：
 
@@ -5777,21 +5550,21 @@ NTP 分发包含了 ntpdate 程序，用于在提供者和消费者之间进行�
 ntpdate address_of_time_provider
 ```
 
-由于 ntpdate 只发生一次，客户端的时间最终会偏离提供者的时间。因此，ntpdate 不是长期最佳解决方案。
+由于 `ntpdate` 只发生一次，客户端的时间最终会偏离提供者的时间。因此，`ntpdate` 不是长期最佳解决方案。
 
-## xntpd
+### `xntpd`
 
-NTP 分发包含了 xntpd，即 NTP 守护进程。该守护进程用于提供者（服务器）和时间消费者（客户端）分别提供和获取时间。
+NTP 分发包含了 `xntpd`，即 NTP 守护进程。该守护进程用于提供者（服务器）和时间消费者（客户端）分别提供和获取时间。
 
-xntpd 设计用于持续调整时间，使得时间调整很小。
+`xntpd` 设计用于持续调整时间，使得时间调整很小。
 
-即使在提供者不可用时，xntpd也可以限制本地时钟。
+即使在提供者不可用时，`xntpd`也可以限制本地时钟。
 
-xntpd 进程所需的资源开销很小。这允许在服务器上部署。
+`xntpd` 进程所需的资源开销很小。这允许在服务器上部署。
 
-## xntpd 如何工作
+### `xntpd` 如何工作
 
-每当启动 守护进程时，它都会读取 /etc/ntp.conf 文件。该文件是 NTP 的配置文件。它告诉 守护进程使用哪些时间提供者。
+每当启动 守护进程时，它都会读取 `/etc/ntp.conf` 文件。该文件是 NTP 的配置文件。它告诉 守护进程使用哪些时间提供者。
 
 默认配置使用以下行将其声明为层级为 10 的提供者，并使用内部时钟作为时间源：
 
@@ -5804,10 +5577,11 @@ fudge 127.0.0.1 stratum 10
 
 ```
 server address_of_time_provider
+```
 
 由于守护进程使用的算法，最好与多个服务器同步，以帮助客户端来自错误或故障的服务器。在许多环境中，很难很快发现 NTP 服务器故障。
 
-要与多个服务器同步，只需在 ntp.conf 文件中添加几行：
+要与多个服务器同步，只需在 `ntp.conf` 文件中添加几行：
 
 ```
 server address1
@@ -5821,25 +5595,23 @@ server address2
 server address3
 ```
 
+
+
 你可以保留声明服务器作为层级为 10 的提供者的默认行。当你使用的服务器无法访问时，这些行为你提供了备份。
 
-如果对 ntp.conf 文件进行了任何更改，都需要停止并重启守护进程以在不重启的情况下更新配置。xtpd 进程可以随时启动或重启。
+如果对 `ntp.conf` 文件进行了任何更改，都需要停止并重启守护进程以在不重启的情况下更新配置。`xtpd` 进程可以随时启动或重启。
 
-以 root 身份登录时，输入 rcntpd start 启动 xtpd。
+以 root 身份登录时，输入 `rcntpd start` 启动 `xtpd`。
 
-以 root 身份登录时，输入 rcntpd stop 停止 xtpd。
+以 root 身份登录时，输入 `rcntpd stop` 停止 `xtpd`。
 
-以 root 身份登录时，输入 rcntpd restart 重启 xtpd。
+以 root 身份登录时，输入 `rcntpd restart` 重启 `xtpd`。
 
-在 xntpd 读取了 ntp.conf 文件后，客户端向服务器发送请求，服务器返回带有时间戳的响应，以及准确度和层级等信息。
+在 `xntpd` 读取了 `ntp.conf` 文件后，客户端向服务器发送请求，服务器返回带有时间戳的响应，以及准确度和层级等信息。
 
 客户端与服务器之间的事务大约每分钟发生一次，在正常情况下逐渐减少到每 17 分钟一次。同步状况差的客户端倾向于更频繁地轮询。
 
 客户端使用从服务器或多个服务器获取的信息来校准其时钟。
-
-
-
-
 
 # 为 Linux 集成 Novell 企业级服务器
 
@@ -5859,9 +5631,9 @@ server address3
 
 # ntptrace
 
-NTP 分发版还包含 ntptrace 程序。ntptrace 是一个信息性工具，用于跟踪时间消费者所接收的时间源。它可以作为一个的调试工具。
+NTP 分发版还包含 `ntptrace` 程序。`ntptrace` 是一个信息性工具，用于跟踪时间消费者所接收的时间源。它可以作为一个的调试工具。
 
-以下是 ntptrace 输出的示例：
+以下是 `ntptrace` 输出的示例：
 
 ```
 localhost: stratum 3, offset 0.00723, synch distance
@@ -5870,7 +5642,7 @@ tick.east.ca: stratum 2, offset 1.601143, synch distance 0.06713
 tock.usask.ca: stratum 1, offset 1.712003, synch distance 0.007233, refid 'TRUE'
 ```
 
-ntptrace 输出列出了客户端名称、其层级 (stratum)、相对于主机的时间偏移、同步距离以及连接到服务器的参考时钟 ID（如果存在）。
+`ntptrace` 输出列出了客户端名称、其层级 (stratum)、相对于主机的时间偏移、同步距离以及连接到服务器的参考时钟 ID（如果存在）。
 
 同步距离是时钟准确性的衡量标准，假设它有一个正确的时间源。
 
@@ -5883,7 +5655,7 @@ ntptrace 输出列出了客户端名称、其层级 (stratum)、相对于主机�
 - 使用服务器本地时钟
 - 使用你网络中的 NTP 时间源
 
-# 使用公共 NTP 时间服务器
+## 使用公共 NTP 时间服务器
 
 对于大多数小型组织（少于 100 台服务器），将服务器同步到准确的公共 NTP 服务器是时间同步最常用的方法。
 
@@ -5896,14 +5668,14 @@ ntptrace 输出列出了客户端名称、其层级 (stratum)、相对于主机�
 要配置服务器从特定的 NTP 服务器获取时间，请执行以下操作：
 
 1. 如果尚未安装 NTP，请安装它。可以从在线源或 Linux 安装光盘获取 NTP。
-2. 使用 Linux 文本编辑器打开 /etc/ntp.conf 文件。
+2. 使用 Linux 文本编辑器打开 `/etc/ntp.conf` 文件。
 3. 对于每个想要用作时间提供者的 NTP 服务器，添加类似下面的一行：
    `server IP_address_of_time_provider`
 4. 保存文件并退出编辑器。
 5. 输入 `xntpd start` 启动 NTP 守护进程。该进程将尝试从你配置的 NTP 服务器获取初始日期时间和，并返回“done”或“failed”消息。
-6. 在命令行提示符输入 `chkconfig xntpd 235`，配置 xntpd 守护进程在服务器启动时自动启动。
+6. 在命令行提示符输入 `chkconfig xntpd 235`，配置 `xntpd` 守护进程在服务器启动时自动启动。
 
-# 使用参考时钟
+## 使用参考时钟
 
 你可以使用自己的参考时钟为网络提供时间。参考时钟是使用各种技术同步到正确时间的设备，包括长波无线信号、GPS 传输或 CDMA 技术。
 
@@ -5915,40 +5687,29 @@ ntptrace 输出列出了客户端名称、其层级 (stratum)、相对于主机�
 
 > 你可以在 http://www.ntp.org 找到有关如何选择参考时钟的信息。
 
-# 使用服务器本地时钟
+## 使用服务器本地时钟
 
 你可以使用服务器内部本地时钟作为时间源。由于本地时钟的时间可能会漂移，这通常不是首选的时间同步解决方案。
 
-ntp.conf 文件已预配置为使用服务器本地时钟作为时间源，因此不需要编辑。然而，需要启动 NTP 守护进程。
+`ntp.conf` 文件已预配置为使用服务器本地时钟作为时间源，因此不需要编辑。然而，需要启动 NTP 守护进程。
 
 要配置服务器从其本地时钟获取时间，请执行以下操作：
 
 - 如果尚未安装 NTP，请安装它。可以从在线源或 Linux 安装光盘获取 NTP。
 - 在服务器控制台上，输入 `xntpd start` 启动 NTP 守护进程。
-- 输入 `chkconfig xntpd 235`，配置 xntpd 守护进程在服务器启动时自动启动。
+- 输入 `chkconfig xntpd 235`，配置 `xntpd` 守护进程在服务器启动时自动启动。
 
-# 使用你网络中的 NTP 时间源
+## 使用你网络中的 NTP 时间源
 
 在本课程中，DA1 已经设置。要设置你的 SUSE 服务器从 DA1 获取时间，请执行：
 
 1. 如果尚未安装 NTP，请安装它。可以从在线源或 Linux 安装光盘获取 NTP。
-2. 使用 Linux 文本编辑器打开 /etc/ntp.conf 文件。
+2. 使用 Linux 文本编辑器打开 `/etc/ntp.conf` 文件。
 3. 对于每个想要用作时间提供者的 NTP 服务器，添加类似下面的一行：
-   ntptrace 输出的示例：
-```
-localhost: stratum 3, offset 0.00723, synch distance
-1.18225
-tick.east.ca: stratum 2, offset 1.601143, synch distance 0.06713
-tock.usask.ca: stratum 1, offset 1.712003, synch distance 0.007233, refid 'TRUE'
-```
-ntptrace 输出列出了客户端名称、其层级 (stratum)、相对于主机的时间偏移、同步距离以及连接到服务器的参考时钟 ID（如果存在）。
-
-同步距离是时钟准确性的衡量标准，假设它有一个正确的时间源。
-
-3. 在 /etc/ntp.conf 中添加以下内容：
-server DA1
-
-4. 修改并保存文件后，输入 `xntpd start` 启动服务。
+   `server IP_address_of_time_provider`
+4. 在 `/etc/ntp.conf` 中添加以下内容：
+   `server DA1`
+5. 修改并保存文件后，输入 `xntpd start` 启动服务。
 
 或者，如果 NTP 守护进程已运行，输入 `xntpd restart` 重启服务。
 
@@ -5965,21 +5726,22 @@ server DA1
 
 在本课程中，你将 OES Linux 服务器从自己的 eDirectory 树移动到带有 NetWare 服务器的现有 eDirectory 树。
 
-你可以通过 eDirectory YaST 模块完成大部分操作。但为了一致的可靠性，Novell 建议使用 ndsconfig 工具将服务器安装到现有树中。
+你可以通过 eDirectory YaST 模块完成大部分操作。但为了一致的可靠性，Novell 建议使用 `ndsconfig` 工具将服务器安装到现有树中。
 
-你必须以 root 身份登录才能使用 ndsconfig。在使用参数使用 ndsconfig 时，它验证所有参数并提示具有树管理权限的用户名和密码。
+你必须以 root 身份登录才能使用 `ndsconfig`。在使用参数使用 `ndsconfig` 时，它验证所有参数并提示具有树管理权限的用户名和密码。
 
-使用 ndsconfig，你可以：
+使用 `ndsconfig`，你可以：
 
 - 创建树
 - 向现有树中添加服务器
 - 从树中移除服务器
 
-ndsconfig 使用以下语法：
+`ndsconfig` 使用以下语法：
+```
 
-```
-ndsconfig type [-m modulename] [-S servername] [-t tree_name] [-n context] [-d path_for_DIB] [-L ldap_port] [-l ssl_port] [-e] -a admin_name
-```
+
+
+`ndsconfig type [-m modulename] [-S servername] [-t tree_name] [-n context] [-d path_for_DIB] [-L ldap_port] [-l ssl_port] [-e] -a admin_name`
 
 你可以使用以下参数：
 
@@ -5990,25 +5752,21 @@ ndsconfig type [-m modulename] [-S servername] [-t tree_name] [-n context] [-d p
 | | * add | 向树中添加服务器。 |
 | | * rm | 从树中移除服务器。 |
 
-
-
-
-
 ## 表 5-1 参数使用
 
 | 参数 | 用途 |
 |---|---|
-| -t | 指定服务器要添加的树名称。 |
-| -n | 指定服务器对象要所在的上下文（context）。 |
-| -d | 指定数据库文件存储目录路径。 |
-| -L | 指定 LDAP 服务器上的 TCP 端口号。 |
-| -l | 指定 LDAP 服务器上的 SSL 端口号。 |
-| -a | 指定 User 对象的命名标识（DN），该对象对创建服务器对象的上下文具有管理员权限。 |
-| -e | 为 LDAP 对象启用明文密码支持。 |
-| -p | 通过指定托管该树的服务器 IP 地址，将 eDirectory 服务器安装到现有的树中。如果使用此选项，则不使用 SLP 进行树查找。 |
-| -m | 指定要安装的模块名称。在安装新树时，你可以只安装 `ds` 模块。安装 `ds` 模块后，你可以使用 `add` 命令添加 LDAP 和 SAS 服务。如果未指定模块名称，则安装所有 3 个模块。 |
-| -o | 指定 HTTP 明文端口号。 |
-| -O | 指定 HTTP 安全端口号。 |
+| `-t` | 指定服务器要添加的树名称。 |
+| `-n` | 指定服务器对象要所在的上下文（context）。 |
+| `-d` | 指定数据库文件存储目录路径。 |
+| `-L` | 指定 LDAP 服务器上的 TCP 端口号。 |
+| `-l` | 指定 LDAP 服务器上的 SSL 端口号。 |
+| `-a` | 指定 User 对象的命名标识（DN），该对象对创建服务器对象的上下文具有管理员权限。 |
+| `-e` | 为 LDAP 对象启用明文密码支持。 |
+| `-p` | 通过指定托管该树的服务器 IP 地址，将 eDirectory 服务器安装到现有的树中。如果使用此选项，则不使用 SLP 进行树查找。 |
+| `-m` | 指定要安装的模块名称。在安装新树时，你可以只安装 `ds` 模块。安装 `ds` 模块后，你可以使用 `add` 命令添加 LDAP 和 SAS 服务。如果未指定模块名称，则安装所有 3 个模块。 |
+| `-o` | 指定 HTTP 明文端口号。 |
+| `-O` | 指定 HTTP 安全端口号。 |
 | (续) 表 5-1 参数 | 用途 |
 |---|--- |
 | set | 为指定的 eDirectory 可配置参数设置值。如果未指定参数列表，`ndsconfig` 将列出所有 eDirectory 可配置参数。 |
@@ -6025,7 +5783,7 @@ ndsconfig new [-m modulename] [-i] [-S servername] [-t tree_name] [-n context] [
 
 系统将根据指定的树名称和上下文安装新树。如果命令行中没有指定参数，`ndsconfig` 将提示你为每个缺失的参数输入值。
 
-例如，要创建一个名为 DIGITALAIR-TREE 的新树，在 O=DigitalAir 上下文中安装服务器，并在 O=DigitalAir 上下文中创建 Admin，请输入以下命令：
+例如，要创建一个名为 `DIGITALAIR-TREE` 的新树，在 `O=DigitalAir` 上下文中安装服务器，并在 `O=DigitalAir` 上下文中创建 Admin，请输入以下命令：
 
 ```
 ndsconfig new -t DIGITALAIR-TREE -n O=DigitalAir -a CN=admin,lin O=DigitalAir
@@ -6051,7 +5809,7 @@ ndsconfig add [-m modulename] [-S servername] [-p IP_address] [-t tree_name] [-n
 
 服务器将被添加到指定上下文的现有树中。如果上下文不存在，`ndsconfig` 将创建该上下文并添加服务器。
 
-例如，要在 SLC.DigitalAir 上下文中向名为 DIGITALAIR-TREE 的现有树中添加服务器，请使用以下命令：
+例如，要在 `SLC.DigitalAir` 上下文中向名为 `DIGITALAIR-TREE` 的现有树中添加服务器，请使用以下命令：
 
 ```
 ndsconfig add -t DIGITALAIR-TREE -n OU=SLC,O=DigitalAir -a CN=admin,O=DigitalAir
@@ -6065,37 +5823,36 @@ ndsconfig add -t DIGITALAIR-TREE -n OU=SLC,O=DigitalAir -a CN=admin,O=DigitalAir
 ndsconfig rm -a admin_name
 ```
 
+
+
 ### 目标 3
 
 #### 配置 eDirectory 用户访问 OES Linux 服务器
 
-正如 NetWare 服务器上的用户和组通过 eDirectory 管理一样，Linux 服务器上的用户和组也是根据 **POSIX**（可移植操作系统接口）标准进行管理的。
+正如 NetWare 服务器上的用户和组通过 eDirectory 管理一样，Linux 服务器上的用户和组也是根据 `POSIX`（可移植操作系统接口）标准进行管理的。
 
 由于 Novell OES 提供了运行在 Linux 和 NetWare 上的服务，Novell 开发了一项技术，让 eDirectory 用户在 Linux 服务器上也能作为 POSIX 用户使用。
 
-这项技术被称为 **Linux 用户管理（LUM）**。
+这项技术被称为 `Linux 用户管理（LUM）`。
 
 要配置 eDirectory 用户通过 LUM 访问 OES 服务器，你需要了解以下内容：
 
 - LUM 基础
 - 如何实现 LUM
-- 如何启用 eDirectory 用户访问 Linux 
+- 如何启用 eDirectory 用户访问 Linux
 
-关于 Linux 用户管理的完整信息，请参阅《Novell OES Linux User Management Technology Guide首页lumadgd.pdf)。
-你可以从 3077 课程 CD 中的 `OES_Docs` 目录通过 http://www.novell.com/documentation/oes 获取该指南。
+关于 Linux 用户管理的完整信息，请参阅《Novell OES Linux User Management Technology Guide 首页 `lumadgd.pdf`）。
+你可以从 `3077` 课程 CD 中的 `OES_Docs` 目录通过 `http://www.novell.com/documentation/oes` 获取该指南。
 
 ## LUM 基础
 
 以下内容对你有所帮助：
 - LUM 基础
 - 如何实现 LUM
-- 如何启用 eDirectory 用户访问 Linux 
+- 如何启用 eDirectory 用户访问 Linux
 
-关于 Linux 用户管理的完整信息，请参阅《Novell OES Linux User Management Technology Guide》(lumadgd.pdf)。
-你可以从 3077 课程 CD 中的 `OES_Docs` 目录通过 http://www.novell.com/documentation/oes 获取该指南。
-
-
-
+关于 Linux 用户管理的完整信息，请参阅《Novell OES Linux User Management Technology Guide》(`lumadgd.pdf`)。
+你可以从 `3077` 课程 CD 中的 `OES_Docs` 目录通过 `http://www.novell.com/documentation/oes` 获取该指南。
 
 # 以下列出了用于启用 用的核心实用程序：
 
@@ -6103,23 +5860,23 @@ ndsconfig rm -a admin_name
 
 | 命令 | 执行位置 | 任务 |
 |---|---|---|
-| ftp | 另一台主机 | 在 OES 服务器之间传输文件，在这种情况下，服务器是远程主机。 |
-| login | - OES 服务器 | 登录 OES 服务器，可以可以直接登录，也可以通过与服务器的 SSH 会话登录。 |
+| `ftp` | 另一台主机 | 在 OES 服务器之间传输文件，在这种情况下，服务器是远程主机。 |
+| `login` | - OES 服务器 | 登录 OES 服务器，可以可以直接登录，也可以通过与服务器的 SSH 会话登录。 |
 | | 与 OES 服务器的 SSH 会话 | |
-| passwd | - OES 服务器 | 修改 POSIX 密码。 |
+| `passwd` | - OES 服务器 | 修改 POSIX 密码。 |
 | | 与 OES 服务器的 SSH 会话 | |
-| rlogin | 另一台主机 | 登录 OES 服务器，在这种情况下，服务器是远程主机。 |
-| rsh | 另一台主机 | 在 OES 服务器上执行命令，在这种情况下，服务器是远程主机。 |
-| ssh | 另一台主机 | 与 OES 服务器建立安全的加密连接，在这种情况下，服务器是远程主机。 |
-| su | - OES 服务器 | 临时变为另一个用户。 |
+| `rlogin` | 另一台主机 | 登录 OES 服务器，在这种情况下，服务器是远程主机。 |
+| `rsh` | 另一台主机 | 在 OES 服务器上执行命令，在这种情况下，服务器是远程主机。 |
+| `ssh` | 另一台主机 | 与 OES 服务器建立安全的加密连接，在这种情况下，服务器是远程主机。 |
+| `su` | - OES 服务器 | 临时变为另一个用户。 |
 | | 与 OES 服务器的 SSH 会话 | |
 
 **服务器上的 Novell Samba (SMB/CIFS) 共享。** 需要访问服务器上定义的 Samba 共享的 Windows 工作组用户必须是已配置访问服务器的启用 Linux eDirectory 用户，因为 Samba 需要 POSIX 身份识别才能访问。
 
 扩展来说，需要访问指向服务器的 SMB/CIFS 存储位置对象（Storage Location Objects）的 NetStorage 用户也必须是具有服务器访问权限的启用 Linux eDirectory 用户。
 
-- Linux 上的 Novell Remote Manager (NRM)。你可以通过以下方式访问 NRM：
-- 具有查看 Linux 服务器上所有内容权限的 root 用户
+- Linux 上的 Novell Remote Manager (`NRM`)。你可以通过以下方式访问 NRM：
+- 具有查看 Linux 服务器上所有内容权限的 `root` 用户
 - 受 POSIX 权限限制的本地 Linux 用户
 - 启用了 Linux 的 eDirectory 用户，例如在安装期间创建的 Admin 用户。
 
@@ -6128,13 +5885,11 @@ ndsconfig rm -a admin_name
 某些不需要 eDirectory 用户启用 Linux 即可访问服务，但对 LUM 有某些要求的服务，包括以下项：
 
 - QuickFinder、Novell iFolder 2.1x 以及其他 Web 服务。如果只有本地用户访问这些 Web 服务，则不适用 Linux 启用，因为这些用户不是远程 eDirectory 用户。
-
 - NCP 服务器。移植到 Linux 的 NCP 服务器仍然与 eDirectory 保持紧密集成，不需要 eDirectory 用户启用 Linux。
 
 然而，当创建 NCP 卷指向服务器上 NSS 以外的分区时，如果用户未启用 Linux，则并非所有功能都可用。
 
 例如，如果用户未启用 Linux，则无法进行跨协议访问。
-
 - NSS。直接使用 NCP（Novell 客户端）访问 NSS 卷的 eDirectory 用户不需要启用 Linux。
 
 然而，如果使用任何其他访问协议通过虚拟文件系统访问 NSS，使得 NSS 看起来像是一个符合 POSIX 标准的文件系统，则这些用户必须启用 Linux。
@@ -6151,7 +5906,7 @@ ndsconfig rm -a admin_name
 
 换句话说，如果他们需要访问多台服务器，仅为访问单个 OES Linux 服务器启用 Linux 是不够的。
 
-必须使用 iManager 为用户需要访问的每台服务器配置用户所属的启用 Linux 组与服务器关联的 eDirectory UNIX 工作站（UNIX Workstation）对象之间的关联。
+必须使用 `iManager` 为用户需要访问的每台服务器配置用户所属的启用 Linux 组与服务器关联的 eDirectory UNIX 工作站（UNIX Workstation）对象之间的关联。
 
 # 如何实现 LUM
 
@@ -6173,17 +5928,16 @@ ndsconfig rm -a admin_name
 
 # 为 eDirectory 用户启用 Linux 访问
 
-你可以使用 iManager 2.5 或 nambulkadd 命令为 eDirectory 用户启用 LUM：
+你可以使用 `iManager 2.5` 或 `nambulkadd` 命令为 eDirectory 用户启用 LUM：
 
-- iManager。你可以使用 iManager 中的 LUM 任务为现有的 eDirectory 用户启用 Linux 访问。
+- `iManager`。你可以使用 iManager 中的 LUM 任务为现有的 eDirectory 用户启用 Linux 访问。
 
 只要它们可以被分配到同一个主启用 Linux 组，你就可以在同一操作中启用多个用户。该过程允许将该组与一个或多个 OES Linux 服务器或 Linux 工作站关联。
-
-- nambulkadd。如果你有需要启用 Linux 访问的 eDirectory 用户和组，可以使用 nambulkadd 命令同时修改多个对象。
+- `nambulkadd`。如果你有需要启用 Linux 访问的 eDirectory 用户和组，可以使用 `nambulkadd` 命令同时修改多个对象。
 
 当使用 iManager 管理 OES Linux 访问时，你可能会发现命名上的差异。
 
-当创建 OES Linux 服务器时，eDirectory 中会创建一个 UNIX Workstation - server_name 对象，其中 server_name 是 OES Linux 服务器的 DNS 名称。
+当创建 OES Linux 服务器时，eDirectory 中会创建一个 UNIX Workstation - `server_name` 对象，其中 `server_name` 是 OES Linux 服务器的 DNS 名称。
 
 iManager 用户管理插件将服务器对象称为“Linux Workstation”对象。“Linux Workstation”和“Linux Workstation”（此处原文）指的是相同的 eDirectory 对象。
 
@@ -6208,7 +5962,7 @@ iManager 用户管理插件将服务器对象称为“Linux Workstation”对象
 
 要为 eDirectory 组启用 Linux 访问，请执行以下操作：
 
-1. 以 eDirectory 管理员或等效身份登录 iManager。
+1. 以 eDirectory 管理员或等效身份登录 `iManager`。
 2. 选择用户管理 > 启用组。
 3. 浏览并选择一个多个组对象；点击确定。
 4. （条件）如果你想对组内的所有用户启用，请确保勾选“启用这些组中的所有用户”选项。
@@ -6223,7 +5977,7 @@ iManager 用户管理插件将服务器对象称为“Linux Workstation”对象
 
 要为 eDirectory 用户启用 Linux 访问，请执行以下操作：
 
-1. 以 eDirectory 管理员或等效身份登录 iManager。
+1. 以 eDirectory 管理员或等效身份登录 `iManager`。
 2. 选择用户管理 > 启用用户。
 3. 浏览并选择一个多个用户对象；点击确定。
 4. 点击“下一步”。
@@ -6238,20 +5992,17 @@ iManager 用户管理插件将服务器对象称为“Linux Workstation”对象
 8. 点击“下一步”，然后点击“完成”。
 9. 点击确定。
 
-
-
-
 ## 练习 5-1 将 DA1 Linux 服务器迁移到 DA-CORP 树
 
 现在你已经复习了时间同步和 Linux 用户管理，可以准备开始练习 5-1 了。
 
-目前，DA2 NetWare 和 DA1 Linux 服务器位于不同的树中：DA2 NetWare 位于 DA-CORP 树，而 DA1 Linux 位于 DA-SERVICES 树。每台服务器都使用其自己的本地时钟作为时间提供源。
+目前，`DA2 NetWare` 和 `DA1 Linux` 服务器位于不同的树中：`DA2 NetWare` 位于 `DA-CORP` 树，而 `DA1 Linux` 位于 `DA-SERVICES` 树。每台服务器都使用其自己的本地时钟作为时间提供源。
 
-练习的起始步骤是配置 DA2 NetWare 服务器使用 DA1 Linux 服务器作为时间提供源，以便两台服务器实现时间同步。
+练习的起始步骤是配置 `DA2 NetWare` 服务器使用 `DA1 Linux` 服务器作为时间提供源，以便两台服务器实现时间同步。
 
-由于 DA1 Linux 服务器目前托管着 DA-SERVICES eDirectory 树，在将 DA1 安装到 DA-CORP 树之前，你必须将该服务器从树中移除。
+由于 `DA1 Linux` 服务器目前托管着 `DA-SERVICES` eDirectory 树，在将 `DA1` 安装到 `DA-CORP` 树之前，你必须将该服务器从树中移除。
 
-由于 DA1 Linux 服务器还托管着一个与 DA-SERVICES 树工作的 LUM 配置，练习的一部分将涉及移除当前的 LUM 配置，然后重新配置 LUM 以与 DA-CORP 树工作。
+由于 `DA1 Linux` 服务器还托管着一个与 `DA-SERVICES` 树工作的 LUM 配置，练习的一部分将涉及移除当前的 LUM 配置，然后重新配置 LUM 以与 `DA-CORP` 树工作。
 
 练习 5-1“将 DA1 Linux 服务器迁移到 DA-CORP 树”位于你的《Linux Novell Open Enterprise Server 集成教程》第 5-2 页。
 
@@ -6268,7 +6019,7 @@ iManager 用户管理插件将服务器对象称为“Linux Workstation”对象
 
 ### Novell OES 中的文件系统支持
 
-如下所示，两种 Novell OES 服务器平台都支持 Novell® Storage Services™ (NSS) 及其传统文件系统：
+如下所示，两种 Novell OES 服务器平台都支持 Novell® Storage Services™ (`NSS`) 及其传统文件系统：
 
 图 5-6
 
@@ -6276,19 +6027,19 @@ iManager 用户管理插件将服务器对象称为“Linux Workstation”对象
 
 以下是文件类型的摘要：
 
-- 传统的 Linux 文件系统。Novell OES Linux (SLES 9) 支持多种不同的文件系统，最常见的是 ext2、ext3 和 ReiserFS。
+- 传统的 Linux 文件系统。Novell OES Linux (`SLES 9`) 支持多种不同的文件系统，最常见的是 `ext2`、`ext3` 和 `ReiserFS`。
 
 在各种 Linux 传统文件系统上，对 OES 服务的支持没有差异。
 
-在 OES Linux 上，Linux 和 Novell Storage Services (NSS) 之间的服务支持存在差异。
+在 OES Linux 上，Linux 和 Novell Storage Services (`NSS`) 之间的服务支持存在差异。
 
 ### 在 Linux 上集成 Novell Open Enterprise Server
 
 **传统 NetWare 文件系统。**尽管它在 NetWare 服务器上被认为是遗留文件系统，但 NetWare 传统文件系统仍然强大强大，并支持 NetWare 文件服务访问模型。
 
-**Novell Storage Services (NSS)。** NSS 允许你为任何规模的组织共享文件存储。
+**Novell Storage Services (`NSS`)。** `NSS` 允许你为任何规模的组织共享文件存储。
 
-在 NetWare 上，NSS 的特性包括：
+在 NetWare 上，`NSS` 的特性包括：
 
 - 可见性
 - Trustee 访问控制支持
@@ -6300,17 +6051,17 @@ iManager 用户管理插件将服务器对象称为“Linux Workstation”对象
 - 事件文件列表
 - 文件救援子系统
 
-这些许多功能在 OES Linux 的 NSS 中也得到了支持。
+这些许多功能在 OES Linux 的 `NSS` 中也得到了支持。
 
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_353_0.png)
 
-要比较 NetWare 和 Linux  NSS，请参考《Novell Storage Services File System Administration Guide》(nss_enu.pdf) 第 413 页的“NetWare 上 NSS 与 Linux 上 NSS 的比较”。
+要比较 NetWare 和 Linux  NSS，请参考《Novell Storage Services File System Administration Guide》(`nss_enu.pdf`) 第 413 页的“NetWare 上 NSS 与 Linux 上 NSS 的比较”。
 
-你可以从 **3077 课程 CD** 上的 OES_Docs 目录通过 http://www.novell.com/documentation/oes 访问该指南。
+你可以从 `3077` 课程 CD 上的 `OES_Docs` 目录通过 `http://www.novell.com/documentation/oes` 访问该指南。
 
 ### Linux 上的 NetWare 协议支持（Novell 客户端支持）
 
-许多组织依赖 NetWare Core Protocol™ (NCP) 和 Novell Client™ 软件来实现文件存储服务的高安全性访问。
+许多组织依赖 NetWare Core Protocol™ (`NCP`) 和 Novell Client™ 软件来实现文件存储服务的高安全性访问。
 
 OES Linux 的 NCP 服务器允许你使用 Novell Client 软件连接到 Linux。
 
@@ -6323,32 +6074,27 @@ OES Linux 的 NCP 服务器允许你使用 Novell Client 软件连接到 Linux�
 
 ### 直接连接存储选项（NSS 和传统）
 
-如图 5-6 所示，你可以在两种 Novell OES 平台上安装传统卷和 Novell 存储系统 (NSS) 卷。
+如图 5-6 所示，你可以在两种 Novell OES 平台上安装传统卷和 Novell 存储系统 (`NSS`) 卷。
 
 这些设备可以安装在服务器内部，也可以通过外部 SCSI 总线直接连接到服务器。
 
 ### 高级存储选项（仅限 NSS）
 
-NSS 卷支持以下高级存储解决方案：
+`NSS` 卷支持以下高级存储解决方案：
 
-- 网络附属存储 (NAS) 解决方案。NAS 是一个专用的数据服务器或设备，通过现有的网络基础设施为用户和应用程序服务器提供集中访问。它使用以太网和 TCP/IP 等传统的 LAN 协议。
+- 网络附属存储 (`NAS`) 解决方案。`NAS` 是一个专用的数据服务器或设备，通过现有的网络基础设施为用户和应用程序服务器提供集中访问。它使用以太网和 TCP/IP 等传统的 LAN 协议。
 
 使用千兆以太网时，访问速度与直接连接存储设备的速度相似。
 
 缺点是数据请求和数据会竞争网络带宽。
-
-- 存储区域网络 (SAN) 解决方案。SAN 是由服务器和存储媒体组成的独立专用网络，通过高速互连连接。
+- 存储区域网络 (`SAN`) 解决方案。`SAN` 是由服务器和存储媒体组成的独立专用网络，通过高速互连连接。
 
 Novell iSCSI。你可以使用 Novell iSCSI 创建 SAN，它使用 Novell eDirectory 管理 iSCSI 资源，包括授予 trustee 权限和用户访问。
 
 容错和高可用架构。你可以使用以下一种或多种技术：
 
-- 多路径 I/O。NSS 通过自动识别每个 NetWare 服务器与其存储设备之间的多条路径，帮助防止 CPU 与存储设备之间连接的故障。
-
-。
-
-- 软件 RAID。NSS 支持软件 RAID，通过增强数据容错和 I/O 性能来提高存储的可用性和性能。
-
+- 多路径 I/O。`NSS` 通过自动识别每个 NetWare 服务器与其存储设备之间的多条路径，帮助防止 CPU 与存储设备之间连接的故障。
+- 软件 RAID。`NSS` 支持软件 RAID，通过增强数据容错和 I/O 性能来提高存储的可用性和性能。
 - 服务器集群。你可以将 OES NetWare 配置为高可用集群，当托管服务器故障时，资源和服务将自动配置从一台服务器切换到另一台服务器。你也可以手动从一台服务器切换到另一台，以帮助维护服务器。
 
 ### OES 文件规划
@@ -6368,19 +6114,19 @@ Novell iSCSI。你可以使用 Novell iSCSI 创建 SAN，它使用 Novell eDirec
 
 ### NSS 考虑因素
 
-以下是 NSS 的考虑因素：
+以下是 `NSS` 的考虑因素：
 
-**设备大小限制。** NSS 识别的逻辑或物理设备最大大小为 2TB。如果你的存储磁盘大于 2TB，请使用存储设备实用程序将其分区为较小的逻辑设备以供 NSS 使用。在规划 OES Linux 上的 NSS 时特别要注意，因为 Linux 传统卷的大小限制为 8TB。
+**设备大小限制。** `NSS` 识别的逻辑或物理设备最大大小为 `2TB`。如果你的存储磁盘大于 `2TB`，请使用存储设备实用程序将其分区为较小的逻辑设备以供 `NSS` 使用。在规划 OES Linux 上的 `NSS` 时特别要注意，因为 Linux 传统卷的大小限制为 `8TB`。
 
-**其他 NSS 规划主题。** 规划 NSS 时，请考虑以下主题：
+**其他 NSS 规划主题。** 规划 `NSS` 时，请考虑以下主题：
 * 系统要求
 * 安全考虑
 * 未来存储需求规划
 * 在 eDirectory 中创建和命名存储对象
 
-有关存储规划的详情，请参考《Novell Storage Services File System Administration Guide》(nss_enu.pdf) 第 65 页的“规划 NSS 解决方案”。
+有关存储规划的详情，请参考《Novell Storage Services File System Administration Guide》(`nss_enu.pdf`) 第 65 页的“规划 NSS 解决方案”。
 
-你可以通过 http://www.novell.com/documentation/oes 或从 3077 课程 CD 上的 OES_Docs 目录访问该指南。
+你可以通过 `http://www.novell.com/documentation/oes` 或从 `3077` 课程 CD 上的 `OES_Docs` 目录访问该指南。
 
 ## 目标 5
 
@@ -6390,7 +6136,7 @@ Windows 版 Novell Client 是一种长期软件解决方案，用于从 Windows 
 
 Novell Client 扩展了 Windows 桌面的能力，使其能够访问 Novell 服务，例如 eDirectory 身份验证、网络浏览和服务解析，以及安全的文件系统访问。
 
-它支持 NCP、RSA 和 NDAP 等传统的 Novell 协议，并与 LDAP 等开放协议协作。
+它支持 `NCP`、`RSA` 和 `NDAP` 等传统的 Novell 协议，并与 `LDAP` 等开放协议协作。
 
 Linux 版 Novell Client 为 Linux 工作站提供相同的服务。预计 Linux 版 Novell Client 将 OES 发布后作为免费下载提供。
 
@@ -6406,13 +6152,9 @@ Linux NCP 服务器启用了对登录脚本、OES Linux 服务器驱动器映射
 
 > Novell OES 的初始版本不支持事务跟踪（Transaction Tracking）和乐观锁定。
 
-
-
-
-
 ## NCP 的用途
 
-通过 Novell OES，NetWare 核心协议 (NCP) 支持 OES NetWare 和 OES Linux 服务器上的许多网络服务。
+通过 Novell OES，NetWare 核心协议 (`NCP`) 支持 OES NetWare 和 OES Linux 服务器上的许多网络服务。
 
 Windows 用户可以使用 Novell Client 像在 NetWare 服务器上一样，访问 OES Linux 服务器上的数据、管理文件和文件夹，并映射驱动器。
 
@@ -6424,7 +6166,7 @@ Windows 用户可以使用 Novell Client 像在 NetWare 服务器上一样，访
 
 在安装 OES NetWare 服务器后，在安装了 Novell Client 的工作站上的 eDirectory 用户可以访问您授予其访问权限的所有目录和文件。
 
-对于 OES NetWare 上的 NCP 卷，可以通过 NRM 或通过 Novell Client 管理权限。
+对于 OES NetWare 上的 NCP 卷，可以通过 `NRM` 或通过 Novell Client 管理权限。
 
 您可以通过以下步骤使用 Novell Client 来管理文件系统权限：
 
@@ -6452,27 +6194,27 @@ Windows 用户可以使用 Novell Client 像在 NetWare 服务器上一样，访
 
 Linux 版 NCP Server 允许 NCP 访问在 OES Linux 服务器上定义的 NCP 卷。
 
-当您安装 NCP 服务器时，安装程序会创建一个名为 SYS 的 NCP 卷，映射到 Linux 服务器上的 `/usr/novell/sys` 文件夹。
+当您安装 NCP 服务器时，安装程序会创建一个名为 `SYS` 的 NCP 卷，映射到 Linux 服务器上的 `/usr/novell/sys` 文件夹。
 
-此 NCP 卷包含 LOGIN 和 PUBLIC 目录，这些目录又包含了与 NetWare 中同名目录相同的一小部分文件。
+此 NCP 卷包含 `LOGIN` 和 `PUBLIC` 目录，这些目录又包含了与 NetWare 中同名目录相同的一小部分文件。
 
 ## 如何创建卷指针
 
 最初，连接到 OES Linux 服务器的 Novell Client 没有任何可用的 NCP 主目录或数据卷。
 
-如果您希望用户在服务器上拥有 NCP 主目录或数据目录，您必须决定希望这些目录出现在服务器目录结构的何种位置，并使用 Linux 提示符下使用 NCPCON 工具创建 NCP 卷。
+如果您希望用户在服务器上拥有 NCP 主目录或数据目录，您必须决定希望这些目录出现在服务器目录结构的何种位置，并使用 Linux 提示符下使用 `NCPCON` 工具创建 NCP 卷。
 
-例如，如果您想创建一个名为 HOME 的 NCP 卷（指针），将执行以下步骤：
+例如，如果您想创建一个名为 `HOME` 的 NCP 卷（指针），将执行以下步骤：
 
 - 1. 确定您想将其挂载到 Linux 服务器上的 `/home` 挂载点。
 - 与 Linux 系统上的其他挂载点不同，可以将 NCP 卷挂载到已填充的目录。该挂载点下的文件和目录供 NCP 客户端访问。
 - 2. 创建卷指针：
     a. 在终端提示符下，输入 `ncpcon`。
-    b. 在 ncpcon 提示符下，输入 `create volume HOME /home`。
+    b. 在 `ncpcon` 提示符下，输入 `create volume HOME /home`。
 
-创建卷指针后，Novell Client 即可连接到 OES Linux 服务器并看到 HOME 卷以及安装创建的 SYS 卷。
+创建卷指针后，Novell Client 即可连接到 OES Linux 服务器并看到 `HOME` 卷以及安装创建的 `SYS` 卷。
 
-NCP 卷指针始终以大写名称（HOME、SYS 等）创建，无论创建卷指针时指定的大小如何。
+NCP 卷指针始终以大写名称（`HOME`、`SYS` 等）创建，无论创建卷指针时指定的大小如何。
 
 ## 如何分配文件受托权限
 
@@ -6484,18 +6226,29 @@ OES Linux 上 NCP 卷的受托分配存储在该卷的 `.trustee_database.xml` �
 
 文件名开头的点表示这是一个隐藏文件。
 
-例如，对于挂载在 `/home` 的 HOME 卷，受托分配保留在 `/home/.trustee_database.xml` 文件中。以下是一个未配置任何受托分配的 `.trustee_database.xml` 文件示例：
+例如，对于挂载在 `/home` 的 `HOME` 卷，受托分配保留在 `/home/.trustee_database.xml` 文件中。以下是一个未配置任何受托分配的 `.trustee_database.xml` 文件示例：
 
 5-9
 
 ```xml
+
+
+
+```xml
 <volume_trustees>
+
   <inherited_rights_mask path="/.trustee_work.dat">
+
     <rights>S</rights>
+
   </inherited_rights_mask>
+
   <inherited_rights_mask path="/.trustee_database.xml">
+
     <rights>S</rights>
+
   </inherited_rights_mask>
+
 </volume_trustees>
 ```
 
@@ -6505,66 +6258,66 @@ OES Linux 上 NCP 卷的受托分配存储在该卷的 `.trustee_database.xml` �
 
 ```xml
 <volume_trustees>
+
   <trustee path="RLajoie">
+
     <name>RLajoie.IS.SLC.Da</name>
+
     <rights>RWNCEM</rights>
+
   </trustee>
+
   <trustee path="Keeetch">
+
     <name>Keeetch.IS.Da</name>
+
     <rights>RWNCEM</rights>
+
   </trustee>
+
   <inherited_rights_mask path="/.trustee_work.dat">
+
     <rights>S</rights>
+
   </inherited_rights_mask>
+
   <inherited_rights_mask path="/.trustee_database.xml">
+
     <rights>S</rights>
+
   </inherited_rights_mask>
+
 </volume_trustees>
 ```
+
+
 
 在进行几次受托分配后，`.trustee_database.xml` 文件看起来如下所示：
 
 （注：OCR 文本在最后区块中包含严重损坏/重复，已根据前页面提供的标准 XML 结构和上下文进行了清理。）
 
-
-
-
-
 - 软件级 RAID 0（条带化）、RAID 1（镜像）、RAID 5（条带化）、RAID 10（镜像 RAID 0 设备）以及 RAID 15（镜像 RAID 5 设备）
-
 - 多服务器激活预防机制 (MSAP)，有助于保护存储池不被多个不共享集群关系的服务器同时激活
-
 - 存储在存储池中、跨越多个存储设备的 NSS 卷
-
 - 单个目录下支持多达 40 亿 (10E9) 个文件
-
 - 无论文件大小或卷大小，数据访问速度更快
-
 - 更低的内存需求：1 MB 的 RAM 内存即可激活一个 NSS 卷
-
 - 目录空间限制
-
 - 用户空间限制
-
 - 对已删除的卷和文件的抢救支持
 
 NSS 在 NetWare 上提供以下额外优势：
 
 - 多路 I/O 路径支持
-
 - 存储池快照，可捕获池中文件的时间点版本
-
 - 事务跟踪系统™ (TTS™)
-
 - 可挂载的媒体和镜像文件可激活为 NSS 卷
-
 - Novell 分布式文件服务 (NDFS)，允许您移动和拆分卷以更好地管理存储增长
-
 - Novell 存档与版本服务，允许您对基于间隔的用户文件进行归档，并供用户进行单独检索
 
 更多详情，请参阅《Novell Archive and Version Services 2.0 for NetWare Administration Guide》(arc_admin.pdf)。
 
-您可以从 http://www.novell.com/documentation/oes 或从 3077 课程 CD 上的 OES_Docs 目录访问该指南。
+您可以从 `http://www.novell.com/documentation/oes` 或从 3077 课程 CD 上的 `OES_Docs` 目录访问该指南。
 
 ## NSS 存储池与卷
 
@@ -6575,9 +6328,9 @@ NSS 是一种 64 位文件系统，可以管理几乎无限数量的文件对象
 - NSS 存储池
 - NSS 卷
 
-## NSS 存储池
+### NSS 存储池
 
-NSS 能够识别大小高达 2 TB 的物理和逻辑设备。您可以在这些设备上创建任意数量的虚拟存储资源，称为*池* (pools)。
+NSS 能够识别大小高达 2 TB 的物理和逻辑设备。您可以在这些设备上创建任意数量的虚拟存储资源，称为*池* (`pools`)。
 
 您可以从至少四个逻辑设备（每个设备最高 2 TB）中选择空间来创建一个最大池大小为 8 TB 的池。池可以包含任意数量的卷，取决于池的大小，其中最小卷大小为 10 MB。
 
@@ -6587,21 +6340,21 @@ NSS 能够识别大小高达 2 TB 的物理和逻辑设备。您可以在这些�
 
 下图说明了 NSS 如何利用多个设备上的空闲空间来创建存储池：
 
-## 图 5-11
+### 图 5-11
 
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_369_0.png)
 
-在 NetWare 安装期间，NSS 会自动创建一个系统池 (sys) 和一个 NSS 卷 (sys:)，该卷的大小可以增长到与池相同。
+在 NetWare 安装期间，NSS 会自动创建一个系统池 (`sys`) 和一个 NSS 卷 (`sys:`)，该卷的大小可以增长到与池相同。
 
 我们建议您预留系统池和系统卷用于操作系统软件和扩展程序。创建额外的池来有效存储应用程序、文件和数据库。
 
-## NSS 卷
+### NSS 卷
 
 您在 NSS 存储池上创建的逻辑卷称为 NSS 卷。
 
 您可以为卷指定最大存储配额，或允许卷动态增长到与其池相同的大小。您可以向存储池中添加任意数量的卷。
 
-由于创建的卷数量没有限制，因此所有卷的组合管理大小总和可能会大于存储池本身的物理大小。NSS 将此过程称为“超预订” (overbooking)。
+由于创建的卷数量没有限制，因此所有卷的组合管理大小总和可能会大于存储池本身的物理大小。NSS 将此过程称为“超预订” (`overbooking`)。
 
 如果您对池空间进行了超预订，则单个卷的各个大小不能超过存储池的大小。
 
@@ -6622,7 +6375,7 @@ NSS 仅在需要时从池中为卷分配空间。通常情况下，用户对卷�
 实际上，提示词中提供的 OCR 文本在结尾处有些碎片。让我们重新构建逻辑流：
 例如，假设您有一个 300 GB 的存储池。从该池中，您可以创建两个每个 200 GB 的 NSS 卷。这些卷的组合管理大小为 400 GB，超过了池的物理大小。然而，只要两个卷的总用量不超过 300 GB，这就是允许的。如果您对池空间进行了超预订，单个卷的各个大小不能超过存储池的大小。
 
-实际上，OCR 文本显示为：“例如，假设您有一个 300 GB 的存储池。从该池中，您可以创建两个每个 200 GB 的 NSS 卷。这些卷的组合管理大小为 400 GB，超过了池的物理大小。……如果您对池空间进行了超预订，单个卷的各个大小不能超过存储池的大小。”
+实际上，OCR 文本显示为：“例如，假设您有一个 300 GB 的存储池。这些卷的组合管理大小为 400 GB，超过了池的物理大小。……如果您对池空间进行了超预订，单个卷的各个大小不能超过存储池的大小。”
 
 等一下，OCR 文本显示为：“例如，假设您有一个 300 GB 的存储池。这些卷的组合管理大小为 400 GB，超过了池的物理大小。……如果您对池空间进行了超预订，单个卷的各个大小不能超过存储池的大小。”
 
@@ -6638,16 +6391,16 @@ NSS 仅在需要时从池中为卷分配空间。通常情况下，用户对卷�
 | 目录管理 | NetWare 和 Linux |
 | 文件空间管理 | NetWare 和 Linux |
 | 用户空间管理 | NetWare 和 Linux: 在设置配额之前确保启用 LVM。<br>用户空间限制在 OES SP1 及更高版本中可用。 |
-| NSS 池的默认挂载位置 | Linux: /opt/novell/nss/mnt/ |
-| NSS 卷的默认挂载位置 | NetWare: 服务器根目录<br>Linux: /media/nss |
-| 由 EVMS 管理设备的默认挂载位置 | Linux: /dev/evms |
+| NSS 池的默认挂载位置 | Linux: `/opt/novell/nss/mnt/` |
+| NSS 卷的默认挂载位置 | NetWare: 服务器根目录<br>Linux: `/media/nss` |
+| 由 EVMS 管理设备的默认挂载位置 | Linux: `/dev/evms` |
 | 最小池大小 | NetWare 和 Linux: 10 MB |
 
 ## 集成 Novell Open Server for Linux
 
 有关 NetWare 和 Linux 上 NSS 对的详情，请参见《Novell Storage Services File System Administration Guide》(nss_enu.pdf) 第 413 页的“Comparison of NSS on NetWare and Linux”。
 
-您可以从 http://www.novell.com/documentation/oes 或从 3077 课程 CD 上的 OES_Docs 目录访问该指南。
+您可以从 `http://www.novell.com/documentation/oes` 或从 3077 课程 CD 上的 `OES_Docs` 目录访问该指南。
 
 ## OES 上的 NSS 和 EVMS
 
@@ -6658,12 +6411,7 @@ Linux 的默认卷管理器是 LVM。然而，要在包含启动和系统卷的�
 简单的解决方案是将交换和系统卷放在一个设备上，然后使用不同的设备用于 NSS 卷。换句话说，在以下场景中，必须使用 EVMS 作为系统硬盘的卷管理器来安装 Linux：
 
 - 您的系统只有一个硬盘，并且希望使用其空闲空间创建 NSS 数据卷。
-
 - 您的系统有多个硬盘，并且希望从任何包含 Linux 启动、系统或交换卷的硬盘中使用空闲空间创建 NSS 卷。
-
-
-
-
 
 # 如何在 OES Linux 服务器上安装 NSS
 
@@ -6765,13 +6513,9 @@ Novell 存储服务管理工具 (NSSMU) 是一种基于控制台的实用，用�
 - * F9 = 命名空间 - 选择 Long、UNIX、DOS、Mac
 - * Enter = 设置或查看卷属性
 
-
-
-
-
 目录/文件路径名是基于 NSS 卷在 OES Linux 文件系统结构中的挂载点，而不是基于 NSS 卷的名称。
 
-例如，如果您创建了一个名为 ifolderdata 的 NSS 卷并将其挂载到 /var/nss/ifolder，那么 `/var/nss/ifolder` 就是您在使用 rights 命令的 `-f` 选项时使用的目录路径。
+例如，如果您创建了一个名为 ifolderdata 的 NSS 卷并将其挂载到 `/var/nss/ifolder`，那么 `/var/nss/ifolder` 就是您在使用 rights 命令的 `-f` 选项时使用的目录路径。
 
 `USERNAME` 变量代表您想要分配为 NSS 信任托人的用户、组或容器的完全限定名称（DN）。
 
@@ -6779,7 +6523,7 @@ Novell 存储服务管理工具 (NSSMU) 是一种基于控制台的实用，用�
 
 # 图 5-13
 
-+ USERNAME
++ `USERNAME`
 用户名包括树名称在内的 eDirectory 对象名称
 掩码是一个字符字符串，其中每个字符代表一种权限类型：
 - ns Supervisor（管理员）
@@ -6793,7 +6537,9 @@ Novell 存储服务管理工具 (NSSMU) 是一种基于控制台的实用，用�
 - none No rights（无权限）
 - all All rights（所有权限）
 
-例如，如果您有一个挂载在 /var/nss/ifolder 的 ifolderdata NSS 卷，并且您将用户 KThorn 设置为 ifolderdata NSS 卷根目录的读取、写入、创建、擦除、修改和文件扫描系统权限的信任人，您将输入以下内容：
+例如，如果您有一个挂载在 `/var/nss/ifolder` 的 ifolderdata NSS 卷，并且您将用户 KThorn 设置为 ifolderdata NSS 卷根目录的读取、写入、创建、擦除、修改和文件扫描系统权限的信任人，您将输入以下内容：
+
+
 
 ```
 rights -f /var/nss/ifolder -r rwcemf trustee kthorn.slc.da.da-tree
@@ -6811,7 +6557,7 @@ iFolder 设计为能够使用原生 Linux 文件系统或 NSS 卷来存储数据
 
 然而，如果您选择将 iFolder 数据存储在 NSS 卷上，必须手动将 `novlifdr` 分配为 NSS 卷的文件系统信任人，并赋予 `novlifdr` 所有文件系统权限。
 
-例如，假设 NSS 卷 iFolder 配置为挂载在 /var/nss/iffolder，则执行此信任人分配的命令为：
+例如，假设 NSS 卷 iFolder 配置为挂载在 `/var/nss/iffolder`，则执行此信任人分配的命令为：
 
 ```
 rights -f /var/nss/iffolder -r all trustee novlifdr.slc
@@ -6831,7 +6577,7 @@ Novell OES for Linux 安装默认不安装 NSS。
 
 请参阅《Integrating Open Enterprise Server for Linux 工作手册》第 5-17 页的练习 5-2：在 DA1 Linux 服务器上安装和配置 NSS。
 
-### 目标 7 使用服务器合并工具迁移 NSS 卷
+## 目标 7 使用服务器合并工具迁移 NSS 卷
 
 Novell OES Support Pack 2 提供了一个用于迁移 NSS 卷的工具。在开始开始迁移之前，您应该考虑以下内容：
 
@@ -6840,18 +6586,18 @@ Novell OES Support Pack 2 提供了一个用于迁移 NSS 卷的工具。在开�
 - 准备源和目标服务器
 - 创建并运行合并项目
 
-# 满足系统和软件需求
+### 满足系统和软件需求
 
 在执行合并项目时，Linux 目标服务器必须安装并运行以下组件：
 
 - Novell eDirectory
 - Novell NCP Server（如果从 NetWare 源服务器复制数据）
-- Novell Storage Services (NSS）（如果从 NetWare 源服务器复制数据）
+- Novell Storage Services (NSS)（如果从 NetWare 源服务器复制数据）
 - Novell User Management (LUM)
 
 如果您从 NetWare 源服务器复制数据，必须在 Linux 目标服务器上创建并配置 NSS 卷。
 
-# 理解 NetWare 到 Linux 的迁移问题
+### 理解 NetWare 到 Linux 的迁移问题
 
 在运行服务器合并工具从 NetWare 服务器复制数据到 OES Linux 服务器之前，应该意识到以下问题：
 
@@ -6865,33 +6611,26 @@ Novell OES Support Pack 2 提供了一个用于迁移 NSS 卷的工具。在开�
 nss /filewrite=volname
 ```
 
-例如，执行 `nss /filewrite=vol1` 将为 vol1 卷启用写入复制，但这种影响仅限于最后关闭的文件。
+
+
+例如，执行 `nss /filewrite=vol1` 将为 `vol1` 卷启用写入复制，但这种影响仅限于最后关闭的文件。
 
 - 集群转移停止文件复制。如果您运行涉及 NetWare 集群的合并项目并在合并期间发生故障转移，文件复制将停止。必须重新运行合并项目。
-
 - 使用 SMS 复制数据。服务器合并工具使用存储管理服务（SMS）作为其文件复制引擎，从 NetWare 服务器复制数据到 OES Linux 服务器。
-
 使用 SMS 可以尽可能保留 NetWare 的信任人权限和文件/目录属性。
-
-- OES Linux 的新 attrib 命令。如果您从 NetWare 源服务器复制设置了“删除”属性的文件，则无法使用标准的 Linux 或 Windows 工具从 Linux 目标 NSS 卷上删除这些文件。
+- OES Linux 的新 `attrib` 命令。如果您从 NetWare 源服务器复制设置了“删除”属性的文件，则无法使用标准的 Linux 或 Windows 工具从 Linux 目标 NSS 卷上删除这些文件。
 
 Novell 为 OES Linux 提供了一个新的 `attrib` 命令，允许您移除删除属性，并在 Linux 上设置或修改其他支持的 NetWare 属性。更多信息请输入 `attrib -h` 查看在线帮助。
-
 - 创建日期从 NetWare 到 Linux 的变化。从 NetWare 源服务器复制文件到 OES Linux 目标服务器后，这些文件的创建日期将变为今天的日期，而不是文件的原始创建日期。
 
 Linux 文件系统不提供创建日期字段，但 NCP 服务器会显示当前日期。
 
-
-
-
 如果你启用了此项检查，你应该预期会在日志文件中看到许多错误，这是由于 Linux 存储文件系统数据的方式存在固有差异导致的。
-
 - 为服务器合并工具 (SCU) 上的 NCP 客户端启用 UTF-8 编码。你可以使用服务器合并工具从存储双字节字符集（日语、韩语和其他非 ASCII 字符）或扩展 ASCII 字符数据（多国语言）的服务器复制数据。
 
 为了拷贝带有非 ASCII 或扩展 ASCII 字符的数据，你必须在 Windows 2000/XP 的 Novell Client 4.91 中启用 UTF-8 支持，以防止受托者和所有权的丢失。
 
 UTF-8 支持默认关闭。
-
 - 理解 Linux 启用用户的必要性。当你使用服务器合并工具将数据从 NetWare 服务器复制到 OES Linux 上的 NSS 卷时，它会随文件传输 NetWare 受托者权限以及支持的文件和目录属性。
 
 然而，为了保留文件所有权，用户必须启用 Linux 权限（也称为 LUM 启用，因为该过程涉及 OES 中的 Linux 用户管理服务）。
@@ -6902,9 +6641,9 @@ UTF-8 支持默认关闭。
 
 # 集成 Linux 版 Novell 企业服务器
 
-有关为 OES Linux 启用 Linux (LUM) 用户的完整细节，请参阅《Novell Linux 用户管理技术指南》(lumadgd.pdf)。
+有关为 OES Linux 启用 Linux (LUM) 用户的完整细节，请参阅《Novell Linux 用户管理技术指南》(`lumadgd.pdf`)。
 
-该指南可以在 http://www.novell.com/documentation/oes 获取，或从你的 3077 课程 CD 中的 OES_Docs 目录获取。
+该指南可以在 `http://www.novell.com/documentation/oes` 获取，或从你的 3077 课程 CD 中的 `OES_Docs` 目录获取。
 
 - **维护文件所有权信息。** 在将数据从 NetWare 卷拷贝到 OES Linux 上的 NSS 卷时，Novell 建议你在拷贝数据之前通过 LUM 为用户启用 Linux 权限。
 
@@ -6916,9 +6655,9 @@ UTF-8 支持默认关闭。
 
 你可以在启用 Linux 权限后通过运行 `refresh` 命令来立即触发 ID 更新过程。
 
-有关使用 `nuseradd` 命令的完整细节，请参阅《Novell Linux 用户管理技术指南》(lumadgd.pdf) 第 37 页的“nuseradd”。
+有关使用 `nuseradd` 命令的完整细节，请参阅《Novell Linux 用户管理技术指南》(`lumadgd.pdf`) 第 37 页的“`nuseradd`”。
 
-该指南可以在 http://www.novell.com/documentation/oes 获取，或从你的 3077 课程 CD 中的 OES_Docs 目录获取。
+该指南可以在 `http://www.novell.com/documentation/oes` 获取，或从你的 3077 课程 CD 中的 `OES_Docs` 目录获取。
 
 # 准备源服务器和目标服务器
 
@@ -6926,36 +6665,35 @@ UTF-8 支持默认关闭。
 
 1. 确保所有源服务器和目标服务器都在运行支持的 NetWare、Linux 或 Windows 服务器软件。
 
-有关支持的 NetWare、Linux 或 Windows 版本的完整细节，请参阅《Novell 服务器合并与迁移工具包》(scmt11.pdf) 第 18 页的“支持的源和目标服务器版本”。
+有关支持的 NetWare、Linux 或 Windows 版本的完整细节，请参阅《Novell 服务器合并与迁移工具包》(`scmt11.pdf`) 第 18 页的“支持的源和目标服务器版本”。
 
-该指南可以在 http://www.novell.com/documentation/oes 获取，或从你的 3077 课程 CD 中的 OES_Docs 目录获取。
-
+该指南可以在 `http://www.novell.com/documentation/oes` 获取，或从你的 3077 课程 CD 中的 `OES_Docs` 目录获取。
 2. 如必要，在源和目标 NetWare 或 OES 服务器上应用最新的 NetWare 或 Open Enterprise NetWare 或 (OES) 支持包。
-
 3. 如果在 NetWare 服务器之间进行数据拷贝，请为源服务器和目标服务器设置相同的代码页。
 
 如果两台服务器没有相同的代码页，数据在合并过程中将会丢失。
 
-有关更改服务器代码页的完整细节，请参阅《Novell 服务器合并与迁移工具包》(scmt11.pdf) 第 11 页的“更改 NetWare 服务器代码页”。
+有关更改服务器代码页的完整细节，请参阅《Novell 服务器合并与迁移工具包》(`scmt11.pdf`) 第 11 页的“更改 NetWare 服务器代码页”。
 
-该指南可以在 http://www.novell.com/documentation/oes 获取，或从你的 3077 课程 CD 中的 OES_Docs 目录获取。
-
+该指南可以在 `http://www.novell.com/documentation/oes` 获取，或从你的 3077 课程 CD 中的 `OES_Docs` 目录获取。
 4. 作为预防措施，你应该拥有目标服务器上所有文件系统和 eDirectory 数据的最新备份。
 
-# 集成 Linux 版 Novell 企业服务器
+## 集成 Linux 版 Novell 企业服务器
 
 尽管在数据合并项目期间源数据不会被修改，你仍应该拥有源服务器的最新数据和受托者备份。只有合并打印机时数据才会发生变化。
 
-5. 对于 NetWare/eDirectory 合并，在源和目标 NetWare 服务器上加载最新的存储管理数据请求器 (smdr.nlm) 和目标服务代理 (tsafs.nlm) 模块。
+5. 对于 NetWare/eDirectory 合并，在源和目标 NetWare 服务器上加载最新的存储管理数据请求器 (`smdr.nlm`) 和目标服务代理 (`tsafs.nlm`) 模块。
 
 要加载随 NetWare 操作系统软件提供的 SMS 模块，请在服务器命令行提示符输入 `load smdr` 和 `load tsafs`。
-
 6. 如果你将数据合并到 OES Linux 服务器，请在 shell 提示符输入这些命令在 Linux 上加载模块：
 
 ```
 /etc/init.d/novell-smdr start
+
 /opt/novell/sms/bin/smsconfig -l tsafs
 ```
+
+
 
 7. 根据你的网络，添加 `/etc/hosts` 文件，反之亦然。
 
@@ -6980,23 +6718,14 @@ Novell 服务器合并与迁移工具包位于 NetWare 6.5 CD 或 Open Enterpris
 要在工作站上安装工具包，请执行以下操作：
 
 1. 从 NetWare CD 或 Novell 站点获取自提取文件并拷贝到工作站。
-
 2. 双击 `scmt.exe` 启动程序；然后点击 Next。
-
 3. 如果提示你没有正确的 Novell 客户端版本，请使用提示链接。
-
 4. 如果提示删除旧版本的 NetWare 向导或服务器合并工具，回答 Yes；然后点击 Next > Done。
-
 5. 接受许可协议；然后点击 Next。
-
 6. 读取 readme 文件；然后点击 Next。
-
 7. 指定工具包位置；选择 Next。默认情况下，工具包安装在 `c:\program files\novell server consolidation and migration toolkit`。
-
 8. 指定是否创建桌面和快速启动图标；选择 Next。
-
 9. 验证你的安装信息；选择 Install。
-
 10. 你必须重启工作站以完成安装。当安装程序退出时重启，选择 Yes。
 
 # 启动服务器合并工具并创建项目文件
@@ -7008,23 +6737,14 @@ Novell 服务器合并与迁移工具包位于 NetWare 6.5 CD 或 Open Enterpris
 Start > Programs > Novell Server Consolidation and Migration Toolkit > Novell Server Consolidation and Migration Toolkit
 
 2. 读取欢迎页；选择 Create or Open Project。
-
 3. 选择 NetWare 或 Open Enterprise Server (eDirectory)；选择 Next。
-
 4. 选择服务器之间合并和拷贝数据及打印；选择 Next。
-
 5. 读取关于的屏幕；选择 OK。
-
 6. 执行以下操作之一：
 
 - 要创建一个新的合并项目，选择 Create a New Project > OK。
-
 - 继续第 7 步。
-
 - 要打开现有项目，选择 Open an Existing Project > OK，选择要处理的项目；选择 Open。
-
-
-
 
 跳转到第 5-72 页的“建模您的合并项目”。
 
@@ -7054,7 +6774,6 @@ Start > Programs > Novell Server Consolidation and Migration Toolkit > Novell Se
 通过以下步骤进行登录：
 
 +   a. 在 Novell 登录对话框中，选择**树**。
-
 +   b. 浏览到每个所需的树并使用正确的**用户名**和**密码**登录。
 
 如果您不知道树的名称，请在登录对话框的服务器字段中，输入您将合并到或从某处合并的服务器的**IP 地址或 DNS 名称**。
@@ -7167,7 +6886,9 @@ Start > Programs > Novell Server Consolidation and Migration Toolkit > Novell Se
 +   - 如果打印机的目标位置正确，选择下一步。
 +   - 如果位置不正确，选择取消并在项目窗口中进行相应更改。
 
-## 重复文件解决如果在目标卷或目录中发现与从源复制的文件同名的文件，则必须决定如何处理。
+## 重复文件解决
+
+如果在目标卷或目录中发现与从源复制的文件同名的文件，则必须决定如何处理。
 
 您在重复文件解决对话框中有以下选项可供选择：
 
@@ -7176,10 +6897,6 @@ Start > Programs > Novell Server Consolidation and Migration Toolkit > Novell Se
 源服务器上的文件不会被复制，目标服务器上的文件也不会被替换。
 
 +   - 如果源文件较新则复制源文件（默认）
-
-
-
-
 
 如果源服务器上的文件比目标服务器上的文件新，则目标服务器上的文件将被替换。
 
@@ -7313,10 +7030,6 @@ Start > Programs > Novell Server Consolidation and Migration Toolkit > Novell Se
 为了提高性能，将搜索限制在您认为对象所在的容器中。从根目录搜索将耗长得多，取决于目标树的大小。
 
 - 3. 选择“下一步”。
-
-
-
-
 
 如果你正在将数据合并到企业分支机构设备，则无法指定你想要搜索的容器。选择“是”或“否”，然后选择“下一步”。
 
@@ -7478,10 +7191,6 @@ Linux 版 NCP Server 支持登录脚本、映射驱动器到 OES Linux 服务器
 * 如何在 OES Linux 上使用 NSSMU 管理工具
 * 如何为 OES Linux 上的 NSS 卷分配文件系统权限
 
-
-
-
-
 ## 目标
 
 ## 摘要
@@ -7596,9 +7305,33 @@ Novell Open Enterprise Server (OES) 软件旨在允许你集成异构系统并�
 
 通用密码受到三个级别的安全保护：密码本身的 tripleDES 加密、eDirectory 权限和文件系统权限。通用密码由特定的用户的 tripleDES 密钥加密。通用密码和用户密钥都标记了只有 eDirectory 可以读取的隐藏属性。
 
+树密钥存在于树内的每台机器上，但每个树都有不同的树密钥。因此，用树密钥加密的数据只能在同一树内的机器上进行恢复。
 
+因此，在存储时，通用密码（Universal Password）受到三层加密的保护。
 
+每个密钥还通过 eDirectory 权限受到保护。只有具有主管权限的管理员或用户本人才有更改通用密码的权限。
 
+文件系统权限确保只有具有适当权限的用户才能访问这些文件。
+
+如果将通用密码部署在需要安全性的环境中，您可以采取以下预防措施：
+
+- 1. 确保以下目录和文件是安全的：
+    - 在 NetWare 服务器上，确保以下内容的安全：
+      %system32%\novell\nici
+    - 在 Windows 服务器上，确保以下内容的安全：
+      %system32%\novell\nici
+      %system32\(此处安装 NICI DLL 的位置）
+    - 在 Linux/Unix 服务器上，确保以下内容的安全：
+      /var/novell/nici
+      etc/nici.cfg
+      /usr/local/lib/libcc2.so（以及同目录下的 NICI 共享库）
+    - 在符合 LSB 的 Linux/Unix 服务器上，确保以下内容的安全：
+      /var/novell/nici
+      etc/nici.cfg
+      /usr/local/lib/libcc2.so（以及同目录下的 NICI 共享库）
+      /var/opt/novell/nici
+      etc/opt/novell
+      /opt/novell/lib
 
 # 集成 Linux 版 Novell 企业级服务器
 
@@ -7709,10 +7442,6 @@ NMAS 依赖于对 eDirectory 树的全局策略。eDirectory 树是安全的。�
 - 6. 检查容器的 SDI 密钥一致性。
 
 检查整个树中所有加密密钥实例是否一致。sidiag 工具可确保每台服务器都拥有与树中其他服务器进行安全通信所需的加密密钥。
-
-
-
-
 
 执行以下操作：
 
@@ -7844,9 +7573,6 @@ NetWare 6 原生文件访问包（NFAP）中的协议（CIFS、AFP、N）现在�
 
 CIFS 上下文配置文件（cifsctx.cfg）默认允许与管理员用户相同上下文的用户访问。
 
-
-
-
 默认情况下，CIFS 服务器的名称为 `server_name-W`，并且挂载在 CIFS 服务器上的所有 NSS 卷都已导出，以便兼容 SMB 的客户端进行访问。
 
 OES NetWare 上的默认 CIFS 服务器 行为可以通过修改 `cifsctxs.cfg` 文件来更改。例如，你可以修改 `cifsctxs.cfg` 以添加额外的用户上下文。
@@ -7875,6 +7601,8 @@ OES Linux 服务器上 Samba 服务的配置由 `/etc/smb.conf` 文件控制。�
 
 在直接对此文件进行更改后，必须手动重启 smb 守护进程使更改生效。你可以通过命令行输入以下命令重启 smb 守护进程：
 
+
+
 ```
 /etc/init.d/smb restart
 ```
@@ -7885,9 +7613,11 @@ OES Linux 服务器上 Samba 服务的配置由 `/etc/smb.conf` 文件控制。�
 rcsmb restart
 ```
 
+
+
 你还可以通过 YaST 使用 Samba Client 或 Samba Server 模块来编辑 Samba 配置。（你将在练习 6-1 中使用 Samba Client 模块。）
 
-当你通过这些模块完成更改后，YaST 会将更改写入 Samba 配置文件并重启 smb 守护进程。
+当你通过这些模块完成更改后，YaST 会将更改写入 Samba 配置文件并重启 `smb` 守护进程。
 
 # 如何为 OES 服务器上的用户准备访问 CIFS 或 Samba 共享
 
@@ -7899,12 +7629,12 @@ rcsmb restart
 - 分配文件系统权限
 - 配置 CIFS 上文
 
-# 启用 Samba 用户
+## 启用 Samba 用户
 
 Novell OES 中的 Samba 服务要求用户启用 Samba，这提供了以下身份验证方法：
 
 - **在 OES NetWare 服务器上。** 启用 Samba 允许用户对象访问 Samba 默认密码策略，该策略包含通用密码配置选项，允许他们访问 CIFS 共享。
-- **OES Linux 服务器上。** 启用 Samba 允许用户对象访问 Samba 默认密码策略，并允许启用了 LUM的用户通过 eDirectory 进行身份验证并访问 Samba 共享。
+- **OES Linux 服务器上。** 启用 Samba 允许用户对象访问 Samba 默认密码策略，并允许启用了 LUM 的用户通过 eDirectory 进行身份验证并访问 Samba 共享。
 
 说用户需要启用 Samba 意味着树中至少有一台 OES Linux 服务器。除非部署了 OES Linux 服务器，否则树中不存在 Samba 服务，因为部署会将 Samba 默认策略置于树中。
 
@@ -7912,12 +7642,12 @@ Novell OES 中的 Samba 服务要求用户启用 Samba，这提供了以下身�
 
 这些模块只能为运行在 OES Linux 服务器上的 iManager 安装。访问这些模块，你必须从 OES Linux 服务器启动 iManager。
 
-在为 Samba启用用户之前，他们必须已经启用 Linux：
+在为 Samba 启用用户之前，他们必须已经启用 Linux：
 
-- 对于未启用 Linux的用户，从 OES Linux 服务器运行 iManager 以访问 **Linux User Management > Enable Users for Linux** 选项。你必须准备好一个启用了 LUM 的组对象来分配这些用户。
+- 对于未启用 Linux 的用户，从 OES Linux 服务器运行 iManager 以访问 **Linux User Management > Enable Users for Linux** 选项。你必须准备好一个启用了 LUM 的组对象来分配这些用户。
 - 对于已启用 Linux 的用户，从 OES Linux 服务器运行 iManager 以访问 **Samba Management > Enable Linux User for Samba** 选项。
 
-# 分配通用密码
+## 分配通用密码
 
 你通过以下步骤分配通用密码：
 
@@ -7935,54 +7665,13 @@ Novell OES 中的 Samba 服务要求用户启用 Samba，这提供了以下身�
 
 应用符合 Samba 要求的密码策略后，所有选的用户、组或容器现在已分配此策略。
 
-当你在 SLC.DA 容器中启用 Samba 用户时，iManager Samba 插件将发现此策略分配。
+当你在 `SLC.DA` 容器中启用 Samba 用户时，iManager Samba 插件将发现此策略分配。
 
 找到符合 Samba 要求的密码策略分配后，iManager Samba 插件会查找用户的通用密码。
 
-如果已设置通用密码，它将成为该用户的 Samba 密码。如果未设置通用密码，iManager Samba 插件将提示你设置。
-
 如果设置了通用密码，它将成为该用户的 Samba 密码。如果未设置通用密码，iManager Samba 插件将提示你设置。
 
-设置了通用密码，它将成为该用户的 Samba 密码。如果未设置通用密码，iManager Samba 插件将提示你设置。
-
-设置了通用密码，它将成为该用户的 Samba 密码。如果未设置通用密码，iManager Samba 插件将提示你设置。
-
-设置了通用密码，它将成为该用户的 Samba 密码。如果未设置通用密码，iManager Samba 插件将提示你设置。
-
-设置了通用密码，它将成为该用户的 Samba 密码。如果未设置通用密码，iManager Samba 插件将提示你设置。
-
-设置了通用密码，它将成为该用户的 Samba 密码。如果未设置通用密码，iManager Samba 插件将提示你设置。
-
-设置了通用密码，它将成为该用户的 Samba 密码。如果未设置通用密码，iManager Samba 插件将提示你设置。
-
-设置了通用密码，它将成为该用户的 Samba 密码。如果未设置通用密码，iManager Samba 插件将提示你设置。
-
-设置了通用密码，它将成为该用户的 Samba 密码。如果未设置通用密码，iManager Samba 插件将提示你设置。
-
-设置了通用密码，它将成为该用户的 Samba 密码。如果未设置通用密码，iManager Samba 插件将提示你设置。
-
-设置了通用密码，它将成为该用户的 Samba 密码。如果未设置通用密码，iManager Samba 插件将提示你设置。
-
-设置了通用密码，它将成为该用户的 Samba 密码。如果未设置通用密码，iManager Samba 插件将提示你设置。
-
-设置了通用密码，它将成为该用户的 Samba 密码。如果未设置通用密码，iManager Samba 插件将提示你设置。
-
-（注：由于原文存在大量文本重复，已根据指令“不要重复输出原文”原则进行处理，仅保留了核心逻辑的翻译）
-
-*(修正：重新根据逻辑梳理翻译内容如下)*
-
-在启用 Samba 用户时，iManager Samba 插件会发现密码策略分配。以下是翻译核心逻辑：
-Novell OES 中的 Samba 服务要求用户启用 Samba，这提供了以下身份验证方法：
-- **在 OES NetWare 服务器上。** 启用 Samba 允许用户对象访问 Samba 默认密码策略，该策略包含一个通用密码配置选项，允许他们访问 CIFS 共享。
-- **OES Linux 服务器上。** 启用 Samba 允许用户对象访问 Samba 默认密码策略，并允许启用了 LUM 的用户通过 eDirectory 进行身份验证并访问 Samba 共享。
-
-当你在 SLC.DA 容器中启用 Samba 用户时，iManager Samba 插件将发现此策略分配。找到符合 Samba 要求的密码策略分配后，iManager Samba 插件会查找用户的通用密码。如果设置了通用密码，它将成为该用户的 Samba 密码。如果未设置通用密码，iManager Samba 插件将提示你设置。
-
 你可以通过设置通用密码来作为 Samba 密码，或者选择“不设置通用密码”。如果用户在未设置通用密码的情况下尝试使用 Samba 访问（CIFS 或 Samba 共享），其 Samba 账户将被禁用。
-
-
-
-
 
 ## 分配文件系统权限
 
@@ -7990,21 +7679,21 @@ Novell OES 中的 Samba 服务要求用户启用 Samba，这提供了以下身�
 
 默认情况下，用户（无论是否启用了 Samba）对给定卷上的文件系统均没有权限。作为网络管理员，你必须授予你希望用户使用的文件系统权限。
 
-在 Novell OES 的初始版本中，文件系统权限是使用 Novell Remote Manager (NRM) 管理的。在未来的版本中，文件系统管理功能将被添加到 iManager 中。
+在 Novell OES 的初始版本中，文件系统权限是使用 Novell Remote Manager (`NRM`) 管理的。在未来的版本中，文件系统管理功能将被添加到 iManager 中。
 
-NWAdmin 和 ConsoleOne 随 OES 发发，并用于管理文件系统权限，但 Novell 不再维护这些工具了。
+`NWAdmin` 和 `ConsoleOne` 随 OES 发发，并用于管理文件系统权限，但 Novell 不再维护这些工具了。
 
-你可以使用 NRM 将用户分配为受托者（trustees），并赋予他们对 CIFS 共享上目录和文件所需的权限。
+你可以使用 `NRM` 将用户分配为受托者（trustees），并赋予他们对 CIFS 共享上目录和文件所需的权限。
 
 若要在 Novell Remote Manager 中访问受托者分配功能，请执行以下操作：
 
-- 1. 以 Admin 用户身份身份到 Novell Remote Manager。
-  你看到的第一个页面是卷管理（Volume Management）页面。
+1. 以 Admin 用户身份身份到 Novell Remote Manager。
+   你看到的第一个页面是卷管理（Volume Management）页面。
 
-- 2. 从卷（Volumes）列表中选择你想要管理的卷。
-  下一页将显示所选卷上的实体。这些实体包括卷的根，以及存储在卷上的任何目录和文件。
+2. 从卷（Volumes）列表中选择你想要管理的卷。
+   下一页将显示所选卷上的实体。这些实体包括卷的根，以及存储在卷上的任何目录和文件。
 
-## 这些实体都列在 NetWare 文件列表（NetWare File Listing）标题下，如下所示：
+### 这些实体都列在 NetWare 文件列表（NetWare File Listing）标题下，如下所示：
 
 图 6-1
 
@@ -8022,23 +7711,23 @@ NWAdmin 和 ConsoleOne 随 OES 发发，并用于管理文件系统权限，但 
 
 根实体的项目由点 (.) 表示。
 
-- 3. 通过选择信息（Info）图标为这些任何实体（包括根）配置文件系统受托者权限。
+3. 通过选择信息（Info）图标为这些任何实体（包括根）配置文件系统受托者权限。
 
 选择信息图标后，会出现后续页面，显示实体的目录和受托者信息：
 
-## 图 6-2
+### 图 6-2
 
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_441_0.png)
 
-- 4. 在受托者信息（Trustee Information）下的用户名称（User Name）字段中，输入你想要分配为受托者的用户、组或容器对象的**完全限定名称（fully distinguished name）**。
+4. 在受托者信息（Trustee Information）下的用户名称（User Name）字段中，输入你想要分配为受托者的用户、组或容器对象的**完全限定名称（fully distinguished name）**。
 
 此名称必须包含开头的点、树名称和结尾的点，如图 6-2 所示。
 
-- 5. 一旦输入了完全限定名称，选择**添加受托者 (Add Trustee)**。
+5. 一旦输入了完全限定名称，选择**添加受托者 (Add Trustee)**。
 
 下一页包含受托者权限（Trustee Rights）表，如下所示：
 
-## 图 6-3
+### 图 6-3
 
 | 受托者权限 | 描述 |
 | --- | --- |
@@ -8051,95 +7740,102 @@ NWAdmin 和 ConsoleOne 随 OES 发发，并用于管理文件系统权限，但 
 | 扫描 (File Scan) | 如果勾选，表示查看文件的能力。 |
 | 访问控制 (Access Control) | 如果勾选，表示控制访问文件或子目录的能力。 |
 
-- 6. 从表中选择所需的的文件系统受托者权限；然后选择 OK。
+6. 从表中选择所需的文件系统受托者权限；然后选择 OK。
 
 配置文件系统受托者分配后，用户将仅访问你指定的目录和文件。
 
 ## 配置 CIFS 上下文
 
 只有来自已配置 CIFS 上下文的用户才能访问 CIFS 服务器。
-CIFS 上下文由 SYS:\etc\cifsctxxs.cfg 文件控制。这是一个文本文件，其中仅包含你想要访问 CIFS 服务器的上下文列表。
+CIFS 上下文由 `SYS:\etc\cifsctxxs.cfg` 文件控制。这是一个文本文件，其中仅包含你想要访问 CIFS 服务器的上下文列表。
 
-默认情况下，cfscftxs.cfg 包含一个 Admin 用户上下文的条目。例如，在练习 1-1 中升级到 OES NetWare 的服务器上的 cfscftxs.cfg 文件包含以下内容：
+默认情况下，`cfscftxs.cfg` 包含一个 Admin 用户上下文的条目。例如，在练习 1-1 中升级到 OES NetWare 的服务器上的 `cfscftxs.cfg` 文件包含以下内容：
 
-OU=SLC.O=DA
+`OU=SLC.O=DA`
 
 要添加另一个上下文，在现有行下方插入一行并输入上下文，如下例所示：
 
-OU=SLC.O=DA
-OU=IS.OU=SLC.O=DA
+`OU=SLC.O=DA`
+`OU=IS.OU=SLC.O=DA`
 
 修改此文件后，必须停止并重新启动 CIFS 服务器更改才能生效。你可以通过输入以下命令来实现这一点：
-
-```
-CIFSSTOP
-CIFSSTRT
 ```
 
-现在 IS.SLC.DA 上下文的用户可以访问 CIFS 服务器了。
 
-- **[global]**。需要在 [global] 部分配置以下条目：
+
+# CIFSSTOP
+
+# CIFSSTRT
+
+现在 `IS.SLC.DA` 上下文的用户可以访问 CIFS 服务器了。
+
+## [global]
+
+需要在 `[global]` 部分配置以下条目：
+
 - **Ld admin dn =**。指定 Samba 用于连接 eDirectory LDAP 服务器以检索请求访问共享的用户信息的区分名称 (DN)。
-  示例：Ldap admin dn = cn=admin,o=novell
+  示例：`Ldap admin dn = cn=admin,o=novell`
 - **ssl =**。指定 Samba 应该使用 SSL 与 LDAP 服务器 (eDirectory) 通通信。
 
 ## 安全 LDAP 要求此项设置为 On。
 
-默认值：ldap ssl = on
+默认值：`ldap ssl = on`
 
 - **ldap port =**。指定用于 Samba 与 LDAP 服务器 (eDirectory) 之间安全 LDAP 通信的端口。
 
 如果你的网络使用不同的端口进行安全 LDAP 通信，则可以更改此值。
 
-默认值：ldap port = 636
+默认值：`ldap port = 636`
 
 - **ldap server**。指定 LDAP 服务器的主机名。可以使用全限定 DNS 名称或 IP 地址。
 
-示例：ldap server = OES.provo.novell.com
+示例：`ldap server = OES.provo.novell.com`
 
-默认值：ldap server = i.i.i.i（其中 i.i.i.i = eDirectory 服务器的 IP 地址）
+默认值：`ldap server = i.i.i.i`（其中 `i.i.i.i` = eDirectory 服务器的 IP 地址）
 
 - **security =**。这指定安全模式。该值必须设置为 **user**。更多信息请参阅 www.samba.org。
 
-默认（强制性）：security = user
+默认（强制性）：`security = user`
 
 - **encrypt passwords =**。这指定从 Windows 客户端接收的密码将被加密。此值必须设置为 **yes**。更多信息请参阅 www.samba.org。
 
-默认（强制性）：encrypt passwords = yes
+默认（强制性）：`encrypt passwords = yes`
 
 - **workgroup =**。指定 Samba 服务器将加入（如果存在）或实际上创建（如果名称是新的）的 Windows 工作组。
 
-示例：workgroup = mygroup
+示例：`workgroup = mygroup`
 
-默认值：workgroup = workgroup
+默认值：`workgroup = workgroup`
 
 - **netbios name =**。这设置 Samba 服务器识别和广播的 netBIOS 名称。如果由 OES 首次安装 Samba，Novell 会在此条目的主机名后附加 -W。
 
 这为了防止与 Linux  NCP 发生冲突是必要的，Linux 使用主机名。
 
-示例：netbios name = myhost-W
+示例：`netbios name = myhost-W`
 
-- [homes]。以下是在 [homes] 部分需要配置的条目：
+## [homes]
+
+以下是在 `[homes]` 部分需要配置的条目：
 
 - **comment =**。这指定在 Windows 客户端的网络邻域中， Samba 服务器名称后显示的名称。
 
 如果设置了此项以及两个条目，则无需为用户的主目录指定单独的共享。
 
-默认值：comment = Home Directories
+默认值：`comment = Home Directories`
 
 - **browseable =**。指定所有主目录是否出现在网络邻域中。
 
-默认值：browseable = no
+默认值：`browseable = no`
 
 - **writable =**。指定用户是否可以创建和修改文件。
 
-默认值：writable = yes
+默认值：`writable = yes`
 
 ## ldap conf
 
-ldap.conf 文件位于 /etc/opt/novell/ldap 目录下。
+`ldap.conf` 文件位于 `/etc/opt/novell/ldap` 目录下。
 
-如果你将 OES Linux 安装到现有树中，如果你想使用 SSL，则在安装时必须指定信任根证书。你的 OES 服务器上的 ldap.conf 文件将具有以下证书条目：
+如果你将 OES Linux 安装到现有树中，如果你想使用 SSL，则在安装时必须指定信任根证书。你的 OES 服务器上的 `ldap.conf` 文件将具有以下证书条目：
 
 ```
 TLS_CACERT /etc/ssl/certificate.cert
@@ -8149,17 +7845,19 @@ TLS_CACERT /etc/ssl/certificate.cert
 TLS_REQCERT demand
 ```
 
-如果你正在安装新的目录，ldap.conf 将具有以下项：
+如果你正在安装新的目录，`ldap.conf` 将具有以下项：
 
 ```
 TLS_REQCERT allow
 ```
 
-有关 ldap.conf 的更多信息，请查看 ldap.conf 手页。
+
+
+有关 `ldap.conf` 的更多信息，请查看 `ldap.conf` 手页。
 
 ![](img/1dca8e8a8784dadffa032dcfe0460e55_446_0.png)
 
-## 练习 6-1 访问 DA2 NetWare  CIFS 共享
+## 练习 6-1 访问 DA2 NetWare CIFS 共享
 
 你现在准备好测试 CIFS 协议创建并访问 DA2 NetWare 上的共享。
 
@@ -8175,20 +7873,16 @@ TLS_REQCERT allow
 
 练习的最后一部分允许你通过从 Windows 工作站和 SUSE Linux 桌面 (SLED) 10 工作站访问 CIFS 共享，来验证你的配置运行正常。
 
-练习 6-1 访问 DA2 NetWare  CIFS 共享位于你的《Integrating Novell Open Enterprise Server for Linux》工作簿第 6-2 页。
-
-
-
-
+练习 6-1 访问 DA2 NetWare CIFS 共享位于你的《Integrating Novell Open Enterprise Server for Linux》工作簿第 6-2 页。
 
 # 在 DA1 Linux 服务器上访问 Samba 共享
 
 在练习 6-1 中，你已经完成了为用户提供 OES Linux 服务器 Samba 共享访问所需的许多步骤，包括以下内容：
 
--   在你的 OES Linux 服务器上安装 Novell Samba
--   为你的用户启用 LUM 和 Samba
--   配置启用通用密码（Universal Password）的策略
--   确保你的用户已设置通用密码
+- 在你的 OES Linux 服务器上安装 Novell Samba
+- 为你的用户启用 LUM 和 Samba
+- 配置启用通用密码（Universal Password）的策略
+- 确保你的用户已设置通用密码
 
 在这些组件就绪后，你现在准备好 DA1 Linux 服务器上创建 Samba 共享，并从你的 Windows 和 SLED 10 工作站访问这些共享。
 
@@ -8201,7 +7895,7 @@ TLS_REQCERT allow
 | 1. 描述 Novell Samba 的用途 | Novell OES 中的 Samba 是一种文件访问服务，允许你通过 Linux 计算机和其他平台访问服务器消息块 (SMB) 网络协议。 |
 | 2. 描述通用密码的作用和架构 | 通用密码是一种将不同的密码和身份验证系统集成并管理到统一网络中从而简化管理的方法。 |
 | 3. 安装 Novell Samba 并配置 Samba 用户 | 在 Novell OES 服务器上实现 Samba，你需要了解以下内容：<br>- 如何安装 Samba<br>- 如何准备用户访问 OES 服务器上的 CIFS 或 Samba 共享 |
-| 4. 描述 Novell Samba 组件的用途 | Novell OES 随附的 Samba 分发版包含以下 RPM 和配置文件：<br>- Samba RPM<br>- smb.conf<br>- ldap.conf |
+| 4. 描述 Novell Samba 组件的用途 | Novell OES 随附的 Samba 分发版包含以下 RPM 和配置文件：<br>- Samba RPM<br>- `smb.conf`<br>- `ldap.conf` |
 
 # 索引
 
@@ -8243,10 +7937,6 @@ cache 2-28
 Certificate Authority 11-15
 
 > *严禁复制或分发本手册的全部或部分。如报告版权问题，请拨打 1-800-PIRATES。*
-
-
-
-
 
 # 在 Linux 上集成 Novell 企业级服务器
 
@@ -8496,406 +8186,7 @@ management Intro-19–Intro-21, 3-1, 7,
 10-993, 10-994, 10-995, 10-996, 10-997, 10-998,
 10-999, 10-1000,
 
-manage 8-56
-management Intro-19–Intro-21, 3-1, 7,
-1-10–11-13, 1-18, 1-26–1-27, 1-38,
-1-44, 1-46, 1-51–1-59, 2-7,
-2-14, 2-17–2-18, 2-21, 2-37, 2-56,
-2-60, 2-81–2-82, 3-1–3-4, 3-10,
-3-22, 3-26, 3-28, 3-37, 3-68–3,
-3-83, 3-86, 3-88, 3-96, 4-1,
-4-14, 4-2, 5-20, 5-21, 5-27, 5-30,
-5-35, 5-45, 5-50, 5-52, 5-54, 5-56,
-5-62, 5-63, 5-65, 5-66, 5-68, 5-90,
-6-7, 6-11, 6-13, 6-15–17, 6-6, 6-9, 6-10,
-7-4, 7-5, 7-10, 7-11, 7-4, 7-53, 7-61, 8-23,
-8-24, 8-25, 8-29, 8-31, 8-35, 8-37,
-8-45, 8-49, 8-51, 8-56, 8-58, 8-63,
-8-71, 8-77, 8-79, 8-83, 8-85, 8-87,
-8-88, 8-90, 8-93, 8-96, 8-98, 9-10,
-9-11, 10-2, 10-12, 10-14, 10-15,
-10-17, 10-20, 10-23, 10-25, 10-27, 10-32,
-10-33, 10-36, 10-37, 10-41, 10-45, 10-49,
-10-51, 10-52, 10-54, 10-55, 10-56, 10-59,
-10-62, 10-63, 10-65, 10-66, 10-68, 10-70,
-10-72, 10-73, 10-74, 10-75, 10-76, 10-79,
-10-80, 10-81, 10-82, 10-83, 10-84, 10-85,
-10-87, 10-88, 10-89, 10-90, 10-91, 10-92,
-10-93, 10-94, 10-95, 10-96, 10-97, 10-98,
-10-99, 10-100, 10-101, 10-102, 10-103, 10-104,
-10-105, 10-106, 10-107, 10-108, 10-109, 10-110,
-10-111, 10-112, 10-113, 10-114, 10-115, 10-116,
-10-117, 10-118, 10-119, 10-120, 10-121, 10-122,
-10-123, 10-124, 10-125, 10-126, 10-127, 10-128,
-10-129, 10-130, 10-131, 10-132, 10-133, 10-134,
-10-135, 10-136, 10-137, 10-138, 10-139, 10-140,
-10-141, 10-142, 10-143, 10-144, 10-145, 10-146,
-10-147, 10-148, 10-149, 10-150, 10-151, 10-152,
-10-153, 10-154, 10-155, 10-156, 10-157, 10-158,
-10-159, 10-160, 10-161, 10-162, 10-163, 10-164,
-10-165, 10-166, 10-167, 10-168, 10-169, 10-170,
-10-171, 10-172, 10-173, 10-174, 10-175, 10-176,
-10-177, 10-178, 10-179, 10-180, 10-181, 10-182,
-10-183, 10-184, 10-185, 10-186, 10-187, 10-188,
-10-189, 10-190, 10-191, 10-192, 10-193, 10-194,
-10-195, 10-196, 10-197, 10-198, 10-199, 10-200,
-10-201, 10-202, 10-203, 10-204, 10-205, 10-206,
-10-207, 10-208, 10-209, 10-210, 10-211, 10-212,
-10-213, 10-214, 10-215, 10-216, 10-217, 10-218,
-10-219, 10-220, 10-221, 10-222, 10-223, 10-224,
-10-225, 10-226, 10-227, 10-228, 10-229, 10-230,
-10-231, 10-232, 10-233, 10-234, 10-235, 10-236,
-10-237, 10-238, 10-239, 10-240, 10-241, 10-242,
-10-243, 10-244, 10-245, 10-246, 10-247, 10-248,
-10-249, 10-250, 10-251, 10-252, 10-253, 10-254,
-10-255, 10-256, 10-257, 10-258, 10-259, 10-260,
-10-261, 10-262, 10-263, 10-264, 10-265, 10-266,
-10-267, 10-268, 10-269, 10-270, 10-271, 10-272,
-10-273, 10-274, 10-275, 10-276, 10-277, 10-278,
-10-279, 10-280, 10-281, 10-282, 10-283, 10-284,
-10-285, 10-286, 10-287, 10-288, 10-289, 10-290,
-10-291, 10-292, 10-293, 10-294, 10-295, 10-296,
-10-297, 10-298, 10-299, 10-300, 10-301, 10-302,
-10-303, 10-304, 10-305, 10-306, 10-307, 10-308,
-10-309, 10-310, 10-311, 10-312, 10-313, 10-314,
-10-315, 10-316, 10-317, 10-318, 10-319, 10-320,
-10-321, 10-322, 10-323, 10-324, 10-325, 10-326,
-10-327, 10-328, 10-329, 10-330, 10-331, 10-332,
-10-333, 10-334, 10-335, 10-336, 10-337, 10-338,
-10-339, 10-340, 10-341, 10-342, 10-343, 10-344,
-10-345, 10-346, 10-347, 10-348, 10-349, 10-350,
-10-351, 10-352, 10-353, 10-354, 10-355, 10-356,
-10-357, 10-358, 10-359, 10-360, 10-361, 10-362,
-10-363, 10-364, 10-365, 10-366, 10-367, 10-368,
-10-369, 10-370, 10-371, 10-372, 10-373, 10-374,
-10-375, 10-376, 10-377, 10-378, 10-379, 10-380,
-10-381, 10-382, 10-383, 10-384, 10-385, 10-386,
-10-387, 10-388, 10-389, 10-390, 10-391, 10-392,
-10-393, 10-394, 10-395, 10-396, 10-397, 10-398,
-10-399, 10-400, 10-401, 10-402, 10-403, 10-404,
-10-405, 10-406, 10-407, 10-408, 10-409, 10-410,
-10-411, 10-412, 10-413, 10-414, 10-415, 10-416,
-10-417, 10-418, 10-419, 10-420, 10-421, 10-422,
-10-423, 10-424, 10-425, 10-426, 10-427, 10-428,
-10-429, 10-430, 10-431, 10-432, 10-433, 10-434,
-10-435, 10-436, 10-437, 10-438, 10-439, 10-440,
-10-441, 10-442, 10-443, 10-444, 10-445, 10-446,
-10-447, 10-448, 10-449, 10-450, 10-451, 10-452,
-10-453, 10-454, 10-455, 10-456, 10-457, 10-458,
-10-459, 10-460, 10-461, 10-462, 10-463, 10-464,
-10-465, 10-466, 10-467, 10-468, 10-469, 10-470,
-10-471, 10-472, 10-473, 10-474, 10-475, 10-476,
-10-477, 10-478, 10-479, 10-480, 10-481, 10-482,
-10-483, 10-484, 10-485, 10-486, 10-487, 10-488,
-10-489, 10-490, 10-491, 10-492, 10-493, 10-494,
-10-495, 10-496, 10-497, 10-498, 10-499, 10-500,
-10-501, 10-502, 10-503, 10-504, 10-505, 10-506,
-10-507, 10-508, 10-509, 10-510, 10-511, 10-512,
-10-513, 10-514, 10-515, 10-516, 10-517, 10-518,
-10-519, 10-520, 10-521, 10-522, 10-523, 10-524,
-10-525, 10-526, 10-527, 10-528, 10-529, 10-530,
-10-531, 10-532, 10-533, 10-534, 10-535, 10-536,
-10-537, 10-538, 10-539, 10-540, 10-541, 10-542,
-10-543, 10-544, 10-545, 10-546, 10-547, 10-548,
-10-549, 10-550, 10-551, 10-552, 10-553, 10-554,
-10-555, 10-556, 10-557, 10-558, 10-559, 10-560,
-10-561, 10-562, 10-563, 10-564, 10-565, 10-566,
-10-567, 10-568, 10-569, 10-570, 10-571, 10-572,
-10-573, 10-574, 10-575, 10-576, 10-577, 10-578,
-10-579, 10-580, 10-581, 10-582, 10-583, 10-584,
-10-585, 10-586, 10-587, 10-588, 10-589, 10-590,
-10-591, 10-592, 10-593, 10-594, 10-595, 10-596,
-10-597, 10-598, 10-599, 10-600, 10-601, 10-602,
-10-603, 10-604, 10-605, 10-606, 10-607, 10-608,
-10-609, 10-610, 10-611, 10-612, 10-613, 10-614,
-10-615, 10-616, 10-617, 10-618, 10-619, 10-620,
-10-621, 10-622, 10-623, 10-624, 10-625, 10-626,
-10-627, 10-628, 10-629, 10-630, 10-631, 10-632,
-10-633, 10-634, 10-635, 10-636, 10-637, 10-638,
-10-639, 10-640, 10-641, 10-642, 10-643, 10-644,
-10-645, 10-646, 10-647, 10-648, 10-649, 10-650,
-10-651, 10-652, 10-653, 10-654, 10-655, 10-656,
-10-657, 10-658, 10-659, 10-660, 10-661, 10-662,
-10-663, 10-664, 10-665, 10-666, 10-667, 10-668,
-10-669, 10-670, 10-671, 10-672, 10-673, 10-674,
-10-675, 10-676, 10-677, 10-678, 10-679, 10-680,
-10-681, 10-682, 10-683, 10-684, 10-685, 10-686,
-10-687, 10-688, 10-689, 10-690, 10-691, 10-692,
-10-693, 10-694, 10-695, 10-696, 10-697, 10-698,
-10-699, 10-700, 10-701, 10-702, 10-703, 10-704,
-10-705, 10-706, 10-707, 10-708, 10-709, 10-710,
-10-711, 10-712, 10-713, 10-714, 10-715, 10-716,
-10-717, 10-718, 10-719, 10-720, 10-721, 10-722,
-10-723, 10-724, 10-725, 10-726, 10-727, 10-728,
-10-729, 10-730, 10-731, 10-732, 10-733, 10-734,
-10-735, 10-736, 10-737, 10-738, 10-739, 10-740,
-10-741, 10-742, 10-743, 10-744, 10-745, 10-746,
-10-747, 10-748, 10-749, 10-750, 10-751, 10-752,
-10-753, 10-754, 10-755, 10-756, 10-757, 10-758,
-10-759, 10-760, 10-761, 10-762, 10-763, 10-764,
-10-765, 10-766, 10-767, 10-768, 10-769, 10-770,
-10-771, 10-772, 10-773, 10-774, 10-775, 10-776,
-10-777, 10-778, 10-779, 10-780, 10-781, 10-782,
-10-783, 10-784, 10-785, 10-786, 10-787, 10-788,
-10-789, 10-790, 10-791, 10-792, 10-793, 10-794,
-10-795, 10-796, 10-797, 10-798, 10-799, 10-800,
-10-801, 10-802, 10-803, 10-804, 10-805, 10-806,
-10-807, 10-808, 10-809, 10-810, 10-811, 10-812,
-10-813, 10-814, 10-815, 10-816, 10-817, 10-818,
-10-819, 10-820, 10-821, 10-822, 10-823, 10-824,
-10-825, 10-826, 10-827, 10-828, 10-829, 10-830,
-10-831, 10-832, 10-833, 10-834, 10-835, 10-836,
-10-837, 10-838, 10-839, 10-840, 10-841, 10-842,
-10-843, 10-844, 10-845, 10-846, 10-847, 10-848,
-10-849, 10-850, 10-851, 10-852, 10-853, 10-854,
-10-855, 10-856, 10-857, 10-858, 10-859, 10-860,
-10-861, 10-862, 10-863, 10-864, 10-865, 10-866,
-10-867, 10-868, 10-869, 10-870, 10-871, 10-872,
-10-873, 10-874, 10-875, 10-876, 10-877, 10-878,
-10-879, 10-880, 10-881, 10-882, 10-883, 10-884,
-10-885, 10-886, 10-887, 10-888, 10-889, 10-890,
-10-891, 10-892, 10-893, 10-894, 10-895, 10-896,
-10-897, 10-898, 10-899, 10-900, 10-901, 10-902,
-10-903, 10-904, 10-905, 10-906, 10-907, 10-908,
-10-909, 10-910, 10-911, 10-912, 10-913, 10-914,
-10-915, 10-916, 10-917, 10-918, 10-919, 10-920,
-10-921, 10-922, 10-923, 10-924, 10-925, 10-926,
-10-927, 10-928, 10-929, 10-930, 10-931, 10-932,
-10-933, 10-934, 10-935, 10-936, 10-937, 10-938,
-10-939, 10-940, 10-941, 10-942, 10-943, 10-944,
-10-945, 10-946, 10-947, 10-948, 10-949, 10-950,
-10-951, 10-952, 10-953, 10-954, 10-955, 10-956,
-10-957, 10-958, 10-959, 10-960, 10-961, 10-962,
-10-963, 10-964, 10-965, 10-966, 10-967, 10-968,
-10-969, 10-970, 10-971, 10-972, 10-973, 10-974,
-10-975, 10-976, 10-977, 10-978, 10-979, 10-980,
-10-981, 10-982, 10-983, 10-984, 10-985, 10-986,
-10-987, 10-988, 10-989, 10-990, 10-991, 10-992,
-10-993, 10-994, 10-995, 10-996, 10-997, 10-998,
-10-999, 10-1000,
-
-1-22, 1-24–1-25, 2-17, 2-21, 3-6, 3-17,
-3-19, 3-33, 3-36, 3-50, 5-21, 5-56,
-8-34, 8-36, 9-11, 10-2, 10-12,
-10-18–10-31–10-32, 11-21–11-22, 12
-
-LOAD Intro-17, 1-57, 1-63, 1-66, 2-41, 2-43,
-2-57, 3-25, 3-28, 3-62, 3-57, 5-55,
-6-58, 6-13, 7-21–7-21, 7-30,
-9-1
-
-location 3-52, 3-92
-location 4-7–7-75, 7-41–7-72
-
-log 2-24
-logical 5-22, 5-35, 5-47–5-48, A-2, 4-4–A-5,
-A-11, A-16
-
-login 10-14
-
-# M
-
-manage 8-56
-management Intro-19–Intro-21, 3-1, 7,
-1-10–11-13, 1-18, 1-26–1-27, 1-38,
-1-44, 1-46, 1-51–1-59, 2-7,
-2-14, 2-17–2-18, 2-21, 2-37, 2-56,
-2-60, 2-81–2-82, 3-1–3-4, 3-10,
-3-22, 3-26, 3-28, 3-37, 3-68–3,
-3-83, 3-86, 3-88, 3-96, 4-1,
-4-14, 4-2, 5-20, 5-21, 5-27, 5-30,
-5-35, 5-45, 5-50, 5-52, 5-54, 5-56,
-5-62, 5-63, 5-65, 5-66, 5-68, 5-90,
-6-7, 6-11, 6-13, 6-15–17, 6-6, 6-9, 6-10,
-7-4, 7-5, 7-10, 7-11, 7-4, 7-53, 7-61, 8-23,
-8-24, 8-25, 8-29, 8-31, 8-35, 8-37,
-8-45, 8-49, 8-51, 8-56, 8-58, 8-63,
-8-71, 8-77, 8-79, 8-83, 8-85, 8-87,
-8-88, 8-90, 8-93, 8-96, 8-98, 9-10,
-9-11, 10-2, 10-12, 10-14, 10-15,
-10-17, 10-20, 10-23, 10-25, 10-27, 10-32,
-10-33, 10-36, 10-37, 10-41, 10-45, 10-49,
-10-51, 10-52, 10-54, 10-55, 10-56, 10-59,
-10-62, 10-63, 10-65, 10-66, 10-68, 10-70,
-10-72, 10-73, 10-74, 10-75, 10-76, 10-79,
-10-80, 10-81, 10-82, 10-83, 10-84, 10-85,
-10-87, 10-88, 10-89, 10-90, 10-91, 10-92,
-10-93, 10-94, 10-95, 10-96, 10-97, 10-98,
-10-99, 10-100, 10-101, 10-102, 10-103, 10-104,
-10-105, 10-106, 10-107, 10-108, 10-109, 10-110,
-10-111, 10-112, 10-113, 10-114, 10-115, 10-116,
-10-117, 10-118, 10-119, 10-120, 10-121, 10-122,
-10-123, 10-124, 10-125, 10-126, 10-127, 10-128,
-10-129, 10-130, 10-131, 10-132, 10-133, 10-134,
-10-135, 10-136, 10-137, 10-138, 10-139, 10-140,
-10-141, 10-142, 10-143, 10-144, 10-145, 10-146,
-10-147, 10-148, 10-149, 10-150, 10-151, 10-152,
-10-153, 10-154, 10-155, 10-156, 10-157, 10-158,
-10-159, 10-160, 10-161, 10-162, 10-163, 10-164,
-10-165, 10-166, 10-167, 10-168, 10-169, 10-170,
-10-171, 10-172, 10-173, 10-174, 10-175, 10-176,
-10-177, 10-178, 10-179, 10-180, 10-181, 10-182,
-10-183, 10-184, 10-185, 10-186, 10-187, 10-188,
-10-189, 10-190, 10-191, 10-192, 10-193, 10-194,
-10-195, 10-196, 10-197, 10-198, 10-199, 10-200,
-10-201, 10-202, 10-203, 10-204, 10-205, 10-206,
-10-207, 10-208, 10-209, 10-210, 10-211, 10-212,
-10-213, 10-214, 10-215, 10-216, 10-217, 10-218,
-10-219, 10-220, 10-221, 10-222, 10-223, 10-224,
-10-225, 10-226, 10-227, 10-228, 10-229, 10-230,
-10-231, 10-232, 10-233, 10-234, 10-235, 10-236,
-10-237, 10-238, 10-239, 10-240, 10-241, 10-242,
-10-243, 10-244, 10-245, 10-246, 10-247, 10-248,
-10-249, 10-250, 10-251, 10-252, 10-253, 10-254,
-10-255, 10-256, 10-257, 10-258, 10-259, 10-260,
-10-261, 10-262, 10-263, 10-264, 10-265, 10-266,
-10-267, 10-268, 10-269, 10-270, 10-271, 10-272,
-10-273, 10-274, 10-275, 10-276, 10-277, 10-278,
-10-279, 10-280, 10-281, 10-282, 10-283, 10-284,
-10-285, 10-286, 10-287, 10-288, 10-289, 10-290,
-10-291, 10-292, 10-293, 10-294, 10-295, 10-296,
-10-297, 10-298, 10-299, 10-300, 10-301, 10-302,
-10-303, 10-304, 10-305, 10-306, 10-307, 10-308,
-10-309, 10-310, 10-311, 10-312, 10-313, 10-314,
-10-315, 10-316, 10-317, 10-318, 10-319, 10-320,
-10-321, 10-322, 10-323, 10-324, 10-325, 10-326,
-10-327, 10-328, 10-329, 10-330, 10-331, 10-332,
-10-333, 10-334, 10-335, 10-336, 10-337, 10-338,
-10-339, 10-340, 10-341, 10-342, 10-343, 10-344,
-10-345, 10-346, 10-347, 10-348, 10-349, 10-350,
-10-351, 10-352, 10-353, 10-354, 10-355, 10-356,
-10-357, 10-358, 10-359, 10-360, 10-361, 10-362,
-10-363, 10-364, 10-365, 10-366, 10-367, 10-368,
-10-369, 10-370, 10-371, 10-372, 10-373, 10-374,
-10-375, 10-376, 10-377, 10-378, 10-379, 10-380,
-10-381, 10-382, 10-383, 10-384, 10-385, 10-386,
-10-387, 10-388, 10-389, 10-390, 10-391, 10-392,
-10-393, 10-394, 10-395, 10-396, 10-397, 10-398,
-10-399, 10-400, 10-401, 10-402, 10-403, 10-404,
-10-405, 10-406, 10-407, 10-408, 10-409, 10-410,
-10-411, 10-412, 10-413, 10-414, 10-415, 10-416,
-10-417, 10-418, 10-419, 10-420, 10-421, 10-422,
-10-423, 10-424, 10-425, 10-426, 10-427, 10-428,
-10-429, 10-430, 10-431, 10-432, 10-433, 10-434,
-10-435, 10-436, 10-437, 10-438, 10-439, 10-440,
-10-441, 10-442, 10-443, 10-444, 10-445, 10-446,
-10-447, 10-448, 10-449, 10-450, 10-451, 10-452,
-10-453, 10-454, 10-455, 10-456, 10-457, 10-458,
-10-459, 10-460, 10-461, 10-462, 10-463, 10-464,
-10-465, 10-466, 10-467, 10-468, 10-469, 10-470,
-10-471, 10-472, 10-473, 10-474, 10-475, 10-476,
-10-477, 10-478, 10-479, 10-480, 10-481, 10-482,
-10-483, 10-484, 10-485, 10-486, 10-487, 10-488,
-10-489, 10-490, 10-491, 10-492, 10-493, 10-494,
-10-495, 10-496, 10-497, 10-498, 10-499, 10-500,
-10-501, 10-502, 10-503, 10-504, 10-505, 10-506,
-10-507, 10-508, 10-509, 10-510, 10-511, 10-512,
-10-513, 10-514, 10-515, 10-516, 10-517, 10-518,
-10-519, 10-520, 10-521, 10-522, 10-523, 10-524,
-10-525, 10-526, 10-527, 10-528, 10-529, 10-530,
-10-531, 10-532, 10-533, 10-534, 10-535, 10-536,
-10-537, 10-538, 10-539, 10-540, 10-541, 10-542,
-10-543, 10-544, 10-545, 10-546, 10-547, 10-548,
-10-549, 10-550, 10-551, 10-552, 10-553, 10-554,
-10-555, 10-556, 10-557, 10-558, 10-559, 10-560,
-10-561, 10-562, 10-563, 10-564, 10-565, 10-566,
-10-567, 10-568, 10-569, 10-570, 10-571, 10-572,
-10-573, 10-574, 10-575, 10-576, 10-577, 10-578,
-10-579, 10-580, 10-581, 10-582, 10-583, 10-584,
-10-585, 10-586, 10-587, 10-588, 10-589, 10-590,
-10-591, 10-592, 10-593, 10-594, 10-595, 10-596,
-10-597, 10-598, 10-599, 10-600, 10-601, 10-602,
-10-603, 10-604, 10-605, 10-606, 10-607, 10-608,
-10-609, 10-610, 10-611, 10-612, 10-613, 10-614,
-10-615, 10-616, 10-617, 10-618, 10-619, 10-620,
-10-621, 10-622, 10-623, 10-624, 10-625, 10-626,
-10-627, 10-628, 10-629, 10-630, 10-631, 10-632,
-10-633, 10-634, 10-635, 10-636, 10-637, 10-638,
-10-639, 10-640, 10-641, 10-642, 10-643, 10-644,
-10-645, 10-646, 10-647, 10-648, 10-649, 10-650,
-10-651, 10-652, 10-653, 10-654, 10-655, 10-656,
-10-657, 10-658, 10-659, 10-660, 10-661, 10-662,
-10-663, 10-664, 10-665, 10-666, 10-667, 10-668,
-10-669, 10-670, 10-671, 10-672, 10-673, 10-674,
-10-675, 10-676, 10-677, 10-678, 10-679, 10-680,
-10-681, 10-682, 10-683, 10-684, 10-685, 10-686,
-10-687, 10-688, 10-689, 10-690, 10-691, 10-692,
-10-693, 10-694, 10-695, 10-696, 10-697, 10-698,
-10-699, 10-700, 10-701, 10-702, 10-703, 10-704,
-10-705, 10-706, 10-707, 10-708, 10-709, 10-710,
-10-711, 10-712, 10-713, 10-714, 10-715, 10-716,
-10-717, 10-718, 10-719, 10-720, 10-721, 10-722,
-10-723, 10-724, 10-725, 10-726, 10-727, 10-728,
-10-729, 10-730, 10-731, 10-732, 10-733, 10-734,
-10-735, 10-736, 10-737, 10-738, 10-739, 10-740,
-10-741, 10-742, 10-743, 10-744, 10-745, 10-746,
-10-747, 10-748, 10-749, 10-750, 10-751, 10-752,
-10-753, 10-754, 10-755, 10-756, 10-757, 10-758,
-10-759, 10-760, 10-761, 10-762, 10-763, 10-764,
-10-765, 10-766, 10-767, 10-768, 10-769, 10-770,
-10-771, 10-772, 10-773, 10-774, 10-775, 10-776,
-10-777, 10-778, 10-779, 10-780, 10-781, 10-782,
-10-783, 10-784, 10-785, 10-786, 10-787, 10-788,
-10-789, 10-790, 10-791, 10-792, 10-793, 10-794,
-10-795, 10-796, 10-797, 10-798, 10-799, 10-800,
-10-801, 10-802, 10-803, 10-804, 10-805, 10-806,
-10-807, 10-808, 10-809, 10-810, 10-811, 10-812,
-10-813, 10-814, 10-815, 10-816, 10-817, 10-818,
-10-819, 10-820, 10-821, 10-822, 10-823, 10-824,
-10-825, 10-826, 10-827, 10-828, 10-829, 10-830,
-10-831, 10-832, 10-833, 10-834, 10-835, 10-836,
-10-837, 10-838, 10-839, 10-840, 10-841, 10-842,
-10-843, 10-844, 10-845, 10-846, 10-847, 10-848,
-10-849, 10-850, 10-851, 10-852, 10-853, 10-854,
-10-855, 10-856, 10-857, 10-858, 10-859, 10-860,
-10-861, 10-862, 10-863, 10-864, 10-865, 10-866,
-10-867, 10-868, 10-869, 10-870, 10-871, 10-872,
-10-873, 10-874, 10-875, 10-876, 10-877, 10-878,
-10-879, 10-880, 10-881, 10-882, 10-883, 10-884,
-10-885, 10-886, 10-887, 10-888, 10-889, 10-890,
-10-891, 10-892, 10-893, 10-894, 10-895, 10-896,
-10-897, 10-898, 10-899, 10-900, 10-901, 10-902,
-10-903, 10-904, 10-905, 10-906, 10-907, 10-908,
-10-909, 10-910, 10-911, 10-912, 10-913, 10-914,
-10-915, 10-916, 10-917, 10-918, 10-919, 10-920,
-10-921, 10-922, 10-923, 10-924, 10-925, 10-926,
-10-927, 10-928, 10-929, 10-930, 10-931, 10-932,
-10-933, 10-934, 10-935, 10-936, 10-937, 10-938,
-10-939, 10-940, 10-941, 10-942, 10-943, 10-944,
-10-945, 10-946, 10-947, 10-948, 10-949, 10-950,
-10-951, 10-952, 10-953, 10-954, 10-955, 10-956,
-10-957, 10-958, 10-959, 10-960, 10-961, 10-962,
-10-963, 10-964, 10-965, 10-966, 10-967, 10-968,
-10-969, 10-970, 10-971, 10-972, 10-973, 10-974,
-10-975, 10-976, 10-977, 10-978, 10-979, 10-980,
-10-981, 10-982, 10-983, 10-984, 10-985, 10-986,
-10-987, 10-988, 10-989, 10-990, 10-991, 10-992,
-10-993, 10-994, 10-995, 10-996, 10-997, 10-998,
-10-999, 10-1000,
-
-installation 5-53, 7-58, 10
-Internet Protocol 3-97, 5-46, 6-82, 8-79, 8-82–8-83,
-8-88–8-90, 8-97–8-98, 8-101, 8-108,
-8-122, 8-124, 8-137
-
-tran 7-37
-
-IP
-
-address 8-52–8-53, 5-55, 8-69, 8-14
-IPP 3-20, 3-23, 7-4–7-55, 7, 7-34, 7-39–41
-Copying all of this manual, or distributing copies, is strictly prohibited.
-To request permission, please call 100-PRATES.
-
-Index-4
-
-Version 1
-
 # Integrating Novell Enterprise Server for Linux
-
-
-
-
 
 5-32–54, 5-37, 5–45–46, 5-48,
 5-54, 5-56, 5-62, 5–67–59, 5-90,
@@ -9104,4 +8395,3 @@ YaST 2-15, 2-18
 ## Z
 
 区域 4–8–4–11, 7-16
-

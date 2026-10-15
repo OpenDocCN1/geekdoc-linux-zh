@@ -1,4 +1,5 @@
-# 介绍中间人攻击- Advance ElderNode 博客
+
+# 介绍中间人攻击 - Advance ElderNode 博客
 
 > 原文：<https://blog.eldernode.com/man-in-the-middle-attack/>
 
@@ -10,9 +11,9 @@
 
 **[ElderNode VPS 托管包](https://eldernode.com/vps-hosting/)**
 
-### 介绍中间人攻击
+## 介绍中间人攻击
 
-中路进攻的人，在国际上被称为 MIM 、 [MitM](https://en.wikipedia.org/wiki/Man-in-the-middle_attack) 和 MITMA 。这是最危险的黑客攻击类型之一。
+中路进攻的人，在国际上被称为`MIM`、[`MitM`](https://en.wikipedia.org/wiki/Man-in-the-middle_attack)和`MITMA`。这是最危险的黑客攻击类型之一。
 
 这种类型的攻击可以在网络中的**层 2** 和**层 3** 进行。在这种类型的攻击中，黑客将自己置于网络中两个节点的连接之间，存储所有信息，并通过在网络中的两个系统或服务器之间传递信息来显示给黑客。
 
@@ -24,19 +25,19 @@
 
 ![Introducing Man in the Middle Attack](img/b15c8625ffb9c215876ed8c3b25bd612.png)
 
-### 第二层中间人攻击
+## 第二层中间人攻击
 
-第二层的 MitM 攻击是这样的，攻击者通过**伪造**网络上的 MAC 地址，使系统相信网关已经被传输。
+第二层的`MitM`攻击是这样的，攻击者通过**伪造**网络上的`MAC`地址，使系统相信网关已经被传输。
 
 系统认为他们把所有的数据包都发送给了黑客。同样，黑客通过复制所有输入的信息将数据包发送到目的地。
 
 这一过程发生得如此之快，以至于用户都没有意识到，就好像他们正在自己的网络上不间断地工作。
 
-**注:** 这种类型的攻击，又称 ARP 中毒，可以用[戴](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst6500/ios/12-2SXF/native/configuration/guide/swcg/dynarp.pdf)等技术在智能交换机上**挫败**。
+**注：** 这种类型的攻击，又称`ARP`中毒，可以用[戴](https://www.cisco.com/c/en/us/td/docs/switches/lan/catalyst6500/ios/12-2SXF/native/configuration/guide/swcg/dynarp.pdf)等技术在智能交换机上**挫败**。
 
-### 第三层中间人攻击
+## 第三层中间人攻击
 
-第三层的 MitM 攻击 要常见得多，当然也更危险。在第二层攻击中，黑客必须能够访问网络的**物理层**。或者在网络上捕获一个系统，用各种软件发动攻击。在第三层中，这种攻击也可以远程完成。
+第三层的`MitM`攻击要常见得多，当然也更危险。在第二层攻击中，黑客必须能够访问网络的**物理层**。或者在网络上捕获一个系统，用各种软件发动攻击。在第三层中，这种攻击也可以远程完成。
 
 第 3 层中的中间人攻击可以在 [web 服务器](https://eldernode.com/vps-hosting/)和用户之间。它也可以在一个[虚拟服务器](https://eldernode.com/vps/)和一个用户之间。一般来说，它能够用各种方法控制这种攻击。
 
@@ -50,7 +51,7 @@
 
 这样，它就不能轻易使用你的密码和其他信息。
 
-**亦作，见:**
+**亦作，见：**
 
 [如何安装和激活 SSL 证书](https://eldernode.com/how-to-install-and-activate-the-ssl-certificate/)
 

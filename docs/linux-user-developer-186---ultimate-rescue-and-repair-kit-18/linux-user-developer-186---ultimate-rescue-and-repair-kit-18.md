@@ -1,22 +1,9 @@
+
 # Linux 用户与开发者 186 - 终极救援与修复工具包 186
-
-
-
-
-
-
-
-
 
 面向 Linux 高级用户的网页浏览器
 
-
-
-
-
 为创作者、开发者和极客者打造的发行版
-
-
 
 ------
 
@@ -26,102 +13,119 @@
 
 Two Sides 是一项促进负责任使用印刷和纸张全球计划。当纸张源自认证或可持续管理的森林时，它是一种独特强大且自然的传播媒介。
 
- #LovePaper 有许多绝佳理由。现在就发现它们：twosides.info
-
-
+#LovePaper 有许多绝佳理由。现在就发现它们：twosides.info
 
 ## 编辑部
+
 编辑 Chris Thornett
+
 editor@linuxuser.com
 
 设计 Rosie Weber
+
 制片 Edie King
+
 总编辑 Tech Graham Barrow
+
 高级艺术编辑 Matthew
 
 ## 贡献者
+
 Adam Black, Michael Bedford, Jaime Beard, Neil Benedict, Christian Crawley, Neal Drake, John Grover, Tim Harris, Chris Glyn, David Patterson, Paul Rogers, Catherine Kahn, Carolyn Robinson, Maya Sharma, Alexander Steve White
 
-
-
 ## 广告
+
 媒体包在线提供
+
 商业总监 Clive Dove
+
 dove@linuxuser.com
 
 广告经理 Andrew Tilling
+
 tillingh@linuxuser.com
 
 客户经理 Simon Mason
+
 smason@linuxuser.com
+
 011225 68735
 
 LinuxUser & Developer 提供订阅。请联系销售团队获取广告和业务机会。
+
 国际授权总监 Matt Ellis
+
 mattellis@linuxuser.com
 
 印刷订阅与书籍
+
 我们接受电子邮件或电话订单
+
 邮箱：orders@linuxusermagazines.co.uk
+
 0346 84 9832
-国际电话：(+44 (0)16 348 9832
+
+国际电话：(+44 (0)16 348 9832)
 
 新闻主管 Tim Matters
 
 ## 制作
+
 美国及英国区负责人 Mark Constance
+
 制作经理 David White
+
 广告经理 James Cooney
+
 设计总监 Paul Young
+
 制作经理 Note Cooley
 
 总经理 Aaron Askill
+
 助理编辑 Sarah Wood
+
 艺术与设计总监 Ross Edwards
+
 编辑助理 James Hill
+
 财务总监 James Duncan
 
 ## 赞助者
 
 ## 发行
 
-
-
 Future 是一本屡获奖项的杂志。我们在全球生产超过 200 期，并在在线、印刷、移动和店内创造世界级的内容。Future 是一家媒体出版公司。非执行主席 Peter Allen
+
 首席执行官 James Dillon
+
 电话 +44 (0)12225 2424
 
 # 本期欢迎
-欢迎阅读这份英国和北美喜爱的 Linux 和 FOSS（开源软件）杂志。我写此是为了告诉大家任何人都可以通过在用户名字段输入“root”来“黑进” macOS Sierra，但我必须说，他们发现的这个漏洞非常荒唐。在该事件之后，我们正在研究如何通过我们的 Linux 抢救与修复（p18）更改各种类型的功能。我们还想清理和维护系统以提供更好的未来。对于我们的第二个专题，我们考虑了未来将使用的技术，这体现在全新的两部分系列中，我们回顾了过去的编程以及现在的增长情况。我们还想看看你们喜欢在杂志中看到哪些语言，因为我们是为你们制作的！
+
+欢迎阅读这份英国和北美喜爱的 Linux 和 FOSS（开源软件）杂志。我写此是为了告诉大家任何人都可以通过在用户名字段输入“`root`”来“黑进” macOS Sierra，但我必须说，他们发现的这个漏洞非常荒唐。在该事件之后，我们正在研究如何通过我们的 Linux 抢救与修复（p18）更改各种类型的功能。我们还想清理和维护系统以提供更好的未来。对于我们的第二个专题，我们考虑了未来将使用的技术，这体现在全新的两部分系列中，我们回顾了过去的编程以及现在的增长情况。我们还想看看你们喜欢在杂志中看到哪些语言，因为我们是为你们制作的！
 
 Chris Thornett, 编辑
+
 联系我们的团队：linuxuser@future.com
+
 Facebook：facebook.com
+
 Twitter: @linuxusag
+
 获取最佳订阅优惠：linuxuser.co.uk/subscribe
+
 优惠高达 20%
+
 详情见第 30 页
 
-
-
-
 - 18 终极抢救工具包：虽然我们知道 Linux 是最稳定可靠的操作系统之一，但问题仍会发生。不必绝望，Bothwick 展示了诊断和修复系统的最佳工具
-
 
 # 封底
 
 72 Pi 项目：微型机器人！Joshua Elidson 为了在课堂上教授多机器人行为，创造了比口袋硬币还小的微型机器人
 
-
-
 订阅印刷版可节省 20%！更多信息请见第 30 页
-
-
-
-
-
-
-
 
 ## 硬件
 
@@ -137,7 +141,7 @@ Twitter: @linuxusag
 
 这提升了在 AAA 游戏和内容创作应用中的图形体验。这种新的半定制 GPU 将 Radeon 显卡的性能和功能交给了更广泛的爱好者，他们希望获得最好的视觉体验。
 
-该系列作为第 8 代 Core 推出，通过其第二代 DDR5 带宽内存 (HBM2) 和自定义独立显卡芯片，将英特高性能移动平台推向前。英特的嵌入式互连桥接 (EMIB) 是其核心，支持游戏的处理需求。基本上，AMD 是一座加速数据流的桥梁，使设备更快速、更强大、更高效。
+该系列作为第 8 代 Core 推出，通过其第二代 DDR5 带宽内存 (`HBM2`) 和自定义独立显卡芯片，将英特高性能移动平台推向前。英特的嵌入式互连桥接 (`EMIB`) 是其核心，支持游戏的处理需求。基本上，AMD 是一座加速数据流的桥梁，使设备更快速、更强大、更高效。
 
 但这笔交易不仅是革命性的；产品本身也是。它可能让 OEM 厂商获得开发更薄、更轻的设计的自由。看起来更好的散热和更长的电池续航并非不可能。
 
@@ -155,9 +159,8 @@ Twitter: @linuxusag
 
 将通过 OEM 市场提供。噢，如果它还没有一个正式的名字，“英特单路多路解决方案”（Intel Single Package Multi-Solution）读起来并不怎么顺口，对吧？
 
-
-
 （每日平均访问量，截至 2017 年 11 月 17 日）
+
 - 1. Mint 2766
 - 3. Debian 1825
 - 6. Solus 1321
@@ -184,41 +187,13 @@ Firefox 能反击 Chrome 吗？虽然需要时间让数据反映这一点，但�
 
 性能改进。Firefox 量子版可以从 Mozilla.org 手动下载，Ubuntu 14.0 及后续用户将获得更新。
 
-目前我们不知道将进展到什么程度。同样，英特和 AMD 提供了处理器是否可用。
-
-将通过 OEM 市场提供。噢，如果它还没有一个正式的名字，“英特单路多路解决方案”读起来并不怎么顺口，对吧？
-
-目前我们不知道将进展到什么程度。同样，英特和 AMD 提供了处理器是否可用。
-
-将通过 OEM 市场提供。噢，如果它还没有一个正式的名字，“英特单路多路解决方案”读起来并不怎么顺口，对吧？
-
-目前我们不知道将进展到什么程度。同样，英特和 AMD 提供了处理器是否可用。
-
-将通过 OEM 市场提供。噢，如果它还没有一个正式的名字，“英特单路多路解决方案”读起来并不怎么顺口，对吧？
-
-（注：由于原文中存在大量重复，根据指令“一定不要重复输出原文”，译文已特意去除了重复部分的翻译逻辑）
-
-Firefox 能反击 Chrome 吗？虽然需要时间让数据反映这一点，但早期迹象是好的。大部分实验都集中在
-
-性能改进。Firefox 量子版可以从 Mozilla.org 手动下载，Ubuntu 14.0 及后续用户将获得更新。
-
-目前我们不知道将进展到什么程度。同样，英特和 AMD 提供了处理器是否可用。
-
-将通过 OEM 市场提供。噢，如果它还没有一个正式的名字，“英特单路多路解决方案”读起来并不怎么顺口，对吧？
-（注：由于提供的待译文本包含大量重复段落，为遵循“不要重复输出原文”的原则，此处仅展示核心内容的逻辑性翻译，以确保文档的专业与非冗余。）
-
-
-
-
-
-
 ## Intel 管理引擎中的严重漏洞
 
 SPS 和 TXE 技术中也发现了安全漏洞
 
 正在使用 Intel 个人电脑或笔记本电脑吗？你的电脑正面临风险。隐藏在 Intel 管理引擎（ME）中的威胁——这被称为“计算机中的计算机”，且已在 2016 年被证实存在漏洞——使得任何支持 Intel 的 Linux、Apple Mac 或 Windows 设备都可能被劫持，即使在没有操作系统的情况下也是。
 
-第三方专家（位于英国）发现，除了 ME 之外，服务器平台服务 (SPS) 和可信执行引擎 (TXE) 也容易受到任何伪装成特权 root 的用户的攻击。他们可以安装 rootkit 并进行覆盖写入。当用户登录时，被劫持的账户可以从内存中访问系统的所有数据。共享内存和服务面临尤为风险，且可以通过 USB 闪盘引入利用 ME 的代码。
+第三方专家（位于英国）发现，除了 ME 之外，服务器平台服务 (`SPS`) 和可信执行引擎 (`TXE`) 也容易受到任何伪装成特权 `root` 的用户的攻击。他们可以安装 `rootkit` 并进行覆盖写入。当用户登录时，被劫持的账户可以从内存中访问系统的所有数据。共享内存和服务面临尤为风险，且可以通过 USB 闪盘引入利用 ME 的代码。
 
 由于该技术首次于 2008 年引入，目前使用的绝大多数处理器都有此漏洞。这包括第 6 代至第 8 代的 Intel Core CPU、低端赛扬和 Intel Xeon 芯片。
 
@@ -230,26 +205,17 @@ Positive Technologies 的研究员 Michal Goryakh 表示：“攻击者可以绕
 
 Intel 表示可以从其下载中心获取漏洞（INTEL-SA-0086）。补丁已经发布。然而，不要期望你的操作系统会提供任何更新。如果你的系统受到影响，你需要联系硬件的 OEM。
 
-
-
-
 在巨大的宣传声势中发布，Firefox 57（被称为 Quantum）改写了历史，它比 Chrome 更快，且内存占用减少了 30%。然而，Firefox 的未来尚不确定，但它的实力是否足以挑战 Chrome 呢？
-
 
 Midori 采用 WebKit 渲染引擎，与 Xfce 桌面相关并按照相同的原理开发。只需投入少量精力，就能在许多 Linux 发行版中找到它。
 
-
 任何用过 Google Chrome 的人对它的开源都很熟悉。但如果具有相同的功能，以及扩展程序呢？Chromium 快速且易于使用。
-
 
 Brave 基于 Chromium 并由项目联合创始人 Brendan Eich 开发，通过阻止追踪器和广告，向广告商展示更少的数据。
 
-
 以前名为 Epiph，它依然很强大（该包保留了新的 epiphany-browser，并使用 WebKit 渲染引擎）。最近增加了 Mozilla Sync，实现了跨设备的连续性。
 
-
 你的 Linux 新闻与观点来源
-
 
 ### 读者来信
 
@@ -264,7 +230,6 @@ drwxr-xr-x 20 user group 4096 Oct 12 09:55 ..
 ```
 
 **关于** 你希望下次看到哪些事件报道？请通过下方邮箱向我们写信。
-
 
 亲爱的 **LU&D**，我大约在一年前开始阅读你们的 Linux 杂志了。这是一本很棒的读物，我从你们提供的教程和更实用的功能中学到了非常多。我也喜欢你们关于 Linux 通用事件的图片，比如太空中的 Linux。我必须说，令我惊讶的是活动列表页面。如果它能告诉我这段时间有哪些培训活动和会议，我会做得更多。我认为这对只想知道关键日期的忙碌读者很有帮助。
 
@@ -297,12 +262,6 @@ Swap: 2048.0 total,   2048.0 free,     0.0 used
 
 **Right 是时候放弃所有 Ubuntu 变体并推出套装包了**
 
-
-
-
-
-
-
 ## Vivaldi：面向强力用户的浏览器
 
 我们采访了基于 Chromium 的浏览器 Vivaldi 的首席执行官，探讨了关于隐私保护和网络中性的斗争，以及未来计划中的功能。
@@ -320,6 +279,8 @@ Swap: 2048.0 total,   2048.0 free,     0.0 used
 ## 你们达到 100 万用户了吗？
 
 差不多吧，我们说正在接近 100 万。这是我们目前的状态。我们非常接近这个目标，而且增长率正在提高，我们很快达到第一个百万用户，我们统计的是活跃用户而不是下载量。我们统计的是有意义的数字，即对我们最重要的指标——月活跃用户数。
+
+
 
 自 1996 年以来，他在互联网浏览器领域基本上一直拥有某种特质，现在是 Vivaldi 的首席执行官。
 
@@ -359,22 +320,17 @@ Tetzner 提到，广告应该是公开的。这涉及到广告问题，，我们
 
 > 不幸的是，当我们想要做某些事情时，我们被看作是在做坏事。这里有两件事：你有多少
 
-
 你可以在不解决“房间里的大象”的情况下使用它，而这就是使用开源许可协议的问题。这是一个复杂的情况，对 Chromium 引擎进行的所有更改都是根据 BSD 许可发布的。这种类型的许可不要求分发源代码，尽管 Vivaldi 确实这样做，但我们保持 UI 是开源的。
 
 “我们在 C++ 中做的每一个更改都是开源的，”Tetzner 说，“当我们最初启动项目时，我们讨论过——我们应该带许可发布吗？但我们还没有准备好。而现在，至少检查代码并更仔细地观察别人在做什么要好。”
 
 Tetzner 表示公司确实考虑过使用 GPL，但由于风险，这是一个决定。“选择错误的许可并发布，我们会担心，而且在很多方面，人们仍然可以做他们想做的，”Jon 说。此外，这并没有阻止社区提交补丁供审查。有些补丁已经包含在浏览器中，但 Tetzner 承认它们没有被采纳。
 
-
-
-
 这显然行不通。情况恰恰相反：我们应该限制 Facebook 和 Google 收集信息，而不是给更多个人和公司提供监视我们的机会。
-
 
 这正是我们最初开发 Vivaldi 的原因。在开发 Opera 之前，我们与社区保持着密切的关系，但当时我们正偏离那条窄路并尝试完全不同的事情；这并不是人们对此感到不悦，我们觉得欠他们他们，不能让他们被抛弃。因此，我们开始构建一个更好的浏览器，并且与社区保持非常紧密的关系进行此。
 
-我们有不同的层次：有志愿者帮助我们并提供反馈；有志愿者帮助我们进行翻译。此外，我们在 https://vivaldi.net 上有一个非常活跃的社区，用户会直言不讳地提出他们认为我们在软件上做得更好或需要改进的地方。我们非常认真地对待他们的反馈。我们有一种理念：“我们正在为用户构建这款浏览器，这不仅仅关乎我们作为朋友的用户，我们想为他们构建一个更好的浏览器。当你尝试它时，不要监视你的用户，因为你想保护好朋友的安全，你也想听取朋友的建议——这是真的。我们为用户做最好的，这也是我们公开讨论隐私问题的原因之一，因为隐私至关重要，如果你无法在技术层面解决所有问题，我们或许可以以其他方式介入。”
+我们有不同的层次：有志愿者帮助我们并提供反馈；有志愿者帮助我们进行翻译。此外，我们在 `https://vivaldi.net` 上有一个非常活跃的社区，用户会直言不讳地提出他们认为我们在软件上做得更好或需要改进的地方。我们非常认真地对待他们的反馈。我们有一种理念：“我们正在为用户构建这款浏览器，这不仅仅关乎我们作为朋友的用户，我们想为他们构建一个更好的浏览器。当你尝试它时，不要监视你的用户，因为你想保护好朋友的安全，你也想听取朋友的建议——这是真的。我们为用户做最好的，这也是我们公开讨论隐私问题的原因之一，因为隐私至关重要，如果你无法在技术层面解决所有问题，我们或许可以以其他方式介入。”
 
 ## 我注意到你们有一个博客平台
 
@@ -404,27 +360,26 @@ Jon Masters 报道了 Linux 社区的最新动态，随着 4.15-rc1 的发布，
 
 **Jon Masters** 是一位 Linux 内核开发者，从事 Linux 相关工作已超过 22 年，从他 13 岁首次参加开始。在 Linux 会议上，Masters 曾工作过。
 
-
-
-
-
-
 我们可以修复它，我们拥有这项技术。Neil Bothwick 揭了诊断、修复、清洁和维护系统的最佳工具。
 
-
 - • 分析问题，p20
+
 在尝试各种修复方法之前，请查看证据以确保你确切知道问题所在。
 
 - • 克隆与备份，p22
+
 为你的数据创建副本，在还可以时进行恢复，并确保任何修复尝试都不会导致进一步损失。
 
 - • 恢复系统，p24
+
 你可以做什么来从问题中恢复，主要目标有两个：
 
 - • 硬件与清洁，p26
+
 诊断故障或失效的硬件，并通过丢弃任何垃圾和不再需要的文件来清理自己的环境。
 
 - • 维护技巧，p28
+
 在保持系统安全的同时，最大限度地增加恢复电脑的机会。
 
 Linux 用户对于他们所选操作系统的稳定性、安全性和可靠性通常表现出某种从容；但意外总会发生，而且也可能发生在你身上。故障、磁盘或内存错误（不是你的错），甚至是老化的电源都会导致所有故障，更不用说故障或恶意的软件漏洞了。你可以做一些事情来降低故障概率，并在故障发生时采取其他步骤来减轻损害，但在大部分范围内，我们将探索当灾难发生时该做什么，以及如何从致命崩溃中恢复。
@@ -434,8 +389,6 @@ Linux 用户对于他们所选操作系统的稳定性、安全性和可靠性�
 接下来我们将介绍诊断和修复问题涉及的步骤，以及在崩溃发生前后保护你宝贵数据的方法。其中某些方法以一种复杂的方式，通常需要使用 启动 USB（live USB），我们将使用几个这样的 U 盘，配合本月的封面光盘（这是保留它的非常充分的理由），但你也可以从 U 盘启动它们，或者如果你愿意的话，甚至通过网络启动它们。
 
 众所周知，问题的产生原因之一是采用了过于仓忙的解决方案；或者在处理完问题后没有清理现场。当问题出现时，我们需要采取结构化且正确的方法，以确保在尝试某些有时是激进的修复之前，知道哪里出错了。好消息是，许多 Linux 工具可以用来修复 Windows 问题，我们将简要介绍这些。在火灾发生之前，你可以做很多事情，从定期备份到监控系统的健康状况。
-
-
 
 在开始尝试修复问题之前，你需要精确地确定该问题是什么。
 
@@ -447,15 +400,21 @@ Linux 日志几乎关于内核，但许多其他程序也会向系统日志报�
 
 系统在启动过程的早期启动（在文件系统挂载和记录器启动之前），无法写入用户模式。某些内部进程启动非常早，将信息缓冲在内存中直到保存到磁盘，所以如果你能到达登录提示界面，就可以读取 journal。如果你不能，可以尝试进入早期用户模式（runlevel）。在 GRUB 菜单处（启动时可能需要按住某个键）或按 `e` 编辑条目，并在内核行中添加 `single`。该选项是 `system.unit=base.target`；basic：目标失败，尝试 `rescue.target`。此外删除任何你不想运行的选项——这将帮助你进入用户模式下的登录提示界面，这是最基础的操作模式。现在你可以读取内核日志了，系统日志通常位于 `/var/log/messages`；使用以下命令读取：
 
-`less /var/log/messages`
+```
+less /var/log/messages
+```
 
 有些用户使用不同的名称，例如 `/var/log/`，但它是 `/var/log` 中最近的文件之一。使用以下命令读取内核日志：
 
-`dmesg`
+```
+dmesg
+```
 
 在里面查找错误信息。不要太担心警告：它们可能由各种情况产生，例如系统寻找某个不存在的东西。大多数警告并不是致命的，也不会导致系统损坏。对于系统，使用：
 
-`sudo journalctl -b`
+```
+sudo journalctl -b
+```
 
 如果你没有以 root 身份登录，则需要 `sudo`。
 
@@ -490,16 +449,16 @@ Linux 日志几乎关于内核，但许多其他程序也会向系统日志报�
 | Nov 22 14:41:50 | kernel | usb-port:1-26:: Cannot disable (error -72) |
 | Nov 22 14:41:50 | kernel | usb-port:1-27:: Cannot disable (error -72) |
 | Nov 22 14:41:50 | kernel | usb-port:1-28:: Cannot disable (error -72) |
+
+
+
 | Nov 22 14:41:50 | kernel | usb-port:1-29:: Cannot disable (error -72) |
+
 | Nov 22 14:41:50 | kernel | usb-port:1-30:: Cannot disable (error -72) |
 
 从系统 journal 日志中提取信息可能是困难的。
 
-
-
-
 你可能只能看到你用户的日志记录。`-b` 选项告诉它只显示自上次重启以来的条目。你还可以通过进一步告诉它只显示错误或更严重的条目来精细调整，如下：
-
 
 ```
 sudo journalctl -b p err
@@ -517,15 +476,14 @@ journalctl -b | grep
 journalctl /dev/sda
 ```
 
-
 在诊断问题时，你可以向 GRUB 中的内核行中添加许多选项。这些参考可以告诉你发生了什么。如果你已经带有启动界面启动且系统已开始启动，请按 `Esc` 键退出启动界面并查看日志。使用 `initramfs` 帮助非常有帮助。使用 `rd.shell` 和 `dbg` 可能有助于找到问题的根源。如果系统未能完成启动，或者 `rd.debug` 已经尽尽所能，你可以将日志重定向到文件，或保存到 USB 盘中以备后用。
 
 有时你在这些过去部分看到的信息就是你所需要的。你可能可以通过 `Shift+F2` 找回，前提是还没有运行得太远。通常，滚动缓冲区只保存几页。如果是这样，滚动不起作用，或者你在加载内核时没有运行多久——就像崩溃时那样——请使用你的相机并恢复运行，这样你就能看到需要的内容。用它，它是有效的。当 GRUB 工作时，你可以尝试任何方法配合它。对于发生的错误，是不完全更新后的缺少文件错误或包含 `/` 的文件系统损坏：
 
 ![](img/b0e5bcf1ba8a75a2b9418fda820e5cd0_21_0.png)
 
-
 查看之前发生过
+
 当你在日志中发现错误时，检查错误之前的条目——它们可能提供关于导致该错误的线索：
 
 ```
@@ -548,11 +506,9 @@ ls -lrt /log
 
 系统用户可以使用 `journalctl -xe` 显示最近记录事件的更多细节。应用这些技术，你要么会看到一个你理解的错误，要么会看到一个令你困惑的错误。在后一种，尝试将其粘贴到你喜爱的搜索引擎中，但不要急于采用第一个答案，确保你仔细阅读结果，以确保你正在尝试适用于你情况的正确修复，www.linuxuser.com
 
-
 ![](img/b0e5bcf1ba8a75a2b9418fda820e5cd0_21_0.png)
 
 如果可能，不要将备份存在同一台计算机上，即使你使用的是网络中的另一台电脑，或使用云存储设备。
-
 
 复制你的数据，并在可能时恢复它，确保任何修复尝试都不会导致进一步损失
 
@@ -565,64 +521,6 @@ ddrescue /dev/sda sda.map
 第一个设备用于读取，第二个是镜像文件，第三个是用于跟踪任何无法读取块的 map 文件。你可以通过多次运行命令来恢复更多数据：`ddrescue` 使用 map 文件知道哪些块可以再次尝试，它对于有划痕的磁盘比硬盘效果更好。自然，你不能在你正尝试挂载的驱动器上存储镜像或 map 文件，所以你需要其他
 
 ![](img/b0e5bcf1ba8a75a2b9418fda820e5cd0_21_1.png)
-
-上面的内容是（此处由于原文文本不完整，根据上下文推断翻译）：
-...
-用它，它是有效的。当 GRUB 工作时，你可以尝试任何方法配合它。对于发生的错误，是不完全更新后的缺少文件错误或包含 `/` 的文件系统损坏：
-
-![](img/b0e5bcf1ba8a75a2b9418fda820e5cd0_20_0.png)
-
-
-查看之前发生过
-当你在日志中发现错误时，检查错误之前的条目——它们可能提供关于导致该错误的线索：
-
-journalctl -b -1
-```
-
-你如何获取日志信息，一旦你获取了，通常就能看到哪里出了问题。一旦你知道了问题的原因，如果你正处于修复它的路上：
-
-另一种没有写入日志的情况是程序在系统崩溃之前无法向日志写入。幸运的是，这种情况很少见，而且崩溃是瞬时的，你知道如何触发它。
-
-系统日志或日记不是信息的来源。如果你在预期看到桌面时却使用了控制台日志，说明桌面加载失败。在这种情况下，请查找任何以 `/var/log/Xorg.log` 开头的行，特别是任何带有 `EE` 的行——
-
-> 当程序导致瞬时崩溃时，在系统崩溃之前无法写入任何内容
-
-在 `/log` 目录下还有其他日志——系统使用的所有内容。在问题发生后立即列出该目录，可以显示最近的日志文件，这可能帮助你了解：
-
-```
-ls -lrt /log
-```
-
-系统用户可以使用 `journalctl -xe` 显示最近记录事件的更多细节。应用这些技术，你要么会看到一个你理解的错误，要么会看到一个令你困惑的错误。在后一种，尝试将其粘贴到你喜爱的搜索引擎中，但不要急于采用第一个答案，确保你仔细阅读结果，以确保你正在尝试适用于你情况的正确修复，www.linuxuser.com
-
-
-![](img/b0e5bcf1ba8a75a2b9418fda820e5cd0_21_0.png)
-
-如果可能，不要将备份存在同一台计算机上，即使你使用的是网络中的另一台电脑，或使用云存储设备。
-
-
-复制你的数据，并在可能时恢复它，确保任何修复尝试都不会导致进一步损失
-
-如果磁盘驱动或文件系统出现任何问题，让其工作的简单方法是使用救援光。第一步是从只读驱动启动。在挂载它之前，你应该对驱动器进行备份镜像。通常工具是 `dd`，但程序从驱动器读取时速度很慢，所以我们使用 `ddrescue`。它的功能与 `dd` 相同，但在遇到错误时会重新运行，并跳到下一个部分。经过多次尝试后，我们可以在镜像文件上使用某些工具；为此，请在另一个上创建一个镜像副本——不要冒任何风险。我们可以再做一个。
-
-```
-ddrescue /dev/sda sda.map
-```
-
-第一个设备用于读取，第二个是镜像文件，第三个是用于跟踪任何无法读取块的 map 文件。你可以通过多次运行命令来恢复更多数据：`ddrescue` 使用 map 文件知道哪些块可以再次尝试，它对于有划痕的磁盘比硬盘效果更好。自然，你不能在你正尝试挂载的驱动器上存储镜像或 map 文件，所以你需要其他
-
-![](img/b0e5bcf1ba8a75a2b9418fda820e5cd0_21_1.png)
-
-上面的内容是（此处由于原文文本不完整，根据上下文推断翻译）：
-...
-用它，它是有效的。当 GRUB 工作时，你可以尝试任何方法配合它。对于发生的错误，是不完全更新后的缺少文件错误或包含 `/` 的文件系统损坏：
-
-![](img/b0e5bcf1ba8a75a2b9418fda820e5cd0_20_0.png)
-
-*(注：由于您提供的待翻译文本后半部分大量重复且逻辑断裂，译文已根据您的“不要重复输出原文”原则对核心内容进行了去重和逻辑对齐)*
-
-
-
 
 不要慌乱
 
@@ -688,39 +586,9 @@ Rescueed CD 使用你正在启动的磁盘通过这种方法更改任何用户�
 
 如果驱动器显示分区或分区表损坏，我们可以恢复数据。Rescueed 可以非常容易地修复 Linux 和 Windows 的某些问题。点击按钮，阅读并操作。
 
-（此处根据原文翻译逻辑）
-
 ```bash
 ntfs -ro /dev/sda
 ```
-
-eded CD 使用你正在启动的磁盘通过这种方法更改任何用户（包括 root）的密码。
-
-虽然使用 Linux CD 修复损坏的 Linux 系统看起来完全合逻辑，但用它来修复 Windows 问题并不那么显而易见，但确实可行。其明显的应用是挂载无法启动的 Windows 分区以恢复你的数据和其他文件。虽然过程可能不完美，但 Rescueed 可以非常容易地修复 Linux 和 Windows 的某些问题。点击按钮，阅读并操作。
-
-如果驱动器显示分区或分区表损坏，我们可以恢复数据。Rescueed 可以非常容易地修复 Linux 和 Windows 的某些问题。点击按钮，阅读并操作。
-
-```bash
-ntfs -ro /dev/sda
-```
-
-eded CD 使用你正在启动的磁盘通过这种方法更改任何用户（包括 root）的密码。
-
-（注：由于原文最后部分似乎存在重复或断句，翻译已严格按照原文行进行对齐，确保不漏译且不重复逻辑逻辑。）
-
-```bash
-ntfs -ro /dev/sda
-```
-
-eded CD 使用你正在启动的磁盘通过这种方法更改任何用户（包括 root）的密码。
-
-虽然使用 Linux CD 修复损坏的 Linux 系统看起来完全合逻辑，但用它来修复 Windows 问题并不那么显而易见，但确实可行。其明显的应用是挂载无法启动的 Windows 分区以恢复你的数据和其他文件。虽然过程可能不完美，但 Rescueed 可以非常容易地修复 Linux 和 Windows 的某些问题。点击按钮，阅读并操作。
-
-（注：原文提供的文本末尾存在部分重复片段，翻译已按要求逐行处理。）
-
-
-
-
 
 我们使用 `sudo` 是因为 `smartctl` 需要访问设备的底级权限。要对驱动器进行彻底测试，你可以使用：
 
@@ -737,7 +605,6 @@ eded CD 使用你正在启动的磁盘通过这种方法更改任何用户（包
 我们定期运行 `smartctl` 程序并查看日志输出，这意味着人类懒得自己去检查。这个名为 `smartctl` 的程序在后台运行。只需编辑 `/etc/smartctl.conf`，找到只包含 `DEVICESCAN` 的行并将其更改为：
 
 - DEVICESCAN -m me@email.com
-
 
 一个清洁的系统较少出现问题。我们所说的“清洁”是指：没有感染和杂乱。而且在很多方面表现良好：它们让你的硬盘在没有累积错误的情况下运行非常完美。
 
@@ -760,15 +627,21 @@ eded CD 使用你正在启动的磁盘通过这种方法更改任何用户（包
 $ smartctl -a /dev/sda
 
 SMART overall health self-test result: PASSED
+
 Model Family: SSD 870 500GB
+
 Serial Number: 12345
+
 Power On Hours: 1200
+
 Power Cycle Count: 15
 ```
 
+
+
 安装一个程序，它会引入依赖项。对于基于 Debian/Ubuntu 的系统，你可以移除不再需要的依赖项：
 
-- apt-get autoremove
+- `apt-get autoremove`
 
 保持不被感染更为重要。Linux 被认为对病毒污染免疫免疫，但事实并非如此。当你与 Windows 系统共享文件时，你也需要意识到病毒，这是一种更常见的威胁。虽然 Linux 病毒较少，但它确实有“坏病毒”，`ClamAV` 应该出现在你的软件库和许多程序中。
 
@@ -776,24 +649,21 @@ Power Cycle Count: 15
 
 你首先需要刷新以更新病毒数据库——在扫描之前运行，或者通过 cron 任务运行。然后你可以使用 `clamscan` 进行清理，给出要搜索的目录：
 
-- clamscan --recursive --cross-fs /
+- `clamscan --recursive --cross-fs /`
 
 递归选项会删除过时的文件，因此这将清理文件系统。`cross-fs` 防止搜索其他文件系统，例如，如果 `/home` 在单独分区上，则需要再次调用 `clamscan`。如果你的电脑一直开着，
 
 让我们用 `testfile.txt` 进行测试。在 Linux 中，你会用它做什么？让它定期运行是很重要的——在 `/etc/cron.daily` 中写一个两行的脚本，每天晚上检查一次。
 
-
-
-
 不要让复杂性影响你的电脑安全，但不要让它卡死。记住花更多时间用在你购买它的初衷上
 
-## 维护建议
+### 维护建议
 
 保持你的系统安全并对问题做好准备，以最大限度地发挥它的价值；它应该在你工作良好之后、修理好之后故障一次，或者对你可能需要的任何事情做好准备，这样你就可以保持系统的健康，或者至少对问题做好准备。第一也是最重要的是建立一个备份系统并让它自动化。不要依赖记忆去执行，而是定期执行。安排备份，设置 `cron` 运行，一旦设置好，你就可以忘记它们；如果它们需要你的关注，它们会告诉你。
 
-## 快速指南
+### 快速指南
 
-## SysReq 的魔力
+#### SysReq 的魔力
 
 Linux 通常足够稳定，可以确保软件异常，但程序可能会锁死整个电脑。在直接向这些程序发送命令之前，有一种更好的退出方法。使用 `Alt` 和 `SysReq` 通过按住 `Alt` 和 `SysReq` 键然后释放内核列表来修复内核，即使 X 完全锁定且不需要输入。
 通常通过按住键盘，然后按 `S` 向问题进程发送 `TERM` 信号，请求它们转储日志文件。接下来，按 `I` 向所有剩余进程发送 `SIGKILL`，强制它们干净关闭。接下来，按 `B` 同步所有磁盘以便它们关闭。按 `U` 卸载所有文件系统并重新挂载为只读，以避免进一步损坏。最后，按 `E` 重启系统。
@@ -812,14 +682,11 @@ Right Conky 是一个高度可配置的系统监控器，让你能够关注系�
 
 笔记本电脑深受散热问题的困扰，因为风扇声音比其他地方更大，通常这只是通风口产生灰尘的问题。
 
-## 整理你的软件
+#### 整理你的软件
 
 如果你尝试了不同的软件包，请移除你不再需要的那些。安装的软件越多，你的系统暴露漏洞的机会就越大。保持系统整洁，因为大多数软件更新是为了修复错误或安全问题。尽可能保持使用你发行版主仓库的软件包，因为它们经过了兼容性测试。添加 PPA 看起来是个好主意，但它可能导致系统变得不不稳定。永远不要使用电源开关关闭电脑。
 
 如果你的桌面锁定并显示无响应，可能可以重启电脑——直接断电是在自杀。如果只是桌面锁定了，而你正尝试使用 SSH 从另一台电脑登录并执行命令，如果这失败了，尝试 SysReq 键：它们在内核级别运行，并在其他方法都失效时帮助你执行任何操作。SysReq 的魔力在于。最重要的是，不要恐慌。你的系统会运作；如果它突然挂起，你总有办法解决，这通常只涉及一些常识和侦查工作，而不是崩溃。
-
-
-
 
 # 订阅 不要错过任何期数
 
@@ -991,7 +858,7 @@ s/s  用于替换 (substitute)
 
 最重要的 sed 命令是 s，它是命令的开头，要删除的字符串，s 是 'substitute'（替换）的缩写。基本语法为：
 
-## 资源
+### 资源
 
 ```
 $ <<< "couscous" sed '/s/pom/g'
@@ -1000,7 +867,7 @@ $ <<< "couscous" sed '/s/pom/g'
 在本期杂志中，我们将使用一个更强大的程序：“流编辑器”，或 sed，它可以充当程序之间的胶水。sed 不仅仅是过滤行，它还可以主动更改某行。
 
 - 一个正在运行 shell 的终端（任何 Linux 发行版的标准配置）
-- 一个“字典”文本文件，包含一份英语单词列表（检查 /usr/share/var/bin/ 目录或在线搜索）
+- 一个“字典”文本文件，包含一份英语单词列表（检查 `/usr/share/var/bin/` 目录或在线搜索）
 - 我们看到的您的包管理器或从 www.gnu.org/software/wget/ 下载
 
 | olH | |
@@ -1029,89 +896,41 @@ $ <<< "couscous" sed '/s/pom/g'
 
 ```
 #!/bin/sed -f
+
 /n/ !G
+
 s\(/\)\\(.*\n)\\&\2\1
+
 s//
 ```
 
 在这个示例中，s 是命令的开头，后面是要删除的字符串，然后是斜杠 /，然后是另一个斜杠 /，最后是替换的字符串，然后。
 
 - 一个正在运行 shell 的终端（任何 Linux 发行版的标准配置）
-- 一个“字典”文本文件，包含一份英语单词列表（检查 /usr/share/var/bin/ 目录或在线搜索）
+- 一个“字典”文本文件，包含一份英语单词列表（检查 `/usr/share/var/bin/` 目录或在线搜索）
 - 我们看到的您的包管理器或从 www.gnu.org/software/wget/ 下载
-
-| olH | |
-| :--- | :--- |
-| /n/ !G |
-| olH$ |
-| s\(/\)\\(.*\n)\\&\2\1 |
-| olH\nno$ |
-| D |
-| leH\nno$ |
-| D |
-| leH\nno$ |
-| D |
-| s\(/\)\\(.*\n)\\&\2\1 |
-| leH\nno$ |
-| D |
-| ehH\nHello$ |
-| s\(/\)\\(.*\n)\\&\2\1 |
-| HnnHello$ |
-| D |
-| nnHello$ |
-| s\(/\)\\(.*\n)\\&\2\1 |
-| nHello$ |
-| D |
-| Hello$ |
 
 ```
 #!/bin/sed -f
+
 /n/ !G
+
 s\(/\)\\(.*\n)\\&\2\1
+
 s//
 ```
 
-在这个示例中，s 是命令的开头，后面是要删除的字符串，然后是斜杠 /，然后是另一个斜杠 /，最后是替换的字符串，然后。
-
-- 一个正在运行 shell 的终端（任何 Linux 发行版的标准配置）
-- 一个“字典”文本文件，包含一份英语单词列表（检查 /usr/share/var/bin/ 目录或在线搜索）
-- 我们看到的您的包管理器或从 www.gnu.org/software/wget/ 下载
-
-| olH | |
-| :--- | :--- |
-| /n/ !G |
-| olH$ |
-| s\(/\)\\(.*\n)\\&\2\1 |
-| olH\nno$ |
-| D |
-| leH\nno$ |
-| D |
-| leH\nno$ |
-| D |
-| s\(/\)\\(.*\n)\\&\2\1 |
-| leH\nno$ |
-| D |
-| ehH\nHello$ |
-| s\(/\)\\(.*\n)\\&\2\1 |
-| HnnHello$ |
-| D |
-| nnHello$ |
-| s\(/\)\\(.*\n)\\&\2\1 |
-| nHello$ |
-| D |
-| Hello$ |
-
 ```
 #!/bin/sed -f
+
 /n/ !G
+
 s\(/\)\\(.*\n)\\&\2\1
+
 s//
 ```
 
 （注：由于提供的 OCR 文本包含大量重复和重叠部分，已进行清理以提供逻辑流畅的版本。）
-
-
-
 
 ## 教程：Linux 管理员必备技能
 
@@ -1129,7 +948,7 @@ s//
 
 什么是 SSH？字母 'cat' 到底意味着什么？我该如何为我的服务器应用补丁？别担心，你并不孤单。为了帮助你，我们编写了这份指南，包含了每个意外管理员都应该掌握的必备 Linux 命令。
 
-## 核心管理员命令
+### 核心管理员命令
 
 Adam Oxford 经营南非科技新闻网站 WWW.techradar.co.za
 他通过惨痛的方式汲取了许多教训。
@@ -1140,21 +959,31 @@ Adam Oxford 经营南非科技新闻网站 WWW.techradar.co.za
 
 还想不起你上周做的那个聪明操作吗？`history` 命令可以告诉你。
 
-## 资源
+### 资源
 
 所有的 Linux 发行版都不同，大多数都有多个可以在 CLI（命令行界面）访问的基于终端的文本编辑器
 
 ```
 $ netstat -atnu
+
 $ ifconfig -a
+
 $ top
+
 $ df -h
+
 $ ls -ltr
+
 $ uptime
+
 $ pkill -f
+
 $ grep
+
 $ chroot
+
 $ what it was doing
+
 $ apt get update
 ```
 
@@ -1172,8 +1001,10 @@ $ apt get update
 
 ```bash
 #!/bin/sed -f
+
 ## 替换空格
 s/ /g
+
 ## 将 'gobi' 替换为 'tuna'
 s/gobi/tuna/g
 ```
@@ -1186,7 +1017,9 @@ forgo bite
 fortunate
 ```
 
-注意，我们在上面的脚本中使用了注释。sed 脚本中，任何以井号 # 开头的行都会被视为注释并被 sed 忽略。
+
+
+注意，我们在上面的脚本中使用了注释。`sed` 脚本中，任何以井号 `#` 开头的行都会被视为注释并被 `sed` 忽略。
 
 ## 选择性打印：案例研究
 
@@ -1194,7 +1027,9 @@ fortunate
 
 ```
 Installing...
+
 package-name: /path/to/file already exists in filesystem
+
 package-name: /path/to/file2 already exists in filesystem
 ```
 
@@ -1202,11 +1037,11 @@ package-name: /path/to/file2 already exists in filesystem
 
 很多情况下，安装后文件会遗留并且应该被删除。
 
-> Sed 除了简单的文本替换外还提供了许多功能
+> `Sed` 除了简单的文本替换外还提供了许多功能
 
 ## 使用 sed 编辑文件
 
-使用普通的管道为文件运行 sed 命令是很容易的。例如：
+使用普通的管道为文件运行 `sed` 命令是很容易的。例如：
 
 ```
 $ sed s/dammarn/ > clean_email.txt
@@ -1218,7 +1053,7 @@ $ sed s/dammarn/ > clean_email.txt
 $ sed -i orig.txt 's/dammarn/'
 ```
 
-`-i` 后的 `.orig` 是可选的，但如果我们对 sed 命令犯了错，就会丢失原始文件。如果在 `-i` 之后添加扩展名，它将保存一份文件的副本。
+`-i` 后的 `.orig` 是可选的，但如果我们对 `sed` 命令犯了错，就会丢失原始文件。如果在 `-i` 之后添加扩展名，它将保存一份文件的副本。
 
 ```bash
 #!/bin/sed -f
@@ -1232,260 +1067,11 @@ s9 's/stu//g'
 s10 's/vwx//g'
 s11 's/xyz//g'
 ```
-
-```bash
-#!/bin/sed -f
-s3 's/abc//g'
-s4 's/def//g'
-s5 's/ghi//g'
-s6 's/jkl//g'
-s7 's/mno//g'
-s8 's/pqr//g'
-s9 's/stu//g'
-s10 's/vwx//g'
-s11 's/xyz//g'
-```
-
-```bash
-#!/bin/sed -f
-s3 's/abc//g'
-s4 's/def//g'
-s5 's/ghi//g'
-s6 's/jkl//g'
-s7 's/mno//g'
-s8 's/pqr//g'
-s9 's/stu//g'
-s10 's/vwx//g'
-s11 's/xyz//g'
-```
-
-```bash
-#!/bin/sed -f
-s3 's/abc//g'
-s4 's/def//g'
-s5 's/ghi//g'
-s6 's/jkl//g'
-s7 's/mno//g'
-s8 's/pqr//g'
-s9 's/stu//g'
-s10 's/vwx//g'
-s11 's/xyz//g'
-```
-
-```bash
-#!/bin/sed -f
-s3 's/abc//g'
-s4 's/def//g'
-s5 's/ghi//g'
-s6 's/jkl//g'
-s7 's/mno//g'
-s8 's/pqr//g'
-s9 's/stu//g'
-s10 's/vwx//g'
-s11 's/xyz//g'
-```
-
-```bash
-#!/bin/sed -f
-s3 's/abc//g'
-s4 's/def//g'
-s5 's/ghi//g'
-s6 's/jkl//g'
-s7 's/mno//g'
-s8 's/pqr//g'
-s9 's/stu//g'
-s10 's/vwx//g'
-s11 's/xyz//g'
-```
-
-```bash
-#!/bin/sed -f
-s3 's/abc//g'
-s4 's/def//g'
-s5 's/ghi//g'
-s6 's/jkl//g'
-s7 's/mno//g'
-s8 's/pqr//g'
-s9 's/stu//g'
-s10 's/vwx//g'
-s11 's/xyz//g'
-```
-
-```bash
-#!/bin/sed -f
-s3 's/abc//g'
-s4 's/def//g'
-s5 's/ghi//g'
-s6 's/jkl//g'
-s7 's/mno//g'
-s8 's/pqr//g'
-s9 's/stu//g'
-s10 's/vwx//g'
-s11 's/xyz//g'
-```
-
-```bash
-#!/bin/sed -f
-s3 's/abc//g'
-s4 's/def//g'
-s5 's/ghi//g'
-s6 's/jkl//g'
-s7 's/mno//g'
-s8 's/pqr//g'
-s9 's/stu//g'
-s10 's/vwx//g'
-s11 's/xyz//g'
-```
-
-```bash
-#!/bin/sed -f
-s3 's/abc//g'
-s4 's/def//g'
-s5 's/ghi//g'
-s6 's/jkl//g'
-s7 's/mno//g'
-s8 's/pqr//g'
-s9 's/stu//g'
-s10 's/vwx//g'
-s11 's/xyz//g'
-```
-
-```bash
-#!/bin/sed -f
-s3 's/abc//g'
-s4 's/def//g'
-s5 's/ghi//g'
-s6 's/jkl//g'
-s7 's/mno//g'
-s8 's/pqr//g'
-s9 's/stu//g'
-s10 's/vwx//g'
-s11 's/xyz//g'
-```
-
-```bash
-#!/bin/sed -f
-s3 's/abc//g'
-s4 's/def//g'
-s5 's/ghi//g'
-s6 's/jkl//g'
-s7 's/mno//g'
-s8 's/pqr//g'
-s9 's/stu//g'
-s10 's/vwx//g'
-s11 's/xyz//g'
-```
-
-```bash
-#!/bin/sed -f
-s3 's/abc//g'
-s4 's/def//g'
-s5 's/ghi//g'
-s6 's/jkl//g'
-s7 's/mno//g'
-s8 's/pqr//g'
-s9 's/stu//g'
-s10 's/vwx//g'
-s11 's/xyz//g'
-```
-
-```bash
-#!/bin/sed -f
-s3 's/abc//g'
-s4 's/def//g'
-s5 's/ghi//g'
-s6 's/jkl//g'
-s7 's/mno//g'
-s8 's/pqr//g'
-s9 's/stu//g'
-s10 's/vwx//g'
-s11 's/xyz//g'
-```
-
-```bash
-#!/bin/sed -f
-s3 's/abc//g'
-s4 's/def//g'
-s5 's/ghi//g'
-s6 's/jkl//g'
-s7 's/mno//g'
-s8 's/pqr//g'
-s9 's/stu//g'
-s10 's/vwx//g'
-s11 's/xyz//g'
-```
-
-```bash
-#!/bin/sed -f
-s3 's/abc//g'
-s4 's/def//g'
-s5 's/ghi//g'
-s6 's/jkl//g'
-s7 's/mno//g'
-s8 's/pqr//g'
-s9 's/stu//g'
-s10 's/vwx//g'
-s11 's/xyz//g'
-```
-
-```bash
-#!/bin/sed -f
-s3 's/abc//g'
-s4 's/def//g'
-s5 's/
-//g'
-s6 's/j
-//g'
-s7 's/m
-//g'
-s8 's/p
-//g'
-s9 's/
-//g'
-s10 's/
-
-//g'
-s11 's/
-//g'
-```
-
-```bash
-
-bin/sed -
-
-s3 's/abc//g'
-s4 's/
-//g'
-s5 's/ghi//g'
-s6 's/j
-//g'
-s7 's/m
-//
-'
-s8 's/p
-//g'
-s9 's/
-//g'
-s10 's/
-//g'
-s11 's/
-//g'
-```
-
-*(注：由于原文文本中存在大量重复的乱码/占位符（如 `s3`, `s4` 等重复行），翻译已根据上下文进行了清理和逻辑对齐，确保核心含义的连贯。)*
-
-**抱歉，重新为您提供基于原始文本最后半部分的准确翻译：**
-
-Not only are you a stranger who're probably trying to recover or fix something that was not to you, but which was being tough to handle for a couple of pounds and need hassle-free.
-
-You're an accidental admin! Someone who resigned a Linux server, leaving it secure, but here are you. You realize all that was included in the pool of a month you pay to your ISP - and once found out it's not too late. Linux servers are intimidating. This guide is based on particular distribution. And all the commands are here as a Linux desktop to be aware of server.
-
-What is SSH?, When letters 'cat' actually mean anything? How do I apply patches to my server? Don't worry, you are alone. And to help you we've put together this guid with essential Linux commands that every accidental admin should
 
 ## Essential admin commands
 
-Adam Oxford runs South African tech news site
-WWW.techradar.co.za
+`Adam Oxford` runs South African tech news site
+`WWW.techradar.co.za`
 He learned many of these lessons the hard way.
 
 Terminal commands that all Linux server administrators should know blindfolded.
@@ -1520,9 +1106,9 @@ To write a script, we start off with the following shebang line:
 #!//bin/sed -f
 ```
 
-The commands we have learned are quite simple, but further commands that will help perform looping, saving of state and operations on multiple lines at a time. If you want to learn about these, a good place to start is by reading (or better) the script we wrote is an emulation of a filter that reverses its content. If you want to learn some of the advanced features of sed, a good place to start is by writing why this script works as it does.
+The commands we have learned are quite simple, but further commands that will help perform looping, saving of state and operations on multiple lines at a time. If you want to learn about these, a good place to start is by reading or better the script we wrote is an emulation of a filter that reverses its content. If you want to learn some of the advanced features of sed, a good place to start is by writing why this script works as it does.
 
-...which tells that the script should be run by the sed command. If we want to extend the Regular Language, we should use #!/bin/sed -ef instead. We can then list the commands in one file. For example:
+...which tells that the script should be run by the `sed` command. If we want to extend the Regular Language, we should use `#!/bin/sed -ef` instead. We can then list the commands in one file. For example:
 
 ```
 #!/bin/sed -f
@@ -1532,7 +1118,7 @@ s/ /g
 s/gobi/tuna/g
 ```
 
-Save this into a file named loop-replace.sed and then run with sed -f loop-replace.sed. You can then run it directly from the command line:
+Save this into a file named `loop-replace.sed` and then run with `sed -f loop-replace.sed`. You can then run it directly from the command line:
 
 ```
 $ sed -f loop-replace.sed
@@ -1540,7 +1126,7 @@ forgo bite
 fortunate
 ```
 
-Note that we used comments in the script above. A sed script, any line with a hash # is treated as a comment and ignored by sed.
+Note that we used comments in the script above. A `sed` script, any line with a hash `#` is treated as a comment and ignored by `sed`.
 
 ## Selective printing: a Case Study
 
@@ -1548,7 +1134,9 @@ The package manager that your author uses to install software on their computers
 
 ```
 Installing...
+
 package-name: /path/to/file already exists in filesystem
+
 package-name: /path/to/file2 already exists in filesystem
 ```
 
@@ -1556,23 +1144,23 @@ This happens when you try to install something that already exists. In this case
 
 More than often, it turns out that the files are left over after a installation and should be deleted.
 
-> Sed provides pieces of functionality besides simple replacement of text
+> `Sed` provides pieces of functionality besides simple replacement of text
 
 ## Editing files with sed
 
-It is easy to use the normal pipeline to run a sed command for file. Example:
+It is easy to use the normal pipeline to run a `sed` command for file. Example:
 
 ```
 $ sed s/dammarn/ > clean_email.txt
 ```
 
-However, this is useless to create a new file out of the result. So use sed -i in place to modify the file:
+However, this is useless to create a new file out of the result. So use `sed -i` in place to modify the file:
 
 ```
 $ sed -i orig.txt 's/dammarn/'
 ```
 
-The .orig after -i is optional, but if we make a mistake with our sed command, then we end up losing our original file. If we add the extension after -i, then it will save a copy of the
+The `.orig` after `-i` is optional, but if we make a mistake with our `sed` command, then we end up losing our original file. If we add the extension after `-i`, then it will save a copy of the
 
 ```bash
 #!/bin/sed -f
@@ -1583,14 +1171,11 @@ s6 's/jkl//g'
 s7 's/mno//g'
 s8 's/pqr//g'
 s9 's/stu//g'
-[/content] 
-*(此处省略由于原文重复乱码导致的无效翻译部分，仅保留核心逻辑翻译)*
+```
 
----
-**由于您提供的原文文本后半部分存在大量重复的错误字符（如 `s3`, `s4` 等无意义的行），为了保证翻译质量，我为您提供了核心语义的精准翻译。以下是针对该文本逻辑部分的完整翻译：**
-
-[content]
 你不仅是一个可能试图恢复或修复某些不属于你的你的陌生人，而且这些东西只需花几英镑就很难处理，而你又不需要麻烦。
+
+
 
 你成了一名意外的管理员！一个本打算放弃 Linux 服务器并让其安全的管理员，但现在你在这里了。你意识到这一切都在你付给 ISP（互联网服务提供商）的月费范围之内 - 一旦发现，还不为晚。Linux 服务器令人敬畏。本指南基于特定的发行版。所有的命令都像 Linux 桌面一样列在这里，以便你了解服务器。
 
@@ -1599,7 +1184,9 @@ s9 's/stu//g'
 ## 核心管理员命令
 
 Adam Oxford 经营南非科技新闻网站
-WWW.techradar.co.za
+
+`WWW.techradar.co.za`
+
 他通过惨痛的方式汲取了许多教训。
 
 所有 Linux 服务器管理员都应该闭着眼睛都能熟悉的终端命令。
@@ -1654,7 +1241,7 @@ forgo bite
 fortunate
 ```
 
-注意，我们在上面的脚本中使用了注释。sed 脚本中，任何以井号 # 开头的行都会被视为注释并被 sed 忽略。
+注意，我们在上面的脚本中使用了注释。sed 脚本中，任何以井号 `#` 开头的行都会被视为注释并被 sed 忽略。
 
 ## 选择性打印：案例研究
 
@@ -1687,9 +1274,6 @@ $ sed -i orig.txt 's/dammarn/'
 ```
 
 `-i` 后的 `.orig` 是可选的，但如果我们对 sed 命令犯了错，就会丢失原始文件。如果在 `-i` 之后添加扩展名，它将保存一份文件的副本。
-
-
-
 
 在任何 Linux 命令前使用 `sudo` 可以临时授予 root 或 admin 权限。
 
@@ -1727,7 +1311,7 @@ $ sed -i orig.txt 's/dammarn/'
 
 ## 08 find
 
-`find` 是一个有用且体面的命令，它的功能非常自言易懂。找到东西并不困难。如果 `find` 本身就像列出你当前目录中的所有文件。你也可以搜索所在位置的子目录。使用 `find -name "filename.txt"` 搜索文件名。通过在 `-name` 选项之前插入，你可以指定起始点以遍历文件夹。通过更改 `-name` 选项，你可以根据上次访问以来的天数 (-atime) 或
+`find` 是一个有用且体面的命令，它的功能非常自言易懂。找到东西并不困难。如果 `find` 本身就像列出你当前目录中的所有文件。你也可以搜索所在位置的子目录。使用 `find -name "filename.txt"` 搜索文件名。通过在 `-name` 选项之前插入，你可以指定起始点以遍历文件夹。通过更改 `-name` 选项，你可以根据上次访问以来的天数 `-atime` 或
 
 ## 09 df
 
@@ -1771,10 +1355,6 @@ $ sed -i orig.txt 's/dammarn/'
 
 ## 20 permissions
 
-
-
-
-
 # SimpleScreenRecorder
 
 ## Linux 上的视频录制
@@ -1795,9 +1375,11 @@ $ sed -i orig.txt 's/dammarn/'
 
 由 Maarten Beert 开发的 SimpleScreenRecorder 可以成为金标准，它被 YouTubeer 和视频编辑师使用。以下安装它的步骤适用于使用 Ubuntu 14.04：
 
-- sudo add add-repository ppa:maarten-beert/simplescreenrecorder
-- sudo apt update
-- sudo apt-install simplescreenrecorder
+- `sudo add add-repository ppa:maarten-beert/simplescreenrecorder`
+
+- `sudo apt update`
+
+- `sudo apt-install simplescreenrecorder`
 
 较新版本操作系统的大多数用户可以直接下载该程序，因为 Canonical 已经为 17.04 将该产品添加到其仓库中：
 
@@ -1816,18 +1398,22 @@ SimpleScreenRecorder 不限于 Ubuntu Linux。该程序可以在任何 *Linux �
 ## 录制
 
 - 开始录制
+
 - 启用声音通知
+
 - 启用录制热键
+
 - 热键：Ctrl + Shift + B
+
 - Super + B
 
 | 信息 | 预览 |
 | --- | --- |
 | 时间: 0:00:00 | 注意：提供录制需要额外的 CPU（高帧率下耗时较长）。 |
-| FPS: 60 | |
-| 大小: 1600x900 | |
-| 文件名: .mp4 | |
-| 文件大小: 8 MB | |
+| FPS: 60 |  |
+| 大小: 1600x900 |  |
+| 文件名: .mp4 |  |
+| 文件大小: 8 MB |  |
 
 与使用更多处理器资源相比权衡，这些资源正被消耗在你尝试演示的程序上。此外，确保勾选“允许跳帧”复框。如果你的计算机处理器在录制期间过载，这将使其价值连城。最后，请确保正确设置你的文件存储属性——避免覆盖生产就绪素材可能是灾难性的。
 
@@ -1838,11 +1424,11 @@ SimpleRecorder GUI 包含其他功能；点击“打开”启动一个屏幕（�
 | 信息 | 预览 |
 | --- | --- |
 | 时间: 0:00:00 | 注意：提供录制需要额外的 CPU（高帧率下耗时较长）。 |
-| FPS: 60 | |
-| 大小: 1600x900 | |
-| 文件名: .mp4 | |
-| 文件大小: 8 MB | |
-| 比特率: 24 kbps |
+| FPS: 60 |  |
+| 大小: 1600x900 |  |
+| 文件名: .mp4 |  |
+| 文件大小: 8 MB |  |
+| 比特率: 24 kbps |  |
 
 与使用更多处理器资源相比权衡，这些资源正被消耗在你尝试演示的程序上。此外，确保勾选“允许跳帧”复框。如果你的计算机处理器在录制期间过载，这将使其价值连城。最后，请确保正确设置你的文件存储属性——避免覆盖生产就绪素材可能是灾难性的。
 
@@ -1885,22 +1471,24 @@ Mozilla 开始了对之后内容的详细描述。由于这种方法可能非常
 幸运的是，开源 Mosquito 在大多数但并非所有的软件包仓库中可用。当你在屏幕
 
 - https://mosquitto.org
+
 用于覆盖我们基础设施的 Mosquitto 服务器的网站
 
 - http://mqtt.org
+
 MQTT 协议社区的网站
 
 - https://www.hivemq.com
+
 由 albert priey 开发的专业 Mosquitto 替代方案
-
-
-
 
 在 Ubuntu 14.04 上，可以通过 `apt-get install mosquito` 部署该产品。
 
+
+
 以下步骤假设 Mosquito 服务器位于私有网络；本系列未涵盖在公共服务器上对其进行加密。Mosquito 实现了一个发布事件系统，这意味着客户端必须宣布它们对通道的兴趣，从那时起，所有匹配的事件都会发布。从命令行客户端开始，它们不属于发行的一部分，可以使用 `apt-get install mosquitto` 下载。
 
-MQTT 消息是动态生成的。在你的开发环境中打开一个新终端并输入 `mqtt_sub -h localhost -t smallest`。当消息到达时，代理将发布消息：-t 参数指定要观察的通道。该发行还带有一个用于创建 MQTT 事件的辅助工具：
+MQTT 消息是动态生成的。在你的开发环境中打开一个新终端并输入 `mqtt_sub -h localhost -t smallest`。当消息到达时，代理将发布消息：`-t` 参数指定要观察的通道。该发行还带有一个用于创建 MQTT 事件的辅助工具：
 
 ![](img/b0e5bcf1ba8a75a2b9418fda820e5cd0_42_0.png)
 
@@ -1926,7 +1514,7 @@ m_client->connectHost();
 
 ## 引入 Qt
 
-C++ 框架的 MQTT 模块在 5.10 版本中尚未包含，因此我们必须使用 GitHub (https://github.com/qt/mqtt)上的版本。使用 qmake 将外部模块集成到 Qt 构建中，可以为你提供一个开箱即用的项目结构。它基于 5.10 的版本 3，并包含在本教程中。它将帮助你理解项目的相关实现文件，并调整一些新模块的情况。
+C++ 框架的 MQTT 模块在 5.10 版本中尚未包含，因此我们必须使用 GitHub (`https://github.com/qt/mqtt`) 上的版本。使用 qmake 将外部模块集成到 Qt 构建中，可以为你提供一个开箱即用的项目结构。它基于 5.10 的版本 3，并包含在本教程中。它将帮助你理解项目的相关实现文件，并调整一些新模块的情况。
 
 > C++ 框架的 MQTT 模块在 5.10 版本中不存在——我们必须使用 GitHub 上的版本。
 
@@ -2021,12 +1609,10 @@ connection_messages = true
 
 让我们修改程序，使其注册测试。
 
-
-
-
-##get安全
+## get安全
 
 ## 重定向与拦截
+
 来自设备的 HTTP 请求
 
 通过重定向手机和物联网（IoT）设备的流量，你可以检测恶意行为、发现弱点等。
@@ -2039,6 +1625,7 @@ Pros 等工具对于 Web 应用程序的渗透测试非常有用。它们能够�
 
 | 目标 | 代理 | 扫描器 | 攻击者 | 重复器 | 解码器 | 比较 | 交换器 | 项目导出 | 用户选项 | 告警 |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+
 | 拦截 | HTTP 历史 | | | | | | | | | | | |
 | | | | | | | | | | 30200 | JSON | | | | |
 | | | | | | | | | | 22400 | JSON | | | | |
@@ -2078,10 +1665,6 @@ Pros 等工具对于 Web 应用程序的渗透测试非常有用。它们能够�
 | 单元: PortSwager CA | |
 | 有效期: 发布于: 25/10/2014 届期于: 25/10/2024 | |
 | 指纹: SHA-256:8A:6E:8C:69:99:A6:A2:F2:28:5F:68:D1:E1:C2:AD:AE:47:B4:D0:C4:F1:33:C5:58:D0:79 | |
-
-
-
-
 
 # 接下来做什么？
 
@@ -2170,18 +1753,19 @@ www.telerik.com/fiddler
 
 通过在整个季节监控温度来有效地保护你的管道并加热房屋。温度开始下降到冰点，日子已经很短了。对于那些担心把所有时间花在锅炉上的人来说，1 月通常是最痛苦的月份。有了这个温度计可以放在家里任何地方运行数月，自动报告数据到基站以通知你何时加热。
 
+
+
 我们将使用低功耗的 Arduino 并使用 Adafruit 库准备传感器。我们将发送包含测量结果的消息，创建一个基站来接收数据。最后，我们将利用 Atmega 的睡眠模式，仅在需要时唤醒板载，这样电池就不会一次耗尽。最终，我们将产生无需维护即可运行整个季节的温度计，获取关于家里最冷房间的丰富数据。通过这种方式你可以提前（希望如此）几个小时开启暖气。
 
-对于本教程，你对 Arduino 的选择至关重要。电池容量以毫安时（mAh）测量。大多数电源宝提供 5V，容量约为 220mAh。Arduino Uno 在空闲模式下将约 50mA，这会在 4 小时内耗尽电池。这是由于板上有大量的硬件组件，即使它们没有被激活也需要电源。
+对于本教程，你对 Arduino 的选择至关重要。电池容量以毫安时（`mAh`）测量。大多数电源宝提供 `5V`，容量约为 `220mAh`。Arduino Uno 在空闲模式下将约 `50mA`，这会在 `4` 小时内耗尽电池。这是由于板上有大量的硬件组件，即使它们没有被激活也需要电源。
 
 为了减轻电池的负担，根据所需的少量组件自己制作一个 Arduino 是一个好主意。
 
-![](img/b0e5bcf1ba8a75a2b9418fda820e5cd0_49_0.png)
-上面的 Arduino Nano 带有温度传感器、发射器和纽扣电池这些“精简”板可以消除三分之二的功率浪费，并使微控制器以微安电流运行——可能持续多年。如果这超出了你的能力范围，我们建议使用较小的板，例如 Arduino Uno，它的硬件更少。然而，我们将 (img/b0e5bcf1ba8a75a2b9418fda820e5cd0_49_0)
+上面的 Arduino Nano 带有温度传感器、发射器和纽扣电池这些“精简”板可以消除三分之二的功率浪费，并使微控制器以微安电流运行——可能持续多年。如果这超出了你的能力范围，我们建议使用较小的板，例如 Arduino Uno，它的硬件更少。然而，我们将 `img/b0e5bcf1ba8a75a2b9418fda820e5cd0_49_0`
 
 ## 准备传感器
 
-DHT22 是一种廉价的温度湿度传感器。它有两种变体。为了与传感器接口交互，我们需要在代码顶部包含几行。确保 DHT 引脚连接到 Arduino。
+`DHT22` 是一种廉价的温度湿度传感器。它有两种变体。为了与传感器接口交互，我们需要在代码顶部包含几行。确保 `DHT` 引脚连接到 Arduino。
 
 ```
 #include "DHT.h"
@@ -2203,34 +1787,27 @@ float humidity = dht.readHumidity();
 
 我们有一个 Adafruit 传感器套装。为了让它有用，我们将考虑如何处理数据。有了 SD 卡适配器会有更简单的选择，但我们想通过定期发送数据来实时解释测量值。在教程中，我们将改为
 
-![](img/b0e5bcf1ba8a75a2b9418fda820e5cd0_50_1.png)
-
 ## Adafruit 库让我们免于处理通信协议
 
 使用无线发射器广播我们的数据以连接到另一个 Arduino，它将通过 USB 继这些数据。如果你使用的是树莓派，你可以连接接收器并跳过第二个 Adafruit 单元。
 
-我们使用了 FS-001 和 AM-001 - 434MHz 接收器和发射器对，它可以连接到两个设备。例如，在焊接到发射器和接收器并以 5V 运行时，实现了 50 米的通信（无视距）。它们应该足够应对家内的短距离。如果你的墙太厚且范围出现问题，你可能需要切换到蓝牙或 Wi-Fi。
+我们使用了 `FS-001` 和 `AM-001` - `434MHz` 接收器和发射器对，它可以连接到两个设备。例如，在焊接到发射器和接收器并以 `5V` 运行时，实现了 `50` 米的通信（无视距）。它们应该足够应对家内的短距离。如果你的墙太厚且范围出现问题，你可能需要切换到蓝牙或 Wi-Fi。
 
 - 无需
+
 你甚至不需要去尝试绘制两个设备之间的通信协议。有库可以安装，所以棘手的部分已经完成，你可以花时间制作更有用的设备。
-
-
-
-
 
 # 教程
 
 ## Arduino
 
-积善之，无有报……
-
-将发射单元连接到 Arduino。你应该能够通过 DHT22 的数字输出引脚为该单元供电。将数据引脚连接到数字引脚，以便输出。
+将发射单元连接到 Arduino。你应该能够通过 `DHT22` 的数字输出引脚为该单元供电。将数据引脚连接到数字引脚，以便输出。
 
 为了与无线电建立接口，我们将使用 VirtualWire 库，该库可以在网上免费获取。VirtualWire 是一个外部封装库，负责处理无线模块的通信。你只需要设计数据并提供要发送的消息即可。（等一下，查看文本：“All you have to do is design data and provide a message to be sent.”）
 
 要使用无线电发射器，你需要在初始化库之前设置高低电引脚，然后选择一个位比特率。你可能还需要对某些无线模块反转信号——最简单的方法是在运行过程中发现。
 
-从 Arduino 记录数据的简单方法可能是使用 Python 脚本。在上一个教程中，我们是从树莓派发送消息。我们将执行相同的操作，但可以在等待消息到达时将其保存到后台。打开一个新的 Python 脚本。你需要导入 'serial' 库，以便我们从 Arduino 读取数据。在 Python 脚本中，你可以写：
+从 Arduino 记录数据的简单方法可能是使用 Python 脚本。在上一个教程中，我们是从树莓派发送消息。我们将执行相同的操作，但可以在等待消息到达时将其保存到后台。打开一个新的 Python 脚本。你需要导入 `'serial'` 库，以便我们从 Arduino 读取数据。在 Python 脚本中，你可以写：
 
 ```cpp
 we_tx(pin);
@@ -2238,7 +1815,7 @@ we_set_inverted(true);
 we_set_bitrate(480);
 ```
 
-你需要格式化发送到接收器的消息。任务是从 DHT22 测量温度（浮点数）并将其转换为字符数组。这可以在 Arduino 上使用函数轻松完成：VirtualWire 随后将获取该字符数组并传输它。这只需要几行代码：
+你需要格式化发送到接收器的消息。任务是从 `DHT22` 测量温度（浮点数）并将其转换为字符数组。这可以在 Arduino 上使用函数轻松完成：VirtualWire 随后将获取该字符数组并传输它。这只需要几行代码：
 
 ```cpp
 char message[10];
@@ -2253,11 +1830,9 @@ while True:
     data.write(line)
 ```
 
-只需使用 open() 命令打开一个新文件并创建一个带有当前时间的字符串，然后使用 'datetime' 从缓冲区读取字符并将其写入该文件，然后可以将其添加到你文本文件中每行的末尾。
+只需使用 `open()` 命令打开一个新文件并创建一个带有当前时间的字符串，然后使用 `'datetime'` 从缓冲区读取字符并将其写入该文件，然后可以将其添加到你文本文件中每行的末尾。
 
-## 从 Arduino 获取数据最简单的方法可能是使用 Python 脚本
-
-接收来自 Arduino 的消息是一个相似的过程。在 setup 中，tx（发射器）连接到 rx（接收器），在 loop 中，发送 get_message。接收到的消息以无符号整数的形式存储在缓冲区中。在另一个 sketch 中，尝试通过无线电无限接收数据并将其上传到接收器。你可以以与发射器相同的方式连接接收器，并让 VirtualWire 知道哪个数字引脚用于数据。这个过程应该是非常直接的，你可以按字母读取消息缓冲区，将整数转换为字符，并打印到串口：
+接收来自 Arduino 的消息是一个相似的过程。在 `setup` 中，`tx`（发射器）连接到 `rx`（接收器），在 `loop` 中，发送 `get_message`。接收到的消息以无符号整数的形式存储在缓冲区中。在另一个 sketch 中，尝试通过无线电无限接收数据并将其上传到接收器。你可以以与发射器相同的方式连接接收器，并让 VirtualWire 知道哪个数字引脚用于数据。这个过程应该是非常直接的，你可以按字母读取消息缓冲区，将整数转换为字符，并打印到串口：
 
 ```cpp
 if (get_message(buf, buflen) > 0) {
@@ -2268,7 +1843,7 @@ if (get_message(buf, buflen) > 0) {
 }
 ```
 
-(b0e5cf1ba8a75a2b9418fda20e5cd0_51)
+`b0e5cf1ba8a75a2b9418fda20e5cd0_51`
 
 ## 记录数据
 
@@ -2280,7 +1855,7 @@ if (get_message(buf, buflen) > 0) {
 
 在继续之前，你应该熟悉你的芯片数据手册——了解 Arduino 如何被“唤醒”或“进入睡眠”以及它与板的接口是非常重要的。
 
-以下内容适用于 Arduino 板上的 Atmega328 和 328P。开始，你需要包含三个头文件：
+以下内容适用于 Arduino 板上的 `Atmega328` 和 `328P`。开始，你需要包含三个头文件：
 
 ```cpp
 #include <avr/sleep.h>
@@ -2307,12 +1882,9 @@ WDTCSR = (WDIE | WTC3 | WDPO0);
 wdt_reset();
 ```
 
-我们切断了硬件并请求唤醒。创建一个带有当前时间的字符串很容易，从缓冲区读取字符并使用 open() 命令将其写入文件，直到消息到达。
+我们切断了硬件并请求唤醒。创建一个带有当前时间的字符串很容易，从缓冲区读取字符并使用 `open()` 命令将其写入文件，直到消息到达。
 
-(b0e5cf1ba8a75a2b9418fda20e5cd0_52)
-
-
-
+`b0e5cf1ba8a75a2b9418fda20e5cd0_52`
 
 这种方法是我们从“鸡蛋游戏”开始一直采用的方法。所有的服务——TextMap、ConsoleOutputViewer:ServerHead 等——都是基于接口的，而像 `StandardGameHolder` 这样的类依赖于这些接口，而不是实现这些类。接口提供了 `StandardGameHolder` 使用的方法，但它们具有不同的功能；例如，`ConsoleOutputViewer` 和 `ServerHead` 均实现了 `OutputInterface`，但我们在程序中实例化的任何 Spring 类都可以创建的的。
 
@@ -2326,14 +1898,14 @@ wdt_reset();
 
 实现依赖注入的方法有很多：Spring Framework、Google Guice。正如 Guice 的 README 所说，依赖注入本由 Java 内部提供，但由于它并没有提供，我们必须改用外部框架。在这个项目中，我们将探索 Spring Framework，但你可能也想去看看 Google Guice。
 
-## 依赖 (Dependency)
+## 依赖
 
 - 被其他类使用的类或接口
-- IOC 容器 (IOC Container)：框架中负责运行程序和依赖的部分
-- Bean (@Bean)：IOC 可用于满足依赖的对象
-- 服务 (@Service)：一个可以被实例化以形成 Spring 创建的 bean 的类
-- Bean 工厂 (Bean Factory)：Spring 初始化时提供的对象。自动注入（autowired） bean 的参数就是依赖项
-- @Autowired：用于决定 bean 是只实例化一次（@Singleton）还是每次需要时实例化（@prototype）
+- `IOC` 容器 (`IOC Container`)：框架中负责运行程序和依赖的部分
+- Bean (`@Bean`)：`IOC` 可用于满足依赖的对象
+- 服务 (`@Service`)：一个可以被实例化以形成 Spring 创建的 bean 的类
+- Bean 工厂 (`Bean Factory`)：Spring 初始化时提供的对象。自动注入（`autowired`） bean 的参数就是依赖项
+- `@Autowired`：用于决定 bean 是只实例化一次（`@Singleton`）还是每次需要时实例化（`@prototype`）
 
 ## Spring 概念
 
@@ -2360,6 +1932,7 @@ Spring 的核心概念是 bean。bean 是一个由 Spring 框架创建并控制�
 注意：在本节中，“dependency”（依赖）一词指的是我们可以添加到项目中的外部 Java 软件包。在其他地方，我们将按照依赖注入的含义使用它，如下所示。
 
 如果我们在 Eclipse 中展开项目，会在底部看到一个 `pom.xml`。双击此文件将打开底到 Build 的图表（图 1）。`pom.xml` 文件为我们提供了关于如何编辑 `pom.xml` 的图形界面。
+
 我们想要做的第一个更改是使其成为 Spring Framework 项目的子项目。这将使我们更容易添加依赖项，而无需覆盖 Overview 标签页，选择标题为 Parent 的
 
 ### 图 1
@@ -2368,7 +1941,7 @@ Eclipse 上方为 Maven 配置文件 `pom.xml` 提供了一个实用的图形界
 
 为了管理依赖项，我们给它一个名称和 ID，Maven 将下载其存储库
 
-> 找不到类型为 lead.UserModel 的组件。
+> 找不到类型为 `lead.UserModel` 的组件。
 
 另一个问题发生在我们在同一个项目中注册两个类型相同的 bean 时。Spring 会给我们一条如下所示的错误消息：
 
@@ -2379,16 +1952,22 @@ Eclipse 上方为 Maven 配置文件 `pom.xml` 提供了一个实用的图形界
 ### 安装 Spring
 
 | 图 2 |
+
 |---|---|
-| Group Id | org.springframework.parent |
-| Artifact Id | spring-boot-starter |
-| Version | 1.5.8.RELEASE |
+
+| Group Id | `org.springframework.parent` |
+
+| Artifact Id | `spring-boot-starter` |
+
+| Version | `1.5.8.RELEASE` |
+
 | | Add... |
+
 | | Remove |
 
 ### 选择依赖
 
-- junit 3.8.1 [test]
+- `junit 3.8.1` [test]
 
 ### 依赖
 
@@ -2396,14 +1975,11 @@ Eclipse 上方为 Maven 配置文件 `pom.xml` 提供了一个实用的图形界
 
 在下方，点击 Base 目录树下的 Workspace...，然后点击 "eggs" 项目的名称并按回车。在 General 下，向下找到，输入 install。然后，点击底部的 Run 开始依赖项的安装。
 
-
-
-
 Maven 现在将从互联网下载 Spring Framework 所需的 JAR 文件，如果你的电脑上还没有这些文件。你可以通过展开 Package Explorer 中的 Maven Dependencies 文件夹来检查它们是否已下载。如果它在 Spring 5 中运行符合预期，那么你就可以开始工作了。
 
 ## 启动依赖注入
 
-在项目 `luad.eggs.spring.boot` 中创建一个新包，并在其中创建两个类：EggsServer（它应该包含一个 `main` 方法）和 EggsRunner（它应该实现 `CommandLineRunner`）。在 `org.springframework.framework.boot` 包中的 `main` 方法应该启动 EggsServer。
+在项目 `luad.eggs.spring.boot` 中创建一个新包，并在其中创建两个类：`EggsServer`（它应该包含一个 `main` 方法）和 `EggsRunner`（它应该实现 `CommandLineRunner`）。在 `org.springframework.framework.boot` 包中的 `main` 方法应该启动 EggsServer。
 
 ```
 public static void main(String[] args) {
@@ -2421,9 +1997,9 @@ public static void main(String[] args) {
 
 从常规方法的角度来看，这个选择顺序没有提到我们的其他任何类。`SpringApplication.run` 方法的作用是搜索实现 `ApplicationRunner` 接口或 `CommandLineRunner` 接口的 bean。因此，我们可以选择在 EggsRunner 的 `run` 方法中启动应用程序。
 
-@SpringBootApplication 注解告诉 Spring 扫描 `scanBasePackages` 以搜索这些包内的 bean。由于我们想将 EggsRunner 类注册为一个 bean，我们还必须在类声明的正上方添加 @Component 注解（即 `@Component` 这一行）。
+`@SpringBootApplication` 注解告诉 Spring 扫描 `scanBasePackages` 以搜索这些包内的 bean。由于我们想将 EggsRunner 类注册为一个 bean，我们还必须在类声明的正上方添加 `@Component` 注解（即 `@Component` 这一行）。
 
-由于我们想将 EggsRunner 类注册为一个 bean，我们还必须在类声明的正上方添加 @Component 注解（即 `@Component` 这一行）。
+由于我们想将 EggsRunner 类注册为一个 bean，我们还必须在类声明的正上方添加 `@Component` 注解（即 `@Component` 这一行）。
 
 ```
 import java.util.observable.*;
@@ -2432,6 +2008,8 @@ import luad.eggs.util.MapperFactory;
 ```
 
 // 使用基于文本的类型定义的类模型。
+
+
 
 ```
 @Service
@@ -2455,11 +2033,11 @@ import luad.eggs.util.MapperFactory;
 
 你可能喜欢使用 Spring 中旧的依赖注入方法，这种方法可以通过 XML 编写指定其依赖项的位置。对于这种我们尚未涵盖的方法，你可以从代码中定义你的 bean 和依赖项。
 
-为了运行 Maven 项目，你必须使用 'goals' 对于写入到文件上的内容。
+为了运行 Maven 项目，你必须使用 `goals` 对于写入到文件上的内容。
 
 如果你已经在 EggsRunner 中创建了 `public void main(String[] args)` 方法，并在内部放入了一个简单的示例（例如 `System.out.println("Hello world!")`），这样我们就可以验证框架是否正常工作，
 
-在创建一个新 Bean 后，调用 'eggs' run。在此之前，在 Base directory 下选择 'eggs' 项目，你可能会看到以下：
+在创建一个新 Bean 后，调用 `eggs` run。在此之前，在 Base directory 下选择 `eggs` 项目，你可能会看到以下：
 
 当你运行程序时，你应该能看到像 Spring 6 那样输出其 bean 的列表，但正如你所看到的，程序已经输出了信息。
 
@@ -2484,11 +2062,14 @@ import luad.eggs.util.MapperFactory;
 
 ## Java
 
-更多魔力
+### 更多魔力
+
 使用 Spring
-Spring 远不止依赖注入和反射。一个实用的工具是 @Async，它指定一个方法应该被异步执行。事实上，这个新类的优势之一是它可以接受任何参数。为了使用 @Async，你必须在你的主类上标记 @EnableAsync。
+
+Spring 远不止依赖注入和反射。一个实用的工具是 `@Async`，它指定一个方法应该被异步执行。事实上，这个新类的优势之一是它可以接受任何参数。为了使用 `@Async`，你必须在你的主类上标记 `@EnableAsync`。
 
 它将创建一个 ServerHead 对象以满足该依赖。
+
 第二行
 
 ![](img/b0e5bcf1ba8a75a2b9418fda820e5cd0_57_0.png)
@@ -2511,15 +2092,15 @@ public String getMapFileName() {
 
 ## 设置网络
 
-另一方面，游戏地图应该是单例：想要创建地图的单个实例并让游戏模型的所有实例都使用它。因此，我们在 Map 类中添加 @Service 注解，但我们没有对类型添加 @Scope("prototype")。
+另一方面，游戏地图应该是单例：想要创建地图的单个实例并让游戏模型的所有实例都使用它。因此，我们在 Map 类中添加 `@Service` 注解，但我们没有对类型添加 `@Scope("prototype")`。
 
 ## @Autowired 和 @Bean
 
-还有一些方法需要在游戏后执行。当我们创建游戏地图时，我们需要在正确的地图文件中调用 `readMap()` 方法。当我们创建一个新玩家时，我们需要调用 `move()` 方法。因此，现在我们将让 Spring 来调用这些方法。我们在 `readMap()` 声明之前立即使用 @Autowired 注解。在我们的情况下，我们将该类标记为 @Service。Spring 只有该类的构造函数
+还有一些方法需要在游戏后执行。当我们创建游戏地图时，我们需要在正确的地图文件中调用 `readMap()` 方法。当我们创建一个新玩家时，我们需要调用 `move()` 方法。因此，现在我们将让 Spring 来调用这些方法。我们在 `readMap()` 声明之前立即使用 `@Autowired` 注解。在我们的情况下，我们将该类标记为 `@Service`。Spring 只有该类的构造函数
 
 依赖注入的优势是，我们可以自由地抽象出代码的某以创建另一个类。一个新类将在 `loading.java.net.server.ServerSocket` 类中调用 `ClientConnection`。这将是 ServerClass 在尝试创建一个匹配连接的客户端中使用的方式。
 
-在类中创建一个类型为 `ServerSocket` 的字段，并编写一个构造函数，通过获取端口号作为参数并传递传递 `ServerSocket` 构造函数来设置该字段。然后我们在 EggServer 类中创建一个字段并将其标记为 @Bean 注解，返回端口号 9800。
+在类中创建一个类型为 `ServerSocket` 的字段，并编写一个构造函数，通过获取端口号作为参数并传递传递 `ServerSocket` 构造函数来设置该字段。然后我们在 EggServer 类中创建一个字段并将其标记为 `@Bean` 注解，返回端口号 9800。
 
 - 下方我们可以看到我们的 map 依赖位于 Eclipse 的 Package Explorer 中
 
@@ -2527,7 +2108,7 @@ public String getMapFileName() {
 
 在 Client 类中创建一个类型为 `Socket` 的字段，使用 `ServerSocket.accept()` 设置该字段。`fetchClientConnection()` 方法应该返回一个布尔值：如果连接成功建立（如果 `clientSocket != null`）则返回 true，否则返回 false。
 
-现在我们可以创建一个返回 `Socket` 对象的 bean。Client 类中的对象将调用 `getClientSocket()`，该方法返回带有 @Bean 的字段的值以及 `clientSocket@@@Scope("prototype")` 方法的值，以便它每次都返回一个新值。
+现在我们可以创建一个返回 `Socket` 对象的 bean。Client 类中的对象将调用 `getClientSocket()`，该方法返回带有 `@Bean` 的字段的值以及 `clientSocket@@@Scope("prototype")` 方法的值，以便它每次都返回一个新值。
 
 ## 底层原理
 
@@ -2539,7 +2120,7 @@ Spring 中的依赖注入使用反射工作：一组允许我们检查程序低�
 GameModel bean = beanFactory.getBean(GameModel.class);
 ```
 
-反射 API 允许我们找到包中的所有类并读取它们的注解。这些注解用于识别哪些类应该由 Spring 管理。Spring 然后可以调用 `getAnnotation()` 来检查每个类的注解。例如，在 Spring 中，我们可以使用 @Component 注解来查找类型。如果我们将 bean 标记为 @scope("prototype")，Spring 将创建一个新实例
+反射 API 允许我们找到包中的所有类并读取它们的注解。这些注解用于识别哪些类应该由 Spring 管理。Spring 然后可以调用 `getAnnotation()` 来检查每个类的注解。例如，在 Spring 中，我们可以使用 `@Component` 注解来查找类型。如果我们将 bean 标记为 `@scope("prototype")`，Spring 将创建一个新实例
 
 为了完成程序，从 EggsServer 中移除 `run()` 方法并将其替换为使其工作的代码。首先，我们需要使用 Bean Factory 来实例化 `ClientConnection` 的 bean，它是代码的网络部分。
 
@@ -2561,17 +2142,14 @@ GameModel bean = beanFactory.getBean(GameModel.class);
 private BeanFactory beanFactory;
 ```
 
-由于 Bean 是 Spring 框架的一部分，@Autowired 注解意味着 Spring 将
-
-
-
-
+由于 Bean 是 Spring 框架的一部分，`@Autowired` 注解意味着 Spring 将
 
 # Prolog
 
 # APL
 
 # 专题
+
 ## 编程语言的未来
 
 ## C++
@@ -2587,6 +2165,7 @@ private BeanFactory beanFactory;
 # APL
 
 # 编程语言的
+
 # 未来
 
 Mike Bedford 带我们领览了一些不寻常且新兴的编程语言，以调查未来可能如何。
@@ -2596,12 +2175,15 @@ Mike Bedford 带我们领览了一些不寻常且新兴的编程语言，以调�
 ## 概览
 
 ### 不寻常的语言，p62
+
 许多语言与其他许多语言有许多共同点，但只有少数语言敢于与众不同。我们研究了一些打破常规的语言，并借此提供了一种不同的编程方式。每种语言都能为更具冒险精神的程序员提供与众不同的。
 
 ### 值得关注的语言，p64
+
 编程领域处于不断变化的状态，明年我们使用不同语言是极具可能的。正是这些语言开始获得势头，因此我们来看看当今即将上市的语言。
 
 ### 未来的语言，p66
+
 为了感受编程的未来可能是什么，我们回顾了过去六十年语言的发展情况，并在这些基础之上，展示了那些处于编程语言前沿研究的人士的观点。
 
 最近对编程语言的调查表明，它们都太容易预测了。Linux 编码者使用的语言、Python、C++ 和 Java 占据了桌面应用的前五。如果我们把视野扩大到 Web 应用，发现了 JavaScript 和 PHP，除了 Windows 平台上的 C# 之外，其他操作系统的列表也也相当相似。
@@ -2627,12 +2209,19 @@ Mike Bedford 带我们领览了一些不寻常且新兴的编程语言，以调�
 在这里我们看到的在某种意义上可以认为是不寻常的语言，因为它们并不常用，但许多正通过新的手段被使用。但它们并不一定是因为失败了。不寻常的语言通常是为小众应用设计的，或者可能吸引少数程序员，但仍然吸引着兴趣；因此，这里这里讨论的语言之一可能为你提供解决方案，或者至少为你提供一堂关于编程的有趣课程。
 
 | Q | W | E | R | T | Y | U | I | O | P | |
+
 |---|---|---|---|---|---|---|---|---|---|---|
+
 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 0 | - |
+
 | A | S | D | F | G | H | J | K | L | ; | ' |
+
 | Z | X | C | V | B | N | M | | | | |
+
 | Caps Lock | | | | | | | | | | | |
+
 | a | s | d | f | g | h | j | k | l | ; | ' |
+
 | z | x | c | v | b | n | m | | | | |
 
 Prolog 追溯到 1972 年，但与今天使用的大多数语言不同，Prolog 在某些领域经常被描述为第一代语言。定义问题可能的，但 Prolog 不告诉计算机提供算法。在 Prolog 中编写涉及定义关系和规则，然后对这些关系和规则的数据库进行查询。
@@ -2659,10 +2248,6 @@ Prolog 追溯到 1972 年，但与今天使用的大多数语言不同，Prolog 
 
 考虑到 Java 或 Python 使用代码来解决问题。
 
-
-
-
-
 ## 编程语言的未来
 
 ## 可能取代 Java 的语言
@@ -2684,7 +2269,9 @@ Go 也许人们最感到兴奋的语言，它是由 Google 团队及其他开发
 Haskell 是一个拥有二十多年开发历史的开源项目。根据开发者的介绍，它是一种多态类型、惰性的、纯函数语言，不同的开发者对此赞有加。
 
 | 1964 | 1964 | 1972 | 1972 |
+
 | :--- | :--- | :--- | :--- |
+
 | BASIC 是一种易于使用的第一门语言，为初学者设计。它被广泛用于 1980 年代的家用电脑上。 | APL 提供了一个交互式编程环境。使用独特的字符集，它可以完全地表达问题。 | Smalltalk 是最早具有面向对象特征的语言之一，受到今天流行语言的影响。 | C 语言发布。在 ALGOL 之上构建。 |
 
 引起关注的新语言列表确实将是一个很长的列表。
@@ -2699,6 +2286,8 @@ D-wave 是全球唯一商业量子计算机的制造商，提供了几种对其�
 
 十年来，微软的一个研究人员团队一直在研究量子计算，一种利用量子比特的计算模型。量子比特可以以位的形式存在，这将导致高度并行处理。不用说，使用这种奇异的架构需要不同的编程方法。
 
+
+
 就在几个月前，微软宣布了一种新语言，供开发者为量子模拟器编程并在未来运行任何实际量子计算机。坦率地说，他们说你不需要理解这项技术。
 
 通过采用量子退火架构，D-wave 机器可以被看作利用 Google 和 NASA 解决特定问题的量子计算机，这些问题不像我们的数字计算机那样是通用的。
@@ -2707,17 +2296,17 @@ D-wave 是全球唯一商业量子计算机的制造商，提供了几种对其�
 
 它们是命令式的，因为它们由一组严格按顺序执行的命令组成，他们解释了函数式语言的工作原理：
 
-根据一位发言人的的话，“新的编程语言可以很容易地引入 Visual Studio，并且还有适用于 Linux 等多种操作系统的可用编译器。”
+根据一位发言人的话，“新的编程语言可以很容易地引入 Visual Studio，并且还有适用于 Linux 等多种操作系统的可用编译器。”
 
 函数是一个表达式，由表达式执行。任何使用过不同函数式编程方法的人都会发现每个单元格相对于其他单元格的值。
 
-## 还要考虑……
+## 还要考虑
 
-引起关注的新语言列表确实将是一个很长的列表。然而，如果你继续探索它们，这些语言是广为人知的：Kotlin、Scala、TypeScript、Clojure、Rust 和 Swift。
+引起关注的新语言列表确实将是一个很长的列表。然而，如果你继续探索它们，这些语言是广为人知的：`Kotlin`、`Scala`、`TypeScript`、`Clojure`、`Rust` 和 `Swift`。
 
-为了说明这一点，他们展示了 Haskell 的六行代码以及对应的 C 语言代码，后者占据了 24 行，两者都为了清晰而留了间距。与许多编程语言一样，你可以在 http://tryaskell.org 学习更多细节，并可以在那里访问快速教程。
+为了说明这一点，他们展示了 Haskell 的六行代码以及对应的 C 语言代码，后者占据了 24 行，两者都为了清晰而留了间距。与许多编程语言一样，你可以在 `http://tryaskell.org` 学习更多细节，并可以在那里访问快速教程。
 
-列出一个排序的短名单会更好，对于一种既新又不同常的语言——在采用某种不同编程范式的意义上——尝试 Clojure 怎么样？作为 1998 年引入的旧 Lisp 变言，它被称为现代语言。Rich Hickey，Clojure 说：“Clojure 是一种通用编程语言，包括用于脚本语言开发的功能，以及健壮的多线程编程基础设施。Clojure 是 Lisp 的变言，具有代码即数据的哲学和强大的宏系统。”
+列出一个排序的短名单会更好，对于一种既新又不同常的语言——在采用某种不同编程范式的意义上——尝试 `Clojure` 怎么样？作为 1998 年引入的旧 Lisp 变言，它被称为现代语言。Rich Hickey，Clojure 说：“Clojure 是一种通用编程语言，包括用于脚本语言开发的功能，以及健壮的多线程编程基础设施。Clojure 是 Lisp 的变言，具有代码即数据的哲学和强大的宏系统。”
 
 | 1991 | 1995 | 2009 | 2017 |
 | :--- | :--- | :--- | :--- |
@@ -2725,12 +2314,14 @@ D-wave 是全球唯一商业量子计算机的制造商，提供了几种对其�
 
 ## 编程的未来
 
-## 编程的未来
+### 编程的未来
 
 编程语言的未来将如何？
 
 在展望编程语言的未来之前，深入过去以理解背景会有帮助。第一批计算机是用机器码编程的。最初，程序是通过向开关中写入二进制数来输入的，或者使用打孔纸带。
+
 例如，为了处理旧操作码上的 011100，你可能需要将操作码（代表指令的二进制数）00001110 输入到特定地址，并将 011100 输入到下一个地址。
+
 不用说，这并不容易，而且非常容易。首先，修改代码意味着你必须准确地计算出跳转代码。此外，修改代码是枯燥的。如果你在代码某处添加了指令，所有此类指令都必须移动到不同的地址，任何引用这些指令的跳转或分支指令都必须修改为新地址。
 
 上图：今天的编程语言（如 C++）是过去 60 年演变发展的结果。
@@ -2741,18 +2332,17 @@ D-wave 是全球唯一商业量子计算机的制造商，提供了几种对其�
 
 接下来是汇编语言，它是为了克服机器码的缺点而设计的。称为汇编器的软件会将汇编代码翻译成机器码。这提供了多样性。在每个操作码上，都使用了有意义的助记符。此外，变量名被用来引用内存位置，指令可以更改而无需生成跳转指令，因此，
 
-可能会从 00001110 011100 变为 JM INITIALISE。
-
+可能会从 00001110 011100 变为 `JM INITIALISE`。
 
 suggests.（建议）。特别是，一条高级指令通常可以替代几条机器码或汇编指令，为程序员带来清晰的收益。
 
-例如，为了将具有唯一变量名 A 和 B 的两个内存位置的内容相加并将结果需要三条汇编指令：LOAD A、ADD 和 STORE；这三条指令将被替换为 C = A + B。
+例如，为了将具有唯一变量名 A 和 B 的两个内存位置的内容相加并将结果需要三条汇编指令：LOAD A、ADD 和 STORE；这三条指令将被替换为 `C = A + B`。
 
 高级代码生成语言的历史可以追溯到较早以前，但那时它们还相当专业化，而现代编程的绝大多数属于第三代。这一说法并没有被普遍接受，根据专家的意见，它仅仅是代码供应商的一种营销噱头。
 
 ![](img/b0e5bcf1ba8a75a2b9418fda820e5cd0_66_0.png)
 
-# 问答 (Q&A)
+# 问答 Q&A
 
 ## 访谈：Martin Lester，牛津大学
 
@@ -2766,7 +2356,7 @@ Martin Lester 是牛津大学的研究员，对编程语言的理论和应用感
 
 由于 C 非常流行且被广泛使用，这并不意味着它在某些情况下是最佳选择，或者事实上没有发生变化。
 
-## 测试检查程序是否无法找到的一种良好方法
+### 测试检查程序是否无法找到的一种良好方法
 
 我们没有详细讨论第四代和第五代语言是如何定义的。然而，如果我们从代际的角度来看，共识是每一代都是一种定义比前一代更复杂问题的手段，而我们看到的硬件工作已经非常完善。
 
@@ -2774,7 +2364,7 @@ Martin Lester 是牛津大学的研究员，对编程语言的理论和应用感
 
 所以，你是说还有后续发展吗？C 和 Java 在过去几年里引入了很多变化。每当向语言添加一个新功能时，其收益通常是能够更快地编写更多程序，然后让它们运行得更快，或者减少错误。所以我不知道未来会有什么特征或范式。我很有信心会有这样的
 
-## 演进开发 (Evolutionary development)
+## 演进开发 Evolutionary development
 
 机器码和汇编语言在高级语言之初是不同的。我们可以追溯演进路径，将今天使用的语言与最早的极少数语言联系起来，然后追溯到汇编语言。我们无法追溯今天最常用语言的祖先。该谱系基于斯坦福大学计算博物馆对语言的研究。
 
@@ -2786,7 +2376,7 @@ Martin Lester 是牛津大学的研究员，对编程语言的理论和应用感
 
 Fortran 是第一个被广泛使用的高级语言，专为科学编程设计的。流控制几乎包含在 GOTO、DO、函数和子程序中，这导致了“面条代码”；ALGOL 是为了解决这个问题而设计的，提供了对
 
-## 前景 (The way ahead)
+## 前景 The way ahead
 
 为了看到未来可能是什么样子，我们与牛津大学的 Gon Runciman 教授和牛津大学的 Martin Lester 进行了关于编程语言的交流。
 
@@ -2794,13 +2384,13 @@ Fortran 是第一个被广泛使用的高级语言，专为科学编程设计的
 
 ![](img/b0e5bcf1ba8a75a2b9418fda820e5cd0_66_1)
 
-# 特性 (Feature)
+# 特性 Feature
 
 ## 编程语言的未来
 
 ![](img/b0e5bcf1ba8a75a2b9418fda820e5cd0)
 
-# 问答 (Q&A)
+# 问答 Q&A
 
 ## 访谈：Runciman 教授，牛津大学
 
@@ -2825,9 +2415,6 @@ SMTLIB 项目为约束求解器提供了一种标准输入语言，它支持多�
 在发展方面，研究人员无疑会让求解器变得更好、更可靠，但我更有兴趣的是看到约束求解器作为主流编程的一部分能做什么。
 
 更多的声明式编程，即你陈述问题而不是定义解决问题的指令序列。让我们解释这一类声明式之间的区别。
-
-
-
 
 # 获取免费 6 期
 
@@ -2877,7 +2464,7 @@ SMTLIB 项目为约束求解器提供了一种标准输入语言，它支持多�
 
 # Linux 用户与开发者
 
-## STER 终端（TERMINAL）
+## STER 终端 TERMINAL
 
 你需要的命令行指南
 
@@ -2888,7 +2475,9 @@ SMTLIB 项目为约束求解器提供了一种标准输入语言，它支持多�
 ## 42 页指南
 
 - 5 格言：精通 http 协议
+
 - 5 安全：网络黑客
+
 - 核心 Linux：Sed 的乐趣
 
 内部精彩：未来
@@ -2908,14 +2497,16 @@ SMTLIB 项目为约束求解器提供了一种标准输入语言，它支持多�
 ![](img/b0e5bcf1ba8a75a2b9418fda820e5cd0_69_0.png)
 
 # 按下暂停
+
 享受时刻
 
 要了解更多关于“按下暂停”的信息，请访问：
+
 pauseyourday.co.uk
 
 # 编码员与制作者的必备指南
 
-# 实用树莓派（Raspberry Pi）
+# 实用树莓派 Raspberry Pi
 
 ![](img/b0e5bcf1ba8a75a2b9418fda820e5cd0_70_0.png)
 
@@ -2924,15 +2515,18 @@ pauseyourday.co.uk
 # 目录
 
 - 72 页 Pi 项目：微型机器人真的非常小
+
 - 74 页在你的 Minecraft 世界中绘制矢量形状
+
 - 76 页添加带有 Google 助理的语音激活 AI
+
 - 78 页使用 SQLite 创建轻量级数据库
 
 ## 微型机器人
 
 ## 一种务实的机器人教学方法导致了一个制造比硬零钱还小的机器人项目。
 
-您能向我们概述一下微型机器人项目吗？你们微型机器人的设计理念是什么？微型机器人项目是在讨论帝国学会（Imperial Society）如何为青少年工程师开发课程时成立的，之前一个在小型机器人上介绍机器人学基础的课程非常成功，那个机器人大约一张 A4 纸大，但这个尺寸很快就成了我们的问题。我们不得不放弃昂贵的低级硬件；通常情况下我们一个班级只有一个，而我们必须这样服务。
+您能向我们概述一下微型机器人项目吗？你们微型机器人的设计理念是什么？微型机器人项目是在讨论帝国学会 Imperial Society 如何为青少年工程师开发课程时成立的，之前一个在小型机器人上介绍机器人学基础的课程非常成功，那个机器人大约一张 A4 纸大，但这个尺寸很快就成了我们的问题。我们不得不放弃昂贵的低级硬件；通常情况下我们一个班级只有一个，而我们必须这样服务。
 
 你还提到了树莓派 3；它是如何融入项目的？最初我们将其视为一个教育套件的商业案例，而这些套件非常贵。使用树莓派帮助我们在不给用户提供额外设备的情况下提供计算系统。我们能够让带有高精度传感器和主电脑的微型机器人系统的负担负担。在整个开发过程中，为了方便起见，我们主要使用全桌面级系统。
 
@@ -2948,13 +2542,13 @@ pauseyourday.co.uk
 
 对于大多数实验来说，知道它的位置是一个基本问题。如果我们的传感器还不够先进以发现位置，一种潜在解决方案是使用俯视摄像头来追踪机器人的位置。在这里，我们使用摄像头的位置作为输入。
 
-能告诉我们你正在做的机器人吗？我们有一些备件用于机器人，所以决定创建一个 RC 接口。我们目前正在机器人前端实现一个 TOF（飞行时间）激光扫描仪。由于步进电机的动力，我们可以使用 SLAM（同步定位与地图构建）进行环境导航，这可以通过最小的机器人完成。
+能告诉我们你正在做的机器人吗？我们有一些备件用于机器人，所以决定创建一个 RC 接口。我们目前正在机器人前端实现一个 TOF 飞行时间 激光扫描仪。由于步进电机的动力，我们可以使用 SLAM 同步定位与地图构建 进行环境导航，这可以通过最小的机器人完成。
 
 你认为微型机器人市场化需要什么？
 
 你也提到了机器人需要视觉。是的，这比较容易说：我们为新的无人机实现了一个加速度计，驱动在磁性墙面上驱动机器人。加速度计可以配合绝对方向和重力工作。至于套件，我们很有可能制作一个套件——我们需要的一切都是开源的；只有电池需要购买。我们可能在今年生产更大批次，明年我们需要寻找可以供应机器人的机会。
 
-Joshua Elsdon 目前是伦敦帝国学院（Imperial College London）的博士生，研究手持工程增强现实领域。我们对机器人的兴趣源于音频工程和高压电路，然后是一个为了机器人而开发课程的青少年。
+Joshua Elsdon 目前是伦敦帝国学院 Imperial College London 的博士生，研究手持工程增强现实领域。我们对机器人的兴趣源于音频工程和高压电路，然后是一个为了机器人而开发课程的青少年。
 
 喜欢吗？
 
@@ -2963,10 +2557,6 @@ Joshua Elsdon 目前是伦敦帝国学院（Imperial College London）的博士�
 延伸阅读
 
 要关注 Joshua 的微型机器人，请访问 http://bit.ly/Jemicicrobots
-
-
-
-
 
 # 教程
 
@@ -2980,9 +2570,9 @@ Joshua Elsdon 目前是伦敦帝国学院（Imperial College London）的博士�
 
 ## Calvin Robinson
 
-他是巴内内特（Barnet）一所全学段制学校（CoFE）员工的计算机科学负责人。Calvin 还与伦敦各地的学校合作，提供高质量的课程。
+他是巴内内特 Barnet 一所全学段制学校 CoFE 员工的计算机科学负责人。Calvin 还与伦敦各地的学校合作，提供高质量的课程。
 
-只需确保将它与 McPiFoMo 一起放入 ~/home/minecraft 目录即可。安装 'Minecraft' 的另一种方法是使用 `sudo pip install minecraftstuff` 或 `sudo pip3 install minecraftstuff`。
+只需确保将它与 McPiFoMo 一起放入 `~/home/minecraft` 目录即可。安装 'Minecraft' 的另一种方法是使用 `sudo pip install minecraftstuff` 或 `sudo pip3 install minecraftstuff`。
 
 ## Python 准备
 
@@ -2991,7 +2581,9 @@ Joshua Elsdon 目前是伦敦帝国学院（Imperial College London）的博士�
 ## 资源
 
 - McPiFoMo: http://github.com/co.uk/McPiFoMo.rar
+
 - 方块 ID: http://bit.ly/MC-BlockIDs
+
 - Minecraft Stuff: http://bit.ly/MC-stuff
 
 ```python
@@ -3006,15 +2598,17 @@ import minecraftstuff
 
 ## 03 连接到 Minecraft
 
-本教程是以 Pi 版（树莓派版）编写的，但你不需要运行树莓派也可以跟随操作。我们整合了一个适用于任何版本 Minecraft 的包，因此你可以在桌面端、Linux 或 Pi 上使用它。要连接到 Minecraft，你需要安装 McPiFoMo（详情见下文）。教程将在下一条目中继续：~/home/minecraft。McPiFoMo 包含了 Alexander Jam 开发的 Minecraft 中的 McPi。只要你已经安装，除了你喜欢的编辑器或 IDE 之外，不需要任何额外的软件。
+本教程是以 Pi 版 树莓派版 编写的，但你不需要运行树莓派也可以跟随操作。我们整合了一个适用于任何版本 Minecraft 的包，因此你可以在桌面端、Linux 或 Pi 上使用它。要连接到 Minecraft，你需要安装 McPiFoMo 详情见下文。教程将在下一条目中继续：`~/home/minecraft`。McPiFoMo 包含了 Alexander Jam 开发的 Minecraft 中的 McPi。只要你已经安装，除了你喜欢的编辑器或 IDE 之外，不需要任何额外的软件。
 
 ```python
 mc = mcpi.Minecraft.create()
 ```
 
-在这里，我们正在创建变量 `mc`，我们可以用它直接在世界中生成形状。我们将在实例化 'Minecraft' 实例时使用该变量：Martin 的教程中有一些 GitHub 上可用的预定义函数（请参考参考文献中的 'Minecraft'）。无论你运行的是 Pi 版还是 Linux 版，本教程中的 Python 脚本应始终保存在 ~/home/minecraft 中。确保正确运行 Minecraft。现在让我们获取当前位置以便绘图：`pos = mc.player.getPos()`。
 
-## 04 生成形状
+
+在这里，我们正在创建变量 `mc`，我们可以用它直接在世界中生成形状。我们将在实例化 `Minecraft` 实例时使用该变量：Martin 的教程中有一些 GitHub 上可用的预定义函数（请参考参考文献中的 `Minecraft`）。无论你运行的是 Pi 版还是 Linux 版，本教程中的 Python 脚本应始终保存在 `~/home/minecraft` 中。确保正确运行 Minecraft。现在让我们获取当前位置以便绘图：`pos = mc.player.getPos()`。
+
+# 04 生成形状
 
 我们允许使用的预定义形状有 `drawLine`、`drawCircle` 和 `drawFace`。我们可以通过以下方式在世界中生成这些形状：
 
@@ -3032,7 +2626,7 @@ $ git clone https://github.com/martin/minecraft-stuff
 drawing.drawSphere(playerPos.x, playerPos.y, playerPos.z, 5, block.DIAMOND_BLOCK.id)
 ```
 
-## 05 函数及其参数
+# 05 函数及其参数
 
 我们有不同的形状函数：
 
@@ -3052,18 +2646,18 @@ drawing.drawLine(playerPos.x, playerPos.y + 2, playerPos.x, playerPos.y + 2, blo
 
 结合 `drawFace` 使用，这为我们在 Minecraft 世界中创建内容提供了一些强大的工具，而无需花费过多时间放置方块。
 
-## 09 时间的脚步
+# 09 时间的脚步
 
 我们导入了 `time` 模块，以便在需要时减慢（或加速）。使用 `drawLine` 或 `drawFace` 函数时，最好在每次调用后包含一个短暂的暂停，否则你的游戏可能会出现追赶问题，延迟可能会导致混乱。只需一个 1 到 5 之间的的小数字就足够。
 
-## 06 使用 drawFace 自定义向量 – 部分 1
+# 06 使用 drawFace 自定义向量 – 部分 1
 
 预制形状很棒，但有时我们想绘制属于自己的形状。我们可以通过设置每个点的坐标，然后用 `drawFace` 填充空白：
 
-- shapesPoints = []
-- shapesPoints.add(minecraft.Vec3(x1, y1, z1))
-- shapesPoints.add(minecraft.Vec3(x2, y2, z2))
-- shapesPoints.add(minecraft.Vec3(x3, y3, z3))
+- `shapesPoints = []`
+- `shapesPoints.add(minecraft.Vec3(x1, y1, z1))`
+- `shapesPoints.add(minecraft.Vec3(x2, y2, z2))`
+- `shapesPoints.add(minecraft.Vec3(x3, y3, z3))`
 
 # 10 状态更新
 
@@ -3075,7 +2669,7 @@ mc.postChat("awning in the player world")
 
 ... 是你正在生成的内容名称。在创建每个形状之前（或之后）插入这些行。
 
-## 07 使用 drawFace 自定义向量 – 部分 2
+# 07 使用 drawFace 自定义向量 – 部分 2
 
 现在我们设置了点的坐标，`drawFace` 将连接这些点并用你选择的方块填充线条：
 
@@ -3083,9 +2677,9 @@ mc.postChat("awning in the player world")
 drawing.drawFace(shapesPoints, True, blockID)
 ```
 
-然而，如果你想绘制形状的轮廓，可以将布尔值从 True 改为 False，这样 `drawFace` 就不会填充它们：
+然而，如果你想绘制形状的轮廓，可以将布尔值从 `True` 改为 `False`，这样 `drawFace` 就不会填充它们：
 
-## Minecraft 中的 Python
+# Minecraft 中的 Python
 
 使用 Python，我们可以直接注入 Minecraft Pi 来执行复杂的计算，在确定玩家角色位置后，在世界中生成方块以创建所有的 2D 和 3D 作品。我们可以对 Minecraft 的想象远多于它仅仅是一个直接通过 pickle 通信的脚本。
 
@@ -3105,13 +2699,13 @@ drawing.drawFace(shapesPoints, True, blockID)
 
 他是巴内特（Barnet）一所全学段制学校（CoFE）员工的计算机科学负责人。Calvin 还与伦敦各地的学校合作，提供高质量的课程。
 
-只需确保将它与 McPiFoMo 一起放入 ~/home/minecraft 目录即可。安装 'Minecraft' 的另一种方法是使用 `sudo pip install minecraftstuff` 或 `sudo pip3 install minecraftstuff`。
+只需确保将它与 McPiFoMo 一起放入 `~/home/minecraft` 目录即可。安装 `Minecraft` 的另一种方法是使用 `sudo pip install minecraftstuff` 或 `sudo pip3 install minecraftstuff`。
 
-## Python 准备
+# Python 准备
 
-我们将在最喜欢的文本编辑器中创建一个新的 .py 文件，并导入所有相关的 Minecraft 模块。
+我们将在最喜欢的文本编辑器中创建一个新的 `.py` 文件，并导入所有相关的 Minecraft 模块。
 
-## 资源
+# 资源
 
 - McPiFoMo: http://github.com/co.uk/McPiFoMo.rar
 - 方块 ID: http://bit.ly/MC-BlockIDs
@@ -3127,96 +2721,15 @@ import minecraftstuff
 
 这个问题回到了我们最初开始的地方，即使用 Python 代码直接在我们的世界中绘制形状。
 
-## 03 连接到 Minecraft
+# 03 连接到 Minecraft
 
-本教程是以 Pi 版（树莓派版）编写的，但你不需要运行树莓派也可以跟随操作。我们整合了一个适用于任何版本 Minecraft 的包，因此你可以在桌面端、Linux 或 Pi 上使用。要连接到 Minecraft，你需要安装 McPiFoMo（详情见下文）。教程将在下一条目中继续：~/home/minecraft。McPiFoMo 包含了 Alexander Jam 开发的 Minecraft 中的 McPi。只要你已经安装，除了你喜欢的编辑器或 IDE 之外，不需要任何额外的软件。
+本教程是以 Pi 版（树莓派版）编写的，但你不需要运行树莓派也可以跟随操作。我们整合了一个适用于任何版本 Minecraft 的包，因此你可以在桌面端、Linux 或 Pi 上使用。要连接到 Minecraft，你需要安装 McPiFoMo（详情见下文）。教程将在下一条目中继续：`~/home/minecraft`。McPiFoMo 包含了 Alexander Jam 开发的 Minecraft 中的 McPi。只要你已经安装，除了你喜欢的编辑器或 IDE 之外，不需要任何额外的软件。
 
 ```python
 mc = mcpi.Minecraft.create()
 ```
 
-在这里，我们正在创建变量 `mc`，我们可以用它直接在世界中生成形状。我们将在实例化 'Minecraft' 实例时使用该变量：Martin 的教程中有一些 GitHub 上可用的预定义函数（请参考参考文献中的 'Minecraft'）。无论你运行的是 Pi 版还是 Linux 版，本教程中的 Python 脚本应始终保存在 ~/home/minecraft 中。确保正确运行 Minecraft。现在让我们获取当前位置以便绘图：`pos = mc.player.getPos()`。
-
-## 04 生成形状
-
-我们允许使用的预定义形状有 `drawLine`、`drawCircle` 和 `drawFace`。我们可以通过以下方式在世界中生成这些形状：
-
-```bash
-$ git clone https://github.com/martin/minecraft-stuff
-```
-
-或者直接访问 GitHub 手动下载 `minecraftstuff.py`，这就是本教程需要的全部。
-
-![](img/b0e5bcf1ba8a75a2b9418fda820e5cd0_73_1.png)
-
-我们刚才设置的绘制变量，即 `drawing.drawSphere()`，我们需要确保向函数传递了坐标，以及我们想要使用的方块类型。例如：
-
-```python
-drawing.drawSphere(playerPos.x, playerPos.y, playerPos.z, 5, block.DIAMOND_BLOCK.id)
-```
-
-## 05 函数及其参数
-
-我们有不同的形状函数：
-
-```python
-drawing.drawLine(x1, y1, x2, y2, block)
-drawing.drawSphere(x, y, z, radius, block)
-drawing.drawCircle(x, y, z, radius, block)
-```
-
-我们稍后会扩展 `drawFace` 函数。它是填充表面的极佳工具。将 `drawFace` 视为 Photoshop 中的画笔：
-
-![](img/b0e5bcf1ba8a75a2b9418fda820e5cd0_74_0.png)
-
-```python
-drawing.drawLine(playerPos.x, playerPos.y + 2, playerPos.x, playerPos.y + 2, block.DIAMOND_BLOCK.id)
-```
-
-结合 `drawFace` 使用，这为我们在 Minecraft 世界中创建内容提供了一些强大的工具，而无需花费过多时间放置方块。
-
-## 09 时间的脚步
-
-我们导入了 `time` 模块，以便在需要时减慢（或加速）。使用 `drawLine` 或 `drawFace` 函数时，最好在每次调用后包含一个短暂的暂停，否则你的游戏可能会出现追赶问题，延迟可能会导致混乱。只需一个 1 到 5 之间的的小数字就足够。
-
-## 06 使用 drawFace 自定义向量 – 部分 1
-
-预制形状很棒，但有时我们想绘制属于自己的形状。我们可以通过设置每个点的坐标，然后用 `drawFace` 填充空白：
-
-- shapesPoints = []
-- shapesPoints.add(minecraft.Vec3(x1, y1, z1))
-- shapesPoints.add(minecraft.Vec3(x2, y2, z2))
-- shapesPoints.add(minecraft.Vec3(x3, y3, z3))
-
-# 10 状态更新
-
-随着预制和自定义形状的添加，Python 脚本变得更加复杂。注释代码是一个良好的习惯，但用状态更新更新当前玩家也是一个很好的点笔。
-
-```python
-mc.postChat("awning in the player world")
-```
-
-... 是你正在生成的内容名称。在创建每个形状之前（或之后）插入这些行。
-
-## 07 使用 drawFace 自定义向量 – 部分 2
-
-现在我们设置了点的坐标，`drawFace` 将连接这些点并用你选择的方块填充线条：
-
-```python
-drawing.drawFace(shapesPoints, True, blockID)
-```
-
-然而，如果你想绘制形状的轮廓，可以将布尔值从 True 改为 False，这样 `drawFace` 就不会填充它们：
-
-## Minecraft 中的 Python
-
-使用 Python，我们可以直接注入 Minecraft Pi 来执行复杂的计算，在确定玩家角色位置后，在世界中生成方块以创建所有的 2D 和 3D 作品。我们可以对 Minecraft 的想象远多于它仅仅是一个直接通过 pickle 通信的脚本。
-
-在这种情况下，我们创建了生成的粒子。
-
-# 08 跨越线条
-
-有时你可能想画一条线。本教程将向你展示如何做到这一点。
+在这里，我们正在创建变量 `mc`，我们可以用它直接在世界中生成形状。我们将在实例化 `Minecraft` 实例时使用该变量：Martin 的教程中有一些 GitHub 上可用的预定义函数（请参考参考文献中的 `Minecraft`）。无论你运行的是 Pi 版还是 Linux 版，本教程中的 Python 脚本应始终保存在 `~/home/minecraft` 中。确保正确运行 Minecraft。现在让我们获取当前位置以便绘图：`pos = mc.player.getPos()`。
 
 # 01 连接 ReSpeaker
 
@@ -3228,42 +2741,43 @@ drawing.drawFace(shapesPoints, True, blockID)
 
 为了让你的设备与 Google 助理交互，你需要一个 Google 账号。如果
 
-
 如果你还没有，请在任选的浏览器中访问 https://google.com 并点击右上角的“创建账户”。完成后，访问 https://console.cloud.google.com/project 并使用账户详情登录。点击“下一步”，再次点击“下一步”。将出现“Google OAuth 权限”页面。要查看此页面，请选择一个项目。点击“创建”并建立你的项目。设置项目 ID，然后点击“创建”。
 
-www.googleapis.com/auth/assistant-sdk-prototype --save-headless.
+`www.googleapis.com/auth/assistant-sdk-prototype --save-headless`.
 
-请确保将 client_secret.json 替换为 JSON 文件的实际名称。
+请确保将 `client_secret.json` 替换为 JSON 文件的实际名称。
 
 # 输入确认码
 
 现在会弹出一个带有 OAuth 确认码的 URL，要求你右键点击并复制链接。打开浏览器，右键点击地址栏并选择“转到”。点击你的账户名称然后点击“允许”。助手页面将生成一个代码。从浏览器中复制此代码并粘贴到终端（Terminal）。如果成功，你将看到一条你的凭据已保存的消息。
 
-## 06 创建产品
+# 06 创建产品
 
 为了使用 Google Assistant API，你需要配置凭据。这些凭据存储在派派 中，并让 Google 知道你正在使用授权设备。在加载的 API 页面上点击“启用”。接下来，访问 http://bit.ly/GCP-OAuth。点击“配置”屏幕，例如“派 语音助手”。如果你正在创建一个市场应用程序，请在帮助中心、标志和隐私策略字段中填写。完成后，点击顶部的“保存”。
 
-## 10 启动 Google assistant demo
+# 10 启动 Google assistant demo
 
 在终端中，运行 `sudo apt-get install pulseaudio`，然后使用 `pulseaudio &` 启动。最后，运行 `google-assistant-demo`。
 
-## 07 创建客户端 ID
+# 07 创建客户端 ID
 
-进入“创建客户端 ID”屏幕后。在“应用程序类型”下选择“其他”，然后点击“创建”。你现在将看到你的 Client ID 和密钥（secret key）。复制并记住它们。Google 现在会将你带回“凭据”屏幕，将加载 Client ID。点击右侧的向下箭头将凭据保存为 json 文件。如果文件已下载，打开浏览器将其移动到 /home/pi。这将更容易访问。
+进入“创建客户端 ID”屏幕后。在“应用程序类型”下选择“其他”，然后点击“创建”。你现在将看到你的 Client ID 和密钥（secret key）。复制并记住它们。Google 现在会将你带回“凭据”屏幕，将加载 Client ID。点击右侧的向下箭头将凭据保存为 json 文件。如果文件已下载，打开浏览器将其移动到 `/home/pi`。这将更容易访问。
 
 | 文件编辑标签页 |
+
 | :--- |
+
 | ### CONFIGURATION_DONE<br>START ---<br>{<br>  "client_id": "12345-67890.apps.googleusercontent.com",<br>  "client_secret": "GOCOB-1234567890",<br>  "redirect_uri": "http://localhost:8080"<br>---<br>[INFO] Authentication successful<br>[INFO] Logging in as user...<br>[INFO] Waiting for command...<br>[INFO] "What is the weather in London?"} |
 
 确保你的耳机或扬声器已连接。使用默认的“Hey Google”让助手监听，然后问它一个标准问题，如“今天伦敦天气如何？”以收听天气预报。
 
 Google Assistant 还可以播放声音；例如“狗是怎么叫的”或询问 100 欧元兑多少美元。
 
-## 使用虚拟环境
+# 使用虚拟环境
 
 如果你在嵌入式设备或应用程序中使用 Google Assistant，你可能想要创建一个专用的虚拟环境，将其与其他项目隔离开。
 
-## 08 授权 Google Assistant
+# 08 授权 Google Assistant
 
 在你的浏览器中，访问 https://cloud.google.com/activity/credentials。确保选择了你的项目。点击“设备信息”和“语音与音频”。接下来，打开终端并运行 `sudo pip install --upgrade-google-auth-oauthlib`。你可以使用此工具配合上一步下载的 JSON 文件与派派协作。要此操作，请运行命令：
 
@@ -3271,11 +2785,11 @@ Google Assistant 还可以播放声音；例如“狗是怎么叫的”或询问
 
 如果你决定使用虚拟环境，运行 `source env/bin/activate` 切换到你的虚拟环境。完成后，使用命令 `source env/bin/activate` 退出。一旦你在虚拟环境中安装完成，照常输入命令：`./ google-assistant-demo`
 
-- google-auth-oauthlib --credentials /home/pi/client_secret... --scope https://
+- `google-auth-oauthlib --credentials /home/pi/client_secret... --scope https://`
 
 77 www.linuxuser.co.uk
 
-## 在 Python 中管理数据
+# 在 Python 中管理数据
 
 当你需要处理的数据增长到超出简单文件的范围时，是时候转向使用数据库了。SQLite 是一个很好的起点。
 
@@ -3288,28 +2802,30 @@ my_conn = sqlite3
 connection.connect('example.db')
 ```
 
-这为你提供了一个连接对象，与存储在 example.db 文件中的数据库进行交互。如果文件不存在，sqlite 模块将创建一个新的数据库文件。如果你在程序运行期间需要数据库，可以给连接提供特殊文件名 "memory:" 以在 RAM 中创建数据库。
+这为你提供了一个连接对象，与存储在 `example.db` 文件中的数据库进行交互。如果文件不存在，`sqlite` 模块将创建一个新的数据库文件。如果你在程序运行期间需要数据库，可以给连接提供特殊文件名 `"memory:"` 以在 RAM 中创建数据库。
 
-现在你已经有了连接，你要用它做什么呢？第一步是创建一个游标（cursor）。
+
+
+现在你已经有了连接，你要用它做什么呢？第一步是创建一个游标（`cursor`）。
 
 ## “所有的 SQLite 代码都是你代码的一部分”
 
-在轻量级数据中，SQLite 是大多数环境下的标准。它以库的形式出现，提供对本地磁盘上文件支持数据库的访问。优点之一是它不需要运行服务器来管理数据库。所有的代码都在你的代码中。该语言是 SQL 的变体，这意味着你可以从 SQLite 开始项目，然后能够以极小的更改移动到更大的数据库。SQLite 相对轻量级，并作为 Python 的一部分包含。所以你应该已经安装了它。第一步是创建一个启动 SQLite 接口的连接对象：
+在轻量级数据中，`SQLite` 是大多数环境下的标准。它以库的形式出现，提供对本地磁盘上文件支持数据库的访问。优点之一是它不需要运行服务器来管理数据库。所有的代码都在你的代码中。该语言是 SQL 的变体，这意味着你可以从 `SQLite` 开始项目，然后能够以极小的更改移动到更大的数据库。`SQLite` 相对轻量级，并作为 Python 的一部分包含。所以你应该已经安装了它。第一步是创建一个启动 `SQLite` 接口的连接对象：
 
-- sqlite3
+- `sqlite3`
 - 用于处理语句的数据库游标
 
 ```python
 my_cursor.execute("CREATE TABLE people (name TEXT, phone_number TEXT)")
 ```
 
-第一件事是创建一个表来存储你的数据。通过执行以下代码，我们可以存储名称和电话号码：一旦你有数据来填充每列，SQLite 支持除 BLOB、INTEGER 和 NULL 以外的所有类型。将这些映射到 Python 类型。
+第一件事是创建一个表来存储你的数据。通过执行以下代码，我们可以存储名称和电话号码：一旦你有数据来填充每列，`SQLite` 支持除 `BLOB`、`INTEGER` 和 `NULL` 以外的所有类型。将这些映射到 Python 类型。
 
 ```python
 my_cursor.execute("INSERT INTO people VALUES (?, ?)", (my_name, my_number))
 ```
 
-虽然这是针对硬编码数据的，但对于从用户那里获取的数据，你应该检查并清理它，以确保没有 SQL 注入的风险。你可以在调用 execute 之前通过字符串处理来实现此。另一种选项是使用包含已存储数值的占位符的语句。这使得输入验证变得更容易处理。
+虽然这是针对硬编码数据的，但对于从用户那里获取的数据，你应该检查并清理它，以确保没有 SQL 注入的风险。你可以在调用 `execute` 之前通过字符串处理来实现此。另一种选项是使用包含已存储数值的占位符的语句。这使得输入验证变得更容易处理。
 
 ```python
 my_name = 'Joe Beard'
@@ -3317,27 +2833,27 @@ my_number = '555-5555'
 my_cursor.execute("INSERT INTO people VALUES (?, ?)", (my_name, my_number))
 ```
 
-语句中使用的值在一个元组（tuple）内提供。如果你有大量数据需要一次处理，可以使用 `executemany()` 方法。该方法接受一个包含每个条目的的可迭代对象，并将其作为一个数据块运行。
+语句中使用的值在一个元组（`tuple`）内提供。如果你有大量数据需要一次处理，可以使用 `executemany()` 方法。该方法接受一个包含每个条目的的可迭代对象，并将其作为一个数据块运行。
 
 ## 如果 SQLite 不够用？
 
-有时，取决于你的特定需求，即使是 SQLite 可能也不够。在这些情况下，你有另一个选择。有一个非常流行的数据库 dbm，它将数据存储为文件系统中一组键值对。因此，你需要添加类似下面的数据库代码。
+有时，取决于你的特定需求，即使是 `SQLite` 可能也不够。在这些情况下，你有另一个选择。有一个非常流行的数据库 `dbm`，它将数据存储为文件系统中一组键值对。因此，你需要添加类似下面的数据库代码。
 
 ```python
 import dbm
 db = dbm.open('example.db', 'c')
 ```
 
-现在数据库中有了数据，我们如何提取并处理它们呢？使用的基本 SQL 语句是 SELECT 语句，用于自动化报告获取电话号码。
+现在数据库中有了数据，我们如何提取并处理它们呢？使用的基本 SQL 语句是 `SELECT` 语句，用于自动化报告获取电话号码。
 
 ```python
 my_cursor.execute("SELECT phone_number FROM users WHERE name='John Bernard'")
 print(my_cursor.fetchone())
 ```
 
-你可以看到，你需要某种获取方法来获取实际结果。`fetchone()` 方法返回结果的第一行。如果没有内容，它会返回 None。如果你想分块处理结果值，可以使用 `fetchmany(size)` 方法，它在列表内返回多个项。如果你想从你的 SELECT 语句中获取所有项，可以使用 `fetchall()` 方法获取条目列表。
+你可以看到，你需要某种获取方法来获取实际结果。`fetchone()` 方法返回结果的第一行。如果没有内容，它会返回 `None`。如果你想分块处理结果值，可以使用 `fetchmany(size)` 方法，它在列表内返回多个项。如果你想从你的 `SELECT` 语句中获取所有项，可以使用 `fetchall()` 方法获取条目列表。
 
-有一类特殊的数据库函数，即聚合器（aggregators），你可以使用它们来获取一组值并应用聚合函数，如对所有值求和。然后可以使用 `createaggregate()` 将一个类注册到集合。聚合器需要提供一个用于聚合计算的 `step` 方法以及一个返回最终结果的 `final()` 方法。
+有一类特殊的数据库函数，即聚合器（`aggregators`），你可以使用它们来获取一组值并应用聚合函数，如对所有值求和。然后可以使用 `createaggregate()` 将一个类注册到集合。聚合器需要提供一个用于聚合计算的 `step` 方法以及一个返回最终结果的 `final()` 方法。
 
 你可能需要做的最后一件事是可以一次性插入大块 SQL 语句。在这种情况下，你将希望使用 `executany()` 方法。记住，`commit()` 方法仅仅是为了保存你的工作。如果你需要回滚更改，使用 `rollback()` 方法。有一个注意事项需要记住。当你有更复杂的查询时，你可能需要跟踪数据来源。游标对象的 `description` 属性返回最后执行查询的列名。这打开数据库并在如果不存在则创建。你可以给定键插入值，稍后检索。以下是存储名称/电话号码的示例。
 
@@ -3351,11 +2867,9 @@ db.get('John Bernard') = '555-5555'
 my_number = db.get('John Bernard')
 ```
 
-
-
-
 科技购买建议的来源
-techradar.com
+
+`techradar.com`
 
 ## 评测
 
@@ -3368,113 +2882,145 @@ techradar.com
 在舒适的桌面发行版中体验古老 Arch Linux 的优势，让安装过程变得不再痛苦。
 
 ### Antergos
+
 这是一个以其设计上的简单性为自豪的发行版。特别是 Manjaro，它附带了自定义的艺术设计和主题，提供了一个开箱即用的系统，安装后可能不需要任何额外步骤。
-https://antergos.com
+
+`https://antergos.com`
 
 ### Chakra GNU/Linux
-为桌面用户设计的受欢迎的基于 Arch 的发行版之一。Chakra 采用半滚动发布周期。该发行版的核心包仅接收安全漏洞更新，而其他包则采用滚动发布模式。
-https://chakralinux.org
+
+为桌面用户设计的受欢迎的基于 Arch 的发行版之一。`Chakra` 采用半滚动发布周期。该发行版的核心包仅接收安全漏洞更新，而其他包则采用滚动发布模式。
+
+`https://chakralinux.org`
 
 ## Manjaro Linux
+
 另一个基于 Arch 的发行版有其独特的一选择。该发行版提供三种不同的桌面环境 - Xfce、KDE 和 GNOME，且最新版本即将发布，这也是该项目最后一个支持 32 位硬件的版本。
-https://manjaro.org
+
+`https://manjaro.org`
 
 ## RevengeOS
-这个与众不同的发行版的核心在于选择 - 从它的六种桌面环境到默认应用程序。RevengeOS 的目标是提供一个易安装的 Arch 发行版，并通过其 Arch Linux 基础提供丰富的自定义选项。
-http://revengeos.weebly.com
+
+这个与众不同的发行版的核心在于选择 - 从它的六种桌面环境到默认应用程序。`RevengeOS` 的目标是提供一个易安装的 Arch 发行版，并通过其 Arch Linux 基础提供丰富的自定义选项。
+
+`http://revengeos.weebly.com`
 
 ## 基于 Arch 的发行版
 
 ### Antergos
+
 利用 Arch 巨大的仓库提供七种桌面选择。
 
 ### Chakra Linux
-KDE 的完美呈现，并配有匹配的应用选择。
 
-- 你可以通过非常有用的 Enchli 安装程序在 Antergos 仓库外，额外启用 Arch 用户仓库 (AUR)。
-- Chakra 有几个自定义仓库，包括一个受 Arch 仓库启发的社区维护仓库。
+`KDE` 的完美呈现，并配有匹配的应用选择。
+
+- 你可以通过非常有用的 Enchli 安装程序在 Antergos 仓库外，额外启用 Arch 用户仓库 (`AUR`)。
+- `Chakra` 有几个自定义仓库，包括一个受 Arch 仓库启发的社区维护仓库。
 
 ## 安装
+
 自制的、多语言 Enchli 安装程序在锚定发行版方面做得很好。它允许你从支持的桌面中选择，还可以安装类 Arch 的仅限 CLI 基础。分区操作对于新用户来说足够直观，并且有助于预安装应用的处理，例如将 ZFS home 目录放在单独的分区上。
 
 ## 安装
-Chakra 使用独立于发行版的 Calamares 安装程序。这就是为什么它可以轻松导航。像 Arch 一样，你可以调用自动分区磁盘，也可以让你修改分区。然而，Chakra 提供的选项没有 Antergos 那么多。
+
+`Chakra` 使用独立于发行版的 Calamares 安装程序。这就是为什么它可以轻松导航。像 Arch 一样，你可以调用自动分区磁盘，也可以让你修改分区。然而，`Chakra` 提供的选项没有 Antergos 那么多。
 
 ## 预安装应用
-Antergos 拥有多种实用的生产力应用。默认情况下使用 Chrome 浏览器，但你也可以在设置过程中安装 Firefox，同时获得引入 LibreOffice 和 Steam 的选项。默认还包括 Gnome 主题和配置编辑器，用于调整 Gnome 桌面。
+
+`Antergos` 拥有多种实用的生产力应用。默认情况下使用 Chrome 浏览器，但你也可以在设置过程中安装 Firefox，同时获得引入 LibreOffice 和 Steam 的选项。默认还包括 Gnome 主题和配置编辑器，用于调整 Gnome 桌面。
 
 ## 预安装应用
-Chakra 作为以 KDE 为中心的发行版展现了它的喜悦，这就是为什么它包含了一系列 KDE 应用，包括完整套件和其他 Qt 应用，如 Bomi 媒体播放器和轻量级 QupZilla 浏览器，而非功能更丰富的 Firefox。
+
+`Chakra` 作为以 KDE 为中心的发行版展现了它的喜悦，这就是为什么它包含了一系列 KDE 应用，包括完整套件和其他 Qt 应用，如 Bomi 媒体播放器和轻量级 QupZilla 浏览器，而非功能更丰富的 Firefox。
 
 ## 可用性
+
 项目的 Enchli 安装程序没有该项目的自定义工具。该发行版允许你在 Cinnamon、desktopin、KDE、Openbox 和 XFCE 之间进行选择。所有桌面都有自己的配置，并且通过丰富的桌面壁纸选择以及 Numix 主题得到了视觉关注。
 
 ## 可用性
-Chakra 使用包管理来维护其仓库。在易用性方面，KDE 倾向于重塑新用户，这使得 Chakra 最适合那些熟悉并习惯桌面的用户。
+
+`Chakra` 使用包管理来维护其仓库。在易用性方面，KDE 倾向于重塑新用户，这使得 `Chakra` 最适合那些熟悉并习惯桌面的用户。
 
 ## 帮助与支持
+
 该项目有一个非常活跃的论坛，设有支持板块。用于安装、解决新手疑问，以及开发环境、包及升级问题等。在分类良好的 wiki 中有几篇实用的文章，你也可以寻求项目的 IRC 频道。
 
 ## 帮助与支持
+
 该项目重构了其支持基础设施，开发者现在通过网站上的社区板块与用户进行互动。你可以找到旧 wiki 的链接，那里有帮助安装和管理该发行版的有用文章，而其他页面则只有骨架内容。
 
 ## 总体
-Antergos 是一个审美上悦的发行版。它的 Enchli 安装程序做得非常好，帮助用户自定义安装的各个方面，包括应用选择。
+
+`Antergos` 是一个审美上悦的发行版。它的 Enchli 安装程序做得非常好，帮助用户自定义安装的各个方面，包括应用选择。
 
 ## 总体
-Chakra 是一个基于 Arch、仅限 64 位的发行版，其目标是为用户提供 KDE 体验。对于那些对目标有要求的人来说，这是一个出色的桌面。
+
+`Chakra` 是一个基于 Arch、仅限 64 位的发行版，其目标是为用户提供 KDE 体验。对于那些对目标有要求的人来说，这是一个出色的桌面。
 
 ## Manjaro Linux
+
 通过其强大的自定义工具，帮助所有用户利用 Arch 的力量。
 
 ## RevengeOS
+
 一个轻量级发行版，带有帮助你选择和自定义的工具
 
-- 通过 MSM，你可以为连接的硬件安装专有驱动，并单击即可在它们之间切换。
+- 通过 `MSM`，你可以为连接的硬件安装专有驱动，并单击即可在它们之间切换。
 - 通过发行版的软件安装工具，你可以单击安装流行的和多媒体应用。
 
 ## 安装
-Manjaro 提供三种官方版本，虽然该项目没有推荐其中某一个，但我们使用了下载页面上列在第一的 Xfce 版本。所有版本都使用 Calamares 安装程序，允许你加密计划安装桌面的分区。
+
+`Manjaro` 提供三种官方版本，虽然该项目没有推荐其中某一个，但我们使用了下载页面上列在第一的 Xfce 版本。所有版本都使用 Calamares 安装程序，允许你加密计划安装桌面的分区。
 
 ## 安装
-RevengeOS 使用其自原生的 Nemesis 安装程序。它提供三种安装类型：Normal、OEM 和 StationX。安装程序的导航相当直观，允许你在两种桌面环境之间进行选择。分区步骤提供了自动安装选项，但也留了了 Gparted 用于手动分区。
+
+`RevengeOS` 使用其自原生的 Nemesis 安装程序。它提供三种安装类型：Normal、OEM 和 StationX。安装程序的导航相当直观，允许你在两种桌面环境之间进行选择。分区步骤提供了自动安装选项，但也留了了 Gparted 用于手动分区。
 
 ## 预安装应用
-Manjaro 包含了所有主流流行应用，如 LibreOffice 套件、GIMP、VLC、Firefox、Thunderbird、Steam 客户端等。桌面充满了来自 Xfce 的有用应用。如果你需要从仓库获取更多应用，Xfce 版本使用 Pacman 进行包管理和更新处理。
+
+`Manjaro` 包含了所有主流流行应用，如 LibreOffice 套件、GIMP、VLC、Firefox、Thunderbird、Steam 客户端等。桌面充满了来自 Xfce 的有用应用。如果你需要从仓库获取更多应用，Xfce 版本使用 Pacman 进行包管理和更新处理。
 
 ## 预安装应用
+
 在安装期间，你会看到一个欢迎界面，允许安装 LibreOffice、Wine、Steam 客户端等有用软件。除了这些，桌面还包含了预装的 virtualbox 虚拟机以及另一个安装 Nvidia 驱动的程序。还有一个自定义控件，用于访问管理系统各个方面的各种工具，从切换壁纸到安装桌面解码器和切换器。
 
 ## 可用性
-Manjaro 非常好用，因为它避免了常见的审美问题。Xfce 桌面遵循传统的桌面隐喻，将吸引大量的潜在用户。另一个加分项是项目的自定义工具——特别是 Manjaro 设置——允许用户利用 Arch 的优势。
+
+`Manjaro` 非常好用，因为它避免了常见的审美问题。Xfce 桌面遵循传统的桌面隐喻，将吸引大量的潜在用户。另一个加分项是项目的自定义工具——特别是 Manjaro 设置——允许用户利用 Arch 的优势。
 
 ## 支持
+
 欢迎界面链接到加入 Google+ 社区论坛，另一个是链接到该发行版相当活跃的论坛板块。在这里，你会找到同伴们讨论关于安装的问题以及你可能遇到的任何问题。网站还有一个 wiki，里面有一些你可能觉得很有用的文章。
 
 ## 帮助与支持
-Manjaro 在 Vimeo 上通过两段关于桌面方面及其发行版的视频与 Wiki 进行交流。他们的 wiki 相当详细且分类良好，项目举办了最完善的论坛和 IRC 频道。该发行版还捆绑了一个详细的 PDF 用户指南。
+
+`Manjaro` 在 Vimeo 上通过两段关于桌面方面及其发行版的视频与 Wiki 进行交流。他们的 wiki 相当详细且分类良好，项目举办了最完善的论坛和 IRC 频道。该发行版还捆绑了一个详细的 PDF 用户指南。
 
 ## 帮助与支持
 
 ## 总体
-Manjaro 的开发者付出的努力帮助用户体验 Arch 的力量。凭借其自定义工具和捆绑应用，开箱即用的桌面在功能和形式上都表现出色。
 
-RevengeOS 充斥着工具和脚本，是一个精制的发行版，在处理新用户和帮助他们掌握 Arch 方面做得非常好。
+`Manjaro` 的开发者付出的努力帮助用户体验 Arch 的力量。凭借其自定义工具和捆绑应用，开箱即用的桌面在功能和形式上都表现出色。
 
-
-
-
+`RevengeOS` 充斥着工具和脚本，是一个精制的发行版，在处理新用户和帮助他们掌握 Arch 方面做得非常好。
 
 ## 评测基于 Arch 的发行版
 
 ## 简要：对比我们的评结果
 
 | 安装 | Anteros | Chakra GNU/Linux | Manjaro Linux | RevengeOS |
+
 |---|---|---|---|---|---|
+
 | 安装 | 它的安装程序帮助你选择桌面，并具有智能分区选项。 | 8 | 使用 Calamar 安装程序，功能没有 Chun 那么强大，但运行良好。 | 7 | Calamar 安装程序为你提供了加密安装分区的选项。 | 8 | 它的 Nemesis 安装程序非常实用，并支持三种安装类型。 | 8 |
+
 | 预装应用 | 你可以使用 Firefox、LibreOffice 和 Steam 等已安装的应用。 | 8 | 作为一个仅限 KDE 的发行版，它内置了各种 Qt 应用程序。 | 8 | 包含了你在现代桌面环境中预期的所有内容。 | 9 | 安装程序帮助你选择桌面以及流行的日常应用。 | 8 |
+
 | 易用性 | 所有支持的桌面都经过了调优，非常好用。 | 8 | 仅选择 Qt 而非主流应用可能会是一个问题。 | 8 | 自定义工具和帮助使得使用和导航变得简单。 | 9 | 你可以管理整个桌面作为你的自定义控制中心。 | 9 |
+
 | 帮助与支持 | 除了帮助你找到任何可能问题的解决方法外，一无是处。 | 8 | 它不是最新的，但每个支持板块都能让你找到解决方案。 | 7 | 文字支持由 Vimo 频道的视频作为补充。 | 7 | 你可以获得 Google 页面帮助，或在论坛发布你的查询以寻求帮助。 | 7 |
+
 | 总体 | 一个外观智能的发行版，其安装程序让你能够自定义安装。 | 8 | 纯 KDE 体验用户的终极基于 Arch 的发行版。 | 8 | 让所有技能水平的用户都能体验 Arch 的力量和灵活性。 | 9 | 本质上是一场独角戏，包含了各种工具来塑造想象中的世界。 | 8 |
 
 ## # 冠军诞生了……
@@ -3485,15 +3031,15 @@ RevengeOS 充斥着工具和脚本，是一个精制的发行版，在处理新�
 
 ![](img/b0e5bcf1ba8a75a2b9418fda820e5cd0_83_0.png)
 
-该发行版展示了其对 KDE 用户的喜爱，有无数选择，但它并不是缺乏经验的用户的最佳环境。RevengeOS 是自定义工具的天才，但那种没有固定发布计划的独角戏的感觉对我来说有点过头了，尤其是视觉效果需要花费大量精力，而投入这些精力对每个人都是最好的。
+该发行版展示了其对 KDE 用户的喜爱，有无数选择，但它并不是缺乏经验的用户的最佳环境。`RevengeOS` 是自定义工具的天才，但那种没有固定发布计划的独角戏的感觉对我来说有点过头了，尤其是视觉效果需要花费大量精力，而投入这些精力对每个人都是最好的。
 
 最后，获胜者是在 Anteros 和 Manjaro 之间产生的。Anteros 的一个大优势是它在安装期间提供了多个桌面的选项。除了没有其他自定义工具外，它在视觉上也很易用。
 
-另一方面，Manjaro 包含了非常有用的 Manjaro 设置管理器（jaro Settings Manager），帮助用户利用 Arch 生态系统而无需陷入琐碎细节。它还装满了应用，可以开箱即用。
+另一方面，`Manjaro` 包含了非常有用的 Manjaro 设置管理器（`jaro Settings Manager`），帮助用户利用 Arch 生态系统而无需陷入琐碎细节。它还装满了应用，可以开箱即用。
 
 该项目拥有自己的专用软件仓库，提供经过彻底测试且稳定的软件，这些软件与 Arch 及其仓库配合良好，并可用于前沿软件。
 
-最后，Manjaro 仍然是极少数独立开发的、同时适用于 32 位和 64 位架构的发行版之一。
+最后，`Manjaro` 仍然是极少数独立开发的、同时适用于 32 位和 64 位架构的发行版之一。
 
 > Manoj Sharma
 
@@ -3509,9 +3055,9 @@ RevengeOS 充斥着工具和脚本，是一个精制的发行版，在处理新�
 - 创新、文化和极客文化的探索
 - 加入英国领先的在线科技社区
 
-www.gizmodo.co.uk
+`www.gizmodo.co.uk`
 
-twitter.com/GizmodoUK facebook.com/GizmodoUK
+`twitter.com/GizmodoUK` `facebook.com/GizmodoUK`
 
 ## 评测 iStore DiskAshur Pro 2
 
@@ -3524,7 +3070,7 @@ twitter.com/GizmodoUK facebook.com/GizmodoUK
 表面上是一个昂贵的便携硬盘，但良好的安全性从不廉
 
 - 价格：195 英镑起（约 249 美元）
-- 网站：https://istore.uk.com
+- 网站：`https://istore.uk.com`
 - 容量：500GB-5TB
 - 数据传输速度：高达 10Gbps（读/写）
 - 电源：USB 总线供电
@@ -3534,15 +3080,15 @@ twitter.com/GizmodoUK facebook.com/GizmodoUK
 - 尺寸：124mmx84mmx20mm (500GB/1TB, 2TB)
 - 重量：500GB/1TB/2TB, 3TB/4TB/5TB
 
-对于每天携带敏感信息的人来说，丢失携带信息的设备（或被盗）是一个一直的问题。diskAshur Pro 2 外硬盘是一个紧凑设备，旨在无需软件的安全运行。Pro 2 的零售价为
+对于每天携带敏感信息的人来说，丢失携带信息的设备（或被盗）是一个一直的问题。`diskAshur Pro 2` 外硬盘是一个紧凑设备，旨在无需软件的安全运行。Pro 2 的零售价为
 
 最后，获胜者是在 Anteros 和 Manjaro 之间产生的。Anteros 的一个大优势是它在安装期间提供了多个桌面的选项。除了没有其他自定义工具外，它在视觉上也很易用。
 
-另一方面，Manjaro 包含了非常有用的 Manjaro 设置管理器帮助用户利用 Arch 生态系统而无需陷入琐碎细节。它还装满了应用，可以开箱即用。
+另一方面，`Manjaro` 包含了非常有用的 Manjaro 设置管理器帮助用户利用 Arch 生态系统而无需陷入琐碎细节。它还装满了应用，可以开箱即用。
 
 该项目拥有自己的专用软件仓库，提供经过彻底测试且稳定的软件，这些软件与 Arch 及其仓库配合良好，并可用于前沿软件。
 
-最后，Manjaro 仍然是极少数独立开发的、同时适用于 32 位和 64 位架构的发行版之一。
+最后，`Manjaro` 仍然是极少数独立开发的、同时适用于 32 位和 64 位架构的发行版之一。
 
 > Manoj Sharma
 
@@ -3557,6 +3103,8 @@ twitter.com/GizmodoUK facebook.com/GizmodoUK
 如果错误输入代码十次，硬盘将重置加密密钥，导致内容无法访问。Pro 2 的零售价为。
 
 对于大多数人来说，Pro2 在安全性方面足够。
+
+
 
 以 65MB/s 的读取速度和 144MB/s 的写入速度，Pro2 内部的旋转磁盘确实有些门道。SSD 会更快（更大），但性能水平足够，并且像使用硬盘存储的 PC 一样快速。单元本身通过了认证，具有防水功能。额外的物理保护是键盘按键涂了环氧树脂。这使得很难判断哪些按键被定期擦除。
 
@@ -3577,10 +3125,6 @@ Mark Pickering
 一个能够处理物理滥用和恶意攻击的安全存储设备需要高昂的价格。这种经过深思的设计与精良设备的结合非常有吸引力。
 
 www.linuxuser.co
-
-
-
-
 
 ## Pop!_OS 17.10
 
@@ -3614,12 +3158,15 @@ System76 通过其 “Imagine” 营销活动（https://system76.com/imagine）�
 扁平 GTK 主题基于 Material GTK+，配有匹配的颜色和图标对。作为良好的开源支持者，System76 还在改进上游代码。Carl 告诉我们，他们正在改进 Gnome 的窗口聚焦和控制。一个让我们感到困难的 Gnome 主题是重新映射的键盘快捷键。Carl 与软件开发者的反馈密切合作，但需要对设置编辑器进行微调，以将其恢复到熟悉的 GNOME 值。另一个亮点是基于 elementary 的 AppCenter 的商店。Carl 告诉我们它使用了相同的搜索逻辑并处理列出的项目。如果你无法从 Pop!OS 显示的发行版中安装 Thunderbird 或 Ethereum 等应用，请告诉他们使用 APT。他们正在创建“应用程序切换器”，将帮助用户获取与特定任务相关的程序。
 
 ### 优点
+
 - 一个美感愉悦的 GNOME 环境，默认启用了实用的元素，并有一个直观的应用商店。
 
 ### 缺点
+
 - 一个极简的发行版，其默认应用程序选择可能无法满足其需求。
 
 ### 总结
+
 - 一个外观良好的发行版，不仅仅与官方网站相符。但背后做了大量工作，为未来的元素奠定了基础，并将帮助将该发行版推向完美的开发平台。
 
 Maya Sharma
@@ -3645,12 +3192,15 @@ Linux 不缺少可以作为轻量级 IDE 使用的高级文本编辑器，我们
 该项目为 Debian 系发行版提供了未编译的二进制文件。Carl 告诉我们，它正在改进 Gnome 的窗口聚焦并正确控制。一个让我们感到困难的 Gnome 主题是重新映射的键盘快捷键。Carl 与软件开发者的反馈密切合作，但需要对设置编辑器进行微调，以将其恢复到熟悉的 GNOME 值。另一个亮点是基于 elementary 的 AppCenter 的商店。Carl 告诉我们它使用了相同的搜索逻辑并处理列出的项目。如果你无法从 Pop!OS 显示的发行版中安装 Thunderbird 或 Ethereum 等应用，请告诉他们使用 APT。他们正在创建“应用程序切换器”，将帮助用户获取与特定任务相关的程序。
 
 ### 优点
+
 - 包含了所有的常用便利功能，可以通过插件扩展。
 
 ### 缺点
+
 - 你需要编辑配置文件来连接 Python 解释器。
 
 ### 非常适合...
+
 - 使用 IDE 编辑代码。http://viewsoft.com/cudatext/
 
 ## 潜水工具
@@ -3663,12 +3213,10 @@ Linus Torvalds 喜欢跟踪他所做的。他使用 Git 跟踪内核开发并使
 
 该项目为 Debian 系发行版提供了未编译的二进制文件。因此你需要按照在线文档中包含的所有方面的说明进行手动编译，并仔细阅读以获取该程序的所有功能。（注：原文中存在大量由于 OCR 错误导致的重复文本，已根据上下文进行清理和翻译）。
 
-
-
-
-
 # 在我们的目录中发布您的列表
+
 如在此广告，请联系 Chris
+
 chris.mitchell@futurenet.com | +44 01225 68 7832 (分机 7832)
 
 ## 推荐
@@ -3682,17 +3230,25 @@ chris.mitchell@futurenet.com | +44 01225 68 7832 (分机 7832)
 精选托管商：
 
 ### 关于我们
+
 作为始于 1999 年的托管品牌的一部分，我们历史悠久、总部位于英国、独立运营，我们的使命是——确保您的网络呈现“运行无忧”。
 
 我们提供极具性价比的域名、cPanel 托管、SSL 证书、企业邮箱、WordPress 托管、云和 VPS。
 
 + 我们提供的服务：
+
 - 带有欺诈、垃圾邮件和病毒保护的免费邮箱账户。
+
 - 免费 DNS 管理。
+
 - 易于使用的控制面板。
+
 - 免费邮件转发，自动将您的电子邮件重定向到现有账户。
+
 - 域名威胁保护，防止意外或未经您许可的情况下被转出。
+
 - 易于使用的工具，帮助您一步完成多个域名的注册、转让并进行其他更改。
+
 - 免费域名转发，将您的域名指向另一个网站。
 
 ![](img/b0e5bcf1ba8a75a2b9418fda820e5cd0_91_1.png)
@@ -3700,28 +3256,37 @@ chris.mitchell@futurenet.com | +44 01225 68 7832 (分机 7832)
 ## 专业人士提示
 
 + 01 优化您的网站图像
+
 在更新网站时，请确保所有的图像都经过了优化！尝试免费使用 imagejpeg.com 或使用 EWWW Image Optimizer 插件。
 
 **客户证言**
+
 David Brown
+
 我购买了一张 SSL 证书。购买过程非常轻松，只需几分钟时间。我的困难之处在于安装证书，这是我永远无法做到的。然而，我提交了一个支持工单，他们在几小时内就回复了，并帮助我获取证书签名授权，而且支持团队……
 
 + 02 在英国托管您的网站
+
 确保您的网站托管在英国，而不仅仅是对我们本地！如果您的服务器位于海外，您可能会在 google.co.uk 的搜索排名中受到惩罚——在 www.check-host 检查您的网站所在地。
 
 + 04 尝试在 Google 上排名？
+
 2015 年起。如果您正苦于在 Google 上获得排名，请确保您的网站是响应式的！Google 现在更倾向于移动端友好站点。联系我们的支持团队，我们将修复您网站的 HTTPS。
 
 Tracy Hope
+
 我们使用了 TheNames 的多服务，网络连接是顶级的——极高的可用性和运行速度。技术支持非常有帮助且回复迅速——这是额外的加分。我们非常推荐 TheNames。
 
 + 03 避开廉价托管
+
 我们见过许多尝试获取廉价托管的人！例如，一台服务器上会挤进多少客户？您宁愿使用 20 英镑的廉价硬盘，也不用 11 英镑以上的企业级 SSL！记住：一分钱分货！
 
 J Edwards
+
 在尝试了其他托管公司后，我们的客户服务似乎远胜其他，而且我分享的所有功能。共享托管速度很快，控制面板非常全面……
 
 + 03 您会定期备份吗？
+
 如果您今天丢失了网站，对您的业务会产生什么影响？始终进行自己的备份至关重要；如果……
 
 ## 高级托管
@@ -3740,11 +3305,15 @@ CWCS 托管托管是英国领先的托管专家，提供全系列的托管产品
 自2001年以来，BargainHost 一直致力于英国争取最低的云托管。它已成功实现这一目标，并建立了一个包含许多重复客户的大数据库，并因卓越的托管服务而获奖。
 
 - 托管机房
+
 - VPS
+
 - 100% 网络可用性
 
 - 共享托管
+
 - 云托管
+
 - 域名
 
 ![](img/b0e5bcf1ba8a75a2b9418fda820e5cd0_92_2.png)
@@ -3762,34 +3331,35 @@ www.220Media.com | www.220Media.com
 ## elastochosts
 
 elastochosts.co.uk
+
 0271 83256
 
 ![](img/b0e5bcf1ba8a75a2b9418fda820e5cd0_92_3.png)
 
 patchman-hosting.co.uk
+
 0162 442 237
 
 ElastoHosts 提供简单、灵活且高效益的云服务，具有高性能、可扩展性以及全球范围的支持。我们的团队……
 
 （注：提示中的 OCR 文本根据提供的输入在页面处似乎有重复/中断。我已按照要求处理了可用文本。）
 
-
-
-
-
 # 短篇
 
 ## 蒂芬·奥拉姆 (Stephen Oram)
 
 下期将于1月11日发售
+
 您的免费光盘 | 微软爱 Linux 吗？ | SBC 汇总
 
 关注我们
 
 Facebook:
+
 facebook.com/LinuxUserUK
 
 Twitter:
+
 @linuxusermag
 
 ## 近未来小说
@@ -3797,21 +3367,35 @@ Twitter:
 ## 碎片
 
 他赤条裸地站在全身镜前，收起着二头肌。
+
 镜子闪烁起琥珀色的警告，提醒他在扫描身体时保持静止，他希望是如此。它将评估他的健康状况，并调整散布在他全身各处的增强植入物，通过不断调节来最大限度地提升他的体能和心理表现。
+
 这种日常惯例让他感到被囚禁和逼入绝境，就像这面镜子是一个他几乎无法离开二十小时的接口。他想跑进海里，或者让自己醉醉；他想尽可能走得远一点。
+
 挣脱的压力在他内心积聚，以至于在撑过又一天之前，他感到双倍的窒息。
+
 当镜子的右上角向他靠近时，他收紧腹部肌肉并挺直背部。镜子咔哒一声落下，显示了他的档案，据他怀疑，还有一个中央数据库。
+
 他用尽全力紧握拳头。成千上万的碎片飞过地板。守护他健康的整体守护者被肢解了，散落在他周围。
+
 一种巨大的解脱感在他内心涌起。
+
 但真的是这样吗？
+
 镜子的碎片仍在孤立地工作，而他身体的不同部位正在选择它们自己的设置。
+
 他的手变暖了，脚变冷了。
+
 他的心脏在剧跳；胃部在抗拒，小腿肌肉却平静了。每当他的大脑检测到问题时，它就会告诉他不要担心，立即覆盖掉所有的警告。
+
 他意识到，这种肢解带来的痛苦和记忆遗失已触及了他存在的每一个部分。
 
 关于
+
 进食机器人
+
 节选自蒂芬·奥拉姆的新短篇小说集：探索梦想与扭曲现实、技术与人性之间碰撞的近未来小说。这30篇短篇小说将在你步入未来后出版。
+
 http://linuxeron.net
 
 早上好，今天你想成为什么样？
@@ -3819,13 +3403,15 @@ http://linuxeron.net
 电子前沿基金会（Electronic Frontier Foundation，简称 EFF）是捍卫数字世界公民自由的领先非营利组织。EFF成立于1990年，通过影响力性诉讼、政策分析、基层活动和技术开发，捍护用户隐私、自由表达和创新。我们致力于确保随着技术使用的增长，权利和自由能够得到增强和保护。
 
 ## EFF.ORG
+
 ## 电子前沿基金会 (ELECTRONIC FRONTIER FOUNDATION)
 
 在电子前沿保护权利并促进自由
 
 # 在黑胶片的世界中迷失自我
+
 在乐施会（OXFAM）在线商店中寻找自我
+
 oxfam.org.uk/shop
 
 乐施会 (OXFAM)
-

@@ -1,10 +1,9 @@
+
 # Bash 示例：Linux 脚本实用指南
-
-
 
 ![](img/image_rsrcPB.jpg)
 
-# 我是谁
+## 我是谁
 
 Tomas Gonzalez 是一位在计算机领域拥有丰富经验的专业人士。凭借在电脑商店 5 年的工作经验，他对技术相关产品和业务积累了深厚的知识。在商店工作期间，他在客户服务、问题解决以及计算机产品选择建议方面积累了技能。
 
@@ -14,7 +13,7 @@ Tomas 还涉足了教学领域，担任培训师并提供私人课程。在一�
 
 总结来说，Tomas Gonzalez 是一位在计算机领域丰富的专业人士，他是计算机产品专家、拥有丰富 `PHP` 和 `APIs` 经验的高级 Web 程序员，以及一位热于分享知识的培训师。他在电脑商店的实践经验、Web 开发和教学的结合，为他应对技术领域的各种挑战提供了坚实的基础。
 
-# 简介
+## 简介
 
 欢迎阅读《实例：在做中学学》（Bash by Examples: Learning by Doing），这本书旨在手手带你开启通通 `Bash` 命令行用户的兴奋之旅。在计算机世界中，理解如何高效与 `Unix/Linux` shell 交互不仅是一项价值巨大的技能，也是从软件开发人员到系统管理员以及数据科学家等 IT 专业人士的必备技能。
 
@@ -28,7 +27,7 @@ Tomas 还涉足了教学领域，担任培训师并提供私人课程。在一�
 
 让我们一起开启这段学习冒险，探索 `Bash` 庞大而强大的世界，发现我们如何通过实践和实验解锁新技能并开启新的可能性。欢迎阅读《实例：在做中学学 Bash》。是时候编写、运行和学习了！
 
-# 任务脚本
+## 任务脚本
 
 为了在 Bash 脚本中提供一个包含说明和解决方案的示例，我将首先定义一个简单的问题，然后向你展示如何用 Bash 脚本解决它。
 
@@ -38,7 +37,7 @@ Tomas 还涉足了教学领域，担任培训师并提供私人课程。在一�
 2. 如果目录存在，脚本应该列出其中的所有文件和目录。
 3. 如果目录不存在，脚本必须创建它。
 
-## Bash 脚本解决方案
+### Bash 脚本解决方案
 
 接下来，我向你展示解决上述问题的 Bash 脚本长什么样：
 
@@ -61,7 +60,7 @@ echo "Directory $directory created successfully."
 be
 ```
 
-## 如何使用脚本
+### 如何使用脚本
 
 1. 首先，你必须将脚本保存到文件中。例如，`check_directory.sh`。
 2. 接下来，你必须使用命令 `chmod +x verify_directory.sh` 给文件可执行权限。
@@ -69,13 +68,13 @@ be
 
 该脚本是一个基础示例，展示了如何在 Bash 脚本中处理参数、执行条件判断执行基本命令。要注意，更复杂的用例可能需要额外的检查，例如检查用户是否有创建目录的权限。
 
-### 编写一个 Bash 脚本，在给定目录的所有 .txt 文件中查找并替换单词
+### 编写一个 Bash 脚本，在给定目录的所有 `.txt` 文件中查找并替换单词
 
 目录和单词（搜索词和替换词）将作为参数传递给脚本。
 
-## Bash 脚本解决方案
+### Bash 脚本解决方案
 
-该脚本将使用三个参数：搜索 .txt 文件的目录、要查找的单词以及替换词。它将遍历给定目录中所有的 .txt 文件，查找目标单词并将其替换为替换词。
+该脚本将使用三个参数：搜索 `.txt` 文件的目录、要查找的单词以及替换词。它将遍历给定目录中所有的 `.txt` 文件，查找目标单词并将其替换为替换词。
 
 ```bash
 #!/bin/bash
@@ -99,7 +98,7 @@ echo "The directory $directory does not exist. Please check the path."
 be
 ```
 
-## 如何使用脚本
+### 如何使用脚本
 
 1. 将脚本内容保存到文件中，例如，`replace_word.sh`。
 2. 使用 `chmod +x replace_word.sh` 给文件赋予执行权限。
@@ -111,25 +110,27 @@ be
 
 如果 CPU 或内存使用超过特定阈值，脚本应发送警报（用控制台消息模拟）。CPU 和内存阈值以及进程名称将作为参数传递给脚本。
 
-## Bash 脚本解决方案
+### Bash 脚本解决方案
 
 ```bash
 #!/bin/bash
 ```
 
+#### 将参数赋值给变量
 
+```bash
+process_name=$1
+umbral_cpu=$2
+memory_threshold=$3
+```
 
-### 将参数赋值给变量
+#### 获取并评估进程资源使用的函数
 
-`process_name=$1`
-`umbral_cpu=$2`
-`memory_threshold=$3`
-
-### 获取并评估进程资源使用的函数
-
-`process_monitor()` {
+```bash
+process_monitor() {
   # 通过名称获取进程的 PID
   pid=$(pgrep -f $process_name)
+
   if [ -z "$pid" ]; then
     echo "未找到进程。请确保 '$process_name'正在运行。"
     exit 1
@@ -138,9 +139,11 @@ be
   # 获取进程的 CPU 和内存占用
   uso_cpu=$(ps -p $pid -o %cpu=)
   use_memory=$(ps -p $pid -o %mem=)
+
   # 将 CPU 和内存占用与阈值比较
   cpu_excedido=$(echo "$uso_cpu > $umbral_cpu" | bc)
   exceeded_memory=$(echo "$use_memory > $umbral_memory" | bc)
+
   if [ $cpu_excedido -eq 1 ]; then
     echo "警告：'$process_name' 的 CPU 使用率过高 (${cpu_usage}%)"
   fi
@@ -149,19 +152,26 @@ be
     echo "警告：'$process_name' 的内存使用率过高 (${memory_usage}%)"
   fi
 }
+```
 
-### 每分钟监控一次进程的循环
+#### 每分钟监控一次进程的循环
+
+```bash
 while true; do
   process_monitor
   sleep 60
 done
+```
 
-## 如何使用脚本
+### 如何使用脚本
 
 1. 将脚本内容保存到文件中，例如 `process_monitor.sh`。
 2. 使用命令给文件赋予执行权限：`chmod +x monitor_process.sh`。
 3. 运行脚本并提供进程名称以及 CPU 和内存阈值。例如：
-`./monitor_proceso.sh firefox 10 20`
+
+```bash
+./monitor_proceso.sh firefox 10 20
+```
 
 此命令将监控 Firefox 进程，如果 CPU 使用率超过 10% 或内存使用率超过 20%，将发出警报。
 
@@ -171,7 +181,7 @@ done
 
 该脚本应将备份保存到特定目录，并用创建日期和时间标记每个备份。源目录和目标目录将作为参数传递给脚本。此外，脚本应该删除旧备份，只保留最近的 3 个。
 
-## Bash 脚本解决方案
+### Bash 脚本解决方案
 
 此 Bash 脚本将使用 `rsync` 的文件传输效率对指定目录进行增量备份。你将使用 `date` 用时间戳标记每个备份，并结合 `find` 和 `rm` 来管理仅保留最近的 3 个备份。
 
@@ -209,20 +219,23 @@ echo "备份完成: $backup_name"
 echo "旧备份已删除，保留了最近的 3 个。"
 ```
 
-## 如何使用脚本
+### 如何使用脚本
 
 1. 将脚本保存到文件中，例如 `backup_incremental.sh`。
 2. 使用 `chmod +x backup_incremental.sh` 给文件赋予执行权限。
 3. 运行脚本并将源目录和目标目录作为参数。例如：
-`./backup_incremental.sh /path/a/source_directory /path/a/destination_directory`
+
+```bash
+./backup_incremental.sh /path/a/source_directory /path/a/destination_directory
+```
 
 此脚本简化了增量备份的过程，对于频繁变化但不需要每次都进行完整备份的数据特别有用。实现的保留策略确保了存储空间不会被浪费消耗。
 
-### 开发一个 Bash 脚本，检查提供的多个网站的可用性，并将每个的状态记录在日志文件中。
+### 开发一个 Bash 脚本，检查提供的多个网站的可用性，并将每个的状态记录在日志文件中
 
 脚本必须对每个网站发送 HTTP 请求并检查响应是否成功（HTTP 状态码 200）。对于每个网站，脚本应在控制台输出网站是上线还是离，并将此信息带时间戳记录到日志文件中。
 
-## Bash 脚本解决方案
+### Bash 脚本解决方案
 
 此脚本将使用 `curl` 向提供的参数网站发送 HTTP 请求。对于每个站点，它将检查响应的状态码，并将网站状态同当前日期时间记录到日志文件中。
 
@@ -241,10 +254,13 @@ fi
 ### 检查网站状态的功能
 verify_site() {
   site=$1
+
   # 发送 HTTP 请求并获取状态码
   status=$(curl -o /dev/null -s -w "%{http_code}\n" $site)
+
   # 获取当前日期时间
   date=$(date +"%Y-%m-%d %H:%M:%S")
+
   if [ $status -eq 200 ]; then
     echo "$date: $site 在线。" | tee -a $log_file
   else
@@ -258,22 +274,25 @@ for sitio in "$@"; do
 done
 ```
 
-## 如何使用脚本
+### 如何使用脚本
 
-1. 将脚本保存到文件中，例如 `verify_sites.sh`。
+1. 将脚本保存到文件中，例如，`verify_sites.sh`。
 2. 使用命令 `chmod +x verify_sites.sh` 给文件赋予执行权限。
 3. 运行脚本并将网站作为参数。例如：
-`./verificar_sitios.sh https://www.google.com https://www.ejemploente.com`
+
+```bash
+./verificar_sitios.sh https://www.google.com https://www.ejemploente.com
+```
 
 此命令将检查 Google 和一个不存在的网站的可用性，打印并记录状态。
 
 这种方法适用于简单地监控网站可用性并记录状态以备后审查。
 
-### 开发一个 Bash 脚本，将特定目录下的所有图像文件从一种格式转换为另一种。
+### 开发一个 Bash 脚本，将特定目录下的所有图像文件从一种格式转换为另一种
 
 例如，将所有图像从 JPEG 转换为 PNG。源目录和目标格式将作为参数传递给脚本。
 
-## Bash 脚本解决方案
+### Bash 脚本解决方案
 
 ```bash
 #!/bin/bash
@@ -308,21 +327,21 @@ done
 echo "总转换图像数量: $quantity"
 ```
 
-## 如何使用脚本
+### 如何使用脚本
 
-1. 将脚本保存到文件中，例如 `convert_images.sh`。
+1. 将脚本保存到文件中，例如，`convert_images.sh`。
 2. 使用命令 `chmod +x convert_imagenes.sh` 给文件赋予执行权限。
 3. 运行脚本提供图像目录、源格式和目标格式。例如：
-`./convertir_imagenes.sh /path/a/mis_imagenes jpeg png`
+
+```bash
+./convertir_imagenes.sh /path/a/mis_imagenes jpeg png
+```
 
 此脚本是批量转换图像的有用工具，特别是在处理大量文件或需要为要求特定格式的项目准备图像时。
 
-
-
-
 脚本必须允许用户通过参数指定目标目录。此外，你应该包含一个选项，让用户选择在报告中包含单个文件的详细信息，还是仅包含目录的总大小。
 
-## Bash 脚本解决方案
+### Bash 脚本解决方案
 
 此脚本将允许用户指定一个目录，并选择他们想要详细报告（包含文件）还是仅目录大小的摘要。你将使用 `du` 来计算大小，并使用 `sort` 对结果进行排序。
 
@@ -356,23 +375,31 @@ fi
 echo "报告已生成。"
 ```
 
-## 如何使用脚本
+### 如何使用脚本
+
+
 
 1. 将脚本保存到文件，例如 `reporte_sizes.sh`。
+
 2. 使用 `chmod +x report_sizes.sh` 给文件赋予执行权限。
+
 3. 运行脚本并将目标目录作为参数，可选地添加 `detailed` 单词以获取包含单个文件的报告。例如：
+
    - 对于仅限目录的报告：
+
      ```bash
      ./reporte_sizes.sh /path/a/my_directory
      ```
+
    - 对于包含文件的详细报告：
+
      ```bash
      ./reporte_sizes.sh /path/a/my_detailed directory
      ```
 
 此脚本对于系统管理员或需要监控目录空间使用情况的用户非常有用，能够让你快速识别占用空间最大的部分。
 
-### 开发一个 Bash 脚本来监控特定接口上的网络活动，并对任何超过用户定义阈值的额外数据使用进行记录。
+### 开发一个 Bash 脚本来监控特定接口上的网络活动，并对任何超过用户定义阈值的额外数据使用进行记录
 
 脚本必须允许用户通过参数指定网络接口和数据阈值（单位为 MB）。如果在规定时间内数据使用超过了阈值，必须将此事件记录在日志文件中。
 
@@ -418,16 +445,20 @@ done
 ## 如何使用脚本
 
 1. 确保你的系统中安装了 `vnstat`。如果没有安装，你可以使用发行版的包管理器进行安装，例如在 Debian/Ubuntu 上使用 `sudo apt-get install vnstat`。
+
 2. 将脚本保存到文件，例如 `monitor_red.sh`。
+
 3. 使用 `chmod +x monitor_red.sh` 给文件赋予执行权限。
+
 4. 运行脚本并将网络接口和 MB 为单位的数据阈值作为参数。例如：
+
    ```bash
    ./monitor_red.sh eth0 500
    ```
 
 此脚本对于系统管理员或关注网络使用情况的用户非常有用，特别是对于具有数据限制的连接，或为了识别网络上的异常活动。
 
-### 编写一个 Bash 脚本，生成过去 24 小时内指定目录及其子目录中修改过的文件列表，并将此列表通过电子邮件发送给指定用户。
+### 编写一个 Bash 脚本，生成过去 24 小时内指定目录及其子目录中修改过的文件列表，并将此列表通过电子邮件发送给指定用户
 
 要的目录和收件人邮箱地址将作为脚本的参数。
 
@@ -469,14 +500,18 @@ rm $temporary_file
 ## 如何使用脚本
 
 1. 将脚本保存到文件，例如 `send_files.sh`。
+
 2. 使用 `chmod +x send_files.sh` 给文件赋予执行权限。
+
 3. 在运行脚本之前，确保系统可以发送电子邮件。根据你的电子邮件供应商，可能需要配置 `sendmail` 或 `postfix`。
+
 4. 运行脚本并将要监控的目录和收件人邮箱作为参数。例如：
+
    ```bash
    ./send_files.sh /path/to/directory myemail@example.com
    ```
 
-### 创建一个 Bash 脚本，计算文件系统的空闲和使用空间，以用户可读的格式（例如 GB）并将结果发送给系统管理员。
+### 创建一个 Bash 脚本，计算文件系统的空闲和使用空间，以用户可读的格式（例如 GB）并将结果发送给系统管理员
 
 脚本参数将是管理员的邮箱地址。
 
@@ -516,11 +551,9 @@ fi
 rm $report_file
 ```
 
-
-
 此脚本对于需要了解所管理系统磁盘空间使用情况的系统管理员非常有用，允许他们在空间问题影响运行之前快速识别潜在的空间问题。
 
-### 创建一个 Bash 脚本，在 Linux 系统上自动创建用户账户，并分配主目录和默认密码。
+### 创建一个 Bash 脚本，在 Linux 系统上自动创建用户账户，并分配主目录和默认密码
 
 脚本必须接受用户名和默认密码作为参数。此外，在尝试创建用户之前，你应该检查该用户是否已于系统中。
 
@@ -558,16 +591,18 @@ fi
 ## 如何使用该脚本
 
 1. 将脚本内容保存到文件中，例如 `create_user.sh`。
+
 2. 使用 `chmod +x create_user.sh` 给文件赋予执行权限。
+
 3. 以超级用户身份运行脚本，并提供用户名和默认密码作为参数。例如：
 
-```bash
-sudo ./create_user.sh new_user password123
-```
+   ```bash
+   sudo ./create_user.sh new_user password123
+   ```
 
 此脚本简化了 Linux 系统上的用户管理，允许系统管理员和 IT 自动化人员快速创建带有默认设置的用户账户。在需要高效创建多个用户账户的环境中，它特别别有用。
 
-# 开发一个 Bash 脚本，查找并删除特定目录及其子目录中的重复文件。
+# 开发一个 Bash 脚本，查找并删除特定目录及其子目录中的重复文件
 
 脚本应该根据文件内容（SHA-256 哈希值）而不是文件名对文件进行比较。它应该通知用户发现的任何重复文件并删除副本，为每个文件仅保留一个实例。目标目录将作为参数传递给脚本。
 
@@ -625,16 +660,18 @@ echo "处理完成。重复文件已删除。"
 ## 如何使用该脚本
 
 1. 将脚本保存到文件中，例如 `remove_duplicates.sh`。
+
 2. 使用 `chmod +x remove_duplicates.sh` 给文件赋予执行权限。
+
 3. 提供目标目录作为参数运行脚本。例如：
 
-```bash
-./remove_duplicates.sh /path/to/my_directory
-```
+   ```bash
+   ./remove_duplicates.sh /path/to/my_directory
+   ```
 
 此脚本对于保持目录整洁非常有用，特别是对于那些容易堆积重复文件的目录，例如照片或文档集。在运行此脚本之前，备份您的数据很重要，以避免意外丢失重要文件。
 
-### 创建一个 Bash 脚本，将用户提供的目录列表备份到 tar.gz 文件。
+### 创建一个 Bash 脚本，将用户提供的目录列表备份到 tar.gz 文件
 
 脚本必须允许用户指定多个目录作为参数，以及备份文件的输出文件名。如果备份文件已存在，脚本应该通知用户并终止操作，以防止意外覆盖。
 
@@ -672,16 +709,18 @@ echo "成功备份目录到 $output_file。"
 ## 如何使用该脚本
 
 1. 将脚本内容保存到文件中，例如 `backup_directories.sh`。
+
 2. 使用 `chmod +x backup_directories.sh` 给文件赋予执行权限。
+
 3. 提供输出文件名和要备份的目录列表运行脚本。确保输出文件不存在。例如：
 
-```bash
-./backup_directories.sh my_backup.tar.gz /path/a/directory1 /path/a/directory2
-```
+   ```bash
+   ./backup_directories.sh my_backup.tar.gz /path/a/directory1 /path/a/directory2
+   ```
 
 此脚本使得创建多个目录的压缩备份变得简单，对于数据丢失预防非常有价值。适用于对系统或应用进行重大更改之前的备份。
 
-# 开发一个 Bash 脚本，将过去 7 天内修改的文件压缩到特定目录，创建一个以戳命名的 zip 文件。
+# 开发一个 Bash 脚本，将过去 7 天内修改的文件压缩到特定目录，创建一个以戳命名的 zip 文件
 
 脚本应允许用户将要压缩的文件源目录作为参数。
 
@@ -720,26 +759,26 @@ echo "过去 7 天内修改已压缩至 $file_name。"
 ## 如何使用该脚本
 
 1. 将脚本保存到文件中，例如 `compress_modified.sh`。
+
 2. 使用 `chmod +x compress_modified.sh` 给文件赋予执行权限。
+
 3. 提供源目录作为参数运行脚本。例如：
 
-```bash
-./compress_modified.sh /path/to/my_directory
-```
+   ```bash
+   ./compress_modified.sh /path/to/my_directory
+   ```
 
 此脚本对于对最近修改的文件进行定期备份非常有用，有助于版本管理和数据恢复。它也可以作为自动化备份系统或文件维护程序的一部分。
 
-### 创建一个 Bash 脚本，清理 Linux 系统特定用户的临时和缓存文件。
+### 创建一个 Bash 脚本，清理 Linux 系统特定用户的临时和缓存文件
 
 脚本必须允许管理员指定一组用户名作为参数。对于每个用户，脚本需要删除常见临时目录中的文件，并在存在浏览器缓存时清理它。
 
 ## Bash 脚本解决方案
 
-
-
-
-
 此脚本将遍历作为参数提供的用户名列表，检查临时目录和浏览器缓存目录是否存在。随后，它将清理这些目录以释放空间并可能提升系统性能。
+
+
 
 ```bash
 #!/bin/bash
@@ -786,14 +825,13 @@ echo "Cleanup completed."
 ## 如何使用该脚本
 
 1. 将脚本保存到文件中，例如，`clean_users.sh`。
-2. 使用 `chmod +x clean_users.sh` 给该文件赋予执行权限。
+2. 使用`chmod +x clean_users.sh`给该文件赋予执行权限。
 3. 以超级用户身份运行脚本，并提供用户名作为参数。例如：
 
 ```bash
 sudo ./clear_users.sh user1 user2
 ```
 
-注：此处示例文件名已与 `clean_users.sh` 保持一致。
+注：此处示例文件名已与`clean_users.sh`保持一致。
 
 该脚本在多用户环境中特别有用，在这些环境中，临时文件和浏览器缓存可能会堆积并占用大量的磁盘空间。它有助于保持系统的整洁高效，特别是在共享系统或教育和商业环境中。
-

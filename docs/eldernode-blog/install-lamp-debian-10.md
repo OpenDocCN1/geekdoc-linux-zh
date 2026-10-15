@@ -1,3 +1,4 @@
+
 # 如何在 Debian 10 - ElderNode 博客上安装 LAMP
 
 > 原文：<https://blog.eldernode.com/install-lamp-debian-10/>
@@ -6,19 +7,18 @@
 
 [更新]LAMP(Linux、Apache、MariaDB、PHP)堆栈是一组流行的开源软件，通常安装在一起以使服务器能够托管动态网站和 web 应用程序。每一层都代表了堆栈的一个基本层，它们一起可以创建一个数据库驱动的动态网站。Linux 是操作系统，Apache 是 HTTP 服务器，MariaDB 是数据库管理系统，PHP 是编程语言。在这篇文章中，你将学习如何在 Debian 10 上安装 LAMP。要购买自己的 **[Linux VPS](https://eldernode.com/linux-vps/)** ，看看 [Eldernode](https://eldernode.com/) 上可用的软件包，买下你考虑的所有东西。
 
-## **教程在 Debian 10 上逐步安装 LAMP**
+## 教程在 Debian 10 上逐步安装 LAMP
 
 为了帮助 web 应用程序工作，LAMP Stack 必须包括操作系统、web 服务器、数据库和编程语言。在本教程中，我们使用 [Mariadb](https://eldernode.com/mariadb-installation-on-debian-10/) 作为数据库管理系统。让我们执行以下步骤来开始并完成安装。和我们一起阅读这个指南，预览在 Debian 10 上安装 LAMP 的必要步骤。
 
-### **在 Debian 10 Linux 上安装 LAMP 的先决条件**
+### 在 Debian 10 Linux 上安装 LAMP 的先决条件
 
 如果您知道以下内容，本教程可能会更有用:
 
-_ 拥有 Sudo 权限和配置有 ufw 防火墙的非 root 用户。
+- 拥有 Sudo 权限和配置有 ufw 防火墙的非 root 用户。
+- 要设置，请按照 Debian 10 的[初始设置](https://eldernode.com/initial-setup-with-debian-10/)
 
-_ 要设置，请按照 Debian 10 的[初始设置](https://eldernode.com/initial-setup-with-debian-10/)
-
-### **如何安装 Apache 并更新防火墙**
+### 如何安装 Apache 并更新防火墙
 
 由于 Apache 是世界上最流行的 web 服务器之一，我们选择它来托管网站。
 
@@ -38,7 +38,7 @@ sudo apt install apache2
 sudo ufw app list
 ```
 
-您可以使用 *WWW* 配置文件来管理 web 服务器使用的端口。
+您可以使用 `WWW` 配置文件来管理 web 服务器使用的端口。
 
 **输出**
 
@@ -90,7 +90,7 @@ sudo apt install curl
 curl http://icanhazip.com 
 ```
 
-### **如何安装 MariaDB**
+### 如何安装 MariaDB
 
 在这一步中，您将安装数据库系统，以便能够为您的站点存储和管理数据。运行以下命令安装该软件:
 
@@ -104,7 +104,7 @@ sudo apt install mariadb-server
 sudo mysql_secure_installation
 ```
 
-刚安装完 MariaDB 时，在 prom 上按 ***进入*** 。而且由于 MariaDB 对 **root** 用户使用了特殊的认证方法，你需要键入 ***N*** 然后按 ***回车*** 。之后，您可以按下 ***Y*** 然后 ***输入*** 接受所有后续问题的默认设置。
+刚安装完 MariaDB 时，在 prom 上按 `Enter` 。而且由于 MariaDB 对 `root` 用户使用了特殊的认证方法，你需要键入 `N` 然后按 `回车` 。之后，您可以按下 `Y` 然后 `输入` 接受所有后续问题的默认设置。
 
 完成后，登录到 MariaDB 控制台:
 
@@ -124,7 +124,7 @@ Welcome to the MariaDB monitor.  Commands end with ; or \g.  Your MariaDB connec
 mariaDB [ (none) ] > CREATE DATABASE example_database; 
 ```
 
-创建新用户并授予他们对定制数据库的完全权限后，使用下面的命令将该用户的密码定义为一个*密码。*
+创建新用户并授予他们对定制数据库的完全权限后，使用下面的命令将该用户的密码定义为一个`password`。
 
 ```
 mariaDB [ (none) ] > GRANT ALL ON example_database.* TO 'example_user'@'localhost' IDENTIFIED BY 'password' WITH GRANT OPTION; 
@@ -142,7 +142,7 @@ mariaDB [ (none) ] > FLUSH PRIVILEGES;
 mariaDB [ (none) ] > exit
 ```
 
-要确认您有权访问 **example_database** 数据库，请在登录 MariaDB 控制台后键入以下命令。
+要确认您有权访问 `example_database` 数据库，请在登录 MariaDB 控制台后键入以下命令。
 
 然后，您可以退出 MariaDB shell:
 
@@ -162,7 +162,7 @@ mariaDB [ (none) ] > SHOW DATABASES;
 mariaDB [ (none) ] > exit
 ```
 
-### **如何在 Debian Linux 上安装 PHP**
+### 如何在 Debian Linux 上安装 PHP
 
 PHP 处理代码来显示动态内容和运行脚本，连接到 MariaDB 数据库来获取信息，并将处理后的内容交给 web 服务器来显示。为了确保 PHP 代码可以在 Apache 服务器下运行并与您的 MariaDB 数据库对话:
 
@@ -170,7 +170,7 @@ PHP 处理代码来显示动态内容和运行脚本，连接到 MariaDB 数据�
 sudo pt install php libapache2-mod-php php-mysql 
 ```
 
-让 Apache 首先查找一个**index.php**文件，然后通过下面的命令在一个具有 root 权限的文本编辑器中打开 **dir.conf** 文件:
+让 Apache 首先查找一个`index.php`文件，然后通过下面的命令在一个具有 root 权限的文本编辑器中打开 `dir.conf` 文件:
 
 ```
 sudo nano /etc/apache2/mods-enabled/dir.conf 
@@ -180,7 +180,7 @@ sudo nano /etc/apache2/mods-enabled/dir.conf
 <IfModule mod_dir.c>      DirectoryIndex index.html index.cgi index.pl *index.php* index.xhtml index.htm  </IfModule>
 ```
 
-在 **DirectoryIndex** 规范之后，将 PHP 索引文件移动到 **DirectoryIndex** 规范之后的第一个位置。
+在 `DirectoryIndex` 规范之后，将 PHP 索引文件移动到 `DirectoryIndex` 规范之后的第一个位置。
 
 ```
 <IfModule mod_dir.c>      DirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm  </IfModule>
@@ -192,7 +192,7 @@ sudo nano /etc/apache2/mods-enabled/dir.conf
 sudo systemctl reload apache2 
 ```
 
-运行这个命令来检查 **apache2** 服务的状态:
+运行这个命令来检查 `apache2` 服务的状态:
 
 ```
 sudo systemctl status apache2
@@ -206,7 +206,7 @@ sudo systemctl status apache2
 
 ### 如何为你的网站创建虚拟主机
 
-为了测试您的 PHP 环境，您需要创建一个新的虚拟主机。它允许你在一台 Apache 服务器上托管多个网站。为 **your_domain** 创建 web 根目录。
+为了测试您的 PHP 环境，您需要创建一个新的虚拟主机。它允许你在一台 Apache 服务器上托管多个网站。为 `your_domain` 创建 web 根目录。
 
 ```
 sudo mkdir /var/www/your_domain 
@@ -218,7 +218,7 @@ sudo mkdir /var/www/your_domain
 sudo chown -R $USER:$USER /var/www/your_domain 
 ```
 
-通过您喜欢的命令行编辑器，在 Apache 的 **sites-available** 目录中打开一个新的配置文件
+通过您喜欢的命令行编辑器，在 Apache 的 `sites-available` 目录中打开一个新的配置文件
 
 ```
 sudo nano /etc/apache2/sites-available/your_domain.conf 
@@ -228,7 +228,7 @@ sudo nano /etc/apache2/sites-available/your_domain.conf
 VirtualHost *:80>      ServerName your_domain      ServerAlias www.your_domain       ServerAdmin [[email protected]](/cdn-cgi/l/email-protection)      DocumentRoot /var/www/your_domain      ErrorLog ${APACHE_LOG_DIR}/error.log      CustomLog ${APACHE_LOG_DIR}/access.log combined  </VirtualHost>
 ```
 
-要启用该虚拟主机，请使用 **a2ensite** :
+要启用该虚拟主机，请使用 `a2ensite` :
 
 ```
 sudo a2ensite your_domain 
@@ -252,9 +252,9 @@ sudo apache2ctl configtest
 sudo systemctl reload apache2
 ```
 
-### **如何在你的 Web 服务器上测试 PHP 处理**
+### 如何在你的 Web 服务器上测试 PHP 处理
 
-在这一步中，您将确认 Apache 能够处理 PHP 文件请求。因此，在你的自定义 webroot 文件夹中创建一个名为**info.php**的新文件:
+在这一步中，您将确认 Apache 能够处理 PHP 文件请求。因此，在你的自定义 webroot 文件夹中创建一个名为`info.php`的新文件:
 
 ```
 nano /var/www/your_domain/info.php
@@ -282,7 +282,7 @@ http://your_domain/info.php
 serversudo rm /var/www/your_domain/info.php 
 ```
 
-### **如何从 PHP 测试数据库连接**
+### 如何从 PHP 测试数据库连接
 
 您可以使用数据库用户连接到 MariaDB 控制台:
 
@@ -324,17 +324,19 @@ mariaDB [ (none) ] > exit
 nano /var/www/your_domain/todo_list.php
 ```
 
-现在，将这些内容复制到您的 **todo_list.php** 脚本中:
+现在，将这些内容复制到您的 `todo_list.php` 脚本中:
 
 ```
 <?php  $user = "example_user";  $password = "password";  $database = "example_database";  $table = "todo_list";
 ```
 
+
+
 ```
 try {  $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);  echo "<h2>TODO</h2><ol>";  foreach($db->query("SELECT content FROM $table") as $row) {  echo "<li>" . $row['content'] . "</li>";  }  echo "</ol>";  } catch (PDOException $e) {  print "Error!: " . $e->getMessage() . "<br/>";  die();  }
 ```
 
-编辑完成后，保存并关闭文件。通过访问您网站的域名或公共 IP 地址，y 通过访问您网站的域名或公共 IP 地址。最后，您应该会看到您在测试表中插入的内容，如下所示:
+编辑完成后，保存并关闭文件。通过访问您网站的域名或公共 IP 地址，您应该会看到您在测试表中插入的内容，如下所示：
 
 ![php sample code on debian 10](img/399d6b5fd1f5bb72c34f55d338134aea.png)
 
@@ -342,4 +344,4 @@ try {  $db = new PDO("mysql:host=localhost;dbname=$database", $user, $password);
 
 ## 结论
 
-在这篇文章中。您学习了如何在 Debian 10 上安装 LAMP。此外，您可以安装 [Composer](https://blog.eldernode.com/install-composer-debian-10/) 用于 PHP 中的依赖和包管理，以改进您当前的设置。你也可以围绕这个主题继续阅读。所以，请参考[在 CentOS 8 上安装灯](https://blog.eldernode.com/install-lamp-stack-on-centos-8/)和 [Ubuntu 20.04](https://blog.eldernode.com/how-to-install-lamp-on-ubuntu-20-04/) 。
+在这篇文章中，您学习了如何在 Debian 10 上安装 LAMP。此外，您可以安装 [Composer](https://blog.eldernode.com/install-composer-debian-10/) 用于 PHP 中的依赖和包管理，以改进您当前的设置。您也可以围绕这个主题继续阅读。所以，请参考[在 CentOS 8 上安装灯](https://blog.eldernode.com/install-lamp-stack-on-centos-8/)和 [Ubuntu 20.04](https://blog.eldernode.com/how-to-install-lamp-on-ubuntu-20-04/)。

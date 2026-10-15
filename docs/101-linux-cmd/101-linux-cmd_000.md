@@ -1,3 +1,4 @@
+
 # 101 Linux 命令开源电子书
 
 这是一本开源的电子书，包含 101 个每个人都应该知道的 Linux 命令。无论你是 DevOps/SysOps 工程师、开发者，还是仅仅是一个 Linux 爱好者，你很可能在职业生涯的某个时刻需要使用终端。
@@ -24,7 +25,7 @@ DigitalOcean 于 2012 年成立，在纽约和马萨诸塞州的剑桥设有办�
 
 如需更多信息，请访问 [`www.digitalocean.com`](https://www.digitalocean.com) 或在 Twitter 上关注 [@digitalocean](https://twitter.com/digitalocean)。
 
-如果你刚开始使用 DigitalOcean，你可以通过这个推荐链接获得免费 $200 信用额度并启动自己的服务器：
+如果你刚开始使用 DigitalOcean，你可以通过这个推荐链接获得免费 `$200` 信用额度并启动自己的服务器：
 
 [DigitalOcean 免费赠送 $200 信用额度](https://m.do.co/c/2a9bba940f39)
 

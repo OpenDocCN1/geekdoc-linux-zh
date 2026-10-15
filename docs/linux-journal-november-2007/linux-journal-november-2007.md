@@ -1,32 +1,23 @@
+
 # Linux 日志 (2007年11月)
 
-
-
-
-
-
-
-
-# SCTP 多路复用
+## SCTP 多路复用
 
 自1994年以来：x 社区
 
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_0_0.png)
 
-# 访谈 RapidMind
+## 访谈 RapidMind
 
-# HPC 的现在与未来之王
+## HPC 的现在与未来之王
 
-# 高性能计算
+## 高性能计算
 
-
-
-
-# 由您掌控的企业级与高性能计算
+### 由您掌控的企业级与高性能计算
 
 行业领先的 4P x86 计算，通过双核或四核 AMD Opteron™ 处理器提升性能和能效。
 
-## 4路 XtremeWorkstation™
+#### 4路 XtremeWorkstation™
 
 - AMD Opteron™ 8000 系列处理器
 - 高达 128GB DDR2 533/667 内存
@@ -35,7 +26,7 @@
 - 2 个 PCI-E x16 插槽用于高端显卡
 - Windows® 或 Linux OS
 
-## 4路 3U XtremeServer™
+#### 4路 3U XtremeServer™
 
 - AMD Opteron™ 8000 系列处理器
 - 高达 128GB DDR2 533/667 内存
@@ -46,16 +37,17 @@
 - ServerDome 管理 – IPMI 2.0
 - Windows® 或 Linux OS
 
-欲了解更多信息，请访问 www.appro.com 或拨打 Apro 销售电话：800-927-5464。
+欲了解更多信息，请访问 `www.appro.com` 或拨打 Apro 销售电话：`800-927-5464`。
 
 AMD Opteron™ 处理器：
+
 - 支持四核无需无需更改数据中心基础设施即可容量
 - 使用高效 DDR2 实现最佳瓦特性能
 - 通过 Direct Connect 架构优化系统性能
 
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_1_0.png)
 
-# 管理任何数据中心。随时。随地。
+## 管理任何数据中心。随时。随地。
 
 在以下任何展会中与我们见面！
 
@@ -80,7 +72,7 @@ AMD Opteron™ 处理器：
 
 Avocent 构建硬件和软件，用于访问、管理和控制您数据中心中的任何 IT 资产（无论在线还是离线），使其和您的业务“始终在线”。
 
-访问我们的远程控制巡之旅。如需查询附近的地点，请访问 **www.avocent.com/remotecontrol.**。
+访问我们的远程控制巡之旅。如需查询附近的地点，请访问 `www.avocent.com/remotecontrol.`。
 
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_2_1.png)
 
@@ -88,17 +80,13 @@ Avocent。Avocent 标志和 The Power of Being® 是 Avocent Corporation 的注�
 
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_2_2.png)
 
-
-# 高性能计算
+## 高性能计算
 
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_3_0.png)
 
-# 专题
+## 专题
 
-
-
-
-# 敏捷。
+### 敏捷。
 
 有了 Coyote Point，你永远不必担心你的网络是否足够快或足够灵活。你很清楚它是。
 
@@ -106,76 +94,35 @@ Avocent。Avocent 标志和 The Power of Being® 是 Avocent Corporation 的注�
 
 了解为什么超过 2,000 家企业依赖我们来使他们的基础设施效益最大化。了解 Coyote Point 对您的 Web 和网络流量意味着什么。
 
-请写邮件至 info@coyotepoint.com 或拨打 1-877-367-2966。
+请写邮件至 `info@coyotepoint.com` 或拨打 `1-877-367-2966`。
 
-# 狼以闪电般响应。
+## 狼以闪电般响应。
+
 你的网络也应该是。
 
+## 专栏
 
-# 专栏
-
-
-# 深度
-
+## 深度
 
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_5_1.png)
 
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_5_2.png)
 
-# 笔记本
-
-# 笔记本
-
-# 笔记本
-
-# 笔记本
-
-# 笔记本
-
-# 笔记本
-
-# 笔记本
-
-# 笔记本
-
-# 笔记本
-
-# 笔记本
-
-# 笔记本
-
-# 笔记本
-
-# 笔记本
-
-# 笔记本
-
-# 笔记本
-
-# 笔记本
-
-# 笔记本
-
-# 笔记本
-
-# 笔记本。
+## 笔记本
 
 地址更改和订单请留 4-6 周处理时间。
+
 美国制造
 
 LINUX 是 Linux Torvalds 的注册商标。
 
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_7_6.png)
 
-
-
-
-
-## 32核处理器的力量
+### 32核处理器的力量
 
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_8_0.png)
 
-## 256GB 内存
+### 256GB 内存
 
 基于业界领先的 AMD Opteron™ 微处理器，HPC A808-32 服务器凭借最新的 I/O、网络、内存和高能效技术，提供了业界领先的可扩展 x64 处理能力。
 
@@ -188,17 +135,22 @@ HPC Systems, Inc. 专注于高性能计算（HPC 系统），是一家为金融�
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_8_1.png)
 
 HPC Systems, Inc.
+
 48009 Fremont Blvd
+
 Fremont, CA 94538
-Tel: 510-656-8282
-Fax: 510-656-8341
-E-mail: info@hpcsystems.com
+
+Tel: `510-656-8282`
+
+Fax: `510-656-8341`
+
+E-mail: `info@hpcsystems.com`
 
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_8_2.png)
 
 *AMD、AMD Opteron 以及 AMD 标志是 Advanced Micro Devices 及其在美国和其他国家子公司的注册商标。
 
-# 信件
+## 信件
 
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_9_0.png)
 
@@ -216,7 +168,7 @@ E-mail: info@hpcsystems.com
 
 这是技术的一种临时特性，让艺术家和唱片能够将表演变成可以买卖的商品。那时，少数艺术家可以录制并卖回卷轴，而当时他们购买煤炭和机器。有了我们的技术，世界依然如故，这是一个古老的警告，允许人们适应：适应或死亡。
 
-## 随你所愿
+### 随你所愿
 
 我想看到关于 Linux 内核中新的完全公平调度（Completely Fair）的细节，包括它在调度方面可能逊于其他地方以及它卓越的地方。我想看到对滴答（ticks）的解释，这在显著的节电方面特别有用。
 
@@ -224,15 +176,15 @@ Chris Thompson
 
 我们会考虑包含一篇文章，但如果我们有节电的解释，我们会包含有关滴答的信息——以及。
 
-## 街机游戏火热了！
+### 街机游戏火热了！
 
-我对比 Shawn Power 在 2007 年 8 月撰写的关于围绕 [Linux] 构建街机器的文章非常感兴趣。然而，有一点让我担心，因为这类系统缺乏成本说明。如果我用一个装在箱子里的 P4 做街机，这会对机器、CPU 和我们的硬盘造成多大损坏吗？wecode.com/energy/computer-power-hot/
+我对比 Shawn Power 在 2007 年 8 月撰写的关于围绕 `[Linux]` 构建街机器的文章非常感兴趣。然而，有一点让我担心，因为这类系统缺乏成本说明。如果我用一个装在箱子里的 P4 做街机，这会对机器、CPU 和我们的硬盘造成多大损坏吗？`wecode.com/energy/computer-power-hot/`
 
 URE 在不同时间运行时会消耗某些能量（测试在 Linux 提示符下是空闲的——P4 上的 IDE BIOS 使用的功耗明显高于 PIII）。我只能推测 PIII 和原始硬件的相对功率需求。
 
 Russell Coker
 
-Linux OS 是我们周围开发的最著名的 [文本] 种类。Linux 也是更大协作开发浪潮的一部分，利用开源技术来利用全球数千人的才华和创作冲动。廉价的 PIII 机器和 P2P 共享网络现在已经。
+Linux OS 是我们周围开发的最著名的 `[文本]` 种类。Linux 也是更大协作开发浪潮的一部分，利用开源技术来利用全球数千人的才华和创作冲动。廉价的 PIII 机器和 P2P 共享网络现在已经。
 
 这一趋势的直接证据来自 USB 驱动器，复制新的，并按照他们的意愿与朋友分享。这对我们来说并不容易，因为我们只是这群伪君子人口中的少数灵魂。他们是最大的。此外，可怜的路径现在更受欢迎，富有肥胖地附着在表面，那是他们所在的地方。
 
@@ -240,25 +192,26 @@ Linux OS 是我们周围开发的最著名的 [文本] 种类。Linux 也是更�
 
 RIAA 维持着许多方法防止破解进入文件。理论上存在更多的代码。
 
-## 不可避免的下降
+### 不可避免的下降
 
 读者可能想要阅读关于手机网络的全部内容。Carl Brown 建议这从根本上是连接手机网络的概念。它也是真实的，从范围内构建的块。如果我分享 Wi-Fi，在我的公寓里，我可以跨越街道连接到忙碌的市场……确实。
 
 这个想法并不是我发明的，尽管我最近想过。这个想法是显而易见的，支持的社区已经为许多人提供服务。ISP 并不喜欢它，但他们无能为力——我们只被允许上网。他们仍然依赖基础设施。
 
-另一个无序趋势的结果是一个项目被称为 Netsuku (netsuku.freak.net)。该项目创建了使用网络与相同守护进程的……
+另一个无序趋势的结果是一个项目被称为 Netsuku (`netsuku.freak.net`)。该项目创建了使用网络与相同守护进程的……
 
-8 | 2007 | www.linuxjournal.com
+8 | 2007 | `www.linuxjournal.com`
 
-# 服务器直接
+## 服务器直接
+
 直达来源！
 
 更多产品，更好的服务，保证。
 
-# 让你的业务运行顺畅
+## 让你的业务运行顺畅
 
+### SDR-1105T 1U 级服务器
 
-## SDR-1105T 1U 级服务器
 适用于通用应用程序的优秀服务器，价格低廉
 
 - 1U 机架式机箱配备 520W 电源
@@ -270,11 +223,7 @@ RIAA 维持着许多方法防止破解进入文件。理论上存在更多的代
 - 2x Intel® 8253E3 双千太网控制器
 - Intel® ESB2 SATA 3.0Gbps
 
-
-
-
-
-# 信件
+## 信件
 
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_11_0.png)
 
@@ -282,33 +231,33 @@ RIAA 维持着许多方法防止破解进入文件。理论上存在更多的代
 
 终极 Linux 盒子（Ultimate Linux Box）涉及到 Windows 游戏或运行 DirectX 10，而这对于 Windows 来说甚至并不可用。我们将考虑你对下一个 USB 设备的需求——Ed。
 
-# 为您服务
+## 为您服务
 
 我不自称能看到未来。我只是推断通信和数据管理可能会从精英阶层向大众发生不可逆的转移。如果你认为这是好事，如果你恐惧人们，或者他们无法控制自己的生活，你将会反抗它……而且
 
-# 保护内存
+## 保护内存
 
 我必须感谢 Ivar//opinion “仁慈的黑客” [2007年8月]
 
-# 杂志
+## 杂志
 
 你那位想象中的信件写者脱颖而出。我们读到的这篇评论会很容易认同，因为我们在字里行间看到了他们的观点得到了解决。幸运的是，《Linux Journal》，所以你不会因为我阅读了这篇文字代码而起诉我。
 
-印刷版订阅：续订订阅、更改支付方式、查看账户详情或其他订阅查询均可在 www.linuxjournal.com 在线完成。对于美国和加拿大以外的用户，您也可以拨打 1-800-66LINUX (54688)，或通过国际电子邮件联系我们：subs@linuxjournal.com，或向 Linux Journal, PO Box 98308, Houston, TX 77208-98308 提供您的姓名和地址与我们联系。
+印刷版订阅：续订订阅、更改支付方式、查看账户详情或其他订阅查询均可在 `www.linuxjournal.com` 在线完成。对于美国和加拿大以外的用户，您也可以拨打 `1-800-66LINUX (54688)`，或通过国际电子邮件联系我们：`subs@linuxjournal.com`，或向 Linux Journal, PO Box 98308, Houston, TX 77208-98308 提供您的姓名和地址与我们联系。
 
-# Tim Copeland
+## Tim Copeland
 
-# 实用型 Linux
+## 实用型 Linux
 
 我热切地等待本期 LI [2007年9月] 来评测 Linux 盒子计划。你的计划很快就会实施，并从中获得一些想法。
 
-# Kurt
+## Kurt
 
-数字订阅：Linux Journal 的数字订阅现已提供，并通过电子邮件递送。请访问 www.linuxjournal.com 了解更多信息，或获取我们任何所有相关服务的联系方式。
+数字订阅：Linux Journal 的数字订阅现已提供，并通过电子邮件递送。请访问 `www.linuxjournal.com` 了解更多信息，或获取我们任何所有相关服务的联系方式。
 
 我不公平地为被排除的事感到羞愧。我想要看到的是一个实用的 Linux 盒子。但你的“sedimenture”并没有比 ULB 更满足我的需求。你们的是免费的，不是吗？例如，看看显示图。它是最新、最强大的 DirectX 10！这怎么能是一个好的 Linux 盒子呢？
 
-编辑来信：我们欢迎您的来信，并鼓励您发送至 editor@linuxjournal.com 或通过邮寄至 Linux Journal, 7572 Market Street, 200, Seattle, WA 98101-9837。为了版幅和清晰起见，信可能会经过编辑。
+编辑来信：我们欢迎您的来信，并鼓励您发送至 `editor@linuxjournal.com` 或通过邮寄至 Linux Journal, 7572 Market Street, 200, Seattle, WA 98101-9837。为了版幅和清晰起见，信可能会经过编辑。
 
 我正在寻找的东西可能不是别人在寻找的，但我认为有些人是值得在某类文章中展示这个计划的，正如
 
@@ -322,7 +271,7 @@ if [ $? -ne 0 ]; then
 fi
 ```
 
-`-p` 将创建 $dimension 字符串中的所有目录，如果任何目录已存在，则不会冲突。这将为你未来的系统成为真正的特性。这是通过错误并向情况返回值来解释的。
+`-p` 将创建 `$dimension` 字符串中的所有目录，如果任何目录已存在，则不会冲突。这将为你未来的系统成为真正的特性。这是通过错误并向情况返回值来解释的。
 
 - 使用了静音/风扇电源。
 - 小型机箱，留有容纳 DVD 和两个硬盘的空间。
@@ -331,15 +280,15 @@ fi
 
 你可以辩说我想要一台媒体 PC，但那并不是我的目标。我估计我可以在 700 美元以下构建出一台符合我要求的系统，而不是一个静音 Linux 盒子或廉价 Linux 盒子。
 
-投稿：我们接受读者的贡献、文章和信件，可以在 www.linuxjournal.com 查看我们的编辑日历、主题和截止日期。
+投稿：我们接受读者的贡献、文章和信件，可以在 `www.linuxjournal.com` 查看我们的编辑日历、主题和截止日期。
 
-广告：Linux Journal 正在寻找像你这样的广告商。索取媒体包，查看我们的编辑费率，并在 www.linuxjournal.com 了解我们的营销机会。直接联系我们或拨打 417-334-3956 分机 0，ads@linuxjournal.com。
+广告：Linux Journal 正在寻找像你这样的广告商。索取媒体包，查看我们的编辑费率，并在 `www.linuxjournal.com` 了解我们的营销机会。直接联系我们或拨打 `417-334-3956` 分机 0，`ads@linuxjournal.com`。
 
-# 在线网站
+## 在线网站
 
-我们在 Linux Journal 网站上托管独家在线内容。过去的文章也可以在线查阅。订阅以获取完整版本、数字打印版或接收。有关更多信息，请联系 subs@linuxjournal.com。
+我们在 Linux Journal 网站上托管独家在线内容。过去的文章也可以在线查阅。订阅以获取完整版本、数字打印版或接收。有关更多信息，请联系 `subs@linuxjournal.com`。
 
-电子通讯报：每周，《Linux Journal》都会告诉你世界上的热点。订阅我们的周刊通讯报，获取链接、技巧和深度故事，立即订阅 www.linuxjournal.com。
+电子通讯报：每周，《Linux Journal》都会告诉你世界上的热点。订阅我们的周刊通讯报，获取链接、技巧和深度故事，立即订阅 `www.linuxjournal.com`。
 
 JT Moore
 
@@ -348,9 +297,11 @@ steeve
 10 | 2007年11月 # 使用 UniServer 最大 AMD Opteron™ 多核性能
 
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_12_0.png)
+
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_12_1.png)
 
 8 DIMM 插槽的 UniServer
+
 * 双核/四核 AMD Opteron™ 2000 系列
 * 高 32GB 内存
 * 热插拔 3.5 英 硬盘
@@ -364,6 +315,9 @@ steeve
 | 1U 服务器 | 1 & 2 插槽，高达 64GB 内存 |
 | 2U 服务器 | 2 & 4 插槽，高达 128GB 内存 |
 | 3U 服务器 | 2 & 4 插槽，高达 128GB 内存 |
+
+
+
 | 工作站 | 1, 2 & 4 插槽，高达 128GB 内存 |
 
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_12_2.png)
@@ -402,11 +356,8 @@ John Jonathan Campbell 开始编写补丁，以确保 386 等架构仅包含良�
 
 来源：1; 2; z.co.uk，由 Data Maker IJ UK 提供；1; 4; moneysnupermarket.com，由 Mark Muller 提供；5; 6-“扩展数字宇宙”，由 John F. Gantz 等人编写，2007 年 3 月 IDC 白皮书
 
-
-
-
-
 # EmperorLinux
+
 ...Linux 与笔记本电脑的交汇之处
 
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_14_0.png)
@@ -416,14 +367,23 @@ John Jonathan Campbell 开始编写补丁，以确保 386 等架构仅包含良�
 # Toucan T61/T61ws
 
 - 高达 15.4" WUXGA，分辨率支持 X@1920x1200
+
 - NVIDIA Quadro NVS 140 显卡
+
 - 1.8–2.4 GHz Core 2 Duo 处理器
+
 - 512 MB–4 GB 内存
+
 - 80–160 GB 硬盘
+
 - CDRW/DVD 或 DVD+DVDRW
+
 - 5.2–6.0 磅
+
 - 10/1000 Mbps 以太网
+
 - 802.11a/b/g (54Mbps) WiFi
+
 - 起价 $1650
 
 # 便携式
@@ -433,14 +393,23 @@ EmperorLinux 专注于在 IBM、联想、索尼和松下的各种顶级笔记本
 # Rhino D830/M6300
 
 - 高达 13.7" WUXGA，分辨率支持 X@1920x1200
+
 - NVIDIA Quadro FX 3500 显卡
+
 - 1.8–2.4 GHz Core 2 Duo/Extreme 处理器
+
 - 1 GB–8 GB 内存
+
 - 60–160 GB 硬盘
+
 - DVD+RW 或 蓝光
+
 - 6.3–8.6 磅
+
 - 802.11a/b/g (54Mbps) WiFi
+
 - ExpressCard/EVDO
+
 - 起价 $1365
 
 # 完美动力
@@ -448,15 +417,25 @@ EmperorLinux 专注于在 IBM、联想、索尼和松下的各种顶级笔记本
 # Raven X61 平板电脑
 
 - 联想 ThinkPad X61 Tablet
+
 - 12.1" SXGA+，分辨率支持 X@1400x1050
+
 - 1.6 GHz Core 2 Duo 处理器
+
 - 1–4 GB 内存
+
 - 80–120 GB 硬盘
+
 - 3.8 磅
+
 - 屏幕支持笔/电笔输入
+
 - 动态屏幕旋转
+
 - 手写识别
+
 - 提供 X61s 笔记本电脑
+
 - 起价 $2300
 
 # 独特
@@ -466,6 +445,7 @@ EmperorLinux 提供具有独特功能的 Linux 笔记本电脑。加固型松下
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_14_1.png)
 
 www.EmperorLinux.com 1-888-651-6686
+
 型号价格、规格和可用性可能有所不同。所有商标均为其所有者的财产。
 
 # TS-7800 嵌入式加固高性能设备
@@ -479,32 +459,41 @@ www.EmperorLinux.com 1-888-651-6686
 $269 q1 / $229 q10
 
 - 500 MHz ARM9
+
 - 全新设计——速度快 3 倍
+
 - 与 TS-72xx 后兼容
+
 - 低功耗——待机 4W
+
 - 128MB DDR 内存
+
 - 512MB 板载 Flash
+
 - 12K LTX 用户自定义 FPGA
+
 - 内部 PCI 总线，PC/104 接口
+
 - 2 个 USB 2.0 ABHR Mbps
+
 - 千兆以太网2 个 SD 插槽
+
 - 10 个串口 10 GIO
+
 - 5 位双向 2 个 SATA 接口
+
 - 速度模式使用 200 兆兹
+
 - 在 2 秒内启动 Linux
+
 - 默认使用 Linux 2.6 和 Debian
 
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_15_0.png)
 
 # 掀起社交浪潮
 
-（此处为重复内容，已根据要求不进行重复输出）
-
-
-
-
-
 # LINUX 杂志
+
 自1994年以来。Linux内核的正版杂志
 
 # [ 前言 ]
@@ -516,15 +505,19 @@ $269 q1 / $229 q10
 # 数字版现已发售！
 
 抢先阅读
+
 在报刊亭上架前获取最新期
 
 # 关键词搜索
+
 数秒内找到主题或名称
 
 # 无纸化存档
+
 下载到您的电脑，方便离线阅读
 
 # 同样的精彩杂志
+
 以高品质 PDF 格式阅读每期
 
 # 活泼的 N800 极客
@@ -544,6 +537,7 @@ Puppy 的 Albio 除了 Puppy 的开放性外，最大的不同在于它是一个
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_17_2.png)
 
 如果我们的客户从我们这里获得带宽，并且他们想与邻居分享，这并不意味着他们是坏客户。
+
 - Joe Plotkin, www.businessweek.com/technology/content/ju2002/cc2002073_1130.html
 
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_17_3.png)
@@ -555,6 +549,7 @@ Puppy 的 Albio 除了 Puppy 的开放性外，最大的不同在于它是一个
 每天工作都知道大量公司正在使用你的软件，然后联系你获取额外价值，这种感觉很令人兴奋。这绝非易事，但比私有模型要高效、高产出得多。
 
 - Matt Agass, blogs.net.com/
+
 8301-1350-1_976220-16.html?part=rss&feed=feed&subject=TheOpenRoad
 
 # 试读期刊！ www.linuxjournal.com/digital
@@ -566,11 +561,15 @@ Puppy 的 Albio 除了 Puppy 的开放性外，最大的不同在于它是一个
 以太网传输 ATA（ATA-over-Ethernet） = 快速、可靠、简单的存储。
 
 - 1. 千兆以太网存储，无 TCP/IP 开销！
+
 - 2. 无限可扩展性，处于最低价格点！！
+
 - 3. 你想要更多存储……你只需买更多磁盘——就这么简单
 
 EtherDrive® SRxxxx
+
 带有热插拔 SATA 磁盘槽的快速灵活的 RAID 设备
+
 查看我们完整的 EtherDrive® 存储和虚拟化存储设备以及 NAS 网关
 
 访问我们的网站 www.coraid.com
@@ -587,7 +586,7 @@ EtherDrive® SRxxxx
 
 ## 显示日期或时间，过去或未来
 
-在 Linux/Unix 平台上工作时，经常发现获取过去或未来的日期和时间非常有用。无论是调度任务、搜索具有特定日期的文件，还是比较过去或未来的日期和时间，我最终不得不写了一个程序，叫做 `showdate`。它用 C 语言编写，也可以移植到 Linux 上。你可以从 ftp.linuxjournal.com/pub/listings/issue_16/showdate.tgz 下载它。
+在 Linux/Unix 平台上工作时，经常发现获取过去或未来的日期和时间非常有用。无论是调度任务、搜索具有特定日期的文件，还是比较过去或未来的日期和时间，我最终不得不写了一个程序，叫做 `showdate`。它用 C 语言编写，也可以移植到 Linux 上。你可以从 `ftp.linuxjournal.com/pub/listings/issue_16/showdate.tgz` 下载它。
 
 获取源码后，使用 C 编译器汇编 `showdate`：
 
@@ -595,17 +594,24 @@ EtherDrive® SRxxxx
 showdate -c
 ```
 
-将可执行文件存放在 /usr/local/bin 或你选择的目录，并在不带任何参数的情况下调用它：
+将可执行文件存放在 `/usr/local/bin` 或你选择的目录，并在不带任何参数的情况下调用它：
 
 - -f 根据格式指令显示日期和时间。`e` 和 `f` 选项是不兼容的。`showdate` 的默认输出可以通过格式指令进行调整，这与标准的 `date` 命令相同。重要的是，所有的格式化都是相对于当前日期（now）的正偏移（未来）或负偏移（过去）执行的。熟悉任何工具的好方法是理解它的工作原理。例如，显示十年前的日期和时间，取决于：
 
-showdate 用法:
+`showdate` 用法:
+
 - -y [+years] 年
+
 - -m [+months] 月
+
 - -d [+days] 天
+
 - -h [+hours] 小时
+
 - -M [+minutes] 分
+
 - -s [+seconds] 秒
+
 - -e: 自 Unix 元（1970 年 1 月 1 日）以来经过的秒数
 
 ```
@@ -634,15 +640,20 @@ showdate 5 -m 2 -d 23 -f %Y-%m-%d
 showdate -m 2 -f %Y-%m-%d -d 23 -y 5
 ```
 
-然而，将它们组合在同一个命令行中可能会导致意外的结果。如果现在是 2003 年 1 月 1 日凌晨 12:00:00，showdate 输出：
+然而，将它们组合在同一个命令行中可能会导致意外的结果。如果现在是 2003 年 1 月 1 日凌晨 12:00:00，`showdate` 输出：
 
-showdate 识别以下命令行选项和参数：
+`showdate` 识别以下命令行选项和参数：
 
 - -y [+years]: 当前年份过去或未来的年数。
+
 - -m [+months]: 当前月份过去或未来的月份数。
+
 - -d [+days]: 当前日期过去或未来的天数。
+
 - -h [+hours]: 当前小时过去或未来的小时数。
+
 - -M [+minutes]: 当前分钟过去或未来的分钟数。
+
 - -s [+seconds]: 当前秒过去或未来的秒数。
 
 上面的命令显示过去 8 个月 32 分钟的日期和时间，而下面的显示未来 8 个月但 32 分钟前的日期和时间：
@@ -661,7 +672,7 @@ showdate -m 8 -m 32
 
 ## 技巧
 
-showdate 的功能可以指定子任务调度时间。当你想要调度 12 分钟 35 秒后的批处理时：
+`showdate` 的功能可以指定子任务调度时间。当你想要调度 12 分钟 35 秒后的批处理时：
 
 ```
 $ showdate -l -p -d
@@ -673,7 +684,7 @@ showdate -M 12 -s 35 -f %Y%m%d%H:%M:%S | xargs -f job-file -t
 
 当前日期和时间被记录为自已经过的秒数。这个数字存储在符号长型中，这意味着在 32 位系统上，计数将一直持续到 UTC 2038 年 1 月 19 日 03:14:08，此时值将溢出变为负数。如果日期超过此类限制，将返回错误：
 
-假设你在第一个目录 (/home/sangeeth/soft/release2/src/) 有更改。要从你创建的目录列表中删除该目录，请执行：
+假设你在第一个目录 (`/home/sangeeth/soft/release2/src/`) 有更改。要从你创建的目录列表中删除该目录，请执行：
 
 ```
 $ popd
@@ -683,13 +694,13 @@ $ popd
 $ showdate: required time exceeds system limit
 ```
 
-上面的命令删除了顶部目录 (/home/sangeeth/soft/release2/src/) 并切换到顶层目录，即第二个目录 (/home/sangeeth/soft/release2/scw/）。
+上面的命令删除了顶部目录 (`/home/sangeeth/soft/release2/src/`) 并切换到顶层目录，即第二个目录 (`/home/sangeeth/soft/release2/scw/`）。
 
-或者，可以通过提供其 ID（使用 dirs -l -p 显示在旁边）从目录列表中弹出特定目录：
+或者，可以通过提供其 ID（使用 `dirs -l -p` 显示在旁边）从目录列表中弹出特定目录：
 
 ## Push 和 pop
 
-dirs 命令结合 push 和 pop 可以有效跟踪用户的更改。假设你必须对以下目录中的文件进行一些更改：
+`dirs` 命令结合 `push` 和 `pop` 可以有效跟踪用户的更改。假设你必须对以下目录中的文件进行一些更改：
 
 ```
 $ push /home/sangeeth/soft/release2/src/
@@ -702,15 +713,25 @@ $ pop /home/sangeeth/soft/release2/doc/
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_20_0.png)
 
 - * Cirrus Logic EP9302
+
 - * 200 MHz 处理器
+
 - * 浮点数学引擎
+
 - * 2 USB 端口主机
+
 - * SD/MC 闪存槽
+
 - * 48 数字 GPIO 线
+
 - * 1/100 Base-T 以太网端口
+
 - * 5 路12 位 A/D & 3 路 PWM
+
 - * 1 RS232 & 1 RS485 串口
+
 - * 电池备份实时时钟/日历
+
 - * Eclipse Linux 环境
 
 要列出所有目录，执行以下操作：
@@ -719,32 +740,34 @@ $ pop /home/sangeeth/soft/release2/doc/
 
 格式化中的空格必须用引号转义（双引号或单引号）。使用命令显示 18 小时 30 分钟后的年-月-日:时:分格式为：
 
+
+
 ```
 $ showdate -h -18 -M 30 -f "%Y-%m-%d %H:%M:%S"
 ```
 
-更多可用选项可以通过查看 man 页获取
+更多可用选项可以通过查看 `man` 页获取
 
 Sandeep
 
-如果你发现 Bug 或需要改进算法，实现编码快捷或有效利用资源可以改进程序，请通过电子邮件与我联系：ssashore@yahoo.com。
-showdate 设计用于根据命令行选项计算并显示日期和时间。下一步是增强 showdate 以指定周并允许它更改日期。
+如果你发现 Bug 或需要改进算法，实现编码快捷或有效利用资源可以改进程序，请通过电子邮件与我联系：`ssashore@yahoo.com`。
 
-
-
-
+`showdate` 设计用于根据命令行选项计算并显示日期和时间。下一步是增强 `showdate` 以指定周并允许它更改日期。
 
 # Linux 以纯正 64 位形式重生 - 告别遗留，自由飞翔。
+
 开启 Linux 性能的新纪元。
 
-www.pure-linux.com
+`www.pure-linux.com`
 
 # 独一
 
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_21_0.png)
 
 PureOS 和 PureOS 标志是 Infinitch 的商标。
+
 Pure64 和 Pure64 标志是 Infinitch 的商标。
+
 Linux 是 Linux Foss 的注册商标。© PureOS Inc. 保留所有权利。
 
 # 纯净
@@ -755,14 +778,16 @@ Linux 是 Linux Foss 的注册商标。© PureOS Inc. 保留所有权利。
 
 动力、速度与性能，于一体
 
-www.infi-tech.com/pure64
+`www.infi-tech.com/pure64`
 
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_22_0.png)
 
 体验纯正的 64 位计算。
+
 拥有纯粹性能、纯粹速度的工作站。
 
 INFITECH
+
 1-800-560-6550
 
 为了极致速度和性能，我们推荐 Pure64
@@ -801,10 +826,6 @@ RSS 和 Atom 在今天仍然流行。这些分发馈最常见的用途是博客�
 
 例如，著名的开发公司 Signals 为其 Highrise 联系人管理系统提供了近期活动的 Atom 馈。这对于你或你的团队聚合多个源源的信息非常有帮助。
 
-
-
-
-
 在这种情况下，无神者无法使用我上面提到的任何协议。相反，Facebook 使用了多种协议和技术与您的 Web 应用进行通信，使得您的程序能够在 Facebook 应用程序旁边显示它们的输出。此外，Facebook 让您的应用程序能够获得访问用户 Facebook 权限，即使您没有后端数据库的权限，仍然可以获取（并显示）有关用户朋友的一些信息。您的应用程序可以向用户的朋友发送消息，尽管 Facebook 发现这会导致垃圾邮件，所以这似乎正是在这个平台上发生的事情。
 
 而且，尽管 Amazon、Google 和 eBay 已经证明了以平台为中心的观点的重要作用，但 Facebook 正在引领第三方应用程序的连接。诚然，到目前创建的大多数 Facebook 应用都是简单或微不足道的。但我们可以预计，这些应用程序随着时间的推移会变得越来越复杂实用。Facebook 对开发者开放有利于所有人——甚至是像 MySpace 和 LinkedIn 这样的竞争对手，它们目前似乎仍然独立的网站，而不是应用程序平台。
@@ -818,13 +839,14 @@ RSS 和 Atom 在今天仍然流行。这些分发馈最常见的用途是博客�
 > Reven Lerner 是一位资深 Web/数据库开发者和顾问，是西北大学学习社区的博士候选生，研究在线学习社区。在芝加哥地区生活四年后，他最近带着妻子和三个孩子回了位于以色列莫迪的家。
 
 ## 专家加入。
+
 Kim 为行业内最全面的服务器和存储产品之一提供专业、专注的客户支持。
 
 她非常高兴介绍新的 Rackform R141U 服务器，该服务器为入门级服务器带来了卓越的性能和成本效益。R141 配备了四核 Intel® Xeon 3200 系列处理器，提供了高效的能源利用性能和 Intel 的可靠性。凭借四核性能、多达 8 GB 的 DDR2 内存和四个热插拔 SATA 硬盘，R141 具有灵活性，可以有效地为小型企业服务，或作为高性能计算集群的核心。
 
 当您与 Silicon Mechanics 合作时，您获得的不仅是可靠的 Intel 解决方案——您还得到了像 Kim 这样的支持专家。
 
-访问 www.siliconmechanics.com 或拨打免费电话 886-352-1173
+访问 `www.siliconmechanics.com` 或拨打免费电话 886-352-1173
 
 Silicon Mechanics 和 Silicon logo 是 Silicon Mechanics Inc. 的注册商标。Intel、Intel logo、Xeon 和 Xeon Inside 是 Intel 公司及其在美国和其他国家子公司的商标或注册商标。
 
@@ -842,7 +864,7 @@ Silicon Mechanics 和 Silicon logo 是 Silicon Mechanics Inc. 的注册商标。
 
 啊，欢迎来到马塞尔的夜晚，精美的菜单配有世界顶级葡萄酒——也就是今晚除外。看来我了不起的侍者丢失了酒窖的钥匙。别担心，*我的朋友们*（mes amis），我知道来自葡萄的液体水果——好啤酒，比葡萄酒更好或相当。所以，今晚我们将配以*啤酒冰箱*中的精选产品。请让弗朗索为您提供出色的选择，这些都是我的最爱，包括 Alexander Knights' India Ale、Kilkenny Irish Cream、Stephen's Original、Boutique Maudite 等。
 
-正如你们所知道的，伙计，这个问题关乎他们的性能，我们都只能提到赛车和汽车。如果“高性能 Linux”没有立即在你的脑海中产生同样的联系，你就知道事实上，Linux 和赛车的发展非常好。2007 年的印第纳利斯 500 大赛出现了第一辆 Linux 赞助的赛车。Ken Starr（又名 Helios）的 Tux500 项目成功筹集了足够的资金，将由 Larry Ewing 创建的著名的 Linux 标志放在 Indy 赛车的引擎盖上。更多详细信息，请访问 **www.tux500.com**。
+正如你们所知道的，伙计，这个问题关乎他们的性能，我们都只能提到赛车和汽车。如果“高性能 Linux”没有立即在你的脑海中产生同样的联系，你就知道事实上，Linux 和赛车的发展非常好。2007 年的印第纳利斯 500 大赛出现了第一辆 Linux 赞助的赛车。Ken Starr（又名 Helios）的 Tux500 项目成功筹集了足够的资金，将由 Larry Ewing 创建的著名的 Linux 标志放在 Indy 赛车的引擎盖上。更多详细信息，请访问 **`www.tux500.com`**。
 
 图 1. Tux500 Indianapolis 赛赛——注意引擎盖下的标志。
 
@@ -859,9 +881,11 @@ Silicon Mechanics 和 Silicon logo 是 Silicon Mechanics Inc. 的注册商标。
 ### 你渴望已已的四核处理器
 
 - 高达 16 核心和 128GB DDR2 RAM
+
 - 高达 32 核心和 256GB DDR2 RAM
 
 PERFORMANCEWARE 1680
+
 PERFORMANCEWARE 5870
 
 ## 惊人的性能与可靠性
@@ -869,14 +893,17 @@ PERFORMANCEWARE 5870
 在平庸的丛林中
 
 了解如何可以将多少硬核计算挤进紧凑型服务器中
+
 Pogo Linux 在配备 4 路 PerformanceWare 1680 和 8 路 PerformanceWare 5870 上提供配备四核 AMD Opteron 处理器的 Linux。四核 AMD Opteron 在单片硅片上采用原生四核技术，以全速在核心之间移动数据，以实现更高效的数据共享。AMD 革命性的 Direct Coherent Architecture 消除了传统侧边总线架构固有的瓶颈，实现了高吞吐响应和可扩展性，从而提高了整体系统效率。对于最严苛的数据库应用、高性能计算和服务器虚拟化，PerformanceWare 1680 和 PerformanceWare 5870 提供了经济尺寸的价格。今天就联系 Pogo 吧！
 
 经验、想象与支持。
+
 Pogo Linux 是为 Linux 构建的硬件解决方案，为为您打造。
 
-www.polinux.com
+`www.polinux.com`
 
-要开始，请拨打 888.828.POGO 或联系 sales@polinux
+要开始，请拨打 888.828.POGO 或联系 `sales@polinux`
+
 Pogo Linux, Inc. 701 Fifth Ave. Suite 8680, Seattle, WA 98104
 
 AMD, Athlon, Xeon XP 和 AMD logo 是 Advanced Micro Devices 及其在美国和其他国家子公司的注册商标。
@@ -897,36 +924,49 @@ AMD, Athlon, Xeon XP 和 AMD logo 是 Advanced Micro Devices 及其在美国和�
 
 所有这些软件包都可以从各自的网站以源代码形式获取。但在开始编译（除非你想这样做，或者检查一下），请检查你发行版的软件存储库是否有二进制包。在任何情况下，我找包都没有困难。
 
-
-
-
-
 ## 多核
 
 并行编译器与工具
+
 - PGDBG MPI & OpenMP 并行调试器
+
 - Fence & Engine
+
 - 适用于 AMD 和 Intel 的统一二进制文件
+
 - Windows/Linux
+
 - 64 位优化版 Windows Mac
+
 - Windows 版 Fortran
+
 - Linux 性能分析
+
 - Visual Studio
+
 - 世界顶的性能内存计数器执行
+
 - PGF-95 PGCC 和 PGC++ 编译器
+
 - 层次结构优化
+
 - 高效原生 OpenMP 并行
+
 - PGPROF MPI & 多核优化
+
 land 集团
+
 - 低开销自动 OpenMP
+
 - 统一跨平台多核编译器与工具
-- www.pggroup.com
+
+- `www.pggroup.com`
 
 ## 在 LINUX 中烹饪
 
-专为那些了解赛车手狂热状态的人士准备。这款游戏被形象地命名为 ManiaDrive，是一款速度极快的游戏，拥有赛道转弯、惊心动魄的跳跃、背景音乐（ManiaDrive 6）以及震撼的体验。ManiaDrive 实际上是 Nadeo Studio 的《Trackmania》游戏的克隆版。ManiaDrive 包含训练模式，让你为实战做好准备，并可以与其他玩家在线对战。你可以从 maniaadrive.radium.org 开始驾驶。
+专为那些了解赛车手狂热状态的人士准备。这款游戏被形象地命名为 ManiaDrive，是一款速度极快的游戏，拥有赛道转弯、惊心动魄的跳跃、背景音乐（ManiaDrive 6）以及震撼的体验。ManiaDrive 实际上是 Nadeo Studio 的《Trackmania》游戏的克隆版。ManiaDrive 包含训练模式，让你为实战做好准备，并可以与其他玩家在线对战。你可以从 `maniaadrive.radium.org` 开始驾驶。
 
-当你启动 ManiaDrive 时，确保阅读“新手故事”，它将引导你完成各项要求的动作。当你准备好接受挑战时，选择“专业故事模式”。这个游戏与其说是一场比赛，不如说是一场耐力测试。时钟计时，你的速度会被记录（在线针对他人或其他本地），因为比赛持续时间短，不到一分钟。如果你准备好应对这一点，可以从 maniaadrive.radium.org 开始驾驶。
+当你启动 ManiaDrive 时，确保阅读“新手故事”，它将引导你完成各项要求的动作。当你准备好接受挑战时，选择“专业故事模式”。这个游戏与其说是一场比赛，不如说是一场耐力测试。时钟计时，你的速度会被记录（在线针对他人或其他本地），因为比赛持续时间短，不到一分钟。如果你准备好应对这一点，可以从 `maniaadrive.radium.org` 开始驾驶。
 
 图 6。是的，它看起来就是那样。路上有一个巨大的缺口。踩油门，跳跃，保持直行，并保持你的……
 
@@ -938,82 +978,129 @@ land 集团
 
 还有比这更多的选项，我会继续发现它们，但我想提到另一组可能重要的设置。鉴于这是一个 OpenGL 游戏，并且它需要性能较低的显卡的硬件 3D 加速，可能会发现游戏有些缓慢。
 
-Marcel Garcia 是一位住在安大略省滑特铁卢的作者兼作家。他是全获奖作品《Miguel Winter》的作者（可从 book-domain.com 获取免费书籍）。他经常发表出版物寻求 Lewis 的帮助。Garcia 还是一位诗人、顶级漫画作家、科幻小说作家以及《The Legend!》的作者。你可以通过电子邮件 marcel@mgdomain.com 与他联系。你可以从他的网站 www.marcelgaia.com 发现许多其他事物，包括极好的葡萄酒链接。
+Marcel Garcia 是一位住在安大略省滑特铁卢的作者兼作家。他是全获奖作品《Miguel Winter》的作者（可从 book-domain.com 获取免费书籍）。他经常发表出版物寻求 Lewis 的帮助。Garcia 还是一位诗人、顶级漫画作家、科幻小说作家以及《The Legend!》的作者。你可以通过电子邮件 `marcel@mgdomain.com` 与他联系。你可以从他的网站 `www.marcelgaia.com` 发现许多其他事物，包括极好的葡萄酒链接。
 
-在比赛时，你可以通过按 F5 更改视角。如果你发现自己完全被屏幕上的控制所吸引，并想要记录这一刻，可以随时按 F12 截图。这些图像出现在你主目录下的 .vdrift/screenshots 文件夹中。
+在比赛时，你可以通过按 F5 更改视角。如果你发现自己完全被屏幕上的控制所吸引，并想要记录这一刻，可以随时按 F12 截图。这些图像出现在你主目录下的 `.vdrift/screenshots` 文件夹中。
 
 # 资源
-- ManiaDrive: maniaadrive.radium.org
-- SuperKart: superkart.de
-- VDrift: vdrift.net
-- Marcel 的网页: www.marcelgaia.com
-- WFT-LG 在线小组: www.marcelgaia.com/wft.html
-- 菜单上的最后一项是完美的选择 2007年11月 | www.linux.com
+
+- ManiaDrive: `maniaadrive.radium.org`
+
+- SuperKart: `superkart.de`
+
+- VDrift: `vdrift.net`
+
+- Marcel 的网页: `www.marcelgaia.com`
+
+- WFT-LG 在线小组: `www.marcelgaia.com/wft.html`
+
+- 菜单上的最后一项是完美的选择 2007年11月 | `www.linux.com`
 
 ## Polywell 终极系统
+
 ## 更多选择。卓越支持，超值！
+
 - $399 1U 起步 8GB RAM
+
 - $399 1U 起价 $299
+
 - $399 1U-48A5A Xeon, 5GB DDR2, 80GB (仅限硬盘)
-- $499 1U-68A5A Athlon, 5GB DDR2, 80GB (仅限硬盘)
-- $699 1U-69A5A Athlon 双核, 6GB DDR2, 80GB (双链接)
-- $999 1U-69A5A Athlon 双核, 6GB DDR2, 240GB (双路)
-- $299 1U-6100 Athlon 64x2, 512MB RAM, 80GB
-- $499 1U-7050A Athlon 64x2, 5GB DDR2, 500GB (DVD)
-- $499 1U 高级版, 高达 64GB RAM, 4TB
-- $1,799 1U-95A5A Athlon 64x4, 8GB DDR2, 2TB4x500 HD, 双路
-- $2,999 1U-25016A x2 Opteron 2212, 16GB DDR2, 1.TB3x500 HD, 双路
-- $5,999 1U-25016A x4 Opteron 2212, 32GB DDR2, 2TB4x500 HD, 双路 (64GB+4TB)
-- $10,799 1U-41H5S324 Opteron 2212, 64GB DDR2, 24TB6x4 SAS, 双路 (最高 128GB)
+
+
+
+- `$499 1U-68A5A Athlon, 5GB DDR2, 80GB (仅限硬盘)`
+
+- `$699 1U-69A5A Athlon 双核, 6GB DDR2, 80GB (双链接)`
+
+- `$999 1U-69A5A Athlon 双核, 6GB DDR2, 240GB (双路)`
+
+- `$299 1U-6100 Athlon 64x2, 512MB RAM, 80GB`
+
+- `$499 1U-7050A Athlon 64x2, 5GB DDR2, 500GB (DVD)`
+
+- `$499 1U 高级版, 高达 64GB RAM, 4TB`
+
+- `$1,799 1U-95A5A Athlon 64x4, 8GB DDR2, 2TB4x500 HD, 双路`
+
+- `$2,999 1U-25016A x2 Opteron 2212, 16GB DDR2, 1.TB3x500 HD, 双路`
+
+- `$5,999 1U-25016A x4 Opteron 2212, 32GB DDR2, 2TB4x500 HD, 双路 (64GB+4TB)`
+
+- `$10,799 1U-41H5S324 Opteron 2212, 64GB DDR2, 24TB6x4 SAS, 双路 (最高 128GB)`
 
 ## 低成本 NAS
-## $2.0TB 起价 $999
-- $999 网硬盘 4000 2x500G
-- $1,499 网硬盘 6000 1TB 4x500G (2U)
-- $2,999 网硬盘 6000 1TB 6x500 (2U)
+
+## `$2.0TB 起价 $999`
+
+- `$999 网硬盘 4000 2x500G`
+
+- `$1,499 网硬盘 6000 1TB 4x500G (2U)`
+
+- `$2,999 网硬盘 6000 1TB 6x500 (2U)`
 
 ## 1U 双路 Opteron
-- $299 1U-6100 Athlon 64x2, 512MB RAM, 80GB
-- $4     DDR2, 80)
-- $499 1U-7050A Athlon 64x2, 5GB DDR2, 500GB (DVD)
-- $499 1U 高级版, 高达 64GB RAM, 4TB
-- $1,799 1U-95A5A Athlon 64x4, 8GB DDR2, 2TB4x500 HD, 双路
-- $2,999 1U-25016A x2 Opteron 2212, 16GB DDR2, 1.TB3x500 HD, 双路
-- $5,999 1U-25016A x4 Opteron 2212, 32GB DDR2, 2TB4x500 HD, 双路 (64GB+4TB)
-- $10,799 1U-41H5S324 Opteron 2212, 64GB DDR2, 24TB6x4 SAS, 双路 (最高 128GB)
+
+- `$299 1U-6100 Athlon 64x2, 512MB RAM, 80GB`
+
+- `$4 DDR2, 80)`
+
+- `$499 1U-7050A Athlon 64x2, 5GB DDR2, 500GB (DVD)`
+
+- `$499 1U 高级版, 高达 64GB RAM, 4TB`
+
+- `$1,799 1U-95A5A Athlon 64x4, 8GB DDR2, 2TB4x500 HD, 双路`
+
+- `$2,999 1U-25016A x2 Opteron 2212, 16GB DDR2, 1.TB3x500 HD, 双路`
+
+- `$5,999 1U-25016A x4 Opteron 2212, 32GB DDR2, 2TB4x500 HD, 双路 (64GB+4TB)`
+
+- `$10,799 1U-41H5S324 Opteron 2212, 64GB DDR2, 24TB6x4 SAS, 双路 (最高 128GB)`
 
 ## 高密度多处理器服务器
+
 ## 1U 到四路, 八路 Opteron, 最高 128GB RAM
-- $11,999 2U-BL425S x4 Opteron 8212, 64GB DDR2, 4TB 500G RAID-5, 双路
-- $32,999 2U-BL425S x4 Opteron 8216, 128GB DDR2, 2x73GB 15K SAS, 双路
-- $14,999 5U-55H5S x4 Opteron 8212, 64GB DDR2, 14TB 2x500, 双路
-- $36,999 5U-55H805 x7 Opteron 8212, 128GB RAM, 24TB 8x500 HD
+
+- `$11,999 2U-BL425S x4 Opteron 8212, 64GB DDR2, 4TB 500G RAID-5, 双路`
+
+- `$32,999 2U-BL425S x4 Opteron 8216, 128GB DDR2, 2x73GB 15K SAS, 双路`
+
+- `$14,999 5U-55H5S x4 Opteron 8212, 64GB DDR2, 14TB 2x500, 双路`
+
+- `$36,999 5U-55H805 x7 Opteron 8212, 128GB RAM, 24TB 8x500 HD`
 
 ## 6TB 双路存储服务器 201C-2055
-- $2,999 4TB 8x500G, Opteron
-- $3,999 6TB 2x1000G, Optteron
+
+- `$2,999 4TB 8x500G, Opteron`
+
+- `$3,999 6TB 2x1000G, Optteron`
 
 ## 刀片服务器 - 10 双路或四路刀片
-- $13,999 10 x 2050A Blades 10 (Dual) Opteron 2210, 48GB RAM, 80GB
-- $24,999 10 x 25016A Blades 10 (Dual) Opteron 2212, 16GB RAM, 80GB
-- $48,999 10 x 4254A Blades 10 (Quad) Opteron 2212, 16GB RAM, 80GB
-- $69,999 10 x 8450A Blades 10 (Dual) Opteron 2214, 32GB RAM, HD
+
+- `$13,999 10 x 2050A Blades 10 (Dual) Opteron 2210, 48GB RAM, 80GB`
+
+- `$24,999 10 x 25016A Blades 10 (Dual) Opteron 2212, 16GB RAM, 80GB`
+
+- `$48,999 10 x 4254A Blades 10 (Quad) Opteron 2212, 16GB RAM, 80GB`
+
+- `$69,999 10 x 8450A Blades 10 (Dual) Opteron 2214, 32GB RAM, HD`
 
 ## 24TB 四路存储服务器 20245S 4U
-- $12,799 12TB 8x500G, Optteron
-- $24,999 24TB 4x1000G, Optteron
+
+- `$12,799 12TB 8x500G, Optteron`
+
+- `$24,999 24TB 4x1000G, Optteron`
 
 Polywell OEM 服务, 您的虚拟营销人员
+
 支持 Linux/FreeBSD 的原型开发
+
 从小规模到大规模的部署
+
 履行、货运和 RMA 服务
 
-
-
-
-
 # 专栏
-操作 Shell 之术
+
+## 操作 Shell 之术
 
 # 在大骰子（Yahtzee）中计分
 
@@ -1025,7 +1112,7 @@ DAVE TAYLOR
 
 大骰子的基本思想是投掷五枚骰子以获得可能的数值组合。然后根据计分卡对其进行评分，计分卡提供了各种组合的分数——从每个骰子1分到“五条相同”（大骰子方式）。
 
-如果我们将游戏中的所有数组都填充一个已知值，例如 -1，那么测试某个单元格是否已填充的方法是：快速访问 Google 查一下大骰子计分表——在我们继续之前看一眼：www.google.com/images/sheets/yahtzee.jpg
+如果我们将游戏中的所有数组都填充一个已知值，例如 -1，那么测试某个单元格是否已填充的方法是：快速访问 Google 查一下大骰子计分表——在我们继续之前看一眼：`www.google.com/images/sheets/yahtzee.jpg`
 
 ```php
 if ($scores[$i] != -1) {
@@ -1050,15 +1137,15 @@ function sortDice($dice) {
 
 你可以通过达到某些水平获得奖金，例如总分达到至少63分可获得63分奖金，但计分表非常直观。那么，游戏的关键在于弄清楚如何计分。如果你投了一次，你是想把你的得分计为四条相同还是你的点数？如果两者都已满了呢！你会把决定权交给玩家，但仍然留了一个问题：如何模拟计分表上的奖金，以及如何界面提示用户选择为哪个单元格计分。让我们来看看。
 
-当你使用变量对结果值进行排序时，而我正在使用一个子 shell——那个 $index——来完成任务。这个函数最困难的部分是弄清楚如何正确将值放入数组中，这是通过循环完成的。注意，巧合的是，无序的字段通过空格（缩进）隔开，因此它将结果序列返回数组中。
+当你使用变量对结果值进行排序时，而我正在使用一个子 shell——那个 `$index`——来完成任务。这个函数最困难的部分是弄清楚如何正确将值放入数组中，这是通过循环完成的。注意，巧合的是，无序的字段通过空格（缩进）隔开，因此它将结果序列返回数组中。
 
 # 将计分表建模为数组
 
 对于大多数这类数据结构，我们将使用数组来模拟计分表。数一数计分表上的单元格，我们总共将使用13个单元格，包括可以投掷——并获得多个分的大骰子单元格（该游戏有13次投掷，但可以更多）。
 
-Dave Taylor 是 Elm Team 的一名24岁UNIX专家，他最近是畅销书《Shell Scripts》和《24小时自学Shell脚本》的作者。他有16本技术书籍。他的主站是 www.intuitive.com，他还在 DaveTaylor.com 提供技术支持。
+Dave Taylor 是 Elm Team 的一名24岁UNIX专家，他最近是畅销书《Shell Scripts》和《24小时自学Shell脚本》的作者。他有16本技术书籍。他的主站是 `www.intuitive.com`，他还在 `DaveTaylor.com` 提供技术支持。
 
-32 | 2002年11月 www.linuxjournal.com
+32 | 2002年11月 `www.linuxjournal.com`
 
 # 超微刀片 (SUPERmicroBlade)
 
@@ -1069,28 +1156,38 @@ Intel处理器刀片配备3.5英寸热插拔驱动器
 AMD 四处理器刀片机箱管理模块
 
 7U 内置160 核心（40个处理器）和640GB 内存
+
 90%+ 功率效率
 
 - 采用 Intel® Xeon® 和 AMD Opteron DP/MP
+
 - 可容纳高达10/14 个服务器刀片
+
 - 六个外壳适配一个 42U 机架
+
 - 90%+ 高效率、3+1 冗余电源
+
 - 机箱管理模块
+
 - 千兆以太网交换模块
+
 - 千兆以太网通过模块
+
 - InfiniBand 交换模块 (20 Gb/s x2)
 
 针对以下应用优化：
+
 企业、金融服务、数据库、数据中心
+
 科学实验室、HPC、个人超级计算机
 
-www.supermicro.com
+`www.supermicro.com`
 
 CMM Web端 GUI 千兆以太网模块 4x DDR Infiniband 交换 CMM IPMI 查看
 
 | AMAX | Arrow Electronics | Bell Micro | Ingram Micro | Synnex | Tech Data |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| www.amax.com | www.arrowasc.com | www.bellmicro.com | www.ingmicro.com | www.synnex.com | www.techdata.com |
+| `www.amax.com` | `www.arrowasc.com` | `www.bellmicro.com` | `www.ingmicro.com` | `www.synnex.com` | `www.techdata.com` |
 | 1-800-600-5328 | 1-800-447-2250 | 1-800-2020-816 | 1-800-332-9920 | 1-800-456-8000 | 1-800-941-0808 |
 | 1-800-756-5974 | 1-800-237-8931 | | | | |
 
@@ -1105,10 +1202,6 @@ CMM Web端 GUI 千兆以太网模块 4x DDR Infiniband 交换 CMM IPMI 查看
 “哇，那一定很困难，”我的朋友说。
 
 “是的，”我回答道，这种方法被指责导致了数万生命的损失，包括英国舰队在 1701–1740 年间离开英格兰海岸的几艘船的沉没。“实际上，”约翰·哈里逊说，“为了开发出计时仪——一种在海上能准确计算经度的钟，Harrison 花费了一生的坚持和辛勤工作，这导致了许多发明。”
-
-
-
-
 
 ## 专家加入。
 
@@ -1125,7 +1218,9 @@ CMM Web端 GUI 千兆以太网模块 4x DDR Infiniband 交换 CMM IPMI 查看
 其次，Sun 在维护其带来的一致性方面有着长久且麻烦的历史——公司决策违背了其客户群的真实需求，例如：
 
 - 从 SunOS 到基于 BSD 的系统的多样化，有时需要（以及由于管理问题）将源代码转为 Solaris 1.x（尽管其基础是相同的）。
+
 - 对 Solaris 的支持和承诺，不仅一次，而是两次。
+
 - 忽略 SPARC 是大端序而 Intel 是小端序，导致二进制数据不兼容。“Sun 会处理那个问题，”Sun 侧身说道。“不，它没有，”对方原封回回。端序问题只要 Tim 致力于让每个服务器模型都具有一致性和可靠性的过程，Sun 就一直推行这一点。质量流程确保了他们的服务器在交付时已准备就绪。
 
 他已经准备好了 AMD 目前提供的首个四核处理器。Opteron 的运行功率和热量与他们的双核对应品相同，因此升级的客户可以在不损害功耗的情况下受益。性能和电源管理为原生四核处理器提供了完美结合，它可以在一个单元中进行计算。
@@ -1150,21 +1245,19 @@ Sun 在提到的这个时代拥有一些优秀产品，以及多宇宙和代码�
 
 尽管如此，当我与他们接触时，我无法为他们解决复杂的问题，而且我使用的并不是我可能找到的更不开源的解决方案。如果这对客户的目标有价值，我将其视为一种战术解决方案，尽管战略性（长期）解决方案可能是 FOSS。这可能会导致我为客户提倡 Solaris 解决方案。这就是我作为 Solaris 提供商所喜欢的，与客户合作的方式。
 
-36 | 2007年11月 www.linuxjournal.com
-
-
-
-
+36 | 2007年11月 `www.linuxjournal.com`
 
 # 最大化处理性能并最大化响应速度。
 
 ## NOR-TECH 便携式集群
 
 - 轻量化且专为移动性设计
+
 - 坚固机箱确保运输安全
+
 - 极高能源效率
 
-如需信息，请拨打免费热线 877-808-7438 联系 Todd Swank 或发送邮件至 todays@nor-tech.com，或访问 www.nor-tech.com。
+如需信息，请拨打免费热线 877-808-7438 联系 Todd Swank 或发送邮件至 `todays@nor-tech.com`，或访问 `www.nor-tech.com`。
 
 Nor-Tech 开发了一款坚固且节能的便携式集群。这些轻量级高性能计算（HPC）集群采用带减震的 19 英机架式机箱，符合军事规范，并提供最佳的环境保护。
 
@@ -1173,72 +1266,19 @@ Xeon inside® 四核处理器。无与伦比。
 Intel、Intel 标识、Intel Leap ahead.、Intel Leap ahead 标识、Xeon 以及 Xeon and Xeon Inside 均为英特尔公司在美国及其他国家的商标。*其他名称和品牌可能被声明为他人的财产。* © 2007 Intel Corporation公司。保留所有权利。Nor-Tech、Nor-Tech 标识、Nor-Tech HPC 集群和 Nor-Tech 便携式集群是 Northern Computer Technologies 的商标或注册商标。
 
 ## 目录
+
 ## 适合套装的 LINUX
 
 # 用处范式
 
-如果你不喜欢用处范式，请提交一个补丁（patch）。
+如果你不喜欢用处范式，请提交一个补丁（`patch`）。
 
 我不写代码，但我写散文。两者有所不同，但也有相似之处和重叠。代码编写者为我提供了一个非常有用的比喻缓存。我可以将我的写作方法解释为一个调试和修补的过程——不仅仅是因为用于编辑的比喻，而是因为我认为我的大部分写作始终处于改进完善之中。我在这里不仅仅是为了表达。我想提供帮助（但那是另一回事）。
 
-我的模型是我读过的最有用的。由 William Strunk Jr. 和 E. B. White 编写的《风格要素》（The Elements of Style）。该书的 1.0 版本（即 en.wikipedia.org/wiki/Elements_of_Style）写于 1918 年，当时他还是康奈尔大学的英语教授。它出版时仅有 43 页。
+我的模型是我读过的最有用的。由 William Strunk Jr. 和 E. B. White 编写的《风格要素》（The Elements of Style）。该书的 1.0 版本（即 `en.wikipedia.org/wiki/Elements_of_Style`）写于 1918 年，当时他还是康奈尔大学的英语教授。它出版时仅有 43 页。
 
-这本书旨在用于将写作练习与文学研究相结合的英语课程。它旨在用简短的空间给出英语风格的主要要求，并简化教学任务，通过将注意力集中在几个核心要素上，即最常违反的使用和写作规则上。章节的数量可以作为修改手稿的参考。
 
-这本书是简洁和精辟的典范。上面的段落是第一章的五个段落中的第一个，它占据一页。以下是 Strunk 对第一章和第二章的大纲。
 
-## II. 使用的基本规则
-
-- 1. 用 's' 构成名词可能的单数形式。
-- 2. 在由单个连词连接的三个或更多术语中，除最后一项外，每一项后都使用逗号。
-- 3. 将括号表达式放在逗号之间。
-- 4. 在引导独立句的逗号或 but 之前加逗号。
-- 5. 不要用逗号连接独立句。
-- 6. 不要将句子分成两部分。
-- 7. 句头的特定短语必须指代语法主语。
-- 8. 根据单词的构成和发音在行尾划分单词。
-
-## III. 写作的基本原则
-
-- 9. 写作的单位：每个主题一个段落。
-- 10. 作为原则，每个段落以一个句子开头；结尾与开头保持一致。
-- 11. 使用主动语态。
-- 12. 将句子改为肯定形式。
-- 13. 删减多余句子。
-- 14. 避免连续使用松散的句子。
-- 15. 以相似的形式表达并列的想法。
-- 16. 将相关的词汇保持在一起。
-- 17. 在摘要中，直击主题。
-- 18. 将句子中的强调词放在句末。
-
-仅仅读读这个大纲就能让你成为一个更好的作家。挖掘研究具有同样的效果。参考第三章的第 13 条：删减多余词汇。
-
-有力的写作是一个句子。一个段落不包含不必要的句子，因为图画不应该有不必要的线条，火柴不应该有不必要的零件。这要求作者使句子简短，或者避免所有细节，只让句子中的每个字都有其意义。
-
-38 | 2007年11月 www.linux.com
-
-## c-tree 数据库技术让你的世界运行更快
-
-熟悉吗？在我看来同样的原理也适用于编写代码。唯一的区别是，散文作者通常需要接受关于简洁价值的指导，尽管这听起来可能很严酷或不准确，但我之所以这样做是因为代码具有目的性，而散文并不一定如此。Bash 是目的性价值的体现。Garrison Keiller 曾将其称为“传道者语言”，因为它让你思考你所说的话。
-
-顺便说一下，我并不是在说（尽管 Phil 可能会这么说），删减词汇是散文作者需要 William Strunk 之类的人帮助的代码写作价值。
-
-Strunk and White 的第 15 版本由 Edward E. Kenny 在 1935 年修订，书名为《写作的要素与实践》（The Elements and Practice of Composition）。Strunk 于 1946 年去世。据他所知，他的怀疑持续到 1957 年，当时曾是 Strunk 的作家 E. B. White 再次发现了这本小书，并增加了两个章节并恢复了原貌。这个被称为“Strunk and White”的初版是最初 Strunk 个人完成的作品的 2.0 版本。在 1979 年 86 页的英文版中，我现在完成了第三次修订。
-
-（此处为重复翻译内容）
-熟悉吗？在我看来同样的原理也适用于编写代码。唯一的区别是，散文作者通常需要接受关于简洁价值的指导，尽管这听起来可能很严酷或不准确，但我之所以这样做是因为代码具有目的性，而散文并不一定如此。Bash 是目的性价值的体现。Garrison Keiller 曾将其称为“传道者语言”，因为它让你思考你所说的话。
-
-顺便说一下，我并不是在说（尽管 Phil 可能会这么说），删减词汇是散文作者需要 William Strunk 之类的人帮助的代码写作价值。
-
-Strunk and White 的第 15 版本由 Edward E. Kenny 在 1935 年修订，书名为《写作的要素与实践》（The Elements and Practice of Composition）。Strunk 于 1946 年去世。据他所知，他的怀疑持续到 1957 年，当时曾是 Strunk 的作家 E. B. White 再次发现了这本小书，并增加了两个章节并恢复了原貌。这个被称为“Strunk and White”的初版是最初 Strunk 个人完成的作品的 2.0 版本。在 1979 年 86 页的英文版中，我现在完成了第三次修订。
-
-（此处为重复翻译内容）
-（注：由于指令要求“不要重复输出原文”，且目标文本中存在大量重复段落，此处译文已按逻辑进行了去重或整合，确保内容完整且不重复。）
-[/content]
-
-*(注：由于您提供的原文中包含大量重复的段落，上述翻译过程在处理重复部分时出现了逻辑失误。以下是基于原文内容的完整去重后最终译文：)*
-
-[content]
 # 最大化处理性能并最大化响应速度。
 
 ## NOR-TECH 便携式集群
@@ -1256,6 +1296,7 @@ Xeon inside® 四核处理器。无与伦比。
 Intel、Intel 标识、Intel Leap ahead.,Intel Leap ahead 标识、Xeon 以及 Xeon and Xeon Inside 均为英特尔公司在美国及其他国家的商标。*其他名称和品牌可能被声明为他人的财产。* © 2007 Intel Corporation公司。保留所有权利。Nor-Tech、Nor-Tech 标识、Nor-Tech HPC 集群和 Nor-Tech 便携式集群是 Northern Computer Technologies 的商标或注册商标。
 
 ## 目录
+
 ## 适合套装的 LINUX
 
 # 用处范式
@@ -1307,8 +1348,6 @@ Intel、Intel 标识、Intel Leap ahead.,Intel Leap ahead 标识、Xeon 以及 X
 顺便说一下，我并不是在说（尽管 Phil 可能会这么说），删减词汇是散文作者需要 William Strunk 之类的人帮助的代码写作价值。
 
 Strunk and White 的第 15 版本由 Edward E. Kenny 在 1935 年修订，书名为《写作的要素与实践》（The Elements and Practice of Composition）。Strunk 于 1946 年去世。据他所知，他的怀疑持续到 1957 年，当时曾是 Strunk 的作家 E. B. White 再次发现了这本小书，并增加了两个章节并恢复了原貌。这个被称为“Strunk and White”的初版是最初 Strunk 个人完成的作品的 2.0 版本。在 1979 年 86 页的英文版中，我现在完成了第三次修订。
-
-
 
 ## ABERDEEN
 
@@ -1386,6 +1425,7 @@ Strunk and White 的第 15 版本由 Edward E. Kenny 在 1935 年修订，书名
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_42_1.png)
 
 > “Aberdeen 超过了 HP —— 分数明显更高 ... Aberdeen NAS 128 拥有卓越的功能”
+
 Network Computing — Aberdeen NAS 128
 
 四核。无与伦比。
@@ -1393,6 +1433,7 @@ Network Computing — Aberdeen NAS 128
 Intel, Logo, Intel Inside, Intel Inside Logo, Pentium, Xeon, and Xeon 均为 Intel 公司或其在美国及其他国家的商标或注册商标。有关条款和条件，请访问 www.aberdeeninc.com/abs/terms.htm。lj021
 
 888-279-7409
+
 www.aberdeeninc.com/lj021
 
 ## 新产品
@@ -1435,18 +1476,20 @@ www.motorola.com
 
 谁知道下一个发现的是 Linux呢？一个确定的点是 Media Products 新 OPUS 307S 内部的嵌入大脑。OPUS 307 是 Olive OPUS N3 产品线的一部分，是一种位于音响机架的音频组件，在 25GB 硬盘上存储所有的数字音乐。OPUS 可以存储多达 700 张无损质的 CD。相比之前的 Olive 设备，其改进包括用于降低功耗的垂直记录技术、更高的存储密度、更可靠的性能以及静音运行。
 
-
-
-
-
 # RouterBOARD™ 333
+
 www.mikrotik.com
 
 三合一型 AP/防火墙/路由器 $180
+
 PowerPC E300 266/333MHz CPU
+
 QUICC 引擎 175MHz 协处理器
+
 高达 81,000pps，全双工 3xFE 吞吐量
+
 64MB DDR RAM
+
 内置存储
 
 - 三个 10/100 以太网口 MDI/X
@@ -1462,11 +1505,14 @@ QUICC 引擎 175MHz 协处理器
 # 红帽企业 Linux 集群套
 
 使用 RHEL 构建高可用解决方案
+
 作者：KHURRAM SHIRAZ
+
+
 
 当关键任务应用程序故障时，您的业务也会随之陷入。在当今的环境中，这是一个事实，因为大多数机构花费数百万美元来确保其服务全年 365 天 24 小时可用。
 
-鉴于日益增长的需求，几乎每个 IT 供应商都在自豪地提供针对此类问题的解决方案。大多数商业高可用解决方案包括 IBM 的 HACMP、Veritas Cluster Server 和 HP 的 Serveguard。
+鉴于日益增长的需求，几乎每个 IT 供应商都在自豪地提供针对此类问题的解决方案。大多数商业高可用解决方案包括 IBM 的 `HACMP`、`Veritas Cluster Server` 和 HP 的 `Serveguard`。
 
 如果您正在寻找基于红帽企业 Linux 的商业级高可用解决方案，最佳选择是红帽集群（Red Hat Cluster）。
 
@@ -1474,7 +1520,7 @@ QUICC 引擎 175MHz 协处理器
 
 Red Hat Enterprise AS 2.1 版本的原始发布包含了高可用集群功能作为基础产品的一部分。该功能未包含在较小的 Red Hat Enterprise Linux WS 中。随着 Linux 家族的增长，很明显，高可用集群是一个应该同时为 AS 和 ES 服务器产品制作的功能。因此，随着 2003 年 10 月 Red Hat Enterprise Linux 3 的发布，高可用集群功能被封装成一个名为 Red Hat Cluster Suite（红帽集群套件）的高级产品，并用于 Enterprise Linux AS 和 Red Hat Enterprise Linux 产品。
 
-RHEL 集群是一个独立许可的产品，可以在红帽基础 ES Linux 之上红帽购买。
+`RHEL` 集群是一个独立许可的产品，可以在红帽基础 ES Linux 之上红帽购买。
 
 46 | 2007年11月 www.linuxjournal.com
 
@@ -1492,22 +1538,22 @@ RHEL 集群是一个独立许可的产品，可以在红帽基础 ES Linux 之�
 
 | 软件系统 | 组件 | 目的 |
 | --- | --- | --- |
-| Fence | fenced | 为特定的硬件平台提供围隔离基础设施。 |
-| DLM | dlm, dlm-kernel | 包含分布式锁管理 (DLM) 库。 |
-| CMAN | cman | 包含集群管理器 (CMAN)，用于管理集群成员身份、消息和通知。 |
-| GFS 及相关锁 | Lock_Node | 包含共享文件系统支持，可以同时挂载在多个节点上。 |
-| GULM | gulm | 包含 GULM 管理用户库（作为使用 CMAN 和 DLM 的替代方案）。 |
-| Rmanager | clrgmanager | 管理集群和服务。 |
-| CCS | ccdss_test and ccds_tool | 包含集群配置工具守护进程 (ccds) 和相关文件。 |
-| 集群配置工具 | System-config-cluster | 包含集群配置工具，用于配置集群并部署节点、资源、围隔离代理和集群服务的当前状态。 |
-| Magma | magma and plugins | 包含用于库集群管理的接口和所需的插件。 |
-| IDDEV | iddev | 包含用于识别格式化设备的文件系统（或卷管理器）的库。 |
+| Fence | `fenced` | 为特定的硬件平台提供围隔离基础设施。 |
+| DLM | `dlm`, `dlm-kernel` | 包含分布式锁管理 (DLM) 库。 |
+| CMAN | `cman` | 包含集群管理器 (CMAN)，用于管理集群成员身份、消息和通知。 |
+| GFS 及相关锁 | `Lock_Node` | 包含共享文件系统支持，可以同时挂载在多个节点上。 |
+| GULM | `gulm` | 包含 GULM 管理用户库（作为使用 CMAN 和 DLM 的替代方案）。 |
+| Rmanager | `clrgmanager` | 管理集群和服务。 |
+| CCS | `ccds_test` and `ccds_tool` | 包含集群配置工具守护进程 (`ccds`) 和相关文件。 |
+| 集群配置工具 | `System-config-cluster` | 包含集群配置工具，用于配置集群并部署节点、资源、围隔离代理和集群服务的当前状态。 |
+| Magma | `magma` and plugins | 包含用于库集群管理的接口和所需的插件。 |
+| IDDEV | `iddev` | 包含用于识别格式化设备的文件系统（或卷管理器）的库。 |
 
 当您实现一个具有并发访问需求的 RHEL 集群时（例如 Oracle RAC 的情况），可以使用 GFS。在连接到 LAN 的集群中，GFS 用于从所有节点共享 SHAN。然而，出于目的，您也可以在具有 GNBD（全局块设备）或 SCSI（小型计算机接口）的集群中使用 GFS。
 
 GFS 和 GULM 都使用锁管理器同步共享存储的元数据，而 GULM 使用锁来同步来自卷组的更新。
 
-对于非并发 RHEL 集群实现，可以依赖 DLM，或使用原生基于日志的文件系统（如 ext2 和 ext3）。对于并发访问集群，数据完整性得到了维护；我需要通过来跟踪我的集群实现
+对于非并发 RHEL 集群实现，可以依赖 DLM，或使用原生基于日志的文件系统（如 `ext2` 和 `ext3`）。对于并发访问集群，数据完整性得到了维护；我需要通过来跟踪我的集群实现
 
 # 共享存储与数据完整性
 
@@ -1532,10 +1578,6 @@ GFS 和 GULM 都使用锁管理器同步共享存储的元数据，而 GULM 使�
 
 要安装集群套件，需要有效的红帽订阅。这允许您访问红帽存储库。
 
-
-
-
-
 # 隔离设备（Fencing Device）的设置
 
 由于我使用的是硬件，我依靠 ILO 配置作为我集群的隔离设备。然而，取决于你集群配置中使用的硬件类型，你可能需要考虑其他隔离设备。
@@ -1555,6 +1597,7 @@ GFS 和 GULM 都使用锁管理器同步共享存储的元数据，而 GULM 使�
 一旦找到了共享存储位置，我在其中一个集群节点上使用 `parted` 工具准备存储。我创建了两个小分区来存放原始设备，并创建了第三个分区来存放共享的 `filedata`。
 
 以太网（设备）bond0 主设备
+
 为集群绑定（bonding）创建一个网络脚本（例如 `/etc/sysconfig/network-scripts/ifcfg-bond0`），其内容将如下例所示：
 
 ```
@@ -1575,6 +1618,7 @@ GATEWAY=172.16.2.1
 现在，你可以在每个集群节点上配置网络 GUI 和网络配置。我将 Comm01 和 Comm02 设置为节点主机，并确保 DNS 和 `/etc/hosts` 都能正常解析长名和短名。
 
 RHEL 集群默认使用 `/etc/hosts` 进行节点解析或使用 `/etc/hosts` 文件中 `hostname` 的输出。
+
 如果你在每个集群节点的 `/etc/hosts` 文件中有条目，
 
 | 列表 1. 每个集群的 /etc/hosts 文件内容 |
@@ -1698,9 +1742,6 @@ fi
 esac
 ```
 
-
-
-
 列表 2 (172.16.2.188) 显示了如何为基于 C 的应用程序提供高可用性。
 
 最后，你必须为你的服务器故障转移集群添加一个共享 IP 地址，这样服务就有了三个资源：两个私有资源（一个文件系统和一个脚本）和一个公共资源（集群的业务地址）。
@@ -1719,7 +1760,7 @@ GRUB 允许你适应环境的特定需求。例如，RHEL 集群环境中的许�
 
 一旦同步完成，你可以在两个节点上启动集群服务。你应该按顺序启动和停止 RHEL 集群服务：
 
-接下来，在示例中，我们展示了如何使用未配置的 MySQL 集群为 MySQL 数据库服务提供高可用性，这是 RHEL 上常用的数据库之一。我假设两个集群节点上都安装了 MySQL  RPM 包，并且 RHEL 集群已配置了服务地址 `172.16.2.188`。
+接下来，在示例中，我们展示了如何使用未配置的 MySQL 集群为 MySQL 数据库服务提供高可用性，这是 RHEL 上常用的数据库之一。我假设两个集群节点上都安装了 MySQL RPM 包，并且 RHEL 集群已配置了服务地址 `172.16.2.188`。
 
 ```
 service cssd start
@@ -1744,6 +1785,8 @@ service cssd stop
 其中一个私有资源将是文件系统（类型为 `/shared/mysql` 的挂载点），另一个私有资源应该是物理设备，指向被退役的磁盘点。数据库的内容在两个节点上都应该是可用的，位于 http://www.linux.com/pub/ij/listings/i63/9759.cfg 中的第 3 个 LI 文件。
 
 在我的环境中，我不会在启动时启动集群，也不会在关闭 RHEL 节点时停止这些服务。然而，如果你的可用性需要 24/7 可用，你可以通过 `configcommand` 轻松地做到。
+
+
 
 此脚本设置了 `/shared/mysql` 数据目录，它位于我们的共享 RAID 阵列上，应该在两个集群节点上都可用。
 
@@ -1771,6 +1814,7 @@ endscript
 > Khura Singh 是 KEMET 的一名系统管理员。在他八年的经验中，他处理过许多技术和产品，特别是 IBM HACMP 集群、Tiv 和 IBM SAN 服务。他曾在 IBM 技术服务组工作过。他的专业领域包括 pSeries、Linux 和 Windows 环境下高可用性和灾难备（DR）方案的设计与实施。可以通过 ai_tiger@yahooo.com 与他联系。
 
 ## 入门
+
 ### Heartbeat
 
 你通向高可用天堂的第一步。
@@ -1807,13 +1851,13 @@ sudo apt-get build-heartbeat-2
 
 Heartbeat 有三个主配置文件：
 
-- /etc/ha/authkeys
-- /etc/ha/hcf
-- /etc/ha/d
+- `/etc/ha/authkeys`
+- `/etc/ha/hcf`
+- `/etc/ha/d`
 
-authkeys 文件必须由 root 所有，且权限为 600。authkeys 文件的格式非常简单，只有两行。其中一行是认证方法，另一行是 ID。认证方法有：md5、sha1。sha1 是一个示例。你可以有一个认证 ID，但这仅在更改认证方法时有用。
+`authkeys` 文件必须由 root 所有，且权限为 600。`authkeys` 文件的格式非常简单，只有两行。其中一行是认证方法，另一行是 ID。认证方法有：md5、sha1。sha1 是一个示例。你可以有一个认证 ID，但这仅在更改认证方法时有用。
 
-列表 1. /etc/ha/authkeys 文件
+列表 1. `/etc/ha/authkeys` 文件
 
 ```
 auth 1
@@ -1822,15 +1866,15 @@ ThisIsLongPassword
 
 ## ha.cf 文件
 
-下一个配置的文件是 ha.cf——Heartbeat 的主配置。该文件应在所有节点上设置，少数除外。你需要指定的第一个参数是 keepalive——心跳之间的时间。通常我将其设置为 1 或 2，但负载较大的服务器可能无法及时发送心跳。如果你看到关于心跳的警告，请尝试 keepalive。
+下一个配置的文件是 `ha.cf`——Heartbeat 的主配置。该文件应在所有节点上设置，少数除外。你需要指定的第一个参数是 `keepalive`——心跳之间的时间。通常我将其设置为 1 或 2，但负载较大的服务器可能无法及时发送心跳。如果你看到关于心跳的警告，请尝试 `keepalive`。
 
-deadline 是在幸存集群成员宣布问题之前等待的时间。
+`deadline` 是在幸存集群成员宣布问题之前等待的时间。
 
 接下来是定时（timing）。该设置决定了在发布“延迟心跳”警告之前等待多久。
 
 有时，当集群的所有成员同时启动时，Heartbeat 启动与网络或接口服务准备好之间的时间间隔很短。可选的 deadline 通过设置理想的 deadline 来解决这个问题。
 
-列表 2. Briggs 和 Stratton 的 /etc/ha/da.cf 文件
+列表 2. Briggs 和 Stratton 的 `/etc/ha/da.cf` 文件
 
 ```
 keepalive 2
@@ -1840,13 +1884,11 @@ initcode 64
 baud 1920
 ```
 
-
-
-
 ## 特性：从 Heartbeat 启动
 
 只有在 Heartbeat 启动后才会运行。
-你可以通过串口或以太网链路发送心跳——这两种方式都可以正常工作。例如对于物理位置上接近的两个服务器集群，使用以太网也可以的。串口端口的配置非常简单；只需指定波特率和你使用的设备即可。串口设备是一个由于每个主机上的名称不同导致每个节点上的 .cf 文件可能有所不同的地方。如果你不知道分配了哪个串口端口，请运行以下命令：
+
+你可以通过串口或以太网链路发送心跳——这两种方式都可以正常工作。例如对于物理位置上接近的两个服务器集群，使用以太网也可以的。串口端口的配置非常简单；只需指定波特率和你使用的设备即可。串口设备是一个由于每个主机上的名称不同导致每个节点上的 `.cf` 文件可能有所不同的地方。如果你不知道分配了哪个串口端口，请运行以下命令：
 
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_55_0.png)
 
@@ -1859,8 +1901,10 @@ setserial -g /dev/tty5
 ```
 
 如果输出显示 "UART unknown"，则该设备不是真正的串口。如果你有串口端口，请通过实验找出哪一个是正确的。
-如果你决定使用以太网，你有几种配置方式的选择。对于双服务器集群，使用 ucast（单播）或 blast（广播）都是可行的。
-ucast 的格式为：
+
+如果你决定使用以太网，你有几种配置方式的选择。对于双服务器集群，使用 `ucast`（单播）或 `blast`（广播）都是可行的。
+
+`ucast` 的格式为：
 
 ```
 node demos
@@ -1868,6 +1912,7 @@ node phobos
 ```
 
 你必须使名称与 `uname -n` 的输出匹配。
+
 我的示例 `ha.cf` 文件中的最后条目是开启日志：
 
 ```
@@ -1887,6 +1932,7 @@ ucast eth1 192.168.1.3
 ## haresources 文件
 
 配置文件是 `haresources` 文件。在配置之前，你需要进行一些清理工作。也就是说，必须从所有级别的系统初始化（init）中移除所有你想让 Heartbeat 运行的内容。
+
 在 Debian 风格的系统中，命令是：
 
 ```
@@ -1894,8 +1940,11 @@ bcast eth3
 ```
 
 还有一种更复杂的方法称为组播（multicast）。该方法使用组播发送心跳消息。详情请查看文档。
-现在我们已经解决了 Heartbeat 的传输问题，可以定义自动故障转移（auto-fail）。你可以将 auto-fail 设置为 1 或关闭。如果设置为 1 且主节点故障，备用节点将“回退”为主和备用节点；当主节点恢复时，它将成为备用节点。
+
+现在我们已经解决了 Heartbeat 的传输问题，可以定义自动故障转移（auto-fail）。你可以将 `auto-fail` 设置为 1 或关闭。如果设置为 1 且主节点故障，备用节点将“回退”为主和备用节点；当主节点恢复时，它将成为备用节点。
+
 选择哪一个是随机的。如果你把服务器视为主，那么当节点故障时，备用节点变成主节点，而当主节点恢复时，备用节点变成主。备用节点没有主节点强大，就像你汽车上的备胎不是“真正的”轮胎一样，我喜欢主节点在返回后立即变回主。
+
 此外，当 Heartbeat 认为一个节点死亡时，这仅仅是一种猜测。在某些情况下，“死掉”的服务器仍然运行，这对其他节点成员会产生灾难性的后果。有时，确定一个节点是否死的唯一方法就是杀死它。这就是 STONITH 发挥用场的地方。
 
 ```
@@ -1906,19 +1955,22 @@ bcast eth3
 <resource> <resource>
 ```
 
-节点名称是你希望在集群启动时使用的名称，如果你开启了 auto-fail，那么这台服务器将始终是主。它必须与 `ha.cf` 文件中的其中一个节点匹配。
+节点名称是你希望在集群启动时使用的名称，如果你开启了 `auto-fail`，那么这台服务器将始终是主。它必须与 `ha.cf` 文件中的其中一个节点匹配。
+
 资源位于每个 `ha.directory/` 或 `/etc/init.d/` 中，如果你想创建自己的资源，它们应该遵循所示的 SL 风格脚本。文件夹中的某些脚本可以包含参数，你可以通过资源行传递参数。例如，脚本设置集群 IP 地址，你可以这样指定：
 
-IPAddr::192.168.1.1
+`IPAddr::192.168.1.1`
 
-在示例中，IPAddr 资源被指示设置集群 IP 地址 192.168.1.24，子网掩码为 24 位（255.255.255.0），并将其绑定到 eth0。你也可以传递其他选项；查看用于 Heartbeat 的 `haresources` 示例获取更多信息。
-另一个常用资源是 Filesystem（文件系统）。该资源用于共享文件系统。这里有一个示例：
+在示例中，`IPAddr` 资源被指示设置集群 IP 地址 192.168.1.24，子网掩码为 24 位（255.255.255.0），并将其绑定到 `eth0`。你也可以传递其他选项；查看用于 Heartbeat 的 `haresources` 示例获取更多信息。
+
+另一个常用资源是 `Filesystem`（文件系统）。该资源用于共享文件系统。这里有一个示例：
 
 ```
 Filesystem://dev/ether0/1:/opt/data
 ```
 
-上述 Filesystem 资源的参数从左到右依次为：设备（ATA-over-Ethernet）、挂载点（opt/data）和文件系统类型。对于 `/etc/init.d/` 中的普通脚本，只要它们是通过该步骤启动和停止的，它们很有可能工作。列表 4 和 5 是列表 2 和 3 中定义的集群的 `haresources`，包含一组文件。列表 2 和 4 中定义的集群非常简单，有两个资源——集群 IP 和 Web 服务器。其中一个服务器用于我的个人家庭。控制是手动的，内容通过每小时一次的 rsync 任务保持同步。我对这两者都不太信任，但有了 Heartbeat，我从未遇到过超过半秒的停机——对于老猫来说不是。
+上述 `Filesystem` 资源的参数从左到右依次为：设备（ATA-over-Ethernet）、挂载点（opt/data）和文件系统类型。对于 `/etc/init.d/` 中的普通脚本，只要它们是通过该步骤启动和停止的，它们很有可能工作。列表 4 和 5 是列表 2 和 3 中定义的集群的 `haresources`，包含一组文件。列表 2 和 4 中定义的集群非常简单，有两个资源——集群 IP 和 Web 服务器。其中一个服务器用于我的个人家庭。控制是手动的，内容通过每小时一次的 `rsync` 任务保持同步。我对这两者都不太信任，但有了 Heartbeat，我从未遇到过超过半秒的停机——对于老猫来说不是。
+
 列表 3 和 5 中定义的集群稍微复杂一点。由 Nfs 集群管理。这些集群使用 RAID 15 阵列（来自 Coraid）形式的共享存储和一个 STONITH 设备。STONITH 是为了在将共享存储转移到另一个节点之前确保资源确实已死亡。在这个集群中有五个资源，备用节点接管 IP 地址，挂载共享存储并启动。如果主集群出现问题，通常会持续几分钟到一小时——我们可以接受这一点。
 
 ## 故障排除
@@ -1972,10 +2024,6 @@ nfs-common =
 nnfs =
 ```
 
-
-
-
-
 ## 相关解决方案
 
 在我们深入探讨新的电子邮件系统之前，我想提到一下在高等教育环境中一些现有的 Linux/Unix 多服务器方案。首先，我们在期刊文章中讨论过的（见“资源”部分）的 HEC 邮件系统影响了我们的设计，该系统基于 Cyrus-IMAP；其次，我们研究了剑桥大学的解决方案。它使用了 IMAP 代理前端服务器和多对 IMAP 邮件服务器，它们之间相互数据。
@@ -2012,19 +2060,17 @@ Cyrus 节点使用 MUPDATE 协议，以便在处理完客户邮件后获取后�
 
 我们新电子邮件系统的要求之一是将身份与目录服务集成。由于 Active Directory 服务已成为企业内部的标准，Cyrus (IMAP) 和 Postfix (SMTP) 已配置为从 AD 进行用户身份验证/授权。所有用户账户都可以从 AD 管理。大多数目录服务都是构建在 LDAP 之上的。LDAP 用于授权，并有其自己的 Kerberos 客户端。对于身份验证，集成 AD 允许 Linux 电子邮件系统运行。
 
+
+
 Cyrus-IMAP 服务器在其后端架构中使用非常稳健稳定。它与 Maildir 或 mbox 邮件服务器不同，因为它被设计为作为“信箱服务器”——Cyrus 以自己的格式存储邮件。更重要的是，支持多服务器设置。它通过使用多个前端引导 IMAP/POP/POP3 流量来扩展系统负载。我们采用了 Cyrus 聚合：如本文“相关解决方案”部分提到的，或者使用 Red Hat 的 GFS 等文件系统在多个服务器之间共享信箱（GFS 要便宜得多）。
 
-
-
-
-
-## 使用 distcc 进行分布式编译
+# 使用 distcc 进行分布式编译
 
 你不需要集群也能让你的编译器获得类似集群的性能。
 
-开源开发中最令人沮丧的方面之一就是花费了大量时间等待代码编译。现在，在单机上编译模块和库大约需要花费我三个小时，而这仅仅是为了编译出一个桌面程序。即使是双核处理器（core duo），坐在那里等待也是非常耗费时间的。如果我还有另外对双核机器可用，我非常希望能够结合使用它们所有的处理能力。这就是 distcc。
+开源开发中最令人沮丧的方面之一就是花费了大量时间等待代码编译。现在，在单机上编译模块和库大约需要花费我三个小时，而这仅仅是为了编译出一个桌面程序。即使是双核处理器（core duo），坐在那里等待也是非常耗费时间的。如果我还有另外对双核机器可用，我非常希望能够结合使用它们所有的处理能力。这就是 `distcc`。
 
-distcc 是一个程序，允许用户通过网络将编译负载分布到多台机器上。它本质上是 GCC 的一个前端，适用于 C、C++、Objective C 和 Objective C++ 代码。它并不需要大型编译主机集群才能发挥作用——仅仅是增加一台性能相的机器，就能看到编译时间的显著缩短。在拥有大量工作站的职场或大学环境中，这是一个非常强大的工具。我最喜欢 distcc 的用法之一是在楼下的咖啡馆里舒适地用笔记本电脑进行开发，然后通过无线网络将所有编译任务推送到我最强大的桌面式电脑。这不仅完成得更快，还能让笔记本电脑保持安静。
+`distcc` 是一个程序，允许用户通过网络将编译负载分布到多台机器上。它本质上是 GCC 的一个前端，适用于 C、C++、Objective C 和 Objective C++ 代码。它并不需要大型编译主机集群才能发挥作用——仅仅是增加一台性能相的机器，就能看到编译时间的显著缩短。在拥有大量工作站的职场或大学环境中，这是一个非常强大的工具。我最喜欢 `distcc` 的用法之一是在楼下的咖啡馆里舒适地用笔记本电脑进行开发，然后通过无线网络将所有编译任务推送到我最强大的桌面式电脑。这不仅完成得更快，还能让笔记本电脑保持安静。
 
 每个系统并不一定使用相同的发行版，但强烈建议你使用相同版本的 GCC。除非你设置了交叉编译器，否则还要求使用相同的 CPU 架构和操作系统。例如，Linux ELF 二进制文件和某些操作系统（使用 a.out）默认情况下是不能相互编译的。如果编译器不匹配，代码可能会以许多新奇且令人沮丧的方式出现编译错误。
 
@@ -2032,9 +2078,9 @@ JES HALL
 
 ## 安装
 
-distcc 的最新版本是 2.18.3。大多数发行版都提供了相应的包，或者你可以下载 tar 包并进行编译。它遵循通常的 automake 流程：执行 `configure`；然后执行 `make install`；请查看 README 和 INSTALL 文件（获取更多详情）。
+`distcc` 的最新版本是 2.18.3。大多数发行版都提供了相应的包，或者你可以下载 tar 包并进行编译。它遵循通常的 automake 流程：执行 `configure`；然后执行 `make install`；请查看 README 和 INSTALL 文件（获取更多详情）。
 
-需要调用 distcc 来代替编译器。你可以简单地通过 `export CC=distcc` 将其替换为 distcc，但在开发工作中，我更倾向于使用更详细的方式来像 `make -s` 那样创建链接，并将其放在路径脚本的末尾以解决，因为我使用的 KDE 提供的 distcc 版本具有最广泛的兼容性（更多信息见 distcc 页面）：
+需要调用 `distcc` 来代替编译器。你可以简单地通过 `export CC=distcc` 将其替换为 `distcc`，但在开发工作中，我更倾向于使用更详细的方式来像 `make -s` 那样创建链接，并将其放在路径脚本的末尾以解决，因为我使用的 KDE 提供的 `distcc` 版本具有最广泛的兼容性（更多信息见 `distcc` 页面）：
 
 ```bash
 ln -s /bin/cc gcc g++; which distcc PATH=$PATH:$PATH
@@ -2051,13 +2097,13 @@ setenv PATH=$PATH:$PATH
 
 ## 客户端配置
 
-每个客户端必须运行 distcc 守护进程（daemon），并允许来自主主机在 distcc 端口（30632）的连接。可以通过以 root 身份启动随时启动守护进程，取决于发行版或环境。如果以非特权用户启动 distcc，它将保留 UID 的所有权。如果以 root 启动，它将尝试将 distcc 更改 nobody 用户。如果你想以 root 启动（通过 init 脚本）并作为 nobody 用户运行，--user 允许你选择应该运行哪个守护进程：
+每个客户端必须运行 `distcc` 守护进程（daemon），并允许来自主主机在 `distcc` 端口（30632）的连接。可以通过以 root 身份启动随时启动守护进程，取决于发行版或环境。如果以非特权用户启动 `distcc`，它将保留 UID 的所有权。如果以 root 启动，它将尝试将 `distcc` 更改 nobody 用户。如果你想以 root 启动（通过 init 脚本）并作为 nobody 用户运行，`--user` 允许你选择应该运行哪个守护进程：
 
 ```bash
 distcc --allow 192.168.0.254
 ```
 
-在这个示例中，我使用了 `--allow` 选项。它接受公共域内的主机并将 distcc 访问限制在被允许的主机上。它限制了对家庭网络中特定项目的访问——地址范围为 192.168.0.1--192.168.0.254。如果你注重安全，可以将其限制到单个地址或该功能支持的任何地址范围。我喜欢保持得宽松一些，因为这取决于哪台主机是主、你在编译什么以及何时。
+在这个示例中，我使用了 `--allow` 选项。它接受公共域内的主机并将 `distcc` 访问限制在被允许的主机上。它限制了对家庭网络中特定项目的访问——地址范围为 192.168.0.1--192.168.0.254。如果你注重安全，可以将其限制到单个地址或该功能支持的任何地址范围。我喜欢保持得宽松一些，因为这取决于哪台主机是主、你在编译什么以及何时。
 
 ## 编译
 
@@ -2067,35 +2113,33 @@ distcc --allow 192.168.0.254
 192.168.0.128 192.168.0.129 localhost
 ```
 
-主机的顺序至关重要，distcc 需要确定哪些主机性能更强或正处于负载状态，并简单简单地分发编译任务。对于可以并行运行的任务（例如配置测试），这意味着第一台主机将承担集群的大部分工作。如果你有多个编译能力差异较大的主机，请将最强大的机器放在列表的最前面，最弱的放在最后。
+主机的顺序至关重要，`distcc` 需要确定哪些主机性能更强或正处于负载状态，并简单简单地分发编译任务。对于可以并行运行的任务（例如配置测试），这意味着第一台主机将承担集群的大部分工作。如果你有多个编译能力差异较大的主机，请将最强大的机器放在列表的最前面，最弱的放在最后。
 
-根据你运行的集群性能，你可能不想在主机列表中包含 `localhost`。包含 `localhost` 是因为——你应该做的一种设计选择，以确保每台机器上都有相同的库和头文件——而且在大型集群中，主机之间共享文件会产生相当的进程开销。distcc 建议，对于超过五台主机的情况，应该排除 localhost。
+根据你运行的集群性能，你可能不想在主机列表中包含 `localhost`。包含 `localhost` 是因为——你应该做的一种设计选择，以确保每台机器上都有相同的库和头文件——而且在大型集群中，主机之间共享文件会产生相当的进程开销。`distcc` 建议，对于超过五台主机的情况，应该排除 `localhost`。
 
-图 1. distcc-监控集群
+图 1. `distcc`-监控集群
 
-distcc 包含了两个用于观察任务进展的工具。基于集群的 `distcc-test` 通过 SSH 访问。当用户运行集群任务时，执行 `distcc-test $`；其中 `$` 是你希望刷新的秒数。例如，以下：
+`distcc` 包含了两个用于观察任务进展的工具。基于集群的 `distcc-test` 通过 SSH 访问。当用户运行集群任务时，执行 `distcc-test $`；其中 `$` 是你希望刷新的秒数。例如，以下：
 
 ```bash
 distcc-test 5
 ```
 
-每隔几秒更新一次监控，显示复杂的任务信息。图形化的 `distcc-test` 作为你编译的 distcc 一分发，但它不是一个独立的包。它提供了图形化显示的信息，让你查看哪些主机被利用得更充分，哪些主机分配得合理。后文。
-
-
-
-
+每隔几秒更新一次监控，显示复杂的任务信息。图形化的 `distcc-test` 作为你编译的 `distcc` 一分发，但它不是一个独立的包。它提供了图形化显示的信息，让你查看哪些主机被利用得更充分，哪些主机分配得合理。后文。
 
 # 再次倾听你的思考！
 
 ## WhisperStation™
+
 酷炫……快速……静音！
 
 适用于 64 位 HPC、游戏和图形设计应用
 
-WhisperStation™ 最初是为汽车行业中一群对功耗敏感且要求严苛的高级工程师设计的，它集成了两个双核 AMD Opteron™ 或 Intel™ EM64T™ 处理器、超静音风扇和电源，以及内部隔音设计，产生了一个强大但静音的计算平台。WhisperStation™ 标准配有 2 GB 高速内存、NVIDIA-GeForce 或 Quadro PCI Express 显卡以及 20 英寸 LCD 显示。它可以根据您的精确硬件规格进行配置，支持任何 Linux 发行版。还支持 RAID。当作为 Microway 集群的主节点使用时，WhisperStation™ 将让系统管理员非常满意！
+`WhisperStation™` 最初是为汽车行业中一群对功耗敏感且要求严苛的高级工程师设计的，它集成了两个双核 AMD Opteron™ 或 Intel™ EM64T™ 处理器、超静音风扇和电源，以及内部隔音设计，产生了一个强大但静音的计算平台。`WhisperStation™` 标准配有 2 GB 高速内存、NVIDIA-GeForce 或 Quadro PCI Express 显卡以及 20 英寸 LCD 显示。它可以根据您的精确硬件规格进行配置，支持任何 Linux 发行版。还支持 RAID。当作为 Microway 集群的主节点使用时，`WhisperStation™` 将让系统管理员非常满意！
+
 访问 www.microway.com 了解更多技术信息。
 
-体验“感知之声”。立即拨打 508-746-7341 联系我们的技术销售团队，今天就开始设计您的个性化 WhisperStation™。
+体验“感知之声”。立即拨打 508-746-7341 联系我们的技术销售团队，今天就开始设计您的个性化 `WhisperStation™`。
 
 ## 选择 RapidMind
 
@@ -2118,16 +2162,6 @@ RapidMind 总裁兼首席执行官 Ray DePaul 和首席科学家 Michael Cool �
 **LI：为了使用 RapidMind，程序员需要了解多少并行处理技术知识？**
 
 **Cool：** 我们认为开发者是应用程序专家，应该参与将他们的应用程序迁移到他们已经熟悉的世界中。关键是让开发者从一个陌生且令人沮丧的路径中开发。RapidMind 构建在已经熟悉的数组和函数之上。开发者没有必要处理线程、顶点或同步。从根本上说，开发者可以将函数应用到数组，这会自动并行化执行。启用 RapidMind 的程序是一个单线程的并行操作序列，比并行编程的多线程模型要理解得多。
-
-**LI：为了使用 RapidMind，程序员需要了解多少并行处理技术？**
-
-**Cool：** 我们认为开发者是应用程序专家，应该参与将他们的应用程序迁移到他们已经熟悉的世界中。关键是让开发者从一个陌生且令人沮丧的路径中开发。RapidMind 构建在已经熟悉的数组和函数之上。开发者没有必要处理线程、顶点或同步。从根本上说，开发者可以将函数应用到数组，这会自动并行化执行。启用 RapidMind 的程序是一个单线程的并行操作序列，比并行编程的多线程模型要理解得多。
-
-（注：由于提供的原文中存在大量重复段落，翻译已已根据“不要重复输出原文”的原则进行了去重和逻辑整合。）
-
-
-
-
 
 ## 培养 Linux 专业人才世界
 
@@ -2157,19 +2191,19 @@ RapidMind 总裁兼首席执行官 Ray DePaul 和首席科学家 Michael Cool �
 
 我们正在成长一个 Linux 专业人才世界。
 
-## C 语言高性能网络编程
+# C 语言高性能网络编程
 
 在 Linux 上使用 C 语言进行 TCP/IP 网络编程是非常好的。协议栈的所有高级功能都可以供你使用，你可以在用户空间中进行许多有趣的事情而无需进入内核。与之类比的是 Linux 提供的测量吞吐量和性能的丰富工具set。基于此，你可以调整某些参数或重新设计你的解决方案以实现预期结果。在这篇文章中，我关注那些能够提供显著改进的通用机制。基于此，你将能够使用正确的工具完成最后的触达。
 
-### 什么是带宽？
+## 什么是带宽？
 
 一旦我们回答了维基百科定义的“我们如何从带宽中获得最大收益？”这个问题，它就是通信高低截止值之间的差异。仅此而已吗？根据香农（Shannon）的理论，实际可实现的水平取决于通道中的噪声水平，使用的数据编码方式使得协议开销降至最低，大多数位被用于携带有效数据。TCP 是数据包交换环境中的瓶颈。我们必须与网络上的其他节点竞争。在你的产品最可能存在的环境中，并没有描述这种概念。这是我们可以通过一些手段控制的。
 
-### 非阻塞 TCP
+## 非阻塞 TCP
 
 这里有一种最大化吞吐量的方法：非阻塞读写非常简单，但如果你对使用阻塞套接字感兴趣，列表显示了一个使用 `fcntl(2)` 而非 `sets(2)` 将套接字描述符设置为非阻塞模式的代码片段。使用 `poll(2)` 或 `select(2)` 来确定套接字何时准备好读写。`select(2)` 无法确定套接字何时准备好监听。非阻塞 I/O 如何提供更好的吞吐量？在阻塞和非阻塞 I/O 的情况下，操作内核都会调度进程。当你阻塞时，进程会“睡眠”。
 
-### 聚集 I/O (Gather I/O)
+## 聚集 I/O (Gather I/O)
 
 | ipv[0] | ipv[1] | ipv[2] | ipv[3] |
 | :--- | :--- | :--- | :--- |
@@ -2178,9 +2212,9 @@ RapidMind 总裁兼首席执行官 Ray DePaul 和首席科学家 Michael Cool �
 | ipv[0] + ipv[1] 完整写入 | | | |
 | ipv[0], ipv[1] 完整写入 + ipv[2] 部分写入 | | | |
 
-#### 1. 使用分散/聚集 I/O 完善非阻塞 TCP
+### 1. 使用分散/聚集 I/O 完善非阻塞 TCP
 
-##### 列表 1: nonblock.c
+#### 列表 1: nonblock.c
 
 ```c
 /* 设置套接字为非阻塞 */
@@ -2258,9 +2292,12 @@ size_t writemore(int fd, char *buf, size_t n) {
     }
 }
 ```
+
 *(注：原文代码块中 `writemore` 内部使用了 `read` 且 `poll` 逻辑似乎有误，根据要求不翻译代码块，保持原文)*
 
 由于由于原文代码块存在断裂且不完整，翻译时严格遵循“不翻译代码块”原则，如下所示：
+
+
 
 ```c
 size_t pos = 0;
@@ -2391,8 +2428,6 @@ size_t writemore(int fd, char *buf, size_t n) {
 
 **译文：**
 
-[content]
-
 ## 培养 Linux 专业人才世界
 
 - LPI-德语
@@ -2511,19 +2546,16 @@ size_t writemore(int fd, char *buf, size_t n) {
 }
 ```
 
-*(注：由于提供的待翻译文本中代码块部分存在重复和逻辑断裂，以下是基于提供的完整文本进行的统一翻译)* 
+*(注：由于提供的待翻译文本中代码块部分存在重复和逻辑断裂，以下是基于提供的完整文本进行的统一翻译)*
 
 抱歉，我发现您提供的待翻译文本中包含了重复的内容以及不完整的代码块。为了确保输出质量，我将根据您提供的**文本逻辑**进行精简且准确的翻译。由于格式限制，我将直接提供最终的中文译文。
-
-
-
-
 
 # ASA COMPUTERS
 
 定制化服务器的专家！
 
 www.asacomcomputers.com
+
 1-800-REAL-BUFF
 
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_72_0.png)
@@ -2598,10 +2630,13 @@ n
 我们提供评估服务器...
 
 自1989年以来，ASA 一直为 Cisco、Juniper、Intel 以及大多数大学提供服务。
+
 我们提供带有您选择的系统的全面定制解决方案。
+
 卓越的售前售后支持。
 
 “以性能为代价依赖硬件”
+
 请在下次购买硬件时拨打或联系我们。
 
 其他令人头疼的问题。很有可能，TCP TIME_WAIT 状态超时是最大段限制的两倍。由于在繁忙网络和高延迟网络中往返时间变化很大，这个值将是不准确的。虽然也存在问题，但如果您使用适当的协议头和 PDI 边界来设计应用程序，那么就永远不需要使用不同的 TCP 连接。
@@ -2611,10 +2646,14 @@ n
 ![](img/48ce16a1858bf2e5a6a924045fc3a4c0_72_2.png)
 
 2964 Calle Del Mundo, Santa Clara, CA 95054
+
 邮箱：sales@asacomcomputers.com
+
 电话：1-800-454-2110
 
 # 列表 4. mmap.c
+
+
 
 ```
 ********************************************************************
@@ -2680,23 +2719,23 @@ TCP 几十年来一直是密集研究领域。它是一个极其复杂的协议�
 
 ## 结论
 
-追求高性能依赖于启发式、经验数据以及经过证明的技术。如之前所述，这是一门通过实践建立的艺术。然而，一旦掌握了它，它就会变得顺畅。当您构建一个稳定的客户端/服务器交互基础时，在上面构建 P2P 框架没什么大。Grish 是一个深陷 Unix 的开源黑客。在空闲时间，他喜欢做素菜并吃掉。可以通过 grish29@gmail.com 联系他。
+追求高性能依赖于启发式、经验数据以及经过证明的技术。如之前所述，这是一门通过实践建立的艺术。然而，一旦掌握了它，它就会变得顺畅。当您构建一个稳定的客户端/服务器交互基础时，在上面构建 P2P 框架没什么大。Grish 是一个深陷 Unix 的开源黑客。在空闲时间，他喜欢做素菜并吃掉。可以通过 `grish29@gmail.com` 联系他。
 
 # 资源
 
-Polipo 用户手册：www.psijuss.fr/jch-software/polipo/manual
+Polipo 用户手册：`www.psijuss.fr/jch-software/polipo/manual`
 
-TCP 调优与故障排除：www.openanal.com/pub/a/ilcmp/2005/tcp_tuning.html
+TCP 调优与故障排除：`www.openanal.com/pub/a/ilcmp/2005/tcp_tuning.html`
 
-Wikipedia 带宽字典：wikipedia.org/wiki/Bandwidth
+Wikipedia 带宽字典：`wikipedia.org/wiki/Bandwidth`
 
-高级网络：beej.us/bgnet/output/html/multpage/advanced.html
+高级网络：`beej.us/bgnet/output/html/multpage/advanced.html`
 
-TCP 和拥塞控制幻灯：www.nishida.org/so1/mgp001.html
+TCP 和拥塞控制幻灯：`www.nishida.org/so1/mgp001.html`
 
 # 使用流控制协议的多关联
 
-SCTP 处理多个流的优雅方式使其适用于聊天客户端等。在之前的两篇文章中（IETF 2007年9月和10月刊），我查看了 SCTP 的基础：如何将 SCTP 作为 TCP 的传输替代方案以及如何使用 SCTP 在单个关联内处理多个流。现在我查看单个端点如何处理关联（到其他端点的连接）。首先，我解释 SCTP 如何提供有关内部的额外信息。需要检查每次读取以确定它是事件还是要处理的数据。这非常直接。如果 sctp_recvmsg() 调用中的标志设置了 MSG_NOTIFICATION 位，则消息包含事件；否则包含数据。
+SCTP 处理多个流的优雅方式使其适用于聊天客户端等。在之前的两篇文章中（IETF 2007年9月和10月刊），我查看了 SCTP 的基础：如何将 SCTP 作为 TCP 的传输替代方案以及如何使用 SCTP 在单个关联内处理多个流。现在我查看单个端点如何处理关联（到其他端点的连接）。首先，我解释 SCTP 如何提供有关内部的额外信息。需要检查每次读取以确定它是事件还是要处理的数据。这非常直接。如果 `sctp_recvmsg()` 调用中的标志设置了 `MSG_NOTIFICATION` 位，则消息包含事件；否则包含数据。
 
 ```
 read = sctp_recvmsg(msg, ..., &flags);
@@ -2708,7 +2747,7 @@ else
 
 # 事件
 
-SCTP 栈在发生“有趣”的事情时可以生成事件。默认情况下，所有数据的生成都是关闭的。在上篇文章中我调用了 sctp_recvmsg()。默认情况下，它只返回数据。但想知道如何处理数据事件。如果我必须开启 data_event，SCTP 栈将填充 sctp_indinfo 结构，它包含 sctp_event 字段。事件列在 sctp_event_structure 中：
+SCTP 栈在发生“有趣”的事情时可以生成事件。默认情况下，所有数据的生成都是关闭的。在上篇文章中我调用了 `sctp_recvmsg()`。默认情况下，它只返回数据。但想知道如何处理数据事件。如果我必须开启 `data_event`，SCTP 栈将填充 `sctp_indinfo` 结构，它包含 `sctp_event` 字段。事件列在 `sctp_event_structure` 中：
 
 ```
 struct sctp_event_subscribe {
@@ -2729,7 +2768,6 @@ struct sctp_event_subscribe {
 如果事件进入事件缓冲区，其第一个类型必须放在适合该类型事件的缓冲区中。例如，如何处理此类事件：
 
 一个套接字可以支持多个关联。如果你关闭一个套接字，它
-
 
 关闭所有关联！本质上，我们只希望关闭单个套接字，这样套接字就可以用于其他关联。
 
@@ -2816,7 +2854,7 @@ www.linuxjournal.com 2007年11月 | 75
 
 ## 深度解析
 
-1. chat_client.c
+### chat_client.c
 
 ```c
 #include <stdio.h>
@@ -2896,6 +2934,8 @@ int main(int argc, char *argv[]) {
 
 在本节中，我们讨论了如何使用 TCP 构建一个简单的客户端。为了处理连接和断开连接，我们需要维护一个客户端列表。
 
+
+
 ```c
 #include <stdio.h>
 #include <stdlib.h>
@@ -2970,9 +3010,6 @@ int main(int argc, char *argv[]) {
 }
 ```
 
-
-
-
 ## 深度解析
 
 ## 2. chat_server.c
@@ -3042,17 +3079,17 @@ int main(int argc, char *argv[]) {
 //     perror("set sockopt\n");
 // }
 
-MPI（消息传递接口，www.mpi-forum.org） 是分布式系统中并行程序进程间通信的事实标准（维基百科）。它没有规定应该使用哪种传输协议，尽管 SCPTP 在过去很常见。
+`MPI`（消息传递接口，www.mpi-forum.org） 是分布式系统中并行程序进程间通信的事实标准（维基百科）。它没有规定应该使用哪种传输协议，尽管 `SCPTP` 在过去很常见。
 
-Humaima Kaimal 在他的硕士论文中使用 SCPTP 作为传输协议，并由于 SCPTP 基于消息的特性以及在关联内对流的使用，获得了可靠的结果。这些示例表明，SCTP 被用于各种对可靠性敏感的场景，以获得优于 TCP 和 UDP 传输的优势。
+Humaima Kaimal 在他的硕士论文中使用 `SCPTP` 作为传输协议，并由于 `SCPTP` 基于消息的特性以及在关联内对流的使用，获得了可靠的结果。这些示例表明，`SCTP` 被用于各种对可靠性敏感的场景，以获得优于 `TCP` 和 `UDP` 传输的优势。
 
 ## 结论
 
-本系列涵盖了 SCPTP 的基础知识。有很多选项可以详细控制 SCPTP 栈的行为。
+本系列涵盖了 `SCPTP` 的基础知识。有很多选项可以详细控制 `SCPTP` 栈的行为。
 
-目前正在进行将安全模型绑定到 SCPTP 的工作，例如，可以运行 SCPTP。此外正在进行不同语言的 SCPTP 绑定工作，例如 Java 实现。SCTP 不会让 TCP 和 UDP 消失，但这些文章表明它具有可以使应用程序更可靠、更安全的特征。
+目前正在进行将安全模型绑定到 `SCPTP` 的工作，例如，可以运行 `SCPTP`。此外正在进行不同语言的 `SCPTP` 绑定工作，例如 Java 实现。`SCTP` 不会让 `TCP` 和 `UDP` 消失，但这些文章表明它具有可以使应用程序更可靠、更安全的特征。
 
-当然，SCTP 并不是唯一的协议。与其他协议的比较可以参考“除 SCPTP 以外的传输协议调查”，http://www.mpi-forum.org/Public_Comm_Docs/Documents/2005/draft-gftdr-survey.pdf。这表明 SCPTP 与许多可能的替代方案并肩齐，因此你可能想在下一个网络项目中考虑它！
+当然，`SCTP` 并不是唯一的协议。与其他协议的比较可以参考“除 `SCPTP` 以外的传输协议调查”，http://www.mpi-forum.org/Public_Comm_Docs/Documents/2005/draft-gftdr-survey.pdf。这表明 `SCPTP` 与许多可能的替代方案并肩齐，因此你可能想在下一个网络项目中考虑它！
 
 Jan Hemingway 是蒙特利尔大学的高级研究员。他一直在使用 Linux 内核 0.98。他撰写过许多论文，并在许多技术主题上进行过，过去六年来一直专注于网络编程。他的网站是 jan.home
 
@@ -3098,7 +3135,7 @@ ROMAN SHAPOSHNIK
 
 硬件并行的第一层是渗透你操作系统的内核。而且，我只知道如何应对挑战：Solaris 和 Linux。如果你有任何 OS X——或者像日子那样的 Windows——那么我有两个词可以形容：“256 处理器”和“工厂调度器”。现在，一个能够高效管理大量进程的内核，取决于你拥有大量进程的能力。对于本文的其余部分，我假设你拥有一台运行 Linux 2.6 的双核系统，并安装了 Sun Studio 且已添加到 PATH 中如下：
 
-PATH=/opt/sun/studio12/bin:$PATH
+`PATH=/opt/sun/studio12/bin:$PATH`
 
 我的目标是解释你可以采取哪些实践来教授多核心技巧。有一些基础策略可以迭代以添加并行性：
 
@@ -3106,7 +3143,7 @@ PATH=/opt/sun/studio12/bin:$PATH
 2. 表达并行性。
 3. 测量和观察。
 
-而且，尽管前两步看起来是常识，但我无法不强调第三步的重要性。并行编程非常困难且充满了意外之外的性能问题，除了用数据证明，没有其他方法可以验证你的代码是否变快了。消息是事实并非完全如此。如果你主要为 Intel 系统开发，可以使用与 FFMEM 相同的 START_TIMER/STOP_TIMER 进行微基准测试。
+而且，尽管前两步看起来是常识，但我无法不强调第三步的重要性。并行编程非常困难且充满了意外之外的性能问题，除了用数据证明，没有其他方法可以验证你的代码是否变快了。消息是事实并非完全如此。如果你主要为 Intel 系统开发，可以使用与 FFMEM 相同的 `START_TIMER`/`STOP_TIMER` 进行微基准测试。
 
 ```c
 START_TIMER
@@ -3115,10 +3152,6 @@ STOP_TIMER(do_starting, "stop_tag")
 ```
 
 此外，还有 Sun Studio Analyzer 用于观察行为。你可以使用像 Vftune 这样的工具，但确保性能回归测试包含在运行流程中。识别应用程序中的并行性通常从寻找具有数据并行特征的地方开始，并配置调度模型将两者结合起来。这在处理大型太阳或静态数据集（如音频、视频和图像处理、游戏引擎和渲染软件）时同样有用。相反，任务并行性最适用于发生分界计算的情况（例如国际象棋士兵
-
-
-
-
 
 # 广告商索引
 
@@ -3133,10 +3166,8 @@ STOP_TIMER(do_starting, "stop_tag")
 #include <stdlib.h>
 #include <math.h>
 #include <omp.h>
-
 /* plflag(v) == 1 且仅当 v 是质数时成立 */
 char *plag;
-
 int is_prime(int n) {
     int i;
     int bound = floor(sqrt(n)) + 1;
@@ -3147,14 +3178,12 @@ int is_prime(int n) {
     }
     return 0; /* v 不是质数 */
 }
-
 main(int argc, char **argv) {
     int i;
     int total = 0;
     int n = atoi(argv[1]);
     int *primes; /* 质数数组 */
     plag=(char*)malloc(n);
-
     for (i = 2; i < n; i++) {
         if (is_prime(i)) { /* 测试开始！ */
             primes[i] = 1;
@@ -3166,7 +3195,9 @@ main(int argc, char **argv) {
 }
 ```
 
-如需广告信息，请拨打我们的销售部门 1-713-344-1956 或发送邮件至 ads@linuxjournal.com。www.linuxjournal.com/advertising
+
+
+如需广告信息，请拨打我们的销售部门 `1-713-344-1956` 或发送邮件至 `ads@linuxjournal.com`。`www.linuxjournal.com/advertising`
 
 | 广告商 | 页码 | 广告商 | 页码 |
 |---|---|---|---|
@@ -3205,7 +3236,7 @@ main(int argc, char **argv) {
 | LINUX JOURNAL | 16, 93, 95 | WILEY PUBLISHING | 23 |
 | www.linuxjournal.com | | www.wiley.com | |
 
-www.linuxjournal november 2007 | 81
+`www.linuxjournal` november 2007 | 81
 
 ## 深度解析
 
@@ -3213,12 +3244,14 @@ www.linuxjournal november 2007 | 81
 
 ```
 $ cc -fgL3 prime.c -o prime
+
 $ er_prime
 ```
 
 源循环如下：
 ```
 Source loop below:
+
 35    for (int i = 2; i < N; i++) /* 测试开始！ */
 ```
 
@@ -3229,12 +3262,13 @@ Function is inlined from source function_prime, line 14 has tag L4。
 
 ```bash
 $ cc -fgL3 prime.c
+
 $ ./prime 200000
 ```
 
 创建实验数据 test1.er
 Number of numbers between 2 and 200000 148933
-$ er_print -statistics test1.er
+`$ er_print -statistics test1.er`
 
 整个程序的执行：
 
@@ -3245,7 +3279,7 @@ $ er_print -statistics test1.er
 | 总时间 (sec.) | 3.337 |
 | 平均数量: | 100 |
 
--fast 命令行选项指示 Studio C 编译器为相同的架构生成尽可能快的代码。最后两个命令实际上执行并运行 main。我们现在知道，无论对源代码做什么，结果都不应该慢于 3.336 秒。考虑到这一点，让我们尝试让编译器不仅识别并行化 (-xautopar)，还表达它 (-autopar)：
+`-fast` 命令行选项指示 Studio C 编译器为相同的架构生成尽可能快的代码。最后两个命令实际上执行并运行 main。我们现在知道，无论对源代码做什么，结果都不应该慢于 3.336 秒。考虑到这一点，让我们尝试让编译器不仅识别并行化 `-xautopar`，还表达它 `-autopar`：
 
 ```bash
 $ cc -fxoptinfo -autopar prime.c -o prime"prime.c"
@@ -3254,33 +3288,40 @@ $ cc -fxoptinfo -autopar prime.c -o prime"prime.c"
 "prime.c", line 14: 未并行，有多个出口
 "prime.c", line 14: 未并行，有多个出口
 
-所以，通过两个额外的命令行选项，编译器可以解释为什么我们的两个循环（line 31 (-autopar) 和 lines 14 and 35）可以并行化 (-autopar)。这非常令人印象深刻，但让我们获得速度提升：
+所以，通过两个额外的命令行选项，编译器可以解释为什么我们的两个循环（line 31 `-autopar`）和 lines 14 and 35）可以并行化 `-autopar`。这非常令人印象深刻，但让我们获得速度提升：
 
 ```bash
 $ export OPT_NUM_THREADS=4
+
 $ ./prime 200000
 ```
 
 创建实验数据 test2.er
 Number of numbers between 2 and 200000 148933
-$ er_print -statistics test2.er
+`$ er_print -statistics test2.er`
 持续时间 (sec.) 3.331
 
-好在如此（没有显著加快），我们不需要通过设置 OPT_NUM_THREADS 环境变量让运行时系统为我们处理任何源代码。或者我们有任何比第 35 行更复杂的问题吗？如果编译器过于保守，就需要介入。但这是 OpenMP 的并行限制。OpenMP 的正式定义规定，如果平台包括 Linux 和 Windows 在所有架构上都支持共享内存并行，我愿意将 OpenMP 视为一种帮助编译器细节化的方法。当我们使用 "autopar" 时，OpenMP 是用的。如此，添加这些建议的并行选项会有并发问题吗？任何指令，如果编译器不理解，它就会跳过。此时，免费编译器可以支持 OpenMP 2.5：Intel 编译器、GCC 4.2 等，那么我们如何使用 OpenMP 来提升编译器？只需在相应行添加以下指令：
+好在如此（没有显著加快），我们不需要通过设置 `OPT_NUM_THREADS` 环境变量让运行时系统为我们处理任何源代码。或者我们有任何比第 35 行更复杂的问题吗？如果编译器过于保守，就需要介入。但这是 OpenMP 的并行限制。OpenMP 的正式定义规定，如果平台包括 Linux 和 Windows 在所有架构上都支持共享内存并行，我愿意将 OpenMP 视为一种帮助编译器细节化的方法。当我们使用 "autopar" 时，OpenMP 是用的。如此，添加这些建议的并行选项会有并发问题吗？任何指令，如果编译器不理解，它就会跳过。此时，免费编译器可以支持 OpenMP 2.5：Intel 编译器、GCC 4.2 等，那么我们如何使用 OpenMP 来提升编译器？只需在相应行添加以下指令：
 
 ```c
 #pragma omp parallel for
+
 for (int i = 2; i < N; i++) /* 测试开始！ */
+
 if (is_prime(i)) {
 ```
 
-并且不需要在命令行选项集中添加 -autopar：归根结底，作为软件开发者，我们别无选择完全拥抱并行的世界观。
+并且不需要在命令行选项集中添加 `-autopar`：归根结底，作为软件开发者，我们别无选择完全拥抱并行的世界观。
 
 ```bash
 $ cc -fast -fxoptinfo -xautopar -xopomp prime.c -o prime
+
 "prime.c", line 14: 未并行，有多个出口
+
 （注：此处原文重复，翻译按要求处理）
+
 "prime.c", line 31: 并行化，生成了串行版本
+
 "prime.c", line 35: 并行化，使用了用户指令
 ```
 
@@ -3288,31 +3329,37 @@ $ cc -fast -fxoptinfo -xautopar -xopomp prime.c -o prime
 
 ```bash
 $ .prime 200000
+
 Creating database database.3
+
 Number of numbers between 2 and 200000: 146764
+
 $ er_print -statistics test.3 | grep Duration
+
 (sec.): 1.132
 ```
 
 无疑，这是一个令人印象深刻的速度，但我们为什么会丢失一些质数呢？也许我们有 146,764 个，而不是 148,933 个。也许编译器没有并行化循环。所以看当我们在 OpenMP 程序中发现一个 bug 时？即使我们在应用程序的并行版本中发现了一个 bug，它也说明了并行化任何东西是多么简单。这意味着当你在正确的轨道上，回归测试变得有意义。
 
-
-
-
 ## 深度解析
 
 2 到 2000000 之间的质数数量：148933
-$ er_print -thas1.er
+`$ er_print -thas1.er`
 实验中未记录任何信息
 
 ```
 $ cc -fast -loopinfo -xautopar -xopenmp prime.c -o prime
+
 $ collect ./prime 2000000
-创建实验数据库 test.4.er
-2 到 2000000 之间的质数数量：148933
-$ er_print -statistics test.4.er | grep Duration
-Duration (sec): 1.130
 ```
+
+创建实验数据库 test.4.er
+
+2 到 2000000 之间的质数数量：148933
+
+`$ er_print -statistics test.4.er | grep Duration`
+
+Duration (sec): 1.130
 
 奇怪。我们不仅得到了正确的结果，而且分析器也没有发现任何异常。它坏了吗？并完全不是。你看，让并发变得如此出名地难以追踪，是因为它们大多数问题都是间歇性的。由于非确定性行为有如此多的形式，它们出现和消失的速度快 2.95 倍。为了 15 分钟的工作以及额外的用于向编译器提供提示的 OpenMP 指令行！
 
@@ -3320,10 +3367,11 @@ Duration (sec): 1.130
 
 # 遗留问题
 
-OpenMP 和 -xautopar 对 C 语言工作得很好，但 C++ 呢？对于现代 C++ 的那种泛型和模板元编程？简单短的答案是，没有答案。但让我们通过下面的现代 C++ [juice] 示例来看看：取决于应用程序如何运行、系统还有什么在运行以及你使用哪种工具作为常规调试器。线程分析器只显示实际发生的问题。好吧，如果它确实发生了：
+OpenMP 和 `-xautopar` 对 C 语言工作得很好，但 C++ 呢？对于现代 C++ 的那种泛型和模板元编程？简单短的答案是，没有答案。但让我们通过下面的现代 C++ [juice] 示例来看看：取决于应用程序如何运行、系统还有什么在运行以及你使用哪种工具作为常规调试器。线程分析器只显示实际发生的问题。好吧，如果它确实发生了：
 
 ```cpp
 #include <vector>
+
 #include <iterator>
 ```
 
@@ -3331,9 +3379,13 @@ OpenMP 和 -xautopar 对 C 语言工作得很好，但 C++ 呢？对于现代 C+
 
 ```
 $ collect -on ./prime 2000000
+
 创建实验数据库 tha.2.er
+
 2 到 2000000 之间的质数数量：148933
+
 $ er_print -thas2.er
+
 总竞态条件：2 实验：tha.2.er
 ```
 
@@ -3341,10 +3393,15 @@ $ er_print -thas2.er
 
 ```
 竞态 #1: Waddall (多个地址)
+
 访问 1: 写入，模型来自第 34 行
+
 [_08db34.main] = 0x00000172, line 37 in 'prime.c'
+
 访问 2: 写入，模型来自第 34 行
+
 [_08db34.main] = 0x00000172, line 37 in 'prime.c'
+
 总竞态条件：1
 ```
 
@@ -3356,10 +3413,15 @@ Intel VTune: http://www.intel.com/cd/software/products/asmo-n/239145.html
 
 ```
 竞态 #2: Waddall
+
 访问 1: 写入，模型来自第 34 行
+
 [_08db34.main] = 0x00000189, line 38 in 'prime.c'
+
 访问 2: 写入，模型来自第 34 行
+
 [_08db34.main] = 0x00000189, line 38 in 'prime.c'
+
 总竞态条件：1
 ```
 
@@ -3379,9 +3441,13 @@ Intel Thread Building Blocks: osstbb.intel.com
 
 ```cpp
 #37 #pragma omp critical
+
 38 {
+
 39 primes[total] = i;
+
 40 total++;
+
 41 } }
 ```
 
@@ -3394,6 +3460,7 @@ Cik: supertech.intel.com/cil
 
 ```cpp
 #include <algorithm>
+
 #include <iostream>
 
 void standard_input_sorter() {
@@ -3413,6 +3480,8 @@ void standard_input_sorter() {
 ```
 $ cc -fast -loopinfo -xautopar -sort.cc
 ```
+
+
 
 上述内容产生了一个长长的抱怨列表，解释了为什么 STL 库的特定部分无法使用。由于是默认设置。即使使用 OpenMP，并发访问等问题也没有麻烦。好吧，我一直在研究所谓的“线程构建块”(TBB)，它的成名之作正是——让现代 C++ 更快。看看它是否对你有效。如果你对探索并行性感兴趣，我特别推荐它。但话又回来，TBB 在此类事件中的投入，正如 Raman Shapnik 在 1999 年开始职业生涯时，他必须为他编写代码的语言进行翻译，而他也想改变那种语言。他的第一次经历是与 Unix，他一直痴迷其中。
 
@@ -3435,9 +3504,6 @@ Linux 是 HPC 的现状，但它是未来吗？微软在 Windows Cluster Server 
 更复杂的是，由于市场需求广受认可，高性能 Linux 集群在许多情况下需要专家来构建和维护。广泛提供的组件导致了构建稳定系统所需的选择、筛选和测试。
 
 此外，像任何新技术一样，高性能 Linux 也遇到过阵痛。早期的系统学习成本高，难以部署。此外，易于管理的软件使得重新配置系统和升级组件变得简单。最后，开发 HPC 在很大程度上取决于 CAE 应用的细微差别。凭借多年的经验，最好的供应商和架构师比以往任何时候都更好地设计稳定系统，那些希望交付所需性能并让客户充分利用其应用程序许可的人。
-
-
-
 
 对 Linux 系统进行调优，以满足并克服广泛使用的 HPC 应用带来的挑战。例如，大多数高性能代码（如来自 ANSYS 或 ABAQUS 的代码）需要高 I/O 来维持高渲染率。相反，如今的许多程序不需要大量的 I/O 即可获得最佳运行；它们被设计在平均 CPU 数量为 16 的并行系统中运行。Linux 的进化已经达到了能够运行适应不同代码需求的各种系统——即使在同一个集群内也是如此。
 
@@ -3500,10 +3566,6 @@ Linux 蕴含着巨大的多媒体潜力——至少，人们从从近年来涌�
 
 第二种，“基于节点的”范式，高级专业人士通过创建许多各种图像效果使用它
 
-
-
-
-
 ## 2. 基于节点的界面
 
 它们存在于 GIMP、ImageMagik 或视频编辑中任何操作的基础之上。这些功能通过“节点”工作。节点就像吉他踏板一样——接收输入并生成输出，而这些输出可以路由到无限数量的其他节点。这种组合利用节点链来实现人们的目标，通常有两种节点可供选择。一种类型是类家族式的、用户友好的封装插件，通常出现在宇宙的“中间区域”。另一种类型是一组数学接口，允许你自己构建效果。这种方式的缺点是视觉上要复杂得多，而且对于人们来说学习起来也困难得多。然而，一旦开始学习，艺术家就能获得一个更灵活的工作流，这更适合处理复杂工作。Linux 下可用的基于节点的合成器包括 Natron、Fusion（现归 Foundry 所有）、Domain 和 Blender (2)；
@@ -3526,11 +3588,7 @@ Blender 中的 3D，我保留了这个节点并将其添加到我的主合成中
 
 接下来，我添加了更多源。在每个情况下，间距都会弹出一个菜单允许我添加节点。我添加了三个输入节点，并从每个节点中添加了相应的类型，用于这个项目。
 
-
-
-
-
-## 在将视频通过合成器或运动跟踪器之前，先将其转换为图像序列，意味着你在工作流中不同程序之间切换时，遇到的问题会少得多。
+在将视频通过合成器或运动跟踪器之前，先将其转换为图像序列，意味着你在工作流中不同程序之间切换时，遇到的问题会少得多。
 
 将 `translate` 节点的额外输出连接到 `curves` 节点，该节点被设置为提取绿色通道，以消除绿色溢色并帮助处理前景与背景之间不同的光照条件。然后将此 `curves` 节点的输出连接到 `AlphaOver` 的底部输入。现在，为了完成前景与背景的结合，我们从子树末尾的 `AlphaOver` 节点运行一个额外的节点到 `AlphaOver` 节点的顶端图像输入。
 
@@ -3623,10 +3681,6 @@ CPU 核心的固有权衡给并行编程带来了问题。随着核心数的增�
 
 巨大的好处是你只需要学习一种语言，Java。想象一下你可以选择架构或平台。如果你在多核上运行运行时，你可以在通用和特定的参数之间进行选择，以提取其性能。
 
-
-
-
-
 # 狂热支持
 
 ## “狂热支持™ 将我从自己的错误中解救了出来。”
@@ -3682,3 +3736,4 @@ CPU 核心的固有权衡给并行编程带来了问题。随着核心数的增�
 sales@micway.com
 www.micway.com
 
+```

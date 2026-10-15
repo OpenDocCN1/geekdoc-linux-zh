@@ -1,3 +1,4 @@
+
 # 第十二章\. 命令替换
 
 > 原文：[`tldp.org/LDP/abs/html/commandsub.html`](https://tldp.org/LDP/abs/html/commandsub.html)
@@ -11,7 +12,7 @@ script_name=`basename $0`
 echo "The name of this script is $script_name."
 ```
 
-**命令的输出可以用作另一个命令的参数，用于设置变量，甚至用于在 for 循环中生成参数列表。**
+**命令的输出可以用作另一个命令的参数，用于设置变量，甚至用于在`for`循环中生成参数列表。**
 
 ```sh
 rm `cat filename`   # "filename" contains a list of files to delete.
@@ -37,11 +38,13 @@ echo $textfile_listing2
 #
 # Thanks, S.C.
 ```
+
 | ![注意](img/068cd6dc5ba56f1437f9ae6e0cb52ede.png) | 命令替换调用一个子 shell。 |
 
 | ![警告](img/05aa79b283e0d53b5a94a522ee0b6cfe.png) | 命令替换可能会导致单词分割。|
 
-&#124;  ```sh COMMAND `echo a b`     # 2 args: a and b
+```sh
+COMMAND `echo a b`     # 2 args: a and b
 
 COMMAND "`echo a b`"   # 1 arg: "a b"
 
@@ -50,11 +53,12 @@ COMMAND `echo`         # no arg
 COMMAND "`echo`"       # one empty arg
 
 # Thanks, S.C.
-```  &#124;
+```
 
 即使没有单词分割，命令替换也可以删除尾随的新行。
 
-&#124;  ```sh # cd "`pwd`"  # This should always work.
+```sh
+# cd "`pwd`"  # This should always work.
 # However...
 
 mkdir 'dir with trailing newline
@@ -80,14 +84,13 @@ echo "You hit ${#key} key."  # ${#variable} = number of characters in $variable
 # Hit RETURN, and it's "You hit 0 key."
 # The newline gets eaten in the command substitution.
 
-#Code snippet by Stphane Chazelas.
-```  &#124;
+# Code snippet by Stphane Chazelas.
+```
 
-|
+| ![警告](img/05aa79b283e0d53b5a94a522ee0b6cfe.png) | 使用`echo`输出通过命令替换设置的*未引用*变量会从重新分配的命令的输出中删除尾随的新行字符。这可能会导致不愉快的惊喜。|
 
-| ![警告](img/05aa79b283e0d53b5a94a522ee0b6cfe.png) | 使用**echo**输出通过命令替换设置的*未引用*变量会从重新分配的命令的输出中删除尾随的新行字符。这可能会导致不愉快的惊喜。|
-
-&#124;  ```sh dir_listing=`ls -l`
+```sh
+dir_listing=`ls -l`
 echo $dir_listing     # unquoted
 
 # Expecting a nicely ordered directory listing.
@@ -102,11 +105,9 @@ echo "$dir_listing"   # quoted
 # -rw-rw-r--    1 bozo       30 May 13 17:15 1.txt
 # -rw-rw-r--    1 bozo       51 May 15 20:57 t2.sh
 # -rwxr-xr-x    1 bozo      217 Mar  5 21:13 wi.sh
-```  &#124;
+```
 
-|
-
-命令替换甚至允许使用重定向或 cat 命令将变量设置为文件的内容。
+命令替换甚至允许使用重定向或`cat`命令将变量设置为文件的内容。
 
 ```sh
 variable1=`<file1`      #  Set "variable1" to contents of "file1".
@@ -120,6 +121,7 @@ variable2=`cat file2`   #  Set "variable2" to contents of "file2".
 #  It is not necessary to explicitly assign a variable.
 echo "` <$0`"           # Echoes the script itself to stdout.
 ```
+
 ```sh
 #  Excerpts from system file, /etc/rc.d/rc.sysinit
 #+ (on a Red Hat Linux installation)
@@ -136,7 +138,7 @@ if [ -e "/proc/ide/${disk[$device]}/media" ] ; then
 fi
 #
 #
-if [ ! -n "`uname -r &#124; grep -- "-"`" ]; then
+if [ ! -n "`uname -r | grep -- "-"`" ]; then
        ktag="`cat /proc/version`"
 ...
 fi
@@ -144,17 +146,18 @@ fi
 #
 if [ $usb = "1" ]; then
     sleep 5
-    mouseoutput=`cat /proc/bus/usb/devices 2>/dev/null&#124;grep -E "^I.*Cls=03.*Prot=02"`
-    kbdoutput=`cat /proc/bus/usb/devices 2>/dev/null&#124;grep -E "^I.*Cls=03.*Prot=01"`
+    mouseoutput=`cat /proc/bus/usb/devices 2>/dev/null | grep -E "^I.*Cls=03.*Prot=02"`
+    kbdoutput=`cat /proc/bus/usb/devices 2>/dev/null | grep -E "^I.*Cls=03.*Prot=01"`
 ...
 fi
-```  |
+```
 
 | ![警告](img/05aa79b283e0d53b5a94a522ee0b6cfe.png) | 除非你有非常充分的理由，否则不要将变量设置为*长*文本文件的内容。不要将变量设置为*二进制*文件的内容，即使是为了开玩笑。|
 
 **示例 12-1\. 愚蠢的脚本技巧**
 
-&#124;  ```sh #!/bin/bash
+```sh
+#!/bin/bash
 # stupid-script-tricks.sh: Don't try this at home, folks.
 # From "Stupid Script Tricks," Volume I.
 
@@ -174,11 +177,11 @@ echo "string-length of \$dangerous_variable = ${#dangerous_variable}"
 #+ setting a variable to the contents of a binary file.
 
 exit 0
-```  &#124;
+```
 
-注意，不会发生*缓冲区溢出*。这是解释语言（如 Bash）比编译语言提供更多保护以防止程序员错误的一个例子。|
+注意，不会发生*缓冲区溢出*。这是解释语言（如 Bash）比编译语言提供更多保护以防止程序员错误的一个例子。
 
-命令替换允许将变量设置为循环的输出。这个问题的关键是在循环中捕获一个 echo 命令的输出。
+命令替换允许将变量设置为循环的输出。这个问题的关键是在循环中捕获一个`echo`命令的输出。
 
 **示例 12-2\. 从循环生成变量**
 
@@ -208,11 +211,10 @@ echo "variable2 = $variable2"  # variable2 = 0123456789
 exit 0
 ```
 
-|
-
 命令替换使得扩展 Bash 可用的工具集成为可能。这仅仅是一个编写输出到`stdout`（就像一个表现良好的 UNIX 工具应该做的那样）的程序或脚本，并将该输出分配给变量的简单问题。
 
-&#124;  ```sh #include <stdio.h>
+```sh
+#include <stdio.h>
 
 /*  "Hello, world." C program  */		
 
@@ -221,52 +223,58 @@ int main()
   printf( "Hello, world.\n" );
   return (0);
 }
-```  &#124;
+```
 
-&#124;  ```sh bash$ **gcc -o hello hello.c**
+```sh
+bash$ **gcc -o hello hello.c**
+```
 
-```  &#124;
-
-&#124;  ```sh #!/bin/bash
+```sh
+#!/bin/bash
 # hello.sh		
 
 greeting=`./hello`
 echo $greeting
-```  &#124;
+```
 
-&#124;  ```sh bash$ **sh hello.sh**
+```sh
+bash$ **sh hello.sh**
 Hello, world.
 
-```  &#124;
+```
 
-|
+| ![注意](img/068cd6dc5ba56f1437f9ae6e0cb52ede.png) | `$(...)`形式已经取代了反引号用于命令替换。|
 
-| ![注意](img/068cd6dc5ba56f1437f9ae6e0cb52ede.png) | **$(...)**形式已经取代了反引号用于命令替换。|
-
-&#124;  ```sh output=$(sed -n /"$1"/p $file)   # From "grp.sh"	example.
+```sh
+output=$(sed -n /"$1"/p $file)   # From "grp.sh"	example.
 
 # Setting a variable to the contents of a text file.
 File_contents1=$(cat $file1)      
 File_contents2=$(<$file2)        # Bash permits this also.
-```  &#124;
+```
 
-命令替换的**$(...)**形式与**`...`**处理双反斜杠的方式不同。
+命令替换的`$(...)`形式与`` `...` ``处理双反斜杠的方式不同。
 
-&#124;  ```sh bash$ **echo `echo \\`**
+```sh
+bash$ **echo `echo \\`**
  `bash$` `**echo $(echo \\)**`
 `\` 
-```  &#124;
+```
 
-命令替换的**$(...)**形式允许嵌套。[[3]](#FTN.AEN7308)
+命令替换的`$(...)`形式允许嵌套。[[3]](#FTN.AEN7308)
 
-&#124;  ```sh word_count=$( wc -w $(echo * &#124; awk '{print $8}') )
-```  &#124;
+```sh
+word_count=$( wc -w $(echo * | awk '{print $8}') )
+```
 
 或者，对于更复杂的情况……
 
 **示例 12-3. 寻找字母表异序词**
 
-&#124;  ```sh #!/bin/bash
+
+
+```sh
+#!/bin/bash
 # agram2.sh
 # Example of nested command substitution.
 
@@ -291,7 +299,7 @@ fi
 
 FILTER='.......'         # Must have at least 7 letters.
 #       1234567
-Anagrams=( $(echo $(anagram $1 &#124; grep $FILTER) ) )
+Anagrams=( $(echo $(anagram $1 | grep $FILTER) ) )
 #          $(     $(  nested command sub.    ) )
 #        (              array assignment         )
 
@@ -310,53 +318,35 @@ echo ${Anagrams[1]}      # Second anagram.
 # See also the agram.sh script for an exercise in anagram finding.
 
 exit $?
-```  &#124;
-
-|
+```
 
 在 shell 脚本中命令替换的示例：
 
-1.  示例 11-8
-
-1.  示例 11-27
-
-1.  示例 9-16
-
-1.  示例 16-3
-
-1.  示例 16-22
-
-1.  示例 16-17
-
-1.  示例 16-54
-
-1.  示例 11-14
-
-1.  示例 11-11
-
-1.  示例 16-32
-
-1.  示例 20-8
-
-1.  示例 A-16
-
-1.  示例 29-3
-
-1.  示例 16-47
-
-1.  示例 16-48
-
-1.  示例 16-49
+1. 示例 11-8
+2. 示例 11-27
+3. 示例 9-16
+4. 示例 16-3
+5. 示例 16-22
+6. 示例 16-17
+7. 示例 16-54
+8. 示例 11-14
+9. 示例 11-11
+10. 示例 16-32
+11. 示例 20-8
+12. 示例 A-16
+13. 示例 29-3
+14. 示例 16-47
+15. 示例 16-48
+16. 示例 16-49
 
 ### 备注
 
-| [[1]](commandsub.html#AEN7205) | 为了**命令替换**的目的，一个**命令**可能是一个外部系统命令，一个内部脚本内置函数，甚至是一个脚本函数。 |
+|  |  |
 | --- | --- |
-| [[2]](commandsub.html#AEN7211) | 在更严格的技术意义上，**命令替换**提取命令的`stdout`，然后使用等号运算符将其赋值给变量。 |
+| [[1]](commandsub.html#AEN7205) | 为了`命令替换`的目的，一个`命令`可能是一个外部系统命令，一个内部脚本内置函数，甚至是一个脚本函数。 |
+| [[2]](commandsub.html#AEN7211) | 在更严格的技术意义上，`命令替换`提取命令的`stdout`，然后使用等号运算符将其赋值给变量。 |
+| [[3]](commandsub.html#AEN7308) | 实际上，使用反引号嵌套也是可能的，但只能通过转义内部的反引号，正如 John Default 所指出的。 |
 
-| [[3]](commandsub.html#AEN7308) | 实际上，使用反引号嵌套也是可能的，但只能通过转义内部的反引号，正如 John Default 所指出的。
-
-&#124;  ```sh word_count=` wc -w \`echo * &#124; awk '{print $8}'\` `
-```  &#124;
-
-|
+```sh
+word_count=` wc -w \`echo * | awk '{print $8}'\` `
+```

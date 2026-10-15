@@ -1,12 +1,13 @@
+
 # 非重叠区间程序
 
 > 原文：[`techbyexample.com/non-overlapping-intervals-program/`](https://techbyexample.com/non-overlapping-intervals-program/)
 
-## **概述**
+## 概述
 
-给定一个区间数组，其中 intervals[i] = [starti, endi]。我们需要找出最少需要移除的区间数量，以使得区间数组中的区间变得不重叠。
+给定一个区间数组，其中`intervals[i] = [starti, endi]`。我们需要找出最少需要移除的区间数量，以使得区间数组中的区间变得不重叠。
 
-让我们通过一个例子来理解
+让我们通过一个例子来理解：
 
 ```go
 Input: intervals = [[2,3],[3,4],[4,5],[2,4]]
@@ -16,9 +17,9 @@ Explanation: [2,4] can be removed and the rest of the intervals are non-overlapp
 
 这个思路是先根据区间的开始时间排序，然后计算重叠的区间。
 
-## **程序**
+## 程序
 
-以下是相应的程序。
+以下是相应的程序：
 
 ```go
 package main
@@ -55,13 +56,12 @@ func eraseOverlapIntervals(intervals [][]int) int {
 }
 
 func main() {
-
 	output := eraseOverlapIntervals([][]int{{2, 3}, {3, 4}, {4, 5}, {2, 4}})
 	fmt.Println(output)
 }
 ```
 
-**输出**
+## 输出
 
 ```go
 6

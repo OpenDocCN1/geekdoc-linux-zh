@@ -1,38 +1,13 @@
+
 # Linux 从零构建 (LFS)：7.1 版本
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - 9.4. 现在怎么办？ ................................................. 226
-
-
-
-
-
-
 
 索引 ............................................................................ 317
 
 # 前言
 
-# 序言
+## 序言
 
 我学习和理解 Linux 的之旅始于十年前，回到 1998 年。那时我刚刚安装了我的第一个 Linux 发行版，并迅速地对 Linux 背后的整个概念和哲学着迷。
 
@@ -47,12 +22,12 @@
 这《Linux From Scratch》这本书是该项目的核心。它为你设计和构建自己的 Linux 系统提供了必要的背景和说明。这种自定义的 Linux 系统不仅能满足用户需求，还能为程序员和系统管理员增强其（现有的）Linux 系统提供理想的学习机会。在这种更广泛的兴趣下，Linux From Scratch 项目诞生了。我衷心希望你在这个过程中玩得愉快。
 
 Gerard Beekmans
+
 gerard@linuxfrom.org
 
 # 读者群体
 
 有很多理由让你阅读这本书。许多人提出的问题是：“既然可以下载并安装现有的系统，为什么要费力从零开始构建呢？”
-
 
 该项目存在的一个重要原因是为了帮助你了解 Linux 是如何工作的。通过从源码构建系统，你可以掌控每一个细节。LFS 的另一个优势是，对于构建系统来说，它提供了巨大的帮助。
 
@@ -68,11 +43,6 @@ LFS的主要目标是 32 位 CPU。如果你还没有构建过 LFS，可能应�
 | 64 位 | 190.6 分钟 | 709 MB |
 
 如你所见，64 位构建仅比 32 位构建快 4%，大 9%。升级到 64 位系统的收益相对很微微。当然，如果你有超过 4GB 的内存或想要处理超过 4GB 的数据，64 位系统的优势是巨大的。
-
-
-
-
-
 
 LFS 生成的默认 64 位构建版本被视为“纯净” 64 位系统。也就是说，它只包含 64 位可执行文件。构建“多库”（multi-lib）系统需要对许多应用程序进行两次编译，一次针对 32 位系统，一次针对 64 位系统。LFS 不直接支持这种方法，因为这会干扰提供简易 Linux 系统说明的教学目标。关于这一高级主题，你可以参考 Cross Linux 项目。
 
@@ -93,7 +63,7 @@ LSB 有五个独立标准：核心（Core）、桌面（Desktop）、运行时�
 - LSB 运行时语言
 - LSB 打印（等等，我列了四项 LSB）
 
-# 满足 LSB 需要的 LFS 提供的软件包
+## 满足 LSB 需要的 LFS 提供的软件包
 
 | LSB 类别 | 软件包 |
 | :--- | :--- |
@@ -104,7 +74,7 @@ LSB 有五个独立标准：核心（Core）、桌面（Desktop）、运行时�
 | LSB 打印 | CUPS |
 | LSB 多媒体 | Alsa, NSS, OpenSSL, Java |
 
-# LFS 或 LSB 未提供的满足 LSB 需要的软件包
+## LFS 或 LSB 未提供的满足 LSB 需要的软件包
 
 | LSB 类别 | 软件包 |
 | :--- | :--- |
@@ -152,75 +122,92 @@ LSB 有五个独立标准：核心（Core）、桌面（Desktop）、运行时�
 - Linux Kernel：该软件包是操作系统。它是 GNU/Linux 环境中的 Linux。
 - M4：该软件包包含通用的文本宏处理器，可用作为其他程序的构建工具。
 - Make：该软件包包含一个指导软件包构建的程序。LFS 中的几乎每个软件包都需要它。
-
-
-
-
-
 - Man-DB
+
 该包包含用于查找和查看手册页（man pages）的程序。由于具有更优秀的国际化能力，它被选中来替代 man 包。它提供了 man 程序。
 
 - Man-pages
+
 该包包含了基础 Linux 手册页的实际内容。
 
 - MPC
+
 该包包含复数算术的函数。Gcc 需要它。
 
 - MPFR
+
 该包包含多精度算术的函数。Gcc 需要它。
 
 - Ncurses
+
 该包包含用于独立于终端处理字符屏幕的库。它通常用于为队列系统提供光标控制。LFS 中的许多软件包都需要它。
 
 - Patch
+
 该包包含通过应用通常由 diff 程序创建的补丁（patch）来修改或创建文件的程序。多个 LFS 软件包的构建过程都需要它。
 
 - Perl
-该包是  语言 Perl 的解释器。多个 LFS 软件包的安装和测试套件需要它。
+
+该包是 语言 Perl 的解释器。多个 LFS 软件包的安装和测试套件需要它。
 
 - Procs
+
 该包包含用于监控进程的程序。这些程序对于系统管理非常有用，也被 LFS 脚本使用。
 
 - Psmisc
+
 该包包含用于显示运行进程信息的程序。这些程序对于系统管理非常有用。
 
 - Readline
+
 该包是一组库，提供了命令行编辑和历史记录功能。Bash 使用它。
 
 - Sed
+
 该包允许在不使用文本编辑器打开的情况下编辑文本。大多数 LFS 软件包的配置脚本也需要它。
 
 - Shadow
+
 该包包含以安全方式处理密码的程序。
 
 - Syslogd
+
 该包包含记录系统消息的程序，例如当异常事件发生时内核或守护进程提供的消息。
 
 - Sysinit
+
 该包提供了 init 程序，它是 Linux 系统上所有其他进程的父进程。
 
 - Tar
+
 该包提供了 LFS 中使用的几乎所有软件包的存档和提取能力。
 
 - Tcl
+
 该包包含了 LFS 软件包中许多测试套件使用的工具命令语言（Tool Command Language）。它仅安装在临时工具链中。
 
 - Texinfo
+
 该包包含用于读取、写入和转换 info 页的程序。它用于许多 LFS 软件包的安装过程。
 
 - Udev
-该包包含用于动态创建设备节点的程序。它是创建 /dev 目录中创建数千个静态设备的替代方案。
+
+该包包含用于动态创建设备节点的程序。它是创建 `/dev` 目录中创建数千个静态设备的替代方案。
 
 - Util-linux
+
 该包包含杂项实用程序。其中包含处理文件系统、控制台、分区和消息的工具。
 
 - Vim
+
 该包包含一个编辑器。选择它是因为它与经典的 vi 编辑器兼容，并且拥有大量强大的功能。编辑器选择对许多用户来说是一个非常个人化的决定，如果需要，可以用任何其他编辑器代替。
 
 - XZ
+
 该包包含用于压缩和解文件的程序。它提供了通常可用的最高压缩率，对于解压缩 XZ 或 LZMA 格式的软件包有用。
 
 - Zlib
+
 该包包含某些程序使用的压缩和解压缩例程。
 
 # 前提条件
@@ -232,60 +219,56 @@ LSB 有五个独立标准：核心（Core）、桌面（Desktop）、运行时�
 在构建 LFS 之前，我们建议阅读以下 HOWTO：
 
 - Software-Building-HOWTO
+
 这是一份关于在 Linux 上构建和安装“通用”Unix 软件包的综合指南。尽管它是多些以前编写的，但它仍然对构建和安装软件所需的 Basic 技术提供了良好的总结。
 
 - The Linux Users' Guide
+
 该指南涵盖了 Linux 软件的使用。该参考资料相当旧，但仍然有效。
 
 - The Essential Pre-Reading Hint http://www.linuxfromscratch.org/downloads/files/essential_ereading.txt
-这是一份专门为 Linux 新手编写的提示。它包含了许多主题的优质信息链接。任何尝试安装 LFS 的人都应该理解该提示中的主题。
 
+这是一份专门为 Linux 新手编写的提示。它包含了许多主题的优质信息链接。任何尝试安装 LFS 的人都应该理解该提示中的主题。
 
 你的主机系统应具有以下指定的软件包。这对于大多数 Linux 发行版来说不是问题。请注意，许多发行版会将头文件放在单独的包中，格式为“package-name>-dev”。如果发行版提供了这些包，请务必安装。
 
 列出的软件包的早期版本可能有效，但未经测试。
 
-- Bash-3.2（bin/sh 应该是指向 bash 的符号链接或硬链接）
+- Bash-3.2（`bin/sh` 应该是指向 `bash` 的符号链接或硬链接）
 - Binutils-2.17（不建议版本大于 2.22，因为未经测试）
-- Bison-2.3（usr/bin/yacc 应该是指向 bison 或执行 bison 的简单脚本）
+- Bison-2.3（`usr/bin/yacc` 应该是指向 `bison` 或执行 `bison` 的简单脚本）
 - Bzip2-1.0.4
 - Coreutils-6.9
 - Diffutils-2.8.1
 - Findutils-4.2.3
-- Gawk-3.1.5（usr/bin/awk 应该是指向 gawk）
+- Gawk-3.1.5（`usr/bin/awk` 应该是指向 `gawk`）
 - GCC-4.1.2（不建议版本大于 4.6.2，因为未经测试）
 - Glib-2.5.1（不建议版本大于 2.14.1，因为未经测试）
 - Grep-2.5.1a
 - Strip-1.3.12
 - Linux Kernel-2.6.25（使用 GCC-4.1.2 或更高版本编译）
 
-内核版本要求是因为我们在第六章构建 glibc 时指定了该版本。udev 也它。
+内核版本要求是因为我们在第六章构建 `glibc` 时指定了该版本。`udev` 也它。
 
-如果主机内核早于 2.6.25，或者不是使用 GCC-4.1.2 编译的，你需要替换内核为符合规范的内核。你有两种方法。首先，查看你的 Linux 发行版是否提供了 2.6.25 或更高的内核包。如果是，你可能希望安装它。如果你的发行版没有提供合格的内核包，或者你不想安装，你可以自己编译内核。编译内核和配置引导程序的说明如下（假设主机使用 GRUB）。
-
-
+如果主机内核早于 2.6.25，或者不是使用 GCC-4.1.2 编译的，你需要替换内核为符合规范的内核。你有两种方法。首先，查看你的 Linux 发行版是否提供了 2.6.25 或更高的内核包。如果是，你可能希望安装它。如果你的发行版没有提供合格的内核包，或者你不想安装，你可以自己编译内核。编译内核和配置引导程序的说明如下（假设主机使用 `GRUB`）。
 
 
-passwd 将打印出它找到的第一个匹配 "passwd" 的 man 页（帮助页），通常是 `/usr/share/man/man/passwd.1`。在本示例中，您需要运行 `man 5 passwd` 来阅读所提到的特定页面。需要注意的是，许多 man 页在不同章节中没有重复的页面名称。因此，通常使用 `man <program name>` 就足够了。
 
+`passwd` 将打印出它找到的第一个匹配 "`passwd`" 的 man 页（帮助页），通常是 `/usr/share/man/man/passwd.1`。在本示例中，您需要运行 `man 5 passwd` 来阅读所提到的特定页面。需要注意的是，许多 man 页在不同章节中没有重复的页面名称。因此，通常使用 `man <program name>` 就足够了。
 
 本书被分为以下几个部分。
 
-## 第一部分 - 引言
+# 第一部分 - 引言
 
 第一部分解释了关于如何进行 TFS 安装的几个重要注意事项。该部分还提供了关于本书的元信息。
-
 
 该部分描述了如何为构建过程做准备——创建分区、下载软件包以及编译临时工具。
 
 第三部分引导读者构建 TFS 系统——逐个编译并安装所有软件包、设置启动脚本并安装内核。最终生成的 Linux 系统是基础，您可以在此基础上构建其他软件以根据需要扩展系统。在本书的末尾，有一个易于使用的参考列表，列出了所有已安装的程序、库和重要文件。
 
+用于创建 TFS 系统的软件正在不断更新和增强。在 TFS 书发布后，可能会出现新的安全警告和错误修复。要检查此版本的 TFS 软件包或说明是否需要任何修改以适应安全漏洞或其他错误修复，请访问 `http://linuxfromscratch.org/lfs/errata/7.1/` 在开始构建之前查看。您在构建 TFS 系统的过程中应该注意所显示的任何更改，并将其应用到书中相关的章节。
 
-用于创建 TFS 系统的软件正在不断更新和增强。在 TFS 书发布后，可能会出现新的安全警告和错误修复。要检查此版本的 TFS 软件包或说明是否需要任何修改以适应安全漏洞或其他错误修复，请访问 http://linuxfromscratch.org/lfs/errata/7.1/ 在开始构建之前查看。您在构建 TFS 系统的过程中应该注意所显示的任何更改，并将其应用到书中相关的章节。
-
-
-
-### 1.1. 如何构建 LFS 系统
+## 1.1. 如何构建 LFS 系统
 
 LFS 系统将使用一个已经安装的 Linux 发行版（如 Debian、Mandriva、Red Hat 或 SUSE）来构建。这个现有的 Linux 系统（主机）将作为起点，提供构建新系统所需的程序，包括编译器、链接器和 shell（外壳）。在安装发行版时，选择“development”（开发）选项，以便访问这些工具。
 
@@ -299,17 +282,17 @@ LFS 系统将使用一个已经安装的 Linux 发行版（如 Debian、Mandriva
 
 这种将新系统与主机发行版隔离开的努力似乎有些过度。关于为什么要这样做的完整技术解释请见第 5.2 节“工具链技术说明”。
 
-在第 6 章中，构建了完整的 LFS 系统。**chroot**（更改根目录）程序被用于进入虚拟环境并启动新的 shell，根目录将设置为 LFS 分区并作为根分区。这与重启并安装内核以挂载 LFS 分区非常相似，但不需要重启，因为创建一个可启动的系统需要额外的工作，而这并不是必须的。主要的优势是，“chrooting”允许您在构建 LFS 的同时继续使用主机系统。在等待编译完成期间，您可以正常地继续使用主机系统。
+在第 6 章中，构建了完整的 LFS 系统。`chroot`（更改根目录）程序被用于进入虚拟环境并启动新的 shell，根目录将设置为 LFS 分区并作为根分区。这与重启并安装内核以挂载 LFS 分区非常相似，但不需要重启，因为创建一个可启动的系统需要额外的工作，而这并不是必须的。主要的优势是，“chrooting”允许您在构建 LFS 的同时继续使用主机系统。在等待编译完成期间，您可以正常地继续使用主机系统。
 
 为了完成安装，将在第 7 章中设置 LFS-Bootscripts，并在第 8 章中设置内核和引导程序。第 9 章包含了关于在本书之外继续 LFS 体验的信息。在执行了书中的步骤后，计算机将准备好重启进入 LFS 系统。
 
 这就是整个过程的概述。每一步的详细信息将在后续章节和软件包描述中进行讨论。看似复杂的项目将得到阐明，随着您开启 LFS 冒险之旅，一切都将各就位。
 
-### 1.2. 自上一个版本发布以来有什么新变化
+## 1.2. 自上一个版本发布以来有什么新变化
 
 以下是自本书上一个版本发布以来的软件包更新列表。
 
-#### 升级到：
+### 升级到：
 
 - Automake 1.11.3
 - Binutils 2.22
@@ -332,26 +315,24 @@ LFS 系统将使用一个已经安装的 Linux 发行版（如 Debian、Mandriva
 - Util-Linux 2.20.1
 - Zlib 1.2.6
 
-#### 新增：
+### 新增：
 
 - glibc-2.14.1-sort-1
 - Kmod-5
 - mpfr-3.1.0-fixes-patch
 - shadow-4.1.5-n-patch
 
-#### 移除：
+### 移除：
 
 - bash-4.2-fixes-patch
 - coreutils-8.14-test_fix-patch
 - gcc-4.6.1-locale-patch
 
-
-这是 Linux From Scratch 的 7.1 版本，日期为 2012 年 3 月 2 日。如果这本书已经超过六个月，可能有更新的版本。要查找，请检查 http://www.linuxfromscratch.org/mirrors
-
+这是 Linux From Scratch 的 7.1 版本，日期为 2012 年 3 月 2 日。如果这本书已经超过六个月，可能有更新的版本。要查找，请检查 `http://www.linuxfromscratch.org/mirrors`
 
 以下是自上一个发布以来的更改列表。
 
-#### 更新日志条：
+### 更新日志条：
 
 - 2012-03-02 - [dbdubs] - LFS-7.1 发布。
 - 2012-02-24 - [dbdubs] - 脚本微调。
@@ -365,7 +346,7 @@ LFS 系统将使用一个已经安装的 Linux 发行版（如 Debian、Mandriva
 - 2012-02-14 - [matthew] - 升级到 Shadow-4.1.5。修复 #3019。
 - 2012-02-14 - [matthew] - 升级到 Linux-3.2.6。修复 #3018。
 - 2012-02-11 - [matthew] - 修正了几个安装命令的标记。这有助于 jhalfs 的包管理。感谢 Pierre Labastien 补丁。
-- 2012-02-11 - [matthew] - 在第 6 章早期创建 /usr/lib/libstdc++.la 项目以修复一个问题。感谢 Pierre Labastien 补丁。
+- 2012-02-11 - [matthew] - 在第 6 章早期创建 `/usr/lib/libstdc++.la` 项目以修复一个问题。感谢 Pierre Labastien 补丁。
 - 2012-02-09 - [matthew] - 升级到 GMP-5.0.4。修复 #3017。
 - 2012-02-09 - [matthew] - 移除了 GMP-5.0.3 在上游添加的 GMP 测试套修复。修复 #3016。
 - 2012-02-07 - [matthew] - 升级到 Udev-181。修复 #3015。
@@ -396,12 +377,8 @@ LFS 系统将使用一个已经安装的 Linux 发行版（如 Debian、Mandriva
 - 2012-01-22 - [dbubbs] 更新网络启动脚本以支持 BLFS 中的桥接设备。
 - 2012-01-22 - [matthew] 升级到 Llibc-3.2.1。修复 #2999。
 - 2012-01-22 - [matthew] 升级到 Udev-178，包括其新依赖 Kmod-4。修复 #2998 和 #3001。
-- 2012-01-16 - [dbubbs] 更改启动脚本使用 devtmfps 用于 /dev。将挂载 /dev 移动到挂载 virtfs 并确保 /dev 放入 /etc/mtab。更改 fstab 和内核配置部分以反映这些更改。
+- 2012-01-16 - [dbubbs] 更改启动脚本使用 devtmfps 用于 `/dev`。将挂载 `/dev` 移动到挂载 virtfs 并确保 `/dev` 放入 `/etc/mtab`。更改 fstab 和内核配置部分以反映这些更改。
 - 2012-01-11 - [dbubbs] 在 GRUB 配置中增加关于使用启动分区的说明。
-
-
-
-
 - [matthew] - 移除 Libnl，因为根结底 IRoute2 并不真的需要它。感谢 Markku Pesonen 指明了上游修复方法。
 
 2012-01-08
@@ -427,7 +404,7 @@ LFS 系统将使用一个已经安装的 Linux 发行版（如 Debian、Mandriva
 
 - [matthew] - 升级到 Automomake-1.11.2。修复 #2986。
 - [matthew] - 升级到 Linux-3.1.6。修复 #2985。
-- [matthew] - 修正 /run/sh 的权限。修复 #2984。
+- [matthew] - 修正 `/run/sh` 的权限。修复 #2984。
 - [matthew] - 为 MPFR 添加上游补丁。修复 #2983。
 
 2012-11-20
@@ -451,53 +428,69 @@ LFS 系统将使用一个已经安装的 Linux 发行版（如 Debian、Mandriva
 2011-11-28
 
 - [dj] - 更新到 lfs-bootscripts-20111128。
-
-
 - [ken] - 修复 coreutils 测试套件中的夏令时 bug。
+
 2011-11-26
+
 - [dbdubs] - 清理控制脚本。
+
 2011-11-25
+
 - [matthew] - 升级到 Binutils-2.22。修复 #2967。
 - [matthew] - 安装 Glibc NIS 和 RPC 头文件。默认的 Glibc-2.14 没有安装这些头文件，但这会导致 VAR BLFS 软件包损坏。修复 #2965。
 - [matthew] - 升级到 Group-2.10。修复 #2964。
 - [matthew] - 为 Perl 的安全漏洞添加修复。修复 #2963。
 - [matthew] - 升级到 GDBM-1.10。修复 #2962。
-- [matthew] - 将 Coreutils libdbuf.so 安装到 /usr/lib/coreutils，以与其他软件包保持一致。修复 #2961。
+- [matthew] - 将 Coreutils libdbuf.so 安装到 `/usr/lib/coreutils`，以与其他软件包保持一致。修复 #2961。
 - [matthew] - 升级到 Linux-3.1.2。修复 #2960。
 - [matthew] - 升级到 Tcl-8.5.11。修复 #2959。
+
 2011-11-19
-- [dbdubs] - 将 /var/lib/btmp 权限设为 660。Michael Blanchard 的建议。
+
+- [dbdubs] - 将 `/var/lib/btmp` 权限设为 660。Michael Blanchard 的建议。
+
 2011-11-14
+
 - [dbdubs] - 更新启动脚本；常规清理；将 consolelog 函数移动到 rc；清理启动循环函数；在 S 级和目标运行级别之间添加交互式提示。感谢 DJ Lucas。
+
 2011-10-29
+
 - [dbdubs] - 启动脚本文本修正。
 - [dbdubs] - 移除用于向后 BLFS 兼容的启动函数中的错误行。
+
 2011-10-28
+
 - [matthew] - 升级到 GCC-4.6.2。修复 #2951。
 - [matthew] - 升级到 Linux-20.1。修复 #2947。
 - [matthew] - 升级到 Libtool-2.4。修复 #2946。
 - [dbdubs] - 偏离书籍并不意味着我们提供帮助。毕竟这取决于个人偏好。
 
+## 1.4.1 常见问题解答 (FAQ)
 
-### 1.4.1 常见问题解答 (FAQ)
 在构建 LFS 系统期间遇到任何问题，请查阅常见问题解答（FAQ）。
 
-### 1.4.2 邮件列表
+## 1.4.2 邮件列表
+
 如果你在阅读本书时遇到问题或在 FAQ 中没有找到答案，请查阅邮件列表。为了让我们能提供最佳帮助，你需要进行。
 
-### 1.4.3 IRC
+## 1.4.3 IRC
+
 在寻求 IRC 帮助之前，请确保你的问题在 FAQ 中没有解答。我们的 IRC 频道名称为。
 
-### 1.4.4 镜像站点
+## 1.4.4 镜像站点
+
 LFS 项目拥有全球多个镜像，方便你下载软件包。请访问网站以获取镜像列表。
 
-### 1.4.5 联系方式
+## 1.4.5 联系方式
+
 请通过以下方式向我们提交反馈。
 
 如果你在执行命令时遇到问题，请查看 `config.log` 文件。它可能包含运行 `configure` 时未打印到屏幕的错误。如果你需要帮助，请包含相关的行。
 
-### 1.5.1 需要说明的事
+## 1.5.1 需要说明的事
+
 除了对问题的简要说明外，请求帮助的关键信息包括：
+
 - 使用书籍的版本（在此例中为7.1）
 - 使用的主机发行版和版本
 - 遇到问题的软件包或章节
@@ -505,19 +498,18 @@ LFS 项目拥有全球多个镜像，方便你下载软件包。请访问网站�
 - 注意是否偏离了书籍
 
 ### 注意
+
 偏离书籍并不意味着我们将提供帮助。毕竟 LFS 是关于个人偏好的。如实说明变化有助于我们评估可能的原因。
 
-### 1.5.2 配置脚本问题
+## 1.5.2 配置脚本问题
+
 如果运行 `configure` 脚本时出错，请检查 `config.log` 文件。这可能包含 `configure` 期间遇到的。
 
-### 1.5.3 编译问题
+## 1.5.3 编译问题
+
+
+
 `make` 的屏幕输出以及各种文件的内容对于确定编译问题有用。`configure` 脚本的输出和 `make` 可以很有帮助。不需要包含全部输出，但要包含足够的信息。以下是 `make` 输出信息的示例：
-
-
-
-
-
-
 
 ### 2.1. 引言
 
@@ -531,47 +523,44 @@ LFS 项目拥有全球多个镜像，方便你下载软件包。请访问网站�
 
 由于编译过程并不总是总有可用的随机内存（RAM），因此使用较小的磁盘分区作为交换分区（swap）是一个好主意。内核使用它来存储一些未使用的数据，并为活动进程留出更多内存。LFS 系统的交换分区可以与宿主机使用的同一个分区，在这种情况下，没有必要创建另一个。
 
-启动如 fdisk 或 cfdisk 等分区程序，并使用命令行选项指定要创建新分区的磁盘——例如用于主集成式驱动器接口（IDE）磁盘的 `/dev/hda`。创建一个 LFS 原生分区，如果需要的话，再创建一个交换分区。如果你不知道如何使用这些程序，请参考 `cfdisk(8)` 或 `fdisk(8)`。
+启动如 `fdisk` 或 `cfdisk` 等分区程序，并使用命令行选项指定要创建新分区的磁盘——例如用于主集成式驱动器接口（IDE）磁盘的 `/dev/hda`。创建一个 LFS 原生分区，如果需要的话，再创建一个交换分区。如果你不知道如何使用这些程序，请参考 `cfdisk(8)` 或 `fdisk(8)`。
 
 > 注意
+>
 > 对于经验丰富的的用户，可以采用其他分区方案。新的 LFS 系统可以位于软件 RAID 阵列或 LVM 卷上。然而，这些选项中的某些需要 initramfs，这是一个高级主题。这些分区方法不建议初次 LFS 用户使用。
 
 记住新分区的标识（例如 `hda5`）。本书将指代此 LFS 分区。同时也请记住交换分区的标识。这些名称稍后将用于 `/etc/fstab` 文件。
 
-### 2.2.1. 其他分区问题
+#### 2.2.1. 其他分区问题
 
 关于系统分区的建议请求通常发布在 LFS 邮件列表中。这是一个高度主观的话题。大多数发行版的默认做法是使用整个硬盘，除了一个小小的交换分区。对于 LFS 来说，由于几个原因并不是最优的。它降低了灵活性，使得在多个发行版或 LFS 构建之间共享数据变得困难，使备份更耗时，并可能由于文件系统结构的分配不当而浪费空间。
 
-### 2.2.1.1. 根分区
+##### 2.2.1.1. 根分区
 
 十 GB 的 LFS 根分区（不要与 `/root` 目录混淆）对于大多数系统来说是一个很好的折中方案。它提供了足够的空间来构建 LFS 和许多 BLFS，但足够小，以便可以创建多个分区进行实验。
 
-### 2.2.1.2. 交换分区
+##### 2.2.1.2. 交换分区
 
 大多数发行版会自动创建一个交换分区。通常推荐的交换分区大小约为物理 RAM 大小的两倍，但这很少需要。如果磁盘空间有限，将交换分区保持在两兆字节即可，并监控磁盘交换量。
 
 交换（Swapping）永远不是好事。通常你只需要通过听磁盘活动并观察系统对命令的反应就能判断系统是否正在进行交换。对交换的第一反应应该是检查是否有不合理的命令，例如尝试编辑一个五 GB 的文件。如果交换变成一种常态，最佳解决方案是为系统购买更多内存。
 
-### 2.2.1.3. 便利分区
+##### 2.2.1.3. 便利分区
 
 还有其他不是必需的分区，但在设计磁盘布局时应当考虑它们。以下列表并非详尽，但旨在作为指南。
 
-- /boot – 强烈推荐。
-- /home – 强烈推荐。
-- /usr – 建议使用。
-- /opt – 建议使用。
-- /tmp – 建议使用。
-- /usr/src – 建议使用。
+- `/boot` – 强烈推荐。
+- `/home` – 强烈推荐。
+- `/usr` – 建议使用。
+- `/opt` – 建议使用。
+- `/tmp` – 建议使用。
+- `/usr/src` – 建议使用。
 
 ### 2.3. 创建文件系统
 
 现在，空分区已经准备好，我们需要在其上创建一个文件系统。
 
 ### 2.4. 挂载新分区
-
-[content] (由于此处为翻译结束)
-
-
 
 如果为 LFS 使用多个分区（例如，一个用于 `/`，另一个用于 `/usr`），请使用以下命令挂载它们：
 
@@ -593,7 +582,6 @@ mount -v -t ext3 /dev/<yyy> $LFS/usr
 将 `<zzz>` 替换为交换分区的名字。
 
 现在工作已经建立，是时候下载软件包了。
-
 
 ### 3.1. 引言
 
@@ -759,162 +747,227 @@ pop
   下载：http://ftp.gnu.org/gnu/gzip-1.4.tar.gz
   MD5 和：e38b18550621c79427f5
 
-
-
-
 # Linux 从零 - 版本 7.1
 
 - LFS-Bootscripts (20120229) - 32 KB
-下载：http://www.linuxfromscratch.org/downloads/7.1/lfs-bootssscripts-20120229.tar.bz
-MD5: 99d71c43f5814322d9f7b4025974dc9
+  下载：http://www.linuxfromscratch.org/downloads/7.1/lfs-bootssscripts-20120229.tar.bz
+  MD5: 99d71c43f5814322d9f7b4025974dc9
 
 - Libpipeline (1.2.0) - 670 KB
-主页：http://pipeline.nongu.org/
-下载：http://download.savannah.gnu.org/releases/libpipeline/libpipeline-1.2.0.tar.gz
-MD5: d03a987a0b2db594716baee2f73d61ae3
+  主页：http://pipeline.nongu.org/
+  下载：http://download.savannah.gnu.org/releases/libpipeline/libpipeline-1.2.0.tar.gz
+  MD5: d03a987a0b2db594716baee2f73d61ae3
 
 - Libitool (2.4.2) - 2571 KB
-主页：http://www.gnu.org/software/libitool/
-下载：http://ftp.gnu.org/gnu/libitool/libitool-2.4.2.tar.gz
-MD5: d2fb3b7d4627e6e913511a40e7224d50
+  主页：http://www.gnu.org/software/libitool/
+  下载：http://ftp.gnu.org/gnu/libitool/libitool-2.4.2.tar.gz
+  MD5: d2fb3b7d4627e6e913511a40e7224d50
 
 - Linux (3.2.6) - 63,560 KB
-主页：http://www.kernel.org/
-下载：http://www.kernel.org/pub/linux/v3/linux-3.2.6.tar.gz
-MD5: 5b0e25e8601a428d13bcc9ae35f840
-
-Linux 内核由于安全漏洞的发现而更新相对频繁。除非错误页面另有说明，否则应使用最新的 x.x 内核版本。对于时间有限或带宽昂贵的想要更新 Linux 内核的用户，可以单独下载软件包的基础版本和补丁。这可以在小版本发布内通过补丁级升级，节省一些时间或成本。
+  主页：http://www.kernel.org/
+  下载：http://www.kernel.org/pub/linux/v3/linux-3.2.6.tar.gz
+  MD5: 5b0e25e8601a428d13bcc9ae35f840
+  Linux 内核由于安全漏洞的发现而更新相对频繁。除非错误页面另有说明，否则应使用最新的 x.x 内核版本。对于时间有限或带宽昂贵的想要更新 Linux 内核的用户，可以单独下载软件包的基础版本和补丁。这可以在小版本发布内通过补丁级升级，节省一些时间或成本。
 
 - M4 (1.4.16) - 1,229 KB
-主页：http://www.gnu.org/software/m4/
-下载：http://ftp.gnu.org/gnu/m4/m4-1.4.16.tar.bz2
+  主页：http://www.gnu.org/software/m4/
+  下载：http://ftp.gnu.org/gnu/m4/m4-1.4.16.tar.bz2
+
+
+
 MD5: 87aceca47fecac672eb2b96a6be63632bf
 
 - Make (3.82) - 1,213 KB
+
 主页：http://www.gnu.org/software/make/
+
 下载：http://ftp.gnu.org/gnu/make/make-3.82.tar.bz2
+
 MD5: a113100f3c63cf575381e5963088bf
 
 - Man-DB (2.6.1) - 2,449 KB
+
 主页：http://www.gnu.org/man-db/
+
 下载：http://download.savannah.gnu.org/releases/man-db/man-db-2.6.1.tar.gz
+
 MD5: 7965e8695c7b9b3b1ee334078a46692
 
 - Man-pages (3.35) - 1,680 KB
+
 主页：http://man7.org/linux/man-pages/index.html
+
 下载：http://man7.org/download/man-pages/man-pages-3.35.tar.gz
+
 MD5: e41432ee35a49036bbaf8d45985069ec
 
 - MPC (0.9) - 553 KB
+
 主页：http://www.multiprocision.org/
+
 下载：http://www.multiprocision.org/mpc/download/mpc-0.9.tar.gz
+
 MD5: 0d6acab8d214bd7d1fbbbc593e83dd00
 
 - MPFR (3.1.0) - 1.176 KB:
+
 主页：http://www.mpfr.org/
+
 下载：http://www.mpfr.org/mpfr-3.1.0/mpfr-3.1.0.tar.bz
+
 MD5 和：238ea4a15cc3a5049b723daef5d179938
 
 - Ncurses (5.9) - 2.760 KB:
+
 主页：http://www.gnu.org/software/ncurses/
+
 下载：http://ftp.gnu.org/ncurses/ncurses-5.9.tar.gz
+
 MD5 和：8bc9c4122e5f2d96bc6f459aa8c62821
 
 - Patch (2.6.1) - 248 KB:
+
 主页：http://savannah.gnu.org/projects/patch/
+
 下载：http://ftp.gnu.org/gnu/patch-2.6.1.tar.bz
+
 MD5 和：0881d1763ae0c4281bdcdc3dac0b2cd0
 
 - Perl (5.14.2) - 12,917 KB:
+
 主页：http://www.cpan.org/
+
 下载：http://www.cpan.org/src/perl-5.14.2.tar.bz
+
 MD5 和：0a44c5d3c1f9d1daaecd19a26
 
 - Procs (3.2.8) - 279 KB:
+
 主页：http://procs.sourceforge.net/
+
 下载：http://procs.sourceforge.net/procs-3.2.8.tar.gz
+
 MD5 和：953271b45f864013ca9894cd7
 
 - Psmsic (22.15) - 382 KB:
+
 主页：http://psmsic.sourceforge.net/
+
 下载：http://downloads.sourceforge.net/psmsic-22.15.tar.gz
+
 MD5 和：35e155bae2e49dc358450db12
 
 - Readline (6.2) - 2,225 KB:
+
 主页：http://www.gnu.org/software/readline/
+
 下载：http://ftp.gnu.org/gnu/readline-6.2.tar.gz
+
 MD5 和：679448abc2ca081f23359d0256
 
 - Sed (4.2.1) - 978 KB:
+
 主页：http://www.gnu.org/software/sed/
+
 下载：http://ftp.gnu.org/gnu/sed-4.2.1.tar.bz
+
 MD5 和：73d10fdb72601a0111575c1d3f45
 
 - Shadow (4.1.5) - 2,105 KB:
+
 主页：http://pkg-shadow.debian.org/
+
 下载：http://pkg-shadow.debian.org/releases/shadow-4.1.5.tar.bz
+
 MD5 和：d57e5588fad79feeb4b0eee829a
 
 - Syslog (1.5) - 85 KB:
+
 主页：http://www.infodrom.org/projects/syslogd/
+
 下载：http://www.infodrom.org/projects/syslogd/download/syslog-1.5.tar.gz
+
 MD5 和：e053094e8103165f98da82f64
 
 - Sysvinit (2.88dsf) - 108 KB:
+
 主页：http://savannah.gnu.org/projects/sysvinit
+
 下载：http://download.savannah.gnu.org/releases/sysvinit-2.88dsf.tar.bz
+
 MD5：6eda8a97b86ea6f59dab2520aa6f
 
 - Tar (1.26) - 225 KB:
+
 主页：http://www.gnu.org/software/tar/
+
 下载：http://ftp.gnu.org/gnu/tar-1.26.tar.bz
+
 MD5：6cee42a2ff41fcd4f9298eeeb22645
 
 - Tcl (8.5.11) - 4,379 KB:
+
 主页：http://tcl.sourceforge.net/
+
 下载：http://downloads.sourceforge.net/tcl/8.5.11-src.tar.gz
+
 MD5：0b1aa96c83990b3db06e2d102ca7
 
 - Texinfo (4.13) - 2,687 KB:
+
 主页：http://www.gnu.org/software/texinfo/
+
 下载：http://ftp.gnu.org/gnu/texinfo/texinfo-4.13.tar.gz
+
 MD5：51ba711519209b5fb583fed52d383
 
 - Udev (181) - 678 KB:
+
 主页：http://www.kernel.org/pub/utils/kernel/hotplug/udev/udev.html
+
 下载：http://www.kernel.org/pub/utils/kernel/hotplug/udev/udev-181.tar.bz
+
 MD5：0d7a7f75070262a081b9f998d8ad
 
 - Udev 配置表 - 7 KB
+
 下载：http://www.linuxfromscratch.org/downloads/7.1/udev-config-20100128.tar.bz
+
 MD5：cc14e2c9be0996fc56310f12a2652
 
 - Util-linux (2.20.1) - 4,506 KB
+
 主页：http://www.kernel.org/pub/utils/util-linux/
+
 下载：http://www.kernel.org/pub/utils/util-linux/v2.20.1.tar.bz
+
 MD5：079b37517d4e002a2e6e99ebbe4
 
 - Vim (7.3) - 8,675 KB
+
 主页：http://www.vim.org/
+
 下载：http://ftp.gnu.org/pub/linux/v3/vim-7.3.tar.bz
 
 - Xz (5.0) - 1,022 KB
+
 主页：http://tukaani.org/
+
 下载：http://tukaani.org/xz-5.0.tar.bz
+
 MD5：5d9021634b
 
 - Zlib (1.2.6) - 490 KB
+
 主页：http://www.zlib.net/
+
 下载：http://www.zlib.net/zlib-1.2.6.tar.gz
+
 MD5：3c792f53774117
-
-
-
-
 
 # 第 4 章 最后的准备
 
-## 4.1. 关于 $LFS
+## 4.1. 关于 `$LFS`
 
 在本书中，将一直使用环境变量 `LFS`。确保该变量始终被定义是至关重要的。它应该被设置为 LFS 分区的挂载点。通过以下命令检查 `LFS` 变量是否设置正确：
 
@@ -932,7 +985,7 @@ export LFS=/mnt/lfs
 
 每当你离开并重新进入当前工作环境时（例如使用 `su` 切换到 root或其他用户），不要忘记检查 `$LFS` 是否已设置。
 
-## 4.2. 创建 $LFS/tools 目录
+## 4.2. 创建 `$LFS/tools` 目录
 
 第 5 章中编译的所有程序将安装在 `$LFS/tools` 下，以将它们与第 6 章编译的程序隔离开来。在这里编译的程序是临时工具，不会成为最终 LFS 系统的一部分。通过将这些程序保留在单独的目录中，在使用后可以轻松地丢弃。这还能防止程序进入宿主机的生产目录（这在第 5 章中很容易不小心发生）。
 
@@ -963,21 +1016,29 @@ useradd -s /bin/bash -g lfs -m -k /dev/null lfs
 
 命令行选项的含义：
 
-- -s /bin/bash: 这使得 bash 成为用户 `lfs` 的默认 shell。
-- -g lfs: 此选项将用户 `lfs` 添加到组 `lfs` 中。
-- -m: 为 `lfs` 创建一个家目录。
-- -k /dev/null: 该参数通过将输入位置更改为本地空设备，防止从骨架目录（默认是 `/etc/skel`）可能复制文件。
-- lfs: 这是创建的组和用户的实际名称。
+- `-s /bin/bash`: 这使得 bash 成为用户 `lfs` 的默认 shell。
+- `-g lfs`: 此选项将用户 `lfs` 添加到组 `lfs` 中。
+- `-m`: 为 `lfs` 创建一个家目录。
+- `-k /dev/null`: 该参数通过将输入位置更改为本地空设备，防止从骨架目录（默认是 `/etc/skel`）可能复制文件。
+- `lfs`: 这是创建的组和用户的实际名称。
 
 以 `lfs` 身份登录（而不是在 root 登录时切换到用户 `lfs`，后者不需要 `lfs` 用户拥有密码），为 `lfs` 设置密码：
 
-| 命令 |
-| :--- |
-| passwd lfs |
-| 通过使 `lfs` 目录所有者来授予 `lfs` 对 `$LFS/tools` 的完全访问： |
-| chown -v lfs $LFS/tools |
-| 如果创建了单独的工作目录，将该目录的所有权交给 `lfs`： |
-| chown -v lfs $LFS/sources |
+```
+passwd lfs
+```
+
+通过使 `lfs` 目录所有者来授予 `lfs` 对 `$LFS/tools` 的完全访问：
+
+```
+chown -v lfs $LFS/tools
+```
+
+如果创建了单独的工作目录，将该目录的所有权交给 `lfs`：
+
+```
+chown -v lfs $LFS/sources
+```
 
 接下来，以用户 `lfs` 登录。可以通过虚拟控制台、显示管理器或通过以下替换命令完成：
 
@@ -1046,10 +1107,6 @@ make -j2
 
 大多数软件包都为新构建的软件包提供测试套件，这是一个好主意，因为可以进行编译是否正确的检查。但这并不保证软件包完全没有问题。某些测试套件比其他的更。例如，核心工具链软件包（GCC、Binutils 和 Glibc）的测试套件由于它们在正常运行系统的核心作用至关重要。GCC 和 Glibc 的测试套件可能需要长时间才能完成，特别是在较慢的硬件上，但强烈建议进行。
 
-
-
-
-
 # 注意事项
 
 经验表明，运行第 5 章中的测试套件获益甚少。无法避免的事实是，主机系统会对该章中的测试产生某些影响，往往导致无法解释的失败。由于第 5 章中构建的工具是临时的且最终会被丢弃，因此提供运行这些测试套件的说明是为了测试人员和开发者考虑，但它们是完全可选的。
@@ -1058,11 +1115,9 @@ make -j2
 
 有时软件包测试套件会失败，但其原因是开发者已知且认为非关键的的。请查阅位于 http://www.linuxfromscratch.org/lfs/build-logs/7.1/ 的日志，以验证失败是否在预期之内。该站点适用于书中的所有测试。
 
----
-
 # 第 5 章。构建临时系统
 
-### 5.1. 引言
+## 5.1. 引言
 
 本章展示了如何构建一个最小的 Linux 系统。该系统将包含足够的工具来开始构建第 6 章中的最终 LFS 系统，并提供一个比最小环境更具用户便利性的工作环境。
 
@@ -1070,15 +1125,17 @@ make -j2
 
 在本章中编译的文件将安装在 `$LFS/tools` 目录下，以将它们与下一章安装的文件以及主机生产目录中的文件隔离开。由于在此处编译的软件包是临时的，我们不希望污染即将建立的 LFS 系统。
 
-### 5.2. 技术说明
+## 5.2. 技术说明
 
 本节解释了整体构建方法背后的一些原理和技术细节。不需要立即理解本节中的所有内容。在执行实际构建后，大部分此类信息将变得更加清晰。可以参考本节：
 
-第 5 章的总体目标是产生一个临时区域，其中包含一组已知的良好工具，并且可以与主机系统隔离开。通过使用 **root**，后续章节中的命令将在该环境中执行，确保目标 LFS 系统得到清洁、无故障的构建。构建过程的设计旨在最大限度地减少新读者的风险，并在此时提供最大的教育价值。
+第 5 章的总体目标是产生一个临时区域，其中包含一组已知的良好工具，并且可以与主机系统隔离开。通过使用 `root`，后续章节中的命令将在该环境中执行，确保目标 LFS 系统得到清洁、无故障的构建。构建过程的设计旨在最大限度地减少新读者的风险，并在此时提供最大的教育价值。
 
-> **重要** 在继续之前，请注意工作平台的名称，通常称为目标三元组（target triplet）。确定目标三元组名称的简单方法是运行许多软件包源码随附的 `config.guess` 脚本。解压 Binutils 并运行：`./config.guess`。例如，对于现代 32 位 Intel 处理器，输出将是 `i686-pc-linux-gnu`。
 
-> 同样请注意平台动态链接器的名称，通常称为动态链接器（dynamic linker）（不要与作为 Binutils 一的静态链接器 `ld` 混淆）。Glibc 提供的动态链接器加载程序所需的共享库，准备程序运行，然后运行它。32 位 Intel 机器的动态链接器名称将是 `ld-linux.so.2`。确定动态链接器名称的一种万无一失的方法是通过运行命令检查主机系统中的一个随机二进制文件：`readelf -l <name of binary> | grep interpreter` 并注意输出。涵盖所有平台的权威参考位于源码根目录下的 `shlib-versions` 文件中。
+
+> **重要** 在继续之前，请注意工作平台的名称，通常称为目标三元组（`target triplet`）。确定目标三元组名称的简单方法是运行许多软件包源码随附的 `config.guess` 脚本。解压 Binutils 并运行：`./config.guess`。例如，对于现代 32 位 Intel 处理器，输出将是 `i686-pc-linux-gnu`。
+
+> 同样请注意平台动态链接器的名称，通常称为动态链接器（`dynamic linker`）（不要与作为 Binutils 一的静态链接器 `ld` 混淆）。Glibc 提供的动态链接器加载程序所需的共享库，准备程序运行，然后运行它。32 位 Intel 机器的动态链接器名称将是 `ld-linux.so.2`。确定动态链接器名称的一种万无一失的方法是通过运行命令检查主机系统中的一个随机二进制文件：`readelf -l <name of binary> | grep interpreter` 并注意输出。涵盖所有平台的权威参考位于源码根目录下的 `shlib-versions` 文件中。
 
 第 5 章构建方法工作的一些关键点：
 
@@ -1088,9 +1145,6 @@ make -j2
 - 目标 LFS 系统的构建过程。
 - 由于在此处编译的软件包是临时的，我们不希望污染即将建立的 LFS 系统。
 - 目标 LFS 系统的清洁、无故障构建。
-
-
-
 
 # Linux From Scratch - 版本 7.1
 
@@ -1111,14 +1165,16 @@ echo $LFS
 ```
 
 确保输出显示了 LFS 分区挂载点的路径，使用我们的示例，该路径为 `/mnt/lfs`。
-
 - 最后，必须强调最后两个重要事项：
 
 > 重要
-构建指令假设正在使用 bash 壳。
+
+构建指令假设正在使用 `bash` 壳。
 
 > 重要
+
 再次强调构建过程：
+
 1. 将所有源码和软件包放在从 chroot 环境可以访问的目录中，例如 `/mnt/lfs/sources/`。不要将源码放在 `/mnt/lfs/tools/` 中。
 2. 切换源码目录。
 3. 对于每个软件包：
@@ -1133,11 +1189,13 @@ echo $LFS
 Binutils 软件包包含一个链接器、一个汇器器以及处理目标文件的其他工具。
 
 预计构建时间：1 SBU
+
 所需磁盘空间：350 MB
 
 ### 5.4.1. 安装交叉编译 Binutils
 
 > 注意
+
 回去并重读上一节中的注释。理解标记为“重要（important）”的注释将为你以后避免很多问题。
 
 让 Binutils 成为第一个编译的软件包是非常重要的，因为 Glibc 和 GCC 都会对可用的链接器和汇器器进行各种测试，以决定启用自身的哪些功能。
@@ -1150,6 +1208,7 @@ cd ../binutils-build
 ```
 
 > 注意
+
 为了使书中列出的 SBU 值具有参考价值，请测量从配置到包括首次安装在构建该软件包的时间。为了方便实现这一点，可以使用 `time` 命令将这三个命令封装起来，如下：`time { ./configure .. make && make install; }`
 
 现在准备编译 Binutils：
@@ -1162,16 +1221,20 @@ cd ../binutils-build
 
 `configure` 的含义：
 
---target=$LFS_TARGET
-由于 LFS_TARGET 变量中的机器描述与 `config-guess` 脚本返回的值略有不同，此开关将告诉 `configure` 脚本调整 Binutils 的构建系统，以构建交叉链接器。
+`--target=$LFS_TARGET`
 
---prefix=/tools
+由于 `LFS_TARGET` 变量中的机器描述与 `config-guess` 脚本返回的值略有不同，此开关将告诉 `configure` 脚本调整 Binutils 的构建系统，以构建交叉链接器。
+
+`--prefix=/tools`
+
 这告诉 `configure` 脚本准备将 Binutils 程序安装到 `/tools` 目录中。
 
---disable-nls
+`--disable-nls`
+
 这禁用了国际化，因为临时工具不需要 i18n。
 
---disable-werror
+`--disable-werror`
+
 这防止在宿主机编译器出现警告时停止构建。
 
 继续编译软件包：
@@ -1203,6 +1266,7 @@ make install
 GCC 软件包包含 GNU 编译器。
 
 预计构建时间：5.0 SBU
+
 所需磁盘空间：1.2 GB
 
 ### 5.5.1. 安装核心 GCC
@@ -1210,6 +1274,7 @@ GCC 软件包包含 GNU 编译器。
 GCC 软件包需要 GMP、MPFR 和 MPC。
 
 > 注意
+
 GCC 文档建议在源码目录之外的专用目录中构建 GCC：
 
 ```
@@ -1233,19 +1298,19 @@ cd ../gcc-build
 
 `configure` 参数的含义：
 
---target=$LFS_TARGET
-由于 LFS_TARGET 变量中的机器描述与 `config-guess` 脚本返回的值略有不同，此开关将告诉 `configure` 脚本调整 GCC 的构建系统以构建交叉链接器。
+`--target=$LFS_TARGET`
 
---prefix=/tools
+由于 `LFS_TARGET` 变量中的机器描述与 `config-guess` 脚本返回的值略有不同，此开关将告诉 `configure` 脚本调整 GCC 的构建系统以构建交叉链接器。
+
+`--prefix=/tools`
+
 这告诉 `configure` 脚本准备将 GCC 程序安装到 `/tools` 目录。
 
---disable-nls
+`--disable-nls`
+
 这禁用了国际化，因为临时工具不需要 i18n。
 
 ...（以此此类推）
-
-
-
 
 ## 5.6. Linux-3.2.6 API Headers
 
@@ -1257,6 +1322,7 @@ Linux API 头文件（位于 `linux-3.2.6.tar.xz` 中）暴露内核 API 以供 
 ### 5.6.1. 安装 Linux API Headers
 
 Linux 内核需要为系统的 C 库（LFS 中为 Glibc）暴露一个应用程序编程接口 (API)。这是通过对 Linux 内核源码 tar 包中提供的各种 C 头文件进行清理来实现的。
+
 确保没有从之前的活动中遗留的过旧文件或依赖项：
 
 ```
@@ -1319,7 +1385,7 @@ esac
   libc_cv_forced-unwind=yes libc_cv_cleanup=yes
 ```
 
-configure 选项的含义：
+`configure` 选项的含义：
 
 ```
 --host=$LFS_STAG --build=$(../glibc-2.14.1/scripts/config.guess)
@@ -1341,28 +1407,39 @@ configure 选项的含义：
 
 ```
 --enable-kernel=2.6.25
+```
+
 这告诉 Glibc 使用支持 2.6.25 及更高版本 Linux 内核进行编译库。未启用针对旧内核的变通方案。
 
+```
 --with-headers=/tools/include
+```
+
 这告诉 Glibc 针对最近安装到 tools 目录的头文件进行编译，这样它就能确切知道内核具有哪些功能并据此进行自我优化。
 
-libc_cv_forced_unwind=yes
+`libc_cv_forced_unwind=yes`
+
 在第 5.4 节“Binutils-2.22 - Pass 1”中安装的链接器是交叉编译的，因此在 Glibc 安装之前无法使用。这意味着针对 force-unwind 支持的 configure 测试将失败，因为它依赖于一个工作的链接器。传递 `libc_cv_forced_unwind=yes` 变量是为了告知 configure 并在无需运行测试的情况下避免 force-unwind 支持。
 
-libc_cv_c_cleanup=yes
-同样，我们将 `libc_cv_c_cleanup=yes` 传递给 **configure** 脚本，以便跳过测试并配置 C 清理处理。
+`libc_cv_c_cleanup=yes`
+
+同样，我们将 `libc_cv_c_cleanup=yes` 传递给 `configure` 脚本，以便跳过测试并配置 C 清理处理。
 
 在此阶段可能会出现以下警告：
 
 ```
 configure: WARNING:
+
 *** These auxiliary programs are missing or
+
 *** incompatible versions: msfmt
+
 *** some features will be disabled.
+
 *** Check the INSTALL file for required versions.
 ```
 
-缺失或不兼容的 **msfmt** 程序通常是无害的。**msfmt** 程序是 Getext 包的一部分，该包带有测试套件，并且可以在主机发行版提供的情况下进行优化。
+缺失或不兼容的 `msfmt` 程序通常是无害的。`msfmt` 程序是 Getext 包的一部分，该包带有测试套件，并且可以在主机发行版提供的情况下进行优化。
 
 编译此包：
 
@@ -1386,20 +1463,25 @@ make
 
 在第 5.4 节“Binutils-2.22 - Pass 1”中安装的链接器是交叉编译的，因此在 Glibc 安装之前无法使用。这意味着针对 force-unwind 支持的 configure 测试将失败，因为它依赖于一个工作的链接器。传递 `libc_cv_forced_unwind=yes` 变量是为了告知 configure 并在无需运行测试的情况下避免 force-unwind 支持。
 
-libc_cv_c_cleanup=yes
-同样，我们将 `libc_cv_c_cleanup=yes` 传递给 **configure** 脚本，以便跳过测试并配置 C 清理处理。
+`libc_cv_c_cleanup=yes`
+
+同样，我们将 `libc_cv_c_cleanup=yes` 传递给 `configure` 脚本，以便跳过测试并配置 C 清理处理。
 
 在此阶段可能会出现以下警告：
 
 ```
 configure: WARNING:
+
 *** These auxiliary programs are missing or
+
 *** incompatible versions: msfmt
+
 *** some features will be disabled.
+
 *** Check the INSTALL file for required versions.
 ```
 
-缺失或不兼容的 **msfmt** 程序通常是无害的。**msfmt** 程序是 Getext 包的一部分，该包带有测试套件，并且可以在主机发行版提供的情况下进行优化。
+缺失或不兼容的 `msfmt` 程序通常是无害的。`msfmt` 程序是 Getext 包的一部分，该包带有测试套件，并且可以在主机发行版提供的情况下进行优化。
 
 安装此包：
 
@@ -1408,8 +1490,6 @@ make install
 ```
 
 关于此包的详细信息请位于第 6.7 2 节，“Linux API 头文件的内容”。
-
-
 
 关于此包的详细信息请位于第 6.7 2 节，“Linux API 头文件的内容”。
 
@@ -1438,13 +1518,15 @@ AR="$LFS_gcc-ar" RANLIB="$LFS_gcc-ranlib"
 --disable-nls --with-lib-path=/tools/lib
 ```
 
-新 configure 选项的含义：
+新 `configure` 选项的含义：
 
 `CC="$LFS_gcc -B/tools/lib/" AR="$LFS_gcc-ar" RANLIB="$LFS_gcc-ranlib"`
+
 由于这是 Binutils 的原生构建，设置这些变量确保构建系统使用交叉编译器和相关工具，而不是主机上的工具。
 
---with-lib-path=/tools/lib
-这告诉 configure 脚本在编译 Binutils 时指定库搜索路径，并将 `/tools/lib` 传递给链接器。这防止了链接器搜索主机上的库目录。
+`--with-lib-path=/tools/lib`
+
+这告诉 `configure` 脚本在编译 Binutils 时指定库搜索路径，并将 `/tools/lib` 传递给链接器。这防止了链接器搜索主机上的库目录。
 
 编译包：
 
@@ -1462,16 +1544,22 @@ make install
 
 ```
 make -C bin ld clean
-make -C bin ld LIB_PATH=/usr/lib
-cp -v bin/ld /tools/bin/ld
 ```
 
-make 参数的含义：
 
--C bin ld clean
-这告诉 make 程序删除 bin 子目录中的所有编译文件。
--C bin ld LIB_PATH=/usr/lib
-此选项将重建 bin 子目录中的所有内容。在命令行上指定 LIB_PATH Makefile 变量允许我们覆盖临时工具的默认值，并指向正确的最终路径。
+
+`make -C bin ld LIB_PATH=/usr/lib`
+
+`cp -v bin/ld /tools/bin/ld`
+
+```
+make 参数的含义：
+```
+
+`-C bin ld clean`
+这告诉 `make` 程序删除 `bin` 子目录中的所有编译文件。
+`-C bin ld LIB_PATH=/usr/lib`
+此选项将重建 `bin` 子目录中的所有内容。在命令行上指定 `LIB_PATH` `Makefile` 变量允许我们覆盖临时工具的默认值，并指向正确的最终路径。
 
 如果一切正常，输出将显示：
 
@@ -1488,36 +1576,33 @@ readelf -l | grep ':'
 **注意：**
 在下一章中构建 Binutils，如果失败，说明之前的 Binutils、GCC 或 Glibc 安装出了问题。
 
-
-
-
 该变量的值指定了链接器的默认库搜索路径。此准备将在下一章中使用。
 
 关于此软件包的详情见第 6.13.2 节，“Binutils 内容”。
 
 ## 5.10. GCC-4.6.2 - Pass 2
 
-GCC 软件包包含 GNU cc 集合，其中包含了 C 和 C++ 编译器。
+`GCC` 软件包包含 GNU cc 集合，其中包含了 C 和 C++ 编译器。
 
 预计编译时间：7.0 SBU
 所需磁盘空间：1.5 GB
 
 ### 5.10.1. 安装 GCC
 
-比 4.3 后的 GCC 版本会将此视为重定位编译器（relocated compiler），并不允许在 --prefix 指定的位置中搜索启动文件（startfiles）。由于这并不是重定位编译器，且 tools 中的启动文件对于构建一个链接到 /tools/libs 中库的正常工作编译器至关重要，请应用以下补丁以将 GCC 恢复到旧行为：
+比 4.3 后的 `GCC` 版本会将此视为重定位编译器（relocated compiler），并不允许在 `--prefix` 指定的位置中搜索启动文件（startfiles）。由于这并不是重定位编译器，且 `tools` 中的启动文件对于构建一个链接到 `/tools/libs` 中库的正常工作编译器至关重要，请应用以下补丁以将 `GCC` 恢复到旧行为：
 
 ```
 patch -npl -1 ... //gcc-4.6.2-startfiles fix-1.patch
 ```
 
-在正常情况下，运行 fixinc 脚本是为了修复可能损坏的头文件。由于此时已经安装了 GCC-4.6.2 和 Glibc-2.14，且已知各自的头文件需要修复，因此不执行 fixinc 脚本。事实上，该脚本可能会通过将修复后的头文件安装到 GCC 的私有包含目录来污染环境。可以通过执行以下命令抑制 fixinc 脚本的运行：
+在正常情况下，运行 `fixinc` 脚本是为了修复可能损坏的头文件。由于此时已经安装了 `GCC-4.6.2` 和 `Glibc-2.14`，且已知各自的头文件需要修复，因此不执行 `fixinc` 脚本。事实上，该脚本可能会通过将修复后的头文件安装到 `GCC` 的私有包含目录来污染环境。可以通过执行以下命令抑制 `fixinc` 脚本的运行：
 
 ```
 cp v gcc/Makefile.in{..} > gcc/Makefile.in
 sed 's/\fixinc\/shb-c true/' gcc/Makefile.in
 ```
 
-对于 x86 机器，使用 --fomit-frame-pointer 编译器标志对 GCC 进行自引导构建（bootstrap build）默认会构建此文件，其目标是产生一个与经过自引导构建的完全相同的编译器。通过应用以下命令强制构建使用该标志：
+对于 x86 机器，使用 `--fomit-frame-pointer` 编译器标志对 `GCC` 进行自引导构建（bootstrap build）默认会构建此文件，其目标是产生一个与经过自引导构建的完全相同的编译器。通过应用以下命令强制构建使用该标志：
 
 ```
 cp v gcc/Makefile.in{..}.tmp
@@ -1525,7 +1610,7 @@ sed 's/T CFLAGS=$/& -fomit-frame-pointer/' gcc/Makefile.in.tmp \
 do > gcc/Makefile.in
 ```
 
-以下操作将更改 GCC 默认动态链接器的位置为在 /tools/ 中安装的路径。它还将 /usr/include 从 GCC 的搜索路径中移除。这样做而不是在安装后调整 specs 文件，可以确保在 GCC 的实际构建期间使用新的动态链接器。在此构建期间创建的所有二进制文件将链接到新的 Glibc。
+以下操作将更改 `GCC` 默认动态链接器的位置为在 `/tools/` 中安装的路径。它还将 `/usr/include` 从 `GCC` 的搜索路径中移除。这样做而不是在安装后调整 `specs` 文件，可以确保在 `GCC` 的实际构建期间使用新的动态链接器。在此构建期间创建的所有二进制文件将链接到新的 `Glibc`。
 
 ```
 for file in \
@@ -1545,9 +1630,9 @@ done
 
 ## Linux 搜索 - 版本 7.1
 
-如果上述内容看起来难以理解，让我们将其拆解一下。首先，我们找到 gcc-config 目录下所有名为 linux.h、linux64.h 或 sys4.h 的文件。对于每个文件，我们将其拷贝到同名但添加了 "orig" 后缀的文件中。然后，第一个 sed 表达式将 "tools" 扩展到每个 /lib/、/lib64/ 或 /lib32/ 实例，其中第二个表达式替换硬编码的 "usr" 实例。随后我们在文件末尾添加定义语句，这些语句还包含了搜索路径和默认静态前缀。最后，我们使用 touch 更新配置文件中的时间戳。当与 cp -u 使用时，这可以防止命令中的原始文件发生意外更改，因为 multibilib spec gcc 被无意中运行了两次。
+如果上述内容看起来难以理解，让我们将其拆解一下。首先，我们找到 `gcc-config` 目录下所有名为 `linux.h`、`linux64.h` 或 `sys4.h` 的文件。对于每个文件，我们将其拷贝到同名但添加了 `"orig"` 后缀的文件中。然后，第一个 `sed` 表达式将 `"tools"` 扩展到每个 `/lib/`、`/lib64/` 或 `/lib32/` 实例，其中第二个表达式替换硬编码的 `"usr"` 实例。随后我们在文件末尾添加定义语句，这些语句还包含了搜索路径和默认静态前缀。最后，我们使用 `touch` 更新配置文件中的时间戳。当与 `cp -u` 使用时，这可以防止命令中的原始文件发生意外更改，因为 `multibilib spec gcc` 被无意中运行了两次。
 
-在 x86_64 上，取消设置 multibilib spec gcc 可确保它不会尝试链接到宿主机上的库：
+在 `x86_64` 上，取消设置 `multibilib spec gcc` 可确保它不会尝试链接到宿主机上的库：
 
 ```
 case ($name -m) in
@@ -1559,7 +1644,7 @@ case ($name -m) in
   esac
 ```
 
-与 GCC 的第一次构建一样，它在构建时需要 GMP、MPFR 和 MPC 软件包。解压 tar 包并将它们移动到所需的目录：
+与 `GCC` 的第一次构建一样，它在构建时需要 `GMP`、`MPFR` 和 `MPC` 软件包。解压 tar 包并将它们移动到所需的目录：
 
 ```
 tar -jxf ../mpfr-3.1.0.tar.bz2
@@ -1577,7 +1662,7 @@ mkdir -v ../gcc-build
 cd ../gcc-build
 ```
 
-在开始构建 GCC 之前，记得取消任何覆盖默认优化标志的环境变量。
+在开始构建 `GCC` 之前，记得取消任何覆盖默认优化标志的环境变量。
 
 现在准备编译：
 
@@ -1589,58 +1674,54 @@ AR="$LFS_TGT-ar RANLIB=$LFS_TGT-ranlib" \
   --enable-shared --enable-threads=posix \
 ```
 
-以下是关于 --enable-languages=c,c++ --disable-libstdcxx-pch --disable-bootstrap --disable-multilib 选项含义：
+以下是关于 `--enable-languages=c,c++ --disable-libstdcxx-pch --disable-bootstrap --disable-multilib` 选项含义：
 
---enable-locale=gnu 
+`--enable-locale=gnu`
 此选项确保它不会尝试链接到宿主机上的库：
 
---enable-threads=posix 
+`--enable-threads=posix`
 此选项允许多线程代码。
 
---enable-shared 
+`--enable-shared`
 此选项确保了共享库的启用。
 
---with-local-prefix=/tools 
-此选项将本地前缀指定为 /tools。
+`--with-local-prefix=/tools`
+此选项将本地前缀指定为 `/tools`。
 
---prefix=/tools 
-此选项指定 GCC 的安装位置。
+`--prefix=/tools`
+此选项指定 `GCC` 的安装位置。
 
-../config-4.6.2/configure 
+`../config-4.6.2/configure`
 这是配置脚本的路径。
 
-CC="$LFS_TGT-gcc -B/tools/lib/" 
-AR="$LFS_TGT-ar RANLIB=$LFS_TGT-ranlib" 
+`CC="$LFS_TGT-gcc -B/tools/lib/"`
+`AR="$LFS_TGT-ar RANLIB=$LFS_TGT-ranlib"`
 这是设置编译器和链接器环境变量的命令。
 
---disable-multilib 
-此选项在 GCC 第一次构建时避免了对多 ABI 架构库的链接。
+`--disable-multilib`
+此选项在 `GCC` 第一次构建时避免了对多 ABI 架构库的链接。
 
---enable-locale=gnu 
+`--enable-locale=gnu`
 此选项启用了 GNU 语言环境。
 
---with-local-prefix=/tools 
+`--with-local-prefix=/tools`
 此选项设置了本地前缀。
 
---prefix=/tools 
+`--prefix=/tools`
 此选项设置了安装的根目录。
-
-
-
-
 
 ## 5.11. Tcl-8.5.11
 
-Tcl 软件包包含了工具命令语言（Tool Command Language）。
+`Tcl` 软件包包含了工具命令语言（Tool Command Language）。
 
 - 预计构建时间：0.3 SBU
 - 所需磁盘空间：33 MB
 
 ### 5.11.1. 安装 Tcl
 
-此软件包以及接下来的三个软件包（Expect、DejaGNU 和 Check）用于支持运行 GCC、Binutils 以及其他软件包的测试套件。安装四个软件包似乎有些多余，但知道最重要的工具正在正常工作是非常令人放心的，甚至可以说它们是必不可少的。即使测试套件未在本章中（它们不是强制性的），但运行第 6 章中的测试套件也需要这些软件包。
+此软件包以及接下来的三个软件包（Expect、DejaGNU 和 Check）用于支持运行 `GCC`、`Binutils` 以及其他软件包的测试套件。安装四个软件包似乎有些多余，但知道最重要的工具正在正常工作是非常令人放心的，甚至可以说它们是必不可少的。即使测试套件未在本章中（它们不是强制性的），但运行第 6 章中的测试套件也需要这些软件包。
 
-为编译准备 Tcl：
+为编译准备 `Tcl`：
 
 ```
 cd unix
@@ -1653,13 +1734,13 @@ cd unix
 make
 ```
 
-编译现在已完成。正如前文所述，对于本章中的临时工具，运行测试套件并不是强制性的。但如果仍要运行 Tcl 测试套件，请执行以下命令：
+编译现在已完成。正如前文所述，对于本章中的临时工具，运行测试套件并不是强制性的。但如果仍要运行 `Tcl` 测试套件，请执行以下命令：
 
 ```
 TZ=UTC make test
 ```
 
-Tcl 测试在某些尚未完全理解的情况下可能会出现失败。套件失败并不意外，且不被认为是关键性的。`TZ=UTC` 参数将时区设置为协调世界时（UTC），也称为格林威治标准时间（GMT），但仅限于测试运行期间。这确保了时钟测试能够正确执行。关于 `TZ` 环境变量的详细信息请见第 7 章。
+`Tcl` 测试在某些尚未完全理解的情况下可能会出现失败。套件失败并不意外，且不被认为是关键性的。`TZ=UTC` 参数将时区设置为协调世界时（UTC），也称为格林威治标准时间（GMT），但仅限于测试运行期间。这确保了时钟测试能够正确执行。关于 `TZ` 环境变量的详细信息请见第 7 章。
 
 安装软件包：
 
@@ -1673,7 +1754,7 @@ make install
 chmod -v u+w /tools/lib/libtcl8.5.so
 ```
 
-安装 Tcl 的头文件。下一个软件包 Expect 需要它们来完成构建。
+安装 `Tcl` 的头文件。下一个软件包 `Expect` 需要它们来完成构建。
 
 ```
 make install-private-headers
@@ -1687,8 +1768,8 @@ ln -sv tclsh8.5 /tools/bin/tclsh
 
 ### 5.11.2. Tcl 的内容
 
-- 安装的程序：tclsh（指向 tclsh8.5）和 tclsh8.5
-- 安装的库：libtcl8.5.so，libtclstub8.5.a
+- 安装的程序：`tclsh`（指向 `tclsh8.5`）和 `tclsh8.5`
+- 安装的库：`libtcl8.5.so`，`libtclstub8.5.a`
 
 | 名称 | 描述 |
 | :--- | :--- |
@@ -1699,21 +1780,21 @@ ln -sv tclsh8.5 /tools/bin/tclsh
 
 ## 5.12. Expect-5.45
 
-Expect 软件包包含一个用于与其他交互程序进行脚本化对话的程序。
+`Expect` 软件包包含一个用于与其他交互程序进行脚本化对话的程序。
 
 预计构建时间：0.1 SBU
 所需磁盘空间：4.1 MB
 
 ### 5.12.1. 安装 Expect
 
-首先，强制 Expect 脚本使用 `/bin/stty` 而不是它可能在主机系统中找到的 `/usr/local/bin/stty`。这将确保我们的测试套件工具在工具链的最终构建中保留：
+首先，强制 `Expect` 脚本使用 `/bin/stty` 而不是它可能在主机系统中找到的 `/usr/local/bin/stty`。这将确保我们的测试套件工具在工具链的最终构建中保留：
 
 ```bash
 diff -v configure(.,orig)
 sed 's:/usr/local/bin:bin:bin:' configure.orig > configure
 ```
 
-现在为编译准备 Expect：
+现在为编译准备 `Expect`：
 
 ```bash
 ./configure --prefix=/tools --with-tcl=/tools/lib --with-tclinclude=/tools/include
@@ -1721,8 +1802,8 @@ sed 's:/usr/local/bin:bin:bin:' configure.orig > configure
 
 `configure` 选项的含义：
 
-- --with-tcl=/tools/lib：这确保 `configure` 脚本在临时工具中找到 Tcl 安装，而不是在主机系统中定位可能存在的现有。
-- --with-tclinclude=/tools/include：这显式告诉 Expect 在哪里寻找 Tcl 头文件。使用此选项可以避免 `configure` 因无法自动发现 Tcl 头文件位置而导致失败的情况。
+- `--with-tcl=/tools/lib`：这确保 `configure` 脚本在临时工具中找到 `Tcl` 安装，而不是在主机系统中定位可能存在的现有。
+- `--with-tclinclude=/tools/include`：这显式告诉 `Expect` 在哪里寻找 `Tcl` 头文件。使用此选项可以避免 `configure` 因无法自动发现 `Tcl` 头文件位置而导致失败的情况。
 
 构建软件包：
 
@@ -1730,13 +1811,13 @@ sed 's:/usr/local/bin:bin:bin:' configure.orig > configure
 make
 ```
 
-编译现在已完成。正如前文所述，对于此软件包中的临时工具，运行测试套件并不是强制性的。但如果仍要运行 Expect 测试套件，请执行以下命令：
+编译现在已完成。正如前文所述，对于此软件包中的临时工具，运行测试套件并不是强制性的。但如果仍要运行 `Expect` 测试套件，请执行以下命令：
 
 ```bash
 make test
 ```
 
-注意，已知 Expect 测试套件在某些我们无法控制的主机条件下会出现失败。因此，失败不是关键性的。
+注意，已知 `Expect` 测试套件在某些我们无法控制的主机条件下会出现失败。因此，失败不是关键性的。
 
 安装软件包：
 
@@ -1746,12 +1827,12 @@ make install SCRIPTS=""
 
 `make` 参数的含义：
 
-- SCRIPTS=""：这防止安装不需要辅助 Expect 脚本。
+- `SCRIPTS=""`：这防止安装不需要辅助 `Expect` 脚本。
 
 ### 5.12.2. Expect 的内容
 
-- 安装的程序：expect
-- 安装的库：libexpect-5.45.a
+- 安装的程序：`expect`
+- 安装的库：`libexpect-5.45.a`
 
 | 名称 | 描述 |
 | :--- | :--- |
@@ -1760,14 +1841,14 @@ make install SCRIPTS=""
 
 ## 5.13. DejaGNU-1.5
 
-DejaGNU 软件包包含一个用于测试其他程序的框架。
+`DejaGNU` 软件包包含一个用于测试其他程序的框架。
 
 预计构建时间：小于 0.1 SBU
 所需磁盘空间：6.1 MB
 
 ### 5.13.1. 安装 DejaGNU
 
-为编译准备 DejaGNU：
+为编译准备 `DejaGNU`：
 
 ```bash
 ./configure --prefix=/tools
@@ -1787,7 +1868,7 @@ make check
 
 ### 5.13.2. DejaGNU 的内容
 
-- 安装的程序：runtest
+- 安装的程序：`runtest`
 
 | 名称 | 描述 |
 | :--- | :--- |
@@ -1796,14 +1877,14 @@ make check
 
 ## 5.15. Ncurses-5.9
 
-Ncurses 软件包包含了用于终端无关字符处理的库。
+`Ncurses` 软件包包含了用于终端无关字符处理的库。
 
 预计构建时间：0.7 SBU
 所需磁盘空间：30 MB
 
 ### 5.15.1. 安装 Ncurses
 
-为编译准备 Ncurses：
+为编译准备 `Ncurses`：
 
 ```bash
 ./configure --prefix=/tools --with-shared --without-debug --without-ada --enable-overwrite
@@ -1811,8 +1892,8 @@ Ncurses 软件包包含了用于终端无关字符处理的库。
 
 `configure` 选项的含义：
 
-- --without-ada：这确保 Ncurses 不构建对 Ada 编译器的支持（主机上可能存在但在 chroot 环境中不可用）。
-- --enable-overwrite：这告诉 Ncurses 将头文件安装到 `/tools/include` 而不是 `/tools/include/ncurses`，以确保其他软件包能够成功找到 Ncurses 头文件。
+- `--without-ada`：这确保 `Ncurses` 不构建对 Ada 编译器的支持（主机上可能存在但在 chroot 环境中不可用）。
+- `--enable-overwrite`：这告诉 `Ncurses` 将头文件安装到 `/tools/include` 而不是 `/tools/include/ncurses`，以确保其他软件包能够成功找到 `Ncurses` 头文件。
 
 编译软件包：
 
@@ -1832,7 +1913,7 @@ make install
 
 ## 5.16. Bash-4.2
 
-Bash 软件包包含了 BourneAgain Shell。
+`Bash` 软件包包含了 BourneAgain Shell。
 
 预计构建时间：0.5 SBU
 所需磁盘空间：35 MB
@@ -1845,7 +1926,7 @@ Bash 软件包包含了 BourneAgain Shell。
 patch -Np -i ../bash-4.2-fixes-4.patch
 ```
 
-为编译准备 Bash：
+为编译准备 `Bash`：
 
 ```bash
 ./configure --prefix=/tools --without-malloc
@@ -1853,7 +1934,7 @@ patch -Np -i ../bash-4.2-fixes-4.patch
 
 `configure` 选项的含义：
 
-- --without-malloc：关闭 Bash 的内存分配（malloc）函数，Bash 将使用更稳定的 Glibc 中的 malloc 函数。
+- `--without-malloc`：关闭 `Bash` 的内存分配（malloc）函数，`Bash` 将使用更稳定的 `Glibc` 中的 malloc 函数。
 
 编译软件包：
 
@@ -1861,7 +1942,7 @@ patch -Np -i ../bash-4.2-fixes-4.patch
 make
 ```
 
-编译现在已完成。正如前文所述，对于本章中的临时工具，运行测试套件并不是强制性的。但如果仍要运行 Bash 测试套件，请执行以下命令：
+编译现在已完成。正如前文所述，对于本章中的临时工具，运行测试套件并不是强制性的。但如果仍要运行 `Bash` 测试套件，请执行以下命令：
 
 ```
 make tests
@@ -1883,14 +1964,14 @@ ln -vs bash /tools/sh
 
 ## 5.17. Bzip2-1.0.6
 
-Bzip2 软件包包含了压缩和解压缩程序。使用 bzip2 压缩文本文件的压缩率比传统的 gzip 高得多。
+`Bzip2` 软件包包含了压缩和解压缩程序。使用 `bzip2` 压缩文本文件的压缩率比传统的 `gzip` 高得多。
 
 预计构建时间：小于 0.1 SBU
 所需磁盘空间：4.8 MB
 
 ### 5.17.1. 安装 Bzip2
 
-Bzip2 软件包不包含 `configure` 脚本。使用以下命令编译并测试：
+`Bzip2` 软件包不包含 `configure` 脚本。使用以下命令编译并测试：
 
 ```
 make
@@ -1906,22 +1987,24 @@ make PREFIX=/tools install
 
 ## 5.18. Coreutils-8.15
 
-Coreutils 软件包包含了显示和设置系统特性的工具。
+`Coreutils` 软件包包含了显示和设置系统特性的工具。
 
 预计构建时间：0.7 SBU
 所需磁盘空间：88 MB
 
 ### 5.18.1. 安装 Coreutils
 
-为编译准备 Coreutils：
+为编译准备 `Coreutils`：
 
 ```bash
 ./configure --prefix=/tools --enable-install-program=hostname
 ```
 
+
+
 `configure` 选项的含义：
 
-- --enable-install-program=hostname：启用 **hostname** 二进制文件的构建和安装——它默认禁用，但 Perl 测试套件需要它。
+- `--enable-install-program=hostname`：启用 `hostname` 二进制文件的构建和安装——它默认禁用，但 Perl 测试套件需要它。
 
 编译软件包：
 
@@ -1943,15 +2026,11 @@ make RUN_EXPENSIVE_TESTS=yes check
 make install
 ```
 
-上述命令拒绝安装 **su**，因为该程序无法作为非特权用户以 setuid root 安装。通过手动以不同的名称安装它，我们可以在最终系统中作为非特权用户运行测试，并在 PATH 中保留一个来自主机的可能用的 **su**。使用以下命令安装它：
+上述命令拒绝安装 `su`，因为该程序无法作为非特权用户以 setuid root 安装。通过手动以不同的名称安装它，我们可以在最终系统中作为非特权用户运行测试，并在 PATH 中保留一个来自主机的可能用的 `su`。使用以下命令安装它：
 
 ```bash
 cp -v src/su /tools/bin/su-tools
 ```
-
-
-
-
 
 ## 5.19. Diffutils-3.2
 
@@ -2110,9 +2189,9 @@ cd gettext-tools
 ./configure --prefix=/tools --disable-shared
 ```
 
-configure 选项的含义：
+`configure` 选项的含义：
 
---disable-shared
+`--disable-shared`
 我们目前不需要安装任何 Gettext 的共享共享库，因此没有必要构建它们。
 
 编译该包：
@@ -2124,7 +2203,7 @@ make -C src msgfmt
 
 由于只编译了一个二进制文件，在不从 Gettext 包中编译额外的支持库的情况下，是不可能运行测试套件的。因此，不建议在此阶段尝试运行测试套件。
 
-安装 msgfmt 二进制文件：
+安装 `msgfmt` 二进制文件：
 
 ```
 cp -v src/msgfmt /tools/bin
@@ -2148,10 +2227,10 @@ Grep 包包含用于搜索搜索的程序。
 --disable-perl-regexp
 ```
 
-configure 切换器的含义：
+`configure` 切换器的含义：
 
---disable-perl-regexp
-这确保 grep 程序不会链接到 Perl 兼容正则表达式 (PCRE) 库，该库可能存在于主机上，但一旦我们进入 chroot 环境，它将不可用。
+`--disable-perl-regexp`
+这确保 `grep` 程序不会链接到 Perl 兼容正则表达式 (PCRE) 库，该库可能存在于主机上，但一旦我们进入 chroot 环境，它将不可用。
 
 编译该包：
 
@@ -2346,10 +2425,6 @@ cp -Rv lib/* /tools/lib/perl5/5.14.2
 
 关于此包的详情请见第 6.35.2 节，“Perl 的内容”。
 
-
-
-
-
 ## 5.30. Sed-4.2.1
 
 Sed 软件包包含一个流编辑器。
@@ -2507,17 +2582,19 @@ rm -rf /tools/{share,info,doc}
 
 ## 5.35. Changing Ownership（更改所有者）
 
-书中其余部分的命令必须在以 root 身份登录时执行，而不是以用户身份。目前，$LFS/tools 目录属于仅存在于主机系统上的用户。如果 $LFS/tools 目录保持不变，则文件将属于一个没有相应账户的用户。这是危险的，因为以后创建的账户可能会获得 $LFS/tools 目录及其其中所有的文件，从而使其暴露在操纵之下。为了避免这种情况，请分配与主机系统相同的用户 ID 和组 ID，最好是运行以下命令将 $LFS/tools 目录的所有权更改为 root：
+书中其余部分的命令必须在以 root 身份登录时执行，而不是以用户身份。目前，`$LFS/tools` 目录属于仅存在于主机系统上的用户。如果 `$LFS/tools` 目录保持不变，则文件将属于一个没有相应账户的用户。这是危险的，因为以后创建的账户可能会获得 `$LFS/tools` 目录及其其中所有的文件，从而使其暴露在操纵之下。为了避免这种情况，请分配与主机系统相同的用户 ID 和组 ID，最好是运行以下命令将 `$LFS/tools` 目录的所有权更改为 root：
 
 ```
 chown -R root:root $LFS/tools
 ```
 
-虽然在 LFS 系统完成后可以删除 $LFS/tools 目录，但也可以保留它以构建额外的 LFS 系统。如何备份 $LFS/tools 取决于个人喜。如果你打算保留这些临时工具用于构建未来的 LFS 系统，现在是备份它们的时候。第 6 章中的后续命令将就地修改工具，导致它们对未来的构建失效。
 
-第 III 部分：构建 LFS 系统
 
-第 6 章：安装基础系统软件
+虽然在 LFS 系统完成后可以删除 `$LFS/tools` 目录，但也可以保留它以构建额外的 LFS 系统。如何备份 `$LFS/tools` 取决于个人喜。如果你打算保留这些临时工具用于构建未来的 LFS 系统，现在是备份它们的时候。第 6 章中的后续命令将就地修改工具，导致它们对未来的构建失效。
+
+# 第 III 部分：构建 LFS 系统
+
+# 第 6 章：安装基础系统软件
 
 ### 6.1. 简介
 
@@ -2527,37 +2604,34 @@ chown -R root:root $LFS/tools
 
 我们不建议使用优化选项。它们可以使程序运行得快一点，但也可能导致编译困难和程序运行时的问题。如果某个软件包在使用优化时编译失败，请尝试修复问题。即使软件包在使用优化时编译成功，由于代码与构建工具之间复杂的相互作用，也存在被错误编译的风险。另外请注意，书中未指明的 `-march` 和 `-mtune` 选项尚未经过测试。这可能会导致工具链软件包（Binutils、GCC 和 Glibc）出现问题。使用编译器优化带来的微小收益通常无法抵消其风险。鼓励首次构建 LFS 的用户在不自定义优化的情况下进行构建。随后的系统仍然会运行得快速且稳定。
 
-
-
-
 ### 6.3.1. 升级问题
 
 包管理器使得在发布新版本时能够轻松进行升级。通常情况下，可以使用 LFS 和 BLFS 书中的指令来升级到新版本。在升级软件包时（特别是在运行中的系统上），你应该注意以下几点：
 
-- 如果工具链软件包中的一个（glibc、GCC 或 Binutils）需要升级到较新的次版本，那么重新构建 LFS 是更安全的。虽然通过按照依赖顺序重新构建所有软件包可能很快，但我们不建议这样做。例如，如果 `glibc-2.2.x` 需要更新到 `glibc-2.3.x`，重新构建更安全。对于微版本（micro version）更新，简单的重新安装可行，但无法保证。例如，从 glibc-2.3.4 升级到 glibc-2.3.5 不会引起任何问题。
-- 如果包含共享库的软件包已更新，且库的名称需要链接到新版本（注意：软件包与库名称之间没有对应关系）。例如，考虑一个名为 foo-1.2.3 的软件包，它安装了一个名为 libfoo 的共享库。假设你将软件包升级到新版本 foo-1.2.4，它安装了一个名为 libfoo.2 的共享库。在这种情况下，所有动态链接到 libfoo.1 的软件包都需要重新编译，以链接到 libfoo.2。注意，在重新编译依赖项之前，你不应该删除之前的库。
+- 如果工具链软件包中的一个（`glibc`、`GCC` 或 `Binutils`）需要升级到较新的次版本，那么重新构建 LFS 是更安全的。虽然通过按照依赖顺序重新构建所有软件包可能很快，但我们不建议这样做。例如，如果 `glibc-2.2.x` 需要更新到 `glibc-2.3.x`，重新构建更安全。对于微版本（micro version）更新，简单的重新安装可行，但无法保证。例如，从 `glibc-2.3.4` 升级到 `glibc-2.3.5` 不会引起任何问题。
+- 如果包含共享库的软件包已更新，且库的名称需要链接到新版本（注意：软件包与库名称之间没有对应关系）。例如，考虑一个名为 `foo-1.2.3` 的软件包，它安装了一个名为 `libfoo` 的共享库。假设你将软件包升级到新版本 `foo-1.2.4`，它安装了一个名为 `libfoo.2` 的共享库。在这种情况下，所有动态链接到 `libfoo.1` 的软件包都需要重新编译，以链接到 `libfoo.2`。注意，在重新编译依赖项之前，你不应该删除之前的库。
 
 ### 6.3.2. 软件包管理技术
 
 以下是一些常见的软件包管理技术。在决定使用包管理器之前，请研究各种技术，特别是特定方案的缺点。
 
-### 6.3.2.1. 全都在脑子里！
+#### 6.3.2.1. 全都在脑子里！
 
 是的，这是一种软件包管理技术。有些人认为没有需要包管理器，因为他们非常熟悉软件包，知道每个软件包安装了哪些文件。有些用户不需要额外的软件包来管理软件包，因为他们在软件包更改时会重新构建整个系统。
 
-### 6.3.2.2. 安装到独立目录
+#### 6.3.2.2. 安装到独立目录
 
-这是一种简单的软件包管理，不会将任何软件包解压到单独目录。例如，软件包 foo-1.1 安装在 `/usr/pkg/foo-1.1`，并从 `/usr/pkg/foo` 到 `/usr/pkg/foo-1.1` 创建软链接。当安装新版本 foo-1.2 时，它安装在 `/usr/pkg/foo-1.2`，之前的软链接被指向新版本的软链接替换。
+这是一种简单的软件包管理，不会将任何软件包解压到单独目录。例如，软件包 `foo-1.1` 安装在 `/usr/pkg/foo-1.1`，并从 `/usr/pkg/foo` 到 `/usr/pkg/foo-1.1` 创建软链接。当安装新版本 `foo-1.2` 时，它安装在 `/usr/pkg/foo-1.2`，之前的软链接被指向新版本的软链接替换。
 
-环境变量如 PATH、LD_LIBRARY_PATH、MANPATH、INFOPATH 和 CPPFLAGS 需要扩展以包含 `/usr/pkg/foo`。对于超过几个的软件包来说，这将变得不可维护。
+环境变量如 `PATH`、`LD_LIBRARY_PATH`、`MANPATH`、`INFOPATH` 和 `CPPFLAGS` 需要扩展以包含 `/usr/pkg/foo`。对于超过几个的软件包来说，这将变得不可维护。
 
 ### 6.3.3. 软链接风格软件包管理
 
-这是前一种软件包管理技术的变体。每个软件包按照之前的方案安装。但不是创建软链接，而是将每个文件软链接到 `/usr` 层级结构中。这消除了扩展环境变量的需求。用户可以创建软链接来实现自动化，许多包管理器都是使用这种方法编写的。一些流行的包括 Stow、Epkg、Graft 和 Depot。
+这是前一种软件包管理技术的变体。每个软件包按照之前的方案安装。但不是创建软链接，而是将每个文件软链接到 `/usr` 层级结构中。这消除了扩展环境变量的需求。用户可以创建软链接来实现自动化，许多包管理器都是使用这种方法编写的。一些流行的包括 `Stow`、`Epkg`、`Graft` 和 `Depot`。
 
 Linux From Scratch - Version 7.1
 
-安装需要进行伪装，以便软件包认为它安装在 /usr 中，尽管实际上它被安装在 /usr/pkg 层级结构中。以这种方式进行安装通常不是一项易事。例如，假设你正在安装软件包 libfoo-1.1。以下指令可能无法正确安装该软件包：
+安装需要进行伪装，以便软件包认为它安装在 `/usr` 中，尽管实际上它被安装在 `/usr/pkg` 层级结构中。以这种方式进行安装通常不是一项易事。例如，假设你正在安装软件包 `libfoo-1.1`。以下指令可能无法正确安装该软件包：
 
 ```
 ./configure --prefix=/usr/pkg/libfoo/1.1
@@ -2565,7 +2639,7 @@ make
 make install
 ```
 
-安装将会运行，但依赖软件包可能不会像你预期的那样链接到 libfoo。如果你发现它链接到了 /usr/pkg/libfoo/1.1/lib/so 而不是你预期的 /usr/libfoo.so.1，那么正确的方法是使用 DESTDIR 策略来对软件包进行伪装安装。这种方法的操作如下：
+安装将会运行，但依赖软件包可能不会像你预期的那样链接到 `libfoo`。如果你发现它链接到了 `/usr/pkg/libfoo/1.1/lib/so` 而不是你预期的 `/usr/libfoo.so.1`，那么正确的方法是使用 `DESTDIR` 策略来对软件包进行伪装安装。这种方法的操作如下：
 
 ```bash
 ./configure --prefix=/usr
@@ -2573,15 +2647,15 @@ make
 make DESTDIR=/usr/pkg/libfoo/1.1 install
 ```
 
-大多数软件包都支持这种方法，但也有例外。对于不符合规范的软件包，你可能需要手动安装软件包，或者你可能会发现将问题的软件包安装到 /opt 比较容易。
+大多数软件包都支持这种方法，但也有例外。对于不符合规范的软件包，你可能需要手动安装软件包，或者你可能会发现将问题的软件包安装到 `/opt` 比较容易。
 
-### 6.3.2.2. 基于时间戳
+#### 6.3.2.2. 基于时间戳
 
-在这种技术中，在安装软件包之前对文件标记时间戳。安装后，使用带有适当选项的 `find` 命令即可生成时间戳文件创建后所有文件的日志。采用这种方法的包管理器是 install-log。
+在这种技术中，在安装软件包之前对文件标记时间戳。安装后，使用带有适当选项的 `find` 命令即可生成时间戳文件创建后所有文件的日志。采用这种方法的包管理器是 `install-log`。
 
 尽管这种方案具有简单的优点，但它有两个缺点。如果在安装过程中，文件安装的时间戳不是当前时间，那么这些文件将不会被包管理器跟踪。此外，这种方案只能在一次安装一个软件包时使用。如果在两个不同的控制台上正在安装两个软件包，日志将是不可靠的。
 
-### 6.3.2.5. 跟踪安装脚本
+#### 6.3.2.5. 跟踪安装脚本
 
 在这种方法中，安装脚本的执行过程会被记录。可以使用两种技术：
 
@@ -2589,13 +2663,13 @@ make DESTDIR=/usr/pkg/libfoo/1.1 install
 
 第二种技术是使用 `strace`，它会记录所有的系统调用。
 
-### 6.3.2.6. 创建软件包存档
+#### 6.3.2.6. 创建软件包存档
 
 （注：提示提供的 OCR 在此处变得重复/乱码。我已根据可用文本和标准文档结构处理了逻辑流。）
 
 ### 6.3.3. 在多个系统上部署
 
-LFS 系统的优势在于没有文件依赖于磁盘上的位置。可以使用 `tar` 将 LFS 构建结果克隆到另一台架构相似的计算机上。从那里，必须更改一些配置文件：/etc/hosts、/etc/fstab、/etc/passwd、/etc/group、/etc/shadow、/etc/ld.so.conf、/etc/scsi_id.config、/etc/sysconfig/network 以及 /etc/sysconfig/network-devices/ifconfig.eth0/ipv4。
+LFS 系统的优势在于没有文件依赖于磁盘上的位置。可以使用 `tar` 将 LFS 构建结果克隆到另一台架构相似的计算机上。从那里，必须更改一些配置文件：`/etc/hosts`、`/etc/fstab`、`/etc/passwd`、`/etc/group`、`/etc/shadow`、`/etc/ld.so.conf`、`/etc/scsi_id.config`、`/etc/sysconfig/network` 以及 `/etc/sysconfig/network-devices/ifconfig.eth0/ipv4`。
 
 根据系统硬件和原始内核配置的差异，需要为新系统构建自定义内核。
 
@@ -2612,16 +2686,13 @@ PATH=/usr/bin:/usr/sbin:/bin:/bin \
 /tools/bin/bash -login
 ```
 
-给 `env` 的 `-i` 选项将清除 chroot 环境的所有变量。之后，只设置了 HOME、TERM、PS1 和 PATH 变量。`TERM=$TERM` 结构会将内部的 TERM 变量设置为与外部相同的值。该变量对于 vim 和 less 等程序的正常运行是需要的。如果需要其他变量（如 CFLAGS），这是设置它们的所有的好位置。
-
-
-
+给 `env` 的 `-i` 选项将清除 chroot 环境的所有变量。之后，只设置了 `HOME`、`TERM`、`PS1` 和 `PATH` 变量。`TERM=$TERM` 结构会将内部的 TERM 变量设置为与外部相同的值。该变量对于 `vim` 和 `less` 等程序的正常运行是需要的。如果需要其他变量（如 `CFLAGS`），这是设置它们的所有的好位置。
 
 # Linux From Scratch - 版本 7.1
 
-注意 `/tools/bin` 位于 PATH 的最后面。这意味着一旦安装了其最终版本，临时工具将不再被使用。这通常发生在 shell 不“记住”已执行的二进制文件位置时——例如，通过向 bash 传递 `+h` 选项关闭哈希查找。
+注意 `/tools/bin` 位于 `PATH` 的最后面。这意味着一旦安装了其最终版本，临时工具将不再被使用。这通常发生在 shell 不“记住”已执行的二进制文件位置时——例如，通过向 `bash` 传递 `+h` 选项关闭哈希查找。
 
-注意 bash 提示符将没有名称！这是正常的，因为 `/etc/passwd` 文件还没有创建。
+注意 `bash` 提示符将没有名称！这是正常的，因为 `/etc/passwd` 文件还没有创建。
 
 ![](img/cae12e13b7a17e5c4e4585e940ebdf45_99_0.png)
 
@@ -2657,7 +2728,7 @@ mkdir -pv /var/{cache,lib}/{misc,location},local
 
 第一次模式更改确保其他人其他人进入 `/root` 目录——这与普通用户访问其家目录的情况相同。第二次更改确保任何用户都可以向 `/tmp` 和 `var/tmp` 目录写入文件，但不能从后者删除用户文件。这是通过所谓的“粘滞位”（sticky bit）禁止的，而 1777 位中的最高位 (1) 正实现了这一功能。
 
-## 6.5.1. FHS 兼容性说明
+### 6.5.1. FHS 兼容性说明
 
 目录树基于文件系统层次结构标准 (FHS)（可以通过 http://www.pathname.com/fhs/ 访问）。除了 FHS 之外，我们为 `man`、`doc` 和 `info` 目录创建了兼容性符号链接，因为软件包仍然尝试将它们安装到 `/usr/<directory>` 或 `/usr/local/<directory>`，而不是 `/usr/share/<directory>` 或 `/usr/local/share/<directory>`。FHS 规定了 `/usr/local/games` 和 `/usr/share/games` 的存在。FHS 对于 `/usr/local/share` 子目录的结构并不精确，因此我们创建了所需的目录。不过，如果你倾向于严格遵守 FHS，也可以自行创建这些目录。
 
@@ -2839,6 +2910,11 @@ docker:x:137:
 docker:x:138:
 docker:x:139:
 docker:x:140:
+```
+
+
+
+```
 docker:x:141:
 docker:x:142:
 docker:x:143:
@@ -3001,11 +3077,7 @@ docker:x:299:
 EOF
 ```
 
-root 的实际密码（此处使用的 "x" 只是一个占位符）稍后设置。
-
-
-
-
+`root` 的实际密码（此处使用的 `"x"` 只是一个占位符）稍后设置。
 
 ## 6.8. Man-pages-3.35
 
@@ -3014,7 +3086,7 @@ Man-pages 软件包包含 1,900 多页手册页（man pages）。
 **预计编译时间：** 少于 0.1 SBU
 **所需的磁盘空间：** 21 MB
 
-## 6.8.1. 安装 Man-pages
+### 6.8.1. 安装 Man-pages
 
 运行以下命令安装 Man-pages：
 
@@ -3022,7 +3094,7 @@ Man-pages 软件包包含 1,900 多页手册页（man pages）。
 make install
 ```
 
-## 6.8.2. Man-pages 的内容
+### 6.8.2. Man-pages 的内容
 
 **已安装文件：** 各种手册页
 
@@ -3037,15 +3109,15 @@ Glib 软件包包含主 C 库。该库提供了内存分配、目录搜索、打
 预计编译时间：14.2 SBU
 所需的磁盘空间：856 MB
 
-## 6.9.1. 安装 Glib
+### 6.9.1. 安装 Glib
 
-# 注意事项
+#### 注意事项
 
 LFS 之外的一些软件包建议使用 GNU libiconv 来将数据从一种编码转换为另一种。项目主页（http://www.gnu.org/software/libiconv/）表示：“此库为没有 Unicode 或其实现无法转换为 Unicode 的系统提供了 iconv() 实现。Glib 提供了 iconv() 实现并可以从 Unicode 转换；因此，在 LFS 系统上不需要 libiconv。”
 
-Glib 的构建是自包含的，并且可以完美安装，即使编译器文件和链接器仍然指向 /tools。在执行 G 安装之前，无法调整规格文件（specs）和链接器，因为 Glib 的 autoconf 测试将失败，并违背实现纯洁构建的目标。
+Glib 的构建是自包含的，并且可以完美安装，即使编译器文件和链接器仍然指向 `/tools`。在执行 G 安装之前，无法调整规格文件（specs）和链接器，因为 Glib 的 autoconf 测试将失败，并违背实现纯洁构建的目标。
 
-在运行 `make install` 时，脚本 `test-installation.pl` 就会对我们新安装的 Glib 进行健全性测试。然而，由于我们的工具链仍然指向 /tools 目录，健全性测试将针对错误的 Glib 进行。我们可以使用以下命令通过脚本检查已安装的 Glib：
+在运行 `make install` 时，脚本 `test-installation.pl` 就会对我们新安装的 Glib 进行健全性测试。然而，由于我们的工具链仍然指向 `/tools` 目录，健全性测试将针对错误的 Glib 进行。我们可以使用以下命令通过脚本检查已安装的 Glib：
 
 ```
 DL=$(readfile -1 /bin/sh -n '$.*.interpret.*/tools/(.*)\$]@@|p$')
@@ -3053,7 +3125,7 @@ sed -i "s/libs|libs -L/usr/lib -Wl,-dynamic-linker=$DL -o " \
     scripts/test-installation.pl
 ```
 
-unset DL
+`unset DL`
 
 此外，`test-installation.pl` 脚本中有一个 bug，它尝试将测试程序链接到未通过 `make install` 安装的库。执行以下 `sed` 命令修复它：
 
@@ -3061,7 +3133,7 @@ unset DL
 sed -i -s/^/bin/sh/|& &e name "testi"| / scripts/test-installation.pl
 ```
 
-该 脚本包含 Bash 特有的字符。以防 BLFS 书的 Shell 章节安装了另一个 /bin/sh，请将其默认解释器更改为 /bin/sh：
+该 脚本包含 Bash 特有的字符。以防 BLFS 书的 Shell 章节安装了另一个 `/bin/sh`，请将其默认解释器更改为 `/bin/sh`：
 
 ```
 sed -i 's@$BASH@/bin/bash|/elf/bash.bash'
@@ -3071,7 +3143,6 @@ Glib 中两个可能导致崩溃和转储的 bug：
 
 ```
 patch -Npl -i ../glib-2.14.1-fixes-1.patch
-
 patch -Npl -i ../glib-2.14.1-sort-1.patch
 ```
 
@@ -3097,7 +3168,7 @@ mkdir -v ../glibc-build
 cd ../glibc-build
 ```
 
-如第 5 章所示，为 x86 机器在 CFLAGS 中添加所需的编译器标志。在这里，还为 gcc 编译器设置了库的优化以提高速度 (-pipe) 和包性能 (-O3)。
+如第 5 章所示，为 x86 机器在 `CFLAGS` 中添加所需的编译器标志。在这里，还为 gcc 编译器设置了库的优化以提高速度 (`-pipe`) 和包性能 (`-O3`)。
 
 ```
 case uname -m in
@@ -3115,8 +3186,8 @@ esac
 
 新选项的含义：
 
-> --libexecdir=/usr/lib/glibc
-> 这更改了 chown 程序的位置，从默认的 /usr/libexec 变为 /usr/lib/glibc。
+> `--libexecdir=/usr/lib/glibc`
+> 这更改了 chown 程序的位置，从默认的 `/usr/libexec` 变为 `/usr/lib/glibc`。
 
 编译包：
 
@@ -3140,22 +3211,17 @@ grep Error glibc-check-log
 - 某些测试在特定的架构上可能会失败。
 - 某些测试依赖于特定的系统配置。
 
+### 6.9.3. 配置动态加载器
 
+默认情况下，动态加载器 (`/lib/ld-linux.so.2`) 会会在 `/lib` 和 `/usr/lib` 中搜索程序运行所需的动态库。然而，如果除了 `/lib` 和 `/usr/lib` 以外的目录也存在库，则需要将它们添加到 `/etc/ld.so.conf` 文件中，以便动态加载器能够找到它们。两个常见的包含额外库的目录是 `/usr/local/lib` 和 `/opt/lib`；将它们添加到动态加载器的搜索路径中。
 
-
-
-## 6.9.3. 配置动态加载器
-
-默认情况下，动态加载器 (/lib/ld-linux.so.2) 会会在 /lib 和 /usr/lib 中搜索程序运行所需的动态库。然而，如果除了 /lib 和 /usr/lib 以外的目录也存在库，则需要将它们添加到 /etc/ld.so.conf 文件中，以便动态加载器能够找到它们。两个常见的包含额外库的目录是 /usr/local/lib 和 /opt/lib；将它们添加到动态加载器的搜索路径中。
-
-通过运行以下命令创建一个新的 /etc/ld.so.conf 文件：
+通过运行以下命令创建一个新的 `/etc/ld.so.conf` 文件：
 
 ```bash
 cat /etc/ld.so.conf << "EOF"
 # 开始 ld.so.conf
 /usr/local/lib
 /opt/lib
-
 EOF
 ```
 
@@ -3165,16 +3231,17 @@ EOF
 cat >> /etc/ld.so.conf << "EOF"
 # 添加包含目录
 include /etc/ld.so.d/*.conf
-
 EOF
 mkdir /etc/ld.so.d
 ```
 
+
+
 ## 6.9.4. Glibc 内容
 
-- **已安装程序：** catchsev, gencat, getconf, getfont, gevent, iconvconf, ldconfig, ldd, libd4, locale, localedef, mtrace, nsed, procdumpfile, pi_chown, rpegen, lin, sotruss, sproff, tzselect, xtrace, zdump, zic
-- **已安装库：** ld.so, BrokenLocal.a{so}, libSegFault.a{so}, libanl.a{so}, libbsd.a{so}, libc.a{so}, libcrypto.a{so}, libdl.a{so}, libga.a{so}, libeece.a{so}, libmcheck.a{so}, libmemsage.a{so}, libssl.a{so}, libnns.a{so}, libnss.a{so}, libhessid.a{so}, libnis.a{so}, libnisplus.a{so}, libpprofile.a{so}, libthread.a{so}, libresolv.a{so}, libpsvc.a{so}, librt.a{so}, libutread.db.so, libutill.a{so}
-- **已安装目录：** /usr/include/arpa, /usr/include/bits/, /usr/include/gnu/, /usr/include/net/, /usr/include/netaltalk, /usr/include/netx25, /usr/include/netsec, /usr/include/conet/, /usr/include/netinet, /usr/include/netipx, /usr/include/netiuuc, /usr/include/packetsec/, /usr/include/netrom, /usr/include/netrotse, /usr/include/nfs, /usr/include/protocols/, /usr/include/rpc/, /usr/include/rpcsv/, /usr/include/sys/, /usr/lib/audit, /usr/lib/gconv/, /usr/lib/glibc, /usr/lib/local, /usr/share/, /usr/share/zoneinfo
+- **已安装程序：** `catchsev`, `gencat`, `getconf`, `getfont`, `gevent`, `iconvconf`, `ldconfig`, `ldd`, `libd4`, `locale`, `localedef`, `mtrace`, `nsed`, `procdumpfile`, `pi_chown`, `rpegen`, `lin`, `sotruss`, `sproff`, `tzselect`, `xtrace`, `zdump`, `zic`
+- **已安装库：** `ld.so`, `BrokenLocal.a{so}`, `libSegFault.a{so}`, `libanl.a{so}`, `libbsd.a{so}`, `libc.a{so}`, `libcrypto.a{so}`, `libdl.a{so}`, `libga.a{so}`, `libeece.a{so}`, `libmcheck.a{so}`, `libmemsage.a{so}`, `libssl.a{so}`, `libnns.a{so}`, `libnss.a{so}`, `libhessid.a{so}`, `libnis.a{so}`, `libnisplus.a{so}`, `libpprofile.a{so}`, `libthread.a{so}`, `libresolv.a{so}`, `libpsvc.a{so}`, `librt.a{so}`, `libutread.db.so`, `libutill.a{so}`
+- **已安装目录：** `/usr/include/arpa`, `/usr/include/bits/`, `/usr/include/gnu/`, `/usr/include/net/`, `/usr/include/netaltalk`, `/usr/include/netx25`, `/usr/include/netsec`, `/usr/include/conet/`, `/usr/include/netinet`, `/usr/include/netipx`, `/usr/include/netiuuc`, `/usr/include/packetsec/`, `/usr/include/netrom`, `/usr/include/netrotse`, `/usr/include/nfs`, `/usr/include/protocols/`, `/usr/include/rpc/`, `/usr/include/rpcsv/`, `/usr/include/sys/`, `/usr/lib/audit`, `/usr/lib/gconv/`, `/usr/lib/glibc`, `/usr/lib/local`, `/usr/share/`, `/usr/share/zoneinfo`
 
 ### 简要描述
 
@@ -3183,17 +3250,17 @@ mkdir /etc/ld.so.d
 - **getconf**: 显示文件系统特定变量的配置值。
 - **getent**: 从管理数据库获取条目。
 - **iconv**: 执行字符集转换。
-- **iconfig**: 创建快速加载 iconv 模块配置文件。
+- **iconfig**: 创建快速加载 `iconv` 模块配置文件。
 - **ldconfig**: 配置动态链接器运行时。
 - **ldd**: 报告每个程序或共享库所需的共享库。
-- **ld4**: 辅助 ld 处理对象文件。
+- **ld4**: 辅助 `ld` 处理对象文件。
 - **locale**: 打印关于位置位置各种信息。
 - **localedef**: 编译区域规范。
 - **mtrace**: 读取并解释内存跟踪并以人类可读格式显示。
 - **nsed**: 守护进程为最常用的服务请求提供缓存。
-- **procdumpfile**: 转储 grantpt 生成的信息，用于设置所有者、组和访问权限。
+- **procdumpfile**: 转储 `grantpt` 生成的信息，用于设置所有者、组和访问权限。
 - **pt_chown**: 伪终端。
-- **rpcgen**: 生成实现远程过程调用 (RPC) 协议的 C 代码。
+- **rpcgen**: 生成实现远程过程调用 (`RPC`) 协议的 C 代码。
 - **sln**: 静态链接程序。
 - **struss**: 跟踪指定命令的共享库过程调用。
 - **sprof**: 读取并显示对象分析数据。
@@ -3202,10 +3269,10 @@ mkdir /etc/ld.so.d
 - **zdump**: 时区转储工具。
 - **zic**: 时区编译器。
 - **ld.so**: 共享库可执行程序的辅助程序。
-- **libBrokenLocale**: Glibc 内部使用的粗略方法，用于让损坏的程序（例如某些应用程序）运行。更多信息请参见 glibc-2.14.1/locale/broken_cur_max.c 中的注释。
-- **libSegFault**: 段错误信号处理程序，被 catchseg 使用。
+- **libBrokenLocale**: Glibc 内部使用的粗略方法，用于让损坏的程序（例如某些应用程序）运行。更多信息请参见 `glibc-2.14.1/locale/broken_cur_max.c` 中的注释。
+- **libSegFault**: 段错误信号处理程序，被 `catchseg` 使用。
 - **libanl**: 异步查找库。
-- **libbsd-compat**: 提供能够在 Linux 下运行某些伯克利软件发行 (BSD) 程序所需的移植性。
+- **libbsd-compat**: 提供能够在 Linux 下运行某些伯克利软件发行 (`BSD`) 程序所需的移植性。
 - **libc**: 主 C 库。
 - **libcid**: Glibc 内部用于处理国际化。
 - **libcrypt**: 加密库。
@@ -3240,9 +3307,9 @@ readelf -l a.out | grep ': /lib'
 
 如果一切正常，不会有错误，最后一条命令的输出将显示特定平台的动态加载器名称：
 
-> 请求解释器: /lib/ld-linux.so.2
+> 请求解释器: `/lib/ld-linux.so.2`
 
-注意 /lib 现在是我们的动态加载器的前缀。
+注意 `/lib` 现在是我们的动态加载器的前缀。
 
 ## 6.9.6. 最终验证
 
@@ -3260,13 +3327,9 @@ grep -o '/usr/lib/.crt[].succeeded' dummy.log
 /usr/lib/crtn.o succeeded
 ```
 
-
-
-
-
 # Linux From Scratch - 版本 7.1
 
-此命令 <...> 应该成功返回并输出以下内容：
+此命令 `<...>` 应该成功返回并输出以下内容：
 
 ```
 #include <...> search starts here:
@@ -3287,13 +3350,13 @@ SEARCH_DIR("/usr/lib")
 SEARCH_DIR("/lib");
 ```
 
-接下来，确保我们正在使用正确的 libc：
+接下来，确保我们正在使用正确的 `libc`：
 
 ```
 grep "*/libc.so.6" dummy.log
 ```
 
-如果一切运行正常，不应该有错误，且最后一条命令的输出（考虑到 64 位主机上的 lib6 目录）将是：
+如果一切运行正常，不应该有错误，且最后一条命令的输出（考虑到 64 位主机上的 `lib6` 目录）将是：
 
 ```
 attempt to open /libc.so.6 succeeded
@@ -3305,13 +3368,13 @@ attempt to open /libc.so.6 succeeded
 grep found dummy.log
 ```
 
-如果一切运行正常，不应该有错误，且最后一条命令的输出如下（考虑到动态链接器名称的平台差异以及 64 位主机上的 lib64 目录）：
+如果一切运行正常，不应该有错误，且最后一条命令的输出如下（考虑到动态链接器名称的平台差异以及 64 位主机上的 `lib64` 目录）：
 
 ```
 found 1ld-linux.so.2 at /lib/ld-linux.so.2
 ```
 
-如果输出未如上所示或完全没有输出，则说明出现了严重问题。请调查并回溯步骤以找到问题所在并进行修正。最可能的原因是 specs 文件调整过程中出了错。在继续后续之前，需要解决所有问题。
+如果输出未如上所示或完全没有输出，则说明出现了严重问题。请调查并回溯步骤以找到问题所在并进行修正。最可能的原因是 `specs` 文件调整过程中出了错。在继续后续之前，需要解决所有问题。
 
 一旦一切运行正常，清理测试文件：
 
@@ -3321,13 +3384,13 @@ rm -v dummy.c a.out dummy.log
 
 # 6.11. Zlib-1.2.6
 
-Zlib 软件包包含某些程序使用的压缩和解压缩例程。
+`Zlib` 软件包包含某些程序使用的压缩和解压缩例程。
 预计编译时间：少于 0.1 SBU
 所需的磁盘空间：2.8 MB
 
 ### 6.11.1. 安装 Zlib
 
-为编译准备 Zlib：
+为编译准备 `Zlib`：
 
 ```
 ./configure --prefix=/usr
@@ -3351,7 +3414,7 @@ make check
 make install
 ```
 
-共享库需要移动到 /lib，结果 /usr/lib 中的 .so 文件需要重新创建：
+共享库需要移动到 `/lib`，结果 `/usr/lib` 中的 `.so` 文件需要重新创建：
 
 ```
 mv -v /usr/lib/libz.so.* /lib
@@ -3360,22 +3423,22 @@ ln -sf ../lib/libz.so.1.2.6 /usr/lib/libz.so
 
 ### 6.11.2. Zlib 的内容
 
-安装的库：libz.{a,so}
+安装的库：`libz.{a,so}`
 
 # 短说明
 
-libz 包含某些程序使用的压缩和解压缩函数
+`libz` 包含某些程序使用的压缩和解压缩函数
 
 ## 6.12. File-5.10
 
-File 软件包包含一个确定给定文件或文件类型的实用程序。
+`File` 软件包包含一个确定给定文件或文件类型的实用程序。
 
 **预计编译时间：**0.2 SBU
 **所需的磁盘空间：**9.5 MB
 
 ### 6.12.1. 安装 File
 
-为编译准备 File：
+为编译准备 `File`：
 
 ```
 ./configure --prefix=/usr
@@ -3401,8 +3464,8 @@ make install
 
 ### 6.12.2. File 的内容
 
-**安装的程序：**file
-**安装的库：**libmagic.{a,so}
+**安装的程序：**`file`
+**安装的库：**`libmagic.{a,so}`
 
 #### 短说明
 
@@ -3411,7 +3474,7 @@ make install
 
 ## 6.13. Binutils-2.22
 
-Binutils 软件包包含一个链接器、一个汇编器以及处理目标文件的工具。
+`Binutils` 软件包包含一个链接器、一个汇编器以及处理目标文件的工具。
 
 | 预计编译时间： | 1.9 SBU |
 | :--- | :--- |
@@ -3419,7 +3482,7 @@ Binutils 软件包包含一个链接器、一个汇编器以及处理目标文�
 
 ### 6.13.1. 安装 PTYs
 
-通过执行简单测试，验证实用程序在 chroot 环境内是否工作正常：
+通过执行简单测试，验证实用程序在 `chroot` 环境内是否工作正常：
 
 ```
 expect -c "spawn ls"
@@ -3431,26 +3494,26 @@ expect -c "spawn ls"
 spawn ls
 ```
 
-如果输出包含下面的消息，则说明环境未配置好用于正确的 PTY 操作。在运行 Binutils 和 GCC 的测试套件之前，需要解决此问题：
+如果输出包含下面的消息，则说明环境未配置好用于正确的 PTY 操作。在运行 `Binutils` 和 `GCC` 的测试套件之前，需要解决此问题：
 
 > The system has no more ptys.
 > 请你的系统管理员创建更多。
 
-抑制安装过时的 standards.info 文件，因为在随后的 Autoconf 指令中会安装较新的文件：
+抑制安装过时的 `standards.info` 文件，因为在随后的 `Autoconf` 指令中会安装较新的文件：
 
 ```
 rm -fv /etc/standards.info
 sed -i .bak "/INFO/s/standards.info // /etc/Makefile.in
 ```
 
-修复几处在使用 GCC-4.6 时失败的测试：
+修复几处在使用 `GCC-4.6` 时失败的测试：
 
 ```
 sed -i "/execution.defs/d" ld/testsuite/testsuite-ld-elf/new.cc
 sed -i "/s/-fvtable-gcc //" ld/testsuite/ld-selective/selective.exp
 ```
 
-Binutils 文档建议在源代码目录的专用目录下编译 Binutils：
+`Binutils` 文档建议在源代码目录的专用目录下编译 `Binutils`：
 
 ```
 mkdir -v ~/binutils-build
@@ -3469,17 +3532,17 @@ cd ~/binutils-build
 make tooldir=/usr
 ```
 
-make 参数的含义：
+`make` 参数的含义：
 
 ```
 tooldir=/usr
 ```
 
-通常情况下，tooldir（可执行文件最终将所在的目录）被设置为 $(exec_prefix)/$(target_alias)。例如，x86_64 机器将输出到 /usr/x86_64-unknown-linux-gnu。由于这是一个自定义系统，不需要 /usr/ 下这个特定于目标的目录。如果系统用于交叉编译（例如，在 Intel 机器上编译一个包，并生成可以在 PowerPC 机器上执行的代码），则会使用 $(exec_prefix)/$(target_alias)。
+通常情况下，`tooldir`（可执行文件最终将所在的目录）被设置为 `$(exec_prefix)/$(target_alias)`。例如，`x86_64` 机器将输出到 `/usr/x86_64-unknown-linux-gnu`。由于这是一个自定义系统，不需要 `/usr/` 下这个特定于目标的目录。如果系统用于交叉编译（例如，在 Intel 机器上编译一个包，并生成可以在 PowerPC 机器上执行的代码），则会使用 `$(exec_prefix)/$(target_alias)`。
 
 # 重要提示
 
-本节中 Binutils 的测试套件被认为是至关重要的。在任何情况下都不要跳过它。
+本节中 `Binutils` 的测试套件被认为是至关重要的。在任何情况下都不要跳过它。
 
 测试结果：
 
@@ -3501,8 +3564,8 @@ rm -v dummy.c a.out dummy.log
 
 ### 6.13.2. Binutils 的内容
 
-安装的程序：ar, as, c++filt, elfedit, gprof, ld, ld.bfd, nm, objcopy, objdump, ranlib, readelf, size, strip
-安装的库：liberty.{a,so}
+安装的程序：`ar`, `as`, `c++filt`, `elfedit`, `gprof`, `ld`, `ld.bfd`, `nm`, `objcopy`, `objdump`, `ranlib`, `readelf`, `size`, `strip`
+安装的库：`liberty.{a,so}`
 
 # 短说明
 
@@ -3526,27 +3589,27 @@ rm -v dummy.c a.out dummy.log
 
 # 6.14. GMP-5.0.4
 
-GMP 软件包包含数学库。这些提供了任意精度算术函数。
+`GMP` 软件包包含数学库。这些提供了任意精度算术函数。
 预计编译时间：1.7 SBU
 所需的磁盘空间：39 MB
 
 ### 6.14.1. 安装 GMP
 
-> 注意：如果你为 32 位 x86 编译，但你的 CPU 能够运行 64 位代码，且你在环境中指定了 CFLAGS，configure 脚本将尝试配置 64 位并失败。通过以下方式调用 configure 命令来避免：
+> 注意：如果你为 32 位 x86 编译，但你的 CPU 能够运行 64 位代码，且你在环境中指定了 `CFLAGS`，`configure` 脚本将尝试配置 64 位并失败。通过以下方式调用 `configure` 命令来避免：
 
 ```
 ABI=32 ./configure ...
 ```
 
-为编译准备 GMP：
+为编译准备 `GMP`：
 
 ```
 ./configure --prefix=/usr --enable-cxx --enable-mpbsd
 ```
 
 新配置选项的含义：
---enable-cxx 启用 C++ 支持
---enable-mpbsd 构建 Berkeley MP 兼容库
+`--enable-cxx` 启用 C++ 支持
+`--enable-mpbsd` 构建 Berkeley MP 兼容库
 
 编译软件包：
 
@@ -3554,7 +3617,7 @@ ABI=32 ./configure ...
 make
 ```
 
-> 重要 本节中 GMP 的测试套件被认为是至关重要的。在任何情况下都不要跳过它。
+> 重要 本节中 `GMP` 的测试套件被认为是至关重要的。在任何情况下都不要跳过它。
 
 测试结果：
 
@@ -3563,7 +3626,7 @@ make check 2>&1 | tee gmp-check-log
 ```
 
 确保套件中的所有 164 个测试均通过。执行以下命令检查结果：
-awk '/tests passed/{total+=$2}; END{print total}' gmp-check-log
+`awk '/tests passed/{total+=$2}; END{print total}' gmp-check-log`
 
 安装软件包：
 
@@ -3579,38 +3642,34 @@ cp -v /usr/{isa_abi_headache,configuration} doc/*.html \
 /usr/share/doc/gmp-5.0.4
 ```
 
-
-
-
-
 ## 6.14.2. GMP 的内容
 
-**已安装库：** libbgmp.{a,so}, libbgmpxx.{a,so}, 以及 libbgmp.{a,so}
+**已安装库：** `libbgmp.{a,so}`, `libbgmpxx.{a,so}`, 以及 `libbgmp.{a,so}`
 
-**安装目录：** /usr/share/doc/gmp-5.0.4
+**安装目录：** `/usr/share/doc/gmp-5.0.4`
 
 # 简要说明
 
-- libbgmp 包含精度数学函数。
-- libbgmpxx 包含 C++ 精度数学函数。
-- libbmp 包含 Berkeley MP 数学函数。
+- `libbgmp` 包含精度数学函数。
+- `libbgmpxx` 包含 C++ 精度数学函数。
+- `libbmp` 包含 Berkeley MP 数学函数。
 
 ## 6.15. MPFR-3.1.0
 
-MPFR 软件包包含多精度数学计算函数。
+`MPFR` 软件包包含多精度数学计算函数。
 
 估算编译时间：1.1 SBU
 所需的磁盘空间：27.1 MB
 
 ## 6.15.1. 安装 MPFR
 
-应用补丁以修复 MPFR-3.1.0 中的若干个漏洞
+应用补丁以修复 `MPFR-3.1.0` 中的若干个漏洞
 
 ```
 patch --Npl -i ../mpfr-3.1.0-fixes-1.patch
 ```
 
-为编译准备 MPFR：
+为编译准备 `MPFR`：
 
 ```
 ./configure --prefix=/usr --enable-thread-safe \
@@ -3622,6 +3681,8 @@ patch --Npl -i ../mpfr-3.1.0-fixes-1.patch
 ```
 make
 ```
+
+
 
 > **重要**
 本节中 MPFR 的测试套件被认为是关键的。在任何情况下都不要跳过它。
@@ -3645,14 +3706,14 @@ make html
 make install-html
 ```
 
-## 6.15.2. MPFR 的内容
+### 6.15.2. MPFR 的内容
 
-已安装库：libmpfr.{a,so}
-安装目录：/usr/share/doc/mpfr-3.1.0
+已安装库：`libmpfr.{a,so}`
+安装目录：`/usr/share/doc/mpfr-3.1.0`
 
-# 简要说明
+## 简要说明
 
-libmpfr 包含多精度数学函数。
+`libmpfr` 包含多精度数学函数。
 
 ## 6.16. MPC-0.9
 
@@ -3661,7 +3722,7 @@ MPC 软件包包含一个用于任意高精度复数算术的库，并对结果�
 **估算编译时间：** 0.3 SBU
 **所需的磁盘空间：** 10.5 MB
 
-## 6.16.1. 安装 MPC
+### 6.16.1. 安装 MPC
 
 为编译准备 MPC：
 
@@ -3687,13 +3748,13 @@ make check
 make install
 ```
 
-## 6.16.2. MPC 的内容
+### 6.16.2. MPC 的内容
 
-**已安装库：** libmpc. {a,so}
+**已安装库：** `libmpc.{a,so}`
 
 # 简要说明
 
-libmpc 包含复数学函数
+`libmpc` 包含复数学函数
 
 ## 6.17. GCC-4.6.2
 
@@ -3701,24 +3762,24 @@ GCC 软件包包含 GNU 编译器集，包括 C 和 C++ 编译器。
 估算编译时间：47 SBU
 所需的磁盘空间：1.7 GB
 
-## 6.17.1. 安装 GCC
+### 6.17.1. 安装 GCC
 
-应用 sed 替换以抑制 libiberty.a 的安装。将使用 Binutils 提供的 libiberty.a 版本：
+应用 `sed` 替换以抑制 `libiberty.a` 的安装。将使用 Binutils 提供的 `libiberty.a` 版本：
 
 ```
 sed -i 's/install to $(INSTALL_DEST) //' libiberty/Makefile.in
 ```
 
-如第 5.10 节所示，GCC-4.6.2 - 第 2 阶段，应用以下 sed 强制构建使用 -fomit-frame-pointer 标志以确保编译器的一致性
+如第 5.10 节所示，GCC-4.6.2 - 第 2 阶段，应用以下 `sed` 强制构建使用 `-fomit-frame-pointer` 标志以确保编译器的一致性
 
 ```
 case "name" -m in \
-i786) sed -i 's/ -T CFLAGS=$& -fomit-frame-pointer/' \ \
+i786) sed -i 's/ -T CFLAGS=$& -fomit-frame-pointer/' \
 gcc/Makefile.in;;
 esac
 ```
 
-已知 fixescl 脚本偶尔会错误地尝试“修复”已安装的系统头文件。已知到目前为止的头文件不需要修复，执行以下命令以防止 fixescl 脚本运行：
+已知 `fixescl` 脚本偶尔会错误地尝试“修复”已安装的系统头文件。已知到目前为止的头文件不需要修复，执行以下命令以防止 `fixescl` 脚本运行：
 
 ```
 sed -i '$s\./fixinc@sh -e true@' gcc/Makefile.in
@@ -3745,7 +3806,7 @@ cd ..gcc-build
 
 新配置选项的含义：
 
---with-system-zlib
+`--with-system-zlib`
 此开关告诉 GCC 链接到系统安装的 Zlib 库副本，而不是其内部的副本。
 
 编译软件包：
@@ -3776,9 +3837,9 @@ make -k check
 ../gcc-4.6.2/contrib/test_summary
 ```
 
-如需仅摘要，将输出通过到 grep -A7 Summ。
-结果可以与 http://www.linuxfrom.org/build-logs/7/ 和 http://gnu.org/gcc/results/ 处的结果进行比较。
-失败并非总是无法避免的。GCC 开发者通常知道这些问题，但尚未解决。特别是 libbf 测试，由于 GCC 的一个漏洞（http://gnu.org/bugzilla.cgi?id=2000），已知是特别问题的。除非测试结果与上述差异巨大，否则可以继续。
+如需仅摘要，将输出通过到 `grep -A7 Summ`。
+结果可以与 `http://www.linuxfrom.org/build-logs/7/` 和 `http://gnu.org/gcc/results/` 处的结果进行比较。
+失败并非总是无法避免的。GCC 开发者通常知道这些问题，但尚未解决。特别是 `libbf` 测试，由于 GCC 的一个漏洞（`http://gnu.org/bugzilla.cgi?id=2000`），已知是特别问题的。除非测试结果与上述差异巨大，否则可以继续。
 
 安装软件包：
 
@@ -3786,13 +3847,13 @@ make -k check
 make install
 ```
 
-某些软件包需要将 C 预处理器安装在 /lib。为了支持这些软件包，创建一个符号链接：
+某些软件包需要将 C 预处理器安装在 `/lib`。为了支持这些软件包，创建一个符号链接：
 
 ```
 ln -sv /usr/bin/cpp /lib
 ```
 
-许多软件包使用 gcc 名称调用 C 编译器。为了满足这些软件包，创建一个符号链接：
+许多软件包使用 `gcc` 名称调用 C 编译器。为了满足这些软件包，创建一个符号链接：
 
 ```
 ln -sv gcc /usr/bin/cc
@@ -3828,7 +3889,7 @@ grep -o '/usr/lib.*' dummy.log
 /usr/lib/gcc/i86-pc-linux-gnu/4.6.2/...crtn
 ```
 
-根据你的架构，名称可能会略有不同，即 /lib/gcc 之后的目录。如果你的机器是 64 位系统，你可能会在结尾看到一个名为 lib64 的目录。在这里重要的是 `gcc` 在 /lib 目录下查找了三个 `crt*.o` 文件。
+根据你的架构，名称可能会略有不同，即 `/lib/gcc` 之后的目录。如果你的机器是 64 位系统，你可能会在结尾看到一个名为 `lib64` 的目录。在这里重要的是 `gcc` 在 `/lib` 目录下查找了三个 `crt*.o` 文件。
 
 验证编译器正在搜索头文件：
 
@@ -3850,7 +3911,7 @@ grep -B4 '^usr/include' dummy.log
 
 ![](img/cae12e13b7a17e5c4e4585e94ebdf45_124_0.png)
 
- 从 4.3.0 版本开始，GCC 现在无条件地将 limits.h 文件安装到私有目录，该文件是必须到位的。
+从 4.3.0 版本开始，GCC 现在无条件地将 `limits.h` 文件安装到私有目录，该文件是必须到位的。
 
 接下来，验证新行是否使用了正确的搜索路径：
 
@@ -3888,7 +3949,7 @@ SEARCH_DIR("/usr/lib")
 grep /lib*/libc.so.6 * dummy.log
 ```
 
-如果一切正常，不应该有错误，最后一个命令的输出（允许 64 位主机上的 lib64 目录）将是：
+如果一切正常，不应该有错误，最后一个命令的输出（允许 64 位主机上的 `lib64` 目录）将是：
 
 ```
 attempt to open /lib/libc.so.6 succeeded
@@ -3900,13 +3961,13 @@ attempt to open /lib/libc.so.6 succeeded
 grep found dummy.log
 ```
 
-如果一切正常，不应该有错误，最后一个命令的输出将（允许 64 位主机上动态链接器名称和 lib64 目录的平台差异）：
+如果一切正常，不应该有错误，最后一个命令的输出将（允许 64 位主机上动态链接器名称和 `lib64` 目录的平台差异）：
 
 ```
 found ld-linux.so.2 at /lib/ld-linux.so.2
 ```
 
-如果输出没有如上面所示，那么发生了严重错误。调查并重复步骤以找出问题所在并进行纠正。最可能的原因是 specs 文件调整出现了一些问题。在继续过程之前，需要解决任何问题。
+如果输出没有如上面所示，那么发生了严重错误。调查并重复步骤以找出问题所在并进行纠正。最可能的原因是 `specs` 文件调整出现了一些问题。在继续过程之前，需要解决任何问题。
 
 一旦一切正常工作，清理测试文件：
 
@@ -3914,19 +3975,17 @@ found ld-linux.so.2 at /lib/ld-linux.so.2
 rm -v dummy.c aout dummy.log
 ```
 
+`liblto_plugin` GCC 的链接时优化 (LTO) 插件，允许 GCC 跨编译单元进行优化。
 
+`libmudflap` 包含支持 GCC 边界检查功能的例程。
 
-liblto_plugin GCC 的链接时优化 (LTO) 插件，允许 GCC 跨编译单元进行优化。
+`libquadmath` GCC 四倍精度数学算库 API。
 
-libmudflap 包含支持 GCC 边界检查功能的例程。
+`libsssp` 包含支持 GCC 栈溢出保护功能的例程。
 
-libquadmath GCC 四倍精度数学算库 API。
+`libstdc++` 标准 C++ 库。
 
-libsssp 包含支持 GCC 栈溢出保护功能的例程。
-
-libstdc++ 标准 C++ 库。
-
-libsupc++ 为 C++ 编程语言提供支持例程。
+`libsupc++` 为 C++ 编程语言提供支持例程。
 
 ## 6.18. Sed-4.2.1
 
@@ -3982,16 +4041,16 @@ make -C doc install-html
 
 ### 6.18.2. Sed 的内容
 
-安装的程序：sed
-安装目录：/usr/share/doc/sed-4.2.1
+安装的程序：`sed`
+安装目录：`/usr/share/doc/sed-4.2.1`
 
 ## 简描述
 
-sed 单次过滤并转换文本文件
+`sed` 单次过滤并转换文本文件
 
 ## 6.19. Bzip2-1.0.6
 
-Bzip2 包包含压缩和解压缩文件的程序。使用 bzip2 压缩文件比传统的 gzip 具有更高的压缩率。
+Bzip2 包包含压缩和解压缩文件的程序。使用 `bzip2` 压缩文件比传统的 `gzip` 具有更高的压缩率。
 
 预计编译时间：小于 0.1 SBU
 所需的磁盘空间：6.4 MB
@@ -4017,9 +4076,9 @@ make -f Makefile-libbz2 -so
 make clean
 ```
 
-make 参数的含义：
+`make` 参数的含义：
 
-- Makefile-libbz2 -so 使用不同的 Makefile 进行构建，在这种情况下使用 Makefile-libbz2-so 文件，它会创建一个动态 libbz2 .so 库并将 Bzip2 工具链接到其上。
+- `Makefile-libbz2 -so` 使用不同的 Makefile 进行构建，在这种情况下使用 `Makefile-libbz2-so` 文件，它会创建一个动态 `libbz2 .so` 库并将 Bzip2 工具链接到其上。
 
 编译并测试软件包：
 
@@ -4033,7 +4092,7 @@ make
 make PREFIX=/usr install
 ```
 
-将 bzip2 二进制文件安装到 /bin 目录，创建一些必要的符号链接并清理：
+将 `bzip2` 二进制文件安装到 `/bin` 目录，创建一些必要的符号链接并清理：
 
 ```
 cp -v bzip2-shared /bin/bzip2
@@ -4046,9 +4105,9 @@ ln -sv bzip2 /bin/bzcat
 
 ### 6.19.2. Bzip2 的内容
 
-- 安装的程序：bzip2 (链接到 bzip2), bzcat (链接到 bzip2), bzemp (链接到 bzdiff), bzdiff, bzegrep (链接到 bzgrep), bzgrep (链接到 bzegrep), bzegrep, bzip2, bzip2recover, bless (链接到 bzgrep), bzmore, 和 bmore
-- 安装的库：libbz2.a,{so}
-- 安装目录：/usr/share/doc/bzip2-1.0.6
+- 安装的程序：`bzip2` (链接到 `bzip2`), `bzcat` (链接到 `bzip2`), `bzemp` (链接到 `bzdiff`), `bzdiff`, `bzegrep` (链接到 `bzgrep`), `bzgrep` (链接到 `bzegrep`), `bzegrep`, `bzip2`, `bzip2recover`, `bless` (链接到 `bzgrep`), `bzmore`, 和 `bmore`
+- 安装的库：`libbz2.a,{so}`
+- 安装目录：`/usr/share/doc/bzip2-1.0.6`
 
 ## 简描述
 
@@ -4082,8 +4141,8 @@ Ncurses 包包含用于独立终端处理字符屏幕的库。
 ```
 
 配置选项的含义：
---enable-wide
-该切换会导致构建宽字符库（例如 libncursesw.so.5.9）而不是普通库（例如 .so.5）。这些宽字符库可用于多字节和传统的 8 位区域设置，而普通库仅适用于 8 位区域设置。宽字符库和普通库源码兼容，但二进制不兼容。
+`--enable-wide`
+该切换会导致构建宽字符库（例如 `libncursesw.so.5.9`）而不是普通库（例如 `.so.5`）。这些宽字符库可用于多字节和传统的 8 位区域设置，而普通库仅适用于 8 位区域设置。宽字符库和普通库源码兼容，但二进制不兼容。
 
 编译软件包：
 
@@ -4091,7 +4150,7 @@ Ncurses 包包含用于独立终端处理字符屏幕的库。
 make
 ```
 
-此软件包有一个测试套件，但只有在安装软件包后才能运行。测试位于 test/目录。详细信息请参见目录中的 README。
+此软件包有一个测试套件，但只有在安装软件包后才能运行。测试位于 `test/` 目录。详细信息请参见目录中的 README。
 
 安装软件包：
 
@@ -4099,7 +4158,7 @@ make
 make install
 ```
 
-将共享库移动到 /lib 目录，这是它们预期所在地：
+将共享库移动到 `/lib` 目录，这是它们预期所在地：
 
 ```
 mv -v ../../usr/lib/libncurses.so.5* /usr/lib
@@ -4123,17 +4182,13 @@ ln -sfv /usr/lib/libncursesw.so /usr/lib/libncurses.so
 ln -sfv /usr/lib/libncursesw.so /usr/lib/libncurses.so
 ```
 
-
-
-
-
-libform
+`libform`
 包含实现表单的函数
 
-libmenu
+`libmenu`
 包含实现菜单的函数
 
-libpanel
+`libpanel`
 包含实现面板的函数
 
 ## 6.21. Util-linux-2.20.1
@@ -4155,15 +4210,15 @@ mkdir -p /var/lib/hwclock
 
 ### 6.21.2. 安装 Util-linux
 
-```bash
-./configure --enable-arch --enable-partx --enable-write
-```
+
+
+`./configure --enable-arch --enable-partx --enable-write`
 
 配置选项的含义：
 
-- --enable-arch: 启用构建 arch 程序
-- --enable-partx: 启用构建 addpart、delpart 和 parts 程序
-- --enable-write: 启用构建 write 程序
+- `--enable-arch`: 启用构建 arch 程序
+- `--enable-partx`: 启用构建 addpart、delpart 和 parts 程序
+- `--enable-write`: 启用构建 write 程序
 
 编译软件包：
 
@@ -4183,95 +4238,91 @@ make install
 
 已安装的程序：addpart, agetty, arch, bl, blockdev, cal, cfdisk, chkdupe, chr, col, coerc, colm, column, ctrlaltdel, cytune, delpart, desmq, fallocate, fdformat, fdisk, findfs, findmnt, flock, fsck-ramfs, fsck-linux, fsfree, fstrim, hwclock, i386, ioctl, ipcmk, ipenc, ipocs, isdatch, linux32, linux64, logger, lookup, islbk, isblk, meocrie, mkfs, mkfs.bfs, mkfs.kamfs, mkfs-linux, mkswap, more, mount, mountpoint, name, partx, pg, pivot_root, rename, renice, renic, rtcwake, scriptreplay, setarch, setcdid, setterm, sdisk, swappable, spoflik (link to spawn), switch root, tail, tasket, tunelp, ul, unshare, uidd, uuidigen, wall, whereis, wipes, and write
 
-已安装的库：libblkid.{a,so}, libmount.{a,so}, libuuid.{a,so}
+已安装的库：`libblkid.{a,so}`, `libmount.{a,so}`, `libuuid.{a,so}`
 
-已安装的目录：/usr/include/blkid, /usr/include/libmount, /usr/include/uuid, /usr/share/getopt, /var/lib/hwclock
+已安装的目录：`/usr/include/blkid`, `/usr/include/libmount`, `/usr/include/uuid`, `/usr/share/getopt`, `/var/lib/hwclock`
 
 ## 要描述
 
-- addpart: 通知 Linux 内核新分区
-- agetty: 打开 tty 端口，提示登录名，然后调用登录程序
-- arch: 报告机器架构
-- blkid: 用于定位和打印块设备属性的命令行实用程序
-- blockdev: 允许用户从命令行调用块设备 ioctl
-- cal: 显示简单的日历
-- cfdisk: 操作给定设备的分区表
-- chkdupe: 查找重复的可执行文件
-- chrt: 操作进程的实时属性
-- col: 过滤掉反向行
-- colct: 为缺少某些功能（如重叠和半行）的终端过滤非 col 内容
-- colrm: 过滤掉指定的列
-- column: 将给定文件格式化为多列
-- ctrlaltdel: 将 Cylades 卡上串行驱动程序的 Ctrl+Alt+Del 键组合功能设为硬重置或软重置
-- cytune: 调整 Cylades 卡串行驱动程序的参数
-- delpart: 请求 Linux 内核删除分区
-- dmesg: 倾储内核启动消息
-- fallocate: 为文件预分配空间
-- fdformat: 低级格式化软磁盘
-- fdisk: 操作给定设备的分区表
-- findfs: 通过标签或通用唯一标识符 (UUID) 查找文件系统
-- findmnt: libmount 库的命令行接口，用于处理 mountinfo、fstab 和 mtab 文件
-- flock: 获取文件锁并在持有锁的情况下执行命令
-- fsck: 用于检查并可选地修复文件系统
-- fsck.cams: 对给定设备上的 Cramfs 文件系统进行一致性检查
-- fsck.minix: 对给定设备上的 Minix 文件系统进行一致性检查
-- fsrefree: 对 FREEZE/FITHAW ioctl 内核驱动操作的非常简单的封装
-- fstrim: 丢弃挂载文件系统上的未使用块
-- getopt: 解析给定命令行中的选项
-- hexdump: 以十六进制或另一个给定格式倾储给定文件
-- hwclock: 读取或设置系统硬件时，也称为实时钟 (RTC) 或 BIOS 钟
-- i386: 指 setarch 的符号链接
-- ionice: 获取或设置程序的 io 调度类和优先级
-- ipcmk: 创建各种 IPC 资源
-- iperm: 移除指定的进程间通信 (IPC) 资源
-- ipcs: 提供 IPC 状态信息
-- isize: 报告 iso960 文件系统的尺寸
-- lddatch: 挂载设备
-- linux32: 指 setarch 的符号链接
-- linux64: 指 setarch 的符号链接
-- logger: 将消息输入系统日志
-- lookup: 显示以特定行头的行
-- iscpu: 生成关于 CPU 的信息
-- isblk: 列出所有块设备的信息
-- meocrie: 生成 128 位随机数
-- mkfs: 构建文件系统
-- mkfs.bfs: 创建 bfs 文件系统
-- mkfs.ramfs: 创建 ramfs 系统
-- mkswap: 初始化设备作为交换分区
-- more: 分页显示文本
-- mount: 挂载文件系统
-- mountpoint: 检查目录是否为挂载点
-- namei: 显示路径中的符号链接
-- partx: 通知内核分区的存在和编号
-- pivot_root: 将给定文件系统变为当前进程的根
-- rename: 通过替换字符串重命名文件
-- renice: 更改运行进程的优先级
-- rev: 反转给定文件的行
-- rtcwake: 用于指定时间唤醒系统睡眠
-- script: 终端录制
-- scriptreplay: 使用计时回放录制
-- setarch: 在新环境中更改架构并设置性标记
-- setid:在新会话中运行程序
-- setterm: 设置终端属性
-- sdisk: 磁盘分区操作器
-- swaplabel: 允许更改交换区域 UUID
-- swap: 列出设备和文件
-- switch_root: 切换文件系统作为根
-- tail: 跟踪日志文件的增长。显示最后 10 行，然后继续显示创建的新条目
-- taskset: 获取或设置进程的 CPU 亲和性
-- tunelp: 调整打印机参数
-- ul: 将下划线转换为指示终端下线的转义序列的过滤器
-- umount: 从系统树中卸载文件系统
-- unshare: 与父进程分离某些命名空间运行程序
-- uuidgen: UUID 库用于生成安全且保证唯一的 UUID 的守护进程
-- wall: 将文件内容（默认其标准输入）显示在所有当前登录用户的终端上
-- whereis: 报告给定命令的二进制文件、源码和手册页的位置
-- wipes: 擦除设备上的文件系统签名
-- write: 向指定用户发送消息，如果该用户未禁用接收此类消息
-
-
-
-
+- `addpart`: 通知 Linux 内核新分区
+- `agetty`: 打开 tty 端口，提示登录名，然后调用登录程序
+- `arch`: 报告机器架构
+- `blkid`: 用于定位和打印块设备属性的命令行实用程序
+- `blockdev`: 允许用户从命令行调用块设备 ioctl
+- `cal`: 显示简单的日历
+- `cfdisk`: 操作给定设备的分区表
+- `chkdupe`: 查找重复的可执行文件
+- `chrt`: 操作进程的实时属性
+- `col`: 过滤掉反向行
+- `colct`: 为缺少某些功能（如重叠和半行）的终端过滤非 col 内容
+- `colrm`: 过滤掉指定的列
+- `column`: 将给定文件格式化为多列
+- `ctrlaltdel`: 将 Cylades 卡上串行驱动程序的 Ctrl+Alt+Del 键组合功能设为硬重置或软重置
+- `cytune`: 调整 Cylades 卡串行驱动程序的参数
+- `delpart`: 请求 Linux 内核删除分区
+- `dmesg`: 倾储内核启动消息
+- `fallocate`: 为文件预分配空间
+- `fdformat`: 低级格式化软磁盘
+- `fdisk`: 操作给定设备的分区表
+- `findfs`: 通过标签或通用唯一标识符 (UUID) 查找文件系统
+- `findmnt`: libmount 库的命令行接口，用于处理 mountinfo、fstab 和 mtab 文件
+- `flock`: 获取文件锁并在持有锁的情况下执行命令
+- `fsck`: 用于检查并可选地修复文件系统
+- `fsck.cams`: 对给定设备上的 Cramfs 文件系统进行一致性检查
+- `fsck.minix`: 对给定设备上的 Minix 文件系统进行一致性检查
+- `fsrefree`: 对 FREEZE/FITHAW ioctl 内核驱动操作的非常简单的封装
+- `fstrim`: 丢弃挂载文件系统上的未使用块
+- `getopt`: 解析给定命令行中的选项
+- `hexdump`: 以十六进制或另一个给定格式倾储给定文件
+- `hwclock`: 读取或设置系统硬件时，也称为实时钟 (RTC) 或 BIOS 钟
+- `i386`: 指 setarch 的符号链接
+- `ionice`: 获取或设置程序的 io 调度类和优先级
+- `ipcmk`: 创建各种 IPC 资源
+- `iperm`: 移除指定的进程间通信 (IPC) 资源
+- `ipcs`: 提供 IPC 状态信息
+- `isize`: 报告 iso960 文件系统的尺寸
+- `lddatch`: 挂载设备
+- `linux32`: 指 setarch 的符号链接
+- `linux64`: 指 setarch 的符号链接
+- `logger`: 将消息输入系统日志
+- `lookup`: 显示以特定行头的行
+- `iscpu`: 生成关于 CPU 的信息
+- `isblk`: 列出所有块设备的信息
+- `meocrie`: 生成 128 位随机数
+- `mkfs`: 构建文件系统
+- `mkfs.bfs`: 创建 bfs 文件系统
+- `mkfs.ramfs`: 创建 ramfs 系统
+- `mkswap`: 初始化设备作为交换分区
+- `more`: 分页显示文本
+- `mount`: 挂载文件系统
+- `mountpoint`: 检查目录是否为挂载点
+- `namei`: 显示路径中的符号链接
+- `partx`: 通知内核分区的存在和编号
+- `pivot_root`: 将给定文件系统变为当前进程的根
+- `rename`: 通过替换字符串重命名文件
+- `renice`: 更改运行进程的优先级
+- `rev`: 反转给定文件的行
+- `rtcwake`: 用于指定时间唤醒系统睡眠
+- `script`: 终端录制
+- `scriptreplay`: 使用计时回放录制
+- `setarch`: 在新环境中更改架构并设置性标记
+- `setid`:在新会话中运行程序
+- `setterm`: 设置终端属性
+- `sdisk`: 磁盘分区操作器
+- `swaplabel`: 允许更改交换区域 UUID
+- `swap`: 列出设备和文件
+- `switch_root`: 切换文件系统作为根
+- `tail`: 跟踪日志文件的增长。显示最后 10 行，然后继续显示创建的新条目
+- `taskset`: 获取或设置进程的 CPU 亲和性
+- `tunelp`: 调整打印机参数
+- `ul`: 将下划线转换为指示终端下线的转义序列的过滤器
+- `umount`: 从系统树中卸载文件系统
+- `unshare`: 与父进程分离某些命名空间运行程序
+- `uuidgen`: UUID 库用于生成安全且保证唯一的 UUID 的守护进程
+- `wall`: 将文件内容（默认其标准输入）显示在所有当前登录用户的终端上
+- `whereis`: 报告给定命令的二进制文件、源码和手册页的位置
+- `wipes`: 擦除设备上的文件系统签名
+- `write`: 向指定用户发送消息，如果该用户未禁用接收此类消息
 
 ## 6.22. Psmisc-22.15
 
@@ -4521,10 +4572,6 @@ make NON_ROOT_USERNAME=nobody check-root
 echo "dummy:x:1000:nobody" >> /etc/group
 ```
 
-
-
-
-
 # Linux 实验性 - 版本 7.1
 
 修复部分权限以便非 root 用户可以编译并运行测试：
@@ -4535,9 +4582,9 @@ chown -R v nobody .
 
 现在运行测试：
 
-```bash
-su-tools nobody -s /bin/bash -c "make RUN EXPENSIVE TESTS=yes check"
-```
+
+
+`su-tools nobody -s /bin/bash -c "make RUN EXPENSIVE TESTS=yes check"`
 
 删除临时组：
 
@@ -4572,9 +4619,9 @@ mv /usr/bin/{head,sleep,nice} /bin
 
 已安装的程序：base64, basename, cat, chgrp, chmod, chown, chroot, cksum, comm, cp, csplit, cut, date, df, du, echo, env, expand, expr, factor, false, fold, groups, hostid, id, install, join, ln, logname, md5sum, mkdir, mktemp, mv, nice, nl, nohup, nproc, od, patch, printf, pty, pwd, readlink, realpath, rm, rmdir, run, seq, sha1sum, sha224sum, sha256sum, sha384sum, sha512sum, shred, sort, stat, stdbuf, sum, sync, tac, tail, timeout, tr, truncate, true, tty, uniq, unexpand, wc, yes
 
-已安装的库：libstdc++.so
+已安装的库：`libstdc++.so`
 
-已安装的目录：/usr/libexec/coreutils
+已安装的目录：`/usr/libexec/coreutils`
 
 ## 短描述
 
@@ -4629,7 +4676,7 @@ mv /usr/bin/{head,sleep,nice} /bin
 | printf | 按指定格式打印字符串 |
 | pty | 伪终端 |
 | pwd | 报告当前工作目录名称 |
-| readlink | 报告符号链接的值
+| readlink | 报告符号链接的值 |
 | realpath | 报告路径 |
 | rm | 删除目录 |
 | rmdir | 删除空目录 |
@@ -4669,10 +4716,6 @@ mv /usr/bin/{head,sleep,nice} /bin
 | whoami | 报告与当前有效用户 ID 关联的 |
 | yes | 重复输出 "y" 或给定的字符串直到被杀死 |
 
-
-
-
-
 ## 6.25. Iana-Etc-2.30
 
 Iana-Etc 软件包为网络服务和协议提供数据。
@@ -4683,26 +4726,26 @@ Iana-Etc 软件包为网络服务和协议提供数据。
 
 以下命令将 IANA 提供的原始数据转换为 `/etc/protocols` 和 `/etc/services` 数据文件的正确格式：
 
-```
+```bash
 make
 ```
 
 该软件包不带测试套件。
 安装该软件包：
 
-```
+```bash
 make install
 ```
 
 ### 6.25.2. Iana-Etc 内容
 
-已安装文件：/etc/protocols 和 /etc/services
+已安装文件：`/etc/protocols` 和 `/etc/services`
 
 # 简要描述
 
-/etc/protocols 描述了 TCP/IP 子系统中可用的各种 DARPA 互联网协议
+`/etc/protocols` 描述了 TCP/IP 子系统中可用的各种 DARPA 互联网协议
 
-/etc/services 提供了互联网服务的友好文本名称与其底层分配端口号和协议类型之间的映射
+`/etc/services` 提供了互联网服务的友好文本名称与其底层分配端口号和协议类型之间的映射
 
 ## 6.26. M4-1.4.16
 
@@ -4714,36 +4757,36 @@ M4 软件包包含一个宏处理器。
 
 为编译准备 M4：
 
-```
+```bash
 ./configure --prefix=/usr
 ```
 
 编译软件包：
 
-```
+```bash
 make
 ```
 
 若要测试软件包，请首先修复一个测试程序，然后运行测试程序：
 
-```
+```bash
 sed -i -e '4s/ls/ENO& || errno == EINVAL/' tests/test-readlink.h
 make check
 ```
 
 安装该软件包：
 
-```
+```bash
 make install
 ```
 
 ### 6.26.2. M4 内容
 
-已安装程序：m4
+已安装程序：`m4`
 
 # 简要描述
 
-m4 在复制给定文件的同时会展开它们包含的宏。这些宏可以是内置或用户定义的，可以接受任意数量的参数。除了执行宏展开外，m4 还具有内置函数，用于包含命名文件、运行 Unix 命令、执行整数算术、处理文本、递归等。m4 程序既可以作为编译器的前端端，也可以作为独立的宏处理器使用。
+`m4` 在复制给定文件的同时会展开它们包含的宏。这些宏可以是内置或用户定义的，可以接受任意数量的参数。除了执行宏展开外，`m4` 还具有内置函数，用于包含命名文件、运行 Unix 命令、执行整数算术、处理文本、递归等。`m4` 程序既可以作为编译器的前端端，也可以作为独立的宏处理器使用。
 
 ## 6.27. Bison-2.5
 
@@ -4755,39 +4798,39 @@ Bison 软件包包含一个解析器生成器。
 
 为编译准备 Bison：
 
-```
+```bash
 ./configure --prefix=/usr
 ```
 
 如果 PATH 中尚未有 bison，配置系统会导致 Bison 在不支持错误消息国际化的情况下进行构建。通过以下操作可以修正此问题：
 
-```
+```bash
 echo '#define YENABLE NLS 1' >> lib/config.h
 ```
 
 编译软件包：
 
-```
+```bash
 make
 ```
 
 若要测试结果（约 0.5 SBU），请执行：
 
-```
+```bash
 make check
 ```
 
 安装该软件包：
 
-```
+```bash
 make install
 ```
 
 ### 6.27.2. Bison 内容
 
-- 已安装程序：bison 和 yacc
-- 已安装库：liby.a
-- 已安装目录：/usr/share/bison
+- 已安装程序：`bison` 和 `yacc`
+- 已安装库：`liby.a`
+- 已安装目录：`/usr/share/bison`
 
 # 简要描述
 
@@ -4805,25 +4848,25 @@ Proccs 软件包包含用于监控进程的程序。
 
 应用补丁防止在确定内核时钟滴频率时不显示错误消息：
 
-```
+```bash
 patch -Npl -i ../proccs-3.2.8-fix HZ errors-1.patch
 ```
 
 应用补丁以修复 watch 程序中的 unicode 问题：
 
-```
+```bash
 patch -Npl -i ../proccs-3.2.8-watch unicode-1.patch
 ```
 
 修复 Makefile 中的 bug，该 bug会导致 proccs 无法使用 make-3.82 进行编译：
 
-```
+```bash
 sed -i -e 's@*/module.mk@proc/module.mk ps/module.mk@' Makefile
 ```
 
 编译软件包：
 
-```
+```bash
 make
 ```
 
@@ -4831,14 +4874,14 @@ make
 
 安装该软件包：
 
-```
+```bash
 make install
 ```
 
 ### 6.28.2. Proccs 内容
 
 - **已安装程序：** free, kill, pgrep, pkill, pmap, ps, pwdx, skill, slabtop, snice, sysctl, tad, top, uptime, vmstat, w, 和 watch
-- **已安装库：** libproc.so
+- **已安装库：** `libproc.so`
 
 - **简要描述**
 - **free**：报告系统中空闲和使用的内存（物理内存和交换内存）
@@ -4868,37 +4911,37 @@ Grep 软件包包含搜索文件的程序。
 
 首先，修复一个小问题：
 
-```
+```bash
 sed -i '.*|/' Makefile
 ```
 
 为编译准备 Grep：
 
-```
+```bash
 ./configure --prefix=/usr --bindir=/bin
 ```
 
 编译软件包：
 
-```
+```bash
 make
 ```
 
 若要测试结果，请执行：
 
-```
+```bash
 make check
 ```
 
 安装该软件包：
 
-```
+```bash
 make install
 ```
 
 ### 6.29.2. Grep 内容
 
-- 已安装程序：egrep, fgrep 和 grep
+- 已安装程序：`egrep`, `fgrep` 和 `grep`
 
 # 简要描述
 
@@ -4916,26 +4959,26 @@ Read 软件包是一组提供命令行编辑能力的库。
 
 重新安装 Readline 会导致旧库移动到 .old。这通常会触发 ldconfig。通过执行以下两条命令可以避免：
 
-```
+```bash
 sed -i '/old/d' Makefile.in
 sed -i '/OLDS]/c' support/shlib-install
 ```
 
 应用补丁修复一个已知的 bug：
 
-```
+```bash
 patch -Npl -i ../readline-6.2-fixes-1.patch
 ```
 
 为编译准备 Readline：
 
-```
+```bash
 ./configure --prefix=/usr --libdir=/lib
 ```
 
 编译软件包：
 
-```
+```bash
 make SHLIB_LIBS=-lncurses
 ```
 
@@ -4943,19 +4986,19 @@ make SHLIB_LIBS=-lncurses
 
 安装该软件包：
 
-```
+```bash
 make install
 ```
 
 现在将静态库移动到更合适的位置：
 
-```
+```bash
 mv -v /lib{readline,history}.a /usr/lib
 ```
 
 接下来，删除 lib 中的 .so 文件并重新链接到 /usr/lib：
 
-```
+```bash
 rm -v /lib{readline,history}.so
 ln -sf ..//lib/libreadline.so.6 /usr/lib/libreadline.so
 ln -sf ..//lib/libhistory.so.6 /usr/lib/libhistory.so
@@ -4963,25 +5006,20 @@ ln -sf ..//lib/libhistory.so.6 /usr/lib/libhistory.so
 
 如果需要，安装文档：
 
-```
+```bash
 mkdir -v /usr/share/doc/readline-6.2
-install -v -m644 doc.*{ps,pdf,html,dvi} \
-/usr/share/doc/readline-6.2
+install -v -m644 doc.*{ps,pdf,html,dvi} /usr/share/doc/readline-6.2
 ```
 
 ### 6.30.2. Readline 内容
 
-- 已安装库：libhistory.{a,so} 和 readline.{a,so}
-- 已安装目录：/usr/include/readline, /usr/share/readline, /usr/share/doc/readline-6.2
+- 已安装库：`libhistory.{a,so}` 和 `readline.{a,so}`
+- 已安装目录：`/usr/include/readline`, `/usr/share/readline`, `/usr/share/doc/readline-6.2`
 
 # 简要描述
 
 - **libhistory**：为回历史记录提供一致的用户界面
 - **libreadline**：为需要提供命令行界面的离散程序提供用户界面的一致性
-
-
-
-
 
 ## 6.31. Bash-4.2
 
@@ -4994,24 +5032,29 @@ Bash 软件包包含了 Bourne-Again SHELL（加强壳）。
 
 首先，应用以下补丁以修复上游已解决的各种错误：
 
-```
+```bash
 patch -Npl -i ../bash-4.2-fixes-4.patch
 ```
 
 为编译准备 Bash：
 
-```
+```bash
 /configure --prefix=/usr --bindir=/bin \
 --htmldir=/usr/share/doc/bash-4.2 --without-bash-malloc \
---with-installed-readline
 ```
 
-configure 选项的含义：
 
---htmldir
+
+### `--with-installed-readline`
+
+```
+configure 选项的含义：
+```
+
+`--htmldir`
 此选项指定了安装 HTML 格式文档的目录。
 
---with-installed-readline
+`--with-installed-readline`
 此选项告诉 Bash 使用系统已安装的 readline 库，而不是使用其内核中自带的 readline 版本。
 
 编译软件包：
@@ -5051,21 +5094,21 @@ exec /bin/bash --login +h
 
 ### 6.31.2. Bash 内容
 
-**已安装程序：** bash, bashbug, 和 sh（链接到 bash）
-**已安装目录：** /usr/share/doc/bash-4.2
+已安装程序：`bash`, `bashbug`, 和 `sh`（链接到 `bash`）
+已安装目录：`/usr/share/doc/bash-4.2`
 
 ### 简述
 
-- **bash** 一种广泛使用的命令解释器；它在执行给定的命令行之前会对该命令行进行许多类型的扩展和替换，使得该解释器成为一个强大的工具。
-- **bashbug** 一个 shell 脚本，帮助用户编写并发送关于 **bash** 的标准格式错误报告。
-- **sh** 指向 **bash** 程序的符号链接；当作为 **sh** 调用时，**bash** 会尝试尽可能模拟历史版本 **sh** 的启动行为，同时符合 POSIX 标准。
+- `bash` 一种广泛使用的命令解释器；它在执行给定的命令行之前会对该命令行进行许多类型的扩展和替换，使得该解释器成为一个强大的工具。
+- `bashbug` 一个 shell 脚本，帮助用户编写并发送关于 `bash` 的标准格式错误报告。
+- `sh` 指向 `bash` 程序的符号链接；当作为 `sh` 调用时，`bash` 会尝试尽可能模拟历史版本 `sh` 的启动行为，同时符合 POSIX 标准。
 
 ## 6.32. Libtool-2.4.2
 
 Libtool 软件包包含了 GNU 通用库支持脚本。它将使用共享库的复杂性封装在一个一致的可移植的接口中。
 
-**估计编译时间：** 3.7 SBU
-**所需磁盘空间：** 35 MB
+估计编译时间：3.7 SBU
+所需磁盘空间：35 MB
 
 ### 6.32.1. 安装 Libtool
 
@@ -5095,16 +5138,15 @@ make install
 
 ### 6.32.2. Libtool 内容
 
-| **已安装程序：** | libtool 和 libtoolize |
-| :--- | :--- |
-| **已安装库：** | libtdl.{a,so} |
-| **已安装目录：** | /usr/include/libtdl, /usr/share/libtool |
+已安装程序：`libtool` 和 `libtoolize`
+已安装库：`libtdl.{a,so}`
+已安装目录：`/usr/include/libtdl`, `/usr/share/libtool`
 
 ### 简述
 
-- **libtool**：提供通用的库构建支持服务
-- **libtoolize**：提供了一种向软件包添加 **libtool** 支持的标准方法
-- **libtdl**：隐藏了打开库的各种困难性
+- `libtool`：提供通用的库构建支持服务
+- `libtoolize`：提供了一种向软件包添加 `libtool` 支持的标准方法
+- `libtdl`：隐藏了打开库的各种困难性
 
 ## 6.33. GDBM-1.10
 
@@ -5123,7 +5165,7 @@ GDBM 软件包包含了 GNU 数据库管理器。这是一种磁盘文件格式�
 
 该选项的含义：
 
---enable-libdbm-compat
+`--enable-libdbm-compat`
 这将启用构建 libdbm 兼容库，因为 LFS 之外的某些软件包需要它提供的例程。
 
 编译软件包：
@@ -5146,13 +5188,13 @@ make install
 
 ### 6.33.2. GDBM 内容
 
-已安装程序：testdbm
-已安装库：libdbm.{so,a} 和 libdbm_compat.{so,a}
+已安装程序：`testdbm`
+已安装库：`libdbm.{so,a}` 和 `libdbm_compat.{so,a}`
 
 ### 简述
 
-- **testdbm** 测试并修改 GDBM 数据库
-- **libdbm** 包含用于操作的函数
+- `testdbm` 测试并修改 GDBM 数据库
+- `libdbm` 包含用于操作的函数
 
 ## 6.34. Inetutils-1.9
 
@@ -5172,19 +5214,19 @@ Inetutils 软件包用于基础网络的程序。
 
 configure 选项的含义：
 
---disable-ifconfig
+`--disable-ifconfig`
 此选项防止 Inetutils 安装 ifconfig 程序，该程序可用于配置接口。LFS 使用 iproute 来执行此任务。
 
---disable-logger
+`--disable-logger`
 此选项防止 Inetutils 安装 logger 程序，该程序用于脚本向系统守护进程传递消息。
 
---disable-syslog
+`--disable-syslog`
 此选项防止 Inetutils 安装 Syslog 守护进程，该守护进程随 syslog 软件包安装。
 
---disable-whois
+`--disable-whois`
 此选项禁用构建 whois 客户端，该客户端已经过时。关于更好的 whois 客户端的说明请参见 BLFS 书。
 
---disable-servers
+`--disable-servers`
 此选项禁用作为 Inetutils 部分的各种网络服务器的安装。这些服务器在基础 LFS 系统中被认为是不适当的。某些服务器从本质上是不安全的，只有在可信的网络上才被认为是安全的。更多信息可以在 http://www.linuxfromscratch.org/blfs/view/inetutils.html 找到。请注意，其中许多程序都有更好的替代品。
 
 编译软件包：
@@ -5215,22 +5257,22 @@ mv -v /usr/bin/traceroute /sbin
 
 ### 6.34.2. Inetutils 内容
 
-**已安装程序：** ftp, hostname, ping, ping6, rcp, reexec, login, rsh, talk, telnet, tftp, traceroute
+已安装程序：`ftp`, `hostname`, `ping`, `ping6`, `rcp`, `reexec`, `login`, `rsh`, `talk`, `telnet`, `tftp`, `traceroute`
 
 ### 简述
 
-- **ftp** 是文件传输协议
-- **hostname** 设置主机名
-- **ping** 发送数据包并报告所需时间
-- **ping6**：针对 IPv6 的 **ping**
-- **rcp**：远程复制
-- **reexec**：在远程主机执行命令
-- **login**：远程登录
-- **rsh**：远程 shell
-- **talk**：用于与其他用户聊天
-- **telnet**：TELNET 协议接口
-- **tftp**：简单的文件传输程序
-- **traceroute**：跟踪从你的主机到网络的路由
+- `ftp` 是文件传输协议
+- `hostname` 设置主机名
+- `ping` 发送数据包并报告所需时间
+- `ping6`：针对 IPv6 的 `ping`
+- `rcp`：远程复制
+- `reexec`：在远程主机执行命令
+- `login`：远程登录
+- `rsh`：远程 shell
+- `talk`：用于与其他用户聊天
+- `telnet`：TELNET 协议接口
+- `tftp`：简单的文件传输程序
+- `traceroute`：跟踪从你的主机到网络的路由
 
 ## 6.35. Perl-5.14.2
 
@@ -5241,7 +5283,7 @@ Perl 软件包包含了实用提取语言。
 
 ### 6.35.1. 安装 Perl
 
-首先创建一个基础 /etc/hosts 文件以供 Perl 的一个配置文件以及测试套件引用：
+首先创建一个基础 `/etc/hosts` 文件以供 Perl 的一个配置文件以及测试套件引用：
 
 ```bash
 echo "127.0.0.1 localhost $(hostname)" > /etc/hosts
@@ -5262,7 +5304,7 @@ sed -i -e "s^ZLIB\*= TRUE;ZLIB = False;" \
      lib/config.in
 ```
 
-要完全控制 Perl 设置，你可以从以下命令中删除 -des 选项并手动选择构建哪些包。或者，直接使用以下命令使用 Perl 自动检测的默认值：
+要完全控制 Perl 设置，你可以从以下命令中删除 `-des` 选项并手动选择构建哪些包。或者，直接使用以下命令使用 Perl 自动检测的默认值：
 
 ```bash
 sh config -des -Dprefix=/usr \
@@ -5278,9 +5320,6 @@ sh config -des -Dprefix=/usr \
 make
 ```
 
-
-
-
 要测试结果（约 2.5 SBU），执行：
 
 ```
@@ -5295,82 +5334,75 @@ make install
 
 ## 6.35.2 Perl 的内容
 
-**已安装的程序：** a2p, c2ph, config_data, corelist, cpan, cpan2dist, cpan, cpanpan-run-perl, dprofpp, enc2xs, find2perl, perlivp, h2ph, h2xs, instmod, json_pp, libnetcfg, piconov, perl5.14 (链接到 perl), perbug, perldoc, perlinthanks (链接到 perbug), pl2pm, podht2, pod2latex, podman, pod2text, podusage, podchecker, podselect, prose, psed (链接到 s2p), pstruct (链接到 c2ph), ptardiff, ptargrep, s2p, shasum, splain, 以及 xsubpp
+已安装的程序：`a2p`, `c2ph`, `config_data`, `corelist`, `cpan`, `cpan2dist`, `cpan`, `cpanpan-run-perl`, `dprofpp`, `enc2xs`, `find2perl`, `perlivp`, `h2ph`, `h2xs`, `instmod`, `json_pp`, `libnetcfg`, `piconov`, `perl5.14`（链接到 `perl`）, `perbug`, `perldoc`, `perlinthanks`（链接到 `perbug`）, `pl2pm`, `podht2`, `pod2latex`, `podman`, `pod2text`, `podusage`, `podchecker`, `podselect`, `prose`, `psed`（链接到 `s2p`）, `pstruct`（链接到 `c2ph`）, `ptardiff`, `ptargrep`, `s2p`, `shasum`, `splain`, 以及 `xsubpp`
 
-**已安装的库：** 此处未列出的还有数百个
+已安装的库：此处未列出的还有数百个
 
-**已安装的目录：** /usr/lib/perl5
+已安装的目录：`/usr/lib/perl5`
 
 ## 简介绍
 
-- **a2p** 将 C awk 翻译为 Perl
-- **c2ph** 将由 cc -g -S 生成的 C 结构导出
-- **config_data** 查询或更改 Perl 模块
-- **corelist** Module::CoreList 的命令行前端
-- **cpan** 从命令行与综合性 Perl 归档网络 (CPAN) 交互
-- **cpan2dist** CPANPLUS 分发中心
-- **cpanpan** CPAN 启动器
-- **cpan-run-perl** Perl 脚本，用于允许在派生进程中每次写入后刷新输出缓冲区
-- **dprofpp** 显示 Perl 分析分析数据
-- **enc2xs** 从 Unicode 字符映射或 Tel 编码文件为 Encode 模块构建 Perl 扩展
-- **find2perl** 将 find 命令翻译为 Perl
-- **h2ph** 将 .h C 文件转换为 .ph Perl 头文件
-- **h2xs** 将 .h C 头文件转换为 Perl 扩展
-- **instmod** 用于检查已安装 Perl 模块的 Shell 脚本，甚至可以从已安装的模块创建 tar 包
-- **json_pp** 在某些输入和输出格式之间转换数据
-- **libnetcfg** 可用于配置 libnet Perl 模块
-- **perl** 将 C, sed, awk 和 sh 的一些最佳功能结合成单一的瑞士军刀语言
-- **perl5.14.2** 向 perl 的硬链接
-- **perbug** 用于生成 Perl 或其附带模块的错误报告并发送邮件
-- **perldoc** 显示嵌入在 Perl 树或 Perl 脚本中的 pod 格式文档片段
-
-# Linux From Scratch - 版本 7.1
-
-- **perlivp**
+- `a2p` 将 C awk 翻译为 Perl
+- `c2ph` 将由 cc -g -S 生成的 C 结构导出
+- `config_data` 查询或更改 Perl 模块
+- `corelist` Module::CoreList 的命令行前端
+- `cpan` 从命令行与综合性 Perl 归档网络（CPAN）交互
+- `cpan2dist` CPANPLUS 分发中心
+- `cpanpan` CPAN 启动器
+- `cpan-run-perl` Perl 脚本，用于允许在派生进程中每次写入后刷新输出缓冲区
+- `dprofpp` 显示 Perl 分析分析数据
+- `enc2xs` 从 Unicode 字符映射或 Tel 编码文件为 Encode 模块构建 Perl 扩展
+- `find2perl` 将 find 命令翻译为 Perl
+- `h2ph` 将 .h C 文件转换为 .ph Perl 头文件
+- `h2xs` 将 .h C 头文件转换为 Perl 扩展
+- `instmod` 用于检查已安装 Perl 模块的 Shell 脚本，甚至可以从已安装的模块创建 tar 包
+- `json_pp` 在某些输入和输出格式之间转换数据
+- `libnetcfg` 可用于配置 libnet Perl 模块
+- `perl` 将 C, sed, awk 和 sh 的一些最佳功能结合成单一的瑞士军刀语言
+- `perl5.14.2` 向 perl 的硬链接
+- `perbug` 用于生成 Perl 或其附带模块的错误报告并发送邮件
+- `perldoc` 显示嵌入在 Perl 树或 Perl 脚本中的 pod 格式文档片段
+- `perlivp`
 Perl 安装验证程序；它可以用于验证 Perl 及其库是否已正确安装
-
-- **perlthanks**
+- `perlthanks`
 用于生成并发送给 Perl 开发人员的感谢邮件
-
-- **piconv**
-字符编码转换器 **iconv** 的 Perl 版本
-
-- **pl2pm**
+- `piconv`
+字符编码转换器 `iconv` 的 Perl 版本
+- `pl2pm`
 一个用于将 Perl4 .p1 文件转换为 Perl5 .pm 模块的粗略工具
-
-- **pod2html**
+- `pod2html`
 将 pod 格式的文件转换为 HTML 格式
-- **pod2latex**
+- `pod2latex`
 将 pod 格式的文件转换为 LaTeX 格式
-- **pod2man**
+- `pod2man`
 将 pod 数据转换为格式化的 *roff 输入*
-- **pod2text**
+- `pod2text`
 将 pod 数据转换为格式化的 ASCII 文本
-- **pod2usage**
+- `pod2usage`
 打印来自文件中嵌入 pod 文档的用法信息
-- **podchecker**
+- `podchecker`
 检查 pod 格式文档文件的语法
-- **podselect**
+- `podselect`
 显示选定的 pod 文档章节
-- **prove**
+- `prove`
 用于针对 Test::Harness 模块运行测试的命令行工具。
-- **psed**
-流式编辑器 **sed** 的 Perl 版本
-- **pstruct**
-将由 **cc -g -S** stabs 生成的 C 结构导出
-- **ptar**
-Perl 中一个类似于 **tar** 的程序
-- **ptdiff**
+- `psed`
+流式编辑器 `sed` 的 Perl 版本
+- `pstruct`
+将由 `cc -g -S` stabs 生成的 C 结构导出
+- `ptar`
+Perl 中一个类似于 `tar` 的程序
+- `ptdiff`
 一个比较提取的归档与未提取归档的 Perl 程序
-- **ptargrep**
+- `ptargrep`
 一个对 tar 归档文件中内容应用模式匹配的 Perl 程序
-- **s2p**
-将 **sed** 脚本翻译为 Perl
-- **shasum**
+- `s2p`
+将 `sed` 脚本翻译为 Perl
+- `shasum`
 打印或检查 SHA 校验和
-- **splain**
+- `splain`
 用于在 Perl 中强制执行详细警告诊断
-- **xubpp**
+- `xubpp`
 将 Perl XS 代码转换为 C 代码
 
 ## 6.36. Autoconf-2.68
@@ -5410,23 +5442,23 @@ make install
 
 ## 6.36.2. Autoconf 的内容
 
-- **已安装的程序：** autoconf, autohader, autom4e, autoconf, autoscan, autoupdate 和 ifnames
-- **已安装的目录：** /usr/share/autoconf
+- 已安装的程序：`autoconf`, `autohader`, `autom4e`, `autoconf`, `autoscan`, `autoupdate` 和 `ifnames`
+- 已安装的目录：`/usr/share/autoconf`
 
 ## 简介绍
 
-- **autoconf** 生成可以自动配置源代码的 shell 脚本。
-- **autohader** autoconf 的封装器
-- **autom4e** 根据 configure.in 生成 m4 文件
-- **autoconf** 包含生成 shell 脚本的程序。
-- **autoscan** 扫描 configure.in
-- **autoupdate** 修改 configure.in
-- **ifnames** 创建条件语句
-- **aclocal** 生成 m4 文件
-- **automake** 从 Makefile.am 生成 Makefile.in 文件的工具
-- **gettext** 生成 aclocal-样式的文件
-- **libtool** 生成 acllocal-样式的文件
-- **automakeize** 扫描 configure.in 获取其依赖信息
+- `autoconf` 生成可以自动配置源代码的 shell 脚本。
+- `autohader` autoconf 的封装器
+- `autom4e` 根据 configure.in 生成 m4 文件
+- `autoconf` 包含生成 shell 脚本的程序。
+- `autoscan` 扫描 configure.in
+- `autoupdate` 修改 configure.in
+- `ifnames` 创建条件语句
+- `aclocal` 生成 m4 文件
+- `automake` 从 Makefile.am 生成 Makefile.in 文件的工具
+- `gettext` 生成 aclocal-样式的文件
+- `libtool` 生成 acllocal-样式的文件
+- `automakeize` 扫描 configure.in 获取其依赖信息
 
 ## 6.37. Automake-1.3
 
@@ -5461,33 +5493,32 @@ make check
 make install
 ```
 
+
+
 ## 6.37.2. Automake 的内容
 
-- **已安装的程序：** acinstall, aclocal, aclocal-1.11.3, automake, automake-1.11.3, compile, config.guess, config.sub, depcomp, clisp-comp, install-sh, mdate-sh, missing, mininstalldirs, py-compile, symlink-tree, ywrap
-- **已安装的目录：** /usr/share/aclocal-1.11, /usr/share/automake-1.11.3, /usr/share/doc/automake-1.11
+- 已安装的程序：`acinstall`, `aclocal`, `aclocal-1.11.3`, `automake`, `automake-1.11.3`, `compile`, `config.guess`, `config.sub`, `depcomp`, `clisp-comp`, `install-sh`, `mdate-sh`, `missing`, `mininstalldirs`, `py-compile`, `symlink-tree`, `ywrap`
+- 已安装的目录：`/usr/share/aclocal-1.11`, `/usr/share/automake-1.11.3`, `/usr/share/doc/automake-1.11`
 
 ## 简介绍
 
-- **acinstall** 安装 aclocal-样式 m4 文件的脚本
-- **aclocal** 根据 configure.in 内容生成 aclocal.m4 文件
-- **aclocal-1.11.3** 向 aclocal 的硬链接
-- **automake** 从 Makefile.am 生成 Makefile.in 文件的工具。
-- **automake-1.11.3** 向 automake 的硬链接
-- **compile** 编译器的封装器
-- **config.guess** 用于为给定的构建、主机或目标架构猜测三元组的脚本
-- **config.sub** 配置验证子程序
-- **depcomp** 用于编译程序以便在生成所需输出的同时生成依赖信息的脚本
-- **clisp-comp** 字节编译 Emacs Lisp 代码
-- **install-sh** 安装程序、脚本或数据文件的脚本
-- **mdate-sh** 打印文件或目录修改时间的脚本
-- **missing** 在安装期间作为 GNU 程序通用占符的脚本
-- **mkinstalldirs** 创建目录树的脚本
-- **py-compile** 编译 Python 程序
-- **symlink-tree** 为目录树创建符号链接树的脚本
-- **ylwrap** lex 和 yacc 的封装器
-
-
-
+- `acinstall` 安装 aclocal-样式 m4 文件的脚本
+- `aclocal` 根据 `configure.in` 内容生成 `aclocal.m4` 文件
+- `aclocal-1.11.3` 向 `aclocal` 的硬链接
+- `automake` 从 `Makefile.am` 生成 `Makefile.in` 文件的工具。
+- `automake-1.11.3` 向 `automake` 的硬链接
+- `compile` 编译器的封装器
+- `config.guess` 用于为给定的构建、主机或目标架构猜测三元组的脚本
+- `config.sub` 配置验证子程序
+- `depcomp` 用于编译程序以便在生成所需输出的同时生成依赖信息的脚本
+- `clisp-comp` 字节编译 Emacs Lisp 代码
+- `install-sh` 安装程序、脚本或数据文件的脚本
+- `mdate-sh` 打印文件或目录修改时间的脚本
+- `missing` 在安装期间作为 GNU 程序通用占符的脚本
+- `mkinstalldirs` 创建目录树的脚本
+- `py-compile` 编译 Python 程序
+- `symlink-tree` 为目录树创建符号链接树的脚本
+- `ylwrap` lex 和 yacc 的封装器
 
 ## 6.38. Diffutils-3.2
 
@@ -5523,14 +5554,14 @@ make install
 
 ### 6.38.2. Diffutils 包含内容
 
-已安装的程序：：cmp, diff, diff3, 和 sdiff
+已安装的程序：：`cmp`, `diff`, `diff3`, 和 `sdiff`
 
 #### 简要描述
 
-- **cmp**: 比较两个文件并报告它们是否相同，或在哪些字节处不同
-- **diff**: 比较两个文件或目录，并报告文件中哪些行不同
-- **diff3**: 逐行比较三个文件
-- **sdiff**: 合并两个文件并交互式输出结果
+- `cmp`: 比较两个文件并报告它们是否相同，或在哪些字节处不同
+- `diff`: 比较两个文件或目录，并报告文件中哪些行不同
+- `diff3`: 逐行比较三个文件
+- `sdiff`: 合并两个文件并交互式输出结果
 
 ## 6.39. Gawk-4.0.0
 
@@ -5569,26 +5600,25 @@ make install
 
 ```
 mkdir -v /usr/share/doc/gawk-4.0.0
-cp -v doc/{awkforai.txt,.*{eps,pdf,jpg}} \
-/usr/share/doc/gawk-4.0.0
+cp -v doc/{awkforai.txt,.*{eps,pdf,jpg}} /usr/share/doc/gawk-4.0.0
 ```
 
 ### 6.39.2. Gawk 包含内容
 
-- 已安装的程序：awk (链接到 gawk), dgawk, gawk, gawk-4.0.0, great, igawk, pgawk, pgawk-4.0.0, 和 pwcat
-- 已安装的目录：/usr/lib/awk, /usr/share/gawk
+- 已安装的程序：`awk` (链接到 `gawk`), `dgawk`, `gawk`, `gawk-4.0.0`, `great`, `igawk`, `pgawk`, `pgawk-4.0.0`, 和 `pwcat`
+- 已安装的目录：`/usr/lib/awk`, `/usr/share/gawk`
 
 #### 简要描述
 
-- **awk**: 指向 gawk 的链接
-- **dgawk**: 一个 awk 调试器
-- **gawk**: 用于处理文本文件的程序；它是 gawk 的 GNU 实现
-- **gawk-4.0.0**: 指向 gawk 的硬链接
-- **great**: 导出组数据库 /etc/group
-- **igawk**: 赋予 gawk 包含文件的能力
-- **pgawk**: gawk 的性能分析版本
-- **pgawk-4.0.0**: 指向 pgawk 的硬链接
-- **pwcat**: 导出密码数据库 /etc/passwd
+- `awk`: 指向 `gawk` 的链接
+- `dgawk`: 一个 awk 调试器
+- `gawk`: 用于处理文本文件的程序；它是 gawk 的 GNU 实现
+- `gawk-4.0.0`: 指向 `gawk` 的硬链接
+- `great`: 导出组数据库 `/etc/group`
+- `igawk`: 赋予 `gawk` 包含文件的能力
+- `pgawk`: `gawk` 的性能分析版本
+- `pgawk-4.0.0`: 指向 `pgawk` 的硬链接
+- `pwcat`: 导出密码数据库 `/etc/passwd`
 
 ## 6.40. Findutils-4.4.2
 
@@ -5607,8 +5637,8 @@ Findutils 软件包包含查找文件的程序。这些程序用于递归搜索�
 ```
 
 configure 选项的含义：
---localstatedir:
-此选项将 locate 数据库的位置更改为 /var/lib/locate，符合 FHS 标准。
+`--localstatedir`:
+此选项将 locate 数据库的位置更改为 `/var/lib/locate`，符合 FHS 标准。
 
 编译软件包：
 
@@ -5628,7 +5658,7 @@ make check
 make install
 ```
 
-L-Boots 软件包中的某些脚本依赖于 find。由于在启动的早期阶段 /usr 可能不可用，因此此程序需要位于根分区上。updatedb 脚本也需要修改以修正显式路径：
+L-Boots 软件包中的某些脚本依赖于 find。由于在启动的早期阶段 `/usr` 可能不可用，因此此程序需要位于根分区上。`updatedb` 脚本也需要修改以修正显式路径：
 
 ```
 mv /usr/bin/find /bin
@@ -5637,24 +5667,24 @@ sed -i 's/find:${BINDIR}/find:=/bin/' /usr/bin/updatedb
 
 ### 6.40.2. Findutils 包含内容
 
-已安装的程序：bigram, code, find, frcode, locate, oldloft, updatedb, 和 xargs
-已安装的目录：/usr/lib/findutils
+已安装的程序：`bigram`, `code`, `find`, `frcode`, `locate`, `oldloft`, `updatedb`, 和 `xargs`
+已安装的目录：`/usr/lib/findutils`
 
 #### 简要描述
 
-- **bigram**: 曾用于生成 locate 数据库
-- **code**: 曾用于生成 locate 数据库；它是 frcode 的祖先。
-- **find**: 在通用树中搜索符合指定标准的文件
-- **frcode**: 由 updatedb 调用以压缩文件名列表；它使用前向压缩，将数据库大小缩小四到五倍。
+- `bigram`: 曾用于生成 locate 数据库
+- `code`: 曾用于生成 locate 数据库；它是 `frcode` 的祖先。
+- `find`: 在通用树中搜索符合指定标准的文件
+- `frcode`: 由 `updatedb` 调用以压缩文件名列表；它使用前向压缩，将数据库大小缩小四到五倍。
 
 Linux From Scratch - 版本 7.1
 
 | 命令 | 描述 |
 | :--- | :--- |
-| **locate** | 搜索文件名数据库并报告包含给定字符串或匹配给定模式的名称 |
-| **oldfind** | find 的旧版本，使用不同的算法 |
-| **updatedb** | 更新 **locate** 数据库；它扫描整个文件系统（包括当前挂载的其他文件系统，除非指示不要这样做），并将找到的每个文件名放入数据库 |
-| **xargs** | 可用于对文件列表应用给定的命令 |
+| `locate` | 搜索文件名数据库并报告包含给定字符串或匹配给定模式的名称 |
+| `oldfind` | find 的旧版本，使用不同的算法 |
+| `updatedb` | 更新 `locate` 数据库；它扫描整个文件系统（包括当前挂载的其他文件系统，除非指示不要这样做），并将找到的每个文件名放入数据库 |
+| `xargs` | 可用于对文件列表应用给定的命令 |
 
 ## 6.41. Flex-2.5.35
 
@@ -5695,7 +5725,7 @@ make check
 make install
 ```
 
-某些程序期望在 /usr/lib 中找到 lex。为了支持这些程序，创建一个名为 lex 的脚本以 lex 模式运行 flex：
+某些程序期望在 `/usr/lib` 中找到 lex。为了支持这些程序，创建一个名为 lex 的脚本以 lex 模式运行 flex：
 
 ```
 cat > /usr/bin/lex << "EOF"
@@ -5716,18 +5746,14 @@ cp -v doc/flex.pdf /usr/share/doc/flex-2.5.35
 
 ### 6.41.2. Flex 包含内容
 
-已安装的程序：flex 和 lex
-已安装的库：libfl.a
+已安装的程序：`flex` 和 `lex`
+已安装的库：`libfl.a`
 
 #### 简要描述
 
-- **flex**: 一个用于生成识别文本中模式的程序；它允许指定模式的规则
-- **lex**: 以 lex 模式运行 flex 的脚本
-- **libfl.a**: flex 库
-
-
-
-
+- `flex`: 一个用于生成识别文本中模式的程序；它允许指定模式的规则
+- `lex`: 以 lex 模式运行 flex 的脚本
+- `libfl.a`: flex 库
 
 ## 6.43. Groff-1.21
 
@@ -5769,8 +5795,8 @@ ln -sv tbl /usr/bin/gtbl
 
 ### 6.43.2. Groff 的内容
 
-- 安装的程序：additinfo, afmotid, chem, eqn, eqn2graph, gdiffmk, gqn（链接到 eqn）,graph2, grndvi, grobi, groff, groger, grolb, groj4, groppy, groty, gtbl（链接到 tbl）,hfootid, indxb, lkbib, lookbib, memoir, maxn, nroff, pdff, pbtops, pit, pic2graph, post-grohtlm, precon, pre-grohtlm, refer, roff2di, roff2html, roff2ps, roff2text, roff2x, soil, tbl, tm, 以及 troff
-- 安装的目录：/usr/lib/groff/usr/share/doc/groff-1.21, /usr/share/groff
+- 安装的程序：`additinfo`, `afmotid`, `chem`, `eqn`, `eqn2graph`, `gdiffmk`, `gqn`（链接到 `eqn`）, `graph2`, `grndvi`, `grobi`, `groff`, `groger`, `grolb`, `gro j4`, `groppy`, `groty`, `gtbl`（链接到 `tbl`）, `hfootid`, `indxb`, `lkbib`, `lookbib`, `memoir`, `maxn`, `nroff`, `pdff`, `pbtops`, `pit`, `pic2graph`, `post-grohtlm`, `precon`, `pre-grohtlm`, `refer`, `roff2di`, `roff2html`, `roff2ps`, `roff2text`, `roff2x`, `soil`, `tbl`, `tm`, 以及 `troff`
+- 安装的目录：`/usr/lib/groff/usr/share/doc/groff-1.21`, `/usr/share/groff`
 
 # 简要描述
 
@@ -5851,51 +5877,7 @@ ln -sv eqn /usr/bin/geqn
 ln -sv tbl /usr/bin/gtbl
 ```
 
-### 6.43.2. Groff 的内容
 
-- 安装的程序：additinfo, afmotid, chem, eqn, eqn2graph, gdiffmk, gqn（链接到 eqn）,graph2, grndvi, grobi, groff, groger, grolb, groj4, groppy, groty, gtbl（链接到 tbl）,hfootid, indxb, lkbib, lookbib, memoir, maxn, nroff, pdff, pbtops, pit, pic2graph, post-grohtlm, precon, pre-grohtlm, refer, roff2di, roff2html, roff2ps, roff2text, roff2x, soil, tbl, tm, 以及 troff
-- 安装的目录：/usr/lib/groff/usr/share/doc/groff-1.21, /usr/share/groff
-
-# 简要描述
-
-- additinfo：读取 troff 文件并添加 groff 系统使用的某些额外字体度信息
-- afmotid：创建一个供 groff 和 grops 使用的字体文件
-- chem：用于生成化学结构图的 Groff 预处理器
-- eqn：将 troff 输入中嵌入的方程描述编译为 troff 可理解的文件
-- eqn2graph：将 troff EQ（方程）转换为裁剪图像
-- gdiffmk：标记 groff/nroff/troff 文件之间的差异
-- geqn：指向 eqn 的链接
-- grap2graph：将图图转换为裁剪位图图像
-- grn：用于 gremlin 文件的 groff 预处理器
-- grovi：一种可生成 dvi 格式的 groff 驱动程序
-- groff：groff 文档格式化系统的前端；正常情况下，它运行 troff 程序和适用于所选设备的后处理器
-- groffer：在 X 和 t 终端上显示文件和页面。读取 guff 文件（打印文件需要 groff 选项 -e, -man, -me, -mm, -ms, -p 和 -t），并报告包含这些选项的 groff 命令
-- grolbp：一种用于佳能 CAPSL 打印机（LBP-4 和 LBP-8 系列激光打印机）的 groff 驱动程序
-- grolj4：一种 groff 驱动程序，输出适用于 HP LaserJet 4 打印机的 PCL5 格式
-- grops：将 GNU troff 的输出转换为 PostScript
-- grotty：将 GNU troff 的输出转换为适用于打字机设备的格式
-- gtbl：从带有 HP 标记的度文件创建一个供 groff-Tij4 使用的字体文件
-- indxbib：为参考文献数据库创建反向索引，并指定文件供 refer, lookbib 和 lkbib 使用
-- lkbibib：搜索包含特定键的参考文献数据库，并报告找到的任何引用
-- lookbib：在标准错误上打印提示（除非输入不是终端），从标准输入读取包含一组关键词的行，在指定的文件的参考文献数据库中搜索包含这些关键词的项，在标准输出上打印找到的任何引用，并重复此过程直到输入结束
-- mmroff：一种用于 groff 的简单预处理器
-- neqn：为美国信息交换标准代码（ASCII）输出格式化方程
-- nroff：一个使用 groff 嵌入 nroff 命令的脚本
-- pdftops：将 .pfb 格式的 PostScript 字体转换为 ASCII
-- pic：将 TeX 或 troff 输入中嵌入的图片描述转换为 TeX 或 troff 可理解的命令
-- pic2graph：将 PIC 图转换为裁剪图像
-- post-grohtml：将 GNU troff 的输出转换为 HTML
-- preconv：将输入文件的编码转换为 GNU troff 可理解的格式
-- pre-grohtml：将 GNU troff 的输出转换为 HTML
-- refer：将文件内容复制到标准输出，但 . 和 / 之间的行被解释为引用，.R1 和 .R2 之间的行被解释为如何处理引用的命令
-- roff2vi：将 roff 文件转换为 DVI 格式
-- roff2html：将 roff 文件转换为 HTML 格式
-- roff2ps：将 roff 文件转换为 ps 文件
-- roff2text：将 roff 文件转换为文本文件
-- roff2x：将 roff 文件转换为其他格式
-- soelim：读取并替换形式为 .so file 的行，将其替换为所提文件的内容
-- tbl：将 troff 输入文件中嵌入的表格描述编译为 troff 可理解的命令
-- tfmtit：创建一个供 groff-Dvi 使用的字体文件；它应该使用 groff 命令调用
 
 ## 6.43. Groff-1.21
 
@@ -5937,464 +5919,120 @@ ln -sv tbl /usr/bin/gtbl
 
 ### 6.43.2. Groff 的内容
 
-- 安装的程序：additinfo, afmotid, chem, eqn, eqn2graph, gdiffmk, gqn（链接到 eqn）,graph2, grndvi, grobi, groff, groger, grolb, groj4, groppy, groty, gtbl（链接到 tbl）,hfootid, indxb, lkbib, lookbib, memoir, maxn, nroff, pdff, pbtops, pit, pic2graph, post-grohtlm, precon, pre-grohtlm, refer, roff2di, roff2html, roff2ps, roff2text, roff2x, soil, tbl, tm, 以及 troff
-- 安装的目录：/usr/lib/groff/usr/share/doc/groff-1.21, /usr/share/groff
+- 安装的程序：`additinfo`, `afmotid`, `chem`, `eqn`, `eqn2graph`, `gdiffmk`, `geqn`（链接到 `eqn`）, `graph2`, `grndvi`, `grobi`, `groff`, `groger`, `grolb`, `groj4`, `groppy`, `groty`, `gtbl`（链接到 `tbl`）, `hfootid`, `indxb`, `lkbib`, `lookbib`, `memoir`, `maxn`, `nroff`, `pdff`, `pbtops`, `pit`, `pic2graph`, `post-grohtml`, `preconv`, `pre-grohtml`, `refer`, `roff2di`, `roff2html`, `roff2ps`, `roff2text`, `roff2x`, `soelim`, `tbl`, `tfmtit`, 以及 `troff`
+- 安装的目录：`/usr/lib/groff` `/usr/share/doc/groff-1.21`, `/usr/share/groff`
 
 # 简要描述
 
-- additinfo：读取 troff 文件并添加 groff 系统使用的某些额外字体度信息
-- afmotid：创建一个供 groff 和 grops 使用的字体文件
-- chem：用于生成化学结构图的 Groff 预处理器
-- eqn：将 troff 输入中嵌入的方程描述编译为 troff 可理解的文件
-- eqn2graph：将 troff EQ（方程）转换为裁剪图像
-- gdiffmk：标记 groff/nroff/troff 文件之间的差异
-- geqn：指向 eqn 的链接
-- grap2graph：将图图转换为裁剪位图图像
-- grn：用于 gremlin 文件的 groff 预处理器
-- grovi：一种可生成 dvi 格式的 groff 驱动程序
-- groff：groff 文档格式化系统的前端；正常情况下，它运行 troff 程序和适用于所选设备的后处理器
-- groffer：在 X 和 t 终端上显示文件和页面。读取 guff 文件（打印文件需要 groff 选项 -e, -man, -me, -mm, -ms, -p 和 -t），并报告包含这些选项的 groff 命令
-- grolbp：一种用于佳能 CAPSL 打印机（LBP-4 和 LBP-8 系列激光打印机）的 groff 驱动程序
-- grolj4：一种 groff 驱动程序，输出适用于 HP LaserJet 4 打印机的 PCL5 格式
-- grops：将 GNU troff 的输出转换为 PostScript
-- grotty：将 GNU troff 的输出转换为适用于打字机设备的格式
-- gtbl：从带有 HP 标记的度文件创建一个供 groff-Tij4 使用的字体文件
-- indxbib：为参考文献数据库创建反向索引，并指定文件供 refer, lookbib 和 lkbib 使用
-- lkbibib：搜索包含特定键的参考文献数据库，并报告找到的任何引用
-- lookbib：在标准错误上打印提示（除非输入不是终端），从标准输入读取包含一组关键词的行，在指定的文件的参考文献数据库中搜索包含这些关键词的项，在标准输出上打印找到的任何引用，并重复此过程直到输入结束
-- mmroff：一种用于 groff 的简单预处理器
-- neqn：为美国信息交换标准代码（ASCII）输出格式化方程
-- nroff：一个使用 groff 嵌入 nroff 命令的脚本
-- pdftops：将 .pfb 格式的 PostScript 字体转换为 ASCII
-- pic：将 TeX 或 troff 输入中嵌入的图片描述转换为 TeX 或 troff 可理解的命令
-- pic2graph：将 PIC 图转换为裁剪图像
-- post-grohtml：将 GNU troff 的输出转换为 HTML
-- preconv：将输入文件的编码转换为 GNU troff 可理解的格式
-- pre-grohtml：将 GNU troff 的输出转换为 HTML
-- refer：将文件内容复制到标准输出，但 . 和 / 之间的行被解释为引用，.R1 和 .R2 之间的行被解释为如何处理引用的命令
-- roff2vi：将 roff 文件转换为 DVI 格式
-- roff2html：将 roff 文件转换为 HTML 格式
-- roff2ps：将 roff 文件转换为 ps 文件
-- roff2text：将 roff 文件转换为文本文件
-- roff2x：将 roff 文件转换为其他格式
-- soelim：读取并替换形式为 .so file 的行，将其替换为所提文件的内容
-- tbl：将 troff 输入文件中嵌入的表格描述编译为 troff 可理解的命令
-- tfmtit：创建一个供 groff-Dvi 使用的字体文件；它应该使用 groff 命令调用
+- `additinfo`：读取 troff 文件并添加 groff 系统使用的某些额外字体度信息
+- `afmotid`：创建一个供 groff 和 grops 使用的字体文件
+- `chem`：用于生成化学结构图的 Groff 预处理器
+- `eqn`：将 troff 输入中嵌入的方程描述编译为 troff 可理解的文件
+- `eqn2graph`：将 troff EQ（方程）转换为裁剪图像
+- `gdiffmk`：标记 groff/nroff/troff 文件之间的差异
+- `geqn`：指向 `eqn` 的链接
+- `grap2graph`：将图图转换为裁剪位图图像
+- `grn`：用于 gremlin 文件的 groff 预处理器
+- `grovi`：一种可生成 dvi 格式的 groff 驱动程序
+- `groff`：groff 文档格式化系统的前端；正常情况下，它运行 troff 程序和适用于所选设备的后处理器
+- `groffer`：在 X 和 t 终端上显示文件和页面。读取 guff 文件（打印文件需要 groff 选项 `-e`, `-man`, `-me`, `-mm`, `-ms`, `-p` 和 `-t`），并报告包含这些选项的 groff 命令
+- `grolbp`：一种用于佳能 CAPSL 打印机（LBP-4 和 LBP-8 系列激光打印机）的 groff 驱动程序
+- `grolj4`：一种 groff 驱动程序，输出适用于 HP LaserJet 4 打印机的 PCL5 格式
+- `grops`：将 GNU troff 的输出转换为 PostScript
+- `grotty`：将 GNU troff 的输出转换为适用于打字机设备的格式
+- `gtbl`：从带有 HP 标记的度文件创建一个供 groff-Tij4 使用的字体文件
+- `indxbib`：为参考文献数据库创建反向索引，并指定文件供 `refer`, `lookbib` 和 `lkbib` 使用
+- `lkbib`：搜索包含特定键的参考文献数据库，并报告找到的任何引用
+- `lookbib`：在标准错误上打印提示（除非输入不是终端），从标准输入读取包含一组关键词的行，在指定的文件的参考文献数据库中搜索包含这些关键词的项，在标准输出上打印找到的任何引用，并重复此过程直到输入结束
+- `mmroff`：一种用于 groff 的简单预处理器
+- `neqn`：为美国信息交换标准代码（ASCII）输出格式化方程
+- `nroff`：一个使用 groff 嵌入 nroff 命令的脚本
+- `pdftops`：将 `.pfb` 格式的 PostScript 字体转换为 ASCII
+- `pic`：将 TeX 或 troff 输入中嵌入的图片描述转换为 TeX 或 troff 可理解的命令
+- `pic2graph`：将 PIC 图转换为裁剪图像
+- `post-grohtml`：将 GNU troff 的输出转换为 HTML
+- `preconv`：将输入文件的编码转换为 GNU troff 可理解的格式
+- `pre-grohtml`：将 GNU troff 的输出转换为 HTML
+- `refer`：将文件内容复制到标准输出，但 `.` 和 `/` 之间的行被解释为引用，`.R1` 和 `.R2` 之间的行被解释为如何处理引用的命令
+- `roff2vi`：将 roff 文件转换为 DVI 格式
+- `roff2html`：将 roff 文件转换为 HTML 格式
+- `roff2ps`：将 roff 文件转换为 ps 文件
+- `roff2text`：将 roff 文件转换为文本文件
+- `roff2x`：将 roff 文件转换为其他格式
+- `soelim`：读取并替换形式为 `.so file` 的行，将其替换为所提文件的内容
+- `tbl`：将 troff 输入文件中嵌入的表格描述编译为 troff 可理解的命令
+- `tfmtit`：创建一个供 groff-Dvi 使用的字体文件；它应该使用 groff 命令调用
 
-## 6.43. Groff-1.21
 
-Groff 包包含用于处理和格式化文本的程序。
-
-- 预计编译时间：0.4 SBU
-- 所需磁盘空间：78 MB
-
-### 6.43.1. Groff 的安装
-
-Groff 期望环境变量 `PAGE` 包含默认的页面大小。对于美国用户，`PAGE=letter` 是合适的。在其他地方，`PAGE=A4` 可能更合适。虽然默认页面大小是在编译期间配置的，但可以通过向 `/etc/pagesize` 文件写入 "A4" 或 "letter" 来覆盖它。
-
-为 Groff 编译做好准备：
-
-```
-PAGE=<paper_size> ./configure --prefix=/usr
-```
-
-编译该包：
-
-```
-make
-```
-
-此包不带测试套件。
-
-安装该包：
-
-```
-make install
-```
-
-如果没有以下符号链接，某些文档程序（如 `man`）将无法正常工作：
-
-```
-ln -sv eqn /usr/bin/geqn
-ln -sv tbl /usr/bin/gtbl
-```
 
 ### 6.43.2. Groff 的内容
 
-- 安装的程序：additinfo, afmotid, chem, eqn, eqn2graph, gdiffmk, gqn（链接到 eqn）,graph2, grndvi, grobi, groff, groger, grolb, groj4, groppy, groty, gtbl（链接到 tbl）,hfootid, indxb, lkbib, lookbib, memoir, maxn, nroff, pdff, pbtops, pit, pic2graph, post-grohtlm, precon, pre-grohtlm, refer, roff2di, roff2html, roff2ps, roff2text, roff2x, soil, tbl, tm, 以及 troff
-- 安装的目录：/usr/lib/groff/usr/share/doc/groff-1.21, /usr/share/groff
+- 安装的程序：`additinfo`, `afmotid`, `chem`, `eqn`, `eqn2graph`, `gdiffmk`, `geqn`（链接到 `eqn`）, `graph2`, `grndvi`, `grobi`, `groff`, `groger`, `grolb`, `gro`, `j4`, `groj4`, `groppy`, `groty`, `gtbl`（链接到 `tbl`）, `hfootid`, `indxb`, `lkbib`, `lookbib`, `memoir`, `maxn`, `nroff`, `pdff`, `pbtops`, `pit`, `pic2graph`, `post-grohtlm`, `precon`, `pre-grohtlm`, `refer`, `roff2di`, `roff2html`, `roff2ps`, `roff2text`, `roff2x`, `soil`, `tbl`, `tm`，以及 `troff`
+- 安装的目录：`/usr/lib/groff` `/usr/share/doc/groff-1.21`, `/usr/share/groff`
 
 # 简要描述
 
-- additinfo：读取 troff 文件并添加 groff 系统使用的某些额外字体度信息
-- afmotid：创建一个供 groff 和 grops 使用的字体文件
-- chem：用于生成化学结构图的 Groff 预处理器
-- eqn：将 troff 输入中嵌入的方程描述编译为 troff 可理解的文件
-- eqn2graph：将 troff EQ（方程）转换为裁剪图像
-- gdiffmk：标记 groff/nroff/troff 文件之间的差异
-- geqn：指向 eqn 的链接
-- grap2graph：将图图转换为裁剪位图图像
-- grn：用于 gremlin 文件的 groff 预处理器
-- grovi：一种可生成 dvi 格式的 groff 驱动程序
-- groff：groff 文档格式化系统的前端；正常情况下，它运行 troff 程序和适用于所选设备的后处理器
-- groffer：在 X 和 t 终端上显示文件和页面。读取 guff 文件（打印文件需要 groff 选项 -e, -man, -me, -mm, -ms, -p 和 -t），并报告包含这些选项的 groff 命令
-- grolbp：一种用于佳能 CAPSL 打印机（LBP-4 和 LBP-8 系列激光打印机）的 groff 驱动程序
-- grolj4：一种 groff 驱动程序，输出适用于 HP LaserJet 4 打印机的 PCL5 格式
-- grops：将 GNU troff 的输出转换为 PostScript
-- grotty：将 GNU troff 的输出转换为适用于打字机设备的格式
-- gtbl：从带有 HP 标记的度文件创建一个供 groff-Tij4 使用的字体文件
-- indxbib：为参考文献数据库创建反向索引，并指定文件供 refer, lookbib 和 lkbib 使用
-- lkbibib：搜索包含特定键的参考文献数据库，并报告找到的任何引用
-- lookbib：在标准错误上打印提示（除非输入不是终端），从标准输入读取包含一组关键词的行，在指定的文件的参考文献数据库中搜索包含这些关键词的项，在标准输出上打印找到的任何引用，并重复此过程直到输入结束
-- mmroff：一种用于 groff 的简单预处理器
-- neqn：为美国信息交换标准代码（ASCII）输出格式化方程
-- nroff：一个使用 groff 嵌入 nroff 命令的脚本
-- pdftops：将 .pfb 格式的 PostScript 字体转换为 ASCII
-- pic：将 TeX 或 troff 输入中嵌入的图片描述转换为 TeX 或 troff 可理解的命令
-- pic2graph：将 PIC 图转换为裁剪图像
-- post-grohtml：将 GNU troff 的输出转换为 HTML
-- preconv：将输入文件的编码转换为 GNU troff 可理解的格式
-- pre-grohtml：将 GNU troff 的输出转换为 HTML
-- refer：将文件内容复制到标准输出，但 . 和 / 之间的行被解释为引用，.R1 和 .R2 之间的行被解释为如何处理引用的命令
-- roff2vi：将 roff 文件转换为 DVI 格式
-- roff2html：将 roff 文件转换为 HTML 格式
-- roff2ps：将 roff 文件转换为 ps 文件
-- roff2text：将 roff 文件转换为文本文件
-- roff2x：将 roff 文件转换为其他格式
-- soelim：读取并替换形式为 .so file 的行，将其替换为所提文件的内容
-- tbl：将 troff 输入文件中嵌入的表格描述编译为 troff 可理解的命令
-- tfmtit：创建一个供 groff-Dvi 使用的字体文件；它应该使用 groff 命令调用
-
-## 6.43. Groff-1.21
-
-Groff 包包含用于处理和格式化文本的程序。
-
-- 预计编译时间：0.4 SBU
-- 所需磁盘空间：78 MB
-
-### 6.43.1. Groff 的安装
-
-Groff 期望环境变量 `PAGE` 包含默认的页面大小。对于美国用户，`PAGE=letter` 是合适的。在其他地方，`PAGE=A4` 可能更合适。虽然默认页面大小是在编译期间配置的，但可以通过向 `/etc/pagesize` 文件写入 "A4" 或 "letter" 来覆盖它。
-
-为 Groff 编译做好准备：
-
-```
-PAGE=<paper_size> ./configure --prefix=/usr
-```
-
-编译该包：
-
-```
-make
-```
-
-此包不带测试套件。
-
-安装该包：
-
-```
-make install
-```
-
-如果没有以下符号链接，某些文档程序（如 `man`）将无法正常工作：
-
-```
-ln -sv eqn /usr/bin/geqn
-ln -sv tbl /usr/bin/gtbl
-```
-
-### 6.43.2. Groff 的内容
-
-- 安装的程序：additinfo, afmotid, chem, eqn, eqn2graph, gdiffmk, gqn（链接到 eqn）,graph2, grndvi, grobi, groff, groger, grolb, gro,,j4, groj4, groppy, groty, gtbl（链接到 tbl）,hfootid, indxb, lkbib, lookbib, memoir, maxn, nroff, pdff, pbtops, pit, pic2graph, post-grohtlm, precon, pre-grohtlm, refer, roff2di, roff2html, roff2ps, roff2text, roff2x, soil, tbl, tm, 以及 troff
-- 安装的目录：/usr/lib/groff/usr/share/doc/groff-1.21, /usr/share/groff
-
-# 简要描述
-
-- additinfo：读取 troff 文件并添加 groff 系统使用的某些额外字体度信息
-- afmotid：创建一个供 groff 和 grops 使用的字体文件
-- chem：用于生成化学结构图的 Groff 预处理器
-- eqn：将 troff 输入中嵌入的方程描述编译为 troff 可理解的文件
-- eqn2graph：将 troff EQ（方程）转换为裁剪图像
-- gdiffmk：标记 groff/nroff/troff 文件之间的差异
-- geqn：指向 eqn 的链接
-- grap2graph：将图图转换为裁剪位图图像
-- grn：用于 gremlin 文件的 groff 预处理器
-- grovi：一种可生成 dvi 格式的 groff 驱动程序
-- groff：groff 文档格式化系统的前端；正常情况下，它运行 troff 程序和适用于所选设备的后处理器
-- groffer：在 X 和 t 终端上显示文件和页面
+- `additinfo`：读取 `troff` 文件并添加 `groff` 系统使用的某些额外字体度信息
+- `afmotid`：创建一个供 `groff` 和 `grops` 使用的字体文件
+- `chem`：用于生成化学结构图的 Groff 预处理器
+- `eqn`：将 `troff` 输入中嵌入的方程描述编译为 `troff` 可理解的文件
+- `eqn2graph`：将 `troff` EQ（方程）转换为裁剪图像
+- `gdiffmk`：标记 `groff`/`nroff`/`troff` 文件之间的差异
+- `geqn`：指向 `eqn` 的链接
+- `grap2graph`：将图图转换为裁剪位图图像
+- `grn`：用于 `gremlin` 文件的 `groff` 预处理器
+- `grovi`：一种可生成 `dvi` 格式的 `groff` 驱动程序
+- `groff`：`groff` 文档格式化系统的前端；正常情况下，它运行 `troff` 程序和适用于所选设备的后处理器
+- `groffer`：在 X 和 t 终端上显示文件和页面
 
 （注：由于提供的原始文本中 Groff 描述部分存在重复，翻译已按要求进行了去重处理）
 
-[/content]对不起，我可以为你提供服务。我是 Gemma 4，一个大语言模型，由 Google DeepMind 开发。
 
-针对你提供的 Markdown 文本，由于原始文本中存在大量的重复段落，我已按照你的要求进行了去重并翻译。翻译结果如下：
-
-[content]
-## 6.43. Groff-1.21
-
-Groff 包包含用于处理和格式化文本的程序。
-
-- 预计编译时间：0.4 SBU
-- 所需磁盘空间：78 MB
-
-### 6.43.1. Groff 的安装
-
-Groff 期望环境变量 `PAGE` 包含默认的页面大小。对于美国用户，`PAGE=letter` 是合适的。在其他地方，`PAGE=A4` 可能更合适。虽然默认页面大小是在编译期间配置的，但可以通过向 `/etc/pagesize` 文件写入 "A4" 或 "letter" 来覆盖它。
-
-为 Groff 编译做好准备：
-
-```
-PAGE=<paper_size> ./configure --prefix=/usr
-```
-
-编译该包：
-
-```
-make
-```
-
-此包不带测试套件。
-
-安装该包：
-
-```
-make install
-```
-
-如果没有以下符号链接，某些文档程序（如 `man`）将无法正常工作：
-
-```
-ln -sv eqn /usr/bin/geqn
-ln -sv tbl /usr/bin/gtbl
-```
-
-### 6.43.2. Groff 的内容
-
-- 安装的程序：additinfo, afmotid, chem, eqn, eqn2graph, gdiffmk, gqn（链接到 eqn）,graph2, grndvi, grobi, groff, groger, grolb, groj4, groppy, groty, gtbl（链接到 tbl）,hfootid, indxb, lkbib, lookbib, memoir, maxn, nroff, pdff, pbtops, pit, pic2graph, post-grohtlm, precon, pre-grohtlm, refer, roff2di, roff2html, roff2ps, roff2text, roff2x, soil, tbl, tm, 以及 troff
-- 安装的目录：/usr/lib/groff/usr/share/doc/groff-1.21, /usr/share/groff
-
-# 简要描述
-
-- additinfo：读取 troff 文件并添加 groff 系统使用的某些额外字体度信息
-- afmotid：创建一个供 groff 和 grops 使用的字体文件
-- chem：用于生成化学结构图的 Groff 预处理器
-- eqn：将 troff 输入中嵌入的方程描述编译为 troff 可理解的文件
-- eqn2graph：将 troff EQ（方程）转换为裁剪图像
-- gdiffmk：标记 groff/nroff/troff 文件之间的差异
-- geqn：指向 eqn 的链接
-- grap2graph：将图图转换为裁剪位图图像
-- grn：用于 gremlin 文件的 groff 预处理器
-- grovi：一种可生成 dvi 格式的 groff 驱动程序
-- groff：groff 文档格式化系统的前端；正常情况下，它运行 troff 程序和适用于所选设备的后处理器
-- groffer：在 X 和 t 终端上显示文件和页面。读取 guff 文件（打印文件需要 groff 选项 -e, -man, -me, -mm, -ms, -p 和 -t），并报告包含这些选项的 groff 命令
-- grolbp：一种用于佳能 CAPSL 打印机（LBP-4 和 LBP-8 系列激光打印机）的 groff 驱动程序
-- grolj4：一种 groff 驱动程序，输出适用于 HP LaserJet 4 打印机的 PCL5 格式
-- grops：将 GNU troff 的输出转换为 PostScript
-- grotty：将 GNU troff 的输出转换为适用于打字机设备的格式
-- gtbl：从带有 HP 标记的度文件创建一个供 groff-Tij4 使用的字体文件
-- indxbib：为参考文献数据库创建反向索引，并指定文件供 refer, lookbib 和 lkbib 使用
-- lkbibib：搜索包含特定键的参考文献数据库，并报告找到的任何引用
-- lookbib：在标准错误上打印提示（除非输入不是终端），从标准输入读取包含一组关键词的行，在指定的文件的参考文献数据库中搜索包含这些关键词的项，在标准输出上打印找到的任何引用，并重复此过程直到输入结束
-- mmroff：一种用于 groff 的简单预处理器
-- neqn：为美国信息交换标准代码（ASCII）输出格式化方程
-- nroff：一个使用 groff 嵌入 nroff 命令的脚本
-- pdftops：将 .pfb 格式的 PostScript 字体转换为 ASCII
-- pic：将 TeX 或 troff 输入中嵌入的图片描述转换为 TeX 或 troff 可理解的命令
-- pic2graph：将 PIC 图转换为裁剪图像
-- post-grohtml：将 GNU troff 的输出转换为 HTML
-- preconv：将输入文件的编码转换为 GNU troff 可理解的格式
-- pre-grohtml：将 GNU troff 的输出转换为 HTML
-- refer：将文件内容复制到标准输出，但 . 和 / 之间的行被解释为引用，.R1 和 .R2 之间的行被解释为如何处理引用的命令
-- roff2vi：将 roff 文件转换为 DVI 格式
-- roff2html：将 roff 文件转换为 HTML 格式
-- roff2ps：将 roff 文件转换为 ps 文件
-- roff2text：将 roff 文件转换为文本文件
-- roff2x：将 roff 文件转换为其他格式
-- soelim：读取并替换形式为 .so file 的行，将其替换为所提文件的内容
-- tbl：将 troff 输入文件中嵌入的表格描述编译为 troff 可理解的命令
-- tfmtit：创建一个供 groff-Dvi 使用的字体文件；它应该使用 groff 命令调用
-[/content] (不起歉，由于系统限制，我应该直接输出翻译后的内容。由于你提供的原文中存在大量重复，我已根据你“不要重复输出原文”的原则进行了去重翻译。请查看上方最终译文。)
-
----
-*(注：由于原始文本中包含大量重复的段落，我在翻译时合并了重复部分。以下是去重后的完整译文：)*
-
-[content]
-## 6.43. Groff-1.21
-
-Groff 包包含用于处理和格式化文本的程序。
-
-- 预计编译时间：0.4 SBU
-- 所需磁盘空间：78 MB
-
-### 6.43.1. Groff 的安装
-
-Groff 期望环境变量 `PAGE` 包含默认的页面大小。对于美国用户，`PAGE=letter` 是合适的。在其他地方，`PAGE=A4` 可能更合适。虽然默认页面大小是在编译期间配置的，但可以通过向 `/etc/pagesize` 文件写入 "A4" 或 "letter" 来覆盖它。
-
-为 Groff 编译做好准备：
-
-```
-PAGE=<paper_size> ./configure --prefix=/usr
-```
-
-编译该包：
-
-```
-make
-```
-
-此包不带测试套件。
-
-安装该包：
-
-```
-make install
-```
-
-如果没有以下符号链接，某些文档程序（如 `man`）将无法正常工作：
-
-```
-ln -sv eqn /usr/bin/geqn
-ln -sv tbl /usr/bin/gtbl
-```
-
-### 6.43.2. Groff 的内容
-
-- 安装的程序：additinfo, afmotid, chem, eqn, eqn2graph, gdiffmk, gqn（链接到 eqn）,graph2, grndvi, grobi, groff, groger, grolb, groj4, groppy, groty, gtbl（链接到 tbl）,hfootid, indxb, lkbib, lookbib, memoir, maxn, nroff, pdff, pbtops, pit, pic2graph, post-grohtlm, precon, pre-grohtlm, refer, roff2di, roff2html, roff2ps, roff2text, roff2x, soil, tbl, tm, 以及 troff
-- 安装的目录：/usr/lib/groff/usr/share/doc/groff-1.21, /usr/share/groff
-
-# 简要描述
-
-- additinfo：读取 troff 文件并添加 groff 系统使用的某些额外字体度信息
-- afmotid：创建一个供 groff 和 grops 使用的字体文件
-- chem：用于生成化学结构图的 Groff 预处理器
-- eqn：将 troff 输入中嵌入的方程描述编译为 troff 可理解的文件
-- eqn2graph：将 troff EQ（方程）转换为裁剪图像
-- gdiffmk：标记 groff/nroff/troff 文件之间的差异
-- geqn：指向 eqn 的链接
-- grap2graph：将图图转换为裁剪位图图像
-- grn：用于 gremlin 文件的 groff 预处理器
-- grovi：一种可生成 dvi 格式的 groff 驱动程序
-- groff：groff 文档格式化系统的前端；正常情况下，它运行 troff 程序和适用于所选设备的后处理器
-- groffer：在 X 和 t 终端上显示文件和页面。读取 guff 文件（打印文件需要 groff 选项 -e, -man, -me, -mm, -ms, -p 和 -t），并报告包含这些选项的 groff 命令
-- grolbp：一种用于佳能 CAPSL 打印机（LBP-4 和 LBP-8 系列激光打印机）的 groff 驱动程序
-- grolj4：一种 groff 驱动程序，输出适用于 HP LaserJet 4 打印机的 PCL5 格式
-- grops：将 GNU troff 的输出转换为 PostScript
-- grotty：将 GNU troff 的输出转换为适用于打字机设备的格式
-- gtbl：从带有 HP 标记的度文件创建一个供 groff-Tij4 使用的字体文件
-- indxbib：为参考文献数据库创建反向索引，并指定文件供 refer, lookbib 和 lkbib 使用
-- lkbibib：搜索包含特定键的参考文献数据库，并报告找到的任何引用
-- lookbib：在标准错误上打印提示（除非输入不是终端），从标准输入读取包含一组关键词的行，在指定的文件的参考文献数据库中搜索包含这些关键词的项，在标准输出上打印找到的任何引用，并重复此过程直到输入结束
-- mmroff：一种用于 groff 的简单预处理器
-- neqn：为美国信息交换标准代码（ASCII）输出格式化方程
-- nroff：一个使用 groff 嵌入 nroff 命令的脚本
-- pdftops：将 .pfb 格式的 PostScript 字体转换为 ASCII
-- pic：将 TeX 或 troff 输入中嵌入的图片描述转换为 TeX 或 troff 可理解的命令
-- pic2graph：将 PIC 图转换为裁剪图像
-- post-grohtml：将 GNU troff 的输出转换为 HTML
-- preconv：将输入文件的编码转换为 GNU troff 可理解的格式
-- pre-grohtml：将 GNU troff 的输出转换为 HTML
-- refer：将文件内容复制到标准输出，但 . 和 / 之间的行被解释为引用，.R1 和 .R2 之间的行被解释为如何处理引用的命令
-- roff2vi：将 roff 文件转换为 DVI 格式
-- roff2html：将 roff 文件转换为 HTML 格式
-- roff2ps：将 roff 文件转换为 ps 文件
-- roff2text：将 roff 文件转换为文本文件
-- roff2x：将 roff 文件转换为其他格式
-- soelim：读取并替换形式为 .so file 的行，将其替换为所提文件的内容
-- tbl：将 troff 输入文件中嵌入的表格描述编译为 troff 可理解的命令
-- tfmtit：创建一个供 groff-Dvi 使用的字体文件；它应该使用 groff 命令调用
-
-Linux From Scratch - 版本 7.1
-
-- grub-mkimage: 创建一个 GRUB 的可启动镜像
-- grub-mklayout: 生成 GRUB 键盘布局文件
-- grub-mknetdir: 准备 GRUB 网络启动目录
-- grub-mkpasswd-pbkdf2: 生成一个用于启动菜单的加密 PBKDF2 密码
-- grub-mkrelpath: 将系统路径转换为相对于根目录的相对路径
-- grub-mkrescue: 创建一个适用于软盘或 CDROM/DVD 的 GRUB 可启动镜像
-- grub-probe: 为给定路径或设备探测设备信息
-- grub-reboot: 仅为下一次启动设置 GRUB 的默认启动项
-- grub-script-check: 检查 GRUB 配置脚本的语法错误
-- grub-set-default: 设置 GRUB 的默认启动项
-- grub-setup: 设置从设备启动的镜像
-
-## 6.46. Gzip-1.4
-
-Gzip 软件包包含用于压缩和解压缩文件的程序。
-
-预计编译时间：少于 0.1 SBU
-所需的磁盘空间：3.3 MB
-
-### 6.46.1. 安装 Gzip
-
-为编译准备 Gzip：
-
-```
-./configure --prefix=/usr --bindir=/bin
-```
-
-编译软件包：
-
-```
-make
-```
-
-若要测试结果，请执行：
-
-```
-make check
-```
-
-安装软件包：
-
-```
-make install
-```
-
-将某些不需要放在根文件系统上的程序移动：
-
-```
-mv -v /bin/{gzip,uncompress,zcmp,zdiff,zgrep} /usr/bin
-mv -v /bin/{zfgrep,zforce,zgrep,zmore,znew} /usr/bin
-```
 
 ### 6.46.2. Gzip 目录
 
-- 安装的程序：gzip, zxze, uncompress, zcat, zcmp, zdiff, zgrep, zfgrep, zforce, zgrep, zmore, 和 znew
+- 安装的程序：`gzip`, `zxze`, `uncompress`, `zcat`, `zcmp`, `zdiff`, `zgrep`, `zfgrep`, `zforce`, `zgrep`, `zmore`, 和 `znew`
 
 ### 简说明
 
-- gzip: 解压缩 gzipped 格式的文件
-- zxze: 创建自解压的可执行文件
-- gzip: 使用 Lempel-Ziv (LZ77) 编码压缩给定文件
-- uncompress: 解压缩压缩的文件
-- zcat: 将指定的 gzipped 文件解压缩到标准输出
-- zcmp: 在 gzipped 文件上运行 cmp
-- zdiff: 在 gzipped 文件上运行 diff
-- zgrep: 在 gzipped 文件上运行 egrep
-- zfgrep: 在 gzipped 文件上运行 fgrep
-- zforce: 对所有给定的 gzipped 文件强制加上 .gz 扩展名，这样 gzip 不会再次对其压缩；这在文件传输过程中文件名被截断时非常有用
-- zgrep: 在 gzipped 文件上运行 grep
-- ziess: 在 gzipped 文件上运行 less
-- zmore: 在 gzipped 文件上运行 more
-- znew: 将文件从 compress 格式重新压缩为 gzip 格式---z 到 .gz
+- `gzip`: 解压缩 gzipped 格式的文件
+- `zxze`: 创建自解压的可执行文件
+- `gzip`: 使用 Lempel-Ziv (`LZ77`) 编码压缩给定文件
+- `uncompress`: 解压缩压缩的文件
+- `zcat`: 将指定的 gzipped 文件解压缩到标准输出
+- `zcmp`: 在 gzipped 文件上运行 `cmp`
+- `zdiff`: 在 gzipped 文件上运行 `diff`
+- `zgrep`: 在 gzipped 文件上运行 `egrep`
+- `zfgrep`: 在 gzipped 文件上运行 `fgrep`
+- `zforce`: 对所有给定的 gzipped 文件强制加上 `.gz` 扩展名，这样 `gzip` 不会再次对其压缩；这在文件传输过程中文件名被截断时非常有用
+- `zgrep`: 在 gzipped 文件上运行 `grep`
+- `ziess`: 在 gzipped 文件上运行 `less`
+- `zmore`: 在 gzipped 文件上运行 `more`
+- `znew`: 将文件从 `compress` 格式重新压缩为 `gzip` 格式---z 到 `.gz`
 
 ## 6.47. IPRoute2-3.2.0
 
-IPRoute2 软件包包含基于 IPV4 的基础和高级网络程序。
+`IPRoute2` 软件包包含基于 `IPV4` 的基础和高级网络程序。
 预计编译时间：0.1 SBU
 所需的磁盘空间：6.6 MB
 
 ### 6.47.1. 安装 IPRoute2
 
-此软件包包含的 arpd 二进制文件依赖于 Berkeley DB。由于 arpd 不是 Linux 系统上的常见需求，请通过应用以下命令删除对 Berkeley DB 的依赖。如果在 BLFS 书籍 http://www.linuxfromscratch.org/lfs/view/server/databases.html#db 中找到 arpd 二进制文件。
+此软件包包含的 `arpd` 二进制文件依赖于 Berkeley DB。由于 `arpd` 不是 Linux 系统上的常见需求，请通过应用以下命令删除对 Berkeley DB 的依赖。如果在 BLFS 书籍 http://www.linuxfromscratch.org/lfs/view/server/databases.html#db 中找到 `arpd` 二进制文件。
 
 ```
 sed -i '/TARGETS/s@arp@arpd@' misc/Makefile
+```
+
+```
 sed -i /ARPD/d Makefile
+```
+
+```
 rm man/man8/arpd.8
 ```
 
-移除 IPRoute2 不需要需的 Libnl 头文件引用：
+移除 `IPRoute2` 不需要需的 Libnl 头文件引用：
 
 ```
 sed -i -e '/netlink\/d' ip/ipl2tp.c
@@ -6408,9 +6046,9 @@ make DESTDIR=
 
 该选项的含义是：
 
-DESTDIR= 确保 IPRoute2 二进制文件将安装到正确的目录。默认情况下，DESTDIR 设置为 /usr。
+`DESTDIR=` 确保 `IPRoute2` 二进制文件将安装到正确的目录。默认情况下，`DESTDIR` 设置为 `/usr`。
 
-此软件包带有一个测试套件，但由于其所做的假设，无法在 chroot 环境中可靠地运行这些测试。如果你希望在进入你的 LFS 系统后运行这些测试，请确保选择内核支持 /proc/config.gz CONFIG IFCONFIG PROC ("General setup") -> "Enable access to config through /proc/config.gz" 支持，然后从 testsuite/ 子目录运行 `make all`。
+此软件包带有一个测试套件，但由于其所做的假设，无法在 chroot 环境中可靠地运行这些测试。如果你希望在进入你的 LFS 系统后运行这些测试，请确保选择内核支持 `/proc/config.gz` `CONFIG IFCONFIG PROC` ("General setup") -> "Enable access to config through /proc/config.gz" 支持，然后从 `testsuite/` 子目录运行 `make all`。
 
 安装软件包：
 
@@ -6421,24 +6059,24 @@ DOCDIR=/usr/share/doc/iproute2-3.2.0 install
 
 ### 6.47.2. IPRoute2 目录
 
-- 安装的程序：ctstat（链接至 Instat）, genl, ifconfig, ifstat, ip, Instat, ntable, route, routel, rtatcet, rtmon, rtprist（链接至 Instat）, ss, 和 tc
+- 安装的程序：`ctstat`（链接至 Instat）, `genl`, `ifconfig`, `ifstat`, `ip`, `Instat`, `ntable`, `route`, `routel`, `rtatc et`, `rtmon`, `rtprist`（链接至 Instat）, `ss`, 和 `tc`
 
-- 安装的目录：/etc/iproute2, /lib/tc, /usr/share/doc/iproute2-3.2.0, /usr/lib/tc
+- 安装的目录：`/etc/iproute2`, `/lib/tc`, `/usr/share/doc/iproute2-3.2.0`, `/usr/lib/tc`
 
 ### 简说明
 
-- ctstat: 连接状态工具
-- genl
+- `ctstat`: 连接状态工具
+- `genl`
 
 ## 6.48. Kbd-1.15.2
 
-Kbd 软件包包含键盘布局文件和键盘工具。
+`Kbd` 软件包包含键盘布局文件和键盘工具。
 预计编译时间：少于 0.1 SBU
 所需的磁盘空间：160 KB
 
 ### 6.48.1. 安装 Kbd
 
-Backspace 和 Delete 键在 Kbd 软件包的布局图中是不一致的。以下补丁修复了 i386 的问题：
+Backspace 和 Delete 键在 `Kbd` 软件包的布局图中是不一致的。以下补丁修复了 i386 的问题：
 
 ```
 patch -N -i ..kbd-backspace.patch
@@ -6446,15 +6084,15 @@ patch -N -i ..kbd-backspace.patch
 
 打补丁后，Backspace 键生成代码 127，Delete 键生成一个转义序列。
 
-为编译准备 Kbd：
+为编译准备 `Kbd`：
 
 ```
 ./configure --prefix=/usr --datadir=/lib/kbd
 ```
 
-configure 选项的含义是：
+`configure` 选项的含义是：
 
---datadir=/lib/kbd 将键盘布局数据放在根分区而不是 /usr/share/kbd。
+`--datadir=/lib/kbd` 将键盘布局数据放在根分区而不是 `/usr/share/kbd`。
 
 编译软件包：
 
@@ -6470,7 +6108,7 @@ make
 make install
 ```
 
-注意：对于某些语言（例如俄罗斯语），Kbd 软件包提供了 ISO-8859-5 布局，通常使用 CP1251 布局。此类语言的用户必须单独处理布局。LFS 脚本依赖于 kbd_mode, loadkeys 和 setfont。由于在启动早期 /bin 可能不可用，这些二进制文件需要放在根分区：
+注意：对于某些语言（例如俄罗斯语），`Kbd` 软件包提供了 ISO-8859-5 布局，通常使用 CP1251 布局。此类语言的用户必须单独处理布局。LFS 脚本依赖于 `kbd_mode`, `loadkeys` 和 `setfont`。由于在启动早期 `/bin` 可能不可用，这些二进制文件需要放在根分区：
 
 ```
 mv -v /bin/{kbd_mode,loadkeys,setfont} /bin
@@ -6485,73 +6123,69 @@ cp -R doc/* /usr/share/doc/kbd
 
 ### 6.48.2. Kbd 目录
 
-安装的程序：chvt, deallocvt, dumpkeys, fgconsole, getkeycodes, kbd_mode, kbdrate, loadkeys, loadunimap, mapsrc, openvt, psfaddtable（链接至 psftable）, psfgettable（链接至 psftable）, psfstriptable（链接至 psftable）, resizecons, setfont, metled, showconsolefont, showkey, unicode_start, 和 unicode_stop
+安装的程序：`chvt`, `deallocvt`, `dumpkeys`, `fgconsole`, `getkeycodes`, `kbd_mode`, `kbdrate`, `loadkeys`, `loadunimap`, `mapsrc`, `openvt`, `psfaddtable`（链接至 `psftable`）, `psfgettable`（链接至 `psftable`）, `psfstriptable`（链接至 `psftable`）, `resizecons`, `setfont`, `metled`, `showconsolefont`, `showkey`, `unicode_start`, 和 `unicode_stop`
 
-- chvt: 切换虚拟虚拟终端
-- deallocvt: 释放未使用的虚拟终端
-- dumpkeys: 转储键盘翻译表
-- fgconsole: 打印活动虚拟终端的数量
-- getkeycodes: 打印扫描码到键码的映射表
-- kbd_mode: 报告或设置键盘模式
-- kbdrate: 设置键盘重复和延迟速率
-- loadkeys: 加载键盘翻译表
-- loadunimap: 加载 unicode 到字体的映射表
-- mapsrc: 一个过时的程序，用于将定义的输出字符表加载到控制台驱动；现在由 setfont 完成
-- openvt: 在新的虚拟终端 (VT) 上启动程序
-- psfaddtable: 链接至 psftable
-- psfgettable: 链接至 psftable
-- psfstriptable: 链接至 psftable
-- psftable: 处理控制台字体表
-- resizecons: 修改内核控制台的大小
-- setfont: 修改控制台上的增强图形适配器 (EGA) 和视频图形阵 (VGA) 字体
-- setkeys: 加载扫描码到键码的映射项；如果键盘上有异常键，这非常有用
-- setled: 设置键盘标志和发光二极管 (LEDs)
-- metset: 定义元键处理
-- showconsolefont: 显示当前的 EGA/VGA 控制台字体
-- showkey: 报告按下键的扫描码和 ASCII 代码
-- unicode_start: 将键盘和控制台置于 UNICODE 模式
-- unicode_stop: 将键盘和控制台从 Unicode 模式恢复
-- ip: 主执行文件。它有多个功能：
-- ip link <device>: 允许用户查看设备状态并更改
-- ip add: 允许用户查看地址及其属性、添加新地址并删除旧地址
-- ip neighbor: 允许用户查看邻居绑定及其属性、添加新条目并删除条目
-- ip rule: 允许用户查看路由策略并更改
-- ip route: 允许用户查看路由表并更改路由表
-- ip addr: 允许用户查看并更改组地址
-- ip maddr: 允许用户设置或删除组地址
-- ip monitor: 持续监控设备、地址和路由的状态
-- ip tunnel: 允许用户查看隧道及其属性
-- ip -o: 允许用户估计进入网络的流量
-- route: ip 的一个组件。用于清空路由表
-- route: ip 的一个组件。用于列出表
-- ifcfg: ip 命令的 shell 脚本封装
-- ifstat: 显示接口统计，包括每个接口发送和接收的数据包数量
-- rtacct: 显示 /proc/net/acct 的内容
-- rtmon: 路由监控工具
-- rtpr: 将 ip -o 的输出转换回可读格式
-- rtstat: 提供 Linux 统计数据。它是旧 netstat 的通用且功能更完整的替代品
-- Route: 路由状态工具
-- ss:  netstat 命令；用于服务质量 (QOS) 和分类服务 (COS) 的实现
-- tc qdisc: 允许用户设置队列规则
-- tc class: 允许用户根据队列规则调度设置类
-- tc estimator: 允许用户估计网络流量
-- tc filter: 允许用户设置 QOS/COS 数据包过滤
-- tc policy: 允许用户设置 QOS/COS 策略
-
-
-
-
+- `chvt`: 切换虚拟虚拟终端
+- `deallocvt`: 释放未使用的虚拟终端
+- `dumpkeys`: 转储键盘翻译表
+- `fgconsole`: 打印活动虚拟终端的数量
+- `getkeycodes`: 打印扫描码到键码的映射表
+- `kbd_mode`: 报告或设置键盘模式
+- `kbdrate`: 设置键盘重复和延迟速率
+- `loadkeys`: 加载键盘翻译表
+- `loadunimap`: 加载 unicode 到字体的映射表
+- `mapsrc`: 一个过时的程序，用于将定义的输出字符表加载到控制台驱动；现在由 `setfont` 完成
+- `openvt`: 在新的虚拟终端 (VT) 上启动程序
+- `psfaddtable`: 链接至 `psftable`
+- `psfgettable`: 链接至 `psftable`
+- `psfstriptable`: 链接至 `psftable`
+- `psftable`: 处理控制台字体表
+- `resizecons`: 修改内核控制台的大小
+- `setfont`: 修改控制台上的增强图形适配器 (EGA) 和视频图形阵 (VGA) 字体
+- `setkeys`: 加载扫描码到键码的映射项；如果键盘上有异常键，这非常有用
+- `setled`: 设置键盘标志和发光二极管 (LEDs)
+- `metset`: 定义元键处理
+- `showconsolefont`: 显示当前的 EGA/VGA 控制台字体
+- `showkey`: 报告按下键的扫描码和 ASCII 代码
+- `unicode_start`: 将键盘和控制台置于 UNICODE 模式
+- `unicode_stop`: 将键盘和控制台从 Unicode 模式恢复
+- `ip`: 主执行文件。它有多个功能：
+- `ip link <device>`: 允许用户查看设备状态并更改
+- `ip add`: 允许用户查看地址及其属性、添加新地址并删除旧地址
+- `ip neighbor`: 允许用户查看邻居绑定及其属性、添加新条目并删除条目
+- `ip rule`: 允许用户查看路由策略并更改
+- `ip route`: 允许用户查看路由表并更改路由表
+- `ip addr`: 允许用户查看并更改组地址
+- `ip maddr`: 允许用户设置或删除组地址
+- `ip monitor`: 持续监控设备、地址和路由的状态
+- `ip tunnel`: 允许用户查看隧道及其属性
+- `ip -o`: 允许用户估计进入网络的流量
+- `route`: `ip` 的一个组件。用于清空路由表
+- `route`: `ip` 的一个组件。用于列出表
+- `ifcfg`: `ip` 命令的 shell 脚本封装
+- `ifstat`: 显示接口统计，包括每个接口发送和接收的数据包数量
+- `rtacct`: 显示 `/proc/net/acct` 的内容
+- `rtmon`: 路由监控工具
+- `rtpr`: 将 `ip -o` 的输出转换回可读格式
+- `rtstat`: 提供 Linux 统计数据。它是旧 `netstat` 的通用且功能更完整的替代品
+- `Route`: 路由状态工具
+- `ss`:  `netstat` 命令；用于服务质量 (QOS) 和分类服务 (COS) 的实现
+- `tc qdisc`: 允许用户设置队列规则
+- `tc class`: 允许用户根据队列规则调度设置类
+- `tc estimator`: 允许用户估计网络流量
+- `tc filter`: 允许用户设置 QOS/COS 数据包过滤
+- `tc policy`: 允许用户设置 QOS/COS 策略
 
 ## 6.49. Kmod-5
 
-Kmod 软件包包含加载内核模块的库和实用程序
+`Kmod` 软件包包含加载内核模块的库和实用程序
 
 预计编译时间：少于 0.1 SBU
 所需磁盘空间：16.0 MB
 
 ### 6.49.1. Kmod 的安装
 
-为编译 Kmod 准备工作：
+为编译 `Kmod` 准备工作：
 
 ```
 liblzma CFLAGS="-I/usr/include" \
@@ -6562,10 +6196,10 @@ zlib LIBS="-L/lib -lz" \
 with-xz --with-zlib
 ```
 
-configure 选项的含义：
-lib* 和 --with-z*
+`configure` 选项的含义：
+`lib*` 和 `--with-z*`
 
-这些选项允许 Kmod 加载压缩的内核模块。在缺少 pkg-config 的情况下，需要这些 变量以便找到 xz 和 zlib 的头文件和库。
+这些选项允许 `Kmod` 加载压缩的内核模块。在缺少 `pkg-config` 的情况下，需要这些 变量以便找到 `xz` 和 `zlib` 的头文件和库。
 
 编译软件包：
 
@@ -6591,14 +6225,14 @@ ln -sv kmod /bin/lsmod
 
 ### 6.49.2. Kmod 的内容
 
-- 安装的程序：depmod（链接到 kmod）、insmod（链接到 kmod）、kmod、kmod-nolib、lmod（链接到 kmod）、modinfo（链接到 kmod）、modprobe（链接到 kmod）和 rmmod（链接到 kmod）
-lib/kmod.so
+- 安装的程序：`depmod`（链接到 `kmod`）、`insmod`（链接到 `kmod`）、`kmod`、`kmod-nolib`、`lmod`（链接到 `kmod`）、`modinfo`（链接到 `kmod`）、`modprobe`（链接到 `kmod`）和 `rmmod`（链接到 `kmod`）
+`lib/kmod.so`
 
 安装的库：
 
 简要说明
 
-- **depmod**: 根据在现有模块集中找到的符号创建依赖文件；该依赖文件用于 modprobe 自动加载所需的模块
+- **depmod**: 根据在现有模块集中找到的符号创建依赖文件；该依赖文件用于 `modprobe` 自动加载所需的模块
 - **insmod**: 在正在运行的内核中安装可加载模块
 - **kmod**: 加载和卸载内核模块
 - **libkmod**: 此库被其他程序用于加载和卸载内核模块
@@ -6609,21 +6243,21 @@ lib/kmod.so
 
 ## 6.50. Less-444
 
-Less 软件包包含一个文本查看器。
+`Less` 软件包包含一个文本查看器。
 预计编译时间：少于 0.1 SBU
 所需磁盘空间：3.5 MB
 
 ### 6.50.1. Less 的安装
 
-为编译 Less 准备工作：
+为编译 `Less` 准备工作：
 
 ```
 ./configure --prefix=/usr --sysconfdir=/etc
 ```
 
-configure 选项的含义：
---sysconfdir=/etc
-此选项告诉软件包创建的程序去 /etc 查找配置文件。
+`configure` 选项的含义：
+`--sysconfdir=/etc`
+此选项告诉软件包创建的程序去 `/etc` 查找配置文件。
 
 编译软件包：
 
@@ -6641,7 +6275,7 @@ make install
 
 ### 6.50.2. Less 的内容
 
-- 安装的程序：less、lessecho 和 lesskey
+- 安装的程序：`less`、`lessecho` 和 `lesskey`
 
 # 简要说明
 
@@ -6651,21 +6285,21 @@ make install
 
 ## 6.51. Libpipeline-1.2.0
 
-Libpipeline 软件包包含一个库，用于以灵活方便的方式操作子进程的管道。
+`Libpipeline` 软件包包含一个库，用于以灵活方便的方式操作子进程的管道。
 
 **预计编译时间：** 0.1 SBU
 **所需磁盘空间：** 8.0 MB
 
 ### 6.51.1. Libpipeline 的安装
 
-为编译 Libpipeline 准备工作：
+为编译 `Libpipeline` 准备工作：
 
 ```
 ./configure CHECK_CFLAGS=-I/tools/include \
 CHECK_LIBS="-L/tools/lib -lcheck" --prefix=/usr
 ```
 
-configure 选项的含义：
+`configure` 选项的含义：
 
 ```
 CHECK_CFLAGS=, CHECK_LIBS=
@@ -6692,7 +6326,7 @@ make install
 
 ### 6.51.2. Libpipeline 的内容
 
-安装的库：libpipeline.so
+安装的库：`libpipeline.so`
 
 # 简要说明
 
@@ -6700,13 +6334,13 @@ make install
 
 ## 6.52. Make-3.82
 
-Make 软件包包含一个用于编译软件包的程序。
+`Make` 软件包包含一个用于编译软件包的程序。
 预计编译时间：0.3 SBU
 所需磁盘空间：9.7 MB
 
 ### 6.52.1. Make 的安装
 
-为编译 Make 准备工作：
+为编译 `Make` 准备工作：
 
 ```
 ./configure --prefix=/usr
@@ -6732,7 +6366,7 @@ make install
 
 ### 6.52.2. Make 的内容
 
-- 安装的程序：make
+- 安装的程序：`make`
 
 # 简要说明
 
@@ -6740,13 +6374,13 @@ make install
 
 ## 6.53. Man-DB-2.6.1
 
-Man-DB 软件包包含查找和查看 man 页的程序。
+`Man-DB` 软件包包含查找和查看 man 页的程序。
 预计编译时间：0.4 SBU
 所需磁盘空间：22 MB
 
 ### 6.53.1. Man-DB 的安装
 
-为 Man-DB 编译准备工作：
+为 `Man-DB` 编译准备工作：
 
 ```
 PKG_CONFIG=/usr/bin/true \
@@ -6758,13 +6392,13 @@ LIBS='-libpipeline' \
 --with-pager=/usr/bin --with-pager=/usr/bin
 ```
 
-configure 选项的含义：
+`configure` 选项的含义：
 
-PKG_CONFIG... 这些环境变量允许配置过程在没有外部 pkg-config 程序的情况下完成。
+`PKG_CONFIG...` 这些环境变量允许配置过程在没有外部 `pkg-config` 程序的情况下完成。
 
---disable-setuid 禁用 man setuid 程序。
+`--disable-setuid` 禁用 man setuid 程序。
 
---with... 这三个参数用于设置默认程序。lynx 是一个基于文本的浏览器，vgrind 将转换为 Groff 输入， grap 用于 Groff 文档的排版。vgrind 和 grap 通常用于查看 man 页，但如果你需要，可以安装它们。
+`--with...` 这三个参数用于设置默认程序。`lynx` 是一个基于文本的浏览器，`vgrind` 将转换为 Groff 输入， `grap` 用于 Groff 文档的排版。`vgrind` 和 `grap` 通常用于查看 man 页，但如果你需要，可以安装它们。
 
 编译软件包：
 
@@ -6784,9 +6418,11 @@ make check
 make install
 ```
 
+
+
 ### 6.53.2. 非英语 man 页
 
-下表显示 Man-DB 假设安装在 /usr/share/man 下的页面将被编码。此外，Man-DB 会正确判断该目录下的 man 页是否为 UTF-8 编码。
+下表显示 Man-DB 假设安装在 `/usr/share/man` 下的页面将被编码。此外，Man-DB 会正确判断该目录下的 man 页是否为 UTF-8 编码。
 
 # Linux From Scratch - 7.1
 
@@ -6822,24 +6458,20 @@ make install
 
 ### 6.53.3. Man-DB 的内容
 
-- 安装的程序：accessdb、apropos（链接到 whatis）、catman、lexgrorg、man、mand、manpath、whatis 和 zoeslim
-- 安装的目录：/usr/share/lib-man,/usr/share/doc/man-db
+- 安装的程序：`accessdb`、`apropos`（链接到 `whatis`）、`catman`、`lexgrorg`、`man`、`mand`、`manpath`、`whatis` 和 `zoeslim`
+- 安装的目录：`/usr/share/lib-man`、`/usr/share/doc/man-db`
 
 # 简要说明
 
-- **accessdb**: 以人类可读的形式导出 **whatis** 数据库内容
-- **apropos**: 搜索 **whatis** 数据库并显示包含给定字符串的系统命令简要说明
-- **catman**: 创建或更新预格式化的 man 页
-- **legrog**: 显示给定 **manual** 页的一行摘要信息
-- **man**: 格式化并显示请求的 man 页
-- **mandb**: 创建或更新 **whatis** 数据库
-- **manpath**: 显示 $MANPATH 的内容（如果未设置 $MANPATH，则根据 man.conf 设置和用户环境显示合适的搜索路径）
-- **whatis**: 搜索 **whatis** 数据库并显示包含独立单词关键词的系统命令简要说明
-- **zsoelim**: 读取文件并将 .so 文件格式的行替换为提到的 *file* 内容
-
-
-
-
+- **`accessdb`**: 以人类可读的形式导出 **`whatis`** 数据库内容
+- **`apropos`**: 搜索 **`whatis`** 数据库并显示包含给定字符串的系统命令简要说明
+- **`catman`**: 创建或更新预格式化的 man 页
+- **`legrog`**: 显示给定 **`manual`** 页的一行摘要信息
+- **`man`**: 格式化并显示请求的 man 页
+- **`mandb`**: 创建或更新 **`whatis`** 数据库
+- **`manpath`**: 显示 `$MANPATH` 的内容（如果未设置 `$MANPATH`，则根据 `man.conf` 设置和用户环境显示合适的搜索路径）
+- **`whatis`**: 搜索 **`whatis`** 数据库并显示包含独立单词关键词的系统命令简要说明
+- **`zsoelim`**: 读取文件并将 `.so` 文件格式的行替换为提到的 *file* 内容
 
 ## 6.54. Patch-2.6.1
 
@@ -6880,7 +6512,7 @@ make install
 
 ## 6.54.2. Patch 的内容
 
-已安装的程序：patch
+已安装的程序：`patch`
 
 ### 简要描述
 
@@ -6895,9 +6527,9 @@ Shadow 包包含以安全方式处理密码的程序。
 
 ## 6.55.1. 安装 Shadow
 
-> 如果你想强制使用强密码，请在构建 Shadow 之前，参考 http://www.linuxfromscratch.org/blfs/view/sw/postifs/cracklib.html 安装 CrackLib。然后在之前的 configure 命令前添加 --with-libcrack。
+> 如果你想强制使用强密码，请在构建 Shadow 之前，参考 http://www.linuxfromscratch.org/blfs/view/sw/postifs/cracklib.html 安装 CrackLib。然后在之前的 `configure` 命令前添加 `--with-libcrack`。
 
-应用补丁以修复当运行来自此包的各种程序时，若在 nscd 守护进程未运行时使用它们会产生的问题。
+应用补丁以修复当运行来自此包的各种程序时，若在 `nscd` 守护进程未运行时使用它们会产生的问题。
 
 ```
 patch -Npl -i ../shadow-4.1.5-nscd-1.patch
@@ -6907,10 +6539,11 @@ patch -Npl -i ../shadow-4.1.5-nscd-1.patch
 
 ```
 sed -i '/s/$groups/{EXEMPT} // /src/Makefile.in
+
 find . -name Makefile.in -exec sed -i 's/$groups\.1 / {}' \ \
 ```
 
-不要默认的 crypt 方法，而是使用更安全的 SHA-512 密码加密方法，该方法还允许超过 8 个字符的密码。此外，必要将 Shadow 默认使用的用户邮箱的过时 /var/mail 位置更改为当前使用的 /var/spool 位置：
+不要默认的 crypt 方法，而是使用更安全的 SHA-512 密码加密方法，该方法还允许超过 8 个字符的密码。此外，必要将 Shadow 默认使用的用户邮箱的过时 `/var/mail` 位置更改为当前使用的 `/var/spool` 位置：
 
 ```
 sed -i -e 's@#@ENCRYPT METHOD DES@=ENCRYPT METHOD SHA512@' \
@@ -6952,7 +6585,7 @@ mv -v /usr/bin/passwd /bin
 
 ## 6.55.2. 配置 Shadow
 
-此软件包包含用于添加、修改和删除用户及组的实用程序；设置并更改它们的密码；以及执行其他管理任务。关于密码影子（password shadowing）的完整解释，请参阅解压后源码树中的 doc/HOWTO 文件。如果使用 Shadow 支持，请记住需要验证密码的程序（显示管理器、FTP 程序、pop3 守护进程等）必须符合 Shadow 标准。也就是说，它们需要能够与影子密码进行配合工作。
+此软件包包含用于添加、修改和删除用户及组的实用程序；设置并更改它们的密码；以及执行其他管理任务。关于密码影子（password shadowing）的完整解释，请参阅解压后源码树中的 `doc/HOWTO` 文件。如果使用 Shadow 支持，请记住需要验证密码的程序（显示管理器、FTP 程序、pop3 守护进程等）必须符合 Shadow 标准。也就是说，它们需要能够与影子密码进行配合工作。
 
 要启用影子密码，请运行以下命令：
 
@@ -6966,15 +6599,15 @@ pwconv
 grpconv
 ```
 
-Shadow 对 useradd 程序的默认配置有几个需要说明的注意事项。首先，useradd 的默认操作是创建用户以及一个同名的组。默认情况下，用户 ID (UID) 和组 ID (GID) 从 1000 开始。这意味着如果你不向 useradd 传递参数，该用户将成为唯一组的成员。如果这种行为不受理想，你需要向 useradd 传递 -g 参数。默认参数存储在 /etc/default/useradd 文件中。你可能根据需要修改该文件中的两个参数。
+Shadow 对 `useradd` 程序的默认配置有几个需要说明的注意事项。首先，`useradd` 的默认操作是创建用户以及一个同名的组。默认情况下，用户 ID (`UID`) 和组 ID (`GID`) 从 1000 开始。这意味着如果你不向 `useradd` 传递参数，该用户将成为唯一组的成员。如果这种行为不受理想，你需要向 `useradd` 传递 `-g` 参数。默认参数存储在 `/etc/default/useradd` 文件中。你可能根据需要修改该文件中的两个参数。
 
 ### /etc/default/useradd 参数说明
 
-GROUP=1000
-此参数设置了 /etc/group 文件使用的组编号起始值。你可以将其修改为任何所需的数值。注意 useradd 不会重用 UID 或 GID。如果使用了此参数指定的数字，它将使用该数字之后的可用数字。另外注意，如果你第一次在不带 -g 参数的情况下使用 useradd 时系统中没有组 1000，终端会显示：useradd: unknown GID 1000。你可以忽略此消息，组 1000 将创建。
+`GROUP=1000`
+此参数设置了 `/etc/group` 文件使用的组编号起始值。你可以将其修改为任何所需的数值。注意 `useradd` 不会重用 `UID` 或 `GID`。如果使用了此参数指定的数字，它将使用该数字之后的可用数字。另外注意，如果你第一次在不带 `-g` 参数的情况下使用 `useradd` 时系统中没有组 1000，终端会显示：`useradd: unknown GID 1000`。你可以忽略此消息，组 1000 将创建。
 
-CREATE_MAIL=yes
-此参数导致 useradd 为新创建的用户创建一个邮箱。useradd 将该邮箱的组所有权。如果你希望不创建邮箱，请使用以下命令：
+`CREATE_MAIL=yes`
+此参数导致 `useradd` 为新创建的用户创建一个邮箱。`useradd` 将该邮箱的组所有权。如果你希望不创建邮箱，请使用以下命令：
 
 ```
 sed -i 's/CREATE_MAIL=yes/CREATE_MAIL=no/' /etc/default/useradd
@@ -6990,11 +6623,7 @@ passwd
 
 ## 6.55.4. Patch 的内容
 
-已安装的程序：patch
-
-
-
-
+已安装的程序：`patch`
 
 ## 6.57. Sysvinit-2.88dsf
 
@@ -7004,18 +6633,21 @@ Sysvinit 软件包包含了控制系统启动、运行和关闭的程序。
 
 ## 6.57.1. 安装 Sysvinit
 
-当运行级别（run-levels）发生变化时（例如停止系统），init 会向那些由 init 自身启动且不应在在新运行级别下运行的进程发送终止信号。在此执行过程中，init 会输出类似“Sending processes the TERM signal”的提示，这似乎意味着它正在向所有当前运行的进程发送这些信号。为了避免这种误解，请修改源代码，使这些消息显示为“Sending processes configured via /etc/initab the TERM signal”。
+当运行级别（run-levels）发生变化时（例如停止系统），`init` 会向那些由 `init` 自身启动且不应在在新运行级别下运行的进程发送终止信号。在此执行过程中，`init` 会输出类似“Sending processes the TERM signal”的提示，这似乎意味着它正在向所有当前运行的进程发送这些信号。为了避免这种误解，请修改源代码，使这些消息显示为“Sending processes configured via /etc/initab the TERM signal”。
 
 ```
 sed -i 's/sending processes configured via /etc/initab/g'
+
 src/init.c
 ```
 
-wall 和 mountpoint 程序的维护版本在此之前已由 Util-linux 安装。抑制安装 Sysvinit 版本的程序及其帮助页（man pages）：
+`wall` 和 `mountpoint` 程序的维护版本在此之前已由 Util-linux 安装。抑制安装 Sysvinit 版本的程序及其帮助页（man pages）：
 
 ```
 sed -i -e 's/utmpdump wall/utmpdump/'
+
 -e '/mountpoint/d'
+
 -e 's/mountpoint.l wall//' src/Makefile
 ```
 
@@ -7035,28 +6667,26 @@ make -C src install
 
 ## 6.57.2. Sysvinit 目录
 
-- **已安装程序：** bootlogd, fstab-decode, halt, init, killall5, last, lastb（链接到 init）,mesg, pidof（链接到 killall5）,poweroff（链接到 halt）,reboot（链接到 halt）,runlevel, shutdown, sulogin, telinit（链接到 init）以及 utmpdump
-
-```---
+- **已安装程序：** `bootlogd`, `fstab-decode`, `halt`, `init`, `killall5`, `last`, `lastb`（链接到 `init`）, `mesg`, `pidof`（链接到 `killall5`）, `poweroff`（链接到 `halt`）, `reboot`（链接到 `halt`）, `runlevel`, `shutdown`, `sulogin`, `telinit`（链接到 `init`）以及 `utmpdump`
 
 # 简要说明
 
-- **bootlogd**: 将日志消息写入日志文件。
-- **fstab-decode**: 运行一个带有 fstab 编码参数的命令。
-- **halt**: 通常情况下调用带有 -h 选项的 shutdown，除非已在运行级别 0，此时它告诉内核停止系统；它会通知文件 /var/log/what 系统正在关机。
-- **init**: 内核初始化硬件后启动的第一个进程，它接管引导过程并启动所有指示启动的进程。
-- **killall5**: 向所有进程发送信号，但所在会话（session）中的进程除外，因此它不会杀死调用它的脚本的 shell。
-- **last**: 显示哪些用户登录了（并登出），通过回溯搜索 /var/log/wutmp 文件；它还会显示系统启动、关机和运行级别的变化。
-- **lastb**: 显示记录在 /var/log/btmp 中的失败登录尝试。
-- **mesg**: 控制其他用户是否可以向当前用户的终端发送消息。
-- **id-pidof**: 报告给定程序的 PID。
-- **poweroff**: 告诉内核停止系统并关闭计算机（参见 **halt**）。
-- **reboot**: 告诉内核重启系统（参见 **halt**）。
-- **runlevel**: 报告之前的和当前的运行级别，如 /var/run/utmp 中最后的运行级别记录所示。
-- **shutdown**: 以安全的方式关机系统，向所有进程发送信号并通知所有登录用户。
-- **sulogin**: 允许 root 登录；通常在系统进入单用户模式时由 **init** 调用。
-- **telinit**: 告诉 **init** 切换到哪个运行级别。
-- **utmpdump**: 以更易于用户的格式显示给定登录文件的内容。
+- **`bootlogd`**: 将日志消息写入日志文件。
+- **`fstab-decode`**: 运行一个带有 `fstab` 编码参数的命令。
+- **`halt`**: 通常情况下调用带有 `-h` 选项的 `shutdown`，除非已在运行级别 0，此时它告诉内核停止系统；它会通知文件 `/var/log/what` 系统正在关机。
+- **`init`**: 内核初始化硬件后启动的第一个进程，它接管引导过程并启动所有指示启动的进程。
+- **`killall5`**: 向所有进程发送信号，但所在会话（session）中的进程除外，因此它不会杀死调用它的脚本的 shell。
+- **`last`**: 显示哪些用户登录了（并登出），通过回溯搜索 `/var/log/wutmp` 文件；它还会显示系统启动、关机和运行级别的变化。
+- **`lastb`**: 显示记录在 `/var/log/btmp` 中的失败登录尝试。
+- **`mesg`**: 控制其他用户是否可以向当前用户的终端发送消息。
+- **`id-pidof`**: 报告给定程序的 PID。
+- **`poweroff`**: 告诉内核停止系统并关闭计算机（参见 **`halt`**）。
+- **`reboot`**: 告诉内核重启系统（参见 **`halt`**）。
+- **`runlevel`**: 报告之前的和当前的运行级别，如 `/var/run/utmp` 中最后的运行级别记录所示。
+- **`shutdown`**: 以安全的方式关机系统，向所有进程发送信号并通知所有登录用户。
+- **`sulogin`**: 允许 root 登录；通常在系统进入单用户模式时由 **`init`** 调用。
+- **`telinit`**: 告诉 **`init`** 切换到哪个运行级别。
+- **`utmpdump`**: 以更易于用户的格式显示给定登录文件的内容。
 
 ## 6.58. Tar-1.26
 
@@ -7074,7 +6704,7 @@ FORCE UNSAFE CONFIGURE=1 ./configure --prefix=/usr \
 --bindir=/bin --libexecdir=/usr/sbin
 ```
 
-configure 选项的含义：
+`configure` 选项的含义：
 
 ```
 FORCE UNSAFE CONFIGFIGURE=1
@@ -7102,17 +6732,18 @@ make -C doc install-html docdir=/usr/share/doc/tar-1.26
 
 ## 6.58.2. Tar 目录
 
-- **已安装程序：** rmt 和 tar
-- **已安装目录：** /usr/share/doc/tar-1.26
+- **已安装程序：** `rmt` 和 `tar`
+- **已安装目录：** `/usr/share/doc/tar-1.26`
 
 # 简要说明
 
-- **rmt**: 通过进程间通信连接远程操纵磁带驱动器。
-- **tar**: 创建、从存档中提取文件并列出存档（也称为 tarballs）的内容。
+- **`rmt`**: 通过进程间通信连接远程操纵磁带驱动器。
+- **`tar`**: 创建、从存档中提取文件并列出存档（也称为 tarballs）的内容。
 
 ## 6.59. Texinfo-4.13a
 
 Texinfo 软件包包含了用于读取、写入和转换 info 页面的程序。
+
 预计编译时间：0.3 SBU
 所需磁盘空间：21 MB
 
@@ -7154,7 +6785,7 @@ make install
 TEXMF=/usr
 ```
 
-Texinfo 系统使用一个文件存储其条目。不幸的是，由于 Makefile 偶尔问题，它有时会与 info 页不同步。如果需要重新创建 /info 目录，以下命令将完成此操作：
+Texinfo 系统使用一个文件存储其条目。不幸的是，由于 Makefile 偶尔问题，它有时会与 info 页不同步。如果需要重新创建 `/info` 目录，以下命令将完成此操作：
 
 ```
 cd /share/info
@@ -7166,19 +6797,19 @@ done
 
 ## 6.59.2. Texinfo 目录
 
-- **已安装程序：** info, infey, install-info, makeinfo, pdftexi2vi, texi2vi, texipdf 以及 texindex
-- **已安装目录：** /usr/share/doc
+- **已安装程序：** `info`, `infey`, `install-info`, `makeinfo`, `pdftexi2vi`, `texi2vi`, `texipdf` 以及 `texindex`
+- **已安装目录：** `/usr/share/doc`
 
 # 简要说明
 
-- **info**: 用于读取类似于 man 页的信息，但通常内容更深。
-- **infey**: 将源文件编译为二进制格式。
-- **install-info**: 用于安装 info 页。
-- **makeinfo**: 将给定的 Texinfo 翻译为 info 页。
-- **pdftexi2vi**: 将给定的 Texinfo 文档格式化 PDF。
-- **texi2vi**: 将给定的 Texinfo 转换为 info。
-- **texi2pdf**: 将给定的 Texinfo 格式化 PDF。
-- **texindex**: 用于排序索引
+- **`info`**: 用于读取类似于 man 页的信息，但通常内容更深。
+- **`infey`**: 将源文件编译为二进制格式。
+- **`install-info`**: 用于安装 info 页。
+- **`makeinfo`**: 将给定的 Texinfo 翻译为 info 页。
+- **`pdftexi2vi`**: 将给定的 Texinfo 文档格式化 PDF。
+- **`texi2vi`**: 将给定的 Texinfo 转换为 info。
+- **`texi2pdf`**: 将给定的 Texinfo 格式化 PDF。
+- **`texindex`**: 用于排序索引
 
 ## 6.60. Udev-181
 
@@ -7202,6 +6833,8 @@ mknod -m0666 /lib/udev/devices/null c 1 3
 
 为编译准备软件包：
 
+
+
 ```
 BLKCFLAGS="-I/usr/include/blkid"
 BLK LIBS="-L/lib-blkid"
@@ -7221,7 +6854,7 @@ KMOD LIBS="-L/lib-kmod"
 --with-systemdunitdir=no
 ```
 
-新 configure 选项的含义
+### 新 configure 选项的含义
 
 ```
 --libexeccdir=/lib
@@ -7236,9 +6869,6 @@ KMOD LIBS="-L/lib-kmod"
 ```
 make
 ```
-
-
-
 
 测试软件包。
 
@@ -7273,58 +6903,93 @@ make install-doc
 
 ## 6.60. Udev 内容
 
-- **已安装的程序：** ata_id, cdrom_id, collect, create_floppy_devices, cdd_id, firmware.sh, fstab_import, path_id, scsi_id, udevadm, udevd, usb_id, write_cd_rules, and write_net_rules
-- **已安装的库：** [udev.so]
-- **已安装的目录：** /etc/udev, /lib/udev, /lib/firmware, /usr/share/doc/udev-config, /usr/share/gtk-doc/html
+- **已安装的程序：** `ata_id`, `cdrom_id`, `collect`, `create_floppy_devices`, `cdd_id`, `firmware.sh`, `fstab_import`, `path_id`, `scsi_id`, `udevadm`, `udevd`, `usb_id`, `write_cd_rules`, and `write_net_rules`
+
+- **已安装的库：** `[udev.so]`
+
+- **已安装的目录：** `/etc/udev`, `/lib/udev`, `/lib/firmware`, `/usr/share/doc/udev-config`, `/usr/share/gtk-doc/html`
 
 ### 简短描述
 
-- **ata_id**
+- **`ata_id`**
+
 为 Udev 提供用于 ATA 驱动程序的唯一字符串和额外信息（uuid, 标签）
-- **cdrom_id**
+
+- **`cdrom_id`**
+
 为 Udev 提供 CD-ROM 或 DVD 事件的能力
-- **collect**
+
+- **`collect`**
+
 给定当前事件的 ID 和 ID 列表（针对所有目标事件），注册当前 ID 并指示所有目标 ID 是否已注册
-- **create_floppy_devices**
+
+- **`create_floppy_devices`**
+
 根据 CMOS 类型创建所有可能的软盘设备
-- **cdd_id**
+
+- **`cdd_id`**
+
 为 Udev 提供 BIOS 磁盘设备的 EDD ID
-- **firmware.sh**
+
+- **`firmware.sh`**
+
 将固件上传到设备
-- **fstab_import**
-在 /etc/fstab 中查找匹配当前设备的条目，并将其信息提供给 Udev
-- **path_id**
+
+- **`fstab_import`**
+
+在 `/etc/fstab` 中查找匹配当前设备的条目，并将其信息提供给 Udev
+
+- **`path_id`**
+
 为设备提供尽可能短的唯一硬件路径
-- **scsi_id**
+
+- **`scsi_id`**
+
 根据向指定设备发送 SCSI INQUIRY 返回的数据，为 Udev 提供基于此的唯一 SCSI 标识符
-- **udevadm**
+
+- **`udevadm`**
+
 通用 udev 管理工具：控制 udev 守护进程，提供来自 Udev 数据库的信息，监控事件，等待事件完成，测试 Udev 配置，并为特定设备触发事件
-- **udevd**
+
+- **`udevd`**
+
 一个监听网络套接字事件的守护进程，创建设备并响应这些事件运行配置的外部程序
-- **usb_id**
+
+- **`usb_id`**
+
 为 Udev 提供有关 USB 设备的信息
-- **write_cd_rules**
+
+- **`write_cd_rules`**
+
 生成 Udev 规则的脚本，为光驱器提供稳定名称（参见第 7.5 节，“为设备创建自定义符号链接”）
-- **write_net_rules**
+
+- **`write_net_rules`**
+
 生成规则的脚本，为网络接口提供稳定名称（参见第 7.2 节，“通用网络配置”）
-- **libudev**
+
+- **`libudev`**
+
 一个指向 udev 设备信息的库接口
-- **/etc/udev**
+
+- **`/etc/udev`**
+
 包含 Udev 配置文件、设备权限和设备命名的规则
 
 ## 6.61. Vim-7.3
 
 Vim 软件包包含一个强大的文本编辑器。
+
 预计编译耗时间：1.0 SBU
+
 所需的磁盘空间：87 MB
 
 ### Vim 的替代方案
 
-如果你更倾向于其他编辑器——例如 Emacs、Joe 或 Nano——请参考 http://www.linuxfromscratch.org/bifs/view/svn/postlfs/editors.html 获取建议的安装说明。
+如果你更倾向于其他编辑器——例如 Emacs、Joe 或 Nano——请参考 `http://www.linuxfromscratch.org/bifs/view/svn/postlfs/editors.html` 获取建议的安装说明。
 
 ### 6.61.1. 安装 Vim
 
-首先，将 vimrc 配置文件的默认位置更改为 /etc：
+首先，将 vimrc 配置文件的默认位置更改为 `/etc`：
 
 ```bash
 echo '#define VIMRCFILE "/etc/vimrc"' >> src/feature.h
@@ -7336,9 +7001,10 @@ echo '#define VIMRCFILE "/etc/vimrc"' >> src/feature.h
 ./configure --prefix=/usr --enable-multibyte
 ```
 
-configure 选项的含义：
+`configure` 选项的含义：
 
-- -enable-multibyte
+- `-enable-multibyte`
+
 此开关启用对多字节字符编码文件的支持。如果本地系统使用多字节字符集，则需要此项。此开关对于编辑最初在 Fedora 等使用 UTF-8 作为默认字符集的 Linux 发行版中创建的文本文件也有帮助。
 
 编译软件包：
@@ -7370,7 +7036,7 @@ for L in /usr/share/man/*/1/vim.1; do
 done
 ```
 
-默认情况下，Vim 的文档安装在 /usr/share/vim。以下符号链接允许通过 /usr/share/doc/vim-7.3 访问文档，与其他软件包的文档位置一致：
+默认情况下，Vim 的文档安装在 `/usr/share/vim`。以下符号链接允许通过 `/usr/share/doc/vim-7.3` 访问文档，与其他软件包的文档位置一致：
 
 ```bash
 ln -sv ../vim/vim7/doc /usr/share/doc/vim-7.3
@@ -7380,7 +7046,7 @@ ln -sv ../vim/vim7/doc /usr/share/doc/vim-7.3
 
 ### 6.61.2. 配置 Vim
 
-由于用户习惯性使用 vi，首先将 vimrc 配置文件的默认位置更改为 /etc：
+由于用户习惯性使用 vi，首先将 vimrc 配置文件的默认位置更改为 `/etc`：
 
 ```bash
 echo '#define VIMRCFILE "/etc/vimrc"' >> src/feature.h
@@ -7392,9 +7058,10 @@ echo '#define VIMRCFILE "/etc/vimrc"' >> src/feature.h
 ./configure --prefix=/usr --enable-multibyte
 ```
 
-configure 选项的含义：
+`configure` 选项的含义：
 
-- -enable-multibyte
+- `-enable-multibyte`
+
 此开关启用对多字节字符编码文件的支持。如果本地系统使用多字节字符集，则需要此项。此开关对于编辑最初在 Fedora 等使用 UTF-8 作为默认字符集的 Linux 发行版中创建的文本文件也有帮助。
 
 编译软件包：
@@ -7426,213 +7093,17 @@ for L in /usr/share/man/*/1/vim.1; do
 done
 ```
 
-默认情况下，Vim 的文档安装在 /usr/share/vim。以下符号链接允许通过 /usr/share/doc/vim-7.3 访问文档，与其他软件包的文档位置一致：
+默认情况下，Vim 的文档安装在 `/usr/share/vim`。以下符号链接允许通过 `/usr/share/doc/vim-7.3` 访问文档，与其他软件包的文档位置一致：
 
 ```bash
 ln -sv ../vim/vim7/doc /usr/share/doc/vim-7.3
 ```
 
 如果要在 LFS 系统上安装 Windows 系统，可能需要重新编译安装 vim。Vim 带有一个 GUI 版本的编辑器，需要安装 X 和一些额外的库。欲需更多信息，请参考 Vim 文档和 Vim 安装。
-
-由于用户习惯性使用 vi，为了在用户习惯性地输入 vi 时允许执行 vim，请为提供的语言中的二进制文件和帮助页创建符号链接：
-
-```bash
-ln -sv vim /usr/bin/vi
-for L in /usr/share/man/*/1/vim.1; do
-  ln -sv vim.1 $(dirname $L)/vi.1
-done
-```
-
-默认情况下，Vim 的文档安装在 /usr/share/vim。以下符号链接允许通过 /usr/share/doc/vim-7.3 访问文档，与其他软件包的文档位置一致：
-
-```bash
-ln -sv ../vim/vim7/doc /usr/share/doc/vim-7.3
-```
-
-如果要在 LFS 系统上安装 Windows 系统，可能需要重新编译安装 vim。Vim 带有一个 GUI 版本的编辑器，需要安装 X 和一些额外的库。欲需更多信息，请参考 Vim 文档和 Vim 安装。
-
-由于用户习惯性使用 vi，为了在用户习惯性地输入 vi 时允许执行 vim，请为提供的语言中的二进制文件和帮助页创建符号链接：
-
-```bash
-ln -sv vim /usr/bin/vi
-for L in /usr/share/man/*/1/vim.1; do
-  ln -sv vim.1 $(dirname $L)/vi.1
-done
-```
-
-默认情况下，Vim 的文档安装在 /usr/share/vim。以下符号链接允许通过 /usr/share/doc/vim-7.3 访问文档，与其他软件包的文档位置一致：
-
-```bash
-ln -sv ../vim/vim7/doc /usr/share/doc/vim-7.3
-```
-
-如果要在 LFS 系统上安装 Windows 系统，可能需要重新编译安装 vim。Vim 带有一个 GUI 版本的编辑器，需要安装 X 和一些额外的库。欲需更多信息，请参考 Vim 文档和 Vim 安装。
-
-由于用户习惯性使用 vi，为了在用户习惯性地输入 vi 时允许执行 vim，请为提供的语言中的二进制文件和帮助页创建符号链接：
-
-```bash
-ln -sv vim /usr/bin/vi
-for L in /usr/share/man/*/1/vim.1; do
-  ln -sv vim.1 $(dirname $L)/vi.1
-done
-```
-
-*(注：由于提供的文本中存在大量重复段落，以上翻译已根据“不要重复输出原文”的原则进行了去重，仅保留了核心逻辑部分的翻译。)*
-
-[/content]
-
----
-
-**抱歉，您提供的原始文本中存在大量的重复段落（例如 6.61 之后的内容被多次重复）。根据您的要求，我为您翻译了唯一的逻辑。以下是去重后的完整译文：**
-
-[content]
-测试软件包。
-
-```
-make check
-```
-
-安装软件包：
-
-```
-make install
-```
-
-删除空的文档目录：
-
-```bash
-rmdir -v /usr/share/udev
-```
-
-现在安装 LFS 特有的自定义规则文件：
-
-```bash
-cd udev-config-20100128
-make install
-```
-
-安装解释 LFS 特有规则文件的文档：
-
-```bash
-make install-doc
-```
-
-## 6.60. Udev 内容 
-
-- **已安装的程序：** ata_id, cdrom_id, collect, create_floppy_devices, cdd_id, firmware.sh, fstab_import, path_id, scsi_id, udevadm, udevd, usb_id, write_cd_rules, and write_net_rules
-- **已安装的库：** [udev.so]
-- **已安装的目录：** /etc/udev, /lib/udev, /lib/firmware, /usr/share/doc/udev-config, /usr/share/gtk-doc/html
-
-### 简短描述
-
-- **ata_id**
-为 Udev 提供用于 ATA 驱动程序的唯一字符串和额外信息（uuid, 标签）
-- **cdrom_id**
-为 Udev 提供 CD-ROM 或 DVD 事件的能力
-- **collect**
-给定当前事件的 ID 和 ID 列表（针对所有目标事件），注册当前 ID 并指示所有目标 ID 是否已注册
-- **create_floppy_devices**
-根据 CMOS 类型创建所有可能的软盘设备
-- **cdd_id**
-为 Udev 提供 BIOS 磁盘设备的 EDD ID
-- **firmware.sh**
-将固件上传到设备
-- **fstab_import**
-在 /etc/fstab 中查找匹配当前设备的条目，并将其信息提供给 Udev
-- **path_id**
-为设备提供尽可能短的唯一硬件路径
-- **scsi_id**
-根据向指定设备发送 SCSI INQUIRY 返回的数据，为 Udev 提供基于此的唯一 SCSI 标识符
-- **udevadm**
-通用 udev 管理工具：控制 udev 守护进程，提供来自 Udev 数据库的信息，监控事件，等待事件完成，测试 Udev 配置，并为特定设备触发事件
-- **udevd**
-一个监听网络套接字事件的守护进程，创建设备并响应这些事件运行配置的外部程序
-- **usb_id**
-为 Udev 提供有关 USB 设备的信息
-- **write_cd_rules**
-生成 Udev 规则的脚本，为光驱器提供稳定名称（参见第 7.5 节，“为设备创建自定义符号链接”）
-- **write_net_rules**
-生成规则的脚本，为网络接口提供稳定名称（参见第 7.2 节，“通用网络配置”）
-- **libudev**
-一个指向 udev 设备信息的库接口
-- **/etc/udev**
-包含 Udev 配置文件、设备权限和设备命名的规则
-
-## 6.61. Vim-7.3
-
-Vim 软件包包含一个强大的文本编辑器。
-预计编译耗时间：1.0 SBU
-所需的磁盘空间：87 MB
-
-### Vim 的替代方案
-
-如果你更倾向于其他编辑器——例如 Emacs、Joe 或 Nano——请参考 http://www.linuxfromscratch.org/bifs/view/svn/postlfs/editors.html 获取建议的安装说明。
-
-### 6.61.1. 安装 Vim
-
-首先，将 vimrc 配置文件的默认位置更改为 /etc：
-
-```bash
-echo '#define VIMRCFILE "/etc/vimrc"' >> src/feature.h
-```
-
-现在为 Vim 编译准备：
-
-```bash
-./configure --prefix=/usr --enable-multibyte
-```
-
-configure 选项的含义：
-
-- -enable-multibyte
-此开关启用对多字节字符编码文件的支持。如果本地系统使用多字节字符集，则需要此项。此开关对于编辑最初在 Fedora 等使用 UTF-8 作为默认字符集的 Linux 发行版中创建的文本文件也有帮助。
-
-编译软件包：
-
-```
-make
-```
-
-要测试结果，执行：
-
-```bash
-make test
-```
-
-然而，该套测试会在屏幕上输出大量二进制数据，可能会导致当前终端设置出现问题。可以通过将输出重定向到日志文件来解决。测试成功将在完成后显示“ALL DONE”字样。
-
-安装软件包：
-
-```
-make install
-```
-
-许多用户使用 vi 而不是 vim。为了在用户习惯性地输入 vi 时允许执行 vim，请为提供的语言中的二进制文件和帮助页创建符号链接：
-
-```bash
-ln -sv vim /usr/bin/vi
-for L in /usr/share/man/*/1/vim.1; do
-  ln -sv vim.1 $(dirname $L)/vi.1
-done
-```
-
-默认情况下，Vim 的文档安装在 /usr/share/vim。以下符号链接允许通过 /usr/share/doc/vim-7.3 访问文档，与其他软件包的文档位置一致：
-
-```bash
-ln -sv ../vim/vim7/doc /usr/share/doc/vim-7.3
-```
-
-如果要在 LFS 系统上安装 Windows 系统，可能需要重新编译安装 vim。Vim 带有一个 GUI 版本的编辑器，需要安装 X 和一些额外的库。欲需更多信息，请参考 Vim 文档和 Vim 安装。
-
-### 6.61.2. 配置 Vim
-
-由于用户习惯性使用 vi，为了在用户习惯性地输入 vi 时允许执行 vim，请为提供的语言中的二进制文件和帮助页创建符号链接：
-*(此处省略重复内容，后续已处理去重)*
-
-
-
 
 ## 6.64. 清理
+
+
 
 从现在起，退出后重新进入 chroot 环境时，使用以下修改后的 chroot 命令：
 
@@ -7643,12 +7114,13 @@ PATH=/bin:/bin:/usr/bin:/sbin:/usr/sbin \
 /bin/bash --login
 ```
 
-此操作是因为 /tools 目录中的程序不再需要了。由于它们不再被需要，如果需要，你可以删除 /tools 目录。
+此操作是因为 `/tools` 目录中的程序不再需要了。由于它们不再被需要，如果需要，你可以删除 `/tools` 目录。
 
 > 注意
-> 删除 /tools 也会删除用于运行工具链测试的 Tcl、Expect、DejaGNU 的临时副本。如果你以后需要这些程序，则需要重新编译并安装。BLFS 书中提供了关于此点的说明（请参见 http://www.linuxfromscratch.org/bfs/）。
+>
+> 删除 `/tools` 也会删除用于运行工具链测试的 Tcl、Expect、DejaGNU 的临时副本。如果你以后需要这些程序，则需要重新编译并安装。BLFS 书中提供了关于此点的说明（请参见 http://www.linuxfromscratch.org/bfs/）。
 
-如果虚拟内核文件系统（通过手动卸载或通过重启）已卸载，请确保在重新进入 chroot 时挂载了虚拟内核文件系统。此过程在第 6.2.2 节“挂载和填充 /dev”以及第 6.2.3 节“挂载虚拟内核文件系统”中介绍。
+如果虚拟内核文件系统（通过手动卸载或通过重启）已卸载，请确保在重新进入 chroot 时挂载了虚拟内核文件系统。此过程在第 6.2.2 节“挂载和填充 `/dev`”以及第 6.2.3 节“挂载虚拟内核文件系统”中介绍。
 
 ## 第 7 章 设置系统启动脚本
 
@@ -7657,7 +7129,7 @@ PATH=/bin:/bin:/usr/bin:/sbin:/usr/sbin \
 本章讨论了配置文件和启动脚本。首先，将介绍设置网络所需的通用配置文件。
 
 - 第 7.2 节，“通用网络配置”
-- 第 7.3 节，“自定义 /etc/hosts 文件”
+- 第 7.3 节，“自定义 `/etc/hosts` 文件”
 
 其次，讨论了影响设备正确设置的问题。
 
@@ -7682,19 +7154,19 @@ PATH=/bin:/bin:/usr/bin:/sbin:/usr/sbin \
 最后，对用户登录系统时使用的脚本和配置文件进行了简要介绍。
 
 - 第 7.13 节，“Bash Shell 启动文件”
-- 第 7.14 节，“配置 /etc/inputrc 文件”
+- 第 7.14 节，“配置 `/etc/inputrc` 文件”
 
 ### 7.2 通用网络配置
 
 本节仅适用于需要配置网卡的情况。
 
-如果将使用网卡，则可能不需要创建任何与网卡相关的配置文件。如果情况是如此，请从所有运行级别目录（/etc/rc.d/rc*）中删除网络符号链接。
+如果将使用网卡，则可能不需要创建任何与网卡相关的配置文件。如果情况是如此，请从所有运行级别目录（`/etc/rc.d/rc*`）中删除网络符号链接。
 
 #### 7.2.1 为网络接口创建稳定名称
 
 如果系统中只有一个需要配置的网络接口，则本节是可选的，尽管这样做永远不会错。在许多情况下（例如带有无线接口和有线接口的笔记本电脑），完成本节中的配置是必要的。
 
-对于每个和模块化的网络驱动程序，接口编号默认在重启后不是持久的，因为驱动程序是并行且随机顺序加载的。例如，在一台带有 Intel 和 Realtek 双网卡的电脑上，Intel 制造的网卡可能变成 eth0，而 Realtek 网卡变成 eth1。在某些情况下，重启后网卡的顺序会反过来。为了避免这种情况，udev 自带了一个脚本和一些规则，根据 MAC 地址为网卡分配名称。
+对于每个和模块化的网络驱动程序，接口编号默认在重启后不是持久的，因为驱动程序是并行且随机顺序加载的。例如，在一台带有 Intel 和 Realtek 双网卡的电脑上，Intel 制造的网卡可能变成 `eth0`，而 Realtek 网卡变成 `eth1`。在某些情况下，重启后网卡的顺序会反过来。为了避免这种情况，`udev` 自带了一个脚本和一些规则，根据 MAC 地址为网卡分配名称。
 
 预生成规则以确保每次启动时（包括第一次启动）都为设备分配相同的名称：
 
@@ -7704,7 +7176,7 @@ for NIC in /sys/class/net/*; do
 done
 ```
 
-现在，检查 /etc/udev/rules.d/70-persistent-net.rules 文件，找出哪个名称分配给了哪个设备：
+现在，检查 `/etc/udev/rules.d/70-persistent-net.rules` 文件，找出哪个名称分配给了哪个设备：
 
 ```
 cat /etc/udev/rules.d/70-persistent-net.rules
@@ -7714,17 +7186,17 @@ cat /etc/udev/rules.d/70-persistent-net.rules
 
 所有 Udev 规则都由多个键组成，用逗号和空格分隔。规则及其说明如下：
 
-- SUBSYSTEM=="net" - 这告诉 Udev 忽略不是网络设备的设备。
-- ACTION=="add" - 这在设备被添加时触发该规则。
-- DRIVERS=="eth*" - 这确保规则仅适用于以太网接口。
-- ATTR{address} - 这指定了用于匹配的 MAC 地址。
-- ATTR{type}=="1" - 这识别设备类型（1 代表以太网）。
-- KERNEL=="eth*" - 这匹配内核命名约定。
-- NAME - 这为接口分配持久化名称。
+- `SUBSYSTEM=="net"` - 这告诉 `Udev` 忽略不是网络设备的设备。
+- `ACTION=="add"` - 这在设备被添加时触发该规则。
+- `DRIVERS=="eth*"` - 这确保规则仅适用于以太网接口。
+- `ATTR{address}` - 这指定了用于匹配的 MAC 地址。
+- `ATTR{type}=="1"` - 这识别设备类型（1 代表以太网）。
+- `KERNEL=="eth*"` - 这匹配内核命名约定。
+- `NAME` - 这为接口分配持久化名称。
 
 #### 7.2.2 创建网络接口文件
 
-以下命令为 eth0 创建一个静态 IP 示例文件：
+以下命令为 `eth0` 创建一个静态 IP 示例文件：
 
 ```
 cd /etc/sysconfig/
@@ -7741,19 +7213,19 @@ EOF
 
 必须更改这些变量的值以匹配设置。
 
-如果 ONBOOT 变量设置为 "yes"，网络脚本将在启动期间启动网卡（NIC）。如果是 "no"，则忽略 NIC 且不启动。可以使用 ifup 和 ifdown 命令手动启动接口。
+如果 `ONBOOT` 变量设置为 "`yes`"，网络脚本将在启动期间启动网卡（NIC）。如果是 "`no`"，则忽略 NIC 且不启动。可以使用 `ifup` 和 `ifdown` 命令手动启动接口。
 
-IFACE 变量定义接口名称，eth0。所有网络配置文件都需要。
+`IFACE` 变量定义接口名称，`eth0`。所有网络配置文件都需要。
 
-SERVICE 变量定义获取 IP 地址的方法。LFS-Bootscripts 包具有模块化的 IP分配格式，在 /lib/services/ 目录下创建文件允许其他分配方法。这通常用于动态主机配置协议（DHCP），BLFS 书中有介绍。
+`SERVICE` 变量定义获取 IP 地址的方法。`LFS-Bootscripts` 包具有模块化的 IP分配格式，在 `/lib/services/` 目录下创建文件允许其他分配方法。这通常用于动态主机配置协议（DHCP），BLFS 书中有介绍。
 
-GATEWAY 变量应包含默认网关 IP 地址（如果有）。如果没有，请注释掉该行。
+`GATEWAY` 变量应包含默认网关 IP 地址（如果有）。如果没有，请注释掉该行。
 
-PREFIX 变量需要包含子网的位数。IP 地址中的每个字节是 8 位。如果子网掩码为 255.255.255.240，则使用前三个字节（24 位）来指定网络号。大于 24 位的前缀常用 DSL 和电缆带服务提供商（ISP）。在本示例中（PREFIX=24），掩码为 255.255.255.240。根据你的特定子网调整 PREFIX 变量。
+`PREFIX` 变量需要包含子网的位数。IP 地址中的每个字节是 8 位。如果子网掩码为 255.255.255.240，则使用前三个字节（24 位）来指定网络号。大于 24 位的前缀常用 DSL 和电缆带服务提供商（ISP）。在本示例中（`PREFIX=24`），掩码为 255.255.255.240。根据你的特定子网调整 `PREFIX` 变量。
 
-#### 7.2.3 创建 /etc/resolv.conf 文件
+#### 7.2.3 创建 `/etc/resolv.conf` 文件
 
-如果系统将连接互联网，它需要某种域名服务（DNS）来将域名解析为 IP 地址，反之亦然。最好的方法是从 ISP 或网络管理员处获取服务器地址并在 /etc/resolv.conf。运行以下命令创建文件：
+如果系统将连接互联网，它需要某种域名服务（DNS）来将域名解析为 IP 地址，反之亦然。最好的方法是从 ISP 或网络管理员处获取服务器地址并在 `/etc/resolv.conf`。运行以下命令创建文件：
 
 ```
 cat > /etc/resolv.conf << "EOF"
@@ -7767,10 +7239,6 @@ nameserver <IP address of your secondary nameserver>
 EOF
 ```
 
-
-
-
-
 # Linux From Scratch - 版本 7.1
 
 域名语句可以省略或替换为搜索语句。更多信息请参阅 `resolv.conf` 的主页。
@@ -7779,13 +7247,13 @@ EOF
 
 > 注意：Google 的 IPv4 DNS 地址地址为 8.8.8.8 和 8.8.4.4。
 
-## 7.3. 自定义 /etc/hosts 文件
+## 7.3. 自定义 `/etc/hosts` 文件
 
 如果需要配置网卡，请决定用于在 `/etc/hosts` 文件中的 IP 地址、完全限定域名 (FQDN) 以及可能的别名。其语法格式为：
 
 `IP 地址 myhost.example.org 别名`
 
- 除非该网卡需要对互联网可见（即拥有注册的域名和有效的分配 IP 地址块——大多数用户并没有这些），否则请确保该 IP 地址位于私有 IP 地址范围内。有效范围如下：
+除非该网卡需要对互联网可见（即拥有注册的域名和有效的分配 IP 地址块——大多数用户并没有这些），否则请确保该 IP 地址位于私有 IP 地址范围内。有效范围如下：
 
 | 私有网络地址范围 | 正常掩码 |
 | :--- | :--- |
@@ -7862,10 +7330,6 @@ EOF
 
 编译为模块的设备驱动程序可能内置别名。别名在 `modinfo` 程序的输出中可见，通常与模块支持的设备标识符有关。例如，`snd-pcm` 支持厂商 ID 为 0x1319 设备 ID 为 0x0801 的设备，其别名为 `pci:v00001319d00000081sdevbc4sc010`。对于大多数设备，内核通过 `sysfs` 导出设备的别名。例如 `/sys/bus/pci/devices/0000:0d:0d.0/modalias` 可能包含字符串 `pci:v00001319d00001319sdevbc4sc010`。`udev` 提供的默认规则将调用 `/sbin/modprobe`，并将 `MODALIAS` 事件名称作为 `sysfs` 中模块文件的内容，从而加载所有别名匹配此通配符扩展的模块。
 
-
-
-
-
 # Linux From Scratch - 版本 7.1
 
 在示例中，这意味着在 `snd-fm801` 中，如果可用，过时的（且不需要的）`forte` 驱动将被加载。请参见下文防止加载不需要的驱动的方法。
@@ -7914,6 +7378,8 @@ blacklist forte
 
 ## 7.4.3.4. `udev` 错误地创建了设备或创建错误的符号链接
 
+
+
 这通常发生在规则意外匹配到设备时。例如，一个编写不当的规则可能会根据厂商同时匹配 SCSI 磁盘（符合预期）和相应的 SCSI 通用设备（错误匹配）。请借助 `udevadm info` 命令找到引起冲突的规则并使其更加具体。
 
 ### 7.4.3.5. `udev` 规则运行不可靠
@@ -7935,7 +7401,9 @@ blacklist forte
 在以下网站可以获得额外的帮助文档：
 
 - devdev 的用户空间实现 http://www.koah.com/linux/tools/ols_2003_udev_paper/Reprint-Koah-Hartman-OLS2003.pdf
+
 - 文件系统映射 http://www.kernel.org/pub/kernel/people/machel/doc/papers/ols-2005/machel.pdf
+
 - 进一步阅读指南 http://www.kernel.org/pub/linux/utils/kernel/hotplug/udev.html
 
 ## 7.5. 为设备创建自定义符号链接
@@ -7949,13 +7417,10 @@ blacklist forte
 如果你预计物理路径会发生变化（例如你可能会插入不同的端口），那么你应该使用 "by-path" 模式。相反，如果你需要符号链接保持稳定，则应该使用 "by-id" 模式。
 
 - **重要**
+
 外部设备（例如 USB 连接的 CD 驱动器）不应使用 by-path 持久化，因为每次设备插入新端口时，其物理路径都会发生变化。如果你编写通过物理路径识别设备的 Udev 规则，所有连接设备都会出现这个问题。
 
-
-
-
-
-## 7.5.2. 处理重复设备
+### 7.5.2. 处理重复设备
 
 如第 7.4 节“LFS 系统上的设备和模块处理”所解释的，具有相同功能的设备在 `/dev` 中出现的顺序本质上是随机的。例如，如果你有一个 USB 摄像头和一个电视调谐器，有时 `/dev/video0` 指向摄像头而 `/dev/video1` 指向调谐器，有时在重启后顺序会反过来。对于声卡和网卡以外的所有硬件类，这都可以通过创建 udev 规则来实现持久化符号链接来解决。网卡的情况在第 7.2 节“通用网络配置”中单独介绍，声卡配置可以在 BLFS 中找到。
 
@@ -7981,6 +7446,7 @@ EOF
 LFS-Bootscripts 包包含一组在启动/关机时启动/停止 LFS 系统的脚本。
 
 预计编译时间：少于 0.1 SBU
+
 所需的磁盘空间：260 KB
 
 ### 7.6.1. 安装 LFS-Bootscripts
@@ -7994,32 +7460,55 @@ make install
 ### 7.6.2. LFS-Bootscripts 的内容
 
 - 安装的脚本：checkfs, cleanfs, console, functions, halt, ifdown, ifup, localnet, modules, mountfs, mountkernfs, network, rc, reboot, reboots, setclock, static, swapt, syscall, syslog, template, udev, and udev_retry
-- 安装的目录：/etc/rc,/etc/init.d（符号链接）,/etc/sysconfig,/lib/services,/lib/bs（符号链接）
+
+- 安装的目录：`/etc/rc`, `/etc/init.d`（符号链接） , `/etc/sysconfig`, `/lib/services`, `/lib/bs`（符号链接）
 
 # 描述
 
 - checkfs：在挂载文件系统之前检查其完整性（日志文件和网络文件系统除外）
-- cleanfs：移除重启之间不应保留的文件，例如 `/var/run/` 和 `/var/lock/` 中的文件；重新创建 `/var/run/utmp` 并移除可能存在的 `/etc/login,/fastboot, 和forceck
+
+- cleanfs：移除重启之间不应保留的文件，例如 `/var/run/` 和 `/var/lock/` 中的文件；重新创建 `/var/run/utmp` 并移除可能存在的 `/etc/login,/fastboot, 和forceck`
+
 - console：为所需的键盘布局加载正确的键位表；它还设置了屏幕字体
+
 - functions：包含常用函数，例如错误和状态检查，供多个启动脚本使用
+
 - halt：停止系统
+
 - ifdown：停止网络设备
+
 - ifup：初始化网络设备
+
 - localnet：设置系统的主机名和本地回环设备
+
 - modules：加载 `/etc/sysconfig/modules` 中列出的内核模块，并使用相同的参数
+
 - mountfs：挂载所有文件系统，标记为 noauto 或基于网络的文件系统除外
+
 - mountkernfs：挂载虚拟内核文件系统，例如 proc
+
 - network：设置网络接口（如网卡）并设置默认网关（适用）
+
 - rc：主级控制脚本；它负责逐个运行所有其他启动脚本，运行顺序由处理的符号链接名称决定
+
 - reboot：重启系统
+
 - sendsignal：确保在系统重启或停止之前每个进程都已终止
+
 - setclock：如果硬件时钟未设置为 UTC 时间，将内核时钟重置为本地时间
+
 - static：提供为网络接口分配静态网协议 (IP) 地址所需的功能
+
 - swap：启用和禁用交换文件和分区
+
 - sysctl：如果存在 `/etc/sysctl.conf` 文件，将系统配置值加载到运行的内核中
+
 - syslogd：启动和停止系统及内核日志守护进程
+
 - template：用于为其他守护进程创建自定义启动脚本的模板
+
 - udev：准备 `/dev` 目录并启动 Udev
+
 - udev_retry：重试失败的 udev 事件，并在需要时生成的规则文件复制到 `/etc/udev/rules.d`
 
 ## 7.7. 这些启动脚本是如何工作的？
@@ -8029,11 +7518,17 @@ Linux 使用名为 SysInit 的特殊启动机制，它基于运行级别（run-l
 SysInit（从现在起称为 "init"）使用运行级别方案工作。共有 0 到 6 7 个运行级别（实际上有更多运行级别，但它们用于特殊情况且通常不使用，详情请见 `init (8)`），每一个级别都对应于计算机启动时应该执行的操作。默认运行级别是 3。以下是不同运行级别的描述：
 
 - 0：停止计算机
+
 - 1：单用户模式
+
 - 2：无网络的多用户模式
+
 - 3：带网络的多用户模式
+
 - 4：留作自定义，否则与 3 相同
+
 - 5：与 4 相同，通常用于 GUI（如 X 的 xdm 或 KDE 的 kdm）
+
 - 6：重启计算机
 
 ### 7.7.1. 配置 Sysinit
@@ -8080,9 +7575,13 @@ EOF
 这些是参数脚本执行的操作描述：
 
 - start：启动服务。
+
 - stop：停止服务。
+
 - restart：停止服务然后重新启动。
+
 - reload：更新服务的配置。这在服务的配置文件被修改后使用，此时不需要重启服务。
+
 - status：告知服务是否正在运行以及 PID 是什么。
 
 可以随意修改启动过程（毕竟这是你自己的 LFS 系统）。这里提供的文件是如何操作的示例。
@@ -8096,9 +7595,6 @@ EOF
 ```
 echo "HOSTNAME=lfs" > /etc/sysconfig/network
 ```
-
-
-
 
 Linux From Scratch - 版本 7.1
 
@@ -8132,6 +7628,7 @@ EOF
 关于如何在 LFS 中处理时间的良好提示，可以在 http://linuxfromscratch.org/hints/downloads/files/time.txt 找到。它解释了时区、UTC 和 TZ 环境变量等问题。
 
 > 注意
+
 > `CLOCKPARAMS` 和 `UTC` 参数也可以在 `/etc/sysconfig/rc.site` 文件中进行设置。
 
 ### 7.10. 配置 Linux 控制台
@@ -8145,26 +7642,34 @@ Linux From Scratch - 7.1
 `/etc/sysconfig/console` 文件应包含形如 `VARIABLE="value"` 格式的行。这些变量是可以识别的：
 
 - LOGLEVEL
+
 此变量设置由 **dmesg** 指定输出到控制台的内核消息日志级别。有效级别从 "0"（无消息）到 "8"。
 
 - KEYMAP
+
 此变量指定 **loadkeys** 程序的参数，通常是需要加载的键映射名称，例如 "us104"。如果未设置此变量，启动脚本将不会运行 **loadkeys** 程序，并将使用默认的内核键映射。
 
 - KEYMAP_CORRECTIONS
+
 此（未使用）变量指定第二次调用 **loadkeys** 程序的参数。如果默认键映射不完全满意并需要进行微调，可以使用此变量。
 
 - FONT
-此变量指定 **setfont** 程序的参数。通常，它包括 "-m" 和要加载的应用程序字符映射。例如，为了加载 "lat16" 配合 "8859-1" 字符映射（在美国适用），将其设置为 "lat16 -m 8859-1"。在 UTF-8 模式下，内核使用应用程序字符映射将键映射中的 8 位代码转换为 UTF-8，因此 "-m" 参数应设置为组合代码的编码。
 
-- UNICODE
-将此变量设置为 "1"、yes" 或 "true" 以将控制台置 UTF-8 模式。这在基于 UTF-8 的本地化中很有用，否则会有害。
 
-- LEGACY_CHARSET
-对于许多键盘布局，Kbd 路径下没有 Unicode KEYMAP。如果将此变量设置为非 UTF-8 键映射的编码，**console** 启动脚本将动态键映射转换为 UTF-8。
+
+此变量指定 `setfont` 程序的参数。通常，它包括 `"-m"` 和要加载的应用程序字符映射。例如，为了加载 `"lat16"` 配合 `"8859-1"` 字符映射（在美国适用），将其设置为 `"lat16 -m 8859-1"`。在 UTF-8 模式下，内核使用应用程序字符映射将键映射中的 8 位代码转换为 UTF-8，因此 `"-m"` 参数应设置为组合代码的编码。
+
+### UNICODE
+
+将此变量设置为 `"1"`、`yes` 或 `true` 以将控制台置 UTF-8 模式。这在基于 UTF-8 的本地化中很有用，否则会有害。
+
+### LEGACY_CHARSET
+
+对于许多键盘布局，`Kbd` 路径下没有 Unicode `KEYMAP`。如果将此变量设置为非 UTF-8 键映射的编码，`console` 启动脚本将动态键映射转换为 UTF-8。
 
 一些示例：
 
-- 对于非 Unicode 设置，通常只需要 KEYMAP 和 FONT 变量。例如，对于波兰系统，将使用：
+对于非 Unicode 设置，通常只需要 `KEYMAP` 和 `FONT` 变量。例如，对于波兰系统，将使用：
 
 ```
 cat /etc/sysconfig/console << "EOF"
@@ -8205,17 +7710,17 @@ FONT="LatArCyrHeb-16"
 EOF
 ```
 
-由于在前一个示例中使用了 512 形的 LatArCyrHeb-16 字体，除非使用 framebuffer，否则 Linux 控制台不再提供彩色。如果人们在没有 framebuffer 的情况下想要彩色以及非语言字符，仍然可以使用特定语言的 256 字符字体，如下所示：
+由于在前一个示例中使用了 512 形的 `LatArCyrHeb-16` 字体，除非使用 framebuffer，否则 Linux 控制台不再提供彩色。如果人们在没有 framebuffer 的情况下想要彩色以及非语言字符，仍然可以使用特定语言的 256 字符字体，如下所示：
 
 ```
 cat > /etc/sysconfig/console << "EOF"
-# Begin /sysconfig/console
+# Begin /etc/sysconfig/console
 
 UNICODE="1"
 KEYMAP="bg_bds-utf8"
 FONT="cyr-sun-16"
 
-# End /sysconfig/console
+# End /etc/sysconfig/console
 EOF
 ```
 
@@ -8232,21 +7737,21 @@ KEYMAP_CORRECTIONS=euro2
 LEGACY_CHARSET=iso-8859-15
 FONT=LatArCyrHeb-16 -m 8859-15
 
-# End /sysconfig/console
+# End /etc/sysconfig/console
 EOF
 ```
 
-- 某些键映射具有死键（即其本身不产生字符，例如默认键映射中的“按下 Ctrl+A 获取 Ä”）。Linux-3.2.6 仅在源字符不是多字节时才解释键映射中的死键和组合规则。这种缺陷不影响欧洲语言的键映射，因为有针对未分配 ASCII 字符的变符号，或者两个 ASCII 字符组合在一起。然而，在 UTF-8 模式下这是一个问题，例如希腊语，有时需要在字母 "alpha" 上加上变符号。解决方案是避免使用 UTF-8 或安装具有此限制的系统。
+某些键映射具有死键（即其本身不产生字符，例如默认键映射中的“按下 Ctrl+A 获取 Ä”）。`Linux-3.2.6` 仅在源字符不是多字节时才解释键映射中的死键和组合规则。这种缺陷不影响欧洲语言的键映射，因为有针对未分配 ASCII 字符的变符号，或者两个 ASCII 字符组合在一起。然而，在 UTF-8 模式下这是一个问题，例如希腊语，有时需要在字母 `"alpha"` 上加上变符号。解决方案是避免使用 UTF-8 或安装具有此限制的系统。
 
-- 对于中文、韩语和其他某些语言，Linux 控制台无法配置为显示所需的字符。需要此类语言的用户应该安装 X Windows 系统、涵盖必要字符范围的字体以及正确的方法（例如 SCIM，它支持多种语言）。
+对于中文、韩语和其他某些语言，Linux 控制台无法配置为显示所需的字符。需要此类语言的用户应该安装 X Windows 系统、涵盖必要字符范围的字体以及正确的方法（例如 `SCIM`，它支持多种语言）。
 
-# 注意
+## 注意
 
 > `/etc/sysconfig/console` 文件只控制 Linux 控制台的本地化。它与在 X Windows 系统中设置正确的键盘布局和终端字体、ssh 会话或串行控制台无关。在这些情况下，上述列表项提到的限制可以为你提供帮助。
 
-## 7.11. 配置 syslog 脚本
+### 7.11. 配置 syslog 脚本
 
-使用 `-m` 选项调用的 syslog 程序默认每 20 分钟写入一次文件。此选项关闭了周期性时间标记。如果你想记录周期性时间标记，请编辑 `/etc/sysconfig/rc.site` 并将变量 `SYSLOG_PARMS` 设置所需的值。例如，删除所有参数，将变量设置为空值：
+使用 `-m` 选项调用的 `syslog` 程序默认每 20 分钟写入一次文件。此选项关闭了周期性时间标记。如果你想记录周期性时间标记，请编辑 `/etc/sysconfig/rc.site` 并将变量 `SYSLOG_PARMS` 设置所需的值。例如，删除所有参数，将变量设置为空值：
 
 ```
 SYSLOG_PARMS=-
@@ -8256,12 +7761,9 @@ SYSLOG_PARMS=-
 
 ### 7.12. rc.site 文件
 
-可选的 `/etc/sysconfig/rc.site` 文件包含为每个启动脚本自动设置的设置。它可以替代地设置 `/etc/sysconfig/` 目录中 hostname、console 和 clock 文件中指定的值。如果相关变量在这些文件和 `rc.site` 中同时存在，则特定文件的值具有优先级。
+可选的 `/etc/sysconfig/rc.site` 文件包含为每个启动脚本自动设置的设置。它可以替代地设置 `/etc/sysconfig/` 目录中 `hostname`、`console` 和 `clock` 文件中指定的值。如果相关变量在这些文件和 `rc.site` 中同时存在，则特定文件的值具有优先级。
 
-
-
-
-rc.site 还包含可以自定义启动过程其他层面的参数。设置 `IMPROMPT` 变量将启用对启动脚本的选择性运行。其他选项在文件中描述。该文件的默认版本如下：
+`rc.site` 还包含可以自定义启动过程其他层面的参数。设置 `IMPROMPT` 变量将启用对启动脚本的选择性运行。其他选项在文件中描述。该文件的默认版本如下：
 
 ```bash
 # rc.site
@@ -8291,57 +7793,79 @@ rc.site 还包含可以自定义启动过程其他层面的参数。设置 `IMPR
 #WARNING="\\033[1;33m" # 黄色
 ```
 
-# 使用彩色前缀
-如果在此指定这些值，将覆盖默认值
-#SUCCESS_PREFIX="${SUCCESS} * ${NORMAL}"
-#FAILURE_PREFIX="${FAILURE} ***** ${NORMAL}"
-#WARNING_PREFIX="${WARNING} **** ${NORMAL}"
+#### 使用彩色前缀
 
-# 交互式启动
-#IMPROMPT="yes" # 是否显示交互式启动提示
-#itime="3" # 显示提示的时间（秒）
+如果在此指定这些值，将覆盖默认值
+
+`#SUCCESS_PREFIX="${SUCCESS} * ${NORMAL}"`
+
+`#FAILURE_PREFIX="${FAILURE} ***** ${NORMAL}"`
+
+`#WARNING_PREFIX="${WARNING} **** ${NORMAL}"`
+
+#### 交互式启动
+
+`#IMPROMPT="yes"` # 是否显示交互式启动提示
+
+`#itime="3"` # 显示提示的时间（秒）
 
 # 发行版欢迎字符串的总长度，不包含转义码
-#wlen=$(echo "Welcome to ${DISTRO}" | wc -c )
-#welcome_message="Welcome to ${INFO}${DISTRO}${NORMAL}"
+
+`#wlen=$(echo "Welcome to ${DISTRO}" | wc -c )`
+
+`#welcome_message="Welcome to ${INFO}${DISTRO}${NORMAL}"`
 
 # 交互字符串字符串的总长度，不包含转义码
 
-#ilen=$(echo "Press 'I' to enter interactive startup" | wc -c )
-#i_message="Press '${FAILURE}$${NORMAL}'` to enter interactive startup
+`#ilen=$(echo "Press 'I' to enter interactive startup" | wc -c )`
+
+`#i_message="Press '${FAILURE}$${NORMAL}'` to enter interactive startup`
 
 # 设置脚本在重启时跳过文件系统检查
-#FASTBOOT=yes
+
+`#FASTBOOT=yes`
 
 # 跳过读取控制台
-#HEADLESS=yes
+
+`#HEADLESS=yes`
 
 # 跳过清理 /tmp
-#SKIPTMPCLEAN=yes
+
+`#SKIPTMPCLEAN=yes`
 
 # 用于 setclock
-#UTC=1
-#CLOCKPARAMS=
+
+`#UTC=1`
+
+`#CLOCKPARAMS=`
 
 # 用于 consolelog
-#LOGLEVEL=5
+
+`#LOGLEVEL=5`
 
 # 用于网络
-#HOSTNAME=mylfs
+
+`#HOSTNAME=mylfs`
 
 # 退出时 TERM 和 KILL 信号之间的延迟
-#KILLDELAY=3
+
+`#KILLDELAY=3`
 
 # 可选的 sysloglog 参数
-#SYSLOGD_PARMS="-m 0"
+
+`#SYSLOGD_PARMS="-m 0"`
 
 # 控制台参数
-#UNICODE=1
-#KEYMAP="de-latin1"
-#KEYMAP_CORRECTIONS="euro2"
-#FONT="lat0-16 -m 8859-15"
-#LEGACY_CHARSET="
-```
+
+`#UNICODE=1`
+
+`#KEYMAP="de-latin1"`
+
+`#KEYMAP_CORRECTIONS="euro2"`
+
+`#FONT="lat0-16 -m 8859-15"`
+
+`#LEGACY_CHARSET="`
 
 ### 7.13. Bash 启动文件
 
@@ -8353,7 +7877,7 @@ rc.site 还包含可以自定义启动过程其他层面的参数。设置 `IMPR
 
 当 shell 作为交互式登录 shell 被调用时，会读取 `/etc/profile` 和 `~/.bash_profile`。
 
-bash `/etc/profile` 设置了某些对本地语言支持必要的环境变量。正确设置这些变量将导致：
+`bash` `/etc/profile` 设置了某些对本地语言支持必要的环境变量。正确设置这些变量将导致：
 
 - 程序的输出被翻译为本地语言
 - 将字符正确分类为字母、数字和其他类别。这对于 bash 在非英语区域语言设置中正确接受命令行中的非 ASCII 字符是必要的
@@ -8361,7 +7885,7 @@ bash `/etc/profile` 设置了某些对本地语言支持必要的环境变量。
 - 适当的默认排序大小
 - 金额、时间和日期值的正确格式化
 
-将 `<ll>` 替换为所需语言的两个字母代码（例如 "en"），并将 `<CC>` 替换为相应国家的两个字母代码（例如 "GB"），应替换为所选区域的标准字符。可能存在可选的修饰符（如 "@euro"）。
+将 `<ll>` 替换为所需语言的两个字母代码（例如 `"en"`），并将 `<CC>` 替换为相应国家的两个字母代码（例如 `"GB"`），应替换为所选区域的标准字符。可能存在可选的修饰符（如 `"@euro"`）。
 
 运行以下命令可以获取 Glibc 支持的所有 locale 列表：
 
@@ -8369,12 +7893,9 @@ bash `/etc/profile` 设置了某些对本地语言支持必要的环境变量。
 locale -a
 ```
 
-字符映射表（Charmaps）有多种名称（例如，“ISO-8859-1" 也称为 "iso8859-1" 和 "iso88591"）。某些应用程序无法正确处理各种同义词（例如，要求 "UTF-8" 必须写为 "UTF-8" 而不是 "utf8"），因此为特定 locale 选择标准名称是最安全的。要确定特定 locale 的标准名称。
+字符映射表（Charmaps）有多种名称（例如，`"ISO-8859-1"` 也称为 `"iso8859-1"` 和 `"iso88591"`）。某些应用程序无法正确处理各种同义词（例如，要求 `"UTF-8"` 必须写为 `"UTF-8"` 而不是 `"utf8"`），因此为特定 locale 选择标准名称是最安全的。要确定特定 locale 的标准名称。
 
-
-
-
-# Linux From Scratch - 版本 7.1
+## Linux From Scratch - 版本 7.1
 
 以下是一个通用的全局 `inputrc`，并附有解释各种选项作用的注释。注意，注释不能与命令在同一行。使用以下命令创建文件：
 
@@ -8382,28 +7903,21 @@ locale -a
 cat /etc/inputrc << "EOF"
 # Begin /etc/inputrc
 # Modified by Chris Lynn <roryo@roryo.dynup.net>
-
 # 允许命令提示符换到下一行
 set horizontal-scroll-mode Off
-
 # 启用 8 位输入
 set meta-flag On
 set input-meta On
-
 # 关闭第8 位的剥离
 set convert-meta Off
-
 # 保留第8位用于显示
 set output-meta On
-
 # 无、可见或听觉
 set bell-style none
-
 # 以下所有内容将第一个参数包含的转义序列
 # 映射到 readline 特有功能
 "\ed": backward-word
 "\oc": forward-word
-
 # 适用于 Linux 控制台
 "\e[1-": beginning-of-line
 "\e[4-": end-of-line
@@ -8411,15 +7925,12 @@ set bell-style none
 "\e[6-": end-of-history
 "\e[3-": delete-char
 "\e[2-": quoted-insert
-
 # 适用于 xterm
 "\eOH": beginning-of-line
 "\EOF": end-of-line
-
 # 适用于 Konsole
 "\e[H-": beginning-of-line
 "\e[F-": end-of-line
-
 # End /etc/inputrc
 EOF
 ```
@@ -8449,15 +7960,15 @@ tdevmps     /dev    devmps mode=0755,nosid 0 0
 EOF
 ```
 
-将 `<xxx>`、`<yyy>` 和 `<fff>` 替换为适用于系统的值，例如 hda2、hda5 和 ext3。关于该文件中六字段的详细信息，请参阅 **man 5 fstab**。
+将 `<xxx>`、`<yyy>` 和 `<fff>` 替换为适用于系统的值，例如 `hda2`、`hda5` 和 `ext3`。关于该文件中六字段的详细信息，请参阅 `man 5 fstab`。
 
-源自 MS-DOS 或 Windows 文件系统（即：vfat, nfs, smbfs, cifs, iso9660, udf）需要 "ioctl" 挂载选项，以便名称中的非 ASCII 字符能被正确解释。该选项的值与你的区域设置字符集相同，并以内核可以理解的方式进行了调整。如果相关的字符集定义（在文件系统 -> 原生语言支持下找到）已编译进内核或作为模块构建，则此方法有效。vfat 和 smbfs 文件系统还需要 "codename" 选项。它应该被设置为你国家 MS-DOS 下使用的代码页。要挂载 USB 闪存器，用户需要在 `/etc/fstab` 中其挂载点的选项部分包含以下内容：
+源自 MS-DOS 或 Windows 文件系统（即：`vfat`, `nfs`, `smbfs`, `cifs`, `iso9660`, `udf`）需要 `"ioctl"` 挂载选项，以便名称中的非 ASCII 字符能被正确解释。该选项的值与你的区域设置字符集相同，并以内核可以理解的方式进行了调整。如果相关的字符集定义（在文件系统 -> 原生语言支持下找到）已编译进内核或作为模块构建，则此方法有效。`vfat` 和 `smbfs` 文件系统还需要 `"codename"` 选项。它应该被设置为你国家 MS-DOS 下使用的代码页。要挂载 USB 闪存器，用户需要在 `/etc/fstab` 中其挂载点的选项部分包含以下内容：
 
 ```bash
 noauto,user,quiet,showexec,iocharset=koi8r, codepage=866
 ```
 
-对于 ru.UTF-8 用户的对应选项为：
+对于 `ru.UTF-8` 用户的对应选项为：
 
 ```bash
 noauto,user,quiet,showexec,iocharset=utf8, codepage=866
@@ -8472,11 +7983,11 @@ FAT: utf8 is not a recommended IO charset for FAT filesystems,
 filesystem will be case sensitive!
 ```
 
-此负面建议应该被忽略，因为 "iocharset" 选项的其他值都会导致 UTF-8 区域设置下的文件名显示错误。
+此负面建议应该被忽略，因为 `"iocharset"` 选项的其他值都会导致 UTF-8 区域设置下的文件名显示错误。
 
-在内核配置期间，也可以为某些文件系统指定默认和字符集值。相关参数名为 "Default NLS Option" (CONFIG_NLS_DEFAULT)、"Default Remote NLS Option" (CONFIG_SMB_DEFAULT)、"Default codepage for FAT" (CONFIG_FAT_DEFAULT_CODEPAGE) 和 "Default charset for FAT" (CONFIG_FAT_DEFAULT_IOCHARSET)。在内核编译时无法为 nfs 文件系统指定这些设置。
+在内核配置期间，也可以为某些文件系统指定默认和字符集值。相关参数名为 `"Default NLS Option"` (`CONFIG_NLS_DEFAULT`)、`"Default Remote NLS Option"` (`CONFIG_SMB_DEFAULT`)、`"Default codepage for FAT"` (`CONFIG_FAT_DEFAULT_CODEPAGE`) 和 `"Default charset for FAT"` (`CONFIG_FAT_DEFAULT_IOCHARSET`)。在内核编译时无法为 `nfs` 文件系统指定这些设置。
 
-对于某些硬盘类型，可以使 ext3 文件系统在掉电时可靠。要做到这一点，请在 /etc/fstab 中相应的条目中添加 `barrier=1` 挂载选项。要检查磁盘驱动是否支持此选项，请在相应的磁盘上运行 `hdparm -I`。例如，如果：
+对于某些硬盘类型，可以使 `ext3` 文件系统在掉电时可靠。要做到这一点，请在 `/etc/fstab` 中相应的条目中添加 `barrier=1` 挂载选项。要检查磁盘驱动是否支持此选项，请在相应的磁盘上运行 `hdparm -I`。例如，如果：
 
 ```bash
 hdparm -I /dev/sda
@@ -8484,23 +7995,25 @@ hdparm -I /dev/sda
 
 ### 8.3. 配置内核
 
-对于某些硬盘类型，可以使 ext3 文件系统在掉电时可靠。要做到这一点，请在 /etc/fstab 中相应的条目中添加 `barrier=1` 挂载选项。要检查磁盘驱动是否支持此选项，请在相应的磁盘上运行 `hdparm -I`。例如，如果：
+对于某些硬盘类型，可以使 `ext3` 文件系统在掉电时可靠。要做到这一点，请在 `/etc/fstab` 中相应的条目中添加 `barrier=1` 挂载选项。要检查磁盘驱动是否支持此选项，请在相应的磁盘上运行 `hdparm -I`。例如，如果：
 
 ```bash
 hdparm -I /dev/sda
 ```
 
-### 8.3.1. 准备内核
+#### 8.3.1. 准备内核
 
-对于某些硬盘类型，可以使 ext3 文件系统在掉电时可靠。要做到这一点，请在 /etc/fstab 中相应的条目中添加 `barrier=1` 挂载选项。要检查磁盘驱动是否支持此选项，请在相应的磁盘上运行 `hdparm -I`。例如，如果：
+对于某些硬盘类型，可以使 `ext3` 文件系统在掉电时可靠。要做到这一点，请在 `/etc/fstab` 中相应的条目中添加 `barrier=1` 挂载选项。要检查磁盘驱动是否支持此选项，请在相应的磁盘上运行 `hdparm -I`。例如，如果：
 
 ```bash
 hdparm -I /dev/sda
 ```
+
+
 
 ### 8.3.2. 编译内核
 
-对于某些硬盘类型，可以使 ext3 文件系统在掉电时可靠。要做到这一点，请在 /etc/fstab 中相应的条目中添加 `barrier=1` 挂载选项。要检查磁盘驱动是否支持此选项，请在相应的磁盘上运行 `hdparm -I`。例如，如果：
+对于某些硬盘类型，可以使 ext3 文件系统在掉电时可靠。要做到这一点，请在 `/etc/fstab` 中相应的条目中添加 `barrier=1` 挂载选项。要检查磁盘驱动是否支持此选项，请在相应的磁盘上运行 `hdparm -I`。例如，如果：
 
 ```bash
 hdparm -I /dev/sda
@@ -8508,15 +8021,11 @@ hdparm -I /dev/sda
 
 ### 8.3.3. 安装内核
 
-对于某些硬盘类型，可以使 ext3 文件系统在掉电时可靠。要做到这一点，请在 /etc/fstab 中相应的条目中添加 `barrier=1` 挂载选项。要检查磁盘驱动是否支持此选项，请在相应的磁盘上运行 `hdparm -I`。例如，如果：
+对于某些硬盘类型，可以使 ext3 文件系统在掉电时可靠。要做到这一点，请在 `/etc/fstab` 中相应的条目中添加 `barrier=1` 挂载选项。要检查磁盘驱动是否支持此选项，请在相应的磁盘上运行 `hdparm -I`。例如，如果：
 
 ```bash
 hdparm -I /dev/sda
 ```
-
-
-
-
 
 # 警告
 
@@ -8524,34 +8033,38 @@ hdparm -I /dev/sda
 
 ## 8.3.2. 配置 Linux 模块加载顺序
 
-需要创建 `/etc/modprobe.d/usb.conf` 文件，以便 USB 驱动程序（ehci_hcd、ohci_hcd 和 uhci_hcd）在构建为模块后，能够按照正确的顺序加载。ehci_hcd 需要在 uhci_hcd 之前加载，以避免在启动时输出警告。
+需要创建 `/etc/modprobe.d/usb.conf` 文件，以便 USB 驱动程序（`ehci_hcd`、`ohci_hcd` 和 `uhci_hcd`）在构建为模块后，能够按照正确的顺序加载。`ehci_hcd` 需要在 `uhci_hcd` 之前加载，以避免在启动时输出警告。
 
 运行以下命令创建一个新文件 `/etc/modprobe.d/usb.conf`：
 
 ```
 install -v -m755 -d /etc/modprobe.d
+
 cat /etc/modprobe.d/usb.conf << "EOF"
+
 # Begin /etc/modprobe.d/usb.conf
 
 install ohci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i ohci_hcd ; true
+
 install uhci_hcd /sbin/modprobe ehci_hcd ; /sbin/modprobe -i uhci_hcd ; true
 
 # End /etc/modprobe.d/usb.conf
+
 EOF
 ```
 
 ## 8.3.3. Linux 的内容
 
-- 安装的文件：config-3.2.6、vmlinux-3.2.6-lfs-7.1-3.2.6 和 System.map-3.2.6
-- 安装的目录：/lib/modules、/usr/share/doc/linux-3.2.6
+- 安装的文件：`config-3.2.6`、`vmlinux-3.2.6-lfs-7.1-3.2.6` 和 `System.map-3.2.6`
+- 安装的目录：`/lib/modules`、`/usr/share/doc/linux-3.2.6`
 
 ## 简描述
 
-- config-3.2.6-linux-3.2.6-lfs-7.1
+- `config-3.2.6-linux-3.2.6-lfs-7.1`
 
 包含了内核的所有配置选项。当电脑启动时，内核是操作系统加载的第一部分。它检测并初始化计算机硬件的所有组件，然后将这些组件作为文件树提供给软件，并将单核 CPU 转换为可以同时运行数十个程序（看似同时运行）的多任务机器。
 
-- System.map-3.2.6
+- `System.map-3.2.6`
 
 地址和符号的列表；它映射了内核中所有函数和数据结构的入口点和地址。
 
@@ -8563,22 +8076,25 @@ EOF
 
 错误地配置 GRUB 会导致你的系统在没有 CD-ROM 等备用启动设备的情况下无法运行。本节对于启动你的 LFS 系统不是必须的。你可能只是想修改当前的引导程序，例如 GRUB-Legacy、GRUB2 或 LILO。
 
-确保已准备好紧急启动设备，以便在计算机变得不可用（无法启动）时“抢救”计算机。如果你还没有启动设备，可以创建一个。为了让下面的步骤生效，你需要跳到 BLFS 阶段并安装 xriso。
+确保已准备好紧急启动设备，以便在计算机变得不可用（无法启动）时“抢救”计算机。如果你还没有启动设备，可以创建一个。为了让下面的步骤生效，你需要跳到 BLFS 阶段并安装 `xriso`。
 
 ```
 cd /tmp &&
+
 grub-mkrescue --output=grub-img.iso &&
+
 xorriso -as cdrecord -v dev=/dev/cdrw blank=as needed grub-img.iso
 ```
 
 ### 8.4.2. GRUB 命名规范
 
-GRUB 使用形式为 (hdn,m) 的结构对设备和分区进行命名，其中 n 是硬盘编号，m 是分区号。硬盘编号从零开始，但普通分号从一开始，扩展分区从五开始。请注意，这与早期版本不同，早期版本两个数字都从零开始。例如，分区 da1 是 (hd0,1)，sdb3 是 (hd1,3)。相比之下，GRUB 不认为 CD-ROM 设备是硬盘。例如，在 hd0 上使用 CD 在 hdc 上使用第二块硬盘，那么第二块硬盘仍是 (hd1)。
+GRUB 使用形式为 `(hdn,m)` 的结构对设备和分区进行命名，其中 n 是硬盘编号，m 是分区号。硬盘编号从零开始，但普通分号从一开始，扩展分区从五开始。请注意，这与早期版本不同，早期版本两个数字都从零开始。例如，分区 da1 是 `(hd0,1)`，sdb3 是 `(hd1,3)`。相比之下，GRUB 不认为 CD-ROM 设备是硬盘。例如，在 hd0 上使用 CD 在 hdc 上使用第二块硬盘，那么第二块硬盘仍是 `(hd1)`。
 
 你可以通过运行以下命令确定 GRUB 认为你的磁盘设备器什么：
 
 ```
 grub-mkdevemap --device-map=device.map
+
 cat device.map
 ```
 
@@ -8589,7 +8105,7 @@ GRUB 通过向硬盘的第一个物理道写入数据来工作。该区域不属
 启动分区的位置由用户选择，这会影响配置。一个建议是设置一个独立的小分区（建议大小为 100 MB）用于启动信息。这样，每次构建（无论是 LFS 还是某些商业发行版）都可以访问相同的启动文件，并从任何已启动的系统进行构建。如果（你在上一个版本中构建的 Linux 内核）到新分区，你将需要挂载该独立分区，将当前 `/boot/` 目录中的所有文件移动到分区并将其重新挂载为 `/boot`。如果这样做，请记住更新 `/etc/fstab`。
 
 使用 LFS 分区也可以，但多个系统的配置会更困难。
-使用上述信息确定根分区（或如果使用独立分区则为启动分区）的适当描述符。对于以下示例，假设根（或独立启动）分区是 sda2。
+使用上述信息确定根分区（或如果使用独立分区则为启动分区）的适当描述符。对于以下示例，假设根（或独立启动）分区是 `sda2`。
 
 将 GRUB 文件安装到 `/boot/grub` 并设置启动轨道：
 
@@ -8611,15 +8127,23 @@ grub-install /dev/sda
 
 ```
 cat > /boot/grub.cfg << "EOF"
+
 # Begin /boot/grub.cfg
+
 set default=0
+
 set timeout=5
+
 insmod ext2
+
 set root=(hd0,2)
 
 menuentry "GNU/Linux 3.2.6-lfs-7.1" {
+
 	linux vmlinuz-3.2.6-lfs-7.1 root=/dev/sda ro
+
 }
+
 EOF
 ```
 
@@ -8657,9 +8181,13 @@ echo 7.1 > /etc/lfs-release
 logout
 
 umount -v $LFS/dev/pts
+
 umount -v $LFS/dev/shm
+
 umount -v $LFS/dev
+
 umount -v $LFS/proc
+
 umount -v $LFS/sys
 ```
 
@@ -8669,17 +8197,15 @@ umount -v $LFS/sys
 umount -v $LFS
 ```
 
-
-
-
-
 # Linux From Scratch - 版本 7.1
 
 如果创建了多个分区，在卸载主分区之前，请卸载其他分区，如下：
 
 ```
 umount -v $LFS/usr
+
 umount -v $LFS/home
+
 umount -v $LFS
 ```
 
@@ -8688,6 +8214,8 @@ umount -v $LFS
 ```
 shutdown -r now
 ```
+
+
 
 假设 GRUB 引导加载程序已如前所述设置完毕，菜单已设置为自动启动 LFS 7.1。
 当重启完成后，LFS 系统已准备就绪，可以根据你的需要添加更多软件。
@@ -8788,7 +8316,7 @@ shutdown -r now
 - SGR 选择渲染
 - SHA1 安全哈希
 - SMP 对称处理器
-- TLDP  Linux 文档项目
+- TLDP Linux 文档项目
 - TFTP 简易传输协议
 - TLS 线程本地存储
 - UID 用户标识符
@@ -8812,10 +8340,6 @@ shutdown -r now
 - 以及许多其他人员使得了本书成为可能。
 
 ## 翻译者
-
-
-
-
 
 - Alexander E. Patrakov <alexander@linuxfromscratch.org> – LFS 技术文档编写，LFS 国际化编辑，LFS Live CD 维护者
 - Simon Perreault
@@ -9152,10 +8676,6 @@ Man-DB
 可选依赖项：
 无
 
-
-
-
-
 ## iana-Etc
 - 安装依赖于：Coreutils, Gawk 和 Make
 - 测试套件依赖于：无可用的测试套件
@@ -9350,6 +8870,9 @@ Man-DB
 - 测试套件依赖于：无可用的测试套件
 - 必须先安装：无
 
+```bash
+```
+
 
 
 ```bash
@@ -9394,13 +8917,13 @@ return $ret
 # 读取所有本地设置/覆盖
 [ - /etc/sysconfig/rc.site ] && source /etc/sysconfig/rc.site
 
-DISTRO=${DISTRO:-Linux From Scratch}
-DISTRO_CONTACT=${DISTRO_CONTACT:-lfs-dev@linuxfromscratch.org (Registration required)}
-DISTRO_MINI=${DISTRO_MINI:---LFS}
-IPPROMPT=${IPPROMPT:-no}
+`DISTRO=${DISTRO:-Linux From Scratch}`
+`DISTRO_CONTACT=${DISTRO_CONTACT:-lfs-dev@linuxfromscratch.org (Registration required)}`
+`DISTRO_MINI=${DISTRO_MINI:---LFS}`
+`IPPROMPT=${IPPROMPT:-no}`
 
 # 这 3 个信号不会导致我们的脚本退出
-trap "" INT QUIT TSTP
+`trap "" INT QUIT TSTP`
 
 ```bash
 [ "${1}" != "" ] && runlevel=${1}
@@ -9411,13 +8934,13 @@ fi
 
 # Linux Scratch - 版本 7.1
 
-previous=${PRELEVEL}
-[ ${previous} == "" ] && previous=N
+`previous=${PRELEVEL}`
+`[ ${previous} == "" ] && previous=N`
 
 246
 
 ```bash
-MSG="WARNING:\n\n${i} can't be " 
+MSG="WARNING:\n\n${i} can't be "
 MSG="${MSG}executed because it was not "
 MSG="${MSG}not started in the previous "
 MSG="${MSG}runlevel (${previous})."
@@ -9427,16 +8950,13 @@ continue
 
 fi
 
-run ${i} stop
-error_value=$?
-
-if [ "${error_value}" = "0" ]; then print_error_msg; fi
-
+`run ${i} stop`
+`error_value=$?`
+`if [ "${error_value}" = "0" ]; then print_error_msg; fi`
 done
 
-if [ "${previous}" == "N" ]; then export IN_BOOT=1; fi
-
-if [ "${runlevel}" == "6" -a n "${FASTBOOT}" ]; then
+`if [ "${previous}" == "N" ]; then export IN_BOOT=1; fi`
+`if [ "${runlevel}" == "6" -a n "${FASTBOOT}" ]; then`
   touch /fastboot
 fi
 
@@ -9444,27 +8964,24 @@ do
 
 # 在此运行级别下启动所有函数
 for i in $(ls -v /etc/rc.dc/rc${runlevel}/d/S* 2>/dev/null)
-
 do
 
 if [ "${previous}" == "*" ]; then
   suffix=/etc/rc.dc/rc${runlevel}.d/S[0-9]-[0-9]
   stop=/etc/rc.dc/rc${runlevel}.d/K[0-9]$suffix
   prev_start=/etc/rc.dc/rc${previous}.d/S[0-9]-[0-9]$suffix
-
 ```
 
 ```bash
 [ -f "${prev_start}" -a ! -f "${stop}" && continue
 ```
-
 fi
 
 check_script_status
 
 case ${runlevel} in
-0|6)
 
+0|6)
 ```bash
 run ${i} stop
 ;;
@@ -9472,39 +8989,31 @@ run ${i} stop
 run ${i} start
 ;;
 ```
-
 esac
 
 error_value=$?
-
 if [ "${error_value}" != "0" ]; then print_error_msg; fi
-
 done
 
 # 在切换运行级别 S 时存储交互变量，如果不存在则删除
+
 if [ "${runlevel}" == "S" -a "${interactive}" == "i" ]; then
   echo "interactive=$i" > /var/run/interactive
-
 else
-
 ```bash
 rm /var/run/interactive 2>/dev/null
 ```
-
 fi
 
 ```bash
 # 仅在初始启动时拷贝启动日志
 if [ "${previous}" != "${runlevel}" ] && [ "${runlevel}" != "S" ]; then
   cat /var/run/bootlog >> /var/log/boot.log
-
   # 标记启动结束
   echo "----------------" >> /var/log/boot.log
-
   # 删除临时文件
   rm -f /run/var/bootlog 2>/dev/null
 fi
-
 # 结束 rc
 ```
 
@@ -9525,27 +9034,28 @@ fi
 #
 #               该文件应位于 /lib/ls
 ###################################################################################
+```
 
 ## 环境变量设置
 # 为环境设置默认值
-umask 022
-export PATH="/bin:/usr/bin:/usr/sbin"
+`umask 022`
+`export PATH="/bin:/usr/bin:/usr/sbin"`
 
 ## 屏幕尺寸
 # Find当前屏幕尺寸
 if [ -z "${COLUMNS}" ]; then
-  COLUMNS=$(stty size)
-  COLUMNS=${COLUMNS%%,*}
+  `COLUMNS=$(stty size)`
+  `COLUMNS=${COLUMNS%%,*}`
 fi
 
 ## 当使用远程连接（如串口）时，stty size 返回 0
 if [ "${COLUMNS}" = "0" ]; then
-  COLUMNS=80
+  `COLUMNS=80`
 fi
 
 ## 定位测量值
-COL=$((COLUMNS - 8))
-WCOL=$((COLUMNS - 2))
+`COL=$((COLUMNS - 8))`
+`WCOL=$((COLUMNS - 2))`
 # Linux From Scratch - 版本 7.1
 
 ```bash
@@ -9554,10 +9064,14 @@ SET_COL="\033[${COL}G"          # 在 COL 字符处
 SET_WCOL="\033[${WCOL}G"        # 在 WCOL 字符处
 CURS_UP="\033[1A"               # 向上一行，在 0 字符处
 CURS_ZERO="\033[0G"
+```
 
 ## 设置颜色，通过 echo 使用
+
 # 请查看图形渲染下的代码
+
 # 注意：从 8bit 切换到 9bit 字体时，控制台将重新解释 glyphs (1;2)。这不影响 framebuffer。
+
 ```bash
 NORMAL="\033[0m"               # 标准控制台灰色
 SUCCESS="\033[2m"             # 成功为绿色
@@ -9568,37 +9082,52 @@ BRACKET="\033[4m"             # 括号为蓝色
 ```
 
 ## 使用彩色前缀
-SUCCESS_PREFIX="${SUCCESS}*${NORMAL}"
-FAILURE_PREFIX="${FAILURE}*****${NORMAL}"
-WARNING_PREFIX="${WARNING}***${NORMAL}"
 
-SUCCESS_SUFFIX="${BRACKET}${SUCCESS} OK${BRACKET}"
-FAILURE_SUFFIX="${BRACKET}${FAILURE} FAIL${BRACKET}"
-WARNING_SUFFIX="${BRACKET}${WARNING}WARN${BRACKET}"
+`SUCCESS_PREFIX="${SUCCESS}*${NORMAL}"`
+`FAILURE_PREFIX="${FAILURE}*****${NORMAL}"`
+`WARNING_PREFIX="${WARNING}***${NORMAL}"`
+`SUCCESS_SUFFIX="${BRACKET}${SUCCESS} OK${BRACKET}"`
+`FAILURE_SUFFIX="${BRACKET}${FAILURE} FAIL${BRACKET}"`
+`WARNING_SUFFIX="${BRACKET}${WARNING}WARN${BRACKET}"`
 
-BOOTLOG=/run/var/bootlog
-IDELAY=3
+`BOOTLOG=/run/var/bootlog`
+`IDELAY=3`
 
 # 设置任何环境变量
+
 [ - /etc/sysconfig/rc.site
 
 ################################
-# 启动守护进程
-# 用法：start daemon [-f] [-n nicelevel] [-p pidfile] pathname [args...]
-# 目的：作为守护进程运行程序
-# 输入：-f 强制运行程序
-#   -n nicelevel：指定 nice 级别。参见 man(1)。
-#   -p pidfile：使用指定的文件确定 PIDs。
-#   pathname：指定程序的路径
-#   args：传递给程序的额外参数
-# 返回值（由 LSB 退出码定义）：
-#   0 - 程序正在运行或服务正常
-#   1 - 通用或参数过多
-#   2 - 无效或参数过多
-#   5 - 程序未安装
-################################################
-start_daemon() {
 
+# 启动守护进程
+
+# 用法：start daemon [-f] [-n nicelevel] [-p pidfile] pathname [args...]
+
+# 目的：作为守护进程运行程序
+
+# 输入：-f 强制运行程序
+
+#   -n nicelevel：指定 nice 级别。参见 man(1)。
+
+#   -p pidfile：使用指定的文件确定 PIDs。
+
+#   pathname：指定程序的路径
+
+#   args：传递给程序的额外参数
+
+# 返回值（由 LSB 退出码定义）：
+
+#   0 - 程序正在运行或服务正常
+
+#   1 - 通用或参数过多
+
+#   2 - 无效或参数过多
+
+#   5 - 程序未安装
+
+################################################
+
+start_daemon() {
 local force=""
 local nice="0"
 local pidfile=""
@@ -9675,6 +9204,7 @@ esac
 # 执行启动！
 nice -n "${nice}" "${program}"
 #####################################
+
 # killproc() {
 # killproc [-p pidfile] pathname [signal]
 # 用法：向正在运行的进程发送控制信号
@@ -9689,6 +9219,7 @@ nice -n "${nice}" "${program}"
 #   5 - 程序未安装
 #   7 - 程序未运行且提供了信号
 #####################################################
+
 killproc()
 {
   local pidfile
@@ -9696,10 +9227,6 @@ killproc()
   local prefix
   local progname
 ```
-
-
-
-
 
 ```bash
 local signal="-TERM"
@@ -9763,13 +9290,13 @@ fi
 # 仅返回值
 # 记录日志是初始化脚本（或发行版函数）的责任！
 case ${retval} in
+```
 
 ```bash
 0)
     # 程序正常运行
     # 在此处什么都不做，让 killproc 继续
     ;;
-
 1)
     # 程序未运行，但存在无效的 pid 文件
     # 删除 pid 文件
@@ -9781,7 +9308,6 @@ rm -f "${pidfile}"
         return 7
     fi
     ;
-
 3)
     # 程序未运行且不存在 pidfile
     # 只有在没有传递信号时视为成功
@@ -9791,7 +9317,6 @@ rm -f "${pidfile}"
         return 7
     fi
     ;
-
 *)
     # 状态值返回的其他内容不应被解释，
     # 并作为未指定的错误返回
@@ -9804,6 +9329,7 @@ esac
 # 为退出信号和控制信号执行不同的操作
 check_sig_type "${signal}"
 if [ "$?" -eq "0" ]; then # 信号用于终止程序
+```
 
 ```bash
 # 考虑到空 pidlist [pid 文件存在且
@@ -9812,16 +9338,21 @@ if [ "${pidlist}" != "" ]; then
     # 杀死 pid 列表
     for pid in ${pidlist}; do
         kill -0 "${pid}" 2 > /dev/null
+```
 
-        if [ "${$?" -ne "0" ]; then
-            # 进程已死，继续并假设一切正常
-            continue
-    fi
+
+
+```bash
+if [ "${$?}" -ne "0" ]; then
+    # 进程已死，继续并假设一切正常
+    continue
+fi
 ```
 
 ```bash
 else
 kill "${signal}" "${pid}" 2 > /dev/null
+```
 
 ```bash
 # 等待最多 ${delay}/10 秒直到 "${pid}" 终止
@@ -9852,10 +9383,8 @@ else
 sleep 1
 kill -0 "${pid}" 2 >/dev/null && return 1
 fi
-
 fi
 done
-
 ```
 
 ```bash
@@ -9878,6 +9407,7 @@ fi
 ```bash
 # 对于不期望程序退出的信号，只需让
 # kill 执行其工作，并评估 kill 的返回值
+```
 
 ```bash
 else # check_sig_type - 信号未用于终止程序
@@ -9891,7 +9421,6 @@ done
 ####################################################################
 # pidofproc [-p pidfile] pathname
 # 用法：pidofproc -p pidfile pathname
-
 # Linux From Scratch 版本：1
 
 ```bash
@@ -9914,7 +9443,6 @@ pidfile() {
   local pidname
   local existstatus
   local exitstatus="2"
-
   # 参数
   while [ $# -gt 0 ]; do
     case $1 in
@@ -9931,7 +9459,6 @@ pidfile() {
         shift 2;;
     esac
   done
-
   # 如果未指定 PID 文件，尝试查找
   if [ -z "$pidfile" ]; then
     # 获取程序的文件名
@@ -9942,19 +9469,17 @@ pidfile() {
       pidname="$(echo "$program" | sed 's////').pid"
     fi
   fi
-
   # 如果同名的 PID 文件存在
   if [ -e "/var/run/$program.pid" ]; then
     pidfile="/var/run/$program.pid"
   fi
 }
-
 # Linux From Scratch - 版本 7.1
+```
 
 ```bash
 # 如果设置并存在 PID 文件，则使用它。
 if [ -n "${pidfile}" -a -f "${pidfile}" ]; then
-
   # 使用 pidfile 第一行的值
   pidlist=$(head -n 1 "${pidfile}")
   # 可选写入日志文件
@@ -9963,18 +9488,15 @@ else
   # 使用 pidof
   pidlist=$(pidof "${program}")
 fi
-
 # 检查列出的 PID 是否都在运行。
 for pid in ${pidlist}; do
   kill -0 ${pid} > /dev/null
-
   if [ "$?" -eq 0 ]; then
     pids="${pids}${pid}"
   else
     exitstatus="1"
   fi
 done
-
 if [ -z "${pids}" -a -f "${pidfile}" ]; then
   return 3
 else
@@ -10000,12 +9522,10 @@ fi
 statusproc() {
   local pidfile
   local pidlist
-
   if [ $# -eq 0 ]; then
     echo "Usage: statusproc [-p pidfile] program"
     exit 1
   fi
-
 # 处理参数
 while true; do
 case "${1}" in
@@ -10023,18 +9543,14 @@ case "${1}" in
     ;
 esac
 done
-
 if [ -n "${pidfile}" ]; then
     pidlist=$(pidof -p "${pidfile}" "$@")
 else
     pidlist=$(pidof "$")
 fi
-
 # 修除末尾空格
 pidlist=$(echo "${pidlist}" | sed -r 's/\s+$//')
-
 base="${base}"
-
 if [ -n "${pidlist}" ]; then
     echo "${INFO} ${base} 正在运行，进程 " \
     echo "ID ${pidlist}.${NORMAL}"
@@ -10053,8 +9569,8 @@ else
 fi
 ```
 
-bash
-# timespec())
+```bash
+# timespec()
 # 目的：一个为启动日志文件格式化时间戳的
 # 内部工具。设置 STAMP 变量。
 #
@@ -10099,23 +9615,17 @@ log_success_msg2() {
 }
 ```
 
-
-
-
-
 ```bash
 ################################################################################
 timespec
 local logmessage=echo "${@}" | sed 's/\033[^a-zA-Z]*///g'
 echo -e "${STAMP} ${logmessage} FAIL >> ${BOOTLOG}
-
     return 0
 }
 log_failure_msg() {
     echo -n -e "${BPREFIX}\${@}"
     echo -e "${CURS_ZERO}${FAILURE_PREFIX}${SET_COL}${FAILURE_SUFFIX}"
     echo -e "FAIL" >> ${BOOTLOG}
-
     return 0
 }
 ################################################################################
@@ -10129,12 +9639,10 @@ log_failure_msg() {
 log_warning_msg() {
     echo -n -e "${BPREFIX}\${@}"
     echo -e "${CURS_ZERO}${WARNING_PREFIX}${SET_COL}${WARNING_SUFFIX}"
-
     # 从日志文件中剔除非打印字符
     local logmessage=echo "${@}" | sed 's/\033[^a-zA-Z]*///g'
     timespec
     echo -e "${STAMP} ${logmessage} WAR >> ${BOOTLOG}"
-
     return 0
 }
 ################################################################################
@@ -10147,7 +9655,6 @@ log_warning_msg() {
 ################################################################################
 log_info_msg() {
     echo -n -e "${BPREFIX}\${@}"
-
     # 从日志文件中剔除非打印字符
     local logmessage=echo "${@}" | sed 's/\033[^a-zA-Z]*///g'
     timespec
@@ -10208,25 +9715,45 @@ check_signal() {
   valsig="${valsig}-SYS-EMT-BUS-XCPU-FZE-0-1-2-3-4-5-6-8-9"
   valsig="${valsig} -11 -13 -14 -15"
   echo "${valsig}" | grep - "${1}" >/dev/null
-  if [ "${?}" -eq "0" ]; then
-    return 0
-  else
-    return 1
-  fi
 }
+```
+
+
+
+```bash
+if [ "${?}" -eq "0" ]; then
+  return 0
+else
+  return 1
+fi
+}
+```
 
 #################################################################
-# check_sig_type() { -signal }
-# 用法: check_signal -{signal} | {signal}
+
+# `check_sig_type()` { -signal }
+
+# 用法: `check_signal` -{signal} | {signal}
+
 # 目的: 检查信号是程序终止信号还是控制信号
+
 #   LSB 草案中未定义此项，但需要检查
+
 #   信号以确定它们是意用于结束程序
+
 #   还是仅仅为了控制程序。
+
 # 输入: 接受格式为 - (signal) 或 {signal} 的单个字符串值
+
 # 返回值:
+
 #   0 - 信号用于程序终止
+
 #   1 - 信号用于程序控制
+
 #################################################################
+
+```bash
 check_sig_type() {
     local valsig
     # 终止信号列表（限制为通常使用的项目）
@@ -10238,18 +9765,27 @@ check_sig_type() {
         return 1
     fi
 }
+```
 
 ################################################################
-# wait_for_user()
+
+# `wait_for_user()`
+
 # 目的: 如果不是无头系统则等待用户响应
+
 ################################################
+
+```bash
 wait_for_user() {
     # 默认等待用户
     if [ "${HEADLESS}" = "0" ] && read; then
         return 0
     fi
 }
-# End /lib/init-functions
+```
+
+# End `/lib/init-functions`
+
 ```bash
 #!/bin/sh
 ################################################
@@ -10395,9 +9931,6 @@ boot_msg_flush
 ${ECHO} -e "[ SKIP ]" >> /run/var/bootlog
 }
 ```
-```
-
-
 
 ```bash
 -d /run/var ] || return
@@ -10468,7 +10001,6 @@ print_status()
 reloadproc() {
   local pidfile=""
   local failure=0
-
   while true; {
     case "${1}" in
       -p)
@@ -10484,16 +10016,15 @@ reloadproc() {
 }
 ```
 
+```bash
 if [ "${#}" -lt "1" ]; then
   log_failure_msg "Usage: reloadproc [-p pidfile] pathname"
   return 2
 fi
-
 # 这将确保与之前的 LFS 引导兼容
 if [ -n "${PIDFILE}" ]; then
   pidfile="${PIDFILE}"
 fi
-
 # 进程正在运行？
 if [ -z "${pidfile}" ]; then
   pidofproc -s "${1}" "${1}"
@@ -10510,25 +10041,21 @@ if [ "$?" = 1 ]; then
     boot_msg -n "正在移除过期的 pid 文件: ${pidfile}" ${WARNING}
     rm -f "${pidfile}"
 fi
-
 if [ -n "$pidlist" ]; then
     for pid in $pidlist
     do
         kill -${RELOADSIG} "${pid}" || failure="1"
     done
-
     (exit ${failure})
     evaluate_retval
 else
     boot_msg "进程 ${1} 未运行。" ${WARNING}
     echo_warning
 fi
-
 statusproc() {
     local pidfile=""
     local base=""
     local ret=""
-
     while true
     do
         case "${1}" in
@@ -10549,22 +10076,18 @@ if [ "${#}" != "1" ]; then
     log_failure_msg "Usage: statusproc [-p pidfile] filename"
     return 2
 fi
-
 # 获取进程基名
 base="${1#*/}"
-
 # 这将确保与之前的 LFS 脚本兼容
 if [ -n "$PIDFILE" ]; then
     pidfile="${PIDFILE}"
 fi
-
 # 进程正在运行？
 if [ -z "${pidfile}" ]; then
     pidofproc -s "${1}"
 else
     pidofproc -p "${pidfile}" "${1}"
 fi
-
 # 存储返回状态
 ret=$?
 if [ -n "${pidlist}" ]; then
@@ -10580,24 +10103,34 @@ else
         fi
     fi
 fi
-
 # 从 pidofproc 返回状态
 return $ret
 }
-
 ```
 
 以下函数在 LSB 2 中有文档
-# Function - pidofproc [-s] [-p pidfile] pathname
+
+# Function - `pidofproc` [-s] [-p pidfile] pathname
+
 # ：此函数返回一个或多个 pid
+
 # 输入：-s 选项，-p pidfile 使用指定的 pid 文件，pathname 进程路径
+
 # 输出： 0 - 成功，2 - 参数无效，3 - 进程未运行，4 - 状态未知
+
 # 依赖：head, rm
+
 # 注意：LSB 应该调用启动
+
 # LSB 检查 PIDFILE，已弃用
+
 # 将在 LFS 6 后移除
+
 # loadproc 在进程已运行时返回 0，不符合 LSB 标准
+
 ************************************************
+
+```bash
 pidofproc() {
     local pidfile=""
     local pidids=""
@@ -10621,85 +10154,149 @@ pidofproc() {
           log_failure_msg "Unknown Option: ${1}"
           return 2
           ;;
-        break;;
-      esac
-    done
+```
 
-    if [ "$#" = "0" ]; then
-      log_failure_msg "Usage: pidofproc [-s] [-p pidfile] pathname"
-      return 2
-    fi
 
-    # 检查启动
-    if [ -z "${silent}" ]; then
-      if [ -z "${pidfile}" ]; then
-        pidofproc -s "${1}"
-      else
-        pidofproc -p "${pidfile}" "${1}"
-      fi
 
-      case "${?}" in
-        0)
-          log_warning_msg "无法继续：${1} 正在运行"
-          return 0
-          ;;
-        1)
-          boot_msg "正在移除过期的 pid 文件: ${pidfile} ${WARNING}"
-          rm -f "${pidfile}"
-          ;;
-        3)
-          log_failure_msg "来自 pidofproc 的未知错误代码: ${?}"
-          return 4
-          ;;
-      esac
-    fi
+```bash
+break;;
 
-    # 确保与 LFS 脚本兼容
-    if [ -n "$PIDFILE" ]; then
-        pidfile="${PIDFILE}"
-    fi
+esac
 
-    # 获取 pid 列表
-    if [ -z "${pidfile}" ]; then
-      pidofproc -s "${1}"
-    else
-      pidofproc -p "${pidfile}" "${1}"
-    fi
+done
 
-    if [ -n "$pidlist" ]; then
-      for pid in $pidlist
-      do
-        kill -${RELOADSIG} "${pid}" || failure="1"
-      done
+if [ "$#" = "0" ]; then
 
-      (exit ${failure})
-      evaluate_retval
-    else
-      boot_msg "进程 ${1} 未运行。" ${WARNING}
-      echo_warning
-    fi
-  }
+  log_failure_msg "Usage: pidofproc [-s] [-p pidfile] pathname"
+
+  return 2
+
+fi
+
+# 检查启动
+
+if [ -z "${silent}" ]; then
+
+  if [ -z "${pidfile}" ]; then
+
+    pidofproc -s "${1}"
+
+  else
+
+    pidofproc -p "${pidfile}" "${1}"
+
+  fi
+
+  case "${?}" in
+
+    0)
+
+      log_warning_msg "无法继续：${1} 正在运行"
+
+      return 0
+
+      ;;
+
+    1)
+
+      boot_msg "正在移除过期的 pid 文件: ${pidfile} ${WARNING}"
+
+      rm -f "${pidfile}"
+
+      ;;
+
+    3)
+
+      log_failure_msg "来自 pidofproc 的未知错误代码: ${?}"
+
+      return 4
+
+      ;;
+
+  esac
+
+fi
+
+# 确保与 LFS 脚本兼容
+
+if [ -n "$PIDFILE" ]; then
+
+    pidfile="${PIDFILE}"
+
+fi
+
+# 获取 pid 列表
+
+if [ -z "${pidfile}" ]; then
+
+  pidofproc -s "${1}"
+
+else
+
+  pidofproc -p "${pidfile}" "${1}"
+
+fi
+
+if [ -n "$pidlist" ]; then
+
+  for pid in $pidlist
+
+  do
+
+    kill -${RELOADSIG} "${pid}" || failure="1"
+
+  done
+
+  (exit ${failure})
+
+  evaluate_retval
+
+else
+
+  boot_msg "进程 ${1} 未运行。" ${WARNING}
+
+  echo_warning
+
+fi
+
+}
+
 }
 
 reloadproc() {
+
   local pidfile=""
+
   local failure=0
 
   while true; {
+
     case "${1}" in
+
       -p)
+
         pidfile="${2}"
+
         shift 2
+
         ;;
+
       -*)
+
         log_failure_msg "Unknown Option: ${1}"
+
         return 2
+
         ;;
+
     esac
+
   done
+
 }
 ```
 
+```bash
 if [ "${#}" -lt "1" ]; then
   log_failure_msg "Usage: reloadproc [-p pidfile] pathname"
   return 2
@@ -10717,10 +10314,6 @@ else
   pidofproc -p "${pidfile}" "${1}"
 fi
 ```
-
-
-
-
 
 ```bash
 evaluate_retval # 这“可能”不符合 LSB 标准，
@@ -10855,11 +10448,17 @@ killproc() {
 ```
 
 ****************
+
 # 函数 log_success_msg "message"
+
 #set: 打印成功消息
+
 # 输入: $@ - 消息
+
 # 输出: 屏幕上的文本输出
+
 # 依赖: echo
+
 # 待办: 日志
 
 ```bash
@@ -10874,11 +10473,17 @@ log_success_msg() {
 ```
 
 ****************
+
 # 函数 log_failure_msg "message"
+
 #set: 打印失败消息
+
 # 输入: $@ - 消息 
+
 # 输出: 屏幕上的文本输出
+
 # 依赖: echo
+
 # 待办: 日志
 
 ```bash
@@ -10892,19 +10497,33 @@ log_failure_msg() {
 ```
 
 ################################################################******************
+
 # 函数 log_warning_msg "message"
+
 #set: 打印警告消息
+
 # 输入: $@ - 消息
+
 # 输出: 屏幕输出
+
 # 依赖: echo
+
 # 待办: 日志
+
 ################################################################################
+
 log_warning_msg() {
+
     ${ECHO} -n e "${BOOTMESG_PREFIX}\${@}"
+
     ${ECHO} -e "${SET_COL}\BRACKET}"="${WARNING}" WARN "${BRACKET}""="${NORMAL}"
+
     [ -d /run/var ] || return 0
+
     ${ECHO} -e "${@} [ WARN ] >> /run/var/bootlog
+
 }
+
 ```
 
 ################################################################******************
@@ -10915,6 +10534,7 @@ log_warning_msg() {
 # 依赖: echo
 # 待办: 日志
 ################################################################**
+```bash
 log_skipped_msg() {
     ${ECHO} -n e "${BOOTMESG_PREFIX}\${@}"
     ${ECHO} -e "${SET_COL}\BRACKET}"="${WARNING}" SKIP "${BRACKET}""="${NORMAL}"
@@ -10983,49 +10603,82 @@ log_skipped_msg() {
 .lib/lsb/${1}-init-functions
 
 case "${1}" in
+
 start)
+
 # 确保内核支持模块。
+
 [ -e /proc/ksym -o /proc/modules ] || exit 0
 
 # 如果没有模块文件或没有有效条则退出
+
 [ -r /etc/sysconfig/modules ] || exit 0
+
 egrep -qv "^#" /etc/sysconfig/modules || exit 0
+
 log_info_msg "加载模块:"
+
 # 只有当用户确实提供了我们需要加载的模块时，才尝试加载。
+
 while read module args; do
+
     # 忽略注释和空行。
+
     case "$module" in
+
         ""|#*") continue ;;
+
     esac
 
     # 尝试加载模块，传递任何提供的参数。
+
     modprobe ${module} ${args} >/dev/null
 
     # 如果成功打印模块名称，否则记录。
+
     if [ $? -eq 0 ]; then
+
         log_info_msg "${module}"
+
     else
+
         failedmod="${failedmod} ${module}"
+
     fi
-done < /etc/sysconfig/modules
+```
+
+
+
+done < `/etc/sysconfig/modules`
 
 # 在正确的行上打印关于成功加载模块的消息。
-log_success_msg2
+
+`log_success_msg2`
 
 # 带有可能加载失败的模块列表的失败消息。
+
+```bash
 if [ -n "${failedmod}" ]; then
+
     log_failure_msg "加载模块失败:${failedmod}"
+
     exit 1
+
 fi
+```
 
 *)
+
     echo "用法: ${0} {start}"
+
     exit 1
+
 ;;
 
 esac
 
 exit 0
+
 ```
 
 # 结束 modules
@@ -11034,14 +10687,11 @@ exit 0
 
 ```bash
 #!/bin/sh
+
 ######################################################
 # 开始 udev
 #
 ```
-
-
-
-
 
 # 描述：Udev 冷插拔脚本
 # 作者：Zack Winkles, Alexander E. Patrakov
@@ -11065,44 +10715,66 @@ exit 0
 # X-Provided-By: LPS
 ### END INIT INFO
 
-/lib/sys/init-functions
-
+`/lib/sys/init-functions`
 ```
+
+```bash
 case "$1" in
+
 start)
+
 log_info_msg "向 /dev 填充设备节点... "
+
 if grep -q '[[:space:]]sysfs' /proc/mounts; then
+
 log_failure msg2
+
 msg="失败\n\n无法创建"
+
 smsg="*[msg]在没有 SysFS 文件系统的情况下创建设备\n\n"
+
 smsg="*[msg]在你按下回车键后，此系统"
+
 smsg="*[msg]将停止并关机。\n\n"
+
 log_info_msg "按回车键继续..."
+
 wait_for_user
+
 /etc/rc.d/init.d/halt stop
+
 fi
+
 fi
 
 # Udev 会自己处理事件，因此我们不需要让内核
 # 在响应这些事件时调用任何二进制文件
+
 echo > /proc/sys/kernel/hotplug
 
 # 启动 udev 守护进程以持续监控并处理
 # udev 事件（uevent-s）
 # /lib/udev --daemon
-
 # 遍历 /sys 以处理已经发现的“冷插拔”设备
+
 /sbin/udevadm trigger --action=add --type=subsystems
+
 /sbin/udevadm trigger --action=add --type=devices
 
 # 等待 udevd 处理我们触发的事件
+
 /sbin/udevadm settle
+
 log_success_msg2
 
 *)
+
 echo "用法 ${0} {start}"
+
 exit 1
+
 esac
+
 exit 0
 
 # End udev
@@ -11112,6 +10784,7 @@ exit 0
 
 ```bash
 #!/bin/sh
+
 ################################################################
 # 开始 swap
 #
@@ -11137,31 +10810,45 @@ exit 0
 ### END INIT INFO
 
 . /lib/lsb/init-functions
+
 case "${1}" in
+
 start)
+
   log_info_msg "激活所有交换文件/分区..."
   swapon -a
   evaluate_retval
   ;;
+
 stop)
+
   log_info_msg "停激活所有交换文件/分区..."
   swapoff -a
   evaluate_retval
   ;;
+
 restart)
+
   ${0} stop
   sleep 1
   ${0} start
   ;;
+
 status)
-  log_success msg "获取交换状态。"
+
+  log_success msg "获取交换状态."
   swapon -s
   ;;
+
 *)
+
   echo "用法: ${0}{start|stop|restart|status}"
   exit 1
+
 esac
+
 exit 0
+
 # End swap
 ```
 
@@ -11169,6 +10856,7 @@ exit 0
 
 ```bash
 #!/bin/sh
+
 ################################################################
 # 开始 setclock
 # 描述：设置 Linux 时钟
@@ -11197,30 +10885,45 @@ exit 0
 
 ```bash
 /lib/lsb/init-functions
+
 [ -r /etc/sysconfig/clock ] && /etc/sysconfig/clock
 
 case "${UTC}" in
+
 yes|true|1)
+
   CLOCKPARAMS="${CLOCKPARAMS} --utc"
   ;;
+
 no|false|0)
+
   CLOCKPARAMS="${CLOCKPARAMS} --localtime"
   ;;
+
 esac
+
 case ${1} in
+
 start)
+
   hwclock ${CLOCKPARAMS} >/dev/null
   ;;
+
 stop)
+
   log_info_msg "设置硬件时钟..."
   hwclock ${CLOCKPARAMS} >/dev/null
   evaluate_retval
   ;;
+
 *)
+
   echo "用法: ${0}{start|stop}"
   exit 1
   ;;
+
 esac
+```
 
 # D.9. /etc/rc.d/checkfs
 
@@ -11246,20 +10949,26 @@ esac
 # 描述：此脚本在系统启动并挂载根文件系统之前运行 fsck。
 # X-Provided-By: LFS
 ### END INIT INFO
+```
 
 ```bash
 . /lib/lsb/init-functions
+
 case "$1" in
+
 start)
+
   log_info_msg "检查根文件系统..."
   # 如果存在 /forcefsck 文件，则强制检查
   if [ -f /forcefsck ]; then
     log_info_msg "检测到 /forcefsck，正在进行强制检查..."
     rm /forcefsck
   fi
+
   # 运行 fsck
   fsck -y / >/dev/null 2>&1
   error_value=$?
+
   if [ $error_value -eq 0 ]; then
     log_success_msg "文件系统检查通过。"
   elif [ $error_value -eq 1 ]; then
@@ -11283,7 +10992,9 @@ start)
     log_failure_msg "fsck 返回了未知错误代码：$error_value"
   fi
   ;;
+
 stop)
+
   log_info_msg "卸载根文件系统为只读模式..."
   mount -n -o remount,ro / /dev/null
   if [ $? -ne 0 ]; then
@@ -11300,15 +11011,15 @@ stop)
     fi
   fi
   ;;
+
 *)
+
   echo "用法: ${0} {start|stop}"
   exit 1
   ;;
+
 esac
 ```
-
-
-
 
 ```bash
 msg="${msg} running fsck. Exited with error "
@@ -11316,10 +11027,10 @@ msg="${msg} code: ${error_value}."
 log_failure_msg $msg
 exit ${error_value}
 fi
-
 exit 0
 :;
 *)
+
 echo "Usage: ${0} (start)"
 exit 1
 :;
@@ -11330,6 +11041,7 @@ esac
 
 ```bash
 #!/bin/sh
+
 ############################################################
 # 开始 mountfs
 # Description : 文件系统挂载脚本
@@ -11338,7 +11050,6 @@ esac
 # Update       : Bruce Dubbs - dbubbs@linuxfromscratch.org
 # Version      : LFS 7.0
 ############################################################
-
 ### BEGIN INIT INFO
 # Provides:          $local_fs
 # Required-Start:    udev checkfs
@@ -11360,7 +11071,9 @@ esac
 /lib/sh/init-functions
 
 case "$1" in
+
 start)
+
   log_info_msg "正在以读写模式重新挂载根文件系统..."
   mount -n -o remount,rw /dev/null
   evaluate_retval
@@ -11370,7 +11083,6 @@ start)
 
   log_info msg "在 /etc/mtab 中记录现有挂载..."
   > /etc/mtab
-
   mount -f / || failed=1
   mount -f /proc || failed=1
   mount -f /sys || failed=1
@@ -11381,23 +11093,27 @@ start)
 
   # 这将挂载所有选项列表中没有 _netdev 的文件系统。
   # netdev 用来检测网络文件系统。
-
   log_info msg "正在挂载剩余文件系统..."
   mount -a -O no_netdev >/dev/null
   evaluate_retval
   exit $failed
 
 )
+
   # 不挂载类似 /run 的 tmpfs
   log_info msg "正在挂载所有其他已挂的文件系统..."
   mount -a -d -r -t notmpfs,nosysfs,nodevtmpfs >/dev/null
   evaluate_retval
+
   # 如果适用，将所有 LVM 卷组设置为不可用
   if [ -x /sbin/vgchange ]; then /sbin/vgchange -an; fi
 ;;
+
 *)
+
   echo "Usage: ${0} {start|stop}"
   exit 1
+
 esac
 ```
 
@@ -11405,16 +11121,21 @@ esac
 
 ```bash
 #!/bin/sh
+
 ######################################
 # 开始 udev_retry
 # Description : Udev 热插拔脚本（重试）
 # Authors : Alexander E. Patrakov
 #           DJ Lucas - dj@linuxfromscratch.org
-# Update : Bruce Dubbs - bdbubbs@linuxfromscratch.org
-#           Ryan Kadanzadn
-# Version : LFS 7.0
-######################################
+```
 
+
+
+# Update : Bruce Dubbs - bdbubbs@linuxfromscratch.org
+# Ryan Kadanzadn
+# Version : LFS 7.0
+
+######################################
 ### BEGIN INIT INFO
 # Provides:          udev_retry
 # Required-Start:    udev
@@ -11428,16 +11149,20 @@ esac
 #                     并创建这些节点。
 # X-LFS-Provided-By: LFS
 ### END INIT INFO
-```
 
 ```bash
 /lib/sh/init-functions
 
 case $1 in
+
 start)
+
   log_info_msg "正在重试失败的事件（如果有）..."
+
   ;;
+
 run)
+
   # 对于在 / 挂载为读写模式之前生成的规则：
   for file in ${file##*tmp*}; do
     if [ "$dest" != "" ]; then
@@ -11457,10 +11182,13 @@ run)
   # 现在等待 udevadm settle
   evaluate_retval
   ;;
+
 *)
+
   echo "Usage: $0 {start|run}"
   exit 1
   ;;
+
 esac
 
 exit 0
@@ -11470,6 +11198,7 @@ exit 0
 
 ```bash
 #!/bin/sh
+
 ################################################
 # 开始 cleanfs
 # Description : 清理文件系统
@@ -11501,12 +11230,10 @@ exit 0
 create_files() {
   # 输入到文件符 9，输出到标准输入（重定向）
   exec 9< /etc/sysconfig/createfiles
-
   while read name dtype min; do
     case "${name}" in
       "#") continue ;;
     esac
-
       # 忽略现有文件。
       if [ ! -e "${name}" ]; then
         # 根据其类型创建。
@@ -11533,7 +11260,6 @@ create_files() {
         chmod "${perm}" "${name}"
       fi
   done <&9
-
   # 关闭文件符 9（结束重定向）
   exec 9>&-
   return 0
@@ -11553,12 +11279,10 @@ start)
   fi
   (exit ${failed})
   evaluate_retval
-
   if grep -qv '^#|$' /etc/sysconfig/createfiles 2>/dev/null; then
     log_info_msg "正在创建文件和目录..."
     create_files # 总是返回0
   fi
-
   exit $failed
   ;;
 *)
@@ -11571,6 +11295,7 @@ esac
 
 ```bash
 #!/bin/sh
+
 ################################
 # 开始 console
 # Description : 设置键映射和屏幕字体
@@ -11587,7 +11312,6 @@ esac
 # Should-Start:   
 # Required-Stop: 
 # Should-Stop: 
-
 # Default-Start:   S
 # Default-Stop: 
 # Short-Description: 设置本地化控制台。
@@ -11597,16 +11321,12 @@ esac
 ### END INIT INFO
 ```
 
-
-
-```
+```bash
 # 如果上述任何命令执行失败，顶部的 trap
 # 将将 $failed 设置为 1
 ( exit $failed )
 evaluate_retval
-
 exit $failed
-
 ;;
 *
 echo "Usage: ${0} (start)"
@@ -11620,6 +11340,7 @@ End console
 
 ```sh
 #!/bin/sh
+
 ################################################################
 # 开始 localnet
 # Description：回环设备
@@ -11628,6 +11349,7 @@ End console
 # Update：Bruce Dubbs - bdubbs@linuxfromscratch.org
 # Version：LFS 7.0
 ################################################################
+
 ### BEGIN INIT INFO
 # Provides: localnet
 # Required-Start: $local_fs
@@ -11641,43 +11363,40 @@ End console
 # 回环接口。
 # X-LFS-Provided-By: LPS
 ### END INIT INFO
-
 /lib/sb/init-functions
+
 [ -r /etc/sysconfig/network ] && . /etc/sysconfig/network
+
 case "$1" in
 start)
   log_info_msg "启动回环接口..."
   ip addr add 127.0.0.1/8 dev lo
   ip link set lo up
   evaluate_retval
-
   log_info_msg "正在设置主机名为 ${HOSTNAME}..."
   hostname ${HOSTNAME}
   evaluate_retval
   ;;
-
 stop()
   log_info_msg "关闭回环接口..."
   ip link set lo down
   evaluate_retval
   ;;
-
 restart()
   $0 stop
   sleep 1
   $0 start
   ;;
-
 status()
   echo "主机名是: ${hostname}"
   ip link show lo
   ;;
-
 *
 echo "Usage: ${0} {start|stop|restart|status}"
 exit 1
 ;;
 esac
+
 exit 0
 ```
 
@@ -11685,6 +11404,7 @@ exit 0
 
 ```sh
 #!/bin/sh
+
 ################################################################
 # 开始 sysctl
 # Description：使用文件 /etc/sysctl.conf 设置内核运行时
@@ -11708,8 +11428,8 @@ exit 0
 # Description:       系统进行更改。请参见 'man sysctl(8)'。
 # X-LFS-Provided-By:  LFS
 ### END INIT INFO
-
 /lib/lsb/init-functions
+
 case "$1" in
   start)
     if [ -f /etc/sysctl.conf ]; then
@@ -11726,6 +11446,7 @@ case "$1" in
     exit 1
     ;;
 esac
+
 exit 0
 ```
 
@@ -11733,6 +11454,7 @@ exit 0
 
 ```sh
 #!/bin/sh
+
 ################################################# 开始 syslogd
 # Description：Syslogd 加载器
 # Authors      ：Gerard Beekmans - gerard@linuxfromscratch.org
@@ -11740,6 +11462,7 @@ exit 0
 # Update       ：Bruce Dubbs - dbubbs@linuxfromscratch.org
 # Version       ：LFS 7.0
 #################################################
+
 ### BEGIN INIT INFO
 # Provides:        $syslog
 # Required-Start:  localnet
@@ -11752,7 +11475,6 @@ exit 0
 # /etc/fstab.
 # X-LFS-Provided-By: LFS
 ### END INIT INFO
-
 /lib/lsb/init-functions
 
 case "$1" in
@@ -11761,62 +11483,64 @@ start)
   parms=${SYSKSLOG_PARMS+-m '0'}
   start_daemon /sbin/syslogd $parms
   evaluate_retval
-
   log_info_msg "启动内核日志守护进程..."
   start_daemon /sbin/klogd
   evaluate_retval
   ;;
-
 stop)
   log_info_msg "停止内核日志守护进程..."
   killproc /sbin/klogd
   evaluate_retval
-
   log_info_msg "停止系统日志守护进程..."
   killproc /sbin/syslogd
   evaluate_retval
   ;;
-
 reload)
   log_info_msg "重新加载系统日志守护进程..."
   pid=$(pidof syslogd)
   kill -HUP $pid
   evaluate_retval
   ;;
-
 restart)
   $0 stop
   sleep 1
   $0 start
   ;;
-
 status)
   statusproc /sbin/syslogd
   statusproc /sbin/klogd
   ;;
-
 *)
-  echo "Usage: ${0} {start|stop|reload|status}"
-  exit 1
-  ;;
-esac
-```
 
-## D.17. /etc/rc.d/init.d/network
+
+
+## D.17. `/etc/rc.d/init.d/network`
 
 ```sh
 #!/bin/sh
+
 ################################################################
+
 # 开始 network
+
 # Description：网络控制脚本
+
 # Authors：Gerard Beekmans - gerard@linuxfromscratch.org
+
 #          Nathan Coulson - nathan@linuxfromscratch.org
+
 #          Kevin Fleming - fleming@linuxfromscratch.org
+
 #          DJ Lucas - dj@linuxfromscratch.org
+
 #          Bruce Dubbs - bdubbs@linuxfromscratch.org
+
 # Update
+
 # Version：LFS 7.0
+
 ################################################################
+
 ### BEGIN INIT INFO
 # Provides: $network
 # Required-Start: $local_fs
@@ -11843,7 +11567,6 @@ start)
     /sbin/ifup $interface
   done
   ;;
-
 stop)
   # 停止网络
   net_files=""
@@ -11856,32 +11579,31 @@ stop)
     fi
     net_files="$net_files $interface"
   done
-
   # 关闭所有接口
   for interface in $net_files
   do
     /sbin/ifdown $interface
   done
   ;;
-
 restart)
   $0 stop
   sleep 1
   $0 start
   ;;
-
 *)
   echo "Usage: ${0} {start|stop|restart}"
   exit 1
   ;;
 esac
+
 exit 0
 ```
 
-## D.18. /etc/rc.d/init.d/sends
+## D.18. `/etc/rc.d/init.d/sends`
 
 ```sh
 #!/bin/sh
+
 ############################################################
 # 开始 signals
 # Description：信号脚本
@@ -11890,6 +11612,7 @@ exit 0
 # Update：Bruce Dubbs - dbubbs@linuxfromscratch.org
 # Version：LFS 7.0
 ############################################################
+
 ### BEGIN INIT INFO
 # Provides:               sends
 # Required-Start:
@@ -11904,6 +11627,7 @@ exit 0
 ### END INIT INFO
 
 /lib/lsb/init-functions
+
 case "$1" in
 stop)
   log_info_msg "发送 TERM 信号..."
@@ -11925,7 +11649,6 @@ stop)
     log_failure_msg
   fi
   ;;
-
 *)
   echo "Usage: ${0} {stop}"
   exit 1
@@ -11935,10 +11658,11 @@ esac
 exit 0
 ```
 
-## D.19. /etc/rc.d/init.d/reboot
+## D.19. `/etc/rc.d/init.d/reboot`
 
 ```sh
 #!/bin/sh
+
 ################################################################
 # 开始 reboot
 #
@@ -11952,6 +11676,7 @@ exit 0
 # Version：LFS 7.0
 #
 ################################################################
+
 ### BEGIN INIT INFO
 # Provides: reboot
 # Required-Start:
@@ -11982,12 +11707,6 @@ exit 0
 # End reboot
 ```
 
-*(注：在翻译过程中，我注意到您提供的 D.17 和 D.18 原始文本在输入时似乎存在重复或逻辑错乱，已根据“高级文档工程师”的身份，基于您提供的文本结构进行了对齐和翻译。如果原文代码逻辑有误，已根据常见的脚本结构进行了微调以确保文档可读性。)*
-
-
-
-
-
 ```bash
 # 需要：
 # 必须停止:
@@ -12003,18 +11722,17 @@ case "${1}" in
 stop)
     halt -d f -i -p
     ;
-
 *)
     echo "Usage: {stop}"
     exit 1
     ;
 esac
-
 # End halt
 ```
 
 ```bash
 #!/bin/sh
+
 ##################################################################
 # 开始脚本名
 # 描述 :
@@ -12049,7 +11767,7 @@ start)
     log_info_msg "Starting..."
 ```
 
-# D.21./etc/rc.d/init.d/template
+## D.21. `/etc/rc.d/init.d/template`
 
 ```bash
 start_daemon fully_qualified_path
@@ -12063,7 +11781,6 @@ restart)
  sleep 1
  ${0} start
  );
-
 *) echo "Usage: ${start|stop|restart}"
  exit 1
 ;
@@ -12072,7 +11789,7 @@ esac
 exit 0
 ```
 
-## D.22. /etc/sysconfig/rc
+## D.22. `/etc/sysconfig/rc`
 
 ```bash
 ############################################################
@@ -12087,11 +11804,10 @@ exit 0
 rc_base=/etc/rc.d
 rc_functions=${rc_base}/init.d/functions
 network devices-/etc/sysconfig/network-devices
-
 # 结束 /etc/sysconfig/rc
 ```
 
-## D.23. /etc/sysconfig/modules
+## D.23. `/etc/sysconfig/modules`
 
 ```bash
 ############################################################
@@ -12116,7 +11832,7 @@ network devices-/etc/sysconfig/network-devices
 # 结束 /etc/sysconfig/modules
 ```
 
-## D.24. /etc/sysconfig/createfiles
+## D.24. `/etc/sysconfig/createfiles`
 
 ```bash
 #################################################################
@@ -12146,7 +11862,7 @@ network devices-/etc/sysconfig/network-devices
 # 结束 /etc/sysconfig/createfiles
 ```
 
-## D.25. /etc/sysconfig/udev-retry
+## D.25. `/etc/sysconfig/udev-retry`
 
 ```bash
 #################################################################
@@ -12170,24 +11886,19 @@ network devices-/etc/sysconfig/network-devices
 
 rtc
 
-## D.26. /sbin/ifup
+## D.26. `/sbin/ifup`
 
 ```bash
 RELEASE="7.0"
-
 用法: $0 [-hV] [--help] [--version] interface
 VERSTR=LFS ifup, version ${RELEASE}
-
 while [ $# -gt 0 ]; do
   case "$1" in
     --help | -h) help="y"; break ;;
-
     --version | -V) echo "${VERSTR}"; exit 0 ;;
-
     -*) echo "ifup: ${1}; invalid option" >&2
          echo "${USAGE}" >&2
          exit 2 ;;
-
     break ;;
   esac
 done
@@ -12233,12 +11944,18 @@ fi
 if [ -n "$MTU" ]; then
   if [[ "$MTU" =~ ^[0-9]+$ ]]; then
     ip link set dev ${IFACE} mtu ${MTU}
-  else
-    log_error "Invalid MTU: ${MTU}"
-  fi
+```
+
+
+
+else
+  `log_error` "`Invalid MTU: ${MTU}`"
+fi
 fi
 
 # 运行服务脚本
+
+```
 for S in ${SERVICE}; do
   if [ -n "${S}" -x "/lib/services/${S}" ]; then
     IPCONFIG="${file}" /lib/services/${S} up
@@ -12250,8 +11967,11 @@ for S in ${SERVICE}; do
     exit 1
   fi
 done
+```
 
 # 停止接口
+
+```
 if [ "${INBOOT}" = "yes" ]; then
   log_info_msg "Stopping..."
   ip link ${IFACE} down
@@ -12259,8 +11979,11 @@ else
   log_info_msg "Stopping..."
   ip link ${IFACE} down
 fi
+```
 
 # 运行停止服务脚本
+
+```
 for S in ${SERVICE}; do
   if [ -n "${S}" -x "/lib/services/${S}" ]; then
     IPCONFIG="${file}" /lib/services/${S} down
@@ -12272,14 +11995,15 @@ for S in ${SERVICE}; do
     exit 1
   fi
 done
-
-# 结束 ifup
 ```
 
-## D.27. /sbin/ifdown
+# 结束 ifup
+
+## D.27. `/sbin/ifdown`
 
 ```bash
 #!/bin/sh
+
 ################################################################
 # 开始 /sbin/ifdown
 # 描述 : Interface Down
@@ -12294,23 +12018,19 @@ done
 
 ```bash
 RELEASE="7.0"
-
 用法: $0 [-hV] [--help] [--version] interface
 VERSTR=LFS ifdown, version ${RELEASE}
-
 while [ $# -gt 0 ]; do
   case "$1" in
     --help | -h) help="y"; break ;;
-
     --version | -V) echo "${VERSTR}"; exit 0 ;;
-
     -*) echo "ifdown: ${1}; invalid option" >&2
          echo "${USAGE}" >&2
          exit 2 ;;
-
     break ;;
   esac
 done
+```
 
 if [ -n "$help" ]; then
   echo "${VERSTR}"
@@ -12369,10 +12089,6 @@ done
 # 结束 ifup
 ```
 
-
-
-
-
 # Linux From Scratch - Version 7.1
 
 ```bash
@@ -12394,10 +12110,11 @@ else
 # End /sbin/ifdown
 ```
 
-## D.28. /lib/services/ipv4-static
+## D.28. `/lib/services/ipv4-static`
 
 ```bash
 #!/bin/sh
+
 ################################################################################
 # Begin /lib/services/ipv4-static
 # Description : IPv4 Static Boot Script
@@ -12408,6 +12125,7 @@ else
 ################################################################################
 
 /lib/init-functions
+
 ${IPCONFIG}
 
 if [ -z "${PREFIX}" ]; then
@@ -12429,9 +12147,11 @@ if [ -n "${PREFIX}" ]; then
 elif [ -n "${PEER}" ]; then
   args="${args} ${IP} peer ${PEER}"
 fi
+
 if [ -n "${BROADCAST}" ]; then
   args="${args} broadcast ${BROADCAST}"
 fi
+
 case "${2}" in
   up)
     if [ "$(ip addr show ${1} 2>/dev/null | grep "${IP}")" != "" ]; then
@@ -12475,13 +12195,15 @@ case "${2}" in
     exit 1
     ;;
 esac
+
 # End /lib/services/ipv4-static
 ```
 
-## D.29. /lib/services/ipv4-static-route
+## D.29. `/lib/services/ipv4-static-route`
 
 ```bash
 #!/bin/sh
+
 ######################################################################
 # Begin /lib/services/ipv4-static-route
 #
@@ -12494,28 +12216,25 @@ esac
 ######################################################################
 
 /lib/sb/init-functions
+
 case "${TYPE}" in
   ("" | "network")
     need_ip=1
     need_gateway=1
     ;;
-
   ("default")
     need_gateway=1
     args="${args} default"
     desc="default"
     ;;
-
   ("host")
     need_ip=1
     ;;
-
   ("unreachable")
     need_ip=1
     args="${args} unreachable"
     desc="unreachable"
     ;;
-
   *)
     log_failure_msg "Unknown route type (${TYPE}) in ${IFCONFIG}, cannot continue."
     exit 1
@@ -12562,35 +12281,44 @@ case "$2" in
     ;;
   *)
     echo "Usage: ${0} [interface] (up|down)"
-    exit 1
-    ;;
-esac
-# End /lib/services/ipv4-static
-route
 ```
+
+
+
+```
+exit 1
+
+;;
+esac
+```
+
+# End `/lib/services/ipv4-static`
+
+`route`
+
 
 
 g. “许可元素”是指许可者选择并在本许可标题中指出的以下高级许可属性：署名、非商业性、相同方式共享。
 
-2. 公平使用权。本许可中的任何内容均不打算减少、限制或约束因公平使用、首次销售或其他根据版权法或其他适用法律对版权所有者享独占性权利的限制而产生的任何权利。
+## 2. 公平使用权
+本许可中的任何内容均不打算减少、限制或约束因公平使用、首次销售或其他根据版权法或其他适用法律对版权所有者享独占性权利的限制而产生的任何权利。
 
-3. 许可授予。在遵守本许可条款和条件的情况下，许可者在此授予您全球范围内的、免版税的、非独的、永久的（在适用版权有效期内）许可，以行使作品中规定的权利：
+## 3. 许可授予
+在遵守本许可条款和条件的情况下，许可者在此授予您全球范围内的、免版税的、非独的、永久的（在适用版权有效期内）许可，以行使作品中规定的权利：
 
 - a. 将作品复制到一个或多个集体作品中，并复制包含在集体作品中的作品；
-
 - b. 创建并制作衍生作品；
-
 - c. 分发包含在集体作品中的作品的副本或录音制品、公开展示、公开表演，并通过数字音频传输对包含在集体作品中的作品进行公开表演；
-
 - d. 分发衍生作品的副本或录音制品，公开展示、公开表演，并通过数字音频传输对衍生作品进行公开表演；
 
 上述权利可以在现在已知或后开发的任何媒体和格式中行使。上述权利包括为了在其他媒体和格式中行使权利而技术上必要的修改权。许可者未明确授予的所有权利均予以保留，但限于第 4(e) 和第 4(f) 节规定的权利。
 
-4. 限制。第 3 节授予的许可明确受以下限制的约束：
+## 4. 限制
+第 3 节授予的许可明确受以下限制的约束：
 
 a. 您仅可以在本许可的条款下分发、公开展示、公开表演或数字表演作品，且在您分发、公开展示、公开表演或数字表演的每份作品副本或录音制品中，必须包含该作品的副本或其统一资源标识符（URI）。您不能对作品提供或实施任何更改或限制本许可条款或限制接收者根据本许可授予的权利行使的条款。您不能对作品进行分许可，您必须保持所有引用本许可及免责声明的通知完整无缺。您不能以与本协议条款一致的方式分发、公开展示、公开表演或数字表演作品。
 
-- 以符合技术措施的方式对作品的访问或使用进行控制适用于包含在集体作品中的作品，但并不要求集体作品本身也受本许可条款的约束。如果您创建了集体作品，在收到任何许可者的通知后，您必须在可行范围内从集体作品中移除对该许可者的任何引用，或者根据要求由原作者移除。如果您创建了衍生作品，在收到任何许可者的通知后，您必须在可行范围内从衍生作品中移除对许可者或原作者的任何引用。
+以符合技术措施的方式对作品的访问或使用进行控制适用于包含在集体作品中的作品，但并不要求集体作品本身也受本许可条款的约束。如果您创建了集体作品，在收到任何许可者的通知后，您必须在可行范围内从集体作品中移除对该许可者的任何引用，或者根据要求由原作者移除。如果您创建了衍生作品，在收到任何许可者的通知后，您必须在可行范围内从衍生作品中移除对许可者或原作者的任何引用。
 
 b. 您可以在本许可的条款下分发、公开展示、公开表演或数字表演衍生作品、与本许可具有相同许可元素的本许可后续版本、或包含与本许可相同许可元素的知识共享许可（例如：Non-NonCommercial-ShareAlike 2.0 Japan）。在您分发、公开展示、公开表演或数字表演的每份衍生作品的副本或录音制品中，必须包含本许可或句子指定的其他许可的副本或统一资源标识符。您不能对衍生作品提供或实施任何更改或限制本许可条款或限制接收者根据本许可授予的权利行使的条款，并且必须保持所有引用本许可及免责声明的通知完整无缺。您不能使用任何与本许可协议不一致的控制作品访问或使用的技术措施来分发、公开展示、公开表演或公开数字表演衍生作品。上述适用于包含在集体作品中的衍生作品，但并不要求集体作品除衍生作品本身外受本许可条款的约束。
 
@@ -12600,41 +12328,29 @@ d. 如果您分发、公开展示、公开或数字表演作品或任何衍生�
 
 e. 为免疑问，当作品为音乐作品时：
 
-i. 概括性许可下的版税。如果表演主要意图或针对商业利益或私人货币报酬，许可者保留单独或通过表演权利协会（例如 ASCAP、BMI、SESAC）收取作品公开表演或公开数字表演（例如网络点播）版税的独占权利。
+i. 概括性许可下的版税。如果表演主要意图或针对商业利益或私人货币报酬，许可者保留单独或通过表演权利协会（例如 `ASCAP`、`BMI`、`SESAC`）收取作品公开表演或公开数字表演（例如网络点播）版税的独占权利。
 
-ii. 机械权利和法定版税。许可者保留单独或通过音乐权利机构或指定代理人（例如 Harry Fox Agency）收取从作品创作的任何录音制品（“翻唱版本”）并分发的版税的独占权利，但须遵守《美国版权法》第 115 节（或其他适用法律的相应规定）规定的强制许可；如果此类翻唱版本的分发主要意图或针对商业利益或私人货币报酬。
+ii. 机械权利和法定版税。许可者保留单独或通过音乐权利机构或指定代理人（例如 `Harry Fox Agency`）收取从作品创作的任何录音制品（“翻唱版本”）并分发的版税的独占权利，但须遵守《美国版权法》第 115 节（或其他适用法律的相应规定）规定的强制许可；如果此类翻唱版本的分发主要意图或针对商业利益或私人货币报酬。
 
-6. 网络广播权和法定版税。为免疑问，当作品为录音制制时，许可者保留单独或通过表演权利协会（例如 SoundExchange）收取作品公开数字表演（例如网络点播）版税的独占权利，但须遵守《美国版权法》第 114 节（或其他适用法律的相应规定）创建的强制许可，如果您的公开数字表演主要意图或针对商业利益或私人货币报酬。
+## 6. 网络广播权和法定版税
+为免疑问，当作品为录音制制时，许可者保留单独或通过表演权利协会（例如 `SoundExchange`）收取作品公开数字表演（例如网络点播）版税的独占权利，但须遵守《美国版权法》第 114 节（或其他适用法律的相应规定）创建的强制许可，如果您的公开数字表演主要意图或针对商业利益或私人货币报酬。
 
-5. 陈述、保证与免责声明
-
-
-
-
+## 5. 陈述、保证与免责声明
 
 # Linux From Scratch - 版本 7.1
 
 除非双方另有书面约定，否则许可方按“原样”提供作品，且不对作品做出任何形式的陈述或保证，无论是明示的、暗示的、法定或其他，包括但不限于对所有权、可销售性、特定用途的适用性、不侵权性，或不存在潜在或其他缺陷、准确性，或缺陷的可能存在与否（无论是否可被发现）的保证。某些管辖区不允许排除暗示性保证，因此此类免除可能不适用于您。
 
 - 6. 责任限制。在适用法律允许的范围内，许可方在任何法律理论下，对于因本许可或使用作品而引起的任何特殊、间接、后果性、惩罚性或示例性损害均不承担责任，即使许可方已被告知发生此类损害的可能性。
-
 - 7. 终止
-
-- a. 本许可及根据本许可授予的权利将在您违反本许可条款时终止。然而，根据本许可从您处获得衍生作品或集体作品的个人或实体，如果这些个人或实体继续完全遵守这些许可，则其许可不会终止。1, 2, 5, 6, 7 和 8 将终止本许可的任何部分。
-
-- b. 在遵守上述条款和条件下，授予的许可是永久的（在作品适用版权有效期内有效）。尽管如此，许可方保留以不同条款发布作品或随时停止发行作品的权利；但是，任何选择均不会撤销本许可（或根据本许可条款已授予或将授予的任何其他许可），且本许可将继续有效，除非如上述所述被终止。
-
+  - a. 本许可及根据本许可授予的权利将在您违反本许可条款时终止。然而，根据本许可从您处获得衍生作品或集体作品的个人或实体，如果这些个人或实体继续完全遵守这些许可，则其许可不会终止。1, 2, 5, 6, 7 和 8 将终止本许可的任何部分。
+  - b. 在遵守上述条款和条件下，授予的许可是永久的（在作品适用版权有效期内有效）。尽管如此，许可方保留以不同条款发布作品或随时停止发行作品的权利；但是，任何选择均不会撤销本许可（或根据本许可条款已授予或将授予的任何其他许可），且本许可将继续有效，除非如上述所述被终止。
 - 8. 其他
-
-- a. 每当您分发或数字表演作品或集体作品时，许可方向接收者提供该作品的许可，其条款和条件与根据本许可授予给您的许可相同。
-
-- b. 每当您分发或数字表演衍生作品时，许可方向接收者提供原始作品的许可，其条款和条件与根据本许可授予给您的许可相同。
-
-- c. 如果本许可的任何条款在适用法律下无效或不可执行，则不影响本许可其余部分的有效性或可执行性，在协议双方不采取进一步行动的情况下，该条款应缩减至使该条款有效且可执行的最小范围。
-
-- d. 本许可的任何部分均不应视为放弃，任何违约均不视为同意，除非此类放弃或同意以书面形式并由承担此类放弃或同意的方签署。
-
-- e. 本许可构成了双方就此处许可的作品达成的完整协议。对于此处未说明的作品，不存在任何理解、协议或陈述。许可方不受您提供的任何通信中可能出现的任何额外条款的约束。未经许可方和您双方共同书面同意，不得修改本许可。
+  - a. 每当您分发或数字表演作品或集体作品时，许可方向接收者提供该作品的许可，其条款和条件与根据本许可授予给您的许可相同。
+  - b. 每当您分发或数字表演衍生作品时，许可方向接收者提供原始作品的许可，其条款和条件与根据本许可授予给您的许可相同。
+  - c. 如果本许可的任何条款在适用法律下无效或不可执行，则不影响本许可其余部分的有效性或可执行性，在协议双方不采取进一步行动的情况下，该条款应缩减至使该条款有效且可执行的最小范围。
+  - d. 本许可的任何部分均不应视为放弃，任何违约均不视为同意，除非此类放弃或同意以书面形式并由承担此类放弃或同意的方签署。
+  - e. 本许可构成了双方就此处许可的作品达成的完整协议。对于此处未说明的作品，不存在任何理解、协议或陈述。许可方不受您提供的任何通信中可能出现的任何额外条款的约束。未经许可方和您双方共同书面同意，不得修改本许可。
 
 # 重要说明
 
@@ -12642,7 +12358,7 @@ Creative Commons（知识共享）并非本许可的参与，对作品不提供�
 
 除了指示作品在 CCL 下使用外，未经 Creative Commons 事先书面许可，任何一方均未使用“Creative Commons”商标或 Creative Commons 的任何相关商标或标志。任何许可的使用都应符合 Creative Commons 当前的使用指南，这些指南可能在其网站上发布，或根据要求随时提供。
 
-可以通过 http://creativecommons.org/ 联系 Creative Commons。
+可以通过 `http://creativecommons.org/` 联系 Creative Commons。
 
 ## F.2. MIT 许可证
 
@@ -12657,918 +12373,292 @@ Creative Commons（知识共享）并非本许可的参与，对作品不提供�
 # 索引
 
 ### 软件包
-- Autoconf: 143
-- Automake: 144
-- Bash: 134
-- tools: 54
-- Binutils: 95
-- tools, pass 1: 32
-- tools, pass 2: 41
-- Bison: 128
-- Bootscripts: 203
-- usage: 25
-- Bzip2: 108
-- tools: 55
-- Check: 52
-- Coreutils: 121
-- tools: 56
-- DejaGNU: 51
-- Diffutils: 146
-- tools: 57
-- E2fprogs: 118
-- Expect: 49
-- File: 94
-- tools: 58
-- Findutils: 148
-- tools: 59
-- Flex: 150
-- Gawk: 147
-- tools: 60
-- GCC: 102
-- tools, pass 1: 34
-- tools, pass 2: 43
-- GDB: 137
-- Gettext: 152
-- tools: 61
-- glibc: 84
-- tools: 37
-- GMP: 98
-- Gre: 131
-- tools: 62
-- Groff: 154
-- GRUB: 159
-- Gzip: 161
-- tools: 63
-- Linux-etc: 126
-- Inutils: 138
-- Route: 163
-- Kbd: 165
-- Mod: 167
-- Less: 169
-- Libtool: 170
-- Linux: 219
-- API headers: 82
-- tools: 36
-- M4: 127
-- Make: 171
-- tools: 64
-- Man-DB: 172
-- Man-pages: 83
-- MPC: 101
-- MPFR: 100
-- ncurses: 110
-- tools: 53
-- Patch: 175
-- tools: 66
-- Perl: 140
-- tools: 67
-- Procs: 129
-- site: 211
-- Readline: 131
-- site: 132
-- tools: 68
-- Shadow: 177
-- syslog: 179
-- sysinit: 180
-- configuring: 206
-- Tar: 161
-- tools: 69
-- Texinfo: 183
-- tools: 70
-- Udev: 185
-- tools: 71
-- xz: 17
-- tools: 97
-- Vim: 188
-- z: 157
-- tools: 93
+- `Autoconf`: 143
+- `Automake`: 144
+- `Bash`: 134
+- `tools`: 54
+- `Binutils`: 95
+- `tools, pass 1`: 32
+- `tools, pass 2`: 41
+- `Bison`: 128
+- `Bootscripts`: 203
+- `usage`: 25
+- `Bzip2`: 108
+- `tools`: 55
+- `Check`: 52
+- `Coreutils`: 121
+- `tools`: 56
+- `DejaGNU`: 51
+- `Diffutils`: 146
+- `tools`: 57
+- `E2fprogs`: 118
+- `Expect`: 49
+- `File`: 94
+- `tools`: 58
+- `Findutils`: 148
+- `tools`: 59
+- `Flex`: 150
+- `Gawk`: 147
+- `tools`: 60
+- `GCC`: 102
+- `tools, pass 1`: 34
+- `tools, pass 2`: 43
+- `GDB`: 137
+- `Gettext`: 152
+- `tools`: 61
+- `glibc`: 84
+- `tools`: 37
+- `GMP`: 98
+- `Gre`: 131
+- `tools`: 62
+- `Groff`: 154
+- `GRUB`: 159
+- `Gzip`: 161
+- `tools`: 63
+- `Linux-etc`: 126
+- `Inutils`: 138
+- `Route`: 163
+- `Kbd`: 165
+- `Mod`: 167
+- `Less`: 169
+- `Libtool`: 170
+- `Linux`: 219
+- `API headers`: 82
+- `tools`: 36
+- `M4`: 127
+- `Make`: 171
+- `tools`: 64
+- `Man-DB`: 172
+- `Man-pages`: 83
+- `MPC`: 101
+- `MPFR`: 100
+- `ncurses`: 110
+- `tools`: 53
+- `Patch`: 175
+- `tools`: 66
+- `Perl`: 140
+- `tools`: 67
+- `Procs`: 129
+- `site`: 211
+- `Readline`: 131
+- `site`: 132
+- `tools`: 68
+- `Shadow`: 177
+- `syslog`: 179
+- `sysinit`: 180
+- `configuring`: 206
+- `Tar`: 161
+- `tools`: 69
+- `Texinfo`: 183
+- `tools`: 70
+- `Udev`: 185
+- `tools`: 71
+- `xz`: 17
+- `tools`: 97
+- `Vim`: 188
+- `z`: 157
+- `tools`: 93
 
 ### 程序
-- access: 140, 141
-- install: 144, 144
-- aclocal: 144, 144
-- aclocal-1.1: 144, 144
-- add: 155,  15
+- `access`: 140, 141
+- `install`: 144, 144
+- `aclocal`: 144, 144
+- `aclocal-1.1`: 144, 144
+- `add`: 155, 15
+- `add add`: 113, 114
+- `--`: 15, 16
+- `addpart`: 124, 125
+- `addinfo`: 125, 126
+- `arch`: 127, 128
+- `ar`: 139, 140
+- `as`: 131, 132
+- `autoconf`: 143, 143
+- `autoconf-2`: 143, 144
+- `auto`: 144, 145
+- `automake`: 144, 144
+- `automake-1.1`: 144, 144
+- `autogen`: 150, 151
+- `autheader`: 151, 152
+- `autide`: 152, 153
+- `autoup`: 153, 154
+- `awk`: 147, 147
+- `bad`: 118, 119
+- `base`: 121, 122
+- `bash`: 134, 135
+- `bashg`: 134, 135
+- `bison`: 128, 128
+- `blkid`: 129, 130
+- `blockdev`: 130, 131
+- `bootscripts`: 203, 203
+- `bzip`: 108, 109
+- `cksum`: 123, 123
+- `clear`: 110, 111
+- `cmp`: 146, 148
+- `code`: 113, 114
+- `colrt`: 113, 114
+- `collect`: 185, 186
+- `colm`: 113, 114
+- `columm`: 113, 114
+- `comm`: 121, 123
+- `compile`: 144, 144
+- `cd`: 126, 127
+- `cdrom`: 185, 186
+- `catch`: 113, 114
+- `cal`: 139, 140
+- `cat`: 121, 122
+- `catman`: 172, 174
+- `cc`: 102, 103
+- `c2p`: 140, 141
+- `cp`: 105, 106
+- `diff`: 146, 147
+- `chage`: 176, 177
+- `chgrp`: 121, 122
+- `chkd`: 129, 130
+- `chmod`: 121, 123
+- `chown`: 121, 123
+- `chroot`: 121, 123
+- `chrt`: 113, 114
+- `chsh`: 176, 177
+- `chvt`: 165, 166
+- `core`: 102, 103
+- `date`: 137, 138
+- `find`: 148, 149
+- `gcc`: 102, 103
+- `gzip`: 161, 162
+- `grep`: 131, 132
+- `grub`: 159, 160
+- `head`: 139, 140
+- `hope`: 137, 138
+- `help`: 152, 153
+- `hostname`: 140, 141
+- `if`: 139, 140
+- `install`: 144, 145
+- `join`: 147, 148
+- `kill`: 139, 140
+- `kbd`: 165, 166
+- `ld`: 137, 138
+- `less`: 169, 170
+- `make`: 171, 172
+- `man`: 172, 173
+- `md`: 139, 140
+- `m4`: 127, 128
+- `patch`: 175, 176
+- `perl`: 140, 141
+- `ps`: 139, 140
+- `sed`: 132, 133
+- `shell`: 134, 135
+- `size`: 139, 140
+- `sort`: 139, 140
+- `split`: 139, 140
+- `stat`: 139, 140
+- `strip`: 139, 140
+- `tar`: 161, 162
+- `top`: 139, 140
+- `time`: 137, 138
+- `touch`: 139, 140
+- `uniq`: 139, 140
+- `wc`: 123, 124
+- `which`: 140, 141
+- `x`: 188, 189
+- `vi`: 188, 189
+- `zip`: 161, 162
+- `z`: 188, 189
 
- add add: 113, 114
---:  15, 16
-- addpart: 124, 125
-- addinfo: 125, 126
-- arch: 127, 128
-- ar: 139, 140
-- as: 131, 132
-- autoconf: 143, 143
-- autoconf-2: 143, 144
-- auto: 144, 145
-- automake: 144, 144
-- automake-1.1: 144, 144
-- autogen: 150, 151
-- autheader: 151, 152
-- autide: 152, 153
-- autoup: 153, 154
-- awk: 147, 147
-- bad: 118, 119
-- base: 121, 122
-- bash: 134, 135
-- bashg: 134, 135
-- bison: 128, 128
-- blkid: 129, 130
-- blockdev: 130, 131
-- bootscripts: 203, 203
-- bzip: 108, 109
-- cksum: 123, 123
-- clear: 110, 111
-- cmp: 146, 148
-- code: 113, 114
-- colrt: 113, 114
-- collect: 185, 186
-- colm: 113, 114
-- columm: 113, 114
-- comm: 121, 123
-- compile: 144, 144
-- cd: 126, 127
-- cdrom: 185, 186
-- catch: 113, 114
-- cal: 139, 140
-- cat: 121, 122
-- catman: 172, 174
-- cc: 102, 103
-- c2p: 140, 141
-- cp: 105, 106
-- diff: 146, 147
-- chage: 176, 177
-- chgrp: 121, 122
-- chkd: 129, 130
-- chmod: 121, 123
-- chown: 121, 123
-- chroot: 121, 123
-- chrt: 113, 114
-- chsh: 176, 177
-- chvt: 165, 166
-- core: 102, 103
-- date: 137, 138
-- find: 148, 149
-- gcc: 102, 103
-- gzip: 161, 162
-- grep: 131, 132
-- grub: 159, 160
-- head: 139, 140
-- hope: 137, 138
-- help: 152, 153
-- hostname: 140, 141
-- if: 139, 140
-- install: 144, 145
-- join: 147, 148
-- kill: 139, 140
-- kbd: 165, 166
-- ld: 137, 138
-- less: 169, 170
-- make: 171, 172
-- man: 172, 173
-- md: 139, 140
-- m4: 127, 128
-- patch: 175, 176
-- perl: 140, 141
-- ps: 139, 140
-- sed: 132, 133
-- shell: 134, 135
-- size: 139, 140
-- sort: 139, 140
-- split: 139, 140
-- stat: 139, 140
-- strip: 139, 140
-- tar: 161, 162
-- top: 139, 140
-- time: 137, 138
-- touch: 139, 140
-- uniq: 139, 140
-- wc: 123, 124
-- which: 140, 141
-- x: 188, 189
-- vi: 188, 189
-- zip: 161, 162
-- z: 188, 189
+### 库
+- `ld.so`: 84, 89
+- `liban`: 84, 89
+- `libasprint`: 152, 153
+- `libbfd`: 95, 97
+- `libbkld`: 113, 116
+- `libBrocnLocale`: 84, 89
+- `libbsd-compat`: 84, 89
+- `libbz2`: 113, 116
+- `libbc`: 84, 89
+- `libcheck`: 52, 52
+- `libcid`: 84, 89
+- `libpc`: 84, 90
+- `librt`: 84, 90
+- `libss`: 84, 90
+- `libdt`: 118, 120
+- `libst`: 102, 106
+- `libbc`: 157, 158
+- `liby`: 157, 158
+- `libthread`: 84, 90
+- `libudev`: 185, 187
+- `libutil`: 113, 116
+- `libz`: 157, 158
+- `liby`: 161, 161
+- `libczmp`: 161, 161
+- `libdecd`: 157, 158
+- `libzdff`: 157, 158
+- `libzgrep`: 157, 158
+- `libzfigrep`: 157, 158
+- `libzgrep`: 157, 158
+- `libzless`: 157, 158
+- `libzmore`: 157, 158
 
+### 其他
+- `/boot/config-3.2`: 119, 121
+- `/boot/map-3.2`: 119, 129
+- `/dev/*`: 74
+- `/etc/fstab`: 211, 207
+- `/etc/group`: 80
+- `/etc/hosts`: 196
+- `/etc/init`: 206
+- `/etc/ld.so`: 84, 89
+- `/etc/lfs-release`: 225, 225
+- `/etc/hostname`: 87
+- `/etc/modprobe.d/`: 221, 221
+- `/etc/switch.conf`: 126, 126
+- `/etc/passwd`: 80
+- `/etc/profile`: 213, 213
+- `/etc/protocols`: 126, 126
+- `/etc/resolv.conf`: 195, 195
+- `/etc/services`: 126, 126
+- `/etc/syslog.conf`: 179, 179
+- `/etc/udev`: 125, 125
+- `/etc/vim`: 188, 190
+- `/usr/include/asm-generic.h`: 119, 121
+- `/usr/include/asm/*.h`: 119, 129
+- `/usr/include/drm/*.h`: 119, 129
+- `/usr/include/linux/*.h`: 119, 129
+- `/usr/include/mtd/*.h`: 119, 129
+- `/usr/include/rdma/*.h`: 119, 129
+- `/usr/include/scsi/*.h`: 119, 129
+- `/usr/include/sound/*.h`: 119, 129
+- `/usr/include/video/*.h`: 119, 129
+- `/usr/include/xen/*.h`: 119, 129
+- `/var/log/btmp`: 80
+- `/var/log/lastlog`: 80
+- `/var/run/utmp`: 80
 
-
-
-- cpan: 140, 141
-- cpan2dist: 140, 141
-- cpanp: 140, 141
-- cpan-run-perl: 140, 141
-- cpp2: 102, 105
-- 创建软盘设备: 185, 186
-- csplit: 121, 123
-- ctrlhld: 113, 114
-- ctars: 163, 166
-- cut: 121, 123
-- cyature: 113, 114
-- date: 121, 123
-- dd: 121, 123
-- deallocovt: 165, 166
-- debugfs: 118, 119
-- delpart: 113, 114
-- depcomp: 144, 144
-- depmod: 167, 167
-- df: 121, 123
-- dgawk: 147, 147
-- diff: 146, 146
-- diff3: 146, 146
-- dir: 121, 123
-- dicollectors: 121, 123
-- dnname: 121, 123
-- dmesg: 113, 114
-- dproppf: 140, 141
-- du: 121, 123
-- dump2fs: 118, 119
-- dumpkeyys: 166, 166
-- d2freefrag: 118, 119
-- d2fck: 118, 119
-- d2image: 118, 120
-- d2initrd 助手: 118, 119
-- d2label: 118, 119
-- d2undo: 118, 120
-- d4defrag: 118, 123
-- echo: 121, 123
-- ed id: 185, 186
-- degrep: 131, 131
-- delfit: 95, 96
-- elishp: 144, 145
-- denc2c: 140, 141
-- d2env: 121, 123
-- denvabsst: 152, 152
-- d2qn: 154, 154
-- d2ngraph: 154, 154
-- ex: 188, 190
-- expand: 121, 123
-- expect: 49, 50
-- expry: 176, 178
-- expr: 121, 123
-- factor: 121, 123
-- falluig: 176, 178
-- fallocate: 113, 114
-- false: 121, 123
-- dformat: 113, 114
-- fdisk: 113, 114
-- fgconsole: 165, 166
-- fgrep: 131, 131
-- file: 94, 94
-- filefrag: 118, 120
-- dfind: 148, 148
-- d2perl: 140, 141
-- dnfdss: 113, 114
-- dfmnt: 113, 114
-- firmware.sh: 185, 186
-- flex: 150, 151
-- flock: 113, 114
-- fnt: 121, 123
-- fold: 121, 123
-- frcode: 148, 148
-- free: 129, 129
-- fckss: 113, 114
-- fckramfs: 113, 114
-- fckext2: 118, 120
-- fckext3: 118, 120
-- fckext4: 118, 120
-- fckext4dev: 118, 120
-- fckminix: 113, 114
-- sfreefrag: 113, 114
-- stab-decode: 180, 180
-- stab_import: 185, 186
-- fstrim: 113, 114
-- ftp: 138, 139
-- fuser: 117, 117
-- g++: 102, 105
-- gawk: 147, 147
-- gawk-4.0: 147, 147
-- gcc: 102, 105
-- gcebug: 102, 105
-- diffmnk: 154, 155
-- gencat: 84, 88
-- genl: 163, 163
-- gecqn: 154, 155
-- getconf: 84, 89
-- getent: 84, 89
-- getkeys: 165, 166
-- getopi: 113, 114
-- gettext: 152, 152
-- gettext.sh: 152, 152
-- gettextize: 152, 152
-- getpasswd: 176, 178
-- getprof: 95, 96
-- grap2: 154, 154
-- grcat: 147, 147
-- gcrpc: 131, 131
-- gm: 154, 155
-- grovi: 154, 155
-- groff: 154, 155
-- groffer: 154, 155
-- grolb: 154, 155
-- grol4j: 154, 155
-- grops: 154, 155
-- grotty: 154, 155
-- groupadd: 176, 178
-- groupdel: 176, 178
-- groupmems: 176, 178
-- groupmod: 176, 178
-- groups: 121, 123
-- gprck: 176, 178
-- gprconv: 176, 178
-- gprunconv: 176, 159
-- grub-bin2: 159, 159
-- grub-editenv: 159, 159
-- grub-fstest: 159, 159
-- grub-install: 159, 159
-- grub-kdbcmp: 159, 159
-- grub-menstcfg: 159, 159
-- grub-mkconfig: 159, 159
-- grub-mkdevicemmap: 159, 159
-- grub-mkimage: 159, 160
-- grub-mlklayout: 159, 160
-- grub-mknetdir: 159, 160
-- grub-mkpassword-pbdf2: 159, 160
-- grub-mkrealpath: 159, 160
-- grub-mkrescue: 159, 160
-- grub-probe: 159, 160
-- grub-reboot: 159, 160
-- grub-script-check: 159, 160
-- grub-set-default: 159, 160
-- grub-setup: 159, 160
-- gtbli: 154, 155
-- gunzip: 161, 161
-- gzxe: 161, 161
-- gzip: 161, 161
-- h2ph: 140, 141
-- h2xs: 140, 141
-- halt: 180, 180
-- head: 121, 123
-- hndexump: 113, 114
-- hostid: 121, 123
-- hostname: 138, 139
-- hostname: 152, 152
-- hpflodit: 154, 155
-- hwclock: 113, 114
-- i386: 113, 114
-- iconv: 84, 89
-- iconfig: 84, 89
-- id: 121, 123
-- ifcfg: 163, 164
-- ifnames: 143, 143
-- ifstat: 163, 164
-- igawk: 147, 147
-- dxbibib: 154, 155
-- info: 183, 183
-- infocmp: 111, 111
-- infok: 183, 184
-- infotocap: 110, 111
-- init: 180, 180
-- nsmod: 167, 167
-- install: 121, 123
-- install-info: 183, 184
-- install-sh: 144, 145
-- instmod: 140, 141
-- ionice: 113, 114
-- if: 163, 164
-- ipcmk: 113, 114
-- ipiprm: 113, 115
-- ipcs: 113, 115
-- आइसोize: 113, 115
-- join: 121, 123
-- json: 140, 141
-- kbdrate: 165, 166
-- kbd_mode: 165, 166
-- kill: 129, 129
-- killall: 117, 117
-- kill5: 180, 180
-- klogd: 79, 179
-- kmod: 167, 168
-- last: 180, 181
-- lastb: 180, 181
-- lastlog: 176, 178
-- ld: 95, 96
-- lbfd: 95, 96
-- latch: 113, 115
-- ldconfig: 84, 89
-- ld: 84, 89
-- ldlib: 169, 169
-- leschecho: 169, 169
-- lesskey: 169, 169
-- lex: 150, 151
-- lexgrog: 172, 174
-- lerdee: 157, 157 (注: 原文为 lerdee)
-- lminfo: 157, 157
-- lmore: 157, 158
-- kernel.2: 219, 221
-- libnetcf: 140, 141
-- libtool: 136, 136
-- libtools: 136, 136
-- link: 121, 123
-- linux32: 113, 115
-- linux64: 113, 115
-- lkbib: 154, 155
-- Instat: 163, 164
-- loadkeys: 165, 166
-- loadimap: 165, 166
-- locale: 84, 89
-- localef: 84, 89
-- locate: 84, 149
-- logger: 113, 115
-- login: 176, 178
-- logname: 121, 124
-- logout: 176, 178
-- logsave: 118, 120
-- look: 113, 115
-- lookbib: 154, 155
-- losetup: 113, 115
-- is: 121, 124
-- isattr: 118, 120
-- isblk: 113, 115
-- iscpu: 113, 115
-- ismod: 167, 168
-- lizcat: 157, 157
-- lzmp: 157, 157
-- lzdiff: 157, 157
-- lzgrep: 157, 157
-- lzfgrep: 157, 157
-- llzgrep: 157, 157
-- lzless: 157, 157
-- lzma: 157, 157
-- lzmadee: 157, 157
-- lzminfo: 157, 157
-- m4: 127, 127
-- make: 171, 171
-- makeinfo: 183, 184
-- man: 172, 174
-- mandby: 172, 174
-- manpath: 172, 166
-- mapscrm: 165, 113
-- mookie: 113, 115
-- md5sum: 121, 124
-- date-sh: 144, 145
-- mesg: 180, 181
-- missing: 144, 145
-- mkdir: 121, 124
-- mke2fs: 118, 120
-- mkfio: 121, 124
-- mkfs: 113, 115
-- mkfs.bfs: 113, 115
-- mkfs.cramfs: 113, 115
-- mkfsext2: 118, 120
-- mkfsext3: 118, 120
-- mkfsext4: 118, 120
-- mkfs4dev: 118, 120
-- mkfs.minix: 113, 115
-- mkinstalldirs: 144, 145
-- mklost-found: 118, 120
-- mknod: 121, 124
-- mkswap: 113, 115
-- mktemp: 121, 124
-- mk_ends: 118, 120
-- mroff: 154, 155
-- modinfo: 167, 168
-- modprobe: 167, 168
-- more: 113, 115
-- mount: 113, 115
-- mountpoint: 113, 115
-- msgattrib: 152, 153
-- msgcat: 152, 153
-- msgcmp: 152, 153
-- msgcomm: 152, 153
-- msgconv: 152, 153
-- msgexec: 152, 153
-- msgfilter: 152, 153
-- msgftnt: 152, 153
-- msgmerge: 152, 153
-- msgunif: 152, 153
-- msguniq: 152, 153
-- mntrace: 84, 89
-- nv: 121, 124
-- name: 121, 124
-- new-config: 110, 111
-- newgroup: 176, 178
-- newusers: 176, 178
-- nice: 121, 124
-- nl: 121, 124
-- nm: 95, 96
-- nohup: 121, 124
-- nolog: 176, 178
-- nproc: 121, 124
-- nroff: 154, 155
-- od: 121, 124
-- objcopy: 95, 96
-- oldfind: 148, 148
-- openvt: 165, 166
-- partx: 113, 115
-- passwd: 176, 178
-- paste: 121, 124
-- patch: 175, 175
-- patchchk: 121, 124
-- path id: 185, 186
-- profilefdump: 84, 89
-- pdfroff: 154, 155
-- pdextid: 183, 184
-- peckfd: 117, 117
-- perl: 140, 141
-- perl5.14.2: 140, 141
-- perbug: 140, 141
-- perldoc: 140, 141
-- perlivp: 140, 141
-- perlthanks: 140, 141
-- pfbtops: 154, 155
-- pg: 113, 115
-- pawk: 147, 147
-- pawk-4.0.0: 147, 147
-- pgrep: 129, 129
-- pic: 154, 155
-- pic2graph: 154, 155
-- piconv: 140, 142
-- pidof: 180, 181
-- ping: 138, 139
-- ping6: 138, 139
-- pinky: 121, 124
-- pivot_root: 113, 115
-- pkill: 129, 129
-- p22m: 140, 142
-- pmap: 129, 129
-- pod2html: 140, 142
-- podlatex: 140, 142
-- podman: 140, 142
-- podtext: 140, 142
-- podusage: 140, 142
-- podchecker: 140, 142
-- podselect: 140, 142
-- post-grohtml: 154, 155
-- poweroff: 180, 181
-- pr: 121, 124
-- pre-grohtml: 154, 155
-- preconv: 154, 155
-- printv: 121, 124
-- print: 121, 124
-- prove: 140, 142
-- prstat: 117, 117
-- ps: 129, 129
-- pfs: 113, 115
-- pmap: 113, 115
-- mountpoint: 113, 115
-- ptattrib: 152, 153
-- ptcat: 152, 153
-- ptcmp: 152, 153
-- ptcomm: 152, 153
-- ptconv: 152, 153
-- ptexec: 152, 153
-- ptfilter: 152, 153
-- ptftnt: 152, 153
-- ptmerge: 152, 153
-- ptunif: 152, 153
-- ptuniq: 152, 153
-- pntrace: 84, 89
-- pv: 121, 124
-- name: 121, 124
-- new-config: 110, 111
-- newgroup: 176, 178
-- newusers: 176, 178
-- nice: 121, 124
-- nl: 121, 124
-- nm: 95, 96
-- nohup: 121, 124
-- nolog: 176, 178
-- nproc: 121, 124
-- nroff: 154, 155
-- od: 121, 124
-- objcopy: 95, 96
-- oldfind: 148, 148
-- openvt: 165, 166
-- partx: 113, 115
-- passwd: 176, 178
-- paste: 121, 124
-- patch: 175, 175
-- patchchk: 121, 124
-- path id: 185, 186
-- profilefdump: 84, 89
-- pdfroff: 154, 155
-- pdextid: 183, 184
-- peckfd: 117, 117
-- perl: 140, 141
-- perl5.14.2: 140, 141
-- perbug: 140, 141
-- perldoc: 140, 141
-- perlivp: 140, 141
-- perlthanks: 140, 141
-- pfbtops: 154, 155
-- pg: 113, 115
-- pawk: 147, 147
-- pawk-4.0.0: 147, 147
-- pgrep: 129, 129
-- pic: 154, 155
-- pic2graph: 154, 155
-- piconv: 140, 142
-- pidof: 180, 181
-- ping: 138, 139
-- ping6: 138, 139
-- pinky: 121, 124
-- pivot_root: 113, 115
-- pkill: 129, 129
-- p22m: 140, 142
-- pmap: 129, 129
-- pod2html: 140, 142
-- podlatex: 140, 142
-- podman: 140, 142
-- podtext: 140, 142
-- podusage: 140, 142
-- podchecker: 140, 142
-- podselect: 140, 142
-- post-grohtml: 154, 155
-- poweroff: 180, 181
-- pr: 121, 124
-- pre-grohtml: 154, 155
-- preconv: 154, 155
-- printv: 121, 124
-- print: 121, 124
-- prove: 140, 142
-- prstat: 117, 117
-- ps: 129, 129
-
-
-
-
-
-# Linux From Scratch - 版本 7.1
-
-- strip: 95, 97
-- stty: 121, 125
-- au: 176, 178
-- suloglin: 180, 181
-- sum: 121, 125
-- swapable: 113, 115
-- swapoff: 113, 116
-- swapon: 113, 116
-- switch-root: 113, 116
-- symlink-tree: 144, 145
-- sync: 121, 125
-- sysct: 129, 125
-- syslogd: 179, 179
-- tabs: 110, 111
-- tac: 121, 125
-- tail: 121, 125
-- tail: 113, 116
-- talkk: 138, 139
-- tar: 182, 182
-- taskset: 113, 116
-- tbfl: 154, 156
-- tc: 163, 164
-- tclsh: 47, 48
-- tclsh8: 45, 48
-- tee: 121, 125
-- telimit: 180, 181
-- telnet: 138, 139
-- test: 121, 125
-- testgdb: 137, 137
-- text2dvi: 183, 184
-- text2pdf: 183, 184
-- textindex: 183, 184
-- tfmodit: 154, 156
-- tffp: 138, 139
-- tic: 110, 111
-- timeout: 121, 125
-- tload: 129, 130
-- toe: 110, 111
-- top: 129, 130
-- tput: 110, 111
-- tr: 121, 125
-- traceroute: 138, 139
-- troff: 154, 156
-- true: 121, 125
-- truncate: 121, 125
-- tset: 110, 111
-- tsort: 121, 125
-- stty: 121, 125
-- tune2fs: 118, 120
-- tunnelp: 113, 116
-- zzselect: 84, 89
-- deudev: 185, 186
-- ducvd: 185, 186
-- ul: 113, 116
-- mount: 113, 116
-- unicame: 121, 125
-- compress: 161, 161
-- expand: 129, 125
-- unicode_start: 165, 166
-- unicodesop: 165, 166
-- unicid: 121, 125
-- unlink: 121, 125
-- unlzma: 157, 158
-- unshare: 113, 116
-- uxz: 157, 158
-- updated: 148, 149
-- uptime: 129, 130
-- dusb: 185, 187
-- useradd: 176, 178
-- userdel: 176, 178
-- usermod: 176, 178
-- users: 121, 125
-- utmpdump: 180, 181
-- uuid: 113, 116
-- uuidgen: 113, 116
-- dir: 121, 125
-- vi: 188, 190
-- view: 188, 190
-- vigr: 176, 178
-- vim: 188, 190
-- vimdiff: 188, 190
-- vimtutor: 188, 190
-- vmipw: 176, 178
-- vmstat: 129, 130
-- w: 129, 130
-- wall: 113, 116
-- watch: 129, 125
-- wc: 121, 125
-- whatis: 172, 174
-- whereis: 113, 116
-- who: 121, 125
-- whoami: 121, 125
-- wipefs: 113, 116
-- write: 113, 116
-- write_cd_rules: 185, 187
-- write_net_rules: 185, 187
-- xargs: 148, 149
-- xxgettext: 152, 153
-- xsububb: 140, 142
-- tstrace: 84, 89
-- xdd: 188, 190
-- xzst: 157, 158
-- zcat: 158, 158
-- zczmp: 157, 158
-- zdecd: 157, 158
-- zdff: 157, 158
-- zgreprep: 157, 158
-- zfigrep: 157, 158
-- zgrep: 157, 158
-- zless: 157, 158
-- zmore: 157, 158
-- yacc: 128, 121
-- yes: 121, 125
-- ywarp: 144, 145
-- zcat: 161, 161
-- zczmp: 161, 161
-- zdff: 161, 161
-- zdump: 84, 89
-- zegrep: 161, 161
-- zfigrep: 161, 161
-- zforce: 161, 161
-- zgrep: 161, 161
-- zic: 84, 89
-- zless: 162, 162
-- zmore: 162, 162
-- znew: 161, 162
-- zsoims: 172, 174
-- lib_err: 118, 120
-- crypt: 84, 89
-- libcurses: 110, 111
-- libdl: 84, 89
-- lib2p: 118, 120
-- libxpect-5.4: 49, 50
-- lib2xtfs: 118, 120
-- libflat: 150, 151
-- libform: 110, 112
-- libg: 84, 89
-- libgcc: 102, 105
-- libcov: 102, 105
-- libcheck: 52, 52
-- libgdbm: 137, 137
-- libgetextlib: 152, 153
-- libgetextpo: 152, 153
-- libgetextsrc: 152, 153
-- libbmp: 98, 99
-- libmpx: 98, 99
-- libgomp: 102, 105
-- libhistory: 132, 133
-- liberty: 95, 97
-- libibee: 84, 90
-- libkmod: 167, 167
-- libdll: 136, 136
-- libto_plugin: 102, 106
-- libzma: 157, 158
-- libm: 84, 90
-- libmagic: 94, 94
-- libcheck: 84, 90
-- libmemusage: 84, 90
-- libmenu: 110, 112
-- libmp: 98, 99
-- libmpc: 101, 101
-- libmpfr: 100, 100
-- libmudflap: 102, 106
-- libncurses: 110, 111
-- libnsl: 84, 90
-- libnss: 84, 90
-- libcodec: 95, 97
-- libpanel: 110, 112
-- libprofile: 84, 90
-- libpipeline: 170, 170
-- libproc: 129, 130
-- libthread: 84, 90
-- libquadmath: 102, 106
-- libquota: 118, 120
-- libreadline: 132, 133
-
-# 库
-
-- ld.so: 84, 89
-- liban: 84, 89
-- libasprint: 152, 153
-- libbfd: 95, 97
-- libbkld: 113, 116
-- libBrocnLocale: 84, 89
-- libbsd-compat: 84, 89
-- libbz2: 113, 116
-- libbc: 84, 89
-- libcheck: 52, 52
-- libcid: 84, 89
-- libpc: 84, 90
-- librt: 84, 90
-- libss: 84, 90
-- libdt: 118, 120
-- libst: 102, 106
-- libbc: 157, 158
-- liby: 157, 158
-- libthread: 84, 90
-- libudev: 185, 187
-- libutil: 113, 116
-- libz: 157, 158
-- liby: 161, 161
-- libczmp: 161, 161
-- libdecd: 157, 158
-- libzdff: 157, 158
-- libzgrep: 157, 158
-- libzfigrep: 157, 158
-- libzgrep: 157, 158
-- libzless: 157, 158
-- libzmore: 157, 158
-
-# 其他
-
-- /boot/config-3.2: 119, 121
-- /boot/map-3.2: 119, 129
-- /dev/*: 74
-- /etc/fstab: 211, 207
-- /etc/group: 80
-- /etc/hosts: 196
-- /etc/init: 206
-- /etc/ld.so: 84, 89
-- /etc/lfs-release: 225, 225
-- /etc/hostname: 87
-- /etc/modprobe.d/: 221, 221
-- /etc/switch.conf: 126, 126
-- /etc/passwd: 80
-- /etc/profile: 213, 213
-- /etc/protocols: 126, 126
-- /etc/resolv.conf: 195, 195
-- /etc/services: 126, 126
-- /etc/syslog.conf: 179, 179
-- /etc/udev: 125, 125
-- /etc/vim: 188, 190
-- /usr/include/asm-generic.h: 119, 121
-- /usr/include/asm/*.h: 119, 129
-- /usr/include/drm/*.h: 119, 129
-- /usr/include/linux/*.h: 119, 129
-- /usr/include/mtd/*.h: 119, 129
-- /usr/include/rdma/*.h: 119, 129
-- /usr/include/scsi/*.h: 119, 129
-- /usr/include/sound/*.h: 119, 129
-- /usr/include/video/*.h: 119, 129
-- /usr/include/xen/*.h: 119, 129
-- /var/log/btmp: 80
-- /var/log/lastlog: 80
-- /var/run/utmp: 80
-
-# 脚本
-
-- checkfs: 203, 203
-- cleans: 203, 203
-- console: 203, 203
-- configuring: 208
-- functions: 203, 203
-- halt: 203, 203
-- hostname
-- configuring: 207
-- ifdown: 203, 203
-- ifup: 203, 203
-- localnet: 203, 203
-- /etc/hosts: 196
-- modules: 203, 203
-- mounts: 203, 203
-- mountkermfs: 203, 203
-- network: 203, 203
-- /etc/hosts: 196
-- configuring: 193
-- rc: 203, 203
-- reboot: 203, 203
-- sendsignal: 203, 203
-- sctlock: 203, 203
-- sctck: 208
-- static: 203, 204
-- swap: 203, 204
-- sysct: 203, 204
-- syslog: 203, 204
+### 脚本
+- `checkfs`: 203, 203
+- `cleans`: 203, 203
+- `console`: 203, 203
+- `configuring`: 208
+- `functions`: 203, 203
+- `halt`: 203, 203
+- `hostname`
+- `configuring`: 207
+- `ifdown`: 203, 203
+- `ifup`: 203, 203
+- `localnet`: 203, 203
+- `/etc/hosts`: 196
+- `modules`: 203, 203
+- `mounts`: 203, 203
+- `mountkermfs`: 203, 203
+- `network`: 203, 203
+- `/etc/hosts`: 196
+- `configuring`: 193
+- `rc`: 203, 203
+- `reboot`: 203, 203
+- `sendsignal`: 203, 203
+- `sctlock`: 203, 203
+- `sctck`: 208
+- `static`: 203, 204
+- `swap`: 203, 204
+- `sysct`: 203, 204
+- `syslog`: 203, 204
 
 # man页: 83, 83
-

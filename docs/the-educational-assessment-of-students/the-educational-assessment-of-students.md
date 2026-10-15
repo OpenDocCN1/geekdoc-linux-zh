@@ -1,27 +1,9 @@
+
 # 学生教育评估
-
-
-
-
-
-
-
-
-
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_2_0.png)
 
 献给 Veronica
-
-
-
-
-
-
-
-
-
-
 
 《Educational Assessment of Students, Fourth Edition》的目标仍然是帮助教师和正在接受培训的教师通过更好地评估学生来改进教学。它直接关注小学和中学教师的专业实践。本版特色为
 
@@ -56,6 +38,7 @@
 1. 如何制作课堂评估的示例以及它们的典型外观，
 2. 核对清单，提供评估本书教授的每种评估类型的质量的简明提示，
 3. 评估高阶思维的策略，并在提交答复后提供建议答案。
+
 - 关键词，线上词汇表，链接到关键评估术语的定义。
 - 网上搜索 提供指向超出本书可获得的评估内容的互联网链接。
 - 网页链接 将用户带到与章节内容相关的网站。
@@ -67,10 +50,6 @@
 
 如此规模的项目需要许多人的帮助。我非常感激审阅者在本书手稿章节的批判性阅读，他们对技术准确性、可读性和教学法的贡献很大：Alice Corkill，内华达大学拉斯维加斯分校；Terry Fogg，明尼苏达州立大学；Gretchen Guiton，南加州大学；Suzanne Lane，匹兹堡大学；Robert Paugh，中佛罗里达大学；以及 Susan E. Phillips，密歇根州立大学。
 
-
-
-
-
 Rogers, University of Northern Iowa; William M. Stallings, Georgia State University; Hoi K. Suen, Pennsylvania State University; James S. Terwilliger, University of Minnesota; Michael S. Trevisan, Washington State University; Anthony Truog, University of Wisconsin–Whitewater; Kinnard White, University of North Carolina; Richard Wolf, Teachers College, Columbia University; David R. Young, SUNY–Cortland; and Michael J. Young, University of Pittsburgh.
 
 My students at the School of Education, University of Pittsburgh; the College of Education, University of Arizona; the Curriculum Development and Evaluation Centre, Botswana Ministry of Education; teachers working with Jamaica Ministry of Education; teachers and assessors at the Examination Development Center, Indonesia Ministry of Education and Culture; and trainers with the Integrated Language Project in Egypt used the second and third editions. They provided insightful feedback and corrections of errors that have greatly improved the usefulness of the text. Francis Amedahe helped classify chapter learning targets and write test items for the third edition. Sarah Bonner contributed test items, practical examples for classroom activities, and many elements of the new Instructor’s Manual for this edition. James Impara of the Buros Institute of Mental Measurements was most generous in helping me to locate information about, obtain copies of, and understand many of the standardized test materials described in this book. Kevin Davis, Julie Peters, and Mary Harlan of Merrill/Prentice Hall, as well as Cindy Miller of Carlisle Communications, encouraged and cajoled me at every stage from acquisition through production, and applied their considerable knowledge and skill to producing the book. To all of these persons, and others I have failed to mention, I offer my most sincere thanks and appreciation.
@@ -79,14 +58,15 @@ No one deserves more thanks, for this edition as well as past editions, than my 
 
 ## ABOUT THE AUTHOR
 
+
+
 Anthony J. Nitko is an adjunct professor, Department of Educational Psychology, University of Arizona, and professor emeritus and former chairperson of the Department of Psychology in Education at the University of Pittsburgh. His research interests include curriculum-based criterion-referenced testing, integration of testing and instruction, classroom assessment, and the assessment of knowledge and higher-order thinking skills. His publications include the chapter "Designing Tests That Are Integrated with Instruction" in the third edition of Educational Measurement. He co-authored (with C. M. Lindvall) Measuring Pupil Achievement and Aptitude, (with T. C. Hsu) Pitt Educational Testing Aids (PETA, a package of computer programs for classroom teachers), and (with R. Glaser) the chapter "Measurement in Learning and Instruction" in the second edition of Educational Measurement.
 
 Dr. Nitko has been the editor of the journal Educational Measurement: Issues and Practice and also d'News, the AERA Division D newsletter. Some of the journals in which his research has appeared are American Educational Research Journal, Applied Measurement in Education, Educational Evaluation and Policy Analysis, Educational Measurement: Issues and Practice, Educational Technology, Journal of Educational Measurement, and Research in Developmental Disabilities.
 
 Dr. Nitko has been a member of several committees of the American Educational Research Association, was elected secretary of AERA Division D, served on committees of the National Council on Measurement in Education, and was elected to the board of directors and as president of the latter. He received Fulbright awards to Malawi and Barbados and has served as a consultant to various government and private agencies in the United States, Bangladesh, Barbados, Botswana, Egypt, Indonesia, Jamaica, Malawi, Namibia, Oman, Vietnam, and Singapore.
 
-## Educator Learning Center:
-An Invaluable Online Resource
+## Educator Learning Center: An Invaluable Online Resource
 
 Merrill Education and the Association for Supervision and Curriculum Development (ASCD) invite you to take advantage of a new online resource, one that provides access to the top research and proven strategies associated with ASCD and Merrill—the Educator Learning Center. At www.EducatorLearningCenter.com you will find resources that will enhance your students’ understanding of course topics and of current educational issues, in addition to being invaluable for further research.
 
@@ -96,13 +76,13 @@ Merrill Education and the Association for Supervision and Curriculum Development
 
 With the combined resources of Merrill Education and ASCD, you and your students will find a wealth of tools and materials to better prepare them for the classroom.
 
-## Research
+### Research
 
 - More than 600 articles from the ASCD journal Educational Leadership discuss everyday issues faced by practicing teachers.
 - A direct link on the site to Research Navigator™ gives students access to many of the leading education journals, as well as extensive content detailing the research process.
 - Excerpts from Merrill Education texts give your students insights on important topics of instructional methods, diverse populations, assessment, classroom management, technology, and refining classroom practice.
 
-## Classroom Practice
+### Classroom Practice
 
 - Hundreds of lesson plans and teaching strategies are categorized by content area and age range.
 - Case studies and classroom video footage provide virtual field experience for student reflection.
@@ -112,123 +92,66 @@ With the combined resources of Merrill Education and ASCD, you and your students
 
 Preview the value of this educational environment by visiting www.EducatorLearningCenter.com and clicking on "Demo." For a free 4-month subscription to the Educator Learning Center in conjunction with this text, simply contact your Merrill/Prentice Hall sales representative.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # 课堂决策与评估的使用
 
 ## 学习目标
+
+
 
 学习本章后，你应掌握以下内容：
 
 ## 教师的课堂决策
 
-+   1. 举例说明你在教学前、中、后需要做出的教学管理决策。 [4, 1, 2]
-+   2. 举例说明能为你做出目标1中所述决策提供有用信息的评估程序。 [1, 2, 3, 4]
+1. 举例说明你在教学前、中、后需要做出的教学管理决策。 [4, 1, 2]
+
+2. 举例说明能为你做出目标1中所述决策提供有用信息的评估程序。 [1, 2, 3, 4]
 
 ## 评估、测验、测量与评价之间的区别
 
-+   3. 定义并解释教学、评估、测验、测量和评价之间的关系。 [6, 1]
-+   4. 解释指导你在选择、开发和使用具有教育意义的评估时的原则。 [1, 3]
+3. 定义并解释教学、评估、测验、测量和评价之间的关系。 [6, 1]
+
+4. 解释指导你在选择、开发和使用具有教育意义的评估时的原则。 [1, 3]
 
 ## 评估与关于学生的教育决策
 
-+   5. 描述并解释教育工作者需要高质量评估的广泛教育决策范围。 [1, 6]
+5. 描述并解释教育工作者需要高质量评估的广泛教育决策范围。 [1, 6]
 
-+   6. 区分形成性评价和总结性评价。 [1, 4]
-+   7. 描述评估为做出关于诊断/补救措施、向学生/家长反馈、向教师反馈、激励学生以及给学生评定成绩的决策所提供的各类信息。 [1, 3, 4]
-+   8. 区分选择决策、安置决策、分类决策、咨询与指导决策以及资格认证/证书授予决策。 [1, 3, 6]
+6. 区分形成性评价和总结性评价。 [1, 4]
+
+7. 描述评估为做出关于诊断/补救措施、向学生/家长反馈、向教师反馈、激励学生以及给学生评定成绩的决策所提供的各类信息。 [1, 3, 4]
+
+8. 区分选择决策、安置决策、分类决策、咨询与指导决策以及资格认证/证书授予决策。 [1, 3, 6]
 
 ## 获得评估学生的能力
 
-+   9. 解释《学生教育评估教师能力标准》中的每一项标准如何与你在教学前、中、后的教学活动相关。 [6, 1, 7]
+9. 解释《学生教育评估教师能力标准》中的每一项标准如何与你在教学前、中、后的教学活动相关。 [6, 1, 7]
 
 ## 重要术语和概念
 
-+   10. 解释本章末尾列出的术语和概念如何适用于教育评估。 [6]
+10. 解释本章末尾列出的术语和概念如何适用于教育评估。 [6]
 
 教师必须做出许多决策。然而，仅凭良好的判断力或多年的经验并不足以在课堂上做出好的决策。好的决策，例如教什么、如何教以及如何评价学生的成绩，都基于高质量的信息。成功的教师从高质量的评估中获取有关学生的信息。
 
 在教学过程中，不要陷入只关注学生是否回答了你提出的问题的陷阱；观察学生互动。）
 
-### 教学过程中的决策
+## 教学过程中的决策
 
-+   1. 我该怎么做才能让这节课（活动）效果更好？（诊断学生犯的错误类型或学生使用的错误思维；回想记忆中教授该材料的替代方法；识别哪些学生没有参与或行为不当。）
-+   2. 我应给每位学生提供怎样的反馈以说明他们的学习情况？（对不同学生所需表扬的数量和类型的非正式观察和经验；关于每位学生接近学习目标程度的信息；家庭作业和测验结果；访谈学生。）
-+   3. 我的学生是否准备好进入学习序列中的下一个活动？（非正式观察并检查学生完成的作业；询问学生对理解的看法；学生的家庭作业、测验和测试结果。）
+1. 我该怎么做才能让这节课（活动）效果更好？（诊断学生犯的错误类型或学生使用的错误思维；回想记忆中教授该材料的替代方法；识别哪些学生没有参与或行为不当。）
 
-### 教学片段后的决策
+2. 我应给每位学生提供怎样的反馈以说明他们的学习情况？（对不同学生所需表扬的数量和类型的非正式观察和经验；关于每位学生接近学习目标程度的信息；家庭作业和测验结果；访谈学生。）
 
-+   1. 我的学生在短期和长期教学目标上的达成情况如何？（课堂测试、项目、观察、与学生的访谈、标准化测试结果。）
-+   2. 我将向每位学生及其监护人或家长报告哪些优势和弱点？（观察每位学生在课堂上的参与情况；回顾每位学生的家庭作业结果；回顾每位学生的标准化成绩和学业能力测试结果；回顾学生个人家庭情况的信息。）
-+   3. 我应给每位学生本课或单元、学期或课程的什么成绩？（课堂学习活动、测验、测试、班级项目、论文、实验等的结果；关于学生是否达到预期学习目标的非正式观察；了解向学生报告特定成绩可能带来的短期和长期后果。）
-+   4. 我对这部分材料教得有多有效？（对班级在重要
+3. 我的学生是否准备好进入学习序列中的下一个活动？（非正式观察并检查学生完成的作业；询问学生对理解的看法；学生的家庭作业、测验和测试结果。）
 
+## 教学片段后的决策
 
+1. 我的学生在短期和长期教学目标上的达成情况如何？（课堂测试、项目、观察、与学生的访谈、标准化测试结果。）
 
-instructional targets; summaries of the class’s performance on selected questions on standardized tests; summaries of how well the students liked the activities and lesson materials.)
+2. 我将向每位学生及其监护人或家长报告哪些优势和弱点？（观察每位学生在课堂上的参与情况；回顾每位学生的家庭作业结果；回顾每位学生的标准化成绩和学业能力测试结果；回顾学生个人家庭情况的信息。）
+
+3. 我应给每位学生本课或单元、学期或课程的什么成绩？（课堂学习活动、测验、测试、班级项目、论文、实验等的结果；关于学生是否达到预期学习目标的非正式观察；了解向学生报告特定成绩可能带来的短期和长期后果。）
+
+4. 我对这部分材料教得有多有效？（对班级在重要
+    instructional targets; summaries of the class’s performance on selected questions on standardized tests; summaries of how well the students liked the activities and lesson materials.）
 
 5. How effective are the curriculum and materials I used? (Summaries of informal observations of students’ interests and reactions to the learning activities and materials; summaries of the class’s achievement on classroom tests that match the curriculum; summaries of several classes’ performance on selected areas of standardized tests.)
 
@@ -238,16 +161,17 @@ These lists of questions and assessments are not exhaustive; you may wish to lis
 
 The general public often uses the terms assessment, test, measurement, and evaluation interchangeably, but it is important for you to distinguish among them. The meanings of the terms, as applied to situations in schools, are explained in the following paragraphs. This section explains the relationship among these terms (shown in Figure 1.1).
 
-## Assessments
-
-Assessment is a broad term defined as a process for obtaining information that is used for making decisions about students, curricula and programs, and educational policy (see American Federation of Teachers, National Council on Measurement in Education, and National Education Association, 1990). Decisions about students include managing classroom instruction, placing them into different types of educational programs, assigning grades to them, guiding and counseling them, selecting them for educational
-
 Figure 1.1
+
 Relationship among the terms assessments, tests, measurement, and evaluation.
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_20_0.png)
 
-opportunities, and credentialing and certifying their competence. Decisions about curricula and programs include decisions about their effectiveness (summative evaluations) and about ways to improve them (formative evaluations). Decisions about educational policy are made at the local school district level, the state level, and the national level. Figure 1.2 illustrates some of the decisions and subdecisions for which educational assessments provide information.
+### Assessments
+
+Assessment is a broad term defined as a process for obtaining information that is used for making decisions about students, curricula and programs, and educational policy (see American Federation of Teachers, National Council on Measurement in Education, and National Education Association, 1990). Decisions about students include managing classroom instruction, placing them into different types of educational programs, assigning grades to them, guiding and counseling them, selecting them for educational opportunities, and credentialing and certifying their competence. Decisions about curricula and programs include decisions about their effectiveness (summative evaluations) and about ways to improve them (formative evaluations). Decisions about educational policy are made at the local school district level, the state level, and the national level. Figure 1.2 illustrates some of the decisions and subdecisions for which educational assessments provide information.
+
+
 
 When we say we are “assessing a student’s competence,” we mean we are collecting information to help us decide the degree to which the student has achieved the learning targets. A large number of assessment techniques may be used to collect this information. These include formal and informal observations of a student; paper-and-pencil tests; a student’s performance on homework, lab work, research papers, projects, and during oral questioning; and analyses of a student’s records.
 
@@ -255,17 +179,19 @@ When we say we are “assessing a student’s competence,” we mean we are coll
 
 Assessment is a process for obtaining information for making a particular educational decision. You should focus your assessment activities on the information you need to make particular educational decisions. This means that you need to become competent in selecting and using assessments. Here is a set of guiding principles that you should follow to select and use educational assessments meaningfully.
 
-+   1. Be clear about the learning targets you want to assess.
-+   2. Be sure that the assessment techniques you select match each learning target.
-+   3. Be sure that the selected assessment techniques serve the needs of the learners.
-+   4. Whenever possible, be sure to use multiple indicators of performance for each learning target.
-+   5. Be sure that when you interpret the results of assessments you take their limitations into account.
++ 1. Be clear about the learning targets you want to assess.
++ 2. Be sure that the assessment techniques you select match each learning target.
++ 3. Be sure that the selected assessment techniques serve the needs of the learners.
++ 4. Whenever possible, be sure to use multiple indicators of performance for each learning target.
++ 5. Be sure that when you interpret the results of assessments you take their limitations into account.
 
 ment(s) be built out of such exemplary intellectual challenges” (Wiggins, 1990, p. 1). The assessment techniques selected should be as practical and efficient to use as possible, but practicality and efficiency should not be the overriding considerations.
 
-+   3. Be sure that the selected assessment techniques serve the needs of the learners. Proper assessments show students concrete examples of what they are expected to do with their learning. Assessment techniques should provide learners with opportunities for determining specifically what they have achieved and specifically what they must do to improve their performance. Therefore, you should select assessment techniques that allow you to provide meaningful feedback to the learners. You should be able to tell students how closely they have approximated the learning targets. Good assessment is good instruction.
++ 3. Be sure that the selected assessment techniques serve the needs of the learners. Proper assessments show students concrete examples of what they are expected to do with their learning. Assessment techniques should provide learners with opportunities for determining specifically what they have achieved and specifically what they must do to improve their performance. Therefore, you should select assessment techniques that allow you to provide meaningful feedback to the learners. You should be able to tell students how closely they have approximated the learning targets. Good assessment is good instruction.
 
-+   4. Whenever possible, be sure to use multiple indicators of performance for each learning target. One format of assessment (such as short-answer questions or matching exercises) provides an incomplete picture of what a student has learned. Because one assessment format tends to emphasize only one aspect of a complex learning target, it typically underrepresents that learning target. Getting information about a student’s achievement from several assessment modalities usually enhances the validity of your assessments. Matching exercises, for example, emphasize recall and recognition of factual information; essay questions emphasize organizing ideas and writing skill under the pressure of time limits; and a month-long project emphasizes freely using resources, research, and more thorough analyses of the topic. All three of these assessment techniques may be needed to ascertain the extent to which a student has achieved a given learning target.
++ 4. Whenever possible, be sure to use multiple indicators of performance for each learning target. One format of assessment (such as short-answer questions or matching exercises) provides an incomplete picture of what a student has learned. Because one assessment format tends to emphasize only one aspect of a complex learning target, it typically underrepresents that learning target. Getting information about a student’s achievement from several assessment modalities usually enhances the validity of your assessments. Matching exercises, for example, emphasize recall and recognition of factual information; essay questions emphasize organizing ideas and writing skill under the pressure of time limits; and a month-long project emphasizes freely using resources, research, and more thorough analyses of the topic. All three of these assessment techniques may be needed to ascertain the extent to which a student has achieved a given learning target.
+
+
 
 +   5. Be sure that when you interpret the results of assessments you take their limitations into account. Although Guiding Principle 2 calls for increasing the authenticity or meaningfulness of the assessment techniques, assessments in schools cannot completely reproduce those things we want students to learn in “real life.” The information we obtain, even from multiple assessments, is only a sample of a student’s attainment of a learning target. Because of this, information from assessment contains sampling error. Also, factors such as a student’s physical and emotional conditions further limit the extent to which we can obtain truly accurate information. Teachers, and others, must make decisions nevertheless. The decisions, however, must keep these limitations in mind.
 
@@ -275,9 +201,7 @@ ment(s) be built out of such exemplary intellectual challenges” (Wiggins, 1990
 
 ## Tests
 
-Testing Individuals A test is defined as an instrument or systematic procedure for observing and describing one or more characteristics of a student using either a numerical
-
-scale or a classification scheme. A test is a concept narrower than assessment. In schools, we usually think of a test as a paper-and-pencil instrument with a series of questions that students must answer. Teachers usually score these tests by adding together the "points" a student earned on each question. By using tests this way, teachers describe the student using a numerical scale. Similarly, a preschool child's cognitive development could be observed by using the Wechsler Pre-School and Primary Scale of Intelligence (see Chapter 19) and described as having a percentile rank of 50 (see Chapter 17).
+Testing Individuals A test is defined as an instrument or systematic procedure for observing and describing one or more characteristics of a student using either a numerical scale or a classification scheme. A test is a concept narrower than assessment. In schools, we usually think of a test as a paper-and-pencil instrument with a series of questions that students must answer. Teachers usually score these tests by adding together the "points" a student earned on each question. By using tests this way, teachers describe the student using a numerical scale. Similarly, a preschool child's cognitive development could be observed by using the Wechsler Pre-School and Primary Scale of Intelligence (see Chapter 19) and described as having a percentile rank of 50 (see Chapter 17).
 
 Not all tests use numerical scales. Other systematic observation procedures such as the play interview (Murphy, 1956), that child development specialists sometimes use with preschoolers, describe the child using a classification scheme. For example, a child may be described as "ego centered" or "drive centered." These categories represent constructs based in Freudian psychological theories.
 
@@ -288,6 +212,8 @@ Figure 1.2 Examples of types of educational decisions for which assessments may 
 ## Survey Testing Programs
 
 Although it is natural to assume that tests are designed to provide information about an individual, this is not always true. Some states have testing programs designed to determine whether their schools have attained certain goals or standards. Although these tests are administered to individual students, states use the results to measure the effectiveness of a school or its programs. In such cases, individual names are not associated with scores, and all students do not need to answer identical questions. The "score" for the school system (or for a specific school at a specific grade level) is usually the average score of the students who took the test.
+
+
 
 Another example of an assessment program designed to survey the educational system rather than individual students is the National Assessment of Educational Progress (NAEP) (Merwin & Womer, 1969; Mullis, 1991; Tyler, 1966). The NAEP assesses the impact of the nation's educational efforts by describing what students are able to do. Assessment tasks are assigned to students on a random sampling basis, so that not every student has the same or even comparable tasks. Thus, it is not possible to use the scores with individual students. The assessment is intended to show the progress of education in the entire country.
 
@@ -307,10 +233,9 @@ You can see from the preceding definitions that an assessment may or may not pro
 
 Evaluation is defined as the process of making a value judgment about the worth of a student's product or performance. For example, you may judge a student's writing as exceptionally good for his grade placement. This evaluation may lead you to encourage the student to enter a national essay competition. To make this evaluation, you would first have to assess his writing ability. You may gather information by reviewing the student's journal, comparing his writing to other students and to known quality standards of writing, and so on. Such assessments provide information you may use to judge the quality or worth of the student's writing. A judgment of high quality would lead to a decision to encourage him to enter the competition. Evaluations are the bases for decisions about what course of action to follow.
 
-Evaluation may or may not be based on measurements or test results. Clearly, evaluation does occur in the absence of tests, measurements, and other objective information. You can—and probably often do—evaluate students on the basis of assessments such as systematic observation and qualitative description, without measur-
 
 
-using them. 即使客观信息可用并被使用，评估者也必须将其整合到自己的经验中才能做出决策。因此，主观性、不一致性和偏见的程度会影响所有评估。测试和测量由于比其他评估技术更标准化、更客观，减少了一些影响评估的不一致性和主观性。然而，说使用测试和测量（或一般而言，定量信息）“极大地改善”评估本身就是一种对技术的偏见。
+Evaluation may or may not be based on measurements or test results. Clearly, evaluation does occur in the absence of tests, measurements, and other objective information. You can—and probably often do—evaluate students on the basis of assessments such as systematic observation and qualitative description, without measurements using them. 即使客观信息可用并被使用，评估者也必须将其整合到自己的经验中才能做出决策。因此，主观性、不一致性和偏见的程度会影响所有评估。测试和测量由于比其他评估技术更标准化、更客观，减少了一些影响评估的不一致性和主观性。然而，说使用测试和测量（或一般而言，定量信息）“极大地改善”评估本身就是一种对技术的偏见。
 
 通常更侧重于为开发者提供改进建议，而不是形成性评估。
 
@@ -343,22 +268,27 @@ using them. 即使客观信息可用并被使用，评估者也必须将其整�
 诊断性评估的艺术尚未得到充分发展。诊断学生学习困难至少有五种方法。第 13 章描述了它们并提供了如何设计适当评估技术的建议。
 
 ### Feedback to Students
+
 评估还为学生提供关于其学习的反馈。然而，反馈只有在某些条件下才可能改善学习。仅仅评估学生并向他们报告结果不太可能影响他们的表现。学习者必须回顾正确和不正确的表现，并且能够纠正不正确的表现。因此，仅向学生提供试卷或测试的成绩的教师并没有提供足够反馈来帮助学生改进。
 
 评估可用于提供促进学习的反馈，前提是你将其整合到你的教学过程中。如果学生在评估前没有掌握先决学习内容和/或对课程几乎没有理解或完全没有理解，来自课堂评估程序的反馈将不会帮助你的学生学习。尤其重要的是，你在进行新教学之前必须纠正学生的错误——或者让学生自行纠正错误。同样，课程期间的频繁反馈至关重要。关于反馈的进一步讨论见第 13 章。
 
 ### Feedback to the Teacher
+
 请记住，评估为教师提供关于学生学习得如何以及教师教得如何的反馈。当然，如果学生未能掌握重要要点，教师应在继续新材料之前重新教授该材料。
 
 ### Modeling Learning Targets
+
 评估通过向学生展示你希望他们学习的内容而为学生提供范例。学生可以将他们在学习目标上的当前表现与期望表现进行比较。你可以教他们识别其当前表现与预期表现相符的方式以及其不足之处。你的教学可以集中于如何弥补这些不足。在这些方面，好的评估就是好的教学。此外，当学生评估自己的表现时，你可以教他们判断学习好坏的适当标准，以及教他们学习什么内容很重要。
 
 ### Motivating Students
+
 评估也可能激励学生学习。不幸的是，一些教师将这种问责形式用作武器而不是建设性力量。教师可能希望使用评估作为可能的威胁来鼓励学生认真对待学习。有时教师以这种方式使用“突击测验”或“随堂测验”来鼓励更频繁的学习而不是临时抱佛脚。
 
 研究并未证明以这种方式使用评估是合理的。相反，问责制的评估应以更积极的视角来看待：作为教学和向学生反馈的工具（Glaser & Nitko, 1971）。此外，教师或家长如果将考试成绩作为学校成功的唯一或主要标准，可能会给学生造成过度的考试焦虑。结果，学生从长远来看可能表现更差。这一点在第 14 章中再次讨论。
 
 ### Assigning Grades to Students
+
 给学生进行课堂评估最明显的原因之一是帮助你给学生分配成绩。虽然教师以非正式方式持续评估学生的进步，但他们也必须通过成绩正式记录对学生进步的评价。你报告的成绩或符号（A、B、C 等）代表你对学生实现重要学习目标的程度的总结性评价或判断。使用多种评估格式来提供你做出这些评价所需的信息。良好的教学实践和常识表明成绩不应仅基于考试成绩。然而，许多教师仍依赖考试成绩来证明他们分配的成绩。分配成绩涉及评价性决策，但主观判断往往难以证明和解释。测试，尤其是客观类型的测试，似乎减少了判断和主观性，即使这并不一定为真。关于评分的更完整讨论，包括分配成绩的建议，见第 15 章。
 
 ## Selection Decisions
@@ -371,15 +301,15 @@ using them. 即使客观信息可用并被使用，评估者也必须将其整�
 
 选择决策不必完美才有用。然而，评估结果不可能对选择或其他决策具有完美的效度（见
 
-
-
 # 图 1.3 选择情境如何使用评估以及这些决策后果的简化说明。评估和决策规则以其后果为标准进行评价。
+
+
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_26_0.png)
 
 第 3 章）。图 1.3 说明了在选择中对不完美评估的使用。一些申请人在被选中而不是被拒绝的情况下本可以成功；而且有些人尽管被录取了，最终却不成功。因此，评估可以根据使用它们所做决策的后果来评价。本主题在第 3 章中讨论。
 
-## placement 决策
+## 安置决策
 
 挑选某人填补工作空缺，或录取到特定大学，与安置学生是完全不同的。我们使用安置决策，例如，当我们将高中班级分为接受不同水平教学的学生时（补救、常规、荣誉），在一年级组建阅读小组，或将一群幼儿园儿童分为将接受或不接受额外感知技能训练的学生。区别在于：在工作和大学选择情境中，拒绝是可能的；机构不关心被拒绝者的去向。在公立学校情境中，机构必须为所有人提供安排：无所谓的拒绝是不可能的。例如，未被安排进荣誉班、上级阅读班或其他特殊班的学生，仍需要被教导并培养到其能力极限。而且，出于法律原因，不能因其残疾而将人排除在教育过程之外（《公共法 94–142》，1975 年）。因此，我们必须考虑安置而非选择。
 
@@ -413,82 +343,66 @@ using them. 即使客观信息可用并被使用，评估者也必须将其整�
 
 ## 获得评估学生的能力
 
-为了帮助你评估你目前的能力水平并关注评估技能的重要领域，美国教师联合会、国家测量教育委员会和国家教育协会
-
-
-
-(1990) 发表了《学生教育评估教师能力标准》。这些标准在附录 A 中重印。每项这七项能力都在本书中有所涉及。我已将每章开头处的学习目标与它们所指的具体能力相对应。由于你的评估能力将在整个职业生涯中不断成长，附录 A 中列出的某些能力可能更适合经验丰富的教师，而不适合初任教师。
+为了帮助你评估你目前的能力水平并关注评估技能的重要领域，美国教师联合会、国家测量教育委员会和国家教育协会（1990）发表了《学生教育评估教师能力标准》。这些标准在附录 A 中重印。每项这七项能力都在本书中有所涉及。我已将每章开头处的学习目标与它们所指的具体能力相对应。由于你的评估能力将在整个职业生涯中不断成长，附录 A 中列出的某些能力可能更适合经验丰富的教师，而不适合初任教师。
 
 ## 摘要
 
-## 教师的课堂决策
-
+### 教师的课堂决策
 - 教学和学习需要持续收集信息以做出决策。可靠的教育决策以可靠的评估为前提。
 
-## 评估、测试、测量和评价的区别
+### 评估、测试、测量和评价的区别
 
-## 评估
-
+#### 评估
 - 评估是获取用于对学生、课程和项目以及教育政策做出决策的信息的过程。
 - 评估技术包括纸笔测验；正式和非正式观察；家庭作业、练习和研究论文；项目和展品；作品集；口头提问；以及对学生记录的分析。
 
-## 选择和使用课堂评估的指导方针
-
+#### 选择和使用课堂评估的指导方针
 - 选择和使用特定评估技术的若干重要原则包括 (a) 明确学习目标，(b) 使评估技术与学习目标相匹配，(c) 满足学习者的需求，(d) 使用多项成就指标，以及 (e) 认识每种技术的局限性。
 
-## 测试
-
+#### 测试
 - 测试是对学生一个或多个特征进行观察和描述的工具或系统程序，使用数值量表或分类方案。测试可以针对个人学生，也可以用于调查学校或国家。
 
-## 测量
-
+#### 测量
 - 测量是将数字（通常称为分数）分配给特定属性或特征的程序，以便数字描述一个人拥有该属性的程度。
 
-## 评价
-
+#### 评价
 - 评价是对某人或某事的价值做出价值判断的过程。评价可能基于从测试和其他评估中获得的信息，也可能不基于。
 - 形成性评价是对正在开发中的课程、材料和项目进行价值判断，从而提出重新设计、完善或改进它们的建议。
 - 总结性评价是对已完成的课程、材料和项目进行价值判断；这些评价建议是否应采用或使用它们。
 
-## 评估与关于学生的教育决策
-
+### 评估与关于学生的教育决策
 - 教育政策决策在学区、州和国家层面做出。
 - 关于课程、材料和项目的决策可能在开发过程中做出，也可能在完成后做出。
 
-## 教学管理决策
-
+### 教学管理决策
 - 管理教学：规划教学活动，将学生安排到学习序列中，监控学生的进步，诊断学生的学习困难，示范学习目标，向学生和家长提供反馈，判断自己的教学有效性，并为学生评分。
 
-## 选择决策
-
+### 选择决策
 - 选择学生：为工作、项目或更高层次的教育接受某些学生并拒绝其他学生。
 
-## 安置决策
-
+### 安置决策
 - 将学生安置到项目中：将学生分配到不同层次的学习项目。
 
-## 分类决策
-
+### 分类决策
 - 对学生进行分类：将学生分配到不同的类别，例如按残疾类型。
 
-## 咨询和指导决策
-
+### 咨询和指导决策
 - 咨询和指导：协助学生探索、选择和为不同职业做准备；帮助他们应对家庭、学校和同伴的压力，这是正常成长和发展的一部分。
 
-## 资格认证和证书决策
-
+### 资格认证和证书决策
 - 对学生进行资格认证和发证：决定学生是否达到获得文凭或获得可申请就业的证书所需的胜任标准。
 
-## 获得评估学生的能力
-
+### 获得评估学生的能力
 - 《学生教育评估教师能力标准》（美国教师联合会等，1990）确定了教师应努力达到的七项标准，以正确评估学生。这些标准在附录 A 中重印，并与本书中涉及这些标准的学习目标相对应。
 
 ## 重要术语和概念
-
 - assessment
 - classification decisions
 - credentialing
 - diagnostic assessments
+
+
+
 - evaluation
 - formative evaluation of programs and materials
 - formative evaluation of students
@@ -524,9 +438,11 @@ Brennan, R. L., & Plake, B. S. (1991). Survey of programs and employment in educ
 如果你想了解教育测试领域的就业机会，这篇简短文章会引起你的兴趣。
 
 Glaser, R., & Nitko, A. J. (1971). Measurement in learning and instruction. In R. L. Thorndike (Ed.), Educational measurement (2nd ed., pp. 625–670). Washington, DC: American Council on Education.
+
 分析一种特定的教学系统、必要的决策类型以及所需评估信息类型。
 
 Popham, W. J. (1988). Educational evaluation (2nd ed.). Englewood Cliffs, NJ: Prentice Hall.
+
 第 2 章简要概述了项目评价的不同思路。如果你不熟悉提出的方案，这是一本关于课程和项目评价的有用入门读物。
 
 Airasian, P. W. (1991). Perspectives on measurement instruction. Educational Measurement: Issues and Practice, 10(1), 13–16.
@@ -544,12 +460,10 @@ Stiggins, R. J. (1991). Relevant classroom assessment training for teachers. Edu
 Stiggins, R. J. (1999). Evaluating classroom assessment training in teacher education programs. Educational Measurement: Issues and Practice, 18(1), 23–27.
 
 Whittington, D. (1999). Making room for values and fairness: Teaching reliability and validity in the classroom context. Educational Measurement: Issues and Practice, 18(1), 14–22, 27.
+
 这组文章描述了教师教育在学生教育评估方面的现状。Airasian (1991)、Schafer (1991) 和 Stiggins (1991) 描述了教育测试和测量课程应涵盖的内容。Sanders (1989) 文章描述了本书附录 A 中标准的制定过程。Brookhart (1999) 和 Whittington (1999) 提出了应如何教授教师重要的测量概念。Stiggins (1999) 提出了一套标准，教育学院可以用它来评估他们在课堂评估方面培养教师的效果。
+
 阅读这些文章后，你可能想与同学和指导教师讨论本课程将如何教授你教育评估的知识。
-
-
-
-
 
 ## 描述教学目标与学习目标
 
@@ -558,31 +472,39 @@ Whittington, D. (1999). Making room for values and fairness: Teaching reliabilit
 学习本章后，你应掌握以下内容：
 
 ### 明确目标的重要性
+
 - 1. 描述学习目标如何指导教学过程。[1, 4, 7]
 - 2. 列出学习目标如何促进课堂评估改进的四种方式。[1, 4]
 
 ## 教育目标、州标准和学习目标
+
 - 3. 区分内容标准与表现标准、一般学习目标与具体学习目标、发展性学习目标与掌握性学习目标。[2, 1]
 
 ### 学习目标的分类法
+
 - 4. 解释思维技能分类法为何有助于审视学习目标和评估任务。[2, 3, 1]
 - 5. 使用 Bloom 等人和 Marzano 等人对思维技能的分类对学习目标进行分类。[2, 3, 1]
 - 6. 命名并定义至少一种思维技能分类法的主要类别。[2, 1]
 - 7. 指出你可能用来决定使用哪种分类法的五个标准。[1, 4]
 
 ### 选择、撰写和评估学习目标
+
 - 8. 命名至少两个获取你计划教授课程学习目标清单的来源。[2, 1]
 - 9. 指出你可能用来审阅和评判单元或课程学习目标清单质量的七项标准。[2, 1, 4]
 - 10. 为你的学科领域撰写符合此类陈述三个基本标准的特定学习目标。[2, 1, 4]
 
 ### 确保评估任务与学习目标相匹配
+
 - 11. 描述你将如何决定你的评估是否与你为课程设定的掌握性学习目标相匹配。[3, 1, 6]
 - 12. 解释为何你需要使用多种评估方法来评估学生对发展性学习目标的达成情况。[3, 1, 6]
 
 ## 重要术语和概念
+
 - 13. 解释本章末尾列出的每个术语和概念如何应用于教育评估。[6]
 
 ## 本章简介
+
+
 
 第1章强调了确保你的评估技术真正与教学的学习目标相匹配的必要性。在本章中，你将学习什么是好的学习目标以及如何为教学准备它们。我们将讨论的主要问题包括：什么是学习目标？为什么需要它们？它们与教育目标和州标准有何不同？是否存在不同类型的学习目标？学习目标如何与高阶思维技能相关？你如何评估教学中使用的学习目标？你如何撰写更好的学习目标？
 
@@ -598,9 +520,9 @@ Whittington, D. (1999). Making room for values and fairness: Teaching reliabilit
 
 决定你期望学生学习的具体目标是教学过程中的一个重要步骤。教学可以被认为涉及三个基本但相互关联的活动（Lindvall & Nitko, 1975）：
 
-- 1. 决定学生将学习什么。
-- 2. 开展实际教学。
-- 3. 评估学习。
+1. 决定学生将学习什么。
+2. 开展实际教学。
+3. 评估学习。
 
 活动1要求你以某种方式阐明学习目标，通常是通过指定学习目标或提供学生应能够完成的任务的几个具体例子，以证明学习目标已达到。活动1向你和学生传达了教学和学习的结果预期。你对学习目标的理解指导你的教学并提供判断学生是否已达到预期变化的标准。活动2是教学过程的核心。在这里你为学生提供学习条件和活动。活动3，评估学习是否发生，对良好的教学至关重要。通过它，你和你的学生可以知道学习目标是否已达到。你对学习目标的指定越清晰，你的教学努力和学生的学习努力就越有针对性。
 
@@ -612,23 +534,23 @@ Whittington, D. (1999). Making room for values and fairness: Teaching reliabilit
 
 刚才介绍的三项活动是对教学过程的简化描述。它们确实说明了当教师心中有清晰的学习目标时教学会更容易。使用具体学习目标在课堂上的额外原因包括（Gow, 1976）：
 
-- 1. 它们帮助教师和/或课程设计者明确自己的教育目标。
-- 2. 它们向学生、家长、其他教师、学校管理人员和公众传达教学的意图。
-- 3. 它们为教师分析所教内容和构建学习活动提供基础。
-- 4. 它们描述了教师可以用来评估教学成功与否的具体表现。
-- 5. 它们可以帮助教育工作者与家长（和其他人）聚焦和澄清教育目标的讨论。
-- 6. 它们向学生传达他们预期要学习的表现。这可能使他们能够指导自己的学习。
-- 7. 它们使个性化教学更容易。
-- 8. 它们帮助教师评估和改进教学程序和学习目标。
+1. 它们帮助教师和/或课程设计者明确自己的教育目标。
+2. 它们向学生、家长、其他教师、学校管理人员和公众传达教学的意图。
+3. 它们为教师分析所教内容和构建学习活动提供基础。
+4. 它们描述了教师可以用来评估教学成功与否的具体表现。
+5. 它们可以帮助教育工作者与家长（和其他人）聚焦和澄清教育目标的讨论。
+6. 它们向学生传达他们预期要学习的表现。这可能使他们能够指导自己的学习。
+7. 它们使个性化教学更容易。
+8. 它们帮助教师评估和改进教学程序和学习目标。
 
 ### 学习目标对课堂评估的重要性
 
 显然，在你制定自己的评估程序之前，你需要知道你想要评估的学生结果。你应该清楚地知道你想要评估的学生表现。如果你不清楚你想要评估哪些重要学习结果，你很容易无法有效评估这些结果。在本章中，具体学习目标的陈述被认为对课堂评估的以下几个方面具有价值：
 
-- 1. 知道你希望学生达到的具体结果，使得评估程序的总体规划更容易。
-- 2. 选择和制定评估程序取决于你知道应评估哪些具体成就。
-- 3. 当你知道具体的学习目标时，评估你已制定的现有评估程序会更容易。
-- 4. 正确判断评估程序的内容相关性要求你知道应评估的具体成就（见第3章）。
+1. 知道你希望学生达到的具体结果，使得评估程序的总体规划更容易。
+2. 选择和制定评估程序取决于你知道应评估哪些具体成就。
+3. 当你知道具体的学习目标时，评估你已制定的现有评估程序会更容易。
+4. 正确判断评估程序的内容相关性要求你知道应评估的具体成就（见第3章）。
 
 ## 教育目标、州标准和学习目标
 
@@ -640,7 +562,7 @@ Whittington, D. (1999). Making room for values and fairness: Teaching reliabilit
 
 教育目标以宽泛的术语陈述。它们为总体教育活动的规划提供方向和目的。州教育部门、地方学区以及美国数学教师全国委员会、美国科学促进协会和美国地理学家协会等协会准备的报告中出现了宽泛教育目标陈述的例子。以下是教育目标的一个例子：
 
-## 示例
+#### 示例
 
 每个学生都应掌握使用科学测量的技能。
 
@@ -652,64 +574,67 @@ Whittington, D. (1999). Making room for values and fairness: Teaching reliabilit
 
 一般学习目标是从教育目标中得出的预期学习结果的陈述。一般学习目标比教育目标更具体，通常足以进行课程的总体规划。然而，在它们成为课堂学习目标之前，需要变得更具体。以下是一个为小学科学单元关于公制系统测量而陈述的一般学习目标的例子：
 
-## 示例
+#### 示例
 
 掌握使用常用仪器以公制单位测量长度、体积和质量所需的技能。
 
-在教授学生并评估他们对这一一般学习目标的掌握时，你可能需要将其分解为两个或多个具体学习目标。具体学习目标是对学生在教学单元结束时应达到的内容的明确陈述。以下是从前述一般学习目标中得出的三个具体学习目标的例子：
+在教授学生并评估他们对这一般学习目标的掌握时，你可能需要将其分解为两个或多个具体学习目标。具体学习目标是对学生在教学单元结束时应达到的内容的明确陈述。以下是从前述一般学习目标中得出的三个具体学习目标的例子：
 
-## 示例
-- 1. 使用米尺测量物体长度，精确到十分之一米。
-- 2. 使用简易梁秤和一套砝码测量物体质量，精确到十分之一千克。
-- 3. 使用量筒测量液体体积，精确到十分之一升。
+#### 示例
 
+1. 使用米尺测量物体长度，精确到十分之一米。
+2. 使用简易梁秤和一套砝码测量物体质量，精确到十分之一千克。
+3. 使用量筒测量液体体积，精确到十分之一升。
 
-
-
-
-## 图 2.1 标准、目标和学习目标之间的关系
+### 图 2.1 标准、目标和学习目标之间的关系
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_33_0.png)
 
-## 过于具体的学习目标的危险
+### 过于具体的学习目标的危险
 
 当学习目标变得更具体时，你要教授和评估的成就就变得清晰了。但要警惕过度具体化。非常狭窄的“行为”片段的长列表会使所要教授的主题支离破碎。以下示例展示了过于具体的学习目标，以及建议的修改。
 
-## 示例
+#### 示例
 
 过于具体：估计罐子里豆子的数量。
+
 更好：使用计算和估算解决实际问题。
+
 理由：“罐中豆子”并不是学习的真正目标。相反，它只是学生为证明其估算和计算的策略性达成而应完成的众多可能任务之一。学习目标陈述应描述这种不太具体的成就。
 
-## 示例
+#### 示例
 
 学生能够：
+
 过于具体：解释冷锋术语的含义。
+
 更好：解释关键天气术语的含义。
+
 理由：“冷锋”只是单元中包含的几个关键天气术语之一。为单元中教授的每个术语分别列出学习目标，会使单元对一般天气术语的关注支离破碎。
 
-## 示例
+#### 示例
 
 学生能够：
 
-- 过于具体：
-- 正确使用问号（?）。
-- 更好：
-- 正确使用句末标点符号。
-- 理由：
-- “问号”只是学生必须学习的句末标点符号的一种。为单元中教授的每种句末标点符号分别列出学习目标，会使单元对正确使用所有句末标点符号的关注支离破碎。
+过于具体：正确使用问号（?）。
+
+更好：正确使用句末标点符号。
+
+理由：“问号”只是学生必须学习的句末标点符号的一种。为单元中教授的每种句末标点符号分别列出学习目标，会使单元对正确使用所有句末标点符号的关注支离破碎。
 
 第二个危险是，具体目标的列表可能变得过长而被忽视。确定每个教学单元中最重要的几个学习目标并集中于这些目标。
 
-## 设计需要学生使用学习目标组合的评估
+### 设计需要学生使用学习目标组合的评估
 
 同样重要的是，要创建学习和评估情境，要求学生使用具体的技能和知识组合来执行复杂任务并解决现实生活中的问题。示例 2.1 显示了一个罐中豆子问题。在解决此问题时，学生预期使用几种具体的技能和知识（列在图右侧的上方）来准确估计罐中豆子的数量。“罐中豆子”当然不是学习目标本身。相反，它只是众多可能任务中的一个例子，其中学习目标是应用比例推理、估算、测量和其他技能的组合来解决复杂问题。
 
 请注意，在此示例中，教师应评估的最重要结果是学生为解决这些问题所使用的过程和策略。这些标准的标准列在示例 2.1 中的“标准参照解释”下。一种仅专注于学生对这类任务的答案正确程度的评估程序是无效的，因为它忽略了对学生所使用过程的评估。
 
-## 州标准 vs. 学习目标
+### 州标准 vs. 学习目标
 
-标准 你的州可能已强制要求学生达到一套教育标准。标准是对学生预期学习内容的陈述。一些州称这些陈述为基本技能、学习期望、学习成果、成就期望或其他名称。通常有两套标准。内容标准是对学生预期学习的学科事实、概念、原理等的陈述。例如，生活科学的标准可能是，“学生应知道细胞核是植物和动物中遗传信息所在的地方。” 表现标准通常是对学生一旦学习了内容标准后能够执行或做的事情的陈述。例如，“学生可以在各种植物和动物细胞的显微镜载玻片中识别细胞核。”
+标准：你的州可能已强制要求学生达到一套教育标准。标准是对学生预期学习内容的陈述。一些州称这些陈述为基本技能、学习期望、学习成果、成就期望或其他名称。通常有两套标准。内容标准是对学生预期学习的学科事实、概念、原理等的陈述。例如，生活科学的标准可能是，“学生应知道细胞核是植物和动物中遗传信息所在的地方。” 表现标准通常是对学生一旦学习了内容标准后能够执行或做的事情的陈述。例如，“学生可以在各种植物和动物细胞的显微镜载玻片中识别细胞核。”
+
+
 
 州教育部门准备学校使用的标准。地方学区必须教授学生达到这些标准。专业组织也可以准备标准。这些组织试图通过公开推广自己的标准来影响教学内容。拥有已发布标准的专业组织示例有国家科学院、国家英语教师委员会和国家数学教师委员会。大多数专业组织的标准都可以在组织的网站上找到。
 
@@ -717,7 +642,9 @@ Whittington, D. (1999). Making room for values and fairness: Teaching reliabilit
 
 各州的标准在质量和具体程度上差异很大。并非所有州都很好地撰写了标准。此外，一些州仅为某些年级制定了标准（例如，四年级、八年级、十年级和十二年级）。其他州则为几乎每个年级都制定了标准。似乎没有标准的方法（双关语并非本意）来撰写标准。
 
-学习目标 正如前几段所述，州的标准实际上是学习目标。在正式采用州标准后，学校必须确保所有学生都被教授并达到这些标准。大多数州标准写得相当概括。写得更好的州表现标准本质上与我们之前讨论的一般学习目标相同。然而，一些州仅撰写了内容标准。在任何一种情况下，你都需要将每个标准分解为两个或多个具体的学习目标以便教授和评估它们。因此，本章中的所有材料都适用于教学和评估，无论你的学校和州使用“目标”、“学习目标”还是“标准”。第 21 页顶部的示例比较了某学区三年级阅读的标准陈述、一般学习目标和具体学习目标。从中你可以看出，你需要从州标准中推导出具体的学习目标。
+## 学习目标
+
+正如前几段所述，州的标准实际上是学习目标。在正式采用州标准后，学校必须确保所有学生都被教授并达到这些标准。大多数州标准写得相当概括。写得更好的州表现标准本质上与我们之前讨论的一般学习目标相同。然而，一些州仅撰写了内容标准。在任何一种情况下，你都需要将每个标准分解为两个或多个具体的学习目标以便教授和评估它们。因此，本章中的所有材料都适用于教学和评估，无论你的学校和州使用“目标”、“学习目标”还是“标准”。第 21 页顶部的示例比较了某学区三年级阅读的标准陈述、一般学习目标和具体学习目标。从中你可以看出，你需要从州标准中推导出具体的学习目标。
 
 > 1 为了使事情更混乱，一些州将表现标准（或简单地“标准”）定义为某些测试分数范围，然后给出这些标签。例如，得分在 20 到 40 之间的学生可能被认为达到了标准的“基础水平”；41 到 60 之间可能处于“熟练水平”；60 以上处于“高级水平”。在本章中，我们不会以这种方式使用标准一词。
 
@@ -725,12 +652,13 @@ Whittington, D. (1999). Making room for values and fairness: Teaching reliabilit
 
 多伦多教育局用作基准的评估任务。
 
-## 罐中豆子
-应用速率和比率
+### 罐中豆子
+
+**应用速率和比率**
 
 在此基准任务中，学生首先被展示一个装满豆子的罐子并被要求估计豆子的数量。然后他们被要求使用以下任何材料更准确地计算豆子的数量：计算器、天平和砝码、尺子、量筒和透明的平方厘米网格。他们被告知可以计数一些豆子但不能全部计数。如果学生不知道如何进行，评估员会建议他们称量一小把豆子。学生被要求保留其解决方案的持续记录。在他们解决完问题后，他们被要求描述问题及其解决方案。
 
-## 安大略省教育部和多伦多教育局的关键目标
+### 安大略省教育部和多伦多教育局的关键目标
 
 - 在问题解决中应用比率和速率
 - 巩固常用公制单位之间的换算
@@ -740,64 +668,29 @@ Whittington, D. (1999). Making room for values and fairness: Teaching reliabilit
 - 发展涉及使用数学语言和符号的沟通技能
 - 发展解决问题的能力
 
-## 常模参照解释
+### 常模参照解释、任务得分与标准参照解释
 
-## 任务得分
-
-## 标准参照解释
-
-20% 的学生得分为 5
-（80% 的学生得分低于 5）
-
-5
-
-学生理解问题并立即开始寻找策略，也许在继续之前会尝试不同的方法和材料。学生监控解决方案的发展过程，并可能进行检查和重新测量。学生有效地、准确地使用材料并很好地记录数据。所有计算都准确完成并得出合理的答案。学生清晰地解释了解决方案，展示了以比例为基础的可靠推理。学生对任务拥有主人翁意识并享受其挑战。
-
-19% 的学生得分为 4
-（61% 的学生得分低于 4）
-
-4
-
-学生可能出现一些错误开端，并可能在评估员的帮助下集中注意力。学生可能无目的或不准确地使用一些材料，也许会混淆体积和质量。学生能正确地进行比例推理。尽管在解决方案的各个点上遇到困难，学生仍坚持下去并通常得出合理的答案。学生通常能清晰地解释并享受活动。
-
-20% 的学生达到 3
-（41% 的学生得分低于 3；
-平均得分为 3.0）
-
-3
-
-在解决问题的某一方面或多个方面存在一些混淆。学生可能混淆单位、出现算术错误或执行错误的运算。学生可能对比例性有一些概念但无法正确使用。学生未能充分利用材料。学生寻求评估员的帮助。尽管没有完全自信，学生仍可能坚持尝试得出问题的答案。
-
-24% 的学生达到 2
-（17% 的学生得分低于 2）
-
-2
-
-学生可能开始解决问题但无法完成解决方案。学生反复更换方法和材料，无法找到有效的策略。对单位和各种测量的解释存在相当大的混淆。学生通常猜测应使用哪些运算来处理数据。学生缺乏信心并寻求评估员的大量帮助。
-
-17% 的学生达到 1
-
-1
-
-学生可能估计豆子的数量但对更准确地计算数量没有回应或回应非常有限。
-
-
-
-
+| 常模参照解释 | 任务得分 | 标准参照解释 |
+| --- | --- | --- |
+| 20% 的学生得分为 5（80% 的学生得分低于 5） | 5 | 学生理解问题并立即开始寻找策略，也许在继续之前会尝试不同的方法和材料。学生监控解决方案的发展过程，并可能进行检查和重新测量。学生有效地、准确地使用材料并很好地记录数据。所有计算都准确完成并得出合理的答案。学生清晰地解释了解决方案，展示了以比例为基础的可靠推理。学生对任务拥有主人翁意识并享受其挑战。 |
+| 19% 的学生得分为 4（61% 的学生得分低于 4） | 4 | 学生可能出现一些错误开端，并可能在评估员的帮助下集中注意力。学生可能无目的或不准确地使用一些材料，也许会混淆体积和质量。学生能正确地进行比例推理。尽管在解决方案的各个点上遇到困难，学生仍坚持下去并通常得出合理的答案。学生通常能清晰地解释并享受活动。 |
+| 20% 的学生达到 3（41% 的学生得分低于 3；平均得分为 3.0） | 3 | 在解决问题的某一方面或多个方面存在一些混淆。学生可能混淆单位、出现算术错误或执行错误的运算。学生可能对比例性有一些概念但无法正确使用。学生未能充分利用材料。学生寻求评估员的帮助。尽管没有完全自信，学生仍可能坚持尝试得出问题的答案。 |
+| 24% 的学生达到 2（17% 的学生得分低于 2） | 2 | 学生可能开始解决问题但无法完成解决方案。学生反复更换方法和材料，无法找到有效的策略。对单位和各种测量的解释存在相当大的混淆。学生通常猜测应使用哪些运算来处理数据。学生缺乏信心并寻求评估员的大量帮助。 |
+| 17% 的学生达到 1 | 1 | 学生可能估计豆子的数量但对更准确地计算数量没有回应或回应非常有限。 |
 
 Here’s an example of how specific learning targets are developed from a state standard:
 
 ## Example
 
-Standard
+**Standard**
 
 - Communicate well in writing for a variety of purposes.
 
-General learning target
+**General learning target**
 
 - Write for narrative, persuasive, imaginative, and expository purposes.
 
-Specific learning targets
+**Specific learning targets**
 
 - Explains the difference between narrative, persuasive, imaginative, and expository writing purposes.
 - Applies prewriting skills and strategies to generate ideas, clarify purpose, and define audience before beginning to write.
@@ -817,6 +710,8 @@ Assessment focuses on what you can see students doing. From this observation you
 Statements of what students can do at the end of instruction may be called mastery learning targets. Robert Forsyth (1976) referred to them as "can do" statements. They have also been called specific learning outcomes and behavioral objectives.
 
 ## Mastery Learning Targets vs. Developmental Learning Targets
+
+
 
 Some skills and abilities are more aptly stated at a somewhat higher level of abstraction than mastery learning targets to communicate that they are continuously developed throughout life. Consider the following examples.
 
@@ -844,6 +739,7 @@ Consider Developmental Learning Target 2 in the previous list. Now, think about 
 - 1. From his manner and formal training, what opinion might people have formed of John Marshall? [28%]
 - 2. What do the last two sentences suggest about Patagonian's acceptance of U.S. aid? [44%]
 - 3. Suppose an uninsured and unemployed motorist damaged someone's car. Which speaker offers a plan that would allow the injured party to collect benefits? [64%]
+
 (Forsyth, 1976, p. 12)
 
 You can see that each question refers to a different passage with different viewpoints expressed. Further, the percentage of students answering one question is quite different from the percentage answering another. Studies of these questions show that those who answer one question right are not necessarily the same students who get another question right (Forsyth, 1976).
@@ -854,11 +750,13 @@ We can conclude from this that Developmental Learning Target 2 represents a broa
 
 The second concern, the continuous or developmental nature of these learning targets, stems from the fact that “students cannot be expected to fully achieve such objectives. Even the simplest of these . . . is a matter of degree and can be continuously developed throughout life. All we can reasonably expect to do for a particular course or unit of instruction is to identify a sample of specific learning outcomes that represent degrees of progress toward the objectives” (Gronlund, 1973, p. 17). The essential concern here is that the skill(s) represented by these learning targets are complex, the number of tasks that can be used to demonstrate learning is vast, and each represents goals to work toward continuously rather than to master completely (Gronlund, 1973).
 
+
+
 ## Teaching and Assessing Developmental Learning Targets
 
 One way to begin designing instruction and assessing progress toward developmental objectives is to list several specific learning targets for each one. They should represent the key performances expected of a student at a particular grade or age level. This is illustrated in the following, which clarifies a broad instructional objective in science by listing several specific learning targets that support it:
 
-## Example²
+### Example²
 
 Developmental learning target: Interprets and uses Boyle’s Law to explain phenomena and solve problems.
 
@@ -889,15 +787,11 @@ Learning targets within each domain may be classified by using a taxonomy for th
 
 > ² Based on Klopfer (1969).
 
-
-
-
-
 其他认知领域分类法总结在附录 D（表 D.2、D.3）、E 和 F 中。第 6 章将讨论如何使用分类法制定评估计划。你现在可以先简要回顾一下该章。第二部分的其他章节讨论如何设计任务以评估不同分类法层级下的学习目标。
 
-## 认知领域分类法
+### 认知领域分类法
 
-## 布鲁姆分类法
+#### 布鲁姆分类法
 
 在制定学习目标清单时，你可能会发现《教育目标分类学手册一：认知领域》（Bloom, Engelhart, Furst, Hill, & Krathwohl, 1956）具有相当大的价值。该分类法是对你可能教授的认知能力范围的全面概述。该分类法将认知表现分为六个主要标题，按从简单到复杂的顺序排列（Bloom et al., 1956）。
 
@@ -905,47 +799,49 @@ Learning targets within each domain may be classified by using a taxonomy for th
 
 - 1. 知识……涉及对具体事物和普遍事物的回忆，对方法和过程的回忆，或对模式、结构或情境的回忆。就测量而言，回忆情境几乎只涉及将适当材料记起。 (p. 201)
 
-## 示例
+##### 示例
 
 示例学习目标：回忆每篇所读短篇小说中的主要人物以及他们做了什么。
 
 示例评估项目：列出《女巫森林》中所有人物的名字。在《女巫森林》中，当她母亲拒绝让她进入森林时，萨莉做了什么？
 
-- 2. 理解……代表理解的最低水平。它指的是这样一种理解或领会，即个体知道所传达的内容，并且能够使用所传达的材料或思想，而不必将其与其他材料联系起来或看到其最充分的含义。 (p. 204)
 
-## 示例
+
+## 2. 理解……代表理解的最低水平。它指的是这样一种理解或领会，即个体知道所传达的内容，并且能够使用所传达的材料或思想，而不必将其与其他材料联系起来或看到其最充分的含义。 (p. 204)
+
+### 示例
 
 示例学习目标：解释所读短篇小说的主要思想和主题。
 
 示例评估项目：请用你自己的话告诉我，《女巫森林》讲的是什么。
 
-- 3. 应用……在特定和具体情境中[解决新颖或全新问题]使用抽象概念。抽象概念可以是一般思想、规则或程序，或概括化的方法。抽象概念也可以是必须记住并应用的技术原理、思想和理论。 (p. 205)
+## 3. 应用……在特定和具体情境中[解决新颖或全新问题]使用抽象概念。抽象概念可以是一般思想、规则或程序，或概括化的方法。抽象概念也可以是必须记住并应用的技术原理、思想和理论。 (p. 205)
 
-## 示例
+### 示例
 
 示例学习目标：将所读短篇小说中人物的个人问题与现实生活中人们面临的问题联系起来。
 
 示例评估项目：萨莉在故事中与母亲的问题与你或你认识的人与母亲的问题相似吗？解释为什么相似或不相似。
 
-- 4. 分析……将一种交流分解为其构成要素或部分，以便使思想的相对层级变得清晰和/或使所表达思想之间的关系变得明确。这样的分析旨在阐明交流，指出交流是如何组织的，以及它是如何传达其效果的，以及它的基础和安排。 (p. 205)
+## 4. 分析……将一种交流分解为其构成要素或部分，以便使思想的相对层级变得清晰和/或使所表达思想之间的关系变得明确。这样的分析旨在阐明交流，指出交流是如何组织的，以及它是如何传达其效果的，以及它的基础和安排。 (p. 205)
 
-## 示例
+### 示例
 
 示例学习目标：识别作者用来向读者传达人物感受的文学手法。
 
 示例评估项目：在《女巫森林》中，萨莉对她母亲感到不满。在《狗长久不见》中，比利对他哥哥感到不满。这两个故事的作者使用了哪些词语和短语来表现这些人物的不满程度？解释并举例说明。
 
-- 5. 综合……将要素和部分组合起来形成整体。这涉及处理碎片、部分、要素等，并以一种尚未明显存在的方式将其排列组合成模式或结构。 (p. 206)
+## 5. 综合……将要素和部分组合起来形成整体。这涉及处理碎片、部分、要素等，并以一种尚未明显存在的方式将其排列组合成模式或结构。 (p. 206)
 
-## 示例
+### 示例
 
 示例学习目标：描述在所有所读故事中，人物为不成功地解决问题的总体方法。
 
 示例评估项目：到目前为止我们读了《女巫森林》、《狗长久不见》、《西蒙的陀螺》和《没有礼貌的女人》。在每个故事中，一个人物都无法解决他或她面临的个人问题。这些人物尝试解决问题的办法是什么？这些不成功的解决问题方式有什么共同点？
 
-- 6. 评价……对材料和方法在给定目的下的价值做出判断。对材料和方法在多大程度上满足标准进行定量和定性判断。使用评判标准。标准可以由学生确定，也可以由学生给出。 (p. 207)
+## 6. 评价……对材料和方法在给定目的下的价值做出判断。对材料和方法在多大程度上满足标准进行定量和定性判断。使用评判标准。标准可以由学生确定，也可以由学生给出。 (p. 207)
 
-## 示例
+### 示例
 
 示例学习目标：制定自己的一套三到四个用于评判短篇小说质量的标准。利用这三到四个标准来评价几篇在课堂上未读的新故事。
 
@@ -961,13 +857,11 @@ Learning targets within each domain may be classified by using a taxonomy for th
 
 请注意，归类于前三个类别的学习目标更容易用简答题、是非题、多选题或配对题等进行评估。归类于后三个类别的学习目标可能部分可通过此类题型进行测试，但其评估通常需要各种其他程序，如论文题、家庭作业、班级项目、观察实验室中的表现以及作品集。更复杂思维层级下的学习目标要求学生实际产生或创造某些东西，而不仅仅是回答问题。仔细阅读表 D.1 中的各种子类别应能使这一点更加明显。
 
-压缩分类法 由于教师有时难以将学习目标归类到全部六个类别中，一些学校使用了布鲁姆等人分类法的简短版本。例如，有些学校将其简化为三个类别：知识、理解和高级思维。“高级思维”类别将应用、分析、综合和评价学习目标合并为一组。其他学校则以略有不同的方式形成三个类别：知识（包括理解）、应用和高级思维（包括分析、综合和评价）。这些压缩的优点是消除了为学习目标归类到分类法的前三个类别之一而苦恼的需要。
+### 压缩分类法
+
+由于教师有时难以将学习目标归类到全部六个类别中，一些学校使用了布鲁姆等人分类法的简短版本。例如，有些学校将其简化为三个类别：知识、理解和高级思维。“高级思维”类别将应用、分析、综合和评价学习目标合并为一组。其他学校则以略有不同的方式形成三个类别：知识（包括理解）、应用和高级思维（包括分析、综合和评价）。这些压缩的优点是消除了为学习目标归类到分类法的前三个类别之一而苦恼的需要。
 
 使用压缩版分类法的严重缺点是教师可能会停止尝试使用综合和评价类别中的学习目标。由于应用和分析与综合和评价在同一类别中，很容易避免在这四者之间做出必要的区分。因此，教师可能会满足于不在课程和评估计划中包含最高两个类别的学习目标。
-
-
-
-
 
 # 示例 2.2
 
@@ -988,51 +882,77 @@ Learning targets within each domain may be classified by using a taxonomy for th
 
 作为如何使用该分类法来指导你的教学和评估的一个例子，我在每个类别中都给出了学习目标和评估项目的例子。假设学生被要求分组合作完成一个研究项目。在该项目中，他们采访学校里的其他学生，了解他们对解决某些当地社区问题的方法的看法。尽管学生一起合作设计研究并收集数据，但学生各自单独撰写研究报告。你的学习目标和对该复杂项目的评估应侧重于学习的多个维度，正如以下示例所示。
 
-+   1. 宣言性知识——这一类学习目标要求学生学习学科的事实、思想、概括和/或理论。
+### 1. 宣言性知识
 
-## 示例
+这一类学习目标要求学生学习学科的事实、思想、概括和/或理论。
+
+#### 示例
 
 示例学习目标：学生陈述目前当地社区关注的主要问题。
 
 示例评估项目：列出你将在项目调查中包含的主要社区问题。
 
-2. 程序性知识——这一类学习目标要求学生展示程序或做事的方法。
+### 2. 程序性知识
 
-## 示例
+这一类学习目标要求学生展示程序或做事的方法。
+
+#### 示例
 
 示例学习目标：学生在进行研究时使用正确的访谈技巧。
 
 示例评估项目：观察每个学生在对其他学生进行访谈时的表现。使用正确的访谈技巧清单来评估访谈是否正确进行。
 
-3. 复杂思维——这一类学习目标要求学生应用他们的知识和/或使用不同类型的推理策略。 （有关此类别中包含的 13 种复杂推理技能子类型的详细信息，请参阅附录 E。）
+### 3. 复杂思维
 
-示例
+这一类学习目标要求学生应用他们的知识和/或使用不同类型的推理策略。 （有关此类别中包含的 13 种复杂推理技能子类型的详细信息，请参阅附录 E。）
+
+#### 示例
+
 示例学习目标：学生利用研究研究期间收集的数据支持研究结论。
+
 示例评估项目：教师阅读学生的研究报告的结论部分。教师使用评分量表来评估每个学生使用研究期间收集的数据来支持所做结论的程度。
 
-4. 信息处理——这一类学习目标要求学生展示收集、综合和/或评估特定目的所需信息的不同方法。该类别包括要求学生确定特定目的所需信息的学习目标。
+### 4. 信息处理
 
-示例
+这一类学习目标要求学生展示收集、综合和/或评估特定目的所需信息的不同方法。该类别包括要求学生确定特定目的所需信息的学习目标。
+
+#### 示例
+
 示例学习目标：从访谈中提供给学生的所有信息中，学生使用与研究研究相关的信息。
+
 示例评估项目：教师阅读学生的研究报告，仔细关注学生收集的信息以及如何使用它来描述解决社区问题的意见。教师使用评分量表来评估每个学生对访谈中相关信息的利用程度。
 
-5. 有效沟通——这些学习目标要求学生展示他们的沟通技巧，例如向正确受众沟通、为手头的目的使用最合适的沟通方法以及开发适当的沟通产品。
+### 5. 有效沟通
 
-示例
+这些学习目标要求学生展示他们的沟通技巧，例如向正确受众沟通、为手头的目的使用最合适的沟通方法以及开发适当的沟通产品。
+
+#### 示例
+
 示例学习目标：学生向同龄人观众清晰有效地口头展示其研究研究的成果。
+
 示例评估项目：教师观察每个学生向班级做口头报告。教师使用评分量表来评价报告的有效性和清晰度。
 
-6. 协作与合作——这些学习目标要求学生展示他们的团队技能，例如朝着团队目标努力、使用人际交往技能、执行保持团队关注相关活动的职能和/或在团队活动中担任多重角色。
+### 6. 协作与合作
 
-示例
+这些学习目标要求学生展示他们的团队技能，例如朝着团队目标努力、使用人际交往技能、执行保持团队关注相关活动的职能和/或在团队活动中担任多重角色。
+
+#### 示例
+
 示例学习目标：学生与小组其他成员合作有效设计研究研究并收集访谈数据。
+
 示例评估项目：教师在研究设计和数据收集阶段观察小组。教师使用评分量表来评估每个学生的团队参与度，包括朝着团队目标努力、人际交往技能、团队维护活动以及在团队中扮演的角色。
 
-7. 思维习惯——这些学习目标要求学生展示其自我调节、批判性思维和/或创造性思维的能力。
+### 7. 思维习惯
 
-示例
+这些学习目标要求学生展示其自我调节、批判性思维和/或创造性思维的能力。
+
+#### 示例
+
 示例学习目标：学生计划和组织访谈数据收集方法和活动。
+
 示例评估项目：教师在学生在开始访谈过程之前与每个学生会面，要求学生描述选择受访者、进行访谈以及收集/记录访谈信息的计划。教师预览学生的访谈问题表和记录表。使用评分量表，教师评估学生对研究研究的该数据收集阶段的计划和组织程度。
+
+
 
 onomies 或我们尚未讨论的方案，其中一些在本书的附录 D（表 D.2 和 D.3）和附录 E 中（见 DeLandsheere，1988 年的综述）。你应该使用哪一个？这取决于这是仅用于你自己课堂的个人决定，还是更广泛的决定，即分类法将在你的整个学校系统中使用。
 
@@ -1054,13 +974,13 @@ onomies 或我们尚未讨论的方案，其中一些在本书的附录 D（表 
 
 我们讨论了两种用于对认知学习目标进行分类的方案。还有很多其他分类方案——
 
-选择认知学习目标分类法的实用标准
+### 选择认知学习目标分类法的实用标准
 
-+   1. 完整性：你的主要学习目标能在多大程度上在每个分类法中进行分类？
-+   2. 观点：在多大程度上每个分类法可以用作向他人解释你的教学方法或你的课程特征的平台？
-+   3. 改革：每个分类法在多大程度上可以帮助你评估你的课程或你的学习目标并促使你修改学习目标？
-+   4. 简易性：家长、教师和教育官员理解每个分类法有多容易？
-+   5. 报告：每个分类法在组织个人学生、教育官员、政府官员或公众的评估结果报告方面有多有用？
++ 1. 完整性：你的主要学习目标能在多大程度上在每个分类法中进行分类？
++ 2. 观点：在多大程度上每个分类法可以用作向他人解释你的教学方法或你的课程特征的平台？
++ 3. 改革：每个分类法在多大程度上可以帮助你评估你的课程或你的学习目标并促使你修改学习目标？
++ 4. 简易性：家长、教师和教育官员理解每个分类法有多容易？
++ 5. 报告：每个分类法在组织个人学生、教育官员、政府官员或公众的评估结果报告方面有多有用？
 
 ## 定位学习目标的来源
 
@@ -1072,19 +992,17 @@ onomies 或我们尚未讨论的方案，其中一些在本书的附录 D（表 
 
 在列出该单元的学习目标之前，永远不要教授一个单元。重要的是要制定完整或全面的
 
-
-
 list of learning targets. A complete list is not necessarily long, however. Apply the following practical criteria to evaluate your list of learning targets:
 
-## Practical Criteria for Evaluating a List of Learning Targets for a Course or Unit
+### Practical Criteria for Evaluating a List of Learning Targets for a Course or Unit
 
-+   1. Be sure all the learning targets are appropriate for students’ educational level.
-+   2. Be sure the list of learning targets is limited to only the important outcomes for the course.
-+   3. Be sure all the learning targets are consistent with your state’s published learning standards.
-+   4. Be sure all the learning targets are consistent with your local school’s philosophy and general goals.
-+   5. Be sure all the learning targets can be defended by currently accepted learning principles.
-+   6. Be sure all the learning targets can be taught in the time limits of the course.
-+   7. Be sure all the learning targets can be taught with available teaching resources.
++ 1. Be sure all the learning targets are appropriate for students’ educational level.
++ 2. Be sure the list of learning targets is limited to only the important outcomes for the course.
++ 3. Be sure all the learning targets are consistent with your state’s published learning standards.
++ 4. Be sure all the learning targets are consistent with your local school’s philosophy and general goals.
++ 5. Be sure all the learning targets can be defended by currently accepted learning principles.
++ 6. Be sure all the learning targets can be taught in the time limits of the course.
++ 7. Be sure all the learning targets can be taught with available teaching resources.
 
 ## How to Write Specific Learning Targets
 
@@ -1092,39 +1010,41 @@ How can you write learning targets so they communicate your instructional intent
 
 The following minimum criteria for learning targets ensures their usefulness as a basis for classroom instruction and crafting assessment instruments (Lindvall, 1964, 1967):
 
-+   1. Student centered: Learning targets should focus on the student.
-+   2. Performance centered: Learning targets should be worded in terms of what a student can perform after the required learning experiences.
-+   3. Content centered: Learning targets should state the specific content to which the student should apply the performance.
++ 1. Student centered: Learning targets should focus on the student.
++ 2. Performance centered: Learning targets should be worded in terms of what a student can perform after the required learning experiences.
++ 3. Content centered: Learning targets should state the specific content to which the student should apply the performance.
 
 ### Student Centered
 
 Because instruction focuses on changes in student performance, learning targets should describe student performances. It is not unusual, however, for some teacher guides, curriculum frameworks, and other materials to contain statements that do not focus on the student. Consider this statement:
 
-## Example
+### Example
 
 Poor: Provide for student participation in classroom discussions.
 
 The problem with the preceding statement is that it is an activity statement for teachers rather than a learning target for students. You may “provide for student participation,” yet each student may not participate. Learning targets need to be student centered if they are to be the basis for crafting assessment procedures. Thus, you should say:
 
-## Example
+### Example
 
 Better: A student will participate in classroom discussions.
 
+
+
 Student-centered learning targets allow you to decide whether the students actually have achieved what you intended from the lesson.
 
-### Performance Centered
+## Performance Centered
 
 Not only should a learning target refer to a student, it should state a performance—that is, an observable activity. This can be accomplished by being sure that the statement includes an action verb that specifies a student performance.
 
 To help beginners write learning targets that describe students’ performances, Example 2.3 lists further examples of various action verbs. These verbs are organized according to the Bloom and Krathwohl et al. cognitive and affective taxonomies discussed in Appendix D. When verbs such as these are used in statements of learning targets, the learning targets will usually satisfy the second criterion of expressing observable student performance. A balance is necessary between verbs that are too broad (and thus imply too many nonequivalent performances) and those that are too specific (and which are often just ways of marking answers). Consider this learning target, which is stated too specifically:
 
-## Example
+### Example
 
 Poor: The student is able to put an X on the picture of the correct geometric shape (circle, triangle, rectangle, square, or ellipse) when the name of the shape is given.
 
 The main intent of such an objective is to select or identify the correct shape, not just to make Xs. Any response that indicates the student has correctly identified the required shape is acceptable. Thus, the learning target should be written as:
 
-## Example
+### Example
 
 Better: The student is able to identify a picture of a geometric shape (circle, triangle, rectangle, square, or ellipse) when the name of the shape is given.
 
@@ -1134,20 +1054,19 @@ Example 2.4 suggests some verbs that maintain this balance and illustrates other
 
 Action verbs to use when writing learning targets. (See Appendix D for additional examples.)
 
-+   I. Cognitive domain (Bloom et al., 1956)
-+   a. Knowledge: define, describe, identify, label, list, match, name, outline, select, state
-+   b. Comprehension: convert, distinguish, estimate, explain, extend, generalize, give examples, infer, paraphrase, predict, rewrite, summarize
-+   c. Application: change, compute, demonstrate, discover, manipulate, modify, operate, predict, prepare, produce, relate, show, solve, use
-+   d. Analysis: break down, diagram, differentiate, discriminate, distinguish, identify, illustrate, infer, outline, point out, relate, select, separate, subdivide
-+   e. Synthesis: categorize, combine, compile, compose, create, design, devise, rewrite, summarize, tell, write
-+   f. Evaluation: appraise, compare, conclude, contrast, criticize, describe, discriminate, explain, justify, interpret, relate, summarize, support
-
-+   II. Affective domain (Krathwohl et al., 1964)
-+   a. Receiving: ask, choose, describe, follow, give, hold, identify, locate, name, point to, reply, select, sit erect, use
-+   b. Responding: answer, assist, comply, conform, discuss, greet, help, label, perform, practice, present, read, report, respond, select, tell, write
-+   c. Valuing: complete, demonstrate, describe, differentiate, explain, follow, form, initiate, invite, join, justify, propose, read, recognize, report, select, share, study, work, write
-+   d. Organizing: adhere, alter, arrange, combine, compare, complete, defend, explain, generalize, identify, integrate, modify, organize, order, prepare, relate, synthesize
-+   e. Characterizing by a value or value complex: act, discriminate, display, influence, listen, modify, perform, practice, propose, qualify, question, revise, serve, solve, use, verify
+- I. Cognitive domain (Bloom et al., 1956)
+  - a. Knowledge: define, describe, identify, label, list, match, name, outline, select, state
+  - b. Comprehension: convert, distinguish, estimate, explain, extend, generalize, give examples, infer, paraphrase, predict, rewrite, summarize
+  - c. Application: change, compute, demonstrate, discover, manipulate, modify, operate, predict, prepare, produce, relate, show, solve, use
+  - d. Analysis: break down, diagram, differentiate, discriminate, distinguish, identify, illustrate, infer, outline, point out, relate, select, separate, subdivide
+  - e. Synthesis: categorize, combine, compile, compose, create, design, devise, rewrite, summarize, tell, write
+  - f. Evaluation: appraise, compare, conclude, contrast, criticize, describe, discriminate, explain, justify, interpret, relate, summarize, support
+- II. Affective domain (Krathwohl et al., 1964)
+  - a. Receiving: ask, choose, describe, follow, give, hold, identify, locate, name, point to, reply, select, sit erect, use
+  - b. Responding: answer, assist, comply, conform, discuss, greet, help, label, perform, practice, present, read, report, respond, select, tell, write
+  - c. Valuing: complete, demonstrate, describe, differentiate, explain, follow, form, initiate, invite, join, justify, propose, read, recognize, report, select, share, study, work, write
+  - d. Organizing: adhere, alter, arrange, combine, compare, complete, defend, explain, generalize, identify, integrate, modify, organize, order, prepare, relate, synthesize
+  - e. Characterizing by a value or value complex: act, discriminate, display, influence, listen, modify, perform, practice, propose, qualify, question, revise, serve, solve, use, verify
 
 > Source: Table adapted from Testing For Teachers, Second Edition by Bruce W. Luckman, copyright © 1988 by Harcourt, Inc. Reproduced by permission of the publisher. (Figure 2.2, p. 17)
 
@@ -1155,37 +1074,39 @@ Action verbs to use when writing learning targets. (See Appendix D for additiona
 
 Action verbs sometimes used in learning targets.
 
+
+
 ### Specific but acceptable verbs
 
-+   add, total
-+   alphabetize
-+   choose
-+   complete, supply
-+   construct, make
-+   convert
-+   count
-+   delete
-+   describe
-+   divide
-+   draw
-+   explain
-+   identify
-+   label
-+   list
-+   match
-+   measure
-+   multiply
-+   name
-+   order, arrange
-+   pick out
-+   regroup
-+   rename
-+   rephrase
-+   select
-+   sort, classify
-+   state
-+   subtract, take away
-+   weigh
++ add, total
++ alphabetize
++ choose
++ complete, supply
++ construct, make
++ convert
++ count
++ delete
++ describe
++ divide
++ draw
++ explain
++ identify
++ label
++ list
++ match
++ measure
++ multiply
++ name
++ order, arrange
++ pick out
++ regroup
++ rename
++ rephrase
++ select
++ sort, classify
++ state
++ subtract, take away
++ weigh
 
 ### Too broad, unacceptable verbs
 
@@ -1199,13 +1120,13 @@ Action verbs sometimes used in learning targets.
 
 When stating a learning target, you should indicate the content to which a student's performance is to apply. The following learning target is lacking a reference to content:
 
-## Example
+#### Example
 
 Poor: The student is able to write definitions of the important terms used in the text.
 
 To modify this learning target you need to include a reference to a specific list of "important words" or in some other way describe them:
 
-## Example
+#### Example
 
 Better: The student is able to write definitions of the terms listed in the "Important Terms and Concepts" section of Chapters 1–5 of the textbook.
 
@@ -1225,6 +1146,8 @@ your assessment plan. The methods of developing assessment plans are treated in 
 
 ### Matching Assessments to Developmental Learning Targets
 
+
+
 As is often the case, developmental learning targets imply a broad domain of performance application. To ensure the validity of your classroom assessment, you may need to assess the same learning target in several different ways. For example, you might assess spelling achievement both by scoring several samples of students' written assignments and by using a dictated spelling test. The test provides the opportunity to assess a student's spelling of word patterns that might not appear in the natural course of the student's writing, but that may well be part of the learning target. Observing a student's natural writing habits permits you to infer how well the student is likely to spell in typical writing situations. Using both procedures increases how comprehensively you assess the students' spelling ability and the validity of your evaluation.
 
 Another reason for using more than one assessment procedure is to obtain more reliable results. Your subjective evaluation of a student's written essay on a topic might be supplemented by a test made up of more objectively scored items. Combining the less reliable information about the student's written work (that is, your subjective evaluation) with the more reliable information (the objectively scored test) yields a more reliable overall evaluation result. Reliability is discussed in more detail in Chapter 4.
@@ -1240,120 +1163,159 @@ Another reason for using more than one assessment procedure is to obtain more re
 ### Educational Goals, State Standards, and Learning Targets
 
 - Statements of general educational goals help guide the overall educational enterprise, but you must make them more specific before you can implement them in the classroom.
-- Specificity is accomplished by organizing goals into subject-matter areas and then developing several general learning targets for each goal. You subsequently define each general learning target by more specific performances that you can
-
-
-
-teach and assess. You use assessment results from these specific learning targets to infer the degree to which students have attained general learning targets and goals.
-
+- Specificity is accomplished by organizing goals into subject-matter areas and then developing several general learning targets for each goal. You subsequently define each general learning target by more specific performances that you can teach and assess. You use assessment results from these specific learning targets to infer the degree to which students have attained general learning targets and goals.
 - Content standards describe what subject-matter content students are expected to learn. Performance standards describe what students are expected to do with their content knowledge. Standards are often statements of general learning targets. Therefore, teachers need to break standards into more specific learning targets for purposes of teaching and assessment.
-
 - At least two kinds or levels of learning targets useful for classroom instruction can be identified: specific, mastery learning targets; and broader, developmental learning targets.
 
-- Students never fully achieve developmental learning targets. However, you can teach and assess the degree of students’ achievement at a particular educational level by writing several important, specific learning targets that define appropriate educational development at that level. You use students’ performances on this sample of learning targets to estimate the progress students have made in achieving the developmental learning target.
 
-- Developmental learning targets cannot be considered mastery learning targets because: (a) They imply several performances that are not highly related to each other; and (b) it is reasonable to expect degrees of development or growth in certain achievement areas, rather than complete mastery.
+
+Students never fully achieve developmental learning targets. However, you can teach and assess the degree of students’ achievement at a particular educational level by writing several important, specific learning targets that define appropriate educational development at that level. You use students’ performances on this sample of learning targets to estimate the progress students have made in achieving the developmental learning target.
+
+Developmental learning targets cannot be considered mastery learning targets because: (a) They imply several performances that are not highly related to each other; and (b) it is reasonable to expect degrees of development or growth in certain achievement areas, rather than complete mastery.
 
 ## Taxonomies of Learning Targets and Sources for Locating Learning Targets
 
-- When writing the learning targets for a lesson or unit and for crafting a classroom assessment, it is important to identify the full range of student performance to be achieved. This is done by (a) referring to taxonomies of cognitive, affective, and/or psychomotor objectives; (b) reviewing instructional materials and teachers’ manuals; (c) consulting curriculum frameworks from various sources; (d) reviewing books on methods of teaching the subject; (e) reviewing the criterion-referenced tests of a subject; (f) consulting your state’s mandated standards; and (g) reviewing reports from professional organizations.
+When writing the learning targets for a lesson or unit and for crafting a classroom assessment, it is important to identify the full range of student performance to be achieved. This is done by (a) referring to taxonomies of cognitive, affective, and/or psychomotor objectives; (b) reviewing instructional materials and teachers’ manuals; (c) consulting curriculum frameworks from various sources; (d) reviewing books on methods of teaching the subject; (e) reviewing the criterion-referenced tests of a subject; (f) consulting your state’s mandated standards; and (g) reviewing reports from professional organizations.
 
 ## Cognitive Domain Taxonomies
 
-- The Bloom et al. (1956) Taxonomy orders levels of cognitive learning targets from simplest to most complex. These are knowledge, comprehension, application, analysis, synthesis, and evaluation. (See Table D.1 of Appendix D for details.)
+The `Bloom et al. (1956) Taxonomy` orders levels of cognitive learning targets from simplest to most complex. These are knowledge, comprehension, application, analysis, synthesis, and evaluation. (See `Table D.1` of `Appendix D` for details.)
 
-- The Dimensions of Learning Model approach defines seven broad categories of learning targets: declarative knowledge, procedural knowledge, complex thinking, information processing, effective communication, collaboration and cooperation, and habits of mind.
+The Dimensions of Learning Model approach defines seven broad categories of learning targets: declarative knowledge, procedural knowledge, complex thinking, information processing, effective communication, collaboration and cooperation, and habits of mind.
 
-- The Dimensions of Learning Model approach is not hierarchical, but the Bloom et al. Taxonomy is.
+The Dimensions of Learning Model approach is not hierarchical, but the `Bloom et al. Taxonomy` is.
 
-- Taxonomies for the affective and psychomotor domains are presented in Appendix D (Tables D.4 and D.5).
+Taxonomies for the affective and psychomotor domains are presented in `Appendix D` (`Tables D.4` and `D.5`).
 
 ## Choosing a Taxonomy
 
-- Criteria for choosing which cognitive taxonomy to use were listed.
+Criteria for choosing which cognitive taxonomy to use were listed.
 
 ## Evaluating the Learning Targets of a Course Unit
 
-- Criteria for evaluating the quality and importance of the learning targets you select for a unit or a course were listed.
+Criteria for evaluating the quality and importance of the learning targets you select for a unit or a course were listed.
 
 ## How to Write Specific Learning Targets
 
-- A written statement of a specific learning target should be worded (a) in terms of the student, rather than in terms of a teacher or a school, (b) in terms of observable student performance, and (c) the specific content to which a student’s performance is applied is clear.
+A written statement of a specific learning target should be worded (a) in terms of the student, rather than in terms of a teacher or a school, (b) in terms of observable student performance, and (c) the specific content to which a student’s performance is applied is clear.
 
-- Specific examples for action verbs that describe student performance appear in Tables 2.2 and 2.3.
+Specific examples for action verbs that describe student performance appear in `Tables 2.2` and `2.3`.
 
 ## Making Sure Assessment Tasks Match Learning Targets
 
-- The validity of assessment results increases if the assessment closely matches the intent of the learning targets.
+The validity of assessment results increases if the assessment closely matches the intent of the learning targets.
 
-- Sometimes you need to use several different methods of assessing a student’s performance before you can validly conclude that the student has met the intent of the learning target.
+Sometimes you need to use several different methods of assessing a student’s performance before you can validly conclude that the student has met the intent of the learning target.
 
 ## Important Terms and Concepts
 
-action verb
-analysis, application, comprehension, evaluation, knowledge, synthesis
-content standards
-declarative knowledge, procedural knowledge, complex thinking, information processing, effective communication, collaboration and cooperation, habits of mind
-developmental learning targets
-educational goals
-general learning targets
-instruction
-learning objective
-learning targets
-mastery learning targets
-matching assessment tasks to learning targets
-minimum criteria for learning targets (content centered, performance centered, student centered)
-performance standards
-specific learning targets
-taxonomies of instructional learning targets (affective, cognitive, psychomotor)
+`action verb`
+
+`analysis`, `application`, `comprehension`, `evaluation`, `knowledge`, `synthesis`
+
+`content standards`
+
+`declarative knowledge`, `procedural knowledge`, `complex thinking`, `information processing`, `effective communication`, `collaboration and cooperation`, `habits of mind`
+
+`developmental learning targets`
+
+`educational goals`
+
+`general learning targets`
+
+`instruction`
+
+`learning objective`
+
+`learning targets`
+
+`mastery learning targets`
+
+`matching assessment tasks to learning targets`
+
+`minimum criteria for learning targets` (content centered, performance centered, student centered)
+
+`performance standards`
+
+`specific learning targets`
+
+`taxonomies of instructional learning targets` (affective, cognitive, psychomotor)
 
 ## Exercises and Applications
 
-- 1. Write three specific learning targets for a lesson you plan to teach. Explain how each learning target meets the three criteria: student centered, performance centered, and content centered.
-- 2. Here are three learning targets. Decide whether each implies a homogeneous or a heterogeneous domain. Write a brief statement justifying your choice.
-  a. When given a Roman numeral, the student is able to write the corresponding Arabic numeral.
-  b. Students are able to recognize examples of deductive and inductive reasoning.
-  c. Students are able to write a definition of deductive and inductive reasoning.
-- 3. Following are three learning targets. Decide whether each is a mastery learning target or a developmental learning target. Explain your choices.
-  a. The student is able to take the square root of any number using a handheld calculator.
-  b. The student is able to determine whether the thesis of the argument is supported adequately.
-  c. When given data, the student is able to construct a graph to describe the trend in the data.
 
-4. Decide whether each learning target listed here belongs to the cognitive, affective, or psychomotor domain. Does the performance of each learning target require some use of elements from domains other than the one into which you classified it? Which one(s)? Explain this mean you should reclassify that learning target? Explain.
 
-- a. The student is able to tune a color television set to get the best color resolution.
-- b. The student demonstrates knowledge of parliamentary law by conducting a meeting without violating parliamentary procedures.
-- c. The student contributes to group maintenance when working with classmates on a science project.
-- d. The student makes 5 baskets out of 10 tries on the basketball court while standing at the foul line.
+# 1. Write three specific learning targets for a lesson you plan to teach. Explain how each learning target meets the three criteria: student centered, performance centered, and content centered.
 
-5. Obtain a copy of your state’s (or neighboring state’s) standards. Analyze the suitability of these statements for (a) planning units and lessons and (b) for developing assessment exercises. Prepare a criticism of these standards from your point of view as a teacher of a specific grade and subject. In your criticism, be sure to emphasize assessment-related issues. Hint: Log on to your state education department’s Website and search for links to the education standards. See also the Companion Website for this textbook.
+# 2. Here are three learning targets. Decide whether each implies a homogeneous or a heterogeneous domain. Write a brief statement justifying your choice.
+
+## a.
+When given a Roman numeral, the student is able to write the corresponding Arabic numeral.
+
+## b.
+Students are able to recognize examples of deductive and inductive reasoning.
+
+## c.
+Students are able to write a definition of deductive and inductive reasoning.
+
+# 3. Following are three learning targets. Decide whether each is a mastery learning target or a developmental learning target. Explain your choices.
+
+## a.
+The student is able to take the square root of any number using a handheld calculator.
+
+## b.
+The student is able to determine whether the thesis of the argument is supported adequately.
+
+## c.
+When given data, the student is able to construct a graph to describe the trend in the data.
+
+# 4. Decide whether each learning target listed here belongs to the cognitive, affective, or psychomotor domain. Does the performance of each learning target require some use of elements from domains other than the one into which you classified it? Which one(s)? Explain this mean you should reclassify that learning target? Explain.
+
+## a.
+The student is able to tune a color television set to get the best color resolution.
+
+## b.
+The student demonstrates knowledge of parliamentary law by conducting a meeting without violating parliamentary procedures.
+
+## c.
+The student contributes to group maintenance when working with classmates on a science project.
+
+## d.
+The student makes 5 baskets out of 10 tries on the basketball court while standing at the foul line.
+
+# 5. Obtain a copy of your state’s (or neighboring state’s) standards. Analyze the suitability of these statements for (a) planning units and lessons and (b) for developing assessment exercises. Prepare a criticism of these standards from your point of view as a teacher of a specific grade and subject. In your criticism, be sure to emphasize assessment-related issues. Hint: Log on to your state education department’s Website and search for links to the education standards. See also the Companion Website for this textbook.
 
 ## Additional Readings
 
 Airasian, P. W. (1991). Classroom assessment (pp. 73–120). New York: McGraw-Hill.
+
 Discusses the instructional planning process and how to use learning targets.
 
 Kendall, J. S. (1997). Content knowledge: A compendium of standards and benchmarks for K–12 education (2nd ed.).
+
 Alexandria, VA: Association for Supervision and Curriculum Development.
+
 Describes content standards and benchmarks (what should be learned) at each grade.
 
 Marzano, R. J., Brandt, R. S., Hughes, C. S., Jones, B. F., Presseisan, B. Z., Rankin, S. C., & Suhor, C. (1988). Dimensions of thinking: A framework for curriculum and instruction. Alexandria, VA: Association for Supervision and Curriculum Development.
+
 Describes a wide range of thinking skills and how they might be taught in school. Explains the Core Thinking Skills in greater detail than this text.
 
 Marzano, R. J., Pickering, D., & McTighe, J. (1993). Assessing student outcomes: Performance assessment using the Dimensions of Learning Model. Alexandria, VA: Association for Supervision and Curriculum Development.
+
 Explains the classification reproduced in Appendix E and illustrates how to use it to assess performance.
 
 Nitko, A. J. (1989). Designing tests that are integrated with instruction. In R. L. Linn (Ed.), Educational measurement (3rd ed., pp. 447–474). New York: Macmillan.
+
 Describes various approaches to diagnostic assessment and points out the limitations of behavioral objectives for these purposes.
 
+
+
 Pasch, M., Sparks-Langer, J., Gardner, T. G., Starko, A. J., & Moody, C. D. (1991). Teaching as decision making: Instructional practices for the successful teacher (Ch. 2, 3). New York: Longman.
+
 Gives practical guidelines and practice exercises for identifying, writing, and using learning targets in the classroom.
 
-
-
-
-
-## 评估结果的有效性
+# 评估结果的有效性
 
 ## 学习目标
 
@@ -1401,9 +1363,7 @@ Gives practical guidelines and practice exercises for identifying, writing, and 
 在讨论评估结果的有效性时，请记住以下几点：
 
 - 1. 有效性的概念适用于我们解释和使用评估结果的方式，而不适用于评估程序本身。 因此，我们不能说，“ABC 阅读测试有效吗？” 除了作为一种非正式的简写说法。 相反，我们必须提出更具体的问题，例如，“将 ABC 阅读测试的分数解释为衡量阅读理解是否有效？” 或“使用 ABC 阅读测试分数将学生分为阅读组是否有效？” 等等。
-
 - 2. 评估结果对于不同的目的和不同的情况具有不同的有效性程度。 例如，我们假设的 ABC 阅读测试的分数在用于评估你学区的阅读计划时可能具有高度有效性，因为其题目与该学区的阅读计划目标非常吻合。 另一方面，同一测试的分数对于评估你邻近学区的阅读计划可能有效性较差，因为其题目与该学区的阅读计划目标匹配较差。
-
 - 3. 你只有在研究并结合几种类型的有效性证据后，才应对你对评估结果的解释或用途的有效性做出判断。 例如，在得出关于 ABC 阅读测试分数的拟议解释或使用的有效性结论之前，你需要收集有关如何
 
 ## 验证的四个原则
@@ -1411,31 +1371,29 @@ Gives practical guidelines and practice exercises for identifying, writing, and 
 四个验证原则将帮助你判断你的评估结果有多有效（Messick, 1989b, 1994a） （请记住，你的有效性判断应基于全部四个原则，而不仅仅是一个）：
 
 - 1. 你给出的学生评估结果的解释（或含义）只有在你能指出支持其适当性和正确性的证据时才是有效的。
-
 - 2. 你可能对评估结果的使用只有在你能指出支持其正确性和适当性的证据时才是有效的。
-
 - 3. 你对评估结果的解释和用途只有在它们所隐含的价值观是适当的情况下才是有效的。
-
 - 4. 你对评估结果的解释和用途只有在这些解释和用途的后果与适当的价值观一致时才是有效的。
 
 这些原则在以下段落中进行了解释。
 
-适当的解释 例如，考虑林肯学校的学生海勒姆。 海勒姆每年都参加 ABC 阅读测试，但今年他的分数突然上升。 你将如何解释海勒姆分数的突然上升？ 这里有几种可能的解释：（a）他的阅读理解能力有所提高，（b）他对阅读理解测试的动机有所提高，以及（c）他回答选择题阅读理解测试题目的技能有所提高。 这些解释并非相互排斥。 海勒姆可能在这一个或多个方面有所改善。
+### 适当的解释
 
-林肯学校的工作人员可能喜欢将海勒姆的评估解释为其阅读理解能力的提高——
+例如，考虑林肯学校的学生海勒姆。 海勒姆每年都参加 ABC 阅读测试，但今年他的分数突然上升。 你将如何解释海勒姆分数的突然上升？ 这里有几种可能的解释：（a）他的阅读理解能力有所提高，（b）他对阅读理解测试的动机有所提高，以及（c）他回答选择题阅读理解测试题目的技能有所提高。 这些解释并非相互排斥。 海勒姆可能在这一个或多个方面有所改善。
 
+林肯学校的工作人员可能喜欢将海勒姆的评估解释为其阅读理解能力的提高——prehension. 在他们声称这种解释具有一定程度有效性之前，他们需要提供证据。首先，他们需要证明 ABC 阅读测试以阅读专家所定义的理解方式衡量阅读理解。其次，他们需要证据来证明 Hiram 测试成绩的提高主要归因于他阅读能力的提高，而不仅仅是他提高考试动机和应试技巧的结果。第三，他们需要使用学校中存在的其他证据：Hiram 的阅读老师和/或班级老师应将其测试成绩与课堂阅读表现进行比较。例如，如果工作人员在评估研究文献中发现矛盾的证据，表明学生的动机和应试技巧很容易提高测试分数，那么继续将 Hiram 的分数解释为纯粹衡量阅读理解的做法就是不合理或无效的。
 
-prehension. 在他们声称这种解释具有一定程度有效性之前，他们需要提供证据。首先，他们需要证明 ABC 阅读测试以阅读专家所定义的理解方式衡量阅读理解。其次，他们需要证据来证明 Hiram 测试成绩的提高主要归因于他阅读能力的提高，而不仅仅是他提高考试动机和应试技巧的结果。第三，他们需要使用学校中存在的其他证据：Hiram 的阅读老师和/或班级老师应将其测试成绩与课堂阅读表现进行比较。例如，如果工作人员在评估研究文献中发现矛盾的证据，表明学生的动机和应试技巧很容易提高测试分数，那么继续将 Hiram 的分数解释为纯粹衡量阅读理解的做法就是不合理或无效的。
-
-## 适当的使用
+### 适当的使用
 
 我们将解释——你对分数的含义——与使用——你基于分数采取的行动——区分开来。林肯学校工作人员可能对测试使用有哪些设想？例如，他们可能希望 (a) 证明 Hiram 的阅读水平与其年级相符；(b) 诊断或识别 Hiram 可能遇到的阅读理解问题类型；(c) 将 Hiram 分入补救、常规或高级阅读小组；以及 (d) 持续监测 Hiram 阅读理解的成长。林肯学校工作人员可能希望将 Hiram 的分数用于其中一个以上的目的。然而，林肯学校对 ABC 阅读测试分数的任何使用的有效性都取决于教师和学校官员能够找到支持每种使用的证据。例如，林肯学校能提供什么证据来证明，根据 ABC 阅读测试成绩被分配到补救阅读小组的学生，其阅读学习效果会比分配到常规阅读班更好？应为每种预期的评估结果使用提供单独的证据。对于已出版的标准化学术测试，其中许多证据可能已在测试的技术手册中提供，因此学校可能无需自行研究。但并非总是如此。
 
 请注意，林肯学校的例子使用了暗示对测试结果进行阅读理解解释的措辞。这说明了评估验证过程中的一个重要观点：要验证评估结果的特定用途，你还必须采用经验证的解释或含义。因此，林肯学校必须首先确定 ABC 阅读测试在多大程度上衡量阅读理解。如果学校无法做到这一点，学校将无法验证任何基于测试衡量阅读理解这一假设的进一步测试分数使用。
 
-## 适当的值
+### 适当的值
 
 你对学生的评估结果的解释和用途源于你的教育和社会价值观。当林肯学校的工作人员将 Hiram 的 ABC 阅读测试分数解释为衡量阅读理解并用其描述和规划他的阅读发展时，暗示了哪些价值观？
+
+
 
 首先，选择 ABC 阅读测试本身就暗示工作人员重视测试题目的格式和内容。假设 ABC 阅读测试由若干短篇段落（每篇少于 500 字）组成，每篇后跟若干选择题。此外，假设阅读段落的主题忽略（或与之无关）非裔美国人、西班牙裔、美洲原住民和/或其它少数族裔的文化体验。使用并解释此测试作为阅读理解的衡量标准，意味着工作人员接受了这种文化和族裔体验在评估学生阅读理解时不重要。
 
@@ -1457,15 +1415,15 @@ prehension. 在他们声称这种解释具有一定程度有效性之前，他�
 
 前面的讨论对课堂评估意味着什么？本节讨论验证课堂评估方法结果的标准。虽然有效性标准适用于所有类型的课堂评估，包括简短作业、长期作业和测验，但我们仅用一个示例来说明这些标准的应用。之所以这样做，是因为有效性的判断取决于了解评估的具体解释、使用、价值和后果。这一示例提供了我们用来说明这些想法的具体焦点。
 
-## 评估解释和使用的示例
+### 评估解释和使用的示例
 
 本节中的示例假设三件事。首先，它假设教师会将课堂评估结果解释为对学生掌握材料的总结性评价之一。评估目的包括使用结果为学生分配字母等级。其次，它还假设教师会将本次评估的结果作为分配字母等级时众多重要信息之一。最后，它假设评估涵盖了相当大的“学习块”，例如一个单元、一个评分期或一个学期。我们讨论的标准适用于为此目的使用的任何评估技术；该技术可能是也可能不是纸笔测试。
 
-## 提高课堂评估有效性的标准
+### 提高课堂评估有效性的标准
 
 可使用若干标准来提高使用评估结果为学生评分的有效性。这些标准总结在表 3.1 中。表格显示了本节讨论的几个类别中组织的标准。
 
-### 内容代表性和相关性
+#### 内容代表性和相关性
 
 你的课堂评估结果的有效性在很大程度上取决于你的评估对学习目标的抽样程度如何。为了创建有效的评估，你必须 (a) 明确识别重要的学习目标，(b) 确保它们被评估程序很好地抽样。这就是为什么第 2 章专门讨论学习目标主题的原因。
 
@@ -1473,12 +1431,9 @@ prehension. 在他们声称这种解释具有一定程度有效性之前，他�
 
 在评估你的课堂评估方法与代表性和相关性的关系时，你应关注以下问题：
 
-- 1. 我的评估程序是否强调了我所教授的内容？学生有权期望被评估的内容是你课堂上强调的内容。如果你花了很多时间在材料的某一领域，评估应突出该领域。教师常犯的一个错误是未经批判地使用随课程材料或教科书附带的测试。通常，这些测试上的题目质量较差，强调低层次的思维技能（Center for the Study of Testing, Evaluation, and Educational Policy, 1992），或强调与教学期间强调的内容不同的内容。我们在此方面回忆了一个悲惨的轶事。一位教师在使用其中一个测试时没有仔细审查。考试当天，教师发现 40 道题中有 10 道涵盖了她未教授的材料。绝望之下，教师使用了测试时间的最初 15 分钟来尝试教授这些概念，然后进行测试。当然，这项评估不仅缺乏有效性，还导致学生挫败和灾难性结果。此案例也是教师不道德使用测试的例子。
+- 我的评估程序是否强调了我所教授的内容？学生有权期望被评估的内容是你课堂上强调的内容。如果你花了很多时间在材料的某一领域，评估应突出该领域。教师常犯的一个错误是未经批判地使用随课程材料或教科书附带的测试。通常，这些测试上的题目质量较差，强调低层次的思维技能（Center for the Study of Testing, Evaluation, and Educational Policy, 1992），或强调与教学期间强调的内容不同的内容。我们在此方面回忆了一个悲惨的轶事。一位教师在使用其中一个测试时没有仔细审查。考试当天，教师发现 40 道题中有 10 道涵盖了她未教授的材料。绝望之下，教师使用了测试时间的最初 15 分钟来尝试教授这些概念，然后进行测试。当然，这项评估不仅缺乏有效性，还导致学生挫败和灾难性结果。此案例也是教师不道德使用测试的例子。
 
 1 你可以提高课堂评估的有效性，如果你自己制作评估工具。本书的第二部分专门教你如何制作有效的课堂评估。
-
-
-
 
 | 表 3.1 用于给学生评分的课堂评估成绩有效性改进标准。 | 类别 | 应达到的标准。你的评估应： |
 |---|---|---|
@@ -1498,7 +1453,7 @@ ment 应对学生的进一步学习或生活技能具有很大价值或意义。
 
 3. 我的评估任务是否与当前关于应教授什么以及应如何评估的观点一致？教育工作者、哲学家、课程理论家、研究人员等不断重新定义什么值得学习。专业教师应跟上这些发展，并在其教学和评估实践中实施。
 
-## 思维过程和技能的代表
+#### 思维过程和技能的代表
 
 4. 我评估中的内容是否重要且值得学习？你教授的课程和内容包含许多具体细节。你必须确保被评估的内容与重要的学生学习目标直接相关，而非间接相关。包含在你的评估中的内容
 
@@ -1506,17 +1461,19 @@ ment 应对学生的进一步学习或生活技能具有很大价值或意义。
 
 以下问题将帮助你判断你的课堂评估在思维技能和过程方面的有效性：
 
-## 5. 我的评估工具上的任务是否要求学生使用重要的思维技能和过程？
+##### 5. 我的评估工具上的任务是否要求学生使用重要的思维技能和过程？
 
 每种课堂评估程序都应要求学生使用混合的思维技能和过程。这里的问题是，你的评估在多大程度上反映了你在教授的学科中使用的重要的思维技能。答案是强调的问题，以及了解课程专家推荐的学生在特定年级的学习目标的问题。
 
 你的评估应收集有关学生使用该学科中常用的策略和过程的能力的信息。例如，数学评估应帮助你评估学生在使用解决问题方法时是否使用良好的数学思维，而不仅仅是评估学生能否得到正确答案。社会研究评估应帮助你评估学生如何批判性思考并将材料应用于日常生活，而不仅仅是评估他们能否“比较和对比”或“列出导致……的因素”。重要且有价值的学习可以应用于现实生活情况。评估任务至少应在适合你所教学生的水平上模拟现实生活应用。它们应尽可能要求学生使用多种技能和知识的组合。
 
-## 6. 我的评估工具是否代表了我所在学校课程框架和州绩效标准认为重要的思维技能类型？
+##### 6. 我的评估工具是否代表了我所在学校课程框架和州绩效标准认为重要的思维技能类型？
 
 地方课程和州标准通常将某些类型的更高阶、批判性思维和表现作为教学目标。你的教学应培养这种思维，你应评估学生使用它的能力。
 
-## 7. 学生在评估过程中是否实际使用了我期望他们使用的思维类型？
+##### 7. 学生在评估过程中是否实际使用了我期望他们使用的思维类型？
+
+
 
 如果你要将学生的评估解释为反映复杂思维技能，那么你应确保学生在完成评估时确实在使用它们。通过观察学生在评估过程中似乎使用的策略来检查这一点。你可以采访几名学生，要求他们在解决评估任务时“出声思考”。你也可以审阅评估上的任务。构造不良的测验题目会给出正确答案的线索，降低学生使用你希望他们使用的重要的思维技能的可能性。同样，措辞含糊的问题会让学生困惑，干扰他们使用重要策略，降低其分数的有效性。
 
@@ -1528,19 +1485,15 @@ ment 应对学生的进一步学习或生活技能具有很大价值或意义。
 
 在单元、评分期或学期期间，你将多次观察班级中的个人。你将收集大量与评估每个学生成就相关的重要信息。用于评分的学生评估结果应与学生在该期间的整体表现模式一致。当然，一些学生可能表现得比你预期的更好或更差，你应尝试确定原因。然而，整个班级的评估结果模式不应让你感到惊讶。如果感到惊讶，你的评估程序可能存在有效性问题。通过关注以下问题来评估这种可能性：
 
-## 9. 班级的结果模式是否与我基于对他们的其他评估所期望的一致？
+### 9. 班级的结果模式是否与我基于对他们的其他评估所期望的一致？
 
 如果班级的模式与你预期的差异很大，请根据问题 1–8 审阅你的评估程序。例如，你的测试的重点可能与你的教学重点不匹配。也许它与你基于此形成期望的其他评估的内容重点不匹配。如果这些原因解释了差异，你可能无法将评估结果解释为掌握程度或用于有效给学生评分。
 
-## 10. 我是否使评估任务对我的学生来说太难或太容易？
+### 10. 我是否使评估任务对我的学生来说太难或太容易？
 
 当任务太难或太容易时，评估结果将与你对学生的其他观察不一致。当评估太容易或太难时，所有学生都会取得几乎相同的结果，你将无法区分他们之间的可靠个体差异。这可能会降低结果用于评分的有效性。此外，评估太难会让学生感到沮丧，使他们觉得学习时间被浪费了。这种情况是一个负面后果，无法揭示学生的最佳表现。当然，评估任务应具有挑战性，但不应如此困难，以至于只有一两个学生在班级中能表现良好。
 
-评估工具中任务的顺序很重要。最容易的任务应首先出现。如果更困难的任务在前面，学生可能会花费太多
-
-
-
-time on them. As a result, they may run out of time before attempting the easier tasks that they probably are able to perform. Also, students who are test-anxious may experience debilitating anxiety when faced with difficult tasks early in the assessment. Your assessment results are less valid in these situations because they do not offer students a fair chance to demonstrate their achievement.
+评估工具中任务的顺序很重要。最容易的任务应首先出现。如果更困难的任务在前面，学生可能会花费太多 time on them. As a result, they may run out of time before attempting the easier tasks that they probably are able to perform. Also, students who are test-anxious may experience debilitating anxiety when faced with difficult tasks early in the assessment. Your assessment results are less valid in these situations because they do not offer students a fair chance to demonstrate their achievement.
 
 ## 可靠性和客观性
 
@@ -1553,6 +1506,8 @@ Objectivity is the degree to which two or more qualified evaluators will agree o
 This does not mean that the more subjective assessment procedures should be eliminated. As a professional and expert teacher, your judgments are extremely valuable and important to students. It would be unethical for you to refuse to evaluate student performance and achievement simply because such evaluations are subjective. What students seek is consistency and fairness in your professional judgment. Personal flaws that result in unprofessional, idiosyncratic, or erratic behavior should be held in check. Chapter 4 and other chapters will suggest ways of improving the reliability of classroom assessment results.
 
 Unreliable results limit the validity of your interpretations and uses. Therefore, when evaluating your classroom assessment procedures, keep focused on these questions:
+
+
 
 11. Do I use a scoring guide for obtaining quality ratings or scores from students' performance on the assessment? Such a guide may be a scoring key, a scoring rubric, or a rating scale with each rating level clearly defined. Apply your scoring guide to every student you are assessing (do not stop using your scoring rubric after the first few students). Your scoring guide should be crafted well enough that a qualified teaching colleague could use it and obtain the same results as you do.
 
@@ -1570,6 +1525,8 @@ As you evaluate your classroom assessment procedure for fairness, focus on the f
 
 ### 14. Do I modify the wording or the administrative conditions of the assessment tasks to accommodate students with disabilities or special learning problems?
 
+
+
 The basic interpretation you wish to make is whether the students have achieved the learning targets you are assessing. If the way that you organize your assessment materials inhibits students’ ability to communicate their understanding, your assessment results are less valid. Some teachers may balk at the types of assessment adaptations implied here. They may claim that such adaptations for a few students make the assessment unstandardized and unfair to the majority of students. But fairness is not a matter of voting for how to obtain information in which the majority wins. Valid assessment results give us a clear picture of what each student is capable of doing in relation to the learning targets. This may require using somewhat modified assessment procedures for some students in the class. (See Chapter 5 for details.)
 
 ### 15. Do the pictures, stories, verbal statements, or other aspects of my assessment procedure perpetuate racial, ethnic, or gender stereotypes?
@@ -1584,15 +1541,15 @@ The validity of classroom assessment results also depends on whether they can in
 
 ### 16. Is the assessment relatively easy for me to construct and not too cumbersome to use to evaluate students?
 
-Two practical concerns to keep in mind are how easy it is to create the assessment tasks and how easy it is to obtain quality ratings or scores. It is simpler to develop essay questions, for example, than to develop complex problem-solving performance tasks or good multiple-choice items. Once developed, however, multiple-choice items are easier to score and may be reused for next year’s class. Problem-solving performance tasks set in real-life settings are difficult to construct properly. However, they let you assess more completely whether
-
-students can use what they learned than do either the typical teacher-crafted multiple-choice items or short-answer questions. Thus, teacher convenience or ease of crafting should not be the overriding criteria for evaluating validity.
+Two practical concerns to keep in mind are how easy it is to create the assessment tasks and how easy it is to obtain quality ratings or scores. It is simpler to develop essay questions, for example, than to develop complex problem-solving performance tasks or good multiple-choice items. Once developed, however, multiple-choice items are easier to score and may be reused for next year’s class. Problem-solving performance tasks set in real-life settings are difficult to construct properly. However, they let you assess more completely whether students can use what they learned than do either the typical teacher-crafted multiple-choice items or short-answer questions. Thus, teacher convenience or ease of crafting should not be the overriding criteria for evaluating validity.
 
 ### 17. Would the time needed to use this assessment be better spent directly teaching my students instead?
 
 Your assessments must be balanced against the best way to use students’ time in class. Some procedures, such as interviews and individual observations of students’ performance, require a long time to complete. Also, while interviewing or observing one student, you need to keep the remainder of the class meaningfully engaged in learning. Group tests, on the other hand, are more efficient, since you administer them to all the students at the same time. You must judge according to the circumstances of your own classroom the appropriate balance between occupying a student’s time with assessment activities versus occupying it with other activities.
 
 ### 18. Does my assessment represent the best use of my time?
+
+
 
 Essay tests, term papers, projects, and lengthy written works generally require much student time to complete and much teacher time to grade and evaluate. When using these procedures, you must decide whether they are a wise investment of your time. But remember, the grading time and student learning time need not be entirely separate. For example, you may be able to evaluate a term paper or a project with the student present. If you can do this in a nonthreatening way, “talking through” the reasons for your evaluation with the student, it gives the student a chance to understand the quality of work you are expecting. This opportunity may also let the student ask questions, clarify the criteria you are using, contribute to the evaluation itself, and otherwise improve her grasp of the learning targets. Such rich interaction is often not possible with multiple-choice testing, which usually yields only one score.
 
@@ -1603,8 +1560,6 @@ When such student-teacher interactions do occur, the time you spend assessing is
 1. Do I use the assessment results in conjunction with other assessment results?
 
 Even though you ask the preceding questions of your assessment technique, you will discover that it does not produce perfectly valid results. The technique will stand up well under the scrutiny of some questions but do poorly under others. Even if you modify your technique to improve its validity, it will not be perfect because a single assessment procedure cannot yield results that are perfectly valid for a given purpose. This means that it is necessary to combine the results from several different types of assessments (such as homework, class performance, quizzes, projects, and tests) to improve the validity of
-
-
 
 你对学生成绩的判断。这被称为多元评估策略。过度依赖单一评估结果（例如让学生的学期成绩几乎完全取决于他期末考试的表现）会导致效度降低。
 
@@ -1634,16 +1589,23 @@ Even though you ask the preceding questions of your assessment technique, you wi
 
 | 证据类型 | 需要回答的问题示例 | 常用于获取答案的技术 |
 |---|---|---|
+
+
+
+## 评估效度证据类型
+
 | 1. 内容代表性和相关性（称为内容证据） | a. 评估任务在多大程度上代表了重要内容领域？评估任务在多大程度上代表了你所定义的课程？ b. 评估任务在多大程度上反映了与评估所依据的构念和理论一致的方式计分的内容？ | a. 如果学生的每项任务表现被量化，则研究任务分数与评估总分数的相关性，以决定所有任务是否都做出积极贡献。 b. 评估的每个部分可分别计分，并将这些部分分数相互关联，以查看是否出现了期望的关系模式。 c. 逻辑、实质性知识和经验被用来为评估中高低表现生成解释。并非所有部分都应与对各部分功能的预期解释一致。 d. 进行实证研究，既有实验性也有相关性，以支持或反驳在（c）和以上部分中产生的假设。 |
+
 | 4. 评估结果与其他相似变量结果或与其他变量结果的关系（称为外部结构证据） | a. 该评估的结果是否与这些学生的其他相似评估结果一致？ b. 该评估程序的表现在多大程度上反映了其他测验所测量的质量或特质？ c. 该评估的表现在多大程度上能预测当前或未来在其他有价值的任务或指标（标准）上的表现？ d. 评估结果在多大程度上可用于为工作、学校等选拔人员？误差幅度是多少？ e. 评估结果在多大程度上可用于将学生分配到不同类型的教学中？这样分配学习效果是否更好？ | a. 确定标准任务并进行分析。创建对其重要特征的评估。 b. 将评估分数与要预测的标准分数进行比较。 c. 对各种分类和预测误差进行研究。 d. 研究显示该评估的结果是否与预期一致地与或不同于其他评估的结果（称为趋同和区分证据），当使用对学生表现的拟议解释时。 |
 
-
-
-
 | 5. 随时间、评估者和内容领域的可靠性（称为可靠性证据） | 如果在另一次场合应用评估程序，同一批学生是否会获得几乎相同的结果？预期的误差范围是多少？ a. 如果由不同的人员实施、评分或计分评估结果，学生的结果是否会相同？误差范围是多少？ b. 如果第二次评估以相似的内容开发，学生的结果是否会非常相似？误差范围是多少？ | 研究集中于评估结果的一致性（可靠性）。这些研究在第 4 章中有更详细的描述 |
+
 | 6. 对不同类型人群、不同条件或特殊教学/干预的解释的推广（称为推广证据） | 当评估程序用于来自不同社会经济和种族背景但能力相同 的学生时，是否会给出显著不同的结果？这是否公平或无偏见？ a. 学生是否会获得特殊激励或动机？如果是，是否应该大幅改变评估？如果评估给予不同类型的人、在不同条件下或有特殊教学（干预）时，是否应大幅改变评估？ b. 教学中的特殊结果，或特殊辅导是否会显著改变学生在评估中获得的结果？如果是，评估结果的解释之后是否应改变？ | a. 使用逻辑、实质性知识和经验来生成解释（假设），说明当程序应用于不同类型的人、在不同条件下或有特殊教学（干预）时，评估结果的解释可能会如何变化。 b. 进行实证研究，包括实验性和相关性研究，以支持或反驳在 (a) 中生成的假设。 |
+
 | 7. 预期和/或非预期后果的价值（称为后果证据） | 如果我们以这种特定方式解释和使用评估结果，我们期望学生会发生什么？这些预期后果发生的程度如何，这是否好？ a. 如果我们以这种特定方式解释和使用评估结果，我们预期学生会发生什么副作用？这些预期副作用发生的程度如何，它们是积极的还是消极的？ b. 在我们以这种特定方式解释和使用评估结果的学生身上发生了什么非预期的负面副作用？这些负面副作用可以通过使用其他评估程序或改变我们的解释来避免吗？ | a. 进行研究以描述使用给定评估程序的预期结果，并确定这些结果对所有学生实现的程度。 b. 进行研究以确定是否因以某种方式解释和使用给定评估程序而产生了预期或非预期的副作用。 |
+
 | 8. 成本、效率、实用性、教学特征（称为实用性证据） | 评估程序能否适应典型的学生人数？ a. 评估程序对教师来说是否易于使用？ b. 教师是否能快速给出结果以指导教学？ c. 评估程序是否在评估程序背后给出可靠的结果？ d. 教师是否同意指导评估程序的理论概念反映了他们正在教授的关键理解？ e. 评估结果是否能有意义地识别个体差异？ f. 评估结果是否能识别需要纠正的误解？ g. 替代的评估程序是否会更有效率？ | 使用逻辑分析、成本分析、教师评审和现场试验数据来就成本、效率、实用性和教学特征的有用性因素做出决定。 |
+
 | 注：这些类型的效度证据已被 Messick（1989b；1994b）和 Linn 和 Dunbar（1991）提出。 |  |  |
 
 1989b）。本书遵循这一建议。² 因此，你应将以下内容视为支持评估效度的证据类型，而不是不同种类的效度。
@@ -1652,11 +1614,17 @@ Even though you ask the preceding questions of your assessment technique, you wi
 
 内容代表性和相关性的概念适用于各种评估：学业成就测验、能力测验、人格测验、学生-教师观察程序、绩效评定量表等等。本节主要关注课外学业成就测验。
 
-领域定义 如表 3.2 所示，这种证据来自对工具上任务或项目的內容进行判断。内容代表性的判断集中于评估任务是否是从更大的表现领域中抽取的代表性样本。任何评估都只是可以向学生呈现的项目中的一个样本。由于我们无法向学生呈现每一种可能的任务，我们必须以代表领域的方式从领域中抽样。（想象一下以更小版本重新呈现领域。）内容相关性的判断集中于测验使用者领域定义中包含评估任务的程度。出现的一个问题是，哪个对领域的定义是合适的：评估开发者还是评估使用者的？例如，ABC 阅读测验可能强调段落和句子阅读，但可能不单独测量词攻技能或词汇。选择阅读测验的学校人员可能认为这些后者领域与阅读领域的定义相关。在这里，测验开发者和测验使用者对领域的定义不一致，因此对评估中应包含什么或不包含什么不一致。对任务在评估中代表（a）开发者的领域和（b）使用者的领域的程度做出单独判断，将阐明证据是否支持学校对评估程序的预期使用。参见 Nitko, Al-Sarimi, Amedahe, Wang, & Wingert（1998）了解如何操作的示例。
+### 领域定义
 
-规范表 测验开发者通常在随附手册或技术出版物中定义所评估的领域。在手册中，定义标准化调查学业测验领域的典型工具是规范表。该表包含所评估的主要内容类别和技能。它描述了每个内容-技能组合的任务（项目）百分比。每种组合的任务百分比是该组合对学生总分贡献权重的粗略衡量。第 6 章和附录 G 显示了规范表的示例。
+如表 3.2 所示，这种证据来自对工具上任务或项目的內容进行判断。内容代表性的判断集中于评估任务是否是从更大的表现领域中抽取的代表性样本。任何评估都只是可以向学生呈现的项目中的一个样本。由于我们无法向学生呈现每一种可能的任务，我们必须以代表领域的方式从领域中抽样。（想象一下以更小版本重新呈现领域。）内容相关性的判断集中于测验使用者领域定义中包含评估任务的程度。出现的一个问题是，哪个对领域的定义是合适的：评估开发者还是评估使用者的？例如，ABC 阅读测验可能强调段落和句子阅读，但可能不单独测量词攻技能或词汇。选择阅读测验的学校人员可能认为这些后者领域与阅读领域的定义相关。在这里，测验开发者和测验使用者对领域的定义不一致，因此对评估中应包含什么或不包含什么不一致。对任务在评估中代表（a）开发者的领域和（b）使用者的领域的程度做出单独判断，将阐明证据是否支持学校对评估程序的预期使用。参见 Nitko, Al-Sarimi, Amedahe, Wang, & Wingert（1998）了解如何操作的示例。
 
-课程相关性和内容领域 评估方法与学校对学业领域的定义的相关性程度，取决于其与学校课程学习目标的匹配程度。我们称评估任务与课程之间重叠程度的判断为评估的课程相关性。研究图 3.1 可能有助于澄清将评估与开发者学业领域相匹配与评估的课程相关性之间的区别。开发者的学业定义和构成特定评估的任务样本显示在图中心。评估与开发者的领域相匹配，如果其上的任务充分代表开发者的定义。（实线和虚直线显示这些任务。）评估的课程相关性基于仪器上的任务代表学校课程框架的程度。（图中，实直线显示这一点。）正如图所示，图示的评估对学校 A 的课程相关性高于学校 B：然而，学校 A 的课程中相当大比例的内容未被评估。
+### 规范表
+
+测验开发者通常在随附手册或技术出版物中定义所评估的领域。在手册中，定义标准化调查学业测验领域的典型工具是规范表。该表包含所评估的主要内容类别和技能。它描述了每个内容-技能组合的任务（项目）百分比。每种组合的任务百分比是该组合对学生总分贡献权重的粗略衡量。第 6 章和附录 G 显示了规范表的示例。
+
+### 课程相关性和内容领域
+
+评估方法与学校对学业领域的定义的相关性程度，取决于其与学校课程学习目标的匹配程度。我们称评估任务与课程之间重叠程度的判断为评估的课程相关性。研究图 3.1 可能有助于澄清将评估与开发者学业领域相匹配与评估的课程相关性之间的区别。开发者的学业定义和构成特定评估的任务样本显示在图中心。评估与开发者的领域相匹配，如果其上的任务充分代表开发者的定义。（实线和虚直线显示这些任务。）评估的课程相关性基于仪器上的任务代表学校课程框架的程度。（图中，实直线显示这一点。）正如图所示，图示的评估对学校 A 的课程相关性高于学校 B：然而，学校 A 的课程中相当大比例的内容未被评估。
 
 这是典型的：学校的课程框架通常比任何单一课外评估工具更广泛、更丰富。因此，即使图示的评估工具对学校 A 的课程相关性高于学校 B，该相关程度仍可能不足以让学校使用该工具。
 
@@ -1668,24 +1636,19 @@ Even though you ask the preceding questions of your assessment technique, you wi
 
 ² 一些教科书和许多标准化测验手册仍承认三种效度类型：内容效度、效标关联效度和构念效度。还使用过许多其他术语，包括课程效度、教学效度、综合效度、预测效度、同时效度、聚合效度、因子效度、名义效度和“表面”效度。一般而言，此类术语指的是评估效度的特定程序，而不是从测验分数得出的新的解释性推断类型（American Educational Research Association, American Psychological Association, & National Council on Measurement in Education, 1974, p. 26）。
 
-
-
-
 图 3.1 评估工具、开发者内容领域与两所学校课程特定领域之间关系的示意图。一种评估可能与开发者的领域相匹配，但对某些学校而言可能缺乏课程相关性。
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_60_0.png)
 
 流程和技能如课程框架以及被评估学科领域的专家所定义。这样的评估工具要求学生将多种技能和知识组合起来，共同完成“现实生活”应用。
 
-为了验证任务确实要求学生使用高阶思维过程和技能的说法，评估开发者应提供以学生为基础的数据来支持其主张。这应包括 (a) 他们声称要评估的过程和能力的详细描述，(b) 清楚地展示每种类型的任务或评估练习如何评估这些过程和技能，以及 (c) 来自研究研究的证据，证明学生确实使用了所声称的思维过程和技能。后者可能以在认知实验室中进行的少量研究的形式出现。学生被要求在完成工具上的任务时“出声思考”。他们的思维被整理成“方案”并进行分析，以揭示学生声称使用过的思维策略类型。关于学生使用的策略可能报告更严格的实验，但这些很少见。这些研究还应证明学生没有使用不适当的流程来解决任务。例如，假设一个选择题数学测试开发者
 
-声称要评估学生的高阶问题解决能力。开发者应提供证据证明学生确实使用了这些高阶能力。开发者还应提供证据证明学生没有使用不适当的问题作答策略（例如，从每个多选题选项反向推导）。
+
+为了验证任务确实要求学生使用高阶思维过程和技能的说法，评估开发者应提供以学生为基础的数据来支持其主张。这应包括 (a) 他们声称要评估的过程和能力的详细描述，(b) 清楚地展示每种类型的任务或评估练习如何评估这些过程和技能，以及 (c) 来自研究研究的证据，证明学生确实使用了所声称的思维过程和技能。后者可能以在认知实验室中进行的少量研究的形式出现。学生被要求在完成工具上的任务时“出声思考”。他们的思维被整理成“方案”并进行分析，以揭示学生声称使用过的思维策略类型。关于学生使用的策略可能报告更严格的实验，但这些很少见。这些研究还应证明学生没有使用不适当的流程来解决任务。例如，假设一个选择题数学测试开发者声称要评估学生的高阶问题解决能力。开发者应提供证据证明学生确实使用了这些高阶能力。开发者还应提供证据证明学生没有使用不适当的问题作答策略（例如，从每个多选题选项反向推导）。
 
 ## 评估各部分之间的关系：内部结构证据
 
-评估程序不应只是评估任务或测试题目的拼凑集合。程序中的每个任务都应对总结果做出积极贡献。任务之间的相互关系，以及任务与总结果之间的关系，描述了评估的内部结构。评估程序的内部和外部结构对于将评估结果解释为个人在教育或心理建构上的表现指标非常重要。例如，一些评估工具声称只评估一种学生能力，例如算术问题解决。为了确保你真正将评估结果解释为仅衡量该学生的这种能力，你必须找到支持这一主张的证据。开发者
-
-应提供证据证明该评估上的每个任务都能沿着这一单一维度区分学生（此处为算术问题解决）。然而，通常评估任务会衡量不止一个维度。例如，解决算术问题可能在很大程度上依赖于阅读技能、词汇知识、计算速度以及一般的工作速度，以及算术问题解决。在这种情况下，你可能无法将结果有效解释为仅反映学生的算术问题解决能力。
+评估程序不应只是评估任务或测试题目的拼凑集合。程序中的每个任务都应对总结果做出积极贡献。任务之间的相互关系，以及任务与总结果之间的关系，描述了评估的内部结构。评估程序的内部和外部结构对于将评估结果解释为个人在教育或心理建构上的表现指标非常重要。例如，一些评估工具声称只评估一种学生能力，例如算术问题解决。为了确保你真正将评估结果解释为仅衡量该学生的这种能力，你必须找到支持这一主张的证据。开发者应提供证据证明该评估上的每个任务都能沿着这一单一维度区分学生（此处为算术问题解决）。然而，通常评估任务会衡量不止一个维度。例如，解决算术问题可能在很大程度上依赖于阅读技能、词汇知识、计算速度以及一般的工作速度，以及算术问题解决。在这种情况下，你可能无法将结果有效解释为仅反映学生的算术问题解决能力。
 
 另一方面，一些评估工具是专门设计用来评估两个或多个维度的。例如，一些学术能力测试提供语言能力、定量能力和非语言能力的测量。（参见第 19 章的示例。）如果是这样，那么技术手册应包含语言、定量和非语言测试分数具有实质性差异的证据。来自研究研究的证据应证明，尽管学生在测试的三个部分上的分数可能中度相关（因为它们是全球或一般学术能力的方面），但它们足够不同，可以解释为学术能力的三个不同方面。
 
@@ -1693,11 +1656,11 @@ Even though you ask the preceding questions of your assessment technique, you wi
 
 ## 结果与其他变量的关系：外部结构证据
 
-关于评估结果有效性的证据必须超越证明任务如何很好地抽样内容和思维过程，或不同任务上的分数如何相互关联。证据还来自评估结果与其他变量或标准的相关程度如何。例如， Scholastic Assessment Test I（SAT I）同时衡量语言和数学能力。其有效性在一定程度上取决于其内部结构——语言项目是否确实衡量语言能力，数学项目是否衡量数学能力，以及测试两部分的分数是否具有实质性差异。然而，SAT I 的主要用途是为招生官提供信息，帮助他们选拔可能在大学取得成功的申请人。因此，最重要的有效性证据必须来自建立 SAT I 分数与外部变量，即大学成绩的相关性的研究。我们将评估结果与这些类型的外部变量之间的关系模式称为评估的外部结构。
+关于评估结果有效性的证据必须超越证明任务如何很好地抽样内容和思维过程，或不同任务上的分数如何相互关联。证据还来自评估结果与其他变量或标准的相关程度如何。例如，Scholastic Assessment Test I（SAT I）同时衡量语言和数学能力。其有效性在一定程度上取决于其内部结构——语言项目是否确实衡量语言能力，数学项目是否衡量数学能力，以及测试两部分的分数是否具有实质性差异。然而，SAT I 的主要用途是为招生官提供信息，帮助他们选拔可能在大学取得成功的申请人。因此，最重要的有效性证据必须来自建立 SAT I 分数与外部变量，即大学成绩的相关性的研究。我们将评估结果与这些类型的外部变量之间的关系模式称为评估的外部结构。
 
 你需要的具体证据取决于你希望如何解释和使用评估结果。如果你想使用评估结果来帮助选拔大学候选人，那么你需要证明评估结果与大学成功标准（如平均绩点）呈正相关。有时我们希望验证新评估是否衡量与已存在的能力相同的能力。例如，我们可能希望验证选择题和口语评估是否都衡量阅读理解。如果它们都衡量相同的能力，你会期望它们的分数呈正相关：在一个测试上得分高的学生在另一个测试上也应得分高。如果两个评估的分数存在显著差异，很可能它们衡量的是不同的属性。需要额外的研究来确定哪一个分数，如果有的话，衡量阅读理解。关于评估结果与外部标准之间关系的假设和反假设源于逻辑分析、经验、先前研究以及关于所评估特质或特征本质的理论。
 
-请注意这两个例子，一些证据有助于预测未来表现（例如大学成功），而一些证据估计个体在变量上的当前状态。预测效度证据是指个体在标准上的未来表现可以从其在评估工具上的先前表现中预测的程度。例如，我们可以收集高中学生的平均绩点，等待他们完成一年大学后，收集他们的大学平均绩点，并将高中成绩与之相关。预测随时间变化是目标。 concurrent 效度证据是指个体在标准上的当前状态可以从其在评估工具上的当前表现中估计的程度。例如，我们可以研究已经在大学的学生，给他们一个特殊的才能测试，并收集他们当前的平均绩点。成绩与测试之间的关系是 concurrent 效度证据，因为两个测量是在同一时间收集的。这一区别很重要，因为在施测评估工具和获得标准结果之间的时间间隔会影响两者结果之间关系强度的：通常两者结果之间的时间间隔越长，它们之间的相关性越低。
+请注意这两个例子，一些证据有助于预测未来表现（例如大学成功），而一些证据估计个体在变量上的当前状态。预测效度证据是指个体在标准上的未来表现可以从其在评估工具上的先前表现中预测的程度。例如，我们可以收集高中学生的平均绩点，等待他们完成一年大学后，收集他们的大学平均绩点，并将高中成绩与之相关。预测随时间变化是目标。concurrent 效度证据是指个体在标准上的当前状态可以从其在评估工具上的当前表现中估计的程度。例如，我们可以研究已经在大学的学生，给他们一个特殊的才能测试，并收集他们当前的平均绩点。成绩与测试之间的关系是 concurrent 效度证据，因为两个测量是在同一时间收集的。这一区别很重要，因为在施测评估工具和获得标准结果之间的时间间隔会影响两者结果之间关系强度的：通常两者结果之间的时间间隔越长，它们之间的相关性越低。
 
 要理解测试开发者通常提供的外部结构信息，有必要了解一点关于相关系数的知识。我们在以下段落中转向这一必要的 digression。
 
@@ -1706,9 +1669,6 @@ Even though you ask the preceding questions of your assessment technique, you wi
 相关系数是一个统计指标，用来量化一个评估的分数与另一个评估的分数之间的关系程度。该指标在 -1 到 +1 的范围内报告。（本节侧重于概念。计算在附录 I 中举例说明。）
 
 学生在不同测试上的分数 几个测试的分数之间的关系示例将有助于解释相关性。示例 3.1 显示了 11 名学生在每三个测试上的分数。学生已按其语言能力分数（V）降序排列。查看前两列分数
-
-
-
 
 ## 示例 3.1
 
@@ -1740,11 +1700,13 @@ Even though you ask the preceding questions of your assessment technique, you wi
 
 散点图中点倾向于沿直线排列的趋势是相关性概念的核心。两个得分集之间的相关程度越高，点越接近沿直线排列。随着相关程度降低，点趋向于远离这条直线散开。这些点以椭圆形散开。椭圆形模式越窄，相关程度越高。相关程度越低，散点图的椭圆形模式越宽。当两个得分集之间没有关系时，模式会变宽，直到呈圆形而非椭圆形。
 
-皮尔逊积差相关系数 视觉比较得分的排名顺序和绘制散点图是研究得分之间相关性的两种定性方法。大多数已发表的评估材料使用一种定量相关性度量，称为皮尔逊积差相关系数，用 r 表示。在众多不同类型的相关系数中，r 在效度研究中最常用。为简单起见，我将在本教材中将 r 称为相关系数。
+皮尔逊积差相关系数 视觉比较得分的排名顺序和绘制散点图是研究得分之间相关性的两种定性方法。大多数已发表的评估材料使用一种定量相关性度量，称为皮尔逊积差相关系数，用 `r` 表示。在众多不同类型的相关系数中，`r` 在效度研究中最常用。为简单起见，我将在本教材中将 `r` 称为相关系数。
 
-相关系数可能的取值范围从 +1.00 到 0.00 再到 −1.00。相关系数为 0.00 表示两个得分集无关：无法根据学生在另一项评估上的得分预测其在一项评估上的得分。完全正相关关系的相关系数为 +1.00：学生在一次评估上的得分可以完美预测其在另一次评估上的得分。在正相关中，一项评估的高分与另一项评估的高分相关联。完全负相关关系的相关系数为 −1.00。在负相关中，一项评估的高分与另一项评估的低分相关联。对于完全
 
-## 示例 3.2
+
+相关系数可能的取值范围从 +1.00 到 0.00 再到 −1.00。相关系数为 0.00 表示两个得分集无关：无法根据学生在另一项评估上的得分预测其在一项评估上的得分。完全正相关关系的相关系数为 +1.00：学生在一次评估上的得分可以完美预测其在另一次评估上的得分。在正相关中，一项评估的高分与另一项评估的高分相关联。完全负相关关系的相关系数为 −1.00。在负相关中，一项评估的高分与另一项评估的低分相关联。对于完全负相关关系，学生的某次评估得分也可以从其在另一次评估上的得分完美预测；但这里我们预测一项的高分会与另一项的低分相关联，而一项的低分会与另一项的高分相关联。
+
+### 示例 3.2
 
 示例 3.1 中所示的 11 名学生的口头能力与阅读测试得分以及口头能力与算术测试得分的散点图。
 
@@ -1752,11 +1714,13 @@ Even though you ask the preceding questions of your assessment technique, you wi
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_63_1.png)
 
-负相关关系，学生的某次评估得分也可以从其在另一次评估上的得分完美预测；但这里我们预测一项的高分会与另一项的低分相关联，而一项的低分会与另一项的高分相关联。
+### 示例 3.1 中得分的相关系数的数值
 
-示例 3.1 中得分的相关系数的数值  示例 3.1 中得分的相关系数的数值是多少？我们本章不考虑计算。而是关注概念理解。你可能希望自行计算相关系数。如果是这样，请使用附录 I 中所示的程序。如果你应用了附录 I 中描述的程序，你会发现口头测试和阅读测试得分之间的相关性为 0.97，而口头和算术得分之间的相关性为 0.71。你可以看到这些相关系数与你在比较表格中得分的排名顺序并研究散点图时产生的印象一致。数字 0.97 反映了高度正相关关系（它接近 1.00），而 0.71 表示关系较弱。
+示例 3.1 中得分的相关系数的数值是多少？我们本章不考虑计算。而是关注概念理解。你可能希望自行计算相关系数。如果是这样，请使用附录 I 中所示的程序。如果你应用了附录 I 中描述的程序，你会发现口头测试和阅读测试得分之间的相关性为 0.97，而口头和算术得分之间的相关性为 0.71。你可以看到这些相关系数与你在比较表格中得分的排名顺序并研究散点图时产生的印象一致。数字 0.97 反映了高度正相关关系（它接近 1.00），而 0.71 表示关系较弱。
 
-关系程度 将相关系数与散点图联系起来有助于理解相关系数。图 3.2 显示了具有不同关系程度的配对得分的散点图及其对应的相关系数。每个点代表一个人的一对得分。散点图排列以说明具有相同绝对数值（即不带代数符号的数字）的正相关系数和负相关系数代表相同的强度或关系程度。
+### 关系程度
+
+将相关系数与散点图联系起来有助于理解相关系数。图 3.2 显示了具有不同关系程度的配对得分的散点图及其对应的相关系数。每个点代表一个人的一对得分。散点图排列以说明具有相同绝对数值（即不带代数符号的数字）的正相关系数和负相关系数代表相同的强度或关系程度。
 
 例如比较散点图 A 和 E。两者都显示完全相关，但图 A 显示完全正相关，而图 E 显示完全负相关。两种情况下关系的强度相同，但关系方向不同。相关系数上的负号表示关系方向为负。由于两种情况下相关都是完美的，了解一个人在一次评估上的得分就可以准确预测该人在第二次评估上获得的得分：完全相关意味着完全预测。
 
@@ -1766,13 +1730,11 @@ Even though you ask the preceding questions of your assessment technique, you wi
 
 比较 C 与 G 和 B 与 F，我们看到随着得分之间的相关性下降，散布 oc-
 
-
-
 ![](img/5f79dab9acf263c9421570aa1a23cc67_64_0.png)
 
-曲线偏离直线。它仍然可以预测一个人 Y 上的得分基于其 X 上的得分，但这种预测必须以比 r = +0.90 或 r = −0.90 时更宽的误差范围来进行。在 D 和 H 中，相关性分别为 +0.40 和 −0.40。椭圆形模式更宽。
+曲线偏离直线。它仍然可以预测一个人 `Y` 上的得分基于其 `X` 上的得分，但这种预测必须以比 `r = +0.90` 或 `r = −0.90` 时更宽的误差范围来进行。在 D 和 H 中，相关性分别为 +0.40 和 −0.40。椭圆形模式更宽。
 
-最后，散点图 I 说明了两组得分之间完全缺乏相关性。评估 X 上得分高的人在评估 Y 上可能有高、中或低的得分。因此，这些得分被认为是无关或不相关的，且 r = 0.00。请注意散点图中点的圆形模式。
+最后，散点图 I 说明了两组得分之间完全缺乏相关性。评估 `X` 上得分高的人在评估 `Y` 上可能有高、中或低的得分。因此，这些得分被认为是无关或不相关的，且 `r = 0.00`。请注意散点图中点的圆形模式。
 
 在评估的实际工作中，恰好为 0.00、−1.00 和 +1.00 的相关性很少。然而，这些特定的数值作为基准：实际相关系数在这些极限值的背景下才有意义。
 
@@ -1782,9 +1744,25 @@ Even though you ask the preceding questions of your assessment technique, you wi
 
 ## 相关系数与样本量
 
-在评估研究中报告的相关系数是基于从受试样本中获得的得分，而不是基于总体中所有人的得分。从样本计算的相关仅估计总体中相关数值的数值。你对从较小样本计算的相关数值的精确度应比从较大样本计算的相关少信心。在小样本中，即使一对得分也会显著影响相关系数的数值。例 3.3 演示了这一点。当 X = 12、Y = 12 的人被 X = 13、Y = 7 的另一人取代时，相关从 0.70（A）下降到 0.60（B），即使所有其他得分保持不变。
+在评估研究中报告的相关系数是基于从受试样本中获得的得分，而不是基于总体中所有人的得分。从样本计算的相关仅估计总体中相关数值的数值。你对从较小样本计算的相关数值的精确度应比从较大样本计算的相关少信心。在小样本中，即使一对得分也会显著影响相关系数的数值。例 3.3 演示了这一点。当 `X = 12`、`Y = 12` 的人被 `X = 13`、`Y = 7` 的另一人取代时，相关从 0.70（A）下降到 0.60（B），即使所有其他得分保持不变。
 
-### 表 3.3 影响相关系数大小的因素。
+### 例 3.3
+
+仅一对得分变化如何改变相关系数的示例。在此示例中，`N = 25` 对得分。
+
+![](img/5f79dab9acf263c9421570aa1a23cc67_66_0.png)
+
+A.
+
+![](img/5f79dab9acf263c9421570aa1a23cc67_66_1.png)
+
+B.
+
+## 提高或降低相关系数的因素
+
+相关系数出现在测验手册和研究报告中。当我们遇到它们时，我们的第一倾向是将其解释为报告我们仪器评估特征之间真实关系的指标。事实上，被评估特征的相似性只是影响报告的相关系数大小的众多因素之一。一般来说，当（a）被评估的特质相似，（b）两个评估得分的可靠性高，（c）两个评估得分的范围大，（d）两个评估得分分布的形状相似，且（e）施测两个评估的时间间隔短时，相关更高。表 3.3 总结了这些因素并给出了每个因素的示例。
+
+### 表 3.3 影响相关系数大小的因素
 
 | 因素 | 对相关系数的影响 | 示例 |
 |---|---|---|
@@ -1794,9 +1772,7 @@ Even though you ask the preceding questions of your assessment technique, you wi
 | 分布形状的相似性 | 两个评估得分分布形状越不同，相关越低。 | 对于特定学生群体而言，非常困难的成就测验得分与非常容易的测验得分的相关性低于如果这两个测验对该群体而言难度适中。 |
 | 评估施测的时间间隔 | 评估施测之间的时间间隔越短，相关可能越高。 | 在学年开始时施测代数能力测验。其得分与第一学期末数学成绩的相关性将高于与两年后同一学生的数学成绩的相关性。 |
 
-## 提高或降低相关系数的因素
-
-相关系数出现在测验手册和研究报告中。当我们遇到它们时，我们的第一倾向是将其解释为报告我们仪器评估特征之间真实关系的指标。事实上，被评估特征的相似性只是影响报告的相关系数大小的众多因素之一。一般来说，当（a）被评估的特质相似，（b）两个评估得分的可靠性高，（c）两个评估得分的范围大，（d）两个评估得分分布的形状相似，且（e）施测两个评估的时间间隔短时，相关更高。表 3.3 总结了这些因素并给出了每个因素的示例。通常，多个因素同时起作用。仔细阅读相关效度证据的报告，同时牢记这些因素作为解释你正在解读的数值相关值的可能原因。
+通常，多个因素同时起作用。仔细阅读相关效度证据的报告，同时牢记这些因素作为解释你正在解读的数值相关值的可能原因。
 
 ## 效度系数
 
@@ -1806,19 +1782,7 @@ Even though you ask the preceding questions of your assessment technique, you wi
 
 显示预测效度数据的另一种方式是制作期望表。期望表是一个网格或双向表，可预测具有特定评估结果的人达到每个标准得分水平的可能性。例 3.4 说明了如何开发期望表，以指示学生在特定能力得分水平上获得课程中每个字母等级的概率。（当然，期望表可以开发以预测其他标准，如主管评定、销售额、临床治疗成功等。）首先构建一个表，如例 3.4(A)，其中每个单元格包含具有特定
 
-3请注意，你无法从相关系数判断在使用评估结果预测标准得分时可能出现的误差的可能大小。例如，如果你预测大学绩点，相关并不会告诉你预测可能出错多少 GPA 单位。可以估计预测误差可能大小的指标称为估计标准误。其公式为 SEest = SDy √1 − r²。符号 SDy 表示标准差，在附录 I 中解释。
-
-### 例 3.3
-
-仅一对得分变化如何改变相关系数的示例。在此示例中，N = 25 对得分。
-
-![](img/5f79dab9acf263c9421570aa1a23cc67_66_0.png)
-
-A.
-
-![](img/5f79dab9acf263c9421570aa1a23cc67_66_1.png)
-
-B.
+> 3. 请注意，你无法从相关系数判断在使用评估结果预测标准得分时可能出现的误差的可能大小。例如，如果你预测大学绩点，相关并不会告诉你预测可能出错多少 GPA 单位。可以估计预测误差可能大小的指标称为估计标准误。其公式为 `SEest = SDy √1 − r²`。符号 `SDy` 表示标准差，在附录 I 中解释。
 
 ### 例 3.4
 
@@ -1832,6 +1796,13 @@ B.
 | 70-79 |  | 1 | 4 | 5 | 2 | 12 |
 | 60-69 |  | 3 | 5 | 6 | 1 | 15 |
 | 50-59 |  | 4 | 8 | 5 | 1 | 18 |
+
+
+
+#### A. 频率表
+
+| 预测测验得分 | F | D | C | B | A | 合计 |
+|---|---|---|---|---|---|---|
 | 40-49 | 1 | 5 | 8 | 4 |  | 18 |
 | 30-39 | 1 | 6 | 5 | 3 |  | 15 |
 | 20-29 | 2 | 5 | 4 | 1 |  | 12 |
@@ -1853,9 +1824,6 @@ B.
 | 10-19 | 25 | 50 | 25 |  |  | 100 |
 | 0-9 | 100 |  |  |  |  | 100 |
 
-
-
-
 particular score who attained each course grade (criterion score level). For example, 15 students had aptitude test scores between 60 and 69. This number is shown in the right margin of the 60–69 row. Three of these 15 attained a course grade of “D,” five a grade of “C,” six a grade of “B,” and one a grade of “A.”
 
 Second, each cell frequency in Example 3.4(A) is divided by its corresponding row total, converted to a percentage, and put into an expectancy table such as Example 3.4(B). These percentages may be interpreted as probabilities or chances out of 100 to answer such questions as, “At this school, what is the probability that a person with an aptitude test score of 65 will succeed in this course?” If we define succeed to mean “C” or better, then 33% + 40% + 7% = 80% of the students with aptitude scores between 60 and 69 were successful. A person with an aptitude score of 65 is a member of this group. Thus, the answer to the question is, “A person with an aptitude score of 65 has an 80% chance of being successful in this course.”
@@ -1868,48 +1836,67 @@ If you interpret assessment results using expectancy tables, you should observe 
 
 Your judgment about whether the assessment developer has provided appropriate validity evidence depends in part on whether the assessment results have been correlated with relevant criteria. Obtaining suitable criterion measures to use in validating assessment results is so difficult that this has been dubbed the criterion problem (Thorndike, 1949).
 
-Kinds of Criteria A variety of criteria are used to provide validity evidence. Personnel classification and selection research in government and industry use four general types: production (quantity and quality of goods, sales), personal data (accidents on the job, length of service, group membership, training course grades), samples of actual or simulated
+### Kinds of Criteria
 
-job performance, and judgments by others (checklists, supervisors’ ratings) (Lawshe & Balma, 1966). In education, criteria fall into three types: (a) achievement test scores; (b) ratings, marks, and other quantified judgments of teachers; and (c) career data. A common example is a reading readiness test given at the beginning of first grade. Scores are often validated by correlating them with scores from a reading achievement test (the criterion) administered at the end of first grade. Using grade point averages to validate scores from aptitude and admissions tests was mentioned already. Sometimes teachers’ ratings of students’ self-concept, sociability, and so on are used as criterion measures. Scores from vocational interest inventories are validated in part by relating them to career data. (See Chapter 19.)
+A variety of criteria are used to provide validity evidence. Personnel classification and selection research in government and industry use four general types: production (quantity and quality of goods, sales), personal data (accidents on the job, length of service, group membership, training course grades), samples of actual or simulated
+
+
+
+`job performance`, and judgments by others (`checklists`, `supervisors’ ratings`) (`Lawshe & Balma, 1966`). In education, criteria fall into three types: (a) achievement test scores; (b) ratings, marks, and other quantified judgments of teachers; and (c) career data. A common example is a reading readiness test given at the beginning of first grade. Scores are often validated by correlating them with scores from a reading achievement test (the criterion) administered at the end of first grade. Using grade point averages to validate scores from aptitude and admissions tests was mentioned already. Sometimes teachers’ ratings of students’ self-concept, sociability, and so on are used as criterion measures. Scores from vocational interest inventories are validated in part by relating them to career data. (See Chapter 19.)
 
 You should note that any single criterion measure is incomplete. Each represents partial attainment of the ultimate performance that an assessment procedure would like to predict. For this reason, the validation process for a test claiming to be useful in predicting performance should include several studies of how the test’s scores relate to various criteria. You will need to review all of these studies before deciding the predictive validity of a test.
 
-Judging the Worth of Criteria The criterion measures used in a validity study are themselves evaluated in four broad areas (Thorndike, 1949): (a) relevance to the long-term or ultimate real-life performance, (b) degree of reliability, (c) extent of bias against individuals or groups, and (d) practical problems of availability and convenience. Most often of interest in a predictive validity study are one or more ultimate real-life performances (Cronbach, 1971; Lindquist, 1951; Messick, 1989b; Thorndike, 1949). But such ultimate criteria frequently do not occur until many years after the developer initially obtains the assessment results. In such cases, intermediate criteria are used. A developer must present a suitable rationale for using an intermediate criterion before you can accept the data as part of the predictive validity evidence (Cronbach, 1971; Thorndike, 1949).
+### Judging the Worth of Criteria
+The criterion measures used in a validity study are themselves evaluated in four broad areas (`Thorndike, 1949`): (a) relevance to the long-term or ultimate real-life performance, (b) degree of reliability, (c) extent of bias against individuals or groups, and (d) practical problems of availability and convenience. Most often of interest in a predictive validity study are one or more ultimate real-life performances (`Cronbach, 1971`; `Lindquist, 1951`; `Messick, 1989b`; `Thorndike, 1949`). But such ultimate criteria frequently do not occur until many years after the developer initially obtains the assessment results. In such cases, intermediate criteria are used. A developer must present a suitable rationale for using an intermediate criterion before you can accept the data as part of the predictive validity evidence (`Cronbach, 1971`; `Thorndike, 1949`).
 
-Low Criterion Reliability Limits Validity Reliability is the topic of Chapter 4. But you should be aware that if assessment results have low reliability, they will correlate lower with other measures than if they had high reliability. Frequently, predictor instruments will have good reliability, but the criterion scores with which they are correlated are unreliable. No assessment instrument will be able to predict unreliable criterion scores.
+### Low Criterion Reliability Limits Validity
+Reliability is the topic of Chapter 4. But you should be aware that if assessment results have low reliability, they will correlate lower with other measures than if they had high reliability. Frequently, predictor instruments will have good reliability, but the criterion scores with which they are correlated are unreliable. No assessment instrument will be able to predict unreliable criterion scores.
 
-Systematic Errors Systematic errors in criterion measurement may lead you to the wrong conclusion about the validity of an instrument’s scores. For example, a validity study may correlate the test’s scores with teachers’ ratings of students. If these ratings favor boys over girls, or students with high verbal skills over those with lower verbal skills, the criterion measures themselves may be inappropriate. Systematic biases such as these introduce irrelevant factors into the validation process; they “contaminate” the criterion scores.
+### Systematic Errors
+Systematic errors in criterion measurement may lead you to the wrong conclusion about the validity of an instrument’s scores. For example, a validity study may correlate the test’s scores with teachers’ ratings of students. If these ratings favor boys over girls, or students with high verbal skills over those with lower verbal skills, the criterion measures themselves may be inappropriate. Systematic biases such as these introduce irrelevant factors into the validation process; they “contaminate” the criterion scores.
 
 Thus, before accepting correlation results as evidence for predictive validity, think carefully about the possibility that the scores on the criteria themselves may be biased or invalid.
 
-Practical Considerations Ideally, scores from an instrument should be validated using data from ultimate real-life criteria. However, practical considerations limit the degree to which a developer can do this. Practicality should not be the sole driving force in a developer’s decision to select criterion measures, however. Sometimes a developer could, with very little extra expense and effort, obtain criterion measures that are more appropriate than the surrogates the developer uses in a validation study.
+### Practical Considerations
+Ideally, scores from an instrument should be validated using data from ultimate real-life criteria. However, practical considerations limit the degree to which a developer can do this. Practicality should not be the sole driving force in a developer’s decision to select criterion measures, however. Sometimes a developer could, with very little extra expense and effort, obtain criterion measures that are more appropriate than the surrogates the developer uses in a validation study.
 
-## Reliability Over Time, Assessors, and Content Domains: Reliability Evidence
+# Reliability Over Time, Assessors, and Content Domains: Reliability Evidence
 
-Reliability refers to the consistency of the assessment results if and when they are repeated. For example, suppose the scores from the ABC Reading Test administered today correlated 0.00 with the scores from this test administered next week. This correlation is evidence that the scores have no consistency over this period. You would question the validity of this test if students’ scores had little or no consistency from one week to the next because you believe that reading ability should be stable over a short period. If an assessment instrument produces inconsistent or unstable results, you can have little confidence in those results. Inconsistency means unreliability. Therefore, the reliability of an assessment’s results limits its validity. This point is discussed in greater detail in Chapter 4, which is devoted entirely to estimating the reliability of assessment results.
+
+
+Reliability refers to the consistency of the assessment results if and when they are repeated. For example, suppose the scores from the `ABC Reading Test` administered today correlated `0.00` with the scores from this test administered next week. This correlation is evidence that the scores have no consistency over this period. You would question the validity of this test if students’ scores had little or no consistency from one week to the next because you believe that reading ability should be stable over a short period. If an assessment instrument produces inconsistent or unstable results, you can have little confidence in those results. Inconsistency means unreliability. Therefore, the reliability of an assessment’s results limits its validity. This point is discussed in greater detail in Chapter 4, which is devoted entirely to estimating the reliability of assessment results.
 
 ## Generalization of Interpretation Over People, Conditions, or Special Instructions and Interventions: Generalization Evidence
 
-This category of validation evidence addresses how broadly you may interpret and use assessment results. For example, does the ABC Reading Test measure the type of reading comprehension required of students in higher levels of schooling and in real life? Does it measure reading comprehension for nonwhite students in the same way that it measures white students? Is it appropriate to use the scores from this test for remedial reading groups of Spanish-speaking students? Do scores on the ABC Reading Test greatly depend on students’ moods or motivations at the time the test is administered? If students receive special instruction on what strategies to use to answer the questions on this test (e.g., read the question first, then look for the answer in the text), will this greatly affect their scores?
+This category of validation evidence addresses how broadly you may interpret and use assessment results. For example, does the `ABC Reading Test` measure the type of reading comprehension required of students in higher levels of schooling and in real life? Does it measure reading comprehension for nonwhite students in the same way that it measures white students? Is it appropriate to use the scores from this test for remedial reading groups of Spanish-speaking students? Do scores on the `ABC Reading Test` greatly depend on students’ moods or motivations at the time the test is administered? If students receive special instruction on what strategies to use to answer the questions on this test (e.g., read the question first, then look for the answer in the text), will this greatly affect their scores?
 
 Answers to questions such as these help us see the assessment results in a broader perspective. Usually the answers show that our interpretations of assessment results cannot be simplistic. The validity of our interpretations and uses of the results are limited to certain conditions.
 
-Consider the following illustration.³ Suppose the ABC Reading Test had the typical format: a passage of one or two paragraphs followed by several multiple-choice questions. The test directions call for the student to read each passage and to answer the questions that follow it by marking a separate answer sheet. At first glance, it appears that the student needs to read and understand the questions.
+Consider the following illustration.³ Suppose the `ABC Reading Test` had the typical format: a passage of one or two paragraphs followed by several multiple-choice questions. The test directions call for the student to read each passage and to answer the questions that follow it by marking a separate answer sheet. At first glance, it appears that the student needs to read and understand the questions.
 
-Vernon (1962) did a thorough, logical analysis of this type of reading comprehension task. That analysis led to hypothesizing several factors, in addition to reading comprehension, that might account for a student’s test performance. If these factors alter the student’s score, then you cannot interpret the test as a pure measure of reading comprehension. Further, you cannot make decisions about students using scores that depend on such a pure reading comprehension interpretation. Among the factors that may alter a student’s reading score are the following:
+`Vernon` (1962) did a thorough, logical analysis of this type of reading comprehension task. That analysis led to hypothesizing several factors, in addition to reading comprehension, that might account for a student’s test performance. If these factors alter the student’s score, then you cannot interpret the test as a pure measure of reading comprehension. Further, you cannot make decisions about students using scores that depend on such a pure reading comprehension interpretation. Among the factors that may alter a student’s reading score are the following:
 
 - 1. Content Bias — A passage may refer to a specific topic, theme, or experience about which some students may have a lot of prior knowledge. For these students, the test is a different kind of task than for students who lack this specific knowledge.
 - 2. Passage Independence — Students may answer questions without reading the passage because of prior knowledge or poor-quality test items. Passage dependency describes the degree to which answers to questions depend on reading and comprehending the passage. In other words, if a student can answer the questions without reading the passage, the questions are not passage-dependent. Thus, they cannot be said to assess reading comprehension.
 - 3. Speededness — Many tests are timed. If the time limits are not generous enough, the score may depend on reading speed rather than reading comprehension only.
-- 4. Attitudes and Motivation — If the way the test is presented or administered affects performance, the test will not be a pure measure of reading comprehension. Highly motivated students are likely to score much better than poorly motivated ones when the test is presented poorly.
-- 5. Students’ Sophistication — Students who are "test-wise" or who have good test-taking strategies are likely to score higher than their peers of equal ability who do not have such skills.
-- 6. Test Directions — If a student misunderstands test directions, performance probably will be affected adversely.
-- 7. Ability to Mark Answers — Most published multiple-choice tests use separate answer sheets that can be machine scored. Students will differ in the speed and accuracy with which they mark the correct answers. Frequently the type of answer sheet affects the test score.
+
+
+
+### 4. Attitudes and Motivation
+如果测试的呈现或施测方式影响表现，该测试就不会是对阅读理解的纯粹测量。高度有动机的学生在使用测试呈现不佳时，成绩很可能比动机不足的学生好得多。
+
+### 5. Students’ Sophistication
+“test-wise”或具有良好应试策略的学生，很可能比能力相等但不具备此类技能的同龄人得分更高。
+
+### 6. Test Directions
+如果学生误解了测试说明，其表现很可能受到不利影响。
+
+### 7. Ability to Mark Answers
+大多数出版的多项选择测试使用可机器计分的独立答题纸。学生在标记正确答案的速度和准确性上会有所不同。答题纸的类型经常会影响测试分数。
 
 The preceding list is by no means exhaustive. Questions such as these stand as counterhypotheses to the intended interpretation of the scores as measures of reading
 
-
-理解。作为你提出这些问题时，你应该查阅出版商手册和技术报告中关于这些问题的研究证据。然而，并非所有证据都会包含在出版商的材料中，尤其是如果它是不利的证据。你可能需要查阅研究文献以获取额外信息。《心理测量年鉴》（见第18章）包含对测验的评述以及该特定测验出现的研究文献目录。你也可以使用教育研究信息中心（ERIC）在线搜索。
+理解。作为你提出这些问题时，你应该查阅出版商手册和技术报告中关于这些问题的研究证据。然而，并非所有证据都会包含在出版商的材料中，尤其是如果它是不利的证据。你可能需要查阅研究文献以获取额外信息。《心理测量年鉴》包含对测验的评述以及该特定测验出现的研究文献目录。你也可以使用教育研究信息中心（ERIC）在线搜索。
 
 图3.3提供了一个研究研究的例子，该研究试图确定动机对阅读测验分数的影响。一个研究当然不能提供支持评估解释有效性所需的所有证据。需要一系列研究。此外，你不应从图中假设简单的激励措施，例如鼓舞讲话、奖品或金钱，会影响所有类型学生的所有评估结果。也不应假设动机是影响学生表现的唯一因素。
 
@@ -1926,6 +1913,7 @@ Tuinman、Farr 和 Blanton（1972）试图确定在教学期后进行后测并�
 如果你是接下来提高分数最多的九名学生中的一员，你将赢得一件这些 IU 衬衫之一。
 
 而且如果你只是提高了一分，你就能得到其中一块糖果。所以只要提高一分，每个人都会得到奖品。
+
 如果你在这次测验中没有比第一次测验得分更高，就没有奖品。
 
 这并不难，只要努力超过自己的分数。与任何人竞争都无济于事。只要你更努力工作，尝试做更多题目并且做对更多题目，就能做到。提高你的分数，带回家一件奖品。”
@@ -1980,10 +1968,6 @@ Tuinman、Farr 和 Blanton（1972）试图确定在教学期后进行后测并�
 
 ### 验证的基于论证的方法
 
-
-
-
-
 在你的特定情况下，可能会产生混淆。Shepard（1993）建议你组织和聚焦效度证据，以回答以下问题：
 
 - 1. 我的评估实践声称要做什么？
@@ -1992,46 +1976,66 @@ Tuinman、Farr 和 Blanton（1972）试图确定在教学期后进行后测并�
 
 其思想是，你优先考虑表 3.2 中描述的证据类型，并以能够回答这三个问题的方式呈现证据。术语评估实践指的是你打算在特定情况下如何解释和使用评估结果。因此，不同的人可能对同一评估程序的这些问题给出不同的答案。这重申了我们在本章开头提出的一点：“这些评估结果有效吗？”这个问题取决于结果将被如何解释和使用，有许多不同的答案。
 
+
+
 基于论证的效度验证 Kane（1992, 2001, 2002）建议以说服性论证的形式组织对这些问题的回答。换句话说，使用逻辑和数据的结合来说服他人，你对评估结果的解释和用途是有效的。这种效度方法要求你（a）明确说明你打算对评估结果做出何种解释和用途，（b）提出一个逻辑连贯的论证来支持你的主张，即评估结果可以按你所打算的方式进行解释和使用，以及（c）通过引用支持和反对你预期解释和用途的证据来支持你的逻辑论证。这种方法被称为基于论证的验证方法（Kane，1992）。
 
 支持你的效度论证并反驳潜在反论的证据来自表 3.2 中描述的各个类别。你在论证中强调的证据类型将取决于你想要验证的评估实践。Kane 给出了以下例子。假设要验证的评估实践是使用代数分班测试将学生分配到补习代数课程或微积分课程。Kane 指出，为了验证这种评估实践，你需要有论证并有证据支持（例如表 3.2 中描述的那些）以下内容是合理的：
 
-- 1. 你可以适当评估学生在微积分课程中的成功情况（即有合适的标准评估程序可用）。
-- 2. 你可以识别学生在微积分课程中会频繁使用的代数概念和思维技能。
-- 3. 分班测试所评估的代数内容和思维技能与微积分课程中频繁使用的内容相匹配。
-- 4. 低分学生将被分配到的补习课程将成功地教授学生微积分课程所需的代数概念和技能。
-- 5. 分班测试的分数是可靠的（即学生的分数在不同测试题样本、不同测试场合以及不同评分人员之间保持一致）。
-- 6. 让代数能力高的学生上补习代数课程没有帮助（即在分班测试中得分高的学生先上这门特定的补习代数课程并不会显著提高他们在微积分中成功的机会）。
-- 7. 分班测试分数不受会降低你对分班测试衡量代数知识和思维技能这一解释效度的系统误差的影响。
+1. 你可以适当评估学生在微积分课程中的成功情况（即有合适的标准评估程序可用）。
+
+2. 你可以识别学生在微积分课程中会频繁使用的代数概念和思维技能。
+
+3. 分班测试所评估的代数内容和思维技能与微积分课程中频繁使用的内容相匹配。
+
+4. 低分学生将被分配到的补习课程将成功地教授学生微积分课程所需的代数概念和技能。
+
+5. 分班测试的分数是可靠的（即学生的分数在不同测试题样本、不同测试场合以及不同评分人员之间保持一致）。
+
+6. 让代数能力高的学生上补习代数课程没有帮助（即在分班测试中得分高的学生先上这门特定的补习代数课程并不会显著提高他们在微积分中成功的机会）。
+
+7. 分班测试分数不受会降低你对分班测试衡量代数知识和思维技能这一解释效度的系统误差的影响。
 
 ## 摘要
 
 ## 效度的一般性质
 
 - 效度指的是你对评估结果的解释和用途的合理性，而非评估工具本身。
+
 - 评估结果的有效程度取决于结果如何被解释和使用。
 
 ## 验证原则
 
 - 评估结果的效度只有在结合多种类型的证据并根据你希望对结果做出的特定解释和用途来判断该组合后才能确定。
+
 - 评估结果的效度还取决于你使用评估结果所隐含的价值的适当性以及该用途的社会后果。
 
 ## 教师自制课堂评估结果的效度
 
 - 用于给学生评分的课堂评估应满足以下类别中的效度标准。 （表 3.1 列出了具体标准。）
+
   - 内容代表性和相关性
+
   - 思维过程和技能
+
   - 与其他课堂评估的一致性
+
   - 可靠性和客观性
+
   - 对不同学生的公平性
+
   - 经济性、效率、实用性、教学特征
+
   - 多重评估用途
 
 ## 效度证据类别
 
 - 随时间、评估者和内容域的变化的可靠性（可靠性证据）
+
 - 在不同类型的人、不同条件或特殊指导和干预下的解释推广（推广证据）
+
 - 预期和非预期后果的价值（后果证据）
+
 - 成本、效率、实用性和教学特征（实用性证据）
 
 你需要根据你希望从结果中做出的解释和用途类型，对不同类别的证据给予不同的权重。
@@ -2040,7 +2044,7 @@ Tuinman、Farr 和 Blanton（1972）试图确定在教学期后进行后测并�
 
 你不能仅仅因为无法负担进行必要的效度研究，就忽视验证你对评估结果的解释和用途的需要。
 
-几种类型的效度证据取决于两个或多个评估分数集之间的相关性。预测效度证据表明评估工具上的分数预测标准未来分数的好坏。 concurrent 效度证据反映了个体的当前标准状态可以从评估工具分数中估计的程度。在某些情况下，相关系数或期望表可能提供所需的效度证据。
+几种类型的效度证据取决于两个或多个评估分数集之间的相关性。预测效度证据表明评估工具上的分数预测标准未来分数的好坏。concurrent 效度证据反映了个体的当前标准状态可以从评估工具分数中估计的程度。在某些情况下，相关系数或期望表可能提供所需的效度证据。
 
 标准问题出现是因为很难获得适合验证评估结果的标准测量。标准通过其（a）与最终现实生活表现的相关性，（b）可靠性的程度，（c）对个人或群体的偏见程度，以及（d）可用性和便利性来判断。
 
@@ -2048,67 +2052,99 @@ Tuinman、Farr 和 Blanton（1972）试图确定在教学期后进行后测并�
 
 ## 综合证据以做出效度判断
 
-你需要通过考虑你打算如何解释和使用评估结果，在表 3.2 的八个证据类别中确定优先顺序。你通过回答以下问题来准备效度论证：（a）我的评估实践声称要做什么？（b）什么证据支持或反驳我的评估实践实现了我所声称的这一断言？（c）当我在教育系统中<|message|> 使用我的评估实践时，除了我为其声称的功能外，它对好坏有什么作用？
+你需要通过考虑你打算如何解释和使用评估结果，在表 3.2 的八个证据类别中确定优先顺序。你通过回答以下问题来准备效度论证：（a）我的评估实践声称要做什么？（b）什么证据支持或反驳我的评估实践实现了我所声称的这一断言？（c）当我在教育系统中</message> 使用我的评估实践时，除了我为其声称的功能外，它对好坏有什么作用？
 
 你的验证论证必须：（a）明确说明你打算对评估结果做出的解释和用途，（b）提出一个逻辑连贯的论证来支持你的主张，即结果可以按你所打算的方式进行解释和使用，以及（c）通过引用支持和反对你预期解释和用途的证据来支持你的逻辑论证。
 
 ## 重要术语和概念
 
 - argument-based approach to validation
+
 - assessment practice
+
 - concurrent validity evidence
+
 - content relevance
+
 - content representativeness
+
 - correlation coefficient
+
 - curricular relevance
+
 - ethnic and gender stereotypes
+
 - expectancy table
+
 - external structure
+
 - four principles for validation
+
 - internal structure
+
 - multiple-assessment strategy
+
 - negative correlation
+
 - objectivity
+
 - passage dependency
+
 - Pearson product-moment correlation coefficient
+
 - positive correlation
+
 - predictive validity evidence
+
 - scatter diagram (scattergram)
+
 - table of specifications
+
 - validity
+
 - validity coefficient
 
 ## 练习与应用
 
-- 1. 获取一份曾用于给学生打分或字母等级的教师自制评估工具。使用表 3.1 中列出的标准，评估使用评估结果给学生评分的有效性。然后简要描述该评估对此目的的有效性如何以及原因。最后，使用表 3.1 中的标准，描述你如何能提高该评估工具的有效性。
-- 2. 获取一份教师自制评估工具（可以是自己制作的，也可以是别人的）。确定该评估工具学生结果的主要或预期解释。对评估进行逻辑分析。确定三个反向解释（即可能导致对预期解释的有效性提出质疑的替代解释）。然后指定可以收集的证据类型，以验证预期解释并使这三个反向解释无效。将此测试附在此练习中。
-- 3. 假设正在开发一种新的高中科学能力测试，在开发过程中使用了几种程序和技术来提供其有效性的证据。这些程序列在以下陈述中。对于每个陈述，确定表 3.2 中直接涉及的证据类型。解释你做出该选择的原因。
-  - a. 对 150 名 10 年级学生的样本，奇数题分数与偶数题分数相关。
-  - b. 300 名一年级学生九月份施测的分数与同一组二月份施测的分数相关。
-  - c. 200 名一年级学生九月份施测的分数与这些学生在学校记录中一月份获得的普通科学课程成绩相关。
-  - d. 比较上过一门、两门、三门和四门科学课程的学生分数，看看平均值是否有差异。
+1. 获取一份曾用于给学生打分或字母等级的教师自制评估工具。使用表 3.1 中列出的标准，评估使用评估结果给学生评分的有效性。然后简要描述该评估对此目的的有效性如何以及原因。最后，使用表 3.1 中的标准，描述你如何能提高该评估工具的有效性。
 
+2. 获取一份教师自制评估工具（可以是自己制作的，也可以是别人的）。确定该评估工具学生结果的主要或预期解释。对评估进行逻辑分析。确定三个反向解释（即可能导致对预期解释的有效性提出质疑的替代解释）。然后指定可以收集的证据类型，以验证预期解释并使这三个反向解释无效。将此测试附在此练习中。
 
+3. 假设正在开发一种新的高中科学能力测试，在开发过程中使用了几种程序和技术来提供其有效性的证据。这些程序列在以下陈述中。对于每个陈述，确定表 3.2 中直接涉及的证据类型。解释你做出该选择的原因。
 
+- a. 对 150 名 10 年级学生的样本，奇数题分数与偶数题分数相关。
 
+- b. 300 名一年级学生九月份施测的分数与同一组二月份施测的分数相关。
 
-e. 测试手册的一个章节描述了科学能力的七个方面以及衡量每个方面的题目数量。
+- c. 200 名一年级学生九月份施测的分数与这些学生在学校记录中一月份获得的普通科学课程成绩相关。
+
+- d. 比较上过一门、两门、三门和四门科学课程的学生分数，看看平均值是否有差异。
+
+- e. 测试手册的一个章节描述了科学能力的七个方面以及衡量每个方面的题目数量。
 
 ## 4. 以下每个陈述都是教育工作者可以关于评估程序提出的问题。利用表 3.2，针对每个陈述确定回答该问题时最重要的是哪种（些）效度证据类型。然后简要说明你的选择。
 
 - a. “这份拼写测试是否代表了我们教给六年级学生的拼写模式的类型？”
+
 - b. “这份阅读测试的分数能否帮助我将学生分配到不同的教学组？”
+
 - c. “我正在使用这项表现性评估来选拔参加特殊培训项目的人员。我想知道结果是否会受到实施评估的人员的个性显著影响？”
+
 - d. “这项数学表现性评估是否真的评估了这些学生的数学能力？”
+
 - e. “我们现在使用一种程序来评定学生教师。这项程序是否允许在该州教学时可能遇到的广泛课堂情境中观察到学生教师？”
 
 ## 5. 阅读每个陈述并判断其是真还是假。然后解释你为何这样标记。
 
 - a. 在九年级开始时进行一次言语推理测试。该测试的分数与九年级、十年级、十一年级和十二年级的英语成绩相关。与十二年级成绩之间的相关性可能是在四个相关性中最低的。
+
 - b. 某预测测试具有完美的信度（信度系数 = 1.00）。这意味着该预测测试很可能与研究者想要使用的几乎任何标准测量都有非常高的相关性。
+
 - c. 另一项预测测试的信度为零（信度系数 = 0.00）。这意味着该预测测试很可能与研究者想要使用的几乎任何标准测量都相关为零。
 
 ## 附加阅读
+
+
 
 American Educational Research Association, American Psychological Association, & National Council on Measurement in Education. (1999). Standards for educational and psychological testing. Washington, DC: Author.
 
@@ -2156,38 +2192,31 @@ Tittle, C. K. (1989). Validity: Whose construct is it in the teaching and learni
 
 学习本章后，你应该掌握以下内容：
 
-## 信度的一般性质
-
+### 信度的一般性质
 - 1. 解释信度的概念以及它与学生评估结果不一致性的关系。 [3, 6]
 - 2. 解释信度、效度与教育决策质量之间的关系。 [3, 6]
 
-## 测量误差或不一致性的原因
-
+### 测量误差或不一致性的原因
 - 3. 描述几种测量误差的原因以及此类误差如何导致对学生评估结果的错误解释。 [3, 6, 7]
 
-## 信度系数的类型
-
+### 信度系数的类型
 - 4. 解释为何评估结果对于某些用途可能是可靠的，而对于其他用途则不然。 [6, 3]
 - 5. 列出不同类型的信度系数并描述为其计算而收集数据的过程。 [6, 3]
 - 6. 识别提供有关工具测量误差信息的特定信度系数。 [3, 1, 6, 7]
 
-## 获得分数、真实分数和误差分数
-
+### 获得分数、真实分数和误差分数
 - 7. 解释观察分数、真实分数和误差分数的含义。 [6]
 - 8. 解释测量标准误的含义、它与信度的关系以及如何用来解释分数。 [3, 6, 4]
 - 9. 给出影响信度系数和测量标准误的因素的例子。 [3, 6, 7]
 
-## 掌握与及格/不及格决策的信度
-
+### 掌握与及格/不及格决策的信度
 - 10. 解释决策一致性与使用程序进行掌握和及格/不及格决策的关系。 [6, 3, 1]
 
-## 如何提高信度
-
+### 如何提高信度
 - 11. 描述提高评估信度的九种方法。 [3, 6, 4]
 - 12. 描述需要非常高评估信度的教育决策类型以及可以容忍中等水平的类型的区别。 [3, 6, 4]
 
-## 重要术语和概念
-
+### 重要术语和概念
 - 13. 解释本章末尾列出的每个术语和概念如何适用于教育测量。 [6]
 
 ## 关于本章
@@ -2195,8 +2224,6 @@ Tittle, C. K. (1989). Validity: Whose construct is it in the teaching and learni
 你当然知道，你的评估并不完美。在上一章中，你学习了如何提高其效度。本章将教你如何提高其信度。当我们说我们的评估是可靠的时，我们是什么意思？信度与效度有何关系？你的评估结果包含哪些类型的测量误差？哪些信度指标可以帮助你了解分数的可靠性？什么指标可以表明测量误差有多大？哪些因素会提高评估的信度？这些问题在本章中进行了讨论。
 
 本章首先讨论，首先，信度的整体概念以及它与效度的关系。其次，我们解释了一些进入你的评估结果的基本测量误差原因。第三，我们
-
-
 
 ## 可靠性的一般性质
 
@@ -2220,19 +2247,21 @@ Tittle, C. K. (1989). Validity: Whose construct is it in the teaching and learni
 
 ### 高可靠性并不保证效度
 
+
+
 尽管高度效度需要高度可靠性，但反之则不然。高度可靠的评估并不能保证你能做出高度有效的解释或决策。这是因为可靠性只是众多效度标准中的一个（参见表 3.1 和 3.2）。
 
 作为说明，考虑以下例子。科尔特斯女士教授七年级算术。她反思学生在当地社区日常生活中将被期望执行的计算类型并列出这些技能。然后她创建了一份计算和问题解决测试，以评估学生执行这些技能的能力。由于这份纸笔测试包含中等数量的题目，科尔特斯女士可以确信由此产生的分数将非常可靠。
 
 然而，知道这些分数是可靠的还不足以得出它们是有效的结论。在决定评估结果的有效性如何之前，科尔特斯女士应该回答以下问题：这项测试是否是她希望推广结果的计算领域的代表性样本？测试题目的格式是否适合在学生教育发展的这一阶段进行评估？测试的时间限制是否合适？阅读能力是否严重影响测试表现？测试分数是否有助于她为这些学生规划教学？使用这些类型的测试题目是否会无意中向学生传达学校中的计算和问题解决与“现实世界”或“真实”数学问题是孤立的？对这些问题中的任何一个的否定回答都会削弱测试的有效性，即使分数可能非常可靠。
 
-### 可靠性是效度的必要条件
+## 可靠性是效度的必要条件
 
 评估的可靠性影响决策的质量（效度）。假设科尔特斯女士决定掌握目标计算领域 80% 是及格。测试只是从该领域抽取的一个样本。然而，如果测试分数的可靠性很低，那么在所有真正掌握了目标领域 80% 或以上计算的学生中，很可能会有一些学生的测试分数低于 80%。这些学生将被错误地归类为失败者。另一方面，在真正掌握的目标领域略少于 80% 的学生中，很可能会有一些学生通过测试。这些学生将被错误地归类为具有足够能力。
 
 再举一个例子，辅导员可能想知道学生的数学能力或语言能力哪个更高。学生在数学能力测试上的分数不太可能与她在语言能力测试上的分数相同。效度问题是：“分数不同是否意味着学生在两种能力上确实不同？”为了说学生的某一方面能力超过另一方面，辅导员需要知道仅由于测量误差，分数可能与真实能力分数相差多少。如果分数波动很大，它们就是不可靠的。如果分数不可靠，辅导员就很难确信分数差异表明语言和数学能力存在差异。不一致性，也称为测量误差，对需要有效解释学生分数概况的人来说是特别令人担忧的，例如在诊断评估或职业咨询评估中。
 
-### 测量误差或不一致的原因
+## 测量误差或不一致的原因
 
 可靠性和测量误差是谈论同一评估现象的互补方式。可靠性概念关注评估结果的一致性；测量误差概念关注其不一致性。不一致性有不同的原因。然而，并非每个原因对你对评估结果的特定解释和使用都同等重要。
 
@@ -2248,10 +2277,6 @@ Tittle, C. K. (1989). Validity: Whose construct is it in the teaching and learni
 
 > Source: From Education and Psychological Measurement and Evaluation (7th ed.) (p. 130) by K. D. Hopkins, J.C. Stanley, and B. R. Hopkins, 1990, Englewood Cliffs, NJ: Prentice Hall. Reprinted by permission of publisher.
 
-
-
-
-
 off。假设现在，这同样的 10 项任务是在周五进行的。也许周五是一个非常好的日子，学生表现得比平时好得多，达到了 70%。如图 4.1 所示，这种不一致性是由于在不同场合进行抽样造成的。相同的题目样本（即同样的 10 项任务）在周二和周五都被使用了，因此评分不一致的任何来源都不能是内容抽样。
 
 该描述考虑了影响评估表现一致性的两个因素：（a）出现在评估任何形式上的内容或特定任务样本，以及（b）评估所进行的场合。图 4.1 示意图中的实线箭头表示这些因素。该图还显示（通过对角虚线箭头）内容和场合两者可能共同作用以影响评估表现的额外可能性。
@@ -2260,7 +2285,7 @@ off。假设现在，这同样的 10 项任务是在周五进行的。也许周�
 
 图 4.1 还显示存在不同种类的一致性。评估结果可能在某些方面一致，而在其他方面不一致。你必须牢记哪种重复评估最适合回答你的 consistency 问题；否则，你会被误导。例如，学生在不同任务样本的重复评估上的结果可能不一致，但在同一任务样本上一个月后重复评估的结果可能非常一致。如果你关心的评估问题是把学生今天的表现推广到该学生下个月在同一任务样本上可能的表现，那么一个月的一致性对你来说比不同任务样本的分数一致性信息更相关。另一方面，如果你知道学生学习迅速且不断变化，那么分数随时间的一致性就较不相关。如果你牢记对评估的潜在解释和用途，你将能够更好地判断评估结果最重要的 consistency 类型。
 
-## TYPES OF RELIABILITY COEFFICIENTS
+# TYPES OF RELIABILITY COEFFICIENTS
 
 ## 量化评估结果的一致性
 
@@ -2292,9 +2317,11 @@ off。假设现在，这同样的 10 项任务是在周五进行的。也许周�
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_78_0.png)
 
+
+
 你可能记得，相关系数 0.00 表示两组分数之间没有关系，而相关系数 1.00 是完全正相关。信度系数的范围为 0.00 到 1.00。完全不可靠（不一致）的分数集的信度系数为 0.00。完全可靠、不含测量误差的分数集的信度系数为 1.00。重测系数为 1.00 意味着该组在两次场合的分数具有完全相同的等级顺序。然而，重测系数为 1.00 很少出现。通常，标准化成就和能力测试的重测系数在测试间隔为 3 至 6 个月时介于 0.80 和 0.90 之间。
 
-表 4.1 信度系数的汇总。
+**表 4.1 信度系数的汇总。**
 
 | 系数类型 | 回答的主要问题 | 计为测量误差或不一致的内容 |
 |---|---|---|
@@ -2304,13 +2331,9 @@ off。假设现在，这同样的 10 项任务是在周五进行的。也许周�
 | II. 不同内容样本的影响 | | |
 | 另行编制形式（无时间间隔） | a. 分数是否受同一场合抽样不同内容的影响？ <br> b. 两个精心匹配的测试形式是否可互换（等值、平行）？ | 内容抽样 |
 | 分半 | a. 同上 <br> b. 另行编制形式信度系数的估计值是多少？ | 内容抽样 |
-| Kuder-Richardson 公式 20 和 21，系数 alpha | a. 同上，但形式等值或平行性可能不为研究者所关注。 <br> b. 测试同质性的粗略估计是多少？ <br> c. 条目间的反应有多一致？ <br> d. 分数是否受同一场合内容抽样影响？ | 内容抽样和同质性 |
+| Kuder-Richardson 公式 20 和 21，系数 `alpha` | a. 同上，但形式等值或平行性可能不为研究者所关注。 <br> b. 测试同质性的粗略估计是多少？ <br> c. 条目间的反应有多一致？ <br> d. 分数是否受同一场合内容抽样影响？ | 内容抽样和同质性 |
 | III. 不同评分者的影响 | | |
 | 评分者信度 | a. 如果使用不同的评分者（评定者、裁判），分数会有多大不同？ <br> b. 测试客观到什么程度？ <br> c. 不同评分者（观察者、评定者、裁判）的结果是否可互换？ | 评分者抽样 |
-
-
-
-
 
 解读这些重测信度系数时，了解 (a) 两次施测之间的时间间隔长度以及 (b) 所测表现的预期稳定性非常重要。一般而言，重复施测之间的间隔越长，可靠性越低。此外，学生的表现越不稳定，可靠性越低。例如，婴儿和幼儿的一些表现从一天到另一天并不一致。你会期望对这些表现的评估的重测信度也很低。另一方面，像年长学生的一般学业能力等特质往往在一个学期或一年内保持稳定。对该特质的评估的重测信度在较长时期内通常会相对较高，且对一般学业能力的评估往往可用于预测这些时期的未来表现。当评估结果缺乏稳定性时，其作为未来表现预测者的有效性会降低。
 
@@ -2346,10 +2369,10 @@ off。假设现在，这同样的 10 项任务是在周五进行的。也许周�
 
 替代形式并不总是存在。虽然原则上评估可能存在几种平行形式，但在实践中许多评估没有平行形式。此外，即使有平行形式的评估也很少超过两种或三种形式。当出现以下任何情况时，开发者通常不会创建评估的平行形式：
 
-- 1. 评估程序将仅对每个学生使用一次。并不预期为实际决策进行重复测试。
-- 2. 仅仅参加评估的行为本身就会改变学生（Thorndike, 1951）。例如，如果任务旨在评估学生解决不熟悉问题的策略，完成评估任务本身可能会使学生对不同类型的问题更加熟悉，并提高其解决策略的熟练程度。
-- 3. 只有一种方式可以评估感兴趣的能力（Thorndike, 1951）。
-- 4. 构建评估的平行形式成本过高。
+1. 评估程序将仅对每个学生使用一次。并不预期为实际决策进行重复测试。
+2. 仅仅参加评估的行为本身就会改变学生（Thorndike, 1951）。例如，如果任务旨在评估学生解决不熟悉问题的策略，完成评估任务本身可能会使学生对不同类型的问题更加熟悉，并提高其解决策略的熟练程度。
+3. 只有一种方式可以评估感兴趣的能力（Thorndike, 1951）。
+4. 构建评估的平行形式成本过高。
 
 在上述情况下，使用除替代形式信度之外的方法来评估内容抽样对观察分数的影响程度。我们在本节中讨论两种此类方法：分半法和 Kuder-Richardson。
 
@@ -2359,34 +2382,37 @@ off。假设现在，这同样的 10 项任务是在周五进行的。也许周�
 
 ### Spearman-Brown 双倍长度公式
 
+
+
+# Spearman-Brown 双倍长度公式
+
 Spearman-Brown 双倍长度公式（有时称为 Spearman-Brown 预测公式）是对平行形式相关的一种估计。学生对测试的每个半部分进行计分。两半部分的得分进行相关。由于这种相关反映了仅为全长评估一半长度的评估的两组得分的对应关系，因此这种相关需要进行调整或“提升”到
 
 ¹ 附录 J 提供了 Spearman-Brown 公式以及另一种分半方法 Rulon（1939）方法的计算指南。
 
-
-
-
 估计整体的可靠性。斯皮尔曼-布朗公式使用起来很简单：
 
 全测验可靠性 =
-2 × 两半测验分数之间的相关系数
-1 ÷ 两半测验分数之间的相关系数 [Eq 4.1]
 
-例如，假设两半测验分数之间的相关系数为 0.60。斯皮尔曼-布朗双倍长度可靠性估计值为：
+`2 × 两半测验分数之间的相关系数`
 
-全测验可靠性 = 2 × 0.60 / 1 + 0.60 = 1.20 / 1.60 = 0.75
+`1 ÷ 两半测验分数之间的相关系数` [Eq 4.1]
+
+例如，假设两半测验分数之间的相关系数为 `0.60`。斯皮尔曼-布朗双倍长度可靠性估计值为：
+
+全测验可靠性 = `2 × 0.60 / 1 + 0.60 = 1.20 / 1.60 = 0.75`
 
 双倍长度公式通常用于估计平行形式的可靠性系数。要正确使用，需要将测验的题目组织成平行的一半，使两半在内容覆盖、难度水平和变异性方面基本等同，就像构建两个平行形式时一样。
 
-测验的题目可以以多种方式分成两半，² 但并非所有方式在应用分半程序时都令人满意。组织题目最常用的程序是让奇数题项（1、3、5、7、…）组成一半，偶数题项（2、4、6、8、…）组成另一半。这称为奇偶分半程序。这种方式将测验和工具分成两半，只要（a）奇数半和偶数半可以被视为平行的内容样本，且（b）测验不是速度测验，就能很好地工作。速度测验是指没有足够时间让每个人考虑并尝试回答每个题项的测验。如果测验是速度测验，学生在两半上的分数一致性会虚高。一般来说，除非采取预防措施分别施测并计时每半，否则不应在速度测验或部分速度测验中使用分半程序。当任务组相互关联时，奇偶分半程序就不合适，例如当一组题项需要基于同一篇阅读材料（或同一数据表、图表等）的答案时，或当题项在配对练习中以同质集群分组时（Thorndike, 1951）。
+测验的题目可以以多种方式分成两半，² 但并非所有方式在应用分半程序时都令人满意。组织题目最常用的程序是让奇数题项（`1、3、5、7、…`）组成一半，偶数题项（`2、4、6、8、…`）组成另一半。这称为奇偶分半程序。这种方式将测验和工具分成两半，只要（a）奇数半和偶数半可以被视为平行的内容样本，且（b）测验不是速度测验，就能很好地工作。速度测验是指没有足够时间让每个人考虑并尝试回答每个题项的测验。如果测验是速度测验，学生在两半上的分数一致性会虚高。一般来说，除非采取预防措施分别施测并计时每半，否则不应在速度测验或部分速度测验中使用分半程序。当任务组相互关联时，奇偶分半程序就不合适，例如当一组题项需要基于同一篇阅读材料（或同一数据表、图表等）的答案时，或当题项在配对练习中以同质集群分组时（Thorndike, 1951）。
 
 ## 库德-理查森可靠性系数
 
-从单一形式的测验中获得可靠性估计的第二种方法是使用库德和理查森（1937）中的一种程序。这里讨论的两种，库德-理查森公式 20（KR20）和库德-理查森公式 21（KR21），用于题项以二分法计分（0 或 1）的测验。这些程序的名称源自库德和理查森在 1937 年论文中用于标识公式的编号方案。
+从单一形式的测验中获得可靠性估计的第二种方法是使用库德和理查森（1937）中的一种程序。这里讨论的两种，库德-理查森公式 20（KR20）和库德-理查森公式 21（KR21），用于题项以二分法计分（`0` 或 `1`）的测验。这些程序的名称源自库德和理查森在 1937 年论文中用于标识公式的编号方案。
 
 库德-理查森公式 20 与分半公式类似，都是从一次测验施测中估计可靠性。然而，与分半程序不同，KR20 不需要将测验分成两半。相反，它使用每个题项答对的人数比例以及总分标准差的数据。库德-理查森公式 21 程序是 KR20 的简化版本，仅使用总分的均值和标准差。附录 J 说明了这些可靠性估计的计算。KR20 公式在标准化测验的出版报告中最常使用，并且通常作为分析课堂测验数据的计算机程序的输出结果提供。
 
-库德-理查森公式 20 和 21 用于测验仅包含二分计分的题项时。并非所有测验都只包含这种计分的题项。有些测验包含混合的题型。论文题的题项计分更连续；态度量表要求学生在例如 1 到 4 的量表上表达对每个题项的同意程度；表现性测评可能在例如 1 到 5 的量表上对学生进行评级。在这些情况下，使用 KR20 的更一般版本。此可靠性估计称为系数 alpha（Cronbach, 1951）。附录 I 也展示了如何计算该系数。由于系数 alpha 是 KR20 的更一般版本，因此它可用于题项计分为 0 或 1；或在更连续的量表上计分（例如 0、1、2、3 和 5）。
+库德-理查森公式 20 和 21 用于测验仅包含二分计分的题项时。并非所有测验都只包含这种计分的题项。有些测验包含混合的题型。论文题的题项计分更连续；态度量表要求学生在例如 `1` 到 `4` 的量表上表达对每个题项的同意程度；表现性测评可能在例如 `1` 到 `5` 的量表上对学生进行评级。在这些情况下，使用 KR20 的更一般版本。此可靠性估计称为系数 alpha（Cronbach, 1951）。附录 I 也展示了如何计算该系数。由于系数 alpha 是 KR20 的更一般版本，因此它可用于题项计分为 `0` 或 `1`；或在更连续的量表上计分（例如 `0、1、2、3` 和 `5`）。
 
 分半和库德-理查森程序假设学生从一个测评任务到下一个任务的反应一致性是估计总分可靠性系数的良好基础。这种对测评内部任务间一致性的关注导致这些系数被称为内部一致性可靠性估计。
 
@@ -2394,7 +2420,7 @@ Spearman-Brown 双倍长度公式（有时称为 Spearman-Brown 预测公式）�
 
 应注意，KR20 和系数 alpha 等于可为所讨论的测评程序计算的所有可能的分半可靠性系数的平均值（见 Cronbach, 1951）。所有可能的分半不仅指奇偶分半，还指可将测验分成两半的所有不同分法。³
 
-² 对于 4 题测验，有 3 种可能的分半方式。6 题测验可分 10 种方式；8 题测验，35 种方式；10 题测验，126 种方式。有关一般公式，请参阅 Thorndike（1951，第 579 页）、Stanley（1971，第 408 页）或 Feldt 和 Brennan（1989，第 120 页）。
+² 对于 `4` 题测验，有 `3` 种可能的分半方式。`6` 题测验可分 `10` 种方式；`8` 题测验，`35` 种方式；`10` 题测验，`126` 种方式。有关一般公式，请参阅 Thorndike（1951，第 579 页）、Stanley（1971，第 408 页）或 Feldt 和 Brennan（1989，第 120 页）。
 
 ³ 见脚注 2。
 
@@ -2412,91 +2438,93 @@ KR20 和系数 alpha 程序通常不适用于测验由题项集群组成（例�
 
 相关评分者的分数 最直接的估计这种可靠性的方式是让两人对每个学生的论文或表现进行评分。然后将每个学生的两个分数——来自每个评分者的一个分数——进行相关。（相关在第 3 章中解释。）该相关系数称为评分者可靠性或评分者间可靠性。它是评分者对同一批学生进行标记一致性的指标。在此情况下，一致性定义为两名教师或评判者对学生排名顺序的相似性。图 4.2 中四个学生的评级组以夸张的方式说明了这一点。
 
-该示例中的评级在绝对意义上并不“一致”，但在相对意义上完全一致，因为排名完全一致：相关系数 1.00 反映了这一点。
+该示例中的评级在绝对意义上并不“一致”，但在相对意义上完全一致，因为排名完全一致：相关系数 `1.00` 反映了这一点。
 
 一致百分比 绝对意义上的同意发生在两个评分者对每个学生给出相同分数或评级时。这种相同分配发生的程度有时以一致百分比表示。（一致百分比的计算在最后
 
 ### 图 4.2 四名学生的评级和排名顺序。
 
 | 学生 | 来自的评级： |  | 评级转换为排名 |  |
+
 |---|---|---|---|---|
+
 |  | 评分者 A | 评分者 B | A 的排名 | B 的排名 |
+
 | Tony | 4 | 8 | 1 | 1 |
+
 | Marya | 3 | 7 | 2 | 2 |
+
 | Bobby | 2 | 6 | 3 | 3 |
+
 | Meghan | 1 | 5 | 4 | 4 |
+
 | 均值 | 2.5 | 6.5 | r_AB = 1.00 |  |
+
 | SD | 1.12 | 1.12 |  |  |
-
-
-
-
 
 ## 获得分数、真实分数和误差分数
 
-section of this chapter.) 如果评分者在其分数分配上始终一致，则一致性为 100%；如果他们从未一致，一致性百分比为零；部分一致性表示为介于这两个值之间的百分比。
+section of this chapter.) 如果评分者在其分数分配上始终一致，则一致性为 `100%`；如果他们从未一致，一致性百分比为零；部分一致性表示为介于这两个值之间的百分比。
+
+
 
 一致性百分比与基于相关系数的信度系数是完全不同的概念：通常，两者的数值会不同。在评分者间信度上选择一致性百分比指数还是相关指数，取决于对特定解释和用途而言，学生的绝对（实际）分数水平还是相对（等级顺序）分数水平是否重要。假设在图 4.2 中，评分为 5 或更好才算“通过”。如果使用评分者 A 的分数，那么所有人都“不及格”，但如果使用评分者 B 的分数，所有人都通过了。对于通过与不及格的解释，实际分数水平很重要。错误的一个严重来源（在此示例中）是所采用的具体评分者或评分者：评分者似乎对如何给学生评分没有一致意见。只有一致性百分比才能显示这一点。另一方面，假设只有分数的等级顺序很重要，例如当你想知道班上谁最好、其次最好等等时。在这种情况下，两位观察者在谁是“最好”和“其次最好”上完全一致。换句话说，他们对排名或相对成就水平完全一致。相关评分者间信度系数显示了这一点。
 
-在前面的章节中，我们经常提到学生的分数。在本节中，我们更深入地探讨学生评估结果以分数形式报告的想法。你在评估学生时给出的分数称为获得分数。获得分数包括来自开放式任务（如论文）的评分、来自选择题或简答题测试的答对题数，以及来自常模参照标准化测试的标准分数或年级当量分数。你可以将每个学生的获得分数视为包含一定测量误差。这意味着获得分数实际上由两部分组成：真实分数和误差分数。这两个分数之和等于获得分数。每当我们评估一名学生时，我们真正想知道的是学生的真实分数。然而，我们总是只能“困于”获得分数，因为真实分数对我们来说是不可获得的。我们的评估结果只是学生真实状况的估计。由于获得分数包含误差，我们必须学会与测量误差共存——并在解释获得分数时保持谨慎。
+在前面的章节中，我们经常提到学生的分数。在本节中，我们更深入地探讨学生评估结果以分数形式报告的想法。你在评估学生时给出的分数称为`获得分数`。`获得分数`包括来自开放式任务（如论文）的评分、来自选择题或简答题测试的答对题数，以及来自常模参照标准化测试的标准分数或年级当量分数。你可以将每个学生的`获得分数`视为包含一定测量误差。这意味着`获得分数`实际上由两部分组成：`真实分数`和`误差分数`。这两个分数之和等于`获得分数`。每当我们评估一名学生时，我们真正想知道的是学生的`真实分数`。然而，我们总是只能“困于”`获得分数`，因为`真实分数`对我们来说是不可获得的。我们的评估结果只是学生真实状况的估计。由于`获得分数`包含误差，我们必须学会与测量误差共存——并在解释`获得分数`时保持谨慎。
 
-如果你能量化学生获得分数中的误差量，你就得到了误差分数。（误差分数通常被称为测量误差。）真实分数是观察分数的剩余部分，不包含测量误差。
+如果你能量化学生`获得分数`中的误差量，你就得到了`误差分数`。`误差分数`通常被称为测量误差。`真实分数`是观察分数的剩余部分，不包含测量误差。
 
-作为说明，假设你有两位学生，苏珊和乔治亚。假设你给她们做同一份解题测试，两位学生都得了 52 分。分数 52 是她们的获得分数，你唯一能看到的分数。你可能会被诱惑用这些结果得出结论，苏珊和乔治亚具有相同的解题能力。不要屈从于这种诱惑。仅凭她们具有相同的测试分数 52，就不能得出这两名学生具有相同的解题能力。分数 52 包含需要承认的测量误差。
+作为说明，假设你有两位学生，苏珊和乔治亚。假设你给她们做同一份解题测试，两位学生都得了 52 分。分数 52 是她们的`获得分数`，你唯一能看到的分数。你可能会被诱惑用这些结果得出结论，苏珊和乔治亚具有相同的解题能力。不要屈从于这种诱惑。仅凭她们具有相同的测试分数 52，就不能得出这两名学生具有相同的解题能力。分数 52 包含需要承认的测量误差。
 
-让我们假设苏珊的真实分数是 50，而乔治亚的真实分数是 53。如果你可以创建一个产生无测量误差分数的解题测试，你会看到乔治亚的能力略高于苏珊。不幸的是，创建一个完美的测试是不可能的。因此，两名学生最终都获得了相同的获得分数 52。
+让我们假设苏珊的`真实分数`是 50，而乔治亚的`真实分数`是 53。如果你可以创建一个产生无测量误差分数的解题测试，你会看到乔治亚的能力略高于苏珊。不幸的是，创建一个完美的测试是不可能的。因此，两名学生最终都获得了相同的`获得分数` 52。
 
-她们的获得分数中有多少测量误差？在我们的例子中，乔治亚的真实分数是 53。因此，她的误差分数是 52 − 53 = −1。苏珊的真实分数另一方面是 50，所以她的误差分数是 52 − 50 = +2。这说明测量误差可能是正的（例如 +2）或负的（例如 −1）。
+她们的`获得分数`中有多少测量误差？在我们的例子中，乔治亚的`真实分数`是 53。因此，她的`误差分数`是 52 − 53 = −1。苏珊的`真实分数`另一方面是 50，所以她的`误差分数`是 52 − 50 = +2。这说明测量误差可能是正的（例如 +2）或负的（例如 −1）。
 
-尽管我们举例说明了两位学生具有不同的真实分数但相同的获得分数，但也存在其他可能性。两位学生可能具有相同的真实分数，但由于测量误差，她们可能获得不同的获得分数。关键在于，你需要将观察到的测试分数视为不完美的信息。你如何改进评估以更好地估计一个人的真实分数？要更好地估计学生的真实分数，你需要在总体评估中包含不止一次测试。
+尽管我们举例说明了两位学生具有不同的`真实分数`但相同的`获得分数`，但也存在其他可能性。两位学生可能具有相同的`真实分数`，但由于测量误差，她们可能获得不同的`获得分数`。关键在于，你需要将观察到的测试分数视为不完美的信息。你如何改进评估以更好地估计一个人的`真实分数`？要更好地估计学生的`真实分数`，你需要在总体评估中包含不止一次测试。
 
-学生的真实分数并不是你的评估程序试图发现的某种隐藏属性，也不是在出生时分配给学生的某组数量。它不是“记录天使之书中的终极事实”（Stanley, 1971, p. 361）。相反，学生对特定评估程序的真实分数定义为，如果在相同条件下反复评估该学生，该学生所获得的观察分数的假设平均值（均值）（Lord & Novick, 1968）。
+学生的`真实分数`并不是你的评估程序试图发现的某种隐藏属性，也不是在出生时分配给学生的某组数量。它不是“记录天使之书中的终极事实”（Stanley, 1971, p. 361）。相反，学生对特定评估程序的`真实分数`定义为，如果在相同条件下反复评估该学生，该学生所获得的观察分数的假设平均值（均值）（Lord & Novick, 1968）。
 
-由于真实分数是一个平均值，它从一次评估程序的实施到下一次保持不变。（不同学生会有不同的真实分数。）对于评估程序的每次单独实施，学生的误差分数是不同的。在任何一次场合，学生的误差分数可能为正、负或零。这些测量误差导致学生的获得分数高于或低于学生的真实分数。这些测量误差的一个后果是，任何两次评估程序实施所获得的分数不会以相同的顺序对学生进行排名。
+由于`真实分数`是一个平均值，它从一次评估程序的实施到下一次保持不变。不同学生会有不同的`真实分数`。对于评估程序的每次单独实施，学生的`误差分数`是不同的。在任何一次场合，学生的`误差分数`可能为正、负或零。这些测量误差导致学生的`获得分数`高于或低于学生的`真实分数`。这些测量误差的一个后果是，任何两次评估程序实施所获得的分数不会以相同的顺序对学生进行排名。
 
 ## 测量标准误
 
 ### 测量标准误的含义
 
-由于没有程序能以完美的一致性进行评估，考虑到测量误差的可能大小是有用的。描述评估分数不一致的一种方法是反复评估一名学生并注意分数变化的程度。然而，这只能在假设上完成。如果你能够多次评估一名学生（而不改变学生相对于你正在评估的特质的能力），你将获得该学生的获得分数集合。有些分数会高于其他分数，但大多数会围绕一个平均（均值）值聚集。这个平均值就是我们之前提到的真实分数。这个分布的标准差或离散程度是测量标准误（SEM）。SEM 估计学生获得分数与其真实分数可能存在的差异。
+由于没有程序能以完美的一致性进行评估，考虑到测量误差的可能大小是有用的。描述评估分数不一致的一种方法是反复评估一名学生并注意分数变化的程度。然而，这只能在假设上完成。如果你能够多次评估一名学生（而不改变学生相对于你正在评估的特质的能力），你将获得该学生的`获得分数`集合。有些分数会高于其他分数，但大多数会围绕一个平均（均值）值聚集。这个平均值就是我们之前提到的`真实分数`。这个分布的标准差或离散程度是`测量标准误`（`SEM`）。`SEM`估计学生`获得分数`与其`真实分数`可能存在的差异。
 
-在实践中，你无法在不改变学生的情况下反复重新评估学生，因此测量标准误并不是通过实际重新评估学生来计算的。相反，它是使用以下公式估计的。
+在实践中，你无法在不改变学生的情况下反复重新评估学生，因此`测量标准误`并不是通过实际重新评估学生来计算的。相反，它是使用以下公式估计的。
 
 ```
 SEM = SDₓ √1 − reliability coefficient    [Eq. 4.2]
 ```
 
-其中 SDₓ 是评估的获得分数的标准差。（参见附录 I 了解标准差的描述。）
+其中 `SDₓ` 是评估的`获得分数`的标准差。参见附录 I 了解标准差的描述。
 
-SEM 是测量误差标准差的估计。例如，如果 SDₓ 等于 10 且信度系数等于 0.84，则
+`SEM` 是测量误差标准差的估计。例如，如果 `SDₓ` 等于 10 且信度系数等于 0.84，则
 
 ```
 SEM = 10√1−.84 = 10√.16 = 10(.4) = 4
 ```
 
-测量标准误帮助我们理解特定评估程序的测量误差大小。一种解释是，SEM 的数值估计学生的观察分数可能与其真实分数的偏差量。因此，在前面的例子中，SEM = 4.0 意味着学生的获得分数可能比其真实分数高出或低约 4 分。由于这种与真实分数的可能偏差，你必须将获得分数仅解释为学生真实分数的估计。
+`测量标准误`帮助我们理解特定评估程序的测量误差大小。一种解释是，`SEM` 的数值估计学生的观察分数可能与其`真实分数`的偏差量。因此，在前面的例子中，`SEM = 4.0` 意味着学生的`获得分数`可能比其`真实分数`高出或低约 4 分。由于这种与`真实分数`的可能偏差，你必须将`获得分数`仅解释为学生`真实分数`的估计。
 
-SEM 的另一种解释使用正态分布。假设反复评估一名学生所产生的获得分数的假设分布呈正态形式。（参见第 17 章了解正态分布的讨论。）该分布的均值是学生的真实分数，而标准差是测量标准误。利用第 17 章中标准差与正态曲线下案例百分比之间的关系，可以说 68% 的时间，学生的获得分数将在真实分数的 ±1 SEM 距离内。
+`SEM` 的另一种解释使用正态分布。假设反复评估一名学生所产生的`获得分数`的假设分布呈正态形式。参见第 17 章了解正态分布的讨论。该分布的均值是学生的`真实分数`，而标准差是`测量标准误`。利用第 17 章中标准差与正态曲线下案例百分比之间的关系，可以说 68% 的时间，学生的`获得分数`将在`真实分数`的 ±1 `SEM` 距离内。
 
-SEM 的这种含义在图 4.3 中对真实分数为 52 且 SEM 为 4.0 的假设学生进行了说明。根据正态曲线解释，重新测试一名学生时，约三分之一（32%）的时间，她的获得分数将超出图 4.3 底部阴影区域所示的界限：她获得的分数大于 56（52 + 4）约六分之一（16%）的时间，小于 48（52 − 4）约六分之一的时间。
+`SEM` 的这种含义在图 4.3 中对`真实分数`为 52 且 `SEM` 为 4.0 的假设学生进行了说明。根据正态曲线解释，重新测试一名学生时，约三分之一（32%）的时间，她的`获得分数`将超出图 4.3 底部阴影区域所示的界限：她获得的分数大于 56（52 + 4）约六分之一（16%）的时间，小于 48（52 − 4）约六分之一的时间。
 
 ### 信度系数和 SEM
 
-当你研究图 4.3 时，你可能会注意到如果测量标准误变小，观察分数会更紧密地围绕真实分数聚集，因为三分之二的时间它们在真实分数的 ±1 SEM 范围内。这在图形上说明了我们所说的“一致性”：如果观察评估分数倾向于非常接近学生的真实分数，则分数是一致的。更多的一致性意味着更小的测量误差。
+当你研究图 4.3 时，你可能会注意到如果`测量标准误`变小，观察分数会更紧密地围绕`真实分数`聚集，因为三分之二的时间它们在`真实分数`的 ±1 `SEM` 范围内。这在图形上说明了我们所说的“一致性”：如果观察评估分数倾向于非常接近学生的`真实分数`，则分数是一致的。更多的一致性意味着更小的测量误差。
 
-然而，标准测量误差的大小取决于信度系数和获得分数的标准差。在前面的例子中，如果 SDₓ = 5 而不是 10，则 SEM = 2.0。因此，虽然信度保持在 0.84，但当 SDₓ 变小时 SEM 变小。这较小的 SEM 说明在解释评估结果的一致性时应考虑分数的标准差。由于不同的评估程序具有不同的测量单位以及不同的标准差，通常唯一比较两种不同评估方法分数一致性的方法是查看它们的信度系数。
+然而，标准测量误差的大小取决于信度系数和`获得分数`的标准差。在前面的例子中，如果 `SDₓ = 5` 而不是 10，则 `SEM = 2.0`。因此，虽然信度保持在 0.84，但当 `SDₓ` 变小时 `SEM` 变小。这较小的 `SEM` 说明在解释评估结果的一致性时应考虑分数的标准差。由于不同的评估程序具有不同的测量单位以及不同的标准差，通常唯一比较两种不同评估方法分数一致性的方法是查看它们的信度系数。
 
-SDₓ、信度系数和 SEM 之间的关系如表 4.2 所示。当信度系数固定时，SEM 随着 SDₓ 的增加而变大。当 SDₓ 固定时，SEM 随着信度系数的增大而变小。如果一份测试手册未报告 SEM，一旦已知 SDₓ 和信度系数，表 4.2 就可以提供粗略估计。
+`SDₓ`、信度系数和 `SEM` 之间的关系如表 4.2 所示。当信度系数固定时，`SEM` 随着 `SDₓ` 的增加而变大。当 `SDₓ` 固定时，`SEM` 随着信度系数的增大而变小。如果一份测试手册未报告 `SEM`，一旦已知 `SDₓ` 和信度系数，表 4.2 就可以提供粗略估计。
 
-最后，请记住你在 SEM 公式中使用的信度系数类型很重要。每种信度系数估计不同类型的测量误差（参见表 4.1 的第 3 列）。这意味着 SEM 将估计与公式中使用的信度系数相同的测量误差类型的可能大小。
+最后，请记住你在 `SEM` 公式中使用的信度系数类型很重要。每种信度系数估计不同类型的测量误差（参见表 4.1 的第 3 列）。这意味着 `SEM` 将估计与公式中使用的信度系数相同的测量误差类型的可能大小。
 
 ### 使用 SEM 设置置信带
 
-
-
-
-
-# 图 4.3 由对一名“真实”分数为 52 的学生进行重复评估所产生的假设正态分布分数。
+#### 图 4.3 由对一名“真实”分数为 52 的学生进行重复评估所产生的假设正态分布分数。
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_85_0.png)
 
@@ -2514,33 +2542,44 @@ SDₓ、信度系数和 SEM 之间的关系如表 4.2 所示。当信度系数�
 | .70 | 2.7 | 5.5 | 8.2 | 11.0 | 13.7 | 16.4 |
 | .65 | 3.0 | 5.9 | 8.9 | 11.8 | 14.8 | 17.7 |
 | .60 | 3.2 | 6.3 | 9.5 | 12.6 | 15.8 | 19.0 |
+
+
+
 | .50 | 3.5 | 7.1 | 10.6 | 14.1 | 17.7 | 21.2 |
+
 | .20 | 4.5 | 8.9 | 13.4 | 17.9 | 22.4 | 26.8 |
+
 | .10 | 4.7 | 9.5 | 14.2 | 19.0 | 23.7 | 28.5 |
 
 得到分数，从而形成分数的“置信带”或不确定性区间的边界。这种不确定性区间有 68% 的概率包含学生的真实分数。你可以使用这种方法来帮助你解释学生在一次测试上的分数、学生在两次测试上的分数，或两个不同学生在一次测试上的分数。
 
 下面举例说明如何做到这一点。在所有例子中，我们都将使用来自一个假设标准化成就测试的年级当量分数，该测试的信度系数为 0.83，标准差为 1.0（以年级当量为单位）。对于该测试，SEM 将等于 0.4。重新测试时，学生的分数很可能会在量表上上下移动 4 个年级当量月（0.4）。
 
-一个学生分数的不确定性区间 为了显示一个学生的不确定性区间，你可以将学生的所得分数加上 ± 0.4 来计算不确定性区间的上限，并从学生的所得分数中减去 0.4 来找到该带的下限。区间上下限之间的任何数字都可能是学生的真实分数。
+## 一个学生分数的不确定性区间
 
-## 示例
+为了显示一个学生的不确定性区间，你可以将学生的所得分数加上 ± 0.4 来计算不确定性区间的上限，并从学生的所得分数中减去 0.4 来找到该带的下限。区间上下限之间的任何数字都可能是学生的真实分数。
+
+### 示例
 
 假设哈里的科学年级当量所得分数为 7.8。做出不确定性区间后，我们的解释是哈里的真实年级当量分数很可能在 7.4 到 8.2 之间。
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_85_1.png)
 
-使用 SEM 解释两个分数之间的差异 当学生参加一套成就测试时，学生通常会有两个或多个分数，每个科目一个。这些分数可能不相同。我们可以在每个分数周围设置一个不确定性区间。如果两个分数的区间重叠，则很可能学生的真实分数没有实质性差异。如果区间重叠，学生在 68% 的情况下观察到的分数差异可能仅仅是由测量误差造成的。
+## 使用 SEM 解释两个分数之间的差异
 
-## 示例
+当学生参加一套成就测试时，学生通常会有两个或多个分数，每个科目一个。这些分数可能不相同。我们可以在每个分数周围设置一个不确定性区间。如果两个分数的区间重叠，则很可能学生的真实分数没有实质性差异。如果区间重叠，学生在 68% 的情况下观察到的分数差异可能仅仅是由测量误差造成的。
+
+### 示例
 
 哈里的科学年级当量所得分数为 7.8，而数学为 7.4。这是否意味着他在科学上比数学强？不。科学的置信带为 7.4 到 8.2；数学为 7.0 到 7.8。由于不确定性区间重叠，很可能他在两次测试上的真实分数没有实质性差异。
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_86_0.png)
 
-使用 SEM 解释两个学生分数之间的差异 有时你想通过比较他们在同一成就测试上的分数来看看一个学生是否比另一个学生在某科更强。学生的所得分数可能不同，但由于分数包含测量误差，学生的真实分数是否不同？要回答这个问题，请在每个学生的分数周围形成一个不确定性区间。然后，看看区间是否重叠。没有重叠意味着学生的真实分数很可能有实质性差异。如果区间重叠，则两个学生的真实分数可能没有实质性差异，因为 68% 的情况下，仅凭测量误差就可能产生观察到的这种大小的差异。
+## 使用 SEM 解释两个学生分数之间的差异
 
-## 示例
+有时你想通过比较他们在同一成就测试上的分数来看看一个学生是否比另一个学生在某科更强。学生的所得分数可能不同，但由于分数包含测量误差，学生的真实分数是否不同？要回答这个问题，请在每个学生的分数周围形成一个不确定性区间。然后，看看区间是否重叠。没有重叠意味着学生的真实分数很可能有实质性差异。如果区间重叠，则两个学生的真实分数可能没有实质性差异，因为 68% 的情况下，仅凭测量误差就可能产生观察到的这种大小的差异。
+
+### 示例
 
 在阅读中，莎莉的年级当量所得分数为 8.2，而简为 7.0。莎莉的置信带为 7.8 到 8.6；简为 6.6 到 7.4。这是否意味着莎莉的阅读能力比简强？是的，因为带不重叠。
 
@@ -2553,11 +2592,17 @@ SDₓ、信度系数和 SEM 之间的关系如表 4.2 所示。当信度系数�
 在解释信度和 SEM 信息时，尤其是在比较两个或多个评估程序的此类信息时，你应牢记以下几个因素。
 
 - 1. 评估程序越长，可靠性越高。进入分数制定的项目、评判者、观察场合等的数量越多，该分数就越可靠。这意味着，例如，你不应对仅基于一项任务或甚至两三项任务的集群的学生分数给予太多信心。斯皮尔曼-布朗公式显示了通过添加相似任务来延长评估与所得评估程序的可靠性之间的关系。附录 J 显示了一个计算示例。
+
 - 2. 为一个信度系数计算出的数值会从一个样本波动到另一个样本。测试手册中报告的信度系数是基于学生样本得出的。这些数值会从一个样本到下一个样本波动，因此任何一个已发表的数字只是如果对整个学生群体进行测试时信度系数会是多少的估计。样本波动对于从总体中抽取的小样本比大样本更大。
+
 - 3. 群体能力范围越窄，信度系数往往越低。许多教育工作者使用评估结果对能力相似、年级和年龄相似的学生做出决策。然而，当学生彼此差异很大时，区分个体能力差异要容易得多。因此，请在测试手册中查找基于与你必须处理的学生能力尽可能接近的学生的数据计算的信度系数。对由能力范围很广和/或跨越多个年龄水平的群体汇总样本得出的已发表的高信度系数不要过于信任。这在你将使用评估来评估能力相近的学生时尤其如此。
+
 - 4. 不同成就水平的学生可能以不同的准确度被评估。SEM 作为整个测试的单一数字，仅代表分数不一致的平均量。然而，结果的一致性会随着成就水平而变化。SEM 在分数范围的中间可能比在极端值处更大。如果是这样，分数非常高和非常低的学生比中等范围的学生评估得更一致一些。已出版测试的技术手册应告诉你哪些成就水平被评估得更一致。
+
 - 5. 测试间隔越长，测验-重测和复本信度系数往往越低。如果同一次评估进行两次，当两次施测之间的时间较短时，学生的分数会更相似，当时间较长时则不然。
+
 - 6. 评分更客观的评估结果更可靠。客观性是指两位合格的观察者对同一学生表现给出相同分数的程度。我们称之为评分者间信度。然而，请记住，可靠性和客观性也适用于定性评估，例如观察和对学生进行分类。这就是为什么我们强调为开放式和表现性评估制定正式的评分量表和分类方案。参见第 11 章和第 12 章的详细内容。与选择题和是非题一样，替代性评估方法也应尽可能客观地评分。提高客观性会提高可靠性，这对效度有积极影响。
+
 - 7. 不同的方法估计可靠性不会给出相同的结果。信度系数不同是因为它们包含不同的误差来源，如表 4.1 所描述的那样。请务必在解释评估时使用正确的系数。使用不正确的信度系数意味着错误地描述评估的质量。
 
 ## 掌握度和及格/不及格决策的可靠性
@@ -2571,45 +2616,47 @@ SDₓ、信度系数和 SEM 之间的关系如表 4.2 所示。当信度系数�
 有几个因素影响在评估掌握时决策错误发生的频率。
 
 - 1. 评估工具可能包含对你所想的掌握类型有效性较弱的任务。例如，当你使用课堂上使用的出版课程材料附带的测试题时就会发生这种情况。非常经常这些问题措辞不佳或评估了你在教学中省略或淡化的内容。效度弱会增加决策错误。
+
 - 2. 更长的评估方法通常会导致更准确的掌握决策。从较短的测试（例如少于 10 道选择题）或一项项目或一项表现活动来判断掌握通常会使决策错误上升到不可接受的水平。在对学生做出掌握决定之前，你应使用多个不同的评估信息。
+
 - 3. 评分者间信度低与掌握决策错误率高相关。更可靠的评估通常会导致更准确的掌握决策。
+
 - 4. 你为决定掌握而设定的及格分数会影响决策错误的比率。一般来说，将及格分数设得非常高（90% 或 95%）或非常低（20% 或 30%）会增加分类错误。
 
-# 图 4.4 学生真实掌握状态与其在从评估结果得出结论时可能出现的分类错误之间的关系。
+### 图 4.4 学生真实掌握状态与其在从评估结果得出结论时可能出现的分类错误之间的关系。
 
-| | | 关于领域熟练程度的学生真实状态 | |
-| | | 掌握 | 非掌握 |
+|  |  | 关于领域熟练程度的学生真实状态 |  |
+| --- | --- | --- | --- |
+|  |  | 掌握 | 非掌握 |
 | 教师从评估结果对学生得出的结论 | 评估结果被解释为掌握 | 没有误分类：学生的真实状态和教师从评估结果得出的结论一致。 | 分类错误：学生是非掌握者，但教师得出评估结果显示掌握的结论。 |
-| | 评估结果被解释为非掌握 | 分类错误：学生是掌握者，但教师得出评估结果显示非掌握的结论。 | 没有误分类：学生的真实状态和教师从评估结果得出的结论一致。 |
+|  | 评估结果被解释为非掌握 | 分类错误：学生是掌握者，但教师得出评估结果显示非掌握的结论。 | 没有误分类：学生的真实状态和教师从评估结果得出的结论一致。 |
 
-
-
-
-
-## 图 4.5 使用两种形式的掌握测试成绩对 25 名学生进行分类的假设示例。
+### 图 4.5 使用两种形式的掌握测试成绩对 25 名学生进行分类的假设示例。
 
 |  |  | Results from Form A |  |  |
-|---|---|---|---|---|
+| --- | --- | --- | --- | --- |
 |  |  | Mastery | Nonmastery | Marginal totals |
 | Results from Form B | Mastery | 11 | 4 | 15 |
 |  | Nonmastery | 1 | 9 | 10 |
 |  | Marginal totals | 12 | 13 | 25 |
 
+
+
 学生的真实掌握状态非常接近你设定的及格分数时，他们最有可能被错误分类。例如，如果你将及格分数设为 80%，那么真实掌握状态在 70% 到 90% 之间的学生，其错误分类率会高于此范围之外的学生。当学生的评估结果接近及格分数时，你在做出最终掌握决定之前，应使用来自其他来源的信息（如课堂表现、作业、项目表现）来补充主要评估。
 
 ## 一致性百分比
 
-一致性百分比可以通过对同一组学生施测两种平行形式的掌握测试并研究学生是否被一致地分类为掌握者或非掌握者来计算。可能计算两个指标：一致性百分比（PA）和卡帕系数（κ）（Cohen, 1960）。这里我们展示 PA 的计算方法。附录 J 展示了卡帕系数的计算示例。
+一致性百分比可以通过对同一组学生施测两种平行形式的掌握测试并研究学生是否被一致地分类为掌握者或非掌握者来计算。可能计算两个指标：一致性百分比（`PA`）和卡帕系数（`κ`）（Cohen, 1960）。这里我们展示 `PA` 的计算方法。附录 J 展示了卡帕系数的计算示例。
 
-假设对 25 名学生施测了两种形式的评估 A 和 B，且每种形式的掌握标准均为 80%。图 4.5 总结了这两种评估结果对这些学生分类的一致性。11 名学生被两种形式都分类为掌握者，9 名被两种形式都分类为非掌握者，其余的学生则一种形式分类为掌握者，另一种形式分类为非掌握者。
+假设对 25 名学生施测了两种形式的评估 `A` 和 `B`，且每种形式的掌握标准均为 80%。图 4.5 总结了这两种评估结果对这些学生分类的一致性。11 名学生被两种形式都分类为掌握者，9 名被两种形式都分类为非掌握者，其余的学生则一种形式分类为掌握者，另一种形式分类为非掌握者。
 
 前述情况下的一致性百分比可通过以下公式计算：
 
-PA = [Percentage consistent mastery decisions] + [Percentage consistent nonmastery decisions] [Eq. 4.3]
+`PA = [Percentage consistent mastery decisions] + [Percentage consistent nonmastery decisions]` [Eq. 4.3]
 
 结果通常以小数形式表示。对于表 4.3 中的示例：
 
-PA = 11/25 + 9/25 = 20/25 = 0.80
+`PA = 11/25 + 9/25 = 20/25 = 0.80`
 
 值 0.80 是“无论出于何种原因，在两次测试中发生的总一致分类比例”（Subkoviak, 1980, p. 152）。
 
@@ -2627,7 +2674,7 @@ PA = 11/25 + 9/25 = 20/25 = 0.80
 
 课堂是一个信息丰富的环境，你有许多机会评估学生。此外，课堂决定不应是高风险决定。也就是说，学生应有多次机会从学习失败中恢复并重新学习。课堂评估结果通常具有中等信度水平，但你可以在做出重要课堂决定之前（例如在分配阶段成绩之前）将来自几种程序的评估结果结合起来。因此，只要将多条信息结合起来用于课堂决定，你就可以容忍任何一次评估结果的适中信度水平，即 .70 或更高。
 
-## 表 4.3 如何提高评估结果的信度。
+## 表 4.3 如何提高评估结果的信度
 
 - 1. 延长评估程序。只要切实可行，就给予更多时间，使用更多问题、更多观察等。
 - 2. 扩大程序范围。使用评估目标学习表现的所有基本和重要方面的程序。
@@ -2662,12 +2709,12 @@ PA = 11/25 + 9/25 = 20/25 = 0.80
 - Several types of reliability coefficients were discussed:
 - Test-retest reliability measures the stability of scores.
 - Alternate-forms reliability (different occasions) measures stability and equivalence of the forms.
+
+
+
 - Alternate-forms reliability (same occasion) measures the equivalence of two versions of an assessment instrument.
+
 - Spearman-Brown (split-halves) reliability estimates the equivalence of an assessment instrument using information about the internal consistency of students' responses. This coefficient is not appropriate for speeded assessment instruments.
-
-
-
-
 
 Kuder-Richardson 和系数 alpha 可靠性也使用学生反应内部一致性来估计评估工具的等值性。这些公式也不应在评估为限时测验时使用。
 
@@ -2732,12 +2779,12 @@ Kuder-Richardson 和系数 alpha 可靠性也使用学生反应内部一致性�
 
 ## 练习与讨论问题
 
-- 1. 哪种类型的信度系数，如果有的话，会是回答以下每个问题所需信息的主要来源？
-  a. 一位老师想知道她的学生 Meghan 的测验分数是否可能是因为她状态不佳。
-  b. 一位八年级老师想知道学生的能力测验分数是否能预测他们在九年级的成功。
-  c. 一位十年级英语老师想知道他给学生作文的成绩是否等同于他的同事会给出的成绩。
-  d. 一位十二年级物理老师想知道她今年的期末考试是否等同于去年的期末考试。
-  e. 一位八年级英语老师让学生在一学期内创建作品集。利用作品集，她将学生分为三个组：优秀、满意、不满意。老师想知道她对学生的分类是否可以减少错误。
+1. 哪种类型的信度系数，如果有的话，会是回答以下每个问题所需信息的主要来源？
+   a. 一位老师想知道她的学生 Meghan 的测验分数是否可能是因为她状态不佳。
+   b. 一位八年级老师想知道学生的能力测验分数是否能预测他们在九年级的成功。
+   c. 一位十年级英语老师想知道他给学生作文的成绩是否等同于他的同事会给出的成绩。
+   d. 一位十二年级物理老师想知道她今年的期末考试是否等同于去年的期末考试。
+   e. 一位八年级英语老师让学生在一学期内创建作品集。利用作品集，她将学生分为三个组：优秀、满意、不满意。老师想知道她对学生的分类是否可以减少错误。
 
 2. 某测验奇数题与偶数题分数的相关系数为 0.40。老师声称如果他使用等值测验，学生会取得相同的分数。老师的说法是否合理？请使用适当的信度系数支持你的结论。
 
@@ -2746,14 +2793,14 @@ Kuder-Richardson 和系数 alpha 可靠性也使用学生反应内部一致性�
 4. 第 70–71 页的例子说明了如何使用 SEM 为学生形成置信带以帮助我们解释他们的分数。假设对于图中学生，SEM 等于 0.2 而不是 0.4。每个框中三个插图的解释会如何，如果有的话，会发生变化？
 
 5. 对于以下每种类型的评估程序，解释哪种测量误差原因最令人担忧以及为什么：
-  a. 社会研究考试中的学生作文
-  b. 科学项目
-  c. 艺术项目成绩
-  d. 科学中的是非题测验
-  e. 英语课程中的作品集
-  f. 数学家庭作业问题
-  g. 老师对学生课堂日常参与的评分
-  h. 社会研究单元的纸笔测验，包括选择题、配对题和简答题
+   a. 社会研究考试中的学生作文
+   b. 科学项目
+   c. 艺术项目成绩
+   d. 科学中的是非题测验
+   e. 英语课程中的作品集
+   f. 数学家庭作业问题
+   g. 老师对学生课堂日常参与的评分
+   h. 社会研究单元的纸笔测验，包括选择题、配对题和简答题
 
 ## 附加阅读
 
@@ -2803,6 +2850,9 @@ Traub, R. E., & Rowby, G. L. (1991). An NCME instructional module on understandi
 ## 对残障学生的适应
 
 - 9. 描述课堂评估可如何修改以适应残障学生。 [2, 3]
+
+
+
 - 10. 解释当为残障学生修改时，课堂评估与标准化测验在效度和分数报告方面的关注点有何不同。 [3, 4, 5]
 - 11. 描述可以采取的步骤来处理学生的适应请求并使测验适应项目在法律上具有可辩护性。 [5, 6, 7]
 
@@ -2816,10 +2866,6 @@ Traub, R. E., & Rowby, G. L. (1991). An NCME instructional module on understandi
 
 - 15. 解释本章末尾列出的每个重要术语和概念的含义及其教育意义。 [6, 7]
 
-
-
-
-
 ## 本章概述
 
 课堂评估涉及的远不止于知道如何开发收集信息的工具。评估会影响对学生的决策；伴随着这些决策权而来的是专业责任。你在设计、选择、实施、评分、解释和传达课堂评估时有哪些专业责任？学生的责任是什么？你对保持学生信息私密和保密有哪些责任？你对在你的班级中主流化残疾学生的适应性有哪些责任和法律要求？这些专业责任、伦理原则和法律要求是本章的主题。
@@ -2830,17 +2876,25 @@ Traub, R. E., & Rowby, G. L. (1991). An NCME instructional module on understandi
 
 ### 责任：使用高质量信息做出决策
 
-独立性使你承担责任 在你的课堂上，你几乎完全控制着收集和使用信息以改善学生学习的方式。伴随着这种独立性而来的是对适当收集和使用信息的专业责任。你必须遵循专业实践标准和行为伦理原则来履行你的责任。
+#### 独立性使你承担责任
 
-决策有后果 在你教学的过程中，你必须做出数百项决策。正式和非正式的评估工具帮助你收集用于对学生做出决策的有用信息。如果你和我们其他人一样人性化，你的决策并非全部正确。正确与否，你所做的每个决定都会对学生产生积极或消极的后果。
+在你的课堂上，你几乎完全控制着收集和使用信息以改善学生学习的方式。伴随着这种独立性而来的是对适当收集和使用信息的专业责任。你必须遵循专业实践标准和行为伦理原则来履行你的责任。
+
+#### 决策有后果
+
+在你教学的过程中，你必须做出数百项决策。正式和非正式的评估工具帮助你收集用于对学生做出决策的有用信息。如果你和我们其他人一样人性化，你的决策并非全部正确。正确与否，你所做的每个决定都会对学生产生积极或消极的后果。
 
 后果对其严重程度有所不同。对学生而言，严重后果的决策发生在学生受益或失去非常宝贵的东西并且无法轻易从错误初始决策中恢复时。例如，你给学生在化学课上的最终成绩评为低分，可能会降低该学生被特定大学录取为化学专业的机会。决策的较不严重后果发生在学生受益或失去较不宝贵的东西并且可以轻易从错误初始决策中恢复时。例如，你可能决定重新教授某个化学概念给学生，但在重新教授时你发现学生其实已经理解该概念。你很容易调整教学，学生也可以轻易从你错误的初始决策中恢复。关键在于，当决策的后果是严重时，你有额外的责任在决策过程中使用最佳可用的信息。
 
-高质量信息导致正确决策 评估是为做出教育决策而收集适当信息的过程。提高决策的一种方法是使用高质量信息：对当前决策而言具有高度效度和高度信度的信息。当然，使用高质量信息并不能保证你的决策正确。然而，如果你基于质量差或错误的信息做出决策，你很可能做出错误决策。这可能对学生造成伤害。如果你故意或因疏忽而伤害学生，你的行为是不专业的、不道德的和/或非法的。
+#### 高质量信息导致正确决策
+
+评估是为做出教育决策而收集适当信息的过程。提高决策的一种方法是使用高质量信息：对当前决策而言具有高度效度和高度信度的信息。当然，使用高质量信息并不能保证你的决策正确。然而，如果你基于质量差或错误的信息做出决策，你很可能做出错误决策。这可能对学生造成伤害。如果你故意或因疏忽而伤害学生，你的行为是不专业的、不道德的和/或非法的。
 
 ### 教育测量专业责任守则
 
-专业协会的伦理守则 专业协会经常为其成员制定并执行行为伦理守则。这些守则为如何负责任地行动提供指导。伦理守则通常涵盖专业在社会中的角色、利益冲突以及与客户和公众的沟通等方面（Schmeiser, 1992）。表 5.1 列出了包含使用评估时专业责任声明的一些守则。本章中的大部分信息改编自国家教育测量委员会（NCME）的《教育测量专业责任守则》（CPR）中描述的原则。CPR 的副本收录在附录 C。本章的重点是课堂教师评估的伦理、专业和法律责任。然而，CPR 为参与评估活动的广泛教育专业人士提供指导。这些教育专业人士包括教师；学校和学区管理人员；专业支持人员（主管、顾问、学校心理学家等）；研究、评估和评估组织的专业、技术、立法和政策人员；考试准备服务提供者；学院和大学的教职员工、管理人员；以及在企业中实施教育项目的专业人士（NCME, 1995）。
+#### 专业协会的伦理守则
+
+专业协会经常为其成员制定并执行行为伦理守则。这些守则为如何负责任地行动提供指导。伦理守则通常涵盖专业在社会中的角色、利益冲突以及与客户和公众的沟通等方面（Schmeiser, 1992）。表 5.1 列出了包含使用评估时专业责任声明的一些守则。本章中的大部分信息改编自国家教育测量委员会（NCME）的《教育测量专业责任守则》（CPR）中描述的原则。CPR 的副本收录在附录 C。本章的重点是课堂教师评估的伦理、专业和法律责任。然而，CPR 为参与评估活动的广泛教育专业人士提供指导。这些教育专业人士包括教师；学校和学区管理人员；专业支持人员（主管、顾问、学校心理学家等）；研究、评估和评估组织的专业、技术、立法和政策人员；考试准备服务提供者；学院和大学的教职员工、管理人员；以及在企业中实施教育项目的专业人士（NCME, 1995）。
 
 表 5.1 与使用教育评估相关的专业和伦理责任守则资源。
 
@@ -2857,45 +2911,41 @@ Traub, R. E., & Rowby, G. L. (1991). An NCME instructional module on understandi
 | Joint Committee on Testing Practices. (1988). Code of fair testing practices in education. Washington, DC: APA. |
 | Joint Committee on Standards for Educational Evaluation. (1988). The personnel evaluation standards: How to assess systems for evaluating educators. Newbury Park, CA: Sage. |
 | Joint Committee on Standards for Educational Evaluation. (1994). Standards for evaluations of educational programs. Washington, DC: Author. |
-| Joint Committee on Standards for Educational Evaluation. (1994). The program evaluation standards: How to assess evaluations of educational programs. Thousand Oaks, CA: Sage. |
-| National Association of College Admission Counselors. (1988). Statement of principles of good practices. Alexandria, VA: Author. |
-| Source: Adapted from Code of Professional Responsibilities in Educational Measurement (p. 7–8) by National Council on Measurement in Education, 1995, Washington, DC: Author. Copyright 1995 by the National Council on Measurement in Education. Adapted by permission of the publisher. |
 
-### 相关行为标准
+
+
+> Joint Committee on Standards for Educational Evaluation. (1994). The program evaluation standards: How to assess evaluations of educational programs. Thousand Oaks, CA: Sage.
+>
+> National Association of College Admission Counselors. (1988). Statement of principles of good practices. Alexandria, VA: Author.
+>
+> Source: Adapted from Code of Professional Responsibilities in Educational Measurement (p. 7–8) by National Council on Measurement in Education, 1995, Washington, DC: Author. Copyright 1995 by the National Council on Measurement in Education. Adapted by permission of the publisher.
+
+## 相关行为标准
 
 CPR 假定教育评估的知情使用者将按照其他评估相关专业标准行事。这些包括《教育公平测试实践守则》（Joint Committee on Testing Practices, 1988）和《教育与心理测验标准》（AERA, APA, and NCME, 1999）。《教育公平测试实践守则》在本书记载于附录 B。《标准》在第 18 章中讨论，但未在本书记载。
 
-### 专业行为的一般原则
+## 专业行为的一般原则
 
 在讨论你在使用教育评估时的专业责任时，请记住你被期望维护专业行为原则。你被期望：
 
-- 1. 保护所有应试者的安全、健康和福祉；
-- 2. 熟悉并遵守与专业活动进行相关的州和联邦法律；
-- 3. 维护和提高 [你的] ... 在教育评估方面的专业能力；
-- 4. 仅在 [你的] ... 能力与经验范围内提供评估服务，并充分披露 [你的] 专业资格；
-- 5. 促进对教育中健全评估实践的理解；
-- 6. 遵守最高行为标准，并在提供教育服务的教育机构和机构中促进专业负责的行为；以及
-- 7. 以诚实、诚信、应有的谨慎和公平履行所有专业责任。（NCME, 1995, p. 2）
+1. 保护所有应试者的安全、健康和福祉；
+2. 熟悉并遵守与专业活动进行相关的州和联邦法律；
+3. 维护和提高 [你的] ... 在教育评估方面的专业能力；
+4. 仅在 [你的] ... 能力与经验范围内提供评估服务，并充分披露 [你的] 专业资格；
+5. 促进对教育中健全评估实践的理解；
+6. 遵守最高行为标准，并在提供教育服务的教育机构和机构中促进专业负责的行为；以及
+7. 以诚实、诚信、应有的谨慎和公平履行所有专业责任。（NCME, 1995, p. 2）
 
-### 教师的六类责任
+## 教师的六类责任
 
 你的教学涉及六类评估相关活动。每类都有其特定的专业和伦理问题：
 
-- 1. 设计评估程序——当你开发自己的评估程序时，你有责任确保其质量上乘。
-
-
-
-
-
-2. *选择评估程序*—当你选择或挑选他人制定的评估程序时，你有责任确保它们适合你的预期用途
-
-3. *实施评估程序*—当你实施评估程序时，你有责任确保你的实施过程对所有学生都是公平的，并且不会导致无法解释的结果。
-
-4. *评分评估结果*—当你对学生的评估反应进行评分时，你有责任准确评估这些反应并及时向学生报告结果。
-
-5. *解释和使用评估结果*—当你解释和使用评估结果时，你有责任确保你的解释尽可能有效，用于促进积极的学生成果，并用于最大限度地减少消极的学生成果。
-
-6. *传达评估结果*—当你传达评估结果时，你有责任提供关于学生表现的完整、有用且正确的信息，以促进积极的学生成果并最大限度地减少消极的学生成果。
+1. 设计评估程序——当你开发自己的评估程序时，你有责任确保其质量上乘。
+2. *选择评估程序*——当你选择或挑选他人制定的评估程序时，你有责任确保它们适合你的预期用途
+3. *实施评估程序*——当你实施评估程序时，你有责任确保你的实施过程对所有学生都是公平的，并且不会导致无法解释的结果。
+4. *评分评估结果*——当你对学生的评估反应进行评分时，你有责任准确评估这些反应并及时向学生报告结果。
+5. *解释和使用评估结果*——当你解释和使用评估结果时，你有责任确保你的解释尽可能有效，用于促进积极的学生成果，并用于最大限度地减少消极的学生成果。
+6. *传达评估结果*——当你传达评估结果时，你有责任提供关于学生表现的完整、有用且正确的信息，以促进积极的学生成果并最大限度地减少消极的学生成果。
 
 下一节将讨论教师在以上六个方面的专业责任。虽然 CPR 影响了这一讨论，但你不应将此讨论视为得到 CPR 赞助者的认可。
 
@@ -2937,20 +2987,25 @@ CPR 假定教育评估的知情使用者将按照其他评估相关专业标准�
 
 在实施课堂评估时，一个特别关注点是你建立的评估环境。如果你不必要地催促学生或使评估任务对于可用时间来说太长，如果目标是让学生展示最大表现，就会造成不公平的条件。同样，如果你在学生尝试进行评估时站在他们附近或与他们聊天使他们紧张，你也会造成不公平的条件。有时教师会粗鲁、言简
 
+**表 5.2 可能适用于对残疾学生进行课堂评估的修改类型的示例。**
+
+| 残疾类型 | 可能的评估修改示例 |
+|---|---|
+| 盲 | 延长考试时间、语音录制问题、评估任务的盲文翻译、凸线图、记录员/抄写员、电脑、语音录制答案、读者解释图表和朗读问题、抄写员书写答案。 |
+| 低视力 | 延长考试时间、大字印刷、标准印刷的放大镜、语音录制问题、特殊照明、记录书面答案的格式修改、语音录制答案、读者朗读问题和解释图表、抄写员书写答案。 |
+| 听力障碍 | 延长考试时间、记录员、手语翻译、语言简化问题、修改答案格式（例如，允许用美国手语作答，然后将答案译成标准英语）。 |
 
 
 
+| 残疾类型 | 便利措施 |
+| --- | --- |
+| 身体障碍 | 延长考试时间、抄写员/记录员、修改答案格式（例如，允许口头回答）、修改问题格式、电脑、大面积桌面。 |
+| 学习障碍 | 延长考试时间、环境控制（例如，免受无关噪音、干扰）、计算器、电脑（代替手写答案）、语音录制问题或读者、抄写员书写答案、修改答案格式。 |
+| 健康和压力相关残疾 | 延长考试时间、环境控制。 |
 
-| 表 5.2 可能适用于对残疾学生进行课堂评估的修改类型的示例。 | 残疾类型 | 可能的评估修改示例 |
-|---|---|---|
-|  | 盲 | 延长考试时间、语音录制问题、评估任务的盲文翻译、凸线图、记录员/抄写员、电脑、语音录制答案、读者解释图表和朗读问题、抄写员书写答案。 |
-|  | 低视力 | 延长考试时间、大字印刷、标准印刷的放大镜、语音录制问题、特殊照明、记录书面答案的格式修改、语音录制答案、读者朗读问题和解释图表、抄写员书写答案。 |
-|  | 听力障碍 | 延长考试时间、记录员、手语翻译、语言简化问题、修改答案格式（例如，允许用美国手语作答，然后将答案译成标准英语）。 |
-|  | 身体障碍 | 延长考试时间、抄写员/记录员、修改答案格式（例如，允许口头回答）、修改问题格式、电脑、大面积桌面。 |
-|  | 学习障碍 | 延长考试时间、环境控制（例如，免受无关噪音、干扰）、计算器、电脑（代替手写答案）、语音录制问题或读者、抄写员书写答案、修改答案格式。 |
-|  | 健康和压力相关残疾 | 延长考试时间、环境控制。 |
-| 注释：没有关于何时使用这些修改的通用指南。很多取决于评估的目的以及分数的使用方式。在同一残疾类别内，并非每个学生都应获得每项修改。修改类型也可能因测试是课堂测试还是标准化测试而有所不同。许多学生有多重残疾，严重程度差异很大。因此，你有专业责任不要对学生进行刻板印象，而应将他们视为个体。 |
-| 来源：基于 Algozzine (1993)、King & Janow (1990) 和 Roberts (1994) 中的信息。 |
+注释：没有关于何时使用这些修改的通用指南。很多取决于评估的目的以及分数的使用方式。在同一残疾类别内，并非每个学生都应获得每项修改。修改类型也可能因测试是课堂测试还是标准化测试而有所不同。许多学生有多重残疾，严重程度差异很大。因此，你有专业责任不要对学生进行刻板印象，而应将他们视为个体。
+
+来源：基于 Algozzine (1993)、King & Janow (1990) 和 Roberts (1994) 中的信息。
 
 或对询问评估任务诚实问题的学生粗暴无礼（尤其是当教师没有仔细设计任务或其说明，从而造成了某些模糊性时）。你的专业责任是提供“合理机会让个人在评估程序或说明的实施前以及在实施过程中适当的时间询问问题”（NCME, 1995, p. 6）。
 
@@ -2976,24 +3031,23 @@ CPR 假定教育评估的知情使用者将按照其他评估相关专业标准�
 
 你自己的课堂评估 你的专业义务是：
 
-- 1. 通过使用适当的工具如评分键、评分量规、核对表或评定量表准确评分学生反应。第 9 章和第 12 章解释了如何制作和使用这些提高准确性的辅助工具。
+1. 通过使用适当的工具如评分键、评分量规、核对表或评定量表准确评分学生反应。第 9 章和第 12 章解释了如何制作和使用这些提高准确性的辅助工具。
 
-- 2. 通过从评分过程中移除会导致不公平结果的任何因素来公平评分学生。负责任行为的例子包括在适当时使用客观题目和评分键，让学生在论文考试的背面写上姓名以免你受姓名影响，在转到另一个题目之前先对所有学生对一个问题的反应进行评分，使用评分量规对表现任务进行评分，定期重新评分一批学生反应以对照初始评分，或让同事重新评分一批或全部你的试卷。关于提高论文和表现评估评分公平性的建议见第 9 章和第 12 章。
+2. 通过从评分过程中移除会导致不公平结果的任何因素来公平评分学生。负责任行为的例子包括在适当时使用客观题目和评分键，让学生在论文考试的背面写上姓名以免你受姓名影响，在转到另一个题目之前先对所有学生对一个问题的反应进行评分，使用评分量规对表现任务进行评分，定期重新评分一批学生反应以对照初始评分，或让同事重新评分一批或全部你的试卷。关于提高论文和表现评估评分公平性的建议见第 9 章和第 12 章。
 
-- 3. 为学生提供适当的反馈。你的专业责任不仅仅是简单地给学生分数或字母等级。你有专业责任向学生展示他们做错了什么以及其预期表现水平是什么。仅仅给出分数而不允许学生甚至查看他们错过的题目并解释正确答案的教师是不负责任的。学生必须有机会从评估中了解他们需要如何改进。第 13 章讨论了如何制作能够检测学生为何未能正确表现的评估。期末考试在这方面可能有问题，因为学生在学期或学年结束时可能会离开。尽管如此，如果学生要求澄清和信息，应认真努力提供。便利不是这里的主要标准。
+3. 为学生提供适当的反馈。你的专业责任不仅仅是简单地给学生分数或字母等级。你有专业责任向学生展示他们做错了什么以及其预期表现水平是什么。仅仅给出分数而不允许学生甚至查看他们错过的题目并解释正确答案的教师是不负责任的。学生必须有机会从评估中了解他们需要如何改进。第 13 章讨论了如何制作能够检测学生为何未能正确表现的评估。期末考试在这方面可能有问题，因为学生在学期或学年结束时可能会离开。尽管如此，如果学生要求澄清和信息，应认真努力提供。便利不是这里的主要标准。
 
-- 4. 向学生解释正确答案的理由以及你使用的评分量规。通过解释你如何得出分数以及你使用了什么标准和标准，你教导学生学习目标中重要的内容。这澄清了学习目标并教导学生他们被期望达到的标准。
+4. 向学生解释正确答案的理由以及你使用的评分量规。通过解释你如何得出分数以及你使用了什么标准和标准，你教导学生学习目标中重要的内容。这澄清了学习目标并教导学生他们被期望达到的标准。
 
-- 5. 给学生机会单独审阅他们的评价。学生有权知道他们的反应是如何标记和评价的。他们有权确保评分准确和公平。你有专业责任与请求的学生一起回顾你对其反应的评价。
+5. 给学生机会单独审阅他们的评价。学生有权知道他们的反应是如何标记和评价的。他们有权确保评分准确和公平。你有专业责任与请求的学生一起回顾你对其反应的评价。
 
-- 6. 尽快纠正评分错误并做出必要调整。因为你是人，你会犯评分错误，即使你使用选择题和评分模板。你也不应因学生或家长要求重新评分评估而感到威胁。如果你发现评分错误（即使没有其他人发现），诚实要求你纠正所有错误并相应调整分数。这应及时完成。
+6. 尽快纠正评分错误并做出必要调整。因为你是人，你会犯评分错误，即使你使用选择题和评分模板。你也不应因学生或家长要求重新评分评估而感到威胁。如果你发现评分错误（即使没有其他人发现），诚实要求你纠正所有错误并相应调整分数。这应及时完成。
 
-- 7. 及时评分并返回结果。为了反馈有效，必须及时。进一步，未能尽快返回结果不允许学生有效监控其进步或允许学生调整其学习策略。返回评估结果缓慢不给你或家长足够的时间对有困难的学生提供补救。作为一般规则，你应在评估发生后一到两周内返回学生的结果——如果可能，更早。当你无正当理由延迟返回结果更长时间时，你就不是以专业负责任的方式行事。
+7. 及时评分并返回结果。为了反馈有效，必须及时。进一步，未能尽快返回结果不允许学生有效监控其进步或允许学生调整其学习策略。返回评估结果缓慢不给你或家长足够的时间对有困难的学生提供补救。作为一般规则，你应在评估发生后一到两周内返回学生的结果——如果可能，更早。当你无正当理由延迟返回结果更长时间时，你就不是以专业负责任的方式行事。
 
-标准化与强制性测试 有时你可能会被要求评分标准化测试或其他强制性测试
+### 标准化与强制性测试
 
-
-由你的学区或州制定。在这种情况下，你有责任遵循测试手册或其他材料中给出的评分程序。事先阅读这些材料，并确保你理解如何应用评分指南。教师在将评分键应用于选择题以及在随测试材料提供的表格中查找常模参照分数（例如百分位等级或年级当量）时经常犯错。一个常见的错误是使用错误年份的常模表（例如在春季施测时参考秋季常模表）。确保你的评分准确并检查工作的质量是你的专业责任。
+有时你可能会被要求评分标准化测试或其他强制性测试由你的学区或州制定。在这种情况下，你有责任遵循测试手册或其他材料中给出的评分程序。事先阅读这些材料，并确保你理解如何应用评分指南。教师在将评分键应用于选择题以及在随测试材料提供的表格中查找常模参照分数（例如百分位等级或年级当量）时经常犯错。一个常见的错误是使用错误年份的常模表（例如在春季施测时参考秋季常模表）。确保你的评分准确并检查工作的质量是你的专业责任。
 
 许多时候，教师需要为强制性的州评估项目评分开放式任务、表现任务和作品集。要求教师这样做的学区或州有义务提供高质量的评分量规，并培训教师以高度一致的方式使用它们。作为教师，你的责任是学会如何使用量规并公平、一致地应用它们。使用评分量规在第 9 章和第 12 章中有讨论。
 
@@ -3003,43 +3057,45 @@ CPR 假定教育评估的知情使用者将按照其他评估相关专业标准�
 
 来自你自己的评估的结果 在这一领域的专业义务是：
 
-- 1. 在解释学生在一次评估中的表现时，首先考虑你所教授和强调的学习目标。学生应对其所学学习目标负责。当你强调特定内容或特定学习目标时，你就向学生传达了其重要性。将学生评估的很大一部分基于他们在你未强调的领域中的表现是不负责任的，甚至可能是欺骗性的。
+1. 在解释学生在一次评估中的表现时，首先考虑你所教授和强调的学习目标。学生应对其所学学习目标负责。当你强调特定内容或特定学习目标时，你就向学生传达了其重要性。将学生评估的很大一部分基于他们在你未强调的领域中的表现是不负责任的，甚至可能是欺骗性的。
 
-- 2. 在解释学生在一次评估中的表现时，考虑其他评估的结果。没有任何单一的评估程序能够全面涵盖每一个重要的学习目标。你应让学生有多次机会和多种方式来表达他们对课程学习目标的能力。如果你仅根据学生在一次评估中的表现来评价学生，你就是不负责任的。
+2. 在解释学生在一次评估中的表现时，考虑其他评估的结果。没有任何单一的评估程序能够全面涵盖每一个重要的学习目标。你应让学生有多次机会和多种方式来表达他们对课程学习目标的能力。如果你仅根据学生在一次评估中的表现来评价学生，你就是不负责任的。
 
-- 3. 在解释学生的表现时，要认识到你所使用的评估程序的局限性。单一的评估程序不仅缺乏全面性，而且也不完全可靠。如果你明天或下周再次进行评估，或使用略有不同的问题或内容，学生的分数很可能会发生变化。如果由其他人批改答卷，评分者可能会给出不同的分数。因此，如果你在使用自己的评估程序时不考虑这些局限性，你就是不负责任的。例如，如果你告诉学生她的成绩完全取决于她的测试表现，或在学生诚实询问你如何批改试卷后，你没有认真考虑重新评分，你就是不负责任的。
+3. 在解释学生的表现时，要认识到你所使用的评估程序的局限性。单一的评估程序不仅缺乏全面性，而且也不完全可靠。如果你明天或下周再次进行评估，或使用略有不同的问题或内容，学生的分数很可能会发生变化。如果由其他人批改答卷，评分者可能会给出不同的分数。因此，如果你在使用自己的评估程序时不考虑这些局限性，你就是不负责任的。例如，如果你告诉学生她的成绩完全取决于她的测试表现，或在学生诚实询问你如何批改试卷后，你没有认真考虑重新评分，你就是不负责任的。
 
-- 4. 帮助学生和家长正确解释评估结果。家长和学生可能不了解测试和其他评估的局限性。例如，他们可能不了解由于信度低而导致的课堂评估局限性。你必须传达这些局限性，并将所有评估结果置于适当的解释背景中。
 
-- 5. 帮助学生和家长理解错误解释课堂评估结果的后果。一些家长对测试分数或单次评估结果过于看重。另一些人则看不到随着时间的推移而形成的成功或失败模式。当你帮助他们理解错误解释的负面后果（例如阻碍学生的进一步学习）和正确解释的积极后果（在评分期内稳步提高）时，你就是负责任的。
 
-- 6. 将学生的表现解释为评估其学习目标达成程度的方式，而不是作为惩罚或控制学生行为的武器。虽然即将到来的评估可能会激励学生，但它们是控制学生行为的糟糕武器。如果你以测试威胁学生或试图通过某种评估程序操纵他们，你就是不负责任的。
+### 4. 帮助学生和家长正确解释评估结果
+家长和学生可能不了解测试和其他评估的局限性。例如，他们可能不了解由于信度低而导致的课堂评估局限性。你必须传达这些局限性，并将所有评估结果置于适当的解释背景中。
 
-- 7. 保持课堂评估结果的保密并保护学生的隐私权。当你在教室墙上张贴学生的姓名和评估结果，或当你向没有权利知道的学生结果的其他教师透露你的学生的结果时，你就是不负责任的。有时家长会询问邻居的孩子与自己的孩子相比表现如何。你不应满足此请求，即使是为了相对比较而不是确切分数。
+### 5. 帮助学生和家长理解错误解释课堂评估结果的后果
+一些家长对测试分数或单次评估结果过于看重。另一些人则看不到随着时间的推移而形成的成功或失败模式。当你帮助他们理解错误解释的负面后果（例如阻碍学生的进一步学习）和正确解释的积极后果（在评分期内稳步提高）时，你就是负责任的。
 
-标准化与强制性测试结果 由于外部测试与课程学习目标和你的教学重点并不完全一致，因此经常被学生、家长和公众误解，他们不了解学校因素对测试结果的影响。此外，测试结果通常以常模参照分数报告（例如百分位等级、年级当量），其中许多分数不易正确解释。你的学校管理者和/或州教育当局有严重的义务和责任正确解释结果，并确保避免或至少最大程度减少不当解释。CPR 第 6 节（附录 C）列出了这些责任。其中许多也适用于课堂教师。你应在此时候回顾这些责任。
+### 6. 将学生的表现解释为评估其学习目标达成程度的方式，而不是作为惩罚或控制学生行为的武器
+虽然即将到来的评估可能会激励学生，但它们是控制学生行为的糟糕武器。如果你以测试威胁学生或试图通过某种评估程序操纵他们，你就是不负责任的。
+
+### 7. 保持课堂评估结果的保密并保护学生的隐私权
+当你在教室墙上张贴学生的姓名和评估结果，或当你向没有权利知道的学生结果的其他教师透露你的学生的结果时，你就是不负责任的。有时家长会询问邻居的孩子与自己的孩子相比表现如何。你不应满足此请求，即使是为了相对比较而不是确切分数。
+
+## 标准化与强制性测试结果
+由于外部测试与课程学习目标和你的教学重点并不完全一致，因此经常被学生、家长和公众误解，他们不了解学校因素对测试结果的影响。此外，测试结果通常以常模参照分数报告（例如百分位等级、年级当量），其中许多分数不易正确解释。你的学校管理者和/或州教育当局有严重的义务和责任正确解释结果，并确保避免或至少最大程度减少不当解释。CPR 第 6 节（附录 C）列出了这些责任。其中许多也适用于课堂教师。你应在此时候回顾这些责任。
 
 由于标准化测试结果通常由教师带回家，因此教师通常是家长有疑问时首先联系的人。为了履行 CPR 第 6 节中列出的专业责任，你需要了解信度、效度、常模参照、标准参照和标准化测试。第 3、4、16、17、18 和 19 章专门讨论这些主题。学习它们将帮助你在这一领域履行你的责任。
 
 ## 传达评估结果时的责任
-
 传达评估结果意味着向学生、家长和学校当局传达结果的正确解释。你在此的责任是制定传达正确解释的适当方式。你必须确定学生、家长或学校官员的理解水平，并根据该水平调整你的沟通。这可能涉及向家长教授某些类型分数或评估概念的含义。例如，如果家长不理解其含义，就不专业地使用教育测量术语（例如百分位、T 分数、信度、效度）与家长交流。
 
 除了沟通水平外，你还有义务经常沟通。你有专业责任建立并遵循定期沟通时间表，向家长报告学生进展。你的学校可能有在成绩寄回家时向家长传达进展的政策。这些政策通常规定最低沟通模式。根据社区和你所教的学生，你可能需要更频繁的沟通。然而，你不应过度：每日进展报告可能不适用于学龄前儿童以外的学生。
 
 ## 学生作为测试者的权利
-
 你的学区和州教育部门可能有涵盖学生和家长权利的评估和学校记录政策和程序。适用于接受联邦资金的学区和州的涵盖这些事项的联邦法律包括 1974 年《家庭教育权利和隐私法》（公共法 93-380）、1975 年《全残障儿童教育法》（公共法 94-142）、1986 年《残障人士教育法修正案》（公共法 99-457）、1991 年《残障人士教育修正法》（公共法 101-476）、1973 年《康复法》（公共法 93-112）以及 1990 年《美国残疾人法》（公共法 101-336）。表 5.3 总结了法律下的一些学生和家长权利。
 
 无论是否有法律要求，专业伦理可能表明表 5.3 中总结的权利的某些原则可以适用于课堂评估实践。你应向学区学监咨询你所在州关于学生和家庭权利的要求。你的学校还应有自己的书面政策，关于（a）评估结果的维护和发布，（b）非保密信息的发布，（c）非歧视，以及（d）代表性同意信息。
 
 除了法律要求外，专业组织也在制定测试者权利的声明。例如，CPR 建议了测试者（例如学生）拥有权利的几个领域。联合测试实践委员会的测试者权利工作组（1994 年）也在起草测试者权利声明。权利团体正在研究的领域包括（a）在测试过程中受到尊严和尊重的对待，（b）由合格人员进行测试，（c）被告知测试安排和费用，（d）以适当的便利条件进行测试，（e）被告知测试目的，（f）被告知结果将如何使用，（g）被告知从测试获得的信息质量（例如其信度和效度），（h）被要求给予知情同意，（i）如果法律允许，有拒绝接受测试的权利，（j）获得测试结果的易懂解释，（k）获得测试结果带来的后果和决定的易懂解释，（l）获得隐私和保密，（m）获得审查记录和申诉解释和发现的机会。虽然这样的“测试者权利法案”尚未完成或被专业协会正式采纳，但教师应意识到这些运动，并考虑自己的评估实践与这些关注领域的关系。对课堂教师而言的主要问题是对每个学生的公平、尊重学生、公开学生评价过程，以及尽快纠正学生评价中的错误。
 
-
-
-
-
-# 表 5.3 联邦立法规定的部分学生和家长测试及学校记录权利。 （并非所有这些都是根据所引立法下的绝对权利。法院可能会授予某些例外。请参阅本表的脚注。）
+# 表 5.3 联邦立法规定的部分学生和家长测试及学校记录权利
+（并非所有这些都是根据所引立法下的绝对权利。法院可能会授予某些例外。请参阅本表的脚注。）
 
 ## I. 1974 年《家庭教育权利和隐私法》
 
@@ -3050,7 +3106,6 @@ CPR 假定教育评估的知情使用者将按照其他评估相关专业标准�
 - 4. 如果孩子年满 18 岁，只有孩子本人有权获取记录。
 
 ### B. 隐私权：此处的权利限制了对官方学校记录（包括测试分数）的访问，仅限于具有正当教育需求者。
-
 附加信息：家庭教育权利和隐私法办公室，美国教育部，400 Maryland Avenue, S.W., Washington, DC 20201。
 
 ## II. 1991 年《残疾人教育修正法》（IDEA）和 1973 年《康复法》*
@@ -3075,30 +3130,29 @@ CPR 假定教育评估的知情使用者将按照其他评估相关专业标准�
 - 1. 合格的残疾人有权以其能够理解所问内容的方式以及能够作出回应的方式接受测试。
 - 2. 测试管理员应免费为应试者提供所有必要的测试地点、服务、辅助或便利。
 
-附加信息：国家残疾与康复研究所，美国教育部，Switzer Building, Room 3132, 330 C Street, S.W., Washington, DC 20202-2524。 （也可联系您所在地区的 ADA 技术援助中心。）
+附加信息：国家残疾与康复研究所，美国教育部，Switzer Building, Room 3132, 330 C Street, S.W., Washington, DC 20202-2524。（也可联系您所在地区的 ADA 技术援助中心。）
 
-注释：(a) 法院可能会争辩说，英语能力有限并不是学生残疾。而是可以通过教学和学习克服的暂时性状况。 将英语语言限制与残疾问题分开处理可能是合理的（Phillips，个人交流，2002 年）。
+注释：(a) 法院可能会争辩说，英语能力有限并不是学生残疾。而是可以通过教学和学习克服的暂时性状况。将英语语言限制与残疾问题分开处理可能是合理的（Phillips，个人交流，2002 年）。
 (b) 根据法院的解释，IDEA 和 ADA 要求对影响测试结果的外部因素进行“合理便利”，而不是改变所测试技能和能力的修改。
 
 > 来源：改编自 R.J. Fisher 所著“《美国残疾人法：对测量的影响》”，1994 年，《教育测量：问题与实践》，13(4)，第 17-26、37 页；E. B. Herndon 所著《您的孩子与测试》，1980 年，华盛顿特区：国家教育研究所；以及 Phillips（1994 年；个人交流，1999 年；2001 年）。
 
 ## 学生责任
-
-本章的主题是您在评估方面的专业责任。学生在评估情境中也有责任。学生有学习和为其课程的测试和考试做准备的责任。作弊的学生是不诚实且行为不道德的。抄袭的形式，如复制作业或为项目和其他带回家作业购买论文，不应被容忍。家长、教师、学校管理人员和学生应共同努力，了解作弊和其他形式学术不诚实的严重性。学校应制定书面政策和正当程序来处理不诚实行为，并在执行之前向学生传授这些政策。 “虽然教师必须尽到自己的职责，但他们也有权期望学生表现出道德行为，并且不应被施压而降低标准、淡化课程或为最少的工作给予高分”（S. E. Phillips，个人交流，1999 年 5 月）。
+本章的主题是您在评估方面的专业责任。学生在评估情境中也有责任。学生有学习和为其课程的测试和考试做准备的责任。作弊的学生是不诚实且行为不道德的。抄袭的形式，如复制作业或为项目和其他带回家作业购买论文，不应被容忍。家长、教师、学校管理人员和学生应共同努力，了解作弊和其他形式学术不诚实的严重性。学校应制定书面政策和正当程序来处理不诚实行为，并在执行之前向学生传授这些政策。“虽然教师必须尽到自己的职责，但他们也有权期望学生表现出道德行为，并且不应被施压而降低标准、淡化课程或为最少的工作给予高分”（S. E. Phillips，个人交流，1999 年 5 月）。
 
 ## 保密、访问、隐私、保密与教师
 
 ### 保密与访问
-
-保密和测试安全自 20 世纪 20 年代末和 30 年代初以来一直是测试行业的标志，当时大规模的测试滥用盛行。 扣留测试信息——无论是关于测试题目还是学生获得的确切分数——通常以获取评估结果会造成更多伤害为由得到正当化。例如：
-
+保密和测试安全自 20 世纪 20 年代末和 30 年代初以来一直是测试行业的标志，当时大规模的测试滥用盛行。扣留测试信息——无论是关于测试题目还是学生获得的确切分数——通常以获取评估结果会造成更多伤害为由得到正当化。例如：
 - 学生可能会试图只记住特定答案（“a”或“b”），而不是专注于掌握测试旨在测量的一般技能；这种行为会扭曲知识和能力的测量。
+
+
+
 - 测量高度敏感和个人特征的测试可能需要高度的专业培训来解释分数；缺乏这种培训的应试者可能会因误解结果而伤害自己。
 - 发布测试题目可能会导致未经资格认证的考官使用它们并误解分数，从而伤害应试者。
 - 发布旧版测试的副本可能会要求测试开发人员花费不合理的资金来开发新版本，前提是实际上可以开发出测试的新版本。
 
 然而，近年来，公众已经意识到，一些测试滥用是由这种保密造成的。例如：
-
 - 专业人员本身的资质各不相同，事实上，他们曾误解测试或滥用结果。
 - 表面上基于有效和客观的测试结果做出的教育安置决定，后来被发现存在偏见、误解或其他无效情况。
 - 由于测试无法被最关心其准确性的人——学生和家长——审查，因此发生了无法检测到的评分错误。
@@ -3106,22 +3160,21 @@ CPR 假定教育评估的知情使用者将按照其他评估相关专业标准�
 
 学区应制定书面政策，规定学生和家庭就获取记录和评估结果的权利。
 
-### 为研究目的访问学生数据
+## 为研究目的访问学生数据
 
-另一个问题是记录用于研究。 通常，只要学生的身份保持匿名，获取评估结果用于研究目的就不被视为侵犯隐私。 卫生与公众服务部发布了保护人类受试者在研究项目中福利的法规。 虽然您不是研究人员，但您应注意隐私和保密的道德原则，因为您可能需要收集数据用于研究生课程和学位的研究项目，并且您可能需要保护学生在您照顾下的人的权利，当他人（校内和校外）请求学生信息时。
+另一个问题是记录用于研究。通常，只要学生的身份保持匿名，获取评估结果用于研究目的就不被视为侵犯隐私。卫生与公众服务部发布了保护人类受试者在研究项目中福利的法规。虽然您不是研究人员，但您应注意隐私和保密的道德原则，因为您可能需要收集数据用于研究生课程和学位的研究项目，并且您可能需要保护学生在您照顾下的人的权利，当他人（校内和校外）请求学生信息时。
 
-### 清理和更正学校记录
+## 清理和更正学校记录
 
-另一个问题是清理过时的文件和其他学生记录以及更正错误信息。 当然，如果您给出错误的成绩，您应该更正受影响学生的记录。 有时教师（或其他人）会错误地评分标准化测试，在信息录入记录后才发现这一事实。 这也需要更改记录。 计算机化数据库相对容易更新，尽管一些学校官员经常以“太晚了，因为数据已在计算机中”为借口。 您有专业责任更正记录中的错误。 例如，您轶事记录等信息应在不再需要时（通常在一年或两年内）清理。 一些学校有系统清理学生记录的政策。 其他学校可能依赖学生的家长定期前来审查记录中不必要、有害或错误的信息。
+另一个问题是清理过时的文件和其他学生记录以及更正错误信息。当然，如果您给出错误的成绩，您应该更正受影响学生的记录。有时教师（或其他人）会错误地评分标准化测试，在信息录入记录后才发现这一事实。这也需要更改记录。计算机化数据库相对容易更新，尽管一些学校官员经常以“太晚了，因为数据已在计算机中”为借口。您有专业责任更正记录中的错误。例如，您轶事记录等信息应在不再需要时（通常在一年或两年内）清理。一些学校有系统清理学生记录的政策。其他学校可能依赖学生的家长定期前来审查记录中不必要、有害或错误的信息。
 
-### 隐私、保密与教师
+## 隐私、保密与教师
 
-一个重要问题是学生是否有权期望某些信息被保密。 隐私和保密以多种方式影响您。 例如，在课堂上，教师有时会保留图表或张贴学生的进度。 其他教师让学生互相批改作业并大声报出分数以供记录。 这种公开展示可能以成绩或非成绩的形式出现。 这些做法引发了评估是否应保密的问题。 保密的道德性质可能不受现有法律的约束。 例如，最高法院裁定，同伴批改作业并向教师大声报出同伴的分数并不违反《家庭教育权利和隐私法》，即使家长反对教师的
+一个重要问题是学生是否有权期望某些信息被保密。隐私和保密以多种方式影响您。例如，在课堂上，教师有时会保留图表或张贴学生的进度。其他教师让学生互相批改作业并大声报出分数以供记录。这种公开展示可能以成绩或非成绩的形式出现。这些做法引发了评估是否应保密的问题。保密的道德性质可能不受现有法律的约束。例如，最高法院裁定，同伴批改作业并向教师大声报出同伴的分数并不违反《家庭教育权利和隐私法》，即使家长反对教师的
 
-诸如此类的问题引发了公众对保密伦理以及学生和家长了解情况的权利的 renewed 兴趣。 一系列州和联邦法律以及法院判决应运而生，要求学生和家长对评估结果有更大的获取权，并参与基于评估的决策过程。 表 5.3 列出了根据联邦立法规定的一些获取和参与权利。 您自己的
+诸如此类的问题引发了公众对保密伦理以及学生和家长了解情况的权利的 renewed 兴趣。一系列州和联邦法律以及法院判决应运而生，要求学生和家长对评估结果有更大的获取权，并参与基于评估的决策过程。表 5.3 列出了根据联邦立法规定的一些获取和参与权利。您自己的
 
-
-practice, because that act referred only to official school records (Owasso Independent School District no. 1011, et al. vs. Falvo, et al., 2002).
+`practice`, because that act referred only to official school records (`Owasso Independent School District no. 1011, et al. vs. Falvo, et al., 2002`).
 
 Another example is the practice of keeping scores, grades, and anecdotal comments in a student's official school records. Ethical questions arise about who has authorized access to these files. Teachers and certain other persons have legitimate rights to obtain necessary information from them to help teach a given student. Many schools have forms or other means to keep records of who has used a student's records and for what purposes. Usually a student's test scores and other records cannot be transferred to another institution without that student (or parents') written authorization. Unlike the informal peer-grading situation cited in the preceding paragraph, the Family Rights and Privacy Act covers official school records.
 
@@ -3129,13 +3182,17 @@ Wagging tongues in teacher's lounges are still another way confidentiality can b
 
 ## Informed Consent
 
-Privacy is not violated if persons give consent to others to obtain and use personal information. Without going into a detailed ethical analysis of the matter, we shall state that there are at least four levels of consent (McCormick, 1974; O'Donnell, 1974): informed consent, presumed consent, implied consent, and proxy consent. Informed consent is obtained directly from the student and presumes that the student, in giving that consent, has received and understands the following information (Boruch, 1971): (a) the exact nature and extent to which personal information will remain anonymous, (b) to what extent participation is voluntary rather than required, (c) who (or what agency) is requesting the information and for what purpose, and (d) what will happen to the information after it is collected (including whether and/or when it will be destroyed). Obviously, few young students will be able to understand the implications of all of this information, so their consent may not be truly informed. Often consent must come from a proxy, such as a parent or a school official. The extent to which school officials can grant permission for collecting and using pupil information will depend, among other things, on the degree to which such consent is presumed or implied by the fact that students are entrusted to their care. This is sometimes referred to as representational consent.
+Privacy is not violated if persons give consent to others to obtain and use personal information. Without going into a detailed ethical analysis of the matter, we shall state that there are at least four levels of consent (`McCormick, 1974`; `O'Donnell, 1974`): informed consent, presumed consent, implied consent, and proxy consent. Informed consent is obtained directly from the student and presumes that the student, in giving that consent, has received and understands the following information (`Boruch, 1971`): (a) the exact nature and extent to which personal information will remain anonymous, (b) to what extent participation is voluntary rather than required, (c) who (or what agency) is requesting the information and for what purpose, and (d) what will happen to the information after it is collected (including whether and/or when it will be destroyed). Obviously, few young students will be able to understand the implications of all of this information, so their consent may not be truly informed. Often consent must come from a proxy, such as a parent or a school official. The extent to which school officials can grant permission for collecting and using pupil information will depend, among other things, on the degree to which such consent is presumed or implied by the fact that students are entrusted to their care. This is sometimes referred to as representational consent.
 
 ## ACCOMMODATIONS FOR STUDENTS WITH DISABILITIES
 
 ### Issues and Controversies
 
-Two Basic Concerns Standardized test accommodations for students with physical disabilities are less controversial than accommodations for students with cognitive disabilities such as learning disabilities (Phillips, 1994). One concern is the validity of the test result interpretations: If a test was administered under accommodating conditions, do the scores mean the same thing as the scores for students who took the test under standard conditions? Another concern is violation of students' privacy rights. Should the results for students administered the test under accommodating conditions be identified or flagged in the record or score report? There are no simple answers to either concern.
+
+
+Two Basic Concerns
+
+Standardized test accommodations for students with physical disabilities are less controversial than accommodations for students with cognitive disabilities such as learning disabilities (Phillips, 1994). One concern is the validity of the test result interpretations: If a test was administered under accommodating conditions, do the scores mean the same thing as the scores for students who took the test under standard conditions? Another concern is violation of students' privacy rights. Should the results for students administered the test under accommodating conditions be identified or flagged in the record or score report? There are no simple answers to either concern.
 
 ### Validity of Scores From Accommodations
 
@@ -3163,6 +3220,8 @@ It is sometimes possible to report two results: The student's performance under 
 
 ### The Purposes of Assessment Help in Designing Accommodations
 
+
+
 If the purpose of testing is to assess a student's knowledge and ability in a subject such as social studies or mathematics, then it may be appropriate for a student with a severe reading disability to have a reader. In this case, the concepts, principles, and procedures of the subject are independent of the printed medium in which they are presented on the test. Thus it is logical for you to assess a student's understanding of them through an appropriate accommodation. If you can reasonably argue that reading is not part of the knowledge and ability being assessed, you could also argue that poor readers who do not have learning disabilities should also have their mathematics and social studies tests read to them. Under this scenario, it would be considered fair, for example, to provide a reader for both students with learning disabilities and for poor readers.
 
 ### Problems Will Remain
@@ -3175,18 +3234,19 @@ If you provide accommodations, such as reading the test items to students, there
 
 From a strict measurement perspective, in which the validity of the testing program is a primary concern, the following questions might be considered:
 
-- 1. Will changes in format or testing conditions change the skill being measured?
-- 2. Will the scores of examinees tested under standard conditions have a different meaning than scores for examinees tested with the requested accommodation?
-- 3. Would nondisabled examinees benefit if allowed the same accommodations?
-- 4. Does the disabled examinee have any capacity for adjusting to standard test administration conditions?
-- 5. Is the disability evidence or testing accommodation policy based on procedures with doubtful validity and reliability? (Phillips, 1994, p. 104)
+1. Will changes in format or testing conditions change the skill being measured?
+2. Will the scores of examinees tested under standard conditions have a different meaning than scores for examinees tested with the requested accommodation?
+3. Would nondisabled examinees benefit if allowed the same accommodations?
+4. Does the disabled examinee have any capacity for adjusting to standard test administration conditions?
+5. Is the disability evidence or testing accommodation policy based on procedures with doubtful validity and reliability? (Phillips, 1994, p. 104)
 
 Phillips argues that if you answer yes to any of these questions, a test accommodation is not appropriate, because it would compromise the validity of the test results. She points out the potential conflict between providing maximum participation in society for persons with disabilities and maintaining test validity. You should be cautious when interpreting yes answers to these five questions. A mean-spirited or a misinformed person could respond yes and be wrong. Further, answering some of these questions would demand valid research results that do not exist. Nevertheless, the point that validity of assessment is a prime issue is an important consideration.
 
 ### Measurement Experts Can Disagree
 
-Not all would agree, however, with Phillips' conclusions. For example, even though accommodations may change the skill assessed and/or the meaning of the scores (see Questions 1 and 2), such changes may be more, rather than less, valid. Phillips' argument assumes that administering the test under standard conditions is the criterion against which accommodations should be judged. It also assumes that the skill or ability assessed by the test under standard conditions is the relevant skill and ability to be assessed. These assumptions may not be correct. For example, reading short passages and answering questions under timed standard conditions (the typical reading comprehension test) is not the ultimate learning target for education, nor is it a direct assessment of "real-world" reading. Accommodations to the standard test conditions may change both the skill required and the meaning of the results in a more positive direction. This, in turn, may make the accommodated test results more like the ultimate learning targets in the real world. This is more likely to be the case as the Americans with Disabilities Act of 1990 begins to alter the conditions,
 
+
+Not all would agree, however, with Phillips' conclusions. For example, even though accommodations may change the skill assessed and/or the meaning of the scores (see Questions 1 and 2), such changes may be more, rather than less, valid. Phillips' argument assumes that administering the test under standard conditions is the criterion against which accommodations should be judged. It also assumes that the skill or ability assessed by the test under standard conditions is the relevant skill and ability to be assessed. These assumptions may not be correct. For example, reading short passages and answering questions under timed standard conditions (the typical reading comprehension test) is not the ultimate learning target for education, nor is it a direct assessment of "real-world" reading. Accommodations to the standard test conditions may change both the skill required and the meaning of the results in a more positive direction. This, in turn, may make the accommodated test results more like the ultimate learning targets in the real world. This is more likely to be the case as the Americans with Disabilities Act of 1990 begins to alter the conditions,
 
 适应模式，以及工作场所中的态度。判断评估结果有效性的依据会随着时间的推移而发生变化，因为我们对残疾人士的能力和贡献了解得越来越多。例如，对于许多工作和现实生活中的情况，使用便利措施（如延长使用时间）的阅读是被允许且可以接受的。
 
@@ -3203,11 +3263,11 @@ Not all would agree, however, with Phillips' conclusions. For example, even thou
 - 1. 准备一份书面说明，说明学生（家长）应如何申请评估便利措施。通过确保学生和家长了解这些说明来保护学生的正当程序权利。
 - 2. 准备一份申请便利措施的标准表格，并清楚说明如何退回表格以及截止日期。
 - 3. 要求申请便利措施的学生（家长）提供其残疾的证明。要求：
-- a. 验证描述残疾的专业人员的资格和与残疾相关的经验。
-- b. 由合格专业人员签署的信函，说明所需便利措施的类型。
-- c. 专业人员向你提供用于做出诊断的测试结果和程序。
-- d. 验证专业人员在过去 12 个月内进行了面对面评估。
-- e. 对存疑案件提供额外文件，包括专业人员资格的文件和要求提供学生医疗记录。
+  - a. 验证描述残疾的专业人员的资格和与残疾相关的经验。
+  - b. 由合格专业人员签署的信函，说明所需便利措施的类型。
+  - c. 专业人员向你提供用于做出诊断的测试结果和程序。
+  - d. 验证专业人员在过去 12 个月内进行了面对面评估。
+  - e. 对存疑案件提供额外文件，包括专业人员资格的文件和要求提供学生医疗记录。
 - 4. 确定学生的个别化教育计划是否要求特定的便利措施。
 - 5. 如果你将对便利评估产生的分数进行标记，请以书面形式通知学生和/或家长。要求他们签署声明，证明已收到通知。
 - 6. 指定一名专业工作人员审查并处理所有申请。聘请合格的顾问处理边界案例。
@@ -3218,9 +3278,13 @@ Not all would agree, however, with Phillips' conclusions. For example, even thou
 - 11. 受《1991 年残疾人教育法》、1973 年《康复法》第 504 条和 1990 年《美国残疾人法案》保护的学生可能不得被要求支付额外的服务和便利措施费用。
 - 12. 使你的便利措施政策制度化或合法化，以便在多年人员变动时得以维持。不要依赖某一个人的善意来实施政策。
 
-警告 前述建议旨在保护教育当局和评估组织免受法律诉讼，同时确保残疾学生的正当程序。它们似乎将证明残疾和证明所需便利措施的沉重责任放在学生及其法定监护人身上。它们似乎也置于对抗性背景中，而非调解或合作背景。
+### 警告
 
-课堂评估与外部评估 在你的课堂上，你不必如此正式。然而，请确保以本章概述的法律适当方式看待评估修改。如果家长对你的评估和学生评价做法提出质疑，你将能够在法律指南的范围内为你的做法辩护，本章对此进行了总结。
+前述建议旨在保护教育当局和评估组织免受法律诉讼，同时确保残疾学生的正当程序。它们似乎将证明残疾和证明所需便利措施的沉重责任放在学生及其法定监护人身上。它们似乎也置于对抗性背景中，而非调解或合作背景。
+
+### 课堂评估与外部评估
+
+在你的课堂上，你不必如此正式。然而，请确保以本章概述的法律适当方式看待评估修改。如果家长对你的评估和学生评价做法提出质疑，你将能够在法律指南的范围内为你的做法辩护，本章对此进行了总结。
 
 ## 测试在法庭上受到挑战
 
@@ -3232,42 +3296,35 @@ Not all would agree, however, with Phillips' conclusions. For example, even thou
 
 法庭上提出的某些问题集中在测试的技术方面。我们称之为心理测量问题。以下测试方面在与毕业考试等高风险测试相关的法庭上受到质疑（Fisher, 1980; Langenfeld & Crocker, 1994; Mehrens & Popham, 1992; Phillips, 1994; personal communication, 2001）。它们似乎也适用于涉及其他测试的许多法院案件。
 
-- 1. 测试安全。原告和特殊利益团体可能希望在测试使用之前了解测试内容。与此相关的问题是测试安全、适用的州和联邦“阳光”法律以及“测试真实性”立法。
-- 2. AERA、APA 和 NCME 标准。AERA、APA 和 NCME（1999）标准在本章前面提到过。当不利影响是一个问题时，也使用《员工选拔程序统一指南》（EEOC, CSC, DL, & DJ, 1978）。这些指南可能不严格适用于学生测试和教师资格认证（S. E. Phillips, personal communication, 1999）。EEOC 指南仅适用于就业测试。学生测试受美国宪法第十四修正案管辖。一些法律意见认为，要求许可的州并非作为雇员行事。虽然不是法律文件，但《标准》确实代表了专业共识意见和价值观，即构成良好测试开发实践的内容。原告有时使用这些标准作为反对特定测试或测试项目质量或使用的依据。
-- 3. 信度。（参见第 4 章。）原告可能会挑战测试信度数据的大小或使用特定技术来确定信度的适当性。
-- 4. 有效性和学习机会。（参见第 3 章。）对于旨在证明最低能力的教育测试，测试内容与课堂教授内容的关系很可能受到挑战。（这有时被称为课程相关性或课程有效性。）
 
 
+## 法院中提出的心理测量学问题
 
-
-
+1. 测试安全。原告和特殊利益团体可能希望在测试使用之前了解测试内容。与此相关的问题是测试安全、适用的州和联邦“阳光”法律以及“测试真实性”立法。
+2. AERA、APA 和 NCME 标准。AERA、APA 和 NCME（1999）标准在本章前面提到过。当不利影响是一个问题时，也使用《员工选拔程序统一指南》（EEOC, CSC, DL, & DJ, 1978）。这些指南可能不严格适用于学生测试和教师资格认证（S. E. Phillips, personal communication, 1999）。EEOC 指南仅适用于就业测试。学生测试受美国宪法第十四修正案管辖。一些法律意见认为，要求许可的州并非作为雇员行事。虽然不是法律文件，但《标准》确实代表了专业共识意见和价值观，即构成良好测试开发实践的内容。原告有时使用这些标准作为反对特定测试或测试项目质量或使用的依据。
+3. 信度。（参见第 4 章。）原告可能会挑战测试信度数据的大小或使用特定技术来确定信度的适当性。
+4. 有效性和学习机会。（参见第 3 章。）对于旨在证明最低能力的教育测试，测试内容与课堂教授内容的关系很可能受到挑战。（这有时被称为课程相关性或课程有效性。）
 5. 测试开发程序。测试开发的每个阶段都可能在特定情况下受到挑战：测试计划、题目编写者的资格、题目与目标之间的对应关系、可读性水平、选择题的正确选项和备选选项、试测和实地程序、扫描和报告的正确性，以及为减少或最小化文化、种族、性别和/或地区偏见而采取的步骤。
-
 6. 及格分数。设定及格分数存在多种方法，所有这些方法都可能受到原告的攻击。如果一个拥有法律授权的大型团体通过遵循可接受的标准设定实践来设定及格分数，则此类攻击可能不会成功（参见 Jaeger, 1989, 1990; Mehrens & Popham, 1992）。
-
 7. 机械性问题。原告可以批评测试的机械性方面，例如管理说明和指导的质量、墨水颜色、印刷大小（某些州对特定年级有相关法律），以及测试的其他物理特征。
-
 8. 对残疾人的便利安排。患有精神或身体残疾的原告如果被拒绝适当的便利安排，可以挑战一项测试。便利安排包括进入测试室的通道以及表 5.2 中列出的便利安排。
-
 9. 使用英语测试。如果测试不是学生的第一语言，原告可能会挑战该测试，尤其是如果学生只有有限的机会学习英语。
 
 ## 法院中提出的非心理测量学问题
 
 非心理测量学问题是测试使用中寻求法律救济的基础，包括：
 
-- 1. 法律授权。原告可能会挑战一项测试或测试项目，并非主要基于测试质量的高低，而是基于该项目是否已获得法律授权，或负责测试决策的人员是否有法律授权这样做。
-- 2. 学校中的隔离。在这里，挑战可能是测试对得分较低的群体有偏见和/或它们反映并延续了学校中过去的隔离，从而降低了教育质量。因此，原告不应基于测试结果被拒绝进入或认证。（测试偏见将在本章后面讨论。）
-- 3. 平等保护。如果测试用于制裁和奖励，其分配应使少数民族或贫困学生比例高的学校有与少数民族或贫困学生比例低的学校同等的机会获得这些奖励（Parkes & Stephens, 2002）。
-- 4. 文凭的财产利益。其理论是“学生有权期望在通过所有课程的前提下获得文凭，任何对毕业要求的实质性变更都必须在不通知学生的情况下进行”（Fisher, 1980, p. 4）。在里程碑案件（Debra P et al. v. Turlington, 1984）中，关于佛罗里达最低能力毕业测试的案件中，法院裁定“文凭是受第十四修正案保护的财产权”（Phillips, 1994, p. 108）。
-
+1. 法律授权。原告可能会挑战一项测试或测试项目，并非主要基于测试质量的高低，而是基于该项目是否已获得法律授权，或负责测试决策的人员是否有法律授权这样做。
+2. 学校中的隔离。在这里，挑战可能是测试对得分较低的群体有偏见和/或它们反映并延续了学校中过去的隔离，从而降低了教育质量。因此，原告不应基于测试结果被拒绝进入或认证。（测试偏见将在本章后面讨论。）
+3. 平等保护。如果测试用于制裁和奖励，其分配应使少数民族或贫困学生比例高的学校有与少数民族或贫困学生比例低的学校同等的机会获得这些奖励（Parkes & Stephens, 2002）。
+4. 文凭的财产利益。其理论是“学生有权期望在通过所有课程的前提下获得文凭，任何对毕业要求的实质性变更都必须在不通知学生的情况下进行”（Fisher, 1980, p. 4）。在里程碑案件（Debra P et al. v. Turlington, 1984）中，关于佛罗里达最低能力毕业测试的案件中，法院裁定“文凭是受第十四修正案保护的财产权”（Phillips, 1994, p. 108）。
 5. 正当程序。这可能是实质性正当程序或程序性正当程序。实质性正当程序涉及要求的适当性（例如，通过教师认证测试）和目的（例如，保持高质量的教学）。程序性正当程序侧重于考生是否受到公平对待。公平包括提前通知考生要求、测试日期等；给予听证和上诉的机会；并确保听证会公平进行。最近的一个正当程序案件，GI Forum, et al. vs. Texas Education Agency, et al. (2000)，在美国地方法院审理。它集中于德克萨斯学术技能评估作为毕业要求的用途是否对德克萨斯州少数民族学生产生不利影响并违反了美国宪法下的正当法律程序权利。法院维持了将该测试用于此类目的的用途。
 
-《2001 年不让一个孩子掉队法》（Public Law 107–110, 2001）要求各州根据学校随时间的测试表现对学校实施制裁和奖励。其中一些可能出现的正当程序法律挑战是（Parkes & Stephens, 2002）：
+   《2001 年不让一个孩子掉队法》（Public Law 107–110, 2001）要求各州根据学校随时间的测试表现对学校实施制裁和奖励。其中一些可能出现的正当程序法律挑战是（Parkes & Stephens, 2002）：
 
-- a. 缺乏充分通知——一到四年可能不足以实施制裁。
-- b. 让学校对其人口统计负责而非教师的表现——例如惩罚贫困儿童比例高的学校。
-- c. 缺乏对构成成就指数的内容以及其在奖励或制裁决策中被赋予的权重的合理性证明。
-
+   - a. 缺乏充分通知——一到四年可能不足以实施制裁。
+   - b. 让学校对其人口统计负责而非教师的表现——例如惩罚贫困儿童比例高的学校。
+   - c. 缺乏对构成成就指数的内容以及其在奖励或制裁决策中被赋予的权重的合理性证明。
 6. 污名化。测试结果可能被用来拒绝文凭或证书或给某人贴标签。原告的挑战可能是此类由测试产生的行为是非法的，因为它们使某人蒙羞，尤其是如果该案件可以与种族或性别偏见联系起来。
 
 请注意，在测试使用和滥用的问题上，特定法律的适用很少是明确的。法院判决取决于特定案件的特定情况、案件中提出的证据以及相关法官和陪审团的意见。
@@ -3278,53 +3335,47 @@ Not all would agree, however, with Phillips' conclusions. For example, even thou
 
 围绕各种决策评估适用性的一个关注点是特定评估是否对特定群体有偏见。究竟什么是“有偏见的评估”并不总是清楚，因为媒体和专业文献中存在许多评估或测试偏见的定义。有时讨论偏见的人可能同时想到多种类型的偏见，尽管他们可能没有区分类型。以下评估偏见的定义目录改编自 Flaugher (1978)。
 
-## 评估偏见作为平均差异
+### 评估偏见作为平均差异
 
 许多人使用偏见作为平均差异的方法。根据这种方法，当某个群体的平均（均值）分数低于另一个群体的平均分数时，评估就会对该特定群体有偏见。（均值在附录 1 中解释。）大多数评估专家不会认同这种偏见定义，因为群体表现的平均差异可能代表其成就水平的真实差异，而非人为差异。偏见意味着“不公平”或“不公正”。因此，差异作为差异可能并不代表偏见。如果一个群体接受了劣质教育或被社会化为远离学习或发展某些技能，衡量这些内容的测试很可能会导致该群体相对于有机会或被鼓励学习的其他群体的平均分数较低。
 
 尽管群体均值的差异不一定表明评估程序有偏见，但也不应轻视。这种差异可能表明群体受到不公平对待（没有平等机会获得所评估的能力），因此发展出不同的能力水平。然而，这样的群体均值差异也可能意味着评估程序有偏见。换句话说，多种因素可能导致群体之间的均值差异，包括有偏见的评估。不幸的是，仅知道存在此类差异并不能解释其原因。
 
-## 评估偏见作为项目功能差异（DIF）
+### 评估偏见作为项目功能差异（DIF）
 
 与其研究群体之间的平均总分差异，一些评估开发者研究个体测试项目或评估任务层面的差异。单个测试问题可能偏向一个群体而非另一个群体；但整体评估可能不会显示任何差异。这里的方法不是简单地查看项目表现的总体平均差异。相反，它涉及查看能力相同的人在项目上的表现是否不同。例如，你会研究低能力男孩与低能力女孩的比较、平均能力男孩与平均能力女孩的比较，以及高能力男孩与高能力女孩的比较。如果这些比较显示能力相同的两组学生在任务上的表现不同，这可能表明该任务有偏见。然而，正如平均总测试分数不一定证实测试有偏见一样，这些项目差异也不一定证实项目有偏见。换句话说，测试项目在两个群体中的功能可能不同，但可能没有明显偏见。因为这些差异并不能证明偏见，评估专家将这些差异称为项目功能差异（DIF）而不是项目偏见。
 
-## 评估偏见作为分数的误读
+### 评估偏见作为分数的误读
 
 当某人试图对学生的表现做出超出评估内容领域的 inappropriate 推断时，偏见作为分数的误读就会渗入评估结果的解释中（Cole, 1978; Cole & Moss, 1989）。例如，说一个女性在涉及男性郊区经历知识的两步算术应用题上遇到困难是一回事；将其表现解释为女性算术推理技能低于男性的指标是另一回事。后一种解释超出了内容领域，需要比粗略的证据更多的证据来支持该解释无偏见的说法。
 
-## 评估偏见作为性别歧视和种族主义内容：表面偏见
+### 评估偏见作为性别歧视和种族主义内容：表面偏见
 
-表面偏见是评估任务和材料中冒犯性的刻板印象语言和图片的使用。我们的文化一直是白人、男性主导的盎格鲁中心文化。一个目标是通过在评估（和其他）材料中使用语言和图片不延续这种形象。你可以根据评估任务（和其他材料）是否代表男性或女性、白人或非白人，以及内容是否描绘某些角色刻板印象来判断其内容。表 5.4 显示了一套用于此类判断的标准。在这里描述的偏见定义下，如果评估的任务延续了不良的角色刻板印象、种族刻板印象或性别刻板印象，则该评估是有偏见的。对评估内容冒犯性的这种判断可以称为表面偏见（Cole & Nitko, 1981）。表 5.4 中的标准已被应用于成就测试和智力测试。职业兴趣清单中存在种族和性别表面偏见的特殊关注。目标不是生产没有面孔、无性别、无族裔的评估材料。相反，是以平衡、无冒犯和公平的方式在这些材料中代表性别和族裔群体。
+表面偏见是评估任务和材料中冒犯性的刻板印象语言和图片的使用。我们的文化一直是白人、男性主导的盎格鲁中心文化。一个目标是通过在评估（和其他）材料中使用语言和图片不延续这种形象。你可以根据评估任务（和其他材料）是否代表男性或女性、白人或非白人，以及内容是否描绘某些角色刻板印象来判断其内容。表 5.4 显示了一组用于此类判断的标准。在这里描述的偏见定义下，如果评估的任务延续了不良的角色刻板印象、种族刻板印象或性别刻板印象，则该评估是有偏见的。对评估内容冒犯性的这种判断可以称为表面偏见（Cole & Nitko, 1981）。表 5.4 中的标准已被应用于成就测试和智力测试。职业兴趣清单中存在种族和性别表面偏见的特殊关注。目标不是生产没有面孔、无性别、无族裔的评估材料。相反，是以平衡、无冒犯和公平的方式在这些材料中代表性别和族裔群体。
 
-## 评估偏见作为差异效度
+### 评估偏见作为差异效度
 
 预测效度是指测试估计某人在称为标准量的第二项测量上的可能地位的程度（见第 3 章）。评估偏见中感兴趣的标准通常是某种工作或学校成功度量。在偏见作为差异效度的定义下，如果评估对一组人（例如白人）的标准分数预测得比另一组（例如非裔美国人）更好，则该评估是有偏见的（Cole & Moss, 1989）。“公平”或无偏见的评估将，
-
-
 
 
 
 ## 表5.4 判断测评任务是否存在种族和性别偏见的标准。
 
 性别表征：项目在多大程度上可以被描述为代表男性或女性。
-
-+   1. 图像类项目。项目描绘了哪种性别？检查的特征包括着装、头发长度、面部特征和化妆（例如，婴儿头发上的发夹意味着插图呈现的是女性）。
-+   2. 语言类项目。名词和代词表明性别：他/她、他/她、约翰/简（例如，“Marion bought a bell for his bike，”描述的是男性）。
++ 1. 图像类项目。项目描绘了哪种性别？检查的特征包括着装、头发长度、面部特征和化妆（例如，婴儿头发上的发夹意味着插图呈现的是女性）。
++ 2. 语言类项目。名词和代词表明性别：他/她、他/她、约翰/简（例如，“Marion bought a bell for his bike，”描述的是男性）。
 
 性别角色刻板印象：项目在多大程度上可以被描述为描绘了男性或女性刻板角色。男性角色刻板印象项目将男性描绘为聪明、强壮、精力充沛、粗犷、推动历史发展、机械能力强、专业、有名等。女性角色刻板印象项目将女性描绘为家庭主妇、被动、普遍不活跃、哭泣、外表吸引人且缺乏智力。
-
-+   1. 图像类项目。图片是否说明了性别角色刻板印象？（例如，女人做饭、小女孩玩娃娃、男人提着野餐篮护送女人去公园、男人观看接触性运动、或男孩调皮捣蛋）。
-+   2. 语言类项目。项目是否包含性别角色刻板印象的陈述？（例如，问题：“谁发明了电灯泡？”[男性角色刻板印象]或故事主题：兄妹得到一匹马，男孩骑马而姐姐观看并在男孩摔进泥里时笑[女性角色刻板印象]）。[当几乎所有问题都代表单一性别的负面刻板印象，而非性别成就的平衡时，就暗示存在偏见。]
++ 1. 图像类项目。图片是否说明了性别角色刻板印象？（例如，女人做饭、小女孩玩娃娃、男人提着野餐篮护送女人去公园、男人观看接触性运动、或男孩调皮捣蛋）。
++ 2. 语言类项目。项目是否包含性别角色刻板印象的陈述？（例如，问题：“谁发明了电灯泡？”[男性角色刻板印象]或故事主题：兄妹得到一匹马，男孩骑马而姐姐观看并在男孩摔进泥里时笑[女性角色刻板印象]）。[当几乎所有问题都代表单一性别的负面刻板印象，而非性别成就的平衡时，就暗示存在偏见。]
 
 种族表征：项目在多大程度上可以被描述为代表白人或非白人。
-
-+   1. 图像类项目。诸如肤色、眼睛形状和颜色、头发颜色和质地等身体特征是否多样化？
-+   2. 语言类项目。需要识别的著名人物是否来自不同种族（例如，乔治·华盛顿、马丁·路德·金 Jr.）？
++ 1. 图像类项目。诸如肤色、眼睛形状和颜色、头发颜色和质地等身体特征是否多样化？
++ 2. 语言类项目。需要识别的著名人物是否来自不同种族（例如，乔治·华盛顿、马丁·路德·金 Jr.）？
 
 种族角色刻板印象：项目在多大程度上可以被描述为描绘了白人或非白人角色刻板印象。白人角色刻板印象项目将白人描绘为富有、技术或学术训练有素、专业、聪明、倾向于学术或智力追求。图片或语言主题显示白人操作诸如听诊器之类的仪器或测量横梁。非白人角色刻板印象项目将非白人描绘为贫穷、无技能、运动型（例如拳击手、橄榄球线卫）、文化原始且宗教异教。
-
-+   1. 图像类项目。是否描绘了角色刻板印象（例如，白人男性高管、东方苦力、美洲原住民战士和黑人男服务员）？
-+   2. 语言类项目。语言内容或故事主题是否代表角色刻板印象（例如，“谁写了《哈姆雷特》？”）？
++ 1. 图像类项目。是否描绘了角色刻板印象（例如，白人男性高管、东方苦力、美洲原住民战士和黑人男服务员）？
++ 2. 语言类项目。语言内容或故事主题是否代表角色刻板印象（例如，“谁写了《哈姆雷特》？”）？
 
 > 来源：摘自 L. Zoref 和 P. Williams 的“A look at content bias in IQ tests”，1980 年，《Journal of Educational Measurement》，17，页 313-322。版权 1980。国家测量教育委员会，华盛顿特区。经出版商许可改编。
 
@@ -3357,23 +3408,17 @@ Not all would agree, however, with Phillips' conclusions. For example, even thou
 ## 测试公平性的可能未来方向
 
 正如前面的讨论所建议的那样，并不是只有一个测试偏见或评估公平性的定义。你可以从所有这些方法中看到的一个共同点是，测试偏见和测试公平性反映了测试效度。公平的测试（评估）是提供分数的测试，（a）对特定目的进行适当解释和使用，（b）由于其解释或使用方式不会产生负面或不利后果，并且（c）促进适当价值观。未来，评估开发者需要关注四个问题来使评估工具更公平（Cole & Zieky, 2001）：
-
-+   1. 通过在开发过程中早期控制要评估的构念、评估它们的格式以及要包含的具体问题来减少群体差异。
-+   2. 认识到由于任何一项评估仅包含对最终学习目标的有限代表，学生的成绩可能无法通过特定程序很好地评估。
-+   3. 开发识别评估误用的方法以及如何处理这些误用。
-+   4. 开发适应个别学生的程序，认识到可能需要不同的方法来评估不同学生的相同成绩。
++ 1. 通过在开发过程中早期控制要评估的构念、评估它们的格式以及要包含的具体问题来减少群体差异。
++ 2. 认识到由于任何一项评估仅包含对最终学习目标的有限代表，学生的成绩可能无法通过特定程序很好地评估。
++ 3. 开发识别评估误用的方法以及如何处理这些误用。
++ 4. 开发适应个别学生的程序，认识到可能需要不同的方法来评估不同学生的相同成绩。
 
 ## 总结
 
 教师在评估中的专业责任
-
-+   - 你对课堂评估的制定、使用和报告结果的方式负有专业、道德和法律责任。
-+   - 专业协会已制定了道德和专业责任守则。《教育测量专业责任守则》（附录 C）就是其中之一。
-+   - 你在评估活动的六个主要领域负有道德和专业责任：（a）制定评估，（b）选择评估，（c）实施评估，（d）评分评估，（e）解释和使用评估结果，以及（f）传达评估结果。
-
-
-
-
++ - 你对课堂评估的制定、使用和报告结果的方式负有专业、道德和法律责任。
++ - 专业协会已制定了道德和专业责任守则。《教育测量专业责任守则》（附录 C）就是其中之一。
++ - 你在评估活动的六个主要领域负有道德和专业责任：（a）制定评估，（b）选择评估，（c）实施评估，（d）评分评估，（e）解释和使用评估结果，以及（f）传达评估结果。
 
 在制定评估程序时，你的专业责任是制定一个与预期目的高度契合且可靠性程度与使用结果所做决策的严重性相适应的程序。
 
@@ -3384,6 +3429,8 @@ Not all would agree, however, with Phillips' conclusions. For example, even thou
 在担任委员会成员为学区或州评估项目选择标准化测试时，你有专业责任了解（a）教育评估质量特征，（b）AERA、APA 和 NCME 标准以及《教育公平测试实践守则》，（c）用于评估教育评估的程序和标准，以及（d）类似评估在其他地方的使用方式及其后果。
 
 在向学生施测时，你有专业责任（a）提前充分通知学生评估，（b）向学生提供关于评估覆盖范围以及施测条件的完整信息，以及（c）以专业的方式进行评估，鼓励每位学生尽力而为。
+
+
 
 在施测标准化或州强制性测试时，你有专业责任（a）充分告知学生测试及其目的，（b）严格遵循施测说明，（c）维护必要的测试安全，（d）保持有利于最大程度发挥表现的测试条件，（e）为残疾学生提供必要的便利，以及（f）避免作弊、教授测试题目的具体答案以及不道德的测试准备做法。
 
@@ -3472,29 +3519,26 @@ Not all would agree, however, with Phillips' conclusions. For example, even thou
 
 1. 以下每条陈述描述了教师制定评估程序的情况。阅读每条陈述并判断是否发生了专业责任的违反。做出判断后，写出证明你判断的解释。与班级其他成员讨论你的发现。
 
-- a. 琼斯夫人每周五在社会研究课安排一次短测。她在学期开始时宣布此事，每位学生都知道这将发生。她在周五早上上课前草拟问题并复印分发。她从未上过评估课程，也从未读过关于如何改进评估的书籍。
-- b. 罗伯茨先生教科学。他的班级里有一名聋学生。安排测试时，他提前几天将测试副本交给学生的手语翻译，翻译简化了问题的语言但保留了技术或科学术语。当其他学生参加测试时，聋学生在另一间房间由其手语翻译施测，翻译将问题手语传达给学生。
+   - a. 琼斯夫人每周五在社会研究课安排一次短测。她在学期开始时宣布此事，每位学生都知道这将发生。她在周五早上上课前草拟问题并复印分发。她从未上过评估课程，也从未读过关于如何改进评估的书籍。
+   - b. 罗伯茨先生教科学。他的班级里有一名聋学生。安排测试时，他提前几天将测试副本交给学生的手语翻译，翻译简化了问题的语言但保留了技术或科学术语。当其他学生参加测试时，聋学生在另一间房间由其手语翻译施测，翻译将问题手语传达给学生。
 
 2. 以下每条陈述描述了教师选择或帮助选择其未开发的评估程序的情况。阅读每条陈述并判断是否发生了专业责任的违反。做出判断后，写出证明你判断的解释。与你的班级讨论你的发现。
 
-- a. 史密斯先生教生物学。他的教师指南附带一份涵盖他刚讲授章节材料的印刷选择题测试。他提前几天将测试交给办公室秘书复印。在他要施测的那天，他查看测试以制作答案键。他发现 40 道题中有 10 道涵盖了他未讲授或未彻底教授的材料。他用第一节课的 15 分钟教授这些概念，然后进行测试。全部 40 道题计入学生成绩。
-- b. 威廉姆斯先生教历史。他的班级使用的教科书作者提供多项选择单元测试。其中一名学生在成绩返还后带回家。学生的父亲查看后注意到，在 40 道题中有 5 道题，根据教科书中的信息，他的儿子答案正确但被威廉姆斯先生判为错误。他写信给威廉姆斯先生描述情况并引用教科书页码支持其主张。威廉姆斯先生回信说测试由教科书作者编写并已出版，因此质疑题目正确性是荒谬的。他拒绝重新考虑题目或重新评分试卷。
+   - a. 史密斯先生教生物学。他的教师指南附带一份涵盖他刚讲授章节材料的印刷选择题测试。他提前几天将测试交给办公室秘书复印。在他要施测的那天，他查看测试以制作答案键。他发现 40 道题中有 10 道涵盖了他未讲授或未彻底教授的材料。他用第一节课的 15 分钟教授这些概念，然后进行测试。全部 40 道题计入学生成绩。
+   - b. 威廉姆斯先生教历史。他的班级使用的教科书作者提供多项选择单元测试。其中一名学生在成绩返还后带回家。学生的父亲查看后注意到，在 40 道题中有 5 道题，根据教科书中的信息，他的儿子答案正确但被威廉姆斯先生判为错误。他写信给威廉姆斯先生描述情况并引用教科书页码支持其主张。威廉姆斯先生回信说测试由教科书作者编写并已出版，因此质疑题目正确性是荒谬的。他拒绝重新考虑题目或重新评分试卷。
 
 3. 以下每条陈述描述了教师施测评估的情况。阅读每条陈述并判断是否发生了专业责任的违反。做出判断后，写出证明你判断的解释。与你的班级讨论你的发现。
 
+   - a. 戈登先生喜欢出“突击”测验或惊喜测验来让学生“保持警惕”。
+   - b. 斯塔文斯基夫人认为她被要求进行的阅读标准化测试进度过快。因此她给学生额外增加了10分钟。她没有向任何人报告此事。
 
+4. 以下每个陈述都描述了教师评分评估的情况。阅读每个陈述并判断是否发生了违反职业责任的行为。写出解释以证明你的决定。与班级其他成员讨论你的发现。
 
-
-
-+   a. 戈登先生喜欢出“突击”测验或惊喜测验来让学生“保持警惕”。
-
-+   b. 斯塔文斯基夫人认为她被要求进行的阅读标准化测试进度过快。因此她给学生额外增加了10分钟。她没有向任何人报告此事。
-
-## 4. 以下每个陈述都描述了教师评分评估的情况。阅读每个陈述并判断是否发生了违反职业责任的行为。写出解释以证明你的决定。与班级其他成员讨论你的发现。
-
-+   a. 艾普尔顿夫人是一名流动聋人教育教师，她协助山景高中主流化学生的教育。比利·戴维是一名她为其使用适当的 sign 语言进行标准化成绩测试的聋人高年级学生。她知道比利的成绩将被发送给聋人后继学校，他们将把成绩作为录取决定的部分。在手工评分测试时，她注意到比利的成绩出乎意料地低。她回顾了他答错的问题并对自己说：“我知道他其实知道这些答案。”于是她更改了约25%问题的答案以给他更高的分数。她为自己的行为辩解说
+   - a. 艾普尔顿夫人是一名流动聋人教育教师，她协助山景高中主流化学生的教育。比利·戴维是一名她为其使用适当的 sign 语言进行标准化成绩测试的聋人高年级学生。她知道比利的成绩将被发送给聋人后继学校，他们将把成绩作为录取决定的部分。在手工评分测试时，她注意到比利的成绩出乎意料地低。她回顾了他答错的问题并对自己说：“我知道他其实知道这些答案。”于是她更改了约25%问题的答案以给他更高的分数。她为自己的行为辩解说
 
 ## Additional Readings
+
+
 
 Fischer, R. J. (1994). The Americans with Disabilities Act: Implications for measurement. Educational Measurement: Issues and Practice, 13(4), 17–26, 37.
 
@@ -3512,76 +3556,75 @@ Mehrens, W. A., & Popham, W. J. (1992). How to evaluate the legal defensibility 
 
 These articles review federal legislation and case law in concerning what test developers need to do to ensure tests are legally defensible, especially for high-stakes decisions.
 
-## Crafting and Using Classroom Assessments
+# Crafting and Using Classroom Assessments
 
-+   6 PLANNING FOR INTEGRATING ASSESSMENT AND INSTRUCTION
-+   7 COMPLETION, SHORT-ANSWER, AND TRUE-FALSE ITEMS
-+   8 MULTIPLE-CHOICE AND MATCHING EXERCISES
-+   9 ESSAY ASSESSMENT TASKS
-+   10 HIGHER-ORDER THINKING, PROBLEM-SOLVING, AND CRITICAL THINKING
-+   11 PERFORMANCE, PORTFOLIO, AND AUTHENTIC ASSESSMENTS: AN OVERVIEW
-+   12 HOW TO CRAFT PERFORMANCE TASKS, PROJECTS, PORTFOLIOS, RATING SCALES, AND SCORING RUBRICS
-+   13 FORMATIVE EVALUATION USING INFORMAL DIAGNOSTIC ASSESSMENTS
-+   14 PREPARING YOUR STUDENTS TO BE ASSESSED AND USING STUDENTS’ RESULTS TO IMPROVE YOUR ASSESSMENTS
-+   15 EVALUATING AND GRADING STUDENT PROGRESS
+- 6 PLANNING FOR INTEGRATING ASSESSMENT AND INSTRUCTION
+- 7 COMPLETION, SHORT-ANSWER, AND TRUE-FALSE ITEMS
+- 8 MULTIPLE-CHOICE AND MATCHING EXERCISES
+- 9 ESSAY ASSESSMENT TASKS
+- 10 HIGHER-ORDER THINKING, PROBLEM-SOLVING, AND CRITICAL THINKING
+- 11 PERFORMANCE, PORTFOLIO, AND AUTHENTIC ASSESSMENTS: AN OVERVIEW
+- 12 HOW TO CRAFT PERFORMANCE TASKS, PROJECTS, PORTFOLIOS, RATING SCALES, AND SCORING RUBRICS
+- 13 FORMATIVE EVALUATION USING INFORMAL DIAGNOSTIC ASSESSMENTS
+- 14 PREPARING YOUR STUDENTS TO BE ASSESSED AND USING STUDENTS’ RESULTS TO IMPROVE YOUR ASSESSMENTS
+- 15 EVALUATING AND GRADING STUDENT PROGRESS
 
 ## Planning for Integrating Assessment and Instruction
 
-## LEARNING TARGETS
+### LEARNING TARGETS
 
 After studying this chapter, you should have learned the following:
 
-## Making Your Own Assessments Improves Your Teaching
+### Making Your Own Assessments Improves Your Teaching
 
-+   1. Describe several ways in which learning to craft assessment tools can improve your teaching. [1, 2]
+- 1. Describe several ways in which learning to craft assessment tools can improve your teaching. [1, 2]
 
-## Are You Assessing for Formative or Summative Purposes?
+### Are You Assessing for Formative or Summative Purposes?
 
-+   2. Describe and give examples of common formative and summative uses of assessment results. [4, 1, 3]
+- 2. Describe and give examples of common formative and summative uses of assessment results. [4, 1, 3]
 
-## Assessment Planning for a Marking Period
+### Assessment Planning for a Marking Period
 
-+   3. Craft a formative and summative assessment plan for a marking period. [1, 2, 4]
+- 3. Craft a formative and summative assessment plan for a marking period. [1, 2, 4]
 
-## Assessment Planning for One Unit of Instruction
+### Assessment Planning for One Unit of Instruction
 
-+   4. Design a formative and summative assessment plan for one unit of instruction. [1, 2, 3]
+- 4. Design a formative and summative assessment plan for one unit of instruction. [1, 2, 3]
+- 5. Explain how to integrate assessment and instruction through an assessment plan. [1, 2, 4]
 
-+   5. Explain how to integrate assessment and instruction through an assessment plan. [1, 2, 4]
+### Pretesting to Plan Your Teaching
 
-## Pretesting to Plan Your Teaching
+- 6. Use a preinstruction framework to craft an instrument for assessing students prior to teaching a unit in your area. [2, 1]
 
-+   6. Use a preinstruction framework to craft an instrument for assessing students prior to teaching a unit in your area. [2, 1]
+### Crafting a Plan for One Summative Assessment
 
-## Crafting a Plan for One Summative Assessment
+- 7. Craft a blueprint for a summative assessment instrument for a unit in your area. [2, 1]
+- 8. Explain the major decisions you make when crafting your summative assessment blueprint. [2, 1]
+- 9. Apply the validity criteria from Chapter 3 to the classroom assessment instrument described by your blueprint. [2, 1, 3, 7]
 
-+   7. Craft a blueprint for a summative assessment instrument for a unit in your area. [2, 1]
+### Blueprints for Student-Centered Assessment
 
-+   8. Explain the major decisions you make when crafting your summative assessment blueprint. [2, 1]
+- 10. Describe how sharing your summative assessment blueprint improves the student-centeredness of the assessment.
 
-+   9. Apply the validity criteria from Chapter 3 to the classroom assessment instrument described by your blueprint. [2, 1, 3, 7]
+### Criteria for Improving Assessment Plans
 
-## Blueprints for Student-Centered Assessment
+- 11. Apply the criteria in Table 6.2 to improve your assessment plans.
 
-+   10. Describe how sharing your summative assessment blueprint improves the student-centeredness of the assessment.
+### What Assessment Options are Available to You?
 
-## Criteria for Improving Assessment Plans
+- 12. State the advantages and disadvantages of commonly used formative and summative assessment techniques. [4, 1, 3]
 
-+   11. Apply the criteria in Table 6.2 to improve your assessment plans.
+### Validity of Different Assessment Options
 
-## What Assessment Options are Available to You?
 
-+   12. State the advantages and disadvantages of commonly used formative and summative assessment techniques. [4, 1, 3]
 
-## Validity of Different Assessment Options
+### 13. Describe the potential validity of using the results from each of the common assessment techniques. [4, 1, 3, 6]
 
-+   13. Describe the potential validity of using the results from each of the common assessment techniques. [4, 1, 3, 6]
-
-+   14. Explain why no single assessment technique should be used for all classroom decisions. [1, 3, 6, 7]
+### 14. Explain why no single assessment technique should be used for all classroom decisions. [1, 3, 6, 7]
 
 ## Important Terms and Concepts
 
-+   15. Explain how each of the terms and concepts found at the end of this chapter may be applied to the creation of plans for assessment and instruction in your classroom. [6]
+### 15. Explain how each of the terms and concepts found at the end of this chapter may be applied to the creation of plans for assessment and instruction in your classroom. [6]
 
 ## ABOUT THIS CHAPTER
 
@@ -3593,25 +3636,29 @@ This chapter focuses on how to improve your assessment planning, first by discus
 
 You can expect the following benefits to your teaching as your assessment-crafting skills improve.
 
-+   1. Knowing how to choose or to craft quality assessments increases the quality of your teaching decisions. By assessing how your students use their knowledge and skills, you are able to monitor and evaluate their progress. This allows you to plan better teaching.
-
-+   2. What and how you assess communicates in a powerful way what you really value in your students’ learning. For example, you may tell your students how important it is for them to be independent and critical thinkers, but your words are empty if your assessments consist of only a few matching exercises based on facts from the textbook or handouts. On the other hand, if your assessments require students to integrate their knowledge and skills to solve “real-life” problems, they learn that you expect them to develop integrating and problem-solving abilities.
-
-+   3. When you carefully define assessment tasks, you are clarifying what you want students to learn. When you craft assessment tasks, you learn how to create situations in which students can demonstrate their achievement. These skills apply directly to your teaching, because to teach effectively you must have clearly in mind how students should demonstrate their achievement.
-
-+   4. You use your knowledge of how to craft quality assessment tasks when you evaluate assessment materials available from other sources. Your knowledge of the craft will also help you evaluate and become a critical consumer of assessment procedures, whether they are part of your curriculum materials or are imposed by or on your school district, such as standardized achievement tests and state-mandated assessments.
-
-+   5. Learning to craft assessment tasks increases your freedom to design lessons (Stiggins, Rubel, & Quellmalz, 1986). Knowing how to assess students validly, especially in relation to higher-order thinking skills, means that you are no longer chained to the assessment procedures already prepared by textbook publishers and others. You can use a wider variety of teaching strategies because you are able to assess students using your own assessment procedures.
-
-+   6. You will improve the validity of your interpretations and uses of assessment results. Research shows that teachers who have studied assessment, either through coursework or in-service training, are able to recognize and produce better assessments (Boothroyd, McMorris, & Pruzek, 1992; Plake, Impara, & Fager, 1993).
-
-+   7. You will improve your appreciation of the strengths and limitations of each type of assessment procedure. As a professional, you must have the knowledge and skill to independently evaluate proposed assessment approaches. You must evaluate their general educational value and their technical quality. Without both evaluations, you cannot determine whether these approaches can make good on the promises implied by their promoters. To fulfill your professional responsibility, you need a solid foundation in the basic principles of assessment development and in the criteria for valid use of the assessment results.
++ 1. Knowing how to choose or to craft quality assessments increases the quality of your teaching decisions. By assessing how your students use their knowledge and skills, you are able to monitor and evaluate their progress. This allows you to plan better teaching.
 
 
 
+## 2. What and how you assess communicates in a powerful way what you really value in your students’ learning
+For example, you may tell your students how important it is for them to be independent and critical thinkers, but your words are empty if your assessments consist of only a few matching exercises based on facts from the textbook or handouts. On the other hand, if your assessments require students to integrate their knowledge and skills to solve “real-life” problems, they learn that you expect them to develop integrating and problem-solving abilities.
 
+## 3. When you carefully define assessment tasks, you are clarifying what you want students to learn
+When you craft assessment tasks, you learn how to create situations in which students can demonstrate their achievement. These skills apply directly to your teaching, because to teach effectively you must have clearly in mind how students should demonstrate their achievement.
 
-## 你是在为形成性还是总结性目的进行评估？
+## 4. You use your knowledge of how to craft quality assessment tasks when you evaluate assessment materials available from other sources
+Your knowledge of the craft will also help you evaluate and become a critical consumer of assessment procedures, whether they are part of your curriculum materials or are imposed by or on your school district, such as standardized achievement tests and state-mandated assessments.
+
+## 5. Learning to craft assessment tasks increases your freedom to design lessons
+*Stiggins, Rubel, & Quellmalz, 1986*. Knowing how to assess students validly, especially in relation to higher-order thinking skills, means that you are no longer chained to the assessment procedures already prepared by textbook publishers and others. You can use a wider variety of teaching strategies because you are able to assess students using your own assessment procedures.
+
+## 6. You will improve the validity of your interpretations and uses of assessment results
+Research shows that teachers who have studied assessment, either through coursework or in-service training, are able to recognize and produce better assessments *Boothroyd, McMorris, & Pruzek, 1992; Plake, Impara, & Fager, 1993*.
+
+## 7. You will improve your appreciation of the strengths and limitations of each type of assessment procedure
+As a professional, you must have the knowledge and skill to independently evaluate proposed assessment approaches. You must evaluate their general educational value and their technical quality. Without both evaluations, you cannot determine whether these approaches can make good on the promises implied by their promoters. To fulfill your professional responsibility, you need a solid foundation in the basic principles of assessment development and in the criteria for valid use of the assessment results.
+
+# 你是在为形成性还是总结性目的进行评估？
 
 需要牢记的一个主要问题是，你必须为形成性和总结性目的进行评估，但通常使用不同的评估方法。我们在第1章中介绍了这些概念。在本章中，我们讨论如何将它们应用于评估规划。表6.1显示了课堂评估结果的常见用途。这些用途被组织成三组：形成性、总结性和其他。
 
@@ -3620,13 +3667,15 @@ You can expect the following benefits to your teaching as your assessment-crafti
 形成性评估用途帮助你在学习仍在进行时指导或监控学生的学习。你使用各种正式和非正式的评估结果来做出形成性决策。一般来说，形成性评估不太正式。虽然你可以记录这些评估的结果以帮助记忆，但你不会用它们来报告官方的字母等级或成绩进展。（正如你从表中可以看到的，每种形成性用途都有助于你规划教学内容和方式。）
 
 ### 摸底用途
+
 通常，你使用最非正式的评估来进行摸底目的。摸底是指在课程或学年开始时对学生的优势、劣势、学习特征和个性形成总体印象。以下示例说明了一位教师如何整合各种非正式获得的信息来摸底五年级学生Joslyn：
 
-> Joslyn每天带着担忧和疲惫的表情走进教室。称赞她的工作，或即使是最小的积极行动，也会在她脸上绽放笑容，尽管影响很短暂。她注意力不集中，即使我们在全班一起逐步进行的练习中也是如此。她很害羞，但有时会要求帮助，但在她给自己机会之前，她会把头埋在桌子上闭上眼睛。我不知道她为什么严重缺乏动力。也许是化学失衡或家里有问题。她可能整年都会这样。（Airasian, 1991a, p. 37）
+> Joslyn每天带着担忧和疲惫的表情走进教室。称赞她的工作，或即使是最小的积极行动，也会在她脸上绽放笑容，尽管影响很短暂。她注意力不集中，即使我们在全班一起逐步进行的练习中也是如此。她很害羞，但有时会要求帮助，但在她给自己机会之前，她会把头埋在桌子上闭上眼睛。我不知道她为什么严重缺乏动力。也许是化学失衡或家里有问题。她可能整年都会这样。*Airasian, 1991a, p. 37*
 
 你可以看到，这位教师使用了关于Joslyn的认知、情感和精神运动特征的信息。教师对Joslyn的印象有助于形成如何教她以及如何在课堂上对待她的总体策略。
 
 ### 其他形成性用途
+
 通常，你做出需要高质量信息的其他形成性决策。这些包括诊断个别学生的学习需求、诊断群体的学习需求以及规划教学。第13章详细讨论了诊断。这些决策也在本书的前两章中描述过。我们在这里提到它们是为了强调在正确做出这些决策时使用有效信息的需求。当然，当你仔细规划评估时，你的评估有效性会提高。
 
 表6.1 课堂评估结果使用的基本目的示例。
@@ -3637,13 +3686,22 @@ You can expect the following benefits to your teaching as your assessment-crafti
 | C. 诊断群体的学习需求帮助教师确定全班整体的学习进展，可能需要加强或重新教授的内容，以及何时可以进入新的学习。 |
 | D. 规划教学用途帮助教师设计和实施适当的教学和学习活动，决定包含或强调的内容，以及组织和管理课堂作为学习环境。 |
 | II. 总结性用途帮助教师在教授一门课程的一个或多个单元后评估学生的学习。 |
-| A. 为成绩单分配等级是一种教师记录对每个学生学习进展的评估以向学生、他们的父母和负责的教育当局传达评估的方式。 |
-| B. 将学生分入补救和高级课程是教师在教学以小组为基础时试图根据个人需求调整教学的方式。成绩不佳的学生可能会被分入提供替代或补充教学的补救班，这种教学更适合学生的当前教育发展水平。同样，教育发展高于班级其他学生的学生可能会被分入更高水平或更丰富的班级。 |
-| C. 评估自己的教学要求教师回顾学生在课程完成后能够展示的学习，确定哪些课程对哪些学生是成功的，并制定教学策略的修改方案，以便下次教授这些课程时能提高学生的表现。 |
-| III. 其他用途有助于一般教学，但可能与评估个人没有直接联系。 |
-| A. 将评估程序用作教学工具是教师将评估过程用作教学策略的方式。例如，教师可能会给出练习测试或“模拟考试”以帮助学生了解评估中使用的任务类型，练习以期望的方式回答和记录答案，或提高他们响应的速度。在某些情况下，所评估的表现与期望的学习目标相同或几乎相同，因此“练习评估”就相当于教授期望的学习目标。 |
-| B. 控制学生的行为是一种用途，教师希望通过使用评估工具上的表现作为学生问责的载体来激励学生学习和学习。对学生而言，评估的利害关系越高，“取得好成绩”或“通过”评估的激励就越大。一些教师认为，如果没有这种外部奖励，学生就不会学习和掌握材料。 |
-| C. 向学生传达成绩期望是一种用途，教师帮助学生明确在学习完成后他们期望能够执行的内容。这可以通过展示实际的评估任务或通过回顾以前学生在特定评估任务上的各种表现水平或程度来实现，以便当前学生清楚地了解对他们的学习期望。 |
+
+
+
+### A. 为成绩单分配等级是一种教师记录对每个学生学习进展的评估以向学生、他们的父母和负责的教育当局传达评估的方式。
+
+### B. 将学生分入补救和高级课程是教师在教学以小组为基础时试图根据个人需求调整教学的方式。成绩不佳的学生可能会被分入提供替代或补充教学的补救班，这种教学更适合学生的当前教育发展水平。同样，教育发展高于班级其他学生的学生可能会被分入更高水平或更丰富的班级。
+
+### C. 评估自己的教学要求教师回顾学生在课程完成后能够展示的学习，确定哪些课程对哪些学生是成功的，并制定教学策略的修改方案，以便下次教授这些课程时能提高学生的表现。
+
+### III. 其他用途有助于一般教学，但可能与评估个人没有直接联系。
+
+### A. 将评估程序用作教学工具是教师将评估过程用作教学策略的方式。例如，教师可能会给出练习测试或“模拟考试”以帮助学生了解评估中使用的任务类型，练习以期望的方式回答和记录答案，或提高他们响应的速度。在某些情况下，所评估的表现与期望的学习目标相同或几乎相同，因此“练习评估”就相当于教授期望的学习目标。
+
+### B. 控制学生的行为是一种用途，教师希望通过使用评估工具上的表现作为学生问责的载体来激励学生学习和学习。对学生而言，评估的利害关系越高，“取得好成绩”或“通过”评估的激励就越大。一些教师认为，如果没有这种外部奖励，学生就不会学习和掌握材料。
+
+### C. 向学生传达成绩期望是一种用途，教师帮助学生明确在学习完成后他们期望能够执行的内容。这可以通过展示实际的评估任务或通过回顾以前学生在特定评估任务上的各种表现水平或程度来实现，以便当前学生清楚地了解对他们的学习期望。
 
 ## 评估的总结性目的
 
@@ -3657,7 +3715,7 @@ You can expect the following benefits to your teaching as your assessment-crafti
 
 牢记你需要为形成性和总结性评估进行规划，下一个需要考虑的问题是计划的期限。你可以为一年、一个学期、一个评分期、一个单元或一节课进行规划。你对教学较大部分的计划将比对较小部分的计划更不详细。
 
-一年或一个学期的计划列出了你将用于教学和评估的总体方法和策略。这样的计划包含你将教授的主题大纲、学生将达到的总体学习目标以及你将用于评估他们的<|message|> 主要策略。
+一年或一个学期的计划列出了你将用于教学和评估的总体方法和策略。这样的计划包含你将教授的主题大纲、学生将达到的总体学习目标以及你将用于评估他们的主要策略。
 
 评分期的计划通常适用于两到三个教学单元。评分期是你必须教授的周数，然后你需要为每个学生的成绩单准备成绩。在典型的学年中，评分期由九周组成。教学单元是涵盖从一到七周课程的教学序列，具体取决于你教授的学生和主题。你使用教学单元的计划将更大的课程分解并组织成可管理的教学、学习和评估序列。一次规划多个单元可以让你对单元进行排序，并保持你的教学和评估方法一致。它还允许你描述你的形成性和总结性评估计划。
 
@@ -3671,11 +3729,7 @@ You can expect the following benefits to your teaching as your assessment-crafti
 
 为了激发你对评估规划的思考，让我们看一个简单的示例。因为这是一本评估书籍，我们将强调规划的评估方面，但你的规划也将包括教学联系。假设你正在教授中学科学。进一步假设你正在为一个九周的评分期进行规划。也许你计划教授两个单元：一个关于水循环，一个关于天气和天气系统。对于每个单元，你将概述你将涵盖的内容要点、单元的总体顺序和时间安排，以及最重要的，学生将从每个单元获得的学习目标。你的计划开始成形。
 
-你需要在教学方面做更多规划。你需要回答以下问题：你将采用什么总体方法和教学策略？水循环和天气单元相关；你将如何让学生清楚这一点？你需要创建和使用什么类型的学习活动（例如，创建演示
-
-
-
-of condensation, cloud simulation, building a diorama of the water cycle, drawing weather maps, measuring variables related to weather such as wind speed and precipitation, collecting and reading weather maps, or conducting a weather prediction activity?)
+你需要在教学方面做更多规划。你需要回答以下问题：你将采用什么总体方法和教学策略？水循环和天气单元相关；你将如何让学生清楚这一点？你需要创建和使用什么类型的学习活动（例如，创建演示 of condensation, cloud simulation, building a diorama of the water cycle, drawing weather maps, measuring variables related to weather such as wind speed and precipitation, collecting and reading weather maps, or conducting a weather prediction activity?）
 
 你的教学计划必须包括学生评价。你将如何评价学生对学习目标的达成情况？你的形成性评价的总体策略是什么？也许你计划了一些课堂活动和练习，以便让你评估学生的进展情况。这些也能让你给学生适当的反馈。也许你计划了家庭作业练习。这些可以让你评估学生是否掌握了基本概念。你的思考应包括计划评估的频率。例如，在课程的哪些时间点布置家庭作业或测验是合适的？
 
@@ -3691,11 +3745,11 @@ of condensation, cloud simulation, building a diorama of the water cycle, drawin
 
 ## 一个教学单元的评价规划
 
-## 为一个教学单元制定评价计划
+### 为一个教学单元制定评价计划
 
 为一个单元设计评价计划会更详细一些。你需要列出课程序列和学习目标。然后你需要选择将使用哪些评价方法。最后，你应确定你需要使用每种类型的原因、评价与课程的关系，以及在获得学生成绩信息后你将采取什么行动。
 
-## 一个单元的评价计划示例
+### 一个单元的评价计划示例
 
 示例6.2展示了示例6.1中一个科学单元的评价计划示例。当你研究示例6.2时，请记住它包含了教师在决定进行哪些评价时可能使用的所有思考。你的计划可能没有如此详细，因为思考仍在你的脑海中。重要的一点是，你可以解释何时以及为何使用不同的评价方法，你将评价方法与它们适用的学习目标相匹配，并且你能说明在收集信息后将采取什么教学行动。评价如果在看到结果时不采取行动就是无用的。
 
@@ -3710,7 +3764,13 @@ of condensation, cloud simulation, building a diorama of the water cycle, drawin
 在一个评分期内教授两个小学科学单元的长期计划。
 
 |  |  |
+
 |---|---|
+
+
+
+|  |  |
+| --- | --- |
 | Unit 1. The Water Cycle |  |
 | General learning target: | Understanding what the water cycle is, how it works, and how it helps living things. Ability to explain the water cycle and apply it to real life. |
 | Time frame: | It will take two weeks to complete. |
@@ -3734,26 +3794,29 @@ of condensation, cloud simulation, building a diorama of the water cycle, drawin
 
 当你为一个单元规划教学时，你必须考虑的不仅仅是覆盖材料。在大多数学科中，学生带到单元中的是与将要教授的主题密切相关的知识、经验、技能、信念和态度的复杂组合。如果你了解你的
 
-
-
-
-
-# 示例 6.2
+### 示例 6.2
 
 一个教学单元的评价活动计划。
 
 | 评价技术 | 评价目的、活动和后续行动的描述（用途） |
-| 更具形成性 | |
+| --- | --- |
+| 更具形成性 |  |
 | 前测 | 在开始本单元大约一周前，我会进行一次非常简短的前测，以了解学生对天气的态度、经历、知识和信念。（参见图 6.3。）行动：我将利用这些信息帮助我在课堂上开展讨论，设计克服学生对天气的误解和恐惧的课程，并在学生已有的知识基础上进行拓展。 |
-|  | 第 1 课 理解基本天气概念 | 第 2 课 区分天气模式和系统 | 第 3 课 识别当地天气状况和模式 | 第 4 课 使用基本工具测量天气 | 第 5 课 理解和绘制天气图 | 第 6 课 收集和记录当地天气数据 | 第 7 课 利用数据预测当地天气 |
+|  | 第 1 课 理解基本天气概念；第 2 课 区分天气模式和系统；第 3 课 识别当地天气状况和模式；第 4 课 使用基本工具测量天气；第 5 课 理解和绘制天气图；第 6 课 收集和记录当地天气数据；第 7 课 利用数据预测当地天气 |
 | 观察和口头提问 | 在每一节课中，我都会观察学生并在课上提问，以评估他们对材料的反应如何，他们似乎对日常活动和作业的理解程度如何，以及他们是否对我们正在研究的天气概念存在误解。行动：如果大多数班级有困难，我会调整教学。如果只有少数人遇到困难，我会单独、小组或请另一名学生来教授该概念。 |
 | 家庭作业 | 我会在每节课后布置家庭作业。家庭作业活动将侧重于观察和发现天气概念在现实世界中的实例。学生将记录他们的观察结果，并使用本单元学到的规范科学语言写出解释。行动：当我阅读学生的家庭作业回答时，我会为每位学生记录其使用科学语言讨论天气的准确性和流畅程度。我还会评估他们的观察和记录技能。如果许多学生遇到困难，我会重新教授这些材料。如果只有少数人有困难，我会单独辅导他们。 |
-| 小测验 | 小测验 1（涵盖第 1 课）：测试基本词汇的简答题 行动：未掌握基本概念的学生将接受再教学。 | 小测验 2（涵盖第 2 和 3 课）：带部分图表的简答题。重点是天气模式：地方性、全国性和国际性。行动：我将利用此小测验监测学生对天气模式和系统的理解。我会根据结果决定是否重新教学或继续进行。 | 小测验 3（涵盖第 4 课）：这将是一项表现活动。我希望确保每位学生都能准确使用天气测量工具并能正确记录数据。行动：我会当场纠正错误。 | 小测验 4（涵盖第 5 课）：我希望学生能够阅读、解释和绘制简单的天气图。我会给学生提供天气数据，要求他们使用天气数据绘制适当的地图。我还会提供已绘制的地图，要求学生进行解释。行动：如果出现问题，我会重新教学。 |
+| 小测验 | 小测验 1（涵盖第 1 课）：测试基本词汇的简答题 行动：未掌握基本概念的学生将接受再教学。<br>小测验 2（涵盖第 2 和 3 课）：带部分图表的简答题。重点是天气模式：地方性、全国性和国际性。行动：我将利用此小测验监测学生对天气模式和系统的理解。我会根据结果决定是否重新教学或继续进行。<br>小测验 3（涵盖第 4 课）：这将是一项表现活动。我希望确保每位学生都能准确使用天气测量工具并能正确记录数据。行动：我会当场纠正错误。<br>小测验 4（涵盖第 5 课）：我希望学生能够阅读、解释和绘制简单的天气图。我会给学生提供天气数据，要求他们使用天气数据绘制适当的地图。我还会提供已绘制的地图，要求学生进行解释。行动：如果出现问题，我会重新教学。 |
 | 独立探究（表现性评价） | 预测天气（第 4 课后开始，包含第 5 和 6 课）：此表现性评价将帮助我评估学生是否能将课程概念应用于现实世界。它将帮助我评估他们是否能综合并使用标准来评估收集的数据。学生将收集和测量天气数据，记录数据，并利用数据预测未来两天的当地天气。他们将每天重复此练习至少两周。他们将独立工作。他们将准备一份报告，描述他们做了什么并评估其探究及其准确性。行动：这是一种总结性评价类型。我将利用此练习帮助我判断学生在本单元中学习概念和原理的程度如何。我应该能很好地了解学生是否能将课堂所学应用于实践 |
+
+
+
 | 单元末测试 | 单元测试（涵盖所有课程）。这将在所有课程结束后进行。这是一份在课堂上进行的纸笔测试。（我可能会分两天进行。）它将是全面的，涵盖单元中大部分重要的学习目标。行动：我将利用本次测试的结果以及家庭作业、小测验、绘图和独立探究的结果为学生在本单元的成绩打分。（权重见示例 6.1。） |
+
 | 更具总结性 | |
 
-在教授学生之前了解学生的思维，你就可以在此基础上构建教学。学生的信念往往与你将要教授的内容相悖。即使你在介绍信息后，学生的信念也可能不会改变。如果学生不相信你所教授的内容，那么他们就不会将新概念整合到现有的思维方式中，未来也无法应用这些信息。例如，年轻人知道穿毛衣会让他们感到温暖。在教授关于隔热性能的科学单元时，你可能会教授空气具有隔热性能。如果你问年轻人用毛衣包裹一瓶冷饮料后会发生什么，许多人可能会说它会变得很暖。如果你告诉他们它会保持冰冷，许多人不会相信你，因为他们知道毛衣会让他们感到温暖。了解这一点后，你的教学必须包括活动，通过建立在他们先前的经验和知识之上来改变学生的信念。你的教学必须提供真实的演示和全面的解释——例如，为什么毛衣会让学生感到温暖而让软饮料保持凉爽——在那之前，教学才能改变他们的信念。
+## 在教授学生之前了解学生的思维
+
+你就可以在此基础上构建教学。学生的信念往往与你将要教授的内容相悖。即使你在介绍信息后，学生的信念也可能不会改变。如果学生不相信你所教授的内容，那么他们就不会将新概念整合到现有的思维方式中，未来也无法应用这些信息。例如，年轻人知道穿毛衣会让他们感到温暖。在教授关于隔热性能的科学单元时，你可能会教授空气具有隔热性能。如果你问年轻人用毛衣包裹一瓶冷饮料后会发生什么，许多人可能会说它会变得很暖。如果你告诉他们它会保持冰冷，许多人不会相信你，因为他们知道毛衣会让他们感到温暖。了解这一点后，你的教学必须包括活动，通过建立在他们先前的经验和知识之上来改变学生的信念。你的教学必须提供真实的演示和全面的解释——例如，为什么毛衣会让学生感到温暖而让软饮料保持凉爽——在那之前，教学才能改变他们的信念。
 
 ## 构建工具的框架
 
@@ -3763,19 +3826,19 @@ of condensation, cloud simulation, building a diorama of the water cycle, drawin
 
 图 6.1 中的工作适用于多个学科。它使用六类信息。它最初是为中学科学开发的。
 
-## 元认知技能的前测
+### 元认知技能的前测
 
 一些教师发现，对学生在执行学习活动时监控和控制自己思维的能力进行前测是有用的（Tittle, 1989；Tittle, Hecht, & Moore, 1993）。如果学生意识到学习一件事比另一件事更困难，如果他们习惯性地在接受为事实之前核查陈述，或者如果他们习惯性地在开始工作前计划工作，他们就是在使用元认知技能。你可能希望在教学前评估这些技能，以便更好地了解你的学生能够在多大程度上监控和控制他们对本单元作业的思考。你可能希望将教授部分元认知技能整合到单元中。有关如何操作的细节见附录 F
 
-## 制定一项总结性评价的计划
+### 制定一项总结性评价的计划
 
 本节关注一个评价目的：利用结果帮助为学生评分。这是重要的责任，你不应仅基于一次测试来做出此决定。第 15 章将详细讨论评分的策略和技巧。然而在本节中，我们的重点更窄——如何为此总结性目的制定一份正式评价工具的计划。
 
-## 组织蓝图
+### 组织蓝图
 
 在制定工具之前，你需要制作一个蓝图。蓝图描述了评价应涵盖的内容以及
 
-### 图 6.1 制定学生对主题的态度、知识、信念和经历的书面评价的框架。
+#### 图 6.1 制定学生对主题的态度、知识、信念和经历的书面评价的框架。
 
 | 评估领域 | 示例问题 |
 |---|---|
@@ -3788,13 +3851,9 @@ of condensation, cloud simulation, building a diorama of the water cycle, drawin
 
 > 来源：改编自 “Instructional assessments: Lever for Systematic change in science education classrooms.” B. Gong, R. Venezky, and D. Mioduser, 1992, Journal of Science Education and Technology, 1(3), pp. 164–165. 经 Plenum Publishing Corporation 和作者许可改编。
 
-
-
-
-
 # 图 6.2 科学单元形成性评价蓝图的示例。
 
-认知目标分类法的[content]
+认知目标分类法的
 
 # 图 6.2 科学单元形成性评价蓝图的示例。
 
@@ -3808,11 +3867,11 @@ of condensation, cloud simulation, building a diorama of the water cycle, drawin
 
 蓝图的主体列出了具体的学习目标。学习目标因此同时按内容主题和分类法类别的复杂程度两个维度进行分类。在此示例中，大多数学习目标处于分类法的低、中层级。对于不同的重点，你将使用蓝图来确定写入其他评价目标的单元格。
 
-## 严格分类是不必要的
+### 严格分类是不必要的
 
 将学习目标和题目归类到某些分类法的类别中是困难的。然而，这种评价规划方法仍然有用。正式列出这种双向网格的目的并不是促进精确或严格的分类。相反，它是一个工具，帮助你回忆课堂上需要系统教授和评价的高阶认知技能。
 
-## 蓝图规定评价重点
+### 蓝图规定评价重点
 
 图 6.2 中蓝图中的数字描述了评价的重点，既以总任务数的百分比表示，也以每个行或内容类别内任务的百分比表示。你在考虑 (a) 每个学习目标的重要性，(b) 任务类型，(c) 要评价的内容，(d) 你在教学中强调的内容，以及 (e) 可用于评价的时间后，才决定评价中包含多少任务。以下示例说明了图 6.2 中蓝图的制作方法。
 
@@ -3832,6 +3891,8 @@ of condensation, cloud simulation, building a diorama of the water cycle, drawin
 
 教师在归类所有学习目标并计算评价所需的所有题目后审阅了蓝图。教师注意到 25 (= 6 + 9 + 8 + 2) 道题将用于评价应用和综合等高阶思维层级。这意味着 63%（40 道中的 25 道）评价问题将涉及较高的分类层级，即使分类法的低层级有许多学习目标。此示例说明评价工具的权重或重点与某一类别中包含的任务或分数的数量有关，而与学习目标的数量无关。它反映了一些学习目标对学生总结性评价更为重要。
 
+
+
 教师对题目在主题、思维技能层级和学习目标之间的分布感到满意。如果教师不满意，计划可以更改以更好地反映教师想要的重点。
 
 学生会期望评价上的各种分数与课堂上用于该材料的时间以及他们认为你对该材料所放的重点相对应。如果你计划的评价不符合这一期望，似乎公平的做法是在实施前很久就通知学生这一事实。
@@ -3846,11 +3907,7 @@ of condensation, cloud simulation, building a diorama of the water cycle, drawin
 
 ## 随着时间的推移制作蓝图
 
-此处描述的评价规划程序工作量很大。鉴于还有许多其他责任和活动与你的时间竞争，你不可能总是
-
-
-
-follow them completely. Because the validity of your grading decisions is important, however, you need to use some type of systematic plan to develop unit assessments. But, you need not attempt to devise a formal plan for all units in one semester or year. If you develop a blueprint for a few units each year, after a few years most units will have blueprints. As the learning targets change, you can update these blueprints with less work than originally required. Also, several teachers could draft blueprints for different units in a subject and exchange them. Even if a colleague’s blueprint has to be modified to suit your particular teaching approach, you will likely save considerable time. When changes in the blueprints do occur, you should revise and redistribute the blueprints.
+此处描述的评价规划程序工作量很大。鉴于还有许多其他责任和活动与你的时间竞争，你不可能总是 follow them completely. Because the validity of your grading decisions is important, however, you need to use some type of systematic plan to develop unit assessments. But, you need not attempt to devise a formal plan for all units in one semester or year. If you develop a blueprint for a few units each year, after a few years most units will have blueprints. As the learning targets change, you can update these blueprints with less work than originally required. Also, several teachers could draft blueprints for different units in a subject and exchange them. Even if a colleague’s blueprint has to be modified to suit your particular teaching approach, you will likely save considerable time. When changes in the blueprints do occur, you should revise and redistribute the blueprints.
 
 ## Simplified Specifications
 
@@ -3876,6 +3933,8 @@ So far, we have discussed the first three steps. Step four is the subject of the
 
 In this section, we emphasize some of the general criteria for evaluating your own planned assessment. These include (a) matching tasks to learning targets, (b) covering important skills, (c) selecting appropriate assessment task formats, (d) making assessments understandable, (e) satisfying validity criteria, (f) using the appropriate length of the assessment, (g) ensuring equivalence, and (h) identifying appropriate complexity and difficulty of tasks.
 
+
+
 The discussion in this section necessarily will be general, because we assume that you are not yet familiar with the technical aspects of crafting an assessment. This section, however, will show how you can integrate the knowledge you have already acquired through studying this book into the initial planning stages of a classroom assessment. Table 6.2 summarizes the main points.
 
 ## Matching Assessment Tasks to Learning Targets
@@ -3893,6 +3952,11 @@ Assessment tasks must match the targets. For example, if a learning target calls
 | Use appropriate multiple assessment formats | • Become skilled in crafting many types of assessment formats.<br>• Learn the strengths and limitations of each type of assessment format.<br>• Analyze each learning target. Think: What are several different ways I can assess this achievement? How can I use two or more ways?<br>• Analyze the assessment tasks to identify which parts may not match the learning target. Eliminate or rewrite the nonmatching parts.<br>• Plan for assessing each important learning target in two or more ways. |
 | Make assessments understandable | • Be sure each assessment procedure has clear directions to the student, and that you have prepared students concerning each assessment. (See "Preparing Students for the Assessment" in Chapter 14.)<br>• Learn to craft assessments well so they will satisfy the criteria and checklists in the tables contained in Chapters 7, 8, 9, 10, 11, 12, and 14.<br>• Learn to craft scoring rubrics well so they will satisfy the criteria and checklists in the tables contained in Chapters 9 and 12. |
 | Follow appropriate validity criteria | • Use the criteria described in Chapter 3, Table 3.1. |
+
+
+
+| 评估方面 | 建议 |
+| --- | --- |
 | Use appropriate length of assessments | • Be sure all students who know the material can finish within the time limits.<br>• Follow the suggestions for improving reliability given in Chapter 4.<br>• Follow the guidelines in Table 6.3 until you have considerable experience with your students. |
 | Assure equivalence across years | • Use blueprints from previous years to guide you in crafting this year’s assessment blueprints.<br>• Be sure to make the difficulty and complexity of this year’s assessment tasks equivalent to last year’s tasks. |
 | Assure appropriate difficulty and complexity of assessment tasks | • Be sure the conditions and tools for students to use during the assessment are appropriate for the learning targets and the students’ educational development.<br>• Add appropriate accommodations for students with disabilities (see Table 5.2).<br>• Follow the guidelines in Table 6.4. |
@@ -3903,17 +3967,15 @@ As an example, consider the ninth-grade social studies learning target stated he
 
 Learning target: Students will explain in their own words the meaning of the concept of culture.
 
-+   Task 1. Name three things that are important to the culture of indigenous Americans.
-+   Task 2. Give a short talk to the class comparing three different cultures. In your talk, make sure you describe the similarities and differences among the cultures you have chosen.
-+   Task 3. Write a paragraph telling in your own words what is meant by the term culture.
++ Task 1. Name three things that are important to the culture of indigenous Americans.
+
++ Task 2. Give a short talk to the class comparing three different cultures. In your talk, make sure you describe the similarities and differences among the cultures you have chosen.
+
++ Task 3. Write a paragraph telling in your own words what is meant by the term culture.
 
 Only Task 3 matches the stated learning target. Consider Task 1: The performance required applies to a specific cultural situation rather than to the general concept of culture as intended by the learning target. Task 1 should not be used for the assessment of this learning target. The performances required in Task 2 are to "compare" and to "describe" ("giving a talk" is only the way the student has to indicate she is describing similarities and differences among the cultures). Although these are worthwhile activities, they seem to go beyond the more limited scope and main intent of the learning target. Because this task does not match the learning target, it should not appear on the assessment either.
 
-What should you do if you create or identify a "great" task that does not match the stated learning target? You have only three choices: Disregard the task, modify the task so it matches the learning target, or modify the learning target so it matches the task. Often, crafting an excellent assessment task helps further clarify a learning
-
-
-
-target: 我们看到了学习目标的完整含义，而这之前从其文字表述中并不清楚。如果情况如此，那么你应该修改所陈述的学习目标，使其更清晰地表达你的意图。
+What should you do if you create or identify a "great" task that does not match the stated learning target? You have only three choices: Disregard the task, modify the task so it matches the learning target, or modify the learning target so it matches the task. Often, crafting an excellent assessment task helps further clarify a learning target: 我们看到了学习目标的完整含义，而这之前从其文字表述中并不清楚。如果情况如此，那么你应该修改所陈述的学习目标，使其更清晰地表达你的意图。
 
 但要小心。如果您已经向学生传达了评估计划，就需要确保您不会用比他们为之准备的类型更复杂或更困难的任务来“惊讶”他们。中途更改规则通常是不道德的。通常，这保证了你会失去至少部分学生的尊重。与其完全放弃任务，你可以将其修改以适应所陈述的学习目标，或将其保留到下次教授该单元时使用。那时你可以更清晰地指定学习目标。
 
@@ -3927,28 +3989,28 @@ target: 我们看到了学习目标的完整含义，而这之前从其文字表
 
 我们在第3章（表3.1）中讨论的一个标准是让学生以多种方式展示其能力。因此，如果您使用几种任务格式，通常会提高评估结果的有效性。您可以选择的许多具体任务格式包括：
 
-- I. 纸笔格式
-- A. 选择格式（“客观”题目）
-- 1. 正确/错误（第7章）
-- 2. 多项选择（第8章和第10章）
-- 3. 配对练习（第8章）
-- 4. 其他格式（第8章）
-- B. 简答和填空格式（第7章）
-- C. 论文格式（第9章）
-- 1. 限制性回答
-- 2. 扩展性回答
-- II. 表现格式（第11章和第12章）
-- A. 核对表
-- B. 评分量表
-- C. 标志和分类系统
-- III. 长期活动格式（第11章和第12章）
-- A. 项目
-- B. 扩展性书面作业
-- C. 实验室练习
-- D. 作品集
-- IV. 个人交流格式（第10章和第13章）
-- A. 深入访谈、观察
-- B. 口头提问
++ I. 纸笔格式
+  + A. 选择格式（“客观”题目）
+    + 1. 正确/错误（第7章）
+    + 2. 多项选择（第8章和第10章）
+    + 3. 配对练习（第8章）
+    + 4. 其他格式（第8章）
+  + B. 简答和填空格式（第7章）
+  + C. 论文格式（第9章）
+    + 1. 限制性回答
+    + 2. 扩展性回答
++ II. 表现格式（第11章和第12章）
+  + A. 核对表
+  + B. 评分量表
+  + C. 标志和分类系统
++ III. 长期活动格式（第11章和第12章）
+  + A. 项目
+  + B. 扩展性书面作业
+  + C. 实验室练习
+  + D. 作品集
++ IV. 个人交流格式（第10章和第13章）
+  + A. 深入访谈、观察
+  + B. 口头提问
 
 在您的总结性测验中，尝试使用最能直接评估所陈述学习目标意图的格式混合。
 
@@ -3957,6 +4019,8 @@ target: 我们看到了学习目标的完整含义，而这之前从其文字表
 在规划和制作评估时，请记住，您需要向学生明确说明他们将如何以及何时被评估，他们需要做什么，以及何时以及如何进行评价。第14章“为评估做准备”中的一个章节描述了学生需要了解的有关您计划评估的一些信息。除此之外，您还希望确保对学生的指示、评估任务（例如您的测验问题）和评分量规（例如满分标准）对所有学生都可理解。国家教育进展评估中未作答的建构反应题的学生可能之所以不作答，是因为他们“搞不清楚问题在问什么”（第9页），“真的没理解问题”（第9页），“认为花费时间太长”（第9页），或“没有意识到[1]...必须完成两部分”（第10页）（Jakwerth, Stancavage, and Reed, 1999）。您可以通过清晰地撰写和向学生解释评估，并在学生开始之前确保学生理解来避免此类问题。
 
 ## 满足适当的效度标准
+
+
 
 判断您评估质量的主要标准是效度标准。在第3章中，我们讨论了课堂评估的七个效度标准类别：（a）内容代表性和相关性；（b）所代表的思维过程和技能；（c）与其他评估的一致性；（d）信度和客观性；（e）对不同类型学生的公平性；（f）经济性、效率、实用性和教学特征；以及（g）多次评估使用。具体的标准在表3.1中描述。在阅读的此时回顾这些标准，并用它们来评估您的评估计划和产品。在使用多种评估策略的规划阶段要特别注意。您需要给自己留出时间来制作这些。
 
@@ -3986,81 +4050,95 @@ target: 我们看到了学习目标的完整含义，而这之前从其文字表
 
 研究人员已确定最常用的课堂评估程序类型（Airasian, 1991b；Stiggins et al., 1992）。这些在表6.5中列出，连同其优势、局限性和改进使用的简要建议。技术分为两类：形成性评估技术和总结性评估技术。
 
-## 形成性评估选项
+### 形成性评估选项
 
 当您收集信息以帮助提高学生对学习目标的达成度时，您会从形成性评估选项中进行选择。此信息指导并微调您的思考。它主要是您用来规划下一步教学活动并诊断学生学习困难原因的信息。您必须在仍在教授材料且学生仍在学习时收集此信息。因此，这些是非正式的评估技术。也就是说，它们会随着您需要信息而自发发生，您很少会停止教学来进行评估。表6.5总结了八个形成性评估选项类别。这八个类别分为以下段落所述的三个组。
 
-口头评估技术 您可以在不制作测验或其他纸笔任务的情况下收集信息以改善学生的学习。与曾教过该学生的教师的交谈可能会让您了解学生的背景以及过去哪些方法有效。这些交谈在学期开始时评估班级情况时也可能有所帮助。与学生的交谈可让您进一步了解他们的感受、态度、兴趣和动机。
+#### 口头评估技术
+
+您可以在不制作测验或其他纸笔任务的情况下收集信息以改善学生的学习。与曾教过该学生的教师的交谈可能会让您了解学生的背景以及过去哪些方法有效。这些交谈在学期开始时评估班级情况时也可能有所帮助。与学生的交谈可让您进一步了解他们的感受、态度、兴趣和动机。
 
 在教授课程时，您会就材料向学生提问。这些问题应鼓励学生思考材料并揭示他们的理解，包括误解。这将帮助您指导教学。避免“背诵”式的提问，即您寻求对问题的简短回答。这种提问方式对学生的思维提供很少的洞察力，因此提供很少的形成性信息。避免只对害羞和不善言辞的学生忽视或只提简单问题（Brophy & Good, 1999）的倾向。
 
 规划口头提问的一个好方法是使用思维技能分类法。在每节课中，确保您提出分类法中高阶思维类别的几个问题。以下是教师可能会向学习短篇小说作为文学形式的学生提出的一些问题的示例：
 
-## Example
+### Example
 
 | 知识 | “我们上次读的故事中主角是谁？” |
+
 | 理解 | “这个故事中的角色需要解决哪些个人问题？” |
+
 | 应用 | “角色的问题是否在某种程度上与你或你认识的人遇到过的问题相似？请告诉我们。不要使用真实姓名，以免让当事人尴尬。” |
+
 | 分析 | “作者使用了哪些文学手法、写作风格或‘写作技巧’来帮助读者真正理解角色的感受？请解释这是如何做到的。” |
+
 | 综合 | “本学期迄今为止，我们读了八篇短篇小说。在每一篇中，一个角色（有时是两个角色）未能令人满意地解决他的或她的问题——尽管每个角色都试图这样做。为什么会这样？他们有什么共同点导致未能解决问题？所有这些角色使用了什么导致失败的一般问题解决办法？” |
+
 | 评价 | “我们可以应用哪些三到四个标准来评估所有故事的文学质量，以便比较和评价它们？” |
 
-
-
-
-
 | 评估替代方案 | 教师的优势 | 教师的劣势 | 形成性评估技术 | 改进使用的建议 |
+
 |---|---|---|---|---|
+
 | 1. 其他教师的谈话和评论 | (a) 快速获得学生背景信息的某些类型<br>(b) 允许同事分享对特定学生在其他学习情境中的经验，从而拓宽对学习者的视角 | (a) 倾向于强化对家庭或社会阶层在另一位教师或另一情境下的刻板印象和偏见。学习可能与其在当前情境中的学习大不相同。<br>(b) 他人的意见并不客观，往往基于不完整的信息、个人生活观或个人人格理论。 | (a) 学生的思维可能没有集中在正在评估的学习目标上。<br>(b) 对学生知识的抽样不足；评估的学生太少。<br>(c) 效率低下：学生的谈话可能与评估其成绩无关。 | (a) 不要相信道听途说、谣言、他人的偏见。<br>(b) 不要八卦或透露学生私人且保密的信息。<br>(c) 保持谈话在专业层面上，聚焦事实而非推测和保密，以免被他人 overhear。 |
+
 | 2. 与学生的非正式谈话 | (a) 提供轻松、非正式的环境来获取信息<br>(b) 学生可能会透露在课堂上未表现出的学习态度和动机。 | (a) 有些学生在其他学生面前表达能力不佳。<br>(b) 需要学会如何提问以及如何在课堂上计划提出特定类型的问题。<br>(c) 获取的信息往往只是学习成果和班级学生的少量样本。<br>(d) 有些学习目标无法通过即兴和简短的口头回应来评估，它们需要更长的时间框架，让学生自由思考、创造和回应。<br>(e) 对学生回应的记录仅保存在教师的脑海中，不可靠。 | (a) 不要显得像审讯者总是在探查学生。<br>(b) 小心不要误解学生的态度或理解程度。 | |
+
 | 3. 教学过程中提问学生 | (a) 允许对学生做出判断。<br>(c) 高阶的学生间互动可供讨论<br>(d) 允许评估学生口头与他人深入讨论问题的能力。 | (a) 确保向内向或反应缓慢的学生提问。避免只关注言语攻击性和讨人喜欢的“明星”。<br>(b) 在转向另一位学生之前，等待 5-10 秒让学生回应。<br>(c) 避免将问题局限于需要事实或确定正确答案的问题，从而适当地缩小评估的重点。<br>(d) 不要因学生未能参与课堂提问而惩罚学生，也不要因参与而给予不当奖励。<br>(e) 记住学生在课堂上的言语和非言语行为可能并不表明其真正的态度/价值观。 | |
+
 | 4. 每日家庭作业和座位作业 | (a) 提供关于学习进展的形成性信息。<br>(b) 允许诊断和纠正错误。<br>(c) 结合练习、强化和评估。 | (a) 倾向于关注学习的狭窄片段，而非整合技能和知识的大型综合体。<br>(b) 任何一次作业只抽样了少量内容和技能。<br>(c) 作业可能未完成或从他人处抄袭。 | (a) 记住其方法评估的只是处于形成阶段的学习。不应从结果中给出总结性的字母等级。<br>(b) 未完成家庭作业或迟交不是降低学生整体成绩的惩罚理由。学习随后可通过其他评估来证明。<br>(c) 不要不恰当地将考试表现不佳归因于学生未做家庭作业。<br>(d) 不要过度强调家庭作业成绩并过度使用家庭作业作为教学策略（例如，将其作为主要教学方法）。 | |
 
 表 6.5（续）
 
 5. 教师自编测验和测试
+
 (a) 虽然主要用于总结性评价，但它们可能允许诊断错误和缺陷并允许阐述答案。
+
 (c) 允许诊断缺陷。
-(b) 允许学生整合几种简单技能和知识以执行复杂的现实任务。
-(c) 允许小组和合作表现和评估。
-(d) 允许评估完成作业所使用的步骤。
 
-2. 聚焦程序和过程的任务
-(a) 完全专注于内容知识和认知技能。
-(b) 需要大量时间来正确制定、管理和评分。
-(c) 除非使用评分量规，否则评分者间信度可能很低。
-(d) 结果通常特定于学生和任务的组合。学生的表现质量很难在内容和任务之间推广。
-(e) 学生认为无趣、枯燥或无关的任务不会激发学生的最佳努力。
 
-(a) 需要大量时间完成。
-(b) 学生正在接受访谈；访谈期间教师需让其余班级保持占用。
-(c) 需要学习有效教育成就访谈和诊断的技能。
 
-(a) 需要很长时间才能积累成长和进步的证据。
-(b) 需要特别努力教导学生如何使用适当的现实自我评估技术。
-(c) 需要对所学科目有很高的知识水平来诊断和指导学生。
-(d) 需要能够识别该科目中成长和进步的复杂和微妙模式。
-(e) 结果往往因教师而异。
+## 2. 聚焦程序和过程的任务
 
-(a) 结果对问题的措辞方式很敏感。学生可能误解、不理解或与评估者意图不同地反应。
-(b) 可以被年长且不那么明智的学生轻易“伪造”。
+- (b) 允许学生整合几种简单技能和知识以执行复杂的现实任务。
+- (c) 允许小组和合作表现和评估。
+- (d) 允许评估完成作业所使用的步骤。
 
-(a) 难以评估复杂技能或使用技能组合来创建、编辑和制作良好项目的 ability。
-(b) 需要时间来创建。
-(c) 课堂时间通常不足以完成完整评估。
-(d) 完全专注于认知成果。
+- (a) 完全专注于内容知识和认知技能。
+- (b) 需要大量时间来正确制定、管理和评分。
+- (c) 除非使用评分量规，否则评分者间信度可能很低。
+- (d) 结果通常特定于学生和任务的组合。学生的表现质量很难在内容和任务之间推广。
+- (e) 学生认为无趣、枯燥或无关的任务不会激发学生的最佳努力。
 
-(a) 不要过度强调低水平任务。
-(c) 对学生的洞察力可能从一次场合到另一场合或在人格背景下发生巨大变化。
-(c) 记住你的个人人格理论或个人价值体系可能导致对学生回应的错误解释。
+- (a) 需要大量时间完成。
+- (b) 学生正在接受访谈；访谈期间教师需让其余班级保持占用。
+- (c) 需要学习有效教育成就访谈和诊断的技能。
 
-(a) 不要过度强调低水平选择题。
-(c) 制作需要学生将知识应用于“现实生活”的任务。
+- (a) 需要很长时间才能积累成长和进步的证据。
+- (b) 需要特别努力教导学生如何使用适当的现实自我评估技术。
+- (c) 需要对所学科目有很高的知识水平来诊断和指导学生。
+- (d) 需要能够识别该科目中成长和进步的复杂和微妙模式。
+- (e) 结果往往因教师而异。
 
-(a) 仔细调查学生未能成功完成任务的原因。
-(b) 使用评分量规以提高结果的信度和效度。
-(c) 不要将学生使用的评估过程与评估答案正确性的需要混淆。
-(d) 为学生充分展示表现提供足够的时间。
+- (a) 结果对问题的措辞方式很敏感。学生可能误解、不理解或与评估者意图不同地反应。
+- (b) 可以被年长且不那么明智的学生轻易“伪造”。
+
+- (a) 难以评估复杂技能或使用技能组合来创建、编辑和制作良好项目的 ability。
+- (b) 需要时间来创建。
+- (c) 课堂时间通常不足以完成完整评估。
+- (d) 完全专注于认知成果。
+
+- (a) 不要过度强调低水平任务。
+- (c) 对学生的洞察力可能从一次场合到另一场合或在人格背景下发生巨大变化。
+- (c) 记住你的个人人格理论或个人价值体系可能导致对学生回应的错误解释。
+
+- (a) 不要过度强调低水平选择题。
+- (c) 制作需要学生将知识应用于“现实生活”的任务。
+
+- (a) 仔细调查学生未能成功完成任务的原因。
+- (b) 使用评分量规以提高结果的信度和效度。
+- (c) 不要将学生使用的评估过程与评估答案正确性的需要混淆。
+- (d) 为学生充分展示表现提供足够的时间。
 
 | 评估替代方案（续） | 教师的优势 | 教师的劣势 | 改进使用的建议 |
 |---|---|---|---|
@@ -4068,10 +4146,6 @@ target: 我们看到了学习目标的完整含义，而这之前从其文字表
 | 4. 最佳作品作品集 | (a) 允许评估学生学习经历的大部分内容。<br>(b) 可能允许学生参与选择作品集所包含的材料。<br>(c) 允许对作品集中的作品进行定量或定性评估。<br>(d) 允许比测试更广泛地评估学习目标。 | (a) 需要等待很长时间才能报告评估结果。<br>(b) 学生必须学习如何选择要包含的工作以及如何有效展示。<br>(c) 教师必须学习使用评估各种作品的评分量规。<br>(d) 如果由教师、评估者或来自学科知识来正确评估学生的工作，评分者间信度很低。<br>(e) 需要高水平的工作。 | (a) 非常清楚要评估的学习目标，以避免混淆和无效的作品集评估结果。<br>(b) 教导学生使用适当标准来选择要包含的作品。<br>(c) 不要收集太多材料进行评估。<br>(d) 与其他教师协调作品集的开发。<br>(e) 开发并使用评分量规来定义标准并保持一致性。 |
 | 5. 教科书提供的测试和测验 | (a) 允许评估书面表达。<br>(b) 已准备好，节省教师时间。<br>(c) 与教科书或课程材料的内容和顺序相匹配。 | (a) 通常不评估复杂技能或使用技能组合的能力。<br>(b) 通常与课堂上的重点和呈现不匹配。<br>(c) 专注于认知技能。<br>(d) 课堂时间通常不足以完成完整评估 | (a) 对项目是否由专业人士制作且质量很高保持怀疑。<br>(b) 仔细编辑或重写项目以匹配你所教授的内容。<br>(c) 记住你个人对使用劣质测试负责。你不得诉诸教科书的权威。 |
 | 6. 标准化成绩测试 | (a) 评估一年学习中广泛的认知能力和技能。<br>(b) 评估全国许多学校共同的内容和技能。<br>(c) 项目由专业人员开发和筛选，仅包含最好的项目。<br>(d) 证实教师对学生的了解：有时会为特定学生指出意想不到的结果。<br>(e) 提供常模参照信息，允许评估学生相对于全国学生的进步。<br>(f) 提供学生两个或多个课程领域成绩的合法比较。<br>(g) 提供成长量表，以便长期监控学生的教育发展。<br>(h) 用于课程评估。 | (a) 完全专注于认知成果。<br>(b) 通常对特定测试的强调与特定教师的强调不同。<br>(c) 不提供诊断信息。<br>(d) 结果通常需要太长时间才能反馈给教师，因此对教学计划没有直接用处。 | (a) 避免在管理者对教师施压时将教学缩小以准备这些测试。<br>(b) 不要用这些测试来评估教师。<br>(c) 在解释时，不要将标准化测试结果与未在课堂上发生的学习质量混淆。<br>(d) 教育家长了解这些测试对评估学生学习潜力的有限效度。 |
-
-
-
-
 
 ## 纸笔测评技术
 
@@ -4089,46 +4163,44 @@ target: 我们看到了学习目标的完整含义，而这之前从其文字表
 
 主要缺点是，需要花费大量时间来设计适当的任务、准备评分方案或评分量表、执行测评本身以及管理多个任务。最后一点与解释学生结果的有效性有关。很少能将学生在某一任务上的表现推广到另一任务上。也就是说，学生表现的好坏取决于表现所关联的具体内容和任务（Baker，1992；Linn，1994）。一名学生可能写出一首关于她所在社区人们的好诗，却写出一首关于洛杉矶交通的可怕诗。在这种情况下，学生的诗歌水平如何？高质量的表现性测评需要对重要学习目标有非常清晰的认识，以及将该愿景转化为适当任务和评分标准的高水平技能（Arter & Stiggins，1992）。
 
-之前，我们讨论了成长和学习进展作品集作为形成性测评工具。作品集也可用于总结性评价。最佳作品作品集是学生最佳产品（作品）的代表性选择，提供学生实现指定学习目标程度的证据。在艺术课程中，它可能是学生在绘画、油画、雕塑、工艺品以及、或许由学生选择的媒介中的最佳作品。在数学中，它可能包括数学调查的报告、学生将数学应用于实际问题的例子、关于数学或数学家的写作，以及数学在社会研究、英语和科学中应用的例子。最佳作品作品集侧重于总结性评价。为了提高作品集评价的可靠性，你需要制作评分量规。你还需要与学生分享量规并教他们如何根据这些量规选择自己的最佳作品。你将通过学习第 11 章和第 12 章，了解有关作品集测评的更多细节，包括如何制作它们。
 
-### 外部（课外）技术
+
+之前，我们讨论了成长和学习进展作品集作为形成性测评工具。作品集也可用于总结性评价。最佳作品作品集是学生最佳产品（作品）的代表性选择，提供学生实现指定学习目标程度的证据。在艺术课程中，它可能是学生在绘画、油画、雕塑、工艺品以及或许由学生选择的媒介中的最佳作品。在数学中，它可能包括数学调查的报告、学生将数学应用于实际问题的例子、关于数学或数学家的写作，以及数学在社会研究、英语和科学中应用的例子。最佳作品作品集侧重于总结性评价。为了提高作品集评价的可靠性，你需要制作评分量规。你还需要与学生分享量规并教他们如何根据这些量规选择自己的最佳作品。你将通过学习第 11 章和第 12 章，了解有关作品集测评的更多细节，包括如何制作它们。
+
+## 外部（课外）技术
 
 教师经常使用另外两种技术。一种是教科书出版商提供的测验和测试。这些很方便，因为你不必自己制作，而且它们与你使用的书籍相匹配。问题是这些测评材料的质量往往很差：它们与当地学习目标的匹配度不高，它们倾向于关注低阶思维技能，且任务未经过专业开发（即制作质量较差）。正如我们在第 5 章中所提到的，在使用这些测评材料之前，你有专业责任对其进行改进。
 
 标准化成就测验也提供总结性测评信息。与教科书测试不同，这些材料通常制作精良，并得到对分数有效性的研究支持。测验由一系列分测验组成，每个分测验涵盖不同的课程领域。由于同一组学生（常模组）参加了所有分测验，出版商的百分位常模允许你比较学生在两个或多个课程领域的进展；出版商的分数量表允许你随时间监测学生的成长。你自己的或你所在学区的测试无法提供这些类型的信息。标准化测验组合并不完全匹配你的课程或教学目标。因此，用它来评估广泛的目标（例如阅读理解）而不是课堂上的具体学习目标。你将通过学习第 16 章至第 18 章，了解有关此测评选项的更多细节。
 
-
-
-
-
 ## 不同课堂评估选项的有效性
-
-## 指导规划的有效性原则
 
 你的课堂评估计划必须侧重于为你的特定解释和用途获得最有效的评估结果。我们在表 6.1 中总结了最常见的课堂用途。本节讨论了这些用途与表 6.5 中评估选项结果的有效性之间的关系。这有助于你理解不同的评估选项并非对所有用途都同样有效。
 
+### 指导规划的有效性原则
+
 来自第三章的两个重要有效性原则应指导你的评估计划。无论是规划单次评估还是多次评估，你都应始终将这些原则放在思考的前沿：
 
-- 1. 评估结果仅对特定的解释和用途有效，而非对所有解释或用途都有效。
-- 2. 由于没有任何单一评估方法能提供完全有效的结果，因此应使用多种方法来评估同一成就。
+1. 评估结果仅对特定的解释和用途有效，而非对所有解释或用途都有效。
+2. 由于没有任何单一评估方法能提供完全有效的结果，因此应使用多种方法来评估同一成就。
 
-## 评估选项的潜在有效性
+### 评估选项的潜在有效性
 
 由于评估结果的有效性取决于你在课堂上具体如何使用它们，我们无法预测如果你使用特定选项将实际达到的有效性。然而，我们可以提供一些指导。表 6.6 显示了前面讨论的评估用途和替代方案。表格显示了每种用途与评估选项组合时，使用该选项用于特定类型决策的潜在有效性。例如，表格显示教师自编测验和测试的结果对于诸如规划教学和评定成绩等目的具有高度有效的潜力。结果对于评估学生并将其分入补救或提高班则具有中等有效性。最后，结果对于控制学生行为的有效性较低。
 
-## 解释有效性指南
+### 解释有效性指南
 
 在制定评估计划时，你应参考表 6.5 和表 6.6 以了解哪些评估选项是合适的。解释表 6.6 时，应牢记以下几点：
 
-- 1. 在某些条件下，你的评估结果的有效性可能与表格中显示的截然不同。你可以将表格中的结果视为潜在有效性的估计。例如，教师可能会制作一份质量极差的纸笔测试，该测试对于给学生评分的有效性非常低，即使我们在表格中显示其有效性很高。在此示例中，教师的纸笔测试未能达到其潜力。
-- 2. 你仍必须将第三章中描述的有效性标准应用于你使用的具体课堂评估程序。表 6.6 提供了一般性指导，但你仍有专业义务为你的评估结果的有效性制定自己的论证。 （有关此点的进一步讨论，请参阅第 3 章和第 5 章。）
-- 3. 表 6.6 中显示的潜在有效性估计是作者的判断，而不是科学实验的结果。在做出这些判断时，我使用了对评估选项的个人了解以及我对非常优秀、经验丰富的教师通常如何制作和使用它们的经验。我还使用了我对目的在课堂上通常如何实施的个人经验。最后，我将表 3.2 中列出的标准应用于每种目的与评估方法组合的典型工具或程序。我侧重于课堂使用，而非外部或问责制使用。也许将来有人会对课堂评估结果对每个决策的有效性进行更科学的研究，但目前，这种科学证据薄弱或缺乏。因此，我认为表 6.6 中的有效性是你如果掌握并应用本教材中概述的知识和技能可以合理期望达到的有效性。
-- 4. 在表 6.6 中，“高有效性”并不意味着完美有效性。没有任何单一评估工具或评估选项具有完美的有效性。
-- 5. 将几种评估类型的结果结合起来，每种评估的有效性都较低或中等，通常会产生比单独考虑各个组成部分更高的有效性。虽然这通常是正确的，但在你的情况下可能并非如此。例如，在将来自几种评估的成绩结合起来时，你可能出于某种奇怪的原因，最重视有效性最差的评估。这种做法会降低组合的有效性。或者，也许每个组成部分都糟糕透顶，以至于即使组合起来也无法提高有效性。
+1. 在某些条件下，你的评估结果的有效性可能与表格中显示的截然不同。你可以将表格中的结果视为潜在有效性的估计。例如，教师可能会制作一份质量极差的纸笔测试，该测试对于给学生评分的有效性非常低，即使我们在表格中显示其有效性很高。在此示例中，教师的纸笔测试未能达到其潜力。
+2. 你仍必须将第三章中描述的有效性标准应用于你使用的具体课堂评估程序。表 6.6 提供了一般性指导，但你仍有专业义务为你的评估结果的有效性制定自己的论证。（有关此点的进一步讨论，请参阅第 3 章和第 5 章。）
+3. 表 6.6 中显示的潜在有效性估计是作者的判断，而不是科学实验的结果。在做出这些判断时，我使用了对评估选项的个人了解以及我对非常优秀、经验丰富的教师通常如何制作和使用它们的经验。我还使用了我对目的在课堂上通常如何实施的个人经验。最后，我将表 3.2 中列出的标准应用于每种目的与评估方法组合的典型工具或程序。我侧重于课堂使用，而非外部或问责制使用。也许将来有人会对课堂评估结果对每个决策的有效性进行更科学的研究，但目前，这种科学证据薄弱或缺乏。因此，我认为表 6.6 中的有效性是你如果掌握并应用本教材中概述的知识和技能可以合理期望达到的有效性。
+4. 在表 6.6 中，“高有效性”并不意味着完美有效性。没有任何单一评估工具或评估选项具有完美的有效性。
+5. 将几种评估类型的结果结合起来，每种评估的有效性都较低或中等，通常会产生比单独考虑各个组成部分更高的有效性。虽然这通常是正确的，但在你的情况下可能并非如此。例如，在将来自几种评估的成绩结合起来时，你可能出于某种奇怪的原因，最重视有效性最差的评估。这种做法会降低组合的有效性。或者，也许每个组成部分都糟糕透顶，以至于即使组合起来也无法提高有效性。
 
 ## 摘要
 
-## 自行制作评估可提高你的教学
+### 自行制作评估可提高你的教学
 
 - 高质量的评估和高质量的教学是高质量教学无缝织物的一部分。
 - 制作和解释高质量评估的能力可提高你的教学，因为它
@@ -4140,9 +4212,10 @@ target: 我们看到了学习目标的完整含义，而这之前从其文字表
   - 提高了学生评估的公平性。
   - 帮助你认识到各种评估程序的局限性。
 
+表 6.6 教师用于各种目的时各种评估替代方案的潜在有效性。
+
 | 评估替代方案 | 评估概况 | 诊断个人需求 | 诊断群体需求 | 规划教学 | 为成绩单评定成绩 | 将学生分入补救或提高班 | 评估你自己的教学 | 评估作为教学工具 | 控制学生行为 | 向学生传达成绩期望 |
-|---|---|---|---|---|---|---|---|---|---|---|
-| 表 6.6 教师用于各种目的时各种评估替代方案的潜在有效性。 |  |  |  |  |  |  |  |  |  |  |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 形成性评估技术 |  |  |  |  |  |  |  |  |  |  |
 | 其他教师的评论 | L/M | L | L | L | L | L | L | L | L | L |
 | 与学生的随意交谈 | L | L | L | L | L | L | L | L | L | L |
@@ -4158,10 +4231,13 @@ target: 我们看到了学习目标的完整含义，而这之前从其文字表
 | 最佳作品档案 | L | L/M | L/M | L/M | M/H | L/M | M | L/M | L | L | L/M |
 | 教科书测试和测验 | L | L | L | L | L | L | L | L | L | L | L/M |
 | 标准化测试 | M | L/M | M | L/M | L | H | L/M | L/M | L | L | L/M |
-| 总结性评估技术 |  |  |  |  |  |  |  |  |  |  |
-| 注：H = 结果倾向于对所示目的具有高有效性<br>M = 结果倾向于对所示目的具有中等有效性<br>L = 结果倾向于对所示目的具有低有效性
+| 总结性评估技术 |  |  |  |  |  |  |  |  |  |  |  |
 
-## 你是在进行形成性还是总结性评估？
+注：H = 结果倾向于对所示目的具有高有效性  
+M = 结果倾向于对所示目的具有中等有效性  
+L = 结果倾向于对所示目的具有低有效性
+
+### 你是在进行形成性还是总结性评估？
 
 评估结果的常见课堂用途是（另见表 6.1）：
 
@@ -4169,13 +4245,15 @@ target: 我们看到了学习目标的完整含义，而这之前从其文字表
 - 总结性用途——为成绩单评定成绩、将学生分入补救或提高课程以及评估自己的教学。
 - 其他用途——将评估程序用作教学工具、控制学生行为以及向学生传达成绩期望。
 
-## 为一个学段和一个教学单元进行评估规划
+### 为一个学段和一个教学单元进行评估规划
 
 讨论了不同时间框架的规划。给出了为一个学段（示例 6.1）和一个教学单元（示例 6.2）规划评估的示例。这些示例说明了对形成性和总结性评估的规划，包括广泛的评估技术，将技术与适当的课程和学习目标相匹配，并使用评估结果采取行动以改善学生的学习。
 
-## 预测教学
+### 预测教学
 
-讨论了为规划教学单元获取教学前评估信息的重要性。讨论了规划和制作此类工具的框架。该框架建议评估学生的
+
+
+讨论了为规划教学单元获取教学前评估信息的重要性。讨论了规划和制作此类工具的框架。该框架建议评估学生的：
 
 - 对主题的态度。
 - 对该主题的学校经历。
@@ -4184,9 +4262,9 @@ target: 我们看到了学习目标的完整含义，而这之前从其文字表
 - 对与该主题相关的技术术语的了解。
 - 对该主题某些方面的个人经历。
 
-## 为一次总结性评估制定计划
+# 为一次总结性评估制定计划
 
-本章描述了总结性评估的评估蓝图（或规格表），包括
+本章描述了总结性评估的评估蓝图（或规格表），包括：
 
 - 如何组织蓝图。
 - 如何使用蓝图确定评估的内容和技能重点。
@@ -4202,9 +4280,9 @@ target: 我们看到了学习目标的完整含义，而这之前从其文字表
 - 确定与蓝图相匹配的任务和评估选项。
 - 制作任务和选项的初稿。
 
-## 改进评估计划的标准
+# 改进评估计划的标准
 
-评估你计划的评估的一般标准是
+评估你计划的评估的一般标准是：
 
 - 将评估任务与学习目标相匹配。
 - 仅涵盖重要的学习目标。
@@ -4215,7 +4293,7 @@ target: 我们看到了学习目标的完整含义，而这之前从其文字表
 - 确保等值性。
 - 确定任务的适当复杂性和难度。
 
-## 你有哪些评估选项？
+# 你有哪些评估选项？
 
 描述了这些评估选项，并讨论了它们的优点、局限性和使用建议（见表 6.5）：
 
@@ -4224,7 +4302,7 @@ target: 我们看到了学习目标的完整含义，而这之前从其文字表
 
 所有教师都应被敦促在规划评估策略之前了解这些评估程序的优点和缺点。
 
-## 不同评估选项的有效性
+# 不同评估选项的有效性
 
 估计了每种评估选项对每个常见课堂目的的有效性结果（见表 6.6），说明了：
 
@@ -4233,7 +4311,7 @@ target: 我们看到了学习目标的完整含义，而这之前从其文字表
 - 一些选项对某些目的的有效性较低，对其他目的的有效性较高。
 - 不同类型评估的组合通常会产生更有效的结果。
 
-## 重要术语和概念
+# 重要术语和概念
 
 - assessment planning
 - best works portfolio
@@ -4250,34 +4328,31 @@ target: 我们看到了学习目标的完整含义，而这之前从其文字表
 - paper-and-pencil assessments
 - performance assessments
 - planning skills
+- 预先教学单元评估框架
+- 产品与过程评估
+- 相对成就
+- 评估的 sizing-up 用途
+- 评估的总结性用途
+- 任务（题目）
+- 任务格式
+- 评估后的教学行动
+- 教学单元
 
+# 练习与应用
 
+1. 参观一间教室（如果你不是在职教师）或利用你自己的教学经验完成以下内容：
+   a. 识别表 6.1 中描述的每种课堂评估目的的一个或多个具体例子。
+   b. 对于每个例子，描述教师为做出该决定所使用的评估工具和信息。
+   c. 将每种工具或技术归类为表 6.5 中所示的评估选项类别之一。
+   d. 创建一个具有与表 6.6 相似的行列标题的表格，以显示哪些评估工具用于何种目的。
+   e. 评估将评估结果用于这些决定的有效性。使用表 3.1 中列出的标准来帮助你的评估。
 
+2. 参观一间教室，或环顾你自己的教室，并列出所有提供评估或类似评估工具的教学资源。
+   a. 将其分类为是非题、选择题、配对题、论文题、简答题、填空题、表现性评估、项目、作品集、口头提问策略、观察策略或深入访谈策略。
+   b. 哪种类型占主导？
+   c. 统计这些... 这被称为一篇论文题目。我们将在第 9 章讨论论文题目。）以下是几个例子：
 
-预先教学单元评估框架
-产品与过程评估
-相对成就
-评估的 sizing-up 用途
-评估的总结性用途
-任务（题目）
-任务格式
-评估后的教学行动
-教学单元
-
-## 练习与应用
-
-- 1. 参观一间教室（如果你不是在职教师）或利用你自己的教学经验完成以下内容：
-  a. 识别表 6.1 中描述的每种课堂评估目的的一个或多个具体例子。
-  b. 对于每个例子，描述教师为做出该决定所使用的评估工具和信息。
-  c. 将每种工具或技术归类为表 6.5 中所示的评估选项类别之一。
-  d. 创建一个具有与表 6.6 相似的行列标题的表格，以显示哪些评估工具用于何种目的。
-  e. 评估将评估结果用于这些决定的有效性。 使用表 3.1 中列出的标准来帮助你的评估。
-- 2. 参观一间教室，或环顾你自己的教室，并列出所有提供评估或类似评估工具的教学资源。
-  a. 将其分类为是非题、选择题、配对题、论文题、简答题、填空题、表现性评估、项目、作品集、口头提问策略、观察策略或深入访谈策略。
-  b. 哪种类型占主导？
-  c. 统计这些... 这被称为一篇论文题目。我们将在第 9 章讨论论文题目。）以下是几个例子：
-
-## 示例
+### 示例
 
 - 1. 宾夕法尼亚州的首都是什么？（哈里斯堡）
 - 2. 通常用作标准差符号的希腊字母是什么？（σ）
@@ -4285,7 +4360,7 @@ target: 我们看到了学习目标的完整含义，而这之前从其文字表
 
 填空题变体向学生呈现一个不完整的句子，要求学生添加一个或多个词来完成它。以下是两个例子：
 
-## 示例
+### 示例
 
 - 1. 宾夕法尼亚州的首都是（哈里斯堡）
 - 2. 4 + (6 ÷ 2) = （7）
@@ -4294,12 +4369,9 @@ target: 我们看到了学习目标的完整含义，而这之前从其文字表
 
 > ¹当特指纸笔评估任务时，我们将使用术语 item 和 test item。
 
-
-
-
 符号，或其他术语。这种类型的问题也称为识别题。一些例子：
 
-## Example
+### Example
 
 在每个化学元素的名称旁边的空白处，写出其使用的符号。
 
@@ -4311,11 +4383,11 @@ target: 我们看到了学习目标的完整含义，而这之前从其文字表
 | Potassium | (K)    |
 | Zinc      | (Zn)   |
 
-## Usefulness of Short-Answer Items
+# Usefulness of Short-Answer Items
 
-Abilities Assessed 似乎显而易见的是，简答题可以评估学生对被认为部分正确的低阶表现的掌握。这是适当的做法，如果你使用一份评分标准来显示可获得部分分的答案类型，就能得到更可靠的分数。使用这样的评分标准可以使你对不同学生的部分分评定更加一致，从而提高可靠性。
+**Abilities Assessed** 似乎显而易见的是，简答题可以评估学生对被认为部分正确的低阶表现的掌握。这是适当的做法，如果你使用一份评分标准来显示可获得部分分的答案类型，就能得到更可靠的分数。使用这样的评分标准可以使你对不同学生的部分分评定更加一致，从而提高可靠性。
 
-## Crafting Short-Answer Items
+# Crafting Short-Answer Items
 
 简答题很容易构建，但你必须遵循一些简单的指导原则。清单以是非问题的形式总结了这些指导原则。在将题目放入测验之前，使用此清单来审阅题目。对任何一个问题的否定回答就足以让你在修正缺陷之前将该题目从测验中剔除。这些指导原则实际上是构建评估的三个基本原则的应用。在下面的段落中，我们将更详细地审视清单中的指导原则。
 
@@ -4325,23 +4397,27 @@ Abilities Assessed 似乎显而易见的是，简答题可以评估学生对被�
 
 此外，如果将它们表述为问题而不是不完整的句子，题目的含义通常会更清晰。考虑通过将其转换为直接问题如何改进完成题：
 
-## Table 7.1 Examples of short-answer items assessing different types of lower-order in mind. This miscommunication is corrected by the second, revised version of the item.
+**Table 7.1 Examples of short-answer items assessing different types of lower-order in mind. This miscommunication is corrected by the second, revised version of the item.**
 
 大多数情况下，问题格式会产生更好的题目。因此，你的第一反应应该是写问题，而不是不完整的句子。
 
 4. 第四条指导原则建议用具体且清晰的措辞表述题目。通常，简答题需要一个唯一正确答案。你应该用措辞表述问题或不完整句子，使学生清楚这一点。以下说明了如何使用正确的措辞传达教师想要一个单一、具体答案的例子：
 
-## Example
+### Example
 
 Poor: Where is Pittsburgh, Pennsylvania located?
+
 Better: Pittsburgh, Pennsylvania is located at the confluence of what two rivers? (Allegheny and Monongahela)
+
 Better: What city is located at the confluence of the Allegheny and Monongahela rivers? (Pittsburgh, Pennsylvania)
 
 对第一个版本，取决于所需的具体程度，可能有多种答案：“宾夕法尼亚州西部”、“宾夕法尼亚州西南角”、“俄亥俄河”、“莫诺ongahela河和阿勒格尼河”，等等。如果你想要一个具体的答案，你必须以聚焦和结构化的方式表述问题。例如，如果你想聚焦河流，可以使用第一个改写版本。要聚焦城市，请使用第二个改写版本。
 
+
+
 聚焦题目很重要，因为你想要一个特定的答案。一些知道期望答案的学生不会给出它，因为他们误解了问题。对于字面理解问题的低年级学生来说，这种情况尤其可能。例如，在一个课堂上，四年级学生被给出一个条形图来解读。老师随后提出了下面措辞不佳的问题。
 
-## Example
+### Example
 
 Poor: Was the population of Mexico greater in 1941 or 1951? ____
 
@@ -4349,20 +4425,20 @@ Poor: Was the population of Mexico greater in 1941 or 1951? ____
 
 5. 将空白放在句子的末尾。这一第五条指导原则适用于完成题。如果空白放在句子的开头或中间，学生必须在回答前在脑中重新排列题目为问题。即使是有知识的学生也必须阅读题目两次才能回答它。下面的例子展示了如何通过将空白放在末尾来改进题目。
 
-## Example
+### Example
 
 Poor: ________ is the name of the capital city of Illinois.
+
 Better: The name of the capital city of Illinois is (Springfield).
 
-小学算术教师认识到，解决缺失加数问题的能力（例如，“5 + ____ = 12”或“____ + 5 = 12”）是相当难以学习的。当空白不放在句子的末尾时，口头题目就像这些算术问题一样。然而，与缺失加数问题不同，
+小学算术教师认识到，解决缺失加数问题的能力（例如，`5 + ____ = 12`或`____ + 5 = 12`）是相当难以学习的。当空白不放在句子的末尾时，口头题目就像这些算术问题一样。然而，与缺失加数问题不同，在句子的开头放置空格会给掌握相关知识的孩子设置一个意外的障碍。这种障碍会降低你评估的有效性。有时观察到小学生会在空格处停下来困惑，而不阅读整道题目：他们意识到应该在那里写答案，但缺乏提前阅读并在脑中重新排列题目作为问题的经验。如果你将题目重新表述为直接问题或将空格放在末尾，这些孩子就能展示他们所获得的知识。
 
-
-在句子的开头放置空格会给掌握相关知识的孩子设置一个意外的障碍。这种障碍会降低你评估的有效性。有时观察到小学生会在空格处停下来困惑，而不阅读整道题目：他们意识到应该在那里写答案，但缺乏提前阅读并在脑中重新排列题目作为问题的经验。如果你将题目重新表述为直接问题或将空格放在末尾，这些孩子就能展示他们所获得的知识。
-
-## Example
+### Example
 
 Poor: Decisions for which rejection of some students is permitted are called ____ decisions. Decisions for which every student must be assigned to one of several educational programs are called ____.
+
 Better: Which type of decision permits rejection of some students? ____
+
 Which type of decision requires that every student be assigned to one of several educational programs? ____
 
 6. 第六条准则建议不要逐字复制陈述。当你复制材料时，你鼓励学生死记硬背而不是理解和领会。此外，作为测验题使用的教科书陈述通常是脱离上下文引用的。这可能导致题目含糊不清或出现多个正确答案。一个建议是先思考答案，然后编一个以该答案为唯一正确答案的问题（Ebel, 1979）。
@@ -4371,33 +4447,35 @@ Which type of decision requires that every student be assigned to one of several
 
 8. 将空格限制为一个或两个是适用于完形题的另一条准则。超过一个或两个空格时，完形题通常变得难以理解或含糊不清，以至于可能被视为有多个非预期答案。考虑以下示例：
 
-## Example
+### Example
 
 Poor: ______ and ______ are two methods of scoring ______.
+
 Better: Two different methods of scoring essay tests are the (analytic) and (holistic) methods.
 
 9. 有经验的应试学生有时会利用空格长度作为答案的线索，因此你应注意完形题中空格的长度和排列。为了避免此类非预期线索，保持所有空格长度相同。在测试年长学生时，你可以通过在题目中使用短空格，并在纸张的右侧或左侧边缘或单独的答题纸上为学生记录答案而节省大量的评分时间。然后你可以将印有正确答案的条形键沿着每位学生的纸张边缘放置并快速评分。打字时使所有空格都出现在同一列也能达到同样的目的。例如，不要将题目分散在页面上，你可以按如下方式排列它们：
 
 10. 第10条准则是要明确你对答案精度的期望。在涉及日期或数值答案的简答测试中，务必明确你期望学生使用的数值单位，或答案应有的精确度或准确度。这澄清了任务。它也为那些追求超出你意图的精确度的学生节省了时间。以下示例说明如何陈述对答案期望的精确程度：
 
-## Example
+### Example
 
 Poor: If each letter to be mailed weighs 1 1/8 oz., how much will 10 letters weigh? ____
+
 Better: If each letter to be mailed weighs 1 1/8 oz., how much (to the nearest whole oz.) will 10 letters weigh? (11 oz.)
+
 Better: A kilogram is equal to ____ pounds. (Express your answer to one decimal place.)
 
 如果有不止一个或两个数值题目，你可以在题目集开始处的一般说明中描述你期望的精确程度，而不是在每个题目中添加文字。
 
 11. 最后的建议是避免无关线索。测验题目旨在评估特定的学习目标，但有时措辞会提供无关线索。当这种情况发生时，学生可能在未达到学习目标的情况下仍答对。句子中的动词，例如，可能无意中提示学生你想要的答案是复数还是单数。不定冠词可能是提示学生期望的答案以元音开头。下一个示例显示了同一题目有线索和无线索的情况：
 
-## Example
+### Example
 
 Poor: A specialist in urban planning is called an (urbanist)
+
 Better: A specialist in city planning is called a(n) (urbanist)
 
-较差的版本对正确答案有两个线索：它使用了 urban planning，这提示了 urbanist，并且它使用了不定冠词 an，这提示学生期望的答案以元音音素开头。较好的版本
-
-通过替换同义词（city planning）并使用 a(n) 作为不定冠词形式来纠正这些缺陷。
+较差的版本对正确答案有两个线索：它使用了 urban planning，这提示了 urbanist，并且它使用了不定冠词 an，这提示学生期望的答案以元音音素开头。较好的版本通过替换同义词（city planning）并使用 a(n) 作为不定冠词形式来纠正这些缺陷。
 
 ## TRUE-FALSE ITEMS
 
@@ -4405,33 +4483,38 @@ Better: A specialist in city planning is called a(n) (urbanist)
 
 是非题由学生必须判断并标记为真或假的陈述或命题组成。至少有六种类型：是非题、是/否题、正确/错误题、改错题、多重是非题和带解释的是/否题。是非题类型呈现一个学生判断真假的命题。以下是示例：
 
-## Example
+### Example
 
 The sum of all the angles in any four-sided closed figure equals 360 degrees. T F
 
 是/否类型提出一个直接问题，学生回答是或否。这是一个示例：
 
-## Example
+### Example
 
 Is it possible for a presidential candidate to become President of the United States without obtaining a majority of the votes cast on election day? Yes No
 
 正确/错误类型呈现一个学生判断正确或不正确（正确或错误）的计算、等式或语言句子。以下是两个示例：
 
-## Example
+### Example
 
-Example assessing an arithmetic principle 5 + 3 × 2 = 16 R W Example assessing grammatical correctness Did she know whom it was? C I
+Example assessing an arithmetic principle `5 + 3 × 2 = 16` R W
+
+Example assessing grammatical correctness Did she know whom it was? C I
 
 改错类型要求学生判断命题，如是非题类型，但学生还必须纠正任何假陈述使其为真。以下是示例以及给学生的说明：
 
-## Example
+### Example
 
 Read each statement below and decide if it is correct or incorrect. If it is incorrect, change the underlined word or phrase to make the statement correct. The new student, who we met today, came from Greece. C I
 
 多重是非类型看起来类似于选择题。然而，与选择一个选项作为正确答案不同，学生将每个选项都视为一个独立的真假陈述。（可能有多个选项为真。）每个选项都作为单独的题目评分。示例：
 
-## Example
+### Example
 
 Under the Bill of Rights, freedom of the press means that newspapers:
+
+
+
 - 1. have the right to print anything they wish without restrictions. T F
 - 2. can be stopped from printing criticisms of the government. T F
 - 3. have the right to attend any meeting of the executive branch of the federal government. T F
@@ -4441,12 +4524,19 @@ Under the Bill of Rights, freedom of the press means that newspapers:
 ## Example
 
 Situation*: A poll was taken of 500 city Democrats and 500 city Republicans. Each person was asked whether he or she agreed with the statement: “That government is best which governs least.” These are the results:
+
 Democratic male Agree 12% Disagree 35%
+
 Democratic female Agree 3% Disagree 14%
+
 Republican male Agree 48% Disagree 12%
+
 Republican female Agree 28% Disagree 7%
+
 I assert that this poll proves that most people want the government to do very little. Am I correct? Yes No
+
 If you say “No”, explain why I am wrong:
+
 *The situation portion of this item is adapted from Sanders, 1966, p. 117.
 
 ## USEFULNESS OF TRUE-FALSE ITEMS
@@ -4454,26 +4544,23 @@ If you say “No”, explain why I am wrong:
 是非题的有用性 教师经常使用是非题，因为（a）学科的某些方面很容易转化为可判断真假的言语命题，（b）它们相对容易编写，（c）它们可以轻松且客观地评分，以及（d）它们可以在相对较短的时间内覆盖广泛的内容。但一些教育工作者严重批评了是非题——尤其是构造不良的是非题。最常见的批评之一是，构造不良的是非题只评估特定的、经常是琐碎的事实；措辞含糊不清；可通过随机猜测答对；并鼓励学生只学习和接受对真理和事实细节的过度简化陈述。如果你遵循本章中改进是非题的建议，你可以避免这些批评。
 
 评估不止简单的回忆 写得好的是非题可以评估学生识别各种有意义命题的正确性或适当性的能力，包括以下内容（Ebel, 1972）：
+
 - 1. 学科领域的概括。
 - 2. 概念之间的比较。
 - 3. 因果或条件命题。
 - 4. 两个事件、概念、事实或原理之间的关系。
 - 5. 事件或现象发生的原因解释。
-
-
-
-
-
-+   6. 概念或原理的实例或例子。
-+   7. 证据性陈述。
-+   8. 对现象或事件的预测。
-+   9. 程序或过程中的步骤。
-+   10. 计算（或其他通过应用程序获得的结果）。
-+   11. 对事件或现象的评价。
+- 6. 概念或原理的实例或例子。
+- 7. 证据性陈述。
+- 8. 对现象或事件的预测。
+- 9. 程序或过程中的步骤。
+- 10. 计算（或其他通过应用程序获得的结果）。
+- 11. 对事件或现象的评价。
 
 表 7.2 中展示了每种类型的示例。表中还列出了用于构建每类项目的一些关键短语。你可能希望不时参考表 7.2，以获取撰写是非题的建议。但是，请确保你不要盲目遵循表格。请确保当你使用关键短语时，最终的项目评估的是你期望的思维技能
 
 ## 表 7.2 可构成是非题基础的陈述类型
+
 请注意，要有效，你的项目必须与特定的学习目标相匹配
 
 | 陈述类型 | 示例引导词或短语 | 示例是非题 |
@@ -4488,6 +4575,9 @@ If you say “No”, explain why I am wrong:
 | 预测 | One could expect...<br>Increasing... would result in... | One could expect to increase the reliability coefficient of a test from .30 to .60 by doubling its number of items. (F) |
 | 程序 | To find... one must...<br>In order to... one must...<br>One method of... is to...<br>One essential step... is to...<br>Use... of...<br>The first step toward... | One method of ensuring that scores from a 100-item test and scores from a 25-item test will carry equal weight is to multiply the latter scores by 4. (F) |
 | 计算 | （项目包含数值数据并需要计算或估算。） | The range of the scores 2, 3, 4, and 6 is 5. (T) |
+
+
+
 | 评价 | A good...<br>It is better to... than...<br>The best... is...<br>The maximum... is...<br>The easiest method of... is to...<br>It is easy to demonstrate that...<br>It is difficult to...<br>It is possible to...<br>It is reasonable to...<br>It is necessary to... in order to...<br>The major drawback to... is... | It is difficult to obtain reliable scores from a group in which the range of abilities is very wide. (F) |
 
 > 来源：改编自 R. L. Ebel 所著《教育测量精要》（第 183–185 页），1972 年，Englewood Cliffs, NJ: Prentice-Hall。经版权持有者许可改编。
@@ -4498,10 +4588,10 @@ If you say “No”, explain why I am wrong:
 
 Ebel，或许比任何其他测量专家更坚定地捍卫了在课堂评估中使用写得好的是非题。他提出了以下关于此格式有效性的论证：
 
-+   1. 教育成就的本质是对有用言语知识的掌握。
-+   2. 所有言语知识都可以用命题表达。
-+   3. 命题是任何可以说成真或假的句子。
-+   4. 学生对特定知识领域的掌握程度由其判断与其相关的命题真假的成功程度来体现。 (Ebel, 1979, pp. 111–112)
++ 1. 教育成就的本质是对有用言语知识的掌握。
++ 2. 所有言语知识都可以用命题表达。
++ 3. 命题是任何可以说成真或假的句子。
++ 4. 学生对特定知识领域的掌握程度由其判断与其相关的命题真假的成功程度来体现。 (Ebel, 1979, pp. 111–112)
 
 请注意，要求学生识别命题的真假并不是衡量其知识掌握的唯一手段。本书其余章节中讨论了评估知识掌握的其他方法。
 
@@ -4511,10 +4601,10 @@ Ebel，或许比任何其他测量专家更坚定地捍卫了在课堂评估中�
 
 查尔斯·舒尔茨的《花生漫画》人物林纳斯曾观察到，“做是非题就像有顺风相助。”这反映了对是非题的常见批评：它们容易出错，因为学生可以用随机猜测来回答。据众所周知，对于单个是非题，如果随机选择真或假，答对的几率为 50-50。这意味着随机猜测的人平均可以答对一半的非是题。² 然而，有几个观点削弱了这一批评（Ebel, 1972）：
 
-+   1. 盲目（完全随机）的猜测与有根据的猜测（基于部分知识的猜测）截然不同。
-+   2. 积极动机的学生（至少在大学水平）倾向于在测试的极少数问题上才盲目猜测。
-+   3. 仅靠盲目猜测很难在测试中取得好成绩。
-+   4. 某个是非题测试具有较高的信度系数³ 将是该测试分数未受盲目猜测严重影响的证据。
++ 1. 盲目（完全随机）的猜测与有根据的猜测（基于部分知识的猜测）截然不同。
++ 2. 积极动机的学生（至少在大学水平）倾向于在测试的极少数问题上才盲目猜测。
++ 3. 仅靠盲目猜测很难在测试中取得好成绩。
++ 4. 某个是非题测试具有较高的信度系数³ 将是该测试分数未受盲目猜测严重影响的证据。
 
 随机猜测，按“50-50 机会”陈述所假设的那样，定义上是随机反应。随机猜测有时被称为盲目猜测。但大多数人的经验是，学生很少以这种方式对测试问题做出反应。相反，学生倾向于利用他们对问题主题和/或问题所嵌入的上下文的部分知识来进行有根据的猜测。这样的有根据猜测者在是非题上的成功率高于 50-50（但高多少，我们无法说）。这意味着是非题的分数（与其他题型一样）在有根据猜测发生时是部分知识的衡量标准。（当然，真正知道答案的人答对的几率为 100%！）
 
@@ -4528,10 +4618,7 @@ Ebel，或许比任何其他测量专家更坚定地捍卫了在课堂评估中�
 
 Frisbie 和 Becker（1990）提供了以下额外的入门建议：
 
-+   1. 创建一对项目，一个为真一个为假，涉及同一思想，即使你只使用其中一个。创建
-
-
-
++ 1. 创建一对项目，一个为真一个为假，涉及同一思想，即使你只使用其中一个。创建
 
 表 7.3 学生仅通过随机猜测回答各种长度的判断题时获得各种“好成绩”的几率。
 
@@ -4558,9 +4645,10 @@ Frisbie 和 Becker（1990）提供了以下额外的入门建议：
 
 你应该审阅和修改所有评估任务的初稿。我将在书中多次提到这一点：评估任务的初稿不适合人类使用。编辑评估任务是评估开发过程中的重要一步。检查表总结了提高判断题质量的原则。这些原则写成你可以用来审阅题目草案时提问的问题。你应该始终使用检查表来审阅教科书和课程材料中附带的判断题，因为这些判断题以质量低下而臭名昭著。检查表所隐含的原则将在下一节中解释和举例说明。
 
-## 检查表 7.2
+### 检查表 7.2
 
 判断题质量判断检查表。
+
 对任何一个问题的回答为“否”的每一道题目都应进行修改。
 
 - 1. 该题目是否评估了教学单元教学目标的重要方面？
@@ -4583,6 +4671,11 @@ Frisbie 和 Becker（1990）提供了以下额外的入门建议：
 ## 示例
 
 - 较差：乔治·华盛顿有木牙。T F
+
+
+
+### 判断题编写准则
+
 - 更好：乔治·华盛顿积极参与了制宪会议。T F
 - 较差：教科书的作者提供了六条编写判断题的建议。T F
 - 更好：开发判断题的一个好程序是将否定词 not 插入到从教科书中取出的真命题中。T F
@@ -4591,11 +4684,13 @@ Frisbie 和 Becker（1990）提供了以下额外的入门建议：
 
 顺便说一下，第二道修改后题目的答案是“假”。将教科书句子取出来并通过插入否定功能词（例如，not、neither…nor）使其变为假的做法，会使你编写的题目对学生来说很 tricky。Tricky 的题目不属于你的评估工具。即使是准备充分的学生也可能忽略否定词（Ebel, 1979）。如果你遵循本章中开始的建议，你不太可能创建这种有缺陷的题目。
 
-4. 准则 4 建议确保题目明确为真或假。命题不应过于笼统，以至于有知识的学生能找到改变预期真假性的例外情况。确保题目表述方式对有知识的学生来说是无歧义的。（题目当然应对准备不足或无知的学生来说显得模糊。）减少题目模糊性的一些建议如下（Lindvall & Nitko, 1975）：
+#### 4. 准则 4 建议确保题目明确为真或假
+
+命题不应过于笼统，以至于有知识的学生能找到改变预期真假性的例外情况。确保题目表述方式对有知识的学生来说是无歧义的。（题目当然应对准备不足或无知的学生来说显得模糊。）减少题目模糊性的一些建议如下（Lindvall & Nitko, 1975）：
 
 - a. 在可能的情况下使用简短的陈述。这使得识别学生需要判断真假的思想变得更容易。复杂、累赘的陈述即使对有知识的学生也难以识别题目中的本质要素（Ebel, 1951）。如果你想在陈述中描述的信息很复杂，请使用不同的句子将描述与学生必须判断真假的陈述分开。经常，你可以通过简单地编辑它来缩短包含多余材料的冗长复杂陈述。⁴ 通过编辑使其更简洁、更切题从而改进题目的示例如下：
 
-## 示例
+##### 示例
 
 - 较差：尽管单个题目通常是不可靠的衡量标准，而且尽管经常难以编写额外的题目，但通过使测试变长从而增加观察学生行为的次数，测试的可靠性通常可以得到改善。T F
 - 更好：包含更多题目的测试通常比较短的测试可靠性更低。T F
@@ -4604,7 +4699,7 @@ Frisbie 和 Becker（1990）提供了以下额外的入门建议：
 
 - c. 使用肯定陈述并避免双重否定，许多学生发现双重否定尤其令人困惑。以下是通过避免否定和双重否定来改进题目的一些示例：
 
-## 示例
+##### 示例
 
 - 较差：在判断题中无意使用双重否定并不是不可取的。* T F
 - 较差：摩农加希拉河并不向北流。T F
@@ -4614,38 +4709,48 @@ Frisbie 和 Becker（1990）提供了以下额外的入门建议：
 
 如果你必须使用否定功能词，请确保将其下划线或使用全大写字母，以便 NOT 被忽略。
 
-5. 避免逐字复制句子。学生经常发现从文本中复制的句子因为脱离了上下文而难以理解。此外，这类陈述很可能传达给学生，文本的精确（而且经常是特有的）措辞很重要，而非他们自己的理解。这会鼓励学生对教科书句子进行死记硬背。回顾表 3.2，评估有效性的一个因素是它不产生此类负面后果。
+#### 5. 避免逐字复制句子
+
+学生经常发现从文本中复制的句子因为脱离了上下文而难以理解。此外，这类陈述很可能传达给学生，文本的精确（而且经常是特有的）措辞很重要，而非他们自己的理解。这会鼓励学生对教科书句子进行死记硬背。回顾表 3.2，评估有效性的一个因素是它不产生此类负面后果。
 
 ⁴ 此建议当然适用于所有题目类型。
 
-
-
-
-
 复制文本中的内容在教师测试学生对言语概念（包括定义）和原理陈述（规则）的知识时更有可能发生。但测试理解力至少需要改写，而增强学生对概念和原理的理解似乎比鼓励学生逐字背诵教科书陈述更重要的教育目标。同样，如果你遵循前面所述的最初推导项目的建议，你不太可能从教科书中复制陈述。
 
-6. 真假陈述应具有大致相同的词数。教师倾向于使真陈述比假陈述更具限定性和冗长。善于应试的学生可以捕捉到这种无关的线索，并在没有达到学习目标的情况下答对题目。纠正这种缺陷的最简单方法是保持警惕的编辑眼光并重写不适当的陈述。
+#### 6. 真假陈述应具有大致相同的词数
 
-7. 不要以重复或易于学习的方式呈现题目（例如 TFTF . . .，TTFFTT . . .，TFFTFF . . .）。一些教师之所以形成这种模式，是因为它们易于记忆，从而使评分更容易。但如果教师容易记住，善于应试的学生也容易学习。评估结果因此会无效。你还应避免一贯的做法是真答案远多于假答案，或假答案远多于真答案。如果学生注意到，例如你很少使用假陈述，他们就会（正确地）在不确定答案时避免选择假。学生在教师大量使用是非题时，会迅速发现这些模式。
+教师倾向于使真陈述比假陈述更具限定性和冗长。善于应试的学生可以捕捉到这种无关的线索，并在没有达到学习目标的情况下答对题目。纠正这种缺陷的最简单方法是保持警惕的编辑眼光并重写不适当的陈述。
+
+#### 7. 不要以重复或易于学习的方式呈现题目
+
+例如 TFTF . . .，TTFFTT . . .，TFFTFF . . .。一些教师之所以形成这种模式，是因为它们易于记忆，从而使评分更容易。但如果教师容易记住，善于应试的学生也容易学习。评估结果因此会无效。你还应避免一贯的做法是真答案远多于假答案，或假答案远多于真答案。如果学生注意到，例如你很少使用假陈述，他们就会（正确地）在不确定答案时避免选择假。学生在教师大量使用是非题时，会迅速发现这些模式。
 
 并非所有教育评估专家都同意应包含多少真与假答案的比例（Frisbie & Becker, 1990）。一些专家（Ebel & Frisbie, 1991; Popham, 1991）建议假题多于真题，因为假题已被证明比真题区分度更好（Barker & Ebel, 1981; Oosterhof & Glasnap, 1974）。在此上下文中，区分意味着假题倾向于比真题更好地区分最有知识的学生与最少知识的学生。题目区分度的提高可提高总测试分数的可靠性。
 
-8. 不要使用会泄露答案的言语线索（特定限定词）。特定限定词是是非题或选择题中的一个词或短语，它“过度限定”了给定的陈述，并给学生一个无意的正确答案线索（Sarnacki, 1979）。诸如 always、never 和 every 之类的词往往使命题为假。诸如 often、usually 和 frequently 之类的词往往使命题为真。善于应试的学生会利用这些线索正确作答，即使他们不掌握所需知识。以下是使用特定限定词的糟糕题目的一些示例：
+#### 8. 不要使用会泄露答案的言语线索（特定限定词）
 
-## Example
+特定限定词是是非题或选择题中的一个词或短语，它“过度限定”了给定的陈述，并给学生一个无意的正确答案线索（Sarnacki, 1979）。诸如 always、never 和 every 之类的词往往使命题为假。诸如 often、usually 和 frequently 之类的词往往使命题为真。善于应试的学生会利用这些线索正确作答，即使他们不掌握所需知识。以下是使用特定限定词的糟糕题目的一些示例：
+
+##### Example
 
 Poor: It is always better to use a longer test than a shorter one. T F
+
 Poor: Frequently, it is better to use a longer test than a shorter test. T F
 
 你应注意，有些命题是“总是”或“从不”为真，或“经常”或“通常”为假。因此一些评估专家建议反向使用特定限定词有助于区分有知识的学生与仅善于应试的学生（Ebel, 1979; Ebel & Frisbie, 1991）。我不建议对小学生使用此类策略。一些证据（Slakter, Koehler, & Hampton, 1970）表明，年轻人直到九年级才会在选择题中注意特定限定词线索，尽管他们从五年级起就使用其他类型的应试技巧。同样很可能对是非题也有效。
 
-9. 将陈述中的观点归于适当的来源。如果你的是非题表达了观点、价值或态度，你应将该陈述归于适当的来源。你可以使用诸如“According to the text . . .”或“In the opinion of most specialists in this area . . .”或“In Jones’ view . . .”之类的引导从句。这种引用以两种方式减少了歧义：（a）它明确指出陈述不是一般性判断，而是根据特定来源；（b）它明确指出你不是要求学生的个人意见。
+#### 9. 将陈述中的观点归于适当的来源
 
-10. 专注于一个思想。每道题只有一个思想，除非题目旨在评估两个思想之间关系的知识。以下示例展示了如何通过将题目聚焦于单一思想来改进题目：
+如果你的是非题表达了观点、价值或态度，你应将该陈述归于适当的来源。你可以使用诸如“According to the text . . .”或“In the opinion of most specialists in this area . . .”或“In Jones’ view . . .”之类的引导从句。这种引用以两种方式减少了歧义：（a）它明确指出陈述不是一般性判断，而是根据特定来源；（b）它明确指出你不是要求学生的个人意见。
 
-## Example
+#### 10. 专注于一个思想
+
+每道题只有一个思想，除非题目旨在评估两个思想之间关系的知识。以下示例展示了如何通过将题目聚焦于单一思想来改进题目：
+
+##### Example
 
 Poor: The Monongahela River flows north to join the Allegheny River at Columbus, where they form the Ohio River. T F
+
 Better: The Monongahela River and the Allegheny River join to form the Ohio River. T F
 
 在糟糕的题目中，学生可能因适当的原因给出正确答案 F：学生可能（错误地）认为 Monongahela 河不是向北流，可能不知道河流汇合处在匹兹堡，或可能对三条河流一无所知。因此，学生会在没有获得正确答案所暗示的知识的情况下答对题目。可能需要为每个思想分别陈述，以精确识别学生所知的内容。
@@ -4654,23 +4759,30 @@ Better: The Monongahela River and the Allegheny River join to form the Ohio Rive
 
 6 C.C. Weidemann (1926) was probably the first person to use this term in connection with true-false items.
 
-## Crafting Multiple True-False Items
+### Crafting Multiple True-False Items
 
 多项是非题看起来像选择题，因为它有一个题干后跟若干备选答案。然而，与回答选择题不同，学生不选择单一的正确或最佳答案；她对每个备选答案都回答真或假。每个备选答案都被计为正确或不正确。因此，题目可以被设计为有多个正确答案（真答案）而非只有一个。以下示例说明了这一点。
 
-## Example
+##### Example
 
-**Under current collective bargaining laws, workers have the right to bargain for
+**Under current collective bargaining laws, workers have the right to bargain for**
 
 +   1. how much workers of each skill level should be paid. T F
+
+
+
 +   2. how much managers should be paid. T F
+
 +   3. what new products the company should produce. T F
+
 +   4. which workers should be laid off first. T F
 
-** The following statements are arguments used by some people before the Civil War to justify slavery. Read each statement and decide if it is an argument based on democratic ideas.
+**The following statements are arguments used by some people before the Civil War to justify slavery. Read each statement and decide if it is an argument based on democratic ideas.**
 
 +   5. Slavery is right because it existed through most of history. T F
+
 +   6. Slavery is right because the men who wrote the United States Constitution accepted it. T F
+
 +   7. Slavery is right because the great Greek, Aristotle, supported it. T F
 
 Source: Adapted from Sanders, 1966, pp. 53 & 132.
@@ -4710,10 +4822,6 @@ Limitations 多项是非题格式与选择题共享许多相同的局限性。�
 - 用于评估具体的琐碎事实。
 - 措辞含糊。
 - 通过盲目猜测答对。
-
-
-
-
 - 鼓励学生学习事实细节并接受对真理的过度简化表述。
 - 经过精心设计的判断题经常能超越事实细节。它们措辞不会含糊不清，也不评估琐碎事实。示例见表 7.2。
 - 判断题的优点包括
@@ -4769,18 +4877,20 @@ Limitations 多项是非题格式与选择题共享许多相同的局限性。�
 ## 附加阅读
 
 > Ebel, R. L., & Frisbie, D. A., (1991). Essentials of educational measurement (5th ed.). Englewood Cliffs, NJ: Prentice-Hall, Chapter 8.
-> 
+
 > 作者主张在成就测试中扩大判断题的使用。他们提供了全面而详细的分析，提出了许多建议，并给出了大量好坏判断题的例证。
 
 > Frisbie, D. A. (1992). The multiple true-false item format: A status review. Educational Measurement: Issues and Practice, 11(4), 21-26.
-> 
+
 > 回顾了关于此题型信度和效度的研究文献。确定了需要进一步研究的 10 个领域。
 
-> Frisbie, D. A., & Becker, D. F. (1990). An analysis of textbook advice about true-false tests. Applied Measurement in Education, 4, 67-83.
-> 
-> 本文分析了 17 本教科书关于如何撰写判断题的建议。它指出了建议中的矛盾，并确定了哪些题目撰写“规则”得到了研究的支持。
 
-## 选择题和配对练习
+
+> Frisbie, D. A., & Becker, D. F. (1990). An analysis of textbook advice about true-false tests. Applied Measurement in Education, 4, 67-83.
+
+本文分析了 17 本教科书关于如何撰写判断题的建议。它指出了建议中的矛盾，并确定了哪些题目撰写“规则”得到了研究的支持。
+
+# 选择题和配对练习
 
 ## 学习目标
 
@@ -4829,10 +4939,6 @@ Limitations 多项是非题格式与选择题共享许多相同的局限性。�
 - 18. 在你的教学领域制作以下每种替代配对练习类型的可用题目：主列表（关键列表）和表格（矩阵）。 [2, 1]
 - 19. 解释主列表和表格配对练习格式的优点和批评。 [1, 2, 6]
 
-
-
-
-
 ## 本章概述
 
 毫无疑问，在你的教育过程中，你曾参加过包含选择题和配对练习的测试。有效的选择题和配对题是如何编写的？它们适用于哪些知识和技能范围？它们的局限性是什么？编写这些题型的基本指导原则是什么？
@@ -4842,9 +4948,13 @@ Limitations 多项是非题格式与选择题共享许多相同的局限性。�
 ## 示例
 
 以下哪项，结合太阳的公转，会导致季节变化？题干
+
 A 太阳黑子出现频率
+
 B 月球的引力牵引 干扰项
+
 C 太阳发出的光强度
+
 *D 地轴倾斜 正确答案
 
 > 来源：摘自《高中生的地理学习》（第44页）R.Allen、N. Betts、D. Kurfman、W. McDonald、L.V.S. Mullis 和 C. Salter（1990）。新泽西州普林斯顿：国家教育进展评估、教育测试服务。经许可转载。
@@ -4859,12 +4969,9 @@ C 太阳发出的光强度
 
 教师用各种名称称呼建议答案的列表：备选项、响应、选择和选项。备选项应始终以有意义的方式排列（按逻辑、数字、字母顺序等）。事件发生的 chronological 顺序和物体大小（大、中、小）是逻辑顺序的例子。如果它们之间没有逻辑或数字顺序，
 
-20. 描述 masterlist 和表格题型格式所评估的知识和技能类型。 [1, 2, 6]
-
-21. 解释 masterlist 和表格题型格式相对于传统是非题、选择题和配对题格式的优势。 [1, 2, 6]
-
-22. 对于 masterlist 和表格配对练习格式，使用教科书中提供的清单来评估你自己编写的项目和你所在教学领域教学材料中提供的项目的质量并纠正缺陷。 [2, 6]
-
+20. 描述 `masterlist` 和表格题型格式所评估的知识和技能类型。 [1, 2, 6]
+21. 解释 `masterlist` 和表格题型格式相对于传统是非题、选择题和配对题格式的优势。 [1, 2, 6]
+22. 对于 `masterlist` 和表格配对练习格式，使用教科书中提供的清单来评估你自己编写的项目和你所在教学领域教学材料中提供的项目的质量并纠正缺陷。 [2, 6]
 23. 使用本章所述的程序对表格（矩阵）项目集进行评分。 [3]
 
 ## 重要术语和概念
@@ -4923,9 +5030,13 @@ C 太阳发出的光强度
 来源. 摘自《高中生的地理学习》（第45页）R Allen、N. Betts、D. Kurfman、W. McDonald、L.V.S. Mullis 和 C. Salter（1990）。新泽西州普林斯顿：国家教育进展评估、教育测试服务。经许可转载。
 
 3. 美国何时加入第一次世界大战？
+
 A 1913
+
 B 1915
+
 C 1916
+
 *D 1917
 
 所有三个项目都问同一个问题，但回答该问题所需的知识程度从项目 1 到项目 3 增加。在此示例中，你可以清楚地看到备选项如何使项目变得容易或困难：备选项要求学生对日期做出更细微的区分。一些研究支持备选项之间的相似性会增加项目的难度这一观点（Green, 1984）。当然，操纵备选项并不是创造更困难项目的唯一方法。
@@ -4933,6 +5044,8 @@ C 1916
 应为哪个知识水平编写项目？没有通用规则，但请牢记以下主要观点：学生类型、教学水平、你将使用评估结果的目的以及学生在此教育发展阶段需要达到的知识水平。实际上，你需要大致决定每个重要学习目标的足够熟练程度。然后你构建测试项目，以便区分缺乏足够熟练程度的学生和已获得熟练程度的学生。
 
 ## 评估任务的基本目的
+
+
 
 前述陈述代表了一种理想化的情况。你的实际评估任务很少能如此清晰地分离学生。一些知识较少的学生可能正确回答一些任务，而其他知识更丰富的学生则不会。总的来说，请牢记这一原则：
 
@@ -4952,144 +5065,136 @@ Lindvall（1967）区分了教育成果的直接和间接评估。选择题测�
 
 ## 选择题的优点和批评
 
-## 优点
+### 优点
 
 选择题的优点如下：
 
-+   1. 选择题格式可用于评估比其他响应选择题格式更多的学习目标种类。前几段讨论了各种能力。
-
-+   2. 选择题不需要学生写出并阐述他们的答案，从而最大限度地减少了知识较少的学生“吹嘘”或“包装”他们的答案的机会（Wood, 1977）。这种无法写出答案的机会被一些人认为是缺点。
-
-+   3. 选择题测试侧重于阅读和选择任务。
++ 1. 选择题格式可用于评估比其他响应选择题格式更多的学习目标种类。前几段讨论了各种能力。
++ 2. 选择题不需要学生写出并阐述他们的答案，从而最大限度地减少了知识较少的学生“吹嘘”或“包装”他们的答案的机会（Wood, 1977）。这种无法写出答案的机会被一些人认为是缺点。
++ 3. 选择题测试侧重于阅读和选择任务。
 
 > 2 你可能会惊讶地发现，有些人称赞为优点的事情，其他人则极力抨击！
 
+### 示例 8.2
 
-
-
-
-# 示例 8.2
-
-## A. 正确答案型
+#### A. 正确答案型
 
 谁发明了缝纫机？
 
-+   A. Fulton
-+   *B. Howe
-+   C. Singer
-+   D. White
-+   E. Whitney
++ A. Fulton
++ \*B. Howe
++ C. Singer
++ D. White
++ E. Whitney
 
-## B. 最佳答案型
+#### B. 最佳答案型
 
 马歇尔计划的基本目的是什么？
 
-+   A. 军事防御西欧
-+   *B. 重建西欧的商业和工业
-+   C. 解决美国与俄罗斯的分歧
-+   D. 直接帮助欧洲的饥饿和无家可归者
++ A. 军事防御西欧
++ \*B. 重建西欧的商业和工业
++ C. 解决美国与俄罗斯的分歧
++ D. 直接帮助欧洲的饥饿和无家可归者
 
-## C. 多选型
+#### C. 多选型
 
 导致血液凝固的主要因素是什么？
 
-+   A. 血液与异物接触
-+   *B. 血液与受伤组织接触
-+   C. 血红蛋白氧化
-+   D. 存在未改变的凝血酶原
++ A. 血液与异物接触
++ \*B. 血液与受伤组织接触
++ C. 血红蛋白氧化
++ D. 存在未改变的凝血酶原
 
-## D. 不完整陈述型
+#### D. 不完整陈述型
 
 美国每年有多少百万美元的玉米、大麦、小麦和黑麦被破坏？
 
-+   A. 霉菌。
-+   B. 霉。
-+   C. 锈病。
-+   *D. 烟煤病。
++ A. 霉菌。
++ B. 霉。
++ C. 锈病。
++ \*D. 烟煤病。
 
-## E. 否定型
+#### E. 否定型
 
 以下哪项不是病毒的特征？
 
-+   A. 病毒只存在于植物和动物中。
-+   B. 病毒能自我繁殖。
-+   *C. 病毒由非常大的活细胞组成。
-+   D. 病毒能引起疾病。
++ A. 病毒只存在于植物和动物中。
++ B. 病毒能自我繁殖。
++ \*C. 病毒由非常大的活细胞组成。
++ D. 病毒能引起疾病。
 
-## F. 替换型
+#### F. 替换型
 
 阅读以下段落
 
 教育力量理应充分利用，以使青年了解对民主的危险的真实本质，因为没有其他地方 1 提供了与学校 2 一样好或更好的机会来对所涉及的问题进行理性思考。 3
 
-### 待回答的题目
+##### 待回答的题目
 
-+   1. *A. ，for
-+   B. . For
-+   C. - for
-+   D. 无需标点
++ 1. \*A. ，for
++ B. . For
++ C. - for
++ D. 无需标点
++ 2. A. As good or better opportunities than
++ B. as good opportunities or better than
++ C. as good opportunities as or better than
++ \*D. better opportunities than
++ 3. \*A. rational
++ B. radical
++ C. reasonable
++ D. realistic
 
-+   2. A. As good or better opportunities than
-+   B. as good opportunities or better than
-+   C. as good opportunities as or better than
-+   *D. better opportunities than
-
-+   3. *A. rational
-+   B. radical
-+   C. reasonable
-+   D. realistic
-
-## G. 不完整备选型*
+#### G. 不完整备选型\*
 
 一个苹果的味道尖锐、辛辣，但不令人不愉快地酸或苦，被称为 (4)
 
-+   A. p B. q *C. t D. v E. w
-
-## H. 组合反应型
-
-这些句子应按什么顺序排列才能构成连贯的段落？
-
-+   a. 必须在餐桌礼仪和运动礼仪之间划清明确的界限。
-+   b. 然而，在餐桌上这样处理勺子，最多只会引起对把葡萄柚汁喷得到处都是的愤怒抗议。
-+   c. 因此，例如，在棒球中外野手接住飞球或在足球中完成传球都是值得喝彩的。
-+   d. 同样地，在高尔夫中熟练地用勺子从沙坑中取出球可能会赢得锦标赛。
-+   e. 但在餐桌上把饼干或松饼抛起接住会招致鄙视和责备。
-
-+   A. a, b, c, d, e
-+   *B. a, c, e, d, b
-+   C. a, e, c, d, b
-+   D. b, e, d, c, a
-+   E. Whitney
++ A. p
++ B. q
++ \*C. t
++ D. v
++ E. w
 
 a 括号中的数字表示正确答案的字母数（在本例中为“tart”）。使用该数字可以排除边界正确的答案。
 
+#### H. 组合反应型
+
+这些句子应按什么顺序排列才能构成连贯的段落？
+
++ a. 必须在餐桌礼仪和运动礼仪之间划清明确的界限。
++ b. 然而，在餐桌上这样处理勺子，最多只会引起对把葡萄柚汁喷得到处都是的愤怒抗议。
++ c. 因此，例如，在棒球中外野手接住飞球或在足球中完成传球都是值得喝彩的。
++ d. 同样地，在高尔夫中熟练地用勺子从沙坑中取出球可能会赢得锦标赛。
++ e. 但在餐桌上把饼干或松饼抛起接住会招致鄙视和责备。
++ A. a, b, c, d, e
++ \*B. a, c, e, d, b
++ C. a, e, c, d, b
++ D. b, e, d, c, a
++ E. Whitney
+
 > 来源：改编自 R. L. Ebel 的“Writing the Test Item”，载于 E. F. Lindquist 编的《Educational Measurement》（第 194–195 页），1951 年，华盛顿特区：美国教育委员会。另改编自 A. G. Wesman 的“Writing the Test Item”，载于 R. L. Thorndike 编的《Educational Measurement》（第 2 版）（第 93– 页），1971 年，华盛顿特区：美国教育委员会。经许可改编。
 
-sis for a diagnosis. You will have to follow up to confirm your diagnosis.
+basis for a diagnosis. You will have to follow up to confirm your diagnosis.
 
-## 批评
+### 批评
 
 Wood（1977）总结了对选择题测试的若干批评。当然，本节中表达的大多数批评也可能适用于任何类型的评估程序。然而，在其他评估形式中，这些缺陷可能在教师设定任务的方式或教师用于评分学生的评分标准中显现出来。
 
-+   1. 学生必须从固定的选项列表中选择，而不是创造或表达自己的想法或解决方案。如果你完全依赖选择题测试，你将冒着让学生几乎没有或没有机会就他们正在学习的主题进行写作的风险。
-
-+   2. 写得不好的选择题可能肤浅、琐碎，并且仅限于事实知识。当然，任何构造不良的评估形式也可能如此。获得克服这一批评的知识和技能正是你学习这门课程的原因！
-
-+   3. 因为通常只有一项的选项被标记为正确，更聪明的学生可能会因未选择它而受到惩罚。更聪明的学生可能会因措辞的歧义、分歧的观点或对该主题的额外知识而发现选择题中的缺陷，而其他学生可能不会。
-
-+   4. 选择题往往基于“标准化”、“庸俗化”或“批准”的知识。学生在选择题上解决的问题往往非常结构化和封闭（只有一个正确答案）。这给人一种印象，即某一学科领域的所有问题都有唯一的正确答案，这可能会鼓励学生过分相信权威人物的正确性，或可能将某一学科领域描绘成具有固定且有限的知识基础。此外，如果你使用与现实解释材料无关的题目进行选择题测试，这会导致测试缺乏现实背景。这被称为去情境化知识。因此，你的测试可能无法评估学生是否能在有意义和真实的情境中使用所学知识。
-
-+   5. 对重要或高风险评估完全使用选择题测试可能会以不良的方式塑造教育。反对选择题测试的人指出，你使用的考试类型可以塑造你向学生提供的教学内容和性质。如果高风险评估的选择题侧重于事实知识，教师倾向于使用练习和训练技术来为学生做准备。如果测试包含评估使用知识和应用高阶能力（例如，是与否，男性与女性，阳性与阴性）的选择题。
-
-+   4. 每个测试题目的答案足够简短，以至于写出答案不会比在答题纸上标记选择题答案花费学生更长的时间。
++ 1. 学生必须从固定的选项列表中选择，而不是创造或表达自己的想法或解决方案。如果你完全依赖选择题测试，你将冒着让学生几乎没有或没有机会就他们正在学习的主题进行写作的风险。
++ 2. 写得不好的选择题可能肤浅、琐碎，并且仅限于事实知识。当然，任何构造不良的评估形式也可能如此。获得克服这一批评的知识和技能正是你学习这门课程的原因！
++ 3. 因为通常只有一项的选项被标记为正确，更聪明的学生可能会因未选择它而受到惩罚。更聪明的学生可能会因措辞的歧义、分歧的观点或对该主题的额外知识而发现选择题中的缺陷，而其他学生可能不会。
++ 4. 选择题往往基于“标准化”、“庸俗化”或“批准”的知识。学生在选择题上解决的问题往往非常结构化和封闭（只有一个正确答案）。这给人一种印象，即某一学科领域的所有问题都有唯一的正确答案，这可能会鼓励学生过分相信权威人物的正确性，或可能将某一学科领域描绘成具有固定且有限的知识基础。此外，如果你使用与现实解释材料无关的题目进行选择题测试，这会导致测试缺乏现实背景。这被称为去情境化知识。因此，你的测试可能无法评估学生是否能在有意义和真实的情境中使用所学知识。
++ 5. 对重要或高风险评估完全使用选择题测试可能会以不良的方式塑造教育。反对选择题测试的人指出，你使用的考试类型可以塑造你向学生提供的教学内容和性质。如果高风险评估的选择题侧重于事实知识，教师倾向于使用练习和训练技术来为学生做准备。如果测试包含评估使用知识和应用高阶能力（例如，是与否，男性与女性，阳性与阴性）的选择题。
++ 4. 每个测试题目的答案足够简短，以至于写出答案不会比在答题纸上标记选择题答案花费学生更长的时间。
 
 当存在上述任何一种情况时，你将很难编写出要求学生展示所需程度回忆和计算的选择题。此外，如同第 2 和第 4 种情况，有时选择题格式相比更直接的简答格式并无优势。
 
-## 例外情况
+### 例外情况
 
 当然，这些建议也有例外。当你需要对大量学生在大范围的内容上进行评估，并且有现成的机器评分时，选择题可能是唯一实用的评估方式。或者当你已经拥有一份包含大量优质选择题的测试，但其中只有一两个题目符合前面列出的四种情况之一时，使用选择题格式更为高效。
 
 如果你的学生将接受标准化成就测试（由你的学区或州提供），让他们有机会回答选择题对他们是有利的。事实上，一些教育测量专家认为，在这种情况下，如果你不让学生练习做选择题测试，你就是失职的。因此，即使存在四种情况之一，你也可能希望至少在评估的一部分中使用选择题，以给学生适当的练习。
+
+
 
 课堂评估通常受益于评估格式的混合。你应专门为每个学习目标量身定制任务，以获得最有效的结果。你的结果的有效性，而非你自己的便利，应是你的首要优先事项。
 
@@ -5099,7 +5204,7 @@ Wood（1977）总结了对选择题测试的若干批评。当然，本节中表
 
 ## 构建基础选择题
 
-## 五项基本技能
+### 五项基本技能
 
 如果你学会了五件事，你就能编写出有用的选择题：（a）将题目聚焦于评估特定的学习目标，（b）将题干准备为需要解决的问题或问题，（c）写出简洁、正确的备选答案，（d）写出合理的干扰项，以及（e）编辑题目以去除对正确答案的无关线索。你必须记住，当一个选择题第一次从你的脑海中产生时，它只是一个粗糙的题目。任何评估任务的初稿都不可用于人类使用。在编辑和润色之前不应将其放入测试中。最后时刻匆忙编写选择题放入测试中，是你没有履行专业责任的明显迹象（参见第 5 章）。编辑题目是必要的步骤，即使对于最有经验的教师也是如此。本节提出了若干题目编写指南，以在编辑阶段改进题目。
 
@@ -5127,9 +5232,6 @@ Wood（1977）总结了对选择题测试的若干批评。当然，本节中表
 
 来源：Ebel, 1951, 1979, Greene, Jorgensen, & Gerberich, 1942, 1943; Gronlund, 1976; Hopkins, Stanley, & Hopkins, 1990; Lindquist & Mann, 1936; Lindvall, 1967; Millman, 1961; Sax, 1974; Thorndike, Cunningham, Thorndike, & Hagen, 1991; Wesman, 1971.
 
-
-
-
 原因可能是当教师不提出直接问题时，学生必须在脑中将题干重新表述为适合所给选项的问题。这增加了学生任务的认知复杂性，可能超出了你的预期。当这种情况发生时，你就违反了设计测评的第二和第三条基本原则。当使用不完整的句子时，当然会隐含一个问题。年龄较大且聪明的学生有时能够毫不困难地进行这种改写。然而，年龄较小、平均水平的学生，以及可能存在某些学习困难的学生，可能会发现这个额外过程增加了他们表达所知内容的难度。
 
 检查这一缺陷的一个简单方法是，用手遮住选项。然后，阅读题干。仅凭该题干，你能否确定对学生有什么要求？如果不能，题干就是不完整的，你应该重写它。下面的例子展示了如何通过将不完整的题干重新表述为一个问题来改进题目。
@@ -5137,17 +5239,27 @@ Wood（1977）总结了对选择题测试的若干批评。当然，本节中表
 ## Example
 
 Poor: Incomplete stem
+
 1. W. E. B. DuBois
+
 *A Actively pressed for complete political participation and full rights for African Americans.
+
 B Taught that the immediate need was for African Americans to raise their economic status by learning trades and crafts.
+
 C Emphasized helping African Americans through the National Urban League.
+
 D Founded the Association for the Study of Negro Life and History.
 
 Better: Asks a question
+
 2. Which of the following comes closest to expressing W. E. B. DuBois' ideas about priorities of activities of African Americans during the early 20th century?
+
 A African Americans should first improve their economic condition before becoming fully involved in politics.
+
 B African Americans should postpone the fight for equal access to higher education until their majority acquire salable trade skills.
+
 C African Americans should withdraw from white society to form a separate state in which they have complete political and economic control.
+
 *D African Americans should become active, seeking out complete citizenship and full political participation immediately.
 
 Example 1 is poor because the stem does not set a task or ask a question. (Cover the alternative. What task or problem does the stem set?) The student must read the entire item and infer that the teacher must be trying to find out something about W. E. B. DuBois' ideas. The student may
@@ -5155,21 +5267,33 @@ Example 1 is poor because the stem does not set a task or ask a question. (Cover
 very well know DuBois' ideas, but if the student makes the wrong inference about the teacher's intent, the student may answer the item incorrectly. Example 2 is better because the intent of the item is clear after the student reads the stem.
 
 ## Put Alternatives at the End
+
 If you fail to follow this rule, you will encounter problems similar to those encountered with completion items when the blank is not placed at the end of the incomplete sentence (Chapter 7). The following example shows how an item is improved by listing alternatives at the end of the stem.
 
 ## Example
 
 Poor: Options in the middle of the stem
+
 1. Before the Civil War, the South's
+
 *A emphasis on staple-crop production
-B lack of suitable supply of raw materials
-C short supply of personnel capable of operating the necessary machinery
+
+
+
+`B` lack of suitable supply of raw materials
+
+`C` short supply of personnel capable of operating the necessary machinery
+
 was one of the major reasons manufacturing developed more slowly than it did in the North.
 
 Better: Options put at the end
+
 2. Before the Civil War, why did manufacturing develop more slowly in the South than in the North?
+
 *A The South emphasized staple-crop production.
+
 B The South lacked a suitable supply of raw materials.
+
 C The South had a short supply of people capable of operating the necessary machinery.
 
 Control Vocabulary and Sentence Structure When testing for subject-matter learning, make sure you phrase the item at a level suitable for the students. You don't want long sentences, difficult vocabulary, and unnecessarily complex sentence structures to interfere with students' ability to answer the item. This may be especially true when you have students with disabilities mainstreamed in your class. For example, deaf and hard-of-hearing students frequently have relatively large language and vocabulary deficits. These students may very well have acquired the specific knowledge, concept, or principle you are assessing, but the way you phrase an item may interfere with their ability to demonstrate this knowledge (see Suppes, 1974).
@@ -5179,16 +5303,23 @@ The example below illustrates how a simple information item can be complicated b
 ## Example
 
 Poor: Unnecessary wordiness and complexity
+
 1. Given the present day utilization of the automobile in urban settings, which of the following represents an important contribution of Garrett A. Morgan's genius?
+
 A automobile safety belts
+
 B crosswalk markers
 
 ## Better: More concise
 
 2. Which of the following did Garrett A. Morgan invent?
+
 A automobile safety belts
+
 B crosswalk markers
+
 *C traffic lights
+
 D vulcanized rubber tires
 
 Avoid “Window Dressing” Item 1 in the preceding example demonstrates how extraneous wording can complicate an item unnecessarily. Less obvious is the use of words that tend to “dress up” a stem to make it sound as though it is testing something of practical importance (Ebel, 1965). Often such window dressing creeps into an item when you are struggling to measure higher-level cognitive abilities, such as applications. Window dressing makes an item appear to measure applications, when it does not. The next example shows how window dressing makes an item more difficult, less discriminating, less reliable, and less valid (Haladyna & Downing, 1989a). The item is improved by eliminating the window dressing.
@@ -5198,17 +5329,25 @@ Avoid “Window Dressing” Item 1 in the preceding example demonstrates how ext
 Poor: Window dressing
 
 1. There are 10 preservice teachers in the Department of Education who recently registered for the college-sponsored weight loss program. At the beginning of the program each was weighed, and the 10 had a mean weight of 139.4 pounds. Suppose there were but three men in this group, and that their mean weight was 180 pounds. What was the mean weight of the women at the beginning of the program?
+
 A 115.0 pounds
+
 *B 122.0 pounds
+
 C 140.0 pounds
+
 D 159.7 pounds
 
 ## Better: More concise
 
 2. Ten persons have a mean weight of 139.4 pounds. The mean weight of three of them is 180 pounds. What is the mean weight of the remaining seven persons?
+
 A 115.0 pounds
+
 *B 122.0 pounds
+
 C 140.0 pounds
+
 D 159.7 pounds
 
 Every word used in an item should have a purpose. Sometimes names, places, and other “facts” about a situation are necessary pieces of information: They can give the student the basis for determining the correct answer. The following example shows an acceptable inclusion of facts in an item stem.
@@ -5223,45 +5362,60 @@ A company owns a fleet of cars for which it pays all fuel expenses. Three readil
 | Type B | 18.5 | 19.1 |
 | Type C | 18.8 | 18.9 |
 
-1. Assuming they all cost the same, which type of gasoline should the company use?
+
+
+# Assuming they all cost the same, which type of gasoline should the company use?
+
 *A Type A
+
 B Type B
+
 C Type C
+
 D Type D
 
 Avoid Negatively Worded Stems Phrase items positively if possible. Negatively worded stems, such as “which of the following is not . . .,” tend to confuse students, especially the younger or less careful ones. Even well-prepared students often overlook the not in an examination question. Positively worded items are easier for students than the corresponding negatively worded items (Haladyna & Downing, 1989a). The following example shows how to improve an item by using positive wording.
 
 ## Example
 
-Poor: Negatively phrased stem
+### Poor: Negatively phrased stem
 
 1. Sometimes a teacher finds it necessary to use a mild form of punishment. When this occurs, which of the following should not happen?
+
 A Children should not believe all of their behavior is bad.
+
 B Children should understand the reason(s) why they are being punished.
+
 *C Children should understand that the teacher, not them, controls when the punishment will end.
 
 ## Better: Positively phrased stem
 
 2. Sometimes a teacher finds it necessary to use a mild form of punishment. When this occurs, it is important that the children understand
+
 A that it may be a long time before happy times return to the classroom.
+
 *B the reason(s) why they are being punished.
+
 C that the teacher, not the children, controls when their punishment will end.
 
 If negatively phrased items must be used, use the negative word only in the stem or only in an option (not both), and either underline the negative word or place it in CAPITAL LETTERS.
 
 Avoid Grading Personal Opinions Do not ask for students' personal opinions in the context of a multiple-choice test in
 
-
 学生需要选择一个选项作为最佳或正确答案。每个人都有发表意见的权利。如果你要求学生在多项选择题中发表意见，每个选项都可能是正确的。以下示例说明了这一点。
 
 ## Example
 
-Poor: Makes the correct answer a matter of personal opinion
+### Poor: Makes the correct answer a matter of personal opinion
 
 - 1. Which of the following men contributed most toward the improvement of the self-confidence of African Americans?
+
 - A W. E. B. DuBois
+
 - B Eugene K. Jones
+
 - C Booker T. Washington
+
 - D Carter G. Woodson
 
 前一问题没有唯一的正确答案，因为每个人的贡献可以用不同方式进行判断和评估。该问题可以作为一篇扩展回答作文或学期论文的基础，要求学生在其中用证据和逻辑论证来支持自己的观点。但是，不要评判意见或所持立场。相反，要评估学生使用证据支持其观点的能力。
@@ -5272,11 +5426,14 @@ Poor: Makes the correct answer a matter of personal opinion
 
 ## Example
 
-Poor: Uses textbookish phrasing
+### Poor: Uses textbookish phrasing
 
 - 1. The annual incomes of five employees are: $8,000; $8,000; $10,000; $11,000; and $25,000, respectively. Which index should be used to summarize the typical employee's income?
+
 - A mean
+
 - *B median
+
 - C mode
 
 ## Better: Novel situation for students
@@ -5284,8 +5441,11 @@ Poor: Uses textbookish phrasing
 A teacher keeps a record of how long it takes students to complete the 50-question final exam. The mean time was 46 minutes and the median time was 20 minutes. The teacher used this information to set the next exam's time at 20 minutes. The teacher reasoned that these data demonstrate that the typical student could complete the test in that time.
 
 - 2. In all likelihood, this time limit is
+
 - A Just about right.
+
 - *B Too short.
+
 - C Too long.
 
 第一个题目较弱，因为大多数入门统计学书籍将术语 typical 与 median 关联，并且经常使用收入示例来说明中位数的应用。通过了解这些肤浅的事实，学生可以在不展示对该统计指标的深入理解的情况下选择“B”。更好的题目，第2题，评估的是不同的学习目标。它更好，因为它呈现了一个新颖的情况并要求对概念进行应用。
@@ -5302,26 +5462,42 @@ A teacher keeps a record of how long it takes students to complete the 50-questi
 
 Preceding item
 
+
+
+# 题目示例
+
 - 1. The perimeter of a rectangle is 350 centimeters. The length of the rectangle is 3 centimeters longer than the width. What is the width?
+
 - A 18.7 cm.
-- *B 86.0 cm.
+
+- *B 86.0 cm.*
+
 - C 89.0 cm.
+
 - D 116.7 cm.
 
 Poor subsequent item: Linked to Item 1
 
 - 2. What is the area of the rectangle described in Question 1?
+
 - A 1050 sq. cm.
+
 - B 7396 sq. cm.
-- *C 7654 sq. cm.
+
+- *C 7654 sq. cm.*
+
 - D 8188 sq. cm.
 
 Better subsequent item: Independent of Item 1
 
 - 3. The width of a rectangle is 4 centimeters and the length is 3 centimeters. What is the area?
+
 - A 9 sq. cm.
-- *B 12 sq. cm.
+
+- *B 12 sq. cm.*
+
 - C 16 sq. cm.
+
 - D 17 sq. cm.
 
 “前一题目”主要是计算性的。较差的后续题目（第2题）与之链接。学生在第1题中可能因计算错误而得到89.0等结果。已经在第1题中犯错的学生也会在第2题中出错，因为89 × (89 + 3) = 8,188 被设为错误答案。解决方案在更好的后续题目中展示：你为学生提供一个新的数值供其使用，该数值独立于前一题目。因此，第3题与第1题无关。
@@ -5337,17 +5513,25 @@ Better subsequent item: Independent of Item 1
 Poor: Definition in the stem
 
 - 1. The increase in length per unit of length of a metal rod for each degree rise in temperature (Centigrade) is known as the
-- *A coefficient of linear expansion of the metal.
+
+- *A coefficient of linear expansion of the metal.*
+
 - B elasticity of the metal.
+
 - C specific heat of the metal.
+
 - D surface tension of the metal.
 
 Better: Definitions in the alternatives
 
 - 2. What is the coefficient of linear expansion of a metal rod?
+
 - A the increase in length of the rod when its temperature is raised 1° C
-- *B the increase in length when the temperature is raised 1° C divided by the total length of the rod at its original temperature
+
+- *B the increase in length when the temperature is raised 1° C divided by the total length of the rod at its original temperature*
+
 - C the ratio of its length at 100 to its length at 0° C
+
 - D the rise in temperature (degrees Centigrade) which is necessary to cause the length of the rod to expand 1 per cent
 
 > Source: Adapted from “The Construction of Tests” by E. F. Lindquist and C. R. Mann (1936) in H. E. Hawkes, E. F. Lindquist, and C. R. Mann (Eds.), The Constructions and Use of Achievement Examinations: A Manual for Secondary School Teachers. Boston: Houghton-Mifflin, pp.145–146.
@@ -5361,10 +5545,6 @@ Better: Definitions in the alternatives
 以下许多建议将帮助你制作合理的干扰项。合理的干扰项是看起来对未掌握所评估学习目标的学生来说似乎是正确的错误备选。为了使干扰项合理，应基于学生常犯的错误，例如计算错误、概念错误或源于错误常识的错误。这样，你对学生回答的分析可以帮助你识别他们的具体困难。
 
 表8.2要求使用三到五个功能性备选。一个功能性备选服务于其编写的目的。这意味着作为干扰项的备选至少吸引一个没有你期望所有学生都具备的知识程度的学生。
-
-
-
-
 
 Table 8.2 Suggestions for improving the alternatives of multiple-choice items.
 
@@ -5384,56 +5564,75 @@ Students. Also, an alternative that is the keyed answer is functional if it is s
 
 For example, an item may have five alternatives. If even the most superficial learner easily eliminates two of the distractors, however, only the remaining three are seriously considered plausible answers. In reality, then, the item has only three functional alternatives. For practical purposes you may as well delete the two nonfunctional alternatives. Nonfunctional distractors are called "deadwood" or filler alternatives.
 
+
+
 Teachers sometimes ask if each multiple-choice item should have the same number of alternatives and, if so, how many there should be. Assessment specialists have long recognized that there is no virtue in having the same number of alternatives for each item (Ebel, 1965; Lindquist & Mann, 1936). This is especially true for classroom assessment. Research supports the rule that you should write as many functional distractors as is feasible; as Haladyna and Downing (1989b) point out, "The key to distractor development is not the number of distractors but the quality of distractors" (p. 59).
 
 If you can write three to five functional alternatives, then the item is more likely to distinguish those who have the desired degree of knowledge from those who do not. But the more alternatives you try to write, the harder it will be to make them functional. Using two functional alternatives is permissible, but with only two alternatives, guessing is likely to play a major role, since one alternative is the keyed answer. As a rule of thumb, strive to write between three and five functional alternatives. Don't waste your time trying to create the same number of alternatives for each item if by so doing you are creating nonfunctional fillers or deadwood. Give yourself and your students a break! (Incidentally, if a separate answer sheet is used for machine scoring, check the maximum spaces allowed per item and adjust the maximum number of alternatives accordingly.)
 
-Homogeneous Alternatives
+## Homogeneous Alternatives
+
 Lack of homogeneity is a primary reason why distractors do not function. An item is said to have homogeneous alternatives when each alternative belongs to the same set of "things," and each alternative is appropriate to the question asked or problem posed by the stem. For example, if the stem asks students to identify the name of someone who invented a particular machine, then each alternative should be a name and each name should be an inventor to be appropriate to the stem.
 
 An item has heterogeneous alternatives when one or more of its alternatives do not belong to the same set of things. An example that shows how to improve an item by making its alternatives homogeneous follows.
 
-## Example
+### Example
 
 Poor: Heterogeneous alternatives that do not belong to the same category
 
 1. What is the official state bird of Pennsylvania?
-A mountain laurel
-B Philadelphia
-*C ruffled grouse
-D Susquehanna River
+
+    - A mountain laurel
+    - B Philadelphia
+    - *C ruffled grouse
+    - D Susquehanna River
 
 Better: Homogeneous alternatives that belong to the same category
 
 2. What is the official state bird of Pennsylvania?
-A goldfinch
-B robin
-*C ruffled grouse
-D wild turkey
 
-You may also adjust the degree of homogeneity to control the difficulty of an item. The more alike the distractors, the more difficult the item (Green, 1984). The World War I items in the "Considerations Before Crafting Items" section illustrated this point previously. Whether
+    - A goldfinch
+    - B robin
+    - *C ruffled grouse
+    - D wild turkey
 
-alternatives are perceived to be homogeneous by the students you are assessing depends on their level of educational development. Item 2 in the preceding example could be made more homogeneous (and more difficult) by using as alternatives the scientific names of several different species of grouse, for example. The World War I items in the “Considerations Before Crafting Items” section illustrate this point, too: The alternatives in Item 1 in that section may appear homogeneous to less knowledgeable, younger students, but they will likely appear to be quite heterogeneous alternatives to knowledgeable, older students.
+You may also adjust the degree of homogeneity to control the difficulty of an item. The more alike the distractors, the more difficult the item (Green, 1984). The World War I items in the "Considerations Before Crafting Items" section illustrated this point previously. Whether alternatives are perceived to be homogeneous by the students you are assessing depends on their level of educational development. Item 2 in the preceding example could be made more homogeneous (and more difficult) by using as alternatives the scientific names of several different species of grouse, for example. The World War I items in the "Considerations Before Crafting Items" section illustrate this point, too: The alternatives in Item 1 in that section may appear homogeneous to less knowledgeable, younger students, but they will likely appear to be quite heterogeneous alternatives to knowledgeable, older students.
 
-Put Repeated Words in the Stem
+## Put Repeated Words in the Stem
+
 In general, it is better to put into the stem words or phrases that are repeated in each alternative. A more complete stem reduces the amount of reading required of the students and makes the task clearer to the student. To accomplish this, you may find it necessary to rephrase the stem to focus it on the critical point of the learning target. The next example shows how to improve an item by eliminating words that are repeated in each alternative.
 
-## Example
+### Example
 
-Poor: Words repeated in each alternative
+
+
+
+# Poor: Words repeated in each alternative
+
 1. Which of the following is the best definition of seismograph?
+
 A an apparatus for measuring sound waves
+
 B an apparatus for measuring heat waves
+
 *C an apparatus for measuring earthquakes waves
+
 D an apparatus for measuring ocean waves
-Better: Stem is more focused and repeated words are incorporated into the stem
+
+# Better: Stem is more focused and repeated words are incorporated into the stem
+
 2. What type of waves does a seismograph measure?
+
 *A earthquake waves
+
 B heat waves
+
 C ocean waves
+
 D sound waves
 
-Consistent, Correct Punctuation
+# Consistent, Correct Punctuation
+
 If the stem asks a question directly (i.e., it ends in a question mark), the options can be either (a) complete sentences; (b) single words, terms, names, or phrases; or (c) other incomplete sentences. Complete sentences begin with a capital letter and end with an appropriate punctuation mark; do not use a semicolon or other inappropriate terminal punctuation. If the options are single words or incomplete sentences, do not use terminal punctuation. However, use a consistent rule for capitalizing the initial word in each option: Throughout the test, either capitalize all initial words or capitalize no initial word (except a proper noun, of course).
 
 An incomplete stem contains an incomplete sentence that the student must complete by choosing the correct alternative. In this case, you must choose plausible alternatives to complete the sentence for students who have not mastered the learning target. When writing this type of item, begin each alternative with a lowercase letter (unless an alternative’s initial word is a proper noun) and end it with the appropriate terminal punctuation.
@@ -5443,12 +5642,17 @@ There are exceptions to these rules, of course, as when the purpose of an item i
 ## Example
 
 Choose the phrases that correctly complete the sentence.
+
 1. Julia became very frightened and shouted,
+
 A “Please save me.”
+
 B “Please save me?”
+
 *C “Please save me!”
 
-Arrangement of the Alternatives
+# Arrangement of the Alternatives
+
 Alternatives are less confusing and easier to read when they are arranged one below the other in list form rather than in tandem or beside one another. The following item shows a poor (tandem) arrangement of the alternatives.
 
 ## Example
@@ -5460,50 +5664,64 @@ Alternatives should be arranged in meaningful order, such as order of magnitude 
 ## Example
 
 Alphabetical arrangement of alternatives
+
 1. Which of the following is made from the shells of tiny animals?
+
 *A chalk
+
 B clay
+
 C shale
 
+# 备选答案的数字排列
 
++ 2. 一个学生的百分位等级是 4。对应的斯坦因等级是多少？
 
++ A 4
 
++ B 3
 
-## 备选答案的数字排列
++ C 2
 
-+   2. 一个学生的百分位等级是 4。对应的斯坦因等级是多少？
-+   A 4
-+   B 3
-+   C 2
-+   *D 1
++ *D 1
 
-与题干在语法上的正确关系 包含对正确答案有语法线索的题目比没有此类线索的题目更容易且可靠性更低（Haladyna & Downing, 1989a）。不要暗示正确答案或允许干扰项因表面原因被排除。不当的语法线索示例包括主谓不一致、不当的不定冠词以及单复数混淆。下面是消除对正确答案的语法线索从而改进题目的示例。
+# 与题干在语法上的正确关系
+
+包含对正确答案有语法线索的题目比没有此类线索的题目更容易且可靠性更低（Haladyna & Downing, 1989a）。不要暗示正确答案或允许干扰项因表面原因被排除。不当的语法线索示例包括主谓不一致、不当的不定冠词以及单复数混淆。下面是消除对正确答案的语法线索从而改进题目的示例。
 
 ## 示例
 
 Poor: 题干末尾的定冠词“a”以及备选答案中“angles”的复数用法暗示了正确答案。
 
-+   1. A 90° angle is called a
-+   A acute angles
-+   B obtuse angles
-+   *C right angle
++ 1. A 90° angle is called a
+
++ A acute angles
+
++ B obtuse angles
+
++ *C right angle
 
 Better: 将题干写成直接提问的方式消除了语法线索。
 
-+   2. What are 90° angles called?
-+   A acute angles
-+   B obtuse angles
-+   *C right angles
++ 2. What are 90° angles called?
+
++ A acute angles
+
++ B obtuse angles
+
+
+
+*C right angles
 
 Poor: 只有一项备选答案与题干在语法上正确地使用了连词。
 
 ## Better: 提出直接问题以聚焦题目。
 
-+   6. What is a scarf?
-+   A band of cloth worn around the neck
-+   B type of wood joint
-+   C a tool for trimming shrubs
-+   *D both (A) and (B) are scarves
++ 6. What is a scarf?
++ A band of cloth worn around the neck
++ B type of wood joint
++ C a tool for trimming shrubs
++ *D both (A) and (B) are scarves
 
 题干 1 中的不定冠词 a 给学生一个线索，表明备选答案 (C) 是正确的。其他两个备选答案以元音开头，因此需要不定冠词 an。在题干 3 中，连词 when 仅适用于选项 (B) 的表述。题干 5 中题干的复数动词形式提示学生选择多个定义。
 
@@ -5512,28 +5730,25 @@ Poor: 只有一项备选答案与题干在语法上正确地使用了连词。
 ## 示例
 
 Poor: 使用“over”使得 A 和 B 与 C 重叠。
-
-+   1. What is the population of Modesto, CA?
-+   A over 180,000
-+   B over 160,000
-+   *C over 140,000
++ 1. What is the population of Modesto, CA?
++ A over 180,000
++ B over 160,000
++ *C over 140,000
 
 Better: 备选答案的数值不重叠。
 
 Poor: 备选答案 B、C 和 D 基本相同，因此可以被排除。
-
-+   5. How long does a perennial plant live?
-+   *A It continues to live year after year.
-+   B It lives only for one growing season.
-+   C It needs to be replanted every year.
-+   D It dies after the first year.
++ 5. How long does a perennial plant live?
++ *A It continues to live year after year.
++ B It lives only for one growing season.
++ C It needs to be replanted every year.
++ D It dies after the first year.
 
 Better: 备选答案重新聚焦，直接询问年限。
-
-+   6. How long does a perennial plant live?
-+   *A It continues to live for several years.
-+   B It lives only for two years.
-+   C It lives for only one year.
++ 6. How long does a perennial plant live?
++ *A It continues to live for several years.
++ B It lives only for two years.
++ C It lives for only one year.
 
 在题干 1 中，选项 (C) 与选项 (A) 和 (B) 重叠。即使学生不知道正确答案，学生也可能选择选项 (C)。在题干 3 中，选项 (A)、(B) 和 (C) 基本上说的是同一件事：一个擅长应试的学生，认识到这种重叠，即使不知道下科罗拉多河盆地需水情况，也很可能选择选项 (D)。同样，对于题干 5，选项 (B)、(C) 和 (D) 基本上说的是同一件事，但这里“以上皆是”并不是一个选项。因此，应试的学生会知道选项 (A) 必须正确。
 
@@ -5544,19 +5759,17 @@ Better: 备选答案重新聚焦，直接询问年限。
 ## 示例
 
 Poor: 备选答案是一组不集中的真假陈述。
-
-+   1. Reliability is
-+   *A increased by making a test longer
-+   B decreased by making the test longer
-+   C unrelated to the test’s standard deviation
-+   D the same as the test’s standard error of measurement
++ 1. Reliability is
++ *A increased by making a test longer
++ B decreased by making the test longer
++ C unrelated to the test’s standard deviation
++ D the same as the test’s standard error of measurement
 
 Better: 题干聚焦于一个问题。
-
-+   2. Which of the following situations will likely increase a test’s reliability coefficient?
-+   *A A 40-item test is lengthened to 50-items.
-+   B A 50-item test is shortened to 40-items.
-+   C The coefficient is computed using only the upper 27% of the students.
++ 2. Which of the following situations will likely increase a test’s reliability coefficient?
++ *A A 40-item test is lengthened to 50-items.
++ B A 50-item test is shortened to 40-items.
++ C The coefficient is computed using only the upper 27% of the students.
 
 在题干 1 中，很难确定学生需要回答的单一问题。所有选项仅因它们都可以用短语“Reliability is”开头而相关。选项 (B)、(C) 和 (D) 与该短语一起使用时成为假陈述。该题目缺乏焦点，因为它实际上嵌入了三个思想：测验长度如何影响信度、群体变异性（标准差）如何影响信度，以及信度系数与测量标准误之间的关系。应只选择其中一个思想并作为修订题目的基础，就像题干 2 所做的那样。 （但是，要制作多个真假题目，请参阅第 7 章。）
 
@@ -5571,29 +5784,23 @@ Better: 题干聚焦于一个问题。
 ## 示例
 
 “以上均不是”的可接受使用：作为正确答案
-
 1. What is the difference?
-
       106
       -21
       ----
        ?
-
 A 81
 B 89
 C 101
 *D None of the above
 
 “以上均不是”的可接受使用：作为合理的干扰项
-
 2. What is the sum?
-
       46
       47
       48
       --
        ?
-
 A 161
 B 171
 *C 141
@@ -5612,36 +5819,47 @@ D None of the above
 ## 示例
 
 Poor: 通过题干与正确答案中词语的关联来回答。
-
 1. Which government agency is most concerned with our nation's agricultural policies?
 *A Department of Agriculture
 B Department of Education
-C Department of the Interior
-D Department of Labor
 
-2. In which journal can you find articles about recent research in educational testing?
+
+
+## C Department of the Interior
+
+## D Department of Labor
+
+### 2. In which journal can you find articles about recent research in educational testing?
+
 A American Psychologist
+
 *B Journal of Educational Measurement
+
 C Journal of Abnormal Child Psychology
+
 D Memory and Cognition
 
 Poor: 特定限定词可用于排除干扰项。
 
-3. Which of the following was one of E. L. Thorndike's contributions to educational measurement?
+### 3. Which of the following was one of E. L. Thorndike's contributions to educational measurement?
+
 A He invented all of the types of multiple-choice items now in use.
+
 B He constructed every educational test published between 1900 and 1920.
+
 *C He helped educational testing gain scientific respectability.
 
 例如，题干 1 在题干和备选答案中都使用了 agriculture。这就造成了“谁埋在格兰特墓中？”类型的问题。同样，在题干 2 中，人们可以很容易地将 educational testing 和 educational measurement 两个术语联系起来，从而在不了解所列期刊内容的情况下得出正确答案。
 
 特定限定词是过度限定一个陈述以使其始终为真或始终为假的词语。我们在第 7 章中看到它们在真假题目中的运作方式；它们也可能出现在多选题中。上面的示例中的题干 3 显示了这一点。备选答案 (A) 和 (B) 可以很容易被排除：没有人会“发明所有”东西，也没有人会“制作每一个……出版的测验”。排除这些后，只剩下备选答案 (C)。
 
+### 避免技术性和不熟悉的措辞
 
+教师在编写选择题时有时会使用高度技术性或不熟悉的词汇作为干扰项。超出学生知识范围的词汇可能需要更多能力来拒绝错误答案，而不是选择正确答案（Ebel, 1951）。一些研究表明，然而，学生认为包含不熟悉技术词汇的选项不太可信，从而使这些替代选项失去作用。在一项研究中，当大学生被指示标记那些实际上没有真实答案的题目时，学生更频繁地选择包含熟悉、非技术性词汇的选项，而不是包含熟悉技术词汇、模糊熟悉技术词汇或不熟悉技术词汇的选项（Strang, 1977）。
 
+### 不要让干扰项过于可信
 
-避免技术性和不熟悉的措辞 教师在编写选择题时有时会使用高度技术性或不熟悉的词汇作为干扰项。超出学生知识范围的词汇可能需要更多能力来拒绝错误答案，而不是选择正确答案（Ebel, 1951）。一些研究表明，然而，学生认为包含不熟悉技术词汇的选项不太可信，从而使这些替代选项失去作用。在一项研究中，当大学生被指示标记那些实际上没有真实答案的题目时，学生更频繁地选择包含熟悉、非技术性词汇的选项，而不是包含熟悉技术词汇、模糊熟悉技术词汇或不熟悉技术词汇的选项（Strang, 1977）。
-
-不要让干扰项过于可信 误导性替代选项有时会被制造得如此可信，以致一般学习良好的学生答错，而学习能力较弱的学生则答对。（这些题目被认为是负向歧视的；见第14章。）良好学生的知识，虽然可能在其他情境中足以选择正确答案，但在特定题目中拒绝所有干扰项可能不足（Lindquist, 1936）。美国历史题目在这里展示了学生知识不足和学习错误如何导致题目功能不佳。
+误导性替代选项有时会被制造得如此可信，以致一般学习良好的学生答错，而学习能力较弱的学生则答对。（这些题目被认为是负向歧视的；见第14章。）良好学生的知识，虽然可能在其他情境中足以选择正确答案，但在特定题目中拒绝所有干扰项可能不足（Lindquist, 1936）。美国历史题目在这里展示了学生知识不足和学习错误如何导致题目功能不佳。
 
 ## 学习或理解不足的影响
 
@@ -5654,7 +5872,7 @@ B He constructed every educational test published between 1900 and 1920.
 - 3. 杰斐逊派的失败（7%）
 - 4. 联邦党的最终崩溃（4%）（已省略该项）（43%）
 
-该题的正确答案是（4）。然而，选择第一项且错误的学生在平均成就上高于选择正确答案（4）的学生。再次，选择第一项且错误的学生似乎是因为学习正面但不足而做出此选择。他们知道在本世纪中叶之前出现了强烈的地区主义时期，因此选择了第一项。显然，他们并不了解，或者未能回忆到，第二次与大不列颠的战争是立即的民族主义结果，而这场战争因此不能被视为“引入”了地区冲突的时代。其他学习水平较低的学生能够选择正确答案，因为他们不被第一项的知识所吸引——即在十九世纪出现了强烈的地区主义。 （但应注意，对于能够作出所需判断的高能学生群体，同一题目可能表现出高度的歧视性指数。）
+该题的正确答案是（4）。然而，选择第一项且错误的学生在平均成就上高于选择正确答案（4）的学生。再次，选择第一项且错误的学生似乎是因为学习正面但不足而做出此选择。他们知道在本世纪中叶之前出现了强烈的地区主义时期，因此选择了第一项。显然，他们并不了解，或者未能回忆到，第二次与大不列颠的战争是立即的民族主义结果，而这场战争因此不能被视为“引入”了地区冲突的时代。其他学习水平较低的学生能够选择正确答案，因为他们不被第一项的知识所吸引——即在十九世纪出现了强烈的地区主义。（但应注意，对于能够作出所需判断的高能学生群体，同一题目可能表现出高度的歧视性指数。）
 
 ## 错误学习的影响
 
@@ -5693,13 +5911,11 @@ B He constructed every educational test published between 1900 and 1920.
 
 实践前述规则将帮助您写出更好的多项选择题。然而，要记住所有规则并不易。下面列出了一些最有用的规则，供您作为检查表使用，审查自己编写的题目或从教材、教学材料中获取的题目。正如前文所述，专业出题人员很少为教材和课程材料编写测试，因此这些题目通常写得很差。在使用之前，请对每个题目使用检查表进行审查。在正式使用前，对所有未通过检查的题目进行修改。
 
+
+
 ## 编写多项选择题的替代选项种类
 
 有多种多项选择题格式通常不在传统评估课程中教授，但它们具有 considerable 实用价值。
-
-
-
-
 
 ## Checklist 8.1
 
@@ -5727,35 +5943,34 @@ The section discusses four item formats: greater-less-same, best-answer, experim
 
 ## GREATER-LESS-SAME ITEMS
 
-## Format
+### Format
 
 The greater-less-same item format consists of a pair of concepts, phrases, quantities, and so on that have a greater-than, same-as, or less-than relationship. The greater-less-same item format is used to assess qualitative, quantitative, or temporal relationships between two concepts. Several examples are shown in Example 8.3.
 
 The student’s task is to identify the relationship between the concepts and record an answer. You may use before-during-after, more-same-less, heavier-same-lighter, or other ordered triads, depending on the context of the items. Also, instead of spelling out the words greater, less, same, you can use the letters G, L, and S, respectively. Using letters instead of words may be more appropriate for older students.
 
-## Advantages and Criticisms
+### Advantages and Criticisms
 
 Advantages The greater-less-same format is especially suited for assessing whether students understand the order or relationships between two concepts, events, or outcomes. These include greater than versus less than, more of versus less of, before versus after, more correct versus less correct, more preferred versus less preferred, heavier versus lighter, and higher quality versus lesser quality. When you teach the relationships in class or when students learn the relationships from the textbook, this item assesses recall and recognition. However, the item format need not be limited to recall. You may teach a principle or a set of criteria and give several examples of its application in class. Then, when assessing the students, present new examples. A student can then apply the principle(s) or criteria you taught to deduce the relationship between the concept pairs.
 
-Criticisms The criticisms of greater-less-same items are similar to those for matching and true-false items. That is, teachers often use them to assess rote association and disconnected bits of knowledge. Also, this format limits assessment to relationships among pairs of concepts. If you wish to assess a student’s ability to order larger members of events or facts, then use an item format that requires students to rank the members.
+
+
+## Criticisms
+The criticisms of greater-less-same items are similar to those for matching and true-false items. That is, teachers often use them to assess rote association and disconnected bits of knowledge. Also, this format limits assessment to relationships among pairs of concepts. If you wish to assess a student’s ability to order larger members of events or facts, then use an item format that requires students to rank the members.
 
 ## Crafting Suggestions
-
-Begin to craft items by first identifying the learning targets you want to assess. This item format assesses learning targets that include the ability to identify the relationships between two ideas, concepts, or situations. You should make a list of concept pairs that are related; add to this list other paired relationships that your students can deduce from principles or criteria they have learned. Rephrase the members of each pair so they are clearly stated and fit
-
-the item format. When arranging the pairs, be sure that you do not have all the “greaters” on one side of the pair.
+Begin to craft items by first identifying the learning targets you want to assess. This item format assesses learning targets that include the ability to identify the relationships between two ideas, concepts, or situations. You should make a list of concept pairs that are related; add to this list other paired relationships that your students can deduce from principles or criteria they have learned. Rephrase the members of each pair so they are clearly stated and fit the item format. When arranging the pairs, be sure that you do not have all the “greaters” on one side of the pair.
 
 Write a set of directions for students that explains the basis on which they are to choose greater-same-less (before-during-after, etc.). Normally, the set of items should refer to the same general topic. In the preceding examples this is not the case, because I wanted to illustrate items from different subject areas. Therefore, the directions in my preceding examples are too general. Your directions should be more focused on the set of items you are using and very clear. Notice, too, that Item 7 does not “fit” the directions.
 
 The first time you use this format, you may need to give your students some sample items to help them understand what they are to do. Be sure the directions tell the students which member (i.e., left or right member) of the pairs in the set they are to use as a referent.
 
-Organize all the items of this format into one section of your assessment. Put the directions and the sample item at the beginning of the set. The numbered items should follow. Be sure that the correct answers do not follow a set pattern (such as GS LGSL or GGLLSS). Review the set to be sure the items are concisely worded, the task is clear, and the relationships are not ambiguous.
+Organize all the items of this format into one section of your assessment. Put the directions and the sample item at the beginning of the set. The numbered items should follow. Be sure that the correct answers do not follow a set pattern (such as `GS LGSL` or `GGLLSS`). Review the set to be sure the items are concisely worded, the task is clear, and the relationships are not ambiguous.
 
 The suggestions in this section are summarized as a checklist for judging the quality of greater-less-same items. Use the checklist to guide you in crafting this type of item format. Use it, too, to evaluate the item sets you have already crafted.
 
-## ✓ Checklist 8.2
-
-## 评阅大于-小于-相同题质量的检查表
+### ✓ Checklist 8.2
+### 评阅大于-小于-相同题质量的检查表
 
 对你编写的每道题都提出这些问题。如果对一个或多个问题的回答是否定的，请相应地修改题目。
 
@@ -5764,10 +5979,9 @@ The suggestions in this section are summarized as a checklist for judging the qu
 - 3. 大于-小于-相同题组中的一些题目是否要求学生将知识和技能应用于新情境、示例或事件？
 - 4. 你的说明是否清晰、完整地解释了你希望学生对每对陈述进行“大于”、“小于”或“相同”判断所依据的标准？
 - 5. 你的说明是否指明了配对成员（左或右）中哪一个是参照物？
-- 6. 你是否避免了为正确答案使用某种模式（GGSSLLGGSSLL等）？
+- 6. 你是否避免了为正确答案使用某种模式（`GGSSLLGGSSLL`等）？
 
 ## Example 8.3
-
 Directions: The numbered items below contain pairs of statements. Compare the two members of each pair. If the thing described on the left is greater than the thing described on the right, circle the word “greater”; if the left is less than the right, circle “less”; and if the left and the right are essentially the same, circle “same.”
 
 说明：下面的编号题目包含成对的陈述。比较每对的两个成员。如果左边描述的事物大于右边描述的事物，请圈出“greater”；如果左边小于右边，请圈出“less”；如果左右基本相同，请圈出“same”。
@@ -5777,71 +5991,61 @@ Directions: The numbered items below contain pairs of statements. Compare the tw
   Same
   Less
   Total area of Lake Huron
-
 - 2. Meaning of the prefix mono-
   Greater
   Same
   Less
   Meaning of the prefix uni-
-
 - 3. Radius of Mars
   Greater
   Same
   Less
   Radius of Venus
-
 - 4. Number of Christians in Africa
   Greater
   Same
   Less
   Number of Muslims in Africa
-
 - 5. Atomic weight of Ca
   Greater
   Same
   Less
   Atomic weight of C
-
 - 6. √3² + 7²
   Greater
   Same
   Less
   √3² + √7²
-
 - 7. First U. S. passenger railroad opened
   Before
   Same
   After
   Erie Canal opened
 
-
-
-
-
 ## 最佳答案题
 
-## 格式
-
+### 格式
 最佳答案题是多选题，其每个选项都至少部分正确。学生的任务是选择最佳或最正确的选项。以下是两个最佳答案题的示例。
 
-## 示例
+### 示例
++ 1. 哪项陈述最能描述威廉为何攻击英格兰？
 
-+   1. 哪项陈述最能描述威廉为何攻击英格兰？
-+   A 威廉认为他与英格兰国王的联系使他有资格在爱德华忏悔者去世时登上王位。
-+   B 挪威国王哈罗德·哈德拉达请威廉帮助他征服英格兰。威廉同意，希望日后除掉哈罗德。
-+   C 威廉认为爱德华忏悔者曾承诺将王位给他，而威塞克斯伯爵哈罗德曾向他宣誓个人效忠。当怀坦选择哈罗德为王时，威廉感到被背叛。
-+   D 威廉的表亲，威塞克斯的哈罗德，被爱德华忏悔者扣为人质，威廉想帮助释放他，然后要求他向威廉宣誓效忠作为英格兰国王。
+
+
++ A 威廉认为他与英格兰国王的联系使他有资格在爱德华忏悔者去世时登上王位。
++ B 挪威国王哈罗德·哈德拉达请威廉帮助他征服英格兰。威廉同意，希望日后除掉哈罗德。
++ C 威廉认为爱德华忏悔者曾承诺将王位给他，而威塞克斯伯爵哈罗德曾向他宣誓个人效忠。当怀坦选择哈罗德为王时，威廉感到被背叛。
++ D 威廉的表亲，威塞克斯的哈罗德，被爱德华忏悔者扣为人质，威廉想帮助释放他，然后要求他向威廉宣誓效忠作为英格兰国王。
 
 说明：在下面段落中有一组关于两种气体 P 和 Q 相互反应的事实。事实之后是一个假设和对检验该假设的可能实验的简要描述。鉴于这些事实，选择最能检验该假设的实验。
 
 事实：两种气体 P 和 Q 在混合于玻璃烧瓶中时会迅速反应。然而，如果你将烧瓶加热到非常热，然后在向其中引入气体之前让其冷却，它们就不会反应。此外，如果使用铜容器，气体根本不会反应。
-
-+   2. 假设：水是气体反应的必要条件。
-+   A 实验：在向烧瓶中引入气体之前，你应该干燥烧瓶但不加热它。
-+   B 实验：在向烧瓶中引入气体之后，你应该将烧瓶保持打开状态。
-+   C 实验：在向烧瓶中引入气体之前，你应该用水润湿烧瓶的内壁。
-+   D 实验：在向烧瓶中引入气体之前，你应该将烧瓶加热到非常热，让其冷却，然后将其敞开数日。
-+   该假设不可成立或无法通过实验检验。
++ 2. 假设：水是气体反应的必要条件。
++ A 实验：在向烧瓶中引入气体之前，你应该干燥烧瓶但不加热它。
++ B 实验：在向烧瓶中引入气体之后，你应该将烧瓶保持打开状态。
++ C 实验：在向烧瓶中引入气体之前，你应该用水润湿烧瓶的内壁。
++ D 实验：在向烧瓶中引入气体之前，你应该将烧瓶加热到非常热，让其冷却，然后将其敞开数日。
++ 该假设不可成立或无法通过实验检验。
 
 在此题型中，每个干扰项都包含部分误解或遗漏。被选中的或最佳答案不包含误解或遗漏。包含遗漏的干扰项是对题干的不完整回答，因此不是最佳答案的好选择。只有一个选项可以是“最佳”。因此，你不应在此格式中使用“以上皆是”或“以上皆非”。也不能将若干选项的组合（如“ A 和 C 皆是”）作为正确答案。
 
@@ -5857,52 +6061,50 @@ Directions: The numbered items below contain pairs of statements. Compare the tw
 
 ## 实验解释题
 
-## 格式
+### 格式
 
 实验解释题由对实验的描述组成，其后是一个多选题，要求学生识别对实验结果的最佳解释。以下有三个示例。
 
-## 示例
+### 示例
 
 使用以下信息回答问题 1。
 
 比利和杰西走过他们家附近的一块空地。比利捡起一块白色的石头。“看，”他说，“我找到了一块石灰石。我知道它是石灰石，因为我去年找到过一块颜色相同的石头，它是石灰石。”杰西说：“仅仅因为它看起来一样，不一定就是一样。”
 
-+   1. 以下哪种解释最能支持杰西的观点？
-+   A 在一年中石灰石的化学性质可能发生了变化。
-+   B 不同矿物具有非常相似的物理性质。
-+   C 一年时间不足以使岩石中的矿物改变其物理性质。
++ 1. 以下哪种解释最能支持杰西的观点？
++ A 在一年中石灰石的化学性质可能发生了变化。
++ B 不同矿物具有非常相似的物理性质。
++ C 一年时间不足以使岩石中的矿物改变其物理性质。
 
 使用以下信息回答问题 2。
+
 比利把石头带回家做了实验。他把一块石头放在一个透明玻璃杯里，倒上醋。石头碎片冒泡并起泡沫。“看！”他对杰西说，“这证明石头是石灰石。”杰西说：“不！你错了。你没有证明它！”
 
-+   2. 杰西为什么是对的？
-+   A 比利只做了一次实验。他需要用不同碎块多次重复同类型实验。如果每次混合都冒泡，那就证明了。
-+   B 实验是正确的但比利误解了结果。石灰石在醋中不会冒泡起泡沫。
-+   C 比利应该做许多不同种类的实验，而不仅仅是醋测试，因为许多不同种类的物质在醋中都会冒泡起泡沫。
-+   D 比利不应该使用醋。他应该使用蒸馏水。如果石头使水变暖，那就证明它是石灰石。
++ 2. 杰西为什么是对的？
++ A 比利只做了一次实验。他需要用不同碎块多次重复同类型实验。如果每次混合都冒泡，那就证明了。
++ B 实验是正确的但比利误解了结果。石灰石在醋中不会冒泡起泡沫。
++ C 比利应该做许多不同种类的实验，而不仅仅是醋测试，因为许多不同种类的物质在醋中都会冒泡起泡沫。
++ D 比利不应该使用醋。他应该使用蒸馏水。如果石头使水变暖，那就证明它是石灰石。
 
 使用以下信息回答问题 3。
+
 为社会研究项目，一班级采访了所有十年级学生。他们询问学生每周在课后工作中工作多少小时。他们还询问他们上学期的平均成绩。他们发现，成绩为 F 和 D 的学生每周工作 8 到 10 小时，成绩为 C 和 B 的学生每周工作 10 到 20 小时，成绩为 A 的学生每周工作 8 到 10 小时。
 
-+   3. 以下哪项是对这些发现的最有效解释？
-+   A 如果你每周工作 10 到 20 小时，你只能得到 C 和 B。
-+   B 课后工作与你的成绩无关。
-+   C 每周工作 10 到 20 小时的学生可能不是 A 学生或 B 学生。
-+   D 学生课后工作的时间越多，其成绩就越高。
++ 3. 以下哪项是对这些发现的最有效解释？
++ A 如果你每周工作 10 到 20 小时，你只能得到 C 和 B。
++ B 课后工作与你的成绩无关。
++ C 每周工作 10 到 20 小时的学生可能不是 A 学生或 B 学生。
++ D 学生课后工作的时间越多，其成绩就越高。
 
 > 来源：第 1 和第 2 题基于 Klopfer（1971）中的想法。
 
 第 1 和第 2 题用于普通或物理科学单元；第 3 题用于社会研究单元或统计方法数学单元。我们在此部分宽泛地使用“实验”一词：它指任何基于数据的研究。科学或受控研究包含在此术语中，但我们并不将其使用限制于仅这些类型的研究。实验解释题与最佳答案格式相似，因为通常多选题选项都具有某种程度的正确性，但只有一个是最好的答案。
 
-
-
-
-
 ## 清单 8.3
 
 最佳答案题质量审查清单
-对你撰写的每道题都提出这些问题。如果对一个或多个问题的回答为“否”，则相应修改该题。
 
+对你撰写的每道题都提出这些问题。如果对一个或多个问题的回答为“否”，则相应修改该题。
 - 1. 每道最佳答案题是否评估了单元教学目标的重要方面？
 - 2. 每道最佳答案题在表现、侧重点和分数数量方面是否与你的评估计划相匹配？
 - 3. 每道最佳答案题是否要求学生在某些新情况、示例或事件中以某种方式应用其知识和技能？
@@ -5918,15 +6120,15 @@ Directions: The numbered items below contain pairs of statements. Compare the tw
 
 一种变体是使用简答题与多项选择题一起使用或代替多项选择题。例如，你可以要求学生为多项选择题中的选择提供理由。或者，你也可以使用简答题代替多项选择题。下面的示例展示了制作实验解释题格式的替代方法。这些示例基于前面的示例中的第3题。
 
-## 示例
+### 示例
 
 在回答下面的问题时使用以下信息。
+
 对于一个社会研究项目，一个班级采访了所有十年级的学生。他们询问学生每周在课后工作多少小时。他们还询问了他们上学期的平均成绩。他们发现，成绩为F和D的学生每周工作8到10小时，成绩为C和B的学生每周工作10到20小时，成绩为A的学生每周工作8到10小时。
 
 ## 替代格式 A。
 
 学生从教师提供的解释中进行选择，但必须写出其选择的理由。
-
 - 4. 以下哪一项是对这些发现的最有效解释？
 - A 如果你每周工作10到20小时，你只会得到C和B。
 - B 课后工作与你的成绩无关。
@@ -5938,9 +6140,7 @@ Directions: The numbered items below contain pairs of statements. Compare the tw
 ## 替代格式 B。
 
 学生提供自己的解释并写出其理由。
-
 6. 班级发现的学生工作时间和成绩之间关系的最有效解释是什么？
-
 7. 写出简要说明，说明你对这些发现的解释为何是最有效的。
 
 你应该注意，这三种变体（仅多项选择、多项选择加简答、仅简答）评估的是略有不同的能力。仅使用多项选择（第3题）评估学生评估你提供的每种解释并选择最佳解释的能力。因此，你不知道学生选择背后的推理。多项选择加简答组合（第4题和第5题）评估学生从你提供的解释选项中解释或证明其选择的解释的能力。这有助于你评估学生选择背后的推理。没有多项选择题的简答题（第6题和第7题）则评估学生解释实验结果的能力及其解释推理的能力。在这种后一种格式中，对开放式问题的正确答案可能不止一个。
@@ -5948,6 +6148,8 @@ Directions: The numbered items below contain pairs of statements. Compare the tw
 ## 优点和批评
 
 优点 你可以使用实验解释格式来评估学生评估数据中的解释、解释和推断的能力。仅多项选择版本允许你比其他版本更快、更客观地评分。因为学生只需要选择正确答案，所以他们的答题时间更短。因此，你可以使用更多题目并在更短的评估时间内覆盖更多内容，而短答题则无法做到。
+
+
 
 如果你在题目中向学生展示的实验和发现对学生来说是新的，你的题目将评估学生应用你所学领域原理和标准的能力。在评估任务中使用对学生来说新的实验和数据，要求你教学生如何将标准和原理应用于各种情况。在进行总结性评估之前，你需要给学生足够的机会练习应用标准和原理。这将使你的教学远离教授事实和结果，而转向教授学生积极应用其知识和技能。
 
@@ -5976,28 +6178,28 @@ Directions: The numbered items below contain pairs of statements. Compare the tw
 
 ## 陈述与评论题
 
-## 格式
+### 格式
 
 陈述与评论题提出关于某些相关主题的陈述，并要求学生对该陈述写出评论或从你提供的列表中选择最合适的评论。陈述与评论题的示例如下。
 
-## 示例
+### 示例
 
 A. 陈述与评论题的多项选择版本
 
 指示：每个编号陈述中的引语表达了关于戏剧《尤利乌斯·凯撒》的主题。引语下方列出了关于引语陈述含义的几条评论。选择最能表达引语主题如何适用于该戏剧的评论。
 
 - 1. “权力腐蚀人。”
-- A 凯撒想要被加冕为国王。
-- B 布鲁图斯担心一个人将控制罗马。因此，他密谋反对凯撒。
-- C 迦琉斯如此渴望权力，他领导了反对凯撒的阴谋。
+  - A 凯撒想要被加冕为国王。
+  - B 布鲁图斯担心一个人将控制罗马。因此，他密谋反对凯撒。
+  - C 迦琉斯如此渴望权力，他领导了反对凯撒的阴谋。
 - 2. “懦夫在死前多次死去。”
-- A 凯撒忽略了警告，因为他不是懦夫。
-- B 布鲁图斯和迦琉斯逃跑了，因为他们害怕被杀。
-- C 布鲁图斯和迦琉斯在逃离罗马后过着羞耻和失败的生活。
+  - A 凯撒忽略了警告，因为他不是懦夫。
+  - B 布鲁图斯和迦琉斯逃跑了，因为他们害怕被杀。
+  - C 布鲁图斯和迦琉斯在逃离罗马后过着羞耻和失败的生活。
 - 3. “男人所做的恶行会伴随他们一生。”
-- A 罗马人会记住布鲁图斯和迦琉斯因他们犯下的谋杀而非他们犯下谋杀的“高尚”动机。
-- B 凯撒的刺客只考虑他的坏品质，而不是他的好品质。
-- C 安东尼只记得迦琉斯的邪恶一面。
+  - A 罗马人会记住布鲁图斯和迦琉斯因他们犯下的谋杀而非他们犯下谋杀的“高尚”动机。
+  - B 凯撒的刺客只考虑他的坏品质，而不是他的好品质。
+  - C 安东尼只记得迦琉斯的邪恶一面。
 
 B. 陈述与评论题的简答版本
 
@@ -6007,11 +6209,7 @@ B. 陈述与评论题的简答版本
 - 5. “懦夫在死前多次死去。”
 - 6. “男人所做的恶行会伴随他们一生。”
 
-
-
-
-
-## 构建建议
+### 构建建议
 
 首先，和往常一样，确定你想要评估的学习目标。这种评估格式适用于学习目标要求学生理解陈述和主题时。例如，聚焦于理解《朱利叶斯·凯撒》这部剧所蕴含主题的学习目标可以使用这种格式。
 
@@ -6021,7 +6219,7 @@ B. 陈述与评论题的简答版本
 
 题目的学科领域是莎士比亚的戏剧《朱利叶斯·凯撒》。陈述内容是该剧的三个主题，班级已讨论过。这些主题用引号标出。在选择题版中，学生从多个备选答案中选择对所引主题的最佳解释。选择题版是最佳答案题格式的一种特例。备选答案应使用与课堂上学习的“套话”不同的语言表述。在简答版中，学生必须直接评论，写出自己对所引陈述的解读。
 
-## 优点与批评
+### 优点与批评
 
 优点 陈述与评论题型评估学生评估给定陈述的解释的能力。选择题版评估学生能否从多个选项中识别出最佳解释或说明。解释不应使用课堂上使用的相同措辞。相反，它们应是学生在解读所引陈述时通常会做出的评论。通过这种方式，学生必须依靠其对所引短语的理解，而不是对“固定”评论的记忆。
 
@@ -6037,7 +6235,7 @@ B. 陈述与评论题的简答版本
 
 > 回应也可以垂直放置在前提之上。参见匹配练习的主列表变体。
 
-## 示例 8.4
+### 示例 8.4
 
 说明：在下方左栏中是对一些19世纪末美国画家的描述。对于每个描述，从右栏中选择被描述的人的名字，并将标识其字母放在描述编号前面的行上。右栏中的每个名字都可使用一次、多次或根本不使用。
 
@@ -6051,7 +6249,6 @@ B. 陈述与评论题的简答版本
 +   (d) 2. 一位现实主义自然画家，尤其以绘画海洋而闻名。
 +   (b) 3. 一位现实主义人物画家，他描绘了强烈的刻画和被摄对象有力、不摆造型的形象。
 +   (a) 4. 一位以德加风格的印象派画家，常画母子主题。
-
 +   a. Mary Cassatt
 +   b. Thomas Eakins
 +   c. John LaFarge
@@ -6067,13 +6264,15 @@ B. 陈述与评论题的简答版本
 
 ## 匹配练习的优点与批评
 
-## 优点
+### 优点
 
 匹配练习可以是一种节省空间且客观的方式，用于评估许多重要的学习目标，例如学生识别两组事物之间关联或关系的能力。你也可以使用图示材料开发匹配练习，以评估学生将词语和短语与物体图片或地图和图表上的位置相匹配的能力。表 8.3 给出了可作为开发匹配练习基础的关系示例（Gronlund, 1976）。
 
-## 批评
+### 批评
 
 批评者批评匹配练习是因为学生可以用死记硬背的方式学习两份列表中的元素，并且因为教师经常只用匹配练习来评估诸如姓名和日期之类的死记硬背的关联。因此，批评者通常认为这种评估格式仅限于评估记忆性事实信息。
+
+
 
 然而，深思熟虑的教师也会使用匹配练习来评估学生对概念、原理或对物体、思想或事件进行分类的方案的理解方面（我们稍后会看到例子）。如果你想评估学生在这些高阶能力方面的表现，请设计练习向学生呈现概念或原理的新例子或实例。然后要求学生将这些例子与适当概念或原理的名称相匹配。在这种情况下，新例子是学生此前未被教授或遇到过的概念的实例。同样，匹配任务可以描述对学生而言新颖的情况，学生可以决定哪几条规则、原理或分类可能适用。这种类型的匹配练习示例如下。
 
@@ -6091,10 +6290,6 @@ B. 陈述与评论题的简答版本
 | 用途和功能 | 零件和机器 |
 | 物体名称 | 物体图片 |
 
-
-
-
-
 ## 示例
 
 说明：下面每个编号的陈述描述了一种测试情境，其中代表了一个决策。在每条陈述旁边的空白处写上字母：
@@ -6104,7 +6299,6 @@ B. 陈述与评论题的简答版本
 +   C 如果该决策主要关注课程改进
 +   D 如果该决策主要关注理论发展
 +   E 如果该决策主要关注激励学生
-
 +   (A) 1. 儿童在被录取进入幼儿园后，会接受筛查测试，以确定哪些儿童应接受感知技能的特殊训练。
 +   (A) 2. 在三年级结束时，所有学生都接受一套全面的阅读测试，并为每个孩子制定阅读档案。根据这些档案，一些孩子接受特殊阅读项目，而其他孩子则继续常规项目。
 +   (B) 3. 高中毕业生参加全国学术能力测试并将成绩寄给他们希望就读的大学。根据这些成绩，大学录取一些学生而不录取其他学生。
@@ -6164,6 +6358,7 @@ e. 阿勒格尼河
 ## A 栏（事件） B 栏（日期）
 
 | Column A (events) | Column B (dates) |
+|---|---|
 | (f) 1. United States entered World War I | a. 1492 |
 | (d) 2. Lincoln became President | b. 1607 |
 | (g) 3. Truman became President | c. 1776 |
@@ -6179,9 +6374,11 @@ e. 阿勒格尼河
 ## 示例
 
 差：说明不完整
+
 将 A 栏与 B 栏匹配。将你的答案写在左侧的空白处。
 
 更好：说明解释匹配基础
+
 A 栏列出了植物细胞的各部分。对每个细胞部分，从 B 栏中选择该细胞部分的主要用途。将该用途的字母写在细胞部分左侧的空白处。
 
 小学生可能需要在评估前进行口头解释和、也许、一些该格式的练习。匹配练习的主列表变体通常需要更详细的说明，甚至对高中生也可能需要特殊的口头解释。然而，避免冗长复杂的书面说明。这些会不必要地强调阅读技能。
@@ -6189,8 +6386,6 @@ A 栏列出了植物细胞的各部分。对每个细胞部分，从 B 栏中选
 5. 所有响应都应作为每个前提的可行选项发挥作用。同质的前提和响应将最大限度地减少合理性问题。此外，避免使用特定限定词和语法线索。例如，避免有些前提或响应以 an 开头而其他以 a 开头，有些为复数而其他为单数，有些用过去时陈述而其他用现在时或将来时陈述。这些会不必要地暗示答案。
 
 避免使用不完整的句子作为前提。如果你使用不完整的句子作为前提，就很难使所有响应同质并且更容易
-
-
 
 students to respond correctly on the basis of superficial features such as grammatical clues or sentence structure (Lindquist & Mann, 1936). Here is an example of a poor matching exercise that comes about when incomplete sentences are used.
 
@@ -6201,21 +6396,23 @@ Poor: Uses incomplete sentences
 - (c) 1. Most normally green plants lose their color when
 - (c) 2. The common characteristic of a flowering plant is
 - (d) 3. Almost all plants that form coal
-- (b) 4. When an expanded amoebae is strongly stimulated it
 
-- a. through their stomata.
-- b. contracts into a rounded mass.
-- c. grown in the dark.
-- d. are now extinct.
-- e. the formation of a reproductive body.
+
+
+- (b) 4. When an expanded amoebae is strongly stimulated it
+  - a. through their stomata.
+  - b. contracts into a rounded mass.
+  - c. grown in the dark.
+  - d. are now extinct.
+  - e. the formation of a reproductive body.
 
 > Source: From The Construction and Use of Achievement Examinations (p. 69) by H. E. Hawkes, E. F. Lindquist, and C. R. Mann (Eds.), 1936, by American Council of Education. Used by permission. Adapted from an illustration in Traditional Examinations and New Type Tests, by C. W. Odell (New York: Century Co., 1928), p. 380.
 
 6. Use short lists of responses and premises. For a single matching exercise, put no more than 5 to 10 elements in a response list. The reasons are that (a) longer lists make it difficult for you to develop homogeneous exercises, (b) longer matching exercises overload a test with one kind of performance, and (c) longer lists require too much student searching time (Ebel, 1951). Finally, (d) some evidence suggests that students attain a lower percentage of correct answers with longer matching exercises than with shorter exercises (Shannon, 1973).
 
-Shorter matching exercises make it easier to keep everything belonging to a single exercise on the same page. For some students, having to turn the page back and forth to answer the exercise may interfere with their ability to show you what they know. For these students, splitting an exercise between two pages increases the likelihood of carelessness, confusion, and short-term memory lapses. In short, a student's ability to answer a test item while flipping pages is not relevant to the learning target you want to assess.
+   Shorter matching exercises make it easier to keep everything belonging to a single exercise on the same page. For some students, having to turn the page back and forth to answer the exercise may interfere with their ability to show you what they know. For these students, splitting an exercise between two pages increases the likelihood of carelessness, confusion, and short-term memory lapses. In short, a student's ability to answer a test item while flipping pages is not relevant to the learning target you want to assess.
 
-To fix an exercise that is too long, separate it into two or more shorter exercises. Or you can use each response as a correct answer more than once. When you do this, alert students through either oral or written directions. One standard phrase you may use to do this is "You may use each of the [names, dates, etc.] once, more than once, or not at all" (see the painters' example we presented at the beginning of this section).
+   To fix an exercise that is too long, separate it into two or more shorter exercises. Or you can use each response as a correct answer more than once. When you do this, alert students through either oral or written directions. One standard phrase you may use to do this is "You may use each of the [names, dates, etc.] once, more than once, or not at all" (see the painters' example we presented at the beginning of this section).
 
 7. Avoid "perfect matching." As I discussed previously, perfect matching is undesirable. It gives away at least one answer to the student who knows all but one of them. This student's final choice will be automatically correct because it is the only one left, thus lowering the validity of your assessment. You can avoid perfect matching by including one or more responses that do not match any of the premises and by using a response as the correct answer for more than one premise.
 
@@ -6227,15 +6424,17 @@ To fix an exercise that is too long, separate it into two or more shorter exerci
 
 ## CRAFTING ALTERNATIVE VARIETIES OF MATCHING EXERCISES
 
+
+
 Two types of matching exercises—masterlist and tabular—may fit some of your learning targets better than the more basic matching exercise. As with the alternative varieties of multiple-choice items we discussed previously, these matching formats are objectively scored, do not take students a long time to complete, and are often easier for you to craft than the basic matching format.
 
 ## MASTERLIST (KEYLIST) ITEMS
 
-## Format
+### Format
 
 A masterlist (or keylist or classification) matching exercise has three parts: (a) directions to students, (b) the masterlist of options, and (c) a list or set of stems. To respond to a masterlist item set, a student reads each numbered stem and applies one of the options from the masterlist. Each stem is scored separately. Example 8.5 shows a masterlist matching exercise for a 10th-grade civics course.
 
-## Example 8.5
+### Example 8.5
 
 Directions: Read each numbered statement and decide which U.S. constitutional principle it illustrates. Mark your answer:
 
@@ -6252,21 +6451,23 @@ Directions: Read each numbered statement and decide which U.S. constitutional pr
 
 4. A state in financial trouble decided to establish a system of taxes on goods imported into the state. The law was challenged and found to be in disagreement with a national law. The state had to seek other ways to raise money.
 
-## Directions
+### Directions
 
 Explain the basis for using the masterlist.
 
-## Masterlist
+### Masterlist
 
 This list of response choices is applied to each of the stems that follow it.
 
-## Stems
+### Stems
 
 This list of stems presents situations, actions, or events that need to be classified into one of the categories in the masterlist.
 
 The content learning target for the preceding masterlist exercise is the students’ ability to relate constitutional values and principles to specific modern-day, concrete examples of actions or events. Therefore, in crafting this item you would ensure that each masterlist response choice (A, B, C, D) is a value or principle expressed by the U.S. Constitution, rather than a Preamble goal or some other aspect of the Constitution.
 
 Notice that each numbered stem is a brief, realistic, and concrete example of an action or event that illustrates one of the four values in the masterlist. Because the learning target calls for students to relate constitutional principles to concrete examples, each stem must be a concrete example. You would not use textbook abstractions or general descriptions. (For example, you would not word a stem in general language such as, “A law takes effect when the majority of Congress votes to approve it,” because this statement describes a general principle rather than a concrete example.) Although the preceding exercise shows only four stems, you need not limit the stems to four. Use as many stems as are appropriate, as long as each stem is an example of one of the masterlist options. Further, although not the case in this example, each stem in a masterlist set may have more than one correct answer from the masterlist.
+
+
 
 and objective way to assess learning targets for which you want students to identify associations between two sets of things. However, it is best used to assess a student’s understanding of concepts. The preceding masterlist exercise, for instance, requires a student to analyze the specific example in each stem and to classify it as an illustration of one of the constitutional principles in the masterlist. Each constitutional principle is a different concept.
 
@@ -6276,13 +6477,11 @@ The masterlist item also is an efficient way to assess a student’s ability to 
 
 ## Advantages and Criticisms
 
-Advantages A masterlist item set is a variation of the matching exercise format, and it has many of the same advantages as that format. It is a space-saving, compact,
+### Advantages
+A masterlist item set is a variation of the matching exercise format, and it has many of the same advantages as that format. It is a space-saving, compact,
 
-Criticisms Because masterlist item sets are “cousins” to matching exercises, they share the same criticisms. Critics point out that teachers often limit using the format to assess rote associations such as names and dates, memorized lists of causes and effects, lists of symbols and definitions, and so on.
-
-
-
-
+### Criticisms
+Because masterlist item sets are “cousins” to matching exercises, they share the same criticisms. Critics point out that teachers often limit using the format to assess rote associations such as names and dates, memorized lists of causes and effects, lists of symbols and definitions, and so on.
 
 ## 示例 8.6
 
@@ -6296,15 +6495,15 @@ Criticisms Because masterlist item sets are “cousins” to matching exercises,
 
 说明：下面编号的陈述说明了不同学生对该图表的说法。阅读每条陈述并判断图表中的信息是否与学生的陈述一致。标记答案：
 
-+   A — 如果图表中的信息与陈述一致。
-+   B — 如果图表中的信息与陈述矛盾。
-+   C — 如果图表中的信息既不矛盾也不一致与陈述。
+- A — 如果图表中的信息与陈述一致。
+- B — 如果图表中的信息与陈述矛盾。
+- C — 如果图表中的信息既不矛盾也不一致与陈述。
 
-+   1. 约翰在他家和市公园之间跑得或走得非常快。
-+   2. 约翰在去比尔家途中停在了莎莉的家。
-+   3. 约翰在去比尔家途中停在了埃德的家。
-+   4. 约翰在到达比尔家之前停下来在面包店买东西。
-+   5. 约翰在经过莎莉的家之后比在到达她家之前旅行得更快。
+1. 约翰在他家和市公园之间跑得或走得非常快。
+2. 约翰在去比尔家途中停在了莎莉的家。
+3. 约翰在去比尔家途中停在了埃德的家。
+4. 约翰在到达比尔家之前停下来在面包店买东西。
+5. 约翰在经过莎莉的家之后比在到达她家之前旅行得更快。
 
 尽管一些学习目标确实侧重于记忆和信息回忆，但许多并非如此，也不应该如此。因此，你应该设计主列表题组来评估学生 (a) 对概念、原理或对物体、事件和思想进行分类的方案的理解，以及 (b) 分析适当解释和结论的能力。通过在题干中呈现新的例子或新的解释并要求学生应用主列表来实现这一点。
 
@@ -6322,7 +6521,7 @@ Criticisms Because masterlist item sets are “cousins” to matching exercises,
 
 题干始终编号并跟在主列表之后。如果不使用单独的答题纸，请在题干编号前留一个空格，而不是在题干末尾。你将能够更快、更准确地评分，如果空格在题干编号之前。打乱题干顺序，使所有匹配同一主列表选项的题干不在一起，并且答案没有可辨别的模式（避免 ABCDABCD 等）。如果你编写了太多题干，请选择最好的并将其他题干保存以供日后修改使用。编辑题干使其语法正确、清晰简洁。限制每个题干在 40 个词或更少。然而，题干和题组其他部分必须提供足够的信息让学生应用规则或原理。例如，在公民课程练习中，如果题干 2 仅包含以下词语，则信息不足：
 
-+   2. 另一个国家正在发生内战。美国总统开始计划帮助支持这场内战。
+2. 另一个国家正在发生内战。美国总统开始计划帮助支持这场内战。
 
 需要更多细节才能知道题干指的是哪个原则。
 
@@ -6330,7 +6529,7 @@ Criticisms Because masterlist item sets are “cousins” to matching exercises,
 
 ## 表格式（矩阵）题目
 
-## 格式
+### 格式
 
 表格式（或矩阵）题目格式是一种匹配练习类型，其中来自多个回答列表的元素（例如，总统、政党、著名首次和重要事件）与来自共同前提列表的元素进行匹配。学生的任务是从每个回答列表中选择一个或多个元素并将其与编号的前提之一匹配。表格式题目格式的示例显示在示例 8.7 中。
 
@@ -6340,32 +6539,39 @@ Criticisms Because masterlist item sets are “cousins” to matching exercises,
 
 ## 检查清单 8.6
 
-#### 审查主列表练习质量的检查清单
+### 审查主列表练习质量的检查清单
 
 对你编写的每道题目提出这些问题。如果对一个或多个问题回答“否”，请相应修改题目。
 
-+   1. 主列表练习是否评估了教学单元教学目标的重要方面？
-+   2. 主列表练习是否与你的评估计划在表现、重点和分数数量方面相匹配？
-+   3. 主列表练习是否要求学生将知识和技能应用于新情况、例子或事件？
-+   4. 你是否提供了足够的信息，以便有知识的学生能够应用题目要求的知识和技能？
-+   5. 你给学生的说明是否清楚、完整地解释了你希望他们在将主列表回答选择应用于题干时使用的基础？
-+   6. 在此主列表练习中，每个题干和主列表中的每个回答选择是否属于同一类别的事物？
-+   7. 主列表中的每个回答选择是否对每个题干都作为合理的替代方案发挥作用？
-+   8. 你是否避免了“完美匹配”？
-+   9. 如果可能，主列表中的选项是否以有意义的方式排序（逻辑上、数字上、字母上等）？
-+   10. 题干是否编号且主列表回答选择是否字母化？
+1. 主列表练习是否评估了教学单元教学目标的重要方面？
+2. 主列表练习是否与你的评估计划在表现、重点和分数数量方面相匹配？
+3. 主列表练习是否要求学生将知识和技能应用于新情况、例子或事件？
+
+
+
+### 4. 你是否提供了足够的信息，以便有知识的学生能够应用题目要求的知识和技能？
+
+### 5. 你给学生的说明是否清楚、完整地解释了你希望他们在将主列表回答选择应用于题干时使用的基础？
+
+### 6. 在此主列表练习中，每个题干和主列表中的每个回答选择是否属于同一类别的事物？
+
+### 7. 主列表中的每个回答选择是否对每个题干都作为合理的替代方案发挥作用？
+
+### 8. 你是否避免了“完美匹配”？
+
+### 9. 如果可能，主列表中的选项是否以有意义的方式排序（逻辑上、数字上、字母上等）？
+
+### 10. 题干是否编号且主列表回答选择是否字母化？
 
 ## 优点和批评
 
-## 优点
+### 优点
 
 表格式或矩阵题目是评估学生是否能将事实和思想整合到表格等有组织格式中的有用方法。当评估对口头信息的回忆时，例如事实、日期、概括、术语和理论的特征时，很容易制作。它在你有一个前提列表和许多不同的回答列表时也非常高效。你可能记得在制作基本匹配题目时，回答列表内的回答应是同质的：即都属于同一类别。当你在制作基本匹配练习时发现回答列表变得异质时，你可能希望将练习重新组织为主列表题组。
 
-## 批评
+### 批评
 
 尽管可能创建评估复杂或高阶思维技能的表格式题组，但这样做很困难。大多数教师发现此格式最适用于评估对口头信息的回忆和识别。由于格式易于构建，一些教师过度使用它（或其表亲，基本匹配）因此受到批评，认为其关注事实而非问题解决、批判性思维或其他高阶认知技能。而且，
-
-
 
 ## 示例 8.7
 
@@ -6420,7 +6626,7 @@ Criticisms Because masterlist item sets are “cousins” to matching exercises,
 
 说明：对于每个行星描述，请在符合该描述的行星名称下方对应的方框中放置一个 X。
 
-## 行星描述
+### 行星描述
 
 - 1. has only one moon
 - 2. has no moons
@@ -6449,6 +6655,8 @@ Criticisms Because masterlist item sets are “cousins” to matching exercises,
 按照前面两个示例中的一种（取决于所需响应类型）对练习进行布局。将说明放在顶部，将响应列表放在说明下方、表格上方。这种安排比响应列表跟在表格后面更容易理解。响应先出现也更容易让学生阅读和跟踪。每个响应使用字母标识。如果像总统任期示例中那样，字母在列表之间连续编号，学生抄写错误会更少。最后放置表格并留出记录分数的位置。网格对学生使用和你评分都更方便。
 
 编辑并润色你的所有工作。检查拼写。对每个列表内的元素分别按字母顺序排列。如果可能，保持响应列表并排（与示例相同），这样学生阅读列表更容易。将前提列表按逻辑、数字或时间顺序组织。检查前提是否已编号。如果可能，将整个练习放在同一页上。这可以减少学生在回答题目时需要在前后翻页时产生的抄写错误和挫败感。文字处理器或电子表格程序有助于制作最终版本。使用文字处理器或电子表格程序创建表格的功能，既用于表格本身，也用于创建响应列表。
+
+
 
 表格项目的清单总结了本节中的建议。在制作表格项目集时以及项目集完成后评估项目集时，将其用作指南。由于表格项目集与基本匹配练习密切相关，你应回顾创建基本匹配练习的建议。基本匹配练习的匹配练习清单是方便你回顾制作匹配练习基本原则的方式。
 
@@ -6514,10 +6722,6 @@ Criticisms Because masterlist item sets are “cousins” to matching exercises,
 - 9. 在试卷页上，说明是否放在第一，响应选择是否放在第二，表格是否放在第三？
 - 10. 如果可能，整个练习是否打印在一页上而不是分成两页？
 
-
-
-
-
 ## 不应使用选择题的情况
 
 在课堂上不推荐使用选择题（即使它们是合适的）的实例包括
@@ -6548,7 +6752,6 @@ Criticisms Because masterlist item sets are “cousins” to matching exercises,
 - 在评估各种学习目标方面的多功能性。
 - 减少学生蒙混或粉饰答案的机会。
 - 关注阅读和选择)。
-
 - 每当多个选择题需要重复同一组备选答案时，就应使用配对练习。
 
 ## 配对练习的优点和批评
@@ -6595,44 +6798,72 @@ Criticisms Because masterlist item sets are “cousins” to matching exercises,
 - high-stakes assessment
 - homogeneous alternatives, heterogeneous alternatives
 - homogeneous premises and responses
+
+
+
 - incomplete stem
+
 - keyed alternative, keyed answer, key
+
 - masterlist items, classification items, keylist items
+
 - matching exercise (basic)
+
 - multiple-choice items (interpretative material)
+
 - meaningfully arranged alternatives
+
 - multiple-choice item
+
 - negatively worded stem
+
 - "none of the above"
+
 - overlapping alternatives
+
 - perfect matching
+
 - plausible distractors, functional alternatives
+
 - premises, premise list
+
 - responses, response list
+
 - specific determiner
+
 - statement-and-comment items
+
 - stem
+
 - tabular (matrix) items
+
 - tandem arrangement of options
+
 - "textbookish" phrasing
+
 - tricky item
+
 - varieties of multiple-choice items
+
 - verbal clues, grammatical clues, "clang" associations
+
 - "window dressing"
 
 ## 练习和应用
 
-- 1. 对于你教授的科目，或你最熟悉的科目，构建一个完美的选择题来评估以下每种能力。在编写每道题之前，写出该题将评估的具体学习目标。编写题目后，使用选择题核对清单来评估和修改你的题目。与班级的其他成员分享你的题目。
-  a. 区分两个语言概念的能力
-  b. 理解原理或规则的能力
-  c. 选择适当行动方案的能力
-  d. 解释新数据或新信息的能力
-- 2. 对于你教授的科目，获取包含供教师和学生使用的选择题的课程材料。从该材料中选择 10 道适合你可能教授的单元的题目。使用选择题核对清单评估每道题。确定每道题的缺陷，然后修改题目以纠正缺陷。（确保评估你的修改后题目使其完美无缺。）与班级讨论你的发现。
-- 3. 对于你教授的科目，获取包含供教师和学生使用的配对练习的课程材料。选择两个适合你可能教授的单元的练习。使用配对练习核对清单评估每个练习。确定每个练习的缺陷，然后修改练习以纠正缺陷。（确保评估你的修改后练习使其完美无缺。）与班级讨论你的发现。
+1. 对于你教授的科目，或你最熟悉的科目，构建一个完美的选择题来评估以下每种能力。在编写每道题之前，写出该题将评估的具体学习目标。编写题目后，使用选择题核对清单来评估和修改你的题目。与班级的其他成员分享你的题目。
 
+   a. 区分两个语言概念的能力
 
+   b. 理解原理或规则的能力
 
+   c. 选择适当行动方案的能力
 
+   d. 解释新数据或新信息的能力
+
+2. 对于你教授的科目，获取包含供教师和学生使用的选择题的课程材料。从该材料中选择 10 道适合你可能教授的单元的题目。使用选择题核对清单评估每道题。确定每道题的缺陷，然后修改题目以纠正缺陷。（确保评估你的修改后题目使其完美无缺。）与班级讨论你的发现。
+
+3. 对于你教授的科目，获取包含供教师和学生使用的配对练习的课程材料。选择两个适合你可能教授的单元的练习。使用配对练习核对清单评估每个练习。确定每个练习的缺陷，然后修改练习以纠正缺陷。（确保评估你的修改后练习使其完美无缺。）与班级讨论你的发现。
 
 4. 从以下列表中选择两种不同的关系类型，并为你教授的科目制作匹配练习：人物成就；著名事件的日期；术语定义；原理或规则应用的例子；概念的符号；作者或艺术家及其特定作品；外语短语的英语对应；机制特定部件的功能；或图片中物体的名称。为你选择的两种关系各开发匹配练习。使用匹配练习核查表评估并修改你的练习以消除所有缺陷。将你的匹配练习呈现给你的班级。
 
@@ -6641,15 +6872,23 @@ Criticisms Because masterlist item sets are “cousins” to matching exercises,
 说明：匹配两列
 
 A
+
 1. chlorophyll
+
 2. igneous
+
 3. photosynthesis
+
 4. water
 
 B
+
 A. Green plants contain this substance
+
 B. Type of rock formed when melted rock hardens
+
 C. A substance made up of both hydrogen and oxygen
+
 D. Process by which green plants produce their food
 
 ## Additional Readings
@@ -6657,21 +6896,24 @@ D. Process by which green plants produce their food
 Bloom, B. S., Madaus, G. F., & Hastings, J. T. (1981). *Evaluation to improve learning*. New York: McGraw-Hill, Chapters 8-10.
 
 这些章节说明了如何编写选择题以评估归类于高阶项目的学习目标。 [1, 2]
-- 2. 描述你应该评估的学习目标类型。 [1, 2]
-- 3. 解释为什么你不应该使用论文题来评估仅限于回忆和理解口头信息的学习目标。 [1]
+
+2. 描述你应该评估的学习目标类型。 [1, 2]
+
+3. 解释为什么你不应该使用论文题来评估仅限于回忆和理解口头信息的学习目标。 [1]
 
 ## Usefulness of Essay Assessments
 
-- 4. 阐述使用论文题对你学生的学习习惯可能产生的影响。 [1, 2, 3, 4]
-- 5. 阐述使用客观题而非论文题能更好地评估的学习目标类型。 [1, 2, 3, 4]
+4. 阐述使用论文题对你学生的学习习惯可能产生的影响。 [1, 2, 3, 4]
+
+5. 阐述使用客观题而非论文题能更好地评估的学习目标类型。 [1, 2, 3, 4]
 
 ## Constructing Essays, Assessing Subject-Matter, Learning and Using Optional Questions
 
-- 6. 编写良好的论文题， free from flaws, that assess a variety of students’s to your essay questions. [3, 4]
+6. 编写良好的论文题， free from flaws, that assess a variety of students’s to your essay questions. [3, 4]
 
 ## Important Terms and Concepts
 
-- 20. 解释本章末尾列出的重要术语和概念如何适用于教育评估。 [6]
+20. 解释本章末尾列出的重要术语和概念如何适用于教育评估。 [6]
 
 ## ABOUT THIS CHAPTER
 
@@ -6683,42 +6925,54 @@ Bloom, B. S., Madaus, G. F., & Hastings, J. T. (1981). *Evaluation to improve le
 
 论文格式通常分为两组：限制性反应题和扩展性反应题。两种类型都是有用的工具，但用于不同目的。
 
-## Restricted Response Varieties
+### Restricted Response Varieties
 
 定义 限制性反应论文题通过你提出限制性反应任务的方式，限制或限定学生答案的内容和其书面回应的形式。以下有两个例子。
 
-## Example
+#### Example
 
-- 1. 写一篇简短的论文比较和对比术语 measurement 和 assessment 在（a）学生回应质量的量化程度、（b）获取信息的过程、（c）学生回应记录方式方面的关系。
-- 2. 列出你的教材中提出的关于撰写论文题的五个建议。对你列出的每个建议，写一段简短的陈述解释该建议为何有助于提高论文评估的有效性。
+1. 写一篇简短的论文比较和对比术语 measurement 和 assessment 在（a）学生回应质量的量化程度、（b）获取信息的过程、（c）学生回应记录方式方面的关系。
+
+2. 列出你的教材中提出的关于撰写论文题的五个建议。对你列出的每个建议，写一段简短的陈述解释该建议为何有助于提高论文评估的有效性。
 
 评估超出回忆和理解的范围 限制性反应题应要求学生应用其技能解决新问题或分析新情况。实现这一点的一种方法是包含解释性材料作为评估的一部分。解释性材料可以是，例如，一段或两段描述特定问题或社会情况的文字、文学作品的摘录，或科学实验或发现的描述。基于这种材料的论文（和选择）题被称为解释性练习或情境依赖任务（在第8章中介绍）。解释性练习要求学生阅读、聆听、分析或以其他方式解释随附的材料，然后基于它完成一个或多个题目。以下例子说明了限制性反应题，以及通过对比，一个要求学生以各种方式分析特定诗歌的扩展性反应题。这些题目是为高中文学课程准备的。
 
-## Example
+#### Example
 
 解释性材料
+
 On First Looking Into Chapman’s Homer
 
-> Much have I traveled in the realms of gold,
-> And many goodly states and kingdoms seen;
-> Round many western islands have I been
-> Which bards in fealty to Apollo hold.
-> Off of one wide expanse have I been told
-> That deep-browned Homer ruled as his demesne;
-> Yet did I never breathe its pure serene
-> Till I heard Chapman speak out loud and bold;
+> Much have I traveled in the realms of gold,  
+> And many goodly states and kingdoms seen;  
+> Round many western islands have I been  
+> Which bards in fealty to Apollo hold.  
+> Off of one wide expanse have I been told  
+> That deep-browned Homer ruled as his demesne;  
+> Yet did I never breathe its pure serene  
+> Till I heard Chapman speak out loud and bold;  
 > Then felt I like some watcher of the skies
+
+
+
 > When a new planet swims into his ken;
+
 > Or like stout Cortez when with eagle eyes
+
 > He stared at the Pacific—and all his men
+
 > Looked at each other with wild surmise—
+
 > Silent, upon a peak of Darien.
+
 > John Keats
 
 ## Restricted response questions
 
 - 1. 诗人在第1到8行中对文学的态度是什么？这些行中的哪些词语使这种态度显现？
+
 - 2. 概括第9到14行描述的心境。
+
 - 3. 第1到8行描述的态度与第9到14行建立的心境之间有什么关系？
 
 ## Extended response questions
@@ -6747,10 +7001,6 @@ On First Looking Into Chapman’s Homer
 | Restricted response essay questions | Ability to— explain cause-effect relationships describe applications of principles present relevant arguments formulate tenable hypotheses formulate valid conclusions state necessary assumptions describe the limitations of data explain methods and procedures (and similar outcomes based on the pupil's ability to supply the answer) |
 | Extended response essay questions | Ability to— produce, organize, and express ideas integrate learnings in different areas create original forms (e.g., designing an experiment) evaluate the worth of ideas |
 | Source: Adapted from Measurement and Evaluation in Teaching (7th ed.) (p. 224) by R. L. Linn and N. E. Gronlund, 1995, Englewood Cliffs, N.J.: Prentice Hall © 1995. Adapted by permission. |
-
-
-
-
 
 想法及其相互之间的关系，并使用他们自己的答案组织方式。通常没有单一的答案被认为是正确的。学生可以自由选择回应方式，只有了解该学科的熟练教师才能根据（Stalnakar, 1951）判断学生回应的正确程度或价值。
 
@@ -6792,6 +7042,8 @@ On First Looking Into Chapman’s Homer
 
 ## 缺点
 
+
+
 扩展性回答作文的一个缺点是评分信度差。很难客观地评分扩展性回答。常见问题是，如果没有特殊培训，不同的教师会对同一篇作文给出不同的分数。当同一回答的成绩或分数因教师而异时，评估结果的有效性就会降低。教师对作文评分的另一个常见问题是，他们使用不同的标准来评估不同学生的作文。例如，你可能主要关注 Johnny 论文中思想的质量，Sally 论文的整洁和语法优雅，以及 Harry 的拼写错误。当你以这种方式评分时，你以不同的基础评估每个学生。由于你学生与学生之间的一致性不足，评估结果的有效性降低。
 
 第二个缺点是评分作文通常耗时，尤其是如果你想给学生反馈以便他们改进学习。当你有许多作文要批改时，就没有太多时间给学生提供详细的评论，说明如何改进他们的工作。
@@ -6800,7 +7052,7 @@ On First Looking Into Chapman’s Homer
 
 ## 作文评估的实用性
 
-## 作文题评估的能力和技能
+### 作文题评估的能力和技能
 
 前几段描述了一些作文让学生展示的能力和技能。表 9.1 简要总结了这些技能和能力。
 
@@ -6808,47 +7060,46 @@ On First Looking Into Chapman’s Homer
 
 作文格式或许独特之处在于，它为学生提供了展示其写作、组织、表达和解释思想之间相互关系的能力的机会。你可以用简答题和选择题更轻松地评估记忆、回忆和理解。重要的一点：选择一个评估格式，该格式将准确评估你希望学生达到的学习目标。
 
-## 为评估不同能力而表述作文问题的思路
+### 为评估不同能力而表述作文问题的思路
 
 你可能会发现研究不同提问方式很有帮助，这将使你能够设计出鼓励学生使用更高水平认知过程和技能的题目。以下是一些表述作文问题以评估不同学习目标的示例。
 
-## 示例
+#### 示例
 
-### 1. 概念理解：识别例子、举例
+##### 1. 概念理解：识别例子、举例
 - 阅读附带的报纸文章。哪些事件说明了政治妥协的概念？
 - 用你自己的话解释偏见的含义。举出你自己经历中的偏见例子。
 
-### 2. 概念理解：对例子进行分类
+##### 2. 概念理解：对例子进行分类
 - 阅读附带的五道数学应用题。将这些问题分成两组。解释为什么每组中的问题相似且属于同一组。解释两组有何不同。
 - 研究附带的10幅画作的图片。根据其风格将这些画作组织成两个或多个组。解释你分组的原因。
 
-### 3. 分析
+##### 3. 分析
 - 看看附带的家庭照片。描述照片中的情绪或感觉以及人们的肢体语言。使用隐喻或明喻来描述这些。
 - 阅读附带的报纸文章。哪些陈述是观点？解释原因。
 
-### 4. 比较
+##### 4. 比较
 - 比较艺术家 A 在其画作中使用色彩的方式与艺术家 B 在其面具中使用色彩的方式。它们有何相似和不同？色彩在每件作品中传达了什么情绪？
 - 阅读参议员 A 和参议员 B 的附带陈述。他们的观点在哪些方面相似？解释你得出结论的理由。
 
-### 5. 使用原则和规则：推理、预测
+##### 5. 使用原则和规则：推理、预测
 - 阅读上面关于巴萨尔瓦人的情况，这是一个我们没有研究的文化群体。基于我们研究的关于文化群体的内容，你预测巴萨尔瓦人在未来20年会发生什么？解释你用来做出预测的原则。
 - 假设南非政府命令所有白人柑橘农场主离开该国。你认为他们会去哪里？解释你用来做出这些预测的原则。
 
-### 6. 推理：演绎、预测、概括
+##### 6. 推理：演绎、预测、概括
 - 比较表 A 中的信息与图 A 中的信息。你对该数据适用的地区水稻种植的成功程度得出什么结论？解释你得出结论的理由。
 - 阅读科学家、参议员和报纸编辑关于继续使用汽油动力汽车发动机的后果的附带陈述。你对发达国家继续使用这些发动机可以做出什么概括？
 - 研究上面的表格数据。你预计未来五年我们的小麦出口会发生什么？解释你为使预测有效而做出的假设。
 
-### 7. 评价
+##### 7. 评价
 - 上面是用来评判作者在写作中使用“声音”好坏的标准。附带的是附近一所学校一名学生的短篇写作。使用这些标准来评价该作者使用声音的情况。解释为什么该作者使用了或没有使用良好的声音。用作品中的例子来说明你的评价。
 - 使用你的日常日志和你植物生长的记录来解释你植物的现状。解释为什么你的植物比同学的植物更好或更差。你本可以做些什么不同的事？这会对你植物的现状产生什么影响？
 
 如果你以与上面类似的方式设计问题，你将鼓励评估高阶思维技能的作文。请注意，许多问题使用了对学生来说是新颖或新奇的解释性材料。还请注意，大多数问题都要求学生给出理由或解释他们的选择。如果不要求这样的解释或理由，你就不会评估学生使用的高阶思维过程。几个
 
-
 作者们尝试对上述示例中的“思考”问题进行分类或归类。Monroe 和 Carter（1923）、Odell（1928）、Curtis（1943）、Wesley 和 Wronski（1958）以及 Bloom、Hastings 和 Madaus（1971）也提供了类似的分类。您可以查阅这些补充资源，获取更多示例。
 
-## 对学习策略的影响
+### 对学习策略的影响
 
 您可以利用评估来激励学生学习。似乎合理的是，您对学生在测验中所期望的表现类型会影响他们的学习方法。一些研究表明，当学生知道将被问及论述题时，他们倾向于集中学习广泛概念，并阐述因果关系、对比、比较等；而准备选择题的学生则侧重记忆事实、细节和具体想法（Douglas & Tallmadge, 1934; Terry, 1933）。然而，尽管学生报告称他们为不同类型的评估采用不同的学习策略，他们并不一定在不同形式的评估中表现出不同的成绩。一些研究发现，在论述题和选择题的评估之间几乎没有或没有任何表现差异，尽管学生报告称他们为不同形式采用了不同的学习策略（Hakstain, 1969; Vallance, 1947）。
 
@@ -6858,17 +7109,17 @@ On First Looking Into Chapman’s Homer
 
 如果您认为学生必须学会在特定学科领域写关于思想，或许最好的建议是确保您在课堂上解释并教导学生如何就该学科写作。您需要布置大量的写作任务，让学生有机会学习在该学科中写作。不要将写作任务局限于考试中。短篇作文和长篇论文等各种书面任务都能帮助学生实现这些写作导向的目标。这通常意味着少依赖课本章节末尾的题目和作业，而更多使用您自己的任务。请记住，评估结果的有效性更高，当您使用多种评估形式时。因此，您的总结性评估应当包含论述题和选择题，以涵盖适当的学习目标。
 
-## 内容采样的深度与广度
+### 内容采样的深度与广度
 
 回答论述题耗时较长，限制了学生可写的内容范围。如果您的学生每分钟可以回答一到两个选择题，那么在半小时内他们可以完成30到60个选择题。60个题目可以覆盖非常广泛的内容，并至少涉及许多教学目标。在同样的30分钟内，这些学生可能只能回答一个或两个论述题。因此，您可以通过一篇论述题来评估对较窄主题的深入学习，或通过大量客观题来评估对广泛、较浅层的整体覆盖。为改善评估的内容覆盖，许多教师会同时使用论述题和客观题。
 
 为克服论述题有限的内容采样缺陷，使用一系列学生可在较长时间内书写的作文（Coflman, 1971）。您可以将这些作文积累在作品集中。在一个学期内，学生完成的多篇课外作文可能比在短时间考试中写的一篇作文更能准确评估特定学习目标。您还需要记住，让学生在考试时间的压力下写作可能不是评估他们最大能力的最佳方法。
 
-## 教师时间的高效使用
+### 教师时间的高效使用
 
 论述题和作文的评分耗时较长。如果这些是评估重要学习目标的最佳方式，如果完成它们是学生有意义的活动，并且学生能从您对其回答质量的反馈中受益，那么这段时间是值得的。然而，有时由于教师需要评分大量作文，或受日常压力影响，他们可能会草率评分：这违背职业伦理，也是责任滥用。评估和评价学生是严肃的事业。仔细规划，包括决定论述题是否是最有效的评估方式，可以大幅减少作文评分的不当行为。
 
-## 评分标准和范例的影响
+### 评分标准和范例的影响
 
 正如您将在本章后面看到的，使用明确定义的标准来评价学生的论述题回答非常重要。标准应向学生教授并加以说明。地方学区和州教育部认识到制定这些标准的重要性。因此，教师可能会参与专业发展活动，以帮助定义这些标准并改进对学生回答的应用。大部分努力集中在定义用于性能评估的标准或评分量表上，论述题评估可视为其中一部分。（请参见第11章和第12章以获取详细信息。）
 
@@ -6876,27 +7127,30 @@ On First Looking Into Chapman’s Homer
 
 同样，向学生分享质量标准以及不同时间水平的优质作品示例，能更好地将您的评估与教学相结合。学生了解质量表现的特征，并通过示例看到质量表现的具体样子。第11章和第12章在此方面有更详细的描述。
 
-## 构建论述题以评估学科内容学习
+### 构建论述题以评估学科内容学习
 
-检查表总结了提升论述题质量的建议。与以往的检查表一样，如果检查表中任何一项回答为“不”，则无需使用该论述题，直至您纠正缺陷。建议稍后在本章中讨论。首先，我们将检查一项 poorly crafted（ poorly crafted）论述题，并运用检查表对其进行评估。这将使您了解该项应如何改进。
+检查表总结了提升论述题质量的建议。与以往的检查表一样，如果检查表中任何一项回答为“不”，则无需使用该论述题，直至您纠正缺陷。建议稍后在本章中讨论。首先，我们将检查一项 poorly crafted 论述题，并运用检查表对其进行评估。这将使您了解该项应如何改进。
 
-## 关于 poorly crafted 论述题的案例研究
+#### 关于 poorly crafted 论述题的案例研究
+
+
 
 在讨论检查表的具体建议之前，让我们先研究一项 poorly worded（ poorly worded）论述题，并使用检查表对其进行评估。这一练习将帮助您理解如何评估自己的论述题，并使检查表的解释对您更具意义。
 
-### 例题
+## 例题
 
 假设一位教师希望评估以下 10 年级美国历史学习目标：
 
-#### 例题
+### 例题
 
 10 年级学习目标：分析殖民者在美国独立战争期间取得成功的原因，并说明英方或殖民者可能采取的替代行动以改变结果。
 
 教师编写了以下论述题来评估该学习目标。总体而言，该论述题未能很好地评估该学习目标。请阅读该题，随后我们将使用检查表对其进行评估。
 
-#### 例题
+### 例题
 
 一项 poorly crafted（ poorly crafted）论述题
+
 分析英方被殖民者击败的原因，并列出课堂上讨论的四个导致击败的因素。
 
 ## 检查表 9.1
@@ -6919,35 +7173,36 @@ On First Looking Into Chapman’s Homer
   d. 评价依据？
 - 10. 如果论述提示要求学生陈述并支持他们在争议性问题上的观点，提示词是否明确表明评估将基于支撑其论证的逻辑和证据，而非学生实际持的立场或表达的意见？
 
-#### 使用检查表的评估 这里是逐项分析，使用检查表进行评估。数字对应检查表中的点。
+### 使用检查表的评估
+
+这里是逐项分析，使用检查表进行评估。数字对应检查表中的点。
 
 - 1. 是，殖民者取得成功的因素对本单元的学习成果很重要。
 - 2. 否，学习目标要求学生分析成功原因并说明替代可能性。该项既不要求分析，也不要求说明。
-
-
-
-+   3. 否，该题目仅要求列出（回忆）在课堂上呈现的信息。
-+   4. 是，相对于其他题目（未显示），该题目有助于实现教师对该单元所设想的覆盖广度。
-+   5. 是，学生需要做什么（即列出）已明确说明。
-+   6. 否，学习目标意味着学生应具备超出该题目要求的能力。（该题目设定的任务“从记忆中列出”在学生能力范围内，但其复杂程度低于学习目标所规定的适当水平。）
-+   7. 否，该题目仅要求回忆语言信息。
-+   8. 存疑；一些学生可能会被“分析”一词弄糊涂，但大多数人可能仍会列出清单。
-+   9. a. 是，该题目说明学生应列出四个原因。
+- 3. 否，该题目仅要求列出（回忆）在课堂上呈现的信息。
+- 4. 是，相对于其他题目（未显示），该题目有助于实现教师对该单元所设想的覆盖广度。
+- 5. 是，学生需要做什么（即列出）已明确说明。
+- 6. 否，学习目标意味着学生应具备超出该题目要求的能力。（该题目设定的任务“从记忆中列出”在学生能力范围内，但其复杂程度低于学习目标所规定的适当水平。）
+- 7. 否，该题目仅要求回忆语言信息。
+- 8. 存疑；一些学生可能会被“分析”一词弄糊涂，但大多数人可能仍会列出清单。
+- 9. a. 是，该题目说明学生应列出四个原因。
     b. 也许目的只是重复课堂上教授的内容，但目的并未说明。
     c. 否，未说明时间限制。
     d. 否，但仅仅对错似乎是评价的隐含依据。
-+   10. 不适用；未要求提供意见。
+- 10. 不适用；未要求提供意见。
 
-修订后的题目 使用检查表后，教师重新思考了该题目与学习目标以及他所教授内容之间的关系。教师重新设计了该题目，使其更符合学习目标。以下是修订后的题目。
+### 修订后的题目
+
+使用检查表后，教师重新思考了该题目与学习目标以及他所教授内容之间的关系。教师重新设计了该题目，使其更符合学习目标。以下是修订后的题目。
 
 ## 示例
 
 改进的作文任务
 
-+   A. 列出导致殖民者在独立战争中战胜英国的四个因素之一（4 分）
-+   B. 对于你列出的每个因素，写一段简短的解释说明该因素如何帮助殖民者击败英国。（4 分）
-+   C. 选择其中一个你认为英国本可以改变或克服的因素。解释英国本可以采取什么行动来改变或克服这一因素。（4 分）
-+   D. 如果英国采取了你所说的行动，战争很可能会发生什么？为什么你认为会这样发生？（8 分）
+- A. 列出导致殖民者在独立战争中战胜英国的四个因素之一（4 分）
+- B. 对于你列出的每个因素，写一段简短的解释说明该因素如何帮助殖民者击败英国。（4 分）
+- C. 选择其中一个你认为英国本可以改变或克服的因素。解释英国本可以采取什么行动来改变或克服这一因素。（4 分）
+- D. 如果英国采取了你所说的行动，战争很可能会发生什么？为什么你认为会这样发生？（8 分）
 
 评分：A 部分和 B 部分将根据答案的正确性进行评分。C 部分和 D 部分将根据你支持自己观点的程度进行评分，而不是根据你所持的立场。
 
@@ -6957,11 +7212,15 @@ On First Looking Into Chapman’s Homer
 
 ## 检查表讨论
 
-1 和 2. 被评估内容的重要性以及与评估计划的对应关系。我们强调，无论你的评估任务格式如何，每个任务都必须聚焦于重要的学习目标，并且必须与你的评估计划相匹配。需要作文的学习目标可能很难表述，因为目标可能复杂且抽象。此外，在评估这些复杂学习目标时，你可能需要使用不止一种类型的评估任务。例如，你可能希望学生展示批判性分析和评价表达关于男女平等不同观点的段落的能力。这一复杂学习目标需要在得出学生已达到这一目标的结论之前，使用几种不同的任务来评估学生。
+### 1 和 2. 被评估内容的重要性以及与评估计划的对应关系
+
+我们强调，无论你的评估任务格式如何，每个任务都必须聚焦于重要的学习目标，并且必须与你的评估计划相匹配。需要作文的学习目标可能很难表述，因为目标可能复杂且抽象。此外，在评估这些复杂学习目标时，你可能需要使用不止一种类型的评估任务。例如，你可能希望学生展示批判性分析和评价表达关于男女平等不同观点的段落的能力。这一复杂学习目标需要在得出学生已达到这一目标的结论之前，使用几种不同的任务来评估学生。
 
 你应关注你希望学生做出何种类型的回应，而不是担心学习目标的表述是否完善。例如，你可以写一个样例答案——概述你希望学生提出的要点。或者你可以说明你期望学生在作文题中如何处理问题。然后你可以完善作文题，以明确你希望学生做什么。
 
-3. 将基本知识应用于新情境。作文题格式有可能评估学生对更高认知过程和技能的掌握。做到这一点最好的方法是要求学生将示例应用于新情境，例如分析济慈的诗歌。这一题目的不聚焦版本可能写成：“写一篇分析这首诗的作文。”不太可能这样的不聚焦题目会产生对诗歌“情绪”的分析，而这正是教师所想的。如果题目不聚焦，你将无法区分那些能够完成学习目标但误解了你的问题的人，与那些根本无法应用你所教授技能的人。
+### 3. 将基本知识应用于新情境
+
+作文题格式有可能评估学生对更高认知过程和技能的掌握。做到这一点最好的方法是要求学生将示例应用于新情境，例如分析济慈的诗歌。这一题目的不聚焦版本可能写成：“写一篇分析这首诗的作文。”不太可能这样的不聚焦题目会产生对诗歌“情绪”的分析，而这正是教师所想的。如果题目不聚焦，你将无法区分那些能够完成学习目标但误解了你的问题的人，与那些根本无法应用你所教授技能的人。
 
 有时，如果你发现很难清楚地表述任务本身的性质，明确说明你将如何评估学生的回答以及评估标准可能会增加清晰度。例如，有时教师会给学生一篇表达某观点的报纸摘录，并希望学生通过应用课堂上教授的策略和标准来评价该摘录。然而，教师表述不佳的问题可能只是说：“你是否同意或不同意这篇文章的立场？”无法预料学生会做出何种回应：他们的回应可能从简单的“是”或“否”到冗长的争论纠缠不等。教师应通过明确学生应涉及摘录的哪些方面来使题目更聚焦。此外，教师应告知学生，他们的作文不会根据是否同意或不同意摘录来评价，而是根据他们如何构建论证以及他们为支持自己的立场而引入的外部信息的质量来评价。
 
@@ -6969,19 +7228,22 @@ On First Looking Into Chapman’s Homer
 
 这里一个重要的实践建议是请同事或朋友审阅问题，并在可能的情况下让几名学生试做题目。然后你可以根据需要修改问题。遵循这些步骤可以极大地提高作文题的质量。
 
-### 6. 复杂性应与教育水平相符。
+### 6. 复杂性应与教育水平相符
+
 由于回答作文需要学生阅读、思考和写作，你必须确保题目适合学生的教育发展水平。避免为小学生使用复杂的句子结构和措辞。避免使用间接的短语或增加题目阅读量的表述。然而，不要过度简化高级学生的作文。作文应挑战学生发挥最佳水平——选择题可增加内容覆盖面并提高评估回忆结果的有效性。
 
 应使用作文来评估高阶思维；以及你在其回答中期望的细节程度。
 
-### 9. 明确回应长度、目的、时间限制和评价标准。
+### 9. 明确回应长度、目的、时间限制和评价标准
+
 你应告知学生（a）大致的
 
+`length you expect their response to be`, (b) the purpose for which they are writing, (c) the goal toward which their essay should aim, and (d) the audience for whom they should target their responses. If you impose time limits, you should clearly announce these to your students. If more than one answer can be correct, your students should know this. If you will deduct points for incorrect spelling, poor language usage, or poor penmanship, tell students before they respond. Failing to provide this information for an important summative evaluation of students is professionally irresponsible. (See Chapter 5 for more professional responsibilities.)
 
 
-length you expect their response to be, (b) the purpose for which they are writing, (c) the goal toward which their essay should aim, and (d) the audience for whom they should target their responses. If you impose time limits, you should clearly announce these to your students. If more than one answer can be correct, your students should know this. If you will deduct points for incorrect spelling, poor language usage, or poor penmanship, tell students before they respond. Failing to provide this information for an important summative evaluation of students is professionally irresponsible. (See Chapter 5 for more professional responsibilities.)
 
-10. Clarify how students’ opinions will be evaluated. Often an essay will require students to state and support their opinions on controversial or nonroutine matters. These essays often provide excellent opportunities to assess students’ abilities to analyze, synthesize, and evaluate. In such items, you should make clear that students’ answers will be evaluated on the logic shown in their answers and how well they use evidence to support their positions. You should reassure them that the opinions or positions they state will not be marked right or wrong per se.
+## 10. Clarify how students’ opinions will be evaluated
+Often an essay will require students to state and support their opinions on controversial or nonroutine matters. These essays often provide excellent opportunities to assess students’ abilities to analyze, synthesize, and evaluate. In such items, you should make clear that students’ answers will be evaluated on the logic shown in their answers and how well they use evidence to support their positions. You should reassure them that the opinions or positions they state will not be marked right or wrong per se.
 
 ## OPTIONAL QUESTIONS
 
@@ -6989,13 +7251,13 @@ When the purpose for assessment is summative evaluation, you should require all 
 
 Some teachers believe that offering students optional essay questions (a choice of questions) is fairer because it permits students to "put their best foot forward." Research doesn’t bear out this belief, however (Coffman, 1971; Stalnaker, 1951; Wilson, 1976). Some students will choose to answer questions on which they do less well (Cowan, 1972; Meyer, 1939; Stalnaker, 1936; Taylor & Nuttall, 1974). Further, the topics on which questions are based vary in familiarity and difficulty for the students. We have already mentioned how difficult it is to generalize from one essay to the next. In addition, teachers marking essays frequently change their ratings based on their own perceptions of the nature and difficulty of topics. It is extremely difficult, often impossible, to compare tests equitably when students have taken different items (Wang, Wainer, & Thissen, 1995). If all the questions asked on an assessment represent important learning targets, then it seems logical and fair to hold all students accountable for answering all of them (Ebel, 1979).
 
-Perhaps the story would be different if general writing ability were being assessed, rather than subject-matter competence (Coffman, 1971). You could argue that students may demonstrate general writing ability by writing on any one of a number of topics. If you follow this practice, you should score papers on each topic separately, rather than mixing topics together. This will reduce the
-
-topic-to-topic differences that tend to raise or lower your rating of an essay quite apart from its merits. As we pointed out earlier in this chapter, however, the topic and the prompt of the essay questions are very important determinants of how well a student performs. A student can write very well about some topics and very poorly about others. You might, for example, write a better essay on the frustrations of a teacher than on the frustrations of a professional golfer, simply because you know more about one area than the other. Similarly, the topics students choose or are assigned do affect their ability to answer appropriately. Even if you are assessing general writing ability, interpret very cautiously students’ responses to different topics and prompts. The most important thing for you to do is to use multiple topics and assess students over longer periods, rather than base your evaluation on a single essay.
+Perhaps the story would be different if general writing ability were being assessed, rather than subject-matter competence (Coffman, 1971). You could argue that students may demonstrate general writing ability by writing on any one of a number of topics. If you follow this practice, you should score papers on each topic separately, rather than mixing topics together. This will reduce the topic-to-topic differences that tend to raise or lower your rating of an essay quite apart from its merits. As we pointed out earlier in this chapter, however, the topic and the prompt of the essay questions are very important determinants of how well a student performs. A student can write very well about some topics and very poorly about others. You might, for example, write a better essay on the frustrations of a teacher than on the frustrations of a professional golfer, simply because you know more about one area than the other. Similarly, the topics students choose or are assigned do affect their ability to answer appropriately. Even if you are assessing general writing ability, interpret very cautiously students’ responses to different topics and prompts. The most important thing for you to do is to use multiple topics and assess students over longer periods, rather than base your evaluation on a single essay.
 
 ## CONSTRUCTING PROMPTS FOR ASSESSING WRITING ACHIEVEMENT
 
 Assessing students’ writing achievement requires special attention to both writing prompts and scoring rubrics. In this section we discuss writing prompts. Scoring rubrics for writing assessment are discussed in the next section.
+
+
 
 Before we begin, you should note that some school district or state assessment programs have adopted very specific writing instruction and assessment frameworks. We cannot discuss all of these in this book. We will discuss a few so you have an idea about writing assessment. However, you should follow your school’s or state’s mandated program to be fair to your students. It is possible for you to adapt some of the guidelines in this book to your local situation.
 
@@ -7003,15 +7265,13 @@ Writing instruction and formative student assessment need to be tightly integrat
 
 ## General Suggestions for Integrating Writing Assessment and Instruction
 
-Focus on the Characteristics of Good Writing For classroom purposes, teaching and evaluating students’ writing should concentrate on characteristics or qualities of good writing, especially those that students can be taught to improve. Sometimes these writing qualities are called writing traits or writing dimensions. Teaching and assessing writing need to be highly integrated because to improve, students need to know in some detail (a) what dimensions of their
-
-writing need improving and (b) how to make these improvements. Information from assessment should allow you to give students specific feedback that guides their writing improvement.
+Focus on the Characteristics of Good Writing For classroom purposes, teaching and evaluating students’ writing should concentrate on characteristics or qualities of good writing, especially those that students can be taught to improve. Sometimes these writing qualities are called writing traits or writing dimensions. Teaching and assessing writing need to be highly integrated because to improve, students need to know in some detail (a) what dimensions of their writing need improving and (b) how to make these improvements. Information from assessment should allow you to give students specific feedback that guides their writing improvement.
 
 ## What Are the Characteristics of Good Writing?
 
 You need to know which writing traits to teach and to assess. Educators differ as to what constitutes good student writing. State standards and school district guidelines will differ in the number and type of traits that define good writing. The Arizona (http://ade.state.az.us/stdstandards/aims) and Oregon (http://open.k12.or.us/open01.html) state assessment programs, for example, assess six traits.
 
-## Example
+### Example
 
 Writing traits used by Arizona and Oregon
 
@@ -7026,7 +7286,7 @@ Writing traits used by Arizona and Oregon
 
 The Pennsylvania Department of Education, on the other hand, evaluates five traits (http://www.pde.state.pa.us/k12/site/default.asp).
 
-## Example
+### Example
 
 Writing traits used by Pennsylvania
 
@@ -7040,7 +7300,7 @@ Writing traits used by Pennsylvania
 
 You can see that while not identical, the traits assessed by these states are similar. Many schools and states have adopted or adapted some or all of the Six + 1 Traits® of Writing developed by the Northwest Regional Educational Laboratory (http://www.nwrel.org/eval/toolkit/traits/index.html). These are:
 
-## Example
+### Example
 
 - 1. ideas
 - 2. organization
@@ -7051,6 +7311,8 @@ You can see that while not identical, the traits assessed by these states are si
 - 7. presentation
 
 You use the writing traits you adopt as a framework around which you organize your assessment and teaching to help students understand what constitutes good writing. Using the traits as a framework for feedback avoids giving feedback that is too general to be helpful (Examples of feedback that are too general are: “This is a B paper.” “You need to improve your writing.” etc.)
+
+
 
 ## Teach Students What Good Writing Is
 
@@ -7064,26 +7326,16 @@ This is a far cry from how good writers work. Students need to understand that m
 
 The writing process that follows is adapted from suggestions developed by the Northwest Regional Educational Laboratory. Note (a) how the assessment is built into this process and (b) that some of the steps in the writing process depend on the feedback that the assessment provided.
 
-
-
-
-
 ## Example
 
 写作特征如何融入写作过程
 
 1. 写作前活动——在写作之前，作者明确写作目的，开始组织思路，头脑风暴，并尝试新想法。作者会与其他人讨论这些想法，决定写作的格式和方式，并确定主要受众。文章的计划逐渐形成。教师可能希望安排一次内容会议（Darden, 2000），以帮助学生聚焦文章的想法和内容。
-
 2. 起草文章——作者根据写作前的想法起草文章的初步版本。随着草稿的进展，想法和计划会发生变化。写作目的会进一步明确（甚至改变）。草稿开始成形，想法和内容开始发展。文章的初步组织得以发展，使开头、中间和结尾开始显现。草稿被视为进行中的作品，而非最终成品。
-
 3. 获取反馈以改进草稿——根据评估，作者从教师、同伴或其他人那里获得反馈。评估用于使反馈具体针对已采用的定义良好写作的特征（例如，思想、组织、用词、句子变化）。教师可能希望与学生安排一次起草会议（Darden, 2000）以提供部分反馈。
-
 4. 修改文章——作者利用评估中的具体反馈，在每个特征领域改进文章。例如，作为具体反馈的结果，作者可能会在故事中加入更生动或更令人兴奋的词语。
-
 5. 如有必要重复步骤 3 和 5——作者可能没有正确实施反馈中的建议。或者，作者可能不理解反馈并需要更多指导。写作并不是严格的线性过程；它可能需要多次迭代。学生作者必须学会，完成作业并提交并不是最后一步。教师可能希望与学生安排一次过程会议（Darden, 2000）来讨论学生所做的选择并建议如何继续修改。
-
 6. 编辑——作者通过检查正确的英语 mechanics：拼写、语法、标点等，具体点来编辑修改后的文章。英语 mechanics 是良好写作的特征之一。教师可以评估书面作品以了解学生实施 mechanics 的程度，但请注意，在这种特定的写作过程中，英语 mechanics 在写作过程的后期才进行评估，因为教学法是让学生在文章形成阶段首先集中于思想、组织、用词选择等。这有助于作者更具创造性，并在作品形成阶段集中于作品的实质内容。
-
 7. 定稿并使文章具有可呈现性——作者将文章以最终形式呈现给教师或班级或寄出。根据年级水平、目的和资源，这可能意味着用均匀的边距工整书写，或使用花哨的文字处理。请注意，对外观的关注被推迟到最后，在文章修改和润色之后。
 
 > 来源：基于作者对西北地区教育实验室开发的想法和建议的解读。不得推断西北地区教育实验室的认可。
@@ -7116,59 +7368,68 @@ The writing process that follows is adapted from suggestions developed by the No
 
 | 6 | 5 | 4 |
 |---|---|---|
-| 写作非常清晰、聚焦且有趣。它始终吸引读者的注意力。主要思想突出，并通过适合受众和目的的强有力支持和丰富细节得以发展。写作的特点是<br>- 清晰、聚焦和控制。<br>- 突出的主要思想。<br>- 支持性、相关、精心挑选的细节；当适当时，使用资源提供强有力、准确、可信的支持。<br>- 对主题的透彻、平衡、深入的解释/探索；写作建立联系并分享见解。<br>- 内容和所选细节非常适合受众和目的。 | 写作清晰、聚焦且有趣。它吸引读者的注意力。主要思想突出，并通过适合受众和目的的支持细节得以发展。写作的特点是<br>- 清晰、聚焦和控制。<br>- 突出的主要思想。<br>- 支持性、相关、精心挑选的细节；当适当时，使用资源提供强有力、准确、可信的支持。<br>- 对主题的透彻、平衡的解释/探索；写作建立联系并分享见解。<br>- 内容和所选细节非常适合受众和目的。 | 写作清晰且聚焦。读者可以轻松理解主要思想。支持存在，尽管可能有限或相当笼统。写作的特点是<br>- 容易识别的目的。<br>- 清晰的主要思想。<br>- 支持细节相关，但可能在某些地方过于笼统或有限；当适当时，使用资源提供准确支持。<br>- 主题得到探索/解释，尽管发展细节可能偶尔与主要思想不平衡；可能存在一些联系和见解。<br>- 内容和所选细节相关，但可能并非始终为受众和目的精心挑选。 |
+
+
+
+|  |  |  |
+| --- | --- | --- |
+| 写作非常清晰、聚焦且有趣。它始终吸引读者的注意力。主要思想突出，并通过适合受众和目的的强有力支持和丰富细节得以发展。写作的特点是<br>- 清晰、聚焦和控制。<br>- 突出的主要思想。<br>- 支持性、相关、精心挑选的细节；当适当时，使用资源提供强有力、准确、可信的支持。<br>- 对主题的透彻、平衡、深入的解释/探索；写作建立连接并分享见解。<br>- 内容和所选细节非常适合受众和目的。 | 写作清晰、聚焦且有趣。它吸引读者的注意力。主要思想突出，并通过适合受众和目的的支持细节得以发展。写作的特点是<br>- 清晰、聚焦和控制。<br>- 突出的主要思想。<br>- 支持性、相关、精心挑选的细节；当适当时，使用资源提供强有力、准确、可信的支持。<br>- 对主题的透彻、平衡的解释/探索；写作建立连接并分享见解。<br>- 内容和所选细节非常适合受众和目的。 | 写作清晰且聚焦。读者可以轻松理解主要思想。支持存在，尽管可能有限或相当笼统。写作的特点是<br>- 容易识别的目的。<br>- 清晰的主要思想。<br>- 支持细节相关，但可能在某些地方过于笼统或有限；当适当时，使用资源提供准确支持。<br>- 主题得到探索/解释，尽管发展细节可能偶尔与主要思想不平衡；可能存在一些联系和见解。<br>- 内容和所选细节相关，但可能并非始终为受众和目的精心挑选。 |
 | 3 | 2 | 1 |
 | 读者可以理解主要思想，尽管它们可能过于宽泛或简单化，结果可能无效。支持细节通常有限、实质不足、过于笼统，或偶尔略偏离主题。写作的特点是<br>- 容易识别的目的和主要思想。<br>- 可预测或过于明显的主题思想或情节；结论或主要观点似乎在重复 elsewhere 听到的观察。<br>- 支持被尝试，但发展细节通常范围有限、不均衡、略偏离主题、可预测或过于笼统。<br>- 细节可能没有扎根于可信资源；它们可能基于陈词滥调、刻板印象或可疑的信息来源。<br>- 从一般观察转向具体时存在困难。 | 主要思想和目的有些不明确或发展被尝试但最小。写作的特点是<br>- 目的和主要思想可能需要读者进行大量推断。<br>- 发展最小；细节不足。<br>- 无关细节使文本杂乱。<br>- 细节大量重复。 | 写作缺乏中心思想或目的。写作的特点是<br>- 思想极其有限或 simply 不清晰。<br>- 发展的尝试最小或不存在；论文太短，无法展示思想的发展。 |
 
 > 来源：摘自俄勒冈州教育部《写作评分指南》（第 1 页），1996 年，塞勒姆，OR：评估与评价办公室，作者。经许可转载。
 
-
-
-
-
 6. 形式——告知学生如果期望作品采用某种特定形式，例如诗歌、信件、段落、论文等。
 
 以下示例展示了如何通过添加这些修辞线索来改进写作提示。
 
-## 示例
+### 示例
 
-较差：无 SOAP——写作提示未提供关于作品主题、场合、读者或目的的建议。
+**较差：** 无 SOAP——写作提示未提供关于作品主题、场合、读者或目的的建议。
 
 写一封信讲述一个事件。
 
-较好：SOAP 已融入提示中
+**较好：** SOAP 已融入提示中
 
 回想一下你最近看到或发生在你身上的重要事情。也许是你看到了一起事故、一桩罪行、某人做的好事。也许最近发生了让你觉得好笑的事情。
 
 写一封信给朋友描述你所看到的或发生在你身上的事情，就按发生的样子写。清楚地描述事件，让不在场的朋友也能准确知道它是什么样的以及你对此的感受。
 
-为不同文体设计写作提示 你教学生为不同的读者和不同的目的写作。你提供的写作提示引导他们写出你心目中的特定类型的作品。通常，课堂写作有四种形式：叙事、想象、说明和说服。
+## 为不同文体设计写作提示
+
+你教学生为不同的读者和不同的目的写作。你提供的写作提示引导他们写出你心目中的特定类型的作品。通常，课堂写作有四种形式：叙事、想象、说明和说服。
+
+### 叙事写作
 
 叙事写作描述真正发生过的事情，通常是学生的个人经历。以下是引导学生进行叙事写作的提示示例。
 
-## 示例
+#### 示例
 
-叙事提示
+**叙事提示**
 
 想一件过去发生在你身上的 HAPPY 的事情。也许是发生在家里或学校或别处的。
 
 写一篇论文讲述发生了什么。务必提供具体细节来解释为什么这是件快乐的事情。
 
+### 想象写作
+
 想象写作描述的是从未发生过、常常不可能发生的事情。学生运用想象力和创造力来讲述一个故事。以下是示例：
 
-## 示例
+#### 示例
 
-想象提示
+**想象提示**
 
 假设有一天你醒来发现自己变成了一条 FISH。你的生活会是什么样？会发生什么？
 
 写一个故事，我们可以放到班级杂志里，讲述你变成鱼时会发生什么。务必提供关于你作为鱼的生活的具体细节。
 
+### 说明写作
+
 说明写作提供解释和信息。学生被要求提供细节、澄清事物并解释事物。以下是示例：
 
-## 示例
+#### 示例
 
-说明提示
+**说明提示**
 
 动物在成长时会发生很大变化。想想你了解很多的 ONE ANIMAL。
 
@@ -7176,11 +7437,13 @@ The writing process that follows is adapted from suggestions developed by the No
 
 学生经常在回答学科论文题时使用说明写作。
 
+### 说服写作
+
 说服写作说服读者接受作者的观点。作者可能希望读者接受他的想法或采取作者支持的某些行动。以下是示例：
 
-## 示例
+#### 示例
 
-说服提示
+**说服提示**
 
 假设本校学生每周有 30 分钟的自由时间。校长希望得到你们关于学生应如何利用这段自由时间的 ONE THING 的建议。你会建议哪一件事情？
 
@@ -7189,47 +7452,56 @@ The writing process that follows is adapted from suggestions developed by the No
 ## 写作提示的额外建议
 
 在准备评估学生写作能力的课堂测评时有一些特殊考虑。Albertson（1998）提出了以下建议。
+
 不要准备以下提示：
 
--   要求学生具备专门知识。
--   要求学生写关于他们可能因文化或社会背景而没有经历过的经历的叙事。
--   要求学生对个人价值观、宗教信仰、父母会反对的敏感或有争议的事项发表意见。
--   鼓励对学校、学生父母或社区人士提出投诉和批评。
+- 要求学生具备专门知识。
+- 要求学生写关于他们可能因文化或社会背景而没有经历过的经历的叙事。
+- 要求学生对个人价值观、宗教信仰、父母会反对的敏感或有争议的事项发表意见。
+- 鼓励对学校、学生父母或社区人士提出投诉和批评。
 
 应准备以下提示：
 
--   指涉具体情境而非抽象情境。
--   会让学生感兴趣。
--   在你评估学生写作时也会让你感兴趣
--   在学生的经验范围内。
+- 指涉具体情境而非抽象情境。
+- 会让学生感兴趣。
+- 在你评估学生写作时也会让你感兴趣
+- 在学生的经验范围内。
 
 ## 评分论文测评
 
-## 评分可靠性的问题
+### 评分可靠性的问题
 
 论文格式通常具有非常低的评分者间信度。你可以有意努力克服一些降低论文评分信度的负面因素。我们在以下段落中讨论这些因素。关注这些因素将减少你对学生作品评估中的测量误差。你也可以通过使用评分量规来提高论文分数的评分者间信度。我们将在本节后面讨论评分量规。
 
-不一致的标准 分配给学生回应的成绩可能因阅卷者而异，既因为阅卷者自身的不一致，也因为他们评分标准的不同。此外，同一阅卷者可能在不同日子对同一篇论文给出不同的评分。评估论文时缺乏一致的标准是教育界在 20 世纪初转向选择题和多项选择测评的主要理由之一。克服这种一致性的一种方法是让所有教师使用相同的评分量规。
+#### 不一致的标准
 
-评分者漂移 即使评分标准定义良好，评分者倾向于随着时间的推移不注意标准或以不同的方式解释它们。这种随着时间推移评分标准应用方式发生变化的倾向缓慢发生，被称为评分者漂移。实际应用是，你必须定期停下来确定你对后批阅的论文应用评分标准的方式是否与对先前批阅的论文相同。
+分配给学生回应的成绩可能因阅卷者而异，既因为阅卷者自身的不一致，也因为他们评分标准的不同。此外，同一阅卷者可能在不同日子对同一篇论文给出不同的评分。评估论文时缺乏一致的标准是教育界在 20 世纪初转向选择题和多项选择测评的主要理由之一。克服这种一致性的一种方法是让所有教师使用相同的评分量规。
 
-主题和提示的变化 导致你的测评结果不一致的另一个因素是论文的主题。学生的分数可能相差很大，即使由同一阅卷者批改，也因为主题、提示或问题而异（Breland, Camp, Jones, Morris, & Rock, 1987; Dunbar, Koretz, & Hoover, 1991）。这是一个严重的问题：如果你的学生评估基于一个论文题，你将无法对该学生在不同主题上的表现做出一般性陈述。如果你对学生的陈述仅限于学生写的那一篇论文，你的整体评估（例如成绩）的效度就会降低。这是一个强有力的理由，要求将学生的评分期成绩基于整个评分期内收集的多次测评。这意味着，当然，你必须为评分期制定一个测评计划，确定你将使用哪些不同类型的测评格式。（参见第 6 章，了解如何制定测评计划。）
+#### 评分者漂移
 
-光环效应 光环效应错误发生在你对一个人的一个特征的判断反映了你对其他特征的判断或你对该人的总体印象时。因此，你可能倾向于对你钦佩的学生写的某篇论文打分更宽松，因为你心里知道该学生掌握了目标或主题。光环效应也反向作用：你可能给不被你欣赏的学生写的某篇论文打更低的分数，因为你“心里知道”该学生并不擅长。为纠正这一缺陷的一种方法是仅在隐藏学生姓名后批改论文。
+即使评分标准定义良好，评分者倾向于随着时间的推移不注意标准或以不同的方式解释它们。这种随着时间推移评分标准应用方式发生变化的倾向缓慢发生，被称为评分者漂移。实际应用是，你必须定期停下来确定你对后批阅的论文应用评分标准的方式是否与对先前批阅的论文相同。
 
-迁移效应 迁移效应错误发生在你对学生对第 1 题的回答的判断影响了你对该学生对第 2 题的回答的判断。例如，学生可能对第 1 题有精彩的回答，但对第 2 题的回答平平。迁移效应发生在你在批改第 1 题后立即批改第 2 题时发生：你因为从第 1 题“迁移”了有利印象而对第 2 题打分更有利。除非你使用以下评分建议，否则你分配给相邻问题的分数很可能更相似，而与学生答案的质量无关，相较于非相邻问题的分数。建议是这样：先为所有学生评分第 1 题，然后再回过头来为所有学生评分第 2 题，以此类推。
+#### 主题和提示的变化
+
+导致你的测评结果不一致的另一个因素是论文的主题。学生的分数可能相差很大，即使由同一阅卷者批改，也因为主题、提示或问题而异（Breland, Camp, Jones, Morris, & Rock, 1987; Dunbar, Koretz, & Hoover, 1991）。这是一个严重的问题：如果你的学生评估基于一个论文题，你将无法对该学生在不同主题上的表现做出一般性陈述。如果你对学生的陈述仅限于学生写的那一篇论文，你的整体评估（例如成绩）的效度就会降低。这是一个强有力的理由，要求将学生的评分期成绩基于整个评分期内收集的多次测评。这意味着，当然，你必须为评分期制定一个测评计划，确定你将使用哪些不同类型的测评格式。（参见第 6 章，了解如何制定测评计划。）
+
+#### 光环效应
+
+光环效应错误发生在你对一个人的一个特征的判断反映了你对其他特征的判断或你对该人的总体印象时。因此，你可能倾向于对你钦佩的学生写的某篇论文打分更宽松，因为你心里知道该学生掌握了目标或主题。光环效应也反向作用：你可能给不被你欣赏的学生写的某篇论文打更低的分数，因为你“心里知道”该学生并不擅长。为纠正这一缺陷的一种方法是仅在隐藏学生姓名后批改论文。
+
+#### 迁移效应
+
+迁移效应错误发生在你对学生对第 1 题的回答的判断影响了你对该学生对第 2 题的回答的判断。例如，学生可能对第 1 题有精彩的回答，但对第 2 题的回答平平。迁移效应发生在你在批改第 1 题后立即批改第 2 题时发生：你因为从第 1 题“迁移”了有利印象而对第 2 题打分更有利。除非你使用以下评分建议，否则你分配给相邻问题的分数很可能更相似，而与学生答案的质量无关，相较于非相邻问题的分数。建议是这样：先为所有学生评分第 1 题，然后再回过头来为所有学生评分第 2 题，以此类推。
 
 本章后面的许多建议都涉及提高评分论文的信度和效度。关于论文评分这些方面的研究综述可参见 Coffman（1971）；Hopkins, Stanley, and Hopkins（1990）；以及 Stalnaker（1951）。
 
-## 使用评分量规
+### 使用评分量规
 
 我们对论文评分的讨论侧重于提高你评分的客观性（从而提高信度）。评分论文有两种通用方法：分析法（也称为评分键、点或特征法）和整体法（也称为全局、排序或评级法）。分析评分量规要求你评估学生回应的特定维度、特征或要素。整体评分量规要求你对每个学生回应的整体质量做出判断。当你使用整体评分量规时，你不会对学生答案中包含的每个具体维度或内容要素进行标记。相反，你根据对回应质量的总体印象进行标记。在第 12 章我们讨论制作评分量规的更高级方法，我们的讨论更广泛，扩展到评分表现性测评。
 
 
 
-
-
-## 分析性评分量规
+# 分析性评分量规
 
 分析性评分量规要求你使用理想答案的大纲、学生应在理想答案中包含的主要要素清单，或几个定义明确的特征。俄勒冈州示例中所示的关于构想/内容维度的分析性评分量规仅针对一个特征。因此，它只是评分写作的分析性评分量规的一部分。全部六个特征的量规才构成写作的分析性评分量规。俄勒冈州写作评估的完整分析性评分量规见附录 H。
 
@@ -7239,21 +7511,21 @@ The writing process that follows is adapted from suggestions developed by the No
 
 题目：讨论在验证教育评估时识别各种决策情境的重要性。在你的讨论中比较选择、安置和分类决策。务必给出每种决策类型的具体例子来说明你的比较。
 
-## 评分回应的分析量规
+### 评分回应的分析量规
 
 - 1. 区分决策情境的原因（4 分）
 - 2. 选择决策
-  - a. 描述（2 分）
-  - b. 选择决策的例子（2 分）
+    - a. 描述（2 分）
+    - b. 选择决策的例子（2 分）
 - 3. 安置决策（2 分）
-  - a. 描述（2 分）
-  - b. 选择决策的例子（2 分）
+    - a. 描述（2 分）
+    - b. 选择决策的例子（2 分）
 - 4. 分类决策（2 分）
-  - a. 描述（2 分）
-  - b. 选择决策的例子（2 分）
+    - a. 描述（2 分）
+    - b. 选择决策的例子（2 分）
 - 5. 三种决策类型的比较（2 分）
-  - a. 相似之处（2 分）
-  - b. 差异（2 分）
+    - a. 相似之处（2 分）
+    - b. 差异（2 分）
 
 在此示例中，对某些答案要素授予 2 分或 4 分的决定基于教师的价值观，以及该内容对课程的重要性。在你的课堂上，你必须决定哪些要素对你的学习目标更重要，因此应为其授予更多分数。在为每个要素分配分数时，请确保总分与论文在评估计划中的总体分数值相对应。
 
@@ -7271,7 +7543,7 @@ The writing process that follows is adapted from suggestions developed by the No
 
 ## 示例
 
-## 一个整体评分量规
+### 一个整体评分量规
 
 题目：讨论在验证教育评估时识别各种决策情境的重要性。在你的讨论中比较选择、安置和分类决策。务必给出每种决策类型的具体例子来说明你的比较。
 
@@ -7279,20 +7551,20 @@ The writing process that follows is adapted from suggestions developed by the No
 
 定性标准 分数
 
-## 4 级 16–20
+#### 4 级 16–20
 
 - 在三种决策类型之间做出明确比较。
 - 包含支持每项决策所需的效度论证中的相似性和差异。
 - 给出每种不同决策的具体例子。
 - 给出对这些具体例子的效度论证所需的效度证据类型示例。
 
-## 3 级 11–15
+#### 3 级 11–15
 
 - 在三种决策类型之间做出明确比较。
 - 包含支持每项决策所需的效度论证中的相似性和差异。
 - 给出每种不同决策的一些具体例子，但没有详细说明它们如何适用于每种情况的效度论证的具体细节。
 
-## 2 级 6–10
+#### 2 级 6–10
 
 - 讨论效度及其必要性，但仅将其与每种决策类型弱相关联。
 - 描述三种决策类型并隐含地比较它们。
@@ -7300,7 +7572,7 @@ The writing process that follows is adapted from suggestions developed by the No
 - 使用教科书式的、不是很具体的描述和例子。
 - 指出效度很重要，但没有将效度与每种决策类型所需的证据不同需求联系起来。
 
-## 1 级 0–5
+#### 1 级 0–5
 
 - 描述三种决策类型中的一些或全部，但描述不正确和/或没有比较它们的相似性和差异。
 - 例子可能抽象和/或与决策不匹配。
@@ -7334,55 +7606,70 @@ The writing process that follows is adapted from suggestions developed by the No
 
 一些原则适用于无论使用哪种评分方法。这些原则总结在表 9.3 中。我们在以下段落中讨论它们。
 
-## 评分量规
+### 评分量规
 
 评分量规和模型答案与分析性和整体方法相关联。 使用这些工具的目的是提高你的评分一致性，以便你从一篇论文到另一篇论文应用相同的标准。一些州已采用你应使用的通用量规。检查你所在州网站上的要求。
 
-## 一次只评分一个问题
+### 一次只评分一个问题
 
 如果有多个论文问题，先对所有学生在第一个问题上进行评分，然后再进行下一个问题。这样做可以提高你对每个学生应用评分标准的一致性。它也使你更熟悉某个问题的评分指南，你不太可能被其他问题的回应分散注意力。最后，使用这种方法有助于减少前面讨论的迁移误差。你可以在评分每个问题后重新洗牌论文以进一步减少迁移误差。
 
-## 将学科正确性与其他因素分开评分
+### 将学科正确性与其他因素分开评分
 
 在批改学科论文时，除答案内容之外的因素往往会影响你的评价。其中这些因素包括拼写、笔迹、整洁度，
 
+## 表 9.2 整体评分量规与分析性评分量规的优缺点
 
+### I. 整体评分量规
 
+#### A. 优点
 
-
-# 表 9.2 整体评分量规与分析性评分量规的优缺点
-
-## I. 整体评分量规
-### A. 优点
 - 1. 与分析性量规相比，你可以稍微更快地给学生的论文评分。
 - 2. 它帮助你将论文视为一个整体来审视。
 
-### B. 缺点
-- 1. 你只给出一个总体分数，并不会指出可能帮助学生改进的细节。
-- 2. 你的个人偏见（例如偏爱整洁或拼写正确）和错误（对某位学生的论文中特定要素的正确性关注得比另一位学生更多）很容易被总体分数所掩盖。
+#### B. 缺点
+
+
+
+1. 你只给出一个总体分数，并不会指出可能帮助学生改进的细节。
+
+2. 你的个人偏见（例如偏爱整洁或拼写正确）和错误（对某位学生的论文中特定要素的正确性关注得比另一位学生更多）很容易被总体分数所掩盖。
 
 ## II. 分析性评分量规
+
 ### A. 优点
-- 1. 通过分别对每个要素进行评分，你可以向学生反馈他们的优势和弱点。
-- 2. 通过分别对每个部分进行评分，你可以查看所有论文，看看哪些要素给学生带来了最大困难，因此需要重新教授。
-- 3. 通过对答案的某些要素赋予比其他要素更大的权重，你必须正视自己的价值观（即你必须决定哪些要素比其他要素更重要）。
+
+1. 通过分别对每个要素进行评分，你可以向学生反馈他们的优势和弱点。
+
+2. 通过分别对每个部分进行评分，你可以查看所有论文，看看哪些要素给学生带来了最大困难，因此需要重新教授。
+
+3. 通过对答案的某些要素赋予比其他要素更大的权重，你必须正视自己的价值观（即你必须决定哪些要素比其他要素更重要）。
 
 ### B. 缺点
-- 1. 使用分析性评分量规时，你的评分会稍微慢一些。
-- 2. 对于某些作文，你可能会发现很难在评分指南中提出明确定义的要素。
-- 3. 初任教师可能会因创建有用的分析性评分量规所需的时间而感到有些沮丧。
+
+1. 使用分析性评分量规时，你的评分会稍微慢一些。
+
+2. 对于某些作文，你可能会发现很难在评分指南中提出明确定义的要素。
+
+3. 初任教师可能会因创建有用的分析性评分量规所需的时间而感到有些沮丧。
 
 > 来源：改编自《Creating Writers: Linking Assessment and Writing Instruction》第2版（第29–36页）作者 V. Spandel 和 R. J. Stiggins，1990年，纽约：Longman。版权 1997、1990 归 Longman Publishers USA 所有。经 Addison-Wesley Educational Publishers Inc. 许可改编。
 
-# 表 9.3 对学科论文题作答评分原则的总结
+## 表 9.3 对学科论文题作答评分原则的总结
 
-- 1. 准备某种类型的评分指南（例如，大纲、量规、“理想”答案，或往年考试的“样例”回答）。
-- 2. 在转到下一个问题之前，先对所有对一个问题的回答进行评分。
-- 3. 定期重新评分已评分的论文。
-- 4. 将笔迹、整体整洁度、拼写、规定格式的使用和英语 mechanics 与学科内容正确性分开评分。
-- 5. 在不知道写答卷的学生姓名的情况下评分。
-- 6. 向学生提供其回答的优势和弱点的反馈。
-- 7. 当评分决定至关重要时，让两位或两位以上的阅卷者独立评分。
+1. 准备某种类型的评分指南（例如，大纲、量规、“理想”答案，或往年考试的“样例”回答）。
+
+2. 在转到下一个问题之前，先对所有对一个问题的回答进行评分。
+
+3. 定期重新评分已评分的论文。
+
+4. 将笔迹、整体整洁度、拼写、规定格式的使用和英语 mechanics 与学科内容正确性分开评分。
+
+5. 在不知道写答卷的学生姓名的情况下评分。
+
+6. 向学生提供其回答的优势和弱点的反馈。
+
+7. 当评分决定至关重要时，让两位或两位以上的阅卷者独立评分。
 
 > 来源：Coffman, 1971; Ebel, 1979; Greene, Jorgensen, & Gerberich, 1942; Gronlund, 1976; Hopkins, Stanley, & Hopkins, 1990; Lindvall & Nitko, 1975; Mehrens & Lehmann, 1991; Sax, 1989; Stainaker, 1951; Thorndike, Cunningham, Thorndike, & Hagen, 1991.
 
@@ -7394,15 +7681,23 @@ The writing process that follows is adapted from suggestions developed by the No
 
 给学生反馈 使用作文的一个重要原因是它给了你评估学生表达能力和思维过程的机会。你应该记录每位学生在这些方面的优势和弱点，并解释你是如何得出所给分数的。这样，作文评估就为进一步的学生学习提供了机会。以下列表提供了在你的关注点是教授一般写作技能时，对学生作文进行评注的建议。这些建议也适用于学科论文题。
 
-- 1. 在任何一篇论文中只评论两三个要点。
-- 2. 选择对特定学生在特定时间最重要的问题进行评论。
-- 3. 以可用的形式总结评论。
-- 4. 仅在对整篇论文进行快速分析后才开始写评论。
-- 5. 选择那些最有可能在学生下一篇文章的内在有效性方面带来最大评估改进的评论。
-- 6. 以鼓励的方式陈述评论。
-- 7. 不要犹豫在多篇论文中重复同一评论。
-- 8. 跟踪评论，以便在课程中不会遗漏对特定学生而言非常重要的内容。
-- 9. 通过评论的语气明确表明它们涉及的是需要学习的手艺，而不是教师的个人品味。（Hirsch, 1977, pp. 160–161）
+1. 在任何一篇论文中只评论两三个要点。
+
+2. 选择对特定学生在特定时间最重要的问题进行评论。
+
+3. 以可用的形式总结评论。
+
+4. 仅在对整篇论文进行快速分析后才开始写评论。
+
+5. 选择那些最有可能在学生下一篇文章的内在有效性方面带来最大评估改进的评论。
+
+6. 以鼓励的方式陈述评论。
+
+7. 不要犹豫在多篇论文中重复同一评论。
+
+8. 跟踪评论，以便在课程中不会遗漏对特定学生而言非常重要的内容。
+
+9. 通过评论的语气明确表明它们涉及的是需要学习的手艺，而不是教师的个人品味。（Hirsch, 1977, pp. 160–161）
 
 另一种提供反馈的建议是举行学生会议——即与每位学生单独会面，回顾答案和评论。与每位学生进行10到20分钟的简短会议更具个人性，并且可以为学生提供比在论文边际写下评论更清晰的指导。与每位学生进行简短的直接会议也可能为你节省大量撰写大量笔记和评论以澄清学生疑问的时间。
 
@@ -7419,60 +7714,87 @@ The writing process that follows is adapted from suggestions developed by the No
 ## 作文题的格式
 
 - 作文题要求学生对一个问题或问题写出相当长的回答。
+
 - 限制性回答作文限制或限定了书面回答的实质内容和形式。
 
 扩展性回答作文允许学生更充分地利用书面言语推理和写作技能，包括对实质性问题的答案进行充分阐述。
 
 客观题、限制性回答作文和扩展性回答作文可以评估的不同学习成果的总结见表 9.1。
 
-## 限制性回答格式：
+### 限制性回答格式：
 
 - 应用于衡量各种复杂的学习成果。
+
 - 将题目焦点缩小到更具体的內容和明确定义的情境。
+
 - 可用作情境依赖或解释性练习。
+
 - 很可能导致几乎所有学生以基本相同的方式理解题目的意图。
+
 - 比扩展性回答格式更可靠地评分。
 
-## 扩展性回答格式：
+### 扩展性回答格式：
 
 - 应用于衡量更复杂的各种学习目标。
+
 - 应用于评估关于学科的写作能力或学生的一般写作能力。
+
 - 具有独特的特征，允许学生展示书面产出、组织和表达思想以及这些能力之间相互关系所需的技能。
+
 - 不应用于引出对不同提示和内容的低层次反应。
+
 - 对于评估写作成绩，尤其是形成性目的，让学生在同一文体中选择写作主题通常是可取的。通常，这意味着为所有学生制作一个单一文体的提示，但让他们自行选择如何回应。
-
-
-
-
 
 ## 构建用于评估写作成绩的提示
 
 - 有效的写作教学要求评估是形成性的，并且高度融入教学中。
+
 - 评估和教学要求你集中关注优秀写作的特征或特质，如思想与内容、组织、声音、词语选择、句子流畅度以及英语 mechanics。章节给出了这些特质的若干示例。附录 H 展示了如何详细定义它们。
+
 - 写作评估主要被视为形成性的，在写作的每个阶段提供不同类型的反馈。章节中给出了一个与评估整合的写作过程示例。
+
 - 当你设计写作提示时，应确保每个提示都包含足够的修辞线索，以便学生理解你希望他们写什么。其中应包含的修辞线索包括 SOAP（主题、场合、受众、目的）、作者角色和形式。
+
 - 章节提供了准备写作提示的若干 dos 和 don'ts。
+
 - 提示应为不同体裁和写作目的而设计，以便满足写作课程中的所有学习目标。常见的体裁包括叙事、想象、说明性和说服性写作。
 
 ## 评分作文评估
 
 - 评分作文所涉及的主观性对分数的可靠性和有效性构成了严重威胁：
+
   - 特定阅卷者可能不一致。
+
   - 同一学生的分数在阅卷者之间往往存在很大差异。
+
   - 问题的类型和主题会影响阅卷者的评分。
+
   - 光环效应、延续效应、夸大、笔迹、拼写和语法都会影响评分。
+
 - 学科类作文题可以采用分析性或整体性评分。你应使用的方法取决于你提出的作文题的性质。提供了每种评分类型的示例。表 9.2 总结了每种方法的优缺点。
+
 - 表 9.3 总结了评分作文题的建议，适用于分析性或整体性评分。
+
 - 提出了对学生作文和作品进行评语的建议。
+
 - 你可以使用整体性或分析性评分量规来评估一般的写作技能。表 9.2 总结了每种量规的优缺点。
+
 - 分析性评分量规有助于你评估学生写作的特定方面。因此，当你想要诊断学习需求并将教学重点放在这些需求上时，它们似乎很有用。
+
 - 你采用的任何分析性评分量规都应包含以下特质：（a）具有良好的教育意义，（b）适用于广泛的写作表现，（c）可以轻松教授给学生。
 
 ## 重要术语和概念
 
 - analytic scoring rubric
+
 - annotated holistic rubric
+
 - assessing subject-matter knowledge
+
+
+
+# 术语列表
+
 - assessing general writing ability
 - assessment of simple recall
 - assessment of higher-order essay items
@@ -7496,69 +7818,96 @@ The writing process that follows is adapted from suggestions developed by the No
 ## 练习与应用
 
 - 1. 对于你教授的每门学科（或计划教授的学科），确定可以伴随情境依赖性题目的不同类型的材料。
-  a. 对于每种类型，说明其 intended 的学生教育水平。
+
+  a. 对于每种类型，说明其 `intended` 的学生教育水平。
+
   b. 对于每道构成科学单元测试的作文题。在每道题后提供了教师提供的标准答案和 Jane Smith 的答案。你需要做两件事：首先，确定每道题的最高分（分数）。（整份测试的最高分为 50 分，因此你需要根据认为适当的方式在四道题之间分配。）其次，根据答案要点评估 Jane Smith 的答案，并根据其正确程度给予她分数。
 
-## Question 1
+### Question 1
 
 What is the shape of a quartz crystal?
+
 Answer key: Hexagonal
+
 Maximum marks: ______
+
 Jane’s answer: “Six-sided hectogon.”
+
 Jane’s score: ______
 
-## Question 2
+### Question 2
 
 What is a saturated solution?
+
 Answer key: A solution that contains as much dissolved substance as it can for a particular temperature.
+
 Maximum marks: ______
+
 Jane’s answer: “Large crystals contain a great deal of substance that has been formed. This process of forming crystals is called crystallization. It occurs both in the laboratory and in nature.”
+
 Jane’s score: ______
 
-## Question 3
+### Question 3
 
 Write a paragraph describing how you can grow very large crystals.
+
 Answer key: Any answer that says size of crystal is directly related to the rate of crystallization.
+
 Maximum marks: ______
+
 Jane’s answer: “Large crystals contain a great deal of substance that has been formed. This process of forming crystals is called crystallization. It occurs both in the laboratory and in nature.”
+
 Jane’s score: ______
 
-## Question 4
+### Question 4
 
 Name three major categories of rocks.
+
 Answer key: Igneous, sedimentary, and metamorphic
+
 Maximum marks: ______
+
 Jane’s answer: “The three kinds are fire-formed, settled, and those that have changed their form.”
+
 Jane’s score: ______
 
 5. 本练习应在课堂上完成。
+
 a. 将你在练习 4 中为每道题分配的最高分与本课程其他人分配的分数进行比较。（将最高分的分布写在黑板上。）对于哪些问题有更多的一致性？对于哪些问题一致性较少？
+
 b. 在课堂上讨论一致和不一致的原因。列出似乎影响同学为每道题分配最高值的因素。
+
 c. 提出减少分配问题最高值时人员之间差异的方法。确保建议针对这四道题具体。
+
 d. 将你给 Jane 的每道题分数与本课程其他人给出的分数进行比较。对于哪些题目有更多的一致性？对于哪些题目一致性较少？
+
 e. 在课堂上讨论评分一致和不一致的原因。列出似乎影响为 Jane 每道题分配分数的因素。
+
 f. 评分 Jane 回答时一致性更高的问题，是否与最高分一致性更高的问题相同？解释。
 
 ## 附加阅读
 
 Coffman, W. E. (1971). Essay examinations. In R. L. Thorndike (Ed.), Educational measurement (2nd ed.). Washington, DC: American Council on Education. Chapter 10, 271–302.
+
 Reviews early research on essay items. Gives suggestions for improving the essay examination process.
 
 Gentile, C. (1992). Exploring new methods for collecting students’ school-based writing: NAEP’s 1990 portfolio study (Ch. 2, pp. 18–61). Washington, DC: Education Information Branch, Office of Educational Research and Improvement, U.S. Department of Education.
+
 This chapter describes three scoring guides for assessing writing: narrative, informative, and persuasive. Examples of student writing (in student penmanship) are presented to illustrate how each scoring guide is used.
 
-Northwest Regional Educational Laboratory. Toolkit98. Available online from the Northwest Regional Educational Laboratory at http://www.nwrel.org/assessment/toolkit98.asp.
+Northwest Regional Educational Laboratory. Toolkit98. Available online from the Northwest Regional Educational Laboratory at `http://www.nwrel.org/assessment/toolkit98.asp`.
+
 A large set of workshop material about alternative assessments including detailed explanations of the Six Traits® analytic scoring rubric. Gives examples of how to use the rubric to score students’ writing and how to integrate assessment results into your daily teaching. Contains links to other sites that have examples, lesson plans, and teaching tips for using the Six + 1 Traits® model.
 
-Oregon Public Education Network. Practice scoring! Available from the Oregon Department of Education, Salem, OR online at http://www.open.k12.or.us/scoring.
+Oregon Public Education Network. Practice scoring! Available from the Oregon Department of Education, Salem, OR online at `http://www.open.k12.or.us/scoring`.
+
+
+
 This is an interactive site where you read sample student papers, apply the scoring rubrics, and compare your results with teachers who have scored these papers before. Contains some teaching tips, too.
 
 Wittrock, M. C., & Baker, E. L. (Eds.), (1991) Testing and cognition. Englewood Cliffs, NJ: Prentice Hall.
+
 A number of chapters relate to issues in using constructed-response tasks to assess cognitive achievement.
-
-
-
-
 
 ## 高阶思维、问题解决与批判性思维
 
@@ -7608,19 +7957,24 @@ A number of chapters relate to issues in using constructed-response tasks to ass
 
 ## 情境依赖性题组
 
-## 特点
+### 特点
 
 情境依赖性题组由介绍性材料和若干题目组成。你设计题目，使学生必须思考并使用介绍性材料中的信息来回答问题、解决难题或以其他方式完成评估任务。情境依赖性题组有时称为解释性练习。介绍性材料可能是阅读材料摘录、图片、图表、绘图、段落、诗歌、公式、数字表、单词或符号列表、标本、地图、影片和录音。如果你想评估本章所述类型的学生高阶思维技能，你需要使用情境依赖性题组。以下是一个例子。
 
-## 示例
+### 示例
 
 下面是词典的一部分。利用它回答问题1、2和3。
 
 ru-bli-ous (roo’bē əs) adj. Of the color of a ruby : red.
+
 ru-ble (rōo’bə) n. var. of ROUBLE.
+
 ru-bric (roo’brik) n. [ME rubrice < OFr. rubriche < Lat. rubrica, rubric, red chalk < ruber, red.] 1. A part of a manuscript or book, as a heading, title, or initial letter, that appears in decorative red lettering or is otherwise distinguished from the rest of the text. 2. A title or heading of a statute or chapter in a code of law. 3. a. A class or category. b. A title : name. 4. A direction in a liturgical book, as a missal or hymnal. 5. An authoritative direction or rule. 6. A short commentary or explanation covering a broad subject. 7. Red ocher.—adj., 1. Red or reddish. 2. Written in red.—ru’bri-cal adj.
+
 ru-bri-cate (roo’bri-kāt’) vt. -cat, ed, -cat-ing, -cates. [Lat. rubricare, rubricat-, to color red < rubric, rubric.] 1. To write, arrange, or print as a rubric. 2. To provide with rubrics. 3. To establish rules for.—ru’bri-ca’tion n.—ru’bri-ca’tor n.
+
 ru-bri-cian (roo’bri-shən) n. One learned in the rubrics of ecclesiastical ritual.
+
 ru-by (roo’bē) n., pl. -bies [ME < OFr. rubi < Med. Lat. rubinus (lapis), red (stone) < Lat. rubeus, red.] 1. A deep-red translucent corundum highly valued as a precious stone. 2. Something, as a watch bearing, made from a ruby. 3. A dark or deep red to deep purplish red.—adj. Of the color of ruby.
 
 > Source: Copyright © 1994 by Houghton Mifflin Company. Reproduced by permission from Webster’s II Riverside University Dictionary.
@@ -7630,18 +7984,20 @@ ru-by (roo’bē) n., pl. -bies [ME < OFr. rubi < Med. Lat. rubinus (lapis), red
   + *B oo in boot
   + C u in lunch
   + D oo in cook
-  
+
 - 2. Which meaning of rubric is used in the following sentence: "Our teacher told us to use the rubric when we mark our papers."
   + A 1
   + B 4
   + *C 5
   + D 6
-  
+
 - 3. What part of speech is the word rubrication?
   + A adjective
   + B adverb
   + *C noun
   + D transitive verb
+
+
 
 在这个例子中，解释性材料是词典摘录。该摘录“模拟”了词典页面，因此呈现了一个具体、现实的例子。学生必须分析或处理此例中的材料来回答问题。该示例显示了多项选择题。然而，情境依赖性题组可与任何类型的题目格式一起使用。
 
@@ -7655,7 +8011,7 @@ ru-by (roo’bē) n., pl. -bies [ME < OFr. rubi < Med. Lat. rubinus (lapis), red
 
 情境依赖性材料在测验手册页面上的排列方式很重要，因为不良的排列可能导致学生误读或误解题组。因此，不良的排列会危及你的评估结果的有效性。下一个示例显示了一种可接受的排列。
 
-## 示例
+### 示例
 
 情境依赖性题组的排列
 
@@ -7671,29 +8027,25 @@ ru-by (roo’bē) n., pl. -bies [ME < OFr. rubi < Med. Lat. rubinus (lapis), red
 
 ## 概念与概念学习
 
-## 什么是概念？
+### 什么是概念？
 
 概念是相似事物（对象、人物、事件或关系）的类别或分类。你教授的许多东西都是概念。学生对概念的理解构成了他们高阶学习的基础。例如，当我们谈论概念 red 时，我们指的是具有相似颜色的物体类别。如果学生 (a) 能识别 red 事物的例子或实例（红色三轮车、红色书、红色口红等）并且 (b) 不将非红色事物（绿色三轮车、紫色书、粉色口红等）称为红色，则认为学生已学习了概念 red。概念是思想或抽象：世界上只存在概念的具体例子。概念类别的各个成员称为实例、例子或范例。
 
-### 具体与定义概念
-
-
-
-
+#### 具体与定义概念
 
 other concepts. Defined concepts are sometimes called abstract or relational concepts (Gagné, 1970). Defined concepts are usually learned by definitions. Gagné gives an example of the defined concept diagonal, which is defined as a line connecting the opposite corners of a quadrilateral figure. The relationship is “connecting.” The related concepts are “opposite corners,” “quadrilateral figure,” and “line.” Other examples of defined concepts include beside, friendliness, uncle, and mother. Some concepts are learned initially as concrete concepts and later as defined concepts.
 
-## 理解概念
+### 理解概念
 
 理解概念不仅仅是简单地识别它的例子。概念彼此相关，并通过图式或网络以复杂的方式相互联系。图式是我们通过相互连接的概念、信息、规则、问题解决策略和行动条件网络在头脑中表示知识的方式（Marshall, 1990）。例如，Woolfolk（1995）指出，我们知道假钱不是真钱，即使它符合货币概念的原型和例子。我们知道它是假钱，因为我们将货币概念与其他概念联系起来，例如印刷货币的权威、犯罪、伪造等概念。你需要在学生能够完全理解这些概念之前帮助他们将概念连接到他们已有的知识网络和图式中。Woolfolk（1995）总结了教授概念的推荐教学结构。
 
 ## 评估具体概念学习
 
-## 三种评估策略
+### 三种评估策略
 
 三种常用的策略可以评估学生是否学习了具体概念。策略1是给出名称：你在向学生展示其不同例证后要求其说出概念的名称。以下是评估学生是否学习了形状圆的例子。
 
-## 示例
+#### 示例
 
 策略1. 给出名称：学生看到例证后给出概念名称
 
@@ -7703,7 +8055,7 @@ other concepts. Defined concepts are sometimes called abstract or relational con
 
 策略2是区分例证与非例证：你向学生展示目标概念的几个例证和几个非例证，所有内容按混乱顺序排列，提供目标概念的名称，并要求学生识别哪些是该概念的例证。以下是评估学生是否学习了概念圆的例子。
 
-## 示例
+#### 示例
 
 策略2. 区分例证与非例证：学生必须将概念例证与非例证区分开
 
@@ -7713,13 +8065,13 @@ other concepts. Defined concepts are sometimes called abstract or relational con
 
 策略3是产生新例证：你在告诉学生概念名称后要求其产生新的例证。以下是针对概念圆的第三种策略的例子。
 
-## 示例
+#### 示例
 
 策略3. 产生新例证：学生在给出概念名称时产生自己的例证
 
 3. 画三个圆。确保每个都与其他不同。
 
-### 对三种策略的批评
+#### 对三种策略的批评
 
 给出名称策略1通常是评估概念学习不令人满意的方式。学生可能学习了概念并且能够使用它，而无需学习概念的正确名称。给出名称评估策略不需要学生区分例证与非例证，因此你不知道学生是否过度概括了概念。例如，学生可能认为所有边缘呈圆形的形状都是圆。因此，学生可能会将圆与椭圆（卵形）和球体（球）混淆。最后，这种评估策略不需要学生使用或应用其对概念的理解。因此，即使学生能够说出概念名称，你也不知道她是否具有将概念与其他概念联系起来并将其整合到其图式中所需的更深层次的理解。
 
@@ -7727,11 +8079,11 @@ other concepts. Defined concepts are sometimes called abstract or relational con
 
 产生新例证策略3要求（a）学生想出例子，（b）你判断例子的正确性，以及（c）你判断学生的例子是否被明确教授（即它们是否“新”；见 Jenkins & Deno, 1971）。请记住，然而，学生产生新例子的能力可能不是学习概念的必要条件。因此，虽然这种策略可能有助于评估简单概念（如圆），但它不适用于更复杂概念的评估，因为它不允许你评估学生的更深层次理解。
 
-## 在更深层次评估概念理解
+### 在更深层次评估概念理解
 
 我们在上一节看到，所有三种常用的策略都有一些弱点。它们都未评估学生对概念的更深层次理解。然而，学生在用于进一步学习和进行高阶思维之前需要更深层次的理解。在本节中，我们讨论一种评估概念更深层次理解的更好策略。
 
-## 用于更深层次理解的表现性评估
+#### 用于更深层次理解的表现性评估
 
 学生通过能够（a）使用概念解决问题，（b）将概念与其他概念、原理（规则）和已学到的概括联系起来，以及（c）使用概念学习新材料来展示其更深层次的理解。为了评估学生的更深层次理解，你必须设计更复杂且需要比前述题目更大量概念应用的评估。以下示例显示，即使对于简单的具体概念，也有可能进行这种更深层次的评估。
 
@@ -7743,29 +8095,30 @@ other concepts. Defined concepts are sometimes called abstract or relational con
 
 开始之前我会向你展示一些图画的例子，解释我会寻找什么，以及我对你的回答的期望。
 
+
+
 Source: Adapted from Assessing Student Outcomes: Performance Assessment Using the Dimensions of Learning Model (pp. 61–62), by R. J. Marana, D. Pickering, and J. McTighe, 1993, Alexandria, VA: Association for Supervision and Curriculum Development. Reproduced with permission of McREL Institute, 2550 S. Parker Rd., Suite 500, Aurora, CO, 80014. Telephone (303) 337-0990. © 1993 by McREL Institute. All rights reserved.
 
 该示例显示了一种表现性任务，意味着学生必须对自己的知识做些什么（参见第11章和第12章，完整讨论表现性评估）。此评估可用于评估以下学习：
 
 - I. 内容目标（组合）
-- A. 理解世界中形状的重要性
-- B. 识别圆和正方形
-- C. 将圆和正方形与其他形状区分开
+  - A. 理解世界中形状的重要性
+  - B. 识别圆和正方形
+  - C. 将圆和正方形与其他形状区分开
 - II. 复杂思维目标（解决问题）
-- A. 识别阻碍你解决问题的事情
+  - A. 识别阻碍你解决问题的事情
 - III. 信息处理目标
-- A. 有效地解释和综合信息
+  - A. 有效地解释和综合信息
 - IV. 有效沟通目标
-- A. 有效地传达思想
+  - A. 有效地传达思想
 
-此示例中的评估需要相对较长时间来实施，可能需要两个或三个40分钟的数学课时。主要表现是：制作一幅包含建筑物、汽车和人物的社区图画，但不使用圆和正方形。此图画提出了一个需要解决的问题：如何在不使用圆和正方形的情况下制作建筑物、汽车和人物？对于一年级学生来说这是一个困难的问题，因为圆和正方形是构成学生大部分经验的基本形状。学生
+此示例中的评估需要相对较长时间来实施，可能需要两个或三个40分钟的数学课时。主要表现是：制作一幅包含建筑物、汽车和人物的社区图画，但不使用圆和正方形。此图画提出了一个需要解决的问题：如何在不使用圆和正方形的情况下制作建筑物、汽车和人物？对于一年级学生来说这是一个困难的问题，因为圆和正方形是构成学生大部分经验的基本形状。
 
-示例
-策略4. 更深层次的理解：一种评估概念理解更深层次的表现性评估
+### 示例
+
+**策略4. 更深层次的理解：一种评估概念理解更深层次的表现性评估**
 
 教师口头解释任务
-
-
 
 必须区分圆形、正方形和其他形状才能解决这个问题。注意，评估要求你做的不仅仅是收集绘画。你必须与每位学生进行访谈或会议，使用绘画来提示或引导学生提供有关学习目标达成情况的信息。
 
@@ -7803,7 +8156,7 @@ Source: Adapted from Assessing Student Outcomes: Performance Assessment Using th
 - 2 在解释解决绘画问题的物体形状信息时出现重大错误，或综合信息不精确或笨拙。
 - 1 对为绘画问题收集的物体形状信息进行严重误解或未能综合。
 
-### 以数学正确的方式表达关于圆形和正方形是现实世界物体基本元素的想法。
+### 以数学正确的方式表达关于圆形和正方形是现实世界物体基本元素的想法
 
 - 4 清晰传达关于圆形和正方形作为现实世界形状基本元素的核心思想。提供的观点支持包含丰富、生动而有力的细节。以数学正确的方式使用形状术语。
 - 3 清晰传达圆形和形状是构成现实世界物体的基本形状的核心思想，并提供适当的支持。
@@ -7822,29 +8175,31 @@ Source: Adapted from Assessing Student Outcomes: Performance Assessment Using th
 
 四种策略可以帮助评估学生对抽象或定义概念的学习。策略 1 要求学生对概念做出正确定义（Jenkins & Deno, 1971）。这里有一个例子：
 
-## 示例
+### 示例
 
-策略 1：要求学生提供定义
+**策略 1：要求学生提供定义**
 
 - 1. 用你自己的话定义偏见行为。
 - 2. 说明“孤独”是什么意思。
 
 策略 2 要求学生提供概念的新颖或新例子（Jenkins & Deno, 1971）。这是一个例子：
 
-## 示例
+### 示例
 
-策略 2：要求学生提供例子
+**策略 2：要求学生提供例子**
 
 - 3. 描述两个在课堂或课本中未讨论过的偏见行为的例子，但你是在过去几周亲眼目睹或经历过的。
 
 策略 3 要求学生识别概念的典型例和非典型例（Jenkins & Deno, 1971）。下面是一个例子。
 
-## 示例
+### 示例
 
-策略 3：要求学生区分典型例和非典型例
+**策略 3：要求学生区分典型例和非典型例**
 
 说明：阅读每个编号的陈述。在陈述前标记：
+
 P—如果它最有可能是偏见行为的例子。
+
 NP—如果它最可能不是偏见行为的例子。
 
 - (NP) 4. 萨姆，一名白人男子，在公司食堂被一名非裔美国收银员多收了钱。他变得很生气，并在之后两周拒绝与收银员交谈。
@@ -7853,34 +8208,40 @@ NP—如果它最可能不是偏见行为的例子。
 - (NP) 7. 比尔，一名职业高尔夫球手，声称在他职业生涯中，没有一个与他竞争的女性曾打败过他。
 
 8. 哪项陈述最接近描述“孤独”的概念？
+
 A 十岁的麦根今天决定独自玩她的娃娃屋，即使她的朋友们邀请她一起玩。
+
 B 教授科里每天早上都关上办公室门，独自一人写研究报告。
+
 *C 十五岁的玛雅在拥挤的学校食堂的每个午餐时间都独自站着，不与任何人说话。
+
 D 克拉丽丝，一名隐修修女，不与任何人交谈，在祈祷时独自度过许多小时。
 
 策略 4 要求学生分析定义概念以识别其组成部分概念并说明它们之间的关系（Gagné & Briggs, 1979）。这是一个例子：
 
-## 示例
+### 示例
 
-策略 4：要求学生识别组成部分并展示关系
+**策略 4：要求学生识别组成部分并展示关系**
+
 （为节省篇幅省略了地球上有人物的图片）
 
 9. 在上面的图片中，画出线条和角度以显示天顶相对于人的位置。标记角度和天顶。
+
 来源：项目 9 基于 Gagné & Briggs, 1979, p. 227 的思想。
 
 在四种策略中，策略 1 要求学生提供定义，策略 2 要求学生提供概念的新典型例，是较弱的策略，可能不适合年幼的学生（Nitko, 1983）。策略 3 要求学生区分典型例和非典型例，策略 4 要求学生识别组成部分并展示关系，是较强的策略。它们的主要优势在于要求学生识别新典型例，确保他们不会仅用死记硬背的定义来回答。项目 9（策略 4）的表现（绘画和标记）方面具有额外优势，不完全依赖高度发展的语言技能。（有关更多细节，请参阅 Nitko, 1983。）
 
 ## 语言项目评估某些定义概念的局限性
 
-你不能使用前面示例中显示的项目类型来评估学生对某些概念的理解
-
-
+你不能使用前面示例中显示的项目类型来评估学生对某些概念的理解。
 
 示例。以下两种概念分别是 (a) 关系性概念（例如，叔叔、阿姨）和 (b) 其例证只能通过重复概念名称来用语言描述的概念（Anderson, 1972）。阿姨是母亲或父亲的姐妹。如果你试图写出“阿姨”的一个“实例”，你需要在选项中提及这种关系。
 
 概念 wings 是第二种类型概念的例子（Anderson, 1972）。你写的每个例证都必须包含单词 wings（飞机翅膀、鸟翅膀、天使翅膀等），因此测试题可以通过将题干中的一个词与选项中的一个词进行匹配来作答。然而，你可以通过示例中显示的类型项目来评估诸如 tools 这样的概念，因为 tools 的实例（螺丝刀、扳手、锯子）可以在不重复术语 tool 的情况下写出。
 
 ## 评估学生的思维是否使用规则
+
+
 
 学习的重要另一个领域是规则支配或原则支配的项目提供了学生被要求 (a) 识别或推断适用的原则、(b) 应用原则推断可能的结果，以及 (c) 使用原则写出适当的解释以证明所述结果的合理性的情境。请注意，该项目要求学生具备超出回忆原则和识别的知识。要正确回答该项目，学生不仅需要知道原则，还需要对地理有足够的了解，能够列出两个或更多与“中西部平原”相似的“地理位置”。此外，通常的标准要求学生使用新的例子。
 
@@ -7898,6 +8259,7 @@ D 克拉丽丝，一名隐修修女，不与任何人交谈，在祈祷时独自
 策略 3：仅产生解释
 
 在回答第 3 题时使用以下信息。
+
 在最近一次参观教室时，Larson 校长注意到 Hewmenist 老师在与一名儿童 Dizzy Ordur 合作时遇到困难。只要 Hewmenist 老师在他身边，Dizzy 就会工作，但只要她离开，Dizzy 就会“出声”或离开座位，她不得不返回才能让他重新工作。Larson 校长在前 10 分钟内观察到这种情况一次，在第二个 10 分钟内三次，在第三个 10 分钟内四次。
 
 - 3. 你认为 Hewmenist 老师为什么会与 Dizzy Ordur 如此困难？
@@ -7913,14 +8275,11 @@ D 克拉丽丝，一名隐修修女，不与任何人交谈，在祈祷时独自
 策略 4：基于原则应用识别结论
 
 在回答第 4 题时使用以下信息。
+
 一名研究人员从三个社会经济水平（SES）中随机抽取儿童样本：上层、中层和下层。他通过访谈和观察确定了每个水平儿童参与攻击行为（打架）的频率。他发现低 SES 儿童的攻击性显著高于中上层 SES 儿童，而中层 SES 儿童表现出比上层 SES 儿童显著更多的攻击行为。
 
 - 4. 根据这项研究的结果，以下哪个结论最有效？
 - A SES 影响攻击性。
-
-
-
-
 
 ## 问题解决
 
@@ -7981,11 +8340,17 @@ B 将来自低社会经济地位环境的儿童置于高社会经济地位环境
 
 ## 一般性与学科特定性问题解决
 
-能力与可推广性争议认知科学家、心理学家和教育工作者之间仍然存在争议，关于我们是否应该教学生一般性或特定于每个课程领域的问题解决策略——例如特定于数学、历史或艺术的策略。解决课程特定问题的策略在不同学科间的适用性较低，但在特定课程内的能力更强；一般方法适用于每个课程领域，但在其特定课程内的能力有限 （Marzano et al., 1988）。
 
-看起来人们实际上同时使用一般性和特定性策略 （Alexander, 1992; Perkins & Salomon, 1989; Shuell, 1990）。在某一领域工作且拥有大量知识和专业知识的人会应用众所周知的问题解决策略来解决特定于其领域的特定问题。然而，如果他们在专业知识领域之外工作，特定策略不再适用：他们随后会求助于更一般的问题解决策略。然而，随着他们在最初不熟悉的领域中发展专业知识，一般策略会被更具领域特定的策略所取代。
 
-IDEAL 问题解决者一般问题解决技能可以组织成 Bransford 和 Stein （1984） 所称的 IDEAL 问题解决者的五阶段过程：
+能力与可推广性争议
+
+认知科学家、心理学家和教育工作者之间仍然存在争议，关于我们是否应该教学生一般性或特定于每个课程领域的问题解决策略——例如特定于数学、历史或艺术的策略。解决课程特定问题的策略在不同学科间的适用性较低，但在特定课程内的能力更强；一般方法适用于每个课程领域，但在其特定课程内的能力有限（Marzano et al., 1988）。
+
+看起来人们实际上同时使用一般性和特定性策略（Alexander, 1992; Perkins & Salomon, 1989; Shuell, 1990）。在某一领域工作且拥有大量知识和专业知识的人会应用众所周知的问题解决策略来解决特定于其领域的特定问题。然而，如果他们在专业知识领域之外工作，特定策略不再适用：他们随后会求助于更一般的问题解决策略。然而，随着他们在最初不熟悉的领域中发展专业知识，一般策略会被更具领域特定的策略所取代。
+
+## IDEAL 问题解决者
+
+一般问题解决技能可以组织成 Bransford 和 Stein（1984）所称的 IDEAL 问题解决者的五阶段过程：
 
 - I 识别问题
 - D 定义和表征问题
@@ -7997,40 +8362,41 @@ IDEAL 问题解决者一般问题解决技能可以组织成 Bransford 和 Stein
 
 ## 解决问题的启发式方法
 
-特定领域的知识型问题解决方法的解决方案策略比本节建议的一般方法更好 （Anderson, 1987; Royer, Cisero, & Carlo, 1993）。尽管如此，当学生没有基于知识的策略时，应尝试启发式方法。启发式是一种一般问题解决策略，可能有助于解决给定问题。以下是 10 种问题解决启发式方法列表 （Cyert, 1980; Frederiksen, 1984）：
+特定领域的知识型问题解决方法的解决方案策略比本节建议的一般方法更好（Anderson, 1987; Royer, Cisero, & Carlo, 1993）。尽管如此，当学生没有基于知识的策略时，应尝试启发式方法。启发式是一种一般问题解决策略，可能有助于解决给定问题。以下是 10 种问题解决启发式方法列表（Cyert, 1980; Frederiksen, 1984）：
 
 - 1. 尝试看整体；不要只关注细节。
 - 2. 保留你的判断；不要过快急于得出解决方案。
-
-
-
-
-
-+   3. 使用图片、草图、图表、图形、方程或符号为问题建立模型。
-+   4. 如果一种建模或表示问题的方式不起作用，请尝试另一种方式。
-+   5. 将问题表述为一个问题；如果原问题没有提示解决方案，则更改问题。
-+   6. 保持灵活：寻找使用现有工具的非常规或新方法；以新的方式看待常规事物；尝试从不同的角度或观点回应情况；发散思考。
-+   7. 尝试倒推，从目标开始往回推以找到解决方案策略。
-+   8. 跟踪你的部分解决方案，以便你可以回来继续未完成的部分。
-+   9. 使用类比：
+- 3. 使用图片、草图、图表、图形、方程或符号为问题建立模型。
+- 4. 如果一种建模或表示问题的方式不起作用，请尝试另一种方式。
+- 5. 将问题表述为一个问题；如果原问题没有提示解决方案，则更改问题。
+- 6. 保持灵活：寻找使用现有工具的非常规或新方法；以新的方式看待常规事物；尝试从不同的角度或观点回应情况；发散思考。
+- 7. 尝试倒推，从目标开始往回推以找到解决方案策略。
+- 8. 跟踪你的部分解决方案，以便你可以回来继续未完成的部分。
+- 9. 使用类比：
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_227_0.png)
 
-评估策略 8. 建模问题策略 8 提出一个问题的陈述，并要求学生绘制图表或图片展示问题情境。重点评估学生如何表示问题，而不是问题是否被正确解决。例如，数学中的时间问题绘图应描绘时间线，而不是称重用的刻度。
+评估策略 8. 建模问题
+策略 8 提出一个问题的陈述，并要求学生绘制图表或图片展示问题情境。重点评估学生如何表示问题，而不是问题是否被正确解决。例如，数学中的时间问题绘图应描绘时间线，而不是称重用的刻度。
 
-评估策略 9. 识别障碍 策略 9 提出一个难以解决的问题，也许缺少关键信息，并要求学生解释 (a) 为什么任务难以完成，(b) 障碍是什么，和/或 (c) 他们需要什么额外信息来克服障碍。重点评估学生是否能够识别解决问题的障碍。 （参见我们之前讨论过的圆圈和正方形绘图问题及评分标准作为示例。）
+评估策略 9. 识别障碍
+策略 9 提出一个难以解决的问题，也许缺少关键信息，并要求学生解释 (a) 为什么任务难以完成，(b) 障碍是什么，和/或 (c) 他们需要什么额外信息来克服障碍。重点评估学生是否能够识别解决问题的障碍。（参见我们之前讨论过的圆圈和正方形绘图问题及评分标准作为示例。）
 
 ## 探索可能的解决方案策略
 
-评估策略 10. 论证解决方案 策略 10 提出一个问题陈述以及该问题的两种或多种可能解决方案，并要求学生 (a) 选择他们认为正确的解决方案以及 (b) 论证其为何正确。
+评估策略 10. 论证解决方案
+策略 10 提出一个问题陈述以及该问题的两种或多种可能解决方案，并要求学生 (a) 选择他们认为正确的解决方案以及 (b) 论证其为何正确。
 
-评估策略 11. 论证所用策略 策略 11 提出一个问题陈述以及两种或多种解决问题的策略，并要求学生解释为何两种策略都正确。当你使用此评估策略设计题目时，请确保两种策略都能得出正确答案。在编写题目时，你可以例如说明这是两个虚构学生解决问题的不同方法。
+评估策略 11. 论证所用策略
+策略 11 提出一个问题陈述以及两种或多种解决问题的策略，并要求学生解释为何两种策略都正确。当你使用此评估策略设计题目时，请确保两种策略都能得出正确答案。在编写题目时，你可以例如说明这是两个虚构学生解决问题的不同方法。
 
-评估策略 12. 整合数据 策略 12 呈现几种类型的解释性材料（故事、漫画、图表、数据表）以及一个需要使用其中两种或多种解释性材料信息的问题陈述，然后要求学生 (a) 解决该问题以及 (b) 解释他们为得出解决方案所使用的程序。确保问题解决方案需要使用两种或多种解释性材料中的一些信息。例如，在科学中，你可以呈现降雨表、土壤分析、温度表、几种品种的番茄营养需求、肥料成分，并要求学生选择最适合当地种植的品种，并根据你提供的信息制定浇水和施肥计划。
+评估策略 12. 整合数据
+策略 12 呈现几种类型的解释性材料（故事、漫画、图表、数据表）以及一个需要使用其中两种或多种解释性材料信息的问题陈述，然后要求学生 (a) 解决该问题以及 (b) 解释他们为得出解决方案所使用的程序。确保问题解决方案需要使用两种或多种解释性材料中的一些信息。例如，在科学中，你可以呈现降雨表、土壤分析、温度表、几种品种的番茄营养需求、肥料成分，并要求学生选择最适合当地种植的品种，并根据你提供的信息制定浇水和施肥计划。
 
-评估策略 13. 产生替代策略 策略 13 提出一个问题陈述，并要求学生陈述该问题的两种或多种替代解决方案。以下是示例：
+评估策略 13. 产生替代策略
+策略 13 提出一个问题陈述，并要求学生陈述该问题的两种或多种替代解决方案。以下是示例：
 
-## 示例
+### 示例
 
 策略 13：产生解决问题的替代策略
 
@@ -8042,13 +8408,11 @@ IDEAL 问题解决者一般问题解决技能可以组织成 Bransford 和 Stein
 
 另一种方法是，在问题陈述之外，同时呈现一种解决问题的策略，并要求学生展示问题还可以如何以另一种方式解决。
 
+## 评估策略 14. 使用类比策略
 
+策略 14 提出一个问题陈述和一个正确解决该问题的解决方案策略，并要求学生 (a) 描述其他可以通过类比使用相同解决方案策略解决的问题，以及 (b) 解释他们生成的问题的解决方案为何与你给他们的问题的解决方案相似。将你的评估重点放在学生的解决方案策略与你给他们的解决方案策略的类比关系上。你想了解学生是否能将类比作为启发式方法来解决不同问题。这里有一个例子：
 
-
-
-# 评估策略 14. 使用类比策略 策略 14 提出一个问题陈述和一个正确解决该问题的解决方案策略，并要求学生 (a) 描述其他可以通过类比使用相同解决方案策略解决的问题，以及 (b) 解释他们生成的问题的解决方案为何与你给他们的问题的解决方案相似。 将你的评估重点放在学生的解决方案策略与你给他们的解决方案策略的类比关系上。 你想了解学生是否能将类比作为启发式方法来解决不同问题。 这里有一个例子：
-
-## 示例
+### 示例
 
 策略 14：使用类比来帮助解决另一个问题
 
@@ -8059,100 +8423,104 @@ IDEAL 问题解决者一般问题解决技能可以组织成 Bransford 和 Stein
 - 1. 描述几种在不同情况下的其他问题，这些问题可以通过使用与国会委员会类似的一套规则来解决。
 - 2. 对于你列出的每个问题，解释规则可能如何修改以及为什么这将解决你列出的问题。
 
-评估策略 15. 反向求解 策略 15 提出一个复杂的问题情境或一个复杂的（多步骤）任务以完成，并要求学生从期望的结果倒推，开发完成任务或解决问题的计划或策略。 （例如，开发完成图书馆研究论文所需的步骤和时间框架；制定一个计划来收集信息以回答问题，“本校的学生是否赞成对 18 岁以下人士实施宵禁？”） 将你的评估重点放在学生使用反向解决方案策略的熟练程度。
+评估策略 15. 反向求解
+策略 15 提出一个复杂的问题情境或一个复杂的（多步骤）任务以完成，并要求学生从期望的结果倒推，开发完成任务或解决问题的计划或策略。（例如，开发完成图书馆研究论文所需的步骤和时间框架；制定一个计划来收集信息以回答问题，“本校的学生是否赞成对 18 岁以下人士实施宵禁？”）将你的评估重点放在学生使用反向解决方案策略的熟练程度。
 
-## 示例
+### 示例
 
 策略 15：使用反向启发式解决问题
 
 已完成一项学生调查，以确定学校的学生是否赞成对 18 岁以下人士实施宵禁。结果显示，在女生中，56% 赞成宵禁（10% 未作回应），在男生中，48% 赞成宵禁（9% 未作回应）。结果仅基于学生样本。
 
-- 1. 从上述信息倒推，制定一个计划来说明该调查及结果是如何获得的。 确保你的计划涵盖研究的所有部分。
+- 1. 从上述信息倒推，制定一个计划来说明该调查及结果是如何获得的。确保你的计划涵盖研究的所有部分。
 
 ## 对问题-解决方案策略的行动与反思
 
-评估策略 16. 评估解决方案策略的质量 策略 16 提出一个问题陈述并要求学生评估几种不同的解决问题策略。 你可以要求学生提出几种不同的解决方案，也可以提供几种解决方案并要求他们评估所提供的方案。 如果你提供解决方案进行评估，请务必使其正确性和质量各不相同，以便学生能够展示其评估能力。 （例如，有些可能更有效率，有些可能有负面后果，有些可能根本不起作用。） 要求学生尝试实施每种策略并对其进行彻底评估。 要求他们确定最佳策略，解释为什么有些策略比其他策略效果更好，以及为什么有些策略根本不起作用。 将你的评估重点放在学生证明策略质量等级排序的能力上。 这里有一个例子：
+评估策略 16. 评估解决方案策略的质量
+策略 16 提出一个问题陈述并要求学生评估几种不同的解决问题策略。你可以要求学生提出几种不同的解决方案，也可以提供几种解决方案并要求他们评估所提供的方案。如果你提供解决方案进行评估，请务必使其正确性和质量各不相同，以便学生能够展示其评估能力。（例如，有些可能更有效率，有些可能有负面后果，有些可能根本不起作用。）要求学生尝试实施每种策略并对其进行彻底评估。要求他们确定最佳策略，解释为什么有些策略比其他策略效果更好，以及为什么有些策略根本不起作用。将你的评估重点放在学生证明策略质量等级排序的能力上。这里有一个例子：
 
-## 示例
+### 示例
 
 策略 16：评估问题解决方案的质量
 
 阅读下面的描述，然后回答问题。
 
-一对年轻聋夫妇有了第一个孩子。婴儿需要在夜间哭泣时喂养和更换，但母亲和父亲都听不到婴儿的声音。 这对夫妇不希望把婴儿带到床上，担心会压到婴儿并使其窒息。 他们也不希望把婴儿安排在固定的更换和喂养时间表上。
+一对年轻聋夫妇有了第一个孩子。婴儿需要在夜间哭泣时喂养和更换，但母亲和父亲都听不到婴儿的声音。这对夫妇不希望把婴儿带到床上，担心会压到婴儿并使其窒息。他们也不希望把婴儿安排在固定的更换和喂养时间表上。
 
-- 4. 你在问题 3 中提出的解决方案中哪一个最好？ 通过解释其优点和缺点来证明你的选择。
+- 4. 你在问题 3 中提出的解决方案中哪一个最好？通过解释其优点和缺点来证明你的选择。
 - 5. 解释为什么其他每个解决方案都不如你认为最好的那个好。
 
-评估策略 17. 系统评估策略 策略 17 使用与评估策略 16 相同的任务类型，但你将评估重点放在学生在评估你提出的每个解决方案策略时是否遵循系统程序的程度上。
+评估策略 17. 系统评估策略
+策略 17 使用与评估策略 16 相同的任务类型，但你将评估重点放在学生在评估你提出的每个解决方案策略时是否遵循系统程序的程度上。
 
 ## 评估问题解决的其他有前景的方法
 
-在前一节中，我们建议你可以评估学生是否具备与问题解决过程中的每一步相关的技能。 评估问题解决的其他方法显示出前景，但仍处于实验和验证阶段（Royer, Cisero, & Carlo, 1993）。 空间不允许我们讨论这些方法。 然而，你可能希望通过查阅本章“附加阅读”部分列出的一些参考资料来跟进这一主题（例如，Glaser, Lesgold, and Lajoie, 1985; Nitko, 1996）。 你可能还希望回顾第 13 章（方法 5）中对学生知识结构的评估。
+在前一节中，我们建议你可以评估学生是否具备与问题解决过程中的每一步相关的技能。评估问题解决的其他方法显示出前景，但仍处于实验和验证阶段（Royer, Cisero, & Carlo, 1993）。空间不允许我们讨论这些方法。然而，你可能希望通过查阅本章“附加阅读”部分列出的一些参考资料来跟进这一主题（例如，Glaser, Lesgold, and Lajoie, 1985; Nitko, 1996）。你可能还希望回顾第 13 章（方法 5）中对学生知识结构的评估。
 
 ## 批判性思维
 
-课程框架经常指出，培养学生的批判性思维能力是一个重要的教育目标。 批判性思维教育目标侧重于培养公平、客观、得出合理结论并倾向于寻求清晰和准确的学生（Marzano et al., 1988）。 什么是批判性思维？ 心理学家并不完全同意构成它的技能（Woolfolk, 1995; Kuhn, 1999）。 批判性思维的讨论经常使用与问题解决讨论中使用的许多相同术语：这两个领域密切相关。
 
-在本章中，我们将采用以下定义：“批判性思维是合理的、反思性的思维，专注于决定相信什么或做什么”（Ennis, 1985, p. 54）。 该定义意味着以下内容（Norris & Ennis, 1989）：
 
-- 1. 合理思维——使用充分的理由
-- 2. 反思性思维——有意识地寻找并使用充分的理由
-- 3. 集中思维——为特定目的或目标而思考
-- 4. 决定相信什么或做什么——评估陈述（相信什么）和行动（做什么）
-- 5. 能力和倾向——认知技能（能力）和使用能力的倾向（倾向）
+课程框架经常指出，培养学生的批判性思维能力是一个重要的教育目标。批判性思维教育目标侧重于培养公平、客观、得出合理结论并倾向于寻求清晰和准确的学生（Marzano et al., 1988）。什么是批判性思维？心理学家并不完全同意构成它的技能（Woolfolk, 1995; Kuhn, 1999）。批判性思维的讨论经常使用与问题解决讨论中使用的许多相同术语：这两个领域密切相关。
+
+在本章中，我们将采用以下定义：“批判性思维是合理的、反思性的思维，专注于决定相信什么或做什么”（Ennis, 1985, p. 54）。该定义意味着以下内容（Norris & Ennis, 1989）：
+
+- 合理思维——使用充分的理由
+- 反思性思维——有意识地寻找并使用充分的理由
+- 集中思维——为特定目的或目标而思考
+- 决定相信什么或做什么——评估陈述（相信什么）和行动（做什么）
+- 能力和倾向——认知技能（能力）和使用能力的倾向（倾向）
 
 ## 评估批判性思维的倾向
 
-## 什么是倾向？
+### 什么是倾向？
 
-倾向是思维习惯或经常使用适当的批判性思维行为的倾向。 倾向于批判性思维的学生：
+倾向是思维习惯或经常使用适当的批判性思维行为的倾向。倾向于批判性思维的学生：
 
-- 1. 寻求论题或问题的陈述；
-- 2. 寻求理由；
-- 3. 努力做到知情；
-- 4. 使用可信来源并提及它们；
-- 5. 考虑到整体情况；
-- 6. 保持思维与主要观点相关；
-- 7. 牢记最初或最基本的问题；
-- 8. 寻找替代方案；
-- 9. 心胸开阔且
-  - a. 认真考虑与自己不同的观点；
-  - b. 从自己不同意的起点进行推理，而不让分歧干扰其推理；
-  - c. 在证据和理由不足时保留判断；
-- 10. 采取立场，并在证据和理由充分时改变立场；
-- 11. 寻求主题所允许的最大精确度；
-- 12. 有条不紊地处理复杂整体的各个部分；
-- 13. 运用他们的批判性思维能力；
-- 14. 对他人的感受、知识水平和成熟程度敏感。
+1. 寻求论题或问题的陈述；
+2. 寻求理由；
+3. 努力做到知情；
+4. 使用可信来源并提及它们；
+5. 考虑到整体情况；
+6. 保持思维与主要观点相关；
+7. 牢记最初或最基本的问题；
+8. 寻找替代方案；
+9. 心胸开阔且
+    - a. 认真考虑与自己不同的观点；
+    - b. 从自己不同意的起点进行推理，而不让分歧干扰其推理；
+    - c. 在证据和理由不足时保留判断；
+10. 采取立场，并在证据和理由充分时改变立场；
+11. 寻求主题所允许的最大精确度；
+12. 有条不紊地处理复杂整体的各个部分；
+13. 运用他们的批判性思维能力；
+14. 对他人的感受、知识水平和成熟程度敏感。
 
-> 来源：摘自 S. P. Norris 和 R. H. Ennis 的《Evaluating Critical Thinking》（p. 12），1989 年；加州太平洋格罗夫：批判性思维书籍和软件。 经许可转载。
+> 来源：摘自 S. P. Norris 和 R. H. Ennis 的《Evaluating Critical Thinking》（p. 12），1989 年；加州太平洋格罗夫：批判性思维书籍和软件。经许可转载。
 
-## 评估倾向
+### 评估倾向
 
-虽然你可以在一次场合评估学生使用批判性思维能力或技能的情况，但评估学生的倾向需要你关注其长期习惯。 你的评估应报告学生在评分期、学期或学年内在课程学科内容中多频繁地使用批判性思维。 你使用清单或评分量表来评估倾向。
+虽然你可以在一次场合评估学生使用批判性思维能力或技能的情况，但评估学生的倾向需要你关注其长期习惯。你的评估应报告学生在评分期、学期或学年内在课程学科内容中多频繁地使用批判性思维。你使用清单或评分量表来评估倾向。
 
-## 清单
+### 清单
 
-清单是一种包含行为列表的工具。 你在一段时间内观察学生，并在你观察到的行为旁打勾（√）。 然后你就有记录显示学生表现了哪些倾向行为。 你勾选的行为越多，学生的批判性思维倾向就越大。 第 12 章提供了制作此类评估工具的具体建议。 图 10.3 显示了一个可用于评估学生批判性思维倾向的示例清单。
+清单是一种包含行为列表的工具。你在一段时间内观察学生，并在你观察到的行为旁打勾（√）。然后你就有记录显示学生表现了哪些倾向行为。你勾选的行为越多，学生的批判性思维倾向就越大。第 12 章提供了制作此类评估工具的具体建议。图 10.3 显示了一个可用于评估学生批判性思维倾向的示例清单。
 
-该清单可以帮助你跟踪学生在单元期间的批判性思维行为。 你可以从清单中看出，学生经常表现出许多倾向（例如，“2. 寻找解释和理由”，“6. 心胸开阔”）而其他倾向则不常表现（例如，“5. 寻找替代方案”）。 你可以利用这些信息帮助学生发展其批判性思维，通过教导他养成始终寻找替代方案的习惯。
+该清单可以帮助你跟踪学生在单元期间的批判性思维行为。你可以从清单中看出，学生经常表现出许多倾向（例如，“2. 寻找解释和理由”，“6. 心胸开阔”）而其他倾向则不常表现（例如，“5. 寻找替代方案”）。你可以利用这些信息帮助学生发展其批判性思维，通过教导他养成始终寻找替代方案的习惯。
 
-## 评分量表
+### 评分量表
 
-简单的评分量表是一种记录你对学生每种批判性思维行为倾向质量水平的判断的工具。 评分量表通常有一条线，其上的点从质量差到质量优。 通常，四或五个质量点会通过描述该行为在每个点的表现形式来进一步定义。 这些描述称为锚点。 图 10.4 是教师对批判性思维倾向的一些示例
+简单的评分量表是一种记录你对学生每种批判性思维行为倾向质量水平的判断的工具。评分量表通常有一条线，其上的点从质量差到质量优。通常，四或五个质量点会通过描述该行为在每个点的表现形式来进一步定义。这些描述称为锚点。图 10.4 是教师对批判性思维倾向的一些示例。
 
+**图 10.3 在教学单元中跟踪学生批判性思维倾向使用的核对表示例。**
 
+**个别学生的批判性思维倾向记录**
 
+学生姓名：______　班次：______　日期：______
 
+学科/单元：美国历史/第三单元。开始一个政府，1780–1800
 
-## 图 10.3 在教学单元中跟踪学生批判性思维倾向使用的核对表示例。
-
-| 个别学生的批判性思维倾向记录 |
-| 学生姓名： | 班次： | 日期： |
-| 学科/单元：美国历史/第三单元。开始一个政府，1780–1800 |
-| 批判性思维倾向 | 作业/活动 |  |  |  |  |
-|  | 关于邦联条例的课堂讨论 | 讨论宪法批准的论点和反论点的论文 | 收集和分析报纸报道的事件并使用宪法概念的剪贴簿 | 团队辩论问题：“政党是否使美国政府变得更好？” | 评价华盛顿作为总统的论文 |
+| 批判性思维倾向 | 关于邦联条例的课堂讨论 | 讨论宪法批准的论点和反论点的论文 | 收集和分析报纸报道的事件并使用宪法概念的剪贴簿 | 团队辩论问题：“政党是否使美国政府变得更好？” | 评价华盛顿作为总统的论文 |
+|---|---|---|---|---|---|
 | 1. 寻求主要观点或问题的陈述 | √ | — | √ | √ | NA |
 | 2. 寻找解释和理由 | √ | √ | √ | √ | √ |
 | 3. 使用并引用可靠来源 | — | √ | — | √ | — |
@@ -8164,78 +8532,75 @@ IDEAL 问题解决者一般问题解决技能可以组织成 Bransford 和 Stein
 | 9. 努力在陈述和工作中做到准确和精确 | NA | — | √ | √ | — |
 | 10. 对他人的感受、知识水平敏感 | √ | NA | NA | — | NA |
 
-## 图 10.4 评估学生批判性思维倾向质量的样本评分量表，教师在学生完成作业时可能会观察到。
+**图 10.4 评估学生批判性思维倾向质量的样本评分量表，教师在学生完成作业时可能会观察到。**
 
-## 批判性思维倾向评分量表
+**批判性思维倾向评分量表**
 
-学生姓名：
-作业：
-日期：
+学生姓名：______　作业：______　日期：______
 
-- 1. 学生是否考虑了不同的观点？
-- 0 表现得好像自己的观点被每个人接受
-- 1 意识到自己的观点并非被每个人接受
-- 2 显示出意识到他人有合法的、与自己不同的观点
-- 3 主动寻找并鼓励他人表达与自己不同或相反的观点
-
-- 2. 学生如何对待他人的观点？
-- 0 以避免或阻止他人观点的方式行事
-- 1 显示出对他人观点有所关注
-- 2 认真努力考虑他人观点，但并不始终客观或理性
-- 3 认真关注他人观点并始终客观、理性地审视它们
-
-- 3. 学生是否能与知识或能力较少的人良好沟通？
-- 0 不能与知识或能力较少的人合作或沟通
-- 1 尝试与知识或能力较少的人合作或沟通，但在做此事时不足够
-- 2 能与知识或能力较少的人充分合作和沟通
-- 3 能与知识或能力较少的人出色地合作和沟通
-
-- 4. 学生是否对知识或能力较少的人的感受敏感？
-- 0 对知识和能力较少的人漠不关心或残酷
-- 1 做到最低限度以帮助或鼓励尊重知识或能力较少的人的感受
-- 2 提供良好的鼓励和尊重知识或能力较少的人的感受
-- 3 主动寻求增强和提高对知识或能力较少的人感受的尊重
+1. 学生是否考虑了不同的观点？
+    - 0 表现得好像自己的观点被每个人接受
+    - 1 意识到自己的观点并非被每个人接受
+    - 2 显示出意识到他人有合法的、与自己不同的观点
+    - 3 主动寻找并鼓励他人表达与自己不同或相反的观点
+2. 学生如何对待他人的观点？
+    - 0 以避免或阻止他人观点的方式行事
+    - 1 显示出对他人观点有所关注
+    - 2 认真努力考虑他人观点，但并不始终客观或理性
+    - 3 认真关注他人观点并始终客观、理性地审视它们
+3. 学生是否能与知识或能力较少的人良好沟通？
+    - 0 不能与知识或能力较少的人合作或沟通
+    - 1 尝试与知识或能力较少的人合作或沟通，但在做此事时不足够
+    - 2 能与知识或能力较少的人充分合作和沟通
+    - 3 能与知识或能力较少的人出色地合作和沟通
+4. 学生是否对知识或能力较少的人的感受敏感？
+    - 0 对知识和能力较少的人漠不关心或残酷
+    - 1 做到最低限度以帮助或鼓励尊重知识或能力较少的人的感受
+    - 2 提供良好的鼓励和尊重知识或能力较少的人的感受
+    - 3 主动寻求增强和提高对知识或能力较少的人感受的尊重
 
 might observe as a student completes an assignment. The anchor points on the items' rating scales were adapted from the Marzano, Pickering, and McTighe (1993) analysis of habits of mind. In this example, each item's scale shows the degree to which a student is disposed toward using a particular critical-thinking habit. The numerical ratings on the scale are anchored by descriptions of specific and observable behaviors. Over time you can observe the student with respect to these habits. Then, at the end of the period, you use the rating scale to assess the student's disposition on each habit.
 
 ## 评估批判性思维能力
 
-## 需要评估的能力
+### 需要评估的能力
 
 批判性思维能力是学生在表现出批判性思维行为时使用的特定认知技能。以下是批判性思维讨论中通常考虑的、可以评估的一些能力。它们被分为五个领域。
 
-## 基础澄清
+#### 基础澄清
 
-- 1. 聚焦于一个问题
-- 2. 分析论证
-- 3. 提出和回答澄清和质疑的问题
+1. 聚焦于一个问题
+2. 分析论证
+3. 提出和回答澄清和质疑的问题
 
-## 基本支持
+#### 基本支持
 
-- 4. 判断来源的可信度
-- 5. 做出和判断观察
+4. 判断来源的可信度
+5. 做出和判断观察
 
-## 推理
+#### 推理
 
-- 6. 做出和判断演绎
-- 7. 做出和判断归纳
-- 8. 做出和判断价值判断
+6. 做出和判断演绎
+7. 做出和判断归纳
+8. 做出和判断价值判断
 
-## 高级澄清
+#### 高级澄清
 
-- 9. 定义术语和判断定义
-- 10. 识别假设
+9. 定义术语和判断定义
+10. 识别假设
 
-## 策略和策略
+#### 策略和策略
 
-- 11. 决定行动
-- 12. 与他人互动
+11. 决定行动
+12. 与他人互动
 
 > 来源：摘自《Evaluating Critical Thinking》（第14页）S. P. Norris 和 R. H. Ennis，1989；加州太平洋格罗夫：批判性思维书籍和软件。经许可转载。
 
 批判性思维教育的最终目标是让学生在校内和校外生活中自发地使用这些能力。例如，预计学生会自发地通过询问“你的主要观点是什么？”或“可以说你的主要观点是_____吗？”来澄清某人表述不清的论证的主要观点。正如我们批判性思维倾向清单第13点所述，学生应定期使用本清单中的能力。
 
 ## 情境中的批判性思维
+
+
 
 在很大程度上，批判性思维能力最好在各个学科的情境中教授和评估。最终学生会将批判性思维应用于生活中的具体事件，因此他们必须学会在不同情境中应用这些能力。你应牢记，关于视觉艺术等学科的“合理反思性思维”可能与关于科学等学科的“合理反思性思维”大不相同：不同的学科有不同类型的论证和验证真理或可信度的标准。第266页的示例（第12章）展示了中学生如何使用科学标准来批判性地评估他们的项目。
 
@@ -8245,19 +8610,16 @@ might observe as a student completes an assignment. The anchor points on the ite
 
 ## 基础澄清能力
 
-聚焦于问题 具备聚焦于问题能力的学生可以批判性地审视一个行动、口头陈述、话语、科学或政治论证，甚至漫画，以确定其主要观点或论证的本质。子技能包括（a）制定或识别提出的问题或议题，（b）制定或选择用于评估所呈现材料的适当标准，以及（c）牢记议题及其适当背景（Ennis, 1985）。以下是设计题目以评估此能力的策略。
+### 聚焦于问题
+具备聚焦于问题能力的学生可以批判性地审视一个行动、口头陈述、话语、科学或政治论证，甚至漫画，以确定其主要观点或论证的本质。子技能包括（a）制定或识别提出的问题或议题，（b）制定或选择用于评估所呈现材料的适当标准，以及（c）牢记议题及其适当背景（Ennis, 1985）。以下是设计题目以评估此能力的策略。
 
-## 策略
+### 策略
 
-## 策略 1：如何评估聚焦于问题的能力
+#### 策略 1：如何评估聚焦于问题的能力
 
 | | 介绍性材料例如： | 回应以下问题例如： |
 |---|---|---|
-| 给学生 | • 一个问题的陈述
-• 一次政治演讲
-• 一项政府政策的陈述
-• 一个实验及其结果 | 问学生 | • 主要问题/议题是什么？
-• 你应使用什么标准来评估论证或结论的质量、好坏或真实性？ |
+| 给学生 | • 一个问题的陈述<br>• 一次政治演讲<br>• 一项政府政策的陈述<br>• 一个实验及其结果 | 问学生 | • 主要问题/议题是什么？<br>• 你应使用什么标准来评估论证或结论的质量、好坏或真实性？ |
 
 注意：对于本策略和后续的评估策略，你需要重新表述问题，使其符合学生的教育水平。
 
@@ -8276,24 +8638,18 @@ might observe as a student completes an assignment. The anchor points on the ite
 - B 政党对选民意愿作出回应。
 - C 政党往往更关心政治而非国家福祉
 - D 两党合作往往只存在于名义上。
-
 - 2. 漫画中所示的情况最不可能发生在以下哪个时间？
 - A 新一届国会首次会议期间
 - B 在政治代表大会期间
-
-
-
-
-
 # C 在一次初选竞选中
-
 # *D 在一次总统竞选活动中
 
 来源：摘自《让课堂测试成为可能：教师指南》（第4号。评估与咨询服务）（第18-19页），作者 Q. Siodola，1961年，普林斯顿，新泽西州：教育测试服务。漫画由 Army Times Publishing Company 提供。经 Educational Testing Service 版权所有者许可转载。
 
-分析论证 具备分析论证能力的学生能够分析在口头陈述、讨论、科学或政治报告、漫画等中提出的论证的细节。子技能包括（a）识别陈述中的结论，（b）识别论证背后的陈述理由和未陈述理由，（c）看到两个或多个论证之间的相似性和差异，（d）找出、指出并在适当时忽略论证中出现的无关内容，（e）表示论证的逻辑或结构，以及（f）总结论证（Ennis, 1985）。在设计任务以评估此能力时，使用策略2。示例如下。
+### 分析论证
+具备分析论证能力的学生能够分析在口头陈述、讨论、科学或政治报告、漫画等中提出的论证的细节。子技能包括（a）识别陈述中的结论，（b）识别论证背后的陈述理由和未陈述理由，（c）看到两个或多个论证之间的相似性和差异，（d）找出、指出并在适当时忽略论证中出现的无关内容，（e）表示论证的逻辑或结构，以及（f）总结论证（Ennis, 1985）。在设计任务以评估此能力时，使用策略2。示例如下。
 
-## 策略
+#### 策略
 
 策略2：如何评估分析论证的能力
 
@@ -8314,7 +8670,6 @@ might observe as a student completes an assignment. The anchor points on the ite
 - B 博茨瓦纳政府应对对外贸易采取自由放任政策。
 - C 政府帮助某些产业可以改善普通人的经济状况。
 - D 博茨瓦纳的收入在所有人之间分配不均。
-
 - 2. Clayton 论证的基本结构是博茨瓦纳人民强烈受其
 - A 追求个人最大利益的欲望驱动。
 - B 欲望将民族主义置于个人利益之上的欲望。
@@ -8336,6 +8691,7 @@ A 他们对竞争性经济是否可取存在分歧。
 B 他们对道德在经济生活中所起的作用存在分歧。
 C 他们对政府是否会腐败的预测存在分歧。
 D 他们对政府应多大程度上鼓励博茨瓦纳的外国投资存在分歧。
+
 注意：这些题目仅用于说明。所提及的阅读材料和人物均为虚构。
 
 ## 澄清和质疑
@@ -8348,13 +8704,13 @@ D 他们对政府应多大程度上鼓励博茨瓦纳的外国投资存在分歧
 
 ## 论证的基本支持
 
-## 判断来源的可信度
+### 判断来源的可信度
 
 具备此能力的学生可以评估某人在支持某一立场时所使用的证据的质量。学生应能够在判断可信度时使用的标准或标准包括（a）提供证据的人的专业知识，（b）提供证据的人是否存在利益冲突，（c）不同证据来源是否一致，（d）证据来源是否有准确和正确的声誉，（e）证据是否通过 established 程序获得从而具有有效性，以及（f）在给定情况下使用该证据是否有充分理由（Ennis, 1985）。每个学科也将有特定的证据规则。
 
 在设计任务以评估此能力时，你可以使用以下策略。
 
-## 策略
+#### 策略
 
 策略3：如何评估判断可信度的能力
 
@@ -8367,6 +8723,7 @@ D 他们对政府应多大程度上鼓励博茨瓦纳的外国投资存在分歧
 使用策略3评估学生判断论证或陈述可信度的能力
 
 问题1涉及以下信息。
+
 董事会宣布，XYZ 汽车去年销量比上一年增长25%。XYZ 汽车公司总裁 Mr. Hereto 表示，这一增长的原因是本国汽车买家认识到 XYZ 汽车是今天市场上最好的汽车。
 
 1. 分析此陈述，指出其中哪些部分是可信的，哪些部分，如果有的话，是不可信的。给出每个选择的理由。你可以按以下格式组织你的答案。
@@ -8391,11 +8748,13 @@ D 他们对政府应多大程度上鼓励博茨瓦纳的外国投资存在分歧
 
 为了有效评估此能力，你必须小心地包含介绍性材料，该材料不是课堂示例或指定阅读材料的一部分，并提出要求学生解释其对材料各部分可信度评估背后的推理的问题。对你已经分析和判断过的材料进行学生评估会产生对学生自行判断来源可信度的能力的无效评估。此外，如果你不要求学生解释为什么某个来源可信或不可信，你就不知道学生是否使用了适当的标准和批判性思维来得出答案。
 
+
+
 观察与判断 观察报告 这是学生评估从目击者或对事件、现象或人物进行直接观察获得的信息质量的能力。在做出这些判断时，学生应能够使用的标准或标准包括是否（a）观察者以最少地参考他人观察的方式报告；（b）事件与观察者报告之间的时间很短；（c）观察者没有转述传闻；（d）观察者记录了观察结果；（e）所报告的观察结果得到他人证实；（f）观察者对事件或人物有良好的接触，因此直接观察可以准确；（g）观察者正确记录观察结果；以及（h）观察者是可信的来源（Ennis, 1985）。每个学科可能还有更具体的标准。以下是评估此能力的策略。
 
 ## 策略
 
-策略4：如何评估判断观察报告的能力
+### 策略4：如何评估判断观察报告的能力
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_235_0.png)
 
@@ -8405,19 +8764,17 @@ D 他们对政府应多大程度上鼓励博茨瓦纳的外国投资存在分歧
 
 ## 推理
 
-演绎与判断 演绎 能够判断演绎的学生在分析陈述和结论时应用逻辑思维。子技能包括（a）使用类包含的逻辑（应逻辑上包含在某一类或类别中的元素或成员），（b）使用条件逻辑（识别使某事为真或为假的条件），以及（c）正确使用逻辑策略解释陈述（否定；双重否定；必要条件与充分条件；以及诸如如果、或、一些、不、两者等词语）（Ennis, 1985）。要设计客观任务来评估此能力，你可以遵循以下策略之一（Norris & Ennis, 1989）。
+### 演绎与判断 演绎
+
+能够判断演绎的学生在分析陈述和结论时应用逻辑思维。子技能包括（a）使用类包含的逻辑（应逻辑上包含在某一类或类别中的元素或成员），（b）使用条件逻辑（识别使某事为真或为假的条件），以及（c）正确使用逻辑策略解释陈述（否定；双重否定；必要条件与充分条件；以及诸如如果、或、一些、不、两者等词语）（Ennis, 1985）。要设计客观任务来评估此能力，你可以遵循以下策略之一（Norris & Ennis, 1989）。
 
 ## 策略
 
-策略5(A)：如何通过比较不同结论来评估做出和判断结论的能力
+### 策略5(A)：如何通过比较不同结论来评估做出和判断结论的能力
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_235_1.png)
 
-
-
-
-
-## 策略 5(B)：如何通过判断结论的真假来评估做出和判断结论的能力
+### 策略 5(B)：如何通过判断结论的真假来评估做出和判断结论的能力
 
 给学生提供入门材料，例如：学生需要假定为真的陈述 AND 由一个可能正确的结论组成的备选方案 要求学生 对诸如以下问题作出回应：这个结论必须成立吗？
 
@@ -8454,11 +8811,11 @@ D 他们对政府应多大程度上鼓励博茨瓦纳的外国投资存在分歧
 
 ## 策略
 
-## 策略 6(A)：如何使用选择题评估判断归纳的能力
+### 策略 6(A)：如何使用选择题评估判断归纳的能力
 
 给学生提供入门材料，例如：情境陈述 AND 信息（数据） AND 从信息中得出的可能结论 要求学生 对诸如以下问题作出回应：判断每个结论是由数据支持的、被数据矛盾的，还是既不支持也不矛盾。 或 选择最能解释数据的结论。
 
-## 策略 6(B)：如何使用建构题评估判断归纳的能力
+### 策略 6(B)：如何使用建构题评估判断归纳的能力
 
 给学生提供入门材料，例如：情境陈述 AND 信息（数据） 要求学生 对诸如以下问题作出回应：从数据中得出正确的结论 AND 解释你的结论为何正确。
 
@@ -8483,8 +8840,8 @@ D 他们对政府应多大程度上鼓励博茨瓦纳的外国投资存在分歧
 此处会出现与主题相关的段落
 
 +   1. 作者在其论证中基于隐含假设，即美国公民受到了非常强烈的欲望的驱使，即
-+      A 尽可能为自己赚取最多的钱。
-+      B 把国家利益置于个人利益之上。
++   A 尽可能为自己赚取最多的钱。
++   B 把国家利益置于个人利益之上。
 +   C 扩大开放市场竞争。
 +   D 让世界其他地方都像美国一样。
 
@@ -8502,13 +8859,10 @@ D 他们对政府应多大程度上鼓励博茨瓦纳的外国投资存在分歧
 
 你可能还希望评估学生是否能够识别所使用的修辞机制和策略
 
-
-
-
-
 # 图10.5 简单评分量表的示例，用于评估学生口头或书面论证陈述的质量。
 
 学生姓名：
+
 主题：
 
 日期：
@@ -8516,50 +8870,73 @@ D 他们对政府应多大程度上鼓励博茨瓦纳的外国投资存在分歧
 # 1. 学生是否清楚地陈述了论点或主要观点？
 
 0 未陈述或暗示主要观点或论点
+
 1 暗示了主要观点或论点但未清楚陈述
+
 2 清楚地陈述了主要思想或论点但只是平铺直叙
+
 3 清楚、热情且有趣地为听众陈述了主要思想或论点
 
 # 2. 学生在必要时是否对关键术语进行了定义？
 
 0 未尝试定义关键术语，即使在必要时也未定义
+
 1 尝试定义关键术语，但效果不佳
+
 2 清楚有效地定义了必要的关键术语
+
 NA 演示的性质使得定义关键术语是不必要的
 
 # 3. 学生是否运用了合理的推理来支持主要观点或论点？
 
 0 未提供对论点或所持立场的支持理由
+
 1 提供了支持理由，但它们偏离目标或不能直接支持论点
+
 2 给出了相关的支持理由，但本可以给出更好或更多样化的理由
+
 3 给出了优秀的支持理由，多样性好，直接适用
 
 # 4. 学生是否以适当的方式使用了相关的事实来支持论点？
 
 0 未提供事实，使用了完全无关的事实，或引用了非可信来源的事实
+
 1 提供了支持论点的事实，但从中得出的概括较弱、不太恰当或不完整；事实引用自可信来源
+
 2 提供了多个支持论点的适当事实，从事实中得出的概括是恰当的，事实来源可信
+
 3 提供了高度恰当的事实，从事实中得出优秀的概括以支持论点，事实来源可信，事实在论证中被很好地使用
 
 # 5. 学生是否公平地呈现并评估了替代立场？
 
 0 未提及替代立场，也未进行评估
+
 1 提及了替代立场，但它们要么没有公平呈现，要么未得到适当评估，要么与论点无关
+
 2 提到了部分相关的替代立场，它们被恰当呈现并得到适当评估；其他重要的替代立场被省略
+
 3 提到了所有相关且重要的替代立场，公平呈现并得到适当评估
 
 # 6. 学生是否很好地反驳了替代立场？
 
 0 未尝试反驳
+
+
+
 1 尝试反驳，但效果不佳或不完整
+
 2 反驳得当，但本可以在解释替代方案的缺陷方面更有效
+
 3 反驳得当，有效，清楚地指出了替代方案的不足，说服力强
 
 # 7. 学生是否提出了组织良好的论证？
 
 0 组织松散，缺乏方向，使论点或主要观点混淆
+
 1 组织清晰，但效果不佳，与论点或主要观点的联系不紧密；细节经常位置不当
+
 2 组织良好，有助于论证的有效性，但少数细节位置不当；有时与主要观点的联系薄弱或位置不当
+
 3 组织非常清晰，增强了论证；演讲使听众的兴趣始终集中在主要问题上
 
 a particular piece of writing, speech, advertisement, or other persuasive material. Two assessment strategies for doing this follow.
@@ -8569,27 +8946,45 @@ a particular piece of writing, speech, advertisement, or other persuasive materi
 Strategy 10(A): How to assess the ability to identify rhetorical mechanisms and tactics by analyzing one piece to identify what is misleading
 
 - Give students
+
 - Introductory material such as:
+
   - Persuasive writing
+
   - A speech
+
   - An advertisement
+
   - A video clip segment
+
 - Require students
+
 - To respond to questions such as:
+
   - What deceptive or misleading statements or strategies are used? Explain.
+
   - Which of the following types of descriptive or misleading strategies are used?
 
 Strategy 10(B): How to assess the ability to identify rhetorical mechanisms and tactics by identifying the misleading piece from among several pieces that are not misleading
 
 - Give students
+
 - Introductory material such as:
+
   - Several pieces of persuasive writing
+
   - Several speeches
+
   - Several advertisements
+
   - Several video clips
+
 - Require students
+
 - To respond to questions such as:
+
   - From among these advertisements, which one is misleading because it inappropriately appeals to scientific authority?
+
   - From among these advertisements, which one is misleading because it ______?
 
 Here are two examples that implement this strategy with the multiple-choice format.
@@ -8601,19 +8996,31 @@ Items using Strategy 9(B) to assess the ability to identify misleading approache
 Questions 1 and 2 refer to the advertisements below.
 
 - Advertisement A goes here
+
 - Advertisement B goes here
+
 - Advertisement C goes here
+
 - Advertisement D goes here
 
 - 1. Which of the advertisements above should be considered misleading because it inappropriately appeals to scientific authority?
+
   A
+
   B
+
   C
+
   D
+
 - 2. Which of the advertisements above should be considered misleading because it focuses on the consumer keeping up with the crowd or joining the bandwagon?
+
   A
+
   B
+
   C
+
   D
 
 ## Critical-Thinking Skills in Combination
@@ -8626,6 +9033,8 @@ Finally, if students are to learn to be disposed toward using critical thinking 
 
 ## Ability to Use Reference Materials
 
+
+
 Undoubtedly it is important to develop the ability to use both general reference materials and special subject-matter-specific materials. Among the reference-using skills you may teach and assess are: alphabetizing, using tables of contents and indexes, using encyclopedias, using dictionaries, using general reference materials (calendars, maps and globes, textbooks, periodical indexes, atlases, Who's Who in America, and magazines), and using a library and its catalogue (Hoover, Hieronymus, Frisbie, & Dunbar, 1993b). The Internet and computer-based CDs are also reference materials. Skills in using these media should also be taught and assessed. The dictionary items on page 200 illustrate how to assess these dictionary-entry skills: using the guide to pronunciation, locating the meaning in particular usage, and identifying a word’s part of speech.
 
 Earlier we spoke of using interpretive materials. In this assessment area interpretive materials include: a section of an index, a section of a table of contents, a part of an atlas, a list of words to alphabetize, a reproduction of a library and a catalogue entry card, a section of the Dewey or Library of Congress classification system, a picture of a computer screen, and a section of a periodical guide (index). Many times, however, you will have to rewrite or modify these materials before they are suitable for use in assessment, because (a) they contain material irrelevant or extraneous to assessing the objective at hand; (b) they are too long; or (c) the extract is out of context and is therefore not clear to students. You may need to obtain written permission to reproduce copyrighted materials. You may, of course, use entire volumes or take students to the library for the assessment. To do so, you will need sufficient materials (or computers) for all students, as well as sufficient uninterrupted time to administer this type of performance assessment.
@@ -8634,34 +9043,42 @@ Earlier we spoke of using interpretive materials. In this assessment area interp
 
 Much information is condensed in tables and graphs. Graph and table reading abilities are important to further learning in many areas, both in and out of school. Following are examples of some of the graph- and table-reading abilities that you can teach and assess.
 
-## Example
+### Example
 
-- 1. To comprehend from the title the topic on which a table or graph gives information
-- 2. To recognize from subtitles and row or column headings what is shown by each part of a graph or table
-- 3. To read amounts
-  A by using the scale (or scales) on bar, line, and picture graphs
-  B by interpreting the sectors of a circle on circle graphs
-  C by locating a cell in a table
-  D by using special symbols and a key
-- 4. To compare two or more values read from a graph or a table
-  A by determining rank
-  B by determining differences between amounts
-  C by determining how many times greater one amount is than another
-- 5. To determine relative rates or trends
-- 6. To determine underlying relationships through correct interpretation of a graph
-- 7. To grasp the outstanding facts portrayed by a graph or a table
+1. To comprehend from the title the topic on which a table or graph gives information
+
+2. To recognize from subtitles and row or column headings what is shown by each part of a graph or table
+
+3. To read amounts
+
+   - A. by using the scale (or scales) on bar, line, and picture graphs
+   - B. by interpreting the sectors of a circle on circle graphs
+   - C. by locating a cell in a table
+   - D. by using special symbols and a key
+
+4. To compare two or more values read from a graph or a table
+
+   - A. by determining rank
+   - B. by determining differences between amounts
+   - C. by determining how many times greater one amount is than another
+
+5. To determine relative rates or trends
+
+6. To determine underlying relationships through correct interpretation of a graph
+
+7. To grasp the outstanding facts portrayed by a graph or a table
 
 > Source: Copyright © 1971 by the University of Iowa. All rights reserved. Reproduced from the Iowa Tests of Basic Skills, Teachers Guide to Administration, Interpretation, and Use, Levels Edition, Form 6, p. 46, with permission of the Riverside Publishing Company.
 
 Here are some examples of items written to assess some of these skills.
 
-## Example
+### Example
 
 Use the table below to answer Questions 1 and 2.
 
-| Average Temperature and Rainfall at Windy Hill Town |
-| 2000 | 2001 | 2002 | 2003 |
-| Temp | Rain | Temp | Rain | Temp | Rain | Temp | Rain |
+**Average Temperature and Rainfall at Windy Hill Town**
+
+| Month | 2000 Temp | 2000 Rain | 2001 Temp | 2001 Rain | 2002 Temp | 2002 Rain | 2003 Temp | 2003 Rain |
 | September | 64° | 0.1 in | 63° | 0.2 in | 66° | 0.0 in | 64° | 0.3 in |
 | October | 72° | 0.4 in | 71° | 0.5 in | 74° | 0.4 in | 71° | 0.6 in |
 | November | 77° | 0.9 in | 75° | 1.0 in | 78° | 0.8 in | 76° | 0.7 in |
@@ -8669,22 +9086,27 @@ Use the table below to answer Questions 1 and 2.
 
 Example of assessing the ability to locate and compare information from a table
 
+
+
 - 1. When did the highest average rainfall occur?
+
   A November of 2000
+
   B November of 2001
+
   *C December of 2001
+
   D December of 2003
 
 Example of assessing the ability to draw inferences based on trends and other information in a table
 
 - 2. Which of the following events is most likely to have occurred between September and December of 2002?
+
   A The roads were covered with ice and snow.
+
   *B The town's water reserves were very low.
+
   C The river flowing through the town overflowed its banks.
-
-
-
-
 
 Item 1 要求学生阅读表格并在单元格中定位信息（前述列表中的能力 3(c)），并比较从表格中读出的多个值以确定哪个最大（列表中的能力 4(a)）。Item 2 要求学生根据所呈现的趋势和事实对事件发生的可能性做出推断（能力 6 和 7）。
 
@@ -8701,16 +9123,23 @@ Item 1 要求学生阅读表格并在单元格中定位信息（前述列表中�
 评估从图表中得出推断的能力的题目示例
 
 +   1. 根据图表，哪种类型的锻炼使学生的心跳更快？
+
 +   *A 跑步
+
 +   B 步行
+
 +   C 都不是——无论是步行还是跑步，结果都相同。
 
 评估解释图表潜在趋势的能力的题目示例
 
 +   2. 当所有学生在图书馆读书时，锻炼一小时后心跳大约是多少？
+
 +   *A 两组都约为 70。
+
 +   B 步行两圈的组约为 70，跑一圈的组约为 130。
+
 +   C 步行两圈的组约为 90，跑一圈的组约为 130。
+
 +   D 两组都低于 60。
 
 ## Maps
@@ -8720,25 +9149,45 @@ Item 1 要求学生阅读表格并在单元格中定位信息（前述列表中�
 ## Example
 
 +   1. 能够定向地图并确定方向
+
 +    a. 根据方位确定方向
+
 +    b. 根据纬线或经线确定方向
+
 +    c. 确定河流流向或地形坡度
+
 +   2. 能够在地图和地球仪上定位和/或描述地点
+
 +    a. 通过使用标准地图符号
+
 +    b. 通过使用图例
+
 +    c. 通过使用距离和/或方向
+
 +    d. 通过使用纬度或经度
+
 +   3. 能够确定距离
+
 +    a. 在道路地图上确定距离
+
 +    b. 使用单位比例尺确定距离
+
 +    c. 在地球仪上确定距离
+
 +    d. 比较距离
+
 +   4. 能够确定或追踪旅行路线
+
 +   5. 能够确定季节变化、太阳模式和时差
+
 +   6. 能够从一个或多个模式地图中阅读和比较事实
+
 +   7. 能够形象化地形特征
+
 +   8. 能够推断人的活动或生活方式
+
 +    •来自轮廓地图
+
 +    •来自模式地图
 
 > Source: Copyright © 1971 by the University of Iowa. All rights reserved. Reproduced from the Iowa Tests of Basic Skills, Teachers Guide to Administration, Interpretation, and Use. Levels Edition, Form 6, p. 44, with permission of the Riverside Publishing Company.
@@ -8754,9 +9203,13 @@ Hoover et al. (1993b) 给出了教授这些技能的建议以及教学材料的�
 Item 1 评估根据给定方位确定地图上地点的方向的能力（能力 1(a)）
 
 +   1. 这些城市中哪一个最靠南？
+
 +   A Elton
+
 +   B Follet
+
 +   C Gull
+
 +   *D Hart
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_244_0.png)
@@ -8784,9 +9237,13 @@ Source: Map and items are copyright © by the University of Iowa. All rights res
 构建需要阅读和解释印刷段落的评估问题集的步骤如下（Ebel, 1951; Wesman, 1971）：
 
 +   1. 找到一个有前景的段落。检查来源（教科书、期刊、参考书、专业书籍以及选集和文集），直到找到可以为其编写多个解释性题目的段落。
+
 +   2. 编写初始测试题目。为该段落编写尽可能多的题目。尝试利用段落的所有解释可能性，只要符合你的原始评估计划。
+
 +   3. 重写段落。在你有了初步的题目集后，重写段落以消除不必要的材料，这些材料对你所写的题目没有贡献。
+
 +   4. 考虑重写一些题目。对段落的更改可能需要修改或删除你已写的一些题目。步骤 3 和 4 的目标是产生一个简洁高效的段落和题目集。
+
 +   5. 只要必要就重复步骤 3 和 4，直到你满意地拥有了一套高效的题目。
 
 大多数商业调查成就测试都包含阅读理解分测验。你应该查阅这些测试，以了解如何使用段落来评估阅读理解。
@@ -8798,18 +9255,23 @@ Source: Map and items are copyright © by the University of Iowa. All rights res
 如果段落取自学科的原始来源、符合年龄要求
 
 
+
 books and magazines, newspapers, and textbooks students may encounter. In addition, authentic reading tasks may require students to read longer passages than typically appear on traditional reading comprehension tests. They may also require students to read from several sources to compare points of view or obtain reliable and complete information. For example, a student may read four different accounts of an event or of a procedure and then answer questions about the event or procedure, or about comparisons among the different accounts read.
 
 Alternately, you may want to combine reading, writing, and subject-matter exercises, such as conducting science experiments. For instance, students can individually read several pieces and answer questions about them. Then you can organize students into groups to discuss the pieces they read and to share their insights into interpreting them. Next, students can individually write essays or set up experiments to extend or synthesize the material they have read and discussed. The purpose of the intermediate discussion is to offer all students the opportunity, through group discussion, to clarify points, obtain information they may have missed through their reading, and “level the playing field” somewhat before the writing phase of the assessment begins.
 
 Longer and more authentic reading tasks use more of your class time for assessment than does the traditional method. An assessment that requires reading several original texts and writing essays after a class discussion may take several class periods to complete. You need to balance your assessment time against your teaching time before deciding which assessment strategy to use. You could try some combination of both. You could use more authentic assessment methods on some occasions and more efficient assessment methods on others. Compare students’ performance and the type of information you obtain under the different approaches. This may give you some insight into the validity of the assessment results from each method. (Assessment validity is discussed in Chapter 3.)
 
-The MAZE Item Type Reading comprehension can be assessed through a multiple-choice variety of the cloze reading exercise known as MAZE. The basic idea is to find an appropriate passage and embed a multiple-choice question in the passage that students can answer only if they comprehend the meaning of the surrounding passage. To better understand this procedure, consider the following multiple-choice item, which requires students to select the word that best completes the sentence, “The baby _____.”
+## The MAZE Item Type
 
-## Example
+Reading comprehension can be assessed through a multiple-choice variety of the cloze reading exercise known as MAZE. The basic idea is to find an appropriate passage and embed a multiple-choice question in the passage that students can answer only if they comprehend the meaning of the surrounding passage. To better understand this procedure, consider the following multiple-choice item, which requires students to select the word that best completes the sentence, “The baby _____.”
+
+### Example
 
 MAZE multiple-choice item before it is embedded in text
+
 The baby __1__.
+
 1. A cried
 B laughed
 C slept
@@ -8817,10 +9279,12 @@ D walked
 
 Notice that all options correctly complete this sentence when it is read outside the context of a reading passage. Now, consider the same item when it is embedded in a brief passage as shown in Item 2 below.
 
-## Example
+### Example
 
 MAZE multiple-choice item after it is embedded in text
+
 Mother and her six-month-old baby played for a long time. The baby __1__. He enjoyed being tickled under the arms.
+
 2. A cried
 *B laughed
 C slept
@@ -8830,13 +9294,17 @@ Option B is correct because of the context in which the item is embedded. Item 2
 
 MAZE items appear to have a considerable advantage over the usual cloze exercises, in which only the blank appears and students must fill in the missing word. They (a) assess whether students can construct meaning from the passages, (b) are objectively scored, (c) do not result in a student filling in blanks with words that leave you wondering whether a student understands the passage, and (d) do not require students to have a great deal of outside knowledge for you to assess their ability to read.
 
+
+
 The following suggestions for formulating MAZE test items are based on those used for the Degree of Reading Power (Touchstone Applied Science Associates, 1995a, 1995b) test.
 
-- 1. Design the items so that a student needs to read and understand the passage to answer correctly. As in the preceding example, when an item is considered in isolation, each option should make the sentence grammatically and semantically correct. However, once the item is embedded in the text, only one option should be correct.
-- 2. The passage should contain all the content information a student needs to answer the item correctly. For the item to assess reading ability, a student should not have to depend on recall of special experiences to find the correct answer. This usually means the passages must be written specifically for the test.
-- 3. All of the items’ options should be common words. All students should recognize and understand the meaning of each option. This ensures that when a student misses an item, the fault lies with the student’s inability to comprehend the reading passage rather than the student’s lack of knowledge about the meaning of the words in the item.
+1. Design the items so that a student needs to read and understand the passage to answer correctly. As in the preceding example, when an item is considered in isolation, each option should make the sentence grammatically and semantically correct. However, once the item is embedded in the text, only one option should be correct.
 
-## ENHANCED MULTIPLE-CHOICE ITEMS
+2. The passage should contain all the content information a student needs to answer the item correctly. For the item to assess reading ability, a student should not have to depend on recall of special experiences to find the correct answer. This usually means the passages must be written specifically for the test.
+
+3. All of the items’ options should be common words. All students should recognize and understand the meaning of each option. This ensures that when a student misses an item, the fault lies with the student’s inability to comprehend the reading passage rather than the student’s lack of knowledge about the meaning of the words in the item.
+
+# ENHANCED MULTIPLE-CHOICE ITEMS
 
 ## Tasks Requiring Combinations of Abilities
 
@@ -8846,10 +9314,13 @@ A criticism of teacher-made tests is that they often assess skills and knowledge
 
 Response-choice scored items, such as multiple-choice, can address many of the preceding criticisms by using enhanced items. Enhanced multiple-choice items require students to use knowledge and skills in combinations, often through a carefully crafted context-dependent item set. Enhanced multiple-choice items differ from simple forms of multiple-choice items in the following ways (Psychological Corporation, 1992a):
 
-- 1. They require students to use knowledge and skill in a context that is similar to real life or to know how the knowledge and skill will be used in new classroom learning.
-- 2. They assess how well students use the thinking and “doing” processes required by the discipline underlying the subject matter.
-- 3. Insofar as possible with paper-and-pencil tasks, they require students to perform actual skills that are the ultimate purpose of a learning target. Some performances are mental activities (decision making, identifying problem solutions, computations, reading, etc.). These cognitive performances can be assessed efficiently with paper-and-pencil tasks.
-- 4. They require students to use processes and knowledge in combination, sometimes from different subjects or from different teaching units of the same subject matter. This allows you to assess “constellations” of skills and abilities rather than only discrete pieces of learning.
+1. They require students to use knowledge and skill in a context that is similar to real life or to know how the knowledge and skill will be used in new classroom learning.
+
+2. They assess how well students use the thinking and “doing” processes required by the discipline underlying the subject matter.
+
+3. Insofar as possible with paper-and-pencil tasks, they require students to perform actual skills that are the ultimate purpose of a learning target. Some performances are mental activities (decision making, identifying problem solutions, computations, reading, etc.). These cognitive performances can be assessed efficiently with paper-and-pencil tasks.
+
+4. They require students to use processes and knowledge in combination, sometimes from different subjects or from different teaching units of the same subject matter. This allows you to assess “constellations” of skills and abilities rather than only discrete pieces of learning.
 
 The following examples show enhanced multiple-choice items from different curriculum areas. Chapter 8 described how to write more advanced formats for multiple-choice items.
 
@@ -8861,9 +9332,12 @@ For a class assignment, Tanya is going to write a report about her work at the r
 
 Here is the first part of Tanya's report. Use it to answer Questions 6 and 7.
 
+
+
 Our town has a new recycling center. I work there every (1) Saturday. My friend Bob works at the car wash. I have (2) learned that our city's dump is getting too full. It is too (3) full to take any more garbage. (4) (5)
 
-- 1. Which sentence contains information that does not belong?
+1. Which sentence contains information that does not belong?
+
 - A 2
 - B 3
 - C 4
@@ -8873,86 +9347,95 @@ Read the next part of Tanya's report and answer Question 8. This section has gro
 
 Recycling means reusing things instead of throwing (6) them away? People bring things to the center. Then (7) the center sells these things to companies that reuse (8) them. This way, natural resources are saved. (9)
 
-- 2. In Sentence 8, how should Then the center sells be written?
+2. In Sentence 8, how should Then the center sells be written?
+
 - A Then the Center sells
 - B Then the center sells
 - C Then The Center sells
 - D As it is
 
-### B. Items in science
+## B. Items in science
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_246_0.png)
-
-
-
 
 1. 如果所有黄蜂都被杀死，以下哪一项会首先增加？
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_247_0.png)
 
-# C. 社会研究中的题目
+## C. 社会研究中的题目
 
-## COLE 是如何赚取钱的
+### COLE 是如何赚取钱的
 
-### Cole 如何赚取钱 August
+#### Cole 如何赚取钱 August
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_247_1.png)
 
-### September
+#### September
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_247_2.png)
 
 1. 根据这些图表，哪项陈述是正确的？
-A Cole 在九月份浇花园赚的钱比八月份少。
-B Cole 在九月份遛狗赚的钱比八月份多。
-C Cole 在九月份洗盘子的次数比八月份少。
-D Cole 在上学日不倒垃圾。
+
+- A Cole 在九月份浇花园赚的钱比八月份少。
+- B Cole 在九月份遛狗赚的钱比八月份多。
+- C Cole 在九月份洗盘子的次数比八月份少。
+- D Cole 在上学日不倒垃圾。
 
 ## Summary
 
 ## 使用情境依赖题目集评估高阶思维
 
 - 开发用于评估高阶思维任务的基本规则
+
 - 在测试幼儿、双语学习者、有特殊学习困难的学生以及残疾学生时，考虑指标反应的适当性非常重要。
 
-## 评估定义性概念学习
+### 评估定义性概念学习
 
-- 定义性概念已被通过以下方式评估：
-  - 要求学生对概念给出正确的定义。
-  - 呈现概念的实例和非实例，并要求学生识别概念的实例。
-  - 给出概念的名称并要求学生产生该概念的新实例。
-  - 要求学生识别定义性概念的组成部分并举例说明各组成部分之间的关系。
+定义性概念已被通过以下方式评估：
 
-## 在更深层次上评估概念理解
+- 要求学生对概念给出正确的定义。
+- 呈现概念的实例和非实例，并要求学生识别概念的实例。
+- 给出概念的名称并要求学生产生该概念的新实例。
+- 要求学生识别定义性概念的组成部分并举例说明各组成部分之间的关系。
 
-- 使用复杂的表现性评估，让学生将概念应用于新情境并将其与其他概念和关系联系起来，是评估学生对概念的深入理解的最佳方式。本章介绍了评估这种理解的策略示例。
+### 在更深层次上评估概念理解
 
-## 评估规则和原理的理解
+使用复杂的表现性评估，让学生将概念应用于新情境并将其与其他概念和关系联系起来，是评估学生对概念的深入理解的最佳方式。本章介绍了评估这种理解的策略示例。
+
+### 评估规则和原理的理解
 
 - 一个人的行为如果受规则或原理支配，则意味着该人会定期对一类概念做出一类适当的关联反应。
+
 - 要评估学生是否理解一条规则，你必须确保任务评估的不仅仅是学生复述或陈述规则的能力。你必须要求学生将规则应用于新的或新颖的情境。
+
 - 与概念理解评估一样，评估学生是否理解原理的任务需要向学生呈现与教学中用作示例的情境不同的情境，并且用词与教学中使用的话语不完全相同。
+
 - 任务不应过度依赖阅读理解，以至于干扰识别那些虽然理解规则但阅读能力不佳的学生。
+
 - 制作评估规则或原理理解的口头题目的两种基本策略是
   - 向学生呈现原理中规定的先决条件，并要求学生陈述或选择如果应用规则将遵循的后果的示例。
   - 向学生呈现后果，并要求学生陈述或选择根据规则产生这些后果必须存在的先决条件。
+
 - 与前两种基本类型相似的任务变体包括
   - 要求学生识别与在给定情境中应用原理一致的推论或预测。
   - 要求学生产生在给定情境中应用原理的推论或后果的新示例。
   - 要求学生陈述解释特定情境或一系列事件的原理。
 
-## 评估问题解决能力
+### 评估问题解决能力
 
-- 问题解决涉及识别实现期望结果的障碍并使用适当的方法克服这些障碍以实现目标。问题解决可以从多个角度考虑，包括问题是结构良好还是结构不良，解决方案是否由图式驱动，以及解决方案策略是否特定于学科或通用。理解这些角度对于确定适当的评估策略至关重要。
-- 以 IDEAL 问题解决者为框架，本章描述并举例说明了可用于评估特定问题解决能力的任务。提出了评估学生识别和认识问题、定义和表征问题、探索和使用启发式和其他解决方案策略，以及回顾和评估问题解决方案的能力的策略。
+问题解决涉及识别实现期望结果的障碍并使用适当的方法克服这些障碍以实现目标。问题解决可以从多个角度考虑，包括问题是结构良好还是结构不良，解决方案是否由图式驱动，以及解决方案策略是否特定于学科或通用。理解这些角度对于确定适当的评估策略至关重要。
 
-## 评估批判性思维能力
+以 IDEAL 问题解决者为框架，本章描述并举例说明了可用于评估特定问题解决能力的任务。提出了评估学生识别和认识问题、定义和表征问题、探索和使用启发式和其他解决方案策略，以及回顾和评估问题解决方案的能力的策略。
+
+### 评估批判性思维能力
 
 - 先提出批判性题目，然后在向学生发放选择题之前将其收回。
+
 - h. 比较你获得的结果。你收到的信息的质量有何相似之处和不同之处？哪个任务更有效？为什么？
+
 - i. 与本班其他人分享你的结果。你的结果与他们的相比如何？在所评估的学科和年级方面是否存在差异？班级可以从集体经验中得出什么结论？
 
-2. 对于你教授或计划教授的学科，制作一本包含精心设计的任务的笔记本，这些任务评估不同的问题解决能力。根据 IDEAL 问题解决者的类别组织你的任务。按如下结构组织你的笔记本：
+2\. 对于你教授或计划教授的学科，制作一本包含精心设计的任务的笔记本，这些任务评估不同的问题解决能力。根据 IDEAL 问题解决者的类别组织你的任务。按如下结构组织你的笔记本：
 
 - a. 使用本章介绍的 17 种问题解决评估策略中的每一种制作一个评估任务。
 - b. 每页输入一个评估任务。用学科、教学单元、学生年级、评估策略以及任务所评估的 IDEAL 问题解决者类别对任务进行标注。
@@ -8960,19 +9443,15 @@ D Cole 在上学日不倒垃圾。
 - d. 仔细审阅你的工作。确保每个任务的内容和评分量规准确无误，并且任务设计精良。
 - e. 与本课程的其他参与者分享你的笔记本。
 
-3. 选择你教授或计划教授的一个学科和年级水平，对于批判。
+3\. 选择你教授或计划教授的一个学科和年级水平，对于批判。
 
+- d. 仔细审阅你的工作。确保每个任务的内容和评分量规都是准确的。确保任务设计精良。
+- e. 将你的笔记本与本课程的其他成员共享。
 
+5\. 对于你教授或计划教授的某一学科和年级，确定学生应能够使用的图表和表格（图表）：
 
-
-
-+   d. 仔细审阅你的工作。确保每个任务的内容和评分量规都是准确的。确保任务设计精良。
-+   e. 将你的笔记本与本课程的其他成员共享。
-
-## 5. 对于你教授或计划教授的某一学科和年级，确定学生应能够使用的图表和表格（图表）：
-
-+   a. 为该图表设计一个情境依赖的题目集，以评估学生使用该图表的能力，而不仅仅是读取其数值。为该题目集设计至少两个任务。使用第7章和第8章中的相应核查表审阅这些题目。附上每个题目的已完成核查表。
-+   b. 将你的情境依赖题目集与本课程的其他成员共享。
+- a. 为该图表设计一个情境依赖的题目集，以评估学生使用该图表的能力，而不仅仅是读取其数值。为该题目集设计至少两个任务。使用第7章和第8章中的相应核查表审阅这些题目。附上每个题目的已完成核查表。
+- b. 将你的情境依赖题目集与本课程的其他成员共享。
 
 ## Additional Readings
 
@@ -8987,6 +9466,8 @@ Joshua, S., & Dupin, J. J. (1991). In physics class, exercises can cause problem
 Royer, J. M., Cisero, C. A., & Carlo, M. S. (1993). Techniques and procedures for assessing cognitive skills. Review of Educational Research, 63, 201–243.
 
 对认知科学研究文献的综述，重点关注研究人员用于评估思维技能的任务。综述围绕以下阅读中描述的 Glaser、Lesgold 和 Lajoie 发展框架组织。
+
+
 
 Glaser, R., Lesgold, A., & Lajoie, S. (1985). Toward a cognitive theory for the measurement of achievement. In R.R. Ronning, J. Glover, J. C. Conoley, & J. C. Witt (Eds.), The influence of cognitive psychology on testing and measurement (pp. 41–85). Hillsdale, NJ: Erlbaum.
 
@@ -9005,49 +9486,51 @@ Nitko, A.J. (1996). Educational assessment of students (2nd ed.). Englewood Clif
 第10章给出了例子并描述了如何设计任务以评估以下问题解决技能发展的维度：知识组织和结构、问题表征的深度、心理模型的品质、程序的效率、表现的自动化以及学习的元认知技能。本章说明了如何实施 Glaser、Lesgold 和 Lajoie（1985）发展框架的方法。
 
 Clarke, J. H. (1990). Patterns of thinking: Integrating learning skills in content thinking. Boston: Allyn and Bacon.
+
 Fisher, R. (1990). Teaching children to think. Oxford, England: Basil Blackwell Ltd.
+
 Halpern, D. F. (1989). Thought and knowledge: An introduction to critical thinking (2nd ed.). Hillsdale, NJ: Erlbaum.
+
 Norris, S. P., & Ennis, R. H. (1989). Evaluating critical thinking. Pacific Grove, CA: Midwest Publications, Critical Thinking Press.
 
 这些卷包含了关于构成批判性思维和问题解决的各种技能和能力的易读且实用的讨论。它们给出了教学建议以及示例任务。Clarke 书籍给出了概念图任务的良好例子（第8章）。
 
-U. S. Department of Education (1999). NAEP 1998 writing report card highlights. (NCES-464) Jessup, MD: U.S. Department of Education ED Pubs. Also available on the National Center for Educational Statistics Website (http://nces.ed.gov/nationsreportcard/writing/results1998.asp/).
+U. S. Department of Education (1999). NAEP 1998 writing report card highlights. (NCES-464) Jessup, MD: U.S. Department of Education ED Pubs. Also available on the National Center for Educational Statistics Website (`http://nces.ed.gov/nationsreportcard/writing/results1998.asp/`).
 
 这份简报总结了全国写作评估。它包含了使用国家教育进展评估整体评分量规评估的4年级、8年级和12年级学生的写作样本，从而向你展示了一些写作评估的例子。
 
-## Performance, Portfolio, and Authentic Assessments:
-An Overview
+# Performance, Portfolio, and Authentic Assessments: An Overview
 
 ## LEARNING TARGETS
 
 After studying this chapter, you should be able to do the following:
 
-## What is Performance Assessment?
+### What is Performance Assessment?
 
 +   1. 区分表现性任务与其他评估格式。 [1, 3, 6]
 +   2. 区分课堂表现活动与表现性评估任务。 [1, 4]
 
-## Types of Performance Assessments
+### Types of Performance Assessments
 
 +   3. 列出、解释并举例说明表现性评估的主要类型。 [1, 4, 6]
 
-## Authentic Assessments
+### Authentic Assessments
 
 +   4. 解释真实性评估的含义及其基本特征。 [1, 6]
 
-## Advantages and Criticisms of Performance Assessments
+### Advantages and Criticisms of Performance Assessments
 
 +   5. 解释使用表现性评估的主要优点和缺点。 [1, 6]
 
-## How Using Performance Assessment Can Improve Your Teaching
+### How Using Performance Assessment Can Improve Your Teaching
 
 +   6. 描述使用表现性评估如何改善教学、学习和评估效度。 [4, 1, 3, 6]
 
-## Multiple-Intelligences Perspective on Performance Assessments
+### Multiple-Intelligences Perspective on Performance Assessments
 
 +   7. 解释从多元智能视角使用表现性评估的优势和劣势。 [1, 6]
 
-## Important Terms and Concepts
+### Important Terms and Concepts
 
 +   8. 解释本章末尾列出的重要术语和概念如何适用于教育评估。 [6, 1, 4]
 
@@ -9059,15 +9542,15 @@ After studying this chapter, you should be able to do the following:
 
 ## What Is Performance Assessment?
 
-## Definition
+### Definition
 
 表现性评估（a）提出一个动手任务，要求学生完成一项需要运用多个学习目标的知识和技能的活动，（b）使用明确定义的标准来评估学生实现这种应用的程度。表现性评估要求学生对自己的知识做些什么，例如制作某物（建造一面书架）、制作报告（报告一项调查家长态度的团体项目）或进行演示（展示如何在实验室天平上测量质量）。以下示例展示了一位历史教师构建的决策任务。教师使用这一个任务来评估从《学习维度模型》（Marzano et al., 1992）派生的几种类型的学习目标。 （见附录 E，了解这些类型的摘要。）
 
-## Example
+### Example
 
 高中历史课程的表现性评估任务
 
-## Decision-Making Task
+#### Decision-Making Task
 
 假设你生活在1940年代，总统哈里·S·杜鲁门请求你担任白宫特别工作组成员。目标是决定如何迫使日本无条件投降，同时为战后世界提供安全保障。
 
@@ -9089,37 +9572,36 @@ After studying this chapter, you should be able to do the following:
 
 你将获得量规并在以下每个学习目标上接受评估：
 
-## Content Learning Target
+#### Content Learning Target
 
 +   1. 你对战争迫使敏感问题浮现并导致人们面对内在价值观和信念冲突这一原则的理解。
 
+
+
 ## Information Processing Learning Targets
 
-+   2. 你评估每个信息来源对项目各部分价值的能力。
++ 2. 你评估每个信息来源对项目各部分价值的能力。
 
 ## Complex Thinking Learning Targets: Decision Making
 
-+   3. 你识别投下原子弹的重要且适当的替代方案的能力。
-+   4. 你识别评估每个待考虑替代方案的重要且适当标准的能力。
-+   5. 你准确评估每个替代方案在每个标准上满足程度的能力。
-+   6. 你选择充分满足标准并回答初始决策问题的替代方案的能力。
++ 3. 你识别投下原子弹的重要且适当的替代方案的能力。
++ 4. 你识别评估每个待考虑替代方案的重要且适当标准的能力。
++ 5. 你准确评估每个替代方案在每个标准上满足程度的能力。
++ 6. 你选择充分满足标准并回答初始决策问题的替代方案的能力。
 
 ## Habits of Mind Learning Target
 
-+   7. 你在此作业中有效地定义目标并解释实现该目标计划的能力。
++ 7. 你在此作业中有效地定义目标并解释实现该目标计划的能力。
 
 ## Effective Communication Learning Target
 
-+   8. 你以两种或以上方式传达你的结论和发现的能力。
++ 8. 你以两种或以上方式传达你的结论和发现的能力。
 
 > Source: Adapted from Assessing Student Outcomes: Performance Assessment Using the Dimensions of Learning Model (pp. 27-29) by R. J. Marzano, D. Pickering, and J. McTighe, 1993, Alexandria, VA: Association for Supervision and Curriculum Development. Adapted by permission of McREL Institute, 2550 S. Parker Rd., Suite 500, Aurora, CO 80014. Telephone (303) 337-0990. (c) by McREL Institute. All rights reserved.
 
 ## Balancing Assessment Formats
 
-你不应使用表现性评估来评估每个学习目标。每个课程都非常多样化，并非每个学习目标都需要学生应用他们的知识和技能。因此，在选择评估方法之前，你必须首先明确你想要评估的学习目标，然后将方法与之匹配。一些学习目标，例如，要求学生学习
-
-
-事实（例如国家政府的结构、宪法和权利法案的主要条款）、理解一个事件或理论，或比较两个或多个概念。你应该使用传统的题目格式来获得有效的结果，以评估这些类型的学习目标。另一方面，你应该使用表现性任务来评估需要学生在使用知识和技能执行某项任务时应用其知识和技能的学习目标。记住的一个经验法则是：简单的学习目标需要简单的评估格式；复杂的学习目标需要复杂的评估（Arter, 1998）。
+你不应使用表现性评估来评估每个学习目标。每个课程都非常多样化，并非每个学习目标都需要学生应用他们的知识和技能。因此，在选择评估方法之前，你必须首先明确你想要评估的学习目标，然后将方法与之匹配。一些学习目标，例如，要求学生学习事实（例如国家政府的结构、宪法和权利法案的主要条款）、理解一个事件或理论，或比较两个或多个概念。你应该使用传统的题目格式来获得有效的结果，以评估这些类型的学习目标。另一方面，你应该使用表现性任务来评估需要学生在使用知识和技能执行某项任务时应用其知识和技能的学习目标。记住的一个经验法则是：简单的学习目标需要简单的评估格式；复杂的学习目标需要复杂的评估（Arter, 1998）。
 
 ## 表现性评估的基本特征
 
@@ -9139,13 +9621,18 @@ After studying this chapter, you should be able to do the following:
 
 一般评分标准包含适用于许多不同任务的评分指南，而不仅仅适用于一个特定任务。然而，它作为制定更具体评分标准的一般框架。下面是评估与我们之前介绍的类似的高中历史任务的任何内容学习目标的一般评分指南的示例。例如，以海湾战争和布什总统为中心的任务就是可以评估此内容学习目标的替代任务。
 
-## 示例
+### 示例
 
 可应用于高中历史任务的一般评分标准。
+
 正在评估的内容学习目标：理解战争会使敏感问题浮出水面并迫使人们面对价值观和信念的固有冲突。
+
 4 充分展示对任务或情况特有的概括性概念和事实的理解。对该信息某些方面提供新的见解。
+
 3 展示对任务或情况特有的概括、概念和事实的完整而准确的理解。
+
 2 展示对任务或情况特有的概括、概念和事实的不完整理解。
+
 1 展示对任务或情况特有的概括、概念和事实的严重误解。
 
 来源：改编自《评估学生成果：使用学习维度模型的表现性评估》（第29–30页）R. J. Marzano, D. Pickering 和 J. McTighe，1993年，Alexandria, VA，Association for Supervision and Curriculum Development。经 McREL Institute 许可改编，2550 S. Parker Rd., Suite 500, Aurora, CO 80014。电话 (303) 337-0990。© McREL Institute。保留所有权利。
@@ -9160,9 +9647,10 @@ After studying this chapter, you should be able to do the following:
 
 具体评分标准是一种评分量表，它将一般评分框架应用于特定任务。仔细应用一般评分框架来制定具体评分标准可确保你的具体评分标准以与一般评分框架一致的方式评估学生。以下是历史教师用来评估学生对之前介绍的高中历史决策任务表现的具体评分标准。它以前述的一般评分标准作为框架。
 
-## 示例
+### 示例
 
 可应用于高中历史任务的具体评分标准。
+
 正在评估的内容学习目标：理解战争会使敏感问题浮出水面并迫使人们面对价值观和信念的固有冲突。
 
 - 4 充分展示对“战争会使敏感问题浮出水面并迫使人们面对价值观和信念的固有冲突”这一概括的理解。对战时人们的行为提供新的见解。
@@ -9174,6 +9662,8 @@ After studying this chapter, you should be able to do the following:
 
 ## 表现性评估的类型
 
+
+
 许多类型的任务符合我们在此采用的广泛定义。表11.1列出了其中大部分。在下面的段落中，我们将描述它们并举例说明。
 
 ## 结构化、即时任务
@@ -9181,6 +9671,7 @@ After studying this chapter, you should be able to do the following:
 当你决定材料的内容和时间时，你使用结构化、即时任务或练习
 
 表11.1 表现性评估技术类型
+
 A. 针对个人学生、小组或两者而设的结构化、即时任务
 1. 纸笔任务
 2. 需要超出纸笔的设备和资源的任务
@@ -9198,20 +9689,15 @@ H. 模拟和人为情境
 3. 计算机化自适应文本场景
 4. 计算机化视听模拟
 
-
-
-
-
 应使用，说明了绩效的指导，描述了学生应努力实现的结果类型，告知学生他们正在接受评估，并为学生提供为评估做准备的机会。这类任务也称为即时（或控制）任务。
 
 ## 纸笔任务
 
 我们已经研究了许多类型的纸笔任务。在第7章、第9章和第10章中，我们讨论了 constructed response 和 essay 题目。这些格式不仅允许学生记录答案，还可以让他们解释、阐述推理并表达解决问题的思路。有时你的主要关注点是学生创作的书面产品本身，例如故事、报告或绘画。另一些时候，你可能更感兴趣的是学生使用的过程（例如，当学生记录完成实验所用的步骤或解释他如何解决问题时）。以下是一些额外示例：
 
-## Example
+### Example
 
 即时纸笔表现任务示例
-
 - 1. 解决这个算术应用题并解释你是如何解决的。
 - 2. 研究以下显示 Sally 如何使用时间的图表。然后，利用图表中的信息写一个关于 Sally 典型一天的故事。
 - 3. 绘制图表来说明以下应用题中的数学思想。
@@ -9222,7 +9708,7 @@ H. 模拟和人为情境
 
 例如，在小学综合科学中，如果你要求他们测量物体、体积、质量等，你就可以直接评估学生对公制系统的理解和使用。如果你只要求学生进行从一个系统或单位到另一个系统的数值转换，或根据测量设备的图片回答问题，你就使用了间接评估。你可以评估学生的估算技能、测量技能和系统性，允许替代的正确表现，或封闭式回答，只允许一个最佳或正确答案。下面给出了一个开放式回答、非纸笔表现任务的示例。请注意，在此示例中，重点在于学生使用的过程而不是最终产品。
 
-## Example
+### Example
 
 一个需要超出纸笔资源的开放式科学任务
 
@@ -9242,10 +9728,9 @@ H. 模拟和人为情境
 
 与结构化、即时表现相反的是自然发生的表现。自然发生的任务要求你在自然环境中观察和评估学生：在典型的课堂环境中、在操场上或在家中。在这些环境中，你很可能会看到学生在学习目标上的典型表现，例如与团队成员合作实现目标。在自然环境中，你不会告诉学生他们正在接受评估，也不会以任何方式控制情况。以下是一些示例。
 
-## Example
+### Example
 
 自然发生或典型表现任务示例
-
 - 1. 观察学生在操场上处理冲突的方式。
 - 2. 收集每个学生在每门科目中写的全部作品并分析其语法、拼写和句法错误，以确定学生的典型语言使用情况（至少在学校作业中）。
 - 3. 观察学生在学校集市上经营饮料摊时是否能正确找零。
@@ -9253,7 +9738,6 @@ H. 模拟和人为情境
 虽然自然发生的环境可能让你评估学生的典型表现，但这并不总是如此。在自然环境中，你必须等待特定学生执行你想要评估的特定活动的机会出现。活动可能不会在你观察时发生。这种等待降低了这种评估方式的效率。例如，上述任务 2 不太可能为你提供所有所需的信息来确定学生甚至对写作机械的掌握程度。例如，并非所有学生需要学习的拼写模式和句子结构形式都可能出现在每个学生的写作中。因此，你无法彻底评估学生对句子结构的运用。
 
 这个简单示例说明了使用自然发生事件作为主要评估任务来源的困难。以下是主要缺点：
-
 - 你花费大量时间等待。
 - 你对将发生什么表现以及何时发生几乎没有控制权。
 - 你无法确保所有学生都会执行相同的任务。
@@ -9264,10 +9748,9 @@ H. 模拟和人为情境
 
 个人学生项目 个人项目是一项长期活动，会产生学生产品：模型、功能性物体、实质性报告或收藏。以下是一些示例：
 
-## Example
+### Example
 
 个人学生项目示例
-
 - 1. 在学期中每个假日前几个月收集和分类报纸和杂志广告。
 - 2. 使用你在学期中学会使用的手工工具制作一件小家具。
 - 3. 使用本单元教授的光学原理制作一个照相机的实用模型。
@@ -9278,15 +9761,10 @@ H. 模拟和人为情境
 尽管项目通常是有价值的教育活动，但它们作为个人学生评估工具的实用性取决于你设计它们的程度。我们将在第 12 章讨论如何设计项目。
 
 小组项目 小组项目要求两个或更多学生共同完成一个较长期的项目。小组项目作为评估技术的主要目的是评估学生是否能够合作、适当且有效地共同创造高质量的产品。小组项目的学习目标取决于学科内容和你评估的学生水平。例如，小组项目可能侧重于：
-
 - 以行动为导向的学习目标（制作一份通讯）。
 - 以学生兴趣为导向的学习目标（写一篇关于他们感兴趣的主题的论文）。
 
-
-
-
-
-## 图 11.1 项目的积极特征
+### 图 11.1 项目的积极特征
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_257_0.png)
 
@@ -9295,11 +9773,11 @@ H. 模拟和人为情境
 
 我们在第 12 章中提供了改进小组项目的建议。接下来展示一个以学科为导向的小组项目的例子。
 
-## 示例
+### 示例
 
 美国历史课程中针对初中或高中学生的小组项目
 
-## 历史调查任务
+#### 历史调查任务
 
 近年来，关于克里斯托弗·哥伦布地位的争议不断出现。他是英雄还是恶棍？在我们研究哥伦布时，我们将阅读由不同历史学家撰写的多项资源，了解他们对哥伦布的看法。
 
@@ -9311,26 +9789,24 @@ H. 模拟和人为情境
 
 小组每个成员都将根据以下学习目标进行评估。你将获得每个学习目标的评分量规，以便更清楚地了解评估内容。
 
-## 社会研究内容学习目标
-
+#### 社会研究内容学习目标
 - 1. 你理解记录的历史受历史学家视角的影响。
 - 2. 你理解哥伦布发现和定居新世界周围的事件。
 
-## 复杂思维学习目标：历史调查
-
+#### 复杂思维学习目标：历史调查
 - 1. 你识别并解释过去事件周围的困惑、不确定性或矛盾的能力。
 - 2. 你发展并捍卫对过去事件周围的困惑、不确定性或矛盾的合乎逻辑且合理的解决办法的能力。
 
-## 有效沟通学习目标
-
+#### 有效沟通学习目标
 - 1. 你为多种目的进行沟通的能力。
 - 2. 你以多种方式进行沟通的能力。
 
-## 协作学习目标
-
+#### 协作学习目标
 - 1. 你与小组中的所有学生一起成功完成项目的能力。
 - 2. 你为向全班展示研究成果提供良好想法和资源的贡献能力。
 - 3. 你做多种不同活动以帮助小组成功完成项目的能力。
+
+
 
 > 来源：改编自《评估学生成果：使用学习维度模型的绩效评估》（第 60 页）R. J. Marzano、D. Pickering 和 J. McTighe，1993 年，Alexandria, VA：监督与课程发展协会。经 McREL Institute 许可改编，2550 S. Parker Rd., Suite 500, Aurora, CO 80014。电话 (303) 337-0990。© McREL Institute。保留所有权利。
 
@@ -9340,29 +9816,25 @@ H. 模拟和人为情境
 
 用于评估个人学生在小组项目中从事小组项目时四种协作和合作学习目标的一般量规
 
-## 学习目标 A. 致力于实现小组目标。
-
+### 学习目标 A. 致力于实现小组目标。
 - 4 积极帮助确定小组目标并努力实现它们。
 - 3 传达对小组目标的承诺并有效履行分配的角色。
 - 2 传达对小组目标的承诺但未履行分配的角色。
 - 1 未致力于小组目标或积极阻碍它们。
 
-## 学习目标 B. 表现出有效的个人间技能。
-
+### 学习目标 B. 表现出有效的个人间技能。
 - 4 积极促进有效的群体互动，并在对他人的感受和知识基础敏感的方式下表达思想和意见。
 - 3 在提示下参与群体互动。以对他人的感受和知识基础敏感的方式表达思想和意见。
 - 2 在未提示的情况下参与群体互动，或在不考虑他人的感受和知识基础的情况下表达思想和意见。
 - 1 即使在提示下也不参与群体互动，或以对他人的感受和知识基础不敏感的方式表达思想和意见。
 
-## 学习目标 C. 促进小组维护。
-
+### 学习目标 C. 促进小组维护。
 - 4 积极帮助小组确定小组过程中必要的变化或修改并努力执行这些变化。
 - 3 帮助确定小组过程中必要的变化或修改并努力执行这些变化。
 - 2 在提示下，帮助确定小组过程中必要的变化或修改，或仅在执行这些变化中发挥最小作用。
 - 1 即使在提示下也不尝试确定小组过程中必要的变化或修改，或拒绝努力执行这些变化。
 
-## 学习目标 D. 在小组中有效履行多种角色。
-
+### 学习目标 D. 在小组中有效履行多种角色。
 - 4 在小组中有效履行多个角色。
 - 3 在小组中有效履行两个角色。
 - 2 尝试在小组中履行多个角色，但在次要角色上成功有限。
@@ -9386,18 +9858,17 @@ H. 模拟和人为情境
 
 就评估目的而言，作品集是学生作品的有限集合，用于展示学生的最佳作品或展示学生在给定时间内的教育成长。作品集不仅仅是学生所有作品的集合：放入作品集的作品仅限于最能服务于作品集目的的作品。作品集既不是剪贴簿，也不是学生所有成就的“倾倒地”。作品集中的项目经过仔细和有意地选择，以便整个集合实现其目的。虽然创建作品集有其他目的，但本章仅讨论两种评估目的¹：展示自己的最佳作品和展示教育成长。
 
-## 最佳作品作品集
+### 最佳作品作品集
 
 最佳作品作品集包含学生的最佳最终产品。你主要出于总结性目的使用最佳作品作品集。以下是最佳作品作品集所服务的用途的一些例子。
 
-## 示例
+#### 示例
 
 最佳作品作品集的例子
 
 总体目的：对个人学生的评估
 
-### 可能的具体目的
-
+##### 可能的具体目的
 - 学科掌握和学习的证据。
 - 在艺术或写作等领域取得高水平成就的证据。
 - 为毕业目的在某一学科达到最低能力要求的证据。
@@ -9411,8 +9882,7 @@ H. 模拟和人为情境
 
 总体目的：沟通
 
-### 可能的具体目的
-
+##### 可能的具体目的
 - 学生向其父母展示的作品。
 - 将有关学生的信息传递给下一位教师。
 - 学校的展示。
@@ -9427,43 +9897,41 @@ H. 模拟和人为情境
 
 与其他形式的绩效评估一样，你只有在制定评分量规后才评估最佳作品作品集。作品集的评分量规通常适用于整个作品集而不是每件作品单独，但也有例外。我们将在第 12 章讨论作品集的量规。
 
-## 成长和学习进展作品集
+### 成长和学习进展作品集
 
 成长和学习进展作品集包含学生的作品示例以及评论，展示学生在给定时期内的学习如何进展。它不侧重于学生产生的最终产品。相反，你和学生使用作品集进行形成性目的，以监测学生的学习和思维进展、诊断学习和思维困难，并指导新的学习和思维。学生在决定应包含在此作品集中的内容方面发挥重要作用，并学习使用作品集来理解和评估自己的进展。以下是一些例子：
 
-
-
-## 示例
+#### 示例
 
 成长与学习档案的示例
 
 总体目的：监测个别学生的进步
 
-## 可能的具体目的
+##### 可能的具体目的
 - 教师和/或学生希望回顾进步和成绩的变化。
 - 学生需要回顾自己的作品，以了解所取得成就的“长远视角”或“整体图景”。
 
-## 档案内容
+##### 档案内容
 - 学生在学习过程中出现的中间阶段的作品或成果。这些可能包括初稿、思维记录和重写。最终成果也应放入档案中。
 
 总体目的：日常教学
 
-## 可能的具体目的
+##### 可能的具体目的
 - 作为与学生讨论其想法和作品的基础。
 - 记录学生思维和概念解释的变化。
 - 作为诊断学生在某一学科学习困难的基础。
 
-## 档案内容
+##### 档案内容
 - 学生最近完成的作品示例、学生收集的数据、某一学科中正在进行的调查的最新发现、学生对正在进行的作品的自身解释等。
 
 总体目的：自我反思和自我指导
 
-## 可能的具体目的
+##### 可能的具体目的
 - 反思自己在学科知识和技能方面的进步，例如在阅读方面。
 - 反思自己对事件的思考方式的变化，例如如何解释一个科学现象。
 - 在回顾其他学生的档案后，反思自己的进步。
 
-## 档案内容
+##### 档案内容
 - 在不同时间点完成的作品示例、学生对某一学科特定问题的过去和现在的概念性思维记录、学生对其自身作品的过去和现在评价的记录等。
 
 要使成长和学习进展档案有效，它必须精心制作。我们将在第12章讨论如何制作它们。
@@ -9474,11 +9942,14 @@ H. 模拟和人为情境
 
 演示是一种即时表演，学生在其中展示其能够使用知识和技能完成一个定义明确的复杂任务。演示不像项目那样长或复杂。演示通常是封闭式应答任务。构成演示的任务通常定义明确，学生和评估者通常都知道“正确”或“最佳方式”。然而，允许个人差异；演示方式和呈现风格在学生展示演示时通常很重要。4-H 俱乐部经常使用演示：男孩和女孩在各种农业和家政领域展示他们的技能。
 
+
+
 在学校里，学生可能会在以下示例中展示他们在正确技术方面的技能。
 
 ## 示例
 
-用于评估的演示示例
+### 用于评估的演示示例
+
 - 1. 演示制作面包时揉面团的正确方法。
 - 2. 演示如何设置显微镜以观察染色玻片。
 - 3. 演示如何爬绳。
@@ -9491,6 +9962,7 @@ H. 模拟和人为情境
 实验或调查是一种即时表演，学生在其中计划、进行并解释实证研究的结果。该研究侧重于回答特定的研究问题，例如“本校大多数学生是否支持本州的死刑法律？”或调查特定的研究假设“鲜艳的广告会被记住更久”。按此定义，实验或调查包括自然科学和社会科学学科中发生的各种研究活动。它们包括实地和调查研究以及实验室和对照组实验，可以作为个人或小组活动进行。
 
 实验让你评估学生是否使用适当的研究探究技能和方法。你也可以评估学生是否已发展出适当的概念框架和理论性、学科性的对所调查现象的解释。为了评估这些后者方面，重点关注学生的参照框架质量、他们对所研究问题的心理表征、他们计划或设计研究的水平、他们能够指定的问题或假设的质量，以及他们对数据关系存在原因所提供的解释的质量。为了评估这些能力，请设计你的实验或调查任务，使学生必须：
+
 - 1. 在开始收集数据之前做出估计和预测。
 - 2. 收集自己的数据，对其进行分析并展示分析结果。
 - 3. 得出结论并通过引用所收集的适当证据来支持结论。
@@ -9501,9 +9973,9 @@ H. 模拟和人为情境
 
 口头报告允许学生以访谈、演讲或口头报告的形式言语化其知识并使用其口语技能。确定口头报告应侧重的学习目标。例如，在语言和语言艺术课程中，许多学习目标侧重于风格和沟通技能，而非内容的正确性。在某些课程中，流利地讲外语是一项重要的学习目标。以下是建议用于外语口语能力面试的熟练程度量表中的主要锚点的示例：
 
-## 示例
+### 示例
 
-评估外语口语熟练程度的胜任力水平描述示例
+#### 评估外语口语熟练程度的胜任力水平描述示例
 
 | 熟练程度 | 描述 |
 |---|---|
@@ -9520,42 +9992,36 @@ H. 模拟和人为情境
 
 戏剧化表演结合了言语化、口语和表达技能以及动作表演。学生可以通过扮演角色展示对虚构人物或历史人物的理解，例如，通过表演展示这些人物的意识形态立场和个人特征。虽然戏剧化表演通常涉及口语技能，但有时可能不涉及。例如，在阅读《哈克·芬恩》之后，教师可以要求学生
 
+### 示例 11.1
 
+#### 对学生口头演讲质量进行评估的简单评分量表示例。
 
-
-
-## 示例 11.1
-
-对学生口头演讲质量进行评估的简单评分量表示例。
-
-## 课堂演讲评分量表
+#### 课堂演讲评分量表
 
 学生姓名 ______________________________ 日期 __________
+
 演讲主题 ______________________________
 
 1. 演讲内容是否对主题有意义？
-1 大部分演讲内容并不真正有意义
-2 只有约 50% 的演讲内容相关
-3 大部分内容相关；偶尔有不相关想法
-4 所有内容都明显且清晰地相关
-
+   1 大部分演讲内容并不真正有意义
+   2 只有约 50% 的演讲内容相关
+   3 大部分内容相关；偶尔有不相关想法
+   4 所有内容都明显且清晰地相关
 2. 表达是否流畅且不犹豫？
-1 几乎每句话都有长时间停顿和找词现象
-2 约 50% 的句子出现停顿和找词现象
-3 偶尔出现停顿和找词现象
-4 表达流畅；没有停顿或找词现象
-
+   1 几乎每句话都有长时间停顿和找词现象
+   2 约 50% 的句子出现停顿和找词现象
+   3 偶尔出现停顿和找词现象
+   4 表达流畅；没有停顿或找词现象
 3. 演讲者是否使用正确的语法？
-1 大多数句子都有错误
-2 约 50% 的句子有错误
-3 1 到 3 处错误
-4 没有错误
-
+   1 大多数句子都有错误
+   2 约 50% 的句子有错误
+   3 1 到 3 处错误
+   4 没有错误
 4. 演讲者是否看着听众？
-1 大部分时间都避开视线
-2 只有 50% 的时间看着听众
-3 大部分时间看着听众
-4 不断看着听众
+   1 大部分时间都避开视线
+   2 只有 50% 的时间看着听众
+   3 大部分时间看着听众
+   4 不断看着听众
 
 模仿哈克·芬恩在课堂上可能的表现方式 (Armstrong, 1994)。
 
@@ -9577,7 +10043,9 @@ H. 模拟和人为情境
 
 表现性评估有时被称为替代性评估或真实性评估。然而，这些术语不能互换使用。“替代”在替代性评估中通常意味着与标准化成就测试以及多项选择（是非题、配对题、完形题）题型相对立。从教育哲学角度来看，“真实”在真实性评估中通常意味着向学生呈现直接对其教育有意义的任务，而不是间接有意义。例如，阅读几部长篇作品并用它们来比较和对比不同的社会观点是直接有意义的，因为这是受过教育的公民所做的深思熟虑的阅读。另一方面，阅读短段落并回答关于“主旨”或段落中人物做了什么的问题，则是间接有意义的，因为它只是现实阅读的最终学习目标的一个片段或组成部分。“现实”和“有意义”是教育工作者在谈论真实性评估时经常使用的术语。正如我们稍后将讨论的，这些术语也引出了进一步的问题，例如，“在哪个情境下是现实的？”和“对谁有意义？”
 
-真实性特征 你在本书之外阅读的表现性评估材料会提到真实性评估。这通常意味着学生是在直接具有教育意义的任务上接受评估。真实性任务具有以下特征 (Wiggins, 1990)：
+### 真实性特征
+
+你在本书之外阅读的表现性评估材料会提到真实性评估。这通常意味着学生是在直接具有教育意义的任务上接受评估。真实性任务具有以下特征 (Wiggins, 1990)：
 
 - 1. 它们要求学生运用知识完成有意义的任务。
 - 2. 它们复杂且要求学生使用不同知识、技能和能力的组合。
@@ -9588,14 +10056,24 @@ H. 模拟和人为情境
 
 你对表现性任务类型的回顾表明，并非所有任务都体现了 Wiggins 的所有真实性特征。此外，你应该认识到真实性是有程度之分的：任务在满足上述任何一个特征的程度上会有所不同。
 
-本身就很有价值 围绕真实性评估任务的宣传往往通过批评多项选择、配对、是非和简答题等格式来为其辩护 (Hambleton & Murphy, 1992)。此类讨论也批评了标准化测试的使用（参见第 16 章，了解这些批评的总结）。那些不区分他们对标准化测试结果使用方式的批评与他们对使用客观评估任务的优点批评的教育工作者会误导和混淆你。此外，这种“测试抨击”往往是不必要的：可以提出令人信服的论点来支持使用表现性评估，而无需贬低客观任务或标准化测试。
+### 本身就很有价值
 
-实际考虑 对真实性评估文献的回顾 (Baron, 1991; Horvath, 1991; Jones, 1994) 表明，你应将以下四个特征纳入真实性评估中：
+围绕真实性评估任务的宣传往往通过批评多项选择、配对、是非和简答题等格式来为其辩护 (Hambleton & Murphy, 1992)。此类讨论也批评了标准化测试的使用（参见第 16 章，了解这些批评的总结）。那些不区分他们对标准化测试结果使用方式的批评与他们对使用客观评估任务的优点批评的教育工作者会误导和混淆你。此外，这种“测试抨击”往往是不必要的：可以提出令人信服的论点来支持使用表现性评估，而无需贬低客观任务或标准化测试。
+
+### 实际考虑
+
+对真实性评估文献的回顾 (Baron, 1991; Horvath, 1991; Jones, 1994) 表明，你应将以下四个特征纳入真实性评估中：
 
 - 1. 强调应用：评估学生能否使用其知识，而不仅仅是评估学生知道什么。
 - 2. 注重直接评估：直接评估所陈述的学习目标，而与间接评估相对。
-- 3. 使用现实问题：以高度现实的方式构建任务，使学生能够将其识别为日常生活的一部分。
-- 4. 鼓励开放式思维：构建任务以鼓励不止一种正确答案、不止一种表达答案的方式、学生小组合作以及花费相对较长时间完成（例如，数天、数周、数月）。
+
+
+
+### 3. 使用现实问题
+以高度现实的方式构建任务，使学生能够将其识别为日常生活的一部分。
+
+### 4. 鼓励开放式思维
+构建任务以鼓励不止一种正确答案、不止一种表达答案的方式、学生小组合作以及花费相对较长时间完成（例如，数天、数周、数月）。
 
 我们将在第 12 章讨论构建表现性评估的细节。
 
@@ -9603,10 +10081,7 @@ H. 模拟和人为情境
 
 ## 课堂活动与评估
 
-你现在对表现性评估技术的广泛范围有了很好的了解，并且选择合适的技术在很大程度上取决于学习目标
-
-
-tasks you wish to assess. You should recognize, however, that not all classroom performance activities are assessment tasks. When you teach, you use many learning activities to engage students’ interest, to give them experience, and to give practice with the learning targets. Many of these activities are useful teaching tools and resemble the performance tasks described in the preceding section.
+你现在对表现性评估技术的广泛范围有了很好的了解，并且选择合适的技术在很大程度上取决于学习目标 `tasks you wish to assess.` You should recognize, however, that not all classroom performance activities are assessment tasks. When you teach, you use many learning activities to engage students’ interest, to give them experience, and to give practice with the learning targets. Many of these activities are useful teaching tools and resemble the performance tasks described in the preceding section.
 
 Performance tasks become assessment tools when you craft the tasks primarily for their value as assessment procedures rather than primarily as opportunities for student practice and enrichment. Assessments must also include criteria and a scoring rubric.
 
@@ -9617,12 +10092,20 @@ This is not to say that performance assessment tasks should be radically differe
 Performance assessments have several advantages over other assessments. These advantages (Hambleton & Murphy, 1992; Linn & Gronlund, 1995; Oosterhof, 1994; Rudner & Boston, 1994; Shepard, 1991; Stiggins, 1994; Wiggins, 1990) are summarized here:
 
 - 1. Performance tasks clarify the meaning of complex learning targets. Authentic performance tasks match complex learning targets to a close degree. When you present them to students and share them with parents, you make the learning goals clear through actual example.
+
 - 2. Performance tasks assess the ability "to do." An important school outcome is the ability to use knowledge and skill to solve problems and lead a useful life, rather than simply to answer questions about doing.
+
 - 3. Performance assessment is consistent with modern learning theory. Modern learning theory emphasizes that students should use their previous knowledge to build new knowledge structures, be actively involved in exploration and inquiry through task-like activities, and construct meaning for themselves from educational experience. This is called the constructivist approach to learning. Most performance assessments engage students and actively involve them with complex tasks. Many performance tasks require exploration and inquiry.
+
 - 4. Performance tasks require integration of knowledge, skills, and abilities. Complex performance tasks, especially those that span longer periods, usually require students to use many different skills and abilities. Portfolio assessment, projects, and research reports, for example, require a student to use knowledge from several different subject areas and many different abilities.
+
 - 5. Performance assessments may be linked more closely with teaching activities. When your teaching requires students to be actively involved in inquiry and performance activities, performance assessments are a meaningful component. This is not an advantage of performance assessment if your teaching is primarily teacher directed or uses lecture style.
+
 - 6. Performance tasks broaden the approach to student assessment. Introducing performance assessment along with traditional objective formats broadens the types of learning targets you assess and offers students a variety of ways of expressing their learning. This increases the validity of your student evaluations.
-- 7. Performance tasks let teachers assess the processes students use as well as the products they produce. Many performance tasks offer you the opportunity to watch the way a student goes about solving a problem or completing a task. Appropriate scoring rubrics help you collect information about the quality of the processes and strategies students use, as well as assess the quality of the finished product.
+
+
+
+Performance tasks let teachers assess the processes students use as well as the products they produce. Many performance tasks offer you the opportunity to watch the way a student goes about solving a problem or completing a task. Appropriate scoring rubrics help you collect information about the quality of the processes and strategies students use, as well as assess the quality of the finished product.
 
 ## Disadvantages of Performance Assessments
 
@@ -9636,22 +10119,30 @@ Although performance assessments offer several advantages over traditional objec
 - 6. Students’ performance on one task provides little information about their performance on other tasks. A serious problem with performance assessments is that a student’s performance on a task very much depends on her prior knowledge, the particular wording and phrasing of the task, the context in which it is administered, and the specific subject-matter content embedded in the task (Shavelson & Baxter, 1991; Lane, Parke, & Moskal, 1992; Linn, 1993). This results in low reliability from the content-sampling point of view. (See Chapter 4.) In other words, you may have to use six or seven performance tasks to evaluate reliably a student in a unit of instruction.
 
 The educational importance of these findings is this: Whenever a learning target implies that a student should be able to perform several quite different tasks under varied conditions and in several contexts (which is almost always!), your assessment must include many different tasks, not just one. The validity of your assessment results is low whenever you use too few tasks.
-- 7. Performance tasks do not assess all learning targets well. If a learning target focuses on memorizing and recalling, then objective format items such as short-answer, multiple-choice, matching, and true-false are better assessment choices. If your learning targets emphasize logical thinking, understanding concepts, or verbal reasoning, objective formats may still be a better choice than performance formats. They allow a much broader content to be assessed and can assess that broad coverage in less time. Further, objective formats are easier to score and the results from them are more reliable. A balanced assessment approach is recommended.
+
+
+
+## 7. Performance tasks do not assess all learning targets well
+If a learning target focuses on memorizing and recalling, then objective format items such as short-answer, multiple-choice, matching, and true-false are better assessment choices. If your learning targets emphasize logical thinking, understanding concepts, or verbal reasoning, objective formats may still be a better choice than performance formats. They allow a much broader content to be assessed and can assess that broad coverage in less time. Further, objective formats are easier to score and the results from them are more reliable. A balanced assessment approach is recommended.
 
 projects may help by permitting peers to share the work, use each other’s partial knowledge and differential skills, and motivate one another.
-- 9. Performance assessments may underrepresent the learning of some cultural groups. Although performance assessments allow the opportunity for students to use their backgrounds in diverse ways and allow multiple correct solutions, you may find it difficult to craft tasks—and especially scoring rubrics—to take advantage of this diversity. If you are not knowledgeable about how different cultural groups express their higher thinking skills, you may systematically bias your assessments of them. Further, some groups perform better on some types of tasks than others (e.g., word problems vs. computational mathematics).
+
+## 9. Performance assessments may underrepresent the learning of some cultural groups
+Although performance assessments allow the opportunity for students to use their backgrounds in diverse ways and allow multiple correct solutions, you may find it difficult to craft tasks—and especially scoring rubrics—to take advantage of this diversity. If you are not knowledgeable about how different cultural groups express their higher thinking skills, you may systematically bias your assessments of them. Further, some groups perform better on some types of tasks than others (e.g., word problems vs. computational mathematics).
 
 Performance tasks will not wash away differences among cultural groups; in fact, they are likely to make such differences more apparent. Multiple assessment formats may improve this situation somewhat, because they allow knowledge, skills, and ability to be expressed in different formats and media. After reviewing the research literature regarding performance assessments and equity, Baker and O’Neil (1994) drew this conclusion:
 
 > If it is believed that performance-based assessment, if not the only solution, is at least a critical component of integrative educational reform, then attempts must be made to remedy its obvious potential for injury. These remedies include improving the design measures and scoring procedures so that differences in students’ world knowledge, specific prior knowledge, perception of meaningfulness, and language facility are considered explicitly. Administration conditions, including climate, setting, and logistical support, must also be comparable. Furthermore, qualifications of raters including their training to avoid ethnic interactions, the models of student performance, and comparable standards of judgment must be made public and subject to independent review. Of course, the real key is that students receive truly comparable and equitable teaching offered in safe environments from qualified teachers with high expectations. Research into all these aspects needs to continue. (p. 24)
 
-- 10. Performance assessments may be corruptible. As you use performance assessments, you will teach your students how to do well on them. This amounts to coaching them how to perform (often called “teaching to the test”). If your coaching amounts to teaching all aspects of your state’s standards and your school’s curriculum framework’s learning targets, you are doing the right thing. However, if you focus primarily on only one aspect of the learning targets (e.g., how to write answers to constructed-response social studies items), you will lower the validity of your results.
-- 8. Completing performance tasks may be discouraging to less able students. Complex tasks that require students to sustain their interest and intensity over a long period may discourage less able students. They may see the high standards implied by such tasks as beyond their reach. They may have partial knowledge of the learning target but may fail to complete the task because it does not allow them to use or express this partial knowledge effectively. Group
+## 10. Performance assessments may be corruptible
+As you use performance assessments, you will teach your students how to do well on them. This amounts to coaching them how to perform (often called “teaching to the test”). If your coaching amounts to teaching all aspects of your state’s standards and your school’s curriculum framework’s learning targets, you are doing the right thing. However, if you focus primarily on only one aspect of the learning targets (e.g., how to write answers to constructed-response social studies items), you will lower the validity of your results.
 
-In Chapters 2 and 10, we said that a student’s use of higher-order thinking is best assessed when the student faces new or novel tasks. Coaching tends to reduce the novelty of the task or change it from an “application” task
+## 8. Completing performance tasks may be discouraging to less able students
+Complex tasks that require students to sustain their interest and intensity over a long period may discourage less able students. They may see the high standards implied by such tasks as beyond their reach. They may have partial knowledge of the learning target but may fail to complete the task because it does not allow them to use or express this partial knowledge effectively. Group
 
 
-to a “following-the-solution-strategy-the-teacher-taught-me” task. These types of coaching reduce the validity of your results, because they do not assess the main intent of learning targets that want students to learn to solve new and ill-structured problems. The quality of a student’s education is thereby reduced.
+
+In Chapters 2 and 10, we said that a student’s use of higher-order thinking is best assessed when the student faces new or novel tasks. Coaching tends to reduce the novelty of the task or change it from an “application” task to a “following-the-solution-strategy-the-teacher-taught-me” task. These types of coaching reduce the validity of your results, because they do not assess the main intent of learning targets that want students to learn to solve new and ill-structured problems. The quality of a student’s education is thereby reduced.
 
 ## How Using Performance Assessment Can Improve Your Teaching
 
@@ -9664,7 +10155,7 @@ You may improve your teaching by using performance assessments and performance l
 
 ## Multiple-Intelligences Perspective on Performance Assessments
 
-## Theory of Multiple-Intelligences
+### Theory of Multiple-Intelligences
 
 In some schools teachers organize their teaching around Howard Gardner’s (1983, 1991, 1993) theory of multiple intelligences. This theory says that all persons have not one, but eight intelligences, although some persons are stronger in some of these areas than others. These intelligences are briefly described in Table 11.2.
 
@@ -9676,6 +10167,9 @@ These particular capacities were selected as intelligences because they fit cert
 |  | Logical-mathematical intelligence | Capacity to understand underlying causal principles in ways similar to scientists or logicians, or to use quantitative and mathematical reasoning in ways similar to mathematicians. |
 |  | Spatial intelligence | Capacity to represent the spatial aspects of the world in your mind in ways similar to airplane pilot navigators, chess players, painters, sculptors, or architects. |
 |  | Bodily kinesthetic intelligence | Capacity to use part or all of your body to solve a problem, make a product, or perform in ways similar to athletes, actors, or dancers. |
+
+
+
 |  | Musical intelligence | Capacity to mentally process music in a way that recognizes patterns, remembers patterns, and manipulates music to solve problems or to express understanding. |
 |  | Interpersonal intelligence | Capacity to understand and meaningfully relate to other people. This is accomplished through understanding other persons: what they are able to do, how they approach the world and others, what their reactions are likely to be, what they like, what they avoid, and what they might be feeling. |
 |  | Intrapersonal intelligence | Capacity to understand yourself, knowing who you are, your strengths and limitations, your goals and aspirations, how you feel, what you should avoid, and how you will react in various situations. |
@@ -9699,62 +10193,80 @@ Menus Not Tied to Learning Targets and Scoring Criteria Are Missing You should b
 Example of a multiple intelligences assessment menu. Students are allowed to demonstrate their achievement of learning targets by choosing an assessment model from one or more of the intelligences categories.
 
 Multiple Intelligences Menus
+
 Linguistic Menu
+
 Use storytelling to explain ________
+
 Conduct a debate on ________
+
 Write a poem, myth, legend, short play, or news article about ________
+
 Create a talk show radio program about ________
-Conduct an interview of ________ on ________
-Logical-Mathematical Menu
-Translate a ________ into a mathematical formula
-Design and conduct an experiment on ________
-Make up syllogisms to demonstrate ________
-Make up analogies to explain ________
-Describe the patterns or symmetry in ________
-Others of your choice ________
-Bodily-Kinesthetic Menu
-Create a movement or sequence of movements to explain ________
-Make task or puzzle cards for ________
-Build or construct a ________
-Plan and attend a field trip that will ________
-Bring hands-on materials to demonstrate ________
-Visual Menu
-Chart, map, cluster, or graph ________
-Create a slide show, videotape, or photo album of ________
-Create a piece of art that demonstrates ________
-Invent a board or card game to demonstrate ________
-Illustrate, draw, paint, sketch, or sculpt ________
-Musical Menu
-Give a presentation with appropriate musical accompaniment on ________
-Sing a rap or song that explains ________
-Indicate the rhythmical patterns in ________
-Explain how the music of a song is similar to ________
-Make an instrument and use it to demonstrate ________
-Interpersonal Menu
-Conduct a meeting to address ________
-Intentionally use ________ social skills to learn about ________
-Participate in a service project to ________
-Teach someone about ________
-Practice giving and receiving feedback on ________
-Use technology to ________
-Intrapersonal Menu
-Describe qualities you possess that will help you successfully complete ________
-Set and pursue a goal to ________
-Describe one of your personal values about ________
-Write a journal entry on ________
-Assess your own work in ________
-Naturalist Menu
-Create observation notebooks of ________
-Describe changes in the local or global environment ________
-Care for pets, wildlife, gardens, or parks ________
-Use binoculars, telescopes, microscopes, or magnifiers to ________
-Draw or photograph natural objects ________
+
+
+
+- Conduct an interview of ________ on ________
+
+**Logical-Mathematical Menu**
+
+- Translate a ________ into a mathematical formula
+- Design and conduct an experiment on ________
+- Make up syllogisms to demonstrate ________
+- Make up analogies to explain ________
+- Describe the patterns or symmetry in ________
+- Others of your choice ________
+
+**Bodily-Kinesthetic Menu**
+
+- Create a movement or sequence of movements to explain ________
+- Make task or puzzle cards for ________
+- Build or construct a ________
+- Plan and attend a field trip that will ________
+- Bring hands-on materials to demonstrate ________
+
+**Visual Menu**
+
+- Chart, map, cluster, or graph ________
+- Create a slide show, videotape, or photo album of ________
+- Create a piece of art that demonstrates ________
+- Invent a board or card game to demonstrate ________
+- Illustrate, draw, paint, sketch, or sculpt ________
+
+**Musical Menu**
+
+- Give a presentation with appropriate musical accompaniment on ________
+- Sing a rap or song that explains ________
+- Indicate the rhythmical patterns in ________
+- Explain how the music of a song is similar to ________
+- Make an instrument and use it to demonstrate ________
+
+**Interpersonal Menu**
+
+- Conduct a meeting to address ________
+- Intentionally use ________ social skills to learn about ________
+- Participate in a service project to ________
+- Teach someone about ________
+- Practice giving and receiving feedback on ________
+- Use technology to ________
+
+**Intrapersonal Menu**
+
+- Describe qualities you possess that will help you successfully complete ________
+- Set and pursue a goal to ________
+- Describe one of your personal values about ________
+- Write a journal entry on ________
+- Assess your own work in ________
+
+**Naturalist Menu**
+
+- Create observation notebooks of ________
+- Describe changes in the local or global environment ________
+- Care for pets, wildlife, gardens, or parks ________
+- Use binoculars, telescopes, microscopes, or magnifiers to ________
+- Draw or photograph natural objects ________
 
 > Source: Campbell, L. (1997). Variations on a theme: How teachers interpret MI theory. Educational Leadership, 55(1), 14-18 (figure on page 18). Permission granted by Educational Leadership, Association for Supervision and Curriculum Development, Alexandria, VA.
-
-
-
-
 
 他本人主张教师使用智力的组合来帮助学生在基于学校的学业目标学习中取得成功，而不是只教授智力本身（Interview in Checkley, 1997）。在多重智能教学的评估部分讨论中，这一观点有时会被忽略。
 
@@ -9763,8 +10275,11 @@ Draw or photograph natural objects ________
 尚未解决的其他效度问题是，学生在示例 11.2 中不同菜单格式的评估结果的概括性和意义。应该很清楚，每一项菜单条目在质上是不同的——活动并不等价；它们不能简单互换。如果你要在课堂评估中使用多重智能评估菜单，你必须回答以下问题：
 
 - 虽然学生可以使用不同的展示方式，不同的展示方式是否以相同的方式针对相同的学习目标？
+
 - 不同格式的模式是否使得其中一些不能评估特定学习目标的主要意图？
+
 - 是否不明确相同的标准和评价标准是否可以（或应该）在不同模式之间适用？
+
 - 例如，是否适用于学生解释飞机应在 30,000 英尺时开始着陆下降的动作序列的相同标准或相同评分量规，也适用于对同一解释的说唱歌曲？[有关此点的进一步讨论，请参阅第 12 章第 262 页的“Response Mode”部分。]
 
 ## 学生会设计有效的任务吗？
@@ -9790,9 +10305,13 @@ Draw or photograph natural objects ________
 ## 什么是表现性评估？
 
 - 表现性评估要求学生展示其运用来自多个领域的知识和技能完成任务的能力，而不仅仅是回忆信息或说明如何完成任务。
+
 - 由于课程领域非常多样，并非所有学习目标都侧重于表现，因此并非所有评估都应是表现性评估。
+
 - 表现性评估必须包含两个组成部分：（a）要执行的任务和（b）用于评估学生在任务上表现质量的量规。
+
 - 评分量规应构成一个连贯的评估框架，与课程框架的重点相匹配。这通常意味着创建一份描述要评估的主要内容和过程领域的通用量规，以及一份将这些领域应用于特定任务的具体量规。
+
 - 如果表现性评估与课程框架的学习目标相匹配，与教学重点相符，并与其他更客观的评估格式结合使用以评估所有重要的学习目标，则可以提高课堂评估结果的效度。
 
 ## 表现性评估的类型
@@ -9800,6 +10319,8 @@ Draw or photograph natural objects ________
 - 你可以从多种表现性任务格式中进行选择，但并非所有格式的效度都相等。格式选择主要由其与课程框架学习目标主要意图的匹配程度指导。任务格式与学习目标或教学重点之间的不匹配会降低结果的效度，即使使用了真实的表现性任务。
 
 这些是主要的表现性任务格式：结构化、即时任务（纸笔和非纸笔）；自然发生或典型表现；长期项目（个人、小组和综合）；作品集（最佳作品、成长与学习进展）；演示；实验或调查；口头报告和戏剧化（包括辩论）；以及模拟（标准化病人、计算机化自适应视听情景、计算机化文本情景、模拟）。
+
+
 
 作品集文化模型以成长与学习进展为教学活动的焦点。该模型使用的作品集包括真实作品、学生概念理解成长的例子以及学生反思性思维使用的例子。
 
@@ -9870,13 +10391,8 @@ Draw or photograph natural objects ________
 ## 练习与应用
 
 - 1. 将表 11.1 中的思想应用于你教授（或计划教授）的学科。对每个类别和子类别，描述一个适用于你学科的表现性评估。（不要使用文本中给出的例子，但可以改编。）你不必实际创建一个可行的任务。相反，用一两句话描述一个可以创建的任务。哪些类型的任务不适用于你的教学情况？解释。
-- 2. 你是否有课堂表现性活动的经验？表现性评估？在多重智能框架下教学？与
-
-
-
-others in your course. Do you agree with the author that performance assessments have potential for improving your teaching? Defend your answer.
-
-3. 在一张纸上画出三列。在第一列列出真实性表现任务的四个特征。从你自己的经验或本章中选择两个表现任务。用第二列标示其中一个任务；用第三列标示另一个任务。然后，在表格的每个单元格中，对每个任务针对四个特征进行评估：描述每个特征在每个任务中体现得如何。与本课程的其他同学分享你的发现。
+- 2. 你是否有课堂表现性活动的经验？表现性评估？在多重智能框架下教学？与 others in your course. Do you agree with the author that performance assessments have potential for improving your teaching? Defend your answer。
+- 3. 在一张纸上画出三列。在第一列列出真实性表现任务的四个特征。从你自己的经验或本章中选择两个表现任务。用第二列标示其中一个任务；用第三列标示另一个任务。然后，在表格的每个单元格中，对每个任务针对四个特征进行评估：描述每个特征在每个任务中体现得如何。与本课程的其他同学分享你的发现。
 
 ## Suggestions for Additional Readings
 
@@ -9916,28 +10432,41 @@ After studying this chapter, you should have achieved the following:
 + 2. Apply criteria to evaluate achievement dimensions your tasks will assess. [2,1]
 + 3. Craft performance assessment tasks and their corresponding scoring rubrics. [2]
 + 4. Apply criteria for evaluating the quality of your performance assessment tasks. [2, 1]
+
+
+
 + 5. Describe the major types of scoring rubrics, their advantages, and the process used to develop them. [2, 3, 5]
+
 + 6. Apply criteria to evaluate the quality of your scoring rubrics. [2, 3, 5]
 
 ## Crafting Checklists and Rating Scales
 
 + 7. Craft a checklist tool for assessing a student's product or the procedures (process) a student uses to complete a performance. [2, 3]
+
 + 8. Describe the advantages and disadvantages of the major types of rating scales. [1, 6]
+
 + 9. Craft rating scales for assessing student performance. [2, 3, 5]
+
 + 10. Apply criteria to evaluate your checklists and rating scales. [2, 3, 5]
 
 ## Crafting Projects
 
 + 11. Describe the conditions under which projects can be useful for assessing students. [1, 6]
+
 + 12. Craft a classroom project that is useful for assessing students. [2, 3]
+
 + 13. Explain a teacher's classroom management goals and strategies for ensuring a successful project. [1, 2, 6]
 
 ## Crafting Portfolios, Including Electronic Portfolios
 
 + 14. Describe and give examples of the different purposes for portfolios. [1, 6]
+
 + 15. Explain why different uses of portfolios require different organizations, evaluations, and types or entries. [1, 6, 3]
+
 + 16. Describe what must be decided in each of the six steps for crafting a portfolio system. [2, 1, 4]
+
 + 17. Craft a plan for a portfolio system to use with your students. [2, 4, 6]
+
 + 18. Describe how electronic portfolios are organized and used. [1, 2, 3]
 
 ## Important Terms and Concepts
@@ -9947,20 +10476,21 @@ After studying this chapter, you should have achieved the following:
 ## ABOUT THIS CHAPTER
 
 We learned about different kinds of performance assessments in the last chapter, but how do we craft them? Is there a systematic way to craft performance assessments? How do we craft, manage, and evaluate projects? What do we need to do to craft different types of portfolios? How do we craft and use valid scoring rubrics and rating scales? These are the questions addressed in this chapter.
-
 The chapter begins by describing a three-stage process for developing performance assessments. We discuss how to get started, how to identify the proper achievement dimensions to assess, and how to frame levels of achievement. Second, we discuss the actual crafting of the performance task: how to begin, how to revise, and how to extend the task to include assessment of several achievement dimensions such as problem-solving and critical-thinking skills. Third, we discuss how to craft scoring rubrics that will validly assess your students’ achievement. Part of this discussion includes how to craft, use, and improve rating scales and checklists. Fourth, we turn to the crafting of long-term student projects. We discuss how to manage the projects so that worthwhile educational achievements are assessed. Last, we turn to the design and crafting of portfolios. We discuss how to craft growth-and-learning portfolios as well as best-works portfolios.
 
 ## STAGES IN CRAFTING PERFORMANCE TASKS AND RUBRICS
 
 It is best to use a systematic approach for crafting performance tasks. The process has three stages (Stiggins, 1994): (a) being very clear about the performance you want to assess, (b) crafting the task, and (c) crafting a way to score and record the results. The following sections suggest ways to improve your performance task crafting in each stage.
 
-## STAGE ONE: BEING CLEAR ABOUT THE PERFORMANCE TO ASSESS
+### STAGE ONE: BEING CLEAR ABOUT THE PERFORMANCE TO ASSESS
 
 Because performance tasks assess complex learning targets, you must be quite clear about what you will assess. You must know whether the curriculum learning targets you wish to assess are mainly about the process a student uses, the product produced, or both. You must answer these questions:
-
 - Which important learning targets will I assess?
 - On what content achievement dimension will the task focus?
 - On what complex thinking skills should I focus this task?
+
+
+
 - What other achievement dimensions shall I assess along with the content dimension and the thinking-skills dimension?
 - Does the learning target imply assessing a process, a product, or both?
 
@@ -9974,10 +10504,9 @@ Recall from Chapter 11 that not every learning target can or should be assessed 
 
 Perhaps the most important part of the first stage in performance assessment crafting is specifying the achievement dimensions against which you will assess students’ performance (see Marzano, Pickering, & McTighe, 1993; Stiggins, 1987). Achievement dimensions are the knowledge, skills, and abilities that you want students to learn as a result of your teaching. Dimensions include content or subject-matter-specific learning targets and lifelong learning targets. Content achievement dimensions include the specific declarative and procedural learning targets you want students to achieve. Declarative learning targets are the facts, ideas, generalizations, and theories you want a student to learn. Procedural learning targets are the skills, methods, and procedures you want a student to learn. Lifelong achievement dimensions include outcomes that cut across curricula or may be useful outside of school, such as complex thinking, information processing, effective communication, cooperation and collaboration, and habits of mind (Marzano et al., 1993). Appendix E shows these categories of learning targets. You should frame your performance task around them or some other framework that your school district requires you to use.
 
-Limit Number of Dimensions Assessed You should not try to assess all of the achievement dimensions in Appendix E in one performance task, otherwise the task will become unwieldy and confusing. Marzano et al. (1993) suggest that every performance task should assess one achievement dimension from each of these four categories: content, complex thinking, information processing, and effective communication. Assessing one achievement dimension from each of the other two categories (collaboration/cooperation and habits of mind) is optional. The high school history decision-making task and the history group investigation task, both presented in Chapter 11, are examples
+### Limit Number of Dimensions Assessed
 
-
-of two performance tasks developed around the achievement dimensions outlined in Appendix E.
+You should not try to assess all of the achievement dimensions in Appendix E in one performance task, otherwise the task will become unwieldy and confusing. Marzano et al. (1993) suggest that every performance task should assess one achievement dimension from each of these four categories: content, complex thinking, information processing, and effective communication. Assessing one achievement dimension from each of the other two categories (collaboration/cooperation and habits of mind) is optional. The high school history decision-making task and the history group investigation task, both presented in Chapter 11, are examples of two performance tasks developed around the achievement dimensions outlined in Appendix E.
 
 ## 定义质量水平
 
@@ -9994,16 +10523,28 @@ of two performance tasks developed around the achievement dimensions outlined in
 用于评判你打算用来评估学生在表现任务上的成就维度的质量的清单。对这些问题中一个或多个问题的回答为“否”意味着你应该修改该维度。
 
 - 1. 你评估的成就在课程的更广泛背景和现实世界应用中是否有意义？
+
   说明。你的任务的成就维度应仅指定最重要的组成部分；它们应包括高水平的内容学习目标，并反映若干终身或现实世界学习目标，包括复杂推理、信息处理、有效沟通，以及在适当情况下，思维习惯和合作学习目标。
+
 - 2. 你评估的成就是否具有真实性和对任务在评估环境之外应如何执行方式的忠实度？
+
 - 3. 你是否已将一般成就框架应用于此任务的评分量规？
-  说明。你的量规虽然针对你使用的表现任务是具体的，但应适合一个一般方案或一般量规框架，以便于看出学生在属于同一类别但在不同条件或不同时间下的若干类似任务中的表现。这类一般框架将使你和其他教师更容易在同一课程内的不同任务中一致地应用量规。
-- 4. 你的成就维度是否符合更广泛的教育能力框架？
-  说明。你的成就维度应（a）以健全的教育发展方式表述，以便于看出从新手到专家表现的延伸，（b）位于更广泛的框架内，但方式应适合你评估的学生年级和年龄水平，以及（c）用词描述每个水平预期的表现（与表述为“差”等价值相对）。
-- 5. 你的成就维度是否易于学生、家长和教师理解？
-  说明。你的成就维度应以清晰的语言表述，以便学生、家长、教师和社区都能轻松理解。你可能希望有一个通俗语言版本和一个技术语言版本，前者供学生和家长使用，后者供你领域的其他教师使用。
-- 6. 你的成就维度是否有助于指出学生可以改进的方式？
-  说明。你的成就维度及其连续体应集中于学生可以改进的表现特征。你的维度应能够向学生（和其他人）传达他们需要集中精力改进的内容。
+
+
+
+说明。你的量规虽然针对你使用的表现任务是具体的，但应适合一个一般方案或一般量规框架，以便于看出学生在属于同一类别但在不同条件或不同时间下的若干类似任务中的表现。这类一般框架将使你和其他教师更容易在同一课程内的不同任务中一致地应用量规。
+
+4. 你的成就维度是否符合更广泛的教育能力框架？
+
+   说明。你的成就维度应（a）以健全的教育发展方式表述，以便于看出从新手到专家表现的延伸，（b）位于更广泛的框架内，但方式应适合你评估的学生年级和年龄水平，以及（c）用词描述每个水平预期的表现（与表述为“差”等价值相对）。
+
+5. 你的成就维度是否易于学生、家长和教师理解？
+
+   说明。你的成就维度应以清晰的语言表述，以便学生、家长、教师和社区都能轻松理解。你可能希望有一个通俗语言版本和一个技术语言版本，前者供学生和家长使用，后者供你领域的其他教师使用。
+
+6. 你的成就维度是否有助于指出学生可以改进的方式？
+
+   说明。你的成就维度及其连续体应集中于学生可以改进的表现特征。你的维度应能够向学生（和其他人）传达他们需要集中精力改进的内容。
 
 来源：基于Quellmalz（1991）中的标准和观点。
 
@@ -10011,52 +10552,52 @@ of two performance tasks developed around the achievement dimensions outlined in
 
 有时学习目标要求学生展示一个过程或程序。以下是一些例子。
 
-## 示例
+### 示例
 
 要求学生展示特定过程的学习目标示例
 
-- 1. 使用长除法算法。
-- 2. 处理实验室化学品时使用张贴的安全程序。
+1. 使用长除法算法。
+2. 处理实验室化学品时使用张贴的安全程序。
 
 在某些情况下，即使可能存在几种正确的过程，学习目标仍然集中于过程。例如，在数学课程中，学习目标可能会要求学生学习几种不同的除法程序，而不是单一的正确算法。
 
 在其他时候，即使你教授特定的过程，课程框架也清楚地暗示主要焦点是学生产生的产品。你教授的具体过程只是学生可能使用的方法之一。以下是两个例子。
 
-## 示例
+### 示例
 
 要求学生生产产品的学习目标示例
 
-- 1. 基于日常经验写俳句诗歌。
-- 2. 准备一份关于火山爆发原因的研究学期论文。
+1. 基于日常经验写俳句诗歌。
+2. 准备一份关于火山爆发原因的研究学期论文。
 
 完成此类任务可能有几种同样好的方法，但焦点在于结果或产品。
 
 有时产品和过程同等重要。例如：
 
-## 示例
+### 示例
 
 要求学生通过执行特定过程来生产产品的学习目标示例
 
-- 1. 按照教科书提供的步骤写一份研究学期论文。
-- 2. 使用长除法算法，解决章节测验中提出的90%的问题。
+1. 按照教科书提供的步骤写一份研究学期论文。
+2. 使用长除法算法，解决章节测验中提出的90%的问题。
 
 ## 何时评估过程
 
 如果你能对以下问题（Highland, 1955）回答“是”，则将你的评估重点放在学生使用的过程上：
 
-- 1. 你是否教学生使用特定程序？你能指定这些步骤吗？
-- 2. 你能否准确评估学生偏离公认程序的程度？
-- 3. 关于学生实现学习目标的大部分或全部证据是否都存在于表现的执行方式中？评估学生所需的证据是否很少或根本不存在于产品本身？
-- 4. 你是否有足够的时间或帮助来观察、记录和评分学生使用的程序？
+1. 你是否教学生使用特定程序？你能指定这些步骤吗？
+2. 你能否准确评估学生偏离公认程序的程度？
+3. 关于学生实现学习目标的大部分或全部证据是否都存在于表现的执行方式中？评估学生所需的证据是否很少或根本不存在于产品本身？
+4. 你是否有足够的时间或帮助来观察、记录和评分学生使用的程序？
 
 ## 何时评估产品
 
 如果你能对以下问题回答“是”（Highland, 1955），则将你的评估重点放在学生使用的产品上：
 
-- 1. 你能否准确客观地评估产品？
-- 2. 关于学生实现学习目标的大部分或全部证据是否都存在于产品本身？评估学生所需的证据是否很少或根本不存在于学生使用的程序或学生的表现方式中？
-- 3. 你是否无法确定执行学习目标应遵循的正确步骤序列？是否没有教授特定的一套程序？虽然每个人都知道步骤，但它们难以执行吗？
-- 4. 你是否没有足够的时间或帮助来评估学生产生的产品？
+1. 你能否准确客观地评估产品？
+2. 关于学生实现学习目标的大部分或全部证据是否都存在于产品本身？评估学生所需的证据是否很少或根本不存在于学生使用的程序或学生的表现方式中？
+3. 你是否无法确定执行学习目标应遵循的正确步骤序列？是否没有教授特定的一套程序？虽然每个人都知道步骤，但它们难以执行吗？
+4. 你是否没有足够的时间或帮助来评估学生产生的产品？
 
 ## 制作任务以适应学生
 
@@ -10078,19 +10619,15 @@ of two performance tasks developed around the achievement dimensions outlined in
 - 我必须告诉学生关于任务及其评分的内容，以传达他们需要执行的内容？
 - 来自不同种族和社会背景的学生是否会适当理解我的任务？
 
-
-
-
-
 ## 创建有意义的任务
 
 你设计的任务应该对学生有意义。这能让学生个人参与到解决问题或完成任务中。以下建议（Barone, 1991）将帮助你确定可以围绕其设计任务的合适思路：
 
-- 1. 选择一个对大多数学生都可能具有个人意义的情境或任务。
-- 2. 仔细融合熟悉和新颖的元素，使学生能被任务挑战。不要让任务要求过高或过于奇怪，以至于让学生感到沮丧。
-- 3. 选择一些植根于你所教学生的真实世界经验的情境或任务。
-- 4. 选择一些需要学生将他们在课堂外获得的知识和技能应用到任务中的情境或任务。
-- 5. 选择能评估学生是否具备将知识和技能从课堂活动和示例转移到类似但对他们而言是新的格式的能力的情境或任务。
+1. 选择一个对大多数学生都可能具有个人意义的情境或任务。
+2. 仔细融合熟悉和新颖的元素，使学生能被任务挑战。不要让任务要求过高或过于奇怪，以至于让学生感到沮丧。
+3. 选择一些植根于你所教学生的真实世界经验的情境或任务。
+4. 选择一些需要学生将他们在课堂外获得的知识和技能应用到任务中的情境或任务。
+5. 选择能评估学生是否具备将知识和技能从课堂活动和示例转移到类似但对他们而言是新的格式的能力的情境或任务。
 
 ## 分阶段开发任务
 
@@ -10121,16 +10658,18 @@ Step 3. 使用内容和s—到那时，通常为时已晚，无法“修复”�
 | Task Property | Variations In the Task Requirements |
 |---|---|
 | Time to complete the task | Short tasks can be done in one class period or less. Long tasks require a month or more, and work may need to be outside of class. |
+
+
+
 | Task structure provided | Structure may vary in: Problem definition: High structure here means you carefully define the problem the student must solve. Low structure means the student is free to select and define the problem. Scaffolding: High structure here means the student is given lots of guidance or directions in how to begin a solution and what materials to use. Low structure here means a student has little or no guidance and must decide for him or herself. Alternate strategies: High structure means there are very few correct or appropriate pathways to get to the correct answer. Low structure means there are many correct or appropriate approaches to get an acceptable answer. Alternate solutions: High structure means there is a correct answer to the task. Low structure means there is no single correct answer to this task. |
+
 | Participation of groups | The task may require: Individual work only throughout all phases of performance. Mixed individual and group work in which some of the performance occurs in groups and some is strictly individual effort. Group work only throughout all phases of performance. |
+
 | Product and process focus | The task may require: Process assessment only in which the student's performance of the steps and procedures and not the outcome are observed and evaluated. Both process and product assessment in which both the steps and the concrete outcome (product) are evaluated. Product assessment only in which only the concrete product or outcome is evaluated. |
+
 | Performance modality | The task may require: A single modality in which the performance is limited to one mode (e.g., oral, written, wood model, etc.). Multiple modality in which the performance must be done in several modes (e.g., do both a written and an oral report). |
 
 Source: Based on ideas in Davey & Rindone (1990).
-
-
-
-
 
 脚手架是指你在学生着手完成任务时所提供的支持、指导和方向的程度。你可能会建议如何着手解决问题、应使用哪些书籍或材料，以及你所要求的最终成果的一般性质。这些指示和指导性陈述为任务增添了结构。脚手架越少，结构就越少。
 
@@ -10163,9 +10702,17 @@ Source: Based on ideas in Davey & Rindone (1990).
 - 3. 评估格式的混合。如果将客观格式与绩效任务混合，你将能够涵盖学习目标的更多方面，平衡你的评估并拓宽评估范围。在这种情况下，你可能需要的绩效任务更少，因为你的评估范围比仅使用绩效任务时更广。
 - 4. 学习目标的复杂性。复杂的学习目标需要整合许多技能和能力，可能需要在较长时间内执行。在这种情况下，实用性限制了你可以给出的此类任务的数量。然而，由于更多时间用于一个（或最多几个）此类任务，信息可能是高质量的（即可靠的）。尽管如此，你的评估范围或跨度可能并不很广。这可能带来有效性问题。
 - 5. 完成每个任务所需的时间。从实际角度来看，你通常只能在一次典型的课堂期间进行少数任务。确定一个任务让学生完成需要多长时间，并将其除以课堂时长的长度以确定可能的任务最大数量。学生通常完成任务所需的时间比你想象的要长，因此要留出余地。
-- 6. 整个评估可用的时间。你可能愿意将多于或少于一节课的时间用于评估。任务数量可能会根据可用时间而缩小或扩大。
-- 7. 需要的诊断细节。如果你需要大量细节来诊断学生的学习或概念问题，你需要设计能提供这些丰富细节的任务。这通常意味着任务更少、表现更详细、以及对回答的评分更详细。如果你为诊断目的评估许多学生，表现和评分所需时间的实际限制通常会将你限制为每个学生只有少数几个任务。
-- 8. 可用的人力资源。如果你有助教或家长帮助你进行评估或评分，这可能会腾出一些时间让你多进行几个任务。你也可以教学生评分评估，虽然这在教育上很有用，但不太可能导致任务数量的增加。
+
+
+
+### 6. 整个评估可用的时间
+你可能愿意将多于或少于一节课的时间用于评估。任务数量可能会根据可用时间而缩小或扩大。
+
+### 7. 需要的诊断细节
+如果你需要大量细节来诊断学生的学习或概念问题，你需要设计能提供这些丰富细节的任务。这通常意味着任务更少、表现更详细、以及对回答的评分更详细。如果你为诊断目的评估许多学生，表现和评分所需时间的实际限制通常会将你限制为每个学生只有少数几个任务。
+
+### 8. 可用的人力资源
+如果你有助教或家长帮助你进行评估或评分，这可能会腾出一些时间让你多进行几个任务。你也可以教学生评分评估，虽然这在教育上很有用，但不太可能导致任务数量的增加。
 
 ## 评估你的绩效任务
 
@@ -10180,10 +10727,6 @@ Source: Based on ideas in Davey & Rindone (1990).
 - 我应使用整体评分标准还是分析评分标准？
 - 我需要使用评定量表还是清单作为我的评分标准？
 - 我的学生是否应参与对自己表现的评定？
-
-
-
-
 
 # 检查表 12.2
 
@@ -10226,9 +10769,7 @@ Source: Based on ideas in Davey & Rindone (1990).
 
 ## 制定评分量规：开始之前
 
-评分量规对于本章和前一章所述的所有表现性评估方法都是必要的，包括项目和作品集。在制定过程的第一阶段，你已确定了成就维度以及每个维度的进步量表，从非常低的进步到非常高的进步。要制定评分量规，你需要重新定义这些表现水平描述，以确保它们
-
-清晰。你可以为每个水平关联一个数值（第 11 章第 243 页和第 247 页有示例）。或者，你可以为每个水平关联一个定性描述，如新手、学徒、熟练、卓越。这些定性描述在第 246 页的外语熟练度评定示例中有所说明。
+评分量规对于本章和前一章所述的所有表现性评估方法都是必要的，包括项目和作品集。在制定过程的第一阶段，你已确定了成就维度以及每个维度的进步量表，从非常低的进步到非常高的进步。要制定评分量规，你需要重新定义这些表现水平描述，以确保它们清晰。你可以为每个水平关联一个数值（第 11 章第 243 页和第 247 页有示例）。或者，你可以为每个水平关联一个定性描述，如新手、学徒、熟练、卓越。这些定性描述在第 246 页的外语熟练度评定示例中有所说明。
 
 有必要描述学生的表现特征，这些特征区分了一个成就水平与另一个成就水平，因为这些描述在每个水平上锚定了量表。重要的是要有与学校字母等级一样多的成就水平。这样量规就可以支持你的成绩。
 
@@ -10322,11 +10863,13 @@ Source: Based on ideas in Davey & Rindone (1990).
 ## 主题的阐述
 
 - 该术语与我们之前做的事情有何关系？
+
+
+
 - 它熟悉吗？如果是，如何？
 - 它与你在另一门课上做的事情有何关系？
 
 ## 准确性
-
 - 该陈述是否与其他关于同一主题的信息一致？
 - 你的模型与其他模型相比如何？
 - 它与其他表征相比如何？
@@ -10334,9 +10877,6 @@ Source: Based on ideas in Davey & Rindone (1990).
 > 来源：Moupgo, N. S. (1995). 捕捉课堂评估的力量。 (Focus 28, 第 20 页方框摘录。）经 Educational Testing Service 许可转载，版权所有者。
 
 示例 12.2 显示了围绕三部分框架组织的初中数学整体评分量规示例：数学知识、策略知识和交流
-
-
-
 
 ## 示例 12.2
 
@@ -10427,7 +10967,9 @@ Source: Based on ideas in Davey & Rindone (1990).
 
 当我们在第 9 章讨论写作评估时，我们讨论了按六部分框架组织的评分：思想与内容、组织、声音、词语选择、句子流畅性和规范。实施该框架的分析量规在附录 H 中重印。
 
-自下而上方法 在自下而上方法中，你从学生作品样本开始，使用实际回应来创建自己的框架。使用不同质量水平的示例来帮助你识别学生可以被评估的维度。以下步骤可能有帮助：
+## 自下而上方法
+
+在自下而上方法中，你从学生作品样本开始，使用实际回应来创建自己的框架。使用不同质量水平的示例来帮助你识别学生可以被评估的维度。以下步骤可能有帮助：
 
 步骤 1. 获取约 10 至 12 名学生对某项表现题的实际回应的复印件。确保你选择的回应展示了你所评估的一般成就的各种质量水平（例如，科学理解、书信写作、批判性推理等）。
 
@@ -10444,7 +10986,6 @@ Source: Based on ideas in Davey & Rindone (1990).
 ## 制定量规：验证本地采用或创建的框架
 
 为了识别概念框架和应评估的重要成就维度或标准，你应回答以下问题（Herman, Aschbacher, & Winters, 1992）：
-
 - 高质量成就的特征是什么（例如，好的写作、好的问题解决、好的协作、好的科学？
 - 我应评估的学习目标的重要特征是什么？
 - 学生回应的哪些方面区分了差、合格和优秀的学生？
@@ -10458,29 +10999,31 @@ Source: Based on ideas in Davey & Rindone (1990).
 
 你应向学生布置一项表现任务，然后应用你开发的具体量规。如果你难以评定学生的表现，你应重新审视你的量规，看看其在何处不清晰。通常你需要扩展量规中每个质量水平的描述，以包含示例或描述学生表现的一个你最初忘记包含的方面。
 
-
-
-
-
 ## 编制核查表
 
 在表 12.2 中简要描述了几种记录学生表现评估的有用方法。虽然表中列出的每种方法都有其特殊用途，但核查表和评分量表是与表现性任务一起使用最频繁的。编制核查表的建议在本节中给出。评分量表的建议在下一节中给出。
 
-## 核查表的类型
+### 核查表的类型
 
 核查表由一系列具体的行为、特征或活动以及标记每个行为是否存在或不存在的位置组成。你可以用核查表来评估学生使用的程序、学生制作的产品或学生表现出的行为。学生可以用核查表来评估自己的表现。
 
-程序核查表 程序核查表评估学生是否按照流程或程序的适当步骤进行。示例 12.3 说明了这样的核查表。该核查表评估学生是否能够正确使用显微镜。该核查表包含序列中可能的不当步骤（错误）和适当步骤（正确）的描述。通过在核查表中包含可能的错误，你可以在补救学生时回顾这些错误。表格上记录的数字代表特定学生执行任务所使用的顺序。有时学生表现的主要缺陷是他执行步骤的顺序。记录正确的顺序和学生在表格上的顺序将有助于你关注表现的这一方面。
+#### 程序核查表
+程序核查表评估学生是否按照流程或程序的适当步骤进行。示例 12.3 说明了这样的核查表。该核查表评估学生是否能够正确使用显微镜。该核查表包含序列中可能的不当步骤（错误）和适当步骤（正确）的描述。通过在核查表中包含可能的错误，你可以在补救学生时回顾这些错误。表格上记录的数字代表特定学生执行任务所使用的顺序。有时学生表现的主要缺陷是他执行步骤的顺序。记录正确的顺序和学生在表格上的顺序将有助于你关注表现的这一方面。
 
-产品核查表 产品核查表侧重于学生制作的物品的质量。产品包括绘画、构建的模型、论文和学期论文。这些核查表确定产品应该具有的部件或其他属性。然后你检查每个产品，核对这些属性是否存在。
+#### 产品核查表
+产品核查表侧重于学生制作的物品的质量。产品包括绘画、构建的模型、论文和学期论文。这些核查表确定产品应该具有的部件或其他属性。然后你检查每个产品，核对这些属性是否存在。
 
-行为核查表 行为核查表由与学生表现的特定领域相关的离散行为列表组成。例如，你可能希望确定学生在口语的语音、语义和句法方面遇到的具体困难。行为核查表可能包含诸如“仅使用简单句结构”或“对问题无延迟地做出回应”等项目。
+#### 行为核查表
+行为核查表由与学生表现的特定领域相关的离散行为列表组成。例如，你可能希望确定学生在口语的语音、语义和句法方面遇到的具体困难。行为核查表可能包含诸如“仅使用简单句结构”或“对问题无延迟地做出回应”等项目。
 
 表 12.2 记录学生对表现性任务的反应的一些有用方法。
 
 | 记录方法 | 描述 | 推荐用途 | 用法示例 |
 |---|---|---|---|
 | 轶事记录 | 你观察表现并写下学生做了什么的描述。 | 这些主要用于记录意外或自然发生的表现。通常你一次只能记录一名学生。 | 一名学生对时事表现出不寻常的见解，你想保留这些记录以放入他的作品集或推荐该学生参加领导力暑期项目。 |
+
+
+
 | 行为计数 | 你为想要为学生保留记录的具体行为创建一个列表。在观察表现时，你统计每种行为发生的次数。列表通常仅限于少数几种行为。 | 这些主要用于你预期会频繁发生的明确行为列表。它们也可能用于跟踪不良行为。 | 作为一名通讯艺术教师，你跟踪学生在全班面前讲话时使用“呃-呃” 的频率。 |
 | 核查表 | 你为程序中的具体步骤或具体行为创建一个列表。你勾选发生的每个行为。列表可能很长。 | 这些主要在行为按顺序排列或构成完整表现的所有子任务都可以列出时很有用。 | 你是一名科学教师，想确保每个学生都能正确执行设置显微镜的步骤。你是一名汽车修理店教师，想确保每个学生都能正确完成更换汽车机油所需的所有任务。 |
 | 评分量表 | 你为评估表现创建标准或标准。每个标准都有能力水平，你根据学生在完成任务时表现每个标准的好坏对学生进行评分。 | 这些在每个标准可以根据水平或质量程度而不是简单地存在或不存在来判断时特别有用。 | 你是一名艺术教师，根据构图、质感、主题和技巧对每个学生的绘画进行评分。你是一名数学教师，根据学生展示数学知识的程度、使用解决问题的良好策略以及用书面形式传达其对解决方案的解释的程度对学生的解题进行评分。 |
@@ -10531,17 +11074,20 @@ Source: Based on ideas in Davey & Rindone (1990).
 | al. Wipes objective with cloth |  |  | g. Very poor mount |  |
 | am. Wipes objective with finger | 17 |  | h. Nothing in view but a thread in his eyepiece |  |
 | an. Wipes eyepiece with lens paper |  |  | i. Something on objective |  |
+
+
+
 | ao. Wipes eyepiece with cloth |  |  | j. Smeared lens | ✓ |
+
 | ap. Wipes eyepiece with finger |  |  | k. Unable to find object | ✓ |
+
 | aq. Makes another mount | 18 |  | Source: From "A Test of Skill in Using a Microscope" by R.W. Tyler, 1930, Educational Research Bulletin, 9, p. 494. |
 
-自我评估核查表 学生使用自我评估核查表来回顾和评估自己的工作。你可以用学生完成的核查表作为学生-教师会议的基础，在会议中讨论学生的进步。例如，考虑以下情况：
+## 自我评估核查表
 
-一名学生制作了一份最佳作品数学作品集，该作品集最终将在州一级使用之前在示例 12.1 中显示的评分标准进行评估。为了创建这个作品集，学生必须完成数学任务并决定她应该在
+学生使用自我评估核查表来回顾和评估自己的工作。你可以用学生完成的核查表作为学生-教师会议的基础，在会议中讨论学生的进步。例如，考虑以下情况：
 
-
-
-纳入作品集。学生必须挑选六到七项已完成的任务放入最佳作品作品集中。清单可以帮助学生评估每项内容并决定放入作品集的内容。它也可以作为与同伴、家长或教师讨论这些内容的基础（Kentucky Department of Education, 1993c）。由于清单关注作品集条目，因此它使学生的注意力集中在作品集评分量规上（示例 12.1）。然而，清单的表述比教师使用的评分量规更简单、更不正式。示例 12.4 中展示了该清单的一种改编版本。
+一名学生制作了一份最佳作品数学作品集，该作品集最终将在州一级使用之前在示例 12.1 中显示的评分标准进行评估。为了创建这个作品集，学生必须完成数学任务并决定她应该在纳入作品集。学生必须挑选六到七项已完成的任务放入最佳作品作品集中。清单可以帮助学生评估每项内容并决定放入作品集的内容。它也可以作为与同伴、家长或教师讨论这些内容的基础（Kentucky Department of Education, 1993c）。由于清单关注作品集条目，因此它使学生的注意力集中在作品集评分量规上（示例 12.1）。然而，清单的表述比教师使用的评分量规更简单、更不正式。示例 12.4 中展示了该清单的一种改编版本。
 
 ## 如何制作清单
 
@@ -10560,11 +11106,11 @@ Source: Based on ideas in Davey & Rindone (1990).
 
 ## 制作评分量表
 
-## 评分量表为何有用
+### 评分量表为何有用
 
 需要评估成就程度 清单可以帮助你评估某个步骤、特定属性或特定行为是否存在。很多时候，你关心的不仅仅是这些要素的存在与否。评分量表评估学生在绩效任务中达到成就维度的程度。以评估学生向班级做口头报告的质量为例。你可能会确定“好的口头报告”的几个维度，然后判断学生在每个维度上的表现程度。好的口头报告可能包括学生呈现的材料与主题相关的程度、说话是否流畅不犹豫、是否使用正确的语法和语言模式、是否与观众进行视觉接触等特征（Lindvall, 1961）。你需要评估并记录学生在每个维度上的表现程度，而不是采用全有或全无、存在或不存在的方式进行评估。第 11 章中展示了一个用于此目的的简单评分量表（示例 11.1）。你在第 10 章中也看到过评分量表的其他例子：用于评价批判性思维倾向的量表（图 10.4）和用于评价口头论证陈述的量表（图 10.5）。
 
-## 评分量表在教学中的使用
+### 评分量表在教学中的使用
 
 评分量表既可用于教学目的，也可用于评估：
 
@@ -10573,11 +11119,11 @@ Source: Based on ideas in Davey & Rindone (1990).
 - 3. 学生不仅达到学习目标，还可能内化用于评估其成就的标准。这意味着他们会自动将评分量表中的标准应用于自己的工作。要实现这一点，你必须在整年中对多个不同的绩效任务使用相同的成就维度进行评分。
 - 4. 评分有助于你向每位学生展示其成长。如果你在档案中保存评分副本，你将拥有记录以帮助你监控和评估每位学生的进步。要有效做到这一点，你需要在所有任务中使用相同的（或相似的）评分量表。为了确保你收集的信息在不同场合具有可比性，请使用通用量规或框架来创建具体的量规和评分量表。
 
-## 评分量表的类型
+### 评分量表的类型
 
 尽管评分量表种类繁多，但三种类型——数值评分量表、图形评分量表和描述性图形评分量表——在充分发挥其优势时，能很好地满足教师的大多数需求。
 
-## 数值评分量表
+### 数值评分量表
 
 使用数值评分量表时，你必须将质量或成就程度的判断在脑中转化为数字。示例 12.5 显示了这种方法的一个例子。技术制图课程的教师列出了 10 个成就维度，用以评估每幅图纸。他在 0 到 10 的量表上对学生在每个维度的成就进行评分，然后将评分相加。如果某个特定维度——例如，“圆弧、圆和切线的质量”——没有
 
@@ -10588,10 +11134,15 @@ Source: Based on ideas in Davey & Rindone (1990).
 ### 数学自我评估与会议表
 
 姓名： ___________________________
+
 与以下人员会议：
+
 ___ 同学   日期： ____
+
 ___ 教师   日期： ____
+
 ___ 我的家长   日期： ____
+
 条目标题： ___________________________
 
 | Mathematics Area | Did I ... | Comments about strengths and needs |
@@ -10603,14 +11154,16 @@ ___ 我的家长   日期： ____
 |  | Do the following with your teacher |  |
 | Type of entry | 14. Circle the kind(s) of entry this is: <br>writing          investigation/discovery <br>application       interdisciplinary <br>nonroutine problem project |  |
 | Core concepts & principles I used | 15. Circle the mathematical concepts that you used in this entry: <br>change            measurement <br>data              number <br>mathematical procedures <br>space & dimensionally <br>mathematical structure |  |
+
+
+
 | Tools I used | 16. Circle the mathematical tools you used in this entry: <br>algebra tiles      fraction bars <br>base 10 blocks     geoboards <br>beans              pattern blocks <br>calculator         protractor <br>compass            rulers <br>computer           scales <br>decimal squares    other |  |
+
 | Type of entry | 17. Circle the kind of entry this is: <br>individual          group |  |
+
 | Do you want to revise, edit, or polish this entry? Yes No | Is this entry one that you want to publish in your assessment portfolio? Yes No |
+
 | Possible changes: |  |
-
-
-
-
 
 # 示例 12.5
 
@@ -10655,6 +11208,8 @@ When using a graphic rating scale, you can check any point along the line, not j
 
 ## Descriptive Graphic Rating Scale
 
+
+
 This is a better format for rating. Descriptive graphic rating scales replace the ambiguous single words (e.g., frequently) with short behavioral descriptions of the various points along the scale. The oral presentation rating scale in Chapter 11 (Example 11.1) is an example of this type. Each degree of success on each dimension is defined by a brief description. Sometimes numbers are also printed along the line, as in Example 11.1, combining the features of both a numerical and a graphic rating scale. Describing the points of the scale by behavior descriptions leads to increased consistency of ratings across raters and students. Other examples of descriptive graphic rating scales are given in Chapter 10: rating a student’s disposition toward critical thinking (Figures 10.4) and rating a student’s oral or written presentation of an argument (Figure 10.5).
 
 Descriptive graphic rating scales are given in Chapter 10: rating a student’s disposition toward critical thinking (Figures 10.4) and rating a student’s oral or written presentation of an argument (Figure 10.5).
@@ -10664,9 +11219,7 @@ Descriptive graphic rating scales are given in Chapter 10: rating a student’s 
 You should be aware of several common errors that occur when teachers rate students. Teachers who do not use all of the points on a rating scale cause the following errors:
 
 - Leniency error occurs when a teacher tends to make almost all ratings toward the high end of the scale, avoiding the low end.
-
 - Severity error is the opposite of leniency error: A teacher tends to make almost all ratings toward the low end of the scale.
-
 - Central tendency error occurs when a teacher hesitates to use extremes and uses the middle part of the scale only. Central tendency errors sometimes occur when a teacher has to make strong inferences about a student (e.g., regarding “creativity” or “dedication”) and, in hesitation, the teacher tends to mark nearly everyone as average. Central tendency errors may occur when a teacher does not know the students very well.
 
 Using only certain parts of the rating scale has two negative consequences. First, when you give only very high, very low, or “middle” ratings, you introduce your own quirks and biases into the ratings, thus lowering their validity for describing students ability in performing the task. Second, when your ratings bunch up and do not distinguish one student’s performance from another, they become unreliable, which in turn reduces the validity of the scores.
@@ -10677,7 +11230,7 @@ Here are other common teacher rating errors.
 
 The general “halo” you place around the student affects your ability to judge the student’s standing on specific performances. (The halo effect may work in reverse, of course: Your general impression of a student as “not very good” may lead you to lower ratings on specific dimensions more than the student deserves.) One expression of the halo effect may occur when teachers need to make grading decisions for students whose assessment results put them on the border between two letter-grade categories: The error is that individuals who favorably impress a teacher are moved into the upper category; those who less favorably impress the teacher are moved into the lower category.
 
-# 示例 12.6
+### 示例 12.6
 
 一种用于测量书写能力的量表（Thorndike 的）示例。 一系列书写样本被按数值“质量”量表进行评定。 使用该量表时，将学生的书写样本与其中一个样本的质量进行匹配并赋予相应的数值。 该图仅显示了其中的部分样本。
 
@@ -10685,21 +11238,19 @@ The general “halo” you place around the student affects your ability to judg
 
 Source: From "Handwriting" by E.L. Thorndike, 1910, Teacher's College Record, 11, 62, 65, 70, 73.
 
+
+
 - Personal bias occurs when a teacher tends to rate based on inappropriate or irrelevant stereotypes favoring boys over girls, whites over blacks, working families over welfare recipients, or particular families and individual students a teacher may dislike.
 
 - A logical error occurs when a teacher gives similar ratings on two or more dimensions of performance that the teacher believes are logically related but that are in fact unrelated. For example, a teacher may falsely believe that students with exceptionally high scores on scholastic aptitude tests also should be the top students in all subject areas. The teacher then marks the high-scoring aptitude test students differently from the way the low scorers are marked.
 
 Logical errors are a result of a teacher's ignorance and unfounded beliefs, rather than the teacher's personal quirks and biases about individuals or groups of students.
 
-
-
-
-
 ## 示例 12.7
 
 一个用于评估小组项目合作学习目标的简单图形量表。
 
-## 小组项目中协作与合作学习目标评分表
+### 小组项目中协作与合作学习目标评分表
 
 被评估学生：
 
@@ -10713,37 +11264,46 @@ Logical errors are a result of a teacher's ignorance and unfounded beliefs, rath
 
 说明：在每条线的任何位置打勾，以显示您对该项目学生表现的判断。如果您没有足够的机会观察该学生，请圈出 N/O。
 
-## 目标达成
+### 目标达成
 
 1. 学生是否参加小组会议？
+
 从不    很少    偶尔    经常    总是    N/O
 
 2. 参加时学生是否做好准备？
+
 从不    很少    偶尔    经常    总是    N/O
 
 3. 学生是否积极努力实现小组目标？
+
 从不    很少    偶尔    经常    总是    N/O
 
 4. 学生是否在小组会议之外对小组项目进行工作？
+
 从不    很少    偶尔    经常    总是    N/O
 
-## 人际技能
+### 人际技能
 
 5. 学生是否与小组成员适当互动？
+
 从不    很少    偶尔    经常    总是    N/O
 
 6. 学生在表达自己的想法和观点时是否对他人的感受敏感？
+
 从不    很少    偶尔    经常    总是    N/O
 
 7. 学生的行为是否会干扰小组中的其他人？
+
 从不    很少    偶尔    经常    总是    N/O
 
-## 小组维护
+### 小组维护
 
 8. 学生是否帮助小组决定是否需要改变小组流程？
+
 从不    很少    偶尔    经常    总是    N/O
 
 9. 当需要时，学生是否积极努力帮助小组改变其流程？
+
 从不    很少    偶尔    经常    总是    N/O
 
 评论：
@@ -10751,17 +11311,18 @@ Logical errors are a result of a teacher's ignorance and unfounded beliefs, rath
 当“局外人”对表现评估进行评分时还会出现其他错误。当州和大型学区实施表现评估时，通常由除其教师以外的个人对学生的作业进行评分。在这些情况下，评分者接受过培训并练习使用特定的评分量规。
 
 - 评分者漂移是指评分者最初的评分一致，但开始自行重新定义量规时发生的现象。因此，评分者不再产生与原始量规一致的评分，即使他们接受过相同的量规培训。对此的补救措施是监控评分并重新培训那些似乎已偏离商定标准的评分者。 （参见第 9 章末尾的练习。）
+
 - 可靠性衰减是相关的错误：在培训后立即，评分者会跨学生一致地应用量规并相互一致地标记。然而，随着时间的推移，评分变得不一致，无论是对学生还是对评分者。监控和再培训也是对此效应的补救措施。
 
 ## 评估评分量规和评定量表
 
 在本章中，我们讨论了您应如何制定评分量规和评定量表。本节将主要建议汇总起来，以便您用它们来评估您制定的评分量规。
 
-## 评估您的量规和评定量表的核对表
+### 评估您的量规和评定量表的核对表
 
 核对表 12.3 在您评估您制定的评分量规时提供指导。您将使用特定的评分量规来评估学生在特定表现任务上的表现。您通过应用核对表 12.2 来评估您的表现任务。您通过应用本节中的核对表来评估评分量规。由于许多评分量规表现为评定量表，因此该核对表也可用于评估其他课堂评定量表。
 
-## 如何使量规和评定量表与您的评分系统保持一致
+### 如何使量规和评定量表与您的评分系统保持一致
 
 这里有一个需要特别提及的点，因为之前没有讨论过。您的字母等级制度、您的评分量规和您的评定量表应具有相同数量的等级。例如，如果您的评分系统有 A、B、C、D 或 E，量规应有五个等级，而不是四个或六个。所有评估中量表的一致性是提高评估结果有效性的重要方式。这些等级的含义也应与成绩的含义一致。如果您的评分量规和评定量表未与评分系统对齐，您将难以在成绩单上用字母等级报告学生进展。 （成绩将在第 15 章中更详细地讨论。）
 
@@ -10770,35 +11331,49 @@ Logical errors are a result of a teacher's ignorance and unfounded beliefs, rath
 用于判断评分量规和评定量表质量的核对表。修改对一个或多个问题回答为“否”的任何量规。
 
 - 1. 总体而言，量规是否强调了学习目标的最重要内容和过程？
+
 - 2. 您从量规各部分获得的分数（即成就维度）是否与您在评估计划中赋予它们的重点相匹配？
+
 - 3. 从量规中获得的最大可能总分（点数）是否与您在评估计划中赋予这些学习目标的重点相匹配？
+
 - 4. 您的学生是否能理解量规？
+
 - 5. 量规评定的类别是否适合为学生提供他们改善学习目标表现所需的指导？
+
 - 6. 对于此特定任务，量规是否是一般量规或概念框架的忠实应用？
+
 - 7. 量规各部分量表的等级（即成就维度的等级）是否以学生可观察的行为方式清晰地描述？
+
 - 8. 就此特定任务而言，量规是否允许您评估学生使用适当的：a. 宣言性和程序性内容维度？ b. 对学习目标重要的过程？
+
 - 9. 如果此任务的目的是评估学生使用替代正确答案/产品或替代正确过程/策略，量规是否清楚地描述了如何对每个进行评分和标记？
+
 - 10. 量规是否允许您区分学生在该任务上的广泛成就水平，而不是将所有学生都归入一两个成就水平？
 
 ## 提高量规和评分的可靠性
 
 评分的可靠性是评估表现评估的重要标准。以下可靠性系数（在第 4 章中讨论）是适用于使用表现评估授予学生的更连续分数的合适系数之一：
 
-## 随时间估计可靠性
+### 随时间估计可靠性
 
 - 测验-重测
+
 - 不同场合的替代形式
 
-## 在单次场合估计可靠性
+### 在单次场合估计可靠性
 
 - 替代形式
+
 - 系数 alpha
+
 - 分半系数
 
-## 估计评分者可靠性
+### 估计评分者可靠性
 
 - 两个评分者结果的相关性
+
 - 百分比一致性
+
 - Kappa 系数
 
 附录 J 显示了如何计算系数 alpha、分半百分比一致性和 kappa 系数。然而，附录仅显示了在做出通过-失败或掌握-非掌握决策的特殊情况下的百分比一致性和 kappa 计算。虽然这两个指标可以很容易地应用于两个以上类别的分数，但这超出了本书的范围。
@@ -10806,21 +11381,30 @@ Logical errors are a result of a teacher's ignorance and unfounded beliefs, rath
 第 4 章中的表 4.3 讨论了如何提高评估结果的可靠性。此时请回顾这些建议并思考您应如何将其应用于表现评估。以下是专门适用于提高评分量规和评定量表评分可靠性的额外建议：
 
 - 1. 将评分量规中的成就维度组织成与课程内容和过程框架相匹配的逻辑组。
+
 - 2. 对于每个成就维度，使用行为描述符来定义每个表现水平。
+
 - 3. 提供学生作业的样本或示例以帮助定义成就维度的每个水平。
+
 - 4. 让几位教师共同制定评分量规或评定量表。
+
 - 5. 让几位教师审查和批评评分量规或评定量表的草案。
+
 - 6. 为所有将使用评分量规或评定量表的人员提供培训和监督练习。
+
 - 7. 让多于一名评分者对学生在任务上的表现进行评分。
+
 - 8. 通过定期抽样他们的评分来监控评分者，检查他们应用评分量规和评定量表的准确性和一致性。对评分不准确或不一致的人员进行再培训。
 
 ## 制定项目
 
-## 需要明确项目目的并控制您的偏见
+### 需要明确项目目的并控制您的偏见
 
 项目通常是有价值的教育活动。然而，它们作为对个人学生的评估工具的有用性取决于四个条件。您必须确保（a）您和您的学生非常清楚项目关注一个或多个重要的课程学习目标，（b）每个学生都做自己的工作，（c）每个学生都能平等地获得准备优秀最终产品和获得优秀评估所需的资源，（d）您可以控制自己对某些类型产品的偏见并公平地评估其他做得很好的项目。例如，中产阶级和上中产阶级学生，其父母受过高等教育，通常比其不太幸运的同龄人拥有更多资源。您可能会因为他们使用这些资源并制作出外观非常好的产品而更高度地评估这些学生的项目。然而，通过这样做，您可能会使您的评估偏向于某些社会阶层的学生。
 
 同样，如果您潜意识里倾向于偏爱某些类型的项目、报告或格式而非其他，您可能会不公平地评估一些学生。请考虑以下真实故事：
+
+
 
 > Veronica，一名学生，花了很长时间和精力为小学科学项目展制作了一个照相机的实用模型。她对相机学到了很多东西，并且可以很好地解释相机的工作原理。当她自豪地准备把她的相机模型带到学校时，她的父亲，他有七个孩子就读于同一所小学，把她叫到一边说：“我知道你努力工作了，Veronica，我为你对相机学到的东西感到骄傲。然而，我不想让你失望。我想让你意识到，爆炸火山项目总是赢得科学项目展！”果然如此！ [Nitko，个人交流，1995 年]
 
@@ -10834,13 +11418,9 @@ Logical errors are a result of a teacher's ignorance and unfounded beliefs, rath
 
 1 如果你忘了，爆炸火山由一个纸浆火山和顶部的一杯醋组成。加入小苏打到醋中以产生喷发效果。
 
-
-
-
-
-+   4. 制定你将用于评估项目中每个成就维度的评分量规。
-+   5. 确定在计算整体项目成绩时，你将给每个成就维度分数赋予的权重。
-+   6. 如果学生在获取资源的能力上差异很大，则限制学生完成项目时可使用的资源。
+- 4. 制定你将用于评估项目中每个成就维度的评分量规。
+- 5. 确定在计算整体项目成绩时，你将给每个成就维度分数赋予的权重。
+- 6. 如果学生在获取资源的能力上差异很大，则限制学生完成项目时可使用的资源。
 
 ## 如何管理你的课堂项目
 
@@ -10848,23 +11428,20 @@ Logical errors are a result of a teacher's ignorance and unfounded beliefs, rath
 
 管理目标 这些项目管理目标对于管理小组和个人项目都很有用，无论它们是用于课堂活动还是评估目的：
 
-+   目标 1. 监控个别学生，确保他们在稳步取得进展。
-+   目标 2. 指导学生，帮助他们克服可能超出其控制范围的操作问题（例如，学生原计划采访的关键人物因病无法会见他们）。
-+   目标 3. 指导学生，使他们保持专注，完成项目。
-+   目标 4. 监控学生使用的程序和流程，以确保他们能够达到为项目设定的学习目标。
+- 目标 1. 监控个别学生，确保他们在稳步取得进展。
+- 目标 2. 指导学生，帮助他们克服可能超出其控制范围的操作问题（例如，学生原计划采访的关键人物因病无法会见他们）。
+- 目标 3. 指导学生，使他们保持专注，完成项目。
+- 目标 4. 监控学生使用的程序和流程，以确保他们能够达到为项目设定的学习目标。
 
 实现管理目标的策略 以下课堂项目管理策略可以帮助实现目标：
 
-+   策略 1. 明确你期望的结果。确保每位学生都彻底理解项目的目的（所评估的学习目标）以及你期望项目呈现的样子。展示并讨论你从往届学生处保存的高质量项目范例。
-+   策略 2. 将你的期望以书面形式呈现。向学生分发并讨论一份书面说明，描述你对项目、流程以及项目主要目的的期望。
-+   策略 3. 明确你将用于评估项目的标准。解释评分量规并向学生提供副本。
-+   策略 4. 让学生参与制定标准。每位学生都应内化质量标准并对其产生拥有感。利用往届项目帮助学生归纳出成就维度。帮助学生描述每个维度内的质量水平。
-
-策略 5. 明确截止日期。设定足够长的截止日期，以便学生能够开发和完成真实的项目。然而，时间框架要足够短以保持实用性，并使学生必须保持在任务上，不能浪费时间，并按时完成。
-
-策略 6. 要求提交进度报告。对于较长的项目，指定每周或每两周的学生进度汇报日期（例如每周五）。这有助于保持学生专注，并让你能够评估他们使用的流程以及完成项目的进展情况。（我们在本章前面讨论了过程与成果评估。）它还能提醒你注意任何超出学生控制范围的问题，可能需要你的干预。
-
-策略 7. 尽量减少抄袭机会。每位学生都应尽其所能完成自己的工作。向学生解释何构成抄袭。解释即使不完美，也要独立完成工作的严重性。避免可能无意中鼓励学生抄袭材料的项目。有助于减少学生抄袭诱惑的项目包括访谈、比较观点、制作模型、设计理想项目、查找某一问题的不同观点、制作实物，以及为另一组或班级创作戏剧化表演（Harmin, 1994）。
+- 策略 1. 明确你期望的结果。确保每位学生都彻底理解项目的目的（所评估的学习目标）以及你期望项目呈现的样子。展示并讨论你从往届学生处保存的高质量项目范例。
+- 策略 2. 将你的期望以书面形式呈现。向学生分发并讨论一份书面说明，描述你对项目、流程以及项目主要目的的期望。
+- 策略 3. 明确你将用于评估项目的标准。解释评分量规并向学生提供副本。
+- 策略 4. 让学生参与制定标准。每位学生都应内化质量标准并对其产生拥有感。利用往届项目帮助学生归纳出成就维度。帮助学生描述每个维度内的质量水平。
+- 策略 5. 明确截止日期。设定足够长的截止日期，以便学生能够开发和完成真实的项目。然而，时间框架要足够短以保持实用性，并使学生必须保持在任务上，不能浪费时间，并按时完成。
+- 策略 6. 要求提交进度报告。对于较长的项目，指定每周或每两周的学生进度汇报日期（例如每周五）。这有助于保持学生专注，并让你能够评估他们使用的流程以及完成项目的进展情况。（我们在本章前面讨论了过程与成果评估。）它还能提醒你注意任何超出学生控制范围的问题，可能需要你的干预。
+- 策略 7. 尽量减少抄袭机会。每位学生都应尽其所能完成自己的工作。向学生解释何构成抄袭。解释即使不完美，也要独立完成工作的严重性。避免可能无意中鼓励学生抄袭材料的项目。有助于减少学生抄袭诱惑的项目包括访谈、比较观点、制作模型、设计理想项目、查找某一问题的不同观点、制作实物，以及为另一组或班级创作戏剧化表演（Harmin, 1994）。
 
 ## 制作作品集
 
@@ -10876,10 +11453,10 @@ Logical errors are a result of a teacher's ignorance and unfounded beliefs, rath
 
 以及发展。为了使成长与学习进展作品集有效，你必须使用以下原则仔细制作它：
 
-+   1. 非常明确你希望监控学生学习进展的学习目标。你越明确，你的作品集系统就越好。
-+   2. 对学习进展理论有坚实的理解。你选择的理论将指导你确定在评估学生概念发展变化或诊断学生学习困难时应关注的内容。
-+   3. 如果学校里有几位教师致力于使用成长与学习进展作品集，请与他们合作并协同工作。如果教师协调总体方法、应包含的内容以及作品集的组织，学生就不会感到困惑，并会收到关于其作品集活动性质和目的的一致信息。
-+   4. 使用某种类型的量规来定义评估标准并帮助你在应用这些标准时保持一致性，无论是对不同学生还是对同一学生在不同时间。
+- 1. 非常明确你希望监控学生学习进展的学习目标。你越明确，你的作品集系统就越好。
+- 2. 对学习进展理论有坚实的理解。你选择的理论将指导你确定在评估学生概念发展变化或诊断学生学习困难时应关注的内容。
+- 3. 如果学校里有几位教师致力于使用成长与学习进展作品集，请与他们合作并协同工作。如果教师协调总体方法、应包含的内容以及作品集的组织，学生就不会感到困惑，并会收到关于其作品集活动性质和目的的一致信息。
+- 4. 使用某种类型的量规来定义评估标准并帮助你在应用这些标准时保持一致性，无论是对不同学生还是对同一学生在不同时间。
 
 示例 12.8 是某校语言艺术教师如何规划和组织学生成长与学习进展作品集的一个例子。组织是由一群教师共同决定的。时间框架已明确说明，正如内容和应由谁贡献每个条目（在本例中学生和教师都贡献）。请注意，教师指定了学习目标，并为每个目标描述了应包含的条目类型。
 
@@ -10904,11 +11481,7 @@ Logical errors are a result of a teacher's ignorance and unfounded beliefs, rath
 | 5. 通过写作有效沟通 | 5. 更长篇写作的样本 | 5. 每年两次或三次 |
 | 6. 学生作为读者和作家的成长 | 6. (a) 教师挑选的学生草稿、笔记和其他作品 (b) 教师关于学生进展的笔记和评论 | 6. 由教师自行决定 |
 
-
-
-
-
-# 示例 12-9
+## 示例 12.9
 
 初中生在评估自己一年的阅读和写作进步后，其作品集条目的示例。
 
@@ -10928,6 +11501,8 @@ Logical errors are a result of a teacher's ignorance and unfounded beliefs, rath
 
 当你查看你的作品集时，你对自己作为读者的感觉如何？说明你为什么会有这种感觉。我对自己作为读者感到非常棒。我爱阅读 + 我喜欢完成一本好书时得到的感觉。
 
+
+
 > 来源：摘自 S.W. Valencia 和 N.A Place 的《Literacy Portfolios for Teaching, Learning, and Accountability: The Bellevue Literacy Project》，载于 Sheila W. Valencia、E.H. Hiebert 和 Peter P. Afflerbach 主编的《Authentic Reading Assessment: Practice and Possibilities》（第 146 页），1994 年，Newark, DE：International Reading Association。经 Sheila W. Valencia 和 International Reading Association 许可转载。版权所有。
 
 - 1. 包含真实作品。学生纳入作品集中的作品必须为他提供直接机会，让他参与该领域或学科工作者通常使用的思考方式和能力。例如，在科学作品集中，学生应从事评估证据、利用科学解释说明数据，或收集数据以支持或反驳解释的工作。
@@ -10938,11 +11513,11 @@ ops。仅包含成品是不够的。例如，学生应定期在科学作品集�
 
 - 3. 参与反思活动。学生利用作品集内容作为与教师讨论他对作品所依据的概念、原理和理论的理解的基础。教师引导讨论，使学生使用该领域或学科工作者使用的相同思维策略和能力。例如，如果学生正在解决科学问题，她应利用作品集内容参与科学思维和活动。学生应记录随着新证据积累其解释的变化。
 
-你必须具备知识和自发性 使用这些作品集要求你具备显著的知识、技能和能力。此外，你需要非常精通你正在评估进展的学科。你也应该注意到，这种作品集评估活动比使用最佳作品作品集评估更自发、更不正式。这些特征不一定是弱点，因为作品集与互动教学一起使用，并作为形成性评估工具。
+你必须具备知识和自发性。使用这些作品集要求你具备显著的知识、技能和能力。此外，你需要非常精通你正在评估进展的学科。你也应该注意到，这种作品集评估活动比使用最佳作品作品集评估更自发、更不正式。这些特征不一定是弱点，因为作品集与互动教学一起使用，并作为形成性评估工具。
 
 ## 最佳作品作品集的组织和内容
 
-组织最佳作品作品集 你在示例 12.1 中看到了最佳作品作品集的评分量规示例。仔细研究该图，你会看到最佳作品作品集是如何组织的。此示例中的作品集是州学校问责制系统的一部分。州教育部门强制规定了作品集的内容和组织。作品集旨在评估问题解决、数学推理、数学交流以及理解核心课程概念方面的学习目标。为了实现这一评估，州政府强制要求每个作品集包含某些类型的数学作业。因此，每个作品集必须包含以下示例：数学调查、应用、非常规问题的解决方案、项目、跨学科问题解决方案以及关于数学的写作。
+组织最佳作品作品集。你在示例 12.1 中看到了最佳作品作品集的评分量规示例。仔细研究该图，你会看到最佳作品作品集是如何组织的。此示例中的作品集是州学校问责制系统的一部分。州教育部门强制规定了作品集的内容和组织。作品集旨在评估问题解决、数学推理、数学交流以及理解核心课程概念方面的学习目标。为了实现这一评估，州政府强制要求每个作品集包含某些类型的数学作业。因此，每个作品集必须包含以下示例：数学调查、应用、非常规问题的解决方案、项目、跨学科问题解决方案以及关于数学的写作。
 
 学生在整个学年准备条目。除了作品集截止日期外，没有强制的时间表。然而，为了帮助学生准备，教师会向学生提供解释和建议，帮助他们决定应包含哪些示例。示例 12.10 显示了教师在准备最佳作品数学作品集时给学生提供的一些解释和自我反思问题。
 
@@ -10954,9 +11529,9 @@ ops。仅包含成品是不够的。例如，学生应定期在科学作品集�
 
 给四年级学生关于如何准备数学作品集的建议示例。
 
-## 什么有效？
+### 什么有效？
 
-## 来看看！
+### 来看看！
 
 以下是你应纳入作品集的作品类型：
 
@@ -11011,16 +11586,13 @@ accomplishment. In that case, you will need to give students clear statements of
 - Name of the student
 - Date of entry
 - Title or description of the entry. For example, “Comparison of the Population Growth of Mexico and the United States.”
-- Some indication of the learning target or purpose for including the entry. A student may write, for example, “This entry shows that I can use numbers in real-world situations to draw conclusions about how populations grow. I can use growth rates and draw
+
+
+
+- Some indication of the learning target or purpose for including the entry. A student may write, for example, “This entry shows that I can use numbers in real-world situations to draw conclusions about how populations grow. I can use growth rates and draw conclusions about when the two populations will be the same.”
+- 为什么这一条目很重要或有价值。例如，“我认为这是一篇好的内容，因为它展示了我实际使用数学的情境。人口增长是一门社会学科，我用数学来解决它。此外，我还需要使用电脑表格程序多次进行计算，才能发现两个国家将在大约59年后人口相同。”
 
 示例条目引用自 Kentucky Department of Education (1994)。示例引文是基于实际条目的虚构说明。
-
-
-
-
-conclusions about when the two populations will be the same.”
-
-+   为什么这一条目很重要或有价值。例如，“我认为这是一篇好的内容，因为它展示了我实际使用数学的情境。人口增长是一门社会学科，我用数学来解决它。此外，我还需要使用电脑表格程序多次进行计算，才能发现两个国家将在大约59年后人口相同。”
 
 ## Limits to a Best-Works Portfolio
 
@@ -11032,23 +11604,25 @@ portfolio的规模与有效性和可靠性有关。portfolio是否代表学生�
 
 如何鼓励学生对portfolio条目的自我反思 为了某些教学目的，学生对portfolio内容的审阅和自我反思是主要关注点。Arter和Spandel（1992）建议向学生提出以下类型的问题，以促进自我反思活动：
 
-+   完成这项任务的过程是什么？包括你从哪里获得想法，如何探索主题，遇到了什么问题，以及你使用了什么修订策略。
-+   小组在审阅你的作品时提出了哪些观点？描述你对每个观点的回应——你是否同意或不同意？为什么？你因此做了什么？
-+   你最有效的作品和最不有效的作品有什么不同？
-+   这项活动与你之前学过的内容有什么关系？
-+   你的作品有哪些优势？什么仍然让你感到不安？（第40页）
+- 完成这项任务的过程是什么？包括你从哪里获得想法，如何探索主题，遇到了什么问题，以及你使用了什么修订策略。
+- 小组在审阅你的作品时提出了哪些观点？描述你对每个观点的回应——你是否同意或不同意？为什么？你因此做了什么？
+- 你最有效的作品和最不有效的作品有什么不同？
+- 这项活动与你之前学过的内容有什么关系？
+- 你的作品有哪些优势？什么仍然让你感到不安？（第40页）
 
-元认知 虽然这些问题促使学生审视和评估自己的工作，但这些问题本身并不构成一种评估方法。请记住，自我反思是一种心理活动。因此，你对这一活动的评估必须是间接的。此外，尽管自我反思看似是一项有价值的教学活动，但并不清楚从教育角度来看，正式评估学生完成这些自我反思活动的能力是否合适或必要。它们可能最适合作为非正式的形成性评估。在附录F中，我们讨论了相关的元认知领域。图F.1展示了一份关于元认知不同方面的学生自评问卷。你可以考虑改编这份问卷来评估portfolio的自我反思。
+### 元认知
+
+虽然这些问题促使学生审视和评估自己的工作，但这些问题本身并不构成一种评估方法。请记住，自我反思是一种心理活动。因此，你对这一活动的评估必须是间接的。此外，尽管自我反思看似是一项有价值的教学活动，但并不清楚从教育角度来看，正式评估学生完成这些自我反思活动的能力是否合适或必要。它们可能最适合作为非正式的形成性评估。在附录F中，我们讨论了相关的元认知领域。图F.1展示了一份关于元认知不同方面的学生自评问卷。你可以考虑改编这份问卷来评估portfolio的自我反思。
 
 ## Special Concerns About Portfolio Contents
 
 如果一位或两位老师为一两个班级设计portfolio系统，该系统可能满足他们作为非正式评估学生进步的即时需求。另一方面，如果中央教育机构在州或地方层面强制实施portfolio系统，它就成为已有课堂活动的“附加项”。因此，需要采取特殊措施说服和教育教师portfolio的有用性。例如，如果学生每周只有一天视为“portfolio日”，他们会把portfolio视为一门独立学科！曾经，肯塔基州教育部要求portfolio作为学校问责制的一部分。早期的授权模式显示了这种缺乏整合的模式。Buren和Lewis（1994）观察到写作portfolio的使用模式如下：
 
-+   高投入portfolio。这些portfolio显示学生对内容高度投入。每个portfolio高度个性化，内容明显是学生选择的。这些portfolio通常展示出比后面描述的类型更高的写作水平。这非常可取。
-+   统一模板portfolio。并不理想。同一班级的所有portfolio看起来几乎相同。所有学生撰写相同的话题并使用相同的提示。学生没有选择内容，学生投入度低。这些portfolio通常展示出较低的写作水平。
-+   portfolio周portfolio。并不理想。同一教室的所有portfolio在所有作品上都有相同的日期。作品未经润色或重写，而是在提交州考试截止日期前匆忙完成。内容未体现高度的个人选择或投入。这些portfolio通常展示出较低的写作水平。
-+   教师生成的portfolio提示。并不理想。同一班级的所有portfolio都基于相同的提示集。学生对主题选择有限，投入度低。教师生成的提示不当或限制了学生为不同目的或不同受众写作的能力。
-+   内容受限portfolio。并不理想。这些portfolio可能呈现上述任何模式。然而，其中一些作品来自语言艺术课程之外的学科。内容领域受限，portfolio显示学生在语言艺术课程之外的写作还需进一步提高。portfolio表明，写作技能在不同学科之间未得到应用或整合。
+- 高投入portfolio。这些portfolio显示学生对内容高度投入。每个portfolio高度个性化，内容明显是学生选择的。这些portfolio通常展示出比后面描述的类型更高的写作水平。这非常可取。
+- 统一模板portfolio。并不理想。同一班级的所有portfolio看起来几乎相同。所有学生撰写相同的话题并使用相同的提示。学生没有选择内容，学生投入度低。这些portfolio通常展示出较低的写作水平。
+- portfolio周portfolio。并不理想。同一教室的所有portfolio在所有作品上都有相同的日期。作品未经润色或重写，而是在提交州考试截止日期前匆忙完成。内容未体现高度的个人选择或投入。这些portfolio通常展示出较低的写作水平。
+- 教师生成的portfolio提示。并不理想。同一班级的所有portfolio都基于相同的提示集。学生对主题选择有限，投入度低。教师生成的提示不当或限制了学生为不同目的或不同受众写作的能力。
+- 内容受限portfolio。并不理想。这些portfolio可能呈现上述任何模式。然而，其中一些作品来自语言艺术课程之外的学科。内容领域受限，portfolio显示学生在语言艺术课程之外的写作还需进一步提高。portfolio表明，写作技能在不同学科之间未得到应用或整合。
 
 显然，你不想创建一个会产生任何不适当portfolio类型的系统。当你按照下一节描述的步骤进行操作时，请始终牢记portfolio的目的。
 
@@ -11058,56 +11632,54 @@ portfolio的规模与有效性和可靠性有关。portfolio是否代表学生�
 
 每个步骤后都有portfolio制作问题，用于聚焦你的开发努力。注意，在回答Step 1的问题后，你可能会决定不开发portfolio系统。Step 2至Step 5假设你已经完成Step 1并决定使用portfolio系统。如果你决定开发portfolio系统，Step 1的问题答案将设定你在应用最后五个步骤时的边界和背景。
 
-## Step 1. Identify Portfolio’s Purpose and Focus
+### Step 1. Identify Portfolio’s Purpose and Focus
 
-+   - 为什么我要一个portfolio？
-+   - 它将服务于哪些学习目标和课程目标？
-+   - 其他评估方法是否更能服务于这些学习目标？
-+   - portfolio是应侧重于最佳作品、成长和学习进步，还是两者兼顾？
-+   - portfolio是用于学生的总结性评估、形成性评估，还是两者兼顾？
-+   - 谁应该参与定义portfolio的目的、焦点和组织（例如，学生、教师、家长）？
+- 为什么我要一个portfolio？
+- 它将服务于哪些学习目标和课程目标？
+- 其他评估方法是否更能服务于这些学习目标？
+- portfolio是应侧重于最佳作品、成长和学习进步，还是两者兼顾？
+- portfolio是用于学生的总结性评估、形成性评估，还是两者兼顾？
+- 谁应该参与定义portfolio的目的、焦点和组织（例如，学生、教师、家长）？
 
-## Step 2. Identify the General Achievement Dimensions to Be Assessed
+### Step 2. Identify the General Achievement Dimensions to Be Assessed
 
-+   - 我是否需要使用与个人表现任务相同的内容和思维过程框架？
-+   - 我是否应主要关注学生如何通过portfolio反思自己的进步或成长？
-+   - portfolio的主要关注点是什么知识、技能和能力？
-+   - 如果我要求一个成长和学习进步的portfolio，我想了解学生的什么关于自我反思的内容？
+- 我是否需要使用与个人表现任务相同的内容和思维过程框架？
+- 我是否应主要关注学生如何通过portfolio反思自己的进步或成长？
+- portfolio的主要关注点是什么知识、技能和能力？
+- 如果我要求一个成长和学习进步的portfolio，我想了解学生的什么关于自我反思的内容？
 
-## Step 3. Identify Appropriate Organization
+### Step 3. Identify Appropriate Organization
 
-+   - 哪些类型的条目（学生作品和活动记录）能提供关于Step 2中识别的内容和过程维度的评估信息？
-+   - 每个portfolio的提纲或目录应包含什么？
-+   - 定义每个类别或条目类型：
-   - 它评估的是哪个内容和过程维度？
-   - 教师或学生从中能获得什么？
-+   - 每个条目被放入portfolio的时间范围是什么？
-+   - 条目何时进行评估？
-+   - 每个类别的最小和最大条目数量是多少？
-+   - 学生的portfolio内部条目将如何组织？
-+   - 这些条目是否能完整代表学生的达成程度或成长和学习进步？
-+   - 我需要什么类型的容器来存放所有学生的条目，以及它们将存放在哪里？
+- 哪些类型的条目（学生作品和活动记录）能提供关于Step 2中识别的内容和过程维度的评估信息？
+- 每个portfolio的提纲或目录应包含什么？
+- 定义每个类别或条目类型：
+  - 它评估的是哪个内容和过程维度？
+  - 教师或学生从中能获得什么？
+- 每个条目被放入portfolio的时间范围是什么？
+- 条目何时进行评估？
+- 每个类别的最小和最大条目数量是多少？
+- 学生的portfolio内部条目将如何组织？
+- 这些条目是否能完整代表学生的达成程度或成长和学习进步？
+- 我需要什么类型的容器来存放所有学生的条目，以及它们将存放在哪里？
 
-## Step 4. Portfolio’s Use in Practice
+### Step 4. Portfolio’s Use in Practice
 
-+   - 学生何时会使用或开展portfolio（例如，每节课15分钟）？
-+   - portfolio将如何融入课堂常规？
-+   - 教师、学生或两者共同决定portfolio中包含什么内容？
-+   - 是否需要在课堂中营造特殊氛围以促进portfolio的良好使用？
-+   - 学生和/或教师何时会审阅和评估portfolio？
-+   - 当给出本学期的字母成绩时，portfolio的权重是否需要调整？
-+   - 是否需要安排一次会议与学生一起审阅portfolio？
-+   - portfolio是否会与家长、其他教师或其他学生共享？
-
-
-
-
-
+- 学生何时会使用或开展portfolio（例如，每节课15分钟）？
+- portfolio将如何融入课堂常规？
+- 教师、学生或两者共同决定portfolio中包含什么内容？
+- 是否需要在课堂中营造特殊氛围以促进portfolio的良好使用？
+- 学生和/或教师何时会审阅和评估portfolio？
+- 当给出本学期的字母成绩时，portfolio的权重是否需要调整？
+- 是否需要安排一次会议与学生一起审阅portfolio？
+- portfolio是否会与家长、其他教师或其他学生共享？
 - 每一项的评价是否都会计入学段成绩？
 - 鉴于其目的，作品集是否需要一个总体分数？
 - 量规应是整体的、分析性的，还是注释整体的？
 - 谁来评分作品集（例如，学生、教师、外部人员）？
 - 整个作品集需要多久评分一次（例如，每周或每个学段）？
+
+
+
 - 是否存在用于整体评价作品集的评价框架或通用评分量规？
 
 ## Step 6. Evaluation of Rubrics
@@ -11119,12 +11691,11 @@ portfolio的规模与有效性和可靠性有关。portfolio是否代表学生�
 ## ELECTRONIC PORTFOLIOS
 
 教科书出版商和软件开发商已创建产品，允许最佳作品作品集以数字形式呈现。这些被称为电子作品集。这种作品集的一种用途是教师教育学生申请职位时展示其教学资质。数字化作品集可以存放在本地计算机、光盘（CD）或网站上。软件为作品集内容提供组织方式。人员随后在各个类别中添加电子文档和图像。例如，教师候选人的作品集可能具有以下类别：（a）候选人概述声明，（b）简历，（c）满足的州教学标准，（d）开发的教学计划，（e）开发的教学单元，以及（f）制作的学生评估工具。软件为组织和有时为条目提供模板。
-
 创建作品集的人员将各种数字文件中的文件和作品上传到电子作品集的适当类别中，例如教学计划、简历、教学哲学论文等。一些更复杂的软件允许上传视频片段，因此一个人可以向作品集评估者展示自己授课的视频。作品的照片（例如，制作的表现性任务）可以扫描（或用数码相机拍摄）并上传。如果电子作品集位于网站上，则世界各地的潜在雇主都可以获得访问权限以查看它。或者，完成的电子作品集可以复制到 CD 上并发送给雇主。
 
 ## Summary
 
-## Crafting Performance Tasks and Rubrics
+### Crafting Performance Tasks and Rubrics
 
 - 绩效评估分为三个阶段开发：定义和澄清要评估的表现、构建绩效任务以及创建评分量规。实际上，这些阶段是迭代的，而非线性的。
 - 本章提供了大量关于定义和澄清要评估表现的建议。其中包括使用框架来指导评估将重点关注的成就维度的定义建议。给出了用于评估成就维度的核对表。
@@ -11132,19 +11703,19 @@ portfolio的规模与有效性和可靠性有关。portfolio是否代表学生�
 - 评估中包含的绩效任务数量至关重要，因为此类任务完成时间很长，因此在任何一次评估中任务数量较少。本章回顾了几个影响任务数量决策的因素，包括决策的重要性、评估范围、评估格式的混合、学习目标的复杂性、完成任务所需的时间、评估可用时间、所需的诊断细节以及可用的人力资源。
 - 本章提供了大量关于制作评分量规和记录评估结果的建议。建议包括开发和使用概念框架来组织量规。给出了用于评估评分量规的核对表。
 
-## Crafting Checklists and Rating Scales
+### Crafting Checklists and Rating Scales
 
 - 本章提供了制作核对表的指南以及将它们用于评估过程和程序以及产品的示例。
 - 提供了制作评分量表的指南以及它们在实施评分量规中的使用示例。
 - 描述了教师在使用评分量表作为评分量规时可能犯的错误。
 - 提出了提高评分量表可靠性的建议。给出了用于评估评分量规的核对表。
 
-## Crafting Projects
+### Crafting Projects
 
 - 给出了制作可作为评估工具的项目的指南和建议。
 - 本章提供了管理课堂项目的指导，包括管理目标和实现这些目标的策略。
 
-## Crafting Portfolios
+### Crafting Portfolios
 
 - 关于内容和作品集目的的指导和建议描述了构建作品集系统的相关问题。本章提出了制作作品集的六步程序。
 - 本章讨论了电子作品集的组织和使用方式。
@@ -11194,55 +11765,53 @@ top-down approach to rubric crafting
 ## Exercises and Applications
 
 - 1. 对于你教授（或计划教授）的学科，确定适合使用纸笔格式的即时绩效任务以及不使用纸笔的即时绩效任务进行适当评估的学习目标。
-  a. 使用这些结果，创建一个使用纸笔的即时绩效任务和一个不使用纸笔的即时绩效任务。对于两个任务，均遵循文本中描述的 Marzano et al. (1993) 程序。
+  a. 使用这些结果，创建一个使用纸笔的即时绩效任务和一个不使用纸笔的即时绩效任务。对于两个任务，均遵循文本中描述的 `Marzano et al. (1993)` 程序。
   b. 将你的任务与课程中的另一名学生交换。通过应用用于评判绩效任务质量的核对表来评估彼此的任务。如果任务在核对表的某一项上得到“否”的答案，请说明原因。在必要时修改任务。
   c. 与课程中的其他人分享你的结果。
-
 - 2. 选择你在练习 1 中创建的一个绩效任务，或从其他来源获得的任务。按照本章中的程序准备通用和具体的评分量规。（你可以使用附录 E 中的框架或你的指导教师批准的其他框架。）
   a. 写下你用于制作量规的每一步的描述。
   b. 将你的量规与课程中的另一名学生交换。使用用于评判评分量规质量的核对表来评估彼此的具体量规。每当你的量规在核对表的某一项上得到“否”的答案时，请说明原因。在必要时修改量规。
   c. 与你的课程中的其他人分享你的结果。
-
 - 3. 选择两个或多个可以通过一个绩效任务和相应的具体评分量规（你自己或他人创建）进行评估的学习目标。通过解释该任务如何最好地评估这些学习目标来证明你的选择。
   a. 将绩效任务实施给至少五名学生。使用评分量规对任务进行评分。
   b. 写一篇简短的论文描述你的评分经历。评分量规是否足够？使用它是否存在可靠性问题？为什么或为什么不？根据你的经验提出改进评分量规的建议。
   c. 准备一份你学生结果的摘要。
-
 - 4. 将用于评判绩效任务质量的核对表应用于文本第 11 章中的以下示例。写一份你的发现报告。务必提出如何改进任务的建议。将你的报告副本发送给教科书作者。
   a. “决策制定”（第 237 页）
   b. “清洁水”（第 240 页）
   c. “历史调查”（第 242 页）
-
 - 5. 为你教授（或计划教授）的学科设计一个最佳作品作品集系统。遵循本章建议的六步程序。
   a. 准备一份描述你设计的作品集系统的报告。确保你的报告解决了每个步骤下列出的所有问题。
   b. 与其他学生在课堂上讨论你的作品集系统。
 
 ## Additional Readings
 
-Bevard Public Schools, Stone Middle School, Melbourne, Florida. (http://stone.web.bevard.k12.fl.us/html/d.b.rubric.html)
+Bevard Public Schools, Stone Middle School, Melbourne, Florida. (`http://stone.web.bevard.k12.fl.us/html/d.b.rubric.html`)
 介绍如何使用计算机和/或手持个人数据助理数据库来保存学生的评分量规标记。
 
-Chicago Public Schools, Instructional Intranet, Assessments, Ideas and Rubrics. (http://intranet.cps.k12.us/Assessments/Ideas_and_Rubrics/ideas_and_rubrics.html/)
+Chicago Public Schools, Instructional Intranet, Assessments, Ideas and Rubrics. (`http://intranet.cps.k12.us/Assessments/Ideas_and_Rubrics/ideas_and_rubrics.html/`)
 提供各种学科和年级的绩效任务和量规示例。
 
+
+
 Glathorn, A. A., Bragau, K. D., & Parker, J. (1998). Performance assessment and standards-based curricula: The achievement cycle. Larchmont, NY: Eye on Education.
+
 整合教学、基于标准的课程和绩效评估的实用指南。强调在单元层面规划评估。
 
-Kentucky Department of Education, Office of Academic and Professional Development, Division of Curriculum Development (http://www.kde.state.ky.us/oapd/curr ic/Publications/Performance Event/TOC.html)
+Kentucky Department of Education, Office of Academic and Professional Development, Division of Curriculum Development (`http://www.kde.state.ky.us/oapd/curr ic/Publications/Performance Event/TOC.html`)
+
 开发课堂绩效任务和评分量规的指南。包括示例。
 
 Khattri, N., Reeve, A. L., & Kane, M. B. (1998). Principles and practices of performance assessment. Hillsdale, NJ: Erlbaum.
 
-
-
-
-
 基于16所学校的案例研究得出的想法和建议。讨论了州级和地方级在目的和实施方面的差异。提供了对绩效评估各方面的见解。
 
 Marzano, R., Pickering, D., & McTighe, J. (1993). Assessing student outcomes: Performance assessment using the Dimensions of Learning Model. Alexandria, VA: Association for Supervision and Curriculum Development.
+
 详细描述了附录E中所示的标准。提供了许多可应用其标准的绩效任务和评分量规示例。
 
 Mehrens, W. A., Popham, W. J., & Ryan, J. M. (1998). How to prepare students for performance assessments. Educational Measurement: Issues and Practice, 17(1), 18–22.
+
 本文提供了六条关于如何准备学生参加绩效评估的实用指导原则。重点在于保持绩效评估的有效性和教育价值。
 
 Rolheiser, C., Bower, B., & Stevahn, L. (2000). The portfolio organizer: Succeeding with portfolios in your classroom. Alexandria, VA: Association for Supervision and Curriculum Development.
@@ -11250,36 +11819,39 @@ Rolheiser, C., Bower, B., & Stevahn, L. (2000). The portfolio organizer: Succeed
 一本如何操作指南。提供了针对最佳作品组合和成长发展组合开发和使用各个步骤的建议和示例。
 
 Shaklee, B. D., Barbour, N. E., Ambrose, R., & Hansford, S. (1997). Designing and using portfolios. Boston: Allyn & Bacon.
+
 使用作品集进行教学目的的实用指导原则、表格和示例。其中一章讨论了使用作品集来识别天赋学生的用途。
 
-State of Michigan, Library of Michigan, Michigan Education Library. (http://mel.lib.mi.us/education/edu-assess.html)
+State of Michigan, Library of Michigan, Michigan Education Library. (`http://mel.lib.mi.us/education/edu-assess.html`)
+
 提供了一个“热链接”列表，其中包含用于开发和使用绩效、项目和作品集评估的文章、示例和其他资源，包括量规开发。
 
 Underwood, T. (1998). The consequences of portfolio assessment: A case study. Educational Assessment, 5, 147–194.
+
 本文描述了一项为期一年的案例研究，涉及用于成绩单评分的语言艺术作品集系统。阅读学生因该系统而取得的进步，以及教师喜欢它的原因。还了解“作品集地狱”。了解学校为何选择不采用作品集系统，即使可以证明与传统系统相比学生学得更多。
 
-## 使用非正式诊断评估进行形成性评价
+# 使用非正式诊断评估进行形成性评价
 
 ## 学习目标
 
 学习本章后，你应掌握以下内容：
 
-## 诊断评估
+### 诊断评估
 
 - 1. 解释诊断学习困难的双重目的。 [1, 4]
 
-### 将教学与六种诊断方法整合
+#### 将教学与六种诊断方法整合
 
 - 2. 描述六种诊断评估方法并举例说明。 [1, 4]
 - 3. 使用本章所述的六种方法中的每一种制定诊断评估程序。 [2, 3, 4]
 - 4. 解释每种诊断评估方法的优势和劣势。 [1, 4]
 - 5. 通过文字和/或图表展示教学、诊断和评估过程如何整合。 [4, 3, 1]
 
-### 对学生进行访谈
+#### 对学生进行访谈
 
 - 6. 解释如何改进对学生的诊断评估访谈。 [2, 4]
 
-## 重要术语和概念
+### 重要术语和概念
 
 - 7. 解释本章末尾所列术语和概念对教育评估的重要性。 [6, 4]
 
@@ -11295,9 +11867,9 @@ Underwood, T. (1998). The consequences of portfolio assessment: A case study. Ed
 
 不同的诊断方法提供了关于学生学习缺陷的不同详细程度。它们在强调诊断的两个目的之一的程度上也存在差异。我们将讨论的六种方法是：
 
-## 诊断评估
+### 诊断评估
 
-## 课堂诊断评估的两个目的
+#### 课堂诊断评估的两个目的
 
 诊断学习困难的评估有两个相关目的：(a) 识别学生未掌握的学习目标，以及
 
@@ -11320,7 +11892,7 @@ Underwood, T. (1998). The consequences of portfolio assessment: A case study. Ed
 
 - 1. 学生是否已学习新单元的先决条件？如果没有，你需要识别缺陷的先决条件，然后在开始新材料之前教授它们。否则学生将无法从新单元中受益。
 
-## 例13.1
+### 例13.1
 
 不同诊断评估方法对同一学生表现的解读示例。
 
@@ -11331,17 +11903,15 @@ Underwood, T. (1998). The consequences of portfolio assessment: A case study. Ed
 | 5 | 2 | 11 | 111 | 231 | √22 | √14 | √111 | √313 |
 | 减法总分为 5/9 或 56%。百分位等级 = 18 |
 
-## 方法1. 优势与弱点剖面
+#### 方法1. 优势与弱点剖面
 
 上图所示减法分测验的得分与加法、乘法、除法等其他分测验的得分进行比较。为每个学生创建算术优势与弱点剖面。
+
 示例：5分的得分百分位等级为18，低于其他分测验得分。
+
 结果解释：学生在减法方面较弱。
 
-
-
-
-
-## 图13.1 将诊断学习困难的六种方法整合到教学过程中的示例。
+#### 图13.1 将诊断学习困难的六种方法整合到教学过程中的示例。
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_305_0.png)
 
@@ -11349,17 +11919,22 @@ Underwood, T. (1998). The consequences of portfolio assessment: A case study. Ed
 
 3. 学生对单元的学习目标进行练习。学生必须练习才能掌握学习目标。
 
-4. 学生是否掌握了单元的学习目标？在此步骤中，你可以通过实施第六章中描述的评估计划，对学生进行更正式的总结性评估。如果学生掌握了材料，你可以继续下一个单元。如果没有，你可能需要重新教授单元的至少一部分。
 
-5. 学生没有掌握哪些学习目标？你的再教学应集中于这些学习目标。根据你学生的教学内容和教育水平，仅仅知道哪些目标学习不足可能就足以让你进行补救教学。
 
-6. 学生犯了什么错误或失误？通常你需要超越学习目标的缺陷来识别学生犯的错误或失误。你的再教学可以集中于纠正你识别出的错误或失误。
+### 4. 学生是否掌握了单元的学习目标？
+在此步骤中，你可以通过实施第六章中描述的评估计划，对学生进行更正式的总结性评估。如果学生掌握了材料，你可以继续下一个单元。如果没有，你可能需要重新教授单元的至少一部分。
 
-7. 为什么会犯这些错误/失误？什么是错误选择项目做得不好。
-  
-  b. 如果可能，每个内容领域使用12到25个项目。这将产生更可靠的档案。
-  
-  c. 项目应涵盖每个内容领域中最基本的概念和程序。你试图识别那些在某一领域最需要补救的少数学生。每个内容领域的项目对于在每个领域达到可接受学习水平的的学生来说应该是容易的。
+### 5. 学生没有掌握哪些学习目标？
+你的再教学应集中于这些学习目标。根据你学生的教学内容和教育水平，仅仅知道哪些目标学习不足可能就足以让你进行补救教学。
+
+### 6. 学生犯了什么错误或失误？
+通常你需要超越学习目标的缺陷来识别学生犯的错误或失误。你的再教学可以集中于纠正你识别出的错误或失误。
+
+### 7. 为什么会犯这些错误/失误？什么是错误选择项目做得不好。
+
+b. 如果可能，每个内容领域使用12到25个项目。这将产生更可靠的档案。
+
+c. 项目应涵盖每个内容领域中最基本的概念和程序。你试图识别那些在某一领域最需要补救的少数学生。每个内容领域的项目对于在每个领域达到可接受学习水平的的学生来说应该是容易的。
 
 - 3. 将项目组合成单独的子测试，每个内容领域一个子测试。例如，将所有加法项目放在一起，所有减法项目放在一起，等等。在每个子测试内按从易到难的顺序排列项目。
 
@@ -11373,9 +11948,9 @@ Underwood, T. (1998). The consequences of portfolio assessment: A case study. Ed
 
 ## 优势和弱点
 
-优势 这种诊断评估方法在你想要对学生在某一学科的子领域中的表现有一个总体概念时最有用。如果你对 incoming 学生班级知之甚少，在学期开始时作为前测施测这种类型的评估可以帮助你根据学生的档案规划教学。它易于制作。可以快速评分，如果你有大班或多个班级，这是一个好处。
+**优势** 这种诊断评估方法在你想要对学生在某一学科的子领域中的表现有一个总体概念时最有用。如果你对 incoming 学生班级知之甚少，在学期开始时作为前测施测这种类型的评估可以帮助你根据学生的档案规划教学。它易于制作。可以快速评分，如果你有大班或多个班级，这是一个好处。
 
-弱点 为了使这些档案有效，你构建的项目必须评估适当的知识和技能，所有学生必须参加相同的子测试，并且子测试必须可靠。如果子测试每个只包含少数几个评估任务，子测试分数可能不可靠。不可靠的子测试分数会导致在不同子领域的不可靠档案。因此，学生的优势和弱点可能因测量偶然误差而被夸大或掩盖。
+**弱点** 为了使这些档案有效，你构建的项目必须评估适当的知识和技能，所有学生必须参加相同的子测试，并且子测试必须可靠。如果子测试每个只包含少数几个评估任务，子测试分数可能不可靠。不可靠的子测试分数会导致在不同子领域的不可靠档案。因此，学生的优势和弱点可能因测量偶然误差而被夸大或掩盖。
 
 使用此类测试进行诊断只为你提供了关于他们问题所在的大致信息。这就像说，“圣杯在北方。”信息是有帮助的，但它让你在找到圣杯之前还有很多工作要做。
 
@@ -11384,22 +11959,30 @@ Underwood, T. (1998). The consequences of portfolio assessment: A case study. Ed
 教师自制法语I诊断测试产生的学生优势和弱点档案示例。
 
 | Areas of French I |  |  |  |  |  |  |  |  |  |  |
+
 |---|---|---|---|---|---|---|---|---|---|---|
+
 |  | Idioms |  | Vocab. |  | Grammar |  | Para. Reading |  | Listen. Compre. |  |
+
 |  | Correct | Rank | Correct | Rank | Correct | Rank | Correct | Rank | Correct | Rank |
+
 | Alan | 10/12 | 3.5 | 11/15 | 3 | 11/13 | 3 | 9/12 | 4 | 3/15 | 5 |
+
 | Isaac | 11/12 | 2 | 10/15 | 4.5 | 3/13 | 6 | 11/12 | 2 | 10/15 | 3 |
+
 | Leslie | 12/12 | 1 | 15/15 | 1 | 12/13 | 2 | 11/12 | 2 | 14/15 | 1 |
+
 | Miriam | 3/12 | 6 | 10/15 | 4.5 | 10/13 | 4.5 | 2/12 | 6 | 1/15 | 6 |
+
 | Rebecca | 5/12 | 5 | 3/15 | 6 | 10/13 | 4.5 | 6/12 | 5 | 4/15 | 4 |
+
 | Robert | 10/12 | 3.5 | 14/15 | 2 | 13/13 | 1 | 11/12 | 2 | 12/15 | 2 |
 
 一位优秀的教育诊断师会利用初始测试结果来形成关于学生困难的假设。你通过跟进并收集额外信息来确认或拒绝这些假设。因此，尽管初始的优势和弱点档案可能不可靠，但如果一位熟练的诊断师在其中纳入适当的额外信息，则最终的诊断将可靠得多。这并不意味着档案生成测试的可靠性应该被忽视：较高的初始可靠性有助于聚焦初始假设集，并防止大量错误线索。档案可靠性非常低的测试会浪费诊断师的资源，因为会追查许多错误线索。
 
 ## 方法2：识别先决条件缺陷
 
-## 描述
-
+### 描述
 这种方法探讨学生是否落后是因为他们没有学习从即将到来的教学中获益所需的特定知识和技能。依赖于识别学习先决条件的方法之一是 Gagné 的学习层级（Gagné, 1962, 1968; Gagné, Major, Garstens, & Paradise, 1962; Gagné & Paradise, 1961）。
 
 创建层级的第一步是选择学生必须能够执行的学习目标。下一步涉及分析它以识别学生为实现目标而必须学习的前提条件。对于每个识别出的前提条件，你重复相同的分析，生成前提条件表现的层级。这种向后分析程序识别出关键的先前学习，其缺乏可能导致学生在后续学习中出现问题。
@@ -11408,13 +11991,8 @@ Underwood, T. (1998). The consequences of portfolio assessment: A case study. Ed
 
 Metropolitan Performance Assessment（Nurss, 1994）例如包含多个评估组件，用于调查学前班和幼儿园学生对开始一年级所需的基本技能和过程的学习。其中一个评估组件是 Metropolitan Integrated Performance Tasks，它评估准备技能，如遵循口头指示、理解押韵词、匹配大小写字母、抄写印刷字母、画图、基本概念（例如，顶部、底部、中间、下面）、机械计数、数字与数字的对应、顺数和倒数、阅读简单图表。学前班和幼儿园教师利用 Metropolitan Performance Assessment 中关于掌握先决条件的信息来为学生准备一年级的工作。
 
-## 课堂应用
-
-你可以为单个教学单元或一个学期识别先决条件。使用层级方法，或简单地识别不在教学顺序中的必要先决条件。要制定学习层级，你应遵循前面关于 Gagné 学习层级所述的程序。对于每个学习目标，自问：“学生在准备学习这个学习目标之前必须能够做什么？”关注需要立即之前学习的内容。一旦你识别出那个直接之前（前提）表现，你就对其提出同样的问题。你可能会识别出一个或多个直接
-
-
-
-先决条件。继续进行这种向后分析，直到你到达可以合理假设几乎所有 incoming 学生都已学习先决条件的那一点。
+### 课堂应用
+你可以为单个教学单元或一个学期识别先决条件。使用层级方法，或简单地识别不在教学顺序中的必要先决条件。要制定学习层级，你应遵循前面关于 Gagné 学习层级所述的程序。对于每个学习目标，自问：“学生在准备学习这个学习目标之前必须能够做什么？”关注需要立即之前学习的内容。一旦你识别出那个直接之前（前提）表现，你就对其提出同样的问题。你可能会识别出一个或多个直接先决条件。继续进行这种向后分析，直到你到达可以合理假设几乎所有 incoming 学生都已学习先决条件的那一点。
 
 例 13.3 显示了基于 Ferguson（1970）的分析得出的计算减法学习层级的一个例子。最终学习目标“从十位和百位借位减去两个三位数”位于顶部。所有其他表现都是它的先决条件。请注意，表现 5 是表现 4 的先决条件，但表现 2 和 3 也是表现 4 的先决条件。然而，表现 2 和 3 互不为先决条件，因此它们显示在并行的分支中。
 
@@ -11429,6 +12007,8 @@ Metropolitan Performance Assessment（Nurss, 1994）例如包含多个评估组�
 ## 例 13.3
 
 减法单元的先决条件层级。
+
+
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_308_0.png)
 
@@ -11448,7 +12028,7 @@ Champagne 等人回顾了认知研究者关于教授力学基本原理的教学�
 
 ## 方法 3：识别未掌握的目标
 
-## 描述
+### 描述
 
 这种方法将评估集中在学生预期学习的重要、具体目标上。简短的测试评估每个目标。这种方法与识别先决条件缺陷方法的区别在于，这里你只评估单元或课程的结果目标，而非先决目标。
 
@@ -11460,7 +12040,7 @@ competencies, providing teachers with the necessary information to determine ski
 
 当前目标导向评估和教学的广泛流行，主要是由于集成目标和测试的商业可用性。出版商在 1970 年代后期和 1980 年代初期转向此类集成材料，此前教育工作者热情地迎接了标准参照测试的概念（Glaser, 1963；Nitko, 1980）。开发了将目标、学习材料和诊断测试集成的教学方法。主要原型是掌握学习模型（Bloom, 1968；Carroll, 1963）、个体化规定教学（Glaser, 1968；Lindvall & Bolvin, 1967）、按需学习计划（Flanagan, 1967, 1969）、个体化指导教学（Klausmeier, 1975）以及个性化教学系统（Keller, 1968；Keller & Sherman, 1974）。
 
-## 课堂应用
+### 课堂应用
 
 你希望从这种方法中获得的诊断信息是学生已掌握和未掌握的学习目标（目标）清单。这意味着对于每个教学单元，你必须仔细识别并陈述重要的学习目标。按以下步骤进行：
 
@@ -11468,28 +12048,23 @@ competencies, providing teachers with the necessary information to determine ski
 - Step 2. 对每个学习目标，设计四到八道测试题。
 - Step 3. 如果可能，让另一位教师审阅每道题并评定其与学习目标的匹配程度。根据需要修改题目以获得更紧密的匹配。
 - Step 4. 如果学习目标清单相对较短（少于六个），将题目组装成单一工具；否则，根据学生的教育发展，你可能需要将评估分为两个或多个工具。为便于评分，保持评估同一目标的所有题目在工具中放在一起。
-- Step 5. 为每个学习目标设定“掌握”或及格分数。常用的及格分数是 80%（或根据你用于评估学习目标的题目数量尽可能接近此值）。80% 并没有教育上的正当理由。重要的是不是及格分数或及格百分比的确切数值。而是最低的知识水平
-
-诊断和监测学生学习进展已成为旨在根据学生差异调整教学的项目的运营特征。此类项目的一个关键组成部分是使用标准参照评估，即 [assessments] 设计用于确定某些特定
-
+- Step 5. 为每个学习目标设定“掌握”或及格分数。常用的及格分数是 80%（或根据你用于评估学习目标的题目数量尽可能接近此值）。80% 并没有教育上的正当理由。重要的是不是及格分数或及格百分比的确切数值，而是最低的知识水平。
 
 学生需要就每个学习目标进行展示，以便从进一步的教学中受益。这可能因学习目标而异。请自行判断，记住设定标准过低或过高会导致将学生错误地归类为掌握者或非掌握者。
 
 第 6 步。对学生进行测评。测评后，分别对每个学习目标进行评分。准备一份班级名单和图表，以便记录学生在每个学习目标上的得分。这可以帮助你识别具有相似缺陷的学生。示例 13.4 显示了此类图表的示例。图表上圈出的分数表示缺乏掌握。学生应就这些目标接受补救教学。
 
-## 优势与劣势
+### 优势与劣势
 
 优势 基于具体目标的诊断性测评具有吸引力，因为它们 (a) 专注于教学的特定且有限的学习目标，(b) 以易于理解的形式传达学习目标，(c) 将你的注意力集中在学生可观察的表现上。这些特点使测评更容易，教学决策更简单，公共问责更清晰。
 
-劣势 基于目标的诊断性测评通常受测量误差困扰，主要是因为测评每个目标的题目往往太少。如果你使用诊断性测评来决定学生是否“掌握”某个目标，你应该
+劣势 基于目标的诊断性测评通常受测量误差困扰，主要是因为测评每个目标的题目往往太少。如果你使用诊断性测评来决定学生是否“掌握”某个目标，你应该使用诸如一致性百分比之类的指标来评估其质量，而不是传统的信度系数。百分比一致性在第 4 章中有讨论。百分比一致性指标估计学生在重新施测同一测评或施测测评的替代形式时被归类到同一类别的可能性。 （参见附录 J，了解如何计算该指标的示例。）分类的一致性（即掌握或未掌握）是主要关注点，而非学生精确分数的一致性。
 
-使用诸如一致性百分比之类的指标来评估其质量，而不是传统的信度系数。百分比一致性在第 4 章中有讨论。百分比一致性指标估计学生在重新施测同一测评或施测测评的替代形式时被归类到同一类别的可能性。 （参见附录 J，了解如何计算该指标的示例。）分类的一致性（即掌握或未掌握）是主要关注点，而非学生精确分数的一致性。
-
-行为目标法进行诊断性测评还有其他严重的局限性。所获得的信息仅反映诊断的一个方面：待学习内容的观察行为或表现。这为你提供了很少的信息来补救发现的缺陷。你只知道学生未掌握某个目标。与我们讨论过的其他方法一样，基于行为目标的测评并非完全诊断性的。
+行为目标法进行诊断性测评还有其他严重的局限性。所获得的信息仅反映诊断的一个方面：待学内容的观察行为或表现。这为你提供了很少的信息来补救发现的缺陷。你只知道学生未掌握某个目标。与我们讨论过的其他方法一样，基于行为目标的测评并非完全诊断性的。
 
 行为目标法还可被批评为暗示了知识和技能获得的不当理论。学生的知识基础被视为先前学习的具体行为的简单总和。此外，批评者指出，基于行为的测验无法评估学生的知识图式、问题解决障碍以及在新的现实世界情境中思考的能力（Haertel & Calfee, 1983）。近年来，教学心理学和认知心理学强调了学习学生知识的内部表征
 
-## 示例 13.4
+### 示例 13.4
 
 教师自编、基于目标的诊断性测验中特定目标掌握与未掌握诊断的假设示例。圆圈表示未掌握。
 
@@ -11499,6 +12074,9 @@ competencies, providing teachers with the necessary information to determine ski
 | 1. Names and tells functions of each cell part. [8 items, mastery = 7/8] | 7/8 | 8/8 | 7/8 | 2/8 | 5/8 | 6/8 |
 | 2. Lists substances diffused and not diffused through cell membrane. [6 items, mastery = 5/6] | 4/6 | 6/6 | 5/6 | 5/6 | 3/6 | 1/6 |
 | 3. Labels parts of animal and plant cells. [6 items, mastery = 5/6] | 5/6 | 5/6 | 5/6 | 4/6 | 2/6 | 4/6 |
+
+
+
 | 4. Applies concepts of diffusion, oxidation, fusion, division, chromosomes, and DNA to explain reproduction. [8 items, mastery = 7/8] | 5/8 | 7/8 | 7/8 | 7/8 | 3/8 | 6/8 |
 
 （或图式）、学生对知识要素之间的关系、学生如何从学习经历中构建意义，以及学生掌握的知识加工技能（Glaser, 1982, 1984; Greeno, 1976）。
@@ -11507,13 +12085,13 @@ competencies, providing teachers with the necessary information to determine ski
 
 ## 方法 4：识别学生的错误
 
-## 描述
+### 描述
 
 该方法的目标是识别学生的错误，而不仅仅是对学生在特定行为目标上的整体表现做出掌握-非掌握的判断。错误的例子包括：在减法中“借位”时未能进位、阅读时元音发音不当、拼写时 i 和 e 颠倒、写作时产生句子片段。一旦你识别并对学生的错误进行分类，你就可以尝试提供教学以补救（消除）它们（参见示例 13.1 和图 13.1）。
 
 与错误分类方法相关的是将复杂表现分析为两个或多个组成部分表现的方法。如果学生无法完成整个复杂表现，诊断性测评会识别缺少哪些组成部分行为。例如，Resnick 及其同事（Resnick, 1975, 1976; Resnick, Wang, & Kaplan, 1973）将复杂的学前数学技能分解为其组成部分技能，并确定这些子技能应执行的顺序。Burton（1982）确定了学生正确解决一个问题所需的所有子技能。对这些较不复杂的子技能在孤立情况下的测量是诊断的基础。Gagné（1970, 1979）提出了一种两阶段程序来评估问题解决能力。当学生未能解决所呈现的问题时，会使用第二阶段测评来确定学生是否知道其中的任何原理、是否知道所有原理，以及学生是否理解如何将它们结合起来。
 
-## 课堂应用
+### 课堂应用
 
 应用这种方法并不容易，因为识别学生的错误需要相当的经验和技能，而且一个错误可能有多个原因。例如，考虑示例 13.1 中的减法问题。经验不足或技能不足的教师可能无法认识到学生错误可能的原因。经常，这样的教师会说学生“不仔细”或“犯了粗心错误”。然而，学生的错误很少是粗心或随机的。相反，学生的错误往往是系统性的。
 
@@ -11523,7 +12101,7 @@ competencies, providing teachers with the necessary information to determine ski
 
 第 10 章讨论了高阶思维和问题解决测评。那些测评策略对于发现学生倾向于犯何种类型的问题解决错误很有用。
 
-## 优势与劣势
+### 优势与劣势
 
 优势 错误分类方法相对于行为目标方法的 chief 优势在于，你不仅发现学习目标无法完成，还发现学生表现中哪些方面存在缺陷。这缩小了你寻找表现不佳可能原因的范围。熟练的教师可以利用这些信息快速识别一种或多种先前对类似学生有效（补救了错误）的教学程序。
 
@@ -11531,12 +12109,9 @@ competencies, providing teachers with the necessary information to determine ski
 
 然而，比实施的实际问题更严重的是，如果诊断仅对错误进行分类，它仍然无法识别学生产生错误时使用的思维过程。仅仅知道错误的类型（减法中未能借位）并不能告诉你学生需要哪些适当的知识结构和认知过程才能达到期望的结果。错误枚举和分类关注表现的负面方面，对于理解学生为何产生错误是不够的（Bejar, 1984）。当然，认知分析可以纳入错误诊断程序。我们接下来讨论这种可能性。
 
-
-
-
 ## 方法 5：识别学生知识结构
 
-## 描述
+### 描述
 
 前面提到的诊断性评估方法的不足之处在于，它们与学科信息和问题解决的表面特征联系紧密。诊断应更多地关注学生如何感知该内容的结构或组织（即学生的知识结构），以及她如何处理信息和知识，利用该内容知识来解决问题。正如 Sternberg 在其他情境中所指出的（Sternberg, 1984；Wagner & Sternberg, 1984），行为主义和心理测量学方法并不完全错误，但它们是不完整的。更好的方法应描述帮助改变思维的学生心理过程。
 
@@ -11546,13 +12121,13 @@ competencies, providing teachers with the necessary information to determine ski
 
 用于评估学生知识结构的几种方法。这些方法有一个共同的观点，即随着个人变得更加熟练，他们的知识变得更加相互联系、组织得更深入且更易于获取。知识组织评估有着悠久的历史，最早的研究使用自由回忆，后来的研究使用词语联想（Preece, 1976 是一个例子）。其他方法包括卡片自由分类（Hambleton & Sheehan, 1977）；相似性评定（Johnson, 1967）；树状或层次图构建（Filenbaum & Rapoport, 1971）；有序树层次恢复（Reitman & Rueter, 1980）；改进有序树（MOT）层次恢复（Naveh-Benjamin, McKeachie, Lin, & Tucker, 1986）；方案分析（Greeno, 1976, 1978；Hewson & Hamlyn, 1984）；测绘测试（Surber, 1984；Surber & Smith, 1981）；结构形成（SLT）（Ballstaedt & Mandl, 1985）；MicroCAM 概念映射（Ju, 1989；Young, 1993）；以及概念结构分析（ConSAT）（Champagne & Klopfer, 1980）。这些技术在理论视角和它们所代表的知识组织类型上有所不同。对理论建构和潜在知识结构以及该结构如何在学生记录中反映做出相似假设的技术具有足够的聚合效度，可用于课堂评估目的（Champagne, Hoz, & Klopfer, 1984；Shavelson & Stanton, 1975）。
 
-## 课堂应用
+### 课堂应用
 
 概念图是图形化表示学生如何理解学科中主要概念之间关系的方式。学生如何组织与岩石科学单元相关的概念的示例显示在示例 13.5 中。请注意，这个概念图显示学生对该单元概念的组织相当良好。然而，一些重要的概念联系缺失了。在很大程度上，学生以层次结构理解概念（例如，花岗岩和浮石包含在称为火成岩的类别中，而火成岩是一种岩石类型）。学生只显示了一个与特定岩石或岩石类别的变化或转化相关的联系（页岩变成板岩）。学生无法将沉积物概念纳入地图，因此不知道沉积物可以形成页岩或石灰石。其他联系也缺失：火成岩可以风化并转化为沉积物和沉积岩；沉积岩可以形成变质岩，而变质岩又可以风化并返回沉积岩；石灰石可以变成大理石（Champagne & Klopfer, 1980）。
 
 关于如何捕捉学生的概念图，建议见表 13.1。对于此任务，教师向学生展示示例 13.5 顶部概念列表，并与学生单独合作，按照表 13.1 中描述的程序创建概念图。随着每个概念在地图中使用，它将被从列表中划掉。
 
-### 示例 13.5
+#### 示例 13.5
 
 学生岩石概念图的假设示例。
 
@@ -11567,7 +12142,11 @@ competencies, providing teachers with the necessary information to determine ski
 - ✓ 岩石
 - ✓ 沉积物
 - ✓ 沉积岩
+
+
+
 - ✓ 页岩
+
 - ✓ 板岩
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_313_0.png)
@@ -11584,17 +12163,15 @@ competencies, providing teachers with the necessary information to determine ski
 | 6. 探索交叉联系和复杂关系 | 与学生一起回顾到目前为止绘制的地图。询问学生关于之前未连接的概念对以及第 5 步中提到的新概念的联系。问学生他或她是否认为三个或四个概念应该连接在一起以及为什么。记录这些复杂关系。 |
 | 7. 向学生反馈并重新排列以制作最终地图 | 向学生展示地图并与学生讨论地图告诉你关于学生思维的什么信息。问学生这是否准确，并重新排列地图以更准确地描述学生对概念的组织。你可以在这里停止，如果你有足够的细节来理解学生的概念组织。否则，重复步骤 5 和 6。 |
 
-
-
-
-
-从示例可以看出，使用这种诊断方法需要对学生进行单独评估，需要非常了解该学科才能识别出学生缺失的环节，并在解释 resulting 概念图时使用相当大的判断力。如果您将对学生“缺失环节”的评估与其他关于学生理解概念的证据相互印证，例如解题任务以及学生的论文和课堂回答，您的判断的有效性就会提高。此外，请记住，关联信息可能有不止一种正确的方式；不止一种图式可能是正确的。
+从示例可以看出，使用这种诊断方法需要对学生进行单独评估，需要非常了解该学科才能识别出学生缺失的环节，并在解释 `resulting` 概念图时使用相当大的判断力。如果您将对学生“缺失环节”的评估与其他关于学生理解概念的证据相互印证，例如解题任务以及学生的论文和课堂回答，您的判断的有效性就会提高。此外，请记住，关联信息可能有不止一种正确的方式；不止一种图式可能是正确的。
 
 ## 优势与劣势
 
-优势 这种诊断方法将您的注意力集中在学生如何思考概念及其相互关系上。它让您对学生如何看待概念的组织方式有所了解，以及或许它们如何与学生学过的其他概念和程序相关联。这些见解可能有助于您解释学生为何犯错，或为何难以解决问题。
+### 优势
+这种诊断方法将您的注意力集中在学生如何思考概念及其相互关系上。它让您对学生如何看待概念的组织方式有所了解，以及或许它们如何与学生学过的其他概念和程序相关联。这些见解可能有助于您解释学生为何犯错，或为何难以解决问题。
 
-劣势 虽然对知识结构和问题表征的评估可能让您洞察到学生的思维，但这些临床程序仍处于实验阶段。我们尚不清楚结果的有效程度，或不同教师是否会对同一学生得出相同的诊断。学生对访谈者（教师）和访谈情境的反应可能会极大地影响结果。因此，在解释结果时您需要谨慎。
+### 劣势
+虽然对知识结构和问题表征的评估可能让您洞察到学生的思维，但这些临床程序仍处于实验阶段。我们尚不清楚结果的有效程度，或不同教师是否会对同一学生得出相同的诊断。学生对访谈者（教师）和访谈情境的反应可能会极大地影响结果。因此，在解释结果时您需要谨慎。
 
 在大班教学中，这些程序会带来实际问题。因为您必须一次只评估一名学生，所以您需要让其余班级保持忙碌。虽然前面列出的某些程序面向小组，但尚不清楚它们是否能产生与此处推荐的个人访谈方法相同的结果。一些作者（Clarke, 1990）建议教学生使用概念图。然而，目前尚不清楚学生创建地图所需的技能是否有助于或阻碍他们表达其知识组织。绘制概念图和绘制问题的模型需要空间技能，并非所有学生都具备。此外，目前尚不清楚所有概念和关系是否都能在空间上表示。例如，你如何在空间上展示家庭之爱、尊重邻里以及社区和平共处之间的关系？
 
@@ -11604,91 +12181,86 @@ competencies, providing teachers with the necessary information to determine ski
 
 ## 方法 6：识别解决文字问题的能力
 
-## 描述
-
+### 描述
 这种方法侧重于诊断学生是否理解文字问题的组成部分。解决文字问题构成了社会研究、数学和科学中大量学习目标。文字问题是对或多或少现实情况的简短口头描述，要求学生使用所给信息来回答一个问题（Marshall, Pribe, & Smith, 1987）。考虑以下文字问题：
 
-Example
+**Example**
+
 一辆公交车载着 38 名乘客。它停在公交车站，23 名乘客下车，另有 11 名乘客上车。当公交车驶离该车站时，车上有多少名乘客？
 
 为了解决这个问题，学生必须以多种方式使用长期记忆中的知识在心理上处理它（Mayer, Larkin, & Kadane, 1984）：
 
 - 1. 翻译。学生必须理解问题中的每个陈述。这要求学生使用事实和语言知识。
 
-Example
+**Example**
+
 例如，在前述问题中，学生必须理解公交车、载客、公交车站、下车、上车、驶离车站等概念。在语言上，学生必须理解问题的含义，“当公交车驶离该车站时，车上有多少名乘客？”
 
 - 2. 理解。学生必须形成问题的心理表征或模型。换句话说，学生必须使用图式知识来识别问题如何融入一般框架，以确定其问题类型。（参见第 10 章关于图式的讨论。）
 
-## Example
+**Example**
 
 在前述问题中，学生必须认识到这是一个仅涉及加法和减法的算术问题。
 
 - 3. 计划。学生必须形成解决问题的策略或计划。学生必须使用策略性知识。（参见第 10 章关于评估解题策略的讨论。）
 
-## Example
+**Example**
 
 学生必须认识到要知道公交车离开车站时有多少乘客，必须从公交车上的 38 人中减去在该站下车的 23 人，并将 11 名在该站上车的人加到剩余人数上。算术上，策略是：（38 − 23）+ 11。（注：许多问题可能有不止一种正确的策略。）
 
 - 4. 执行。学生必须使用适当的算法（程序）并正确执行计算或步骤。学生必须使用算法知识。
 
-## Example
+**Example**
 
 学生必须能够正确计算：（38 − 23）+ 11 = 26 名乘客在公交车驶离车站时。
 
 这种方法的诊断是识别无法解决文字问题的学生，以及他们的缺陷是否在于语言和事实知识、图式知识、策略性知识或算法知识。学生可能无法解决一个问题，因为学生缺乏这四种知识类型中的一种或多种。您的补救教学侧重于教学生使用他们缺乏的知识类型。
 
-## 课堂应用
-
+### 课堂应用
 您通过识别每个文字问题中关键的语言、图式、策略和算法知识来应用这种方法。这意味着您必须分析每个文字问题，并以分析结果为基础提出诊断性问题。以下是您可以如何表述诊断项目的示例，类似于 Ismail（1994）使用的方法。
 
-## Example
+**Example**
 
-### 评估学生对文字问题组成能力的诊断项目的示例
+#### 评估学生对文字问题组成能力的诊断项目的示例
 
-### 重点文字问题
-
+#### 重点文字问题
 空饼干罐重 3 盎司。装满饼干后重 1 磅。罐内饼干重多少盎司？
 
-### 语言知识诊断项目
-
+#### 语言知识诊断项目
 - 1. 什么是饼干罐？
 - 2. 你认为以下问题是什么意思：“罐内饼干重多少盎司？”
 
-### 图式知识诊断项目
-
+#### 图式知识诊断项目
 - 3. 你需要哪些算术运算来解决这个问题？
 
-### 图式知识诊断项目
-
+#### 图式知识诊断项目
 - 4. 你应该采取哪些步骤来解决这个问题？（或，你将如何着手解决这个问题？）
 - 5. 以下哪项是解决该问题的正确方法？
-  - A (1 × 16) − 3
-  - B (3 − 1) 16
-  - C (1 × 3)
-  - D 3 + 1
-  - E 3 − 1
+  - A `(1 × 16) − 3`
+  - B `(3 − 1) 16`
+  - C `(1 × 3)`
+  - D `3 + 1`
+  - E `3 − 1`
 
-### 算法知识诊断项目
-
-- 6. (1 × 16) − 3 =
+#### 算法知识诊断项目
+- 6. `(1 × 16) − 3 =`
 
 以下建议将帮助您为使用这种诊断程序制作项目。
 
 - 1. 为了评估语言知识，将您的问题集中在学生必须理解以将陈述转化为问题的心理模型的关键术语和关键短语上。您可能需要提出几个问题并探究学生的答案，以发现他对问题中词语和短语的理解程度。
 - 2. 为了评估图式知识，请学生提问以查看他们是否知道为解决该问题必须使用哪些规则或原理。对于算术问题，这可能意味着询问应使用哪些运算。
-- 3. 为了评估策略性知识，重点关注学生识别达到答案所需的正确步骤序列或正确过程的能力。对于算术文字问题，这意味着确定学生是否知道使用哪些数字，使用哪些运算以及应用运算的正确顺序。也许更容易向学生展示几个序列并询问哪一个适用于给定的问题（Ismail, 1994）。所有替代解题策略中的所有数字都应与手头的文字问题相关。
-- 4. 为了评估算法知识，制作一个项目，呈现正确的序列和正确的数字。重点在于学生是否能够在没有文字问题背景的情况下遵循算法。为了避免向学生提示正确的图式和策略，请在完成对语言、图式和策略知识的提问后，再呈现算法项目（Ismail, 1994）。
 
 
 
+3. 为了评估策略性知识，重点关注学生识别达到答案所需的正确步骤序列或正确过程的能力。对于算术文字问题，这意味着确定学生是否知道使用哪些数字，使用哪些运算以及应用运算的正确顺序。也许更容易向学生展示几个序列并询问哪一个适用于给定的问题（Ismail, 1994）。所有替代解题策略中的所有数字都应与手头的文字问题相关。
 
+4. 为了评估算法知识，制作一个项目，呈现正确的序列和正确的数字。重点在于学生是否能够在没有文字问题背景的情况下遵循算法。为了避免向学生提示正确的图式和策略，请在完成对语言、图式和策略知识的提问后，再呈现算法项目（Ismail, 1994）。
 
 虽然识别学生在四种成分知识类型中的哪一种存在不足是有用的，但更重要的是评估学生的缺陷是否在多个不同问题中持续存在一种模式。为了识别这种模式，选择若干不同类别问题中的每个类别的两个文字题。对每个问题，针对前面所述的四种知识类型分别设计诊断性问题。按以下顺序施测这些题目：
 
-- 1. 先施测所有文字题。
-- 2. 对每个文字题，施测语言、图式和策略知识题目。
-- 3. 施测所有算法知识题目。
+1. 先施测所有文字题。
+2. 对每个文字题，施测语言、图式和策略知识题目。
+3. 施测所有算法知识题目。
 
 要识别学生的模式，回顾学生在所有问题类型中对语言题目的回答。学生是在所有问题中表现 consistently 很好或很差，还是仅在某个文字题或问题类别中存在困难？对图式题目重复此回顾，然后是策略，最后是算法。诊断应基于学生回答的一致性。
 
@@ -11696,33 +12268,34 @@ Example
 
 ## 优势与劣势
 
-优势 这种方法最适用于用公式或一组算术运算算法求解的文字题。这些包括算术文字题（如货币、时间、速率和成本）、代数文字题、统计文字题、涉及数学的社会研究文字题以及科学文字题。你用来解释诊断的框架（语言、图式、策略和算法知识）可以在许多问题类别中保持一致地应用。该框架还提示了如何补救学生的缺陷。
+**优势** 这种方法最适用于用公式或一组算术运算算法求解的文字题。这些包括算术文字题（如货币、时间、速率和成本）、代数文字题、统计文字题、涉及数学的社会研究文字题以及科学文字题。你用来解释诊断的框架（语言、图式、策略和算法知识）可以在许多问题类别中保持一致地应用。该框架还提示了如何补救学生的缺陷。
 
-劣势 这种方法需要每个知识类别有大量题目以确保足够的信度。对一种问题类型（如货币）观察到的模式可能在其他问题类型（如时间）中不出现。如果试图将学生的缺陷推广到问题类型，这会使诊断的有效性降低。由于需要大量题目，并且个别施测是最合适的评估方法，该程序耗时。方法的有效性也非常取决于你识别关键短语、适当图式以及解决问题的适当策略的能力。如果存在多种解题策略，你必须小心允许学生表达这些策略，不要因否定它们而混淆诊断。尽管如此，你可以用非常非正式的方式使用这种方法，也许口头提问，以获得一些关于学生为何在文字题上遇到困难的见解。
+**劣势** 这种方法需要每个知识类别有大量题目以确保足够的信度。对一种问题类型（如货币）观察到的模式可能在其他问题类型（如时间）中不出现。如果试图将学生的缺陷推广到问题类型，这会使诊断的有效性降低。由于需要大量题目，并且个别施测是最合适的评估方法，该程序耗时。方法的有效性也非常取决于你识别关键短语、适当图式以及解决问题的适当策略的能力。如果存在多种解题策略，你必须小心允许学生表达这些策略，不要因否定它们而混淆诊断。尽管如此，你可以用非常非正式的方式使用这种方法，也许口头提问，以获得一些关于学生为何在文字题上遇到困难的见解。
 
 ## 面试学生
 
 本章讨论的许多诊断方法要求你与学生单独工作。很多时候你需要要求学生解释他们的想法以收集非正式诊断信息。以下是使用访谈收集诊断信息的建议：
 
-- 1. 记住访谈的主要目的是收集有关学生思维、错误、错误过程或对学科的错误方法的 信息。你不是在寻找你提出的问题的“正确答案”。
-- 2. 像准备其他评估一样为访谈做准备。心里想着你寻求的信息类型，了解你将用来追问答案的一般策略，准备好必要的材料，准备一个安静、无干扰的访谈场所，计划让其余班级的学生保持忙碌，并计划将访谈限制在几分钟内。
-- 3. 不要让学生感到恐惧或害怕。用非正式、友好、交谈的方式。
-- 4. 不要用大量快速提问轰炸学生。
-- 5. 等待学生回应。当你要求学生思考或告诉你他们如何处理信息时，5秒或10秒的等待时间可能是最低限度。
-- 6. 从更广泛的问题开始，然后逐渐提出更具体、更有针对性的问题。保持问题聚焦于你寻求的诊断信息类型。
-- 7. 做笔记，这样你就不必依赖记忆，也可以在计划补救教学时跟进。
+1. 记住访谈的主要目的是收集有关学生思维、错误、错误过程或对学科的错误方法的信息。你不是在寻找你提出的问题的“正确答案”。
+2. 像准备其他评估一样为访谈做准备。心里想着你寻求的信息类型，了解你将用来追问答案的一般策略，准备好必要的材料，准备一个安静、无干扰的访谈场所，计划让其余班级的学生保持忙碌，并计划将访谈限制在几分钟内。
+3. 不要让学生感到恐惧或害怕。用非正式、友好、交谈的方式。
+4. 不要用大量快速提问轰炸学生。
+5. 等待学生回应。当你要求学生思考或告诉他们你如何处理信息时，5秒或10秒的等待时间可能是最低限度。
+6. 从更广泛的问题开始，然后逐渐提出更具体、更有针对性的问题。保持问题聚焦于你寻求的诊断信息类型。
+7. 做笔记，这样你就不必依赖记忆，也可以在计划补救教学时跟进。
+
+许多诊断评估策略需要在访谈情境中与个别学生进行密集工作。本章提供了改进诊断访谈的建议。
 
 ## 摘要
 
-诊断性评估
+### 诊断性评估
 
 - 诊断性学习困难评估有两个相关目的：（a）识别学生尚未掌握的学习目标，以及（b）提出学生为何未掌握学习目标的可能原因或理由。
 
-将教学与六种诊断方法整合
+### 将教学与六种诊断方法整合
 
 - 本章介绍了六种诊断学习问题的方法：（a）描述内容领域优势与劣势，（b）识别先备知识和技能，（c）识别未掌握的具体目标，（d）识别学生的错误，（e）识别学生的知识结构，以及（f）识别文字问题解决中的知识成分缺陷。
 - 图13.1总结了六种诊断方法如何融入教学过程。
-- 描述内容领域优势与劣势的方法呈现学生在若干主题领域的常模参照性档案。该方法在你对新入学学生群体知之甚少且想大致了解其需求时很有用。学生的粗略档案仅为教学提供一般性指导，必须通过更详细的诊断来跟进。档案也往往不可靠。本章给出了制作和使用遵循此方法测试的建议。
 
 描述内容领域优势与劣势的方法呈现学生在若干主题领域的常模参照性档案。该方法在你对新入学学生群体知之甚少且想大致了解其需求时很有用。学生的粗略档案仅为教学提供一般性指导，必须通过更详细的诊断来跟进。档案也往往不可靠。本章给出了制作和使用遵循此方法测试的建议。
 
@@ -11735,10 +12308,6 @@ Example
 识别学生知识结构的方法关注学生（a）如何感知学科概念和事实的结构或组织，以及（b）如何处理概念和事实以解决学科中的问题。其优点是该方法要求你分析学生如何思考相互关联的概念。对学生学习这一方面的关注帮助你收集有关学生为何犯错或为何难以解决问题的信息。获取这些信息的方法是实验性的，其有效性程度尚不明确。这些方法需要与个别学生密集工作，因此在只有一名教师的大班中有些不切实际。本章建议了如何与个别学生实施该方法的方法。
 
 识别文字问题解决成分能力的方法关注社会研究、数学和科学中的文字问题。要解决文字问题，学生必须使用语言、图式、策略和算法知识。评估的重点是识别学生在这些领域的每一个方面是否具有足够的问题特定知识。该方法对可通过应用适当公式求解的封闭式反应问题最有用。知识类型框架可应用于广泛的问题，并有助于聚焦学生的补救教学。该方法如果仅用少数任务评估每种知识类型就可能受到测量误差的困扰。它也是耗时的方法，其有效性取决于你对文字问题的分析质量。本章提出了制作此类诊断评估的建议。
-
-## 面试学生
-
-许多诊断评估策略需要在访谈情境中与个别学生进行密集工作。本章提供了改进诊断访谈的建议。
 
 ## 重要术语和概念
 
@@ -11767,15 +12336,17 @@ Example
 
 ## 练习与应用
 
-- 1. 对于你教授或计划教授的学科，制作方法1、2、3和4的诊断评估程序。如果有时间，尝试用这些方法对遇到学习困难的学生进行评估。基于这些学生试验修订你的评估程序。与课程中的其他人分享你评估程序的最终版本。
-- 2. 以下每个陈述描述了一个教学决策情境。阅读每个陈述并决定可能提供所需信息的诊断评估方法。
-- a. 一位老师想知道 Lynn 是否因为不认识数字事实而错过了几个算术应用题。
+1. 对于你教授或计划教授的学科，制作方法1、2、3和4的诊断评估程序。如果有时间，尝试用这些方法对遇到学习困难的学生进行评估。基于这些学生试验修订你的评估程序。与课程中的其他人分享你评估程序的最终版本。
+
+2. 以下每个陈述描述了一个教学决策情境。阅读每个陈述并决定可能提供所需信息的诊断评估方法。
+
+   a. 一位老师想知道 Lynn 是否因为不认识数字事实而错过了几个算术应用题。
+
+
+
 - b. Ray 错过了几个涉及混合小数分数的加法计算题。他的老师想知道 Ray 是否在数每个加数的十进制位数，并以此计数作为放置最终答案中小数点的依据。
-- c. Lou 错过了几个涉及进位（ regrouping）的整数算术题。他的老师想知道
 
-
-
-是否 Lou 没有记得把他的“进位”加到下一列数字的和中。
+- c. Lou 错过了几个涉及进位（ regrouping）的整数算术题。他的老师想知道是否 Lou 没有记得把他的“进位”加到下一列数字的和中。
 
 d. 珍妮特是一个阅读缓慢的学生，她在阅读段落后经常错过理解题。她的老师想知道珍妮特是否出现了阅读倒置，导致她在段落中误读了一些单词。
 
@@ -11786,28 +12357,43 @@ d. 珍妮特是一个阅读缓慢的学生，她在阅读段落后经常错过�
 一名学生给出了 14 作为这个问题的答案。当老师采访该学生时，老师发现学生使用的是这个错误规则：“每当你在应用题中看到‘ altogether ’这个词时，你就把给出的两个数字相加。”因此，学生进行了加法，6 + 8 = 14，而不是减法，8 − 6 = 2。
 
 - a. 考虑你教授或计划教授的学科和学生。找出你见过学生使用的两个错误规则。（如果你经验不足，你可能需要在进行此练习前先与几名学生合作。）下面，说明错误规则、正确规则，以及说明每个要点的示例（与前一段的写法相同）。
+
 - 学科，年级：_____
+
 - i. 正确规则：_____
+
 - ii. 学生错误规则：_____
+
 - iii. 说明性示例：_____
+
 - b. 学科，年级：_____
+
 - i. 正确规则：_____
+
 - ii. 学生错误规则：_____
+
 - iii. 说明性示例：_____
+
 - c. 与本课程中的其他人分享并讨论你的发现。
 
-## 4. 重新考虑练习 3 中给出的算术应用题。根据语言知识、图式知识、策略知识和算法知识分析该应用题。
+## 4. 重新考虑练习 3 中给出的算术应用题。根据语言知识、图式知识、策略知识和算法知识分析该算术应用题。
 
 - a. 描述解决这个问题所需的每种类型知识的具体内容。
+
 - b. 以第 300 页示例中的条目为模型，制作类似的条目来诊断学生在每种类型知识上的理解程度。
+
 - c. 如果有时间，请将你的诊断评估任务交给几名学生，其中一些学生没有正确回答该文字题。与本课程中的其他人分享你的发现。
 
 ## 5. 将图 13.1 中所示的教学诊断流程图应用于你教授或计划教授的内容单元。
 
 - a. 描述该单元以及其所指向的学习目标（表现）。
+
 - b. 识别先决条件并解释你是否必须对学生进行诊断。
+
 - c. 识别单元结束时可以诊断掌握或未掌握的学习目标。
+
 - d. 识别学生在完成评估每个学习目标的任务时经常犯的错误类型。
+
 - e. 对于每个已识别的错误，解释学生犯的错误。对你的题目进行改进以提高题目和教学质量？本章讨论了这些问题。
 
 在本章的第一部分，你将学习如何为学生做准备，使他们能够在你的评估中发挥最佳水平。为了表现良好，学生需要的不仅仅是学科知识。他们需要知道如何参加测试以及如何处理评估过程中可能出现的焦虑。你不应该假设所有学生都自动知道如何做到最好
@@ -11820,22 +12406,28 @@ d. 珍妮特是一个阅读缓慢的学生，她在阅读段落后经常错过�
 
 ## PREPARING STUDENTS FOR THE ASSESSMENT
 
-## Assess Maximum, Not Typical, Performance in the Classroom
+### Assess Maximum, Not Typical, Performance in the Classroom
 
 你应该评估学生的最大表现而不是典型表现（Cronbach, 1990）。当你设置条件使学生能够获得他们能获得的最好分数时，你就评估了最大表现。当你收集有关学生在普通或典型条件下会做什么的信息时，你就评估了典型表现。
 
 例如，你可能教过学生一项实用技能，如平衡支票簿，你的评估程序收集有关每个学生是否能够做到这一点的信息。这是最大表现评估。另一方面，一些学生在课堂外实际使用支票购物时以后可能会犯错误，或者他们可能永远不会对支票账户进行对账。因此，这样的学生可能有能力执行你所教授的技能，但通常可能不会以最大能力执行该技能。由于学校通常试图以高水平教授学习者新能力，因此在鼓励学生发挥最佳能力的条件下进行成绩评估。
 
-## Give Students Enough Information before Assessing Them
+### Give Students Enough Information before Assessing Them
 
 告知学生即将进行的评估以及评分方式是你的专业责任（参见第 5 章）。为了在最佳条件下评估学生，你需要提供有关即将进行的评估的至少以下信息：
 
 - 1. 何时进行。
+
 - 2. 在什么条件下进行（计时、限速、带回家考试）。
+
 - 3. 它将涵盖的内容领域。
+
 - 4. 评估中包含的内容领域的重点或权重（分数值）。
+
 - 5. 学生必须展示的表现类型（测试上的题目种类，记忆要求的程度）。
+
 - 6. 评估如何评分和评级（例如，会给部分分数吗？）。
+
 - 7. 特定评估结果相对于学生决策的重要性（例如，它是否占学期成绩的一半？）。
 
 何时进行评估 如果你希望学生发挥最佳水平，你需要告诉他们何时进行测试，以便他们提前准备。特别是那些由多位教师授课的学生，需要组织他们的学习努力并设定优先顺序。他们可以在提前知道考试日期时学会这种规划。各个学科的教师应协调他们的评估时间表，使其分散开来。然而，评分期的结束通常存在问题。
@@ -11850,25 +12442,21 @@ d. 珍妮特是一个阅读缓慢的学生，她在阅读段落后经常错过�
 
 评估条件 你应该告诉学生他们被期望在什么条件下表现：测试会有多少道题？学生完成评估有多少时间？评估是否限速？是开卷还是闭卷？猜测是否有惩罚？以及它将在一天中的什么时间进行（如果不是在常规课时）？
 
-
-
-
-
-## 向学生说明测试将包含的内容
+### 向学生说明测试将包含的内容
 
 说评估将涵盖书中的前三章，对学生帮助不大。为了有效规划和学习，学生需要更详细的信息。一些教师准备了学习问题清单，帮助学生集中精力。这对于几乎书中所有内容都似乎同样重要的小学生尤其有帮助。学习问题也有助于年长的学生，尤其是在学期中涵盖了大量材料时。
 
 对于高中和大学生来说，替代开发一套学习问题的方法是给他们一份评估蓝图副本（见第6章）、一份学习目标清单、评分标准（或评分细则）副本，或一份详细的内容大纲，标明每个要素涵盖的题目数量。（见附录G。）
 
-## 说明测试将强调的内容
+### 说明测试将强调的内容
 
 你应该告诉学生评估中内容的权重，包括每个目标、内容要素或蓝图单元将分配多少题目（以及多少分）。评估不同部分的权重应与你的教学重点相匹配；否则，结果的有效性会很低。学生可能会浪费数小时学习在评估中几乎不重要或完全不重要的主题。许多教师会与学生分享他们的评估计划，在课程或学段开始时告诉他们对每项作业、测验、考试和课堂表现活动的权重分配。学生就可以根据这些优先事项组织他们的努力。
 
-## 给练习预期表现的机会
+### 给练习预期表现的机会
 
 你应该给学生练习你将要求他们负责的表现类型的机会。不幸的是，学生经常不得不猜测评估中会出现的问题的性质或类型。以下是如果你没有给予适当练习会发生什么的例子。
 
-## 示例
+#### 示例
 
 未给予适当练习机会的结果示例
 
@@ -11876,7 +12464,9 @@ d. 珍妮特是一个阅读缓慢的学生，她在阅读段落后经常错过�
 
 让学生熟悉评估中会出现任务的最好方法是给他们样本任务，也许是一份旧的评估形式供他们练习。当评估中出现的任务类型对学生来说复杂和/或不熟悉时，这种方法可能特别有效。
 
-## 告诉学生你将如何评分
+### 告诉学生你将如何评分
+
+
 
 告诉学生你将如何评分评估有助于他们准备，尤其是回答开放式任务。如果你会因拼写重要术语和专有名词错误而扣分，那么学生除了学习主要思想和练习如何组织答案外，还需要练习这些拼写。学生还需要知道你是否以及如何为不完美的答案授予分数，以及你将为每个问题给予多少权重（即分数）。在考试前很久就应与学生分享评分细则。
 
@@ -11886,17 +12476,17 @@ d. 珍妮特是一个阅读缓慢的学生，她在阅读段落后经常错过�
 
 ## 最低限度的应试技能
 
-你需要教给学生的技能 学生需要的不仅仅是关于评估是什么的信息：他们需要学习如何应试。你可能需要通过课堂直接教学（Ebel & Frisbie, 1991）教给学生以下最低限度的应试技能：
+学生需要的不仅仅是关于评估是什么的信息：他们需要学习如何应试。你可能需要通过课堂直接教学（Ebel & Frisbie, 1991）教给学生以下最低限度的应试技能：
 
-- 1. 注意口头和书面的指示，并了解不遵守指示的后果。
-- 2. 询问评估将如何评分，如何将各个任务的分数计入总分，以及因错误答案、拼写错误或语法不良会扣多少分。
-- 3. 清楚地书写回答或标记答案，以避免因笔迹潦草或答案标记错误而导致分数降低。
-- 4. 在整个课程中学习并分阶段复习，以减少临时抱佛脚和疲劳。
-- 5. 合理使用评估时间，确保在规定时间内完成所有任务。
-- 6. 利用部分知识并适当猜测。
-- 7. 在写作之前反思、大纲并组织对论文的答案；为每篇论文使用适当的时间。
-- 8. 检查他们在单独答题纸上做的标记，以避免错位或在某题被省略时失去位置。
-- 9. 复习他们对任务的答案，如果能做出更好的回答就更改答案。
+1. 注意口头和书面的指示，并了解不遵守指示的后果。
+2. 询问评估将如何评分，如何将各个任务的分数计入总分，以及因错误答案、拼写错误或语法不良会扣多少分。
+3. 清楚地书写回答或标记答案，以避免因笔迹潦草或答案标记错误而导致分数降低。
+4. 在整个课程中学习并分阶段复习，以减少临时抱佛脚和疲劳。
+5. 合理使用评估时间，确保在规定时间内完成所有任务。
+6. 利用部分知识并适当猜测。
+7. 在写作之前反思、大纲并组织对论文的答案；为每篇论文使用适当的时间。
+8. 检查他们在单独答题纸上做的标记，以避免错位或在某题被省略时失去位置。
+9. 复习他们对任务的答案，如果能做出更好的回答就更改答案。
 
 ## 避免亏待你的学生
 
@@ -11912,41 +12502,49 @@ d. 珍妮特是一个阅读缓慢的学生，她在阅读段落后经常错过�
 
 在继续阅读之前，请做以下简短测试。确保为每道题都标记一个答案，即使你不确定答案。每道题都有一个正确或最佳答案。（题目摘自 Diamond and Evans, 1972, p. 147，并略有修改。）
 
-- 1. Augustine National Party 的总部设在
-  - a. 新泽西州卡姆登。
-  - b. 佛罗里达州圣奥古斯丁。
-  - c. 加利福尼亚州帕洛阿尔托。
-  - d. 德克萨斯州达拉斯。
-- 2. Hermann Klavermann 最为人所知的是
-  - a. 开发了西方世界使用的所有音乐音阶。
-  - b. 在浪漫主义时代创作了每部奏鸣曲。
-  - c. 将所有俄罗斯经典译成英语。
-  - d. 发明了安全别针。
-- 3. 20世纪的 Davis Act
-  - a. 为学校提供更多资金。
-  - b. 推翻了早期的法律。
-  - c. 禁止制造、销售、运输或使用几种被用于非法目的的特定药物。
-  - d. 给政府雇员加薪。
-- 4. Harold Stone 的书《The Last Friendship》是
-  - a. 政治讽刺。
-  - b. 自传。
-  - c. 科幻小说。
-  - d. 传记。
-- 5. Franktown 的人口超过
-  - a. 5万。
-  - b. 6万。
-  - c. 7万。
-  - d. 8万。
+1. Augustine National Party 的总部设在
+   a. 新泽西州卡姆登。
+   b. 佛罗里达州圣奥古斯丁。
+   c. 加利福尼亚州帕洛阿尔托。
+   d. 德克萨斯州达拉斯。
+
+2. Hermann Klavermann 最为人所知的是
+   a. 开发了西方世界使用的所有音乐音阶。
+   b. 在浪漫主义时代创作了每部奏鸣曲。
+   c. 将所有俄罗斯经典译成英语。
+   d. 发明了安全别针。
+
+3. 20世纪的 Davis Act
+   a. 为学校提供更多资金。
+   b. 推翻了早期的法律。
+   c. 禁止制造、销售、运输或使用几种被用于非法目的的特定药物。
+   d. 给政府雇员加薪。
+
+4. Harold Stone 的书《The Last Friendship》是
+   a. 政治讽刺。
+   b. 自传。
+   c. 科幻小说。
+   d. 传记。
+
+5. Franktown 的人口超过
+   a. 5万。
+   b. 6万。
+   c. 7万。
+   d. 8万。
 
 每道题的内容都是虚构的，但每道题的正确答案都可以通过使用题目中的某些线索来确定：
 
 第1题。题干（Augustine National Party）中的一个词或短语与备选答案（St. Augustine）中的一个词或短语之间存在明显的关联。
+
 第2题。备选答案中的特定限定词（all, every）导致这些答案被排除在考虑之外。
+
 第3题。更长、更具体的答案被设为正确答案。
+
 第4题。题干中包含一个语法线索（an）。
+
 第5题。一个备选答案与其他答案重叠或包含其他答案。
 
-## 应试技巧分类法
+### 应试技巧分类法
 
 正确回答像上述这样的题目能力通常被称为应试技巧。应试技巧是指利用应试策略、来自写得不好的题目的线索以及应试经验来提高分数的能力，而不仅仅依靠对学科本身的掌握程度。在编写课堂评估时，要意识到学生可能会利用你在题目写作中的个人习惯或有缺陷的题目来提高分数，而没有达到期望的掌握水平。表14.1是应试技巧原则的大纲或分类法。
 
@@ -11957,11 +12555,8 @@ d. 珍妮特是一个阅读缓慢的学生，她在阅读段落后经常错过�
 学生一旦在答题纸上标记了答案后再更改答案会有好处吗？尽管流传的说法如此，如果更改是基于对题目进行深思熟虑的重新考虑，那么更改答案是有益的。以下是关于此问题的研究结果摘要（Pike, 1978）。
 
 - 大多数应试者和许多教育工作者认为更改答案没有好处。
+
 - 然而，大多数学生实际上会更改约4%的题目的答案。
-
-
-
-
 
 ## 表 14.1 测试明智性原则的分类。
 
@@ -11970,6 +12565,8 @@ d. 珍妮特是一个阅读缓慢的学生，她在阅读段落后经常错过�
 | A. 用时策略。<br>1. 尽可能迅速开始工作，同时合理保证准确性。<br>2. 为通过测试制定进度计划。<br>3. 省略或猜测题目（参见 I.C. 和 II.B.）<br>4. 标记被省略的题目，或需要进一步考虑的题目，以确保易于重新定位。<br>5. 在完成测试后利用剩余时间重新考虑答案。<br><br>B. 避免错误策略。<br>1. 仔细阅读说明，明确任务的性质和回答的预期依据。<br>2. 仔细阅读题目，明确问题的性质。<br>3. 在允许的情况下必要时向考官请求澄清。<br>4. 检查所有答案。<br><br>C. 猜测策略。<br>1. 如果只计对答案，总是猜测。<br>2. 如果猜测的修正比使随机作答期望得分为零的“猜测修正”公式更为宽松，总是猜测。<br>3. 即使采用通常的修正或更严厉的猜测惩罚，只要排除选项后获益的可能性足够大，就总是猜测。<br><br>D. 演绎推理策略。<br>1. 排除已知错误的选项，从剩余选项中选择。<br>2. 选择两个相互暗示对方正确性的选项中的两者都不选或都选。<br>3. 对于两个陈述中，若其一正确则会暗示另一不正确，选择两者都不选或只选其一（但不能同时选两者）。<br>4. 将选择限制在涵盖两个或多个已知正确的陈述的所有选项上。<br>5. 利用其他测试题目和选项中的相关内容信息。 | A. 意图考量策略。<br>1. 根据测试编制者的先前特殊侧重点或根据测试目的来解释和回答问题。<br>2. 按测试编制者的意图回答题目。<br>3. 采用预期的成熟程度。<br>4. 考虑具体细节的相关性。<br><br>B. 线索使用策略。<br>1. 认识并利用测试编制者区分正确答案与错误选项的任何一致性特殊习惯。<br>a. 他使其比错误选项更长（更短）。<br>b. 他对其描述得更仔细，或使其代表更高程度的概括。<br>c. 他包含更多虚假（真实）的陈述。<br>d. 他将其置于选项中的特定物理位置（例如中间）。<br>e. 他将其置于有序选项集中的特定逻辑位置（例如序列的中间）。<br>f. 他将其包含在（不包含在）相似陈述中，或使其成为（不使其成为）一对完全相反陈述中的一个。<br>g. 他用熟悉或陈词滥调的措辞（不这样）组成它。<br>h. 他不使其在语法上与题干不一致。<br>2. 回答给定题目时考虑具体细节的相关性。<br>3. 认识并利用特定的决定性因素。<br>4. 认识并利用选项与题干某一方面的相似性。<br>5. 在解释和回答给定题目时考虑邻近题目的主题和难度。 |
 
 > 来源：引自 J. Millman, C. H. Bishop, 和 R. L. Ebel, “An Analyses of Test-Wiseness.” Educational and Psychological Measurement, 25, pp. 711-713. Copyright © 1965 by Sage Publications. Reprinted by permission of Sage Publications, Inc.
+
+
 
 - 研究表明，事实上更改答案是有回报的。通常每三次更改的答案中有两次会变成正确。
 - 随着题目对学生来说变得更困难，更改答案的回报会减少。
@@ -11995,30 +12592,26 @@ d. 珍妮特是一个阅读缓慢的学生，她在阅读段落后经常错过�
 
 学生对评估情境的反应可分为四个相关因素：紧张、担忧、测试无关思维和身体反应（Sarason, 1984）。这四个因素似乎也适用于跨国样本（Benson & El-Zahhar, 1994）。以下是评估这四个因素的项目示例。
 
-## 示例
+### 示例
 
 定义 Sarason 测试焦虑四个因素的项目示例
 
 #### 紧张
-
 - 1. 我在考试前感到困扰和不安。
 - 2. 我在考试前感到焦躁。
 - 3. 我发现自己在考试当天变得焦虑。
 
 #### 身体反应
-
 - 1. 我在重要考试期间头痛。
 - 2. 我在考试前胃部不适。
 - 3. 考试开始时我的心跳加快。
 
 #### 担忧
-
 - 1. 考试前，我担心失败。
 - 2. 考试期间，我想知道其他人表现如何。
 - 3. 考试前，我为即将发生的事情感到困扰。
 
 #### 测试无关思维
-
 - 1. 考试期间，我会想起过去的事件。
 - 2. 考试期间，无关的信息片段会出现在我脑海中。
 - 3. 考试期间，我发现自己在思考与所测材料无关的事情。
@@ -12027,14 +12620,13 @@ d. 珍妮特是一个阅读缓慢的学生，她在阅读段落后经常错过�
 
 上述四个因素比之前提到的情绪性和担忧的概念更具体地描述了测试焦虑。情绪性被细分为紧张和身体反应；测试无关思维与担忧一起被添加。
 
-## 三种测试焦虑的学生类型
+### 三种测试焦虑的学生类型
 
 至少有三种类型的测试焦虑学生（Mealey & Host, 1992）。你识别出学生之间的这些差异的能力将帮助你与他们合作，使他们在你的评估中发挥最佳表现。首先是学习技能不好且不理解所教科目主要思想之间关系和组织的学生。这些学生因学得不好而对即将进行的评估感到焦虑（Culler and Holahan, 1980; Naveh-Benjamin, McKeachie, & Lin, 1987）。第二是掌握材料良好且学习技能好但对评估和评价有失败恐惧的学生（Herman, 1990; McKeachie, Pollie, & Spiesman, 1985）。第三是认为自己有良好学习习惯但实际上没有的学生。他们在评估中表现不佳，并学会对被评估感到焦虑（Mealey & Host, 1992）。
 
-## 帮助测试焦虑的学生
+### 帮助测试焦虑的学生
 
 以下因素被证明与测试焦虑相关（Hembree, 1988），并且可能在课堂评估情境中由你控制：
-
 - 1. 当学生认为评估很困难时，其测试焦虑会上升。
 - 2. 处于风险中的学生比通过的学生具有更高的测试焦虑水平。
 - 3. 教师在测试后逐题给予反馈的学生，其测试焦虑低于未获得反馈的学生。
@@ -12044,12 +12636,7 @@ d. 珍妮特是一个阅读缓慢的学生，她在阅读段落后经常错过�
 - 7. 给非常测试焦虑的学生提供将注意力集中在评估任务上并且不要让自己从任务中分心的指示，比简单地用“别担心”或“你会没事的”之类的安慰语句更有益于他们的表现（Sarason, 1984）。
 - 8. 测试技巧低的学生可以通过测试明智性训练降低其测试焦虑。
 
-此外，Mealey 和 Host（1992）建议你询问你的学生你能做些什么来帮助他们感到
-
-
-
-更放松或在评估前、评估期间和评估后不那么紧张。研究人员自己的发展性阅读大学生报告了以下建议：
-
+此外，Mealey 和 Host（1992）建议你询问你的学生你能做些什么来帮助他们感到更放松或在评估前、评估期间和评估后不那么紧张。研究人员自己的发展性阅读大学生报告了以下建议：
 - 1. 教师在学生进行评估时不应说话或打断。
 - 2. 教师应在进行评估前先向全班复习相关材料。
 - 3. 教师在学生接受评估时不应走来走去俯视学生的肩膀。
@@ -12063,27 +12650,29 @@ d. 珍妮特是一个阅读缓慢的学生，她在阅读段落后经常错过�
 
 你可能没有意识到，但你的测试的最终外观和安排对结果的有效性很重要。难以辨认、打字质量差或安排不合逻辑的评估会让准备充分的学生感到厌烦，会导致不必要的错误，并让所有学生都觉得你没有认真对待评估责任。评估的组织和外观对于能力较弱的学生可能尤其重要。
 
-## Distribution of Assessment Items
+### Distribution of Assessment Items
 
 作为一般规则，你应该打字制作测试并复制它，以便每个学生都能拥有一份副本。 （明显的例外是拼写评估和类似的听觉能力评估。）有时教师会在黑板上写下题目或向全班口述。如果这样做，可能会给学生带来问题，尤其是视力、听力理解或听力有问题的人。如果你口述问题，你会使用学生本可以用来回答问题的宝贵时间。此外，大声朗读问题并要求学生写下答案会给短期记忆带来压力，许多学生无法满足这种要求。以下是可能发生的情况的一个例子。
 
-## Example
+### Example
 
 Example of how dictating questions can be frustrating to students
 
 Bob 是一名六年级平均能力的男孩，他在记忆科学术语的定义方面有困难。在父母的帮助下在家学习了两个晚上后，他觉得自己已为老师的测试做好了准备。他的老师决定口述测试问题，他只答对了 10 题中的 4 题。在查看他永久记录中的标准化测试成绩后，老师发现他的听力理解能力远低于班级平均水平。她还从自己的观察中注意到，他的短期记忆能力低于同龄人。重新测试而不口述似乎是合适的。
 
-## Test Booklet Layout and Design
+### Test Booklet Layout and Design
 
 Organization of Test Items 如果有许多客观题目，你应该将它们整理成测试小册子。 （构成作文测试的少量问题可以方便地呈现在一张纸上。）对于大班，你可以在测试小册子上加一个封面页，标明课程并列出说明。封面页的示例如下。封面页之后，测试题目应按格式分组（例如，所有是非题放在一起，所有选择题放在一起）。
 
-## Example
+### Example
 
 Example of a test booklet cover sheet with directions to students
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_325_0.png)
 
 封面页可以防止先收到小册子的学生，在其他同学开始之前、在你回答所有澄清问题之前就开始测试。当题目按格式类型排列时，学生不必改变“思维模式”，这减少了在不同格式之间切换造成的错误。
+
+
 
 专家通常建议按难度顺序排列题目，最简单的题目先放。如果题目按格式类型分组，则在每种格式内按从易到难的顺序排列。大多数学生可以快速完成最简单的题目，并将剩余的测试时间留给难题。一些研究表明，从易到难的题目排列可以减少焦虑并提高成绩（Tippets & Benson, 1989）。另一种排列方法是按照教学顺序或教科书中出现的顺序排列内容。学生可以利用这种学科组织作为一种“认知地图”，通过它检索存储的信息。如果你使用这种顺序排列，你应该告诉学生跳过困难的题目，继续做后面的题目，这些题目可能更容易。 （始终鼓励学生在有时间时返回被省略的题目。）更好的是，在内容领域内按从易到难的顺序排列题目。这最大限度地减少了测试造成的焦虑，进而提高了评估结果的有效性（Tippets & Benson, 1989）。
 
@@ -12102,7 +12691,9 @@ Read the paragraph below before answering Items 12, 13, and 14.
 Paragraph is put here
 
 12. Question 12 goes here.
+
 13. Question 13 goes here.
+
 14. Question 14 goes here.
 
 Items 16, 17, and 18 refer to the data found in the table below.
@@ -12110,7 +12701,9 @@ Items 16, 17, and 18 refer to the data found in the table below.
 Table is put here
 
 16. Question 16 goes here.
+
 17. Question 17 goes here.
+
 18. Question 18 goes here.
 
 ## Duplicating the Test
@@ -12135,50 +12728,65 @@ Scanning the Answer Sheets 大多数学校都可以使用可扫描答题纸。�
 
 对于是非题和/或多项选择题，有时会采用猜测校正公式对分数进行校正，方法是从答对题数中减去答错题数的一定比例。常用的公式如下：
 
-校正分数 = R - W / (n - 1) [公式14.1]
+校正分数 = `R - W / (n - 1)` [公式14.1]
 
 其中
-R 表示正确作答的题目数，
-W 表示错误标记的题目数，
-n 表示每题包含的选项数。
+
+`R` 表示正确作答的题目数，
+
+`W` 表示错误标记的题目数，
+
+`n` 表示每题包含的选项数。
 
 如果每题有两个选项（例如是非题），则
-校正分数 = R - W
+
+校正分数 = `R - W`
 
 如果每题有四个选项，则
-校正分数 = R - W / 3
+
+校正分数 = `R - W / 3`
 
 校正公式旨在消除学生因猜对而可能获得的优势。以下示例说明了如何使用此校正。你需要对每位学生应用该校正。
 
 ## 示例
 
 如何应用猜测校正：正确得分公式
-假设吉姆参加了一次包含50道题的多项选择测试，每题有四个选项。进一步假设吉姆的测试结果为：40题作答正确，6题作答错误，4题未作答。应用公式，我们得到：
-校正分数 = R - W / (n - 1)
-= 40 - 6 / (4 - 1) = 40 - 2 = 38
 
-请注意，未作答的题数未用于此校正公式；只使用错误标记的答案数（W）和正确标记的答案数（R）。
+假设吉姆参加了一次包含50道题的多项选择测试，每题有四个选项。进一步假设吉姆的测试结果为：40题作答正确，6题作答错误，4题未作答。应用公式，我们得到：
+
+校正分数 = `R - W / (n - 1)`
+
+= `40 - 6 / (4 - 1) = 40 - 2 = 38`
+
+请注意，未作答的题数未用于此校正公式；只使用错误标记的答案数（`W`）和正确标记的答案数（`R`）。
 
 上述校正公式的一个补充版本确实使用了未作答的题数：它不是因学生答错而扣分，而是因学生未作答（即避免猜测）而给分。该公式为：
-调整分数 = R + O / n [公式14.2]
+
+调整分数 = `R + O / n` [公式14.2]
 
 其中
-R 表示正确作答的题目数，
-O 表示未作答的题目数，
-n 表示每题包含的选项数。
+
+`R` 表示正确作答的题目数，
+
+`O` 表示未作答的题目数，
+
+`n` 表示每题包含的选项数。
 
 （使用“调整”而非“校正”是为了将此公式与前一个公式区分开来。这并不是标准做法。此类公式的通用术语是“公式计分”。）以下是一个使用示例。
 
 ## 示例
 
 如何应用猜测校正：调整分数公式
+
 假设吉姆参加了一次包含50道题的多项选择测试，每题有四个选项。进一步假设吉姆的测试结果为：40题作答正确，6题作答错误，4题未作答。应用公式，我们得到：
-调整分数 = R + O / n
-= 40 + 4 / 4 = 41
+
+调整分数 = `R + O / n`
+
+= `40 + 4 / 4 = 41`
 
 该公式将随机作答替代未作答时的预期分数计入学生成绩。如果一名学生未作答所有题目，其分数将等于该学生随机猜测所有题目时的预期平均分。因此，通过调整分数公式获得的分数将高于同一批学生通过校正分数公式获得的分数。然而，两种方法下的分数完全相关（Gulliksen, 1950）；也就是说，无论使用哪种公式，个体排名次序都是相同的。
 
-未校正分数（R）仅指正确标记的题目数。当每位学生都作答了每一道题时，未校正分数与校正分数或调整分数完全相关（Gulliksen, 1950），因此在这种情况下，无论分数是否针对猜测进行校正，个体排名次序同样相同。
+未校正分数（`R`）仅指正确标记的题目数。当每位学生都作答了每一道题时，未校正分数与校正分数或调整分数完全相关（Gulliksen, 1950），因此在这种情况下，无论分数是否针对猜测进行校正，个体排名次序同样相同。
 
 表14.2列出了在决定是否使用校正公式时需要注意的几点事项。
 
@@ -12192,17 +12800,19 @@ n 表示每题包含的选项数。
 
 ## 课堂评估的题目分析
 
+
+
 题目分析是收集、总结并利用学生反应中的信息来对每个题目做出决策的过程。标准化测试开发者，尤其是常模参照测试的开发者，试测的题目数量通常是最终版本测试题目数量的五倍。来自试测的题目分析数据用于帮助筛选最终版本的题目。开发者会丢弃未能展现适当统计特性的题目。相比之下，你的课堂评估与日常教与学过程联系更为紧密，其目的与已出版的标准化测试有所不同。因此，你使用题目分析数据的方式也会与测试出版商不同。
 
-### 题目分析的课堂用途
+## 题目分析的课堂用途
 
 对于教师自编的评估，题目分析的重要用途包括：
 
-- 1. 确定题目是否按预期发挥作用。你不能期望写出完美发挥作用的题目。要判断课堂评估中的一道题目是否正常发挥作用，你需要了解它是否评估了预期的学习目标，难度是否适当，是否区分了掌握学习目标的学生与未掌握的学生，标准答案是否正确，以及（对于选择反应题）干扰项是否有效。第6章描述了一个帮助您判断题目是否在评估预期学习目标的程序。本章将讨论其余四个要素。
+1. **确定题目是否按预期发挥作用。** 你不能期望写出完美发挥作用的题目。要判断课堂评估中的一道题目是否正常发挥作用，你需要了解它是否评估了预期的学习目标，难度是否适当，是否区分了掌握学习目标的学生与未掌握的学生，标准答案是否正确，以及（对于选择反应题）干扰项是否有效。第6章描述了一个帮助您判断题目是否在评估预期学习目标的程序。本章将讨论其余四个要素。
 
-- 2. 向学生提供关于其表现的反馈，并作为课堂讨论的基础。学生有权知道他们在每项评估任务中的表现如何被评分，以及每项任务的正确答案。与学生一起回顾测试在教学中是常识性的做法：你可以纠正学生的错误，可以向学生澄清你期望他们达到的详细程度，并且可以强化良好（且正确）的反应。此外，缺乏应试技巧的学生可以学习正确答案是如何形成的，或者（在选择反应题中）干扰项为何不正确。如果你教导学生理性地将你的评估置于教学情境中看待，还可以减轻一些考试焦虑。
+2. **向学生提供关于其表现的反馈，并作为课堂讨论的基础。** 学生有权知道他们在每项评估任务中的表现如何被评分，以及每项任务的正确答案。与学生一起回顾测试在教学中是常识性的做法：你可以纠正学生的错误，可以向学生澄清你期望他们达到的详细程度，并且可以强化良好（且正确）的反应。此外，缺乏应试技巧的学生可以学习正确答案是如何形成的，或者（在选择反应题中）干扰项为何不正确。如果你教导学生理性地将你的评估置于教学情境中看待，还可以减轻一些考试焦虑。
 
-- 3. 向教师提供关于学生困难的反馈。统计答对某题的学生百分比这一简单程序，可以为你提供关于哪些领域需要额外教学和补救的信息。（一些权威人士建议你通过举手表决来计算答对某题的学生人数。作者不建议这种做法，因为它可能会让一些学生感到不安，并可能侵犯其他学生的隐私。）来自题目分析的反馈可以帮助你将教学重点放在群体和个人需求上。然而，请注意，基于若干题目汇总的子分数
+3. **向教师提供关于学生困难的反馈。** 统计答对某题的学生百分比这一简单程序，可以为你提供关于哪些领域需要额外教学和补救的信息。（一些权威人士建议你通过举手表决来计算答对某题的学生人数。作者不建议这种做法，因为它可能会让一些学生感到不安，并可能侵犯其他学生的隐私。）来自题目分析的反馈可以帮助你将教学重点放在群体和个人需求上。然而，请注意，基于若干题目汇总的子分数
 
 表14.2 猜测校正注意事项。
 
@@ -12220,25 +12830,17 @@ n 表示每题包含的选项数。
 
 来源：摘自R. L. Ebel所著《Measuring Educational Achievement》第251-257页，© 1965 by Allyn and Bacon。经许可转载。
 
-
-
-
-
 测量相似的学习目标比单一题目提供的信息更可靠，因此请谨慎使用这些结果。
 
 你还会发现识别学生在评估任务上的错误性质很有帮助。对于论文、简答题和完成题，对回答进行内容分析可以确定学生错误的主要类型及其发生的频率。你不必每次给出评估时都对每一项评估进行内容分析。然而，你可以在每个评分周期做一个单元，或者同事可以分析不同的单元。你可以与其他人交换信息并保存这些信息以供下一组学生使用。随着时间的推移，你将积累足够的信息来制定学生困难的清单。利用这份清单来聚焦你的教学并诊断学生的错误。
 
 许多学区拥有扫描答题纸的电子设备以及对每个反应选择题的答题正确率进行汇总的计算机能力。随着学校获得更好的计算机以及题目分析软件成本降低，本章推荐的这些和其他汇总表将变得更容易让你常规地完成。（另见第15章。）
 
-## 4. 课程改进领域。
+4. **课程改进领域。** 如果特定内容对学生来说反复困难，或者某些类型的错误经常出现，也许问题超出了你个人：可能需要更广泛的课程修订。题目分析数据有助于识别具体问题。但任何评估都可能不完整地代表学校的课程目标，因此在试图将题目分析推广到学生学习的整体时应谨慎使用。
 
-如果特定内容对学生来说反复困难，或者某些类型的错误经常出现，也许问题超出了你个人：可能需要更广泛的课程修订。题目分析数据有助于识别具体问题。但任何评估都可能不完整地代表学校的课程目标，因此在试图将题目分析推广到学生学习的整体时应谨慎使用。
+5. **修订评估任务。** 你应使用学生对题目及其感知的反应信息来修订题目。题目可以重复用于未来的评估，如果你每次修订其中一些，评估的整体质量最终会提高。通常，修订一个题目比写一个新题目花费的时间更少。一些教师，尤其是在初中、高中（以及大学）中，建立题目文件或题目库。他们编写并尝试新题目，并通过题目分析每次保留最好的题目，修订一些，丢弃其余的。你可以保留题目的副本及其信息在卡片上存档以供将来使用。以下是此类文件中一张卡片的示例。
 
-## 5. 修订评估任务。
-
-你应使用学生对题目及其感知的反应信息来修订题目。题目可以重复用于未来的评估，如果你每次修订其中一些，评估的整体质量最终会提高。通常，修订一个题目比写一个新题目花费的时间更少。一些教师，尤其是在初中、高中（以及大学）中，建立题目文件或题目库。他们编写并尝试新题目，并通过题目分析每次保留最好的题目，修订一些，丢弃其余的。你可以保留题目的副本及其信息在卡片上存档以供将来使用。以下是此类文件中一张卡片的示例。
-
-## Example
+### Example
 
 带有题目分析数据的题目卡片示例。汇总是在图14.1所示的汇总记录表上的第3题上进行的。
 
@@ -12246,9 +12848,7 @@ n 表示每题包含的选项数。
 
 几年后，一个好的题目文件就会积累起来。一旦建立了题目文件，相对容易构建测试的等值版本。你可以构建测试的等值版本，并在人员在常规安排期间缺席时用于补考，当你教授同一课程的多个班级时，或当你逐年交替使用测试时。
 
-## 6. 提高题目编写技能。
-
-提高题目编写技能最有效的方法可能是分析题目并理解学生对它们的反应方式，然后利用这些信息修订题目并再次让学生尝试。
+6. **提高题目编写技能。** 提高题目编写技能最有效的方法可能是分析题目并理解学生对它们的反应方式，然后利用这些信息修订题目并再次让学生尝试。
 
 ## 选择题的题目分析
 
@@ -12260,54 +12860,63 @@ n 表示每题包含的选项数。
 
 步骤3. 确定上、中、下组（见正文）。
 
-## Course: Testing and Measurement
+### Course: Testing and Measurement
+
 Date(s): Fall 2003
+
 Spring 2004
+
 Fall 2004
+
 Topic: Percentile Ranks
 
-### ITEM
+#### ITEM
 
 在100个分数的集合中，有48个分数低于54。有4个分数等于54。分数点54的百分位等级是多少？
-a. 48   *b. 50   c. 52   d. 54
 
-### ITEM DATA SUMMARY
+a. 48   `*b. 50`   c. 52   d. 54
+
+#### ITEM DATA SUMMARY
 
 | Upper Group | Lower Group | Middle Group |
 |---|---|---|
 | a. 0 | 1 | |
-| *b. 10 | 7 | |
+| `*b. 10` | 7 | |
 | c. 0 | 1 | 12 |
 | d. 0 | 1 | |
 | Omits 0 | 0 | 0 |
 
 Difficulty Index: .85   Number of Students: 34
+
 Discrimination Index: .30
 
 步骤4. 汇总上组和下组中选择每个备选项的学生人数，并汇总中组中选择正确答案的学生人数。
+
 步骤5. 计算每个题目的难度指数（稍后讨论）。
+
 步骤6. 计算每个题目的区分指数（稍后讨论）。
+
 步骤7. 使用步骤4的结果，检查每个题目以识别不良干扰项、模糊的备选项、误设答案以及随机猜测的迹象（稍后讨论）。
 
 尽管本节主要针对选择题的分析编写，但你可以用几种描述的技术用于任何二分计分的评估任务（正确/不正确或通过/失败），例如完成题或简答题。确实存在用于分析连续计分的任务（如论文或表现性评估）的题目分析技术。我们在下一节中说明这些技术。然而，这些技术的复杂性可能使它们对没有计算机和/或复杂扫描设备访问的教师来说不切实际。
 
-## 上、下得分组（步骤3）
+### 上、下得分组（步骤3）
 
 在你评分试卷后，根据学生的总分按数值顺序排列它们。接下来，将试卷堆分成三组：上、中、下得分组。然后你以各种方式对比上组和下组的反应（稍后描述）以确定每个题目是否发挥良好。
 
 如何形成这些组很重要。当参加你测试的学生总数在20到40之间时，选择10个最高分和10个最低分试卷（Whitney & Sabers, 1970），但保持中间得分组完整。（当有20名学生时，将没有中间组。）如果有20名学生或更少，仅仅一两个学生的反应就可能极大地影响你通过此处描述的程序获得的结果。如果你对学生太少使用题目分析，你可能会对某个题目如果再次使用时的表现得出相当错误的结论。尽管如此，如果你想对人数很少的群体继续进行分析，将试卷分成两组（上半部分和下半部分）并谨慎解释结果。对于大于40人的群体，测试专家经常在技术上建议使用该群体上、下27%的得分者（Kelly, 1939）。然而，就课堂评估而言，当群体大于40时，25到33%之间的任何百分比似乎都是合适的。
 
-## 汇总对每个题目的反应（步骤4）
+### 汇总对每个题目的反应（步骤4）
 
-对于每个题目，记录（a）在上组中选择每个备选项的学生人数（以及单独未作答[省略]的人数）；（b）在下组中
+对于每个题目，记录（a）在上组中选择每个备选项的学生人数（以及单独未作答[省略]的人数）；（b）在下组中选择每个备选项的学生人数（以及单独省略该题的人数）；以及（c）在中间得分组中选择正确答案的学生人数。我们之前给出的题目文件卡片示例显示了对一个题目进行此类汇总的结果。你也可以制作一个表格来记录一页上多个题目的必要数字，或者你只需将此信息写在教师用试卷的页边空白处。
 
-选择每个备选项的学生人数（以及单独省略该题的人数）；以及（c）在中间得分组中选择正确答案的学生人数。我们之前给出的题目文件卡片示例显示了对一个题目进行此类汇总的结果。你也可以制作一个表格来记录一页上多个题目的必要数字，或者你只需将此信息写在教师用试卷的页边空白处。
+
 
 毫无疑问，题目分析中最繁琐的部分是汇总学生对题目的反应。使用上组和下组而不是整个班级使任务更容易。一个简化程序是制作如示例14.1所示的表格。一旦你获得示例中给出的基本信息，你就可以做出各种汇总。我们在本节中描述这些汇总，并在本章后续部分解释如何解释它们。
 
-## 计算题目难度指数（p）（步骤5）
+## 计算题目难度指数（`p`）（步骤5）
 
-答对该题的总群体比例称为题目难度指数（p）。要计算它，将上、中、下组中选择正确答案的学生人数相加，然后除以参加测试的总学生人数。这由公式14.3概括
+答对该题的总群体比例称为题目难度指数（`p`）。要计算它，将上、中、下组中选择正确答案的学生人数相加，然后除以参加测试的总学生人数。这由公式14.3概括
 
 ```
 p = [ number of students choosing the correct answer / total number of students taking the test ]
@@ -12317,7 +12926,7 @@ p = [ number of students choosing the correct answer / total number of students 
 
 下一个示例显示了如何使用班级汇总表中的第3题数据应用公式14.3。这是之前给出的题目文件卡片示例中使用的同一题目。
 
-## Example
+### Example
 
 如何根据班级汇总中的数据使用公式14.3计算第3题的题目难度指数
 
@@ -12328,53 +12937,77 @@ p = [ number of students choosing the correct answer for the upper + the middle 
 
 正如我们稍后将讨论的，这个分数的范围可以从0.00到1.00。
 
-
-
-
-
 ## 示例 14.1
 
 对 34 名大学生参加的 59 题测验的前 10 题的项目反应。 这是进行项目分析所需的基本数据的示例。 请注意，对于中间组，你只记录选择正确答案的人数和遗漏人数。
 
 | 题号： | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 |
+
 | 上组 | Doris | A | C | B | B | C | C | B | A | B | D |
+
 |  | Jerry | A | C | B | B | C | C | B | A | B | D |
+
 |  | Robert | A | C | B | B | C | C | E | A | B | D |
+
 |  | Elazar | A | B | B | B | C | C | B | A | B | D |
+
 |  | Marya | A | C | B | B | C | C | B | A | B | D |
+
 |  | Anna | A | C | B | B | C | C | B | A | B | D |
+
 |  | Diana | A | C | B | B | C | C | B | A | B | D |
+
 |  | Harry | A | C | B | B | C | C | B | A | B | D |
+
 |  | Anthony | A | C | B | B | C | C | B | A | B | D |
+
 |  | Carolyn | A | C | B | B | B | C | B | A | B | D |
+
 |  | 关键 | A | C | B | B | C | C | B | A | B | D |
+
 |  | 选择各选项的人数 | A 10 0 0 10 0 0 0 10 0 0 | B 0 1 10 0 1 0 9 0 10 0 | C 0 9 0 — 9 10 0 0 0 0 | D 0 — 0 — 0 0 0 0 0 10 | E — — — — — — 1 — — — |
+
 |  | 遗漏 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
 | 中间组 | 答对数 | 14 | 12 | 12 | 13 | 12 | 13 | 11 | 11 | 12 | 12 |
+
 |  | 遗漏数 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
+
 | 下组 | Anita | A | C | B | B | D | C | E | A | A | D |
+
 |  | Larry | A | C | B | B | D | C | D | A | B | D |
+
 |  | Charles | C | B | B | B | C | C | B | A | B | C |
+
 |  | Joel | A | C | B | B | C | C | E | A | B | D |
+
 |  | Leslie | A | C | B | B | C | C | E | A | B | B |
+
 |  | Alida | A | C | B | B | C | C | A | B | B | B |
+
 |  | Marilyn | A | C | D | B | C | C | D | C | D | A |
+
 |  | Wayne | A | B | A | A | C | C | B | B | C | A |
+
 |  | Ina | D | C | C | A | B | B | C | B | A | D |
+
 |  | Donald | C | B | B | B | D | C | E | C | D | D |
+
 |  | 关键 | A | C | B | B | C | C | B | A | B | D |
+
 |  | 选择各选项的人数 | A 7 0 1 2 0 0 1 5 2 2 | B 0 3 7 8 1 1 2 3 5 2 | C 2 7 1 — 6 9 1 2 1 1 | D 1 — 1 — 3 0 2 0 2 5 | E — — — — — — 4 — — — |
+
 |  | 遗漏 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 | 0 |
 
-## 计算项目区分指数（D）（步骤 6）
+## 计算项目区分指数（`D`）（步骤 6）
 
-项目区分指数（D）是上组答对该项目的比例与下组答对该项目的比例之差。 区分指数描述了特定测验项目在多大程度上能够区分高分学生和低分学生。
+项目区分指数（`D`）是上组答对该项目的比例与下组答对该项目的比例之差。 区分指数描述了特定测验项目在多大程度上能够区分高分学生和低分学生。
 
-使用以下公式计算该指数： D = [上组答对该项目的比例] - [下组答对该项目的比例] [式 14.4]
+使用以下公式计算该指数： `D = [上组答对该项目的比例] - [下组答对该项目的比例]` [式 14.4]
 
 下面是一个如何根据该数据计算一个项目的区分指数的示例。
 
-## 示例
+### 示例
 
 如何使用式 14.4 根据班级汇总数据计算第 3 题的项目区分指数
 
@@ -12388,11 +13021,11 @@ D = 10/10 - 7/10 = 1.0 - 0.7 = 0.3
 
 当使用构造反应和表现性评估时，每个项目以更连续的方式评分。 而不是 0 或 1 分，每个项目在 0 到 3、1 到 4 或其他分数范围内评分。 这些项目的项目难度和区分度也可以计算。 计算方法有很多，但我们将讨论限制在适用于课堂评估的简单方法。
 
-## 计算项目难度指数（p*）
+### 计算项目难度指数（`p*`）
 
 构造反应或表现性项目的项目难度只是该项目的平均分。1 例如，如果第 1 题是论文题，按 1 到 6 分评分，并且该题的平均分为 4.2，则该题的难度为 4.2。
 
-为了使该项目难度与式 14.3 的 p 值保持在同一量表上，我们应该用其可能的分数范围除以该平均值。 这将给出 .00 到 1.00 之间的值，与式 14.3 的结果范围相同。 这里举例说明：
+为了使该项目难度与式 14.3 的 `p` 值保持在同一量表上，我们应该用其可能的分数范围除以该平均值。 这将给出 .00 到 1.00 之间的值，与式 14.3 的结果范围相同。 这里举例说明：
 
 ```
 p* = [ average score for the item / possible range of score for the item ] = [ average score for the item / ( maximum possible item score - minimum possible item score ) ] [Eq. 14.5]
@@ -12400,13 +13033,13 @@ p* = [ average score for the item / possible range of score for the item ] = [ a
 
 以下是使用该公式的示例：
 
-> 1如果你有数学背景，你会注意到按 0 或 1 评分的项目的平均分就是式 14.3 给出的 p 值。 因此，我们不会感到惊讶的是，我们将更连续评分的项目的项目难度定义为该项目的平均分。
+> 1如果你有数学背景，你会注意到按 0 或 1 评分的项目的平均分就是式 14.3 给出的 `p` 值。 因此，我们不会感到惊讶的是，我们将更连续评分的项目的项目难度定义为该项目的平均分。
 
-## 示例
+### 示例
 
 应用式 14.5 的示例
 
-+   1. 假设第 1 题（论文题）的班级平均分为 4.2。 假设最低可能得分为 1，最高可能得分为 6。 p* 难度指数是多少？
++   1. 假设第 1 题（论文题）的班级平均分为 4.2。 假设最低可能得分为 1，最高可能得分为 6。 `p*` 难度指数是多少？
 
 ```
 p* = [ average score for the item / ( maximum possible item score - minimum possible item score ) ] = 4.2 / (6 - 1) = 4.2 / 5 = 0.84
@@ -12414,25 +13047,25 @@ p* = [ average score for the item / ( maximum possible item score - minimum poss
 
 +   2. 假设第 2 题（也是论文题）的班级平均分为 4.2。 假设最低可能得分为 0，最高可能得分为 10。 难度指数是多少？
 
+
+
 ```
 p* = [ average score for the item / ( maximum possible item score - minimum possible item score ) ] = 4.2 / (10 - 0) = 4.2 / 10 = 0.42
 ```
 
-从这两个例子可以看出，我们需要用可能的分数范围除以平均分，以便清楚地解释平均分。 在第 1 题中，平均分为 4.2，但可能的分数范围是 1 到 6。 因此，p* = 0.84 意味着平均而言，学生在该题上获得了最大可能分数范围的 84%。 （这是一道相当容易的题。）第 2 题的解释则不同。 第 2 题的平均分也是 4.2。 然而，该题的可能分数范围是从 0 到 10。 难度指数为 0.42，意味着平均而言，学生仅获得了该题最大可能分数范围的 42%。 因此，第 2 题对学生来说比第 1 题困难得多。 所以你可以看到，除非你知道表现性项目的可能分数范围，否则你无法完全解释其平均分。
+从这两个例子可以看出，我们需要用可能的分数范围除以平均分，以便清楚地解释平均分。 在第 1 题中，平均分为 4.2，但可能的分数范围是 1 到 6。 因此，`p* = 0.84` 意味着平均而言，学生在该题上获得了最大可能分数范围的 84%。 （这是一道相当容易的题。）第 2 题的解释则不同。 第 2 题的平均分也是 4.2。 然而，该题的可能分数范围是从 0 到 10。 难度指数为 0.42，意味着平均而言，学生仅获得了该题最大可能分数范围的 42%。 因此，第 2 题对学生来说比第 1 题困难得多。 所以你可以看到，除非你知道表现性项目的可能分数范围，否则你无法完全解释其平均分。
 
-顺便说一下，为了区分式 14.5 和之前的式 14.3，我在 p 后加了一个 *。 这不是标准做法。
+顺便说一下，为了区分式 14.5 和之前的式 14.3，我在 `p` 后加了一个 `*`。 这不是标准做法。
 
 ## 计算项目区分指数（D*）
 
-构造反应和表现性项目的区分指数只是上组在该项目上的平均分与下组相应平均分之差。 上组和下组的定义与之前所述相同；
+构造反应和表现性项目的区分指数只是上组在该项目上的平均分与下组相应平均分之差。 上组和下组的定义与之前所述相同；即，基于他们在整个评估中的排名。 这里有一个例子：
 
-即，基于他们在整个评估中的排名。 这里有一个例子：
-
-## 示例
+### 示例
 
 假设上组在某题上的平均分为 5.3，下组相应平均分为 2.8，且该题按 1 到 6 分评分。 该题的区分度为 5.3 − 2.8 = 2.5。
 
-为了使项目区分指数与式 14.4 的 D 值保持在同一量表上，我们应该用可能的分数范围除以该差值。 这给出了 -1.00 到 +1.00 之间的值，就像式 14.4 一样。 这在式 14.6 中进行了总结。
+为了使项目区分指数与式 14.4 的 `D` 值保持在同一量表上，我们应该用可能的分数范围除以该差值。 这给出了 -1.00 到 +1.00 之间的值，就像式 14.4 一样。 这在式 14.6 中进行了总结。
 
 ```
 D* = [average score of the upper group on the item] − [average score of the lower group on the item] / range of possible item scores = [difference between the upper and lower groups' average item score] / [maximum possible item score − minimum possible item score] [Eq. 14.6]
@@ -12440,11 +13073,11 @@ D* = [average score of the upper group on the item] − [average score of the lo
 
 下一个示例展示了如何使用该公式。
 
-## 示例
+### 示例
 
 应用式 14.6 的示例
 
-假设上组在某题上的平均分为 5.3，下组相应平均分为 2.8，且该题按 1 到 6 分评分。 区分指数 D* 是多少？
+假设上组在某题上的平均分为 5.3，下组相应平均分为 2.8，且该题按 1 到 6 分评分。 区分指数 `D*` 是多少？
 
 ```
 D* = [difference between the upper and lower groups' average item score] / [maximum possible item score − minimum possible item score] = (5.3 − 2.8)/(6 - 1) = 2.5/5 = 0.5
@@ -12458,34 +13091,36 @@ D* = [difference between the upper and lower groups' average item score] / [maxi
 
 ## 对测验分数分布的影响
 
-分布的形状 项目的难度会影响总测验分数分布的形状。 包含 ps < 0.25 的项目的非常困难的测验往往呈正偏态，而包含 ps < 0.80 的项目的容易测验往往呈负偏态。 （参见图 1.2，了解分布形状的解释。）其他类型评估的总分数分布的形状并不容易推断。
+### 分布的形状
+项目的难度会影响总测验分数分布的形状。 包含 `ps < 0.25` 的项目的非常困难的测验往往呈正偏态，而包含 `ps < 0.80` 的项目的容易测验往往呈负偏态。 （参见图 1.2，了解分布形状的解释。）其他类型评估的总分数分布的形状并不容易推断。
 
-平均或平均测验分数 项目的难度会影响平均或平均测验分数： 平均测验分数（M）等于项目难度的总和。 关系如下所示：
+### 平均或平均测验分数
+项目的难度会影响平均或平均测验分数： 平均测验分数（`M`）等于项目难度的总和。 关系如下所示：
 
 ```
 M = Σ p [Eq. 14.7]
 ```
 
-平均（M）测验分数等于构成测验的项目的难度（p）值的总和。 当评估仅包含表现性或构造反应项目时，均值只是项目均值的总和，而不是式 14.5 的 p* 值之和。
+平均（`M`）测验分数等于构成测验的项目的难度（`p`）值的总和。 当评估仅包含表现性或构造反应项目时，均值只是项目均值的总和，而不是式 14.5 的 `p*` 值之和。
 
-分数的分布 项目难度分布和测验分数分布相关。 所有 p 值都集中在 0.50 左右的测验具有最大的测验分数分布，而难度分布在 .10 到 .90 之间的测验具有较小的分数分布。 项目难度（p 值）并不是导致测验分数分布的唯一因素。 另一个因素是项目之间的相关性（附录 I）： 这些相关性越高，标准差越大。 然而，项目之间的相关性可能受 p 值的影响： p = 0.00 或 1.00 的项目相关性为 0.00。
+### 分数的分布
+项目难度分布和测验分数分布相关。 所有 `p` 值都集中在 0.50 左右的测验具有最大的测验分数分布，而难度分布在 .10 到 .90 之间的测验具有较小的分数分布。 项目难度（`p` 值）并不是导致测验分数分布的唯一因素。 另一个因素是项目之间的相关性（附录 I）： 这些相关性越高，标准差越大。 然而，项目之间的相关性可能受 `p` 值的影响： `p = 0.00` 或 `1.00` 的项目相关性为 0.00。
 
 ## 项目难度信息的用途
 
-表 14.3 总结了教师和学校官员在评估和教学中可以使用 p 值的方式。 对于教师来说，确定需要重新教授的概念并向学生提供关于他们学习的反馈可能是项目难度数据的更重要用途。 例如获取有关课程优势或怀疑项目偏见的信息需要学区范围内的合作。 这种分析通常仅用于州强制性和标准化测试，因为测试出版商会 readily 提供这些信息。 如果你担任学校委员会成员或被提升到行政职位，你可能会参与解释州强制性或标准化测试数据。 使用
-
+表 14.3 总结了教师和学校官员在评估和教学中可以使用 `p` 值的方式。 对于教师来说，确定需要重新教授的概念并向学生提供关于他们学习的反馈可能是项目难度数据的更重要用途。 例如获取有关课程优势或怀疑项目偏见的信息需要学区范围内的合作。 这种分析通常仅用于州强制性和标准化测试，因为测试出版商会 readily 提供这些信息。 如果你担任学校委员会成员或被提升到行政职位，你可能会参与解释州强制性或标准化测试数据。 使用
 
 表 14.3 题目难度指数在测验和教学中可用的示例方式。
 
 | 用途 | 程序 | 注释 |
 |---|---|---|
-| 识别需要重新教学的概念 | 查找 p 值较小的题目。这些题目可能指向需要重新教学的目标。 | a. 测验成绩不佳可能并不反映教学不佳：成绩不佳可能反映题目编写不佳、先前学习不正确，或测验动机不佳。 b. 基于若干相似题目的得分比单一题目的表现更可靠。 |
-| 学校课程中可能存在的优势和弱点的线索 | 计算学校建筑或学区相似题目簇的 p 值。将这些值与出版商全国常模组的相同题目的 p 值进行比较。注意优势和弱点区域。 | a. 见上文 a 和 b。 b. 此程序仅适用于标准化测验。 c. 题目必须对应当地课程目标和教学。 d. 任何已出版的测验都无法涵盖学区的全部目标。 |
-| 向学生提供反馈 | 将每道题目的 p 值连同学生答错的题目编号一起报告给学生。 | a. 这种报告对高中和大学生更有用。 |
-| 可能的题目偏倚线索 | 将试卷分为对比组（例如，男性 vs 女性，黑人 vs 白人）。分别计算每组每道题目的 p 值。对 p 值差异异常大的题目进行进一步研究，看是否可能存在偏倚。 | a. 这只是一种粗略的方法，不是科学上令人满意的方法（Lord, 1977）。 b. 由于抽样波动，此程序在考生样本量较小时不太有用。 |
+| 识别需要重新教学的概念 | 查找 `p` 值较小的题目。这些题目可能指向需要重新教学的目标。 | a. 测验成绩不佳可能并不反映教学不佳：成绩不佳可能反映题目编写不佳、先前学习不正确，或测验动机不佳。 b. 基于若干相似题目的得分比单一题目的表现更可靠。 |
+| 学校课程中可能存在的优势和弱点的线索 | 计算学校建筑或学区相似题目簇的 `p` 值。将这些值与出版商全国常模组的相同题目的 `p` 值进行比较。注意优势和弱点区域。 | a. 见上文 a 和 b。 b. 此程序仅适用于标准化测验。 c. 题目必须对应当地课程目标和教学。 d. 任何已出版的测验都无法涵盖学区的全部目标。 |
+| 向学生提供反馈 | 将每道题目的 `p` 值连同学生答错的题目编号一起报告给学生。 | a. 这种报告对高中和大学生更有用。 |
+| 可能的题目偏倚线索 | 将试卷分为对比组（例如，男性 vs 女性，黑人 vs 白人）。分别计算每组每道题目的 `p` 值。对 `p` 值差异异常大的题目进行进一步研究，看是否可能存在偏倚。 | a. 这只是一种粗略的方法，不是科学上令人满意的方法（Lord, 1977）。 b. 由于抽样波动，此程序在考生样本量较小时不太有用。 |
 | 建立具有特定统计特性的测验 | 见表 14.4 |  |
 
-本章后面将描述用于建立特殊用途测验的 p 值。
+本章后面将描述用于建立特殊用途测验的 `p` 值。
 
 ## 题目区分指数
 
@@ -12498,31 +13133,34 @@ D = p_U - p_L
 
 其中
 
-D 代表区分指数的数值，
+`D` 代表区分指数的数值，
 
-p_U 代表高分组的比例答对该题目，
+`p_U` 代表高分组的比例答对该题目，
 
-p_L 代表低分组的比例答对该题目。
+`p_L` 代表低分组的比例答对该题目。
 
-该指数有时被称为净 D 区分指数。商业测验开发商今天很少使用净 D；他们现在使用相关系数作为区分指数，或使用基于项目反应数学建模的其他指数。然而，净 D 可能是用于教师自编测评时最有用的区分指数。公式 14.6 是结构化反应和表现题目的可比公式。
+该指数有时被称为净 `D` 区分指数。商业测验开发商今天很少使用净 `D`；他们现在使用相关系数作为区分指数，或使用基于项目反应数学建模的其他指数。然而，净 `D` 可能是用于教师自编测评时最有用的区分指数。公式 14.6 是结构化反应和表现题目的可比公式。
 
 ## 题目区分的重要性
 
-绝对成绩与相对成绩 绝对成绩测评的主要目的是准确确定每个学生学到的内容或行为。相对成绩测评的主要目的则在于准确确定学生在所学内容或学习目标方面的等级顺序。当你主要收集关于学生等级顺序的信息时，应修订或从测验中删除那些不提供关于学生排序的信息或提供不一致、令人困惑的排序信息的题目。
+### 绝对成绩与相对成绩
+绝对成绩测评的主要目的是准确确定每个学生学到的内容或行为。相对成绩测评的主要目的则在于准确确定学生在所学内容或学习目标方面的等级顺序。当你主要收集关于学生等级顺序的信息时，应修订或从测验中删除那些不提供关于学生排序的信息或提供不一致、令人困惑的排序信息的题目。
 
-假设你想用一份 30 题的单元测验将一个班级的学生从高到低排序。假设进一步，当进行题目分析时，你根据总测验分数将班级分为两半（通常，高分者在上组，低分者在下组）。最后，假设对于其中一道题目，你发现下组的所有学生都答对了该题，而上组全体都答错了。在这种情况下，题目难度指数为 p = 0.50，但题目区分指数为 D = 0 - 1.00 = -1.00。这种负向区分的题目很差，因为它与大多数其他题目作用相反。也就是说，高分学生答错，低分学生答对。如果你把这种负向区分的题目放在测验上，它们会使学生按与测评中正向区分题目所产生的排序不一致的顺序排列。只有区分指数能够检测到刚刚描述的那种功能失调的题目。难度指数给出的是全班答对题目的比例，但它并不能表明答对的是更多的高分学生还是低分学生。因此，在决定题目是否应出现在测验上时，你应比难度指数更重视题目的区分指数。
+假设你想用一份 30 题的单元测验将一个班级的学生从高到低排序。假设进一步，当进行题目分析时，你根据总测验分数将班级分为两半（通常，高分者在上组，低分者在下组）。最后，假设对于其中一道题目，你发现下组的所有学生都答对了该题，而上组全体都答错了。在这种情况下，题目难度指数为 `p = 0.50`，但题目区分指数为 `D = 0 - 1.00 = -1.00`。这种负向区分的题目很差，因为它与大多数其他题目作用相反。也就是说，高分学生答错，低分学生答对。如果你把这种负向区分的题目放在测验上，它们会使学生按与测评中正向区分题目所产生的排序不一致的顺序排列。只有区分指数能够检测到刚刚描述的那种功能失调的题目。难度指数给出的是全班答对题目的比例，但它并不能表明答对的是更多的高分学生还是低分学生。因此，在决定题目是否应出现在测验上时，你应比难度指数更重视题目的区分指数。
 
 ## D 的数值限制
 
-对于每道题目，净 D 的可能范围为 -1 到 +1。如果题目所做的所有区分都是正确的区分（上组每个人都答对，下组每个人都答错），净 D 将等于 +1。这样的题目被称为完美正向区分题目。如果正确区分的数量等于错误区分的数量（上组和下组答对的学生数量相等），则 D = 0。这样的题目被称为无区分题目。最后，如果所有区分都是错误的（上组每个人都答错，下组每个人都答对），D 将等于 -1。这样的题目被称为完美负向区分题目。+1 和 -1 在实践中很少出现。D = 0 最常出现在非常容易或非常困难的题目上。值 -1、0 和 +1 可作为解释 D 时的基准。
 
-## D 可提示需要修订的题目
 
-将 D 的负值解释为警告，提示你应仔细研究该题目并进行修订或删除。如果找不到题目的技术缺陷，可能是上分数组的学生对该材料学习不完整或完全错误（Lindquist, 1936）。（参见第 8 章第 154 页的示例。）除非有相反的合理解释，否则你的所有测评题目都应为正向区分；否则，测评的总分将无法提供可用信息。
+对于每道题目，净 `D` 的可能范围为 -1 到 +1。如果题目所做的所有区分都是正确的区分（上组每个人都答对，下组每个人都答错），净 `D` 将等于 +1。这样的题目被称为完美正向区分题目。如果正确区分的数量等于错误区分的数量（上组和下组答对的学生数量相等），则 `D = 0`。这样的题目被称为无区分题目。最后，如果所有区分都是错误的（上组每个人都答错，下组每个人都答对），`D` 将等于 -1。这样的题目被称为完美负向区分题目。+1 和 -1 在实践中很少出现。`D = 0` 最常出现在非常容易或非常困难的题目上。值 -1、0 和 +1 可作为解释 `D` 时的基准。
+
+## `D` 可提示需要修订的题目
+
+将 `D` 的负值解释为警告，提示你应仔细研究该题目并进行修订或删除。如果找不到题目的技术缺陷，可能是上分数组的学生对该材料学习不完整或完全错误（Lindquist, 1936）。（参见第 8 章第 154 页的示例。）除非有相反的合理解释，否则你的所有测评题目都应为正向区分；否则，测评的总分将无法提供可用信息。
 
 ## 分数分布
 
-直觉上你知道，如果没有任何题目区分（所有题目的 D = 0），每个人都会集中在一起：如果单个题目无法区分学生，那么题目集合也无法做到。测评的平均题目区分水平越大，测评分数的多样性就越大。
+直觉上你知道，如果没有任何题目区分（所有题目的 `D = 0`），每个人都会集中在一起：如果单个题目无法区分学生，那么题目集合也无法做到。测评的平均题目区分水平越大，测评分数的多样性就越大。
 
 ## 成绩信度和题目区分力
 
@@ -12530,11 +13168,11 @@ p_L 代表低分组的比例答对该题目。
 
 ## 提高选择题质量
 
-## 功能不佳的干扰项
+### 功能不佳的干扰项
 
 干扰项的反应模式 选择题中干扰项或诱答项的主要目的是对缺乏足够知识以选择正确答案的学生显得合理。由示例 14.1 中所示的班级记录汇总的题目分析数据可用于找出哪些题目干扰项未达到此目的。一般规则是：每个干扰项应至少有一名低分组学生选择它，并且选择它的低分组学生应多于上分组学生。以下数据来自先前在题目档案卡示例中提出的题目，说明了这些要点。
 
-## 示例
+### 示例
 
 显示对干扰项反应模式适当的题目分析数据的示例
 
@@ -12553,11 +13191,7 @@ p_L 代表低分组的比例答对该题目。
 
 如果低分组没有学生选择某个特定干扰项，该干扰项可能功能不佳。以下是显示干扰项 B 可能功能不正常的反应模式示例。此示例为示例 14.1 的第 1 题。
 
-
-
-
-
-## Example
+### Example
 
 题目分析反应模式的示例，显示应检查备选方案 B 是否功能不佳
 
@@ -12580,7 +13214,7 @@ Subject Matter Has Precedence 并非总是当下组无人选择某个备选方�
 
 学生反应可提供有关模糊备选方案的线索。在此语境中，备选方案是模糊的，如果上组学生无法区分设定的答案和一个或多个干扰项（Sax, 1989）。当这种情况发生时，上组倾向于以与设定反应大致相同的频率选择一个干扰项，如以下示例所示。
 
-## Example
+### Example
 
 上组干扰项反应模式的示例，显示备选方案模糊
 
@@ -12599,7 +13233,7 @@ Subject Matter Has Precedence 并非总是当下组无人选择某个备选方�
 
 然而，在得出需要修改题目的结论之前，你必须研究该题目与参加测试的学生之间的关系，并判断模糊性源于学生缺乏知识而不是题目写得不好（Sax, 1974）。请考虑下一个示例，它显示了不完全的学习如何产生一种反应模式，看起来像是备选方案模糊。
 
-## Example
+### Example
 
 不完全学习可能导致反应模式看起来像是备选方案模糊的示例
 
@@ -12618,7 +13252,7 @@ Subject Matter Has Precedence 并非总是当下组无人选择某个备选方�
 
 如果你发现比上组学生更多的人选择某个错误反应，则可能对题目设错了答案键。在这种情况下，请检查答案键是否正确。请看此示例：
 
-## Example
+### Example
 
 上组干扰项反应模式的示例，显示可能设错答案键的题目
 
@@ -12637,7 +13271,7 @@ Subject Matter Has Precedence 并非总是当下组无人选择某个备选方�
 
 如果对上组学生而言许多备选方案同样合理，则学生可能在随机猜测。如果上组学生随机猜测，每个选项倾向于被选择的次数大致相等，如此示例所示：
 
-## Example
+### Example
 
 上组干扰项反应模式的示例，显示可能随机猜测或困惑
 
@@ -12648,9 +13282,11 @@ Subject Matter Has Precedence 并非总是当下组无人选择某个备选方�
 | C 1916 | 3 | 3 |
 | *D 1917 | 3 | 2 |
 
+
+
 请记住，要寻找许多学生可能在猜测的题目，应查看上组的反应模式，而不是下组。上组学生猜测可能表明班级存在普遍困惑。下组学生在较难题目上也可能事实上在猜测，但这表明你需要重新教学，而不是简单地修改测验题目。随机猜测会给分数增加测量误差，从而降低信度和效度。
 
-## SELECTING TEST ITEMS
+# SELECTING TEST ITEMS
 
 ## Another Purpose for Item Analysis
 
@@ -12660,21 +13296,21 @@ Subject Matter Has Precedence 并非总是当下组无人选择某个备选方�
 
 如果与你进行测评的目的不一致，任何统计题目选择规则都无帮助。此外，你用来选择某些题目而非其他题目的任何程序都会改变表现域的定义。你剔除的题目所代表的表现永远不会被测评。
 
-Relative Versus Absolute Student Attainment 仔细选择题目可使测评更短、更高效、更可靠。在课堂上，基于统计的题目选择似乎在你主要关注学生的相对成绩而非绝对成绩时最适用。当你的优先事项是根据学生所学知识对学生进行排名时，你会关注相对成绩的测评。当你的优先事项是确定每个学生学到的精确内容（或表现）时，你会关注绝对成绩的测评。
+### Relative Versus Absolute Student Attainment
 
-例如，考虑评估学生在一年级和二年级通常教授的 100 个简单加法事实的学习需求。如果你只想知道学生的相对成绩（哪位学生知道最多、其次最多，等等），你可以使用相对较短的测验，由最能区分学生的加法事实组成。该测验可能主要包含加法表的中间和上部部分。几乎人人都知道的加法事实（例如 1 + 1 = 2）不会被包含在这样的测验中，因为这些题目不具区分度（D = 0），因此无法提供对学生进行排名的信息。然而，由于某些加法事实区分度不佳而将其从测评中排除，意味着你将无法观察学生在全部 100 个加法事实上的表现。
+仔细选择题目可使测评更短、更高效、更可靠。在课堂上，基于统计的题目选择似乎在你主要关注学生的相对成绩而非绝对成绩时最适用。当你的优先事项是根据学生所学知识对学生进行排名时，你会关注相对成绩的测评。当你的优先事项是确定每个学生学到的精确内容（或表现）时，你会关注绝对成绩的测评。
 
-另一方面，假设你的测评目的是识别特定的加法组合
+例如，考虑评估学生在一年级和二年级通常教授的 100 个简单加法事实的学习需求。如果你只想知道学生的相对成绩（哪位学生知道最多、其次最多，等等），你可以使用相对较短的测验，由最能区分学生的加法事实组成。该测验可能主要包含加法表的中间和上部部分。几乎人人都知道的加法事实（例如 `1 + 1 = 2`）不会被包含在这样的测验中，因为这些题目不具区分度（`D = 0`），因此无法提供对学生进行排名的信息。然而，由于某些加法事实区分度不佳而将其从测评中排除，意味着你将无法观察学生在全部 100 个加法事实上的表现。
 
-
-
-with which a student has difficulty. In this case, finding out the absolute level of achievement would be your main assessment focus. You may find it necessary to use a longer, less efficient test, perhaps assessing all 100 facts over a period of several days.
+另一方面，假设你的测评目的是识别特定的加法组合 with which a student has difficulty. In this case, finding out the absolute level of achievement would be your main assessment focus. You may find it necessary to use a longer, less efficient test, perhaps assessing all 100 facts over a period of several days.
 
 Absolute, rather than relative, achievement is more important for diagnostic assessments intended to identify such things as whether a student has acquired particular reading skills, learned a certain percentage of facts in some specified domain, or has the ability to solve certain types of problems. Relative achievement is more important when you are assessing a student's general educational development in a subject area.
 
-Complete Versus Partial Ordering For some educational decisions, you may need to accurately rank all students using their test performance, called a complete ordering of students. On the other hand, you may only want to separate students into five ordered categories so you can assign grades (A, B, C, D, and F). In so doing, you may not wish to make precise distinctions among the students within each category. Similarly, you may wish to divide the class into two groups, such as mastery/nonmastery or faster/slower readers. We say there is partial ordering when the categories themselves are ordered, but there is no ordering of individuals within a category. Categorizing students by their grades, or into fail-pass groups, are examples of partial ordering.
+### Complete Versus Partial Ordering
 
-When you focus your assessment on either partial or complete ordering, it is inefficient to include items that do not contribute to ordering and distinguishing students. Such items therefore are culled from the pool. To cull, you try out items with students before creating the final version of the test (or you use items from past administrations of the test). You calculate item statistics (p and D). You select and assemble into the final test those items with high, positive discrimination indices, generally of middle difficulty.
+For some educational decisions, you may need to accurately rank all students using their test performance, called a complete ordering of students. On the other hand, you may only want to separate students into five ordered categories so you can assign grades (A, B, C, D, and F). In so doing, you may not wish to make precise distinctions among the students within each category. Similarly, you may wish to divide the class into two groups, such as mastery/nonmastery or faster/slower readers. We say there is partial ordering when the categories themselves are ordered, but there is no ordering of individuals within a category. Categorizing students by their grades, or into fail-pass groups, are examples of partial ordering.
+
+When you focus your assessment on either partial or complete ordering, it is inefficient to include items that do not contribute to ordering and distinguishing students. Such items therefore are culled from the pool. To cull, you try out items with students before creating the final version of the test (or you use items from past administrations of the test). You calculate item statistics (`p` and `D`). You select and assemble into the final test those items with high, positive discrimination indices, generally of middle difficulty.
 
 ## Realities, Content Coverage, and Compromise
 
@@ -12689,11 +13325,16 @@ Table 14.4 Guidelines for selecting items.
 |  | Relative achievement is the focus |  | Absolute achievement is the focus |
 |---|---|---|---|
 |  | Complete ordering | Partial ordering (two groups) |  |
+
+
+
+# Test Item Selection Guidelines
+
 | General concerns | Ranking all the pupils in terms of their relative attainment in a subject area. | Dividing pupils into two groups on the basis of their relative attainment. Pupils within each group will be treated alike. | Assess the absolute status (achievement) of the pupil with respect to a well-defined domain of instructionally relevant tasks. |
 | Specific focus of test | Seek to accurately describe differences in relative achievement between individual pupils. | Seek to accurately classify persons into two categories. | Seek to accurately estimate the percentage of the domain each pupil can perform successfully. |
 | Attention to the test's blueprint | Be sure that items cover all important topics and objectives within the blueprint. | Be sure that items cover all important topics and objectives within the blueprint. | Be sure items are a representative, random sample from the defined domain which the blueprint operationalizes. |
-| How the difficulty Index (p) is used | Within each topical area of the blueprint, select those items with: (1) p between 0.16 and 0.84 if performance on the test represents a single ability. (2) p between 0.40 and 0.60 if performance on the test represents several different abilities. Note: Items should be easier than described above if guessing is a factor. | Within each topical area of the blueprint, select those items with p-values slightly larger than the percentage of persons to be classified in the upper group (e.g., if the class is to be divided in half (0.50) then items with p-value of about 0.60 should be selected; if the division is lower 75% vs. upper 25%, items should have p = 0.35 (approximately)). Note: The above suggestion assumes the test measures a single ability. | Don't select items on the basis of their p-values, but study each p to see if it is signaling a poorly written item. |
-| How the discrimination Index (D) is used | Within each topical area of the blueprint, select items with D greater than or equal to +0.30. | Within each topical area of the blueprint, select items with D greater than or equal to +0.30. | All items should have D greater than or equal to 0.00. Unless there is a rational explanation to the contrary, revise those items not possessing this property. |
+| How the difficulty Index (`p`) is used | Within each topical area of the blueprint, select those items with: (1) `p` between 0.16 and 0.84 if performance on the test represents a single ability. (2) `p` between 0.40 and 0.60 if performance on the test represents several different abilities. Note: Items should be easier than described above if guessing is a factor. | Within each topical area of the blueprint, select those items with `p`-values slightly larger than the percentage of persons to be classified in the upper group (e.g., if the class is to be divided in half (0.50) then items with `p`-value of about 0.60 should be selected; if the division is lower 75% vs. upper 25%, items should have `p` = 0.35 (approximately)). Note: The above suggestion assumes the test measures a single ability. | Don't select items on the basis of their `p`-values, but study each `p` to see if it is signaling a poorly written item. |
+| How the discrimination Index (`D`) is used | Within each topical area of the blueprint, select items with `D` greater than or equal to +0.30. | Within each topical area of the blueprint, select items with `D` greater than or equal to +0.30. | All items should have `D` greater than or equal to 0.00. Unless there is a rational explanation to the contrary, revise those items not possessing this property. |
 
 achievement and building one to measure absolute achievement. Note that coverage of content and learning targets has primacy over statistical indices when selecting test items by the procedures recommended here. The guidelines shown in the table require you to understand whether the prospective test should assess only one ability or a combination of several abilities. A homogeneous test will measure one ability, while a heterogeneous test will assess a combination of abilities. If your test contains some items for which students can get the right answer by random guessing (such as with multiple-choice items), then the items you select should be approximately 5% easier than shown in the table.
 
@@ -12703,6 +13344,8 @@ When you design a criterion-referenced classroom test, item statistics play a le
 
 ## USING COMPUTERS FOR TEST ASSEMBLY AND ITEM ANALYSES
 
+
+
 The calculations and tabulations illustrated in this chapter can be done with a handheld calculator. They can also be done using a computer program. In some schools, students’ responses on scannable answer sheets can be scanned directly into a program that does all the item analyses illustrated in this chapter. In other schools the scanner creates a computer file, but you must use your own program to analyze the data. You can duplicate much of the analysis done by specialized programs using a standard spreadsheet program that comes with office suite programs.
 
 Vendors have also created software that allows banking or storing test items in a computer file (i.e., both the item’s text and graphics). The software then allows you to select items from the bank, assemble tests, and print them for duplication. Some software permits tests to be administered via intranet or Internet. Other software products offer even more organization: You can align your assignments with your state’s standards and school’s curriculum objectives, then compare each student’s progress against these standards and objectives.
@@ -12711,7 +13354,7 @@ Software, hardware, and related products vary greatly, not only in their quality
 
 ## Summary
 
-## Getting Students Ready for Assessment and Handling Test Anxiety
+### Getting Students Ready for Assessment and Handling Test Anxiety
 
 - Students should demonstrate their maximum performance on classroom assessments.
 - If you handle your classroom assessments properly, you can help students demonstrate their maximum capability.
@@ -12722,131 +13365,192 @@ Software, hardware, and related products vary greatly, not only in their quality
 - Testwiseness skills and knowledge can be classified into two broad areas: those that students can use regardless of the purpose for taking the assessment or who developed the assessment procedure, and those that students can use with assessments developed for certain purposes or by certain persons. These skills and knowledge are outlined in Table 14.1.
 - Students’ testwiseness and general test-taking skills become more sophisticated as they progress through the grades, but students’ abilities vary greatly. Those with few skills and little testwiseness are usually at a disadvantage when they take tests with more skilled and testwise peers.
 
-## Putting the Assessment Together and Preparing to Scoring It
+### Putting the Assessment Together and Preparing to Scoring It
+
+
 
 - You facilitate students’ maximum assessment performance by attending carefully to the assessment materials, including their overall appearance, the arrangement of the assessment tasks, and the way you present the assessment to your students.
+
 - When crafting the format and procedures for a formal assessment, you should be sensitive to the visual and auditory abilities of your students and how these abilities may affect their assessment performance.
+
 - Arrange tasks in an assessment to help students do their best.
-
-
-
-
 
 ## 测试焦虑
 
 - 与考试相关的焦虑被认为会在考生中引发任务相关反应，有助于考试表现，以及任务无关反应，会干扰考试表现。
+
 - 任务无关的想法会削弱高度考试焦虑的人，因为他们 preoccupied with their own inadequacy, helplessness, and possible failure.
+
 - 测试焦虑包含认知性的担忧成分和情绪性成分。或者可以识别出四个成分：(a) 紧张，(b) 担忧，(c) 任务无关想法，(d) 情绪性。
+
 - 课堂评估的项目分析的重要用途是 (a) 表明评估任务是否按预期发挥作用，(b) 给学生提供其表现的反馈并为课堂讨论建立基础，(c) 提供关于学生学习缺陷的反馈，(d) 提示教学改进的领域，(e) 提示评估任务如何修订，以及 (f) 帮助你提高设定评估任务的技能。
-- 项目难度的一个衡量指标是 p，即正确回答该项目的总人数所占比例。最难的项目 p 接近 0.00，最容易的项目 p 接近 1.00。
-- 项目区分度的一个衡量指标是 D，即上极端组正确回答该项目的比例与下极端组正确回答该项目的比例之差。该指数范围从 −1.00 到 +1.00。区分度不佳的项目 D 值接近零。许多测试开发者力求使项目具有 D > +0.30。
-- 你的评估分数分布的形状、其均值和分数的离散程度受评估中项目 p 值的影响。
+
+- 项目难度的一个衡量指标是 `p`，即正确回答该项目的总人数所占比例。最难的项目 `p` 接近 0.00，最容易的项目 `p` 接近 1.00。
+
+- 项目区分度的一个衡量指标是 `D`，即上极端组正确回答该项目的比例与下极端组正确回答该项目的比例之差。该指数范围从 −1.00 到 +1.00。区分度不佳的项目 `D` 值接近零。许多测试开发者力求使项目具有 `D` > +0.30。
+
+- 你的评估分数分布的形状、其均值和分数的离散程度受评估中项目 `p` 值的影响。
+
 - 影响评估任务难度的因素包括你的教学有效性、评估任务的技术质量、学生的背景和先前学习，以及学生参加评估时的动机。
+
 - 评估中项目区分度指数的大小会影响评估分数的离散程度，受项目难度限制，并影响评估分数的可靠性。
+
 - 你可以通过统计每个选项被学生选择的次数来识别选择题中功能不佳的干扰项。统计分别针对高分组和低分组进行。一般规则是，每个错误选项至少应有一名低分组学生选择它，并且每个错误选项被低分组学生选择的次数应多于高分组学生。
+
 - 如果高分学生无法区分正确答案和一个或多个错误选项，则选项是模糊的。编写不佳的项目或学生缺乏知识可能造成模糊性。
+
 - 如果大量高分学生选择某个特定错误答案，你应检查项目是否存在无意误设答案。
+
 - 如果大约相等数量的高分学生选择每个选项，你应怀疑学生正在进行大量随机猜测。
+
 - 相对成就的评估主要关注根据学生学到的内容对学生进行排名（谁学得最多，其次最多，等等）。绝对成就的评估主要关注描述每个学生所学的内容或表现。尝试诊断学生学习缺陷时，绝对成就更为重要；确定学生在某一领域的一般教育发展时，相对成就更为重要。
-- p 和 D 指数可以与评估蓝图一起使用，从更大的项目库中选择最能衡量相对成就的项目。项目选择的经验法则总结在表 14.4 中。
-- 当评估的重点是绝对成就时，p 和 D 指数在选择项目时通常起较小的作用。
+
+- `p` 和 `D` 指数可以与评估蓝图一起使用，从更大的项目库中选择最能衡量相对成就的项目。项目选择的经验法则总结在表 14.4 中。
+
+- 当评估的重点是绝对成就时，`p` 和 `D` 指数在选择项目时通常起较小的作用。
 
 ## 重要术语和概念
 
 - ambiguous alternatives
+
 - blind guessing
+
 - bodily reactions to anxiety
+
 - cognitive interference
+
 - complete versus partial ordering of students
+
 - content analysis of the responses
+
 - correction for guessing formulas
+
 - dichotomous item scoring
+
 - emotionality
+
 - homogeneous versus heterogeneous test
+
 - item analysis
 
 你应在向学生实施评估之前准备好评分程序和评分密钥（或评分指南）。
 
-## 表 14.5 用于练习 4 的项目分析汇总。
+## 表 14.5 用于练习 4 的项目分析汇总
 
 | Item Number | Groups | Options |  |  |  | Faulty distractors | Miskeying | Ambiguous | Guessing |
 |---|---|---|---|---|---|---|---|---|---|
 |  |  | A | B | C | D |  |  |  | |
 | 1. | Upper | 0 | 2 | *9 | 0 | ___ | ___ | ___ | ___ |
 |  | Middle |  |  | *5 |  |  |  |  | |
-|  | Lower | 1 | 2 | *4 | 4 |  | p = ___ | D = ___ | |
+|  | Lower | 1 | 2 | *4 | 4 |  | `p` = ___ | `D` = ___ |  |
 | 2. | Upper | 2 | *7 | 0 | 2 | ___ | ___ | ___ | ___ |
 |  | Middle |  | *4 |  |  |  |  |  | |
-|  | Lower | 0 | *9 | 1 | 1 |  | p = ___ | D = ___ | |
+|  | Lower | 0 | *9 | 1 | 1 |  | `p` = ___ | `D` = ___ |  |
 | 3. | Upper | 9 | *1 | 1 | 0 | ___ | ___ | ___ | ___ |
 |  | Middle |  | *1 |  |  |  |  |  | |
-|  | Lower | 6 | *2 | 2 | 1 |  | p = ___ | D = ___ | |
+|  | Lower | 6 | *2 | 2 | 1 |  | `p` = ___ | `D` = ___ |  |
 | 4. | Upper | *5 | 5 | 0 | 1 | ___ | ___ | ___ | ___ |
 |  | Middle | *8 |  |  |  |  |  |  | |
-|  | Lower | *3 | 3 | 3 | 2 |  | p = ___ | D = ___ | |
+|  | Lower | *3 | 3 | 3 | 2 |  | `p` = ___ | `D` = ___ |  |
 | 5. | Upper | 3 | 2 | 3 | *3 | ___ | ___ | ___ | ___ |
 |  | Middle |  |  |  | *4 |  |  |  | |
-|  | Lower | 3 | 2 | 3 | *3 |  | p = ___ | D = ___ | |
+|  | Lower | 3 | 2 | 3 | *3 |  | `p` = ___ | `D` = ___ |  |
 
 > Note: This idea for this exercise came from Sax, 1980, pp. 109–112.
 
 - item bank
-- item difficulty index (p and p*)
-- item discrimination index (D and D*)
+
+- item difficulty index (`p` and `p*`)
+
+- item discrimination index (`D` and `D*`)
+
 - item file
+
 - maximum performance assessment
+
 - minimum assessment-taking skills
+
 - miskeyed items
+
 - negatively discriminating item
+
 - nondiscriminating item
+
 - poorly functioning distractor
+
 - positively discriminating item
+
 - relative versus absolute achievement
+
 - task-directed versus task-irrelevant thoughts
+
 - tension
+
 - test anxiety
+
 - testwiseness
+
 - types of test-anxious students
+
 - typical performance assessment
+
 - upper, middle, and lower scoring groups
+
 - worry
 
 ## 练习与应用
 
-1. 以下陈述是学生在评估情境中可能产生的想法。阅读每条陈述并判断它是任务相关 (TR) 想法还是任务无关 (TI) 想法。
+1. 以下陈述是学生在评估情境中可能产生的想法。阅读每条陈述并判断它是任务相关 (`TR`) 想法还是任务无关 (`TI`) 想法。
 
 - a. "I have to be very careful in answering this problem. My teacher takes points off for computational errors."
+
 - b. "I am really dumb. I just can't do it!"
+
 - c. "If I don't pass this test, Dad will kill me!"
+
+
+
 - d. "I know I don't know the answer to this question. It's no use trying to fool Mr. Jones. He'll just think I'm dumber than I am."
+
 - e. "Oops! I forgot to study the material this question is asking. Oh well, I better write something down. I usually am able to get a few points from Mr. Jones!"
 
 2. 以下陈述代表了哪些应试策略？
+
 a. "When Mr. Jones gives a true-false test, I mark true when in doubt because he always has more true than false items on his tests."
+
 b. "When writing essays for a philosophy course I always use words such as ergo, being, and thing. This makes my answer sound more philosophical."
+
 c. "The first thing I do is mark B in all the answer spaces. Then I go back and read the questions. If B was wrong, I change it to the correct answer. At least I have a mark on every answer before time is called."
 
-3. 解释以下 D 值的含义。
+3. 解释以下 `D` 值的含义。
+
 a. + 1.00
+
 b. + 0.50
+
 c. 0.00
+
 d. − 0.50
+
 e. − 1.00
 
-4. 表 14.5 显示了 30 名学生班级中五个选择题的项目分析数据汇总。上组有 11 名学生，下组有 11 名学生。每个项目的设定的答案用星号标记。对于每个项目，计算难度指数 (p) 和区分度指数 (D)，然后判断该项目是否具有不良干扰项；可能误设答案；上组可能在猜测，或两个选项似乎模糊。
+4. 表 14.5 显示了 30 名学生班级中五个选择题的项目分析数据汇总。上组有 11 名学生，下组有 11 名学生。每个项目的设定的答案用星号标记。对于每个项目，计算难度指数 (`p`) 和区分度指数 (`D`)，然后判断该项目是否具有不良干扰项；可能误设答案；上组可能在猜测，或两个选项似乎模糊。
 
 5. 以下问题涉及对练习 4 中项目数据的分析。
+
 a. 哪个项目是负向区分？
+
 b. 哪个项目最容易？
+
 c. 哪个项目最困难？
+
 d. 对于哪些项目，更多上组学生比下组学生选择干扰项？
+
 e. 哪个项目的区分度指数最高？
+
 f. 哪个项目的区分度指数最低？
+
 g. 这 30 名参加测试的学生在这五项测试中的平均（均值）分数是多少？
-
-
-
-
 
 # 补充阅读
 
@@ -12880,22 +13584,26 @@ Tobias, S. (1992). The impact of test anxiety on cognition in school learning. I
 
 学习本章后，你应达到以下目标：
 
-## 第一节：成绩的含义与目的
+### 第一节：成绩的含义与目的
+
 - 1. 解释为什么给学生评分是教师的重要责任。 [5, 6]
 - 2. 解释从成绩中做出的不同决策以及不同利益相关者如何以不同方式使用成绩。 [5, 4, 6, 7]
 - 3. 解释使用成绩激励学生的利弊。 [5, 7, 4]
 
 ### 第二节：成绩单和其他学生进步的正式报告
+
 - 4. 描述报告学生进步的不同方法及其优缺点。 [4, 6, 5]
 - 5. 计划一次有效且具有教育成效的家校会议。 [5, 3]
 - 6. 描述多标记系统成绩单的组成部分。 [5, 6, 4]
 
 ### 第三节：选择评分模式
+
 - 7. 制定与你的教学方法一致、对形成性和总结性目的均有效、且能有效报告学生达到标准和学习目标的评分哲学。 [5, 6]
 - 8. 解释使用三种主要成绩参照框架的优缺点：标准参照（绝对标准）、常模参照（相对标准）和自我参照（成长标准）。 [5, 4, 6]
 - 9. 捍卫你的评分系统以应对各种批评。 [5, 4, 6]
 
 ### 第四节：合理的评分实践
+
 - 10. 区分评估变量、报告变量和评分变量。 [5]
 - 11. 解释如何使你的评估量表在不同作业之间保持一致。 [5, 3, 6]
 - 12. 解释评分量表上的分数数量如何影响成绩的精确度。 [5, 3, 6]
@@ -12905,98 +13613,95 @@ Tobias, S. (1992). The impact of test anxiety on cognition in school learning. I
 - 16. 解释不及格成绩的含义以及你如何处理不努力的学生评分。 [4, 5, 6]
 - 17. 解释对迟交作业降低成绩和对未交作业给予零分如何导致成绩效度降低。 [5, 4, 6]
 
-## 第五节：设定成绩边界和合并分数的技术
+### 第五节：设定成绩边界和合并分数的技术
+
 - 18. 使用以下每种评分方法对学生进行评分：(a) 按曲线评分，(b) 标准差法，(c) 根据班级能力水平调整，(d) 将分数转换为标准分数，(e) 总分法，(f) 固定百分比法，(g) 内容为基础或质量水平法，以及 (h) 绝对标准系统的组成部分加权。 [5]
 - 19. 解释为什么使用成绩惩罚学生、控制他们等违反了你对他们的伦理义务。 [1, 4, 3]
 
-## 重要术语和概念
+### 重要术语和概念
+
 - 20. 解释本章末尾列出的术语和概念如何适用于教育评估。 [6]
 
 ## 本章简介
 
 你必须给学生打分吗？谁使用成绩呢？字母成绩的替代方案是什么？如何选择适合自己的评分模式？如何公平地给分？什么是合理的评分实践？你可以用哪些不同技术来给学生评分？这些都是本章讨论的问题之一。
 
+
+
 本章分为五个部分。在第一节，我们讨论评分的含义和目的。我们评估评分的利弊，并考察谁使用成绩以及出于何种目的。在第二节，我们讨论成绩单和其他向家长和学生报告教育进步的方法。所讨论的替代方案包括清单、叙述性进展报告和家校会议。我们还讨论如何设计一份报告认知和非认知学生成绩的成绩单。第三节教你如何选择与教学方法相匹配的评分模式。讨论了三种评分框架：标准参照、常模参照和自我参照。第四节讨论合理的评分实践。我们区分评估、报告和评分变量。我们讨论如何使你的评分量表在作业之间保持一致，如何思考可能不及格的学生，以及给学生因未交作业而零分的破坏性。第五节教授八种设定成绩边界和分配成绩的方法。它还教授如何将不同组成部分的成绩合并为一个单一分数以用于评分的方法。
 
 ## 第一节：成绩的含义与目的
 
-## 你对分数和成绩的态度如何？
+### 你对分数和成绩的态度如何？
 
 在开始本章之前，请考虑你对分配成绩和分数的感觉。阅读图15.1中的每条陈述。在每条陈述旁边，勾选 A 表示同意，D 表示不同意，U 表示不确定。将你的答案与同学和你的指导教师进行比较。在学习本章并思考如何将概念应用于自己的教学时，请牢记这些态度。学习本章后重新审视你的答案。你改变了多少个答案？
 
-## 持续评估与评分
+### 持续评估与评分
 
-### 形成性与总结性评估
+#### 形成性与总结性评估
 
-形成性评估 持续评估是你收集学生实现课程学习目标进展信息的日常过程（Nitko, 1995）。持续评估具有形成性和总结性两个方面。你使用形成性持续评估来做出日常教学计划的决策以及判断当天的课程进行情况。你不会在成绩单或永久记录卡上正式记录形成性评价。许多评价直接报告给学生。例如，“梅根，我希望你今天特别注意课程”，或“鲍勃，周一我们将学习如何做应用题。请这个周末与你爸爸一起复习数字事实。” 其他形成性评价会在个人会议、电话或写给家庭的信件或便条中与家长讨论。
+持续评估是你收集学生实现课程学习目标进展信息的日常过程（Nitko, 1995）。持续评估具有形成性和总结性两个方面。你使用形成性持续评估来做出日常教学计划的决策以及判断当天的课程进行情况。你不会在成绩单或永久记录卡上正式记录形成性评价。许多评价直接报告给学生。例如，“梅根，我希望你今天特别注意课程”，或“鲍勃，周一我们将学习如何做应用题。请这个周末与你爸爸一起复习数字事实。” 其他形成性评价会在个人会议、电话或写给家庭的信件或便条中与家长讨论。
 
-总结性评估 本章强调如何使用成绩来报告你对学生实现课程主要学习目标的总结性持续评估。评分（或记分）主要是指使用符号系统（通常是字母）报告学生各种进步的过程。总结性评分让你能够向自己、其他教师、学校官员、学生、家长、后继教育机构和潜在雇主提供关于学生实现课程学习目标情况的报告。你给学生的成绩会报告给学校管理部门的永久记录卡或文件夹中。在学习的后期阶段，它们成为学生成绩单的一部分。学校通过成绩单、会议或信件等各种方式向学生和家长报告成绩。
+本章强调如何使用成绩来报告你对学生实现课程主要学习目标的总结性持续评估。评分（或记分）主要是指使用符号系统（通常是字母）报告学生各种进步的过程。总结性评分让你能够向自己、其他教师、学校官员、学生、家长、后继教育机构和潜在雇主提供关于学生实现课程学习目标情况的报告。你给学生的成绩会报告给学校管理部门的永久记录卡或文件夹中。在学习的后期阶段，它们成为学生成绩单的一部分。学校通过成绩单、会议或信件等各种方式向学生和家长报告成绩。
 
-需要效度 用于正式总结性评价目的的成绩必须基于与学校标准、官方课程学习目标和教育心理学相一致的正式持续评估。正如一位四年级教师所说（引自Azwell和Schmar, 1995, pp. 7–9）：
+用于正式总结性评价目的的成绩必须基于与学校标准、官方课程学习目标和教育心理学相一致的正式持续评估。正如一位四年级教师所说（引自Azwell和Schmar, 1995, pp. 7–9）：
 
 > 我不知道其他教师的感觉如何，但每当我寄出一份盖有我名字的正式报告时，它就相当于一份法律文件。该报告中的信息宣布自己是关于一个孩子最新的最佳教育信息。这可能听起来过于夸张，但家长期望该报告告诉他们关于孩子生活的重要部分。它应该是真实的，而且是正式的。
 
 由于许多利益相关者会出于许多不同目的使用你的总结性成绩，因此它们必须基于有效的评估。促成成绩的评估来自多个来源：课程材料、测验和测试、你创建的表现任务、项目和其他长期任务、学生制作的产品、你和学生整理的作品集，以及由一组教师共同制定的评估。
 
-似乎不公平地基于一次考试（评估）来确定学生的最终成绩。这种“大爆炸”式的评价方法忽略了评估学生的几个重要因素：(a) 在一个教学期间内用于评估的时间有限；(b) 在有限的时间内，只能对学生进行少量任务的测试；(c) 学生可能知道的远不止出现在
+似乎不公平地基于一次考试（评估）来确定学生的最终成绩。这种“大爆炸”式的评价方法忽略了评估学生的几个重要因素：(a) 在一个教学期间内用于评估的时间有限；(b) 在有限的时间内，只能对学生进行少量任务的测试；(c) 学生可能知道的远不止出现在“一击即中”式评估；(d) 学生的疾病或家庭问题会干扰其展示所需成就的能力；(e) 学生可以通过你决定评估的以外的方式展示其成就；以及 (f) 一些重要的学习目标最好通过长期项目、论文或校外作业来评估。
 
+**图 15.1 你对成绩和分数的感受如何（A = 同意，U = 不确定，D = 不同意）？**
 
-
-
-
-## 图 15.1 你对成绩和分数的感受如何（A = 同意，U = 不确定，D = 不同意）？
-
-+   1. 当使用学业成绩时，期望有超过三种的评级类别。
-+   2. 某些教师、课程和系的成绩持续平均高于其他教师、课程和系是有正当理由的。
-+   3. 如果学生某门课程不及格但随后通过，该初始不及格成绩应保留在其永久记录上。
-+   4. 大学生应在评估和评定他们在学业领域的个人成就方面发挥实质性作用。
-+   5. 学业成绩应更多基于成就状态而非成长或进步。
-+   6. 如果使用学业成绩，它们应为数字，而非字母。
-+   7. 学生的学业成绩应完全由其学业成就决定，而非出勤、公民行为、努力和态度。
-+   8. 使用成绩的学校应制定并执行明确的机构评分政策。
-+   9. 如果向学生分配学业成绩，它们应被视为测量，而非评价。
-+   10. 对慢速学习者的班级给予的高分比例应与对快速学习者的班级相同。
-+   11. 大多数教师在评估和评定学生时使用适当的统计技术太少。
-+   12. 在没有机构评分政策的情况下，成绩不应用于确定学生参加学业课程和项目的资格。
-
-+   13. 对成绩的大多数当前批评是指评分行为本身，而非具体的评分做法。
-+   14. 在评估和评定学生在学业领域的表现时，绝对标准比相对标准更可取。
-+   15. 在没有机构评分政策的情况下，成绩不应用于确定参加体育和其他课外活动的资格。
-+   16. “通过/不及格”或“学分/不学分”比具有三个或更多类别的评分系统更适合学业课程。
-+   17. 允许学生为自己的成绩签约比按相对标准评分更可取。
-+   18. 大多数教师在评估学生时过于依赖其主观判断。
-+   19.某种类型的数字或字母评分系统对良好的教育实践至关重要。
-+   20. 典型的评分做法在学生之间造成了太多不必要的竞争。
-+   21. 最终课程成绩应基于课程结束时的成就状态，而非整个课程的平均成就。
-+   22. 态度和兴趣等因素应被有意用于确定学生的成绩。
-+   23. “如果某物存在，它就以某种量存在，因此可以被测量。”
-+   24. 教师应尝试在兴趣、态度和动机等领域评估和评定学生。
+1. 当使用学业成绩时，期望有超过三种的评级类别。
+2. 某些教师、课程和系的成绩持续平均高于其他教师、课程和系是有正当理由的。
+3. 如果学生某门课程不及格但随后通过，该初始不及格成绩应保留在其永久记录上。
+4. 大学生应在评估和评定他们在学业领域的个人成就方面发挥实质性作用。
+5. 学业成绩应更多基于成就状态而非成长或进步。
+6. 如果使用学业成绩，它们应为数字，而非字母。
+7. 学生的学业成绩应完全由其学业成就决定，而非出勤、公民行为、努力和态度。
+8. 使用成绩的学校应制定并执行明确的机构评分政策。
+9. 如果向学生分配学业成绩，它们应被视为测量，而非评价。
+10. 对慢速学习者的班级给予的高分比例应与对快速学习者的班级相同。
+11. 大多数教师在评估和评定学生时使用适当的统计技术太少。
+12. 在没有机构评分政策的情况下，成绩不应用于确定学生参加学业课程和项目的资格。
+13. 对成绩的大多数当前批评是指评分行为本身，而非具体的评分做法。
+14. 在评估和评定学生在学业领域的表现时，绝对标准比相对标准更可取。
+15. 在没有机构评分政策的情况下，成绩不应用于确定参加体育和其他课外活动的资格。
+16. “通过/不及格”或“学分/不学分”比具有三个或更多类别的评分系统更适合学业课程。
+17. 允许学生为自己的成绩签约比按相对标准评分更可取。
+18. 大多数教师在评估学生时过于依赖其主观判断。
+19. 某种类型的数字或字母评分系统对良好的教育实践至关重要。
+20. 典型的评分做法在学生之间造成了太多不必要的竞争。
+21. 最终课程成绩应基于课程结束时的成就状态，而非整个课程的平均成就。
+22. 态度和兴趣等因素应被有意用于确定学生的成绩。
+23. “如果某物存在，它就以某种量存在，因此可以被测量。”
+24. 教师应尝试在兴趣、态度和动机等领域评估和评定学生。
 
 > 来源：摘自 W. S. Harris 的“教育测量中选定问题的 NCME 成员共识”，1973 年，《教育测量期刊》，10，页 67–70。华盛顿特区：NCME。1973 年由国家教育测量委员会版权所有。经出版商许可转载。
 
-“一击即中”式评估；(d) 学生的疾病或家庭问题会干扰其展示所需成就的能力；(e) 学生可以通过你决定评估的以外的方式展示其成就；以及 (f) 一些重要的学习目标最好通过长期项目、论文或校外作业来评估。
-
-## 教师为何不喜欢评分
+### 教师为何不喜欢评分
 
 对许多教师而言，评分是教学中最困难和最麻烦的方面之一。这已持续了许多代人。为什么会这样？Ebel（1979）列出了以下原因：
 
-+   1. 教育成就难以正确评估。
-+   2. 不同的教育观点和哲学意味着评估、评价和报告学生进步的不同方法。
-+   3. 评分要求教师评判学生，而其中许多判断是困难的和/或令人不愉快的。
+1. 教育成就难以正确评估。
+2. 不同的教育观点和哲学意味着评估、评价和报告学生进步的不同方法。
+3. 评分要求教师评判学生，而其中许多判断是困难的和/或令人不愉快的。
 
 尽管教师不喜欢评分，它仍是工作所需的一部分。这就是为什么你需要学习如何尽可能有效地给学生评分。
 
-## 人们如何感知和使用成绩
+### 人们如何感知和使用成绩
 
-### 有效性、决策和利益相关者
+#### 有效性、决策和利益相关者
 
 表 15.1 给出了正式学生进度报告中经常出现的信息示例以及可能基于此类信息做出的各种决策。请研究这些决策，以便熟悉他人将如何使用你分配的成绩。这将帮助你更好地理解本章的其余部分。
 
-表 15.1 成绩单上信息类型示例以及从该信息做出的决策类型。
+**表 15.1 成绩单上信息类型示例以及从该信息做出的决策类型。**
 
 | 报告中的信息 | 可以做出的决策 |  |  |  |
 |---|---|---|---|---|
-| | 选择 |  placement remediation | 指导、咨询 | 课程改进 |
+| | 选择 | placement remediation | 指导、咨询 | 课程改进 |
 | 1. 学习的内容或目标 | 升学、试读、毕业、录取 | 选择要修的课程、需要补救帮助 | 下一门课程、需要额外教育、与职业相关的选择 | 教学可以改进的地方 |
 | 2. 不同学科表现的比较 | 录取 | 选择高级和/或补救课程 | 学生优势和劣势的模式 | 学校的强项领域 |
 | 3. 相对于其他人的表现 | 奖学金、奖项、录取 | 估计可能成功、特殊项目资格 | 估计在某些领域的可能成功 |  |
@@ -13008,9 +13713,11 @@ Tobias, S. (1992). The impact of test anxiety on cognition in school learning. I
 
 > 然而，教师为补偿成绩的使用和误用而做的调整既不统一也不一定有效。态度、努力和成就的拼凑成绩，试图为学生提供积极反馈，并不是答案。这种拼凑成绩在有效性检验下也会失败；它不具备可解释性的特征。教师在成绩中加入非成就因素时似乎意图是减轻负面社会后果，但成绩并不是社会工程的适当工具。然而，教师对社会后果的直觉是有用的，因为它指出了有效性问题的另一半：当成绩被用于决策和行动时会发生什么。（第 36 页）
 
-### 家长与教师的理解差异
+#### 家长与教师的理解差异
 
 与家长沟通尤其具有挑战性。一些研究表明，家长和教师对成绩单成绩含义的理解往往相差甚远（Waltman & Frisbie, 1994）。例如，家长
+
+
 
 可能会将成绩视为纯粹的成就反映。或者，他们可能会将成绩视为对未来工作或高等教育成功预测。
 
@@ -13022,26 +13729,38 @@ Tobias, S. (1992). The impact of test anxiety on cognition in school learning. I
 
 成绩能否和应否被用来激励学生？教育评估专家在是否适当使用传统评分系统（A、B、C……）来激励学生的问题上存在分歧。有些人（如 Ebel, 1979）认为成绩对学生而言是重要的激励因素。为了发挥这一功能，许多评估专家认为成绩必须有效且准确地仅反映成就——达到最高绩效标准的学生应获得最高成绩（Ebel & Frisbie, 1991；Hills, 1990；Linn & Gronlund, 1995；Oosterhof, 1994；Stiggins, Frisbie, & Griswold, 1989；Terwilliger, 1989）。
 
-
-
-
-
 | 表 15.2 不同利益相关者对成绩的不同用途。 | 可能按所示方式使用成绩的利益相关者 |  |  |  |  |  |  |
+
 |---|---|---|---|---|---|---|---|
+
 | 成绩用途 | 学生 | 父母 | 教师 | 指导顾问 | 学校管理者 | 后续教育机构 | 雇主 |
+
 | 1. 重新确认已知的课堂成绩 | ✓ |  | ✓ |  |  |  | ✓ |
+
 | 2. 教育进展和课程完成的证明文件 | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+
 | 3. 获得外在奖励/惩罚 | ✓ | ✓ |  |  |  |  |  |
+
 | 4. 获得社会关注或教师关注 | ✓ |  | ✓ | ✓ | ✓ |  |  |
+
 | 5. 申请新的教育安置 | ✓ | ✓ |  |  |  |  |  |
+
 | 6. 判断教师的胜任力或公平性 |  | ✓ |  |  | ✓ |  |  |
+
 | 7. 指出学生的问题 |  | ✓ | ✓ | ✓ | ✓ |  |  |
+
 | 8. 支持职业或职业指导探索 | ✓ | ✓ |  | ✓ |  |  |  |
+
 | 9. 限制或排除学生参与课外活动 |  | ✓ | ✓ |  | ✓ |  |  |
+
 | 10. 晋升或留级 |  |  | ✓ |  | ✓ |  |  |
+
 | 11. 授予毕业/文凭 |  |  |  |  | ✓ |  |  |
+
 | 12. 判断学生是否具备更高级别课程所需的先修条件 |  |  | ✓ |  | ✓ |  |  |
+
 | 13. 选择后续教育 |  |  |  | ✓ |  | ✓ |  |
+
 | 14. 判断个人是否具备特定工作所需的基本技能 |  |  |  |  |  | ✓ | ✓ |
 
 其他人对成绩的激励作用提出了另一种看法。例如，Cronbach（1977）提出了四项动机原则：（a）学生应有想要实现的学习目标，（b）学生应相信自己能够实现这些学习目标，（c）学生应了解自己距离实现这些学习目标的程度，（d）实现课堂学习目标应促使学生将学习应用于真实情境。Cronbach 对传统 A、B、C 评分在这些原则方面的分析指出：（a）成绩确实作为目标，至少部分学生寻求实现；（b）成绩并不能激励那些认为高分遥不可及的学生——当成绩仅包含学生最终的达成水平，而非考虑到初始准备情况的课程进展时，这种情况很可能发生；（c）如果教师持续向学生提供评估结果（清楚地解释学生的最终表现应是什么样子），学生可以利用成绩来判断自己的进步；（d）成绩往往是整体性判断，而非优势和劣势的描述；以及（e）成绩本身并不能告诉学生需要做哪些改进才能使当前成绩更接近期望成绩。
@@ -13059,7 +13778,9 @@ Tobias, S. (1992). The impact of test anxiety on cognition in school learning. I
 以下评论是对这些批评的回应（Ebel，1974）：
 
 - 1. 成绩本质上毫无意义。每个批评标题下的批评都有一定的道理。然而，表 15.3 中的批评 1、2、4 和 5 可以用作支持改进和加强评分实践的论据，而不是废除它们。批评 3 将成绩归因于超出其本意的内容。总结性成绩从未打算替代日常教学计划所需的复杂成就细节。成绩是学生总体成就水平的总结报告。
+
 - 
+
 - 2. 成绩在教育上不重要。这里的批评是价值陈述和不必要的比较的混合。成绩确实是符号，但由此不能得出符号不重要的结论。有些人为了具体的有形奖励而工作；另一些人则为了象征性奖励而工作并为之工作。只重视无形结果将意味着教育中没有任何有价值的东西可以被观察或评估。这似乎是不可行的。将教师的成绩与学生的自我评价相对立意味着只能使用其中之一。然而，有理由相信两者都应被使用。进一步，教师的评价有助于个人更现实地评价自己。成绩确实可以预测后续学业成绩（即后续成绩），并且可以预测某些课外成就类型。成绩不可能被期望成为完美或接近完美的预测指标。后续成就涉及机会、努力、教学质量和运气等多方面因素。此外，有效的成绩应反映学生所学内容。如果课程学习目标与工作成功所需的技能、能力和态度不匹配，那么即使成绩完美地描述了学生所学内容，也不会期望成绩能预测工作表现。
 
 - 3. 成绩是不必要的。上述观点表明，尽管成绩对于所有评估功能并非必要，但也不能完全取消。指导和咨询以及问责制——学生对学校的问责以及学校对学生和家长的问责——都需要某种类型的总结报告。你需要在被理解之前总结大量的成就数据。因此，尽管成绩不完美，但它们发挥着总结和记录保存的功能。例如，家长需要知道孩子在算术方面的整体表现，以及学生所具备的具体算术能力类型。然而，过度的详细报告将难以理解。例如，高中学生可能想知道是否应注册高级班微积分或普通微积分。顾问会参考本学期预微积分课程的成绩，而不是过去九周内学习的具体数学概念清单。另一个例子是，学生可能想知道自己是否在满意地进步。学校有义务提供其判断，可能以成绩的形式总结，而不是仅仅描述其在课程中的位置。
@@ -13077,7 +13798,9 @@ Tobias, S. (1992). The impact of test anxiety on cognition in school learning. I
 学生进展报告方法是指学校向学生和家长传达信息的方式，也是记录学生成绩的方式。表 15.4 总结了不同方法的优势和劣势。你的学区可能会使用一种以上的学生进展报告方法，因为不同方法可能服务于不同的目的和不同的受众。你可以在本章末尾列出的补充阅读中找到有关各种学生报告方法实际利弊的有用总结。在评估你学区的报告方法时，请记住以下几点：
 
 - 1. 教师在某些年级使用某些报告学生进展的方法更为频繁。例如，字母等级在高年级小学、初中和高中阶段使用频率很高。家长教师会议在初中和高中并不常见。
+
 - 2. 学校经常在同一份成绩单上使用多种方法组合。例如，字母等级可能报告学生的学科成绩；评定量表可能报告学生的态度和行为。家长教师会议可能传达有关成绩、努力、态度和行为的信息。学校可能会使用几乎所有方法组合。
+
 - 3. 方法之间可能产生冲突。学校管理者需要每个学生的进展简明总结以便问责和记录保存。家长和教师可能需要对所教授内容、掌握标准以及学生教育发展与同龄人相比情况的稍详细解释。¹ 表中确定的最详细报告方法是清单和叙述。
 
 ## 清单
@@ -13086,13 +13809,12 @@ Tobias, S. (1992). The impact of test anxiety on cognition in school learning. I
 
 > ¹请注意，家长可能会寻求常模参照信息，因为他们对特定年龄或年级的学生经验有限。例如，一名教师在五年教学后可能接触过数百名特定年级的学生。在 20 年的育儿经历后，家长只经历过自己的孩子以及少数朋友、亲戚和邻居的孩子。
 
-
-
-
-
 ## 表 15.4 报告学生进步的一些常用方法的优点和缺点。
 
 | 名称 | 使用的代码类型 | 优点 | 缺点 |
+
+
+
 | Letter grades | A, B, C, etc., also "+" and "-" may be added. | a. Administratively easy to use<br>b. Believed to be easy to interpret<br>c. Concisely summarize overall performance | a. Meaning of a grade varies widely with subject, teacher, school<br>b. Do not describe strength and weaknesses<br>c. Kindergarten and primary school children may feel defeated by them |
 | Number or percentage grade | Integers (5, 4, 3...) or percentages (99, 98...) | a. Same as (a), (b), (c) above<br>b. More continuous than letter grades<br>c. May be used along with letter grades | a. Same as (a), (b), (c) above<br>b. Meaning not immediately apparent unless explanation accompanies them |
 | Two-category grade | Pass-fail, satisfactory-unsatisfactory, credit-entry | a. Less devastating to younger students<br>b. Can encourage older students to take courses normally neglected because of fear of lowered GPA | a. Less reliable than more continuous system<br>b. Does not communicate enough information about pupil's performance for others to judge progress |
@@ -13106,9 +13828,13 @@ Tobias, S. (1992). The impact of test anxiety on cognition in school learning. I
 
 叙述性报告是对每个学生在学校课程框架下所学内容及其在课堂上的努力程度的详细书面描述。希望叙述性报告能够取代字母等级的不足之处，因为后者往往将过多的信息压缩成一个单一的符号。
 
-优点 提供对学生学习和教育发展的丰富描述的概念是值得称赞的。做得好的话，这些描述对家长和学生来说可能比成绩提供的简单总结更有意义。这对于描述小学生的学习非常有用，尤其是当某个州或学校已为多个年级定义了学习目标和绩效标准的连续体，并为每个年级设定了基准时。
+### 优点
+提供对学生学习和教育发展的丰富描述的概念是值得称赞的。做得好的话，这些描述对家长和学生来说可能比成绩提供的简单总结更有意义。这对于描述小学生的学习非常有用，尤其是当某个州或学校已为多个年级定义了学习目标和绩效标准的连续体，并为每个年级设定了基准时。
 
-局限性 叙述性报告当然也可能写得不好或不敏感。在这种情况下，它们传达了教师的无能。它们可能会让家长感到困惑或不知所措，因为家长可能需要阅读 5 到 10 页的叙述才能了解孩子在学习什么。在没有进行大量教师培训的情况下，不应采用叙述性报告。一个刻薄的教师在叙述性写作中和在字母评分中一样刻薄。有位刻薄的教师写道：“Johnny 像鸡一样思考！” 需要敏感性和建设性评论。教师培训应基于本学区以外学校中教师的成功经验，以便获得视角和实用建议。需要大量有指导的练习来写出不具威胁性和不归咎于人的评论。
+### 局限性
+叙述性报告当然也可能写得不好或不敏感。在这种情况下，它们传达了教师的无能。它们可能会让家长感到困惑或不知所措，因为家长可能需要阅读 5 到 10 页的叙述才能了解孩子在学习什么。在没有进行大量教师培训的情况下，不应采用叙述性报告。一个刻薄的教师在叙述性写作中和在字母评分中一样刻薄。有位刻薄的教师写道：“Johnny 像鸡一样思考！” 需要敏感性和建设性评论。教师培训应基于本学区以外学校中教师的成功经验，以便获得视角和实用建议。需要大量有指导的练习来写出不具威胁性和不归咎于人的评论。
+
+
 
 修改后的叙述性报告 由于有意义的长篇叙述性报告对教师来说准备起来非常耗时，一些学校已修改了报告流程。一种方法是结合清单或评分量表程序，并附上关于每个学生的简短书面评论。示例 15.2 显示了小学学生叙述性报告的一个部分。完整报告为四页，并包括几页显示学校教育发展连续体的内容（Egawa & Azwell, 1995）。你可以看到，从示例中，指标以类似于清单的方式发挥作用（即使你没有实际勾选它们），并为解释教师的简短评论提供了一种框架。指标的存在减少了教师对每个学生所使用和评估的课程活动的解释需求。沿着同样的思路，标准化的成绩单是在图森统一学区开发的（Clarridge & Whitaker, 1997）。示例 15.3 显示了一个例子。对于每个课程领域，1-2 年级和 3-6 年级的标准都被写了出来。每个标准都采自
 
@@ -13148,21 +13874,24 @@ Source: From Listening and Speaking Checklist, Grades 9-12: California Achieveme
 ## 小学进步报告
 
 姓名 ________________________ 班级 ________________________
+
 家长 ________________________ 教师 ________________________
+
 报告期 ________________________ 电话 ________________________
+
 出勤天数 ______ 缺勤 ______ 迟到 ______
 
-> 致家长的说明：在每个课程领域下，我列出了我在评估和评价学生时所寻找的指标。学生应展示或正在努力实现这些目标。这些指标在报告的左侧。关于您孩子的具体评论在指标的右侧。** 这些项目将在春季重点强调。
+> 致家长的说明：在每个课程领域下，我列出了我在评估和评价学生时所寻找的指标。学生应展示或正在努力实现这些目标。这些指标在报告的左侧。关于您孩子的具体评论在指标的右侧。**这些项目将在春季重点强调。**
 
 ### 学习与社交技能
 
 我们学校社区的成员关注以下几点：
+
 - 尽自己最大的努力
 - 可信赖
 - 诚实
 - 积极倾听他人
 - 不“贬低”他人
-
 - 为其他班级成员的学习做出贡献
 - 迅速在适当区域安顿下来
 - 与他人合作
@@ -13189,15 +13918,12 @@ Source: From Listening and Speaking Checklist, Grades 9-12: California Achieveme
 - 为自己的新闻配图
 
 报纸每天在塑料叠加层上创建并投影到大屏幕上。学生在教师书写时提供信息。
+
 个人评论在此为每个孩子添加：
 
 家长评论：
 
 Source: "Telling the story: Narrative reports," reprinted by permission of Kathy Egawa and Tara Azwell. In Report on Report Cards: Alternatives to Consider edited by Tara Azwell and Elizabeth Schmar. (Heinemann, A division of Reed Elsevier Inc., Portsmouth, NH, 1995.), Figure 9–1, p. 103.
-
-
-
-
 
 ## 示例 15.3
 
@@ -13213,6 +13939,8 @@ Source: "Telling the story: Narrative reports," reprinted by permission of Kathy
 | Problem Solver | 4 |  |  |  |
 | Student reasons, makes decisions, and solves complex problems in many situations, and uses these skills regularly, independently, and efficiently. | Comments: |  |  |  |
 
+
+
 > 来源：经 Pamela Brown Clarridge 和 Elizabeth M. Whitaker 许可转载：Rolling the Elephant Over: How to Effect Large-scale Change in the Reporting Process. （Heinemann, A division of Reed Elsevier, Inc., Portsmouth, NH, 1997）。
 
 州的标准并根据学区的核心课程编写。在这种方式下，标准与具体的学习目标相联系。 （参见第 2 章中的示例。）如果学生达到州标准，教师会给学生一个质量分数 4。教师还为每个标准的 3、2 和 1 级准备了文字描述，以解释较低水平的成就含义，方式与制定一般评分量规类似。 （参见第 12 章，了解评分量规的信息。）所有这些文字描述都使用数据库程序进行了计算机化。
@@ -13224,12 +13952,15 @@ Source: "Telling the story: Narrative reports," reprinted by permission of Kathy
 ## 家长-教师会议
 
 ### 召开会议
+
 家长-教师会议是与家长建立牢固联系的最好方式之一，让他们了解孩子学习上的优势和需求，并帮助他们参与孩子的学习。然而，如果要成功，你需要谨慎而熟练地进行。表 15.5 列出了在会议前后以及会议期间为保持会议目标明确而应做的事情。Shalaway 的《Learning to Teach . . . Not Just for Beginners》（1998）中给出了额外的建议。
 
 ### 会议的局限性
+
 然而，家长-教师会议也有其弊端。它们对教师来说耗时很长，既包括准备时间也包括实际接触时间。学校经常安排一两天在校时间让你在上课时间举行会议；有些学校安排晚间时间以方便在职家长。有时学校没有给教师安排计划和准备会议的时间，假设教师要么不需要很少或不需要计划时间，要么他们会在课后进行必要的准备。此外，家长-教师会议可能令人沮丧并给教师和家长双方带来焦虑，尤其是当双方对彼此缺乏信心时。出勤也可能是一个问题。并非所有家长都会来参加会议。家长可能在工作、生病、对自己的英语不好或贫困感到尴尬、不愿参加，或因其他原因无法前来。有些家长会礼貌地通知你他们无法参加，但你不应期望大多数家长这样做。最后，教师和/或家长可能有太多信息、太多议题或太多关注点需要在会议的短暂时间内讨论。通常会议只分配大约 20 分钟。此外，有些家长（和教师）话太多，占用了超过他们应有的时间。可能需要另行安排与家长的会议。
 
 ### 隐私
+
 家长会议应是私密的，且仅限于一名教师和一名学生的家长之间。学校校长应提供设施以允许保密讨论。避免在其他教师、其他学生或其他家长可能听到谈话内容的地方举行会议。这保护了所有相关者的权利。在学生对不同科目有不同教师的学校中，将会议限制在一名教师和家长之间可能很困难。
 
 ## 表 15.5 组织和召开家长会议的建议。
@@ -13258,32 +13989,38 @@ Source: "Telling the story: Narrative reports," reprinted by permission of Kathy
 |---|---|
 | 1. Start by reviewing the agenda; communicate your specific information. |  |
 | 2. Listen to parents' questions, answer their questions directly, explain your points clearly, ask parents to confirm your impressions. |  |
-| 3. Work with parents to jointly set goals for the student. |  |
-| 4. Conclude conference by recommending specific steps parents should take. |  |
-| 5. Invite parents to keep in touch by any means: note, phone, or stopping in. |  |
 
-| After the Conference |  |
-|---|---|
-| 1. Write the essence of what was said; keep in a folder. |  |
-| 2. List any decisions and commitments you or the parents made. |  |
-| 3. Follow up via phone or note where necessary. |  |
-| 4. List what you have learned that will help you teach the student. |  |
-| 5. Evaluate your own performance; list ways to improve the next conference. |  |
+
+
+3. Work with parents to jointly set goals for the student.
+4. Conclude conference by recommending specific steps parents should take.
+5. Invite parents to keep in touch by any means: note, phone, or stopping in.
+
+**After the Conference**
+
+1. Write the essence of what was said; keep in a folder.
+2. List any decisions and commitments you or the parents made.
+3. Follow up via phone or note where necessary.
+4. List what you have learned that will help you teach the student.
+5. Evaluate your own performance; list ways to improve the next conference.
 
 ## 多重评定系统
 
 ### 成绩单示例
+
 当学校使用不止一种方法来报告学生的进展时，例如成绩单上有几种类型的标记或符号，这就叫做多重评定系统。成绩单，尤其是小学的成绩单，通常使用多重评定系统。下面是示例 15.4，展示了一个学区 4 至 6 年级使用的多重评定系统成绩单。
 
 ### 为每门科目报告成绩
-请注意，该卡片有四个评定期，称为“报告期”，每个大约九周长。词语（experiencing difficulty、performing successfully、和 commendable）定义了成就水平并作为其他领域的评定量表。这些词语在每个评定期下重复作为列标题。对于每个评定期，教师使用勾号来报告学生在每门科目中的成绩
 
+请注意，该卡片有四个评定期，称为“报告期”，每个大约九周长。词语（experiencing difficulty、performing successfully、和 commendable）定义了成就水平并作为其他领域的评定量表。这些词语在每个评定期下重复作为列标题。对于每个评定期，教师使用勾号来报告学生在每门科目中的成绩（课程领域）。破折号（—）和“1”也用于传达信息。在本成绩单中，每个课程领域都分为两个到四个子领域，其中包含本学区课程的主要学习目标。对每个子领域报告进展情况，可为家长和下一学年的教师提供有关学生在本课程中取得的成就的更具体信息。
 
-课程领域。破折号（—）和“1”也用于传达信息。在本成绩单中，每个课程领域都分为两个到四个子领域，其中包含本学区课程的主要学习目标。对每个子领域报告进展情况，可为家长和下一学年的教师提供有关学生在本课程中取得的成就的更具体信息。
+### 报告非认知性成就
 
-报告非认知性成就 在右侧报告卡的最后一个示例中，非学术领域的进展情况在成绩单的右侧报告。多数学校将公民意识、行为等与成绩分开评定，但这种规定因年级而异（Kunder & Porwall, 1977）。对于幼儿园、小学和小学高年级，多数学校提供这种分离；在初中和高中阶段这样做的学校则相对较少。注意，在示例成绩单中，非学术领域由具体的、可观察的学生表现来定义。因此，学区要求教师关注具体的、可观察和可评估的学生表现，而不是要求教师评定“个性”或“举止”等一般性特质。
+在右侧报告卡的最后一个示例中，非学术领域的进展情况在成绩单的右侧报告。多数学校将公民意识、行为等与成绩分开评定，但这种规定因年级而异（Kunder & Porwall, 1977）。对于幼儿园、小学和小学高年级，多数学校提供这种分离；在初中和高中阶段这样做的学校则相对较少。注意，在示例成绩单中，非学术领域由具体的、可观察的学生表现来定义。因此，学区要求教师关注具体的、可观察和可评估的学生表现，而不是要求教师评定“个性”或“举止”等一般性特质。
 
-永久记录卡 永久记录卡是学生学校表现的官方记录。并非所有信息都需要出现在学生的永久记录卡上。将小学学生的字母等级放入永久记录卡是有争议的。许多教育工作者（以及一些专业协会）认为，在小学阶段报告或记录成绩是不合适的。然而，如果学生在初中第一次获得 C（或更低）成绩，而此前在小学成绩单上只获得“表现令人满意”的勾选或叙述性报告，学生和家长可能会感到不满。
+### 永久记录卡
+
+永久记录卡是学生学校表现的官方记录。并非所有信息都需要出现在学生的永久记录卡上。将小学学生的字母等级放入永久记录卡是有争议的。许多教育工作者（以及一些专业协会）认为，在小学阶段报告或记录成绩是不合适的。然而，如果学生在初中第一次获得 C（或更低）成绩，而此前在小学成绩单上只获得“表现令人满意”的勾选或叙述性报告，学生和家长可能会感到不满。
 
 某种中间政策可以帮助学生完成从小学评分代码到初中新评分代码的过渡。例如，学校可以决定让教师为五年级和六年级的学生准备字母等级，但不在成绩单或永久记录卡上报告。家长 however 会被告知这些成绩。因此，“表现令人满意”对某些学生可能意味着 C，对其他学生可能意味着 B。学年末，字母等级记录将被销毁。
 
@@ -13295,7 +14032,7 @@ Source: "Telling the story: Narrative reports," reprinted by permission of Kathy
 
 ## 第三节：选择评分模型
 
-## 第三节概述
+### 第三节概述
 
 除非你（a）采用一个评分框架来概念化它们，并且（b）以与你的教学方法一致的合理方式使用该框架，否则你的成绩将毫无意义。成绩还必须与（a）你希望赋予成绩的原因以及（b）你所在学区的教育哲学和“评分文化”一致。你在采用框架方面的自由可能没有你想象的那么多。因为给学生评分是一件严肃的事情，如果你不负责任地选择和使用评分框架，你将不负责任。你必须能够向学生、家长和学校官员解释你的评分框架。这种期望在《学生教育评估教师胜任力标准》（AFT, NCME, & NEA, 1990）的标准 5 中有说明，该标准转载于附录 A。
 
@@ -13305,34 +14042,31 @@ Source: "Telling the story: Narrative reports," reprinted by permission of Kathy
 
 第四，我们展示教学方法、评分目的和评分框架之间的关系。我们将讨论为什么某些评分框架在逻辑上不能与某些教学方法或某些评分目的一起使用。通过这次讨论，我们希望你能更清楚地了解将评分框架与教育目的和哲学相匹配的必要性。一旦你选择了教学方法，你就限制了可用的评分选项（假设你希望在逻辑上保持一致）。即使你的教学方法和目的与本节中的示例不完全相同，我们用来解决评分问题的策略也应适用于你。从中你将学会如何改进你的评分实践。
 
-## 课堂评价评分框架的基本概念
+### 课堂评价评分框架的基本概念
 
-### 基本教学方法
+#### 基本教学方法
 
 虽然教学方法和教育哲学有很多，但大多数有许多共同点。你可以根据其主要重点将教学方法分为两个大类。
 
-关注既定学习目标 这种教学风格的重点是让学生通过达到高标准和实现有价值的学习目标而取得高成就。教师努力明确定义标准和学习目标，并将所有努力集中于实现它们。你可能在其中一种变体下听说过这种方法，例如基于标准的（或标准驱动的）教学、基于表现的教学或基于学习目标的教学。遵循这些方法的教师认为，学生的自尊取决于他们内心相信自己能够达到标准或学习目标。教学和指导为学生实现标准提供了条件。
+**关注既定学习目标** 这种教学风格的重点是让学生通过达到高标准和实现有价值的学习目标而取得高成就。教师努力明确定义标准和学习目标，并将所有努力集中于实现它们。你可能在其中一种变体下听说过这种方法，例如基于标准的（或标准驱动的）教学、基于表现的教学或基于学习目标的教学。遵循这些方法的教师认为，学生的自尊取决于他们内心相信自己能够达到标准或学习目标。教学和指导为学生实现标准提供了条件。
 
-关注超越同龄人 其他教育方法强调学生通过超越同龄人而取得高成就。其哲学是教育应使人具有竞争力；“好上浮”；并非所有学生都能够达到高标准。教师认为，学生的自尊取决于他们能够与同龄人比较并认识到自己比他人更好。
+**关注超越同龄人** 其他教育方法强调学生通过超越同龄人而取得高成就。其哲学是教育应使人具有竞争力；“好上浮”；并非所有学生都能够达到高标准。教师认为，学生的自尊取决于他们能够与同龄人比较并认识到自己比他人更好。
 
-### 课堂成绩的形成性评价目的
+#### 课堂成绩的形成性评价目的
 
 虽然本章侧重于评分的总结性目的，但这些并不是唯一的。接下来讨论的前三个是形成性评价目的。如果你不牢记形成性评价和总结性评价之间的区别，就无法在评分时保持逻辑一致。
 
-从起点出发的进展反馈 一个形成性评价目的是向学生传达他们从开始时所取得的进展。我们知道，学生进入我们的课堂时具有不同的教育发展水平和不同的待学习技能和能力的掌握程度。我们希望表扬和鼓励那些入学水平较低但进步很大、即使尚未达到高成就水平的学生。我们也希望通过向能力较弱的学生展示他们进步了多少来鼓励他们。我们说“看看你从起点走了多远”。我们希望这样的进展反馈不会打击学生，而是鼓励学生付出更多（或持续）的努力。
+**从起点出发的进展反馈** 一个形成性评价目的是向学生传达他们从开始时所取得的进展。我们知道，学生进入我们的课堂时具有不同的教育发展水平和不同的待学习技能和能力的掌握程度。我们希望表扬和鼓励那些入学水平较低但进步很大、即使尚未达到高成就水平的学生。我们也希望通过向能力较弱的学生展示他们进步了多少来鼓励他们。我们说“看看你从起点走了多远”。我们希望这样的进展反馈不会打击学生，而是鼓励学生付出更多（或持续）的努力。
 
-实现标准接近度的反馈 另一个形成性评价目的是传达学生距离实现高标准和学习目标有多近。在这里我们说，“这是高标准，这里是你相对于它的位置。看看你离实现标准有多近。”我们相信，当学生了解高质量的表现是什么样子，以及他的状态与高质量有何不同时，他会被鼓励付出更多（或持续）的努力来实现标准。
+**实现标准接近度的反馈** 另一个形成性评价目的是传达学生距离实现高标准和学习目标有多近。在这里我们说，“这是高标准，这里是你相对于它的位置。看看你离实现标准有多近。”我们相信，当学生了解高质量的表现是什么样子，以及他的状态与高质量有何不同时，他会被鼓励付出更多（或持续）的努力来实现标准。
 
-关注既定学习目标 这种教学风格的重点是让学生通过达到高标准和实现有价值的学习目标而取得高成就
+**关注既定学习目标** 这种教学风格的重点是让学生通过达到高标准和实现有价值的学习目标而取得高成就
+
+**对学生与同学关系反馈** 形成性评价的第三个目的是传达学生在学年中的各个中间阶段相对于同学或同龄人的表现如何。在这里我们说：“这是你与他人相比的表现。”我们希望知道她与他人相比表现如何，会鼓励学生继续努力保持或领先于他人。鼓励来自于知道她没有落后于他人，或与他人保持相同的进步速度。如果一个人知道其他人也在学习困难材料时遇到困难，就不会感到气馁。
+
+#### 课堂成绩的总结性评价目的
 
 
-
-
-## 对学生与同学关系反馈
-
-形成性评价的第三个目的是传达学生在学年中的各个中间阶段相对于同学或同龄人的表现如何。在这里我们说：“这是你与他人相比的表现。”我们希望知道她与他人相比表现如何，会鼓励学生继续努力保持或领先于他人。鼓励来自于知道她没有落后于他人，或与他人保持相同的进步速度。如果一个人知道其他人也在学习困难材料时遇到困难，就不会感到气馁。
-
-## 课堂成绩的总结性评价目的
 
 相对于标准的成就水平 这一总结性目的评估学生达到了特定学习目标或高标准的情况。在总结性评价中，我们不关注学生相对于起点的位置，也不关注学生在达到标准之前还有多远的路要走。虽然这些是有价值的目的，但它们是形成性的，而非总结性的目的。在这里我们总结学生已经实现了多少标准或学习目标，或学生达到的质量水平。
 
@@ -13344,13 +14078,15 @@ Source: "Telling the story: Narrative reports," reprinted by permission of Kathy
 
 这三个基本框架是标准参照（绝对标准）、常模参照（相对标准）和自我参照（成长或进步标准）。表 15.7 说明了成绩如何反映学生表现的质量相对于（a）描述学习目标或标准达成情况的质量水平，（b）特定群体（如同学）中其他人的表现，或（c）学生的起点或整体能力。在此，你可能希望回顾示例 2.1 以及第 2 章中的相关文本。在讨论你应该使用哪种框架之前，我们将分别解释每一种。
 
-标准参照：绝对标准 标准参照评分也被称为使用绝对标准评分或任务参照评分。你通过将学生的表现与要实现的一套既定标准、要学习的目标或要获得的知识进行比较来分配成绩：完成任务、完全达到标准或学习目标的学生会获得较好的成绩，而不管其他学生表现如何或他们是否发挥了潜力。因此，如果所有学生都达到了学习目标规定的绝对标准，你可能会给所有学生 A 和 B。同样，当你使用此框架时，你必须准备好如果没有学生达到学习目标设定的标准，就给所有学生 F 和 D。
+### 标准参照：绝对标准
+
+标准参照评分也被称为使用绝对标准评分或任务参照评分。你通过将学生的表现与要实现的一套既定标准、要学习的目标或要获得的知识进行比较来分配成绩：完成任务、完全达到标准或学习目标的学生会获得较好的成绩，而不管其他学生表现如何或他们是否发挥了潜力。因此，如果所有学生都达到了学习目标规定的绝对标准，你可能会给所有学生 A 和 B。同样，当你使用此框架时，你必须准备好如果没有学生达到学习目标设定的标准，就给所有学生 F 和 D。
 
 学习目标和标准需要切合实际。例如，假设学生是该年级的典型学生，你的教学也很好。进一步假设学习目标规定学生应能够创建反映现实生活情况的有意义的数学应用题。如果所有或大多数学生都无法完成此学习目标，则它可能在课程中的位置不当。如果你使用标准参照评分框架，你可能会想给所有学生低分。然而，常识要求你与其他教师和课程协调员讨论学习目标的设置。在学生尚未准备好学习任务时让他们不及格是不合适的。（当然，你必须确保标准确实不合适，并且你确实教得很好。如果你的教学不佳或使用了质量差的评估程序，那么你应该重新教学或正确评估。）这也意味着绝对标准必须使用常模参照信息来设定：对于你所教的学生群体来说，什么是适当或典型的？标准参照和常模参照都是正确解释评估结果所必需的。
 
 当你为学生学习有明确定义的绩效领域时，标准参照评分是有意义的。最近的教育运动要求在州一级设定标准，这给学区带来了压力，要求他们使用这些标准在课堂层面设定具体的学习目标。学区内的教师往往被留下来将具体的学习目标与标准对齐。对齐的学习目标构成了学生预期学习的明确定义的绩效领域。实现这些学习目标成为分配成绩的基础。总体而言，支持和反对标准参照的论点都集中在了解学生独立于其自身能力和他人学习所学到的确切内容是否有价值。Bellanca 和 Kirschenbaum（1976）总结了这些论点。
 
-## 常模参照：相对标准
+### 常模参照：相对标准
 
 常模参照也称为使用相对标准评分或群体参照评分。在这种方法中，你根据学生的表现与其他班级同学的比较来分配成绩：表现优于大多数同学的学生获得较高的成绩。群体参照的支持者基于生活竞争的必要性、了解自己相对于同伴的地位的价值，以及相对成就比绝对成就更重要的观点来提出论点。反对常模参照评分的论点集中在竞争的负面影响上，认为在同伴群体中的排名并不能描述学生学到了什么，以及确定绝对成就水平比确定相对成就更重要。Bellanca 和 Kirschenbaum（1976）提供了这些论点的更详细总结。
 
@@ -13360,7 +14096,7 @@ Source: "Telling the story: Narrative reports," reprinted by permission of Kathy
 
 正如标准参照框架需要以适合你所教年级的标准为基础一样，群体参照框架也必须进行调整。作为教师，你的责任包括确保学生学习课程规定的学习目标。对尚未达到标准的学生给予 A、B 和 C 是不负责任的
 
-### 表 15.7 三种参照框架下成绩定义的示例。
+#### 表 15.7 三种参照框架下成绩定义的示例。
 
 | 绝对量表：任务参照、标准参照 | 相对量表：群体参照、常模参照 | 成长量表：自我参照、变化量表 |
 |---|---|---|
@@ -13379,15 +14115,14 @@ Source: "Telling the story: Narrative reports," reprinted by permission of Kathy
 
 一个纯粹基于学生相对地位的成绩，并不能向家长和学校官员传达学生相对于课程学习目标的能力。此外，为了在该框架内保持一致，你应该给“顶尖”学生好成绩，即使他们可能不具备标准或课程学习目标规定的能力水平。同样，你应该给排名靠后的学生差成绩，即使他们可能已达到课程学习目标规定的最低能力水平。
 
-正如标准参照框架需要以适合你所教年级的标准为基础一样，群体参照框架也必须进行调整。作为教师，你的责任包括确保学生学习课程规定的学习目标。对尚未达到标准的学生给予 A、B 和 C 是不负责任的
+正如标准参照框架需要以适合你所教年级的标准为基础一样，群体参照框架也必须进行调整。作为教师，你的责任包括确保学生学习课程规定的学习目标。对尚未达到标准的学生给予 A、B 和 C 是不负责任的 though they may be the top students. Those who use the grades you assign will count on you to make the grades reflect these learning targets. Thus, we return to the earlier principle that both norm-referenced and criterion-referenced information is needed to properly interpret the grades.
 
 
-
-though they may be the top students. Those who use the grades you assign will count on you to make the grades reflect these learning targets. Thus, we return to the earlier principle that both norm-referenced and criterion-referenced information is needed to properly interpret the grades.
 
 Don't waffle and retrofit. You may start out wanting to grade using criterion-referencing and standards, but then discover that your students have done poorly. Being afraid to give poor grades, you may then waffle and start to "grade on the curve" (i.e., use norm-referencing). This retrofitting of a norm-referenced framework simply does not fit either approach and is not good educational practice. If the standards you set are grade appropriate and if students performed poorly, then you must determine why. Perhaps your assessment instruments were poorly crafted (e.g., you may have used poor-quality testing materials that came with your curriculum). If so, then your assessments are invalid and no amount of norm-referencing can make them more valid. Perhaps your teaching was inadequate. Then reteaching is in order. Or perhaps the standards are simply not grade appropriate or are not appropriate for the educational development of the students you teach. This is a matter that needs to be addressed by your principal or by the curriculum coordinator. In this case you need to adjust the standards, and then reteach: Grading on the curve in this instance distorts the real educational problem and is, therefore, not acting in a professionally responsible way.
 
-Self-Referencing: Growth Standards
+## Self-Referencing: Growth Standards
+
 Self-referencing is also called growth-based grading or change-based grading. You assign grades by comparing a student's performance with your perceptions of his capability: Students performing at or above the level at which you believe them capable of performing receive the better grades, regardless of their absolute levels of attainment or their relative standing in the group. A student who came to the class with very little previous knowledge but who has made great strides may be given the same grade as a student who has learned more but who initially came to the class with a great deal more previous learning. A variation of this approach is grading on the basis of improvement, growth, or change.
 
 Arguments in favor of self-referenced grading center on the possibility of reducing competition among students and the concept that grades can be adjusted to motivate, to encourage, and to meet the students' needs. Arguments against the system center on the unreliable nature of teachers' judgments of capability, the need for parents and students to know standing relative to peers, the idea that this procedure tends to be applied mostly to lower ability students, and the possibility that this system may eventually lead to grading based solely on effort (Dunbar, Float, & Lyman, 1980). Additionally, students may not achieve the state's standards set for the grade.
@@ -13399,6 +14134,8 @@ From a statistical viewpoint, grading purely on growth or change may result in a
 ### Integrating Teaching Approach, Evaluation, Purpose, and Grading Framework
 
 Now that you are familiar with the frameworks for grading, and have thought about your teaching approach and the formative and summative purposes for grading, you must consider how to put these together in a logically consistent manner. Which framework should you use? Or should you use more than one framework?
+
+
 
 Table 15.8 offers some guidance. The table shows how the different grading approaches complement teaching approaches and purposes for grading. Self-referenced grading, for example, is consistent with a teaching approach that focuses on standards or learning targets, but only when the purpose of grading is for formative evaluation that gives a student feedback on how well he has progressed from his starting point or within the limits of his ability. This combination of purpose and teaching approach is the only one consistent with using self-referenced grading.
 
@@ -13414,9 +14151,15 @@ Criterion-referenced grading, on the other hand, is not consistent with a teachi
 | Formative evaluation (Feedback to students and teachers; monitoring learners’ progress) | | |
 | 1. Feedback on how much a student has progressed from his/her own starting point or within the limits of his/her capacity. | • Self-referenced (growth) grading is consistent with this purpose and teaching approach. It is assumed that knowing one’s progress in relation to one’s ability will stimulate more effort to learn and be less discouraging to students. | • Achievement as progress or change from where one begins is of less interest to this teaching approach than is the ultimate or final standing at the end of the marking period. Attainment of specific learning targets and standards are less of an interest to this teaching approach. |
 | 2. Feedback on how close a student is to achieving the learning targets or to meeting the standards. | • Criterion-referenced (task-referenced) grading is consistent with this purpose and teaching approach. It is assumed that understanding what quality learning looks like and what one’s own status in relation to that level of learning is will motivate further learning and effort to meet the high standards. | • Achievement of specific learning targets and standards is not emphasized by this approach. Of more interest is outdoing one’s peers. |
+
+
+
 | 3. Feedback on how a student is achieving relative to peers at this point in instruction. | • Comparisons of achievement among students are not emphasized by this teaching approach. Of more interest is meeting standards and achievement of learning targets. | • Norm-referenced (group-referenced) grading is consistent with this purpose and teaching approach. It is assumed that knowing one’s current rank in class will motivate one to work harder to achieve more. |
+
 | Summative evaluation (Official recording of achievement at end of marking period or end of term; official report of achievement) | | |
+
 | 4. Reporting a student’s level of performance in relation to learning targets and to standards. | • Criterion-referenced (task referenced) grading is consistent with this purpose and teaching approach. | • Achievement of specific levels of learning in relation to standards is not emphasized by this reading approach. |
+
 | 5. Reporting a student’s standing relative to classmates and peers. | • Comparisons of achievement are not emphasized by this teaching approach. | • Norm-referenced (group-referenced) grading is consistent with this purpose and teaching approach. |
 
 use, and integrate with your approach to assessment. Be sure to consider the assessment requirements and initiatives of your district before developing a reporting system. (p. 20)
@@ -13429,8 +14172,6 @@ It should be clear from Table 15.8 that one grading framework couldn’t serve a
 
 Your school district’s grading policy and a grading culture are important factors in selecting a grading framework. Not every school district has a clearly written grading policy, but if your school district has a grading policy, you will be required to work within its guidelines. If it is a poor or inconsistent policy, you may wish to suggest ways to im-
 
-
-
 证明它。如果你是一名新教师，你的建议可能在学校管理层对你的教学能力建立信心之前不会被认真对待。在教了一年或两年之后再继续推进你的改革：先与你最重视的教学同事一起探讨你的想法。永远不要放弃为学生改善教育而努力。
 
 ## 报告卡成绩
@@ -13442,11 +14183,17 @@ Your school district’s grading policy and a grading culture are important fact
 本部分更详细地讨论如何使用你的评估计划进行总结性评分。在实施总结性评分时，你必须解决至少七个问题，才能使你的成绩有效。
 
 - 1. 你需要考虑应该给学生哪些类型的行为评分。我们将讨论三类学生行为：被评估的行为、被报告的行为和被评分的行为。
+
 - 2. 你需要考虑如何在整个评分期内使所有作业的评分标准保持一致。我们将讨论这一问题的实际和效度方面。
+
 - 3. 你需要决定构成成绩的组成部分及其在最终成绩中的权重。我们对这一问题的讨论将强调成绩的有效性。
+
 - 4. 你需要考虑每个字母等级的标准或界限：它们是如何设定的，是否具有意义？
+
 - 5. 边界情况怎么办？对于成绩刚好处于两个字母等级边界的学生，你该怎么办？
+
 - 6. 你需要关注不及格（F）的问题。不及格意味着什么？
+
 - 7. 你需要关注给进入成绩的一个或多个组成部分的标记分配零分的做法：这种做法的影响是什么？什么时候不应给零分？
 
 ## 要评估的行为类型
@@ -13459,17 +14206,27 @@ Your school district’s grading policy and a grading culture are important fact
 
 评估变量 在第6章中，我们讨论了你在教学时需要的学生信息类型，包括对班级的整体把握、对学生需求的诊断、先决条件、学生成绩、学生态度、学生工作习惯、学生学习技能以及学生在校的动机和努力。收集信息的这些特征的完整集合称为评估变量（有时也称为评价变量 [Frisbie & Waltman, 1992]）。然而，并非你评估的所有变量都需要记录和报告。显然，你会使用其中的一些信息来规划和指导自己的教学。这些信息主要具有形成性。它们不应进入成绩。成绩是对学生成绩的总结性评价。
 
-报告变量 你的学区会期望你向家长和用于官方目的报告评估变量的一个子集。这些称为报告变量（Frisbie & Waltman, 1992）。它们通常包括学生在该学科的成绩、学习技能、社会行为和人际技能、课堂上的动机和学习努力、领导技能以及审美才能。这由本章前面展示的多重评分系统报告卡示例说明。
 
-评分变量 报告变量代表重要的学校成果，因此应适当向家长和其他人报告。它们不应与课程成绩混淆。也就是说，在所有报告变量中，有一个更有限的子集可以作为你的成绩基础。这些变量中的有限子集称为评分变量（Frisbie & Waltman, 1992）。你使用评分变量来描述学生在该学科的成就。你通过制定更正式的程序来评估这些成就，例如表现任务、作品集、项目、测试和测验。它们是分配成绩最有效和最合理的依据。
 
-变量之间的关系 在你分配成绩时，了解这些变量的含义非常重要。图15.2将帮助你理解这些变量之间的关系以及它们的使用方式。
+## 报告变量
 
-## 图15.2 不同类型的评估变量和评分变量之间的关系。
+你的学区会期望你向家长和用于官方目的报告评估变量的一个子集。这些称为报告变量（Frisbie & Waltman, 1992）。它们通常包括学生在该学科的成绩、学习技能、社会行为和人际技能、课堂上的动机和学习努力、领导技能以及审美才能。这由本章前面展示的多重评分系统报告卡示例说明。
+
+## 评分变量
+
+报告变量代表重要的学校成果，因此应适当向家长和其他人报告。它们不应与课程成绩混淆。也就是说，在所有报告变量中，有一个更有限的子集可以作为你的成绩基础。这些变量中的有限子集称为评分变量（Frisbie & Waltman, 1992）。你使用评分变量来描述学生在该学科的成就。你通过制定更正式的程序来评估这些成就，例如表现任务、作品集、项目、测试和测验。它们是分配成绩最有效和最合理的依据。
+
+## 变量之间的关系
+
+在你分配成绩时，了解这些变量的含义非常重要。图15.2将帮助你理解这些变量之间的关系以及它们的使用方式。
+
+### 图15.2 不同类型的评估变量和评分变量之间的关系。
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_363_0.png)
 
-消除混合 如果你将评分变量与其他变量混合，你的成绩的含义就会令人困惑且无效。例如，如果你因学生未交作业或迟交作业而降低其成绩进行惩罚，那么你就混淆了学生的成绩与学生的行为。同样，如果你因语言使用不当或外表不佳而降低科学或社会研究成绩，你的成绩就是对学生掌握科学或社会研究课程学习目标的较不有效的评估。请考虑以下情况：
+## 消除混合
+
+如果你将评分变量与其他变量混合，你的成绩的含义就会令人困惑且无效。例如，如果你因学生未交作业或迟交作业而降低其成绩进行惩罚，那么你就混淆了学生的成绩与学生的行为。同样，如果你因语言使用不当或外表不佳而降低科学或社会研究成绩，你的成绩就是对学生掌握科学或社会研究课程学习目标的较不有效的评估。请考虑以下情况：
 
 如果某些学生的社会研究论文成绩因写作 mechanics 缺陷而被降低，这些成绩在多大程度上描述了成绩？如果一名教师给一个小组项目评为A，这对一个对规划、进行或总结项目活动贡献甚少的小组成员意味着什么？如果论文的成绩每天迟交就降低一个完整的字母等级，论文的最终成绩在多大程度上反映了语言艺术的成绩？如果学生在考试当天无故缺席，对该次考试的F成绩会如何影响本应描述成绩的季度成绩？
 
@@ -13477,13 +14234,17 @@ Your school district’s grading policy and a grading culture are important fact
 
 前一段并不意味着语言使用或按时交作业与学生的学校经历无关。相反，其目的是使成绩的含义清晰，从而使其成为成绩更有效的指标。例如，一些学校使用“跨课程写作”方法。这意味着社会研究、历史、数学和科学作业既要评估学科内容的正确性，也要评估语言使用。对学生语言使用的评价作为语言成绩的一部分报告，而对学生学科内容成绩的评价则成为学科成绩的一部分。同样，迟到、未完成作业和其他问题可以单独报告，与成绩分开，并可用于解释学生缺乏学校成就的原因。
 
-消除形成性评价组成部分 并非所有成绩变量都应作为评分变量（Frisbie & Waltman, 1992）。许多成绩变量具有形成性。例如，家庭作业、测验和对课堂活动的口头回应可能主要具有形成性目的——帮助你判断个别学生是否需要更多强化或你的课程是否进展顺利。这些形成性成绩评估不应计入评分期的学科成绩。当然，并非所有课外作业都是形成性的。一些家庭作业、大多数项目和大多数研究论文可用于总结性评价。因此，一般规则是，将你确定为对总结性评价有用的评估纳入成绩中，并排除主要为形成性评价而建立的所有评估。
+## 消除形成性评价组成部分
+
+并非所有成绩变量都应作为评分变量（Frisbie & Waltman, 1992）。许多成绩变量具有形成性。例如，家庭作业、测验和对课堂活动的口头回应可能主要具有形成性目的——帮助你判断个别学生是否需要更多强化或你的课程是否进展顺利。这些形成性成绩评估不应计入评分期的学科成绩。当然，并非所有课外作业都是形成性的。一些家庭作业、大多数项目和大多数研究论文可用于总结性评价。因此，一般规则是，将你确定为对总结性评价有用的评估纳入成绩中，并排除主要为形成性评价而建立的所有评估。
 
 ## 在整个评分期内保持评分一致
 
-## 制定评分标准以在不同评估中保持一致
+### 制定评分标准以在不同评估中保持一致
 
-评分标准不兼容 你需要提前思考，使进入总结性成绩的所有组成部分的评估标准兼容。例如，示例6.1中的天气单元评估计划显示，有五个组成部分进入单元的总结性成绩：家庭作业、测验、独立研究、地图绘制和单元末测试。假设这些分别按以下不同标准评分：
+#### 评分标准不兼容
+
+你需要提前思考，使进入总结性成绩的所有组成部分的评估标准兼容。例如，示例6.1中的天气单元评估计划显示，有五个组成部分进入单元的总结性成绩：家庭作业、测验、独立研究、地图绘制和单元末测试。假设这些分别按以下不同标准评分：
 
 | 组件 | 评分标准 |
 |---|---|
@@ -13499,7 +14260,9 @@ Your school district’s grading policy and a grading culture are important fact
 
 > 我合作的一个学区，八年级教师面临着将常规语言艺术测试的百分比正确分数和按4点评分细则评分的写作表现结合起来，形成报告卡成绩的五个等级（A、B、C、D、F）的任务。其中几位教师没有进行定量推理的背景来理解或如何进行标准转换，而且没有一个人采纳4点写作评分细则的人想到它对于分配五个等级的成绩不会很有帮助。这是在事后解决比在设计阶段解决更复杂的问题，在设计阶段，选择评分细则和构建决策规则是合适的。（Brookhart, 1999, p. 8）
 
-失去精确度 最可靠的分数是能够区分学生学习质量细微差异的分数。能够证明 Sally 对学习目标的掌握略好于 Johnny 的标准，比无法区分他们学习水平的标准更可靠。为了可靠地检测学生之间的细微差异，分数标准需要许多分级或“点”。显示 Sally 为89而 Johnny 为82 的标准，比显示他们都获得相同评级的标准更好地展示了他们的学习质量。
+#### 失去精确度
+
+最可靠的分数是能够区分学生学习质量细微差异的分数。能够证明 Sally 对学习目标的掌握略好于 Johnny 的标准，比无法区分他们学习水平的标准更可靠。为了可靠地检测学生之间的细微差异，分数标准需要许多分级或“点”。显示 Sally 为89而 Johnny 为82 的标准，比显示他们都获得相同评级的标准更好地展示了他们的学习质量。
 
 当你将分数从细粒度标准（例如百分比正确标准）转换为粗粒度标准（例如字母等级）时，你会失去精确度。如果 B 定义为80–89 分，则 Sally 和 Johnny 都将获得相同的成绩 B。因为他们都获得相同的成绩，他们的真实差异无法用字母等级标准区分。通过将89和82都转换为 B，你失去了可靠性。
 
@@ -13509,11 +14272,8 @@ Your school district’s grading policy and a grading culture are important fact
 
 标准精确度的影响，无论正面还是负面，都在加上使用精心制作的评估工具所带来的积极影响。因此，你最好像精心制作评估工具本身一样精心制作评分标准。
 
-
-
-
-
 ## 成績的組成部分
+
 ### 組成部分的權重
 
 在評分時，你不應將每項成就性評估的權重設為相等。你在決定各項學習目標的達成度後，再決定要給家庭作業、測驗、隨堂測驗、學期論文和其他要素分配多少權重。你首先列出所有用於評估成績達成的組成部分。接著，你決定這些組成部分與學習目標的關聯，並判斷每個組成部分的重要性（因此在整體總結性成績中的權重）。
@@ -13528,6 +14288,7 @@ Your school district’s grading policy and a grading culture are important fact
 - 6. 可靠性和客觀性較低的組成部分應比更可靠、更客觀的組成部分具有較低的權重。然而，這並不意味著你應避免使用論文和作品集等較難客觀評分的評估來評定成績。相反，你應為其評分使用評分量規，以便評分更可靠。（見第12章，第278頁。）
 
 ## 成績分界
+
 ### 成績之間的標準或分界
 
 一個重要考慮是如何建立成績之間的分界。什麼構成A、B等？答案將取決於（a）你使用的框架以及（b）你所在學區的政策。設定常模參照評分分界的程序與設定標準參照評分分界的程序非常不同。你需要遵循與你的教學方法一致的分界設定方法。我們將在本章稍後討論這些分界設定程序的細節。
@@ -13536,11 +14297,14 @@ Your school district’s grading policy and a grading culture are important fact
 
 ### 邊界案例
 
+
+
 你總會有邊界案例——學生的綜合分數接近或正好落在兩個成績的分界線上。該怎麼辦？學生必須離成績分界多近，你才會將字母成績上調或下調？許多教師樂於審查學生並為那些剛低於分界線的學生提高成績，但不考慮降低那些剛高於分界線的學生成績（Brookhart, 1993）。然而，當額外的成就證據證明其合理時，降低邊界成績與提高成績一樣有效。
 
 正如你在第4章中所學，評估結果包含測量誤差，因此分數位於分界或分界附近的學生，其真實分數可能與其觀察到的分數不同。這反對採取強硬態度，告訴學生她只因一兩分而錯過了更高成績。你應將分界附近的分數視為類似第4章中討論的“不確定帶”。你應使用學生額外的成就資訊來幫助你判斷學生的真實分數是在分界之上還是之下。利用額外的成就資訊來幫助做出分界決策，比利用學生在學習上付出的努力資訊更有效（Brookhart, 1999）。如果你仍有疑問，從教育角度來看，給予較高的成績比給予較低的成績更好。
 
 ## 失敗成績
+
 ### 失敗的含義
 
 正如 Frisbie 和 Waltman（1992）指出的那樣，F成績帶有許多情感，因為獲得它通常會對學生產生負面後果。F應該意味著什麼？你的答案應與你的評分框架一致。分配不及格成績（F）最不令人困惑的方式是設定關於課程學習目標表現的合理最低標準。持續表現低於這些最低表現標準的學生將獲得F。
@@ -13569,11 +14333,7 @@ Your school district’s grading policy and a grading culture are important fact
 
 零分的影響，當然取決於學生獲得的組成部分分數，以及有多少分數計入
 
-
-
-
-
-# 示例 15.5
+## 示例 15.5
 
 假设将未交作业的学生作业替换为零或 59 的影响示例。替换后的数值显示在括号中。 （假设 A = 90–100，B = 80–89，C = 70–79，D = 60–69，F = 0–59。）
 
@@ -13607,11 +14367,13 @@ Your school district’s grading policy and a grading culture are important fact
 
 使用零分意味着你已为她缺失的作业给予了最低可能的不及格分数作为替代。相反，你可以给她最高可能的不及格分数。在本例中，F 范围为 0–59，因此 59 是最高可能的不及格分数。面板 C 显示了如果你采用这种策略，Ashley 的成绩会怎样。Ashley 从 B 平均分（面板 A）降到 C 平均分（面板 C）。尽管如此，一项作业缺失仍使她的平均分下降了一个等级。
 
+
+
 还可以使用其他策略。其中一种显示在面板 D 中。这里你只是忽略缺失的作业，基于其余四项给分。如面板 D 所示，对她成绩的影响取决于她未交的是哪项作业。如果她未交其中两项得分最高的一项（案例 3，作业 3 为 85，或案例 5，作业 5 为 90），她的成绩会下降一个等级；在其他情况下成绩仍为 B。还可以使用其他策略（未显示）（Brookhart, 1999），例如使用中位数成绩，使用 50 而不是 59，或用四项已完成作业的平均分代替缺失作业的分数。对 Ashley 来说，这些其他方法得出的字母等级结果与面板 D 所示相同。
 
 从测量角度来看，当满足以下条件时，策略 3（仅基于已交作业给分）是三种策略中最好的：（a）作业对学生而言难度大致相等，（b）作业权重相等（或分值相同），（c）作业数量较多且仅缺一两项。该建议不考虑其他因素，例如：（a）“缺失作业”是否是最重要的作业（例如项目或期末考试），（b）学生因疾病或个人悲剧未交作业，（c）学生因不懂得如何完成作业而未完成作业，以及（d）学生已养成不按时交作业的习惯。正如我们之前所述，这些并非严格意义上的测量问题，而是教育实践、课堂管理和学校政策方面的事项。
 
-## 第五节：设定成绩边界和合并分数的技术
+# 第五节：设定成绩边界和合并分数的技术
 
 ## 分配常模参照字母等级
 
@@ -13619,9 +14381,11 @@ Your school district’s grading policy and a grading culture are important fact
 
 ### 给单项测验或评估评分
 
-曲线评分 要使用曲线评分法分配字母等级，你需要决定要授予 A、B、C 等的百分比。例如，你可以决定如下：
+#### 曲线评分
 
-## 示例
+要使用曲线评分法分配字母等级，你需要决定要授予 A、B、C 等的百分比。例如，你可以决定如下：
+
+##### 示例
 
 用于曲线评分的一种可能的百分比设定示例
 
@@ -13635,31 +14399,29 @@ Your school district’s grading policy and a grading culture are important fact
 
 另一种设定百分比的方法是将正态或钟形曲线（见第 17 章）的范围划分为五个等长区间。下面示例显示了由此产生的各等级学生百分比。
 
-## 示例
+##### 示例
 
 使用正态曲线并分为五个等长区间的曲线评分的一种可能的百分比设定示例
 
 - 前 3.6% 的学生得 A
-- 接下来 23.8% 得 B
-- 接下来 45.2% 得 C
-- 接下来 23.8% 得 D
-- 最后 3.6% 得 F
+- 接下来 23.8% 的学生得 B
+- 接下来 45.2% 的学生得 C
+- 接下来 23.8% 的学生得 D
+- 最后 3.6% 的学生得 F
 
 这组百分比假设你班级学生群体的真实成绩呈正态分布，而作者认为这种假设对你或任何教师来说都很难证明。注意：（a）决定百分比的区间的宽度是完全任意的，（b）评估分数必须是所需成绩的有效测量，（c）没有关于字母等级所代表的学习目标、技能或能力的参考（除非是排名靠前的学生比排名靠后的学生能力更高）。如果你决定采用曲线评分，那么你必须提供令人信服且在教育上合理的理由来证明你所使用的特定百分比；否则，你的成绩很可能是不合理的。
 
-标准差法 要使用标准差法，你首先决定定义 A 等下限的分数。你通过决定 A 的下限将高于该群体中位数（PR = 50）多少个标准差倍数来确定（Ebel, 1965; Ebel & Stuit, 1954）。然后你将分数刻度再向下划分为四个*段：这四个段的宽度等于标准差的数值；你从 A 的下限开始向下划分。（附录 1）解释了标准差以及如何计算它。）示例 15.6 显示了这样做的步骤，并附有示例。
+#### 标准差法
+
+要使用标准差法，你首先决定定义 A 等下限的分数。你通过决定 A 的下限将高于该群体中位数（PR = 50）多少个标准差倍数来确定（Ebel, 1965; Ebel & Stuit, 1954）。然后你将分数刻度再向下划分为四个段：这四个段的宽度等于标准差的数值；你从 A 的下限开始向下划分。（附录 1）解释了标准差以及如何计算它。）示例 15.6 显示了这样做的步骤，并附有示例。
 
 对班级平均能力的调整 与为每个班级使用相同的 A、B、C 等百分比相比，对于这种常模参照评分方法，根据班级能力的改变而改变百分比似乎是合理的。例如，如果班级非常聪明，那么你预计会给出更多 A 和更少 D，而如果班级为平均水平则不会。前面示例中概述的方法会根据你班级学生的整体学业能力调整分配的各字母等级数量。因此，第一步是使用学生之前的平均绩点或所有学生都参加的能力测试分数来估计该群体的能力水平（从差到优秀）。使用这种方法，选择使用什么区间宽度以及 A 的下限是任意的，
 
-
-
-
-
-## 示例 15.6
+##### 示例 15.6
 
 应用 Ebel-Stuit 标准差法设定成绩等级边界的示例。
 
-### 七个能力水平班级的等级标记分布统计
+###### 七个能力水平班级的等级标记分布统计
 
 | 班级能力水平 | A 的下限 | A | B | C | D | F | GPA | 能力衡量百分位 |
 |---|---|---|---|---|---|---|---|---|
@@ -13678,9 +14440,9 @@ Your school district’s grading policy and a grading culture are important fact
 - 3. 使用中位数、标准差以及 [the table] 中的适当下限因子确定 A、B、C 和 D 等级区间的下限分数。
 - 4. 将指定的等级分配给分数落在各等级所确定区间内的学生。
 
-### 等级标记分配的示例问题
+###### 等级标记分配的示例问题
 
-#### A. 问题的资料
+##### A. 问题的资料
 
 - 1. 班级能力水平衡量：
   - a. 往年课程的平均 GPA：2.17
@@ -13693,10 +14455,9 @@ Your school district’s grading policy and a grading culture are important fact
   - 105 95 89 81 75 69 59
   - 104 95 84 80 74 68 58
 
-#### B. 数据的计算
+##### B. 数据的计算
 
 1. 中位数 = 80.5
-
 2. 标准差 = 17.6
 
 | 等级 | 下限 | 区间 | 人数 | 百分比 |
@@ -13718,11 +14479,11 @@ Your school district’s grading policy and a grading culture are important fact
 
 本节讨论如何将多个评分组成部分的分数合并为单一的综合成绩。程序将与常模参照评分框架保持一致。稍后我们将讨论如何以与标准参照评分框架一致的方式合并组成部分的成绩。通常，成绩单上的等级反映了学生在作业、测验、报告以及可能是一次考试等多个评估上的表现。我们之前讨论过在为成绩的每个组成部分分配权重时需要考虑的因素。对于每个评分组成部分的恰当权重并没有达成一致。
 
-## 权重指南
+### 权重指南
 
 当采用常模参照评分时，对该组学生最终排名贡献最大的组成部分权重最大。如果简单地将组成部分分数乘以任意权重然后相加形成综合分数，这一原则很可能被违反。原因是综合分数的排名受构成综合分数的组成部分的标准差的影响 [以及组成部分之间的相关性]。为说明这一点，请考虑下一个示例。
 
-## 示例
+##### 示例
 
 说明当使用常模参照评分时，评分组成部分可能与教师意图相反发挥作用的假设示例
 
@@ -13730,86 +14491,118 @@ Your school district’s grading policy and a grading culture are important fact
 
 |  | 考试（50 分） |  | 项目（100 分） |  | 总计 |  |
 |---|---|---|---|---|---|---|
+
+
+
 | 学生 | 成绩 | 排名 | 成绩 | 排名 | 成绩 | 排名 |
+
 | Anthony | 44 | 1 | 77 | 5 | 120 | 1 |
+
 | Ashley | 33 | 2 | 78 | 4 | 111 | 2 |
+
 | Billy | 26 | 3 | 79 | 3 | 105 | 3 |
+
 | Chad | 22 | 4 | 80 | 2 | 102 | 4 |
+
 | Vanessa | 15 | 5 | 81 | 1 | 96 | 5 |
 
-请注意，项目的排名与考试完全相反。然而，最终顺序与考试完全相同，尽管教师对项目赋予了更大权重。这是因为学生总成绩的排名取决于分数的离散程度，而非教师 intended 的权重。分数的离散程度用标准差衡量。 [参见附录 I。] 项目分数彼此接近，因此其标准差很小，而考试分数差异很大，因此其标准差很大。由于考试分数的标准差更大，学生的考试排名主导了其最终总排名，尽管教师 intended 使项目成为主导组成部分。一般来说，使用常模参照评分时，一个组成部分分数的标准差越大，该组成部分对形成综合分数后学生最终排名的影响就越大。
+请注意，项目的排名与考试完全相反。然而，最终顺序与考试完全相同，尽管教师对项目赋予了更大权重。这是因为学生总成绩的排名取决于分数的离散程度，而非教师 `intended` 的权重。分数的离散程度用标准差衡量。 [参见附录 I。] 项目分数彼此接近，因此其标准差很小，而考试分数差异很大，因此其标准差很大。由于考试分数的标准差更大，学生的考试排名主导了其最终总排名，尽管教师 `intended` 使项目成为主导组成部分。一般来说，使用常模参照评分时，一个组成部分分数的标准差越大，该组成部分对形成综合分数后学生最终排名的影响就越大。
 
 ## 使用 SS-分数法
 
 SS-分数法通过先调整各组成部分标准差的值来保留你希望组成部分具有的影响 [权重]。调整后，你即可应用所需的权重。有三个步骤：首先，将每个组成部分上的所有分数都转换为 SS-分数 [SS 表示线性标准分数；参见第 17 章]。这使所有标准差相等。其次，将组成部分的 SS-分数乘以你想要的权重。最后，将这些乘积相加形成每个学生的综合成绩。以下公式概括了这些步骤。
 
-加权综合分数 = Σ(weight × SS) [Eq.15.1]
+加权综合分数 = Σ(`weight` × `SS`) [Eq.15.1]
 
 其中
-weight = 你希望该组成部分具有的权重
-SS = 该组成部分的线性 SS-分数
-= 10 (X-M)/SD + 50
+
+`weight` = 你希望该组成部分具有的权重
+
+`SS` = 该组成部分的线性 SS-分数
+
+= 10 (`X-M`)/`SD` + 50
 
 该程序在示例 15.7 中进行了说明。
 
-请注意，这些加权综合分数本身并不是 SS-分数。然而，加权综合分数确实提供了一种对学生进行排名的方法，使得你指定的组成部分权重会对学生的最终名次产生 desired 的影响。
+请注意，这些加权综合分数本身并不是 SS-分数。然而，加权综合分数确实提供了一种对学生进行排名的方法，使得你指定的组成部分权重会对学生的最终名次产生 `desired` 的影响。
 
 为了体会 SS-分数法对最终加权综合分数中学生排名的影响，请回顾我们之前的一个示例，其中教师试图使项目主导学生排名的尝试失败了。这次，让我们对与此处所示的相同成绩应用 SS-分数法：
 
 ## 示例
 
-说明使用 SS-分数法可以帮助教师在采用常模参照评分时按 intended 方式加权作业的假设示例
+说明使用 SS-分数法可以帮助教师在采用常模参照评分时按 `intended` 方式加权作业的假设示例
 
 |  | 考试（权重 = 1） |  |  | 项目（权重 = 2） |  |  | 总计 |
+
 |---|---|---|---|---|---|---|---|
+
 | 学生 | 成绩 | SS | 排名 | 成绩 | SS | 排名 | 综合排名 |
+
 | Anthony | 44 | 66 | 1 | 77 | 36 | 5 | 138 | 5 |
+
 | Ashley | 33 | 55 | 2 | 78 | 43 | 4 | 141 | 4 |
+
 | Billy | 26 | 48 | 3 | 79 | 50 | 3 | 148 | 3 |
+
 | Chad | 22 | 44 | 4 | 80 | 57 | 2 | 158 | 2 |
+
 | Vanessa | 15 | 37 | 5 | 81 | 64 | 1 | 165 | 1 |
 
-将此示例中的最终排名与前一个示例中的最终排名进行比较。现在，项目主导了基于综合分数的排名，而不是考试。这正是教师最初 intended 的结果。先将成绩转换为 SS-分数使考试
-
-
-
-
+将此示例中的最终排名与前一个示例中的最终排名进行比较。现在，项目主导了基于综合分数的排名，而不是考试。这正是教师最初 `intended` 的结果。先将成绩转换为 SS-分数使考试
 
 # 示例 15.7
 
 使用 SS 分数法计算综合成绩的示例。
 
 | 计入成绩的组成部分 |  |  |  |  |
+
 |---|---|---|---|---|
+
 |  | 小测验 | 作业 | 课程论文 | 考试 |
-| 均值 (M) | 70 | 85 | 75 | 65 |
-| 标准差 (SD) | 5 | 8 | 15 | 20 |
+
+| 均值 (`M`) | 70 | 85 | 75 | 65 |
+
+| 标准差 (`SD`) | 5 | 8 | 15 | 20 |
+
 | 教师权重 | 20% | 10% | 20% | 50% |
-| SS* 计算公式 | SS = 10(Mark -70)/5 + 50 | SS = 10(Mark -85)/8 + 50 | SS = 10(Mark -75)/15 + 50 | SS = 10(Mark -65)/20 + 50 |
+
+| SS* 计算公式 | `SS = 10(Mark -70)/5 + 50` | `SS = 10(Mark -85)/8 + 50` | `SS = 10(Mark -75)/15 + 50` | `SS = 10(Mark -65)/20 + 50` |
 
 *SS 分数是通过用学生的原始分数减去该组成部分的均值，将差值除以标准差，乘以 10，然后将乘积加上 50 计算得出。每个学生的结果如下所示。例如：
 
 - Bob 的小测验 SS 分数 = 10(87 - 70)/5 + 50 = 84
+
 - Chad 的小测验 SS 分数 = 10(85 - 70)/5 + 50 = 80
+
 - Susan 的小测验 SS 分数 = 10(75 - 70)/5 + 50 = 60
+
 - Theresa 的小测验 SS 分数 = 10(70 - 70)/5 + 50 = 50
 
 |  | 各组成部分的原始分数 |  |  |  | 各组成部分的 SS 分数 |  |  |  |  |
+
 |---|---|---|---|---|---|---|---|---|---|
+
 | 学生 | 小测验 | 作业 | 课程论文 | 考试 | 小测验 | 作业 | 课程论文 | 考试 | 加权综合分 |
+
 | Bob | 87 | 85 | 70 | 80 | 84 | 50 | 47 | 58 | 60 |
+
 | Chad | 85 | 80 | 80 | 70 | 80 | 44 | 53 | 53 | 58 |
+
 | Susan | 75 | 82 | 85 | 60 | 60 | 46 | 57 | 48 | 51 |
+
 | Theresa | 70 | 78 | 75 | 65 | 50 | 41 | 50 | 50 | 49 |
 
 综合分数是通过将各组成部分的 SS 分数乘以相应的教师组成部分权重并求和计算得出。例如：
 
 - Bob 的综合分数 = .2(84) + .1(50) + .2(47) + .5(58) = 60
+
 - Chad 的综合分数 = .2(80) + .1(44) + .2(53) + .5(53) = 58
+
 - Susan 的综合分数 = .2(60) + .1(46) + .2(57) + .5(48) = 51
+
 - Theresa 的综合分数 = .2(50) + .1(41) + .2(50) + .5(50) = 49
 
-marks' and project marks' standard deviations equal.5 Then when the weight of 2 was applied, the composite better matched the teacher's intent.
+`marks'` and project marks' standard deviations equal.5 Then when the weight of 2 was applied, the composite better matched the teacher's intent.
 
 ## 设定标准参照字母等级
 
@@ -13830,12 +14623,18 @@ marks' and project marks' standard deviations equal.5 Then when the weight of 2 
 使用固定百分比法评分的一种可能的百分比集合示例
 
 - 90–100% = A
+
 - 80–89% = B
+
 - 70–79% = C
+
 - 60–69% = D
+
 - 0–59% = F
 
 请注意，百分比引发了这样一个问题：“百分比的什么？” 通常，你唯一能够辩护的答案是，该分数代表了测验或作业上最高分的百分比。这个答案忽略了更广泛的关注：测验应是从课程学习目标所暗示的明确定义的表现领域中抽取的代表性样本。如果你没有定义该领域，并且没有构建评估以代表性地抽样该领域，那么你就不能使用百分比等级来准确估计学生在该更广泛领域上的状态。这样的测验（或评估），以及由此产生的此类百分比，不能被视为标准参照。
+
+
 
 定义每个等级的百分比应考虑到教师对所教学生类型的经验以及教师制定的测验的难度。因此，常模参照信息有助于建立标准参照评分系统。如果学区没有为每个字母等级定义一组百分比，你可能需要花费数年时间来制定一个既公平对待学生又代表合理学术标准的百分比评分方案。如果你是新教师，你应与同事核实，以确保你的评分方案合理且不会不必要地偏离其他教师。
 
@@ -13843,9 +14642,11 @@ marks' and project marks' standard deviations equal.5 Then when the weight of 2 
 
 第二个局限是，这种方法鼓励你更强烈地关注评估的难度水平，而非其应评估的学习目标。例如，如果你固定了百分比，你就会寻找方法使评估足够容易或足够困难，以便为班级获得合理的字母等级分布。这似乎违背了绝对或标准参照评分的原则。
 
-总分法 要使用此方法，你必须事先决定所有将计入期末评分期间成绩的组成部分。然后，也要事先决定每个组成部分的最高点数。你的评估计划应做到这一点。每个组成部分的最高点数反映了你分配给该组成部分的权重。例如，如果你希望单元测验在成绩中占更大比重，你就会分配给单元测验更多的总点数。最后，你将各组成部分的最高点数全部相加，并使用该总点数设定字母等级边界。请注意，与固定百分比法不同，你不是为每个组成部分分配字母等级，而是仅为所有组成部分的总和分配字母等级。
+## 总分法
 
-## 示例
+要使用此方法，你必须事先决定所有将计入期末评分期间成绩的组成部分。然后，也要事先决定每个组成部分的最高点数。你的评估计划应做到这一点。每个组成部分的最高点数反映了你分配给该组成部分的权重。例如，如果你希望单元测验在成绩中占更大比重，你就会分配给单元测验更多的总点数。最后，你将各组成部分的最高点数全部相加，并使用该总点数设定字母等级边界。请注意，与固定百分比法不同，你不是为每个组成部分分配字母等级，而是仅为所有组成部分的总和分配字母等级。
+
+### 示例
 
 使用总分评分法评分的一种可能的点数集合示例
 
@@ -13867,11 +14668,7 @@ marks' and project marks' standard deviations equal.5 Then when the weight of 2 
 | 120–139 | D |
 | 0–119 | F |
 
-请注意，这些总分等级边界对应于 200 总分的 90%、80%、70% 和 60% 分别为 A、B、C 和 D。 （例如，
-
-
-
-for an A, 180 + 200 = .90 or 90%.) 你可以使用其他百分比来定义等级边界。相应地调整总分边界。
+请注意，这些总分等级边界对应于 200 总分的 90%、80%、70% 和 60% 分别为 A、B、C 和 D。 （例如，`for an A, 180 + 200 = .90 or 90%.)` 你可以使用其他百分比来定义等级边界。相应地调整总分边界。
 
 总分法的局限之一是，它使你很容易为低分学生提供“额外学分”作业来提高其总分。额外学分作业往往会扭曲成绩的含义，尤其是在这些作业没有对原始组成部分的相同学习目标进行适当评估时。例如，如果一名学生在学期论文上表现不佳，你可能会诱使该学生阅读并总结一份时事杂志文章来提高其分数，而不是再写一篇学期论文。对于该学生而言，总分的含义相对于其他学生会被扭曲。因此，你的成绩有效性降低。
 
@@ -13883,7 +14680,9 @@ for an A, 180 + 200 = .90 or 90%.) 你可以使用其他百分比来定义等级
 
 本节讨论如何将来自若干组成部分的分数合并为单一的综合成绩。讨论与标准参照评分框架一致。使用标准参照框架时，与常模参照评分一样，你在为组成部分分配权重时必须谨慎。如果权重分配不当，综合结果将无法保持你对每个组成部分所期望的重要性。
 
-固定百分比法 如果你使用固定百分比评分法，你将为每个学生、每个组成部分获得一个百分比分数。然后，你将每个组成部分的百分比乘以其相应的权重，将这些乘积相加，并将乘积之和除以权重之和。该程序可由以下公式概括：
+### 固定百分比法
+
+如果你使用固定百分比评分法，你将为每个学生、每个组成部分获得一个百分比分数。然后，你将每个组成部分的百分比乘以其相应的权重，将这些乘积相加，并将乘积之和除以权重之和。该程序可由以下公式概括：
 
 ```
 Composite percentage (weighted) = Σ (weight × percentage score) / Σ (weight) [Eq.15.2]
@@ -13895,7 +14694,9 @@ Composite percentage (weighted) = Σ (weight × percentage score) / Σ (weight) 
 
 如果你没有使用权重，每个组成部分将同等计入综合成绩。该程序不应与常模参照评分一起使用，因为此处分配的权重并不反映各组成部分的标准差。
 
-总分法 我们在上一节中描述的总分法会自动评分综合成绩。学生的综合成绩是学生累积的分数总和。但是，请确保你为每个组成部分分配的分数反映了你希望该组成部分对总综合成绩的贡献权重。例如，如果你希望各组成部分的权重为测验 20%、家庭作业 10%、学期论文 20%、考试 50%，那么每个组成部分的分数应反映总最大分数的这些百分比。因此，如果最大总分为 200 分，则所有测验的最高分为 40 分（= 200 的 20%），所有家庭作业的最高分为 20 分，学期论文 40 分，考试 100 分。
+### 总分法
+
+我们在上一节中描述的总分法会自动评分综合成绩。学生的综合成绩是学生累积的分数总和。但是，请确保你为每个组成部分分配的分数反映了你希望该组成部分对总综合成绩的贡献权重。例如，如果你希望各组成部分的权重为测验 20%、家庭作业 10%、学期论文 20%、考试 50%，那么每个组成部分的分数应反映总最大分数的这些百分比。因此，如果最大总分为 200 分，则所有测验的最高分为 40 分（= 200 的 20%），所有家庭作业的最高分为 20 分，学期论文 40 分，考试 100 分。
 
 ## 成绩簿计算机程序
 
@@ -13903,7 +14704,7 @@ Composite percentage (weighted) = Σ (weight × percentage score) / Σ (weight) 
 
 示例 15.9 显示了一个成绩簿程序的计算机屏幕窗口。请注意最右侧的“结果列”。当你为每个学生输入评估结果时，该列会不断更新。特定程序（Excelsior 2 Grade for Windows）允许你打印许多不同的报告，包括班级成绩报告、班级期末成绩（六周和季度）、班级目标汇总、
 
-## 示例 15.8
+### 示例 15.8
 
 使用固定百分比法计算综合成绩的示例
 
@@ -13919,8 +14720,11 @@ Composite percentage (weighted) = Σ (weight × percentage score) / Σ (weight) 
 你计算加权综合成绩（最后一列）并将该成绩与你为字母等级设定的边界进行比较。你使用公式 15.2 计算加权综合成绩。计算如下：
 
 Bob 的加权综合成绩 = [20 × 87 + 10 × 85 + 20 × 70 + 50 × 80] ÷ [100] = 80
+
 Chad 的加权综合成绩 = [20 × 85 + 10 × 80 + 20 × 80 + 50 × 70] ÷ [100] = 75
+
 Susan 的加权综合成绩 = [20 × 75 + 10 × 82 + 20 × 85 + 50 × 60] ÷ [100] = 65
+
 Theresa 的加权综合成绩 = [20 × 70 + 10 × 78 + 20 × 75 + 50 × 65] ÷ [100] = 69
 
 假设你的等级边界为：
@@ -13931,7 +14735,7 @@ A = 90–100；B = 80–89；C = 70–79；D = 60–69；和 F = 0–59
 
 Bob = B；Chad = C；Susan = D；和 Theresa = D
 
-## 示例 15.9
+### 示例 15.9
 
 将学生评估结果输入成绩簿程序的计算机屏幕示例。
 
@@ -13939,7 +14743,9 @@ Bob = B；Chad = C；Susan = D；和 Theresa = D
 
 班级统计数据、个人期间掌握情况、班级排名名册、期间作业报告、个人成绩或目标报告以及出勤报告。该程序也可以联网。
 
-并非所有成绩簿程序质量都很高。然而，有些价值有限，使用非常困难或非常不灵活。务必阅读教师杂志或教育技术杂志中对这些程序的评论，并在购买前试用该程序。网站 www.thejournal.com 可能有所帮助。成绩簿程序的评估可从西密歇根大学评估中心阿伦·古利克森教授处获得。
+
+
+并非所有成绩簿程序质量都很高。然而，有些价值有限，使用非常困难或非常不灵活。务必阅读教师杂志或教育技术杂志中对这些程序的评论，并在购买前试用该程序。网站 `www.thejournal.com` 可能有所帮助。成绩簿程序的评估可从西密歇根大学评估中心阿伦·古利克森教授处获得。
 
 ## 摘要
 
@@ -13978,15 +14784,10 @@ Bob = B；Chad = C；Susan = D；和 Theresa = D
   - 合理地为组成部分分配权重。
   - 使用额外的成绩评估信息来评估接近等级边界的学生。
   - 使用与你的等级参照框架相匹配的技术设定等级边界。
-  - 使用 F 表示低成就，而不是“未能努力”或“未能交作业”。
+  - 使用 `F` 表示低成就，而不是“未能努力”或“未能交作业”。
   - 避免因未能交作业或作为惩罚而给出零分。
 - 评分变量是报告变量的子集，报告变量是评估变量的子集。评分变量仅限于反映课程学习目标的总结性学生成绩的评估变量，你必须在官方学校记录上报告这些成绩。
 - 你应以不同方式对构成成绩的评估组成部分类别进行加权。你在加权组成部分时应考虑的因素包括代表性和相关性、对所教授内容的强调、所需的思维过程和技能、组成部分之间的重叠、对所有学生的公平性以及评估结果的可靠性和客观性。
-
-
-
-
-
 - 你需要考虑失败的含义及其对学生的影响。本章讨论了一些问题，并提供了建议，说明你应如何根据学区政策看待不及格成绩。
 - 你应该理解当学生未完成作业时，给学生零分所产生的严重影响。建议了分配零分以外的替代方案。
 
@@ -14028,36 +14829,39 @@ Bob = B；Chad = C；Susan = D；和 Theresa = D
 ## 练习与应用
 
 1. 准备一份简短的论文，说明你使用的（或计划使用的）评分系统。在单独的部分中解释使用该系统的教育理由，包括说明你的系统如何改善（或将改善）学生的教育发展。在你的论文中，展示你如何使用表15.8来构建你的思考。与班级其他同学讨论你的评分观点。准备至少一段文字解释以下每一项：
-a. 你成绩符号的含义。
-b. 你班级中失败的含义。
-c. 你如何区分“失败”和“未能尝试”。
-d. 你如何处理迟交作业或未交作业。
-e. 你如何避免“致命的零分”。
-f. 哪些学生表现计入你分配给学生的成绩。
-g. 你在班级中通常分配（或将分配）的每种字母（或其他符号）成绩的数量。
-h. 哪些组成部分进入（或将进入）你学生的学期末成绩。
-i. 第h项中每个组成部分应占多少权重。
-j. 你对每个成绩使用的（或将使用的）边界。
-k. 你如何处理成绩处于边界的学生。
-l. 你考虑的任何其他因素。
+   a. 你成绩符号的含义。
+   b. 你班级中失败的含义。
+   c. 你如何区分“失败”和“未能尝试”。
+   d. 你如何处理迟交作业或未交作业。
+   e. 你如何避免“致命的零分”。
+   f. 哪些学生表现计入你分配给学生的成绩。
+   g. 你在班级中通常分配（或将分配）的每种字母（或其他符号）成绩的数量。
+   h. 哪些组成部分进入（或将进入）你学生的学期末成绩。
+   i. 第h项中每个组成部分应占多少权重。
+   j. 你对每个成绩使用的（或将使用的）边界。
+   k. 你如何处理成绩处于边界的学生。
+   l. 你考虑的任何其他因素。
 
 2. 与你所在或工作的学区中多个年级的学校管理人员和教师交谈。带上表15.4。
-a. 使用了哪些学生进步报告方法？
-b. 学区对所使用的方法是否满意？
-c. 学校学区经历了表15.4中列出的哪些优点和缺点？请解释。
-d. 获取学区成绩单的复印件。将你的所有发现与班级其他成员分享。
-e. 总结你班级中代表的学区之间的相似之处和差异，并提出改进学生进步报告的建议。
+   a. 使用了哪些学生进步报告方法？
+   b. 学区对所使用的方法是否满意？
+   c. 学校学区经历了表15.4中列出的哪些优点和缺点？请解释。
+   d. 获取学区成绩单的复印件。将你的所有发现与班级其他成员分享。
+   e. 总结你班级中代表的学区之间的相似之处和差异，并提出改进学生进步报告的建议。
 
 3. 确定你教授过或将要教授的一个单元。
-a. 在你的教学情境和该单元的背景下，确定评估变量、报告变量和评分变量。
-b. 准备一个三列表，列出这些变量并描述你如何评估（或将评估）每个变量。
-c. 与班级其他同学分享你的发现。
+   a. 在你的教学情境和该单元的背景下，确定评估变量、报告变量和评分变量。
+   b. 准备一个三列表，列出这些变量并描述你如何评估（或将评估）每个变量。
+   c. 与班级其他同学分享你的发现。
 
 4. 命名几种你认为应在以下每个层级包含的学生表现类型：小学、初中或高中。
-a. 说明应分配给每种表现类型的权重。通过讨论章节中所述的六个因素与每种表现类型的关系来解释这些权重的理由。
-b. 权重会因不同年级或不同科目而变化吗？请解释。
+   a. 说明应分配给每种表现类型的权重。通过讨论章节中所述的六个因素与每种表现类型的关系来解释这些权重的理由。
+   b. 权重会因不同年级或不同科目而变化吗？请解释。
 
 5. 表15.9包含一个10名学生班级的表现信息。用它来完成此练习。
+
+
+
 a. 使用以下方法为每位学生确定整体成绩单成绩：（i）自我参照；（ii）标准参照，固定百分比；（iii）标准参照，总分；（iv）常模参照，按曲线评分；（v）常模参照，标准差法；以及（vi）常模参照，Ebel-Stuit法。提示：在应用教师权重之前，先对类别内的成绩取平均值——例如作业内的成绩。
 
 ### 表15.9 列出学生在一个评分期内在每个组成部分获得的成绩。使用此表进行练习13。
@@ -14080,7 +14884,7 @@ a. 使用以下方法为每位学生确定整体成绩单成绩：（i）自我�
 | Teacher's weights: | | | | 5% | 5% | 5% | 15% | 10% | 10% | 50% |
 
 - b. 准备一个表格，以学生的姓名作为行标题，以四种不同方法作为列标题。在每种方法下输入学生的成绩并比较结果。
-- c. 与班级其他同学分享你的结果。你在哪里看到最多的<|message|> 一致和最多的分歧？
+- c. 与班级其他同学分享你的结果。你在哪里看到最多的 一致和最多的分歧？
 - d. 列出每种方法一致和分歧的原因。
 
 图森统一学区改变为标准参照评分和报告系统的详细案例研究。作者讨论了变革过程的积极和消极方面。
@@ -14129,25 +14933,22 @@ Terwilliger, J. S. (1989). Classroom standard-setting and grading practices. Edu
 
 提出了一种方法，可以在某些学习目标可归类为基本技能的情况下，将绝对标准和相对标准评分框架结合起来。
 
-
-
-
-
 ## 解释与使用标准化测验
 
-+   16 标准化学业成就测验
-+   17 解释常模参照分数
-+   18 寻找与评价已出版的测评
-+   19 学术能力、职业兴趣、态度与人格测验
++ 16 标准化学业成就测验
++ 17 解释常模参照分数
++ 18 寻找与评价已出版的测评
++ 19 学术能力、职业兴趣、态度与人格测验
 
 ## 标准化学业成就测验
-学习目标
 
-## 学习目标
+### 学习目标
+
+### 学习目标
 
 研读本章后，你应达到以下目标：
 
-## 测验类型与标准化调查组合
+### 测验类型与标准化调查组合
 
 - 1. 命名并描述教育学业成就测验的主要类别。 [4, 6, 1]
 - 2. 解释每种教育学业成就测验的优势。 [4, 3, 1]
@@ -14156,15 +14957,18 @@ Terwilliger, J. S. (1989). Classroom standard-setting and grading practices. Edu
 - 5. 描述标准化成就测验组合在主要维度上的差异。 [1, 6, 7]
 - 6. 解释随标准化测验项目提供的计算机生成报告，包括项目分析（集群）报告、学校（校舍）报告和学生（家庭）报告。 [1, 6, 7]
 
-## 非标准化学业成就测验
+### 非标准化学业成就测验
 
 - 7. 解释使用随课程材料附带的测验时你所获得和失去的东西。 [1, 4]
 - 8. 描述教师自编测评相对于出版测评的优势与劣势。 [1, 4]
 
-## 州强制性测验
+### 州强制性测验
 
 - 9. 描述州强制性测验项目如何获得其测验。 [6, 5]
-- 10. 描述州强制性测验项目通常如何运作。 [6, 5]
+
+
+
+## 10. 描述州强制性测验项目通常如何运作。 [6, 5]
 
 ## 标准化测验结果的适当用途
 
@@ -14196,15 +15000,13 @@ Terwilliger, J. S. (1989). Classroom standard-setting and grading practices. Edu
 ## 本章简介
 
 什么是标准化测验？标准化测验在哪些方面相似？不同？它们与州强制性测验有何不同？如何正确施测标准化测验？如何为学生准备标准化测验？为学生准备标准化测验的伦理和不伦理方式是什么？这些是我们本章要讨论的一些问题。
-
 我们首先通过查看已出版测验的全部范围来开始本章。我们讨论何时测验是标准化的，何时不是。接下来，我们查看不同类型测验的优势，包括教师自编测验。第三，我们讨论州强制性测验以及它们与普通标准化测验的不同之处。第四，我们讨论在课堂内以及课堂外决策中适当使用标准化测验结果的方式。第五，我们讨论对标准化测验结果的批评和误用。第六，我们对选择标准化测验提出建议。我们考虑当你想要一个标准化测验来补充你的州强制性测验时需要牢记的内容。第七，我们提供如何施测标准化测验的建议，包括如何为测验准备学生。最后，我们讨论为学生提供标准化测验练习的伦理和不伦理方式。在第18章中，我们将讨论已出版测验是如何开发和评价的。
 
 ## 测验类型
 
-## 概述
+### 概述
 
 已出版的学业成就测验在目的、实用性和质量上各不相同。为了欣赏其多样性，你可能会发现对其进行分类有所帮助。以下是一种分类方案：
-
 - 1. 已出版学业成就测验
   - A. 标准化、经实证记录的测验具有高度的标准化程度。标准化测验遵循第18章概述的开发程序，特别是要求使用其有效性的实证记录数据的步骤。以下类型属于这一组：
     - 1. 多水平调查组合是熟悉的、每年施测的测验，用于调查学生在多个课程领域的一般教育成长或基础技能发展。多水平意味着测验内容跨越多个年级；组合意味着多个课程领域由不同的分测验进行评估。
@@ -14215,25 +15017,17 @@ Terwilliger, J. S. (1989). Classroom standard-setting and grading practices. Edu
     - 1. 一些标准参照测验估计学生相对于明确定义的绩效领域（通常由具体的行为目标指定）的状况，但它们缺乏标准化和价值的实证记录。
     - 2. 教科书或课程配套是教师用书中、教科书章节末尾、书后或内置于教学材料中的测验或测验题目。它们被称为不同的名称，如前测、后测、安置测验、进度检查、单元测验、复习测验或课程嵌入式测验。它们缺乏标准化和实证记录。作为教师，你必须牢记这些测验很少是专业题目编写者的产品，通常测量低层次认知技能，而且经常有多个答案键入错误。
 - II. 教师自编测验是由你根据课程框架强调的具体学习目标制作的。这些测验帮助你在日常教学决策中提供帮助。
-
 本章的重点仅限于标准化、经实证记录的学业成就测验。分类中的测验全范围并未讨论。
 
 ## 多水平调查组合
 
 标准化学业成就测验的 workhorse 是多水平调查组合。虽然每个出版商的测验组合强调内容和技能的不同细节，但组合的组织方式相似。
-
-组合的组织 每个组合都是团体施测，并且每个组合都包含几个分测验。一个分测验评估一个领域，例如阅读、数学、听力技能、英语用法（ mechanics）、写作、拼写（识别）、词汇（词义）或使用图书馆和
-
-
-reference materials. Not all questions on these subtests are multiple-choice: In recent years, publishers have added constructed-response items or performance tasks to several subtests. Separate scores are given for each subtest. Usually, a battery has subtests for six to eight curriculum areas. Different publishers may have different subtest names for the same curriculum area.
-
+组合的组织 每个组合都是团体施测，并且每个组合都包含几个分测验。一个分测验评估一个领域，例如阅读、数学、听力技能、英语用法（mechanics）、写作、拼写（识别）、词汇（词义）或使用图书馆和 reference materials. Not all questions on these subtests are multiple-choice: In recent years, publishers have added constructed-response items or performance tasks to several subtests. Separate scores are given for each subtest. Usually, a battery has subtests for six to eight curriculum areas. Different publishers may have different subtest names for the same curriculum area.
 Each subtest is made up of a coordinated series of test levels that spans the grades. For example, a reading subtest may be organized into four levels: one level for grades 1 and 2, another for grades 3 and 4, another for 5 and 6, and a fourth for 7 and 8. It is not unusual for a publisher to have adjacent levels with overlapping grades (e.g., one level covering grades 3–4–5 and the next level covering grades 5–6–7).
-
 Table 16.1 shows the curriculum areas, subtests, and grade levels covered by some of the more popular standardized achievement tests.
+Although different publishers’ survey batteries are similar in their surface features, they are not interchangeable, even though subtest names may sound similar. The specific content emphasized, the cognitive skills students are required to use to complete the tasks, and the way the norms and scales are developed will be very different from publisher to publisher.
 
-Although different publishers’ survey batteries are similar in their surface features, they are not interchangeable,
 
-even though subtest names may sound similar. The specific content emphasized, the cognitive skills students are required to use to complete the tasks, and the way the norms and scales are developed will be very different from publisher to publisher.
 
 Tests vary in how well they match any school district’s curriculum. In some curricula, such as reading and perhaps mathematics, the curricula differ very little from one school district to another within a state. The tests and these curricula may match closely. In other curricula such as science and social studies, especially in the elementary schools, there are much larger variations between school districts. For a teacher this means that the different subtests in the battery have less value in assessing the specifics of what the teacher taught during the year. However, such subtests can assess general information and general ability to apply knowledge and skill.
 
@@ -14243,39 +15037,72 @@ These differences make it necessary for school officials to actually inspect the
 
 | Curriculum area/subarea^a | Stanford Achievement Test (9th edition) | Metropolitan Achievement Test (8th edition) | Iowa Tests of Basic Skills (Form A) | Iowa Tests of Educational Development (Form A) | Comprehensive Tests of Basic Skills (5th edition) Complete Battery Plus |
 |---|---|---|---|---|---|
+
 | Reading multiple-choice |  |  |  |  |  |
+
 | Alphabet knowledge | K.0–1.5 | K.0–K.5 |  |  |  |
+
 | Word/sentence reading | K.0–2.5 | 1.5–4.5 | K.8–3.5 |  | K–4.2 |
+
 | Phonetic/structural analysis | 1.5–3.5 | K.0–4.5 | K.0–3.5 |  | K–4.2 |
+
 | Decoding skills | K.0–1.5 | K.0–1.5 |  |  | K–4.2 |
+
 | Vocabulary | 2.5–13.0 | 1.5–12.9 | K.0–8.9 | 9.0–12.9 | K–12.9 |
+
 | Comprehension | 1.5–13.0 | 1.5–12.9 | K.8–8.9 | 9.0–12.9 | K.0–12.9 |
+
 | Reading performance assessment | 1.5–13.0^b | 1.5–12.9^b | 3.0–8.9^a | 9.0–12.9^b | 1.6–12.9^c |
+
 | Language multiple-choice |  |  |  |  |  |
+
 | Punctuation | 1.5–13.0 | 1.5–12.9 | 3.0–8.5 | 9.0–12.9 | 1.6–12.9 |
+
 | Capitalization | 1.5–13.0 | 1.5–12.9 | 3.0–8.9 | 9.0–12.9 | 1.6–12.9 |
+
 | Usage | 1.5–13.0 | 1.5–12.9 | 3.0–8.9 | 9.0–12.9 | 1.6–12.9 |
+
 | Listening | K.0–9.9 | K.0–3.5 | K.0–8.9 |  | K.6–2.6 |
+
 | Sentence/paragraph organization | 1.5–13.0 | 3.0–8.9 |  | 9.0–12.9 | 1.6–12.9 |
+
 | Language/writing performance assessment | 3.5–13.0^b | 1.5–12.9^b | 1.0–8.9^b | 9.0–12.9^b | 1.6–12.9^c |
+
 | Spelling multiple-choice | 1.5–13.0 | 1.5–12.9 | 1.7–8.9 | 9.0–12.9 | 2.0–12.9 |
+
 | Spelling performance assessment |  |  |  |  |  |
+
 | Mathematics multiple-choice |  |  |  |  |  |
+
 | Computation | K.0–13.0 | K.5–9.5 | 1.7–8.9 | 9.0–12.9 | 1.6–12.9 |
+
 | Concepts | K.0–13.0 | K.5–12.9 | K.0–8.9 | 9.0–12.9 | K.0–12.9 |
+
 | Problem solving | K.5–13.0 | 1.5–12.9 | 1.7–8.9 | 9.0–12.9 | K.6–12.9 |
+
 | Mathematics performance assessment | 1.5–13.0^b | 1.5–12.9^b | 1.0–8.9^a | 9.0–12.9^b | 1.6–12.9^c |
+
 | Study skills multiple-choice |  |  |  |  |  |
+
 | Maps, graphs, tables | 4.5–13.0 | 3.5–12.9 | 1.7–8.9 | 9.0–12.9 | 1.6–12.9 |
+
 | Library/reference materials | 4.5–13.0 | 3.5–12.9 | 1.7–8.9 | 9.0–12.9 | 1.6–12.9 |
+
 | Study skills performance assessment |  | K.0–8.9^b |  | 9.0–12.9^b | 1.6–12.9 |
+
 | Science multiple-choice | K.0–13.0 | 1.5–12.9 | 1.7–8.9 | 9.0–12.9 | 1.6–12.9 |
+
 | Science performance assessment | 1.5–13.0^b | 1.5–12.9^b | 1.0–8.9^a | 9.0–12.9^b | 1.6–12.9^c |
+
 | Social studies multiple-choice | 3.5–13.0 | 1.5–12.9 | 1.7–8.9 | 9.0–12.9 | 1.6–12.9 |
+
 | Social studies performance assessment | 1.5–13.0^b | 1.5–12.9^b | 1.0–8.9^a | 9.0–12.9^b | 1.6–12.9^c |
+
 Notes: ^a Publishers may have somewhat different names for these areas than those used here. Separate scores are not provided for every area. ^b Assessments in these areas are available as supplements or additional purchase components that are not part of the battery itself. ^c Part of the Multiple Assessments Edition.
 
 tery, matching their local curriculum to the battery's content and skills emphasis. If there is a wide gap between your local curriculum's learning targets and the battery's tasks, do not adopt the survey battery.
+
+
 
 Publishers think of each subtest (e.g., reading comprehension) as assessing a continuous dimension that grows or develops over a range of grades. Because each subtest is a graded series of assessments, the publisher can use empirical data to link the levels together and to place the scores of students from every grade on one numerical scale that spans all the grades. The scale allows achievement to be expressed quantitatively. This allows you to use a multilevel subtest to measure a student's year-to-year educational development and growth in a curricular area. Different types of educational development scales are explained in Chapter 17.
 
@@ -14297,6 +15124,8 @@ Most publishers of standardized, empirically documented tests provide auxiliary 
 
 Multilevel criterion-referenced tests provide information about a student's status with respect to the specific learning targets in a domain. Although some survey batteries also provide this information, most surveys assess very broadly or globally defined educational development. Multilevel criterion-referenced tests tend to focus on a more narrowly defined set of learning targets.
 
+
+
 ## Other Multilevel Tests
 
 Other types of multilevel tests are stand-alone products that cover one curricular area, such as reading or mathematics, across several grades. These assessments provide a deeper and broader sampling of content than a corresponding subtest of a survey battery. Thus, more time is devoted to assessing students in a single curricular area than when you use a survey battery subtest. However, if the same sample of students was not used to norm a stand-alone multilevel test concurrently with tests from other curricular areas, you cannot use the stand-alone tests to compare a student's relative strengths and weaknesses across curricular areas. For example, you could not say a student is better in reading than in mathematics.
@@ -14307,25 +15136,19 @@ If you do not want to measure growth or development, a single-level test may be 
 
 Each test is a stand-alone product and is not coordinated with other tests. Thus, these test results cannot be used to compare a student's relative standing in several subjects. Scores from this group of achievement tests are most often interpreted using norm-referencing schemes such as percentile ranks and standard scores.
 
-
-
-
 ## 标准化测验量表
 
-标准化测试的好处 如果你希望结果在时间、地点和人之间具有可比性，标准化是必要的。如果一种测评程序是标准化的，你就能更好地正确解释学生在该测评上的分数。任何测评程序的质量都是通过使用实证数据来证明其效度和有效性。这些数据为测验开发者提供了（a）改进和选择任务，（b）建立信度和效度，（c）描述测评在目标学生群体中的有效程度，（d）创建衡量成长的量表，（e）等值分数（使分数在年级之间以及测评的一种形式与另一种形式之间具有可比性），以及（f）制定多种常模参照分数的基础。
+### 标准化测试的好处
+如果你希望结果在时间、地点和人之间具有可比性，标准化是必要的。如果一种测评程序是标准化的，你就能更好地正确解释学生在该测评上的分数。任何测评程序的质量都是通过使用实证数据来证明其效度和有效性。这些数据为测验开发者提供了（a）改进和选择任务，（b）建立信度和效度，（c）描述测评在目标学生群体中的有效程度，（d）创建衡量成长的量表，（e）等值分数（使分数在年级之间以及测评的一种形式与另一种形式之间具有可比性），以及（f）制定多种常模参照分数的基础。
 
 ## 共同特征
 
 大多数团体施测的测验量表具有以下共同特征（Iwanicki, 1980）。
 
 - 1. 测验开发特征。手册和其他材料对每个分测验描述：（a）所涵盖的内容和学习目标，（b）常模的类型及其制定方法，（c）提供的参照标准类型，（d）信度数据，以及（e）用于筛选具有冒犯性以及可能存在性别、种族和族裔偏见的题目所使用的技术。
-
 - 2. 测验施测特征。测验通常（a）有两个等值形式；（b）需要总施测时间 2 至 3 小时，分散在数个测试场次中进行，跨越数个上学日（尽管测验在长度和施测时间上差异很大）；（c）为学生在受测前使用提供练习手册；（d）为高年级提供单独的机器可评分答题纸（低年级学生在机器可评分的测验本上直接标记答案），以及（e）允许同级和跨级测验。
-
 - 3. 测验常模特征。测验通常使用具有广泛代表性的全国抽样来制定常模，并提供秋季和春季的个人学生常模。有时还会提供以下特殊常模：（a）大城市常模，（b）特殊政府资助项目学生的常模，（c）高收入社区的常模，（d）非公立学校的常模，（e）地区常模，以及（f）校舍平均常模。
-
 - 4. 测验分数特征。测验提供每个分测验的原始分数以及以下常模参照分数：百分等级、正态曲线等值、斯坦因等级、扩展标准化常模分数和年级等值（或某种类似的年级水平指标分数）。对使用年级等值的态度各不相同。有些测验提供与常用基础读物相匹配的教学阅读水平分数。（我们在下一章讨论这些分数。）
-
 - 5. 测验分数报告和解释特征。测验通常为教师、学校管理人员和/或辅导员提供解释手册。大多数团体测验提供计算机准备的叙述性报告，其中包含学区、校舍和班级测验结果的汇总。此类报告当然不是免费的。示例 16.1 至 16.3 显示了你应能为你的学生阅读和解释的报告。
 
 ## 差异
@@ -14333,7 +15156,6 @@ Each test is a stand-alone product and is not coordinated with other tests. Thus
 尽管测验量表共享共同特征，但它们绝对不可互换。来自不同出版商的量表所获得的分数，即使在标题相似的分测验上，也会不同且不能直接比较。以下是在严重影响分数可比性的特征中不同的方面：
 
 - 1. 内容领域的侧重点。来自不同测验出版商的量表的分测验分数具有不同的含义。例如，对四个标准化测验量表中四年级水平的数学分测验进行的研究表明，涵盖诸如分数等主题的题目百分比在各测验之间差异很大——从 5.4% 到 14.4%（Freeman, Kuhs, Knappen, & Porter, 1982）。这种覆盖面的差异会显著影响学生的分数。因为每个测验出版商对每个子主题的强调略有不同，所以某一量表所称的“阅读理解”或“社会研究”与某一学校和/或教师在课堂上强调的内容之间可能存在严重不匹配。这些不匹配导致分测验分数（如某一学科领域的年级等值）可能无法代表学生的当前功能水平。测验与学校教学计划的重叠程度是在选择测验量表时极其重要的考虑因素。
-
 - 2. 发展量表在年级间的衔接质量。标准化测验的一种用途是衡量学生在连续量表上的成长。如果量表构建得当，就有可能追踪学生在各年级的教育成长。但不同的测验开发者在创建发展量表时使用不同的技术方法，即使量表名称相同也是如此。一些出版商使用一种称为项目反应理论的复杂技术；另一些则不使用。在实际使用测验结果时，一个主要考虑因素是发展分数在年级间的重叠程度（Peterson, Kolen, & Hoover, 1989）。例如，一个四年级学生可能在四年级数学分测验上获得 6.0 的年级等值，以及年级等值
 
 ## 示例 16.2 显示学校四年级学生每个分测验表现的校舍报告示例。该报告显示（a）当地第 90、75、50、25 和 10 百分位学生相对于全国常模组的表现，（b）当地四年级学生的四分之一相对于全国常模组的表现，（c）有多少当地学生在全国常模组的每个四分位中，以及（d）有多少百分比的当地学生在全国常模组的每个四分位中。
@@ -14347,64 +15169,88 @@ Each test is a stand-alone product and is not coordinated with other tests. Thus
 学生人数 | 阅读 86 | 语言 87 | 数学 86 | 总分* 86 | 科学 88 | 社会研究 88
 
 平均分与标准差
+
 年级平均等值 | 4.6 | 5.0 | 4.5 | 4.8 | 4.8 | 4.3
+
 标准差 | 1.5 | 2.0 | 1.9 | 1.3 | 1.7 | 1.8
+
 平均正态曲线等值 | 49.0 | 52.0 | 49.5 | 51.4 | 49.9 | 47.0
+
 标准差 | 13.9 | 14.9 | 19.3 | 15.7 | 18.2 | 18.1
+
 主要 NCE 的数量 | 49.7 | 54.9 | 49.4 | 53.7 | 50.5 | 64.1
+
 标准差 | 14.6 | 15.5 | 16.9 | 16.7 | 16.5 | 64.9
 
 当地百分位/四分位
+
 第 90 百分位当地
+
 年级等值 | 9.5 | 9.6 | 9.0 | 9.4 | 9.2 | 9.0
+
 正态曲线等值 | 74.2 | 78.3 | 78.4 | 75.4 | 76.2 | 73.0
+
 量表分数 | 746.1 | 786.3 | 784.4 | 744.2 | 756.6 | 759.5
-
-第 75 百分位当地
-年级等值 | 62.8 | 75.4 | 72.3 | 70.2 | 74.3 | 85.6
-正态曲线等值 | 54.6 | 64.4 | 62.7 | 55.0 | 53.9 | 54.7
-量表分数 | 710.8 | 741.5 | 725.3 | 719.7 | 731.3 | 728.6
-
-第 50 百分位（中位数）
-年级等值 | 41.3 | 53.3 | 54.0 | 52.7 | 56.7 | 49.8
-正态曲线等值 | 45.9 | 52.0 | 50.0 | 49.2 | 43.3 | 70.8
-量表分数 | 665.9 | 700.0 | 700.0 | 680.2 | 733.3 | 700.8
-
-第 25 百分位当地
-年级等值 | 39.0 | 39.1 | 34.8 | 30.1 | 36.4 | 39.5
-正态曲线等值 | 35.0 | 42.4 | 36.5 | 39.0 | 38.5 | 39.0
-量表分数 | 679.0 | 694.2 | 665.5 | 678.0 | 847.0 | 679.0
-
-第 10 百分位当地
-年级等值 | 12.1 | 15.5 | 10.9 | 13.2 | 11.0 | 12.3
-正态曲线等值 | 25.2 | 27.0 | 24.3 | 26.1 | 24.1 | 25.8
-量表分数 | 635.3 | 667.0 | 636.7 | 646.9 | 647.0 | 644.3
-
-全国四分位
-每季度当地人数 | 10 | 22 | 19 | 18 | 20 | 10
-当地百分比 | 10 | 22 | 19 | 18 | 20 | 10
-每季度 | 36 | 28 | 23 | 25 | 20 | 36
-当地百分比 | 01-25 | 01-25 | 01-25 | 01-25 | 01-25 | 01-25
-当地百分比 | 26-50 | 26-50 | 26-50 | 26-50 | 26-50 | 26-50
-当地百分比 | 51-75 | 51-75 | 51-75 | 51-75 | 51-75 | 51-75
-当地百分比 | 76-99 | 76-99 | 76-99 | 76-99 | 76-99 | 76-99
-
-
 
 
 
 ## 全国百分位
 
+### 第 75 百分位当地
+
+|  |  |  |  |  |  |  |
+|---|---|---|---|---|---|---|
+| 年级等值 | 62.8 | 75.4 | 72.3 | 70.2 | 74.3 | 85.6 |
+| 正态曲线等值 | 54.6 | 64.4 | 62.7 | 55.0 | 53.9 | 54.7 |
+| 量表分数 | 710.8 | 741.5 | 725.3 | 719.7 | 731.3 | 728.6 |
+
+### 第 50 百分位（中位数）
+
+|  |  |  |  |  |  |  |
+|---|---|---|---|---|---|---|
+| 年级等值 | 41.3 | 53.3 | 54.0 | 52.7 | 56.7 | 49.8 |
+| 正态曲线等值 | 45.9 | 52.0 | 50.0 | 49.2 | 43.3 | 70.8 |
+| 量表分数 | 665.9 | 700.0 | 700.0 | 680.2 | 733.3 | 700.8 |
+
+### 第 25 百分位当地
+
+|  |  |  |  |  |  |  |
+|---|---|---|---|---|---|---|
+| 年级等值 | 39.0 | 39.1 | 34.8 | 30.1 | 36.4 | 39.5 |
+| 正态曲线等值 | 35.0 | 42.4 | 36.5 | 39.0 | 38.5 | 39.0 |
+| 量表分数 | 679.0 | 694.2 | 665.5 | 678.0 | 847.0 | 679.0 |
+
+### 第 10 百分位当地
+
+|  |  |  |  |  |  |  |
+|---|---|---|---|---|---|---|
+| 年级等值 | 12.1 | 15.5 | 10.9 | 13.2 | 11.0 | 12.3 |
+| 正态曲线等值 | 25.2 | 27.0 | 24.3 | 26.1 | 24.1 | 25.8 |
+| 量表分数 | 635.3 | 667.0 | 636.7 | 646.9 | 647.0 | 644.3 |
+
+### 全国四分位
+
+|  |  |  |  |  |  |  |
+|---|---|---|---|---|---|---|
+| 每季度当地人数 | 10 | 22 | 19 | 18 | 20 | 10 |
+| 当地百分比 | 10 | 22 | 19 | 18 | 20 | 10 |
+| 每季度 | 36 | 28 | 23 | 25 | 20 | 36 |
+| 当地百分比 | 01-25 | 01-25 | 01-25 | 01-25 | 01-25 | 01-25 |
+| 当地百分比 | 26-50 | 26-50 | 26-50 | 26-50 | 26-50 | 26-50 |
+| 当地百分比 | 51-75 | 51-75 | 51-75 | 51-75 | 51-75 | 51-75 |
+| 当地百分比 | 76-99 | 76-99 | 76-99 | 76-99 | 76-99 | 76-99 |
+
 ## 家庭报告
 
 MARY BROWN
+
 六年级
 
-## 目的
+### 目的
 
 家庭报告呈现了您孩子在 TerraNova 评估中的表现信息。它以全国百分位的形式描述成绩，全国百分位说明了您孩子与全国同年级其他学生相比的表现。该报告可用于确定优势和需求领域。
 
-## 观察
+### 观察
 
 每个条形的高度显示了您孩子在每项测试上的全国百分位分数。百分位刻度显示在左侧。图表显示您孩子在阅读方面的全国百分位为 65。这意味着您孩子的成绩高于全国约 65% 的学生。
 
@@ -14428,7 +15274,7 @@ MARY BROWN
 
 ## 非标准化成就测试
 
-## 缺点
+### 缺点
 
 如果测试未标准化，其出版商可能没有广泛尝试评估材料。很可能出版商没有收集基于学生的数据来支持测试的质量（即，几乎没有或没有分数有效性和可靠性的实证证据）。没有实证数据，很难改进评估或验证其预期目的是否确实实现。然而，许多这类评估被教师购买并使用。
 
@@ -14436,20 +15282,26 @@ MARY BROWN
 
 ## 教科书基础测试
 
-吸引力 教材教师版通常在章节末尾或书籍末尾有评估任务。一些课程材料在学习材料中内置了评估任务；另一些则有单独的测试供复印或复制。这些评估程序对教师有吸引力的原因有两个：（a）如果您严格遵循教科书，测试的主题似乎与您教授的内容非常匹配；以及（b）它们似乎减轻了您创建高质量评估的责任。从出版商的角度来看，在课程材料中添加测试通常是营销工具：使课程材料对教师有吸引力会增加被采用的可能性。
+### 吸引力
 
-缺点 随课程材料提供的评估的质量通常很差。出版商很少使用试验数据来改进这些评估材料。当评估任务是表现任务时，尝试评估材料以改进目的尤为重要，因为措辞强烈影响学生对任务的解释，并且评分量规需要使用实际学生反应进行完善。此外，教材系列作者很少精通评估开发。出版商的编辑人员不会使用本书第 7 章至第 12 章中发现的清单等来从技术评估角度编辑任务。有时问题的标准答案是错误的或与课程材料中的内容矛盾。以下是示例。
+教材教师版通常在章节末尾或书籍末尾有评估任务。一些课程材料在学习材料中内置了评估任务；另一些则有单独的测试供复印或复制。这些评估程序对教师有吸引力的原因有两个：（a）如果您严格遵循教科书，测试的主题似乎与您教授的内容非常匹配；以及（b）它们似乎减轻了您创建高质量评估的责任。从出版商的角度来看，在课程材料中添加测试通常是营销工具：使课程材料对教师有吸引力会增加被采用的可能性。
 
-## 示例
+### 缺点
+
+随课程材料提供的评估的质量通常很差。出版商很少使用试验数据来改进这些评估材料。当评估任务是表现任务时，尝试评估材料以改进目的尤为重要，因为措辞强烈影响学生对任务的解释，并且评分量规需要使用实际学生反应进行完善。此外，教材系列作者很少精通评估开发。出版商的编辑人员不会使用本书第 7 章至第 12 章中发现的清单等来从技术评估角度编辑任务。有时问题的标准答案是错误的或与课程材料中的内容矛盾。以下是示例。
+
+### 示例
 
 教师对随教材附带的测试过度信任的示例
+
 鲍勃的父母帮助他为社会研究测试学习。第二天他在课堂上参加了测试。几天后他在老师批改后带回家。当他的父母回顾时，他们发现两道题被标记为错误，尽管鲍勃给出了正确答案。教师的答案键与书中所述相矛盾。当指出这两项的错误时，老师坚持说这种矛盾是不可能的，因为教科书出版商印刷了测试！不要效仿这位老师的例子。
 
 通常这些评估材料上的问题侧重于低水平的认知技能，如回忆事实和定义。尽管存在这些缺陷，许多教师仍对这些测试抱有不当的信任，并用它们对学生学习进展做出重要的日常决策。第 5 章解释了为什么如果您使用这些低质量的评估材料，您就没有履行自己的专业责任。
 
-## 该怎么做
+### 该怎么做
 
 当您的课程材料包含有吸引力的评估任务时，您该怎么办？首先，不要盲目接受其质量，无论其余课程材料多么好。仔细查看嵌入式或“家庭作业”类型的练习，确保它们评估的是学生学习的有价值的东西，答案是正确的，并且任务完全符合您所在州的标准和您学区的重要学习目标。其次，做好失望的准备：您可能需要自己重写这些练习。
+
 第三，仔细审查随材料附带的任何测试或测验。您使用测试和测验的分数来确定学生的成绩，因此您希望这些评估具有高质量。审查每道题的正确性、重要性以及与标准和学习目标的匹配度。使用第 7 章至第 12 章中的清单来帮助您编辑题目，必要时对其进行修改。当您在课堂上使用这些题目时，审查学生对它们的反应，以帮助您发现缺陷并纠正它们（参见第 14 章）。教师应以小组形式共同审查和改进随课程材料附带的评估材料。这可以一点一点地进行，持续两到三年。
 
 ## 州强制测试
@@ -14466,19 +15318,17 @@ MARY BROWN
 
 评估。各州尝试了大规模表现评估和作品集，成功程度不一。后者开发成本高；管理耗时；评分成本高；并且难以制定高技术标准的可信度、有效性和逐年可比性。一些州坚持并取得了良好效果，但许多州又回到了选择题测试或选择题测试与少量表现评估和写作评估混合的形式。
 
-州评估项目通常由州立法机构和州长发起和终止。真实性和表现评估通常被视为需要学生表达其意见、价值观和个人创造力的激进改革。保守团体可能认为这些对学生不合适。他们可能坚持学生应为具有挑战性的标准承担责任，这些标准不需要学生学习“自由主义”价值观和思想。政治上自由的人可能希望学生超越常规思考，阅读和评估挑战传统价值观的材料——或质疑政府、权威或既定宗教。这一方可能将评估视为改革教育实践以及课程的机会。您可以在名为《教育周刊》的周刊上阅读有关州评估项目及其争议的信息（www.educationweek.com）。
+
+
+州评估项目通常由州立法机构和州长发起和终止。真实性和表现评估通常被视为需要学生表达其意见、价值观和个人创造力的激进改革。保守团体可能认为这些对学生不合适。他们可能坚持学生应为具有挑战性的标准承担责任，这些标准不需要学生学习“自由主义”价值观和思想。政治上自由的人可能希望学生超越常规思考，阅读和评估挑战传统价值观的材料——或质疑政府、权威或既定宗教。这一方可能将评估视为改革教育实践以及课程的机会。您可以在名为《教育周刊》的周刊上阅读有关州评估项目及其争议的信息（`www.educationweek.com`）。
 
 作为教师，您无疑会发现自己处于有争议的州评估环境中。立法者倾向于将教育系统的问题归咎于教师（但很少给他们应有的赞誉）。您将被要求实施并参与您所在州的评估项目。
 
 您在本本书中学到的原则可以应用于州评估。您可能需要使用这些原则为您所在州的评估辩护。您也可能希望使用它们提出建设性批评。附录 A、B 和 C 中的原则也应适用。
 
-您通常可以通过其教育部门网站了解您所在州的评估项目。您可以通过美国教育部国家教育统计中心（www.ed.gov/Programs/bastmp/SEA.htm）找到链接到每个州教育部门的链接。个别学校网站（如果存在）可以通过搜索学校名称和位置找到。
+您通常可以通过其教育部门网站了解您所在州的评估项目。您可以通过美国教育部国家教育统计中心（`www.ed.gov/Programs/bastmp/SEA.htm`）找到链接到每个州教育部门的链接。个别学校网站（如果存在）可以通过搜索学校名称和位置找到。
 
 共识是，希望改变课堂实践的州评估项目必须非常强调教师发展，因为仅靠评估项目并不能改善学校（Linn & Baker, 1997；McDonnell, 1997；Smith, 1997）。此外，由于财务限制、时间压力、技术限制和政治压力造成的妥协通常意味着州评估的原始计划需要缩减。这可能导致未能实施关键组成部分，例如改善课堂评估实践、使用表现评估或未能实施适当的教师发展项目。
-
-
-
-
 
 ## 标准化测验结果的适当用途
 
@@ -14541,36 +15391,35 @@ Airasian（1979）讨论了这三个批评领域中的几个方面：
 | B. 针对测验未测量的特征的批评： | 1. 测验不是诊断性的。<br>2. 测验没有测量创新教学项目的目标。<br>3. 测验没有测量创造力、兴趣、主动性和/或价值观。<br>4. 测验比较学生而不是测量个人的学习。 |
 | C. 针对使用测验影响的批评： | 1. 儿童被“贴标签”（或“贴错标签”）。<br>2. 测验使用改变了学校课程，鼓励为测验而教。<br>3. 测验导致学习者之间产生竞争。<br>4. 测验引起恐惧。 |
 
+
+
 来源：改编自 P. W. Airasian 的“A Perspective on the Uses and Misuses of Standardized Tests”，1979，Measurement in Education, 10(3)。版权 1979，National Council on Measurement in Education。经 NCME 许可转载。
-
-
-
 
 使用单一的评估结果对学生做出重要决定。例如，你可能会想仅根据学生的考试成绩来评定学生的成绩，而忽略学生在课堂上的日常表现，或学生在考试时所处的个人情况。教师和学校管理人员以类似的方式滥用标准化测试结果。不当使用调查成就测验电池的情况在此列出。你还应注意，以这些方式使用州强制性评估也是不恰当的（Hoover, Hieronymus, Frisbie, & Dunbar, 1993b）。
 
 出现在测试中，它们破坏了概括的能力。学校官员可以通过使用源自教育发展、儿童发展、学习以及学科领域的适当原则来制定课程框架，从而克服这种滥用。他们应选择最符合重要课程学习目标的测试，而不是反过来。
 
-## 1. 仅根据标准化成就测试的结果将学生安置到特殊教学项目中。
+## 1. 仅根据标准化成就测试的结果将学生安置到特殊教学项目中
 
 特殊项目包括补救项目以及为天才和有才能的学生设立的项目。学校官员可以通过在做出这些决定时使用多种信息来克服这种滥用。他们应包括学生的日常课堂表现、教师的评估，以及除调查成就测验电池之外的其他评估结果。
 
-## 2. 仅根据标准化测试的结果让学生留级。
+## 2. 仅根据标准化测试的结果让学生留级
 
 首先，你应认识到让学生留级是一个非常开放的教育问题，而且在低年级普遍实行的留级做法往往对学生没有帮助（Karweit & Wasik, 1992）。其次，你对学生的日常观察、教学和评估是学校官员在做出此决定时应使用的最相关类型的信息。第三，家长拥有学校官员和教师所不具备的关于孩子的知识。虽然标准化成就测试分数可能对这种类型的决定产生一定影响，但其重要性在最终决定中应占很小权重。
 
-## 3. 仅根据标准化成就测试的结果来评判整个学校项目的质量。
+## 3. 仅根据标准化成就测试的结果来评判整个学校项目的质量
 
 学校项目很复杂。它们教授的不仅仅是标准化测试所评估的内容。你也知道，即使在测试评估的课程领域内，测试所评估的内容与课程框架中的所有教学目标之间也没有完美的匹配。（表18.1列出了在使用调查测验分数进行课程评估时应考虑的许多学校和社区因素。）学校官员可以通过将项目评估决定置于更广泛的完整课程框架以及学校和社区因素的完整背景中来克服滥用。
 
-## 4. 使用调查成就测验电池为教师在特定年级应教授的具体内容制定规定。
+## 4. 使用调查成就测验电池为教师在特定年级应教授的具体内容制定规定
 
 你知道测试只抽样了学生可能被要求执行的大量任务。虽然测试任务很重要，但每个任务本身并不是目的。因为这些任务是从这个更大领域中抽取的样本，所以它们使你能够在此基础上进行概括，以估计学生在该领域上的表现。如果学校官员操纵样本或试图主要将课程领域限制在测试中出现的样本上，他们就破坏了概括的能力。
 
-## 5. 将学生的评估结果不佳归因于单一原因。
+## 5. 将学生的评估结果不佳归因于单一原因
 
 有时教师或学校管理人员会将学生的评估结果解释为完全是学生自身缺点的结果，而非多种相互作用条件的结果。学生的评估结果不佳可能确实反映了先前教学的质量、学生家庭环境的特点，或其他个人经历。
 
-## 6. 学校官员或家长试图在班级在标准化测试中表现不佳时指责教师。
+## 6. 学校官员或家长试图在班级在标准化测试中表现不佳时指责教师
 
 在某人能够将班级测试成绩的上升（或下降）完全归因于某位特定教师之前，那个人必须考虑每种因素如何影响成绩：测试的内容是否与课堂上所教授内容的广度和重点相匹配？今年班级的学生整体上是否比过去的班级（或分配给其他教师的班级）具有更好或更差的一般学校适应能力？本班（或其他班）的学生在测试中是否被教过答案或以其他方式获得了不公平的优势？去年的教师是否做得异常好（或差），并且这种影响延续到了今年？哪些家庭因素影响了学生的成功（或缺乏成功）？学校校长（或其他教学领导者）是否促进或阻碍了教师的教学或学生的学习？你大概还能列出其他在试图找出班级测试结果原因时需要考虑的因素。与汽车制造商或比萨店老板不同，学校和教师对其原材料及其必须运作的条件相对控制力很小（Feldt, 1976）。
 
@@ -14615,7 +15464,7 @@ PIAT 的题目印在小型画架上。学生不会对选择题写出答案；他
 
 ## 选择标准化测试
 
-## 调查成就测验电池选择
+### 调查成就测验电池选择
 
 如前所述，你必须逐一检查和审阅每项测试，以决定其是否适合你的学校。在选择小学调查测验电池之前，学校官员应牢记以下建议（Gronlund, 1976）：
 
@@ -14626,9 +15475,9 @@ PIAT 的题目印在小型画架上。学生不会对选择题写出答案；他
 
 由于高中课程差异很大，因此为这一教育水平选择调查测验电池很困难。在这一水平选择测试需要对学校的课程主要侧重点和理念有完全了解。在选择高中测试电池之前，学校官员应牢记以下几点（Gronlund, 1976）：
 
-
-
 ## 补充你的州评估
+
+
 
 如果你的州要求进行自己的评估，在选择已出版的标准化学科测试之前，你需要先考虑其覆盖范围。大多数州评估的主要目的是问责制。已出版的标准化学科测试并非如此，其主要用途是
 
@@ -14652,162 +15501,182 @@ PIAT 的题目印在小型画架上。学生不会对选择题写出答案；他
 
 表 16.4 对学生施测标准化评估程序的清单。
 
-评估日期之前
+### 评估日期之前
+
 1. 制定评估时间表，包括每个需要施测的组成部分的日期和时间。
+
 2. 与学生讨论即将进行的评估。
-a. 解释评估的目的。
-b. 解释他们将做什么。
-c. 解释他们何时以及如何收到结果。
-d. 解释结果将如何使用。
-3. 熟悉评估程序和施测说明。 （自己练习做该评估。）
+
+   - (a) 解释评估的目的。
+   - (b) 解释他们将做什么。
+   - (c) 解释他们何时以及如何收到结果。
+   - (d) 解释结果将如何使用。
+
+3. 熟悉评估程序和施测说明。（自己练习做该评估。）
+
 4. 如果需要监考人员，安排并培训他们。
+
 5. 确保所有评估材料都已准备好，学生有铅笔和其他必要工具，并且有草稿纸和其他材料可用。
+
 6. 对房间进行必要的物理调整。
+
 7. 做一个写着“正在评估。请勿打扰我们！”的标志。在评估期间使用该标志。
 
-评估期间
+### 评估期间
+
 1. 严格按照说明手册中的指示执行。
+
 2. 监督学生，确保他们在正确的页面和活动上工作，并正确记录他们的反应。
+
 3. 监督在场的任何监考人员的工作。
+
 4. 记录任何异常情况的笔记，无论是针对个别学生还是整个群体。
 
 来源：H. D. Hoover, A. N. Hieronymus, D. A. Frisbie, and S. B. Dunbar, 1993a. Copyright © 1993 by The University of Iowa. All rights reserved. Adapted from the Iowa Tests of Basic Skills, Directions for Administration, Forms K and L, Levels 9–14, p. 15, with permission of The Riverside Publishing Company.
-
-
-
-
 
 ## 标准化学业测验中学生的道德与不道德练习
 
 在学生参加标准化测评之前应给予何种类型的练习，这是一个你需要回答的重要问题。教育工作者对于什么是适当的做法并不一致（Cohen & Hyman, 1991; Mehrens, 1991; Mehrens & Kaminski, 1989; Popham, 1991）。争议涉及道德的测验准备做法。如果你以不当的方式准备学生，那么其测评结果的有效性就值得怀疑。某些测评前的活动是否给你的学生带来了其他学生无法获得的不当优势？如果你的学生接受了某些类型的练习，你或其他人还能有效解释他们的分数吗？如果你教给学生某些反应或答案，你能否正确地推广他们的测评结果？
 
-## 明显不道德的教学做法
+### 明显不道德的教学做法
 
 确保有效性的指导原则之一是测评结果的推广性。参见表 3.2。即，你能否从学生所做的特定题目推断出学生在整个课程领域中的表现？如果不能，结果的有效性就很低。例如，假设社会研究某一领域有 100 个关键概念。进一步假设，与其教学生组织和理解这些概念和原理的策略，你只挑选了将出现在标准化社会研究测验上的四个概念，并只教关于这四个概念的问题的答案。假设你是一位好老师，你的学生在与这些概念相关的测验题目上会表现得非常好，他们的测验分数会更高。然而，你的学生很可能无法理解更广泛的社会研究框架，也没有办法理解和整合课程本应教授的全部概念集合。换句话说，通过将教学缩小到仅出现在特定测验上的少数任务，你未能为学生提供组织社会研究概念和原理的赋能策略。此外，你无法将他们的测验结果解释为反映他们对课程概念和原理的一般知识。通过只教授这四个概念，你使学生的测验结果无效化并损害了学生的教育。
 
 当你评估学生时，你希望从学生的表现推广到课程框架本应培养的更大更广的能力和知识领域。特定测验或评估上的反应只是学生在学习目标所暗示的更大领域中可能表现的标志或指针。然而，如果你只对评估上的问题或任务进行特定练习，你就只将学生的学习聚焦于这少数任务。这种狭窄聚焦的教学和学习几乎不可能推广到教育真正目标的更广泛的学习目标。
 
-## 从道德到不道德的做法范围
+### 从道德到不道德的做法范围
 
 你可以提供各种练习活动来帮助学生提高在测评上的表现。哪些是合适的？以下是测评准备活动的有序列表，按从最合法到最不合法的顺序排列（Mehrens & Kaminski, 1989）：
 
-- 1. 教授课程中的学习目标，而不将教学缩小到出现在标准化测评上的那些目标。
-- 2. 教授一般的应试策略，例如第 14 章中讨论的那些。
-- 3. 只教授那些专门与学生将参加的标准化测评上会出现目标相匹配的学习目标。
-- 4. 只教授那些专门与学生将参加的标准化测评上会出现目标相匹配的学习目标，并使用与测评上会出现相同的任务格式进行练习。
-- 5. 让学生对测评的已出版平行形式进行练习。
-- 6. 让学生对他们稍后将参加的相同问题和任务进行练习。
+1. 教授课程中的学习目标，而不将教学缩小到出现在标准化测评上的那些目标。
+
+2. 教授一般的应试策略，例如第 14 章中讨论的那些。
+
+3. 只教授那些专门与学生将参加的标准化测评上会出现目标相匹配的学习目标。
+
+4. 只教授那些专门与学生将参加的标准化测评上会出现目标相匹配的学习目标，并使用与测评上会出现相同的任务格式进行练习。
+
+5. 让学生对测评的已出版平行形式进行练习。
+
+6. 让学生对他们稍后将参加的相同问题和任务进行练习。
 
 大多数教育工作者会同意，第一项活动始终是道德的，因为教师的工作是教授官方课程。大多数教育工作者也会同意，第二项活动，即教学生如何应试并在其中发挥最佳水平，并不不道德。第六项活动总是被认为是不道德的，因为它将教学缩小到学生将被施测的特定测评程序，实际上消除了你从测评结果推广到课程规定的表现领域的可能性。
 
 因此，Mehrens 和 Kaminski 指出，道德与不道德的测验准备做法之间的界限在第 3 项活动和第 5 项活动之间。他们指出，决定因素在于学校希望多大程度地推广测验结果。活动越接近第五项，学校官员就越无法将学生的测评结果推广到官方课程——除非，当然，官方课程与测评工具完全相同。学校官员必须认识到，教育的目的是提高学生的胜任力、知识、文化意识和思维技能——而不是提高测验分数。
 
-## 两个指导原则
+### 两个指导原则
 
 Popham（1991）提供了两个伦理标准，概括了前述讨论中说明的原则。你可以用它们来判断你或学校其他人是否正在适当准备学生参加标准化测评：
 
 - 专业伦理：任何测验准备做法都不应违反教育专业的伦理标准（p. 13）。
+
 - 教育上的可辩护性：任何测验准备做法都不应提高学生的测验分数，而同时不提高学生对所测内容领域的掌握程度。（p. 13）
 
 ## 摘要
 
-## 测验类型和标准化调查组合
+### 测验类型和标准化调查组合
 
 - 有多种已出版的学业测验可用。本章将它们区分为两大类：标准化、经实证记录的测验和非标准化、未经实证记录的测验。
+
 - 标准化、经实证记录的测验包括设计用于跨越数个年级或年龄水平的分级测验，以及仅设计用于一个年级或课程的单级测验。
+
 - 分级测验包括学业调查组合，以及特定课程领域如数学或阅读中的标准参照和/或常模参照测验。
+
 - 单级测验衡量特定学科或课程如代数 I 或法语 II 的学业成绩。
+
 - 描述并举例说明了团体施测和个别施测的分级学业测验的特征，并提供了解释分数和利用测验结果进行教学规划的建议。具体测验列于附录 K。
+
 - 非标准化、未经实证记录的测验不采用来自受试样本的实证数据来改进和完善测验并记录其可靠性和有效性的程度。
 
-## 标准化测验结果的适当用途
+### 标准化测验结果的适当用途
 
 - 标准化学业测验可用于各种课堂内和课堂外的目的。特定标准化学业测验对这些用途的实用性取决于其与特定学校的课程相关性。
 
-## 标准化测验结果的不当用途
+### 标准化测验结果的不当用途
 
 - 对标准化学业测验组合的批评针对其固有属性、缺失属性，以及对学生和学校课程的影响。适当的测验选择和使用可以克服许多批评。
-- 学业测验分数的误用包括（a）未能考虑测量误差的可能性，（b）仅使用单一分数作为重要决策的唯一标准，（c）不加批判地接受分数作为特质的纯粹度量，以及（d）未能认识到学生的测验表现是由复杂的一系列先前条件造成的。
+
+
+
+# 学业测验分数的误用
+
+学业测验分数的误用包括（a）未能考虑测量误差的可能性，（b）仅使用单一分数作为重要决策的唯一标准，（c）不加批判地接受分数作为特质的纯粹度量，以及（d）未能认识到学生的测验表现是由复杂的一系列先前条件造成的。
 
 ## 如何施测标准化测验
 
-- 你必须为自己和学生准备好参加标准化测评，无论该测评是纸笔测验还是表现测验。本章提供了进行这些准备的适当方式的建议。
+你必须为自己和学生准备好参加标准化测评，无论该测评是纸笔测验还是表现测验。本章提供了进行这些准备的适当方式的建议。
 
 ## 标准化学业测评中学生的道德与不道德练习
 
-- 也有不适当或不道德的准备学生参加测评的方式。本章描述了从最不合法到最不合法的测评准备活动连续体，以便你能利用该连续体评判自己的行为。
+也有不适当或不道德的准备学生参加测评的方式。本章描述了从最不合法到最不合法的测评准备活动连续体，以便你能利用该连续体评判自己的行为。
 
 ## 重要术语和概念
 
-- Code of Fair Testing Practices in Education
-- Code of Professional Responsibilities in Educational Measurement
-- computer-prepared narrative reports (building report, item analysis report, profile report)
-- empirically documented
-- ethical test preparation practices
-- external uses of test results
-- generalizability of assessment results
-- in-level versus out-of-level testing
-- multilevel survey battery versus single-level test
-- Professional Ethics Principle and Educational Defensibility Principle
-- special norms
-- standardized test
-- state-mandated assessment
-- subtest
-- test level
-- within-classroom uses of test results
+- `Code of Fair Testing Practices in Education`
+- `Code of Professional Responsibilities in Educational Measurement`
+- `computer-prepared narrative reports` (building report, item analysis report, profile report)
+- `empirically documented`
+- `ethical test preparation practices`
+- `external uses of test results`
+- `generalizability of assessment results`
+- `in-level versus out-of-level testing`
+- `multilevel survey battery versus single-level test`
+- `Professional Ethics Principle and Educational Defensibility Principle`
+- `special norms`
+- `standardized test`
+- `state-mandated assessment`
+- `subtest`
+- `test level`
+- `within-classroom uses of test results`
 
 ## 练习与应用
 
-- 1. 使用测验出版商的目录、Mental Measurements Yearbooks 以及其他资源，确定一份符合作者对已出版学业测验分类方案中每一类别的已出版测验。与你的同学分享你的发现。
-- 2. 描述你所教（或计划教授）的学生、他们的社区和学科。给出具体例子说明在该情境中你可能以以下每种方式误用学业测验结果。与课程中的其他人分享你的发现。
-  - a. 在解释学生分数时未能考虑测量误差。
-  - b. 仅使用测验结果对学生做出决定。
-  - c. 不加批判地将学生的分数解释为衡量纯粹特质。
-  - d. 未能考虑导致特定学生测验表现的复杂原因。
-- 3. 使用 Popham 的两个伦理原则评估以下每种标准化测验准备做法的适当性。
-  - a. 学校使用某项测验的最新版本。教师使用学校不再施测的该测验版本来给学生特别练习。
-
-
-
-
+1. 使用测验出版商的目录、`Mental Measurements Yearbooks` 以及其他资源，确定一份符合作者对已出版学业测验分类方案中每一类别的已出版测验。与你的同学分享你的发现。
+2. 描述你所教（或计划教授）的学生、他们的社区和学科。给出具体例子说明在该情境中你可能以以下每种方式误用学业测验结果。与课程中的其他人分享你的发现。
+   - a. 在解释学生分数时未能考虑测量误差。
+   - b. 仅使用测验结果对学生做出决定。
+   - c. 不加批判地将学生的分数解释为衡量纯粹特质。
+   - d. 未能考虑导致特定学生测验表现的复杂原因。
+3. 使用 `Popham` 的两个伦理原则评估以下每种标准化测验准备做法的适当性。
+   - a. 学校使用某项测验的最新版本。教师使用学校不再施测的该测验版本来给学生特别练习。
 
 ## 解释常模参照分数
 
-## 学习目标
+### 学习目标
 
 学习本章后，你应达到以下目标：
 
-## 两种参照框架
+### 两种参照框架
 
-+   1. 解释为什么有必要同时使用常模参照和标准参照框架来正确理解学生的评估表现。 [3, 6, 4]
-+   2. 解释各种标准参照分数的优点和缺点。 [3, 4, 6]
-+   3. 解释常模参照分数的优点和缺点。 [3, 4, 6]
+1. 解释为什么有必要同时使用常模参照和标准参照框架来正确理解学生的评估表现。 `[3, 6, 4]`
+2. 解释各种标准参照分数的优点和缺点。 `[3, 4, 6]`
+3. 解释常模参照分数的优点和缺点。 `[3, 4, 6]`
 
-## 使用常模
+### 使用常模
 
-+   4. 解释本地、全国和特殊常模群体比较的目的和用途。 [3, 4]
-+   5. 应用相关性、代表性和时效性标准来评估常模数据的质量。 [3, 4]
+4. 解释本地、全国和特殊常模群体比较的目的和用途。 `[3, 4]`
+5. 应用相关性、代表性和时效性标准来评估常模数据的质量。 `[3, 4]`
 
-## 常模参照分数
+### 常模参照分数
 
-+   6. 在标准化测验出版商的常模表中准确查找学生的常模参照分数。 [3]
-+   7. 正确向家长解释他们孩子在标准化测验中获得的常模参照分数的含义。 [6, 4]
+6. 在标准化测验出版商的常模表中准确查找学生的常模参照分数。 `[3]`
+7. 正确向家长解释他们孩子在标准化测验中获得的常模参照分数的含义。 `[6, 4]`
 
-## 正态分布
+### 正态分布
 
-+   8. 指出一些教师和学校管理人员对学生能力、智力和成绩正态分布最常见的误解。 [6, 4, 7]
+8. 指出一些教师和学校管理人员对学生能力、智力和成绩正态分布最常见的误解。 `[6, 4, 7]`
 
-## 年级当量分数
+### 年级当量分数
 
-+   9. 指出一些教师和学校管理人员对年级当量分数最常见的七个误解。 [6, 4, 7]
+9. 指出一些教师和学校管理人员对年级当量分数最常见的七个误解。 `[6, 4, 7]`
 
-## 向家长解释分数
+### 向家长解释分数
 
-+   10. 利用你班级学生的标准化测验报告来证实你对他们的观察，识别他们的优势模式，发现可能需要补救的弱点，并了解整体群体的表现。 [3, 4]
+10. 利用你班级学生的标准化测验报告来证实你对他们的观察，识别他们的优势模式，发现可能需要补救的弱点，并了解整体群体的表现。 `[3, 4]`
 
-## 重要术语和概念
+### 重要术语和概念
 
-+   11. 解释本章末尾列出的术语和概念如何适用于解释教育评估结果。 [6]
+11. 解释本章末尾列出的术语和概念如何适用于解释教育评估结果。 `[6]`
 
 ## 本章简介
 
@@ -14815,46 +15684,44 @@ Popham（1991）提供了两个伦理标准，概括了前述讨论中说明的�
 
 本章的组织如下。第一，我们解释解释分数的两个基本框架：标准参照和常模参照。第二，我们讨论出版商的常模。我们描述不同类型的常模，如何使用它们，以及如何评估其质量。第三，我们展示标准参照和常模参照分数不同类型的概念图，以及它们之间的关系。第四，我们解释常模参照分数的含义、使用和解释。我们讨论百分位等级、标准分数、基于正态曲线的分数和年级当量分数等。第五，我们比较常模参照分数的含义，并为你提供解释它们并向家长说明的指导方针。
 
-
-
-
-
 ## 两个参照框架
 
-假设你做了一次拼写测试，你的分数是 45，得分方式是每个拼写正确的单词得一分。你表现得如何？仅知道你的任务是“拼写测试”并且你的分数是 45，你无法解读自己的表现。
+假设你做了一次拼写测试，你的分数是 `45`，得分方式是每个拼写正确的单词得一分。你表现得如何？仅知道你的任务是“拼写测试”并且你的分数是 `45`，你无法解读自己的表现。
 
 原始分数是你对学生在一次测评中的表现所赋予的分数（分值）。你可以通过累加正确答案的数量、每个任务的评定分数，或测评各部分所授予的分数点数来获得这些分数。正如前面的拼写分数示例所示，原始分数告诉学生他/她“得了多少分”，但几乎没有说明分数的含义。
 
 几乎所有的教育和心理测评都需要你使用某种类型的参照框架来解读学生的表现。参照框架是你用来将学生的表现与测评本身之外的某物进行比较的结构。外部框架增强了你对学生测评结果的解读。
 
-## 规范参照框架
+### 规范参照框架
 
 规范参照 你使用规范参照框架来通过将学生的测评表现与已明确界定的、参加过相同测评的其他学生群体的表现进行比较来解读学生的测评表现。已明确界定的其他学生群体称为规范群体。要做出有效的规范参照解读，规范群体中的所有人都必须在相同的条件下接受过与你的学生相同的测评（相同的时限、指导、设备和材料等）。这就是为什么当你想通过规范参照框架来解读标准化成就测验的结果时，必须严格按照施测说明进行施测的原因。
 
-要理解规范参照解读，让我们回到你在拼写测试上的分数。假设你的原始分数 45 意味着你的百分位等级（PR）是 99——也就是说，参加拼写测试的人中有 99% 的人得分低于 45。在你为自己祝贺之前，你应该确定你的原始分数所参照的规范群体中包含谁。如果你知道规范群体由三年级学生组成，与知道规范群体由成年人组成相比，你对自己表现的解读会有所不同。
+要理解规范参照解读，让我们回到你在拼写测试上的分数。假设你的原始分数 `45` 意味着你的百分位等级（`PR`）是 `99`——也就是说，参加拼写测试的人中有 `99%` 的人得分低于 `45`。在你为自己祝贺之前，你应该确定你的原始分数所参照的规范群体中包含谁。如果你知道规范群体由三年级学生组成，与知道规范群体由成年人组成相比，你对自己表现的解读会有所不同。
 
 规范参照解读的有效性 当规范群体界定不清时，你的规范参照解读的有效性会降低。你对规范群体中包含的人员了解得越多，你就能越好地在规范参照框架中解读学生的表现。例如，考虑解读你在拼写测试上的表现时，规范群体是一般成年人，与规范群体是赢得全国拼写比赛奖项的成年人之间的差异。
 
 规范参照分数 推导分数使规范参照解读变得更容易。现今对大多数出版的教育测验常规报告的推导分数集大致如下：
 
-- 1. 百分位等级说明在规范群体中低于某个特定原始分数的人所占的百分比。
-- 2. 线性标准分数说明某个特定原始分数相对于规范群体的平均数和标准差的位置。
-- 3. 标准化标准分数说明某个特定原始分数相对于拟合到规范群体的正态分布的位置。
-- 4. 年级当量分数说明某个特定原始分数对规范群体而言是平均值的年级安置。
+1. 百分位等级说明在规范群体中低于某个特定原始分数的人所占的百分比。
+2. 线性标准分数说明某个特定原始分数相对于规范群体的平均数和标准差的位置。
+3. 标准化标准分数说明某个特定原始分数相对于拟合到规范群体的正态分布的位置。
+4. 年级当量分数说明某个特定原始分数对规范群体而言是平均值的年级安置。
 
 ## 准则参照框架
 
-超越规范参照 规范参照不足以完全解读你的分数：你可能比其他人拼写更好——无论他们是谁——但你能拼写什么？至少，你需要知道拼写测试中选词的词库种类、选词数量以及选词过程。它们真的是单词，还是无意义的音节？它们是英语单词吗？它们是从最难（或最易）的英语单词列表中挑选的吗？测试有 45 个词还是 500 个词？测试中的词是否代表某个更大的类别或领域？拼写这些词是否要求你使用某些心理过程或应用某些拼写规则？
+超越规范参照 规范参照不足以完全解读你的分数：你可能比其他人拼写更好——无论他们是谁——但你能拼写什么？至少，你需要知道拼写测试中选词的词库种类、选词数量以及选词过程。它们真的是单词，还是无意义的音节？它们是英语单词吗？它们是从最难（或最易）的英语单词列表中挑选的吗？测试有 `45` 个词还是 `500` 个词？测试中的词是否代表某个更大的类别或领域？拼写这些词是否要求你使用某些心理过程或应用某些拼写规则？
 
-当你需要对学生的测评表现做出绝对解读时，这些问题尤其重要——例如，当你需要知道学生具体在哪些学习目标上遇到困难时。规范参照提供信息来帮助你对分数进行相对解读，但经常这些是不够的。例如，反映相对成就的分数，如名次顺序，可能有助于挑选最好的读者，或将班级分为较好、良好和较差的读者。然而，为了规划适当的教学，最终你需要知道每个学生的具体阅读技能以及每个学生遇到的特定类型的困难。当你的诊断和处方基于学生的错误模式，或基于你对他们错误推理或思维过程的分析，如第 13 章所述时，你必须放弃规范参照框架并使用准则参照框架。
+当你需要对学生的测评表现做出绝对解读时，这些问题尤其重要——例如，当你需要知道学生具体在哪些学习目标上遇到困难时。规范参照提供信息来帮助你对分数进行相对解读，但经常这些是不够的。例如，反映相对成就的分数，如名次顺序，可能有助于挑选最好的读者，或将班级分为较好、良好和较差的读者。然而，为了规划适当的教学，最终你需要知道每个学生的具体阅读技能以及每个学生遇到的特定类型的困难。当你的诊断和处方基于学生的错误模式，或基于你对他们错误推理或思维过程的分析，如第 `13` 章所述时，你必须放弃规范参照框架并使用准则参照框架。
 
 准则参照 你使用准则参照框架来推断学生在某个领域中能够做出的表现类型，而非学生在规范群体中的相对地位。你将学生的测评结果参照的该表现领域称为准则。当你教学时，最感兴趣的准则就是由你所在州的标准、你的课程框架和你的课程学习目标所暗示的表现领域。
 
 ### 准则参照解读的有效性
 
+
+
 当你希望推断学生状态的所指表现领域界定不清，或当你的测评是该领域的一个较差样本时，你的准则参照测评解读会失去有效性。你对测评任务所抽样的领域了解得越多，你就能越有效地区解读其结果。例如，如果你没有使用明确界定的学习目标陈述来构建你的测评，或如果你的测评未能充分代表由明确界定的学习目标集所暗示的广泛表现范围，那么你对准则参照解读就只有薄弱的基础。
 
-通过再次回顾拼写示例，你可以很容易地看出原因。假设你知道拼写领域是最常被拼错的 10,000 个英语单词，并且测评被构建为 100 个词的样本，代表该领域中的拼写模式。在这种情况下，你可以将你在 100 词测评上的 45 分解读为你知道这 10,000 个词中大约比例的估计。你可以看到，如果测评只有 50 个词，你的估计就不如有 100 个词时准确。10 个词的样本就更不准确了。此外，如果这 100 个词没有代表性地抽样该领域，即使有 100 个词，你的估计也会不那么准确。例如，这 100 个词可能只包含规则的拼写模式而忽略其他模式。因此，测评上的题目数量以及它们代表该领域的程度都[content]
+通过再次回顾拼写示例，你可以很容易地看出原因。假设你知道拼写领域是最常被拼错的 10,000 个英语单词，并且测评被构建为 100 个词的样本，代表该领域中的拼写模式。在这种情况下，你可以将你在 100 词测评上的 45 分解读为你知道这 10,000 个词中大约比例的估计。你可以看到，如果测评只有 50 个词，你的估计就不如有 100 个词时准确。10 个词的样本就更不准确了。此外，如果这 100 个词没有代表性地抽样该领域，即使有 100 个词，你的估计也会不那么准确。例如，这 100 个词可能只包含规则的拼写模式而忽略其他模式。因此，测评上的题目数量以及它们代表该领域的程度都
 
 ## 两个参照框架
 
@@ -14904,7 +15771,7 @@ Popham（1991）提供了两个伦理标准，概括了前述讨论中说明的�
 
 ## 使用常模
 
-## 常模的重要性
+### 常模的重要性
 
 规范参照说明一个学生的表现与他人的表现相比如何。你应该意识到，仅仅将学生相互比较并不是评估他们的很好理由（Hoover et al., 1993b）。以下是评估学生的几个主要原因：
 
@@ -14923,18 +15790,16 @@ Popham（1991）提供了两个伦理标准，概括了前述讨论中说明的�
 
 本章的其余部分讨论了教育评估中使用的各种规范参照分数和量表。作为教师，你不需要创建成长量表或计算量表分数。然而，你不需要创建成长量表或计算量表分数。
 
-
-
-
-
 你将被要求对学生进行解释和使用这些量表和分数。此外，你还应向学生及其家长解释这些分数报告的含义。
 
 ## 规范组的种类
 
+
+
 在你能够理解和使用常模参照分数之前，你需要理解常模和常模组的含义。常模组是测试手册报告表现的庞大且具有代表性的学生样本。该常模组在特定评估上的表现代表了该学生群体在该特定评估上的当前平均水平。然而，一个群体的当前平均值并不代表标准，也不确立你的学校或你的学生应达到的目标。你的州的内容和绩效标准以及你的课程的学习目标告诉你学生应取得什么成就。然而，将你的学生和学校与常模组进行比较可以帮助你决定对学生的预期表现的一般范围，前提是你的学生与常模组中的学生相似。正如你将看到的，测试出版商在报告常模参照分数时可能会提供关于数个不同群体的信息。
 
-多常模组比较 通常情况下，一个学生属于多个群体。例如，一名14岁、八年级、有听力障碍的男孩参加了一项标准化数学概念测试，得到了32分的原始分。这可能代表以下百分位等级：
-
+### 多常模组比较
+通常情况下，一个学生属于多个群体。例如，一名14岁、八年级、有听力障碍的男孩参加了一项标准化数学概念测试，得到了32分的原始分。这可能代表以下百分位等级：
 - 在全国聋哑八年级学生群体中为99。
 - 在测试出版商的全国八年级标准化样本中为94。
 - 在他所在本地社区的八年级学生群体中为89。
@@ -14942,15 +15807,19 @@ Popham（1991）提供了两个伦理标准，概括了前述讨论中说明的�
 
 根据你必须做出的决定，参考学生分数的多个常模组可能是合适的。例如，职业咨询决策可能要求你将学生的能力与成就概况与学生正在寻求职业信息的多个职业或职业群体进行比较。仅将此人与其他“学生群体”进行比较可能为职业探索提供的信息较少。
 
-地方常模 对于你许多常模参照解释而言，你应比较学生的最合适的群体是地方常模组：同一学区同年级的学生群体。你和学生将与此群体互动最多。学校的测试项目中地方百分位等级或标准分数很容易编制，你的测试主管应在每次标准化测试实施时向你提供这些数据。出版商也为其客户提供此服务——不过通常需要额外费用。
+### 地方常模
+对于你许多常模参照解释而言，你应比较学生的最合适的群体是地方常模组：同一学区同年级的学生群体。你和学生将与此群体互动最多。学校的测试项目中地方百分位等级或标准分数很容易编制，你的测试主管应在每次标准化测试实施时向你提供这些数据。出版商也为其客户提供此服务——不过通常需要额外费用。
 
-全国常模 大多数常模参照的标准化成就和能力测验电池都有所谓的全国常模。原则上，全国常模组 supposed to 代表全国的学生，有些出版商为确保代表性付出了很大努力。但每个出版商对构成真正具有代表性的全国样本的定义略有不同，并且抽样过程也不同。结果是，不同出版商的常模不可比较。你应注意的是，没有任何出版商的常模样本完全反映全国的学校。学校参与出版商常模样本是自愿的。有时这会在特定出版商的常模中造成自我选择偏差，可能使常模偏向过去使用该出版商测试的学校（Baglin, 1981）。关于出版商如何获得常模样本的更详细描述见第18章。
+### 全国常模
+大多数常模参照的标准化成就和能力测验电池都有所谓的全国常模。原则上，全国常模组 supposed to 代表全国的学生，有些出版商为确保代表性付出了很大努力。但每个出版商对构成真正具有代表性的全国样本的定义略有不同，并且抽样过程也不同。结果是，不同出版商的常模不可比较。你应注意的是，没有任何出版商的常模样本完全反映全国的学校。学校参与出版商常模样本是自愿的。有时这会在特定出版商的常模中造成自我选择偏差，可能使常模偏向过去使用该出版商测试的学校（Baglin, 1981）。关于出版商如何获得常模样本的更详细描述见第18章。
 
 全国常模不必仅由某一年级的一般学生组成。出版商可能会提供单独的男/女常模，或为少数群体提供单独常模。有时提供的是众数年龄常模。众数年龄常模仅包括在特定年级水平的所有学生中，年龄接近该年级最典型实际年龄的学生。
 
-特殊常模组 对于某些测试，会形成特殊常模组。例子包括有听力或视力障碍的学生、智力障碍的学生、就读于特定课程或课程的学生，以及就读于地区学校的学生。当然，一个学生可能属于多个特殊群体。
+### 特殊常模组
+对于某些测试，会形成特殊常模组。例子包括有听力或视力障碍的学生、智力障碍的学生、就读于特定课程或课程的学生，以及就读于地区学校的学生。当然，一个学生可能属于多个特殊群体。
 
-学校平均常模 学校平均常模由全国学校样本中每个学校建筑的平均（均值）分数的汇总表组成，并提供这些平均值的相对排序信息。这种平均值的分布比单个学生分数的分布变化小得多。图17.1说明了某出版商阅读测试中这种变异性的差异。
+### 学校平均常模
+学校平均常模由全国学校样本中每个学校建筑的平均（均值）分数的汇总表组成，并提供这些平均值的相对排序信息。这种平均值的分布比单个学生分数的分布变化小得多。图17.1说明了某出版商阅读测试中这种变异性的差异。
 
 如果你的学校校长想知道学校的三年级平均分数与其它学校建筑相比如何，那么校长需要使用学校平均常模。对于个别学生的常模，则制作单个分数的分布并将其用作常模参照的基础。但个别学生分数变化很大，以至于将学校的平均值与该群体进行比较可能导致误解。
 
@@ -14984,13 +15853,11 @@ Popham（1991）提供了两个伦理标准，概括了前述讨论中说明的�
 
 ## 使用出版商的常模
 
-了解评估的常模时间 当学生在出版商建立常模的年份时间最接近的日期接受测试时，你可以获得学生在其常模组中地位的最准确估计。出版商通常会进行内插和外推来制定常模表：例如，他们可能会提供春季常模表，即使常模组实际上并未在春季进行测试。每个出版商的实证常模日期都不同，但出版商应在测试手册或技术报告中说明这些日期。为了准确，你的学校应在出版商实证常模期的中点日期前后两到三周内实施标准化测试。
+### 了解评估的常模时间
+当学生在出版商建立常模的年份时间最接近的日期接受测试时，你可以获得学生在其常模组中地位的最准确估计。出版商通常会进行内插和外推来制定常模表：例如，他们可能会提供春季常模表，即使常模组实际上并未在春季进行测试。每个出版商的实证常模日期都不同，但出版商应在测试手册或技术报告中说明这些日期。为了准确，你的学校应在出版商实证常模期的中点日期前后两到三周内实施标准化测试。
 
-评估常模的标准 一般公认（APA, AERA, & NCME, 1974）已发表的常模数据应满足三个R：相关性、代表性和可靠性。相关性意味着出版商提供的常模组应是你希望将学生与之比较的群体。代表性意味着常模样本必须基于精心设计的样本。测试出版商应向你提供有关用于确保代表性的子类划分（性别、年龄、社会经济水平等）的信息。请记住，样本量不如其代表性重要。（当然，如果学生总体非常庞大，具有代表性的样本必然很大。）
-
-
-
-
+### 评估常模的标准
+一般公认（APA, AERA, & NCME, 1974）已发表的常模数据应满足三个R：相关性、代表性和可靠性。相关性意味着出版商提供的常模组应是你希望将学生与之比较的群体。代表性意味着常模样本必须基于精心设计的样本。测试出版商应向你提供有关用于确保代表性的子类划分（性别、年龄、社会经济水平等）的信息。请记住，样本量不如其代表性重要。（当然，如果学生总体非常庞大，具有代表性的样本必然很大。）
 
 时效性意味着常模基于当前数据。随着课程、学校教育以及社会和经济因素的变化，学生在测试中的表现也会随之改变。此外，如果你的学校年复一年使用同一份测试形式，得分通常会提高，因为学生对格式已熟悉，教师也倾向于专门针对该测试进行准备（Linn, Graue, & Sanders, 1990; Shepard, 1990; Wiser & Lenke, 1987）。如果常模不是最近的，它们会产生误导，给人一种你的学生学习得比实际更好的印象。
 
@@ -15014,11 +15881,13 @@ Popham（1991）提供了两个伦理标准，概括了前述讨论中说明的�
 
 ## 示例 17.1
 
-百分位常模表示例：Differential Aptitude Tests, Level 1, Form C.
 
-| MECHANICAL REASONING | | | | | | | | | | | |
+
+## 百分位常模表示例：Differential Aptitude Tests, Level 1, Form C.
+
+| MECHANICAL REASONING |  |  |  |  |  |  |  |  |  |  |  |
 |---|---|---|---|---|---|---|---|---|---|---|---|
-| MALE | | | | FEMALE | | | | COMBINED | | | |
+| MALE |  |  |  | FEMALE |  |  |  | COMBINED |  |  |  |
 | Raw Score | % -ile Rank | Sta-nine | Scaled Score | Raw Score | % -ile Rank | Sta-nine | Scaled Score | Raw Score | % -ile Rank | Sta-nine | Scaled Score |
 | 60 | 99 | 9 | 343 | 60 | 99 | 9 | 343 | 60 | 99 | 9 | 343 |
 | 59 | 99 | 9 | 330 | 59 | 99 | 9 | 330 | 59 | 99 | 9 | 330 |
@@ -15071,15 +15940,17 @@ Popham（1991）提供了两个伦理标准，概括了前述讨论中说明的�
 
 教师和辅导员应使用哪种性别常模？答案取决于他们如何使用测试分数。例如，DAT 为每个学生的八个认知领域提供能力与弱点概况。教师和辅导员使用此概况帮助学生规划进一步的学习和职业。DAT 出版商鼓励使用分性别常模：
 
-尽管乍一看，按女性和男性分别报告常模似乎代表了不可取的性别歧视形式；事实上，恰恰相反。
+> 尽管乍一看，按女性和男性分别报告常模似乎代表了不可取的性别歧视形式；事实上，恰恰相反。
+>
+> 在 DAT 的某些测试中，两个性别的得分通常不同。特别是，男性在机械推理测试中得分高于女性，在空间关系测试中也略高于女性，而女性在感知速度和准确性测试中得分更高，在拼写测试中也略高于男性。其中一些差异在教育和职业规划中可能具有相当大的意义。……
+>
+> 使用分性别常模不仅为男性与女性提供了与同性别学生表现进行比较的机会，也提供了与异性学生进行比较的机会。……
+>
+> 尽管工作世界发生了最近的变化，仍然有许多职业领域由一个性别主导。因此，在为希望进入机械领域的女性提供咨询时，她在机械推理测试上的分数应与同年级的男性进行比较。另一方面，在为希望进入文职或编辑领域的男性提供咨询时，他在感知速度和准确性测试以及拼写测试上的分数应与同年级的女性进行比较。……
+>
+> 由于女性和男性在 DAT 的许多测试中表现大致相同，随着就业市场的不断变化，性别差异……可能会随着时间的推移而减弱。（Psychological Corporation, 1991, pp. 31–33）
 
-在 DAT 的某些测试中，两个性别的得分通常不同。特别是，男性在机械推理测试中得分高于女性，在空间关系测试中也略高于女性，而女性在感知速度和准确性测试中得分更高，在拼写测试中也略高于男性。其中一些差异在教育和职业规划中可能具有相当大的意义。……
 
-使用分性别常模不仅为男性与女性提供了与同性别学生表现进行比较的机会，也提供了与异性学生进行比较的机会。……
-
-尽管工作世界发生了最近的变化，仍然有许多职业领域由一个性别主导。因此，在为希望进入机械领域的女性提供咨询时，她在机械推理测试上的分数应与同年级的男性进行比较。另一方面，在为希望进入文职或编辑领域的男性提供咨询时，他在感知速度和准确性测试以及拼写测试上的分数应与同年级的女性进行比较。……
-
-由于女性和男性在 DAT 的许多测试中表现大致相同，随着就业市场的不断变化，性别差异……可能会随着时间的推移而减弱。（Psychological Corporation, 1991, pp. 31–33）
 
 务必使用与学生参加评估时间相对应的常模表。在我们的示例中，学年秋季的原始分数 48 对应的百分位等级为 99。如果你查阅春季常模表中的原始分数 48，其百分位等级会略低。百分位等级的降低反映了学生在一年中的学习或进步。
 
@@ -15098,7 +15969,7 @@ Popham（1991）提供了两个伦理标准，概括了前述讨论中说明的�
 
 - 5. 可能与正确百分比分数混淆。
 - 6. 可能与某些其他类型的两位数字导出分数混淆。
-- 7. 尺度中间的 PR 差异往往被过度解释。分布尾部相同幅度的差异往往被低估。
+- 7. 尺度中间的 `PR` 差异往往被过度解释。分布尾部相同幅度的差异往往被低估。
 
 由于百分位等级易于理解，你的学区很可能会报告它们。百分位等级也易于计算。示例 17.2 显示了该程序。同样的方法可用于你班级或整个学区的结果。
 
@@ -15110,61 +15981,59 @@ Popham（1991）提供了两个伦理标准，概括了前述讨论中说明的�
 
 通常，线性标准分数具有与它们派生的原始分数相同的分布形状（百分位等级和非线性标准分数并非如此），并且可用于通过将它们置于相同的数值尺度上来使两个分布更具可比性。
 
-> ¹ 标准差是一个衡量分布中分数离散程度的指标。本书中用 SD 表示的标准差在附录 I 中有解释。
+> ¹ 标准差是一个衡量分布中分数离散程度的指标。本书中用 `SD` 表示的标准差在附录 I 中有解释。
 
-
-
-
-
-# 示例 17.2
+## 示例 17.2
 
 计算 25 名学生班级百分位等级的示例。
 
 | 原始分 | 划记 | 频数 | 累积频数 | 百分位等级 |
 |---|---|---|---|---|
-| PR = 1/2 [具有该分数的人数] + [低于该分数的人数] / 总人数 × 100 | | | | |
-| 36 | / | 1 | 25 | 98 = (.5 + 24)/25 × 100 |
+| `PR = 1/2 [具有该分数的人数] + [低于该分数的人数] / 总人数 × 100` | | | | |
+| 36 | / | 1 | 25 | `98 = (.5 + 24)/25 × 100` |
 | 35 |  | 0 | 24 | 96 |
 | 34 |  | 0 | 24 | 96 |
-| 33 |  | 0 | 24 | 96 = (0 + 24)/25 × 100 |
-| 32 | / | 1 | 24 | 94 = (.5 + 23)/25 × 100 |
-| 31 | / | 1 | 23 | 90 = (.5 + 22)/25 × 100 |
-| 30 |  | 0 | 22 | 88 = (0 + 22)/25 × 100 |
-| 29 | // | 2 | 22 | 84 = (1 + 20)/25 × 100 |
-| 28 | IIII | 4 | 20 | 72 = (2 + 16)/25 × 100 |
-| 27 | IIII | 5 | 16 | 54 = (2.5 + 11)/25 × 100 |
-| 26 | IIII / | 6 | 11 | 32 = (3 + 5)/25 × 100 |
-| 25 | // | 2 | 5 | 16 = (1 + 3)/25 × 100 |
-| 24 | / | 1 | 3 | 10 = (.5 + 2)/25 × 100 |
+| 33 |  | 0 | 24 | `96 = (0 + 24)/25 × 100` |
+| 32 | / | 1 | 24 | `94 = (.5 + 23)/25 × 100` |
+| 31 | / | 1 | 23 | `90 = (.5 + 22)/25 × 100` |
+| 30 |  | 0 | 22 | `88 = (0 + 22)/25 × 100` |
+| 29 | // | 2 | 22 | `84 = (1 + 20)/25 × 100` |
+| 28 | IIII | 4 | 20 | `72 = (2 + 16)/25 × 100` |
+| 27 | IIII | 5 | 16 | `54 = (2.5 + 11)/25 × 100` |
+| 26 | IIII / | 6 | 11 | `32 = (3 + 5)/25 × 100` |
+| 25 | // | 2 | 5 | `16 = (1 + 3)/25 × 100` |
+| 24 | / | 1 | 3 | `10 = (.5 + 2)/25 × 100` |
 | 23 |  | 0 | 2 | 8 |
-| 22 |  | 0 | 2 | 8 = (0 + 2)/25 × 100 |
-| 21 | / | 1 | 2 | 6 = (.5 + 1)/25 × 100 |
+| 22 |  | 0 | 2 | `8 = (0 + 2)/25 × 100` |
+| 21 | / | 1 | 2 | `6 = (.5 + 1)/25 × 100` |
 | 20 |  | 0 | 1 | 4 |
 | 19 |  | 0 | 1 | 4 |
 | 18 |  | 0 | 1 | 4 |
 | 17 |  | 0 | 1 | 4 |
 | 16 |  | 0 | 1 | 4 |
-| 15 |  | 0 | 1 | 4 = (0 + 1)/25 × 100 |
-| 14 | / | 1 | 1 | 2 = (.5 + 0)/25 × 100 |
-N = 25
+| 15 |  | 0 | 1 | `4 = (0 + 1)/25 × 100` |
+| 14 | / | 1 | 1 | `2 = (.5 + 0)/25 × 100` |
 
-## 逐步说明
+`N = 25`
+
+### 逐步说明
 
 - 1. 按降序列出可能的分数（第 1 列）。（如需可将分数分组为区间。）
 - 2. 统计获得每个分数的学生人数（第 2 列）。
 - 3. 求和每个分数的学生人数（第 3 列）。
-- 4. 从最低分数的列底部开始，连续累加频数。将每次累加的和填入累积频数列（第 4 列）。例如，0 + 1 = 1，...，2 + 1 = 3，3 + 2 = 5，等等。
+- 4. 从最低分数的列底部开始，连续累加频数。将每次累加的和填入累积频数列（第 4 列）。例如，`0 + 1 = 1`，...，`2 + 1 = 3`，`3 + 2 = 5`，等等。
 - 5. 计算每个分数的百分位等级（第 5 列）。下面以分数 27 为例。
-  - (a) 计算该分数频数的一半（1/2 × 5 = 2.5）。
-  - (b) 将 (a) 的结果加上该分数下方累积频数（2.5 + 11 = 13.5）。
-  - (c) 将 (b) 的结果除以总分数数（13.5 ÷ 25 = .54）。
-  - (d) 将 (c) 的结果乘以 100（.54 × 100 = 54）。
+
+  - (a) 计算该分数频数的一半（`1/2 × 5 = 2.5`）。
+  - (b) 将 (a) 的结果加上该分数下方累积频数（`2.5 + 11 = 13.5`）。
+  - (c) 将 (b) 的结果除以总分数数（`13.5 ÷ 25 = .54`）。
+  - (d) 将 (c) 的结果乘以 100（`.54 × 100 = 54`）。
 
 线性标准分数之所以称为线性，是因为如果你将每个原始分与其对应的线性标准分数在图表上作图并连接这些点，你将始终得到一条直线。
 
-## z 分数
+### `z` 分数
 
-最基本的线性标准分数是 z 分数，它表示原始分相对于给定分布均值之上（或之下）的标准差单位数。其他线性标准分数均由 z 分数计算得出。公式 17.1 解释了这一点。
+最基本的线性标准分数是 `z` 分数，它表示原始分相对于给定分布均值之上（或之下）的标准差单位数。其他线性标准分数均由 `z` 分数计算得出。公式 17.1 解释了这一点。
 
 ```
 z = (X - M) / SD
@@ -15173,48 +16042,50 @@ z = (X - M) / SD
 
 其中
 
-- X 表示原始分
-- M 表示该组的原始分均值（平均值）
-- SD 表示该组原始分的标准差
+- `X` 表示原始分
+- `M` 表示该组的原始分均值（平均值）
+- `SD` 表示该组原始分的标准差
 
 下面是如何应用该公式的示例：
 
-## 示例
+### 示例
 
-使用公式 17.1 计算线性 z 分数的示例
+使用公式 17.1 计算线性 `z` 分数的示例
 
-假设 Ashley 在 A 测试中的原始分为 38。假设该测试均值为 44，标准差为 4。对应的 z 分数计算如下：
+假设 Ashley 在 A 测试中的原始分为 38。假设该测试均值为 44，标准差为 4。对应的 `z` 分数计算如下：
 
 ```
 z = (38 - 44)/4 = -6/4 = -1.5
 ```
 
-z 分数表示原始分相对于均值之上或之下的标准差数。例如，如果学生的原始分低于均值，距离等于该组标准差的一倍半，则学生的 z 分数为 -1.50。当原始分低于均值时 z 分数为负，原始分高于均值时为正，原始分恰好等于均值时为零。
+`z` 分数表示原始分相对于均值之上或之下的标准差数。例如，如果学生的原始分低于均值，距离等于该组标准差的一倍半，则学生的 `z` 分数为 -1.50。当原始分低于均值时 `z` 分数为负，原始分高于均值时为正，原始分恰好等于均值时为零。
 
-使用 z 分数的优点在于，它们以距均值的距离形式传达学生的常模参照成绩。在许多群体中，大多数学生的分数集中在均值附近，通常在均值两侧一个标准差之内。均值上方一个标准差的距离为 z = +1.0；均值下方一个标准差的距离为 z = -1.0。因此，你会将 z 分数在 +1.0 到 -1.0 之间的学生解释为具有典型或平均水平的成绩。（请记住，这是一个常模参照框架，而不是标准参照框架。也就是说，解释是相对于他人，而不是绝对的。）同样，你会将 z = -1.5 或更低的学生解释为具有异常低的成绩，因为很少有学生的 z 分数小于或等于 -1.5。你会将 z = +1.5 或更高的学生解释为具有异常高的成绩，因为相对较少学生能达到 +1.50 或更高的 z 分数。
+使用 `z` 分数的优点在于，它们以距均值的距离形式传达学生的常模参照成绩。在许多群体中，大多数学生的分数集中在均值附近，通常在均值两侧一个标准差之内。均值上方一个标准差的距离为 `z = +1.0`；均值下方一个标准差的距离为 `z = -1.0`。因此，你会将 `z` 分数在 +1.0 到 -1.0 之间的学生解释为具有典型或平均水平的成绩。（请记住，这是一个常模参照框架，而不是标准参照框架。也就是说，解释是相对于他人，而不是绝对的。）同样，你会将 `z = -1.5` 或更低的学生解释为具有异常低的成绩，因为很少有学生的 `z` 分数小于或等于 -1.5。你会将 `z = +1.5` 或更高的学生解释为具有异常高的成绩，因为相对较少学生能达到 +1.50 或更高的 `z` 分数。
 
-使用 z 分数的另一个优点是可以将具有不同度量的原始分放在同一常模参照量表上。考虑以下示例，其中同一学生在磅和千克两种单位下都被测量。注意当每个学生的测量值转换为 z 分数时会发生什么。
+使用 `z` 分数的另一个优点是可以将具有不同度量的原始分放在同一常模参照量表上。考虑以下示例，其中同一学生在磅和千克两种单位下都被测量。注意当每个学生的测量值转换为 `z` 分数时会发生什么。
 
-## 示例
+### 示例
 
-示例说明学生的 z 分数即使测量尺度发生变化也保持不变。
+示例说明学生的 `z` 分数即使测量尺度发生变化也保持不变。
 
 | 学生 | 千克体重 | | 磅体重 | |
-| | X | z | X | z |
+| | `X` | `z` | `X` | `z` |
 | A | 48 | -1.52 | 105.2 | -1.52 |
 | B | 52 | -0.17 | 114.4 | -0.17 |
 | C | 54 | -0.51 | 118.8 | 0.51 |
 | D | 56 | 1.18 | 123.2 | 1.18 |
 
-即使磅的均值和标准差与千克的均值和标准差不同，学生在分布中的相对位置是相同的。这由 z 分数表达（磅和千克的 z 分数相同），而不是由磅和千克的原始分表达。
+即使磅的均值和标准差与千克的均值和标准差不同，学生在分布中的相对位置是相同的。这由 `z` 分数表达（磅和千克的 `z` 分数相同），而不是由磅和千克的原始分表达。
 
-z 分数有几个实际缺点。它很难向学生和家长解释，因为理解它需要理解均值和标准差。另一个实际缺点是使用了正负号。转录错误导致代数符号被遗漏或互换的情况很常见。此外，你会发现很难向学生（或家长）解释为什么评估表现会报告为负数和/或分数。例如，学生可能会说：“我答对了 45 题中的 15 题。我的分数怎么会是 -1.34 呢？”同样，小数点也容易出现转录错误。
+`z` 分数有几个实际缺点。它很难向学生和家长解释，因为理解它需要理解均值和标准差。另一个实际缺点是使用了正负号。转录错误导致代数符号被遗漏或互换的情况很常见。此外，你会发现很难向学生（或家长）解释为什么评估表现会报告为负数和/或分数。例如，学生可能会说：“我答对了 45 题中的 15 题。我的分数怎么会是 -1.34 呢？”同样，小数点也容易出现转录错误。
 
-然而，这些实际问题可以通过将 z 分数转换为其他类型的分数来轻松克服。这些额外的转换在保持 z 分数的概念常模参照优势的同时克服了其实际局限性。
+然而，这些实际问题可以通过将 `z` 分数转换为其他类型的分数来轻松克服。这些额外的转换在保持 `z` 分数的概念常模参照优势的同时克服了其实际局限性。
 
-## SS 分数
+### `SS` 分数
 
-图 17.2 线性标准分数分支下的第二种分数是 SS 分数。SS 分数表示原始分在均值为 50、标准差为 10 的分布中的位置。为了弥补 z 分数的一些缺点，一些出版商应用了一种修改（转换）来消除负分数和 z 分数的分数部分。SS 分数的公式显示了如何实现这两点：
+
+
+图 17.2 线性标准分数分支下的第二种分数是 `SS` 分数。`SS` 分数表示原始分在均值为 50、标准差为 10 的分布中的位置。为了弥补 `z` 分数的一些缺点，一些出版商应用了一种修改（转换）来消除负分数和 `z` 分数的分数部分。`SS` 分数的公式显示了如何实现这两点：
 
 ```
 SS = 10z + 50
@@ -15222,38 +16093,40 @@ SS = 10z + 50
 [Eq. 17.2]
 ```
 
-首先计算 z 分数；然后将每个 z 分数转换为 SS 分数：将每个 z 乘以 10，将乘积四舍五入到最接近的整数，最后加上 50。乘以 10 并四舍五入消除了 z 分数的小数。加上 50 消除了 z 分数的负值。下面是如何使用该公式的示例。
+首先计算 `z` 分数；然后将每个 `z` 分数转换为 `SS` 分数：将每个 `z` 乘以 10，将乘积四舍五入到最接近的整数，最后加上 50。乘以 10 并四舍五入消除了 `z` 分数的小数。加上 50 消除了 `z` 分数的负值。下面是如何使用该公式的示例。
 
 ## 示例
 
-示例说明如何将学生的 z 分数转换为 SS 分数。
+示例说明如何将学生的 `z` 分数转换为 `SS` 分数。
 
-假设 Ashley 的 z 分数计算为 −1.5。（参见之前的示例。）要将其转换为 SS 分数，将其乘以 10 并将结果加上 50。因此，
+假设 Ashley 的 `z` 分数计算为 −1.5。（参见之前的示例。）要将其转换为 `SS` 分数，将其乘以 10 并将结果加上 50。因此，
 
+```
 SS = 10(−1.5) + 50
 = −15 + 50 = 35
+```
 
-应用此转换到 z 分数后，SS 分数的分布将具有均值 50 和标准差 10。一旦你知道这一事实，你就可以通过在脑中将 SS 分数转换回 z 分数来解释任何人的 SS 分数。
+应用此转换到 `z` 分数后，`SS` 分数的分布将具有均值 50 和标准差 10。一旦你知道这一事实，你就可以通过在脑中将 `SS` 分数转换回 `z` 分数来解释任何人的 `SS` 分数。
 
 ## 示例
 
-示例说明如何通过将其转换回 z 分数来解释学生的 SS 分数。
+示例说明如何通过将其转换回 `z` 分数来解释学生的 `SS` 分数。
 
-Ashley 的 SS 分数为 35；35 分比 50 的均值低 15 分，即低 1.5 个标准差。因此，Ashley 的 z 分数为 −1.5。
+Ashley 的 `SS` 分数为 35；35 分比 50 的均值低 15 分，即低 1.5 个标准差。因此，Ashley 的 `z` 分数为 −1.5。
 
-SS 分数的优点在于不改变原始分分布的形状。SS 分数的分布始终具有均值 50 和标准差 10。SS 分数可以用标准差单位解释，同时避免负数和分数小数。缺点是需要理解标准差和线性转换的概念才能解释它们。
+`SS` 分数的优点在于不改变原始分分布的形状。`SS` 分数的分布始终具有均值 50 和标准差 10。`SS` 分数可以用标准差单位解释，同时避免负数和分数小数。缺点是需要理解标准差和线性转换的概念才能解释它们。
 
 ## 线性标准分数的比较
 
 如果我们展示它们之间的数值关系，可能会帮助你理解这些分数。因为所有线性标准分数系统都反映本质上相同的信息，一旦你知道乘数和加常数，解释其含义就很容易。下一个示例显示了每种分数类型如何相互关联以及与原始分数的关系。²
 
-## 示例
+### 示例
 
-示例比较同一原始分的 z 分数和 SS 分数
+示例比较同一原始分的 `z` 分数和 `SS` 分数
 
-| 均值 M = 41、标准差 SD = 3 的群体中的原始分 | 对应每个原始分的线性标准分数 |  |
+| 均值 `M` = 41、标准差 `SD` = 3 的群体中的原始分 | 对应每个原始分的线性标准分数 |  |
 |---|---|---|
-|  | z 分数 | SS 分数 |
+|  | `z` 分数 | `SS` 分数 |
 | 32 | −3.0 | 20 |
 | 35 | −2.0 | 30 |
 | 38 | −1.0 | 40 |
@@ -15266,19 +16139,15 @@ SS 分数的优点在于不改变原始分分布的形状。SS 分数的分布�
 
 我们将讨论图 17.2 的标准化标准分数分支。但首先我们需要讨论分数的正态分布。
 
-定义 评估开发者发现将分数转换为共同分布形式是有利的：正态分布。正态分布，有时称为正态曲线，是 1733 年由 Abraham deMoivre 发明的数学模型（Pearson, 1924）。它由一个特定方程定义，该方程取决于两个特定数字：均值和标准差，表明存在许多正态分布，每个都有不同的均值和/或标准差。图 17.3 显示了几种不同的正态曲线。每个都是通过使用正态方程并在图表上绘制点得到的。在图 17.3A 中，每个正态分布具有相同的均值但不同的标准差。尽管每个都以 X 轴上的同一点为中心，但有些看起来更平、更分散，因为其标准差更大。图 17.3B 显示了三个正态曲线，每个具有相同的标准差但不同的均值。每个的离散程度相同，但每个都以分数尺度上的不同点为中心。
+定义 评估开发者发现将分数转换为共同分布形式是有利的：正态分布。正态分布，有时称为正态曲线，是 1733 年由 Abraham deMoivre 发明的数学模型（Pearson, 1924）。它由一个特定方程定义，该方程取决于两个特定数字：均值和标准差，表明存在许多正态分布，每个都有不同的均值和/或标准差。图 17.3 显示了几种不同的正态曲线。每个都是通过使用正态方程并在图表上绘制点得到的。在图 17.3A 中，每个正态分布具有相同的均值但不同的标准差。尽管每个都以 `X` 轴上的同一点为中心，但有些看起来更平、更分散，因为其标准差更大。图 17.3B 显示了三个正态曲线，每个具有相同的标准差但不同的均值。每个的离散程度相同，但每个都以分数尺度上的不同点为中心。
 
 每个正态曲线都是光滑且连续的；每个都具有对称的钟形。理论上，正态曲线永远不会触及基线（水平轴），而是渐近于它，从均值向两个方向延伸到无穷远。实际原始分分布的图形是不对称且锯齿状的。对于实际原始分分布，最低可能分数为 0，最高可能分数等于评估中的题目总数。实际分布与数学定义的正态曲线如何比较的想法可以从示例 17.3 中获得。两个分布具有相同的均值和相同的标准差。此正态曲线近似实际分布但并不完全匹配。
 
-## 自然法则与正态分布
+### 自然法则与正态分布
 
 早期使用正态曲线的人们相信某种自然法则决定了几乎所有人类特征都是
 
-
-
-
-
-## 图 17.3 不同正态分布的插图。
+### 图 17.3 不同正态分布的插图。
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_410_0.png)
 
@@ -15288,7 +16157,7 @@ B. 具有不同均值但相同标准差的正态分布。
 
 > 来源：摘自 C.M. Lindvall 和 A. J. Nitko 所著《Measuring Pupil Achievement and Aptitude》第 2 版（第 87 页），1975 年，纽约：Harcourt Brace Jovanovich。经作者许可转载。
 
-## 例 17.3
+### 例 17.3
 
 数学定义的正态曲线（平滑曲线）叠加在 505 名 12 年级学生创造力测验成绩的实际分布（直方图）上的例子。两个分布具有相同的均值和标准差。
 
@@ -15302,13 +16171,13 @@ B. 具有不同均值但相同标准差的正态分布。
 
 从你自己的经验中，你知道你可以控制测验分数分布的形状。例如，如果测验的所有题目都很简单，就会有很多高分和很少的低分。非常困难的测验会有很多低分和很少的高分。关键是，正态分布是一个方便的模型，但你不应该相信它是教育成就结果的自然表现。
 
-## 正态分布中的百分位等级和 z 分数
+### 正态分布中的百分位等级和 `z` 分数
 
-要理解百分位等级与正态曲线 z 分数之间的关系，你需要仔细研究图 17.4 顶部的图表。如果我们将正态分布切成宽度为一个标准差的区段，每个区段将具有固定的案例百分比（见图 17.4）或正态曲线下的面积。例如，位于均值正上方宽度为一个标准差的区段包含大约 34% 的面积。对称地，位于均值正下方的相比较区段也包含 34%。这两个区段一起包含 68% 的面积。因此，正态分布中 68% 的面积将在均值的一个标准差之内；95% 将在两个标准差之内；99.7% 的面积将在三个标准差之内。因此，如果一个分布是正态的，几乎所有的分数将跨越相当于六个标准差的范围。
+要理解百分位等级与正态曲线 `z` 分数之间的关系，你需要仔细研究图 17.4 顶部的图表。如果我们将正态分布切成宽度为一个标准差的区段，每个区段将具有固定的案例百分比（见图 17.4）或正态曲线下的面积。例如，位于均值正上方宽度为一个标准差的区段包含大约 34% 的面积。对称地，位于均值正下方的相比较区段也包含 34%。这两个区段一起包含 68% 的面积。因此，正态分布中 68% 的面积将在均值的一个标准差之内；95% 将在两个标准差之内；99.7% 的面积将在三个标准差之内。因此，如果一个分布是正态的，几乎所有的分数将跨越相当于六个标准差的范围。
 
-你可以使用这些关于各种区段中案例百分比的事实来确定正态分布中百分位等级与 z 分数之间的对应关系。为了强调我们只谈论正态分布，图 17.4 将 z 分数表示为 zₙ。这种百分位等级对应关系，对所有正态分布都相同，使得正态分布中标准分数的解释变得容易。例如，查看图 17.4 中的图表和图表下方的两个刻度。zₙ = −2.00 下方的案例百分比为 2.27%（= 0.13 + 2.14）。（图 17.4 还显示了 T 分数，我们将在本章后面解释。）因此，在正态分布中，对应于 zₙ = −2.00 的百分位等级为（四舍五入）2。其他 z 分数的百分位等级可以类似地从图 17.4 中计算出来，如下面的例子所示。图 17.4 绘图下方的图表提供了关于 zₙ 分数与正态曲线之间百分位等级对应关系的更完整信息。
+你可以使用这些关于各种区段中案例百分比的事实来确定正态分布中百分位等级与 `z` 分数之间的对应关系。为了强调我们只谈论正态分布，图 17.4 将 `z` 分数表示为 `zₙ`。这种百分位等级对应关系，对所有正态分布都相同，使得正态分布中标准分数的解释变得容易。例如，查看图 17.4 中的图表和图表下方的两个刻度。`zₙ` = −2.00 下方的案例百分比为 2.27%（= 0.13 + 2.14）。（图 17.4 还显示了 `T` 分数，我们将在本章后面解释。）因此，在正态分布中，对应于 `zₙ` = −2.00 的百分位等级为（四舍五入）2。其他 `z` 分数的百分位等级可以类似地从图 17.4 中计算出来，如下面的例子所示。图 17.4 绘图下方的图表提供了关于 `zₙ` 分数与正态曲线之间百分位等级对应关系的更完整信息。
 
-## 图 17.4 正态分布中百分位等级、z 分数和 T 分数之间的关系。
+### 图 17.4 正态分布中百分位等级、`z` 分数和 `T` 分数之间的关系。
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_411_0.png)
 
@@ -15318,45 +16187,72 @@ B. 具有不同均值但相同标准差的正态分布。
 
 选定的百分位等级
 
-zₙ 分数
+`zₙ` 分数
 
-T 分数
+`T` 分数
 
-| %ile rank | Normalized*: zₙ | T | %ile rank | Normalized*: zₙ | T | %ile rank | Normalized*: zₙ | T | %ile rank | Normalized*: zₙ | T |
+| %ile rank | Normalized*: `zₙ` | `T` | %ile rank | Normalized*: `zₙ` | `T` | %ile rank | Normalized*: `zₙ` | `T` | %ile rank | Normalized*: `zₙ` | `T` |
 |---|---|---|---|---|---|---|---|---|---|---|---|
+
+
+
 | 0.05 | -2.6 | 24 | 26 | -0.6 | 44 | 51 | 0.0 | 50 | 76 | 0.7 | 57 |
+
 | 1 | -2.3 | 27 | 27 | -0.6 | 44 | 52 | 0.1 | 51 | 77 | 0.7 | 57 |
+
 | 2 | -2.1 | 29 | 28 | -0.6 | 44 | 53 | 0.1 | 51 | 78 | 0.8 | 58 |
+
 | 4 | -1.8 | 32 | 29 | -0.6 | 44 | 54 | 0.1 | 51 | 79 | 0.8 | 58 |
+
 | 5 | -1.7 | 33 | 30 | -0.5 | 45 | 55 | 0.1 | 51 | 80 | 0.8 | 58 |
+
 | 6 | -1.6 | 34 | 31 | -0.5 | 45 | 56 | 0.2 | 52 | 81 | 0.9 | 59 |
+
 | 7 | -1.5 | 35 | 32 | -0.5 | 45 | 57 | 0.2 | 52 | 82 | 0.9 | 59 |
+
 | 8 | -1.4 | 36 | 33 | -0.4 | 46 | 58 | 0.2 | 52 | 83 | 1.0 | 60 |
+
 | 9 | -1.3 | 37 | 34 | -0.4 | 46 | 59 | 0.2 | 52 | 84 | 1.0 | 60 |
+
 | 10 | -1.3 | 37 | 35 | -0.4 | 46 | 60 | 0.3 | 53 | 85 | 1.0 | 60 |
+
 | 11 | -1.2 | 38 | 36 | -0.4 | 46 | 61 | 0.3 | 53 | 86 | 1.1 | 61 |
+
 | 12 | -1.2 | 38 | 37 | -0.3 | 47 | 62 | 0.3 | 53 | 87 | 1.1 | 61 |
+
 | 13 | -1.1 | 39 | 38 | -0.3 | 47 | 63 | 0.3 | 53 | 88 | 1.2 | 62 |
+
 | 14 | -1.1 | 39 | 39 | -0.3 | 47 | 64 | 0.4 | 54 | 89 | 1.2 | 62 |
+
 | 15 | -1.0 | 40 | 40 | -0.3 | 47 | 65 | 0.4 | 54 | 90 | 1.3 | 63 |
+
 | 16 | -1.0 | 40 | 41 | -0.2 | 48 | 66 | 0.4 | 54 | 91 | 1.3 | 63 |
+
 | 17 | -0.9 | 41 | 42 | -0.2 | 48 | 67 | 0.4 | 54 | 92 | 1.4 | 64 |
+
 | 18 | -0.9 | 41 | 43 | -0.2 | 48 | 68 | 0.5 | 55 | 93 | 1.5 | 65 |
+
 | 19 | -0.9 | 41 | 44 | -0.2 | 48 | 69 | 0.5 | 55 | 94 | 1.6 | 66 |
+
 | 20 | -0.8 | 42 | 45 | -0.1 | 49 | 70 | 0.5 | 55 | 95 | 1.7 | 67 |
+
 | 21 | -0.8 | 42 | 46 | -0.1 | 49 | 71 | 0.6 | 56 | 96 | 1.8 | 68 |
+
 | 22 | -0.8 | 42 | 47 | -0.1 | 49 | 72 | 0.6 | 56 | 97 | 1.9 | 69 |
+
 | 23 | -0.7 | 43 | 48 | -0.1 | 49 | 73 | 0.6 | 56 | 98 | 2.1 | 71 |
+
 | 24 | -0.7 | 43 | 49 | -0.0 | 50 | 74 | 0.6 | 56 | 99 | 2.3 | 73 |
+
 | 25 | -0.7 | 43 | 50 | -0.0 | 50 | 75 | 0.7 | 57 | 99.9 | 3.1 | 81 |
 
-*数值已四舍五入。要“标准化”分数，请用实际百分位等级进入表格并读出 zₙ 或 T。
+*数值已四舍五入。要“标准化”分数，请用实际百分位等级进入表格并读出 `zₙ` 或 `T`。
 
 ## 例
 
-如何确定正态分布中选定 zₙ 分数对应的百分位等级
+如何确定正态分布中选定 `zₙ` 分数对应的百分位等级
 
-| zₙ | PR（四舍五入） | 计算方法 |
+| `zₙ` | `PR`（四舍五入） | 计算方法 |
 |---|---|---|
 | −3.0 | 0.1 | = 0.13 |
 | −2.0 | 2 | = 0.13 + 2.14 |
@@ -15374,19 +16270,19 @@ T 分数
 
 ## 标准化 z 分数
 
-当 z 分数的百分位等级与我们在正态分布中预期的对应时，它们被称为标准化 z 分数（zₙ），并使用以下符号：
+当 `z` 分数的百分位等级与我们在正态分布中预期的对应时，它们被称为标准化 `z` 分数（`zₙ`），并使用以下符号：
 
-zₙ = 正态分布中给定百分位等级对应的 z 分数
+`zₙ` = 正态分布中给定百分位等级对应的 `z` 分数
 
-如果原始分数的分布形式不是正态的，其 z 分数的百分位等级将不会与规范分布中预期的对应。你可能会惊讶地得知，然而，可以为任何非正态分布创建一组“标准化”z 分数。进行这种转换后，新的一组分数更接近正态分布。“标准化”一组分数的方法如下：（a）确定规范群体中每个原始分数的百分位等级，（b）在正态曲线表（例如图 17.4 中的图表）中查找每个百分位等级，（c）读出每个对应的 zₙ 值。所得的 zₙ 值是“标准化的”。也就是说，它们是如果分布呈正态形式本应获得的 z 分数。
+如果原始分数的分布形式不是正态的，其 `z` 分数的百分位等级将不会与规范分布中预期的对应。你可能会惊讶地得知，然而，可以为任何非正态分布创建一组“标准化”`z` 分数。进行这种转换后，新的一组分数更接近正态分布。“标准化”一组分数的方法如下：（a）确定规范群体中每个原始分数的百分位等级，（b）在正态曲线表（例如图 17.4 中的图表）中查找每个百分位等级，（c）读出每个对应的 `zₙ` 值。所得的 `zₙ` 值是“标准化的”。也就是说，它们是如果分布呈正态形式本应获得的 `z` 分数。
 
-为了向你展示该过程的工作原理，并说明 z 与 zₙ 之间的差异，考虑下一个示例中的分数。分数和百分位等级来自我们之前关于如何计算百分位等级的 25 名学生的班级示例（第 392 页）。
+为了向你展示该过程的工作原理，并说明 `z` 与 `zₙ` 之间的差异，考虑下一个示例中的分数。分数和百分位等级来自我们之前关于如何计算百分位等级的 25 名学生的班级示例（第 392 页）。
 
 ## 例
 
-说明与上一页 392 页上所示的 25 个测验分数分布对应的标准化 z 分数和（实际）线性 z 分数。
+说明与上一页 392 页上所示的 25 个测验分数分布对应的标准化 `z` 分数和（实际）线性 `z` 分数。
 
-| 原始分数 | %ile rank | 标准化ᵃ z 分数（zₙ） | 线性ᵇ z 分数（z） |
+| 原始分数 | %ile rank | 标准化ᵃ `z` 分数（`zₙ`） | 线性ᵇ `z` 分数（`z`） |
 |---|---|---|---|
 | 36 | 98 | 2.05 | 2.43 |
 | 33 | 96 | 1.75 | 1.64 |
@@ -15404,44 +16300,45 @@ zₙ = 正态分布中给定百分位等级对应的 z 分数
 | 15 | 4 | −1.75 | −3.09 |
 | 14 | 2 | −2.05 | −3.36 |
 
-ᵃzₙ 值是通过在图 17.4 中查找百分位等级并读出对应的 zₙ 值获得的。
-ᵇz 值是通过使用第 392 页上的实际分数分布并应用公式获得的：z = (X−M)/SD 其中 M = 26.75 且 SD = 3.80。
+ᵃ`zₙ` 值是通过在图 17.4 中查找百分位等级并读出对应的 `zₙ` 值获得的。
 
+ᵇ`z` 值是通过使用第 392 页上的实际分数分布并应用公式获得的：`z = (X−M)/SD` 其中 `M = 26.75` 且 `SD = 3.80`。
 
-
-
-
-接下来，你在图 17.4 中查找每个百分位等级，并读出对应的 z_n。结果出现在示例中。为了便于比较，实际的线性 z 分数是通过公式 17.1 计算的，其中 M = 26.75，SD = 3.8。标准化 z 分数与线性 z 分数之间的差异代表了“拉伸和压缩”所必需的程度，以便使原始分布更接近正态分布。
+接下来，你在图 17.4 中查找每个百分位等级，并读出对应的 `z_n`。结果出现在示例中。为了便于比较，实际的线性 `z` 分数是通过公式 17.1 计算的，其中 `M = 26.75`，`SD = 3.8`。标准化 `z` 分数与线性 `z` 分数之间的差异代表了“拉伸和压缩”所必需的程度，以便使原始分布更接近正态分布。
 
 ## 标准化 T 分数（McCall 的 T）
 
-图 17.2 中标准化标准分数分支的第二种分数是 T 分数。标准化 T 分数表示原始分数在均值为 50、标准差为 10 的正态分布中的位置。标准化 T 分数是线性 SS 分数的对应物。因此，T = 10z_n + 50 [Eq. 17.3]
+图 17.2 中标准化标准分数分支的第二种分数是 `T` 分数。标准化 `T` 分数表示原始分数在均值为 50、标准差为 10 的正态分布中的位置。标准化 `T` 分数是线性 `SS` 分数的对应物。因此，`T = 10z_n + 50` [Eq. 17.3]
 
-该方程与方程 17.2（SS = 10 z + 50）之间的区别在于 z_n 是标准化 z 分数而不是线性 z 分数。
+该方程与方程 17.2（`SS = 10 z + 50`）之间的区别在于 `z_n` 是标准化 `z` 分数而不是线性 `z` 分数。
 
-标准化 T 分数相对于标准化 z 分数的优势与 SS 分数相对于线性 z 分数的优势相同，另外 T 分数还具有正态曲线的百分位等级解释。以下是示例。
+标准化 `T` 分数相对于标准化 `z` 分数的优势与 `SS` 分数相对于线性 `z` 分数的优势相同，另外 `T` 分数还具有正态曲线的百分位等级解释。以下是示例。
 
 ## 示例
 
-使用如图 17.4 所示的正态曲线解释 T 分数的方法。
+使用如图 17.4 所示的正态曲线解释 `T` 分数的方法。
 
-- 1. Joey 的 T 分数为 40。这意味着他比常模组的平均值低一个标准差，他的百分位等级约为 16。
+- 1. Joey 的 `T` 分数为 40。这意味着他比常模组的平均值低一个标准差，他的百分位等级约为 16。
+
+
+
 - 2. Betty 的百分位等级为 84。这意味着她的 T 分数为 60，她比常模组平均值高一个标准差的距离。
 
-图 17.4 显示了正态分布中百分位等级、T 分数和 z_n 分数之间的对应关系。该图可以帮助你直接将百分位等级转换为 T 分数，而无需使用公式 17.3。
+图 17.4 显示了正态分布中百分位等级、T 分数和 `z_n` 分数之间的对应关系。该图可以帮助你直接将百分位等级转换为 T 分数，而无需使用公式 17.3。
 
 ## 偏差智商分数
 
-图 17.2 中显示的第三种标准化标准分数是与某些智力能力评估一起使用的偏差智商分数。偏差智商（DIQ）分数表示原始分数在均值为 100、标准差为 15 或 16 的正态分布中的位置。常模组通常由所有具有相同实际年龄的学生组成，而不管年级 placement 如何。例如，如果测验编制者将标准差设为 16，则 DIQ 由 DIQ = 16z_n + 100 给出 [Eq. 17.4]
+图 17.2 中显示的第三种标准化标准分数是与某些智力能力评估一起使用的偏差智商分数。偏差智商（DIQ）分数表示原始分数在均值为 100、标准差为 15 或 16 的正态分布中的位置。常模组通常由所有具有相同实际年龄的学生组成，而不管年级 placement 如何。例如，如果测验编制者将标准差设为 16，则 DIQ 由`DIQ = 16z_n + 100`给出 [Eq. 17.4]
 
 这些 DIQ 的解释方式与 T 分数相似，但参考的是均值为 100、标准差为 16 的正态分布。以下是示例。
 
-## 示例
+### 示例
 
 DIQ 分数的含义。
 
-- 1. Meghan 的 DIQ = 116。这意味着她比其年龄组的平均值高一个标准差，她的分数的百分位等级为 84。
-- 2. Sherry 的 DIQ = 100。这意味着她在年龄组的平均水平得分，她的分数的百分位等级为 50。
+- 1. Meghan 的 `DIQ = 116`。这意味着她比其年龄组的平均值高一个标准差，她的分数的百分位等级为 84。
+
+- 2. Sherry 的 `DIQ = 100`。这意味着她在年龄组的平均水平得分，她的分数的百分位等级为 50。
 
 通常，评估手册提供表格，允许你直接将原始分数转换为 DIQ。
 
@@ -15451,22 +16348,22 @@ DIQ 分数的含义。
 
 图 17.5 说明了九分位分数的含义。正态分布被划分为九个区段，从低的 1 编号到高的 9。落在这些区段边界内的分数被分配这九个数字之一（因此术语 stanine 来自“standard nine”）。每个区段宽半个标准差，除了九分位 1 和 9。落在正态曲线每个区段内的案例百分比在图 17.5 中显示，同时显示了与每个区段相关的百分位等级范围。
 
-所有分数落在区间内的个人都被分配该区间的九分位。例如，所有百分位等级为 11 至 22 的个人都被分配九分位 3；所有 23 至 29 的个人都被分配九分位
+所有分数落在区间内的个人都被分配该区间的九分位。例如，所有百分位等级为 11 至 22 的个人都被分配九分位 3；所有 23 至 29 的个人都被分配九分位 4；等等。常模组中 12% 的人将被分配九分位 3，17% 的人将被分配九分位 4。当来自正态分布的原始分数转换为九分位时，九分位的平均值为 5，标准差等于 2。以下是九分位解释的示例。在阅读这些示例时，请参考图 17.5。
 
-## 图 17.5 说明正态分布，显示九分位、百分位等级区间以及具有每个九分位的案例百分比。
+**图 17.5** 说明正态分布，显示九分位、百分位等级区间以及具有每个九分位的案例百分比。
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_413_0.png)
 
-Source: From The Metropolitan Achievement Tests: Seventh Edition (p. 36) Copyright © 1993 by Harcourt, Inc. Adapted by permission. All rights reserved.
+*Source: From The Metropolitan Achievement Tests: Seventh Edition (p. 36) Copyright © 1993 by Harcourt, Inc. Adapted by permission. All rights reserved.*
 
-4；等等。常模组中 12% 的人将被分配九分位 3，17% 的人将被分配九分位 4。当来自正态分布的原始分数转换为九分位时，九分位的平均值为 5，标准差等于 2。以下是九分位解释的示例。在阅读这些示例时，请参考图 17.5。
-
-## 示例
+### 示例
 
 如何解释九分位分数。
 
 - 1. Sophia 在标准化测验的数学分测验中获得九分位 5。这意味着她在测验上的原始分数处于常模组的中间 20%。
+
 - 2. Jesse 在标准化测验的阅读分测验中获得九分位 9。这意味着他在测验上的原始分数处于常模组的最高 4%。
+
 - 3. Blake 在标准化测验的拼写分测验中的九分位为 3。这意味着他的原始分数处于常模组的较低 20%。具体来说，他的百分位等级在 11 到 22 之间。
 
 九分位的 claimed 优势包括：它们只是单数字，只有大约相等的单位贯穿整个分数量表，并且不会暗示超过评估所证实的精确度。
@@ -15501,7 +16398,7 @@ NCE = 21.06zₙ + 50      [Eq. 17.6]
 
 以下示例显示了所选百分位等级、NCE 分数和九分位之间的关系。
 
-## 示例
+### 示例
 
 所选百分位等级、NCE 分数和九分位之间的对应关系。
 
@@ -15528,10 +16425,6 @@ NCE = 21.06zₙ + 50      [Eq. 17.6]
 | 95 | 85 | 8 |
 | 99 | 99 | 9 |
 
-
-
-
-
 ## 示例 17.4
 
 如何将原始分数转换为九分等级。
@@ -15555,25 +16448,35 @@ NCE = 21.06zₙ + 50      [Eq. 17.6]
 ### 评论
 
 - 1. 制作频率分布表或将分数从高到低排序列出。
+
 - 2. 找到中位数或中间分数。 a
+
 - 3. 使用理论百分比确定应分配九分等级为 5 的分数数量。
+
 - 4. 将九分等级 5 分配给步骤 3 计算出的分数数量。（如果需要，应包括中位数上下方的分数，以尽可能接近所需数量。）
+
 - 5. 从分配了九分等级 5 的分数向上开始，使用理论百分比将分数分配到九分等级 6、7、8 和 9 的类别。尽可能接近理论百分比。
+
 - 6. 对低于分配了九分等级 5 的分数重复该程序。
+
 - 7. 重要的是，你必须为所有相同的分数分配相同的九分等级。
 
 参见 PR 示例，第一列和第三列。
+
 25 分数 × ½ = 12.5 分数。因此，中位数分数为 27。
+
 20% 的 25 = 5 分数。
 
 将中位数四舍五入为整数。
 
 碰巧的是，在 PR 示例中，恰好有 5 个人得分为 27，因此我们不需要查看相邻值。（见下文。）
 
+
+
 记住，所有相同的分数必须分配相同的九分等级。
 
 | 分数 | 九分等级 | 实际数量 | 理论数量 |
-|---|---|---|---|
+| --- | --- | --- | --- |
 | 36 | 9 | 1 | 1 |
 | 32 – 35 | 8 | 1 | 2 |
 | 29 – 31 | 7 | 3 | 3 |
@@ -15594,81 +16497,80 @@ a 中位数在附录 H 中有解释。
 
 我们现在转向图 17.2 中规范参照方案的第四分支。迄今为止讨论的标准化标准分数量表特定于某一特定年级或年龄组。如果分数量表特定于某一特定年级，你就无法用它来衡量学生从一个年级到下一个年级的成长。下一个示例说明了为什么你不能使用百分位等级和 T 分数来评估学生的教育成长。
 
-## 示例
+### 示例
 
 为什么百分位等级和 T 分数不能用于衡量成长。
 
-- 1. 假设比利在 5、6 和 7 年级的测试中均处于第 84 百分位。虽然比利在技能和知识方面会有所成长，但他的百分位等级（84）保持不变。数字 84 仅反映了他在每个年级规范群体中的位置，并不能传达他的成长。
-- 2. 同样，假设阿什莉的 T 分数分别针对每个年级的规范群体确定，从年到年几乎保持不变，例如约为 60。阿什莉实际上在通过年级的过程中每年都表现出教育成长。T 分数由于保持不变而无法传达成长。
+1. 假设比利在 5、6 和 7 年级的测试中均处于第 84 百分位。虽然比利在技能和知识方面会有所成长，但他的百分位等级（84）保持不变。数字 84 仅反映了他在每个年级规范群体中的位置，并不能传达他的成长。
+2. 同样，假设阿什莉的 T 分数分别针对每个年级的规范群体确定，从年到年几乎保持不变，例如约为 60。阿什莉实际上在通过年级的过程中每年都表现出教育成长。T 分数由于保持不变而无法传达成长。
 
 然而，如果你的学生的教育成长以跨越学年的单一数字量表报告，你会觉得很有用。例如，调查性成就测验通常跨越几个年级；例如二年级至八年级，或九年级至十二年级。如果此类测验的分数量表没有将来自几个年级的评估链接到单一的发展性分数量表，你就无法衡量学生在这些年间的成长。我们现在转向讨论图 17.2 中发展或成长量表分支所示的两种量表：扩展标准化标准分数量表和年级等价分数量表。
 
-## 扩展标准化标准分数量表
+### 扩展标准化标准分数量表
 
-### 扩展标准化分数量表的基本思想
+#### 扩展标准化分数量表的基本思想
 
 扩展标准化标准分数告诉原始分数在以较低年级参考组为锚的数字量表上的位置。教育工作者发现，一个“尺子”或成就连续体，在其上可以衡量学生在很宽的年级范围内取得的进步是非常有用的。在这个连续体上，低分数代表最低的教育发展水平，高分数代表最高的教育发展水平。出版商用多种名称来指称这种量表，例如：所得量表分数（加州成就测验）、量表分数（基础技能综合测验）、扩展标准分数（盖茨-麦格尼蒂阅读测验）、标准分数（爱荷华基础技能测验；大都会成就测验）或成长量表值（爱荷华教育发展测验）。
 
-### 扩展量表分数的发展
+#### 扩展量表分数的发展
 
 尽管每个出版商以略有不同方式准备扩展量表，并且所得数字在出版商之间不可比较，但扩展量表分数共享相同的目标和相同的一般开发方法：（a）选择一个基准或锚定组并开发标准化 z 分数，这些分数扩展到该锚定组的分数范围之外；（b）对一系列评估进行施测，相邻组使用共同题目（例如，二年级和三年级学生做同一套题目，然后三年级和四年级学生做同一套题目，等等）；（c）对每个年级的分数分布进行汇总和标准化；以及（d）通过这些重叠题目，将所有组置于锚定组的扩展 z 分数量表上。该扩展 z 量表成为跨越几个年级的尺子或成长量表。
 
 然后将扩展 z 量表再次转换为消除 z 分数不愉快属性（例如负数和小数）的量表。新量表可能范围从 00 到 99，从 000 到 999，或出版商所选择的任何其他正整数集合；对于该范围应为多少没有标准。图 17.6 说明了出版商在假设情况下如何建立此类量表。示例 17.1 中报告的量表分数是测试手册如何报告扩展标准分数的实际示例。
 
-### 项目反应理论方法³
+#### 项目反应理论方法³
 
 最近的技术进步导致一些出版商为学校提供两种计算扩展标准分数的选择。一种方法使用学生的传统原始分数（即答对题数）作为计算的开始步骤。这是我们上面描述的方法。第二种方法使用项目反应理论（IRT），其中将数学方程拟合到出版商样本学生的题目反应上。然后用结果推导出分数量表。根据此方法，学生的分数取决于其答对或答错的模式。IRT 模式计分考虑学生是否正确回答了容易或困难的题目，以及该题目在多大程度上区分了不同成就水平的学生。这意味着，例如，两个学生答对相同数量的题目可能会得到不同的量表分数，如果正确回答题目的模式对这两个学生非常不同。
 
 优点是所得扩展标准分数可以具有比传统答对题数分数更低的测量误差和更高的可靠性。缺点是（a）答对题数与扩展量表分数之间的直接联系被打破（当使用某些方程时），以及（b）该方法对每种类型的测试和每个学生群体都有效。
 
-## 建议
+### 建议
 
-尽管项目评估人员和学校研究人员通常更喜欢使用扩展标准分数，但其含义对教师、家长和
+尽管项目评估人员和学校研究人员通常更喜欢使用扩展标准分数，但其含义对教师、家长和学生。一些教育工作者认为这是一个优势，因为它减少了过度解读分数的可能性。另一方面，如果没人知道它们是什么意思，就不会使用它们，因此分数会被低估使用。
 
-
-
-## 图 17.6 一系列学业测验分数转换为统一扩展分数量表的假设示例。相继的组通过在特殊施测中将重叠的测验连接起来而定位在量表上。
+**图 17.6 一系列学业测验分数转换为统一扩展分数量表的假设示例。相继的组通过在特殊施测中将重叠的测验连接起来而定位在量表上。**
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_417_0.png)
 
-学生。一些教育工作者认为这是一个优势，因为它减少了过度解读分数的可能性。另一方面，如果没人知道它们是什么意思，就不会使用它们，因此分数会被低估使用。
-
 请注意，扩展标准分数在不同科目之间显示不同的标准差，并且随着年级的升高标准差逐渐增大。因此，你不能将一个学生的扩展评估分数从一个学科领域与另一个学科领域进行比较。在这方面，它们与下面要讨论的年级当量分数具有共同的属性。
 
-## 年级当量分数
+### 年级当量分数
 
-## 年级当量分数的基本概念
+#### 年级当量分数的基本概念
 
 年级当量分数（GE）表示原始分数在哪个年级安置时为平均水平。GE 是最常用于小学阶段学业测验的教育发展分数。年级当量分数以小数形式报告，例如 3.4 或 7.9。分数的整数部分指的是年级水平，小数部分指的是该年级学年中的月份。例如，你将年级当量分数 3.4 读作“三年级第四个月”；同样，7.9 读作“七年级第九个月”。假设原始分数 31 对应的年级当量分数为 6.3。这意味着在六年级第三个月时，规范样本组的平均值为 31。下面的示例显示了年级当量量表的布局。
 
-## 示例
+#### 示例
 
 年级当量分数量表布局
 
-| 学年月份 |
-| September | October | November | December | January | February | March | April | May | June |
-| .0 | .1 | .2 | .3 | .4 | .5 | .6 | .7 | .8 | .9 |
-| 年级当量分数的小数部分 |
+| 学年月份 | September | October | November | December | January | February | March | April | May | June |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| 年级当量分数的小数部分 | .0 | .1 | .2 | .3 | .4 | .5 | .6 | .7 | .8 | .9 |
 
 使用这些分数时，你假设六月到九月之间的时间（即暑假月份）在年级当量量表上代表十分之一（或一个月）的增量（见上文）。通过这种方式定义年级当量量表，分数的平均值每年显示 10 个月的增长。（然而，你不应期望每个学生每个暑假都能增长一个月。）
 
-## 年级当量分数的总体有用性
+#### 年级当量分数的总体有用性
 
 年级当量分数对于报告学生的教育发展很有用。如果标准化测验在学生整个学年期间定期施测，所得的年级当量分数可以帮助使用基于年级的教育发展量表监测学生的教育进展。在较小程度上，年级当量也可以用来监测学生的年级安置。GE 分数年级安置解释的问题在于，它们取决于测验内容与学生在测验施测时点之前所学内容的匹配程度——这种匹配越差，年级安置解释的有效性就越低。
 
 年级当量分数不能用来比较学生在不同学科领域的优势和劣势。它们也不能用来确定学生在其同伴中的排名。本节余下部分将对这些局限性进行解释。
 
-## 年级当量分数的编制
+#### 年级当量分数的编制
 
 了解测验出版商如何获得年级当量分数将有助于你避免误解。当然，你无需计算它们，因为测验手册提供了所需的转换表。
 
 编制过程以阅读测验为例进行说明，但该过程适用于所有学科领域。假设出版商希望从一年级到八年级评估阅读并编制年级当量。出版商创建一系列重叠的测验，覆盖所需的年级：一个测验用于一年级和二年级，一个用于二年级和三年级，依此类推。每个测验适用于特定的年级水平。出版商在每个年级水平对一个大型的全国样本施测适当的测验。通常，出版商每年施测一次或两次（秋季和/或春季），因为不可能在全年持续施测。施测测验的日期称为经验常模日期。然后使用扩展分数量表将这些重叠测验连接起来。这使得来自不同测验的原始分数能够置于基于年级的阅读能力量表上。该过程称为垂直链接或垂直等值，因为链接沿着年级向上进行。
 
+
+
 在此共同量表上，规范样本组在每个年级水平的阅读能力存在很大差异。因此，在每个年级水平上都有阅读分数的分布。这些阅读分数的分布如图 17.7 所示。在此示例中，出版商在一年中仅施测一次——在二月（月份 = 0.5）——因此该图将分布直接绘制在 1.5、2.5、3.5 等之上。
 
-设定年级当量量表 出版商的第一步是在图表上定位并绘制每个年级规范样本组的中间分数（有时使用平均分数）。例如，在图中，二月参加测验的规范样本组一年级学生的平均（中位数）分数为 10。年级当量分数 1.5 对应原始分数 10，因为该中位数的年级安置为 1.5。二月规范样本组二年级学生的平均分数为 15，其对应的年级当量为 2.5。图 17.7 中四年级和五年级的年级当量也以同样方式绘制。
+### 设定年级当量量表
+出版商的第一步是在图表上定位并绘制每个年级规范样本组的中间分数（有时使用平均分数）。例如，在图中，二月参加测验的规范样本组一年级学生的平均（中位数）分数为 10。年级当量分数 1.5 对应原始分数 10，因为该中位数的年级安置为 1.5。二月规范样本组二年级学生的平均分数为 15，其对应的年级当量为 2.5。图 17.7 中四年级和五年级的年级当量也以同样方式绘制。
 
-插值和外推 实际的年级当量只能在出版商施测测验的时间点获得。其他时间点的年级当量通过插值或外推获得。在图 17.7 中，注意实线连接了实际分布的中位数。这条实线用于插值，从而估计中间年级当量的值。例如，原始分数 13 并不是规范样本分布的实际中位数。然而，我们从 13 水平向图表画一条线，直到它与实线相交，然后垂直向下画到年级安置量表。对应于该垂直线的年级安置（2.1）成为对应于原始分数 13 的插值年级当量。
+### 插值和外推
+实际的年级当量只能在出版商施测测验的时间点获得。其他时间点的年级当量通过插值或外推获得。在图 17.7 中，注意实线连接了实际分布的中位数。这条实线用于插值，从而估计中间年级当量的值。例如，原始分数 13 并不是规范样本分布的实际中位数。然而，我们从 13 水平向图表画一条线，直到它与实线相交，然后垂直向下画到年级安置量表。对应于该垂直线的年级安置（2.1）成为对应于原始分数 13 的插值年级当量。
 
 考虑原始分数 8。对该分数的年级当量只能通过外推获得：根据中位数的趋势将线延伸到实际测试的规范样本组之外。图 17.7 中的虚线代表这种延伸。因此，原始分数 8 的外推年级当量为 1.1。如果外推不正确，年级当量也会错误。
 
@@ -15698,22 +16600,18 @@ a 中位数在附录 H 中有解释。
 
 ## 解释年级当量时应注意的事项
 
-春季到秋季的下降：暑假损失 在解释年级当量的过程中，一个特别的关注点是
+### 春季到秋季的下降：暑假损失
+在解释年级当量的过程中，一个特别的关注点是夏季成绩损失现象。在某些学科领域——例如算术——学生的成绩在夏季几个月会失去一些优势（Beggs & Hieronymus, 1968; DeVito & Long, 1977; Tallmadge, 1973; Tallmadge & Horst, 1974; Tallmadge & Wood, 1976）。夏季几个月的成绩下降有几种含义：（a）夏季增长一个月这一假设在每个学科领域都不成立，（b）对许多儿童而言，教育成长并不规律且统一，（c）使用秋季到春季的年级等值分数增益来评估教学项目可能会导致错误的结论。当测验出版商提供单独的秋季和春季常模，并且学校系统在与出版商常模建立的日期非常接近的日期进行测试时，第三点问题较小。
 
+### 年级等值与课程对应
+认为学生应该与其年级等值分数有相同的安置是错误的。要理解原因，请回顾图 17.7 以及年级等值是如何基于中位数。按定义，在特定年级安置的常模组中有一半的学生分数高于中位数。因此，常模组中有一半的学生年级等值分数高于其实际年级安置。其次，请记住，出版商使用一系列测验，而不是单一测验，来建立年级等值。你不能将例如三年级学生在涵盖三年级内容的数学测验上获得的 5.7 的年级等值分数解释为该学生应被安置在五年级数学中。测验显示学生对三年级内容表现非常好，但学生并未接受五年级数学的评估。当然，除了单一评估结果之外，还有许多因素决定学生是否应获得加速安置。一些测验出版商可能会开发其测验电池，以便在为建立年级等值量表时，让三年级学生接受五年级内容。在这种情况下，可以谨慎地说，具有 5.7 年级等值的三年级学生确实掌握了一些五年级内容（Hoover et al., 1993b）。
 
-
-
-
-# 图 17.7 用于获得年级等值分数的假设数据示例。
+## 图 17.7 用于获得年级等值分数的假设数据示例。
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_419_0.png)
 
-夏季成绩损失现象。在某些学科领域——例如算术——学生的成绩在夏季几个月会失去一些优势（Beggs & Hieronymus, 1968; DeVito & Long, 1977; Tallmadge, 1973; Tallmadge & Horst, 1974; Tallmadge & Wood, 1976）。夏季几个月的成绩下降有几种含义：（a）夏季增长一个月这一假设在每个学科领域都不成立，（b）对许多儿童而言，教育成长并不规律且统一，（c）使用秋季到春季的年级等值分数增益来评估教学项目可能会导致错误的结论。当测验出版商提供单独的秋季和春季常模，并且学校系统在与出版商常模建立的日期非常接近的日期进行测试时，第三点问题较小。
-
-## 年级等值与课程对应
-认为学生应该与其年级等值分数有相同的安置是错误的。要理解原因，请回顾图 17.7 以及年级等值是如何基于中位数。按定义，在特定年级安置的常模组中有一半的学生分数高于中位数。因此，常模组中有一半的学生年级等值分数高于其实际年级安置。其次，请记住，出版商使用一系列测验，而不是单一测验，来建立年级等值。你不能将例如三年级学生在涵盖三年级内容的数学测验上获得的 5.7 的年级等值分数解释为该学生应被安置在五年级数学中。测验显示学生对三年级内容表现非常好，但学生并未接受五年级数学的评估。当然，除了单一评估结果之外，还有许多因素决定学生是否应获得加速安置。一些测验出版商可能会开发其测验电池，以便在为建立年级等值量表时，让三年级学生接受五年级内容。在这种情况下，可以谨慎地说，具有 5.7 年级等值的三年级学生确实掌握了一些五年级内容（Hoover et al., 1993b）。
-
 ### 示例 17.5
+
 《都市成就测验》（第七版），形式 S/T，秋季常模的年级等值表的一部分。请注意，你使用（扩展的）量表分数进入表格，并在边际读取年级等值分数。扩展量表分数首先从另一张表（未显示）获得，你使用原始分数进入该表。
 
 | Grade Equiv. | Scaled Scores |  |  |  |  |  | Grade Equiv. |
@@ -15743,6 +16641,9 @@ a 中位数在附录 H 中有解释。
 | 5.8 | 634-636 | 628-629 | 630 | 628-630 | 613 | 616-617 | 5.8 |
 | 5.7 | 632-633 | 626-627 | 628-629 | 626-627 | 611-612 | 614-615 | 5.7 |
 | 5.6 | 630-631 | 624-625 | 626-627 | 625 | 610 | 611-613 | 5.6 |
+
+
+
 | 5.5 | 628-629 | 622-623 | 624-625 | 623-624 | 609 | 608-610 | 5.5 |
 | 5.4 | 626-627 | 620-621 | 623 | 621-622 | 608 | 606-607 | 5.4 |
 | 5.3 | 624-625 | 618-619 | 622 | 619-620 | 607 | 604-605 | 5.3 |
@@ -15763,11 +16664,13 @@ a 中位数在附录 H 中有解释。
 > 来源：摘自《多水平常模手册：都市成就测验，第七版》（第 171 页）。版权所有 © 1993 Harcourt, Inc. 经许可转载。保留所有权利。
 
 ## 年级等值与掌握
+
 有时教师、家长和学校管理人员会误将年级等值解释为掌握特定课程领域某一分数的含义。例如，家长可能错误地认为学生在数学上的年级等值为 3.5 意味着学生已掌握当地学校三年级数学课程的 5/10。最多能说的是，该学生的测验分数等于常模组在三年级第五个月时的平均分数。这不太可能意味着掌握三年级数学，因为测验并未系统抽样学生当地课程中三年级数学的整个领域。
 
 测验项目与你在测验前在课堂上强调的材料越接近，你的学生在这些全国标准化测验上得分高于年级水平的可能性就越大。你可能在测试日期之后教授某些测验项目的内容。因此，你的学生在测试时表现不佳，但在学年结束前会学到这些材料。答错三四个题目会显著降低学生的年级等值分数。如果你的教学顺序与测试顺序不一致，推断掌握就成问题。这指出了年级等值分数的常模参照特征，并说明了不能从中做出标准参照解释。
 
 ## 不同测验的年级等值不可互换
+
 年级等值（和其他常模参照）分数取决于测试上放置的具体题目以及使用的具体常模组。例如，如果你说“ABC 阅读评估上的 3.7 年级等值与 DEF 阅读评估上的 3.7 年级等值含义相同”，你就是在误解年级等值。两个不同出版商的评估结果除非在特殊条件下，否则不可比较（Bianchini & Loret, 1974a, 1974b; Jaeger, 1973; Peterson, Kolen, & Hoover, 1989）。
 
 ## 示例
@@ -15789,21 +16692,19 @@ a 中位数在附录 H 中有解释。
 你应该用什么来描述学生在不同学科领域的相对优势和劣势？如果常模组中的所有学生在所有学科都参加了相同的测验，请使用百分位等级来比较学生来自不同科目的分数。因此，在前述例示中，John 在数学和阅读方面都稍好，Howard 在两个科目方面大致相同，Susan 在数学方面比阅读稍好。因为这些是常模参照解释，“更好”意味着“与他人相比”。
 
 ## “正常”成长
+
 有时教师和学校管理人员使用年级等值来回答学生应期望的教育成长问题。这不是一个好做法，其结果也不令人满意。正常成长的一种观点是：“学生从一个年级到下一个年级应表现出 1.0 个年级等值单位的成长。” 在这种观点下，例如在二年级参加测验并获得 1.3 分的学生，需要在三年级获得 2.3 分，在五年级获得 4.3 分，等等，以显示“正常”或预期成长。
 
 这种年级等值对正常成长的看法无法得到支持。示例 17.6 说明了如果采用这种看法，三名假设学生在两个出版测验的数学分测验上的情况会如何。
 
 这些学生具有以下特征：学生 A 在年级等值方面落后一年，学生 B 在年级水平，学生 C 超前一年。每一年，学生的年级等值显示出比前一年多一年的“成长”。但请看其分数对应的百分位等级：起步落后一年的学生 A，为了保持落后一年的年级等值，必须超过常模组中更多的人。在二年级落后一年意味着处于第 16 或 17 百分位。然而，年级
 
-
-
-
-
-# 示例 17.6
+### 示例 17.6
 
 从二年级到八年级，每个“获得”一年年级当量时的三个假设学生的百分位排名变化示例。
 
 | 测试时的年级安置 | Metropolitan Achievement Tests, 总数学 | | | | | | Iowa Tests of Basic Skills, 总数学 | | | | | |
+|---|---|---|---|---|---|---|---|---|---|---|---|
 | | Student A: "Below grade level" | | Student B: "On grade level" | | Student C: "Above grade level" | | Student A: "Below grade level" | | Student B: "On grade level" | | Student C: "Above grade level" | |
 | | GE | PR | GE | PR | GE | PR | GE | PR | GE | PR | GE | PR |
 | 2.3 | 1.3 | 16 | 2.3 | 63 | 3.3 | 86 | 1.3 | 18 | 2.3 | 54 | 3.3 | 92 |
@@ -15813,6 +16714,8 @@ a 中位数在附录 H 中有解释。
 | 6.3 | 5.3 | 36 | 6.3 | 57 | 7.3 | 73 | 5.3 | 34 | 6.3 | 52 | 7.3 | 66 |
 | 7.3 | 6.3 | 39 | 7.3 | 60 | 8.3 | 70 | 6.3 | 38 | 7.3 | 52 | 8.3 | 65 |
 | 8.3 | 7.3 | 42 | 8.3 | 55 | 9.3 | 60 | 7.3 | 41 | 8.3 | 53 | 9.3 | 64 |
+
+
 
 来源：部分数据摘自 The Psychological Corporation (1993a). The Metropolitan Achievement Tests (第7版)，Forms S/T，秋季。版权所有 © 1993 Harcourt, Inc. 经许可转载。保留所有权利。其他数据改编自 Hoover, Hieronymus, Frisbie, & Dunbar (1993c). Iowa Tests of Basic Skills: Norms and score conversions, complete and core batteries, Form K。版权所有 © 1993 由 The University of Iowa。保留所有权利。经 Riverside Publishing Company 许可转载。
 
@@ -15865,17 +16768,15 @@ a 中位数在附录 H 中有解释。
 
 > *陈述 1 到 6 来自 Lindvall 和 Nitko (1975, p. 98)。陈述 7 和 8 改编自 Hills (1976, pp. 87–88)。
 
-
-
-
-
 ## 各种常模参照分数的比较
+
+
 
 表17.1总结了本章讨论的各种常模参照分数。虽然每种类型的分数都描述了学生在常模群体中的位置，但各自的方式不同。最易于向家长和学生解释的分数类型是百分位等级。各种线性标准分数需要理解均值和标准差，其含义才能变得清晰。通常你需要结合百分位等级来解释正态化标准分数。在不同测验之间，正态化标准分数所对应的案例百分比是相同的。因此，只要可以假定正态分布，它们的含义就保持相当稳定。年级当量和扩展标准分数提供了沿教育成长连续体的分数，但由于其固有的技术复杂性，教师和学校管理人员经常误解它们。将年级当量限制用于对学生年度成长的粗略估计。只有在伴有百分位等级时才使用它们。使用百分位等级来比较个别学生在不同课程领域的表现。
 
 ## 分数解释的一般指南
 
-教师和学校管理人员在解释学生在常模参照标准化测验上的分数时，应考虑以下几点（Prescott, Balow, Hogan, & Farr, 1978）：
+教师和学校管理人员在解释学生在常模参照标准化测验上的分数时，应考虑以下几点（`Prescott, Balow, Hogan, & Farr, 1978`）：
 
 - 1. *寻找异常的分数模式。* 评估应证实教师从日常与学生的互动中所了解的情况；学生异常高或低的分数应是探索教学影响的信号。
 - 2. *寻找模式的解释。* 询问为什么一个学生在某一科目比另一科目高。检查动机、特殊兴趣、特殊困难等。
@@ -15904,18 +16805,19 @@ a 中位数在附录 H 中有解释。
 来源：摘自《爱荷华基本技能测验：教师和辅导员解释指南，K和L表格，9-14级》（第52页），作者H. D. Hoover, A. N. Hieronymus, D. A. Frisbie, and S. B. Dunbar，1993b，芝加哥：Riverside出版公司。版权所有©1993年爱荷华大学。经Riverside出版公司许可改编。
 
 表17.1 如何解释不同类型的常模参照分数。
+
 | 分数类型 | 解释 | 分数 | 解释示例 |
 |---|---|---|---|
-| 百分位等级 | 在分布中低于此点的分数的百分比。 | PR = 60 | “60%的原始分数低于此分数。” |
-| 线性标准分数（z分数） | 某分数高于（或低于）给定分布均值的标准差单位数。 | z = +1.5 | “此原始分数位于均值以上1.5个标准差。” |
-| | | z = -1.2 | “此原始分数位于均值以下1.2个标准差。” |
-| 线性标准分数（SS分数或50±10系统） | 分数在均值为50、标准差为10的分布中的位置。（注：对于其他系统，请在这些陈述中替换该系统的均值和标准差。） | SS = 65 | “此原始分数位于均值为50、标准差为10的分布中均值以上1.5个标准差。” |
-| | | SS = 38 | “此原始分数位于均值为50、标准差为10的分布中均值以下1.2个标准差。” |
-| 九分制（Stanine） | 分数在正态分布特定区段中的位置。 | Stanine = 5 | “此原始分数位于正态分布中间20%。” |
-| | | Stanine = 9 | “此原始分数位于正态分布顶部4%。” |
-| 正态化标准分数（T分数或正态化50±10系统） | 分数在均值为50、标准差为10的正态分布中的位置。（注：对于其他系统，请在这些陈述中替换该系统的均值和标准差[例如，DIQ的均值为100、标准差为16：这是100±16系统]。） | T = 65 | “此原始分数位于均值为50、标准差为10的正态分布中均值以上1.5个标准差。此分数的百分位等级为84。” |
-| | | T = 38 | “此原始分数位于均值为50、标准差为10的正态分布中均值以下1.2个标准差。此分数的百分位等级为12。” |
-| 扩展标准分数 | 分数在锚定于某个参考群体的任意数字量表上的位置。 | GE = 4.5 | （此处不提供解释，因为这些系统非常任意且彼此不同。） |
+| 百分位等级 | 在分布中低于此点的分数的百分比。 | `PR = 60` | “60%的原始分数低于此分数。” |
+| 线性标准分数（z分数） | 某分数高于（或低于）给定分布均值的标准差单位数。 | `z = +1.5` | “此原始分数位于均值以上1.5个标准差。” |
+| | | `z = -1.2` | “此原始分数位于均值以下1.2个标准差。” |
+| 线性标准分数（SS分数或50±10系统） | 分数在均值为50、标准差为10的分布中的位置。（注：对于其他系统，请在这些陈述中替换该系统的均值和标准差。） | `SS = 65` | “此原始分数位于均值为50、标准差为10的分布中均值以上1.5个标准差。” |
+| | | `SS = 38` | “此原始分数位于均值为50、标准差为10的分布中均值以下1.2个标准差。” |
+| 九分制（Stanine） | 分数在正态分布特定区段中的位置。 | `Stanine = 5` | “此原始分数位于正态分布中间20%。” |
+| | | `Stanine = 9` | “此原始分数位于正态分布顶部4%。” |
+| 正态化标准分数（T分数或正态化50±10系统） | 分数在均值为50、标准差为10的正态分布中的位置。（注：对于其他系统，请在这些陈述中替换该系统的均值和标准差[例如，DIQ的均值为100、标准差为16：这是100±16系统]。） | `T = 65` | “此原始分数位于均值为50、标准差为10的正态分布中均值以上1.5个标准差。此分数的百分位等级为84。” |
+| | | `T = 38` | “此原始分数位于均值为50、标准差为10的正态分布中均值以下1.2个标准差。此分数的百分位等级为12。” |
+| 扩展标准分数 | 分数在锚定于某个参考群体的任意数字量表上的位置。 | `GE = 4.5` | （此处不提供解释，因为这些系统非常任意且彼此不同。） |
 | 年级当量分数 | 原始分数达到平均水平的年级位置。 | | “此原始分数是所有年级位置在四年级第五个月的学生的获得或估计平均值。” |
 
 来源：改编自《测量学生成就和能力》（第2版）（第99页），作者C. M. Lindvall和A. J. Nitko，1975年，纽约：Harcourt Brace Jovanovich。经作者许可转载。
@@ -15929,7 +16831,8 @@ a 中位数在附录 H 中有解释。
 | 需要改进之处 | • 我的孩子有什么学习弱点吗？ • 我如何帮助改进我孩子的学习？ | 使用百分位等级来识别相对弱点。使用学生表现的信息，按相似问题聚类来精确指出弱点。使用课堂表现的信息来解释具体弱点。不要过分强调弱点。也要解释学生的相对优势；给出家长如何提供帮助的具体建议。 |
 | 优势 | • 我的孩子擅长什么？ | 使用百分位等级来挑选出相对优势领域。使用课堂信息来说明这一点。提出家长如何帮助改进这些领域的建议。 |
 | 智力 | • 我的孩子有多聪明？我的孩子有天赋吗？ | 解释成就测验不是智力测验。解释成就测验对课堂上所教内容非常敏感，高分可能仅反映特定的学习机会。使用课堂信息来说明你的观点。 |
-| 来源：此表基于Hoover, Hieronymus, Frisbie, & Dunbar, 1993b中的建议。 |
+
+来源：此表基于Hoover, Hieronymus, Frisbie, & Dunbar, 1993b中的建议。
 
 ## 家长的误解
 
@@ -15945,27 +16848,26 @@ a 中位数在附录 H 中有解释。
 
 ## 总结
 
-## 两种参照框架
+### 两种参照框架
 
 - • 原始分数本身在教育与心理测验中难以解释：你需要将其参照一个定义明确的常模群体和一个定义明确的表现领域。
 - • 常模参照框架将学生的表现与参加同一测验的其他学生的明确界定群体进行比较。常模参照回答的问题是：“这名学生与其他学生相比表现如何？”
 - • 标准参照框架将学生的表现与评估所采样的表现领域进行比较。标准参照回答的问题是：“这名学生达到了多少目标学习成果？”对于许多日常教学决策，标准参照框架最为有用。
 
-## 使用常模
+### 使用常模
 
 - • 可以与学生进行比较的群体有很多。这些群体称为常模群体，包括地方常模、全国常模和特殊常模。
 - • 学校建筑中的平均分数只能与学校平均常模进行比较。
 - • 可用于判断常模数据质量的三个标准是：与学校的相关性、出版者抽样计划的代表性，以及常模群体测验施测的时效性。
 
-## 常模参照分数的含义
+### 常模参照分数的含义
 
 - • 最常见的标准参照分数是正确百分比、表现速度、质量评级和表现精确度。
 - • 最常见的常模参照分数是百分位等级、线性标准分数、正态化标准分数和年级当量分数。这些可以在测验出版者的常模表中找到。
-- • 线性标准分数包括z分数、SS分数和SAT分数。正态化标准分数包括z_r分数、T分数、九分制分数、NCE分数、DIQ分数和扩展量表分数。
 
 
 
-
+线性标准分数包括`z`分数、`SS`分数和`SAT`分数。正态化标准分数包括`z_r`分数、`T`分数、九分制分数、`NCE`分数、`DIQ`分数和扩展量表分数。
 
 ## 正态分布
 
@@ -16017,30 +16919,49 @@ a 中位数在附录 H 中有解释。
 ## 练习与应用
 
 - 1. 学生在学年中旬参加测验。错误地，学生的教师使用了学年末出版的常模表来查找学生的百分位等级。这种错误对教师报告的百分位等级有何影响？如果教师使用学年初的常模表，在此情况下会有什么影响？
+
 - 2. 阅读以下每项陈述并判断其主要指哪种常模参照分数。向你的同学说明你的选择理由。
+
   - a. 在这个偏态分布中，John 的分数比平均值低一个标准差。
+
   - b. Bob 的测验分数与在五年级第四个月接受测验的学生平均分数相同。
+
   - c. 因为 Bill 今年的分数提高了，我知道他的一般教育发展有所提高，即使他在常模组的地位保持不变。
+
   - d. Nancy 的分数是 5，因为它位于正态分布中间 20% 的位置。
+
 - 3. 判断以下每项陈述为真或假。说明你在每种情况下判断的依据。
+
   - a. 一个人的百分位等级是 45。这意味着该人的原始分数与 45% 的受测群体相同。
+
   - b. Sally 的算术测评分数是 40。班级的平均分数是 45，标准差是 10。因此，Sally 位于平均值以下一个标准差。
+
   - c. 常模表显示学校能力测验的偏差智商分数分布形式近似正态。这意味着对于常模组中的人，分数背后自然存在的智力是正态分布的。
+
 - 4. 表 17.3 显示了几种类型的标准化分数。利用分数之间的关系完成表格，从而展示各种分数如何相互关联。前两个已为你完成。你可以使用图 17.4 协助。
+
 - 5. 表 17.4 显示了可能出现在标准化成就测验手册中的常模表的一部分。该表显示了出版商标准化样本（即常模组）的选定原始分数、年级等值分数和百分位等级。假设 (a) 当地学区已判断测验内容与其课程匹配良好，(b) 常模数据是在四年级第七个月收集的，(c) 常模适用于当地学区，(d) 出版商已按通常方式且无错误计算年级等值和百分位等级，以及 (e) 学校在四月份对学生进行了测验。
 
-利用表格和你对常模参照框架的知识判断以下每项陈述为真或假。说明并论证你在每种情况下的判断。
-a. James 是四年级学生，其年级等值概况为 V = 6.2, R = 5.6, L = 5.6, W = 5.6, A = 6.2。判断以下每个结论为真或假，并说明判断依据。
-i. James 应该在五年级。
-ii. James 在词汇和算术方面最强。
-iii. James 的分数高于其年级的平均水平。
+  利用表格和你对常模参照框架的知识判断以下每项陈述为真或假。说明并论证你在每种情况下的判断。
 
-b. 四年级学生 Sue 在阅读上的原始分数为 50，在语言上为 30。判断以下每个结论为真或假，并说明你的决定。
-i. Sue 在阅读方面的能力更强，因为她在阅读上的原始分数更高。
-ii. 因为 Sue 的年级等值分数相等，她在阅读和词汇方面的能力相等（相对于常模组）。
-iii. Sue 在语言方面的能力比阅读更强（相对于常模组），因为她在语言上的百分位等级更高。
+  a. James 是四年级学生，其年级等值概况为 V = 6.2, R = 5.6, L = 5.6, W = 5.6, A = 6.2。判断以下每个结论为真或假，并说明判断依据。
+
+  i. James 应该在五年级。
+
+  ii. James 在词汇和算术方面最强。
+
+  iii. James 的分数高于其年级的平均水平。
+
+  b. 四年级学生 Sue 在阅读上的原始分数为 50，在语言上为 30。判断以下每个结论为真或假，并说明你的决定。
+
+  i. Sue 在阅读方面的能力更强，因为她在阅读上的原始分数更高。
+
+  ii. 因为 Sue 的年级等值分数相等，她在阅读和词汇方面的能力相等（相对于常模组）。
+
+  iii. Sue 在语言方面的能力比阅读更强（相对于常模组），因为她在语言上的百分位等级更高。
 
 表 17.3 使用于练习 4。
+
 | 百分位等级 | 九分位 | zₙ | DIQ (SD = 15) | T 分数 |
 |---|---|---|---|---|
 | 99.9 | 9 | +3.00 |  |  |
@@ -16052,6 +16973,7 @@ iii. Sue 在语言方面的能力比阅读更强（相对于常模组），因�
 | 0.1 |  |  |  |  |
 
 表 17.4 使用于练习 5。
+
 | 原始分数 | 词汇 (V) GE PR | 阅读 (R) GE PR | 语言 (L) GE PR | 工作研究 (W) GE PR | 算术 (A) GE PR |
 |---|---|---|---|---|---|
 | 5 | 1.8 1 | 1.6 1 | 1.9 1 | 2.3 1 | 2.5 1 |
@@ -16061,32 +16983,35 @@ iii. Sue 在语言方面的能力比阅读更强（相对于常模组），因�
 | 50 | 7.0 96 | 5.6 74 | 7.9 99 | 8.0 99 | 7.7 99 |
 | 70 |  | 8.1 99 |  |  |  |
 
-fourth grade, (c) the norms are appropriate for use with the local school system, (d) the publisher has computed grade equivalents and percentile ranks in the usual way and with no errors, and (e) the school tested the students in April.
-
 ## 附加阅读
 
 Hoover, H. D., Hieronymus, A. N., Frisbie, D. A., & Dunbar, S. (1993b). Interpretive guide for teachers and counselors: Iowa Tests of Basic Skills, Levels 9–14, Forms K and L. Chicago: Riverside Publishing.
 
 该手册在解释特定标准化成就测验组合时，描述了本章讨论的分数。
 
+
+
 Lyman, H. B. (1998). Test scores and what they mean (6th ed). Boston: Allyn & Bacon.
+
 这本小书解释了各种测验分数及其含义。它还讨论了标准化测验的施测和分数报告的解释。
 
 Peterson, N. S., Kolen, M. J., & Hoover, H. D. (1989). Scaling, norming, and equating. In R. L. Linn (Ed.), Educational measurement (3rd ed., pp. 221–262). Phoenix: Oryx Press, Chapter 6.
+
 本章讨论了分数和常模的开发。重点在于开发的技术方面以及每种技术的理论优势和局限性。
 
 Rudner, L. M., Conoley, J. C., & Plake, B. S. (1989). Understanding achievement tests: A guide for school administrators (pp. 9–44). Washington, DC: The ERIC Clearinghouse on Tests, Measurements, and Evaluation.
+
 这些页面提供了对标准化测验各种分数类型的简单讨论，并提出了学校管理人员可如何使用这些分数的建议。
 
 有关常模参照分数的更多学习的互联网资源包括：
-www.ctb.com
-www.ericac.net
-www.hemweb.com
-www.riverpub.com
 
+`www.ctb.com`
 
+`www.ericac.net`
 
+`www.hemweb.com`
 
+`www.riverpub.com`
 
 ## 寻找和评估已出版的测评
 
@@ -16096,34 +17021,34 @@ www.riverpub.com
 
 ### 定位已出版的测验及其已出版的评述
 
-+   1. 命名关于已出版测评的主要印刷和非印刷信息来源。 [1, 3, 6]
-+   2. 描述在为特定目的寻找测评工具时，你会使用哪些来源，测评工具的专业评述，测评出版商的名称和地址，测评的技术信息，以及能够回答你关于特定测评工具问题的测评专家。 [1, 3, 6]
++ 1. 命名关于已出版测评的主要印刷和非印刷信息来源。 [1, 3, 6]
++ 2. 描述在为特定目的寻找测评工具时，你会使用哪些来源，测评工具的专业评述，测评出版商的名称和地址，测评的技术信息，以及能够回答你关于特定测评工具问题的测评专家。 [1, 3, 6]
 
 ### 定位未出版的测验和计算机化测评信息
 
-+   3. 描述你在为特定目的寻找未出版的测评工具时所使用的来源。 [1, 3, 6]
-+   4. 描述你用来定位计算机化测验和测评服务的来源。 [1, 3, 6]
++ 3. 描述你在为特定目的寻找未出版的测评工具时所使用的来源。 [1, 3, 6]
++ 4. 描述你用来定位计算机化测验和测评服务的来源。 [1, 3, 6]
 
 ### 购买和使用测验的限制
 
-+   5. 解释你在使用测验时的责任以及测评开发者在使用测验时的责任。 [1, 3, 4, 7]
-+   6. 描述《教育与心理测验标准》和《公平测验实践守则》的内容和用途。 [1, 3, 4, 7]
++ 5. 解释你在使用测验时的责任以及测评开发者在使用测验时的责任。 [1, 3, 4, 7]
++ 6. 描述《教育与心理测验标准》和《公平测验实践守则》的内容和用途。 [1, 3, 4, 7]
 
 ### 评估和选择测验
 
-+   7. 确定定位和评估特定已出版测评工具所需的步骤。 [1, 3]
-+   8. 解释在采用已出版测评之前应考虑的当地学区因素。 [1, 3, 4]
-+   9. 命名在评估学校或学区有效性时，必须连同测评结果一起报告的几个非测验因素。 [4, 7, 6]
-+   10. 说明你需要从出版商处获得哪些材料才能正确审查测评程序。 [1, 3]
-+   11. 确定并解释在建议购买已出版测评工具之前，你的评估报告中应包含的主要信息类别。 [1, 3]
++ 7. 确定定位和评估特定已出版测评工具所需的步骤。 [1, 3]
++ 8. 解释在采用已出版测评之前应考虑的当地学区因素。 [1, 3, 4]
++ 9. 命名在评估学校或学区有效性时，必须连同测评结果一起报告的几个非测验因素。 [4, 7, 6]
++ 10. 说明你需要从出版商处获得哪些材料才能正确审查测评程序。 [1, 3]
++ 11. 确定并解释在建议购买已出版测评工具之前，你的评估报告中应包含的主要信息类别。 [1, 3]
 
 ### 标准化测验的开发
 
-+   12. 解释开发标准化测验的主要研究和开发步骤。 [1, 3]
++ 12. 解释开发标准化测验的主要研究和开发步骤。 [1, 3]
 
 ## 重要术语和概念
 
-+   13. 解释本章末尾列出的术语和概念如何适用于教育测评。 [6]
++ 13. 解释本章末尾列出的术语和概念如何适用于教育测评。 [6]
 
 ## 本章概述
 
@@ -16143,11 +17068,11 @@ www.riverpub.com
 
 Tests in Print (TIP) VI TIP 第六版（Murphy, Impara, & Plake, 2002）是一份测验书目，包含超过 2,900 种商业可用工具的信息。你可以使用此来源识别合适的测验，定位 Mental Measurements Yearbooks（稍后讨论）中的测验评述，并找到出版商地址。要作为 Tests in Print VI 的条目出现，测验必须目前在印刷中并且必须以英语出版。每个条目包括以下信息：测验的描述及其目的，人口和评分信息，可用的测验版本及其价格，出版商名称，以及测验在 Mental Measurements Yearbook 中的评述位置。 （参见图 18.4 的顶部，了解 TIP VI 条目的示例。）你可以通过使用该书的五个索引来定位测验。
 
-+   1. 如果你知道或对测验名称有所了解，请查阅标题索引。该索引列出了 TIP VI 中的所有测验以及所有已停印的测验。
-+   2. 如果你不知道测验名称，但知道测验类别或类型，请查阅分类主题索引。书中所有测验分为 18 个类别（例如，社会研究、言语与听力等），每个类别下的单个测验按字母顺序排列。
-+   3. 如果你知道测验作者或在 Mental Measurements Yearbooks 之一中评述过该测验的人的名字，请查阅姓名索引。
-+   4. 如果你知道测验可能产生的分数类型，请查阅分数索引。例如，你可能从阅读中回忆起一个测验包含“攻击/敌意”分数或“数学享受”分数，但不知道各自测验的名称。分数索引按字母顺序列出 TIP VI 中包含的所有此类分数。该索引中的条目非常具体于提供分数的测验。这意味着你的分数定义可能与测验出版商的不同，或者不同出版商可能以不同名称对同一学生特征进行评分。因此，在得出测验未包含在 TIP VI 中的结论之前，请检查所有替代或相关的分数名称。
-+   5. 如果你知道测验的缩写但不知道其完整名称，请查阅缩写索引。例如，如果你回忆起有一个名为 DAT 的测验用于咨询，你可能想使用此索引来定位它。缩写索引列出了两个 DAT：牙科入学考试和分化能力测验。由于你想要的是咨询测验，因此更可能是后者而不是前者。
++ 1. 如果你知道或对测验名称有所了解，请查阅标题索引。该索引列出了 TIP VI 中的所有测验以及所有已停印的测验。
++ 2. 如果你不知道测验名称，但知道测验类别或类型，请查阅分类主题索引。书中所有测验分为 18 个类别（例如，社会研究、言语与听力等），每个类别下的单个测验按字母顺序排列。
++ 3. 如果你知道测验作者或在 Mental Measurements Yearbooks 之一中评述过该测验的人的名字，请查阅姓名索引。
++ 4. 如果你知道测验可能产生的分数类型，请查阅分数索引。例如，你可能从阅读中回忆起一个测验包含“攻击/敌意”分数或“数学享受”分数，但不知道各自测验的名称。分数索引按字母顺序列出 TIP VI 中包含的所有此类分数。该索引中的条目非常具体于提供分数的测验。这意味着你的分数定义可能与测验出版商的不同，或者不同出版商可能以不同名称对同一学生特征进行评分。因此，在得出测验未包含在 TIP VI 中的结论之前，请检查所有替代或相关的分数名称。
++ 5. 如果你知道测验的缩写但不知道其完整名称，请查阅缩写索引。例如，如果你回忆起有一个名为 DAT 的测验用于咨询，你可能想使用此索引来定位它。缩写索引列出了两个 DAT：牙科入学考试和分化能力测验。由于你想要的是咨询测验，因此更可能是后者而不是前者。
 
 Tests: A Comprehensive Reference for Assessments in Psychology, Education, and Business (Fourth Edition) 此参考书（Maddox & Myles, 2003）列出并描述了大约 2,000 个测验，但未对其进行评估。 （测验评估在 Test Critiques 中给出，这是一本姊妹卷，稍后描述。）测验分为三个主要组——心理学、教育和商业——以及 89 个子类别。每个列表描述了测验及其目的，适用对象，评分程序，成本和出版商。
 
@@ -16163,38 +17088,37 @@ Tests: A Comprehensive Reference for Assessments in Psychology, Education, and B
 
 ## 在线定位已出版测验
 
-#### ERIC/AE Test Locator
+### ERIC/AE Test Locator
 
-ERIC/AE Test Locator 是一种搜索五个来源以尝试定位测验的方法：ETS（教育测验服务）测验收藏、测验评述定位器、Buros/ERIC 测验出版商定位器、Buros 分类主题索引和 CEE/ERIC（教育公平与卓越中心/ERIC）测验数据库。Test Locator 由 ERIC 评估与评价清理中心、教育测验服务的图书馆和参考服务部、内布拉斯加大学林肯分校的 Buros 心理测量研究所、乔治华盛顿大学的第三区综合中心以及 Pro-Ed 测验出版商联合努力组建。Buros 研究所的主页（www.unl.edu/buros）提供指向 ERIC/AE Test Locator 的链接。Test Locator 可直接访问 http://ericae.net/testcol.htm。我们在下面的段落中描述这五个来源中的每一个。
 
-#### ETS Test Collection
 
-这是一个包含约 20,000 个测验和其他测评工具的数据库。它包含已出版和未出版工具的信息
+ERIC/AE Test Locator 是一种搜索五个来源以尝试定位测验的方法：ETS（教育测验服务）测验收藏、测验评述定位器、Buros/ERIC 测验出版商定位器、Buros 分类主题索引和 CEE/ERIC（教育公平与卓越中心/ERIC）测验数据库。Test Locator 由 ERIC 评估与评价清理中心、教育测验服务的图书馆和参考服务部、内布拉斯加大学林肯分校的 Buros 心理测量研究所、乔治华盛顿大学的第三区综合中心以及 Pro-Ed 测验出版商联合努力组建。Buros 研究所的主页（`www.unl.edu/buros`）提供指向 ERIC/AE Test Locator 的链接。Test Locator 可直接访问 `http://ericae.net/testcol.htm`。我们在下面的段落中描述这五个来源中的每一个。
 
-Figure 18.1
-Where to look to locate a test.
+## ETS Test Collection
+
+这是一个包含约 20,000 个测验和其他测评工具的数据库。它包含已出版和未出版工具的信息。
+
+**Figure 18.1** *Where to look to locate a test.*
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_430_0.png)
 
-
-
-ments。数据库中列出的部分仪器已停印，部分可通过出版商获得，部分可通过测试作者获得，部分可通过 ETS 购买并下载。部分测试来自美国以外。你可以按测试类型、作者或标题进行搜索。从测试收藏主页点击“Search Help”按钮可获得进一步的搜索帮助。你可以直接通过 www.ets.org/testcoll 访问 ETS 测试收藏数据库。
+数据库中列出的部分仪器已停印，部分可通过出版商获得，部分可通过测试作者获得，部分可通过 ETS 购买并下载。部分测试来自美国以外。你可以按测试类型、作者或标题进行搜索。从测试收藏主页点击“Search Help”按钮可获得进一步的搜索帮助。你可以直接通过 `www.ets.org/testcoll` 访问 ETS 测试收藏数据库。
 
 ## Buros/ERIC Test Publisher Locator
 
-使用此数据库可搜索测试出版商的当前地址和网站。搜索出版商网站可能有助于你找到当前出版的测试。可通过 www.unl.edu/buros 或通过 http://ericae.net/testcol.htm 访问。
+使用此数据库可搜索测试出版商的当前地址和网站。搜索出版商网站可能有助于你找到当前出版的测试。可通过 `www.unl.edu/buros` 或通过 `http://ericae.net/testcol.htm` 访问。
 
 ## Test Review Locator
 
-此数据库用于查找已在《心理测量年鉴》和/或《测试评论》中评述的测试（两者在后面描述）。你可以按测试标题或标题中的关键词进行搜索。可通过 www.unl.edu/buros 或通过 http://ericae.net/testcol.htm 访问。
+此数据库用于查找已在《心理测量年鉴》和/或《测试评论》中评述的测试（两者在后面描述）。你可以按测试标题或标题中的关键词进行搜索。可通过 `www.unl.edu/buros` 或通过 `http://ericae.net/testcol.htm` 访问。
 
 ## Buros Classified Subject Index
 
-此电子索引包含自 1985 年以来在《心理测量年鉴》中评述的所有测试的名称。每个测试都归入 19 个标题之一（例如，成就、美术、智力和学业能力等）。你可以滚动浏览一组测试以找到标题，然后参考印刷来源获取进一步信息。可通过 www.unl.edu/buros 或 http://ericae.net/testcol.htm 访问。
+此电子索引包含自 1985 年以来在《心理测量年鉴》中评述的所有测试的名称。每个测试都归入 19 个标题之一（例如，成就、美术、智力和学业能力等）。你可以滚动浏览一组测试以找到标题，然后参考印刷来源获取进一步信息。可通过 `www.unl.edu/buros` 或通过 `http://ericae.net/testcol.htm` 访问。
 
 ## CEEE/ERIC Test Database
 
-此数据库包含用于英语能力有限学生的测试。数据库由教育公平与卓越中心（乔治华盛顿大学）和 ERIC/AE 维护。部分测试是对英语能力的评估。其他则是其他语言（如西班牙语、阿拉伯语等）的学科成绩测试。测试被组织成以下组别：诊断、学区评估、识别、语言优势、安置、熟练度、项目退出、进展和项目评估。你可以按标题或关键词搜索，也可以滚动浏览每个分组下的测试列表。数据库也可通过 http://ceee.gwu.edu/standards_assessments/database.htm 或通过 http://ericae.net/testcol.htm 访问。
+此数据库包含用于英语能力有限学生的测试。数据库由教育公平与卓越中心（乔治华盛顿大学）和 ERIC/AE 维护。部分测试是对英语能力的评估。其他则是其他语言（如西班牙语、阿拉伯语等）的学科成绩测试。测试被组织成以下组别：诊断、学区评估、识别、语言优势、安置、熟练度、项目退出、进展和项目评估。你可以按标题或关键词搜索，也可以滚动浏览每个分组下的测试列表。数据库也可通过 `http://ceee.gwu.edu/standards_assessments/database.htm` 或通过 `http://ericae.net/testcol.htm` 访问。
 
 ## Test Publishers’ Websites
 
@@ -16206,44 +17130,47 @@ ments。数据库中列出的部分仪器已停印，部分可通过出版商获
 
 ## Locating Published Tests Through Personal Contacts
 
-## Professional Contacts and Organizations
+### Professional Contacts and Organizations
 
 图 18.2 列出了可能帮助你找到已出版测试的组织。较大的测试公司和机构通常设有信息和/或咨询办公室，可通过免费电话号码回答问题。专业组织，如国家测量教育委员会（位于华盛顿特区），有时可以通过将你转介给当地可以提供帮助的成员来协助你。一些专业协会的重点并非专门在于评估，但可能设有特殊兴趣小组，关注绩效、批判性思维或课堂评估等具体问题。在某些地区，联邦资助的研究与发展中心和区域实验室设有技术援助办公室，可帮助解决测试问题。在一些州，县级学校机构、州相关学校机构或技术援助中心专门组织起来，提供审查和使用测试方面的帮助。
 
-## Testing Specialists in Colleges and Universities
-
-你的专业联系人可能帮助你找到测试。大学和学院的测试与测量教授通常在教育研究、教育心理学、测量与统计、咨询与指导或心理学系工作。请向系主任咨询推荐联系人。
-
-## Testing Offices in Schools, Colleges, and Universities
-
-你所在学校的测试办公室主任或学校心理学家通常是很有用的资源。许多较大的学院和大学设有测试办公室，旨在帮助其教职员工和学生解决测试问题，这些办公室通常也愿意回答公众的提问。
-
-## Promotional Exhibits at Conferences
-
-如果你参加专业会议，你可以去展览区。展览会有书籍和教学材料，也可能有测试出版商的展览。展商可能有你正在寻找的测试，或可将你联系到当地的销售代表以获取所需信息。
-
-## Figure 18.2 Examples of organizations that provide information on educational assessment.
+**Figure 18.2** *Examples of organizations that provide information on educational assessment.*
 
 专业协会准备与教育评估相关的期刊和其他出版物，推动改进评估使用，并可联系以识别在教育评估特定领域具有专长的成员。
 
-- 1. American Educational Research Association (Washington, DC) [www.aera.net]
-- 2. Association for Assessment in Counseling (Arlington, VA) [www.ddc.uc.edu/aac]
-- 3. International Reading Association (IRA) (Newark, DE) [www.reading.org]
-- 4. National Association of Test Directors (NATD) [www.natd.org]
-- 5. National Council on Measurement in Education (NCME) (Washington, DC) [www.ncme.org]
+- 1. American Educational Research Association (Washington, DC) [`www.aera.net`]
+- 2. Association for Assessment in Counseling (Arlington, VA) [`www.ddc.uc.edu/aac`]
+- 3. International Reading Association (IRA) (Newark, DE) [`www.reading.org`]
+- 4. National Association of Test Directors (NATD) [`www.natd.org`]
+- 5. National Council on Measurement in Education (NCME) (Washington, DC) [`www.ncme.org`]
 
 文献中心收集评估文件，对其进行摘要，并通过教育研究信息中心（ERIC）提供。提供在线服务。
 
-- 1. ERIC Clearinghouse on Assessment and Evaluation (ERIC/AE) (University of Maryland, College Park, MD) [www.ericae.net]
+- 1. ERIC Clearinghouse on Assessment and Evaluation (ERIC/AE) (University of Maryland, College Park, MD) [`www.ericae.net`]
 
 研究中心和区域实验室投资于教育评估的技术或政策问题研究。它们有这些出版物的目录，有时也会回答有关具体评估问题的咨询。
 
-- 1. Buros Institute of Mental Measurements (University of Nebraska) [www.unl.edu/buros]
-- 2. Center for the Study of Testing, Evaluation, and Educational Policy (Boston College) [www.csteep.bc.edu]
-- 3. Center for Research on Evaluation, Standards, and Student Testing (CRESST) (UCLA) [www.cse.ucla.edu]
-- 4. Northwest Regional Educational Laboratory (NREL) (Portland, OR) [www.nwrel.org]
-- 5. Comprehensive Regional Assistance Centers [www.ed.gov/EdRes/EdFed/EdFed/EdTechCtrs.html]
-- 6. Mid-continent Regional Educational Laboratory (Mcrel)(Aurora, CO) [www.mcrl.org]
+- 1. Buros Institute of Mental Measurements (University of Nebraska) [`www.unl.edu/buros`]
+- 2. Center for the Study of Testing, Evaluation, and Educational Policy (Boston College) [`www.csteep.bc.edu`]
+- 3. Center for Research on Evaluation, Standards, and Student Testing (CRESST) (UCLA) [`www.cse.ucla.edu`]
+- 4. Northwest Regional Educational Laboratory (NREL) (Portland, OR) [`www.nwrel.org`]
+- 5. Comprehensive Regional Assistance Centers [`www.ed.gov/EdRes/EdFed/EdFed/EdTechCtrs.html`]
+
+### Testing Specialists in Colleges and Universities
+
+你的专业联系人可能帮助你找到测试。大学和学院的测试与测量教授通常在教育研究、教育心理学、测量与统计、咨询与指导或心理学系工作。请向系主任咨询推荐联系人。
+
+### Testing Offices in Schools, Colleges, and Universities
+
+你所在学校的测试办公室主任或学校心理学家通常是很有用的资源。许多较大的学院和大学设有测试办公室，旨在帮助其教职员工和学生解决测试问题，这些办公室通常也愿意回答公众的提问。
+
+### Promotional Exhibits at Conferences
+
+如果你参加专业会议，你可以去展览区。展览会有书籍和教学材料，也可能有测试出版商的展览。展商可能有你正在寻找的测试，或可将你联系到当地的销售代表以获取所需信息。
+
+
+
+# 6. Mid-continent Regional Educational Laboratory (Mcrel) (Aurora, CO) [`www.mcrl.org`]
 
 非营利测试公司提供广泛的评估服务，进行评估研究并传播评估信息。
 
@@ -16255,117 +17182,118 @@ ments。数据库中列出的部分仪器已停印，部分可通过出版商获
 
 三种可能在你学术图书馆中的印刷资源是：《心理测量年鉴》、《测试评论》和专业期刊。第四种、测试出版商目录不太可能在图书馆中。
 
-Mental Measurements Yearbooks (MMY) 用于查找测试信息的最有用资源之一是位于内布拉斯加大学林肯分校的布罗斯心理测量研究所的出版物。已故的 Oscar K. Buros 创立了该研究所并开始了一系列测试书目和《心理测量年鉴》（MMY）。《心理测量年鉴》（Buros，1938 年至今）是一系列卷册，对当前可用的大量英文出版测试进行批判性评估。每卷补充而非取代早期版本，因此有时需要查阅早期卷册以获得对测试的完整覆盖。
+`Mental Measurements Yearbooks` (`MMY`) 用于查找测试信息的最有用资源之一是位于内布拉斯加大学林肯分校的布罗斯心理测量研究所的出版物。已故的 Oscar K. Buros 创立了该研究所并开始了一系列测试书目和《心理测量年鉴》（`MMY`）。《心理测量年鉴》（Buros，1938 年至今）是一系列卷册，对当前可用的大量英文出版测试进行批判性评估。每卷补充而非取代早期版本，因此有时需要查阅早期卷册以获得对测试的完整覆盖。
 
-每项测试均由一位或多位专家特别为 MMY 评审，每卷还摘录了期刊评论。每本《心理测量年鉴》包含数百项测试的原创评述。每项测试条目包含测试标题、年龄或年级、出版日期、特别评论、分测验数量和类型、作者、出版商、参考文献和书目信息。每个条目都交叉引用到早期 MMY 中的先前评述。每本 MMY 中列出了数百家测试出版商的名称和地址。印刷版 MMY 的缺点是由于出版滞后，所评述的测试版本可能与出版商的新版本不对应。
+每项测试均由一位或多位专家特别为 `MMY` 评审，每卷还摘录了期刊评论。每本《心理测量年鉴》包含数百项测试的原创评述。每项测试条目包含测试标题、年龄或年级、出版日期、特别评论、分测验数量和类型、作者、出版商、参考文献和书目信息。每个条目都交叉引用到早期 `MMY` 中的先前评述。每本 `MMY` 中列出了数百家测试出版商的名称和地址。印刷版 `MMY` 的缺点是由于出版滞后，所评述的测试版本可能与出版商的新版本不对应。
 
-要找到测试评述，你需要知道测试出现在哪一卷 MMY 中。如果你的测试标题出现在《Tests in Print VI》中，该出版物会告诉你评述的 MMY 卷册和条目编号。你也可以使用上一节中描述的 Test Review Locator，通过布罗斯研究所主页或通过 ERIC/AE 在互联网上访问它。图 18.4 显示了 MMY 中一页的布局。这将让你更好地了解此资源的预期内容。
+要找到测试评述，你需要知道测试出现在哪一卷 `MMY` 中。如果你的测试标题出现在《`Tests in Print VI`》中，该出版物会告诉你评述的 `MMY` 卷册和条目编号。你也可以使用上一节中描述的 `Test Review Locator`，通过布罗斯研究所主页或通过 `ERIC/AE` 在互联网上访问它。图 18.4 显示了 `MMY` 中一页的布局。这将让你更好地了解此资源的预期内容。
 
+### 图 18.3 测试出版评论的查找位置。
 
+#### 资源
 
-
-
-# 图 18.3 测试出版评论的查找位置。
-
-## 资源
-
-+ 在 MMY 中查找测试评价：
-+ • Tests in Print (TIP)
-
++ 在 `MMY` 中查找测试评价：
++ • `Tests in Print` (`TIP`)
 + 阅读印刷版测试评价：
-+ • Mental Measurements Yearbooks (MMY)
-+ • Test Critiques
++ • `Mental Measurements Yearbooks` (`MMY`)
++ • `Test Critiques`
 + • A Consumer's Guide to Test in Print
 + • Professional journals
-
-+ 在线阅读 MMY 测试评价：
-+ • Test Reviews Online
-
++ 在线阅读 `MMY` 测试评价：
++ • `Test Reviews Online`
 + 通过个人联系获取测试评价：
 + • Testing specialists in colleges and universities
 + • Testing offices in schools, colleges, and universities
 
-# 图 18.4 某假设测试的《心理测量年鉴》评论条目布局。
+### 图 18.4 某假设测试的《心理测量年鉴》评论条目布局。
 
-Entry Number: 在所有索引中引用该测试时引用的编号。
+`Entry Number`: 在所有索引中引用该测试时引用的编号。
 
-Title: 测试标题以粗体印刷；次要标题或系列标题与主标题以冒号分隔。
+`Title`: 测试标题以粗体印刷；次要标题或系列标题与主标题以冒号分隔。
 
-Population: 针对该测试的适用人群的描述。
+`Population`: 针对该测试的适用人群的描述。
 
-Administration: 标明是个人还是团体施测。
+`Administration`: 标明是个人还是团体施测。
 
-Distribution: 仅对出版社以特殊市场推出的测试进行标注。
+`Distribution`: 仅对出版社以特殊市场推出的测试进行标注。
 
-Special Editions: 此处列出各种类型的特殊版本。
+`Special Editions`: 此处列出各种类型的特殊版本。
 
-The Hypothetical Test: Reading. Purpose: Designed to "measure achievement in reading." Population: Grades 9–12. Publication Dates: 1989—1994. Acronym: HYPE. Scores, 3: Vocabulary, Comprehension, and Total. Administration: Individual or group. Forms, 3: Survey, Abbreviated, Complete Battery. Restricted Distribution: Distribution of Survey Form restricted to school principals. Price Data, 1995: $70 per complete kit including 100 tests, scoring key, and manual ('94, 120 pages); $9 per scoring key; $32 per manual. Special Editions: Braille edition available. Time: 50 (60) minutes. Comments: May be self-scored. Author: Jane J. Doe. Publisher: Hypothetical Tests, Inc. Cross References: See T4:3010 (2 references); for reviews by John Roe and Robert Smith of an earlier edition, see 9:1410 (6 references).
+`The Hypothetical Test: Reading. Purpose`: Designed to "measure achievement in reading." `Population`: Grades 9–12. `Publication Dates`: 1989—1994. `Acronym`: HYPE. `Scores, 3`: Vocabulary, Comprehension, and Total. `Administration`: Individual or group. `Forms, 3`: Survey, Abbreviated, Complete Battery. `Restricted Distribution`: Distribution of Survey Form restricted to school principals. `Price Data, 1995`: $70 per complete kit including 100 tests, scoring key, and manual ('94, 120 pages); $9 per scoring key; $32 per manual. `Special Editions`: Braille edition available. `Time`: 50 (60) minutes. `Comments`: May be self-scored. `Author`: Jane J. Doe. `Publisher`: Hypothetical Tests, Inc. `Cross References`: See T4:3010 (2 references); for reviews by John Roe and Robert Smith of an earlier edition, see 9:1410 (6 references).
 
-Purpose: 对测试目的的简要、清晰陈述；这些通常是摘自测试手册的引文。
+`Purpose`: 对测试目的的简要、清晰陈述；这些通常是摘自测试手册的引文。
 
-Publication Date: 出版日期的包含范围。
+`Publication Date`: 出版日期的包含范围。
 
-Acronym: 测试可能通用的缩写。
+`Acronym`: 测试可能通用的缩写。
 
-Scores: 列出明确分数的数量以及它们旨在测量的内容描述。
+`Scores`: 列出明确分数的数量以及它们旨在测量的内容描述。
 
-Forms: 列出所有可用的形式、部分和等级。
+`Forms`: 列出所有可用的形式、部分和等级。
 
-Price Data: 报告测试套装、答题纸、配件和样张集的价格信息。
+`Price Data`: 报告测试套装、答题纸、配件和样张集的价格信息。
 
-Time: 这是完成并施测测试所需的时间。第一个数字是受试者允许的实际工作时间，第二个（括号内）数字是施测测试所需的总时间。
+`Time`: 这是完成并施测测试所需的时间。第一个数字是受试者允许的实际工作时间，第二个（括号内）数字是施测测试所需的总时间。
 
 ## 在线查找已出版测试的评价
 
-获取测试评论在线的一个来源是 Buros Institute 的 Test Reviews Online (www.unl.edu/buros)。MMY 第 9 至 14 卷的测试评论可供使用。大约有 2,000 条测试评论可供使用，但只能付费查看和下载。这对于没有方便获取印刷资料但有互联网接入的人来说是一个极好的资源。
+获取测试评论在线的一个来源是 Buros Institute 的 `Test Reviews Online` (`www.unl.edu/buros`)。`MMY` 第 9 至 14 卷的测试评论可供使用。大约有 2,000 条测试评论可供使用，但只能付费查看和下载。这对于没有方便获取印刷资料但有互联网接入的人来说是一个极好的资源。
 
 ## 通过个人联系查找已出版测试的评价
 
-Testing Specialists in Colleges and Universities 就像你的专业联系人可以帮助你找到测试一样，这些人也可能帮助你评价测试。大学的测试和测量教授通常在教育研究、教育心理学、测量与统计、咨询与指导或心理学系工作。请致电系主任以获取推荐联系人。测试专家可能对特定测试有个人经验，并愿意与你分享。
+`Testing Specialists in Colleges and Universities` 就像你的专业联系人可以帮助你找到测试一样，这些人也可能帮助你评价测试。大学的测试和测量教授通常在教育研究、教育心理学、测量与统计、咨询与指导或心理学系工作。请致电系主任以获取推荐联系人。测试专家可能对特定测试有个人经验，并愿意与你分享。
 
-Test Critiques (Volumes I–X) 该参考书（Keyser & Sweetland, 1994）是一系列卷册，回顾了在商业、教育和心理学中最常用的测试。每项测试由一名测试专家进行评审。条目涵盖测试介绍、实际用途和应用、技术方面以及对测试的总体评价。你可以使用前面描述的 Tests: A Comprehensive Reference for Assessments in Psychology, Education, and Business 来定位包含该测试的 Test Critiques 卷。你也可以通过 Buros Institute 主页或 ERIC/AE 在互联网上访问本节最后描述的 Test Review Locator 来使用它。
+`Test Critiques` (`Volumes I–X`) 该参考书（Keyser & Sweetland, 1994）是一系列卷册，回顾了在商业、教育和心理学中最常用的测试。每项测试由一名测试专家进行评审。条目涵盖测试介绍、实际用途和应用、技术方面以及对测试的总体评价。你可以使用前面描述的 `Tests: A Comprehensive Reference for Assessments in Psychology, Education, and Business` 来定位包含该测试的 `Test Critiques` 卷。你也可以通过 Buros Institute 主页或 `ERIC/AE` 在互联网上访问本节最后描述的 `Test Review Locator` 来使用它。
 
-Professional Journals 某个领域的专业期刊经常评论在特定领域具有潜在应用的测试，例如阅读、数学、儿童发展或学习障碍。专门的测试和测量期刊会评论对学校从业人员和心理学家具有广泛吸引力的测试。经常报道测试评论的期刊（Buros, 1978）包括 Developmental Medicine and Child Neurology；Journal of Educational Measurement；Journal of Learning Disabilities；Journal of Personality Assessment；Journal of Reading；Journal of School Psychology；Journal of Special Education；Measurement and Evaluation in Guidance；Modern Language Journal；Psychological Reports；Psychology in the Schools；和 Reading Teacher。关于这些及其他期刊的书目信息（包括评论测试书籍的期刊）出现在一些《心理测量年鉴》的后面。期刊参考文献在 Education Index、Dissertation Abstracts、Research Studies in Education、Psychological Abstracts 和 Research in Education (ERIC) 等来源中都有索引。
 
-Testing Offices in Schools, Colleges, and Universities 你所在学校的测试办公室主任或学校心理学家可能是一个有用的资源。许多较大的学院和大学设有测试办公室，旨在帮助其教职员工和学生解决测试问题。这些办公室通常也向公众开放咨询。
+
+# Professional Journals
+某个领域的专业期刊经常评论在特定领域具有潜在应用的测试，例如阅读、数学、儿童发展或学习障碍。专门的测试和测量期刊会评论对学校从业人员和心理学家具有广泛吸引力的测试。经常报道测试评论的期刊（Buros, 1978）包括 Developmental Medicine and Child Neurology；Journal of Educational Measurement；Journal of Learning Disabilities；Journal of Personality Assessment；Journal of Reading；Journal of School Psychology；Journal of Special Education；Measurement and Evaluation in Guidance；Modern Language Journal；Psychological Reports；Psychology in the Schools；和 Reading Teacher。关于这些及其他期刊的书目信息（包括评论测试书籍的期刊）出现在一些《心理测量年鉴》的后面。期刊参考文献在 Education Index、Dissertation Abstracts、Research Studies in Education、Psychological Abstracts 和 Research in Education (ERIC) 等来源中都有索引。
+
+## Testing Offices in Schools, Colleges, and Universities
+你所在学校的测试办公室主任或学校心理学家可能是一个有用的资源。许多较大的学院和大学设有测试办公室，旨在帮助其教职员工和学生解决测试问题。这些办公室通常也向公众开放咨询。
 
 ## 查找计算机化测试材料
 
-Psychware Sourcebook 计算机和计算机化测试产品的使用量激增。Psychware Sourcebook (Krug, 1993) 就是此类产品的汇编之一，尽管有点过时。你可以联系其出版商 Metritech, Inc., 4106 Fiddstone Rd, P.O. Box 6479, Champaign, IL 61826-6479 或 www.metritech.com 获取最新信息和计划修订。
+### Psychware Sourcebook
+计算机和计算机化测试产品的使用量激增。Psychware Sourcebook (Krug, 1993) 就是此类产品的汇编之一，尽管有点过时。你可以联系其出版商 Metritech, Inc., 4106 Fiddstone Rd, P.O. Box 6479, Champaign, IL 61826-6479 或 `www.metritech.com` 获取最新信息和计划修订。
 
-General Internet Searches 你可能有运气使用 Google 或其他搜索引擎查找计算机化测试产品。务必使用“computer testing + education”作为搜索词，否则你会得到大量虚假链接。你找到的大多数网站都在销售计算机化测试产品，因此在这些网站上找不到产品的专家客观评价。
+### General Internet Searches
+你可能有运气使用 Google 或其他搜索引擎查找计算机化测试产品。务必使用“computer testing + education”作为搜索词，否则你会得到大量虚假链接。你找到的大多数网站都在销售计算机化测试产品，因此在这些网站上找不到产品的专家客观评价。
 
-Test Publishers’ Websites 测试出版商可能有多款计算机化测试产品，会在其网站上列出。同样，这些网站是营销工具，因此在这些网站上找不到产品的客观评价。本教材的 Companion Website (http://www.prenhall.com/nitko) 上提供了提供计算机辅助测试的公司网站列表。本书附录 L 中给出了测试出版商及其网址列表。
+### Test Publishers’ Websites
+测试出版商可能有多款计算机化测试产品，会在其网站上列出。同样，这些网站是营销工具，因此在这些网站上找不到产品的客观评价。本教材的 Companion Website (`http://www.prenhall.com/nitko`) 上提供了提供计算机辅助测试的公司网站列表。本书附录 L 中给出了测试出版商及其网址列表。
 
 ## 查找未出版的测试材料
-
 并非所有测试材料都是出版的。许多测试已在研究和评估项目中使用。其中一些是可以获得的，如果你能找到的话。我们在本节中描述了一些查找此类测试的来源。
 
 ## 从印刷来源查找未出版的测试
 
-ETS Test Collection 我们之前讨论过 ETS Test Collection 作为测试的在线数据库。其中许多测试是未出版的。印刷版等同物是 Collection Catalog, Volume I: Achievement Tests and Measurement Devices, Volume 2: Vocational Tests and Measurement Devices, Volume III: Tests for Special Populations, Volume IV: Cognitive Aptitude and Intelligence Tests, Volume V: Attitude Tests, Volume VI: Affective Measures and Personality Tests。这些由 Oryx Press, Phoenix, AZ 出版。
+### ETS Test Collection
+我们之前讨论过 ETS Test Collection 作为测试的在线数据库。其中许多测试是未出版的。印刷版等同物是 Collection Catalog, Volume I: Achievement Tests and Measurement Devices, Volume 2: Vocational Tests and Measurement Devices, Volume III: Tests for Special Populations, Volume IV: Cognitive Aptitude and Intelligence Tests, Volume V: Attitude Tests, Volume VI: Affective Measures and Personality Tests。这些由 Oryx Press, Phoenix, AZ 出版。
 
+### Tests in Microfiche
+包含超过 800 项用于教育、商业和心理学的未出版测试。它可在许多学院和大学图书馆的缩微格式收藏中获得。一些测试在 Tests in Microfiche 收藏中。Educational Testing Services 位于新泽西州普林斯顿。
 
+### Directory of Unpublished Experimental Measures
+该目录由 Goldman 和 Mitchell（1997）编辑，列出了各种教育和心理领域的未出版测试和调查。条目按 24 个类别排列，并包括测试的可用性、目的、内容、格式和相关研究。每卷都有一个累计索引，列出了所有约 5,000 项测试，涵盖所有早期卷。
 
+### Measures for Psychological Assessment: A Guide to 3,000 Original Sources and Their Applications
+该卷由 Chun、Cobb、French（1975）编辑，略显过时，但提供了已发表研究中使用的测试和工具的注释描述。
 
-Tests in Microfiche 包含超过 800 项用于教育、商业和心理学的未出版测试。它可在许多学院和大学图书馆的缩微格式收藏中获得。一些测试在 Tests in Microfiche 收藏中。Educational Testing Services 位于新泽西州普林斯顿。
-
-Directory of Unpublished Experimental Measures 该目录由 Goldman 和 Mitchell（1997）编辑，列出了各种教育和心理领域的未出版测试和调查。条目按 24 个类别排列，并包括测试的可用性、目的、内容、格式和相关研究。每卷都有一个累计索引，列出了所有约 5,000 项测试，涵盖所有早期卷。
-
-Measures for Psychological Assessment: A Guide to 3,000 Original Sources and Their Applications 该卷由 Chun、Cobb、French（1975）编辑，略显过时，但提供了已发表研究中使用的测试和工具的注释描述。
-
-Health and Psychosocial Instruments (HAPI) 该资源可在 CD-ROM 上获得（联系 Evelyn Perloff，Behavior Measurement Database Service，P. O. Box 110287，Pittsburgh，PA 15232–0787，412-687-6850）并通过 Ovid Technologies（数据库供应商）在 http://www.ovid.com/ 上在线获取。它包括健康科学、护理、心理学和社会科学期刊文章中的工具。
+### Health and Psychosocial Instruments (HAPI)
+该资源可在 CD-ROM 上获得（联系 Evelyn Perloff，Behavior Measurement Database Service，P. O. Box 110287，Pittsburgh，PA 15232–0787，412-687-6850）并通过 Ovid Technologies（数据库供应商）在 `http://www.ovid.com/` 上在线获取。它包括健康科学、护理、心理学和社会科学期刊文章中的工具。
 
 ## Locating Unpublished Tests Online
 
-College and University Library Subject Guides 一些学院和大学的学术图书馆提供在线测试和测量主题指南。这些可能包括指向未出版测试和调查工具书目的链接。两个例子是：Tests and Testing Information（Corby，2002）位于密歇根州立大学（http://www.lib.msu.edu/corby/psychology/）和 Test and Measures in the Social Sciences: Tests Available in Compilation Volumes（Hough，2002）位于德克萨斯大学阿灵顿分校（http://libraries.uta.edu/helen/tests&meas/testmaniframe.htm/）。您应检查您当地图书馆的测试和测量主题指南。
+### College and University Library Subject Guides
+一些学院和大学的学术图书馆提供在线测试和测量主题指南。这些可能包括指向未出版测试和调查工具书目的链接。两个例子是：Tests and Testing Information（Corby，2002）位于密歇根州立大学（`http://www.lib.msu.edu/corby/psychology/`）和 Test and Measures in the Social Sciences: Tests Available in Compilation Volumes（Hough，2002）位于德克萨斯大学阿灵顿分校（`http://libraries.uta.edu/helen/tests&meas/testmaniframe.htm/`）。您应检查您当地图书馆的测试和测量主题指南。
 
 最后，通过 ERIC/AE 搜索将比一般的搜索，例如在 Google 上，产生更多与教育测试相关的结果。您也可以尝试在图书馆的 PsycINFO 上搜索。
 
 ## RESTRICTIONS ON PURCHASING AND USING TESTS
 
-## Purchasing Restrictions
-
+### Purchasing Restrictions
 虽然您可能会找到想要使用的测试名称，但其可用性可能受到限制。如果它是已出版的测试，出版商的目录将列出测试购买的任何限制：某些测试，尤其是单独施测的智力和人格测试的销售，仅限于合格的心理学家。为了防止评估滥用，一些出版商限制测试材料的销售。通常，出版商根据购买限制的严重程度对测试进行标记：
 
 Level A —可由机构或组织在正式信头上订购，该机构或组织中的合格人员将施测并解释结果。该机构或机构将雇用符合《教育和心理测试标准》（1999）建议的人员。订购个人必须验证其已完成认可项目中的足够培训和测试解释与使用课程。
@@ -16380,11 +17308,13 @@ Level C —个人需要验证他们拥有心理学或教育学领域的博士学
 
 ## Guidelines for Proper Test Development and Use
 
+
+
 Test Standards 评估教育和心理测试的有用出版物是《教育和心理测试标准》（AERA、APA、& NCME，1999）。这是前面关于测试订购限制段落中引用的出版物。这是美国教育研究协会、美国心理学会和国家测量教育委员会联合制定的出版商和测试使用者测试标准。该标准描述了出版商应在测试手册和随附材料中提供的各种信息。它包括测试应如何开发的建议以及测试应如何使用的指南。可以通过致电国家测量教育委员会（202-223-9318）获得进一步信息。
 
 The Code 《标准》中的思想和概念是针对专业测试人员而非测量学生和公众的。然而，联合测试实践委员会（1988）制定了一套专业人员（像您一样）在正式教育测试项目中使用专业开发的测试时的主要义务。这些义务被称为《教育公平测试实践守则》，包含在附录 B 中。当您评估测试或您学校的测试项目时，该守则对您尤其有用。该守则列出了测试使用者和测试开发者的单独义务。《教育测量专业责任守则》（国家测量教育委员会，1995）也描述了专业义务，并转载于附录 C。（另见第 5 章。）
 
-## EVALUATING AND SELECTING A TEST
+# EVALUATING AND SELECTING A TEST
 
 由于测试在教育系统中发挥重要作用，学校官员应仔细选择它们。在您的学区采用测试之前，家长、教师和管理员组成的委员会应仔细检查和评估它。本节描述了进行此类审查和评估的系统程序。作为教师，您参与此类测试选择委员会并提供知情判断是您专业责任的一部分。没有教师知情判断的学校管理员选择测试会冒犯严重错误的危险。由于没有任何测试能完美匹配学区的需求，比较一个测试与另一个测试的优点是选择更好产品的重要步骤。
 
@@ -16401,11 +17331,7 @@ The Code 《标准》中的思想和概念是针对专业测试人员而非测�
 
 ## Put the New Assessment Plans into Local Context
 
-在您着手选择新的评估程序之前，您应盘点学区已在使用中的评估。例如，什么类型的评估
-
-
-
-do teachers already do, of what quality are these assessments, and do they serve the perceived need?
+在您着手选择新的评估程序之前，您应盘点学区已在使用中的评估。例如，什么类型的评估 do teachers already do, of what quality are these assessments, and do they serve the perceived need?
 
 ## 外部评估与教师自制评估
 
@@ -16421,7 +17347,7 @@ do teachers already do, of what quality are these assessments, and do they serve
 
 ## 评估学区
 
-有时学区希望使用外部评估，例如标准化测试，来评估自身。学校官员应意识到，不仅单一测试为评估教师和课程提供了尤其糟糕的基础，而且项目评估本身就是一个需要经过良好培训的专业评估人员的技术领域。非常经常，合格的项目评估人员并不在学区的工资单上。学校官员往往不知道需要专业项目评估员，于是常将任务分配给在其他领域受过专业训练的人员，例如学校心理学家或指导顾问。希望使用评估进行项目评估的学监在设计这些评估策略之前，可能希望咨询课程评估专家。一个建议是联系美国教育研究协会 (www.aera.net)，并询问如何联系居住在您学区附近的 H 分会成员。表 18.1 总结了一些影响学校教育任务难度的因素。关于这些因素的信息应与测试结果一起使用，以帮助解释学校的成效。
+有时学区希望使用外部评估，例如标准化测试，来评估自身。学校官员应意识到，不仅单一测试为评估教师和课程提供了尤其糟糕的基础，而且项目评估本身就是一个需要经过良好培训的专业评估人员的技术领域。非常经常，合格的项目评估人员并不在学区的工资单上。学校官员往往不知道需要专业项目评估员，于是常将任务分配给在其他领域受过专业训练的人员，例如学校心理学家或指导顾问。希望使用评估进行项目评估的学监在设计这些评估策略之前，可能希望咨询课程评估专家。一个建议是联系美国教育研究协会 (`www.aera.net`)，并询问如何联系居住在您学区附近的 H 分会成员。表 18.1 总结了一些影响学校教育任务难度的因素。关于这些因素的信息应与测试结果一起使用，以帮助解释学校的成效。
 
 ## 人员的资质
 
@@ -16463,6 +17389,9 @@ do teachers already do, of what quality are these assessments, and do they serve
 | Stability | Includes percent of staff and students new to a school district. |
 | Experience | Includes years of teaching experience and years of education beyond the initial qualifications. |
 | Staff development | Includes inservice programs, peer mentoring, collaboration with businesses or colleges, and courses taken. |
+
+
+
 | Programs for students | Includes study skills, counseling, dropout and at-risk prevention, reentry, cross-age tutoring, extra-curricular, and summer school. |
 | Achievement | Includes performance of students at the next higher educational level; longitudinal patterns of achievement test results, student awards and honors, per-student library loans, National Merit scholars, college entrance test results, and out-of-class student accomplishments. |
 | School environment | Includes incidents of vandalism and violence, gang-related activities, types of disciplinary actions, special services, extra-curricular activities, and library facilities. |
@@ -16475,15 +17404,15 @@ and scoring service; and technical information about the assessment. (See our ea
 
 其中大部分材料捆绑在一起形成样本集，该样本集既是营销工具，也是对材料进行批判性审阅的工具。因此，并非您为明智地审阅测试所需的所有材料都包含在内。例如，一些出版商的样本集不包括评估小册子的完整副本或评分指南。您需要单独订购这些。
 
-测试质量的技术信息 测试质量的技术信息不会在出版商的目录中找到。关于测试是如何开发的、信度系数、测量标准误、相关性和效度研究、等值方法、项目分析程序以及常模样本数据等信息，都可以在测试的技术手册中找到。技术手册通常不包含在样本集中，必须与测试分开订购。虽然学校测试主管应拥有学校使用的测试的技术手册副本，但这种情况太少见了。一些维护测试收藏供其教职员工和学生使用的学院和大学可能拥有技术手册。通常，您需要直接从测试出版商处订购技术手册。
+### 测试质量的技术信息
 
-委员会应审阅所有材料 一旦您获得材料，委员会就可以审阅它们。务必将类似的评估与您打算使用评估的目的进行比较。委员会可能需要就评估的某些部分征求非委员会成员的意见：例如，数学教师对数学部分，阅读教师对阅读评估，等等。您也可以请大学或学院的教职员工提供帮助：例如，测试与测量领域的教职员工可能更胜任审阅和/或解释技术材料。联系国家教育测量委员会 (www.ncme.org) 以获取居住在您学区附近的专家的姓名。
+测试质量的技术信息不会在出版商的目录中找到。关于测试是如何开发的、信度系数、测量标准误、相关性和效度研究、等值方法、项目分析程序以及常模样本数据等信息，都可以在测试的技术手册中找到。技术手册通常不包含在样本集中，必须与测试分开订购。虽然学校测试主管应拥有学校使用的测试的技术手册副本，但这种情况太少见了。一些维护测试收藏供其教职员工和学生使用的学院和大学可能拥有技术手册。通常，您需要直接从测试出版商处订购技术手册。
 
-成就测试必须与课程匹配 重要的是将每个测试项目与您所在州的标准以及州或地方课程相匹配。您可以通过获取按年级组织的完整标准或学习目标清单来实现这一点。两人独立阅读每个测试项目并记录它匹配的标准或学习目标。当所有项目都匹配后，两人比较结果并调和差异。研究结果汇总在一张表中，列出每个标准以及与之匹配的测试项目的 I.D. 编号。未匹配项目的数量也记录在案。这应为每个年级分别进行，因为测试的项目可能出现在与对应学习目标教授的年级不同的年级。如果存在大量这些年级顺序不匹配，测试就不适合您的学区。务必特别注意标准所暗示的思维和表现活动类型与测试项目之间的匹配。经常内容
+委员会应审阅所有材料 一旦您获得材料，委员会就可以审阅它们。务必将类似的评估与您打算使用评估的目的进行比较。委员会可能需要就评估的某些部分征求非委员会成员的意见：例如，数学教师对数学部分，阅读教师对阅读评估，等等。您也可以请大学或学院的教职员工提供帮助：例如，测试与测量领域的教职员工可能更胜任审阅和/或解释技术材料。联系国家教育测量委员会 (`www.ncme.org`) 以获取居住在您学区附近的专家的姓名。
 
+### 成就测试必须与课程匹配
 
-
-匹配，但所需的思维过程和表现并不相同。Nitko, Al-Sarimi, Amedahe, Wang, & Wingert (1998) 中给出了如何做到这一点的示例。最后，查明学区计划在哪个月进行测试。然后，确定测试项目中有多大比例的内容在测试开始前会被教授。 （有关此点与年级等值分数的联系，请参见第 17 章。）
+重要的是将每个测试项目与您所在州的标准以及州或地方课程相匹配。您可以通过获取按年级组织的完整标准或学习目标清单来实现这一点。两人独立阅读每个测试项目并记录它匹配的标准或学习目标。当所有项目都匹配后，两人比较结果并调和差异。研究结果汇总在一张表中，列出每个标准以及与之匹配的测试项目的 I.D. 编号。未匹配项目的数量也记录在案。这应为每个年级分别进行，因为测试的项目可能出现在与对应学习目标教授的年级不同的年级。如果存在大量这些年级顺序不匹配，测试就不适合您的学区。务必特别注意标准所暗示的思维和表现活动类型与测试项目之间的匹配。经常内容匹配，但所需的思维过程和表现并不相同。Nitko, Al-Sarimi, Amedahe, Wang, & Wingert (1998) 中给出了如何做到这一点的示例。最后，查明学区计划在哪个月进行测试。然后，确定测试项目中有多大比例的内容在测试开始前会被教授。 （有关此点与年级等值分数的联系，请参见第 17 章。）
 
 ## Pilot the Test
 
@@ -16505,118 +17434,136 @@ and scoring service; and technical information about the assessment. (See our ea
 - 4. Prepare test specifications.
 - 5. Write items.
 - 6. Conduct item tryout.
-  a. Prepare tryout sample specifications.
-  b. Prepare participants.
-  c. Prepare tryout materials.
-  d. Administer tryout items.
-  e. Analyze tryout data.
+  - a. Prepare tryout sample specifications.
+  - b. Prepare participants.
+  - c. Prepare tryout materials.
+  - d. Administer tryout items.
+  - e. Analyze tryout data.
 - 7. Assemble final test form(s).
 - 8. Conduct national standardization.
-  a. Prepare standardization sample specifications.
-  b. Obtain participants.
-  c. Prepare standardization materials.
-  d. Administer tests.
-  e. Analyze data.
-  f. Develop norms tables.
+  - a. Prepare standardization sample specifications.
+  - b. Obtain participants.
+  - c. Prepare standardization materials.
+  - d. Administer tests.
+  - e. Analyze data.
+  - f. Develop norms tables.
 
 Figure 18.5 A suggested outline for recording relevant information for reviewing and evaluating an assessment procedure.
 
 Identifying information
+
 1. Title, publisher, copyright date
 2. Purpose of the test as described by the publisher
 3. Grade level(s), subject(s), administrative time
 4. Cost per student, service costs
-5. Types of scores and norms provided
-Content and curricular evaluation
+
+
+
+# 5. Types of scores and norms provided
+
+## Content and curricular evaluation
+
 1. Publisher's description and rationale for specific types of tasks
 2. Quality and clarity of the tasks themselves
 3. Currency of the content and match to recent curricular trends
 4. Match of the tasks to each of the school district's curricula
 5. Inclusion of ethnic and gender diversity in the task content
-Instructional use evaluation
+
+## Instructional use evaluation
+
 1. Publisher's description and rationale for how the assessment results may be used by teachers to improve instruction
 2. Local teachers' evaluations of how the assessment results could be used for improving their instruction
 3. Overlap of assessment with the existing teacher-based assessment procedures.
-Technical evaluation
+
+## Technical evaluation
+
 1. Representativeness, recency, and local relevance of the national norms
 2. Types of reliability coefficients and their values (use average values if necessary)
 3. Summary of the evidence regarding the validity of the assessment for the purpose(s) you have in mind for using it
 4. Quality of the criterion-referenced information the assessment provides
 5. Likelihood that the assessment will have adverse effects on students with disabilities, minority students, and female students
-Practical evaluation
+
+## Practical evaluation
+
 1. Quality of the manual and teacher-oriented materials
 2. Ease of administration and scoring
 3. Cost and usefulness of the scoring services
 4. Estimated annual costs (time and money) if the assessment procedure is adopted for the district
 5. Likely public reaction to using the assessment procedure
-Overall evaluation
+
+## Overall evaluation
+
 1. Comments of reviewers (e.g., MMY or Test Critiques)
 2. Conclusions about the positive aspects of the assessment
 3. Conclusions about the negative aspects of the assessment
 4. Summary and recommendation about adoption
-List of references and sources used
+
+## List of references and sources used
 
 - 9. Prepare final materials.
   a. Establish publication schedule.
   b. Write manual.
   c. Prepare test books and answer forms.
   d. Manufacture/produce/print materials.
-
 - 10. Prepare marketing plan.
   a. Initiate direct mail promotion.
   b. Initiate space advertising.
   c. Train sales staff.
   d. Attend professional meetings and conventions.
-
 - 11. Publish.
 
-请注意，市场上许多可用的评估并未遵循所有步骤，因为这样做成本高且耗时。 不幸的是，如果评估出版商在开发过程中省略了步骤，出版商很可能会省略那些用于收集和分析用于提高测试质量的数据和/或支持对测试所做的声明的有效性的步骤。 绕过评估开发步骤通常意味着降低效度，因此请注意开发不充分的评估。
+请注意，市场上许多可用的评估并未遵循所有步骤，因为这样做成本高且耗时。不幸的是，如果评估出版商在开发过程中省略了步骤，出版商很可能会省略那些用于收集和分析用于提高测试质量的数据和/或支持对测试所做的声明的有效性的步骤。绕过评估开发步骤通常意味着降低效度，因此请注意开发不充分的评估。
 
-## Summary
+# Summary
 
 ## Locating a Published Test and Its Published Review
 
-- 你可以使用众多来源来查找有关测试的信息。 这些包括
-  - Buros Institute of Mental Measurements
-  - Test Corporation of America
-  - Educational Testing Service
-  - Professional associations
-  - Test publishers
+你可以使用众多来源来查找有关测试的信息。这些包括
 
-- 其他测试信息来源包括
-  - Testing and measurement textbooks
-  - Professional contacts and organizations
-  - Test Standards
-  - Online services through Internet
+- Buros Institute of Mental Measurements
+- Test Corporation of America
+- Educational Testing Service
+- Professional associations
+- Test publishers
+
+其他测试信息来源包括
+
+- Testing and measurement textbooks
+- Professional contacts and organizations
+- Test Standards
+- Online services through Internet
 
 ## Locating an Unpublished Test and Computerized Testing Information
 
-- 你可以使用以下几个来源来查找有关未发表测试的信息。 这些包括
-  - Directory of Unpublished Experimental Measures
-  - Health and Psychosocial Instruments (HAPI)
-  - ETS Test Collection
-  - Tests in Microfiche
-  - PsycINFO
+你可以使用以下几个来源来查找有关未发表测试的信息。这些包括
 
-- 你可以使用以下几个来源来查找有关计算机化测试和测试服务测试的信息。 这些包括
-  - Psyware Sourcebook
-  - Textbooks on testing and measurement
-  - The Companion Website for this book (http://www.prenhall.com/nitko)
-  - Publishers' catalogues and Websites
-  - Internet searches
+- Directory of Unpublished Experimental Measures
+- Health and Psychosocial Instruments (HAPI)
+- ETS Test Collection
+- Tests in Microfiche
+- PsycINFO
+
+你可以使用以下几个来源来查找有关计算机化测试和测试服务测试的信息。这些包括
+
+- Psyware Sourcebook
+- Textbooks on testing and measurement
+- The Companion Website for this book (`http://www.prenhall.com/nitko`)
+- Publishers' catalogues and Websites
+- Internet searches
 
 ## Restrictions on Purchasing and Using Tests
 
-讨论了评估购买的资格。 尽管出版商有义务告诉你和其他潜在使用者使用和解释评估所需的资格，但你有最终责任了解你自己的资格以及它们是否与正确使用评估所需的资格相匹配。
+讨论了评估购买的资格。尽管出版商有义务告诉你和其他潜在使用者使用和解释评估所需的资格，但你有最终责任了解你自己的资格以及它们是否与正确使用评估所需的资格相匹配。
 
 ## Evaluating and Selecting a Test
 
-- 在评估和选择已发表的评估工具之前，你应该：
-  - 明确识别你希望使用结果的目的。
-  - 思考你本地教育环境中的新评估，包括你需要报告的非测试信息类型（参见表 18.1）。
-  - 识别可能拥有你所需信息的来源。
-  - 为你正在评估的所有评估获取样本集、施测手册和技术手册。
-  - 使用类似于图 18.5 的大纲准备每种评估程序审查的总结报告。
+在评估和选择已发表的评估工具之前，你应该：
+
+- 明确识别你希望使用结果的目的。
+- 思考你本地教育环境中的新评估，包括你需要报告的非测试信息类型（参见表 18.1）。
+- 识别可能拥有你所需信息的来源。
+- 为你正在评估的所有评估获取样本集、施测手册和技术手册。
+- 使用类似于图 18.5 的大纲准备每种评估程序审查的总结报告。
 
 ## How a Standardized Test is Developed
 
@@ -16632,7 +17579,10 @@ List of references and sources used
 - Mental Measurements Yearbooks (MMY)
 - online services
 - specimen set
-- Standards for Educational and Psychological Testing
+
+
+
+# Standards for Educational and Psychological Testing
 - technical manual
 - Test Critiques
 - Tests in Print
@@ -16640,105 +17590,112 @@ List of references and sources used
 
 ## Exercise and Applications
 
-- 1. 描述你在以下每个来源中会找到的评估信息类型：
-  a. Mental Measurements Yearbook
-  b. Tests in Print
-  c. Tests
-  d. Test Critiques
-  e. ETS Test Collection
-  f. News on Tests
-  g. Standards for Educational and Psychological Tests
-  h. www.ericac.net
-  i. a test publisher's catalogue
-  j. www.ncme.org
+### 1. 描述你在以下每个来源中会找到的评估信息类型：
+a. Mental Measurements Yearbook
+b. Tests in Print
+c. Tests
+d. Test Critiques
+e. ETS Test Collection
+f. News on Tests
+g. Standards for Educational and Psychological Tests
+h. www.ericac.net
+i. a test publisher's catalogue
+j. www.ncme.org
 
-- 2. 描述以下每个专业组织如何帮助你获取测试信息：
-  a. Association for Measurement and Evaluation in Counseling and Development
-  b. International Reading Association
-  c. National Association of Test Directors
-
-
-
-
-
+### 2. 描述以下每个专业组织如何帮助你获取测试信息：
+a. Association for Measurement and Evaluation in Counseling and Development
+b. International Reading Association
+c. National Association of Test Directors
 d. 国家教育测量委员会
 
-## 3. 阅读以下每条陈述并确定最可能包含发言人所请求信息的唯一来源。
-- a. “我想知道有哪些工具可用于评估女性学生对工作、家庭、婚姻和家庭生活的态度。”
-- b. “我想知道该领域专业人士对这项标准参照测验的看法。”
-- c. “出版商为解释评估结果提供哪些服务，费用是多少？”
-- d. “我想知道为评估小学学生感知运动发展而开发的最新的工具。”
+### 3. 阅读以下每条陈述并确定最可能包含发言人所请求信息的唯一来源。
+a. “我想知道有哪些工具可用于评估女性学生对工作、家庭、婚姻和家庭生活的态度。”
+b. “我想知道该领域专业人士对这项标准参照测验的看法。”
+c. “出版商为解释评估结果提供哪些服务，费用是多少？”
+d. “我想知道为评估小学学生感知运动发展而开发的最新的工具。”
 
-## 4. 假设你已经找到了一项特定测验，并且你想要以下陈述所暗示的关于它的具体信息。对于每条陈述，你首先会查阅什么来源？
-- a. “他们的测验的信度系数是多少？”
-- b. “出版商提供哪种类型的常模？”
-- c. “测验专家如何看待出版商在开发测验时所遵循程序的质量？”
-- d. “哪些研究和报告使用了该评估工具？”
+### 4. 假设你已经找到了一项特定测验，并且你想要以下陈述所暗示的关于它的具体信息。对于每条陈述，你首先会查阅什么来源？
+a. “他们的测验的信度系数是多少？”
+b. “出版商提供哪种类型的常模？”
+c. “测验专家如何看待出版商在开发测验时所遵循程序的质量？”
+d. “哪些研究和报告使用了该评估工具？”
 
-## 5. 使用本章所述的程序，查找一项你认为可以满足你已确定的目的的特定标准化评估工具。
-- a. 然后，按照本章所述的程序，审查并评估该评估工具与其所述目的的相关性。使用图 18.5 提供的提纲撰写你的审查和评估，适当使用标题和子标题。
-- b. 与本课程的其他人分享你的评估。
+### 5. 使用本章所述的程序，查找一项你认为可以满足你已确定的目的的特定标准化评估工具。
+a. 然后，按照本章所述的程序，审查并评估该评估工具与其所述目的的相关性。使用图 18.5 提供的提纲撰写你的审查和评估，适当使用标题和子标题。
+b. 与本课程的其他人分享你的评估。
 
 ## 附加阅读
 
 American Educational Research Association, American Psychological Association, & National Council on Measurement in Education. (1999). Standards for educational and psychological testing. Washington, DC: Author.
+
 包含评估开发者和使用者应达到的技术标准。可作为评估你学区所使用评估工具的实用工具。
 
 Crosby-Muilenburg, C. (1988). Psychological and educational tests: A selected annotated guide. (TM 011 545). Washington, DC: ERIC/AE.
+
 为 Humboldt State University Library 开发的指南。参考资料按咨询、幼儿教育和特殊教育等特定学科列出。
 
 Drake, L., Rudner, L., & Pierce, J. (1995). Assessment and evaluation on the Internet. Washington, DC: ERIC Clearinghouse on Assessment and Evaluation, Catholic University of America.
+
 确定了 17 多个提供教育评估信息的 World Wide Web 和 Gopher 站点以及 15 个列表服务器。当在线访问时，该文件具有热链接，可直接连接到文件中提到的所有站点和列表服务器。
 
 Keyser, D. J., & Sweetland, R. C. (Eds.). (1985–present). Test critiques. Kansas City, MO: Test Corporation of America.
+
 测验评论强调了管理的实际方面。
 
 Keyser, D. J., & Sweetland, R. C. (Eds.). (1986–present). Tests: A comprehensive reference for assessment in psychology, education, and business. Kansas City, MO: Test Corporation of America.
+
 提供数千种工具的简明描述，但不提供评估性评论。
 
 Nitko, A. J. (1997). The Kentucky Institute for Educational Research Guide to tests in Kentucky: A description and comparison of the CAT, CTBS, TerraNova, and Kentucky Instructional System Assessments. Frankfort, KY: Kentucky Institute for Educational Research.
+
 以易于阅读的方式解释标准化成就测验和州评估如何不同以及如何相互补充。提供给家长、学校董事会成员和立法者的有用示例。
 
 Nitko, A. J., Al-Sarimi, A., Amedahe, F. K., Wang, S., & Wingert, M. (1998). How well are the Kentucky Academic Expectations matched to the KIRIS assessments, the CTBS, and the CAT? Paper presented at the annual meeting of the American Educational Research Association, San Diego, April. (ERIC Document Reproduction Service No. ED420677).
+
 这是如何审查标准化测验内容以查看其与州标准和州自身评估的匹配程度的一个例子。
 
 Plake, B. S., & Impara, J. C. (Eds.). (2002). The fifteenth mental measurements yearbook. Lincoln, NE: The Buros Institute of Mental Measurements.
+
 包含超过 800 篇对英语出版的数百种教育和心理测验的坦率批判性评论。
 
 ## 学业能力、职业兴趣、态度和人格测验
 
-## 学习目标
-
+### 学习目标
 学习本章后，你应达到以下目标：
 
-## 评估学业和其他能力测验
-- 1. 解释为什么在教学中评估和使用学生一般智力和能力的信息很重要。 [4, 1]
-- 2. 解释为什么能力测验不能描述学生未来学习或成功的潜力。 [4, 1]
-- 3. 区分能力测验和成就测验。 [4, 7, 9]
-- 4. 解释大多数学生在其中学习时固定的条件如何提高能力测验预测其成功的可能性。 [4, 3]
-- 5. 解释使学生能力测验分数在一段时间内保持稳定或一致的因素。 [4, 3]
-- 6. 解释导致学业能力测验分数随时间变化的因素。 [4, 3]
-- 7. 解释使用综合测验、双分数测验和多因素能力测验进行教育决策的优点和缺点。 [4, 3]
-- 8. 描述一些流行的团体施测学业能力测验，包括教师在关于学生的报告中可能收到的一些分数类型。 [6, 3]
-- 9. 解释在教育中使用特定能力团体测验的优点。 [6, 7, 3]
-- 10. 解释在评估学生时使用个别施测的一般学业能力测验的优点。 [4, 3, 6, 7]
-- 11. 根据其内容、使用的学生年龄以及报告的分数类型描述流行的个别施测一般学业能力测验。 [4, 6, 7]
+### 评估学业和其他能力测验
+1. 解释为什么在教学中评估和使用学生一般智力和能力的信息很重要。 [4, 1]
+2. 解释为什么能力测验不能描述学生未来学习或成功的潜力。 [4, 1]
+3. 区分能力测验和成就测验。 [4, 7, 9]
+4. 解释大多数学生在其中学习时固定的条件如何提高能力测验预测其成功的可能性。 [4, 3]
+5. 解释使学生能力测验分数在一段时间内保持稳定或一致的因素。 [4, 3]
+6. 解释导致学业能力测验分数随时间变化的因素。 [4, 3]
+7. 解释使用综合测验、双分数测验和多因素能力测验进行教育决策的优点和缺点。 [4, 3]
+8. 描述一些流行的团体施测学业能力测验，包括教师在关于学生的报告中可能收到的一些分数类型。 [6, 3]
+9. 解释在教育中使用特定能力团体测验的优点。 [6, 7, 3]
+10. 解释在评估学生时使用个别施测的一般学业能力测验的优点。 [4, 3, 6, 7]
+11. 根据其内容、使用的学生年龄以及报告的分数类型描述流行的个别施测一般学业能力测验。 [4, 6, 7]
+12. 解释为什么有必要系统地评估低功能学生的适应行为。 [4, 6]
 
-- 12. 解释为什么有必要系统地评估低功能学生的适应行为。 [4, 6]
+### 评估职业和职业兴趣
+13. 解释在为学生提供进一步教育和职业选择咨询时，使用职业兴趣量表的信息除了成就和能力信息之外的有用性。 [4, 6, 7]
 
-## 评估职业和职业兴趣
-- 13. 解释在为学生提供进一步教育和职业选择咨询时，使用职业兴趣量表的信息除了成就和能力信息之外的有用性。 [4, 6, 7]
+### 评估态度和人格
+14. 区分成就、能力、态度、兴趣和价值观的概念。 [4, 1]
+15. 解释建立职业兴趣量表的两个主要方法。 [4, 6]
+16. 描述职业兴趣量表的内容、组织和评分类型。 [4, 6]
+17. 区分表达性、表现性、测验性和量表式测验。 [4, 6]
 
-## 评估态度和人格
-- 14. 区分成就、能力、态度、兴趣和价值观的概念。 [4, 1]
-- 15. 解释建立职业兴趣量表的两个主要方法。 [4, 6]
-- 16. 描述职业兴趣量表的内容、组织和评分类型。 [4, 6]
-- 17. 区分表达性、表现性、测验性和量表式测验。 [4, 6]
+
+
 - 18. 解释使用学生态度评估结果时应牢记的因素。 [4, 6, 7]
+
 - 19. 解释评估人格特征的两个主要方法。 [4]
+
 - 20. 讨论学生人格评估结果对课堂教师的有用性。 [4]
 
 ## 重要术语和概念
+
 - 21. 解释本章末尾列出的术语和概念如何适用于教育评估。 [6]
 
 ## 关于本章
@@ -16755,33 +17712,31 @@ Plake, B. S., & Impara, J. C. (Eds.). (2002). The fifteenth mental measurements 
 
 ## 学习能力
 
-## 一般与特定智力技能
+### 一般与特定智力技能
 
 本章讨论的评估描述学习者的一般智力技能，而不是描述学习者例如在下周几何课上需要的特定智力技能。当学生为即将到来的课程所需的知识或技能是具体和狭窄的时，学生目前的知识和技能水平是其学习成功的最佳预测指标。对于大多数这些具体的日常教学决策，你必须自行开发评估程序。
 
-## 一般智力技能和能力测量
+### 一般智力技能和能力测量
 
 学生的过去在特定课程中的表现对于建立对学习新材料的期望没有多大帮助，只要：(a) 学生必须以与过去学习不同的方式进行表现，(b) 学生的过去表现非常不稳定，(c) 以前的测验分数或学校成绩已知非常不可靠或无效，或 (d) 学生的过去表现记录不可用。
 
 例如，一个想第一次学习西班牙语的 9 年级学生，之前没有任何外语培训或经验。西班牙语语言知识测验无法提供有关该学生成功完成即将到来的西班牙语课程的机会的信息。在这种情况下，对与语言学习相关的更一般智力技能和能力的评估会更好地预测成功。通常此类测验评估英语语言技能和概念、已获得的听觉学习技能以及应用记忆技能。同样，来自另一个学区或从一个教育阶段转到下一个教育阶段的学生可能有完整的记录，但这些记录的含义可能不明确。为了澄清它们，学校可能会用评估广泛智力技能或学业能力的工具来测试学生。
 
-学校官员可以用多种方式预测学生在一个教育项目中的可能成功。三个例子是学生的：(a) 过去在与学生需要学习的新表现相同类型的表现中的成就水平，(b) 一般学业能力水平，以及 (c) 与新表现相关的几种特定能力的能力。这些预测指标的有效性与学校想要预测的表现的具体性有关。如果学校想要预测非常具体的表现（例如，解二次方程），那么：(a) 学生非常相似类型的先前成就是最好的预测指标，(b) 学生的一般学业能力是第二好的预测指标，(c) 特定能力的评估是最后选择。如果学校想要预测非常一般的表现（例如，用新生平均绩点衡量的整体学校表现），那么预测指标的首选顺序是 (a) 一般学业能力评估，(b) 然后是先前特定成就的评估，(c) 最后是特定能力的评估 (Snow, 1980)。
+学校官员可以用多种方式预测学生在一个教育项目中的可能成功。三个例子是学生的：(a) 过去在与学生需要学习的新表现相同类型的表现中的成就水平，(b) 一般学业能力水平，以及 (c) 与新表现相关的几种特定能力的能力。这些预测指标的有效性与学校想要预测的表现的具体性有关。如果学校想要预测非常具体的表现（例如，解二次方程），那么：(a) 学生非常相似类型的先前成就是最好的预测指标，(b) 学生的一般学业能力是第二好的预测指标，(c) 特定能力的评估是最后选择。如果学校想要预测非常一般的表现（例如，用新生平均绩点衡量的整体学校表现），那么预测指标的首选顺序是 (a) 一般学业能力评估，(b) 然后是先前特定成就的评估，(c) 最后是特定能力的评估 (`Snow, 1980`)。
 
-## 能力测验测量学习行为
+### 能力测验测量学习行为
 
 能力并非固定 评估能力和智力技能的测验仅反映过去的学习。它们不能直接评估先天能力或“潜力”。此外，由于我们无法从未来获得表现样本，因此它们不能直接评估未来能力。我们只能满足于用过去和现在的学习来预测未来的学习。
 
-
-
-
-
 It is important to recognize that a student’s “aptitude for learning” implies learning through a specific type of instructional approach. If you change the instructional approach drastically, the student’s aptitude for learning changes also. A student’s aptitude is influenced also by a number of facts of development (including biological makeup), experience in the environment (including interactions with other persons), and a complex interaction of the two.
 
-The very idea of “capacity” places some upper limit on a student’s ability to learn. This limitation is likely to be untrue in general. For example, a student’s capacity to do algebra may depend on the way a teacher currently teaches it, on the mathematics concepts the student learned previously, and on the motivational level a teacher stimulates in the student, as well as on some kind of native endowment. It seems reasonable to conclude that both developmental (life history) and instructional conditions affect one’s particular potentials. As Cronbach (1977) observed: “So long as a way is open to invent better conditions of development, no one knows the limit of human potentialities” (p. 274).
+The very idea of “capacity” places some upper limit on a student’s ability to learn. This limitation is likely to be untrue in general. For example, a student’s capacity to do algebra may depend on the way a teacher currently teaches it, on the mathematics concepts the student learned previously, and on the motivational level a teacher stimulates in the student, as well as on some kind of native endowment. It seems reasonable to conclude that both developmental (life history) and instructional conditions affect one’s particular potentials. As `Cronbach (1977)` observed: “So long as a way is open to invent better conditions of development, no one knows the limit of human potentialities” (p. 274).
 
-## Aptitude-Achievement Distinctions
+### Aptitude-Achievement Distinctions
 
-It sometimes troubles teachers to see assessment instruments bearing titles such as readiness, intelligence, general mental ability, and “aptitude for X”, but containing items closely resembling items found on achievement tests. The troublesome aspect appears to be related in part to a teacher’s failure to distinguish between the abstract concepts of aptitude and achievement and the observations we make to infer the state of a person’s aptitude and achievement. We can define an aptitude for X as the present state of a person that indicates the person’s expected future performance in X if the conditions of the past and present continue into the future (see Carroll, 1974). A student’s present aptitude (or state) could be indicated in many ways.
+It sometimes troubles teachers to see assessment instruments bearing titles such as readiness, intelligence, general mental ability, and “aptitude for X”, but containing items closely resembling items found on achievement tests. The troublesome aspect appears to be related in part to a teacher’s failure to distinguish between the abstract concepts of aptitude and achievement and the observations we make to infer the state of a person’s aptitude and achievement. We can define an aptitude for X as the present state of a person that indicates the person’s expected future performance in X if the conditions of the past and present continue into the future (see `Carroll, 1974`). A student’s present aptitude (or state) could be indicated in many ways.
+
+
 
 Thus: [An] “aptitude test” is only one indicant of aptitude. Other indicants of aptitude could include scores on achievement tests, data on prior performance in activities similar to those for which we wish to predict success, and information derived from procedures for assessing personality, interest, attitude, physical prowess, physiological state, etc. (Carroll, 1974, p. 287)
 
@@ -16794,17 +17749,23 @@ A second way in which reasoning tests differ from subject matter tests is in the
 ## Teaching Conditions for Aptitude Development
 
 ### Nonadaptive Teaching
+
 An important part of the definition of aptitude given earlier was the continuance of past learning conditions into the future. One thing that makes aptitude tests useful predictors of future school success is that schools are generally not very adaptive to individual learners. Thus, the conditions under which students learn this year are usually quite similar to last year’s learning conditions.
 
 ### Underemphasizing Adaptive Teaching
+
 When a student must learn under the same conditions from year to year, there is a danger that teachers will believe that the results of the student’s scholastic aptitude testing determine what the student is able to accomplish. That is, once they see a student’s present aptitude level, they will do little to modify learning conditions to improve the student’s aptitude. Past psychological conceptions of the learner have led some educators to overemphasize the (a) consistency of the general scholastic ability of learners, (b) passivity of learners as receivers of information, and (c) categorical placement of learners into educational tracks with narrow ranges of instructional options. They have underemphasized the (a) adaptivity and plasticity of learners, (b) learners’ ability to actively construct information during problem solving, and (c) responsibility of educational systems to adapt to learners’ initial performance levels (Glaser, 1977).
 
 ### Invalidity for Instructional Placement
+
 Unfortunately, the aptitude tests described in this chapter have not been validated for use in assigning students to different kinds of instructional methods. Rather, they have been built to predict how well students will perform when they must adapt to the fixed type of instruction. You should view the tests’ helpfulness for decision making in that light.
 
 ## Scholastic Aptitude Test Score Stability
 
 ### Importance of Score Stability
+
+
+
 An important school concern is whether a student’s scholastic aptitude remains constant or stable over time. If a student’s scholastic aptitude test score changed erratically every year, you would have no confidence that it assessed a useful characteristic. Although on a student-by-student basis scores may systematically rise or decline, a definite tendency exists for a student to maintain similar, but not identical, ranking in the student's age group throughout his school years. In general, changes in students' rankings on general scholastic aptitude tests tend to be greater (a) as the time interval between the two testings grows and (b) the younger the students were at the time of the initial testing. Although groups of students tend to maintain their relative position in the distribution of aptitude scores, important changes in individual students do occur. Therefore, if a school wants to use a student's scholastic aptitude score for guidance or placement decisions, it should bear in mind that there are sufficient differences in individual students' patterns of score change to justify reassessment each time a decision is made (Sattler, 1988).
 
 scores on a scholastic aptitude test are likely to increase. Conversely, if the person becomes physically or emotionally ill or deprived in a way that interferes with intellectual development, then aptitude scores may decrease.
@@ -16814,38 +17775,48 @@ scores on a scholastic aptitude test are likely to increase. Conversely, if the 
 ## Types of Group Aptitude Tests
 
 ### Advantage
+
 The principal advantage of group testing over individual testing is the efficiency and cost savings gained by testing many persons at the same time. The ease with which group tests can be administered and scored has contributed greatly to schools adopting them.
 
 ### Number of Aptitudes Reported
+
 There are different types of group aptitude tests. The omnibus test contains items assessing different abilities that comprise general scholastic aptitude, but it provides only a single score. A two-score test also assesses several different kinds of specific abilities, but reports only two scores, usually verbal/quantitative or verbal/nonverbal. The items on the verbal section of the test, for example, may assess several kinds of specific verbal abilities, but only one verbal ability score is reported.
 
 Some school ability tests report three scores, such as verbal, quantitative, and nonverbal. Nonverbal tests assess how well students process symbols and content that have no specific verbal labels, such as discerning spatial patterns and relations or classifying patterns and figures. Multiple-aptitude tests assess several different abilities separately and provide an ability score for each. Multiple-aptitude tests, for example, may provide separate scores for verbal reasoning, verbal comprehension, numerical reasoning, and figural reasoning.
 
 ### Type of Test to Use
+
 The type of group scholastic aptitude test a school should use depends on how the staff will use the scores. Multiple-aptitude tests are most useful for providing information about a student's profile of strengths and weaknesses to make better decisions about further schooling or planning a career. Omnibus tests are most useful when a school wants an estimate of a student's general level of school ability for purposes of predicting his future success under standard classroom conditions. Examples of a two-score and multiple-score aptitude tests are given in the following sections. Others are listed in Appendix K.
 
 ## Two-Score Test: Otis-Lennon School Ability Test
 
 ### Factors for Score Stability
+
 Among the factors that work to keep students' rankings on aptitude tests about the same over time are (Anastasi, 1988; Ausubel, Novak, & Hanesian, 1978; Sattler, 1992a):
 - 1. The genetic makeup of students remains stable.
 - 2. If a student's socioeconomic level, family configuration, and sociocultural influences remain stable over a long period, these contribute to aptitude stability.
+
+
+
 - 3. Development and prerequisite learning is rarely reversible, so earlier development and learning continues to exert similar impact on new development and learning.
+
 - 4. If the content assessment by different scholastic aptitude tests is similar, students' scores will be similar from one testing to the next.
 
 ### Reasons for Score Changes
+
 Among factors that work to change student's rankings on aptitude tests from one testing to another are the following:
+
 - 1. Errors of measurement—Even if the person's "true score" were to stay the same, the obtained score is likely to be different due to a test's unreliability (see Chapter 4).
+
 - 2. Test differences—The content of tests produced by different publishers will vary. Also, the content of the same publisher's test may vary with the age level of the student taking the test. Tests designed for young children are more concrete and perceptual; those designed for older children are more abstract and verbal.
+
 - 3. Norm-group differences—The norms of different publishers' tests are not comparable. Because mental ability scores are norm-referenced, differences in scores may be due to differences in norms.
+
 - 4. Special interventions and enriched environments—If a person's environment dramatically and persistently becomes more intellectually nurturing, that person's
 
 ### Test Content
-The Otis-Lennon School Ability Test (OLSAT) provides verbal and nonverbal part scores as well as a total score. The identification of a test item as verbal versus nonverbal depends on whether the student must understand
 
-
-
-
+The Otis-Lennon School Ability Test (`OLSAT`) provides verbal and nonverbal part scores as well as a total score. The identification of a test item as verbal versus nonverbal depends on whether the student must understand
 
 表 19.1 OLSAT 上项目类型的描述
 
@@ -16856,18 +17827,21 @@ The Otis-Lennon School Ability Test (OLSAT) provides verbal and nonverbal part s
 
 *来源：改编自心理公司《教育绩效测量资源》（第98-99页），1994年，圣安东尼奥：作者。版权所有 © 1989 Harcourt, Inc. 经许可转载。保留所有权利。*
 
-用英语回答题目。例如，“数值推理……被归类为非语言，因为英语熟练程度对项目成功完成不是必要的。也就是说，只要理解了说明，被试就可以在不知道英语的情况下回答问题。另一方面，算术推理被归类为语言，因为它由文字问题组成，因此依赖于理解英语”（Otis & Lennon, 1990, p. 15）。表 19.1 描述了 OLSAT 包含的集群和项目类型。（本文撰写时，OLSAT 的第七版正在准备中。）
+用英语回答题目。例如，“数值推理……被归类为非语言，因为英语熟练程度对项目成功完成不是必要的。也就是说，只要理解了说明，被试就可以在不知道英语的情况下回答问题。另一方面，算术推理被归类为语言，因为它由文字问题组成，因此依赖于理解英语”（Otis & Lennon, 1990, p. 15）。表 19.1 描述了 `OLSAT` 包含的集群和项目类型。（本文撰写时，`OLSAT` 的第七版正在准备中。）
 
 每种类型的项目各呈现一个；然后序列重复，但使用更难的项目。
 
 ## 测试组织
-OLSAT 组织为七个水平：A 级（幼儿园）、B 级（1 年级）、C 级（2 年级）、D 级（3 年级）、E 级（4 年级和 5 年级）、F 级（6、7 和 8 年级）以及 G 级（9、10、11 和 12 年级）。并非所有不同类型的项目都在每个年级给出。低年级的项目为图像式，不需要阅读，且由教师控制节奏。高年级的项目为自测：学生阅读说明并在没有教师控制节奏的情况下回答项目。在 K 至 3 年级，测试项目组织为三个部分，每个部分包含不同的项目类型。然而，在 4 至 12 年级，相似类型的项目不会被分组为分测验，而是按螺旋格式排列，类似于图 19.1 所示。一种
+
+`OLSAT` 组织为七个水平：A 级（幼儿园）、B 级（1 年级）、C 级（2 年级）、D 级（3 年级）、E 级（4 年级和 5 年级）、F 级（6、7 和 8 年级）以及 G 级（9、10、11 和 12 年级）。并非所有不同类型的项目都在每个年级给出。低年级的项目为图像式，不需要阅读，且由教师控制节奏。高年级的项目为自测：学生阅读说明并在没有教师控制节奏的情况下回答项目。在 K 至 3 年级，测试项目组织为三个部分，每个部分包含不同的项目类型。然而，在 4 至 12 年级，相似类型的项目不会被分组为分测验，而是按螺旋格式排列，类似于图 19.1 所示。一种
 
 ## 常模参照方案
-OLSAT 的出版商使用几种常模参照方案来报告语言、非语言和总测试结果。这些方案在图 19.2 所示的个人学生报告上进行了说明。这些类型的分数在以下列表中描述。此描述中的字母对应于图 19.2 中的字母。（如果您不确定术语，请复习表 17.2 中的常模参照方案。）
 
-- 1. 基于年龄的分数将该学生与同龄的常模组学生进行比较，不考虑年级安置。除原始分数外，OLSAT 报告（1）*学校能力指数*（SAI），即均值为 100、标准差为 16 的标准化标准分数；（2）*全国百分位等级*（PR）；（3）*全国九分等级*（S）；以及（4）*常态曲线当量*（NCE）。
-- 2. 基于年级的分数将该学生与同年级安置的常模组学生进行比较，不考虑其年龄。本节报告的分数为：（1）*量表分数*，即扩展量表分数，可让您在多年间追踪学业能力的成长，因为该量表涵盖所有年级；（2）*全国百分位等级*（PR），（3）*全国九分等级*（S），
+`OLSAT` 的出版商使用几种常模参照方案来报告语言、非语言和总测试结果。这些方案在图 19.2 所示的个人学生报告上进行了说明。这些类型的分数在以下列表中描述。此描述中的字母对应于图 19.2 中的字母。（如果您不确定术语，请复习表 17.2 中的常模参照方案。）
+
+- 1. 基于年龄的分数将该学生与同龄的常模组学生进行比较，不考虑年级安置。除原始分数外，`OLSAT` 报告（1）*学校能力指数*（`SAI`），即均值为 100、标准差为 16 的标准化标准分数；（2）*全国百分位等级*（`PR`）；（3）*全国九分等级*（`S`）；以及（4）*常态曲线当量*（`NCE`）。
+
+- 2. 基于年级的分数将该学生与同年级安置的常模组学生进行比较，不考虑其年龄。本节报告的分数为：（1）*量表分数*，即扩展量表分数，可让您在多年间追踪学业能力的成长，因为该量表涵盖所有年级；（2）*全国百分位等级*（`PR`），（3）*全国九分等级*（`S`），
 
 # 图 19.1 Otis-Lennon 学校能力测试（第 7 版）项目类型的示例。
 
@@ -16876,7 +17850,9 @@ OLSAT 的出版商使用几种常模参照方案来报告语言、非语言和�
 ![](img/5f79dab9acf263c9421570aa1a23cc67_448_0.png)
 
 5 book me the see let
+
 如果上面的词语按句子顺序排列，句子的第一个词将以 — 开头
+
 S M T L
 
 6 选择放在问号处的图画。
@@ -16884,9 +17860,11 @@ S M T L
 ![](img/5f79dab9acf263c9421570aa1a23cc67_448_1.png)
 
 7 什么数字等于六和十之和的一半？
+
 4 5 8 9
 
 8 wet 的反义词是 —
+
 dusty dry fluffy cracked
 
 9 框中的图画以某种方式组合在一起。选择放在问号处的图画。
@@ -16894,21 +17872,28 @@ dusty dry fluffy cracked
 ![](img/5f79dab9acf263c9421570aa1a23cc67_448_2.png)
 
 10 Candy is to sweet as pickle is to —
+
 green hamburger sour taste
 
 11 选择放在问号处的答案。
+
 3A 6B 9C ? | 9D 12C 12D DE
 
 12 一所学校总是拥有 —
+
 a cafeteria books desks students
 
 14 框中的词语以某种方式组合在一起。选择放在问号处的词语。
+
 slide side lid land ran bid lad
+
 brand band ?
 
 来源：摘自《练习测试：Otis-Lennon 学校能力测试（第 7 版）》，D 级。版权所有 © 1996 Harcourt, Inc. 经许可转载。保留所有权利。
 
-(4) 地方百分位等级（PR），（5）地方九分等级（S），以及（6）地方常态曲线当量（NCE）。
+(4) 地方百分位等级（`PR`），（5）地方九分等级（`S`），以及（6）地方常态曲线当量（`NCE`）。
+
+
 
 3. 百分位带显示了图 19.2 第 A 和 B 节中报告的学生分数的不确定区间。不确定带是通过在学生分数上加减一个 SEM 形成的。（参见第 4 章中关于 SEM 的讨论。）
 
@@ -16917,57 +17902,79 @@ brand band ?
 5. 计算机生成的叙述用简化的语言解释结果。
 
 ## 结果解释
+
 尽管 OLSAT 是双分数测试，但其作者鼓励您将总测试结果用作主要解释信息。他们认为，因为语言和非语言能力都是在学校取得成功所必需的，所以总分是最好的整体指标。
 
 他们承认，然而，您教授学生的许多内容都与语言学习有关。因此，如果学生的非语言能力远高于语言能力，您可能会注意到该学生可能具有良好的学业能力，但在高度语言的科目上可能有困难。语言能力高于非语言能力的学生可能在定量科目上遇到更多困难。作者建议您将超过两个九分等级的分数差异视为有意义。您应更谨慎地解释较小的差异，因为它们可能仅代表测量误差。
 
 语言-非语言差异的其他可能原因包括双语、阅读问题、学习障碍、听力障碍、视力障碍、焦虑、疾病或测试施测的不规则。您应要求对 OLSAT 进行重新施测，如果学生存在较大的语言-非语言差异。如果复测证实了差异，并且您想要进一步的诊断信息，那么您应要求使用个体测试进行评估，例如韦氏儿童智力量表第三版（本章后面描述）。
 
-
-
-
-
 ## 图 19.2 一名学生的报告，显示了奥蒂斯-伦农学校能力测验报告的分数类型。（注：分数为模拟结果。）
 
 ## OLSAT
+
 奥蒂斯-伦农学校能力测验，第七版
 
 教师：CORRIGAN
+
 学校：NEWTOWN ELEMENTARY
+
 学区：NEWTOWN
+
 年级：04
+
 测试日期：04-94
 
 MIKE LANGFORD 的学生报告
+
 年龄：10 岁 01 月
 
 年龄基准指标
+
 % of Norm Raw Score SA Age PR-S Age NCE
+
 总分 72 33 96 60-5 44.7
+
 言语 74 19 99 60-5 50.0
+
 非言语 74 19 99 60-5 40.9
 
 全国年龄百分位排名
+
 5 10 20 30 40 50 60 70 80 90 95 99
 
 年级基准分数
+
 标准化分数 全国年级 PR-S 全国年级 NCE
+
 总分 593 43-6 44.1
+
 言语 584 36-4 41.9
+
 非言语 602 51-5 50.8
 
 全国年级百分位排名
+
 5 10 20 30 40 50 60 70 80 90 95 99
 
 分群
+
 原始分数/题目数
+
 同龄平均 高于平均
+
 言语
+
 言语理解 14/18 ✓ ✓
+
 言语推理 10/24 ✓ ✓
+
 非言语
+
 图形推理 14/15 ✓ ✓
+
 数量推理 9/10 ✓ ✓
+
 总计 33/
 
 最近该学生... 奥蒂斯-伦农学校能力测验... 学校学习能力...
@@ -17018,10 +18025,6 @@ MIKE LANGFORD 的学生报告
 
 使用 DAT 的优势 使用 DAT 等多重能力电池而不是综合或双分数能力测验的一个优势是，它提供了发现学生相对优势的能力的机会。例如，学生可能具有低的一般学业能力（言语推理和数理推理），但具有高的感知速度和准确性或高的机械推理。这为顾问提供了
 
-
-
-
-
 ## 图19.3 《差异能力测验》（第5版）各分测验的简要描述、时间限制、题目数量及各分测验的样题。
 
 ## 语文推理（25 分钟，40 题）
@@ -17031,11 +18034,17 @@ MIKE LANGFORD 的学生报告
 ### 样题
 
 哪个答案包含补全此句所缺少的词语？
+
 .... 是对 fin 的如同 bird 是对 ....
+
 A water — feather
+
 B shark — nest
+
 *C fish — wing
+
 D flipper — fly
+
 E fish — sky
 
 ## 机械推理（25 分钟，60 题）
@@ -17055,13 +18064,21 @@ E fish — sky
 ### 样题
 
 在此正确的加法示例中，R 应被什么数字替换？
+
 7R
+
 + R
+
 88
+
 *A 9
+
 B 6
+
 C 4
+
 D 3
+
 E 以上均无
 
 ## 空间关系（25 分钟，50 题）
@@ -17071,6 +18088,8 @@ E 以上均无
 ### 样题
 
 选择一个可以用该图案制作的图形。
+
+
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_451_1.png)
 
@@ -17091,9 +18110,13 @@ E 以上均无
 ### 样题
 
 判断下面一组中哪个词拼写不正确。
+
 *A paragraf
+
 B dramatic
+
 C circular
+
 D audience
 
 ## 知觉速度与准确性（6 分钟，200 题）
@@ -17103,9 +18126,13 @@ D audience
 ### 样题
 
 查看下划线的字母或数字组合，并在答题纸上找到相同的组合。然后在它下面的圆圈中填涂。
+
 1 XY Xy XX YX Yy
+
 2 6g 6G Gg G6 g6
+
 3 nm mn mm rn nv
+
 4 Db BD Bd Bo BB
 
 ## 语言用法（15 分钟，40 题）
@@ -17115,8 +18142,11 @@ D audience
 ### 样题
 
 判断下面句子中四个部分哪个包含错误。如果没有错误，在答题纸上标记字母旁边的空格，表示无错误。
+
 Jane and Tom/ is going/ to the office/ this morning.
+
 A *B C D
+
 E 无错误
 
 在大学和选择性高中用来做出录取决定的各种信息中。一些私立和教区高中，例如，使用一系列成就和能力测验来筛选申请者。测试通常在当地高中举行，其工作人员通常负责管理测验。
@@ -17139,30 +18169,45 @@ ACT 评估有四个分测验：英语、数学、阅读和科学推理。所有�
 
 除了这些测试外，参加 SAT I 或 ACT 评估的学生还被要求报告有关他们自己的信息，包括最近的成绩、高中活动、课外成就、计划的大学专业和人口统计信息。除了其他目的外，该问卷允许学生指出任何在课程成绩中未反映的特殊才能和成就（例如赢得州辩论）。此外，ACT 评估还包括 ACT 兴趣清单。它由一系列活动组成，学生表示他们是否喜欢、不喜欢或对清单上的每项活动无所谓。兴趣清单帮助学生更好地了解他们的职业兴趣如何融入各个大学专业领域的主流。
 
-
-
-
 # 图 19.4 斯丹福-比奈测验（第4版）分测验的描述。
 
 | 实施顺序 | 语言推理分测验 |
 |---|---|
+
 | 1. | **词汇（14张图片和32个词语）**<br>前14个项目为图片，被试为其命名。<br>后32个项目为词语，被试对其进行定义。 |
+
 | 6. | **理解（42个项目）**<br>低水平项目涉及在图片中命名身体部位；高水平项目询问社会理解问题。 |
+
 | 7. | **荒谬（32个项目）**<br>被试识别图片中令人发笑或愚蠢之处。 |
+
 | 14. | **言语关系（18个项目）**<br>被试被呈现四个概念名称，并被要求描述前三个为何相似但与第四个不同。 |
+
 |  | **抽象/视觉推理分测验** |
+
 | 5. | **模式分析（6个项目用于形板，36个项目用于积木）**<br>低水平项目要求将形状放入孔中；高水平项目要求使用立方体建模模式。 |
+
 | 9. | **描摹（12个项目积木，16个项目描摹）**<br>在低水平，被试描摹由主试搭建的模式。在高水平被试使用铅笔和纸描摹几何模式。 |
+
 | 11. | **矩阵（26个项目）**<br>被试被给出一个矩阵，并选择能完成矩阵中所示关系的物体、字母或模式。 |
+
 | 13. | **纸张折叠与剪切（18个项目）**<br>主试以多种方式折叠和剪切纸张。被试选择能显示纸张展开后外观的选项。 |
+
 |  | **定量推理分测验** |
+
 | 3. | **定量（40个项目）**<br>被试回答算术问题。 |
+
 | 12. | **数列（29个项目）**<br>被试被展示一系列数字，必须归纳出模式并说明接下来两个数字是什么。 |
+
 | 15. | **方程构建（18个项目）**<br>被试被给出一组数字、一个或多个算术运算符以及等号。被试必须用这些内容组成一个正确的等式。 |
+
 |  | **短期记忆分测验** |
+
 | 2. | **珠子记忆（42个项目）**<br>被试复现图片中所示的珠子模式。 |
+
 | 4. | **句子记忆（42个项目）**<br>被试复述主试朗读的句子。随着项目进展，句子越来越长。 |
+
 | 8. | **数字记忆（26个项目）**<br>被试复述主试朗读的数字序列。<br>当要求正向复述时，序列长度为3–9个数字；当要求反向复述时，序列长度为3–7个数字。 |
+
 | 10. | **物体记忆（14个项目）**<br>被试被依次单独呈现2–8个图片物体。然后被试被展示另一张包含所有物体以及未在呈现序列中出现的其他物体的图片。被试必须按呈现顺序指出这些单个物体。 |
 
 ## 一般学业才能的个别施测测验
@@ -17177,70 +18222,112 @@ ACT 评估有四个分测验：英语、数学、阅读和科学推理。所有�
 
 | 集群及分测验 | 年龄 |
 |---|---|
+
 | 语言推理 |  |
+
 | 词汇 | 2 → 23 |
+
 | 理解 | 2 → 23 |
+
 | 荒谬 | 2 → ~13 |
+
 | 言语关系 | ~12 → 23 |
+
 | 抽象/视觉推理 |  |
+
 | 模式分析 | 2 → 23 |
+
 | 描摹 | 2 → ~13 |
+
 | 矩阵 | 7 → 23 |
+
 | 纸张折叠与剪切 | ~12 → 23 |
+
 | 定量推理 |  |
+
 | 定量 | 2 → 23 |
+
 | 数列 | 7 → 23 |
+
 | 方程构建 | ~12 → 23 |
+
 | 短期记忆 |  |
+
 | 珠子记忆 | 2 → 23 |
+
 | 句子记忆 | 2 → 23 |
+
 | 数字记忆 | 7 → 23 |
+
 | 物体记忆 | 7 → 23 |
 
 了解该测验工具的性质和内容。
+
+
 
 研究图 19.4。该图显示分测验可分为四个领域：语言推理、抽象/视觉推理、定量推理和短期记忆。分测验按施测顺序编号。然而，并非每个分测验在每个年龄都施测。图 19.5 显示了每个分测验适用的年龄范围。
 
 并非每个分测验中的所有项目都会施测，因为在每个分测验中，项目按难度递增排列。施测测验的心理学家首先需要确定基础水平，即通过四项的最高水平。最低水平为三项或四项（或全部四项）失败的水平称为天花板水平。假设由于项目按难度递增排列，被试会通过基础水平以下的所有项目，因此不予施测。同样，假设被试会失败天花板水平以上的所有项目。词汇分测验首先施测并用作测验分流测验。学生在该测验上的表现连同学生的年龄，会告诉心理学家在其他测验上应从何种难度水平开始对学生进行测验。
 
-并非所有适用于某一年龄范围的分测验都需要施测。Sattler（1992b）建议根据学生年龄施测8、10或12个分测验。
+并非所有适用于某一年龄范围的分测验都需要施测。`Sattler（1992b）`建议根据学生年龄施测8、10或12个分测验。
 
-分数 学生在每个分测验上的原始分转换为标准化标准分，称为分测验的标准年龄分（SAS）。分测验的SAS在与被测学生同龄的常模组中平均值为50，标准差为8。在图 19.4 所示的每个集群中，学生的分测验SAS相加，并将总和转换为领域SAS（平均值=100，标准差=16）。整个测评的分数是通过将所有领域的SAS相加并将该总和转换为斯丹福-比奈综合分（平均值=100，标准差=16）得出的。因此，综合分是偏差智商（DIQ），如第17章方程17.4所述。
+## 分数
 
-智力年龄和智商（IQ）的概念已不再用于斯丹福-比奈（第4版）等测验。因此，比值智商（100倍的智力年龄除以实际年龄）已被DIQ取代。
+学生在每个分测验上的原始分转换为标准化标准分，称为分测验的标准年龄分（`SAS`）。分测验的`SAS`在与被测学生同龄的常模组中平均值为50，标准差为8。在图 19.4 所示的每个集群中，学生的分测验`SAS`相加，并将总和转换为领域`SAS`（平均值=100，标准差=16）。整个测评的分数是通过将所有领域的`SAS`相加并将该总和转换为斯丹福-比奈综合分（平均值=100，标准差=16）得出的。因此，综合分是偏差智商（`DIQ`），如第17章方程17.4所述。
 
-常模参照特征 学业才能测验描述学生的能力为其在与学生同龄的常模组中的位置。如果学生的智力发展未能跟上常模组中的其他人，学生将获得较低的DIQ。常模会过时，测验有时需要重新常模化。
+智力年龄和智商（`IQ`）的概念已不再用于斯丹福-比奈（第4版）等测验。因此，比值智商（100倍的智力年龄除以实际年龄）已被`DIQ`取代。
+
+## 常模参照特征
+
+学业才能测验描述学生的能力为其在与学生同龄的常模组中的位置。如果学生的智力发展未能跟上常模组中的其他人，学生将获得较低的`DIQ`。常模会过时，测验有时需要重新常模化。
 
 ## 韦氏智力量表
 
-另一套广泛使用的个别测验是韦氏智力量表。该套量表包含三种不同的智力量表，每种设计用于不同年龄水平：（a）韦氏学前和初级智力量表-修订版（WPPSI-R），3岁至7岁3个月；（b）韦氏儿童智力量表-第三版（WISC-III），6至16岁11个月；以及（c）韦氏成人智力量表-修订版（WAIS-R），16至74岁。
+另一套广泛使用的个别测验是韦氏智力量表。该套量表包含三种不同的智力量表，每种设计用于不同年龄水平：（a）韦氏学前和初级智力量表-修订版（`WPPSI-R`），3岁至7岁3个月；（b）韦氏儿童智力量表-第三版（`WISC-III`），6至16岁11个月；以及（c）韦氏成人智力量表-修订版（`WAIS-R`），16至74岁。
 
-总体设计 所有韦氏测验都有相同的总体设计，尽管项目并不完全相同。分测验分为两组：言语和操作。分测验内的项目内容相似但难度不同。（不同量表上的分测验——WPPSI、WISC和WAIS——包含不同类型的项目。）所有被试都会接受所有分测验，但由于项目按难度递增排列，如同斯丹福-比奈一样，并非分测验内的所有项目都需要施测。所有韦氏量表都将分测验结果报告为标准化标准分（平均值=10，标准差=3）。所有量表都报告操作智商、言语智商和总分或全量表智商。这三个均为DIQ分数（平均值=100，标准差=15）。学生所参照的常模组是与学生同龄的学生组。
+### 总体设计
 
-WAIS-R 韦氏成人智力量表-修订版用于16至74岁。年龄与WISC-III在16岁处重叠。它包含11个分测验：6个言语和5个操作。言语类别中的分测验为信息、相似性、算术、词汇、理解和数字广度。操作类别分测验为图片补全、图片排列、积木设计、物体组合和数字符号。
+所有韦氏测验都有相同的总体设计，尽管项目并不完全相同。分测验分为两组：言语和操作。分测验内的项目内容相似但难度不同。（不同量表上的分测验——`WPPSI`、`WISC`和`WAIS`——包含不同类型的项目。）所有被试都会接受所有分测验，但由于项目按难度递增排列，如同斯丹福-比奈一样，并非分测验内的所有项目都需要施测。所有韦氏量表都将分测验结果报告为标准化标准分（平均值=10，标准差=3）。所有量表都报告操作智商、言语智商和总分或全量表智商。这三个均为`DIQ`分数（平均值=100，标准差=15）。学生所参照的常模组是与学生同龄的学生组。
 
-WAIS-R通常被认为是对一般认知能力进行评估的合理有效且可靠的工具。以下是其一些局限性（Sattler，1999b）：（a）它无法为严重智力障碍者提供足够低的分数，（b）它无法为极具天赋者提供足够高的分数，（c）某些年龄组的分测验量表分数范围受限。
+### `WAIS-R`
 
-WISC-III 韦氏儿童智力量表-第三版用于6岁至16岁11个月的儿童。它包含10个核心和3个补充分测验。言语类别为信息、相似性、算术、词汇和理解（数字广度为补充言语分测验）。操作类别为图片补全、编码、图片排列、积木设计和物体组合（符号搜索和迷宫为补充操作分测验）。
+韦氏成人智力量表-修订版用于16至74岁。年龄与`WISC-III`在16岁处重叠。它包含11个分测验：6个言语和5个操作。言语类别中的分测验为信息、相似性、算术、词汇、理解和数字广度。操作类别分测验为图片补全、图片排列、积木设计、物体组合和数字符号。
 
-WISC-III与韦氏个人成就测验（WIAT）一起标准化，后者是个别施测的基础技能成就测验。这使得可以比较来自WISC-III的智力能力结果与WIAT，这对于在学校学习困难的学生来说通常会进行比较。这有助于制定个别化教育计划（IEPs）的过程。
+`WAIS-R`通常被认为是对一般认知能力进行评估的合理有效且可靠的工具。以下是其一些局限性（`Sattler，1999b`）：（a）它无法为严重智力障碍者提供足够低的分数，（b）它无法为极具天赋者提供足够高的分数，（c）某些年龄组的分测验量表分数范围受限。
 
-WISC-III通常被认为是对一般智力能力的良好测验。其优势（Sattler，1992）包括其（a）高质量常模；（b）良好的信度和效度；（c）在诊断大多数学生的认知能力方面的有用性；（d）材料、施测和计分的良好特点；以及（e）广泛的研究文献。其局限性（Sattler，1992）包括其（a）对极低和极高能力儿童的用处有限，（b）某些分测验和年龄水平的分数范围受限，（c）当分测验被替换时缺乏适当常模，（d）操作量表易受较大练习效应影响，以及（e）可能惩罚不以反应速度为优先的学生。
+### `WISC-III`
 
-WPPSI-R 韦氏学前和初级智力量表-修订版用于3岁至7岁3个月的儿童。它与WISC-III在6岁至7岁3个月的年龄范围重叠，对于该重叠年龄范围，建议使用WISC-III（Sattler，1992）。WPPSI-R包含10个分测验和2个补充分测验。言语类别为信息、词汇、算术、相似性和理解（句子为补充言语分测验）。操作类别为动物图钉、图片补全、迷宫、几何设计和积木设计（物体组合为补充操作分测验）。WPPSI-R具有与WISC-III许多相同的优势和局限性（Sattler，1992）。
+韦氏儿童智力量表-第三版用于6岁至16岁11个月的儿童。它包含10个核心和3个补充分测验。言语类别为信息、相似性、算术、词汇和理解（数字广度为补充言语分测验）。操作类别为图片补全、编码、图片排列、积木设计和物体组合（符号搜索和迷宫为补充操作分测验）。
+
+`WISC-III`与韦氏个人成就测验（`WIAT`）一起标准化，后者是个别施测的基础技能成就测验。这使得可以比较来自`WISC-III`的智力能力结果与`WIAT`，这对于在学校学习困难的学生来说通常会进行比较。这有助于制定个别化教育计划（`IEPs`）的过程。
+
+`WISC-III`通常被认为是对一般智力能力的良好测验。其优势（`Sattler，1992`）包括其（a）高质量常模；（b）良好的信度和效度；（c）在诊断大多数学生的认知能力方面的有用性；（d）材料、施测和计分的良好特点；以及（e）广泛的研究文献。其局限性（`Sattler，1992`）包括其（a）对极低和极高能力儿童的用处有限，（b）某些分测验和年龄水平的分数范围受限，（c）当分测验被替换时缺乏适当常模，（d）操作量表易受较大练习效应影响，以及（e）可能惩罚不以反应速度为优先的学生。
+
+### `WPPSI-R`
+
+韦氏学前和初级智力量表-修订版用于3岁至7岁3个月的儿童。它与`WISC-III`在6岁至7岁3个月的年龄范围重叠，对于该重叠年龄范围，建议使用`WISC-III`（`Sattler，1992`）。`WPPSI-R`包含10个分测验和2个补充分测验。言语类别为信息、词汇、算术、相似性和理解（句子为补充言语分测验）。操作类别为动物图钉、图片补全、迷宫、几何设计和积木设计（物体组合为补充操作分测验）。`WPPSI-R`具有与`WISC-III`许多相同的优势和局限性（`Sattler，1992`）。
 
 ## 卡夫曼儿童评估测验
 
-总体描述 卡夫曼儿童评估测验（K-ABC）是个别施测的智力和成就测验（Kaufman & Kaufman，1983）。它用于6岁3个月至12岁5个月的儿童。K-ABC在几个方面与其他迄今描述的学业才能测量方法不同：（a）智力量表侧重于所使用
+### 总体描述
 
-to solve a problem rather than on the content processes (verbal comprehension), (b) the subtests were derived from psychological and neuropsychological theory, (c) mental processing (“intelligence”) is tested separately from learning of school-related material (“achievement”), (d) both verbal and nonverbal achievement are assessed, (e) norms include both normal and exceptional children, and (f) the mental processing and achievement scales were normed on the same group of children. This simultaneous norming allows scores in the two areas to be compared and is helpful when professionals are developing IEPs for students.
+卡夫曼儿童评估测验（`K-ABC`）是个别施测的智力和成就测验（`Kaufman & Kaufman，1983`）。它用于6岁3个月至12岁5个月的儿童。`K-ABC`在几个方面与其他迄今描述的学业才能测量方法不同：（a）智力量表侧重于所使用
 
-Content The K-ABC has 16 subtests: 10 associated with mental processing (intelligence scale) and 6 associated with the achievement scale. Not all subtests are administered to all students: Younger students take 7, and older students take 13. The scales and their subtests are organized as follows:
+to solve a problem rather than on the content processes (verbal comprehension), (b) the subtests were derived from psychological and neuropsychological theory, (c) mental processing（“intelligence”）is tested separately from learning of school-related material（“achievement”）, (d) both verbal and nonverbal achievement are assessed, (e) norms include both normal and exceptional children, and (f) the mental processing and achievement scales were normed on the same group of children. This simultaneous norming allows scores in the two areas to be compared and is helpful when professionals are developing `IEPs` for students.
 
-- Sequential Processing Scale requires students to solve tasks by mentally arranging the stimuli in a sequential or serial order (3 subtests): Hand Movements, Number Recall, Word Order.
-- Simultaneous Processing Scale requires students to solve spatial and analogic tasks by mentally integrating and processing many stimuli at once (7 subtests): Magic Window, Face Recognition, Gestalt Closure, Triangles, Matrix Analogies, Spatial Memory, Photo Series.
-- Achievement Scale requires students to solve tasks using factual knowledge and skills learned in and out of school (6 subtests): Expressive Vocabulary, Faces and Places, Arithmetic, Riddles, Reading/Decoding, Reading/Understanding.
-- Nonverbal Scale is not a separate set of subtests. Rather, it consists of those subtests from the Sequential and Simultaneous Scales that do not require word understanding: Hand Movements, Face Recognition, Triangles, Matrix Analogies, Spatial Memory, Photo Series.
+### Content
+
+The `K-ABC` has 16 subtests: 10 associated with mental processing (intelligence scale) and 6 associated with the achievement scale. Not all subtests are administered to all students: Younger students take 7, and older students take 13. The scales and their subtests are organized as follows:
+
+- `Sequential Processing Scale` requires students to solve tasks by mentally arranging the stimuli in a sequential or serial order (3 subtests): `Hand Movements`, `Number Recall`, `Word Order`.
+
+- `Simultaneous Processing Scale` requires students to solve spatial and analogic tasks by mentally integrating and processing many stimuli at once (7 subtests): `Magic Window`, `Face Recognition`, `Gestalt Closure`, `Triangles`, `Matrix Analogies`, `Spatial Memory`, `Photo Series`.
+
+- `Achievement Scale` requires students to solve tasks using factual knowledge and skills learned in and out of school (6 subtests): `Expressive Vocabulary`, `Faces and Places`, `Arithmetic`, `Riddles`, `Reading/Decoding`, `Reading/Understanding`.
+
+
+
+Nonverbal Scale is not a separate set of subtests. Rather, it consists of those subtests from the Sequential and Simultaneous Scales that do not require word understanding: Hand Movements, Face Recognition, Triangles, Matrix Analogies, Spatial Memory, Photo Series.
 
 Figure 19.6 describes these subtests and ages for which they are intended.
 
@@ -17248,45 +18335,45 @@ Scores The K-ABC provides IQ scores (mean = 100, standard deviation = 15) for ea
 
 ## Figure 19.6 Description of the subtests and age levels for the K-ABC.
 
-## Sequential Processing Scale
+### Sequential Processing Scale
 
-Hand Movements (2½–12½) Child performs series of hand movements in same sequence as the examiner performed them.
+`Hand Movements` (2½–12½) Child performs series of hand movements in same sequence as the examiner performed them.
 
-Number Recall (2½–12½) Repeating digits in same sequence as presented by the examiner.
+`Number Recall` (2½–12½) Repeating digits in same sequence as presented by the examiner.
 
-Word Order (4–12½) Child touches silhouettes of common objects in same sequence as examiner orally names them.
+`Word Order` (4–12½) Child touches silhouettes of common objects in same sequence as examiner orally names them.
 
-## Simultaneous Processing Scale
+### Simultaneous Processing Scale
 
-Magic Window (2½–4 yrs. 11 mo.) Child identifies a picture that is partially exposed when the examiner moves it behind a narrow window.
+`Magic Window` (2½–4 yrs. 11 mo.) Child identifies a picture that is partially exposed when the examiner moves it behind a narrow window.
 
-Face Recognition (2½–4 yrs. 11 mo.) One or two faces are exposed briefly, and child has to find them when a group photograph is presented.
+`Face Recognition` (2½–4 yrs. 11 mo.) One or two faces are exposed briefly, and child has to find them when a group photograph is presented.
 
-Gestalt Closure (2½–12½) Naming the object or picture in a partially completed drawing.
+`Gestalt Closure` (2½–12½) Naming the object or picture in a partially completed drawing.
 
-Triangles (4–12½) Arranging identical triangles to match a pattern in a given model.
+`Triangles` (4–12½) Arranging identical triangles to match a pattern in a given model.
 
-Matrix Analogies (5–12½) Selecting the picture that best completes a visual analogy.
+`Matrix Analogies` (5–12½) Selecting the picture that best completes a visual analogy.
 
-## Simultaneous Processing Scale (cont.)
+### Simultaneous Processing Scale (cont.)
 
-Spatial Memory (5–12½) Recalling location of pictures on a page that was briefly exposed.
+`Spatial Memory` (5–12½) Recalling location of pictures on a page that was briefly exposed.
 
-Photo Series (6–12½) Arranging photographs in chronological order.
+`Photo Series` (6–12½) Arranging photographs in chronological order.
 
-## Achievement Scales
+### Achievement Scales
 
-Expressive Vocabulary (2½–4 yrs. 11 mo.) Stating the name of an object in a photograph.
+`Expressive Vocabulary` (2½–4 yrs. 11 mo.) Stating the name of an object in a photograph.
 
-Faces and Places (2½–12½) Naming the well-known person, place, or thing in a photograph.
+`Faces and Places` (2½–12½) Naming the well-known person, place, or thing in a photograph.
 
-Arithmetic (3–12½) Knowing school-related arithmetic concepts and skills.
+`Arithmetic` (3–12½) Knowing school-related arithmetic concepts and skills.
 
-Riddles (3–12½) Naming a concrete or abstract concept after being presented with a list of its characteristics.
+`Riddles` (3–12½) Naming a concrete or abstract concept after being presented with a list of its characteristics.
 
-Reading/Decoding (5–12½) Naming letters; reading words
+`Reading/Decoding` (5–12½) Naming letters; reading words
 
-Reading/Understanding (7–12½) Reading sentences and following the commands presented in them.
+`Reading/Understanding` (7–12½) Reading sentences and following the commands presented in them.
 
 ## Usefulness of the K-ABC Approach
 
@@ -17294,7 +18381,9 @@ Although the authors suggest that organizing assessment information into three s
 
 ## ASSESSING ADAPTIVE BEHAVIOR
 
-## Meaning of Adaptive Behavior
+### Meaning of Adaptive Behavior
+
+
 
 Tests such as the Stanford-Binet, the WISC-R, and the K-ABC measure general scholastic ability. A school setting is not, of course, the only environment in which persons are expected to cope. Some students may appear to teachers and other school personnel to suffer from mental retardation, but their families, neighbors, and peers accept the students and consider the students normal in all other facets of life (Mercer, 1973). It is recommended, therefore, that before labeling a student as having mental retardation, the student's ability to cope with the demands of his or her environment outside of classroom learning be assessed (Grossman, 1983).
 
@@ -17308,20 +18397,19 @@ The VABS has three editions: Interview Edition, Survey Form, which provides stan
 
 ## ASSESSING VOCATIONAL AND CAREER INTERESTS
 
-## What Are Interests?
+### What Are Interests?
 
-## Attitudes, Interests, and Values
+### Attitudes, Interests, and Values
 
 Three characteristics of students are closely related: attitudes, interests, and values. These characteristics are very often assessed by using some type of questionnaire. The questionnaire appear similar because, when responding to the questionnaire, a student reads several statements and expresses his or her degree of agreement with the statements. You must remember, however, that in spite of their similarity, the three concepts are not identical.
+
+
 
 To interpret assessment results properly, you must distinguish among these three concepts. An attitude is a positive or negative feeling about a physical object, a type of people, a particular person, a government or other social institution's policy, ideas, or the like. For example, when a student expresses agreement with the statement, "My mathematics class helps me to become a better person," the student is expressing his or her attitude toward the mathematics class.
 
 Interests, on the other hand, are preferences for specific types of activities when a person is not under external pressure. For example, when a student expresses agreement with the statement, "I enjoy working on the mathematics problems my teacher assigns," the student is expressing his or her interest in a mathematics activity.
 
 Values, unlike attitudes and interests, are long-lasting beliefs of the importance of certain life goals, a lifestyle, a way of acting, or a way of life. For example, when a student expresses agreement with the statement, "I consider it more important to be one of the best students in mathematics than to be one of the best players in a football game," the student is expressing his or her valuing of mathematics success over football (athletic) success.
-
-
-
 
 用于评估它们的“高度易于伪装，需要受试者坦率回应，因此只能评估个人能够或愿意透露的特征”（Mehrens & Lehmann, 1991, p. 405）。
 
@@ -17363,71 +18451,86 @@ Values, unlike attitudes and interests, are long-lasting beliefs of the importan
 
 ### ACT 兴趣测验
 
-我会不喜欢做这个活动 ................................... D
-我无所谓（不偏不倚） ........................... I
-我会喜欢做这个活动 ....................................... L
+我会不喜欢做这个活动 ................................... D  
+我无所谓（不偏不倚） ........................... I  
+我会喜欢做这个活动 ....................................... L  
 
-- 1. 参观科学博物馆
-- 2. 在组合乐队中演奏爵士乐
-- 3. 帮助朋友之间调解争执
+1. 参观科学博物馆
+
+2. 在组合乐队中演奏爵士乐
+
+3. 帮助朋友之间调解争执
 
 ### SVIB–SII
 
-- *1. L I D 演员/女演员
-- 2. L I D 广告主管
-- 3. L I D 建筑师
+\*1. L I D 演员/女演员  
+2. L I D 广告主管  
+3. L I D 建筑师  
 
 ### 库德职业兴趣调查，DD 表
 
 - ** 1. 参观美术馆 ................................... M L
+
   在图书馆浏览 ................................... M L
+
   参观博物馆 ................................... M L
+
 - 2. 收集签名 ................................... M L
+
   收集硬币 ................................... M L
+
   收集石头 ................................... M L
 
-* L = 喜欢，I = 无所谓，D = 不喜欢
-** M = 最喜欢，L = 最不喜欢
+\* L = 喜欢，I = 无所谓，D = 不喜欢
+
+\*\* M = 最喜欢，L = 最不喜欢
 
 来源：ACT 兴趣测验的测验项目，摘自《注册 ACT 评估》，第 10 页。版权归 ACT, Inc. 所有。经出版商许可转载。SVIB-SII 项目经出版商 Consulting Psychologists Press, Inc.，加州帕洛阿尔托 94303 特别许可修改并转载，自《强氏职业兴趣空白表》强氏兴趣清单®，表格 T317。版权 © 1994 斯坦福大学董事会。保留所有权利。经斯坦福大学出版社，斯坦福，加州 94303 许可印刷。未经出版商书面同意禁止进一步复制。库德职业兴趣调查，DD 表的项目经许可转载。由 National Career Assessment Services Inc.™ 出版，邮政信箱 277，爱荷华州阿黛尔 50003。800-314-8972/www.kuder.com。版权 © National Career Assessment Services, Inc.™ 所有。保留所有权利。
 
 三组（三元组）。这些后者项目要求学生标记三元组中学生最喜欢的（“M”）活动和学生最不喜欢的（“L”）活动。这相当于要求学生将三个活动从最喜欢到最不喜欢进行排序。这种方法称为强制选择项目格式，旨在克服一些学生对“喜欢”有非常高的个人标准，而另一些学生有非常低的标准这一倾向。当这种标准差异出现时，两个实际上对活动的喜好或厌恶顺序相同的人可能会在答题纸上做出不同的标记。然而，测量专家批评了强制选择格式，因为使用它会导致统计假象，从而导致测验量表之间出现负相关。
 
-兴趣测验的使用 在职业兴趣测验分数的使用中包括以下用途：（a）让人们对暂定的选择感到安心，（b）为人们理解工作世界提供结构，（c）帮助人们解决冲突的替代方案，（d）帮助人们规划个人发展，（e）引起人们对平均人通常不知道或忽视的有利替代方案的注意，（f）帮助人们理解他们的工作不满，（g）帮助雇主选择会成为更好员工的人，（h）帮助人们规划职业晋升，（i）帮助对工作世界进行科学研究并将此研究与其他社会科学研究联系起来（Holland, 1975, p. 22）。
+
+
+# 兴趣测验的使用
+
+在职业兴趣测验分数的使用中包括以下用途：（a）让人们对暂定的选择感到安心，（b）为人们理解工作世界提供结构，（c）帮助人们解决冲突的替代方案，（d）帮助人们规划个人发展，（e）引起人们对平均人通常不知道或忽视的有利替代方案的注意，（f）帮助人们理解他们的工作不满，（g）帮助雇主选择会成为更好员工的人，（h）帮助人们规划职业晋升，（i）帮助对工作世界进行科学研究并将此研究与其他社会科学研究联系起来（Holland, 1975, p. 22）。
 
 ## 强氏兴趣清单
 
 附录 K 列出了若干职业兴趣测验。其中一个测验，强氏兴趣清单（SII），在此简要描述。
 
-项目内容 兴趣测验技术的先驱使用了各种内容来调查兴趣，包括询问受试者对工作头衔、学校科目、爱好、休闲活动、工作活动、人物类型和阅读材料类型的喜好和厌恶，并评估受试者的个人特征（Davis, 1980）。随着时间的推移，兴趣的概念缩小到工作和职业世界。今天大多数测验的内容仅限于活动清单，且大多数关注工作活动。SII 是一个例外，它使用了大量多样化的内容。SII 上的 317 个项目衡量一个人对 109 种职业的兴趣。
+### 项目内容
 
-组织 1994 年修订版，用于 14 岁及以上的学生，由 317 个项目组成。学生会看到职业、学校科目、活动、娱乐和人物类型，并对每个项目进行喜欢、不喜欢或无所谓的评级。学生还会被呈现活动对，并选择其中一个或两者都不偏好。此外，学生会说明清单中每个特征是否描述了他或她。反应随后
+兴趣测验技术的先驱使用了各种内容来调查兴趣，包括询问受试者对工作头衔、学校科目、爱好、休闲活动、工作活动、人物类型和阅读材料类型的喜好和厌恶，并评估受试者的个人特征（Davis, 1980）。随着时间的推移，兴趣的概念缩小到工作和职业世界。今天大多数测验的内容仅限于活动清单，且大多数关注工作活动。SII 是一个例外，它使用了大量多样化的内容。SII 上的 317 个项目衡量一个人对 109 种职业的兴趣。
 
+### 组织
 
+1994 年修订版，用于 14 岁及以上的学生，由 317 个项目组成。学生会看到职业、学校科目、活动、娱乐和人物类型，并对每个项目进行喜欢、不喜欢或无所谓的评级。学生还会被呈现活动对，并选择其中一个或两者都不偏好。此外，学生会说明清单中每个特征是否描述了他或她。反应随后scored via a computer (tests can't be scored locally) and reported as standard scores on various scales. The results of the SII are reported to the examinee in three ways: (a) 6 General Occupational Themes, which describe a person's overall pattern of occupational interests, (b) 25 Basic Interest Scales, which describe the somewhat narrower categories of activities a person likes, (c) 211 Occupational Scales, which describe the extent to which a person's likes and dislikes are similar to persons in specific occupations, and (d) 4 Personality Style Scales.
 
-scored via a computer (tests can't be scored locally) and reported as standard scores on various scales. The results of the SII are reported to the examinee in three ways: (a) 6 General Occupational Themes, which describe a person's overall pattern of occupational interests, (b) 25 Basic Interest Scales, which describe the somewhat narrower categories of activities a person likes, (c) 211 Occupational Scales, which describe the extent to which a person's likes and dislikes are similar to persons in specific occupations, and (d) 4 Personality Style Scales.
-
-## General Occupational Themes
+### General Occupational Themes
 
 The student receives a score on each of six personality types, which were adapted from Holland (1973). These are Realistic, Investigative, Artistic, Social, Enterprising, and Conventional. A counselor can use the student's profile regarding these types of personalities to help a student understand his or her overall or general pattern of interests and how he or she appears to be oriented to the world of work. A normalized standard score (T-score) is reported for each of the six themes.
 
-## Basic Interest Scales
+### Basic Interest Scales
 
 The 25 scales are grouped in clusters under each of the six themes. For example, five of the basic interest scales—Teaching, Social Service, Athletics, Domestic Arts, Religious Activities—are clustered under the general occupational theme of Social. The basic interest scales are intermediate between the general occupational themes and the more specific occupational scales (described next). The basic interest scales describe the clusters of activities a student likes. These activity areas may be common to several specific occupations (for example, there are many types of teachers).
 
-## Occupational Scales
+### Occupational Scales
 
 Farmer, air force trainer, school administrator, fine artist, and science teacher are some of the 211 occupations listed. A student receives a standard score for each occupation. This score describes how similar the student's pattern of likes and dislikes is to persons who are experienced and satisfied in each occupation.
 
-## Special Scales
+### Special Scales
 
 Two nonoccupational scales are used: the Academic Comfort Scale and the Introversion-Extroversion Scale. The first is an assessment of the extent to which a student likes intellectual activities. The second assesses the extent to which a student likes to interact and work with other people as contrasted with being content working alone. In addition to these scales, there are special administrative indexes. These are used to assess whether the student's responses can be interpreted with some confidence.
 
 The Total Response Index checks whether the student answered enough items to make a useful interpretation of the SII results. If a student omitted 15 or more items, the results may not be valid. The Infrequent Response Index checks on whether the student's responses are marked incorrectly. It compares the student's responses to those in a general norm group. A third index assesses like, dislike, and indifference percentages. This is used to assess whether a student's response patterns indicate improper scoring, misunderstood directions, or marking the answer sheet improperly. The administrative indexes help a counselor decide whether the student responded well enough to make the results meaningful.
 
-## Male-Female Differences
+### Male-Female Differences
+
+
 
 Although the SII has a single booklet for both males and females, there are separate norms for each gender. The authors have kept the norms separate because (a) there are large differences in the strength of interests in the two genders in many areas and (b) combined-sex (unisex) scales appear less valid for many occupations. Students may understand their interests better if they can compare them to both like-gender and opposite-gender norms. This may be especially helpful to students who are to an attitude questionnaire.
+
 - Different ways of constructing attitude scales include Thurstone, Guttman, Likert, Semantic Differential, and Item Response Theory. These methods are not interchangeable.
 - Because it is difficult to construct an attitude scale, you may need to look seriously into the validity and reliability of the results before you use one.
 - Because students can fake their responses to attitude questionnaires, you should interpret the results very cautiously.
@@ -17440,8 +18543,7 @@ The attitudes of older students and adults are changeable, but it is much easier
 
 ## School Attitude Measure
 
-The School Attitude Measure (SAM) (Wick et al., 1989) assesses students' attitudes and
-self-concept in five areas. There are five levels of the questionnaire: one each for grades 1–2, 3–4, 5–6, 7–8, and 9–12. The five areas assessed are described here:
+The School Attitude Measure (SAM) (Wick et al., 1989) assesses students' attitudes and self-concept in five areas. There are five levels of the questionnaire: one each for grades 1–2, 3–4, 5–6, 7–8, and 9–12. The five areas assessed are described here:
 
 - Scale 1: Motivation for Schooling—Assesses students' positive and negative feelings about schooling.
 - Scale 2: Academic Self-Concept—Performance Based—Assesses students' self-confidence in their ability to learn and perform in school.
@@ -17455,6 +18557,8 @@ Teachers receive class reports listing each student's total score and the score 
 
 ## Assessing Personality Dimensions
 
+
+
 A variety of techniques have been developed to measure various aspects of personality. Personality tests and vocational tests are the two most numerous varieties of tests. A person using a personality test must be trained in psychological interpretation of the results. This usually requires extensive graduate work in counseling or school psychology and a lengthy supervised internship. Thus, for the most part, teacher-training programs leave teachers unqualified to administer and interpret personality tests. Teachers will encounter the results of such tests, however, if they are part of a child study team or if they read psychological reports of students. Thus, some familiarity with a few basic concepts of personality measurement is in order.
 
 ## Assessment Approaches
@@ -17463,7 +18567,9 @@ The kind of personality tests a counselor or psychologist uses depends primarily
 
 ## Projective Techniques
 
-Projective Hypothesis Two broad categories of methods for assessing personality dimensions are projective techniques and structured techniques. Projective techniques present the examinee with ambiguous stimuli and ask the examinee to respond to them. The proponents of this technique assume that an examinee's interpretations of these vague stimuli will reveal the examinee's innermost needs, feelings, and conflicts, even though the examinee is unaware of what he or she is revealing. This assumption is known as the projective hypothesis (Frank, 1939). A trained examiner is needed to interpret an examinee's responses. Examples of projective personality tests are the Rorschach Test, the Thematic Apperception Test (TAT), word association tests, various sentence completion tests, certain picture arrangements tests, and various figure drawing tests.
+### Projective Hypothesis
+
+Two broad categories of methods for assessing personality dimensions are projective techniques and structured techniques. Projective techniques present the examinee with ambiguous stimuli and ask the examinee to respond to them. The proponents of this technique assume that an examinee's interpretations of these vague stimuli will reveal the examinee's innermost needs, feelings, and conflicts, even though the examinee is unaware of what he or she is revealing. This assumption is known as the projective hypothesis (Frank, 1939). A trained examiner is needed to interpret an examinee's responses. Examples of projective personality tests are the Rorschach Test, the Thematic Apperception Test (TAT), word association tests, various sentence completion tests, certain picture arrangements tests, and various figure drawing tests.
 
 ### Rorschach
 
@@ -17471,23 +18577,29 @@ The Rorschach Test, for example, presents to the examinee one at a time several 
 
 ### Thematic Apperception Test
 
-TAT pictures are more structured than the Rorschach inkblots. They show surrealistic pictures of scenes involving one or more persons. The examinee is asked to tell a story about the picture: What happened before the event pictured? What is happening at the moment? Who are the characters? What are their feelings? How will the story end? Because examinees must construct stories, the TAT is sometimes classified as a construction test. The psychologist analyzes the content of the story in terms of H. A. Murray's (1938) personality theory of "needs" and
+TAT pictures are more structured than the Rorschach inkblots. They show surrealistic pictures of scenes involving one or more persons. The examinee is asked to tell a story about the picture: What happened before the event pictured? What is happening at the moment? Who are the characters? What are their feelings? How will the story end? Because examinees must construct stories, the TAT is sometimes classified as a construction test. The psychologist analyzes the content of the story in terms of H. A. Murray's (1938) personality theory of "needs" and “press,” 在访谈中进一步探索时，对被试人格提出假设。
 
-“press,” 在访谈中进一步探索时，对被试人格提出假设。
-
-## 句子完成测验
+### 句子完成测验
 
 人格句子完成测验要求被试完成与自我和人际关系各个方面相关的句子（例如，“与大多数家庭相比，我的家庭……”。）。内容分析的结果被类似地用来为受试者的人格生成假设。
 
 ## 结构化技术
 
-定义 结构化人格测评技术遵循非常具体的施测、计分和解释规则。通常它们遵循反应选择格式：是-否、真-假或多项选择。结构化人格测验的例子有吉尔福德-齐默尔曼气质调查表、明尼苏达多相人格测验——第二版、加州心理测验、十六人格因素问卷和儿童人格测验。
+### 定义
 
-自我报告特征 每项测验有时被称为自我报告人格量表，因为它要求被试以描述其个人感受的方式回答题目。例如，可能要求被试说明陈述“我通常向他人表达个人意见”是否适用于他们自己。
+结构化人格测评技术遵循非常具体的施测、计分和解释规则。通常它们遵循反应选择格式：是-否、真-假或多项选择。结构化人格测验的例子有吉尔福德-齐默尔曼气质调查表、明尼苏达多相人格测验——第二版、加州心理测验、十六人格因素问卷和儿童人格测验。
 
-人格维度 结构化人格量表的另一个特征是题目与各种量表或人格维度相关。例如，吉尔福德-齐默尔曼气质调查表报告被试在 10 个量表方面的概况：一般活动量、克制、优势（领导力）、社交性、情绪稳定性、客观性、友好性、深思熟虑、人际关系和阳刚性。
+### 自我报告特征
+
+每项测验有时被称为自我报告人格量表，因为它要求被试以描述其个人感受的方式回答题目。例如，可能要求被试说明陈述“我通常向他人表达个人意见”是否适用于他们自己。
+
+### 人格维度
+
+结构化人格量表的另一个特征是题目与各种量表或人格维度相关。例如，吉尔福德-齐默尔曼气质调查表报告被试在 10 个量表方面的概况：一般活动量、克制、优势（领导力）、社交性、情绪稳定性、客观性、友好性、深思熟虑、人际关系和阳刚性。
 
 ## 教师使用测验的价值
+
+
 
 自我报告人格量表要求受试者（Thorndike, Cunningham, Thorndike, & Hagen, 1991）：(a) 阅读并理解每个题目，(b) 能够足够了解自己的行为以判断给定陈述是否适用于他们，(c) 愿意诚实、坦率地作答。在人格测验的情境中阅读要求学生足够理解题目以便能够决定陈述在多大程度上适用于他们自己的生活。为了决定陈述是否适用，学生必须客观地看待该行为，这可能不在适应不良学生的能力范围内。最后，如果学生不愿或不能坦率地回答题目，可能会产生扭曲的人格描述。这种不坦率在测试感到脆弱或受威胁的儿童时更常发生，如果他们向教师或更一般地向学校透露自己的感受。
 
@@ -17498,18 +18610,31 @@ TAT pictures are more structured than the Rorschach inkblots. They show surreali
 ## 评估学业及其他能力测验
 
 - 一般学业能力或智力测验描述学习者的一般智力技能，而非学习特定课程或任务所需的特定能力。
+
 - 关于一般智力技能的信息在试图预测学生未来的总体学业表现时变得重要，并且当未来学习的条件预计与过去的学习条件相似时。
+
 - 一般学业能力测验分数在预测非常具体的学术学习时效度较低，但在预测更整体的学术成就时效度更高。
+
 - 一个人学习的能力是生物构成、环境经验以及二者复杂相互作用的函数。一个人的学习新事物的能力将取决于先前的学习、新材料教授的方式、学生的动机以及许多其他因素，以及学生的天赋。
+
 - 成绩测验和能力测验都可以反映一个人的当前能力水平。然而，最能预测未来成就的题目往往出现在能力测验上。
+
 - 所有基于能力测验分数的预测都假设过去存在的相同学习条件会延续到未来。
+
 - 本章讨论了三种常见的团体施测学业能力测验：综合测验、双分数测验和多能力测验。提出了使用这些测验分数的建议。
+
 - 还描述了入学准备测验。
+
 - 高中和大学入学测验旨在预测在更高一级学校的学习成功。本章描述了两种大学入学测验。
+
 - 作为一个整体，学生的学业能力测验分数随时间推移趋于稳定。
+
 - 总体而言，学业能力测验的重测相关系数 (a) 随着两次测验之间的时间间隔增长而趋于降低（稳定性降低），(b) 对于固定的测验间隔，它们在年幼儿童中往往低于年长儿童。
+
 - 有助于能力分数相对稳定的一些因素是 (a) 智力技能的累积性，(b) 个人环境的稳定性，(c) 早期获得的先决技能的生成性。
+
 - 有助于个人能力分数变化的一些因素是 (a) 测量误差，(b) 测验常模差异，(c) 特殊干预和丰富环境。
+
 - 早期智力技能的增长似乎与情感上支持和接纳的环境相关，在该环境中个人有许多体验和强化认知成功的机会。
 
 斯坦福-比奈智力量表、韦克斯勒智力量表和儿童认知能力测验是单独施测的一般学业能力测验的例子。文中描述了每一种以及它们之间的相似性和差异。
@@ -17535,66 +18660,96 @@ TAT pictures are more structured than the Rorschach inkblots. They show surreali
 ## 重要术语和概念
 
 - 抽象/视觉推理分测验
+
 - 适应行为
+
 - 情感显著性
+
 - 按年龄计分与按年级计分
+
 - 能力（与成绩相对）
+
 - 人格联想测验
+
 - 态度
+
 - 基准水平、天花板水平
+
 - 人格完成测验
+
 - 人格建构测验
+
 - 态度的方向和强度
+
 - 经验键入量表
+
 - 形象推理
+
 - 强制选择题目格式
+
 - 一般与特定智力技能 兴趣
+
 - 量表兴趣、表现兴趣、测验兴趣、表达兴趣
+
 - 心理年龄
+
 - 多能力测验
+
 - 非语言测验
+
 - 综合测验
+
 - 人相似原理与活动相似原理
+
 - 图像推理
+
 - 投射假设
+
 - 投射人格测验技术
+
 - 定量推理
+
 - 定量推理分测验
+
 - 准备测验
+
 - 短期记忆分测验
+
 - 螺旋格式
+
 - 标准年龄分（SAS）
+
 - 结构化（自我报告）人格评估技术
+
 - 价值观
+
 - 语言理解
+
 - 语言推理
+
 - 语言推理分测验
+
 - 职业兴趣量表
 
 ## 练习和活动
 
 1. 描述几种学校情境，在这些情境中，了解学生的特定技能发展水平在为学习新材料设定期望方面不如了解学生的一般智力技能发展水平有帮助。
-
-
-
-
-
-+   c. “我想知道我的五年级学生中哪些人能够快速且熟练地学习计算机编程。”
-+   d. “我需要为一名最近从古巴来的学生进行一次一般的智力测验。”
-+   e. “我需要一份大学入学考试，它提供的信息既可用于指导和咨询活动，也可用于招生。”
+    - c. “我想知道我的五年级学生中哪些人能够快速且熟练地学习计算机编程。”
+    - d. “我需要为一名最近从古巴来的学生进行一次一般的智力测验。”
+    - e. “我需要一份大学入学考试，它提供的信息既可用于指导和咨询活动，也可用于招生。”
 
 3. DAT 和 SVIB-SII 的结果均在各自的一般常模上报告。解释其原因，并讨论这种做法对女性职业和进一步学业规划是否有帮助。
 
 4. Holland（1975）列举了兴趣量表分数的九种用途是什么？
-a. 访问您学校的指导部门，并确定其辅导员是否以这些方式中的任何一种使用兴趣量表分数。
-b. 与您的同学分享您的发现。
+    - a. 访问您学校的指导部门，并确定其辅导员是否以这些方式中的任何一种使用兴趣量表分数。
+    - b. 与您的同学分享您的发现。
 
 5. 阅读以下陈述。每条陈述表达了学生就成就、能力、态度、兴趣或价值观而言的状态。将每条陈述归类为五类之一。
-a. “我在这个班级里随时都控制着自己的学习。”
-b. “我更喜欢科幻故事而不是传记。”
-c. “我认为我的数学课很无聊。”
-d. “对我来说，能够自主控制工作时间比赚取高薪更重要。”
-e. “我不断努力成为这个学校最好的学生。”
+    - a. “我在这个班级里随时都控制着自己的学习。”
+    - b. “我更喜欢科幻故事而不是传记。”
+    - c. “我认为我的数学课很无聊。”
+    - d. “对我来说，能够自主控制工作时间比赚取高薪更重要。”
+    - e. “我不断努力成为这个学校最好的学生。”
 
 ## Additional Readings
 
@@ -17615,6 +18770,7 @@ Gregory, R. J. (1992). Psychological testing: History, principles, and applicati
 讨论了许多不同的一般心理能力、兴趣和人格测验。对每种测验的研究结果进行了讨论。
 
 Sattler, J. M. (1992). Assessment of children (3rd ed.). San Diego: Author.
+
 Sattler, J. M. (1992). Assessment of children: WISC-III and WPPSI-R supplement. San Diego: Author.
 
 对个体一般心理能力测验、适应行为量表和其他相关工具的全面描述。总结了每种工具的研究并提供了管理和解释其结果的建议。
@@ -17625,18 +18781,22 @@ Snow, R. E., & Lohman, D. F. (1989). Implications of cognitive psychology for ed
 
 ## APPENDIX A
 
-## Standards for Teacher Competence in Educational Assessment of Students
+### Standards for Teacher Competence in Educational Assessment of Students
+
+
 
 由 American Federation of Teachers
+
 National Council on Measurement in Education
+
 National Education Association 制定
 
 这些标准旨在用作：
 
--   教师教育者设计和批准教师培养项目的指南
--   教师进行自我评估以确定其在学生评估方面专业发展需求的指南
--   研讨会讲师为在职教师设计专业发展体验的指南
--   促使教育测量专家和教师培训师比过去更广泛地概念化学生评估和学生评估教师培训的动力
+- 教师教育者设计和批准教师培养项目的指南
+- 教师进行自我评估以确定其在学生评估方面专业发展需求的指南
+- 研讨会讲师为在职教师设计专业发展体验的指南
+- 促使教育测量专家和教师培训师比过去更广泛地概念化学生评估和学生评估教师培训的动力
 
 ## 1. Teachers Should be Skilled in Choosing Assessment Methods Appropriate for Instructional Decisions.
 
@@ -17684,10 +18844,6 @@ National Education Association 制定
 
 符合此标准的教师将具备以下概念和应用技能。教师将理解并能够给出适当的解释，即学生评估的解释必须由学生的社会经济、文化、语言和其他背景因素所调节。教师将能够解释评估结果并不意味着此类背景因素限制学生的最终教育发展。他们将能够向学生及其家长或监护人传达他们如何评估学生的教育进展。教师将理解并能够解释在对个体学生做出决策时使用评估时考虑测量误差的重要性。教师将能够解释不同非正式和正式评估方法的局限性。他们将能够解释课堂、学区、州和国家层面上学生评估结果的印刷报告。
 
-
-
-
-
 ## 7. 教师应具备识别不道德、非法以及其他不适当评估方法及评估信息使用方式的能力。
 
 公平、所有相关者的权利以及专业道德行为必须贯穿学生评估活动的始终，从最初的规划和信息收集，到结果的解释、使用和传达。教师必须熟知自己在评估方面的伦理和法律责任。此外，当遇到他人不当的评估做法时，他们还应努力使其停止。教师还应与更广泛的教育界共同参与界定评估中适当专业行为的界限。
@@ -17699,6 +18855,10 @@ National Education Association 制定
 ## 教育公平测试实践守则
 
 由联合测试实践委员会编制
+
+
+
+# 《教育公平测试实践守则》
 
 《教育公平测试实践守则》列出了开发或使用教育测验的专业人员对考生应承担的主要义务。该守则旨在广泛适用于教育中测验的使用（入学、教育评估、教育诊断和学生安置）。该守则并非旨在涵盖就业测试、执照或认证测试或其他类型的测试。尽管该守则与许多类型的教育测验相关，但主要针对的是专业开发的测验，例如商业测验出版商出售的测验或在正式组织的测试项目中使用的测验。该守则无意涵盖由个别教师为其自己的课堂制作的测验。
 
@@ -17719,7 +18879,7 @@ National Education Association 制定
 
 测验开发者应提供测验使用者选择适当测验所需的信息。
 
-#### 测验开发者应：
+### 测验开发者应：
 
 - 1. 明确每项测验所测量的内容以及测验应用于何处。描述测验适用的群体。
 - 2. 准确表述测验在其预期用途方面的特征、用途和局限性。
@@ -17728,20 +18888,11 @@ National Education Association 制定
 - 5. 提供证据证明测验符合其预期目的。
 - 6. 向合格使用者提供测验题目、指导、答题纸、手册和成绩报告的代表性样本或完整副本。
 - 7. 指出关于每项测验对不同种族、民族或语言背景群体的适用性所获得证据的性质，这些群体很可能接受测试。
-
-该守则由联合测试实践委员会制定，该委员会是多个专业组织的合作努力，旨在出于公共利益推进测试实践的质量。联合委员会由美国教育研究协会、美国心理学会和国家测量教育委员会发起。除这三个团体外，美国咨询与发展协会/咨询与发展测量与评估协会，以及美国言语-语言-听力协会现也成为联合委员会的赞助者。
-
-本材料不受版权保护。鼓励复制和传播。请按如下方式引用本文档：
-
-> Code of Fair Testing Practices in Education. (1988). Washington, D.C.: Joint Committee on Testing Practices. (Mailing Address: Joint Committee on Testing Practices, American Psychological Association, 1200 17th Street, NW, Washington, D.C. 20036.
-
-*守则中的许多陈述涉及现有测验的选择。然而，在定制测试项目中，测验开发者受聘构建新测验。在这些情况下，测验开发过程应设计为有助于确保完成的测验符合守则。
-
-8. 识别并公布管理每项测验和正确解释分数所需的专门技能。
+- 8. 识别并公布管理每项测验和正确解释分数所需的专门技能。
 
 测验使用者应选择符合其使用目的且适合预期考生群体的测验。
 
-#### 测验使用者应：
+### 测验使用者应：
 
 - 1. 首先明确测试目的和受测群体。然后，基于对可用信息的全面审查，为该目的和该群体选择测验。
 - 2. 调查除测验分数之外可能有用的信息来源，以证实测验提供的信息。
@@ -17756,7 +18907,7 @@ National Education Association 制定
 
 测验开发者应帮助使用者正确解释分数。
 
-#### 测验开发者应：
+### 测验开发者应：
 
 - 9. 提供及时且易于理解的成绩报告，清晰准确地描述测验表现。还应解释所报告分数的含义和局限性。
 - 10. 描述任何常模或比较群体所代表的群体、数据收集的日期以及选择考生样本所使用的过程。
@@ -17766,7 +18917,7 @@ National Education Association 制定
 
 测验使用者应正确解释分数。
 
-#### 测验使用者应：
+### 测验使用者应：
 
 - 9. 获取有关成绩报告所用量表、任何常模或比较群体的特征以及分数局限性的信息。
 - 10. 解释分数时应考虑常模或比较群体与实际考生之间的任何主要差异。还应考虑测验管理实践的差异或对测验中具体问题的熟悉程度差异。
@@ -17778,7 +18929,7 @@ National Education Association 制定
 
 测验开发者应努力使测验对不同种族、性别、民族背景或残疾状况的考生尽可能公平。
 
-#### 测验开发者应：
+### 测验开发者应：
 
 - 14. 审查和修改测验题目及相关材料，以避免可能引起冒犯的内容或语言。
 - 15. 当样本量足够时，调查不同种族、性别和民族背景考生的表现。实施程序以确保表现差异主要与所评估技能相关，而非无关因素。
@@ -17786,7 +18937,7 @@ National Education Association 制定
 
 测验使用者应选择以尽可能使测验对不同种族、性别、民族背景或残疾状况的考生公平的方式开发的测验。
 
-#### 测验使用者应：
+### 测验使用者应：
 
 - 14. 评估测验开发者为避免可能引起冒犯的内容或语言所使用的程序。
 - 15. 当样本量足够时，审查不同种族、性别和民族背景考生的表现。评估表现差异在多大程度上可能由测验的不当特征造成。
@@ -17796,64 +18947,94 @@ National Education Association 制定
 
 在某些情况下，测验开发者直接与考生沟通。在其他情况下，测验使用者直接与考生沟通。无论哪一方直接与考生沟通，都应提供以下所述信息。
 
-#### 测验开发者或测验使用者应：
+### 测验开发者或测验使用者应：
 
 - 17. 当测验为可选时，向考生或其父母/监护人提供信息，帮助他们判断是否应参加测验，或是否应使用可用的替代方案。
 - 18. 向考生提供他们熟悉测验覆盖范围、题型格式、指导和适当应试策略所需的信息。努力使此类信息对所有考生平等可用。
 
-
-
-
-
 在某些情况下，测试开发者直接控制测试和测试分数。在其他情况下，测试使用者拥有这种控制权。无论是哪一方直接控制测试和测试分数，都应采取下述步骤。
 
-## 测试开发者或测试使用者应：
+### 测试开发者或测试使用者应：
 
 - 19. 向考生或其家长/监护人提供有关考生可能拥有的权利的信息，包括获取测试和已完成的答题卡副本、重新参加测试、要求重新评分或取消分数。
 - 20. 告知考生或其家长/监护人分数将存档多长时间，并说明分数将向谁、在何种情况下公布或不公布。
 - 21. 说明考生或其家长/监护人可用于提出投诉并解决问题的方法。
 
-注意：制定《教育公平测试实践准则》的工作组以及指导该工作组的测试实践联合委员会的成员如下：
+该守则由联合测试实践委员会制定，该委员会是多个专业组织的合作努力，旨在出于公共利益推进测试实践的质量。联合委员会由美国教育研究协会、美国心理学会和国家测量教育委员会发起。除这三个团体外，美国咨询与发展协会/咨询与发展测量与评估协会，以及美国言语-语言-听力协会现也成为联合委员会的赞助者。
+
+本材料不受版权保护。鼓励复制和传播。请按如下方式引用本文档：
+
+> Code of Fair Testing Practices in Education. (1988). Washington, D.C.: Joint Committee on Testing Practices. (Mailing Address: Joint Committee on Testing Practices, American Psychological Association, 1200 17th Street, NW, Washington, D.C. 20036.
+
+*守则中的许多陈述涉及现有测验的选择。然而，在定制测试项目中，测验开发者受聘构建新测验。在这些情况下，测验开发过程应设计为有助于确保完成的测验符合守则。
+
+### 注意
+
+制定《教育公平测试实践准则》的工作组以及指导该工作组的测试实践联合委员会的成员如下：
 
 Theodore P Bartell
+
 John R. Bergan
+
 Esther E. Diamond
+
 Richard P. Duran
+
 Loraine D. Eyde
+
 Raymond D. Fowler
+
 John J. Fremer（JCTP联合主席，准则工作组主席）
+
 Edmund W. Gordon
+
 Jo-Ida C. Hansen
+
 James B. Lingwall
+
 George F Madaus（JCTP联合主席）
 
 Kevin L. Moreland
+
 Jo-Ellen V. Perez
+
 Robert J. Solomon
+
 John T. Stewart
+
 Carol Kehr Tittle（JCTP联合主席）
+
 Nicholas A. Vacc
+
 Michael J. Zieky
+
 美国心理学会的Debra Boltas和Wayne Camara担任工作人员联络员
 
 ## 教育测量中的职业责任准则
 
 由NCME职业道德准则制定特别委员会编制：
+
 Cynthia B. Schmeiser，ACT——主席
+
 Kurt F. Geisinger，纽约州立大学
+
 Sharon Johnson-Lewis，底特律公立学校
+
 Edward D. Roeber，州首席学校官员委员会
+
 William D. Schafer，马里兰大学
 
 ## 序言与一般责任
 
-作为致力于改进教育中测量与评价实践的组织，全国教育测量委员会（NCME）采纳本准则，以促进教育测量领域专业负责的实践。专业负责的实践是指源于该领域的专业标准、一般伦理原则或两者的行为。
 
-《教育测量中的职业责任准则》（以下简称“准则”）旨在指导NCME成员在参与任何类型教育评估活动时的行为。NCME还将本准则作为公共服务提供给所有从事教育评估活动的个人，希望这些活动能以专业负责的方式进行。从事这些活动的人员包括地方教育工作者，如课堂教师、校长和学区总监；专业人士，如学校心理学家和咨询师；州级和国家级的教育技术、立法和政策人员；研究、评价和测试机构的工作人员；考试准备服务提供者；学院和大学教师及管理人员；以及设计和实施教育和培训项目的工商业专业人士。
+
+作为致力于改进教育中测量与评价实践的组织，全国教育测量委员会（`NCME`）采纳本准则，以促进教育测量领域专业负责的实践。专业负责的实践是指源于该领域的专业标准、一般伦理原则或两者的行为。
+
+《教育测量中的职业责任准则》（以下简称“准则”）旨在指导`NCME`成员在参与任何类型教育评估活动时的行为。`NCME`还将本准则作为公共服务提供给所有从事教育评估活动的个人，希望这些活动能以专业负责的方式进行。从事这些活动的人员包括地方教育工作者，如课堂教师、校长和学区总监；专业人士，如学校心理学家和咨询师；州级和国家级的教育技术、立法和政策人员；研究、评价和测试机构的工作人员；考试准备服务提供者；学院和大学教师及管理人员；以及设计和实施教育和培训项目的工商业专业人士。
 
 本准则适用于作为教育过程一部分的任何类型评估，包括用于各级教育决策的信息收集的正规和非正规、传统和替代技术。这些技术包括但不限于：学校、学区、州、国家和国际层面的大规模评估；标准化测试；观察测量；教师实施的评估；评估支持材料；以及用于教育的其他成就、能力倾向、兴趣和人格测量。
 
-虽然NCME为其成员颁布本准则，但它强烈鼓励从事教育评估活动的其他组织和个人认可并遵守与其职业相关的责任。由于本准则仅涉及评估在教育中的使用，因此应认识到，教育情境之外的评估使用，如就业、认证或许可，可能涉及本准则所述内容之外的其他职业责任。
+虽然`NCME`为其成员颁布本准则，但它强烈鼓励从事教育评估活动的其他组织和个人认可并遵守与其职业相关的责任。由于本准则仅涉及评估在教育中的使用，因此应认识到，教育情境之外的评估使用，如就业、认证或许可，可能涉及本准则所述内容之外的其他职业责任。
 
 本准则旨在发挥教育功能：通知并提醒教育评估相关人员有责任维护评估开发、使用、评价和营销方式的完整性。此外，期望本准则能激发人们对各级教育中何种构成专业负责的评估实践进行深入思考。
 
@@ -17861,97 +19042,99 @@ William D. Schafer，马里兰大学
 
 评估产品与服务的开发者，如课堂教师和其他评估专业人员，负有努力生产最优质评估的专业责任。开发评估的人员负有专业责任：
 
-- 1.1 确保评估产品和服务的开发符合适用的专业、技术和法律标准。
-- 1.2 开发尽可能避免因与所测量构念无关的特征（如性别、民族、种族、社会经济地位、残疾、宗教、年龄或国籍）而产生偏倚的评估产品和服务。
-- 1.3 在开发评估时，为残疾考生和其他特殊需要考生群体规划合理便利。
-- 1.4 向适当方披露可能影响开发者判断或表现的任何实际或潜在利益冲突。
-- 1.5 在评估产品和服务中使用受版权保护的材料时，遵守州和联邦法律。
-- 1.6 向适当人员提供有关评估开发和评分所采取措施的信息，包括用于支持评估的信度、效度、评分和报告过程及其他相关特征的最新信息。
-- 1.7 在评估开发过程中保护被评估者的隐私权。
-- 1.8 以清晰显著的语言提醒使用者警惕评估开发过程中可能出现的最常见的数据误解和误用。
-- 1.9 避免在考试准备和项目支持材料及服务中，对评估或其使用和解释作出虚假或未经证实的声明。
-- 1.10 尽快纠正评估或其支持材料中的任何实质性错误。
-- 1.11 开发有助于理解评估结果的分数报告和支持材料。
+- `1.1` 确保评估产品和服务的开发符合适用的专业、技术和法律标准。
+- `1.2` 开发尽可能避免因与所测量构念无关的特征（如性别、民族、种族、社会经济地位、残疾、宗教、年龄或国籍）而产生偏倚的评估产品和服务。
+- `1.3` 在开发评估时，为残疾考生和其他特殊需要考生群体规划合理便利。
+- `1.4` 向适当方披露可能影响开发者判断或表现的任何实际或潜在利益冲突。
+- `1.5` 在评估产品和服务中使用受版权保护的材料时，遵守州和联邦法律。
+- `1.6` 向适当人员提供有关评估开发和评分所采取措施的信息，包括用于支持评估的信度、效度、评分和报告过程及其他相关特征的最新信息。
+- `1.7` 在评估开发过程中保护被评估者的隐私权。
+- `1.8` 以清晰显著的语言提醒使用者警惕评估开发过程中可能出现的最常见的数据误解和误用。
+- `1.9` 避免在考试准备和项目支持材料及服务中，对评估或其使用和解释作出虚假或未经证实的声明。
+- `1.10` 尽快纠正评估或其支持材料中的任何实质性错误。
+- `1.11` 开发有助于理解评估结果的分数报告和支持材料。
 
 ## 第2节：评估产品与服务营销和销售者的责任
 
 评估产品和服务的营销，如测试和其他工具、评分服务、考试准备服务、咨询和测试解释服务，应基于准确、完整且与考虑使用这些服务的人相关的信息。营销和销售评估产品及服务的人员负有专业责任：
 
-- 2.1 向潜在购买者提供有关评估产品和服务及其推荐用途和限制的准确信息。
-- 2.2 不得故意隐瞒可能影响适当选择决策的评估产品和服务的相关信息。
-- 2.3 关于评估产品和服务的所有声明均应基于对公开信息的有效解释。
-- 2.4 允许合格用户有平等机会购买评估产品和服务。
-- 2.5 为评估产品和服务制定合理的费用。
-- 2.6 在任何购买或使用之前，向潜在用户告知与评估产品和服务相关的所有适用费用。
-- 2.7 努力确保没有人因无力支付评估产品和服务的费用而被剥夺获得机会的权利。
-- 2.8 为评估产品和服务的销售制定标准，例如将评估产品和服务的销售限于有资格进行推荐用途且预期会进行正确使用和解释的个人。
-- 2.9 告知潜在用户已知的评估产品和服务的不当用途，并就如何避免此类误用提供建议。
-- 2.10 保持对评估产品和服务及其在教育中适当用途的最新了解。
-- 2.11 只有在获得用户允许的情况下，才发布暗示用户认可评估产品和服务的信息。
-- 2.12 除非已获得官方认可，否则避免声称评估产品和服务已获得另一组织的认可。
-- 2.13 避免营销可能导致个人获得歪曲其实际成就水平的分数的考试准备产品和服务。
+- `2.1` 向潜在购买者提供有关评估产品和服务及其推荐用途和限制的准确信息。
+- `2.2` 不得故意隐瞒可能影响适当选择决策的评估产品和服务的相关信息。
+- `2.3` 关于评估产品和服务的所有声明均应基于对公开信息的有效解释。
+- `2.4` 允许合格用户有平等机会购买评估产品和服务。
+- `2.5` 为评估产品和服务制定合理的费用。
+- `2.6` 在任何购买或使用之前，向潜在用户告知与评估产品和服务相关的所有适用费用。
+- `2.7` 努力确保没有人因无力支付评估产品和服务的费用而被剥夺获得机会的权利。
+- `2.8` 为评估产品和服务的销售制定标准，例如将评估产品和服务的销售限于有资格进行推荐用途且预期会进行正确使用和解释的个人。
+- `2.9` 告知潜在用户已知的评估产品和服务的不当用途，并就如何避免此类误用提供建议。
+- `2.10` 保持对评估产品和服务及其在教育中适当用途的最新了解。
+- `2.11` 只有在获得用户允许的情况下，才发布暗示用户认可评估产品和服务的信息。
+- `2.12` 除非已获得官方认可，否则避免声称评估产品和服务已获得另一组织的认可。
+- `2.13` 避免营销可能导致个人获得歪曲其实际成就水平的分数的考试准备产品和服务。
 
 ## 第3节：选择评估产品和服务者的责任
 
 选择评估产品和服务用于教育环境，或帮助他人这样做的人，负有重要的专业责任，以确保评估适合其预期用途。选择评估产品和服务的人员负有专业责任：
 
-- 3.1 对可能适用于预期用途的现有评估策略和工具进行全面审查和评价。
-- 3.2 基于公开记录的技术质量和效用证据，而非未经证实的声明或陈述，来推荐和/或选择评估。
-- 3.3 披露其与正在考虑购买的评估的作者、测试出版商或其他相关人员的任何关联或隶属关系，如果此类关联可能影响选择过程的客观性，则应避免参与。
-- 3.4 告知决策者和潜在用户评估对预期用途的适宜性、使用的可能后果、考生权利的保护、相关成本、实施或使用评估所需的材料和服务，以及评估的已知局限性，包括评估信息可能的误用和误解。
-- 3.5 对于可能因种族、民族、性别、年龄、残疾、语言背景、社会经济地位、宗教或国籍等原因，以无效方式对社会中不同群体成员实施、评分和使用的任何潜在评估，应建议不要使用。
-- 3.6 遵守被审查评估可能附带的所有安全防范措施。
-- 3.7 立即披露他人对评估选择过程施加不当影响的任何企图。
-- 3.8 避免推荐、购买或使用可能导致个人获得歪曲其实际成就水平的分数的考试准备产品和服务。
+- `3.1` 对可能适用于预期用途的现有评估策略和工具进行全面审查和评价。
+- `3.2` 基于公开记录的技术质量和效用证据，而非未经证实的声明或陈述，来推荐和/或选择评估。
+- `3.3` 披露其与正在考虑购买的评估的作者、测试出版商或其他相关人员的任何关联或隶属关系，如果此类关联可能影响选择过程的客观性，则应避免参与。
+- `3.4` 告知决策者和潜在用户评估对预期用途的适宜性、使用的可能后果、考生权利的保护、相关成本、实施或使用评估所需的材料和服务，以及评估的已知局限性，包括评估信息可能的误用和误解。
+- `3.5` 对于可能因种族、民族、性别、年龄、残疾、语言背景、社会经济地位、宗教或国籍等原因，以无效方式对社会中不同群体成员实施、评分和使用的任何潜在评估，应建议不要使用。
+- `3.6` 遵守被审查评估可能附带的所有安全防范措施。
+- `3.7` 立即披露他人对评估选择过程施加不当影响的任何企图。
+- `3.8` 避免推荐、购买或使用可能导致个人获得歪曲其实际成就水平的分数的考试准备产品和服务。
 
 ## 第4节：评估实施者的责任
 
 那些帮助个人准备参加评估的人，以及直接或间接参与作为教育过程一部分的评估实施的人，包括教师、管理者和评估人员，在确保评估以公平和准确的方式实施方面发挥着重要作用。帮助他人准备评估的人员以及实施评估的人员负有专业责任：
 
-- 4.1 在评估实施前告知考生评估的相关信息，包括其目的、用途和后果；评估信息将如何评判或评分；结果将如何存档；谁将有权访问结果；结果将如何分发；以及考生在评估前、评估中和评估后的权利。
-- 4.2 仅实施其凭借教育、培训、执照或认证而具备资格的评估。
-- 4.3 在评估实施前、实施中和实施后采取适当的安全防范措施。
-- 4.4 在实施前了解实施评估所需的程序。
-- 4.5 按照规定的程序和条件实施标准化评估，如果出现任何非标准或限制性条件，应通知适当人员。
-
-
-
-
+- `4.1` 在评估实施前告知考生评估的相关信息，包括其目的、用途和后果；评估信息将如何评判或评分；结果将如何存档；谁将有权访问结果；结果将如何分发；以及考生在评估前、评估中和评估后的权利。
+- `4.2` 仅实施其凭借教育、培训、执照或认证而具备资格的评估。
+- `4.3` 在评估实施前、实施中和实施后采取适当的安全防范措施。
+- `4.4` 在实施前了解实施评估所需的程序。
+- `4.5` 按照规定的程序和条件实施标准化评估，如果出现任何非标准或限制性条件，应通知适当人员。
+- `4.6` 不排除任何符合条件的学生参加测评。
+- `4.7` 避免测评实施中可能使结果无效的任何条件。
+- `4.8` 为残疾或有特殊需求的人员提供并记录测评实施的所有合理且允许的便利。
+- `4.9` 在测评实施前及规定的时间内，为个人提供合理的机会询问有关测评程序或说明的问题。
+- `4.10` 保护被测评者的隐私权和正当程序权利。
+- `4.11` 避免任何可能允许或鼓励个人或团体获得与其实际 attainment 水平不符的分数的行为或条件。
 
 ## 第5节：评分人员的责任
 
 教育测评的评分应妥善且高效地进行，以便结果能够准确及时地报告。评分人员和准备测评报告的人员有专业责任：
 
-- 5.1 向使用者提供关于测评如何评分的完整准确信息，例如报告时间表、拟使用的评分流程、评分方法的理由、技术特征、质量控制程序、报告格式，以及这些服务的费用（如有）。
-- 5.2 通过在评分前后进行合理的质量控制程序，确保测评结果的准确性。
-- 5.3 尽量减少与测评目的无关的因素对评分的影响。
-- 5.4 及时告知使用者任何计划的评分和报告服务或时间表的偏差，并与使用者协商解决方案。
-- 5.5 如发现可能影响基于分数得出的推断的错误，应尽快向考生或客户提供更正后的分数结果。
-- 5.6 按州和联邦法律的规定保护可识别个人的信息的保密性。
-- 5.7 仅向州或联邦法律赋予有权获得此类信息的个人，或由委托评分服务的一方指定的个人发布测评的汇总结果。
-- 5.8 在可行时，建立公平合理的申诉流程并重新评分测评。
+- `5.1` 向使用者提供关于测评如何评分的完整准确信息，例如报告时间表、拟使用的评分流程、评分方法的理由、技术特征、质量控制程序、报告格式，以及这些服务的费用（如有）。
+- `5.2` 通过在评分前后进行合理的质量控制程序，确保测评结果的准确性。
+- `5.3` 尽量减少与测评目的无关的因素对评分的影响。
+- `5.4` 及时告知使用者任何计划的评分和报告服务或时间表的偏差，并与使用者协商解决方案。
+- `5.5` 如发现可能影响基于分数得出的推断的错误，应尽快向考生或客户提供更正后的分数结果。
+- `5.6` 按州和联邦法律的规定保护可识别个人的信息的保密性。
+- `5.7` 仅向州或联邦法律赋予有权获得此类信息的个人，或由委托评分服务的一方指定的个人发布测评的汇总结果。
+- `5.8` 在可行时，建立公平合理的申诉流程并重新评分测评。
 
 ## 第6节：解释、使用和传达测评结果人员的责任
 
 解释、使用和传达测评结果应促进有效推断并最大限度地减少无效推断。解释、使用和传达测评结果的人员有专业责任：
 
-- 6.1 在了解测评局限性的背景下，并理解使用的潜在后果，以知情、客观和公平的方式开展这些活动。
-- 6.2 向接收测评结果的人员提供有关测评的信息，包括其目的、局限性和使用情况，以确保对结果的正确解释。
-- 6.3 向接收分数报告的人员提供所有报告分数的易于理解的书面描述，包括适当的解释和可能的误解。
-- 4.6 不排除任何符合条件的学生参加测评。
-- 4.7 避免测评实施中可能使结果无效的任何条件。
-- 4.8 为残疾或有特殊需求的人员提供并记录测评实施的所有合理且允许的便利。
-- 4.9 在测评实施前及规定的时间内，为个人提供合理的机会询问有关测评程序或说明的问题。
-- 4.10 保护被测评者的隐私权和正当程序权利。
-- 4.11 避免任何可能允许或鼓励个人或团体获得与其实际 attainment 水平不符的分数的行为或条件。
-- 6.4 以易于理解且及时的方式向适当受众传达测评结果，包括适当的解释和可能的误解。
-- 6.5 评估并传达用于解释测评结果的任何常模或标准的充分性和适当性。
-- 6.6 告知参与测评过程的各方测评结果可能如何影响他们。
-- 6.7 在做出教育决策时，尽可能使用关于个人或项目的多种来源和类型的相关信息。
-- 6.8 避免做出不准确的报告、无根据的声明、不当的解释或关于测评结果的其他虚假和误导性陈述，并积极劝阻他人这样做。
-- 6.9 向考生和其他人披露测评结果将保存多久、申诉和重新评分的程序、考生和其他人对测评信息的权利，以及如何行使这些权利。
-- 6.10 向负责测评过程的人员报告任何明显的测评信息滥用行为。
-- 6.11 保护参与测评过程的个人和机构的隐私权。
+- `6.1` 在了解测评局限性的背景下，并理解使用的潜在后果，以知情、客观和公平的方式开展这些活动。
+- `6.2` 向接收测评结果的人员提供有关测评的信息，包括其目的、局限性和使用情况，以确保对结果的正确解释。
+- `6.3` 向接收分数报告的人员提供所有报告分数的易于理解的书面描述，包括适当的解释和可能的误解。
+- `6.4` 以易于理解且及时的方式向适当受众传达测评结果，包括适当的解释和可能的误解。
+- `6.5` 评估并传达用于解释测评结果的任何常模或标准的充分性和适当性。
+- `6.6` 告知参与测评过程的各方测评结果可能如何影响他们。
+- `6.7` 在做出教育决策时，尽可能使用关于个人或项目的多种来源和类型的相关信息。
+- `6.8` 避免做出不准确的报告、无根据的声明、不当的解释或关于测评结果的其他虚假和误导性陈述，并积极劝阻他人这样做。
+- `6.9` 向考生和其他人披露测评结果将保存多久、申诉和重新评分的程序、考生和其他人对测评信息的权利，以及如何行使这些权利。
+
+
+
+### 6.10
+向负责测评过程的人员报告任何明显的测评信息滥用行为。
+
+### 6.11
+保护参与测评过程的个人和机构的隐私权。
 
 ## 第7节：教育他人了解测评人员的责任
 
@@ -17988,49 +19171,74 @@ William D. Schafer，马里兰大学
 为协助不断完善守则，欢迎对本文件提出意见。请将您的意见和询问发送至：
 
 执行官
+
 国家教育测量委员会
+
 1230 Seventeenth Street, NW
+
 Washington, DC 20036-3078
 
-
-
-
-
 ## 附录 D
-## 教育目标分类学的概要：认知、情感和动作技能领域
 
-表 D.1 布鲁姆等人认知目标分类学的类别和子类别。
+### 教育目标分类学的概要：认知、情感和动作技能领域
+
+#### 表 D.1 布鲁姆等人认知目标分类学的类别和子类别。
 
 1.00 知识
+
 1.10 特定知识
+
 1.11 术语知识 对特定符号（言语和非言语）的指称物的知识 ....
+
 1.12 特定事实知识 日期、事件、人物、地点等知识
+
 1.20 处理特定事物的途径和方法知识
+
 1.21 惯例知识 对思想和现象的特征性处理和呈现方式的知识。
+
 1.22 趋势和序列知识 关于现象随时间推移的过程、方向和运动的知识。
+
 1.23 分类和类别知识 对某一学科领域、目的、论证或问题所认为的基本的类别、集合、划分和安排的知识。
+
 1.24 标准知识 判断事实、原理和行为所依据的标准知识。
+
 1.25 方法论知识 某一特定学科领域所采用的探究方法、技术和程序的知识，以及调查特定问题和现象所采用的方法的知识。
+
 2.00 理解
+
 2.10 翻译 以转述或从一种语言或一种交流形式转译为另一种语言或形式时所体现的细致和准确性来证明的理解。
+
 2.20 解释 对交流的解释或概括。
+
 2.30 外推 在给定数据的基础上延伸趋势或倾向，以确定符合原始交流中所述条件的含义、后果、推论、效果等。
+
 3.00 应用 在特定和具体情境中使用抽象。抽象可以是一般性思想、程序规则或概括性方法的形式。
+
 4.00 分析
+
 4.10 元素的分析 识别交流中所包含的元素。
+
 4.20 关系的分析 交流中元素和部分之间的联系和相互作用。
+
 4.30 有组织的原理的分析 使交流保持一致的组织、系统安排和结构。
+
 5.00 综合
+
 5.10 独特交流的产生 发展一种交流，作者或演讲者试图向他人传达思想、感受和/或经历。
+
 5.20 计划或拟议操作方案的产生 制定工作计划或提出工作计划。
+
 5.30 抽象关系集合的推导 发展一组抽象关系以对特定数据或现象进行分类或解释，或从一组基本命题或符号表示中推导出命题和关系。
+
 6.00 评价
+
 6.10 以内部证据为依据的判断 根据逻辑准确性、一致性等内部标准评价交流的准确性。
+
 6.20 以外部标准为依据的判断 根据选定或记忆的标准评价材料。
 
 来源：改编自《教育目标分类学：第一卷：认知领域》（第 201–207 页）主编 Benjamin S. Bloom。版权所有 © 1956、1984 Pearson Education。经出版商许可转载。
 
-表 D.2 加涅关于人类技能复杂程度的等级、评估这些能力任务的反应特征以及为每种能力编写的具体目标示例。
+#### 表 D.2 加涅关于人类技能复杂程度的等级、评估这些能力任务的反应特征以及为每种能力编写的具体目标示例。
 
 | 能力或容量类型 | 评估任务的反应特征 | 具体学习目标示例 |
 |---|---|---|
@@ -18043,21 +19251,22 @@ Washington, DC 20036-3078
 
 来源：表格和摘录改编自《教学设计原理》（第 3 版）（第 12、57–68 页）作者 Robert M. Gagné、Walter W. Wager 和 Leslie J. Briggs，版权所有 © 1988。经 Wadsworth 许可转载，Wadsworth 为 Thomson Learning 的一个部门；www.thomsonrights.com。传真 800-730-2215。
 
-## 表 D.3 Quellmalz 分类学的概要。
+#### 表 D.3 Quellmalz 分类学的概要。
 
 | 分类 | 定义 | 举例 | 与布鲁姆分类学的关联 |
 |---|---|---|---|
 | 回忆 | 大多数任务要求学生识别或记住关键事实、定义、概念、规则和原理。回忆问题要求学生逐字重复或转述所给信息。为了回忆信息，学生最常需要复述或练习它，然后将其与其它相关概念联系起来。布鲁姆分类学中的知识和理解水平被包含于此，因为逐字重复和用自己的话翻译是学习和理解的可以接受的证据。 | 故事中的主角是谁？ | 回忆<br>理解 |
+
+
+
+| 思维技能 | 定义 | 示例 | 相关布鲁姆层级 |
+|---|---|---|---|
 | 分析 | 在此操作中，学生将整体划分为组成部分。通常，学科领域内知识所特有的不同部分/整体关系以及因果关系的部分是更复杂任务的重要组成部分。组成部分可以是物体或思想的独特特征，或程序或事件的基本行为者。此分析定义与布鲁姆分类学中的定义相同。 | 故事的不同部分是什么？ | 分析 |
 | 比较 | 这些任务要求学生识别或解释相似性和差异。简单的比较需要关注一个或少数几个非常明显的属性或组成部分，而复杂的比较需要识别众多属性或组成部分之间的差异。此类别与布鲁姆分析层级中的一些技能相关。单独的比较类别强调了当学生超越将整体分解为部分以比较相似性和差异时所需的不同信息处理。此类比较类似于布鲁姆的综合水平。 | 这个故事与上一个故事有何相似之处？ | 分析 |
 | 推断 | 演绎推理和归纳推理均落入此类别。在演绎任务中，学生被给出一个概括，并被要求识别或解释与其相关的证据。规则和“如果-那么”关系的运用需要推断。在归纳任务中，学生被给出证据或细节，并被要求得出概括。假设、预测、得出结论和综合都需要学生关联和整合信息。归纳和演绎推理与布鲁姆的应用和综合水平相关。规则的应用是一种演绎推理；综合，即将部分组合形成概括，出现在归纳和演绎推理中。 | 这个故事的标题可能是什么？ | 应用<br>综合 |
 | 评价 | 这些任务要求学生判断质量、可信度、价值或实用性。通常，我们期望学生使用既定标准并解释这些标准如何得到满足或未得到满足。标准可能是证据、逻辑或共同价值观的既定规则。布鲁姆的综合和评价水平涉及此类别。为了评价，学生必须汇集并解释证据和理由之间的相互关系以支持其结论（综合）。解释得出结论的标准是评价性推理所独有的。 | 这是一个好故事吗？为什么或为什么不？ | 综合<br>评价 |
 
 来源：改编自《在课堂上测量思维技能》（表 1，第 8 和 19 页），修订版，作者 R. J. Stiggins、E. Rubel 和 E. Quellmalz。版权所有 1988。华盛顿特区：国家教育协会。经 NEA 专业图书馆许可改编。
-
-
-
-
 
 ## 表 D.4 克拉斯沃尔等人情感目标分类学的类别与子类别，附目标说明示例。
 
@@ -18096,11 +19305,11 @@ Washington, DC 20036-3078
 
 ## 源自学习维度模型的学习目标类别
 
-## 陈述性知识
+### 陈述性知识
 
-## 程序性知识
+### 程序性知识
 
-## 复杂思维
+### 复杂思维
 
 - A. 有效地将问题和情境转化为具有明确目的的、有意义的任务。
 - B. 有效地运用多种复杂推理策略。
@@ -18158,20 +19367,16 @@ Washington, DC 20036-3078
 
 #### 推理策略 7：抽象
 
-抽象涉及识别并解释某一情境或信息集中的抽象模式与另一情境或信息集中的抽象模式之间的相似或差异。该过程包括三个可评估的组成部分：
 
+
+抽象涉及识别并解释某一情境或信息集中的抽象模式与另一情境或信息集中的抽象模式之间的相似或差异。该过程包括三个可评估的组成部分：
 - a. 识别一个重要的情境或有意义的信息，作为抽象过程的有用主题。
 - b. 为该情境或信息识别一个具有代表性的一般或抽象模式。
 - c. 准确阐述该一般或抽象模式与另一情境或信息集之间的关系。
 
-
-
-
-
 ## 推理策略 8：分析观点
 
 分析观点涉及考虑某一议题上的一个观点及其背后的推理，以及对立观点及其背后的推理。该过程包含三个可评估的组成部分：
-
 - a. 识别存在分歧的议题。
 - b. 识别该议题上的一个立场及其背后的推理。
 - c. 识别对立立场及其背后的推理。
@@ -18179,7 +19384,6 @@ Washington, DC 20036-3078
 ## 推理策略 9：决策制定
 
 决策制定涉及在看似平等的备选方案中进行选择。它包含四个可评估的组成部分：
-
 - a. 识别需要考虑的重要且适当的备选方案。
 - b. 识别评估备选方案的重要且适当的标准。
 - c. 准确识别每个备选方案在每个标准上的程度。
@@ -18188,13 +19392,11 @@ Washington, DC 20036-3078
 ## 推理策略 10：调查
 
 调查是一个涉及密切审视和系统探究的过程。调查有三种基本类型：
-
 - 定义性调查：构建一个概念的定义或详细描述，而该概念目前尚无现成或被接受的定义或描述。
 - 历史性调查：构建对某个过去事件的解释，而该事件目前尚无现成或被接受的解释。
 - 预测性调查：构建对某个未来事件或假设性过去事件的情景，而该情景目前尚无现成或被接受的情景。
 
 每种调查类型都包含三个可评估的组成部分：
-
 - a. 准确识别关于该概念（定义性调查）、过去事件（历史性调查）或未来事件（预测性调查）已知的或已达成一致的内容。
 - b. 识别并解释关于该概念（定义性调查）、过去事件（历史性调查）或未来事件（预测性调查）的困惑、不确定性或矛盾。
 - c. 针对关于该概念（定义性调查）、过去事件（历史性调查）或未来事件（预测性调查）的困惑、不确定性或矛盾，提出并捍卫一个合乎逻辑且合理的解决办法。
@@ -18202,7 +19404,6 @@ Washington, DC 20036-3078
 ## 推理策略 11：问题解决
 
 问题解决涉及开发和测试一种方法或产品，以克服障碍或限制从而达到期望结果。它包含四个可评估的组成部分：
-
 - a. 准确识别限制或障碍。
 - b. 识别克服限制或障碍的可行且重要的备选方案。
 - c. 选择并充分尝试备选方案。
@@ -18211,7 +19412,6 @@ Washington, DC 20036-3078
 ## 推理策略 12：实验探究
 
 实验探究涉及测试为解释现象而提出的假设。它包含四个可评估的组成部分：
-
 - a. 使用适当且被接受的事实、概念或原理准确解释最初观察到的现象。
 - b. 基于解释所依据的事实、概念或原理做出合乎逻辑的预测。
 - c. 设置并开展有效检验该预测的活动或实验。
@@ -18220,7 +19420,6 @@ Washington, DC 20036-3078
 ## 推理策略 13：发明
 
 发明涉及开发独特的事物或对流程做出独特改进以满足未被满足的需求。它包含四个可评估的组成部分：
-
 - a. 识别需要开发或改进以满足未被满足需求的流程或产品。
 - b. 识别发明将要满足的严格且重要的标准或准则。
 - c. 对初始流程或产品做出详细且重要的修改。
@@ -18279,17 +19478,14 @@ Washington, DC 20036-3078
 ### 元认知技能的类型
 
 元认知技能群可以以多种方式组织。Marzano et al.（1988）的组织对该学习目标领域进行了简要概述。
-
 - I. 自我调节技能是学生在意识到自己可以控制对学术任务的投入、态度和注意力时所使用的技能。
   - A. 对学术任务的承诺是学生有意识地决定选择完成该任务，无论该任务对学生是否有趣。
   - B. 对学术任务的积极态度是学生相信自己能够完成该任务，并且成功的主要决定因素是自己的努力，而非运气、天赋或他人的帮助。
   - C. 控制对学术任务要求的注意力发生在学生认识到必须控制注意力的水平和焦点以匹配待执行任务要求时。
-
 - II. 学生使用的知识类型必须适合手头的学术任务。
   - A. 陈述性知识在学生知道需要做什么、知道事实信息或知道某事需要完成时表现出来。
   - B. 程序性知识在学生能够执行任务或应用策略完成任务时表现出来。
   - C. 条件性知识在学生意识到为何使用某些程序或策略，或在何种情况下一种程序或策略优于另一种时表现出来。
-
 - III. 执行控制技能是学生在评估、计划和检查自己完成学术任务的进展时所使用的技能。
   - A. 评估技能在学生评估自己在学术任务开始前、进行中和完成后的当前知识状态时使用；识别完成学术任务的可用资源和仍需的资源；并识别学术任务的目标和子目标。
   - B. 计划技能在学生完成学术任务之前和进行中时使用，当学生有意选择完成任务的程序和策略时。
@@ -18301,9 +19497,6 @@ Washington, DC 20036-3078
 
 关于如何建模和教授这些技能的建议可在其他来源中找到（Good & Brophy, 1999; Marzano et al., 1988）。在此我们给出一些简单评估学生对是否使用这些技能的自我感知的示例。
 
-
-
-
 教师发现这类评估信息对于规划教学很有用（Tittle, 1989; Tittle, Hecht, & Moore, 1993）。要编制一份测评工具，你需要确定一项具体的教学活动，以便围绕它来编写题目。例如，你可能会关注学生在课堂上、与他人合作时、做家庭作业或其他作业和项目时，或者在完成用于总结性评价的测试或其他评估活动时的元认知（Tittle et al., 1993）。然后，运用元认知技能的子类别，编写描述学生对该类特定活动的想法、信念或意识的陈述。每个类别既要编写正面陈述，也要编写负面陈述（即“良好”和“较差”的元认知）。给每个学生一份清单，请他们指出自己在每项陈述中描述的行为出现的频率。
 
 图F.1展示了一些与学生在撰写社会研究论文时可能出现的各种元认知相关的陈述示例。学生需要标明自己表现出所列想法、行为或信念的频率。这些陈述按照前面讨论的元认知技能大纲排列。陈述成对出现：编号为奇数的陈述是正面陈述，编号为偶数的陈述是负面陈述。方括号中的代码标示大纲中的技能类别，以及该陈述是正面还是负面表述。请记住，图F.1只是示例列表，并非测评工具本身。在实际测评工具中，你应将正面和负面陈述的顺序打乱以避免呈现规律，省去代码，并且每个类别要有两题以上的陈述。此外，由于你所关注的具体活动性质不同，某些类别可能不需要评估。请注意，这类测评工具可能不适用于小学生，因为他们的阅读能力可能不足以理解。
@@ -18312,8 +19505,10 @@ Washington, DC 20036-3078
 
 给学生说明：这些问题询问你在撰写社会研究论文时做某些事情的频率。请圈出表示你做每件事频率的数字。
 
-| 从不或几乎不 1 | 有时 2 | 经常 3 | 总是或几乎总是 4 | 不知道 DK |
-|---|---|---|---|---|
+
+
+|  | 从不或几乎不 1 | 有时 2 | 经常 3 | 总是或几乎总是 4 | 不知道 DK |
+|---|---|---|---|---|---|
 | 1. 当论文不太有趣时，我会非常努力地把它做好。[I.A,+] | 1 | 2 | 3 | 4 | DK |
 | 2. 当论文不太有趣时，我不太努力。[I.A,−] | 1 | 2 | 3 | 4 | DK |
 | 3. 虽然我的天赋不如其他学生，但我仍会把论文做好。[I.B,+] | 1 | 2 | 3 | 4 | DK |
@@ -18335,7 +19530,7 @@ Washington, DC 20036-3078
 | 19. 写论文时，我会思考它是否符合一篇好的研究报告的标准。[III.C,+] | 1 | 2 | 3 | 4 | DK |
 | 20. 只要一获取少量关于主题的信息，我就开始写论文。[III.C,−] | 1 | 2 | 3 | 4 | DK |
 
-## 附录 G
+# 附录 G
 
 ## 总结性单元评估的替代蓝图示例
 
@@ -18382,11 +19577,7 @@ Washington, DC 20036-3078
 
 来源：改编自 A. J. Nitko 和 T-C. Hsu 的《教师课堂测验改进指南：评判性方法》（第4页），1987年，匹兹堡，PA：匹兹堡大学教育学院教育实践与研究所。经作者许可改编。
 
-
-
-
-
-## 表 G.4 仅使用学习目标列表的蓝图
+### 表 G.4 仅使用学习目标列表的蓝图
 
 | 单位目标 | 题项数 | 分数 |
 |---|---|---|
@@ -18397,6 +19588,9 @@ Washington, DC 20036-3078
 | 5. 给出扩散的定义。 | 1 | 1 |
 | 6. 给出分裂、染色体和 DNA 的定义。 | 3 | 3 |
 | 7. 说明植物细胞分裂与动物细胞分裂的差异。 | 1 | 1 |
+
+
+
 | 8. 在看到线条图时标注细胞各部分。 | 3 | 3 |
 | 9. 区分扩散、氧化和裂变。 | 2 | 2 |
 | 10. 已知细胞分裂前染色体的数目，说明分裂后每个细胞中的数目。 | 1 | 1 |
@@ -18434,21 +19628,20 @@ Washington, DC 20036-3078
 
 > 来源：摘自《教师课堂测试指南：判断性方法》（第 38 页）A. J. Nitko 和 T-C. Hsu，1993 年，匹兹堡，PA：教育实践与研究学院，匹兹堡大学教育学院。经作者许可转载。
 
-## 俄勒冈州写作评估评分指南
+# 俄勒冈州写作评估评分指南
 
 ### 写作评分指南：中学学生版
 
-| 思想与内容 传达对主题的了解，包括相关示例、事实、轶事和细节 |
+#### 思想与内容 传达对主题的了解，包括相关示例、事实、轶事和细节
+
 | 6 写作清晰、聚焦且有趣。能吸引读者的注意力。主要思想突出，并通过强有力的支持和丰富的细节展开，这些细节适合受众和目的。写作具有 • 清晰的焦点和控制。 • 突出的主要思想。 • 切题且精心挑选的细节；必要时，使用资源提供强有力、准确、可信的支持。 • 适当的细节量（不过多也不过少）以支持对主题的深入解释或探索；写作建立联系并分享见解。 • 主要思想和所选细节符合目的，并从头到尾吸引读者的注意力。 | 5 写作清晰、聚焦且有趣。能吸引读者的注意力。主要思想突出，并通过符合受众和目的的支持性细节展开。写作具有 • 清晰的焦点和控制。 • 突出的主要思想。 • 切题且精心挑选的细节；必要时，使用资源提供强有力、准确、可信的支持。 • 适当的细节量（不过多也不过少）以支持充分的解释或探索；写作建立联系并分享见解。 • 主要思想和所选细节符合目的，并从头到尾吸引读者的注意力。 | 4 写作清晰且聚焦。读者可以轻松理解主要思想。支持存在，但可能有限或较为笼统。写作具有 • 清晰的目的。 • 清晰的主要思想。 • 切题的细节，但可能过于笼统或有限；必要时，使用资源提供准确的支持。 • 细节有时可能过多或过少，难以充分解释或探索主题；可能存在一些联系和见解。 • 主要思想和所选细节符合目的，并在大部分时间里吸引读者的注意力。 |
 | 3 写作有主要思想，但可能过于宽泛或简单。支持性细节通常过于有限、过于笼统，或有时偏离主题。写作具有 • 容易找到的目的。 • 容易找到但过于明显和可预测的主要思想；主要观点或结论经常重复人们常听到的观点。 • 主要思想得到支持，但支持性细节不足，或过于笼统、可预测，或 somewhat 偏离主题。 • 细节可能并非基于可靠资源；可能基于陈词滥调、刻板印象，或信息来源存在偏见、无知或不可靠。 | 2 写作有主要思想，但未得到充分发展，目的有些不明确。写作具有 • 目的不明确，需要读者猜测主要思想。 • 发展极少，缺乏细节。 • 细节若有，也与主要思想联系不紧密，使文章杂乱。 • 细节经常重复。 | 1 写作缺乏主要思想或目的。写作具有 • 思想非常有限或 simply 不清晰。 • 几乎没有尝试发展思想；文章太短，无法展示思想的发展。 |
 
-## 组织
-
+#### 组织
 以逻辑顺序结构化信息，在思想、句子和段落之间建立联系和过渡
 
 6
 组织使中心思想和支持性细节清晰。顺序和结构强有力，使读者轻松阅读。写作具有
-
 - 有效（有时富有创意）的思想、细节和示例，按易于遵循的顺序排列。
 - 强有力且引人入胜的开头，吸引读者，并令人满意的结尾，让读者感到满足
 - 流畅有效的过渡，将思想、句子和段落联系起来；读者可以轻松从一个部分移动到下一个部分。
@@ -18456,7 +19649,6 @@ Washington, DC 20036-3078
 
 5
 组织有助于阐明中心思想和支持性细节。顺序和结构强有力，使读者阅读流畅。写作具有
-
 - 思想、细节和示例按有意义且易于遵循的顺序排列。
 - 引人入胜的开头吸引读者，结尾令人满意
 - 流畅的过渡将思想、句子和段落联系起来；读者可以轻松从一个部分移动到下一个部分。
@@ -18464,7 +19656,6 @@ Washington, DC 20036-3078
 
 4
 组织清晰且功能性。顺序和结构存在，但可能像公式一样。写作具有
-
 - 清晰的顺序。
 - 可能可预测的组织。
 - 可识别但可能不特别引人入胜的开头；功能性但可能显得重复和普通的结尾。
@@ -18474,7 +19665,6 @@ Washington, DC 20036-3078
 
 3
 已尝试组织写作，但在某些地方效果不佳或过于明显。写作具有
-
 - 尝试按顺序排列思想，但顺序有时不清晰。
 - 有开头和结尾，但它们要么太短，要么过于明显（例如，“我的主题是...”；“这些都是...的原因”）
 - 有限的过渡词使用次数过多（例如，“和”，“然后”，“但是”，“所以”，“或”，“因为”，“然而”，编号）
@@ -18484,7 +19674,6 @@ Washington, DC 20036-3078
 
 2
 写作缺乏清晰的组织结构。偶尔尝试组织，但写作难以跟随，读者需要重读大段内容。写作可能显得不完整。写作具有
-
 - 一些尝试组织思想，但顺序不清晰含义。
 - 缺失或极度不发展的开头、正文或结尾。
 - 很少或没有过渡；若有则无效或过度使用。
@@ -18492,18 +19681,12 @@ Washington, DC 20036-3078
 
 1
 写作不连贯；写作显得杂乱无章。即使重读，读者仍感到困惑。写作具有
-
 - 思想不在清晰或逻辑的顺序中。
 - 没有可识别的开头或结尾。
 - 很少或没有过渡。
 - 思想的安排和节奏要么拖沓，要么仓促。
 
-
-
-
-
-## Voice
-
+#### Voice
 以引人入胜且可信的方式表达观点，针对受众和目的
 
 | Score | Criteria |
@@ -18513,6 +19696,11 @@ Washington, DC 20036-3078
 | **4** | 语气存在，且对主题有投入感。在某些地方，写作有趣且似乎真诚。写作具有<br>- 与受众亲近或疏离程度存疑或不一致。<br>- 目的感和受众意识，但可能未始终使用合适的语气。<br>- 当合适时具有原创性、活力、幽默和/或使用外部资源；然而，有时语气可能过于随意或正式。 |
 | **3** | 作者似乎对主题没有特别投入，或可能过于个人化或过于 impersonal。写作具有<br>- 语气似乎与主题、目的和受众不匹配。<br>- 有限的针对特定受众写作的感觉。<br>- 在某些地方能感受到文字背后的作者；然而，这可能会在下一两行后转移或消失。<br>- 从随意、非正式的语气转变为更客观语气的能力有限，当需要时。 |
 | **2** | 写作几乎没有投入感或合适语气的证据。写作具有<br>- 几乎没有作者关心主题的感觉；写作大体平淡、无生气、僵硬或机械。<br>- 几乎没有匹配主题、目的和受众的意识。<br>- 几乎没有文字背后作者的感觉；只有少数地方读者和作者能产生联系。<br>- 语气可能过于正式或过于个人化。 |
+
+
+
+| Score | Criteria |
+|---|---|
 | **1** | 写作缺乏投入感和合适的语气。写作具有<br>- 没有作者关心主题的感觉；写作平淡、无生气、僵硬或机械。<br>- 没有这篇文章是为受众而写的感觉。<br>- 没有文字背后作者的任何迹象；几乎没有读者能与作者产生联系的地方。写作无法让读者参与其中。 |
 
 ## Word Choice
@@ -18541,14 +19729,12 @@ Washington, DC 20036-3078
 | **2** | 写作倾向于支离破碎或冗长。笨拙的构造经常迫使读者放慢并重读。写作具有<br>- 文本的大部分难以跟随或朗读。<br>- 句子模式单调（例如，主语-动词或主语-动词-宾语）。<br>- 大量笨拙、支离破碎或冗长的句子结构。 |
 | **1** | 写作难以跟随或朗读。句子倾向于支离破碎、不完整、冗长或非常笨拙。写作具有<br>- 句子可能难以轻松朗读。<br>- 词序混乱，经常使含义难以跟随。<br>- 句子模式经常使含义不清晰。<br>- 句子支离破碎、令人困惑、支离破碎或冗长不已。 |
 
+## 写作规范
 
+展示对拼写、语法、标点符号、大小写、用法和分段的掌握情况
 
-
-
-| 写作规范 |  |  |
-|---|---|---|
-| 展示对拼写、语法、标点符号、大小写、用法和分段的掌握情况 |  |  |
 | **6** | **5** | **4** |
+|---|---|---|
 | **该写作展示了对各种标准写作规范的熟练掌握，即使在复杂和不常见的情况下也如此。错误（如有）不明显或不重要。该写作具备以下特点：** | **该写作展示了对标准写作规范的强有力把控，这些规范有效地服务于信息传达。错误极少且非常轻微，不会分散读者的注意力。该写作具备以下特点：** | **该写作展示了处理标准写作规范的合格能力。轻微错误会分散注意力，但不会造成困惑。该写作具备以下特点：** |
 | - 正确使用标点符号，包括逗号、分号、撇号和冒号，在各种情境中为表达增添意义。 | - 语法和用法正确。 | - 句末标点正确；极少或没有逗号、分号、撇号或冒号使用混淆的情况。 |
 | - 拼写正确，包括难词。 | - 分段合理。 | - 常用词或关键词拼写正确。 |
@@ -18557,7 +19743,9 @@ Washington, DC 20036-3078
 | - 语法和用法正确，有助于表达的清晰性和风格。 | - 大小写错误较少。 | - 偶尔出现语法和用法错误；这些问题不会造成混淆或改变含义。 |
 | - 能够在足够长且复杂的文章中使用广泛的写作规范，体现出相应的技巧。 | - 能够在足够长且复杂的文章中使用广泛的写作规范，体现出相应的技巧。 | - 需要做一些小修改。 |
 | - 几乎无需或完全无需编辑。 | - 几乎无需编辑。 |  |
+
 | **3** | **2** | **1** |
+|---|---|---|
 | **该写作对标准写作规范的控制有限。错误开始影响可读性。该写作具备以下特点：** | **该写作对标准写作规范的理解甚少。错误常常分散并迷惑读者，迫使读者重读段落。该写作具备以下特点：** | **大量写作规范错误反复分散读者注意力，使文章难以阅读。该写作具备以下特点：** |
 | - 语法、用法和大小写方面存在错误，虽不阻碍理解，但会分散读者注意力。 | - 多处标点遗漏或使用错误。 | - 使用写作规范的技巧非常有限。 |
 | - 段落有时连在一起，或在不恰当的位置开始。 | - 拼写错误频繁，即使常见词也如此。 | - 标点（包括句末标点）往往会遗漏、随意或出错。 |
@@ -18572,12 +19760,15 @@ Washington, DC 20036-3078
 
 标明所呈现信息的来源，包括所有来自来源且并非常识的观点、陈述、引语和统计数据。
 
-## 6
+### 6
 
 该写作体现了对研究质量与重要性以及书面文件准确性的极其坚定的投入。使用文献引用以避免抄袭，并使读者能够通过核对来源来判断信息的可信度或重要性。作者做到了以下几点：
 
 - 通过提及权威人士姓名来标明借用材料，引出引文或转述。
 - 所有引用材料标点正确；错误（如有）很轻微。
+
+
+
 - 用作者自己的风格和语言改写材料来进行转述。
 - 为每项借用材料提供了具体的文内引用。
 - 提供了参考文献页，列出论文中引用的所有来源；省略了查阅但未使用的来源。
@@ -18628,11 +19819,7 @@ Washington, DC 20036-3078
 - 包含来源中的词语或观点，却没有加引号。
 - 没有提供列出所使用来源的参考文献页。
 
-
-
-
-
-## 基础统计概念
+# 基础统计概念
 
 你有必要理解一些基本的统计概念，以便更好地理解课堂评估的结果、在给学生评分时更好地总结评估结果、解释学生的常模参照测验分数、理解已出版的测验手册中的基本数据，以及理解学区或州提供的评估总结报告。本附录侧重于概念而非计算。不过，我们仍会演示某些统计指标的计算方法，以便你了解其数值的来源。
 
@@ -18681,7 +19868,7 @@ Washington, DC 20036-3078
 - 4. 班上的分数分布模式是否看起来有些异常？还是正如预期？
 - 5. 有没有学生的分数显著高于或低于其同学？
 
-## 分数排序
+### 分数排序
 
 开始回答这类问题的一个简单方法是对分数进行排序。大多数人已经知道如何操作。要对分数排序，请将其从大到小排列。最大的分数指定为第1名；第二大的指定为第2名；依此类推，直到最小的分数。这样，所有原始分数（成绩）都转换成了名次。
 
@@ -18732,6 +19919,8 @@ Washington, DC 20036-3078
 
 ## 茎叶图
 
+
+
 组织大量分数的一个简单方法是制作茎叶图。表1.3演示了表I.1中28名学生在两次测验中的分数的制作过程。“茎”是分数的十位数字，“叶”是个位数字。例如，考虑测验1中的分数80、83、84、86和89。十位数字是8，写在茎列中。个位数字0、3、4、6和9是叶，写在8右侧的行中。
 
 茎叶图的优点是，当分数按10分的间隔分组时，它能够显示整组分数的分布情况。也就是说，它将分数组织成40分段、50分段、60分段、70分段、80分段和90分段的组。由于显示了个位数字，你可以轻松“重构”分数的各个值。如果你需要以后进行计算，这会很有用。在“频数”列中，每行写入该组分数个数。
@@ -18744,13 +19933,10 @@ Washington, DC 20036-3078
 
 当需要组织的分数数量非常大时，排序列表和茎叶图就显得繁琐。在这种情况下，分数集合可以组织成一个称为频数分布表的表格。该表显示获得不同分数的人数。表1.5显示了两次测验的频数分布。
 
-
-
-
-
 表 I.3 表 I.1 中学生成绩分布的茎叶图。
 
 Test 1
+
 | 茎 | 叶 | 频数 |
 |------|--------|-----------|
 | 0 |  |  |
@@ -18766,6 +19952,7 @@ Test 1
 |  | N=28 |
 
 Test 2
+
 | 茎 | 叶 | 频数 |
 |------|--------|-----------|
 | 0 |  |  |
@@ -18783,6 +19970,7 @@ Test 2
 表 I.4 当内部宽度等于 5 时，表 I.1 中成绩的茎叶图。
 
 Test 1
+
 | 茎 | 叶 | 频数 |
 |------|--------|-----------|
 | 0 |  |  |
@@ -18808,6 +19996,7 @@ Test 1
 |  | N = 28 |
 
 Test 2
+
 | 茎 | 叶 | 频数 |
 |------|--------|-----------|
 | 0 |  |  |
@@ -18835,6 +20024,7 @@ Test 2
 表 I.5 表 I.1 中成绩的频数分布。 （区间宽度等于 5。）
 
 Test 1
+
 | 区间 | 划记 | 中点 | 频数 |
 |----------|-------|----------|-----------|
 | 95-99 | ||| | 97 | 3 |
@@ -18852,6 +20042,7 @@ Test 1
 |  |  |  | 28 |
 
 Test 2
+
 | 区间 | 划记 | 中点 | 频数 |
 |----------|-------|----------|-----------|
 | 95-99 |  | 97 | 0 |
@@ -18888,6 +20079,8 @@ Test 2
 
 图 I.2 的插图是理想化的，并不代表实际分布。尽管如此，对这些分布形式有一个心理图像是有帮助的，因为在实践中，实际的测试分数分布至少大致类似于理想形式。测试手册以及学校和州报告通常使用这些术语来描述分数分布。
 
+
+
 分数分布形状取决于测试者和测试。分数分布的形状反映了测试的特征以及被测试群体的能力。没有单一的“自然”或“正常”形状，特定学生群体的测试分数趋向于该形状。一个由难度不太大也不太容易的题目组成的测试，对于特定群体来说，很可能会产生与那些
 
 # 图 I.1 表 I.5 中 Test 1 分数的直方图和频数多边形。
@@ -18909,10 +20102,6 @@ B. 频数多边形
 | E. 双峰且对称或 U 形。 分数刻度 | E. 双峰且对称或 U 形。 | 被汽车撞死的行人死亡年龄的分布。 |
 | 偏斜 F. 正偏或右偏。 分数刻度 | F. 正偏或右偏。 | “困难”算术测试的分数分布。 |
 | G. 负偏或左偏。 分数刻度 | G. 负偏或左偏。 | “简单”算术测试的分数分布。 |
-
-
-
-
 
 图 1.2 的 A、B 或 C 所示。同一组人员，能力相同，可能参加同一科目但由少数人能答对的题目组成的测试，或由“容易”题目组成的测试。在后两种情况下，可能会出现偏态分布（F 或 G）。因此，仅通过观察观察到的考试成绩分布的形状来得出关于学生群体潜在能力分布的结论是不准确的。群体所参加的测试的特征也需要纳入决策。
 
@@ -18947,11 +20136,12 @@ M = Sum of all the scores / Total number of scores
 = ΣX / N
 ```
 
-其中 M 表示均值，N 表示所涉及的总分数数，Σ 表示“总和”。表 I.6 中测试 1 和测试 2 分数的均值分别为 71.4 和 71.3。
+其中 `M` 表示均值，`N` 表示所涉及的总分数数，`Σ` 表示“总和”。表 I.6 中测试 1 和测试 2 分数的均值分别为 71.4 和 71.3。
 
 均值的一个重要特性是其值受集合中每一个分数的影响，因为其基础的总和包括每一个分数。当你想要一个关注总体而非典型或最频繁的平均值时，选择均值。均值反映了最高和最低分数，而众数仅反映最频繁的分数。这种极高或极低分数的影响可能是不可取的，因为这些分数不是分布的典型分数。当你想要一个平均值关注典型表现且不受极高或极低分数影响时，中位数是首选。
 
 表 I.6
+
 分别排名的测试 1 和测试 2 的分数并显示集中趋势的测度。
 
 | Test 1 | Test 2 |
@@ -18985,8 +20175,8 @@ M = Sum of all the scores / Total number of scores
 | 45 | 53 |
 | 44 | 53 |
 | 43 | 47 |
-| ΣX = 1,999 | ΣX = 1,995 |
-| M = (1,999) ÷ 28 = 71.4 | M = (1,995) ÷ 28 = 71.3 |
+| `ΣX = 1,999` | `ΣX = 1,995` |
+| `M = (1,999) ÷ 28 = 71.4` | `M = (1,995) ÷ 28 = 71.3` |
 
 ### 中位数
 
@@ -18998,55 +20188,55 @@ M = Sum of all the scores / Total number of scores
 
 ## 变异性的测度
 
-尽管平均值概括了分数组的集中趋势，但它们并不能概括分数在分数量表上的分布情况。例如，两个七年级班级的阅读测试平均分可能都是 75。然而，在一个班级中，分数可能从 55 到 95  widely 分布，而在另一个班级中，分数可能仅从 70 到 80 分布。显然，后一班级的学生在阅读成绩上比前一班级的学生更相似。在教授前一班级时，你需要照顾到更广泛不同的阅读水平，而在教授后一班级时则不需要。
+尽管平均值概括了分数组的集中趋势，但它们并不能概括分数在分数量表上的分布情况。例如，两个七年级班级的阅读测试平均分可能都是 75。然而，在一个班级中，分数可能从 55 到 95 widely 分布，而在另一个班级中，分数可能仅从 70 到 80 分布。显然，后一班级的学生在阅读成绩上比前一班级的学生更相似。在教授前一班级时，你需要照顾到更广泛不同的阅读水平，而在教授后一班级时则不需要。
 
 本节描述了三个衡量分数离散或变异性的测度：极差、四分位距和标准差。
 
-### 极差 (R)
+### 极差 (`R`)
 
 极差是离散度的一个简单指标。它是集合中最高分与最低分之差。对于表 1.6 中的两个测试，测试 1 的极差为 55（98 − 43 = 55），测试 2 的极差为 47（94 − 47 = 47）。尽管对于任一测试，极差相对较大，但测试 2 的极差较小，表明分数分布在分数量表上的范围更小。程序可总结如下：
 
-R = 最高分 − 最低分
+`R = 最高分 − 最低分`
 
 极差作为变异性指标的弱点在于它仅基于两个分数。它忽略了最高分和最低分之间的分数。极差的另一个问题是，集合中最高分或最低分的任何变化都可能极大地改变其值。
 
-### 四分位距 (IR)
+### 四分位距 (`IR`)
 
-四分位距描述了中间 50% 分数的离散程度。它是第三四分位数与第一四分位数之差。四分位数是将分数组分为四分之一的点。第一四分位数（Q₁）是最低 25% 的学生得分以下的点。第三四分位数（Q₃）是最高 25% 的学生得分以上的点。第二四分位数（Q₂）是中位数。
+四分位距描述了中间 50% 分数的离散程度。它是第三四分位数与第一四分位数之差。四分位数是将分数组分为四分之一的点。第一四分位数（`Q₁`）是最低 25% 的学生得分以下的点。第三四分位数（`Q₃`）是最高 25% 的学生得分以上的点。第二四分位数（`Q₂`）是中位数。
 
-要获得四分位距，你首先对分数排序并与计算中位数类似进行操作。即，从最高分数向下数 25% 的分数以定位 Q₃，并从最低分数向上数 25% 以计算 Q₁。四分位距是这两个值之差。¹
+要获得四分位距，你首先对分数排序并与计算中位数类似进行操作。即，从最高分数向下数 25% 的分数以定位 `Q₃`，并从最低分数向上数 25% 以计算 `Q₁`。四分位距是这两个值之差。¹
 
-IR = Q₃ − Q₁
+`IR = Q₃ − Q₁`
 
-在表 1.6 中，测试 1 的 Q₃ = 83 且 Q₁ = 61。即，对于测试 1，第 75 百分位数为 83，第 25 百分位数为 61。IR = [83 − 61] = 22 对于此测试。因此，测试 1 上中间 50% 的分数有 22 分的离散。对于测试 2，Q₃ = 73，Q₁ = 65，且 IR = [73 − 65] = 8。测试 2 上中间 50% 的学生只有 8 分的离散。
 
-### 标准差 (SD)
 
-最常用的变异性指标是标准差。此指标的数值较大表示分数远离均值地分散。数值较小表示分数倾向于围绕均值聚集。标准差是分数与平均分数相差的平均量。² 在某些测试报告中，使用平方标准差（SD²），即方差。
+在表 1.6 中，测试 1 的 `Q₃` = 83 且 `Q₁` = 61。即，对于测试 1，第 75 百分位数为 83，第 25 百分位数为 61。`IR` = [83 − 61] = 22 对于此测试。因此，测试 1 上中间 50% 的分数有 22 分的离散。对于测试 2，`Q₃` = 73，`Q₁` = 65，且 `IR` = [73 − 65] = 8。测试 2 上中间 50% 的学生只有 8 分的离散。
+
+### 标准差 (`SD`)
+
+最常用的变异性指标是标准差。此指标的数值较大表示分数远离均值地分散。数值较小表示分数倾向于围绕均值聚集。标准差是分数与平均分数相差的平均量。² 在某些测试报告中，使用平方标准差（`SD²`），即方差。
 
 标准差的定义公式为：
 
-SD = √[ Σ(X−M)² / N ]
-= √[ sum of the squared deviations from the mean / total number of scores ]
+`SD = √[ Σ(X−M)² / N ]`
 
-许多廉价的科学计算器和微型计算机程序都有计算标准差的程序。你应该使用其中之一来计算 SD。如果你想使用没有内置此程序的计算器来计算标准差，请按照以下步骤操作：
+`= √[ sum of the squared deviations from the mean / total number of scores ]`
+
+许多廉价的科学计算器和微型计算机程序都有计算标准差的程序。你应该使用其中之一来计算 `SD`。如果你想使用没有内置此程序的计算器来计算标准差，请按照以下步骤操作：
 
 - 1. 首先将分数整理成频数分布，如表 1.5 中所示并在表 1.7 中重现。
 - 2. 应用计算公式，如此处所示。 （你可以在应用统计学教科书中找到其他计算公式。）
 
-SD = √[ Σf(X²) / N − M² ]
-= √[ sum of the product of the square of each score and its frequency / total number − [square of the mean] ]
+`SD = √[ Σf(X²) / N − M² ]`
 
-> ¹有些书籍将四分位距除以 2 以获得半四分位距（SIR）。该值表示在分数量表上在中位数上方和下方移动的大致距离以涵盖中间 50% 的分数。
+`= √[ sum of the product of the square of each score and its frequency / total number − [square of the mean] ]`
 
+> ¹有些书籍将四分位距除以 2 以获得半四分位距（`SIR`）。该值表示在分数量表上在中位数上方和下方移动的大致距离以涵盖中间 50% 的分数。
 > ²这并不严格正确，但就实际而言，对评估结果的解释几乎不会因以这种方式思考标准差而造成伤害。
-
-
-
 
 ## 表 I.7 在将测试 1 的分数整理成频率分布后计算其标准差
 
-| 分数区间 | 中点 | 频率 (f) | 步骤 1 (X²) | 步骤 2 (f(X²)) |
+| 分数区间 | 中点 | 频率 (`f`) | 步骤 1 (`X²`) | 步骤 2 (`f(X²)`) |
 |---|---|---|---|---|
 | 95-99 | 97 | 3 | 9,409 | 28,227 |
 | 90-94 | 92 | 0 | 8,464 | 0 |
@@ -19060,7 +20250,7 @@ SD = √[ Σf(X²) / N − M² ]
 | 50-54 | 52 | 0 | 2,704 | 0 |
 | 45-49 | 47 | 1 | 2,209 | 2,209 |
 | 40-44 | 42 | 2 | 1,764 | 3,528 |
-|  |  | n = 28 |  | 150,357 |
+|  |  | `n = 28` |  | 150,357 |
 
 公式如下：
 
@@ -19068,7 +20258,7 @@ SD = √[ Σf(X²) / N − M² ]
 SD = √[ Σf(X²)/N - M² ]
 ```
 
-（请注意，使用上面的分组数据时，M = 71.8）
+（请注意，使用上面的分组数据时，`M = 71.8`）
 
 将数字代入公式：
 
@@ -19088,19 +20278,19 @@ SD = √[5,369.89 - 5,155.24]
 SD = √214.65
 ```
 
-步骤 7 得出最终结果：SD = 14.65
+步骤 7 得出最终结果：`SD = 14.65`
 
 计算起来并不像看上去那么难：
 
 | 步骤 | 符号 |
 |---|---|
-| 1. 将每个区间中点平方。 | 1. X² |
-| 2. 将每个平方值乘以其频率。 | 2. f(X²) |
-| 3. 将所有这些乘积相加。 | 3. Σf(X²) |
-| 4. 除以总数。 | 4. Σf(X²)/N |
-| 5. 将平均值平方。（如果尚未计算平均值，则需要先计算。） | 5. M² |
-| 6. 从步骤 4 得到的结果中减去平均值的平方。（如果只需要方差，则到此为止。） | 6. Σf(X²)/N - M² |
-| 7. 对差值取平方根，这就是标准差。 | 7. √[ Σf(X²)/N - M² ] |
+| 1. 将每个区间中点平方。 | 1. `X²` |
+| 2. 将每个平方值乘以其频率。 | 2. `f(X²)` |
+| 3. 将所有这些乘积相加。 | 3. `Σf(X²)` |
+| 4. 除以总数。 | 4. `Σf(X²)/N` |
+| 5. 将平均值平方。（如果尚未计算平均值，则需要先计算。） | 5. `M²` |
+| 6. 从步骤 4 得到的结果中减去平均值的平方。（如果只需要方差，则到此为止。） | 6. `Σf(X²)/N - M²` |
+| 7. 对差值取平方根，这就是标准差。 | 7. `√[ Σf(X²)/N - M² ]` |
 
 表 I.7 演示了测试 1 的这些计算。（请注意，在此示例中，从表 I.7 获得的结果与您不将分数分组为区间时获得的结果并不相同。分组分数会带来一定误差。不过，该结果仍然有用。）
 
@@ -19118,15 +20308,15 @@ r = [ N(ΣXY) - (ΣX)(ΣY) ] / √[ N(ΣX²) - (ΣX)² ][ N(ΣY²) - (ΣY)² ]
 
 | 步骤 | 符号 | 示例 |
 |---|---|---|
-| 1. 列出每个人的成对分数。 | 1. X, Y | 1. Blake: X = 74, Y = 72 |
-| 2. 将每个分数平方。 | 2. X²; Y² | 2. Blake: X² = (74)² = 5,476<br>Y² = (72)² = 5,184 |
-| 3. 将每对中的两个分数相乘。 | 3. XY | 3. Blake: XY = 74 × 72 = 5,328 |
-| 4. 对 X、Y、X²、Y² 和 XY 各列求和。 | 4. ΣX, ΣY<br>ΣX², ΣY²<br>ΣXY | 4. ΣX = 1,999, ΣX² = 148,635<br>ΣY = 1,995, ΣY² = 145,761<br>ΣXY = 145,902 |
-| 5. 将各项总和代入方程。 |  | 5. r = [28(145,902) − (1,999)(1,995)] / √[28(148,635) − (1,999)²][28(145,761) − (1,995)²]<br>= [4,085,256 − 3,988,005] / √[(4,161,780 − 3,996,001)(4,081,308 − 3,980,025)]<br>= 97,251 / √[(165,779)(101,283)] = 97,251 / 129,578.53 = .75 |
+| 1. 列出每个人的成对分数。 | 1. `X`, `Y` | 1. Blake: `X = 74`, `Y = 72` |
+| 2. 将每个分数平方。 | 2. `X²`; `Y²` | 2. Blake: `X² = (74)² = 5,476`<br>`Y² = (72)² = 5,184` |
+| 3. 将每对中的两个分数相乘。 | 3. `XY` | 3. Blake: `XY = 74 × 72 = 5,328` |
+| 4. 对 `X`、`Y`、`X²`、`Y²` 和 `XY` 各列求和。 | 4. `ΣX`, `ΣY`<br>`ΣX²`, `ΣY²`<br>`ΣXY` | 4. `ΣX = 1,999`, `ΣX² = 148,635`<br>`ΣY = 1,995`, `ΣY² = 145,761`<br>`ΣXY = 145,902` |
+| 5. 将各项总和代入方程。 |  | 5. `r = [28(145,902) − (1,999)(1,995)] / √[28(148,635) − (1,999)²][28(145,761) − (1,995)²]`<br>`= [4,085,256 − 3,988,005] / √[(4,161,780 − 3,996,001)(4,081,308 − 3,980,025)]`<br>`= 97,251 / √[(165,779)(101,283)] = 97,251 / 129,578.53 = .75` |
 
 ### 表 I.9 计算表 I.1 中各分数之间的相关系数
 
-| 姓名 | X | X² | Y | Y² | XY |
+| 姓名 | `X` | `X²` | `Y` | `Y²` | `XY` |
 |---|---|---|---|---|---|
 | Anthony | 89 | 7,921 | 94 | 8,836 | 8,366 |
 | Ashley | 75 | 5,625 | 68 | 4,624 | 5,100 |
@@ -19149,6 +20339,9 @@ r = [ N(ΣXY) - (ΣX)(ΣY) ] / √[ N(ΣX²) - (ΣX)² ][ N(ΣY²) - (ΣY)² ]
 | Robert | 69 | 4,761 | 65 | 4,225 | 4,485 |
 | Sally | 60 | 3,600 | 47 | 2,209 | 2,820 |
 | Tina | 73 | 5,329 | 74 | 5,476 | 5,402 |
+
+
+
 | Ula | 75 | 5,625 | 88 | 7,744 | 6,600 |
 | Veronica | 71 | 5,041 | 73 | 5,329 | 5,183 |
 | Wallace | 43 | 1,849 | 61 | 3,721 | 2,623 |
@@ -19160,13 +20353,13 @@ r = [ N(ΣXY) - (ΣX)(ΣY) ] / √[ N(ΣX²) - (ΣX)² ][ N(ΣY²) - (ΣY)² ]
 
 为了用表 I.9 中的数据进行说明，其中
 
-$M_x = 71.39, M_y = 71.25$
+`M_x = 71.39, M_y = 71.25`
 
-$SD_x = 14.81, SD_y = 11.57$
+`SD_x = 14.81, SD_y = 11.57`
 
 我们有：
 
-$r = \frac{\frac{145,902}{28} - (71.39)(71.25)}{(14.81)(11.57)} = .75$
+`r = \frac{\frac{145,902}{28} - (71.39)(71.25)}{(14.81)(11.57)} = .75`
 
 （你从这两个方程得到的结果略有差异，这是因为舍入误差。）
 
@@ -19174,9 +20367,9 @@ $r = \frac{\frac{145,902}{28} - (71.39)(71.25)}{(14.81)(11.57)} = .75$
 
 本附录中的许多统计量都可以使用 Microsoft Excel 电子表格程序非常轻松地计算出来。本附录中的第一个表（表 I.1）显示了某班 28 名学生在两次测试中的分数。我们使用该表中的分数来演示如何使用 Excel 程序。您需要按照右侧示例所示，将学生姓名和分数输入到电子表格中。请注意，行以数字编号，列以字母编号。这些列字母和行号会自动出现，无法更改。
 
-要计算测试 1 分数的平均值 (M)，请单击单元格 B31。然后输入 =AVERAGE(B2:B29) 并按回车键。（请务必包含等号，且 AVERAGE 前不要有空格。）这将告诉程序计算单元格 B2 到 B31 中分数的平均值。平均值（= 71.39）将出现在 B31 单元格中。要计算测试 1 分数的标准差 (SD)，请单击单元格 B32。然后输入 =STDEVP(B2:B29) 并按回车键。B2 到 B29 单元格中分数的 SD（= 14.65）将出现在 B32 单元格中。类似地，如果您在单元格 C31 中输入 =AVERAGE(C2:C29) 并按回车，测试 2 的平均值（= 71.25）将出现在 C31 单元格中。如果您在单元格 C32 中输入 =STDEVP(C2:C29)，SD（= 11.37）将出现在 C32 单元格中。
+要计算测试 1 分数的平均值 `M`，请单击单元格 `B31`。然后输入 `=AVERAGE(B2:B29)` 并按回车键。（请务必包含等号，且 `AVERAGE` 前不要有空格。）这将告诉程序计算单元格 `B2` 到 `B31` 中分数的平均值。平均值（= 71.39）将出现在 `B31` 单元格中。要计算测试 1 分数的标准差 `SD`，请单击单元格 `B32`。然后输入 `=STDEVP(B2:B29)` 并按回车键。`B2` 到 `B29` 单元格中分数的 `SD`（= 14.65）将出现在 `B32` 单元格中。类似地，如果您在单元格 `C31` 中输入 `=AVERAGE(C2:C29)` 并按回车，测试 2 的平均值（= 71.25）将出现在 `C31` 单元格中。如果您在单元格 `C32` 中输入 `=STDEVP(C2:C29)`，`SD`（= 11.37）将出现在 `C32` 单元格中。
 
-要计算相关系数，您需要告诉程序所涉及的两列分数。单击单元格 B33，然后输入 =CORREL(B2:B29,C2:C29)。这将告诉程序将 B2 到 B29 单元格中的测试 1 分数与 C2 到 C29 单元格中的测试 2 分数进行相关分析。按回车键后，相关系数 r = 0.75 将出现在 B33 单元格中。
+要计算相关系数，您需要告诉程序所涉及的两列分数。单击单元格 `B33`，然后输入 `=CORREL(B2:B29,C2:C29)`。这将告诉程序将 `B2` 到 `B29` 单元格中的测试 1 分数与 `C2` 到 `C29` 单元格中的测试 2 分数进行相关分析。按回车键后，相关系数 `r = 0.75` 将出现在 `B33` 单元格中。
 
 |  | A | B | C |
 |---|---|---|---|
@@ -19215,22 +20408,18 @@ $r = \frac{\frac{145,902}{28} - (71.39)(71.25)}{(14.81)(11.57)} = .75$
 | 33 | 相关系数 | 0.75 |  |
 
 - 将学生姓名和分数输入到这些行和列中
-- 将 =STDEVP(B2:B29) 输入到此单元格
-- 将 =AVERAGE(B2:B29) 输入到此单元格
-- 将 =CORREL(B2:B29,C2:C29) 输入到此单元格
+- 将 `=STDEVP(B2:B29)` 输入到此单元格
+- 将 `=AVERAGE(B2:B29)` 输入到此单元格
+- 将 `=CORREL(B2:B29,C2:C29)` 输入到此单元格
 
 ## 各种信度系数的计算步骤
-
-
-
-
 
 ## 表 J.1 计算 Spearman-Brown 双倍长度和 Rulon 分半信度估计的示例。
 
 ### A. 学生项目得分和总测试得分*
 
 | 学生 | 测试项目 |  |  |  | 总分 |
-| | 1 | 2 | 3 | 4 | (X) |
+| | 1 | 2 | 3 | 4 | `(X)` |
 | Alan | 1 | 0 | 0 | 0 | 1 |
 | Isaac | 1 | 1 | 0 | 0 | 2 |
 | Leslie | 0 | 0 | 1 | 1 | 2 |
@@ -19238,14 +20427,14 @@ $r = \frac{\frac{145,902}{28} - (71.39)(71.25)}{(14.81)(11.57)} = .75$
 | Rebecca | 1 | 1 | 0 | 1 | 3 |
 | Robert | 1 | 1 | 1 | 1 | 4 |
 
-M = ΣX / N = 12 / 6 = 2; (SDx)² = Σ(X - M)² / N = 10 / 6 = 1.67
+`M = ΣX / N = 12 / 6 = 2; (SDx)² = Σ(X - M)² / N = 10 / 6 = 1.67`
 
 > *如果项目答对则计为 1；否则为 0。
 
 ### B. Spearman-Brown 公式计算
 
 | 学生 | 分半测试得分 |  | 计算半部分相关* |  |  |
-| | 奇数题 (1 + 3) | 偶数题 (2 + 4) | z 分数： |  | 乘积 (z_o * z_e) |
+| | 奇数题 `(1 + 3)` | 偶数题 `(2 + 4)` | z 分数： |  | 乘积 `(z_o * z_e)` |
 | | | | 奇数 | 偶数 | |
 | Alan | 1 | 0 | 0 | -1.22 | 0 |
 | Isaac | 1 | 1 | 0 | 0 | 0 |
@@ -19254,16 +20443,16 @@ M = ΣX / N = 12 / 6 = 2; (SDx)² = Σ(X - M)² / N = 10 / 6 = 1.67
 | Rebecca | 1 | 2 | 0 | +1.22 | 0 |
 | Robert | 2 | 2 | +1.72 | +1.22 | 2.10 |
 | 均值 | 1.0 | 1.00 |  |  |  |
-| 标准差 | 0.58 | 0.82 | r_mm = Σz_o z_e / N = 4.6 / 6 = 0.70 |  |  |
+| 标准差 | 0.58 | 0.82 | `r_mm = Σz_o z_e / N = 4.6 / 6 = 0.70` |  |  |
 
-Spearman-Brown 双倍长度信度估计 = 2 r_mm / (1 + r_mm) = (2)(.70) / (1 + .70) = 0.82
+Spearman-Brown 双倍长度信度估计 = `2 r_mm / (1 + r_mm) = (2)(.70) / (1 + .70) = 0.82`
 
 > *计算相关系数可使用其他程序（参见表 1.8）。
 
 ### C. Rulon 公式计算
 
 | 学生 | 分半测试得分* |  | 分半测试得分之差 |
-| | 奇数题 (1 + 3) | 偶数题 (2 + 4) | |
+| | 奇数题 `(1 + 3)` | 偶数题 `(2 + 4)` | |
 | Alan | 1 | 0 | 1 |
 | Isaac | 1 | 1 | 0 |
 | Leslie | 1 | 1 | 0 |
@@ -19271,9 +20460,11 @@ Spearman-Brown 双倍长度信度估计 = 2 r_mm / (1 + r_mm) = (2)(.70) / (1 + 
 | Rebecca | 1 | 2 | -1 |
 | Robert | 2 | 2 | 0 |
 
-差异方差 = (SD_diff)² = 0.33
-总分方差 = (SD_x)² = 1.67
-Rulon 分半信度估计 = 1 - (SD_diff)² / (SD_x)² = 1 - 0.33 / 1.67 = 0.80
+差异方差 = `(SD_diff)² = 0.33`
+
+总分方差 = `(SD_x)² = 1.67`
+
+Rulon 分半信度估计 = `1 - (SD_diff)² / (SD_x)² = 1 - 0.33 / 1.67 = 0.80`
 
 > *Spearman-Brown 和 Rulon 公式并不限于奇偶分半。也可以使用其他分法（参见正文）。
 
@@ -19281,27 +20472,31 @@ Rulon 分半信度估计 = 1 - (SD_diff)² / (SD_x)² = 1 - 0.33 / 1.67 = 0.80
 
 ### A. 计算 KR20
 
-| 学生 | 测试项目* |  |  |  | 总分†(X) |
+| 学生 | 测试项目* |  |  |  | 总分†`(X)` |
 |---|---|---|---|---|---|
 |  | 1 | 2 | 3 | 4 | |
 | Alan | 1 | 0 | 0 | 0 | 1 |
 | Isaac | 1 | 1 | 0 | 0 | 2 |
 | Leslie | 0 | 0 | 1 | 1 | 2 |
+
+
+
 | Miriam | 0 | 0 | 0 | 0 | 0 |
 | Rebecca | 1 | 1 | 0 | 1 | 3 |
 | Robert | 1 | 1 | 1 | 1 | 4 |
-| 每题通过比例 (p 值) | 0.67 | 0.50 | 0.33 | 0.50 | M = 2.0 (SD_X)² = 1.667 |
-| (1-p) | 0.33 | 0.50 | 0.67 | 0.50 | |
-| p(1-p) | 0.222 | 0.250 | 0.222 | 0.250 | Σ p(1-p) = 0.944 |
+| 每题通过比例 (`p` 值) | 0.67 | 0.50 | 0.33 | 0.50 | `M = 2.0` (`SD_X`)² = 1.667 |
+| `(1-p)` | 0.33 | 0.50 | 0.67 | 0.50 | |
+| `p(1-p)` | 0.222 | 0.250 | 0.222 | 0.250 | Σ `p(1-p)` = 0.944 |
 
-KR20 = [k/(k-1)] {1 - [Σ p(1-p) / (SD_X)²]} = [4/(4-1)] {1 - [0.944 / 1.667]} = (1.333)(1 - .566) = (1.333)(.434) = 0.58
+`KR20 = [k/(k-1)] {1 - [Σ p(1-p) / (SD_X)²]} = [4/(4-1)] {1 - [0.944 / 1.667]} = (1.333)(1 - .566) = (1.333)(.434) = 0.58`
 
 *如果项目答对则计为 1；否则为 0。
+
 †均值和方差在附录 I 中计算。
 
 ### B. 计算 KR21
 
-| 学生 | 总分* (X) |
+| 学生 | 总分* (`X`) |
 |---|---|
 | Alan | 1 |
 | Isaac | 2 |
@@ -19309,9 +20504,9 @@ KR20 = [k/(k-1)] {1 - [Σ p(1-p) / (SD_X)²]} = [4/(4-1)] {1 - [0.944 / 1.667]} 
 | Miriam | 0 |
 | Rebecca | 3 |
 | Robert | 4 |
-| M = 2.0; (SD_X)² = 1.667 | |
+| `M = 2.0`; (`SD_X`)² = 1.667 | |
 
-KR21 = [k/(k-1)] {1 - [M(k-M) / k(SD_X)²]} = [4/(4-1)] {1 - [2(4-2) / 4(1.667)]} = (1.333) {1 - 4/6.668} = (1.333)(1 - .600) = 0.53
+`KR21 = [k/(k-1)] {1 - [M(k-M) / k(SD_X)²]} = [4/(4-1)] {1 - [2(4-2) / 4(1.667)]} = (1.333) {1 - 4/6.668} = (1.333)(1 - .600) = 0.53`
 
 †均值和方差在附录 I 中计算。
 
@@ -19325,11 +20520,12 @@ KR21 = [k/(k-1)] {1 - [M(k-M) / k(SD_X)²]} = [4/(4-1)] {1 - [2(4-2) / 4(1.667)]
 | KR21 | 0.53 |
 
 *另见附录 I。
+
 ᵇ基于奇偶分半。
 
 ## 表 J.3 计算一组作文题或评委评分的系数 alpha 信度估计的示例。
 
-| 人 | 题目或评委 |  |  |  | 总分 (X) |
+| 人 | 题目或评委 |  |  |  | 总分 (`X`) |
 | | I | II | III | IV | |
 | Aaron | 4 | 3 | 4 | 4 | 15 |
 | Dorcas | 2 | 5 | 5 | 5 | 17 |
@@ -19337,28 +20533,28 @@ KR21 = [k/(k-1)] {1 - [M(k-M) / k(SD_X)²]} = [4/(4-1)] {1 - [2(4-2) / 4(1.667)]
 | Kenneth | 1 | 3 | 1 | 1 | 6 |
 | Lee | 5 | 5 | 5 | 4 | 19 |
 | Peter | 4 | 3 | 4 | 4 | 15 |
-| (SD)² 值 | 1.81 | 1.00 | 2.00 | 1.58 | (SD)ₜ² = 16.89 |
-| Σ(SD)² = 1.81 + 1.00 + 2.00 + 1.58 = 6.39 |
+| (`SD`)² 值 | 1.81 | 1.00 | 2.00 | 1.58 | (`SD`)ₜ² = 16.89 |
+| Σ(`SD`)² = 1.81 + 1.00 + 2.00 + 1.58 = 6.39 |
 
-α = [k/(k−1)] [1 − Σ(SD)²/(SD)ₜ²] = [4/(4−1)] [1 − 6.39/16.89] = (1.33)(1−0.38) = (1.33)(.62) = 0.82
+`α = [k/(k−1)] [1 − Σ(SD)²/(SD)ₜ²] = [4/(4−1)] [1 − 6.39/16.89] = (1.33)(1−0.38) = (1.33)(.62) = 0.82`
 
 ## 表 J.4 计算一般 Spearman-Brown 信度估计的示例。
 
 ### A. 公式
 
-rₙₙ = (n r₁₁) / [1 + (n − 1) r₁₁]
+`rₙₙ = (n r₁₁) / [1 + (n − 1) r₁₁]`
 
 ### B. 示例
 
 Q. 一位教师有一个 10 题的测试，其信度系数为 0.40。如果教师增加 15 道与现有题目相似的新题目，信度会是多少？
 
-A. 这里 r₁₁ = 0.40 且 n = 25/10 = 2.5。 （新测试将为 25 题长，因此比原始测试长 2.5 倍。）因此，新测试的信度为：
+A. 这里 `r₁₁ = 0.40` 且 `n = 25/10 = 2.5`。 （新测试将为 25 题长，因此比原始测试长 2.5 倍。）因此，新测试的信度为：
 
-rₙₙ = (2.5)(0.40) / [1 + (2.5 − 1)(0.40)] = 1.00 / (1 + 0.6) = 1.0 / 1.6 = 0.625
+`rₙₙ = (2.5)(0.40) / [1 + (2.5 − 1)(0.40)] = 1.00 / (1 + 0.6) = 1.0 / 1.6 = 0.625`
 
-### C. 将公式应用于各种 r₁₁ 和 n 值的結果。
+### C. 将公式应用于各种 `r₁₁` 和 `n` 值的結果。
 
-| 原始信度 | 原始测试延长倍数 (n) |  |  |  |  |
+| 原始信度 | 原始测试延长倍数 (`n`) |  |  |  |  |
 | | 2 | 3 | 4 | 5 | 6 |
 | .10 | .18 | .25 | .31 | .36 | .40 |
 | .20 | .33 | .43 | .50 | .56 | .60 |
@@ -19376,17 +20572,21 @@ rₙₙ = (2.5)(0.40) / [1 + (2.5 − 1)(0.40)] = 1.00 / (1 + 0.6) = 1.0 / 1.6 =
 
 | 测试 2 的结果 | 精通 | 测试 1 的结果 | | 边缘总数 |
 | | | 精通 | 非精通 | |
-| 测试 2 的结果 | 精通 | a | b | a + b |
-| | 非精通 | c | d | c + d |
-| | 边缘总数 | a + c | b + d | N = a + b + c + d |
+| 测试 2 的结果 | 精通 | `a` | `b` | `a + b` |
+| | 非精通 | `c` | `d` | `c + d` |
+| | 边缘总数 | `a + c` | `b + d` | `N = a + b + c + d` |
 
 ### B. 公式
 
-P_A = 表中总百分比一致性
-= a/N + d/N = (a + d)/N
-P_c = 由于群体构成而预期的一致性百分比。
-= ( (a + b)/N × (a + c)/N ) + ( (c + d)/N × (b + d)/N )
-κ = (P_A - P_c) / (1 - P_c)
+`P_A =` 表中总百分比一致性
+
+`= a/N + d/N = (a + d)/N`
+
+`P_c =` 由于群体构成而预期的一致性百分比。
+
+`= ( (a + b)/N × (a + c)/N ) + ( (c + d)/N × (b + d)/N )`
+
+`κ = (P_A - P_c) / (1 - P_c)`
 
 ### C. 数值示例
 
@@ -19396,9 +20596,11 @@ P_c = 由于群体构成而预期的一致性百分比。
 | | 非精通 | 1 | 9 | 10 |
 | | 边缘总数 | 12 | 13 | 25 |
 
-P_A = 11/25 + 9/25 = (11 + 9)/25 = 20/25 = 0.80
-P_c = (15/25 × 12/25) + (10/25 × 13/25) = 180/625 + 130/625 = 310/625 = 0.50
-κ = (0.8 - 0.50)/(1 - 0.50) = 0.30/0.50 = 0.60
+`P_A = 11/25 + 9/25 = (11 + 9)/25 = 20/25 = 0.80`
+
+`P_c = (15/25 × 12/25) + (10/25 × 13/25) = 180/625 + 130/625 = 310/625 = 0.50`
+
+`κ = (0.8 - 0.50)/(1 - 0.50) = 0.30/0.50 = 0.60`
 
 ## 附录 K
 
@@ -19430,18 +20632,24 @@ P_c = (15/25 × 12/25) + (10/25 × 13/25) = 180/625 + 130/625 = 310/625 = 0.50
 | • 新标准 | 4, 8, 10 | HEM |  |
 | 阅读测验 |  |  |  |
 | • Gates–MacGinitie 阅读测验，第 3 版 | K–12 | RP | 11:146 |
+
+
+
 | 阅读诊断测验 |  |  |  |
+
 | • 诊断阅读量表 | Gr. 1–8 | CTBMH | 9:338 |
+
 | • 斯坦福诊断阅读测验，第 4 版 | Gr. 1–13 | HEM | 9:1178, 13:294 |
+
 | • Woodcock 诊断阅读电池 | K–16.9 | RP | 10:391, 14:422 |
+
 | 适应行为量表 |  |  |  |
+
 | • Vineland 适应行为量表 | 3–19 岁 | AGS | 10:381 |
+
 | ¹参见附录 L 了解出版商名称和地址。 |  |  |  |
+
 | ²粗体数字为 MMY 卷号；冒号后的数字为条目号。如果条目号缺失，则出版时不可用。 |  |  |  |
-
-
-
-
 
 ## 表K.1（续）
 
@@ -19487,32 +20695,127 @@ P_c = (15/25 × 12/25) + (10/25 × 13/25) = 180/625 + 130/625 = 310/625 = 0.50
 | • 斯特朗兴趣量表（第4版） | 16岁–成人 | CPP | 12:374 |
 
 ## 附录 L
+
 ### 测试出版商及其网站列表
 
-如需更多名称和地址，请参见最新的《心理测量年鉴》（MMY），布罗斯心理测量研究所（www.unl.edu/buros），ERIC评估与评价测试定位器（www.ericae.net/testcol.htm），或测试出版商索引（www.testpublishers.org/aboutatp.htm）。
+如需更多名称和地址，请参见最新的《心理测量年鉴》`MMY`，布罗斯心理测量研究所（www.unl.edu/buros），ERIC评估与评价测试定位器（www.ericae.net/testcol.htm），或测试出版商索引（www.testpublishers.org/aboutatp.htm）。
 
-- **美国大学测验项目（ACT）**<br>2201 N. Dodge Street<br>PO Box 168<br>Iowa City, IA 52243<br>www.act.org
-- **美国教育理事会（ACE）**<br>Suite 800<br>1 Dupont Circle<br>Washington, DC 20036<br>www.acenet.edu/calec/ged/home.html
-- **美国指导服务公司（AGS）**<br>4201 Woodland Road<br>P.O. Box 99<br>Circle Pines, MN 55014-1796<br>www.agsnet.com/index.asp
-- **CTB/麦格劳-希尔（CTBMH）出版商测试服务**<br>20 Ryan Ranch Road<br>Monterey, CA 93940-5703<br>www.ctb.com
-- **应用语言学中心（CAL）**<br>1118 22nd Street N.W.<br>Washington, DC 20037<br>www.cal.org
-- **大学入学考试委员会（CEEB）**<br>45 Columbus Avenue<br>New York, NY 10023-6992<br>www.collegeboard.org
-- **咨询心理学家出版社（CPP）**<br>3803 East Bayshore Road<br>P.O. Box 10096<br>Palo Alto, CA 94303<br>www.cpp-db.com
-- **教育与工业测验服务社（EDITS）**<br>P.O. Box 7234<br>San Diego, CA 93167<br>www.edits.net
-- **教育记录局公司（ERB）**<br>220 East 42nd Street<br>New York, NY 10017<br>www.erbtest.org
-- **教育测验服务社（ETS）**<br>P.O. Box 6736<br>Princeton NJ 08541-6736<br>www.ets.org
-- **哈考特教育测量公司（HEM）**<br>555 Academic Court<br>San Antonio, TX 78204-2498<br>www.hem.com
-- **人格与能力测验研究所（IPAT）**<br>P.O. Box 1188<br>Champaign, IL 61824-1188<br>www.ipat.com
-- **Pro-Ed出版社（PE）**<br>8700 Shoal Creek Boulevard<br>Austin, TX 78757-6897<br>www.proedinc.com
-- **心理公司（PC）**<br>555 Academic Court<br>San Antonio, TX 78204-2498<br>www.tpcweb.com
-- **河畔出版公司（RP）**<br>425 Spring Lake Drive<br>Itasca, IL 60143-2079<br>www.riverpub.com
-- **学业测验服务公司（STS）**<br>480 Meyer Road<br>Bensenville, IL 60106<br>www.ststesting.com
-- **斯科特·福尔斯曼公司（SF）**<br>1900 East Lake Avenue<br>Glenview, IL 60025-2055<br>www.scottforesman.com
-- **西格玛评估系统（SAS）**<br>P.O. Box 610984<br>Port Huron, MI 48061-0984<br>www.sigmaassessmentsystems.com
-- **斯洛森教育出版社公司**<br>538 Buffalo Road<br>P.O. Box 280<br>East Aurora, NY 14052-0280<br>www.slosson.com
-- **试金石应用科学联合公司**<br>4 Hardscrabble Heights<br>P.O. Box 382<br>Brewster, NY 10509-0382<br>www.tasa.com
-- **美国政府印刷局（USGPO）**<br>Washington, DC 20402<br>www.accessgpo.ucop.edu/search/
-- **西部心理服务公司（WPS）**<br>12031 Wilshire Boulevard<br>Los Angeles, CA 90025-1251<br>www.wpspublish.com
+- **美国大学测验项目（ACT）**
+  2201 N. Dodge Street
+  PO Box 168
+  Iowa City, IA 52243
+  www.act.org
+
+- **美国教育理事会（ACE）**
+  Suite 800
+  1 Dupont Circle
+  Washington, DC 20036
+  www.acenet.edu/calec/ged/home.html
+
+- **美国指导服务公司（AGS）**
+  4201 Woodland Road
+  P.O. Box 99
+  Circle Pines, MN 55014-1796
+  www.agsnet.com/index.asp
+
+- **CTB/麦格劳-希尔（CTBMH）出版商测试服务**
+  20 Ryan Ranch Road
+  Monterey, CA 93940-5703
+  www.ctb.com
+
+- **应用语言学中心（CAL）**
+  1118 22nd Street N.W.
+  Washington, DC 20037
+  www.cal.org
+
+- **大学入学考试委员会（CEEB）**
+  45 Columbus Avenue
+  New York, NY 10023-6992
+  www.collegeboard.org
+
+- **咨询心理学家出版社（CPP）**
+  3803 East Bayshore Road
+  P.O. Box 10096
+  Palo Alto, CA 94303
+  www.cpp-db.com
+
+- **教育与工业测验服务社（EDITS）**
+  P.O. Box 7234
+  San Diego, CA 93167
+  www.edits.net
+
+- **教育记录局公司（ERB）**
+  220 East 42nd Street
+  New York, NY 10017
+  www.erbtest.org
+
+- **教育测验服务社（ETS）**
+  P.O. Box 6736
+  Princeton NJ 08541-6736
+  www.ets.org
+
+- **哈考特教育测量公司（HEM）**
+  555 Academic Court
+  San Antonio, TX 78204-2498
+  www.hem.com
+
+- **人格与能力测验研究所（IPAT）**
+  P.O. Box 1188
+  Champaign, IL 61824-1188
+  www.ipat.com
+
+- **Pro-Ed出版社（PE）**
+  8700 Shoal Creek Boulevard
+  Austin, TX 78757-6897
+  www.proedinc.com
+
+- **心理公司（PC）**
+  555 Academic Court
+  San Antonio, TX 78204-2498
+  www.tpcweb.com
+
+- **河畔出版公司（RP）**
+  425 Spring Lake Drive
+  Itasca, IL 60143-2079
+  www.riverpub.com
+
+- **学业测验服务公司（STS）**
+  480 Meyer Road
+  Bensenville, IL 60106
+  www.ststesting.com
+
+- **斯科特·福尔斯曼公司（SF）**
+  1900 East Lake Avenue
+  Glenview, IL 60025-2055
+  www.scottforesman.com
+
+- **西格玛评估系统（SAS）**
+  P.O. Box 610984
+  Port Huron, MI 48061-0984
+  www.sigmaassessmentsystems.com
+
+- **斯洛森教育出版社公司**
+  538 Buffalo Road
+  P.O. Box 280
+  East Aurora, NY 14052-0280
+  www.slosson.com
+
+
+
+### 试金石应用科学联合公司
+4 Hardscrabble Heights
+P.O. Box 382
+Brewster, NY 10509-0382
+www.tasa.com
+
+### 美国政府印刷局（USGPO）
+Washington, DC 20402
+www.accessgpo.ucop.edu/search/
+
+### 西部心理服务公司（WPS）
+12031 Wilshire Boulevard
+Los Angeles, CA 90025-1251
+www.wpspublish.com
 
 ## 参考文献
 
@@ -19560,6 +20863,8 @@ Anastasi, A. (1976). Psychological testing (4th ed.). Englewood Cliffs, NJ: Merr
 
 Anastasi, A. (1988). Psychological testing (6th ed.). Englewood Cliffs, NJ: Merrill/Prentice Hall.
 
+
+
 Anderson, J. R. (1987). Skill acquisition: Compilation of weak-method problem solutions. Psychological Review, 94, 199–210.
 
 Anderson, R. C. (1972). How to construct achievement tests to assess comprehension. Review of Educational Research, 42, 145–170.
@@ -19598,20 +20903,32 @@ Barone, J. B. (1991). Strategies for the development of effective performance ex
 
 Beck, M. D. (1974). Achievement test reliability as a function of pupil-response procedures. Journal of Educational Measurement, 11, 109–114.
 
-Beggs, D. L., & Hieronymus, A. N. (1968). Uniformity of growth in the basic skills throughout the school year and during
+Beggs, D. L., & Hieronymus, A. N. (1968). Uniformity of growth in the basic skills throughout the school year and during the summer. 教育测量期刊, 5, 91–97.
+
+Bejar, I. I. (1984). 教育诊断性评估. 教育测量期刊, 21, 175–189.
+
+Bellanca, J. A., & Kirschenbaum, H. (1976). 评分替代方案概述. 收录于 S. B. Simon & J. A. Bellanca 编著的《降级评分神话：成绩和分数替代方案入门》。华盛顿特区：监督与课程发展协会。
+
+Bennett, G. K., Seashore, H. G., & Wesman, A. G. (1974). 《差异能力测验》第五版手册. （S 版和 T 版）。纽约：心理公司。
+
+Benson, J. (1989). 成人统计测验焦虑的结构成分：一个探索性模型. 实验心理学期刊, 57, 247–261.
+
+Benson, J. (1998). 构建强有力的构念效度程序：以测验焦虑为例. 教育测量：问题与实践, 17(1), 10–17, 22.
+
+Benson, J., & El-Zahar, N. E. (1994). 修订版测验焦虑量表的进一步完善与验证. 结构方程建模, 1, 203–221.
+
+Bianchini, J. C., & Loret, P. G. (1974a). 锚定测验研究. 最终项目报告. （第 1 卷）。（ERIC 文件复制服务编号 ED 092 601）。
+
+Bianchini, J. C., & Loret, P. G. (1974b). 锚定测验研究补充. 最终报告. （第 31 卷）。（ERIC 文件复制服务编号 ED 092 632）。
+
+Blommers, P. J., & Forsyth, R. A. (1977). 心理学与教育中的初等统计方法（第 2 版）。波士顿：霍顿·米夫林。
+
+Bloom, B. S. (1968). 为掌握而学习. 评价评论, 1, 1–12.
 
 
-- the summer. 教育测量期刊, 5, 91–97.
-- Bejar, I. I. (1984). 教育诊断性评估. 教育测量期刊, 21, 175–189.
-- Bellanca, J. A., & Kirschenbaum, H. (1976). 评分替代方案概述. 收录于 S. B. Simon & J. A. Bellanca 编著的《降级评分神话：成绩和分数替代方案入门》。华盛顿特区：监督与课程发展协会。
-- Bennett, G. K., Seashore, H. G., & Wesman, A. G. (1974). 《差异能力测验》第五版手册. （S 版和 T 版）。纽约：心理公司。
-- Benson, J. (1989). 成人统计测验焦虑的结构成分：一个探索性模型. 实验心理学期刊, 57, 247–261.
-- Benson, J. (1998). 构建强有力的构念效度程序：以测验焦虑为例. 教育测量：问题与实践, 17(1), 10–17, 22.
-- Benson, J., & El-Zahar, N. E. (1994). 修订版测验焦虑量表的进一步完善与验证. 结构方程建模, 1, 203–221.
-- Bianchini, J. C., & Loret, P. G. (1974a). 锚定测验研究. 最终项目报告. （第 1 卷）。（ERIC 文件复制服务编号 ED 092 601）。
-- Bianchini, J. C., & Loret, P. G. (1974b). 锚定测验研究补充. 最终报告. （第 31 卷）。（ERIC 文件复制服务编号 ED 092 632）。
-- Blommers, P. J., & Forsyth, R. A. (1977). 心理学与教育中的初等统计方法（第 2 版）。波士顿：霍顿·米夫林。
-- Bloom, B. S. (1968). 为掌握而学习. 评价评论, 1, 1–12.
+
+# 参考文献
+
 - Bloom, B. S., Engelhart, M. D., Furst, E. J., Hill, W. H., & Krathwohl, D. R. (1956). 教育目标分类学：教育目标的分类. 手册 I：认知领域. 怀特普莱恩斯，纽约：朗曼。
 - Bloom, B. S., Hastings, J. T., & Madaus, G. F. (1971). 学生学习形成性与总结性评价手册. 纽约：麦格劳-希尔。
 - Bond, L. (1989). 特殊准备对学业能力测量影响的效果. 收录于 R. L. Linn 编著的《教育测量》（第 3 版，第 429–444 页）。恩格尔伍德悬崖，新泽西州：梅里尔/普伦蒂斯·霍尔。
@@ -19660,13 +20977,16 @@ Beggs, D. L., & Hieronymus, A. N. (1968). Uniformity of growth in the basic skil
 - Cole, N. S. (1978 年 3 月). 检查成就测验项目偏差的方法. 在美国人事与指导协会年会上宣读的论文，华盛顿特区。
 - Cole, N. S., & Hanson, G. R. (1975). 兴趣清单对职业选择的影响. 收录于 E. E. Diamond 编著的《职业兴趣测量中的性别偏见与性别公平问题》。华盛顿特区：职业教育计划，国家教育研究所，卫生、教育和福利部。
 - Cole, N. S., & Moss, P. A. (1989). 测验使用中的偏差. 收录于 R. L. Linn 编著的《教育测量》（第 3 版，第 201–219 页）。恩格尔伍德悬崖，新泽西州：梅里尔/普伦蒂斯·霍尔。
+
+
+
 - Cole, N. S., & Nitko, A. J. (1981). 工具与偏差：教育评估中选择测量方法的议题. 收录于 R. A. Berk 编著的《教育评价方法论：现状》。巴尔的摩：约翰霍普金斯大学出版社。
 - Cole, N. S., & Zieky, M. J. (2001). 公平的新面孔. 教育测量期刊, 38, 369–382.
 - Collis, K. F. (1991). 初等数学与科学学习结构的评估. 在数学科学评估会议上宣读的论文，维多利亚，澳大利亚。
 - Connolly, A. J., Nachtman, W., & Pritchett, E. M. (1976). 手册：KeyMath 诊断算术测验. 塞克尔派恩斯，明尼苏达州：美国指导服务。
 - Consulting Psychologists Press, Inc. (1994). Strong 兴趣清单. 帕洛阿尔托，加利福尼亚州：作者。
 - Corby, K. (2002). 测验与测验信息. 东兰辛，密歇根州：密歇根州立大学图书馆。
-- Cowan, J. (1972 年 2 月). 考试中选择自由是否如此有利？ 技术期刊.
+- Cowan, J. (1972 年 2 月). 考试中选择自由是否如此有利？技术期刊.
 - Crane, L., & Bellis, D. (1978). 伊利诺伊州试点学区编辑的初步结果. 未发表备忘录致技术援助中心主任。
 - Cronbach, L. J. (1951). 系数 alpha 与测验内部结构. 心理测量学, 16, 297–334.
 - Cronbach, L. J. (1963). 通过评价改进课程. 师范学院记录（出版物编号 64），672–683.
@@ -19693,291 +21013,558 @@ Beggs, D. L., & Hieronymus, A. N. (1968). Uniformity of growth in the basic skil
 - Davis, B. G., & Trimble, C. S. (1978). 可消耗练习册与不可消耗练习册的单张答题纸. 弗兰克福特：肯塔基州教育部. （ERIC 文件复制服务编号 ED 160–656）。
 - Dawis, R. V. (1980). 兴趣测量. 收录于 D. A. Payne 编著的《测验与测量新方向：情感测量最新发展》（第 7 号）。旧金山：Jossey-Bass.
 - De Landsheere, G. (1988). 教育目标分类学. 收录于 J. P. Keeves 编著的《教育研究、方法与测量：国际手册》（第 345–354 页）。牛津：Pergamon Press.
-- DeVito, P. J., & Long, J. V. (1977 年 4 月). 春季-春季与秋季-春季测验对补偿性教育项目评价的影响. 在美国教育研究协会年会上宣读的论文，纽约市。
+- DeVito, P. J., & Long, J. V. (1977 年 4 月). 春季-春季与秋季-秋季测验对补偿性教育项目评价的影响. 在美国教育研究协会年会上宣读的论文，纽约市。
 - Diamond, J. J., & Evans, W. J. (1972). 测验技巧认知相关性的研究. 教育测量期刊, 9, 145–150.
 - Donlon, T. F., & Angoff, W. H. (1971). 学术能力测验. 收录于 W. H. Angoff 编著的《大学入学考试计划：关于学术能力测验和成就测验的研究与开发技术报告》。纽约：大学入学考试委员会。
 - Doolittle, P. (1994). ERIC/IAE 测验定位服务. 华盛顿特区：ERIC/AE.
-- Dorans, N. J. (1994 年 5 月). 选择和评估量表转换：SAT 分数居中和重新校准
+- Dorans, N. J. (1994 年 5 月). 选择和评估量表转换：SAT 分数居中和重新校准 distributions. 普林斯顿, NJ: 教育测验服务。
+- Douglas, H. R., & Tallmadge, M. (1934). 大学学生为新型考试做准备的方式。School and Society, 39, 318–320。
+- Downing, S. M., Baranowski, R. A., Grosso, L. J., & Norcini, J. J. (1995). 题干类型与所测认知能力：医学专业认证中多项真假题的效度证据。Applied Measurement in Education, 8, 187–197。
+- Drake, L., Rudner, L., & Pierce, J. (1995). 互联网上的评估与评价。Washington, DC: ERIC 清晰度中心关于评估与评价，Catholic University of America。
+- Dudycha, A. L., & Dudycha, L. W. (1972). 行为统计学：历史视角。In R. E. Kirk (Ed.), 统计学问题：行为科学读本。Monterey, CA: Brooks/Cole。
+- Dunbar, D. A., Float, B., & Lyman, F. J. (1980, November). 成绩单修订指导委员会最终报告。Mount Lebanon, PA: Mt. Lebanon School District。
+- Dunbar, S. B., Koretz, D., & Hoover, H. D. (1991). 绩效评估的开发与使用中的质量控制。Applied Measurement in Education, 4(4), 289–303。
+- Duran, R. P. (1989). 语言少数群体的测试。In R. L. Linn (Ed.), 教育测量 (第3版, pp. 573–587)。Englewood Cliffs, NJ: Merrill/Prentice Hall。
+- Duschl, R. A., & Gitomer, D. H. (1991). 概念变化的认识论视角：对教育实践的启示。Journal of Research in Science Teaching, 28, 839–858。
 
 
-distributions. 普林斯顿, NJ: 教育测验服务。
-Douglas, H. R., & Tallmadge, M. (1934). 大学学生为新型考试做准备的方式。School and Society, 39, 318–320。
-Downing, S. M., Baranowski, R. A., Grosso, L. J., & Norcini, J. J. (1995). 题干类型与所测认知能力：医学专业认证中多项真假题的效度证据。Applied Measurement in Education, 8, 187–197。
-Drake, L., Rudner, L., & Pierce, J. (1995). 互联网上的评估与评价。Washington, DC: ERIC 清晰度中心关于评估与评价，Catholic University of America。
-Dudycha, A. L., & Dudycha, L. W. (1972). 行为统计学：历史视角。In R. E. Kirk (Ed.), 统计学问题：行为科学读本。Monterey, CA: Brooks/Cole。
-Dunbar, D. A., Float, B., & Lyman, F. J. (1980, November). 成绩单修订指导委员会最终报告。Mount Lebanon, PA: Mt. Lebanon School District。
-Dunbar, S. B., Koretz, D., & Hoover, H. D. (1991). 绩效评估的开发与使用中的质量控制。Applied Measurement in Education, 4(4), 289–303。
-Duran, R. P. (1989). 语言少数群体的测试。In R. L. Linn (Ed.), 教育测量 (第3版, pp. 573–587)。Englewood Cliffs, NJ: Merrill/Prentice Hall。
-Duschl, R. A., & Gitomer, D. H. (1991). 概念变化的认识论视角：对教育实践的启示。Journal of Research in Science Teaching, 28, 839–858。
+
 Ebel, R. L. (1951). 编写测验题。In E. F. Lindquist (Ed.), 教育测量。Washington, DC: American Council on Education。
+
 Ebel, R. L. (1965). 测量教育成就。Englewood Cliffs, NJ: Prentice-Hall。
+
 Ebel, R. L. (1972). 教育测量 essentials (第2版)。Englewood Cliffs, NJ: Prentice Hall。
+
 Ebel, R. L. (1979). 教育测量 essentials (第3版)。Englewood Cliffs, NJ: Prentice Hall。
+
 Ebel, R. L., & Frisbie, D. A. (1991). 教育测量 essentials (第5版)。Englewood Cliffs, NJ: Prentice Hall。
+
 Ebel, R. L., & Stuit, D. B. (1954). 技术公报第8号。Iowa City: University Examinations Service, State University of Iowa。
+
 Educational Testing Service. (1992). 测验收藏目录，第一卷：成就测验与测量装置 (第2版)。Phoenix: Oryx Press。
 
 Educational Testing Service. (1992). 测验收藏目录，第五卷：态度测验 (第2版)。Phoenix: Oryx Press。
+
 Educational Testing Service. (1992). 测验收藏目录，第六卷：情感测量与人格测验。Phoenix: Oryx Press。
+
 Educational Testing Service. (1995). 测验收藏目录，第二卷：职业测验与测量装置 (第2版)。Phoenix: Oryx Press。
+
 Educational Testing Service. (1996). 测验收藏目录，第三卷：特殊人群测验。Phoenix: Oryx Press。
+
 Educational Testing Service. (1997). 测验收藏目录，第四卷：认知能力与智力测验。Phoenix: Oryx Press。
+
 Egawa, K., & Azwell, T. (1995). 讲述故事：叙述性报告。In T. Azwell and E. Schmar (Eds.), 成绩单报告：备选方案。Portsmouth, NH: Heinemann。
+
 Einhorn, H. J., & Bass, A. R. (1971). 与就业测试中的歧视相关的研究方法考虑。Psychological Bulletin, 75, 261–269。
+
 Ennis, R. H. (1985). 批判性思维课程的目标。In A. Costa (Ed.), 发展思维：教学思维资源手册，Alexandria, VA: Association for Supervision and Curriculum Development。
+
 Equal Employment Opportunity Commission, Civil Service Commission, Department of Justice, Department of Labor, & Department of the Treasury. (1979). 采纳问题与答案以澄清并提供对《员工甄选程序统一准则》的共同解释。Federal Register, 44 (Publication Number: 11996–12006)。
+
 Equal Employment Opportunity Commission, Civil Service Commission, Department of Labor, & Department of Justice (1978, August 25). 员工甄选程序统一准则。Federal Register, 43 (Publication Number: 38290–38315)。
+
 Evaluation Center. (1995). 肯塔基教学成果信息系统(KIRIS)的独立评估。Frankfort, KY: Kentucky Institute for Education Research。
+
 Excelsior Software, Inc. (1991). Excelsior 2 grade for Windows: 自学模块。Greeley, CO: Author。
+
 Feister, W. J., & Whitney, D. R. (1968). 与 D. E. F. Linquist 的一次访谈。Epsilon Bulletin, 42, 17–28。
+
 Feldt, L. S. (1967). 使用置信带评估两分数差值可靠性的说明。American Educational Research Journal, 4, 139–145。
 
 Feldt, L. S. (1976, December). 爱荷华教育发展测验作为评估工具的新用途。Paper presented at the Sixty-first Annual Education Conference, Evaluation in the Schools, Iowa City。
+
 Feldt, L. S. (2002). 估计由长度不同的测验单元组成的测验的内部一致性信度。Applied Measurement in Education, 15, 33–48。
+
 Feldt, L. S., & Brennan, R. L. (1989). 信度。In R. L. Linn (Ed.), 教育测量 (第3版)。Englewood Cliffs, NJ: Merrill/Prentice Hall。
+
 Ferguson, R. L. (1970). 计算机辅助标准参照测量的模型。Education, 81, 25–31。
+
 Fillenbaum, S., & Rapoport, A. (1971). 主观词典中的结构。New York: Academic Press。
+
 Finley, C. J. (1977). 爱荷华数据报告错误。Unpublished memoranda to Technical Assistance Center Directors, October 24, 1977。
+
 Fischer, R. J. (1994). 《美国残疾人法》：对测量的影响。Educational Measurement: Issues and Practice, 13(4), 17–26, 37。
+
 Fisher, T. H. (1980). 法院与你的最低能力测试计划——生存指南。NCME Measurement in Education, 11(1), 1–12。
+
 Flanagan, J. C. (1967). 七十年代的功能性教育。Phi Delta Kappan, 49, 27–32。
+
 Flanagan, J. C. (1969). 依据需求进行学习的计划。Psychology in the Schools, 6, 133–136。
+
 Flaugher, R. L. (1978). 测验偏倚的多种定义。American Psychologist, 33, 671–679。
+
 Flavell, J. H. (1976). 问题解决的元认知方面。In L. B. Resnick (Ed.), 智力的本质 (pp. 231–235)。Hillsdale, NJ: Erlbaum。
+
 Fleming, M., & Chambers, B. (1983). 教师自编测验：课堂的窗口。New Directions for Testing and Measurement, 19, 29–38。
+
 Forsyth, R. A. (1976, March). 描述 Johnny 能做什么。 (Iowa Testing Program, Occasional Paper, No. 17)。Iowa City: University of Iowa。
+
 Frank, L. K. (1939). 人格研究的投射方法。Journal of Psychology, 8, 389–413。
+
 Frederiksen, N. (1984). 认知理论对问题解决教学的启示。Review of Educational Research, 54, 363–407。
+
 Freeman, D. J., Kuhs, T. M., Knappen, L. B., & Porter, A. C. (1982). 对标准化测验的更近距离观察。Arithmetic Teacher, 29(7), 50–54。
-Frisbie, D. A. (1992). 多项真假题格式：现状综述。Educational
-Measurement: Issues and Practice, 11(4), 21–26。
+
+Frisbie, D. A. (1992). 多项真假题格式：现状综述。Educational Measurement: Issues and Practice, 11(4), 21–26。
+
+
+
 Frisbie, D. A., & Becker, D. F. (1990). 教科书中关于真假题的建议分析。Applied Measurement in Education, 4, 67–83。
+
 Frisbie, D. A., & Waltman, K. K. (1992). 制定个人评分计划。Educational Measurement: Issues and Practice, 11(3), 35–42。
+
 Gaffney, R. F., & Maguire, T. O. (1971). 使用光学扫描测验答题卡与幼儿。Journal of Educational Measurement, 8, 103–106。
+
 Gagné, R. M. (1962). 知识的获得。Psychological Review, 69, 355–365。
+
 Gagné, R. M. (1968). 学习层级。Educational Psychologist, 6, 1–9。
+
 Gagné, R. M. (1970). 教学变量与学习结果。In M. C. Wittrock & F. Wiley (Eds.), 教学评估。New York: Holt, Rinehart & Winston。
+
 Gagné, R. M., & Briggs, L. J. (1979). 教学设计原理 (第2版)。New York: Holt, Rinehart & Winston。
+
 Gagné, R. M., Briggs, L. J., & Wagner, W. W. (1988). 教学设计原理 (第3版)。New York: Holt, Rinehart & Winston。
+
 Gagné, R. M., Major, J. R., Garstens, H. L., & Paradise, N. E. (1962). 获取数学任务知识的因素。Psychological Monographs, 76 (7, whole No. 526)。
+
 Gagné, R. M., & Paradise, N. E. (1961). 能力与知识获取中的学习集。Psychological Monographs, 75 (14, whole No. 518)。
+
 Gardner, H. (1983). 心智框架：多元智能理论。New York: Basic Books。
+
 Gardner, H. (1991). 未受学校教育的头脑：儿童如何思考以及学校应如何教学。New York: Basic Books。
+
 Gardner, H. (1993). 为理解而教育。American School Board Journal, 180, 20–24。
+
 GI Forum, et al. vs. Texas Education Agency, et al., (January 7, 2000). U.S. District Court (Civil Action SA – 97-CA-1278-EP)。
+
 Gick, M. L. (1986). 问题解决策略。Educational Psychologist, 21, 99–120。
+
 Glaser, R. (1963). 教学技术与学习成果的测量。American Psychologist, 18, 519–521。
+
 Glaser, R. (1968). 使小学课程适应个体表现。Proceedings of the 1967 Invitational Conference on Testing Problems, 3–36。Princeton, NJ: Educational Testing Service。
+
 Glaser, R. (1977). 自适应教育：个体差异与学习。New York: Holt, Rinehart & Winston。
+
 Glaser, R. (1982). 教学心理学：过去、现在与未来。American Psychologist, 37, 292–305。
+
 Glaser, R. (1984). 教育与思维：知识的作用。American Psychologist, 39, 93–104。
+
 Glaser, R., Lesgold, A., & Lajoie, S. (1985). 测评成就的认知理论。In R. R. Ronning, J. Glover, J. C. Conoley, & J. C. Witt (Eds.), 认知心理学对测验的影响 (pp. 41–85)。Hillsdale, NJ: Erlbaum。
+
 Glaser, R., & Nitko, A. J. (1971). 学习与教学中的测量。In R. L. Thorndike (Ed.), 教育测量 (第2版, pp. 625–670)。Washington, DC: American Council on Education。
+
 Goldman, B. A., & Mitchell, D. F. (Eds.). (1997). 未发表实验测量目录。Dubuque, IA: William C. Brown Publishers。
+
 Gong, B., Venezky, R., & Mioduser, D. (1992). 教学评估：系统变革在科学教育课堂中的水平。Journal of Science Education and Technology, 1, 157–175。
+
 Goodwin, D. L. (1966). 训练教师使用强化技术以增加学生任务导向行为：一次实验评估。Unpublished doctoral dissertation, Stanford University. Cited In L. J. Cronbach, G. C. Gleser, H. Nanda, & N. Rajaratnam, 行为测量 dependability: 分数和轮廓的普遍化理论。New York: John Wiley。
+
 Gow, D. T. (Ed.). (1976). 课程材料的设计与开发：教学设计文章 (Vol. 2)。Pittsburgh: University Center for International Studies, University of Pittsburgh。
+
 Green, K. (1984). 题项特征对多项选择题难度的影响。Educational and Psychological Measurement, 44, 551–561。
+
 Greene, H. A., Jorgensen, A. N., & Gerberich, J. R. (1942). 小学中的测量与评价。New York: Longmans, Green。
+
 Greene, H. A., Jorgensen, A. N., & Gerberich, J. R. (1943). 中学中的测量与评价。New York: Longmans, Green。
+
 Greeno, J. G. (1976). 教学的认知目标：解决问题的知识理论。In D. Klahr (Ed.), 认知与教学。Hillsdale, NJ: Lawrence Erlbaum。
+
 Greeno, J. G. (1978). 问题解决能力的本质。In W. K. Estes (Ed.), 学习与认知过程手册：Vol. 5。Hillsdale, NJ: Lawrence Erlbaum。
+
 Gronlund, N. E. (1973). 为课堂教学准备标准参照测验。New York: Macmillan。
+
 Gronlund, N. E. (1976). 教学中的测量与评价 (第3版)。Englewood Cliffs, NJ: Merrill/Prentice Hall。
+
 Gross, A. L., & Su, W. (1975). 定义“公平”或“无偏倚”的选择模型：效用问题。Journal of Applied Psychology, 60, 345–351。
+
 Grossman, H. J. (1983). 精神迟滞的分类。Washington, DC: American Association on Mental Deficiency。
+
 Gulliksen, H. (1950). 心理测验理论。New York: John Wiley & Sons。
+
 Gulliksen, H. (1986). 教育测量的视角。Applied Psychological Measurement, 10, 109–132。
+
 Haertel, E., & Calfee, R. (1983). 学校成就：思考要测什么。Journal of Educational Measurement, 20, 119–131。
+
 Hakstain, A. R. (1969, February). 预期考试类型对学生测验准备和表现的影响。Paper presented at the annual meeting of the American Educational Research Association, Washington, DC。
+
+
+
 Haladyna, T. M., & Downing, S. M. (1989a). 多项选择题编写规则的分类法。Applied Measurement in Education, 2, 37–50。
+
 Haladyna, T. M., & Downing, S. M. (1989b). 多项选择题编写规则分类法的效度。Applied Measurement in Education, 2, 51–78。
+
 Hambleton, R. K., & Murphy, E. (1992). 真实测量的心理测量视角。Applied Measurement in Education, 5, 1–16。
+
 Hambleton, R. K., & Sheehan, D. S. (1977). 对高阶科学教学目标的评估。Science Education, 61, 307–315。
+
 Hardy, R. A. (1984). 测量教学效度：阿拉巴马高中毕业考试工具效度研究的报告。Journal of Educational Measurement, 21, 291–301。
+
 Harmin, M. (1994). 激发主动学习：教师手册。Alexandria, VA: Association for Supervision and Curriculum Development。
+
 Harris, W. S. (1973). NCME 成员对教育测量若干问题的共识。Journal of Educational Measurement, 10, 63–70。
+
 Harrow, A. J. (1972). 心理运动领域的分类法：制定行为目标的指南。White Plains, NY: Longman。
-Hawkes, H. E., Lindquist, E. F., & Mann, C. R. (Eds.) (1936). 成就测验的编制与使用：中学手册
 
+Hawkes, H. E., Lindquist, E. F., & Mann, C. R. (Eds.) (1936). 成就测验的编制与使用：中学手册 school teachers. Boston: Houghton Mifflin.
 
-school teachers. Boston: Houghton Mifflin.
 Helmke, A. (1988). 课堂情境因素对考试焦虑导致成绩受损效应的作用. Anxiety Research, 1, 37–52.
+
 Hembre, R. (1988). 考试焦虑的相关因素、原因、影响及治疗. Review of Educational Research, 58, 47–77.
+
 Henrysson, S. (1971). 收集、分析和利用试题数据. In R. L. Thorndike (Ed.), Educational measurement (2nd ed.). Washington, DC: American Council on Education.
+
 Herman, J. L., Aschbacher, P. R., & Winters, L. (1992). 替代性评估的实用指南. Alexandria, VA: Association for Supervision and Curriculum Development.
+
 Herman, W. E. (1990). 失败恐惧作为考试焦虑的独特人格特质测量. Journal of Research and Development in Education, 23, 180–185.
+
 Herndon, E. B. (1980). 你的孩子与测试. Washington, DC: National Institute of Education, U.S. Department of Education.
+
 Hewson, M. G. A. B., & Hamlyn, D. (1984). 知识环境对热概念的影响. European Journal of Science Education, 6, 245–262.
+
 Hieronymus, A. N. (1976, December). 爱荷华基础技能测试在评估中的用途. Paper presented at the 61st Annual Education Conferences, Iowa City, IA.
+
 Hieronymus, A. N., & Lindquist, E. F. (1971). 爱荷华基础技能测试：教师管理、解释和使用指南 (Levels Edition, Form 6). Iowa City: Riverside Publishing.
+
 Hieronymus, A. N., & Lindquist, E. F. (1974a). 爱荷华基础技能测试：管理员、督导员和辅导员手册 (Levels edition, Forms 5 and 6). Iowa City: Riverside Publishing.
+
 Hieronymus, A. N., & Lindquist, E. F. (1974b). 爱荷华基础技能测试：教师管理、解释和使用指南 (Forms 5 and 6). Iowa City: Riverside Publishing.
+
 Highland, R. W. (1955). 空军技术学校绩效测试使用指南 (ASPRL-TM-55-1). Lowry Air Force Base, CO: Armament Systems Performance Personnel Research Laboratory.
+
 Hills, J. R. (1976). 课堂测量练习. Englewood Cliffs, NJ: Merrill/Prentice Hall.
+
 Hills, J. R. (1990). 回应两封信：评分做法和提高标准化测试成绩. Educational Measurement: Issues and Practice, 9(3), 33.
+
 Hirsch, E. D., Jr. (1977). 作文的哲学. Chicago: University of Chicago Press.
 
 Holland, J. L. (1973). 职业选择：职业理论. Englewood Cliffs, NJ: Prentice Hall.
+
 Holland, J. L. (1975). 兴趣量表的应用与评价. In E. E. Diamond (Ed.), 职业兴趣测量中的性别偏见和性别公平问题. Washington, DC: Career Education Program, National Institute of Education, Department of Health, Education, and Welfare.
+
 Hoover, H. D., Hieronymus, A. N., Frisbie, D. A., & Dunbar, S. B. (1993a). 管理说明：爱荷华基础技能测试，Levels 9–14，Forms K and L. Chicago: Riverside Publishing.
+
 Hoover, H. D., Hieronymus, A. N., Frisbie, D. A., & Dunbar, S. B. (1993b). 教师和辅导员解释指南：爱荷华基础技能测试，Levels 9–14，Forms K and L. Chicago: Riverside Publishing.
+
 Hoover, H. D., Hieronymus, A. N., Frisbie, D. A., & Dunbar, S. B. (1993c). 爱荷华基础技能测试：常模和分数转换，完整和核心电池，Form K. Chicago: Riverside Publishing.
+
 Hoover, H. D., Hieronymus, A. N., Frisbie, D. A., & Dunbar, S. B. (1993d). 爱荷华基础技能测试：分数转换，完整和核心电池，Form K. Chicago: Riverside Publishing.
+
 Hopkins, K. D., Stanley, J. C., & Hopkins, B. R. (1990). 教育与心理测量与评价 (7th ed.). Englewood Cliffs, NJ: Prentice Hall.
+
 Horvath, F. G. (1991). 阿尔伯塔的评估：真实性的维度. Paper presented at the annual meeting of the National Association of Test Directors and the National Council on Measurement in Education, Chicago.
+
 Hough, H. (2002). 社会科学中的测试与测量：汇编卷中的可用测试. Arlington: University of Texas at Arlington, Central Library, Health Sciences.
+
 Huynh, H. (1976). 关于领域参照测试中决策可靠性的研究. Journal of Educational Measurement, 13, 253–264.
+
+
+
+# 参考文献
+
 Ismail, M. (1994). 马来西亚六年级学生算术应用题解决能力的多成分诊断测试的开发与验证. Unpublished doctoral dissertation, University of Pittsburgh, Pittsburgh.
+
 Iwanicki, E. F. (1980). 新一代标准化学业测验电池：其主要特征概况. Journal of Educational Measurement, 17, 155–162.
+
 Jaeger, R. M. (1973). 全国阅读测验等值研究：预锚定测试研究. NCME Measurement in Education, 4, 1–8.
+
 Jaeger, R. M. (1989). 学生能力认证. In R. L. Linn (Ed.), Educational measurement (3rd ed., pp. 485–514). Englewood Cliffs, NJ: Merrill/Prentice Hall.
 
 Jaeger, R. M. (1990). 教师资格认证测试中的标准设定. In J. Millman & L. Darling-Hammond (Eds.), 教师评价新手册：评估小学和中学教师 (pp. 295–321). Newbury Park, CA: Sage.
+
 Jakwerth, P. R., Stancavage, F. B., & Reed, E. D. (1999). 调查学生不回答问题的缘由：(NAEP 有效性研究). Palo Alto, CA: American Institutes for Research.
+
 Jenkins, J. R., & Deno, S. J. (1971). 评估概念和原理知识. Journal of Educational Measurement, 8(1), 95–101.
+
 Johnson, H. M. (1928). 心理测验使用中存在的一些谬误. Psychological Review, 35, 328–337. Reprinted in T. Engen & N. Levy (Eds.), Selected readings in the history of mental measurement (1955). Providence, RI: Brown University.
+
 Johnson, H. M. (1936). 心理和社会科学中的伪数学. American Journal of Psychology, 48, 342–351. Reprinted in T. Engen & N. Levy (Eds.), Selected readings in the history of mental measurement (1955). Providence, RI: Brown University.
+
 Johnson, P. E. (1967). 主题结构的一些心理方面. Journal of Educational Psychology, 58, 75–85.
+
 Johnson, R. T., & Thomas, W. P. (1979, April). RMC Title I 评估模式实施的用户经验. Paper presented at the annual meeting of the American Educational Research Association, San Francisco.
+
 Joint Advisory Committee on Testing Practices. (1993). 加拿大教育公平评估实践原则. Edmonton, Alberta: Author.
+
 Joint Committee on Standards for Educational Evaluation. (1988). 人员评价标准：如何评估教育工作者评价系统. Newbury Park, CA: Sage.
+
 Joint Committee on Standards for Educational Evaluation. (1994). 教育项目评价标准. Washington, DC: Author.
+
 Joint Committee on Standards for Educational Evaluation. (1994). 项目评价标准：如何评估教育项目评价. Thousand Oaks, CA: Sage.
+
 Joint Committee on Testing Practices. (1988). 教育公平测试实践守则. Washington, DC: American Psychological Association.
+
 Jones, L. V. (1971). 测量的本质. In R. L. Thorndike (Ed.), Educational measurement (2nd ed.). Washington, DC: American Council on Education.
+
 Jones, R. W. (1994). 绩效和替代性评估技术：应对替代性评估策略的挑战. Paper presented at the Second International Conference on Educational Evaluation and Assessment, Pretoria, Republic of South Africa.
+
 Ju, T-P. (1989). 开发微型计算机辅助测量工具以显示个人的知识结构. Unpublished doctoral dissertation, University of Pittsburgh, Pittsburgh.
+
 Kane, M. T. (1992). 基于论证的有效性方法. Psychological Bulletin, 112, 527–535.
+
 Kane, M.T. (2001). 有效性理论的当前关注点. Journal of Educational Measurement, 38, 319–342.
+
 Kane, M. T. (2002). 验证高风险测试项目. Educational Measurement: Issues and Practice, 21(1), 31–41.
+
 Karweit, N. L., & Wasik, B. A. (1992). 额外一年幼儿园项目和过渡性一年级的影响回顾. (CDS Report 41). Baltimore: Center for Research on Effective Schooling for Disadvantaged Students, Johns Hopkins University.
+
 Kaufman, A. S., & Kaufman, N. L. (1995). Kaufman儿童评估电池解释手册. Circle Pines, MN: American Guidance Service.
+
 Keller, F. S. (1968). 再见老师. Journal of Applied Behavior Analysis, 1, 79–89.
+
 Keller, F. S., & Sherman, J. G. (1974). PS! The Keller Plan handbook. Menlo Park, CA: Benjamin-Cummings.
+
 Kelly, T. L. (1939). 检验项目效度时上组和下组的选取. Journal of Educational Psychology, 30, 17–24.
+
 Kentucky Department of Education (1993a). KIRIS 评估作品集：数学，四年级，1993–1994. Frankfort, KY: Office of Assessment and Accountability.
+
 Kentucky Department of Education (1993b). 作品集与你. Frankfort, KY: Office of Assessment and Accountability.
+
 Kentucky Department of Education (1993c). 教师指南：肯塔基数学作品集. Frankfort, KY: Office of Assessment and Accountability.
+
 Kentucky Department of Education (1994). KIRIS 数学作品集评估，八年级：评分培训手册，1992–93，1994年增补. Frankfort, KY: Office of Assessment and Accountability, Author.
+
 Keyser, D. J., & Sweetland, R. C. (Eds.) (1994). Test critiques: Volume 10. Austin, TX: Pro-Ed.
+
 Khattri, N., Reeve, A. L., & Adamson, R. J. (1997). 教育改革研究：学生表现评估.
+
+
+
+# 参考文献
+
 Washington, DC: Office of Educational Research and Improvement.
+
 King, W. L., & Janow, J. E. (1990). 残障学生的测试便利. Washington, DC: Association on Handicapped Student Services in Postsecondary Education.
+
 Kintsch, W. (1974). 记忆中意义的表征. Hillsdale, NJ: Lawrence Erlbaum.
+
 Klaus, C. H., Lloyd-Jones, R., Brown, R., Littlefair, W., Mullis, I., Miller, D., & Verity, D. (1979). 构建童年经验：小学阶段写作与学习的途径 (Experimental version). St. Louis: CEMREL.
+
 Klausmeier, H. J. (1975). 一种替代性学校形式. In K. Talmage (Ed.), Systems of individual education. Berkeley, CA: McCutchan.
+
 Klopler, L. E. (1969). “理解”的操作性定义. Unpublished manuscript, Learning Research and Development Center, University of Pittsburgh.
+
 Klopler, L. E. (1971). 科学学习评价. In B. S. Bloom, J. T. Hastings, & G. F. Madaus (Eds.), Handbook on formative and summative evaluation of student learning. New York: McGraw-Hill.
+
 Koretz, D., Stecher, B., Klein, S., & McCaffrey, D. (1994). 佛蒙特州作品集评估项目：研究发现及启示. Educational Measurement: Issues and Practice, 13(3), 5–16.
+
 Kracke, E. A. (1953). 宋初文官制度：960–1067. Cambridge, MA: Harvard University Press.
+
 Krathwohl, D. R., Bloom, B. S., & Masia, B. B. (1964). 教育目标分类：第二卷：情感领域. White Plains, NY: Longman.
+
 Krug, S. E. (Ed.) (1993). Psychware sourcebook (4th ed.). Champaign, IL: Metritech, Inc.
+
 Krispin, W. J., & Feldhusen, J. F. (1974). 开发课堂测试. Minneapolis: Burgess.
+
 Kuder, G. F., & Richardson, M. W. (1937). 测验信度估计理论. Psychometrika, 2, 151–160.
+
 Kuhn, D. (1999). 批判性思维的发展模型. Educational Researcher, 28(2), 16–25, 46.
+
 Kunder, L. H., & Porwoll, P. J. (1977). 报告学生进步：政策、程序和系统. Arlington, VA: Educational Research Service.
+
 Landau, D., & Lazarsfeld, P. F. (1968). Quetelet, Adolphe. International encyclopedia of the social sciences, 13, 247–257.
+
 Lane, S., & Stone, C.A. (2002). 检验评估和问责制项目后果的策略. Educational Measurement: Issues and Practice, 21(1), 23–30.
+
 Lane, S. (1992). 数学绩效评估工具开发的概念框架. Educational Measurement: Issues and Practice, 12(2), 16–23.
+
 Lane, S., Parke, C., & Moskal, B. (1992). 开发绩效评估的原则. Paper presented at the annual meeting of the American Educational Research Association, San Francisco.
+
 Langenfeld, T. E., & Crocker, L. M. (1994). 有效性理论的评价：公立学校测试、法院和不相容的解释. Educational Assessment, 2, 149–165.
+
 Lawshe, C. H., & Balma, M. J. (1966). 人员测试原则 (2nd ed.). New York: McGraw-Hill.
+
 Liebert, R. M., & Morris, L. W. (1967). 考试焦虑的认知和情绪成分：区分及初步数据. Psychological Reports, 20, 975–978.
+
 Lindquist, E. F. (1936). 测验编制理论. In H. E. Hawkes, E. F. Lindquist, & C. R. Mann (Eds.), The construction and use of achievement examinations: A manual for secondary school teachers. Boston: Houghton Mifflin.
+
 Lindquist, E. F. (1951). 客观测验编制的初步考虑. In E. F. Lindquist (Ed.), Educational measurement. Washington, DC: American Council on Education.
+
 Lindquist, E. F., & Mann, C. R. (1936). 测验的编制. In H. E. Hawkes, E. F. Lindquist, & C. R. Mann (Eds.), The construction and use of achievement examinations: A manual for secondary school teachers. Boston: Houghton Mifflin.
+
 Lindvall, C. M. (1964). 引言. In C. M. Lindvall (Ed.), Defining educational objectives: A report of the Regional Commission on Educational Coordination and the Learning Research and Development Center. Pittsburgh: University of Pittsburgh Press.
+
 Lindvall, C. M. (1967). 测量学生成绩和能力. New York: Harcourt, Brace and World.
+
 Lindvall, C. M. (1976). 制定 IPI 目标的标准. In D. T. Gow (Ed.), Design and development of curricular materials: Instructional design articles (Vol. 2). Pittsburgh: University Center for International Studies, University of Pittsburgh.
-Lindvall, C. M., & Bolvin, J. O. (1967). 学校中的程序教学：“个体化教学”中编程原则的应用. In P. Lange (Ed.),
 
+Lindvall, C. M., & Bolvin, J. O. (1967). 学校中的程序教学：“个体化教学”中编程原则的应用. In P. Lange (Ed.), Programmed instruction: 66th Yearbook, Part II (pp. 217–254). Chicago: National Society for the Study of Education.
 
-Programmed instruction: 66th Yearbook, Part II (pp. 217–254). Chicago: National Society for the Study of Education.
 Lindvall, C. M., & Cox, R. C. (1970). Evaluation as a tool in curriculum development: The IPI evaluation program. AERA Monograph Series on Curriculum Evaluation (Publication No. 5). Chicago: Rand McNally.
+
+
+
 Lindvall, C. M., & Nitko, A. J. (1975). Measuring pupil achievement and aptitude (2nd ed.). New York: Harcourt Brace Jovanovich.
+
 Linn, R. L. (1973). Fair test use in selection. Review of Educational Research, 43, 139–161.
+
 Linn, R. L. (1993). Educational assessment: Expanded expectations and challenges. Educational Evaluation and Policy Analysis, 15, 1–16.
+
 Linn, R. L. (1994). Performance assessment: Policy, promises, and technical measurement standards. Educational Researcher, 23(4), 4–14.
+
 Linn, R. L., & Baker, E. (1997). CRESST conceptual model for assessment. Evaluation Comment, 7(1), 1–22, Summer.
+
 Linn, R. L., Baker, E. L., & Dunbar, S. B. (1991). Complex, performance-based assessment: Expectations and validation criteria. Educational Researcher, 20(8), 5–21.
+
 Linn, R. L., & Burton, D. (1994). Performance-based assessment: Implications of task specificity. Educational Measurement: Issues and Practice, 13(1), 5 & 15.
+
 Linn, R. L., Graue, M. E., & Sanders, N. M. (1990). Comparing state and district test results to national norms: The validity of claims that ‘everyone is above average’. Educational Measurement: Issues and Practice, 9(3), 5–14.
+
 Linn, R. L., & Gronlund, N. E. (1995). Measurement and assessment in teaching (7th ed.). Englewood Cliffs, NJ: Prentice Hall.
+
 Loeninger, J., Wessler, R., & Redmore, C. (1970). Measuring ego development. Vol. 1: Construction and use of a sentence completion test; Vol. 2: Scoring manual for women and girls. San Francisco: Jossey-Bass.
+
 Lohnes, P. R., & Cooley, W. W. (1968). Introduction to statistical procedures: With computer exercises. New York: John Wiley & Sons.
+
 Lord, F. M. (1953). The relation of test scores to the trait underlying the test. Educational and Psychological Measurement, 13, 517–549.
+
 Lord, F. M. (1977). A study of item bias using item characteristic curve theory. In Y. H. Poortinga (Ed.), Basic problems in cross-cultural psychology. Amsterdam: Swets and Zeitlinger.
+
 Lord, F. M., & Novick, M. R. (1968). Statistical theories of mental test scores. Reading, MA: Addison-Wesley.
+
 Lyman, H. B. (1998). Test scores and what they mean (6th ed.). Boston: Allyn & Bacon.
+
 Maddox, T., & Myles, B. (Eds.). (2003). Tests: A comprehensive reference for assessments in psychology, education, and business. Austin, TX: Pro-Ed, Inc.
+
 Mandler, G., & Sarason, S. B. (1952). A study of anxiety and learning. Journal of Abnormal and Social Psychology, 47, 166–173.
+
 Marshall, J. C. (1967). Composition errors and essay examinations grades reexamined. American Educational Research Journal, 4, 375–385.
+
 Marshall, J. C., & Powers, J. M. (1969). Writing neatness, composition errors, and essay grades. Journal of Educational Measurement, 6, 97–101.
+
 Marshall, S. P. (1990). Generating good items for diagnostic tests. In N. Frederiksen, R. Glaser, A. Lesgold, & M. G. Shafto (Eds.), Diagnostic monitoring of skill and knowledge acquisition (pp. 433–452). Hillsdale, NJ: Lawrence Erlbaum.
+
 Marshall, S. P., Pribe, C. A., & Smith, J. D. (1987). Schema knowledge structure for representing and understanding arithmetic story problems. (Report No. SE 047 910). San Diego: San Diego State University, Center for Research in Mathematics and Science Education. (ERIC Document Reproduction Service No. ED 281 716)
+
 Marzano, R. J., Brand, R. S., Hughes, C. S., Jones, B. F., Pressisan, B. Z., Rankin, S. C., & Suhor, C. (1988). Dimensions ofs and performances as scientific inquiry into score meaning. Keynote address at the Conference on Contemporary Psychological Assessment, Stockholm, Sweden.
+
 Meyer, G. (1939). The choice of questions on essay examinations. Journal of Educational Psychology, 30, 161–171.
+
 Miller, M. D., & Seraphine, A. E. (1993). Can test scores remain authentic when teaching to the test? Educational Assessment, 1, 119–129.
+
+
+
 Millman, J. (1961). Multiple-choice test item construction rules. Ithaca, NY: Cornell University Press (mimeographed). Cited by J. C. Stanley & K. D. Hopkins (1972). Educational and psychological measurement and evaluation (5th ed.). Englewood Cliffs, NJ: Prentice Hall.
+
 Millman, J., Bishop, C. H., & Ebel, R. L. (1965). An analysis of test-wise-ness. Educational and Psychological Measurement, 25, 707–726.
+
 Millman, J., & Green, J. (1989). The specification and development of tests of achievement and ability. In R. L. Linn (Eds.), Educational measurement (3rd ed., pp. 335–366). Phoenix, AZ: Oryx Press.
+
 Minstrell, J., & Stimpson, V. C. (1990, April). A teaching system for diagnosing student conceptions and prescribing relevant instruction. Paper presented at the annual meeting of the American Educational Research Association, Boston.
+
 Monroe, W. S., & Carter, R. E. (1923). The use of different types of thought questions in secondary schools and their relative difficulty for students. University of Illinois Bulletin, 20. (Bulletin N. 14).
+
 Moss, P. A. (1992). Shifting conceptions of validity in educational measurement: Implications for performance assessment. Review of Educational Research, 62, 229–258.
+
 Moss, P. A., Beck, J. S., Ebbs, C., Matson, B., Muchmore, J., Steele, D., Taylor, C., & Herter, R. (1992). Portfolios, accountability, and an interpretive approach to validity. Educational Measurement: Issues and Practice, 11, 12–21.
+
 Moss, P. A., Cole, N. S., & Trent, E. R. (1979, October). A comparison of multiple-choice answer formats in early elementary grades. Paper presented at the Annual Meeting of the Northeast Educational Research Association, Mt. Pocono, PA.
+
 Moyer, K. L. (1979, April). Observed school district errors in the Title I evaluation and reporting system. Harrisburg, PA: Division of Research, Pennsylvania Department of Education.
+
 Muller, D., Calhoun, E., & Orling, R. (1972). Test reliability as a function of answer sheet mode. Journal of Educational Measurement, 9, 321–324.
+
 Mullis, I. V. S. (1991). The NAEP guide. Princeton, NJ: National Assessment of Educational Progress, Educational Testing Service.
+
 Murphy, L. B. (1956). Methods for the study of personality in young children. New York: Basic Books.
+
 Murphy, L. L., Impara, J. C., & Plake, B. S. (2002). Tests in print VI. Lincoln, NE: University of Nebraska Press, Buros Institute of Mental Measurements.
+
 Murray, H. A. (1938). Explorations in personality. New York: Oxford University Press.
+
 National Assessment Governing Board. (1992). Reading framework for the 1992 National Assessment of Educational Progress (Publication No. 316499/60006). Washington, DC: U.S. Government Printing Office.
+
 National Association of College Admission Counselors. (1988). Statement of principles of good practices. Alexandria, VA: Author.
+
 National Board for Professional Teaching Standards. (1991, December). Report to the U.S. Senate Committee on Labor and Human Relations and the U.S. House of Representative Committee on Education and Labor. Detroit: Author.
+
 National Council of Teachers of Mathematics, (NCTM). (1989). Curriculum and evaluation standards for school mathematics. Reston, VA: Author.
+
 National Council on Measurement in Education (NCME). (1995). Code of professional responsibilities in educational measurement (CPR). Washington, DC: Author.
+
 Naveh-Benjamin, M., McKeachie, W. J., & Lin, Y. G. (1987). Two types of test-anxious students: Support for an information processing model. Journal of Educational Psychology, 79, 131–136.
+
 Naveh-Benjamin, M., McKeachie, W. J., Lin, Y. G., & Tucker, D. G. (1986). Inferring students’ cognitive structures and their development using the “Ordered Tree Technique.” Journal of Educational Psychology, 78(2), 130–140.
+
 Nitko, A. J. (1980). Distinguishing the many varieties of criterion-referenced tests. Review of Educational Research, 50, 461–485.
+
+
+
+# 参考文献
+
 Nitko, A. J. (1983). Educational tests and measurement: An introduction. San Diego: Harcourt Brace Jovanovich.
+
 Nitko, A. J. (1984). Defining “criterion-referenced test.” In R. A. Berk (Ed.), A guide to criterion-referenced test construction (pp. 8–28). Baltimore, MD: Johns Hopkins University Press.
+
 Nitko, A. J. (1989). Designing tests that are integrated with instruction. In R. L. Linn (Ed.), Educational measurement (3rd ed., pp. 447–474). New York: Macmillan.
+
 Nitko, A. J. (1995). Curriculum-based continuous assessment: A framework for concepts, politics, and procedures. Assessment in Education: Principles, Policy, and Practice, 2.
+
 Nitko, A. J. (1996). Educational assessment of students (2nd ed.). Englewood, NJ: Prentice Hall/Merrill Education.
+
 Nitko, A. J., Al-Sarimi, A., Amedahe, F. K., Wang, S., & Wingert, M. (1998, April). How well are the Kentucky Academic Expectations matched to the KIRIS assessments, the CTBS, and the CAT? Paper presented at the annual meeting of the American Educational Research Association, San Diego. (ERIC Document Reproduction Service No. ED420677)
+
 Nitko, A. J., & Hsu, T.-C. (1974). Using domain-referenced tests for student placement, diagnosis, and attainment in a system of adaptive, individualized instruction. In W. Hively (Ed.), Domain-referenced testing. Englewood Cliffs, NJ: Educational Technology Publications.
+
 Nitko, A. J., & Hsu, T.-C. (1987). Teacher’s guide to better classroom testing: A judgmental approach. Pittsburgh: Institute for Practice and Research in Education, School of Education, University of Pittsburgh.
+
 Nitko, V. V. (1995, March). Personal communication.
+
 Niyogi, N. S. (1995). Capturing the power of classroom assessment. (Focus 28). Princeton, NJ: Educational Testing Service.
+
 Norris, S. P., & Ennis, R. H. (1989). Evaluating critical thinking. Pacific Grove, CA: Midwest Publications, Critical Thinking Press.
+
 Northwest Regional Educational Laboratory (1998). Improving classroom assessment: A toolkit for professional developers (2nd ed.). Portland, OR: Author.
+
 Novick, M. R., & Peterson, N. S. (1976). Towards equalizing educational and employment opportunity. Journal of Educational Measurement, 13, 77–88.
+
 Nunnally, J. C. (1967). Psychometric theory. New York: McGraw-Hill.
+
 Nurs, J. (1994). Metropolitan performance assessment. San Antonio: Psychological Corporation.
+
 Odell, C. W. (1928). Traditional examinations and new-type tests. New York: Century Co.
+
 O’Donnell, T. J. (1974). Informed consent. Journal of the American Medical Association, 227, 73.
+
 Oosterhof, A. (1994). Classroom applications of educational measurement (2nd ed.). Englewood Cliffs, NJ: Merrill/Prentice Hall.
+
 Oosterhof, A. & Glasnap, D. (1974). Comparative reliabilities and difficulties
 
 - ...多种选择题和是非题格式。实验教育期刊，42(3)，62–64。
+
 - Owasso 独立学区第 10011 号等诉 Falvo 等案（2002 年 2 月 19 日）。美国最高法院。
+
 - Otis, A. S., & Lennon, R. T. (1990). 技术手册：Otis-Lennon 学校能力测验。圣安东尼奥：心理公司。
+
 - Parkes, J., & Stevens, J. J. (2002 年 4 月)。学校问责制系统能否在法庭上受到挑战？教育评估内幕：测试与问责，1(1)，1–2。
+
 - Paulson, F. L., Paulson, P. R., & Meyer, C. A. (1991)。什么使作品集成为作品集？教育领导，49(5)，60–63。
+
 - Pearson, K. (1924)。误差正态曲线起源的历史注记。生物计量学，16，402–404。
+
 - 绩效评估实验室。(1992 年冬季)。拟议评估系统。ADL 评论，2(1)，2–3。
+
 - Perkins, D. N., & Salomon, G. (1989)。认知技能是否受情境限制？教育研究者，18，16–25。
+
 - Peterson, N. S., Kolen, M. J., & Hoover, H. D. (1989)。定标、常模化和等值。在 R. L. Linn（编），教育测量（第 3 版），第 221–262 页。凤凰城：Oryx 出版社。
+
 - Pfanzagl, J. (1968)。测量理论。纽约：Wiley。
+
 - Phillips, B. N., & Weathers, G. (1958)。标准化测试评分错误分析。教育与心理测量，18，563–567。
+
 - Phillips, S. E. (1994)。高风险测试便利措施：效度与残疾人权利。教育测量，7，93–120。
+
 - Pike, L. A. (1978)。短期教学、测验技巧与 Scholastic Aptitude Test：文献综述与研究建议。（学院入学考试委员会研究与发展报告 77–78，第 2 号和教育测试服务研究公报，第 78–2 号）。普林斯顿，新泽西州：教育测试服务。
+
 - Plake, B. S., Impara, J. C., & Fager, J. J. (1993)。教师评估能力：全国调查。教育测量：问题与实践，12(4)，10–12，39。
+
 - Popham, W. J. (1991)。教师备考做法的适当性。教育测量：问题与实践，10(4)，12–15。
+
 - Portland House (1989)。韦氏英语语言百科全书无删节词典。纽约：作者。
+
 - Preece, P. F. W. (1976)。绘制认知结构：方法比较。教育心理学期刊，68，1–8。
+
+
+
 - Prescott, G. A., Balow, I. H., Hogan, T. P., & Farr, R. C. (1978)。都市成就测验（完整调查电池，初中级，JS 形）。纽约：Harcourt Brace Jovanovich。
 - Pichert, J. W., & Anderson, R. C. (1977)。对故事的不同视角。教育心理学期刊，69，309–315。
 - 心理公司。(1985)。斯坦福诊断数学测验（第 3 版），红级，H 形。蒙特雷，加州：作者。
@@ -20036,6 +21623,9 @@ Oosterhof, A. & Glasnap, D. (1974). Comparative reliabilities and difficulties
 - Shepard, L. A. (1991)。与 Lorrie Shepard 关于评估问题的访谈。教育研究者，20(3)，21–23。
 - Shepard, L. A. (1993)。评估测试效度。教育研究评论，19，403–450。
 - Shuell, T. J. (1990)。有意义学习的阶段。教育研究评论，60，531–548。
+
+
+
 - Silver, E. A., Smith, M. S., & Nelson, B. S. (1995)。QUASAR 项目：公平关注与中学数学教育改革的相遇。在 W. Secada, E. Fennema, & L. Byrd（编），数学教育公平新方向。纽约：剑桥大学出版社。
 - Silver, H., Strong, R., & Perini, M. (1997)。整合学习风格与多元智能。教育领导，55(1)，22–27。
 - Simon, H. A. (1973)。非结构化问题的结构。人工智能，4，181–201。
@@ -20060,85 +21650,118 @@ Oosterhof, A. & Glasnap, D. (1974). Comparative reliabilities and difficulties
 - Stiggins, R. J., Frisbie, D. A., & Griswold, P. A. (1989)。高中评分实践内部：建立研究议程。教育测量：问题与实践，8(2)，5–14。
 - Stiggins, R. J., Rubel, E., & Quellmalz, E. (1986)。测量思维技能在课堂中。华盛顿特区：国家教育协会。
 - Stodola, Q. (1961)。制作课堂测试：教师指南（第 4 号。评估与咨询服务）。普林斯顿，新泽西州：教育测试服务。
+- 斯特兰，H. R.（1977）。技术与不熟悉选项对多项选择题猜测的影响。《教育测量杂志》，14，253–260。
+- 苏布科维亚克，M. J.（1976）。从标准参照测验的一次施测中估计信度。《教育测量杂志》，13，265–276。
+- 苏布科维亚克，M. J.（1980）。决策一致性方法。载于R. A. 伯克（主编），《标准参照测量：最新进展》。巴尔的摩：约翰斯·霍普金斯大学出版社。
+- 苏珀，D. E.（1947）。职业兴趣与职业选择。《教育心理测量》，7，375–384。
+- 苏珀，D. E.（1949）。评估职业适应性。纽约：哈珀与罗出版社。
+- 萨普斯，P.（1974）。残疾儿童认知研究综述。《教育研究评论》，44，145–176。
+- 萨普斯，P.，& 津尼斯，J. L.（1963）。基础测量理论。载于R. D. 卢斯、R. R. 布什和E. 加兰特（主编），《数学心理学手册》（第1卷）。纽约：威利出版社。
+- 瑟伯，J. R.（1984）。图示作为测试和诊断工具。载于C. D. 霍利和D. F. 丹塞罗，《空间学习策略：技术、应用及相关问题》。奥兰多：学术出版社，第213–233页。
+- 瑟伯，J. R.，& 史密斯，P. L.（1981）。误解的检测。《教育心理学家》，16，165–174。
+- 斯瓦米纳坦，H.，汉布尔顿，R. K.，& 阿尔吉纳，J.（1974）。标准参照测验的信度：决策论表述。《教育测量杂志》，11，263–267。
+- 斯威特兰，R. C.，& 基泽，D. J.（1985–87）。《测验评论：第一至六卷》。密苏里州堪萨斯城：美国测验公司。
+- 塔尔马奇，G. K.（1973年3月）。加利福尼亚州第一标题项目中学生阅读和数学成绩提升与生均经费之间关系的分析：1972财政年度（AIR-35100-3/73-FR）。加利福尼亚州帕洛阿尔托：美国研究学会。
+- 塔尔马奇，G. K.，& 霍斯特，D.（1974）。教育项目中成绩提升验证程序指南（修订版）（RMC报告UR-240）。加利福尼亚州洛斯阿尔托斯：RMC研究公司。
+- 塔尔马奇，G. K.，& 伍德，C. T.（1976）。用户指南（ESEA第一标题项目评估与报告系统）。加利福尼亚州山景城：RMC研究公司。
+- 泰勒，C. S.（1998）。数学表现性评估评分方法的调查研究。《教育评估》，5，195–224。
+- 泰勒，E. D.，& 纳托尔，D. L.（1974）。考试中的试题选择：地理和科学实验。《教育研究》，16，143–150。
+- 特里，P. W.（1933）。学生如何复习客观题和论述题考试。《小学教育杂志》，33，592–603。
+- 特威利格，J. S.（1971）。给学生评定等级。伊利诺伊州格伦维尤：斯科特-福斯曼出版社。
+- 特威利格，J. S.（1989）。课堂标准设定和评分实践。《教育测量：问题与实践》，8，15–19。
+- 应试者权利工作组。（1994）。应试者权利声明草案。华盛顿特区：美国心理学会，测验实践联合委员会。
+- 桑代克，E. L.（1910）。书写。《师范学院记录》，11，1–93。
+- 桑代克，R. L.（1949）。人员选拔：测验与测量技术。纽约：约翰·威利父子出版社。
+- 桑代克，R. L.（1951）。信度。载于E. F. 林奎斯特（主编），《教育测量》。华盛顿特区：美国教育委员会。
+- 桑代克，R. L.（1971）。文化公平性的概念。《教育测量杂志》，8，63–70。
+- 桑代克，R. L.，& 哈根，E. P.（1977）。心理学和教育中的测量与评估（第4版）。纽约：约翰·威利父子出版社。
+- 桑代克，R. M.，坎宁安，G. K.，桑代克，R. L.，& 哈根，E. P.（1991）。心理学和教育中的测量与评估（第5版）。纽约：麦克米伦出版社。
+- 蒂皮特，E.，& 本森，J.（1989）。题目排列对考试焦虑的影响。《教育应用测量》，2，289–296。
+- 蒂特尔，C. K.（1989）。效度：在教与学情境中是谁的构念？《教育测量：问题与实践》，8(1)，5–13，34。
+- 蒂特尔，C. K.，赫希特，D.，& 穆尔，P.（1993）。课堂评估理论与研究：从分类学到在情境中建构意义。《教育测量：问题与实践》，12(4)，13–19。
+- 托拜厄斯，S.（1992）。考试焦虑对学校学习认知的影响。载于K. A. 哈格特维特和T. 贝克·约翰逊（主编），《考试焦虑研究进展》（第18–31页）。阿姆斯特丹：斯韦茨和蔡特林格出版社。
+- 试金石应用科学协会。（1995a）。阅读能力和词义能力等级：概述。纽约州布鲁斯特：作者。
+- 试金石应用科学协会。（1995b）。DPR目录。纽约州布鲁斯特：作者。
+- 特赖恩，G. S.（1980）。考试焦虑的测量与治疗。《教育研究评论》，50，343–372。
+- 塔克曼，B. W.（1988）。教师测验（第2版）。圣地亚哥：哈考特·布雷斯·约万诺维奇出版社。
 
 
 
-
-斯特兰，H. R.（1977）。技术与不熟悉选项对多项选择题猜测的影响。《教育测量杂志》，14，253–260。
-苏布科维亚克，M. J.（1976）。从标准参照测验的一次施测中估计信度。《教育测量杂志》，13，265–276。
-苏布科维亚克，M. J.（1980）。决策一致性方法。载于R. A. 伯克（主编），《标准参照测量：最新进展》。巴尔的摩：约翰斯·霍普金斯大学出版社。
-苏珀，D. E.（1947）。职业兴趣与职业选择。《教育心理测量》，7，375–384。
-苏珀，D. E.（1949）。评估职业适应性。纽约：哈珀与罗出版社。
-萨普斯，P.（1974）。残疾儿童认知研究综述。《教育研究评论》，44，145–176。
-萨普斯，P.，& 津尼斯，J. L.（1963）。基础测量理论。载于R. D. 卢斯、R. R. 布什和E. 加兰特（主编），《数学心理学手册》（第1卷）。纽约：威利出版社。
-瑟伯，J. R.（1984）。图示作为测试和诊断工具。载于C. D. 霍利和D. F. 丹塞罗，《空间学习策略：技术、应用及相关问题》。奥兰多：学术出版社，第213–233页。
-瑟伯，J. R.，& 史密斯，P. L.（1981）。误解的检测。《教育心理学家》，16，165–174。
-斯瓦米纳坦，H.，汉布尔顿，R. K.，& 阿尔吉纳，J.（1974）。标准参照测验的信度：决策论表述。《教育测量杂志》，11，263–267。
-斯威特兰，R. C.，& 基泽，D. J.（1985–87）。《测验评论：第一至六卷》。密苏里州堪萨斯城：美国测验公司。
-塔尔马奇，G. K.（1973年3月）。加利福尼亚州第一标题项目中学生阅读和数学成绩提升与生均经费之间关系的分析：1972财政年度（AIR-35100-3/73-FR）。加利福尼亚州帕洛阿尔托：美国研究学会。
-塔尔马奇，G. K.，& 霍斯特，D.（1974）。教育项目中成绩提升验证程序指南（修订版）（RMC报告UR-240）。加利福尼亚州洛斯阿尔托斯：RMC研究公司。
-塔尔马奇，G. K.，& 伍德，C. T.（1976）。用户指南（ESEA第一标题项目评估与报告系统）。加利福尼亚州山景城：RMC研究公司。
-泰勒，C. S.（1998）。数学表现性评估评分方法的调查研究。《教育评估》，5，195–224。
-泰勒，E. D.，& 纳托尔，D. L.（1974）。考试中的试题选择：地理和科学实验。《教育研究》，16，143–150。
-特里，P. W.（1933）。学生如何复习客观题和论述题考试。《小学教育杂志》，33，592–603。
-特威利格，J. S.（1971）。给学生评定等级。伊利诺伊州格伦维尤：斯科特-福斯曼出版社。
-特威利格，J. S.（1989）。课堂标准设定和评分实践。《教育测量：问题与实践》，8，15–19。
-应试者权利工作组。（1994）。应试者权利声明草案。华盛顿特区：美国心理学会，测验实践联合委员会。
-桑代克，E. L.（1910）。书写。《师范学院记录》，11，1–93。
-桑代克，R. L.（1949）。人员选拔：测验与测量技术。纽约：约翰·威利父子出版社。
-桑代克，R. L.（1951）。信度。载于E. F. 林奎斯特（主编），《教育测量》。华盛顿特区：美国教育委员会。
-桑代克，R. L.（1971）。文化公平性的概念。《教育测量杂志》，8，63–70。
-桑代克，R. L.，& 哈根，E. P.（1977）。心理学和教育中的测量与评估（第4版）。纽约：约翰·威利父子出版社。
-桑代克，R. M.，坎宁安，G. K.，桑代克，R. L.，& 哈根，E. P.（1991）。心理学和教育中的测量与评估（第5版）。纽约：麦克米伦出版社。
-蒂皮特，E.，& 本森，J.（1989）。题目排列对考试焦虑的影响。《教育应用测量》，2，289–296。
-蒂特尔，C. K.（1989）。效度：在教与学情境中是谁的构念？《教育测量：问题与实践》，8(1)，5–13，34。
-蒂特尔，C. K.，赫希特，D.，& 穆尔，P.（1993）。课堂评估理论与研究：从分类学到在情境中建构意义。《教育测量：问题与实践》，12(4)，13–19。
-托拜厄斯，S.（1992）。考试焦虑对学校学习认知的影响。载于K. A. 哈格特维特和T. 贝克·约翰逊（主编），《考试焦虑研究进展》（第18–31页）。阿姆斯特丹：斯韦茨和蔡特林格出版社。
-试金石应用科学协会。（1995a）。阅读能力和词义能力等级：概述。纽约州布鲁斯特：作者。
-试金石应用科学协会。（1995b）。DPR目录。纽约州布鲁斯特：作者。
-特赖恩，G. S.（1980）。考试焦虑的测量与治疗。《教育研究评论》，50，343–372。
-塔克曼，B. W.（1988）。教师测验（第2版）。圣地亚哥：哈考特·布雷斯·约万诺维奇出版社。
 图因曼，J. J.，法尔，R.，& 布兰顿，B. E.（1972）。测验分数随物质奖励的增加而提高。《教育测量杂志》，9，215–223。
+
 泰勒，F. T.，& 查默斯，T. M.（1943）。预先告知初中生即将进行测验对其分数的影响。《教育研究杂志》，37，290–296。
+
 泰勒，R. W.（1930）。使用显微镜技能测验。《教育研究通报》，9，493–496。
+
 泰勒，R. W.（1934）。编制成就测验。哥伦布：俄亥俄州立大学出版社。
+
 泰勒，R. W.（1966）。国家教育进展评估的目标与计划。《教育测量杂志》，3，1–4。
+
 美国最高法院。（1971）。格里格斯等人诉杜克电力公司案（出版物编号125，401 U.S. 424，1971年3月8日判决）。
+
 乌雷夫布，A. O.（1984）。学校科学课程与创新：非洲视角。《欧洲科学教育杂志》，6，217–225。
+
 巴伦西亚，S. W.，& 普莱斯，N. A.（1994）。用于教学、学习和问责的读写档案袋：贝尔维尤读写评估项目。载于S. W. 巴伦西亚、E. H. 希伯特和P. P. 阿弗勒巴赫（主编），《真实性阅读评估：实践与可能性》。特拉华州纽瓦克：国际阅读协会。
+
 瓦兰斯，T. R.（1947）。论述题和客观题考试作为学习体验的比较。《教育研究杂志》，41，279–288。
+
 弗农，P. E.（1962）。阅读理解的决定因素。《教育心理测量》，22，269–286。
+
 维亚德罗，D.（1995）。研究发现新评估对合同影响甚微。《教育周报》，14(40)，6。
+
 瓦格纳，R. K.，& 斯滕伯格，R. J.（1984）。智力的另类概念及其对教育的影响。《教育研究评论》，54，179–223。
+
 沃尔特曼，K. K.，& 弗里斯比，D. A.（1994）。家长对孩子成绩单的理解。《教育应用测量》，2，223–240。
+
 王，M. C.（1980）。适应性教学：在多样性基础上构建。《理论与实践》，19，122–128。（转载为《致教育者的报告》5。）匹兹堡：匹兹堡大学学习研究与发展中心。
+
 王，M. C.，真纳里，P.，& 瓦克斯曼，H. C.（1983）。适应性学习环境模型：一个反复出现的主题的创新变体。匹兹堡：匹兹堡大学学习研究与发展中心。
+
 王，M. C.，& 雷斯尼克，L. B.（1978）。初等教育方案：手册1–8。宾夕法尼亚州约翰斯敦：马利克斯联合出版公司。
+
 王，X.，韦纳，H.，& 蒂森，D.（1995）。关于允许考生选题的等值考试中某些不可检验假设的可行性。《教育应用测量》，8，211–225。
+
 韦普尔斯，D.，& 泰勒，R. W.（1930）。研究方法与教师问题。纽约：麦克米伦出版社。
+
 沃特金斯，R. W.（1962）。关于使用公式分数和原始分数的测试运营委员会建议报告附录。新泽西州普林斯顿：教育考试服务中心。未发表报告，引自R. L. 埃贝尔，《教育测量基础》。新泽西州恩格尔伍德克利夫斯：普伦蒂斯·霍尔，1972年。
+
 沃特曼，K. K.，& 弗里斯比，D. A.（1994）。家长对孩子成绩单的理解。《教育应用测量》，7，223–240。
+
 韦克斯勒，D.（1939）。成人智力的测量。巴尔的摩：威廉姆斯和威尔金斯出版社。
+
 韦德曼，C. C.（1926）。如何编制判断题考试。哥伦比亚大学师范学院教育论丛（第225号）。纽约：哥伦比亚大学师范学院出版局。
+
 韦斯利，E. B.，& 龙斯基，S. P.（1958）。中学社会科教学（第4版）。波士顿：D.C. 希思出版社。
+
 韦斯曼，A. G.（1971）。编写测验题目。载于R. L. 桑代克（主编），《教育测量》（第2版）。华盛顿特区：美国教育委员会。
+
 惠特尼，D. R.，& 萨伯斯，D. L.（1970年5月）。改进论述题考试III：项目分析的应用。（技术通报第11号）艾奥瓦城：艾奥瓦大学评估与考试服务处。
+
 惠廷顿，D.（1999）。为价值观和公平留出空间：在课堂情境中教授信度和效度。《教育测量：问题与实践》，18(1)，14–22。
+
 威克，J. W. 等人。（1989）。学校态度测量（第2版）。艾奥瓦州艾奥瓦城：美国测验罗尼克斯公司。
+
 威金斯，G.（1990）。真实性评估的理由。（EDD-TM-9010）。华盛顿特区：美国研究学会ERIC测试、测量和评估信息交换所。
+
 威廉斯，R. L.（1975）。BITCH-100：一种文化特异性测验。《美国黑人问题杂志》，3，103–116。
+
 威尔逊，J. A.（1976）。A-Level物理考试中的试题选择。《课程研究》，8，71–78。
+
 瓦恩，J.（1971）。考试焦虑与注意方向。《心理学公报》，76，92–104。
+
 怀泽，B.，& 伦克，J. M.（1987年4月）。成就测验常模随时间变化的稳定性。论文发表于国家教育测量委员会年会，华盛顿特区。
+
 沃尔夫，D. P.（1989）。档案袋评估：学生作品抽样。《教育领导》，46(2)，4–10。
+
 伍德，R.（1977）。多项选择：最新进展报告。《教育评估：国际进展》，1，191–280。
+
 伍尔福克，A. E.（1995）。《教育心理学》（第6版）。波士顿：阿林和培根出版社。
+
 扬，M. J.（1993）。陈述性知识结构特征评估的定量测量。未发表的博士论文，匹兹堡大学，匹兹堡。
+
 佐雷夫，L.，& 威廉斯，P.（1980）。智力测验中内容偏差的审视。《教育测量杂志》，17，313–322。
+
 朱克曼，M.，& 斯皮尔伯格，C. D.（主编）。（1976）。《情绪与焦虑：新概念、方法与应用》。纽约：劳伦斯·厄尔鲍姆出版社。
-
-
-
 
 **绝对成就** 不考虑其他学生取得的成就而实现特定的学习目标和内容。另见标准参照和相对成就。
 
@@ -20190,9 +21813,11 @@ Oosterhof, A. & Glasnap, D. (1974). Comparative reliabilities and difficulties
 
 **带注释的整体评分量规** 另见带注释的整体量规。
 
+
+
 **应用** 布卢姆等人（1956）《教育目标分类学》中的一个类别。该类别中的学习目标要求学生将知识和技能用于解决新问题或在新情境中有效工作。另见分析、理解、评价、知识和综合。
 
-**天赋** 对 X 的天赋是个人当前的状态，表明如果过去和现在的条件延续到未来，该个人在 X 方面的预期未来表现（见 Carroll, 1974）。
+**天赋** 对 `X` 的天赋是个人当前的状态，表明如果过去和现在的条件延续到未来，该个人在 `X` 方面的预期未来表现（见 Carroll, 1974）。
 
 **算术平均** 另见平均。
 
@@ -20213,6 +21838,7 @@ Oosterhof, A. & Glasnap, D. (1974). Comparative reliabilities and difficulties
 **评估修改** 对评估的条件或材料进行的更改，使有残疾的学生能够在与未修改评估的学生相同的领域接受评估。
 
 **高阶技能、表现或产品的评估**
+
 - 它们明确规定了评估可能的多重正确答案、表现或产品的标准和标准。
 - 它们模拟了学生在现实世界中应如何使用知识、技能和能力的组合的方式。
 - 它们向学生呈现不完善的“挑战和角色”，这些角色和任务与他们作为成年人工作和在家中可能遇到的角色和任务相似。
@@ -20251,12 +21877,7 @@ Oosterhof, A. & Glasnap, D. (1974). Comparative reliabilities and difficulties
 
 **临界案例** 成绩将其置于两个字母等级边界或非常接近边界的学生。
 
-**自下而上的量规制定方法** 通过从样本开始创建评估框架和评分量规。
-
-
-
-
-of student’s work and actual responses. See **top-down approach to rubric crafting**。
+**自下而上的量规制定方法** 通过从样本开始创建评估框架和评分量规。 of student’s work and actual responses. See **top-down approach to rubric crafting**。
 
 **building report (for a standardized test)** 对学区内特定学校（building）特定年级标准化测试各部分所有学生的平均表现的汇总。
 
@@ -20312,6 +21933,8 @@ of student’s work and actual responses. See **top-down approach to rubric craf
 
 **content relevance** 聚焦于评估任务是否属于使用者对评估应包含内容的定义的有效性证据。
 
+
+
 **content representativeness** 聚焦于评估任务是否代表更大表现领域的有效性证据。
 
 **content standards** 关于学生预期要学习的主科事实、概念、原理等的陈述。
@@ -20350,79 +21973,106 @@ of student’s work and actual responses. See **top-down approach to rubric craf
 
 **external structure** 聚焦于评估分数与外部变量或标准之间的关系模式的有效性证据。See **internal structure**。
 
-**external uses of test results** 为课堂外目的使用标准化测验结果。其中外部使用包括
+**external uses of test results** 为课堂外目的使用标准化测验结果。其中外部使用包括：results are (Hieronymus, 1976) the following: (a) to help school officials to make decisions about curriculum or instructional changes; (b) to help educational evaluators describe the relative effectiveness of alternate methods of instruction and some of the factors moderating their effectiveness; (c) to help educational researchers describe the relative effectiveness of innovations or experiments in education; and (d) to help school superintendents to describe to school boards the relative effectiveness of the local educational enterprise.
 
-results are (Hieronymus, 1976) the following: (a) to help school officials to make decisions about curriculum or instructional changes; (b) to help educational evaluators describe the relative effectiveness of alternate methods of instruction and some of the factors moderating their effectiveness; (c) to help educational researchers describe the relative effectiveness of innovations or experiments in education; and (d) to help school superintendents to describe to school boards the relative effectiveness of the local educational enterprise.
+**extrapolation** The process of estimating an unknown number that lies outside of the range of available data. Used extensively with standardized achievement tests to estimate the grade equivalent scores of examinees whose raw scores lie well below or above the available data.
 
-extrapolation The process of estimating an unknown number that lies outside of the range of available data. Used extensively with standardized achievement tests to estimate the grade equivalent scores of examinees whose raw scores lie well below or above the available data.
+**facial bias** According to this approach, an assessment is biased if it contains offensive stereotypes in its use of language or in pictures in the assessment tasks and materials (Cole & Nitko, 1981).
 
-facial bias According to this approach, an assessment is biased if it contains offensive stereotypes in its use of language or in pictures in the assessment tasks and materials (Cole & Nitko, 1981).
+**failing grade** The letter grade that indicates that a student has achieved far below the expectations for that grade level in a subject. The letter grade associated with a failing grade is usually F.
 
-failing grade The letter grade that indicates that a student has achieved far below the expectations for that grade level in a subject. The letter grade associated with a failing grade is usually F.
+**failing work versus failing to try** Two categories of student failure (Brookhart, 1999): (a) doing work that is of very poor quality (i.e., failing work) and (b) not doing the work at all (i.e., failing to try).
 
-failing work versus failing to try Two categories of student failure (Brookhart, 1999): (a) doing work that is of very poor quality (i.e., failing work) and (b) not doing the work at all (i.e., failing to try).
+**fairness (assessment or test)** See **bias (assessment or test)**。
 
-fairness (assessment or test) See bias (assessment or test).
+**figural reasoning** The ability to reason using geometric figures to infer relationships among the figures, to identify the similarities and differences among figures, and to identify progressions and predict the next figure in the progression.
 
-figural reasoning The ability to reason using geometric figures to infer relationships among the figures, to identify the similarities and differences among figures, and to identify progressions and predict the next figure in the progression.
+**filler alternative** A type of multiple-choice item-writing flaw in which a nonplausible alternative is added to an item primarily for the purpose of increasing the number of alternatives rather than as a useful functioning distractor.
 
-filler alternative A type of multiple-choice item-writing flaw in which a nonplausible alternative is added to an item primarily for the purpose of increasing the number of alternatives rather than as a useful functioning distractor.
+**fixed-percentage method for grading** Assigning grades by using percentages as bases for marking and grading papers. The relationship between percentage correct and letter grade is arbitrary.
 
-fixed-percentage method for grading Assigning grades by using percentages as bases for marking and grading papers. The relationship between percentage correct and letter grade is arbitrary.
+**focusing the item** Asking a direct question or writing the item in a way that the specific question the student is to answer is clear.
 
-focusing the item Asking a direct question or writing the item in a way that the specific question the student is to answer is clear.
+**foils** See **distractors**。
 
-foils See distractors.
 
-forced-choice item format A technique used by interest inventories that presents activities in items in sets of three (triads). These items ask the student to mark the one activity in the triad that the student most (“M”) likes and the one activity the student least (“L”) likes. This is equivalent to asking a student to rank the three activities from most liked to least liked.
 
-formative evaluation of programs and materials Judgment about the worth of curricula, materials, and programs made while they are under development leading to suggestions for ways to redesign, refine, or improve them. See also summative evaluation of programs and materials.
+### forced-choice item format
+A technique used by interest inventories that presents activities in items in sets of three (triads). These items ask the student to mark the one activity in the triad that the student most (“M”) likes and the one activity the student least (“L”) likes. This is equivalent to asking a student to rank the three activities from most liked to least liked.
 
-formative evaluation of students Judgment about the quality of students’ achievement made while the students are still in the process of learning. Such judgments help us guide a student’s next learning steps. See also summative evaluation of students.
+### formative evaluation of programs and materials
+Judgment about the worth of curricula, materials, and programs made while they are under development leading to suggestions for ways to redesign, refine, or improve them. See also summative evaluation of programs and materials.
 
-formative uses of assessments Using assessment results to improve your teaching and to help you to guide students’ learning. See summative uses of assessments.
+### formative evaluation of students
+Judgment about the quality of students’ achievement made while the students are still in the process of learning. Such judgments help us guide a student’s next learning steps. See also summative evaluation of students.
 
-four factors of test anxiety Students’ anxiety reactions to assessment on four related factors: tension, worry, test-irrelevant thinking, and bodily reactions (Sarason, 1984).
+### formative uses of assessments
+Using assessment results to improve your teaching and to help you to guide students’ learning. See summative uses of assessments.
 
-four principles for validation Rules about interpretations, uses, values, and consequences that help you judge whether your assessment results have sufficient validity for their intended purposes.
+### four factors of test anxiety
+Students’ anxiety reactions to assessment on four related factors: tension, worry, test-irrelevant thinking, and bodily reactions (Sarason, 1984).
 
-frequency The number of persons that have a particular score.
+### four principles for validation
+Rules about interpretations, uses, values, and consequences that help you judge whether your assessment results have sufficient validity for their intended purposes.
 
-frequency distribution A table that shows the number of persons in a group having each possible score.
+### frequency
+The number of persons that have a particular score.
 
-frequency polygon A line graph of a frequency distribution.
+### frequency distribution
+A table that shows the number of persons in a group having each possible score.
 
-functional alternatives Response choices in a multiple-choice item that work effectively as distractors or correct answers. If no examinee in the lower scoring group chooses a particular alternative, it is considered nonfunctional. See distractors.
+### frequency polygon
+A line graph of a frequency distribution.
 
-gender representation The number and ways that males and females are discussed or pictured in test items. See role stereotype.
+### functional alternatives
+Response choices in a multiple-choice item that work effectively as distractors or correct answers. If no examinee in the lower scoring group chooses a particular alternative, it is considered nonfunctional. See distractors.
 
-gender stereotype See role stereotype.
+### gender representation
+The number and ways that males and females are discussed or pictured in test items. See role stereotype.
 
-general learning targets Statements of expected learning outcomes derived from educational goals that are more specific than the goals but not specific enough to be useful as classroom learning targets. See educational goals and specific learning targets.
+### gender stereotype
+See role stereotype.
 
-general scoring rubric Guidelines for scoring that apply across many different tasks, not just to one specific task. It serves, however, as a general framework for developing the more specific rubrics.
+### general learning targets
+Statements of expected learning outcomes derived from educational goals that are more specific than the goals but not specific enough to be useful as classroom learning targets. See educational goals and specific learning targets.
 
-general versus specific intellectual skills General intellectual skills are a student’s overall abilities to engage successfully in academic learning in general or on the average. Specific intellectual skills are the student’s abilities to engage successfully in learning one subject or one academic area.
+### general scoring rubric
+Guidelines for scoring that apply across many different tasks, not just to one specific task. It serves, however, as a general framework for developing the more specific rubrics.
 
-generalizability of assessment results Validity evidence that focuses on the extent to which students’ scores on a test can be generalized to their performance on the broader curriculum of the school district or state.
+### general versus specific intellectual skills
+General intellectual skills are a student’s overall abilities to engage successfully in academic learning in general or on the average. Specific intellectual skills are the student’s abilities to engage successfully in learning one subject or one academic area.
 
-grade mean equivalent A norm-referenced score that tells the grade placement of a group’s average expanded scale score.
+### generalizability of assessment results
+Validity evidence that focuses on the extent to which students’ scores on a test can be generalized to their performance on the broader curriculum of the school district or state.
 
-gradebook program A computer program combining a spreadsheet and database that allows you to enter students’ names and grades and automatically calculates averages and letter grades.
+### grade mean equivalent
+A norm-referenced score that tells the grade placement of a group’s average expanded scale score.
 
-grade-equivalent scores (GE) A norm-referenced growth scale score that tells the grade placement at which a raw score is average. A grade-equivalent score is reported as a decimal fraction, such as 3.4. The whole number part of the score refers to a grade level, and the decimal part refers to a month of the school year within that grade level.
+### gradebook program
+A computer program combining a spreadsheet and database that allows you to enter students’ names and grades and automatically calculates averages and letter grades.
 
-grading The process of summing up students’ achievement in a subject through the use of letters such as A, B, C, D, and F.
+### grade-equivalent scores (GE)
+A norm-referenced growth scale score that tells the grade placement at which a raw score is average. A grade-equivalent score is reported as a decimal fraction, such as 3.4. The whole number part of the score refers to a grade level, and the decimal part refers to a month of the school year within that grade level.
 
-grading for summative purposes Assigning grades for the purposes of providing you, other teachers, school officials, students, parents, postsecondary educational institutions, and potential employers with a report about how well a student has achieved the curriculum learning targets.
+### grading
+The process of summing up students’ achievement in a subject through the use of letters such as A, B, C, D, and F.
 
-grading framework A logically consistent way of conceptualizing the meaning of grades that is well-reasoned and consistent with your teaching approach.
 
-grading on the curve A method for assigning grades that ranks students’ marks from highest to lowest, and assigns grades (A, B, C, etc.) on the basis of this ranking. See ranking scores.
 
-grading variables The subset of variables, selected from among all the reporting variables, on which you may base your grades (Frisbie & Waltman, 1992). You use the grading variables to describe a student’s accomplishments in the subject. See reporting variables.
+## grading for summative purposes
+Assigning grades for the purposes of providing you, other teachers, school officials, students, parents, postsecondary educational institutions, and potential employers with a report about how well a student has achieved the curriculum learning targets.
 
-grammatical clue A type of multiple-choice and matching item flaw in which the correct grammatical relationship between words in the stem and words in the correct alternate clue the examinee as to which alternative is correct. Similarly, incorrect grammatical relationships between words in the stem and distractors clue the examinee that those distractors can be eliminated from consideration.
+## grading framework
+A logically consistent way of conceptualizing the meaning of grades that is well-reasoned and consistent with your teaching approach.
+
+## grading on the curve
+A method for assigning grades that ranks students’ marks from highest to lowest, and assigns grades (A, B, C, etc.) on the basis of this ranking. See ranking scores.
+
+## grading variables
+The subset of variables, selected from among all the reporting variables, on which you may base your grades (Frisbie & Waltman, 1992). You use the grading variables to describe a student’s accomplishments in the subject. See reporting variables.
+
+## grammatical clue
+A type of multiple-choice and matching item flaw in which the correct grammatical relationship between words in the stem and words in the correct alternate clue the examinee as to which alternative is correct. Similarly, incorrect grammatical relationships between words in the stem and distractors clue the examinee that those distractors can be eliminated from consideration.
 
 ## graph and table reading abilities
 The abilities needed to understand and use information presented in a table or a graph.
@@ -20451,8 +22101,6 @@ See self-referenced grading framework.
 ## habits of mind
 The types of learning targets that ask students to demonstrate their ability for self-regulation, critical thinking.
 
-A desirable item-writing practice in which each alternative of a multiple-choice or matching exercise is a member of the same set of "things," and each alternative is appropriate to the question asked or problem posed by the stem or premises.
-
 ## homogeneous tasks
 All of those tasks in one assessment that measure the same trait or ability.
 
@@ -20468,355 +22116,552 @@ A way of organizing general problem-solving skills into a five-stage process (Br
 - L Look back and evaluate the effects of your activities
 
 ## identifying assumptions
-The ability to identify the unstated bases that are part of someone's reasoning about what to believe or do. A part of what is meant by critical thinking without consulting or collaborating with each other.
-
-## indirect assessment
-A type of assessment that assesses part of the entire learning target or assesses the learning target in a context that is not intended by the learning target. See direct assessment.
-
-## individual education plan (IEP)
-An educational plan designed by a child study team (including a teacher) and agreed to by the student's parents or guardians describing what learning targets the student should attain, the time frame for attaining them, the proposed methods for attaining them, and the methods of evaluating the student's progress in achieving the learning targets.
-
-## informal assessment techniques
-Impromptu methods you use to gather information that guides and fine-tunes your thinking while you are teaching, to plan your next teaching activities, and to diagnose the causes of students' learning difficulties.
-
-## information processing
-A category of learning targets requiring students to demonstrate different ways of gathering, synthesizing, and/or evaluating information needed for a particular purpose.
-
-## informed consent
-Giving approval to release information or participate in an activity after understanding (1) the extent to which personal information will remain anonymous, (2) the extent participation is voluntary, (3) who (or what agency) is requesting the information and for what purpose, and (4) what will happen to the information after it is collected.
 
 
 
-in-level versus out-of-level testing 使用为特定年级设计的标准化测试对高于或低于该年级的学生进行测试即为跨级测试；否则，测试为同级测试。
-instructional features of an assessment procedure 允许评估用于课堂教学的特征。
-instructional objective 见具体学习目标。
-intensity of attitude 见态度方向与强度。
-internal structure 聚焦于评估中各任务（题目）之间的相互关系以及各任务与总分之间的关系的效度证据。另见外部结构。
-interpolation 在两个已知数之间寻找未知数 的过程。在估计未在标准化成就测试的经验常模日期接受测试的学生 的年级当量分数时被广泛使用。
-interpretive exercises 一组题目或评估任务，要求学生使用阅读材料、图表、表格、图片或其他材料来回答题目。见解释性材料。
-interpretive materials 伴随一组题目并供应试者用来回答题目所提出的问题或问题的阅读材料、图表、图片、表格或其他材料。
-interquartile range 第三四分位数与第一四分位数之差。它是中间 50% 分数所跨的范围。见四分位数。
-inter-rater reliability 当想研究学生如果由不同的教师评分或评定表现是否会得到相同分数时所使用的估计信度的程序。
-inventoried interests 通过各种纸笔测验或兴趣清单识别出的职业和专业兴趣。见兴趣、表达兴趣、表现兴趣和测验兴趣。
-IRT pattern score 由拟合出版商样本学生题目反应 的数学方程推导出的常模参照扩展量表分数。
-item 见任务（题目）。
-item analysis 收集、汇总并使用学生题目反应信息以便对每个题目 的功能做出决策的过程。
-item analysis report (on a standardized test) 一份报告，显示每个年级有多少比例的学生正确回答了标准化测试中的每个题目。
-item bank 通常连同每个题目的统计数据一起保存的已使用题目文件，可用于创建新测试。
-item difficulty index (p and p*) 正确回答二分计分题目 的总体的比例。对构思回答和表现题目的题目难度，用 p* 表示，仅仅是该题目组的平均分数。
-item difficulty level 见题目难度指数。
-item discrimination index (D and D’) 对于二分计分题目，D 是答对题目的上组比例与答对题目的下组比例之差。区分指数描述了特定测试题目区分高分学生与低分学生 的程度。见上组和下组。
-item file 见题目库。
-item response theory (IRT) score 见 IRT 模式分数。
+The ability to identify the unstated bases that are part of someone's reasoning about what to believe or do. A part of what is meant by critical theory (IRT) score 见 IRT 模式分数。
+
 interests 人在不受外部压力时对特定类型活动的偏好。见态度和价值观。
+
 judging credibility 评估某人支持其立场时所使用证据质量的能力。
+
 judging deductions 应用逻辑的能力。学生的任务是根据说明中描述的标准将每个前提与其中一个反应相匹配。
+
 maximum performance assessment 在你设定条件使学生能够获得其最佳分数时对学生进行评估。见典型表现评估。
+
 MAZE item type 阅读理解评估，是闭合阅读练习的多项选择改编形式。见闭合阅读练习。
+
 mean 通过将所有分数相加并除以其数量求得的平均分数。也称为算术平均数。
+
 meaningfully arranged alternatives 将多项选择或匹配练习的备选答案按逻辑、数字或字母顺序排列，使其对考生更清晰。
+
 measurement 为将数字（通常称为分数）分配给人的特定属性或特征而设定的程序，以这种方式数字描述了人拥有该属性的程度。见评估、评价和测验。
+
 median 分数量表上 50% 的分数在其下方且 50% 的分数在其上方的点。
+
 mental age 学生在学业能力测试上得分平均的年龄。该概念已不再用于现代学业能力测试。
+
 Mental Measurements Yearbooks (MMY) 由布罗斯心理测量研究所出版的一套卷册，其中包含用英语出版的测验的评述。
+
 mental model 在尝试解决问题之前一个人对问题在心理上的表征或特征化方式。
+
 minimum assessment-taking skills 学生需要学习以便在评估中取得最佳成绩的关于测试期间如何行动的技能。
+
 miskeyed items 答案密钥中指定为正确答案是错误的题目。如果较大数量的上组学生选择某个特定错误答案，题目可能被误标。
+
 modal-age norms 仅包括在特定年级水平上接近该年级最典型实际年龄的学生 的常模。
+
 mode 分布中最常出现的分数。
+
 multilevel survey battery 在每个学校科目中跨越广泛年级范围的标准化测试调查组合。见单级调查组合。
+
 multiple marking system 使用多种符号和标记向学生和家长报告教育进展总结性评价的系统。多标记系统通常以成绩单形式出现，并报告学业成绩、出勤、品行和非学业成绩。
+
 multiple true-false variety of true-false items 这种格式看起来与多项选择题相似。然而，与选择一个正确选项不同，学生将每个选项视为单独的真假陈述。
-multiple-aptitude tests 评估几种不同能力并为每种能力提供能力分数的测验。见综合测验和双分数测验。
-multiple-assessment strategy 结合几种不同类型评估的结果（例如家庭作业、课堂表现、测验、项目和测试）以提高对学生成就决策效度的策略。
-multiple-choice item 这种题目格式由提出问题或设定问题的题干和两个或更多用于回答问题或解决问题的反应选择组成。只有其中一个反应选择是正确或最佳答案。
-multiple-intelligences assessment menu 按加德纳理论中每种智力类型对应一种方式组织的学生评估替代方式清单。
-multiple-intelligences theory 霍华德·加德纳（1983、1991、1993）的理论认为所有人并非只有一种智力，而是八种智力，尽管有些人在某些方面比其他方面更强。
-narrative report method of reporting student progress 详细书面报告，描述每个学生在学校课程框架下学到了什么以及学生在课堂上的努力程度。
-narrative writing 一种写作类型，作者描述真正发生的事情，通常是作者的个人经历。
 
 
 
-national percentile rank 学生在参加测试的全国样本学生中的百分位排名。
-naturally occurring performance 并非应教师或学校当局要求而进行的表现，而是在日常活动正常过程中发生的表现。
-NCE-score 参见 normal curve equivalent。
-negative correlation 两组分数之间的一种关系类型，当在一项测评中得分高时，在另一项测评中得分低；在一项中得分低则在另一项中得分高。另见 correlation coefficient 和 positive correlation。
-negatively discriminating item 高分学生倾向于答错而低分学生倾向于答对的题目。
-negatively skewed distribution 分数频率分布中，分数集中在分数尺度的上端，并在下端稀疏分布。参见 positively skewed distribution。
-negatively worded stem 包含“not”或其他否定词的多选题题干。例如，“以下哪位人士并未发明轧棉机？”
-nondiscriminating item 正确区分数等于错误区分数的题目（因此相等数量的上组和下组学生答对该题）。
-none of the above 表示题干提出的问题或问题的正确答案并非前述备选答案中的任何一个的多选题备选。
-non-paper-and-pencil task 表现并非主要通过学生书面反应来评估的测评任务。
-nonverbal tests 引发并评估非语言反应的测试，如组装物体、完成实验、执行心理运动活动等。参见 verbal tests 和 performance assessments。
-norm group (local, national, special) 在相同条件下接受相同测评的明确界定的学生群体（相同的时间限制、指导、设备和材料等）。参见 special norms。
-normal curve equivalent (NCE) 一种标准化标准分数，均值为 50，标准差为 21.06。选择该标准差是为了使 NCE 分数跨度为 1 到 99。它主要用于联邦项目评估工作（Tallmadge & Wood, 1976）。
-normal distributions 一组理论分布，通过特殊数学公式呈现钟形且单峰的形式。
-normal growth (grade-equivalent view, percentile rank view) 正常成长的年级当量观认为，学生应从一个年级到下一个年级增长 1.0 个年级当量单位。在此观点下，例如在二年级测试中得分 1.3 的学生，若要在三年级显示“正常”或预期成长，则需在三年级得分 2.3，在五年级得分 4.3，依此类推。正常成长的百分位排名观认为，如果学生每年在常模中的位置（即百分位排名）保持不变，则显示正常成长。
-normalized standard scores (z, T, DIQ, NCE, SAT) 一类分数，其中原始分数已被更改或转换成分布更接近正态分布的其他分数。
-normalizing a set of scores 将分布中的原始原始分数转换成分布更接近正态分布的新分数集的过程。
-norm-referenced grading framework 根据学生表现（成绩）与其他同学相比的情况来分配成绩的框架：表现优于大多数同学的学生获得较高的成绩。
-norm-referencing 通过将学生的分数与在相同测试中接受测试的明确界定群体中其他学生的表现进行比较来解释学生分数的框架。
-novel material 应用先前学习知识或技能的新情境、问题或背景。
-numbers method of reporting student progress 对学生在各科目的成绩进行总结性评价，并使用数字（例如 5、4、3、2、1）或百分比报告。
-numerical rating scale 必须将质量或成就程度的判断在心理上转化为数值评级的量表。
-objectivity 两个或多个合格评估者对学生表现的质量评级或分数达成一致的程度。
-obtained score 学生在评估中实际获得的分数。这些分数包括开放式任务（如论文）的评级、多选或简答测试的答对题数，以及常模参照标准化测试的标准分数或年级当量分数。参见 error score 和 true score。
-odd-even split halves reliability coefficient 当关注同一场合下不同内容样本分数的一致性但未构建平行形式时，用于估计信度的程序。将一项测试的题目分为两组——奇数题一组，偶数题一组，从这两组估计全测试信度。参见 Spearman-Brown double length formula 和 split-halves reliability coefficient
-omnibus test 一种包含评估构成一般学业能力的几种不同能力的题目的测试，但只报告单一分数。参见 multiple-aptitude tests 和 two-score tests。
-on-demand task 教师或其他权威决定使用何种材料以及何时使用，规定表现的指导，描述学生应努力达到的结果类型，告知学生正在接受评估，并给学生机会为评估做好准备的评估。
-online services 用于查找测试、测试评论和其他评估信息的互联网服务。
-open-response task 允许多种正确答案的评估任务。参见 closed-response task。
-optional essay questions 向学生提供几篇不同的论文并允许他们选择要回答哪一篇或几篇。
-options 参见 alternatives。
-oral presentation 允许学生以访谈、演讲或其他口语活动形式口头表达其知识并使用其口语技能的表现性评估任务。
-overgeneralizing a concept 将概念名称用于与概念类别成员相似但实际上不属于该类别的事物。
-overinterpreting score differences 过分强调学生在一次测试中的所得分数的微小差异或学生在两次不同测试中的所得分数的微小差异。
-overlapping alternatives 多选题编写缺陷的一种类型，其中一个备选的含义与另一个备选的含义重叠或包含另一个备选的含义。
-paper-and-pencil assessments 学生对其问题作书面反应的评估技术。书面家庭作业、课堂作业和测试是典型的纸笔评估技术。
-paper-and-pencil task 学生通过书写来回答评估格式的格式，不仅记录答案，还给出解释、阐述其推理并表达其解决问题的方法。有时称为纸笔任务。
-parallel forms 两个（版本）评估形式，其任务根据同一蓝图仔细匹配，以便测试尽可能相似，即使它们没有任何共同的题目。
-parent-teacher conferences method of reporting student progress 教师与家长之间就学生各科成绩进行总结性报告的个人会议。
-partial credit 因为学生的反应部分正确而给予学生题目最大可能分数的一部分。
-partial knowledge 学生拥有的并用于回答题目的不完整知识。
-partial ordering of students 将学生分为两个或更多类别；类别本身是有序的，但类别内的个人之间没有顺序。
-passage dependency 阅读理解测试中题目正确答案取决于学生是否实际阅读并理解文章的程度。
-passing score 识别出已达到进一步学习该主题所需最低知识水平的学生的分数。这可能因学习目标而异。
-Pearson product-moment correlation coefficient 一种相关系数，是成对分数集中对应线性 z 分数的平均乘积。用 ρ 或 r 表示。参见 correlation coefficient。
-people-similarity rationale for assessing interests 描述个人兴趣的传统观点，其依据是“如果一个人喜欢与某个职业中的人喜欢的东西相同，那么这个人会满意于该职业”（Cole & Hanson, 1975, p. 6）。
-percentage of agreement 两个独立评判者做出的决定一致性的指标。它是两个评判者做出相同决定的学生所占的百分比。
-percentages method of reporting student progress 对学生在各科目的成绩进行总结性评价，并使用学校作业正确标记的平均百分比。
-percentile ranks 一种常模参照分数，说明在常模群体中低于特定原始分数的人所占的百分比。参见 local percentile rank 和 national percentile rank。
-perfect matching 当匹配练习中前提陈述和响应陈述的数量相等时。
-performance assessment 任何要求学生实际执行复杂、延长的过程（如口头提出论点、演奏乐器或攀爬结绳）或生产重要产品（如写诗、实验报告或创作绘画）的评估技术。任务的复杂性将表现性评估与典型的纸笔评估中发现的简短答案、去情境化数学问题或简短（一节课）论文任务区分开来。
-performance standards 关于学生在学习内容标准后能够执行或做到的事情的陈述。另见 content standards 和 standards。
-performance task 表现性评估中的一项活动或题目。参见 performance assessment。
-permanent record card 按年级记录学生各科成绩及其在特定学校出勤情况的官方总结性记录。
-personal bias 一种评级错误类型，发生在教师有普遍倾向使用不当或无关的刻板印象，偏爱男孩胜过女孩，白人胜过黑人，工薪家庭胜过福利领取者，或教师喜欢的特定家庭和个别学生胜过教师可能不喜欢的其他人时。
-persuasive writing 一种写作类型，作者试图说服读者接受作者的观点。作者可能希望读者接受其想法或采取作者支持的某些行动。
-pictorial reasoning 使用图片进行推理的能力。例如，推断图片中物体之间的关系，识别图片之间的相似性和差异，并识别进展并预测进展中的下一张图片。
-placement decision 将人员分配到同一一般类型教学、教育或工作的不同水平上的决定；没有人被拒绝，所有人仍留在机构内被分配到某个水平（Cronbach, 1990; Cronbach & Gleser, 1965）。另见 classification decision 和 selection decision。
-plausible distractors 多选题或匹配练习中对不太了解的学生来说似乎正确的错误备选。
-poorly functioning distractor 多选题中几乎没有低分组学生选择的干扰项。
-portfolio 用于评估目的的学生作品的有限集合，用于展示学生的最佳作品或展示学生在给定时间段内的教育成长。
-portfolio culture model 一种教学方法，主张学生的作品集成为教师教学计划和教学活动的中心，以便教师和学生能够与作品集内容进行密集互动（Duschl & Gitomer, 1991; Niyogi, 1995）。
-portfolio entry sheet (caption) 作品集中每个条目的单页，包含以下信息：学生姓名、条目日期、条目标题或描述、包含该条目的学习目标或目的的某些说明，以及为何该特定条目重要或有价值。
-positive correlation 两组分数之间的一种关系类型，当在一项测评中得分高时，在另一项测评中得分也高；在一项中得分低则在另一项中得分也低。另见 correlation coefficient 和 negative correlation。
-positive or negative consequences of decisions 学生因参加评估而发生的事情。积极后果意味着发生一些期望的事情（如在阅读方面获得额外帮助）；消极后果意味着发生一些不期望的事情（如因需要阅读额外帮助而被贴上“愚蠢”的标签）。
+## `multiple-aptitude tests`
+评估几种不同能力并为每种能力提供能力分数的测验。见综合测验和双分数测验。
+
+## `multiple-assessment strategy`
+结合几种不同类型评估的结果（例如家庭作业、课堂表现、测验、项目和测试）以提高对学生成就决策效度的策略。
+
+## `multiple-choice item`
+这种题目格式由提出问题或设定问题的题干和两个或更多用于回答问题或解决问题的反应选择组成。只有其中一个反应选择是正确或最佳答案。
+
+## `multiple-intelligences assessment menu`
+按加德纳理论中每种智力类型对应一种方式组织的学生评估替代方式清单。
+
+## `multiple-intelligences theory`
+霍华德·加德纳（1983、1991、1993）的理论认为所有人并非只有一种智力，而是八种智力，尽管有些人在某些方面比其他方面更强。
+
+## `narrative report method of reporting student progress`
+详细书面报告，描述每个学生在学校课程框架下学到了什么以及学生在课堂上的努力程度。
+
+## `narrative writing`
+一种写作类型，作者描述真正发生的事情，通常是作者的个人经历。
+
+## `national percentile rank`
+学生在参加测试的全国样本学生中的百分位排名。
+
+## `naturally occurring performance`
+并非应教师或学校当局要求而进行的表现，而是在日常活动正常过程中发生的表现。
+
+## `NCE-score`
+参见 `normal curve equivalent`。
+
+## `negative correlation`
+两组分数之间的一种关系类型，当在一项测评中得分高时，在另一项测评中得分低；在一项中得分低则在另一项中得分高。另见 `correlation coefficient` 和 `positive correlation`。
+
+## `negatively discriminating item`
+高分学生倾向于答错而低分学生倾向于答对的题目。
+
+## `negatively skewed distribution`
+分数频率分布中，分数集中在分数尺度的上端，并在下端稀疏分布。参见 `positively skewed distribution`。
+
+## `negatively worded stem`
+包含“not”或其他否定词的多选题题干。例如，“以下哪位人士并未发明轧棉机？”
+
+## `nondiscriminating item`
+正确区分数等于错误区分数的题目（因此相等数量的上组和下组学生答对该题）。
+
+## `none of the above`
+表示题干提出的问题或问题的正确答案并非前述备选答案中的任何一个的多选题备选。
+
+## `non-paper-and-pencil task`
+表现并非主要通过学生书面反应来评估的测评任务。
+
+## `nonverbal tests`
+引发并评估非语言反应的测试，如组装物体、完成实验、执行心理运动活动等。参见 `verbal tests` 和 `performance assessments`。
+
+## `norm group (local, national, special)`
+在相同条件下接受相同测评的明确界定的学生群体（相同的时间限制、指导、设备和材料等）。参见 `special norms`。
+
+## `normal curve equivalent (NCE)`
+一种标准化标准分数，均值为 50，标准差为 21.06。选择该标准差是为了使 NCE 分数跨度为 1 到 99。它主要用于联邦项目评估工作（Tallmadge & Wood, 1976）。
+
+## `normal distributions`
+一组理论分布，通过特殊数学公式呈现钟形且单峰的形式。
+
+## `normal growth (grade-equivalent view, percentile rank view)`
+正常成长的年级当量观认为，学生应从一个年级到下一个年级增长 1.0 个年级当量单位。在此观点下，例如在二年级测试中得分 1.3 的学生，若要在三年级显示“正常”或预期成长，则需在三年级得分 2.3，在五年级得分 4.3，依此类推。正常成长的百分位排名观认为，如果学生每年在常模中的位置（即百分位排名）保持不变，则显示正常成长。
+
+## `normalized standard scores (z, T, DIQ, NCE, SAT)`
+一类分数，其中原始分数已被更改或转换成分布更接近正态分布的其他分数。
+
+## `normalizing a set of scores`
+将分布中的原始原始分数转换成分布更接近正态分布的新分数集的过程。
+
+## `norm-referenced grading framework`
+根据学生表现（成绩）与其他同学相比的情况来分配成绩的框架：表现优于大多数同学的学生获得较高的成绩。
+
+## `norm-referencing`
+通过将学生的分数与在相同测试中接受测试的明确界定群体中其他学生的表现进行比较来解释学生分数的框架。
+
+## `novel material`
+应用先前学习知识或技能的新情境、问题或背景。
+
+## `numbers method of reporting student progress`
+对学生在各科目的成绩进行总结性评价，并使用数字（例如 5、4、3、2、1）或百分比报告。
+
+## `numerical rating scale`
+必须将质量或成就程度的判断在心理上转化为数值评级的量表。
+
+## `objectivity`
+两个或多个合格评估者对学生表现的质量评级或分数达成一致的程度。
+
+## `obtained score`
+学生在评估中实际获得的分数。这些分数包括开放式任务（如论文）的评级、多选或简答测试的答对题数，以及常模参照标准化测试的标准分数或年级当量分数。参见 `error score` 和 `true score`。
+
+## `odd-even split halves reliability coefficient`
+当关注同一场合下不同内容样本分数的一致性但未构建平行形式时，用于估计信度的程序。将一项测试的题目分为两组——奇数题一组，偶数题一组，从这两组估计全测试信度。参见 `Spearman-Brown double length formula` 和 `split-halves reliability coefficient`。
+
+## `omnibus test`
+一种包含评估构成一般学业能力的几种不同能力的题目的测试，但只报告单一分数。参见 `multiple-aptitude tests` 和 `two-score tests`。
+
+## `on-demand task`
+教师或其他权威决定使用何种材料以及何时使用，规定表现的指导，描述学生应努力达到的结果类型，告知学生正在接受评估，并给学生机会为评估做好准备的评估。
+
+## `online services`
+用于查找测试、测试评论和其他评估信息的互联网服务。
+
+## `open-response task`
+允许多种正确答案的评估任务。参见 `closed-response task`。
+
+## `optional essay questions`
+向学生提供几篇不同的论文并允许他们选择要回答哪一篇或几篇。
+
+## `options`
+参见 `alternatives`。
+
+## `oral presentation`
+允许学生以访谈、演讲或其他口语活动形式口头表达其知识并使用其口语技能的表现性评估任务。
+
+## `overgeneralizing a concept`
+将概念名称用于与概念类别成员相似但实际上不属于该类别的事物。
+
+## `overinterpreting score differences`
+过分强调学生在一次测试中的所得分数的微小差异或学生在两次不同测试中的所得分数的微小差异。
+
+## `overlapping alternatives`
+多选题编写缺陷的一种类型，其中一个备选的含义与另一个备选的含义重叠或包含另一个备选的含义。
+
+## `paper-and-pencil assessments`
+学生对其问题作书面反应的评估技术。书面家庭作业、课堂作业和测试是典型的纸笔评估技术。
+
+## `paper-and-pencil task`
+学生通过书写来回答评估格式的格式，不仅记录答案，还给出解释、阐述其推理并表达其解决问题的方法。有时称为纸笔任务。
+
+## `parallel forms`
+两个（版本）评估形式，其任务根据同一蓝图仔细匹配，以便测试尽可能相似，即使它们没有任何共同的题目。
+
+## `parent-teacher conferences method of reporting student progress`
+教师与家长之间就学生各科成绩进行总结性报告的个人会议。
+
+## `partial credit`
+因为学生的反应部分正确而给予学生题目最大可能分数的一部分。
+
+## `partial knowledge`
+学生拥有的并用于回答题目的不完整知识。
+
+## `partial ordering of students`
+将学生分为两个或更多类别；类别本身是有序的，但类别内的个人之间没有顺序。
+
+## `passage dependency`
+阅读理解测试中题目正确答案取决于学生是否实际阅读并理解文章的程度。
+
+## `passing score`
+识别出已达到进一步学习该主题所需最低知识水平的学生的分数。这可能因学习目标而异。
+
+## `Pearson product-moment correlation coefficient`
+一种相关系数，是成对分数集中对应线性 z 分数的平均乘积。用 `ρ` 或 `r` 表示。参见 `correlation coefficient`。
 
 
 
-- **正向区分项目** 指高分段学生中在该项目上获得高分的人数比例大于低分段学生中在该项目上获得高分的人数比例的项目。
-- **正偏态分布** 一种分数频数分布，其中分数集中在分数量表低端，向分数量表高端稀疏延伸。参见负偏态分布。
-- **预测效度证据** 一种外部结构效度证据，显示个体在某一标准上的未来表现可从其在评估工具上的先前表现预测的程度。另见同时效度证据和外部结构。
-- **教学前单元评估框架** 一种帮助评估即将进行的单元的认知和情感学习目标的计划。
-- **前提，前提列表** 匹配题中最左侧的陈述或元素列表。
-- **先备知识与技能缺陷评估** 一种诊断性评估方法，用于确定学生在能够从新教学中获益之前需要知道什么。该方法使用任务分析来识别入门要求，也可能识别先备知识的学习层级。参见学习层级评估。
-- **写前活动** 在写作之前，作者明确写作目的，开始整理思路、头脑风暴并尝试新的想法。作者与他人讨论这些想法，决定写作的形式和方法，并确定主要受众。于是形成了作品的计划。
-- **原理** 描述该做什么或两个概念之间关系的规则。
-- **匹配题中受原则支配的选项** 在编制练习题时，此列表放置在前提列表的右侧。参见前提。
-- **限制性回答论述题** 限制或限定书面回答的实质内容和形式的论述题提示或指令。
-- **正误型判断题** 这种题型呈现一个计算、方程式或语言句子，让学生判断其正确或错误（对或错）。
-- **角色刻板印象** 评估材料中对种族或男性和女性在过度简化的活动或工作角色中的描绘，这种描绘给人留下这些人的能力在某些方面受限的印象。
-- **评分细则评分法** 参见质量水平评分法。
-- **评分细则** 一套连贯的规则，用于评价学生表现的质量：它们指导你的判断，并确保你对每个学生一致地应用这些规则。另见核查表和评定量表。
-- **S.O.A.P.** 是以下要素的首字母缩写，这些要素应出现在提示中，以激发学生写出好文章（Albertson, 1998）：
-    - **主题（S）**——告知学生该作品应该涉及谁或什么。
-    - **场合（O）**——告知学生需要写作的场合或情境是什么。
-    - **受众（A）**——告知学生目标受众是谁。
-    - **目的（P）**——告知学生目的应该是什么：是告知或叙述？是想象？还是说服？
-- **SAT分数** 来自均值为500、标准差为100的分布的正态标准分数。
-- **脚手架** 学生在着手完成任务时，你所提供的支持、指导和引导的程度。
-- **散点图** 将配对分数绘制于其上以显示它们关系的图形。
-- **情景** 一种评估技术，呈现一个现实情境并评估学生在该情境中的表现。
-- **图式** 知识通过相互关联的概念、信息、规则、问题解决策略和行动条件网络在我们头脑中表征的方式（Marshall, 1990）。
-- **图式驱动的问题解决** 当一个人认识到某个特定问题是我们现有图式的一部分或与之非常相似，并运用存储在该图式中的解决策略来解决新问题时，即为图式驱动的问题解决（Gick, 1986）。参见图式。
-- **图式知识评估** 一种诊断性评估方法，用于确定学生是否已形成问题的内部表征或模型。参见问题解决的组成能力。
-- **学校平均分数常模** 在全国学校样本中，对每所学校的平均分数进行列表，提供这些平均值相对排序的信息。
-- **分数带** 参见不确定区间。
-- **评分者信度** 参见评分者间信度和决策一致性。
-- **评分标准答案** 一种评分细则或规则列表，显示正确答案以及可获得不同分值的部分正确答案类型。
-- **评分细则** 参见评分细则。
-- **选拔决策** 一种决策，机构或组织决定某些人可被接受而另一些人则不可；不可接受者被拒绝，不再属于该机构或组织关注的范围。另见分类决策和安置决策。
-- **自我评价核查表** 学生用来评价自己表现的核查表。
-- **自我参照评分框架** 通过将学生的表现与教师对其能力的感知进行比较来给定等级。
-- **过严误差** 当教师倾向于将几乎所有评分都放在量尺低端时出现的评分误差。它是过宽误差的反面。参见过宽误差。
-- **短期表现任务** 可在不超过一节课的时间内完成的表现任务。参见长期表现任务。
-- **简答题型** 这种题型要求学生用一个词、短语、数字或符号作答。
+## people-similarity rationale for assessing interests
+描述个人兴趣的传统观点，其依据是“如果一个人喜欢与某个职业中的人喜欢的东西相同，那么这个人会满意于该职业”（Cole & Hanson, 1975, p. 6）。
+
+## percentage of agreement
+两个独立评判者做出的决定一致性的指标。它是两个评判者做出相同决定的学生所占的百分比。
+
+## percentages method of reporting student progress
+对学生在各科目的成绩进行总结性评价，并使用学校作业正确标记的平均百分比。
+
+## percentile ranks
+一种常模参照分数，说明在常模群体中低于特定原始分数的人所占的百分比。参见 local percentile rank 和 national percentile rank。
+
+## perfect matching
+当匹配练习中前提陈述和响应陈述的数量相等时。
+
+## performance assessment
+任何要求学生实际执行复杂、延长的过程（如口头提出论点、演奏乐器或攀爬结绳）或生产重要产品（如写诗、实验报告或创作绘画）的评估技术。任务的复杂性将表现性评估与典型的纸笔评估中发现的简短答案、去情境化数学问题或简短（一节课）论文任务区分开来。
+
+## performance standards
+关于学生在学习内容标准后能够执行或做到的事情的陈述。另见 content standards 和 standards。
+
+## performance task
+表现性评估中的一项活动或题目。参见 performance assessment。
+
+## permanent record card
+按年级记录学生各科成绩及其在特定学校出勤情况的官方总结性记录。
+
+## personal bias
+一种评级错误类型，发生在教师有普遍倾向使用不当或无关的刻板印象，偏爱男孩胜过女孩，白人胜过黑人，工薪家庭胜过福利领取者，或教师喜欢的特定家庭和个别学生胜过教师可能不喜欢的其他人时。
+
+## persuasive writing
+一种写作类型，作者试图说服读者接受作者的观点。作者可能希望读者接受其想法或采取作者支持的某些行动。
+
+## pictorial reasoning
+使用图片进行推理的能力。例如，推断图片中物体之间的关系，识别图片之间的相似性和差异，并识别进展并预测进展中的下一张图片。
+
+## placement decision
+将人员分配到同一一般类型教学、教育或工作的不同水平上的决定；没有人被拒绝，所有人仍留在机构内被分配到某个水平（Cronbach, 1990; Cronbach & Gleser, 1965）。另见 classification decision 和 selection decision。
+
+## plausible distractors
+多选题或匹配练习中对不太了解的学生来说似乎正确的错误备选。
+
+## poorly functioning distractor
+多选题中几乎没有低分组学生选择的干扰项。
+
+## portfolio
+用于评估目的的学生作品的有限集合，用于展示学生的最佳作品或展示学生在给定时间段内的教育成长。
+
+## portfolio culture model
+一种教学方法，主张学生的作品集成为教师教学计划和教学活动的中心，以便教师和学生能够与作品集内容进行密集互动（Duschl & Gitomer, 1991; Niyogi, 1995）。
+
+## portfolio entry sheet (caption)
+作品集中每个条目的单页，包含以下信息：学生姓名、条目日期、条目标题或描述、包含该条目的学习目标或目的的某些说明，以及为何该特定条目重要或有价值。
+
+## positive correlation
+两组分数之间的一种关系类型，当在一项测评中得分高时，在另一项测评中得分也高；在一项中得分低则在另一项中得分也低。另见 correlation coefficient 和 negative correlation。
+
+## positive or negative consequences of decisions
+学生因参加评估而发生的事情。积极后果意味着发生一些期望的事情（如在阅读方面获得额外帮助）；消极后果意味着发生一些不期望的事情（如因需要阅读额外帮助而被贴上“愚蠢”的标签）。
+
+- `正向区分项目` 指高分段学生中在该项目上获得高分的人数比例大于低分段学生中在该项目上获得高分的人数比例的项目。
+- `正偏态分布` 一种分数频数分布，其中分数集中在分数量表低端，向分数量表高端稀疏延伸。参见负偏态分布。
+- `预测效度证据` 一种外部结构效度证据，显示个体在某一标准上的未来表现可从其在评估工具上的先前表现预测的程度。另见同时效度证据和外部结构。
+- `教学前单元评估框架` 一种帮助评估即将进行的单元的认知和情感学习目标的计划。
+- `前提，前提列表` 匹配题中最左侧的陈述或元素列表。
+- `先备知识与技能缺陷评估` 一种诊断性评估方法，用于确定学生在能够从新教学中获益之前需要知道什么。该方法使用任务分析来识别入门要求，也可能识别先备知识的学习层级。参见学习层级评估。
+- `写前活动` 在写作之前，作者明确写作目的，开始整理思路、头脑风暴并尝试新的想法。作者与他人讨论这些想法，决定写作的形式和方法，并确定主要受众。于是形成了作品的计划。
+- `原理` 描述该做什么或两个概念之间关系的规则。
+- `匹配题中受原则支配的选项` 在编制练习题时，此列表放置在前提列表的右侧。参见前提。
+- `限制性回答论述题` 限制或限定书面回答的实质内容和形式的论述题提示或指令。
+- `正误型判断题` 这种题型呈现一个计算、方程式或语言句子，让学生判断其正确或错误（对或错）。
+- `角色刻板印象` 评估材料中对种族或男性和女性在过度简化的活动或工作角色中的描绘，这种描绘给人留下这些人的能力在某些方面受限的印象。
+- `评分细则评分法` 参见质量水平评分法。
+- `评分细则` 一套连贯的规则，用于评价学生表现的质量：它们指导你的判断，并确保你对每个学生一致地应用这些规则。另见核查表和评定量表。
+- `S.O.A.P.` 是以下要素的首字母缩写，这些要素应出现在提示中，以激发学生写出好文章（Albertson, 1998）：
+    - `主题（S）`——告知学生该作品应该涉及谁或什么。
+    - `场合（O）`——告知学生需要写作的场合或情境是什么。
+    - `受众（A）`——告知学生目标受众是谁。
+    - `目的（P）`——告知学生目的应该是什么：是告知或叙述？是想象？还是说服？
+- `SAT分数` 来自均值为500、标准差为100的分布的正态标准分数。
+- `脚手架` 学生在着手完成任务时，你所提供的支持、指导和引导的程度。
+- `散点图` 将配对分数绘制于其上以显示它们关系的图形。
+- `情景` 一种评估技术，呈现一个现实情境并评估学生在该情境中的表现。
+- `图式` 知识通过相互关联的概念、信息、规则、问题解决策略和行动条件网络在我们头脑中表征的方式（Marshall, 1990）。
+- `图式驱动的问题解决` 当一个人认识到某个特定问题是我们现有图式的一部分或与之非常相似，并运用存储在该图式中的解决策略来解决新问题时，即为图式驱动的问题解决（Gick, 1986）。参见图式。
+- `图式知识评估` 一种诊断性评估方法，用于确定学生是否已形成问题的内部表征或模型。参见问题解决的组成能力。
+- `学校平均分数常模` 在全国学校样本中，对每所学校的平均分数进行列表，提供这些平均值相对排序的信息。
+- `分数带` 参见不确定区间。
+- `评分者信度` 参见评分者间信度和决策一致性。
+- `评分标准答案` 一种评分细则或规则列表，显示正确答案以及可获得不同分值的部分正确答案类型。
+- `评分细则` 参见评分细则。
+- `选拔决策` 一种决策，机构或组织决定某些人可被接受而另一些人则不可；不可接受者被拒绝，不再属于该机构或组织关注的范围。另见分类决策和安置决策。
+- `自我评价核查表` 学生用来评价自己表现的核查表。
+- `自我参照评分框架` 通过将学生的表现与教师对其能力的感知进行比较来给定等级。
+- `过严误差` 当教师倾向于将几乎所有评分都放在量尺低端时出现的评分误差。它是过宽误差的反面。参见过宽误差。
+- `短期表现任务` 可在不超过一节课的时间内完成的表现任务。参见长期表现任务。
+- `简答题型` 这种题型要求学生用一个词、短语、数字或符号作答。
+- `短期记忆分测验`：评估一个人在听到、看到或读到图案、物体、单词和数字后立即记住它们的能力的测验。
+- `模拟`：在受控条件下发生的、试图模仿自然发生事件的按需活动。
+- `单水平测试`：仅在某个年级水平或较窄年级范围内使用的标准化调查测验组。参见多水平调查测验组。
+- `写作六加一特质®`：一种用于评估一般写作能力的框架和评分细则，通过七个写作特质来评价学生的每篇文章：想法、组织、语态、措辞、句子流畅度、规范性和呈现。
 
 
 
--   **短期记忆分测验**：评估一个人在听到、看到或读到图案、物体、单词和数字后立即记住它们的能力的测验。
--   **模拟**：在受控条件下发生的、试图模仿自然发生事件的按需活动。
--   **单水平测试**：仅在某个年级水平或较窄年级范围内使用的标准化调查测验组。参见多水平调查测验组。
--   **写作六加一特质®**：一种用于评估一般写作能力的框架和评分细则，通过七个写作特质来评价学生的每篇文章：想法、组织、语态、措辞、句子流畅度、规范性和呈现。
--   **初步了解用途**：在课程或学年开始时，利用评估信息对学生的优势、劣势、学习特点和个性形成总体印象。
--   **偏态分布**：对频数分布的一种描述，其中分数堆积在分数尺度的一端，而向另一端稀疏延伸。参见负偏态分布和正偏态分布。
--   **斯皮尔曼-布朗加倍长度信度公式**：当研究重点是学生从一个题目样本到来自同一内容领域的另一个等效题目样本的分数一致性，但仅存在一种测验形式时，用于估计信度的程序。参见奇偶分半程序和分半信度系数。
--   **特殊常模**：为特定学生亚群体（如聋哑学生、天主教学校等）制定的百分位等级或标准分数常模。
--   **具体学习目标**：关于学生在一个教学单元结束时应取得什么的清晰陈述。参见教育目标和一般学习目标。
--   **特定限定词**：判断题或选择题中"过度限定"给定陈述并给学生提供非预期正确答案线索的单词或短语（如总是、从不、经常、通常等）（Sarnacki, 1979）。
--   **特定评分细则**：将通用评分框架改编应用于特定任务而得到的评分细则。参见通用评分细则。
--   **样本套装**：测试出版商提供的一包材料，包含测验样本、样本计算机报告、宣传材料，以及（偶尔）测验质量的技术报告。
--   **限时评估**：任何侧重于学生完成速度的评估。
--   **螺旋式编排**：测验中题目的排列方式，相似的题目类型不分组为分测验，而是按一定模式排列，使每种类型各出现一题；然后重复该序列，但使用更难的题目。
--   **分半信度系数**：通过研究学生在完整测验两半上分数之间的关系，在单次施测中估计信度的任何方法。参见成就领域、斯皮尔曼-布朗加倍长度公式和奇偶分半信度程序。
--   **合成分数的SS分数法**：为常模参照评分准备学生合成分数的一种方法，该方法保留了希望合成各组成部分所具有的影响（权重）。
--   **稳定性系数**：研究学生分数从一次施测到下一次施测一致性的几种信度估计方法之一。参见交替形式信度系数[延迟]、交替形式信度系数[同时施测]和重测信度系数。
+# 术语表
 
--   **设计表现性任务的阶段**：开发表现性任务的三个阶段：(a) 非常清楚要评估的表现，(b) 设计任务，以及(c) 设计评分和记录结果的方式（Stiggins, 1994）。
--   **利益相关者**：对评估结果感兴趣的个人或群体，通常是因为他们会受到使用测试结果所做决定的影响。
--   **标准年龄分数**：在与受测学生年龄相同的常模组中，均值为50、标准差为8的正态化标准分数。
--   **标准差**：分布中分数离散程度的指标，计算方法是将各分数与分数算术平均数的平方偏差的均值开平方。
--   **标准差评分法**：一种常模参照评分方法，使用班级分数的标准差作为评分量表上的度量单位。教师计算分数的标准差，并用该数字在数轴上标出定义成绩等级边界的区段。参见标准差。
--   **测量标准误**：对同一人使用同一评估进行重复测试所产生的假设所得分数分布的标准差或离散程度的估计。参见所得分数和标准差。
--   **标准或质量维度**：参见成就维度。
--   **标准分数**：一种转换分数的类别，改变原始分数的平均数、标准差，有时还改变分布形态，使其更易于解释。参见线性标准分数和正态化标准分数。
--   **标准**：关于学生应学习内容的陈述。一些州将这些陈述称为基本技能、学习期望、学习成果、成就期望或其他名称。通常有两套标准：内容标准和表现标准。
--   **标准化患者模式**：最初用于评估医学考生和执业医生的临床技能，由演员接受训练以表现特定疾病的症状。每位医学考生会见并访谈这位标准化患者以诊断疾病并开出治疗方案。
--   **标准化测试**：程序、施测、材料和评分规则都固定的测试，以便在不同时间和地点尽可能保持评估的一致性。
--   **《教育与心理测试标准》**：由美国教育研究协会、美国心理学会和美国教育测量委员会编制的关于教育及心理评估的开发与使用的指南和建议。
--   **九分制分数**：一种正态化标准分数，显示原始分数在正态分布的九个特定区段中的位置：因此，stanine源自"standard nine"（标准九分）。
--   **州法定评估**：法律要求在指定年级水平对全体学生施行的测验和其他评估。
--   **陈述与评论题**：用于评估学生使用所学标准对引述评论的给定解释集进行评价能力的题目。
+### `初步了解用途`
+在课程或学年开始时，利用评估信息对学生的优势、劣势、学习特点和个性形成总体印象。
 
--   **统计量（统计指标）**：简洁地捕捉一组分数特定特征的汇总数字。
+### `偏态分布`
+对频数分布的一种描述，其中分数堆积在分数尺度的一端，而向另一端稀疏延伸。参见负偏态分布和正偏态分布。
 
--   **题干**：选择题中提出问题或需解决问题的部分。
+### `斯皮尔曼-布朗加倍长度信度公式`
+当研究重点是学生从一个题目样本到来自同一内容领域的另一个等效题目样本的分数一致性，但仅存在一种测验形式时，用于估计信度的程序。参见奇偶分半程序和分半信度系数。
 
--   **策略性知识评估**：一种评估方法，确定学生识别达成答案所需的适当步骤顺序或适当过程的能力。参见问题解决的组成能力。
+### `特殊常模`
+为特定学生亚群体（如聋哑学生、天主教学校等）制定的百分位等级或标准分数常模。
 
--   **答题条**：一条纸条，上面按列写出完形题的正确答案，当纸条放在学生的试卷上时，正确答案与学生作答的位置对齐。
+### `具体学习目标`
+关于学生在一个教学单元结束时应取得什么的清晰陈述。参见教育目标和一般学习目标。
 
--   **结构化任务**：为学生提供书面或口头指导，说明如何完成任务、使用哪些资源、回答必须多长等。提供的指导越多，任务的结构化程度越高。参见支架式指导。
+### `特定限定词`
+判断题或选择题中"过度限定"给定陈述并给学生提供非预期正确答案线索的单词或短语（如总是、从不、经常、通常等）（Sarnacki, 1979）。
 
--   **结构化（自陈式）人格评估技术**：这些评估程序有特定的应答选择题目集；遵循非常具体的施测、评分和解释规则；并要求应试者以描述其个人感受的方式作答（例如，应试者可能被问及"我通常向他人表达我的个人观点"这一陈述是否符合他们自身的情况）。
+### `特定评分细则`
+将通用评分框架改编应用于特定任务而得到的评分细则。参见通用评分细则。
 
--   **结构化任务（练习）**：参见结构化任务和支架式指导。
+### `样本套装`
+测试出版商提供的一包材料，包含测验样本、样本计算机报告、宣传材料，以及（偶尔）测验质量的技术报告。
 
--   **学生进步报告方法**：学校和教师向家长报告每位学生成绩并用于官方学校记录的多种方式之一。这些包括字母等级、数字等级、百分制等级、核对表、评定量表、叙述性报告、学生-教师会议、家长-教师会议以及致家长的信。
+### `限时评估`
+任何侧重于学生完成速度的评估。
 
--   **分测验**：单独计分但属于较长的测验组一部分的短测验。较长的测验组由两个或更多分测验组成。
+### `螺旋式编排`
+测验中题目的排列方式，相似的题目类型不分组为分测验，而是按一定模式排列，使每种类型各出现一题；然后重复该序列，但使用更难的题目。
 
--   **课程与材料的终结性评价**：在课程、计划或材料完成后对其价值做出的判断，以提出是否应采用或使用的建议。参见课程与材料的过程性评价。
+### `分半信度系数`
+通过研究学生在完整测验两半上分数之间的关系，在单次施测中估计信度的任何方法。参见成就领域、斯皮尔曼-布朗加倍长度公式和奇偶分半信度程序。
 
--   **学生的终结性评价**：在教学过程完成后对学生成绩质量或价值做出的判断。参见学生的过程性评价。
+### `合成分数的SS分数法`
+为常模参照评分准备学生合成分数的一种方法，该方法保留了希望合成各组成部分所具有的影响（权重）。
 
--   **评估的终结性用途**：参见学生的终结性评价。
+### `稳定性系数`
+研究学生分数从一次施测到下一次施测一致性的几种信度估计方法之一。参见交替形式信度系数[延迟]、交替形式信度系数[同时施测]和重测信度系数。
 
--   **表面特征**：一种诊断性评估方法，使用测试或测试题目内容的直接外部特征来描述学生的成就。这与更深层次的特征形成对比，后者关注学生如何感知该内容的结构或组织，以及如何使用该内容知识处理信息和知识以解决问题。参见知识结构评估。
+### `设计表现性任务的阶段`
+开发表现性任务的三个阶段：(a) 非常清楚要评估的表现，(b) 设计任务，以及(c) 设计评分和记录结果的方式（Stiggins, 1994）。
 
--   **对称分布**：分数的频数分布，其图形可以沿垂直线折叠，使图形的两半重合。
+### `利益相关者`
+对评估结果感兴趣的个人或群体，通常是因为他们会受到使用测试结果所做决定的影响。
 
--   **命题细目表**：该表描述了测试所评估的主要内容类别和技能。它描述了测试中每种内容-技能组合的任务（题目）百分比。
+### `标准年龄分数`
+在与受测学生年龄相同的常模组中，均值为50、标准差为8的正态化标准分数。
 
--   **表格（矩阵）式题目**：一种匹配题类型，学生将来自多个应答列表的元素（如总统、政党、著名首创和重要事件）与一个共同前提列表中的元素进行匹配。
+### `标准差`
+分布中分数离散程度的指标，计算方法是将各分数与分数算术平均数的平方偏差的均值开平方。
 
--   **选项串联排列**：一种选择题编写缺陷，选项以段落式的连续文本流排列，而不是更理想的将一个选项置于另一个选项下方的列表式排列。
+### `标准差评分法`
+一种常模参照评分方法，使用班级分数的标准差作为评分量表上的度量单位。教师计算分数的标准差，并用该数字在数轴上标出定义成绩等级边界的区段。参见标准差。
 
--   **任务（题目）**：评估程序中出现的题目、练习和活动。通常，"题目"一词用于指纸笔测试的练习。
+### `测量标准误`
+对同一人使用同一评估进行重复测试所产生的假设所得分数分布的标准差或离散程度的估计。参见所得分数和标准差。
 
--   **任务格式**：任务或题目在评估中的呈现方式。典型格式包括选择题、判断题、匹配题、简答题和论述题等。
+### `标准或质量维度`
+参见成就维度。
 
--   **任务参照评分**：参见标准参照评分框架。
+### `标准分数`
+一种转换分数的类别，改变原始分数的平均数、标准差，有时还改变分布形态，使其更易于解释。参见线性标准分数和正态化标准分数。
 
--   **任务导向思维**：专注于完成评估任务从而减少与之相关的紧张感的思维和应试行为（Mandler & Sarason, 1952）。参见任务无关思维。
+### `标准`
+关于学生应学习内容的陈述。一些州将这些陈述称为基本技能、学习期望、学习成果、成就期望或其他名称。通常有两套标准：内容标准和表现标准。
 
--   **任务无关思维**：自我专注的思维和应试行为，集中在如果考试不及格会发生什么或自己的无助感，有时还希望尽快逃离考试情境（Mandler & Sarason, 1952）。四种考试焦虑因素之一。参见任务导向思维和考试焦虑四因素。
+### `标准化患者模式`
+最初用于评估医学考生和执业医生的临床技能，由演员接受训练以表现特定疾病的症状。每位医学考生会见并访谈这位标准化患者以诊断疾病并开出治疗方案。
 
--   **评估后的教学行动**：利用获得的评估结果来改进教学和学生学习的做法。
+### `标准化测试`
+程序、施测、材料和评分规则都固定的测试，以便在不同时间和地点尽可能保持评估的一致性。
 
--   **技术手册**：由测试开发者编写的出版物，解释测试开发的 technical details，包括测试是如何开发的、常模是如何建立的、测试题目选择的程序、不同测验形式等值的程序，以及已完成的测试信度和效度研究。
+### `《教育与心理测试标准》`
+由美国教育研究协会、美国心理学会和美国教育测量委员会编制的关于教育及心理评估的开发与使用的指南和建议。
 
--   **紧张**：四种考试焦虑因素之一，学生在考试前感到非常不安、紧张、痛苦、焦虑等。参见考试焦虑四因素。
+### `九分制分数`
+一种正态化标准分数，显示原始分数在正态分布的九个特定区段中的位置：因此，stanine源自"standard nine"（标准九分）。
 
--   **测验**：使用数字量表或分类方案观察和描述学生一个或多个特征的工具或系统程序。（参见评估、评价、测量和测验。）
+### `州法定评估`
+法律要求在指定年级水平对全体学生施行的测验和其他评估。
 
--   **考试焦虑**：想在考试中取得好成绩的学生中增加的情绪紧张，导致身体和自主神经唤醒，并产生关于失败负面后果以及自己表现与他人比较的想法。参见担忧、情绪性和考试焦虑四因素。
+### `陈述与评论题`
+用于评估学生使用所学标准对引述评论的给定解释集进行评价能力的题目。
 
--   **《测验评论》**：一系列评论商业、教育和心理学中最常用测试的著作。由美国测验公司出版。
+### `统计量（统计指标）`
+简洁地捕捉一组分数特定特征的汇总数字。
 
--   **测验水平**：标准化测试所针对的年级水平或较窄的年级范围。
+### `题干`
+选择题中提出问题或需解决问题的部分。
 
--   **测验所得兴趣**：从对学生特定学科信息和知识的评估结果中推断出的学生职业和生涯兴趣。参见兴趣、表达兴趣、清单兴趣和表现兴趣。
+### `策略性知识评估`
+一种评估方法，确定学生识别达成答案所需的适当步骤顺序或适当过程的能力。参见问题解决的组成能力。
 
--   **重测信度系数**：当研究重点是同一测试题目上学生分数从一次施测到下一次施测的一致性时，用于估计信度的程序。
+### `答题条`
+一条纸条，上面按列写出完形题的正确答案，当纸条放在学生的试卷上时，正确答案与学生作答的位置对齐。
 
--   **《缩微胶片测验》**：收录了800多个未发表的教育、商业和心理学测验的合集。由教育测试服务中心出版。
+### `结构化任务`
+为学生提供书面或口头指导，说明如何完成任务、使用哪些资源、回答必须多长等。提供的指导越多，任务的结构化程度越高。参见支架式指导。
 
--   **《在版测验》**：包含2900多种商业可用工具信息的测试书目。由布鲁斯心理测量研究所出版。
+### `结构化（自陈式）人格评估技术`
+这些评估程序有特定的应答选择题目集；遵循非常具体的施测、评分和解释规则；并要求应试者以描述其个人感受的方式作答（例如，应试者可能被问及"我通常向他人表达我的个人观点"这一陈述是否符合他们自身的情况）。
+
+### `结构化任务（练习）`
+参见结构化任务和支架式指导。
+
+### `学生进步报告方法`
+学校和教师向家长报告每位学生成绩并用于官方学校记录的多种方式之一。这些包括字母等级、数字等级、百分制等级、核对表、评定量表、叙述性报告、学生-教师会议、家长-教师会议以及致家长的信。
+
+### `分测验`
+单独计分但属于较长的测验组一部分的短测验。较长的测验组由两个或更多分测验组成。
+
+### `课程与材料的终结性评价`
+在课程、计划或材料完成后对其价值做出的判断，以提出是否应采用或使用的建议。参见课程与材料的过程性评价。
+
+### `学生的终结性评价`
+在教学过程完成后对学生成绩质量或价值做出的判断。参见学生的过程性评价。
+
+### `评估的终结性用途`
+参见学生的终结性评价。
+
+### `表面特征`
+一种诊断性评估方法，使用测试或测试题目内容的直接外部特征来描述学生的成就。这与更深层次的特征形成对比，后者关注学生如何感知该内容的结构或组织，以及如何使用该内容知识处理信息和知识以解决问题。参见知识结构评估。
+
+### `对称分布`
+分数的频数分布，其图形可以沿垂直线折叠，使图形的两半重合。
+
+### `命题细目表`
+该表描述了测试所评估的主要内容类别和技能。它描述了测试中每种内容-技能组合的任务（题目）百分比。
+
+### `表格（矩阵）式题目`
+一种匹配题类型，学生将来自多个应答列表的元素（如总统、政党、著名首创和重要事件）与一个共同前提列表中的元素进行匹配。
+
+### `选项串联排列`
+一种选择题编写缺陷，选项以段落式的连续文本流排列，而不是更理想的将一个选项置于另一个选项下方的列表式排列。
+
+### `任务（题目）`
+评估程序中出现的题目、练习和活动。通常，"题目"一词用于指纸笔测试的练习。
+
+### `任务格式`
+任务或题目在评估中的呈现方式。典型格式包括选择题、判断题、匹配题、简答题和论述题等。
+
+### `任务参照评分`
+参见标准参照评分框架。
+
+### `任务导向思维`
+专注于完成评估任务从而减少与之相关的紧张感的思维和应试行为（Mandler & Sarason, 1952）。参见任务无关思维。
+
+### `任务无关思维`
+自我专注的思维和应试行为，集中在如果考试不及格会发生什么或自己的无助感，有时还希望尽快逃离考试情境（Mandler & Sarason, 1952）。四种考试焦虑因素之一。参见任务导向思维和考试焦虑四因素。
+
+### `评估后的教学行动`
+利用获得的评估结果来改进教学和学生学习的做法。
+
+### `技术手册`
+由测试开发者编写的出版物，解释测试开发的 technical details，包括测试是如何开发的、常模是如何建立的、测试题目选择的程序、不同测验形式等值的程序，以及已完成的测试信度和效度研究。
+
+### `紧张`
+四种考试焦虑因素之一，学生在考试前感到非常不安、紧张、痛苦、焦虑等。参见考试焦虑四因素。
+
+### `测验`
+使用数字量表或分类方案观察和描述学生一个或多个特征的工具或系统程序。（参见评估、评价、测量和测验。）
+
+### `考试焦虑`
+想在考试中取得好成绩的学生中增加的情绪紧张，导致身体和自主神经唤醒，并产生关于失败负面后果以及自己表现与他人比较的想法。参见担忧、情绪性和考试焦虑四因素。
+
+### `《测验评论》`
+一系列评论商业、教育和心理学中最常用测试的著作。由美国测验公司出版。
+
+### `测验水平`
+标准化测试所针对的年级水平或较窄的年级范围。
+
+### `测验所得兴趣`
+从对学生特定学科信息和知识的评估结果中推断出的学生职业和生涯兴趣。参见兴趣、表达兴趣、清单兴趣和表现兴趣。
+
+### `重测信度系数`
+当研究重点是同一测试题目上学生分数从一次施测到下一次施测的一致性时，用于估计信度的程序。
+
+### `《缩微胶片测验》`
+收录了800多个未发表的教育、商业和心理学测验的合集。由教育测试服务中心出版。
 
 
 
+### `《在版测验》`
+包含2900多种商业可用工具信息的测试书目。由布鲁斯心理测量研究所出版。
 
 ### test-takers' rights
-
 参加测试者有权获得测试管理者和使用测试结果者提供的信息以及公平对待。
 
 ### testwiseness
-
 学生利用评估材料和评估情境的特征来获得比其知识本应获得的更高分数的能力。
 
 ### textbookish phrasing
-
 一种题目编写缺陷类型，其中题目措辞与教科书表述该信息的方式非常相似。
 
 ### three fundamental principles for crafting assessments
-
 几乎所有更具体的评估任务编写建议的基础原则。它们是：(a) 仅关注教育上重要的学习目标，(b) 仅引出与所评估学习目标相关的表现，以及 (c) 既不阻止也不妨碍学生展示其已获得学习目标的能力。
 
 ### top-down approach to rubric crafting
-
 在开始制定评分标准之前，采用定义需要评估的成就维度的概念框架的方法。参见自下而上制定评分标准的方法。
 
 ### total points method for grading
-
 一种以标准参照为依据的评分方法，其中最终综合成绩中包含的每个组成部分都被赋予最大点值（例如，测验可能计 10 分，每次考试可能最高计 50 分，项目可能最高计 40 分）；字母等级是根据学生在评分期间累计的总分来分配的。
 
 ### tricky item
-
 一种题目，其选项的正确性取决于琐碎的事实、特异性标准或容易被忽视的词语或短语。
 
 ### true score
-
 如果从考生获得的分数中减去考生的误差分数，则会得到的假设分数。参见误差分数和获得分数。
 
 ### uncertainty interval
-
 考生真实分数可能所在的分数区间。该区间的端点通过 (a) 从考生获得的分数中减去测量标准误（下端点）以及 (b) 将测量标准误加到考生获得的分数上（上端点）来计算。参见获得分数、测量标准误和真实分数。
 
 ### within-classroom uses of test results
-
 在教师课堂内对标准化测试结果的使用，例如描述每位学生的教育发展水平或描述学生在具体方面的定性优势和劣势。
 
 ### worry
-
 测试焦虑的认知方面之一：对失败的负面后果的想法以及自己的表现与其他人相比如何。参见测试焦虑的四个因素。
 
 ### writing process
-
 大多数写作都源于一个有序的过程，其中包括起草、反馈、修改和润色。
 
 ### writing traits (writing dimensions)
-
 可用于评估写作质量的若干特征或品质。每个特征都表达为质量的连续体。参见 Six + 1 Traits® of Writing
 
 ### yes-no variety of true-false items
-
 一种题目格式，要求直接提问，学生的回答仅限于是否。
 
 ### yes-no with explanation variety of true-false items
-
 一种题目格式，要求直接提问，并要求学生回答是否并解释其选择为何正确。
 
 ### z-score
-
 一种标准化标准分数类型：z 分数具有我们期望在正态分布中出现的百分等级。参见线性标准分数。
 
 ## NAME INDEX
-
 - Abelson, R., 297
 - Adamson, R. J., 238
-- \*Airasian, P. W., 14, 102, 114, 374
+- *Airasian, P. W., 14, 102, 114, 374
 - Albertson, B., 189, 190
 - Alexander, P. A., 209
 - Aleyideino, S. C., 155
@@ -20834,7 +22679,6 @@ positive or negative consequences of decisions 学生因参加评估而发生的
 - Aschbacher, P. R., 268
 - Ausubel, D. P., 431
 - Azwell, T., 329, 337
-
 - Baglin, R. F., 387
 - Baker, E. L., 41, 119, 250, 373
 - Balls, David A., 442
@@ -20877,7 +22721,6 @@ positive or negative consequences of decisions 学生因参加评估而发生的
 - Buren, A., 283
 - Buros, O. K., 418, 420
 - Burton, R. R., 296
-
 - Calfee, R., 295, 297
 - Calhoun, E., 155
 - Camp, R., 191
@@ -20915,8 +22758,10 @@ positive or negative consequences of decisions 学生因参加评估而发生的
 - Culler, R. E., 309
 - Cunningham, G. K., 129, 144, 195n, 447
 - Cyert, R. M., 209
-
 - Darden, A. D., 188
+
+
+
 - Darley, J. G., 443
 - Darlington, R. B., 95
 - Davey, B., 261, 262
@@ -20935,7 +22780,6 @@ positive or negative consequences of decisions 学生因参加评估而发生的
 - Dunbar, D., 345
 - Dunbar, S. B., 41, 191, 226, 238, 376, 379n, 386, 399, 406, 411
 - Duran, R. P., 262
-
 - Ebbs, C., 118
 - Ebel, R. L., 128n, 129, 130, 132, 133n, 134, 135, 136, 141, 142n, 144, 146, 149, 152, 154, 155, 167, 182, 195n, 229, 306, 308n, 313n, 330, 331, 333
 - Egawa, K., 337
@@ -20944,7 +22788,6 @@ positive or negative consequences of decisions 学生因参加评估而发生的
 - Englehart, M. D., 23–24, 29, 108, 179n
 - Ennis, R. H., 214, 217n, 219, 220, 221, 222, 223, 224
 - Evans, W. J., 307
-
 - Fager, J. J., 101
 - Farr, R. C., 54, 409
 - Feister, W. J., 437
@@ -20963,7 +22806,6 @@ positive or negative consequences of decisions 学生因参加评估而发生的
 - French, J. R. P., Jr., 421
 - Frisbie, D. A., 132, 135, 136, 226, 228, 306, 331, 344n, 347–348, 350, 356, 358, 376, 379n, 386, 399, 406, 411
 - Furst, E. J., 23–24, 28, 29, 108, 179n
-
 - Gaffney, R. F., 155
 - Gagné, R. M., 17, 201, 202, 205, 292, 296
 - Gardner, Howard, 251, 252–253, 429n
@@ -20989,7 +22831,6 @@ positive or negative consequences of decisions 学生因参加评估而发生的
 - Gullickson, Arlen, 360
 - Gulliksen, H., 156, 312
 - Gunstone, R. E., 294, 297
-
 - Haertel, E., 295, 297
 - Hagen, E. P., 128n, 129, 133n, 144, 195n, 447
 - Hagenah, T., 443
@@ -21016,59 +22857,54 @@ positive or negative consequences of decisions 学生因参加评估而发生的
 - Hogan, T. P., 409
 - Holahan, C. J., 309
 - Holland, J. L., 444, 445
+- Hoover, H. D., 191, 226, 228, 368, 376, 379n, 386, 399, 406, 411
+- Hopkins, B. R., 61n, 128n, 133n, 144, 191, 195n
+- Hopkins, K. D., 61n, 128n, 133n, 144, 191, 195n
+- Horst, D., 404
+- Host, T. R., 305, 309
+- Hoz, R., 297
+- Hsu, T.-C., 9, 128n, 133n, 156n, 160n
+- Hughes, C. S., 209, 214
+- Huynh, H., 73
+- Hyman, J. S., 380
+- Impara, J. C., 101, 415–416
+- Ismail, M., 300, 301
+- Iwanicki, E. F., 368
+- Jaeger, R. M., 92, 406
+- Jakwerth, P. R., 112
+- Jenkins, J. R., 203, 205, 207n, 208n
+- Joergenson, A. N., 128n
+- Johnson, H. M., 8
+- Johnson, P. E., 297
+- Johnson, R. T., 389
+- Jones, B. F., 209, 214
+- Jones, L. V., 8
+- Jones, R. J., 191
+- Jones, R. W., 248
+- Jorgensen, A. N., 133n, 144, 195n
+- Ju, T. P., 297
+- Kadane, J. B., 299
+- Kaminski, J., 83, 380
+- Kane, M. T., 34, 56
+- Kaplan, J., 296
+- Karweit, N. L., 376
+- Keats, John, 178
+- Keller, F. S., 294
+- Kelly, T. L., 315
+- Keyser, D. J., 420
+- Khatri, N., 238
+- Kintsch, W., 297
+- Kirschbaum, H., 343, 344
+- Klaus, C. H., 180
+- Klausmeier, H. J., 294
+- Klein, S., 250
+- Kloper, L. E., 22n, 159, 294, 297
+- Knappen, L. B., 368
+- Koehler, R. A., 135, 307
+- Kolen, M. J., 368, 406
 
 
 
-
-
-Hoover, H. D., 191, 226, 228, 368, 376, 379n, 386, 399, 406, 411
-Hopkins, B. R., 61n, 128n, 133n, 144, 191, 195n
-Hopkins, K. D., 61n, 128n, 133n, 144, 191, 195n
-Horst, D., 404
-Host, T. R., 305, 309
-Hoz, R., 297
-Hsu, T.-C., 9, 128n, 133n, 156n, 160n
-Hughes, C. S., 209, 214
-Huynh, H., 73
-Hyman, J. S., 380
-
-Impara, J. C., 101, 415–416
-Ismail, M., 300, 301
-Iwanicki, E. F., 368
-
-Jaeger, R. M., 92, 406
-Jakwerth, P. R., 112
-Jenkins, J. R., 203, 205, 207n, 208n
-Joergenson, A. N., 128n
-Johnson, H. M., 8
-Johnson, P. E., 297
-Johnson, R. T., 389
-Jones, B. F., 209, 214
-Jones, L. V., 8
-Jones, R. J., 191
-Jones, R. W., 248
-Jorgensen, A. N., 133n, 144, 195n
-Ju, T. P., 297
-
-Kadane, J. B., 299
-Kaminski, J., 83, 380
-Kane, M. T., 34, 56
-Kaplan, J., 296
-Karweit, N. L., 376
-Keats, John, 178
-Keller, F. S., 294
-Kelly, T. L., 315
-Keyser, D. J., 420
-Khatri, N., 238
-Kintsch, W., 297
-Kirschbaum, H., 343, 344
-Klaus, C. H., 180
-Klausmeier, H. J., 294
-Klein, S., 250
-Kloper, L. E., 22n, 159, 294, 297
-Knappen, L. B., 368
-Koehler, R. A., 135, 307
-Kolen, M. J., 368, 406
 Koretz, D., 191, 250
 Kracke, E. A., 196
 Krathwohl, D. R., 23–24, 28, 29, 108, 179n
@@ -21076,7 +22912,6 @@ Kuhn, D., 214
 Kuhs, T. M., 368
 Kunder, L. H., 341
 Kurfman, D., 139n, 140n
-
 Lajoie, S., 214
 Landau, D., 395
 Lane, S., 55, 210, 250, 262, 268
@@ -21091,7 +22926,6 @@ Lessgold, A., 214
 Lewis, S., 283
 Liebert, R. M., 309
 Lin, Y. G., 297, 309
-
 Lindquist, E. F., 52, 133n, 142n, 143, 144, 147, 148, 148n, 149, 154, 167, 320, 437
 Lindvall, C. M., 9, 16, 28, 29n, 128n, 133n, 134, 141, 144, 195n, 294, 408n, 409n
 Linn, R. L., 41, 95, 119, 179n, 249, 250, 271, 331, 341n, 373
@@ -21103,7 +22937,6 @@ Loret, P. G., 406
 Luckman, Bruce W., 29n
 Lyman, F. J., 345
 Lyman, H. B., 389
-
 Madaus, G. F., 158n, 179n, 182
 Maddox, T., 416
 Maguire, T. O., 155
@@ -21154,11 +22987,9 @@ Murphy, L. B., 8
 Murphy, L. L., 415–416
 Murray, H. A., 446
 Myles, B., 416
-
 Nachtman, W., 291
 Naveh-Benjamin, M., 297, 309
 Nelson, B. S., 222
-
 Nerwin, 8
 Nitko, A. J., 9, 10, 16, 44, 93, 95, 128n, 133n, 134, 156n, 160n, 195n, 205, 214, 278, 294, 329, 408n, 409n, 425
 Nitko, T., 273
@@ -21169,14 +23000,12 @@ Novak, J. D., 431
 Novick, M. R., 8, 68, 95
 Nurse, J., 292
 Nuttall, D. L., 186
-
 Odell, C. W., 125, 128n, 182
 O'Donnell, T. J., 88
 O'Neil, H. E., Jr., 250
 Oosterhof, A., 135, 249, 331
 Orling, R., 155
 Otis, A. S., 432
-
 Paradise, N. E., 292
 Parke, C., 210, 250, 262
 Parkes, J., 92
@@ -21205,10 +23034,8 @@ Prichett, J. W., 297
 Pritchett, E. M., 291
 Pruzcek, R., 101
 Purves, A. C., 179n
-
 Quellmalz, E. S., 101, 258
 Quetelet, 48, 395
-
 Ramseyer, G. C., 155
 Rankin, S. C., 209, 214
 Rapoport, A., 297
@@ -21226,10 +23053,8 @@ Rozeboom, W. W., 8
 Rubel, E., 101
 Rudner, L. M., 249
 Rueter, H. H., 297
-
 Sabers, D. L., 315
 Salomon, G., 209
-
 Salter, C., 139n, 140n
 Sanders, N. M., 130n, 180, 389
 Sarason, I. G., 309, 310
@@ -21237,265 +23062,291 @@ Sarason, S. B., 308
 *Sarnacki, R. E., 135, 307
 Sattler, J. M., 431, 439, 440, 442
 Sax, G., 128n, 195n, 321
-Scannell, D. P., 195
-Schaler, W. D., 14
-Schmar, E., 329
-Schmeiser, C. B., 78
-Scriven, M., 9
-Seashore, H. G., 435
-Seraphine, A. E., 249
-Shalaway, L., 338, 339n
-Shank, R. C., 297
-Shannon, G. A., 167
-Shavelson, R. J., 4, 247, 250, 297
-Sheehan, D. S., 297
-Shepard, L. A., 56, 249, 389
-Shelman, J. G., 294
-Shuell, T. J., 209
-Silver, E. A., 222
-Silver, H., 252
-Simon, H. A., 208
-Slakter, M. J., 135, 307
-Slavin, R. E., 244
-Smith, J. D., 299
-Smith, M. L., 373
-Smith, M. S., 222
-Smith, P. L., 297
-Snow, R. E., 49, 429
-Spandel, V., 244, 281, 283
-Sparrow, Sara S., 442
-Spearman, C., 65
-Spielberger, C. D., 310
-Spiesman, J., 309
-Stalnakar, J. M., 128n, 186, 191, 195n
-Stanley, J. C., 65, 66n, 68, 128n, 133n, 144, 191, 195n
-Stanton, G. C., 297
-Stecher, B., 250
-Steele, D., 118
-Stein, B. S., 209
-Stephens, J. J., 92
-Stern, P., 4
-Sternberg, R. J., 297
-Stevens, S. S., 8
-Stiggins, R. J., 4, 14, 101, 114, 119, 249, 257, 331
-Stimson, V. C., 297
-Stone, C. A., 55
-Strang, H. R., 154
-Strong, R., 252
-Su, W., 95
-Subkoviak, M. J., 73
-Suhor, C., 209, 214
-Super, D. E., 443
-Suppes, P. R., 145
-Surber, J. R., 297
-Swaminathan, H., 73
-Sweetland, R. C., 420
-Tallmadge, G. K., 404
-Tallmadge, M., 182
-Taylor, C. S., 118, 264
-Taylor, E. D., 186
-Terman, Lewis M., 338
-Terry, P. W., 182
-Terwilliger, J. S., 331, 345
-Thissen, D., 186
-Thomas, W. P., 389
-Thorndike, R. L., 52, 66, 95, 128n, 129, 133n, 144, 195n, 313, 447
-Thorndike, R. M., 129, 144, 195n, 447
-Tippets, E., 309, 311
-Title, C. K., 107
-Trent, E. R., 155
-Trimble, C. S., 155
-Tryon, G. S., 310
-Tucker, D. G., 297
-Tuinman, J. J., 54
-Tyler, F. T., 305
-Urevbu, A. O., 297
-Vallance, T. R., 182
-Verity, D., 180
-Vernon, P. E., 53
-Viadero, D., 182
-Wagner, R. K., 297
-Wagner, W. W., 17
-Wainer, H., 186
-Waltman, K. K., 331, 344n, 347–348, 350, 356, 358
-Wang, M. C., 294, 296
-Wang, S., 44, 425
-Wang, X., 186
-Wasik, B. A., 376
-Weidmann, C. C., 133n, 135n
-Wesley, E. B., 182
-Wesman, A. G., 125, 133n, 141, 142n, 144, 229, 435
-Whitaker, E. M., 337, 338, 345–346
-Whitney, D. R., 315, 437
-Wick, J. W., 445
-Wiggins, G., 6, 248, 249
-Williams, P. 39, 94n
-Williams, R. L., 94
-Wilson, J. A., 186
-Wine, J., 310
-Wingert, M., 44, 425
-Winters, L., 268
-Wiser, B., 389
-Wolf, D. P., 244
-Womer, 8
-Wood, C. T., 404
-Wood, R., 141, 143, 152
-Woolfolk, A. E., 202, 214
-Wronski, S. P., 182
-Young, M. J., 297
-Zieky, M. J., 95
-Zinnes, J. L., 8
-Zoref, L., 39, 94n
-Zuckerman, M., 310
+
+
+
+## 作者索引
+
+- Scannell, D. P., 195
+- Schaler, W. D., 14
+- Schmar, E., 329
+- Schmeiser, C. B., 78
+- Scriven, M., 9
+- Seashore, H. G., 435
+- Seraphine, A. E., 249
+- Shalaway, L., 338, 339n
+- Shank, R. C., 297
+- Shannon, G. A., 167
+- Shavelson, R. J., 4, 247, 250, 297
+- Sheehan, D. S., 297
+- Shepard, L. A., 56, 249, 389
+- Shelman, J. G., 294
+- Shuell, T. J., 209
+- Silver, E. A., 222
+- Silver, H., 252
+- Simon, H. A., 208
+- Slakter, M. J., 135, 307
+- Slavin, R. E., 244
+- Smith, J. D., 299
+- Smith, M. L., 373
+- Smith, M. S., 222
+- Smith, P. L., 297
+- Snow, R. E., 49, 429
+- Spandel, V., 244, 281, 283
+- Sparrow, Sara S., 442
+- Spearman, C., 65
+- Spielberger, C. D., 310
+- Spiesman, J., 309
+- Stalnakar, J. M., 128n, 186, 191, 195n
+- Stanley, J. C., 65, 66n, 68, 128n, 133n, 144, 191, 195n
+- Stanton, G. C., 297
+- Stecher, B., 250
+- Steele, D., 118
+- Stein, B. S., 209
+- Stephens, J. J., 92
+- Stern, P., 4
+- Sternberg, R. J., 297
+- Stevens, S. S., 8
+- Stiggins, R. J., 4, 14, 101, 114, 119, 249, 257, 331
+- Stimson, V. C., 297
+- Stone, C. A., 55
+- Strang, H. R., 154
+- Strong, R., 252
+- Su, W., 95
+- Subkoviak, M. J., 73
+- Suhor, C., 209, 214
+- Super, D. E., 443
+- Suppes, P. R., 145
+- Surber, J. R., 297
+- Swaminathan, H., 73
+- Sweetland, R. C., 420
+- Tallmadge, G. K., 404
+- Tallmadge, M., 182
+- Taylor, C. S., 118, 264
+- Taylor, E. D., 186
+- Terman, Lewis M., 338
+- Terry, P. W., 182
+- Terwilliger, J. S., 331, 345
+- Thissen, D., 186
+- Thomas, W. P., 389
+- Thorndike, R. L., 52, 66, 95, 128n, 129, 133n, 144, 195n, 313, 447
+- Thorndike, R. M., 129, 144, 195n, 447
+- Tippets, E., 309, 311
+- Title, C. K., 107
+- Trent, E. R., 155
+- Trimble, C. S., 155
+- Tryon, G. S., 310
+- Tucker, D. G., 297
+- Tuinman, J. J., 54
+- Tyler, F. T., 305
+- Urevbu, A. O., 297
+- Vallance, T. R., 182
+- Verity, D., 180
+- Vernon, P. E., 53
+- Viadero, D., 182
+- Wagner, R. K., 297
+- Wagner, W. W., 17
+- Wainer, H., 186
+- Waltman, K. K., 331, 344n, 347–348, 350, 356, 358
+- Wang, M. C., 294, 296
+- Wang, S., 44, 425
+- Wang, X., 186
+- Wasik, B. A., 376
+- Weidmann, C. C., 133n, 135n
+- Wesley, E. B., 182
+- Wesman, A. G., 125, 133n, 141, 142n, 144, 229, 435
+- Whitaker, E. M., 337, 338, 345–346
+- Whitney, D. R., 315, 437
+- Wick, J. W., 445
+- Wiggins, G., 6, 248, 249
+- Williams, P. 39, 94n
+- Williams, R. L., 94
+- Wilson, J. A., 186
+- Wine, J., 310
+- Wingert, M., 44, 425
+- Winters, L., 268
+- Wiser, B., 389
+- Wolf, D. P., 244
+- Womer, 8
+- Wood, C. T., 404
+- Wood, R., 141, 143, 152
+- Woolfolk, A. E., 202, 214
+- Wronski, S. P., 182
+- Young, M. J., 297
+- Zieky, M. J., 95
+- Zinnes, J. L., 8
+- Zoref, L., 39, 94n
+- Zuckerman, M., 310
 
 ## 主题索引
 
-绝对成就，319
-绝对评分，341n
-绝对标准评分，343
-获取学生数据，86–87
-残疾学生的考试便利，82, 88–91
-成就，430
-  绝对，319
-  构建评估写作的提示，186–191
-  成就的维度，257, 258
-  成就领域，61
-  非认知，341
-  相对，319
-成就/能力比较（AAC），434
-成就测验。另见标准化测验
-  非标准化，372–373
-ACT评估，437
-ACT兴趣清单，437
-行动导向学习目标，241
-行动动词，28
-自适应评估任务，247
-自适应行为
-  评估，442
-  含义，442
-低估自适应教学，430
-优势
-  最佳答案题的优势，158
-  实验解释题的优势，161
-  大于-小于-相同题的优势，156
-  主列表（关键列表）题的优势，168–169
-  配对练习格式的优势，164–165
-  选择题格式的优势，141–143
-  语句与评论题的优势，163
-  表格（矩阵）题的优势，170–171
-情感领域，22
-情感学习目标，16
-情感显著性，445
-年龄基准分数，432
-算术推理，432
-评估，5–6。另见课堂评估；形成性评估；非正式诊断性评估；表现性评估；总结性评估
-  关于学生，9–12
-  便利，82
-  获得执行能力，12–13
-  真实性，229–230, 248
-  偏见，92–95
-  连续性，329–330
-  制定要求学生使用学习目标组合的评估，19
-  定义，5
-  诊断性，9
-  不同水平的不同类型，24
-  在教育决策中，3–4
-  评估的外在结构，46
-  格式和外观，310–311
-  整合教学、诊断和评估，289–291
-  内部结构，45
-  使学生易于理解，112
-  自行制作以改进教学，101
-  与学习目标匹配，30, 110–112
-  修改，82
-  多重用途，40–41
-  评分准备，311–312
-  选项范围，113–119
-  各部分之间的关系，45–46
-  审查实际材料，423–425
-  限时，66
-  学生的责任，86
-  教师的专业责任，78–86
-  实施时，81–83
-  选择程序时，80–81
-  沟通结果时，85
-  制定程序时，80
-  解释和利用结果时，84–85
-  评分时，83–84
-  使用适当长度，112–113
-  变量，347
-评估偏见
-  作为内容和经验差异，94–95
-  作为差异项目功能，93
-  作为差异效度，93–94
-  作为平均差异，93
-  作为分数误读，93
-  作为性别主义和种族主义内容，93
-  作为用于选择决策的统计模型，95
-  作为错误标准测量，95
-评估计划
-  提高效度的标准，110–113
-  标记期，103–104
-  教学单元，104–105, 106
-  指导效度的原则，120
-评估实践，56
-评估选择委员会，担任，81
-关联测试，446
-关联性短答题变体，125–126
-假设，223
-态度，442
-  特征，445–446
-  动机与，53
-  对成绩的态度，329
-真实性评估，248。另见表现性评估
-  阅读，229–230
-基线水平，439
-行为
-  自适应，442
-  能力测验在测量学习行为，429–430
-  要评估的类型，347–349
-行为清单，269
-最佳答案题
-  优点和批评，158
-  评估清单，160
-  设计建议，158–159
-  格式，158
-最佳作品作品集，119, 244
-  组织和内容，281–283
-偏见。另见评估偏见
-  内容，93
-  定义，92–93
-  外表，93
-  个人，275
-  源于评估氛围和条件，95
-大爆炸评估法，329
-双峰，485
-布鲁姆分类法，23–24
-蓝图
-  评估重点，108–109
-  制定，109–110
-  示例，471–472
-  提高效度，109
-  组织，107–108
-  学生中心评估，110
-边际案例，350
-自下而上方法，268
+- 绝对成就，319
+- 绝对评分，341n
+- 绝对标准评分，343
+- 获取学生数据，86–87
+- 残疾学生的考试便利，82, 88–91
+- 成就，430
+  - 绝对，319
+  - 构建评估写作的提示，186–191
+  - 成就的维度，257, 258
+  - 成就领域，61
+  - 非认知，341
+  - 相对，319
+- 成就/能力比较（AAC），434
+- 成就测验。另见标准化测验
+  - 非标准化，372–373
+- ACT评估，437
+- ACT兴趣清单，437
+- 行动导向学习目标，241
+- 行动动词，28
+- 自适应评估任务，247
+- 自适应行为
+  - 评估，442
+  - 含义，442
+- 低估自适应教学，430
+- 优势
+  - 最佳答案题的优势，158
+  - 实验解释题的优势，161
+  - 大于-小于-相同题的优势，156
+  - 主列表（关键列表）题的优势，168–169
+  - 配对练习格式的优势，164–165
+  - 选择题格式的优势，141–143
+  - 语句与评论题的优势，163
+  - 表格（矩阵）题的优势，170–171
+- 情感领域，22
+- 情感学习目标，16
+- 情感显著性，445
+- 年龄基准分数，432
+- 算术推理，432
+- 评估，5–6。另见课堂评估；形成性评估；非正式诊断性评估；表现性评估；总结性评估
+  - 关于学生，9–12
+  - 便利，82
+  - 获得执行能力，12–13
+  - 真实性，229–230, 248
+  - 偏见，92–95
+  - 连续性，329–330
+  - 制定要求学生使用学习目标组合的评估，19
+  - 定义，5
+  - 诊断性，9
+  - 不同水平的不同类型，24
+  - 在教育决策中，3–4
+  - 评估的外在结构，46
+  - 格式和外观，310–311
+  - 整合教学、诊断和评估，289–291
+  - 内部结构，45
+  - 使学生易于理解，112
+  - 自行制作以改进教学，101
+  - 与学习目标匹配，30, 110–112
+  - 修改，82
+  - 多重用途，40–41
+  - 评分准备，311–312
+  - 选项范围，113–119
+  - 各部分之间的关系，45–46
+  - 审查实际材料，423–425
+  - 限时，66
+  - 学生的责任，86
+  - 教师的专业责任，78–86
+  - 实施时，81–83
+  - 选择程序时，80–81
+  - 沟通结果时，85
+  - 制定程序时，80
+  - 解释和利用结果时，84–85
+  - 评分时，83–84
+  - 使用适当长度，112–113
+  - 变量，347
+- 评估偏见
+  - 作为内容和经验差异，94–95
+  - 作为差异项目功能，93
+  - 作为差异效度，93–94
+  - 作为平均差异，93
+  - 作为分数误读，93
+  - 作为性别主义和种族主义内容，93
+  - 作为用于选择决策的统计模型，95
+  - 作为错误标准测量，95
+- 评估计划
+  - 提高效度的标准，110–113
+  - 标记期，103–104
+  - 教学单元，104–105, 106
+  - 指导效度的原则，120
+- 评估实践，56
+- 评估选择委员会，担任，81
+- 关联测试，446
+- 关联性短答题变体，125–126
+- 假设，223
+- 态度，442
+  - 特征，445–446
+  - 动机与，53
+  - 对成绩的态度，329
+- 真实性评估，248。另见表现性评估
+  - 阅读，229–230
+- 基线水平，439
+- 行为
+  - 自适应，442
+  - 能力测验在测量学习行为，429–430
+  - 要评估的类型，347–349
+- 行为清单，269
 
 
 
-用于评价判断题的项目，133
-程序，269
-产品，269
-在报告学生进步时，334
-自我评价，270–271
-类型，269–271
-选择题格式中的选项，139
-公务员委员会，10
-Clang，153
-分类，12
-决策，12
-或关键列表变体，165
-课堂评价
+## 最佳答案题
+优点和批评，158
+评估清单，160
+设计建议，158–159
+格式，158
+
+## 最佳作品作品集，119, 244
+组织和内容，281–283
+
+## 偏见。另见评估偏见
+内容，93
+定义，92–93
+外表，93
+个人，275
+源于评估氛围和条件，95
+
+## 大爆炸评估法，329
+
+## 双峰，485
+
+## 布鲁姆分类法，23–24
+
+## 蓝图
+评估重点，108–109
+制定，109–110
+示例，471–472
+提高效度，109
+组织，107–108
+学生中心评估，110
+
+## 边际案例，350
+
+## 自下而上方法，268
+
+## 用于评价判断题的项目，133
+
+## 程序，269
+
+## 产品，269
+
+## 在报告学生进步时，334
+
+## 自我评价，270–271
+
+## 类型，269–271
+
+## 选择题格式中的选项，139
+
+## 公务员委员会，10
+
+## Clang，153
+
+## 分类，12
+
+## 决策，12
+
+## 或关键列表变体，165
+
+## 课堂评价
 评分框架的基本概念，342–345
 选择，80–81
 与其他评价的一致性，38–39
@@ -21505,49 +23356,86 @@ Clang，153
 改进效度的标准，36
 表现性评价的效度，239
 教师的课堂决策，4–5
-课堂项目，管理，279
-封闭式应答任务，208, 240
-暗示，147
-聚类分数，433
-《教育公平测试实践准则》，41, 79, 81, 374, 422, 453–455
-《教育测量专业责任准则》，78–79, 374, 456–459
-α系数，66, 67
-认知领域，22
-分类学，23–27
-认知干扰，309
-认知学习目标，16
-协作与合作，26
-大学入学考试，437
-高校图书馆学科指南，421
-沟通
+
+## 课堂项目，管理，279
+
+## 封闭式应答任务，208, 240
+
+## 暗示，147
+
+## 聚类分数，433
+
+## 《教育公平测试实践准则》，41, 79, 81, 374, 422, 453–455
+
+## 《教育测量专业责任准则》，78–79, 374, 456–459
+
+## α系数，66, 67
+
+## 认知领域，22
+
+## 分类学，23–27
+
+## 认知干扰，309
+
+## 认知学习目标，16
+
+## 协作与合作，26
+
+## 大学入学考试，437
+
+## 高校图书馆学科指南，421
+
+## 沟通
 评价结果的沟通，85
 有效的沟通，26
-简答题的补全变体，125
-复杂，314
-基于内容的方法，356
-内容偏差，53
-内容差异，评价偏差作为，94–95
-内容领域，44
-内容证据，44
-内容受限的档案袋，283–284
-内容导向的学习目标，28, 30
-内容相关性，44
-内容代表性，44
-相关性与代表性，36–37
-内容标准，19
-情境依赖题组，140, 200–201
+
+## 简答题的补全变体，125
+
+## 复杂，314
+
+## 基于内容的方法，356
+
+## 内容偏差，53
+
+## 内容差异，评价偏差作为，94–95
+
+## 内容领域，44
+
+## 内容证据，44
+
+## 内容受限的档案袋，283–284
+
+## 内容导向的学习目标，28, 30
+
+## 内容相关性，44
+
+## 内容代表性，44
+
+## 相关性与代表性，36–37
+
+## 内容标准，19
+
+## 情境依赖题组，140, 200–201
 优点与缺点，201
 特点，200–201
 布局，201
 页面安排，201
-论述题中的情境依赖任务，178
-持续评价，329–330
-学习的连续体，140
-模板化档案袋，283
-合作学习策略，243–244
-猜测校正公式，312–313
-判断题的校正变体，130
-相关系数，46–50, 487, 489
+
+## 论述题中的情境依赖任务，178
+
+## 持续评价，329–330
+
+## 学习的连续体，140
+
+## 模板化档案袋，283
+
+## 合作学习策略，243–244
+
+## 猜测校正公式，312–313
+
+## 判断题的校正变体，130
+
+## 相关系数，46–50, 487, 489
 比较学生的排名顺序，47
 相关与因果，49
 相关程度，48–49
@@ -21557,18 +23445,29 @@ Clang，153
 样本量与相关系数，49–50
 散点图，47
 学生在不同测验上的分数，46–47
-咨询与指导决策，12
-测验的法律挑战，91–92
-资格认证与证书决策，12
-可信度，判断学生信息来源的，219
-标准，52–53
-评价偏差作为错误的标准，95
-判断标准的价值，52
-标准的种类，52
-标准参照评分，343, 345–346, 356–358
-标准参照，341n, 385–386
+
+## 咨询与指导决策，12
+
+## 测验的法律挑战，91–92
+
+## 资格认证与证书决策，12
+
+## 可信度，判断学生信息来源的，219
+
+## 标准，52–53
+
+## 评价偏差作为错误的标准，95
+
+## 判断标准的价值，52
+
+## 标准的种类，52
+
+## 标准参照评分，343, 345–346, 356–358
+
+## 标准参照，341n, 385–386
 效度，386
-批判性，179–180
+
+## 批判性，179–180
 评分标准和范例的影响，182–183
 对学习策略的影响，182
 可选问题，186
@@ -21576,11 +23475,14 @@ Clang，153
 限制性应答，178–179
 评分，191–196
 有用性，180–183
-伦理原则
+
+## 伦理原则
 保密性，87
 隐私性，87
-ETS测验集，416–417
-评价，8–9。另见评估
+
+## ETS测验集，416–417
+
+## 评价，8–9。另见评估
 在布鲁姆分类学中，24
 定义，8
 对项目和课程的评价，9
@@ -21588,47 +23490,82 @@ ETS测验集，416–417
 技能，468
 变量，347
 证据，多种类型，55
-Excel电子表格，用其计算基本统计量，489
-执行控制技能，468
-范例，201
-扩展分数量表，开发，401
-预期表，50–52
-经验差异，评价偏差作为，94–95
-实验-解释题，159–162
+
+## Excel电子表格，用其计算基本统计量，489
+
+## 执行控制技能，468
+
+## 范例，201
+
+## 扩展分数量表，开发，401
+
+## 预期表，50–52
+
+## 经验差异，评价偏差作为，94–95
+
+## 实验-解释题，159–162
 优点与批评，161
 质量审查清单，160, 162
 编写建议，161–162
 格式，159–161
-实验，245–246
-说明文写作，190
-表现出的兴趣，443
-扩展标准化标准分数量表，401–402
-扩展论述题中的扩展应答，179–180
-外部评价程序，423
-评价的外部结构，46
-外部技术，119
-测验结果的外部使用，374
-课外评价的效度，41
-外推，403
-面部偏差，93
-未尝试，351
-不及格作业，351
-不及格等级，350–353
-对不同类型学生的公平性，39–40
-公平测验评价，95
-《家庭教育权利和隐私法案》（1974），85, 87, 88
-反馈
+
+## 实验，245–246
+
+## 说明文写作，190
+
+## 表现出的兴趣，443
+
+## 扩展标准化标准分数量表，401–402
+
+## 扩展论述题中的扩展应答，179–180
+
+## 外部评价程序，423
+
+## 评价的外部结构，46
+
+## 外部技术，119
+
+## 测验结果的外部使用，374
+
+## 课外评价的效度，41
+
+## 外推，403
+
+## 面部偏差，93
+
+## 未尝试，351
+
+## 不及格作业，351
+
+## 不及格等级，350–353
+
+## 对不同类型学生的公平性，39–40
+
+## 公平测验评价，95
+
+## 《家庭教育权利和隐私法案》（1974），85, 87, 88
+
+## 反馈
 给学生，10
 给教师，10
-画人测验，446
-填充选项，149
-固定百分比法，356, 357, 358
-标记分数，90
-聚焦题，127
-聚焦于一个问题，217
-选择题格式中的干扰项，140, 148–154
-迫选项目格式，444
-格式
+
+## 画人测验，446
+
+## 填充选项，149
+
+## 固定百分比法，356, 357, 358
+
+## 标记分数，90
+
+## 聚焦题，127
+
+## 聚焦于一个问题，217
+
+## 选择题格式中的干扰项，140, 148–154
+
+## 迫选项目格式，444
+
+## 格式
 在最佳答案题中，158
 在实验-解释题中，159–161
 在更大-更小-相同题中，156
@@ -21637,12 +23574,18 @@ Excel电子表格，用其计算基本统计量，489
 在陈述-评论题中，162–163
 在表格（矩阵）题中，170
 在判断题中，130, 136
-形成性评价，102–103, 329
-选项，114, 118
-对项目或材料的评价，9
-课堂评分的目的，342–343
-对学生评价的评价，9
-使用非正式诊断性评价，288–301
+
+## 形成性评价，102–103, 329
+
+## 选项，114, 118
+
+## 对项目或材料的评价，9
+
+## 课堂评分的目的，342–343
+
+## 对学生评价的评价，9
+
+## 使用非正式诊断性评价，288–301
 识别解决应用题的能力，299–301
 识别未掌握的目标，294–296
 识别先决条件缺陷，292–294
@@ -21650,119 +23593,205 @@ Excel电子表格，用其计算基本统计量，489
 识别学生的错误，296
 访谈学生，301
 分析内容优势和劣势，291–292
-第十四修正案，92
-频数分布，481–483, 485
-频数图，483, 485
-频数直方图，483
-频数多边形，483
-功能选项，148
-Gates-MacGinitie阅读测验，401
-性别刻板印象，39
-一般智力技能，429
-概括化证据，53–54
-评价结果的概括化，380
-一般学习目标，17
-一般评分量规，238, 266
-论述题中的一般写作能力，180
-GI论坛等诉德克萨斯教育机构等案，92
-给出名称策略，202
-2000年目标，373
-基于等级分数，432–433
-年级当量分数，385, 402–408
+
+## 第十四修正案，92
+
+## 频数分布，481–483, 485
+
+## 频数图，483, 485
+
+## 频数直方图，483
+
+## 频数多边形，483
+
+## 功能选项，148
+
+## Gates-MacGinitie阅读测验，401
+
+## 性别刻板印象，39
+
+## 一般智力技能，429
+
+## 概括化证据，53–54
+
+## 评价结果的概括化，380
+
+## 一般学习目标，17
+
+## 一般评分量规，238, 266
+
+## 论述题中的一般写作能力，180
+
+## GI论坛等诉德克萨斯教育机构等案，92
+
+## 给出名称策略，202
+
+## 2000年目标，373
+
+## 基于等级分数，432–433
+
+## 年级当量分数，385, 402–408
 开发，403
 解释，403–408
 总体有用性，402–403
 建议，408
-年级平均当量，408
-等级，329
-给学生分配等级，10
-对等级的态度，329
-等级边界，350
-选择模型，341–347
-在沟通价值观中，331
-等级组成部分，350
-批评，333–334
-曲线评分，353
-不及格等级，350–353
-形成性评价的目的，342–343
-将等级与评价计划相联系，347
-等级的含义和目的，329–334
-作为激励因素，331, 333
-在整个评分期间保持一致的必要性，349
-感知和使用，330–333
-教师不喜欢等级的原因，330
-相对标准，343
-用于成绩单，347
-明智的做法，347–353
-总结性评价的目的，343
-等级变量，347
-多个分数的综合评分
+
+## 年级平均当量，408
+
+## 等级，329
+
+## 给学生分配等级，10
+
+## 对等级的态度，329
+
+## 等级边界，350
+
+## 选择模型，341–347
+
+## 在沟通价值观中，331
+
+## 等级组成部分，350
+
+## 批评，333–334
+
+## 曲线评分，353
+
+## 不及格等级，350–353
+
+## 形成性评价的目的，342–343
+
+## 将等级与评价计划相联系，347
+
+## 等级的含义和目的，329–334
+
+## 作为激励因素，331, 333
+
+## 在整个评分期间保持一致的必要性，349
+
+## 感知和使用，330–333
+
+## 教师不喜欢等级的原因，330
+
+## 相对标准，343
+
+## 用于成绩单，347
+
+## 明智的做法，347–353
+
+## 总结性评价的目的，343
+
+## 等级变量，347
+
+## 多个分数的综合评分
 标准参照，358
 常模参照，354–356
-评分框架，342
-课堂评价的基本概念，342–345
-评分系统，使量规和等级量表与其一致，277
-图形等级量表，274
-描述性，274
-图表阅读能力，227–228
-更大-更小-相同题，156–159
+
+## 评分框架，342
+
+## 课堂评价的基本概念，342–345
+
+## 评分系统，使量规和等级量表与其一致，277
+
+## 图形等级量表，274
+
+## 描述性，274
+
+## 图表阅读能力，227–228
+
+## 更大-更小-相同题，156–159
 优点与批评，156
 质量审查清单，157
 编写建议，156–157
 格式，156
-团体施测的调查成套测验，377
-团体能力倾向测验，435
-入学测验，435, 437–438
-准备度测验，435
-类型，431
-分组频数分布，483
-团体项目，241–242
-组合，243
-团体参照评分，341n, 343
-成长与学习进步档案袋，118, 244–245
+
+## 团体施测的调查成套测验，377
+
+## 团体能力倾向测验，435
+
+## 入学测验，435, 437–438
+
+## 准备度测验，435
+
+## 类型，431
+
+## 分组频数分布，483
+
+## 团体项目，241–242
+
+## 组合，243
+
+## 团体参照评分，341n, 343
+
+## 成长与学习进步档案袋，118, 244–245
 组织与内容，279–280
 在教学中使用，280–281
-基于成长的评分，345
-猜测
+
+## 基于成长的评分，345
+
+## 猜测
 校正，312–313
 随机猜测，132, 322
 判断题中的猜测，132
-《3000个原始来源及其应用指南》，421
-吉尔福德-齐默尔曼气质调查表，447
-思维习惯，26–27
-光环效应，191, 274
-健康与心理测量工具（HAPI），421
-异质选项，149
-异质任务，66
-异质测验，324
+
+## 《3000个原始来源及其应用指南》，421
+
+## 吉尔福德-齐默尔曼气质调查表，447
+
+## 思维习惯，26–27
+
+## 光环效应，191, 274
+
+## 健康与心理测量工具（HAPI），421
+
+## 异质选项，149
+
+## 异质任务，66
+
+## 异质测验，324
+
+## 启发式，209
+
+## 用于解决问题，209–210
+
+## 高阶，165
+
+## 同质任务，66
+
+## 同质性测验，324
+
+## IDEAL问题解决法，209
+
+## 简答题的识别变式，126
+
+## 在表现法中识别学生的错误，289
+
+## 结构不良问题，208
+
+## 想象性写作，190
+
+## 不完整题干，150
+
+## 不一致的原因，61–62
+
+## 独立评分论文，196
+
+## 决策一致性指标，72
+
+## 间接评估，141
+
+## 个别教育计划（IEP），82
+
+## 个别施测调查，377
+
+## 一般学业能力倾向的个别施测测验
 
 
 
-
-启发式，209
-用于解决问题，209–210
-高阶，165
-同质任务，66
-同质性测验，324
-
-IDEAL问题解决法，209
-简答题的识别变式，126
-在表现法中识别学生的错误，289
-结构不良问题，208
-想象性写作，190
-不完整题干，150
-不一致的原因，61–62
-独立评分论文，196
-决策一致性指标，72
-间接评估，141
-个别教育计划（IEP），82
-个别施测调查，377
-一般学业能力倾向的个别施测测验
-    考夫曼儿童评估成套测验，440–442
-    斯坦福-比奈智力量表，438–440
-    韦克斯勒智力量表，440
+考夫曼儿童评估成套测验，440–442
+斯坦福-比奈智力量表，438–440
+韦克斯勒智力量表，440
 个人项目，241
-    合并，243
+合并，243
 个体测验，6, 8
 推断，220–222
 非正式评估技术，114
@@ -21791,25 +23820,24 @@ IDEAL问题解决法，209
 智商（IQ），440
 跨学科学习目标，242
 兴趣，442
-    表达的，443
-    测查的，443
-    表现出来的，443
-    测验的，443
-
+表达的，443
+测查的，443
+表现出来的，443
+测验的，443
 内部一致性信度估计，66
 评估的内部结构，45
 互联网
-    在互联网上查找已出版的测验，416–417
-    在互联网上查找未出版的测验，421
+在互联网上查找已出版的测验，416–417
+在互联网上查找未出版的测验，421
 解释性练习
-    情境依赖性，200
-    在论文题中，178
-    在高阶选择题测验中，314–315
-    计算机的使用，324
+情境依赖性，200
+在论文题中，178
+在高阶选择题测验中，314–315
+计算机的使用，324
 题库，314
 题目难度
-    在单项选择题格式中调整，140–141
-    难度信息的用途，318–319
+在单项选择题格式中调整，140–141
+难度信息的用途，318–319
 题目难度指数，318–319
 题目难度水平，113, 315, 317
 题目区分度指数，316–318, 319–330
@@ -21821,61 +23849,60 @@ IDEAL问题解决法，209
 单项选择题格式中的正确选项和干扰项，140
 单项选择题格式中的正确答案，140
 知识
-    算法性，300
-    在布鲁姆分类学中，23
-    陈述性，25
-    语言性，299
-    部分的，132
-    程序性，25
-    图式性，299
-    策略性，300
+算法性，300
+在布鲁姆分类学中，23
+陈述性，25
+语言性，299
+部分的，132
+程序性，25
+图式性，299
+策略性，300
 知识结构方法，289
 库德职业兴趣调查表（KOIS），443
 库德-理查森信度系数，66–67
 美国劳工部，10
 能力倾向测验在测量习得行为中的作用，429–430
 学习
-    问题诊断方法，288–289
-    学习能力倾向，429–431
-    陈述性，257
-    程序性，257
+问题诊断方法，288–289
+学习能力倾向，429–431
+陈述性，257
+程序性，257
 学习模型，源自学习模型维度的学习目标类别，465–467
 学习目标，16
-    行动导向的，241
-    情感领域的，16
-    源自学习模型维度的类别，465–467
-    认知领域的，16
-    内容导向的，28, 30
-
-    过于具体化的危险，18–19
-    在指导教学过程中的作用，16
-    教育目标与具体目标，17
-    为课程或单元进行评估，27–28
-    关注定义明确的，342
-    一般与具体，17
-    对课堂评估的重要性，17
-    跨学科的，242
-    掌握性与发展性，21–22
-    使评估任务与其匹配，30, 110–112
-    最低标准，28
-    建模，10
-    表现中心的，28
-    使用分类学进行分类时的问题，27
-    动作技能领域的，16
-    使用具体目标的原因，16–17
-    为评估选择目标，257
-    查找来源，27
-    州标准与…的对比，19, 21
-    学生中心的，28
-    学生兴趣导向的，241
-    学科导向的，242
-    分类学，22–23
-    撰写具体目标，28–30
+行动导向的，241
+情感领域的，16
+源自学习模型维度的类别，465–467
+认知领域的，16
+内容导向的，28, 30
+过于具体化的危险，18–19
+在指导教学过程中的作用，16
+教育目标与具体目标，17
+为课程或单元进行评估，27–28
+关注定义明确的，342
+一般与具体，17
+对课堂评估的重要性，17
+跨学科的，242
+掌握性与发展性，21–22
+使评估任务与其匹配，30, 110–112
+最低标准，28
+建模，10
+表现中心的，28
+使用分类学进行分类时的问题，27
+动作技能领域的，16
+使用具体目标的原因，16–17
+为评估选择目标，257
+查找来源，27
+州标准与…的对比，19, 21
+学生中心的，28
+学生兴趣导向的，241
+学科导向的，242
+分类学，22–23
+撰写具体目标，28–30
 宽大误差，274
 决策的不太严重后果，78
 终身成就维度，257
 线性标准分数，385, 391, 393–394
-    比较，394
+比较，394
 语言知识，299
 关联题目，140
 链接，147
@@ -21887,41 +23914,40 @@ IDEAL问题解决法，209
 低效标信度，52
 信度估计的下限，66
 法定测验，82–83
-    州级，373
+州级，373
 表现出来的兴趣，443
 读图能力，228
 评分周期，339
-    评估规划，103–104
-    整个周期内评分一致性的需要，349
+评估规划，103–104
+整个周期内评分一致性的需要，349
 主列表（关键列表）题，165, 167–170
-    优点与批评，168–169
-    评估检查表，170
-    编制建议，169–170
-    格式，167–168
+优点与批评，168–169
+评估检查表，170
+编制建议，169–170
+格式，167–168
 掌握度的信度，72–73
 掌握性学习目标，21
-    与发展性学习目标对比，21–22
-    匹配评估，30
+与发展性学习目标对比，21–22
+匹配评估，30
 具体目标掌握法，289
 掌握陈述，作为具体学习目标，21
 匹配题格式，163–173
-    优点与批评，164–165
-    评估检查表，166
-    编制替代变式，167–173
-    编制基本形式，165–167
+优点与批评，164–165
+评估检查表，166
+编制替代变式，167–173
+编制基本形式，165–167
 材料
-    形成性评价，9
-    总结性评价，9
+形成性评价，9
+总结性评价，9
 MAZE题型阅读，230
 科罗拉多州McREL研究所，25
 平均数，485
 平均数差异作为评估偏差，93
 有意义的顺序，150
 创建有意义的任务，260
-
 测量，8
-    误差原因，61–62
-    定义，8
+误差原因，61–62
+定义，8
 测量误差，68
 心理评估量表，421
 集中趋势量数，485–486
@@ -21932,10 +23958,10 @@ MAZE题型阅读，230
 心理测量年鉴（MMY），54, 415–416, 418, 420
 心理模型，209
 元认知
-    用纸笔工具评估，468–469
-    定义，468
-    预试，107
-    类型，468
+用纸笔工具评估，468–469
+定义，468
+预试，107
+类型，468
 大城市成就测验，401, 434
 最低应试技能，306–307
 明尼苏达多相人格量表（MMPI），447
@@ -21947,41 +23973,41 @@ MAZE题型阅读，230
 分数作为激励因素，331, 333
 多水平标准参照测验，367
 多水平调查成套测验，365–367, 376–377
-    辅助材料，367
-    共同学习目标，367
-    团体施测，377
-    个别施测调查，377
-    组织，365–367
+辅助材料，367
+共同学习目标，367
+团体施测，377
+个别施测调查，377
+组织，365–367
 多水平测验，367
 多重能力倾向测验，431
 多评估策略，41
 多种评估任务格式，112
 单项选择题，139–156, 231
-    调整难度，140–141
-    优点与批评，141–143
-    备选答案，139–140
-    替代变式，155–163
-    基本形式，144–155
-    评估任务的基本目的，141
-    评估检查表，155
-    决定不使用，143–144
-    直接与间接评估，141
-    提高质量，144–156, 320–322
-    解释性材料，140
-    正确选项与干扰项，140, 148–155
-    题干，139, 144–148
-    变式，141, 155–163
+调整难度，140–141
+优点与批评，141–143
+备选答案，139–140
+替代变式，155–163
+基本形式，144–155
+评估任务的基本目的，141
+评估检查表，155
+决定不使用，143–144
+直接与间接评估，141
+提高质量，144–156, 320–322
+解释性材料，140
+正确选项与干扰项，140, 148–155
+题干，139, 144–148
+变式，141, 155–163
 多元智能评估菜单，252
 多元智能理论，429n
-    在表现性评估中，251–253
+在表现性评估中，251–253
 多重评分系统，339–341
 编制多重报告系统，341
 多项正误题，130
 叙述性报告，335–338
-    优点，335
-    计算机生成的，368
-    局限性，335–336
-    修改式，336–338
+优点，335
+计算机生成的，368
+局限性，335–336
+修改式，336–338
 叙述性写作，190
 国家科学院，19
 国家教育进展评估（NAEP），8, 27
@@ -21991,7 +24017,7 @@ MAZE题型阅读，230
 全国教育测量委员会，424
 全国数学教师委员会，17, 19
 全国教育测量委员会（NCME），5, 12, 41, 79, 82, 91, 422
-    教育测量专业责任守则，78–79, 374, 456–457
+教育测量专业责任守则，78–79, 374, 456–457
 全国教育协会，5, 12
 全国常模，387
 全国百分等级，391
@@ -22007,118 +24033,214 @@ NCE分数，399
 无区分度题目，320
 非心理测量学问题，92
 非标准化成就测验，372–373
-    缺点，372
-    基于教科书的，372–373
+缺点，372
+基于教科书的，372–373
 非言语测验，431
 正态曲线，394
-    曲线下面积，395
+曲线下面积，395
 正态曲线等值，399–400
 正态分布，394–397
-    与自然规律对比，395
-    正态分布中的百分等级和z分数，395, 397
+与自然规律对比，395
+正态分布中的百分等级和z分数，395, 397
 正态化标准分数，385, 397–400
-    扩展的，401–402
+扩展的，401–402
 正态化T分数（McCall's T），398
 正态化z分数，397–398
 常模组
-    地方，387
-    类型，387–389
+
+
+
+地方，387
+
+类型，387–389
+
 常模参照评分，346
+
 分配常模参照字母等级，353–356
+
 常模参照分数
-    各种比较，409
-    解释的一般指南，409–410
-    解释，384–411
-    向家长解释，410–411
+
+各种比较，409
+
+解释的一般指南，409–410
+
+解释，384–411
+
+向家长解释，410–411
+
 常模参照，341n, 343–345, 385
+
 常模
-    评估标准，388
-    重要性，386–387
-    出版者的，388–389
-    特殊，368
+
+评估标准，388
+
+重要性，386–387
+
+出版者的，388–389
+
+特殊，368
+
 常模表，389
+
 新颖材料，200
+
 数值评定量表，8, 271, 274
+
 数字推理，432
+
 目标
-    行为目标，21
-    明确目标的重要性，16–17
-    教育目标分类学，460–464
+
+行为目标，21
+
+明确目标的重要性，16–17
+
+教育目标分类学，460–464
+
 目标参照，341n
+
 客观性，39
+
 观察报告，观察与判断，220
+
 获得分数，68
+
 奇偶分半法，66
+
 综合测验，431
+
 开放式反应任务，208, 240
+
 选择题选项，139
+
 口头评估技术，114
+
 口头报告，246
+
 俄勒冈州写作评估的评分指南，473–479
+
 奥蒂斯-列侬学校能力测验，431–435
+
 越级测验，368
+
 过度解释，71
+
 重叠选项，151–152
+
 欧瓦索独立学区第1011号等诉法尔沃等案，88
+
 纸笔工具，240
-    用其评估元认知，468–469
-    技术，118
+
+用其评估元认知，468–469
+
+技术，118
+
 复本信度系数，65
+
 向家长解释分数，410–411
+
 家长会，338–339
-    主持，338
-    局限性，338–339
-    隐私，339
+
+主持，338
+
+局限性，338–339
+
+隐私，339
+
 部分得分，126
+
 部分知识，132
+
 段落依赖性，53
+
 及格-不及格决策的信度，72–73
+
 皮博迪个人成就测验（PIAT），377
+
 皮尔逊积矩相关系数，47–48
+
 人相似性原理，443
+
 百分比一致性，67–68, 73
+
 百分等级区间，433
+
 百分等级，385, 389–391
-    在正态分布中，395, 397
+
+在正态分布中，395, 397
+
 正常发展的百分等级观，407
+
 完美匹配，163
+
 表现性评估，203–204, 237–244, 248
-    优点与批评，248–251
-    平衡格式，237–238
-    争论，246
-    定义，237
-    演示，245
-    戏剧表演，246–247
-    基本特征，238–239
-    实验，245–246
-    多元智能视角，251–253
-    口头报告，246
-    档案袋，244–245
-    用于阅读，229–230
-    模拟，247–248
-    编制阶段，257–268
-    技术，119
-    类型，239–244
-    用于改进教学，251
+
+优点与批评，248–251
+
+平衡格式，237–238
+
+争论，246
+
+定义，237
+
+演示，245
+
+戏剧表演，246–247
+
+基本特征，238–239
+
+实验，245–246
+
+多元智能视角，251–253
+
+口头报告，246
+
+档案袋，244–245
+
+用于阅读，229–230
+
+模拟，247–248
+
+编制阶段，257–268
+
+技术，119
+
+类型，239–244
+
+用于改进教学，251
+
 表现中心学习目标，28
+
 表现标准，19
+
 表现任务，238
-    编制，259–263
-    评估，263
+
+编制，259–263
+
+评估，263
+
 永久记录，341
+
 个人偏见，275
+
 通过个人联系查找已出版测验，417
+
 人格维度评估，446–447
+
 儿童人格量表，447
+
 说服性写作，190
+
 图片排列测验，446
+
 安置决策，11
+
 规划技能，468
+
 似真干扰项，148
+
 游戏访谈，8
+
 档案袋文化模式，280
-
-
 
 - 作品集（Portfolios），118, 244–245
   - 最佳作品（best-works），119, 244, 281–283
@@ -22190,7 +24312,10 @@ NCE分数，399
   - 评估核对表（checklist for evaluating），128
   - 编制（crafting），126–130
   - 实用性（usefulness of），126
-  - 格式变式（varieties of formats），125–126
+
+
+
+- 格式变式（varieties of formats），125–126
 - 简短任务（Short tasks），261
 - 模拟（Simulations），247–248
 - 单层标准化测验（Single-level standardized tests），367
@@ -22292,7 +24417,10 @@ NCE分数，399
     - 参加标准化测验（to take standardized tests），83
   - 作为应试者的权利（rights of, as test takers），85
   - 学生的成熟度（sophistication of），53
-  - 总结性评价（summative evaluation of），9
+
+
+
+- 总结性评价（summative evaluation of），9
 - 以学生为中心的评估蓝图（Student-centered assessment, blueprints for），110
 - 以学生为中心的学习目标（Student-centered learning targets），28
 - 出于研究目的访问学生数据（Student data, access to, for research purposes），87
@@ -22384,29 +24512,29 @@ NCE分数，399
     - 开发程序（development procedures），92
     - 指导语（directions for），53
     - 画人测验（figure drawing），446
-    - 标准参照评分（grading criterion-referenced），357–358
-    - 常模参照评分（grading norm referenced），353–354
-    - 异质测验（heterogeneous），324
-    - 同质测验（homogeneous），324
-    - 强制测验（mandated），82–83
-    - 多水平测验（multilevel），367
-    - 多重能力倾向测验（multiple-aptitude），431
-    - 非言语测验（nonverbal），431
-    - 综合测验（omnibus），431
-    - 图片排列测验（picture arrangements），446
-    - 投射测验（projective），3, 446–447
-    - 准备性测验（readiness），3, 435
-    - 为测验选择题目（selecting items for），322–324
-    - 单层标准化测验（single-level standardized），367
-    - 单科测验（single-subject），378–379
-    - 州强制测验（state-mandated），373
-    - 教科书出版商提供的测验（supplied by textbook publishers），119
-    - 基于教科书的测验（textbook-based），372–373
-    - 类型（types of），365–367
-    - 对教师的有用性（usefulness of, for the teacher），447
 
 
 
+- 标准参照评分（grading criterion-referenced），357–358
+- 常模参照评分（grading norm referenced），353–354
+- 异质测验（heterogeneous），324
+- 同质测验（homogeneous），324
+- 强制测验（mandated），82–83
+- 多水平测验（multilevel），367
+- 多重能力倾向测验（multiple-aptitude），431
+- 非言语测验（nonverbal），431
+- 综合测验（omnibus），431
+- 图片排列测验（picture arrangements），446
+- 投射测验（projective），3, 446–447
+- 准备性测验（readiness），3, 435
+- 为测验选择题目（selecting items for），322–324
+- 单层标准化测验（single-level standardized），367
+- 单科测验（single-subject），378–379
+- 州强制测验（state-mandated），373
+- 教科书出版商提供的测验（supplied by textbook publishers），119
+- 基于教科书的测验（textbook-based），372–373
+- 类型（types of），365–367
+- 对教师的有用性（usefulness of, for the teacher），447
 - 计算机在（测验）编制中的应用，324
 - 词语联想，446
 - 《测验：心理学、教育及商业评估综合参考》，416, 420
@@ -22508,10 +24636,11 @@ NCE分数，399
 - z分数，393
   - 正态分布中的z分数，395, 397
 
-StudentAid.ed.gov
+`StudentAid.ed.gov`
+
 资助你的未来。
 
-要查看本书的配套网站，请访问 http://www.prenhall.com/nitko
+要查看本书的配套网站，请访问 `http://www.prenhall.com/nitko`
 
 ![](img/5f79dab9acf263c9421570aa1a23cc67_561_0.png)
 

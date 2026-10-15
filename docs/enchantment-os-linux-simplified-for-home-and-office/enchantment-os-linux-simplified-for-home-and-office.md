@@ -1,29 +1,7 @@
+
 # Enchantment OS：家庭与办公极简版 Linux
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# XFCE
-
-
-
+## XFCE
 
 ```bash
 bash-2.05b$ pwd
@@ -64,29 +42,28 @@ bash-2.05b$ date
 Wed May 25 11:36:56 PDT 2005
 ```
 
-
-
-
 请选择启动设备：
-SATA:PM-PLEXTOR PX-64M1S
-USB:Verbatim TUFF
 
-↑ 和 ↓ 移动选择
-ENTER 选择启动设备
-ESC 使用默认设置启动
+- `SATA:PM-PLEXTOR PX-64M1S`
+- `USB:Verbatim TUFF`
 
+`↑` 和 `↓` 移动选择
 
-# Enchantment
+`ENTER` 选择启动设备
+
+`ESC` 使用默认设置启动
+
+## Enchantment
+
 简化的 Linux
 
-Enchantment OS，基于 Xubuntu 16.04 LTS
+Enchantment OS，基于 `Xubuntu 16.04 LTS`
 
-使用 Linux：保存文件（持久性 USB 驱动）
-尝试 Linux：文件不保存（DVD 或 USB）
-在硬盘上安装 Enchantment Linux
+- 使用 Linux：保存文件（持久性 USB 驱动）
+- 尝试 Linux：文件不保存（DVD 或 USB）
+- 在硬盘上安装 Enchantment Linux
 
-
-```
+```text
 GNU GRUB 版本1
 Ubuntu
 Ubuntu 的高级选项
@@ -94,18 +71,7 @@ Ubuntu 的高级选项
 内存测试 (memtest86+, 串口 con
 ```
 
-
-
-
-
-
-
-
-
-
-
-
-# #软件
+## 软件
 
 Enchantment 有大量的软件可用，这是针对 Ubuntu 的精选软件集合。如果您没有找到想要的内容，请检查软件中心。
 
@@ -115,70 +81,60 @@ Enchantment 有大量的软件可用，这是针对 Ubuntu 的精选软件集合
 | 类别 | 解码器 |
 | 来源 | Ubuntu |
 
+## Samba 用户
 
-
-
-
-
-# Samba 用户
-
-kelley
+`kelley`
 
 - 添加用户
 - 编辑用户
 - 删除用户
 
-## 创建新 Samba 用户
+### 创建新 Samba 用户
 
-Unix 用户名：kelley
-Windows 用户名：kelley
-Samba 密码：********
-确认 Samba 密码：********
+- Unix 用户名：`kelley`
+- Windows 用户名：`kelley`
+- Samba 密码：`********`
+- 确认 Samba 密码：`********`
 
-确定
-取消
-确定
+[确定] [取消] [确定]
 
-## 创建 Samba 共享
+### 创建 Samba 共享
 
-基本访问
+**基本访问**
 
-目录：/home/kelley/Pictures [浏览...]
-共享名称：Pictures
-描述：我的照片
-
+- 目录：`/home/kelley/Pictures` [浏览...]
+- 共享名称：`Pictures`
+- 描述：我的照片
 - 仅允许特定用户访问
-- kelley
+  - `kelley`
 - 可写
 - 可见
 - 允许所有人访问
 
-确定
+[确定] [取消] [确定] [取消]
 
-取消
-确定
-取消
+### Pictures
 
-## Pictures
+**家目录**
 
-家目录
 - Pictures
   - (空)
 - Videos
-  -  下载 (Downloads)
+  - 下载 (Downloads)
 - 计算机
-  - WDC WD100S12X-555JTETO: home:1000
-- JetFlash Transcend 16GB: Transcend
-- SD02G: 2.0 GB 卷
+  - `WDC WD100S12X-555JTETO: home:1000`
+- `JetFlash Transcend 16GB: Transcend`
+- `SD02G: 2.0 GB 卷`
 - 目录
 - 选择
 
 显示：全部
+
 13 个文件 (4.3 MB) · 剩余 78.5 GB 空间
 
-## Transcend - 文件管理器
+### Transcend - 文件管理器
 
-/media/kelley/Transcend/
+`/media/kelley/Transcend/`
 
 | 名称 | 大小 | 类型 | 修改日期 |
 | :--- | :--- | :--- | :--- |
@@ -203,4 +159,3 @@ Samba 密码：********
 | 4 | 启动/停止次数 | 34 | 100 | 0 | 100 | 老化 | 在线中 | OK |
 | 5 | 重映射扇区计数 | 0 扇区 | 200 | 140 | 200 | 故障前 | 在线中 | OK |
 | 7 | 寻道错误率 | 0 | 200 | 0 | 200 | 老化 | 在线中 | OK |
-

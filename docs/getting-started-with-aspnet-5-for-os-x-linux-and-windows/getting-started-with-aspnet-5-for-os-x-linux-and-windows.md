@@ -1,16 +1,9 @@
+
 # ASP.NET 5 在 OS X、Linux 和 Windows 上入门指南
-
-
-
-
-
-
-
 
 ## 前言
 
 本书旨在帮助任何希望开始使用 ASP.NET 5 core 的人。它描述了 ASP.NET 5 core 的部署以及 ASP.NET 5 core 的基本元素，并展示了如何使用几个 ASP.NET 5 core 功能。
-
 Agus Kurniawan
 柏林 & 德波克，2015 年 6 月
 
@@ -21,7 +14,6 @@ Agus Kurniawan
 ASP.NET 5 是一个轻量级且可组合的框架，用于构建 Web 和云应用程序。
 ASP.NET 5 完全开源，可在 GitHub 上获取，http://github.com/aspnet/home。
 撰写本书时，ASP.NET 5 目前处于预览阶段。
-
 本书将重点介绍如何在 OS X、Linux 和 Windows 平台上开发 ASP.NET 5。我们使用 ASP.NET 5 core beta4。
 
 ### 1.2 系统要求
@@ -42,7 +34,7 @@ ASP.NET 5 完全开源，可在 GitHub 上获取，http://github.com/aspnet/home
 
 ### 2.2 部署 ASP.NET 5
 
-要在 OS X 上安装 ASP.NET，你可以使用 brew，[http://brew.sh/](http://brew.sh/)。输入以下命令来安装 ASP.NET 5。
+要在 OS X 上安装 ASP.NET，你可以使用 `brew`，[http://brew.sh/](http://brew.sh/)。输入以下命令来安装 ASP.NET 5。
 
 ```bash
 $ brew tap aspnet/dnx
@@ -52,7 +44,7 @@ $ brew install dnvm
 
 ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_12_0.png)
 
-如果成功，你会看到一个你应该执行的任务。我们必须将 dnvm 添加到我们的配置文件中。
+如果成功，你会看到一个你应该执行的任务。我们必须将 `dnvm` 添加到我们的配置文件中。
 
 ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_13_0.png)
 
@@ -62,7 +54,7 @@ $ brew install dnvm
 $ nano ~/.bash_profile
 ```
 
-然后，你会打开 nano 编辑器。你可以使用其他文本编辑器。将此脚本添加到 `~/.bash_profile` 中。
+然后，你会打开 `nano` 编辑器。你可以使用其他文本编辑器。将此脚本添加到 `~/.bash_profile` 中。
 
 ```bash
 source dnvm.sh
@@ -71,7 +63,6 @@ source dnvm.sh
 ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_14_0.png)
 
 完成后，保存此文件。然后，关闭你的终端并重新打开，以便终端加载配置文件脚本。
-
 下一步是升级。输入此命令。
 
 ```bash
@@ -80,13 +71,13 @@ $ dnvm upgrade
 
 ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_15_0.png)
 
-现在你已经安装了 dnvm。它将用于管理 OS X 上的 ASP.NET 5 运行时。你可以通过输入此命令来验证 dnvm。
+现在你已经安装了 `dnvm`。它将用于管理 OS X 上的 ASP.NET 5 运行时。你可以通过输入此命令来验证 `dnvm`。
 
 ```bash
 $ dnvm help
 ```
 
-因此你会看到 dnvm 参数列表。
+因此你会看到 `dnvm` 参数列表。
 
 ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_16_0.png)
 
@@ -124,7 +115,7 @@ agusk$
 
 ### 2.3 测试
 
-为了测试我们的 ASP.NET 5，我们使用来自 [https://github.com/aspnet/Home](https://github.com/aspnet/Home) 的代码示例。我们克隆这些代码示例，然后使用 dnu 命令还原所有必需的库。输入这些命令。
+为了测试我们的 ASP.NET 5，我们使用来自 [https://github.com/aspnet/Home](https://github.com/aspnet/Home) 的代码示例。我们克隆这些代码示例，然后使用 `dnu` 命令还原所有必需的库。输入这些命令。
 
 ```bash
 $ git clone https://github.com/aspnet/Home
@@ -132,7 +123,7 @@ $ cd Home
 $ dnu restore
 ```
 
-如果你的 OS X 上没有 git，你可以通过 brew 安装它。
+如果你的 OS X 上没有 `git`，你可以通过 `brew` 安装它。
 
 ```bash
 $ brew install git
@@ -144,7 +135,7 @@ $ brew install git
 
 #### 2.3.1 ASP.NET 控制台
 
-要运行 ASP.NET 控制台，我们可以使用 dnx。首先，导航到 ConsoleApp 项目。输入这些命令。
+要运行 ASP.NET 控制台，我们可以使用 `dnx`。首先，导航到 `ConsoleApp` 项目。输入这些命令。
 
 ```bash
 $ cd samples/latest/ConsoleApp/
@@ -157,7 +148,7 @@ $ dnx . run .
 
 #### 2.3.2 ASP.NET 5
 
-要运行 ASP.NET 5 应用程序，我们可以使用带有 kestrel 的 dnx。首先，导航到 HelloWeb 项目。
+要运行 ASP.NET 5 应用程序，我们可以使用带有 `kestrel` 的 `dnx`。首先，导航到 `HelloWeb` 项目。
 输入这些命令。
 
 ```bash
@@ -170,7 +161,7 @@ ASP.NET 5 应用程序。
 
 ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_20_0.png)
 
-要停止 kestrel，你可以输入 `exit`。
+要停止 `kestrel`，你可以输入 `exit`。
 
 ```bash
 exit
@@ -180,7 +171,7 @@ exit
 
 #### 2.3.3 ASP.NET MVC
 
-要运行 ASP.NET MVC，我们可以使用 dnx。首先，导航到 HelloMvc 项目。输入这些命令。
+要运行 ASP.NET MVC，我们可以使用 `dnx`。首先，导航到 `HelloMvc` 项目。输入这些命令。
 
 ```bash
 $ cd samples/latest/HelloMvc/
@@ -191,29 +182,27 @@ $ dnx . kestrel
 
 ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_21_0.png)
 
-要停止 kestrel，你可以输入 exit。
+要停止 `kestrel`，你可以输入 `exit`。
 
-#### 2.4 开发工具
+### 2.4 开发工具
 
 下一步是构建程序。要编写程序，你可以使用任何文本编辑器。微软还提供了 Visual Studio Code。它可以在 Windows、Linux 和 Mac 上运行。你可以在 [https://code.visualstudio.com/](https://code.visualstudio.com/) 上下载。
 
 ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_23_0.png)
 
-
-
-
-
 ## 3 在 Linux 上部署 ASP.NET 5
+
+
 
 在本章中，我们将学习如何在 Linux 上部署 ASP.NET 5。
 
 ### 3.1 入门
 
-在本节中，我们将开始在 Linux 上部署 ASP.NET 5。在这本书中，我使用的是 ASP.NET 5 预览版，beta4。作为示例，我使用 Ubuntu 15.04 作为 Linux 发行版。请按照下一节的安装步骤进行操作。
+在本节中，我们将开始在 Linux 上部署 ASP.NET 5。在这本书中，我使用的是 ASP.NET 5 预览版，`beta4`。作为示例，我使用 Ubuntu 15.04 作为 Linux 发行版。请按照下一节的安装步骤进行操作。
 
 ### 3.2 部署 ASP.NET 5
 
-此安装过程基于此文档：[https://github.com/aspnet/Home/blob/dev/GettingStartedDeb.md](https://github.com/aspnet/Home/blob/dev/GettingStartedDeb.md)。在本节中，我们将手动在 Linux 上安装 ASP.NET 5（不使用 docker）。首先，请更新你的发行版。
+此安装过程基于此文档：[https://github.com/aspnet/Home/blob/dev/GettingStartedDeb.md](https://github.com/aspnet/Home/blob/dev/GettingStartedDeb.md)。在本节中，我们将手动在 Linux 上安装 ASP.NET 5（不使用 `docker`）。首先，请更新你的发行版。
 
 ```bash
 $ sudo apt-get update
@@ -261,7 +250,7 @@ agusk@ubuntu15:~$
 
 #### 3.2.2 安装 libuv
 
-Libuv 是一个多平台异步 IO 库，由我们将用于托管 Web 应用程序的 KestrelHttpServer 使用。
+Libuv 是一个多平台异步 IO 库，由我们将用于托管 Web 应用程序的 `KestrelHttpServer` 使用。
 
 输入这些命令来安装 libuv 库。
 
@@ -309,7 +298,7 @@ agusk@ubuntu15:~$
 $ curl -sSL https://raw.githubusercontent.com/aspnet/Home/dev/dnvminstall.sh | DNX_BRANCH=dev sh && source ~/.dnx/dnvm/dnvm.sh
 ```
 
-如果成功，你会看到一个你应该执行的任务。我们必须将 dnvm 添加到我们的配置文件（profile）中。
+如果成功，你会看到一个你应该执行的任务。我们必须将 `dnvm` 添加到我们的配置文件 `profile` 中。
 
 ```bash
 agusk@ubuntu15:~
@@ -328,7 +317,7 @@ $ nano /home/<account>/.bashrc
 
 请将 `<account>` 替换为你的 Linux 登录账户。
 
-然后，你将看到 nano 编辑器。你也可以使用 gedit 或其他文本编辑器来编辑此文件。将此脚本添加到你的配置文件（例如，`/home/<account>/.bashrc`）中的 .bashrc 文件里。
+然后，你将看到 `nano` 编辑器。你也可以使用 `gedit` 或其他文本编辑器来编辑此文件。将此脚本添加到你的配置文件（例如，`/home/<account>/.bashrc`）中的 `.bashrc` 文件里。
 
 然后，输入此脚本。
 
@@ -348,13 +337,15 @@ $ dnvm upgrade
 
 ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_29_0.png)
 
-现在你已经安装好了 dnvm。它将用于管理 Linux 上的 ASP.NET 5 运行时。你可以通过输入此命令来验证 dnvm。
+
+
+现在你已经安装好了 `dnvm`。它将用于管理 Linux 上的 ASP.NET 5 运行时。你可以通过输入此命令来验证 `dnvm`。
 
 ```bash
 $ dnvm help
 ```
 
-这样你就会看到 dnvm 参数列表。
+这样你就会看到 `dnvm` 参数列表。
 
 ```bash
 agusk@ubuntu15:~$ dnvm upgrade
@@ -413,11 +404,11 @@ Active Version          Runtime Arch Location           Alias
 agusk@ubuntu15:~$
 ```
 
-#### 3.2.4 安装 git
+### 3.2.4 安装 git
 
-此任务是可选的，但我建议安装它，因为我们想要从 https://github.com/aspnet/Home 运行示例应用。
+此任务是可选的，但我建议安装它，因为我们想要从 `https://github.com/aspnet/Home` 运行示例应用。
 
-输入此命令来安装 git。
+输入此命令来安装 `git`。
 
 ```bash
 $ sudo apt-get install git
@@ -446,7 +437,7 @@ Do you want to continue? [Y/n]
 
 ### 3.3 测试
 
-为了测试我们的 ASP.NET 5，我们使用来自 https://github.com/aspnet/Home 的代码示例。我们克隆这些代码示例，然后使用 dnu 命令恢复所有必需的库。
+为了测试我们的 ASP.NET 5，我们使用来自 `https://github.com/aspnet/Home` 的代码示例。我们克隆这些代码示例，然后使用 `dnu` 命令恢复所有必需的库。
 
 输入这些命令。
 
@@ -460,9 +451,9 @@ $ dnu restore
 
 现在你准备好运行代码示例了。
 
-### 3.3.1 ASP.NET 控制台
+#### 3.3.1 ASP.NET 控制台
 
-要运行 ASP.NET 控制台，我们可以使用 dnx。首先，导航到 ConsoleApp 项目。
+要运行 ASP.NET 控制台，我们可以使用 `dnx`。首先，导航到 `ConsoleApp` 项目。
 
 输入这些命令。
 
@@ -473,13 +464,9 @@ $ dnx . run .
 
 如果成功，你可以在终端上看到一条 “Hello World” 消息。
 
+#### 3.3.2 ASP.NET 5
 
-
-
-
-### 3.3.2 ASP.NET 5
-
-要运行 ASP.NET 5 应用程序，我们可以使用 `dnx` 搭配 kestrel。首先，导航到 HelloWeb 项目。输入以下命令。
+要运行 ASP.NET 5 应用程序，我们可以使用 `dnx` 搭配 `kestrel`。首先，导航到 `HelloWeb` 项目。输入以下命令。
 
 ```
 $ cd samples/latest/HelloWeb/
@@ -502,20 +489,22 @@ agusk@ubuntu15: ~/books/aspnet/home/samples/latest/ConsoleApp$
 
 ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_34_0.png)
 
-要停止 kestrel，你可以输入 `exit`。
+要停止 `kestrel`，你可以输入 `exit`。
 
 ```
 exit
 ```
 
-### 3.3.3 ASP.NET MVC
+#### 3.3.3 ASP.NET MVC
 
-要运行 ASP.NET MVC，我们可以使用 `dnx`。首先，导航到 HelloMvc 项目。输入以下命令。
+要运行 ASP.NET MVC，我们可以使用 `dnx`。首先，导航到 `HelloMvc` 项目。输入以下命令。
 
 ```
 $ cd samples/latest/HelloMvc/
 $ dnx . kestrel
 ```
+
+
 
 ```
 agusk@ubuntu15:~/books/aspnet/home/samples/latest/HelloMvc$ ls
@@ -686,6 +675,16 @@ D:\Temp\Home\samples\latest\ConsoleApp>cd ..
 D:\Temp\Home\samples\latest>cd HelloWeb
 
 D:\Temp\Home\samples\latest\HelloWeb>dnx . kestrel
+Started
+exit
+
+D:\Temp\Home\samples\latest\HelloWeb>cd ..
+
+D:\Temp\Home\samples\latest>cd HelloMvc
+
+D:\Temp\Home\samples\latest\HelloMvc>dnx . kestrel
+Started
+exit
 ```
 
 现在打开浏览器，然后导航到 `http://localhost:5004/`。你应该能看到 ASP.NET MVC 应用程序。
@@ -712,6 +711,8 @@ exit
 
 ## 4.4 开发工具
 
+
+
 下一步是构建程序。为了编写程序，你可以使用任何文本编辑器。微软还提供了 Visual Studio Code。它运行在 Windows、Linux 和 Mac 上。你可以在 `https://code.visualstudio.com/` 上下载它。
 
 ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_48_0.png)
@@ -720,23 +721,23 @@ exit
 
 在本章中，我将解释如何处理 ASP.NET 5 开发。
 
-## 5.1 入门
+### 5.1 入门
 
 在本章中，我们学习如何从头开始为 ASP.NET 5 编写程序。我们使用两个场景，ASP.NET 5 控制台和 ASP.NET 5 MVC，进行说明。
 
 ### 5.2 构建 ASP.NET 5 控制台应用程序
 
-在这种情况下，我们为 ASP.NET 5 控制台构建一个简单的程序。我们使用 Math 类来实现 Math 操作。
+在这种情况下，我们为 ASP.NET 5 控制台构建一个简单的程序。我们使用 `Math` 类来实现 Math 操作。
 
-### 5.2.1 创建项目
+#### 5.2.1 创建项目
 
-要创建一个项目，我们可以创建一个文件夹，名为 ConsoleDemo。在 Linux/OS X 中，你可以在终端中输入此命令。
+要创建一个项目，我们可以创建一个文件夹，名为 `ConsoleDemo`。在 Linux/OS X 中，你可以在终端中输入此命令。
 
 ```bash
 mkdir ConsoleDemo
 ```
 
-此外，我们创建一个文件，**project.json**。输入此脚本。
+此外，我们创建一个文件，`project.json`。输入此脚本。
 
 ```json
 {
@@ -758,9 +759,9 @@ mkdir ConsoleDemo
 
 此文件是一个项目配置，使用 ASP.NET 5 DNX。
 
-### 5.2.2 编写程序
+#### 5.2.2 编写程序
 
-要创建一个程序，我们创建一个类，SimpleMath。创建一个文件，名为 **SimpleMath.cs**。然后，编写此代码。
+要创建一个程序，我们创建一个类，`SimpleMath`。创建一个文件，名为 `SimpleMath.cs`。然后，编写此代码。
 
 ```csharp
 using System;
@@ -770,10 +771,6 @@ public class SimpleMath
 public SimpleMath(){ }
 }
 ```
-
-
-
-
 
 ```csharp
 public double Add(double a, double b)
@@ -789,7 +786,7 @@ public void DemoMath(double a, double b)
 }
 ```
 
-下一步是创建主程序。创建一个文件，**Program.cs**，并编写以下代码。
+下一步是创建主程序。创建一个文件，`Program.cs`，并编写以下代码。
 
 ```csharp
 using System;
@@ -819,7 +816,7 @@ public class Program
 
 ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_52_0.png)
 
-#### 5.2.3 测试
+##### 5.2.3 测试
 
 现在您可以测试该程序了。首先，我们使用 `dnu` 加载所有必需的库。然后，使用 `dnx` 执行该程序。
 
@@ -837,27 +834,34 @@ dnx . run .
 第二个演示是构建一个 ASP.NET 5 MVC 应用程序。我们开发一个简单的输入表单并利用 ASP.NET MVC 会话。以下是我们的场景：
 
 - 用户填写表格以创建新项目
+
 - 用户点击保存按钮以保存数据
+
 - 数据将被存储到一个会话堆栈中
+
 - 然后，数据将在另一个页面中显示
 
 让我们开始开发吧。
 
-### 5.3.1 创建项目
+#### 5.3.1 创建项目
 
-首先，我们通过创建一个名为 WebDemo 的文件夹来创建项目。然后，您创建以下文件夹：
+首先，我们通过创建一个名为 `WebDemo` 的文件夹来创建项目。然后，您创建以下文件夹：
 
 - Controllers
+
 - Models
+
 - Properties
+
 - Views
+
 - wwwroot
 
 您可以在下图中看到项目结构。
 
 ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_55_0.png)
 
-我们需要在项目的根目录中有一个配置文件，称为 **project.json**。它包含必需的库。请为 project.json 文件编写此脚本。
+我们需要在项目的根目录中有一个配置文件，称为 `project.json`。它包含必需的库。请为 `project.json` 文件编写此脚本。
 
 ```json
 {
@@ -890,7 +894,7 @@ dnx . run .
 }
 ```
 
-应用程序将通过执行 **Startup.cs** 文件启动。创建此文件并编写以下代码。
+应用程序将通过执行 `Startup.cs` 文件启动。创建此文件并编写以下代码。
 
 ```csharp
 using Microsoft.AspNetCore.Builder;
@@ -921,7 +925,9 @@ namespace WebDemo
 }
 ```
 
-我们还添加 **launchSettings.json** 来配置如何执行程序。将其存储在 Properties 文件夹中。请为 **launchSettings.json** 文件编写此脚本。
+我们还添加 `launchSettings.json` 来配置如何执行程序。将其存储在 Properties 文件夹中。请为 `launchSettings.json` 文件编写此脚本。
+
+
 
 ```json
 {
@@ -953,7 +959,7 @@ namespace WebDemo
 
 #### 5.3.2.1 创建模型
 
-模型持有数据。在我们的情况下，我们创建一个名为 Product 的模型，它由四个属性组成。创建一个文件，称为 **Product.cs**，并编写以下代码。
+模型持有数据。在我们的情况下，我们创建一个名为 `Product` 的模型，它由四个属性组成。创建一个文件，称为 `Product.cs`，并编写以下代码。
 
 ```csharp
 using System.ComponentModel.DataAnnotations;
@@ -976,11 +982,11 @@ namespace WebDemo.Web.Models
 }
 ```
 
-将此文件保存到 Models 文件夹中。
+将此文件保存到 `Models` 文件夹中。
 
 #### 5.3.2.2 创建控制器
 
-现在我们将创建名为 Home 控制器的 MVC 控制器。创建一个文件，称为 **HomeController.cs**，并编写以下代码。
+现在我们将创建名为 `Home` 控制器的 MVC 控制器。创建一个文件，称为 `HomeController.cs`，并编写以下代码。
 
 ```csharp
 using System;
@@ -1034,11 +1040,11 @@ namespace WebDemo.Web.Controllers
 
 我们创建三个页面：
 
-- Index.cshtml
-- Create.cshtml
-- Save.cshtml
+- `Index.cshtml`
+- `Create.cshtml`
+- `Save.cshtml`
 
-我们还创建一个布局，称为 **Shared.cshtml**。编写此脚本。
+我们还创建一个布局，称为 `Shared.cshtml`。编写此脚本。
 
 ```html
 <!DOCTYPE html>
@@ -1076,7 +1082,9 @@ namespace WebDemo.Web.Controllers
 </html>
 ```
 
-以下是 **Index.cshtml** 文件的脚本。
+以下是 `Index.cshtml` 文件的脚本。
+
+
 
 ```html
 @{
@@ -1091,7 +1099,7 @@ namespace WebDemo.Web.Controllers
 </div>
 ```
 
-以下是 **Create.cshtml** 文件的脚本。
+以下是 `Create.cshtml` 文件的脚本。
 
 ```html
 @using WebDemo.Web.Models
@@ -1149,13 +1157,9 @@ namespace WebDemo.Web.Controllers
 }
 ```
 
+### 5.3.3 测试
 
-
-
-
-#### 5.3.3 测试
-
-以下是 **Save.cshtml** 文件的脚本。
+以下是 `Save.cshtml` 文件的脚本。
 
 ```html
 @model WebDemo.Web.Models.Product
@@ -1176,7 +1180,7 @@ namespace WebDemo.Web.Controllers
 </div>
 ```
 
-保存所有文件并将其存储到 Views 文件夹中。参见项目结构。
+保存所有文件并将其存储到 `Views` 文件夹中。参见项目结构。
 
 现在你可以执行了。输入这些命令以加载所需的库并执行程序。
 
@@ -1216,7 +1220,6 @@ Started
 数量：10  
 是否折扣：[x]  
 保存  
-
 © 2015 - 我的 ASP.NET 应用程序
 
 我们填写的表单将在下一页显示。它使用 ASP.NET 会话来保持我们填写的数据。
@@ -1231,18 +1234,19 @@ Started
 产品代码：abc123  
 数量：10  
 是否折扣：True  
-
 © 2015 - 我的 ASP.NET 应用程序
 
 ## 6. ASP.NET 5 RESTful 和 AngularJS
 
 在本章中，我将解释如何使用 ASP.NET 5 RESTful 和 AngularJS。
 
-## 6.1 入门
+### 6.1 入门
 
 在本节中，我们将开发一个简单的应用程序，以结合使用 ASP.NET RESTful 和 AngularJS。AngularJS 是一个由 Google 维护的开源 JavaScript 框架，它有助于运行单页应用程序。有关 AngularJS 的更多信息，你可以访问 `http://angularjs.org/` 上的官方网站。
 
 要将你的应用程序与 AngularJS 集成，你可以从 `http://code.angularjs.org/` 下载 AngularJS。选择你要使用的 AngularJS 版本。要在你的 Web 应用程序中使用 AngularJS，你只需将其放在你的网页上：
+
+
 
 ```html
 <script src="lib/angular.min.js"></script>
@@ -1263,20 +1267,20 @@ Started
 
 ## 6.2 创建项目
 
-首先，我们通过创建一个名为 RESTfuldemo 的文件夹来创建一个项目。之后，你可以创建以下文件夹：
+首先，我们通过创建一个名为 `RESTfuldemo` 的文件夹来创建一个项目。之后，你可以创建以下文件夹：
 
-- Controllers
-- Database
-- Models
-- Properties
-- Views
-- wwwroot
+- `Controllers`
+- `Database`
+- `Models`
+- `Properties`
+- `Views`
+- `wwwroot`
 
 以下是项目结构。
 
 ![](img/2b788c7cc1c2fc37b428b6e7f92dcaed_67_0.png)
 
-我们需要在项目的根文件夹中有一个项目配置文件，称为 **project.json**。它包含所需的库。请为 **project.json** 文件编写此脚本。
+我们需要在项目的根文件夹中有一个项目配置文件，称为 `project.json`。它包含所需的库。请为 `project.json` 文件编写此脚本。
 
 ```json
 {
@@ -1309,7 +1313,7 @@ Started
 }
 ```
 
-我们还添加 **launchSettings.json** 来配置如何执行程序。将其存储在 Properties 文件夹中。请为 **launchSettings.json** 文件编写此脚本。
+我们还添加 `launchSettings.json` 来配置如何执行程序。将其存储在 `Properties` 文件夹中。请为 `launchSettings.json` 文件编写此脚本。
 
 ```json
 {
@@ -1335,7 +1339,7 @@ Started
 }
 ```
 
-通过执行 **Startup.cs** 文件来启动应用程序。创建此文件并编写此代码。
+通过执行 `Startup.cs` 文件来启动应用程序。创建此文件并编写此代码。
 
 ```csharp
 using Microsoft.AspNetCore;
@@ -1370,9 +1374,9 @@ namespace WebDemo
 
 在本节中，我们将编写我们的 ASP.NET 5 MVC 程序。
 
-### 6.3.1 创建模型
+#### 6.3.1 创建模型
 
-首先，我们创建一个名为 Product 的模型。以下是代码实现。
+首先，我们创建一个名为 `Product` 的模型。以下是代码实现。
 
 ```csharp
 using System.ComponentModel.DataAnnotations;
@@ -1395,11 +1399,13 @@ namespace WebDemo.Web.Models
 }
 ```
 
-将此代码保存到一个名为 Product.cs 的文件中，并将其存储到 Models 文件夹中。
+将此代码保存到一个名为 `Product.cs` 的文件中，并将其存储到 `Models` 文件夹中。
 
-### 6.3.2 模拟数据库
+#### 6.3.2 模拟数据库
 
-在这种情况下，我们不直接访问数据库，所以我们创建一个模拟数据库来生成产品数据。创建一个名为 DumpDatabase.cs 的文件并编写此代码。
+在这种情况下，我们不直接访问数据库，所以我们创建一个模拟数据库来生成产品数据。创建一个名为 `DumpDatabase.cs` 的文件并编写此代码。
+
+
 
 ```csharp
 using System;
@@ -1432,11 +1438,11 @@ namespace WebDemo.Web.Database
 }
 ```
 
-将此文件保存到 Database 文件夹中。
+将此文件保存到 `Database` 文件夹中。
 
 ### 6.3.3 创建控制器
 
-此外，我们通过创建一个名为 **HomeController.cs** 的文件来构建一个名为 Home 的控制器。编写此代码。
+此外，我们通过创建一个名为 `HomeController.cs` 的文件来构建一个名为 `Home` 的控制器。编写此代码。
 
 ```csharp
 using System;
@@ -1464,15 +1470,11 @@ namespace WebDemo.Web.Controllers
 }
 ```
 
-
-
-
-
 #### 6.3.4 创建视图
 
-将此文件保存到 Controllers 文件夹中。
+将此文件保存到 `Controllers` 文件夹中。
 
-我们创建一个页面，Index.cshtml。我们还创建一个布局，称为 _Shared.cshtml。编写以下脚本。
+我们创建一个页面，`Index.cshtml`。我们还创建一个布局，称为 `_Shared.cshtml`。编写以下脚本。
 
 ```html
 <!DOCTYPE html>
@@ -1511,7 +1513,7 @@ namespace WebDemo.Web.Controllers
 </html>
 ```
 
-以下是 **Index.cshtml** 文件的脚本。
+以下是 `Index.cshtml` 文件的脚本。
 
 ```html
 @{
@@ -1558,19 +1560,21 @@ namespace WebDemo.Web.Controllers
 <p><br></p>
 ```
 
+
+
 此文件加载 AngularJS 文件。我们将在下一节中编写它们。
 
 保存所有文件。以下是我们的视图结构。
 
 ![View Structure](img/2b788c7cc1c2fc37b428b6e7f92dcaed_74_0.png)
 
-#### 6.3.5 AngularJS 程序
+### 6.3.5 AngularJS 程序
 
-首先，从 http://code.angularjs.org/ 下载 AngularJS。将这些文件放入 /js/lib 文件夹中。
+首先，从 http://code.angularjs.org/ 下载 AngularJS。将这些文件放入 `/js/lib` 文件夹中。
 
 ![AngularJS Files](img/2b788c7cc1c2fc37b428b6e7f92dcaed_74_1.png)
 
-下一步是编写 AngularJS 程序。创建一个名为 **product.service.js** 的文件，并编写以下脚本。
+下一步是编写 AngularJS 程序。创建一个名为 `product.service.js` 的文件，并编写以下脚本。
 
 ```javascript
 var myApp = angular.module('ProductService', []);
@@ -1608,7 +1612,7 @@ myApp.controller('MyController', function ($scope, DataService) {
 });
 ```
 
-以下是 simple.css 文件的脚本。
+以下是 `simple.css` 文件的脚本。
 
 ```css
 table { margin: 1em; border-collapse: collapse; }
@@ -1639,9 +1643,9 @@ dnx . kestrel
 
 ![Data Loaded](img/2b788c7cc1c2fc37b428b6e7f92dcaed_77_0.png)
 
-尝试单击表格行中的 **edit** 菜单。然后，选中的项将显示在底部。
+尝试单击表格行中的 `edit` 菜单。然后，选中的项将显示在底部。
 
-### 产品应用程序
+#### 产品应用程序
 
 | 产品名称 | 代码 | 数量 | 价格 | 操作 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -1656,7 +1660,7 @@ dnx . kestrel
 | 产品 9 | K09 | 12 | 12.87 | 编辑 |
 | 产品 10 | K010 | 13 | 14.30 | 编辑 |
 
-选中项：{"Name":"产品 2","ProductCode":"K02","Quantity":5,"Price":2.86}
+选中项：`{"Name":"产品 2","ProductCode":"K02","Quantity":5,"Price":2.86}`
 
 ### 6.5 接下来是什么？
 
@@ -1666,9 +1670,8 @@ dnx . kestrel
 
 ## 源代码
 
-源代码可以从 [http://www.aguskurniawan.net/book/aspnet5_06062015ZFR.zip.zip](http://www.aguskurniawan.net/book/aspnet5_06062015ZFR.zip.zip) 下载。
+源代码可以从 http://www.aguskurniawan.net/book/aspnet5_06062015ZFR.zip.zip 下载。
 
 ## 联系
 
-如果你有关于本书的问题，请通过 aguskur@hotmail.com 联系我。我的博客：[http://blog.aguskurniawan.net](http://blog.aguskurniawan.net)。
-
+如果你有关于本书的问题，请通过 aguskur@hotmail.com 联系我。我的博客：http://blog.aguskurniawan.net 。

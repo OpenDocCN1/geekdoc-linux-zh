@@ -1,3 +1,4 @@
+
 # libcurl HTTP
 
 HTTP 是 libcurl 用户最常用的协议，libcurl 提供了无数种修改此类传输的方式。有关 HTTP 协议如何工作的基础知识，请参阅 HTTP 协议基础。
@@ -14,24 +15,14 @@ HTTPS 是在 TLS 之上的 HTTP。有关 TLS 传输选项的更多信息，请�
 
 ## 部分
 
-+   HTTP 响应
-
-+   HTTP 请求
-
-+   HTTP 版本
-
-+   HTTP 范围
-
-+   HTTP 认证
-
-+   使用 libcurl 的 Cookies
-
-+   下载
-
-+   上传
-
-+   多路复用
-
-+   HSTS
-
-+   alt-svc
++ HTTP 响应
++ HTTP 请求
++ HTTP 版本
++ HTTP 范围
++ HTTP 认证
++ 使用 libcurl 的 Cookies
++ 下载
++ 上传
++ 多路复用
++ HSTS
++ alt-svc

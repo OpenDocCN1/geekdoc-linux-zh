@@ -1,3 +1,4 @@
+
 # 写入
 
 应用程序可以通过两种不同的方式接收 WebSocket 数据，但发送数据的方式只有一种：`curl_ws_send()`函数。
@@ -10,17 +11,12 @@ CURLcode curl_ws_send(CURL *curl, const void *buffer, size_t buflen,
                       unsigned int sendflags);
 ```
 
-`curl` - 传输句柄
-
-`buffer` - 指向要发送的帧数据的指针
-
-`buflen` - `buffer`中数据的长度（以字节为单位）
-
-`fragsize` - 整个片段的总大小，用于发送较大片段的一部分。
-
-`sent` - 发送的字节数
-
-`flags` - 描述数据的位掩码。请参见下面的位描述。
+- `curl` - 传输句柄
+- `buffer` - 指向要发送的帧数据的指针
+- `buflen` - `buffer`中数据的长度（以字节为单位）
+- `fragsize` - 整个片段的总大小，用于发送较大片段的一部分。
+- `sent` - 发送的字节数
+- `flags` - 描述数据的位掩码。请参见下面的位描述。
 
 ## 完整片段与部分片段
 

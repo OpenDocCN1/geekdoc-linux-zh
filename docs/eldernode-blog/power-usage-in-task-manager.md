@@ -1,4 +1,5 @@
-# 如何在任务管理器- ElderNode 博客中查看电源使用情况
+
+# 如何在任务管理器中查看电源使用情况
 
 > 原文：<https://blog.eldernode.com/power-usage-in-task-manager/>
 
@@ -6,15 +7,14 @@
 
 如何在任务管理器中查看电源使用情况？Windows 10 的一个很酷的功能是通过[任务管理器](https://en.wikipedia.org/wiki/Task_manager)显示每个操作系统进程消耗的能量。
 
-Windows 10 的任务管理器现在可以显示你系统上每个进程的用电量。该功能是【2018 年 10 月更新中的新增功能。
+Windows 10 的任务管理器现在可以显示你系统上每个进程的用电量。该功能是 2018 年 10 月更新中的新增功能。
 
 [***在 Eldernode***](https://eldernode.com/vps-hosting/) 买便宜的 VPS 主机
 
-### 教程进程的用电详细信息
+## 教程进程的用电详细信息
 
-**–**通过**右键**你的任务栏打开任务管理器。
-
-**–**选择任务管理器或者按 Ctrl+Shift+Esc 。
+- 通过**右键**你的任务栏打开任务管理器。
+- 选择任务管理器或者按`Ctrl+Shift+Esc`。
 
 **注意:** 如果没有看到完整的任务管理器窗格，点击底部的更多详情。
 
@@ -24,11 +24,11 @@ Windows 10 的任务管理器现在可以显示你系统上每个进程的用电
 
 ![How to See Power Usage in Task Manager](img/0707081838f738d7e070b2da8a42a6d4.png)
 
-如果您没有看到这些列，**右键单击此处的标题**并启用用电量和用电量 趋势列。
+如果您没有看到这些列，**右键单击此处的标题**并启用用电量和用电量趋势列。
 
 ![How to See Power Usage in Task Manager](img/1cd17ddc8c7c573eca43c99fcb7ca76a.png)
 
-### 用电量和用电量趋势
+## 用电量和用电量趋势
 
 用电量栏告诉您此时进程使用了多少电量，而用电量趋势栏则显示了的长期趋势。
 
@@ -46,7 +46,7 @@ Windows 10 的任务管理器现在可以显示你系统上每个进程的用电
 
 ![How to See Power Usage in Task Manager](img/6d15525b1baffac4d39fcc2f0e857e6f.png)
 
-### 如何查看哪些应用程序耗电最多
+## 如何查看哪些应用程序耗电最多
 
 要查看电脑上哪些应用使用了最多的电池电量，请前往设置 > > 系统 > > 电池。
 

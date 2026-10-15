@@ -1,3 +1,4 @@
+
 # 教程在 Linux ubuntu 20.10 上安装和运行 Dropbox-elder node 博客
 
 > 原文：<https://blog.eldernode.com/dropbox-on-linux-ubuntu-20-10/>
@@ -6,7 +7,7 @@
 
 【更新】Dropbox 是一种在线云存储服务，最重要的用途是在数据备份方面。您可以从任何设备和任何地方访问您的文件和信息。如果你正在寻找一个保护信息的好选择，Dropbox 是这方面最合适的服务之一。Dropbox 在强大的云服务器上为其用户提供服务，你只需要互联网接入就可以从世界任何地方访问你的信息。在本文中，我们将讨论**教程安装，并在 Linux ubuntu 20.10 上运行 Dropbox**。需要注意的是，如果你想购买一台 [Ubuntu VPS](https://eldernode.com/ubuntu-vps/) 服务器，你可以访问 [Eldernode](https://eldernode.com/) 中提供的软件包。
 
-## **如何在 Linux ubuntu 20.10 上安装运行 Dropbox**
+## 如何在 Linux ubuntu 20.10 上安装运行 Dropbox
 
 如果你正在寻找一个云存储服务，并希望在任何可以上传各种文件的地方访问它，我们建议你下载这个在全球拥有超过 4 亿用户的服务。免费创建一个账户就可以获得 2GB 的空间。如果你邀请你的朋友，你还会得到额外的空间作为礼物。最后，您可以将这个空闲空间升级到 8GB。这项服务可以在 [Windows](https://blog.eldernode.com/tag/windows/) 、Mac、 [Linux](https://blog.eldernode.com/tag/linux/) 等各种操作系统上使用，也可以在 iOS 和 Android 操作系统的手机上使用。
 
@@ -14,7 +15,7 @@
 
 如果提供的空间对你来说不够，你可以每月支付大约 6 英镑获得 100 GB 的额外空间。需要特别注意的重要一点是你的互联网使用情况，它在这方面有非常强大的工具，可以帮助你维持带宽，防止带宽被浪费在下载或上传到 Dropbox 上。这可以防止同步文件时占用所有带宽。
 
-### **Dropbox 功能及应用**
+### Dropbox 功能及应用
 
 您应该使用在这方面提供的工具，以防止在文件同步(Sync)期间完全占用 Dropbox 带宽。选择性同步是这一领域最有用的工具之一，它可以帮助您从系统上的特定文件夹中只下载您想要的内容。
 
@@ -24,21 +25,19 @@ Dropbox 提供的另一个重要功能是这项服务非常通用的网络界面
 
 Dropbox 一直以优质云存储服务著称。近年来，OneDrive 和 Google Drive 等激烈的竞争对手已经出现，它们不仅通过各种方式达到了 Dropbox，而且在某些情况下从这个知名的竞争对手那里抢走了领先地位。
 
-## **Linux Ubuntu 20.10 Dropbox 安装指南**
+## Linux Ubuntu 20.10 Dropbox 安装指南
 
 Dropbox 会将你电脑上的文件夹与虚拟云硬盘同步。在本指南中，我们将向您展示如何在 [Ubuntu](https://blog.eldernode.com/tag/ubuntu/) 20.10 系统上安装 Dropbox。第一步是从 Ubuntu 软件中心安装 Dropbox:
 
-### **如何安装 Dropbox 加载器**
+### 如何安装 Dropbox 加载器
 
 首先，点击软件中心搜索 Dropbox。请记住，由于 dropbox 是专有软件，软件包是通过 Dropbox 网站下载的，因此您不能从命令行安装它。
 
 ![How to install Dropbox Loader](img/0456a95193408030c2d150dea7d1f039.png)
 
-*
-
 ![tutorial install Dropbox Loader](img/27cc2dcd971721891b3bf70888473e39.png)
 
-### **教程从官方资源库** 在 Ubuntu 20.10 上安装 Dropbox
+### 教程从官方资源库在 Ubuntu 20.10 上安装 Dropbox
 
 首先，你需要在 Dropbox 网站上创建一个账户。
 
@@ -54,7 +53,7 @@ sudo nano /etc/apt/sources.list.d/dropbox.list
 deb [arch=i386,amd64] http://linux.dropbox.com/ubuntu bionic main
 ```
 
-现在**在 nano 文本编辑器中保存**文件。 **(Ctrl+O)**
+现在**在 nano 文本编辑器中保存**文件。**(Ctrl+O)**
 
 要将 Dropbox GPG 密钥导入 Ubuntu 20.10 系统，您需要运行以下命令:
 
@@ -80,12 +79,12 @@ gpg: keyserver receive failed: No data
 sudo apt-key adv --keyserver pgp.mit.edu --recv-keys 1C61A2656FB57B7E4DE0F4C1FC918B335044912E
 ```
 
-换句话说，你应该用**pgp.mit.edu**而不是【keyserver.ubuntu.com】T2。
+换句话说，你应该用`pgp.mit.edu`而不是`keyserver.ubuntu.com`。
 
 现在，您应该更新本地包索引并安装 Dropbox:
 
 ```
-sudo apt update 
+sudo apt update
 ```
 
 ```
@@ -106,7 +105,7 @@ dropbox start -i
 
 ![dropbox installation on ubuntu 20.10](img/acfc108302a2dbded1883b121453957c.png)
 
-### **Ubuntu 20.10 上第一次使用 Dropbox**
+### Ubuntu 20.10 上第一次使用 Dropbox
 
 安装守护程序后，将显示以下图像:
 

@@ -1,84 +1,78 @@
+
 # `spd-say` 命令
 
-`spd-say` 向处理语音的 `speech-dispatcher` 进程发送文本到语音的输出请求，该进程处理请求并在理想情况下将结果输出到音频系统。
+`spd-say`向处理语音的`speech-dispatcher`进程发送文本到语音的输出请求，该进程处理请求并在理想情况下将结果输出到音频系统。
 
-## 语法：
-
-```sh
-      $ spd-say [options] "some text" 
+## 语法
 
 ```
+$ spd-say [options] "some text"
+```
 
-## 选项：
+## 选项
 
-```sh
-      -r, --rate
-       Set the rate of the speech (between -100 and +100, default: 0)
+```
+-r, --rate
+       设置语速（范围：-100 到 +100，默认：0）
 
 -p, --pitch
-       Set the pitch of the speech (between -100 and +100, default: 0)
+       设置音调（范围：-100 到 +100，默认：0）
 
 -i, --volume
-       Set the volume (intensity) of the speech (between -100 and +100, default: 0)
+       设置音量（强度）（范围：-100 到 +100，默认：0）
 
 -o, --output-module
-       Set the output module
+       设置输出模块
 
 -l, --language
-       Set the language (iso code)
+       设置语言（ISO 代码）
 
 -t, --voice-type
-       Set the preferred voice type  (male1,  male2,  male3,  female1,  female2,  female3,
-       child_male, child_female)
+       设置首选语音类型（male1, male2, male3, female1, female2, female3, child_male, child_female）
 
 -m, --punctuation-mode
-       Set the punctuation mode (none, some, all)
+       设置标点模式（none, some, all）
 
 -s, --spelling
-       Spell the message
+       拼读消息
 
 -x, --ssml
-       Set SSML mode on (default: off)
+       开启 SSML 模式（默认：关闭）
 
 -e, --pipe-mode
-       Pipe from stdin to stdout plus Speech Dispatcher
+       从 stdin 管道传输到 stdout，并加上 Speech Dispatcher
 
 -P, --priority
-       Set  priority  of  the  message  (important, message, text, notification, progress;
-       default: text)
+       设置消息优先级（important, message, text, notification, progress；默认：text）
 
 -N, --application-name
-       Set the application name used to establish the connection to specified string value
-       (default: spd-say)
+       设置用于建立连接的应用程序名称为指定字符串值（默认：spd-say）
 
 -n, --connection-name
-       Set  the connection name used to establish the connection to specified string value
-       (default: main)
+       设置用于建立连接的连接名称为指定字符串值（默认：main）
 
 -w, --wait
-       Wait till the message is spoken or discarded
+       等待消息被朗读或丢弃
 
 -S, --stop
-       Stop speaking the message being spoken in Speech Dispatcher
+       停止朗读 Speech Dispatcher 中正在朗读的消息
 
 -C, --cancel
-       Cancel all messages in Speech Dispatcher
+       取消 Speech Dispatcher 中的所有消息
 
 -v, --version
-       Print version and copyright info
+       打印版本和版权信息
 
 -h, --help
-       Print this info 
-
+       打印此帮助信息
 ```
 
-## 示例：
+## 示例
 
-1.  播放给定的文本作为声音。
+1. 播放给定的文本作为声音。
 
-```sh
-      $ spd-say "Hello" 
-
+```
+$ spd-say "Hello"
 ```
 
 > 播放“你好”声音。

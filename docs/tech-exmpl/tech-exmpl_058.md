@@ -1,18 +1,18 @@
+
 # 数组中递增元素之间的最大差值
 
 > 原文：[`techbyexample.com/maximum-difference-increasing-elements/`](https://techbyexample.com/maximum-difference-increasing-elements/)
 
-## **概述**
+## 概述
 
-给定一个数组。目标是找出两个索引 i 和 j 之间的最大差值，使得
+给定一个数组。目标是找出两个索引`i`和`j`之间的最大差值，使得：
 
-+   j > i
+- `j > i`
+- `arr[j] > arr[i]`
 
-+   arr[j] > arr[i]
+如果不存在这样的索引，则返回`-1`。
 
-如果不存在这样的索引，则返回 -1
-
-示例 1
+**示例 1**
 
 ```go
 Input: intervals = [8, 2, 6, 5]
@@ -20,7 +20,7 @@ Output: 4
 Explanation: 6-2 = 4
 ```
 
-示例 2
+**示例 2**
 
 ```go
 Input: intervals = [8, 3, 2, 1]
@@ -28,7 +28,7 @@ Output: -1
 Explanation: Condition is not satified
 ```
 
-## **程序**
+## 程序
 
 下面是相应的程序。
 

@@ -1,3 +1,4 @@
+
 # `dmesg` 命令
 
 `dmesg` 命令显示内核环形缓冲区中的消息。它显示引导消息、硬件检测、驱动加载和系统事件。这对于解决硬件问题、驱动程序问题和理解系统启动过程至关重要。
@@ -5,28 +6,23 @@
 ## 语法
 
 ```sh
-      dmesg [options] 
-
+dmesg [options]
 ```
 
 ## 关键特性
 
-+   **内核消息**: 显示内核环形缓冲区内容
-
-+   **引导信息**: 硬件检测和驱动加载
-
-+   **实时监控**: 可以跟踪新消息
-
-+   **过滤选项**: 通过设施、级别或时间过滤
-
-+   **多种格式**: 人类可读和原始格式
+- **内核消息**：显示内核环形缓冲区内容
+- **引导信息**：硬件检测和驱动加载
+- **实时监控**：可以跟踪新消息
+- **过滤选项**：通过设施、级别或时间过滤
+- **多种格式**：人类可读和原始格式
 
 ## 基本用法
 
 ### 显示所有消息
 
 ```sh
-      # Display all kernel messages
+# Display all kernel messages
 dmesg
 
 # Display with human-readable timestamps
@@ -36,22 +32,20 @@ dmesg -T
 dmesg | tail -20
 
 # Display first 20 lines (boot messages)
-dmesg | head -20 
-
+dmesg | head -20
 ```
 
 ### 跟踪新消息
 
 ```sh
-      # Follow new kernel messages (like tail -f)
+# Follow new kernel messages (like tail -f)
 dmesg -w
 
 # Follow with timestamps
 dmesg -T -w
 
 # Follow last 10 lines and continue
-dmesg | tail -10 && dmesg -w 
-
+dmesg | tail -10 && dmesg -w
 ```
 
 ## 消息级别和设施
@@ -59,7 +53,7 @@ dmesg | tail -10 && dmesg -w
 ### 消息级别
 
 ```sh
-      # Emergency messages (level 0)
+# Emergency messages (level 0)
 dmesg -l emerg
 
 # Alert messages (level 1)
@@ -81,28 +75,26 @@ dmesg -l notice
 dmesg -l info
 
 # Debug messages (level 7)
-dmesg -l debug 
-
+dmesg -l debug
 ```
 
 ### 多级
 
 ```sh
-      # Show errors and warnings
+# Show errors and warnings
 dmesg -l err,warn
 
 # Show critical and above (crit, alert, emerg)
 dmesg -l crit+
 
 # Show warnings and below (warn, notice, info, debug)
-dmesg -l warn- 
-
+dmesg -l warn-
 ```
 
 ### 设施
 
 ```sh
-      # Kernel messages
+# Kernel messages
 dmesg -f kern
 
 # User-space messages
@@ -118,8 +110,7 @@ dmesg -f daemon
 dmesg -f auth
 
 # Syslog messages
-dmesg -f syslog 
-
+dmesg -f syslog
 ```
 
 ## 常见选项
@@ -127,7 +118,7 @@ dmesg -f syslog
 ### 显示选项
 
 ```sh
-      # -T: Human-readable timestamps
+# -T: Human-readable timestamps
 dmesg -T
 
 # -t: Don't show timestamps
@@ -140,14 +131,13 @@ dmesg -x
 dmesg -H
 
 # -k: Show kernel messages only
-dmesg -k 
-
+dmesg -k
 ```
 
 ### 缓冲区选项
 
 ```sh
-      # -c: Clear ring buffer after reading
+# -c: Clear ring buffer after reading
 sudo dmesg -c
 
 # -C: Clear ring buffer
@@ -157,8 +147,7 @@ sudo dmesg -C
 dmesg -s 65536
 
 # -n: Set console log level
-sudo dmesg -n 1 
-
+sudo dmesg -n 1
 ```
 
 ## 实际示例
@@ -166,7 +155,7 @@ sudo dmesg -n 1
 ### 1. 硬件检测
 
 ```sh
-      # Check USB device detection
+# Check USB device detection
 dmesg | grep -i usb
 
 # Check network interface detection
@@ -179,14 +168,13 @@ dmesg | grep -i -E "(sda|sdb|sdc|nvme)"
 dmesg | grep -i memory
 
 # Check CPU detection
-dmesg | grep -i cpu 
-
+dmesg | grep -i cpu
 ```
 
 ### 2. 驱动加载
 
 ```sh
-      # Check loaded drivers
+# Check loaded drivers
 dmesg | grep -i driver
 
 # Check specific driver (e.g., nvidia)
@@ -199,14 +187,13 @@ dmesg | grep -i wifi
 dmesg | grep -i bluetooth
 
 # Check sound driver
-dmesg | grep -i audio 
-
+dmesg | grep -i audio
 ```
 
 ### 3. 错误调试
 
 ```sh
-      # Show only error messages
+# Show only error messages
 dmesg -l err
 
 # Show errors and warnings
@@ -219,14 +206,13 @@ dmesg | grep -i error
 dmesg | grep -i fail
 
 # Search for timeout issues
-dmesg | grep -i timeout 
-
+dmesg | grep -i timeout
 ```
 
 ### 4. 引导过程分析
 
 ```sh
-      # Show boot messages with timestamps
+# Show boot messages with timestamps
 dmesg -T | head -50
 
 # Find boot completion time
@@ -239,8 +225,7 @@ dmesg | grep -i systemd
 dmesg | grep -i mount
 
 # Check network initialization
-dmesg | grep -i network 
-
+dmesg | grep -i network
 ```
 
 ## 基于时间的过滤
@@ -248,7 +233,7 @@ dmesg | grep -i network
 ### 最近消息
 
 ```sh
-      # Messages from last 10 minutes
+# Messages from last 10 minutes
 dmesg --since="10 minutes ago"
 
 # Messages from last hour
@@ -258,22 +243,20 @@ dmesg --since="1 hour ago"
 dmesg --since="today"
 
 # Messages from specific time
-dmesg --since="2023-01-01 00:00:00" 
-
+dmesg --since="2023-01-01 00:00:00"
 ```
 
 ### 时间范围
 
 ```sh
-      # Messages between specific times
+# Messages between specific times
 dmesg --since="2023-01-01" --until="2023-01-02"
 
 # Messages from last boot
 dmesg --since="last boot"
 
 # Messages from specific duration
-dmesg --since="30 minutes ago" --until="10 minutes ago" 
-
+dmesg --since="30 minutes ago" --until="10 minutes ago"
 ```
 
 ## 高级过滤
@@ -281,7 +264,7 @@ dmesg --since="30 minutes ago" --until="10 minutes ago"
 ### 1. 过滤器组合
 
 ```sh
-      # Errors from last hour
+# Errors from last hour
 dmesg -l err --since="1 hour ago"
 
 # Kernel warnings with timestamps
@@ -291,14 +274,13 @@ dmesg -T -l warn -f kern
 dmesg -l err | grep -i usb
 
 # Network errors from today
-dmesg --since="today" | grep -i -E "(network|eth|wifi)" 
-
+dmesg --since="today" | grep -i -E "(network|eth|wifi)"
 ```
 
 ### 2. 输出格式化
 
 ```sh
-      # JSON format
+# JSON format
 dmesg --json
 
 # Raw format (no timestamp processing)
@@ -308,20 +290,19 @@ dmesg -r
 dmesg --color=always
 
 # No pager
-dmesg --nopager 
-
+dmesg --nopager
 ```
 
 ### 3. 自定义格式化
 
 ```sh
-      # Extract specific informationextract_usb_devices() {
+# Extract specific information
+extract_usb_devices() {
     dmesg | grep -E "usb.*: New USB device" | \
     sed -n 's/.*New USB device found, idVendor=\([^,]*\), idProduct=\([^ ]*\).*/Vendor: \1, Product: \2/p'
 }
 
-extract_usb_devices 
-
+extract_usb_devices
 ```
 
 ## 监控和警报
@@ -329,105 +310,109 @@ extract_usb_devices
 ### 1. 实时监控
 
 ```sh
-      # Monitor for specific eventsmonitor_errors() {
-    dmesg -w -l err | while read line; do
-        echo "$(date): $line"
+# Monitor for specific events
+monitor_errors() {
+    dmesg -w -l err | while read line; do
+        echo "$(date): $line"
         # Send alert
-        echo "$line" | mail -s "Kernel Error Alert" admin@domain.com
+        echo "$line" | mail -s "Kernel Error Alert" admin@domain.com
     done
 }
 
 # Monitor USB connections
 monitor_usb() {
-    dmesg -w | grep --line-buffered -i usb | while read line; do
-        echo "USB Event: $line"
+    dmesg -w | grep --line-buffered -i usb | while read line; do
+        echo "USB Event: $line"
     done
-} 
-
+}
 ```
 
 ### 2. 日志分析脚本
 
 ```sh
-      #!/bin/bash# Analyze kernel messages for issuesanalyze_dmesg() {
-    echo "=== Kernel Message Analysis ==="
-    echo "Generated: $(date)"
+#!/bin/bash
+
+# Analyze kernel messages for issues
+analyze_dmesg() {
+    echo "=== Kernel Message Analysis ==="
+    echo "Generated: $(date)"
     echo
 
-    echo "Error Messages:"
+    echo "Error Messages:"
     dmesg -l err | tail -10
     echo
 
-    echo "Warning Messages:"
+    echo "Warning Messages:"
     dmesg -l warn | tail -10
     echo
 
-    echo "Recent Hardware Events:"
+    echo "Recent Hardware Events:"
     dmesg --since="1 hour ago" | grep -i -E "(usb|disk|network|memory)" | tail -10
     echo
 
-    echo "Driver Loading Issues:"
+    echo "Driver Loading Issues:"
     dmesg | grep -i -E "(failed|error|timeout)" | grep -i driver | tail -5
 }
 
-analyze_dmesg > kernel_analysis.txt 
-
+analyze_dmesg > kernel_analysis.txt
 ```
 
 ### 3. 系统健康检查
 
 ```sh
-      #!/bin/bash# Check system health using dmesgcheck_system_health() {
+#!/bin/bash
+
+# Check system health using dmesg
+check_system_health() {
     local issues=0
 
-    echo "=== System Health Check ==="
+    echo "=== System Health Check ==="
 
     # Check for critical errors
     critical_errors=$(dmesg -l crit,alert,emerg --since="24 hours ago" | wc -l)
     if [ $critical_errors -gt 0 ]; then
-        echo "⚠️  $critical_errors critical errors found in last 24 hours"
+        echo "⚠️  $critical_errors critical errors found in last 24 hours"
         ((issues++))
     else
-        echo "✅ No critical errors in last 24 hours"
+        echo "✅ No critical errors in last 24 hours"
     fi
 
     # Check for hardware errors
     hw_errors=$(dmesg --since="24 hours ago" | grep -i -c -E "(hardware error|machine check|MCE)")
     if [ $hw_errors -gt 0 ]; then
-        echo "⚠️  $hw_errors hardware errors detected"
+        echo "⚠️  $hw_errors hardware errors detected"
         ((issues++))
     else
-        echo "✅ No hardware errors detected"
+        echo "✅ No hardware errors detected"
     fi
 
     # Check for out of memory
     oom_events=$(dmesg --since="24 hours ago" | grep -i -c "out of memory")
     if [ $oom_events -gt 0 ]; then
-        echo "⚠️  $oom_events out of memory events"
+        echo "⚠️  $oom_events out of memory events"
         ((issues++))
     else
-        echo "✅ No out of memory events"
+        echo "✅ No out of memory events"
     fi
 
     # Check for filesystem errors
     fs_errors=$(dmesg --since="24 hours ago" | grep -i -c -E "(filesystem error|ext[234] error|xfs error)")
     if [ $fs_errors -gt 0 ]; then
-        echo "⚠️  $fs_errors filesystem errors"
+        echo "⚠️  $fs_errors filesystem errors"
         ((issues++))
     else
-        echo "✅ No filesystem errors"
+        echo "✅ No filesystem errors"
     fi
 
     echo
     if [ $issues -eq 0 ]; then
-        echo "🎉 System appears healthy!"
+        echo "🎉 System appears healthy!"
     else
-        echo "⚠️  Found $issues types of issues - check details above"
+        echo "⚠️  Found $issues types of issues - check details above"
     fi
 }
 
-check_system_health 
-
+check_system_health
 ```
 
 ## 常见用例
@@ -435,129 +420,148 @@ check_system_health
 ### 1. USB 设备故障排除
 
 ```sh
-      # Monitor USB device connectionsmonitor_usb_debug() {
-    echo "Monitoring USB events (Ctrl+C to stop)..."
-    dmesg -w | grep --line-buffered -i usb | while read line; do
+# Monitor USB device connections
+monitor_usb_debug() {
+    echo "Monitoring USB events (Ctrl+C to stop)..."
+    dmesg -w | grep --line-buffered -i usb | while read line; do
         timestamp=$(date '+%Y-%m-%d %H:%M:%S')
-        echo "[$timestamp] $line"
+        echo "[$timestamp] $line"
     done
 }
 
 # Check USB device history
 usb_device_history() {
-    echo "USB Device Connection History:"
+    echo "USB Device Connection History:"
     dmesg | grep -i "usb.*: New USB device" | tail -10
     echo
-    echo "USB Device Disconnections:"
+    echo "USB Device Disconnections:"
     dmesg | grep -i "usb.*disconnect" | tail -10
-} 
-
+}
 ```
 
 ### 2. 网络接口问题
 
 ```sh
-      # Check network interface eventscheck_network_issues() {
-    echo "Network Interface Events:"
+# Check network interface events
+check_network_issues() {
+    echo "Network Interface Events:"
     dmesg | grep -i -E "(eth[0-9]|wlan[0-9]|enp|wlp)" | tail -10
     echo
 
-    echo "Network Driver Issues:"
+    echo "Network Driver Issues:"
     dmesg | grep -i -E "network.*error|ethernet.*error" | tail -5
     echo
 
-    echo "Link Status Changes:"
+    echo "Link Status Changes:"
     dmesg | grep -i "link" | tail -10
-} 
-
+}
 ```
 
 ### 3. 存储设备监控
 
+
+
+# `dmesg` 命令：系统诊断与监控
+
+`dmesg`（diagnostic messages）是 Linux 系统中用于查看和控制内核环形缓冲区（kernel ring buffer）的命令。该缓冲区存储了内核启动及运行期间产生的各类消息，包括硬件检测、驱动程序加载、文件系统挂载以及错误报告等。通过分析这些消息，管理员可以诊断硬件故障、排查系统问题并深入了解内核运行状态。
+
+## 核心功能：存储健康检查
+
+以下脚本演示如何使用`dmesg`检查存储设备健康和文件系统状态：
+
 ```sh
-      # Check disk health and errorscheck_storage_health() {
-    echo "Storage Device Detection:"
+# Check disk health and errors
+check_storage_health() {
+    echo "Storage Device Detection:"
     dmesg | grep -i -E "(sda|sdb|nvme)" | grep -i "sectors" | tail -5
     echo
 
-    echo "Storage Errors:"
+    echo "Storage Errors:"
     dmesg | grep -i -E "(I/O error|Medium Error|critical medium error)" | tail -5
     echo
 
-    echo "Filesystem Events:"
+    echo "Filesystem Events:"
     dmesg | grep -i -E "(mounted|unmounted|remounted)" | tail -10
-} 
-
+}
 ```
 
 ## 与其他工具集成
 
-### 1. 结合 journalctl
+### 1. 结合 `journalctl`
+
+`journalctl`是 systemd 的日志管理工具，可与`dmesg`互补使用：
 
 ```sh
-      # Compare kernel messagesecho "=== dmesg output ==="
+# Compare kernel messages
+echo "=== dmesg output ==="
 dmesg --since="1 hour ago" | head -5
 
-echo "=== journalctl kernel messages ==="
-journalctl -k --since="1 hour ago" | head -5 
-
+echo "=== journalctl kernel messages ==="
+journalctl -k --since="1 hour ago" | head -5
 ```
 
 ### 2. 日志文件集成
 
+将`dmesg`输出保存到文件并自动轮转：
+
 ```sh
-      # Save dmesg to file with rotationsave_dmesg_log() {
+# Save dmesg to file with rotation
+save_dmesg_log() {
     local logfile="/var/log/dmesg.log"
     local timestamp=$(date '+%Y-%m-%d %H:%M:%S')
 
-    echo "[$timestamp] === dmesg snapshot ===" >> "$logfile"
+    echo "[$timestamp] === dmesg snapshot ===" >> "$logfile"
     dmesg -T >> "$logfile"
 
     # Rotate if file gets too large
     if [ $(stat -f%z "$logfile" 2>/dev/null || stat -c%s "$logfile") -gt 10485760 ]; then
-        mv "$logfile" "$logfile.old"
-        echo "Log rotated at $timestamp" > "$logfile"
+        mv "$logfile" "$logfile.old"
+        echo "Log rotated at $timestamp" > "$logfile"
     fi
-} 
-
+}
 ```
 
 ### 3. 监控系统集成
 
+生成 Prometheus 格式的监控指标：
+
 ```sh
-      # Create metrics for monitoring systemscreate_dmesg_metrics() {
+# Create metrics for monitoring systems
+create_dmesg_metrics() {
     local errors=$(dmesg -l err --since="1 hour ago" | wc -l)
     local warnings=$(dmesg -l warn --since="1 hour ago" | wc -l)
     local timestamp=$(date +%s)
 
     # Output in Prometheus format
-    echo "kernel_errors_total $errors $timestamp"
-    echo "kernel_warnings_total $warnings $timestamp"
-} 
-
+    echo "kernel_errors_total $errors $timestamp"
+    echo "kernel_warnings_total $warnings $timestamp"
+}
 ```
 
 ## 故障排除
 
 ### 1. 缓冲区大小问题
 
+环形缓冲区默认大小有限，可通过以下方式调整：
+
 ```sh
-      # Check current buffer size
+# Check current buffer size
 dmesg | wc -l
 
 # Increase buffer size (temporary)
 sudo dmesg -s 1048576
 
 # Make permanent (add to kernel parameters)
-# Add to GRUB: log_buf_len=1048576 
-
+# Add to GRUB: log_buf_len=1048576
 ```
 
 ### 2. 权限问题
 
+部分系统限制非 root 用户读取`dmesg`：
+
 ```sh
-      # Check if non-root can read dmesg
-dmesg >/dev/null 2>&1 && echo "Can read dmesg" || echo "Cannot read dmesg"
+# Check if non-root can read dmesg
+dmesg >/dev/null 2>&1 && echo "Can read dmesg" || echo "Cannot read dmesg"
 
 # Check kernel parameter
 cat /proc/sys/kernel/dmesg_restrict
@@ -566,14 +570,15 @@ cat /proc/sys/kernel/dmesg_restrict
 sudo sysctl kernel.dmesg_restrict=0
 
 # Make permanent
-echo "kernel.dmesg_restrict = 0" | sudo tee -a /etc/sysctl.conf 
-
+echo "kernel.dmesg_restrict = 0" | sudo tee -a /etc/sysctl.conf
 ```
 
 ### 3. 消息过滤问题
 
+确保正确使用过滤选项：
+
 ```sh
-      # Check available facilities and levels
+# Check available facilities and levels
 dmesg --help | grep -A 20 "supported facilities"
 
 # Test filtering
@@ -581,88 +586,92 @@ dmesg -l err | head -5
 dmesg -f kern | head -5
 
 # Check if systemd is interfering
-systemctl status systemd-journald 
-
+systemctl status systemd-journald
 ```
 
 ## 性能考虑
 
 ### 1. 大缓冲区处理
 
+流式处理避免内存溢出：
+
 ```sh
-      # Process large buffers efficientlyprocess_large_dmesg() {
+# Process large buffers efficiently
+process_large_dmesg() {
     # Use streaming instead of loading all into memory
     dmesg | while IFS= read -r line; do
         # Process line by line
-        echo "$line" | grep -q "error" && echo "Error: $line"
+        echo "$line" | grep -q "error" && echo "Error: $line"
     done
-} 
-
+}
 ```
 
 ### 2. 高效搜索
 
-```sh
-      # Use specific filters instead of post-processing
-dmesg -l err               # Better than dmesg | grep -i error
-dmesg --since="1 hour ago" # Better than dmesg | filtering by time 
+优先使用内置过滤器而非事后处理：
 
+```sh
+# Use specific filters instead of post-processing
+dmesg -l err               # Better than dmesg | grep -i error
+dmesg --since="1 hour ago" # Better than dmesg | filtering by time
 ```
 
 ## 最佳实践
 
 ### 1. 定期监控
 
+通过 cron 定期检查错误并发送警报：
+
 ```sh
-      # Create cron job for regular checks# 0 */4 * * * /usr/local/bin/check_dmesg_errors.sh# Create check script#!/bin/bash
+# Create cron job for regular checks
+# 0 */4 * * * /usr/local/bin/check_dmesg_errors.sh
+# Create check script
+#!/bin/bash
 errors=$(dmesg -l err --since="4 hours ago" | wc -l)
 if [ $errors -gt 0 ]; then
     dmesg -l err --since="4 hours ago" | mail -s "Kernel Errors Detected" admin@domain.com
-fi 
-
+fi
 ```
 
 ### 2. 日志保留
 
+定期保存关键级别的消息：
+
 ```sh
-      # Save important messagessave_important_messages() {
+# Save important messages
+save_important_messages() {
     local date_str=$(date '+%Y%m%d')
     dmesg -l err,crit,alert,emerg > "/var/log/kernel_errors_$date_str.log"
-} 
-
+}
 ```
 
 ### 3. 文档
 
+记录系统事件及当时的`dmesg`快照：
+
 ```sh
-      # Document system eventsdocument_system_event() {
+# Document system events
+document_system_event() {
     local event="$1"
     local logfile="/var/log/system_events.log"
 
-    echo "$(date): $event" >> "$logfile"
-    echo "=== dmesg at time of event ===" >> "$logfile"
+    echo "$(date): $event" >> "$logfile"
+    echo "=== dmesg at time of event ===" >> "$logfile"
     dmesg -T | tail -20 >> "$logfile"
-    echo "=================================" >> "$logfile"
-} 
-
+    echo "=================================" >> "$logfile"
+}
 ```
 
 ## 重要注意事项
 
-+   **root 权限**: 一些发行版将 dmesg 限制为 root 用户
+- **root 权限**：一些发行版将`dmesg`限制为 root 用户
+- **缓冲区大小**：环形缓冲区大小有限，旧消息会被新消息覆盖
+- **时间戳**：使用`-T`以人类可读的格式显示时间
+- **级别**：理解消息级别（如`err`、`warn`）以进行有效过滤
+- **实时**：使用`-w`参数监控新消息
+- **性能**：大缓冲区可能影响系统性能
+- **安全**：内核消息可能包含敏感信息，谨慎对外暴露
 
-+   **缓冲区大小**: 环形缓冲区大小有限；旧消息被覆盖
-
-+   **时间戳**: 使用 `-T` 以人类可读的格式显示
-
-+   **级别**: 理解消息级别以进行有效过滤
-
-+   **实时**: 使用 `-w` 监控新消息
-
-+   **性能**: 大缓冲区可能影响性能
-
-+   **安全**: 谨慎暴露内核消息
-
-`dmesg` 命令对于系统故障排除、硬件调试和理解内核行为至关重要。
+`dmesg`命令对于系统故障排除、硬件调试和理解内核行为至关重要。
 
 更多详细信息，请查看手册：`man dmesg`

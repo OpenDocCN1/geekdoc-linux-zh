@@ -1,22 +1,21 @@
-# 引爆最大炸弹程序。
+
+# 引爆最大炸弹程序
 
 > 原文：[`techbyexample.com/detonate-maximum-bombs-program/`](https://techbyexample.com/detonate-maximum-bombs-program/)
 
-# **概述**
+## 概述
 
-给定一个二维数组，其中每个数组项有三个值。
+给定一个二维数组，其中每个数组项有三个值：
 
-+   i – 表示炸弹的 x 坐标。
-
-+   j – 表示炸弹的 y 坐标。
-
-+   r – 表示炸弹的爆炸半径。
+- `i`：表示炸弹的 x 坐标。
+- `j`：表示炸弹的 y 坐标。
+- `r`：表示炸弹的爆炸半径。
 
 一个炸弹在爆炸时会引发其范围内所有炸弹的爆炸。当这些炸弹爆炸时，它们将再次引发其范围内所有炸弹的爆炸。
 
 你只能引爆一个炸弹。这个问题的思路是找出可以引爆的最大炸弹数量。
 
-**示例 1**
+### 示例 1
 
 ```go
 Input: [[1,0,3],[5,0,4]]
@@ -25,10 +24,10 @@ Output: 2
 
 第一个炸弹在第二个炸弹的爆炸范围内。所以当我们引爆第二个炸弹时，第二个炸弹和第一个炸弹都会被引爆。
 
-**示例 2**
+### 示例 2
 
 ```go
-Input:  [[2,2,2],[10,10,5]]
+Input: [[2,2,2],[10,10,5]]
 Output: 1
 ```
 
@@ -38,7 +37,7 @@ Output: 1
 
 一旦构建了这个图，我们可以从每个节点做深度优先搜索（DFS），以获得它能引爆的最大炸弹数。我们还会存储之前计算的结果。
 
-# **程序**
+## 程序
 
 以下是相应的程序。
 
@@ -119,15 +118,15 @@ func main() {
 }
 ```
 
-**输出：**
+### 输出
 
 ```go
 2
 1
 ```
 
-**注意：** 查看我们的 Golang 高级教程。本系列教程内容详尽，并且我们尽力通过实例覆盖所有概念。本教程适合那些希望深入掌握并精通 Golang 的人 – [Golang 高级教程](https://golangbyexample.com/golang-comprehensive-tutorial/)
+**注意：** 查看我们的 Golang 高级教程。本系列教程内容详尽，并且我们尽力通过实例覆盖所有概念。本教程适合那些希望深入掌握并精通 Golang 的人： [Golang 高级教程](https://golangbyexample.com/golang-comprehensive-tutorial/)
 
-如果你有兴趣了解如何在 Golang 中实现所有设计模式。如果是的话，那这篇文章适合你 – [所有设计模式 Golang](https://golangbyexample.com/all-design-patterns-golang/)
+如果你有兴趣了解如何在 Golang 中实现所有设计模式，那么这篇文章适合你： [所有设计模式 Golang](https://golangbyexample.com/all-design-patterns-golang/)
 
-同时，也可以查看我们的系统设计教程系列 – [系统设计教程系列](https://techbyexample.com/system-design-questions/)
+同时，也可以查看我们的系统设计教程系列： [系统设计教程系列](https://techbyexample.com/system-design-questions/)

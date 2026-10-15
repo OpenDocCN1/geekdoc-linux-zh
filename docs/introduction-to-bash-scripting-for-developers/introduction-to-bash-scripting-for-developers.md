@@ -1,36 +1,11 @@
+
 # Bash 脚本入门指南：开发者篇
-
-
-
-
-
-
 
 ![](img/7521519cf793a2e66883462104020ab5_0_0.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 - 完整脚本：......................................................................... 133
 
-
-
-
-
-
 ## 关于本书
-
 
 这是一份开源的 Bash 脚本入门指南，将帮助你学习 Bash 脚本的基础知识，并开始编写出色的 Bash 脚本，帮助你自动化日常 SysOps、DevOps 和开发任务。无论你是 DevOps/SysOps 工程师、开发者，还是仅仅 Linux 爱好者，都可以使用 Bash 脚本组合不同的 Linux 命令，并自动化枯燥重复的任务，从而让你专注于更具生产力且更有趣的事情。
 
@@ -46,13 +21,9 @@
 
 欲了解更多信息，请访问我的博客 https://bobbyiliev.com，并在 Twitter 上关注我 @bobbyiliev_ 并在 YouTube。
 
-
-
-
 用于实时分析的流式数据库。
 
 Materialize 是一个提供增量视图更新的响应式数据库。Materialize 帮助开发者使用标准 SQL 利用流数据轻松进行构建。
-
 
 DigitalOcean 是一个云服务平台，提供开发者喜爱的简单性和企业信任的可靠性，用于大规模生产运行。
 
@@ -76,18 +47,13 @@ DevDojo 是一个学习所有 Web 开发和网页设计的资源库。在午休�
 
 欲了解更多信息，请访问 https://www.devdojo.com 或在 Twitter 上关注 @thedevdojo。
 
-
-
 Ibis 是一个 PHP 工具，帮助你用 markdown 编写电子书。
 
-
 ePub 版本由 Pandoc 生成。
-
 
 本电子书的封面使用 Canva.com 创建。
 
 如果你需要创建图形、海报、邀请函、标志、演示文稿或其他任何看起来好看的内容——请尝试 Canva。
-
 
 MIT 许可证
 
@@ -107,15 +73,15 @@ Bash 是一种 Unix Shell 和命令语言。它在各种系统中广泛可用，
 
 Bash 代表 Bourne-Again Shell（再次 Bourne Shell）。与其他 Shell 一样，你可以直接在终端交互式地使用 Bash，也可以像使用任何编程语言一样使用 Bash 编写脚本。本书将帮助你学习 Bash 基础，包括 Bash 变量、用户输入、注释、参数、数组、条件表达式、条件语句、循环、函数、调试和测试。
 
-Bash  对于自动化重复性负载非常出色，可以帮助你节省大量时间。例如，想象你正与五个开发者一起参与一个需要进行繁琐环境设置的项目。为了让程序正确运行，每位开发者都必须手动设置环境。这是一个相同且非常长的任务（设置环境），至少重复五次。这就是你和 Bash 脚本大显身手的地方！你可以创建一个包含所有必要指令的简单文本文件，并与团队成员共享。现在，他们只需要执行 Bash 脚本，一切就会为他们创建完成。
+Bash 对于自动化重复性负载非常出色，可以帮助你节省大量时间。例如，想象你正与五个开发者一起参与一个需要进行繁琐环境设置的项目。为了让程序正确运行，每位开发者都必须手动设置环境。这是一个相同且非常长的任务（设置环境），至少重复五次。这就是你和 Bash 脚本大显身手的地方！你可以创建一个包含所有必要指令的简单文本文件，并与团队成员共享。现在，他们只需要执行 Bash 脚本，一切就会为他们创建完成。
 
-为了编写 Bash 脚本，你只需要一个 UNIX 终端和一个文本编辑器，如 Sublime Text、VS Code 或基于终端的编辑器 vim 或 nano。
+为了编写 Bash 脚本，你只需要一个 UNIX 终端和一个文本编辑器，如 Sublime Text、VS Code 或基于终端的编辑器 `vim` 或 `nano`。
 
 ## Bash 结构
 
-让我们从创建一个 .sh 扩展的新文件开始。例如，我们可以创建一个名为 devdojo.sh 的文件。
+让我们从创建一个 `.sh` 扩展的新文件开始。例如，我们可以创建一个名为 `devdojo.sh` 的文件。
 
-要创建该文件，你可以使用 touch 命令：
+要创建该文件，你可以使用 `touch` 命令：
 
 ```
 touch devdojo.sh
@@ -135,17 +101,13 @@ nano devdojo.sh
 
 这也被称为 Shebang（解释器）。
 
-shebang 所做的作用就是指示操作系统使用 /bin/bash 可执行文件运行脚本。
-
-
-
-
+shebang 所做的作用就是指示操作系统使用 `/bin/bash` 可执行文件运行脚本。
 
 ## Bash Hello World
 
-一旦我们创建了 devdojo.sh 文件并在第一行指定了 shebang，我们就可以准备创建我们的第一个 Hello World 脚本了。
+一旦我们创建了 `devdojo.sh` 文件并在第一行指定了 shebang，我们就可以准备创建我们的第一个 Hello World 脚本了。
 
-要做到这一点，再次打开 devdojo.sh 文件，在 `#!/bin/bash` 这一行之后添加以下内容：
+要做到这一点，再次打开 `devdojo.sh` 文件，在 `#!/bin/bash` 这一行之后添加以下内容：
 
 ```bash
 #!/bin/bash
@@ -211,9 +173,9 @@ echo ${name}
 
 上面的代码将输出：DevDojo，这是我们变量的值。
 
-接下来，让我们更新 devdojo.sh 脚本并在其中包含变量。
+接下来，让我们更新 `devdojo.sh` 脚本并在其中包含变量。
 
-再次，你可以使用你喜欢的文本编辑器打开 devdojo.sh 文件，这里我们使用 nano 打开：
+再次，你可以使用你喜欢的文本编辑器打开 `devdojo.sh` 文件，这里我们使用 `nano` 打开：
 
 ```bash
 nano devdojo.sh
@@ -264,13 +226,15 @@ Hello DevDojo
 
 注意，你并不需要在每行末尾添加分号 `;`。这与 JavaScript 等编程语言不同。
 
+
+
 你也可以在 Bash 脚本之外添加变量，它们作为参数传递：
 
 ```bash
 ./devdojo.sh
 ```
 
-该脚本接收两个由空格分隔的参数。在 devdojo.sh 文件中我们有：
+该脚本接收两个由空格分隔的参数。在 `devdojo.sh` 文件中我们有：
 
 ```bash
 #!/bin/bash
@@ -281,7 +245,7 @@ echo "Hello there" $1
 
 使用 `$@` 来引用所有输入是另一种读取变量的有用方法。这表示`$@` 引用了所有输入。
 
-所以现在更改 devdojo.sh 文件以更好地理解：
+所以现在更改 `devdojo.sh` 文件以更好地理解：
 
 ```bash
 #!/bin/bash
@@ -342,6 +306,7 @@ Bobby
 - 一旦输入了名字，只需回车，你将获得以下输出：
 
 Hi there Bobby
+
 Welcome to DevDojo!
 
 为了简化代码，我们可以将第一个 `echo` 语句改为 `read -p`，带有 `-p` 标志的 `read` 命令会在提示用户输入之前打印消息：
@@ -436,11 +401,13 @@ All arguments: dog cat bird
 例如，让我们创建一个打印文件名并在之后删除文件的脚本：
 
 ```bash
+
 #!/bin/bash
 
 echo "The name of the file is: $0 and it is going to be self-deleted."
 
 rm $0
+
 ```
 
 你需要对自删除小心，并确保在自删除之前备份了脚本。
@@ -454,7 +421,9 @@ rm $0
 你可以通过赋值由空格分隔并包含在 `()` 中的值来初始化数组。示例：
 
 ```bash
+
 my_array=("value 1" "value 2" "value 3" "value 4")
+
 ```
 
 要访问数组中的元素，你需要通过数字索引引用它们。
@@ -464,19 +433,25 @@ my_array=("value 1" "value 2" "value 3" "value 4")
 - 访问单个元素，这将输出：value 2
 
 ```bash
+
 echo ${my_array[1]}
+
 ```
 
 - 这将返回最后一个元素：value 4
 
 ```bash
+
 echo ${my_array[-1]}
+
 ```
 
 - 就像命令行参数一样，使用 `@` 将返回数组中的所有参数，如下：value 1 value 2 value 3 value 4
 
 ```bash
+
 echo ${my_array[@]}
+
 ```
 
 
@@ -486,7 +461,9 @@ echo ${my_array[@]}
 -   在数组前面加上一个哈号 (#) 将输出数组中元素的总数，在我们的用例中它是 4：
 
 ```bash
+
 echo ${#my_array[@]}
+
 ```
 
 确保在你的本地测试此并使用不同的值进行练习。
@@ -496,9 +473,13 @@ echo ${#my_array[@]}
 让我们复习下面这个关于在 Bash 中对字符串进行切片的示例：
 
 ```bash
+
 #!/bin/bash
+
 letters=( "A""B""C""D""E" )
+
 echo ${letters[@]}
+
 ```
 
 此命令将打印数组的所有元素：
@@ -506,7 +487,9 @@ echo ${letters[@]}
 输出：
 
 ```
+
 $ ABCDE
+
 ```
 
 让我们再看几个例子：
@@ -514,26 +497,37 @@ $ ABCDE
 - 示例 1
 
 ```bash
+
 #!/bin/bash
+
 letters=( "A""B""C""D""E" )
+
 b=${letters:0:2}
+
 echo "${b}"
+
 ```
 
 此命令将打印从起始索引 0 开始到 2 的数组内容（其中 2 不包含在内）。
 
 ```
+
 $ AB
+
 ```
 
 - 示例 2
 
 ```bash
+
 #!/bin/bash
 
 letters=( "A"B"C"D"E" )
+
 b=${letters::5}
+
 echo "${b}"
+
 ```
 
 此命令将从基础索引 0 输出到 5，其中 5 不包含在内，且起始索引默认设置为 0。
@@ -543,11 +537,15 @@ echo "${b}"
 - 示例 3
 
 ```bash
+
 #!/bin/bash
 
 letters=( "A"B"C"D"E" )
+
 b=${letters:3}
+
 echo "${b}"
+
 ```
 
 此命令将打印从起始索引 3 到数组末尾的内容（包含在内）。
@@ -569,68 +567,89 @@ echo "${b}"
 - 如果文件存在则为真。
 
 ```bash
+
 [[ -a ${file} ]]
+
 ```
 
 - 如果文件存在且是块设备文件，则为真。
 
 ```bash
+
 [[ -b ${file} ]]
+
 ```
 
 - 如果文件存在且是字符设备文件，则为真。
 
 ```bash
+
 [[ -c ${file} ]]
+
 ```
 
 - 如果文件存在且是目录，则为真。
 
 ```bash
+
 [[ -d ${file} ]]
+
 ```
 
 - 如果文件存在则为真。
 
 ```bash
+
 [[ -e ${file} ]]
+
 ```
 
 - 如果文件存在且是普通文件，则为真。
 
 ```bash
+
 [[ -f ${file} ]]
+
 ```
 
 - 如果文件存在且是符号链接，则为真。
 
 ```bash
+
 [[ -h ${file} ]]
+
 ```
 
 - 如果文件存在且可读，则为真。
 
 ```bash
+
 [[ -r ${file} ]]
+
 ```
 
 - 如果文件存在且大小大于零，则为真。
 
 ```bash
+
 [[ -s ${file} ]]
+
 ```
 
 - 如果文件存在且可写，则为真。
 
 ```bash
+
 [[ -w ${file} ]]
+
 ```
 
 - 如果文件存在且可执行，则为真。
-
 ```bash
+
+
+
 [[ -x ${file} ]]
-```
 
 - 如果文件存在且是符号链接，则为真。
 
@@ -640,7 +659,7 @@ echo "${b}"
 
 ### 字符串表达式
 
-- 如果 shell 变量 varname 已设置（已赋值值），则为真。
+- 如果 shell 变量 `varname` 已设置（已赋值值），则为真。
 
 ```bash
 [[ -v ${varname} ]]
@@ -761,11 +780,8 @@ fi
 
 ```bash
 #!/bin/bash
-
 ### if 语句示例
-
 read -p "你的名字是？" name
-
 if [[ -z ${name} ]]
 then
     echo "请输入名字！"
@@ -778,11 +794,8 @@ fi
 
 ```bash
 #!/bin/bash
-
 ### if-else 语句示例
-
 read -p "你的名字是？" name
-
 if [[ -z ${name} ]]
 then
     echo "请输入名字！"
@@ -795,13 +808,9 @@ fi
 
 ```bash
 #!/bin/bash
-
 admin="root"
-
 read -p "用户名：" username
-
 ### 检查用户名是否为管理员
-
 if [[ "${username}" == "${admin}" ]]; then
     echo "你是管理员！"
 else
@@ -813,7 +822,6 @@ fi
 
 ```bash
 #!/bin/bash
-
 if [[ $EUID -eq 0 ]]; then
     echo "你是 root 用户"
 else
@@ -851,10 +859,6 @@ esac
 - 所有子句必须通过添加 `;;` 来终止。
 - 你可以通过添加 `*` 作为模式来设置默认语句。
 - 为了关闭 `case` 语句，使用 `esac` 关键字（case 倒过来写）。
-
-
-
-
 
 ```bash
 #!/bin/bash
@@ -948,7 +952,6 @@ done
 
 ```bash
 #!/bin/bash
-
 counter=1
 while [[ $counter -le 10 ]]
 do
@@ -956,6 +959,8 @@ do
   ((counter++))
 done
 ```
+
+
 
 首先，我们指定了一个计数器变量并将其设置为 1，然后在循环内部，我们使用这条语句 `((counter++))` 为计数器加 1。这样，我们就能确保循环将运行 10 次而不会无限运行。一旦计数器变为 10，循环就会完成，因为这是我们设置的条件：`while [[ $counter -le 10 ]]`。
 
@@ -967,9 +972,13 @@ done
 read -p "What is your name? " name
 
 while [[ -z ${name} ]]
+
 do
+
     echo "Your name can not be blank. Please enter a valid name!"
+
     read -p "Enter your name again? " name
+
 done
 
 echo "Hi there ${name}"
@@ -985,8 +994,11 @@ echo "Hi there ${name}"
 
 ```bash
 until [[ your_condition ]]
+
 do
+
     your_commands
+
 done
 ```
 
@@ -996,10 +1008,15 @@ done
 #!/bin/bash
 
 count=1
+
 until [[ $count -gt 10 ]]
+
 do
+
     echo $count
+
     ((count++))
+
 done
 ```
 
@@ -1019,14 +1036,23 @@ continue [n]
 
 ```bash
 #!/bin/bash
+
 for i in 1 2 3 4 5
+
 do
+
     if [[ $i -eq 2 ]]
+
     then
+
         echo "skipping number 2"
+
         continue
+
     fi
+
     echo "i is equal to $i"
+
 done
 ```
 
@@ -1046,14 +1072,23 @@ break [n]
 
 ```bash
 #!/bin/bash
+
 for i in 1 2 3 4 5
+
 do
+
     if [[ $i -eq 2 ]]
+
     then
+
         echo "skipping number 2"
+
         continue
+
     fi
+
     echo "i is equal to $i"
+
 done
 ```
 
@@ -1075,15 +1110,25 @@ break [n]
 
 ```bash
 #!/bin/bash
+
 num=1
+
 while [[ $num -le 5 ]]
+
 do
+
   if [[ $num -eq 3 ]]
+
   then
+
     break
+
   fi
+
   echo $num
+
   ((num++))
+
 done
 ```
 
@@ -1093,16 +1138,27 @@ done
 
 ```bash
 #!/bin/bash
+
 for i in {1..3}
+
 do
+
     for j in {1..3}
+
     do
+
         if [[ $i -eq 2 && $j -eq 2 ]]
+
         then
+
             break 2
+
         fi
+
         echo "i: $i, j: $j"
+
     done
+
 done
 ```
 
@@ -1112,7 +1168,9 @@ done
 
 ```bash
 function function_name() {
+
   your_commands
+
 }
 ```
 
@@ -1120,7 +1178,9 @@ function function_name() {
 
 ```bash
 function_name() {
+
   your_commands
+
 }
 ```
 
@@ -1128,9 +1188,13 @@ function_name() {
 
 ```bash
 #!/bin/bash
+
 function hello() {
+
   echo "Hello!"
+
 }
+
 hello
 ```
 
@@ -1140,8 +1204,11 @@ hello
 
 ```bash
 #!/bin/bash
+
 function hello() {
+
     echo "Hello $1!"
+
 }
 
 hello Devojo
@@ -1159,13 +1226,15 @@ hello Devojo
 ### Returns: 成功返回 0，错误返回非零
 ###########################################
 function hello() {
+
     echo "Hello $1!"
+
 }
 ```
 
 在接下来的几章中我们将大量使用函数！
 
-### 调试、测试快捷快捷
+### 调试、测试快捷
 
 为了调试你的 bash 脚本，可以在执行脚本时使用 `-x`：
 
@@ -1198,12 +1267,6 @@ Ctrl + k
 ```
 
 - 删除从光标到行首的所有内容：
-
-```
-Ctrl + u
-```
-
-
 
 ```
 Ctrl + u
@@ -1251,6 +1314,8 @@ Ctrl + c
 Ctrl + z
 ```
 
+
+
 我每天都会经常使用这些命令，节省了我大量时间。
 
 如果你认为我漏掉了任何内容，欢迎在 DigitalOcean 社区论坛加入讨论！
@@ -1259,7 +1324,7 @@ Ctrl + z
 
 作为开发者或系统管理员，你可能需要在终端中花费大量时间。我总是尝试寻找优化重复性任务的方法。
 
-实现这一点的方法是编写短的 bash 脚本或创建自定义命令（也称为别名，aliases）。例如，与其每次都输入一个非常长的命令，你只需为它创建一个快捷方式即可。
+实现这一点的方法是编写短的 bash 脚本或创建自定义命令（也称为别名，`aliases`）。例如，与其每次都输入一个非常长的命令，你只需为它创建一个快捷方式即可。
 
 ### 示例
 
@@ -1307,7 +1372,7 @@ Total connections on port 80 and 443:
 
 为了让更改持久化，我们需要在 shell 配置文件中添加 `alias` 命令。
 
-在 Ubuntu 上，默认是 `~/.bashrc` 文件，对于其他操作系统，这可能是 `~/.bash_profile`。用你喜喜欢的文本编辑器打开该文件：
+在 Ubuntu 上，默认是 `~/.bashrc` 文件，对于其他操作系统，这可能是 `~/.bash_profile`。用你喜欢的文本编辑器打开该文件：
 
 ```
 nano ~/.bashrc
@@ -1368,7 +1433,7 @@ alias
 #!/bin/bash
 ```
 
-shebang 的唯一作用就是指示操作系统使用 `/bin/bash` 可执行文件来运行该脚本。
+`shebang` 的唯一作用就是指示操作系统使用 `/bin/bash` 可执行文件来运行该脚本。
 
 ### 添加注释
 
@@ -1446,6 +1511,7 @@ memory_check
 
 ```bash
 #!/bin/bash
+
 ##
 # 检查内容的 BASH 脚本
 ### 内存使用情况
@@ -1493,21 +1559,22 @@ tcp_check
 kernel_check
 ```
 
-
-
-
 ```bash
 uname -r
 echo ""
 }
+
 function all_checks() {
     memory_check
     cpu_check
     tcp_check
     kernel_check
 }
+
 all_checks
 ```
+
+
 
 ### 结论
 
@@ -1517,7 +1584,7 @@ Bash 脚本太棒了！无论你是 DevOps/SysOps 工程师、开发者，还是
 
 ## 在 Bash 中创建交互式菜单
 
-在在本教程中，我将向你展示如何在 Bash 中创建一个多选项菜单，以便你的用户可以选择要执行什么操作！
+在本教程中，我将向你展示如何在 Bash 中创建一个多选项菜单，以便你的用户可以选择要执行什么操作！
 
 我们将复用上一章节中的部分代码，所以如果你还没有读过，请确保已阅读。
 
@@ -1565,8 +1632,9 @@ function tcp_check() {
   echo "TCP connections on ${server_name}:"
   echo ""
   cat /proc/net/tcp | wc -l
-echo ""
+  echo ""
 }
+
 function kernel_check() {
     echo "Kernel version on ${server_name} is: "
     echo ""
@@ -1574,6 +1642,7 @@ function kernel_check() {
     uname -r
     echo ""
 }
+
 function all_checks() {
     memory_check
     cpu_check
@@ -1598,7 +1667,6 @@ function all_checks() {
 green='\e[32m'
 blue='\e[34m'
 clear='\e[0m'
-
 ### 颜色函数
 ##
 ColorGreen(){
@@ -1625,13 +1693,13 @@ echo -ne $(ColorBlue 'Some text here')
 menu() {
   echo -ne "
 My First Menu
-  ($ColorGreen '1') Memory usage
-  ($ColorGreen '2') CPU load
-  ($ColorGreen '3') Number of TCP connections
-  ($ColorGreen '4') Kernel version
-  ($ColorGreen '5') Check All
-  ($ColorGreen '0') Exit
-  ($ColorBlue 'Choose an option:') "
+  ($(ColorGreen '1')) Memory usage
+  ($(ColorGreen '2')) CPU load
+  ($(ColorGreen '3')) Number of TCP connections
+  ($(ColorGreen '4')) Kernel version
+  ($(ColorGreen '5')) Check All
+  ($(ColorGreen '0')) Exit
+  ($(ColorBlue 'Choose an option:')) "
   read a
   case $a in
     1) memory_check; menu;
@@ -1662,13 +1730,13 @@ $(ColorGreen '0') Exit
 $(ColorBlue 'Choose an option:') "
 ```
 
-然后，我们读取用户的回答并将其存储在变量 $a 中：
+然后，我们读取用户的回答并将其存储在变量 `$a` 中：
 
 ```bash
 read a
 ```
 
-最后，我们有一个 `switch case` 语句，根据 $a 的值触发不同的函数：
+最后，我们有一个 `switch case` 语句，根据 `$a` 的值触发不同的函数：
 
 ```bash
 case $a in
@@ -1680,9 +1748,7 @@ case $a in
   0) exit 0 ;
   *) echo -e $red"Wrong option.\\$clear;"
 esac
-
 WrongCommand;
-
 ```
 
 在最后，我们需要调用 `menu` 函数来实际打印菜单：
@@ -1705,15 +1771,12 @@ menu
 ### - TCP 连接数
 ### - 内核版本
 ##
-
 server_name=$(hostname)
-
 function memory_check() {
     echo "Memory usage on ${server_name} is:"
     free -h
     echo ""
 }
-
 function cpu_check() {
     echo ""
     echo "CPU load on ${server_name} is:"
@@ -1721,7 +1784,6 @@ function cpu_check() {
     uptime
     echo ""
 }
-
 function tcp_check() {
     echo ""
     echo "TCP connections on ${server_name} is:"
@@ -1729,13 +1791,11 @@ function tcp_check() {
     cat /proc/net/tcp | wc -l
     echo ""
 }
-
 function kernel_check() {
     echo ""
     echo "Kernel version on ${server_name} is:"
     echo ""
 }
-
 uname -r
 echo ""
 }
@@ -1750,9 +1810,9 @@ function all_checks() {
 ##
 ### 颜色变量
 ##
-green='\e[32m'
-blue='\e[34m'
-clear='\e[0m'
+`green`='\e[32m'
+`blue`='\e[34m'
+`clear`='\e[0m'
 
 ##
 ### 颜色函数
@@ -1762,11 +1822,12 @@ clear='\e[0m'
 ColorGreen(){
     echo -ne $green$1$clear
 }
-
 ColorBlue(){
     echo -ne $blue$1$clear
 }
+```
 
+```bash
 menu() {
   echo -ne "
 My First Menu
@@ -1779,22 +1840,38 @@ $(ColorGreen '0') Exit
 $(ColorBlue 'Choose an option:') "
   read a
   case $a in
-    1) memory_check; menu;
-    2) cpu_check; menu;
-    3) tcp_check; menu;
-    4) kernel_check; menu;
-    5) all_checks; menu;
-    0) exit 0;
-    *) echo -e "$redWrong option.\$clear"
-WrongCommand;
-  esac
-}
-
-### 调用菜单函数
-menu
 ```
 
-要测试脚本，创建一个以 .sh 扩展的新文件，例如 menu.sh，然后运行它：
+
+
+```
+    1) memory_check; menu;
+
+    2) cpu_check; menu;
+
+    3) tcp_check; menu;
+
+    4) kernel_check; menu;
+
+    5) all_checks; menu;
+
+    0) exit 0;
+
+    *) echo -e "$redWrong option.\$clear"
+
+WrongCommand;
+
+  esac
+
+}
+```
+
+### 调用菜单函数
+
+`menu`
+
+```
+要测试脚本，创建一个以 `.sh` 扩展的新文件，例如 `menu.sh`，然后运行它：
 
 ```bash
 bash menu.sh
@@ -1811,16 +1888,13 @@ My First Menu
 0) Exit
 Choose an option:
 
-
-
-
-
 # BASH 脚本
 
 我将重用上一章节的演示脚本并进行一些微调。它简单地执行一些检查，例如当前内存使用情况、当前 CPU 使用率、TCP 连接数以及内核版本。
 
 ```bash
 #!/bin/bash
+
 ##
 # 检查以下内容的 BASH 脚本：
 ### 内存使用
@@ -1828,7 +1902,6 @@ Choose an option:
 ### TCP 连接数
 ### 内核版本
 ##
-
 ##
 ### 内存检查
 ##
@@ -2025,6 +2098,8 @@ jq .[0]
 curl "https://quizapi.io/api/v1/questions?apiKey=${API_KEY}&limit=1" | jq .[0]
 ```
 
+
+
 你将只获得第一个元素，输出如下：
 
 ![](img/7521519cf793a2e66883462104020ab5_100_0.png)
@@ -2057,38 +2132,54 @@ jq .[].question
 - 打印问题和答案
 - 为了实现这一点，我编写了以下脚本：
 
-> 注意：请确保将 API_KEY 部分替换为你实际的 QuizAPI 密钥：
+> 注意：请确保将 `API_KEY` 部分替换为你实际的 QuizAPI 密钥：
 
 ```bash
 #!/bin/bash
+
 ##
 # 调用 QuizAPI 的 API并将输出存储在变量中
 ##
+
 output=$(curl 'https://quizapi.io/api/v1/questions?apiKey=API_KEY&limit=10' >/dev/null)
+
 ##
 ### 获取第一个问题
 ##
+
 output=$(echo $output | jq.[0])
+
 ##
 ### 获取问题
 ##
+
 question=$(echo $output | jq .question)
+
 ##
 ### 获取答案
 ##
+
 answer_a=$(echo $output | jq .answers.a)
+
 answer_b=$(echo $output | jq .answers.b)
+
 answer_c=$(echo $output | jq .answers.c)
+
 answer_d=$(echo $output | jq .answers.d)
+
 ##
 ### 输出问题
 ##
+
 echo "
 Question: ${question}
 
 A) ${answer_a}
+
 B) ${answer_b}
+
 C) ${answer_c}
+
 D) ${answer_d}
 "
 ```
@@ -2097,15 +2188,11 @@ D) ${answer_d}
 
 我们甚至可以进一步使其具有交互性，这样我们就可以直接在终端中选择答案。
 
-已经有一个使用 QuizAPI 和 jq 实现此点的 bash 脚本：
+已经有一个使用 QuizAPI 和 `jq` 实现此点的 bash 脚本：
 
 你可以在这里查看该脚本：
 
 - https://github.com/QuizApi/QuizAPI-BASH/blob/master/quiz.sh
-
-
-
-
 
 ### 结论
 
@@ -2216,7 +2303,6 @@ crontab -e
 注意：将路径更改为你存储脚本的实际路径。
 
 ## 使用 Bash 配合 Cloudflare API
-... (剩余内容处理方式相同) ...
 
 ### 前提条件
 在遵循此指南之前，请设置你的 Cloudflare 账户并准备好你的网站。如果你不确定如何操作，可以遵循这些步骤：创建 Cloudflare 账户并添加网站。
@@ -2278,8 +2364,11 @@ nano protection.sh
 ```bash
 CF_ZONE_ID="YOUR_ZONE_ID"
 CF_EMAIL="YOUR_EMAIL"
-CF_API_KEY="YOUR_API_KEY"
 ```
+
+
+
+CF_API_KEY="YOUR_API_KEY"
 
 之后，让脚本具有可执行权限：
 
@@ -2301,10 +2390,6 @@ crontab -e
 
 ... (为了简洁已截略)
 
-
-
-
-
 ## 使用 Bash 和 SSMTP 发送电子邮件
 
 SSMTP 是一种将电子邮件从计算机或服务器发送到已配置的邮件主机的工具。
@@ -2324,33 +2409,33 @@ SSMTP 本身并不是电子邮件服务器，它不接收邮件或管理队列�
 
 为了安装 SSMTP，你首先通过以下命令更新 apt 缓存：
 
-```
+```bash
 sudo apt update
 ```
 
 然后运行以下命令安装 SSMTP：
 
-```
+```bash
 sudo apt install ssmtp
 ```
 
 你可能还需要安装的是 mailutils，执行此操作请运行以下命令：
 
-```
+```bash
 sudo apt install mailutils
 ```
 
 ### 配置 SSMTP
 
-现在你已经安装了 ssmtp，为了配置它在发送送邮件时使用你的 SMTP 服务器，你需要编辑配置文件。使用你喜欢的文本编辑器打开 /etc/ssmtp.conf 文件：
+现在你已经安装了 ssmtp，为了配置它在发送送邮件时使用你的 SMTP 服务器，你需要编辑配置文件。使用你喜欢的文本编辑器打开 `/etc/ssmtp.conf` 文件：
 
-```
+```bash
 sudo nano /etc/ssmtp.conf
 ```
 
 你需要包含你的配置：
 
-```
+```bash
 root=postmaster
 mailhub=your_smtp_host:587
 hostname=your_hostname
@@ -2366,7 +2451,7 @@ STARTTLS=YES
 
 配置完成后，只需运行以下命令即可发送电子邮件：
 
-```
+```bash
 echo "email body" | mail -s "email subject" recipient_email@domain.com
 ```
 
@@ -2376,13 +2461,13 @@ echo "email body" | mail -s "email subject" recipient_email@domain.com
 
 如果你需要发送文件附件，可以使用 `mutt`。安装 `mutt` 请运行以下命令：
 
-```
+```bash
 sudo apt install mut
 ```
 
 接下来，要发送带文件的电子邮件，请运行以下命令：
 
-```
+```bash
 mutt -s "Your Subject" -- file.zip -- recipient_email@domain.com
 ```
 
@@ -2419,28 +2504,28 @@ Linux 的巨大优势之一是你可以使用不同的方法来完成很多事�
 
 - 使用 `date` 命令。`date` 命令将输出当前的日期和时间。我们进一步对输出进行处理将其作为随机生成的密码。我们可以使用 md5、sha 对日期进行哈希处理，或直接通过 base64 运行。以下是几个示例：
 
-```
+```bash
 date | md5sum
 94cb1cdec0699ed98acd9a7b8f6fed
 ```
 
 使用 sha256sum：
 
-```
+```bash
 date | sha256sum
 30a0c6091e94c8c7785f0d7bb6e1eac9b76c528f02213d1b6a5fbcc7cef4
 ```
 
 使用 base64：
 
-```
+```bash
 date | base64
 0YHQssDRj9C90YmAgMTk6NTE6NDGGVUDIwEK
 ```
 
 - 我们可以使用 `openssl` 来生成伪随机字节并将输出通过 base64。示例输出如下：
 
-```
+```bash
 openssl rand -base64 10
 9+soM9btmhdcw==
 ```
@@ -2449,11 +2534,11 @@ openssl rand -base64 10
 
 - 最优的方法是使用伪随机数生成器 `/dev/urandom`，因为它旨在用于大多数加密用途。我们还需要使用 `tr` 对输出进行处理以转换。示例命令为：
 
-```
+```bash
 tr -cd '[:alnum:]' < /dev/urandom | fold -w10 | head -n 1
 ```
 
-通过此命令，我们从 /dev/urandom 获取输出，使用 tr 进行转换（保留所有字母和数字），并打印指定数量的字符。
+通过此命令，我们从 `/dev/urandom` 获取输出，使用 `tr` 进行转换（保留所有字母和数字），并打印指定数量的字符。
 
 ### 脚本
 
@@ -2486,7 +2571,6 @@ echo $pass_output
 
 
 
-
 ### 结论
 
 这就是你可以使用简单的 bash 脚本生成随机密码的方法。
@@ -2497,19 +2581,19 @@ echo $pass_output
 
 ### 贡献者
 
-Alex Georgiev
+`Alex Georgiev`
 
-## # Bash 中的重定向
+## Bash 中的重定向
 
 Linux 超级用户必须对 Bash 中的管道（pipes）和重定向（redirection）有良好的了解。这是系统的核心组成部分，在 Linux 系统管理领域通常非常有帮助。
 
-当你运行像 `ls`、`cat` 等命令时，你会在终端上看到一些输出。如果你写了错误的命令、传递了错误的标记或错误的命令行参数，你会在终端上得到错误输出。在这两种情况下，你都会得到一些文本。对你来说这似乎仅仅是“文本”，但系统处理这些文本的方式是不同的。这个标识符被称为文件描述符（File Descriptor， fd）。
+当你运行像 `ls`、`cat` 等命令时，你会在终端上看到一些输出。如果你写了错误的命令、传递了错误的标记或错误的命令行参数，你会在终端上得到错误输出。在这两种情况下，你都会得到一些文本。对你来说这似乎仅仅是“文本”，但系统处理这些文本的方式是不同的。这个标识符被称为文件描述符（File Descriptor， `fd`）。
 
-在 Linux 中，有 3 个文件描述符：STDIN (0)、STDOUT (1) 和 STDERR (2)。
+在 Linux 中，有 3 个文件描述符：`STDIN` (`0`)、`STDOUT` (`1`) 和 `STDERR` (`2`)。
 
-- **STDIN** (fd: 0): 管理终端的输入。
-- **STDOUT** (fd: 1): 管理终端的输出文本。
-- **STDERR** (fd: 2): 管理终端的错误文本。
+- `STDIN` (`fd: 0`): 管理终端的输入。
+- `STDOUT` (`fd: 1`): 管理终端的输出文本。
+- `STDERR` (`fd: 2`): 管理终端的错误文本。
 
 ### 管道与重定向的区别
 
@@ -2521,14 +2605,17 @@ Linux 超级用户必须对 Bash 中的管道（pipes）和重定向（redirecti
 
 ### STDIN（标准输入）
 
-当你为要求要求输入的命令输入一些输入文本时，你实际上是在向 STDIN 文件描述符输入这些文本。运行不带任何命令行参数的 `cat` 命令。看起来进程似乎暂停了，但实际上是 `cat` 在请求 STDIN。`cat` 是一个简单的程序，它会打印传递给 STDIN 的文本。然而，你可以通过重定向输入到接收 STDIN 的命令来扩展其用法。
+当你为要求要求输入的命令输入一些输入文本时，你实际上是在向 `STDIN` 文件描述符输入这些文本。运行不带任何命令行参数的 `cat` 命令。看起来进程似乎暂停了，但实际上是 `cat` 在请求 `STDIN`。`cat` 是一个简单的程序，它会打印传递给 `STDIN` 的文本。然而，你可以通过重定向输入到接收 `STDIN` 的命令来扩展其用法。
 
 使用 `cat` 的示例：
 
 ```
 cat << EOF
+
 Hello World!
+
 How are you?
+
 EOF
 ```
 
@@ -2536,15 +2623,19 @@ EOF
 
 ```
 Hello World!
+
 How are you?
 ```
 
-其他通过 STDIN 接收输入的命令也可以进行相同的操作。例如，`wc`：
+其他通过 `STDIN` 接收输入的命令也可以进行相同的操作。例如，`wc`：
 
 ```
 wc -l << EOF
+
 Hello World!
+
 How are you?
+
 EOF
 ```
 
@@ -2556,7 +2647,7 @@ EOF
 
 ### STDOUT（标准输出）
 
-你终端屏幕上的正常非错误文本是通过 STDOUT 文件描述符打印的。命令的 STDOUT 可以重定向到文件，使得命令的输出被写入文件而不是打印在终端屏幕上。这简单地通过 `>` 和 `>>` 运算符来实现。
+你终端屏幕上的正常非错误文本是通过 `STDOUT` 文件描述符打印的。命令的 `STDOUT` 可以重定向到文件，使得命令的输出被写入文件而不是打印在终端屏幕上。这简单地通过 `>` 和 `>>` 运算符来实现。
 
 示例：
 
@@ -2564,22 +2655,23 @@ EOF
 echo "Hello World!" > file.txt
 ```
 
-接下来的命令不会在终端屏幕上打印 "Hello World"，它会创建一个名为 file.txt 的文件并将字符串 "Hello World" 写入其中。可以通过在 file.txt 文件上运行 `cat` 命令来验证。
+接下来的命令不会在终端屏幕上打印 "Hello World"，它会创建一个名为 `file.txt` 的文件并将字符串 "Hello World" 写入其中。可以通过在 `file.txt` 文件上运行 `cat` 命令来验证。
 
 ```
 cat file.txt
 ```
 
-然而，当你多次将任何命令的 STDOUT 重定向到同一个文件时，它会移除文件的现有内容并写入新内容。
+然而，当你多次将任何命令的 `STDOUT` 重定向到同一个文件时，它会移除文件的现有内容并写入新内容。
 
 示例：
 
 ```
 echo "Hello World!" > file.txt
+
 echo "How are you?" > file.txt
 ```
 
-在 file.txt 文件上运行 `cat` 时：
+在 `file.txt` 文件上运行 `cat` 时：
 
 ```
 cat file.txt
@@ -2597,17 +2689,19 @@ How are you?
 
 ```
 echo "Hello World!" > file.txt
+
 echo "How are you?" >> file.txt
 ```
 
-在 file.txt 文件上运行 `cat`，你将得到预期的结果：
+在 `file.txt` 文件上运行 `cat`，你将得到预期的结果：
 
 ```
 Hello World!
+
 How are you?
 ```
 
-或者，STDOUT 的重定向运算符也可以写为 `1>`。例如，
+或者，`STDOUT` 的重定向运算符也可以写为 `1>`。例如，
 
 ```
 echo "Hello World!" 1> file.txt
@@ -2615,22 +2709,22 @@ echo "Hello World!" 1> file.txt
 
 ### STDERR（标准错误）
 
-终端屏幕上的错误文本是通过命令的 STDERR 打印的。
+终端屏幕上的错误文本是通过命令的 `STDERR` 打印的。
 例如：
 
 ```
 ls --hello
 ```
 
-会给出错误消息。此错误消息就是命令的 STDERR。
+会给出错误消息。此错误消息就是命令的 `STDERR`。
 
-可以使用 `2>` 重定向 STDERR：
+可以使用 `2>` 重定向 `STDERR`：
 
 ```
 ls --hello 2> error.txt
 ```
 
-然后你可以通过查看 error.txt 看到错误：
+然后你可以通过查看 `error.txt` 看到错误：
 
 ```
 cat error.txt
@@ -2642,13 +2736,13 @@ cat error.txt
 ls --hello 2>> error.txt
 ```
 
-此外，还可以将 STDOUT 和 STDERR 同时重定向到同一个文件：
+此外，还可以将 `STDOUT` 和 `STDERR` 同时重定向到同一个文件：
 
 ```
 ls --hello > output.txt 2> output.txt
 ```
 
-或者使用 `2>&1` 将 STDERR 重定向到 STDOUT：
+或者使用 `2>&1` 将 `STDERR` 重定向到 `STDOUT`：
 
 ```
 ls --hello > output.txt 2>&1
@@ -2656,7 +2750,7 @@ ls --hello > output.txt 2>&1
 
 ### 管道
 
-到为止，我们已经了解了如何通过重定向 STDOUT、STDIN 和文件。为了将程序（命令）的输出作为另一个程序（命令）的输入，可以使用管道符 `|`。
+到为止，我们已经了解了如何通过重定向 `STDOUT`、`STDIN` 和文件。为了将程序（命令）的输出作为另一个程序（命令）的输入，可以使用管道符 `|`。
 
 示例：
 
@@ -2689,21 +2783,31 @@ ls -l /projects/bash_scripts | tail -n +2 | sed 's/\s*/ /g' | cut -d ' ' -f 3 | 
 
 ```
 COMMAND << EOF
+
 ContentOfDocument
+
 ...
+
 ...
+
 EOF
 ```
 
-注意这里的 EOF 代表 heredoc 的结束符（文件结束）。实际上，我们可以在此处使用任何字母数字单词来表示文件的开始和结束。例如，这是一个有效的 heredoc：
+注意这里的 `EOF` 代表 heredoc 的结束符（文件结束）。实际上，我们可以在此处使用任何字母数字单词来表示文件的开始和结束。例如，这是一个有效的 heredoc：
 
 ```
 cat << randomword1
+
 This script will print these lines on the terminal.
+
 Note that cat can read from standard input. Using this heredoc, we can
+
 create a temporary file with these lines as it's
+
 content and pipe that
+
 to cat.
+
 randomword1
 ```
 
@@ -2713,12 +2817,19 @@ randomword1
 
 ```
 cat << randomword1 | wc
+
 This script will print these lines on the terminal.
+
 Note that cat can read from standard input. Using this
+
 heroc, we can
+
 create a temporary file with these lines as it's
+
 content and pipe that
+
 into cat.
+
 randomword1
 ```
 
@@ -2726,7 +2837,9 @@ randomword1
 
 ```
 cat << EOF
+
 $VAR
+
 EOF
 ```
 
@@ -2736,7 +2849,7 @@ EOF
 cat << EOF > file.txt
 ```
 
- 还有另一种更短的方法来这样做：
+还有另一种更短的方法来这样做：
 
 ```
 ./install_package.sh > file.txt 2>&1
@@ -2746,27 +2859,23 @@ cat << EOF > file.txt
 
 Herestring 与 heredoc 非常相似，但使用的是 `<<<`。这些用于必须管道到某些程序的单行字符串。这看起来比 heredoc 更整洁，因为我们不需要指定分隔符。
 
-```
-wc <<<this is an easy way of passing strings to the stdin of a program (here wc)"
-```
+
+
+`wc <<<this is an easy way of passing strings to the stdin of a program (here wc)"`
 
 就像 heredoc 一样，herestring 也可以包含变量。
-
-
-
-
 
 ### 摘要
 
 操作描述
 
-- > 将输出保存到文件
-- >> 将输出追加到文件
-- < 从文件读取输入
-- 2> 重定向错误消息
-- | 将一个程序的输出作为另一个程序的输入
-- << 清洁地将多行管道到程序
-- <<< 清洁地将单行管道到程序
+- `>` 将输出保存到文件
+- `>>` 将输出追加到文件
+- `<` 从文件读取输入
+- `2>` 重定向错误消息
+- `|` 将一个程序的输出作为另一个程序的输入
+- `<<` 清洁地将多行管道到程序
+- `<<<` 清洁地将单行管道到程序
 
 # 使用 BASH 在 LAMP 上自动 Wordpress
 
@@ -2783,7 +2892,7 @@ wc <<<this is an easy way of passing strings to the stdin of a program (here wc)
 ### Lamp 安装
 
 - 更新包管理器
-- 安装防火墙 (ufw)
+- 安装防火墙 (`ufw`)
 - 允许 SSH、HTTP 和 HTTPS 流量
 - 安装 Apache2
 - 安装并配置 MariaDB
@@ -2816,7 +2925,7 @@ wc <<<this is an easy way of passing strings to the stdin of a program (here wc)
 
 - 安装所需的 Wordpress PHP 插件
 - 安装 Wordpress
-- 将所需信息追加到 wp-config.php 文件
+- 将所需信息追加到 `wp-config.php` 文件
 
 话不多说，让我们开始编写脚本。
 
@@ -2826,68 +2935,107 @@ wc <<<this is an easy way of passing strings to the stdin of a program (here wc)
 
 ```
 echo `Please enter your domain of preference without www:`
+
 read DOMAIN
+
 echo "Please enter your Database username:"
+
 read DBUSERNAME
+
 echo "Please enter your Database password:"
+
 read DBPASSWORD
+
 echo "Please enter your Database name:"
+
 read DBNAME
 
 ip=`hostname -I | cut -f1 -d' '`
 ```
 
-我们现在准备好开始编写函数了。从创建 `lamp_install()` 函数开始。在函数内部，我们将更新系统、安装 ufw、允许 SSH、HTTP 和 HTTPS 流量、安装 Apache2、MariaDB 和 PHP。我们还将启用所有所需的 Apache2 模块。
+我们现在准备好开始编写函数了。从创建 `lamp_install()` 函数开始。在函数内部，我们将更新系统、安装 `ufw`、允许 SSH、HTTP 和 HTTPS 流量、安装 Apache2、MariaDB 和 PHP。我们还将启用所有所需的 Apache2 模块。
 
 ```
 lamp_install () {
+
     apt update -y
+
     apt install ufw
+
     ufw enable
+
     ufw allow OpenSSH
+
     ufw allow in "WWW Full"
 
     apt install apache2
+
     apt install mariadb-server
+
     mysql secure_installation -y
+
     apt install libapache2-mod-php php-mysql -y
+
     sed -i "2d" /etc/apache2/mods-enabled/dir.conf
+
     sed -i "2i\tDirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm" /etc/apache2/mods-enabled/dir.conf
+
     systemctl reload apache2
+
 }
 ```
 
-接下来，我们将创建 `apache_virtualhost_setup()` 函数。在函数内部，我们将在 /var/www 中创建一个目录，配置该目录的权限，在 /etc/apache2/sites-available 下创建 $domain 文件并追加所需的 Virtualhost 内容，启用站点并重启 Apache2。
+接下来，我们将创建 `apache_virtualhost_setup()` 函数。在函数内部，我们将在 `/var/www` 中创建一个目录，配置该目录的权限，在 `/etc/apache2/sites-available` 下创建 `$domain` 文件并追加所需的 Virtualhost 内容，启用站点并重启 Apache2。
 
 ```
 apache_virtual_host setup() {
+
     mkdir /var/www/$DOMAIN
+
     chown -R $USER:$USER /var/www/$DOMAIN
 
     echo "<VirtualHost *:80>" >> /etc/apache2/sites-available/$DOMAIN.conf
+
     echo -e "$serverName $DOMAIN" >> /etc/apache2/sites-available/$DOMAIN.conf
+
     echo -e "$serverAlias www.$DOMAIN" >> /etc/apache2/sites-available/$DOMAIN.conf
+
     echo -e "$serverAdmin webmaster@localhost" >> /etc/apache2/sites-available/$DOMAIN.conf
+
     echo -e "$documentRoot /var/www/$DOMAIN" >> /etc/apache2/sites-available/$DOMAIN.conf
+
     echo -e "$errorLog \${APACHE_LOG_DIR}/error.log" >> /etc/apache2/sites-available/$DOMAIN.conf
+
     echo -e "$customLog \${APACHE_LOG_DIR}/access.log combined" >> /etc/apache2/sites-available/$DOMAIN.conf
+
     echo "</VirtualHost>" >> /etc/apache2/sites-available/\DOMAIN.conf
+
     a2ensite $DOMAIN
+
     a2dissite 000-default
+
     systemctl reload apache2
+
 }
 ```
 
-接下来，我们将创建 `ssl_config()` 函数。在函数内部，我们将生成 OpenSSL 证书，将 SSL 证书追加到 ssl-params.conf 文件，将 ssl 配置追加到虚拟主机文件，启用 SSL 并重启 Apache。
+接下来，我们将创建 `ssl_config()` 函数。在函数内部，我们将生成 OpenSSL 证书，将 SSL 证书追加到 `ssl-params.conf` 文件，将 ssl 配置追加到虚拟主机文件，启用 SSL 并重启 Apache。
 
 ```
 ssl_config() {
+
     openssl req -x509 -days 365 -newkey rsa:2048
+
     key /ssl/private/apache-selfsigned.key -out /etc/certs/apache-selfsigned.crt
+
     echo "SSLCipherSuite EECDH+GCM:AES256+GCM+ECDH:AES256+EDH" >> /etc/apache2/conf-available/ssl-params.conf
+
     echo "SSLProtocol All -SSLv2 -TLSv1 -TLSv1.1" >> /etc/apache2/conf-available/ssl-params.conf
+
     echo "SSLHonorCipherOrder On" >> /etc/apache2/conf-available/ssl-params.conf
+
     echo "Header always set X-Frame-Options DENY" >> {}
+
 }
 ```
 
@@ -2895,42 +3043,67 @@ ssl_config() {
 
 ```
 db_config () {
+
     mysql -e "CREATE DATABASE $DBNAME;"
+
     mysql -e "GRANT ALL ON $DBNAME.* TO '$DBUSERNAME'@localhost' IDENTIFIED BY '$DBPASSWORD' WITH GRANT OPTION;"
+
     mysql -e "FLUSH PRIVILEGES;"
+
 }
 ```
 
-接下来，我们将创建 `wordpress_config()` 函数。在函数内部，我们将下载最新版本的 WordPress，将其解压到 /var/www/ 目录，创建 wp-config.php 文件并向其追加所需内容。
+接下来，我们将创建 `wordpress_config()` 函数。在函数内部，我们将下载最新版本的 WordPress，将其解压到 `/var/www/` 目录，创建 `wp-config.php` 文件并向其追加所需内容。
 
 ```
 wordpress_config() {
-  db_setup()
-
-  apt install php-gd php-mbstring php-xml php-soap php-intl php-zip -y
-  systemctl restart apache2
-  curl -s https://wordpress.org/latest.tar.gz -O
-  tar xvzf latest.tar.gz
-  cd /var/www/$DOMAIN
-  chown -R www-data:www-data /var/www/$DOMAIN
-  find . -type d -exec chmod 755 {} \;
-  find . -type f -exec chmod 644 {} \;
-  cp wp-config.sample wp-config.php
-  sed -i "s/DB_NAME/$DBNAME/g" wp-config.php
-  sed -i "s/DB_USER/$DBUSERNAME/g" wp-config.php
-  sed -i "s/DB_PASSWORD/$DBPASSWORD/g" wp-config.php
-  sed -i "s/DB_HOST/'localhost'/'localhost'/g" wp-config.php
-}
 ```
+
+
+
+`db_setup()`
+
+`apt install php-gd php-mbstring php-xml php-soap php-intl php-zip -y`
+
+`systemctl restart apache2`
+
+`curl -s https://wordpress.org/latest.tar.gz -O`
+
+`tar xvzf latest.tar.gz`
+
+`cd /var/www/$DOMAIN`
+
+`chown -R www-data:www-data /var/www/$DOMAIN`
+
+`find . -type d -exec chmod 755 {} \;`
+
+`find . -type f -exec chmod 644 {} \;`
+
+`cp wp-config.sample wp-config.php`
+
+`sed -i "s/DB_NAME/$DBNAME/g" wp-config.php`
+
+`sed -i "s/DB_USER/$DBUSERNAME/g" wp-config.php`
+
+`sed -i "s/DB_PASSWORD/$DBPASSWORD/g" wp-config.php`
+
+`sed -i "s/DB_HOST/'localhost'/'localhost'/g" wp-config.php`
+
+}
 
 最后，我们将执行 `execute()` 函数。在函数内部，我们将调用我们创建的所有函数。
 
 ```
 execute () {
+
   lamp_install
+
   apache_virtual_host_setup
+
   ssl_config
+
   wordpress_config
+
 }
 ```
 
@@ -2942,89 +3115,150 @@ execute () {
 #!/bin/bash
 
 echo 'Please enter your domain of preference without www:'
+
 read DOMAIN
+
 echo "Please enter your Database username:"
+
 read DBUSERNAME
+
 echo "Please enter your Database password:"
+
 read DBPASSWORD
+
 echo "Please enter your Database name:"
+
 read DBNAME
 
 ip=`hostname -I | cut -f1 -d ' '`
 
 lamp_install () {
+
     apt update -y
+
     apt install ufw
+
     ufw enable
+
     ufw allow OpenSSH
+
     ufw allow in "WWW Full"
 
     apt install apache2
+
     apt install mariadb-server
+
     mysql secure_installation -y
+
     apt install libapache2-mod-php php-mysql -y
+
     sed -i "2d" /etc/apache2/mods-enabled/dir.conf
+
     sed -i "2i\tDirectoryIndex index.php index.html index.cgi index.pl index.xhtml index.htm" /etc/apache2/mods-enabled/dir.conf
+
     systemctl reload apache2
+
 }
 
 apache_virtual_host_setup() {
+
     mkdir /var/www/$DOMAIN
+
     chown -R $USER:$USER /var/www/$DOMAIN
 
     echo "<VirtualHost *:80>" >> /etc/apache2/sites-available/$DOMAIN.conf
+
     echo -e "$serverName $DOMAIN" >> /etc/apache2/sites-available/$DOMAIN.conf
+
     echo -e "$serverAlias www.$DOMAIN" >> /etc/apache2/sites-available/$DOMAIN.conf
+
     echo -e "$serverAdmin webmaster@localhost" >> /etc/apache2/sites-available/$DOMAIN.conf
+
     echo -e "$documentRoot /var/www/$DOMAIN" >> /etc/apache2/sites-available/$DOMAIN.conf
+
     echo -e "$errorLog \${APACHE_LOG_DIR}/error.log" >> /etc/apache2/sites-available/$DOMAIN.conf
+
     echo -e "$customLog \${APACHE_LOG_DIR}/access.log combined" >> /etc/apache2/sites-available/$DOMAIN.conf
+
     echo "</VirtualHost>" >> /etc/apache2/sites-available/\DOMAIN.conf
+
     a2ensite $DOMAIN
+
     a2dissite 000-default
+
     systemctl reload apache2
+
 }
 
 ssl_config() {
+
     openssl req -x509 -days 365 -newkey rsa:2048
+
     key /ssl/private/apache-selfsigned.key -out /etc/certs/apache-selfsigned.crt
+
     echo "SSLCipherSuite EECDH+GCM:AES256+GCM+ECDH:AES256+EDH" >> /etc/apache2/conf-available/ssl-params.conf
+
     echo "SSLProtocol All -SSLv2 -TLSv1 -TLSv1.1" >> /etc/apache2/conf-available/ssl-params.conf
+
     echo "SSLHonorCipherOrder On" >> /etc/apache2/conf-available/ssl-params.conf
+
     echo "Header always set X-Frame-Options DENY" >> {}
+
 }
 
 db_config () {
+
     mysql -e "CREATE DATABASE $DBNAME;"
+
     mysql -e "GRANT ALL ON $DBNAME.* TO '$DBUSERNAME'@localhost' IDENTIFIED BY '$DBPASSWORD' WITH GRANT OPTION;"
+
     mysql -e "FLUSH PRIVILEGES;"
+
 }
 
 wordpress_config() {
+
   db_setup()
 
   apt install php-gd php-mbstring php-xml php-soap php-intl php-zip -y
+
   systemctl restart apache2
+
   curl -s https://wordpress.org/latest.tar.gz -O
+
   tar xvzf latest.tar.gz
+
   cd /var/www/$DOMAIN
+
   chown -R www-data:www-data /var/www/$DOMAIN
+
   find . -type d -exec chmod 755 {} \;
+
   find . -type f -exec chmod 644 {} \;
+
   cp wp-config.sample wp-config.php
+
   sed -i "s/DB_NAME/$DBNAME/g" wp-config.php
+
   sed -i "s/DB_USER/$DBUSERNAME/g" wp-config.php
+
   sed -i "s/DB_PASSWORD/$DBPASSWORD/g" wp-config.php
+
   sed -i "s/DB_HOST/'localhost'/'localhost'/g" wp-config.php
+
 }
 
 execute () {
+
   lamp_install
+
   apache_virtual_host_setup
+
   ssl_config
+
   wordpress_config
+
 }
-```
 ```
 
 
@@ -3055,6 +3289,7 @@ echo "\tSSLUseStapling On" >> /etc/apache2/conf-available/ssl-params.conf
 echo "\tSSLStaplingCache \"shmc:logs/stapling-cache(150000)\"" >> /etc/apache2/conf-available/ssl-params.conf
 echo "\tSSLessionTickets Off" >> /etc/apache2/conf-available/ssl-params.conf
 cp /etc/apache2/sites-available/default-ssl.conf /etc/apache2/sites-available/default-ssl.conf
+}
 ```
 
 ```bash
@@ -3068,16 +3303,19 @@ a2enmod headers
 a2ensite default-ssl
 a2conf ssl-params
 systemctl restart apache2
+```
 
+```bash
 db_config() {
   mysql -e "CREATE DATABASE $DBNAME"
   mysql -e "GRANT ALL ON $DBNAME.* TO '$DBUSERNAME'@'localhost' IDENTIFIED BY '$DBPASSWORD' GRANT OPTION;"
   mysql -e "FLUSH PRIVILEGES;"
 }
+```
 
+```bash
 wordpress_config() {
   db_config
-
   apt install php-curl php-gd php-mbstring php-xml php-xmlrpc php-soap php-int php-zip
   systemctl restart apache2
   sed -i "8i\tDirectory /var/www/$DOMAIN>" /etc/apache2/sites-available/$DOMAIN.conf
@@ -3085,10 +3323,10 @@ wordpress_config() {
   sed -i "10i\t<Directory>" /etc/apache2/sites-available/$DOMAIN.conf
   a2enmod rewrite
   systemctl restart apache2
-
   apt install curl
   cd /tmp
   curl -0 https://wordpress.org/latest.tar.gz
+}
 ```
 
 ```bash
@@ -3106,7 +3344,9 @@ sed -i "51,58d" /var/www/$DOMAIN/wp-config.php
 sed -i "s/database_name_here/$DBNAME/1" /var/www/$DOMAIN/wp-config.php
 sed -i "s/username_here/$DBUSERNAME/1" /var/www/$DOMAIN/wp-config.php
 sed -i "s/password_here/$DBPASSWORD/1" /var/www/$DOMAIN/wp-config.php
+```
 
+```bash
 execute () {
   lamp_install
   apache_virtual_host_setup
@@ -3120,12 +3360,15 @@ execute () {
 该脚本执行了以下操作：
 
 字体 安装 LAMP
+
 - 创建虚拟主机
 - 配置 SSL
 - 安装 WordPress
 - 配置 WordPress
 
-尽管如此，希望你喜欢这个示例。如果你有任何问题，请随时直接通过 denctl 与我联系。
+
+
+尽管如此，希望你喜欢这个示例。如果你有任何问题，请随时直接通过 `denctl` 与我联系。
 
 ### 结语
 
@@ -3142,4 +3385,3 @@ execute () {
 如果这本书激发了你编写一些酷炫的 Bash 脚本，请务必在 Twitter 上发布并艾特 @bobbyiliev_，以便我们可以看到！
 
 再次恭喜你完成这本书！
-

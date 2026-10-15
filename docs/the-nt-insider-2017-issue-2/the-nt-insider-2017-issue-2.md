@@ -1,7 +1,5 @@
+
 # NT Insider 2017年第2期
-
-
-
 
 ```c
 MODULE_AUTHOR("OSR Open Systems Resources, Inc.");
@@ -59,7 +57,6 @@ out_uninit_issue:
 module_init(init_ntinsiderfs_fs);
 ```
 
-
 ## 与 OSR 社交
 
 ### 实时更新
@@ -68,7 +65,7 @@ module_init(init_ntinsiderfs_fs);
 
 **追踪 NTSTATUS 到其来源**
 
-本周我遇到了一个情况，我真的很想调用 API SeTokenIsAdmin。我隐约记得这个 API 周围有一些问题，快速 Google 后很快出现了 NTDEV 和 NTFSU 的几个帖子，暗示了一个在 2015 年修复的安全问题...
+本周我遇到了一个情况，我真的很想调用 API `SeTokenIsAdmin`。我隐约记得这个 API 周围有一些问题，快速 Google 后很快出现了 NTDEV 和 NTFSU 的几个帖子，暗示了一个在 2015 年修复的安全问题...
 
 [http://www.osr.com/blog/2017/07/14/tracking-ntstatus-source/](http://www.osr.com/blog/2017/07/14/tracking-ntstatus-source/)
 
@@ -114,9 +111,6 @@ TL;DR：不要像我们一样浪费时间——1394 启动调试在 Windows 10 �
 
 ![](img/feabf7ef0b3bb3419a0ef4d863642d48_1_0.png)
 
-
-
-
 ## Windows 兼容的企业加密现已登陆 Linux
 
 ### 适用于 Linux 的文件加密解决方案框架
@@ -131,17 +125,19 @@ TL;DR：不要像我们一样浪费时间——1394 启动调试在 Windows 10 �
 
 是的……这也让我们感到惊讶。好吧，这并没有让 OSR 的每个人都感到惊讶，但确实让我们中的许多人感到惊讶。嗯，也许不是很多人，但……至少让 Peter 感到惊讶。不管怎样，这个星球上确实不是所有人都使用 Windows。确实有人在自己的服务器和工作站上运行 Linux。而且毫不奇怪，这些人也需要按访问透明文件加密。
 
-虽然 Linux 上已经有一些优质的透明文件加密解决方案，但目前没有一个能达到 FESF 所提供的灵活性。例如，它们不允许你指定只加密某个目录中的 `*.odt` 文件，或者只希望这些 `*.odt` 文件在使用 LibreOffice Writer 打开时（而不是比如说用 catdoc 访问时）被透明加密/解密。
 
-而且，现有的 Linux 数据加密应用程序当然都不兼容 Windows 版 FESF。
+
+虽然 Linux 上已经有一些优质的透明文件加密解决方案，但目前没有一个能达到 `FESF` 所提供的灵活性。例如，它们不允许你指定只加密某个目录中的 `*.odt` 文件，或者只希望这些 `*.odt` 文件在使用 LibreOffice Writer 打开时（而不是比如说用 catdoc 访问时）被透明加密/解密。
+
+而且，现有的 Linux 数据加密应用程序当然都不兼容 Windows 版 `FESF`。
 
 ### 隆重推出：适用于 Linux 的 FESF
 
-OSR 的适用于 Linux 的文件加密解决方案框架（FESF）使您能够在 Linux 上创建企业级、高度灵活、按访问透明文件加密/解密解决方案。适用于 Linux 的 FESF 包含一个原生（内核模式）分层文件系统，从零开始构建以支持文件访问拦截和文件加密活动。以适用于 Windows 的 FESF 为灵感，适用于 Linux 的 FESF 允许您的产品从用户模式实时做出策略决策。使用适用于 Linux 的 FESF，您可以创建定制化、强大且灵活的透明数据加密产品，而无需进行内核模式编程。适用于 Linux 的 FESF 附带用户模式代码，可将其用作您产品的基础，让您的开发工作抢占先机。
+`OSR` 的适用于 Linux 的文件加密解决方案框架（`FESF`）使您能够在 Linux 上创建企业级、高度灵活、按访问透明文件加密/解密解决方案。适用于 Linux 的 `FESF` 包含一个原生（内核模式）分层文件系统，从零开始构建以支持文件访问拦截和文件加密活动。以适用于 Windows 的 `FESF` 为灵感，适用于 Linux 的 `FESF` 允许您的产品从用户模式实时做出策略决策。使用适用于 Linux 的 `FESF`，您可以创建定制化、强大且灵活的透明数据加密产品，而无需进行内核模式编程。适用于 Linux 的 `FESF` 附带用户模式代码，可将其用作您产品的基础，让您的开发工作抢占先机。
 
 ### 快速启动您的项目：透明文件加密
 
-- OSR 提供所有内核模式代码
+- `OSR` 提供所有内核模式代码
 - 您可以在每次访问时完全从用户模式为每个文件动态确定策略。
 - 提供高质量、带注释的示例代码。
 - 高性能。
@@ -153,17 +149,17 @@ OSR 的适用于 Linux 的文件加密解决方案框架（FESF）使您能够�
 
 ## 我试过 !Analyze-V……接下来呢？
 
-您已经看过我们深入分析各种崩溃转储或系统挂起以确定根本原因的文章。想自己学习这些工具和技术吗？考虑参加 OSR 的内核调试与崩溃分析研讨会。
+您已经看过我们深入分析各种崩溃转储或系统挂起以确定根本原因的文章。想自己学习这些工具和技术吗？考虑参加 `OSR` 的内核调试与崩溃分析研讨会。
 
-新罕布什尔州阿默斯特（OSR），12 月 4 日至 8 日
+新罕布什尔州阿默斯特（`OSR`），12 月 4 日至 8 日
 
 ## Peter 的宏论
 
-## 我们需要一场驱动程序开发者大会！
+### 我们需要一场驱动程序开发者大会！
 
 ![](img/feabf7ef0b3bb3419a0ef4d863642d48_3_0.png)
 
-早在 2015 年，我就发博客并长篇大论地表示，我欢迎微软与 Windows 驱动程序开发社区之间似乎正在出现的更开放、更良好的沟通局面。当然，在从 Windows 7 到 Windows 8 的那个时代，情况已经不可能更糟了。哦，我可以大讲特讲一些故事。例如，我记得一家大型 IHV（总销售额约 150 亿美元）恰好是我们的客户，他们被告知微软对他们不感兴趣，如果他们想知道 Windows 发生了什么，可以问他们出售硬件的 OEM。
+早在 2015 年，我就发博客并长篇大论地表示，我欢迎微软与 Windows 驱动程序开发社区之间似乎正在出现的更开放、更良好的沟通局面。当然，在从 Windows 7 到 Windows 8 的那个时代，情况已经不可能更糟了。哦，我可以大讲特讲一些故事。例如，我记得一家大型 `IHV`（总销售额约 150 亿美元）恰好是我们的客户，他们被告知微软对他们不感兴趣，如果他们想知道 Windows 发生了什么，可以问他们出售硬件的 `OEM`。
 
 哎哟！从那时起，情况只会好转，对吧？
 
@@ -182,9 +178,6 @@ OSR 的适用于 Linux 的文件加密解决方案框架（FESF）使您能够�
 但总体而言，驱动开发者不得不自己摸索，以弄清楚 Windows 驱动开发者有什么新变化。他们必须自己去发现、搜索、识别并试图消化每个主题的信息。他们在这里读一篇文章，在那里看一段视频。而在拼凑全局图景方面，他们得到的帮助甚少。
 
 续接第 5 页
-
-
-
 
 ## Peter Pontificates... (Cont.)
 
@@ -205,6 +198,7 @@ OSR 的适用于 Linux 的文件加密解决方案框架（FESF）使您能够�
 你怎么看？微软应该为驱动开发人员举办会议吗？它应该作为 WinHEC 的一部分还是单独举办？而且，如果组织了这样一次会议，你希望它在哪里举行？
 
 **在我们的 6 题在线投票中投票：** https://www.osr.com/microsoft-hold-conference-driver-developers/
+
 你投票后就能看到实时结果，我们将在下一期的 NT Insider 中总结所有结果。让我们听听你的声音！
 
 *Peter Pontificates 是 OSR Consulting 合作伙伴 Peter Viscarola 的常规专栏。Peter 不在乎你是否同意或不同意他，但你的评论或反驳很可能会出现在未来的刊物中。发送你的评论、牢骚或事实歪曲到：PeterPont@osr.com。*
@@ -221,33 +215,31 @@ OSR 的适用于 Linux 的文件加密解决方案框架（FESF）使您能够�
 
 最近，NTDEV 上有一个关于使用 Cleanup 和 Cancel 事件处理回调的讨论线程，相当有趣。最近，我也有机会更新两个非常不同的设备驱动程序。一个是在 NT V4 时期编写的 WDM 驱动程序。另一个是由一位新 Windows 驱动开发人员在 KMDF 发布后不久编写的 KMDF 驱动程序。虽然这两个驱动程序是为非常不同类型的设备编写的，但它们有一个共同点：开发人员都误解了如何终止正在进行的请求，并使用了（或更确切地说，误用了）Cleanup 事件来代替 Cancel。
 
-这就是我被激励去详细写关于 WDF 驱动程序中 Cleanup、Close 和 Cancel 处理的原因。另一个私人动机是，虽然我们在 Writing WDF Drivers 研讨会上涵盖了这个主题，但我们几乎从未有时间在我想深入讨论的程度上谈论它。所以，我认为写一篇文章对许多目的都有用。
+
+
+这就是我被激励去详细写关于 WDF 驱动程序中 `Cleanup`、`Close` 和 `Cancel` 处理的原因。另一个私人动机是，虽然我们在 *Writing WDF Drivers* 研讨会上涵盖了这个主题，但我们几乎从未有时间在我想深入讨论的程度上谈论它。所以，我认为写一篇文章对许多目的都有用。
 
 ### Some Preliminaries
 
-首先要明白的是，至少在驱动世界（与文件系统相反），你需要将 Cleanup、Close 和 Cancel 的处理放在一起考虑。这是因为它们经常被混淆，并且这些函数的处理经常相互作用。
+首先要明白的是，至少在驱动世界（与文件系统相反），你需要将 `Cleanup`、`Close` 和 `Cancel` 的处理放在一起考虑。这是因为它们经常被混淆，并且这些函数的处理经常相互作用。
 
-另外，在我们开始讨论时，请记住，我们在这里关于 Cleanup、Close 和 Cancel 的说法完全特定于 WDF。正如 WDF 的大多数事情一样，试图在脑海中“映射”WDM 到 WDF（或反之）并期望能弄明白事情是绝对不明智的。那样会导致疯狂。WDF 框架是其自身 I/O 处理生态系统。当然，它与 WDM 交互，但 WDF 驱动程序的工作规则完全且仅由 WDF 制定。仅仅因为某件事在 WDM 中以某种方式工作，并不意味着对 WDF 也是如此。
+另外，在我们开始讨论时，请记住，我们在这里关于 `Cleanup`、`Close` 和 `Cancel` 的说法完全特定于 WDF。正如 WDF 的大多数事情一样，试图在脑海中“映射” WDM 到 WDF（或反之）并期望能弄明白事情是绝对不明智的。那样会导致疯狂。WDF 框架是其自身 I/O 处理生态系统。当然，它与 WDM 交互，但 WDF 驱动程序的工作规则完全且仅由 WDF 制定。仅仅因为某件事在 WDM 中以某种方式工作，并不意味着对 WDF 也是如此。
 
 ### The Problem
 
-让我们从 Cleanup、Close 和 Cancel 设计为解决的几个简单示例开始。我想强调的是，这些只是这些操作可能有用的两个随机示例。这些两个示例没有涉及的这些事件的其他重要用途还有很多。
+让我们从 `Cleanup`、`Close` 和 `Cancel` 设计为解决的几个简单示例开始。我想强调的是，这些只是这些操作可能有用的两个随机示例。这些两个示例没有涉及的这些事件的其他重要用途还有很多。
 
-假设你的驱动程序有一个使用顺序分派的队列。用户模式应用程序成功调用 Win32 函数 CreateFile 指定 FILE_FLAG_OVERLAPPED 以允许它进行异步 I/O。然后应用程序在循环中成功调用 ReadFile 100 次，每次指定一个 OVERLAPPED 结构。结果是当应用程序的循环完成时，你的驱动程序中有 100 个 Read 请求正在挂起。
+假设你的驱动程序有一个使用顺序分派的队列。用户模式应用程序成功调用 Win32 函数 `CreateFile` 指定 `FILE_FLAG_OVERLAPPED` 以允许它进行异步 I/O。然后应用程序在循环中成功调用 `ReadFile` 100 次，每次指定一个 `OVERLAPPED` 结构。结果是当应用程序的循环完成时，你的驱动程序中有 100 个 Read 请求正在挂起。
 
-现在假设应用程序在句柄上调用 CloseHandle，该句柄用于向你的设备发送那 100 次读取。至少其中 100 次读取中的一些仍在进行中。正在进行的 I/O 请求会发生什么？你的驱动程序如何处理这种情况？
+现在假设应用程序在句柄上调用 `CloseHandle`，该句柄用于向你的设备发送那 100 次读取。至少其中 100 次读取中的一些仍在进行中。正在进行的 I/O 请求会发生什么？你的驱动程序如何处理这种情况？
 
 作为第二个示例，考虑当应用程序在那 100 次读取正在进行时，不是关闭到设备的句柄，而是退出或被终止时会发生什么。随着 Windows 开始为应用程序进行终止处理，你的驱动程序可能有一个或多个指向数据缓冲区的指针，以便将数据返回到应用程序的地址空间。你可以在图 1 中看到这一点。
 
 ![](img/feabf7ef0b3bb3419a0ef4d863642d48_5_0.png)
 
-在图 1 中，你可以看到一个驱动程序有一个 WDFQUEUE，其中有两个 Read 请求排队（我不想在图中放全部 100 个 I/O 请求）。每个 Read 请求都（内部存储）有一个指向要返回读取（输出）数据的缓冲区指针。
+在图 1 中，你可以看到一个驱动程序有一个 `WDFQUEUE`，其中有两个 Read 请求排队（我不想在图中放全部 100 个 I/O 请求）。每个 Read 请求都（内部存储）有一个指向要返回读取（输出）数据的缓冲区指针。
 
 如果 Windows 在 I/O 请求仍在的情况下允许进程完全终止，则
-
-
-
-
 
 ## Cleanup, Close and Cancel... (Cont.)
 
@@ -257,25 +249,21 @@ OSR 的适用于 Linux 的文件加密解决方案框架（FESF）使您能够�
 
 ## Cleanup、Close 和 Cancel 的定义
 
-我们刚刚描述的两个问题，即在 I/O 进行中关闭句柄以及应用程序在 I/O 进行中尝试退出，是 Cleanup、Close 和 Cancel 设计来管理的两个主要问题。让我们先从每个操作的定义开始。在下一节中，我们将扩展这些定义并描述有关驱动程序如何处理这些操作的更多具体细节。
+我们刚刚描述的两个问题，即在 I/O 进行中关闭句柄以及应用程序在 I/O 进行中尝试退出，是 `Cleanup`、`Close` 和 `Cancel` 设计来管理的两个主要问题。让我们先从每个操作的定义开始。在下一节中，我们将扩展这些定义并描述有关驱动程序如何处理这些操作的更多具体细节。
 
-Cleanup、Close 和 Cancel 的事件处理回调在 WDF 中都是技术上可选的。这意味着，你的驱动程序需要明确选择加入以处理它们。Cleanup 和 Close 是文件对象特定的，因此这些操作的事件处理回调与 WDF 文件对象处理相关。如果你在阅读本节时觉得需要快速复习 Windows 文件对象，请参阅侧边栏 **关于文件对象**（如下）。
+`Cleanup`、`Close` 和 `Cancel` 的事件处理回调在 WDF 中都是技术上可选的。这意味着，你的驱动程序需要明确选择加入以处理它们。`Cleanup` 和 `Close` 是文件对象特定的，因此这些操作的事件处理回调与 WDF 文件对象处理相关。如果你在阅读本节时觉得需要快速复习 Windows 文件对象，请参阅侧边栏 **关于文件对象**（如下）。
 
-让我们先讨论 Cleanup。当文件对象的最后一个句柄被关闭时，Windows 会发出 Cleanup 请求，WDF 会调用相关驱动程序的 *EvtFileCleanup* 事件处理回调函数。因为几乎总是只有一个句柄与给定的文件对象相关联，所以一旦应用程序调用 *CloseHandle*（并且在该函数调用的同步过程中），WDF 将调用驱动程序的 *EvtFileCleanup* 事件处理回调。*EvtFileCleanup* 总是在调用 *CloseHandle* 的线程/进程上下文中调用，并且在 IRQL PASSIVE_LEVEL 下。对于应用程序调用 CloseHandle 可能不会导致立即 Cleanup 操作的特殊情况的描述，请参阅标题为 **关于文件对象** 的侧边栏。
+让我们先讨论 `Cleanup`。当文件对象的最后一个句柄被关闭时，Windows 会发出 `Cleanup` 请求，WDF 会调用相关驱动程序的 `EvtFileCleanup` 事件处理回调函数。因为几乎总是只有一个句柄与给定的文件对象相关联，所以一旦应用程序调用 `CloseHandle`（并且在该函数调用的同步过程中），WDF 将调用驱动程序的 `EvtFileCleanup` 事件处理回调。`EvtFileCleanup` 总是在调用 `CloseHandle` 的线程/进程上下文中调用，并且在 IRQL `PASSIVE_LEVEL` 下。对于应用程序调用 `CloseHandle` 可能不会导致立即 `Cleanup` 操作的特殊情况的描述，请参阅标题为 **关于文件对象** 的侧边栏。
 
 ### 关于文件对象
 
-Windows 中的文件对象 – 命名为 FILE_OBJECT 的 WDM 数据结构以及 WDF 对象 WDF FILEOBJECT – 代表文件或设备的单个、特定、打开的实例。例如，当应用程序成功调用 CreateFile 时，会创建一个代表该打开实例的文件对象。如果对 CreateFile 的调用成功，它会返回指向此文件对象的句柄，应用程序使用该句柄对文件或设备执行后续 I/O 操作。返回的句柄是对特定文件对象的进程特定引用。
+Windows 中的文件对象 – 命名为 `FILE_OBJECT` 的 WDM 数据结构以及 WDF 对象 `WDF FILEOBJECT` – 代表文件或设备的单个、特定、打开的实例。例如，当应用程序成功调用 `CreateFile` 时，会创建一个代表该打开实例的文件对象。如果对 `CreateFile` 的调用成功，它会返回指向此文件对象的句柄，应用程序使用该句柄对文件或设备执行后续 I/O 操作。返回的句柄是对特定文件对象的进程特定引用。
 
-文件对象是用于跟踪和管理给定句柄上的 I/O 操作的通用 I/O 子系统对象。例如，当你向磁盘上的文件发出顺序读取操作而不指定特定文件偏移量时，文件系统使用文件对象来跟踪下一次在文件中读取的偏移量。每个文件对象几乎总是只与单个句柄相关联。然而，在某些相对罕见的情况下（例如当 Win32 函数 *DuplicateHandle* 被使用时），单个文件对象可能与多个句柄相关联。
+文件对象是用于跟踪和管理给定句柄上的 I/O 操作的通用 I/O 子系统对象。例如，当你向磁盘上的文件发出顺序读取操作而不指定特定文件偏移量时，文件系统使用文件对象来跟踪下一次在文件中读取的偏移量。每个文件对象几乎总是只与单个句柄相关联。然而，在某些相对罕见的情况下（例如当 Win32 函数 `DuplicateHandle` 被使用时），单个文件对象可能与多个句柄相关联。
 
 你可以在 The NT Insider 文章 *WDF File Object Callbacks and Properties Demystified* 中阅读更多关于 WDF 文件对象、其属性以及与其关联的事件处理回调的信息。
 
 每次应用程序使用文件对象的句柄发出 I/O 请求时，文件对象的引用计数就会增加。每次驱动程序或文件系统完成对给定文件对象的 I/O 操作时，文件对象的引用计数就会递减。
-
-
-
-
 
 ## 文件系统微过滤器
 
@@ -299,6 +287,8 @@ Windows 中的文件对象 – 命名为 FILE_OBJECT 的 WDM 数据结构以及 
 
 **标准微过滤器**
 
+
+
 标准微过滤器是一种 Windows 文件系统微过滤器驱动程序，用于监控或跟踪文件系统数据。大多数防病毒扫描程序都是标准微过滤器。
 
 **隔离微过滤器**
@@ -309,8 +299,7 @@ Windows 中的文件对象 – 命名为 FILE_OBJECT 的 WDM 数据结构以及 
 
 文件系统微过滤器模型的基础是过滤管理器，它是标准 Windows 组件。过滤管理器实现为传统文件系统过滤器，并过滤所有文件系统实例。由于在任何给定文件系统实例上可能存在多个过滤器（Windows 10 的默认安装包含不少于九个标准文件系统微过滤器！），过滤管理器提供了一套“高度”系统，允许开发者决定其微过滤器应在过滤器层级中的何处安装。参见*图 1（下一页）*。
 
-在*图 1*中，你可以看到 Windows 过滤管理器（标记为 FLTMGR）正在过滤挂载为 C 驱动器的 NTFS 文件系统实例。在图中，过滤管理器加载了三个文件系统微过滤器：微过滤器 A、微过滤器 B 和微过滤器 C。顺序为
-
+在*图 1*中，你可以看到 Windows 过滤管理器（标记为 `FLTMGR`）正在过滤挂载为 C 驱动器的 NTFS 文件系统实例。在图中，过滤管理器加载了三个文件系统微过滤器：微过滤器 A、微过滤器 B 和微过滤器 C。顺序为
 
 ## 文件系统微过滤器……（续）
 
@@ -326,18 +315,18 @@ Windows 中的文件对象 – 命名为 FILE_OBJECT 的 WDM 数据结构以及 
 
 ## 微过滤器回调
 
-当微过滤器向筛选器管理器注册时，除了其他事项外，它可以选择接收特定 I/O 操作的 PreOperation 和/或 PostOperation 回调。PreOperation 回调在指定类型的每个 I/O 操作被传递到被筛选的文件系统（或者实际上是下一个最低海拔的微过滤器）之前调用。PostOperation 回调在文件系统（以及任何较低海拔的微过滤器）处理完特定类型的 I/O 操作之后调用。
+当微过滤器向筛选器管理器注册时，除了其他事项外，它可以选择接收特定 I/O 操作的 `PreOperation` 和/或 `PostOperation` 回调。`PreOperation` 回调在指定类型的每个 I/O 操作被传递到被筛选的文件系统（或者实际上是下一个最低海拔的微过滤器）之前调用。`PostOperation` 回调在文件系统（以及任何较低海拔的微过滤器）处理完特定类型的 I/O 操作之后调用。
 
-筛选器管理器对回调的支持考虑得非常周全。例如，当某个微过滤器收到 PreOperation 回调时，该过滤器可以：
+筛选器管理器对回调的支持考虑得非常周全。例如，当某个微过滤器收到 `PreOperation` 回调时，该过滤器可以：
 
 - 完全完成该操作。这将导致较低海拔的微过滤器（如果有）甚至被筛选的文件系统都不会看到这个 I/O 操作。
-- 完成该操作，将其传递给较低海拔的微过滤器（如果有）和底层文件系统，并选择在操作完成时获得回调（PostOperation 回调）。
-- 完成该操作，将其传递给较低海拔的微过滤器（如果有）和底层文件系统，但选择在操作完成时不获得回调（这就是 PostOperation 回调）。
-- 返回并表明操作正在进行中。在这种情况下，微过滤器稍后将把操作的状态告知筛选器管理器，包括是否需要调用任何底层实体，以及是否需要 PostOperation 回调。
+- 完成该操作，将其传递给较低海拔的微过滤器（如果有）和底层文件系统，并选择在操作完成时获得回调（`PostOperation` 回调）。
+- 完成该操作，将其传递给较低海拔的微过滤器（如果有）和底层文件系统，但选择在操作完成时不获得回调（这就是 `PostOperation` 回调）。
+- 返回并表明操作正在进行中。在这种情况下，微过滤器稍后将把操作的状态告知筛选器管理器，包括是否需要调用任何底层实体，以及是否需要 `PostOperation` 回调。
 
 ## USB FX2 学习套件
 
-别忘了，广受欢迎的 OSR USB FX2 学习套件可在商店购买：http://store.osr.com。
+别忘了，广受欢迎的 OSR USB FX2 学习套件可在商店购买：`http://store.osr.com`。
 
 该板卡的设计基于知名的赛普拉斯半导体 USB FX2 芯片组，非常适合学习如何编写 Windows 驱动程序（当然尤其是 USB 驱动！）。更好的是，您可以获取适用于该板卡的示例 WDF 驱动程序，它在 Windows 驱动程序套件中提供。
 
@@ -375,10 +364,7 @@ Windows 中的文件对象 – 命名为 FILE_OBJECT 的 WDM 数据结构以及 
 
 为什么？我们会告诉你为什么。因为你雇不起没有经验的顾问或合同编程公司，这就是原因。你以为通过雇佣廉价的按小时计费的帮手所省下的钱，一旦你意识到这种试错式的开发方式已经将你的时间和材料项目变成了一场冗长的“善后”工作——而且是在你“廉价”的编程团队离开很久之后——就会消失。
 
-你值得（也应该要求）明确无疑的专业技术。你不应该付钱让没有经验的开发人员来尝试开发你的解决方案。你需要的是保证结果的固定价格解决方案。请联系 OSR 销售团队：sales@osr.com，讨论你的下一个项目。
-
-
-
+你值得（也应该要求）明确无疑的专业技术。你不应该付钱让没有经验的开发人员来尝试开发你的解决方案。你需要的是保证结果的固定价格解决方案。请联系 OSR 销售团队：`sales@osr.com`，讨论你的下一个项目。
 
 ## 文件系统微过滤器...（续）
 
@@ -386,29 +372,31 @@ Windows 中的文件对象 – 命名为 FILE_OBJECT 的 WDM 数据结构以及 
 
 ## 隔离微过滤器解决方案框架：轻松得多
 
-幸运的是，有一种解决方案能让你快速启动隔离微过滤器的开发过程，并在几周内获得可工作的原型，而不是耗时数月。这个解决方案就是 OSR 的隔离微过滤器解决方案框架（IMSF）。
+幸运的是，有一种解决方案能让你快速启动隔离微过滤器的开发过程，并在几周内获得可工作的原型，而不是耗时数月。这个解决方案就是 OSR 的隔离微过滤器解决方案框架（`IMSF`）。
 
-在我们开发针对按访问透明文件加密的综合解决方案框架（FESF，如果你感兴趣，可以在这里阅读）时，我们显然必须实现一个隔离微过滤器。我们并没有将这个隔离微过滤器与 FESF 紧密耦合，而是将其架构并实现为一组可分离的模块。我们将这些模块连同文档和示例代码作为 IMSF 的一部分提供。
+在我们开发针对按访问透明文件加密的综合解决方案框架（`FESF`，如果你感兴趣，可以在这里阅读）时，我们显然必须实现一个隔离微过滤器。我们并没有将这个隔离微过滤器与 `FESF` 紧密耦合，而是将其架构并实现为一组可分离的模块。我们将这些模块连同文档和示例代码作为 `IMSF` 的一部分提供。
 
-我们的 IMSF 套件包含一个完整且可完全自定义的隔离微过滤器。这个隔离微过滤器与目前在全球主要产品中发布的 FESF 核心代码完全相同。这段代码每天都在真实环境中被使用和测试。它行之有效，非常可靠。
+我们的 `IMSF` 套件包含一个完整且可完全自定义的隔离微过滤器。这个隔离微过滤器与目前在全球主要产品中发布的 `FESF` 核心代码完全相同。这段代码每天都在真实环境中被使用和测试。它行之有效，非常可靠。
 
-除了隔离微过滤器本身，IMSF 还包含全面的接口文档和一个工作示例，演示了如何以 IMSF 为基础构建真实产品。而且，是的：你会获得完整的源代码。所有一切。
+除了隔离微过滤器本身，`IMSF` 还包含全面的接口文档和一个工作示例，演示了如何以 `IMSF` 为基础构建真实产品。而且，是的：你会获得完整的源代码。所有一切。
 
-需要说明的是：你仍然需要了解 Windows 内核模式编程和文件系统概念，才能充分利用我们的 IMSF 套件。但艰巨的工作已经由 IMSF 为你完成了。你不需要成为缓存管理器方面的专家。你也不必去琢磨“我该怎么做？”IMSF 提供了一个坚实、积极开发、随着 Windows 每个新版本/更新而不断维护的基础，并且已被证明可在真实、已发布的产品中有效运行。
+需要说明的是：你仍然需要了解 Windows 内核模式编程和文件系统概念，才能充分利用我们的 `IMSF` 套件。但艰巨的工作已经由 `IMSF` 为你完成了。你不需要成为缓存管理器方面的专家。你也不必去琢磨“我该怎么做？”`IMSF` 提供了一个坚实、积极开发、随着 Windows 每个新版本/更新而不断维护的基础，并且已被证明可在真实、已发布的产品中有效运行。
 
 ## 咨询专家
 
-如果你正在从事某个项目，并且想讨论隔离微过滤器方法是否是正确的选择，请联系我们。让我们的工程团队与你的工程团队通过 Skype 讨论你的可选方案，这是不收费的。如果我们认为你不需要隔离微过滤器，或者 IMSF 不适合你，我们会直言相告。另一方面，也许我们的某个解决方案框架能为你节省时间和麻烦。无论哪种方式，如果仅用一个小时的电话交谈就能让你走上正确的方向，我们认为这段时间花得很值。
+如果你正在从事某个项目，并且想讨论隔离微过滤器方法是否是正确的选择，请联系我们。让我们的工程团队与你的工程团队通过 Skype 讨论你的可选方案，这是不收费的。如果我们认为你不需要隔离微过滤器，或者 `IMSF` 不适合你，我们会直言相告。另一方面，也许我们的某个解决方案框架能为你节省时间和麻烦。无论哪种方式，如果仅用一个小时的电话交谈就能让你走上正确的方向，我们认为这段时间花得很值。
+
+
 
 ![](img/feabf7ef0b3bb3419a0ef4d863642d48_10_0.png)
 
 关注我们！
 
-## 一个 Windows，处处通用；一个驱动程序，处处通用
+# 一个 Windows，处处通用；一个驱动程序，处处通用
 
-### 通用驱动程序详解
+## 通用驱动程序详解
 
-如果你从 Windows 8 发布以来一直在关注驱动程序领域，你可能已经注意到 **通用驱动程序** 这个术语。你或许不清楚它的含义、为什么你应该关注，以及随着 Windows 平台及其支持的系统不断演进，通用驱动程序的概念是如何发展的。
+如果你从 Windows 8 发布以来一直在关注驱动程序领域，你可能已经注意到 `通用驱动程序` 这个术语。你或许不清楚它的含义、为什么你应该关注，以及随着 Windows 平台及其支持的系统不断演进，通用驱动程序的概念是如何发展的。
 
 ## 通往 OneCore 之路
 
@@ -430,38 +418,36 @@ Windows 中的文件对象 – 命名为 FILE_OBJECT 的 WDM 数据结构以及 
 |---|---|
 | **目标平台** | 通用 |
 | **版本** | 自 Windows 2000 起可用。 |
-| **头文件** | Wdm.h（包括 Wdm.h、Ntddk.h 或 Ntifs.h） |
-| **库** | NtosKrnl.lib |
-| **DLL** | NtosKrnl.exe |
-| **IRQL** | PASSIVE_LEVEL |
+| **头文件** | `Wdm.h`（包括 `Wdm.h`、`Ntddk.h` 或 `Ntifs.h`） |
+| **库** | `NtosKrnl.lib` |
+| **DLL** | `NtosKrnl.exe` |
+| **IRQL** | `PASSIVE_LEVEL` |
 
-对于内核模式驱动程序，很容易做到只调用通用 DDI。事实上，你很难找到一个*不是*通用的 DDI。当你真的找到这样一个 DDI 时，它很可能无论如何也不是你想要（或应该）调用的函数。例如，你最后一次调用 **KeGetCurrentProcessorNumber** 是什么时候，嗯？嗯，自从 Windows 7 引入处理器组以来，它就一直不能正常工作。不管怎样，它是一个非通用的 DDI。有趣的是，即使是很多很久以前被归入 NTDKK.H 的 DDI，也属于通用 DDI 集合。例如，**MmIsAddressValid** 就是这样一个 DDI：它所做的并非大多数人认为的那样，而且在石器时代就被移入了 NTDKK.H。但它是一个通用 DDI。耶。我想是这样。
+对于内核模式驱动程序，很容易做到只调用通用 DDI。事实上，你很难找到一个*不是*通用的 DDI。当你真的找到这样一个 DDI 时，它很可能无论如何也不是你想要（或应该）调用的函数。例如，你最后一次调用 `KeGetCurrentProcessorNumber` 是什么时候，嗯？嗯，自从 Windows 7 引入处理器组以来，它就一直不能正常工作。不管怎样，它是一个非通用的 DDI。有趣的是，即使是很多很久以前被归入 `NTDKK.H` 的 DDI，也属于通用 DDI 集合。例如，`MmIsAddressValid` 就是这样一个 DDI：它所做的并非大多数人认为的那样，而且在石器时代就被移入了 `NTDKK.H`。但它是一个通用 DDI。耶。我想是这样。
 
-MSDN 文档将一些令人意外的 DDI 系列列为*不*通用，例如 Remove Lock 系列的 DDI（**IoAcquireRemoveLock**、**IoReleaseRemoveLockAndWait** 及其同类）。不过，好消息是 MSDN 在这些问题上似乎有误。WDK 中有一个文件，以 XML 形式（方便你查看）列出了所有通用 API 和 DDI。该文件位于：
+MSDN 文档将一些令人意外的 DDI 系列列为*不*通用，例如 `Remove Lock` 系列的 DDI（`IoAcquireRemoveLock`、`IoReleaseRemoveLockAndWait` 及其同类）。不过，好消息是 MSDN 在这些问题上似乎有误。WDK 中有一个文件，以 XML 形式（方便你查看）列出了所有通用 API 和 DDI。该文件位于：
 
 ```
 C:\Program Files (x86)\Windows Kits\10\build\universalDDIs\<arch>\UniversalDDIs.xml
 ```
 
-就 Remove Lock DDI 而言，这些函数出现在上述 XML 文件中，尽管它们在 MSDN 中被列为非通用。以 XML 文件为准。这些函数确实是通用 DDI 集合的一部分。
+就 `Remove Lock` DDI 而言，这些函数出现在上述 XML 文件中，尽管它们在 MSDN 中被列为非通用。以 XML 文件为准。这些函数确实是通用 DDI 集合的一部分。
 
 ![](img/feabf7ef0b3bb3419a0ef4d863642d48_11_0.png)
-
-
-
-
 
 ## Universal Drivers...(Cont.)
 
 对于 UMDF 2 驱动程序，坚持使用通用函数集的难度取决于你在用户模式驱动程序中混合了多少 Win32。如果你坚持使用 WDF DDI 和少数支持函数，就完全不会有问题。但你的驱动程序中“应用类型代码”越多，就越可能需要选择替代 API 或重写代码以不同的方式工作。
 
-幸运的是，你不必猜测，也不用依赖 MSDN，甚至不用查看冗长的 XML 文件来检查自己是否只调用了通用 DDI。有一个名为 ApiValidator 的实用工具，它是 WDK 的一部分，你可以选择将其作为构建过程的一部分运行。此实用工具会检查以确保你的解决方案中的所有内容都适当通用（参见图 2）。
+幸运的是，你不必猜测，也不用依赖 MSDN，甚至不用查看冗长的 XML 文件来检查自己是否只调用了通用 DDI。有一个名为 `ApiValidator` 的实用工具，它是 WDK 的一部分，你可以选择将其作为构建过程的一部分运行。此实用工具会检查以确保你的解决方案中的所有内容都适当通用（参见图 2）。
 
 为了证明创建坚持使用通用 DDI 集的内核模式驱动程序真的像我所说的那样简单，我用自己的代码进行了测试。我重建了一个我一直在处理的相当复杂的 KMDF 设备驱动程序（双向同时 DMA，通过十多个 IOCTL 进行多种 PIO 类型操作，约 30 个源文件，超过 10K NCSLs），该驱动程序目标为 Win7 及更高版本，现在作为适用于 Win10 的通用驱动程序。没有对通用 DDI 集之外的任何 DDI 的调用。
 
 ![](img/feabf7ef0b3bb3419a0ef4d863642d48_12_0.png)
 
-但等等……还有更多：声明式安装
+Figure 2 -- Select “Universal” for the Target Platform... Use `APIValidator` to Check Your Calls
+
+### 但等等……还有更多：声明式安装
 
 构建符合通用 DDI 集的驱动程序是好的。它让你在很大程度上实现了真正的通用兼容性。但这不是你需要做的全部。
 
@@ -469,106 +455,104 @@ C:\Program Files (x86)\Windows Kits\10\build\universalDDIs\<arch>\UniversalDDIs.
 
 你可能有一个很棒的驱动程序，但用户必须能够安装它。Windows IoT Core 没有标准的 Windows Explorer 界面。事实上，它可以完全无头运行。这意味着
 
-Figure 2 -- Select “Universal” for the Target Platform... Use APIValidator to Check Your Calls
-
 ## We Know What We Know
-And...We Know What we Don’t Know
+
+### And...We Know What we Don’t Know
 
 我们不是万事通。我们甚至不是 Windows 的所有事情的专家。但我们认为有几件事我们做得相当不错。我们了解 Windows 操作系统的工作原理。我们了解 Windows 上的设备、驱动程序和文件系统。我们对 Windows 存储子系统所知颇为自豪。
 
 使 OSR 独特的是，我们可以将这些东西解释给你的团队，提供新的见解，如果你正在进行 Windows 系统软件项目，我们可以帮助你了解你的全部选择范围。而且我们也编写出色的内核模式 Windows 代码。真的。我们确实如此。
 
 为什么不发一封电子邮件，看看 OSR 如何帮助你。如果我们不能帮你，我们也会告诉你。
+
 联系方式：sales@osr.com
 
 ## Universal Drivers... (Cont.)
 
-不能有可运行的安装程序 MSI，也不能有需要执行的共安装程序。你需要的是所谓的通用 INF 文件，其限制为“声明式驱动程序安装”。
+不能有可运行的安装程序 `MSI`，也不能有需要执行的共安装程序。你需要的是所谓的通用 `INF` 文件，其限制为“声明式驱动程序安装”。
 
-声明式安装是指能够在完全离线环境中、无 GUI 交互的情况下安装驱动程序。它只允许有限数量的特定、明确且无歧义的操作来安装驱动程序。微软声称这不仅使离线安装驱动程序成为可能，而且还提高了驱动程序安装的可预测性和可支持性。如果这是真的，那太好了，因为在我看来，驱动程序安装要么就是能正常工作，要么就是完全令人头疼。它们似乎永远不会介于两者之间。请参阅 MSDN 上有关通用 INF 文件的文档以获取更多信息。
+声明式安装是指能够在完全离线环境中、无 GUI 交互的情况下安装驱动程序。它只允许有限数量的特定、明确且无歧义的操作来安装驱动程序。微软声称这不仅使离线安装驱动程序成为可能，而且还提高了驱动程序安装的可预测性和可支持性。如果这是真的，那太好了，因为在我看来，驱动程序安装要么就是能正常工作，要么就是完全令人头疼。它们似乎永远不会介于两者之间。请参阅 MSDN 上有关通用 `INF` 文件的文档以获取更多信息。
 
-然而，并非一切都是美好和彩虹。虽然我很赞成让驱动程序安装更可预测，并允许离线安装驱动程序，但关于通用 INF 文件，有一两件事我很难接受。其中最重要的是，ClassInstall32 部分不允许出现在通用 INF 中。这意味着 IHV/OEM 不能将其驱动程序安装到适合其环境的唯一类中。无法使用自定义安装类也限制了你为 devnode 中的设备对象定义默认保护的能力。对我来说，这不是好事。我不希望我的图像扫描仪或人工耳蜗或导弹发射器被归入某个其他随机的设备类。我希望我的独特设备出现在它们自己的独特类中。我希望微软重新考虑这一限制，因为对我来说这是不可接受的。
+然而，并非一切都是美好和彩虹。虽然我很赞成让驱动程序安装更可预测，并允许离线安装驱动程序，但关于通用 `INF` 文件，有一两件事我很难接受。其中最重要的是，`ClassInstall32` 部分不允许出现在通用 `INF` 中。这意味着 IHV/OEM 不能将其驱动程序安装到适合其环境的唯一类中。无法使用自定义安装类也限制了你为 devnode 中的设备对象定义默认保护的能力。对我来说，这不是好事。我不希望我的图像扫描仪或人工耳蜗或导弹发射器被归入某个其他随机的设备类。我希望我的独特设备出现在它们自己的独特类中。我希望微软重新考虑这一限制，因为对我来说这是不可接受的。
 
 哦，你可能在想，“如果我不能在安装驱动程序时使用共安装程序，我将如何根据特定设备/平台/环境/系统定制安装呢？”对此也有答案。它叫做组件化安装。
 
 ## Componentized, Too
 
-组件化安装允许你将驱动程序 INF 文件分成多个部分。你创建一个支持驱动程序基本功能的 Base INF。然后你创建一个或多个 Extension INF，可以根据特定系统品牌、型号或版本定制或配置你的驱动程序。
+组件化安装允许你将驱动程序 `INF` 文件分成多个部分。你创建一个支持驱动程序基本功能的 `Base INF`。然后你创建一个或多个 `Extension INF`，可以根据特定系统品牌、型号或版本定制或配置你的驱动程序。
 
-关键在于，所有系统都将始终获得设备基本功能的单一 INF。Extension INF(s) 然后可以对驱动程序进行任何针对特定系统或平台的专门配置。假设你有需要为特定 OEM 应用的特殊品牌。或者，你想在支持的特定型号设备上启用某些增值功能。你可以从 Extension INF 中完成所有这些工作。你为每个想要支持的独特系统类型或变体编写一个 Extension INF。在安装过程中，Windows 会调用正确的 INF 来执行你的定制。好的一点是，Base INF 和 Extension INF 可以分别更新（并通过 WU 分发）。因此，亲爱的驱动程序编写者，你可以先让你的 Base INF 正常工作，而你的 OEM 客户可以在稍后某个时间点通过流程设置他们想要的 Extension INF。
 
-组件化安装和 Extension INF 在 MSDN 上有关 Extension INF 的文档中有更详细的解释。
+
+关键在于，所有系统都将始终获得设备基本功能的单一 `INF`。`Extension INF(s)` 然后可以对驱动程序进行任何针对特定系统或平台的专门配置。假设你有需要为特定 `OEM` 应用的特殊品牌。或者，你想在支持的特定型号设备上启用某些增值功能。你可以从 `Extension INF` 中完成所有这些工作。你为每个想要支持的独特系统类型或变体编写一个 `Extension INF`。在安装过程中，`Windows` 会调用正确的 `INF` 来执行你的定制。好的一点是，`Base INF` 和 `Extension INF` 可以分别更新（并通过 `WU` 分发）。因此，亲爱的驱动程序编写者，你可以先让你的 `Base INF` 正常工作，而你的 `OEM` 客户可以在稍后某个时间点通过流程设置他们想要的 `Extension INF`。
+
+组件化安装和 `Extension INF` 在 `MSDN` 上有关 `Extension INF` 的文档中有更详细的解释。
 
 ## And Then There Are... Hardware Support Apps
 
-你听说过 Windows 10 S 吗？那是“锁定”版本的 Windows，只能运行来自商店的应用程序。这意味着只能运行 UWP —— 而不是 Win32 —— 应用程序
+你听说过 `Windows 10 S` 吗？那是“锁定”版本的 `Windows`，只能运行来自商店的应用程序。这意味着只能运行 `UWP` —— 而不是 `Win32` —— 应用程序
 
 ![](img/feabf7ef0b3bb3419a0ef4d863642d48_13_0.png)
-
-
-
-
 
 ## Universal Drivers... (Cont.)
 
 are supported. Regardless of what you think about this, Microsoft says they’re going to sell these systems. And, if I had to guess, there’ll be other systems in the future that will have the same restrictions.
 
-Suppose you currently have a Device Manager property sheet, or Control Panel Applet, that’s used to manage your device. That’s not going to work very well on a system that doesn’t support the Win32 API, right? So, the final part of the Universal Driver picture is Hardware Support Apps that are written as UWP apps. Of course, that’s not nearly as simple as it might seem at first blush. UWP has some pretty significant limitations: No IOCTLs, no WMI, no RPC. About the only cool technology that you can use in a UWP app is ETW.
+Suppose you currently have a `Device Manager` property sheet, or `Control Panel Applet`, that’s used to manage your device. That’s not going to work very well on a system that doesn’t support the `Win32 API`, right? So, the final part of the Universal Driver picture is Hardware Support Apps that are written as `UWP` apps. Of course, that’s not nearly as simple as it might seem at first blush. `UWP` has some pretty significant limitations: No `IOCTLs`, no `WMI`, no `RPC`. About the only cool technology that you can use in a `UWP` app is `ETW`.
 
-In place of device-specific IOCTLs, UWP offers something called Custom Capabilities. These are specific functions your driver authorizes to specific applications. And, in this way, everything is supposed to be kept safe.
+In place of device-specific `IOCTLs`, `UWP` offers something called `Custom Capabilities`. These are specific functions your driver authorizes to specific applications. And, in this way, everything is supposed to be kept safe.
 
-I’m not convinced. I’m not a fan of the whole UWP programming model in general (I’m a device guy… I don’t like being told what I can and cannot do). But I admit it: I really haven’t spent much time investigating the whole issue of Custom Capabilities for UWP apps. Maybe it’s not as bad as I think. I’ll look into it, and write an article that describes what I find in a future issue of The NT Insider. In the meantime, you can read (and weep) more about Custom Capabilities for Hardware Support Apps in MSDN.
+I’m not convinced. I’m not a fan of the whole `UWP` programming model in general (I’m a device guy… I don’t like being told what I can and cannot do). But I admit it: I really haven’t spent much time investigating the whole issue of `Custom Capabilities` for `UWP` apps. Maybe it’s not as bad as I think. I’ll look into it, and write an article that describes what I find in a future issue of The NT Insider. In the meantime, you can read (and weep) more about `Custom Capabilities` for Hardware Support Apps in `MSDN`.
 
-Note that there’s an interesting side-effect of making a support app a UWP app. That app can now be pulled-down during the install (and also during future updates) from the Windows Store. You can also, optionally, pre-populate the app onto a specific install image using DISM. But in either case, the app will no longer be part of what we think of today as the traditional installer package. This does sound to me like it might make servicing easier.
+Note that there’s an interesting side-effect of making a support app a `UWP` app. That app can now be pulled-down during the install (and also during future updates) from the `Windows Store`. You can also, optionally, pre-populate the app onto a specific install image using `DISM`. But in either case, the app will no longer be part of what we think of today as the traditional installer package. This does sound to me like it might make servicing easier.
 
 ## Gimmie a D! Gimmie a C! Gimmie a H! Gimmie a U! What’s That Spell?
 
-It spells “DCHU.” No, you can’t pronounce it. It stands for:
+It spells “`DCHU`.” No, you can’t pronounce it. It stands for:
 
-- Declarative – You use a Declarative INF file
-- Componentized – You separate your INF into a Base INF and zero or more Extension INFs
-- Hardware Support Apps – Written at a UWP app, of course
-- Universal – Your driver (and INF) is restricted to the Universal feature set
+- Declarative – You use a Declarative `INF` file
+- Componentized – You separate your `INF` into a `Base INF` and zero or more `Extension INFs`
+- Hardware Support Apps – Written at a `UWP` app, of course
+- Universal – Your driver (and `INF`) is restricted to the Universal feature set
 
 ![](img/feabf7ef0b3bb3419a0ef4d863642d48_14_0.png)
 
 Together, Microsoft describes these as the Universal Driver Pillars. See the lovely artwork I stole from somebody’s WinHEC deck in Figure 3.
 
-For your driver to be truly able to run on “any Windows platform” you need to embrace all four of the DCHU design principles.
+For your driver to be truly able to run on “any Windows platform” you need to embrace all four of the `DCHU` design principles.
 
 ## Universal DDIs – Only Part of the Story
 
-Now, hopefully, you see that writing a driver that’s restricted to the Universal DDIs is straight forward, but it’s also only part of the story. If you truly want your driver to be installable on any Windows system (now and in the future) you’re going to have to become DCHU compliant. Of course, how important any of this is to you will depend greatly on the type of drivers you write and the types of hardware you support.
+Now, hopefully, you see that writing a driver that’s restricted to the Universal `DDIs` is straight forward, but it’s also only part of the story. If you truly want your driver to be installable on any Windows system (now and in the future) you’re going to have to become `DCHU` compliant. Of course, how important any of this is to you will depend greatly on the type of drivers you write and the types of hardware you support.
 
-Be aware that there are rumblings that DCHU compliance will become required for certain classes of drivers in the not too distant future. While that remains to be seen, at least the direction that Microsoft wants us to move is clear.
+Be aware that there are rumblings that `DCHU` compliance will become required for certain classes of drivers in the not too distant future. While that remains to be seen, at least the direction that Microsoft wants us to move is clear.
+
+
 
 ## File System Minifilters... (Cont.)
 
-Within its PreOperation and/or PostOperation callbacks, a Minifilter can perform almost any operation, including examining or modifying the data involved in the operation. Thus, the trick becomes understanding the specific meaning of those operations.
+Within its `PreOperation` and/or `PostOperation` callbacks, a `Minifilter` can perform almost any operation, including examining or modifying the data involved in the operation. Thus, the trick becomes understanding the specific meaning of those operations.
 
 ## Win32 API vs Native Windows API
 
-The Filter Manager framework for writing Minifilters is so powerful and well thought-out, that it’s very easy for new Minifilter developers to be tricked into thinking that file system filtering is easy. The thing is: It can be easy, but it can also be get surprisingly confusing very quickly.
+The `Filter Manager` framework for writing `Minifilters` is so powerful and well thought-out, that it’s very easy for new `Minifilter` developers to be tricked into thinking that file system filtering is easy. The thing is: It can be easy, but it can also be get surprisingly confusing very quickly.
 
-The inherent problem is that regardless of how powerful or pleasant the Filter Manager model is, the world of Windows file systems is inherently a complicated one. Some of this complexity comes from the fact that the Win32 API can sometimes be very different from the native Windows API that the I/O subsystem actually uses. A simple example that we often encounter here at OSR is the Win32 API CopyFile. Developers are often surprised that there’s no native analog to this function. Rather, internally, CopyFile opens the source file, opens the target file, and if both of those operations are successful, issues a series of reads from the source file and writes to the target file until the file is copied. The source file and the target file are then closed.
+The inherent problem is that regardless of how powerful or pleasant the `Filter Manager` model is, the world of Windows file systems is inherently a complicated one. Some of this complexity comes from the fact that the `Win32 API` can sometimes be very different from the native Windows API that the `I/O subsystem` actually uses. A simple example that we often encounter here at OSR is the `Win32 API` `CopyFile`. Developers are often surprised that there’s no native analog to this function. Rather, internally, `CopyFile` opens the source file, opens the target file, and if both of those operations are successful, issues a series of reads from the source file and writes to the target file until the file is copied. The source file and the target file are then closed.
 
-A slightly more interesting example is the Win32 function DeleteFile. If you’re not a file system dev, you’re probably thinking “How complicated can delete be? You just… delete the file, right?” Well, not in Windows, no. The native Windows API doesn’t actually have a specific delete file operation. Rather, the intention to delete a file is indicated by issuing a Set Information operation (ZwSetInformationFile) to set the file’s Disposition (FILE_DISPOSITION_INFORMATION). This allows the caller to specify whether he wants the file to be deleted when its closed. However, it’s important to note that the file is not actually deleted until the last handle to the file has been closed. This means that an application can open a file and call the Win32 DeleteFile API, but this doesn’t actually delete the file. It just set the file’s Disposition of the file to be deleted on close. Even when the app subsequently closes the file, this still doesn’t necessarily mean that the file will actually be deleted. Consider what could happen if another application has the file open when our example app opens it. That application can also set the file’s Disposition at any time. If after our example app has set the file’s Disposition to be delete on close, the other app sets the file’s Disposition so that it’s no longer marked for delete on close, the file will not be deleted. And yes… it happens.
+A slightly more interesting example is the `Win32` function `DeleteFile`. If you’re not a file system dev, you’re probably thinking “How complicated can delete be? You just… delete the file, right?” Well, not in Windows, no. The native Windows API doesn’t actually have a specific delete file operation. Rather, the intention to delete a file is indicated by issuing a Set Information operation (`ZwSetInformationFile`) to set the file’s Disposition (`FILE_DISPOSITION_INFORMATION`). This allows the caller to specify whether he wants the file to be deleted when its closed. However, it’s important to note that the file is not actually deleted until the last handle to the file has been closed. This means that an application can open a file and call the `Win32` `DeleteFile` API, but this doesn’t actually delete the file. It just set the file’s Disposition of the file to be deleted on close. Even when the app subsequently closes the file, this still doesn’t necessarily mean that the file will actually be deleted. Consider what could happen if another application has the file open when our example app opens it. That application can also set the file’s Disposition at any time. If after our example app has set the file’s Disposition to be delete on close, the other app sets the file’s Disposition so that it’s no longer marked for delete on close, the file will not be deleted. And yes… it happens.
 
 ## Virtual Memory System Integration
 
-Another source of complexity for file system Minifilters stems from the close working relationship between file systems, the Windows Cache Manager, and the Windows Memory Manager. We all know that when we call ReadFile, data from the specified data buffer is read from the file indicated by the file handle. Most of us probably also know, at least in a general way, that there’s typically some caching involved. That is, every call we make to ReadFile doesn’t always necessarily result in that data being read directly from the media.
+Another source of complexity for file system `Minifilters` stems from the close working relationship between file systems, the Windows `Cache Manager`, and the Windows `Memory Manager`. We all know that when we call `ReadFile`, data from the specified data buffer is read from the file indicated by the file handle. Most of us probably also know, at least in a general way, that there’s typically some caching involved. That is, every call we make to `ReadFile` doesn’t always necessarily result in that data being read directly from the media.
 
-Interestingly, except when a file is explicitly opened with no caching, file systems typically do very little to process an application’s call to ReadFile, beyond calling the Cache Manager to deal with it. At the file system’s request, the Cache Manager copies the data from the cache area associated with that file’s open instance into the application’s data buffer. This is illustrated in Figure 2.
+Interestingly, except when a file is explicitly opened with no caching, file systems typically do very little to process an application’s call to `ReadFile`, beyond calling the `Cache Manager` to deal with it. At the file system’s request, the `Cache Manager` copies the data from the cache area associated with that file’s open instance into the application’s data buffer. This is illustrated in Figure 2.
 
 ![](img/feabf7ef0b3bb3419a0ef4d863642d48_15_0.png)
 
-In Figure 2, the file system has called the Windows Cache Manager to process an application’s ReadFile request. The file system identifies the open instance of the file being accessed using the file handle provided by the application in its ReadFile call. The file handle "hFile1" is a handle to the indicated File Object which the Cache Manager uses to locate the sections of cached data that are part of the file system’s cache.
-
-Figure 2 -- File System Uses Cache Manager to Process a Read Operation
 
 
+在 Figure 2 中，文件系统已调用 `Windows Cache Manager` 来处理应用程序的 `ReadFile` 请求。文件系统使用应用程序在其 `ReadFile` 调用中提供的 file handle 来识别正在访问的文件的打开实例。file handle `hFile1` 是对指示的 `File Object` 的句柄，`Cache Manager` 使用它来定位属于文件系统缓存的缓存数据的节。
 
-
+## Figure 2 -- File System Uses Cache Manager to Process a Read Operation
 
 ## 文件系统微过滤器...（续）
 
@@ -587,9 +571,9 @@ Figure 2 -- File System Uses Cache Manager to Process a Read Operation
 
 当然，这还只是编写任何 Windows 内核模式驱动程序所固有基本挑战之外的额外负担。
 
-克服第一个挑战（即正确理解并处理原生 Windows I/O 子系统语义）只需要时间和经验。微软提供了大量示例，可以用作起点。而且关于编写基本文件系统微过滤器的文档出奇地好——只要你花时间阅读并理解它。此外，还有一些不错的在线资源，比如我们的 NTFSd 列表，可以帮你解答一路上遇到的问题。另外，我还应该提到，从 2018 年 1 月开始，我们将开设一期关于如何编写标准微过滤器的研讨会。
+克服第一个挑战（即正确理解并处理原生 Windows I/O 子系统语义）只需要时间和经验。微软提供了大量示例，可以用作起点。而且关于编写基本文件系统微过滤器的文档出奇地好——只要你花时间阅读并理解它。此外，还有一些不错的在线资源，比如我们的 `NTFSd` 列表，可以帮你解答一路上遇到的问题。另外，我还应该提到，从 2018 年 1 月开始，我们将开设一期关于如何编写标准微过滤器的研讨会。
 
-上面 B 项的复杂程度在很大程度上取决于你编写的微过滤器类型。你的操作越简单，过滤范围越有限，事情就越容易。例如，试图过滤你的过滤器并不是特别关心的 I/O 操作通常是一个错误。针对文件系统微过滤器的 HLK 测试将非常有助于你评估在保留所过滤文件系统行为方面的成功程度。请务必运行这些测试！
+上面 B 项的复杂程度在很大程度上取决于你编写的微过滤器类型。你的操作越简单，过滤范围越有限，事情就越容易。例如，试图过滤你的过滤器并不是特别关心的 I/O 操作通常是一个错误。针对文件系统微过滤器的 `HLK` 测试将非常有助于你评估在保留所过滤文件系统行为方面的成功程度。请务必运行这些测试！
 
 因此，如果你需要编写一个标准微过滤器——也就是说，一个监视文件系统操作的过滤器——你所面临的挑战将是合理的。
 
@@ -597,7 +581,7 @@ Figure 2 -- File System Uses Cache Manager to Process a Read Operation
 
 ## 文件系统微过滤器...（续）
 
-试图过滤你的过滤器并不是特别关心的 I/O 操作通常是一个错误。针对文件系统微过滤器的 HLK 测试将非常有助于你评估在保留所过滤文件系统行为方面的成功程度。请务必运行这些测试！
+试图过滤你的过滤器并不是特别关心的 I/O 操作通常是一个错误。针对文件系统微过滤器的 `HLK` 测试将非常有助于你评估在保留所过滤文件系统行为方面的成功程度。请务必运行这些测试！
 
 因此，如果你需要编写一个标准微过滤器——也就是说，一个监视文件系统操作的过滤器——你所面临的挑战将是合理的。
 
@@ -605,13 +589,13 @@ Figure 2 -- File System Uses Cache Manager to Process a Read Operation
 
 另一种不太常见的文件系统微过滤器类型是隔离微过滤器。隔离过滤器将文件数据的视图与文件系统实际存储的底层数据分离开（或“隔离”）。编写这种类型的微过滤器通常和编写一个标准的 Windows 文件系统一样复杂，因为它涉及你的微过滤器、Windows 缓存管理器和 Windows 内存管理器之间直接而密切的交互。事实上，一些经验丰富的开发者认为隔离微过滤器甚至比文件系统开发更难，因为当你编写隔离微过滤器时，实际上你必须在筛选器管理器提供的 API 内“容纳”一个 Windows 文件系统的实现。因此，除了标准微过滤器开发者面临的挑战之外，隔离微过滤器的开发者还要处理大量更为复杂的问题。
 
-为了说明我们所说的“将文件数据的视图与实际底层数据分离开”的含义，让我们考虑一个实现按访问透明加密/解密的隔离微过滤器。应用程序打开一个以加密形式存储在磁盘上的文件，并对其调用 ReadFile。在这种情况下，加密/解密微过滤器的工作是透明地解密呈现给应用程序的数据。支持此类活动的一般方案如图 3 所示。
+为了说明我们所说的“将文件数据的视图与实际底层数据分离开”的含义，让我们考虑一个实现按访问透明加密/解密的隔离微过滤器。应用程序打开一个以加密形式存储在磁盘上的文件，并对其调用 `ReadFile`。在这种情况下，加密/解密微过滤器的工作是透明地解密呈现给应用程序的数据。支持此类活动的一般方案如图 3 所示。
 
 图 3 显示了两个文件对象，每个文件对象都与同一个文件相关联。上面的文件对象（绿色）是与应用程序关联的打开实例。这个文件对象代表应用程序对文件的视图。请注意，该文件对象引用的缓存节包含解密数据。这些数据是由隔离过滤器与缓存管理器协同放入缓存中的。
 
 下面的文件对象（蓝色）由隔离微过滤器创建，代表该微过滤器（以及底层文件系统）对文件的视图。请注意，此文件对象的缓存节中的数据是加密的。隔离微过滤器使用下面的文件对象与底层文件系统进行交互。
 
-因此，当用户应用程序调用 ReadFile 时，隔离微过滤器将收到该请求（作为其先前讨论过的读前置操作处理的一部分），并与缓存管理器交互以将缓存填充数据。在处理随后产生的分页读取操作（由内存管理器发送，以满足缓存管理器尝试为缓存获取数据的需求）时，隔离微过滤器会发出一个引用下方（蓝色）文件对象的 ReadFile 操作。底层文件系统与缓存管理器协作，满足此请求并将数据放入指定的缓存节中。
+因此，当用户应用程序调用 `ReadFile` 时，隔离微过滤器将收到该请求（作为其先前讨论过的读前置操作处理的一部分），并与缓存管理器交互以将缓存填充数据。在处理随后产生的分页读取操作（由内存管理器发送，以满足缓存管理器尝试为缓存获取数据的需求）时，隔离微过滤器会发出一个引用下方（蓝色）文件对象的 `ReadFile` 操作。底层文件系统与缓存管理器协作，满足此请求并将数据放入指定的缓存节中。
 
 ![](img/feabf7ef0b3bb3419a0ef4d863642d48_17_0.png)
 
@@ -620,10 +604,6 @@ Figure 2 -- File System Uses Cache Manager to Process a Read Operation
 但通常还有比我们目前讨论的更多的复杂性。假设加密/解密微过滤器确定
 
 图 3 – 隔离微过滤器
-
-
-
-
 
 ## 文件系统微过滤器……（续）
 
@@ -635,11 +615,11 @@ Figure 2 -- File System Uses Cache Manager to Process a Read Operation
 
 我们应当补充说明，隔离微过滤器模型并不仅用于透明的数据加密和解密系统。隔离微过滤器模型适用于以下任何情况：
 
--   应用程序对数据的视图与文件系统上存储的基础文件之间存在差异。
--   应用程序对数据的视图与文件数据的基础位置之间存在差异。
--   不同的应用程序实例需要对文件系统上存储的同一基础数据拥有独特视图。
+- 应用程序对数据的视图与文件系统上存储的基础文件之间存在差异。
+- 应用程序对数据的视图与文件数据的基础位置之间存在差异。
+- 不同的应用程序实例需要对文件系统上存储的同一基础数据拥有独特视图。
 
-例如，考虑一个用于更改跟踪和版本控制的隔离微过滤器。一个 Word 实例可能正在积极编辑某个文件的最新版本，而另一个 Word 实例（可能由不同用户运行）则可能正在积极编辑该文件的旧版本。
+例如，考虑一个用于更改跟踪和版本控制的隔离微过滤器。一个 `Word` 实例可能正在积极编辑某个文件的最新版本，而另一个 `Word` 实例（可能由不同用户运行）则可能正在积极编辑该文件的旧版本。
 
 又例如，一个存储在云中的文件，会根据文件的访问方式被一点一点地拉取下来。该文件在应用程序看来可能完全驻留在本地文件系统中。然而，隔离过滤器可能会根据需求从远程存储中访问和回填数据。
 
@@ -653,7 +633,7 @@ Windows 微过滤器模型灵活而极其强大。只要有足够的时间和经
 
 你编写了代码——是否遗漏了什么？
 
-无论你是 Windows 驱动程序开发新手，还是之前写过几十个驱动程序，总是很难确保自己没有遗漏任何东西。Windows 会变化，WDF 会变化，安全问题也会出现。最佳实践是一个移动的目标。
+无论你是 Windows 驱动程序开发新手，还是之前写过几十个驱动程序，总是很难确保自己没有遗漏任何东西。Windows 会变化，`WDF` 会变化，安全问题也会出现。最佳实践是一个移动的目标。
 
 让 OSR 来帮助你吧！我们的工程团队 100% 专注于 Windows 内部机制和驱动程序开发。让我们成为你项目中的专家、第二双眼睛……确保项目完成得正确！
 
@@ -661,43 +641,41 @@ Windows 微过滤器模型灵活而极其强大。只要有足够的时间和经
 
 （接第7页）
 
-除了调用 EvtFileCleanup 之外，WDF 在 Cleanup 处理中还要更进一步。在调用驱动程序的 EvtFileCleanup 事件处理回调（如果有）之后，WDF 会扫描驱动程序的 WDF 队列，查找最初通过作为 Cleanup 目标的文件对象提交的请求。对于找到的每个此类请求，WDF 都会发出一个取消操作。我们稍后将讨论 Cancel 的细节，但暂时可以说，为这些请求发出取消操作几乎肯定会导致它们从队列中移除，并由 WDF 以错误状态完成。
 
-然而，需要注意的是，作为处理 Cleanup 的一部分，WDF 不会对未存储在 WDF 队列上的挂起请求执行取消处理。因此，如果你有一个正在进行的请求，并且通过将 WDFREQUEST 句柄存储在设备上下文中来跟踪该请求，那么该请求不会由 WDF 在 Cleanup 处理中自动取消，因此它将保持正在进行的状态。
+
+除了调用 `EvtFileCleanup` 之外，`WDF` 在 Cleanup 处理中还要更进一步。在调用驱动程序的 `EvtFileCleanup` 事件处理回调（如果有）之后，`WDF` 会扫描驱动程序的 `WDF` 队列，查找最初通过作为 Cleanup 目标的文件对象提交的请求。对于找到的每个此类请求，`WDF` 都会发出一个取消操作。我们稍后将讨论 Cancel 的细节，但暂时可以说，为这些请求发出取消操作几乎肯定会导致它们从队列中移除，并由 `WDF` 以错误状态完成。
+
+然而，需要注意的是，作为处理 Cleanup 的一部分，`WDF` 不会对未存储在 `WDF` 队列上的挂起请求执行取消处理。因此，如果你有一个正在进行的请求，并且通过将 `WDFREQUEST` 句柄存储在设备上下文中来跟踪该请求，那么该请求不会由 `WDF` 在 Cleanup 处理中自动取消，因此它将保持正在进行的状态。
 
 还有一些其他有趣的特殊情况，在这些情况下，Windows 会在清理操作之后立即对通过关联文件对象发送的请求执行取消操作。有关这些情况的讨论，请参阅侧边栏“当清理变成取消”（下文）。
 
-总结：当应用程序调用 CloseHandle 时，你的驱动程序将在其 EvtFileCleanup（而不是通常认为的 EvtFileClose）事件处理回调中被调用。然后，WDF 将对任何驻留在 WDF 队列上的请求发出取消操作。
+总结：当应用程序调用 `CloseHandle` 时，你的驱动程序将在其 `EvtFileCleanup`（而不是通常认为的 `EvtFileClose`）事件处理回调中被调用。然后，`WDF` 将对任何驻留在 `WDF` 队列上的请求发出取消操作。
 
-当对文件对象的最后一个引用消失时（即文件对象的引用计数递减到零），Windows 会发出一个 Close 请求，WDF 会调用关联驱动程序的 EvtFileClose 事件处理回调。文件对象引用计数为零意味着（就本文而言）没有正在进行的或挂起的针对该文件对象的 I/O 操作。
+当对文件对象的最后一个引用消失时（即文件对象的引用计数递减到零），Windows 会发出一个 Close 请求，`WDF` 会调用关联驱动程序的 `EvtFileClose` 事件处理回调。文件对象引用计数为零意味着（就本文而言）没有正在进行的或挂起的针对该文件对象的 I/O 操作。
 
-如果在调用 CloseHandle 时没有未完成的 I/O 请求，那么 EvtFileClose 将在 EvtFileCleanup 之后立即被调用。你的驱动程序的 EvtFileClose 事件处理回调将在 IRQL PASSIVE_LEVEL 上、在任意进程和线程上下文中被调用。因此，当你驱动程序的 EvtFileClose 被调用时，你不知道哪个线程是“当前线程”，也不知道哪个进程是“当前进程”。
+如果在调用 `CloseHandle` 时没有未完成的 I/O 请求，那么 `EvtFileClose` 将在 `EvtFileCleanup` 之后立即被调用。你的驱动程序的 `EvtFileClose` 事件处理回调将在 `IRQL PASSIVE_LEVEL` 上、在任意进程和线程上下文中被调用。因此，当你驱动程序的 `EvtFileClose` 被调用时，你不知道哪个线程是“当前线程”，也不知道哪个进程是“当前进程”。
 
-总结：当文件对象引用计数变为零，表明没有针对该文件对象挂起的进一步 I/O 请求时，你的驱动程序将在其 EvtFileClose 事件处理回调中被调用。
+总结：当文件对象引用计数变为零，表明没有针对该文件对象挂起的进一步 I/O 请求时，你的驱动程序将在其 `EvtFileClose` 事件处理回调中被调用。
 
 （接第21页）
 
 ## 当清理变成取消
 
-通过阅读本文，你已经知道当 WDF 接收到针对某个文件对象的 Cleanup 操作时，它会针对通过该文件对象发出的、位于 WDF 队列上的任何请求发出取消操作。还有另外两种情况下，Windows I/O 子系统会通过发出取消操作来扩展 Cleanup 处理。这些情况是：发出的 I/O 操作与 I/O 完成端口相关联，以及发出的 I/O 操作来自线程池中的线程。
+通过阅读本文，你已经知道当 `WDF` 接收到针对某个文件对象的 Cleanup 操作时，它会针对通过该文件对象发出的、位于 `WDF` 队列上的任何请求发出取消操作。还有另外两种情况下，Windows I/O 子系统会通过发出取消操作来扩展 Cleanup 处理。这些情况是：发出的 I/O 操作与 I/O 完成端口相关联，以及发出的 I/O 操作来自线程池中的线程。
 
 完成端口和线程池是两种优化的机制，旨在高效处理应用程序的异步回调。我们特别感兴趣的情况是处理 I/O 完成回调。
 
-当文件对象的最后一个句柄被关闭时，Windows 总是发出一个 Cleanup 操作。与完成端口和线程池关联的 CloseHandle 操作处理的特殊之处在于：在 Cleanup 操作完成之后，I/O 子系统会针对文件对象中仍然在进行中的任何 I/O 操作发出取消操作。这会导致（或者，如果相关驱动程序正确履行职责，“应该会”）任何通过该文件对象发起的未完成 I/O 操作被快速终止。因此，完成端口或线程池会及时收到任何挂起 I/O 终止的通知。
-
-
-
-
+当文件对象的最后一个句柄被关闭时，Windows 总是发出一个 Cleanup 操作。与完成端口和线程池关联的 `CloseHandle` 操作处理的特殊之处在于：在 Cleanup 操作完成之后，I/O 子系统会针对文件对象中仍然在进行中的任何 I/O 操作发出取消操作。这会导致（或者，如果相关驱动程序正确履行职责，“应该会”）任何通过该文件对象发起的未完成 I/O 操作被快速终止。因此，完成端口或线程池会及时收到任何挂起 I/O 终止的通知。
 
 ## Cleanup、Close 和 Cancel...
 
-我们最后的定义是 Cancel。当一个线程在存在未完成的 I/O 时退出，或应用程序显式调用 Win32 函数 CancelIo 或 CancelIoEx 时，未完成的 I/O 请求将被取消。这会导致 WDF 为每个将被取消的请求调用驱动程序的其中一个与 Cancel 相关的事件处理回调，前提是已指定了该回调。
+我们最后的定义是 Cancel。当一个线程在存在未完成的 I/O 时退出，或应用程序显式调用 Win32 函数 `CancelIo` 或 `CancelIoEx` 时，未完成的 I/O 请求将被取消。这会导致 `WDF` 为每个将被取消的请求调用驱动程序的其中一个与 Cancel 相关的事件处理回调，前提是已指定了该回调。
 
-与 Cleanup 和 Close 不同，后者的操作是基于特定的文件对象进行的，Cancel 操作在 Windows 中是基于单个、特定的请求进行管理的。WDF 的一大优点是它旨在自动协助你的驱动程序进行 Cancel 处理。它主要通过以下方式实现：当 Windows 取消某个请求时，WDF 会在你的驱动程序的所有 WDF 队列中搜索该请求。如果它在 WDF 队列上找到了正在被取消的请求，WDF 将从队列中移除该请求，并且默认情况下使用 STATUS_CANCELED 完成该请求，信息字段为零。这甚至适用于那些在队列上等待首次呈现给你的驱动程序的请求，也就是说你的驱动程序尚未看到的请求。
+与 Cleanup 和 Close 不同，后者的操作是基于特定的文件对象进行的，Cancel 操作在 Windows 中是基于单个、特定的请求进行管理的。`WDF` 的一大优点是它旨在自动协助你的驱动程序进行 Cancel 处理。它主要通过以下方式实现：当 Windows 取消某个请求时，`WDF` 会在你的驱动程序的所有 `WDF` 队列中搜索该请求。如果它在 `WDF` 队列上找到了正在被取消的请求，`WDF` 将从队列中移除该请求，并且默认情况下使用 `STATUS_CANCELED` 完成该请求，信息字段为零。这甚至适用于那些在队列上等待首次呈现给你的驱动程序的请求，也就是说你的驱动程序尚未看到的请求。
 
-考虑一下这如何帮助我们在第二个示例中的驱动程序处理，即应用程序在存在多个进行中的请求时退出。在这种情况下，随着应用程序退出，Windows 将为每个在应用程序尝试退出时仍在进行中的 I/O 请求发出 Cancel 操作。当 WDF 收到此 Cancel 操作时，它会在你的驱动程序的 WDF 队列中搜索正在被取消的请求，如果找到该请求，它将从队列中移除并完成它（使用 STATUS_CANCELED）。如果被取消的请求正在你的驱动程序的队列上等待，并且尚未呈现给你的驱动程序进行处理，则该请求将被从队列中移除并完成，而你的驱动程序甚至无需处理它。再一次，WDF 通过其“合理默认值”的原则使驱动程序编写变得更容易。
+考虑一下这如何帮助我们在第二个示例中的驱动程序处理，即应用程序在存在多个进行中的请求时退出。在这种情况下，随着应用程序退出，Windows 将为每个在应用程序尝试退出时仍在进行中的 I/O 请求发出 Cancel 操作。当 `WDF` 收到此 Cancel 操作时，它会在你的驱动程序的 `WDF` 队列中搜索正在被取消的请求，如果找到该请求，它将从队列中移除并完成它（使用 `STATUS_CANCELED`）。如果被取消的请求正在你的驱动程序的队列上等待，并且尚未呈现给你的驱动程序进行处理，则该请求将被从队列中移除并完成，而你的驱动程序甚至无需处理它。再一次，`WDF` 通过其“合理默认值”的原则使驱动程序编写变得更容易。
 
-当然，你可能不希望在 Cancel 处理期间，WDF 自动从队列中移除你在队列上持有的请求并完成它们。例如，当你的驱动程序在等待设备完成其工作时，使用手动分派将请求保留在队列上时，可能会出现这种情况。在这种情况下，你的驱动程序可以通过为该队列注册一个 EvtIoCanceledOnQueue 事件处理回调来选择自行处理该特定队列的 Cancel 处理。如果你的驱动程序为某个队列提供了 EvtIoCanceledOnQueue 事件处理回调，每当该队列上的请求被取消时，WDF 将从队列中移除该请求并调用你的驱动程序的 EvtIoCanceledOnQueue 事件处理回调，并传入正在被取消的请求的句柄。
+当然，你可能不希望在 Cancel 处理期间，`WDF` 自动从队列中移除你在队列上持有的请求并完成它们。例如，当你的驱动程序在等待设备完成其工作时，使用手动分派将请求保留在队列上时，可能会出现这种情况。在这种情况下，你的驱动程序可以通过为该队列注册一个 `EvtIoCanceledOnQueue` 事件处理回调来选择自行处理该特定队列的 Cancel 处理。如果你的驱动程序为某个队列提供了 `EvtIoCanceledOnQueue` 事件处理回调，每当该队列上的请求被取消时，`WDF` 将从队列中移除该请求并调用你的驱动程序的 `EvtIoCanceledOnQueue` 事件处理回调，并传入正在被取消的请求的句柄。
 
 ## OSR 的企业内部培训
 
@@ -709,50 +687,47 @@ Windows 微过滤器模型灵活而极其强大。只要有足够的时间和经
 - 为新入职的一批人或现有团队设计并提供一系列培训，并制定量身定制的路线图。
 - 与你的内部培训组织/人力资源部门合作，为你的部门或全公司范围内的工程部门提供每月或每季度的研讨会。
 
-如果你的驱动程序持有进行中的请求，但这些请求不在队列上，它可以为特定请求注册一个 EvtRequestCancel 事件处理回调。例如，如果你的驱动程序在设备上启动了一个请求，并且你正在等待设备完成其处理，你的驱动程序可能只是在设备上下文中的某个位置保存对该挂起请求的句柄。事实上，这非常常见。如果你想在该请求挂起、等待设备时能够处理 Cancel 事件，你可以为该请求可选地注册一个 EvtRequestCancel 事件处理回调。
+如果你的驱动程序持有进行中的请求，但这些请求不在队列上，它可以为特定请求注册一个 `EvtRequestCancel` 事件处理回调。例如，如果你的驱动程序在设备上启动了一个请求，并且你正在等待设备完成其处理，你的驱动程序可能只是在设备上下文中的某个位置保存对该挂起请求的句柄。事实上，这非常常见。如果你想在该请求挂起、等待设备时能够处理 Cancel 事件，你可以为该请求可选地注册一个 `EvtRequestCancel` 事件处理回调。
 
-总结：每当应用程序在 I/O 进行中开始其退出处理，或应用程序调用 CancelIo 或 CancelIoEx 时，你的驱动程序可能会在 EvtRequestCancel 或 EvtIoCanceledOnQueue 事件处理回调中被调用。
+总结：每当应用程序在 I/O 进行中开始其退出处理，或应用程序调用 `CancelIo` 或 `CancelIoEx` 时，你的驱动程序可能会在 `EvtRequestCancel` 或 `EvtIoCanceledOnQueue` 事件处理回调中被调用。
 
 Cleanup、Close 和 Cancel 处理的简要总结以表格形式显示在图 2 中（下一页）。
-
-鉴于上述定义，让我们来研究一下你的驱动程序如何能最好地利用 Cleanup、Close 和 Cancel 事件。
-
-
-
 
 ## 清理、关闭和取消……（续）
 
 | 事件 | 结果操作 | 回调约束 |
 |---|---|---|
-| 文件对象的最后一个句柄关闭 | CLEANUP：调用 EvtFileCleanup；WDF 对当前位于任何 WDF 队列上的任何请求发出取消操作。 | IRQL PASSIVE_LEVEL，在调用 CloseHandle 的线程上下文中 |
-| 文件对象的最后一个引用被移除 | CLOSE：调用 EvtFileClose | IRQL PASSIVE_LEVEL，在任意进程/线程上下文中 |
-| 应用程序开始退出进程，应用程序调用 CancelIo 或 CancelIoEx | CANCEL：依赖请求的取消函数（EvtRequestCancel 或 EvtIoCanceledOnQueue） | IRQL <= DISPATCH_LEVEL，在任意进程/线程上下文中 |
+| 文件对象的最后一个句柄关闭 | CLEANUP：调用 `EvtFileCleanup`；`WDF` 对当前位于任何 `WDF` 队列上的任何请求发出取消操作。 | `IRQL PASSIVE_LEVEL`，在调用 `CloseHandle` 的线程上下文中 |
+| 文件对象的最后一个引用被移除 | CLOSE：调用 `EvtFileClose` | `IRQL PASSIVE_LEVEL`，在任意进程/线程上下文中 |
+| 应用程序开始退出进程，应用程序调用 `CancelIo` 或 `CancelIoEx` | CANCEL：依赖请求的取消函数（`EvtRequestCancel` 或 `EvtIoCanceledOnQueue`） | `IRQL <= DISPATCH_LEVEL`，在任意进程/线程上下文中 |
 
 图 2 – 清理、关闭和取消小结
 
 ## 何时应该处理清理？
 
-当 WDF 收到特定文件对象的清理通知时，如果指定了 EvtFileCleanup 事件处理回调，它会调用该回调。EvtFileCleanup 的原型如下：
+当 `WDF` 收到特定文件对象的清理通知时，如果指定了 `EvtFileCleanup` 事件处理回调，它会调用该回调。`EvtFileCleanup` 的原型如下：
 
 ```
 VOID EvtFileCleanup(
 _In_ WDFFILEOBJECT FileObject)
 ```
 
-您的 WDF 驱动程序是否应该实现清理？如果应该，那么在清理处理过程中您应该做些什么？
+你的 `WDF` 驱动程序是否应该实现清理？如果应该，那么在清理处理过程中你应该做些什么？
 
-对于大多数驱动程序来说，答案很简单：在几乎所有情况下，您都不需要处理清理操作——因此，您不应该在驱动程序中提供 EvtFileCleanup 事件处理回调。
+对于大多数驱动程序来说，答案很简单：在几乎所有情况下，你都不需要处理清理操作——因此，你不应该在驱动程序中提供 `EvtFileCleanup` 事件处理回调。
 
 Windows 中的清理操作主要设计用于两个基本目的：
+
+
 
 - 1) 向驱动程序快速发出通知，告知调用应用程序不打算在关联句柄上发出任何进一步的 I/O 请求（请记住，清理是按文件对象发生的）；
 - 2) 为驱动程序提供“最后一次机会”来执行任何需要在请求应用程序上下文中完成的操作（因为应用程序表明其打算通过这个特定打开实例停止与驱动程序交互）。
 
 作为上述第 1 点的一部分，清理操作可以用作一种批量丢弃大量请求的方法，这些请求对于发出它们的应用程序而言可能已不再重要。WDF 通过在清理处理时，对在正在关闭的文件句柄上发出且位于 WDF 队列中的任何请求执行取消操作，来简化这一过程。这样做的主要结果是：来自已清理文件对象、位于队列中等待呈现给您的驱动程序的任何请求，将永远不会到达您的驱动程序。WDF 会将这些请求从队列中移除并取消它们，而您的驱动程序无需做任何事情。
 
-上述第 2 点稍微更有意思。因为 EvtFileCleanup 是在调用 CloseHandle 的进程/线程上下文中调用的，所以此回调为您的驱动程序提供了机会，让其拆除按进程维护的任何上下文。例如，如果您的驱动程序将某些内存映射到应用程序的虚拟地址空间中，那么 EvtFileCleanup 事件处理回调是撤销该映射的理想位置。这类操作并不常见，但它是 WDF 中清理操作的关键用途之一。而且，是的，在专家读者们提出强烈异议之前，我要补充一点：将内存映射到应用程序的虚拟地址空间以及取消映射，所涉及的内容远不止在 EvtFileCleanup 中简单地取消映射。我在此不打算深入讨论这一点。
+上述第 2 点稍微更有意思。因为 `EvtFileCleanup` 是在调用 `CloseHandle` 的进程/线程上下文中调用的，所以此回调为您的驱动程序提供了机会，让其拆除按进程维护的任何上下文。例如，如果您的驱动程序将某些内存映射到应用程序的虚拟地址空间中，那么 `EvtFileCleanup` 事件处理回调是撤销该映射的理想位置。这类操作并不常见，但它是 WDF 中清理操作的关键用途之一。而且，是的，在专家读者们提出强烈异议之前，我要补充一点：将内存映射到应用程序的虚拟地址空间以及取消映射，所涉及的内容远不止在 `EvtFileCleanup` 中简单地取消映射。我在此不打算深入讨论这一点。
 
-值得注意的是，清理处理中还固有另一个讨厌的细节：由于句柄是进程级别的实体，进程中的一个线程可以正在某个句柄上发送 I/O 请求（例如，反复调用 ReadFile），而另一个线程同时对该句柄调用 CloseHandle。如果您仔细想想，就会意识到这意味着：即使在您的驱动程序已针对该句柄被调用了 `EvtFileCleanup` 事件处理回调之后，您的驱动程序仍有可能在该句柄上收到一个或多个新的请求。这会形成一种讨厌的竞态条件，也使得这个位置成为不适合彻底清除驱动程序中请求的地方，以避免例如应用程序在退出时挂起。
+值得注意的是，清理处理中还固有另一个讨厌的细节：由于句柄是进程级别的实体，进程中的一个线程可以正在某个句柄上发送 I/O 请求（例如，反复调用 `ReadFile`），而另一个线程同时对该句柄调用 `CloseHandle`。如果您仔细想想，就会意识到这意味着：即使在您的驱动程序已针对该句柄被调用了 `EvtFileCleanup` 事件处理回调之后，您的驱动程序仍有可能在该句柄上收到一个或多个新的请求。这会形成一种讨厌的竞态条件，也使得这个位置成为不适合彻底清除驱动程序中请求的地方，以避免例如应用程序在退出时挂起。
 
 因此，一般而言，WDF 驱动程序不需要——实际上也不应该——直接处理清理操作。正如我常说的：“如果你不写任何代码，你就不会有任何 bug。”所以，当你不需要实现某个函数时，这通常是一件好事。
 
@@ -783,26 +758,22 @@ _In_ WDFFILEOBJECT FileObject)
 
 请记住，与清理和关闭不同，取消通知是按请求实现的。如前所述，当线程在 I/O 进行中退出，或应用程序明确请求一个或多个 I/O 操作在完成之前终止时，Windows 会为特定请求发出取消，一次一个。
 
-取消的目的是告诉驱动程序，在方便的时候，它应该尽快停止处理给定的 I/O 操作，因为该 I/O 操作的结果已不再相关。如前所述，取消最常见的用途是作为线程和进程退出的一部分。当线程退出时，Windows 将取消该线程中任何未完成的 I/O 请求。这被称为 I/O 收尾处理。I/O
-
-
-
-
+取消的目的是告诉驱动程序，在方便的时候，它应该尽快停止处理给定的 I/O 操作，因为该 I/O 操作的结果已不再相关。如前所述，取消最常见的用途是作为线程和进程退出的一部分。当线程退出时，Windows 将取消该线程中任何未完成的 I/O 请求。这被称为 I/O 收尾处理。
 
 ## 清理、关闭与取消...（续）
 
-EvtIoCanceledOnQueue 用于允许驱动程序停止因该请求而可能正在进行中的任何硬件操作，然后让驱动程序以 STATUS_CANCELLED 和零信息字段完成该请求。
+`EvtIoCanceledOnQueue` 用于允许驱动程序停止因该请求而可能正在进行中的任何硬件操作，然后让驱动程序以 `STATUS_CANCELLED` 和零信息字段完成该请求。
 
-如果未提供 EvtIoCanceledOnQueue 事件处理回调，WDF 会简单地从队列中移除该请求，并以 STATUS_CANCELLED 和零信息字段完成它。正如我们前面所述，这样做非常有帮助的原因之一是，它可以自动处理掉那些已排队但尚未呈现给你的驱动程序的请求。
+如果未提供 `EvtIoCanceledOnQueue` 事件处理回调，WDF 会简单地从队列中移除该请求，并以 `STATUS_CANCELLED` 和零信息字段完成它。正如我们前面所述，这样做非常有帮助的原因之一是，它可以自动处理掉那些已排队但尚未呈现给你的驱动程序的请求。
 
-如果你的驱动程序持有一个或多个正在进行但不在队列中的请求，那么你的驱动程序需要为这些请求中的每一个都指定一个 EvtRequestCancel 事件处理回调。你的驱动程序通过调用 WdfRequestMarkCancelable 来实现这一点，并指定一个请求句柄以及指向由你的驱动程序实现的 EvtRequestCancel 事件处理回调的指针。EvtRequestCancel 回调的原型如下：
+如果你的驱动程序持有一个或多个正在进行但不在队列中的请求，那么你的驱动程序需要为这些请求中的每一个都指定一个 `EvtRequestCancel` 事件处理回调。你的驱动程序通过调用 `WdfRequestMarkCancelable` 来实现这一点，并指定一个请求句柄以及指向由你的驱动程序实现的 `EvtRequestCancel` 事件处理回调的指针。`EvtRequestCancel` 回调的原型如下：
 
 ```
 VOID EvtRequestCancel(
     _In_ WDFREQUEST Request)
 ```
 
-同样，你的驱动程序在此回调中的目标是停止与该请求相关的任何正在进行中的设备操作，并以 STATUS_CANCELLED 和零信息字段完成该请求。
+同样，你的驱动程序在此回调中的目标是停止与该请求相关的任何正在进行中的设备操作，并以 `STATUS_CANCELLED` 和零信息字段完成该请求。
 
 ## 关于取消的补充：现实世界
 
@@ -810,37 +781,35 @@ VOID EvtRequestCancel(
 
 因此，如前所述，在某些情况下，对于正在进行的 I/O 请求，最好根本不要实现任何取消处理。请注意，只有当你确信所有正在进行的 I/O 请求都会及时完成时，这才是一个合理的策略。是的，当你收到取消操作的通知时，会有一个线程和/或进程正在等待退出。但如果完成一次 DMA 传输还需要 10 毫秒或 20 毫秒，然后再正常完成挂起的请求，那么这点时间延迟对那个线程或进程来说并不重要。而且这比尝试取消正在进行的操作要容易得多。相信我，我身上的伤疤足以证明这一点。
 
-还有另一个细节你需要知道：除非你是在 EvtRequestCancel 事件处理回调中这样做，否则你绝不可对已标记为可取消（Cancelable）的请求调用 WdfRequestComplete（或其任何变体）。这意味着，如果你将一个取消例程与一个请求关联，并且你在常规处理过程中完成该请求（也就是说，你并非在取消处理过程中完成它），则必须先调用 WdfRequestUnmarkCancelable。
+还有另一个细节你需要知道：除非你是在 `EvtRequestCancel` 事件处理回调中这样做，否则你绝不可对已标记为可取消（Cancelable）的请求调用 `WdfRequestComplete`（或其任何变体）。这意味着，如果你将一个取消例程与一个请求关联，并且你在常规处理过程中完成该请求（也就是说，你并非在取消处理过程中完成它），则必须先调用 `WdfRequestUnmarkCancelable`。
 
 遗憾的是，取消处理仍然是 I/O 操作中最复杂的部分之一。虽然 WDF 通过取消位于队列中且尚未呈现给你的驱动程序的请求提供了一些帮助，但对于那些已经呈现给你的驱动程序、并在取消时正在进行的请求，它却帮不上什么忙。
 
 ## 回到那些示例
 
-为了总结我们所讨论的内容，让我们再次回到本文开头使用的示例。在我们的第一个示例中，应用程序向你的驱动程序发送了 100 个异步读取请求，然后调用 CloseHandle，而此时其中一些请求仍在进行中。你的驱动程序使用单个具有顺序调度（Sequential Dispatching）的队列来处理这些请求。
+为了总结我们所讨论的内容，让我们再次回到本文开头使用的示例。在我们的第一个示例中，应用程序向你的驱动程序发送了 100 个异步读取请求，然后调用 `CloseHandle`，而此时其中一些请求仍在进行中。你的驱动程序使用单个具有顺序调度（Sequential Dispatching）的队列来处理这些请求。
 
 现在，你知道会发生什么。
 
-一旦应用程序调用 CloseHandle，Windows 会立即发出一个清理（Cleanup）操作。如果你的驱动程序需要处理与执行 CloseHandle 操作相关的任何进程特定状态，它就会提供一个 EvtFileCleanup 事件处理回调。在此回调中，它会销毁该进程特定的状态。无论你的驱动程序是否提供 EvtFileCleanup 事件处理回调，WDF 都会取消你的驱动程序队列中所有挂起的请求。
-
-
-
-
+一旦应用程序调用 `CloseHandle`，Windows 会立即发出一个清理（Cleanup）操作。如果你的驱动程序需要处理与执行 `CloseHandle` 操作相关的任何进程特定状态，它就会提供一个 `EvtFileCleanup` 事件处理回调。在此回调中，它会销毁该进程特定的状态。无论你的驱动程序是否提供 `EvtFileCleanup` 事件处理回调，WDF 都会取消你的驱动程序队列中所有挂起的请求。
 
 ## 清理（Cleanup）、关闭（Close）和取消（Cancel）...（续）
 
 （接第 24 页）
 
-假设你的驱动程序没有为顶层队列提供 EvtIoCanceledOnQueue 事件处理回调（这是一个安全的假设），WDF 将把在句柄上发出的任何待处理请求从队列中移除并终止。因此，绝大多数进行中的请求将由 WDF 自动终止。
+假设你的驱动程序没有为顶层队列提供 `EvtIoCanceledOnQueue` 事件处理回调（这是一个安全的假设），WDF 将把在句柄上发出的任何待处理请求从队列中移除并终止。因此，绝大多数进行中的请求将由 WDF 自动终止。
 
-如果你的驱动程序在应用程序调用 CloseHandle 时有一个正在进行的请求（而且只能有一个……该示例使用的是顺序分发），除非在收到 Cleanup 时该请求仍在队列中，否则该请求将继续在你的驱动程序中运行。要么你的驱动程序将其作为常规处理的一部分完成，要么请求会在发出线程退出时被取消。无论哪种方式，都没有问题。并且，当文件对象上的最后一个 I/O 操作完成时，如果你指定了 EvtFileClose 事件处理回调，它将被调用。
+
+
+如果你的驱动程序在应用程序调用`CloseHandle`时有一个正在进行的请求（而且只能有一个……该示例使用的是顺序分发），除非在收到 Cleanup 时该请求仍在队列中，否则该请求将继续在你的驱动程序中运行。要么你的驱动程序将其作为常规处理的一部分完成，要么请求会在发出线程退出时被取消。无论哪种方式，都没有问题。并且，当文件对象上的最后一个 I/O 操作完成时，如果你指定了`EvtFileClose`事件处理回调，它将被调用。
 
 因此，这就是我们第一个示例中发生的情况。
 
 在我们的第二个示例中，应用程序发出了相同的 100 次读取请求，但并没有关闭句柄，而是退出或被终止了。
 
-在这种情况下，Windows 首先为指定线程执行 I/O 收尾处理。Windows 将对每个进行中的请求发出取消操作。因此，如前所述，假设你没有为顶层队列指定 EvtIoCanceledOnQueue 事件处理回调，WDF 将把每个已取消的请求从队列中移除并终止。
+在这种情况下，Windows 首先为指定线程执行 I/O 收尾处理。Windows 将对每个进行中的请求发出取消操作。因此，如前所述，假设你没有为顶层队列指定`EvtIoCanceledOnQueue`事件处理回调，WDF 将把每个已取消的请求从队列中移除并终止。
 
-如果你的驱动程序持有一个进行中的请求，且该请求不能保证快速完成，你应当通过调用 WdfRequestMarkCancelable 来指定每个请求的 EvtRequestCancel 事件处理回调。在该回调中，你的驱动程序将以 STATUS_CANCELLED 完成该请求。
+如果你的驱动程序持有一个进行中的请求，且该请求不能保证快速完成，你应当通过调用`WdfRequestMarkCancelable`来指定每个请求的`EvtRequestCancel`事件处理回调。在该回调中，你的驱动程序将以`STATUS_CANCELLED`完成该请求。
 
 当然，如果你的驱动程序持有一个进行中的请求，且该请求绝对保证能快速完成，那么你的驱动程序无需再做任何事情。
 
@@ -860,7 +829,7 @@ VOID EvtRequestCancel(
 
 因此，在取消处理结束时或此后不久，应用程序到你的驱动程序之间将不再有进行中的 I/O 请求。
 
-当所有挂起的请求都已完成时，Windows 将发出 Cleanup（如果已指定，WDF 将调用你的驱动程序的 EvtFileCleanup 事件处理回调），然后发出 Close（如果已指定，WDF 将调用你的驱动程序的 EvtFileClose 事件处理回调）。除非你的驱动程序需要清理某些特定于进程的状态，否则它不会指定 Cleanup 回调。除非你的驱动程序需要清理特定于句柄的状态，否则它不会提供 Close 回调。
+当所有挂起的请求都已完成时，Windows 将发出 Cleanup（如果已指定，WDF 将调用你的驱动程序的`EvtFileCleanup`事件处理回调），然后发出 Close（如果已指定，WDF 将调用你的驱动程序的`EvtFileClose`事件处理回调）。除非你的驱动程序需要清理某些特定于进程的状态，否则它不会指定 Cleanup 回调。除非你的驱动程序需要清理特定于句柄的状态，否则它不会提供 Close 回调。
 
 ## 现在你知道了
 
@@ -904,10 +873,6 @@ OSR 的文件加密解决方案框架（FESF）
 
 ![](img/feabf7ef0b3bb3419a0ef4d863642d48_26_0.png)
 
-
-
-
-
 ## OSR 研讨会日程
 
 | 研讨会 | 日期 | 地点 |
@@ -922,11 +887,12 @@ OSR 的文件加密解决方案框架（FESF）
 
 ## OSR 研讨会
 
-## 我们身体力行是有原因的
+### 我们身体力行是有原因的
 
 当我们说“我们身体力行所教之内容”时，这句座右铭直接转化为我们为研讨会带来的价值。但不要只听我们说...
 
 > "这是我第三次参加 OSR 课程。对于 Windows 内核模式学习，我不会去别处。即使我需要飞到地球另一边，我仍然会选择 OSR。"
+
 > -OSR WDF 核心研讨会近期学员
 
 ![](img/feabf7ef0b3bb3419a0ef4d863642d48_27_0.png)
@@ -947,4 +913,3 @@ OSR 的文件加密解决方案框架（FESF）
 - 更省钱。将 OSR 请到现场授课研讨会的费用远低于派数人参加公开课。而且你无需为宝贵的开发人员支付差旅费用。
 - 节省时间。开发人员在办公室外的时间更少是好事。
 - 节省麻烦。如果你没有可用空间或实验室设备，无需担心。OSR 研讨会顾问可以帮助你安排。
-

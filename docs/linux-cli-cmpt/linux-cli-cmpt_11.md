@@ -1,3 +1,4 @@
+
 # 多用途文本处理工具
 
 > 原文：[`learnbyexample.github.io/cli-computing/multipurpose-text-processing-tools.html`](https://learnbyexample.github.io/cli-computing/multipurpose-text-processing-tools.html)
@@ -7,16 +8,16 @@
 `grep`已经在搜索文件和文件名章节中介绍过了。此外，`sed`、`awk`和`perl`是解决从命令行处理各种文本问题的基本工具。在本章中，你将学习字段处理，使用正则表达式进行搜索和替换，根据多行和文件执行操作等。
 
 > ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 本章中提供的示例仅涵盖了一些功能。我已经编写了单独的书籍，以更详细地解释这些工具，包括示例和练习。有关这些书籍的链接，请参阅[`learnbyexample.github.io/books/`](https://learnbyexample.github.io/books/)。
-> 
+
 > ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 本章中使用的示例输入文件位于[example_files](https://github.com/learnbyexample/cli-computing/tree/master/example_files)目录中。
 
-## sed
+## `sed`
 
-命令名`sed`来源于**s**tream **ed**itor。在这里，stream 指的是通过 shell 管道传递的数据。因此，该命令的主要功能是作为**stdin**数据的文本编辑器，其输出目标为**stdout**。如果需要，你也可以编辑文件输入并将更改保存回同一文件。
+命令名`sed`来源于`stream editor`。在这里，`stream`指的是通过 shell 管道传递的数据。因此，该命令的主要功能是作为`stdin`数据的文本编辑器，其输出目标为`stdout`。如果需要，你也可以编辑文件输入并将更改保存回同一文件。
 
 ### 替换
 
-`sed`有各种命令来操作文本输入。其中**替换**命令是最常用的，其语法为`s/REGEXP/REPLACEMENT/FLAGS`。以下是一些基本示例：
+`sed`有各种命令来操作文本输入。其中替换命令是最常用的，其语法为`s/REGEXP/REPLACEMENT/FLAGS`。以下是一些基本示例：
 
 ```sh
 # for each input line, change only the first ',' to '-'
@@ -27,7 +28,7 @@ a-b,c,d
 # change all matches by adding the 'g' flag
 $ printf '1,2,3,4\na,b,c,d\n' | sed 's/,/-/g'
 1-2-3-4
-a-b-c-d 
+a-b-c-d
 ```
 
 这是一个使用文件输入的示例：
@@ -40,7 +41,7 @@ Have a nice day
 # change 'day' to 'weekend'
 $ sed 's/day/weekend/g' greeting.txt
 Hi there
-Have a nice weekend 
+Have a nice weekend
 ```
 
 如果你想发出多个替换命令（或使用几个其他`sed`命令），这取决于所使用的命令。以下是一个示例，你可以使用`-e`选项或使用`;`字符分隔命令。
@@ -55,7 +56,7 @@ Have a nice weekend.
 # same thing with the -e option
 $ sed -e 's/day/weekend/g' -e 's/$/./' greeting.txt
 Hi there.
-Have a nice weekend. 
+Have a nice weekend.
 ```
 
 ### 原地编辑
@@ -74,7 +75,7 @@ $ sed -i.bkp 's/blue/green/g' ip.txt
 $ cat ip.txt
 deep green
 light orange
-green delight 
+green delight
 ```
 
 ### 过滤功能
@@ -102,7 +103,7 @@ a,b,c,d
 # change commas to hyphens if the input line does NOT contain '2'
 $ printf '1,2,3,4\na,b,c,d\n' | sed '/2/! s/,/-/g'
 1,2,3,4
-a-b-c-d 
+a-b-c-d
 ```
 
 你可以使用`q`和`Q`命令在找到匹配行后退出`sed`：
@@ -117,7 +118,7 @@ east
 # the matching line won't be printed in this case
 $ printf 'apple\nsea\neast\ndust' | sed '/st/Q'
 apple
-sea 
+sea
 ```
 
 除了正则表达式之外，还可以根据行号、地址范围等进行过滤。
@@ -136,10 +137,10 @@ $ seq 15 24 | sed '3,8d'
 15
 16
 23
-24 
+24
 ```
 
-如果需要对过滤行执行多个命令，可以将这些命令组合在 `{}` 字符内。以下是一个示例：
+如果需要对过滤行执行多个命令，可以将这些命令组合在`{}`字符内。以下是一个示例：
 
 ```sh
 # for lines containing 'e', replace 's' with '*' and 't' with '='
@@ -147,12 +148,12 @@ $ seq 15 24 | sed '3,8d'
 $ printf 'gates\nnot\nused\n' | sed '/e/{s/s/*/g; s/t/=/g}'
 ga=e*
 not
-u*ed 
+u*ed
 ```
 
 ### 正则表达式替换
 
-这里有一些基于正则表达式的替换示例。`-E` 选项启用 **ERE**（默认是 **BRE**）。在 `grep` 命令的 正则表达式 部分中讨论的大多数语法也适用于 `sed`。
+这里有一些基于正则表达式的替换示例。`-E`选项启用`ERE`（默认是`BRE`）。在`grep`命令的正则表达式部分中讨论的大多数语法也适用于`sed`。
 
 ```sh
 # replace all sequences of non-digit characters with '-'
@@ -180,40 +181,38 @@ Hello There. How Are You?
 # replace only the third matching occurrence
 $ echo 'apple:123:banana:fig' | sed 's/:/-/3'
 apple:123:banana-fig
+
 # change all ':' to ',' only from the second occurrence
 $ echo 'apple:123:banana:fig' | sed 's/:/,/2g'
-apple:123,banana,fig 
+apple:123,banana,fig
 ```
 
-`/` 字符通常用作正则表达式的分隔符。但除了反斜杠和换行符之外，任何其他字符都可以用作替代。这有助于避免或减少对分隔符字符进行转义的需求。
+`/`字符通常用作正则表达式的分隔符。但除了反斜杠和换行符之外，任何其他字符都可以用作替代。这有助于避免或减少对分隔符字符进行转义的需求。
 
 ```sh
 $ echo '/home/learnbyexample/reports' | sed 's#/home/learnbyexample/#~/#'
 ~/reports
 
 $ echo 'home path is:' | sed 's,$, '"$HOME"','
-home path is: /home/learnbyexample 
+home path is: /home/learnbyexample
 ```
 
 ### 进一步阅读
 
-+   我的电子书 [使用 GNU sed 进行 CLI 文本处理](https://github.com/learnbyexample/learn_gnused)
+- 我的电子书[使用 GNU sed 进行 CLI 文本处理](https://github.com/learnbyexample/learn_gnused)
+  - 参见我的博客文章[GNU BRE/ERE 技巧表](https://learnbyexample.github.io/gnu-bre-ere-cheatsheet/)
+- [unix.stackexchange：使用 sed 和其他工具的常见搜索和替换示例](https://unix.stackexchange.com/q/112023/109046)
 
-    +   参见我的博客文章 [GNU BRE/ERE 技巧表](https://learnbyexample.github.io/gnu-bre-ere-cheatsheet/)
+## `awk`
 
-+   [unix.stackexchange: 使用 sed 和其他工具的常见搜索和替换示例](https://unix.stackexchange.com/q/112023/109046)
-
-## awk
-
-`awk` 是一种编程语言，广泛用于从命令行执行文本处理任务。`awk` 提供了与 `grep` 和 `sed` 命令支持的过滤功能类似的功能，以及一些更实用的特性。类似于许多命令行实用程序，`awk` 可以从 `stdin` 和文件接受输入。
+`awk`是一种编程语言，广泛用于从命令行执行文本处理任务。`awk`提供了与`grep`和`sed`命令支持的过滤功能类似的功能，以及一些更实用的特性。类似于许多命令行实用程序，`awk`可以从`stdin`和文件接受输入。
 
 ### 正则表达式过滤
 
 为了便于从命令行使用编程功能，有一些快捷方式，例如：
 
-+   `awk '/regexp/'` 是 `awk '$0 ~ /regexp/{print $0}'` 的快捷方式
-
-+   `awk '!/regexp/'` 是 `awk '$0 !~ /regexp/{print $0}'` 的快捷方式
+- `awk '/regexp/'`是`awk '$0 ~ /regexp/{print $0}'`的快捷方式。
+- `awk '!/regexp/'`是`awk '$0 !~ /regexp/{print $0}'`的快捷方式。
 
 ```sh
 # same as: grep 'at' and sed -n '/at/p'
@@ -227,36 +226,27 @@ what
 
 # lines containing 'e' followed by zero or more characters and then 'y'
 $ awk '/e.*y/' greeting.txt
-Have a nice day 
+Have a nice day
 ```
 
-### Awk 特殊变量
+### `awk`特殊变量
 
 下面简要描述了一些特殊变量的用法：
 
-+   `$0` 包含输入记录内容
-
-+   `$1` 第一字段
-
-+   `$2` 第二字段以及后续字段
-
-+   `FS` 输入字段分隔符
-
-+   `OFS` 输出字段分隔符
-
-+   `NF` 字段数
-
-+   `RS` 输入记录分隔符
-
-+   `ORS` 输出记录分隔符
-
-+   `NR` 整个输入的记录数（即行号）
-
-+   `FNR` 每个文件中的记录数
+- `$0`包含输入记录内容。
+- `$1`表示第一字段。
+- `$2`表示第二字段以及后续字段。
+- `FS`表示输入字段分隔符。
+- `OFS`表示输出字段分隔符。
+- `NF`表示字段数。
+- `RS`表示输入记录分隔符。
+- `ORS`表示输出记录分隔符。
+- `NR`表示整个输入的记录数（即行号）。
+- `FNR`表示每个文件中的记录数。
 
 ### 默认字段处理
 
-`awk` 会自动根据一个或多个由空格、制表符或换行符组成的序列将输入拆分为字段。此外，输入开头或结尾的任何这三个字符都会被修剪，不会成为字段内容的一部分。字段可以通过 `$N` 访问，其中 `N` 是您需要的字段编号。您也可以传递一个表达式而不是数字字面量来指定所需的字段。
+`awk`会自动根据一个或多个由空格、制表符或换行符组成的序列将输入拆分为字段。此外，输入开头或结尾的任何这三个字符都会被修剪，不会成为字段内容的一部分。字段可以通过`$N`访问，其中`N`是您需要的字段编号。您也可以传递一个表达式而不是数字字面量来指定所需的字段。
 
 这里有一些示例：
 
@@ -274,7 +264,7 @@ banana
 
 # print lines only if the last field is a negative number
 $ awk '$NF&LT0' table.txt
-blue cake mug shirt -7 
+blue cake mug shirt -7
 ```
 
 这里是一个应用特定字段替换操作的示例。
@@ -287,32 +277,34 @@ blue cake mug shirt -7
 $ awk '{gsub(/[aeiou]/, "", $1)} 1' table.txt
 brwn bread mat hair 42
 bl cake mug shirt -7
-yllw banana window shoes 3.14 
+yllw banana window shoes 3.14
 ```
 
 ### 条件和动作
 
-到目前为止的示例使用了构建典型 `awk` 单行脚本的一些不同方法。如果您还没有掌握语法，这个通用结构可能有所帮助：
+到目前为止的示例使用了构建典型`awk`单行脚本的一些不同方法。如果您还没有掌握语法，这个通用结构可能有所帮助：
 
 ```sh
-awk 'cond1{action1} cond2{action2} ... condN{actionN}' 
+awk 'cond1{action1} cond2{action2} ... condN{actionN}'
 ```
 
-如果没有提供条件，则始终执行操作。在块内，你可以提供多个用分号字符分隔的语句。如果没有提供操作，则默认情况下，如果条件评估为 *true*，则打印 `$0` 变量的内容。在单行中，通常使用 `1` 来表示 `true` 条件，作为打印 `$0` 内容的快捷方式（如前例所示）。如果没有操作，则可以使用分号来终止条件并开始另一个 `condX{actionX}` 片段。
+如果没有提供条件，则始终执行操作。在块内，你可以提供多个用分号字符分隔的语句。如果没有提供操作，则默认情况下，如果条件评估为`true`，则打印`$0`变量的内容。在单行中，通常使用`1`来表示`true`条件，作为打印`$0`内容的快捷方式（如前例所示）。如果没有操作，则可以使用分号来终止条件并开始另一个`condX{actionX}`片段。
 
-当你需要读取输入之前执行某些操作时，可以使用 `BEGIN{}` 块，而在所有输入处理完毕后执行某些操作时，可以使用 `END{}` 块。
+当你需要读取输入之前执行某些操作时，可以使用`BEGIN{}`块，而在所有输入处理完毕后执行某些操作时，可以使用`END{}`块。
 
 ```sh
 $ seq 2 | awk 'BEGIN{print "---"} 1; END{print "%%%"}'
 ---
 1
 2
-%%% 
+%%%
 ```
 
 ### 正则表达式字段处理
 
-如前所述，`awk` 会自动根据空格、制表符或换行符将输入拆分为字段，这些字段可以通过 `$N` 访问，其中 `N` 是你需要字段编号。你可以使用 `-F` 选项或分配 `FS` 变量来设置基于正则表达式的输入字段分隔符。使用 `OFS` 变量来设置输出字段分隔符。
+如前所述，`awk`会自动根据空格、制表符或换行符将输入拆分为字段，这些字段可以通过`$N`访问，其中`N`是你需要字段编号。你可以使用`-F`选项或分配`FS`变量来设置基于正则表达式的输入字段分隔符。使用`OFS`变量来设置输出字段分隔符。
+
+
 
 ```sh
 $ echo 'goal:amazing:whistle:kwality' | awk -F: '{print $1}'
@@ -327,7 +319,7 @@ $ echo "$s" | awk -F'[0-9]+' -v OFS=, '{print $1, $(NF-1)}'
 Sample,with 
 ```
 
-`FS` 变量允许你定义输入字段 *分隔符*。相比之下，`FPAT`（字段模式）允许你定义字段应由什么组成。
+`FS` 变量允许你定义输入字段分隔符。相比之下，`FPAT`（字段模式）允许你定义字段应由什么组成。
 
 ```sh
 # lowercase whole words starting with 'b'
@@ -342,9 +334,9 @@ $ echo "$s" | awk -v FPAT='"[^"]*"|[^,]*' '{print $2}'
 "fox,42" 
 ```
 
-### 记录分隔符
+## 记录分隔符
 
-默认情况下，换行符用作输入和输出记录分隔符。你可以使用 `RS` 和 `ORS` 变量来更改它们。
+默认情况下，换行符用作输入和输出记录分隔符。你可以使用`RS`和`ORS`变量来更改它们。
 
 ```sh
 # print records containing 'i' as well as 't'
@@ -365,11 +357,11 @@ $ seq 9 | awk '{ORS = NR%3 ? "-" : "\n"} 1'
 7-8-9 
 ```
 
-### 状态机
+## 状态机
 
-`condX{actionX}` 简略语法使得编写状态机更加简洁。这对于解决依赖于多个记录内容的问题非常有用。
+`condX{actionX}`简略语法使得编写状态机更加简洁。这对于解决依赖于多个记录内容的问题非常有用。
 
-以下是一个示例，打印匹配的行以及随后 `c` 行：
+以下是一个示例，打印匹配的行以及随后`c`行：
 
 ```sh
 # same as: grep --no-group-separator -A1 'blue'
@@ -385,7 +377,7 @@ green
 teal 
 ```
 
-考虑以下具有不同标记（包含 `start` 和 `end` 的行）的输入文件：
+考虑以下具有不同标记（包含`start`和`end`的行）的输入文件：
 
 ```sh
 $ cat uniform.txt
@@ -432,7 +424,7 @@ b
 c 
 ```
 
-以下是一个示例，仅当第一个记录包含 `ar` 且第二个记录包含 `nice` 时打印两个连续的记录：
+以下是一个示例，仅当第一个记录包含`ar`且第二个记录包含`nice`时打印两个连续的记录：
 
 ```sh
 $ awk 'p ~ /ar/ && /nice/{print p ORS $0} {p=$0}' uniform.txt
@@ -440,7 +432,7 @@ how are you
 have a nice day 
 ```
 
-### 两个文件处理
+## 两个文件处理
 
 本节重点介绍依赖于两个或多个文件内容的问题解决方法。这些通常基于比较记录和字段。以下示例将使用这两个文件：
 
@@ -455,17 +447,17 @@ Teal    Red
 White   White 
 ```
 
-用于在两个文件之间查找公共行的 *关键* 功能：
+用于在两个文件之间查找公共行的关键功能：
 
-+   对于两个文件作为输入，`NR==FNR` 仅在处理第一个文件时为 *true*
++   对于两个文件作为输入，`NR==FNR`仅在处理第一个文件时为true
 
-    +   `FNR` 是记录号，类似于 `NR`，但会为每个输入文件重置
+    +   `FNR`是记录号，类似于`NR`，但会为每个输入文件重置
 
-+   `next` 将跳过其余代码并获取下一个记录
++   `next`将跳过其余代码并获取下一个记录
 
-+   `a[$0]` 本身是一个有效的语句，在数组 `a` 中创建一个以 `$0` 为键的未初始化元素（如果键尚不存在）
++   `a[$0]`本身是一个有效的语句，在数组`a`中创建一个以`$0`为键的未初始化元素（如果键尚不存在）
 
-+   `$0 in a` 检查给定的字符串（此处为 `$0`）是否作为键存在于数组 `a` 中
++   `$0 in a`检查给定的字符串（此处为`$0`）是否作为键存在于数组`a`中
 
 ```sh
 # common lines, same as: grep -Fxf c1.txt c2.txt
@@ -482,11 +474,11 @@ Green
 Pink 
 ```
 
-> ![warning](img/b5314b4a0acf0f436c4bf59486793342.png) 注意，如果第一个文件为空，则 `NR==FNR` 逻辑将失败。有关解决方案，请参阅 [这个 unix.stackexchange 线程](https://unix.stackexchange.com/a/237110/109046)。
+> ![warning](img/b5314b4a0acf0f436c4bf59486793342.png) 注意，如果第一个文件为空，则`NR==FNR`逻辑将失败。有关解决方案，请参阅[这个 unix.stackexchange 线程](https://unix.stackexchange.com/a/237110/109046)。
 
-### 移除重复项
+## 移除重复项
 
-`awk '!a[$0]++'` 是最著名的 `awk` 单行命令之一。它在保留输入顺序的同时消除基于行的重复项。以下示例展示了这一功能的使用，以及逻辑是如何工作的。
+`awk '!a[$0]++'`是最著名的`awk`单行命令之一。它在保留输入顺序的同时消除基于行的重复项。以下示例展示了这一功能的使用，以及逻辑是如何工作的。
 
 ```sh
 $ cat purchases.txt
@@ -518,19 +510,19 @@ toothpaste
 soap 
 ```
 
-### 进一步阅读
+## 进一步阅读
 
-+   我的电子书 [使用 GNU awk 进行 CLI 文本处理](https://github.com/learnbyexample/learn_gnuawk)
++   我的电子书[使用 GNU awk 进行 CLI 文本处理](https://github.com/learnbyexample/learn_gnuawk)
 
-    +   参见我的博客文章 [GNU BRE/ERE 技巧表](https://learnbyexample.github.io/gnu-bre-ere-cheatsheet/)
+    +   参见我的博客文章[GNU BRE/ERE 技巧表](https://learnbyexample.github.io/gnu-bre-ere-cheatsheet/)
 
 +   [在线 gawk 手册](https://www.gnu.org/software/gawk/manual/)
 
-+   我的博客文章 [使用 GNU datamash 进行 CLI 计算](https://learnbyexample.github.io/cli-computation-gnu-datamash/)
++   我的博客文章[使用 GNU datamash 进行 CLI 计算](https://learnbyexample.github.io/cli-computation-gnu-datamash/)
 
 ## perl
 
-Perl 是一种具有众多内置功能和强大生态系统的脚本语言。Perl 单行命令可用于文本处理，类似于 `grep`、`sed`、`awk` 等。类似于许多命令行实用程序，`perl` 可以从 `stdin` 和文件参数接受输入。
+Perl 是一种具有众多内置功能和强大生态系统的脚本语言。Perl 单行命令可用于文本处理，类似于`grep`、`sed`、`awk`等。类似于许多命令行实用程序，`perl`可以从`stdin`和文件参数接受输入。
 
 ### 基本单行命令
 
@@ -547,13 +539,13 @@ $ printf 'gate\napple\nwhat\nkite\n' | perl -ne 'print if !/e/'
 what 
 ```
 
-`-e` 选项接受代码作为命令行参数。有许多快捷方式可以减少输入的字符数。在上面的示例中，已使用正则表达式来过滤输入。当未指定输入字符串时，测试是对特殊变量 `$_` 执行的，它包含当前输入行的内容。`$_` 也是许多函数（如 `print` 和 `length`）的默认参数。为了总结：
+`-e`选项接受代码作为命令行参数。有许多快捷方式可以减少输入的字符数。在上面的示例中，已使用正则表达式来过滤输入。当未指定输入字符串时，测试是对特殊变量`$_`执行的，它包含当前输入行的内容。`$_`也是许多函数（如`print`和`length`）的默认参数。为了总结：
 
-+   `/REGEXP/FLAGS` 是 `$_ =~ m/REGEXP/FLAGS` 的快捷方式
++   `/REGEXP/FLAGS`是`$_ =~ m/REGEXP/FLAGS`的快捷方式
 
-+   `!/REGEXP/FLAGS` 是 `$_ !~ m/REGEXP/FLAGS` 的快捷方式
++   `!/REGEXP/FLAGS`是`$_ !~ m/REGEXP/FLAGS`的快捷方式
 
-在下面的示例中，使用 `-p` 选项代替 `-n`。这有助于在处理每行输入后自动打印 `$_` 的值。
+在下面的示例中，使用`-p`选项代替`-n`。这有助于在处理每行输入后自动打印`$_`的值。
 
 ```sh
 # same as: sed 's/:/-/' and awk '{sub(/:/, "-")} 1'
@@ -567,39 +559,39 @@ $ printf '1:2:3:4\na:b:c:d\n' | perl -pe 's/:/-/g'
 a-b-c-d 
 ```
 
-> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 与 `sed` 类似，你可以使用 `-i` 选项进行原地编辑。
+> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 与`sed`类似，你可以使用`-i`选项进行原地编辑。
 
 ### Perl 特殊变量
 
 以下简要描述了一些特殊变量的用途：
 
-+   `$_` 包含输入记录内容
++   `$_`包含输入记录内容
 
-+   `@F` 包含字段内容的数组（使用 `-a` 和 `-F` 选项）
++   `@F`包含字段内容的数组（使用`-a`和`-F`选项）
 
-    +   `$F[0]` 第一个字段
+    +   `$F[0]`第一个字段
 
-    +   `$F[1]` 第二字段等等
+    +   `$F[1]`第二字段等等
 
-    +   `$F[-1]` 最后一个字段
+    +   `$F[-1]`最后一个字段
 
-    +   `$F[-2]` 第二个最后一个字段等等
+    +   `$F[-2]`第二个最后一个字段等等
 
-    +   `$#F` 最后一个字段的索引
+    +   `$#F`最后一个字段的索引
 
-+   `$.` 记录数（即行号）
++   `$.`记录数（即行号）
 
-+   `$1` 对第一个捕获组的反向引用
++   `$1`对第一个捕获组的反向引用
 
-+   `$2` 对第二个捕获组的反向引用等等
++   `$2`对第二个捕获组的反向引用等等
 
-+   `$&` 对整个匹配部分的反向引用
++   `$&`对整个匹配部分的反向引用
 
 你将在接下来的部分中看到使用此类变量的示例。
 
 ### 自动拆分
 
-这里有一些基于特定字段而不是整行的示例。`-a` 选项将导致输入行根据空白字符分割，字段内容可以使用特殊数组变量 `@F` 访问。将抑制前导和尾随空白字符，因此不可能有空字段。
+这里有一些基于特定字段而不是整行的示例。`-a`选项将导致输入行根据空白字符分割，字段内容可以使用特殊数组变量`@F`访问。将抑制前导和尾随空白字符，因此不可能有空字段。
 
 ```sh
 $ cat table.txt
@@ -624,7 +616,7 @@ Blue cake mug shirt -7
 yellow banana window shoes 3.14 
 ```
 
-当你在双引号内使用数组（如上面示例中的 `"@F"`），字段之间将用空格字符打印。`join` 函数是打印数组内容并使用自定义字段分隔符的一种方法。以下是一个示例：
+当你在双引号内使用数组（如上面示例中的`"@F"`），字段之间将用空格字符打印。`join`函数是打印数组内容并使用自定义字段分隔符的一种方法。以下是一个示例：
 
 ```sh
 # print contents of @F array with colon as the separator
@@ -634,11 +626,11 @@ blue:cake:mug:shirt:-7
 yellow:banana:window:shoes:3.14 
 ```
 
-> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 在上述示例中，使用了 `-l` 选项来从输入行中移除记录分隔符（默认为换行符）。当使用 `print` 函数时，移除的记录分隔符将被添加回。
+> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 在上述示例中，使用了`-l`选项来从输入行中移除记录分隔符（默认为换行符）。当使用`print`函数时，移除的记录分隔符将被添加回。
 
 ### 正则表达式字段分隔符
 
-你可以使用 `-F` 选项指定用于输入字段分隔的正则表达式模式。
+你可以使用`-F`选项指定用于输入字段分隔的正则表达式模式。
 
 ```sh
 $ echo 'apple,banana,cherry' | perl -F, -lane 'print $F[1]'
@@ -651,7 +643,7 @@ Sample,string,with,numbers
 
 ### 强大功能
 
-当我需要强大的正则表达式功能并使用大量的内置函数和库时，我选择使用 Perl 而不是 `grep`、`sed` 和 `awk`。
+当我需要强大的正则表达式功能并使用大量的内置函数和库时，我选择使用 Perl 而不是`grep`、`sed`和`awk`。
 
 这里有一些示例展示了 BRE/ERE 中没有的正则表达式功能：
 
@@ -672,6 +664,8 @@ $ echo "$s" | perl -pe 's#\bapple\b(*SKIP)(*F)|\w+#($&)#g'
 ```
 
 下面是一些展示内置功能的示例：
+
+
 
 ```sh
 # filter fields containing 'in' or 'it' or 'is'
@@ -698,11 +692,9 @@ $ echo "$s" | perl -MList::Util=uniq -F, -lane 'print join ",", uniq @F'
 
 ### 进一步阅读
 
-+   [perldoc: Perl 简介](https://perldoc.perl.org/perlintro)
-
-+   [perldoc: 正则表达式教程](https://perldoc.perl.org/perlretut)
-
-+   我的电子书 [Perl One-Liners Guide](https://github.com/learnbyexample/learn_perl_oneliners)
++ [perldoc: Perl 简介](https://perldoc.perl.org/perlintro)
++ [perldoc: 正则表达式教程](https://perldoc.perl.org/perlretut)
++ 我的电子书 [Perl One-Liners Guide](https://github.com/learnbyexample/learn_perl_oneliners)
 
 ## 练习
 

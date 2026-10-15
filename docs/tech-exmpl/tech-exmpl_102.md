@@ -1,12 +1,13 @@
+
 # 求一个数字的各位数字之和程序
 
 > 原文：[`techbyexample.com/add-all-digits-number-program/`](https://techbyexample.com/add-all-digits-number-program/)
 
-## **概述**
+## 概述
 
 目标是反复将一个数字的所有数字相加，直到结果只剩一个数字。
 
-例如
+例如：
 
 ```go
 Input: 453
@@ -16,7 +17,7 @@ Step 2: 1+2 =3
 Output: 3
 ```
 
-另一个例子
+另一个例子：
 
 ```go
 Input: 45
@@ -25,9 +26,9 @@ Step 1: 4+5 = 9
 Output: 9
 ```
 
-## **程序**
+## 程序
 
-这是相同程序的代码
+这是相同程序的代码：
 
 ```go
 package main
@@ -67,7 +68,7 @@ func main() {
 }
 ```
 
-**输出**
+**输出：**
 
 ```go
 3

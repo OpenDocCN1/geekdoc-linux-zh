@@ -1,15 +1,16 @@
+
 # SHELL PROGRAMS 1029
 
 Following is a top-level design for this program:
 
-+   1. Initialize. This involves a number of steps, such as setting the counts of the number of questions asked so far and the number of correct and wrong answers to zero. It also sets up the program to trap CONTROL-C.
+1. Initialize. This involves a number of steps, such as setting the counts of the number of questions asked so far and the number of correct and wrong answers to zero. It also sets up the program to trap `CONTROL-C`.
 2. Present the user with a choice of subjects and get the user's response.
 3. Change to the corresponding subject directory.
 4. Determine the questions to be asked (that is, the filenames in that directory). Arrange them in random order.
 5. Repeatedly present questions and ask for answers until the quiz is over or is interrupted by the user.
 6. Present the results and exit.
 
-Clearly some of these steps (as step 3) are simple, whereas others (as as step 4) are complex and worthy of analysis on their own. Use shell functions for any complex step, and use the trap to build a user interrupt.
+Clearly some of these steps (as step 3) are simple, whereas others (as step 4) are complex and worthy of analysis on their own. Use shell functions for any complex step, and use the `trap` to build a user interrupt.
 
 Here is a skeleton version of the program with empty shell functions:
 

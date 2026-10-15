@@ -1,16 +1,7 @@
+
 # Linux 完全手册 (第5版) - 2020年4月
 
-
-
-
-
-
-
 ![](img/f8aca09bc266ba3d122c77a820ff023b_0_0.png)
-
-
-
-
 ![](img/f8aca09bc266ba3d122c77a820ff023b_1_0.png)
 ![](img/f8aca09bc266ba3d122c77a820ff023b_1_1.png)
 ![](img/f8aca09bc266ba3d122c77a820ff023b_1_2.png)
@@ -28,10 +19,8 @@
 ![](img/f8aca09bc266ba3d122c77a820ff023b_1_14.png)
 ![](img/f8aca09bc266ba3d122c77a820ff023b_1_15.png)
 
-
 > “这就是 Linux 如此优秀的原因：你投入了一些努力，这些努力就会成倍增长。这是一个正反馈循环。”
-
-— 林纳斯·托瓦尔兹（Linux 内内核开发者）
+> — 林纳斯·托瓦尔兹（Linux 内内核开发者）
 
 Linux 无处不在。它作为 Web 服务器背后的主要操作系统驱动着互联网，它驱动着航天器，它是世界上最超级计算机的操作系统，并被用于智能电视和移动设备。为什么？因为它极其稳定、速度极快，而且完全免费。
 
@@ -39,33 +28,16 @@ Linux 无处不在。它作为 Web 服务器背后的主要操作系统驱动着
 
 Linux 关乎自由。摆脱封闭系统的束缚，自由地选择你喜欢的电脑，修改它并使用它。通过这本书，你将掌握 Linux 的技巧，并进入 Linux 世界。自由。
 
-
-
-
-
-
-
-
-
-
-
-
 ![](img/f8aca09bc266ba3d122c77a820ff023b_3_0.png)
-
-
 ![](img/f8aca09bc266ba3d122c77a820ff023b_4_0.png)
 
 - 116 你知道吗...调试
-
-```
-
-
 
 ## 为什么选择 Linux？
 
 对于许多用户来说，Linux 意味着自由。摆脱其他操作系统“围墙花园”式的自由，随心所欲更改和使用操作系统的自由，以及免于任何形式的许可或付费。不过，Linux 的意义远比你想象的要多。
 
-## 免费开源
+### 免费开源
 
 对于那些想要尝试新事物的人，Linux 是一个极佳的解决方案。系统的效率、应用程序可用性和稳定性只是其中的原因之一。
 
@@ -102,15 +74,17 @@ $ sudo apt-get update
 $ sudo apt-get install build-essential
 ```
 
+
+
 ## 最佳 Linux 发行版
 
-有很多版本的 Linux可用，被称为发行版（Distributions）。每个版本都有不同的理念和方法。这里有五个值得尝试的发行版，以及你可以在哪里获取它们。
+有很多版本的 Linux 可用，被称为发行版（Distributions）。每个版本都有不同的理念和方法。这里有五个值得尝试的发行版，以及你可以在哪里获取它们。
 
-# 开始使用 Linux
+### 开始使用 Linux
 
 大多数发行版的安装过程都是相似的。你从网站下载磁盘镜像，将其刻录到光盘或创建 USB 闪盘安装程序。只需务必为你的硬件选择正确的发行版，并仔细阅读说明。
 
-## LINUX MINT
+#### LINUX MINT
 
 迄为止最流行的 Linux 发行版是 Linux Mint。Mint 起于 2006 年，作为最流行的 Ubuntu 的替代品。虽然它基于 Ubuntu 的长期支持（LTS），但 Linux Mint 采取了不同的方向，为用户提供了更好的整体体验。
 
@@ -120,27 +94,23 @@ Cinnamon 是一个图形丰富的环境；MATE 没那么华丽，但在更多种
 
 在整个教程过程中，我们将使用 Cinnamon 版本；但你可以根据意愿尝试任何其他桌面环境。事实上，我建议你花时间尝试不同的桌面环境，看看哪个最适合你。
 
-www.linuxmint.com
+`www.linuxmint.com`
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_9_0.png)
 
-## UBUNTU
+#### UBUNTU
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_9_1.png)
 
-
-
-
-
-## 你将需要的设备
+### 你将需要的设备
 
 在 PC 上成功安装 Linux Mint 的系统要求异常地低，因此即使是几年前的电脑也能很好地运行这个发行版。不过，在继续之前，值得检查一下你是否已经准备好了一切。
 
-## MINT 的配要素
+#### MINT 的配要素
 
 在我们开始阅读这本书之前，这里是安装和运行 Linux Mint 所需的工具。你有多种选择，所以请花些时间看看哪种方式最适合你。
 
-## 系统要求
+#### 系统要求
 
 Linux Mint 的最低系统要求如下：
 - CPU – 700MHz
@@ -150,7 +120,7 @@ Linux Mint 的最低系统要求如下：
 
 显然，你拥系统越好，体验就会越好，速度也越快。
 
-## USB 安装
+#### USB 安装
 
 你可以通过 USB 或 DVD 在你的电脑上安装 Linux Mint。我们稍后会介绍每种方法，但如果你已经熟悉该过程，或者正考虑使用 USB 并正在收集所需的硬件，那么你将一个至少 4GB 的 USB 盘来存储 Linux Mint 的 ISO 镜像。
 
@@ -158,61 +128,57 @@ Linux Mint 的最低系统要求如下：
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_11_1.png)
 
-## DVD 安装
+#### DVD 安装
 
 使用 DVD 安装 Linux Mint 只需要一张空盘。当然，在将 ISO 镜像传输或刻录到光盘之前，你还需要一个光驱（DVD 刻录机）。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_11_2.png)
 
-## 虚拟环境
+#### 虚拟环境
 
-安装到虚拟环境中是测试和使用 Linux 发行版的常用方法。Linux Mint 在虚拟环境中的运行效果非常好，但稍后会详细介绍。有很多不同的虚拟环境应用可用；然而，Oracle 的 VirtualBox 是最容易安装的之一。你可以在 www.virtualbox.org 找到最新版本。
+安装到虚拟环境中是测试和使用 Linux 发行版的常用方法。Linux Mint 在虚拟环境中的运行效果非常好，但稍后会详细介绍。有很多不同的虚拟环境应用可用；然而，Oracle 的 VirtualBox 是最容易安装的之一。你可以在 `www.virtualbox.org` 找到最新版本。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_12_0.png)
 
-## 网络连接
+#### 网络连接
 
 不言而喻，网络连接对于确保 Linux Mint 保持最新的更新和补丁，以及安装更多软件至关重要。虽然使用 Linux Mint 不需要网络连接，但你将错过该发行版中提供的大量免费软件。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_12_1.png)
 
-## MAC 硬件
+#### MAC 硬件
 
 虽然 Linux Mint 可以安装在 Mac 上，但有一种观点建议 Mac 所有者使用虚拟环境，例如 VirtualBox 或 Parallels；而且，何不呢，macOS 是一个很棒的操作系统。如果你想为旧款 Mac 注入新生命，请确保它是 Intel CPU 型号而不是 Power PC 型号。但要注意，它不像安装在 PC 上那样完全免费。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_12_2.png)
 
-## 桌面环境
+#### 桌面环境
 
 Linux Mint 有几个不同的版本，或称为“口味”：Cinnamon、MATE 和 Xfce；这些版本也有 32 位和 64 位之。但这一切意味着什么？你安装时应该选择哪个版本呢？
 
-## 哪种 MINT？
+#### 哪种 MINT？
 
 桌面环境是你用于与 Linux 系统交互的图形界面。正如 Windows 的图形桌面界面一样，Linux Mint 提供了多种选择：Cinnamon、MATE 和 Xfce；这些版本也有 32 位和 64 位之。桌面环境是你用于与 Linux 系统交互的图形界面。桌面环境（GUI）是用户交互界面。图形界面（GUI）是你与系统交互的方式。由于软件套件，桌面环境同样包含文件管理器。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_13_0.png)
 
-## CINNAMON 的
+#### CINNAMON 的
 
 Cinnamon 具有热角功能，点击桌面的某个角落可以执行特定任务，例如显示工作区、显示所有窗口或运行命令。热角可以让桌面更加高效。在这里，我们列了一些功能，帮助你判断它是否适合你。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_14_0.png)
 
-## 最佳 MATE
+#### 最佳 MATE
 
 MATE 简单用且直观。与 Cinnamon 相比，它看起来有些过时，但这只是表面。MATE 有许多值得喜欢的地方。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_14_1.png)
 
-## 无胆固醇桌面环境
+#### 无胆固醇桌面环境
 
 Xfce 起源于 1996 年的通用桌面环境（CDE）。从那时以后它更改了几次，现在简单称为 Xfce，并被称为“无胆固醇桌面环境”。
 
-
-
-
-
-# 选择哪个发行版？
+### 选择哪个发行版？
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_16_0.png)
 
@@ -241,14 +207,14 @@ Xfce 起源于 1996 年的通用桌面环境（CDE）。从那时以后它更改
 | 选项 | |
 | 终端 | |
 
-# 开始使用 Linux
+### 开始使用 Linux
 
 > “在真正的开源世界中，你有权掌控自己的命运。”
->– Linus Torvalds（Linux 内核开发者）
+> – Linus Torvalds（Linux 内核开发者）
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_17_0.png)
 
-# 开始使用 Linux
+### 开始使用 Linux
 
 这些谈论 Linux 多么好固然很好，但如何把它安装到你的电脑上呢？安装 Linux 非常简单，但有几种选项供你选择。本节将介绍你如何下载 Linux ISO、将其安装在 PC 上作为你的主操作系统，甚至如何安装虚拟环境。
 
@@ -261,11 +227,11 @@ Xfce 起源于 1996 年的通用桌面环境（CDE）。从那时以后它更改
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_18_0.png)
 
-## 在 Windows 上创建 Linux 安装器
+#### 在 Windows 上创建 Linux 安装器
 
 你需要将下载的 ISO 传输到 DVD 或 USB 密钥上才能将其安装到计算机上。这将现场环境，允许你在安装之前测试操作系统，但你首先需要创建启动介质。
 
-## DVD 启动介质
+##### DVD 启动介质
 
 我们正在使用 Windows 10 将 ISO 传输到 DVD。如果你使用的是 Windows 7 及更高版本，过程极其简单。
 
@@ -275,14 +241,14 @@ Xfce 起源于 1996 年的通用桌面环境（CDE）。从那时以后它更改
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_19_0.png)
 
-## USB 启动介质
+##### USB 启动介质
 
 USB 介质比 DVD 快且通常更方便，因为大多数现代 PC 没有安装光驱。传输镜像的过程很容易，但你需要一个第三方应用程序和一个 4GB 或更大的 USB 闪盘。
 
-### **第 1 步**
-首先打开浏览器并访问 rufus.ie。向下滚动页面到“下载”，找到最新版本的 Rufus。点击链接开始下载。
+###### **第 1 步**
+首先打开浏览器并访问 `rufus.ie`。向下滚动页面到“下载”，找到最新版本的 Rufus。点击链接开始下载。
 
-### **第 4 步**
+###### **第 4 步**
 准备好后，点击 Rufus 底部的“启动”按钮。这可能会打开一个对话框询问使用新版本的 Syslinux。Syslinux 是一组引导加载器，允许你的电脑从 USB 闪盘访问并启动。点击“确定”继续。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_20_0.png)
@@ -296,10 +262,10 @@ USB 介质比 DVD 快且通常更方便，因为大多数现代 PC 没有安装�
 
 ![](img..._20_1.png)
 
-### **第 2 步**
+###### **第 2 步**
 双击下载的 Rufus 可执行文件。在 Windows 安全问题处选择“是”，在检查更新时选择“是”。启动 Rufus 后，检查它是否正确识别了你的闪盘；如果没有，只需拔掉并重新启动。
 
-### **第 5 步**
+###### **第 5 步**
 下一步是你想让 ISO 写入 USB 闪盘的镜像。两种方法在不同情况下都可行，但推荐的 ISO 模式更受欢迎。确保 ISO 文件存在并点击“确定”继续。
 
 ![](img..._20_2.png)
@@ -314,23 +280,19 @@ USB 介质比 DVD 快且通常更方便，因为大多数现代 PC 没有安装�
 
 ![](img..._20_3.png)
 
-### **第 3 步**
+###### **第 3 步**
 起初 Rufus 界面可能有点混乱，但不用担心，它很简单。首先，点击“磁盘或 ISO 镜像 (选择)”下拉菜单旁边的“选择”按钮。这将启动 Windows 资源管理器窗口，你可以在其中找到并选择 ISO。
 
-### **第 6 步**
+###### **第 6 步**
 ISO 将被传输到 USB 闪盘。这不会花费太长时间，取决于你找到 USB 闪盘的速度。在过程中，Rufus 会在 Windows 资源管理器中自动打开 USB 闪盘；然后你可以根据需要查看或关闭它。过程完成后，点击“启动”按钮。
 
 ![](img..._20_4.png)
 
-
-
-
-
-#在 PC 上安装 Linux
+### 在 PC 上安装 Linux
 
 大多数 Linux 发行版以 Live 环境（Live Environment）的形式提供。这意味着你可以从创建的 DVD 或 USB 中启动一个真实的、功能完备的发行。让我们来看看它是如何工作的，以及之后你从哪里安装 Linux。
 
-## UEFI BIOS
+#### UEFI BIOS
 
 统一可扩展固件接口（UEFI）用于在 PC 启动过程中识别和保护电脑。它取代了传统的 BIOS，但在安装 Linux 时可能会导致问题。
 
@@ -346,23 +308,28 @@ ISO 将被传输到 USB 闪盘。这不会花费太长时间，取决于你找�
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_21_1.png)
 
-# 安装 Linux
+### 安装 Linux
 
 一旦 Live 环境启动，你就可以将该发行版安装到你的电脑上。环顾四周，当你准备好时，寻找桌面上的“安装”（Install）选项。
 
-### 步骤 1 只要你已连接到互联网（如果没有，请先连接）并处于 Live 环境中，双击桌面上的 Linux Mint 图标开始安装过程。其他发行版当然会显示它们的名称，但过程是一样的。准备好后点击“继续”（Continue）。
+#### 步骤 1
+只要你已连接到互联网（如果没有，请先连接）并处于 Live 环境中，双击桌面上的 Linux Mint 图标开始安装过程。其他发行版当然会显示它们的名称，但过程是一样的。准备好后点击“继续”（Continue）。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_22_0.png)
 
-### 步骤 2 虽然大多数 Linux 发行版的安装过程非常相似，但某些版本在安装过程中会提供不同的问题。这些问题并不困难，没有什么深奥的技术，但某些如“安装第三方软件”的问题可能会让人困惑。你可以点击“继续”，但如果你不确定，请准备好连接了网络的设备以便咨询任何问题。
+#### 步骤 2
+虽然大多数 Linux 发行版的安装过程非常相似，但某些版本在安装过程中会提供不同的问题。这些问题并不困难，没有什么深奥的技术，但某些如“安装第三方软件”的问题可能会让人困惑。你可以点击“继续”，但如果你不确定，请准备好连接了网络的设备以便咨询任何问题。
 
-### 步骤 3 安装新操作系统时，建议擦除旧操作系统并替换为新系统。当你到达安装过程的这一阶段时，确保选择了“擦除磁盘并安装 Linux...”（Erase disk and install Linux...）选项。注意：这将完全清除你电脑上的 Windows 10，请确保你已备份个人文件和数据。
+#### 步骤 3
+安装新操作系统时，建议擦除旧操作系统并替换为新系统。当你到达安装过程的这一阶段时，确保选择了“擦除磁盘并安装 Linux...”（Erase disk and install Linux...）选项。注意：这将完全清除你电脑上的 Windows 10，请确保你已备份个人文件和数据。
 
-### 步骤 4 在安装过程开始之前，系统会询问你是否选择确保硬盘擦除是正确的。这是你最后一次退出的机会。如果你不介意擦除所有内容并重新开始 Linux Mint，请点击“继续”。如果你需要将文件备份到 Linux 盘/USB，请重启并重新开始。
+#### 步骤 4
+在安装过程开始之前，系统会询问你是否选择确保硬盘擦除是正确的。这是你最后一次退出的机会。如果你不介意擦除所有内容并重新开始 Linux Mint，请点击“继续”。如果你需要将文件备份到 Linux 盘/USB，请重启并重新开始。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_22_1.png)
 
-### 步骤 5 最终，你会被要求设置 Linux 用户名和密码。输入你的姓名（Name）开始，以及计算机名称（Computer Name，即在网络上的识别名称）。接下来选择一个用户名（Username），然后是密码（Password）。你可以点击“登录自动化”（Login Automation）选项，但暂时留留“进入文件夹”（Entry Folder）选项。
+#### 步骤 5
+最终，你会被要求设置 Linux 用户名和密码。输入你的姓名（Name）开始，以及计算机名称（Computer Name，即在网络上的识别名称）。接下来选择一个用户名（Username），然后是密码（Password）。你可以点击“登录自动化”（Login Automation）选项，但暂时留留“进入文件夹”（Entry Folder）选项。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_22_2.png)
 
@@ -372,33 +339,30 @@ ISO 将被传输到 USB 闪盘。这不会花费太长时间，取决于你找�
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_22_3.png)
 
-### 步骤 6 安装过程可能很快，可能会有更多问题需要回答，也可能只是根据你的偏好开始安装 Linux。无论如何，你最终都可以“继续”Live 环境或“重启”到新安装的操作系统。如果你准备好使用 Linux，请点击“立即重启”（Restart Now）。
+#### 步骤 6
+安装过程可能很快，可能会有更多问题需要回答，也可能只是根据你的偏好开始安装 Linux。无论如何，你最终都可以“继续”Live 环境或“重启”到新安装的操作系统。如果你准备好使用 Linux，请点击“立即重启”（Restart Now）。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_22_4.png)
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_22_5.png)
 
-# 安装虚拟机环境
+### 安装虚拟机环境
 
 虚拟机环境是一个模拟的计算机系统。通过虚拟机，你可以模拟一台标准 PC 并在上面安装任何其他操作系统，而不会影响电脑上已安装的系统。这是测试和使用 Linux 的极佳方法，同时你仍保留 Windows 10 作为主操作系统。
 
-# 使用虚拟
+### 使用虚拟
 
 使用虚拟机（VM）会消耗电脑的资源：内存、硬盘空间、处理器使用等。在开始之前，确保你有足够的资源。
 
-- 步骤 1 在本例中我们使用 VirtualBox，因为它是最上手的环境之一。访问 virtualbox.org 并点击“下载 VirtualBox”。这将带你进入主下载页面。找到适用于你系统的主机（Windows、Mac 或 Linux，主机即当前安装的操作系统）并点击链接下载。
+- 步骤 1 在本例中我们使用 VirtualBox，因为它是最上手的环境之一。访问 `virtualbox.org` 并点击“下载 VirtualBox”。这将带你进入主下载页面。找到适用于你系统的主机（Windows、Mac 或 Linux，主机即当前安装的操作系统）并点击链接下载。
 
 - 步骤 3 下载正确的安装包并在安装它们之前，你需要确保正在使用的电脑可以托管虚拟机。要做到这一点，重启电脑并进入 BIOS。当电脑启动时，按 F2 或相应的键进入设置（Setup）。
 
-
-
-
-
-## 在虚拟环境中安装 Linux
+### 在虚拟环境中安装 Linux
 
 随着 Oracle VirtualBox 运行就绪，接下来的任务是创建一个虚拟机（VM）环境，并在其中安装 Linux。此过程不会影响你当前已安装的操作系统，这正是为什么虚拟机是一个极佳选择。
 
-### 创建虚拟机
+#### 创建虚拟机
 
 在创建虚拟机时有很多选项可以选择。现在，让我们设置一个足够运行 Mint Cinnamon 并正常执行的虚拟机。
 
@@ -442,10 +406,10 @@ ISO 将被传输到 USB 闪盘。这不会花费太长时间，取决于你找�
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_26_5.png)
 
-# 了解 Linux
+### 了解 Linux
 
 > “任何人都可以构建快速处理器。技巧是构建快速系统。”
-— Seymour Cray，工程师/超级计算机创始人
+> — Seymour Cray，工程师/超级计算机创始人
 
 我们在这里使用 Linux Mint 作为指南，因为它易于使用且非常适合 Windows 用户。它也是最完善、文档最好的发行版之一，并拥有丰富的配置选项。
 
@@ -463,9 +427,9 @@ ISO 将被传输到 USB 闪盘。这不会花费太长时间，取决于你找�
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_28_0.png)
 
-## Cinnamon 菜单简介
+#### Cinnamon 菜单简介
 
-## CINNAMON VIRTUALBOX修复
+#### CINNAMON VIRTUALBOX修复
 
 你已经查看了一些功能，使用插入、删除和弹出，但也有可以应用于字符串的功能。
 
@@ -485,7 +449,7 @@ ISO 将被传输到 USB 闪盘。这不会花费太长时间，取决于你找�
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_29_2.png)
 
-## Cinnamon 菜单简介
+#### Cinnamon 菜单简介
 
 现在 Virtualbox 的渲染问题已经解决了，让我们看看菜单以及它是如何工作的。记住，这只是 Cinnamon，其他发行版的外观和行为会有不同。
 
@@ -509,15 +473,11 @@ ISO 将被传输到 USB 闪盘。这不会花费太长时间，取决于你找�
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_30_3.png)
 
-
-
-
-
-## 导航 Cinnamon 桌面
+#### 导航 Cinnamon 桌面
 
 每个桌面环境的行为都不同。有些桌面环境（DE）提供可以自定义并放置在桌面上的部件，而另一些则追求简洁、锐利的外观，以保持一切运行尽可能快速。让我们来看看 Cinnamon 桌面提供了哪些功能。
 
-## 一丝辛香
+##### 一丝辛香
 
 Cinnamon 桌面环境是风格与性能的完美结合。它有很多迷人的之处，这也是为什么它是如此受欢迎的原因。
 
@@ -571,169 +531,39 @@ Cinnamon 桌面环境是风格与性能的完美结合。它有很多迷人的�
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_32_2.png)
 
-## 安装 Linux Mint 后要做的事情
+#### 安装 Linux Mint 后要做的事情
 
 Linux Mint 是一个开箱即用的精致发行版，但与大多数 Linux 发行版一样，通过一些调整可以改进它的运行方式。虽然这些是针对 Mint 的特定调整，但大多数可以适用于其他发行版。
 
-## LINUX 调整
+##### LINUX 调整
 
 这些安装后的操作有些是强烈建议的，而另一些只是方便的补充，用于微调系统或添加自定义功能。
 
-### 第 1 步 第一个也是最重要的安装后操作是更新系统。点击桌面右下角、时间和日期旁面板上的图标。这将启动“更新管理器”。
+###### 第 1 步
+第一个也是最重要的安装后操作是更新系统。点击桌面右下角、时间和日期旁面板上的图标。这将启动“更新管理器”。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_33_0.png)
 
-### 第 3 步 点击 OK 按钮，你就可以看到几个准备好安装的更新。在更新之前，点击蓝色条 OK 切换到本地镜像。这将打开“软件源”选项。在“镜像”部分，点击“主”和“基础”下拉菜单，选择距离你当前位置最近的服务器。
+###### 第 3 步
+点击 OK 按钮，你就可以看到几个准备好安装的更新。在更新之前，点击蓝色条 OK 切换到本地镜像。这将打开“软件源”选项。在“镜像”部分，点击“主”和“基础”下拉菜单，选择距离你当前位置最近的服务器。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_33_1.png)
 
-### 第 2 步 Linux Mint 为用户提供了三级更新策略：不要弄坏我的电脑、优化稳定性与安全以及始终更新一切。推荐选项是“优化稳定性与安全”，它只更新不影响操作系统关键元素的安全补丁。阅读下方的描述以了解中间和推荐选项。
+###### 第 2 步
+Linux Mint 为用户提供了三级更新策略：不要弄坏我的电脑、优化稳定性与安全以及始终更新一切。推荐选项是“优化稳定性与安全”，它只更新不影响操作系统关键元素的安全补丁。阅读下方的描述以了解中间和推荐选项。
 
-### 第 4 步 点击“更新”按钮缓存并下载“软件源”窗口。在更新管理器中，点击“安装更新”图标并输入密码。更新会自动应用并重新启动更新管理器，此时会有更多更新。再次点击“安装更新”，确认任何消息并等待完成。
+###### 第 4 步
+点击“更新”按钮缓存并下载“软件源”窗口。在更新管理器中，点击“安装更新”图标并输入密码。更新会自动应用并重新启动更新管理器，此时会有更多更新。再次点击“安装更新”，确认任何消息并等待完成。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_33_2.png)
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_33_3.png)
 
-### 第 5 步 桌面底部有一个面板，我们已经查看了面板的一个部分：菜单。如果你在面板的任何地方（面板应用以外的地方）右键点击，你就会看到一个菜单，允许以不同的方式编辑和添加面板。
-
-### 第 8 步 在桌上右键点击，弹出上下文菜单，选择“自定义”，然后点击新窗口底部的“桌面设置”链接。这会打开一个窗口，你可以在其中编辑图标。如果你使用的是连接了多个显示器的设置，还可以选择由哪个显示器显示图标。
-
-![](img/f8aca09bc266ba3d122c77a820ff023b_32_0.png)
-
-### 第 6 步 例如，如果你点击“修改面板”，你可以移除、删除面板、添加新面板并清除当前存在的小部件。小部件本身是一种专门设计用于运行并适配 Cinnamon 面板的应用程序。
-
-### 第 9 步 点击菜单并输入“系统设置”，打开“系统设置”。在这里，你可以控制并编辑 Linux Mint Cinnamon 的外观和工作方式，例如添加所有新用户、管理面板以及启用辅助功能。
-
-- 主题
-- 系统设置
-- 故障排除
-- 修改面板
-- 移除面板
-- 添加面板
-- 移动面板
-- 复制小部件配置
-- 清除所有小部件
-
-![](img/f8aca09bc266ba3d122c77a820ff023b_32_1.png)
-
-### 第 7 步 如果你在 Cinnamon 桌面任何地方右键点击，你会看到一组选项，允许你进一步添加、编辑或查看桌面内容。这与 Windows 非常相似，这也是为什么 Mint 是 Windows 用户的良好选择。
-
-### 第 10 步 简而言之，Linux Mint Cinnamon 可以配置得非常精美。关于它可以有多好以及可以实现什么，有很多例子。你可以根据需要变得复杂或简单，添加不同的组件和动画，或者仅仅保持整洁易读。
-
-- 创建文件夹
-- 创建新文档
-- 小部件
-- 更改桌面背景
-- 在此处创建新启动器...
-- 在终端中打开
-- 以 Root 身份打开
-- 自定义
-- 粘贴
-
-![](img/f8aca09bc266ba3d122c77a820ff023b_32_2.png)
-
-### 第 1 步 第一个也是最重要的安装后操作是更新系统。点击桌面右下角、时间和日期旁面板上的图标。这将启动“更新管理器”。
-
-![](img/f8aca09bc266ba3d122c77a820ff023b_33_0.png)
-
-### 第 3 步 点击 OK 按钮，你就可以看到几个准备好安装的更新。在更新之前，点击蓝色条 OK 切换到本地镜像。这将打开“软件源”选项。在“镜像”部分，点击“主”和“基础”下拉菜单，选择距离你当前位置最近的服务器。
-
-![](img/f8aca09bc266ba3d122c77a820ff023b_33_1.png)
-
-### 第 2 步 Linux Mint 为用户提供了三级更新策略：不要弄坏我的电脑、优化稳定性与安全以及始终更新一切。推荐选项是“优化稳定性与安全”，它只更新不影响操作系统关键元素的安全补丁。阅读下方的描述以了解中间和推荐选项。
-
-### 第 4 步 点击“更新”按钮缓存并下载“软件源”窗口。在更新管理器中，点击“安装更新”图标并输入密码。更新会自动应用并重新启动更新管理器，此时会有更多更新。再次点击“安装更新”，确认任何消息并等待完成。
-
-![](img/f8aca09bc266ba3d122c77a820ff023b_33_2.png)
-
-![](img/f8aca09bc266ba3d122c77a820ff023b_33_3.png)
-
-### 第 5 步 桌面底部有一个面板，我们已经查看了面板的一个部分：菜单。如果你在面板的任何地方（面板应用以外的地方）右键点击，你就会看到一个菜单，允许以不同的方式编辑和添加面板。
-
-### 第 8 步 在桌上右键点击，弹出上下文菜单，选择“自定义”，然后点击新窗口底部的“桌面设置”链接。这会打开一个窗口，你可以在其中编辑图标。如果你使用的是连接了多个显示器的设置，还可以选择由哪个显示器显示图标。
-
-![](img/f8aca09bc266ba3d122c77a820ff023b_32_0.png)
-
-### 第 6 步 例如，如果你点击“修改面板”，你可以移除、删除面板、添加新面板并清除当前存在的小部件。小部件本身是一种专门设计用于运行并适配 Cinnamon 面板的应用程序。
-
-### 第 9 步 点击菜单并输入“系统设置”，打开“系统设置”。在这里，你可以控制并编辑 Linux Mint Cinnamon 的外观和工作方式，例如添加所有新用户、管理面板以及启用辅助功能。
-
-- 主题
-- 系统设置
-- 故障排除
-- 修改面板
-- 移除面板
-- 添加面板
-- 移动面板
-- 复制小部件配置
-- 清除所有小部件
-
-![](img/f8aca09bc266ba3d122c77a820ff023b_32_1.png)
-
-### 第 7 步 如果你在 Cinnamon 桌面任何地方右键点击，你会看到一组选项，允许你进一步添加、编辑或查看桌面内容。这与 Windows 非常相似，这也是为什么 Mint 是 Windows 用户的良好选择。
-
-### 第 10 步 简而言之，Linux Mint Cinnamon 可以配置得非常精美。关于它可以有多好以及可以实现什么，有很多例子。你可以根据需要变得复杂或简单，添加不同的组件和动画，或者仅仅保持整洁易读。
-
-- 创建文件夹
-- 创建新文档
-- 小部件
-- 更改桌面背景
-- 在此处创建新启动器...
-- 在终端中打开
-- 以 Root 身份打开
-- 自定义
-- 粘贴
-
-![](img/f8aca09bc266ba3d122c77a820ff023b_32_2.png)
-
-### 第 5 步 桌面底部有一个面板，我们已经查看了面板的一个部分：菜单。如果你在面板的任何地方（面板应用以外的地方）右键点击，你就会看到一个菜单，允许以不同的方式编辑和添加面板。
-
-### 第 8 步 在桌上右键点击，弹出上下文菜单，选择“自定义”，然后点击新窗口底部的“桌面设置”链接。这会打开一个窗口，你可以在其中编辑图标。如果你使用的是连接了多个显示器的设置，还可以选择由哪个显示器显示图标。
-
-![](img/f8aca09bc266ba3d122c77a820ff023b_32_0.png)
-
-### 第 6 步 例如，如果你点击“修改面板”，你可以移除、删除面板、添加新面板并清除当前存在的小部件。小部件本身是一种专门设计用于运行并适配 Cinnamon 面板的应用程序。
-
-### 第 9 步 点击菜单并输入“系统设置”，打开“系统设置”。在这里，你可以控制并编辑 Linux Mint Cinnamon 的外观和工作方式，例如添加所有新用户、管理面板以及启用辅助功能。
-
-- 主题
-- 系统设置
-- 故障排除
-- 修改面板
-- 移除面板
-- 添加面板
-- 移动面板
-- 复制小部件配置
-- 清除所有小部件
-
-![](img/f8aca09bc266ba3d122c77a820ff023b_32_1.png)
-
-### 第 7 步 如果你在 Cinnamon 桌面任何地方右键点击，你会看到一组选项，允许你进一步添加、编辑或查看桌面内容。这与 Windows 非常相似，这也是为什么 Mint 是 Windows 用户的良好选择。
-
-### 第 10 步 简而言之，Linux Mint Cinnamon 可以配置得非常精美。关于它可以有多好以及可以实现什么，有很多例子。你可以根据需要变得复杂或简单，添加不同的组件和动画，或者仅仅保持整洁易读。
-
-- 创建文件夹
-- 创建新文档
-- 小部件
-- 更改桌面背景
-- 在此处创建新启动器...
-- 在终端中打开
-- 以 Root 身份打开
-- 自定义
-- 粘贴
-
-![](img/f8aca09bc266ba3d122c77a820ff023b_32_2.png)
-
-
-
-
-
-# 阿波罗11号
+### 阿波罗11号
 
 你你知道吗……1969年7月20日被视为人类历史上的一个转折点，当时人类首次踏上了月球。那些帮助船员完成关键航行的软件当时并不存在，必须从零开始开发。麻省理工实验室的工程师们使用了一种名为“绳带内存”（Rope Memory）的新程序存储方法，在内存中填充了特殊版本的汇编代码。
 
-令人难以的是，这些代码可以在 GitHub 上免费查看。它们由一位研究人员在2003年上传，你可以通过访问 www.github.com/chrisgarry/Apollo-11/ 查看代码。留意某些代码片段，例如 `Burn`、`Baby_Burn`，特别是第 925 行，带有注释“Goodbye. Come soon.（再见，很快回来）”。
+令人难以的是，这些代码可以在 GitHub 上免费查看。它们由一位研究人员在2003年上传，你可以通过访问 `www.github.com/chrisgarry/Apollo-11/` 查看代码。留意某些代码片段，例如 `Burn`、`Baby_Burn`，特别是第 925 行，带有注释“Goodbye. Come soon.（再见，很快回来）”。
 
 浏览一下，看看你还能发现什么。
 
@@ -741,192 +571,9 @@ Linux Mint 是一个开箱即用的精致发行版，但与大多数 Linux 发�
 |---|---|---|
 | 100 | TURMAN1 | 连接到圆点 CONC |
 | 1001 | TURMAN2 | 连接到圆点 CONC |
-| 102 | TURMAN3 | 连接到圆点 CONC |
-| 103 | TURMAN4 | 连接到圆点 CONC |
-| 104 | TURMAN5 | 连接到圆点 CONC |
-| 105 | TURMAN6 | 连接到圆点 CONC |
-| 106 | TURMAN7 | 连接到圆点 CONC |
-| 107 | TURMAN8 | 连接到圆点 CONC |
-| 108 | TURMAN9 | 连接到圆点 CONC |
-| 109 | TURMAN10 | 连接到圆点 CONC |
-| 110 | TURMAN11 | 连接到圆点 CONC |
-| 111 | TURMAN12 | 连接到圆点 CONC |
-| 112 | TURMAN13 | 连接到圆点 CONC |
-| 113 | TURMAN14 | 连接到圆点 CONC |
-| 114 | TURMAN15 | 连接到圆点 CONC |
-| 115 | TURMAN16 | 连接到圆点 CONC |
-| 116 | TURMAN17 | 连接到圆点 CONC |
-| 117 | TURMAN18 | 连接到圆点 CONC |
-| 118 | TURMAN19 | 连接到圆点 CONC |
-| 119 | TURMAN20 | 连接到圆点 CONC |
-| 120 | TURMAN21 | 连接到圆点 CONC |
-| 121 | TURMAN22 | 连接到圆点 CONC |
-| 122 | TURMAN23 | 连接到圆点 CONC |
-| 123 | TURMAN24 | 连接到圆点 CONC |
-| 124 | TURMAN25 | 连接到圆点 CONC |
-| 125 | TURMAN26 | 连接到圆点 CONC |
-| 126 | TURMAN27 | 连接到圆点 CONC |
-| 127 | TURMAN28 | 连接到圆点 CONC |
-| 128 | TURMAN29 | 连接到圆点 CONC |
-| 129 | TURMAN30 | 连接到圆点 CONC |
-| 130 | TURMAN31 | 连接到圆点 CONC |
-| 131 | TURMAN32 | 连接到圆点 CONC |
-| 132 | TURMAN33 | 连接到圆点 CONC |
-| 133 | TURMAN34 | 连接到圆点 CONC |
-| 134 | TURMAN35 | 连接到圆点 CONC |
-| 135 | TURMAN36 | 连接到圆点 CONC |
-| 136 | TURMAN37 | 连接到圆点 CONC |
-| 137 | TURMAN38 | 连接到圆点 CONC |
-| 138 | TURMAN39 | 连接到圆点 CONC |
-| 139 | TURMAN40 | 连接到圆点 CONC |
-| 140 | TURMAN41 | 连接到圆点 CONC |
-| 141 | TURMAN42 | 连接到圆点 CONC |
-| 142 | TURMAN43 | 连接到圆点 CONC |
-| 143 | TURMAN44 | 连接到圆点 CONC |
-| 144 | TURMAN45 | 连接到圆点 CONC |
-| 145 | TURMAN46 | 连接到圆点 CONC |
-| 146 | TURMAN47 | 连接到圆点 CONC |
-| 147 | TURMAN48 | 连接到圆点 CONC |
-| 148 | TURMAN49 | 连接到圆点 CONC |
-| 149 | TURMAN50 | 连接到圆点 CONC |
-| 150 | TURMAN51 | 连接到圆点 CONC |
-| 151 | TURMAN52 | 连接到圆点 CONC |
-| 152 | TURMAN53 | 连接到圆点 CONC |
-| 153 | TURMAN54 | 连接到圆点 CONC |
-| 154 | TURMAN55 | 连接到圆点 CONC |
-| 155 | TURMAN56 | 连接到圆点 CONC |
-| 156 | TURMAN57 | 连接到圆点 CONC |
-| 158 | TURMAN59 | 连接到圆点 CONC |
-| 159 | TURMAN60 | 连接到圆点 CONC |
-| 160 | TURMAN61 | 连接到圆点 CONC |
-| 161 | TURMAN62 | 连接到圆点 CONC |
-| 162 | TURMAN63 | 连接到圆点 CONC |
-| 163 | TURMAN64 | 连接到圆点 CONC |
-| 164 | TURMAN65 | 连接到圆点 CONC |
-| 165 | TURMAN66 | 连接到圆点 CONC |
-| 166 | TURMAN67 | 连接到圆点 CONC |
-| 167 | TURMAN68 | 连接到圆点 CONC |
-| 168 | TURMAN69 | 连接到圆点 CONC |
-| 169 | TURMAN70 | 连接到圆点 CONC |
-| 170 | TURMAN71 | 连接到圆点 CONC |
-| 171 | TURMAN72 | 连接到圆点 CONC |
-| 172 | TURMAN73 | 连接到圆点 CONC |
-| 173 | TURMAN74 | 连接到圆点 CONC |
-| 174 | TURMAN75 | 连接到圆点 CONC |
-| 175 | TURMAN76 | 连接到圆点 CONC |
-| 176 | TURMAN77 | 连接到圆点 CONC |
-| 177 | TURMAN78 | 连接到圆点 CONC |
-| 178 | TURMAN79 | 连接到圆点 CONC |
-| 179 | TURMAN80 | 连接到圆点 CONC |
-| 180 | TURMAN81 | 连接到圆点 CONC |
-| 181 | TURMAN82 | 连接到圆点 CONC |
-| 182 | TURMAN83 | 连接到圆点 CONC |
-| 183 | TURMAN84 | 连接到圆点 CONC |
-| 184 | TURMAN85 | 连接到圆点 CONC |
-| 185 | TURMAN86 | 连接到圆点 CONC |
-| 186 | TURMAN87 | 连接到圆点 CONC |
-| 187 | TURMAN88 | 连接到圆点 CONC |
-| 188 | TURMAN89 | 连接到圆点 CONC |
-| 189 | TURMAN90 | 连接到圆点 CONC |
-| 190 | TURMAN91 | 连接到圆点 CONC |
-| 191 | TURMAN92 | 连接到圆点 CONC |
-| 192 | TURMAN93 | 连接到圆点 CONC |
-| 193 | TURMAN94 | 连接到圆点 CONC |
-| 194 | TURMAN95 | 连接到圆点 CONC |
-| 195 | TURMAN96 | 连接到圆点 CONC |
-| 196 | TURMAN97 | 连接到圆点 CONC |
-| 197 | TURMAN98 | 连接到圆点 CONC |
-| 198 | TURMAN99 | 连接到圆点 CONC |
-| 199 | TURMAN100 | 连接到圆点 CONC |
+| ... | ... | ... |
 
-| TV | 名称 | 描述 |
-|---|---|---|
-| 200 | TURMAN | 100 |
-| 201 | TURMAN | RETURN |
-| 202 | TURMAN | VALUE |
-| 203 | TURMAN | TITLE |
-| 204 | TURMAN | HIDE |
-| 205 | TURMAN | |
-| 206 | TURMAN | | |
-| 207 | TURMAN | | |
-| 208 | TURMAN | | |
-| 209 | TURMAN | | |
-| 210 | TURMAN | | |
-| 211 | TURMAN | | |
-| 212 | TURMAN | | |
-| 213 | TURMAN | | |
-| 214 | TURMAN | | |
-| 215 | TURMAN | | |
-| 216 | TURMAN | | |
-| 217 | TURMAN | | |
-| 218 | TURMAN | | |
-| 219 | TURMAN | | |
-| 220 | TURMAN | | |
-| 221 | TURMAN | | |
-| 222 | TURMAN | | |
-| 223 | TURMAN | | |
-| 224 | TURMAN | | |
-| 225 | TURMAN | | |
-| 226 | TURMAN | | |
-| 227 | TURMAN | | |
-| 228 | TURMAN | | |
-| 229 | TURMAN | | |
-| 230 | TURMAN | | |
-| 231 | TURMAN | | |
-| 232 | TURMAN | | |
-| 233 | TURMAN | | |
-| 234 | TURMAN | | |
-| 235 | TURMAN | | |
-| 236 | TURMAN | | |
-| 237 | TURMAN | | |
-| 238 | TURMAN | | |
-| 239 | TURMAN | | |
-| 240 | TURMAN | | |
-| 241 | TURMAN | | |
-| 242 | TURMAN | | |
-| 243 | TURMAN | | |
-| 244 | TURMAN | | |
-| 245 | TURMAN | | |
-| 246 | TURMAN | | |
-| 247 | TURMAN | | |
-| 248 | TURMAN | | |
-| 249 | TURMAN | | |
-| 250 | TURMAN | | |
-| 251 | TURMAN | | |
-| 252 | TURMAN | | |
-| 253 | TURMAN | | |
-| 254 | TURMAN | | |
-| 255 | TURMAN | | |
-| 256 | TURMAN | | |
-| 257 | TURMAN | | |
-| 258 | TURMAN | | |
-| 259 | TURMAN | | |
-| 260 | TURMAN | | |
-| 261 | TURMAN | | |
-| 262 | TURMAN | | |
-| 263 | TURMAN | | |
-| 264 | TURMAN | | |
-| 265 | TURMAN | | |
-| 266 | TURMAN | | |
-| 267 | TURMAN | | |
-| 268 | TURMAN | | |
-| 269 | TURMAN | | |
-| 270 | TURMAN | | |
-| 271 | TURMAN | | |
-| 272 | TURMAN | | |
-| 273 | TURMAN | | |
-| 274 | TURMAN | | |
-| 275 | TURMAN | | |
-| 276 | TURMAN | | |
-| 277 | TURMAN | | |
-| 278 | TURMAN | | |
-| 279 | TURMAN | | |
-
-
-
-
-
-### 第 5 步
+#### 第 5 步
 
 你可以为新用户输入密码，或者点击“新密码”（New Password）文本框末尾的弯箭头来为你生成并显示密码。当然，想出一个尽可能复杂的密码是个好主意。完成后，点击“更改”（Change）按钮。
 
@@ -938,7 +585,7 @@ Linux Mint 是一个开箱即用的精致发行版，但与大多数 Linux 发�
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_38_1.png)
 
-### 第 6 步
+#### 第 6 步
 
 现在你可以关闭“用户和组”（Users and Groups）窗口了，因为新用户已经创建。点击 Mint 菜单（Mint Menu），然后点击“注销”（Logout），你将看到 Mint 登录管理器（Mint Login Manager）。新用户出现在当前可用用户列表中。点击他或她即可登录。
 
@@ -950,31 +597,46 @@ Linux Mint 是一个开箱即用的精致发行版，但与大多数 Linux 发�
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_38_3.png)
 
-## 命令行操作
+#### 命令行操作
 
 正如你所预期的，你也可以从命令行添加新用户。在（你的）管理员账户下打开终端（Terminal）会。
 
 从命令行添加新用户的过程相对简单。首先，输入 `sudo adduser <username>` 来创建新用户的登录名。然后会提示你该用户创建密码以及姓名和详细信息。点击确认详情并创建用户账户。
 
-### 第 1 步
+#### 第 1 步
 
 你可以从“用户和组”控制台查看新用户的详情和账户类型。如果你想从 Mint 中删除用户，可以在终端中输入 `sudo deluser <username>` 或在“用户和组”中点击“删除”（Delete）。
 
 ```
-$ sudo adduser david
-Adding user david...
-Adding new user david (1002) from group 'adm'
-Creating home directory '/home/david'
-Copying skeleton from '/etc/skel'
-Setting password for user again:
-Password updated successfully
-Enter new information for the user:
-Full Name []: David
-Room Number [1002]
-Work Group []: 
-Other []: 
-Is information correct? Y
 ```
+
+
+
+`sudo adduser david`
+
+Adding user david...
+
+Adding new user david (1002) from group 'adm'
+
+Creating home directory `/home/david`
+
+Copying skeleton from `/etc/skel`
+
+Setting password for user again:
+
+Password updated successfully
+
+Enter new information for the user:
+
+Full Name []: David
+
+Room Number [1002]
+
+Work Group []:
+
+Other []:
+
+Is information correct? Y
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_38_4.png)
 
@@ -987,7 +649,6 @@ Is information correct? Y
 Linux 可能是最可定制的操作系统之一。只需少量调整、安装一两个额外软件并发挥想象力，你就能创造出不可信的东西。
 
 - **第 1 步** 桌面定制的第一方面是更改壁纸。右键点击桌面并选择“桌面背景”（Desktop Background）。这会打开 Linux Mint 中的背景设置；记住，其他发行版可能以不同的方式展示其背景和壁纸选择工具。
-
 - **第 3 步** 你只需点击任何桌面壁纸中的可用图像。顺便提一下，如果你在系统或网络的另一个位置存储了图像并想将其作为壁纸，可以通过点击“背景”控制台底部的“+”符号来添加，并使用文件管理器定位它们。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_39_0.png)
@@ -995,18 +656,16 @@ Linux 可能是最可定制的操作系统之一。只需少量调整、安装�
 ![](img/f8aca09bc266ba3d122c77a820ff023b_39_1.png)
 
 - **第 2 步** 较版本的 Linux Mint 根据用户运行的版本显示可用背景。你通常会三个类别，然后是第四类“图片”（Pictures），它与其他不同。“图片”选项之所以不同，是因为它从你主目录下的“图片”文件夹中读取图像内容。
-
 - **第 4 步** 通过点击“设置”（Settings）选项卡，你可以将大量图像作为幻灯片播放，或者将壁纸的比例改为多种选择。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_39_2.png)
 
 - 第 5 步 如果没有任何可用的壁纸符合你的心意，打开浏览器并搜索你喜欢的背景图像。当你找到想要作为桌面壁纸的图像时，右键点击它并在选项列表中选择“设置为：桌面背景”（Set: As Desktop Background）。当“设置桌面背景”控制台打开时，点击“设置桌面背景”按钮。
-
 - 第 8 步 “主题”（Themes）允许你更改 Mint 外观的某些方面：窗口边框、图标、控件、鼠标指针和桌面。在“设置”中，你可以通过开关扩展选项。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_39_0.png)
 
-- 第 6 步 点击菜单并搜索 '/desktop'，然后点击设置结果。桌面设置控制台允许你选择布局、图标和多显示器支持。你可以根据个人喜好对选项进行尝试。
+- 第 6 步 点击菜单并搜索 `/desktop`，然后点击设置结果。桌面设置控制台允许你选择布局、图标和多显示器支持。你可以根据个人喜好对选项进行尝试。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_39_1.png)
 
@@ -1018,7 +677,7 @@ Linux 可能是最可定制的操作系统之一。只需少量调整、安装�
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_39_3.png)
 
-- 第 10 步 点击菜单并搜索 '/desktop'，然后点击设置结果。桌面设置控制台允许你选择布局、图标和多显示器支持。你可以根据个人喜好对选项进行尝试。
+- 第 10 步 点击菜单并搜索 `/desktop`，然后点击设置结果。桌面设置控制台允许你选择布局、图标和多显示器支持。你可以根据个人喜好对选项进行尝试。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_39_4.png)
 
@@ -1031,10 +690,6 @@ Linux 可能是最可定制的操作系统之一。只需少量调整、安装�
 ## VPN 和 Tor
 
 Linux 可能是最可定制的操作系统之一。只需少量调整、安装一两个额外软件并发挥想象力，你就能创造出不可信的东西。
-
-
-
-
 
 # 使用终端
 
@@ -1073,20 +728,18 @@ Linux 命令行，即终端（Terminal），是一个极其强大的环境。通
 
 # 终端基础
 
-大多数操作系统使用两种界面：GUI（Windows、macOS 和 Linux Mint 启动进入的桌面）和命令行。虽然现代操作系统在刻意避开命令行，但 Mint 使用终端来赋予用户对系统更大的控制权。
+大多数操作系统使用两种界面：`GUI`（Windows、macOS 和 Linux Mint 启动进入的桌面）和命令行。虽然现代操作系统在刻意避开命令行，但 Mint 使用终端来赋予用户对系统更大的控制权。
 
 # 接管控制
 
 命令行或或终端是一个极其强大的界面。你在桌面上可以做的一切，在终端内都可以实现。让我们先看看它是如何工作的。
 
 - 步骤 1 可以通过点击面板上的终端图标（位于 Firefox 和文件图标之间），或者通过打开菜单并从左侧的快速启动栏中选择它来访问终端。
-
 - 步骤 3 你当前在终端中看到的是你的登录信息，后面跟着计算机的名称；这是你在第一次安装 Mint 时在设置期间结束的。该行以当前文件夹名称结束；起初只是一个波号 `~`，代表你的主目录（Home folder）。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_45_0.png)
 
-- 步骤 2 终端让你能够访问 Linux Mint 的 Shell（称为 Bash），它让你访问底层的操作系统。Mint 中的所有内容，包括桌面和 GUI，都是从命令行运行的模块。
-
+- 步骤 2 终端让你能够访问 Linux Mint 的 Shell（称为 `Bash`），它让你访问底层的操作系统。Mint 中的所有内容，包括桌面和 GUI，都是从命令行运行的模块。
 - 步骤 4 行末尾闪烁的光标是你输入基于文本命令的地方。你可以开始尝试一个简单的命令：打印工作目录（`pwd`），它会在屏幕上输出你所在的文件夹。输入 `pwd` 并按回车。
 
 ```
@@ -1097,6 +750,8 @@ david@david-mint ~ $
 david@david-mint ~ $ pwd
 david@david-mint ~ $
 ```
+
+
 
 # 步骤 5
 
@@ -1137,11 +792,8 @@ david@david-mint ~ $
 更新和升级终端你使用 APT（高级软件包工具）是一个强大的命令，并根据其使用组合不同的元素。
 
 - 步骤 1 通过打开一个新的终端，或者如果你已经打开了一个，通过命令清理内容来从干净的状态开始。
-
 - 步骤 3 `apt-get` 用于升级 Mint 以及其他基于 Debian 的发行版。使用 `apt-get` 获取新软件包并更新源列表。升级下载并安装最新版本。要启动升级过程，输入：`sudo apt-get` 然后输入你的密码。
-
 - 步骤 2 输入 `apt-get` 进入终端。这会带来最常用的命令列表，以及该命令作用的简要描述。
-
 - 步骤 4 注意 `sudo` 命令的添加。管理员用户（super User）使用 APT（高级软件包工具）来获取更新。现在使用：`sudo apt-get upgrade`。
 
 ```
@@ -1152,156 +804,124 @@ david@david-mint: $
 
 ```
 david@david-mint: ~ Search
+
 apt 1.2.7 (ubuntu)
+
 (apt-get) [options] command
+
 Reading lists... Done
+
 1 http://archive.ubuntu.com/ubuntu focal [26841 kB]
+
 2 http://archive.ubuntu.com/ubuntu-updates [71522 kB]
+
 3 http://archive.ubuntu.com/ubuntu-security [14522 kB]
+
 Reading package list... Done
+
 Building cache... Done
+
 Reading dependency tree: Done
+
 Reading sources: Done
+
 Reading packages: 15 upgraded, 0 new installed, 0 to remove and 0 not upgrade
+
 15 packages can be upgraded. Run 'apt-get'.
 ```
 
 ```
 david@david-mint: ~ Search
+
 apt 1.2.7 (ubuntu)
+
 (apt-get) [options] command
+
 Reading lists... Done
+
 1 http://archive.ubuntu.com/ubuntu focal [26841 kB]
+
 2 http://archive.ubuntu.com/ubuntu-updates [71522 kB]
+
 3 http://archive.ubuntu.com/ubuntu-security [14522 kB]
+
 Reading package list... Done
+
 Building cache... Done
+
 Reading dependency tree: Done
+
 Reading sources: Done
+
 Reading packages: 15 upgraded, 0 new installed, 0 to remove and 0 not upgrade
+
 15 packages can be upgraded. Run 'apt-get'.
 ```
 
 # 通过终端更新 Mint
 
 - 步骤 5 根据你的更新状态，如果你有任何安装内容，想要应用 `sudo apt-get upgrade` 命令的结果，按 Y 接受。这里发生的是 apt-get 有一些更新需要应用到 Mint，你已经准备好了。
-
-- 步骤 7 有趣的是，根据可用软件包列表，系统现在是最新的。你可以运行一次该过程，检查一切一切正常。总结一下：**sudo apt-get update** 然后输入：**sudo apt-get upgrade**。
-
-```
-File Edit View Search Help
-davidhaus-mint~
-01: /archive.ubuntu.com/ubuntu main
-02: /archive.ubuntu.com/ubuntu-updates [182 KB]
-03: /archive.ubuntu.com/ubuntu-backports
-04: /archive.ubuntu.com/ubuntu-security [182 KB]
-05: /archive.ubuntu.com/ubuntu focal-universe
-06: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
-07: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
-08: /archive.ubuntu.com/ubuntu focal-security
-09: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
-10: /archive.ubuntu.com/ubuntu focal-security
-11: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
-12: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
-13: /archive.ubuntu.com/ubuntu focal-security
-14: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
-15: /archive.ubuntu.com/ubuntu focal-updates/focal-updates [182 KB]
-16: /archive.ubuntu.com/ubuntu focal-security
-17: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
-18: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
-19: /archive.ubuntu.com/ubuntu focal-security
-20: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
-21: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
-22: /archive.ubuntu.com/ubuntu focal-security
-23: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
-24: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
-25: /archive.ubuntu.com/ubuntu focal-security
-26: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
-27: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
-28: /archive.ubuntu.com/ubuntu focal-security
-29: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
-Reading lists... Done
-Reading packages... Done
-Calculating dependency tree... Done
-The following NEW packages will be installed:
-libapt-bin 2.4.2-ubuntu4 [2150 KB]
-libapt-pkg 2.4.2-ubuntu4 [450 KB]
-nnutils 6.2.0-2ubuntu1 [1200 KB]
-adduser 4.2.0-2ubuntu1 [850 KB]
-archive-common 0.8.12-ubuntu1 [150 KB]
-archive-dev 0.8.12-ubuntu1 [150 KB]
-archive-extra 0.8.12-ubuntu1 [150 KB]
-archive-info 0.8.12-ubuntu1 [150 KB]
-archive-interactive 0.8.12-ubuntu1 [150 KB]
-archive-announce 0.8.12-ubuntu1 [150 KB]
-archive-security 0.8.12-ubuntu1 [150 KB]
-archive-support 0.8.12-ubuntu1 [150 KB]
-archive-tools 0.8.12-ubuntu1 [150 KB]
-apt-utils 2.4.2-ubuntu4 [150 KB]
-apt-progress 2.4.2-ubuntu4 [150 KB]
-5.32 MB will be downloaded.
-15 new packages will be installed, 12 packages will be upgraded, 0 packages to removed.
-After this operation, 24.5 MB additional space will be used.
-Do you want to continue? [Y/n] Y
-```
-
-- 步骤 6 变化列表很长但不用担心。升级的文件已经下载、解包并正确设置。当你执行升级时，最好配合最小软件包这样做。
-
-- 步骤 8 有趣的是，在许多其他事情中，apt 允许你更改系统设置。在这个例子中，我们将使用 **sudo apt-get update** & **sudo apt-get upgrade**。使用双 & 用于在不等待第一个命令完成的情况下运行第二个命令。最好与系统一起进行更新和升级。
+- 步骤 7 有趣的是，根据可用软件包列表，系统现在是最新的。你可以运行一次该过程，检查一切一切正常。总结一下：`sudo apt-get update` 然后输入：`sudo apt-get upgrade`。
 
 ```
 File Edit View Search Help
-davidhaus-mint~
-01: /archive.ubuntu.com/ubuntu main
-02: /archive.ubuntu.com/ubuntu-updates [182 KB]
-03: /archive.ubuntu.com/ubuntu-backports
-04: /archive.ubuntu.com/ubuntu-security [182 KB]
-05: /archive.ubuntu.com/ubuntu focal-universe
-06: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
-07: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
-08: /archive.ubuntu.com/ubuntu focal-security
-09: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
-10: /archive.ubuntu.com/ubuntu focal-security
-11: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
-12: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
-13: /archive.ubuntu.com/ubuntu focal-security
-14: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
-15: /archive.ubuntu.com/ubuntu focal-updates/focal-updates [182 KB]
-16: /archive.ubuntu.com/ubuntu focal-security
-17: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
-18: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
-19: /archive.ubuntu.com/ubuntu focal-security
-20: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
-21: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
-22: /archive.ubuntu.com/ubuntu focal-security
-23: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
-24: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
-25: /archive.ubuntu.com/ubuntu focal-security
-26: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
-27: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
-28: /archive.ubuntu.com/ubuntu focal-security
-29: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
-Reading lists... Done
-Reading packages... Done
-Calculating dependency tree... Done
-The following NEW packages will be installed:
-libapt-bin 2.4.2-ubuntu4 [2150 KB]
-libapt-pkg 2.4.2-ubuntu4 [450 KB]
-nnutils 6.2.0-2ubuntu1 [1200 KB]
-adduser 4.2.0-2ubuntu1 [850 KB]
-archive-common 0.8.12-ubuntu1 [150 KB]
-archive-dev 0.8.12-ubuntu1 [150 KB]
-archive-extra 0.8.12-ubuntu1 [150 KB]
-archive-info 0.8.12-ubuntu1 [150 KB]
-archive-interactive 0.8.12-ubuntu1 [150 KB]
-archive-announce 0.8.12-ubuntu1 [150 KB]
-archive-security 0.8.12-ubuntu1 [150 KB]
-archive-support 0.8.12-ubuntu1 [150 KB]
-archive-tools 0.8.12-ubuntu1 [150 KB]
-apt-utils 2.4.2-ubuntu4 [150 KB]
-apt-progress 2.4.2-ubuntu4 [150 KB]
-```
 
+davidhaus-mint~
+
+01: /archive.ubuntu.com/ubuntu main
+
+02: /archive.ubuntu.com/ubuntu-updates [182 KB]
+
+03: /archive.ubuntu.com/ubuntu-backports
+
+04: /archive.ubuntu.com/ubuntu-security [182 KB]
+
+05: /archive.ubuntu.com/ubuntu focal-universe
+
+06: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
+
+07: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
+
+08: /archive.ubuntu.com/ubuntu focal-security
+
+09: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
+
+10: /archive.ubuntu.com/ubuntu focal-security
+
+11: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
+
+12: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
+
+13: /archive.ubuntu.com/ubuntu focal-security
+
+14: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
+
+15: /archive.ubuntu.com/ubuntu focal-updates/focal-updates [182 KB]
+
+16: /archive.ubuntu.com/ubuntu focal-security
+
+17: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
+
+18: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
+
+19: /archive.ubuntu.com/ubuntu focal-security
+
+20: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
+
+21: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
+
+22: /archive.ubuntu.com/ubuntu focal-security
+
+23: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
+
+24: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
+
+25: /archive.ubuntu.com/ubuntu focal-security
+
+26: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
+
+27: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
+```
 
 
 
@@ -1317,43 +937,213 @@ apt-progress 2.4.2-ubuntu4 [150 KB]
 
 ```
 File Edit View Search Terminal Help
+
 $ sudo apt-get update && sudo apt-get upgrade
+
 Reading package lists......
 Building dependency tree...
 Reading state information... Done
-0 packages upgraded, 0 newly installed, 0 to remove and 0 not upgrade
 ```
 
-- **第 2 步** 正如你所看到的，sudo apt-get update/upgrade 等命令旨在升级系统中已经安装的软件。不过，你确实想安装更多应用吧？首先你需要一个要安装的应用，所以让我们使用 Stella。输入：`sudo apt-add-repository ppa:peterlevi/ppa && sudo apt-get install stella`。
+```
+28: /archive.ubuntu.com/ubuntu focal-security
+
+29: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
+
+Reading lists... Done
+
+Reading packages... Done
+
+Calculating dependency tree... Done
+
+The following NEW packages will be installed:
+
+libapt-bin 2.4.2-ubuntu4 [2150 KB]
+
+libapt-pkg 2.4.2-ubuntu4 [450 KB]
+
+nnutils 6.2.0-2ubuntu1 [1200 KB]
+
+adduser 4.2.0-2ubuntu1 [850 KB]
+
+archive-common 0.8.12-ubuntu1 [150 KB]
+
+archive-dev 0.8.12-ubuntu1 [150 KB]
+
+archive-extra 0.8.12-ubuntu1 [150 KB]
+
+archive-info 0.8.12-ubuntu1 [150 KB]
+
+archive-interactive 0.8.12-ubuntu1 [150 KB]
+
+archive-announce 0.8.12-ubuntu1 [150 KB]
+
+archive-security 0.8.12-ubuntu1 [150 KB]
+
+archive-support 0.8.12-ubuntu1 [150 KB]
+
+archive-tools 0.8.12-ubuntu1 [150 KB]
+
+apt-utils 2.4.2-ubuntu4 [150 KB]
+
+apt-progress 2.4.2-ubuntu4 [150 KB]
+
+5.32 MB will be downloaded.
+
+15 new packages will be installed, 12 packages will be upgraded, 0 packages to removed.
+
+After this operation, 24.5 MB additional space will be used.
+
+Do you want to continue? [Y/n] Y
+```
+
+- 步骤 6 变化列表很长但不用担心。升级的文件已经下载、解包并正确设置。当你执行升级时，最好配合最小软件包这样做。
+
+- 步骤 8 有趣的是，在许多其他事情中，`apt` 允许你更改系统设置。在这个例子中，我们将使用 `sudo apt-get update` & `sudo apt-get upgrade`。使用双 `&` 用于在不等待第一个命令完成的情况下运行第二个命令。最好与系统一起进行更新和升级。
+
+```
+File Edit View Search Help
+
+davidhaus-mint~
+
+01: /archive.ubuntu.com/ubuntu main
+
+02: /archive.ubuntu.com/ubuntu-updates [182 KB]
+
+03: /archive.ubuntu.com/ubuntu-backports
+
+04: /archive.ubuntu.com/ubuntu-security [182 KB]
+
+05: /archive.ubuntu.com/ubuntu focal-universe
+
+06: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
+
+07: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
+
+08: /archive.ubuntu.com/ubuntu focal-security
+
+09: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
+
+10: /archive.ubuntu.com/ubuntu focal-security
+
+11: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
+
+12: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
+
+13: /archive.ubuntu.com/ubuntu focal-security
+
+14: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
+
+15: /archive.ubuntu.com/ubuntu focal-updates/focal-updates [182 KB]
+
+16: /archive.ubuntu.com/ubuntu focal-security
+
+17: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
+
+18: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
+
+19: /archive.ubuntu.com/ubuntu focal-security
+
+20: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
+
+21: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
+
+22: /archive.ubuntu.com/ubuntu focal-security
+
+23: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
+
+24: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
+
+25: /archive.ubuntu.com/ubuntu focal-security
+
+26: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
+
+27: /archive.ubuntu.com/ubuntu focal-updates [182 KB]
+
+28: /archive.ubuntu.com/ubuntu focal-security
+
+29: /archive.ubuntu.com/ubuntu focal-universe [182 KB]
+
+Reading lists... Done
+
+Reading packages... Done
+
+Calculating dependency tree... Done
+
+The following NEW packages will be installed:
+
+libapt-bin 2.4.2-ubuntu4 [2150 KB]
+
+libapt-pkg 2.4.2-ubuntu4 [450 KB]
+
+nnutils 6.2.0-2ubuntu1 [1200 KB]
+
+adduser 4.2.0-2ubuntu1 [850 KB]
+
+archive-common 0.8.12-ubuntu1 [150 KB]
+
+archive-dev 0.8.12-ubuntu1 [150 KB]
+
+archive-extra 0.8.12-ubuntu1 [150 KB]
+
+archive-info 0.8.12-ubuntu1 [150 KB]
+
+archive-interactive 0.8.12-ubuntu1 [150 KB]
+
+archive-announce 0.8.12-ubuntu1 [150 KB]
+
+archive-security 0.8.12-ubuntu1 [150 KB]
+
+archive-support 0.8.12-ubuntu1 [150 KB]
+
+archive-tools 0.8.12-ubuntu1 [150 KB]
+
+apt-utils 2.4.2-ubuntu4 [150 KB]
+
+apt-progress 2.4.2-ubuntu4 [150 KB]
+```
+
+
+
+0 packages upgraded, 0 newly installed, 0 to remove and 0 not upgrade
+
+- **第 2 步** 正如你所看到的，`sudo apt-get update`/`upgrade` 等命令旨在升级系统中已经安装的软件。不过，你确实想安装更多应用吧？首先你需要一个要安装的应用，所以让我们使用 Stella。输入：`sudo apt-add-repository ppa:peterlevi/ppa && sudo apt-get install stella`。
 
 ```
 File Edit View Search Terminal Help
+
 $ sudo apt-add-repository ppa:peterlevi/ppa
+
 Adding PPA ppa:peterlevi/ppa
+
 Contains packages for the Variety package changer
+
 More info: https://launchpad.net/~peterlevi/ubuntu/ppa
+
 Press Enter to continue or Ctrl+C to cancel.
 ```
 
-- **第 3 步** 你需要输入 y确认安装，这将占用系统约 5.5MB 的存储空间。一旦安装完成后，你可以看到 Mint 已经自动在菜单中创建了“游戏”类别以及该应用的快捷方式。
+- **第 3 步** 你需要输入 `y` 确认安装，这将占用系统约 5.5MB 的存储空间。一旦安装完成后，你可以看到 Mint 已经自动在菜单中创建了“游戏”类别以及该应用的快捷方式。
 
 ![](https://img/f8aca09bc266ba3d122c77a820ff023b_49_0.png)
 
-- **第 4 步** 有时在安装软件时，你需要添加应用的仓库（Repository，简称 repo），它是安装软件的远程服务器，以及它所有的依赖项（运行所需的库和文件）。从开始输入：`sudo apt-add-repository ppa:peterlevi/ppa`。按回车添加该 PPA（个人包存档）。
+- **第 4 步** 有时在安装软件时，你需要添加应用的仓库（Repository，简称 `repo`），它是安装软件的远程服务器，以及它所有的依赖项（运行所需的库和文件）。从开始输入：`sudo apt-add-repository ppa:peterlevi/ppa`。按回车添加该 PPA（个人包存档）。
 
 ![](https://img/f8aca09bc266ba3d122c77a820ff023b_49_1.png)
 
 ### 第 5 步
 
-这为应用 Variety 壁纸切换器添加了仓库，这是一个基于 Ubuntu 的应用，可以在 Mint 中运行并自动更改壁纸。添加仓库后，输入：**sudo apt-get update**，以更新信息并将仓库内容添加到包管理器。
+这为应用 Variety 壁纸切换器添加了仓库，这是一个基于 Ubuntu 的应用，可以在 Mint 中运行并自动更改壁纸。添加仓库后，输入：`sudo apt-get update`，以更新信息并将仓库内容添加到包管理器。
 
 ### 第 6 步
 
-现在安装 Variety，输入：**sudo apt-get install**。按 y 接受并继续安装。安装完成后，你可以在终端中输入 **variety** 来运行它。
+现在安装 Variety，输入：`sudo apt-get install`。按 `y` 接受并继续安装。安装完成后，你可以在终端中输入 `variety` 来运行它。
 
 ```
 sudo add-apt-repository ppa:variety-wallpaperproject/ppa
+
 sudo apt-get update
+
 sudo apt-get install variety
 ```
 
@@ -1363,66 +1153,99 @@ sudo apt-get install variety
 
 ### 第 1 步
 
-要卸载，移除 Variety 应用并输入以下：**sudo apt-get remove variety**。输入 y 继续卸载应用；注意，你会收到由于移除该应用而在驱动器上释放了多少空间。
+要卸载，移除 Variety 应用并输入以下：`sudo apt-get remove variety`。输入 `y` 继续卸载应用；注意，你会收到由于移除该应用而在驱动器上释放了多少空间。
 
 ```
 File View Search Terminal
+
 daviddavid-mint $ sudo apt-get remove variety
+
 Reading dependencies
+
 Building dependency tree...
+
 Reading package information... Done
+
 The following packages were automatically installed and are no longer required
+
 variety-slideshow
+
 The following packages will be REMOVED
+
 variety
+
 After this operation, 1 package to remove, 0 not to upgrade,
+
 14.4 MB disk space will be freed.
+
 Do you want to continue? [Y/n]
 ```
 
 ### 第 3 步
 
-当你从系统中移除应用时，某些自动安装的内容不再需要了。你已经在过程教程中看到，可以使用以下命令 **sudo apt-get autoremove**，然后按 y 接受该过程。
+当你从系统中移除应用时，某些自动安装的内容不再需要了。你已经在过程教程中看到，可以使用以下命令 `sudo apt-get autoremove`，然后按 `y` 接受该过程。
 
 ```
 File View Search Terminal
+
 daviddavid-mint $ sudo apt-get autoremove
+
 Reading dependencies
+
 Building dependency tree
+
 Reading package information... Done
+
 The following packages were automatically installed and are no longer required
+
 lib-python3.8-python-py32-variety-slideshow
+
 0 packages to be REMOVED, 0 not to upgrade.
+
 After this operation, 1.06 MB disk space will be freed.
+
 Do you want to continue? [Y/n]
 ```
 
 ### 第 2 步
 
-当 apt-get 命令卸载应用时，它不会移除应用附带的额外内容，如配置和文件。要彻底清除杂质，输入：**sudo apt-get purge variety**。
+当 `apt-get` 命令卸载应用时，它不会移除应用附带的额外内容，如配置和文件。要彻底清除杂质，输入：`sudo apt-get purge variety`。
 
 ```
 File View Search Terminal
+
 daviddavid-mint $ sudo apt-get purge variety
+
 Reading dependencies
+
 Building dependency tree...
+
 Reading package information... Done
+
 Package: variety is not installed, so not removed
+
 The following packages were automatically installed and are no longer required
+
 variety-slideshow
+
 Use "purge" to upgrade 0 to newly installed, 0 to remove not to upgrade.
+
 daviddavid-mint $
 ```
 
 ### 第 4 步
 
-最后，为了整理环境，清理不再需要的 **sudo apt-get clean**（注意这里是清理命令），你可以通过 **sudo apt-get clean** 来操作。
+最后，为了整理环境，清理不再需要的 `sudo apt-get clean`（注意这里是清理命令），你可以通过 `sudo apt-get clean` 来操作。
 
 ```
 File View Search Terminal
+
 daviddavid-mint $ sudo apt-get clean
+
 Reading dependencies
+
 Building dependency tree
+
 Reading package information... Done
 ```
 
@@ -1438,59 +1261,74 @@ Reading package information... Done
 
 - **第 1 步** 从终端下载源码比较简单。首先，你需要下载源码的压缩包。打开终端并输入：`sudo apt-add-repository ppa:variety-wallpaperproject/ppa`。
 
-- **第 2 步** 下载 Variety，输入：**sudo apt update**。按 y 接受并继续下载。下载完成后，你可以在终端中输入 **variety** 来运行它。
+- **第 2 步** 下载 Variety，输入：`sudo apt update`。按 `y` 接受并继续下载。下载完成后，你可以在终端中输入 `variety` 来运行它。
 
 ```
 sudo add-apt-repository ppa:variety-wallpaperproject/ppa
+
 sudo apt-get update
+
 sudo apt-get install variety
 ```
 
-- **第 3 步** 下载 Variety 源码，输入：**wget https://github.com/variety-project/variety/releases/download/v[version]/variety.tar.gz`。
 
-- **第 4 步** 解压源码包，输入：**tar -xvf variety.tar.gz**。
 
-- **第 5 步** 进入解压后的文件夹，输入：**cd variety**。
-
-- **第 6 步** 配置编译环境，输入：**./configure**。这会检查你的系统是否满足安装要求。
-
+- **第 3 步** 下载 Variety 源码，输入：`wget https://github.com/variety-project/variety/releases/download/v[version]/variety.tar.gz`。
+- **第 4 步** 解压源码包，输入：`tar -xvf variety.tar.gz`。
+- **第 5 步** 进入解压后的文件夹，输入：`cd variety`。
+- **第 6 步** 配置编译环境，输入：`./configure`。这会检查你的系统是否满足安装要求。
 - **第 7 步** 如果 `./configure` 报错缺少依赖项，你需要根据提示使用 `sudo apt-get install` 安装缺失的包。
-
-- **第 8 步** 配置完成后，输入 **make**。这会编译源码并生成可执行文件。
-
-- **第 9 步** 编译完成后，最后输入：**sudo make install**。这会将应用安装到系统中。
-
-- **第 10 步** 安装完成后，你就可以在终端中输入 **variety** 来运行它了。如需更多信息，可以访问 [Variety 官方 GitHub](https://github.com/variety-project/variety) 页面。
-
-
-
-
+- **第 8 步** 配置完成后，输入 `make`。这会编译源码并生成可执行文件。
+- **第 9 步** 编译完成后，最后输入：`sudo make install`。这会将应用安装到系统中。
+- **第 10 步** 安装完成后，你就可以在终端中输入 `variety` 来运行它了。如需更多信息，可以访问 [Variety 官方 GitHub](https://github.com/variety-project/variety) 页面。
 
 # 使用终端
 
 ```
 Kernel command line: block2mtd.block2mtd=/dev/hda2,131072.root root=/dev/mtd0
+
 ck0 roottype=jffs2 init=/etc/preinit noinittrd console=ttyS0 console=tty3840n reboot-bios
+
 Found and enabled local APIC:
+
 Enabling FPU save and restore... done.
+
 Enabling unmasked SIMD FPU exception support... done.
+
 Initializing CPU00
+
 PID hash table entries: 32 (order: 5, 128 bytes)
+
 Detected 1991 667 MHz processor.
+
 Console: colour VGA+0x25
+
 console [tty0] enabled
+
 console [tty0] enabled
+
 Dentry cache hash table entries: 1024 (order: 0, 4096 bytes)
+
 Inode-cache hash table entries: 1024 (order: 0, 4096 bytes)
+
 Memory: 512K/812K available (147k kernel code, 264k reserved, 597k data, 196k Ok highmem)
+
 virtual kernel memory layout:
+
 fixmap: 0xfff90000 - 0xffffff (280 kB)
+
 vmalloc: 0xc0000000 - 0xfffff7000 (1007 MB)
+
 lowmem: 0xc0000000 - 0xc07f0000 (7 MB)
+
 .init: 0xc0310000 - 0xc0344000 (196 KB)
+
 .data: 0xc027653c - 0xc030bcfc (597 KB)
+
 .text : 0xc0100000 - 0xc027653c (147 KB)
+
 Checking if this processor honours the WP bit even in supervisor mode...Ok.
+
 Calibrating delay using timer specific routine... 4047.64 BogoMIPS (lp)=202382210
 ```
 
@@ -1506,28 +1344,42 @@ Calibrating delay using timer specific routine... 4047.64 BogoMIPS (lp)=20238221
 
  * 注意：我们有时会短时间禁用并重新启用中断
  * （为了将工作放入视频 IO 中），但这仅对键盘事件
- * 有效。当我们获取到键盘中断时，我们会处理中断开始，
+ * 有效。当我们获取到键盘中断时，我们会处理中断开始
  *，因为我们使用了 trq-gates. 希望一切顺利。
  */
 
 #include <linux/sched.h>
+
 #include <linux/tty.h>
+
 #include <asm/h>
+
 #include <linux/system.h>
 
 #define SCREEN_START 0x8000
+
 #define SCREEN_END 0x0000
+
 #define COLUMNS 80
+
 #define LINES 25
 
 extern unsigned void keyboard_interrupt(void) {
+
 static unsigned long origin=SCREEN_START;
+
 static unsigned long sc_end=SCREEN_START+LINES*COLUMNS;
+
 static unsigned long m_x,y;
+
 static unsigned long top-bottom-LINES;
+
 static unsigned long lines=LINES,columns=COLUMNS;
+
 static unsigned long state;
+
 static unsigned long nq_par[NBAR];
+
 static unsigned char attr=0x07;
 ```
 
@@ -1542,82 +1394,110 @@ static unsigned char attr=0x07;
 使用终端创建内容并不像看起来那么费力。是的，终端对于新手来说可能是一个令人生畏的地方，但一旦掌握了它，它其实非常直观。
 
 - 步骤 1
-主目录。如果需要，使用 `cd -` 命令无论你当前位于何处都能返回到主目录。
-
+  主目录。如果需要，使用 `cd -` 命令无论你当前位于何处都能返回到主目录。
 - 步骤 3
-你的命令行应该变为 Test 文件夹，如果你在那里输入 `ls`（列出文件夹内容），文件夹内没有任何东西；`mkdir` 命令非常直观易懂：创建目录（Make Directory）加上你选择的名称。
+  你的命令行应该变为 `Test` 文件夹，如果你在那里输入 `ls`（列出文件夹内容），文件夹内没有任何东西；`mkdir` 命令非常直观易懂：创建目录（Make Directory）加上你选择的名称。
 
 ```
 davidd@david-mint ~ $ cd -
+
 davidd@david-mint ~ $
 ```
 
 ```
 davidd@david-mint ~ $ mkdir Test
+
 davidd@david-mint ~ $ cd Test
+
 davidd@david-mint ~ $ ls
+
 davidd@david-mint ~ /Test $ ls
 ```
 
 - 步骤 2
-让我们先在 Home 中创建一个新文件夹，并命名为 Test。你需要的命令是 `mkdir Test`。按回车创建你在命令中输入的文件夹，输入 `cd Test` 并按回车。这将切换目录（此处）`cd` 到新创建的 Test 文件夹。
-
+  让我们先在 `Home` 中创建一个新文件夹，并命名为 `Test`。你需要的命令是 `mkdir Test`。按回车创建你在命令中输入的文件夹，输入 `cd Test` 并按回车。这将切换目录（此处）`cd` 到新创建的 `Test` 文件夹。
 - 步骤 4
-要创建一个名为 Test.txt 的空文件，在终端输入：`touch Test.txt`。你可以使用 `ls` 查看文件夹中的新文件。这是一个标准命令，允许在创建文件而无需打开编辑器、保存文件然后关闭编辑器。
+  要创建一个名为 `Test.txt` 的空文件，在终端输入：`touch Test.txt`。你可以使用 `ls` 查看文件夹中的新文件。这是一个标准命令，允许在创建文件而无需打开编辑器、保存文件然后关闭编辑器。
 
 ```
 davidd@david-mint ~ $ mkdir Test
+
 davidd@david-mint ~ $ cd Test
+
 davidd@david-mint ~ $ ls
+
 davidd@david-mint ~ $ touch Test.txt
+
 davidd@david-mint ~ $ ls
+
 davidd@david-mint ~ /Test $ ls
 ```
 
 ```
 davidd@david-mint ~ $ mkdir Test
+
 davidd@david-mint ~ $ cd Test
+
 davidd@david-mint ~ $ ls
+
 davidd@david-mint ~ $ touch Test.txt
+
 davidd@david-mint ~ $ ls
+
 davidd@david-mint ~ /Test $ ls
 ```
+
+
 
 # 使用终端创建文件
 
-**步骤 5** 假设你现在想创建一个文本文件，我们称其为 Test2.txt。输入一些内容来完成。所以，输入：`touch Test2.txt`。这将创建文件 **Test2.txt** 并将其推入终端编辑器。
+**步骤 5** 假设你现在想创建一个文本文件，我们称其为`Test2.txt`。输入一些内容来完成。所以，输入：`touch Test2.txt`。这将创建文件`Test2.txt`并将其推入终端编辑器。
 
-**步骤 8** Xed 是一个 GUI 应用，你可以通过菜单栏输入文本并保存文件（或任何文件），并使用其顶部菜单栏选项中的**文件（File）** > **保存（Save）** 或**文件（File）** > **另存为（Save As）** 功能。
+**步骤 8** `Xed`是一个 GUI 应用，你可以通过菜单栏输入文本并保存文件（或任何文件），并使用其顶部菜单栏选项中的**文件（File）** > **保存（Save）** 或**文件（File）** > **另存为（Save As）** 功能。
 
 ```
 File Edit View Search Terminal Help
+
 david@david-min ~$ touch Test2.txt
+
 david@david-min ~$ ls
+
 david@david-min ~$ touch touch_test.txt
+
 david@david-min ~$ ls
+
 Test2.txt
+
 david@david-min ~$ cat Test2.txt
 ```
 
-**步骤 6** 你会注意到光标在 **cat** > **Test2.txt** 命令下方闪烁，没有任何参数。这个提示允许你输入文件将包含的文本。输入一些文本，然后按 **Ctrl+D** 退出并将内容保存到文件中。
+**步骤 6** 你会注意到光标在`cat` > `Test2.txt`命令下方闪烁，没有任何参数。这个提示允许你输入文件将包含的文本。输入一些文本，然后按**Ctrl+D**退出并将内容保存到文件中。
 
-但是，如果你更喜欢留在终端中编辑/保存/创建文件，可以使用 Nano。Nano 是一个简单的基于终端的编辑器。要尝试它可以使用 `nano Test2.txt`。它屏幕底部有一个菜单。你可以在 Nano 中保存任何内容，然后按 **Ctrl+X** 并遵循屏幕上的操作说明。
+但是，如果你更喜欢留在终端中编辑/保存/创建文件，可以使用`Nano`。`Nano`是一个简单的基于终端的编辑器。要尝试它可以使用`nano Test2.txt`。它屏幕底部有一个菜单。你可以在`Nano`中保存任何内容，然后按**Ctrl+X**并遵循屏幕上的操作说明。
 
 ```
 File Edit View Search Terminal Help
+
 david@david-root ~
+
 david@david-root ~$ touch Test2.txt
+
 david@david-root ~$ ls
+
 david@david-root ~$ touch touch_test.txt
+
 david@david-root ~$ ls
+
 Test2.txt
+
 david@david-root ~$ cat Test2.txt
+
 这是使用终端的 cat 命令输入的。很酷，不是吗？按下 Ctrl+D...
 ```
 
-**步骤 7** 固然你不一定得要使用终端向文件中输入文本。Mint 附带了一个名为 **Xed** 的编辑器，它类似于 Windows 记事本。要在 Xed 中查看之前创建的文件，在终端中输入 `xed` **Test2.txt** 并按**回车**。
+**步骤 7** 固然你不一定得要使用终端向文件中输入文本。`Mint`附带了一个名为`Xed`的编辑器，它类似于 Windows 记事本。要在`Xed`中查看之前创建的文件，在终端中输入`xed Test2.txt`并按**回车**。
 
-**步骤 10** 我们已经使用终端启动了 Mint 应用 Xed，但任何应用其实都可以在终端内启动。例如，尝试：`firefox`，然后按**回车**。关闭 Firefox 返回终端。
+**步骤 10** 我们已经使用终端启动了`Mint`应用`Xed`，但任何应用其实都可以在终端内启动。例如，尝试：`firefox`，然后按**回车**。关闭`Firefox`返回终端。
 
 # 创建和删除目录
 
@@ -1625,94 +1505,121 @@ david@david-root ~$ cat Test2.txt
 
 ## 管理文件夹
 
-学习在终端中创建和删除文件夹是 Mint（实际上是整个 Linux）的一项需要掌握的重要技能。以下是基础操作供你尝试。
+学习在终端中创建和删除文件夹是`Mint`（实际上是整个 Linux）的一项需要掌握的重要技能。以下是基础操作供你尝试。
 
 - 步骤 1
-主目录。如果需要，使用 `cd -` 命令无论你当前位于何处都能返回到主目录。现在输入 `ls` 查看你拥有的文件夹。你会发现文件夹被标记为青色（浅蓝色）。让我们先创建一个目录：`mkdir testdir`。
+主目录。如果需要，使用`cd -`命令无论你当前位于何处都能返回到主目录。现在输入`ls`查看你拥有的文件夹。你会发现文件夹被标记为青色（浅蓝色）。让我们先创建一个目录：`mkdir testdir`。
 
 - 步骤 2
-如果你现在输入 `ls`，你会看到新目录 testdir 与 Home 区域的其他目录一起被创建了。显然 `mkdir` 命令创建了目录。
+如果你现在输入`ls`，你会看到新目录`testdir`与 Home 区域的其他目录一起被创建了。显然`mkdir`命令创建了目录。
 
 - 步骤 3
-如果你再次输入命令 `mkdir testdir`，你会收到一条消息显示：`mkdir:无法创建目录 'testdir': 文件存在`。在当前目录下只能有一个同名的目录。然而，Linux 允许 `ls testdir`。
+如果你再次输入命令`mkdir testdir`，你会收到一条消息显示：`mkdir:无法创建目录 'testdir': 文件存在`。在当前目录下只能有一个同名的目录。然而，Linux 允许`ls testdir`。
 
 - 步骤 4
-你可以在已经创建的目录中创建目录。例如，进入目录 `cd testdir/` 并按照操作列出该目录。那里什么都没有，因为你刚刚创建了它。现在通过 `cd ..` 返回主目录，并输入 `mkdir testdir/reports`。回到测试目录，`cd testdir/` 并执行 ls。
-
-
-
-
+你可以在已经创建的目录中创建目录。例如，进入目录`cd testdir/`并按照操作列出该目录。那里什么都没有，因为你刚刚创建了它。现在通过`cd ..`返回主目录，并输入`mkdir testdir/reports`。回到测试目录，`cd testdir/`并执行`ls`。
 
 ## 创建和删除目录
 
-**第 5步** 创建目录的命令逻辑很清晰，你是的。然而，如果你想创建一个目录并在其中创建子目录，请确保你处于家目录，并使用单个命令创建子目录（`cd ~`）或使用 `mkdir -p Temp/Finances`。现在，`cd Temp/` 并列出新目录。
+**第 5步** 创建目录的命令逻辑很清晰，你是的。然而，如果你想创建一个目录并在其中创建子目录，请确保你处于家目录，并使用单个命令创建子目录（`cd ~`）或使用`mkdir -p Temp/Finances`。现在，`cd Temp/`并列出新目录。
 
-**第 8步** 现在既然我们已经创建了一些目录，让我们来看看如何删除它们。通过进入目录并列出内容：**cd testdir**，然后输入 `ls`。创建的 reports 子目录存在。现在删除它的方法之一是进入 **rmdir reports**，然后输入 `ls` 确认它不存在。
+**第 8步** 现在既然我们已经创建了一些目录，让我们来看看如何删除它们。通过进入目录并列出内容：`cd testdir`，然后输入`ls`。创建的`reports`子目录存在。现在删除它的方法之一是进入`rmdir reports`，然后输入`ls`确认它不存在。
 
 ```
 david@david-mint: ~Temp
+
 File Edit View Search Terminal Help
+
 david@david-mint: # mkdir -p Temp/finances
+
 david@david-mint: # mkdir -p Temp/ls
+
 Finances
+
 david@david-mint: # ls
 ```
 
 ```
 david@david-mint: ~testdir
+
 File Edit View Search Terminal Help
+
 david@david-mint: # cd testdir
+
 david@david-mint: # ls
+
 Reports
+
 david@david-mint: # rmdir reports
+
 ls
+
 david@david-mint: # rmdir testdir
 ```
 
-**第 6步** `-p` 选项让 `mkdir` 命令能够创建子目录以及父目录。在 Linux 中，命令遵循相同的结构：命令、选项和参数。在在上一步的示例中，命令是 (**mkdir**)，选项是 (-p)，参数是 (**Temp/finances**)。
+**第 6步** `-p`选项让`mkdir`命令能够创建子目录以及父目录。在 Linux 中，命令遵循相同的结构：命令、选项和参数。在在上一步的示例中，命令是（`mkdir`），选项是（`-p`），参数是（`Temp/finances`）。
 
-**第 9步** 一个快速的警告：在终端中删除目录不会将其放入通过 Nemo 文件管理器的 Mint 垃圾桶中。对于任何文件也是如此，如果你在终端中删除一个目录，它就会彻底消失。
+**第 9步** 一个快速的警告：在终端中删除目录不会将其放入通过`Nemo`文件管理器的`Mint`垃圾桶中。对于任何文件也是如此，如果你在终端中删除一个目录，它就会彻底消失。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_58_0.png)
 
 ```
 david@david-mint: ~testdir
+
 david@david-mint: # rmdir reports
+
 david@david-mint: # rmdir testdir
 ```
 
 ```
 File Edit View Search Terminal Help
+
 david@david-mint $ mkdir -p Temp/finances
 ```
 
-**第 7步** 如果你想深入研究 `mkdir` 命令的各种选项，可以在终端中输入 `mkdir --help`。这将提供快速帮助，详细说明这些选项以及命令的工作原理。
+**第 7步** 如果你想深入研究`mkdir`命令的各种选项，可以在终端中输入`mkdir --help`。这将提供快速帮助，详细说明这些选项以及命令的工作原理。
 
-Rmdir 只删除空目录，要删除目录及其子目录，甚至文件，除非你使用带有 `-R` 选项的 `rm` 命令。例如，使用 `rm -R Temp`。一个小技巧是删除父文件夹，其所有内容都会被删除。使用时请务必小心。
+`Rmdir`只删除空目录，要删除目录及其子目录，甚至文件，除非你使用带有`-R`选项的`rm`命令。例如，使用`rm -R Temp`。一个小技巧是删除父文件夹，其所有内容都会被删除。使用时请务必小心。
 
 ```
 david@david-mint: ~Temp
+
 File Edit View Search Terminal Help
+
 david@david-mint: # mkdir --help
+
 usage: mkdir [OPTIONS] DIRECTORY...
+
 create the DIRECTORYs, if they do not already exist.
+
   --parents      create parent directories as needed
+
   --verbose      output a message for each created directory
+
   --version      output version information
+
   --context=CTX  use -z or CTX if specified by the SELinux
+
   --help           display help information and exit
 
 GNU coreutils copy copy: https://www.gnu.org/manual/coreutils/
+
 Full list of copy options: see 'mkdir --help'
+
 other available via: 'info (coreutils) invocation'
 ```
 
 ```
 david@david-mint: ~testdir
+
 File Edit View Search Terminal Help
+
 david@david-mint: # rm -R Temp
+
 david@david-mint: # ls
 ```
+
+
 
 ## 使用终端
 
@@ -1724,19 +1631,13 @@ david@david-mint: # ls
 
 在接下来的两个部分中，你将完全在终端中工作，所以开始活动你的手指吧。毕竟，俗语说，工作之余……
 
-- 我们将使用的第一个命令是 `sl`，它默认没有安装，所以执行：`sudo apt-get install sl`。可以运行 sl 命令（输入 LS，注意大写，同样有效）。
-
+- 我们将使用的第一个命令是 `sl`，它默认没有安装，所以执行：`sudo apt-get install sl`。可以运行 `sl` 命令（输入 `LS`，注意大写，同样有效）。
 - 如果你曾让电脑为你读一段随机的运气，那么你走运了。大多数发行版需要你安装 `fortune`，但 Linux Mint 的不同之处在于它预装了它。你只需要在终端输入命令 `fortune` 并享受即可。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_59_0.png)
 
 - 星球大战粉丝在终端中大有收获。通过 `telnet` 命令连接到远程服务器，你可以观看《第四部：新希望》的播放，全部以 ASCII 格式呈现。要查看这场盛宴，输入 `telnet starwars.blinkenlights.nl`。
-
 - `rev` 命令可以反转文本。如果你输入一些内容并通过 `rev`，你会看到有趣的反转效果。
-
-
-
-
 
 # 终端中的更多趣味玩法
 
@@ -1749,12 +1650,19 @@ david@david-mint: # ls
 
 ```
 dump save terminal help
+
 dump ascii white; do echo "$(date +%B) | toilet t f border --midnight"; sleep
+
 06/21 08:30:01
+
 06/21 08:30:02
+
 06/21 08:30:03
+
 06/21 08:30:04
+
 06/21 08:30:05
+
 06/21 08:30:06
 ```
 
@@ -1772,6 +1680,7 @@ david-mint $ ls > folders.txt && speak -f folders.txt
 
 ```
 View Search Terminal Help
+
 david-mint $ ls > folders.txt && speak -f folders.txt
 ```
 
@@ -1809,24 +1718,38 @@ david-mint $ ls > folders.txt && speak -f folders.txt
 Dunnet 是由 Ron Schnall 在 1982 年编写的文本编辑器，自1994 年起隐藏在 Emacs 中。
 
 david@ubuntu-~$: emacs -batch -q dunnet
+
 Dead end
+
 你处于一条道路的死胡同。路向东延伸，但你可以看到它最终会分支。有两条皇室道路，标记等距。这里有一个铲子。
+
 $ shovel
 ```
+
+
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_63_1.png)
 
 ### 月球沼泽
+
 Moon Bogey 基于经典的 1982 年街机游戏《月球球巡逻》（Moon Patrol），出现于 1980 年代中期的计算机上。它是一个疯狂的雅达游戏，可以通过以下命令在 Linux 终端中使用：
+
 `sudo apt-get install moon-bogey`
+
 然后输入：
+
 `moon-bogey`
+
 享受。
 
 ### 让它下雪
+
 在终端中“下雪”是你每天可能遇到的事情。如果你感兴趣，请输入：
+
 `wget https://github.com/contek/1505843/raw/7/d024716a5769fb5232fe09f427533614d/snowjob.sh`
+
 `chmod +x snowjob.sh`
+
 `./snowjob.sh`
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_63_2.png)
@@ -1836,97 +1759,137 @@ Moon Bogey 基于经典的 1982 年街机游戏《月球球巡逻》（Moon Patr
 # 内存大户
 
 如果你需要查看哪些应用消耗最多的内存，只需输入：
+
 `ps aux --sort=%mem`
+
 这将按内存排序输出。
 
 ### BBS（公告板系统）
+
 在拨号时代，在线世界是由公告板系统（BBS）组成的。这些是用户聊天、交换代码、玩游戏的远程聚集地。使用 `telnet`，我们仍然可以连接到一些活跃的 BBS。有无数的 BBS，我们可以查看 https://www.bbs.org/list/ 获取更多信息。
 
 ### 粉碎
+
 当你删除一个文件时，软件可能会恢复它。然而，要安全地永久删除文件，请使用：
+
 `shred -u filename`
-将 filename 替换为文件名。
+
+将 `filename` 替换为文件名。
 
 ### 目录树
+
 如果你想创建一个整个目录（文件夹）树，可以使用：
+
 `mkdir -p New-Dir/{folder1,folder2,folder3,folder4}`
-这将创建一个带有文件夹的 New-Dir。
+
+这将创建一个带有文件夹的 `New-Dir`。
 
 ### ASCII
+
 ASCII 艺术应用于图像时非常引人注目。然而这很难。你可以使用以下工具创建精美的 ASCII 艺术：
 
 ### 忘记命令
-记住所有命令并不容易。坦率地说，我们可以使用 apropos 来帮助我们。只需使用它获取命令的描述：
+
+记住所有命令并不容易。坦率地说，我们可以使用 `apropos` 来帮助我们。只需使用它获取命令的描述：
+
 `apropos "copy files"`
+
 `apropos "rename files"`
+
 将文本替换为系统中实际的文件。如果没有安装，使用：
+
 `sudo apt-get install apt-utils.`
 
 ### 使用终端
 
 ## Linux 与大爆炸
+
 Linux 是粒子碰撞，这样我们就可以理解宇宙是如何运作的。
 
 ## 你知道吗...
+
 Linux 位于大型强子对撞器科学的核心？使用 Red Hat Linux 和 CentOS（基于 Red Hat 内核的超稳定发行版）作为基础，科学家和工程师创建了自己的自定义发行版——Scientific Linux 来帮助 LHC 的所有方面。最著名的 SLC，也称为 CERN。根据报告，有超过36000 台系统运行 SL，15000 台运行 SLC。
 
 # 创建 Bash 脚本 – 第一部分
+
 最终当你开始使用 Linux Mint 时，你会开始创建自己的自动化任务和程序。这些本质上是像 DOS  文件或任何其他语言一样工作的 Shell 脚本。
 
 ### 脚本
-bash 脚本是 Mint 执行以完成特定任务的命令。它们可能非常。
+
+`bash` 脚本是 Mint 执行以完成特定任务的命令。它们可能非常。
 
 - 步骤 1：在接下来的页面中，你将在终端和文本编辑器中工作。文本编辑器有替代方案，但为了方便，我们将使用示例。在开始之前，运行更新检查：`sudo apt-get update && sudo apt-upgrade`
-- 步骤 2：有几种文本编辑器可以创建 Bash 脚本：Xed, Vi, Nano, Vim, GNU Emacs 等。最后，这取决于个人喜好。使用 Xed 纯是为了方便阅读下方截图中的脚本。
+- 步骤 2：有几种文本编辑器可以创建 Bash 脚本：`Xed`, `Vi`, `Nano`, `Vim`, `GNU Emacs` 等。最后，这取决于个人喜好。使用 `Xed` 纯是为了方便阅读下方截图中的脚本。
 - 步骤 3：首先，在你开始编写任何脚本之前，你需要创建一个可以放置所有脚本的文件夹。从 `mkdir scripts` 开始并进入文件夹 `cd scripts/`。这将是我们的工作文件夹，从这里你可以为你创建每个脚本创建子文件夹。
-- 步骤 4：Windows 用户会知道，为了创建一个批处理文件并执行并遵循内部编程，它需要有 BAT 文件扩展名。Linux 是一个没有扩展名的操作系统，但习惯是创建 .sh 脚本。
+- 步骤 4：Windows 用户会知道，为了创建一个批处理文件并执行并遵循内部编程，它需要有 `BAT` 文件扩展名。Linux 是一个没有扩展名的操作系统，但习惯是创建 `.sh` 脚本。
 
-```
+```text
 david-mint $ sudo apt-get update && sudo apt-upgrade
+
 [sudo] password for davidid
+
 Hit: 1: http://launchpad.net/ubuntu/ubuntu-security
+
 Hit: 2: http://launchpad.net/petivi/ubuntu-security
+
 Hit: 3: http://launchpad.net/thomas-schwarz/ubuntu-backports
+
 Hit: 4: http://launchpad.net/thomas-schwarz/ubuntu-updates
+
 Hit: 5: http://launchpad.net/linuxmint/linuxmint-updates
+
 Hit: 6: http://www.mirrors.org/sites/linux.ubuntu/
+
 Get: 7: http://archive.ubuntu.com/ubuntu/ main
+
 Get: 8: http://archive.ubuntu.com/ubuntu/ focal-updates
+
 Get: 9: http://archive.ubuntu.com/ubuntu/ focal-security
+
 Hit: 10: http://repository.ubuntu.com stable
+
 All packages are up to date.
 ```
 
-
-
-
 # 创建 Bash 脚本 – 第 部分
 
-STEP 5 让我们从一个简单的脚本开始，在终端输出一些内容。输入 `xed` 创建名为 `helloworld.sh` 的文件。在 Xed 中，这将启动 Xed 并创建一个名为 `helloworld.sh` 的文件。输入以下内容：`#!/bin/bash`，然后在新行：`Hello World!`
+STEP 5 让我们从一个简单的脚本开始，在终端输出一些内容。输入 `xed` 创建名为 `helloworld.sh` 的文件。在 `Xed` 中，这将启动 `Xed` 并创建一个名为 `helloworld.sh` 的文件。输入以下内容：`#!/bin/bash`，然后在新行：`Hello World!`
 
 STEP 8 当你再次输入 `ls` 时，你会发现 `helloworld.sh` 现在从黑色变成了绿色，这意味着它不是一个可执行文件。换句话说，对于脚本，要运行你输入的内容，运行 `./helloworld.sh`。
 
-```
+```text
 File Edit View Search Terminal Help
+
 daviddavid-mint --scripts xed helloworld.sh
+
 daviddavid-mint --scripts []
 ```
 
-```
+```text
 File View Search Tools Documents Help
+
   * helloworld.sh
+
   #!/bin/bash
+
 echo Hello World
 ```
 
-```
+```text
 File Edit View Search Terminal Help
+
 daviddavid-mint --scripts xed helloworld.sh
+
 daviddavid-mint --scripts chmod +x helloworld.sh
+
 helloworld.sh
+
 daviddavid-mint --scripts --ls
+
 helloworld.sh
+
 daviddavid-mint --scripts ./helloworld.sh
+
 Hello Me World
 ```
 
@@ -1934,41 +1897,61 @@ STEP 6 `#!/bin/bash` 行告诉系统你将变成什么，在这种情况下是 B
 
 STEP 9 尽管这并不令人兴奋，但“Hello World!”现在将显示在终端中。`echo` 命令负责对终端的其他部分做出响应，随着我们的学习，你可以将 `echo` 命令的输出到其他屏幕。
 
-```
+```text
 File Edit View Search Tools Documents Help
+
   * helloworld.sh
+
   #!/bin/bash
+
 echo Hello World
 ```
 
-```
+```text
 File Edit View Search Tools Documents Help
+
 * helloworld.sh
+
   #!/bin/bash
+
 helloworld.sh
+
 helloworld
+
 helloworld World
+
 echo Hello World! This is my first script in Linux Mint
 ```
 
-STEP 7 你可以点击“文件 > 保存”来保存此文件，并退出回到终端。输入 `ls` 将显示文件中的脚本。要使其可执行并能够运行，你需要修改权限。使用 `chmod +x helloworld.sh` 执行此操作。你应该对创建的每个脚本这样做。
 
-STEP 10 将 `echo` 视为 BASIC 的 `PRINT` 命令。它将显示文本或存储在系统中变量，例如当前日期。尝试一下：`echo Hello World! Today is $(date +%A)`
+
+STEP 7 你可以点击“文件 > 保存”来保存此文件，并退出回到终端。输入`ls`将显示文件中的脚本。要使其可执行并能够运行，你需要修改权限。使用`chmod +x helloworld.sh`执行此操作。你应该对创建的每个脚本这样做。
+
+STEP 10 将`echo`视为 BASIC 的`PRINT`命令。它将显示文本或存储在系统中变量，例如当前日期。尝试一下：`echo Hello World! Today is $(date +%A)`
 
 ```
 File Edit Search Terminal Help
+
 daviddavid-mint --scripts xed helloworld.sh
+
 daviddavid-mint --scripts --ls
+
 helloworld.sh
+
 daviddavid-mint --scripts chmod +x helloworld.sh
+
 daviddavid-mint --scripts []
 ```
 
 ```
 File View Search Tools Documents Help
+
   * helloworld.sh
+
 Hello World Today is Monday
+
 helloworld.sh []
+
 echo Hello World! Today is $(date)
 ```
 
@@ -1980,14 +1963,12 @@ echo Hello World! Today is $(date)
 
 就像每一种其他编程语言一样，Bash 脚本可以存储和调用系统中的某些变量，无论是通用的还是用户创建的。
 
-- **STEP 1** 我们从创建一个名为 `hello.sh` 的新脚本开始；`xed Hello $1`。保存文件并退出 Xed。`###!/bin/bash`，然后 `echo $1`。使用 `chmod +x hello.sh` 使脚本变为可执行。
-
+- **STEP 1** 我们从创建一个名为`hello.sh`的新脚本开始；`xed Hello $1`。保存文件并退出 Xed。`###!/bin/bash`，然后`echo $1`。使用`chmod +x hello.sh`使脚本变为可执行。
 - **STEP 3** 输出现在将是 Hello David。Bash 会自动为用户分配变量，这些变量会被持有并传递给脚本。`$1` 了 "David"。你可以通过输入不同的内容来更改变量：`./hello.sh Mint`。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_69_0.png)
 
-- **STEP 2** 由于脚本现在是可执行的，使用 `./hello.sh` 运行它。现在正如你预期的那样，“Hello”显示在终端中。然而，如果你在使用带有变量的命令，事情开始变得有趣了。例如，尝试 `./hello.sh David`。
-
+- **STEP 2** 由于脚本现在是可执行的，使用`./hello.sh`运行它。现在正如你预期的那样，“Hello”显示在终端中。然而，如果你在使用带有变量的命令，事情开始变得有趣了。例如，尝试`./hello.sh David`。
 - **STEP 4** 你可以重命名变量。使用以下内容修改脚本：`surname=$1; Hello $surname`。将每个语句放在新行。保存脚本并退出回到终端。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_69_1.png)
@@ -1996,128 +1977,175 @@ echo Hello World! Today is $(date)
 
 STEP 5 当你运行脚本时，可以使用自定义变量：`./hello.sh David Hayward`。自然，我们用你的名字定义了两个变量；除非你也叫 David Hayward。我们只是在打印内容，让我们把双变量的使用扩展到
 
-STEP 8 让我们进一步扩展。在截图中创建一个新脚本，保存它并使用 `chmod` 命令执行它。你可以看到脚本中增加了一些新内容。
+STEP 8 让我们进一步扩展。在截图中创建一个新脚本，保存它并使用`chmod`命令执行它。你可以看到脚本中增加了一些新内容。
 
 ```
 File Edit View Search Terminal Help
+
 david-david-mint --scripts $ ./hello.sh David Hayward
+
 david-david-mint --scripts $ ./hello.sh Linux Mint
+
 Hello Linux Mint
+
 david-david-mint --scripts $
 ```
 
 ```
 File View Search Tools Documents Help
+
 greetings.sh
+
 #!/bin/bash
+
 echo -n "hello, what is your name?"
+
 read firstname
+
 echo -n "thank you, and what is your surname?"
+
 read surname
+
 echo Hello $firstname $surname, how are you today?
 ```
 
-STEP 6 在这里创建一个名为 `addition.sh` 的新脚本，使用相同的格式。这里我们将使用 `firstname` 和 `secondnumber`，通过 `echo` 输出：`sum is $((firstname+secondnumber))`。
+STEP 6 在这里创建一个名为`addition.sh`的新脚本，使用相同的格式。这里我们将使用`firstname`和`secondnumber`，通过`echo`输出：`sum is $((firstname+secondnumber))`。
 
-STEP 9 我们在 `echo` 命令中添加了 `-n`，它会像之前一样工作。`read` 命令将输入存储为 `firstname` 和 `secondnumber`。`clear` 命令会清理屏幕。保存脚本并使其可执行（`chmod +x addition.sh`）。
+STEP 9 我们在`echo`命令中添加了`-n`，它会像之前一样工作。`read`命令将输入存储为`firstname`和`secondnumber`。`clear`命令会清理屏幕。保存脚本并使其可执行（`chmod +x addition.sh`）。
 
 ```
 File Edit Search Tools Documents Help
+
 addition.sh
+
 #!/bin/bash
+
 firstname=1
+
 secondnumber=2
+
 echo sum is $((firstname+secondnumber))
 ```
 
 ```
 File View Search Terminal Help
+
 Hello, how are you today?
+
 david-david-mint --scripts $
-```STEP 7 当你运行脚本时，我们可以输入两个数字：`./addition.sh 1 2`。结果将在终端显示“sum is 3”。尝试几个数字，看看是否可以修改脚本重命名为乘法。
+```
+
+STEP 7 当你运行脚本时，我们可以输入两个数字：`./addition.sh 1 2`。结果将在终端显示“sum is 3”。尝试几个数字，看看是否可以修改脚本重命名为乘法。
 
 STEP 10 最后，让我们包含日期变量。输出应该显示当前的星期几。
 
 ```
 File View Search Tools Documents Help
+
 david-david-mint --scripts ./addition.sh 1 2
+
 david-david-mint --scripts ./addition.sh 3 4
+
 david-david-mint --scripts ./addition.sh 5 6
+
 david-david-mint --scripts ./multiplication.sh 2
+
 david-david-mint --scripts $
 ```
 
 ```
 File View Search Tools Documents Help
+
 greetings.sh
+
 #!/bin/bash
+
 echo -n "hello, what is your name?"
+
 read firstname
+
 echo -n "thank you, and what is your surname?"
+
 read surname
+
 clear
+
 echo Hello $firstname $surname, how are you today?
 ```
 
-之前的页面中，我们查看了一些基础 Bash 脚本，涉及向屏幕输出文本、获取用户输入、存储并将其输出到屏幕；以及使用 Date 命令包含系统变量。现在让我们结合目前所获得的内容并引入循环。
+
+
+之前的页面中，我们查看了一些基础 Bash 脚本，涉及向屏幕输出文本、获取用户输入、存储并将其输出到屏幕；以及使用 `Date` 命令包含系统变量。现在让我们结合目前所获得的内容并引入循环。
 
 ## IF, THEN, ELSE
 
 在大多数编程结构中，总会有那么时刻，你需要遍历输入的命令以创建更好的功能，并最终创建一个更好的程序。
 
 - **STEP 1** 现在让我们看看现在的 If、Then 和 Else 语句，它们可以正确执行，比较一组指令并简单判断判断是否成立，从而执行不同的操作。创建一个新脚本 `greeting.sh` 并输入截图中的文本。
-
 - **STEP 2** `greeting.sh` 是 `greeting.sh` 的副本，但有细微不同。我们在 if 语句处添加了一个循环。如果输入的变量等于 David，下一行的反应是发生什么，在这种情况下会在屏幕上显示“Awesome name”，随后是 David。
-
 - **STEP 3** 下一行 `ELSE` 是当变量不等于“David”时发生的情况。在这种情况下，简单地在屏幕上输出你熟悉的“Hello...”。最后一行 `FI` 语句将结束循环。如果你有一个 if 命令没有 then，你将得到错误。
-
-
-
 
 # 创建 Bash 脚本 - 部分 3
 
 ## 更多循环
 
-你可以使用 FOR、WHILE 和 UNTIL 语句来遍历数据。当你需要批量复制或运行需要计数器的脚本时，这些语句会非常有用。
+你可以使用 `FOR`、`WHILE` 和 `UNTIL` 语句来遍历数据。当你需要批量复制或运行需要计数器的脚本时，这些语句会非常有用。
 
-步骤 1 创建名为 `count.sh` 的新脚本。输入下方截图中的文本，保存并赋予其执行权限。该脚本在开头创建了一个变量 `count` 并将其赋值为零。然后，如果 WHILE 循环小于 0（LT 部分），它将在 `echo` 命令中打印计数器的当前值。
+步骤 1 创建名为 `count.sh` 的新脚本。输入下方截图中的文本，保存并赋予其执行权限。该脚本在开头创建了一个变量 `count` 并将其赋值为零。然后，如果 `WHILE` 循环小于 0（LT 部分），它将在 `echo` 命令中打印计数器的当前值。
 
-步骤 4 UNTIL 循环的工作原理与 WHILE 循环非常相似，但在大多数情况下，它是反向的。因此，我们使用 UNTIL 计数到一百的写法是：`[ $count -gt 100 ]`；区别在于，在计数器大于（gt 部分）一百之前，保持循环。
+步骤 4 `UNTIL` 循环的工作原理与 `WHILE` 循环非常相似，但在大多数情况下，它是反向的。因此，我们使用 `UNTIL` 计数到一百的写法是：`[ $count -gt 100 ]`；区别在于，在计数器大于（gt 部分）一百之前，保持循环。
 
 ```bash
 File Edit View Search Documents Help
+
 count.sh
+
 #!/bin/bash
+
 count=0
+
 while [ $count -lt 100 ]; do
+
   echo $count
+
   count=$((count+1))
+
 done
 ```
 
-步骤 2 执行脚本 `count.sh` 将导致终端屏幕显示 0 到 99 的数字；当达到 100 时，脚本将结束。使用 FOR 语句修改脚本，其工作原理类似。要在我们的脚本中使用，请将截图中的文本输入 `count.sh`。
+步骤 2 执行脚本 `count.sh` 将导致终端屏幕显示 0 到 99 的数字；当达到 100 时，脚本将结束。使用 `FOR` 语句修改脚本，其工作原理类似。要在我们的脚本中使用，请将截图中的文本输入 `count.sh`。
 
-步骤 5 你并不局限于数字到一百。你可以在循环中执行任何命令集，执行次数取决于你希望循环运行多少。重命名文件、创建五个文件夹等。例如，此脚本将使用 FOR 循环创建从 Folder 1 到 Folder 10 的文件夹。
+步骤 5 你并不局限于数字到一百。你可以在循环中执行任何命令集，执行次数取决于你希望循环运行多少。重命名文件、创建五个文件夹等。例如，此脚本将使用 `FOR` 循环创建从 Folder 1 到 Folder 10 的文件夹。
 
 ```bash
 File Edit View Search Documents Help
+
 count.sh
+
 #!/bin/bash
+
 for count in {0..100}; do
+
   echo $count
+
 done
 ```
 
 步骤 3 在这里添加的 `for: count in {0..100}; do` 意味着对于变量 `count` 在从零到一百的数字中的每一个值，开始循环。脚本的其他部分相同。运行此脚本，输出将出现在终端中。
 
-步骤 6 在使用过一次 FOR 语句后，我们可以通过操作序列 `(0..100)` 部分来执行。这部分代码实际上意味着 `(起始..增量)`；如果没有增量，它只是从单个数字增加到结束值。例如，我们将循环设置为计数到1000 且步长为2：`For count in {0..1000..2}; do`
+步骤 6 在使用过一次 `FOR` 语句后，我们可以通过操作序列 `(0..100)` 部分来执行。这部分代码实际上意味着 `(起始..增量)`；如果没有增量，它只是从单个数字增加到结束值。例如，我们将循环设置为计数到1000 且步长为2：`For count in {0..1000..2}; do`
 
 ```bash
 File Edit View Search Documents Help
+
 count.sh
+
 #!/bin/bash
+
 for count in {0..1000..2}; do
+
   echo $count
+
 done
 ```
 
@@ -2134,22 +2162,39 @@ done
 
 ```bash
 #!/bin/bash
+
 mychoice
+
 echo "Mint"
+
 echo "Awesome"
+
 echo "Please choose an option (1, 2 or 3)"
+
 read choice
+
 while [ $choice -ne 1 ] && [ $choice -ne 2 ]
+
 do
+
   if [ $choice -eq 1 ]; then
+
     echo "Mint"
+
   elif [ $choice -eq 2 ]; then
+
     echo "Awesome"
+
   else
+
     echo "Invalid choice $choice"
+
     echo "Please choose an option (1, 2 or 3)"
+
     read choice
+
   fi
+
 done
 ```
 
@@ -2158,40 +2203,65 @@ done
 
 ```bash
 #!/bin/bash
+
 choice
+
 echo "Vanilla"
+
 echo "Chocolate"
+
 echo "Please choose an option (1, 2, 3 or 4)"
+
 read choice
+
 while [ $choice -ne 1 ] && [ $choice -ne 2 ] && [ $choice -ne 3 ] && [ $choice -ne 4 ]
+
 do
+
   if [ $choice -eq 1 ]; then
+
     echo "Mint"
+
   elif [ $choice -eq 2 ]; then
+
     echo "Awesome"
+
   elif [ $choice -eq 3 ]; then
+
     echo "Vanilla"
+
   elif [ $choice -eq 4 ]; then
+
     echo "Chocolate"
+
   else
+
     echo "Invalid choice $choice"
+
     echo "Please choose an option (1, 2, 3 or 4)"
+
     read choice
+
   fi
+
 done
 ```
 
 - 步骤 2
-如果你遵循这个脚本的操作，根据我们已经涵盖的内容，你很快就能掌握其运行原理。WHILE、IF 和 ELSE 配合循环运行选项，并在你选择错误选项时将你回到起点。
+如果你遵循这个脚本的操作，根据我们已经涵盖的内容，你很快就能掌握其运行原理。`WHILE`、`IF` 和 `ELSE` 配合循环运行选项，并在你选择错误选项时将你回到起点。
 
 - 步骤 4
 你可以在此脚本的菜单中使用方向键和回车键。`select` 是一个外部命令，为选项提供反馈并显示出来。这超出了我们之前的内容范围，但是一个很好的主意。
 
 ```
 SELECT MENU
+
 1. Mint
+
 2. Awesome
+
 3. Vanilla
+
 4. Chocolate
 ```
 
@@ -2210,119 +2280,197 @@ Bash 脚本最常用的示例之一是备份程序，它可以自动化任务。
 
 ```bash
 backup.sh
+
 #!/bin/bash
+
 clear
+
 # Time stamp
+
 day=$(date +%d)
+
 month=$(date +%m)
+
 year=$(date +%Y)
 
 # Folders
+
 dest=~/backups
 
 if [ ! -d $dest ]; then
-  echo "Backup folder does not exist! Creating..."
-  mkdir -p $dest
+```
+
+
+
+# 创建 Bash 脚本 - 部分 5
+
+```bash
+echo "Backup folder does not exist! Creating..."
+
+mkdir -p $dest
+
 fi
+
 echo "Backup complete!"
+
 echo "Backup done for $day$month$year"
 ```
 
 ```bash
 look4.sh
+
 #!/bin/bash
+
 target=
+
 read name
+
 out=$(find "$target" -name "$name*" 2>/dev/null)
+
 if [ "$out" ]; then
+
   echo "$out"
+
 else
+
   echo "No match found"
+
 fi
 ```
 
-# 创建 Bash 脚本 - 部分 5
+## 步骤 5
 
-步骤 5 执行的脚本等待用户输入文件扩展名，例如 jpg、mp4 等。这不太友好。让我们它变得友好一点。使用 `read` 命令，配合 `echo "Please enter the extension of the file you're looking for: "`。
+步骤 5 执行的脚本等待用户输入文件扩展名，例如 `jpg`、`mp4` 等。这不太友好。让我们它变得友好一点。使用 `read` 命令，配合 `echo "Please enter the extension of the file you're looking for: "`。
 
 ```bash
 #!/bin/bash
+
 target=
+
 echo "Please enter the extension of the file you're looking for:"
+
 output=$(echo $target | grep "*$name" 2>/dev/null)
+
 if [ -z "$output" ]; then
+
   echo "No match found"
+
 else
+
   echo "$output"
+
 fi
 ```
 
-步骤 8 `colours.sh` 的输出可以混合，取决于你想要的输出效果。例如，红色背景（或闪烁）。遗憾的是，闪烁效果在所有终端上都不起，所以你可能需要切换到不同的终端。
+## 步骤 8
+
+`colours.sh` 的输出可以混合，取决于你想要的输出效果。例如，红色背景（或闪烁）。遗憾的是，闪烁效果在所有终端上都不起，所以你可能需要切换到不同的终端。
 
 ```
 Normal Text
+
 Default Default
+
 Default Red
+
 Default Yellow
+
 Default Magenta
+
 Default light gray
+
 Default light green
+
 Default light blue
+
 Default light cyan
+
 Default Black
+
 Default Green
+
 Default Yellow
+
 Default Magenta
+
 Default light magenta
 ```
 
-步骤 6 这是一个有趣的脚本，使用应用安装，将文本输入到新脚本 `speak.sh`。
+## 步骤 6
+
+这是一个有趣的脚本，使用应用安装，将文本输入到新脚本 `speak.sh`。
 
 ```bash
 #!/bin/bash
+
 echo "What is your name?"
+
 echo "Thank you, and what is your surname?"
+
 echo "Hello $firstname surname, how are you?"
 ```
 
-步骤 7 我们简短地在我们的脚本输出中添加一些颜色。这里创建一个新脚本 `colours.sh`，它输出如下：
+## 步骤 7
+
+我们简短地在我们的脚本输出中添加一些颜色。这里创建一个新脚本 `colours.sh`，它输出如下：
 
 ```bash
 #!/bin/bash
+
 class=$1
+
 echo -e "Normal $class"
+
 echo -e "Inverted $class"
+
 echo -e "Underlined $class"
+
 echo -e "Blink $class"
+
 echo -e "Bold $class"
+
 echo -e "Default $class"
+
 echo -e "Red $class"
+
 echo -e "Green $class"
+
 echo -e "Yellow $class"
+
 echo -e "Blue $class"
+
 echo -e "Light cyan $class"
+
 echo -e "Light gray $class"
+
 echo -e "Light green $class"
+
 echo -e "Light blue $class"
+
 echo -e "Light magenta $class"
+
 echo -e "Light magenta $class"
 ```
 
-步骤 9 在你制作花哨脚本时，如何使用 Zenith 输出图形界面？将你看到的输入到新脚本 `menu.sh`。
+## 步骤 9
+
+在你制作花哨脚本时，如何使用 Zenith 输出图形界面？将你看到的输入到新脚本 `menu.sh`。
 
 ```bash
 #!/bin/bash
+
 firstname=$1 --entry --title "What is your name?"
+
 surname=$2 --entry --title "Thank you, and what is your surname?"
+
 age=$3 --entry --title "Welcome to Linux Houseka, $firstname surname"
 ```
 
-步骤 10 如果你正在玩游戏，获取 http://proxy.regnet.c/1linux/houseenka.sh/ 赋予脚本执行权限并运行它。英文版，由 Martin Bruchard 撰写，我们相信你可以修改它。提示标题界面是 Base6。
+
+
+步骤 10 如果你正在玩游戏，获取 `http://proxy.regnet.c/1linux/houseenka.sh/` 赋予脚本执行权限并运行它。英文版，由 Martin Bruchard 撰写，我们相信你可以修改它。提示标题界面是 Base6。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_76_0.png)
-
-
-
 
 ## 树莓派 x Linux = 完美组合
 
@@ -2340,9 +2488,7 @@ Raspian 是树莓派推荐的操作系统，它是一个基于 Debian 的定制�
 
 这种组合使得树莓派成为不仅用于编码，还适用于通用 Linux 各种操作的绝佳基础。Raspian 基于 Debian，能够运行本书中列出的任何终端（Terminal）命令，因为 Linux Mint、Mint 和 Ubuntu 也是基于 Debian 的。通过极少的设置，你就可以同时拥有常规的 Windows 或 Mac 电脑，并将树莓派作为一台“无头电脑”（一个供电但不需要连接键盘、鼠标或显示器的设备，你通过远程连接到它），从它连接并学习如何使用 Linux 以及如何编码。
 
-## 树莓派 x Linux = 完美组合
-
-## 哪款树莓派？
+### 哪款树莓派？
 
 目前有多种树莓派型号可用，每个型号都有独特之处。最新发布的 Pi 是树莓派 3 Model B+，虽然它比其他示例稍贵，但它是最强大、功能最丰富的树莓派。
 
@@ -2375,9 +2521,9 @@ Python 是初学者最流行的语言之一，树莓派预装了让你充分发�
 
 C++ 是值得学习的最强大的编程语言之一。树莓派配备了一个出色的 C++ 编辑器，易于使用并能帮助你开发惊人的内容。无论你决定如何开启编码和 Linux 之之旅，树莓派都是一个极佳的起点平台。
 
-```
 RISC OS PI
-```
+
+
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_78_1.png)
 
@@ -2391,24 +2537,20 @@ www.bdmpublications.com 79
 
 这些可能是大家最常用的命令，出现频率很高。
 
-- **cd** 是你在命令行中最常用的命令之一。它允许你更改工作目录。你用它在文件系统的层次结构中移动。
-- **mv** 将文件移动到不同位置或重命名文件。例如 `mv file sub` 将原文件重命名为 sub，`mv sub ~/Desktop` 将 sub 移动到你的目录。重命名必须指定一个新的文件名。
-- **ls** 显示当前目录下的文件。通过某些选项，可以查看文件大小、创建时间和权限。例如 `ls -l` 显示目录的文件。
-- **chown** 更改每个指定文件的用户/组所有。如果只给出一个所有者（名称或数字 ID），它将成为文件的所有者，而文件组不变。
-- **cp** 用于复制文件和目录。例如，`cp file sub` 为你命名的文件创建一个精确副本并命名为 sub。第一个文件将以原始名称存在。
-- **chmod** 更改所列文件的权限。权限基于一个简单的模型。你可以为用户、组和其他世界设置权限，并设置它们是否可以读取、写入和执行。
-- **pwd** 输出当前工作目录的完整路径（“打印目录”）。注意 GNOME 终端也在窗口标题栏中显示此内容。
-- **rm** 移除（删除）文件目录。删除过程是从文件系统从数据存储设备解除链接，并标记为可供未来写入。其他删除增加了磁盘上的可用空间。
-- **clear** 在可能的情况下清除你的屏幕。它查找终端的环境，然后根据指定的终端进入 terminfo 数据库以确定如何清除屏幕。在使用 shell 时，它等同于输入 Control-L。
-- **mkdir** 用于“创建目录”，用于在文件系统中创建目录（如果指定的目录尚不存在）。例如，`mkdir` 创建工作目录。调用 mkdir 时可以指定多个目录。
+- `cd` 是你在命令行中最常用的命令之一。它允许你更改工作目录。你用它在文件系统的层次结构中移动。
+- `mv` 将文件移动到不同位置或重命名文件。例如 `mv file sub` 将原文件重命名为 `sub`，`mv sub ~/Desktop` 将 `sub` 移动到你的目录。重命名必须指定一个新的文件名。
+- `ls` 显示当前目录下的文件。通过某些选项，可以查看文件大小、创建时间和权限。例如 `ls -l` 显示目录的文件。
+- `chown` 更改每个指定文件的用户/组所有。如果只给出一个所有者（名称或数字 ID），它将成为文件的所有者，而文件组不变。
+- `cp` 用于复制文件和目录。例如，`cp file sub` 为你命名的文件创建一个精确副本并命名为 `sub`。第一个文件将以原始名称存在。
+- `chmod` 更改所列文件的权限。权限基于一个简单的模型。你可以为用户、组和其他世界设置权限，并设置它们是否可以读取、写入和执行。
+- `pwd` 输出当前工作目录的完整路径（“打印目录”）。注意 GNOME 终端也在窗口标题栏中显示此内容。
+- `rm` 移除（删除）文件目录。删除过程是从文件系统从数据存储设备解除链接，并标记为可供未来写入。其他删除增加了磁盘上的可用空间。
+- `clear` 在可能的情况下清除你的屏幕。它查找终端的环境，然后根据指定的终端进入 `terminfo` 数据库以确定如何清除屏幕。在使用 shell 时，它等同于输入 Control-L。
+- `mkdir` 用于“创建目录”，用于在文件系统中创建目录（如果指定的目录尚不存在）。例如，`mkdir` 创建工作目录。调用 `mkdir` 时可以指定多个目录。
 
+## 命令行快速参考
 
-
-
-
-# 命令行快速参考
-
-# 有用的帮助/信息命令
+## 有用的帮助/信息命令
 
 当你尝试学习更多关于你正在使用的 Linux 系统或程序知识时，以下命令会非常有用。你可能不需要每天使用它们，但当你需要时，它们将是无价之。
 
@@ -2427,122 +2569,119 @@ www.bdmpublications.com 79
 - `grep` 命令允许你在多个文件中搜索特定模式并打印匹配的行。例如：`grep blah file`。
 - `intro` 命令特别有用。它显示《用户命令简介》（Introduction to User Commands），这是一份关于 Linux 命令的写得非常出色且相当简短的介绍。
 
-# 使用终端
+## 使用终端
 
-# Linux 命令 A-Z 列表
+## Linux 命令 A-Z 列表
 
 Linux 命令字面上有数以千计的命令，虽然这并不是一个完整的 A-Z 列表，但它确实包含了许多你可能需要的命令。你可能会发现自己最终只会反复使用较少的一部分命令，但拥有整体的知识仍然非常有帮助。
 
-## A
-- adduser 添加新用户
-- arch 打印机器架构
-- awk 在文件(s)中查找并替换文本
+### A
+- `adduser` 添加新用户
+- `arch` 打印机器架构
+- `awk` 在文件(s)中查找并替换文本
 
-## D
-- dump 数据转储，转换并复制文件
-- diff 显示两个文件之间的差异
-- dname 将完整路径转换为路径
-- du 估算文件空间使用情况
+### D
+- `dump` 数据转储，转换并复制文件
+- `diff` 显示两个文件之间的差异
+- `dname` 将完整路径转换为路径
+- `du` 估算文件空间使用情况
 
-## G
-- gawk 在文件(s)中查找并替换文本
-- grep 在文件(s)中搜索匹配给定模式的行
-- groups 原样打印组名
-- gzip 压缩或解压命名文件
+### G
+- `gawk` 在文件(s)中查找并替换文本
+- `grep` 在文件(s)中搜索匹配给定模式的行
+- `groups` 原样打印组名
+- `gzip` 压缩或解压命名文件
 
-## B
-- bc 任意精度计算器语言
+### B
+- `bc` 任意精度计算器语言
 
-## C
-- cat 合并文件并打印到标准输出
-- cd 切换工作目录
-- chown 修改文件所有者
-- root 切换根目录
-- cksum 打印 CRC 校验和和字节计数
-- cmp 比较两个文件
-- comm 按行比较两个排序后的文件
-- cp 将一个或多个文件复制到另一个位置
+### C
+- `cat` 合并文件并打印到标准输出
+- `cd` 切换工作目录
+- `chown` 修改文件所有者
+- `root` 切换根目录
+- `cksum` 打印 CRC 校验和和字节计数
+- `cmp` 比较两个文件
+- `comm` 按行比较两个排序后的文件
+- `cp` 将一个或多个文件复制到另一个位置
 
-## E
-- env 显示或移除环境变量
-- expand 将制表转换为空格
-- expr 求值表达式
-- echo 在屏幕上显示消息
-- ed 一个行行的文本编辑器 (edlin)
-- egrep 在文件(s)中搜索匹配扩展正则表达式的行
+### E
+- `env` 显示或移除环境变量
+- `expand` 将制表转换为空格
+- `expr` 求值表达式
+- `echo` 在屏幕上显示消息
+- `ed` 一个行行的文本编辑器 (edlin)
+- `egrep` 在文件(s)中搜索匹配扩展正则表达式的行
 
-## H
-- head 输出文件(s)的第一部分
-- hostname 打印或设置系统名称
-- id 打印用户和组 ID
-- info 帮助信息
-- install 复制文件并设置属性
+### H
+- `head` 输出文件(s)的第一部分
+- `hostname` 打印或设置系统名称
+- `id` 打印用户和组 ID
+- `info` 帮助信息
+- `install` 复制文件并设置属性
 
-## F
-- factor 打印质因数
-- fdisk Linux 分区表操作器
-- grep 在字段(s)中搜索匹配固定字符串的行
-- find 搜索符合标准的文件
-- crontab 安排定时运行的任务
-- split 将文件分成若干部分
-- cut 将文件分割若干部分
+### F
+- `factor` 打印质因数
+- `fdisk` Linux 分区表操作器
+- `grep` 在字段(s)中搜索匹配固定字符串的行
+- `find` 搜索符合标准的文件
+- `crontab` 安排定时运行的任务
+- `split` 将文件分成若干部分
+- `cut` 将文件分割若干部分
 
-## D
-- fold 按指定宽度折叠文本
-- format 格式化磁盘或磁带
-- fsck 文件系统检查和修复
+### D
+- `fold` 按指定宽度折叠文本
+- `format` 格式化磁盘或磁带
+- `fsck` 文件系统检查和修复
 
-## K
-- kill 停止运行的进程
-- less 每次显示一次输出
-- ln 在文件间创建链接
-- locate 查找文件
+### K
+- `kill` 停止运行的进程
+- `less` 每次显示一次输出
+- `ln` 在文件间创建链接
+- `locate` 查找文件
 
-# Linux 命令 A-Z 列表
+## Linux 命令 A-Z 列表
 
-| | | 打印当前登录名 | rcp 在机器间复制文件 | U | |
+| | | 打印当前登录名 | `rcp` 在机器间复制文件 | U | |
 |---|---|---|---|---|---|
-| lpc 打印机控制程序 | rm 删除文件 | umount 卸载设备 | |
-| lpr 离线打印 | rmdir 删除文件夹 | unexpand 将空格转换为制表符 | |
-| rpm 删除打印队列中的作业 | rpm 软件包管理器 | uniq 合并文件 | |
-| | | rsync 远程文件复制（同步文件） | units 将单位转换为其他比例 |
+| `lpc` 打印机控制程序 | `rm` 删除文件 | `umount` 卸载设备 | |
+| `lpr` 离线打印 | `rmdir` 删除文件夹 | `unexpand` 将空格转换为制表符 | |
+| `rpm` 删除打印队列中的作业 | `rpm` 软件包管理器 | `uniq` 合并文件 | |
+| | | `rsync` 远程文件复制（同步文件） | `units` 将单位转换为其他比例 |
 
 ## M
-| man 查看手册 | S | | unshor 解包 shell 脚本 |
+| `man` 查看手册 | S | | `unshor` 解包 shell 脚本 |
 |---|---|---|---|---|---|
-| mkdir 创建文件夹(s) | screen 终端窗口管理器 | useradd 创建新用户账户 |
-| mkfifo 创建命名管道 (FIFOs) | diff 交互式合并两个文件 | usmod 修改用户账户 |
-| knot 创建块或字符特殊文件 | select 接受键盘输入 | users 按字符出用户 |
-| more 每次显示一次输出 | seq 打印数字序列 | | 已登录 |
+| `mkdir` 创建文件夹(s) | `screen` 终端窗口管理器 | `useradd` 创建新用户账户 |
+| `mkfifo` 创建命名管道 (FIFOs) | `diff` 交互式合并两个文件 | `usmod` 修改用户账户 |
+| `knot` 创建块或字符特殊文件 | `select` 接受键盘输入 | `users` 按字符出用户 |
+| `more` 每次显示一次输出 | `seq` 打印数字序列 | | 已登录 |
 
 ## N
-| nice 设置命令或作业的优先级 | shutdown 关闭或重启 Linux | vdir 详细目录列表 (ls -l) |
-|---|---|---|---|---|
-| nl 给行编号并写入文件 | sleep 等待指定时间 | watch 打印字节、单词和行数 |
-| nohup 在挂起的情况下运行命令 | sort 排序文件 | where 报告命令的所有实例 |
+| `nice` 设置命令或作业的优先级 | `shutdown` 关闭或重启 Linux | `vdir` 详细目录列表 (`ls -l`) |
+|---|---|---|---|---|---|
+| `nl` 给行编号并写入文件 | `sleep` 等待指定时间 | `watch` 打印字节、单词和行数 |
+| `nohup` 在挂起的情况下运行命令 | `sort` 排序文件 | `where` 报告命令的所有实例 |
 
 ## P
-| passwd 修改用户密码 | T | | | who 在用户路径中查找文件 |
+| `passwd` 修改用户密码 | T | | | `who` 在用户路径中查找文件 |
 |---|---|---|---|---|---|
-| pathchk 检查行移植性 | tail 输出文件的最后部分 | | whoami 输出当前用户 ID 和名称 |
-| | 转换文本文件用于打印 | tar 磁带归档 | | |
-| printcap 打印打印机数据库 | tee 重定向到多个文件 | | |
-| printf 格式化并打印 | test 求值条件表达式 | | |
+| `pathchk` 检查行移植性 | `tail` 输出文件的最后部分 | | `whoami` 输出当前用户 ID 和名称 |
+| | 转换文本文件用于打印 | `tar` 磁带归档 | | |
+| `printcap` 打印打印机数据库 | `tee` 重定向到多个文件 | | |
+| `printf` 格式化并打印 | `test` 求值条件表达式 | | |
 
 ## Q
-| quota 显示磁盘使用和限制 | time 测量程序资源使用 | yes 打印字符串直到被中断 |
+| `quota` 显示磁盘使用和限制 | `time` 测量程序资源使用 | `yes` 打印字符串直到被中断 |
 |---|---|---|---|---|---|
-| quotacheck 扫描系统磁盘使用文件 | touch 修改文件时间戳 | | |
-| | | top 列出系统上运行的进程 | |
-| | | traceroute 跟踪路由 | tr 翻译、压缩和删除字符 | xargs 构建参数列表执行工具 |
+| `quotacheck` 扫描系统磁盘使用文件 | `touch` 修改文件时间戳 | | |
+| | | `top` 列出系统上运行的进程 | |
+| | | `traceroute` 跟踪路由 | `tr` 翻译、压缩和删除字符 | `xargs` 构建参数列表执行工具 |
 
 ## R
-| ram 内存磁盘 |
+| `ram` 内存磁盘 |
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_82_0.png)
-
-
-
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_86_0.png)
 
@@ -2604,24 +2743,24 @@ Python 被称为**高级语言**（High-Level language），因其精髓在于�
 
 所以回答这个问题：为什么选择 Python？简单来说，它是免费的、易于学习的、强大的、全球认可的，并且是一个超级强大的学习和教育工具。
 
-
-
-
-
 ## 如何在 Linux 中安装 Python
 
 ### 第 5 步 然而，如果你想获得最新、最先进的版本，你需要从源码编译 Python。首先在终端中输入这些命令：
-
-```
-sudo apt-get install build-essential checkinstall
-sudo apt-get install libreadline-dev libsqlite3-dev
-ncursesw5-dev libbz2-dev tk-dev
-libdbm-dev libdb6-dev libbz2
 ```
 
-### 第 8 步 在 Python 文件夹中，
-./configure
-sudo make altinstall
+
+
+`sudo apt-get install build-essential checkinstall`
+
+`sudo apt-get install libreadline-dev libsqlite3-dev`
+
+`ncursesw5-dev libbz2-dev tk-dev`
+
+`libdbm-dev libdb6-dev libbz2`
+
+### 第 8 步 在 Python 文件夹中
+`./configure`
+`sudo make altinstall`
 
 这取决于你电脑的速度，可能需要一段时间。完成后，使用 `python3.7 --version` 检查安装的版本。现在你已经在与 Python 3.x 和 Python 2 并存的情况下安装了 Python 3.7。
 
@@ -2629,10 +2768,10 @@ sudo make altinstall
 
 如果你想要一个包含所有稳定优化的（LTO 等）的构建版本，请运行 `--enable-optimizations`
 
-### 第 6 步 打开你的 Linux 浏览器并访问 Python 页面：www.python.org/downloads。点击 Python Source 下方的下载按钮。这会打开一个下载窗口；选择一个位置并开始下载。
+### 第 6 步 打开你的 Linux 浏览器并访问 Python 页面：`www.python.org/downloads`。点击 Python Source 下方的下载按钮。这会打开一个下载窗口；选择一个位置并开始下载。
 
 ### 第 9 步 对于 GUI，你需要在终端中输入命令：
-sudo apt-get install idle3
+`sudo apt-get install idle3`
 
 可以使用命令 `idle3` 启动 IDE。注意 IDE 运行的版本与你安装的版本不同。
 
@@ -2641,7 +2780,7 @@ sudo apt-get install idle3
 ### 第 10 步 在终端中，使用 `tar -xvf python-3.Y.Y.tar.xz` 进入已下载的源码目录。将文件名替换为你下载的版本。现在使用 `cd Python-3.Y.Y/` 进入解压后的文件夹。
 
 你还需要 PIP（Pip 包管理器）来帮助你安装更多模块和扩展。
-pip3 install --upgrade pip
+`pip3 install --upgrade pip`
 
 完成后，可以通过系统“编程”功能可以使用终端和 Python 3.x。
 
@@ -2657,7 +2796,7 @@ pip3 install --upgrade pip
 
 - 第 1 步 在加载了树莓派桌面后，点击菜单中的 Programming（编程）> Python 3 (IDLE)。这会打开 Python 3 Shell。Windows 和 Mac 用户可以在 Windows 开始菜单或 Finder 访达中找到 Python 3 IDLE Shell。
 
-- 第 3 步 例如，在 Shell 中输入：Z+Z。按下回车键后，下一行显示答案：4。基本上，Python 已经处理了“代码”并产生了相关的输出。
+- 第 3 步 例如，在 Shell 中输入：`Z+Z`。按下回车键后，下一行显示答案：4。基本上，Python 已经处理了“代码”并产生了相关的输出。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_91_0.png)
 
@@ -2667,24 +2806,39 @@ pip3 install --upgrade pip
 
 ```
 Python 3.4.2 (Default, Oct 19 2014, 13:21:11)
+
 >>> on Linux
+
 >>> 'copyright', 'credits' or 'license' for more information.
+
 >>> 4
+
 4
 ```
 
 ```
 Python 3.4.2 (Default, Oct 19 2014, 13:21:11)
+
 >>> on Linux
+
 >>> 'copyright', 'credits' or 'license' for more information.
+
 >>> 4
+
 4
+
 >>> 23539+64552
+
 669061
+
 >>> 465028*12345-12345
+
 5740233332
+
 >>> 9778629968*48234
+
 47147329999512
+
 >>>
 ```
 
@@ -2720,7 +2874,7 @@ Hello!
 - 紫色 函数
 - 橙色 命令
 
-第 10 步 Python IDLE 是一个强大的界面，如果你想知道更多关于 Shell 的信息，建议花几分钟访问 www.python.org/library/idle.html，介绍了 IDLE 的许多功能。
+第 10 步 Python IDLE 是一个强大的界面，如果你想知道更多关于 Shell 的信息，建议花几分钟访问 `www.python.org/library/idle.html`，介绍了 IDLE 的许多功能。
 
 ## IDLE 编码
 
@@ -2778,36 +2932,54 @@ b=2
 
 第 5 步 你在这里执行的操作为字母 a 和 b 赋值了值：2 和 2。它们现在是变量，只要它们的数字保持不变，就可以调用 Python 进行输出、加法、减法等。尝试这个：
 
-第 8 步 现在添加一个姓氏：surname="Hayward"
- print(surname)
+第 8 步 现在添加一个姓氏：`surname="Hayward"`
+`print(surname)`
 
-print(b)
+`print(b)`
 
 ```python
 Python 3.4.2 (Default, Oct 19 2014, 13:21:11)
+
 >>> on Linux
+
 >>> 'copyright', 'credits' or 'license' for more information.
+
 >>> type(name)
 'str'
+
 >>> name="Hayward"
+
 >>> print(name)
 'Hayward'
+
 >>> a=2
+```
+
+
+
+```
 >>> print(a*2)
+
 4
+
 >>> b=3
+
 >>> print(b*2)
+
 6
+
 >>> print(a+b)
+
 5
+
 >>>
 ```
 
 你拥有两个变量，名字和姓，你可以独立地打印它们。
 
-第 6 步 最后的输出独立显示了 a 和 b 的值，因为你要求它们分别打印。如果你想把它们相加，可以使用：
+第 6 步 最后的输出独立显示了 `a` 和 `b` 的值，因为你要求它们分别打印。如果你想把它们相加，可以使用：
 
-第 9 步 如果我们像之前一样相同的程序，使用 + 符号，名字就不会在 Shell 中正确显示。尝试它：
+第 9 步 如果我们像之前一样相同的程序，使用 `+` 符号，名字就不会在 Shell 中正确显示。尝试它：
 
 ```python
 print(a+b)
@@ -2823,16 +2995,15 @@ print("Hello everyone!")
 
 像之前的步骤那样进入 IDLE。
 
-第 8 步 Python IDLE 是一个舒适的环境，如果你不喜欢它的显示方式，可以通过 Options > Configure 并点击 Highlighting 标签进行更改。然而，我们不建议这样做，因为你看到的和截图不一样。
+第 8 步 `Python IDLE` 是一个舒适的环境，如果你不喜欢它的显示方式，可以通过 `Options > Configure` 并点击 `Highlighting` 标签进行更改。然而，我们不建议这样做，因为你看到的和截图不一样。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_92_0.png)
 
-第 7 步 你可以打印不同种类的变量和 Print 函数。例如，你可以为某人的名字赋值：
+第 7 步 你可以打印不同种类的变量和 `Print` 函数。例如，你可以为某人的名字赋值：
 
 ```python
 name="David"
 print(name)
-
 print(name, surname)
 ```
 
@@ -2841,11 +3012,8 @@ print(name, surname)
 ```python
 print("+"+surname)
 ```
+
 正如你所见，逗号的使用要简单得多。恭喜你，你刚刚迈入了 Python 世界的第一步。
-
-
-
-
 
 # 保存并执行你的代码
 
@@ -2855,28 +3023,25 @@ print("+"+surname)
 
 你最终会达到这一点，必须停止在 Shell 中输入单行代码。相反，IDLE 编辑器将允许你保存并执行你的 Python 代码。
 
-- 步骤 1：首先，打开 Python IDLE Shell，启动后，点击 File -> New File。这将打开一个名为“Untitled”（无标题）的新窗口。这就是 Python 编辑器，你可以在其中输入代码来创建未来的程序。
-
+- 步骤 1：首先，打开 Python IDLE Shell，启动后，点击 `File -> New File`。这将打开一个名为“Untitled”（无标题）的新窗口。这就是 Python 编辑器，你可以在其中输入代码来创建未来的程序。
 - 步骤 2：从所有意义上来说，IDLE 编辑器是一个具有 Python 特性、编码等等功能的简单文本编辑器；它类似于 Sublime Editor。你可以像在 Shell 中一样输入输入代码，参考上一个教程的示例，输入：
-
-- 步骤 3：你可以看到 IDLE 编辑器中的颜色编码与 Shell 中相同，这让你能够理解代码正在运行什么。然而，要执行代码，你首先需要将其保存。按下 F5 键会弹出 Save...（保存...）框。
+- 步骤 3：你可以看到 IDLE 编辑器中的颜色编码与 Shell 中相同，这让你能够理解代码正在运行什么。然而，要执行代码，你首先需要将其保存。按下 `F5` 键会弹出 `Save...`（保存...）框。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_95_0.png)
-
 ![](img/f8aca09bc266ba3d122c77a820ff023b_95_1.png)
 
-- 步骤 4：点击保存框中的 OK 按钮，并选择一个保存所有 Python 代码的位置。目标位置可以是专门的 Python 文件夹，也可以随意放在任何你喜欢的地方。但请保持磁盘整洁，这对你以后有帮助。
+- 步骤 4：点击保存框中的 `OK` 按钮，并选择一个保存所有 Python 代码的位置。目标位置可以是专门的 Python 文件夹，也可以随意放在任何你喜欢的地方。但请保持磁盘整洁，这对你以后有帮助。
 
-```
+```python
 print("Hello everyone!")
 ```
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_95_2.png)
 ![](img/f8aca09bc266ba3d122c77a820ff023b_95_3.png)
 
-# 保存并执行你的代码
+### 保存并执行你的代码
 
-步骤 5：为你的代码命名，例如 'print hello'，然后点击按钮。一旦 Python 代码被保存并执行，它将在 IDLE Shell 中详细显示。在这种情况下，是 'Hello everyone!' 这些单词。
+步骤 5：为你的代码命名，例如 `'print hello'`，然后点击按钮。一旦 Python 代码被保存并执行，它将在 IDLE Shell 中详细显示。在这种情况下，是 `'Hello everyone!'` 这些单词。
 
 步骤 8：让我们扩展代码并输入上一个教程中的几个示例：
 
@@ -2889,21 +3054,21 @@ print(name, surname)
 print (a+b)
 ```
 
-如果你按下 F5，系统会提示你保存文件，因为之前已经被修改过。
+如果你按下 `F5`，系统会提示你保存文件，因为之前已经被修改过。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_96_0.png)
 
-步骤 6：这是你大部分 Python 代码的运行方式。将代码输入编辑器，按 F5，保存代码并查看 Shell 中的输出。有时结果会有所不同，取决于你是否请求了进程窗口，但本质上，这是你在整本书中将使用的流程，除非另有说明。
+步骤 6：这是你大部分 Python 代码的运行方式。将代码输入编辑器，按 `F5`，保存代码并查看 Shell 中的输出。有时结果会有所不同，取决于你是否请求了进程窗口，但本质上，这是你在整本书中将使用的流程，除非另有说明。
 
-如果你点击 OK 按钮，文件将被新的代码条目覆盖，对于这几行代码来说不是问题，但如果你编辑一个较大的文件，覆盖可能会成为问题。使用编辑器中的 File > Save As（文件 > 另存为）创建备份。
+如果你点击 `OK` 按钮，文件将被新的代码条目覆盖，对于这几行代码来说不是问题，但如果你编辑一个较大的文件，覆盖可能会成为问题。使用编辑器中的 `File > Save As`（文件 > 另存为）创建备份。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_96_1.png)
 ![](img/f8aca09bc266ba3d122c77a820ff023b_96_2.png)
 ![](img/f8aca09bc266ba3d122c77a820ff023b_96_3.png)
 
-步骤 7：如果你打开保存的 Python 代码位置，你可以看到它是 .py 扩展名。你创建的任何代码都会是某种.py，你从互联网下载的任何 Python 代码都是 .py。只需确保代码是为 Python 3 编写的。
+步骤 7：如果你打开保存的 Python 代码位置，你可以看到它是 `.py` 扩展名。你创建的任何代码都会是某种 `.py`，你从互联网下载的任何 Python 代码都是 `.py`。只需确保代码是为 Python 3 编写的。
 
-步骤 10：现在创建一个新代码。关闭编辑器，打开一个新实例（从 Shell 中 File > New File）。输入以下内容并将其保存为 hello：
+步骤 10：现在创建一个新代码。关闭编辑器，打开一个新实例（从 Shell 中 `File > New File`）。输入以下内容并将其保存为 `hello`：
 
 ```python
 a="Python"
@@ -2911,6 +3076,7 @@ b="15"
 c="hello!"
 print(a, b, c)
 ```
+
 你将在下一个教程中使用这段代码。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_96_4.png)
@@ -2920,11 +3086,11 @@ print(a, b, c)
 
 虽然我们在整本书中都在使用 GUI 版本的 IDLE，但值得看一眼 Python 的命令行处理。我们已经知道有一个命令行版本的 Python，但它也被用于执行代码。
 
-使用我们在上一个教程中创建的代码（即我们命名为 hello.py 的那个），看看如何在命令行运行在 GUI 中创建的代码。在 Linux 中，Python 提供了两种通过命令行执行代码的方法。其中一种是使用 Python 2，另一种是使用 Python 3 库等。首先，是你操作系统上的命令行或终端（Terminal）。
+使用我们在上一个教程中创建的代码（即我们命名为 `hello.py` 的那个），看看如何在命令行运行在 GUI 中创建的代码。在 Linux 中，Python 提供了两种通过命令行执行代码的方法。其中一种是使用 Python 2，另一种是使用 Python 3 库等。首先，是你操作系统上的命令行或终端（Terminal）。
 
-步骤 2：刚才我们正在使用树莓派：Windows 用户需要点击开始按钮并搜索 CMD，然后点击命令行；macOS 用户通过点击 Go > Utilities > Terminal 访问他们的命令行。
+步骤 2：刚才我们正在使用树莓派：Windows 用户需要点击开始按钮并搜索 `CMD`，然后点击命令行；macOS 用户通过点击 `Go > Utilities > Terminal` 访问他们的命令行。
 
-步骤 3：现在你已在命令行界面，我们可以启动 Python 了。对于 Python 3，你需要输入命令 `python` 并按回车。这将带你进入命令行版本的 Shell，光标为右箭头 (>>)。
+步骤 3：现在你已在命令行界面，我们可以启动 Python 了。对于 Python 3，你需要输入命令 `python` 并按回车。这将带你进入命令行版本的 Shell，光标为右箭头 (`>>`)。
 
 ## 代码
 
@@ -2934,6 +3100,7 @@ print(a, b, c)
 a=2
 print(a)
 ```
+
 你可以看到它的工作原理完全一样。
 
 ```
@@ -2946,11 +3113,11 @@ pi@raspberry: $ python3
 2
 ```
 
-# 从终端执行代码
+### 从终端执行代码
 
-步骤 5：现在输入 `exit()` 退出会话并返回命令提示符。进入你保存上一个教程代码的目录，并列出其中的可用文件；希望你会看到 hello.py。
+步骤 5：现在输入 `exit()` 退出会话并返回命令提示符。进入你保存上一个教程代码的目录，并列出其中的可用文件；希望你会看到 `hello.py`。
 
-步骤 8：从 Python 2 运行 Python 3 代码的结果是显而易见的。虽然它不会以任何方式报错，但 Python 3 处理 Print 命令的方式与 Python 2 之间存在差异。在用 Sublime 时刻下，打开 hello.py
+步骤 8：从 Python 2 运行 Python 3 代码的结果是显而易见的。虽然它不会以任何方式报错，但 Python 3 处理 `Print` 命令的方式与 Python 2 之间存在差异。在用 Sublime 时刻下，打开 `hello.py`
 
 ```
 python@raspberry: $ 
@@ -2958,7 +3125,6 @@ File Edit Help
 Python 3.4 (default) Oct 2014, 13:31
 [4.0.1] # "copyright", "credits" or "license" for more information.
 print('hello')
-
 exit
 exit()
 cd Documents/
@@ -2974,6 +3140,9 @@ raspberrypi:~/Documents/Code $
 ```
 python3 hello.py
 ```
+
+
+
 这将执行我们创建的代码，并将：
 
 ```python
@@ -2983,14 +3152,14 @@ c="cool"
 print(a, b, c)
 ```
 
-步骤 9：由于树莓派没有 Sublime Text，你将暂时离开树莓派并使用一个不需要 IDLE 的示例。打开 hello.py 文件，将其修改为：
+步骤 9：由于树莓派没有 Sublime Text，你将暂时离开树莓派并使用一个不需要 IDLE 的示例。打开 `hello.py` 文件，将其修改为：
 
 ```python
 name=input("What is your name?")
 print("hello", name)
 ```
 
-C:\Users\Desktop\Documents\python-hello.py - Sublime Text (UNREGISTERED)
+`C:\Users\Desktop\Documents\python-hello.py - Sublime Text (UNREGISTERED)`
 File Edit Selection Find View Tools Preferences Help
 hello
 a="Python"
@@ -3000,18 +3169,18 @@ print(a, b, c)
 name=input("What is your name?")
 print("hello", name)
 
-步骤 7：自然地，这是 Python 3 代码，使用了 Python 3 特有的语法和布局，当你使用 python3 命令时可以运行。如果你尝试用 Python 2 相同的输入：
+步骤 7：自然地，这是 Python 3 代码，使用了 Python 3 特有的语法和布局，当你使用 `python3` 命令时可以运行。如果你尝试用 Python 2 相同的输入：
 
 ```
 python hello.py
 ```
 
-步骤 10：保存 hello.py 文件并回到命令行。现在新保存的：
+步骤 10：保存 `hello.py` 文件并回到命令行。现在新保存的：
 
 ```
 python3 hello.py
 ```
-结果将是原始的代码语句，加上了为你的名字输入的 input 命令，并显示在内容窗口中。
+结果将是原始的代码语句，加上了为你的名字输入的 `input` 命令，并显示在内容窗口中。
 
 ```
 python@raspberrypi:~/Documents/
@@ -3019,7 +3188,6 @@ File Edit Tabs Help
 Python 3.4 (default) Oct 2014, 13:31
 [4.0.1] # "copyright", "credits" or "license" for more information.
 print('hello')
-
 exit
 exit()
 cd Documents/
@@ -3029,10 +3197,6 @@ raspberrypi:~/Documents/Code python hello.py
 raspberrypi:~/Documents/Code python hello.py
 raspberrypi:~/Documents/Code $
 ```
-
-
-
-
 
 # 太空侵入者
 
@@ -3099,16 +3263,16 @@ Python 3.4.2 (default, Oct 19 2014, 13:31:11)
 ```
 
 - **步骤 2** 在 Shell 中输入以下内容：
-2*2
-54356+34553245
-9986734*2734484221
+`2*2`
+`54356+34553245`
+`9986734*2734484221`
 
 你可以看到 Python 可以处理大数字。
 
-- **步骤 4** 你已经注意到，除法得到一个小数。在 Python 中，这些都是 float，或者说是浮点运算。然而，如果你需要从一个整数得到小数答案，可以使用斜杠：
+- **步骤 4** 你已经注意到，除法得到一个小数。在 Python 中，这些都是 `float`，或者说是浮点运算。然而，如果你需要从一个整数得到小数答案，可以使用斜杠：
 
-1/2
-6/2
+`1/2`
+`6/2`
 
 ```
 Python 3.4.2
@@ -3150,10 +3314,10 @@ Python 3.4.2 (default, Oct 19 2014, 13:31:11)
 
 步骤 5 你也可以使用运算符来查看除法留下的余数。例如：
 
-10/3
+`10/3`
 将显示 3.333333333，这是 3.3 循环小数。如果你输入：
 
-10%3
+`10%3`
 这将显示 1，这是 10 除以 3 的余数。
 
 ```
@@ -3167,9 +3331,9 @@ Python 3.4.2 (default, Oct 19 2014, 13:31:11)
 ```
 
 步骤 8 它将显示为 '011'，将整数转换为二进制并添加前缀 0b。如果你想移除 0b，可以使用：
-format(3, 'b')
+`format(3, 'b')`
 
-format 将值 3 格式化为 'b'。
+`format` 将值 3 格式化为 'b'。
 
 ```
 >>2**2
@@ -3189,8 +3353,8 @@ format 将值 3 格式化为 'b'。
 
 步骤 6 接下来我们有幂运算符，或者说指数，如果你想技术一点。可以使用双星：
 
-2**3
-10**10
+`2**3`
+`10**10`
 它本质上是 2^3 但你已经知道了运算符的基础知识。这是在 Python 中的实现方法。
 
 ```
@@ -3227,93 +3391,130 @@ print(a != 7 or b == 7)
 >> True
 print(a == 7 or b == 6)
 >> True
-print(5, (a == 7 and b == 6))
->> False
-print(7, not (a == 7 or b == 6))
->> False
-print(9, not (a == 7 and b == 6))
->> False
 ```
 
+
+
+`print(5, (a == 7 and b == 6))`
+
+>> False
+
+`print(7, not (a == 7 or b == 6))`
+
+>> False
+
+`print(9, not (a == 7 and b == 6))`
+
+>> False
+
+```
 步骤 7 数字和表达式并没有到此。Python 有许多内置函数来处理数字、绝对值、复数和大量的数学表达式。要转换为二进制，使用：
-
 bin(3)
-
 ```
+
 >> 1/2
+
 >> 0.5
+
 >> 6/2
+
 >> 3
+
 >> 2*3
+
 >> 6
+
 >> (1+2)*(3*4)
+
 >> 21
+
 >> 15
+
 >> 6/2
+
 >> 3
+
 >> 10/3
+
 >> 3.3333333333335
+
 >> 2**3
+
 >> 8
+
 >> 10**8
+
 10000000
->> bin(3)
+
+>> `bin(3)`
+
 >> '0b11'
-```
 
+```
 步骤 10 执行步骤 9 的代码，你可以看到一系列 True 或 False 语句，取决于结果：6 和 7。它是你所看到的扩展，也是编程的重要部分。
+```
 
-```
 Python 3.4.2 (default, Jun 29 2015, 01:28:40) [GCC Windows] on Windows
+
 输入 "help" 获取帮助，或输入 "license" 获取更多信息。
->>> a = 6
->>> b = 7
->>> a == b
+
+>>> `a = 6`
+
+>>> `b = 7`
+
+>>> `a == b`
+
 >> False
->>> a < b
+
+>>> `a < b`
+
 >> True
->>> a == 6 and b == 7
+
+>>> `a == 6 and b == 7`
+
 >> True
->>> a == 4 and b == 7
+
+>>> `a == 4 and b == 7`
+
 >> False
->>> a != 7 or b == 7
+
+>>> `a != 7 or b == 7`
+
 >> True
->>> a == 7 or b == 6
+
+>>> `a == 7 or b == 6`
+
 >> True
->>> 5, (a == 7 and b == 6)
+
+>>> 5, (`a == 7 and b == 6`)
+
 >> False
->>> 7, not (a == 7 or b == 6)
+
+>>> 7, `not (a == 7 or b == 6)`
+
 >> False
->>> 9, not (a == 7 and b == 6)
+
+>>> 9, `not (a == 7 and b == 6)`
+
 >> False
-```
 
 # 使用注释
 
 编写代码时，流程、每个变量的作用、整个程序如何运行等都在你的脑海里。另一个程序员可以逐行跟踪代码，但随着时间的推移，可能会变得难以阅读。
 
-# 注释！
+## 注释！
 
 程序员通过对某些部分进行注释来保持代码的可读性。如果使用了变量，程序员会注释它的预期作用，例如。这是一种良好的习惯。
 
 - **步骤 1** 从创建一个 IDLE 编辑器新实例（File > New）并创建一个新文件。
-
 - **步骤 2** 如果使用了变量，程序员会注释它的预期作用，例如。这是一种良好的习惯。
-
 - **步骤 3** 使用注释来解释代码中发生了什么，以帮助非程序员的读者。
-
 - **步骤 4** 你也可以注释掉你不想运行的代码段。
-
 - **步骤 5** 使用注释标记代码的重要部分。
-
 - **步骤 6** 注释也可以用于给未来的自己留记笔记。
-
 - **步骤 7** 注释有助于记录你程序的逻辑。
-
-- **步骤 8** 井号符号 # 用于注释掉单行。
-
-- **步骤 9** 使用三引号 """ 来注释掉多行代码。
-
+- **步骤 8** 井号符号 `#` 用于注释掉单行。
+- **步骤 9** 使用三引号 `"""` 来注释掉多行代码。
 - **步骤 10** 使用注释解释代码中复杂的部分。
 
 ```python
@@ -3321,7 +3522,6 @@ a = 6
 b = 7
 # 这是一个解释变量 a 和 b 的注释
 print(a + b)
-
 """
 这是一个多行注释
 解释程序的剩余部分。
@@ -3329,15 +3529,11 @@ print(a + b)
 print("Hello, World!")
 ```
 
-
-
-
-
 # 变量操作
 
 我们已经在 Python 代码中看到了一些变量的示例；这里值得回顾一下它们的运行机制，以及 Python 如何创建变量并为变量分配特定值。
 
-## 各种变量 (VARIABLES)
+## 各种变量
 
 在本教程中，你将使用 Python 3 IDLE Shell。如果你还没有打开，请打开 Python 3 或关闭之前的 IDLE Shell 以清理工作区域。
 
@@ -3388,8 +3584,6 @@ age=44
 type(age)
 正如我们所知的，它是整数。
 ```
-
-# 变量操作
 
 ## 步骤 5
 
@@ -3447,8 +3641,11 @@ TypeError: Can't convert 'int' to object implicitly
 这个过程被称为类型转换（TypeC）。Python 代码如下：
 
 ```python
-print (char + " is " + str(age) + " years old.")
 ```
+
+
+
+`print (char + " is " + str(age) + " years old.")`
 
 注意，在最后一个示例中，你不需要在逗号之间添加空格，因为逗号分开处理每个参数。
 
@@ -3464,19 +3661,31 @@ float(19.9)
 
 ```python
 Edit Shell Debug Options Windows help
-Python 3.4.2 (default, Oct 19 2014, 13:31:11)
->>> cc = "linux"
->>> type ("credits" or "license") for more information.
->>> age = input("age: ")
->>> type(age)
-'str'
->>> print(age + 10)
-Traceback (most recent call last):
-  File "<stdin>", line 1, in <module>
-TypeError: Can't convert 'int' to object implicitly
->>> int(age) + 10
-54
 
+Python 3.4.2 (default, Oct 19 2014, 13:31:11)
+
+>>> cc = "linux"
+
+>>> type ("credits" or "license") for more information.
+
+>>> age = input("age: ")
+
+>>> type(age)
+
+'str'
+
+>>> print(age + 10)
+
+Traceback (most recent call last):
+
+  File "<stdin>", line 1, in <module>
+
+TypeError: Can't convert 'int' to object implicitly
+
+>>> int(age) + 10
+
+54
+```
 ```python
 >>> print(char + " is " + str(age) + " years old.")
 David: Descended from Vikings is 44.
@@ -3522,7 +3731,8 @@ TypeError: Can't convert 'int' to object implicitly
 
 你想从用户那里获取输入的类型很大取决于你编写的类型。例如，游戏可能会询问名字，数据库可能会询问个人详情。
 
-**步骤 1**：如果还没有，打开 Python 3 IDLE Shell，从简单的开始：
+### 步骤 1
+如果还没有，打开 Python 3 IDLE Shell，从简单的开始：
 
 ```python
 print("Hello")
@@ -3531,13 +3741,15 @@ print("Thanks.")
 surname=input("And is your surname?")
 ```
 
-**步骤 2**：保存并执行代码，正如你所怀疑的，在 IDLE Shell 中程序会询问名字并存储为第一个变量，然后是姓氏；或者将其存储在自己的变量中 (surname)。
+### 步骤 2
+保存并执行代码，正如你所怀疑的，在 IDLE Shell 中程序会询问名字并存储为第一个变量，然后是姓氏；或者将其存储在自己的变量中 (`surname`)。
 
 ```python
 print("Welcome")
 ```
 
-**步骤 3**：现在我们已经把用户的名字存储在两个变量中，我们可以随时调用它们：
+### 步骤 3
+现在我们已经把用户的名字存储在两个变量中，我们可以随时调用它们：
 
 ```python
 print("Welcome", firstname, surname, ". I hope you're well today.")
@@ -3545,7 +3757,8 @@ print("Welcome", firstname, surname, ". I hope you're well today.")
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_107.png)
 
-**步骤 4**：运行代码你会发现一个小问题，姓氏后面跟着一个空格。为了消除这一点，可以在代码中添加加号：
+### 步骤 4
+运行代码你会发现一个小问题，姓氏后面跟着一个空格。为了消除这一点，可以在代码中添加加号：
 
 ```python
 Python 3.4.2 Shell
@@ -3565,9 +3778,11 @@ print("Welcome", firstname, surname + ". I hope you're well today.")
 
 # 用户输入
 
-**步骤 5**：你不总是需要在输入命令中包含引号文本。例如，你可以询问用户名字，并在行中使用输入：
+### 步骤 5
+你不总是需要在输入命令中包含引号文本。例如，你可以询问用户名字，并在行中使用输入：
 
-**步骤 8**：你在这里创建了一个条件，它很快就会出现。简而言之，我们正在使用输入并根据条件进行衡量。所以如果用户输入的名字是 David，卫兵将允许他们通过。否则，如果他们输入 David 以外的名字，卫兵将挑战他们战斗。
+### 步骤 8
+你在这里创建了一个条件，它很快就会出现。简而言之，我们正在使用输入并根据条件进行衡量。所以如果用户输入的名字是 David，卫兵将允许他们通过。否则，如果他们输入 David 以外的名字，卫兵将挑战他们战斗。
 
 ```python
 print('Hello. What's your name?')
@@ -3594,16 +3809,20 @@ else:
     print('I don't know you. Prepare for battle!')
 ```
 
-**步骤 6**：上一步的代码通常被认为比在输入命令中带有大量文本更接近，所以你在这些情况下可以随心所欲。扩展代码如下：
+### 步骤 6
+上一步的代码通常被认为比在输入命令中带有大量文本更接近，所以你在这些情况下可以随心所欲。扩展代码如下：
 
-**步骤 9**：正如你之前学到的，来自用户的任何输入自动都是字符串，因此你需要应用类型转换将其转换为其他类型。
+### 步骤 9
+正如你之前学到的，来自用户的任何输入自动都是字符串，因此你需要应用类型转换将其转换为其他类型。
 
 ```python
 print (char + " is " + str(age) + " years old.")
 ```
 
-**步骤 7**：这也许是文字冒险游戏的良好开端？现在你可以扩展并使用输入来丰富游戏：为了完成速率和代码，我们可以添加 distance=float(input('Distance: '))
-print('Time: (distance / rate)')
+### 步骤 7
+这也许是文字冒险游戏的良好开端？现在你可以扩展并使用输入来丰富游戏：为了完成速率和代码，我们可以添加 `distance=float(input('Distance: '))`
+
+`print('Time: (distance / rate)')`
 
 ```python
 if name="David":
@@ -3611,10 +3830,6 @@ if name="David":
 else:
     print('I don't know you. Prepare for battle!')
 ```
-
-
-
-
 
 # 创建函数
 
@@ -3625,18 +3840,23 @@ else:
 函数是你输入到 Python 中执行某些操作的命令。它是一段自成体系的代码，接收数据，对其进行处理，然后返回结果。
 
 - **步骤 1** 函数处理的不只是数据。它们可以执行各种有用的事情：排序数据、将项目从一种格式转换为另一种格式，以及检查项目的长度或类型。例如，`len()`、`list()` 或 `type()` 都是后面跟着括号的短名称函数。
+
 - **步骤 3** 你可以以相同的方式通过函数传递变量。假设你想知道某人姓氏的字母数量，可以使用以下代码（在文本编辑器中输入此示例）：
+
 ```python
 name=input("Enter your surname: ")
 print("Your surname has", count, "letters in it.")
 ```
+
 按 F5 保存并执行。
+
+
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_109_0.png)
 
 - **步骤 2** 函数接收数据（使用变量），根据函数设定的功能进行处理，并返回最终值。处理的数据位于括号内，因此，如果你想知道单词 `antidisabishmentarianism()` 中中有多少字母，它将返回数字 28。
 
-Python 内置了数十个函数，由于空间有限，这里无法全部列出。然而，要查看 Python 3 的内置函数列表，请导航至 docs.python.org/3/library/functions.html。这些是预定义函数，但用户还创建了更多，它们并不是唯一可用的函数。
+Python 内置了数十个函数，由于空间有限，这里无法全部列出。然而，要查看 Python 3 的内置函数列表，请导航至 `docs.python.org/3/library/functions.html`。这些是预定义函数，但用户还创建了更多，它们并不是唯一可用的函数。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_109_1.png)
 
@@ -3657,7 +3877,7 @@ Type "copyright", "credits" or "license" for more information.
 
 # 创建函数
 
-步骤 5 可以通过模块（modules）向 Python 添加附加函数。Python 拥有各种编程任务。它们可以作为函数在需要时被导入。例如，要使用高级数学函数：
+步骤 5 可以通过模块（`modules`）向 Python 添加附加函数。Python 拥有各种编程任务。它们可以作为函数在需要时被导入。例如，要使用高级数学函数：
 
 ```python
 import math
@@ -3688,6 +3908,7 @@ def Hello():
     print("Hello")
 Hello()
 ```
+
 按 F5 保存并运行脚本。你将在 Shell 中看到 Hello，输入 `Hello()`，它会返回该函数。
 
 - 步骤 3 进一步，删除脚本最后一行的 `Hello("David")` 行，并创建一个新文件（File > New File）。输入：关闭编辑器并创建：
@@ -3696,6 +3917,7 @@ Hello()
 from Hello import Hello
 Hello("David")
 ```
+
 按 F5 保存并执行代码。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_110_1.png)
@@ -3706,9 +3928,10 @@ Hello("David")
 def Hello(name):
     print("Hello", name)
 ```
+
 现在它将接受变量名，否则它会打印 Hello David。在 Shell 中输入：`name("Bob"), Hello()`。你现在可以传递函数了。
 
-- 步骤 4 你刚刚做是从保存的 Hello.py 中导入函数并使用它说 Hello David。这就是函数和模块的工作原理；你导入模块，然后使用函数。额外加分：
+- 步骤 4 你刚刚做是从保存的 `Hello.py` 中导入函数并使用它说 Hello David。这就是函数和模块的工作原理；你导入模块，然后使用函数。额外加分：
 
 ```python
 def add(a, b):
@@ -3746,6 +3969,7 @@ word_length=len(word)
 if word_length == 4:
 print("is a four-letter word.")
 ```
+
 双等号 `==` 意味着等于。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_111_1.png)
@@ -3800,7 +4024,6 @@ File "test.py", line 6
     else:
         print("is not a four-letter word.")
 ```
-```
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_112_0.png)
 
@@ -3813,20 +4036,33 @@ File "test.py", line 6
 步骤 3 `For` 循环是另一个例子。它用于循环遍历数据范围，通常是存储在变量中的列表。例如：
 
 ```python
+
 x = 10
+
 while x < 10:
+
     print(x)
+
     x = x + 1
+
 ```
 
 ```python
-words=["Cat", "Dog", "Unicorn"]
+
+
+
+`words=["Cat", "Dog", "Unicorn"]`
+
+```python
 for word in words:
     print(word)
 ```
 
 ```
 Python 3.8.10 (default) [Oct 19 2021, 14:33:12] on Windows 10
+```
+
+```python
 File "test.py", line 1
 x = 10
 while x < 10:
@@ -3836,14 +4072,16 @@ while x < 10:
 
 ```
 Python 3.8.10 (default) [Oct 19 2021, 14:33:12] on Windows 10
+```
+
+```python
 File "test.py", line 1
 words=["Cat", "Dog", "Unicorn"]
 for word in words:
     print(word)
 ```
-```
 
-步骤 2 `if` 和 `while` 的区别在于，当 `while` 到缩进代码的结尾时，它会返回检查语句仍然为真。在示例中 x 小于 10。每次循环，它都会打印 x 的当前值，然后对该值加1。当 x 不等于 10 时，停止。
+步骤 2 `if` 和 `while` 的区别在于，当 `while` 到缩进代码的结尾时，它会返回检查语句仍然为真。在示例中 `x` 小于 `10`。每次循环，它都会打印 `x` 的当前值，然后对该值加1。当 `x` 不等于 `10` 时，停止。
 
 步骤 4 循环也可以通过 `range` 函数用于倒计时：
 
@@ -3854,18 +4092,17 @@ for x in range(1, 10):
 
 ```
 这里不需要 x=1，因为 `range` 函数创建一个包含第一个和最后一个数字的列表。
+```
 
 ```
 Python 3.8.10 (default) [Oct 19 2021, 14:33:12] on Windows 10
+```
+
+```python
 File "test.py", line 1
 for x in range(1, 10):
     print(x)
 ```
-```
-
-
-
-
 
 # Python 模块
 
@@ -3876,9 +4113,7 @@ for x in range(1, 10):
 将模块想象成导入你的 Python 代码中的扩展，用于增强和扩展其功能。有数不清的模块可用，正如你所看到的，你可以创建自己的模块。
 
 - **第 1 步** 虽然 Python 的内置函数很好，但它是有限的。然而，使用模块允许我们编写更复杂的程序。如你所示，模块是被导入的 Python 脚本，例如 `import math`。
-
 - **第 2 步** 某些模块（特别是在树莓派上）是默认包含的，Math模块就是一个很好的例子。遗憾的是，其他模块并非总是可用。非树莓派平台上的一个例子是 Pygame 模块，它包含许多帮助创建游戏的函数。尝试：`import pygame`。
-
 - **第 3 步** 结果是 IDLE Shell 报错，因为 Python 未识别或安装 Pygame 模块。要安装模块，我们使用 PIP（Pip Install Packages）。关闭 IDLE Shell 并进入命令提示符或终端会话。在具有权限的命令提示符中输入：
 
 ```bash
@@ -3908,10 +4143,10 @@ C:\WINDOWS\system32>
 ```
 
 - **第 5 步** 关闭命令提示符或终端并重新启动 IDLE Shell。现在当你输入：`import pygame`，模块将无问题地导入到代码中。你会发现大多数从互联网下载或复制的代码都会包含 import 语句，通常因为缺少这些模块会导致执行时的错误。
-
 - **第 6 步** 模块包含了在你自己的代码中实现特定结果所需的额外代码，正如我们之前演示的那样。例如：
 
 `import random`
+
 从 Number Generator 模块导入。你可以使用此模块创建类似的内容：
 
 ```python
@@ -3941,7 +4176,7 @@ print(math.pi)
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_114_0.png)
 
-- **第 9 步** 结果是一串随机数，随后是来自 Math 模块的 Pi 值 (math.pi)。你也可以使用 from 和 import 命令从模块中调入函数，例如：
+- **第 9 步** 结果是一串随机数，随后是来自 Math 模块的 Pi 值 (`math.pi`)。你也可以使用 `from` 和 `import` 命令从模块中调入函数，例如：
 
 ```python
 from random import randint
@@ -3957,6 +4192,7 @@ for i in range(5):
 import math as m
 print(m.pi)
 ```
+
 当然，添加注释有助于解释正在发生什么。
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_114_2.png)
@@ -3993,6 +4229,8 @@ C++ 是一种优秀的高级编程语言，被用于许多技术。从你最喜�
 | 142 | 你知道吗……霍比特 |
 | 144 | 常见编码错误 |
 
+
+
 ![](img/f8aca09bc266ba3d122c77a820ff023b_118_0.png)
 
 # 为什么选择 C++？
@@ -4026,9 +4264,10 @@ void main() {
       break;
     default:
   }
+}
 ```
 
-# 为什么选择 C++?
+## 为什么选择 C++?
 
 安装 - Visual Studio 2017 (15.0.26223.1)
 
@@ -4038,8 +4277,11 @@ void main() {
 | Web 与云 (4) | ASP.NET 开发：使用 ASP.NET、HTML、JavaScript 和 C# 构建 Web 。Azure 开发：用于部署云应用和创建资源的 Azure CLI、工具和项目。数据存储和处理：使用 SQL Server、Azure Lake 或 Azure ML 连接、开发和测试数据解决方案 | |
 
 ## 使用 C++ 开发
+
 可选
+
 * C++ 核心功能
+
 * VC++ 2017 工具集 (x86,x64)
 
 Microsoft Visual Studio 是学习 C++ 的免费环境。
@@ -4052,17 +4294,13 @@ Microsoft Visual Studio 是学习 C++ 的免费环境。
 
 你使用的系统是用 C++ 编写的。
 
+## Linux 上的 C++
 
-
-
-
-# Linux 上的 C++
-
-## 你的第一个 C++ 程序
+### 你的第一个 C++ 程序
 
 树莓派是学习 C++ 的绝佳编程基础。你不需要任何复杂的第三方 IDE，也不需要安装任何额外的组件。你时所需的所有内容已经内置在树莓派中了。
 
-## 你好，世界！（HELLO, WORLD!）
+### 你好，世界！（HELLO, WORLD!）
 
 编程中，第一个输入的代码通常是在屏幕上输出“Hello, World!”字样。有趣的是，这可以追溯到 1968 年的一种名为 BCPL 的语言。
 
@@ -4092,7 +4330,7 @@ int main()
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_121_3.png)
 
-## 你的第一个 C++ 程序
+### 你的第一个 C++ 程序
 
 - **第 5 步** 在下一行，`int main()` 下方，输入一个大括号：
 
@@ -4134,11 +4372,11 @@ int main() {
 }
 ```
 
-## C++ 程序的结构
+### C++ 程序的结构
 
 C++ 有非常明确结构和处理方式。漏掉任何内容，即使是一个微小的分号，你的整个程序将无法编译和执行。许多专业程序员都曾在疏散的结构上栽过头。
 
-### INCLUDE <C++ STRUCTURE>
+#### INCLUDE <C++ STRUCTURE>
 
 学习编程基础后，你开始理解程序的结构。命令在不同语言之间可能不同，但你可以开始看到代码是如何工作的。
 
@@ -4147,14 +4385,15 @@ C++ 有非常明确结构和处理方式。漏掉任何内容，即使是一个�
 C++ 是丹麦学生 Bjarne Stroustrup 在 1979 年发明的，最初是他博士论文的一部分，名为“带有类的 C 语言”，它为已经流行的 C 编程语言添加了功能，同时通过新结构使其成为更加用户友好的环境。
 
 > Bjarne Stroustrup,
+>
 > C++ 的发明者。
 
-```
-main() 启动了函数的声明，
-这是一组在 'main' 名称下的代码语句。
-所有 C++ 代码都从 main 函数开始，
+`main()` 启动了函数的声明，
+这是一组在 `main` 名称下的代码语句。
+所有 C++ 代码都从 `main` 函数开始，
 无论它实际上位于代码的哪个位置。
-```
+
+
 
 ```cpp
 helloworld.cpp
@@ -4163,9 +4402,6 @@ int main()
 ```
 
 C++ 程序的结构非常精确。每段 C++ 代码都有一个指令：`#include`。指令指示预处理器包含一段 C++ 代码。
-
-
-
 
 ### 第 5 步
 
@@ -4231,14 +4467,19 @@ cout << "Greetings from C++\n"
 Elk Cloner 被设计用于感染附带在游戏上的 Apple DOS 3.3 操作系统。当游戏被玩五十次时，病毒就会激活，它不再显示游戏，而是会阻塞屏幕并显示一首诗：
 
 Elk Cloner:
+
 一个有个个性的程序
 
 它会附在你所有的磁盘上
+
 它会渗透你的芯片
+
 是的，它是 Cloner！
 
 它会像胶水一样粘着你
+
 它还会修改 RAM
+
 让 Cloner 进来吧！
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_127_0.png)
@@ -4246,30 +4487,50 @@ Elk Cloner:
 ## 你知道吗……
 
 0010101011
+
 0101011101100110
+
 00000101011110110001
+
 000001110001011010110001
+
 00111010111001010100110
+
 101101110111011111101100
+
 0010101011110111111010101
+
 1000111111001001000000110010
+
 0100101011101010100000110110
+
 011101101011101111011010000
+
 0000101010110011111111110011
+
 0000001010101111111100010011
+
 0011101010111111101111111100
+
 1000111111011001000000110101
+
 0100101011111011111111110101
+
 0000101011111111111101111011
+
 00110001
+
 011101
+
 000001
+
 0110111
+
 001010
+
 01111\n10111
-00000011010101110010100001111101111111111111111111111111111111111111111111111111
 
-
+00000011010101110010100001111101111111111111111111111111111111111111111111111
 
 ## C++ 注释
 
@@ -4311,7 +4572,7 @@ int main() {
 
 然而，你也可以在行尾添加注释，来描述你正在操作：
 
-cout << "Hello, world!" << endl; // 这会输出单词 'Hello, world'. // endl 表示换行。
+`cout << "Hello, world!" << endl; // 这会输出单词 'Hello, world'. // endl 表示换行。`
 
 注意，你不需要在注释末尾加分号。这是因为 `//` 标记了编译器将忽略的行。
 
@@ -4356,71 +4617,83 @@ int main() {
 
 | 符号 | helloworld.cpp |
 | --- | --- |
-| 函数 | #include <iostream> |
-| main (4) | using namespace std; |
-| 变量 | int main() { |
-| 中间 (2) | // 我的第一个 C++ 程序
-cout << "Hello, world!" << endl; // 这会输出单词 'Hello, world.'
-// 注释行
-// 无需添加更多斜杠
-cout << "And greetings from C++!"; |
-
-```
+| 函数 | `#include <iostream>` |
+| main (4) | `using namespace std;` |
+| 变量 | `int main() {` |
+| 中间 (2) | `// 我的第一个 C++ 程序` `cout << "Hello, world!" << endl; // 这会输出单词 'Hello, world.'` `// 注释行` `// 无需添加更多斜杠` `cout << "And greetings from C++!";` |
 
 使用注释时，在 C++ 中的良好做法是在注释块的每行都添加一个星号。这也有帮助你在继续编写代码之前记得关闭注释块：
 
 ```cpp
+
 /*
+
 * 这可以注释
+
 几行
+
 无需添加更多斜杠 *
+
 */
+
 ```
 
 幸运的是，Geany 会自动完成这一点，但在其他 IDE 中需要手动操作。
 
 ```cpp
+
 /* 这可以注释
+
 几行
+
 无需添加更多斜杠 */
 ```
+
+
 
 ## 变量
 
 使用 C++ 时变量与 Python 略有不同，你可以简单地声明 'a' 等于 10 并赋值。然而，在 C++ 中，变量在使用之前必须用其类型进行声明。
 
-## 变量的声明
+### 变量的声明
 
 你可以通过代码中的语句来声明 C++ 变量。你可以声明几种不同不同类型的变量。以下是它的工作原理。
 
 - 步骤 1：打开一个新的空白 C++ 文件并输入通常的代码头文件：
-- 步骤 2：开始创建两个变量 a 和 b，并将其中一个值设为 10，另一个设为 5。使用数据类型 `int` 来声明这些变量。在大括号内：
+- 步骤 2：开始创建两个变量 `a` 和 `b`，并将其中一个值设为 10，另一个设为 5。使用数据类型 `int` 来声明这些变量。在大括号内：
+
 ```cpp
 int a;
 int b;
 a = 10;
 b = 5;
 ```
-- 步骤 3：你可以构建并运行代码，但它不会做什么，除了将变量 10 和 5 存储在整数 a 和 b 中。忽略未设置未使用的变量，代码仍然可以工作。要输出变量的内容，请添加：
+
+- 步骤 3：你可以构建并运行代码，但它不会做什么，除了将变量 10 和 5 存储在整数 `a` 和 `b` 中。忽略未设置未使用的变量，代码仍然可以工作。要输出变量的内容，请添加：
+
 ```cpp
 #include <iostream>
 using namespace std;
 int main() {
 }
 ```
+
 ```cpp
 cout << a;
 cout << "\n";
 cout << b;
 ```
+
 `cout << "\n";` 部分仅仅是在输出 10 和 5 之间添加一个新行。
 
 - 步骤 4：自然地你可以声明一个新变量，调用它并输出一些简单的算术结果：
+
 ```cpp
 int result;
 result = a + b;
 cout << result;
 ```
+
 按照截图插入上述代码。
 
 ```cpp
@@ -4437,33 +4710,43 @@ int main() {
     cout << b;
 }
 ```
+
 - 步骤 5：你可以在声明变量的同时给它赋值。你的代码看起来像这样：
+
 ```cpp
 int a = 10;
 b = 5;
 int result = a + b;
 ```
+
 ```cpp
 cout << result;
 ```
+
 - 步骤 6：对于 C++，你也可以使用以下方式为变量赋值：
+
 ```cpp
 int a = 10;
 b = 5;
 int result = a + b;
 ```
+
 - 步骤 7：你可以在函数外部创建全局变量。例如：
+
 ```cpp
 #include <iostream>
 using namespace std;
 int result = 3;
 ```
+
 ```cpp
 int main() {
     cout << result;
 }
 ```
+
 - 步骤 8：之前的步骤创建变量，这是一个全局变量。在程序中，变量根据你的需要增加或减少。在这里我们返回它的默认值 3。
+
 ```cpp
 Variables.cpp
 #include <iostream>
@@ -4472,12 +4755,15 @@ int main() {
     int result = 3;
 }
 ```
+
 - 步骤 9：现代 C++ 编译器比程序员提供的智能得多。虽然有很多数据类型可以声明变量，但实际上你可以使用：
+
 ```cpp
 int a = 10;
 b = 5;
 int result = a + b;
 ```
+
 ```cpp
 Variables.cpp
 #include <iostream>
@@ -4489,7 +4775,9 @@ int main() {
     cout << result;
 }
 ```
+
 尽管应该忽略警告，但这是一个简单的行。新的数据类型 `double` 精度浮点值使得代码更准确。本质上，你可以无错误地使用它。
+
 ```cpp
 Variables.cpp
 #include <iostream>
@@ -4500,31 +4788,30 @@ int main() {
     cout << area;
 }
 ```
+
 ```cpp
 double area = 1.5;
 area = radius;
 cout << area;
 ```
 
-## Linux 下 C++
-
-## 数据类型
+## Linux 下 C++ 的数据类型
 
 正如你所看到的，变量存储程序员可以调用和操作的信息。变量仅仅是存储程序员赋值值的内存位置。
 
-## 数据的值
+### 数据的值
 
 C++ 中有很多不同的数据类型，例如整数、浮点型、布尔型等。广泛接受有七种基本类型，通常称为内置类型；但你可以在代码中创建自己的数据类型。
 
 | 类型 | 指令 |
 |---|---|
-| 整数 | int |
-| 浮点数 | float |
-| 字符 | char |
-| 布尔型 | bool |
-| 双精度 | double |
-| 宽字符 | wchar_t |
-| 无值 | void |
+| 整数 | `int` |
+| 浮点数 | `float` |
+| 字符 | `char` |
+| 布尔型 | `bool` |
+| 双精度 | `double` |
+| 宽字符 | `wchar_t` |
+| 无值 | `void` |
 
 这些基本类型可以使用以下修饰符进行扩展：`Long`、`Short` 和 `Signed`。基本上这意味着修饰符可以扩大每个数据类型的最小值和最大范围。例如，`int` 类型的默认值为 -2147483648 到 2147483647，你同意吗？
 
@@ -4548,7 +4835,6 @@ C++ 中有很多不同的数据类型，例如整数、浮点型、布尔型等�
 #include <iostream>
 using namespace std;
 double PI = 3.14159265538979323846;
-
 int main() {
     cout.precision(22);
     cout << PI;
@@ -4571,20 +4857,13 @@ DataType.cpp
 
 ```
 3.14159
-
 (程序以代码 0 退出)
 返回以继续
 ```
 
-构建并运行代码，你可以看到输出为 3.14159，这代表了情况下 cout 的局限性。
+构建并运行代码，你可以看到输出为 3.14159，这代表了情况下 `cout` 的局限性。
 
 你也可以考虑上述 `cout.precision` 以获得更高的精度。使用以下代码一直到 22 位小数：
-
-
-
-
-
-# 数据类型
 
 ```cpp
 DataTypes.cpp
@@ -4614,24 +4893,28 @@ int main() {
 }
 ```
 
-再次，编译并运行代码，正如你从命令行数字看到的，变量 `PI` 的值与变量中使用的 22 位数字不同。输出的 Pi 值为 `3.14159265358979311998`，数字从第 15 位小数处开始发生偏差。
+
+
+再次，编译并运行代码，正如你从命令行数字看到的，变量`PI`的值与变量中使用的 22 位数字不同。输出的 Pi 值为`3.14159265358979311998`，数字从第 15 位小数处开始发生偏差。
 
 | 科学 | | | | | | |
-|---|---|---|---|---|---|
-| x² | y² | sin | cos | tan | |
-| ✓ | 10ˣ | log | Exp | Mod | M' |
-| ↑ | CE | C | | ÷ | |
+|---|---|---|---|---|---|---|
+| x² | y² | sin | cos | tan | | |
+| ✓ | 10ˣ | log | Exp | Mod | M' | |
+| ↑ | CE | C | | ÷ | | |
 | π | 7 | 8 | 9 | | | |
 | n! | 4 | 5 | 6 | | | |
 | ± | 1 | 2 | 3 | | | |
-| ( | ) | | | = | |
+| ( | ) | | | = | | |
 
-# 15.42857142857142857142857
+`15.42857142857142857142857`
 
 ```cpp
 #include <iostream>
 using namespace std;
+
 typedef int metres;
+
 int main() {
     metres distance;
     distance = 15;
@@ -4639,22 +4922,23 @@ int main() {
 }
 ```
 
+```text
 文件 编辑 标签 帮助 | 距离为：15
 
-```
 (程序退出，退出代码为：0)
+
 按键继续
 ```
 
-这段代码执行时会执行一个定义的新数据类型方法。在主代码块中，有一个新变量 `distance`，它是一个整数；所以你是在告诉编译器它有另一个名称。我们将值 15 赋值给 `distance` 并显示了以米为单位的距离。
+这段代码执行时会执行一个定义的新数据类型方法。在主代码块中，有一个新变量`distance`，它是一个整数；所以你是在告诉编译器它有另一个名称。我们将值 15 赋值给`distance`并显示了以米为单位的距离。
 
 刚开始听起来可能有点困惑，但你使用 C++ 并创建代码得越多，它就会变得越容易。
 
 # 字符串
 
-字符串是表示和持有字符序列的对象。例如，你可以在代码中设置一个通用的问候语 'Welcome' 并将其赋值为字符串，在程序的任何地方调用它。
+字符串是表示和持有字符序列的对象。例如，你可以在代码中设置一个通用的问候语`'Welcome'`并将其赋值为字符串，在程序的任何地方调用它。
 
-# 字符串理论
+## 字符串理论
 
 有多种方法可以创建字符字符串，这些方法在历史上都是继承自原始的 C 语言并由 C++ 支持的。
 
@@ -4663,15 +4947,17 @@ int main() {
 ```cpp
 #include <iostream>
 using namespace std;
+
 int main ()
 {}
 ```
 
-- 步骤 3 编译并运行代码，'Welcome' 出屏幕上。虽然这完全没问题，但它不是字符串。字符串是一个类，它定义了可以表示为字符流的对象，不需要像数组那样终止。因此代码可以表示为：
+- 步骤 3 编译并运行代码，`'Welcome'` 出屏幕上。虽然这完全没问题，但它不是字符串。字符串是一个类，它定义了可以表示为字符流的对象，不需要像数组那样终止。因此代码可以表示为：
 
 ```cpp
 #include <iostream>
 using namespace std;
+
 int main ()
 {
     char greet[] = "Welcome";
@@ -4683,6 +4969,7 @@ int main ()
 strings.cpp
 #include <iostream>
 using namespace std;
+
 int main ()
 {
     char greet[] = {'W', 'e', 'l', 'c', 'o', 'm', 'e', '\0'};
@@ -4695,6 +4982,7 @@ int main ()
 ```cpp
 #include <iostream>
 using namespace std;
+
 int main ()
 {
     char greet[] = {'W', 'e', 'l', 'c', 'o', 'm', 'e', '\0'};
@@ -4707,6 +4995,7 @@ int main ()
 ```cpp
 #include <iostream>
 using namespace std;
+
 int main ()
 {
     string greet = "Welcome";
@@ -4718,6 +5007,7 @@ int main ()
 strings.cpp
 #include <iostream>
 using namespace std;
+
 int main ()
 {
     string greet = "Welcome";
@@ -4725,22 +5015,23 @@ int main ()
 }
 ```
 
-# 字符串
+## 字符串操作
 
 - 步骤 5 你还可以对该函数应用许多不同操作。例如，为了获取字符串的长度……步骤 8 我们可以看到……（注：此处原文逻辑顺序较乱，已按原文内容翻译）
 
 *(注：由于原文文本在步骤5-10之间之间存在大量重复和逻辑混乱，翻译已严格遵循原文结构。)*
 
+# 数学函数
 
+## 步骤 5
 
-
-
-## 步骤 5 当你调用几十个数学函数以及其他操作时，有趣的数学内容就出现了。从计算正弦、正切到反正函数，再到圆率 Pi 的值。你可以通过以下方式调用头文件：
+当你调用几十个数学函数以及其他操作时，有趣的数学内容就出现了。从计算正弦、正切到反正函数，再到圆率 Pi 的值。你可以通过以下方式调用头文件：
 
 ```cpp
 #include <iostream>
 #include <cmath>
 using namespace std;
+
 int main ()
 {
 ```
@@ -4750,30 +5041,37 @@ maths.cpp
 #include <iostream>
 #include <cmath>
 using namespace std;
+
 int main() {
     float number = 134;
     cout << "The square root of " << number << " is: " << sqrt(number) << "\n";
 }
 ```
 
-## 步骤 6 从获取一个数的根开始：
+## 步骤 6
+
+从获取一个数的根开始：
 
 ```cpp
 #include <iostream>
 #include <cmath>
 using namespace std;
+
 int main () {
     float number = 134;
     cout << "The square root of " << number << " is: " << sqrt(number) << "\n";
 }
 ```
 
-## 步骤 8 计算数字的次方可以使用以下方式完成：
+## 步骤 8
+
+计算数字的次方可以使用以下方式完成：
 
 ```cpp
 #include <iostream>
 #include <cmath>
 using namespace std;
+
 int main () {
     float number = 12;
     cout << number << " to the power of 2 is " << pow(number, 2) << "\n";
@@ -4782,16 +5080,23 @@ int main () {
 }
 ```
 
-## 步骤 9 在这里，我们创建了一个值为 12 的浮点数（float），`pow(variable,power)` 就是计算操作。当然，你可以使用各种变量来计算次方和根号。例如，`pow(12,2)` 输出的值与代码中的第一行相同：
+## 步骤 9
 
-## 步骤 7 在这里我们创建了一个浮点数，并使用 `sqrt(function)` 显示 134 的平方根，即变量的值。构建并运行代码，答案为 11.5758。
+在这里，我们创建了一个值为 12 的浮点数（`float`），`pow(variable,power)` 就是计算操作。当然，你可以使用各种变量来计算次方和根号。例如，`pow(12,2)` 输出的值与代码中的第一行相同：
 
-## 步骤 10 Pi 的值存储在 `cmath` 头文件库中。可以通过 `M_PI` 函数调用它，或者你可以用它来计算：
+## 步骤 7
+
+在这里我们创建了一个浮点数，并使用`sqrt(function)`显示 134 的平方根，即变量的值。构建并运行代码，答案为 11.5758。
+
+## 步骤 10
+
+Pi 的值存储在`cmath`头文件库中。可以通过`M_PI`函数调用它，或者你可以用它来计算：
 
 ```cpp
 #include <iostream>
 #include <cmath>
 using namespace std;
+
 int main () {
     double radius = 1.5;
     area = M_PI * radius;
@@ -4799,15 +5104,15 @@ int main () {
 }
 ```
 
-## 用户交互
+# 用户交互
 
 没有什么比创建一个对你做出响应的程序更令人满足的。基础的用户交互是任何语言中最常教授的方面，通过它，你可以做比单纯用名字问候用户多多的事情。
 
 ## 你好，戴夫
 
-你在整个代码中已经使用了 `cout`（标准输出流）。现在，你将使用 `cin`（标准输入流）来提示用户响应。
+你在整个代码中已经使用了`cout`（标准输出流）。现在，你将使用`cin`（标准输入流）来提示用户响应。
 
-- 步骤 3 `cin` 命令的工作方式与 `cout` 命令相反。在第一行代码中，你向屏幕输出“What is your age ”，如尖括号 `> ` 所示。`cin` 使用相反的尖括号 `<` 表示输入。输入被放入整数 `age` 中，并可以在第二个命令中使用。构建并运行代码。
+- 步骤 3 `cin` 命令的工作方式与 `cout` 命令相反。在第一行代码中，你向屏幕输出“What is your age ”，如尖括号`>`所示。`cin`使用相反的尖括号`<`表示输入。输入被放入整数`age`中，并可以在第二个命令中使用。构建并运行代码。
 
 ```cpp
 #include <iostream>
@@ -4820,13 +5125,14 @@ int main() {
     cout << "\nYou are " << age << " years old.\n";
 }
 ```
+
+
 
 - 步骤 2 变量的数据类型也必须与你想从用户处输入的类型匹配。例如，要询问他们的名字，你会使用这样的输入：
 
 ```cpp
 #include <iostream>
 using namespace std;
-
 int main() {
     int age;
     cout << "What is your age: ";
@@ -4835,12 +5141,11 @@ int main() {
 }
 ```
 
-- 步骤 4 如果你正在提问，你需要将输入存储为字符串（string）；询问用户名字，你会使用：
+- 步骤 4 如果你正在提问，你需要将输入存储为字符串（`string`）；询问用户名字，你会使用：
 
 ```cpp
 #include <iostream>
 using namespace std;
-
 int main() {
     string name;
     cout << "What is your name: ";
@@ -4858,7 +5163,6 @@ int main() {
 ```cpp
 // What is your name: David?
 // Hills, David. I hope you're well today-
-
 // program created with code: 0
 // return continue;
 ```
@@ -4901,10 +5205,6 @@ int main() {
 ```
 
 步骤 10 Pi 的值存储在...
-
-
-
-
 
 # 常见编码错误
 
@@ -5008,15 +5308,8 @@ Press any key to continue.
       </div>
       <div class="slick-slide">
         <div class="slide-content">
-          <img src="assets/images/data.png" alt="Data">
-          <h3>Data</h3>
-          <p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-```
+
+
 
 ## 安全数据
 
@@ -5039,26 +5332,42 @@ Press any key to continue.
 | 2 | 二进制框架的危险 (7) |
 
 ```text
+
 variable z
+
 max = 3
+
 (x, y) = (x, y), n = 13
+
 string s = "s"
+
 variable a = 10
+
 variable b
+
 variable c
+
 variable d
+
 variable e
+
 variable f
+
 variable g
+
 variable h
+
 variable i
+
 variable j
+
 (x, y) variable
+
 ```
 
 ## 从入门到精通你的技术
 
-要继续学习更多关于你的技术，访问：bdm.com
+要继续学习更多关于你的技术，访问：`bdm.com`
 
 ## 免费指南
 
@@ -5097,7 +5406,7 @@ variable j
 
 ![](img/f8aca09bc266ba3d122c77a820ff023b_145_13.png) ultimate photoshop
 
-bdmpublications.com/ultimate-photoshop
+`bdmpublications.com/ultimate-photoshop`
 
 购买我们的 Photoshop指南并免费下载图像！只需注册即可创作。
 
@@ -5123,4 +5432,3 @@ bdmpublications.com/ultimate-photoshop
 ![](img/f8aca09bc266ba3d122c77a820ff023b_146_13.png)
 ![](img/f8aca09bc266ba3d122c77a820ff023b_146_14.png)
 ![](img/f8aca09bc266ba3d122c77a820ff023b_146_15.png)
-

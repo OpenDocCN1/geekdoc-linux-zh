@@ -1,10 +1,11 @@
-# Windows 防火墙环境概述- ElderNode 博客
+
+# Windows 防火墙环境概述 - ElderNode 博客
 
 > 原文：<https://blog.eldernode.com/windows-firewall-environment/>
 
 ![Overview of the Windows Firewall Environment](img/ad54ca1787880c6e171af233f0d87aa8.png)
 
-Windows 防火墙环境概述。一个[防火墙](https://en.wikipedia.org/wiki/Firewall_(computing)#:~:text=In%20computing%2C%20a%20firewall%20is,network%2C%20such%20as%20the%20Internet.)是一个允许数据包到**进入**和退出网络的守卫，每个**操作系统**都有。在本文中，我们将向您介绍 Windows 防火墙环境，以便那些还不熟悉它的用户能够完全熟悉它。
+Windows 防火墙环境概述。一个[防火墙](https://en.wikipedia.org/wiki/Firewall_(computing)#:~:text=In%20computing%2C%20a%20firewall%20is,network%2C%20such%20as%20the%20Internet.)是一个允许数据包进入和退出网络的守卫，每个**操作系统**都有。在本文中，我们将向您介绍 Windows 防火墙环境，以便那些还不熟悉它的用户能够完全熟悉它。
 
 如你所知，在 Windows 的最新版本中，[微软](https://www.microsoft.com/)使用了一种相对先进的防火墙，它具有许多功能，其使用对于提高操作系统的安全性至关重要。
 
@@ -20,7 +21,7 @@ Windows 防火墙环境概述。一个[防火墙](https://en.wikipedia.org/wiki/
 
 **1。** 进入控制面板，选择系统和安全选项，在打开的窗口中点击 Windows 防火墙。
 
-**2。** **打开**运行窗口( Winkey + R )，键入“ firewall.cpl ”。
+**2。** **打开**运行窗口（`Winkey + R`），键入“`firewall.cpl`”。
 
 在 Windows 防火墙中，一些设置位于**左边**，在窗口的**中间**你会看到两个部分，[私网](https://en.wikipedia.org/wiki/Private_network#:~:text=In%20IP%20networking%2C%20a%20private,%2C%20office%2C%20and%20enterprise%20environments.)和[客网或公网](https://www.techopedia.com/definition/26424/public-network#:~:text=A%20public%20network%20is%20a,access%20to%20a%20select%20few.)。
 

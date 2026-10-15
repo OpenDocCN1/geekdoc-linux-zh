@@ -1,3 +1,4 @@
+
 # Keep alive
 
 当不使用时，TCP 连接在两个方向上都可以完全没有流量。因此，一个完全空闲的连接无法与因网络或服务器问题而完全停滞的连接明显区分开来。
@@ -6,7 +7,7 @@
 
 避免一个真正缓慢的连接（或一个空闲的连接）被错误地视为已死亡并错误地终止的一种方法，是确保使用 TCP keepalive。TCP keepalive 是 TCP 协议中的一个功能，它在其他情况下完全空闲时会发送“ping frames”来回。它帮助空闲连接检测到断开，即使在没有任何流量通过它的情况下，也帮助中间系统不认为连接已死亡。
 
-curl 默认使用 TCP keepalive，原因如下。但有时你可能想*禁用* keepalive，或者你可能想改变 TCP “ping” 之间的间隔（curl 默认为 60 秒）。你可以通过以下方式关闭 keepalive：
+`curl` 默认使用 TCP keepalive，原因如下。但有时你可能想*禁用* keepalive，或者你可能想改变 TCP “ping” 之间的间隔（`curl` 默认为 60 秒）。你可以通过以下方式关闭 keepalive：
 
 ```sh
 curl --no-keepalive https://example.com/

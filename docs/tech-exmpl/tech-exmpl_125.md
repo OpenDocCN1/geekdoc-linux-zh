@@ -1,22 +1,23 @@
+
 # 在 Ruby 语言中打印/输出颜色到控制台
 
 > 原文：[`techbyexample.com/print-color-console-terminal-ruby/`](https://techbyexample.com/print-color-console-terminal-ruby/)
 
-# **概述**
+## 概述
 
-我们可以使用 colorize gem 来实现相同的功能
+我们可以使用 `colorize` gem 来实现相同的功能。
 
 [`github.com/fazibear/colorize`](https://github.com/fazibear/colorize)
 
-只需安装 Gem
+只需安装 Gem：
 
-```go
+```bash
 gem install colorize
 ```
 
-# **程序**
+## 程序
 
-```go
+```ruby
 require 'colorize'
 
 puts "Printing Blue Color".colorize(:blue)
@@ -29,15 +30,15 @@ puts "Printing Gree Color".colorize(:green)
 
 ![](img/1e7a47c6c5ee6b471ea921da87e89ee1.png)
 
-你也可以通过运行下面的代码来检查所有的颜色选项
+你也可以通过运行下面的代码来检查所有的颜色选项：
 
-```go
-puts String.colors 
+```ruby
+puts String.colors
 ```
 
-它将输出
+它将输出：
 
-```go
+```text
 black
 light_black
 red

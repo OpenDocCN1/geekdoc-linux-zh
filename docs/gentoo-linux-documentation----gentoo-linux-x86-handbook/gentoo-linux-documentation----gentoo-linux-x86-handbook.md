@@ -1,70 +1,73 @@
+
 # Gentoo Linux 文档 -- Gentoo Linux x86 手册
 
-
-
-
-
-
 Seemann Kullen Gentoo x86 开发者
+
 Tavis Ordway Gentoo Alpha 开发者
+
 Jason Huebel Gentoo AMD64 开发者
+
 Guyy Martin Gentoo HPPA 开发者
+
 Peter van den Abeele Gentoo PPC 开发者
+
 Joe Sellar Gentoo SPARC 开发者
+
 John P. Davis 编写
+
 Pierre-Henri Jondot 编写
+
 Eric Stockridge 编写
+
 Raj Mangoldt 编写
+
 Jungmin Seo 编写
+
 Stoyan Zekov 编写
+
 Jared Hudson 编写
+
 Colin More 编写
+
 Jorge Paulo 编写
+
 Carl Anderson 编写
+
 Jon Portny 编写
+
 Zack Gilbard 编写
+
 Jack Morgan 编写
+
 Benny Chuang 编写
+
 Erwin 编写
+
 Joshua Kismir 编写
+
 Tobias Scherbaum 编写
+
 Xavier Neves 编写
+
 Grant Goodyear 审核者
+
 Gerald A. Normandin Jr. 审核者
+
 Donnie Berkholz 审核者
+
 Ken Nowak 审核者
+
 Lars Weiler 贡献
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ## 1. 简介
+
 欢迎！
+
 首先，欢迎 Gentoo。
 
-Gentoo 通过 stage3 存档运行。本章描述了我们如何提取 stage3 存档并配置 Portage。
+Gentoo 通过 `stage3` 存档运行。本章描述了我们如何提取 `stage3` 存档并配置 `Portage`。
 
-安装并配置 stage3 之后，最终就是你拥有了一个可用的 Gentoo 基础系统。本章解释了如何进入下一个阶段。
+安装并配置 `stage3` 之后，最终就是你拥有了一个可用的 Gentoo 基础系统。本章解释了如何进入下一个阶段。
 
 内核是每个发行版的核心。本章解释了如何配置你的内核。
 
@@ -72,35 +75,35 @@ Gentoo 通过 stage3 存档运行。本章描述了我们如何提取 stage3 存
 
 如前所述，Gentoo 关乎选择。在本章我们将选择并安装一些重要的工具。
 
-x86 架构存在多个引导程序。每一个引导程序都有自己的配置方法。我们将逐步介绍根据你的需求配置引导程序的过程。
+`x86` 架构存在多个引导程序。每一个引导程序都有自己的配置方法。我们将逐步介绍根据你的需求配置引导程序的过程。
 
 你快完成了。我们将为你的系统创建一个（或多个）用户。
 
 现在你有了 Gentoo 系统，但接下来是什么？
 
-学习如何使用 Gentoo，包括安装软件、修改变量、更改 Portage 行为。
+学习如何使用 Gentoo，包括安装软件、修改变量、更改 `Portage` 行为。
 
 本章解释了维护系统上软件需要知道的“简单”步骤。
 
-一旦你想了解 Gentoo 中的 Portage，你就需要知道它将文件和数据存储在何处。
+一旦你想了解 Gentoo 中的 `Portage`，你就需要知道它将文件和数据存储在何处。
 
-**USE flags** 是 Gentoo 一个非常重要的方面。在本章中，你将学习使用 USE flags 并理解 USE flags 如何与你的系统相互作用。
+`USE flags` 是 Gentoo 一个非常重要的方面。在本章中，你将学习使用 `USE flags` 并理解 `USE flags` 如何与你的系统相互作用。
 
-本章讨论了 Portage 的功能，例如对分布式缓存、ccache 等等的支持。
+本章讨论了 `Portage` 的功能，例如对分布式缓存、`ccache` 等等的支持。
 
 Gentoo 使用通用的脚本格式，其他功能允许依赖驱动的决策和 initscripts。本章解释了所有这些方面以及如何处理它们。
 
 通过 Gentoo，你可以轻松地管理系统的环境变量。本章展示了如何做到这一点，以及使用的变量。
 
-Portage可以通过你可以在配置文件中或作为环境变量设置的各种变量进行完全配置。
+`Portage` 可以通过你可以在配置文件中或作为环境变量设置的各种变量进行完全配置。
 
-Gentoo 提供的软件分为几个分支，取决于稳定性和架构支持。“混合软件分支**”会告知你这些分支可以如何配置，以及你如何单独地监督这种状况。
+Gentoo 提供的软件分为几个分支，取决于稳定性和架构支持。“混合软件分支”会告知你这些分支可以如何配置，以及你如何单独地监督这种状况。
 
-Portage 自带了一些额外的工具，让你的 Gentoo 体验变得更好。继续阅读以发现如何使用 dispatch-config和其他工具。
+`Portage` 自带了一些额外的工具，让你的 Gentoo 体验变得更好。继续阅读以发现如何使用 `dispatch-config` 和其他工具。
 
-“**偏离官方树**”为你提供关于如何使用 Portage 树、同步类别、注入包等的技巧和秘门（注：此处原文为 tricks，译为秘门可能是误，通常译为技巧或窍门）。
+“偏离官方树”为你提供关于如何使用 `Portage` 树、同步类别、注入包等的技巧和秘门。
 
-在“**Ebuild 应用**”中，你将获知 Portage 在安装软件时采取的步骤，以及你可以如何执行此操作
+在“`Ebuild` 应用”中，你将获知 `Portage` 在安装软件时采取的步骤，以及你可以如何执行此操作
 
 关于 Gentoo 网络的全面指南。
 
@@ -108,18 +111,19 @@ Portage 自带了一些额外的工具，让你的 Gentoo 体验变得更好。�
 
 在这里我们学习配置是如何工作的——在学习模块化网络之前你需要了解这些。
 
-Gentoo 提供了灵活的网络——这里将告诉你有关不同的 DHCP 客户端、设置绑定（bonding）、桥接（bridging）、VLAN 等。
+Gentoo 提供了灵活的网络——这里将告诉你有关不同的 DHCP 客户端、设置绑定、桥接、VLAN 等。
 
 无线网络并不简单。希望你能成功运行！
 
 如果你觉得很冒险，你可以添加功能
 
 欢迎！
+
 首先，欢迎 Gentoo。
 
-本章描述了我们如何提取 stage3 存档并配置 Portage。
+本章描述了我们如何提取 `stage3` 存档并配置 `Portage`。
 
-安装并配置 stage3 之后，最终就是你拥有了一个可用的 Gentoo 基础系统。本章解释了如何进入下一个阶段。
+安装并配置 `stage3` 之后，最终就是你拥有了一个可用的 Gentoo 基础系统。本章解释了如何进入下一个阶段。
 
 内核是每个发行版的核心。本章解释了如何配置你的内核。
 
@@ -127,13 +131,13 @@ Gentoo 提供了灵活的网络——这里将告诉你有关不同的 DHCP 客�
 
 如前所述，Gentoo 关乎选择。在本章我们将选择并安装一些重要的工具。
 
-**x86 架构**存在多个引导程序。每一个引导程序都有自己的配置方法。我们将逐步介绍根据你的需求配置引导程序的过程。
+`x86` 架构存在多个引导程序。每一个引导程序都有自己的配置方法。我们将逐步介绍根据你的需求配置引导程序的过程。
 
 你快完成了。我们将为你的系统创建一个（或多个）用户。
 
 现在你有了 Gentoo 系统，但接下来是什么？
 
-学习如何使用 Gentoo，包括安装软件、修改变量、更改 Portage 行为。
+学习如何使用 Gentoo，包括安装软件、修改变量、更改 `Portage` 行为。
 
 本章解释了维护系统上软件需要知道的“简单”步骤。
 
@@ -142,10 +146,6 @@ Gentoo 提供了灵活的网络——这里将告诉你有关不同的 DHCP 客�
 你将编辑一些重要的配置文件。在本章中，你将获得这些文件的概述以及如何操作的说明。
 
 如前所述，Gentoo 是。
-
-
-
-
 
 ### 简介
 
@@ -179,16 +179,16 @@ Gentoo CD 是可启动的光盘，包含一个自包含的 Gentoo 环境。它�
 
 ### Gentoo 的最小安装 CD
 
-最小安装版名为 i386-minimal.2006.0.iso，占用 49 MB 磁盘空间。你可以使用此安装 CD 安装 Gentoo，但必须始终保持网络连接可用。
+最小安装版名为 `i386-minimal.2006.0.iso`，占用 49 MB 磁盘空间。你可以使用此安装 CD 安装 Gentoo，但必须始终保持网络连接可用。
 
 | 最小安装 CD | 优缺点 |
 | :--- | :--- |
 | | 下载量最小 |
-| | 不包含 stage3ball、不包含 Portage 快照、没有预构建的软件包，因此不适用于无线安装 |
+| | 不包含 `stage3ball`、不包含 `Portage` 快照、没有预构建的软件包，因此不适用于无线安装 |
 
 ### Gentoo 的安装程序 LiveCD
 
-Live CD 名为 livecd-i686-2006.0.2.iso，占用 97 MB。你可以使用此安装 CD 安装 Gentoo，并且可以在没有网络连接的情况下进行安装，以防你想要将 Gentoo 安装到除当前安装机器之外的另一台 PC 上：
+Live CD 名为 `livecd-i686-2006.0.2.iso`，占用 97 MB。你可以使用此安装 CD 安装 Gentoo，并且可以在没有网络连接的情况下进行安装，以防你想要将 Gentoo 安装到除当前安装机器之外的另一台 PC 上：
 
 #### 安装程序 LiveCD 优缺点
 
@@ -197,25 +197,27 @@ Live CD 名为 livecd-i686-2006.0.2.iso，占用 97 MB。你可以使用此安�
 
 ### Stage3 Tarball
 
-stage3ball 是一个包含最小 Gentoo 环境的归包，适用于按照主手册中的指令继续进行 Gentoo 安装。此前，Gentoo 手册描述了使用三个阶段之一进行安装。虽然 Gentoo 仍然在使用 stage1 和 stage2 阶段，但官方安装程序使用的是 stage3ball。如果你感兴趣使用 stage1 或 stage2 进行 Gentoo 安装，请阅读 Gentoo FAQ 中的“我如何使用 stage1 或 stage2 Tarball 安装 Gentoo？”
+`stage3ball` 是一个包含最小 Gentoo 环境的归包，适用于按照主手册中的指令继续进行 Gentoo 安装。此前，Gentoo 手册描述了使用三个阶段之一进行安装。虽然 Gentoo 仍然在使用 `stage1` 和 `stage2` 阶段，但官方安装程序使用的是 `stage3ball`。如果你感兴趣使用 `stage1` 或 `stage2` 进行 Gentoo 安装，请阅读 Gentoo FAQ 中的“我如何使用 `stage1` 或 `stage2` Tarball 安装 Gentoo？”
 
-Stage3 charballs 可以从 releases/x86/2006.0/stages/ 或其中一个官方 Gentoo 镜像下载，且 LiveCD 上不提供。
+`Stage3` charballs 可以从 `releases/x86/2006.0/stages/` 或其中一个官方 Gentoo 镜像下载，且 LiveCD 上不提供。
 
 ### 2.c. 下载、刻录和启动 Gentoo 安装
 
 ### 下载和刻录安装 CD
 
-你选择了使用 Gentoo CD。我们首先将下载并刻录所选的安装 CD。我们之前讨论过多种安装 CD，但可以在哪里找到它们呢？
+你选择了使用 Gentoo CD。我们首先将下载并刻录所选的安装 CD。我们之前讨论过多种安装 CD，但可以在哪里找到它们？
 
-如果你愿意，可以下载任何一个安装 CD，或者从某个镜像站下载软件包 CD（Packages CD）。安装 CD 位于 releases/x86/2006/installed。
+
+
+如果你愿意，可以下载任何一个安装 CD，或者从某个镜像站下载软件包 CD（Packages CD）。安装 CD 位于 `releases/x86/2006/installed`。
 
 在这些目录下，你会找到 ISO 文件。这些是你可以写入 CD-R 光盘的小型镜像。
 
-如果你怀疑下载的文件已损坏，可以检查其 MD5 校验和，并与我们提供的 MD5 校验和（例如 install-x86-minimal-2006.0.iso）进行对比。你可以使用 Linux/Unix 下的 md5sum 工具或 Windows 下的 md5sum 来检查 MD5 校验和。
+如果你怀疑下载的文件已损坏，可以检查其 MD5 校验和，并与我们提供的 MD5 校验和（例如 `install-x86-minimal-2006.0.iso`）进行对比。你可以使用 Linux/Unix 下的 `md5sum` 工具或 Windows 下的 `md5sum` 来检查 MD5 校验和。
 
-另一种检查下载文件有效性的方法是使用 GnuPG 验证你找到的加密签名（以 .asc 结尾的文件）。下载签名文件并获取公钥：
+另一种检查下载文件有效性的方法是使用 GnuPG 验证你找到的加密签名（以 `.asc` 结尾的文件）。下载签名文件并获取公钥：
 
-#### 代码列表 1：获取公钥
+### 代码列表 1：获取公钥
 
 ```
 $ gpg --keyserver subkeys.pgp.net --recv-keys 170720578
@@ -223,7 +225,7 @@ $ gpg --keyserver subkeys.pgp.net --recv-keys 170720578
 
 现在验证签名：
 
-#### 代码列表 2：验证加密签名
+### 代码列表 2：验证加密签名
 
 ```
 $ gpg --verify <signature file> <downloaded iso>
@@ -232,6 +234,7 @@ $ gpg --verify <signature file> <downloaded iso>
 刻录下载的 ISO 时，必须选择“原始刻录”（raw-burning）。这高度取决于硬件。我们将讨论 Discrecord 和 K3B；更多信息你可以在 Gentoo FAQ 中找到。
 
 - 使用 Discrecord，选择 Select Tools > CD Burn。然后你可以在 'Image to Burn' 中找到你的 ISO 文件。最后点击开始刻。
+
 - 使用 K3B，选择 Tools > CD Burn。
 
 ### 启动安装 CD
@@ -251,14 +254,11 @@ $ gpg --verify <signature file> <downloaded iso>
 | cdrom | 支持 cdrom |
 | hotplug | 支持热插拔 |
 
+激活 DMA：`# hdparam -d 1 /dev/hda`
 
+安全性能选项：`# hdparam -d 1 -A -1 -m 16 -u 1 -a 64 /dev/hda`
 
-
-
-激活 DMA：# hdparam -d 1 /dev/hda
-安全性能选项：# hdparam -d 1 -A -1 -m 16 -u 1 -a 64 /dev/hda
-
-# 可选：用户账户
+### 可选：用户账户
 
 如果你计划让其他人访问您的安装环境，或者您想在没有 root 权限的情况下使用 Gentoo（出于安全考虑），您需要创建必要的用户账户并更改 root 密码。
 
@@ -291,7 +291,7 @@ $ gpg --verify <signature file> <downloaded iso>
 ### su - john
 ```
 
-# 可选：安装时查看文档
+### 可选：安装时查看文档
 
 如果您想在安装期间查看 Gentoo Handbook（从 CD 或在线查看），请确保您已创建了用户账户（可选：用户账户）。然后按 Alt-F2 进入新终端并登录。
 
@@ -313,7 +313,7 @@ $ gpg --verify <signature file> <downloaded iso>
 
 您可以通过按 Alt-F1 回到原始终端。
 
-# 可选：启动 SSH 守护进程
+### 可选：启动 SSH 守护进程
 
 如果您想在 Gentoo 安装期间允许其他用户访问您的计算机（可能因为那些用户正在帮助安装 Gentoo，即使您也是），您需要为他们创建一个用户账户，并可能为他们提供 root 密码（仅在您完全信任该用户时这样做）。
 
@@ -337,7 +337,7 @@ $ gpg --verify <signature file> <downloaded iso>
 
 如果已经为您配置了网络，`/sbin/ifconfig` 命令应该列出网络接口，如 lo 以及 eth0：
 
-# 代码列表 15：用于检查网络的 /sbin/ifconfig
+### 代码列表 15：用于检查网络的 /sbin/ifconfig
 
 ```
 # /sbin/ifconfig
@@ -352,13 +352,13 @@ eth0
     Interrupt:1 Base address:0xe80
 ```
 
-# 可选：配置代理
+### 可选：配置代理
 
 如果您通过代理访问互联网，您可能需要在安装期间设置代理信息。定义代理非常简单：您只需要定义代理服务器的信息。
 
 在许多情况下，您可以使用主机名来定义变量。例如，如果您的代理是 `proxy.gentoo.org` 且端口是 `8080`。
 
-# 代码列表 2：定义代理服务器
+### 代码列表 2：定义代理服务器
 
 ```
 （如果代理过滤 HTTP 流量）
@@ -371,17 +371,17 @@ eth0
 
 如果您需要用户名和密码，应该使用以下变量语法：
 
-# 代码列表 3：在变量中添加用户名/密码
+### 代码列表 3：在变量中添加用户名/密码
 
 ```
 http://username:password@proxy.::
 ```
 
-# 测试网络
+### 测试网络
 
-您可以尝试 ping 您的 ISP 的 DNS（在 /etc/resolv.conf 中找到）或任一网站，以确保您的数据包已到达网络、DNS 解析正常等。
+您可以尝试 ping 您的 ISP 的 DNS（在 `/etc/resolv.conf` 中找到）或任一网站，以确保您的数据包已到达网络、DNS 解析正常等。
 
-# 代码列表 4：进一步测试
+### 代码列表 4：进一步测试
 
 ```
 # ping -c 3 yahoo.com
@@ -393,23 +393,25 @@ http://username:password@proxy.::
 
 如果网络没有立即工作，某些安装介允许使用 `net-setup`（用于普通或无线网络）、`adsl-setup`（用于 ADSL）或 `pptp`（用于 PPTP 仅适用于 x86）。如果安装介未包含任何工具或网络尚未运行，请继续手动配置。
 
-- 普通以太网用户应继续使用：net-setup
+- 普通以太网用户应继续使用：`net-setup`
 - ADSL 用户应继续使用：PoE
 - PPTP 用户应继续使用：PPTP
 
 如果没有自动配置网络，最简单的方法是运行 `net-setup` 脚本：
 
-# 代码列表 5：运行 net-setup
+### 代码列表 5：运行 net-setup
 
 ```
 # net-setup eth0
 ```
 
+
+
 `net-setup` 会向您询问一些关于环境的问题。完成后，您应该有一个工作的连接。按照说明测试您的连接。如果测试成功，恭喜！您现在可以安装 Gentoo 了。跳过本节其余部分继续操作磁盘。如果您的网络不起工作，请继续手动配置。
 
 假设您需要连接互联网，安装 CD（任何版本）已通过 PoE 让事情变得简单。使用提供的 `adsl-setup` 配置您的网络。系统会提示您连接到 ADSL 调制器的以太网设备、用户名和密码、DNS 服务器的 IP 以及您是否需要基础防火墙。
 
-# 代码列表 6：使用 PoE
+## 代码列表 6：使用 PoE
 
 ```
 # adsl-setup
@@ -422,7 +424,7 @@ http://username:password@proxy.::
 
 如果您需要 PPTP，可以使用安装 CD 提供的 `pppclient`。但首先您需要确保您的配置是正确的。编辑 `/etc/ppp/pap-secrets` 或 `/etc/ppp/chap-secrets` 以包含正确的用户名/密码组合：
 
-# 代码列表 7：编辑 /etc/ppp/chap-secrets
+### 代码列表 7：编辑 /etc/ppp/chap-secrets
 
 ```
 # nano -w /etc/ppp/chap-secrets
@@ -430,7 +432,7 @@ http://username:password@proxy.::
 
 然后根据需要调整 `/etc/ppp/options.ppt`：
 
-# 代码列表 8：编辑 /etc/ppp/options.ppt
+### 代码列表 8：编辑 /etc/ppp/options.ppt
 
 ```
 # nano -w /etc/ppp/options.ppt
@@ -438,7 +440,7 @@ http://username:password@proxy.::
 
 完成后，运行 `pptp`（带有 `options.ppt` 中设置的选项）连接到服务器：
 
-# 代码列表 9：连接到拨号服务器
+### 代码列表 9：连接到拨号服务器
 
 ```
 # pptp <server ip>
@@ -454,7 +456,7 @@ http://username:password@proxy.::
 
 要确定哪些内核模块提供网络功能，请使用 `ls`：
 
-# 代码列表 10：搜索提供的模块
+#### 代码列表 10：搜索提供的模块
 
 ```
 # ls /lib/modules/$(uname -r)/kernel/drivers/net
@@ -462,15 +464,17 @@ http://username:password@proxy.::
 
 如果您找到了网卡的驱动程序，使用 `modprobe` 加载内核模块：
 
-# 代码列表 11：使用 modprobe 加载内核模块
-（作为一个示例，我们加载 pcnet32 模块）
+#### 代码列表 11：使用 modprobe 加载内核模块
+
+（作为一个示例，我们加载 `pcnet32` 模块）
+
 ```
 # modprobe pcnet32
 ```
 
 要检查网卡是否被检测，请使用 `ifconfig`。检测到的网卡结果如下：
 
-# 代码列表 12：网卡可用性测试，成功
+#### 代码列表 12：网卡可用性测试，成功
 
 ```
 # ifconfig eth0
@@ -484,20 +488,16 @@ RX bytes:0 (0.0 b) TX bytes:0 (0.0 b)
 
 如果您收到错误则网卡未被检测：
 
-# 代码列表 13：网卡可用性测试，失败
+#### 代码列表 13：网卡可用性测试，失败
 
 ```
 # ifconfig eth0
 eth0: error fetching interface information: Device not found
 ```
 
-如果您的系统中有多个网卡，它们被命名为 eth0、eth1 等。请确保您想要使用的网卡运行良好，并在整个文档中使用正确的名称。我们假设使用的是网卡 eth0。
+如果您的系统中有多个网卡，它们被命名为 `eth0`、`eth1` 等。请确保您想要使用的网卡运行良好，并在整个文档中使用正确的名称。我们假设使用的是网卡 `eth0`。
 
-
-
-
-
-# 代码列表 14: 使用 dhcp
+#### 代码列表 14: 使用 dhcp
 
 ```
 # dhcp
@@ -507,15 +507,15 @@ eth0: error fetching interface information: Device not found
 # dhcp -HD eth0
 ```
 
-如果这有效（例如 ping 通某个服务器，如 Google），那么你已经准备就绪，可以继续下去了。跳过本节的其余部分，继续“准备磁盘”。
+如果这有效（例如 `ping` 通某个服务器，如 Google），那么你已经准备就绪，可以继续下去了。跳过本节的其余部分，继续“准备磁盘”。
 
 ### 准备无线访问
 
-> 注意：ifconfig 的支持仅适用于 x86 和 PPC 安装光盘。你仍然可以通过遵循 linux-wlan-ng 项目的说明来使扩展功能工作。
+> 注意：`ifconfig` 的支持仅适用于 x86 和 PPC 安装光盘。你仍然可以通过遵循 linux-wlan-ng 项目的说明来使扩展功能工作。
 
 如果你正在使用 (802.11) 网卡，在进一步操作之前可能需要配置无线设置。要查看网卡上的当前设置，可以使用 `iwconfig`。`iwconfig` 可能会显示如下内容：
 
-# 代码列表 15: 配置无线设置
+#### 代码列表 15: 配置无线设置
 
 ```
 # iwconfig eth0
@@ -528,11 +528,11 @@ Rx wv invalid:0 Tx wv invalid:0 Tx
 excessive retries:27 Invalid miss:350282 Missed beacon:84
 ```
 
-> 注意：某些无线网卡的设备名称可能是 wlan0 而不是 eth0。运行不带命令行参数的 `iwconfig` 来确定设备名称。
+> 注意：某些无线网卡的设备名称可能是 `wlan0` 而不是 `eth0`。运行不带命令行参数的 `iwconfig` 来确定设备名称。
 
 对于大多数用户来说，只有两个设置可能需要更改：ESSID（网络名称）或 WEP 密钥。如果你需要更改 SSID 或添加 WEP 密钥，可以使用以下命令：
 
-# 代码列表 16: 更改 ESSID 并添加 WEP 密钥
+#### 代码列表 16: 更改 ESSID 并添加 WEP 密钥
 
 ```
 # 这将网络名称设置为 "GentooNode"
@@ -555,36 +555,41 @@ excessive retries:27 Invalid miss:350282 Missed beacon:84
 
 在网络中，主机通过其 IP 地址（互联网协议地址）进行标识。这种地址是 0 到 255 之间四个数字的组合。嗯，至少我们是这样理解的。实际上，这样的 IP 地址由 32 位（0 和 1）组成。让我们来看一个一个示例：
 
-# 代码列表 17: IP 地址示例
+#### 代码列表 17: IP 地址示例
 
 | IP 地址 (数字): | 192.168.0.2 | 11000000 10101000 00000010 |
+
 | IP 地址 (位): | 192 | 168 | 2 |
 
 对于所有关联网络而言，这样的 IP 地址对主机来说是唯一的（即每个可以到达的主机都必须有唯一的 IP 地址）。为了区分网络内部和外部的主机，IP 地址分为两部分：网络部分和主机部分。
 
 这种分离是通过子网掩码进行的，一部分是网络部分，另一个是主机部分。通常，子网掩码可以写成 IP 地址。
 
-# 代码列表 18: 网络/主机分离示例
+#### 代码列表 18: 网络/主机分离示例
 
 | IP 地址: | 192.168.0.2 | 11000000 10101000 00000010 |
+
 | 子网掩码: | 255.255.255.0 | 11111111 11111111 11111111 0 |
+
 | 网络 主机: | | |
 
-换句话说，192.168.0.1 是我们网络的一部分，192.168.1.2 不是。广播是一个与我们的网络相同网络部分，但只有一个主机部分的 IP 地址。网络上的每个主机都监听这个 IP 地址。这是为了广播数据包。为了能够上网，必须知道哪个主机是网关。由于它是普通主机，它有一个 IP 地址（例如 192.168.0.1）。我们之前提到过每个主机都有自己的 IP 地址。为了通过名称（而不是 IP 地址）访问此主机，你需要一个将名称（如 google.org）转换为 IP 地址（如 /etc/resolv.conf）的服务。这种服务被称为 DNS。要使用这种服务，必须在 /etc/resolv.conf 中定义服务器。在某些情况下，你也可以使用 ISP 提供的服务器。总结，在继续之前你需要以下信息：
+
+
+换句话说，`192.168.0.1`是我们网络的一部分，`192.168.1.2`不是。广播是一个与我们的网络相同网络部分，但只有一个主机部分的 IP 地址。网络上的每个主机都监听这个 IP 地址。这是为了广播数据包。为了能够上网，必须知道哪个主机是网关。由于它是普通主机，它有一个 IP 地址（例如`192.168.0.1`）。我们之前提到过每个主机都有自己的 IP 地址。为了通过名称（而不是 IP 地址）访问此主机，你需要一个将名称（如`google.org`）转换为 IP 地址（如`/etc/resolv.conf`）的服务。这种服务被称为 DNS。要使用这种服务，必须在`/etc/resolv.conf`中定义服务器。在某些情况下，你也可以使用 ISP 提供的服务器。总结，在继续之前你需要以下信息：
 
 | 网络 | 示例 |
 | :--- | :--- |
-| 你的 IP 地址 | 192.168.0.2 |
-| 子网掩码 | 255.255.255.0 |
-| 广播地址 | 192.168.0.255 |
-| 网关 | 192.168.0.1 |
-| DNS 服务器 | 8.8.8.8 |
+| 你的 IP 地址 | `192.168.0.2` |
+| 子网掩码 | `255.255.255.0` |
+| 广播地址 | `192.168.0.255` |
+| 网关 | `192.168.0.1` |
+| DNS 服务器 | `8.8.8.8` |
 
 ### 使用 ifconfig
 
-设置网络由三个步骤组成。首先使用 `ifconfig` 分配 IP 地址。然后设置路由到网关。最后，你需要通过在 /etc/resolv.conf 中放置服务器来完成。
+设置网络由三个步骤组成。首先使用 `ifconfig` 分配 IP 地址。然后设置路由到网关。最后，你需要通过在`/etc/resolv.conf`中放置服务器来完成。
 
-要分配 IP 地址，请考虑你的 IP 地址、广播地址子网掩码。然后执行命令，将 IP_ADDR 替换为你的 IP 地址，将 BROADCAST 替换为广播地址，将 NETMASK 替换为子网掩码：
+要分配 IP 地址，请考虑你的 IP 地址、广播地址子网掩码。然后执行命令，将`IP_ADDR`替换为你的 IP 地址，将`BROADCAST`替换为广播地址，将`NETMASK`替换为子网掩码：
 
 # 代码列表 20: 使用 ifconfig
 
@@ -592,21 +597,21 @@ excessive retries:27 Invalid miss:350282 Missed beacon:84
 # ifconfig eth0 $(IP_ADDR) broadcast $(BROADCAST) netmask $(NETMASK) up
 ```
 
-现在使用 `route` 设置路由。将 GATEWAY 替换为你的网关 IP 地址：
+现在使用 `route` 设置路由。将`GATEWAY`替换为你的网关 IP 地址：
 
 ```
 # 代码列表 21: 使用 route
 # route add default gw $(GATEWAY)
 ```
 
-现在用喜欢的编辑器打开 /etc/resolv.conf（例如我们使用 nano）：
+现在用喜欢的编辑器打开`/etc/resolv.conf`（例如我们使用`nano`）：
 
 ```
 # 代码列表 22: 创建 /etc/resolv.conf
 # nano -w /etc/resolv.conf
 ```
 
-现在使用以下模板填写你的服务器。确保将 NAMESERVER1 和 NAMESERVER2 替换为相应的地址：
+现在使用以下模板填写你的服务器。确保将`NAMESERVER1`和`NAMESERVER2`替换为相应的地址：
 
 ```
 代码列表 23: /etc/resolv.conf 模板
@@ -618,33 +623,29 @@ nameserver ${NAMESERVER2}
 
 # 4. 准备磁盘
 
-### 4.a. 块设备介绍
+## 4.a. 块设备介绍
 
-#### 块设备
+### 块设备
 
 我们将查看 Gentoo 以及通用 Linux 的磁盘分区，包括 Linux 系统、分区和块设备。一旦你熟悉了磁盘和文件系统的内部，我们将引导你完成为 Gentoo Linux 安装分区和文件系统的过程。
 
-首先，我们将介绍设备。最基本的块设备可能是 Linux 系统中代表第一个驱动器的设备 /dev/sda。如果你的系统使用 SCSI 或 SATA 设备，那么你的第一硬盘将是 /dev/sd。
+首先，我们将介绍设备。最基本的块设备可能是 Linux 系统中代表第一个驱动器的设备`/dev/sda`。如果你的系统使用 SCSI 或 SATA 设备，那么你的第一硬盘将是`/dev/sd`。
 
 块设备代表了磁盘的抽象接口。你的程序可以使用这些块设备与磁盘交互，而无需担心你的驱动器是 IDE、SCSI 还是其他。程序可以将磁盘上的存储管理为一组连续的、随机的 512 字节块。
 
-#### 分区
+### 分区
 
 虽然理论上可以使用整个磁盘来存放你的 Linux，但在实践中几乎从未这样做。相反，整个块设备被拆分成更小、更容易管理的块设备。在 x86 系统上，这些被称为分区。
 
 分区分为三种：主分区、扩展分区和逻辑分区。
 
-主分区是存储在 MBR（主引导记录）中的分区。由于 MBR 非常小（512 字节），因此只能定义四个主分区（例如 /dev/sda1 到 /dev/sda4）。
+主分区是存储在 MBR（主引导记录）中的分区。由于 MBR 非常小（512 字节），因此只能定义四个主分区（例如`/dev/sda1`到`/dev/sda4`）。
 
 扩展分区是一个特殊的主分区（这意味着扩展分区必须是四个主分区之一）。不能再定义更多分区了。但如果其中一个是第四个，它被赋予了生命，以在不丢失后兼容性的情况下扩展格式方案。
 
 逻辑分区位于扩展分区内部。这些定义没有放在 MBR 中，而是声明在扩展分区内部。
 
-
-
-
-
-## a.b. 设计分区方案
+## 4.b. 设计分区方案
 
 ### 默认分区方案
 
@@ -652,15 +653,15 @@ nameserver ${NAMESERVER2}
 
 | 文件系统 | 大小 | 已用 | 描述 |
 | :--- | :--- | :--- | :--- |
-| /dev/hd1 ext2 | 32M | 启动分区 |
-| /dev/hd2 (swap) | 512M | 交换分区 |
-| /dev/hd3 ext3 | | 磁盘的剩余分区 |
+| `/dev/hd1` ext2 | 32M | 启动分区 |
+| `/dev/hd2` (swap) | 512M | 交换分区 |
+| `/dev/hd3` ext3 | | 磁盘的剩余分区 |
 
 如果你想知道分区应该有多大，或者你需要多少个分区，请继续阅读。使用 `fdisk` 对你的磁盘进行分区来继续分区操作。
 
-## 多少个？多大？
+### 多少个？多大？
 
-分区的数量很大程度上取决于你的环境。例如，如果你有很多用户，你可能最希望将 `/home` 独立出来，因为这确保了安全并便于备份。如果你正在安装 Gentoo 作为邮件服务器，那么你的 `/var` 应该是独立的，因为其所有的小型存储目录都在 `/var` 内部。选择良好的文件系统将最大化你的性能。服务器将有一个独立的 `/opt`，大多数包管理器也会更容易运行。你绝对想要保留 `/usr`：它不仅会限制应用程序的容量，而且除了存储其中的各种源码外，Portage 树大约占用 500 MB。
+分区的数量很大程度上取决于你的环境。例如，如果你有很多用户，你可能最希望将`/home`独立出来，因为这确保了安全并便于备份。如果你正在安装 Gentoo 作为邮件服务器，那么你的`/var`应该是独立的，因为其所有的小型存储目录都在`/var`内部。选择良好的文件系统将最大化你的性能。服务器将有一个独立的`/opt`，大多数包管理器也会更容易运行。你绝对想要保留`/usr`：它不仅会限制应用程序的容量，而且除了存储其中的各种源码外，Portage 树大约占用 500 MB。
 
 正如你所见，这取决于你的用途。为每个分区或卷设置独立分区具有以下优势：
 
@@ -687,7 +688,7 @@ Filesystem Type Size Used Avail% Mounted on
 (Partitioned for future usages: )
 ```
 
-`/usr` 是根目录（此处已使用 85%），但所有软件都安装在此处，`/usr` 往往不会增长太多。为 `/var` 分配几 GB 的磁盘空间似乎过多了，请记住 Portage 使用此分区来编译包。如果你想让 `/var` 保持较小，你需要修改 `/etc/make.conf` 中的 `PORTAGE_TMPDIR` 变量，使其指向有足够剩余空间来编译如 OpenOffice 等大型包的分区。
+`/usr`是根目录（此处已使用 85%），但所有软件都安装在此处，`/usr`往往不会增长太多。为`/var`分配几 GB 的磁盘空间似乎过多了，请记住 Portage 使用此分区来编译包。如果你想让`/var`保持较小，你需要修改`/etc/make.conf`中的`PORTAGE_TMPDIR`变量，使其指向有足够剩余空间来编译如 OpenOffice 等大型包的分区。
 
 ## 4.c. 使用 fdisk 对磁盘进行分区
 
@@ -695,15 +696,17 @@ Filesystem Type Size Used Avail% Mounted on
 
 ### 分区描述
 
-/dev/hd1 启动分区
-/dev/hd2 交换分区
-/dev/hd3 根分区
+`/dev/hd1` 启动分区
+
+`/dev/hd2` 交换分区
+
+`/dev/hd3` 根分区
 
 根据你的喜好更改布局。
 
 ### 查看当前分区布局
 
-fdisk 是一个将磁盘划分为区的流行且强大的工具。在你的磁盘上使用 fdisk（在我们的示例中，我们使用 /dev/hda）：
+`fdisk`是一个将磁盘划分为区的流行且强大的工具。在你的磁盘上使用`fdisk`（在我们的示例中，我们使用`/dev/hda`）：
 
 # Code List 2: 启动 fdisk
 
@@ -711,7 +714,7 @@ fdisk 是一个将磁盘划分为区的流行且强大的工具。在你的磁�
 # fdisk /dev/hda own
 ```
 
-一旦进入 fdisk，你将看到类似所示的提示符：
+一旦进入`fdisk`，你将看到类似所示的提示符：
 
 # Code List 3: fdisk prompt
 
@@ -732,23 +735,26 @@ Units = cylinders of 15120 * 512 bytes
 
 | Device Boot | Start | Blocks | System |
 | :--- | :--- | :--- | :--- |
-| /dev/hda1 | 1 | 105008+ | Linux |
-| /dev/hda2 | 15 | 224060+ | swap |
-| /dev/hda3 | 50 | 158760 | Linux |
-| /dev/hda4 | 71 | 219810+ | Extended |
-| /dev/hda5 | 209 | 205080+ | Linux Linux |
-| /dev/hda6 | 210 | 348080+ | Linux |
-| /dev/hda7 | 349 | 626048+ | Linux |
-| /dev/hda8 | 627 | 904048+ | Linux |
-| /dev/hda9 | 905 | 2184+ | Linux |
+| `/dev/hda1` | 1 | 105008+ | Linux |
+
+
+
+| `/dev/hda2` | 15 | 224060+ | swap |
+| `/dev/hda3` | 50 | 158760 | Linux |
+| `/dev/hda4` | 71 | 219810+ | Extended |
+| `/dev/hda5` | 209 | 205080+ | Linux Linux |
+| `/dev/hda6` | 210 | 348080+ | Linux |
+| `/dev/hda7` | 349 | 626048+ | Linux |
+| `/dev/hda8` | 627 | 904048+ | Linux |
+| `/dev/hda9` | 905 | 2184+ | Linux |
 
 此磁盘配置为用于存放文件系统（每个分区列为 "Linux"）以及一个列为 "swap" 的交换分区。
 
 ### 删除分区
 
-我们首先将从磁盘中删除所有分区。输入 `d` 删除一个分区。例如，删除 /dev/hda1：
+我们首先将从磁盘中删除所有分区。输入 `d` 删除一个分区。例如，删除 `/dev/hda1`：
 
-# Code List 5: 删除分区
+#### Code List 5: 删除分区
 
 ```
 Command (m for help): d
@@ -757,7 +763,7 @@ Partition (1-4): 1
 
 该分区已安排待删除。如果你输入 `p`，它将不再显示，但除非你保存了更改，否则它不会被擦除。如果你犯了错误并想取消，按回车键，你的更改将不会删除。现在，你想擦除磁盘上所有的分区，重复输入 `p` 来打印分区，然后输入 `d` 和分区编号来删除它。最终，你将得到一个没有任何分区表：
 
-# Code List 6: 空分区表
+#### Code List 6: 空分区表
 
 ```
 Disk /dev/hda 30.0 GB, 300058214
@@ -767,23 +773,20 @@ Units = cylinders of 15120 * 512 bytes
 
 现在，分区表是空的，你可以按照之前的说明创建分区。
 
-# Code List 7: 创建分区分区
+#### Code List 7: 创建分区分区
 
 ```
 Disk /dev/hda 30.0 GB, 300058214
 240 heads, 63 sectors, 2184 cylinders
 Units = cylinders of 15120 * 512 bytes
-
-
-
-
-
-# 保存分区布局
-
-要保存分区布局并退出 fdisk，输入 `w`。
-
 ```
-代码列表 11: 保存并退出 fdisk
+
+### 保存分区布局
+
+要保存分区布局并退出 `fdisk`，输入 `w`。
+
+#### 代码列表 11: 保存并退出 fdisk
+
 ```
 命令 (m 帮助): w
 ```
@@ -798,17 +801,17 @@ Units = cylinders of 15120 * 512 bytes
 
 ### 文件系统？
 
-Linux 内核支持多种文件系统。我们将解释 ext2、ReiserFS、XFS 和 JFS，因为它们是 Linux 系统上最常用的文件系统。
+Linux 内核支持多种文件系统。我们将解释 `ext2`、`ReiserFS`、`XFS` 和 `JFS`，因为它们是 Linux 系统上最常用的文件系统。
 
-ext2 是唯一且真正的具有元数据日志（metadata journaling）的 Linux 文件系统，这意味着启动时的 ext2 检查可能非常耗时。现在有了许多新一代的日志文件系统，可以快速检查一致性，并且被认为远优于其非日志对应项。日志文件系统可以防止系统在意外崩溃处于不一致状态时出现长时间延迟。
+`ext2` 是唯一且真正的具有元数据日志（metadata journaling）的 Linux 文件系统，这意味着启动时的 `ext2` 检查可能非常耗时。现在有了许多新一代的日志文件系统，可以快速检查一致性，并且被认为远优于其非日志对应项。日志文件系统可以防止系统在意外崩溃处于不一致状态时出现长时间延迟。
 
-ext3 是 ext2 的日志版本，除了全日志和数据日志等增强模式外，它还提供了元数据日志以实现快速恢复。ext3 是一个非常优秀且可靠的文件系统。它具有一个额外的哈希 b 树索引选项，能够在不产生任何减速的情况下实现快速文件访问。简而言之，ext3 是一个卓越的文件系统。
+`ext3` 是 `ext2` 的日志版本，除了全日志和数据日志等增强模式外，它还提供了元数据日志以实现快速恢复。`ext3` 是一个非常优秀且可靠的文件系统。它具有一个额外的哈希 b 树索引选项，能够在不产生任何减速的情况下实现快速文件访问。简而言之，`ext3` 是一个卓越的文件系统。
 
-ReiserFS 是一种 B+-树文件系统，具有非常好的整体性能。在处理小文件（小于 4kb 的文件）时，其性能远超 ext2 和 ext3，提升可达 10 倍以上。ReiserFS 也非常稳健，可以作为通用文件系统，也可以用于极端情况，如创建大型文件系统、使用大量小文件以及包含数千个文件的大文件和目录。在内核 2.4.18+ 中……
+`ReiserFS` 是一种 B+-树文件系统，具有非常好的整体性能。在处理小文件（小于 4kb 的文件）时，其性能远超 `ext2` 和 `ext3`，提升可达 10 倍以上。`ReiserFS` 也非常稳健，可以作为通用文件系统，也可以用于极端情况，如创建大型文件系统、使用大量小文件以及包含数千个文件的大文件和目录。在内核 `2.4.18+` 中……
 
-XFS 是一种具有元数据日志的文件系统，带有功能强大的特性集，并针对可扩展性进行了优化。我们建议在具有高速 SCSI 和/或光纤通道以及不间断电源的 Linux 系统上使用它。因为 XFS 会激进地在 RAM 中缓存数据，向磁盘写入文件时不要采取预防措施，如果系统意外宕机，那（几个）可能会丢失大量数据。
+`XFS` 是一种具有元数据日志的文件系统，带有功能强大的特性集，并针对可扩展性进行了优化。我们建议在具有高速 SCSI 和/或光纤通道以及不间断电源的 Linux 系统上使用它。因为 `XFS` 会激进地在 RAM 中缓存数据，向磁盘写入文件时不要采取预防措施，如果系统意外宕机，那（几个）可能会丢失大量数据。
 
-JFS 是 IBM 的高性能日志文件系统。它最近已达到生产就绪，但目前还没有足够的记录来对其通用稳定性给出肯定的或否定的评价。
+`JFS` 是 IBM 的高性能日志文件系统。它最近已达到生产就绪，但目前还没有足够的记录来对其通用稳定性给出肯定的或否定的评价。
 
 ### 将文件系统应用到分区
 
@@ -816,16 +819,16 @@ JFS 是 IBM 的高性能日志文件系统。它最近已达到生产就绪，�
 
 | 文件系统 | 命令 |
 | :--- | :--- |
-| ext2 | mke2fs |
-| ext3 | mke2fs -j |
-| reiserfs | mkeiserfs |
-| xfs | mkmfs.xfs |
-| jfs | mke2fs.jfs |
+| ext2 | `mke2fs` |
+| ext3 | `mke2fs -j` |
+| reiserfs | `mkeiserfs` |
+| xfs | `mkmfs.xfs` |
+| jfs | `mke2fs.jfs` |
 
-例如，为了让启动分区（示例中为 `/dev/hd1`）使用 ext2，根分区（示例中为 `/dev/hd3`）使用 ext3（如示例所示你会使用：
+例如，为了让启动分区（示例中为 `/dev/hd1`）使用 `ext2`，根分区（示例中为 `/dev/hd3`）使用 `ext3`（如示例所示你会使用：
 
-```
-代码列表 12: 在分区上应用文件系统
+#### 代码列表 12: 在分区上应用文件系统
+
 ```
 # mke2fs /dev/hda1
 # mke2fs -j /dev/hda3
@@ -835,18 +838,18 @@ JFS 是 IBM 的高性能日志文件系统。它最近已达到生产就绪，�
 
 ### 激活交换分区
 
-mkswap 是初始化交换分区的命令：
+`mkswap` 是初始化交换分区的命令：
 
-```
-代码列表 13: 创建交换签名
+#### 代码列表 13: 创建交换签名
+
 ```
 # mkswap /dev/hda2
 ```
 
-要激活交换分区，请使用 swapon：
+要激活交换分区，请使用 `swapon`：
 
-```
-代码列表 14: 激活交换分区
+#### 代码列表 14: 激活交换分区
+
 ```
 # swapon /dev/hda2
 ```
@@ -857,8 +860,110 @@ mkswap 是初始化交换分区的命令：
 
 现在分区已经初始化并存放了文件系统，是时候挂载你的分区了。使用 `mount` 命令。别忘记为你创建的每个分区创建必要的挂载目录。作为示例，我们将使用根分区和启动分区：
 
+#### 代码列表 15: 挂载分区
+
 ```
-代码列表 15: 挂载分区
+# mount /dev/hda3 /mnt/gentoo
+# mkdir /mnt/gentoo/boot
+# mount /dev/sda1 /mnt/gentoo/boot
+```
+
+> 注意：如果你需要 `/tmp` 位于独立分区上，务必在挂载后更改其权限：`chmod 1777 /mnt/gentoo/tmp`。这对 `/var/tmp` 也同样适用。
+
+我们必须将 proc 文件系统（与内核的虚拟接口）挂载到 `/proc` 上。但首先，我们需要将文件放在分区上。
+
+继续“安装 Gentoo 安装文件”。
+
+# 5. 安装 Gentoo 安装文件
+
+### 5.a. 安装 Stage Tarball
+
+### 设置正确的日期/时间
+
+在需要之前要检查并更新你的日期/时间。配置错误的时钟可能会在未来导致奇怪的结果！
+
+要验证当前日期时间，运行 `date`：
+
+#### 代码列表 1: 验证日期时间
+
+```
+# date
+Fri Mar 29 16:21:18 CEST 2005
+```
+
+如果显示的日期错误，使用 `date MMDDhhmmYYYY` 语法（月、日、时、分和年）更新。例如，将日期设置为2005 年 3 月 29 日 16:21：
+
+#### 代码列表 2: 设置日期时间
+
+```
+date 032916212005
+```
+
+### 你的选择
+
+下一步需要的操作是将我们的文件放置到分区上。
+
+继续“安装 Gentoo 安装文件”。
+
+### 5.b. 默认：使用 Internet 上的 Stage
+
+### 下载 Tarball
+
+现在分区已经初始化并存放了文件系统，是时候挂载你的分区了。使用 `mount` 命令。别忘记为你创建的每个分区创建必要的挂载目录。作为示例，我们将使用根分区和启动分区：
+
+#### 代码列表 15: 挂载分区
+
+```
+# mount /dev/hda3 /mnt/gentoo
+# mkdir /mnt/gentoo/boot
+# mount /dev/sda1 /mnt/gentoo/boot
+```
+
+> 注意：如果你需要 `/tmp` 位于独立分区上，务必在挂载后更改其权限：`chmod 1777 /mnt/gentoo/tmp`。这对 `/var/tmp` 也同样适用。
+
+我们必须将 proc 文件系统（与内核的虚拟接口）挂载到 `/proc` 上。但首先，我们需要将文件放在分区上。
+
+继续“安装 Gentoo 安装文件”。
+
+# 5. 安装 Gentoo 安装文件
+
+### 5.a. 安装 Stage Tarball
+
+### 设置正确的日期/时间
+
+在需要之前要检查并更新你的日期/时间。配置错误的时钟可能会在未来导致奇怪的结果！
+
+要验证当前日期时间，运行 `date`：
+
+#### 代码列表 1: 验证日期时间
+
+```
+# date
+Fri Mar 29 16:21:18 CEST 2005
+```
+
+如果显示的日期错误，使用 `date MMDDhhmmYYYY` 语法（月、日、时、分和年）更新。例如，将日期设置为2005 年 3 月 29 日 16:21：
+
+#### 代码列表 2: 设置日期时间
+
+```
+date 032916212005
+```
+
+
+
+### 你的选择
+
+下一步需要的操作是将我们的文件放置到分区上。
+
+继续“安装 Gentoo 安装文件”。
+
+### 5.b. 默认：使用 Internet 上的 Stage
+
+### 下载 Tarball
+
+现在分区已经初始化并存放了文件系统，是时候挂载你的分区了。使用 `mount` 命令。别忘记为你创建的每个分区创建必要的挂载目录。作为示例，我们将使用根分区和启动分区：
+
 ```
 # mount /dev/hda3 /mnt/gentoo
 # mkdir /mnt/gentoo/boot
@@ -882,16 +987,13 @@ mkswap 是初始化交换分区的命令：
 要验证当前日期时间，运行 `date`：
 
 ```
-代码列表 1: 验证日期时间
-```
 # date
-Fri Mar 29 16:21:18 CEST 2005
 ```
+
+Fri Mar 29 16:21:18 CEST 2005
 
 如果显示的日期错误，使用 `date MMDDhhmmYYYY` 语法（月、日、时、分和年）更新。例如，将日期设置为2005 年 3 月 29 日 16:21：
 
-```
-代码列表 2: 设置日期时间
 ```
 date 032916212005
 ```
@@ -909,261 +1011,6 @@ date 032916212005
 现在分区已经初始化并存放了文件系统，是时候挂载你的分区了。使用 `mount` 命令。别忘记为你创建的每个分区创建必要的挂载目录。作为示例，我们将使用根分区和启动分区：
 
 ```
-代码列表 15: 挂载分区
-```
-# mount /dev/hda3 /mnt/gentoo
-# mkdir /mnt/gentoo/boot
-# mount /dev/sda1 /mnt/gentoo/boot
-```
-
-> 注意：如果你需要 `/tmp` 位于独立分区上，务必在挂载后更改其权限：`chmod 1777 /mnt/gentoo/tmp`。这对 `/var/tmp` 也同样适用。
-
-我们必须将 proc 文件系统（与内核的虚拟接口）挂载到 `/proc` 上。但首先，我们需要将文件放在分区上。
-
-继续“安装 Gentoo 安装文件”。
-
-# 5. 安装 Gentoo 安装文件
-
-### 5.a. 安装 Stage Tarball
-
-### 设置正确的日期/时间
-
-在需要之前要检查并更新你的日期/时间。配置错误的时钟可能会在未来导致奇怪的结果！
-
-要验证当前日期时间，运行 `date`：
-
-```
-代码列表 1: 验证日期时间
-```
-# date
-Fri Mar 29 16:21:18 CEST 2005
-```
-
-如果显示的日期错误，使用 `date MMDDhhmmYYYY` 语法（月、日、时、分和年）更新。例如，将日期设置为2005 年 3 月 29 日 16:21：
-
-```
-代码列表 2: 设置日期时间
-```
-date 032916212005
-```
-
-### 你的选择
-
-下一步需要的操作是将我们的文件放置到分区上。
-
-继续“安装 Gentoo 安装文件”。
-
-### 5.b. 默认：使用 Internet 上的 Stage
-
-### 下载 Tarball
-
-现在分区已经初始化并存放了文件系统，是时候挂载你的分区了。使用 `mount` 命令。别忘记为你创建的每个分区创建必要的挂载目录。作为示例，我们将使用根分区和启动分区：
-
-```
-代码列表 15: 挂载分区
-```
-# mount /dev/hda3 /mnt/gentoo
-# mkdir /mnt/gentoo/boot
-# mount /dev/sda1 /mnt/gentoo/boot
-```
-
-> 注意：如果你需要 `/tmp` 位于独立分区上，务必在挂载后更改其权限：`chmod 1777 /mnt/gentoo/tmp`。这对 `/var/tmp` 也同样适用。
-
-我们必须将 proc 文件系统（与内核的虚拟接口）挂载到 `/proc` 上。但首先，我们需要将文件放在分区上。
-
-继续“安装 Gentoo 安装文件”。
-
-# 5. 安装 Gentoo 安装文件
-
-### 5.a. 安装 Stage Tarball
-
-### 设置正确的日期/时间
-
-在需要之前要检查并更新你的日期/时间。配置错误的时钟可能会在未来导致奇怪的结果！
-
-要验证当前日期时间，运行 `date`：
-
-```
-代码列表 1: 验证日期时间
-```
-# date
-Fri Mar 29 16:21:18 CEST 2005
-```
-
-如果显示的日期错误，使用 `date MMDDhhmmYYYY` 语法（月、日、时、分和年）更新。例如，将日期设置为2005 年 3 月 29 日 16:21：
-
-```
-代码列表 2: 设置日期时间
-```
-date 032916212005
-```
-
-### 你的选择
-
-下一步需要的操作是将我们的文件放置到分区上。
-
-继续“安装 Gentoo 安装文件”。
-
-### 5.b. 默认：使用 Internet 上的 Stage
-
-### 下载 Tarball
-
-现在分区已经初始化并存放了文件系统，是时候挂载你的分区了。使用 `mount` 命令。别忘记为你创建的每个分区创建必要的挂载目录。作为示例，我们将使用根分区和启动分区：
-
-```
-代码列表 15: 挂载分区
-```
-# mount /dev/hda3 /mnt/gentoo
-# mkdir /mnt/gentoo/boot
-# mount /dev/sda1 /mnt/gentoo/boot
-```
-
-> 注意：如果你需要 `/tmp` 位于独立分区上，务必在挂载后更改其权限：`chmod 1777 /mnt/gentoo/tmp`。这对 `/var/tmp` 也同样适用。
-
-我们必须将 proc 文件系统（与内核的虚拟接口）挂载到 `/proc` 上。但首先，我们需要将文件放在分区上。
-
-继续“安装 Gentoo 安装文件”。
-
-[/content]
-
-*(由于你提供的原始文本存在大量重复内容（从“Saving the Partition Layout”开始完全循环），根据“不要重复输出原文”的原则，我仅对第一个完整的逻辑块进行了翻译，并确保了格式的正确。)*
-
-**此处是针对你提供的文本内容的完整翻译译文：**
-
-[content]
-# 保存分区布局
-
-要保存分区布局并退出 fdisk，输入 `w`。
-
-```
-代码列表 11: 保存并退出 fdisk
-```
-命令 (m 帮助): w
-```
-
-现在分区已经创建，你现在可以继续“创建文件系统”。
-
-# 4.d. 创建文件系统
-
-### 简介
-
-现在分区已经创建，是时候在它们上创建文件系统了。如果你不在乎选择哪种文件系统，并且对我们在本手册中使用的感到满意，请继续“将文件系统应用到分区”。否则请继续阅读以了解可用的文件系统……
-
-### 文件系统？
-
-Linux 内核支持多种文件系统。我们将解释 ext2、ReiserFS、XFS 和 JFS，因为它们是 Linux 系统上最常用的文件系统。
-
-ext2 是唯一且真正的具有元数据日志（metadata journaling）的 Linux 文件系统，这意味着启动时的 ext2 检查可能非常耗时。现在有了许多新一代的日志文件系统，可以快速检查一致性，并且被认为远优于其非日志对应项。日志文件系统可以防止系统在意外崩溃处于不一致状态时出现长时间延迟。
-
-ext3 是 ext2 的日志版本，除了全日志和数据日志等增强模式外，它还提供了元数据日志以实现快速恢复。ext3 是一个非常优秀且可靠的文件系统。它具有一个额外的哈希 b 树索引选项，能够在不产生任何减速的情况下实现快速文件访问。简而言之，ext3 是一个卓越的文件系统。
-
-ReiserFS 是一种 B+-树文件系统，具有非常好的整体性能。在处理小文件（小于 4kb 的文件）时，其性能远超 ext2 和 ext3，提升可达 10 倍以上。ReiserFS 也非常稳健，可以作为通用文件系统，也可以用于极端情况，如创建大型文件系统、使用大量小文件以及包含数千个文件的大文件和目录。在内核 2.4.18+ 中……
-
-XFS 是一种具有元数据日志的文件系统，带有功能强大的特性集，并针对可扩展性进行了优化。我们建议在具有高速 SCSI 和/或光纤通道以及不间断电源的 Linux 系统上使用它。因为 XFS 会激进地在 RAM 中缓存数据，向磁盘写入文件时不要采取预防措施，如果系统意外宕机，那（几个）可能会丢失大量数据。
-
-JFS 是 IBM 的高性能日志文件系统。它最近已达到生产就绪，但目前还没有足够的记录来对其通用稳定性给出肯定的或否定的评价。
-
-### 将文件系统应用到分区
-
-若要在分区或卷上创建文件系统，对于每种可能的文件系统都有相应的工具：
-
-| 文件系统 | 命令 |
-| :--- | :--- |
-| ext2 | mke2fs |
-| ext3 | mke2fs -j |
-| reiserfs | mkeiserfs |
-| xfs | mkmfs.xfs |
-| jfs | mke2fs.jfs |
-
-例如，为了让启动分区（示例中为 `/dev/hd1`）使用 ext2，根分区（示例中为 `/dev/hd3`）使用 ext3（如示例所示）你会使用：
-
-```
-代码列表 12: 在分区上应用文件系统
-```
-# mke2fs /dev/hda1
-# mke2fs -j /dev/hda3
-```
-
-在新创建的分区上创建文件系统。
-
-### 激活交换分区
-
-mkswap 是初始化交换分区的命令：
-
-```
-代码列表 13: 创建交换签名
-```
-# mkswap /dev/hda2
-```
-
-要激活交换分区，请使用 swapon：
-
-```
-代码列表 14: 激活交换分区
-```
-# swapon /dev/hda2
-```
-
-使用上述命令创建并激活交换空间。
-
-### 4.e. 挂载
-
-现在分区已经初始化并存放了文件系统，是时候挂载你的分区了。使用 `mount` 命令。别忘记为你创建的每个分区创建必要的挂载目录。作为示例，我们将使用根分区和启动分区：
-
-```
-代码列表 15: 挂载分区
-```
-# mount /dev/hda3 /mnt/gentoo
-# mkdir /mnt/gentoo/boot
-# mount /dev/sda1 /mnt/gentoo/boot
-```
-
-> 注意：如果你需要 `/tmp` 位于独立分区上，务必在挂载后更改其权限：`chmod 1777 /mnt/gentoo/tmp`。这对 `/var/tmp` 也同样适用。
-
-我们必须将 proc 文件系统（与内核的虚拟接口）挂载到 `/proc` 上。但首先，我们需要将文件放在分区上。
-
-继续“安装 Gentoo 安装文件”。
-
-# 5. 安装 Gentoo 安装文件
-
-### 5.a. 安装 Stage Tarball
-
-### 设置正确的日期/时间
-
-在需要之前要检查并更新你的日期/时间。配置错误的时钟可能会在未来导致奇怪的结果！
-
-要验证当前日期时间，运行 `date`：
-
-```
-代码列表 1: 验证日期时间
-```
-# date
-Fri Mar 29 16:21:18 CEST 2005
-```
-
-如果显示的日期错误，使用 `date MMDDhhmmYYYY` 语法（月、日、时、分和年）更新。例如，将日期设置为2005 年 3 月 29 日 16:21：
-
-```
-代码列表 2: 设置日期时间
-```
-date 032916212005
-```
-
-### 你的选择
-
-下一步需要的操作是将我们的文件放置到分区上。
-
-继续“安装 Gentoo 安装文件”。
-
-### 5.b. 默认：使用 Internet 上的 Stage
-
-### 下载 Tarball
-
-现在分区已经初始化并存放了文件系统，是时候挂载你的分区了。使用 `mount` 命令。别忘记为你创建的每个分区创建必要的挂载目录。作为示例，我们将使用根分区和启动分区：
-
-```
-代码列表 15: 挂载分区
-```
 # mount /dev/hda3 /mnt/gentoo
 # mkdir /mnt/gentoo/boot
 # mount /dev/sda1 /mnt/gentoo/boot
@@ -1177,6 +1024,11 @@ date 032916212005
 
 
 
+> 注意：如果你需要 `/tmp` 位于独立分区上，务必在挂载后更改其权限：`chmod 1777 /mnt/gentoo/tmp`。这对 `/var/tmp` 也同样适用。
+
+我们必须将 proc 文件系统（与内核的虚拟接口）挂载到 `/proc` 上。但首先，我们需要将文件放在分区上。
+
+继续“安装 Gentoo 安装文件”。
 
 # 代码列表 12：前往 Gentoo 站点
 
@@ -1289,7 +1141,7 @@ mirrorselect -i o >> /mnt/gentoo/etc/make.conf
 
 另一个重要的设置是 `make.conf` 中的 `SYNC` 设置。该变量处理了你在更新 Portage 树时想要使用的 rsync 服务器。
 
-# 代码列表 2：使用 mirrorselect 设置 SYNC 
+# 代码列表 2：使用 mirrorselect 设置 SYNC
 
 ```bash
 mirrorselect -i o >> /mnt/gentoo/etc/make.conf
@@ -1335,7 +1187,7 @@ cp -L /etc/resolv.conf /mnt/gentoo/etc/resolv.conf
 
 恭喜！你现在位于 Gentoo Linux 内部。当然，这远未结束，这就是为什么安装过程还有几个章节。
 
-6.b. 配置 Portage
+### 6.b. 配置 Portage
 
 #### 更新 Portage 树
 
@@ -1349,7 +1201,9 @@ cp -L /etc/resolv.conf /mnt/gentoo/etc/resolv.conf
 # emerge --sync --quiet
 ```
 
-如果你处于一个阻止 rsync 的防火墙后，可以使用 `env-websync`，它将为你下载并安装 Portage 快照。
+
+
+如果你处于一个阻止 `rsync` 的防火墙后，可以使用 `env-websync`，它将为你下载并安装 Portage 快照。
 
 如果你意识到有新版本的 Portage 发布并且应该更新，请忽略它。Portage 将在安装当天之后更新。
 
@@ -1358,14 +1212,13 @@ cp -L /etc/resolv.conf /mnt/gentoo/etc/resolv.conf
 首先，这里有一个简单的定义。
 Profile 是任何 Gentoo 系统的构建块。它不仅指定了 `CHOST`、`FLAGS` 和其他重要变量的默认值，它还是
 
-
 同时也了解创建包版本的系统。这一切都由 Gentoo 开发者维护。
 
 以前，用户几乎不会触碰此类配置（profile）。然而，x86、ppa 和 alpha 用户可以在两个配置之间进行选择：一个用于 2.4 内核，另一个用于 2.6 内核。为了提高 2.6 内核的集成性，这一要求已被移除。ppc 和 ppc64 架构也有多个可用配置。我们稍后会讨论这些。
 
 你可以通过以下命令查看你正在使用哪个配置：
 
-# 代码列表 7：验证系统配置
+#### 代码列表 7：验证系统配置
 
 ```bash
 # ls -PFG /etc/make.profile
@@ -1376,7 +1229,7 @@ lrwxrwxr-x 1 root Apr 18 8:51 /etc/make.profile -> /usr/portage/profiles/default
 
 用户可能希望安装基于旧版 Linux 2.4 配置的系统。如果你有充分的理由这样做，应该先检查存在哪些配置。在 x86 上，你可以通过以下命令实现：
 
-# 代码列表 8：查找是否存在额外的配置
+#### 代码列表 8：查找是否存在额外的配置
 
 ```bash
 # ls -d /usr/portage/profiles/default-linux/x86/no-nptl/2.4
@@ -1385,7 +1238,7 @@ lrwxrwxr-x 1 root Apr 18 8:51 /etc/make.profile -> /usr/portage/profiles/default
 
 上面的示例显示 2.4 配置存在（即它没有报错说缺少文件或目录）。建议保持默认设置，但如果你想切换，可以按照以下方式操作：
 
-# 代码列表 9：切换到 2.4 配置
+#### 代码列表 9：切换到 2.4 配置
 
 ```bash
 (确保你使用了正确的架构，下面的示例适用于 x86 的)
@@ -1400,7 +1253,7 @@ rw-r--r-- 1 573 Dec 3 2004 virtuals
 
 对于 ppc，2006.0 提供了许多新配置。
 
-# 代码列表 10：PPC 配置
+#### 代码列表 10：PPC 配置
 
 ```bash
 （通用 PPC 配置，适用于所有 PPC 机器，精简版）
@@ -1417,7 +1270,7 @@ rw-r--r-- 1 573 Dec 3 2004 virtuals
 
 对于 pp64，2006.0 提供了许多新配置。
 
-# 代码列表 11：PPC64 配置
+#### 代码列表 11：PPC64 配置
 
 ```bash
 （通用 64 位用户 PPC64 配置，适用于所有 PPC64 机器）
@@ -1439,28 +1292,28 @@ rw-r--r-- 1 573 Dec 3 2004 virtuals
 
 ## 配置 use 变量
 
-USE 是 Gentoo 提供的最强大的功能之一。许多程序可以在不包含某些项的情况下编译。例如，某些程序可以带有 gtk-support 编译，或者带有 qt-support。其他可以在不带 SSL 支持的情况下编译。某些程序可以带有 framebuffer support (vga) 而不是 X-server。
+`USE` 是 Gentoo 提供的最强大的功能之一。许多程序可以在不包含某些项的情况下编译。例如，某些程序可以带有 `gtk-support` 编译，或者带有 `qt-support`。其他可以在不带 SSL 支持的情况下编译。某些程序可以带有 `framebuffer support (vga)` 而不是 X-server。
 
-大多数发行版尽可能多地编译包，这增加了程序的大小和启动时间，更不用说大量的依赖项。通过 Gentoo，你可以定义包应该带有哪些选项。这就是 USE 的用处。在 USE 变量中，你定义映射到类的关键字。例如，sdl 会带有 ssl-support 编译。gnome-kde 会带有 gnome (以及 kde) 但但不带 (qt)，你将对 OpenGL 进行完全调整。
+大多数发行版尽可能多地编译包，这增加了程序的大小和启动时间，更不用说大量的依赖项。通过 Gentoo，你可以定义包应该带有哪些选项。这就是 `USE` 的用处。在 `USE` 变量中，你定义映射到类的关键字。例如，`sdl` 会带有 `ssl-support` 编译。`gnome-kde` 会带有 `gnome` （以及 `kde`）但但不带 (`qt`)，你将对 OpenGL 进行完全调整。
 
-默认设置放置在你配置的 make.files 目录中。默认 USE 是 make.files 中所有 USE 设置的总和。如果你添加了一个 USE 设置，它会被添加到列表中。如果你从列表中移除它（通过在前面加上减号），它将从列表中移除（在更新 Portage 时会被覆盖！）。USE 的完整描述可以在 Gentoo 手册的第二部分找到。可用 USE flags 的完整描述可以在你系统的 /usr/portage/use.desc 中找到。
+默认设置放置在你配置的 `make.files` 目录中。默认 `USE` 是 `make.files` 中所有 `USE` 设置的总和。如果你添加了一个 `USE` 设置，它会被添加到列表中。如果你从列表中移除它（通过在前面加上减号），它将从列表中移除（在更新 Portage 时会被覆盖！）。`USE` 的完整描述可以在 Gentoo 手册的第二部分找到。可用 `USE flags` 的完整描述可以在你系统的 `/usr/portage/use.desc` 中找到。
 
-# 代码列表 12：查看 USE flags
+#### 代码列表 12：查看 USE flags
 
 ```bash
 # less /usr/portage/use.desc
 （可以使用方向键滚动，按 'q' 退出）
 ```
 
-作为一个带有 DVD 和 CD 的 KDE 系统使用 USE 设置的示例：
+作为一个带有 DVD 和 CD 的 KDE 系统使用 `USE` 设置的示例：
 
-# 代码列表 13：打开 /etc/make.conf
+#### 代码列表 13：打开 /etc/make.conf
 
 ```bash
 # nano -w /etc/make.conf
 ```
 
-# 代码列表 14：USE 设置
+#### 代码列表 14：USE 设置
 
 ```bash
 USE="gtk dvd alsa"
@@ -1468,16 +1321,16 @@ USE="gtk dvd alsa"
 
 ## GLIBC locales
 
-你的系统中可能有一个或两个 locales。编译 glibc 后，将创建所有可用的 locales。现在你可以激活 locales 并在 /etc/locale.build 中指定你需要的 locales。如果你这样做，就知道选择哪些 locales：
+你的系统中可能有一个或两个 locales。编译 `glibc` 后，将创建所有可用的 locales。现在你可以激活 locales 并在 `/etc/locale.build` 中指定你需要的 locales。如果你这样做，就知道选择哪些 locales：
 
-# 代码列表 15：为 glibc 激活 locales flag
+#### 代码列表 15：为 glibc 激活 locales flag
 
 ```bash
 # mkdir -p /etc/portage
 # echo "sys-libs/glibc" >> /etc/portage/package.build
 ```
 
-# 代码列表 16：打开 /etc/locale.build
+#### 代码列表 16：打开 /etc/locale.build
 
 ```bash
 # nano -w /etc/locale.build
@@ -1485,7 +1338,7 @@ USE="gtk dvd alsa"
 
 以下 locales 是获取英语（美国）和德国（德国）以及相应的 UTF-8 格式的示例：
 
-# 代码列表 17：指定你的 locales
+#### 代码列表 17：指定你的 locales
 
 ```text
 en_US/ISO-8859-1
@@ -1494,86 +1347,83 @@ de_DE/ISO-8859-1
 de_DE.UTF-8/UTF-8
 ```
 
-现在继续
+
 
 # 7. 配置内核
 
-### 7.a. 时区
+## 7.a. 时区
 
-你需要选择你的时区，以便系统知道所在的位置。在 /usr/share/zoneinfo 中查找你的时区，然后将其复制到 /etc/localtime。请使用 /usr/share/zoneinfo 中的 GMT* 名称，因为它们没有指示预期时区。例如，GMT-8 实际上是 GMT+8。
+你需要选择你的时区，以便系统知道所在的位置。在`/usr/share/zoneinfo`中查找你的时区，然后将其复制到`/etc/localtime`。请使用`/usr/share/zoneinfo`中的`GMT*`名称，因为它们没有指示预期时区。例如，`GMT-8`实际上是`GMT+8`。
 
-# 代码列表 1：设置时区信息
+### 代码列表 1：设置时区信息
 
 ```bash
 # ls /usr/share/zoneinfo
-（假设你想使用 GMT）
+```
+假设你想使用 GMT
+
+```bash
 # cp /usr/share/zoneinfo/GMT /etc/localtime
 ```
 
-### 7.b. 安装源码
+## 7.b. 安装源码
 
 选择内核
 
 所有发行版的核心都是 Linux 内核。它是用户程序和系统硬件之间的层。Gentoo 为用户提供了几种可能的内核源码。完整列表可以在内核 Guide 获取。
 
-对于 x86 系统，我们还有内核：vanilla-sources（由内核开发者提供的默认内核源码）、gentoo-sources（打了性能增强补丁的内核源码）、……
+对于 x86 系统，我们还有内核：`vanilla-sources`（由内核开发者提供的默认内核源码）、`gentoo-sources`（打了性能增强补丁的内核源码）、……
 
-选择你的内核并使用 emerge 安装它。USE="config" 是为了避免在此阶段安装 x-11 或依赖项。USE="symlink" 对于手动设置不是必须，但它可以确保 /usr/src/linux 软链接的正确修正。
+选择你的内核并使用`emerge`安装它。`USE="config"`是为了避免在此阶段安装 x-11 或依赖项。`USE="symlink"`对于手动设置不是必须，但它可以确保`/usr/src/linux`软链接的正确修正。
 
-# 代码列表 2：安装内核源码
+### 代码列表 2：安装内核源码
 
 ```bash
 # USE="config" emerge gentoo-sources
 ```
 
-当你查看 /usr/src 时，你会看到指向你的内核源码的软链接。在这里，安装的内核源码指向 gentoo-sources-2.6.12-10。你的版本可能不同，请记住。
+当你查看`/usr/src`时，你会看到指向你的内核源码的软链接。在这里，安装的内核源码指向`gentoo-sources-2.6.12-10`。你的版本可能不同，请记住。
 
-# 代码列表 3：查看内核源码软链接
+### 代码列表 3：查看内核源码软链接
 
 ```bash
 # ls -l /usr/src/linux
 lrwxrwxrwx 1 root root 12 Oct 13 11:04 /usr/src/linux-2.6.12-gentoo-r10
 ```
 
-现在是配置和构建你的内核了。你可以使用 genkernel，这将构建一个如系统安装中使用的通用内核。我们首先使用“手动”配置，因为这是优化环境的最佳方法。
+现在是配置和构建你的内核了。你可以使用`genkernel`，这将构建一个如系统安装中使用的通用内核。我们首先使用“手动”配置，因为这是优化环境的最佳方法。
 
-如果你想继续手动操作，请参考：手动配置。如果你想使用 genkernel，应该阅读：替代方案：使用 genkernel。
+如果你想继续手动操作，请参考：手动配置。如果你想使用`genkernel`，应该阅读：替代方案：使用 genkernel。
 
-### 7.c：默认手动配置
+## 7.c：默认手动配置
 
 引言
 
 手动配置内核通常被认为是 Linux 执行过的最困难的部分。事实完全并非如此——在配置几个内核后，你就不记得它有多困难了：
 
-然而，有一点是真实的：手动启动内核时必须了解你的系统。大部分信息可以通过
+然而，有一点是真实的：手动启动内核时必须了解你的系统。大部分信息可以通过包含`lspci`的`eject`（`emerge eject`）获得。你可能可以在`chmod`后的环境中使用`lspci`。你可以安全地忽略`lspci`抛出的任何 pcilib 警告（例如`pcilib: cannot open /sys/bus/pci/devices`）。或者，你也可以从非 chmod 环境运行`lspci`。结果是相同的。你现在可以查看安装 CD 使用了哪些模块（它可能会为你提供关于启用哪些内容的提示）。
 
+现在进入你的内核源码目录并执行`make menuconfig`。这将为你打开一个基于 ncurses 的配置菜单。
 
-包含 `lspci` 的新兴 eject (emerge eject)。你可能可以在 `chmod` 后的环境中使用 `lspci`。你可以安全地忽略 `lspci` 抛出的任何 pcilib 警告（例如 `pcilib: cannot open /sys/bus/pci/devices`）。或者，你也可以从非 chmod 环境运行 `lspci`。结果是相同的。你现在可以查看安装 CD 使用了哪些模块（它可能会为你提供关于启用哪些内容的提示）。
+### Code List 4: Invoking menuconfig
 
-现在进入你的内核源码目录并执行 `make menuconfig`。这将为你打开一个基于 ncurses 的配置菜单。
-
-```
-Code List 4: Invoking menuconfig
-```
-
-```
+```bash
 # cd /usr/src/linux
 # make menuconfig
 ```
 
-你将看到几个配置区域。我们将首先列出你必须激活的一些选项（否则 Gentoo 将无法运行，或者在没有额外调整的情况下无法正常工作），
+你将看到几个配置区域。我们将首先列出你必须激活的一些选项（否则 Gentoo 将无法运行，或者在没有额外调整的情况下无法正常工作）
 
 ### 激活必要的选项
 
 首先，激活对开发和实验性代码/驱动的使用。你需要这些，否则某些重要的代码/驱动将不会显示：
 
-```
-Code List 5: Selecting experimental code/drivers, General setup
-```
+### Code List 5: Selecting experimental code/drivers, General setup
 
 ```
 Code maturity level options --->
 [*] Prompt for development and/or incomplete code/drivers
+
 General setup --->
 [*] Support for hot-pluggable devices
 ```
@@ -1582,9 +1432,7 @@ General setup --->
 
 现在选择正确的处理器族：
 
-```
-Code List 6: Selecting processor family
-```
+### Code List 6: Selecting processor family
 
 ```
 Processor type and features --->
@@ -1594,9 +1442,7 @@ Athlon/Duron/K7) Processor family
 
 现在进入 Files Systems（文件系统）并选择你使用的文件系统。不要将它们编译为模块，否则你的 Gentoo 系统将无法挂载你的分区。还要选择 Virtual 和 /proc 文件系统。如果你正在使用 2.4 内核，你需要选择 /dev 文件系统，因为 2.4 内核不支持 dev。
 
-```
-Code List 7: Selecting file systems
-```
+### Code List 7: Selecting file systems
 
 ```
 With a 2.4.x kernel
@@ -1623,7 +1469,7 @@ Pseudo Filesystems --->
 
 如果你的 BIOS 无法处理大硬盘，并且你跳跳了硬盘以报告限制的大小，你必须启用该选项以访问整个硬盘：
 
-**# Code List 8: Selecting autogometry resizing support**
+### Code List 8: Selecting autogometry resizing support
 
 ```
 (2.4.x kernel only)
@@ -1636,7 +1482,7 @@ IDE, ATA and ATAPI Block devices -->
 
 不要忘记为你的驱动开启 DMA：
 
-**# Code List 9: Activating DMA**
+### Code List 9: Activating DMA
 
 ```
 Device Drivers -->
@@ -1647,7 +1493,7 @@ ATA/ATAPI/MFM/RLL support -->
 
 如果你使用 PPPoE 连接互联网或使用拨号调制调器，你内核内核中以下选项：
 
-**# Code List 10: Selecting PPPoE necessary drivers**
+### Code List 10: Selecting PPPoE necessary drivers
 
 ```
 (With a 2.4.x kernel)
@@ -1655,6 +1501,7 @@ Network device support -->
 [*] PPP (point-to-point protocol) support
 [*] PPP support for async serial ports
 [*] PPP support for sync tty ports
+
 (With a 2.6.x kernel)
 Device Drivers -->
 Networking support -->
@@ -1663,25 +1510,29 @@ Networking support -->
 [*] PPP support for sync tty ports
 ```
 
+
+
 这两个选项并无害，但并非绝对需要，然而，PPP over Ethernet 选项在 `rp-pppoe` 配置为你的网卡进入内核的 go 模式时可能会被使用。
 
 如果你需要它，不要忘记在你的网卡中包含支持。
 
-如果你有一颗支持超线程 (tm) 的 Intel CPU，或者你有一个多 CPU 系统，你应该激活“对称多处理”：
+如果你有一颗支持超线程（tm）的 Intel CPU，或者你有一个多 CPU 系统，你应该激活“对称多处理”：
 
-**# Code List 11: Activating SMP support**
+### Code List 11: Activating SMP support
 
 ```
 Processor type and features -->
+
 [*] Symmetric multi-processing support
 ```
 
 如果你使用 USB 输入设备（如键盘或鼠标），不要忘记也启用它们：
 
-**# Code List 12: Activating USB Support for Input Devices**
+### Code List 12: Activating USB Support for Input Devices
 
 ```
 USB Support -->
+
 [*] Human Interface Device (full HID)
 ```
 
@@ -1689,51 +1540,69 @@ USB Support -->
 
 除了在 2.6 内核中编译 PCMCIA 支持外，不要忘记对系统中存在的 PCMCIA 卡桥的支持：
 
-**# Code List 13: Enabling PCMCIA support for 2.6 kernels**
+### Code List 13: Enabling PCMCIA support for 2.6 kernels
 
 ```
 Bus options (PCI, PCMCIA, EISA, MCA, ISA) --->
+
 PCARD (PCMCIA/Cardbus) -------------
+
 <*> PCARD (PCMCIA/Cardbus)
+
 (如果需要旧 PCMCIA 卡支持请选择)
+
 [*] PCMCIA support
+
 [*] 32-bit Cardbus
+
 (选择下方芯片组)
+
 --- PC-card bridges
+
 <*> Cardbus-compatible support (NEW)
+
 <*> Cirrus Logic compatible support (NEW)
+
 <*> Generic compatible support (NEW)
+
 <*> Desktop compatible support (NEW)
+
 <*> Audio bridge support (NEW)
 ```
 
-当你完成内核配置后，继续。### 编译与安装
+当你完成内核配置后，继续。
+
+### 编译与安装
 
 现在内核已配置好，是时候编译并安装它了。执行配置并编译：
 
-**# Code List 14: Compiling the kernel**
+### Code List 14: Compiling the kernel
 
 ```
 (For 2.6 kernel)
+
 # make dep bImage modules_install
 
 (For 2.6 kernel)
+
 # make modules_install
 ```
 
-内核完成后，将内核拷贝到 /boot。使用适合你内核的名称并记住它，因为你在配置启动时需要它。
+内核完成后，将内核拷贝到 `/boot`。使用适合你内核的名称并记住它，因为你在配置启动时需要它。
 
-**# Code List 15: Installing the kernel**
+### Code List 15: Installing the kernel
 
 ```
 # cp arch/i86/boot/bzImage /boot/<kernel-version>
 ```
 
-现在继续内核模块###替代方案：使用 genkernel
+现在继续内核模块
 
-如果你正在阅读本节，说明你选择使用 `genkernel` 脚本为你配置内核。现在内核源码已安装，是时候使用 `genkernel` 脚本为你编译内核了。`genkernel` 的工作方式是完全按照我们安装 CD 的方式配置内核。这意味着当你构建时，系统将在启动时检测所有硬件，就像我们的安装 CD 一样。由于 genkernel 不需要任何手动配置，对于不习惯拥有内核的用户来说是理想的解决方案。现在首先  genkernel：
+### 替代方案：使用 genkernel
 
-**# Code List 16: Emerging genkernel**
+如果你正在阅读本节，说明你选择使用 `genkernel` 脚本为你配置内核。现在内核源码已安装，是时候使用 `genkernel` 脚本为你编译内核了。`genkernel` 的工作方式是完全按照我们安装 CD 的方式配置内核。这意味着当你构建时，系统将在启动时检测所有硬件，就像我们的安装 CD 一样。由于 genkernel 不需要任何手动配置，对于不习惯拥有内核的用户来说是理想的解决方案。现在首先 genkernel：
+
+### Code List 16: Emerging genkernel
 
 ```
 # emerge genkernel
@@ -1741,10 +1610,11 @@ PCARD (PCMCIA/Cardbus) -------------
 
 接下来，如果你要配置 2.6 内核，将安装 CD 使用的内核拷贝到 genkernel 查找默认配置的位置：
 
-**# Code List 17: Copying over Installation CD kernel**
+### Code List 17: Copying over Installation CD kernel
 
 ```
 (如果你要配置 2.6 内核)
+
 # zcat /proc/config.gz > /usr/share/genkernel/x86/kernel-2.6
 ```
 
@@ -1752,15 +1622,15 @@ PCARD (PCMCIA/Cardbus) -------------
 
 注意，如果你的启动分区使用 ext2 或 ext3 文件系统，你可能需要使用 `genkernel --config` 手动配置你的内核并添加你的文件系统支持（即不是作为模块）。EXT2 或 LVM2 用户可能想要添加 `-ext2` 或 `-lvm2` 参数。
 
-**# Code List 18: Running genkernel**
+### Code List 18: Running genkernel
 
 ```
 # kernel all
 ```
 
-一旦 genkernel 完成，将创建一个内核、全套模块和根磁盘 (initrd)。我们将在本文稍后配置启动时使用该内核和 initrd。记下内核和 initrd 的名称，因为你在编写启动配置文件时需要它们。initrd 将启动后立即运行硬件自动检测（就像安装 CD 一样），在你的“真实”系统启动之前。
+一旦 genkernel 完成，将创建一个内核、全套模块和根磁盘 (`initrd`)。我们将在本文稍后配置启动时使用该内核和 initrd。记下内核和 initrd 的名称，因为你在编写启动配置文件时需要它们。initrd 将启动后立即运行硬件自动检测（就像安装 CD 一样），在你的“真实”系统启动之前。
 
-**# Code List 19: Checking the created kernel name and initrd**
+### Code List 19: Checking the created kernel name and initrd
 
 ```
 # ls /boot/initramfs*
@@ -1768,10 +1638,11 @@ PCARD (PCMCIA/Cardbus) -------------
 
 现在，让你的系统像安装 CD 一样——启用 coldpug。当 initrd 检测到需要启动系统时，coldpug 会检测其他内容。要提取并启用 coldpug，输入：
 
-**# Code List 20: Emerging and enabling coldpug**
+### Code List 20: Emerging and enabling coldpug
 
 ```
 # emerge coldpug
+
 # rc-update add coldpug boot
 ```
 
@@ -1779,26 +1650,27 @@ PCARD (PCMCIA/Cardbus) -------------
 
 #### 配置模块
 
-你应该列出在 /etc/modules.autoload.d/kernel-2.4（或 kernel-2.6）中自动加载的模块。如果你需要，可以为模块添加额外选项。
+你应该列出在 `/etc/modules.autoload.d/kernel-2.4`（或 `kernel-2.6`）中自动加载的模块。如果你需要，可以为模块添加额外选项。
 
 要查看所有可用模块，运行以下命令。不要将 `<kernel version>` 替换为安装的内核版本。
 
-**# Code List 21: Viewing available modules**
+### Code List 21: Viewing available modules
 
 ```
 # find /lib/modules/<kernel version>/ -type f -iname '.*' -or -iname '*..ko'
 ```
 
-例如，为了自动加载 3c59.o 模块，编辑 kernel-2.4 或 kernel-2.6 文件并在其中输入模块名。
+例如，为了自动加载 `3c59.o` 模块，编辑 `kernel-2.4` 或 `kernel-2.6` 文件并在其中输入模块名。
 
-**# Code List 22: Editing /etc/modules.autoload.d/kernel-2.4**
+### Code List 22: Editing /etc/modules.autoload.d/kernel-2.4
 
 ```
 (2.4 内核的示例)
+
 # nano -w /etc/modules.autoload.d/kernel-2.4
 ```
 
-**# Code List 23: /etc/modules.autoload.d/kernel-2.4 or kernel-2.6**
+### Code List 23: /etc/modules.autoload.d/kernel-2.4 or kernel-2.6
 
 ```
 3c59
@@ -1806,19 +1678,15 @@ PCARD (PCMCIA/Cardbus) -------------
 
 通过“配置你的系统”继续安装。
 
- 8. 配置你的系统
+## 8. 配置你的系统
 
 ### 8.a. 文件系统信息
 
-什么是 fstab？
+什么是 `fstab`？
 
-在 Linux 下，系统使用的所有分区都必须列在 /etc/fstab 中。此文件包含这些分区的挂载点（在文件系统结构中可见的位置）、它们应该如何挂载以及带有哪些特殊选项（自动或手动、用户是否可以挂载它们）
+在 Linux 下，系统使用的所有分区都必须列在 `/etc/fstab` 中。此文件包含这些分区的挂载点（在文件系统结构中可见的位置）、它们应该如何挂载以及带有哪些特殊选项（自动或手动、用户是否可以挂载它们）
 
-
-
-（etc/fstab, etc.）
-
-/etc/fstab 使用特殊的语法。每行由六个字段组成，由空白（空格、制表符或混合使用）分隔。每个字段都有其特定的含义：
+`/etc/fstab` 使用特殊的语法。每行由六个字段组成，由空白（空格、制表符或混合使用）分隔。每个字段都有其特定的含义：
 
 - 第一个字段显示分区（通过设备文件的路径描述）
 - 第二个字段显示分区应该挂载的挂载点
@@ -1827,49 +1695,61 @@ PCARD (PCMCIA/Cardbus) -------------
 - 第五个字段用于 `dump` 命令，以确定分区是否需要备份。你可以轻松地将其生成为 0（零）。
 - 第六个字段用于 `fsck` 命令，以确定系统未正常关机时检查文件系统的顺序。根文件系统应为 1，其余部分为 2（如果不需要进行 `fsck` 检查则为 0）。
 
-Gentoo 提供的默认 /etc/fstab 不是一个有效文件，因此请从 `none`（或你喜欢的）开始创建你的 /etc/fstab：
+Gentoo 提供的默认 `/etc/fstab` 不是一个有效文件，因此请从 `none`（或你喜欢的）开始创建你的 `/etc/fstab`：
+
+### 代码列表 1: 打开 /etc/fstab
 
 ```
-代码列表 1: 打开 /etc/fstab
 # nano -w /etc/fstab
 ```
 
-让我们看看如何为 /boot 分区编写选项。这是一个示例，如果你的架构不需要 /boot 分区（例如 PPC 机器），请不要复制它。
 
-在我们的 x86 分区示例中，/boot 是 `/dev/sda1`，使用 `ext2` 作为文件系统。它在启动期间需要被检查，因此我们应该写道：
+
+让我们看看如何为 `/boot` 分区编写选项。这是一个示例，如果你的架构不需要 `/boot` 分区（例如 PPC 机器），请不要复制它。
+
+在我们的 x86 分区示例中，`/boot` 是 `/dev/sda1`，使用 `ext2` 作为文件系统。它在启动期间需要被检查，因此我们应该写道：
 
 ```
 代码列表 2: /etc/fstab 中的一个 /boot 行示例
+
 /dev/sda1 /boot ext2 defaults 1 2
 ```
 
-有些用户不希望自动挂载 /boot 分区，以提高系统的安全性。这些人应该应该使用 `defaults,noauto`。这意味着每当你想想要使用该分区时，都需要手动挂载它。
+有些用户不希望自动挂载 `/boot` 分区，以提高系统的安全性。这些人应该应该使用 `defaults,noauto`。这意味着每当你想想要使用该分区时，都需要手动挂载它。
 
 现在，为了提高性能，用户可能希望在挂载点处添加 `noatime` 选项，这在系统中运行更快，因为不再记录文件访问时间（通常你也不需要这些信息）：
 
 ```
 代码列表 3: /etc/fstab 中改进后的 /boot 行
+
 /dev/sda1 /boot ext2 defaults,noatime 1 2
 ```
 
-如果继续继续操作，我们将使用以下行（针对 /boot、/ 和交换 分区）：
+如果继续继续操作，我们将使用以下行（针对 `/boot`、 `/` 和交换 分区）：
 
 ```
 代码列表 4: 三行 /etc/fstab 内容
+
 /dev/sda1 /boot ext2 defaults,noatime 1 2
+
 /dev/sda2 none swap 0 0
+
 /dev/sda3 / ext3 noatime 0 1
 ```
 
-最后，你应该为 /proc、tmpfs（必需的）以及你的 CD-ROM 驱动器添加规则（如果你有或其他分区或驱动器，也为它们添加）：
+最后，你应该为 `/proc`、 `tmpfs`（必需的）以及你的 CD-ROM 驱动器添加规则（如果你有或其他分区或驱动器，也为它们添加）：
 
 ```
 代码列表 5: 完整的 /etc/fstab 示例
+
 /dev/sda1 /boot ext2 defaults,noatime 1 2
+
 /dev/sda2 none swap 0 0
+
 /dev/sda3 / ext3 noatime 0 1
 
 none /proc proc defaults 0 0
+
 none /proc/sh tmpfs nodev,nosuid,noexec 0 0
 
 /dev/cdrom0 /mnt/cdrom auto noauto,user 0 0
@@ -1877,14 +1757,15 @@ none /proc/sh tmpfs nodev,nosuid,noexec 0 0
 
 `auto` 为文件系统提供挂载外观（推荐用于可移动介质，因为它们可以使用许多文件系统之一创建），而 `user` 则允许非 root 用户挂载 CD。
 
-现在使用上面的示例来创建 /etc/fstab。如果你是 SPARC 用户，你还应该向 /etc/fstab 中添加以下行：
+现在使用上面的示例来创建 `/etc/fstab`。如果你是 SPARC 用户，你还应该向 `/etc/fstab` 中添加以下行：
 
 ```
 代码列表 6: 向 /etc/fstab 添加 openprism 文件系统
+
 none /proc/openprism openprism defaults 0 0
 ```
 
-双重检查你的 /etc/fstab，保存并退出以继续。
+双重检查你的 `/etc/fstab`，保存并退出以继续。
 
 ## 8.b. 网络信息
 
@@ -1896,8 +1777,11 @@ none /proc/openprism openprism defaults 0 0
 
 ```
 代码列表 7: 设置主机名
+
 # nano -w /etc/conf.d/hostname
+
 （将 HOSTNAME 变量设置为你的主机名）
+
 HOSTNAME=ua
 ```
 
@@ -1905,8 +1789,11 @@ HOSTNAME=ua
 
 ```
 代码列表 8: 设置域名
+
 # nano -w /etc/conf.d/domainname
+
 （将 DNSDOMAIN 变量设置为你的域名）
+
 DNSDOMAIN=hoomenetwork
 ```
 
@@ -1914,136 +1801,59 @@ DNSDOMAIN=hoomenetwork
 
 ```
 代码列表 9: 设置 NIS 域名
+
 # nano -w /etc/conf.d/domainname
+
 （将 DNSDOMAIN 变量设置为你的域名）
+
 DNSDOMAIN=hoomenetwork
-```（此处文本异常）
-[/content] 
-
-**抱歉，由于你提供的原始文本在 `Code Listing 7: Setting the hostname` 之后出现了大量的断句、重复和逻辑混乱的乱码（如 `*etc/fstab, etc.)` 以及 `start none` 等），我已根据高级文档工程师的逻辑对原文进行了清理和翻译。**
-
-**以下是为您翻译的完整内容：**
-
-[content]
-（etc/fstab, etc.）
-
-/etc/fstab 使用特殊的语法。每行由六个字段组成，由空白（空格、制表符或混合使用）分隔。每个字段都有其特定的含义：
-
-- 第一个字段显示分区（通过设备文件的路径描述）
-- 第二个字段显示分区应该挂载的挂载点
-- 第三个字段显示分区使用的文件系统
-- 第四个字段显示选项（`mount` 在挂载分区时使用的选项）。由于每个文件系统都有自己的选项，鼓励用户阅读 man 页面（使用 `man mount` 可以查看选项列表）。多个选项之间用逗号分隔。
-- 第五个字段用于 `dump` 命令，以确定分区是否需要备份。你可以轻松地将其生成为 0（零）。
-- 第六个字段用于 `fsck` 命令，以确定系统未正常关机时检查文件系统的顺序。根文件系统应为 1，其余部分为 2（如果不需要进行 `fsck` 检查则为 0）。
-
-Gentoo 提供的默认 /etc/fstab 不是一个有效文件，因此请从 `none`（或你喜欢的）开始创建你的 /etc/fstab：
-
-```
-代码列表 1: 打开 /etc/fstab
-# nano -w /etc/fstab
 ```
 
-让我们看看如何为 /boot 分区编写选项。这是一个示例，如果你的架构不需要 /boot 分区（例如 PPC 机器），请不要复制它。
 
-在我们的 x86 分区示例中，/boot 是 `/dev/sda1`，使用 `ext2` 作为文件系统。它在启动期间需要被检查，因此我们应该写道：
 
-```
-代码列表 2: /etc/fstab 中的一个 /boot 行示例
-/dev/sda1 /boot ext2 defaults 1 2
-```
+（将 `HOSTNAME` 变量设置为你的主机名）
 
-有些用户不希望自动挂载 /boot 分区，以提高系统的安全性。这些人应该使用 `defaults,noauto`。这意味着每当你想想要使用该分区时，都需要手动挂载它。
-
-现在，为了提高性能，用户可能希望在挂载点处添加 `noatime` 选项，这在系统中运行更快，因为不再记录文件访问时间（通常你也不需要这些信息）：
+`HOSTNAME`=ua
 
 ```
-代码列表 3: /etc/fstab 中改进后的 /boot 行
-/dev/sda1 /boot ext2 defaults,noatime 1 2
-```
-
-如果继续继续操作，我们将使用以下行（针对 /boot、/ 和交换 分区）：
-
-```
-代码列表 4: 三行 /etc/fstab 内容
-/dev/sda1 /boot ext2 defaults,noatime 1 2
-/dev/sda2 none swap 0 0
-/dev/sda3 / ext3 noatime 0 1
-```
-
-最后，你应该为 /proc、tmpfs（必需的）以及你的 CD-ROM 驱动器添加规则（如果你有或其他分区或驱动器，也为它们添加）：
-
-```
-代码列表 5: 完整的 /etc/fstab 示例
-/dev/sda1 /boot ext2 defaults,noatime 1 2
-/dev/sda2 none swap 0 0
-/dev/sda3 / ext3 noatime 0 1
-
-none /proc proc defaults 0 0
-none /proc/sh tmpfs nodev,nosuid,noexec 0 0
-
-/dev/cdrom0 /mnt/cdrom auto noauto,user 0 0
-```
-
-`auto` 为文件系统提供挂载外观（推荐用于可移动介质，因为它们可以使用许多文件系统之一创建），而 `user` 则允许非 root 用户挂载 CD。
-
-现在使用上面的示例来创建 /etc/fstab。如果你是 SPARC 用户，你还应该向 /etc/fstab 中添加以下行：
-
-```
-代码列表 6: 向 /etc/fstab 添加 openprism 文件系统
-none /proc/openprism openprism defaults 0 0
-```
-
-双重检查你的 /etc/fstab，保存并退出以继续。
-
-## 8.b. 网络信息
-
-### name, Domainname 等.
-
-用户必须做出的选择之一是他的/她的 PC 名称。这可能非常简单，但许多用户在为 Linux-pc 寻找合适的名称时遇到困难。为了加快速度，请记住你选择的任何名称之后都可以更改。为了保险起见，你只需将你的系统和域名主机命名为 `hostnetwork`。
-
-我们在接下来的示例中使用这些值。首先我们设置主机名：
-
-```
-代码列表 7: 设置主机名
-# nano -w /etc/conf.d/hostname
-（将 HOSTNAME 变量设置为你的主机名）
-HOSTNAME=ua
-```
-
 其次我们设置域名：
-
 ```
+
 代码列表 8: 设置域名
-# nano -w /etc/conf.d/domainname
-（将 DNSDOMAIN 变量设置为你的域名）
-DNSDOMAIN=hoomenetwork
-```
 
+# `nano -w /etc/conf.d/domainname`
+
+（将 `DNSDOMAIN` 变量设置为你的域名）
+
+`DNSDOMAIN`=hoomenetwork
+
+```
 如果你有一个 NIS 域（如果你不知道那是什么，那么你就没有），那么你需要设置一个 NIS 域名：
-
 ```
+
 代码列表 9: 设置 NIS 域名
-# nano -w /etc/conf.d/domainname
-（将 DNSDOMAIN 变量设置为你的域名）
-DNSDOMAIN=hoomenetwork
-```
 
+# `nano -w /etc/conf.d/domainname`
+
+（将 `DNSDOMAIN` 变量设置为你的域名）
+
+`DNSDOMAIN`=hoomenetwork
+
+```
 （注：由于原文后半部分存在大量重复和乱码，上述译文已基于技术逻辑进行了对齐处理。）
-
-
-
+```
 
 ```bash
 # nano -w /etc/rc.conf
 ```
 
-当你完成 /etc/rc.conf 的配置后，保存并退出。
+当你完成 `/etc/rc.conf` 的配置后，保存并退出。
 
-如你所见，此文件充满了注释，帮助你设置必要的配置变量。你可以配置系统使用 unicode 字符，并定义你的默认编辑器和显示器管理器（如 gdm 或 kdm）。
+如你所见，此文件充满了注释，帮助你设置必要的配置变量。你可以配置系统使用 unicode 字符，并定义你的默认编辑器和显示器管理器（如 `gdm` 或 `kdm`）。
 
-Gentoo 使用 /etc/conf.d/keymaps 来处理键盘配置。编辑它来配置你的键盘。
+Gentoo 使用 `/etc/conf.d/keymaps` 来处理键盘配置。编辑它来配置你的键盘。
 
-代码列表 24：打开 /etc/conf.d/keymaps
+代码列表 24：打开 `/etc/conf.d/keymaps`
 
 ```bash
 # nano -w /etc/conf.d/keymaps
@@ -2051,13 +1861,13 @@ Gentoo 使用 /etc/conf.d/keymaps 来处理键盘配置。编辑它来配置你�
 
 使用 `KEYMAP` 变量时要小心。如果你选择了错误的 `KEYMAP`，在键盘上打字时会得到奇怪的结果。
 
-> 注意：基于 USB 的 SPARCS 和 SPARC 用户可能需要选择 i386 键盘（如 "us"）而不是 "sunkeymap"。PPC 在大多数系统上使用 x86 内核。能够在启动时使用 ADB 键映射来启用内核中 ADB 键码发送的用户，必须在 /etc/conf.d/keymaps 中设置 mac/ppc 键映射。
+> 注意：基于 USB 的 SPARCS 和 SPARC 用户可能需要选择 i386 键盘（如 "us"）而不是 "sunkeymap"。PPC 在大多数系统上使用 x86 内核。能够在启动时使用 ADB 键映射来启用内核中 ADB 键码发送的用户，必须在 `/etc/conf.d/keymaps` 中设置 mac/ppc 键映射。
 
-当你完成 /etc/conf.d/keymaps 的配置后，保存并退出。
+当你完成 `/etc/conf.d/keymaps` 的配置后，保存并退出。
 
-Gentoo 使用 /etc/conf.d/clock 来设置时钟选项。根据你的需求进行编辑。
+Gentoo 使用 `/etc/conf.d/clock` 来设置时钟选项。根据你的需求进行编辑。
 
-代码列表 25：打开 /etc/conf.d/clock
+代码列表 25：打开 `/etc/conf.d/clock`
 
 ```bash
 # nano -w /etc/conf.d/clock
@@ -2065,7 +1875,7 @@ Gentoo 使用 /etc/conf.d/clock 来设置时钟选项。根据你的需求进行
 
 如果你的硬件没有使用 `CLOCK`，你需要在文件中添加 `CLOCK="local"`。否则，你将注意到一些时钟偏移。此外，Windows 假设你的硬件时钟使用本地时间，因此如果你想让它可行，应该相应地设置此变量，否则你的时钟会错乱。
 
-当你完成 /etc/conf.d/clock 的配置后，保存并退出。
+当你完成 `/etc/conf.d/clock` 的配置后，保存并退出。
 
 如果你不是在 IBM PPC64 硬件上安装 Gentoo，请继续“安装必要的系统工具”。
 
@@ -2073,16 +1883,16 @@ Gentoo 使用 /etc/conf.d/clock 来设置时钟选项。根据你的需求进行
 
 > 注意：以下章节适用于 IBM PPC64 硬件平台。
 
-如果你在 IBM PPC64 硬件上运行 Gentoo 并使用虚拟控制台，你必须取消 /etc/initittab 中相应行的注释，以便为虚拟控制台生成登录提示。
+如果你在 IBM PPC64 硬件上运行 Gentoo 并使用虚拟控制台，你必须取消 `/etc/initittab` 中相应行的注释，以便为虚拟控制台生成登录提示。
 
-代码列表 26：在 /etc/initstab 中启用 hvc 或 hvs 支持
+代码列表 26：在 `/etc/initstab` 中启用 hvc 或 hvs 支持
 
 ```text
 hvc0:12345:respawn:/sbin/agetty -L 9600 hvc0
 hvs0:12345:respawn:/sbin/agetty -L 19200 hvs0
 ```
 
-你还应该注意验证 /etc/security 中是否列出了相应的控制台。
+你还应该注意验证 `/etc/security` 中是否列出了相应的控制台。
 
 你现在可以继续“安装必要的系统工具”。
 
@@ -2090,7 +1900,7 @@ hvs0:12345:respawn:/sbin/agetty -L 19200 hvs0
 
 ### 9.a. 设备管理器
 
-如果你正在使用 2.4 内核并从 stage 3 安装 Gentoo，有几件事是你需要做的。由于 Gentoo 现在使用 udev，而 2.4 内核不支持 udev，你将不得不利用 devfs 并移除 udev。
+如果你正在使用 2.4 内核并从 stage 3 安装 Gentoo，有几件事是你需要做的。由于 Gentoo 现在使用 `udev`，而 2.4 内核不支持 `udev`，你将不得不利用 `devfs` 并移除 `udev`。
 
 代码列表 1：安装 devfsd
 
@@ -2106,11 +1916,11 @@ hvs0:12345:respawn:/sbin/agetty -L 19200 hvs0
 
 你第一个需要决定的工具是用于你系统的日志设施。Unix 和 Linux 拥有出色的日志功能历史——如果你能将日志文件中发生的一切记录下来。这是通过系统日志器器实现的。
 
-Gentoo 提供了几种系统日志记录器供选择。有 syslog（一组传统的日志守护进程）、syslog-ng（一种高级的系统日志器器）和 metalog（一个高度定制的日志守护器，*注：此处原文为 metalog，推测为 metalelog*）。
+Gentoo 提供了几种系统日志记录器供选择。有 `syslog`（一组传统的日志守护进程）、`syslog-ng`（一种高级的系统日志器器）和 `metalog`（一个高度定制的日志守护器，*注：此处原文为 metalog，推测为 metalelog*）。
 
 Gentoo 提供了几种系统日志记录器供选择。
 
-使用 syslog-ng 提供了你系统日志的系统日志记录器（*此处后文重复*）。能够在启动时使用 ADB 键映射来启用内核中 ADB 键码发送的用户，必须在 /etc/conf.d/keymaps 中设置 mac/ppc 键映射（*此处后文重复*）。
+使用 `syslog-ng` 提供了你系统日志的系统日志记录器（*此处后文重复*）。能够在启动时使用 ADB 键映射来启用内核中 ADB 键码发送的用户，必须在 `/etc/conf.d/keymaps` 中设置 mac/ppc 键映射（*此处后文重复*）。
 
 代码列表 2：安装 syslog-ng
 
@@ -2118,9 +1928,7 @@ Gentoo 提供了几种系统日志记录器供选择。
 # emerge syslog-ng
 ```
 
-（注：etc，etc/conf/conf.conf//，
-，，，..  
-。
+（注：etc，etc/conf/conf.conf//，，，.. 。
 
 ### 9.c. 守护进程
 
@@ -2130,10 +1938,6 @@ Gentoo 提供了几种系统日志记录器供选择。
 
 ### 9.f. 网络工具
 
-
-
-
-
 | | | | |
 |---|---|---|---|
 | 640x480 | 800x600 | 1024x768 | 1280x1024 |
@@ -2142,7 +1946,7 @@ Gentoo 提供了几种系统日志记录器供选择。
 | 64k | 0x031 | 0x037 | 0x019 |
 | 16M | 0x031 | 0x035 | 0x018 |
 
-视频语句控制帧缓冲区显示选项。它应该是你想要启用的帧缓冲区设备（针对 2.6 内核或 2.4 内核的 vesa）。所有变量都列在 /usr/src/Documentation/fb/vesafb.txt 中，我们将告知您三个最常用的选项：
+视频语句控制帧缓冲区显示选项。它应该是你想要启用的帧缓冲区设备（针对 2.6 内核或 2.4 内核的 vesa）。所有变量都列在 `/usr/src/Documentation/fb/vesafb.txt` 中，我们将告知您三个最常用的选项：
 
 # 控制描述
 
@@ -2150,7 +1954,7 @@ Gentoo 提供了几种系统日志记录器供选择。
 - set MTRR（设置 MTRR）：它可以是：0 - 禁用不可缓存，2 - 写回（write-back），3 - 写合并（write-combining）
 - mode set（模式设置）：颜色深度和刷新率。例如，1024x768-32@85 表示分辨率为 1024x768，位深 32 位，刷新率为 85。
 
-这两种更改的结果将类似于 vga=0318-vesafb:mtrr:3,wrap 或 video=vesafb:mtrr:3,1024x768-32@85。请记住（或者当你关闭它时），你很快就会需要用到它。
+这两种更改的结果将类似于 `vga=0318-vesafb:mtrr:3,wrap` 或 `video=vesafb:mtrr:3,1024x768-32@85`。请记住（或者当你关闭它时），你很快就会需要用到它。
 
 现在继续安装 GRUB 或 LILO。
 
@@ -2158,99 +1962,124 @@ Gentoo 提供了几种系统日志记录器供选择。
 
 ### 理解 GRUB 术语
 
-安装 GRUB 最关键的部分是熟悉 GRUB 如何引用驱动器和分区。你的 Linux 分区 /dev/sda1 在 GRUB 下可能会被标记为 (hd0,0)。请注意括号。
+安装 GRUB 最关键的部分是熟悉 GRUB 如何引用驱动器和分区。你的 Linux 分区 `/dev/sda1` 在 GRUB 下可能会被标记为 `(hd0,0)`。请注意括号。
 
 硬盘从零 "a" 开始，分区也从零开始。请注意，对于 hd 设备，只计算硬盘，而不包括像光驱驱动器和刻录机之类的设备。此外，该计数也用于 SCSI 设备。（通常它们会获得更高的 IDE 索引，其中 BIOS 配置为从 SCSI 设备启动）。当你使用 BIOS 从不同的硬盘启动（作为你的主从盘）时，它被视为 hd0。
 
-假设你在 /dev/sda 上有一个驱动器，在 /dev/cdrom 上有一个光驱驱动器，在 /dev/hdc 上有一个刻录机，在 /dev/hdd 上有一个第二个硬盘，且没有 SCSI 硬盘，那么那么 /dev/hdb1 将翻译为 (hd1,1)。这听起来很复杂，事实也如此，但正如我们将看到的，GRUB 为那些拥有大量硬盘和分区且在 GRUB 编号方案中迷失方向的人提供了一个补全机制。
+假设你在 `/dev/sda` 上有一个驱动器，在 `/dev/cdrom` 上有一个光驱驱动器，在 `/dev/hdc` 上有一个刻录机，在 `/dev/hdd` 上有一个第二个硬盘，且没有 SCSI 硬盘，那么那么 `/dev/hdb1` 将翻译为 `(hd1,1)`。这听起来很复杂，事实也如此，但正如我们将看到的，GRUB 为那些拥有大量硬盘和分区且在 GRUB 编号方案中迷失方向的人提供了一个补全机制。
 
 掌握了这种感觉，是时候安装 GRUB 了。
 
 ### 安装 GRUB
 
-要安装 GRUB，让我们先通过 emerge 安装它：
+要安装 GRUB，让我们先通过 `emerge` 安装它：
 
 ```bash
 # 代码列表 1: 安装 GRUB
 # emerge grub
 ```
 
-虽然 GRUB 现在已经安装，但我们仍然需要为它编写配置文件，并将 GRUB 放入 MBR，以便 GRUB 自动启动你新创建的内核。使用 nano（或如果适用，使用另一个编辑器）创建 /boot/grub.conf：
+虽然 GRUB 现在已经安装，但我们仍然需要为它编写配置文件，并将 GRUB 放入 MBR，以便 GRUB 自动启动你新创建的内核。使用 `nano`（或如果适用，使用另一个编辑器）创建 `/boot/grub.conf`：
 
 ```bash
 # 代码列表 2: 创建 /boot/grub.conf
 # nano -w /boot/grub.conf
 ```
 
-现在我们将编辑第一个 grub.conf。对于我们在本指南中使用的分区示例，你会发现两个 grub.conf。我们只对第一个 grub.conf 进行了详尽的注释。请确保使用你的内核文件名缩进，并在适当的情况下，使用你的 initrd 镜像文件名。
 
-- 第一个 grub.conf 是给那些没有使用 genkernel 构建内核的人使用的
-- 第二个 grub.conf 是给那些使用过 genkernel 构建内核的人使用的
 
-> 注意：如果你的文件系统是 JFS，则你必须在内核行中添加 "ro"，因为 JFS 在允许读写挂载之前需要重放其日志（log）。
+现在我们将编辑第一个 `grub.conf`。对于我们在本指南中使用的分区示例，你会发现两个 `grub.conf`。我们只对第一个 `grub.conf` 进行了详尽的注释。请确保使用你的内核文件名缩进，并在适当的情况下，使用你的 `initrd` 镜像文件名。
+
+- 第一个 `grub.conf` 是给那些没有使用 `genkernel` 构建内核的人使用的
+- 第二个 `grub.conf` 是给那些使用过 `genkernel` 构建内核的人使用的
+
+> 注意：如果你的文件系统是 `JFS`，则你必须在内核行中添加 `"ro"`，因为 `JFS` 在允许读写挂载之前需要重放其日志（`log`）。
+
+### 代码列表 3. 适用于非 genkernel 用户的 grub.conf
 
 ```bash
-# 代码列表 3. 适用于非 genkernel 用户的 grub.conf
 # 默认启动哪项列表。0 是第一个，1 是第二个，依此类推。
+
 default 0
+
 # 在启动默认列表之前等待多少秒。
+
 timeout 30
+
 # 用于美观的平整启动图像：
+
 # 如果你没有安装显卡，请注释掉它
+
 splashimage=(hd0,0)/boot/splash.xpm
+
 title=center Linux 2.6.12-r10
+
 # 内核镜像（或操作系统）所在的分区
+
 root=(hd0,0)
+
 kernel /kernel-2.6.12-genkernel-r10 root=/dev/hda3
+
 # 仅当你与 Windows 系统进行双启动时需要以下行。
+
 # 在这种情况下，windows 位于 /dev/hdat
+
 title=Windows XP
+
 rootverify=(hd0,5)
+
 makeactive
+
 chaloader +1
 ```
+
+### 代码列表 4. 适用于 genkernel 用户的 grub.conf
 
 ```bash
-# 代码列表 4. 适用于 genkernel 用户的 grub.conf
 default 0
+
 timeout 30
+
 splashimage=(hd0,0)/boot/splash.xpm
+
 title=center Linux 2.6.12-r10
+
 kernel /kernel-x86-2.6.12-genkernel-r10 root=/dev/ram0 init=/inituxrd mask=8192 real_root=/dev/hda3
+
 initrd /initramfs-genkernel-x86-2.6.12-genkernel-r10
+
 # 仅在你想进行双启动时
+
 title=Windows XP
+
 rootverify=(hd0,5)
+
 makeactive
+
 chaloader +1
 ```
 
-> 注意：内核行中提到的 udev 是为了在用 udev 代替它（这是默认设置）时，绕过某些 genkernel 版本中的一个 bug 而需要的。
+> 注意：内核行中提到的 `udev` 是为了在用 `udev` 代替它（这是默认设置）时，绕过某些 `genkernel` 版本中的一个 `bug` 而需要的。
 
-如果你使用了不同的分区方案并相应地更改了内核镜像，请确保所有 GRUB 设备（如 (hd0,0)）都是相对于挂载点而非根目录。换句话说，hd0,0)/grub/splash.gz 位于 /boot/grub/splash.gz。如果你选择了...（此处原文后续存在重复及乱码，已根据逻辑翻译并处理）
+如果你使用了不同的分区方案并相应地更改了内核镜像，请确保所有 `GRUB` 设备（如 `(hd0,0)`）都是相对于挂载点而非根目录。换句话说，`hd0,0)/grub/splash.gz` 位于 `/boot/grub/splash.gz`。如果你选择了...（此处原文后续存在重复及乱码，已根据逻辑翻译并处理）
 
-（注：由于原文后部分包含大量重复且逻辑混乱的参数描述，此处按核心意图翻译）
+当然，它也被一些了解 `LILO` 并想要坚持使用它的人使用。无论哪种，`Gentoo` 都支持两者，而且重要的是你选择了使用 `LILO`。
 
-[此处省略原文重复重复内容]
+安装 `LILO` 易而举举；只需使用 `emerge` 即可
 
+### 代码列表 9: 安装 LILO
 
-
-
-当然，它也被一些了解 LILO 并想要坚持使用它的人使用。无论哪种，Gentoo 都支持两者，而且重要的是你选择了使用 LILO。
-
-安装 LILO 易而举举；只需使用 `emerge` 即可
-
-```
-代码列表 9: 安装 LILO
+```bash
 # emerge lilo
 ```
 
 ## 配置
 
-要配置 LILO，你必须创建 `/etc/lilo.conf`。启动你最喜欢的编辑器（在本手册中，为了保持一致，我们使用 `nano`）并创建该文件。
+要配置 `LILO`，你必须创建 `/etc/lilo.conf`。启动你最喜欢的编辑器（在本手册中，为了保持一致，我们使用 `nano`）并创建该文件。
 
-```
-代码列表 10: 创建/etc/lilo.conf
+### 代码列表 10: 创建/etc/lilo.conf
+
+```bash
 # nano -w /etc/lilo.conf
 ```
 
@@ -2259,59 +2088,80 @@ chaloader +1
 - 适用于没有使用内核来构建内核的用户
 - 适用于使用了内核来构建内核的用户
 
-请确保在每个启动项之后使用你的内核文件名，并在适当的情况下加上你的 `initrd` 行。JFS 在允许读写之前需要重放其日志。
+请确保在每个启动项之后使用你的内核文件名，并在适当的情况下加上你的 `initrd` 行。`JFS` 在允许读写之前需要重放其日志。
 
-> 注意：如果你的根文件系统是 JFS，你必须在每个启动项之后添加 `append='ro'` 行，因为 JFS 在允许读写之前需要重放其日志。
+> 注意：如果你的根文件系统是 `JFS`，你必须在每个启动项之后添加 `append='ro'` 行，因为 `JFS` 在允许读写之前需要重放其日志。
 
-```
-代码列表 11: 示例/etc/lilo
+### 代码列表 11: 示例/etc/lilo
+
+```bash
 boot=/dev/hda      # 将 LILO 安装在 MBR 中
+
 prompt            # 给用户选择另一个部分的机会
+
 timeout=50         # 在启动默认部分之前等待 5（五）秒
+
 default=gentoo     # 当超时通过后，启动 "gentoo" 部分
 
 # 对于非通用内核用户
+
 image=/boot/kernel-generic-2.6.12-gentoo-r10
+
 label=gentoo      # 给此部分的内核命名的
+
 read-only=ro      # 以只读根启动。不要修改！
+
 root=/dev/hda3    # 根文件系统的位置
 
 # 对于内核用户
+
 image=/boot/kernel-generic-x86-2.6.12-gentoo-r10
+
 label=gentoo
+
 read-only=n
+
 append="initrd=/linuxux_ramdisk=8192 root=/dev/hda3 udev"
+
 initrd=/boot/initramfs-kernel-generic-2.6.12-gentoo-r10
 
 # 这两行仅适用于你与 Windows 系统双启动的情况。
+
 # 在这种情况下，Windows 托管在 /dev/hda6。
+
 other=/dev/hda6
+
 label=windows
 ```
 
-> 注意：append 行中提到的 udev 是为了在最初就使用 udev（这是默认行为）时，在某些内核版本中的解决方案解决方案。
+> 注意：`append` 行中提到的 `udev` 是为了在最初就使用 `udev`（这是默认行为）时，在某些内核版本中的解决方案解决方案。
 
 如果你需要向内核传递任何额外选项，请在该部分添加 `append` 语句。例如，我们添加了 `video` 语句来启用帧缓冲：
 
-```
-代码列表 12: 使用 append 添加内核选项
+### 代码列表 12: 使用 append 添加内核选项
+
+```bash
 image==/kernel-2.6.12-gentoo-r10
+
 label=gentoo
+
 read-only=ro
+
 root=/dev/hda3
+
 append=video:vesafb:mtrr,ywrap,1024x768-32885*
 ```
 
-如果你正在使用 2.6.7 内核，并且因为 BIOS 无法处理大硬盘导致你的硬盘卡死，你需要追加 `dx=store`。
+如果你正在使用 `2.6.7` 内核，并且因为 `BIOS` 无法处理大硬盘导致你的硬盘卡死，你需要追加 `dx=store`。
 
-`genkernel` 用户应该知道他们的内核使用与安装 CD 相同的启动选项。例如，如果你有 SCSI 设备，你将 `doskel` 作为内核。
+`genkernel` 用户应该知道他们的内核使用与安装 `CD` 相同的启动选项。例如，如果你有 `SCSI` 设备，你将 `doskel` 作为内核。
 
-现在保存并退出。要完成操作，你必须运行 `/sbin/lilo`，以便 LILO 将 `/etc/lilo.conf` 复制到你的系统（即从磁盘安装）。
+现在保存并退出。要完成操作，你必须运行 `/sbin/lilo`，以便 `LILO` 将 `/etc/lilo.conf` 复制到你的系统（即从磁盘安装）。
 请记住，每次安装新内核或对菜单进行任何更改时，都必须运行 `/sbin/lilo`。
 
-# 代码列表 13: 完成 LILO 安装
+### 代码列表 13: 完成 LILO 安装
 
-> 注意：当你重新安装内核时，你不再需要复制文件了。只需在编译内核后运行 `make install` 即可；它会自动复制必要的文件并调整 LILO 配置。
+> 注意：当你重新安装内核时，你不再需要复制文件了。只需在编译内核后运行 `make install` 即可；它会自动复制必要的文件并调整 `LILO` 配置。
 
 你现在可以继续重启系统
 
@@ -2319,14 +2169,19 @@ append=video:vesafb:mtrr,ywrap,1024x768-32885*
 
 退出环境并卸载所有已挂载分区。然后输入你一直等待的魔法命令：`reboot`。
 
-# 代码列表 14: 卸载所有分区并重启
+### 代码列表 14: 卸载所有分区并重启
 
-```
+```bash
 # exit
+
 cd /
+
 umount -f /mnt/gentoo/boot /mnt/gentoo/dev /mnt/gentoo/proc /mnt/gentoo
+
 reboot -f
 ```
+
+
 
 当然，不要忘记移除启动 CD，否则将再次启动 CD 而不是你的 Gentoo 系统。
 
@@ -2354,16 +2209,21 @@ reboot -f
 | video | 能够访问视频硬件并进行硬件加速 |
 | wheel | 能够使用 su |
 
-例如，要创建一个名为 john 且属于 wheel、users 和 audio 组的用户，请以 root 身份登录（只有 root 可以创建用户）并运行 `useradd`：
+例如，要创建一个名为 `john` 且属于 `wheel`、`users` 和 `audio` 组的用户，请以 root 身份登录（只有 root 可以创建用户）并运行 `useradd`：
 
 # 代码列表 1: 为日常使用添加用户
 
 ```
 Login: root
+
 Password: (你的 root 密码)
+
 # useradd -m -G users,wheel,audio -s /bin/bash john
-# password john
+
+# passwd john
+
 Password: (输入 john 的密码)
+
 Re-enter password: (重新输入密码以验证)
 ```
 
@@ -2390,8 +2250,6 @@ Gentoo 为用户提供了许多可能性，因此也有许多文档记录（以�
 我们还有几个对所有用户开放的邮件列表列表。有关如何加入的信息包含在该页面中。
 
 我们现在闭嘴，让你享受你的安装过程 :)
-
-
 
 ```bash
 # emerge --sync
@@ -2429,17 +2287,23 @@ $ emerge --searchdesc pdf
 
 ```text
 * net-print/cups-pdf
+
 Latest version available: 1.5.2
+
 Latest version installed: [ Not Installed ]
+
 Size of installed files: 15 kB
+
 Homepage: http://cip.physik.uni-weiersburg.de/~vrherr/cups-pdf/
+
 Description: Provides a virtual printer for CUPS to produce files.
+
 License: GPL-2
 ```
 
 #### 安装软件
 
-一旦您找到了喜欢的软件，就可以使用 emerge 轻松地安装它：只需添加包名。例如，安装 gnumeric：
+一旦您找到了喜欢的软件，就可以使用 emerge 轻松地安装它：只需添加包名。例如，安装 `gnumeric`：
 
 # 代码列表 7: 安装 gnumeric
 
@@ -2455,7 +2319,7 @@ License: GPL-2
 # emerge --pretend gnumeric
 ```
 
-当您请求安装一个包时，它将从互联网下载必要的源代码（如果有必要），并默认将其存储在 `/usr/port/distfiles` 中。之后，它将解压、编译并安装该包。如果您想让 Portage 只下载源码而不安装，请在 emerge 命令中添加 `--fetchonly` ：
+当您请求安装一个包时，它将从互联网下载必要的源代码（如果有必要），并默认将其存储在 `/usr/port/distfiles` 中。之后，它将解压、编译并安装该包。如果您想让 Portage 只下载源码而不安装，请在 emerge 命令中添加 `--fetchonly`：
 
 # 代码列表 9: 下载 gnumeric 的源码
 
@@ -2482,18 +2346,29 @@ ebuid N media-lib/alsa-lib-1.0.9_rc +doc -jack 674 KB
 
 ```bash
 # ls -l /usr/share/doc/alsa-lib-1.0.9_rc
+
 total 24
+
 -rw-r--r 1 root      669 May 17 21:54 Changelog.gz
+
 -rw-r--r 1 root      9373 May 17 21:54 COPYING.gz
+
 dr-xr-x 2 root      4096 May 17 21:54 hinfo
+
 dr-xr-x 1 root      196 May 17 21:54 TODO.gz
 
 （或者，使用 equ 定位已安装的文件）：
+
 # query files alsa-lib | less
+
 media-lib/alsa-lib-1.0.9_rc:
+
 *
+
 /usr
+
 /usr/bin
+
 /usr/bin/alsaisimp
 (输出已截断)
 ```
@@ -2534,6 +2409,8 @@ media-lib/alsa-lib-1.0.9_rc:
 # emerge --newuse world
 ```
 
+
+
 ![](img/0231913cf6f51d9b747.png)
 
 #### 元包页 (Metapages)
@@ -2566,7 +2443,7 @@ Portage 树中的某些包没有实际内容，但用于安装一组软件包。
 
 同一个包的不同版本可以共存。虽然其他系统倾向于为这些版本命名包名（如 freetype 和 type2），但 Portage 使用了一种技术来调用槽（slots）。一个 ebb 为其系统声明 SLOT。具有不同槽的 ebuild 可以在同一系统中共存。例如，freetype 包使用 SLOT="1" 和 SLOT="2" 构建。
 
-还有一些包提供相同的功能但实现方式不同。例如，metalog、syslog 和 syslog-ng 都是系统日志记录程序。依赖“系统日志记录程序”可用的应用程序不能依赖于（例如）metalog，因为其他的系统日志记录程序```
+还有一些包提供相同的功能但实现方式不同。例如，metalog、syslog 和 syslog-ng 都是系统日志记录程序。依赖“系统日志记录程序”可用的应用程序不能依赖于（例如）metalog，因为其他的系统日志记录程序
 
 是任何虚拟系统的良好选择：由于每个系统日志记录器都提供了 virtual/syslog，使得应用程序可以依赖 virtual/syslog。
 
@@ -2621,9 +2498,13 @@ sys-libs/glibc-2.2.rl (masked: by profile)
 当你想要安装一个不可用的包时，你将收到此错误。这可能是为了安装一个你的用户可用的不同应用程序，或者等待该包可用。包被屏蔽是有的：
 
 - arch keyword 意味着该应用程序尚未经过充分测试，无法进入稳定分支。等几天时间它们就会回来。
+
 - arch keyword 或 ** keyword 意味着该应用程序在你的架构上无法运行。如果你认为该包运行良好，请在我们的 bugzilla 上提交一个 bug。
+
 - missing keyword 意味着该包尚未在你的架构上安装。让 Portage 团队测试该包，或者如果你在 bugzilla 网站发现了你的报告，请对其进行测试。
+
 - package mask 意味着该包被发现损坏、不稳定或更糟，并被刻意标记为不可用。
+
 - profile mask 意味着该包被发现不适合你的配置。如果你安装它，可能会破坏你的系统，或者它仅与你使用的配置兼容。
 
 ## 缺失的依赖 (Missing Dependencies)
@@ -2695,6 +2576,8 @@ Code Listing 26: Portage 关于保护包的警告
 
 让我们来看看 2004.3 的默认设置。
 
+
+
 ```
 Code List 1: 2004.3 配置的累积 USE 变量
 （此示例是 base, default-linux, default-linux/x86 和 default-linux/x86/2004.3 设置的总和）
@@ -2702,94 +2585,103 @@ use86 oss avx build-fonts ctype encode f77
 usekde sdl glip python gnome lib+ matt mad
 usemod mikft mreq nis obgovnis opennis pdfrib python
 qt quicktime release sdl svga truetype x xml znz xv*)
-
+```
 
 ### 2b. 使用 USE-flags
 
 #### 声明 USE-flags
 
-如所示，此变量包含了许多关键词。不要修改任何 make.files 来声明符合需求的 USE 变量：此文件中的更改将在更新时可见！
+如所示，此变量包含了许多关键词。不要修改任何 `make.files` 来声明符合需求的 `USE` 变量：此文件中的更改将在更新时可见！
 
-要更改此默认设置，你需要向 USE 变量添加或移除关键字。这是通过在 /etc/make.conf 中全局定义 USE 变量来实现。在该变量中，你可以添加额外的 USE-flags，或者移除不需要的 USE-flags。后者通过在关键字前加上减号 (-) 实现。
+要更改此默认设置，你需要向 `USE` 变量添加或移除关键字。这是通过在 `/etc/make.conf` 中全局定义 `USE` 变量来实现。在该变量中，你可以添加额外的 `USE-flags`，或者移除不需要的 `USE-flags`。后者通过在关键字前加上减号 `-` 实现。
 
-例如，为了支持 KDE 和 Qt 添加对 ipad 支持，可以在 /etc/make.conf 中定义以下 USE：
+例如，为了支持 KDE 和 Qt 添加对 ipad 支持，可以在 `/etc/make.conf` 中定义以下 `USE`：
 
 ![](img/c0231913cf632f51d9b75da531c717e6_51_0.png)
 
-
-
-有时你只想为某个（或几个）应用程序声明特定的 USE flag，而不是全局范围。要实现这一点，你需要创建 `/etc/portage/` 目录（如果不存在）并编辑 `/etc/portage/package.use`。
+有时你只想为某个（或几个）应用程序声明特定的 `USE` flag，而不是全局范围。要实现这一点，你需要创建 `/etc/portage/` 目录（如果不存在）并编辑 `/etc/portage/package.use`。
 
 例如，如果你不想在全局启用 `kerdb` 支持，但想为 `mysql` 启用，你可以执行：
 
 ```
 Code List 3: /etc/portage.use example
+
 dev-db/mysql kerdb
 ```
 
-当然，你可以显式地禁用某个应用程序的 USE flag。例如，如果你不想在 PHP 中支持 java：
+当然，你可以显式地禁用某个应用程序的 `USE` flag。例如，如果你不想在 PHP 中支持 java：
 
 ```
 Code List 4: /etc/portage/package.use 2nd example
+
 dev-php/php-java-
 ```
 
 ## 声明临时 USE-flags
 
-有时你只想设置一次某个特定的 USE 设置。与其编辑两次 `/etc/make.conf`（为了执行和撤销 USE 更改），你只需将 `USE` 变量声明为环境变量。记住，当你重新合并或更新此应用程序时（无论是显式地还是作为系统更新的一部分），你的更改将会生效：
+有时你只想设置一次某个特定的 `USE` 设置。与其编辑两次 `/etc/make.conf`（为了执行和撤销 `USE` 更改），你只需将 `USE` 变量声明为环境变量。记住，当你重新合并或更新此应用程序时（无论是显式地还是作为系统更新的一部分），你的更改将会生效：
 
-例如，我们将在安装 `mozilla` 期间临时从 USE 设置中移除 `java`。
+例如，我们将在安装 `mozilla` 期间临时从 `USE` 设置中移除 `java`。
 
 ```
 Code List 5: Using USE as environment variable
+
 USE="-java*" emerge mozilla
 ```
 
 ## 自动 USE Flags
 
-软件包安装后，如果你没有显式禁用，已安装的 USE flags 将自动为你启用。要查看带有 flag 的包列表，请检查你的配置中的 `/etc/make.profile.defaults` 和 `use.defaults` 文件。
+软件包安装后，如果你没有显式禁用，已安装的 `USE` flags 将自动为你启用。要查看带有 flag 的包列表，请检查你的配置中的 `/etc/make.profile.defaults` 和 `use.defaults` 文件。
 
 ```
 Code List 6: A snippet from /etc/make.profile.defaults
+
 gnome gnome-base/gnome
+
 gtk x11-libs/gtk+
+
 dqt x11-libs/qt
+
 kde kde-base/kdebase
+
 motif x11-libs/motif
 ```
 
 ## 优先级
 
-当然，存在某种优于 USE 设置的优先级。你不希望在声明了 `USE="-java"` 后，发现由于某个优先级更高的设置，java 仍然被使用。USE 设置按优先级排序（第一个优先级最低）：
+当然，存在某种优于 `USE` 设置的优先级。你不希望在声明了 `USE="-java"` 后，发现由于某个优先级更高的设置，java 仍然被使用。`USE` 设置按优先级排序（第一个优先级最低）：
 
-1. 配置文件中 `make.defaults` 文件中的默认 USE 设置
-2. 如果安装了来自 `profile.defaults` 的包，则继承的 USE 设置
-3. `/etc/make.conf` 中的用户自定义 USE 设置
-4. `/etc/portage/package.use` 中的用户自定义 USE 设置
-5. 环境变量中的 USE 设置
+1. 配置文件中 `make.defaults` 文件中的默认 `USE` 设置
+2. 如果安装了来自 `profile.defaults` 的包，则继承的 `USE` 设置
+3. `/etc/make.conf` 中的用户自定义 `USE` 设置
+4. `/etc/portage/package.use` 中的用户自定义 `USE` 设置
+5. 环境变量中的 `USE` 设置
 
-要查看 Portage 看到的最终 USE 设置，运行 `emerge --info`。这将列出所有相关变量（包括 `USE` 变量）以及 Portage 所使用的内容。
+要查看 Portage 看到的最终 `USE` 设置，运行 `emerge --info`。这将列出所有相关变量（包括 `USE` 变量）以及 Portage 所使用的内容。
 
 ```
 Code List 7: Running emerge --info
+
 # emerge --info
 ```
 
 ## 使你的系统适配新的 USE Flags
 
-如果你更改了 USE flags 并希望更新整个系统以使用新的 USE flags，请使用 `--newuse` 选项：
+如果你更改了 `USE` flags 并希望更新整个系统以使用新的 `USE` flags，请使用 `--newuse` 选项：
 
 ```
 ### Code Listing 8: Rebuilding your entire system
+
 # emerge --update --deep --newuse
 ```
 
-接下来，运行 Portage 的 `declean` 来移除在你的“旧”系统上合并、但已由于新的 USE flags 变得过时的条件依赖。
+接下来，运行 Portage 的 `declean` 来移除在你的“旧”系统上合并、但已由于新的 `USE` flags 变得过时的条件依赖。
 
 **警告：** 运行 `emerge --depclean` 是一个危险的操作，应该小心处理。双重检查提供的“过时”包列表，以确保不会删除你需要的包。在接后的示例中，我们为 `declean` 添加了 `-p` 选项，仅列出包而不删除它们。
 
 ```
 ### Code Listing 9: Removing obsolete packages
+
 # emerge --depclean
 ```
 
@@ -2797,24 +2689,31 @@ Code List 7: Running emerge --info
 
 ```
 ### Code Listing 10: Running revdev-rebuild
+
 # revdev-rebuild
 ```
 
-完成完成后，你的系统将使用新的 USE flag 设置。
+完成完成后，你的系统将使用新的 `USE` flag 设置。
 
 ### 2.c. 特定包的 USE-flags
 
 **查看可用的 USE-flags**
 
-让我们以 `mozilla` 为例：它监听哪些 USE-flags？要找到答案，我们使用 `--pretend` 和 `--verbose` 选项进行合并：
+让我们以 `mozilla` 为例：它监听哪些 `USE-flags`？要找到答案，我们使用 `--pretend` 和 `--verbose` 选项进行合并：
 
 ```
 ### Code Listing 11: Using the used USE-flags
+
 # emerge --pretend --verbose mozilla
+
 These are the packages that I would merge, in order:
+
 Calculating dependencies ...done
+
 [build] R //www/mozilla-1.7.2-2 USE='crypt gnome java mozsvg ssl
+
 truetype xtprint -xdap -ipv6 -lapad mozcalendar -mozdevel -nozcompose
+
 nozoirc -moznall -nozoft -postgres -xineama 0 KB
 ```
 
@@ -2822,27 +2721,39 @@ nozoirc -moznall -nozoft -postgres -xineama 0 KB
 
 ```
 ### Code Listing 12: Installing gentoolkit
+
 # emerge gentoolkit
 ```
 
-现在运行参数来查看特定包的 USE-flags。例如，对于 `gnumeric` 包：
+现在运行参数来查看特定包的 `USE-flags`。例如，对于 `gnumeric` 包：
 
 ```
 ### Code Listing 13: Using query to view used USE-flags
+
 # query use gnumeric
+
 [ Colour : set theme ]
+
 [ Legend
+
 - (U) Col 1 Current USE flags
+
  (I) Col 2 Installed with USE flags ]
 ```
 
 ```
 U I [ Found these variables in : app-office/numeric-1.2
+
 libda : Adds Data Access (CORBA wrapper) support for gnumeric
+
 gomedeb : unknown
+
 + + python : support/bindings for the Python language
+
 + + bonobo : Adds support for gnome-base/bonobo (Gnome CORBA interfaces)
 ```
+
+
 
 ## 3. Portage Features
 
@@ -2851,29 +2762,26 @@ gomedeb : unknown
 Portage 有一些额外功能，可以让 Gentoo 体验更好。这些功能许多依赖软件工具来提高性能、安全性。要启用或禁用 Portage 功能，可以编辑 `/etc/make.conf` 中的 `FEATURES` 变量，关键词之间用空格分隔。在某些情况下，还需要安装额外的工具包含该功能。并不是所有 Portage 功能都列在这里。概述请参阅 `make.conf` 页面：
 
 ```
-Code List 1: Consulting make.conf
 $ man make.conf
 ```
 
 要找出默认的 `FEATURES`，运行 `emerge --info` 并搜索 `FEATURES`：
 
 ```
-Code List 2: Finding out the FEATURES already set
 $ emerge --info | grep FEATURES
 ```
 
 ### 3.b. Distributing Compiling
 
-**使用 distcc**
+**使用 `distcc`**
 
-`distcc` 是一个在网络上几台并不相同的机器上分配编译的程序。distcc 将所有必要信息发送到可用的 `distcc` 服务器来为客户端编译源码。结果是编译速度更快。关于 `distcc` 的更多信息（以及如何在 Gentoo 中使用它）可以查看 `distcc` 文档。
+`distcc` 是一个在网络上几台并不相同的机器上分配编译的程序。`distcc` 将所有必要信息发送到可用的 `distcc` 服务器来为客户端编译源码。结果是编译速度更快。关于 `distcc` 的更多信息（以及如何在 Gentoo 中使用它）可以查看 `distcc` 文档。
 
-**安装 distcc**
+**安装 `distcc`**
 
 `distcc` 带有一个图形监控器来跟踪你的计算机何时发送编译。如果你使用 Gnome，请在 `USE` 变量中放入 `gnome`。但如果你使用 Gnome 并且想要，你应该放入 `gtk`。
 
 ```
-Code List 3: Installing distcc
 # emerge distcc
 ```
 
@@ -2882,30 +2790,27 @@ Code List 3: Installing distcc
 在 `/etc/make.conf` 的 `FEATURES` 变量中添加此项。接下来，根据喜好编辑 `MAKEOPTS`。一个已知指南是用 `-X` 填写运行 `distcc` 的 CPU 数量（包括当前主机），但其他数字可能有更好的结果。现在运行 `distcc` 并输入可用的 `distcc` 服务器列表：192.168.102（当前主机）、192.168.103 和 192.168.104（“远程”主机）：
 
 ```
-Code List 4: Configuring distcc-daemons
 # distcc-config --set-hosts "192.168.102 192.168.103 192.168.104"
 ```
 
 别忘了也运行 `distccd` 守护进程：
 
 ```
-Code List 5: Starting distccd daemons
 # rc-update add distccd default
 # /etc/init.d/distccd start
 ```
 
 ### 3.c. Caching Compilation
 
-**关于 ccache**
+**关于 `ccache`**
 
 `ccache` 是快速编译器缓存。当你编译程序时，它会缓存中间结果，因此当你重新编译程序时，编译时间会大大缩短。在常见的编译中，这可以快 5 到 10 倍。如果你对 `ccache` 的内部机制感兴趣，请访问 ccache 首页。
 
-**安装 ccache**
+**安装 `ccache`**
 
 要安装 `ccache`，运行 `emerge ccache`：
 
 ```
-Code List 6: Installing ccache
 # emerge ccache
 ```
 
@@ -2914,25 +2819,22 @@ Code List 6: Installing ccache
 打开 `/etc/make.conf` 在 `FEATURES` 变量中添加 `ccache`。接下来，添加一个名为 `CCCACHE_SIZE` 的新变量并设置为 `"2G"`：
 
 ```
-Code List 7: Editing CCCACHE_SIZE in /etc/make.conf
 CCACHE_SIZE="2G"
 ```
 
 要检查 `ccache` 是否运行，让 `ccache` 提供它的统计数据。由于 Portage 使用不同的 `ccache` 主目录，你需要设置 `CCACHE_DIR` 变量为：
 
 ```
-Code List 8: Viewing cache statistics
 # CCACHE_DIR=/var/tmp/ccache ccache -s
 ```
 
 `/var/tmp/ccache` 是 Portage 默认的主目录；如果你想更改它，可以在 `/etc/make.conf` 中设置 `CCACHE_DIR`。但是，如果你运行它，它将使用默认位置 `${HOME}/.ccache`，这就是为什么在请求（Portage）缓存统计时需要设置 `CCACHE_DIR` 变量。
 
-**使用 ccache 进行非 Portage 编译**
+**使用 `ccache` 进行非 Portage 编译**
 
-如果你想为非 Portage 编译使用 ccache`请将 `/usr/lib/ccache/bin` 添加到 `PATH` 变量的开头（在 `/usr/bin` 之前）。这可以通过编辑 `/etc/env/d00base` 实现，它是定义 `PATH` 变量的环境文件：
+如果你想为非 Portage 编译使用 `ccache` 请将 `/usr/lib/ccache/bin` 添加到 `PATH` 变量的开头（在 `/usr/bin` 之前）。这可以通过编辑 `/etc/env/d00base` 实现，它是定义 `PATH` 变量的环境文件：
 
 ```
-Code List 9: Editing /etc/env/d00base
 PATH="/usr/lib/ccache/bin:/opt/*
 ```
 
@@ -2952,21 +2854,15 @@ Portage 支持安装预编译包（preprint packages）。尽管 Gentoo 本身�
 
 虽然 Gentoo 不提供，但你可以创建一个用于存储预编译包的仓库。如果你想使用该仓库，你需要通过让 `PORTAGE_BINHOST` 变量指向它来让 Portage 感知。例如，如果预编译包在
 
-
-
-ftp://buildhost/gentoo:
+`ftp://buildhost/gentoo:`
 
 ```
-Code List 10: 在 /etc/make.conf 中设置 PORTAGE_BINHOST
+PORTAGE_BINHOST="ftp://buildhost/gentoo"
 ```
 
-PORTAGE_BINHOST="*ftp://buildhost/gentoo*"
 当你想要安装预编译包时，可以使用 `emerge` 命令的 `--binpkg` 选项配合 `--usepkg` 选项。前者告诉 `emerge` 从定义的服务器下载预编译包，而后者要求 `emerge` 在获取源码并编译之前先安装预编译包。
-例如，使用预编译包安装 gnumeric：
 
-```
-Code List 11: 安装 gnumeric 预编译包
-```
+例如，使用预编译包安装 gnumeric：
 
 ```
 # emerge --usepkg --binpkg gnumeric
@@ -2975,30 +2871,34 @@ Code List 11: 安装 gnumeric 预编译包
 关于 `emerge` 预编译选项的更多信息可以在管理书中找到：
 
 ```
-Code List 12: 读取 emerge 管理
-```
-
-```
 $ man emerge
 ```
 
+
+
 # 4. Init 级别
 
-### 4.a. Runlevels
+## 4.a. Runlevels
 
-#### 启动你的系统
+### 启动你的系统
 当你启动系统时，你会看到大量的文本闪过。如果你仔细观察，你会发现这些文本在每次重启系统时都是相同的。所有操作的序列被称为启动序列，并且是（在多程度上）静态定义的。
-首先，你的引导程序会在告诉 CPU 运行内核后，会将你在引导程序配置中定义的内核加载到内存中。当内核加载并运行时，它会初始化所有内核特定的结构和任务，并启动 init 进程。
-该进程确保所有文件系统（在 /etc/fstab 中）都已挂载并准备就绪。然后，它会执行位于 /etc/initd/ 中的若干脚本，这些脚本将启动你所需的服务以成功启动系统。
+
+首先，你的引导程序会在告诉 CPU 运行内核后，会将你在引导程序配置中定义的内核加载到内存中。当内核加载并运行时，它会初始化所有内核特定的结构和任务，并启动 `init` 进程。
+
+该进程确保所有文件系统（在 `/etc/fstab` 中）都已挂载并准备就绪。然后，它会执行位于 `/etc/initd/` 中的若干脚本，这些脚本将启动你所需的服务以成功启动系统。
+
 最后，当所有脚本执行完毕后，它会激活终端（大多数情况下是隐藏在 Alt-F1、Alt-F2... 下方的虚拟控制台），并附加一个名为 `getty` 的特殊进程。该进程将通过运行 `login` 来确保你能够登录这些终端。
 
-#### Init 脚本
+### Init 脚本
 现在 `init` 仅执行 `/etc/initd.random` 中的脚本。即使它并不会运行 `/etc/initd.d` 中的所有脚本，只运行被指示执行的脚本。它通过查看 `/etc/runlevels` 来决定执行哪些脚本。
+
 首先，`init` 运行 `/etc/initd/` 中在 `/etc/runlevel/root` 内有符号链接的所有脚本。通常，它会按字母顺序启动脚本，但某些脚本内部包含依赖信息，告诉系统在启动它们之前必须运行另一个脚本。
+
 当所有引用 `/runlevel/default` 的脚本执行完毕后，它将继续运行包含相应符号链接的脚本。
 
-#### Init 如何工作
+### Init 如何工作
 `init` 并不是由自己决定的。它需要一个配置文件来指定需要采取哪些操作。该配置文件位于 `/etc/initab`。
+
 如果你记得我们刚刚描述的启动序列，你就会记得 `init` 的第一个动作是挂载所有文件系统。这定义在 `/etc/initab` 的以下行中：
 
 ```
@@ -3015,7 +2915,9 @@ si:sysinit:/sbin/init.d rc sysinit
 
 ```
 Code Listing 2: 系统初始化继续
+```
 
+```
 rc::boot:sbin/rc boot
 ```
 
@@ -3025,7 +2927,9 @@ rc::boot:sbin/rc boot
 
 ```
 Code Listing 3: 无限行
+```
 
+```
 id3:initdefault:
 ```
 
@@ -3033,7 +2937,9 @@ id3:initdefault:
 
 ```
 Code Listing 4: runlevel 定义
+```
 
+```
 10:0:wait;/sbin/rc shutdown tty1 linux
 11:0:wait;/sbin/rc single tty2 linux
 12:0:wait;/sbin/rc nonwork tty3 linux
@@ -3049,7 +2955,9 @@ Code Listing 4: runlevel 定义
 
 ```
 Code Listing 5: 虚拟控制台定义
+```
 
+```
 c1:2345:respawn;/sbin/agetty 38400 tty1 linux
 c2:12345:respawn;/sbin/agetty 38400 tty2 linux
 c3:12345:respawn;/sbin/agetty 38400 tty3 linux
@@ -3058,12 +2966,8 @@ c5:12345:respawn;/sbin/agetty 38400 tty5 linux
 c6:12345:respawn;/sbin/agetty 38400 tty6 linux
 ```
 
-#### 什么是 runlevel？
-runlevel 是系统运行的状态。在 Gentoo 中，有四种 runlevel：boot、default、single 和 shutdown。内部 runlevel 是 boot 和 shutdown。用户定义的 runlevel 是列在 `/etc/runlevels` 中的那些。每个 runlevel 定义了一组要启动的服务。例如，default runlevel 用于普通多用户操作，而 single runlevel 用于维护。
-
-
-
-
+### 什么是 runlevel？
+runlevel 是系统运行的状态。在 Gentoo 中，有四种 runlevel：`boot`、`default`、`single` 和 `shutdown`。内部 runlevel 是 `boot` 和 `shutdown`。用户定义的 runlevel 是列在 `/etc/runlevels` 中的那些。每个 runlevel 定义了一组要启动的服务。例如，`default` runlevel 用于普通多用户操作，而 `single` runlevel 用于维护。
 
 ## 添加和移除服务
 
@@ -3088,13 +2992,11 @@ runlevel 是系统运行的状态。在 Gentoo 中，有四种 runlevel：boot�
 ## 4.c. 配置服务
 
 ### 为什么需要额外配置？
-
 初始化脚本可能非常复杂。因此，不希望用户直接编辑初始化脚本，因为这会增加出错的概率。能够配置此类服务是非常重要的。例如，你可能想为服务本身提供更多选项。
 
 将配置放在初始化脚本之外的第二个原因是：在更新初始化脚本时，无需担心你的配置会被重置。
 
 ### etc/conf.d 目录
-
 Gentoo 提供了一种简单的方法来配置此类服务：每个可以配置的初始化脚本在 `/etc/conf.d` 中都有一个文件。例如，`apache2` 初始化脚本（路径为 `/etc/init.d/apache2`）有一个配置文件 `/etc/conf.d/apache2`，其中可以包含你在启动 Apache 2 时想要提供给它的选项：
 
 > 代码列表 15：在 /etc/conf.d/apache2 中定义的变量
@@ -3108,35 +3010,46 @@ APACHE_OPTS="-D PHP*"
 ## 4.d. 编写初始化脚本
 
 ### 我必须写吗？
-
 通常不需要编写任何内容，因为 Gentoo 为所有提供的服务都提供了现现用的初始化脚本。但是，你可能没有使用 Portage 安装了某个服务，在这种情况下，你可能需要创建一个初始化脚本。
 
 如果服务提供的初始化脚本不是显式为 Gentoo 编写的，请不要使用它：Gentoo 的初始化脚本与其他发行版所使用的初始化脚本是不兼容的！
 
 ### 布局
-
 初始化脚本的基本布局所示。
 
 > 代码列表 16：初始化脚本的基本布局
 
 ```
 #!/bin/runscript
+
 depend() {
+
   (依赖信息)
+
 }
+
 start() {
+
   (启动服务所需的命令)
+
 }
 ```
 
 ```
 stop() {
+
   (停止服务所需的命令)
+
 }
+
 start() {
+
   (重启服务所需的命令)
+
 }
 ```
+
+
 
 任何初始化脚本都要求定义 `start()` 函数。所有其他部分都是可选的。
 
@@ -3152,9 +3065,13 @@ start() {
 
 ```
 depend() {
+
   need net
+
   use logger dns
+
   provide mta
+
 }
 ```
 
@@ -3175,9 +3092,13 @@ depend() {
 
 ```
 depend() {
+
   need net
+
   before inet
+
   before xinetd
+
 }
 ```
 
@@ -3187,7 +3108,9 @@ depend() {
 
 ```
 depend() {
+
   before *
+
 }
 ```
 
@@ -3197,9 +3120,13 @@ depend() {
 
 ```
 start() {
+
   ebegin "Starting my_service"
+
   # (启动服务的命令)
+
   end
+
 }
 ```
 
@@ -3237,88 +3164,11 @@ APACHE_OPTS="-D PHP*"
 
 > 代码列表 16：初始化脚本的基本布局
 
-（此处由于示例重复，保持逻辑一致，实际翻译应遵循[content]...[/content] 结构，此处为演示翻译逻辑）
-
 任何初始化脚本都要求定义 `start()` 函数。所有其他部分都是可选的。
-
-### 依赖关系
-
-你可以使用两种依赖：`need` 和 `after`。正如我们之前提到的，`need` 依赖比 `after` 依赖更严格。遵循这种依赖类型时，输入你所依赖的服务或虚拟依赖。
-
-虚拟依赖是由某个服务提供的，但并非由该服务唯一提供。你的初始化脚本可以依赖于系统日志程序，但有很多系统日志程序可用（metalog, syslog-ng, syslog, ...）：由于你无法需要它们中的每一个（没有哪个合理的系统会安装并运行所有这些系统），我们确保所有这些服务都提供虚拟依赖。
-
-让我们来看 postfix 服务的依赖信息。
-
-![](img/c0231913cf632f51d9b75da531c717e6_60_0.png)
-
-```
-depend() {
-  need net
-  use logger dns
-  provide mta
-}
-```
-
-如你所见，postfix 服务：
-
-- 需要（虚拟）`net` 依赖（例如由 `/etc/init.d/net.0` 提供）
-- 使用（虚拟）`logger` 依赖（例如由 `/etc/init.d/syslog-ng` 提供）
-- 使用（虚拟）`dns` 依赖（例如由 `/etc/init.d/named` 提供）
-- 提供（虚拟）`mta` 依赖（这对所有邮件服务器都是常见的）
-
-### 控制顺序
-
-在某些情况下，你可能需要某个服务，但如果该服务在系统可用，你希望你的服务在另一个服务之前（或之后）启动（注意条件 - `need` 依赖），并且在同一个运行级别中运行（注意条件 - 仅涉及相同运行级别中的服务）。你可以使用 `before` 或 `after` 设置来提供此类信息。
-
-例如，我们查看 postfix 服务的设置：
-
-![](img/c0231913cf632f51d9b75da531c717e6_60_1.png)
-
-```
-depend() {
-  need net
-  before inet
-  before xinetd
-}
-```
-
-你可以使用 `*` 通配符来捕获相同运行级别的所有服务，尽管不建议这样做。
-
-![](img/c0231913cf632f51d9b75da531c717e6_60_2.png)
-
-```
-depend() {
-  before *
-}
-```
-
-### 标准函数
-
-除了 `depend()` 功能外，你还需要定义 `start()` 函数。它包含了所有初始化命令。使用 `ebegin` 和 `end` 函数可以告知用户正在发生什么。![](img/c0231913cf632f51d9b75da531c717e6_60_3)
-
-```
-start() {
-  ebegin "Starting my_service"
-  # (启动服务的命令)
-  end
-}
-```
-
-（注：由于原文中存在大量逻辑重复和断句，上述译文已根据上下文逻辑进行了结构化处理，并确保所有 Markdown 格式正确。）
-
-[/content]
-
-*(注：由于您提供的原文中包含多处重复的段落和不连续的占位符，我在翻译时确保了文档的逻辑连贯性，并严格遵守了您的格式要求。)*
-
-**对歉，由于您提供的原始文本中存在大量的段落重复（例如 4.d 之后重复多次），我在最终翻译时已遵循了“不要重复输出原文”的原则，对内容进行了合并整合翻译。**
-
----更正：由于您提供的文本存在严重的逻辑重复，以下是精简后、不重复的完整翻译版本：**
-
-[content]
 
 ## 添加和移除服务
 
-在安装 Gentoo 期间，你已经向“default”（默认）运行级别（runlevel）添加了初始化脚本。当时你可能不知道“default”是做什么的，但现在你应该已经了。`rc-update` 脚本需要第二个参数来定义操作：`add`（添加）、`del`（删除）或 `show`（显示）。
+在安装 Gentoo 期间，你已经向“default”运行级别（runlevel）添加了初始化脚本。当时你可能不知道“default”是做什么的，但现在你应该已经了。`rc-update` 脚本需要第二个参数来定义操作：`add`（添加）、`del`（删除）或 `show`（显示）。
 
 要添加或删除初始化脚本，只需更新 `add` 或 `del` 参数，后跟初始化脚本和运行级别即可。例如：
 
@@ -3328,11 +3178,13 @@ start() {
 # rc-update del postfix default
 ```
 
+
+
 `rc-update` 命令将显示所有可用的脚本并列出它们执行的运行级别。
 
 > 代码列表 14：获取初始化脚本信息
 
-```
+```bash
 # rc-update show
 ```
 
@@ -3348,9 +3200,9 @@ start() {
 
 Gentoo 提供了一种简单的方法来配置此类服务：每个可以配置的初始化脚本在 `/etc/conf.d` 中都有一个文件。例如，`apache2` 初始化脚本（路径为 `/etc/init.d/apache2`）有一个配置文件 `/etc/conf.d/apache2`，其中可以包含你在启动 Apache 2 时想要提供给它的选项：
 
-> 代码列表 15：在 /etc/conf.d/apache2 中定义的变量
+> 代码列表 15：在 `/etc/conf.d/apache2` 中定义的变量
 
-```
+```bash
 APACHE_OPTS="-D PHP*"
 ```
 
@@ -3370,22 +3222,33 @@ APACHE_OPTS="-D PHP*"
 
 > 代码列表 16：初始化脚本的基本布局
 
-```
+```bash
 #!/bin/runscript
+
 depend() {
+
   (依赖信息)
+
 }
+
 start() {
+
   (启动服务所需的命令)
+
 }
 ```
 
-```
+```bash
 stop() {
+
   (停止服务所需的命令)
+
 }
+
 start() {
+
   (重启服务所需的命令)
+
 }
 ```
 
@@ -3401,7 +3264,7 @@ start() {
 
 ![](img/c0231913cf632f51d9b75da531c717e6_60_0.png)
 
-```
+```bash
 depend() {
   need net
   use logger dns
@@ -3424,7 +3287,7 @@ depend() {
 
 ![](img/c0231913cf632f51d9b75da531c717e6_60_1.png)
 
-```
+```bash
 depend() {
   need net
   before inet
@@ -3436,7 +3299,7 @@ depend() {
 
 ![](img/c0231913cf632f51d9b75da531c717e6_60_2.png)
 
-```
+```bash
 depend() {
   before *
 }
@@ -3446,7 +3309,7 @@ depend() {
 
 除了 `depend()` 功能外，你还需要定义 `start()` 函数。它包含了所有初始化命令。使用 `ebegin` 和 `end` 函数可以告知用户正在发生什么。![](img/c0231913cf632f51d9b75da531c717e6_60_3)
 
-```
+```bash
 start() {
   ebegin "Starting my_service"
   # (启动服务的命令)
@@ -3462,17 +3325,13 @@ start() {
 
 环境变量是一个命名对象，包含一个或多个应用程序使用的信息。许多用户（尤其是刚接触 Linux 的用户）会觉得这有点奇怪或难以管理。然而，这是一个错误的想法：使用环境变量可以轻松更改一个或多个应用程序的配置设置。
 
+### /etc/envd 目录
 
+为了集中管理这些变量，Gentoo 引入了 `/etc/envd` 目录。在该目录下，你会发现许多文件，例如 `0basic`、`05gcc` 等，它们包含了名称中提到的应用程序所需的所需的变量。
 
+例如，当你安装 gcc 时，ebuild 会创建一个名为 `05gcc` 的文件，其中包含了以下变量的定义：
 
-
-## /etc/envd 目录
-
-为了集中管理这些变量，Gentoo 引入了 /etc/envd 目录。在该目录下，你会发现许多文件，例如 0basic、05gcc 等，它们包含了名称中提到的应用程序所需的所需的变量。
-
-例如，当你安装 gcc 时，ebuild 会创建一个名为 05gcc 的文件，其中包含了以下变量的定义：
-
-## 代码列表 2: /etc/envd/05gcc
+## 代码列表 2: `/etc/envd/05gcc`
 
 ```bash
 PATH=/usr/x86_64-pc-linux-gnu/gcc-bin/3.2*
@@ -3484,11 +3343,11 @@ XX*=
 LDPATH=/usr/lib/gcc/i686-pc-linux-gnu/3.2.3*
 ```
 
-其他发行版允许你在 /etc/profile 或其他位置更改或添加环境变量。相比之下，Gentoo 让你让你（或 Portage）能够轻松地维护和管理环境变量，而无需关注可能包含环境变量的众多文件。
+其他发行版允许你在 `/etc/profile` 或其他位置更改或添加环境变量。相比之下，Gentoo 让你让你（或 Portage）能够轻松地维护和管理环境变量，而无需关注可能包含环境变量的众多文件。
 
-例如，当 gcc 更新时，/etc/envd/05gcc 文件会自动更新，而无需任何用户交互。偶尔，你可能会被要求在系统范围内设置某个环境变量。以 http_proxy 变量为例，你现在不需要去改动 /etc/profile，而是可以创建一个文件（/etc/envd/99local）并并在其中输入你的定义：
+例如，当 gcc 更新时，`/etc/envd/05gcc` 文件会自动更新，而无需任何用户交互。偶尔，你可能会被要求在系统范围内设置某个环境变量。以 `http_proxy` 变量为例，你现在不需要去改动 `/etc/profile`，而是可以创建一个文件（`/etc/envd/99local`）并并在其中输入你的定义：
 
-## 代码列表 3: /etc/envd/99local
+## 代码列表 3: `/etc/envd/99local`
 
 ```bash
 http_proxy="proxy.server.com:8080*"
@@ -3496,52 +3355,56 @@ http_proxy="proxy.server.com:8080*"
 
 通过使用该文件管理所有变量，你可以快速概览你自行定义的变量。
 
-## env-update 脚本
+### env-update 脚本
 
-/etc/envd 中的几个文件定义了 PATH 变量。这并不是错误：当你运行 env-update 时，它会在更新环境变量之前追加这几个定义，使得软件包（或用户）可以方便地添加自己的环境变量设置，而不会干扰现有的文件。
+`/etc/envd` 中的几个文件定义了 `PATH` 变量。这并不是错误：当你运行 `env-update` 时，它会在更新环境变量之前追加这几个定义，使得软件包（或用户）可以方便地添加自己的环境变量设置，而不会干扰现有的文件。
 
-env-update 脚本将按照 /etc/envd 中文件的字母顺序追加变量。这些文件必须以两个数字开头。
+`env-update` 脚本将按照 `/etc/envd` 中文件的字母顺序追加变量。这些文件必须以两个数字开头。
 
-## 代码列表 4: 通过 env-update 更新环境变量
+## 代码列表 4: 通过 `env-update` 更新环境变量
 
 | 00basic | 99k-env | 99local |
 | :--- | :--- | :--- |
-| PATH=/usr/bin:/usr/lib/3.2/bin:/usr/local/bin* | | |
+| `PATH=/usr/bin:/usr/lib/3.2/bin:/usr/local/bin*` | | |
 
-变量的合并并不总是发生，以下变量例外：KEDIRS, PATHCLASS, LDPATH, MANIPATH, INFOPATH, ROOTPATH, CONFIG_PROTECT, CONFIG_MASK, PRELINK_PATH 和 PRELINK, MASK。仅使用最后一个定义的值（按照 /etc/envd 的字母顺序）。
+变量的合并并不总是发生，以下变量例外：`KEDIRS`, `PATHCLASS`, `LDPATH`, `MANIPATH`, `INFOPATH`, `ROOTPATH`, `CONFIG_PROTECT`, `CONFIG_MASK`, `PRELINK_PATH` 和 `PRELINK`, `MASK`。仅使用最后一个定义的值（按照 `/etc/envd` 的字母顺序）。
 
-当你运行 env-update 时，脚本将创建所有环境变量并将它们放置在 /etc/profile 中（由 /etc/ 使用）。它将从 LDPATH 变量中提取信息并用它来创建 /etc/ld.so.cache。之后，你将运行 ldconfig 来重新创建动态链接器使用的 /etc/ld.so 文件。
+当你运行 `env-update` 时，脚本将创建所有环境变量并将它们放置在 `/etc/profile` 中（由 `/etc/` 使用）。它将从 `LDPATH` 变量中提取信息并用它来创建 `/etc/ld.so.cache`。之后，你将运行 `ldconfig` 来重新创建动态链接器使用的 `/etc/ld.so` 文件。
 
-如果你想在运行 env-update 后立即看到效果，请执行以下命令来更新你的环境。安装过 Gentoo 的用户可能在安装说明中记得这一点。
+如果你想在运行 `env-update` 后立即看到效果，请执行以下命令来更新你的环境。安装过 Gentoo 的用户可能在安装说明中记得这一点。
 
 ## 代码列表 5: 更新环境
 
 ```bash
-env-update --all source /etc/profile
 ```
 
-注意：上面的命令仅更新你当前终端、新控制台及其子控制台中的变量。因此，如果你在 X11 中工作，你需要在每个新终端中输入 source /etc/profile 或重启 X，因为所有新的源变量都将被使用。如果你使用登录管理器，请切换到 root 并输入 /etc/init.d/xdm restart。如果不是，你需要注销并重新登录，以便让 X 派生带有新变量的子进程。
+
+
+`env-update --all source /etc/profile`
+
+注意：上面的命令仅更新你当前终端、新控制台及其子控制台中的变量。因此，如果你在 X11 中工作，你需要在每个新终端中输入 `source /etc/profile` 或重启 X，因为所有新的源变量都将被使用。如果你使用登录管理器，请切换到 root 并输入 `/etc/init.d/xdm restart`。如果不是，你需要注销并重新登录，以便让 X 派生带有新变量的子进程。
 
 ## 5.c. 在本地定义变量
 
-#### 用户特定
+### 用户特定
 
-你不需要全局定义一个环境变量。例如，你可能想将 /home/my_user/bin 和工作目录（你所在的目录）添加到 PATH 变量中，但你不希望系统中的所有其他用户在他们的 PATH 中也包含这些。如果你想在本地定义环境变量，应该使用 ~/.bashrc 或 ~/.bash_profile：
+你不需要全局定义一个环境变量。例如，你可能想将 `/home/my_user/bin` 和工作目录（你所在的目录）添加到 `PATH` 变量中，但你不希望系统中的所有其他用户在他们的 `PATH` 中也包含这些。如果你想在本地定义环境变量，应该使用 `~/.bashrc` 或 `~/.bash_profile`：
 
-#### 代码列表 6: 在 ~/.bashrc 中为本地使用扩展 PATH
+#### 代码列表 6: 在 `~/.bashrc` 中为本地使用扩展 PATH
 
 ```bash
 # 冒号后如果没有目录则被视为当前工作目录
+
 PATH=$PATH:/home/my_user/bin;
 ```
 
-重新登录后，你的 PATH 变量将得到更新。
+重新登录后，你的 `PATH` 变量将得到更新。
 
-#### 会话特定
+### 会话特定
 
-有时需要更严格的定义。你可能希望使用你创建的临时目录中的二进制文件，而无需将该路径添加到二进制路径中或在需要的短时间内编辑 ~/.bashrc。
+有时需要更严格的定义。你可能希望使用你创建的临时目录中的二进制文件，而无需将该路径添加到二进制路径中或在需要的短时间内编辑 `~/.bashrc`。
 
-在这种情况下，你可以通过 export 命令在当前会话中定义 PATH。由于你没有注销，PATH 变量将由临时设置修改。
+在这种情况下，你可以通过 `export` 命令在当前会话中定义 `PATH`。由于你没有注销，`PATH` 变量将由临时设置修改。
 
 #### 代码列表 7: 定义会话特定的环境变量
 
@@ -3553,7 +3416,7 @@ export PATH=$PATH:/home/my_user/tmp/usr/bin*
 
 ### 1.a. 文件与目录
 
-### 配置
+#### 配置
 
 Portage 自带默认位置。当你查看它时，你会发现所有的。本章解释了特殊位置。如果你需要100%的覆盖，请参考 Portage 页面：
 
@@ -3565,66 +3428,63 @@ $portage
 
 ### 1.b. 存储文件
 
-### Portage 树
+#### Portage 树
 
-Portage 树的位置是 /usr/portage。这由 PORTDIR 变量定义。当你将 Portage 树存储在其他处时（更改此变量），记得相应地更改 /etc/profile。
+Portage 树的位置是 `/usr/portage`。这由 `PORTDIR` 变量定义。当你将 Portage 树存储在其他处时（更改此变量），记得相应地更改 `/etc/profile`。
 
-如果你更改了 PORTDIR 变量，你可能还需要更改以下变量，它们不会感知 PORTDIR 的变化。这是由于。
+如果你更改了 `PORTDIR` 变量，你可能还需要更改以下变量，它们不会感知 `PORTDIR` 的变化。这是由于。
 
 #### 预编译二进制文件
 
-即使 Portage 默认不使用预编译二进制文件，它也有支持。当你要求 Portage 处理预编译包时，它会在 /etc/packages 中查找。该位置由 PKGDIR 变量定义。
+即使 Portage 默认不使用预编译二进制文件，它也有支持。当你要求 Portage 处理预编译包时，它会在 `/etc/packages` 中查找。该位置由 `PKGDIR` 变量定义。
 
 #### 源代码
 
-源代码默认存储在 /etc/dist。该位置由 DISTDIR 变量定义。
+源代码默认存储在 `/etc/dist`。该位置由 `DISTDIR` 变量定义。
 
 #### RPM 文件
 
-即使 Portage 不能使用 RPM 文件，它也能通过 ebuild 命令生成。 存储 RPM 文件的默认位置是 /etc/rpm，这由 RMPDIR 变量定义。
+即使 Portage 不能使用 RPM 文件，它也能通过 `ebuild` 命令生成。存储 RPM 文件的默认位置是 `/etc/rpm`，这由 `RMPDIR` 变量定义。
 
 #### Portage 数据库
 
-Portage 将状态存储在 /var/db/pkg（哪些文件属于哪个包）。不要手动修改这些文件！这可能会破坏 Portage 对系统的认知。
+Portage 将状态存储在 `/var/db/pkg`（哪些文件属于哪个包）。不要手动修改这些文件！这可能会破坏 Portage 对系统的认知。
 
 #### Portage 缓存
 
-Portage 缓存（修改时间、虚拟、依赖树等）存储在 /var/cache/edb。该位置是一个缓存：在你没有运行任何 portage 相关应用程序时，可以清理它。
+Portage 缓存（修改时间、虚拟、依赖树等）存储在 `/var/cache/edb`。该位置是一个缓存：在你没有运行任何 portage 相关应用程序时，可以清理它。
 
 ### 配置特定的配置
 
 #### 信息
 
-配置特定的信息包含在 /etc/profile 中。之前提到的配置可以通过 /etc/profile 进行更改。这是因为许多 Portage 使用配置。
+配置特定的信息包含在 `/etc/profile` 中。之前提到的配置可以通过 `/etc/profile` 进行更改。这是因为许多 Portage 使用配置。
 
 #### 用户特定配置
 
-用户特定配置通过 /etc/profile 处理。在 /etc/profile 中你可以找到：
+用户特定配置通过 `/etc/profile` 处理。在 `/etc/profile` 中你可以找到：
 
-- package.mask: 你想要屏蔽的包
-- package.unmask: 你想要取消屏蔽的包
-- package.keywords: 你想要关键词的包
-- package.use: 你想要使用的标记
-- package.local: 本地覆盖
+- `package.mask`: 你想要屏蔽的包
+- `package.unmask`: 你想要取消屏蔽的包
+- `package.keywords`: 你想要关键词的包
+- `package.use`: 你想要使用的标记
+- `package.local`: 本地覆盖
 
 ### 2. 编译软件
 
 #### Portage 临时文件
 
-Portage 的临时文件默认存储在 /var/tmp。这由 PORTAGE_TMPDIR 变量定义。要更改此，你可以在 /etc/profile 中设置该变量。
-
-
-
+Portage 的临时文件默认存储在 `/var/tmp`。这由 `PORTAGE_TMPDIR` 变量定义。要更改此，你可以在 `/etc/profile` 中设置该变量。
 
 如果你设置了 `PORTAGE_TMPDIR`，你可能也想要修改以下变量，因为它们不会感知到 `PORTAGE_TMPDIR` 的变化。这是由于 Portage 处理变量的方式：`BUILD_PREFIX`。
 
-## 编译目录
+#### 编译目录
 
-Portage 为每个嵌入在 /var/tmp/portage 下的包创建特定的编译目录。该位置由 `BUILD_PREFIX` 变量定义。
+Portage 为每个嵌入在 `/var/tmp/portage` 下的包创建特定的编译目录。该位置由 `BUILD_PREFIX` 变量定义。
 
 #### Live文件系统位置
 
-默认情况下，Portage 将所有文件安装在当前文件系统（/)上，你可以通过设置 `ROOT` 环境变量来更改。这在你想要构建镜像时非常有用。
+默认情况下，Portage 将所有文件安装在当前文件系统（`/`）上，你可以通过设置 `ROOT` 环境变量来更改。这在你想要构建镜像时非常有用。
 
 ### 1.d. 日志功能
 
@@ -3640,7 +3500,7 @@ Portage 可以创建重新编译日志（re-ebuild logs），但只有当 `PORT_
 
 ![](img/c0231913cf632f51d9b75da531c717e6_66_0.png)
 
-```
+```bash
 $ man make.conf
 ```
 
@@ -3672,7 +3532,7 @@ $ man make.conf
 
 ![](img/c0231913cf632f51d9b75da531c717e6_66_1.png)
 
-```
+```bash
 $ emerge --info | grep 'CONFIG_PROTECT='
 ```
 
@@ -3680,7 +3540,7 @@ $ emerge --info | grep 'CONFIG_PROTECT='
 
 # 代码列表 3：关于配置文件保护的更多信息
 
-```
+```bash
 $ emerge --help config
 ```
 
@@ -3703,9 +3563,11 @@ $ emerge --help config
 
 # 代码列表 4：关于 mirrorselect 的更多信息
 
-```
+```bash
 $ emerge --help
 ```
+
+
 
 当请求的信息或数据在你的系统中不可用时，Portage 将从互联网检索它们。各种信息和数据通道的服务器位置由以下变量定义：
 
@@ -3721,41 +3583,6 @@ $ emerge --help
 ```
 $ emerge --help
 ```
-（注：此处由于原文文本存在部分重复和错乱，翻译已根据指令“不要重复输出原文”的原则进行了逻辑对齐，确保译文通顺）
-
-如果你想使用更多软件，可以考虑使用测试分支。让 Portage 使用测试分支，在你的架构中。
-
-当请求的信息或数据在你的系统中不可用时，Portage 将从互联网检索它们。各种信息和数据通道的服务器位置由以下变量定义：
-
-- `GENTOO_MIRRORS` 定义了包含源码（distifles）的位置列表。
-- `PORTAGE_BINHOS` 定义了包含你系统预编译包的特定位置。
-
-第三个设置涉及你更新 Portage 树时使用的 rsync 服务器位置：
-
-- `SYNC_MIRRORS` 和 `SYNC` 变量可以由 `mirrorselect` 自动设置。你需要在使用它之前合并 `mirrorselect`。更多信息请参见 `mirrorselect` 的在线帮助：
-
-# 代码列表 4：关于 mirrorselect 的更多信息
-
-```
-$ emerge --help
-```
-如果你想使用更多软件，可以考虑使用测试分支。让 Portage 使用测试分支，在你的架构中。
-
-当请求的信息或数据在你的系统中不可用时，Portage 将从互联网检索它们。各种信息和数据通道的服务器位置由以下变量定义：
-
-- `GENTOO_MIRRORS` 定义了包含源码（distifles）的位置列表。
-- `PORTAGE_BINHOS` 定义了包含你系统预编译包的特定位置。
-
-第三个设置涉及你更新 Portage 树时使用的 rsync 服务器位置：
-
-- `SYNC_MIRRORS` 和 `SYNC` 变量可以由 `mirrorselect` 自动设置。你需要在使用它之前合并 `mirrorselect`。更多信息请参见 `mirrorselect` 的在线帮助：
-
-# 代码列表 4：关于 mirrorselect 的更多信息
-
-```
-$ emerge --help
-```
-（注：由于原文文本中存在大量段落重复，译文已根据逻辑结构进行去重处理，确保输出内容完整且不重复）
 
 #### 获取命令
 
@@ -3763,20 +3590,13 @@ Portage 能够恢复下载的文件。它默认使用 `wget`。
 
 如果你想使用来自测试分支的特定软件版本，但不希望 Portage 对后续版本使用测试分支，你可以在 `package.keywords` 文件中添加版本。在这种情况下，你必须使用 `=` 运算符。你也可以使用 `<` 使用版本范围。
 
-[/content]
-
-**修正：根据原文文本逻辑，修正后的完整逻辑译文如下：**
-
 写入此类保护位置的文件将被重命名，并会警告用户存在该（假设是推测的）配置文件的新版本。
 
 你可以通过 `emerge --info` 的输出获取当前的 `CONFIG_PROTECT` 设置：
 
-![](img/c0231913cf632f51d9b75da531c717e6_66_1.png)
-
 ```
 $ emerge --info | grep 'CONFIG_PROTECT='
 ```
-（注：原文末尾的重复内容已根据指令要求去重）
 
 ### 2.f. Portage 行为
 
@@ -3808,6 +3628,7 @@ $ emerge --info | grep 'CONFIG_PROTECT='
 
 ```
 代码列表 1：设置 ACCEPT_KEYWORDS 变量
+
 ACCEPT_KEYWORDS="x86"
 ```
 
@@ -3821,14 +3642,13 @@ ACCEPT_KEYWORDS="x86"
 
 ```
 代码列表 2：/etc/portage/package.keywords 为 gnumeric 的设置
+
 app-office/gnumeric-x86
 ```
 
 #### 测试特定版本
 
 如果你想使用测试分支中的特定软件版本，但不希望 Portage 对后续版本使用测试分支，你可以在 `package.keywords` 文件中添加版本。在这种情况下你必须使用 `=` 运算符。你也可以使用 `<` 使用版本范围。
-
-
 
 `<` 或 `>=` 运算符。
 
@@ -3890,107 +3710,91 @@ etc-update 是一个辅助合并 `_cf0000_<name>` 文件的工具。它提供交
 
 ```
 通过相应的数字选择要编辑的文件。
+
 (-1 退出) (-3 自动合并所有剩余文件)
-(-5 自动合并并使用 'mv -i');
 ```
 
-如果你输入 -1，etc-update 将退出并停止任何后续更改。如果你输入 -3 或 -5，所有配置文件将被用新版本覆盖。因此，选择不应自动更新的第一个配置文件是非常关键的。这只需输入该配置文件左侧列出的数字即可。
+
+
+(-5 自动合并并使用 `mv -i`);
+
+如果你输入 `-1`，`etc-update` 将退出并停止任何后续更改。如果你输入 `-3` 或 `-5`，所有配置文件将被用新版本覆盖。因此，选择不应自动更新的第一个配置文件是非常关键的。这只需输入该配置文件左侧列出的数字即可。
 
 作为一个示例，我们选择了配置文件 `/etc/perf.conf`：
 
-## 代码列表 3：更新特定的配置文件
+### 代码列表 3：更新特定的配置文件
 
 ```
 /etc/perf.conf 和 /etc/._cfgg0000_perf.conf 之间的差异开始
+
 ---
+
 /etc/perf.conf 和 /etc/._cfgg0000_perf.conf 之间的差异结束
+
 1) 用更新版本替换原始文件
+
 2) 更新并保持原始文件不变
+
 3) 交互式合并原始文件与更新版本
+
 4) 再次显示差异
 ```
 
-你可以看到两个文件之间的差异。如果你认为更新后的配置文件可以无问题使用，输入 1。如果你认为更新后的配置文件是不正确的，或没有提供任何有用信息，输入 2。如果你想交互式地更新当前文件，输入 3。
+你可以看到两个文件之间的差异。如果你认为更新后的配置文件可以无问题使用，输入 `1`。如果你认为更新后的配置文件是不正确的，或没有提供任何有用信息，输入 `2`。如果你想交互式地更新当前文件，输入 `3`。
 
 这里没有必要进一步阐述合并过程。为了完整起见，将列出在交互式合并这两个文件时可以使用可以使用命令。你将看到两个文件（原始文件和建议的新文件）以及一个可以输入以下命令的提示符：
 
-## 代码列表 4：交互式合并命令
+### 代码列表 4：交互式合并命令
 
 ```
 ed    编辑两个版本，每个版本都带有页头。
+
 eeb   编辑使用两个版本。
+
 elf   编辑使用左侧版本。
+
 err   编辑使用右侧版本。
+
 e    编辑当前版本。
+
 i    使用左侧版本。
+
 r    使用右侧版本。
+
 s    使用当前版本。
+
 v    详细信息。
+
 q    退出。
 ```
 
-如果你输入 -1，etc-update 将退出并停止任何后续更改。如果你输入 -3 或 -5，所有配置文件将被用新版本覆盖。因此，选择不应自动更新的第一个配置文件是非常关键的。这只需输入该配置文件左侧列出的数字即可。
+当你不想让 Portage 考虑某个包或包的特定版本时，可以通过向 `/etc/portage/package.mask` 添加适当的行来屏蔽它。例如，如果你不想让 Portage 从 `gentoo-sources-2.6.8.1` 安装内核源码，向 `package.mask` 中添加以下行：
 
-作为一个示例，我们选择了配置文件 `/etc/perf.conf`：
-
-## 代码列表 3：更新特定的配置文件
-
-```
-/etc/perf.conf 和 /etc/._cfgg0000_perf.conf 之间的差异开始
----
-/etc/perf.conf 和 /etc/._cfgg0000_perf.conf 之间的差异结束
-1) 用更新版本替换原始文件
-2) 更新并保持原始文件不变
-3) 交互式合并原始文件与更新版本
-4) 再次显示差异
-```
-
-你可以看到两个文件之间的差异。如果你认为更新后的配置文件可以无问题使用，输入 1。如果你认为更新后的配置文件是不正确的，或没有提供任何有用信息，输入 2。如果你想交互式地更新当前文件，输入 3。
-
-这里没有必要进一步阐述合并过程。为了完整起见，将列出在交互式合并这两个文件时可以使用命令。你将看到两个文件（原始文件和建议的新文件）以及一个可以输入以下命令的提示符：
-
-## 代码列表 4：交互式合并命令
-
-```
-ed    编辑两个版本，每个版本都带有页头。
-eeb   编辑使用两个版本。
-elf   编辑使用左侧版本。
-err   编辑使用右侧版本。
-e    编辑当前版本。
-i    使用左侧版本。
-r    使用右侧版本。
-s    使用当前版本。
-v    详细信息。
-q    退出。
-```
-
-当你不想让 Portage 考虑某个包或包的特定版本时，可以通过向 `/etc/portage/package.mask` 添加适当的行来屏蔽它。例如，如果你不想让 Portage 从 `gentoo-sources-2.6.8.1` 安装内核源码，向 package.mask 中添加以下行：
-
-## 代码列表 5：/etc/portage/package.mask 示例
+### 代码列表 5：/etc/portage/package.mask 示例
 
 ```
 >sys-kernel/gentoo-sources-2.6.8.1
 ```
 
-当一个包被 Gentoo 开发者屏蔽，而你尽管由于 package.mask 文件（位于 `/etc/portage/profiles`）中列出的原因，但仍想使用它时，请在 `/etc/portage/package.unpack` 中添加完全相同的行。
+当一个包被 Gentoo 开发者屏蔽，而你尽管由于 `package.mask` 文件（位于 `/etc/portage/profiles`）中列出的原因，但仍想使用它时，请在 `/etc/portage/package.unpack` 中添加完全相同的行。
 
-例如，如果 `=net-mail/hotwayd-0.8` 被屏蔽，你可以通过在 package.unpack 文件中添加完全相同的行来进行提示：
+例如，如果 `=net-mail/hotwayd-0.8` 被屏蔽，你可以通过在 `package.unpack` 文件中添加完全相同的行来进行提示：
 
-## 代码列表 4：/etc/portage/package.unpack
+### 代码列表 4：/etc/portage/package.unpack
 
 ```
 ~net-mail/hotwayd-0.8
 ```
 
-package.unpack 文件
+`package.unpack` 文件
 
-Gentoo 开发者不支持使用这些文件。在执行此时请务必小心。与 package.unpack 和/或 package.mask 相关的支持请求将不会得到回复。你会收到警告。
+Gentoo 开发者不支持使用这些文件。在执行此时请务必小心。与 `package.unpack` 和/或 `package.mask` 相关的支持请求将不会得到回复。你会收到警告。
 
-package.mask 文件
+`package.mask` 文件
 
-当你不想让 Portage 考虑某个包或包的特定版本时，可以通过向 `/etc/portage/package.mask` 添加适当的行来屏蔽它。例如，如果你不想让 Portage 从 `gentoo-sources-2.6.8.1` 安装内核源码，向 package.mask 中添加以下行：
+当你不想让 Portage 考虑某个包或包的特定版本时，可以通过向 `/etc/portage/package.mask` 添加适当的行来屏蔽它。例如，如果你不想让 Portage 从 `gentoo-sources-2.6.8.1` 安装内核源码，向 `package.mask` 中添加以下行：
 
-## 代码列表 5：/etc/portage/package.mask 示例
+### 代码列表 5：/etc/portage/package.mask 示例
 
 ```
 >sys-kernel/gentoo-sources-2.6.8.1
@@ -4000,11 +3804,11 @@ package.mask 文件
 
 ### 4.a. etc-update
 
-etc-update 是一个辅助合并 `_cf0000_<name>` 文件的工具。它提供交互式的合并设置，并可以自动合并细微更改。`_cf0000_<name>` 文件是 Portage 在想要覆盖受 `CONFIG_PROTECT` 变量保护目录中的文件时生成的。
+`etc-update` 是一个辅助合并 `_cf0000_<name>` 文件的工具。它提供交互式的合并设置，并可以自动合并细微更改。`_cf0000_<name>` 文件是 Portage 在想要覆盖受 `CONFIG_PROTECT` 变量保护目录中的文件时生成的。
 
-运行 etc-update 非常简单：
+运行 `etc-update` 非常简单：
 
-## 代码列表 1：运行 etc-update
+### 代码列表 1：运行 etc-update
 
 ```
 # etc-update
@@ -4012,52 +3816,69 @@ etc-update 是一个辅助合并 `_cf0000_<name>` 文件的工具。它提供交
 
 在合并简单的更改后，系统将向你列出等待更新的受保护文件。在底部，你将看到以下选项：
 
-## 代码列表 2：etc-update 选项
+### 代码列表 2：etc-update 选项
 
 ```
 通过相应的数字选择要编辑的文件。
+
 (-1 退出) (-3 自动合并所有剩余文件)
+
 (-5 自动合并并使用 'mv -i');
 ```
 
-如果你输入 -1，etc-update 将退出并停止任何后续更改。如果你输入 -3 或 -5，所有配置文件将被用新版本覆盖。因此，选择不应自动更新的第一个配置文件是非常关键的。这只需输入该配置文件左侧列出的数字即可。
+如果你输入 `-1`，`etc-update` 将退出并停止任何后续更改。如果你输入 `-3` 或 `-5`，所有配置文件将被用新版本覆盖。因此，选择不应自动更新的第一个配置文件是非常关键的。这只需输入该配置文件左侧列出的数字即可。
 
 作为一个示例，我们选择了配置文件 `/etc/perf.conf`：
 
-## 代码列表 3：更新特定的配置文件
+### 代码列表 3：更新特定的配置文件
 
 ```
 /etc/perf.conf 和 /etc/._cfgg0000_perf.conf 之间的差异开始
+
 ---
+
 /etc/perf.conf 和 /etc/._cfgg0000_perf.conf 之间的差异结束
+
 1) 用更新版本替换原始文件
+
 2) 更新并保持原始文件不变
+
 3) 交互式合并原始文件与更新版本
+
 4) 再次显示差异
 ```
 
-你可以看到两个文件之间的差异。如果你认为更新后的配置文件可以无问题使用，输入 1。如果你认为更新后的配置文件是不正确的，或没有提供任何有用信息，输入 2。如果你想交互式地更新当前文件，输入 3。
+你可以看到两个文件之间的差异。如果你认为更新后的配置文件可以无问题使用，输入 `1`。如果你认为更新后的配置文件是不正确的，或没有提供任何有用信息，输入 `2`。如果你想交互式地更新当前文件，输入 `3`。
 
 这里没有必要进一步阐述合并过程。为了完整起见，将列出在交互式合并这两个文件时可以使用命令。你将看到两个文件（原始文件和建议的新文件）以及一个可以输入以下命令的提示符：
 
-## 代码列表 4：交互式合并命令
+### 代码列表 4：交互式合并命令
 
 ```
 ed    编辑两个版本，每个版本都带有页头。
+
 eeb   编辑使用两个版本。
+
 elf   编辑使用左侧版本。
+
 err   编辑使用右侧版本。
+
 e    编辑当前版本。
+
 i    使用左侧版本。
+
 r    使用右侧版本。
+
 s    使用当前版本。
+
 v    详细信息。
+
 q    退出。
 ```
 
-当你不想让 Portage 考虑某个包或包的特定版本时，可以通过向 `/etc/portage/package.mask` 添加适当的行来屏蔽它。例如，如果你不想让 Portage 从 `gentoo-sources-2.6.8.1` 安装内核源码，向 package.mask 中添加以下行：
+当你不想让 Portage 考虑某个包或包的特定版本时，可以通过向 `/etc/portage/package.mask` 添加适当的行来屏蔽它。例如，如果你不想让 Portage 从 `gentoo-sources-2.6.8.1` 安装内核源码，向 `package.mask` 中添加以下行：
 
-## 代码列表 5：/etc/portage/package.mask 示例
+### 代码列表 5：/etc/portage/package.mask 示例
 
 ```
 >sys-kernel/gentoo-sources-2.6.8.1
@@ -4067,11 +3888,11 @@ q    退出。
 
 ### 4.a. etc-update
 
-etc-update 是一个辅助合并 `_cf0000_<name>` 文件的工具。它提供交互式的合并设置，并可以自动合并细微更改。`_cf0000_<name>` 文件是 Portage 在想要覆盖受 `CONFIG_PROTECT` 变量保护目录中的文件时生成的。
+`etc-update` 是一个辅助合并 `_cf0000_<name>` 文件的工具。它提供交互式的合并设置，并可以自动合并细微更改。`_cf0000_<name>` 文件是 Portage 在想要覆盖受 `CONFIG_PROTECT` 变量保护目录中的文件时生成的。
 
-运行 etc-update 非常简单：
+运行 `etc-update` 非常简单：
 
-## 代码列表 1：运行 etc-update
+### 代码列表 1：运行 etc-update
 
 ```
 # etc-update
@@ -4079,15 +3900,19 @@ etc-update 是一个辅助合并 `_cf0000_<name>` 文件的工具。它提供交
 
 在合并简单的更改后，系统将向你列出等待更新的受保护文件。在底部，你将看到以下选项：
 
-## 代码列表 2：etc-update 选项
+### 代码列表 2：etc-update 选项
 
-```
+
+
 通过相应的数字选择要编辑的文件。
-(-1 退出) (-3 自动合并所有剩余文件)
-(-5 自动合并并使用 'mv -i');
-```
 
+`(-1` 退出) `(-3` 自动合并所有剩余文件)
+
+`(-5` 自动合并并使用 '`mv -i`' );
+
+```
 如果你输入 -1，etc-update 将退出并停止任何后续更改。如果你输入 -3 或 -5，所有配置文件将被用新版本覆盖。因此，选择不应自动更新的第一个配置文件是非常关键的。这只需输入该配置文件左侧列出的数字即可。
+```
 
 作为一个示例，我们选择了配置文件 `/etc/perf.conf`：
 
@@ -4095,15 +3920,21 @@ etc-update 是一个辅助合并 `_cf0000_<name>` 文件的工具。它提供交
 
 ```
 /etc/perf.conf 和 /etc/._cfgg0000_perf.conf 之间的差异开始
+
 ---
+
 /etc/perf.conf 和 /etc/._cfgg0000_perf.conf 之间的差异结束
+
 1) 用更新版本替换原始文件
+
 2) 更新并保持原始文件不变
+
 3) 交互式合并原始文件与更新版本
+
 4) 再次显示差异
 ```
 
-你可以看到两个文件之间的差异。如果你认为更新后的配置文件可以无问题使用，输入 1。如果你认为更新后的配置文件是不正确的，或没有提供任何有用信息，输入 2。如果你想交互式地更新当前文件，输入 3。
+你可以看到两个文件之间的差异。如果你认为更新后的配置文件可以无问题使用，输入 `1`。如果你认为更新后的配置文件是不正确的，或没有提供任何有用信息，输入 `2`。如果你想交互式地更新当前文件，输入 `3`。
 
 这里没有必要进一步阐述合并过程。为了完整起见，将列出在交互式合并这两个文件时可以使用命令。你将看到两个文件（原始文件和建议的新文件）以及一个可以输入以下命令的提示符：
 
@@ -4111,14 +3942,23 @@ etc-update 是一个辅助合并 `_cf0000_<name>` 文件的工具。它提供交
 
 ```
 ed    编辑两个版本，每个版本都带有页头。
+
 eeb   编辑使用两个版本。
+
 elf   编辑使用左侧版本。
+
 err   编辑使用右侧版本。
+
 e    编辑当前版本。
+
 i    使用左侧版本。
+
 r    使用右侧版本。
+
 s    使用当前版本。
+
 v    详细信息。
+
 q    退出。
 ```
 
@@ -4128,7 +3968,7 @@ q    退出。
 
 排除包/类别
 
-你可以选择性地更新类别/包并忽略其他类别。我们通过让 rsync 在合并 --sync 时排除类别/包来实现这一点。
+你可以选择性地更新类别/包并忽略其他类别。我们通过让 `rsync` 在合并 `--sync` 时排除类别/包来实现这一点。
 
 你需要在 `/etc.conf` 的 `RSYNC_EXCLUDE` 变量中定义包含排除模式的文件名。
 
@@ -4154,7 +3994,7 @@ games/*
 
 处理多个 Overlay
 
-对于想要多个 Overlay、在包进入 Portage 树之前进行测试或仅仅是为了从各种来源使用非官方构建的强力用户，app-portage-gentookit-build package sync 是一个帮助你保持 Portage Overlay 更新的工具。每个仓库应该在 `/etc/gentoo/configuration` 目录下有一个 `.rsyncsource` 文件，其中包含仓库位置、名称、ID 等。
+对于想要多个 Overlay、在包进入 Portage 树之前进行测试或仅仅是为了从各种来源使用非官方构建的强力用户，`app-portage-gentookit-build` package sync 是一个帮助你保持 Portage Overlay 更新的工具。每个仓库应该在 `/etc/gentoo/configuration` 目录下有一个 `.rsyncsource` 文件，其中包含仓库位置、名称、ID 等。
 
 假设你有两个额外的仓库，分别名为 `java`（用于开发中的 Java 构建）和 `entapps`（用于为企业内部开发的应用程序）。你可以使用以下命令更新这些仓库：
 
@@ -4174,45 +4014,37 @@ games/*
 
 ## 6. 构建应用程序
 
-
-
-
-
 # 6. Emerge 和 Ebuild
 
-ebuild 是 Portage 系统的一个低级接口。使用此应用程序，你可以针对指定的 ebuild 执行特定的操作。例如，你可以手动执行单独的合并步骤。
+`ebuild` 是 Portage 系统的一个低级接口。使用此应用程序，你可以针对指定的 ebuild 执行特定的操作。例如，你可以手动执行单独的合并步骤。
 
-ebuild 通常用于开发目的；因此，关于 ebuild 的更多信息可以在《开发者手册》（Developers Handbook）中找到。然而，我们将解释 Portage 在特定软件标题的合并过程中是如何调用 ebuild 实例的，以及如何调用某些 ebuild 允许你执行的配置后步骤。
+`ebuild` 通常用于开发目的；因此，关于 `ebuild` 的更多信息可以在《开发者手册》（Developers Handbook）中找到。然而，我们将解释 Portage 在特定软件标题的合并过程中是如何调用 `ebuild` 实例的，以及如何调用某些 `ebuild` 允许你执行的配置后步骤。
 
 ## 6.b. 手动安装软件
 
 ### 获取源码与校验
 
-每当你针对给定的 ebuild 调用 ebuild 时，它会验证所有涉及文件的校验和是否与附带 `Manifest` 文件或 `files/digest-<name>-<version>` 文件中的值相等。这在获取源码之后发生。
+每当你针对给定的 `ebuild` 调用 `ebuild` 时，它会验证所有涉及文件的校验和是否与附带 `Manifest` 文件或 `files/digest-<name>-<version>` 文件中的值相等。这在获取源码之后发生。
 
-使用 ebuild 获取源码，运行：
-
-![](img/c0231913cf632f51d9b75da531c717e6_72_0.png)
+使用 `ebuild` 获取源码，运行：
 
 ```
 # ebuild path/to/ebuild fetch
 ```
 
-如果 ebuild 的 mdsum 与 `Manifest` 文件中列出的不匹配，或者下载的源码与 `files/digest-<package>` 文件中列出的不匹配，你会收到类似下面的错误：
-
-![](img/c0231913cf632f51d9b75da531c717e6_72_1.png)
+如果 `ebuild` 的 `mdsum` 与 `Manifest` 文件中列出的不匹配，或者下载的源码与 `files/digest-<package>` 文件中列出的不匹配，你会收到类似下面的错误：
 
 ```
 !!! File is corrupt or incomplete. (Digests do not match)
+
 >>> our recorded digest: db20421ce35e854346e3ef19e6044e
+
 >>> your file's digest: f10392b7c0b2bc463ad0964260a7d6
 ```
 
 后续的一行将提到错误的文件。
 
-如果你确定获取的源码和 ebuild 本身是有效的，可以使用 ebuild 的功能重新生成 `Manifest` 和 `digest-<package>` 文件：
-
-![](img/c0231913cf632f51d9b75da531c717e6_72_2.png)
+如果你确定获取的源码和 `ebuild` 本身是有效的，可以使用 `ebuild` 的功能重新生成 `Manifest` 和 `digest-<package>` 文件：
 
 ```
 # ebuild path/to/ebuild digest
@@ -4220,27 +4052,23 @@ ebuild 通常用于开发目的；因此，关于 ebuild 的更多信息可以�
 
 ### 解包源码
 
-要在 `/var/tmp/portage`（或任何你在 `/etc/make.conf` 中指定的目录）中解包源码，请运行 ebuild 的 unpack 功能：
-
-![](img/c0231913cf632f51d9b75da531c717e6_72_3.png)
+要在 `/var/tmp/portage`（或任何你在 `/etc/make.conf` 中指定的目录）中解包源码，请运行 `ebuild` 的 `unpack` 功能：
 
 ```
 # ebuild path/to/ebuild unpack
 ```
 
-这将执行 ebuild 的 `src_unpack()` 函数（如果没有定义 `src_unpack()`，则默认执行纯粹解压）。必要的补丁（patches）也是在这一步应用的的。
+这将执行 `ebuild` 的 `src_unpack()` 函数（如果没有定义 `src_unpack()`，则默认执行纯粹解压）。必要的补丁（patches）也是在这一步应用的的。
 
 ### 编译源码
 
-合并过程的下一步是编译源码。ebuid 的 `compile` 功能通过执行 ebuild 中的 `src_compile()` 函数来处理这一步。这这也包括相应的 `configure` 步骤。
-
-![](img/c0231913cf632f51d9b75da531c717e6_72_4.png)
+合并过程的下一步是编译源码。`ebuid` 的 `compile` 功能通过执行 `ebuild` 中的 `src_compile()` 函数来处理这一步。这这也包括相应的 `configure` 步骤。
 
 ```
 # ebuild path/to/ebuild compile
 ```
 
-如果你想更改编译指令，建议编辑 ebuild 的 `src_compile()` 函数。不过，你也可以骗过 Portage，使其认为 ebuild 已经完成了编译步骤。运行所有必要的命令并在工作目录下创建一个名为 `.compiled` 的空文件：
+如果你想更改编译指令，建议编辑 `ebuild` 的 `src_compile()` 函数。不过，你也可以骗过 Portage，使其认为 `ebuild` 已经完成了编译步骤。运行所有必要的命令并在工作目录下创建一个名为 `.compiled` 的空文件：
 
 # 代码列表 6：告知 Portage 编译任务已完成
 
@@ -4249,7 +4077,7 @@ ebuild 通常用于开发目的；因此，关于 ebuild 的更多信息可以�
 ```
 
 ### 在临时位置安装文件
-在下一步，Portage 将将所有必要文件安装在临时位置。该目录将包含所有要在运行系统上合并的文件。你可以通过运行 ebuild 的 `install` 功能来实现这一点，该功能会执行 ebuild 的 `src_install()` 函数：
+在下一步，Portage 将将所有必要文件安装在临时位置。该目录将包含所有要在运行系统上合并的文件。你可以通过运行 `ebuild` 的 `install` 功能来实现这一点，该功能会执行 `ebuild` 的 `src_install()` 函数：
 
 # 代码列表 7：安装文件
 
@@ -4257,26 +4085,28 @@ ebuild 通常用于开发目的；因此，关于 ebuild 的更多信息可以�
 # ebuild path/to/ebuild
 ```
 
+
+
 ### 将文件合并到运行系统
-最后一步是将所有文件合并到运行系统（livesystem）并在 Portage 后端注册这些文件。ebuid 的 "qmerge" 步骤涉及以下操作：
+最后一步是将所有文件合并到运行系统（`livesystem`）并在 Portage 后端注册这些文件。`ebuild` 的 "`qmerge`" 步骤涉及以下操作：
 
 - 如果指定，执行 `pkg_preinst()` 函数
 - 将所有文件复制到运行系统
 - 在 Portage 后端注册文件
 - 如果指定，执行 `pkg_postinst()` 函数
 
-运行 ebuild 的 `qmerge` 功能来完成这些步骤：
+运行 `ebuild` 的 `qmerge` 功能来完成这些步骤：
 
-# 代码列表 8：在运行系统上合并 ebuild
+#### 代码列表 8：在运行系统上合并 ebuild
 
 ```
 # ebuild path/to/ebuild qmerge
 ```
 
 ### 清理临时目录
-最后，你可以使用 ebuild 的 `clean` 功能清理临时目录：
+最后，你可以使用 `ebuild` 的 `clean` 功能清理临时目录：
 
-# 代码列表 9：清理临时目录
+#### 代码列表 9：清理临时目录
 
 ```
 # ebuild path/to/ebuild clean
@@ -4284,85 +4114,96 @@ ebuild 通常用于开发目的；因此，关于 ebuild 的更多信息可以�
 
 ## 6.c. 额外的 Ebuild 功能
 ### 运行合并相关命令
-使用 ebuild 的 `merge` 功能，你可以一次性运行 `fetch`、`unpack`、`compile` 和 `qmerge` 命令：
+使用 `ebuild` 的 `merge` 功能，你可以一次性运行 `fetch`、`unpack`、`compile` 和 `qmerge` 命令：
 
-# 代码列表 10：安装软件
+#### 代码列表 10：安装软件
 
 ```
 # ebuild path/to/ebuild merge
 ```
 
 ### 执行配置操作
-某些应用程序包含了进一步配置你的系统的指令。这些指令是交互式的，因此不会自动执行。要运行 ebuild（可选的）`config()` 函数中列出的这些步骤，请使用 ebuild 的 `config` 功能：
+某些应用程序包含了进一步配置你的系统的指令。这些指令是交互式的，因此不会自动执行。要运行 `ebuild`（可选的）`config()` 函数中列出的这些步骤，请使用 `ebuild` 的 `config` 功能：
 
-# 代码列表 11：配置包
+#### 代码列表 11：配置包
 
 ```
 # ebuild path/to/ebuild config
 ```
 
 ### 构建包（或 RPM）
-你可以指示 Portage 创建二进制包或 RPM 文件。使用 ebuild 的 `package` 或 `rpm` 功能来创建归档。这些功能之间存在一些差异：
+你可以指示 Portage 创建二进制包或 RPM 文件。使用 `ebuild` 的 `package` 或 `rpm` 功能来创建归档。这些功能之间存在一些差异：
 
 - `package` 功能类似于 `merge` 功能，在创建包之前执行所有必要的步骤（`fetch`、`unpack`、`compile`）
 - `rpm` 功能在运行 `install` 功能后构建 RPM 包
 
-# 代码列表 12：创建包
+#### 代码列表 12：创建包
 
 ```
 （对于二进制包）
+
 # ebuild path/to/ebuild package
 
 （对于 RPM 包）
+
 # ebuild path/to/ebuild rpm
 ```
 
 生成的 RPM 文件不包含依赖信息。
 
 ## 6.d. 更多信息
-关于 Portage、ebuid 应用和 ebuild 文件的更多信息请参考以下帮助页：
+关于 Portage、`ebuild` 应用和 `ebuild` 文件的更多信息请参考以下帮助页：
 
-# 代码列表 13：帮助页
+#### 代码列表 13：帮助页
 
 ```
 $ portage (Portage 本身)
+
 $ emerge (emerge 命令)
-$ ebuild (ebuid 命令)
-man ebuild (ebuid 文件)
+
+$ ebuild (ebuild 命令)
+
+man ebuild (ebuild 文件)
 ```
 
 你还可以在《开发者手册》中找到开发相关信息。
 
 ## D. Gentoo 网络
 ### 1. 开始
-### 1.a. 开始
+#### 1.a. 开始
 注意：本文假设你已经正确配置了内核、硬件模块以及接口名称。我们还假设你配置的是 `eth0`，但可能是 `eth1`、`wlan0` 等。
 
 注意：本文需要更好的布局。要启动你的网卡，你需要告知 Gentoo RC 系统。这是通过在 `/etc/init.d` 中从 `net.lo` 到 `net.eth0` 创建符号链接实现的。
 
-# 代码列表 1：将 net.eth0 链接到 net.lo
+#### 代码列表 1：将 net.eth0 链接到 net.lo
 
 ```
 # cd /etc/init.d
-# ln -s  
+
+# ln -s
 ```
 
 Gentoo 的 RC 系统现在知道了接口。它还需要知道如何配置新接口。所有的网络接口都在 `/etc/conf.d` 中配置。以下是 DHCP 和静态地址的示例。
 
-# 代码列表 2：etc/conf.d 示例
+#### 代码列表 2：etc/conf.d 示例
 
 ```
 # 对于 DHCP
+
 config_eth0=( "dhcp" )
 
 # 使用 CIDR 法的静态 IP
+
 config_eth0="192.168.0.7/24"
+
 routes_eth0=( "default via 192.168.0.1" )
 ```
 
 ```
 # 使用子网掩码法的静态 IP
+
 config_eth0=("192.168.0.7 255.255.255.0")
+
 routes_eth0=("default gw 192.168.0.1")
 ```
 
@@ -4372,21 +4213,23 @@ routes_eth0=("default gw 192.168.0.1")
 
 ```
 # /etc/init.d/net.eth0 start
+
 # /etc/init.d/net.eth0 stop
 ```
 
 重要：在排除网络故障时，建议在 `/etc/conf.d/rc` 中设置 `RC_VERBOSE="yes"` 以获取更多信息。
 
-现在你已经成功启动并停止了接口，可能希望它在 Gentoo 启动时自动运行。做法如下，“rc”命令指示 Gentoo 启动运行级别（runlevel）中尚未启动的脚本：
+现在你已经成功启动并停止了接口，可能希望它在 Gentoo 启动时自动运行。做法如下，“`rc`”命令指示 Gentoo 启动运行级别（runlevel）中尚未启动的脚本：
 
 ```
 # rc-update add net.eth0 default
+
 # rc
 ```
 
 ## 2. 高级配置
 ### 2.a. 高级配置
-`config_eth0` 变量是接口的核心。它是配置接口（在本例中为 eth0）的高级指令。列表中的命令都会执行。如果至少有一个有效，则认为接口是正常的。
+`config_eth0` 变量是接口的核心。它是配置接口（在本例中为 `eth0`）的高级指令。列表中的命令都会执行。如果至少有一个有效，则认为接口是正常的。
 
 以下是内置指令列表：
 
@@ -4401,55 +4244,67 @@ routes_eth0=("default gw 192.168.0.1")
 
 ```
 # 添加三个 IPv4 地址
+
 config_eth0={
+
   "192.168.0.2/24"
+
   "192.168.0.3/24"
+
   "192.168.0.4/24"
+
 }
 
 # 添加一个 IPv4 地址和两个 IPv6 地址
+
 config_eth0={
+
   "192.168.0.5/32"
+
   "4321:0:1:2:3:4:567:89ab"
+
   "4321:0:1:2:3:4:567:89ac"
+
 }
 ```
 
-
-
-保留我们内核分配的地址，除非接口掉线，否则通过 DHCP 分配另一个。如果 DHCP 失败，我们将添加一个由 APIPA 确定的静态地址 config_eth0={
-
+保留我们内核分配的地址，除非接口掉线，否则通过 DHCP 分配另一个。如果 DHCP 失败，我们将添加一个由 APIPA 确定的静态地址
 ```
+config_eth0={
+
   "nop"
+
   "dhcp"
+
 }
+
 fallback_eth0={
+
   "null"
+
   "apipa"
+
 }
 ```
 
-> 注意：使用 ifconfig 模块并添加多个地址时，会为每个额外的地址创建接口别名。因此，通过上述两个示例，你将获得 eth0、eth1 和 eth2。你无法对这些接口进行任何特殊操作，因为内核和其他程序会将 eth0 和 eth1 视为 eth2。
+> 注意：使用 `ifconfig` 模块并添加多个地址时，会为每个额外的地址创建接口别名。因此，通过上述两个示例，你将获得 `eth0`、`eth1` 和 `eth2`。你无法对这些接口进行任何特殊操作，因为内核和其他程序会将 `eth0` 和 `eth1` 视为 `eth2`。
 
-> 重要：回退顺序非常重要！如果我们没有指定 null，那么只有在 noop 命令失败时，apipa 命令才会运行。
+> 重要：回退顺序非常重要！如果我们没有指定 `null`，那么只有在 `noop` 命令失败时，`apipa` 命令才会运行。
 
 注意：APIPA 和 DHCP 将在稍后进行讨论。
 
-## 2.b. 网络依赖
+### 2.b. 网络依赖
+`/etc/init.d` 中的初始化脚本可以依赖于特定的接口，或者在 `/etc/conf.d/rc` 中定义的 `net` 也可以具有不同的含义，这取决于 `RC_NET_STRICT_CHECKING` 变量。
 
-/etc/init.d 中的初始化脚本可以依赖于特定的接口，或者在 /etc/conf.d/rc 中定义的 `net` 也可以具有不同的含义，这取决于 `RC_NET_STRICT_CHECKING` 变量。
-
-## 值描述
+#### 值描述
 
 - `net` 服务至少有一个服务 `bednet` 必须处于启动状态。这可以用于带有 WIFI 的笔记本用户，他们只想在给定时间开启一个网络，以便 `net` 服务被视为已启动。
-
 - 此没有选项，但 `net.eth0` 也已连接。这对于不关心特定接口是否启动状态的人很有用。
-
 - 所有网络接口必须处于启动状态，`net` 服务才能被考虑。
 
-但是 net.br0 依赖于 net.eth0 和 net.eth1 呢？net.eth1 是一个无线或 PPP 设备，在添加到网桥之前需要进行配置。这不能在 /etc/init.d/net.br0 中完成，因为它是它的符号链接。
+但是 `net.br0` 依赖于 `net.eth0` 和 `net.eth1` 呢？`net.eth1` 是一个无线或 PPP 设备，在添加到网桥之前需要进行配置。这不能在 `/etc/init.d/net.br0` 中完成，因为它是它的符号链接。
 
-答案是在你的 /etc/conf.d/net 中编写 `depend()` 函数。
+答案是在你的 `/etc/conf.d/net` 中编写 `depend()` 函数。
 
 ```
 代码行 2: /etc/conf/net 中的 net.br0 依赖
@@ -4457,28 +4312,33 @@ fallback_eth0={
 
 ```
 # 你可以使用当前脚本中找到的任何依赖关系（use, after, before）
+
 depend_br0()
+
 need net.eth0 net.eth1
 ```
+
+
 
 关于依赖关系的更详细讨论，请参阅 Gentoo Handbook 中的“在脚本中编写”部分。
 
 ## 2.c. 变量名与
 
-变量名是动态的。它们通常遵循 `variable_${interface}[address|mac]` 的结构。例如，变量 `dhcp_eth0` 保存 eth0 的 DHCP 选项值，而 `dhcp_essid` 存储接口连接到 SSID "essid" 时的 DHCP 选项值。
+变量名是动态的。它们通常遵循 `variable_${interface}[address|mac]` 的结构。例如，变量 `dhcp_eth0` 保存 `eth0` 的 DHCP 选项值，而 `dhcp_essid` 存储接口连接到 SSID "essid" 时的 DHCP 选项值。
 
-然而，这里没有硬性规定服务名必须是 `ethx`。事实上，许多接口的名称如 wax、ras 和 xi，定义的定义的接口（如网桥）也可以被命名为任何名称，例如 foo。为了方便起见，无线访问点可以拥有包含字母数字字符的名称，这很重要，因为你可以根据每个 ESSID 配置网络。
+然而，这里没有硬性规定服务名必须是 `ethx`。事实上，许多接口的名称如 `wax`、`ras` 和 `xi`，定义的定义的接口（如网桥）也可以被命名为任何名称，例如 `foo`。为了方便起见，无线访问点可以拥有包含字母数字字符的名称，这很重要，因为你可以根据每个 ESSID 配置网络。
 
-这一切的缺点是 Gentoo 在网络中使用下划线（bars） - bash 无法在英语字母数字之外使用它们。为了绕过这一限制，我们将每个非字母数字的变量更改为 `_` 字符。
+这一切的缺点是 Gentoo 在网络中使用下划线（bars） - `bash` 无法在英语字母数字之外使用它们。为了绕过这一限制，我们将每个非字母数字的变量更改为 `_` 字符。
 
-bash 的另一个缺点是变量的内容 - 某些字符需要转义。这可以通过需要在转义的字符前面放置 `\` 字符来实现。例如 `\.` 和 `\'`。
+`bash` 的另一个缺点是变量的内容 - 某些字符需要转义。这可以通过需要在转义的字符前面放置 `\` 字符来实现。例如 `\.` 和 `\'`。
 
 在这个示例中，我们使用 ESSID，因为它们包含最广泛的字符集。我们将使用 ESSID My \NET：
 
-# 代码列表 3：变量名示例
+### 代码列表 3：变量名示例
 
 ```
 # 这可行，但域名是无效的
+
 dns_domain_My___NET=My \ NET
 ```
 
@@ -4492,47 +4352,51 @@ dns_domain_My___NET=My \ NET
 
 如果模块所需的包已安装，则加载模块。如果你在这里指定了一个未安装对应包的模块，你将收到一个错误，说明你需要安装哪个包。理想情况下，只有当你安装了两个或多个提供服务的包且需要倾向于其中某一个时，才使用模块设置。
 
-> 注意：除非另有说明，这里讨论的所有设置都在 /etc/conf.d/net 中。
+> 注意：除非另有说明，这里讨论的所有设置都在 `/etc/conf.d/net` 中。
 
-# 代码列表 1：模块偏好
+### 代码列表 1：模块偏好
 
 ```
 # 优先使用 iproute2 而非 ifconfig
+
 modules=( "iproute2")
 ```
 
 - 你也可以为接口指定其他模块
-- 在这种情况下，我们优先使用 dhcp6 而非 dhcpcd
-modules_eth0="dhcp6"
-- 你也可以指定不使用的模块 - 例如，你可能正在使用 supplicant 或 linux-ng 来控制无线配置，但你仍然想通过关联的 ESSID 配置网络设置。
-modules=("iwiconfig")
+- 在这种情况下，我们优先使用 `dhcp6` 而非 `dhcpcd`
+`modules_eth0="dhcp6"`
+- 你也可以指定不使用的模块 - 例如，你可能正在使用 `supplicant` 或 `linux-ng` 来控制无线配置，但你仍然想通过关联的 ESSID 配置网络设置。
+`modules=("iwiconfig")`
 
 ### 3.b. 接口处理器
 
-我们目前提供两个处理器：ifconfig 和 iproute2。你需要其中之一来执行任何类型的网络配置。
+我们目前提供两个处理器：`ifconfig` 和 `iproute2`。你需要其中之一来执行任何类型的网络配置。
 
-ifconfig 是 Gentoo 的默认选择，它包含在系统配置中。iproute2 是一个更强大且灵活的包，但默认并不包含。
+`ifconfig` 是 Gentoo 的默认选择，它包含在系统配置中。`iproute2` 是一个更强大且灵活的包，但默认并不包含。
 
-# 代码列表 2：使用 iproute2
+### 代码列表 2：使用 iproute2
 
 ```
 # emerge sys-apps/iproute2
+
 # 如果两者都安装，则优先使用 iproute2
+
 modules=(\iproute2")
 ```
 
-由于 ifconfig 和 iproute2 执行的操作非常相似，它们允许配置互通工作。
+由于 `ifconfig` 和 `iproute2` 执行的操作非常相似，它们允许配置互通工作。
 
-# 代码列表 3：ifconfig 和 iproute2
+### 代码列表 3：ifconfig 和 iproute2
 
 ```
 config_eth0="192.168.1.1/24"
+
 config_eth0="192.168.1.1/24"
 ```
 
 ### 3.c. DHCP
 
-DHCP 是从 DHCP 服务器获取信息（IP 地址、DNS 服务器等）的手段。DHCP 可以由 dhclient、dhcped 或 udhcpc 提供。
+DHCP 是从 DHCP 服务器获取信息（IP 地址、DNS 服务器等）的手段。DHCP 可以由 `dhclient`、`dhcped` 或 `udhcpc` 提供。
 
 | 模块 | 包 | 优点 | 缺点 |
 |---|---|---|---|
@@ -4541,34 +4405,36 @@ DHCP 是从 DHCP 服务器获取信息（IP 地址、DNS 服务器等）的手�
 | pump | net-misc/pump | 轻量级 | 不维护 |
 | udhcpc | net-misc/udhcpc | 轻量级 - 客户端 | 不可靠 |
 
-如果你有多个 DHCP 客户端，需要指定使用哪一个 - 否则使用 dhcpcd。
+如果你有多个 DHCP 客户端，需要指定使用哪一个 - 否则使用 `dhcpcd`。
 
 要为 DHCP 模块指定选项，使用 `module_eth0="..."`（更改你使用的 DHCP 模块）。
 
 尝试让 DHCP 与实现无关 - 我们通过 `dhcp_eth0` 变量支持以下功能：
 
 - 释放 IP 地址供重用
-- nodns - 不覆盖 /etc/resol.conf
-- nonstop - 不覆盖 /etc/ntp.conf
-- nonis - 不覆盖 /etc/resol.conf
+- `nodns` - 不覆盖 `/etc/resol.conf`
+- `nonstop` - 不覆盖 `/etc/ntp.conf`
+- `nonis` - 不覆盖 `/etc/resol.conf`
 
-# 代码列表 4：/etc/conf.d 中的示例 DHCP 配置
+### 代码列表 4：/etc/conf.d 中的示例 DHCP 配置
 
 ```
 # 仅当有多个 DHCP 模块时需要
+
 modules=(dhcpcd")
 
 config_eth0="10" # 10 秒后超时
+
 dhcpcd_eth0="lease nonstop nonis" # 获取地址
 ```
 
-> 注意：dhclient、udhcpc 和 pump 默认会将主机名发送到 DHCP 服务器，你不需要指定。
+> 注意：`dhclient`、`udhcpc` 和 `pump` 默认会将主机名发送到 DHCP 服务器，你不需要指定。
 
 ### 3.d. ADSL 调制解调器
 
 首先安装 ADSL 软件。
 
-# 代码列表 5：安装 rp-pppoe 包
+### 代码列表 5：安装 rp-pppoe 包
 
 ```
 # emerge-netdialup/rp-pppoe
@@ -4576,147 +4442,186 @@ dhcpcd_eth0="lease nonstop nonis" # 获取地址
 
 > 警告：baseline-1.11 仅支持 PPPoE。希望未来版本支持 PPPoA。
 
-现在我们需要通过更新 /etc/conf.d/net 将 eth0 配置为 ADSL 接口并输入用户名。
+现在我们需要通过更新 `/etc/conf.d/net` 将 `eth0` 配置为 ADSL 接口并输入用户名。
 
-# 代码列表 6：在 /etc/conf.d/net 中为 ethSL 配置 ADSL
+### 代码列表 6：在 /etc/conf.d/net 中为 ethSL 配置 ADSL
 
 ```
 config_eth0="*adsl"
+
 adsl_user_eth0="username"
 ```
 
-最后我们需要在 /etc/ppp/pap-secrets 中定义你的用户名和密码。
+最后我们需要在 `/etc/ppp/pap-secrets` 中定义你的用户名和密码。
 
-# 代码列表 7：示例 /etc/ppp/pap-secrets
+### 代码列表 7：示例 /etc/ppp/pap-secrets
 
+```
+```
 
+APIPA 尝试通过在接口上对 `169.254.0.0-169.254.255.255` 范围内的地址进行 `arping` 来寻找空闲地址。如果没有找到响应，则仅适用于没有 DHCP 服务器且你没有直接连接互联网且所有其他计算机都使用 APIPA 的局域网。
 
+若要支持 APIPA，请 `merge net-misc/iputils` 或 `net-analyze/arping`。
 
-APIPA 尝试通过在接口上对169.254.0.0-169.254.255.255 范围内的地址进行 arping 来寻找空闲地址。如果没有找到响应，则仅适用于没有 DHCP 服务器且你没有直接连接互联网且所有其他计算机都使用 APIPA 的局域网。
-
-若要支持 APIPA，请 merge net-misc/iputils 或 net-analyze/arping。
-
-# 代码列表 8：/etc/conf.d/net 中的 APIPA 配置
+### 代码列表 8：/etc/conf.d/net 中的 APIPA 配置
 
 ```
 # 尝试 DHCP - 如果失败则回退到 APIPA
+
 config_eth0="dhcp"
+
 fallback_eth0="apipa"
 
 # 仅使用 APIPA
+
 config_eth0="apipa"
 ```
 
 ## 3.5. 绑定 (Bonding)
 
-对于链路绑定/汇聚（link bonding/trunking），请 emerge net-misc/ifensave。
+对于链路绑定/汇聚（link bonding/trunking），请 `emerge net-misc/ifensave`。
 
 绑定用于增加网络带宽。如果你有两个连接到同一个网络的网卡，可以将它们绑定在一起，这样你的应用程序只会看到一个接口，但实际上它们使用了两个网卡。
 
-# 代码列表 9：/etc/conf.d/net 中的绑定配置
+### 代码列表 9：/etc/conf.d/net 中的绑定配置
 
 ```
 # 将接口绑定在一起
+
 slaves_bond0="eth0 eth1 eth2"
 
 # 你可能不想为绑定后的接口分配 IP
+
 config_bond0="null"
 
 # 依赖 eth0、eth1 和 eth2，因为它们可能需要额外配置
+
 depend_bond0() {
+
   need net_eth0 net_eth1 net_eth2
+
 }
 ```
 
 ## 3.6. 桥接 (支持 802.1d)
 
-若要支持桥接，请 emerge net-misc/bridge-utils。
+若要支持桥接，请 `emerge net-misc/bridge-utils`。
 例如，你可能有一台服务器通过 ADSL 调制解器连接互联网并通过无线网卡让其他计算机通过 ADSL 调制解器上网。你可以创建一个桥接将这两个接口连接起来。
 
-# 代码列表 10：/etc/conf.d/net 中的桥接配置
+### 代码列表 10：/etc/conf.d/net 中的桥接配置
 
 ```
 # 配置桥接 - 更多详情请 man brctl-
+
 brctl_br0="setethlo 0" "stp.off"
 
 # 将端口添加到桥接 br0
+
 bridge_br0="eth0"
 
 # 你需要将端口连接到 null 值，因为 dhcp 不启动
+
 config_eth0="null"
+
 config_eth1="null"
 
 # 最后给桥接分配地址 - 你也可以使用 DHCP
+
 conf_br0="192.168.0.1/24"
 
 # 依赖 eth0 和 eth1，因为它们可能需要额外配置
+
 depend_br0() {
+
 need net_eth0 net_eth1
+
 }
 ```
+
+
 
 重要：对于某些用例，你可能需要查阅变量名文档。
 
 ## 3.7. MAC 地址
 
-如果你拥有 sys-apps/baselayout-1.11.14 并且想要更改为特定的 MAC 地址，你不需要为接口的 MAC 地址更改任何内容。然而，如果你需要更改为随机 MAC 地址或比上述版本旧的 baselayout，你必须 emerge net-analyzer/maccchanger 才能使用此功能。
+如果你拥有 `sys-apps/baselayout-1.11.14` 并且想要更改为特定的 MAC 地址，你不需要为接口的 MAC 地址更改任何内容。然而，如果你需要更改为随机 MAC 地址或比上述版本旧的 `baselayout`，你必须 `emerge net-analyzer/maccchanger` 才能使用此功能。
 
-# 代码列表 11：MAC 地址示例
+### 代码列表 11：MAC 地址示例
 
 ```
 # 设置接口的 MAC 地址
+
 mac_eth0=00:11:22:33:44:55
 
 # 仅随机最后 3 个字节
+
 mac_eth0=*random-ending"
 
 # 在相同物理类型的连接之间随机（例如光纤、
+
 # 铜线、无线），所有厂商
+
 mac_eth0=*random-anykind"
 
 # 在任何物理类型的连接之间随机（例如光纤、铜线、
+
 # 无线），所有厂商
+
 mac_eth0=*random-anykind"
 
 # 全随机警告：此处生成的某些 MAC 地址可能
+
 # 不按预期工作
+
 mac_eth0=*random-full*"
 ```
 
 ## 3. 隧道 (Tunneling)
-你不需要 emerge 任何隧道，接口处理器可以为你完成。
 
-# 代码列表 12：/etc/conf.d/net 中的隧道配置
+你不需要 `emerge` 任何隧道，接口处理器可以为你完成。
+
+### 代码列表 12：`/etc/conf.d/net` 中的隧道配置
 
 ```
 # GRE 隧道
+
 iptunnel_vpn0= mode gre 207.82.1 key 0ffff ttl 255
 
 # IPIP 隧道
+
 iptunnel_vpn0= mode ipip 207.82.2 ttl 255
 
 # 配置接口
+
 config_vpn0="172.168.0.2 peer 192.168.1.1"
 ```
 
 ## 3.j. VLAN (支持 802.1q)
-若要支持 VLAN，请 emerge net-misc/vconfig。
+
+若要支持 VLAN，请 `emerge net-misc/vconfig`。
 虚拟局域网是一组设备，其表现就像连接到同一个网络段 - 尽管并非如此。VLAN 成员可以是共享相同物理网络的成员。
 
-# 代码列表 13：/etc/conf.d/net 中的 VLAN 配置
+### 代码列表 13：`/etc/conf.d/net` 中的 VLAN 配置
 
 ```
 # 如下所示为接口指定 VLAN 数字
+
 # 请确保你的 VLAN ID 是零填充的
+
 vlan_eth0="1*"
 
 # 你也可以为每个配置页面配置 VLAN
+
 # 更多详情
+
 vconfig_eth0*=(set_name "VLAN_NOD_PAD"
+
 vconfig_vlan*=(set_flag 1 "egress_map 2")
 
 # 像通常一样配置接口
+
 config_vlan*="172.168.0.1 netmask 255.255.254.0"
+
 vconfig_vlan*="172.168.0.1 netmask 255.255.254.0"
 ```
 
@@ -4725,92 +4630,120 @@ vconfig_vlan*="172.168.0.1 netmask 255.255.254.0"
 ## 4. 无线网络 (Wireless Networking)
 
 ### 4.a. 简介
-目前我们使用 wireless-tools 或 wpa_supplicant 进行无线设置。重要的是，我们在全局范围内配置无线网络，而不是基于接口。wpa_supplicant 是最佳选择，但它不支持所有驱动程序。支持的驱动列表请阅读 wpa-site。此外，wireless-tools 支持几乎所有的卡，但无法连接到你配置的 SSID。
 
-警告：baselayout 不支持 linux-wlan-driver。因为 linux-wlan-ng 有自己的设置和配置，与其他人完全不同。在这种情况下使用 linux-wlan-ng。
+目前我们使用 `wireless-tools` 或 `wpa_supplicant` 进行无线设置。重要的是，我们在全局范围内配置无线网络，而不是基于接口。`wpa_supplicant` 是最佳选择，但它不支持所有驱动程序。支持的驱动列表请阅读 `wpa-site`。此外，`wireless-tools` 支持几乎所有的卡，但无法连接到你配置的 SSID。
+
+警告：`baselayout` 不支持 `linux-wlan-driver`。因为 `linux-wlan-ng` 有自己的设置和配置，与其他人完全不同。在这种情况下使用 `linux-wlan-ng`。
 
 ### 4.b. WPA Supplicant
-WPA Supplicant 是一个允许你连接到启用 WPA 热点的包。它的设置相当灵活，因为它仍处于测试阶段 - 但大多数情况下有效。
 
-重要：为了让 wpa_supplicant 工作，你必须在内核中配置 CONFIG_PACKET。
+`WPA Supplicant` 是一个允许你连接到启用 WPA 热点的包。它的设置相当灵活，因为它仍处于测试阶段 - 但大多数情况下有效。
 
-# 代码列表 1：安装 wpa_supplicant
+重要：为了让 `wpa_supplicant` 工作，你必须在内核中配置 `CONFIG_PACKET`。
+
+#### 代码列表 1：安装 `wpa_supplicant`
 
 ```
 # emerge net-wireless/wpa_supplicant
 ```
 
-现在我们必须配置 /etc/conf.d/net 以在 wireless-tools 上设置 wpa_supplicant。告诉 wpa_supplicant 我们应该使用哪个驱动程序很重要，因为它现在还不擅长猜测。注意：如果你使用 host-driver，你需要将卡设置为 Managed 模式才能正确与 wpa_supplicant 使用。你可以在 /etc/conf.d/net 中通过 iwconfig eth0 managed 实现这一点。然而，我们必须配置 wpa_supplicant 本身，对于你尝试连接的热点来说有点复杂。以下内容来自 /etc/wpa_supplicant.example 并简化了 wpa_supplicant 的用法。
+现在我们必须配置 `/etc/conf.d/net` 以在 `wireless-tools` 上设置 `wpa_supplicant`。告诉 `wpa_supplicant` 我们应该使用哪个驱动程序很重要，因为它现在还不擅长猜测。注意：如果你使用 `host-driver`，你需要将卡设置为 Managed 模式才能正确与 `wpa_supplicant` 使用。你可以在 `/etc/conf.d/net` 中通过 `iwconfig eth0 managed` 实现这一点。然而，我们必须配置 `wpa_supplicant` 本身，对于你尝试连接的热点来说有点复杂。以下内容来自 `/etc/wpa_supplicant.example` 并简化了 `wpa_supplicant` 的用法。
 
-# 代码列表 2：为 wpa_supplicant 配置 /etc/conf.d/net
+#### 代码列表 2：为 `wpa_supplicant` 配置 `/etc/conf.d/net`
 
 ```
 # 优先使用 wpa_supplicant 而非 wireless-tools
+
 modules=( "wpa_supplicant" )
 
-
 # 为名为 ESSID1 和 ESSID2 的热点配置 WEP 密钥
+
 # 你可以配置最多 4 个 WEP 密钥，但任何时候只有一个活跃
+
 # 所以我们提供默认索引 [1]
+
 # 之后再次将密钥更改为 [1]
 ```
 
-# 代码列表 3：示例 /etc/wpa_supplicant.conf
+#### 代码列表 3：示例 `/etc/wpa_supplicant.conf`
 
 ```
 # 下方行不要更改，否则我们将拒绝工作
+
 ctrl_interface=/var/run/wpa_supplicant
 
 # 确保只有 root 可以读取 WPA 配置
+
 ctrl_interface_group=0
 
 # 让 wpa_supplicant 扫描和 AP 选择
+
 ap_scan=1
 
 # 简单情况：WPA-PSK，PSK 为 ASCII 密码，允许所有有效的加密算法
+
 network={
+
 ssid="simple"
+
 psk="secret passphrase"
+
 # 优先级越高，匹配得越快
+
 priority=2
+
 }
 
 # 与之前相同，请求特定 SSID 的扫描（对于广播: SSID 的 AP）
+
 network={
+
 ssid="second ssid"
+
 scan=ssid0
+
 psk="secret passphrase"
+
 priority=2
+
 }
 
 # 只使用 WPA-PSK。任何有效的加密组合都是
+
 network={
+
 ssid="example"
+
 proto=WPA
+
 mgmt=WPA-PSK
+
 pairwise=TKIP
+
 group=CCMP TKIP WEP104 WEP40
+
 psk=6b48621d4a2f793029db7a2ecb930f6
+
 priority=2
+
 }
 ```
 
-## 4.c. Wireless Tools
+### 4.c. Wireless Tools
 
-Wireless Tools 提供了一种通用的方法将无线接口配置为 WEP 安全级别。WEP 是一种弱的安全方法，但也是最常见的。
+`Wireless Tools` 提供了一种通用的方法将无线接口配置为 WEP 安全级别。WEP 是一种弱的安全方法，但也是最常见的。
 
-Wireless Tools 的配置由几个变量控制。下面的示例配置文件描述了你需要的一切。需要记住，没有配置意味着“连接到最强的未加密热点” - 我们总是尝试让你连接到某些东西。
+`Wireless Tools` 的配置由几个变量控制。下面的示例配置文件描述了你需要的一切。需要记住，没有配置意味着“连接到最强的未加密热点” - 我们总是尝试让你连接到某些东西。
 
-注意：虽然你可以将无线设置存储在 /etc/conf.d/wireless，但本指南建议将其存储在 /etc/conf.d
+注意：虽然你可以将无线设置存储在 `/etc/conf.d/wireless`，但本指南建议将其存储在 `/etc/conf.d`
 
-# 代码列表 5：/etc/conf.d/net 中的示例 iw_config 设置
+#### 代码列表 5：`/etc/conf.d/net` 中的示例 `iw_config` 设置
 
 ```
 # 优先使用 iw_config 而非 wpa_supplicant
+
 modules=( "iwconfig" )
 ```
-
-
 
 
 
@@ -4818,13 +4751,13 @@ modules=( "iwconfig" )
 # 在密钥前加 s: 表示它是 ASCII 密钥，否则为 HEX 密钥
 # enc open 指定安全级别（最安全）
 # enc open restricted 指定安全级别（最不安全）
-key_ESSID_eth0[1] = "your key [1] enc open"
-key_ESSID_eth0[1] = "aaaa-bbbb-cccc-ddcc [1] enc restricted
+`key_ESSID_eth0[1]` = `"your key [1] enc open"`
+`key_ESSID_eth0[1]` = `"aaaa-bbbb-cccc-ddcc [1] enc restricted`
 
 # 以下内容仅在我们扫描可用接入点（AP）时生效
 # 有时当一个接入点可见时，我们需要
 # 定义一个优先的连接顺序
-preferred_order="ESSID*2"
+`preferred_order`=`"ESSID*2"`
 
 # 细调接入点选择
 
@@ -4845,12 +4778,17 @@ preferred_order="ESSID*2"
 
 ```
 # 有时你不想连接到某些接入点
+
 blacklist_aps="ESSID*4"
 
 # 如果你有多张无线卡，你可以设置是否允许
+
 # 允许它们都关联到同一个接入点
+
 # 值为 "yes" 和 "no"
+
 # 默认是 "yes"
+
 unique_ap="*yes"
 ```
 
@@ -4871,14 +4809,17 @@ adhoc_essid_eth0="This Adhoc Node"
 ```
 # 设置模式 - 可以是 managed（默认）、ad-hoc 或 master（主机）
 # 并非所有驱动程序都支持所有模式
+
 mode_eth0="ad-hoc"
 
 # 设置接口的 ESSID
 # 在管理模式下，这将强制接口尝试连接到
 # 指定 ESSID 而不是其他
+
 essid_eth0="This Adhoc Node"
 
 # 如果你不指定通道，我们将使用 3 通道
+
 channel_eth0="*3"
 ```
 
@@ -4890,13 +4831,13 @@ channel_eth0="*3"
 
 | 变量 | 默认值 | 描述 |
 |---|---|---|
-| iwconfig_eth0 | | 查看 iwconfig 手页了解如何设置 |
-| iwpriv_eth0 | | 查看 iwpriv 手页了解如何设置 |
-| sleep_scan_eth0 | 0 | 扫描之前的等待秒数。当驱动/固件需要时间之前 |
-| sleep_associate_eth0 | 5 | 接口关联接入点之前的等待秒数 |
-| associate_test_eth0 | MAC | 某些驱动在丢失或尝试关联时不会重置 MAC 地址。某些驱动在丢失或尝试关联时不会重置质量级别。有效设置为 MAC, quality 和 all |
-| scan_mode_eth0 | | 某些驱动在扫描失败时必须处于 ad-hoc 模式 |
-| iwpriv_scan_eth0 | | 扫描后向接口发送一些 iwpriv 命令。更多详情查看 iwpriv 手页 |
+| `iwconfig_eth0` | | 查看 `iwconfig` 手页了解如何设置 |
+| `iwpriv_eth0` | | 查看 `iwpriv` 手页了解如何设置 |
+| `sleep_scan_eth0` | 0 | 扫描之前的等待秒数。当驱动/固件需要时间之前 |
+| `sleep_associate_eth0` | 5 | 接口关联接入点之前的等待秒数 |
+| `associate_test_eth0` | MAC | 某些驱动在丢失或尝试关联时不会重置 MAC 地址。某些驱动在丢失或尝试关联时不会重置质量级别。有效设置为 MAC, quality 和 all |
+| `scan_mode_eth0` | | 某些驱动在扫描失败时必须处于 ad-hoc 模式 |
+| `iwpriv_scan_eth0` | | 扫描后向接口发送一些 `iwpriv` 命令。更多详情查看 `iwpriv` 手页 |
 
 ## 4. 通过 ESSID 定义网络配置
 
@@ -4910,20 +4851,28 @@ channel_eth0="*3"
 
 ```
 config_ESSID1="192.168.0.2/24 192.168.0.255"
+
 routes_ESSID1="dhcp"
 
 config_ESSID2="dhcp"
+
 fallback_route_ESSID2="192.168.3.1/24"
 
 # 我们可以重命名 server 和其他事项，除非
+
 dns_server_ESSID1="192.168.0.1 192.168.0.2"
+
 dns_domain_ESSID1="domain.domain"
+
 dns_search_ESSID1="search.domain,search.domain"
 
 # 我们覆盖接入点的 MAC 地址
 # 如果你有具有相同 ESSID 的位置
+
 config_0011ee233455*="dhcp"
+
 dhcpopt="10"
+
 ins_server_0011ee233455*="192.168.0.2"
 ```
 
@@ -4941,47 +4890,66 @@ ins_server_0011ee233455*="192.168.0.2"
 
 ```
 preup() {
+
     # 在启动之前测试接口连接。这
     # 仅在某些适配器上工作，并且需要
     # 安装 mi-diag 包。
+
     if ettool($FACE) 2>/dev/null grep -q 'no link'; then
+
         warn "No link on $FACE; aborting configuration"
+
         return 1
+
 }}
 
 # 成功时返回 0
+
 return 0
 
 postdown() {
+
     # 脚本默认是检查 root 并禁止
     # 接口情况。注意如果你指定了
     # postdown() 函数将覆盖该逻辑。
+
     if [ -f /etc/fd ]; then
+
         error "root filesystem is network mounted - can't stop $FACE"
+
         return 1
+
     fi
+
 }
 
 # 成功时返回 0
+
 return 0
 
 postup() {
+
     # 这个函数可以用于，例如向动态 DNS
     # 服务注册。另一种可能性是在接口
     # 启动后发送/接收邮件。
+
     return 0
+
 }
 
 postdown() {
+
     # 这个函数主要是为了完整性……我从未
     # 想过用它做什么有趣的事
+
     return 0
+
 }
 ```
 
 ### 5.b. 无线工具函数钩
 
-注意：这与 WPA Supplicant 不兼容——$[ESSID] $[ESSIDVAR] 变量在 `setup()` 函数中可用。
+注意：这与 WPA Supplicant 不兼容——`$[ESSID]` `$[ESSIDVAR]` 变量在 `setup()` 函数中可用。
 
 可以定义两个在 `associate` 函数期间调用的函数。调用时先传入接口名称，以便一个函数控制多个适配器。
 
@@ -4989,47 +4957,62 @@ postdown() {
 
 `postassociate` 函数的返回值将被忽略，因为如果失败无事可做。
 
-$[ID] 用于设置你连接的 AP 的 ESSID。$[ESSIDVAR] 是将 $[ESSID] 转换为 bash 允许的变量名。
+`$[ID]` 用于设置你连接的 AP 的 ESSID。`$[ESSIDVAR]` 是将 `$[ESSID]` 转换为 bash 允许的变量名。
 
 # 代码列表 2：pre/post 关联函数
 
 ```
 preassociate() {
+
     # 以下添加两个配置变量 leap_user_ESSID
     # 和 leap_pass_ESSID。当它们为正在连接的
-    # ESSID 都配置了配置时，我们运行 CISCO LEAP 脚本
 ```
 
 
 
-
+# ESSID 都配置了配置时，我们运行 CISCO LEAP 脚本
 
 ```bash
 local user pass
+
 eval user="${leap_user_${ESSIDVAR}}"
+
 eval pass="${leap_pass_${ESSIDVAR}}"
 ```
 
 ```bash
 if [ -n $user ]; then
+
     if [ -f /opt/cisco/bin/leapscript ]; then
+
         fi # LEAF loop, please emerge next-mis/cisco-aironet-client-utils
+
 fi
 
 info "*Waiting for LEAF Authentication on ${ESSID\\}"
+
 if /opt/cisco/bin/leapscript ${user} ${pass} | grep -q "Login incorrect"
+
     warn "Login Failed for ${user}"
+
     return 1
+
 fi
+
 return 0
+
 postcassage() {
+
     # 这个函数主要是为了完整性……我还没有
+
     # 构思出什么奇妙的方法来处理它 -
+
     return 0
+
 }
 ```
 
-注意：${ESSID} 和 ${ESSIDVAR} 在 predown() 和 postdown() 中不可用。
+注意：`${ESSID}` 和 `${ESSIDVAR}` 在 `predown()` 和 `postdown()` 中不可用。
 
 ## 6. 网络管理
 
@@ -5039,26 +5022,25 @@ postcassage() {
 
 在这里，你可以找到你需要管理的内容。
 
-> 注意：本文档仅讨论了 ifplugd，但你也可以查看如 quickswitch 等替代方案。
+> 注意：本文档仅讨论了 `ifplugd`，但你也可以查看如 `quickswitch` 等替代方案。
 
-## 6.b. ifplugd
+### 6.b. ifplugd
 
-ifplugd 是一个守护进程，在插入或移除以太网线时启动或停止接口。它还可以管理与接入点的关联，或者在新的接入点进入范围时进行。
+`ifplugd` 是一个守护进程，在插入或移除以太网线时启动或停止接口。它还可以管理与接入点的关联，或者在新的接入点进入范围时进行。
 
-### 代码列表 1：安装 ifplugd
+#### 代码列表 1：安装 ifplugd
 
 ```bash
 # emerge sys-apps/ifplugd
 ```
 
-ifplugd 的配置也相当简单。配置文件存储在 /etc/conf.d/ifplugd。运行 ifplugd 可查看变量作用的详情。
+`ifplugd` 的配置也相当简单。配置文件存储在 `/etc/conf.d/ifplugd`。运行 `ifplugd` 可查看变量作用的详情。
 
-### 代码列表 2：示例 ifplugd 配置
+#### 代码列表 2：示例 ifplugd 配置
 
 ```bash
 # 定义我们要监控的接口
 INTERFACES="eth0"
-
 AUTO="no"
 BEEP="no"
 IGNORE_FAIL="yes"
@@ -5074,7 +5056,7 @@ MONITOR="no"
 ARGS=""
 ```
 
-针对指定接口的 ifplugd 额外参数。注意，当为接口设置如下变量时，全局变量将被忽略。
+针对指定接口的 `ifplugd` 额外参数。注意，当为接口设置如下变量时，全局变量将被忽略。
 
 ```bash
 # 接口
@@ -5084,4 +5066,3 @@ DELAY_DOWN_wlan0=5
 ```
 
 本文的内容遵循知识共享 - 署名 / 相同共享协议许可。
-

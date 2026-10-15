@@ -1,17 +1,9 @@
+
 # Ubuntu 20.04 核心：Ubuntu 20.04 桌面版与服务器版指南
-
-
 
 ![](img/ubuntu_20.04_front_cover_large.png)
 
-
-
 ISBN-13: 978-1-951442-05-7
-
-
-
-
-
 
 ## 1. 引言
 
@@ -25,7 +17,8 @@ Ubuntu 可能是当今最受推崇和最广泛使用的 Linux 发行版之一。
 
 Ubuntu 与大多数 Linux 相同，有两种类型的用户账户：一种是标准用户账户，对操作系统的许多管理文件和功能的访问受限；另一种是具有特权权限的超级用户（root）账户。通常，用户可以通过登录为 root 用户或使用 `su -` 命令并输入 root 密码来获取 root 权限。在下面的示例中，用户通过 `su -` 命令获取 root 权限：
 
-```bash[neil@demo-server ~]$ su -
+```bash
+[neil@demo-server ~]$ su -
 
 Password:
 
@@ -73,7 +66,7 @@ $ date
 相反，如果命令需要 root 权限，则命令将以 `#` 命令提示符为开头：
 
 ```bash
-## apt install openssh-server
+# apt install openssh-server
 ```
 
 ### 1.2 打开终端窗口
@@ -91,13 +84,13 @@ $ date
 配置 Linux 系统通常涉及编辑文件。对于 Linux 新手来说，由于他们可能不清楚应该使用哪种编辑器。如果你正在运行终端会话且还没有首选的编辑器，我们建议使用 `nano` 编辑器。要在终端窗口中启动 `nano` 只需输入以下命令：
 
 ```bash
-## nano <file>
+# nano <file>
 ```
 
 其中 `<file>` 替换为你想要编辑的文件路径。例如：
 
 ```bash
-## nano /etc/passwd
+# nano /etc/passwd
 ```
 
 加载后，`nano` 将出现。完成文件编辑后，按 `Ctrl-S` 保存文件，按 `Ctrl-X` 退出。
@@ -117,8 +110,8 @@ $ date
 或者，从终端窗口启动 `gedit`，带或不带文件路径：
 
 ```bash
-## gedit
-## gedit /etc/passwd
+# gedit
+# gedit /etc/passwd
 ```
 
 ### 1.4 反馈
@@ -139,34 +132,31 @@ Ubuntu Linux 是 Linux 操作系统众多变体（也称为发行版）之一，
 
 ### 2.1 到底什么是 Linux？
 
-
-
-
 Linux 是一个操作系统，就像 Windows 是操作系统一样（尽管 Linux 和 Windows 之间没有任何相似之处）。“操作系统”一词被描述为作为计算机硬件与我们日常运行的应用程序之间中间层的软件。当程序员编写应用程序时，他们通过与操作系统交互来执行诸如将文件写入硬盘驱动以及在屏幕上显示信息等任务。如果没有操作系统，每位程序员都必须编写代码来直接访问系统硬件。此外，程序员必须能够支持曾经创建过的每一件硬件，以确保应用程序可以在任何可能的硬件配置上运行。由于操作系统处理了所有的硬件复杂性，应用程序开发变成了一项简单得多的任务。Linux 是如今许多不同操作系统之一。
 
-## 2.2 UNIX 的起源
+### 2.2 UNIX 的起源
 
-要理解 Linux 的历史，我们首先必须追溯到 20 世纪 60 年代末的 AT&T 实验室。当时，AT&T 停止了对名为 Multics 的新操作系统的开发。两位 AT&T 工程师肯·汤普森（Ken Thompson）和丹尼斯·里奇（Dennis Ritchie）决定将他们在 Multics 项目中学学到的知识，创建一个名为 UNIX 的新操作系统，该系统迅速在企业和学术机构中流行并被广泛采用。
+要理解 Linux 的历史，我们首先必须追溯到 20 世纪 60 年代末的 AT&T 实验室。当时，AT&T 停止了对名为 Multics 的新操作系统的开发。两位 AT&T 工程师肯·汤普森（Ken Thompson）和丹尼斯·里奇（Dennis Ritchie）决定将他们在 Multics 项目中学到的知识，创建一个名为 UNIX 的新操作系统，该系统迅速在企业和学术机构中流行并被广泛采用。
 
-各种专有的 UNIX 实现最终进入市场，包括由 IBM (AIX)、惠尔士惠普 (HP-UX) 和太阳微系统 (SunOS 和 Solaris) 创建的版本。此外，安德鲁·S·塔南鲍（Andrew S. Tanenbaum）创建了一个名为 MINIX 的类 UNIX 操作系统，旨在教学，并向大学提供源代码。
+各种专有的 UNIX 实现最终进入市场，包括由 IBM (AIX)、惠普 (HP-UX) 和太阳微系统 (SunOS 和 Solaris) 创建的版本。此外，安德鲁·S·塔南鲍（Andrew S. Tanenbaum）创建了一个名为 MINIX 的类 UNIX 操作系统，旨在教学，并向大学提供源代码。
 
 ### 2.3 谁创建了 Linux？
 
 Linux 的起源可以追溯到两个人的工作和哲学。Linux 操作系统的核心是一个被称为“内核”（kernel）的东西。这是操作系统运行所需的核心功能集。内核管理系统资源并处理硬件与应用程序之间的通信。Linux 内核是由林纳斯·托瓦尔斯（Linus Torvalds）开发的，由于不喜欢 MS-DOS，并且由于不急于让 MINIX 在新的 Intel 80386 微处理器上可用，他决定编写自己的类 UNIX 内核。当他完成内核的第一版本时，他以开源许可发布了它，这允许任何人下载源代码并自由使用和修改它，而无需向林纳斯支付任何费用。
 
-大约同一时间，自由软件基金会的自由和开源软件的有力倡导者理查德·斯托曼（Richard Stallman）正在开发他自己的开源操作系统。然而，斯托曼最初并没有专注于内核，而是决定从开发使用和维护操作系统所必需的所有 UNIX 工具、实用程序和编译器的开源版本开始。当他完成这些基础设施的开发时，显而易见的解决方案是将他的工作与林纳斯写的内核相结合，创建一个完整的操作系统。这种组合被称为 GNU/Linux。纯洁者坚持认为 Linux 应该被称为 GNU/Linux（事实上，曾有一段时间，理查德·斯托曼拒绝接受未将 Linux 称为 GNU/Linux 的出版物的采访）。考虑到自由软件基金会开发的 GNU 工具构成了 GNU/Linux 重要且关键的一部分，这并不是 unreasonable。遗憾的是，大多数人和出版物简单地将其称为 Linux，这种情况可能会一直持续下去。
+大约同一时间，自由软件基金会的自由和开源软件的有力倡导者理查德·斯托曼（Richard Stallman）正在开发他自己的开源操作系统。然而，斯托曼最初并没有专注于内核，而是决定从开发使用和维护操作系统所必需的所有 UNIX 工具、实用程序和编译器的开源版本开始。当他完成这些基础设施的开发时，显而易见的解决方案是将他的工作与林纳斯写的内核相结合，创建一个完整的操作系统。这种组合被称为 GNU/Linux。纯洁者坚持认为 Linux 应该被称为 GNU/Linux（事实上，曾有一段时间，理查德·斯托曼拒绝接受未将 Linux 称为 GNU/Linux 的出版物的采访）。考虑到自由软件基金会开发的 GNU 工具构成了 GNU/Linux 重要且关键的一部分，这并不是不合理的。遗憾的是，大多数人和出版物简单地将其称为 Linux，这种情况可能会一直持续下去。
 
 ### 2.4 Ubuntu 的历史
 
-如前所述，Ubuntu 是许多 Linux 发行版之一。构成 Ubuntu 发行版的源代码源于一个备受推崇的 Linux 发行版 Debian，是由伊恩·默多奇（Ian Murdoch）创建的。
+如前所述，Ubuntu 是许多 Linux 发行版之一。构成 Ubuntu 发行版的源代码源于一个备受推崇的 Linux 发行版 Debian，是由伊恩·默多克（Ian Murdock）创建的。
 
-一位名叫马克·舒特尔沃（Mark Shuttleworth）的南非互联网大亨（他通过将公司卖给 VeriSign 大约获得了 5 亿美元的财富）决定是时候需要一个更易于使用的 Linux 了。他采用了 Debian 发行版，并使其成为一个更友人类的发行版，他将其命名为 Ubuntu。随后他成立了名为 Canonical Ltd 的公司来推广和提供 Ubuntu 支持。
+一位名叫马克·舒特尔沃（Mark Shuttleworth）的南非互联网大亨（他通过将公司卖给 VeriSign 大约获得了 5 亿美元的财富）决定是时候需要一个更易于使用的 Linux 了。他采用了 Debian 发行版，并使其成为一个更友好的发行版，他将其命名为 Ubuntu。随后他成立了名为 Canonical Ltd 的公司来推广和提供 Ubuntu 支持。
 
 如果你是 Linux 新手，或者已经在使用 Linux 并想尝试不同的 Linux 发行版，你可能找不到比 Ubuntu 更好的选择了。
 
 ### 2.5 “Ubuntu”这个词是什么意思？
 
-“Ubuntu”是一个古老的祖鲁语和科萨萨语词汇，意思是“对他人的人性”。Ubuntu 也意味着“因为我们大家的存在，我才是我”。选择它是因为这些情感准确地描述了 Ubuntu 发行版的精神。
+“Ubuntu”是一个古老的祖鲁语和科萨语词汇，意思是“对他人的人性”。Ubuntu 也意味着“因为我们大家的存在，我才是我”。选择它是因为这些情感准确地描述了 Ubuntu 发行版的精神。
 
 ### 2.6 总结
 
@@ -174,7 +164,7 @@ Linux 操作系统的起源可以追溯到林纳斯·托瓦尔斯和理查德·�
 
 多年来，Linux 的开源特性导致了各种不同 Linux 发行版的发布。其中一种发行版就是 Ubuntu，它基于 Debian Linux 发行版，并由马克·舒特尔沃创立的公司 Canonical Ltd 创建。
 
-## 3 在空白磁盘驱动器上安装 Ubuntu
+## 3. 在空白磁盘驱动器上安装 Ubuntu
 
 现在有三种方法部署 Ubuntu 系统。一种方法是购买新硬件，或重新利用现有的计算机系统以在上面安装和运行操作系统。或者，可以使用 VirtualBox 或 VMware 等虚拟化平台，在现有操作系统的虚拟机内部安装并运行 Ubuntu。另一种选择是使用 Amazon AWS、Google Cloud 或 Microsoft Azure（仅列部分）等服务创建云操作系统实例。由于云实例通常是通过选择预先配置、准备就绪且已针对云平台优化的操作系统镜像，并以此作为 Ubuntu 系统的基础，在这种情况下不需要执行手动操作系统安装。
 
@@ -192,18 +182,14 @@ Ubuntu 可以安装在洁净磁盘环境中（清除整个磁盘上的任何现�
 
 该页面提供了若干下载选项，取决于如何安装和使用操作系统：
 
-•Ubuntu Desktop - 下载操作系统桌面版的安装介质。该版本旨在供需要图形化桌面环境的台式式电脑和笔记本电脑使用，且仅适用于 64 位 x86 系统。桌面版可以以 ISO 镜像的形式下载，然后可以使用本章稍后概述的步骤将其写入 USB 驱动器。启动后，桌面介质将允许你在执行安装之前运行 Live Ubuntu 会话来测试 Ubuntu。
+- **Ubuntu Desktop** - 下载操作系统桌面版的安装介质。该版本旨在供需要图形化桌面的台式电脑和笔记本电脑使用，且仅适用于 64 位 x86 系统。桌面版可以以 ISO 镜像的形式下载，然后可以使用本章稍后概述的步骤将其写入 USB 驱动器。启动后，桌面介质将允许你在执行安装之前运行 Live Ubuntu 会话来测试 Ubuntu。
 
-
-
-
-## Ubuntu Server
-
-下载该操作系统服务器版本的安装介质。此镜像用于在不需要图形桌面环境的服务器上进行安装，适用于 x86、ARM、IBM POWER (PowerPC) 和 s390x (IBM System z 主机) 系统。安装介质不包含安装前尝试 Ubuntu 的选项，并使用基于文本的安装器而不是 Ubuntu 桌面版使用的图形安装器。这允许 Ubuntu 安装在没有图形控制台的系统上。
+- **Ubuntu Server** - 下载该操作系统服务器版本的安装介质。此镜像用于在不需要图形桌面环境的服务器上进行安装，适用于 x86、ARM、IBM POWER (PowerPC) 和 s390x (IBM System z 主机) 系统。安装介质不包含安装前尝试 Ubuntu 的选项，并使用基于文本的安装器而不是 Ubuntu 桌面版使用的图形安装器。这允许 Ubuntu 安装在没有图形控制台的系统上。
 
 下载 Ubuntu Server 版本时，有以下可用选项：
 
 - **标准 Live Server ISO 镜像 (Standard Live Server ISO Image)** - 包含安装 Ubuntu Server 的所有内容。这允许在不需要网络或互联网连接的情况下进行安装。
+
 - **网络安装器 ISO 镜像 (Network Installer ISO Image)** - 包含开始安装过程所需的最小内容，在此期间将根据配置阶段的选择下载额外的软件包。网络安装器将在“使用网络安装器安装 Ubuntu”章节中进行详细介绍。
 
 Live Server 和网络安装器镜像也可用于执行预启动执行环境 (PXE) 网络安装。使用 PXE 安装 Ubuntu 时，Ubuntu 镜像将安装在特殊配置的服务器（称为 PXE 启动服务器）上。要安装 Ubuntu 的客户端系统将配置为通过网络从 PXE 启动服务器上的镜像启动（假设客户端硬件支持 PXE）以启动安装。
@@ -238,7 +224,7 @@ DVD ISO 镜像是自包含的，包含了安装 Ubuntu 系统所需的所有软�
 
 ### 3.4 将 ISO 安装镜像写入 USB 驱动器
 
-如今，操作系统的安装更有可能通过 USB 驱动器执行，而非 DVD。。下载了 Ubuntu 的 ISO 安装镜像后，将该镜像写入 USB 驱动器的步骤将取决于该驱动器连接到 Linux、macOS 还是 Windows 系统。本节剩余部分的概述步骤假设 USB 驱动器是新的，或者已经重新格式化以删除任何现有数据或分区：
+如今，操作系统的安装更有可能通过 USB 驱动器执行，而非 DVD。下载了 Ubuntu 的 ISO 安装镜像后，将该镜像写入 USB 驱动器的步骤将取决于该驱动器连接到 Linux、macOS 还是 Windows 系统。本节剩余部分的概述步骤假设 USB 驱动器是新的，或者已经重新格式化以删除任何现有数据或分区：
 
 ### 3.4.1 Linux
 
@@ -264,22 +250,26 @@ ls /dev/sd*
 
 `/dev/sda /dev/sda1 /dev/sda2 /dev/sdb`
 
-从此输出我们可以知道 USB 驱动器已被分配到 `/dev/sdb`。在将 ISO 镜像写入设备之前的下一步是运行 `findmnt` 命令以确保它没有被自动挂载：
+
+
+从此输出我们可以知道 USB 驱动器已被分配到`/dev/sdb`。在将 ISO 镜像写入设备之前的下一步是运行`findmnt`命令以确保它没有被自动挂载：
 
 ```bash
 findmnt /dev/sdb?
 ```
 
-`TARGET SOURCE FSTYPE OPTIONS`
-`/media/demo/C24E-6727 /dev/sdb1 vfat rw,nosuid,nodev, ...`
+```
+TARGET SOURCE FSTYPE OPTIONS
+/media/demo/C24E-6727 /dev/sdb1 vfat rw,nosuid,nodev, ...
+```
 
-如果 `findmnt` 命令指示 USB 驱动器已挂载，请在继续之前将其卸载：
+如果`findmnt`命令指示 USB 驱动器已挂载，请在继续之前将其卸载：
 
 ```bash
 umount /media/demo/C24E-6727
 ```
 
-一旦文件系统已卸载，使用如下的 `dd` 命令将 ISO 镜像写入驱动器：
+一旦文件系统已卸载，使用如下的`dd`命令将 ISO 镜像写入驱动器：
 
 ```bash
 dd if=/path/to/<image>.iso of=/dev/sdb
@@ -289,33 +279,37 @@ dd if=/path/to/<image>.iso of=/dev/sdb
 
 ### 3.4.2 macOS
 
-在 macOS 上将 ISO 镜像写入 USB 驱动器的第一步是使用 `diskutil` 工具识别设备。在连接 USB 驱动器之前，打开终端窗口并运行：
+在 macOS 上将 ISO 镜像写入 USB 驱动器的第一步是使用`diskutil`工具识别设备。在连接 USB 驱动器之前，打开终端窗口并运行：
 
 ```bash
 diskutil list
 ```
 
-`/dev/disk0 (internal):`
-`#: TYPE NAME IDENTIFIER`
-`0: GUID_partition_scheme *1.0 TB disk0`
-`1: EFI 209.7 MB disk0s1`
-`2: Apple_FS Container 999 GB disk0s2`
+```
+/dev/disk0 (internal):
+#: TYPE NAME IDENTIFIER
+0: GUID_partition_scheme *1.0 TB disk0
+1: EFI 209.7 MB disk0s1
+2: Apple_FS Container 999 GB disk0s2
 
-`/dev/disk1 (external):`
-`#: TYPE NAME IDENTIFIER`
-`0: GUID_partition_scheme 28.0 GB disk1`
-`1: EFI 314.6 MB disk1s1`
-`2: Apple_APFS Container 27.7 GB disk1s2`
+/dev/disk1 (external):
+#: TYPE NAME IDENTIFIER
+0: GUID_partition_scheme 28.0 GB disk1
+1: EFI 314.6 MB disk1s1
+2: Apple_APFS Container 27.7 GB disk1s2
+```
 
-在上面的示例中，USB 驱动器已被分配到 `/dev/disk3`。在继续之前，按如下方式卸载磁盘：
+在上面的示例中，USB 驱动器已被分配到`/dev/disk3`。在继续之前，按如下方式卸载磁盘：
 
 ```bash
 diskutil unmountDisk /dev/disk3
 ```
 
-`Unmount of all volumes on disk3 was successful`
+```
+Unmount of all volumes on disk3 was successful
+```
 
-最后，使用 `dd` 命令将 ISO 镜像写入设备，注意引用原始磁盘设备（/dev/rdisk3`）并在提示时输入用户密码：
+最后，使用`dd`命令将 ISO 镜像写入设备，注意引用原始磁盘设备（`/dev/rdisk3`）并在提示时输入用户密码：
 
 ```bash
 sudo dd if=/path/to/iso/image.iso of=/dev/rdisk3 bs=1m
@@ -327,17 +321,13 @@ Windows 上有许多免费工具可以将 ISO 镜像写入 USB 驱动器，但�
 
 [`getfedora.org/en/workstation/download/`](https://getfedora.org/en/workstation/download/)
 
-
-
-
-
 安装完成后，启动写入工具并选择如图 3-2 所示亮出的“自定义”（Custom）镜像选项：
 
 ![](img/fedora_31_media_writer.jpg)
 
 图 3-2
 
-在出现的文件选择对话框中，导航并选择 Ubuntu 安装 ISO 镜像，然后点击`打开`Open）按钮。选择镜像后将弹出一个对话框，其中可以将镜像写入 USB 驱动器。在点击`写入磁盘`Write to Disk）按钮之前，请从设备菜单中选择目标 USB 驱动器：
+在出现的文件选择对话框中，导航并选择 Ubuntu 安装 ISO 镜像，然后点击`打开`（Open）按钮。选择镜像后将弹出一个对话框，其中可以将镜像写入 USB 驱动器。在点击`写入磁盘`（Write to Disk）按钮之前，请从设备菜单中选择目标 USB 驱动器：
 
 ![](img/ubuntu_20.04_fedora_writer.jpg)
 
@@ -353,13 +343,13 @@ Windows 上有许多免费工具可以将 ISO 镜像写入 USB 驱动器，但�
 
 图 3-4
 
-在此处采取任何操作，Ubuntu 将进入现场会话（Live session），并提供选项：要么在不安装 的情况下尝试 Ubuntu，要么如上方的图 3-1 所示开始安装过程。或者，按下键盘上的`Esc`键将进入启动菜单系统，从图 3-5 所示的语言选择界面开始：
+在此处采取任何操作，Ubuntu 将进入现场会话（Live session），并提供选项：要么在不安装的情况下尝试 Ubuntu，要么如上方的图 3-1 所示开始安装过程。或者，按下键盘上的`Esc`键将进入启动菜单系统，从图 3-5 所示的语言选择界面开始：
 
 ![](img/ubuntu_18.04_boot_menu_language.jpg)
 
 图 3-5
 
-使用键盘方向键导航并按`回车`Enter 键选择语言，随后将显示所示的 Ubuntu 启动菜单屏幕：
+使用键盘方向键导航并按`回车`（Enter）键选择语言，随后将显示所示的 Ubuntu 启动菜单屏幕：
 
 ![](img/ubuntu_20.04_install_menu.jpg)
 
@@ -375,33 +365,33 @@ Windows 上有许多免费工具可以将 ISO 镜像写入 USB 驱动器，但�
 
 图 3-7
 
-在欢迎屏幕上，点击`继续`Continue 按钮之前选择你首选的语言以进入下一个屏幕：
+在欢迎屏幕上，点击`继续`（Continue）按钮之前选择你首选的语言以进入下一个屏幕：
 
 ![](img/ubuntu_20.04_install_keyboard_type.jpg)
 
 图 3-8
 
-选择你的键盘布局，或者如果你不确定，点击`检测键盘布局`Detect Keyboard Layout 按钮，通过一些步骤识别你的键盘，然后点击`继续`Continue。在下一个屏幕上，选择执行`标准`Normal 还是`最小化`Minimal 安装：
+选择你的键盘布局，或者如果你不确定，点击`检测键盘布局`（Detect Keyboard Layout）按钮，通过一些步骤识别你的键盘，然后点击`继续`（Continue）。在下一个屏幕上，选择执行`标准`（Normal）还是`最小化`（Minimal）安装：
 
 ![](img/ubuntu_20.04_install_type.jpg)
 
 图 3-9
 
-如果你有足够的磁盘空间，并希望探索 Ubuntu 包含的主要应用程序和实用程序，而无需以后手动安装它们，请选择`标准`Normal 选项。或者，为了避免用你可能永远需要的软件占用系统，请选择`最小化`Minimal 选项。无论在这里做出什么选择，如果将来需要，Ubuntu 的所有软件都可以在任何时候轻松地安装或删除。
+如果你有足够的磁盘空间，并希望探索 Ubuntu 包含的主要应用程序和实用程序，而无需以后手动安装它们，请选择`标准`（Normal）选项。或者，为了避免用你可能永远需要的软件占用系统，请选择`最小化`（Minimal）选项。无论在这里做出什么选择，如果将来需要，Ubuntu 的所有软件都可以在任何时候轻松地安装或删除。
 
 安装过程中还提供了在更新组成 Ubuntu 发行版的软件包的选项。Ubuntu 与大多数受到活跃支持的操作系统一样，在向公众发布很长时间后仍继续通过错误修复和安全补丁进行更新。如果选择此选项且系统连接到互联网，安装程序将下载自 Ubuntu 安装镜像发布以来发布的所有更新，并在安装期间将其应用到系统。如果你选择在安装过程中不执行此更新，这些更新可能在安装完成后的任何时间仍然应用。
 
-第二个选项提供了选择是否安装第三方非开源软件的选项，以支持特定的硬件设备并在系统上播放专有媒体文件。某些用户强烈反对使用任何未在公用许可下发布的软件。如果你是这些人中的一一员，请不要选择此选项。相反，如果你只想获得 Ubuntu 安装的最佳体验，则建议选择此选项。
+第二个选项提供了选择是否安装第三方非开源软件的选项，以支持特定的硬件设备并在系统上播放专有媒体文件。某些用户强烈反对使用任何未在公用许可下发布的软件。如果你是这些人中的一员，请不要选择此选项。相反，如果你只想获得 Ubuntu 安装的最佳体验，则建议选择此选项。
 
-做出适当选择后，点击`继续`Continue 按钮进入磁盘分配屏幕：
+做出适当选择后，点击`继续`（Continue）按钮进入磁盘分配屏幕：
 
 ![](img/ubuntu_20.04_install_disk_options.jpg)
 
 图 3-10
 
-假设这是一块没有现有操作系统的新磁盘，安装程序将提供擦除整个磁盘并将其用于 Ubuntu 的选项（在这种情况下，安装程序将计算并实施一种典型且推荐的分区布局）。或者，若要定义你自定义的磁盘布局，请选择`其他`Something else 选项，手动创建并调整包含操作系统和数据的磁盘分区。
+假设这是一块没有现有操作系统的新磁盘，安装程序将提供擦除整个磁盘并将其用于 Ubuntu 的选项（在这种情况下，安装程序将计算并实施一种典型且推荐的分区布局）。或者，若要定义你自定义的磁盘布局，请选择`其他`（Something else）选项，手动创建并调整包含操作系统和数据的磁盘分区。
 
-点击`高级功能`Advanced Features 按钮将提供使用逻辑卷管理（LVM）的选项。强烈建议使用 LVM 以使系统磁盘和分区的管理更加容易，该主题在向 Ubuntu 卷组添加逻辑卷中进行了详细介绍：
+点击`高级功能`（Advanced Features）按钮将提供使用逻辑卷管理（LVM）的选项。强烈建议使用 LVM 以使系统磁盘和分区的管理更加容易，该主题在向 Ubuntu 卷组添加逻辑卷中进行了详细介绍：
 
 ![](img/ubuntu_20.04_install_disk_features.jpg)
 
@@ -411,7 +401,7 @@ Windows 上有许多免费工具可以将 ISO 镜像写入 USB 驱动器，但�
 
 还提供了使用`ZFS`文件系统的选项。ZFS 是一种高级文件系统，内置了逻辑卷管理的许多功能，以及一系列其他功能，例如创建磁盘快照和影子功能（写时复制）。尽管 ZFS 已经存在多年，但在 Ubuntu 上的实现在现阶段被认为是实验性的，不应在生产环境中使用。
 
-做出选择后，点击`现在安装`Install Now 按钮开始安装过程，此时系统将确认对磁盘驱动器的更改：
+做出选择后，点击`现在安装`（Install Now）按钮开始安装过程，此时系统将确认对磁盘驱动器的更改：
 
 ![](img/ubuntu_20.04_install_write_changes.jpg)
 
@@ -429,10 +419,7 @@ Windows 上有许多免费工具可以将 ISO 镜像写入 USB 驱动器，但�
 
 图 3-14
 
-还提供了一个选项，规定用户在每次想要登录系统时是否指定密码。默认情况下，每次 Ubuntu 启动时都会出现需要用户名和密码凭据的登录屏幕。如果你是系统的唯一用户并希望跳过此屏幕并在系统每次启动时自动登录，请务必在继续之前勾选`自动登录`Log in automatically 复选框。
-
-
-
+还提供了一个选项，规定用户在每次想要登录系统时是否指定密码。默认情况下，每次 Ubuntu 启动时都会出现需要用户名和密码凭据的登录屏幕。如果你是系统的唯一用户并希望跳过此屏幕并在系统每次启动时自动登录，请务必在继续之前勾选`自动登录`（Log in automatically）复选框。
 
 当所有问题都回答后，安装程序将继续进行安装。根据你的系统速度以及你是否选择在安装期间下载更新，此过程可能需要一些时间。要查看安装程序正在执行的步骤的详细信息，请点击进度条上方状态标题：
 
@@ -446,15 +433,19 @@ Windows 上有许多免费工具可以将 ISO 镜像写入 USB 驱动器，但�
 
 图 3-16
 
-当你准备好重启时，按下 `Restart Now`（立即重启）按钮。安装程序可能会提示你移除安装介质，系统将花费几秒钟关机。此时，移除 USB 闪盘并按 `Enter` 键继续。
+当你准备好重启时，按下`Restart Now`（立即重启）按钮。安装程序可能会提示你移除安装介质，系统将花费几秒钟关机。此时，移除 USB 闪盘并按`Enter`键继续。
 
 ### 3.7 访问 Ubuntu 桌面
 
-系统启动后，如果启用了密码要求选项，GNOME 显示管理器（`GDM`）登录屏幕（图 3-17
+系统启动后，如果启用了密码要求选项，GNOME 显示管理器（`GDM`）登录屏幕（图 3-17）将出现：
+
+![](img/ubuntu_20.04_gdm_login_screen.jpg)
 
 图 3-17
 
-或者，如果安装配置为直接登录桌面，则在系统重启后，GNOME 桌面（图 3-18
+或者，如果安装配置为直接登录桌面，则在系统重启后，GNOME 桌面（图 3-18）将直接显示：
+
+![](img/ubuntu_20.04_gnome_desktop.jpg)
 
 图 3-18
 
@@ -462,7 +453,7 @@ Windows 上有许多免费工具可以将 ISO 镜像写入 USB 驱动器，但�
 
 与现今大多数操作系统一样，Ubuntu 发行版的每个特定版本在发布后都会持续演进。这通常表现为错误修复和安全更新，偶尔还会有可以通过互联网下载并安装到系统中的新功能。
 
-最佳实践建议安装 Ubuntu 后的第一步是确保将任何可用的更新应用到系统。这可以通过 Terminal（终端）窗口中的命令行提示符使用 `apt` 软件包管理器工具来实现。要检查可用更新，右键点击桌面背景，并从弹出的菜单中选择 `Open in Terminal`（在终端中打开）选项：
+最佳实践建议安装 Ubuntu 后的第一步是确保将任何可用的更新应用到系统。这可以通过 Terminal（终端）窗口中的命令行提示符使用`apt`软件包管理器工具来实现。要检查可用更新，右键点击桌面背景，并从弹出的菜单中选择`Open in Terminal`（在终端中打开）选项：
 
 ![](img/ubuntu_20.04_desktop_open_in_terminal.jpg)
 
@@ -484,13 +475,13 @@ Reading state information... Done
 103 packages can be upgraded. Run ‘apt list --upgradable’ to see them.
 ```
 
-任何待处理的更新可以使用 `apt` 工具应用：
+任何待处理的更新可以使用`apt`工具应用：
 
 ```bash
 ## apt upgrade
 ```
 
-执行后，`apt` 工具将提供一份可用更新的软件包列表，并请求执行更新的权限：
+执行后，`apt`工具将提供一份可用更新的软件包列表，并请求执行更新的权限：
 
 ```
 103 upgraded, 7 newly installed, 0 to remove and 0 not upgraded.
@@ -503,25 +494,25 @@ Do you want to continue? [Y/n]
 
 ### 3.9 显示启动消息
 
-在启动过程中，系统将显示 Ubuntu 启动界面，该界面会隐藏系统加载时生成的所有启动消息。若要在启动过程中显示这些消息（如图 3-20 所示），只需在系统启动时按下键盘上的 `Esc` 键即可：
+在启动过程中，系统将显示 Ubuntu 启动界面，该界面会隐藏系统加载时生成的所有启动消息。若要在启动过程中显示这些消息（如图 3-20 所示），只需在系统启动时按下键盘上的`Esc`键即可：
 
 ![](img/ubuntu_18.04_boot_messages.jpg)
 
 图 3-20
 
-可以更改默认行为，通过编辑 `/etc/default/grub` 文件并更改 `GRUB_CMDLINE_LINUX` 设置，使其默认始终显示消息，该设置默认类似于如下内容：
+可以更改默认行为，通过编辑`/etc/default/grub`文件并更改`GRUB_CMDLINE_LINUX`设置，使其默认始终显示消息，该设置默认类似于如下内容：
 
 ```
 GRUB_CMDLINE_LINUX="... rhgb quiet"
 ```
 
-如果你是 Linux 新手且不熟悉可用的编辑器，请参考“引言”章节中概述的编辑器建议。例如，要使用 `nano` 编辑器，输入以下命令启动编辑器并加载 grub 文件：
+如果你是 Linux 新手且不熟悉可用的编辑器，请参考“引言”章节中概述的编辑器建议。例如，要使用`nano`编辑器，输入以下命令启动编辑器并加载 grub 文件：
 
 ```bash
 ## nano /etc/default/grub
 ```
 
-要移除图形化启动界面以便在不按 `Esc` 键的情况下显示消息，请从设置中移除“splash”和“quiet”选项：
+要移除图形化启动界面以便在不按`Esc`键的情况下显示消息，请从设置中移除“splash”和“quiet”选项：
 
 ```
 GRUB_CMDLINE_LINUX=""
@@ -557,13 +548,9 @@ Ubuntu 20.04 的网络安装镜像可以从以下网页下载：
 
 [`archive.ubuntu.com/ubuntu/dists/focal/main/installer-amd64/current/legacy-images/netboot/mini.iso`](http://archive.ubuntu.com/ubuntu/dists/focal/main/installer-amd64/current/legacy-images/netboot/mini)
 
-下载后，按照“在空白硬盘上安装 Ubuntu”章节中的步骤将 `mini.iso` 镜像写入 USB 闪盘。
+下载后，按照“在空白硬盘上安装 Ubuntu”章节中的步骤将`mini.iso`镜像写入 USB 闪盘。
 
 ### 4.3 从安装镜像启动
-
-
-
-
 
 插入 Ubuntu 安装介质并启动系统。如果系统尝试从硬盘启动，你将需要进入计算机的 BIOS 设置并更改启动顺序，使系统首先从安装介质驱动器启动。一旦系统启动，将显示图 4-1 所示的屏幕：
 
@@ -573,15 +560,15 @@ Ubuntu 20.04 的网络安装镜像可以从以下网页下载：
 
 ### 4.4 执行安装
 
-在菜单中，选择 `Install`（安装）选项并按下键盘 `Enter` 键开始安装过程。在接下来的几个屏幕中，使用键盘方向键和 `Enter` 键选择你偏好的语言和键盘类型。
+在菜单中，选择`Install`（安装）选项并按下键盘`Enter`键开始安装过程。在接下来的几个屏幕中，使用键盘方向键和`Enter`键选择你偏好的语言和键盘类型。
 
-在完成配置选择后，安装程序程序将扫描设备硬件以寻找网络接口：
+在完成配置选择后，安装程序将扫描设备硬件以寻找网络接口：
 
 ![](img/ubuntu_18.04_network_install_detect_network.jpg)
 
 图 4-2
 
-一旦检测到网络连接，系统将需要分配一个主机名，以便其在网络上显示。在提示时，输入主机名，然后使用 `Tab` 键导航到 `Continue`（继续）按钮，最后按下 `Enter` 键进入下一个屏幕。
+一旦检测到网络连接，系统将需要分配一个主机名，以便其在网络上显示。在提示时，输入主机名，然后使用`Tab`键导航到`Continue`（继续）按钮，最后按下`Enter`键进入下一个屏幕。
 
 在安装期间，安装程序将仅下载匹配你在安装过程中所做的软件选择所需的软件包。这些 Ubuntu 软件包托管在世界各地的镜像服务器上。为了确保最佳的下载性能，请选择系统所在的国家：
 
@@ -594,6 +581,8 @@ Ubuntu 20.04 的网络安装镜像可以从以下网页下载：
 ![](img/ubuntu_18.04_network_install_choose_mirror_site.jpg)
 
 图 4-4
+
+
 
 如果执行安装的计算机位于基于代理的防火墙之后，请在图 4-5 所示的屏幕上输入代理信息。代理服务防火墙位于互联网和计算机内部网络之间，充当这两个环境之间的中间介。在有了代理服务的情况下，内部客户端计算机不会直接连接到外部资源。相反，它们连接到代理服务器，由代理服务器代表客户端连接外部资源，从而掩盖客户端的内部 IP 地址。来自外部资源的任何响应都将由代理服务处理，并将其传递给最初请求数据的客户端：
 
@@ -670,10 +659,6 @@ tasksel
 ```
 
 ### 4.8 总结
-
-
-
-
 
 Ubuntu 网络安装提供了一种使用较小的 ISO 镜像安装 Ubuntu 的方法。这要求目标系统具有活跃的网络连接，以便在安装过程中用于安装软件包，并将安装过程限制在文本模式下进行（尽管仍然可以安装图形桌面）。与桌面版和服务器版安装镜像不同，网络安装程序还允许选择不同的软件集合进行安装，从而对安装过程提供更大的控制，并产生一个配置更精细的操作系统。
 
@@ -773,10 +758,6 @@ Ubuntu 与绝大多数 Linux 发行版一样，可以很方便地与几乎任何
 
 图 5-11
 
-
-
-
-
 按回车键启动 Ubuntu。如果您想启动 Windows，请使用键盘方向键选择 Windows 选项。如果您选择启动 Ubuntu，操作系统将加载并出现 Ubuntu 登录界面（除非选择了自动登录选项）。输入您在安装过程中设置的用户名和密码，您将登录到 Ubuntu 桌面环境。
 
 ### 5.3 更改默认启动选项
@@ -875,9 +856,6 @@ Device Boot Start End Sectors Size Id Type
 
 通过创建双引导环境，Ubuntu 可以与 Windows 操作系统在同一硬盘器上安全共存。这涉及在安装期间缩小 Windows 系统占据的空间为 Ubuntu 腾出空间。一旦安装了 Ubuntu，就可以修改启动菜单配置来更改默认操作系统。硬盘驱动器上的 Windows 分区可以通过命令行或桌面磁盘工具从 Ubuntu 访问。
 
-
-
-
 ## 6.3 格式化未分配的磁盘分区
 
 为了让新分区适用于 Ubuntu 使用，需要在其上创建文件系统。当前 Ubuntu 版本推荐的文件系统是 XFS，它将在“向 Ubuntu 系统添加新硬盘”章节中进行更详细的介绍。文件系统的创建使用 `mkfs.xfs` 命令执行如下（如有必要请安装 `xfsprogs` 包）：
@@ -886,8 +864,6 @@ Device Boot Start End Sectors Size Id Type
 apt install xfsprogs
 mkfs.xfs /dev/sda1
 ```
-
-
 
 接下来，我们需要挂载新分区。在本例中，我们将将其挂载到名为 `/data` 的目录中。不过，你也可以使用任何所需的有效挂载点来挂载新分区，或将其作为逻辑卷的一部分（详细信息请参阅向 Ubuntu 卷组和逻辑卷添加新磁盘 章节）。首先，我们需要创建一个目录作为挂载点：
 
@@ -901,7 +877,9 @@ mkdir /data
 /dev/sda1 /data xfs defaults 0 0
 ```
 
-最后，我们可以手动挂载新分区（注意，在随后的重启中将不再需要这样做，因为由于我们在上面 `/etc/fstab` 文件中添加的设置，分区将自动挂载）。
+
+
+最后，我们可以手动挂载新分区（注意，在随后的重启中将不再需要这样做，因为由于我们在上面`/etc/fstab`文件中添加的设置，分区将自动挂载）。
 
 ```bash
 mount /data
@@ -913,13 +891,14 @@ mount /data
 df -h /data
 ```
 
+```
 Filesystem Size Used Avail Use% Mounted on
-
 /dev/sda1 29G 62M 29G 1% /data
+```
 
 ## 6.5 编辑启动菜单
 
-下一步是修改 Ubuntu 启动菜单。由于这最初是一个双启动系统，因此菜单被配置为提供启动 Windows 或 Ubuntu 的选项。现在 Windows 分区已经删除，我们需要删除此启动选项。在 Ubuntu 上，可以通过运行如下的 `update-grub` 命令来实现这一点：
+下一步是修改 Ubuntu 启动菜单。由于这最初是一个双启动系统，因此菜单被配置为提供启动 Windows 或 Ubuntu 的选项。现在 Windows 分区已经删除，我们需要删除此启动选项。在 Ubuntu 上，可以通过运行如下的`update-grub`命令来实现这一点：
 
 ```bash
 update-grub
@@ -927,39 +906,32 @@ update-grub
 
 ```
 Sourcing file `/etc/default/grub`
-
 Generating grub configuration file ...
-
 Found linux image: /boot/vmlinuz-5.3.0-42-generic
-
 Found initrd image: /boot/initrd.img-5.3.0-42-generic
-
 Found linux image: /boot/vmlinuz-5.3.0-28-generic
-
 Found initrd image: /boot/initrd.img-5.3.0-28-generic
-
 Found memtest86+ image: /boot/memtest86+.elf
-
 Found memtest86+ image: /boot/memtest86+.bin
 ```
 
 由于现在只有一个操作系统需要启动，系统将在下次重启时自动启动 Ubuntu，而不会显示启动菜单。如果你需要访问此启动菜单（例如使用高级启动选项），只需在启动过程的初始阶段按下 Esc 键即可。
 
-## 6.6 使用 GNOME 磁盘 ks 工具
+## 6.6 使用 GNOME 磁盘工具
 
-`gnome-disks` 工具提供了一个用户友好的图形界面方案，用于从命令行恢复 Windows 分区。由于此处使用的示例将把 Windows NTFS 分区转换为 XFS 格式，第一步是按照如下安装 `xfsprogs` 包：
+`gnome-disks`工具提供了一个用户友好的图形界面方案，用于从命令行恢复 Windows 分区。由于此处使用的示例将把 Windows NTFS 分区转换为 XFS 格式，第一步是按照如下安装`xfsprogs`包：
 
 ```bash
 apt install xfsprogs
 ```
 
-安装包后，打开终端窗口并启动 `gnome-disks` 工具：
+安装包后，打开终端窗口并启动`gnome-disks`工具：
 
 ```bash
 gnome-disks
 ```
 
-稍等片刻，`gnome-disks` 工具将如图 6-1 所示：
+稍等片刻，`gnome-disks`工具将如图 6-1 所示：
 
 ![](img/ubuntu_20.04_windows_partition_mounted.jpg)
 
@@ -999,13 +971,13 @@ gnome-disks
 
 图 6-6
 
-如果 XFS 选项被禁用，请退出。`gnome-disks` 工具将开始格式化过程并显示状态：由于 XFS 的用处，选择 Other 后点击创建按钮：
+如果 XFS 选项被禁用，请退出。`gnome-disks`工具将开始格式化过程并显示状态：由于 XFS 的用处，选择 Other 后点击创建按钮：
 
 ![](img/ubuntu_20.04_gnome-disks_create.jpg)
 
 图 6-7
 
-一旦分区准备就绪，可以通过命令行或使用 `gnome-disks` 进行挂载。要配置挂载点，选择分区并点击如图 6-9 所示的设置按钮：
+一旦分区准备就绪，可以通过命令行或使用`gnome-disks`进行挂载。要配置挂载点，选择分区并点击如图 6-9 所示的设置按钮：
 
 ![](img/ubuntu_20.04_gnome-disks_settings.jpg)
 
@@ -1022,11 +994,11 @@ gnome-disks
 设置完成后，点击 OK。该卷已挂载并可以使用：
 
 ```bash
-$ df -h /data
+df -h /data
 ```
 
+```
 Filesystem Size Used Avail Use% Mounted on
-
 /dev/sda1 29G 62M 29G 1% /data
 ```
 
@@ -1034,7 +1006,7 @@ Filesystem Size Used Avail Use% Mounted on
 
 ## 6.7 总结
 
-双启动配置中的 Windows 分区可以随时删除，为 Ubuntu 系统腾出空间。删除后，可以使用空闲空间创建新的文件系统并进行挂载以供 Ubuntu 系统使用。最后的任务是从启动菜单中删除 Windows 选项。这些任务可以通过命令行使用 fdisk 完成，也可以在桌面环境中使用 gnome-disks 完成。
+双启动配置中的 Windows 分区可以随时删除，为 Ubuntu 系统腾出空间。删除后，可以使用空闲空间创建新的文件系统并进行挂载以供 Ubuntu 系统使用。最后的任务是从启动菜单中删除 Windows 选项。这些任务可以通过命令行使用`fdisk`完成，也可以在桌面环境中使用`gnome-disks`完成。
 
 ## 7 GNOME 3 桌面导览
 
@@ -1045,10 +1017,6 @@ Ubuntu 20.04 包含了 GNOME 3 桌面环境。虽然不像 Windows 和 macOS 桌
 ### 7.1 安装 GNOME 桌面
 
 如果在安装 Ubuntu 20.04 的过程中使用了 Ubuntu Desktop 镜像，则 GNOME 桌面已经安装，并在每次系统启动时都会自动启动。
-
-
-
-
 
 如果在 Ubuntu 20.04 安装过程中选择了任何其他软件配置，则系统安装的软件包中将不包含 GNOME 桌面。对于没有连接显示器的服务器系统，安装图形化桌面环境的想法可能看起来是多余的。然而，值得注意的是，远程访问 GNOME 桌面也是可行的，因此即使在所谓的“无头服务器”（即缺少显示器、键盘和鼠标的服务器）上，安装 GNOME 桌面软件包可能仍有益益。关于建立远程桌面访问的话题将在本书的后续章节中详细介绍。
 
@@ -1066,13 +1034,15 @@ tasksel install ubuntu-desktop
 下方的图 7-1 所示屏幕显示了在启动任何其他程序或进行配置更改之前，典型的新启动 GNOME 桌面会话的外观：
 
 ![](img/ubuntu_20.04_ubuntu_desktop.jpg)
+
 图 7-1
 
 主桌面区域（标记为 A）是启动应用程序和工具时窗口出现的地方。
 
-屏幕顶部的栏（B）称为顶栏（top bar），它包含活动菜单（C）、日期和时间，以及一组按钮和图标，包括网络状态、音频量、电池电量以及其他状态账户设置。当前运行在桌面上的活动应用程序的菜单也会出现在顶栏中。例如，图 7-2 显示了 `Terminal` 程序的应用程序菜单：
+屏幕顶部的栏（B）称为顶栏（top bar），它包含活动菜单（C）、日期和时间，以及一组按钮和图标，包括网络状态、音频量、电池电量以及其他状态账户设置。当前运行在桌面上的活动应用程序的菜单也会出现在顶栏中。例如，图 7-2 显示了`Terminal`程序的应用程序菜单：
 
 ![](img/ubuntu_20.04_gnome_desktop_terminal_menu.jpg)
+
 图 7-2
 
 ### 7.3 启动活动
@@ -1082,6 +1052,7 @@ tasksel install ubuntu-desktop
 显示时，dash 将如图 7-3 所示：
 
 ![](img/ubuntu_20.04_gnome_desktop_dash.jpg)
+
 图 7-3
 
 默认情况下，dash 将显示一组预定义的常用应用程序的图标，并包含任何当前运行的应用程序的图标。如果应用程序正在运行，它将在图标左侧显示带有一个圆点标记；如果运行了多个副本，则每个实例都会显示一个圆点。
@@ -1091,6 +1062,7 @@ tasksel install ubuntu-desktop
 要找到 dash 中未包含的应用程序，一种方法是选择最底部的图标（由九个点组成的正方形）来显示可浏览的应用程序列表，如图 7-4 所示：
 
 ![](img/ubuntu_20.04_gnome_desktop_app_list.jpg)
+
 图 7-4
 
 注意，可以通过选择屏幕底部中央的按钮来过滤列表，显示所有应用程序或仅显示频繁使用的应用程序。此外，要意识到列表中的某些条目实际上是存放其他应用程序的文件夹。
@@ -1098,25 +1070,28 @@ tasksel install ubuntu-desktop
 浏览应用程序的另一种方法是使用搜索栏进行搜索，点击“活动”菜单时会显示搜索栏，如图 7-5 所示：
 
 ![](img/ubuntu_20.04_gnome_desktop_search.jpg)
+
 图 7-5
 
 随着在搜索框中输入文本，可能的匹配列表将不断精简。
 
-为了更方便地访问将应用程序添加到 dash，找到该应用程序的图标，右键点击它并选择 `Add to Favorites`（添加到收藏）菜单选项：
+为了更方便地访问将应用程序添加到 dash，找到该应用程序的图标，右键点击它并选择`Add to Favorites`（添加到收藏）菜单选项：
 
 ![](img/ubuntu_20.04_gnome_desktop_add_to_favorites.jpg)
+
 图 7-6
 
-要从 dash 中移除应用，右键点击 dash 中的图标并选择 `Remove from Favorites`（从收藏中移除）。
+要从 dash 中移除应用，右键点击 dash 中的图标并选择`Remove from Favorites`（从收藏中移除）。
 
 ### 7.4 管理窗口
 
-与其他桌面环境一样，在 GNOME 上运行的应用程序都在窗口中。当打开多个应用程序窗口时，使用 `Super + Tab` 键盘快捷键将显示切换面板（图 7-7），允许选择不同的窗口作为当前活动窗口（`Super` 键是 Windows 键，或者在 Mac 键盘上是 `Cmd` 键）：
+与其他桌面环境一样，在 GNOME 上运行的应用程序都在窗口中。当打开多个应用程序窗口时，使用`Super + Tab`键盘快捷键将显示切换面板（图 7-7），允许选择不同的窗口作为当前活动窗口（`Super`键是 Windows 键，或者在 Mac 键盘上是`Cmd`键）：
 
 ![](img/ubuntu_20.04_gnome_desktop_tasks.jpg)
+
 图 7-7
 
-要在切换器中的图标之间反向循环，请使用 `Shift + Tab` 键盘快捷键。
+要在切换器中的图标之间反向循环，请使用`Shift + Tab`键盘快捷键。
 
 要最大化窗口以填充整个屏幕，点击标题栏并将窗口拖动到屏幕顶部。要将窗口恢复原始大小，点击标题栏并向下拖动。或者，只需双击标题栏即可在窗口大小之间切换。同样，将窗口拖到屏幕的左侧或右侧将使窗口填充屏幕的半部分。
 
@@ -1125,6 +1100,7 @@ tasksel install ubuntu-desktop
 显示应用程序窗口的区域被称为工作区（workspace），GNOME 3 允许配置多个工作区。要创建一个新的工作区，显示“活动”概览并将指针移动到屏幕右侧显示工作区面板：
 
 ![](img/ubuntu_20.04_gnome_desktop_workspaces.jpg)
+
 图 7-8
 
 要切换到不同的面板，只需从列表中选择。要将窗口从一个工作区移动到另一个，显示工作区面板并将应用程序窗口（当前工作区的实际窗口或工作区面板中的缩图）拖放到目标工作区。当窗口被添加到空白工作区时，工作区面板会添加一个新的空白工作区，从而创建多个工作区。要删除工作区，请关闭该工作区的所有窗口，或将其移动到另一个工作区。
@@ -1134,6 +1110,7 @@ tasksel install ubuntu-desktop
 当系统需要通知您事件（例如系统或应用程序更新）时，顶部会出现一个弹出面板。点击顶栏中的日期和时间可以访问日历和任何之前的通知，如图 7-9 所示：
 
 ![](img/ubuntu_20.04_gnome_desktop_calendar.jpg)
+
 图 7-9
 
 ### 7.7 桌面设置
@@ -1141,11 +1118,13 @@ tasksel install ubuntu-desktop
 要访问设置应用程序，点击顶栏最右侧的箭头，并选择图 7-10 所示工具图标按钮：
 
 ![](img/ubuntu_20.04_gnome_desktop_control_panel.jpg)
+
 图 7-10
 
 设置应用程序提供了广泛的选项，例如以太网和 WiFi 连接、屏幕背景自定义选项、屏幕锁定和电源管理控制以及语言偏好。要探索每个类别中的可用设置，只需从设置窗口左侧面板选择一个选项：
 
 ![](img/ubuntu_20.04_gnome_desktop_settings.jpg)
+
 图 7-11
 
 上述[图 7-10]所示的菜单还包括切换用户、调整音量、切换到不同的 WiFi 网络以及注销、重启或关机选项。
@@ -1155,24 +1134,22 @@ tasksel install ubuntu-desktop
 dash（也称为 dock）的大小、位置和行为可以在设置应用中通过选择`Appearance`选项更改，如图 7-12 所示：
 
 ![](img/ubuntu_20.04_gnome_desktop_dock_settings.jpg)
+
 图 7-12
 
-
-
-
-位置可以设置为屏幕的四边之一，同时 `Icon` 大小可用于减小 dock 栏的大小。最后如果启用了 `auto-hide` dock 选项，dock 栏将从视图中隐藏，直到鼠标指针移动到它当前所在的屏幕边缘。
+位置可以设置为屏幕的四边之一，同时`Icon`大小可用于减小 dock 栏的大小。最后如果启用了`auto-hide` dock 选项，dock 栏将从视图中隐藏，直到鼠标指针移动到它当前所在的屏幕边缘。
 
 ### 7.9 切换到深色模式
 
-除了提供 dock 设置外，`Settings` 应用的 `Appearance` 面板还允许在亮色、标准和深色模式之间切换桌面。例如，图 7-13 显示了深色模式：
+除了提供 dock 设置外，`Settings`应用的`Appearance`面板还允许在亮色、标准和深色模式之间切换桌面。例如，图 7-13 显示了深色模式：
 
 ![](img/ubuntu_20.04_gnome_desktop_dark_mode.jpg)
 
 图 7-13
 
-### 7.10 安装 Ubuntu 
+### 7.10 安装 Ubuntu
 
-与 macOS、Windows、iOS 和 Android 等其他操作系统相同，Ubuntu 拥有以 `Ubuntu Software` 工具形式存在的“应用商店”。图标通常放置在 dash 中，如图 7-14 所示：
+与 macOS、Windows、iOS 和 Android 等其他操作系统相同，Ubuntu 拥有以`Ubuntu Software`工具形式存在的“应用商店”。图标通常放置在 dash 中，如图 7-14 所示：
 
 ![](img/ubuntu_20.04_gnome_desktop_ubuntu_software_icon.jpg)
 
@@ -1184,7 +1161,7 @@ dash（也称为 dock）的大小、位置和行为可以在设置应用中通�
 
 图 7-15
 
-要安装应用程序，只需在 `Ubuntu Software` 窗口中选择它并点击 `Install` 按钮：
+要安装应用程序，只需在`Ubuntu Software`窗口中选择它并点击`Install`按钮：
 
 ![](img/ubuntu_20.04_gnome_desktop_install_software.jpg)
 
@@ -1192,15 +1169,17 @@ dash（也称为 dock）的大小、位置和行为可以在设置应用中通�
 
 ### 7.11 基础自定义之外
 
-`GNOME 3` 桌面在设计上是一个简洁且不杂乱的环境，自定义选项极少。然而，这并不意味着无法对桌面进行额外的更改。事实上，`GNOME Project` 开发了一个名为 `GNOME Tweaks` 的工具专门用于实现这一目的。请使用以下命令安装并运行该工具：
+`GNOME 3`桌面在设计上是一个简洁且不杂乱的环境，自定义选项极少。然而，这并不意味着无法对桌面进行额外的更改。事实上，`GNOME Project`开发了一个名为`GNOME Tweaks`的工具专门用于实现这一目的。请使用以下命令安装并运行该工具：
 
-```
+```bash
 apt install gnome-tweaks
 ```
 
-```
+```bash
 gnome-tweaks
 ```
+
+
 
 一旦 `GNOME Tweaks` 加载，将出现图 7-17 所示的界面：
 
@@ -1276,9 +1255,6 @@ firewall-cmd --reload
 ### 8.4 概述
 
 `Overview` 屏幕提供了当前系统的概述，包括 `CPU` 和 `memory` 的实时性能指标。此屏幕还包含系统信息，包括底层硬件、主机名、系统时间以及系统软件是否已为最新版本。还提供了重启或关机系统的选项。
-
-
-
 
 例如，图 8-2 显示了 Cockpit 界面的概览页：
 
@@ -1438,9 +1414,6 @@ Cockpit 界面允许在浏览器中执行远程系统管理任务，而无需依
 
 ### 9.1 什么是 Shell？
 
-
-
-
 Shell 是一个交互式命令解释器环境，用户可以在提示符处输入命令，也可以以脚本的形式将命令写入文件并进行执行。Shell 的起源可以追溯到 UNIX 操作系统的早期。事实上，在 Linux 引入图形化桌面之前的早期，Shell 是用户与操作系统交互的唯一方式。
 
 多年来，人们开发了多种 Shell 环境。第一个被广泛使用的 Shell 是由贝尔实验室的 Stephen Bourne 编写的 `Bourne shell`。
@@ -1527,97 +1500,101 @@ $ history
     1 ps
     2 ls
     3 ls –l
-    4 ls
-    5 man pwd
-    6 apropos
 ```
 
-此外，可以使用 `Ctrl-p`（或 `上箭头`）和 `Ctrl-n`（或 `下箭头`）在历史命令之间滚动。当显示出所需的历史命令时，按回车键执行。
 
-另一种选项是输入 `!` 字符，后跟要重复命令的前几个字符，然后按回车键。
+
+### 9.6 命令行历史
+
+在 Shell 环境中，命令行历史功能允许你查看和重用之前输入的命令。使用`history`命令可以显示当前会话中执行过的命令列表：
+
+```bash
+history
+```
+
+此外，可以使用`Ctrl-p`（或`上箭头`）和`Ctrl-n`（或`下箭头`）在历史命令之间滚动。当显示出所需的历史命令时，按回车键执行。
+
+另一种选项是输入`!`字符，后跟要重复命令的前几个字符，然后按回车键。
 
 ### 9.7 文件名简写
 
-许多 Shell 命令接受一个或多个文件名作为参数。例如，要显示名为 `list.txt` 的文本文件的内容，可以使用 `cat` 命令：
+许多 Shell 命令接受一个或多个文件名作为参数。例如，要显示名为`list.txt`的文本文件的内容，可以使用`cat`命令：
 
-```
+```bash
 $ cat list.txt
 ```
 
 同样，可以通过指定所有文件名作为参数来显示多个文本文件的内容：
 
-```
+```bash
 $ cat list.txt list2.txt list3.txt list4.txt
 ```
 
-与其输入每个名称，可以使用模式匹配来指定符合某些标准的文件。例如，可以使用 `*` 通配符来简化上面的示例：
+与其输入每个名称，可以使用模式匹配来指定符合某些标准的文件。例如，可以使用`*`通配符来简化上面的示例：
 
-```
+```bash
 $ cat *.txt
 ```
 
-上述命令将显示所有以 `.txt` 结尾的文件内容。这可以进一步限制为以 `list` 开头并以 `.txt` 结尾的文件：
+上述命令将显示所有以`.txt`结尾的文件内容。这可以进一步限制为以`list`开头并以`.txt`结尾的文件：
 
-```
+```bash
 $ cat list*.txt
 ```
 
-可以使用 `?` 字符指定单字符匹配：
+可以使用`?`字符指定单字符匹配：
 
-```
+```bash
 $ cat list?.txt
 ```
 
 ### 9.8 文件名和路径补全
 
-与其输入整个文件名或路径，或使用模式匹配来减少输入，Shell 提供了文件名补全功能。要使用文件名补全，只需输入文件名或路径的前几个字符，然后双击 `Esc` 键。Shell 将根据你输入的字符为你补全目录中第一个匹配的文件名或路径。输入前几个字符后按 `Esc` 获取可能的匹配列表。
+与其输入整个文件名或路径，或使用模式匹配来减少输入，Shell 提供了文件名补全功能。要使用文件名补全，只需输入文件名或路径的前几个字符，然后双击`Esc`键。Shell 将根据你输入的字符为你补全目录中第一个匹配的文件名或路径。输入前几个字符后按`Esc`获取可能的匹配列表。
 
 ### 9.9 输入和输出重定向
 
-如前所述，许多 Shell 命令在执行时会输出信息。默认情况下，这些输出去向名为 `stdout` 的设备文件，这本质上是运行 Shell 的终端窗口或控制台。相反，Shell 从名为 `stdin` 的设备文件获取输入，默认情况下是键盘。
+如前所述，许多 Shell 命令在执行时会输出信息。默认情况下，这些输出去向名为`stdout`的设备文件，这本质上是运行 Shell 的终端窗口或控制台。相反，Shell 从名为`stdin`的设备文件获取输入，默认情况下是键盘。
 
-
-
-
-可以使用 `>` 字符将命令的输出从标准输出（stdout）重定向到文件系统的物理文件。例如，要将 `ls` 命令的输出重定向到名为 `files.txt` 的文件，需要以下命令：
+可以使用`>`字符将命令的输出从标准输出（`stdout`）重定向到文件系统的物理文件。例如，要将`ls`命令的输出重定向到名为`files.txt`的文件，需要以下命令：
 
 ```bash
 ls *.txt > files.txt
 ```
 
-完成后，`files.txt` 将包含当前目录下的文件列表。同样，可以将文件的内容作为标准输入（stdin）馈给命令。例如，要将文件的内容重定向为作为命令的输入：
+完成后，`files.txt`将包含当前目录下的文件列表。同样，可以将文件的内容作为标准输入（`stdin`）馈给命令。例如，要将文件的内容重定向为作为命令的输入：
 
 ```bash
 wc –l < files.txt
 ```
 
-上述命令将显示 `files.txt` 文件包含的行数。
+上述命令将显示`files.txt`文件包含的行数。
 
-需要注意的是，`>` 重定向操作符在使用时会创建一个新文件，或者截断现有文件。若要向现有文件追加内容，请使用 `>>` 操作符：
+需要注意的是，`>`重定向操作符在使用时会创建一个新文件，或者截断现有文件。若要向现有文件追加内容，请使用`>>`操作符：
 
 ```bash
 ls *.dat >> files.txt
 ```
 
-除了标准输出外，shell 还通过 `stderr` 提供了标准错误输出。当命令的输出重定向到 `stdout` 时，命令生成的任何错误消息都将重定向到 `stderr`。这意味着如果 `stdout` 被重定向到文件，错误消息仍然会显示在终端中。这通常是期望的行为，尽管如果需要，也可以使用 `2>` 操作符重定向 `stderr`：
+除了标准输出外，shell 还通过`stderr`提供了标准错误输出。当命令的输出重定向到`stdout`时，命令生成的任何错误消息都将重定向到`stderr`。这意味着如果`stdout`被重定向到文件，错误消息仍然会显示在终端中。这通常是期望的行为，尽管如果需要，也可以使用`2>`操作符重定向`stderr`：
 
 ```bash
 ls dkjfnvkjdnf 2> errormsg
 ```
 
-命令执行完成后，一个报告找不到名为 `dkjfnvkjdnf` 文件的错误将包含在 `errormsg` 文件中。
+命令执行完成后，一个报告找不到名为`dkjfnvkjdnf`文件的错误将包含在`errormsg`文件中。
 
-可以使用 `&>` 操作符将 `stderr` 和 `stdout` 同时重定向到同一个文件：
+可以使用`&>`操作符将`stderr`和`stdout`同时重定向到同一个文件：
 
 ```bash
 ls /etc dkjfnvkjdnf &> alloutput
 ```
 
-执行完成后，`alloutput` 文件将包含 `/etc` 目录内容的列表，以及与尝试列出不存在的文件相关的错误消息。
+执行完成后，`alloutput`文件将包含`/etc`目录内容的列表，以及与尝试列出不存在的文件相关的错误消息。
 
 ### 9.10 在 Bash Shell 中使用管道
 
-除了 I/O 重定向外，shell 还允许将一个命令的输出直接通过管道作为另一个命令的输入。通过在命令行中的两个或多个命令之间放置 `|` 字符来实现管道操作。例如，要统计系统上运行的进程数，可以将 `ps` 命令的输出管道传递给 `wc` 命令：
+除了 I/O 重定向外，shell 还允许将一个命令的输出直接通过管道作为另一个命令的输入。通过在命令行中的两个或多个命令之间放置`|`字符来实现管道操作。例如，要统计系统上运行的进程数，可以将`ps`命令的输出管道传递给`wc`命令：
 
 ```bash
 ps –ef | wc –l
@@ -1631,23 +1608,23 @@ cat namesfile | grep Smith | wc –l
 
 ### 9.11 配置别名 (Aliases)
 
-随着你对 shell 环境越来越熟练，你可能会发现自己频繁执行带有相同参数的命令。例如，你可能经常带有 `l` 和 `t` 使用 `ls` 命令：
+随着你对 shell 环境越来越熟练，你可能会发现自己频繁执行带有相同参数的命令。例如，你可能经常带有`l`和`t`使用`ls`命令：
 
 ```bash
 ls –lt
 ```
 
-为了减少执行命令时的打字量，可以创建一个映射到命令和参数的别名。例如，要创建一个别名，使得输入字母 `l` 就会执行 `ls –lt` 命令，可以使用以下语句：
+为了减少执行命令时的打字量，可以创建一个映射到命令和参数的别名。例如，要创建一个别名，使得输入字母`l`就会执行`ls –lt`命令，可以使用以下语句：
 
 ```bash
 alias l="ls –lt"
 ```
 
-现在在命令提示符输入 `l` 将执行原始语句。
+现在在命令提示符输入`l`将执行原始语句。
 
 ### 9.12 环境变量
 
-Shell 环境变量提供了数据和配置设置的临时存储。shell 本身设置了一些环境变量，用户可以更改这些变量来修改 shell 的行为。可以使用 `env` 命令获取当前定义的变量列表：
+Shell 环境变量提供了数据和配置设置的临时存储。shell 本身设置了一些环境变量，用户可以更改这些变量来修改 shell 的行为。可以使用`env`命令获取当前定义的变量列表：
 
 ```bash
 env
@@ -1667,32 +1644,32 @@ SSH_CLIENT=192.168.0.19 61231 22
 SELINUX_LEVEL_REQUESTED=
 ```
 
-也许最有用的环境变量是 `PATH`。它定义了 shell 搜索命令提示符处输入的命令的目录，以及搜索的顺序。新安装的 Ubuntu 系统上用户账户的 `PATH` 环境变量可能配置如下：
+也许最有用的环境变量是`PATH`。它定义了 shell 搜索命令提示符处输入的命令的目录，以及搜索的顺序。新安装的 Ubuntu 系统上用户账户的`PATH`环境变量可能配置如下：
 
 ```bash
 echo $PATH
 /home/demo/.local/bin:/home/demo/bin:/usr/share/Modules/bin:/usr/local/bin:/usr/bin:/usr/local/sbin:/usr/sbin
 ```
 
-另一个有用变量是 `HOME`，它指定了当前用户的家目录。例如，如果你想让 shell 在你家目录下的 scripts 目录中查找命令，你可以如下所示修改 `PATH` 变量：
+另一个有用变量是`HOME`，它指定了当前用户的家目录。例如，如果你想让 shell 在你家目录下的 scripts 目录中查找命令，你可以如下所示修改`PATH`变量：
 
 ```bash
 export PATH=$PATH:$HOME/scripts
 ```
 
-可以使用 `echo` 命令显示现有环境变量的当前值：
+可以使用`echo`命令显示现有环境变量的当前值：
 
 ```bash
 echo $PATH
 ```
 
-你可以使用 `export` 命令创建自己的环境变量。例如：
+你可以使用`export`命令创建自己的环境变量。例如：
 
 ```bash
 export DATAPATH=/data
 ```
 
-一个实用的技巧是使用反引号将命令的输出赋值给环境变量。例如，将当前日期时间赋值给名为 `NOW` 的环境变量：
+一个实用的技巧是使用反引号将命令的输出赋值给环境变量。例如，将当前日期时间赋值给名为`NOW`的环境变量：
 
 ```bash
 export NOW=`date`
@@ -1702,17 +1679,17 @@ Tue Apr 2 13:48:40 EDT 2020
 
 ### 9.13 编写脚本
 
-到为止，我们一直关注 shell 的交互性。交互意味着在提示符处逐个输入命令。事实上，这只是 shell 能力的一小部分。可以说 shell 最强大的方面之一是创建脚本。脚本本质上是包含可以在 shell 中执行的语句序列的文本文件。除了执行命令的能力，shell 还提供了许多编程结构，如 `for` 和 `do` 循环以及 `if` 语句，你可以在脚本语言中发现它们。
+到为止，我们一直关注 shell 的交互性。交互意味着在提示符处逐个输入命令。事实上，这只是 shell 能力的一小部分。可以说 shell 最强大的方面之一是创建脚本。脚本本质上是包含可以在 shell 中执行的语句序列的文本文件。除了执行命令的能力，shell 还提供了许多编程结构，如`for`和`do`循环以及`if`语句，你可以在脚本语言中发现它们。
 
 遗憾的是，对脚本的详细概述超出了本章的范围。然而，有很多专门介绍脚本的书籍和网络资源可以更好地介绍该主题。因此，在本节中，我们仅提供简单的尝试。
 
-创建脚本的第一步创建一个文件（在本示例中我们将命名为 `simple.sh`），并在第一行添加如下：
+创建脚本的第一步创建一个文件（在本示例中我们将命名为`simple.sh`），并在第一行添加如下：
 
 ```bash
 #!/bin/sh
 ```
 
-`#!` 称为“bang”，是一个特殊序列，指示执行脚本所需的解释器路径是该行的下一个项目（在本例中为位于 `/bin` 的 `sh`）。这同样可以是，例如 `/bin/csh`，取决于你想使用的解释器。
+`#!`称为“bang”，是一个特殊序列，指示执行脚本所需的解释器路径是该行的下一个项目（在本例中为位于`/bin`的`sh`）。这同样可以是，例如`/bin/csh`，取决于你想使用的解释器。
 
 下一步是编写一个简单的脚本：
 
@@ -1724,13 +1701,13 @@ do
 done
 ```
 
-此脚本的作用遍历当前目录下的所有文件并显示每个文件的名称。可以通过将脚本名称作为参数传递给 `sh` 来执行：
+此脚本的作用遍历当前目录下的所有文件并显示每个文件的名称。可以通过将脚本名称作为参数传递给`sh`来执行：
 
 ```bash
 sh simple.sh
 ```
 
-为了使文件变为可执行（从而不再需要将其传递给 `sh` 命令），可以使用 `chmod` 命令：
+为了使文件变为可执行（从而不再需要将其传递给`sh`命令），可以使用`chmod`命令：
 
 ```bash
 chmod +x simple.sh
@@ -1742,10 +1719,7 @@ chmod +x simple.sh
 ./simple.sh
 ```
 
-
-
-
-在《Ubuntu Essentials》的这一章中，我们对 `Bash` shell 环境进行了简要概览。在图形化桌面环境中，人们很容易忘记，操作系统的真正威力和灵活性通常只有通过放弃用户友好的桌面界面并使用 shell 环境才能发挥。此外，当需要管理和维护没有安装桌面的服务器系统，或者尝试修复受损到导致桌面或 `Cockpit` 界面都无法启动的系统时，熟悉 shell 是非常有必要的。
+在《Ubuntu Essentials》的这一章中，我们对`Bash` shell 环境进行了简要概览。在图形化桌面环境中，人们很容易忘记，操作系统的真正威力和灵活性通常只有通过放弃用户友好的桌面界面并使用 shell 环境才能发挥。此外，当需要管理和维护没有安装桌面的服务器系统，或者尝试修复受损到导致桌面或`Cockpit`界面都无法启动的系统时，熟悉 shell 是非常有必要的。
 
 shell 的功能远超本章涵盖的范围。如果你是 shell 的初级用户，我们强烈建议你寻找额外的资源。一旦熟悉了这些概念，你很快就会发现，在终端窗口中使用 shell 执行许多任务，比在桌面上层翻阅菜单和对话框要快得多。
 
@@ -1753,25 +1727,25 @@ shell 的功能远超本章涵盖的范围。如果你是 shell 的初级用户�
 
 在安装 Ubuntu 的过程中，安装程序提供了为系统创建用户账户的机会。我们不应该忽视这样一个事实：Ubuntu 实际上是一个企业级、多用户且多任务的操作系统。因此，为了充分利用 Ubuntu 的优势，可能需要为多个用户访问权限。每个用户应该有自己的用户账户登录名、密码、主目录和权限。
 
-为了方便管理，用户被进一步划分为不同的组，这些组可以拥有不同级别的权限。例如，你可能有一组在财务部门工作的。在这种环境下，你可能希望创建一个 `accounts` 组并将所有财务部门的用户分配到该组。
+为了方便管理，用户被进一步划分为不同的组，这些组可以拥有不同级别的权限。例如，你可能有一组在财务部门工作的。在这种环境下，你可能希望创建一个`accounts`组并将所有财务部门的用户分配到该组。
 
-在本章中，我们将介绍在 Ubuntu 系统上添加、删除和管理用户及组的步骤。管理 Ubuntu 用户和组的方法有很多，最常用的选项是命令行工具和 `Cockpit` Web 。在本章中，我们将介绍这两种用户管理方法。
+在本章中，我们将介绍在 Ubuntu 系统上添加、删除和管理用户及组的步骤。管理 Ubuntu 用户和组的方法有很多，最常用的选项是命令行工具和`Cockpit` Web 。在本章中，我们将介绍这两种用户管理方法。
 
 ### 10.1 命令行用户管理
 
-可以通过 `useradd` 工具通过命令行向 Ubuntu 系统添加新用户。要创建一个新用户账户，请输入类似下面的命令：
+可以通过`useradd`工具通过命令行向 Ubuntu 系统添加新用户。要创建一个新用户账户，请输入类似下面的命令：
 
 ```bash
 ## adduser john
 ```
 
-正在添加用户 `john` ...
+正在添加用户`john` ...
 
-正在添加新组 `john` (1001) ...
+正在添加新组`john` (1001) ...
 
-正在添加新用户 `john` (1001) 组为 `john` ...
+正在添加新用户`john` (1001) 组为`john` ...
 
-主目录 `/home/john` 已存在。未从 `/etc/skel` 复制。
+主目录`/home/john`已存在。未从`/etc/skel`复制。
 
 输入新的 UNIX 密码：
 
@@ -1795,13 +1769,13 @@ shell 的功能远超本章涵盖的范围。如果你是 shell 的初级用户�
 
 该信息正确吗？[Y/n] Y
 
-默认情况下，这将在 `/home` 目录下为该用户创建一个主目录（在本例中为 `/home/john`）。要指定不同的主目录，在创建账户时使用 `--home` 命令行选项：
+默认情况下，这将在`/home`目录下为该用户创建一个主目录（在本例中为`/home/john`）。要指定不同的主目录，在创建账户时使用`--home`命令行选项：
 
 ```bash
 ## adduser --home /users/johnsmith john
 ```
 
-账户创建后，可以使用 `passwd` 工具随时更改密码：
+账户创建后，可以使用`passwd`工具随时更改密码：
 
 ```bash
 ## passwd john
@@ -1813,9 +1787,9 @@ shell 的功能远超本章涵盖的范围。如果你是 shell 的初级用户�
 
 重新输入新密码：
 
-`passwd: all authentication tokens updated successfully.
+`passwd: all authentication tokens updated successfully.`
 
-可以通过 `deluser` 工具通过命令行删除已有的用户。虽然这将删除账户，但用户的文件和数据将留在系统中保持完好：
+可以通过`deluser`工具通过命令行删除已有的用户。虽然这将删除账户，但用户的文件和数据将留在系统中保持完好：
 
 ```bash
 ## deluser john
@@ -1827,38 +1801,38 @@ shell 的功能远超本章涵盖的范围。如果你是 shell 的初级用户�
 ## deluser --remove-home john
 ```
 
-Ubuntu 系统上的所有用户都是一个或多个组的成员。默认情况下，新用户会被添加到与用户名同名的私有组中（在上面的示例中，为用户 `john` 创建的账户是一个同名为 `john` 的私有组的成员）。作为管理员，将用户组织成更有逻辑的组是有意义的。例如，所有销售人员可能属于 `sales` 组，而财务人员可能属于 `accounts` 组，以此此类推。可以使用 `addgroup` 命令行工具从命令行添加新组，例如：
+Ubuntu 系统上的所有用户都是一个或多个组的成员。默认情况下，新用户会被添加到与用户名同名的私有组中（在上面的示例中，为用户`john`创建的账户是一个同名为`john`的私有组的成员）。作为管理员，将用户组织成更有逻辑的组是有意义的。例如，所有销售人员可能属于`sales`组，而财务人员可能属于`accounts`组，以此此类推。可以使用`addgroup`命令行工具从命令行添加新组，例如：
 
 ```bash
 ## addgroup accounts
 ```
 
-使用 `adduser` 工具将用户添加到现有组中：
+使用`adduser`工具将用户添加到现有组中：
 
 ```bash
 # adduser john accounts
 ```
 
-要从组中移除用户，请按如下方式使用 `deluser` 命令：
+要从组中移除用户，请按如下方式使用`deluser`命令：
 
 ```bash
 # deluser john accounts
 ```
 
-可以使用 `delgroup` 工具从系统中删除已有的组：
+可以使用`delgroup`工具从系统中删除已有的组：
 
 ```bash
 ## delgroup accounts
 ```
 
-注意，如果要删除的组是任何用户的初始组或主组，则无法删除。必须先删除该用户，或者使用 `usermod` 命令分配一个新的主组，才能移除该组。可以使用 `usermod -g` 选项将用户分配给新的主组：
+注意，如果要删除的组是任何用户的初始组或主组，则无法删除。必须先删除该用户，或者使用`usermod`命令分配一个新的主组，才能移除该组。可以使用`usermod -g`选项将用户分配给新的主组：
 
 ```bash
 # usermod -g sales john
 ## delgroup accounts
 ```
 
-要查找用户所属的组，只需运行 `groups` 命令。例如：
+要查找用户所属的组，只需运行`groups`命令。例如：
 
 ```bash
 $ groups john
@@ -1866,23 +1840,25 @@ $ groups john
 
 `john : accounts support`
 
-默认情况下，只有 Ubuntu 系统上创建的第一个用户账户有权使用 `sudo` 命令执行特权任务。如果新添加的用户尝试使用 `sudo`，将显示类似下面的消息：
+默认情况下，只有 Ubuntu 系统上创建的第一个用户账户有权使用`sudo`命令执行特权任务。如果新添加的用户尝试使用`sudo`，将显示类似下面的消息：
 
 `john is not in the sudoers file. This incident will be reported.`
 
-要将用户添加到 sudoers 文件，只需将用户加入 `sudo` 组：
+要将用户添加到 sudoers 文件，只需将用户加入`sudo`组：
 
 ```bash
 # adduser john sudo
 ```
 
+
+
 ## 10.2 使用 Cockpit 管理用户
 
-如果系统安装并启用了 `Cockpit` Web 界面（该主题在“Ubuntu Cockpit Web 界面概览”章节中介绍），可以在图 10-1（User_Management.xhtml__idTextAnchor174）所示的账户屏幕内执行许多用户管理任务：
+如果系统安装并启用了 `Cockpit` Web 界面（该主题在“Ubuntu Cockpit Web 界面概览”章节中介绍），可以在图 10-1（`User_Management.xhtml__idTextAnchor174`）所示的账户屏幕内执行许多用户管理任务：
 
 ![](img/ubuntu_20.04_cockpit_users.jpg)
 
-该屏幕将显示系统上已有的用户账户，并提供添加额外账户的按钮。要创建新账户，点击 ` New Account` 按钮并在弹出的对话框中输入所需信息（图 10-2，User_Management.xhtml__idTextAnchor175）。注意，该选项也可以创建账户但在稍后锁定：
+该屏幕将显示系统上已有的用户账户，并提供添加额外账户的按钮。要创建新账户，点击 `New Account` 按钮并在弹出的对话框中输入所需信息（图 10-2，`User_Management.xhtml__idTextAnchor175`）。注意，该选项也可以创建账户但在稍后锁定：
 
 ![](img/ubuntu_20.04_cockpit_new_account.jpg)
 
@@ -1900,15 +1876,11 @@ $ groups john
 
 ## 10.3 使用设置应用管理用户
 
-第三种用户账户管理选项通过 GNOME 桌面设置应用可用。可以通过点击 GNOME 桌面右上角的向下箭头并选择 `Settings` 选项来访问该应用，如图 10-4（User_Management.xhtml__idTextAnchor177）所示：
+第三种用户账户管理选项通过 GNOME 桌面设置应用可用。可以通过点击 GNOME 桌面右上角的向下箭头并选择 `Settings` 选项来访问该应用，如图 10-4（`User_Management.xhtml__idTextAnchor177`）所示：
 
 ![](img/ubuntu_20.04_desktop_settings_menu_option.jpg)
 
 图 10-4
-
-
-
-
 
 当主设置界面出现时，点击左侧导航面板中的 `Users`（用户）选项。默认情况下，设置将被锁定，且无法对系统上的用户账户进行任何更改。要解锁设置应用，请点击下方图 10-5 所示的 `Unlock`（解锁）按钮并输入您的密码。请注意，只有当以具有 `sudo` 权限的用户身份登录时，才能解锁设置：
 
@@ -1996,13 +1968,11 @@ Ubuntu 可以被配置为启动到若干状态中的一种（称为 `targets`）
 
 ```
 ◉ systemd-machine-id-commit.service - Commit a transient machine-id on disk
+
   Loaded: loaded (/usr/lib/systemd/system/systemd-machine-id-commit.service; static; vendor preset: disabled)
+
   Active: inactive (dead)
 ```
-
-
-
-
 
 条件：启动条件于 Thu 2019-02-14 15:27:47 EST 失败；1h 14min 前
 
@@ -2085,24 +2055,29 @@ systemctl status apache2.service
 
 ```
 ● apache2.service - The Apache HTTP Server
+
   Loaded: loaded (/lib/systemd/system/apache2.service; enabled; vendor preset: enabled)
+
   Drop-In: /lib/systemd/system/apache2.service.d
+
                └─apache2-systemd.conf
+
   Active: active (running) since Wed 2020-04-08 14:34:54 EDT; 34s ago
+
   Main PID: 3513 (apache2)
+
   Tasks: 55 (limit: 4915)
+
   CGroup: /system.slice/apache2.service
+
               ├─3513 /usr/sbin/apache2 -k start
+
               ├─3515 /usr/sbin/apache2 -k
 ```
 
 ### 11.8 在 Cockpit 中使用 systemd 单元
 
 除了本章目前概述的命令行技术外，还可以在 Cockpit Web 界面内部查看和管理 systemd 单元。假设 Cockpit 已按照“Ubuntu Cockpit Web 界面概览”章节所述的方法进行了安装和设置，可以通过登录 Cockpit 并选择左侧导航面板中图 11-3 所示标记为 A 的 Services 选项来访问系统的 systemd 单元列表。
-
-
-
-
 
 标记为 B 的按钮在标记为 C 的主区域中显示特定类型的单元，其中每个单元的当前状态在 State 列中列出。
 
@@ -2128,9 +2103,11 @@ Linux 本质上由一组基础包组成，这些包提供了操作系统的核�
 
 在首次安装 Ubuntu 时，将根据安装阶段选择的软件选项安装许多不同的软件包。然而，一旦系统开始运行，就可以根据需要安装额外的软件。通常，所有属于 Ubuntu 的软件（换句话说，不是由第三方供应商提供的软件）都是使用高级软件包工具（`apt`）下载并安装到系统上的。正如我们在前面的章节中看到的，这通常涉及在命令行提示符输入类似下面的命令：
 
-```
+```bash
 # apt install apache2
 ```
+
+
 
 当执行此类命令时，请求的软件将从远程仓库下载并安装在本地系统上。默认情况下，Ubuntu 配置为从多个不同的仓库下载软件：
 
@@ -2139,19 +2116,19 @@ Linux 本质上由一组基础包组成，这些包提供了操作系统的核�
 - `universe` - 包含 Canonical Ubuntu 团队未官方支持的软件包。然而，这些包由 Ubuntu 社区维护，并包含主仓库中不可用的软件包。
 - `multiverse` - 由于版权或其他法律问题，这些软件包可能不符合 Ubuntu 发布时遵循的开源许可条款。
 
-Ubuntu 系统上当前启用的仓库列表包含在 `/etc/apt/sources.list` 文件，可以将其加载到编辑器中查看和修改。可以手动将文件加载到编辑器，或使用以下命令通过可选的编辑器进行编辑：
+Ubuntu 系统上当前启用的仓库列表包含在`/etc/apt/sources.list`文件，可以将其加载到编辑器中查看和修改。可以手动将文件加载到编辑器，或使用以下命令通过可选的编辑器进行编辑：
 
 ```
 # apt edit-sources
 ```
 
-该文件的前几行通常引用 main 和 restricted 仓库，例如：
+该文件的前几行通常引用`main`和`restricted`仓库，例如：
 
 ```
 deb http://us.archive.ubuntu.com/ubuntu/ bionic main restricted
 ```
 
-在上面的示例中，列表配置允许从 main 和 restricted 仓库下载软件包。universe 和 multiverse 仓库的条目也会包含在文件中：
+在上面的示例中，列表配置允许从`main`和`restricted`仓库下载软件包。`universe`和`multiverse`仓库的条目也会包含在文件中：
 
 > **注意：此仓库中的软件可能没有主发布版中包含的软件那样经过测试，尽管它包含了一些应用程序的更新版本，这些版本可能提供有用的功能。**
 >
@@ -2167,9 +2144,9 @@ deb http://us.archive.ubuntu.com/ubuntu/ bionic-backports main restricted univer
 # deb http://us.archive.ubuntu.com/ubuntu/ bionic-backports main restricted universe multiverse
 ```
 
-除了标准仓库外，还有许多第三方仓库。如果您需要使用其中之一，只需为 `sources.list` 文件添加其对应的条目即可。
+除了标准仓库外，还有许多第三方仓库。如果您需要使用其中之一，只需为`sources.list`文件添加其对应的条目即可。
 
-其中一个示例是 partners 仓库，它包含在 `sources.list` 文件中但默认被注释掉了：
+其中一个示例是 partners 仓库，它包含在`sources.list`文件中但默认被注释掉了：
 
 ```
 # deb http://archive.canonical.com/ubuntu bionic partner
@@ -2177,9 +2154,9 @@ deb http://us.archive.ubuntu.com/ubuntu/ bionic-backports main restricted univer
 
 要启用此仓库，只需删除“#”注释字符并保存文件即可。
 
-#### 12.2 使用“软件与更新”管理仓库
+## 12.2 使用“软件与更新”管理仓库
 
-作为使用命令行的替代方案，可以在 GNOME 桌面环境中使用“软件与更新”（Software & Updates）应用程序配置仓库。要启动此应用，按下键盘上的特殊键（Windows 键盘上是 Windows 键，macOS 上是 Command 键，Chromebook 上显示放大镜的键），并在搜索栏中输入 `Software Updates`。在结果面板中点击相应的图标。或者，打开一个终端窗口并运行以下命令：
+作为使用命令行的替代方案，可以在 GNOME 桌面环境中使用“软件与更新”（Software & Updates）应用程序配置仓库。要启动此应用，按下键盘上的特殊键（Windows 键盘上是 Windows 键，macOS 上是 Command 键，Chromebook 上显示放大镜的键），并在搜索栏中输入`Software Updates`。在结果面板中点击相应的图标。或者，打开一个终端窗口并运行以下命令：
 
 ```
 $ update-manager
@@ -2197,7 +2174,7 @@ $ update-manager
 
 图 12-2
 
-要启用伙伴 仓库，选择如图 12-3 所示的“其他软件”选项卡：
+要启用伙伴仓库，选择如图 12-3 所示的“其他软件”选项卡：
 
 ![](img/ubuntu_20.04_software_manager_other.jpg)
 
@@ -2209,9 +2186,9 @@ $ update-manager
 
 图 12-4
 
-#### 12.3 使用 APT 管理软件包
+## 12.3 使用 APT 管理软件包
 
-`apt` 工具提供了一种直接从命令行执行大多数软件包管理任务的方法。在本节中，我们将探索一些更常用的 `apt` 命令行选项。
+`apt`工具提供了一种直接从命令行执行大多数软件包管理任务的方法。在本节中，我们将探索一些更常用的`apt`命令行选项。
 
 Ubuntu 系统保留最新软件包信息的本地副本，因此，建议在执行任何其他 apt 操作之前按照如下方式更新此列表：
 
@@ -2225,51 +2202,49 @@ Ubuntu 系统保留最新软件包信息的本地副本，因此，建议在执�
 ## apt install package_name
 ```
 
-同样，可以使用 `remove` 选项从系统中删除已安装的软件包：
+同样，可以使用`remove`选项从系统中删除已安装的软件包：
 
 ```
 ## apt remove package_name
 ```
 
-
-
-当以这种方式删除包时，与包相关的配置文件将保留在系统上。这允许在以后重新安装该包而不会丢失任何自定义配置设置。若要在删除过程中或删除操作执行后删除这些文件，请使用 `purge` 选项：
+当以这种方式删除包时，与包相关的配置文件将保留在系统上。这允许在以后重新安装该包而不会丢失任何自定义配置设置。若要在删除过程中或删除操作执行后删除这些文件，请使用`purge`选项：
 
 ```
 apt purge package_name
 ```
 
-要获取可安装的软件包列表，请按如下方式使用 `apt`：
+要获取可安装的软件包列表，请按如下方式使用`apt`：
 
 ```
 apt list
 ```
 
-或者，若要仅列出已安装的软件包，请配合 `--installed` 标志使用 `list` 选项：
+或者，若要仅列出已安装的软件包，请配合`--installed`标志使用`list`选项：
 
 ```
 apt list --installed
 ```
 
-要检查系统是否已安装特定软件包，请将 `list` 选项与包名结合：
+要检查系统是否已安装特定软件包，请将`list`选项与包名结合：
 
 ```
 apt list package_name
 ```
 
-使用 `search` 选项列出符合特定标准的软件包。例如，列出所有与 Apache Web 服务器相关的包：
+使用`search`选项列出符合特定标准的软件包。例如，列出所有与 Apache Web 服务器相关的包：
 
 ```
 apt search apache
 ```
 
-要找到哪个软件包包含某个特定文件，请使用 `apt-file` 命令。例如，列出包含名为 `gimp` 文件的包名：
+要找到哪个软件包包含某个特定文件，请使用`apt-file`命令。例如，列出包含名为`gimp`文件的包名：
 
 ```
 apt-file --package-only list gimp
 ```
 
-要查看软件包的详细信息，运行带有 `show` 选项的 `apt`：
+要查看软件包的详细信息，运行带有`show`选项的`apt`：
 
 ```
 apt show apache2
@@ -2304,15 +2279,15 @@ The Apache HTTP Server Project 的目标是构建一个符合标准的开源软�
 安装此包将导致完整安装，包括配置文件、初始化脚本和支持脚本。
 ```
 
-### 12.4 执行更新
+## 12.4 执行更新
 
-在基础操作系统和已安装软件包的生命周期内，将发布多次更新以解决问题并添加功能。要从命令行手动下载并安装任何待处理的更新，第一步是使用带有 `update` 选项的 `apt` 更新本地系统上存储的包信息：
+在基础操作系统和已安装软件包的生命周期内，将发布多次更新以解决问题并添加功能。要从命令行手动下载并安装任何待处理的更新，第一步是使用带有`update`选项的`apt`更新本地系统上存储的包信息：
 
 ```
 apt update
 ```
 
-一旦包信息已更新，就可以执行升级。这将从 `sources.list` 文件配置的存储库下载当前已安装包的任何更新并将其安装到系统中：
+一旦包信息已更新，就可以执行升级。这将从`sources.list`文件配置的存储库下载当前已安装包的任何更新并将其安装到系统中：
 
 ```
 apt upgrade
@@ -2324,7 +2299,7 @@ apt upgrade
 
 图 12-5
 
-### 12.5 启用自动更新
+## 12.5 启用自动更新
 
 上一节查看了如何手动安装包升级。Ubuntu 系统也可以配置为自动安装升级。这既可以通过命令行配置，也可以在“软件与更新”工具内部配置。
 
@@ -2336,24 +2311,24 @@ apt upgrade
 
 要从命令行配置自动更新，请遵循以下步骤：
 
-1. 安装 `unattended-upgrades` 包：
+1. 安装`unattended-upgrades`包：
 
 ```
 apt install unattended-upgrades
 ```
 
-2. 编辑 `/etc/apt/apt.conf.d/50unattended-upgrades` 文件并找到以下行：
+2. 编辑`/etc/apt/apt.conf.d/50unattended-upgrades`文件并找到以下行：
 
 ```
 "${distro_id}ESMApps:${distro_codename}-apps-security";
 "${distro_id}ESM:${distro_codename}-infra-security";
 ```
 
-（注意：移除 `//` 注释以启用它们）。
+（注意：移除`//`注释以启用它们）。
 
-3. 移除要自动更新的存储库类型的 `//`。
+3. 移除要自动更新的存储库类型的`//`。
 
-4. 编辑 `/etc/apt/apt.conf.d/20autoupgrades` 文件并声明检查更新的频率（天）：
+4. 编辑`/etc/apt/apt.conf.d/20autoupgrades`文件并声明检查更新的频率（天）：
 
 ```
 APT::Periodic::Update-Lists "1";
@@ -2374,7 +2349,7 @@ unattended-upgrades --dry-run
 cat /var/log/unattended-upgrades/unattended-upgrades.log
 ```
 
-### 12.6 启用 Livepatch
+## 12.6 启用 Livepatch
 
 Linux 历史章节解释了内核如何作为 Linux 操作系统的基础，管理系统资源并处理硬件与应用程序之间的通信。
 
@@ -2390,7 +2365,7 @@ Livepatch 是 Canonical 提供的一项服务，允许在运行 Ubuntu 系统时
 
 [`auth.livepatch.canonical.com/`](https://auth.livepatch.canonical.com/%20)
 
-页面加载后，选择用户类型（如果你不是付费 Ubuntu 用户，只需选择 Ubuntu User ）：
+页面加载后，选择用户类型（如果你不是付费 Ubuntu 用户，只需选择 Ubuntu User）：
 
 ![](img/ubuntu_18.04_livepatch_user_type.jpg)
 
@@ -2405,15 +2380,13 @@ snap install canonical-livepatch
 canonical-livepatch enable your_key_here
 ```
 
-注意，上述安装没有使用 `apt`，而是使用了 Snap 包管理系统，主题将在下一节 Ubuntu Snap 包管理中介绍。
+注意，上述安装没有使用`apt`，而是使用了 Snap 包管理系统，主题将在下一节 Ubuntu Snap 包管理中介绍。
 
 要检查 Livepatch 状态，只需运行以下命令：
 
-
-
-
-
-# canonical-livepatch 状态
+```
+canonical-livepatch status
+```
 
 上次检查：2 分前
 
@@ -2423,39 +2396,39 @@ canonical-livepatch enable your_key_here
 
 补丁状态：此内核尚不需要实时补丁
 
-### 12.7 总结
+## 12.7 总结
 
 Ubuntu 操作系统由数千个软件软件包组成，这些软件包从主、受限、universe、multiverse、partner 合作伙伴以及第三方存储库下载并安装。
 
-软件软件包使用高级软件包工具 (`apt`) 或若干图形化桌面工具之一进行安装，并从 `sources.list` 文件中定义的存储库下载。
+软件软件包使用高级软件包工具（`apt`）或若干图形化桌面工具之一进行安装，并从`sources.list`文件中定义的存储库下载。
 
-除了安装和删除软件软件包外，`apt` 还可以用于将这些软件包升级到最新更新。这些软件升级可以手动进行，也可以配置为自动更新。
+除了安装和删除软件软件包外，`apt`还可以用于将这些软件包升级到最新更新。这些软件升级可以手动进行，也可以配置为自动更新。
 
 在过去，操作系统内核的更新需要重启系统。随着 Livepatch 的引入，Ubuntu Linux 内核现在可以在不中断系统的情况下进行动态更新。
 
-## 13 Ubuntu Snap 软件包管理
+# 13 Ubuntu Snap 软件包管理
 
-上一章节探讨了如何使用高级软件包工具 (`APT`) 在 Ubuntu 系统上安装和更新软件软件包。近年来，Canonical, Ltd. 的 Ubuntu 团队一直在开发一种名为 `Snap` 的新软件包管理系统。虽然没有官方计划完全用 `Snap` 替换 `APT`，但现在可以安装为“snaps”的软件包列表仍在不断增长。
+上一章节探讨了如何使用高级软件包工具（`APT`）在 Ubuntu 系统上安装和更新软件软件包。近年来，Canonical, Ltd. 的 Ubuntu 团队一直在开发一种名为`Snap`的新软件包管理系统。虽然没有官方计划完全用`Snap`替换`APT`，但现在可以安装为“snaps”的软件包列表仍在不断增长。
 
-本章的目标是介绍 `Snap` 系统，突出它优于 `APT` 系统的主要优势，并概述如何使用 `snap` 命令行工具安装和管理基于 snap 的软件软件包。
+本章的目标是介绍`Snap`系统，突出它优于`APT`系统的主要优势，并概述如何使用`snap`命令行工具安装和管理基于 snap 的软件软件包。
 
-### 13.1 使用 Snap 管理软件
+## 13.1 使用 Snap 管理软件
 
-`apt` 工具安装封装在 `.deb` 文件中的软件。使用 `apt` 安装的软件包通常依赖于其他软件包，这些软件包也需要安装才能正常运行。在安装过程中，`apt` 还会下载并安装这些额外的软件包依赖项。
+`apt`工具安装封装在`.deb`文件中的软件。使用`apt`安装的软件包通常依赖于其他软件包，这些软件包也需要安装才能正常运行。在安装过程中，`apt`还会下载并安装这些额外的软件包依赖项。
 
-考虑一个依赖于特定图像库的图形设计应用。在安装期间，`apt` 在安装图形应用软件包的同时，还会安装包含其所依赖的库的软件包。现在，假设用户决定安装另一个同样于相同图形库的图形工具。通常这不会成为问题，因为两个应用程序将共享同一个库，但如果两个应用程序依赖于不同版本的库，可能会出现问题。因此，安装第二个应用程序可能会导致第一个应用程序无法正常工作。
+考虑一个依赖于特定图像库的图形设计应用。在安装期间，`apt`在安装图形应用软件包的同时，还会安装包含其所依赖的库的软件包。现在，假设用户决定安装另一个同样于相同图形库的图形工具。通常这不会成为问题，因为两个应用程序将共享同一个库，但如果两个应用程序依赖于不同版本的库，可能会出现问题。因此，安装第二个应用程序可能会导致第一个应用程序无法正常工作。
 
-`apt` 和 `.deb` 软件包的另一个局限性是，很难在系统中并行安装同一工具或应用的两个不同版本。例如，用户可能想在保留图形应用 1.0 版本安装的同时，尝试 2.0 版本的最新测试版。在尝试过 2.0 版本后，用户可能想删除 1.0 版本并只保留新版本，这一任务使用 `apt` 是很难实现的。
+`apt`和`.deb`软件包的另一个局限性是，很难在系统中并行安装同一工具或应用的两个不同版本。例如，用户可能想在保留图形应用 1.0 版本安装的同时，尝试 2.0 版本的最新测试版。在尝试过 2.0 版本后，用户可能想删除 1.0 版本并只保留新版本，这一任务使用`apt`是很难实现的。
 
-`snap` 系统专门设计用于解决此类缺陷。`snap` 工具安装 `.snap` 软件包，这些软件包包含了软件运行所需的所有库和资源。这避免了将任何依赖项作为单独独立的软件包进行安装的需求。一旦安装了 snap，它会被放置在一个自包含的位置，因此不会与其他软件包共享任何依赖项。例如，我们假设的图形应用各拥有其应用开发者所使用的精确图像库版本的副本，该版本无法被删除、被不兼容的版本替换或被任何其他软件包安装覆盖。
+`snap`系统专门设计用于解决此类缺陷。`snap`工具安装`.snap`软件包，这些软件包包含了软件运行所需的所有库和资源。这避免了将任何依赖项作为单独独立的软件包进行安装的需求。一旦安装了 snap，它会被放置在一个自包含的位置，因此不会与其他软件包共享任何依赖项。例如，我们假设的图形应用各拥有其应用开发者所使用的精确图像库版本的副本，该版本无法被删除、被不兼容的版本替换或被任何其他软件包安装覆盖。
 
 当然，使用 snaps 会导致软件包文件较大，从而导致下载时间变长、安装性能变慢以及磁盘空间占用增加。尽管如此，这些缺点通常被 snap 软件包的优势所抵消。
 
-`Snap` 还支持通道（channels）的概念，这允许应用开发者发布同一应用程序的不同版本。Snap 通道是多个版本的同一软件能够并行安装的机制。
+`Snap`还支持通道（channels）的概念，这允许应用开发者发布同一应用程序的不同版本。Snap 通道是多个版本的同一软件能够并行安装的机制。
 
-### 13.2 基础 Snap 命令
+## 13.2 基础 Snap 命令
 
-尽管许多软件包仍以 `.deb` 格式提供并使用 `apt` 安装，但现在以 snap 格式提供的应用和工具数量正在迅速增加。事实上，Ubuntu Software 工具中列出的所有软件（在本文名为“GNOME 3 桌面导览”的章节中概述过）都是使用 `snap` 封装和安装的。基于 snap 的软件也可以使用 `snap` 命令行工具安装，本节将涵盖其基础知识。
+尽管许多软件包仍以`.deb`格式提供并使用`apt`安装，但现在以 snap 格式提供的应用和工具数量正在迅速增加。事实上，Ubuntu Software 工具中列出的所有软件（在本文名为“GNOME 3 桌面导览”的章节中概述过）都是使用`snap`封装和安装的。基于 snap 的软件也可以使用`snap`命令行工具安装，本节将涵盖其基础知识。
 
 要列出特定类别软件的可用 snap 软件包，请运行类似下面的命令：
 
@@ -2463,117 +2436,109 @@ Ubuntu 操作系统由数千个软件软件包组成，这些软件包从主、�
 # snap find "image editor"
 ```
 
-名称 版本 发布者 备注 摘要
 
-gimp 2.10.18 snapcrafters - GNU 图像处理程序
 
-paintsupreme-3d 1.0.41 braindistrict - PaintSupreme 3D
+## 13.2 使用 Snap 查找软件包
 
-.
+`snap find` 命令用于在 Snap 商店中搜索软件包。例如，以下命令将搜索与图像编辑相关的软件包：
 
-.
-
-上述命令将列出所有可下载和安装的、与图像编辑软件相关的 snap 软件包。其中一个结果是 gimp 图像编辑器。关于 `gimp` snap 的详细信息如下：
-
-```
-$ snap info gimp
+```bash
+snap find "image editor"
 ```
 
+输出结果可能如下：
+
+```text
+名称                版本         发布者          备注  摘要
+gimp               2.10.18      snapcrafters    -     GNU 图像处理程序
+paintsupreme-3d    1.0.41       braindistrict   -     PaintSupreme 3D
+.
+.
+```
+
+上述命令将列出所有可下载和安装的、与图像编辑软件相关的 snap 软件包。其中一个结果是 `gimp` 图像编辑器。关于 `gimp` snap 的详细信息如下：
+
+```bash
+snap info gimp
+```
+
+```text
 name: gimp
-
 summary: GNU 图像处理程序
-
 publisher: Snapcrafters
-
 store-url: https://snapcraft.io/gimp
-
 contact: https://github.com/snapcrafters/gimp/issues
-
 license: GPL-3.0+
-
 description: |
   无论你是图形设计师、摄影师、插画师还是科学家，GIMP 都提供了复杂的工具来完成工作。得益于许多自定义选项和第三方插件，你可以通过 GIMP 进一步提高生产力。
 
   此 snap 由 Snapcrafters 社区维护，并不一定
-
   由上游开发者认可或维护。
 
   上游项目: https://www.gimp.org/
-
   snapcraft.yaml 定义:
   https://github.com/snapcrafters/gimp/blob/master/snapcraft.yaml
-
 snap-id: KDHYbyZukmLhiogKiUksByRhXD2gY
-
 channels:
   latest/stable: 2.10.18 2020-03-03 (252) 182MB -
   latest/candidate: ↑
   latest/beta: ↑
   latest/edge: 2.11.02 2020-04-28 (265) 184MB -
+```
 
 `snap find` 命令还可以通过名称查找特定软件包，以及提供类似功能的软件包。例如，搜索 VLC 播放器应用也会列出类似的软件包：
 
+```bash
+snap find vlc
 ```
-# snap find vlc
+
+```text
+名称                版本         发布者          备注  摘要
+vlc                 3.0.10       videolan        -     终极播放器
+mjpg-streamer       2.0          ogra            -     UVC 摄像头流工具
+audio-recorder      3.0.5+rev1432+pkg-7b07 brlin -     Linux 免费录音器（极其不稳定）
+tundra              0.1.0        m4tx            -     MyAnimeList 同步器
+dav1d               0.6.0        videolan        -     VideoLAN 的 AV1 解码器
+peerflix            v0.39.0+git1.df28e20 pmagill  -     Node.js 种子流客户端
 ```
-
-名称 版本 发布者 备注 摘要
-
-vlc 3.0.10 videolan - 终极播放器
-
-mjpg-streamer 2.0 ogra - UVC 摄像头流工具
-
-audio-recorder 3.0.5+rev1432+pkg-7b07 brlin - Linux 免费录音器（极其不稳定）
-
-tundra 0.1.0 m4tx - MyAnimeList 同步器
-
-dav1d 0.6.0 videolan - VideoLAN 的 AV1 解码器
-
-peerflix v0.39.0+git1.df28e20 pmagill - Node.js 种子流客户端
 
 要获取系统中已安装的 snap 软件包列表，可以使用 `snap list` 选项：
 
+```bash
+snap list
 ```
-$ snap list
+
+```text
+名称                版本         发布者          备注
+canonical-livepatch 9.5.5 95     latest/stable   canonical
+core                16-2.44.3 9066 latest/stable canonical
+core18              20200427 1754 latest/stable canonical
+gnome-3-28-1804     3.28.0-16-g27c9498.27c9498 116 latest/stable canonical
+.
+.
 ```
-
-名称 版本  发布者 备注
-
-canonical-livepatch 9.5.5 95 latest/stable canonical
-
-core 16-2.44.3 9066 latest/stable canonical
-
-core18 20200427 1754 latest/stable canonical
-
-gnome-3-28-1804 3.28.0-16-g27c9498.27c9498 116 latest/stable canonical
-
-.
-
-.
 
 要安装 snap 软件包（例如安装 Remmina 远程桌面工具），请运行 `snap` 命令并后跟要安装的软件包名称：
 
-```
-$ snap install remmina
+```bash
+snap install remmina
 ```
 
 要删除 snap 软件包，只需在运行 `snap` 的 `remove` 选项时指定软件包名称：
 
+```bash
+snap remove remmina
 ```
-# snap remove remmina
-```
 
-### 13.3 使用 Snap 通道
-
-
-
-
+## 13.3 使用 Snap 通道
 
 在执行安装时如果没有指定通道，`snap` 将默认使用稳定（stable）通道。这确保了安装的是软件的最新可靠版本。若要从不同的通道进行安装，请先使用 `snap info` 选项识别所需的包当前可用通道：
 
 ```bash
 snap info remmina
+```
 
+```text
 name: remmina
 summary: Remote Desktop Client
 .
@@ -2609,7 +2574,9 @@ snap switch channel=edge remmina
 
 ```bash
 snap info remmina
+```
 
+```text
 name: remmina
 .
 .
@@ -2626,7 +2593,9 @@ snap 系统包含一个名为 `snapd` 的后台服务，负责根据已安装 sn
 
 ```bash
 snap refresh --time
+```
 
+```text
 timer: 00:00~24:00/4
 last: today at 07:23 EDT
 next: today at 14:25 EDT
@@ -2634,11 +2603,13 @@ next: today at 14:25 EDT
 
 上述输出还包含了计时器信息，表明刷新将在每个 24 小时内执行四次：
 
+```text
 .
 .
 timer: 00:00~24:00/4
 .
 .
+```
 
 还可以使用 `snap` 命令强制刷新所有已安装的 snap 包，如下：
 
@@ -2684,7 +2655,9 @@ snap set system refresh.timer=6:00-7:00,22:00-23:00
 
 ```bash
 snap refresh --time
+```
 
+```text
 timer: mon-fri,1:00-2:00
 last: today at 07:23 EDT
 next: tomorrow at 01:00 EDT
@@ -2706,6 +2679,9 @@ next: tomorrow at 01:00 EDT
 
 ```bash
 snap get refresh.hold
+```
+
+```text
 2020-10-12T03:20:00-05:00
 ```
 
@@ -2739,9 +2715,11 @@ snap set system refresh.metered=null
 
 ```bash
 snap services
+```
 
-Service Startup Current Notes
-canonical-livepatch.canonical-livepatchd enabled -
+```text
+Service                                          Startup  Current  Notes
+canonical-livepatch.canonical-livepatchd         enabled  -
 ```
 
 上述输出表明该 snap 服务已启用并激活。要启动或停止服务，可以使用以下 `snap` 命令：
@@ -2762,13 +2740,17 @@ snap disable canonical-livepatch.canonical-livepatch
 
 ```bash
 snap logs canonical-livepatch
+```
 
+```text
 2020-05-06T13:21:58Z canonical-livepatch[763]: No payload available.
 2020-05-06T13:21:58Z canonical-livepatch[763]: during refresh: cannot check: No machine-token. Please run ‘canonical-livepatch enable’!
 ```
 
+```text
 .
 .
+```
 
 仍然可以使用 `systemctl` 命令来管理 snap 服务。这通常需要在服务名称前加上 `snap.`。例如：
 
@@ -2776,10 +2758,7 @@ snap logs canonical-livepatch
 systemctl status snap.canonical-livepatch.canonical-livepatchd
 ```
 
-### 13.6 总结
-
-
-
+## 13.6 总结
 
 直到最近，所有的 Ubuntu 软件包都存储在 `.deb` 文件中并使用高级软件包工具 (`APT`) 进行安装。现在，有越来越多的软件包可以使用 `Snap` 安装，`Snap` 是由 Canonical, Ltd. 开发的包管理系统。与 `apt` 软件包不同，`snap` 将软件包的所有依赖项封装成单个 `.snap` 文件。这确保了软件软件包是自包含的，拥有运行其所需的所有库和资源的副本。这避免了不同软件包因依赖不同版本的相同共享资源和库而可能产生的冲突。Snap 系统还允许并行安装同一软件包的不同版本。Ubuntu 软件工具列出的所有软件都以 snap 包的形式提供。此外，还可以使用命令行 `snap` 来安装、删除和管理软件包。
 
@@ -2811,8 +2790,8 @@ systemctl status snap.canonical-livepatch.canonical-livepatchd
 apt -qq list network-manager
 ```
 
+```text
 network-manager/bionic-updates,now 1.22.10-1ubuntu1 amd64 [installed,automatic]
-
 ```
 
 如有必要，按照以下方式安装软件包：
@@ -2833,6 +2812,7 @@ systemctl status network-manager
 systemctl status network-manager
 ```
 
+```text
 ● NetworkManager.service - Network Manager
    Loaded: loaded (/lib/systemd/system/NetworkManager.service; enabled; vendor preset: enabled)
    Active: active (running) since Wed 2020-04-08 14:31:58 EDT; 19h ago
@@ -2840,7 +2820,11 @@ systemctl status network-manager
    Main PID: 704 (NetworkManager)
    Tasks: 4 (limit: 4915)
    CGroup: /system.slice/NetworkManager.service
-              ├─704 /usr/sbin/NetworkManager --no-daemon
+```
+
+
+
+`├─704 /usr/sbin/NetworkManager --no-daemon`
 
 ## 14.3 基本 nmcli 命令
 
@@ -2850,7 +2834,7 @@ systemctl status network-manager
 nmcli [Options] Object {Command | help}
 ```
 
-在上述语法中，`Object` 将是 `general`、`networking`、`radio`、`connection`、`monitor`、`device` 或 `agent` 之一，所有都可以缩写为单词的几个字母（例如 connection 缩写为 `con`，甚至只是字母 `c`）。例如，以下所有命令都将输出与 `device` 对象相关的帮助信息：
+在上述语法中，`Object` 将是 `general`、`networking`、`radio`、`connection`、`monitor`、`device` 或 `agent` 之一，所有都可以缩写为单词的几个字母（例如 `connection` 缩写为 `con`，甚至只是字母 `c`）。例如，以下所有命令都将输出与 `device` 对象相关的帮助信息：
 
 ```bash
 nmcli device help
@@ -2864,8 +2848,10 @@ nmcli d help
 nmcli general status
 ```
 
+```
 STATE CONNECTIVITY WIFI-HW WIFI WWAN
 connected full enabled enabled
+```
 
 要检查系统中安装的设备状态，可以使用以下命令：
 
@@ -2873,12 +2859,14 @@ connected full enabled enabled
 nmcli dev status
 ```
 
+```
 DEVICE TYPE CONNECTION
 eno1 ethernet connected
 wlxc8a3517 wifi connected
 virbr0 bridge connected
 lo loopback unmanaged
 virbr0-nic tun unmanaged
+```
 
 可以使用 `-p` (pretty) 选项修改输出，使其更符合人类习惯：
 
@@ -2886,6 +2874,7 @@ virbr0-nic tun unmanaged
 nmcli -p dev status
 ```
 
+```
 =====================
   Status of devices
 =====================
@@ -2896,8 +2885,7 @@ eno1 ethernet connected
 virbr0 bridge connected
 lo loopback unmanaged
 virbr0-nic tun unmanaged
-
-
+```
 
 相反，可以使用 `-t` 选项使输出更简洁，适用于自动化处理：
 
@@ -2905,11 +2893,11 @@ virbr0-nic tun unmanaged
 nmcli -t dev status
 ```
 
+```
 eno1:ethernet:connected
 wlxc8a3517:wifi:connected
 virbr0:bridge:connected
 lo:loopback:unmanaged
-
 ```
 
 从状态输出中，我们可以看到系统有两个物理设备，一个是以太网，另一个是 WiFi 设备。桥 (`virbr`) 条目是为虚拟机提供网络的虚拟设备。回环接口 (`lo`) 是允许系统与自身通信的特殊虚拟设备，通常用于执行网络诊断。
@@ -2922,56 +2910,54 @@ lo:loopback:unmanaged
 nmcli con show
 ```
 
+```
 NAME UUID TYPE DEVICE
 zoneone bbd6e294-5d0c-4eac-b3c2-4dfd44becc9c wifi wlxc8a35cad17
 Wired connection 1 56f32c14-a4d2-32c8-9391-f51967efa173 ethernet eno1
 virbr0 f2d3494f-6ea4-4c90-936c-5eda9ac96a85 bridge virbr0
 zonetwo f2a20df5-aa5e-4576-8379-579d154c3e0d wifi --
 zonethree 45beac50-8741-41a6-abff-415640e24071 wifi --
-
-
-
+```
 
 从上述输出，我们可以看到 WiFi 设备（`wlxc83a35cad517`）连接到了名为 `zoneone` 的无线网络，而以太网设备（`eno1`）连接到了名为 `Wired connection 1` 的连接。除了 `zoneone` 外，`NetworkManager` 还列出了两个名为 `zonetwo` 和 `zonethree` 的 WiFi 连接，它们目前都没有连接设备。
 
 要查找分配给连接的 IP 地址，可以使用 `ip` 工具配合 `address` 选项：
 
-```
+```bash
 ip address
 ```
 
 这也可以简写为：
 
-```
+```bash
 ip a
 ```
 
-.
-.
-
+```
 3: wlxc83a35cad517: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc mq state UP group default qlen 1000
     link/ether c8:3a:35:ca:d5:17 brd ff:ff:ff:ff:ff:ff
     inet 192.168.1.121/24 brd 192.168.86.255 scope global dynamic noprefixroute wlxc83a35cad517
         valid_lft 86076sec preferred_lft 86076sec
-.
-.
+```
 
 `ip` 命令将输出系统上检测到的所有设备的信息。上述输出显示 WiFi 设备已分配了 IP 地址 `192.168.1.121`。
 
 如果我们只想列出活跃的连接，可以使用 `nmcli` 命令配合 `-a` 选项：
 
-```
+```bash
 nmcli con show -a
 ```
 
+```
 NAME UUID TYPE DEVICE
 zoneone bbd6e294-5d0c-4eac-b3c2-4dfd44becc9c wifi wlxc83a35cad517
 Wired connection 1 56f32c14-a4d2-32c8-9391-f51967efa173 ethernet eno1
 virbr0 f2d3494f-6ea4-4c90-936c-5eda9ac96a85 bridge virbr0
+```
 
 将 WiFi 设备连接从 `zoneone` 切换到 `zonetwo`，我们可以运行以下命令：
 
-```
+```bash
 nmcli device wifi connect zonetwo -ask
 ```
 
@@ -2979,44 +2965,47 @@ nmcli device wifi connect zonetwo -ask
 
 `-ask` 标志会导致 `nmcli` 提示用户输入 WiFi 网络的密码。要在命令行中包含 WiFi 密码（特别是在脚本中执行命令时非常有用），请使用 `password` 选项：
 
-```
+```bash
 nmcli device wifi connect zonetwo password <password here>
 ```
 
 `nmcli` 工具也可以按如下方式扫描可用的 WiFi 网络：
 
-```
+```bash
 nmcli device wifi list
 ```
 
+```
 IN-USE SSID MODE CHAN RATE SIGNAL BARS SECURITY
     zoneone Infra 6 195 Mbit/s 80 WPA2
 * zonetwo Infra 11 130 Mbit/s 74 WPA1 WPA2
+```
 
 一个当前活跃的连接可以按如下方式停用：
 
-```
+```bash
 nmcli con down <connection name>
 ```
 
 同样，可以随时重新恢复非活跃的连接：
 
-```
+```bash
 nmcli con up <connection name>
 ```
 
 当连接被断开时，`NetworkManager` 会自动搜索另一个连接，激活它并将其分配到之前建立连接的设备上。为了防止在这种情况下使用连接，请按如下方式禁用 `autoconnect` 选项：
 
-```
+```bash
 nmcli con mod <connection name> connection.autoconnect no
 ```
 
 可以使用以下命令获取关于特定连接的附加信息。这包括所有连接属性的当前值：
 
-```
+```bash
 nmcli con show "Wired connection 1"
 ```
 
+```
 connection.id: Wired connection 1
 connection.uuid: 56f32c14-a4d2-32c8-9391-f51967efa173
 connection.stable-id: --
@@ -3033,12 +3022,11 @@ connection.zone: --
 connection.master: --
 connection.slave-type: --
 connection.autoconnect-slaves: -1 (default)
-.
-.
+```
 
 所有这些属性都可以使用 `nmcli` 配合 `modify` 选项通过以下语法进行修改：
 
-```
+```bash
 nmcli con mod <connection name> connection.<property name> <setting>
 ```
 
@@ -3046,11 +3034,13 @@ nmcli con mod <connection name> connection.<property name> <setting>
 
 到目前为止，我们探索了连接的使用，但还没有解释如何配置连接。连接的配置被称为连接配置文件，存储在 `/etc/NetworkManager/system-connections` 目录下的文件中，其内容如下：
 
-```
+```bash
 ls /etc/NetworkManager/system-connections
 ```
 
+```
 zoneone.nmconnection zonetwo.nmconnection zonethree.nmconnection
+```
 
 每个文件都是一个接口配置文件，包含连接的配置文件。
 
@@ -3078,33 +3068,35 @@ autoconnect-slaves: -1 (default)
 
 每个文件都是一个接口配置文件，包含连接的配置文件。
 
+```
+uuid=6e03666b-26a1-476e-b5b2-77c8eac6006c
+type=ethernet
+interface-name=enp0s3
+permissions=
+```
 
-
-
-`uuid=6e03666b-26a1-476e-b5b2-77c8eac6006c`
-
-`type=ethernet`
-
-`interface-name=enp0s3`
-
-`permissions=`
-
+```
 [ethernet]
-`mac-address-blacklist=`
+mac-address-blacklist=
+```
 
+```
 [ipv4]
-`address1=192.168.1.200/24,192.168.1.1`
-`dns-search=`
-`method=manual`
+address1=192.168.1.200/24,192.168.1.1
+dns-search=
+method=manual
+```
 
+```
 [ipv6]
-`addr-gen-mode=stable-privacy`
-`dns-search=`
-`method=auto`
+addr-gen-mode=stable-privacy
+dns-search=
+method=auto
+```
 
 添加新连接的命令可以稍微微调，以便同时分配 IPv4 和 IPv6 静态地址：
 
-```
+```bash
 nmcli con add type ethernet con-name static_ip ifname enp0s3 ip4 192.168.1.200/24 gw4 192.168.1.1 gw4 192.168.1.1 ip6 cabf::4532 gw6 2010:dfa::1
 ```
 
@@ -3112,24 +3104,22 @@ nmcli con add type ethernet con-name static_ip ifname enp0s3 ip4 192.168.1.200/2
 
 除了使用命令行选项的 `nmcli` 外，该工具还包含一个交互模式，用于创建和修改连接配置文件。例如，下面的输出显示了如何使用交互模式创建一个名为 `demo_con` 的新以太网连接：
 
-```
+```bash
 nmcli con edit
 ```
 
+```
 可用的连接类型：`6lowpan`, `802-11-olpc-mesh (olpc-mesh)`, `802-11-wireless (wifi)`, `802-3-ethernet (ethernet)`, `adsl`, `bluetooth`, `bond`, `bridge`, `cdma`, `dummy`, `generic`, `gsm`, `infiniband`, `ip-tunnel`, `macsec`, `macvlan`, `ovs-bridge`, `ovs-interface`, `ovs-port`, `ppoe`, `team`, `tun`, `vlan`, `vpn`, `vxlan`, `wimax`, `wpan`, `bond-slave`, `bridge-slave`, `team-slave`
-
 输入连接类型：`ethernet`
+```
 
 ```
 ===| nmcli interactive connection editor |===
 正在添加新的 ‘802-3-ethernet’连接
-
 输入 ‘help’ 或 ‘？’ 查看可用命令。
 输入 ‘print’ 显示所有连接属性。
 输入 ‘describe [<setting>.<prop>]’ 获取详细的属性描述。
-
 你可以编辑以下设置：connection, `802-3-ethernet (ethernet)`, `802-1x`, `dcb`, `sriov`, `ethtool`, `match`, `ipv4`, `ipv6`, `tc`, `proxy`
-
 nmcli> set connection.id demo_con
 nmcli> set connection.interface enp0s8
 nmcli> set connection.autoconnect yes
@@ -3137,53 +3127,46 @@ nmcli> set ipv4.method auto
 nmcli> set 802-3-ethernet.mtu auto
 nmcli> set ipv6.method auto
 nmcli> save
-
 正在保存设置了 ‘autoconnect=yes’ 的连接。这可能会导致连接立即激活。
-
 你仍然想要保存吗？(yes/no) [yes] yes
-
 连接 ‘demo_con’ (cb837408-6c6f-4572-9548-4932f88b9275) 已保存。
-
 nmcli> quit
 ```
 
 相反，下面的输出修改了之前创建的 `static_ip` 连接配置文件，使用与原始指定不同的静态 IP 地址：
 
-```
+```bash
 nmcli con edit static_ip
 ```
 
 ```
 ===| nmcli interactive connection editor |===
 正在编辑现有的 '802-3-ethernet'连接：'static_ip'
-
 输入 'help' 或 '?' 查看可用命令。
 输入 'print' 显示所有连接属性。
 输入 'describe [<setting>.<prop>]' 获取详细的属性描述。
-
 你可以编辑以下设置：connection, `802-3-ethernet (ethernet)`, `802-1x`, `dcb`, `sriov`, `ethtool`, `match`, `ipv4`, `ipv6`, `tc`, `proxy`
-
 nmcli> print ipv4.addresses
 ipv4.addresses: 192.168.1.200/24
 nmcli> set ipv4.addresses 192.168.1.201/24
 nmcli> save
-
 连接 'static_ip' (3fccafb3-e761-4271-b310-ad0f28ee8606) 已更新。
-
 nmcli> quit
 ```
 
-在修改现有连接后，请记得指示 NetworkManager 重新加载配置文件：
+在修改现有连接后，请记得指示 `NetworkManager` 重新加载配置文件：
 
-```
+```bash
 nmcli con reload
 ```
 
 在使用交互模式时，了解有一个广泛的内置帮助系统可以学习如何使用该工具是非常有用的。可以通过在 `nmcli >` 提示符下输入 `help` 或 `?` 来访问帮助主题：
 
-```
+```bash
 nmcli> ?
 ```
+
+
 
 ------------------------------------------------------------------------------
 ---[ 主菜单 ]---
@@ -3234,9 +3217,6 @@ https://www.linuxtopia.org/Linux_Firewall_iptables/index.html
 
 TCP/IP 定义了共 65535 个端口，其中 1023 个被认为是已知端口。重要的是，这些不是插入网络电缆的物理端口，而是每个网络连接上的虚拟端口，应用程序和服务可以通过这些端口在 TCP/IP 网络上进行通信。事实上，流行的网络客户端和服务所使用的端口仅是已知端口组的一个更小的子集。
 
-
-
-
 操作系统可以提供许多不同的 TCP/IP 服务。本章末尾的表格提供了此类服务的完整列表，这些服务包括用于运行安全 Web 服务器的 `HTTPS`、用于允许文件传输的 `FTP`、用于提供安全远程登录访问及文件传输的 `SSH` 以及用于传输电子邮件消息的 `SMTP`。每个服务随后被分配给一个标准的 TCP/IP 端口。例如，`HTTPS` 被分配给端口 `443`，而 `SSH` 通信在端口 `22` 上进行。
 
 ## 15.2 端口和服务的安全
@@ -3255,12 +3235,15 @@ TCP/IP 定义了共 65535 个端口，其中 1023 个被认为是已知端口。
 # iptables -L
 
 Chain INPUT (policy ACCEPT)
+
 target prot opt source destination
 
 Chain FORWARD (policy ACCEPT)
+
 target prot opt source destination
 
 Chain OUTPUT (policy ACCEPT)
+
 target prot opt source destination
 ```
 
@@ -3278,13 +3261,17 @@ target prot opt source destination
 # iptables -L
 
 Chain INPUT (policy ACCEPT)
+
 target prot opt source destination
+
 DROP tcp -- 192.168.2.76 anywhere tcp dpt:smtp
 
 Chain FORWARD (policy ACCEPT)
+
 target prot opt source destination
 
 Chain OUTPUT (policy ACCEPT)
+
 target prot opt source destination
 ```
 
@@ -3309,10 +3296,6 @@ target prot opt source destination
 | 25 | `SMTP` | 简单邮件传输协议 - `SMTP` 定义了电子邮件从一个网络主机发送到另一个网络主机的机制。 |
 | 53 | `DNS` | 域名服务器 - TCP/IP 网络用于将主机名和完全限定域名 (FQDN) 转换为 IP 地址的服务。 |
 | 69 | `TFTP` | 简易文件传输协议 - `TFTP` 是 `FTP` 的精简版本，使用 `UDP` 传输数据。 |
-
-
-
-
 
 | 端口 | 协议 | 描述 |
 | :--- | :--- | :--- |
@@ -3348,9 +3331,11 @@ Ubuntu 包含一个名为 `ufw` 的包，它是 Uncomplicated Firewall（简易�
 apt install gufw
 ```
 
+
+
 ### 16.3 运行和启用 gufw
 
-安装后，在 GNOME 桌面内按下 `Alt-F2` 并输入 `gufw` 来启动 `gufw`。首次调用时，防火墙可能处于禁用状态，如图图 16-1 所示。
+安装后，在 GNOME 桌面内按下 `Alt-F2` 并输入 `gufw` 来启动 `gufw`。首次调用时，防火墙可能处于禁用状态，如图 16-1 所示。
 
 要启用防火墙，将状态开关（`A`）移动到开启位置。默认情况下，主面板（`D`）将显示 `gufw` 首页，包含有关工具的基本信息。从按钮行选择选项（`C`）将更改面板显示的内容。例如，选择“规则”按钮来添加、删除和查看规则。
 
@@ -3362,42 +3347,44 @@ apt install gufw
 
 当前选择配置决定了防火墙在没有特定策略规则的情况下如何处理流量。例如，默认的家庭配置配置为拒绝所有入站流量并允许所有出站流量。这些默认策略设置通过“入站:”和“出站:”菜单（`E`）进行更改。
 
-
-
-
 另一方面，如果入站策略更改为 `Allow all traffic`（允许所有流量），则所有入站流量都将被允许，除非为必须拦截的特定类型连接创建了规则。不出所料，这些规则被称为黑名单。黑名单/名单方法同样适用于入站和出站连接。
 
 ### 16.4 创建新配置
 
-虽然可以修改预定义的配置，但创建一个或多个配置来根据你的特定需求配置防火墙通常更有意义。通过选择`Edit`（编辑）->`Preferences...`（首选项...）菜单项可以显示图 16-2 所示的对话框：
+虽然可以修改预定义的配置，但创建一个或多个配置来根据你的特定需求配置防火墙通常更有意义。通过选择 `Edit`（编辑）-> `Preferences...`（首选项...）菜单项可以显示图 16-2 所示的对话框：
 
 ![](img/ubuntu_20.04_gufw_preferences.jpg)
-图 2
 
-要添加新配置，点击配置列表下方的`+`按钮。列表中将出现名为 `Profile 1` 的新配置。要为配置命名更具描述性的名称，请双击条目进入编辑模式并输入新名称：
+图 16-2
+
+要添加新配置，点击配置列表下方的 `+` 按钮。列表中将出现名为 `Profile 1` 的新配置。要为配置命名更具描述性的名称，请双击条目进入编辑模式并输入新名称：
 
 ![](img/ubuntu_20.04_gufw_new_profile.jpg)
+
 图 16-3
 
-配置创建并命名后，点击`Close`（关闭）按钮返回主界面，并在`Profile`（配置）菜单中选择它：
+配置创建并命名后，点击 `Close`（关闭）按钮返回主界面，并在 `Profile`（配置）菜单中选择它：
 
 ![](img/ubuntu_20.04_gufw_enabled.jpg)
+
 图 16-4
 
 选中自定义配置后，即可设置自定义规则来覆盖默认的入站和出站设置。
 
-## 16.5 添加预配置防火规则
+### 16.5 添加预配置防火规则
 
-通过点击`Rules`（规则）按钮以及位于规则面板底部的`+`按钮创建新规则，如图 16-5 所示：
+通过点击 `Rules`（规则）按钮以及位于规则面板底部的 `+` 按钮创建新规则，如图 16-5 所示：
 
 ![](img/ubuntu_20.04_gufw_add_rule.jpg)
+
 图 16-5
 
-一旦选择，将出现如图 16-6 所示的对话框，且默认选中的（显示为已选）`Preconfigured`（预配置）选项卡。`Preconfigured`面板允许选择匹配特定应用程序和服务的规则。例如，可以通过从`Application`（应用程序）菜单中选择项目，并相应地选择`Policy`（策略）和`Direction`（方向）菜单，来限制或允许来自`Skype`和`BitTorrent`等工具的流量。
+一旦选择，将出现如图 16-6 所示的对话框，且默认选中的（显示为已选）`Preconfigured`（预配置）选项卡。`Preconfigured` 面板允许选择匹配特定应用程序和服务的规则。例如，可以通过从 `Application`（应用程序）菜单中选择项目，并相应地选择 `Policy`（策略）和 `Direction`（方向）菜单，来限制或允许来自 `Skype` 和 `BitTorrent` 等工具的流量。
 
-为了帮助找到特定的应用程序或服务，请使用`Category`（类别）和`Subcategory`（子类别）菜单来过滤`Application`菜单中出现的项目。或者，只需在`Application Filter`（应用程序过滤器）字段中输入应用程序或服务的名称来过滤菜单项：
+为了帮助找到特定的应用程序或服务，请使用 `Category`（类别）和 `Subcategory`（子类别）菜单来过滤 `Application` 菜单中出现的项目。或者，只需在 `Application Filter`（应用程序过滤器）字段中输入应用程序或服务的名称来过滤菜单项：
 
 ![](img/ubuntu_20.04_gufw_rule_settings.jpg)
+
 图 16-6
 
 `Policy`（策略）菜单为控制所选应用程序或服务的流量提供以下选项：
@@ -3407,18 +3394,20 @@ apt install gufw
 - `Reject` - 不允许端口上的流量。数据包被丢弃，并通知请求系统已被拒绝。
 - `Limit` - 如果同一个 IP 地址在 30 秒内尝试建立 6 次或更多连接，则拒绝该连接。
 
-一旦定义了规则，点击`Add`（添加）按钮将实施该规则，关闭`Add Rule`对话框，新规则将列在`gufw`工具的主界面上（包含 IPv4 和 IPv6 协议的规则）：
+一旦定义了规则，点击 `Add`（添加）按钮将实施该规则，关闭 `Add Rule` 对话框，新规则将列在 `gufw` 工具的主界面上（包含 IPv4 和 IPv6 协议的规则）：
 
 ![](img/ubuntu_20.04_gufw_rule_added.jpg)
+
 图 16-7
 
-要删除规则，请在列表中选择它并点击对话框底部的`-`按钮。同样，通过选择现有规则并点击`-`按钮右侧的齿轮按钮来编辑现有规则。
+要删除规则，请在列表中选择它并点击对话框底部的 `-` 按钮。同样，通过选择现有规则并点击 `-` 按钮右侧的齿轮按钮来编辑现有规则。
 
 ### 16.6 添加简单防火墙规则
 
-预配置规则允许根据已知的服务和应用程序配置防火墙，而`Add Rule`对话框的`Simple`（简单）选项卡允许通过引用相应的 TCP/IP 端口简单地定义入站和出站规则。已知应用程序和服务使用的端口仅代表了应用程序可用端口的一小部分，而对于这些端口可能需要定义防火墙规则。例如，第三方应用程序可能会使用端口 `5700` 与远程服务器通信。在这种情况下，可能需要使用`Simple`面板允许此特定端口的流量：
+预配置规则允许根据已知的服务和应用程序配置防火墙，而 `Add Rule` 对话框的 `Simple`（简单）选项卡允许通过引用相应的 TCP/IP 端口简单地定义入站和出站规则。已知应用程序和服务使用的端口仅代表了应用程序可用端口的一小部分，而对于这些端口可能需要定义防火墙规则。例如，第三方应用程序可能会使用端口 `5700` 与远程服务器通信。在这种情况下，可能需要使用 `Simple` 面板允许此特定端口的流量：
 
 ![](img/ubuntu_20.04_gufw_simple_rule.jpg)
+
 图 16-8
 
 该规则可以配置为过滤 `TCP`、`UDP` 或两种类型的流量。此外，端口可以指定为单个端口号或端口范围，起始和结束端口之间用冒号分隔（例如，`1000:1500` 将规则适用于 1000 到 1500 之间的所有端口）。或者，输入与端口关联的服务名称（例如 `https` 或 `ssh`）。
@@ -3435,13 +3424,18 @@ apt install gufw
 
 要启用或禁用防火墙：
 
-```bash# ufw enable
+```bash
+# ufw enable
+
 # ufw disable
 ```
 
-使用`status`选项可以获取防火墙的当前状态：
+使用 `status` 选项可以获取防火墙的当前状态：
 
-```bash# ufw status
+```bash
+# ufw status
+```
+
 ```
 Status: active
 To Action From
@@ -3449,29 +3443,33 @@ To Action From
 22 ALLOW 192.168.86.30
 ```
 
-为了获取更详细的状态信息，将上述命令与`verbose`选项结合：
+为了获取更详细的状态信息，将上述命令与 `verbose` 选项结合：
 
 ```bash
 # ufw status verbose
 ```
+
+```
 Status: active
+
 Logging: on (full)
+
 Default: deny (incoming), allow (outgoing), deny (routed)
+
 New profiles: skip
+
 To Action From
+
 -- ------ ----
+
 22 ALLOW IN 192.168.86.30
 ```
 
-要更改这些默认设置之一，请使用`ufw`命令配合`default`选项使用以下语法：
+要更改这些默认设置之一，请使用 `ufw` 命令配合 `default` 选项使用以下语法：
 
 ```bash
 # ufw default <policy> <direction>
 ```
-
-
-
-
 
 例如，默认允许所有入站连接：
 
@@ -3503,7 +3501,7 @@ ufw deny 5700/tcp
 ufw allow ssh
 ```
 
-与 `guf` 工具类似，`ufw` 也允许从特定的外部 IP 地址控制访问。例如，允许来自 IP 地址 `192.168.0.20` 的所有入站流量：
+与 `gufw` 工具类似，`ufw` 也允许从特定的外部 IP 地址控制访问。例如，允许来自 IP 地址 `192.168.0.20` 的所有入站流量：
 
 ```bash
 ufw allow from 192.168.0.20
@@ -3539,20 +3537,31 @@ ufw insert 3 allow from 192.168.0.123 to any port 2
 ufw status numbered
 ```
 
+```
 Status: active
 
-```
       To Action From
+
       -- ------ ----
+
 [ 1] 22 ALLOW IN 192.168.86.30
+
 [ 2] 30 ALLOW IN Anywhere
+
 [ 3] 22 ALLOW IN 192.168.0.123
+
 [ 4] 5700/tcp DENY IN Anywhere
+
 [ 5] 22/tcp ALLOW IN Anywhere
+
 [ 6] Anywhere ALLOW IN 192.168.0.20
+
 [ 7] 22 ALLOW IN 192.168.0.4
+
 [ 8] 30 (v6) ALLOW IN Anywhere (v6)
+
 [ 9] 5700/tcp (v6) DENY IN Anywhere (v6)
+
 [10] 22/tcp (v6) ALLOW IN Anywhere (v6)
 ```
 
@@ -3572,6 +3581,7 @@ ufw help
 
 ```bash
 ufw logging on
+
 ufw logging off
 ```
 
@@ -3631,31 +3641,38 @@ ufw reset
 
 要查看区域的特定设置，请参考位于 `/usr/lib/firewalld/zones` 目录下对应的 XML 配置文件。以下列出了 `public.xml` 区域配置的内容：
 
-```xml<?xml version="1.0" encoding="utf-8"?>
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+
 <zone>
+
   <short>Public</short>
+
   <description>供公共区域使用。你不信任网络上的其他计算机不会损害你的计算机。仅允许特定的入站连接。</description>
+
   <service name="ssh"/>
+
   <service name="mdns"/>
+
   <service name="dhcpv6-client"/>
+
 </zone>
 ```
 
 ### 17.1.2 接口 (Interfaces)
 
-
-
-
-
 任何连接到互联网或网络（或两者都有）的 Ubuntu 系统都包含至少一个以物理或虚拟网络设备形式存在的接口。当 `firewalld` 激活时，这些接口中的每一个都会被分配到一个区域（zone），允许为不同的接口分配不同级别的防火墙安全策略。考虑一个拥有两个接口的服务器，一个连接到外部互联网，另一个连接到内部网络。在这种情况下，面向外部的接口很可能会被分配到限制更严格的外部区域（external zone），而内部接口可能会使用内部区域（internal zone）。
 
 ### 17.1.3 服务
+
 TCP/IP 定义了一组在标准端口上通信的服务。例如，安全的 HTTPS 网页连接使用端口 `443`，而 SMTP 邮件服务使用端口 `25`。为了有选择性地启用针对服务的服务的入站流量，可以在区域中添加 `firewalld` 规则。例如，家庭区域（home zone）默认不允许入站 HTTPS 连接。可以通过向区域添加规则以允许入站 HTTPS 连接来启用此类流量，而无需引用特定的端口号。
 
 ### 17.1.4 端口
+
 虽然在添加 `firewalld` 规则时可以引用常见的 TCP/IP 服务，但也会出现需要在一个未分配给服务的特定端口上允许入站连接的情况。可以通过添加引用特定端口而非服务的规则来实现。
 
 ### 17.2 检查 firewalld 状态
+
 `firewalld` 服务通常不会在所有 Ubuntu 安装中默认安装并启用。可以通过以下命令检查服务的状态：
 
 ```bash
@@ -3664,14 +3681,23 @@ systemctl status firewalld
 
 ```
 ● firewalld.service - firewalld -动态防火墙守护
+
     Loaded: loaded (/lib/systemd/system/firewalld.service; enabled; vendor preset: enabled)
+
     Active: active (running) since Fri 2020-04-10 10:17:54 EDT; 20s ago
+
       Docs: man:firewalld(1)
+
   Main PID: 4488 (firewalld)
+
     Tasks: 2 (limit: 4915)
+
     CGroup: /system.slice/firewalld.service
+
               └─4488 /usr/bin/python3 -Es /usr/sbin/firewalld --nofork --nopid
+
 Apr 10 10:17:54 demo-server systemd[1]: Starting firewalld -动态防火墙守护进程...
+
 Apr 10 10:17:54 demo-server systemd[1]: Started firewalld -动态防火墙守护进程.
 ```
 
@@ -3681,9 +3707,12 @@ Apr 10 10:17:54 demo-server systemd[1]: Started firewalld -动态防火墙守护
 apt install firewalld
 ```
 
+
+
 `firewalld` 服务默认已启用，因此在安装完成后以及每次系统启动时都会自动启动。
 
 ### 17.3 使用 firewall-cmd 配置防火墙规则
+
 `firewall-cmd` 命令行工具允许在终端窗口中查看 `firewalld` 配置信息，并对区域和规则进行更改。
 
 在更改防火墙设置时，意识到运行时（runtime）和永久（permanent）配置的概念非常重要。默认情况下，任何规则更改都被视为运行时配置更改。这意味着虽然更改会立即生效，但它们在下次系统重启或 `firewalld` 服务重载时（例如通过执行以下命令）将会丢失：
@@ -3695,11 +3724,13 @@ firewall-cmd --reload
 要使更改永久生效，必须使用 `--permanent` 命令行选项。永久更改在 `firewalld` 服务重载之前不会生效，但在手动更改之前将一直有效。
 
 ### 17.3.1 识别和更改默认区域
+
 要识别默认区域（换句话说，除非专门选择了不同的区域，否则所有接口将被分配到的区域），请按如下方式使用 `firewall-cmd` 工具：
 
 ```bash
 firewall-cmd --get-default-zone
 ```
+
 public
 
 将默认区域改为不同的区域：
@@ -3707,14 +3738,17 @@ public
 ```bash
 firewall-cmd --set-default-zone=home
 ```
+
 success
 
 ### 17.3.2 显示区域信息
+
 列出系统中所有可用区域：
 
 ```bash
 firewall-cmd --get-zones
 ```
+
 block dmz drop external home internal public trusted work
 
 按如下方式获取当前激活的区域及其分配的接口列表：
@@ -3722,18 +3756,18 @@ block dmz drop external home internal public trusted work
 ```bash
 firewall-cmd --get-active-zones
 ```
+
 external
   interfaces: eth0
 internal
   interfaces: eth1
-
-```
 
 可以如下所示列出为特定区域配置的所有规则：
 
 ```bash
 firewall-cmd --zone=home --list-all
 ```
+
 home (active)
   target: default
   icmp-block-inversion: no
@@ -3748,11 +3782,12 @@ home (active)
   icmp-blocks:
   rich rules:
 
-使用以下命令列出当前可包含在 firewalld 规则的服务：
+使用以下命令列出当前可包含在 `firewalld` 规则的服务：
 
 ```bash
 firewall-cmd --get-services
 ```
+
 RH-Satellite-6 amanda-client amanda-k5-client amqp amqps apcupsd audit bacula bacula-client bgp bitcoin bitcoin-rpc bitcoin-testnet bitcoin-testnet-rpc ceph ceph-mon cfengine cockpit
 
 列出当前为某个区域启用的服务：
@@ -3760,6 +3795,7 @@ RH-Satellite-6 amanda-client amanda-k5-client amqp amqps apcupsd audit bacula ba
 ```bash
 firewall-cmd --zone=home --list-services
 ```
+
 cockpit dhcpv6-client http
 
 可以如下所示获取区域启用的端口列表：
@@ -3767,14 +3803,17 @@ cockpit dhcpv6-client http
 ```bash
 firewall-cmd --zone=public --list-ports
 ```
+
 9090/tcp
 
 ### 17.3.3 添加和删除区域服务
-要为某个区域启用服务，使用 `--add-service` 选项。在此例中添加到 public 区域，使用以下命令：
+
+要为某个区域启用服务，使用 `--add-service` 选项。在此例中添加到 `public` 区域，使用以下命令：
 
 ```bash
 firewall-cmd --zone=public --add-service=https
 ```
+
 success
 
 默认情况下这是运行时更改，因此在系统重启后将丢失。要使更改在下次系统启动时生效，请使用 `--permanent` 标志：
@@ -3782,6 +3821,7 @@ success
 ```bash
 firewall-cmd --zone=public --permanent --add-service=https
 ```
+
 success
 
 要验证服务已永久添加，请确保包含 `--permanent` 标志：
@@ -3789,9 +3829,10 @@ success
 ```bash
 firewall-cmd --zone=public --permanent --list-services
 ```
+
 cockpit dhcpv6-client http
 
-注意，作为永久更改，该规则在系统重启或 firewalld 重载之前不会生效：
+注意，作为永久更改，该规则在系统重启或 `firewalld` 重载之前不会生效：
 
 ```bash
 firewall-cmd --reload
@@ -3810,6 +3851,7 @@ firewall-cmd --zone=public --permanent --remove-service=https
 ```
 
 ### 17.3.4 使用基于端口的规则
+
 要启用特定端口，使用 `--add-port` 选项。注意在手动定义端口时，需要提供端口号和协议（`TCP` 或 `UDP`）：
 
 ```bash
@@ -3823,32 +3865,34 @@ firewall-cmd --zone=public --permanent --add-port=5900-5999/udp
 ```
 
 ### 17.3.5 创建新区域
+
 可以通过运行以下命令创建一个全新的区域。一旦创建，就可以像任何预定义区域一样管理该区域：
 
 ```bash
 firewall-cmd --permanent --new-zone=myoffice
 ```
+
 success
 
-在添加新区域后，需要重启 firewalld 使该区域可用：
+在添加新区域后，需要重启 `firewalld` 使该区域可用：
 
 ```bash
 firewall-cmd --reload
 ```
+
 success
 
 ### 17.3.6 更改区域/接口分配
+
 如前所述，系统上的每个接口必须分配到一个区域。可以使用 `firewall-cmd` 工具更改接口分配的区域。在下述示例中，将 `eth0` 接口分配给 `public` 区域：
 
 ```bash
 firewall-cmd --zone=public --change-interface=eth0
 ```
+
 success
 
 ### 17.3.7 伪装 (Masquerading)
-
-
-
 
 伪装（Masquerading）在网络管理领域更为广为人知的网络地址翻译（NAT）。当使用 Ubuntu 系统作为计算机网络访问互联网的网关时，伪装允许所有内部系统在通过互联网通信时使用该 Ubuntu 系统的 IP 地址。这样做的好处是可以向恶意的外部实体隐藏任何系统的内部 IP 地址，并且避免了为网络上的每台计算机分配公网 IP 地址的必要性。
 
@@ -3868,7 +3912,7 @@ firewall-cmd --zone=external --add-masquerade
 
 互联网控制消息协议（ICMP）用于网络上的客户端系统向彼此发送错误消息等信息。它也是 `ping` 命令的基础，网络管理员和用户都使用它来检测特定客户端在网络上是否存活。ICMP 类别允许阻止特定的 ICMP 消息类型。例如，管理员可能会选择阻止入的 ping（Echo Request）ICMP 消息，以防止基于 ping 的拒绝服务（DoS）攻击的可能性（即服务器被恶意的大量 `ping` 消息轰炸，导致其无法响应合法请求）。
 
-要查看可以包含在 firewalld 规则中的 ICMP 类型，请以下命令：
+要查看可以包含在 `firewalld` 规则中的 ICMP 类型，请使用以下命令：
 
 ```bash
 firewall-cmd --get-icmptypes
@@ -3876,7 +3920,7 @@ firewall-cmd --get-icmptypes
 
 `address-unreachable bad-header beyond-scope communication-prohibited destination-unreachable echo-reply ...`
 
-例如，以下命令永久地为公共区域（public zone）添加规则以阻止 echo-reply（ping 请求）消息：
+例如，以下命令永久地为公共区域（`public` zone）添加规则以阻止 `echo-reply`（ping 请求）消息：
 
 ```bash
 firewall-cmd --zone=public --permanent --add-icmp-block=echo-reply
@@ -3900,7 +3944,7 @@ firewall-cmd --zone=external --add-masquerade
 firewall-cmd --zone=external --add-forward-port=port=22:proto=tcp:toport=2750
 ```
 
-在上面的示例中，任何到达端口 22 的 TCP 流量将将转发到本地系统的端口 2750。另一方面，以下命令将本地系统上的端口 20 转发到 IP 地址为 `192.168.0.19` 的系统的端口 22：
+在上面的示例中，任何到达端口 22 的 TCP 流量将转发到本地系统的端口 2750。另一方面，以下命令将本地系统上的端口 20 转发到 IP 地址为 `192.168.0.19` 的系统的端口 22：
 
 ```bash
 firewall-cmd --zone=external \
@@ -3943,21 +3987,17 @@ apt install firewall-config
 
 ### 17.5 总结
 
-精心规划和实施的防火墙是任何安全系统的重要组成部分。在 Ubuntu 的情况下，firewalld 服务提供了一个灵活且易于管理的防火墙系统。
+精心规划和实施的防火墙是任何安全系统的重要组成部分。在 Ubuntu 的情况下，`firewalld` 服务提供了一个灵活且易于管理的防火墙系统。
 
 ## 18. 在 Ubuntu 上配置 SSH 密钥认证
 
-当 Ubuntu 系统首次安装时，默认未配置通过 Secure Shell（SSH）连接进行远程命令行访问。安装后，SSH 为 root 账户以及安装期间添加的任何其他用户提供密码保护和加密访问。这种安全性水平远不够，应尽快升级为 SSH 密钥认证。
+当 Ubuntu 系统首次安装时，默认未配置通过 Secure Shell（SSH）连接进行远程命令行访问。安装后，SSH 为 `root` 账户以及安装期间添加的任何其他用户提供密码保护和加密访问。这种安全性水平远不够，应尽快升级为 SSH 密钥认证。
 
 本章将概述通过实施密钥对认证来增加 Ubuntu 系统安全性的步骤。
 
 ### 18.1 Secure Shell (SSH) 概述
 
-
-
-
-
-SSH 设计用于允许安全地远程访问系统，以获取 shell 访问并传输文件和数据。正如在“使用 Vino 进行 Ubuntu 桌面访问” 中介绍的，SSH 还可以用于提供一个安全隧道，通过网络连接实现远程访问 GNOME 桌面。
+SSH 设计用于允许安全地远程访问系统，以获取 shell 访问并传输文件和数据。正如在“使用 Vino 进行 Ubuntu 桌面访问”中介绍的，SSH 还可以用于提供一个安全隧道，通过网络连接实现远程访问 GNOME 桌面。
 
 基础 SSH 配置由一个客户端（用于建立连接的计算机）和一个服务器（运行在要连接的系统上）组成。例如，用户可以使用运行在 Linux、Windows 或 macOS 系统上的 SSH 客户端连接到运行在 Ubuntu 系统上的 SSH 服务器，以获取 shell 命令行提示的访问或执行文件传输。客户端与服务器之间的所有通信（包括为了访问而输入的密码）都经过了加密，以防止第三方截获数据。
 
@@ -4011,8 +4051,9 @@ ssh-keygen
 ```
 Generating public/private rsa key pair.
 Enter file in which to save the key (/home/<username>/.ssh/id_rsa):
-按 Enter 键接受密钥文件的默认位置。这将在当前用户主目录下的 .ssh 子目录下放置两个文件。私钥将存储在名为 `id_rsa` 的文件中，而公钥将保存在命为 `id_rsa.pub` 的文件中。
 ```
+
+按 Enter 键接受密钥文件的默认位置。这将在当前用户主目录下的 `.ssh` 子目录下放置两个文件。私钥将存储在名为 `id_rsa` 的文件中，而公钥将保存在名为 `id_rsa.pub` 的文件中。
 
 接下来，`ssh-keygen` 将提示输入短语（passphrase）以保护私钥。如果提供了短语，则私钥将在本地磁盘上被加密，并且在访问远程系统时需要该短语。为了更好的安全，建议使用短语。
 
@@ -4022,12 +4063,14 @@ Enter passphrase (empty for no passphrase):
 
 最后，`ssh-keygen` 工具将生成以下输出，表示密钥已生成：
 
+
+
+您的身份标识已保存在`/home/neil/.ssh/id_rsa`中。
+您的公钥已保存在`/home/neil/.ssh/id_rsa.pub`中。
+密钥指纹为：
+`SHA256:FOLGWEEGFIjWnCT5wtTOv5VK4hdimzWghZizUEMYbfo <username>@<hostname>`
+密钥的随机艺术图像为：
 ```
-Your identification has been saved in /home/neil/.ssh/id_rsa.
-Your public key has been saved in /home/neil/.ssh/id_rsa.pub.
-The key fingerprint is:
-SHA256:FOLGWEEGFIjWnCT5wtTOv5VK4hdimzWghZizUEMYbfo <username>@<hostname>
-The key’s randomart image is:
 +---[RSA 2048]----+
 |.BB+=+*.. |
 |o+B= * . . |
@@ -4041,7 +4084,7 @@ The key’s randomart image is:
 +----[SHA256]-----+
 ```
 
-下一步是将公钥安装到远程服务器系统上。可以使用 `ssh-copy-id` 工具按照如下方式实现：
+下一步是将公钥安装到远程服务器系统上。可以使用`ssh-copy-id`工具按照如下方式实现：
 
 ```bash
 ssh-copy-id username@remote_hostname
@@ -4072,13 +4115,13 @@ ssh <username><hostname>
 
 ### 18.6 管理多个密钥
 
-存在多个私钥并不常见，每个密钥访问不同的服务器。在建立连接时，有多种选项可以选择特定的密钥。例如，可以在启动 `ssh` 客户端时指定要使用的私钥文件如下：
+存在多个私钥并不常见，每个密钥访问不同的服务器。在建立连接时，有多种选项可以选择特定的密钥。例如，可以在启动`ssh`客户端时指定要使用的私钥文件如下：
 
 ```bash
 ssh -l neilsmyth -i ~/.ssh/id_work 35.194.18.119
 ```
 
-或者，可以使用 SSH 客户端用户配置文件将密钥文件与服务器关联。配置文件名为 `config`，必须位于用户主目录下的 `.ssh` 目录，并可用于配置各种选项，包括私钥文件、连接时使用的默认端口、默认用户名以及引用服务器的快捷别名。以下示例配置文件为两个服务器定义了不同的密钥文件，并通过 `home` 和 `work` 别名进行引用。
+或者，可以使用 SSH 客户端用户配置文件将密钥文件与服务器关联。配置文件名为`config`，必须位于用户主目录下的`.ssh`目录，并可用于配置各种选项，包括私钥文件、连接时使用的默认端口、默认用户名以及引用服务器的快捷别名。以下示例配置文件为两个服务器定义了不同的密钥文件，并通过`home`和`work`别名进行引用。
 
 ```text
 Host work
@@ -4090,10 +4133,6 @@ Host home
   HostName 192.168.0.21
   IdentityFile ~/.ssh/id_home
 ```
-
-
-
-
 
 ```bash
 $ ssh -l neilsmyth -i ~/.ssh/id_work 35.194.18.119
@@ -4115,13 +4154,13 @@ $ man ssh_config
 
 最近版本的 Windows 10 包含了 OpenSSH 实现的一个子集，大多数 Linux 和 macOS 系统作为 Windows PowerShell 部分使用它。这允许通过与上述 Linux 和 macOS 类似的步骤，在 Windows 10 客户端上设置 SSH 密钥认证。
 
-在 Windows 10 系统上打开 Windows PowerShell，请按下 `Win+X` 组合键并从菜单中选择，或者从开始菜单中找到并选择它。运行后，PowerShell 窗口将如 图 18-1 所示：
+在 Windows 10 系统上打开 Windows PowerShell，请按下`Win+X`组合键并从菜单中选择，或者从开始菜单中找到并选择它。运行后，PowerShell 窗口将如 图 18-1 所示：
 
 ![](img/windows_10_powwershell.jpg)
 
 图 18-1
 
-如果你已经从另一个客户端系统拥有一个私钥，只需将 `id_rsa` 文件复制到 Windows 10 系统上名为 `.ssh` 的文件夹中。一旦文件到位，在 PowerShell 窗口中按如下方式测试认证：
+如果你已经从另一个客户端系统拥有一个私钥，只需将`id_rsa`文件复制到 Windows 10 系统上名为`.ssh`的文件夹中。一旦文件到位，在 PowerShell 窗口中按如下方式测试认证：
 
 ```bash
 $ ssh -l <username>@<hostname>
@@ -4137,9 +4176,9 @@ PS C:\Users\neil> ssh -l neil 192.168.1.101
 
 在提示时输入密码短语并完成认证过程。
 
-如果不存在现有的私钥，请在 PowerShell 窗口中使用 `ssh-keygen` 工具生成一组新的私钥和公钥对，步骤与为 Linux 和 macOS 说明的步骤相同。密钥生成后，它们将再次位于当前用户主目录下的 `.ssh` 目录中，公钥文件 `id_rsa.pub` 需要安装在远程 Ubuntu 系统上。遗憾的是，Windows PowerShell 并不包含 `ssh-copy-id` 工具，因此此任务需要手动完成。
+如果不存在现有的私钥，请在 PowerShell 窗口中使用`ssh-keygen`工具生成一组新的私钥和公钥对，步骤与为 Linux 和 macOS 说明的步骤相同。密钥生成后，它们将再次位于当前用户主目录下的`.ssh`目录中，公钥文件`id_rsa.pub`需要安装在远程 Ubuntu 系统上。遗憾的是，Windows PowerShell 并不包含`ssh-copy-id`工具，因此此任务需要手动完成。
 
-在 PowerShell 窗口中，切换目录到 `.ssh` 子目录并显示公钥文件 `id_rsa.pub` 的内容：
+在 PowerShell 窗口中，切换目录到`.ssh`子目录并显示公钥文件`id_rsa.pub`的内容：
 
 ```bash
 PS C:\Users\neil> cd .ssh
@@ -4150,7 +4189,7 @@ PS C:\Users\neil\.ssh> type id_rsa.pub
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDFgx1vzuzu59lll6/uQw7FbmKVsQ3fzLz9MW1fgo4sdsxXp81wCHNAlqcjx1Pgr9BJPXWUMInQOi7BQ5I+vc2xQ2AS0kMq3ZH9ybWuQe/U2GjueXZd0FKrEXrT55wM36Rm6Ii3roUCoGCzGR8mn95JvRB3VtCyDdzTWSi8JBPK5gV5oOxNTNPsewlLzouBlCT1qW3CKwEiIwu8S9MTL7m3nrcaNeLewTTHevvHw4QDwzFQ+B0PDg96fzsYoTXVhzyHSWyo6H0gqrft7aK+gILBtEIhWTkSVEMAzy1piKtCr1IYTmVK6engv0aoGtMUq6FnOeGp5FjvKkF4aQkh1QR28r neil@DESKTOP-S8P8D3N
 ```
 
-高亮文件内容并使用快捷键 `Ctrl-C` 将其复制。
+高亮文件内容并使用快捷键`Ctrl-C`将其复制。
 
 留在 PowerShell 窗口中，使用密码认证登录远程系统：
 
@@ -4158,15 +4197,15 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDFgx1vzuzu59lll6/uQw7FbmKVsQ3fzLz9MW1fgo4s
 PS C:\Users\neil\.ssh> ssh -l <username> <hostname>
 ```
 
-登录后，检查是否存在 `.ssh` 子目录。如果不存在，按如下方式创建它：
+登录后，检查是否存在`.ssh`子目录。如果不存在，按如下方式创建它：
 
 ```bash
 $ mkdir .ssh
 ```
 
-切换目录到 `.ssh` 并检查是否已名为 `authorized_keys` 的文件。如果不存在，创建它并将来自 Windows 10 系统的公钥文件内容粘贴其中。
+切换目录到`.ssh`并检查是否已名为`authorized_keys`的文件。如果不存在，创建它并将来自 Windows 10 系统的公钥文件内容粘贴其中。
 
-如果 `authorized_keys` 文件已存在，它很可能已经包含了其他密钥。如果是这样，编辑该文件并将新的公钥粘贴在文件末尾。例如，以下文件包含两个密钥：
+如果`authorized_keys`文件已存在，它很可能已经包含了其他密钥。如果是这样，编辑该文件并将新的公钥粘贴在文件末尾。例如，以下文件包含两个密钥：
 
 ```text
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCzRWH27Xs8ZA5rIbZXKgxFY5XXauMv+6F5PljBLJ6j+9nkmykVe3GjZTp3oD+KMRbT2kTEPbDpFD67DNL0eiX2ZuEEiYsxZfGCRCPBGYmQttFRHEAFnlS1Jx/G4W5UNKvhAXWyMwDEKiWvqTVy6syB2Ritoak+D/Sc8nJflQ6dtw0jBs+S7Aim8TPfgpi4p5XJGruXNRScamk68NgnPfTL3vT726EuABCk6C934KARd+/AXa8/5rNOh4ETPstjBRfFJ0tpmsWWhhNEnwJRqS2LD0ug7E3yFI2qsNKGEzvAYUC8Up45MRP7liR3aMlCBil1tsy9
@@ -4174,7 +4213,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCzRWH27Xs8ZA5rIbZXKgxFY5XXauMv+6F5PljBLJ6j
 
 ## 18.9 使用 PuTTYgen 生成私钥
 
-上一节探讨了在使用 PuTTY 时现有私钥和公钥的使用。如果密钥不存在，可以使用 `PuTTYgen` 工具创建，该工具包含在 PuTTY 主程序中。
+上一节探讨了在使用 PuTTY 时现有私钥和公钥的使用。如果密钥不存在，可以使用`PuTTYgen`工具创建，该工具包含在 PuTTY 主程序中。
 
 要创建新密钥，启动 PutyGen 并点击 图 18-4 中高亮的 Generate 按钮：
 
@@ -4182,21 +4221,17 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCzRWH27Xs8ZA5rIbZXKgxFY5XXauMv+6F5PljBLJ6j
 
 图 18-4
 
-
-
-
-
-按照指示移动鼠标指针以生成随机数据，然后输入一个可选的口令来加密私钥。一旦生成密钥，请使用 `Save public key`（保存公钥）和 `Save private key`（保存私钥）按钮将文件保存到合适的位置。如上一节所述，私钥可以在 `PuTTY`中使用。要在远程服务器上安装公钥，请参考前面的章节中关于在 Windows 10 的 PowerShell 中使用 SSH 介绍的步骤。
+按照指示移动鼠标指针以生成随机数据，然后输入一个可选的口令来加密私钥。一旦生成密钥，请使用`Save public key`（保存公钥）和`Save private key`（保存私钥）按钮将文件保存到合适的位置。如上一节所述，私钥可以在`PuTTY`中使用。要在远程服务器上安装公钥，请参考前面的章节中关于在 Windows 10 的 PowerShell 中使用 SSH 介绍的步骤。
 
 ### 18.10 为 Google Cloud 实例安装公钥
 
-如果你的 Ubuntu 系统托管在 Google Cloud 上（例如作为 Compute Engine 实例），有多种不同的方法可以使用基于密钥的身份验证获取 SSH 访问。可能最简单的方法是将你的公钥添加到 Google Cloud 账户的元数据（Metadata）中。这将使得公钥对你在 Google Cloud 内部创建的所有虚拟机实例都可用。要添加公钥，请登录 Google Cloud Platform 控制台，从左侧导航面板中选择如图 18-5 所示的高亮的 `Metadata` 选项，然后点击 `SSH keys` 选项卡：
+如果你的 Ubuntu 系统托管在 Google Cloud 上（例如作为 Compute Engine 实例），有多种不同的方法可以使用基于密钥的身份验证获取 SSH 访问。可能最简单的方法是将你的公钥添加到 Google Cloud 账户的元数据（Metadata）中。这将使得公钥对你在 Google Cloud 内部创建的所有虚拟机实例都可用。要添加公钥，请登录 Google Cloud Platform 控制台，从左侧导航面板中选择如图 18-5 所示的高亮的`Metadata`选项，然后点击`SSH keys`选项卡：
 
 ![](img/google_cloud_ssh_key_list.jpg)
 
 图 18-5
 
-在 SSH Keys 屏幕上，点击 `Edit` 按钮（如图 18-5 所示的高亮显示）来编辑密钥列表。滚动到当前列表底部并点击 `+ Add Item` 按钮。将出现一个新字段，你需要将 `id_rsa.pub` 文件中显示的完整公钥粘贴到其中。输入密钥后，点击 `Save` 按钮添加密钥。
+在 SSH Keys 屏幕上，点击`Edit`按钮（如图 18-5 所示的高亮显示）来编辑密钥列表。滚动到当前列表底部并点击`+ Add Item`按钮。将出现一个新字段，你需要将`id_rsa.pub`文件中显示的完整公钥粘贴到其中。输入密钥后，点击`Save`按钮添加密钥。
 
 公钥现在将显示在 SSH Keys 列表中。请注意，该密钥条目还包含用户名，在登录任何 Google Cloud 实例时必须使用该用户名：
 
@@ -4204,7 +4239,7 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCzRWH27Xs8ZA5rIbZXKgxFY5XXauMv+6F5PljBLJ6j
 
 图 18-6
 
-一旦将公钥添加到元数据中，理论上就可以从任何安装了相应私钥且拥有该用户账户的客户端访问任何虚拟机实例。事实上，在幕后，Google Cloud 为实现这一点所做的唯一工作，是将公钥添加到任何存在该账户的虚拟机家目录下的 `.ssh/authorized_keys` 文件中。
+一旦将公钥添加到元数据中，理论上就可以从任何安装了相应私钥且拥有该用户账户的客户端访问任何虚拟机实例。事实上，在幕后，Google Cloud 为实现这一点所做的唯一工作，是将公钥添加到任何存在该账户的虚拟机家目录下的`.ssh/authorized_keys`文件中。
 
 ### 18.11 总结
 
@@ -4232,7 +4267,7 @@ Ubuntu 远程桌面功能基于名为虚拟网络计算（`VNC`）的技术，�
 
 ### 19.3 在 Ubuntu 上启用远程桌面访问
 
-Ubuntu 的远程桌面访问由 `Vino` 包提供。`Vino` 是一个专为 GNOME 桌面开发的 VNC 服务器。
+Ubuntu 的远程桌面访问由`Vino`包提供。`Vino`是一个专为 GNOME 桌面开发的 VNC 服务器。
 
 启用远程访问的第一步是安装此包：
 
@@ -4240,19 +4275,19 @@ Ubuntu 的远程桌面访问由 `Vino` 包提供。`Vino` 是一个专为 GNOME 
 apt install vino
 ```
 
-安装 `Vino` 后，下一步是在 GNOME 内部启用远程桌面访问。首先打开如图 19-1 所示的设置程序：
+安装`Vino`后，下一步是在 GNOME 内部启用远程桌面访问。首先打开如图 19-1 所示的设置程序：
 
 ![](img/ubuntu_20.04_gnome_settings.jpg)
 
 图 19-1
 
-在设置应用程序中，选择 `Sharing` 选项（如图 19-2 所示的 A）：
+在设置应用程序中，选择`Sharing`选项（如图 19-2 所示的 A）：
 
 ![](img/ubuntu_20.04_gnome_remote_desktop_setting.jpg)
 
 图 19-2
 
-打开 `Sharing` 开关（B）并点击 `Screen Sharing` 选项（C），显示下方图 19-3 所示的对话框：
+打开`Sharing`开关（B）并点击`Screen Sharing`选项（C），显示下方图 19-3 所示的对话框：
 
 ![](img/ubuntu_20.04_gnome_screen_sharing_preferences.jpg)
 
@@ -4261,12 +4296,10 @@ apt install vino
 Screen Sharing 对话框提供了以下配置选项来管理远程桌面访问：
 
 - `允许连接控制屏幕`：如果启用，远程会话将可以使用鼠标和键盘与桌面环境进行交互。如果禁用，远程会话将仅允许查看桌面。
+
 - `新连接必须请求访问权限`：当选中此项时，主机屏幕上将弹出一个提示，询问是否允许远程用户访问桌面。如果你计划远程访问屏幕且主机系统旁没有人接受连接请求，则请勿选择此选项。
+
 - `需要密码`：要求用户在访问桌面之前输入指定的密码。
-
-
-
-
 
 - `Networks`: 允许远程访问的主机系统上的网络连接。
 
@@ -4274,33 +4307,33 @@ Screen Sharing 对话框提供了以下配置选项来管理远程桌面访问�
 
 ### 19.4 连接到共享桌面
 
-虽然许多操作系统都有 VNC 查看器实现，但当从 Ubuntu 或其他基于 Linux 的系统连接时，建议使用 Remmina 客户端等工具。`Remmina` 是一个具有图形界面的友好工具，它支持 `Vino` 使用的加密，以确保远程连接的安全。
+虽然许多操作系统都有 VNC 查看器实现，但当从 Ubuntu 或其他基于 Linux 的系统连接时，建议使用 Remmina 客户端等工具。`Remmina`是一个具有图形界面的友好工具，它支持`Vino`使用的加密，以确保远程连接的安全。
 
-要安装此工具，打开 Ubuntu 软件应用程序，搜索并安装 `Remmina`：
+要安装此工具，打开 Ubuntu 软件应用程序，搜索并安装`Remmina`：
 
 ![](img/ubuntu_20.04_install_remmina.jpg)
 
 图 19-4
 
-安装并启动 `Remmina` 后，将连接类型菜单（在图 19-5 中标记为 A）更改为 `VNC`，并在地址字段 (B) 输入要连接的远程系统的 IP 地址或主机名：
+安装并启动`Remmina`后，将连接类型菜单（在图 19-5 中标记为 A）更改为`VNC`，并在地址字段 (B) 输入要连接的远程系统的 IP 地址或主机名：
 
 ![](img/ubuntu_20.04_remmina_main.jpg)
 
 图 19-5
 
-要建立连接，按下键盘上的 `Enter` 键开始连接过程。稍等后，将出现第二个屏幕，请求桌面访问密码（如果在在本章较早启用屏幕共享时输入了密码）：
+要建立连接，按下键盘上的`Enter`键开始连接过程。稍等后，将出现第二个屏幕，请求桌面访问密码（如果在在本章较早启用屏幕共享时输入了密码）：
 
 ![](img/ubuntu_20.04_remmina_password.jpg)
 
 图 19-6
 
-输入密码后，点击 `OK` 访问远程屏幕：
+输入密码后，点击`OK`访问远程屏幕：
 
 ![](img/ubuntu_20.04_remmina_running.jpg)
 
 图 19-7
 
-`Remmina` 的默认设置优先考虑速度而非图像质量。如果您发现桌面渲染质量差到无法接受，请点击远程查看器窗口中左侧工具栏中的设置按钮（图 19-8），并尝试不同的设置，直到找到性能与图像质量之间的理想平衡：
+`Remmina`的默认设置优先考虑速度而非图像质量。如果您发现桌面渲染质量差到无法接受，请点击远程查看器窗口中左侧工具栏中的设置按钮（图 19-8），并尝试不同的设置，直到找到性能与图像质量之间的理想平衡：
 
 ![](img/ubuntu_20.04_remmina_quality.jpg)
 
@@ -4308,9 +4341,11 @@ Screen Sharing 对话框提供了以下配置选项来管理远程桌面访问�
 
 ### 19.5 从非 Linux 客户端连接
 
-上一节假设是从 Linux 或 UNIX 系统访问远程桌面的。需要理解的是，`Vino` 默认要求远程连接必须加密以确保安全。使用 `Remmina` 的原因之一是它完全支持 `Vino` 使用的加密。
+上一节假设是从 Linux 或 UNIX 系统访问远程桌面的。需要理解的是，`Vino`默认要求远程连接必须加密以确保安全。使用`Remmina`的原因之一是它完全支持`Vino`使用的加密。
 
-如果您需要从 Windows 或 macOS 等非 Linux 系统连接，则需要安装第三方 `VNC` 查看器，例如 `TightVNC`、`TigerVNC` 或 `RealVNC`。遗憾的是，这些查看器不支持 `Vino` 默认使用的加密。要体验此操作，请从以下 URL 下载适用于 macOS 或 Windows 系统的 `RealVNC` 查看器：
+如果您需要从 Windows 或 macOS 等非 Linux 系统连接，则需要安装第三方`VNC`查看器，例如`TightVNC`、`TigerVNC`或`RealVNC`。遗憾的是，这些查看器不支持`Vino`默认使用的加密。要体验此操作，请从以下 URL 下载适用于 macOS 或 Windows 系统的`RealVNC`查看器：
+
+
 
 [`www.realvnc.com/en/connect/download/viewer/`](https://www.realvnc.com/en/connect/download/viewer/)
 
@@ -4320,7 +4355,7 @@ Screen Sharing 对话框提供了以下配置选项来管理远程桌面访问�
 
 图 19-9
 
-为了允许从非 Linux 系统建立连接，必须关闭远程桌面连接的加密要求。要执行此操作，请 Ubuntu 系统上打开终端窗口并运行以下命令（使用您的账户且不带 `sudo` 权限）：
+为了允许从非 Linux 系统建立连接，必须关闭远程桌面连接的加密要求。要执行此操作，请在 Ubuntu 系统上打开终端窗口并运行以下命令（使用您的账户且不带 `sudo` 权限）：
 
 ```bash
 gsettings set org.gnome.Vino require-encryption false
@@ -4338,7 +4373,7 @@ gsettings set org.gnome.Vino require-encryption false
 
 ### 19.6 建立安全的远程桌面会话
 
-上一节中 macOS 和 Windows 的远程桌面连接被认为是不安全的，因为没有使用加密。当远程连接不延伸到防火墙保护的内部网络之外时，这是可以的。然而，当需要在互联网连接上进行远程会话时，则需要更安全的选项。这可以通过安全外壳 (`SSH`) 连接对远程桌面进行隧道来实现。本节将介绍如何在 Linux、UNIX 和 macOS 客户端上执行此操作。
+上一节中 macOS 和 Windows 的远程桌面连接被认为是不安全的，因为没有使用加密。当远程连接不延伸到防火墙保护的内部网络之外时，这是可以的。然而，当需要在互联网连接上进行远程会话时，则需要更安全的选项。这可以通过安全外壳（`SSH`）连接对远程桌面进行隧道来实现。本节将介绍如何在 Linux、UNIX 和 macOS 客户端上执行此操作。
 
 当 Ubuntu 系统上调用远程桌面会话时，将使用 `TCP/IP` 网络端口 `5900` 建立。为了证明这一点，在主机名或 IP 地址之后引用端口 `5900` 连接到您的远程 Ubuntu 系统，并注意连接仍然建立：
 
@@ -4346,7 +4381,7 @@ gsettings set org.gnome.Vino require-encryption false
 
 为非 Linux 系统实现加密的远程桌面会话。
 
-如果您的 Ubuntu 系统上尚未安装 SSH 服务器，请参阅标题为“在 Ubuntu 上配置基于密钥的 SSH 身份验证 的章节。
+如果您的 Ubuntu 系统上尚未安装 SSH 服务器，请参阅标题为“在 Ubuntu 上配置基于密钥的 SSH 身份验证”的章节。
 
 假设 SSH 服务器已安装并运行，是时候到另一个系统了。在另一个系统上，使用以下命令登录远程系统，这将建立两个系统之间的安全隧道。这假设客户端系统正在运行 macOS、Linux 或 UNIX（Windows 系统的说明将在下一节介绍）：
 
@@ -4360,15 +4395,11 @@ ssh -l <username> -L 5900:localhost:5900 <remotehost>
 ssh -l demo -L 5900:localhost:5900 192.168.86.218
 ```
 
-在提示时，使用账户密码登录。安全连接建立后，是时候启动 `vncviewer` 以使用安全隧道了。在终端窗口中保留 `SSH` 会话，启动 `vnc viewer` 并在地址字段输入以下内容：
+在提示时，使用账户密码登录。安全连接建立后，是时候启动 `vncviewer` 以使用安全隧道了。在终端窗口中保留 `SSH` 会话，启动 `vncviewer` 并在地址字段输入以下内容：
 
 `localhost:5900`
 
-如果需要，`vncviewer` 会话将提示密码，然后启动 `vnc viewer` 为您的桌面提供安全访问。
-
-
-
-
+如果需要，`vncviewer` 会话将提示密码，然后启动 `vncviewer` 为您的桌面提供安全访问。
 
 如果你是从防火墙外部连接到远程桌面，请记住 SSH 连接的 IP 地址将是你的 ISP 或云托管提供商提供的外部 IP 地址，而不是远程系统的局域网（LAN）IP 地址（该地址对于防火墙外的人是不可见的）。你还需要配置防火墙，将端口 `22`（用于 SSH 连接）转发到运行桌面的系统 IP 地址。没有必要转发端口 `5900`。执行端口转发的步骤在不同防火墙之间有所不同，请参考你的防火墙、路由器或无线基站的文档以获取适用于你配置的详细信息。
 
@@ -4379,11 +4410,13 @@ ssh -l demo -L 5900:localhost:5900 192.168.86.218
 一旦下载并安装 `PuTTY`，第一步是在配置适当隧道的情况下，在 Windows 系统与远程系统之间建立安全连接。启动 `PuTTY` 后，将显示以下屏幕：
 
 ![](img/rhel_8_vnc_putty_main.jpg)
+
 图 19-11
 
 输入远程主机的 IP 地址或主机名（如果你是从防火墙外部连接，请输入网关的外部 IP 地址）。下一步是设置隧道。点击对话框左侧 `Category` 树中 `SSH` 旁的 `+` 号，并点击 `Tunnels`。随后屏幕应显示如下：
 
 ![](img/rhel_8_vnc_putty_tunnels.jpg)
+
 图 19-12
 
 在 `Source port` 中输入 `5900`，在 `Destination` 中输入 `localhost:5900`，然后点击 `Add` 按钮。最后，通过点击 `Session` 类别返回主界面。在 `Saved Sessions` 文本字段中为会话输入名称并按 `Save`。点击 `Open` 建立连接。将出现一个终端窗口，显示来自远程系统的登录提示。输入相应的用户登录凭据和密码。
@@ -4402,7 +4435,7 @@ GNOME 桌面的标准远程服务器解决方案是 `Vino`。一旦安装，就�
 
 ## 20 使用 VNC 访问 Ubuntu 远程桌面
 
-标题为 “Ubuntu Remote Desktop with Vino” 的章节探讨了使用 `Vino` 服务器远程访问 Ubuntu GNOME 桌面，这种方法仅适用于远程系统已运行 GNOME 桌面会话的情况。在本章中，我们将介绍启动和访问在后台运行的 GNOME 桌面会话，允许远程访问多个桌面会话，包括未连接图形控制台的服务器级系统。
+标题为“Ubuntu Remote Desktop with Vino”的章节探讨了使用 `Vino` 服务器远程访问 Ubuntu GNOME 桌面，这种方法仅适用于远程系统已运行 GNOME 桌面会话的情况。在本章中，我们将介绍启动和访问在后台运行的 GNOME 桌面会话，允许远程访问多个桌面会话，包括未连接图形控制台的服务器级系统。
 
 ### 20.1 安装 GNOME 桌面环境
 
@@ -4424,7 +4457,7 @@ systemctl set-default multi-user.target
 startx
 ```
 
-反，如果系统是没有直接连接显示器的服务器，运行和访问桌面的唯一方法是在系统上配置 VNC 支持。
+反之，如果系统是没有直接连接显示器的服务器，运行和访问桌面的唯一方法是在系统上配置 VNC 支持。
 
 ### 20.2 在 Ubuntu 上安装 VNC
 
@@ -4478,14 +4511,18 @@ dbus-launch --exit-with-session gnome-session &
 vncserver
 ```
 
-这将启动系统上的第一个桌面会话。由于这是第一个会话，它将被配置使用端口 `5901`（可以简写为 `:1`）。在第一个会话运行时再次运行该命令将在端口 `5902` (:2) 上创建一个 VNC 服务器。可以使用以下命令获取当前运行的桌面会话列表：
+这将启动系统上的第一个桌面会话。由于这是第一个会话，它将被配置使用端口 `5901`（可以简写为 `:1`）。在第一个会话运行时再次运行该命令将在端口 `5902`（`:2`）上创建一个 VNC 服务器。可以使用以下命令获取当前运行的桌面会话列表：
 
 ```bash
 vncserver -list
 ```
+
 TigerVNC server sessions:
+
 X DISPLAY # PROCESS ID
+
 :1 1607
+
 :2 4726
 
 要终止会话，使用 `vncserver` 命令配合 `-kill` 选项引用相应的端口。例如：
@@ -4493,6 +4530,7 @@ X DISPLAY # PROCESS ID
 ```bash
 vncserver -kill :2
 ```
+
 Killing Xtigervnc process ID 4726... success!
 
 或者，使用以下命令杀死所有当前运行的 VNC 服务器会话：
@@ -4500,12 +4538,10 @@ Killing Xtigervnc process ID 4726... success!
 ```bash
 vncserver -kill :*
 ```
+
 Killing Xtigervnc process ID 1607... success!
+
 Killing Xtigervnc process ID 5287... success!
-
-
-
-
 
 要手动指定 VNC 服务器会话使用的端口，请在命令行中包含如下所示的数字：
 
@@ -4517,13 +4553,13 @@ vncserver :5
 
 ### 20.5 连接到 VNC 服务器
 
-有关如何从另一个系统远程连接到桌面会话的详细信息，请遵循上一章中标题为“建立安全的远程桌面会话和“在 Windows 上使用 PuTTY 建立安全隧道的节概述步骤。
+有关如何从另一个系统远程连接到桌面会话的详细信息，请遵循上一章中标题为“建立安全的远程桌面会话”和“在 Windows 上使用 PuTTY 建立安全隧道”的节概述步骤。
 
 ### 20.6 总结
 
 在本章和前一章中，我们探索了两种远程访问 Ubuntu 系统 GNOME 桌面环境的方法。前一章探索了对现有桌面会话的访问，而本章侧重于将 GNOME 桌面会话作为后台进程启动，从而允许远程访问多个桌面会话。对于在“无显示器”服务器系统上运行和远程访问桌面会话来说，这是一种特别实用的技术。
 
-## 21 远程显示 Ubuntu （X11 转发）
+## 21 远程显示 Ubuntu（X11 转发）
 
 在上一章中，我们查看了如何在远程计算机上显示整个 Ubuntu 桌面。虽然当你实际上需要远程显示整个桌面时这种方法很好用，但如果你只想显示单个应用程序，这可能被认为大材小用。因此，在本章中，我们将查看如何在远程系统上显示单个应用程序。
 
@@ -4531,7 +4567,7 @@ vncserver :5
 
 为了在一个 Ubuntu 系统上运行应用程序并在另一个系统上显示它，需要满足几个前提条件。首先，显示应用程序的系统必须运行 X 服务器。如果该系统是运行着桌面环境的 Linux 或类 Unix 系统，则没有问题。然而，如果系统运行的是 Windows 或 macOS，则你必须在从远程系统显示应用程序之前在上面安装 X 服务器。此用途有许多商业和免费的 Windows 版 X 服务器可供选择，网页搜索可以为你提供选项列表。
 
-其次，运行应用程序的系统（而不是显示应用程序的系统）必须配置为允许 SSH 访问。在 Ubuntu 系统上配置 SSH 的详细信息可以在标题为在 Ubuntu 上配置基于密钥的身份验证的章节中找到。该系统必须运行来自 `X.org` 的 X Window 系统而不是 `Wayland`。要确定使用的是哪种系统，请运行：
+其次，运行应用程序的系统（而不是显示应用程序的系统）必须配置为允许 SSH 访问。在 Ubuntu 系统上配置 SSH 的详细信息可以在标题为“在 Ubuntu 上配置基于密钥的身份验证”的章节中找到。该系统必须运行来自 `X.org` 的 X Window 系统而不是 `Wayland`。要确定使用的是哪种系统，请运行：
 
 ```bash
 echo $XDG_SESSION_TYPE
@@ -4543,7 +4579,7 @@ echo $XDG_SESSION_TYPE
 Wayland=false
 ```
 
-最后，SSH 必须配置为允许转发。这通过编辑 `/etc/ssh/sshd_config` 文件并取消取消注释来实现：
+最后，SSH 必须配置为允许转发。这通过编辑 `/etc/ssh/sshd_config` 文件并取消注释来实现：
 
 ```text
 X11Forwarding yes
@@ -4587,17 +4623,13 @@ ssh -Y user@hostname
 ssh -C user@hostname
 ```
 
-### 21.5 在 Windows 上显示 Ubuntu 
+### 21.5 在 Windows 上显示 Ubuntu
 
 要在 Windows 上显示 Ubuntu 应用，需要安装 SSH 客户端和 X 服务器。在 X 服务器方面，流行的选择似乎是 `VcXsrv`，可以从此处免费获取：`https://sourceforge.net/projects/vcxsrv/`。
 
 一旦安装了 `VcXsrv`，桌面上会出现 `XLaunch`。启动 `XLaunch` 并选择显示选项。如果出现 Windows Defender 对话，点击按钮允许访问你所选的网络。
 
-
-
-
-
-在 `PuTTY` 会话窗口中登录 Ubuntu 系统并运行一个桌面应用程序。稍等片，该程序将以独立窗口的形式出现在 Windows 桌面上。该程序打开的任何对话框也将出现在独立的窗口中，就像它们在 Ubuntu GNOME 桌面上显示的一样。例如，图 21-5 显示了在 Windows 10 系统上显示的 Ubuntu `nm-connection-editor` 工具：
+在 `PuTTY` 会话窗口中登录 Ubuntu 系统并运行一个桌面应用程序。稍等片刻，该程序将以独立窗口的形式出现在 Windows 桌面上。该程序打开的任何对话框也将出现在独立的窗口中，就像它们在 Ubuntu GNOME 桌面上显示的一样。例如，图 21-5 显示了在 Windows 10 系统上显示的 Ubuntu `nm-connection-editor` 工具：
 
 ![](img/win_10_xserver_app_displayed.jpg)
 
@@ -4609,13 +4641,15 @@ ssh -C user@hostname
 
 ## 22. 使用 NFS 与远程系统共享 Ubuntu 文件
 
-Ubuntu 提供了两种机制与网络上的其他系统共享文件和文件夹。一种方法是使用名为 `Samba` 的技术。`Samba` 基于 Microsoft Windows 文件夹共享，允许 Linux 系统让 Windows 系统可以访问文件夹，并允许从 Linux 访问基于 Windows 的文件夹共享。这种方法也可用于在其他 Linux 和 UNIX 系统之间共享文件夹，只要这些系统也安装并配置了 `Samba` 支持。这目前是异构网络环境中共享文件夹最流行的方法。使用 `Samba` 共享文件夹的主题在 使用 Samba 在 Ubuntu 和 Windows 系统之间共享文件 中有所介绍。
+Ubuntu 提供了两种机制与网络上的其他系统共享文件和文件夹。一种方法是使用名为 `Samba` 的技术。`Samba` 基于 Microsoft Windows 文件夹共享，允许 Linux 系统让 Windows 系统可以访问文件夹，并允许从 Linux 访问基于 Windows 的文件夹共享。这种方法也可用于在其他 Linux 和 UNIX 系统之间共享文件夹，只要这些系统也安装并配置了 `Samba` 支持。这目前是异构网络环境中共享文件夹最流行的方法。使用 `Samba` 共享文件夹的主题在“使用 Samba 在 Ubuntu 和 Windows 系统之间共享文件”中有所介绍。
+
+
 
 另一个专门针对 Linux 和 UNIX 系统之间共享文件夹的选项使用了名为网络文件系统（`NFS`）的技术。`NFS` 允许另一台 Linux 或 UNIX 系统通过网络连接访问一台 Linux 计算机上的文件系统。`NFS` 由 Sun Microsystems（现属于 `Oracle Corporation`）于 20 世纪 80 年代开发，至今一直是共享远程 Linux/UNIX 文件系统的标准机制。
 
 `NFS` 与 `Samba` 使用的 Windows SMB 资源共享技术非常不同。在本章中，我们将学习使用 `NFS` 在 Ubuntu 与其他 UNIX/Linux 系统之间进行基于网络的文件夹共享。
 
-### 22.1 确保 NFS 服务在 Ubuntu 上运行
+## 22.1 确保 NFS 服务在 Ubuntu 上运行
 
 首要任务是验证你的 Ubuntu 系统上是否安装并运行了 `NFS` 服务。这可以通过命令行实现，也可以使用 `Cockpit` 界面实现。
 
@@ -4637,11 +4671,9 @@ systemctl enable nfs-kernel-server
 systemctl start nfs-kernel-server
 ```
 
-### 22.2 配置 Ubuntu 防火墙允许 NFS 
+## 22.2 配置 Ubuntu 防火墙允许 NFS
 
-
-
-，需要配置防火墙以允许 `NFS` 流量。
+需要配置防火墙以允许 `NFS` 流量。
 
 如果启用了简单的防火墙（UFW），运行以下命令添加规则以允许 `NFS` 流量：
 
@@ -4655,11 +4687,11 @@ ufw allow nfs
 firewall-cmd --add-service=nfs --permanent
 ```
 
-### 22.3 指定要共享的文件夹
+## 22.3 指定要共享的文件夹
 
 现在 `NFS` 正在运行且防火墙已配置，我们需要指定文件系统的哪些部分可以导出。
 
-### 22.4 访问共享文件夹
+## 22.4 访问共享文件夹
 
 可以通过手动挂载的方式从客户端系统访问共享文件夹。在尝试挂载远程文件夹之前，应先在客户端上安装 `nfs-common` 包：
 
@@ -4679,7 +4711,7 @@ mkdir /home/tmp
 mount -t nfs 192.168.1.115:/tmp /home/tmp
 ```
 
-### 22.5 在系统启动时挂载 NFS 文件系统
+## 22.5 在系统启动时挂载 NFS 文件系统
 
 编辑 `/etc/fstab` 文件，也可以配置 Ubuntu 系统在每次启动时都自动挂载远程文件系统。当加载到编辑器时，它可能看起来如下：
 
@@ -4694,7 +4726,7 @@ swapfile none swap 0 0
 192.168.1.115:/tmp /home/tmp nfs rw 0 0
 ```
 
-### 22.6 卸载 NFS 挂载点
+## 22.6 卸载 NFS 挂载点
 
 一旦使用 `NFS` 挂载了远程文件系统，可以使用 `umount` 命令以本地挂载点作为命令行参数进行卸载。例如，以下命令将卸载我们的示例文件系统挂载点：
 
@@ -4702,11 +4734,7 @@ swapfile none swap 0 0
 umount /home/tmp
 ```
 
-### 22.7 在 Cockpit 中访问 NFS 文件系统
-
-
-
-
+## 22.7 在 Cockpit 中访问 NFS 文件系统
 
 除了使用命令行在客户端上挂载远程 NFS 文件系统外，也可以在 Cockpit Web 界面中执行挂载操作。假设客户端系统上已经安装并配置了 Cockpit，请在网络浏览器中登录 Cockpit 界面，并从左侧导航面板中选择 `Storage`（存储）选项。如果没有列出 `Storage` 选项，则需要安装 `cockpit-storaged` 软件包：
 
@@ -4734,11 +4762,11 @@ apt install cockpit-storaged
 
 图 22-3
 
-### 22.8 总结
+## 22.8 总结
 
 网络文件系统（NFS）是一种基于客户端/服务器的系统，最初由 Sun Microsystems 开发，为 Linux 和 Unix 系统提供了通过网络共享文件系统的方法。NFS 允许客户端系统访问（在权限允许的情况下）修改位于远程服务器上的文件，就像这些文件存储在本地文件系统中一样。本章概述了 NFS 的概述，并列出了使用命令行或 Cockpit Web 界面配置客户端和服务器系统的可用选项。
 
-## 23. 使用 Samba 在 Ubuntu 和 Windows 系统之间共享文件
+# 23. 使用 Samba 在 Ubuntu 和 Windows 系统之间共享文件
 
 尽管 Linux 在桌面市场取得了一席之地，但它的起源和未来很大程度上是基于服务器的。因此，Ubuntu 能够作为文件服务器并不意外。在网络环境中，Ubuntu 和 Windows 系统并肩使用也非常常见。因此，一个常见的需求是 Ubuntu 系统上的文件可以通过网络连接被 Linux、UNIX 和基于 Windows 的访问。同样，位于 Windows 系统上的共享文件夹和打印机可能也需要从基于 Ubuntu 系统访问。
 
@@ -4746,7 +4774,7 @@ Windows 系统使用名为 Server Message Block（SMB）的协议共享文件系
 
 在本章中，我们将学习在 Ubuntu 系统上与远程 Windows 和 Linux 系统共享文件系统资源和打印机的必要步骤，以及从 Ubuntu 访问 Windows 资源。
 
-### 23.1 从 GNOME 桌面访问 Windows 资源
+## 23.1 从 GNOME 桌面访问 Windows 资源
 
 在深入了解 Samba 共享的细节之前，值得注意的是，如果你只是想从 Ubuntu GNOME 桌面访问 Windows 共享文件夹，那么 GNOME Files（文件）应用程序已经提供了支持。`Files` 位于程序栏中，如图 23-1 所示：
 
@@ -4760,11 +4788,11 @@ Windows 系统使用名为 Server Message Block（SMB）的协议共享文件系
 
 图 23-2
 
-### 23.2 Samba 和 Samba Client
+## 23.2 Samba 和 Samba Client
 
 Samba 允许 Ubuntu 资源与 Windows 系统共享，也允许 Windows 资源与 Ubuntu 系统共享。Ubuntu 使用 `Samba` 客户端访问 Windows 资源。另一方面，Ubuntu 通过安装和配置 `Samba` 服务将其资源与 Windows 系统共享。
 
-### 23.3 在 Ubuntu 系统上安装 Samba
+## 23.3 在 Ubuntu 系统上安装 Samba
 
 Ubuntu 安装过程中使用的默认设置通常不会安装必要的 Samba 软件包。除非你特别要求安装 Samba，否则你的系统中很可能没有安装 Samba。要检查是否安装了 Samba，打开终端窗口并运行以下命令：
 
@@ -4778,7 +4806,7 @@ apt -qq list samba-common samba smbclient
 apt install samba-common samba smbclient
 ```
 
-### 23.4 配置 Ubuntu 防火墙以启用 Samba
+## 23.4 配置 Ubuntu 防火墙以启用 Samba
 
 接下来，需要配置当前保护 Ubuntu 系统的防火墙以允许 Samba 流量。
 
@@ -4797,7 +4825,7 @@ firewall-cmd --reload
 
 在启动 Samba 服务之前，需要进行若干配置步骤来定义 Ubuntu 系统如何显示以及共享哪些资源。大多数配置任务都在 `/etc/samba/smb.conf` 中完成。
 
-### 23.5 配置 smb.conf 文件
+## 23.5 配置 smb.conf 文件
 
 Samba 是一个高度灵活且可配置的系统，为网络资源共享提供了许多选项。这种灵活性可能会让人认为 Samba 使用起来非常复杂。然而，实际上，典型的安装并不需要许多配置选项，设置基础配置的学习曲线实际上很短。
 
@@ -4805,7 +4833,7 @@ Samba 是一个高度灵活且可配置的系统，为网络资源共享提供�
 
 配置 Samba 的第一步是编辑 `/etc/samba/smb.conf` 文件。
 
-#### 23.5.1 配置 [global] 部分
+### 23.5.1 配置 [global] 部分
 
 `smb.conf` 文件由部分组成。第一部分是 `[global]` 部分，可以在其中指定全局设置。虽然这些是全局设置，但每个选项可以在配置的其他部分被覆盖。
 
@@ -4823,18 +4851,14 @@ workgroup = WORKGROUP
 [global]
 .
 .
-      netbios name = LinuxServer
+      netbios name = LinuxServer
 .
 .
 ```
 
 `netbios name` 属性指定了服务器在网络上可见的名称。
 
-#### 23.5.2 配置共享资源
-
-
-
-
+### 23.5.2 配置共享资源
 
 下一步是配置共享资源（换句话说，就是从 Windows 网络上的其他系统访问的资源）。为了实现这一点，需要为该节指定一个名称，在共享时引用该名称。例如，如果我们计划共享 Ubuntu 系统的 `/sampleshare` 目录，我们可以将该节命名为 `[sampleshare]`。在此节中可以使用多种配置选项。然而，为了本示例的目的，我们将简单定义要共享的目录，指定该目录为可浏览且可写，并声明该资源为公共，以便客用户能够访问：
 
@@ -4864,7 +4888,7 @@ workgroup = WORKGROUP
 # inherit acls = Yes
 ```
 
-### 23.6 创建 Samba 用户
+## 23.6 创建 Samba 用户
 
 任何需要访问 Samba 共享资源的用户都必须配置为 Samba 用户并分配密码。此任务通过使用 `smbpasswd` 命令行工具完成。例如，假设需要一个名为 `demo` 的用户能够从 Windows 系统访问 Ubuntu 系统的 `/sampleshare` 目录。为了满足这一要求，我们必须按照如下方式添加 `demo` 为 Samba 用户：
 
@@ -4877,7 +4901,7 @@ Added user demo.
 
 现在我们已经完成了一个非常基础的 Samba 服务器的配置，是时候测试我们的配置文件并启动 Samba 服务了。
 
-### 23.7 测试 smb.conf 文件
+## 23.7 测试 smb.conf 文件
 
 可以使用 `testparm` 命令行工具按照所示检查 `smb.conf` 文件中的设置是否存在错误：
 
@@ -4931,7 +4955,7 @@ path = /sampleshare
 read only = No
 ```
 
-### 23.8 启动 Samba 和 NetBIOS 名称服务
+## 23.8 启动 Samba 和 NetBIOS 名称服务
 
 为了让 Ubuntu 服务器在 Windows 网络中运行，必须启动 Samba (SMB) 和 NetBIOS 名称服务 (NMB)。可选，还可以启用这些服务，以便它们在每次系统启动时自动启动：
 
@@ -4942,31 +4966,33 @@ read only = No
 # systemctl start nmbd
 ```
 
-在尝试从 Windows 系统连接之前，使用 `smbclient` 工具来验证共享是否已配置：
+在尝试从 Windows 系统连接之前，使用 `smbclient` 工具来验证共享是否已配置。
+
+
 
 ```bash
 # smbclient -U demo -L localhost
 Enter WORKGROUP\demo’s password:
-Sharename Type Comment
---------- ---- -------
-print$ Disk Printer Drivers
-sampleshare Disk Example Samba share
-IPC$ IPC IPC Service (demo-server2 server (Samba, Ubuntu))
+Sharename       Type      Comment
+---------       ----      -------
+print$          Disk      Printer Drivers
+sampleshare     Disk      Example Samba share
+IPC$            IPC       IPC Service (demo-server2 server (Samba, Ubuntu))
 Officejet_Pro_8600_C7C718_ Printer
 Officejet_6600_971B9B_ Printer
 Reconnecting with SMB1 for workgroup listing.
-Server Comment
---------- -------
-Workgroup Master
---------- -------
-WORKGROUP LINUXSERVER
+Server          Comment
+---------       -------
+Workgroup       Master
+---------       -------
+WORKGROUP       LINUXSERVER
 ```
 
-### 23.9 访问 Samba 共享
+## 23.9 访问 Samba 共享
 
 现在 Samba 资源已经配置且服务正在运行，是时候从 Windows 系统访问共享资源了。在与 Ubuntu 系统处于同一工作组的适当 Windows 系统上，访问共享资源。
 
-### 23.10 从 Ubuntu 访问 Windows 共享
+## 23.10 从 Ubuntu 访问 Windows 共享
 
 正如前面提到的，Samba 是双向的，不仅允许 Windows 系统访问托管 Ubuntu 系统上的文件和打印机，还允许 Ubuntu 系统访问 Windows 上的共享资源。这是通过在本章开始时安装的 `smbclient` 包实现的。如果尚未安装，请从终端窗口进行安装：
 
@@ -4979,13 +5005,10 @@ Windows 上的共享资源可以通过 Ubuntu 桌面上的“文件”应用程�
 若要使用 GNOME 桌面访问 Windows 系统上的任何共享资源，首先启动“文件”应用程序并选择“其他位置”（Other Locations）选项。这将显示所示屏幕，其中包含 Windows 网络图标（如果检测到的话）：
 
 ![](img/rhel_8_connect_to_windows_share.jpg)
+
 图 23-7
 
 选择“网络”选项将显示网络上检测到的 Windows 系统并允许访问任何共享资源。
-
-
-
-
 
 ![](img/rhel_8_files_windows_10_share.jpg)
 
@@ -4997,7 +5020,7 @@ Windows 上的共享资源可以通过 Ubuntu 桌面上的“文件”应用程�
 smb://WinServer10/Documents
 ```
 
-### 23.11 总结
+## 23.11 总结
 
 在本章中，我们学习了如何配置 `Ubuntu` 系统使其同时作为 `Samba` 客户端和服务器，从而允许与 Windows 系统共享资源。涵盖的主题包括 `Samba` 客户端和服务器包的安装，以及将 `Samba` 配置为独立服务器。
 
@@ -5037,19 +5060,15 @@ Type-2 Hypervisor（有时称为宿主型 Hypervisor）作为软件应用程序�
 
 与 Type-2 Hypervisor 不同，Type-1 Hypervisor（也称为裸机或原生 Hypervisor）直接运行在主机系统的硬件上的 `ring 0` 中。显然，由于 Hypervisor 占据了 `CPU` 的 `ring 0`，运行在系统上的任何客户操作系统的内核必须运行在权限较低的 CPU 环中。遗憾的是，大多数操作系统内核被显式编写为运行在 `ring 0`，简单原因是它们需要执行只有在该环中才具备的任务，例如执行特权 `CPU` 指令和直接操作内存的能力。近年来针对这个问题设计了许多不同的解决方案，每种方案均在下所示：
 
-### 24.2.1 半虚拟化（Paravirtualization）
+#### 24.2.1 半虚拟化（Paravirtualization）
 
 在半虚拟化下，客户操作系统的内核经过专门修改以运行在 Hypervisor 上。这通常涉及将任何只在 `CPU` 的 `ring 0` 中运行的特权操作替换为对 Hypervisor 的调用（称为 `hypercalls`）。随后，Hypervisor 反而代表客户内核执行该任务。这通常将支持限制在开源操作系统（如 `Linux`，它们可以自由修改）以及已同意进行必要的代码修改以针对特定 Hypervisor 的专有操作系统。尽管存在这些问题，客户内核与 Hypervisor 直接通信的能力使其比其他虚拟化方法具有更高的性能水平。
 
-### 24.2.2 全虚拟化（Full Virtualization）
+#### 24.2.2 全虚拟化（Full Virtualization）
 
 全虚拟化为未修改的客户操作系统提供支持。“未修改”一词指的是没有为了运行在 Hypervisor 上而进行更改的操作系统内核，因此它们仍然像在 `CPU` 的 `ring 0` 中运行一样执行特权操作。在这种情况下，Hypervisor 提供 CPU 仿真来处理和修改客户操作系统内核发出的特权和保护 CPU 操作。遗憾的是，这种仿真过程运行需要时间和系统资源，导致其性能水平低于半虚拟化提供的性能。
 
-
-
-
-
-# 硬件虚拟化
+## 硬件虚拟化
 
 硬件虚拟化利用了 Intel 和 AMD 最新几代 CPU 内置的虚拟化功能。这些技术分别被称为 `Intel VT` 和 `AMD-V`，它们为运行未修改的客户虚拟机提供了必要的扩展，且避免了全虚拟化 CPU 仿真所固有的开销。简单来说，这些处理器在 `ring 0` 之上提供了一个额外的权限模式（称为 `ring -1`），虚拟机监控程序（hypervisor）可以在该模式下运行，从而将 `ring 0` 留给未修改的客户操作系统。
 
@@ -5141,9 +5160,6 @@ apt install virt-manager
 lsmod | grep kvm
 ```
 
-
-
-
 假设安装成功，上述命令应该生成类似下面的输出：
 
 ```bash
@@ -5174,11 +5190,13 @@ systemctl start libvirtd
 如果可用桌面环境，可以通过选择“活动”（Activities）并在搜索框中输入“virt”来运行 `virt-manager` 工具。当“虚拟机管理器”（Virtual Machine Manager）图标出现时，点击它进行启动。加载完成后，管理器将如如下所示：
 
 ![](img/ubuntu_20.04_virt-manager_main.jpg)
+
 图 25-1
 
 如果没有列出 `QEMU/KVM` 项，选择“文件 -> 添加连接”（File -> Add Connection）菜单选项，并在弹出的对话框中，点击“连接”（Connect）按钮之前选择 `QEMU/KVM` 虚拟机程序：
 
 ![](img/ubuntu_20.04_virt-manager_add_connection.jpg)
+
 图 25-2
 
 如果管理器当前未连接到虚拟化进程，右键点击列出的项并从弹出菜单中选择“连接”（Connect）。
@@ -5189,46 +5207,52 @@ KVM 是一种 Type-1 虚拟化解决方案，它利用 `Intel VT` 和 `AMD-V` �
 
 ## 26 使用 Cockpit 和 virt-manager 创建 KVM 虚拟机
 
-在 Ubuntu 上，可以使用 `virt-install` 命令行工具、`virt-manager` 图形界面工具或 `Cockpit` Web 控制台的“虚拟机”（Virtual Machines）模块轻松地配置基于 KVM 的虚拟机。在本章中，我们将使用 `Cockpit` 和 `virt-manager` 工具，在 Ubuntu 主机上作为 `KVM` 客户机安装 Fedora 发行版。
+
+
+在 Ubuntu 上，可以使用`virt-install`命令行工具、`virt-manager`图形界面工具或`Cockpit` Web 控制台的“虚拟机”（Virtual Machines）模块轻松地配置基于 KVM 的虚拟机。在本章中，我们将使用`Cockpit`和`virt-manager`工具，在 Ubuntu 主机上作为`KVM`客户机安装 Fedora 发行版。
 
 命令行创建虚拟机的方法将在下一个章节中介绍，标题为“使用 virt-install 和 virsh 创建 KVM 虚拟机”。
 
-### 26.1 安装 Cockpit 虚拟机模块
+## 26.1 安装 Cockpit 虚拟机模块
 
-默认情况下，标准的 `Cockpit` 安装可能不包含虚拟机模块。假设 `Cockpit` 已安装并配置完成，可以如下所示安装虚拟机模块：
+默认情况下，标准的`Cockpit`安装可能不包含虚拟机模块。假设`Cockpit`已安装并配置完成，可以如下所示安装虚拟机模块：
 
 ```bash
 apt install cockpit-machines
 ```
 
-安装完成后，下次登录 `Cockpit` 界面时，导航面板中会出现“虚拟机”（Virtual Machines）选项（在图 26-1 中标记为 `A`）：
+安装完成后，下次登录`Cockpit`界面时，导航面板中会出现“虚拟机”（Virtual Machines）选项（在图 26-1 中标记为`A`）：
 
 ![](img/ubuntu_20.04_cockpit-virtual_machines.jpg)
+
 图 26-1
 
-### 26.2 在 Cockpit 中创建虚拟机
+## 26.2 在 Cockpit 中创建虚拟机
 
-在 `Cockpit` 中创建虚拟机，只需点击图 26-1 中标记为 `B` 的“创建虚拟机”（Create VM）按钮，即可显示创建对话框。
+在`Cockpit`中创建虚拟机，只需点击图 26-1 中标记为`B`的“创建虚拟机”（Create VM）按钮，即可显示创建对话框。
 
-在对话框中，为机器输入一个名称，并选择安装介质是可以通过 `URL` 访问的 `ISO` 形式，还是本地文件系统路径。理想情况下，还应为客户机选择供应商和操作系统类型信息。虽然这不是必需的，但这将有助于系统为客户机优化虚拟机。
+在对话框中，为机器输入一个名称，并选择安装介质是可以通过`URL`访问的`ISO`形式，还是本地文件系统路径。理想情况下，还应为客户机选择供应商和操作系统类型信息。虽然这不是必需的，但这将有助于系统为客户机优化虚拟机。
 
 还要指定用于操作系统安装的虚拟磁盘驱动器的大小以及分配给虚拟机的内存量：
 
 ![](img/ubuntu_20.04_cockpit-virtual_machines_new.jpg)
+
 图 26-2
 
-注意，`Cockpit` 提供了使用“会话”（Session）或“系统”（System）连接运行客户机的选择。可以选择 `system` 选项，客户机将连接到已经在后台以 root 权限运行的 `libvirtd` 服务系统实例。然而，`session` 选项会启动由当前用户所有的新 `libvirtd` 服务，然后将主机连接到它。默认情况下，会话客户机将使用用户账户本地存储池（例如 `/home/demo/.local/share/libvirt/images`），并且仅供所有者访问。另一方面，系统会话允许所有具有相应权限的用户访问，并默认使用位于 `/var/lib/libvirt/images` 的存储。
+注意，`Cockpit`提供了使用“会话”（Session）或“系统”（System）连接运行客户机的选择。可以选择`system`选项，客户机将连接到已经在后台以 root 权限运行的`libvirtd`服务系统实例。然而，`session`选项会启动由当前用户所有的新`libvirtd`服务，然后将主机连接到它。默认情况下，会话客户机将使用用户账户本地存储池（例如`/home/demo/.local/share/libvirt/images`），并且仅供所有者访问。另一方面，系统会话允许所有具有相应权限的用户访问，并默认使用位于`/var/lib/libvirt/images`的存储。
 
-对于本示例，选择 `System` 选项，不勾选“立即启动虚拟机”（Immediately VM）选项，并在虚拟机配置完成后点击“创建”（Create）按钮构建虚拟机。创建完成后，虚拟机将如图 26-3 所示显示在 `Cockpit` 中：
+对于本示例，选择`System`选项，不勾选“立即启动虚拟机”（Immediately VM）选项，并在虚拟机配置完成后点击“创建”（Create）按钮构建虚拟机。创建完成后，虚拟机将如图 26-3 所示显示在`Cockpit`中：
 
 ![](img/ubuntu_20.04_machine_running.jpg)
+
 图 26-3
 
-### 26.3 开始安装
+## 26.3 开始安装
 
-要启动虚拟机并从指定的介质开始安装操作系统，点击图 26-3 中高亮的“安装”（Install）按钮。`Cockpit` 将启动虚拟机并切换到“控制台”（Consoles）视图，客户机屏幕将会出现：
+要启动虚拟机并从指定的介质开始安装操作系统，点击图 26-3 中高亮的“安装”（Install）按钮。`Cockpit`将启动虚拟机并切换到“控制台”（Consoles）视图，客户机屏幕将会出现：
 
 ![](img/ubuntu_18.04_running.jpg)
+
 图 26-5
 
 如果安装失败，检查消息是否如下：
@@ -5245,7 +5269,7 @@ unsupported configuration: CPU mode ‘custom’ for x86_64 kvm domain on x86_64
 Could not open '<path to iso image>': Permission denied
 ```
 
-域安装似乎失败。通常是因为 QEMU 模拟器以 `qemu` 用户身份运行，而该用户没有访问 ISO 镜像所在目录的权限。要解决此问题，打开终端窗口（如果是远程系统则通过 `SSH` 连接），切换到 ISO 镜像所在的目录，并将 `qemu` 用户添加到父目录的访问控制列表（ACL）中：
+域安装似乎失败。通常是因为 QEMU 模拟器以`qemu`用户身份运行，而该用户没有访问 ISO 镜像所在目录的权限。要解决此问题，打开终端窗口（如果是远程系统则通过`SSH`连接），切换到 ISO 镜像所在的目录，并将`qemu`用户添加到父目录的访问控制列表（ACL）中：
 
 ```bash
 cd /path/to/iso/directory
@@ -5270,19 +5294,17 @@ other::---
 
 安装完成后，在“控制台”（Consoles）视图中与屏幕进行交互，就像在物理硬件上安装操作系统一样。
 
-
-
-
-`virt-viewer` 工具也适用于 Windows 系统，并可以从以下 URL 下载：
+`virt-viewer`工具也适用于 Windows 系统，并可以从以下 URL 下载：
 
 [`virt-manager.org/download/`](https://virt-manager.org/download/)
 
-要连接到运行在本地主机上的虚拟机，只需运行 `virt-viewer` 并在弹出的对话框中选择你想要连接的虚拟机即可：
+要连接到运行在本地主机上的虚拟机，只需运行`virt-viewer`并在弹出的对话框中选择你想要连接的虚拟机即可：
 
 ![](img/ubuntu_20.04_virt-viewer_guests.jpg)
+
 图 26-6
 
-上述命令将列出基于系统的虚拟机。要列出并访问基于会话（session）的虚拟机，请按如下方式启动 `virt-viewer`：
+上述命令将列出基于系统的虚拟机。要列出并访问基于会话（session）的虚拟机，请按如下方式启动`virt-viewer`：
 
 ```bash
 virt-viewer --connect qemu:///session
@@ -5295,7 +5317,7 @@ virt-viewer myFedoraGuest
 virt-viewer --connect qemu:///session myFedoraGuest
 ```
 
-要使用 `SSH` 将 `virt-viewer` 实例连接到运行在远程主机上的虚拟机，可以使用命令：
+要使用`SSH`将`virt-viewer`实例连接到运行在远程主机上的虚拟机，可以使用命令：
 
 ```bash
 virt-viewer --connect qemu+ssh://<user>@<host>/system <guest name>
@@ -5309,154 +5331,171 @@ virt-viewer --connect qemu+ssh://root@192.168.1.122/system MyFedoraGuest
 
 在使用此技术时，需要注意的是，在完全建立连接之前，会提示你输入用户密码。
 
-虚拟机创建完成后，可以使用 `Cockpit` 界面来监控机器并执行重启、关机或删除客户系统等任务。`Disks`（磁盘）面板上还包含一个选项，可以向虚拟机配置添加额外的磁盘。
+虚拟机创建完成后，可以使用`Cockpit`界面来监控机器并执行重启、关机或删除客户系统等任务。`Disks`（磁盘）面板上还包含一个选项，可以向虚拟机配置添加额外的磁盘。
 
-### 26.4 使用存储卷和存储池
+## 26.4 使用存储卷和存储池
 
 当创建虚拟机时，它通常会关联一个虚拟磁盘驱动器。代表这些虚拟磁盘驱动器的镜像存储在存储池（storage pools）中。存储池可以是本地文件系统上的现有目录、文件系统分区、物理磁盘设备、逻辑卷管理 (`LVM`) 卷组甚至是远程网络文件系统 (`NFS`)。
 
-每个存储池被分为一个或多个存储卷（storage volumes）。存储卷通常是单个镜像文件，每个代表一个虚拟磁盘驱动器，也可以采取物理磁盘分区、整个磁盘驱动器或 `LVM` 卷组的形式。
+每个存储池被分为一个或多个存储卷（storage volumes）。存储卷通常是单个镜像文件，每个代表一个虚拟磁盘驱动器，也可以采取物理磁盘分区、整个磁盘驱动器或`LVM`卷组的形式。
 
-当使用前面的步骤创建虚拟机时，会创建一个默认存储池，虚拟机镜像可以存储在其中。该默认存储池占用根文件系统的空间，可以通过 `Cockpit Virtual Machine` 界面查看，选择上方标记为 C 的面板顶部的图 26-1 中的 `Storage Pools` 。
+当使用前面的步骤创建虚拟机时，会创建一个默认存储池，虚拟机镜像可以存储在其中。该默认存储池占用根文件系统的空间，可以通过`Cockpit Virtual Machine`界面查看，选择上方标记为 C 的面板顶部的图 26-1 中的`Storage Pools`。
 
 选中后，将出现下方图 26-7 所示的屏幕，其中包含当前在系统上配置的存储池列表：
 
 ![](img/ubuntu_20.04_cockpit-storage_pools.jpg)
+
 图 26-7
 
-在上面的示例中，默认存储池位于根文件系统，并将虚拟机镜像存储在 `/var/lib/libvirtd/images` 目录下。要查看池中包含的存储卷，请选择图 26-8 中亮显示的 `Storage Volumes`（存储卷）选项卡：
+在上面的示例中，默认存储池位于根文件系统，并将虚拟机镜像存储在`/var/lib/libvirtd/images`目录下。要查看池中包含的存储卷，请选择图 26-8 中亮显示的`Storage Volumes`（存储卷）选项卡：
 
 ![](img/ubuntu_20.04_cockpit-storage_volumes.jpg)
+
 图 26-8
 
-在 Fedora 客户机的情况下，存储卷以名为 `myFedoraGuest.qcow2` 的镜像文件形式存在。要确定特定虚拟机使用哪个存储卷，返回虚拟机 Cockpit 主屏幕，选择该虚拟机并按如图 26-9 所示显示 Disks 面板：
+在 Fedora 客户机的情况下，存储卷以名为`myFedoraGuest.qcow2`的镜像文件形式存在。要确定特定虚拟机使用哪个存储卷，返回虚拟机 Cockpit 主屏幕，选择该虚拟机并按如图 26-9 所示显示 Disks 面板：
 
 ![](img/ubuntu_20.04_cockpit-vm_disks.jpg)
+
 图 26-9
 
-虽然出于测试和早期实验之目的，使用默认存储池是可以接受的，但建议为通用虚拟化用途创建额外的池。要创建新的存储池，请在 `Cockpit` 中显示 `Storage Pools` 屏幕并点击 `Create New Storage Pool`（创建新存储池）按钮，显示如图 26-10 所示的对话框：
+虽然出于测试和早期实验之目的，使用默认存储池是可以接受的，但建议为通用虚拟化用途创建额外的池。要创建新的存储池，请在`Cockpit`中显示`Storage Pools`屏幕并点击`Create New Storage Pool`（创建新存储池）按钮，显示如图 26-10 所示的对话框：
 
 ![](img/fedora_cockpit_vm_create_pool.jpg)
+
 图 26-10
 
-在上面的示例中，正在创建一个名为 `MyPool` 的新存储池，该池使用本地文件系统中挂载为 `/MyPool` 的文件系统分区（磁盘驱动器、分区和挂载点的主题将在本章标题为“向 Ubuntu 系统添加新磁盘驱动器”的章节中讨论）。一旦创建，该池现在将列在 `Cockpit` 存储池屏幕中，并可以在创建新虚拟机时用于包含存储卷。
+在上面的示例中，正在创建一个名为`MyPool`的新存储池，该池使用本地文件系统中挂载为`/MyPool`的文件系统分区（磁盘驱动器、分区和挂载点的主题将在本章标题为“向 Ubuntu 系统添加新磁盘驱动器”的章节中讨论）。一旦创建，该池现在将列在`Cockpit`存储池屏幕中，并可以在创建新虚拟机时用于包含存储卷。
 
-在编写本文时，尚无法在 `Cockpit` 界面内从自定义存储池中创建新的存储卷。然而，可以像下一节所示，在虚拟机管理器中执行此操作。
+在编写本文时，尚无法在`Cockpit`界面内从自定义存储池中创建新的存储卷。然而，可以像下一节所示，在虚拟机管理器中执行此操作。
 
-### 26.5 使用 virt-manager 创建虚拟机
+## 26.5 使用 virt-manager 创建虚拟机
 
-需要注意的是，一旦 `Virtual Machines Cockpit` 扩展完全实现，`virt-manager` 可能会在未来停止。本章的剩余部分将探索使用该工具创建虚拟机。
+需要注意的是，一旦`Virtual Machines Cockpit`扩展完全实现，`virt-manager`可能会在未来停止。本章的剩余部分将探索使用该工具创建虚拟机。
 
-### 26.6 启动虚拟机管理器
+## 26.6 启动虚拟机管理器
 
-通过终端窗口在命令行运行 `virt-manager` 来启动虚拟机管理器。加载后，虚拟机管理器会提示输入当前用户的密码，然后显示如下屏幕：
+通过终端窗口在命令行运行`virt-manager`来启动虚拟机管理器。加载后，虚拟机管理器会提示输入当前用户的密码，然后显示如下屏幕：
 
 ![](img/ubuntu_20.04_virt-manager_main.jpg)
+
 图 26-11
 
-主屏幕列出了系统上运行的虚拟机。默认情况下，管理器应该连接到系统的 `libvirtd` 实例。如果不是，通过右键点击列表中的项并选择 `Connect` 连接主机系统。要管理基于会话的虚拟机，选择 `File -> Add Connection...` 菜单显示如图 26-12 所示的对话框：
+主屏幕列出了系统上运行的虚拟机。默认情况下，管理器应该连接到系统的`libvirtd`实例。如果不是，通过右键点击列表中的项并选择`Connect`连接主机系统。要管理基于会话的虚拟机，选择`File -> Add Connection...`菜单显示如图 26-12 所示的对话框：
 
 ![](img/ubuntu_20.04_virt-manager_add_connection.jpg)
+
 图 26-12
 
-在此对话框中，从 `Hypervisor` 菜单选择 `QEMU/KVM user session` 并点击 `Connect` 按钮。返回 `virt-manager` 主屏幕后，现在列出了用户会话：
+在此对话框中，从`Hypervisor`菜单选择`QEMU/KVM user session`并点击`Connect`按钮。返回`virt-manager`主屏幕后，现在列出了用户会话：
 
 ![](img/ubuntu_20.04_virt-manager_user_session.jpg)
+
 图 26-13
 
-要创建新的虚拟机系统，点击新建虚拟机按钮（工具栏最左侧的按钮），或右键点击 Hypervisor 项并在弹出的菜单中选择 `New`，显示新虚拟机向导的第一个屏幕。
+要创建新的虚拟机系统，点击新建虚拟机按钮（工具栏最左侧的按钮），或右键点击 Hypervisor 项并在弹出的菜单中选择`New`，显示新虚拟机向导的第一个屏幕。
 
-在 `Name` 字段中为虚拟机系统输入一个描述性的名称。在此屏幕上，还要选择用于安装客户操作系统的介质。可以是 CD 或 DVD 驱动器、本地主机可访问 ISO 镜像文件、使用 `HTTP`、`FTP`、`NFS` 或 `PXE` 网络安装，或现有虚拟机的磁盘镜像：
+在`Name`字段中为虚拟机系统输入一个描述性的名称。在此屏幕上，还要选择用于安装客户操作系统的介质。可以是 CD 或 DVD 驱动器、本地主机可访问 ISO 镜像文件、使用`HTTP`、`FTP`、`NFS`或`PXE`网络安装，或现有虚拟机的磁盘镜像：
 
 ![](img/ubuntu_20.04_virt-manager_media.jpg)
+
 图 26-14
 
-### 26.7 配置 KVM 虚拟机系统
+## 26.7 配置 KVM 虚拟机系统
 
-点击前进将显示一个寻求安装过程信息的屏幕。显示的屏幕和所需的信息取决于在前一个屏幕中的选择。例如，如果选择了 CD、DVD 或 ISO，此屏幕将询问 ISO 文件或物理介质的具体位置。此屏幕还根据指定的安装介质识别要安装的客户操作系统类型和版本（例如 Windows 版本或 Linux 发行版）。如果无法识别，取消勾选 `Automatically detect from installation media / source` ，输入操作系统名称的前几个字符并从可能的匹配列表中选择一个选项：
+点击前进将显示一个寻求安装过程信息的屏幕。显示的屏幕和所需的信息取决于在前一个屏幕中的选择。例如，如果选择了 CD、DVD 或 ISO，此屏幕将询问 ISO 文件或物理介质的具体位置。此屏幕还根据指定的安装介质识别要安装的客户操作系统类型和版本（例如 Windows 版本或 Linux 发行版）。如果无法识别，取消勾选`Automatically detect from installation media / source`，输入操作系统名称的前几个字符并从可能的匹配列表中选择一个选项：
 
 ![](img/ubuntu_20.04_virt-manager-iso.jpg)
+
 图 26-15
 
-
-
-
-
-完成这些设置后，点击 `Forward`（前进）按钮来配置 CPU 和内存设置。最佳设置取决于主机上 CPU 的数量、物理内存的大小，并结合与新虚拟机并行运行的其他应用程序和虚拟机的需求：
+完成这些设置后，点击`Forward`（前进）按钮来配置 CPU 和内存设置。最佳设置取决于主机上 CPU 的数量、物理内存的大小，并结合与新虚拟机并行运行的其他应用程序和虚拟机的需求：
 
 ![](img/ubuntu_20.04_virt-manager_cup_memory.jpg)
+
 图 26-16
 
-在下一个屏幕上，可以使用可用选项创建指定大小的镜像磁盘、选择已有的卷，或创建指定格式（raw、vmdk、ISO 等）的存储卷。除非您有使用特定格式的特殊需求（例如，您之后可能需要使用 `vmdk` 迁移到基于 VMware 的虚拟化环境）或需要使用专用磁盘或分区，否则在此屏幕上只需指定大小通常就足够了：
+在下一个屏幕上，可以使用可用选项创建指定大小的镜像磁盘、选择已有的卷，或创建指定格式（raw、vmdk、ISO 等）的存储卷。除非您有使用特定格式的特殊需求（例如，您之后可能需要使用`vmdk`迁移到基于 VMware 的虚拟化环境）或需要使用专用磁盘或分区，否则在此屏幕上只需指定大小通常就足够了：
 
 ![](img/ubuntu_20.04_virt-manager-storage.jpg)
+
 图 26-17
 
-如果在此处默认设置，虚拟机将使用默认存储池中的存储卷作为虚拟磁盘驱动器。要使用本章之前创建的自定义“MyPool”存储池，请在点击 `Manage...`（管理...）按钮之前启用 `Select`（选择）或创建自定义存储选项。
+如果在此处默认设置，虚拟机将使用默认存储池中的存储卷作为虚拟磁盘驱动器。要使用本章之前创建的自定义“MyPool”存储池，请在点击`Manage...`（管理...）按钮之前启用`Select`（选择）或创建自定义存储选项。
 
-在存储卷对话框中，在左侧面板中选择 `MyPool` 条目，然后点击主面板中的 `+` 按钮创建一个新的存储卷：
+在存储卷对话框中，在左侧面板中选择`MyPool`条目，然后点击主面板中的`+`按钮创建一个新的存储卷：
 
 ![](img/ubuntu_20.04_virt-manager_storage_volume.jpg)
+
 图 26-18
 
-注意，位于对话框左下角的 `+` 按钮也可以用于创建新的存储池，作为使用 Cockpit 界面的替代方案。
+注意，位于对话框左下角的`+`按钮也可以用于创建新的存储池，作为使用 Cockpit 界面的替代方案。
 
-在配置屏幕（图 26-19）中，命名存储卷，选择卷的大小并点击 `Finish`（完成）按钮来创建卷并将其分配给虚拟机：
+在配置屏幕（图 26-19）中，命名存储卷，选择卷的大小并点击`Finish`（完成）按钮来创建卷并将其分配给虚拟机：
 
 ![](img/ubuntu_20.04_virt-manager_new_storage_volume.jpg)
+
 图 26-19
 
-配置好设置后，选择新卷并点击 `Choose Volume`（选择卷）按钮。再次点击 `Forward` 按钮。最后一个屏幕显示配置摘要。检查所显示的信息。还可以高级选项来更改客机的虚拟网络配置，如图 26-20 所示：
+配置好设置后，选择新卷并点击`Choose Volume`（选择卷）按钮。再次点击`Forward`按钮。最后一个屏幕显示配置摘要。检查所显示的信息。还可以高级选项来更改客机的虚拟网络配置，如图 26-20 所示：
 
 ![](img/ubuntu_20.04_virt-manager_network.jpg)
+
 图 26-20
 
-### 26.8 启动 KVM 虚拟机
+## 26.8 启动 KVM 虚拟机
 
-点击 `Finish` 按钮开始创建过程。虚拟化管理器将在启动客体系统之前创建磁盘并配置虚拟机。新虚拟机将出现在 virt-manager 主窗口中，状态设置为 `Running`（运行中），如图 26-21 所示：
+点击`Finish`按钮开始创建过程。虚拟化管理器将在启动客体系统之前创建磁盘并配置虚拟机。新虚拟机将出现在 virt-manager 主窗口中，状态设置为`Running`（运行中），如图 26-21 所示：
 
 ![](img/ubuntu_20.04_virt-manager-main-runnings.jpg)
+
 图 26-21
 
-默认情况下，虚拟机的控制台应该出现在虚拟机查看器窗口中。要在以后任何时间查看运行中的机器控制台，请确保它在虚拟机列表中被选中，并选择工具栏上的 `Open`（打开）按钮。虚拟机查看器应准备好开始安装过程：
+默认情况下，虚拟机的控制台应该出现在虚拟机查看器窗口中。要在以后任何时间查看运行中的机器控制台，请确保它在虚拟机列表中被选中，并选择工具栏上的`Open`（打开）按钮。虚拟机查看器应准备好开始安装过程：
 
 ![](img/ubuntu_20.04_virt-manager-guest_running.jpg)
+
 图 26-22
 
 从现在开始，只需按照操作系统的安装指令在 KVM 虚拟机中安装客体操作系统。
 
-### 26.9 总结
+## 26.9 总结
 
-本章概述了在 Ubuntu 主机系统上创建新 KVM 虚拟机的两种方法。第一种方案涉及使用 Cockpit Web 界面来创建和管理虚拟机。这种方法的优点是不需要访问运行在主机系统上的桌面环境。另一种方案是使用 `virt-manager` 图形工具。在涵盖这些基础知识后，下一章将介绍如何从命令行创建虚拟机。
+本章概述了在 Ubuntu 主机系统上创建新 KVM 虚拟机的两种方法。第一种方案涉及使用 Cockpit Web 界面来创建和管理虚拟机。这种方法的优点是不需要访问运行在主机系统上的桌面环境。另一种方案是使用`virt-manager`图形工具。在涵盖这些基础知识后，下一章将介绍如何从命令行创建虚拟机。
 
-## 27. 使用 virt-install 和 virsh 创建 KVM 虚拟机
+# 27. 使用 virt-install 和 virsh 创建 KVM 虚拟机
 
-在上一章中，我们探索了如何在 Ubuntu 主机上使用 Cockpit 和 `virt-manager` 图形工具创建 KVM 客体操作系统。在本章中，我们将把注意力转移到使用 `virt-install` 和 `virsh` 命令行工具创建基于 KVM 的虚拟机。这些工具提供了 `virt-manager` 和 Cockpit 选项的所有功能，并且额外优点是它们可以在脚本中使用以自动化虚拟机的创建。此外，`virsh` 命令允许根据配置文件中的规范创建虚拟机。
+在上一章中，我们探索了如何在 Ubuntu 主机上使用 Cockpit 和`virt-manager`图形工具创建 KVM 客体操作系统。在本章中，我们将把注意力转移到使用`virt-install`和`virsh`命令行工具创建基于 KVM 的虚拟机。这些工具提供了`virt-manager`和 Cockpit 选项的所有功能，并且额外优点是它们可以在脚本中使用以自动化虚拟机的创建。此外，`virsh`命令允许根据配置文件中的规范创建虚拟机。
 
-`virt-install` 工具允许通过提供一系列命令行选项来创建新虚拟机。本章假设已安装必要的 KVM 工具。有关这些要求的详情，请阅读标题为“在 Ubuntu 上安装 KVM 虚拟化”的章节。
+`virt-install`工具允许通过提供一系列命令行选项来创建新虚拟机。本章假设已安装必要的 KVM 工具。有关这些要求的详情，请阅读标题为“在 Ubuntu 上安装 KVM 虚拟化”的章节。
 
-### 27.1 运行 virt-install 构建 KVM 客体系统
+## 27.1 运行 virt-install 构建 KVM 客体系统
 
-`virt-install` 工具接受大量的参数，用于提供与创建的虚拟机相关的配置信息。某些命令行选项是强制性的（特别是必须提供名称、内存和磁盘存储），而其他是可选的。
+`virt-install`工具接受大量的参数，用于提供与创建的虚拟机相关的配置信息。某些命令行选项是强制性的（特别是必须提供名称、内存和磁盘存储），而其他是可选的。
 
-至少，`virt-install` 命令通常需要以下参数：
+至少，`virt-install`命令通常需要以下参数：
 
 - `--name` - 分配给虚拟机的名称。
-- `--memory` - 分配给虚拟机的内存量。
-- `--disk` - 用于虚拟机的镜像文件名和位置。除非指定了 `--import` 选项，否则该文件将在 `virt-install` 创建虚拟机期间创建。
-- `--cdrom` 或 `--location` - 指定包含客体系统安装媒体的本地路径或远程 ISO 镜像 URL。
 
-使用 `virt-install` 可用的所有参数摘要可以在 man 手页找到：
+- `--memory` - 分配给虚拟机的内存量。
+
+- `--disk` - 用于虚拟机的镜像文件名和位置。除非指定了`--import`选项，否则该文件将在`virt-install`创建虚拟机期间创建。
+
+- `--cdrom`或`--location` - 指定包含客体系统安装媒体的本地路径或远程 ISO 镜像 URL。
+
+使用`virt-install`可用的所有参数摘要可以在 man 手页找到：
 
 ```
 $ man virt-install
 ```
 
-### 27.2 一个 Ubuntu virt-install 命令示例
+## 27.2 一个 Ubuntu virt-install 命令示例
 
 参考上述命令行列表，我们现在可以查看一个使用 virt-install 的命令行示例。
 
-注意，为了能够显示虚拟机并完成安装，虚拟机启动后需要连接一个 virt-viewer 实例到虚拟机。默认情况下，`virt-install` 会在虚拟机启动后尝试自动启动 `virt-viewer`。如果没有 `virt-viewer`，`virt-install` 将等待建立 `virt-viewer` 连接。如果主机系统具有图形桌面，则 `virt-viewer` 会话可以在本地运行，也可以像“使用 Cockpit 和 virt-manager 创建 KVM 虚拟机”章节所示从远程客户端建立连接。
+
+
+注意，为了能够显示虚拟机并完成安装，虚拟机启动后需要连接一个 `virt-viewer` 实例到虚拟机。默认情况下，`virt-install` 会在虚拟机启动后尝试自动启动 `virt-viewer`。如果没有 `virt-viewer`，`virt-install` 将等待建立 `virt-viewer` 连接。如果主机系统具有图形桌面，则 `virt-viewer` 会话可以在本地运行，也可以像“使用 Cockpit 和 virt-manager 创建 KVM 虚拟机”章节所示从远程客户端建立连接。
 
 以下命令创建一个配置为 KVM 半虚拟化运行 Fedora 的 KVM 虚拟机。它创建一个新的 10GB 磁盘镜像，为虚拟机分配 1024MB 内存，并为安装媒体 ISO 配置虚拟光驱：
 
@@ -5466,20 +5505,19 @@ virt-install --name MyFedora --memory 1024 --disk path=/tmp/myFedora.img,size=10
 
 在创建过程运行时，`virt-install` 命令将显示创建进度的状态更新：
 
+```
 Starting install...
 Allocating ‘MyFedora.img’ | 10 GB 00:00:01
 Domain installation still in progress. Waiting for installation to complete.
+```
 
-一旦客体系统创建，将出现 virt-viewer 屏幕，其中操作系统安装程序：
+一旦客体系统创建，将出现 `virt-viewer` 屏幕，其中操作系统安装程序：
 
 ![](img/ubuntu_20.04_virt-install_guest.jpg)
+
 图 27-1
 
 从现在开始，按照操作系统的标准安装程序进行。
-
-
-
-
 
 ### 27.3 从命令行启动和停止虚拟机
 
@@ -5610,7 +5648,7 @@ networkctl status -a
           State: off (unmanaged)
 ```
 
-在上面的输出中，我们可以看到主机通过名为 `eno1` 的设备建立了以太网连接，以及名为 `virbr0` 的默认桥接接口，该接口为 KVM 客机系统连接的基于 NAT 的虚拟网络提供访问。输出还列出了回环接口`lo`）。
+在上面的输出中，我们可以看到主机通过名为 `eno1` 的设备建立了以太网连接，以及名为 `virbr0` 的默认桥接接口，该接口为 KVM 客机系统连接的基于 NAT 的虚拟网络提供访问。输出还列出了回环接口 `lo`）。
 
 ### 28.3 创建 Netplan 网络桥接
 
@@ -5639,10 +5677,6 @@ Error in network definition: unknown key ‘bridges’
 ```bash
 netplan apply
 ```
-
-
-
-
 
 请注意，此命令将网络从当前连接切换到桥接，这将导致 DHCP 服务器为系统分配不同的 IP 地址。如果您通过远程 SSH 会话连接，这将导致您失去与服务器的联系。如果您希望为桥接连接分配静态 IP 地址，请按照如下方式修改桥接声明（确保同时关闭 IPv4 和 IPv6 的 DHCP）：
 
@@ -5697,7 +5731,8 @@ network:
       Address: 192.168.86.230
              fe80::b456:edff:fee9:d57
       Gateway: 192.168.86.1
-      DNS: 192.168.86.1```
+      DNS: 192.168.86.1
+```
 
 ## 获取当前网络设置
 
@@ -5765,9 +5800,11 @@ virbr0 dffab88d-1588-4e69-8d1c-2148090aa5ee bridge virbr0
 bridge-slave-eno1 43383092-6434-448f-b735-0cbea39eb3f ethernet
 ```
 
-下一步是启动桥接接口。如果通过网络连接（例如通过 SSH）执行配置桥接的步骤，这一可能会可能会问题，因为在启动桥接连接之前必须关闭当前的 `eno1` 连接，这可能导致远程主机无法访问。
 
-如果您远程访问主机系统，可以通过创建一个脚本来执行网络更改以避免此问题。这将确保在禁用 `eno1` 接口后启用桥接口。首先创建一个包含以下内容的 `bridge.sh` 脚本：
+
+下一步是启动桥接接口。如果通过网络连接（例如通过 SSH）执行配置桥接的步骤，这可能会出现问题，因为在启动桥接连接之前必须关闭当前的`eno1`连接，这可能导致远程主机无法访问。
+
+如果您远程访问主机系统，可以通过创建一个脚本来执行网络更改以避免此问题。这将确保在禁用`eno1`接口后启用桥接口。首先创建一个包含以下内容的`bridge.sh`脚本：
 
 ```bash
 #!/bin/bash
@@ -5781,9 +5818,9 @@ nmcli con up br0
 # sh ./bridge.sh
 ```
 
-当脚本执行时，`eno1` 连接关闭时将会丢失。但在等待几秒钟后，一旦 `br0` 连接激活，就可以重新连接到主机。
+当脚本执行时，`eno1`连接关闭时将会丢失。但在等待几秒钟后，一旦`br0`连接激活，就可以重新连接到主机。
 
-如果您在主机上本地操作，可以在终端窗口中运行这两个 `nmcli` 命令而无丢失连接的风险：
+如果您在主机上本地操作，可以在终端窗口中运行这两个`nmcli`命令而无丢失连接的风险：
 
 ```
 # nmcli con down "Wired connection 1"
@@ -5800,7 +5837,7 @@ br0 8416607e-c6c1-4abb-8583-1661689b95a9 bridge br0
 bridge-slave-eno1 43383092-6434-448f-b735-0cbea39eb3f ethernet
 ```
 
-请注意，Wired Connection 1 连接仍在列表中，但实际上已不再处于激活状态。要从列表中排除非活动连接，只需在请求列表时使用 `--active` 标志即可：
+请注意，Wired Connection 1 连接仍在列表中，但实际上已不再处于激活状态。要从列表中排除非活动连接，只需在请求列表时使用`--active`标志即可：
 
 ```
 # nmcli con show --active
@@ -5808,56 +5845,68 @@ NAME UUID TYPE DEVICE
 br0 8416607e-c6c1-4abb-8583-1661689b95a9 bridge br0
 ```
 
-
-
-
-
 bridge-slave-eno1 43383092-6434-448f-b735-0cbea39eb38f ethernet eno1
 
 virbr0 dffab88d-1588-4e69-8d1c-2148090aa5ee bridge virbr0
 
 ### 28.6 声明 KVM 桥接网络
 
-此时，桥接连接已存在于系统中，但在 KVM 环境中不可见。运行 `virsh` 命令仍然会将默认网络列为唯一的可用网络选项：
+此时，桥接连接已存在于系统中，但在 KVM 环境中不可见。运行`virsh`命令仍然会将默认网络列为唯一的可用网络选项：
 
 ```bash
 virsh net-list --all
 ```
 
 名称 状态 自动启动 持久性
+
 ----------------------------------------------------------
+
 default 激活 是 是否
+
 ```
 
-在虚拟机可以使用网桥之前，必须对其进行声明并将其添加到 KVM 网络配置中。这涉及创建一个定义文件，并且再次使用 `virsh` 命令行工具。
+在虚拟机可以使用网桥之前，必须对其进行声明并将其添加到 KVM 网络配置中。这涉及创建一个定义文件，并且再次使用`virsh`命令行工具。
 
-首先，为桥接网络创建一个名为 `bridge.xml` 的定义文件，内容如下：
+首先，为桥接网络创建一个名为`bridge.xml`的定义文件，内容如下：
 
 ```xml
+
 <network>
+
   <name>br0</name>
+
   <forward mode="bridge"/>
+
   <bridge name="br0" />
+
 </network>
+
 ```
 
 接下来，使用该文件来定义新网络：
 
 ```bash
+
 virsh net-define ./bridge.xml
+
 ```
 
 一旦定义了网络，请启动它，并在需要时将其配置为每次系统重启时自动启动：
 
 ```bash
+
 virsh net-start br0
+
 virsh net-autostart br0
+
 ```
 
 再次列出网络，以验证桥接网络现在 KVM 环境内是否是可用的：
 
 ```bash
+
 virsh net-list --all
+
 ```
 
 名称 状态 自动启动 持久性
@@ -5868,7 +5917,7 @@ default 激活 是 是
 
 ### 28.7 在虚拟机中使用桥接网络
 
-要创建一个使用桥接网络的虚拟机，请使用 `virt-install --network` 选项并指定 `br0` 网桥名称。例如：
+要创建一个使用桥接网络的虚拟机，请使用`virt-install --network`选项并指定`br0`网桥名称。例如：
 
 ```bash
 virt-install --name MyFedora --memory 1024 --disk path=/tmp/myFedora.img,size=10 --network network=br0 --os-variant fedora28 --cdrom /home/demo/Downloads/Fedora-Server-dvd-x86_64-29-1.2.iso
@@ -5876,19 +5925,19 @@ virt-install --name MyFedora --memory 1024 --disk path=/tmp/myFedora.img,size=10
 
 当客体系操作系统运行时，它将出现在与主机系统相同的物理网络上，而不再位于基于 NAT 的虚拟网络上。
 
-要修改现有虚拟机以使用网桥，请使用 `virsh edit` 命令。该命令将 XML 定义文件加载到编辑器中，可以在其中进行更改并保存：
+要修改现有虚拟机以使用网桥，请使用`virsh edit`命令。该命令将 XML 定义文件加载到编辑器中，可以在其中进行更改并保存：
 
 ```bash
 virsh edit GuestName
 ```
 
-默认情况下，文件将加载到 `vi` 编辑器中。要使用不同的编辑器，只需更改 `$EDITOR` 环境变量，例如：
+默认情况下，文件将加载到`vi`编辑器中。要使用不同的编辑器，只需更改`$EDITOR`环境变量，例如：
 
 ```bash
 export EDITOR=gedit
 ```
 
-要从默认虚拟网络更改，请找到文件的 `<interface>` 部分，对于 NAT 配置，其内容如下：
+要从默认虚拟网络更改，请找到文件的`<interface>`部分，对于 NAT 配置，其内容如下：
 
 ```xml
 <interface type='network'>
@@ -5925,43 +5974,49 @@ export EDITOR=gedit
 
 ### 28.8 使用 nm-connection-editor 创建桥接网络
 
-如果主机系统可以使用本地或远程桌面访问，大部分网桥配置过程可以使用 `nm-connection-editor` 图形工具完成。要使用此工具，在桌面内打开终端窗口并输入以下命令：
+如果主机系统可以使用本地或远程桌面访问，大部分网桥配置过程可以使用`nm-connection-editor`图形工具完成。要使用此工具，在桌面内打开终端窗口并输入以下命令：
 
 ```bash
 nm-connection-editor
 ```
 
-当工具加载后，将出现如图 28-1 所示的窗口，列出当前配置的网络连接（本质上与 `nmcli con show` 命令生成的输出相同）：
+当工具加载后，将出现如图 28-1 所示的窗口，列出当前配置的网络连接（本质上与`nmcli con show`命令生成的输出相同）：
 
 ![](img/ubuntu_18.04_nm-connection-editor-main.jpg)
+
 图 28-1
 
-要创建新连接，点击左下角的 `+` 按钮。在图 28-2 中，从菜单中选择 Bridge（桥接）：
+要创建新连接，点击左下角的`+`按钮。在图 28-2 中，从菜单中选择 Bridge（桥接）：
 
 ![](img/ubuntu_18.04_nm-connection-editor-type.jpg)
+
 图 28-2
 
-选择桥接选项后，点击 `Create`（创建）：
+选择桥接选项后，点击`Create`（创建）：
 
 ![](img/ubuntu_18.04_nm-connection-editor-create.jpg)
+
 图 28-3
 
-现在将一个对话框，需要配置从接连接。在图 28-4 中，选择网桥连接的物理网络（例如 `eno1`）：
+现在将一个对话框，需要配置从接连接。在图 28-4 中，选择网桥连接的物理网络（例如`eno1`）：
 
 ![](img/ubuntu_18.04_nm-connection-editor-slave.jpg)
+
 图 28-4
 
-点击 `Save`（保存）按钮应用更改并返回编辑对话框。在此对话框中，点击 `Save` 创建网桥：
+点击`Save`（保存）按钮应用更改并返回编辑对话框。在此对话框中，点击`Save`创建网桥：
 
 ![](img/ubuntu_18.04_nm-connection-editor-br0.jpg)
+
 图 28-5
 
 返回主窗口后，现在应该列出网桥和从接连接：
 
 ![](img/ubuntu_18.04_nm-connection-editor-br0-added.jpg)
+
 图 28-6
 
-剩下的工作是关闭 `eno1` 连接并按照前面的步骤启动 `br0` 连接（如果是远程访问，请记得在脚本中执行这些步骤）：
+剩下的工作是关闭`eno1`连接并按照前面的步骤启动`br0`连接（如果是远程访问，请记得在脚本中执行这些步骤）：
 
 ```bash
 nmcli down "Wired connection 1"
@@ -5972,15 +6027,15 @@ nmcli up br0
 
 ### 28.9 总结
 
-默认情况下，KVM 虚拟机连接到使用 NAT 提供主机所在网络访问的网络。如果要求虚拟机以自己的 IP 地址出现在网络上，则需要配置虚拟机共享主机的物理接口。本章所述，可以使用 `nmcli` 或 `nm-connection-editor` 工具创建网桥接口。
+默认情况下，KVM 虚拟机连接到使用 NAT 提供主机所在网络访问的网络。如果要求虚拟机以自己的 IP 地址出现在网络上，则需要配置虚拟机共享主机的物理接口。本章所述，可以使用`nmcli`或`nm-connection-editor`工具创建网桥接口。
 
 ## 29. 使用 virsh 命令行工具管理 KVM
 
-在之前的章节中，我们涵盖了在 Ubuntu 上安装和配置基于 KVM 的虚拟机操作系统。本章专注于 `virsh` 工具的一些之前未涵盖的领域，以及如何从命令行管理基于 KVM 的虚拟机操作系统。
+在之前的章节中，我们涵盖了在 Ubuntu 上安装和配置基于 KVM 的虚拟机操作系统。本章专注于`virsh`工具的一些之前未涵盖的领域，以及如何从命令行管理基于 KVM 的虚拟机操作系统。
 
 ### 29.1 virsh Shell 和命令行
 
-`virsh` 工具既是一个命令行工具，也是一个交互式 shell 环境。在命令行模式下使用，只需在命令提示符处输入适用于执行任务的任务参数。
+`virsh`工具既是一个命令行工具，也是一个交互式 shell 环境。在命令行模式下使用，只需在命令提示符处输入适用于执行任务的任务参数。
 
 要将选项作为命令行参数使用，请如下例所示在终端命令提示符中使用：
 
@@ -5988,11 +6043,7 @@ nmcli up br0
 virsh <option>
 ```
 
-
-
-
-
-要在 `virsh` shell 中运行命令，请执行以下命令：
+要在`virsh`shell 中运行命令，请执行以下命令：
 
 # virsh
 
@@ -6007,7 +6058,7 @@ Type: ‘help’ for help with commands
 virsh #
 ```
 
-在 `virsh #` 提示符下输入你想运行的选项。例如，下面的 `virsh` 会话列出了当前的虚拟机，启动了一个名为 `FedoraVM` 的虚拟机，然后获取另一个列表以验证该虚拟机正在运行：
+在`virsh #`提示符下输入你想运行的选项。例如，下面的`virsh`会话列出了当前的虚拟机，启动了一个名为`FedoraVM`的虚拟机，然后获取另一个列表以验证该虚拟机正在运行：
 
 ```bash
 virsh
@@ -6037,7 +6088,7 @@ virsh # list
 virsh#
 ```
 
-`virsh` 工具支持广泛命令，可以使用帮助选项获取完整的命令列表：
+`virsh`工具支持广泛命令，可以使用帮助选项获取完整的命令列表：
 
 ```bash
 virsh help
@@ -6069,7 +6120,7 @@ virsh help restore
 
 ### 29.2 列出客机系统状态
 
-在 Ubuntu 虚拟化主机上，可以使用 `virsh` 工具的 `list` 选项随时查看客机系统的状态。例如：
+在 Ubuntu 虚拟化主机上，可以使用`virsh`工具的`list`选项随时查看客机系统的状态。例如：
 
 ```bash
 virsh list
@@ -6089,7 +6140,7 @@ virsh # list
 
 ### 29.3 启动客机系统
 
-可以使用 `virsh` 工具结合 `start` 选项以及要启动的客机操作系统的名称来启动操作系统。例如：
+可以使用`virsh`工具结合`start`选项以及要启动的客机操作系统的名称来启动操作系统。例如：
 
 ```bash
 virsh start myGuestOS
@@ -6097,13 +6148,13 @@ virsh start myGuestOS
 
 ### 29.4 关闭客机系统
 
-`virsh` 工具的 `shutdown` 选项顾顾名用于关闭客机操作系统：
+`virsh`工具的`shutdown`选项顾顾名用于关闭客机操作系统：
 
 ```bash
 virsh shutdown guestName
 ```
 
-注意，`shutdown` 允许客机操作系统在接收到关闭指令时执行有序关闭。要立即停止客机操作系统，可以使用 `destroy` 选项（存在文件系统损坏和数据丢失的风险）：
+注意，`shutdown`允许客机操作系统在接收到关闭指令时执行有序关闭。要立即停止客机操作系统，可以使用`destroy`选项（存在文件系统损坏和数据丢失的风险）：
 
 ```bash
 virsh destroy guestName
@@ -6111,7 +6162,7 @@ virsh destroy guestName
 
 ### 29.5 挂起和恢复客机系统
 
-可以使用 `virsh` 工具的 `suspend` 和 `resume` 选项挂起和恢复客机系统。例如，挂起特定系统：
+可以使用`virsh`工具的`suspend`和`resume`选项挂起和恢复客机系统。例如，挂起特定系统：
 
 ```bash
 virsh suspend guestName
@@ -6127,7 +6178,7 @@ virsh resume guestName
 
 ### 29.6 保存和恢复客机系统
 
-可以使用 `virsh` 实用程序保存和恢复正在运行的客机操作系统。保存时，客机操作系统的当前状态被写入磁盘并从系统内存中移除。保存的系统随后可以在任何时间恢复（包括在主机系统重启后）。
+可以使用`virsh`实用程序保存和恢复正在运行的客机操作系统。保存时，客机操作系统的当前状态被写入磁盘并从系统内存中移除。保存的系统随后可以在任何时间恢复（包括在主机系统重启后）。
 
 保存客机：
 
@@ -6151,21 +6202,21 @@ virsh reboot guestName
 
 ### 29.8 配置分配给 Guest OS 的内存
 
-要配置分配给 Guest OS 的内存，使用 `virsh` 命令的 `setmem` 选项。例如，以下命令将给客机系统的内存减少到 256MB：
+要配置分配给 Guest OS 的内存，使用`virsh`命令的`setmem`选项。例如，以下命令将给客机系统的内存减少到 256MB：
 
 ```bash
 virsh setmem guestName 256
 ```
 
-注意，允许的内存设置必须在当前 `Domain` 可用的内存范围内。可以使用 `setmaxmem` 选项增加此限制。
+注意，允许的内存设置必须在当前`Domain`可用的内存范围内。可以使用`setmaxmem`选项增加此限制。
 
 ### 29.9 总结
 
-`virsh` 工具提供了创建、监控和管理客机虚拟机的多种选项。如本章所述，该工具可以在命令行或交互式模式下使用。
+`virsh`工具提供了创建、监控和管理客机虚拟机的多种选项。如本章所述，该工具可以在命令行或交互式模式下使用。
 
 ## 30. Linux 容器简介
 
-前面的章节涵盖了虚拟化概念，特别强调了使用 `KVM` 创建和管理虚拟机。本章将以 Linux 容器（Linux Containers）的形式介绍一种相关技术。虽然虚拟机和容器之间有一些相似之处，但也有一些关键区别，本章将概述这些区别并介绍 Linux 容器的原理和优势。本章还将概述容器管理工具。
+前面的章节涵盖了虚拟化概念，特别强调了使用`KVM`创建和管理虚拟机。本章将以 Linux 容器（Linux Containers）的形式介绍一种相关技术。虽然虚拟机和容器之间有一些相似之处，但也有一些关键区别，本章将概述这些区别并介绍 Linux 容器的原理和优势。本章还将概述容器管理工具。
 
 ### 30.1 Linux 容器与内核共享
 
@@ -6175,15 +6226,13 @@ virsh setmem guestName 256
 
 为了理解内核共享和容器如何工作，有助于首先理解 Linux 或 Unix 系统的两个主要组件。操作系统的核心是内核。简单来说，内核处理操作系统与物理硬件之间所有的交互。第二个关键组件是根文件系统，它包含了操作系统运行所需的所有库、文件和实用程序。利用这种结构，容器都有自己的根文件系统，但共享主机操作系统的内核。
 
+
+
 这种资源共享通过内核能够动态更改当前根文件系统（称为 `change root` 或 `chroot`）的能力变为，而无需重启整个系统。Linux 容器本质上是这种能力的扩展，并结合了容器运行时，其职责是为主机系统上的执行和管理容器提供接口。许多容器运行时可用，包括 `Docker`、`lxd`、`containerd` 和 `CRI-O`。
 
-### 30.2 容器的用途和优势
+## 30.2 容器的用途和优势
 
 容器的主要优势是它们比虚拟化所需的资源开销小得多，允许在单个服务器上同时运行许多实例，并根据需求水平快速高效地启动和停止。容器原生运行在主机系统上，提供了虚拟机无法比拟的性能。
-
-
-
-
 
 容器具有极强的移植性，可以在系统之间快速、方便地迁移。当与 `Docker`、`OpenShift` 和 `Kubernetes` 等容器管理系统结合时，可以在跨多个服务器和云平台的大范围内部署并管理容器，可能运行数千个容器。
 
@@ -6195,7 +6244,7 @@ virsh setmem guestName 256
 
 容器的一个可能的缺点是客户操作系统必须与正在共享的内核版本兼容。例如，无法在 Linux 系统上的容器中运行 Microsoft Windows。同样，为 2.6 版本内核设计的 Linux 客户系统无法共享 2.4 版本的内核。然而，这些要求并不是容器的设计初衷。因此，不应将这些视为限制，而应视为容器在提供简单、可扩展且可靠的部署平台方面的关键优势之一。
 
-### 30.3 Ubuntu 容器工具
+## 30.3 Ubuntu 容器工具
 
 在 Ubuntu 上有许多创建和管理容器的。一种方法是下载并安装 `Docker` 提供的标准工具。然而，在书中，我们将关注一组由 Red Hat, Inc. 开发的新工具，这些工具广泛用于 `CentOS`、`Fedora` 和 Red Hat Enterprise Linux 等其他 Linux 发行版。选择它们有几个原因。首先，这些工具与 `Docker` 提供的工具完全兼容（包括相同的命令行选项）。更重要的是，这些工具的优势在于可以在无需运行 `Docker` 守护进程的情况下使用。该容器工具集由以下程序组成：
 
@@ -6206,7 +6255,7 @@ virsh setmem guestName 256
 
 上述所有工具都符合开放容器倡议 (OCI)，这是一组旨在确保容器在不同竞争性工具和平台之间遵循相同标准的规范。
 
-### 30.4 Docker 仓库 (Registry)
+## 30.4 Docker 仓库 (Registry)
 
 尽管 Ubuntu 提供了一套设计用于替代 `Docker` 提供的工具的工具，但这些工具在构建容器时仍需要访问 Ubuntu 镜像以供使用。出于此目的，Ubuntu 团队在 `Docker Hub` 中维护了一套 Ubuntu 容器镜像。`Docker Hub` 是一个由多个仓库组成的在线容器仓库，每个仓库都包含许多供在构建容器时下载的容器镜像。仓库中的每个镜像都分配有一个仓库标签（例如，`20.04`、`latest` 等），在执行镜像下载时可以引用它。例如，以下是 `Docker Hub` 中 Ubuntu 20.04 镜像的 URL：
 
@@ -6220,7 +6269,7 @@ docker://docker.io/library/ubuntu:20.04
 
 默认情况下，容器使用容器网络接口 (CNI) 桥接网络栈到网络。在桥接配置中，运行在服务器上的所有容器属于同一个子网，因此能够相互通信。容器还通过桥接宿主机系统的网络连接到外部网络。同样，宿主机可以通过虚拟网络接口（通常命名为 `cni0`）访问容器，该接口是在容器工具安装过程中创建的。
 
-### 30.6 总结
+## 30.6 总结
 
 Linux 容器提供了虚拟化的轻量级替代，并利用了 Linux 和 Unix 操作系统的结构。Linux 容器本质上共享主机操作系统的内核，每个容器都有自己的根文件系统，其中包含文件、库和应用程序。容器高效且可扩展，为构建和部署模块化企业级解决方案提供了理想平台。有许多工具和平台用于构建、部署和管理容器，包括第三方解决方案和 Ubuntu 提供的工具。
 
@@ -6273,9 +6322,6 @@ $ skopeo inspect docker://docker.io/ubuntu
 }
 ```
 
-
-
-
 ```json
 {
     "DockerVersion": "18.09.7",
@@ -6303,13 +6349,21 @@ $ podman pull docker://docker.io/ubuntu:latest
 正在拉取 `docker://docker.io/ubuntu:latest`...
 
 获取镜像源签名
+
 正在复制 blob 5bed26d33875 done
+
 正在复制 blob f11b29a9c730 done
+
 正在复制 blob 78bf9a5ad49e done
+
 正在复制 blob 930bda195c84 done
+
 正在复制 config 4e5021d210 done
+
 正在将清单写入镜像目标位置
+
 存储签名
+
 4e5021d210f65ebe915670c7089120120bc0a303b90208592851708c1b8c04bd
 
 通过让 `podman` 列出所有本地镜像来验证该镜像是否已存储：
@@ -6319,6 +6373,7 @@ $ podman images
 ```
 
 REPOSITORY 标签 镜像 ID 创建时间 大小
+
 docker.io/library/ubuntu latest 4e5021d210f6 3 weeks ago 66.6 MB
 
 可以通过运行 `podman inspect` 命令获取有关本地镜像的详情：
@@ -6366,9 +6421,6 @@ _apt:x:100:65534::/nonexistent:/usr/sbin/nologin
 ```bash
 $ podman run --name=mycontainer -it ubuntu:latest /bin/bash
 ```
-
-
-
 
 注意：在移除镜像之前，必须先移除基于该镜像的所有容器。
 
@@ -6446,6 +6498,8 @@ apt install apache2
 ufw allow Apache
 ```
 
+
+
 仅启用安全的（HTTPS）流量：
 
 ```bash
@@ -6505,7 +6559,7 @@ systemctl enable apache2
 
 如果你可以本地或远程访问服务器的桌面环境，只需启动 Web 浏览器并在地址栏中输入 `http://127.0.0.1`（`127.0.0.1` 是回环网络地址，告诉系统连接到本地）。如果一切设置正确，浏览器应加载如[图 32-1]所示的页面：
 
-![](ubuntu_18.04_apache_test_page.jpg
+![](ubuntu_18.04_apache_test_page.jpg)
 
 图 32-1
 
@@ -6522,10 +6576,6 @@ IncludeOptional sites-enabled/*.conf
 
 同样，`apache2.conf` 文件导入了 `ports.conf` 文件，该文件定义了 Apache 服务器监听网络流量的端口。
 
-
-
-
-
 ## 配置
 
 将默认文件复制到一个与你的域名匹配名称的新文件中。例如：
@@ -6534,7 +6584,7 @@ IncludeOptional sites-enabled/*.conf
 cp 000-default.conf myexample.conf
 ```
 
-使用你喜喜欢的编辑器编辑 `myexample.com` 文件，其内容将如下：
+使用你喜欢的编辑器编辑 `myexample.com` 文件，其内容将如下：
 
 ```apache
 <VirtualHost *:80>
@@ -6621,11 +6671,11 @@ Syntax OK
 systemctl reload apache2
 ```
 
-最后，通过打开浏览器窗口并使用域名而不是 IP 地址访问站点，检查服务器配置是否正常工作。加载的网页应该是应该是上面创建的 `index.html` 文件中定义的那个。
+最后，通过打开浏览器窗口并使用域名而不是 IP 地址访问站点，检查服务器配置是否正常工作。加载的网页应该是上面创建的 `index.html` 文件中定义的那个。
 
 ## 32.8 安全网站的基础
 
-本章到目前为止创建的 Web 服务器和网站使用 80 端口上的 HTTP 协议，因此被认为是不安全的。问题在于 Web 服务器与客户端（通常是用户的 浏览器）之间的流量是以明文传输的。换句话说，数据未加密且容易被拦截。虽然对于一般的网页浏览来说这不是问题，但在执行登录网站或传输敏感信息等任务时，这是一个严重的缺陷。
+本章到目前为止创建的 Web 服务器和网站使用 80 端口上的 HTTP 协议，因此被认为是不安全的。问题在于 Web 服务器与客户端（通常是用户的浏览器）之间的流量是以明文传输的。换句话说，数据未加密且容易被拦截。虽然对于一般的网页浏览来说这不是问题，但在执行登录网站或传输敏感信息等任务时，这是一个严重的缺陷。
 
 ## 32.9 为 Apache 配置 HTTPS
 
@@ -6635,7 +6685,7 @@ systemctl reload apache2
 a2enmod ssl
 ```
 
-安装后重启 httpd 加载新模块：
+安装后重启 `httpd` 加载新模块：
 
 ```bash
 systemctl restart apache2
@@ -6651,7 +6701,7 @@ apache2ctl -M | grep ssl
 
 ## 32.10 获取 SSL 证书
 
-网站的证书必须从证书颁发机构（CA）获取。在不同的价格范围内有多种选择。然而，目前最好的选项是从 Let’s Encrypt 获取免费证书。从 Let’s Encrypt 获取证书的过程仅涉及安装和运行 `certbot` 工具。该工具将扫描服务器上的 Apache 配置文件，并提供为系统上配置的任何虚拟主机生成证书的选项。它将生成证书并向 Apache 配置添加虚拟主机条目。
+网站的证书必须从证书颁发机构（CA）获取。在不同的价格范围内有多种选择。然而，目前最好的选项是从 Let's Encrypt 获取免费证书。从 Let's Encrypt 获取证书的过程仅涉及安装和运行 `certbot` 工具。该工具将扫描服务器上的 Apache 配置文件，并提供为系统上配置的任何虚拟主机生成证书的选项。它将生成证书并向 Apache 配置添加虚拟主机条目。
 
 使用以下步骤在你的 Ubuntu 系统上安装 `certbot` 工具：
 
@@ -6668,9 +6718,6 @@ apt install certbot python-certbot-apache
 ```bash
 certbot --apache
 ```
-
-
-
 
 在 `/etc/apache2/sites-available/myexample-le-ssl.conf` 创建了 SSL 虚拟主机
 
@@ -6706,23 +6753,27 @@ Include /etc/letsencrypt/options-ssl-apache.conf
 请选择是否将 HTTP 流量重定向到 HTTPS 并移除 HTTP 访问。
 
 - `1`: 不重定向 - 不对 Web 服务器配置做任何进一步更改。
+
 - `2`: 重定向 - 将所有请求重定向到安全的 HTTPS 访问。对于新站点或如果你确定站点在 HTTPS 上运行正常请选择此项。你可以通过编辑 Web 服务器配置来撤销此更改。
 
-选择相应的数字 `[1-2]` 然后按 `[enter]`（按 ‘c’ 可消）：`2`
+选择相应的数字 `[1-2]` 然后按 `[enter]`（按 'c' 可取消）：`2`
 
-如果你目前正在测试 HTTPS 配置并希望稍后之前保留 HTTP 版本，请选择“不重定向”选项。否则，通常建议重定向到 HTTPS。
+如果你目前正在测试 HTTPS 配置并希望稍后之前保留 HTTP 版本，请选择"不重定向"选项。否则，通常建议重定向到 HTTPS。
 
 一旦证书安装完成，在浏览器中访问以下 URL 进行测试（将 `myexample.com` 替换为你自己的域名）：
+
 `https://www.ssllabs.com/ssltest/analyze.html?d=www.myexample.com`
 
 如果证书配置成功，SSL Labs 将提供高评分，如图 32-2 所示：
 
 ![](img/rhel_8_ssl_labs_report.jpg)
+
 图 32-2
 
 作为最后的测试，打开浏览器窗口并使用 `https://` 前缀导航到你的域名。页面应像以前一样加载，浏览器应指示浏览器与服务器之间的连接是安全的（通常由地址栏中的锁图标指示，点击它可以查看更多信息）：
 
 ![](img/rhel_8_web_site_secure.jpg)
+
 图 32-3
 
 ### 32.1 总结
@@ -6765,11 +6816,9 @@ Include /etc/letsencrypt/options-ssl-apache.conf
 
 许多系统使用 `Sendmail` `MTA` 传输电子邮件，在许多 Linux 发行版中这是默认的邮件传输代理。然而，`Sendmail` 是一个复杂的系统，对于初学者和资深用户来说都难以理解和配置。由于它认为其处理电子邮件消息的速度慢于许多较新的 `MTA`，它也正在失去青睐。
 
-许多系统管理员现在使用 `Postfix` 或 `Qmail` 来处理电子邮件。它们都比 `Sendmail` 更快且更于配置。
+许多系统管理员现在使用 `Postfix` 或 `Qmail` 来处理电子邮件。它们都比 `Sendmail` 更快且更易于配置。
 
 因此，为了本章的目的，我们将 `Postfix` 作为一种 `MTA`，因为它简单且流行。如果你更倾向于使用 `Sendmail`，有许多专门研究该主题的书籍，它们比我们本章的内容要深入得多。
-
-
 
 作为第一步，本章将介绍如何配置 Ubuntu 系统以作为一个全邮件服务器。在章节的后半部分，还将介绍如何使用 SMTP 中继服务的步骤。
 
@@ -6777,41 +6826,43 @@ Include /etc/letsencrypt/options-ssl-apache.conf
 
 在安装 Postfix 之前的第一步是确保你的系统中没有在运行 `Sendmail`。你可以使用以下命令进行检查：
 
-```
+```bash
 systemctl status sendmail
 ```
 
-如果系统中没有安装 `sendmail`，该工具将显示一条与以下内容类似的消息：
+
+
+如果系统中没有安装`sendmail`，该工具将显示一条与以下内容类似的消息：
 
 `Unit sendmail.service could not be found.`
 
-如果 `sendmail` 正在你的系统上运行，则在安装和配置 Postfix 之前必须停止它。要停止 `sendmail`，请运行以下命令：
+如果`sendmail`正在你的系统上运行，则在安装和配置 Postfix 之前必须停止它。要停止`sendmail`，请运行以下命令：
 
 ```
 systemctl stop sendmail
 ```
 
-下一步是确保在系统重启时 `sendmail` 不会重新启动：
+下一步是确保在系统重启时`sendmail`不会重新启动：
 
 ```
 systemctl disable sendmail
 ```
 
-现在，`Sendmail` 已经关闭，并且已被配置为在系统启动时不自动启动。可选情况下，若要从系统中完全删除 `sendmail`，请运行以下命令：
+现在，`Sendmail`已经关闭，并且已被配置为在系统启动时不自动启动。可选情况下，若要从系统中完全删除`sendmail`，请运行以下命令：
 
 ```
 apt remove sendmail
 ```
 
-## 33.4 防墙/路由器配置
+## 33.4 防火墙/路由器配置
 
-由于邮件消息的收发涉及网络连接，因此需要配置防火墙允许 SMTP 流量。如果 `firewalld` 处于激活状态，请如下方式使用 `firewall-cmd` 工具：
+由于邮件消息的收发涉及网络连接，因此需要配置防火墙允许 SMTP 流量。如果`firewalld`处于激活状态，请如下方式使用`firewall-cmd`工具：
 
 ```
 firewall-cmd --permanent --add-service=smtp
 ```
 
-或者，如果启用了 `ufw`，使用以下命令配置其允许 SMTP 流量：
+或者，如果启用了`ufw`，使用以下命令配置其允许 SMTP 流量：
 
 ```
 ufw allow Postfix
@@ -6823,31 +6874,31 @@ ufw allow Postfix
 
 ## 33.5 在 Ubuntu 上安装 Postfix
 
-默认情况下，Ubuntu 的安装过程会在大多数配置中安装 `postfix`。要验证 `postfix` 是否已安装，请使用以下 `apt` 命令：
+默认情况下，Ubuntu 的安装过程会在大多数配置中安装`postfix`。要验证`postfix`是否已安装，请使用以下`apt`命令：
 
 ```
 apt -qq list postfix
 ```
 
-如果 `apt` 报告 `postfix` 未安装，则可以通过以下方式安装：
+如果`apt`报告`postfix`未安装，则可以通过以下方式安装：
 
 ```
 apt install postfix
 ```
 
-在大多数情况下，“Internet Site”（互联网站点）选项将是最有用的选项。这将配置一些基础设置，用于发送和接收与你的网站域名相关的消息。选择此选项后，按下 `Enter` 键继续到下一个屏幕：
+在大多数情况下，"Internet Site"（互联网站点）选项将是最有用的选项。这将配置一些基础设置，用于发送和接收与你的网站域名相关的消息。选择此选项后，按下`Enter`键继续到下一个屏幕：
 
 ![](img/ubuntu_18.04_postfix_setup_domain.jpg)
 
 图 33-1
 
-在上面的屏幕上，在再次按下 `Enter` 键之前输入你的域名。
+在上面的屏幕上，在再次按下`Enter`键之前输入你的域名。
 
 ## 33.6 配置 Postfix
 
-`postfix` 的主要配置设置位于 `/etc/postfix/main.cf` 文件中。互联网上有许多资源提供了关于 `postfix` 的详细信息，因此本节将重点关注让邮件运行起来所需的基础选项。尽管 `apt` 安装设置了一些基础配置选项，但它往往会漏掉某些设置，并对其他设置进行错误的猜测，因此请务必仔细检查 `main.cf` 文件。
+`postfix`的主要配置设置位于`/etc/postfix/main.cf`文件中。互联网上有许多资源提供了关于`postfix`的详细信息，因此本节将重点关注让邮件运行起来所需的基础选项。尽管`apt`安装设置了一些基础配置选项，但它往往会漏掉某些设置，并对其他设置进行错误的猜测，因此请务必仔细检查`main.cf`文件。
 
-`main.cf` 文件中的关键选项是：
+`main.cf`文件中的关键选项是：
 
 ```
 myhostname = mta1.domain.com
@@ -6860,43 +6911,45 @@ mynetworks = subnet
 
 其他设置要么已由安装过程为你设置好，要么除非你觉得好奇并想配置一个更复杂的邮件系统，否则是不需要的。
 
-`myhostname` 的格式为 `host.domain.extension`。例如，如果你的 Linux 系统名为 `MyLinuxHost` 且你的互联网域名为 `MyDomain.com`，你将如下设置 `myhostname` 选项：
+`myhostname`的格式为`host.domain.extension`。例如，如果你的 Linux 系统名为`MyLinuxHost`且你的互联网域名为`MyDomain.com`，你将如下设置`myhostname`选项：
 
 ```
 myhostname = mylinuxhost.mydomain.com
 ```
 
-`mydomain` 设置仅仅是上述设置的域名部分。例如：
+`mydomain`设置仅仅是上述设置的域名部分。例如：
 
 ```
 mydomain = mydomain.com
 ```
 
-`myorigin` 设置定义了输出邮件在到达收件人收箱时看起来发自的域名名称，它应设置为你的域名：
+`myorigin`设置定义了输出邮件在到达收件人收箱时看起来发自的域名名称，它应设置为你的域名：
 
 ```
 myorigin = $mydomain
 ```
 
-也许最关键的参数之一 `mydestination` 与入站邮件有关，它声明此服务器作为最终投递地地的域名。任何发往不在此列表中的域名入站邮件都将被视为中继请求，根据 `mynetworks` 设置（下文概述），这通常会导致投递失败。
+也许最关键的参数之一`mydestination`与入站邮件有关，它声明此服务器作为最终投递地地的域名。任何发往不在此列表中的域名入站邮件都将被视为中继请求，根据`mynetworks`设置（下文概述），这通常会导致投递失败。
 
-`inet_interfaces` 设置定义了系统上允许 `postfix` 接收邮件的网络接口，通常被设置为 `all`：
+`inet_interfaces`设置定义了系统上允许`postfix`接收邮件的网络接口，通常被设置为`all`：
 
 ```
 inet_interfaces = all
 ```
 
-`mynetworks` 设置定义了哪些外部系统被信任可以使用服务器作为 SMTP 中继。该设置的可能值如下：
+`mynetworks`设置定义了哪些外部系统被信任可以使用服务器作为 SMTP 中继。该设置的可能值如下：
 
 * `host` - 仅本地系统受信任。所有外部客户端尝试使用服务器作为中继的尝试将被拒绝。
-* `subnet` - 仅允许同一网络子网上的系统使用服务器作为中继。例如，如果服务器的 IP 地址为 `192.168.1.29`，IP 地址为 `192.168.1.30` 的客户端系统将能够使用服务器作为中继。
+
+* `subnet` - 仅允许同一网络子网上的系统使用服务器作为中继。例如，如果服务器的 IP 地址为`192.168.1.29`，IP 地址为`192.168.1.30`的客户端系统将能够使用服务器作为中继。
+
 * `class` - 同一 IP 地址类内的系统可以使用服务器作为中继。
 
-信任的地址也可以通过手动指定子网、地址范围或引用文件来定义。以下示例声明了本地和子网 `192.168.0.0/24` 为信任地址。
+信任的地址也可以通过手动指定子网、地址范围或引用文件来定义。以下示例声明了本地和子网`192.168.0.0/24`为信任地址。
 
-对于此示例，将属性设置为 `subnet` 以以便网络上的任何其他系统发送邮件。
+对于此示例，将属性设置为`subnet`以以便网络上的任何其他系统发送邮件。
 
-`main.cf` 中的关键设置可能所示：
+`main.cf`中的关键设置可能所示：
 
 ```
 biff = no
@@ -6924,7 +6977,7 @@ smtpd_relay_restrictions = permit_mynetworks permit_sasl_authenticated defer_una
 
 ## 33.7 在 Ubuntu 系统上启动 Postfix
 
-一旦 `/etc/postfix/main.cf` 文件配置了正确的设置，现在是启动 Postfix 的时间了。可以通过如下命令行来实现实现：
+一旦`/etc/postfix/main.cf`文件配置了正确的设置，现在是启动 Postfix 的时间了。可以通过如下命令行来实现实现：
 
 ```
 systemctl start postfix
@@ -6942,9 +6995,7 @@ systemctl reload postfix
 systemctl enable postfix
 ```
 
-
-
-Postfix 进程现在应该启动了。验证一切运行正常的最佳方法是检查您的邮件日志。这通常位于 `/var/log/mail.log` 文件中，现在应该包含一条类似于下面的输出的条目：
+Postfix 进程现在应该启动了。验证一切运行正常的最佳方法是检查您的邮件日志。这通常位于`/var/log/mail.log`文件中，现在应该包含一条类似于下面的输出的条目：
 
 ```
 Mar 25 11:21:48 demo-server postfix/postfix-script[5377]: starting the Postfix mail system
@@ -6955,19 +7006,19 @@ Mar 25 11:21:48 demo-server postfix/master[5379]: daemon started -- version 3.3.
 
 # 33.9 测试 Postfix
 
-测试 postfix 配置的一种简单方法是在系统的本地用户之间发送电子邮件消息。若要进行快速测试，请按照如下方式使用 `mail` 工具（其中 `name` 和 `mydomain` 分别替换为系统上的用户名和您的域名名）：
+测试 postfix 配置的一种简单方法是在系统的本地用户之间发送电子邮件消息。若要进行快速测试，请按照如下方式使用`mail`工具（其中`name`和`mydomain`分别替换为系统上的用户名和您的域名名）：
 
 ```
 # mail name@mydomain.com
 ```
 
-如果无法使用 `mail` 工具，可以通过以下方式安装：
+如果无法使用`mail`工具，可以通过以下方式安装：
 
 ```
 # apt install mailutils
 ```
 
-在提示时，为邮件消息输入主题，然后输入消息正文。。要发送邮件消息，只需按 `Ctrl-D`。例如：
+在提示时，为邮件消息输入主题，然后输入消息正文。。要发送邮件消息，只需按`Ctrl-D`。例如：
 
 ```
 # mail demo@mydomain.com
@@ -6979,7 +7030,7 @@ This is a test message.
 EOT
 ```
 
-再次运行 `mail` 命令，这次使用另一个用户，并验证消息是否已发送并接收：
+再次运行`mail`命令，这次使用另一个用户，并验证消息是否已发送并接收：
 
 ```
 $ mail
@@ -6998,27 +7049,27 @@ Mar 25 13:41:37 demo-server postfix/local[7500]: 94FAF61E8F4A: to=<neil@mydomain
 Mar 25 13:41:37 demo-server postfix/qmgr[7154]: 94FAF61E8F4A: removed
 ```
 
-一旦本地邮件工作正常，尝试向外部地址（如 GMail 账户）发送邮件。此外，通过外部账户向您域名上的用户发送邮件，以测试接收邮件是否正常。在每种情况下，请检查 `/var/log/mail.log` 文件以获取任何错误的解释。
+一旦本地邮件工作正常，尝试向外部地址（如 GMail 账户）发送邮件。此外，通过外部账户向您域名上的用户发送邮件，以测试接收邮件是否正常。在每种情况下，请检查`/var/log/mail.log`文件以获取任何错误的解释。
 
 # 33.10 通过 SMTP 中继服务器发送邮件
 
-配置邮件服务器处理发出的邮件消息的替代方案是使用 SMTP 中继服务。如之前讨论过的，有许多可用服务，其中大多数可以通过网络搜索“SMTP Relay Service”来找到。这些服务中的大多数将要求您以某种方式验证您的域名，并提供 MX 记录以更新您的 DNS 设置。您还将获得一个用户名和密码，这些需要被添加到 postfix 配置中。本节其余部分假设 postfix 已经安装在您的系统中，并且您选择的 SMTP 中继提供商所需的所有初始步骤已完成。
+配置邮件服务器处理发出的邮件消息的替代方案是使用 SMTP 中继服务。如之前讨论过的，有许多可用服务，其中大多数可以通过网络搜索"SMTP Relay Service"来找到。这些服务中的大多数将要求您以某种方式验证您的域名，并提供 MX 记录以更新您的 DNS 设置。您还将获得一个用户名和密码，这些需要被添加到 postfix 配置中。本节其余部分假设 postfix 已经安装在您的系统中，并且您选择的 SMTP 中继提供商所需的所有初始步骤已完成。
 
-开始编辑 `/etc/postfix/main.cf` 文件，并使用您的域名配置 `myhostname` 参数：
+开始编辑`/etc/postfix/main.cf`文件，并使用您的域名配置`myhostname`参数：
 
 ```
 myhostname = mydomain.com
 ```
 
-接下来，在 `/etc/postfix` 中创建一个名为 `sasl_passwd` 的新文件，并添加一行包含中继服务提供的邮件服务器主机、用户名和密码的行。例如：
+接下来，在`/etc/postfix`中创建一个名为`sasl_passwd`的新文件，并添加一行包含中继服务提供的邮件服务器主机、用户名和密码的行。例如：
 
 ```
 [smtp.myprovider.com]:587 neil@mydomain.com:mypassword
 ```
 
-注意，上面的条目也指定了端口 `587`。如果没有此设置，postfix 将默认使用端口 `25`，而该端口被大多数 SMTP 中继服务提供商默认锁定。
+注意，上面的条目也指定了端口`587`。如果没有此设置，postfix 将默认使用端口`25`，而该端口被大多数 SMTP 中继服务提供商默认锁定。
 
-创建密码文件后，使用 `postmap` 工具生成包含邮件凭据的哈希数据库：
+创建密码文件后，使用`postmap`工具生成包含邮件凭据的哈希数据库：
 
 ```
 # postmap /etc/postfix/sasl_passwd
@@ -7031,13 +7082,13 @@ myhostname = mydomain.com
 # chmod 0600 /etc/postfix/sasl_passwd /etc/postfix/sasl_passwd.db
 ```
 
-再次编辑 `main.cf` 文件并添加条目以指定中继主机：
+再次编辑`main.cf`文件并添加条目以指定中继主机：
 
 ```
 relayhost = [smtp.myprovider.com]:587
 ```
 
-在 `main.cf` 文件中添加以下行以配置 SMTP 验证：
+在`main.cf`文件中添加以下行以配置 SMTP 验证：
 
 ```
 smtp_use_tls = yes
@@ -7063,11 +7114,11 @@ smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
 
 在 Ubuntu 上配置新磁盘有两种方法。一种方法是在硬盘上创建一个或多个分区，在分区上创建文件系统，然后将其挂载到特定的挂载点。这种方法将在本章介绍。
 
-另一种方法是将空间添加到现有的卷组。当安装 Ubuntu 时选择逻辑卷时，会创建一个名为 `vgubuntu` 的卷组。该卷组有两个名为 `root` 和 `swap_1` 的逻辑卷，分别用于 `/` 和交换分区。通过将新磁盘配置为卷组的一部分，我们可以增加现有逻辑卷的可用磁盘。通过这种方法，我们能够通过分配新磁盘上的部分或全部空间来增加 `/home` 文件系统的大小。
+另一种方法是将空间添加到现有的卷组。当安装 Ubuntu 时选择逻辑卷时，会创建一个名为`vgubuntu`的卷组。该卷组有两个名为`root`和`swap_1`的逻辑卷，分别用于`/`和交换分区。通过将新磁盘配置为卷组的一部分，我们可以增加现有逻辑卷的可用磁盘。通过这种方法，我们能够通过分配新磁盘上的部分或全部空间来增加`/home`文件系统的大小。
 
 ## 34.2 寻找硬盘
 
-本教程假设一个新的物理或虚拟硬盘已安装在系统中并对操作系统可见。一旦添加，新硬盘应被操作系统自动检测。通常，系统中的磁盘驱动被分配以 `sd` 开头加上表示设备数字字母的设备名称。例如，第一个设备可能是 `/dev/sda`，第二个可能是 `/dev/sdb`，依此类推。
+本教程假设一个新的物理或虚拟硬盘已安装在系统中并对操作系统可见。一旦添加，新硬盘应被操作系统自动检测。通常，系统中的磁盘驱动被分配以`sd`开头加上表示设备数字字母的设备名称。例如，第一个设备可能是`/dev/sda`，第二个可能是`/dev/sdb`，依此类推。
 
 以下是一个只有一个硬盘连接到 SATA 控制器的典型系统的输出：
 
@@ -7076,7 +7127,7 @@ smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
 /dev/sda /dev/sda1 /dev/sda2
 ```
 
-这显示由 `/dev/sda` 表示的磁盘驱动本身被分为 2 个分区，由 `/dev/sda1` 和 `/dev/sda2` 表示。
+这显示由`/dev/sda`表示的磁盘驱动本身被分为 2 个分区，由`/dev/sda1`和`/dev/sda2`表示。
 
 以下是安装第二个硬盘驱动后，同一系统的输出：
 
@@ -7085,17 +7136,13 @@ smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
 /dev/sda /dev/sda1 /dev/sda2 /dev/sdb
 ```
 
-如所示，新硬盘已被分配给设备文件 `/dev/sdb`。目前该硬盘没有显示分区（因为我们尚未创建任何分区）。
-
-
-
-
+如所示，新硬盘已被分配给设备文件`/dev/sdb`。目前该硬盘没有显示分区（因为我们尚未创建任何分区）。
 
 此时，我们有两种选择：在新驱动器上创建分区和文件系统并挂载它们以便访问，或者将磁盘作为物理卷添加到卷组中。若要执行前者，请继续本章节；否则，请阅读向 Ubuntu 卷组和逻辑卷添加新磁盘以了解配置逻辑卷的详情。
 
 ## 34.3 创建 Linux 分区
 
-下一步是在新磁盘驱动器上创建一个或多个 Linux 分区。这是通过 `fdisk` 工具实现的，它将要分区的设备作为命令行参数传递：
+下一步是在新磁盘驱动器上创建一个或多个 Linux 分区。这是通过`fdisk`工具实现的，它将要分区的设备作为命令行参数传递：
 
 ```
 fdisk /dev/sdb
@@ -7110,7 +7157,7 @@ Created a new DOS disklabel with disk identifier 0xbd09c991.
 Command (m for help):
 ```
 
-要查看磁盘上的当前分区，请输入 `p` 命令：
+要查看磁盘上的当前分区，请输入`p`命令：
 
 ```
 Command (m for help): p
@@ -7122,9 +7169,11 @@ Disklabel type: dos
 Disk identifier: 0xbd09c991
 ```
 
-如从上面的 fdisk 输出中所示，磁盘目前没有分区，因为它是一个之前未使用的磁盘。下一步是在磁盘上创建一个新分区，该任务通过输入 `n`（代表新分区）和 `p`（代表主分区）来完成：
+如从上面的 fdisk 输出中所示，磁盘目前没有分区，因为它是一个之前未使用的磁盘。下一步是在磁盘上创建一个新分区，该任务通过输入`n`（代表新分区）和`p`（代表主分区）来完成：
 
-``````
+
+
+```
 Command (m for help): n
 Partition type
    p primary (0 primary, 0 extended, 4 free)
@@ -7142,17 +7191,19 @@ Created a new partition 1 of type ‘Linux’ and of size 8 GiB.
 Command (m for help):
 ```
 
-现在我们已经指定了分区，需要使用 `w` 命令将其写入磁盘：
+现在我们已经指定了分区，需要使用`w`命令将其写入磁盘：
 
 ```
 Command (m for help): w
 ```
 
 分区表已修改。
-正在调用 `ioctl()` 重新读取分区表。
+
+正在调用`ioctl()`重新读取分区表。
+
 正在同步磁盘。
 
-如果我们现在再次查看设备，将看到新分区作为 `/dev/sdb1` 可见：
+如果我们现在再次查看设备，将看到新分区作为`/dev/sdb1`可见：
 
 ```
 ls /dev/sd*
@@ -7163,7 +7214,7 @@ ls /dev/sd*
 
 ## 34.4 在磁盘上创建文件系统
 
-现在我们已经安装了一个新磁盘，它对 Ubuntu 可见，并且我们在磁盘上配置了一个 Linux 分区。下一步是在分区上创建一个文件系统，以便操作系统可以使用它存储文件和数据。在分区上创建文件系统的简单方法是使用 `mkfs.xfs` 工具：
+现在我们已经安装了一个新磁盘，它对 Ubuntu 可见，并且我们在磁盘上配置了一个 Linux 分区。下一步是在分区上创建一个文件系统，以便操作系统可以使用它存储文件和数据。在分区上创建文件系统的简单方法是使用`mkfs.xfs`工具：
 
 ```
 apt install xsprogs
@@ -7176,25 +7227,25 @@ mkfs.xfs /dev/sdb1
 
 日志文件系统会在磁盘写入期间对文件系统所做的更改保留日志或记录，这些日志可以用于快速恢复由于系统崩溃或停电等事件可能导致的损坏。
 
-使用日志文件系统有很多优势。多年来，存储在磁盘驱动器上的数据大小和都在增长。非日志文件系统的问题是，崩溃后必须运行 `fsck`（文件系统一致性检查）工具。`fsck` 工具将扫描整个文件系统，验证所有条目并确保块被正确分配和引用。如果它发现损坏的条目，它将尝试修复问题。这里的问题有两个方面：首先，`fsck` 工具并不总是能够修复损坏，你最终会在 `lost+found` 目录中得到数据，而系统不再知道它们原来在哪里。另一个问题是时间问题。在大文件系统上完成 `fsck` 过程可能需要很长时间，可能导致不可接受的停机时间。
+使用日志文件系统有很多优势。多年来，存储在磁盘驱动器上的数据大小和都在增长。非日志文件系统的问题是，崩溃后必须运行`fsck`（文件系统一致性检查）工具。`fsck`工具将扫描整个文件系统，验证所有条目并确保块被正确分配和引用。如果它发现损坏的条目，它将尝试修复问题。这里的问题有两个方面：首先，`fsck`工具并不总是能够修复损坏，你最终会在`lost+found`目录中得到数据，而系统不再知道它们原来在哪里。另一个问题是时间问题。在大文件系统上完成`fsck`过程可能需要很长时间，可能导致不可接受的停机时间。
 
-相反，日志文件系统在磁盘的日志区域记录信息（日志和记录不需要在同一设备上），这是在每次写入期间进行的。日志记录的信息是可配置的，范围从从不记录任何内容到记录元数据（例如所有权、时间戳等），以及写入文件系统的实际块。一旦日志更新，系统就会在文件系统中标记数据已提交。崩溃后可以使用日志非常快速地恢复在线，从而将使用 `fsck` 需要几分钟的时间缩短到几秒钟，此外如此。
+相反，日志文件系统在磁盘的日志区域记录信息（日志和记录不需要在同一设备上），这是在每次写入期间进行的。日志记录的信息是可配置的，范围从从不记录任何内容到记录元数据（例如所有权、时间戳等），以及写入文件系统的实际块。一旦日志更新，系统就会在文件系统中标记数据已提交。崩溃后可以使用日志非常快速地恢复在线，从而将使用`fsck`需要几分钟的时间缩短到几秒钟，此外如此。
 
 ## 34.6 挂载文件系统
 
-现在我们已经在新磁盘的 Linux 分区上创建了文件系统，我们需要挂载它以便访问和使用。为了这一点，我们需要创建一个挂载点。挂载点简单来说就是挂载文件系统的目录或文件夹。为了本示例，我们将创建一个 `/backup` 目录以匹配文件系统（尽管这些值并不匹配）：
+现在我们已经在新磁盘的 Linux 分区上创建了文件系统，我们需要挂载它以便访问和使用。为了这一点，我们需要创建一个挂载点。挂载点简单来说就是挂载文件系统的目录或文件夹。为了本示例，我们将创建一个`/backup`目录以匹配文件系统（尽管这些值并不匹配）：
 
 ```
 mkdir /backup
 ```
 
-然后可以使用 `mount` 命令手动挂载文件系统：
+然后可以使用`mount`命令手动挂载文件系统：
 
 ```
 mount /dev/sdb1 /backup
 ```
 
-不带任何参数运行 `mount` 命令将显示所有已挂载的文件系统（包括我们的新文件系统）：
+不带任何参数运行`mount`命令将显示所有已挂载的文件系统（包括我们的新文件系统）：
 
 ```
 mount
@@ -7207,25 +7258,25 @@ proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
 
 ## 34.7 配置 Ubuntu 自动挂载文件系统
 
-为了设置系统在启动时自动挂载新文件系统，需要在 `/etc/fstab` 文件中添加条目。`fstab` 条目的格式如下：
+为了设置系统在启动时自动挂载新文件系统，需要在`/etc/fstab`文件中添加条目。`fstab`条目的格式如下：
 
 `<device> <dir> <type> <options> <dump> <fsck>`
 
 这些条目可以总结如下：
 
 - `<device>` - 要挂载文件系统的设备。
+
 - `<dir>` - 作为文件系统挂载点的目录。
+
 - `<type>` - 文件系统类型（xfs, ext4 等）。
-- `<options>` - 额外的文件系统挂载选项，例如使文件系统变为只读或控制哪些用户可以挂载文件系统。运行 `man mount` 查看完整的选项列表。将此值设置为默认值将使用文件系统的默认设置（rw, suid, dev, exec, auto, nouser, async）。
 
+- `<options>` - 额外的文件系统挂载选项，例如使文件系统变为只读或控制哪些用户可以挂载文件系统。运行`man mount`查看完整的选项列表。将此值设置为默认值将使用文件系统的默认设置（rw, suid, dev, exec, auto, nouser, async）。
 
+- `dump` - 决定文件系统内容是否包含在由`dump`工具执行的任何备份中。此设置很少使用，可以使用值`0`禁用。
 
+- `fsck` - 决定在系统崩溃后是否由`fsck`对文件系统进行检查，以及检查文件检查的顺序。对于诸如`XFS`等带日志的文件系统，应将此项设置为`0`，以表示不需要检查。
 
-
-- `dump` - 决定文件系统内容是否包含在由 `dump` 工具执行的任何备份中。此设置很少使用，可以使用值 `0` 禁用。
-- `fsck` - 决定在系统崩溃后是否由 `fsck` 对文件系统进行检查，以及检查文件检查的顺序。对于诸如 `XFS` 等带日志的文件系统，应将此项设置为 `0`，以表示不需要检查。
-
-以下示例显示了一个配置好的 `fstab` 文件，该文件将我们的 `/backup` 分区自动挂载到 `/dev/sdb1` 分区（分区）上：
+以下示例显示了一个配置好的`fstab`文件，该文件将我们的`/backup`分区自动挂载到`/dev/sdb1`分区（分区）上：
 
 ```
 /dev/mapper/vgubuntu-root / ext4 errors=remount-ro 0 1
@@ -7233,90 +7284,95 @@ proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
 /dev/sdb1 /backup xfs defaults 0 0
 ```
 
-现在，`/backup` 文件系统将在每次系统重新启动时自动挂载。
+现在，`/backup`文件系统将在每次系统重新启动时自动挂载。
 
 ## 34.8 使用 Cockpit 添加磁盘
 
-除了使用本章概述的命令行工具进行存储操作外，还可以使用 Cockpit Web 控制台配置新的存储设备。要查看当前的存储配置，请登录 Cockpit 控制台并选择 `Storage`（存储）选项，如图图 34-1 所示：
+除了使用本章概述的命令行工具进行存储操作外，还可以使用 Cockpit Web 控制台配置新的存储设备。要查看当前的存储配置，请登录 Cockpit 控制台并选择`Storage`（存储）选项，如图图 34-1 所示：
 
 ![](img/ubuntu_20.04_cockpit_storage1.jpg)
 
 图 34-1
 
-找到新添加的存储，滚动到 `Storage` 页面的底部直到 `Drives`（驱动器）部分可见（注意 `Drives` 部分也可能位于屏幕的右上角）：
+找到新添加的存储，滚动到`Storage`页面的底部直到`Drives`（驱动器）部分可见（注意`Drives`部分也可能位于屏幕的右上角）：
 
 ![](img/ubuntu_20.04_cockpit_storage_disks.jpg)
 
 图 34-2
 
-在上述图中，新驱动器是 10 GiB 的驱动器。选择新驱动器以显示 `Drive` 屏幕，如图图 34-3 所示：
+在上述图中，新驱动器是 10 GiB 的驱动器。选择新驱动器以显示`Drive`屏幕，如图图 34-3 所示：
 
 ![](img/ubuntu_20.04_cockpit_storage_disk_details.jpg)
 
 图 34-3
 
-点击 `Create Partition Table`（创建分区表）按钮，在弹出的对话框中，接受默认设置后点击 `Format`（格式化）按钮：
+点击`Create Partition Table`（创建分区表）按钮，在弹出的对话框中，接受默认设置后点击`Format`（格式化）按钮：
 
 ![](img/ubuntu_20.04_cockpit_storage_format.jpg)
 
 图 34-4
 
-返回主 `Storage` 屏幕，点击 `Create Partition`（创建分区）按钮并使用对话框指定分配给此分区的空间大小、文件系统类型（推荐 `XFS`）以及可选的标签、文件系统挂载点和挂载选项。注意，如果此新分区未使用所有可用空间，随后可以在驱动器上添加附加分区。要更改文件系统是否为只读或在启动时挂载等设置，请将 `Mounting`（挂载）菜单选项更改为 `Custom`（自定义）并调整切换按钮设置：
+返回主`Storage`屏幕，点击`Create Partition`（创建分区）按钮并使用对话框指定分配给此分区的空间大小、文件系统类型（推荐`XFS`）以及可选的标签、文件系统挂载点和挂载选项。注意，如果此新分区未使用所有可用空间，随后可以在驱动器上添加附加分区。要更改文件系统是否为只读或在启动时挂载等设置，请将`Mounting`（挂载）菜单选项更改为`Custom`（自定义）并调整切换按钮设置：
 
 ![](img/ubuntu_20.04_cockpit_storage_create_partition.jpg)
 
 图 34-5
 
-一旦选择设置，点击 `Create partition` 按钮提交更改。创建完成后，新分区将添加到磁盘，创建相应的文件系统并挂载到指定的挂载点，同时对 `/etc/fstab` 文件进行相应更改。
+一旦选择设置，点击`Create partition`按钮提交更改。创建完成后，新分区将添加到磁盘，创建相应的文件系统并挂载到指定的挂载点，同时对`/etc/fstab`文件进行相应更改。
 
 ## 34.9 总结
 
-本章涵盖了为现有 Ubuntu 系统添加额外的物理或虚拟磁盘驱动器的主题。这是一个相对简单的过程，只需确保操作系统检测到新驱动器，在驱动器上创建一个或多个分区，然后在这些分区上创建文件系统。虽然 Ubuntu 上有多种不同的文件系统类型，但通常推荐使用 `XFS`。一旦文件系统准备就绪，它们可以使用 `mount` 命令进行挂载。为了让新创建的文件系统在系统启动时自动挂载，可以在 `/etc/fstab` 配置文件中进行添加。
+本章涵盖了为现有 Ubuntu 系统添加额外的物理或虚拟磁盘驱动器的主题。这是一个相对简单的过程，只需确保操作系统检测到新驱动器，在驱动器上创建一个或多个分区，然后在这些分区上创建文件系统。虽然 Ubuntu 上有多种不同的文件系统类型，但通常推荐使用`XFS`。一旦文件系统准备就绪，它们可以使用`mount`命令进行挂载。为了让新创建的文件系统在系统启动时自动挂载，可以在`/etc/fstab`配置文件中进行添加。
 
 ## 35. 向 Ubuntu 卷组和逻辑卷添加新磁盘
 
-在上一章中，我们查看了向 Ubuntu 系统添加新磁盘驱动器、创建分区和文件系统，然后挂载该文件系统以便访问磁盘。创建固定分区和文件系统的替代方案是使用逻辑卷管理 (`LVM`）来创建由一个或多个物理或虚拟磁盘或分区的空间组成的逻辑磁盘。使用 `LVM` 的优势在于可以根据需要向逻辑卷中添加或删除空间，而无需将数据分散在多个文件系统上。
+在上一章中，我们查看了向 Ubuntu 系统添加新磁盘驱动器、创建分区和文件系统，然后挂载该文件系统以便访问磁盘。创建固定分区和文件系统的替代方案是使用逻辑卷管理 (`LVM`）来创建由一个或多个物理或虚拟磁盘或分区的空间组成的逻辑磁盘。使用`LVM`的优势在于可以根据需要向逻辑卷中添加或删除空间，而无需将数据分散在多个文件系统上。
 
-让我们以基于 Ubuntu 的服务器的根（`/`）文件系统为例。如果没有 `LVM`，该文件系统在安装操作系统时将以特定大小创建。如果安装了新磁盘驱动器，没有方法将该空间的任何部分分配给 `/` 文件系统。唯一的选项是在新磁盘上创建新文件系统并将其挂载到特定的挂载点。在这种情况下，你在新文件系统上有充足的空间，但 `/` 文件系统仍然几乎是满的。唯一的选择是将文件移动到新文件系统。通过 `LVM`，可以将新磁盘（或其部分）分配给包含根文件系统的逻辑卷，从而动态地扩展可用空间。
+让我们以基于 Ubuntu 的服务器的根（`/`）文件系统为例。如果没有`LVM`，该文件系统在安装操作系统时将以特定大小创建。如果安装了新磁盘驱动器，没有方法将该空间的任何部分分配给`/`文件系统。唯一的选项是在新磁盘上创建新文件系统并将其挂载到特定的挂载点。在这种情况下，你在新文件系统上有充足的空间，但`/`文件系统仍然几乎是满的。唯一的选择是将文件移动到新文件系统。通过`LVM`，可以将新磁盘（或其部分）分配给包含根文件系统的逻辑卷，从而动态地扩展可用空间。
 
 在本章中，我们将查看向卷组和逻辑卷添加新磁盘空间所需的步骤，其目的是为 Ubuntu 系统的根文件系统添加额外空间。
 
 ### 35.1 逻辑卷管理 (LVM) 概述
 
-`LVM` 提供了一种灵活管理空间的方法。不是将每个磁盘驱动器划分为创建固定大小文件系统的固定分区，`LVM` 提供了一种将空间组合成逻辑卷的方法，可以轻松调整大小和移动。此外`LVM` 允许通过分配不同的卷组或逻辑卷来精细控制分配给用户的磁盘空间。
+`LVM`提供了一种灵活管理空间的方法。不是将每个磁盘驱动器划分为创建固定大小文件系统的固定分区，`LVM`提供了一种将空间组合成逻辑卷的方法，可以轻松调整大小和移动。此外`LVM`允许通过分配不同的卷组或逻辑卷来精细控制分配给用户的磁盘空间。
 
 LVM 由以下组件组成：
 
 #### 35.1.1 卷组 (Volume Group)
-`Volume Group` 是包含一个或多个逻辑卷和物理卷的高层容器。
+
+`Volume Group`是包含一个或多个逻辑卷和物理卷的高层容器。
 
 #### 35.1.2 物理卷 (Physical Volume)
-`Physical Volume` 代表磁盘驱动器或其他存储介质。
+
+`Physical Volume`代表磁盘驱动器或其他存储介质。
 
 #### 35.1.3 逻辑卷 (Logical Volume)
-`Logical Volume` 相当于磁盘分区，作为分区，它可以包含文件系统。
+
+`Logical Volume`相当于磁盘分区，作为分区，它可以包含文件系统。
 
 #### 35.1.4 物理区 (Physical Extent)
+
 每个物理卷 (`PV`) 被划分为称为物理区的等大小块。
 
 #### 35.1.5 逻辑区 (Logical Extent)
+
 每个逻辑卷 (`LV`) 被划分为称为逻辑区的等大小块。
 
-假设我们要创建一个名为 `VolGroup001` 的新卷组。该卷组需要磁盘空间运行，因此我们分配三个磁盘分区 `/dev/sda1`、`/dev/sdb1` 和 `/dev/sdb2`。这些成为 `VolGroup001` 中的物理卷。随后我们在由这些物理卷组成的卷组内创建一个名为 `LogVol001` 的逻辑卷。
+假设我们要创建一个名为`VolGroup001`的新卷组。该卷组需要磁盘空间运行，因此我们分配三个磁盘分区`/dev/sda1`、`/dev/sdb1`和`/dev/sdb2`。这些成为`VolGroup001`中的物理卷。随后我们在由这些物理卷组成的卷组内创建一个名为`LogVol001`的逻辑卷。
 
-如果 `LogVol001` 空间不足，只需添加更多磁盘分区作为物理卷并将其分配给卷组和逻辑卷即可。
+如果`LogVol001`空间不足，只需添加更多磁盘分区作为物理卷并将其分配给卷组和逻辑卷即可。
 
 ## 35.2 获取逻辑卷信息
 
-作为在 Ubuntu 中使用 `LVM` 的示例，我们将通过为标准 Ubuntu 安装的 `/` 文件系统添加空间的示例。考虑到根分区大小的灵活性需求（当然，假设在 Ubuntu 安装过程中选择了 LVM 分区选项），Ubuntu 将 `/` 文件系统设置为名为 `vgubuntu` 的卷组内的逻辑卷（名为 `root`）。然而，在对 `LVM` 设置进行任何更改之前，收集信息是重要的。
+作为在 Ubuntu 中使用`LVM`的示例，我们将通过为标准 Ubuntu 安装的`/`文件系统添加空间的示例。考虑到根分区大小的灵活性需求（当然，假设在 Ubuntu 安装过程中选择了 LVM 分区选项），Ubuntu 将`/`文件系统设置为名为`vgubuntu`的卷组内的逻辑卷（名为`root`）。然而，在对`LVM`设置进行任何更改之前，收集信息是重要的。
 
-运行 `mount` 命令将输出范围挂载点的信息，包括根文件系统的条目：
+运行`mount`命令将输出范围挂载点的信息，包括根文件系统的条目：
 
 ```
 /dev/mapper/vgubuntu-root on / type ext4 (rw,relatime,errors=remount-ro)
 ```
 
-可以使用 `vgdisplay` 命令获取卷组信息：
+可以使用`vgdisplay`命令获取卷组信息：
 
 ```
 # vgdisplay
@@ -7327,8 +7383,6 @@ LVM 由以下组件组成：
   Format lvm2
   Metadata Areas 1
 ```
-
-
 
 # 元数据序列号 3
 
@@ -7360,7 +7414,7 @@ PE 大小 4.00 MiB
 
 VG UUID hqaagb-OgB5-3DhK-qLoN-bRHU-jsFm-LrdXtT
 
-如上面的示例所示，`vgubuntu` 卷组的物理区大小为 `4.00MiB`，总共有约 73GB 的可用空间分配给逻辑卷。目前已分配了 18879 个物理区，等同于总容量。因此，如果我们想增加分配给 `vgubuntu` 卷组中任何逻辑卷的空间，我们需要添加一个或多个物理卷。`vgs` 工具也用于快速显示系统中卷组中可用空间的概述：
+如上面的示例所示，`vgubuntu`卷组的物理区大小为`4.00MiB`，总共有约 73GB 的可用空间分配给逻辑卷。目前已分配了 18879 个物理区，等同于总容量。因此，如果我们想增加分配给`vgubuntu`卷组中任何逻辑卷的空间，我们需要添加一个或多个物理卷。`vgs`工具也用于快速显示系统中卷组中可用空间的概述：
 
 ```
 # vgs
@@ -7369,7 +7423,7 @@ VG #PV #LV #SN Attr VSize VFree
 vgubuntu 1 2 0 wz--n- <73.75g 0
 ```
 
-同样，可以使用 `lvdisplay` 命令获取卷组中逻辑卷的信息：
+同样，可以使用`lvdisplay`命令获取卷组中逻辑卷的信息：
 
 ```
 # lvdisplay
@@ -7408,9 +7462,9 @@ LV Size 980.00 MiB
 块设备 253:1
 ```
 
-如上面的示例所示，卷组 `vgubuntu` 中约 72 GiB 的空间被分配给逻辑卷 `root`（用于 `/` 文件系统），980 MiB 分配给了 `swap_1`（用于交换空间）。
+如上面的示例所示，卷组`vgubuntu`中约 72 GiB 的空间被分配给逻辑卷`root`（用于`/`文件系统），980 MiB 分配给了`swap_1`（用于交换空间）。
 
-现在我们知道了使用了哪些空间，了解哪些设备提供了这些空间（即哪些设备被用作物理卷）通常很有帮助。要获取这些信息，我们需要运行 `pvdisplay` 命令：
+现在我们知道了使用了哪些空间，了解哪些设备提供了这些空间（即哪些设备被用作物理卷）通常很有帮助。要获取这些信息，我们需要运行`pvdisplay`命令：
 
 ```
 # pvdisplay
@@ -7427,7 +7481,7 @@ PE Size 4.00 MiB
 PV UUID nwp55K-Chay-x5eB-kZcc-sonL-cm3E-3SWnKG
 ```
 
-显然，逻辑卷 `vgubuntu` 控制的空间是通过位于 `/dev/sda1` 的物理卷提供的。
+显然，逻辑卷`vgubuntu`控制的空间是通过位于`/dev/sda1`的物理卷提供的。
 
 现在我们对自己的 LVM 配置有了进一步的了解，可以开始向卷组及其包含的逻辑卷添加空间的过程了。
 
@@ -7435,7 +7489,7 @@ PV UUID nwp55K-Chay-x5eB-kZcc-sonL-cm3E-3SWnKG
 
 与之前收集 Ubuntu 系统当前逻辑卷管理信息的步骤一样，对此配置的更改可以通过命令行进行。
 
-在本章的剩余部分中，我们假设系统已添加了一个新磁盘，并且操作系统将其识别为 `/dev/sdb`。我们还假设这是一块不包含任何现有分区的空磁盘。如果存在现有分区，应先对其进行备份，然后使用 `fdisk` 实用程序从磁盘删除分区。例如，假设表示 `/dev/sdb` 的设备包含如下分区：
+在本章的剩余部分中，我们假设系统已添加了一个新磁盘，并且操作系统将其识别为`/dev/sdb`。我们还假设这是一块不包含任何现有分区的空磁盘。如果存在现有分区，应先对其进行备份，然后使用`fdisk`实用程序从磁盘删除分区。例如，假设表示`/dev/sdb`的设备包含如下分区：
 
 ```bash
 # fdisk -l /dev/sdb
@@ -7452,6 +7506,8 @@ Device Start End Sectors Size Type
 
 一旦此分区上的任何文件系统已卸载，就可以按照以下方式删除它们：
 
+
+
 ```bash
 # fdisk /dev/sdb
 
@@ -7467,8 +7523,6 @@ Device Start End Sectors Size Type
 ```
 
 （注：由于提供的原文中存在大量重复和乱码，译文已根据逻辑结构进行了清理和翻译。）
-
-
 
 维护 Ubuntu 系统性能的一个重要部分是确保有足够的交换空间（swap space），以与系统的内存需求相匹配。因此，本章的目标是概述 Ubuntu 交换空间管理。
 
@@ -7497,7 +7551,7 @@ Ubuntu 推荐的交换空间取决于多个因素，包括系统内存的大小�
 
 对于内存配置超过 24GB 的系统，请参考以下网页以获取交换空间指南：
 
-[`help.ubuntu.com/community/SwapFaq`](https://help.ubuntu.com/community/SwapFaq%20)
+[`help.ubuntu.com/community/SwapFaq`](https://help.ubuntu.com/community/SwapFaq)
 
 当系统进入休眠时，当前的系统状态会被写入硬盘，主机将关闭。当机器随后开机时，系统状态将从硬盘恢复。这与挂起（suspension）不同，在挂起状态下系统状态存储在 RAM 中。机器进入睡眠状态，系统 RAM 保持供电而其他设备关闭。
 
@@ -7510,7 +7564,8 @@ cat /proc/swaps
 ```
 
 文件名 类型 大小 使用 优先级
-/dev/dm-1 分区 4169724 41484 -2
+
+`/dev/dm-1` 分区 4169724 41484 -2
 
 或者，可以使用 `swapon` 命令：
 
@@ -7519,7 +7574,8 @@ swapon
 ```
 
 名称 类型 大小 使用 优先级
-/dev/dm-1 分区 4G 40.5M -2
+
+`/dev/dm-1` 分区 4G 40.5M -2
 
 若要查看相对于总可用 RAM 的交换空间大小，可以使用 `free` 命令：
 
@@ -7539,7 +7595,9 @@ dd if=/dev/zero of=/newswap bs=1024 count=2000000
 ```
 
 2000000+0 records in
+
 2000000+0 records out
+
 2048000000 bytes (2.0 GB, 1.9 GiB) copied, 3.62697 s, 565 MB/s
 
 在将文件转换为交换文件之前，务必确保该文件设置了安全的权限：
@@ -7555,6 +7613,7 @@ mkswap /newswap
 ```
 
 设置交换空间版本 1, 大小 = 1.9 GiB (2047995904 bytes)
+
 no label, UUID=4ffc238d-7fde-4367-bd98-c5c46407e535
 
 创建并配置交换文件后，可以使用 `swapon` 实用程序将其实时添加到系统中：
@@ -7570,9 +7629,10 @@ swapon
 ```
 
 名称 类型 大小 使用 优先级
-/dev/dm-1 分区 4G 0B -2
-/newswap 文件 1.9G 0B -3
-```
+
+`/dev/dm-1` 分区 4G 0B -2
+
+`/newswap` 文件 1.9G 0B -3
 
 可以使用 `swapoff` 实用程序动态移除交换空间，如下：
 
@@ -7606,24 +7666,24 @@ swapoff /dev/db1
 
 最后，将条目添加到 `/etc/fstab` 以确保持久性：
 
-`/dev/db1` swap `swap` `defaults` 0 0`
-
-
+`/dev/db1` swap `swap` `defaults` 0 0
 
 上述输出表示卷组（volume group）内没有可用空间。然而，假设我们需要为系统的交换分区（swap）添加 8 GB 空间。显然，这需要向卷组添加更多空间。为了本示例，我们假设有一个大小为 8 GB 且表示为 `/dev/sdb` 的磁盘可添加到卷组。第一步是将此分区转换为物理卷（physical volume）：
 
-```
+```bash
 # pvcreate /dev/sdb
 ```
+
 物理卷 `/dev/sdb` 已成功创建。
 
 如果创建失败并显示类似“Device `/dev/sdb` excluded by a filter”（设备被过滤器排除）的消息，则可能需要在创建物理卷之前擦除磁盘：
 
-```
+```bash
 # wipefs -a /dev/sdb
 ```
 
-```/dev/sdb: 8 bytes were erased at offset 0x00000200 (gpt): 45 46 49 20 50 41 52 54
+```bash
+/dev/sdb: 8 bytes were erased at offset 0x00000200 (gpt): 45 46 49 20 50 41 52 54
 /dev/sdb: 8 bytes were erased at offset 0x1fffffe00 (gpt): 45 46 49 20 50 41 52 54
 /dev/sdb: 2 bytes were erased at offset 0x000001fe (PMBR): 55 aa
 /dev/sdb: calling ioctl to re-read partition table: Success
@@ -7631,14 +7691,15 @@ swapoff /dev/db1
 
 接下来，需要扩展卷组以使用此额外的物理卷：
 
-```
+```bash
 # vgextend vgubuntu /dev/sdb
 ```
+
 卷组 "vgubuntu" 已成功扩展
 
 此时，`vgs` 命令应该报告卷组已添加了 10 GB 的空间：
 
-```
+```bash
 # vgs
   VG #PV #LV #SN Attr VSize VFree
   vgubuntu 2 2 0 wz--n- 83.74g <10.00g
@@ -7646,26 +7707,27 @@ swapoff /dev/db1
 
 既然卷组中已经有了可用空间，就可以扩展交换逻辑卷（swap logical volume）以利用该空间。首先，使用 `swapoff` 工具关闭交换：
 
-```
+```bash
 # swapoff /dev/vgubuntu/swap_1
 ```
 
 接下来，扩展逻辑卷以使用新空间：
 
-```
+```bash
 # lvextend -L+9.7GB /dev/vgubuntu/swap_1
 ```
+
 Rounding size to boundary between physical extents: 9.70 GiB.
 Size of logical volume `vgubuntu/swap_1` changed from 980.00 MiB (245 extents) to 10.66 GiB (2729 extents).
 Logical volume `vgubuntu/swap_1` successfully resized.
 
 在逻辑卷上重新创建交换：
 
-```
+```bash
 # mkswap /dev/vgubuntu/swap_1
 ```
 
-```
+```bash
 mkswap: /dev/vgubuntu/swap_1: warning: wiping old swap signature.
 Setting up swapspace version 1, size = 10.7 GiB (11446251520 bytes)
 no label, UUID=447fb9e5-5473-4f2c-96f8-839b1457d3ed
@@ -7673,17 +7735,17 @@ no label, UUID=447fb9e5-5473-4f2c-96f8-839b1457d3ed
 
 接下来，重新开启交换：
 
-```
+```bash
 # swapon /dev/vgubuntu/swap_1
 ```
 
 最后，使用 `swapon` 命令验证系统已添加的交换空间：
 
-```
+```bash
 # swapon
 ```
 
-```
+```bash
 NAME TYPE SIZE USED PRIO
 /dev/dm-1 partition 10.7G 0B -2
 ```
@@ -7704,7 +7766,7 @@ Ubuntu 提供了一套指南，根据系统安装的 RAM 数量建议分配的�
 
 要获取当前在单个终端或命令行提示符会话中运行的活动用户进程列表，如下所示使用 `ps` 命令：
 
-```
+```bash
 $ ps
   PID TTY TIME CMD
 10395 pts/1 00:00:00 bash
@@ -7714,8 +7776,6 @@ $ ps
 `ps` 命令的输出显示，当前终端窗口或命令行提示符会话中当前有两个用户进程运行，即执行命令的 bash shell。
 
 *(注：由于原文文本中存在大量重复的 `ps` 描述，此处已根据指令翻译并保留了核心逻辑。)*
-
-
 
 要更改列出的进程（例如列出所有进程或仅列出您自己的进程），请使用图 37-3 所示的菜单：
 
@@ -7753,7 +7813,7 @@ $ ps
 
 如“Ubuntu Cockpit Web 界面概述”章节所述，可以使用 Cockpit Web 界面执行一些基础系统监控。前一节还解释了如何使用 GNOME 系统监视工具来监控进程和系统资源。在本章中，我们还探索了如何使用 `ps` 命令提供 Ubuntu 系统上正在运行进程的快照视图。然而，`ps` 命令无法提供系统进程和资源使用的实时视图。要从命令行提示符实时监控系统资源和进程，`htop` 命令是一个理想工具。尽管它通常没有默认安装，但可以通过以下方式安装：
 
-```
+```bash
 apt install htop
 ```
 
@@ -7792,11 +7852,10 @@ df -h
 Filesystem Size Used Avail Use% Mounted on
 udev 1.8G 0 1.8G 0% /dev
 tmpfs 374M 1.7M 372M 1% /run
-/dev/sda5 92G 7.2G 80G 9% /
+`/dev/sda5` 92G 7.2G 80G 9% /
 tmpfs 1.9G 0 1.9G 0% /dev/shm
 tmpfs 5.0M 4.0K 5.0M 1% /run/lock
 tmpfs 1.9G 0 1.9G 0% /sys/fs/cgroup
-```
 
 在上述输出中，根文件系统 (`/`) 当前仅使用 7.2GB 空间，留下了 80GB 可用空间。
 
@@ -7806,7 +7865,7 @@ tmpfs 1.9G 0 1.9G 0% /sys/fs/cgroup
 free
 ```
 
-```
+```bash
               total used free shared buff/cache available
 Mem: 3823720 879916 1561108 226220 1382696 2476300
 ```
@@ -7817,7 +7876,7 @@ Mem: 3823720 879916 1561108 226220 1382696 2476300
 free -s 1
 ```
 
-```
+```bash
 Mem: 3823720 879472 1561532 226220 1382716 2476744
 Swap: 2097148 0 2097148
 ```
@@ -7836,11 +7895,8 @@ apt install iotop
 
 ## 37.4 总结
 
-
-
-
-
 # Shell
+
 - 命令行编辑 [78]
 - 环境变量 [82]
 - 文件名缩写 [80]
@@ -7852,17 +7908,21 @@ apt install iotop
 - shell 脚本 [83]
 
 # Systemd
+
 - basic.target [92]
 
 # 启动菜单
+
 - 编辑 [49]
 
 # Bourne shell [77]
 
 # 容器
+
 - buildah [253]
 
 # C
+
 - CA [266]
 - canonical-livepatch [106]
 - Canonical Ltd [7], [8]
@@ -7874,6 +7934,7 @@ apt install iotop
 - CNI [254]
 
 # Cockpit
+
 - 访问 [68]
 - 账户管理 [71]
 - 添加磁盘 [283]
@@ -7886,42 +7947,49 @@ apt install iotop
 - 日志 [70]
 - 多台服务器 [74]
 - 网络 [71]
-- NFS 管理 [192]
-- 概览 [67]
+
+
+
+# NFS 管理 [192]
+
+## 概览 [67]
+
 - 端口 [68]
 - 服务 [71]
 - 存储 [70]
 - 系统 [69]
-- systemd 单元 [96]
+- `systemd` 单元 [96]
 - 终端访问 [73]
 - 用户管理 [87]
 - 虚拟机 [72]
 - 虚拟机模块 [215]
 
 # 网络管理
+
 - 连接配置 [122]
 
 # 容器
-- containerd [251]
+
+- `containerd` [251]
 - 容器网络接口 (CNI) [254]
 - 容器运行时 [251]
 - 容器 [251]
-- buildah [253]
+- `buildah` [253]
 - 更改 root [251]
-- chroot [251]
+- `chroot` [251]
 - CNI [254]
-- cni0 [254]
-- containerd [251]
+- `cni0` [254]
+- `containerd` [251]
 - 容器运行时 [251]
 - CRI-O [251]
 - Docker [251]
 - 内核共享 [251]
-- lxd [251]
+- `lxd` [251]
 - 网络 [254]
 - 概览 [251]
-- podman [253]
+- `podman` [253]
 - 拉取镜像 [255]
-- runc [253]
+- `runc` [253]
 - 运行中的镜像 [257]
 - 保存为镜像 [259]
 - 范围 [253]
@@ -7929,77 +7997,89 @@ apt install iotop
 - C shell [77]
 
 # D
+
 - 守护进程 [91]
 - 深色模式 [62]
-- dd [12], [294]
+- `dd` [12], [294]
 - Debian [8]
-- default.target 文件 [94]
-- df 命令 [304]
+- `default.target` 文件 [94]
+- `df` 命令 [304]
 
 # 磁盘
+
 - 添加 [279]
 - 检测 [279]
 - 磁盘 I/O
 - 监控 [305]
 
 # 磁盘分区
+
 - 格式化 [48]
 
 # 磁盘使用
-- df 命令 [304]
-- diskutil [12]
-- dmesg [11]
+
+- `df` 命令 [304]
+- `diskutil` [12]
+- `dmesg` [11]
 
 # DNS MX 记录 [276]
+
 # Docker [251]
+
 - 双系统启动 [45]
 
 # E
+
 - 邮件服务器 [271]
 - 配置 [272]
 - MX 记录 [276]
 
 # 邮件系统
+
 - 概览 [271]
-- env [82]
+- `env` [82]
 - 环境变量 [82]
 - 错误列表 [5]
 - 导出 [82]
 
 # F
-- fdisk [45], [280], [290]
+
+- `fdisk` [45], [280], [290]
 - Fedora Media Writer [13]
 
 # 文件系统
+
 - 创建 [281]
 - 挂载 [282]
-- findmnt [12]
+- `findmnt` [12]
 
 # 防火墙
-- gufw [137]
-- ufw [137]
+
+- `gufw` [137]
+- `ufw` [137]
 
 # 防火墙
+
 - 邮件设置 [273]
 - 概览 [147]
 - Web 服务器设置 [262]
-- firewall-cmd [150]
+- `firewall-cmd` [150]
 - NFS 设置 [190]
 - Samba 设置 [196]
-- firewall-config [154]
+- `firewall-config` [154]
 
 # firewalld
+
 - 默认区域 [150]
 - 显示区域信息 [150]
-- firewall-cmd [150]
-- firewall-config [154]
+- `firewall-cmd` [150]
+- `firewall-config` [154]
 - ICMP 规则 [153]
 - 接口 [147], [149]
 - 列出服务 [151]
 
-
-
 # 概述
+
 - 概述
 - 永久性设置
 - 端口转发
@@ -8014,12 +8094,13 @@ apt install iotop
 - 区域
 - 区域服务
 - 释放
-- free 命令
+- `free` 命令
 - 自由软件基金会
-- fsck
+- `fsck`
 - 全虚拟化
 
 # G
+
 - GDM
 - GNOME
 - 深色模式
@@ -8031,17 +8112,17 @@ apt install iotop
 - 安装
 - 启动
 - GNOME 显示管理器
-- gnome-system-monitor
+- `gnome-system-monitor`
 - GNU/Linux
 - GNU 项目
 - Google Cloud
-- graphical.target
-- groupdel
+- `graphical.target`
+- `groupdel`
 - 组
 - 列出成员
 - 移除
 - 客户机虚拟化
-- gufw
+- `gufw`
 - 添加简单规则
 - 高级规则
 - 允许
@@ -8055,18 +8136,19 @@ apt install iotop
 - 运行
 
 # H
+
 - 硬件虚拟化
 - 惠普
 - 休眠
 - 历史记录
-- HOME
+- `HOME`
 - 托管型虚拟机监控程序
 - HP-UX
-- htop
+- `htop`
 - 安装
 - 用户进程
-- httpd-le-ssl.conf
-- httpd.service
+- `httpd-le-ssl.conf`
+- `httpd.service`
 - HTTPS
 - 超调用
 - 虚拟机管理器虚拟化
@@ -8074,50 +8156,54 @@ apt install iotop
 - Type-2
 
 # I
+
 - Ian Murdoch
 - IBM
-- id_rsa
-- id_rsa.pub
+- `id_rsa`
+- `id_rsa.pub`
 - 安装
 - 清理磁盘
 - Intel VT
 - 检查可用性
-- iotop 命令
+- `iotop` 命令
 - 安装
-- iptables
+- `iptables`
 - ISO 镜像
 - 写入 USB 驱动
 
 # J
+
 - 日志文件系统
 
 # K
+
 - 内核
 - 内核共享
-- kill 命令
+- `kill` 命令
 - KILL 信号
-- kvm
+- `kvm`
 - 会话虚拟机
 - 系统虚拟机
 - KVM
 - 在 Cockpit 中创建虚拟机
 - 硬件要求
 - 安装
-- kvm_amd
-- kvm_intel
-- libvirtd
+- `kvm_amd`
+- `kvm_intel`
+- `libvirtd`
 - 网络桥接接口
 - 概述
 - 验证
-- virsh
-- virt-manager
-- virt-viewer
-- kvm_amd
-- kvm_intel
+- `virsh`
+- `virt-manager`
+- `virt-viewer`
+- `kvm_amd`
+- `kvm_intel`
 
 # L
+
 - Landscape
-- libvirtd
+- `libvirtd`
 - Linus Torvalds
 - Linux 容器。参见 容器
 - Livepatch
@@ -8130,274 +8216,153 @@ apt install iotop
 - 获取信息
 - 管理
 - `ls`
-
-
-
-
-`lvdisplay` 289, 295
-
-`lvextend` 292
-
-`LVM` 287
-
-`lxd` 251
-
-## M
-
-macOS
-
-将 ISO 写入 USB 驱动器 12
-
-邮件传输代理 (MDA) 272
-
-邮件传输代理 (MTA) 271
-
-邮件用户代理 (MUA) 271
-
-`main.cf` 文件 274
-
-`man` 78
-
-Mark Shuttleworth 7, 8
-
-Martin Hellman 157
-
-MDA 272
-
-内存
-
-free 304
-
-裸机 Hyper 管理器 207
-
-MINIX 7
-
-`mkfs.xfs` 48
-
-`mkswap` 294, 295
-
-`mount` 288
-
-MTA 271
-
-MUA 271
-
-`multi-user.target` 92
-
-MX 记录 276
-
-## N
-
-NAT 209
-
-原生 Hyper 管理器 207
-
-NetBIOS 名称服务 200
-
-网络地址转换 209
-
-网络桥接接口 233
-
-网络文件系统 (NFS) 189
-
-网络安装程序 25
-
-下载镜像 25
-
-执行安装 26
-
-软件集合 30
-
-`NetworkManager` 117
-
-检查状态 118
-
-连接配置 122
-
-连接 119
-
-设备 119
-
-设备状态 118
-
-启用 118
-
-安装 118
-
-管理连接 121
-
-修改连接 121
-
-`nmcli` 117
-
-`nm-connection-editor` 117
-
-`nmtui` 117
-
-权限 126
-
-`NFS` 189
-
-Cockpit 管理 192
-
-导出文件系统 190
-
-防火墙设置 189
-
-挂载文件系统 191
-
-启动服务 189
-
-卸载文件系统 191
-
-`MB` 200
-
-`nmcli` 117, 237
-
-基础命令 118
-
-连接权限 126
-
-连接配置 122
-
-交互式编辑 125
-
-管理连接 121
-
-网络桥接创建 239
-
-权限 126
-
-显示连接 121
-
-Wi-Fi 扫描 121
-
-`nm-connection-editor` 117, 242
-
-网络桥接接口 242
-
-`nmtui` 117
-
-`NTFS` 46
-
-## P
-
-半虚拟化 207
-
-分区 48
-
-合作伙伴库 100
-
-`PATH` 82
-
-物理范围 288
-
-物理卷 287
-
-创建 291
-
-`podman` 253
-
-`attach` 258
-
-`exec` 258
-
-列出镜像 256
-
-`pause` 259
-
-`ps -a` 258
-
-`rm` 259
-
-`start` 259
-
-`unpause` 259
-
-端口转发 153
-
-postfix
-
-配置 272, 274
-
-安装 273
-
-日志文件 276
-
-`main.cf` 文件 274
-
-SMTP 继继服务器 277
-
-启动 276
-
-测试 277
-
-`Postfix` 271
-
-`poweroff.target` 91
-
-预启动执行环境 (PXE) 10
-
-进程
-
-在系统监控中 301
-
-列出所有 300
-
-列出活动状态 299
-
-派生 301
-
-系统 299
-
-用户 299
-
-`ps` 81
-
-`ps command` 299
-
-公钥加密 157
-
-`PuTTY` 163
-
-安全隧道 176
-
-`PuTTYgen` 163, 164
-
-`pvcreate` 291
-
-`pvdisplay` 290
-
-`pwd` 78
-
-`PXE` 10
-
-## Q
-
-`QEMU/KVM` 213
-
-## R
-
-RealVNC 173, 179
-
-
-
-
-
+- `lvdisplay` 289, 295
+- `lvextend` 292
+- `LVM` 287
+- `lxd` 251
+
+# M
+
+- macOS
+- 将 ISO 写入 USB 驱动器 12
+- 邮件传输代理 (MDA) 272
+- 邮件传输代理 (MTA) 271
+- 邮件用户代理 (MUA) 271
+- `main.cf` 文件 274
+- `man` 78
+- Mark Shuttleworth 7, 8
+- Martin Hellman 157
+- MDA 272
+- 内存
+- `free` 304
+- 裸机 Hyper 管理器 207
+- MINIX 7
+- `mkfs.xfs` 48
+- `mkswap` 294, 295
+- `mount` 288
+- MTA 271
+- MUA 271
+- `multi-user.target` 92
+- MX 记录 276
+
+# N
+
+- NAT 209
+- 原生 Hyper 管理器 207
+- NetBIOS 名称服务 200
+- 网络地址转换 209
+- 网络桥接接口 233
+- 网络文件系统 (NFS) 189
+- 网络安装程序 25
+- 下载镜像 25
+- 执行安装 26
+- 软件集合 30
+- `NetworkManager` 117
+- 检查状态 118
+- 连接配置 122
+- 连接 119
+- 设备 119
+- 设备状态 118
+- 启用 118
+- 安装 118
+- 管理连接 121
+- 修改连接 121
+- `nmcli` 117
+- `nm-connection-editor` 117
+- `nmtui` 117
+- 权限 126
+- `NFS` 189
+- Cockpit 管理 192
+- 导出文件系统 190
+- 防火墙设置 189
+- 挂载文件系统 191
+- 启动服务 189
+- 卸载文件系统 191
+- `MB` 200
+- `nmcli` 117, 237
+- 基础命令 118
+- 连接权限 126
+- 连接配置 122
+- 交互式编辑 125
+- 管理连接 121
+- 网络桥接创建 239
+- 权限 126
+- 显示连接 121
+- Wi-Fi 扫描 121
+- `nm-connection-editor` 117, 242
+- 网络桥接接口 242
+- `nmtui` 117
+- `NTFS` 46
+
+# P
+
+- 半虚拟化 207
+- 分区 48
+- 合作伙伴库 100
+- `PATH` 82
+- 物理范围 288
+- 物理卷 287
+- 创建 291
+- `podman` 253
+- `attach` 258
+- `exec` 258
+- 列出镜像 256
+- `pause` 259
+- `ps -a` 258
+- `rm` 259
+- `start` 259
+- `unpause` 259
+- 端口转发 153
+- `postfix`
+- 配置 272, 274
+- 安装 273
+- 日志文件 276
+- `main.cf` 文件 274
+- SMTP 继继服务器 277
+- 启动 276
+- 测试 277
+- `Postfix` 271
+- `poweroff.target` 91
+- 预启动执行环境 (PXE) 10
+- 进程
+- 在系统监控中 301
+- 列出所有 300
+- 列出活动状态 299
+- 派生 301
+- 系统 299
+- 用户 299
+- `ps` 81
+- `ps command` 299
+- 公钥加密 157
+- `PuTTY` 163
+- 安全隧道 176
+- `PuTTYgen` 163, 164
+- `pvcreate` 291
+- `pvdisplay` 290
+- `pwd` 78
+- `PXE` 10
+
+# Q
+
+- `QEMU/KVM` 213
+
+# R
+
+- RealVNC 173, 179
 - `reboot.target` 92
 - Red Hat, Inc. 7
 - Remmina 桌面客户端 171
 - 远程桌面访问 169, 170, 179
-    - 启用 170
-    - 安全与不安全 169
+  - 启用 170
+  - 安全与不安全 169
 - 软件库 99
-    - 禁用 100
-    - 主 99
-    - 管理 100
-    - 多重宇宙 100
-    - 限制 99
-    - 源列表 100
-    - 宇宙 99
+  - 禁用 100
+  - 主 99
+  - 管理 100
+  - 多重宇宙 100
+  - 限制 99
+  - 源列表 100
+  - 宇宙 99
 - `rescue.target` 91
 - `resize2fs` 292
 - RFC 3339 114
@@ -8407,113 +8372,111 @@ RealVNC 173, 179
 - `runlevel` 91
 
 # S
+
 - 安全图形模式 15
 - Samba 195
-    - 客户端 196
-    - 配置共享资源 198
-    - 创建用户 198
-    - 防火墙设置 196
-    - 安装 196
-    - NetBIOS 名称服务 200
-    - NMB 200
-    - `samba-client` 202
-    - `smb://` 203
-    - `smbclient` 200
-    - `smb.conf` 文件 197
-    - 测试 `smb.conf` 文件 199
-    - 工作组 197
-    - `samba-client` 202
-    - Samba 客户端 196
+  - 客户端 196
+  - 配置共享资源 198
+  - 创建用户 198
+  - 防火墙设置 196
+  - 安装 196
+  - NetBIOS 名称服务 200
+  - NMB 200
+  - `samba-client` 202
+  - `smb://` 203
+  - `smbclient` 200
+  - `smb.conf` 文件 197
+  - 测试 `smb.conf` 文件 199
+  - 工作组 197
+  - `samba-client` 202
+  - Samba 客户端 196
 - SATA 控制器 279
 - 安全传输层层 (SSL) 265
-    - 安全网站
-        - 配置 265
+  - 安全网站
+    - 配置 265
 - SELinux
-    - `smbpasswd` 198
+  - `smbpasswd` 198
 - 服务器消息块 195
 - 服务 91
-    - 禁用 96
-    - 启用 95
-    - 掩码 96
-    - 启动 95
-    - 停止 95
-    - `sh` 84
-    - 历史 79
-    - 概述 77
-    - 脚本 83
-    - 容器作用域 253, 255
-    - 获取镜像 255
-    - `smb://` 203
-    - SMB 195
-    - `smbclient` 200
-    - `smb.conf` 199
-    - `smb.conf` 文件 197
-    - 全局区域 197
-    - 测试 199
-    - `smbpasswd` 198
+  - 禁用 96
+  - 启用 95
+  - 掩码 96
+  - 启动 95
+  - 停止 95
+  - `sh` 84
+  - 历史 79
+  - 概述 77
+  - 脚本 83
+  - 容器作用域 253, 255
+  - 获取镜像 255
+  - `smb://` 203
+  - SMB 195
+  - `smbclient` 200
+  - `smb.conf` 199
+  - `smb.conf` 文件 197
+  - 全局区域 197
+  - 测试 199
+  - `smbpasswd` 198
 - SMTP 272
-    - SMTP 中继 272
-    - SMTP 中继服务器 277
-    - 配置 277
+  - SMTP 中继 272
+  - SMTP 中继服务器 277
+  - 配置 277
 - snap
-    - 频道 112
-    - 命令 110
-    - 禁用 115
-    - 启用 115
-    - 查找 110
-    - 信息 110, 112
-    - 安装 111
-    - 列表 111
-    - 日志 115
-    - 概述 109
-    - 软件包 109
-    - 刷新 113
-    - 刷新锁定 113
-    - 流量流量 113
-    - 刷新保留 113
-    - 刷新定时器 113
-    - 移除 111
-    - 服务 115
-    - 设置系统 113
-    - 启动 115
-    - 停止 115
-    - 切换 112
+  - 频道 112
+  - 命令 110
+  - 禁用 115
+  - 启用 115
+  - 查找 110
+  - 信息 110, 112
+  - 安装 111
+  - 列表 111
+  - 日志 115
+  - 概述 109
+  - 软件包 109
+  - 刷新 113
+  - 刷新锁定 113
+  - 流量流量 113
+  - 刷新保留 113
+  - 刷新定时器 113
+  - 移除 111
+  - 服务 115
+  - 设置系统 113
+  - 启动 115
+  - 停止 115
+  - 切换 112
 - `sockets.target` 92
 - 软件集合
-    - 安装 31
-    - Solaris 7
-    - `sources.list` 文件 100
-    - 生成 301
+  - 安装 31
+  - Solaris 7
+  - `sources.list` 文件 100
+  - 生成 301
 - SSH 157
-    - SSH 认证 158
-        - 来自 Linux 158
-        - 来自 macOS 158
-        - 来自 Windows 161
-    - Google 云 165
-    - 多多个密钥 160
-    - PuTTY 163
-    - PuTTYgen 163, 164
-    - `ssh_config` 文件 160
-    - `ssh-copy-id` 159
-    - `ssh-keygen` 158
-    - `ssh_config` 文件 160
-    - `ssh-copy-id` 159
-    - `sshd.service` 160
-    - `ssh-keygen` 158
+  - SSH 认证 158
+    - 来自 Linux 158
+    - 来自 macOS 158
+    - 来自 Windows 161
+  - Google 云 165
+  - 多多个密钥 160
+  - PuTTY 163
+  - PuTTYgen 163, 164
+  - `ssh_config` 文件 160
+  - `ssh-copy-id` 159
+  - `ssh-keygen` 158
+  - `ssh_config` 文件 160
+  - `ssh-copy-id` 159
+  - `sshd.service` 160
+  - `ssh-keygen` 158
 - SSL 265
-    - SSL 证书 266
+  - SSL 证书 266
 - `startx` 179, 181
 - `stderr` 81
 - `stdin` 80
 - `stdout` 80
 - 存储设备
-    - 识别 11
-
-
-
-
+  - 识别 11
 
 # 命令
+
 - `su - command` [1]
 - `sudo` [2]
 - SunOS [7]
@@ -8522,6 +8485,7 @@ RealVNC 173, 179
 - `swapon` [294], [298]
 
 ## 交换空间
+
 - 添加分区 [295]
 - 添加交换文件 [294]
 - 添加到卷组 [297]
@@ -8531,12 +8495,14 @@ RealVNC 173, 179
 - 推荐 [293]
 
 ## systemd
+
 - `systemctl` [92], [93]
 - 默认目标 [91]
 - 目标 [91]
--  [91]
+- [91]
 
 ### systemd 目标
+
 - `basic.target` [92]
 - 动态更改 [94]
 - 获取默认 [93]
@@ -8550,15 +8516,17 @@ RealVNC 173, 179
 - `sockets.target` [92]
 
 ### systemd 单元
+
 - 配置文件 [94]
 - 禁用 [95]
 - 启用 [95]
 - 锁定 [95]
 - 状态 [93]
 - 类型 [94]
-- systemd 单元 [91]
+- `systemd` 单元 [91]
 
 ## 系统监器
+
 - 系统监器 [301]
 - 系统监控 [299]
 - 磁盘 I/O [305]
@@ -8569,18 +8537,19 @@ RealVNC 173, 179
 - `iotop` [305]
 - 系统进程 [299]
 
-## T
+# T
+
 - 目标 [91]
-- `tasksel`, [31]
+- `tasksel` [31]
 - `TERM` 信号 [300]
 - TigerVNC [179]
 - TightVNC [176], [179]
-
 - `TLS` (传输层安全) [266]
 - 类型 1 虚拟化 [206]
 - 类型 2 虚拟化 [206]
 
-## Ubuntu
+# Ubuntu
+
 - 历史 [8]
 - 含义 [8]
 - `ufw` [137], [143]
@@ -8599,17 +8568,20 @@ RealVNC 173, 179
 - 更新 [103]
 - 自动 [104]
 
-## USB 驱动器
+# USB 驱动器
+
 - 设备名称 [11]
 - `useradd` [85]
 - `userdel` [86]
 - 用户进程 [299]
 
-## 用户
+# 用户
+
 - 添加和删除 [86]
 - 用户与组 [85]
 
-## V
+# V
+
 - `VcXsrv` [185]
 - `vgdisplay` [288]
 - `vgextend` [291]
@@ -8617,7 +8589,8 @@ RealVNC 173, 179
 - 禁用加密 [174]
 - 安装 [170]
 
-### virsh
+## virsh
+
 - 交互模式 [247]
 - 重启虚拟机 [250]
 - 恢复虚拟机 [249]
@@ -8632,7 +8605,8 @@ RealVNC 173, 179
 - 会话连接 [222]
 - 启动虚拟机 [226]
 
-## 虚拟化
+# 虚拟化
+
 - 虚拟化 [205]
 - AMD-V [208]
 - 全虚拟化 [208]
@@ -8644,20 +8618,22 @@ RealVNC 173, 179
 - Intel VT [208]
 - KVM [211]
 - 裸金属虚拟机程序 [207]
-- 原生虚拟机程序 [207]
-- 半虚拟化 [207]
+
+
+
+# 原生虚拟机程序 [207]
+
+# 半虚拟化 [207]
 
 ## VNC
+
 - `virt-viewer` [218]
 - 安装 [218]
 - 远程 SSH 连接 [219]
 - 会话虚拟机 [219]
 
-
-
-
-
 # Ubuntu
+
 - 连接到服务器 [181]
 - 端口 [180]
 - 安全访问 [175]
@@ -8669,29 +8645,32 @@ RealVNC 173, 179
 - 卷组 [287]
 
 # W
+
 - `wc` [81]
 - Web 服务器 [261]
 - `which` [78]
 - 惠特菲德·迪菲 (Whitfield Diffie) [157]
 
 # Windows
+
 - 将 ISO 写入 USB 驱动 [13]
 - Windows 分区
-- 文件系统访问 [40]
-- 回收空间 [45]
-- 卸载 [45]
+  - 文件系统访问 [40]
+  - 回收空间 [45]
+  - 卸载 [45]
 - Windows PowerShell [161]
 - Windows SMB [189]
 - Windows 系统分区 [46]
 - `wipefs` [291]
 
 # X
+
 - X11 转发 [183]
-- 压缩 [184]
-- 可信 [184]
+  - 压缩 [184]
+  - 可信 [184]
 - XFS 文件系统 [281]
 - `xfs_growfs` [292]
 
 # Z
-- ZFS 文件系统 [18]
 
+- ZFS 文件系统 [18]

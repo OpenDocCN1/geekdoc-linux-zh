@@ -1,24 +1,30 @@
+
 # LAB 37
 
 # Use RPM and YUM Package Management: YUM
 
 **Lab Objective:**
+
 Learn how to use the YUM package manager to install, upgrade, search for, and uninstall packages.
 
 **Lab Purpose:**
+
 The YUM package manager is a collection of tools meant for RedHat-based distros to install and manage RPM-based packages.
 
 > **IMPORTANT:** YUM is not pre-installed with Ubuntu and it may not install correctly. In that case, we recommend setting up another VM with a RedHat-based distro, such as CentOS.
 
 **Lab Tool:**
+
 A RedHat-based distro such as CentOS. Ubuntu is not recommended for this lab.
 
 **Lab Topology:**
+
 A single Linux machine, or virtual machine
 
 # Lab Walkthrough:
 
 *Task 1:*
+
 Open the Terminal and run:
 
 ```

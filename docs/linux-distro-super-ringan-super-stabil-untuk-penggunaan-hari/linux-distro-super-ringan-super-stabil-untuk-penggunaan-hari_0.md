@@ -1,14 +1,5 @@
+
 # 适用于日常使用与关键基础设施的极轻极极稳定 Linux 发行版（英文版）
-
-
-
-
-
-
-
-
-
-
 
 | ![image](img/chapter_title_corner_decoration_left.png) |  | ![image](img/chapter_title_corner_decoration_right.png) |
 
@@ -55,13 +46,21 @@ Linux 发行版的发展可以追溯到 1991 年，当时芬兰计算机科学�
 有因素有助于 Linux 发行版在日常中使用保持稳定：
 
 1. **可靠性和性能**：稳定的发行版应该具有良好的可靠记录，崩溃或系统故障极少。它还应该提供良好的性能，确保运行顺畅高效。
+
 2. **长期支持 (LTS)**：长期支持确保发行版在很长时间内接收定期的更新、错误修复和安全补丁。这对于维持稳定性和解决可能出现的任何漏洞至关重要。
+
 3. **社区支持**：强大且活跃的社区可以在出现问题时提供帮助、故障排除和指导。稳定的发行版通常受益于大型且支持用户的社区。
+
 4. **软件可用性**：与发行版兼容的广泛应用程序对于日常使用至关重要。稳定的发行版应该拥有强大的软件生态系统，包括流行的应用程序和工具。
+
 5. **硬件兼容性**：稳定的发行版应该与各种硬件配置无缝工作，减少兼容性问题并确保在不同设备上顺畅运行。
+
 6. **用户友好界面**：日常使用的稳定发行版应该具有直观且友好的界面，让新手和经验用户都能轻松导航并执行任务。
+
 7. **测试和质量保证**：开发过程中严格的测试和质量保证有助于在发行版发布之前识别并解决问题。这确保了稳定可靠的体验。
+
 8. **定期更新**：定期更新对于修复漏洞、应对安全漏洞和引入新功能至关重要。稳定的发行版应该有定义的更新周期，以确保持续的稳定性和。
+
 9. **与现有系统的兼容性**：稳定的发行版应该与现有系统和基础设施兼容，允许无缝集成和互操作性。
 
 记住，选择日常使用的稳定发行版可能会根据个人偏好、需求和特定的用例而异。
@@ -79,9 +78,6 @@ Ubuntu MATE 是一个于 2014 年首次开源操作系统。它是一个社区�
 Ubuntu MATE 的历史可以追溯到为偏好传统桌面体验的用户创建一个轻量且可定制操作系统的渴望。该项目迅速流行，吸引了热情的开发者和用户社区，他们为项目的增长和发展做出了贡献。
 
 Ubuntu MATE 提供了一系列功能和应用程序，包括 `Caja` 文件管理器、`Pluma` 编辑器和用于轻松系统配置的 `MATE Control Center`。它还支持广泛的硬件，使其被多样化的用户群体可以使用。
-
-
-
 
 Ubuntu MATE 22.04 LTS 是一个基于 Ubuntu 22.04 LTS（长期支持版）的 Ubuntu MATE Linux 发行版。它旨在为用户提供一个易用且可定制的桌面环境。Ubuntu MATE 22.04 LTS 通过 MATE 桌面环境提供了一个熟悉的界面，该环境以其传统的布局和易于使用而闻名。
 
@@ -166,12 +162,12 @@ Linux Mint 21.2 Victoria 于 2023 年 7 月发布。它引入了许多新功能�
 Linux Mint 21.2 Victoria Mate 版引入了许多新功能和改进。以下是几个值得关注的特性：
 
 - **MATE 1.26**: Linux Mint 21.2 Victoria Mate 版采用了 `1.26` 版本 MATE 桌面环境，为用户提供了更新且增强的桌面体验。
+
 - **Linux 内核 5.15**: 该版本包含了升级到 `5.15` 版本 Linux 内核，改进了硬件兼容性和性能。
+
 - **扩展安全更新**: Linux Mint 21.2 Victoria Mate 版将提供安全更新直到 `2027` 年，确保操作系统安全受保护。
+
 - **长期包基础**: 直到 `2024` 年，Linux Mint 未来版本将使用与 Linux Mint 21.2 相同的包基础，方便用户升级并保持兼容性。
-
-
-
 
 新背景：Linux Mint 21.2 Victoria Mate 版本包含了来自各种艺术家的精美背景集，为桌面环境增添了视觉吸引力。
 
@@ -209,6 +205,8 @@ https://linuxmint.com/edition.php?id=308
 
 | ![image](img/chapter_title_corner_decoration_left.png) |  | ![image](img/chapter_title_corner_decoration_right.png) |
 
+
+
 ![image](img/chapter_title_above.png)
 
 ## 6) Backbox Linux 8 Sara OS
@@ -234,7 +232,7 @@ BackBox Linux 8 Sara OS 为渗透测试和安全评估提供了若干功能和�
 
 官方下载链接：
 
-https://backbox.org/download/
+`https://backbox.org/download/`
 
 | ![image](img/chapter_title_corner_decoration_left.png) |  | ![image](img/chapter_title_corner_decoration_right.png) |
 
@@ -246,13 +244,13 @@ https://backbox.org/download/
 
 ![image](img/image005.png)
 
-Antix Linux 是一个基于 Debian 的轻量级操作系统。它旨在旧旧硬件和低资源系统上高效运行。Antix Linux 默认使用 IceWM 窗口管理器，但也其他桌面环境。它以低内存占用而闻名，通常占用小于 100MB。
+Antix Linux 是一个基于 Debian 的轻量级操作系统。它旨在旧硬件和低资源系统上高效运行。Antix Linux 默认使用 `IceWM` 窗口管理器，但也支持其他桌面环境。它以低内存占用而闻名，通常占用小于 100MB。
 
-Antix 的最新版本是 Antix-23，也被称为“Arditi Popolo”，于 2023 年 8 月 28 日发布。Antix-23 基于 Debian bookworm，并为 32 位和 64 位架构提供了完全无 systemd 和无 elogind 的版本。它提供了多种选择，包括不同的初始化系统（sysVinit 或 runit）以及 Antix-full、Antix-base、Antix-core 和 Antix-net 等。Antix-full 是最大的版本，包含了四个窗口管理器（IceWM、fluxbox、jwm 和 herbstluft）以及完整的 LibreOffice 套件。Antix-23 旨在新旧电脑上运行，提供快速且轻量化的 Linux 体验。
+Antix 的最新版本是 Antix-23，也被称为“Arditi Popolo”，于 2023 年 8 月 28 日发布。Antix-23 基于 Debian bookworm，并为 32 位和 64 位架构提供了完全无 `systemd` 和无 `elogind` 的版本。它提供了多种选择，包括不同的初始化系统（`sysVinit` 或 `runit`）以及 Antix-full、Antix-base、Antix-core 和 Antix-net 等。Antix-full 是最大的版本，包含了四个窗口管理器（`IceWM`、`fluxbox`、`jwm` 和 `herbstluft`）以及完整的 LibreOffice 套件。Antix-23 旨在新旧电脑上运行，提供快速且轻量化的 Linux 体验。
 
 官方下载链接：
 
-https://antixlinux.com/download/
+`https://antixlinux.com/download/`
 
 | ![image](img/chapter_title_corner_decoration_left.png) |  | ![image](img/chapter_title_corner_decoration_right.png) |
 
@@ -264,17 +262,13 @@ https://antixlinux.com/download/
 
 ![image](img/image014.jpg)
 
-Zorin OS 是一个基于 Linux 的稳定且长期支持（LTS）的操作系统。它提供了友好的界面，并为那些来自 Windows 背景的用户而设计。Zorin OS 提供了各种预装软件，包括 LibreOffice，这是一款类似于 Microsoft Office 的免费开源办公套件。
+Zorin OS 是一个基于 Linux 的稳定且长期支持（`LTS`）的操作系统。它提供了友好的界面，并为那些来自 Windows 背景的用户而设计。Zorin OS 提供了各种预装软件，包括 LibreOffice，这是一款类似于 Microsoft Office 的免费开源办公套件。
 
-Zorin OS Lite 版本是 Zorin OS 的轻量级版本，专为低配置和旧电脑设计。它提供了一个基于 XFCE 桌面环境的简约且高效的桌面环境。Zorin OS Lite 以能够在 15 年前的电脑上运行而闻名，使其成为希望焕活旧 PC 并延长其寿命用户的极佳选择。
+Zorin OS Lite 版本是 Zorin OS 的轻量级版本，专为低配置和旧电脑设计。它提供了一个基于 `XFCE` 桌面环境的简约且高效的桌面环境。Zorin OS Lite 以能够在 15 年前的电脑上运行而闻名，使其成为希望焕活旧 PC 并延长其寿命用户的极佳选择。
 
-Zorin OS Lite 版本具有焕一新且精致的外观，配备了更护眼的新默认主题。它还包含了新的艺术和桌面壁纸，以提升整体视觉体验。
+Zorin OS Lite 版本具有焕然一新且精致的外观，配备了更护眼的新默认主题。它还包含了新的艺术和桌面壁纸，以提升整体视觉体验。
 
-
-
-
-
-在系统要求方面，Zorin OS Lite 专为低配置电脑运行而设计。最低硬件规格包括 1 GHz 单核 Intel/AMD 64 位处理器、1 GB 运行内存、10 GB 存储空间以及 800x600 的显示分辨率。
+在系统要求方面，Zorin OS Lite 专为低配置电脑运行而设计。最低硬件规格包括 1 GHz 单核 `Intel/AMD` 64 位处理器、1 GB 运行内存、10 GB 存储空间以及 800x600 的显示分辨率。
 
 Zorin OS Lite 提供了多种软件选项，包括 `XFCE` 桌面环境、用于自定义的 `Zorin Appearance` 应用以及 `Rhythmbox` 音乐播放器。Pro Lite 版本还提供了额外的预装应用和功能。
 
@@ -282,7 +276,7 @@ Zorin OS Lite 提供了多种软件选项，包括 `XFCE` 桌面环境、用于�
 
 官方下载链接：
 
-https://zorin.com/os/
+`https://zorin.com/os/`
 
 | ![image](img/chapter_title_corner_decoration_left.png) |  | ![image](img/chapter_title_corner_decoration_right.png) |
 
@@ -296,7 +290,7 @@ https://zorin.com/os/
 
 适用于 PC 和 Mac 的树莓派桌面版是一个基于 `Debian` 的操作系统，允许您在任何 PC 或 Apple Mac 电脑上运行树莓派操作系统桌面环境。它提供了树莓派操作系统自带的大部分推荐软件，使其成为那些想要在自己的桌面或笔记本电脑上体验树莓派界面的人的理想选择。
 
-通过树莓派桌面，您可以将其安装为电脑的主操作系统、在虚拟机中运行它，或者创建一个可启动的 Live USB 闪盘以在需要时使用。它对于复活那些可能已不再强大到足以运行现代商业操作系统的旧电脑来说特别别有用，因为它通常能让这些电脑重新焕发生机。
+通过树莓派桌面，您可以将其安装为电脑的主操作系统、在虚拟机中运行它，或者创建一个可启动的 Live USB 闪盘以在需要时使用。它对于复活那些可能已不再强大到足以运行现代商业操作系统的旧电脑来说特别有用，因为它通常能让这些电脑重新焕发生机。
 
 树莓派桌面同时兼容 PC 和 Mac 平台，让用户可以在自己的桌面或笔记本电脑上享受熟悉的树莓派界面，并访问推荐的软件。
 
@@ -304,7 +298,7 @@ https://zorin.com/os/
 
 官方下载链接：
 
-https://www.raspberrypi.com/software/raspberry-pi-desktop/
+`https://www.raspberrypi.com/software/raspberry-pi-desktop/`
 
 | ![image](img/chapter_title_corner_decoration_left.png) |  | ![image](img/chapter_title_corner_decoration_right.png) |
 
@@ -318,7 +312,7 @@ https://www.raspberrypi.com/software/raspberry-pi-desktop/
 
 Elementary OS 是一个基于 Linux 的操作系统，提供凝聚且集成的桌面体验。它以极简主义设计和对简单性的关注而闻名。其他 Linux 发行版提供了广泛的设置和选项，而 elementary OS 采取了更加克制的方法，提供了一种开发者认为保持现状即运行良好的精选体验。
 
-Elementary OS 的一个显著特性是它对对 `HiDPI` 缩放的支持。用户可以调整文本和显示元素的缩放因子，以确保在高分辨率屏幕上获得舒适的视觉体验。
+Elementary OS 的一个显著特性是它对 `HiDPI` 缩放的支持。用户可以调整文本和显示元素的缩放因子，以确保在高分辨率屏幕上获得舒适的视觉体验。
 
 Elementary OS 适用于个人和专业用途。它的设计旨在让新用户易于理解和上手，使其对普通电脑用户触手可及。同时，它也因其简单性和功能受到专业开发者的青睐。该操作系统提供了一个用户友好且强大的环境，侧重于流畅的处理和易用性。
 
@@ -326,7 +320,7 @@ Elementary OS 适用于个人和专业用途。它的设计旨在让新用户易
 
 官方下载链接：
 
-[`elementary.io/`](https://elementary.io/)
+`https://elementary.io/`
 
 | ![image](img/chapter_title_corner_decoration_left.png) |  | ![image](img/chapter_title_corner_decoration_right.png) |
 
@@ -346,7 +340,7 @@ Chrome OS Flex 的关键功能之一是它能够提供云优先的体验，允�
 
 官方下载链接：
 
-https://chromeos.google/products/chromeos-flex/
+`https://chromeos.google/products/chromeos-flex/`
 
 | ![image](img/chapter_title_corner_decoration_left.png) |  | ![image](img/chapter_title_corner_decoration_right.png) |
 
@@ -366,7 +360,7 @@ Bliss OS 是一个基于 Android 的开源操作系统，设计用于在个人�
 
 官方下载链接：
 
-https://blissos.org/
+`https://blissos.org/`
 
 ## 13) Manjaro Linux Xfce 版
 
@@ -376,16 +370,13 @@ https://blissos.org/
 
 Manjaro Linux Xfce 版是一款受欢迎的操作系统，以其用户友好界面和对简单优雅的关注而闻名。Manjaro Linux 本身于 2011 年由一组来自奥地利、法国和德国的开发者首次发布。Xfce 版专门设计得轻量级且快速，非常适合旧电脑或偏好快捷桌面体验的用户。
 
-
-
-
-
 Manjaro Linux Xfce 版的历史与 Manjaro 项目的整体发展紧密相连。多年来，`Xfce Edition` 随着主发行版同步演进，整合了最新的 `Xfce` 桌面环境特性和改进。Manjaro 团队致力于提供一个稳定的、滚动更新的发行版，并强调社区反馈与参与。
 
-随着 Manjaro Linux 的流行，`Xfce Edition` 成为追求简洁高效桌面环境用户的首选。它的历史是一段不断精炼和创新的历，通过定期更新并承诺为用户提供无缝的 Linux 体验。如今，Manjaro Linux `Xfce Edition` 仍然是寻找可靠且可定制 Linux 发行版的用户的首选。
+随着 Manjaro Linux 的流行，`Xfce Edition` 成为追求简洁高效桌面环境用户的首选。它的历史是一段不断精炼和创新的历程，通过定期更新并承诺为用户提供无缝的 Linux 体验。如今，Manjaro Linux `Xfce Edition` 仍然是寻找可靠且可定制 Linux 发行版的用户的首选。
 
-**官方下载链接：**
-https://manjaro.org/download/
+官方下载链接：
+
+`https://manjaro.org/download/`
 
 | ![image](img/chapter_title_corner_decoration_left.png) |  | ![image](img/chapter_title_corner_decoration_right.png) |
 
@@ -399,14 +390,15 @@ https://manjaro.org/download/
 
 GhostBSD 是一个基于 `FreeBSD` 的桌面级操作系统，专注于简单性和易用性。它提供了一系列预装的常用软件，旨在为现代 `BSD` 平台提供舒适的体验。该项目的目标是将安全性、隐私性、稳定性、易用性、开放性和自由结合，并且完全免费。
 
-该项目始于 2009 年初初，由 Eric Turgeon 和 Francois Toussaint 创立。最初的目标是制作一个安全的、可安装的 `FreeBSD` Gnome `live CD` 系统，帮助新用户适应 `FreeBSD`。第一个测试版本 `1.0 BETA` 于 2009 年 11 月 10 日发布。
+该项目始于 2009 年初，由 Eric Turgeon 和 Francois Toussaint 创立。最初的目标是制作一个安全的、可安装的 `FreeBSD` Gnome `live CD` 系统，帮助新用户适应 `FreeBSD`。第一个测试版本 `1.0 BETA` 于 2009 年 11 月 10 日发布。
 
 该项目持续演进，在 `2.5` 版本中引入了第一个图形化安装程序。GhostBSD 最初基于 `FreeBSD`，然后短暂切换到 `TrueOS`，后来又回到了基于 `FreeBSD`。该项目经历了多次基础变更，旨在提供稳定的更新和发布周期。“GhostBSD”这个名称最初代表“运行在 BSD 上的 GNOME”，因为它最初是尝试在 `FreeBSD` 上提供即插即用的 `GNOME` 桌面。然而，主桌面后来更改为 `GNOME 2` 的分支 `MATE`，项目开始提供如 `XFCE` 等替代桌面环境，所有这些均使用 `GTK` 工具包。
 
-如今，GhostBSD 是一款基于 `FreeBSD` 的简单、优雅且友好的桌面笔记本 `BSD` 操作系统，官方桌面环境为 `MATE`。安装程序利用 `OpenZFS`，使用户可以轻松在同一硬盘的 `ZFS` 上与其他操作系统一起安装 GhostBSD，非常适合 `FreeBSD` 新手。由于硬件要求适中，GhostBSD 是现代工作站和 64 位单板计算机硬件的理想选择。总而言，GhostBSD 旨在类 Unix 操作系统上提供简单、轻量级的桌面体验，并关注易用性和稳定性。
+如今，GhostBSD 是一款基于 `FreeBSD` 的简单、优雅且友好的桌面笔记本 `BSD` 操作系统，官方桌面环境为 `MATE`。安装程序利用 `OpenZFS`，使用户可以轻松在同一硬盘的 `ZFS` 上与其他操作系统一起安装 GhostBSD，非常适合 `FreeBSD` 新手。由于硬件要求适中，GhostBSD 是现代工作站和 64 位单板计算机硬件的理想选择。总而言之，GhostBSD 旨在类 Unix 操作系统上提供简单、轻量级的桌面体验，并关注易用性和稳定性。
 
-**官方下载链接：**
-[`ghostbsd.org/`](https://ghostbsd.org/)
+官方下载链接：
+
+`https://ghostbsd.org/`
 
 | ![image](img/chapter_title_corner_decoration_left.png) |  | ![image](img/chapter_title_corner_decoration_right.png) |
 
@@ -426,8 +418,9 @@ Endless OS 构建在 `Debian` 之上，采用了自定义的 `GNOME` 桌面环�
 
 多年来，Endless OS 通过定期更新不断演进，增强了用户界面并扩展了其应用生态系统。其开发继续关注提高可访问性并为全球用户赋能，体现了为欠服务群体提供价值计算资源的哲学。
 
-**官方下载链接：**
-[`www.endlessos.org/`](https://www.endlessos.org/)
+官方下载链接：
+
+`https://www.endlessos.org/`
 
 | ![image](img/chapter_title_corner_decoration_left.png) |  | ![image](img/chapter_title_corner_decoration_right.png) |
 
@@ -441,5 +434,6 @@ Endless OS 构建在 `Debian` 之上，采用了自定义的 `GNOME` 桌面环�
 
 来自蓝色星球的无名机械剑客
 
-Pendekar Pedang Cyborg Tak Bernama Dari Planet Biru Bernama Bumi
 
+
+# Pendekar Pedang Cyborg Tak Bernama Dari Planet Biru Bernama Bumi

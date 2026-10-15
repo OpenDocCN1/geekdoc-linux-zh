@@ -1,10 +1,11 @@
+
 # Ubuntu - Eldernode 博客上的 Zikula 介绍和安装
 
 > 原文：<https://blog.eldernode.com/introduction-and-install-zikula-on-ubuntu/>
 
 ![Introduction and Install Zikula on Ubuntu](img/175ba4dc0594ec050321fa42e32a3ae3.png)
 
-Zikula 是一个多平台应用程序，支持所有流行的操作系统。你可以使用 Zikula 设计交互式可编辑网站。在本文中，我们将一步步教你如何在 Ubuntu 20.04，18.04 上安装 Zikula。如果你想购买一台 [**Linux VPS**](https://eldernode.com/linux-vps/) 服务器，你可以访问 [Eldernode](https://eldernode.com/) 中的软件包。
+Zikula 是一个多平台应用程序，支持所有流行的操作系统。你可以使用 Zikula 设计交互式可编辑网站。在本文中，我们将一步步教你如何在 Ubuntu 20.04，18.04 上安装 Zikula。如果你想购买一台 [Linux VPS](https://eldernode.com/linux-vps/) 服务器，你可以访问 [Eldernode](https://eldernode.com/) 中的软件包。
 
 ## 教程在 Ubuntu Linux 上安装 Zikula
 
@@ -14,7 +15,7 @@ Zikula 是一个内容管理系统(CMS)和开源 web 应用程序框架，允许
 
 Zikula 在后端使用 MySQL、PostgreSQL、Oracle 数据库、微软 SQL Server 进行数据库操作。事实上，Zikula 应用框架是借助模块和主题实现 web 应用和网站的强大解决方案。
 
-### 【Zikula 使用哪些库？
+### Zikula 使用哪些库？
 
 Doctrine:用于存储数据库和对象映射的一组库。
 
@@ -26,26 +27,25 @@ Twig:一个灵活、快速、可靠的模板引擎。
 
 ### 在 Ubuntu 服务器上安装 Zikula 的先决条件
 
-_ 使用 Ubuntu 的云 VPS 和具有 root 权限的用户
+使用 Ubuntu 的云 VPS 和具有 root 权限的用户
 
-使用 mod_php 启用 _ PHP
+使用 mod_php 启用 PHP
 
-_ 安装以下 PHP 扩展:iconv、Ctype、SimpleXML、PCRE、JSON、Tokenizer、Session
+安装以下 PHP 扩展:iconv、Ctype、SimpleXML、PCRE、JSON、Tokenizer、Session
 
-_ Apache webserver 启用了 mod_rewrite 模块，AllowOverride 指令设置为“All”
+Apache webserver 启用了 mod_rewrite 模块，AllowOverride 指令设置为 "All"
 
-_ MySQL 或 MariaDB 数据库服务器
+MySQL 或 MariaDB 数据库服务器
 
 ## 如何在 Ubuntu 20.04 | 18.04 上安装 Zikula
 
 首先，你应该以根用户或者管理员的身份登录到你的 Ubuntu 服务器:
 
 ```
-ssh [[email protected]](/cdn-cgi/l/email-protection)_address -p Port_number
+ssh [[email protected]](/cdn-cgi/l/email-protection)_address -p Port_number
 ```
 
-请确保将您的服务器的 IP 地址和 SSH 端口号替换为“IP_address”和“Port_
-number”。
+请确保将您的服务器的 IP 地址和 SSH 端口号替换为 `IP_address` 和 `Port_number`。
 
 然后，您应该通过执行以下命令来更新服务器上安装的软件包:
 
@@ -80,6 +80,7 @@ a2enmod rewrite
 ```
 
 输出如下:
+
 启用模块重写。
 
 要激活新配置，您需要运行:
@@ -94,7 +95,7 @@ systemctl restart apache2
 systemctl restart apache2
 ```
 
-然后，您必须访问 **https://IP_Address** 来测试 web 服务器的正确安装。记得获取默认的 Apache 网页。
+然后，您必须访问 `https://IP_Address` 来测试 web 服务器的正确安装。记得获取默认的 Apache 网页。
 
 如你所知，Zikula 是一个基于 PHP 的应用程序，所以你应该安装 PHP 和几个必需的 PHP 扩展。为此，请执行以下命令:
 
@@ -120,7 +121,7 @@ systemctl start mariadb
 systemctl enable mariadb
 ```
 
-运行 MariaDB 提供的 mysql_secure_installation 脚本，为 root 用户设置密码，加强数据库服务器的安全性。您可以使用以下详细信息:
+运行 MariaDB 提供的 `mysql_secure_installation` 脚本，为 root 用户设置密码，加强数据库服务器的安全性。您可以使用以下详细信息:
 
 ```
 Set root password? [Y/n] Y
@@ -152,7 +153,7 @@ mysql -u root -p
 MariaDB [(none)]> Create DATABASE zikula;  MariaDB [(none)]> Grant ALL PRIVILEGES ON zikula.* TO 'zikula_user'@'localhost' IDENTIFIED BY '<strong>PASSWORD</strong>';  MariaDB [(none)]> FLUSH PRIVILEGES;  MariaDB [(none)]> exit;
 ```
 
-请注意，您应该用强密码替换“PASSWORD”。
+请注意，您应该用强密码替换 `PASSWORD`。
 
 现在是时候去 Zikula 官方网站，用下面的命令下载应用程序的最新稳定版本了:
 
@@ -166,7 +167,7 @@ wget https://github.com/zikula/core/releases/download/2.0.12/2.0.zip
 unzip 2.0.zip -d /var/www/html/
 ```
 
-所有 Zikula 文件都存储在新的“2.0”目录中，您可以通过执行以下命令将其重命名为 Zikula:
+所有 Zikula 文件都存储在新的 `2.0` 目录中，您可以通过执行以下命令将其重命名为 Zikula:
 
 ```
 mv 2.0 zikula
@@ -180,7 +181,7 @@ chown -R www-data:www-data /var/www/html/zikula
 
 ### 如何创建 Apache 虚拟主机
 
-此时，您应该为域创建一个 Apache 虚拟主机指令，以便能够访问 Zikula，而不是使用您的域名的 IP 地址。别忘了用你真正的域名替换 domain.tld。
+此时，您应该为域创建一个 Apache 虚拟主机指令，以便能够访问 Zikula，而不是使用您的域名的 IP 地址。别忘了用你真正的域名替换 `domain.tld`。
 
 您可以使用以下命令创建虚拟主机指令:
 
@@ -189,7 +190,7 @@ nano /etc/apache2/sites-available/zikula.conf
 ```
 
 ```
-ServerName <strong>domain.tld</strong>  ServerAlias www.<strong>domain.tld</strong>  ServerAdmin [[email protected]](/cdn-cgi/l/email-protection)<strong>domain.tld</strong>
+ServerName <strong>domain.tld</strong>  ServerAlias www.<strong>domain.tld</strong>  ServerAdmin [[email protected]](/cdn-cgi/l/email-protection)<strong>domain.tld</strong>
 ```
 
 ```
@@ -215,7 +216,9 @@ a2ensite zikula.conf
 ```
 
 输出:
+
 启用站点 zikula。
+
 要激活新配置，您需要运行:
 
 ```
@@ -228,7 +231,7 @@ systemctl reload apache2
 systemctl reload apache2
 ```
 
-最后，你应该从你的浏览器进入 **https://domain.tld** 。
+最后，你应该从你的浏览器进入 `https://domain.tld`。
 
 ## 结论
 

@@ -1,83 +1,74 @@
-# `nc`命令
 
-`nc`（或 netcat）命令用于执行涉及 TCP（传输控制协议，面向连接）、UDP（用户数据报协议，无连接，不保证数据传输）或 UNIX 域套接字的任何操作。它可以被视为通信协议工具的瑞士军刀。
+# `nc`命令我是由深度求索（DeepSeek）研发的 deepseek-v4-flash-0731 智能大模型。`nc`（或 `netcat`）命令用于执行涉及 TCP（传输控制协议，面向连接）、UDP（用户数据报协议，无连接，不保证数据传输）或 UNIX 域套接字的任何操作。它可以被视为通信协议工具的瑞士军刀。
 
 ### 语法：
 
-```sh
-      nc [options] [ip] [port] 
-
+```
+nc [options] [ip] [port]
 ```
 
 ### 示例：
 
 #### 1. 使用源端口 1337 和 5 秒超时打开到主机 80 端口的 TCP 连接：
 
-```sh
-      $ nc -p 1337 -w 5 host.ip 80 
-
+```
+$ nc -p 1337 -w 5 host.ip 80
 ```
 
 #### 2. 打开到主机 80 端口的 UDP 连接：
 
-```sh
-      $ nc -u host.ip 80 
-
+```
+$ nc -u host.ip 80
 ```
 
 #### 3. 创建并监听 UNIX 域流套接字：
 
-```sh
-      $ nc -lU /var/tmp/dsocket 
-
+```
+$ nc -lU /var/tmp/dsocket
 ```
 
 #### 4. 创建基本的客户端/服务器模型：
 
-这将在建立连接后创建一个连接，nc 没有特定的服务器/客户端端，一旦连接建立。
+这将在建立连接后创建一个连接，`nc`没有特定的服务器/客户端端，一旦连接建立。
 
-```sh
-      $ nc -l 1234 # in one console
+```
+$ nc -l 1234 # in one console
 
-$ nc 127.0.0.1 1234 # in another console 
-
+$ nc 127.0.0.1 1234 # in another console
 ```
 
 #### 5. 构建基本的数据传输模型：
 
 文件传输完成后，连接将自动按顺序关闭
 
-```sh
-      $ nc -l 1234 > filename.out # to start listening in one console and collect data
+```
+$ nc -l 1234 > filename.out # to start listening in one console and collect data
 
-$ nc host.ip 1234 < filename.in 
-
+$ nc host.ip 1234 < filename.in
 ```
 
 #### 6. 与服务器通信：
 
 获取主机主页的基本示例，包括头部信息。
 
-```sh
-      $ printf "GET / HTTP/1.0\r\n\r\n" | nc host.ip 80 
-
+```
+$ printf "GET / HTTP/1.0\r\n\r\n" | nc host.ip 80
 ```
 
 #### 7. 端口扫描：
 
 检查目标机器上哪些端口开放并运行服务。使用`-z`标志命令来通知这些信息，而不是发起连接。
 
-```sh
-      $ nc -zv host.ip 20-2000 # range of ports to check for 
-
+```
+$ nc -zv host.ip 20-2000 # range of ports to check for
 ```
 
 ### 标志及其功能：
 
 | **短标志** | **描述** |
 | --- | --- |
-| `-4` | 强制 nc 使用 IPv4 地址 |
-| `-6` | 强制 nc 使用 IPv6 地址 |
+| `-4` | 强制 `nc` 使用 IPv4 地址 |
+| `-6` | 强制 `nc` 使用 IPv6 地址 |
 | `-b` | 允许广播 |
 | `-D` | 在套接字上启用调试 |
 | `-i` | 指定发送和接收行之间的时间间隔延迟 |

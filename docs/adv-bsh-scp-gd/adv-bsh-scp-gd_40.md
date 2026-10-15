@@ -1,3 +1,4 @@
+
 # 第三十五章：以风格编写脚本
 
 > 原文：[`tldp.org/LDP/abs/html/scrstyle.html`](https://tldp.org/LDP/abs/html/scrstyle.html)

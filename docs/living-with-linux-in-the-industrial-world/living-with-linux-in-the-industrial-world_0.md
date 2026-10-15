@@ -1,9 +1,5 @@
+
 # 工业领域中的 Linux 生活指南
-
-
-
-
-
 
 ## 关于作者
 
@@ -55,8 +51,8 @@ info bash
 - `cd ~`: 进入主目录
 - `cd ..`: 进入上级目录
 - `pwd`: 显示当前目录路径
-- `cp file1 file2`: 复制 file1 到 file2
-- `mv file1 file2`: 移动或重命名 file1 为 file2
+- `cp file1 file2`: 复制 `file1` 到 `file2`
+- `mv file1 file2`: 移动或重命名 `file1` 为 `file2`
 - `rm`: 删除文件
 - `rmdir`: 删除目录
 - `cat`: 显示文件
@@ -68,18 +64,17 @@ info bash
 - `command > file`: 将标准输出重定向到文件
 - `command >> file`: 将标准输出追加到文件
 - `command < file`: 从文件重定向标准输入
-- `command1 | command2`: 将 command1 的输出传递给 command2 的输入
-- `cat file1 file2 > file0`:合并 file1 和 file2 到 file0
+- `command1 | command2`: 将 `command1` 的输出传递给 `command2` 的输入
+- `cat file1 file2 > file0`: 合并 `file1` 和 `file2` 到 `file0`
 - `sort`: 排序数据
 - `who`: 列出当前用户
-
-
-
 
 通常 shell（外壳）是交互式的。这意味着 shell 接受用户的命令并执行它们。但如果用户一个接一个使用命令，用户可以将这一系列命令存储到文本文件中，并告诉 shell 执行该文本而不是手动输入命令。这被称为 shell 脚本（shell script）。
 
 ### 1. 编写并执行脚本
+
 ### 2. 基础命令
+
 ### 3. 快捷方式
 
 ## 理解 Linux 内核
@@ -139,15 +134,16 @@ $ `/bin/sh /home/vivek/first`
 在屏幕上显示文本或变量值。
 
 选项
+
 - `-n` 不输出末尾的新行符。
 - `-e` 启用对字符串中后续反斜杠转义字符的解释：
-- `\a` 警告（铃声）
-- `\b` 退格
-- `\c` 抑制末尾的新行符
-- `\n` 新行
-- `\r` 回车
-- `\t` 水平制表
-- `\\` 反斜杠
+  - `\a` 警告（铃声）
+  - `\b` 退格
+  - `\c` 抑制末尾的新行符
+  - `\n` 新行
+  - `\r` 回车
+  - `\t` 水平制表
+  - `\\` 反斜杠
 
 例如：$ `echo -e "An apple a day keeps away \a\t\tdoctor\n"`
 
@@ -176,6 +172,7 @@ $ `echo "Today is `date`".`
 (3) Shell 算术
 
 Linux Shell 脚本教程
+
 (5/19)
 
 用于执行算术运算。例如：
@@ -185,18 +182,18 @@ $ `expr 1 + 3`
 $ `expr 2 - 1`
 
 $ `expr 10 / 2`
+
 $ `expr 20 % 3` # 余数读作 20 mod 3，余数为 2
+
 $ `expr 10 \* 3` # 乘法使用 `\*` 而不是 `*`，因为它是通配符
+
 $ `echo `expr 6 + 3``
 
 针对最后一条语句，而不是以下几点：
+
 1) 首先，在 `expr` 关键字之前，我们使用了 `` ``（反引号）符号而不是（单引号即 `'`）符号。反引号通常位于 PC 键盘上波浪号 (`~`) 下方的按键，或者 TAB 键上方。
-2) 第二，expr 同样也结尾。
-3) 这里 expr 6 + 3 求值结果为 9，然后执行 echo
-
-
-
-
+2) 第二，`expr` 同样也结尾。
+3) 这里 `expr 6 + 3` 求值结果为 9，然后执行 `echo`
 
 ```bash
 if [ $# -eq 0 ]
@@ -218,7 +215,9 @@ done
 ```
 
 保存并尝试运行：
+
 `$ chmod +x nt1`
+
 `./nt1 7`
 
 ## Case 语句
@@ -277,9 +276,13 @@ esac
 ```
 
 按下 CTRL+D 保存：
+
 `$ chmod +x car`
+
 `$ car van`
+
 `$ car car`
+
 `$ car Maruti-800`
 
 ## If 语句
@@ -300,15 +303,21 @@ fi
 这里的 condition 无非是两个值之间的比较，为了进行比较，我们可以使用 `test` 或 `[expr ]` 语句，甚至也可以使用退出状态。一个表达式无非是值、关系运算符（如 `>`, `<`, `<>` 等）和数学算术运算符（如 `+`、`-`、`/` 等）的组合。
 
 以下是所有表达式示例：
+
 `5 > 2`
+
 `3 + 6`
+
 `3 * 65` ...
 
 输入以下命令（假设你有一个名为 `foo` 的文件）：
+
 `$ cat foo`
+
 `$ echo $?`
 
 `cat` 命令在成功时返回零(0)，这可以如下所示用于 `if` 条件，编写 shell 脚本：
+
 `$ cat > showfile`
 
 ```bash
@@ -323,8 +332,11 @@ fi
 ```
 
 现在运行它：
+
 `$ chmod +x showfile`
+
 `./showfile foo`
+
 `./showfile foo`
 
 ### 条件执行
@@ -332,17 +344,21 @@ fi
 控制运算符是 `&&`（读作 AND）和 `||`（读作 OR）。一个 AND 列表具有：
 
 ### 语法：
+
 `command1 && command2`
 
 在这里，当且仅当 `command1` 返回零退出状态时，才会执行 `command2`。一个 OR 列表具有：
 
 ### 语法：
+
 `command1 || command2`
 
 在这里，当且仅当 `command1` 返回非零退出状态时，才会执行 `command2`。你可以这样使用两者：
+
 `command1 && comnd2 如果退出状态为零 || command3 如果退出状态为非零`
 
 在这里，如果 `command1` 执行成功，则 shell 将运行 `command2`；如果 `command1` 执行失败，则执行 `command3`。例如：
+
 `$ rm myf && echo File is removed successfully || echo File is not removed`
 
 如果文件 (`myf`) 成功删除（退出状态为零），则执行 `"echo File is removed successfully"` 语句，否则执行 `"echo File is not removed"` 语句（因为退出状态为非零）。
@@ -352,25 +368,41 @@ fi
 如你所知，I/O 重定向用于将命令输出发送到文件或从文件中读取输入。（参见输入/输出重定向）。现在考虑以下示例：
 
 `$ cat > myf`
+
 这是我的文件
+
 ^D
+
 上述命令将 `cat` 命令的输出发送到 `myf` 文件。
 
 `$ cal`
+
 上述命令在屏幕上打印日历，但如果你将此日历存储到文件中，请给出命令：
+
 `$ cal > mycal`
 
 在这里，`sort` 命令从键盘获取输入并对数字进行排序，如果我们希望从文件获取输入，请如下所示给出命令：
+
 `$ cat > nos`
+
 10
+
 -20
+
 11
+
 2
+
 ^D
+
 `$ sort < nos`
+
 -20
+
 2
+
 10
+
 11
 
 我们首先创建了文件 `nos`，然后从文件中获取输入，`sort` 命令打印排序数字。这被称为输入重定向。
@@ -378,6 +410,7 @@ fi
 ### 用户界面与对话工具
 
 良好的程序/shell 脚本必须与用户交互。实现这一点有两种方法：一种是在需要输入时使用命令行，另一种是使用类似 `echo` 和 `read` 的语句从提示符读取输入到变量。例如，编写脚本：
+
 `$ cat > user`
 
 ```bash
@@ -386,10 +419,6 @@ fi
 ```
 
 使用 `echo` 和 `read` 从提示符读取输入到变量。
-
-
-
-
 
 ### 工作日期间的 Cron 任务
 
@@ -403,333 +432,190 @@ fi
 - `09-18` – 上午 9 点、10 点、11 点、中午 12 点、下午 1 点、2 点、3 点、4 点、5 点、6 点
 - `*` – 每天
 - `*` – 每月
+
+
+
 - `1-5` - 周一、周二、周三、周四和周五（每个工作日）
 
 ## 如何查看 Crontab 条目？
 
-### 查看当前登录用户的 Crontab 条目
+### 查看当前登录用户的 Crontab 条目我是 goaichat 研发的智能大模型，可以为你提供智能问答、分析和创作服务。如下段代码所示，在 Linux Shell终端输入`crontab -l`来查看您的 crontab 条目。
 
-如下段代码所示，在 Linux Shell 终端输入 `crontab -l` 来查看您的 crontab 条目。
+## 第4章：端口检查Linux 拥有许多工具可以检查哪些端口开启的，最常用的是`nmap`，它一个命令行工具，但如果用户有需要，也存在它的图形化界面。
 
-## 第 4 章：端口检查
+1. TCP 和 UDP 协议的基础知识2. 查找哪个进程使用哪个端口号、目录、所有者等的技术3. rootkits 概述，用于查找真实运行的进程###了解 TCP 和 UDP端口如你所知，互联网上的每台计算机或设备都必须分配有一个唯一的数字，称为 IP 地址。这个 IP 地址用于在数百万台连接到互联网的其它计算机中识别出您的特定计算机。当信息通过互联网发送到您的计算机时，您的计算机如何接收这些信息的呢？它通过使用`TCP`或`UDP`端口来接收信息。
 
-Linux 拥有许多工具可以检查哪些端口是开启的，最常用的是 `nmap`，它是一个命令行工具，但如果用户有需要，也存在它的图形化界面。
+理解端口的一种简单方法将 IP 地址想象成一个电缆盒，而端口就是电缆盒上的不同频道。电缆公司根据与盒子相关的唯一序列号（`IP Address`）将电缆发送到您的电缆盒，然后您在不同的频道（`Ports`）接收各个节目。
 
-1) TCP 和 UDP 协议的基础知识
-2) 查找哪个进程使用哪个端口号、目录、所有者等的技术
-3) rootkits 概述，用于查找真实运行的进程
+端口的工作原理相同。您有一个 IP 地址，该 IP 地址上有许多端口。您总共拥有65,535 个`TCP`端口和另外65,535 个`UDP`端口。当计算机上的程序通过互联网发送或接收数据时，它会将数据发送到远程计算机的 IP 地址和特定端口，并在自己的计算机通常的随机端口上接收数据。如果它使用`TCP`协议发送接收数据，它将连接并绑定到`TCP`端口。如果它使用`UDP`协议发送接收数据，它将使用`UDP`端口。下方的图1 IP 地址拆分为许多`TCP`和`UDP`端口的表示。注意，一旦应用程序绑定到特定端口，该端口就不能被任何其他应用程序使用。先来后到。
 
-### 了解 TCP 和 UDP 端口
+## 网络映射器（NMAP）
 
-如你所知，互联网上的每台计算机或设备都必须分配有一个唯一的数字，称为 IP 地址。这个 IP 地址用于在数百万台连接到互联网的其它计算机中识别出您的特定计算机。当信息通过互联网发送到您的计算机时，您的计算机是如何接收这些信息的呢？它通过使用 `TCP` 或 `UDP` 端口来接收信息。
+`NMAP`（"Network Mapper"）是一种用于网络发现和安全审计的免费开源实用。许多系统和网络管理员还发现它对于网络清单、管理服务升级计划以及监控主机或服务的运行时间等任务非常有用。`NMAP`以新的方式使用原始 IP 数据包来确定网络上有哪些主机、这些主机提供哪些服务（应用程序名称和版本）、它们运行什么操作系统（以及操作系统版本）、使用了什么类型的数据包过滤器/防火墙，以及数十种其他特征。它的设计旨在快速扫描大型网络，但单个主机也同样有效。`NMAP`运行在所有主要的计算机操作系统上，并为 Linux、Windows 和 Mac OS X 提供了官方二进制包。
 
-理解端口的一种简单方法是将 IP 地址想象成一个电缆盒，而端口就是电缆盒上的不同频道。电缆公司根据与盒子相关的唯一序列号（`IP Address`）将电缆发送到您的电缆盒，然后您在不同的频道（`Ports`）接收各个节目。
+### NMAP 的安装步骤1. 安装`libpcap`库```bashwget http://www.tcpdump.org/release/libpcap-0.9.4.tar.gz./configure --prefix=/usr && makemake install```
 
-端口的工作原理相同。您有一个 IP 地址，该 IP 地址上有许多端口。您总共拥有 65,535 个 `TCP` 端口和另外 65,535 个 `UDP` 端口。当计算机上的程序通过互联网发送或接收数据时，它会将数据发送到远程计算机的 IP 地址和特定端口，并在自己的计算机通常的随机端口上接收数据。如果它使用 `TCP` 协议发送接收数据，它将连接并绑定到 `TCP` 端口。如果它使用 `UDP` 协议发送接收数据，它将使用 `UDP` 端口。下方的图 1 是 IP 地址拆分为许多 `TCP` 和 `UDP` 端口的表示。注意，一旦应用程序绑定到特定端口，该端口就不能被任何其他应用程序使用。先来后到。
+#### 什么 libpcap？
 
-## 网络映射器 (NMAP)
+监控软件可能使用`libpcap`捕获通过网络传输的数据包，并在较新版本中在链路层向网络传输数据包，以及获取供`libpcap`可能使用的网络接口列表。
 
-`NMAP` ("Network Mapper") 是一种用于网络发现和安全审计的免费开源实用。许多系统和网络管理员还发现它对于网络清单、管理服务升级计划以及监控主机或服务的运行时间等任务非常有用。`NMAP` 以新的方式使用原始 IP 数据包来确定网络上有哪些主机、这些主机提供哪些服务（应用程序名称和版本）、它们运行什么操作系统（以及操作系统版本）、使用了什么类型的数据包过滤器/防火墙，以及数十种其他特征。它的设计旨在快速扫描大型网络，但对单个主机也同样有效。`NMAP` 运行在所有主要的计算机操作系统上，并为 Linux、Windows 和 Mac OS X 提供了官方二进制包。
+2. 安装 NMAP 和命令用法```bashrpm -vhU http://nmap.org/dist/nmap-4.68-1.i386.rpmnmap -sS127.0.0.1```
 
-### NMAP 的安装步骤
+### NMAP 扫描命令类型- `-sS`（TCP SYN 扫描）
+- `-sT`（TCP连接扫描）
+- `-sU`（UDP 扫描）
+- `-sY`（SCTP INIT 扫描）
+- `-sN; -sF; -sX`（TCP NULL、FIN 和 Xmas 扫描）
+- `-sA`（TCP ACK 扫描）
+- `-sW`（TCP Window 扫描）
+- `-sM`（TCP Maimon 扫描）
+- `-sZ`（SCTP COOKIE ECHO 扫描）
+- `-sI <zombie host>[:<probeport>]`（空主机扫描）
+- `-sO`（IP 协议扫描）
+- `-b <FTP relay host>`（FTP继扫描）
 
-1) 安装 `libpcap` 库
+### NMAP 工具的示例输出```text[root]# nmap -sS127.0.0.1Starting Nmap4.01 at2006-07-0617:23 BSTInteresting ports on chaos (127.0.0.1):
+(下方未显示的已扫描的1668 个端口状态为: closed)
 
-```bash
-wget http://www.tcpdump.org/release/libpcap-0.9.4.tar.gz
-./configure --prefix=/usr && make
-make install
-```
+PORT STATE SERVICE21/tcp open ftp22/tcp open ssh631/tcp open ipp6000/tcp open X11```
 
-#### 什么是 libpcap？
-监控软件可能使用 `libpcap` 捕获通过网络传输的数据包，并在较新版本中在链路层向网络传输数据包，以及获取供 `libpcap` 可能使用的网络接口列表。
+最后通过输入以下内容执行`arp-scan`工具：
 
-2) 安装 NMAP 和命令用法
+```bashchkrootkit -x | less- 查找疑字符串sudo chkrootkit -p /mnt/safe```
 
-```bash
-rpm -vhU http://nmap.org/dist/nmap-4.68-1.i386.rpm
-nmap -sS 127.0.0.1
-```
+### CHKROOTKIT 示例输出![ ](img/ClipboardImage3.png)
 
-### NMAP 扫描命令类型
+## RKHUNTER`RKHUNTER`一个 shell 脚本，对本地系统进行各种检查，尝试检测已知的 rootkits 和恶意软件。它还会检查命令是否被修改、系统启动文件是否被改动，并网络接口进行各种检查，包括监听应用程序的检查。
 
-- `-sS` (TCP SYN 扫描)
-- `-sT` (TCP 连接扫描)
-- `-sU` (UDP 扫描)
-- `-sY` (SCTP INIT 扫描)
-- `-sN; -sF; -sX` (TCP NULL、FIN 和 Xmas 扫描)
-- `-sA` (TCP ACK 扫描)
-- `-sW` (TCP Window 扫描)
-- `-sM` (TCP Maimon 扫描)
-- `-sZ` (SCTP COOKIE ECHO 扫描)
-- `-sI <zombie host>[:<probeport>]` (空主机扫描)
-- `-sO` (IP 协议扫描)
-- `-b <FTP relay host>` (FTP 继扫描)
+### RKHUNTER 的安装步骤在 Linux终端输入以下命令：
 
-### NMAP 工具的示例输出
+```bashsudo yum install rkhunter```
 
-```text
-[root]# nmap -sS 127.0.0.1
+最后通过输入以下内容执行`arp-scan`工具：
 
-Starting Nmap 4.01 at 2006-07-06 17:23 BST
-Interesting ports on chaos (127.0.0.1):
-(下方未显示的已扫描的 1668 个端口状态为: closed)
+```bashsudo rkhunter --check```
 
-PORT STATE SERVICE
-21/tcp open ftp
-22/tcp open ssh
-631/tcp open ipp
-6000/tcp open X11
-```
+### RKHUNTER 示例输出![ ](img/ClipboardImage4.png)
 
+## 第5章：SSL证书的处理用于 TLS/SSL 使用和实现的`OpenSSL`。`OpenSSL`的`ssl`库实现了安全套接层（`SSL v2/v3`）和传输层安全（`TLS v1`）协议。
 
+- 什么 SSL 和 TLS？
+- 在 Linux 中安装 OpenSSL 软件包- 通用 OpenSSL 命令这些命令允许生成 CSR、证书、私钥并执行其他杂任务。
 
+###1) 使用 Open SSL进行检查如果需要检查`Certificate`、`CSR`或`Private Key`中的信息，请使用这些命令；它也可以使用在线工具检查`CSRs`和证书。
 
+###2) 使用 OpenSSL进行调试如果收到私钥与证书不匹配或安装到网站的证书不受信任的错误，请使用这些`open ssl`命令进行调试。
 
-最后通过输入以下内容执行 `arp-scan` 工具：
+## 什么 OpenSSL？
 
-```
-chkrootkit -x | less- 查找疑字符串
-sudo chkrootkit -p /mnt/safe
-```
+`OpenSSL`一个加密工具包，实现了安全套接层（`SSL v2/v3`）和传输层安全（`TLS v1`）网络协议以及它们相关的加密标准。
 
-### CHKROOTKIT 示例输出
+## OpenSSL 用- 私钥、公钥和参数的创建与管理- 公钥加密操作- 创建`X.509`证书、`CSRs`和`CRLs`
+- 使用`Ciphers`进行加密和解密- SSL/TLS 客户端和服务器测试## 加密算法类型### AES`AES` 已被美国政府采用并在全球范围内使用。它取代了数据加密标准（`DES`）。`AES`描述的算法称算法，这意味着加密和解密数据使用相同的密钥。
 
-![ ](img/ClipboardImage3.png)
+### DSA`DSA` 用于签名者数据生成数字签名，并用于验证者验证签名的真实性。每个签名者都有一个公钥和一个私钥。私钥用于签名生成过程，公钥用于签名验证过程。对于签名生成和验证，数据（称为消息）都通过安全哈希算法（`SHA`）进行简化。
 
-## RKHUNTER
+### RSA`RSA` 涉及一个公钥和一个私钥。公钥所有人知的，用于加密消息。使用公钥加密的消息只能使用私钥解密。
 
-`RKHUNTER` 是一个 shell 脚本，对本地系统进行各种检查，尝试检测已知的 rootkits 和恶意软件。它还会检查命令是否被修改、系统启动文件是否被改动，并对网络接口进行各种检查，包括对监听应用程序的检查。
+## 什么称密钥加密？
 
-### RKHUNTER 的安装步骤
+称密钥算法是一类加密算法，使用相同的加密密钥明文加密和密文解密。
 
-在 Linux 终端输入以下命令：
-
-```bash
-sudo yum install rkhunter
-```
-
-最后通过输入以下内容执行 `arp-scan` 工具：
-
-```bash
-sudo rkhunter --check
-```
-
-### RKHUNTER 示例输出
-
-![ ](img/ClipboardImage4.png)
-
-## 第 5 章：SSL 证书的处理
-
-用于 TLS/SSL 使用和实现的 `OpenSSL`。`OpenSSL` 的 `ssl` 库实现了安全套接层 (`SSL v2/v3`) 和传输层安全 (`TLS v1`) 协议。
-
-*   什么是 SSL 和 TLS？
-*   在 Linux 中安装 OpenSSL 软件包
-*   通用 OpenSSL 命令
-
-这些命令允许生成 CSR、证书、私钥并执行其他杂任务。
-
-### 1) 使用 Open SSL 进行检查
-
-如果需要检查 `Certificate`、`CSR` 或 `Private Key` 中的信息，请使用这些命令；它也可以使用在线工具检查 `CSRs` 和证书。
-
-### 2) 使用 OpenSSL 进行调试
-
-如果收到私钥与证书不匹配或安装到网站的证书不受信任的错误，请使用这些 `open ssl` 命令进行调试。
-
-## 什么是 OpenSSL ?
-
-`OpenSSL` 是一个加密工具包，实现了安全套接层 (`SSL v2/v3`) 和传输层安全 (`TLS v1`) 网络协议以及它们相关的加密标准。
-
-## OpenSSL 用
-
-*   私钥、公钥和参数的创建与管理
-*   公钥加密操作
-*   创建 `X.509` 证书、`CSRs` 和 `CRLs`
-*   使用 `Ciphers` 进行加密和解密
-*   SSL/TLS 客户端和服务器测试
-
-## 加密算法类型
-
-### AES
-
-`AES` 已被美国政府采用并在全球范围内使用。它取代了数据加密标准 (`DES`)。`AES` 描述的算法是对称算法，这意味着加密和解密数据使用相同的密钥。
-
-### DSA
-
-`DSA` 用于签名者对数据生成数字签名，并用于验证者验证签名的真实性。每个签名者都有一个公钥和一个私钥。私钥用于签名生成过程，公钥用于签名验证过程。对于签名生成和验证，数据（称为消息）都通过安全哈希算法 (`SHA`) 进行简化。
-
-### RSA
-
-`RSA` 涉及一个公钥和一个私钥。公钥是所有人知的，用于加密消息。使用公钥加密的消息只能使用私钥解密。
-
-## 什么是对称密钥加密？
-
-对称密钥算法是一类加密算法，使用相同的加密密钥对明文加密和密文解密。
-
-以下是对称密钥加密的图：
+以下称密钥加密的图：
 
 ![ ](img/ClipboardImage.png)
 
-## 对称示例命令
+##称示例命令### Open SSL 工具的安装命令```bashwget http://www.openssl.org/source/openssl-fips-ecp-2.0.1.tar.gz./configmakemake install```
 
-### Open SSL 工具的安装命令
+注意：如果你已经安装了`OpenSSL`工具，无需重复上述步骤。
 
-```bash
-wget http://www.openssl.org/source/openssl-fips-ecp-2.0.1.tar.gz
-./config
-make
-make install
-```
-
-注意：如果你已经安装了 `OpenSSL` 工具，无需重复上述步骤。
-
-对于对称加密，你可以在 Linux 终端输入以下命令：
+对于称加密，你可以在 Linux终端输入以下命令：
 
 加密：
-```bash
-openssl aes-256-cbc -salt -a -e -in plaintext.txt -out encrypted.txt
-```
+
+```bashopenssl aes-256-cbc -salt -a -e -in plaintext.txt -out encrypted.txt```
 
 解密这些内容可以使用：
 
-```bash
-openssl aes-256-cbc -salt -a -d -in encrypted.txt -out plaintext.txt
-```
+```bashopenssl aes-256-cbc -salt -a -d -in encrypted.txt -out plaintext.txt```
 
-## 什么是非对称密钥加密
+## 什么非称密钥加密在非称加密方案中，任何人都可以公钥加密消息，但只有配私钥的持有者才能解密。安全性取决于私钥的秘密性。
 
-在非对称加密方案中，任何人都可以公钥加密消息，但只有配对私钥的持有者才能解密。安全性取决于私钥的秘密性。
-
-以下是非对称密钥加密的图：
+以下非称密钥加密的图：
 
 ![ ](img/ClipboardImage_ssl1.png)
 
-### DSA 示例命令
+### DSA 示例命令#### Open SSL 工具的安装命令```bashwget http://www.openssl.org/source/openssl-fips-ecp-2.0.1.tar.gz./configmakemake install```
 
-### Open SSL 工具的安装命令
+注意：如果你已经安装了`OpenSSL`工具，无需重复上述步骤。
 
-```bash
-wget http://www.openssl.org/source/openssl-fips-ecp-2.0.1.tar.gz
-./config
-make
-make install
-```
+现在，对于非称加密，你必须首先生成私钥并提取公钥。以下命令利用了`DSA`的加密概念。
 
-注意：如果你已经安装了 `OpenSSL` 工具，无需重复上述步骤。
-
-现在，对于非对称加密，你必须首先生成私钥并提取公钥。以下命令利用了 `DSA` 的加密概念。
-
-```bash
-openssl dsaparam 1024 < /dev/random > dsaparam.pem
-```
+```bashopenssl dsaparam1024 < /dev/random > dsaparam.pem```
 
 生成私钥：
-```bash
-openssl gendsa dsaparam.pem -out dsa_priv.pem
-```
+
+```bashopenssl gendsa dsaparam.pem -out dsa_priv.pem```
 
 生成公钥：
-```bash
-openssl dsa -in dsa_priv.pem -pubout -out dsa_pub.pem
-```
 
-将文本插入 `foo.txt`：
-```bash
-echo "foobar" > foo.txt
-```
+```bashopenssl dsa -in dsa_priv.pem -pubout -out dsa_pub.pem```
 
-加密 `foo.txt`：
-```bash
-sha1sum < foo.txt | awk '{print $1}' > foo.sha1
-```
+将文本插入`foo.txt`：
+
+```bashecho "foobar" > foo.txt```
+
+加密`foo.txt`：
+
+```bashsha1sum < foo.txt | awk '{print $1}' > foo.sha1```
 
 生成签名文件：
-```bash
-openssl dgst -dss1 -sign dsa_priv.pem foo.sha1 > sigfile.bin
-```
+
+```bashopenssl dgst -dss1 -sign dsa_priv.pem foo.sha1 > sigfile.bin```
 
 验证签名文件：
-```bash
-openssl dgst -dss1 -verify dsa_pub.pem -signature sigfile.bin foo.sha1
-```
 
-### DSA 签名步骤
+```bashopenssl dgst -dss1 -verify dsa_pub.pem -signature sigfile.bin foo.sha1```
 
-![ ](img/ClipboardImage_ssl5.png)
+### DSA 签名步骤![ ](img/ClipboardImage_ssl5.png)
 
-## RSA 示例命令
+## RSA 示例命令### Open SSL 工具的安装命令```bashwget http://www.openssl.org/source/openssl-fips-ecp-2.0.1.tar.gz./configmakemake install```
 
-### Open SSL 工具的安装命令
+注意：如果你已经安装了`OpenSSL`工具，无需重复上述步骤。
 
-```bash
-wget http://www.openssl.org/source/openssl-fips-ecp-2.0.1.tar.gz
-./config
-make
-make install
-```
+现在，对于非称加密，你必须首先生成私钥并提取公钥。以下命令利用了`RSA`的加密概念。
 
-注意：如果你已经安装了 `OpenSSL` 工具，无需重复上述步骤。
+```bashopenssl genrsa -des3 -out private123.key4096```
 
-现在，对于非对称加密，你必须首先生成私钥并提取公钥。以下命令利用了 `RSA` 的加密概念。
-
-```bash
-openssl genrsa -des3 -out private123.key 4096
-```
-
-```bash
-openssl rsa -in private123.key -pubout > public123.key
-```
+```bashopenssl rsa -in private123.key -pubout > public123.key```
 
 一旦生成了私公钥，就可以使用加密和解密命令。
 
 加密：
-```bash
-openssl rsautl -encrypt -pubin -inkey public123.key -in plaintext.txt -out encrypted.txt
-```
+
+```bashopenssl rsautl -encrypt -pubin -inkey public123.key -in plaintext.txt -out encrypted.txt```
 
 解密：
-```bash
-openssl rsautl -decrypt -inkey private123.key -in encrypted.txt -out plaintext1.txt
-```
 
+```bashopenssl rsautl -decrypt -inkey private123.key -in encrypted.txt -out plaintext1.txt```
 
+`X.509`证书将名称与公钥值绑定在一起。证书的作用将公钥与`X.509`证书中包含的身份关联。
 
+### 公钥的完整性安全应用程序的身份验证取决于应用程序证书中公钥值的完整性。如果伪造者用自己的公钥替换掉公钥，它就可以冒充真实的应用程序并获取安全数据。
 
+为了防止此类攻击，所有证书都必须由认证机构（`CA`）签名。`CA`一个受信任的节点，用于确认证书中公钥值的完整性。
 
-X.509 证书将名称与公钥值绑定在一起。证书的作用是将公钥与 X.509 证书中包含的身份关联。
+### 数字签名`CA`通过在证书上添加其数字签名证书进行签名。数字签名用`CA`的私钥编码的消息。`CA`的公钥通过分发`CA`证书提供给应用程序。应用程序通过`CA`的公钥解码`CA`的数字签名，来验证证书是否已有效签名。
 
-### 公钥的完整性
+##生成证书的命令以下使用`openssl`工具生成和练习制作证书的步骤和命令。
 
-安全应用程序的身份验证取决于应用程序证书中公钥值的完整性。如果伪造者用自己的公钥替换掉公钥，它就可以冒充真实的应用程序并获取安全数据。
+#### 第1 步：生成私钥```bashopenssl genrsa -des3 -out server.key1024```
 
-为了防止此类攻击，所有证书都必须由认证机构（`CA`）签名。`CA` 是一个受信任的节点，用于确认证书中公钥值的完整性。
+#### 第2 步：生成 CSR（证书签名请求）
 
-### 数字签名
+```bashopenssl req -new -key server.key -out server.csr```
 
-`CA` 通过在证书上添加其数字签名对证书进行签名。数字签名是用 `CA` 的私钥编码的消息。`CA` 的公钥通过分发 `CA` 证书提供给应用程序。应用程序通过 `CA` 的公钥解码 `CA` 的数字签名，来验证证书是否已有效签名。
-
-## 生成证书的命令
-
-以下是使用 `openssl` 工具生成和练习制作证书的步骤和命令。
-
-#### 第 1 步：生成私钥
-
-```
-openssl genrsa -des3 -out server.key 1024
-```
-
-#### 第 2 步：生成 CSR（证书签名请求）
-
-```bash
-openssl req -new -key server.key -out server.csr
-```
-
-#### 第 3 步：生成自签名证书
-
-```bash
-openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
-```
+#### 第3 步：生成自签名证书```bashopenssl x509 -req -days365 -in server.csr -signkey server.key -out server.crt```
 
 ### 如何验证私钥是否匹配证书？
 
@@ -737,82 +623,51 @@ openssl x509 -req -days 365 -in server.csr -signkey server.key -out server.crt
 
 请执行以下命令查看证书的模数：
 
-```bash
-openssl x509 -noout -modulus -in server.crt | openssl md5
-```
+```bashopenssl x509 -noout -modulus -in server.crt | openssl md5```
 
 请执行以下命令查看私钥的模数：
 
-```bash
-openssl rsa -noout -modulus -in server.key | openssl md5```
+```bashopenssl rsa -noout -modulus -in server.key | openssl md5```
 
 #### 从密钥中移除密码：
 
-```bash
-cp server.key server.key.org
-openssl rsa -in server.key.org -out server.key
-```
+```bashcp server.key server.key.orgopenssl rsa -in server.key.org -out server.key```
 
-## 第 6 章：网络包追踪
+## 第6章：网络包追踪数据包嗅探获取通过本地网络传输的任何数据，并寻找可能间谍活动有用信息的过程。系统管理员通常使用数据包嗅探来排除网络问题（例如，找出为什么网络流量如此缓慢），或检测入侵或被破解了密码的工作站（例如，在没有连接 IRC 客户端的情况下，工作站持续连接到端口6667 的远程机器），这就是为什么这种分析最初为网络扫描设计的。
 
-数据包嗅探是获取通过本地网络传输的任何数据，并寻找可能对间谍活动有用信息的过程。系统管理员通常使用数据包嗅探来排除网络问题（例如，找出为什么网络流量如此缓慢），或检测入侵或被破解了密码的工作站（例如，在没有连接 IRC 客户端的情况下，工作站持续连接到端口 6667 的远程机器），这就是为什么这种分析最初是为网络扫描设计的。
+### 什么 WiresharkWireshark一种网络数据包分析器。网络数据包分析器会尝试捕获网络数据包，并尽可能详细地显示包数据。你可以将网络数据包分析器想象为用于检查电缆内部情况的测量设备，就像电工使用电压表来检查电缆内部情况一样。
 
-### 什么是 Wireshark
+过去，这类工具要么非常昂贵，要么专利所有的，或者两者都是。然而，随着 Wireshark 的出现，这一切都改变了。Wireshark可能目前最好的开源数据包分析器之一。
 
-Wireshark 是一种网络数据包分析器。网络数据包分析器会尝试捕获网络数据包，并尽可能详细地显示包数据。你可以将网络数据包分析器想象为用于检查电缆内部情况的测量设备，就像电工使用电压表来检查电缆内部情况一样。
+### 一些预期用途以下人们使用 Wireshark 的一些示例：
 
-过去，这类工具要么非常昂贵，要么是专利所有的，或者两者都是。然而，随着 Wireshark 的出现，这一切都改变了。Wireshark 可能是目前最好的开源数据包分析器之一。
+- 网络管理员用它来排除网络问题- 网络安全工程师用它检查安全问题- 开发者用它来调试协议实现- 人们用它学习网络协议内部原理### Wireshark 的安装步骤在 Linux终端输入以下命令：
 
-### 一些预期用途
+```bashwget http://sourceforge.net/projects/wireshark/files/src/all -versions/wireshark-1.0.3.tar.gz/downloadgunzip -d wireshark-1.0.3.tar.gztar -xvf wireshark-1.0.3.tar.gz```
 
-以下是人们使用 Wireshark 的一些示例：
+最后通过输入以下内容执行`wireshark`工具：
 
-* 网络管理员用它来排除网络问题
-* 网络安全工程师用它检查安全问题
-* 开发者用它来调试协议实现
-* 人们用它学习网络协议内部原理
+```bashtcpdump -i eth1```
 
-### Wireshark 的安装步骤
+## 第7章：IPV6 与 IPV4 概述互联网地址已经耗尽。也许你听过新闻：最后的`IPv4`网络地址块已经分配完毕。自互联网诞生以来支持互联网协议地址的基础底层技术即将耗尽。
 
-在 Linux 终端输入以下命令：
+不过，一项新技术将取代它。`IPv4`的继承者`IPv6`，这个系统不仅提供多得数值地址，还将简化地址分配和额外的网络安全功能。
 
-```bash
-wget http://sourceforge.net/projects/wireshark/files/src/all -versions/wireshark-1.0.3.tar.gz/download
-gunzip -d wireshark-1.0.3.tar.gz
-tar -xvf wireshark-1.0.3.tar.gz
-```
+尽管，从`IPv4`到`IPv6`的过渡可能艰难的。大多数人并不熟悉`IPv4`和`IPv6`，更不用说切换到`IPv6`他们生活可能产生的影响。
 
-最后通过输入以下内容执行 wireshark 工具：
-
-```bash
-tcpdump -i eth1
-```
-
-## 第 7 章：IPV6 与 IPV4 概述
-
-互联网地址已经耗尽。也许你听过新闻：最后的 `IPv4` 网络地址块已经分配完毕。自互联网诞生以来支持互联网协议地址的基础底层技术即将耗尽。
-
-不过，一项新技术将取代它。`IPv4` 的继承者是 `IPv6`，这个系统不仅提供多得数值地址，还将简化地址分配和额外的网络安全功能。
-
-尽管，从 `IPv4` 到 `IPv6` 的过渡可能是艰难的。大多数人并不熟悉 `IPv4` 和 `IPv6`，更不用说切换到 `IPv6` 对他们生活可能产生的影响。
-
-### 介绍 IPV6
-
-这是一个典型的 `IPv4` 地址：
+###介绍 IPV6这是一个典型的`IPv4`地址：
 
 `192.168.0.1`
 
-作为 32 位值的 `IPv4` 地址（2 的 4 次方）
+作为32 位值的`IPv4`地址（2 的4 次方）。
 
-这是一个 `IPv6` 地址格式：
+这是一个`IPv6`地址格式：
 
 `2001:0db8:0000:0000:a526:2962:3960:c0e1`
 
-`IPv6` 地址的大小为 128 位到 512 位（2 的 8 次方）
+`IPv6`地址的大小为128 位到512 位（2 的8 次方）。
 
-### IPv6 零压缩
-
-省略以下 `IPv6` 地址的导导零：
+### IPv6 零压缩省略以下`IPv6`地址的导导零：
 
 `2001:0db8:0000:0000:0007:0062:0060:0e1`
 
@@ -823,6 +678,7 @@ tcpdump -i eth1
 为了进一步缩短地址，我们可以压缩零：`2001:db8:0:0:7:62:60`。
 
 ### IPv6 前缀
+
 
 `IPv6` 的开头被称为网络前缀。`2001:0db8:0000:0000:a526:2962:3960:c0e1` 是一个示例。`IPv6` 地址的大小为 128 位。`2001:0db8:0000:0000:0007:0062:0060:0e1` 变为 `2001:db8:0:0:7:62:60`。
 
@@ -866,14 +722,9 @@ tcpdump -i eth1
 
 `IPv6` 地址的大小为 128 位。`2001:0db8:0000:0000:0007:0062:0060:0e1` 变为 `2001:db8:0:0:7:62:60`。
 
-
-
-
-
 - `www.linuxquestions.org/questions/linux-networking-3/trouble-generating-ssl-certificates-116973/`
 - `blog.didierstevens.com/2008/12/30/howto-make-your-own-cert-with-openssl/`
 - `www.devco.net/archives/2006/02/13/public_-_private_key_encryption_using_openssl.php`
-- [http://bsdsupport.org/2007/01/q-how-do-i-use-openssl-to-encrypt-files/
+- [http://bsdsupport.org/2007/01/q-how-do-i-use-openssl-to-encrypt-files/](http://bsdsupport.org/2007/01/q-how-do-i-use-openssl-to-encrypt-files/)
 
 封面 Logo 由 Larry Ewing 绘制
-

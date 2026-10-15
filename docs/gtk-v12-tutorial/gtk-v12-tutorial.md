@@ -1,120 +1,83 @@
+
 # GTK+ v1.2 入门指南
-
-
-
-
-
-[content]
-
-
 
 这是一份关于如何通过 C 接口使用 GTK（GIMP 工具包）的教程。
 
+## 17 超时、IO 和空闲函数 ................................................................ 161
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 17 超时、IO 和空闲函数 ................................................................ 161
-
-
-
-
-
-- 22.4.4 基础知识 (The Basics) ................................... 190
-
+- 22.4.4 基础知识 (`The Basics`) ................................... 190
 - 25 贡献 215
 - 26 致谢 216
 - 27 教程版权与许可说明 217
-- A.7 GtkTipsQuery . . . . . . . . . . . . . . 222
-- A.8 GtkList . . . . . . . . . . . . . . . 222
-- A.9 GtkNotebook . . . . . . . . . . . . . . 223
-- A.10 GtkList . . . . . . . . . . . . . . . 223
-- A.11 GtkMenuShell . . . . . . . . . . . . . 223
-- A.12 GtkToolbar . . . . . . . . . . . . . . 223
-- A.13 GtkTree . . . . . . . . . . . . . . 224
-- A.14 GtkButton . . . . . . . . . . . . . 224
-- A.15 GtkItem . . . . . . . . . . . . . 224
-- A.16 GtkWindow . . . . 224
-- A.17 GtkHandleBox . . . . 224
-- A.18 GtkToggleButton . . . . 225
-- A.19 GtkMenuItem . . . . 225
-- A.20 GtkListItem . . . . 225
-- A.21 GtkTreeItem . . 225
-- A.22 GtkCheckMenuItem . . 225
-- A.23 GtkInputDialog . . 226
-
-
-
-
-
-
-- A.24 GtkColorSelection ..................................................................................................... 226
-A.25 GtkStatusBar ........................................................................................................................ 226
-A.26 GtkTree ................................................................................................................ 226
-A.27 GtkCurve ............................................................................................... 226
-A.28 GtkAdjustment ................................................................................ 227
-
-
-
+- A.7 `GtkTipsQuery` . . . . . . . . . . . . . . 222
+- A.8 `GtkList` . . . . . . . . . . . . . . . 222
+- A.9 `GtkNotebook` . . . . . . . . . . . . . . 223
+- A.10 `GtkList` . . . . . . . . . . . . . . . 223
+- A.11 `GtkMenuShell` . . . . . . . . . . . . . 223
+- A.12 `GtkToolbar` . . . . . . . . . . . . . . 223
+- A.13 `GtkTree` . . . . . . . . . . . . . . 224
+- A.14 `GtkButton` . . . . . . . . . . . . . 224
+- A.15 `GtkItem` . . . . . . . . . . . . . 224
+- A.16 `GtkWindow` . . . . 224
+- A.17 `GtkHandleBox` . . . . 224
+- A.18 `GtkToggleButton` . . . . 225
+- A.19 `GtkMenuItem` . . . . 225
+- A.20 `GtkListItem` . . . . 225
+- A.21 `GtkTreeItem` . . 225
+- A.22 `GtkCheckMenuItem` . . 225
+- A.23 `GtkInputDialog` . . 226
+- A.24 `GtkColorSelection` ..................................................................................................... 226
+- A.25 `GtkStatusBar` ........................................................................................................................ 226
+- A.26 `GtkTree` ................................................................................................................ 226
+- A.27 `GtkCurve` ............................................................................................... 226
+- A.28 `GtkAdjustment` ................................................................................ 227
 - C.1 井字游戏 ................................................................................................................... 234
-C.1.1 tictactoe.h ................................................................................................ 234
-C.1.2 tictactoe.c ................................................................................................ 235
-C.1.3 ttt_test.c ................................................................................................ 238
-C.2 GtkDial ................................................................................................................ 239
-C.2.1 gtkdial.h ................................................................................ 239
-C.2.2 gtkdial.c ................................................................................ 240
-C.3 Scribble ................................................................................................................ 251
-
-
+  - C.1.1 `tictactoe.h` ................................................................................................ 234
+  - C.1.2 `tictactoe.c` ................................................................................................ 235
+  - C.1.3 `ttt_test.c` ................................................................................................ 238
+- C.2 `GtkDial` ................................................................................................................ 239
+  - C.2.1 `gtkdial.h` ................................................................................ 239
+  - C.2.2 `gtkdial.c` ................................................................................ 240
+- C.3 `Scribble` ................................................................................................................ 251
 - D.1 信号 ................................................................................................................ 255
-D.2 函数 ............................................................................... 256
-D.3 示例 ................................................................................................... 257
-D.4 列表项小组件 ............................................................................ 262
-D.5 信号 ................................................................................................................ 263
-D.6 函数 ............................................................................... 263
-D.7 示例 ................................................................................... 263
+- D.2 函数 ............................................................................... 256
+- D.3 示例 ................................................................................................... 257
+- D.4 列表项小组件 ............................................................................ 262
+- D.5 信号 ................................................................................................................ 263
+- D.6 函数 ............................................................................... 263
+- D.7 示例 ................................................................................... 263
 
 # 1 引言
 
-GTK (GIMP Toolkit) 是一个用于创建图形用户界面的库。它采用 GPL 许可证发布，因此你可以使用 GTK 开发开源软件、免费软件，甚至是商业性的非自由软件，而无需支付许可费用或版税。
+`GTK` (`GIMP Toolkit`) 是一个用于创建图形用户界面的库。它采用 `GPL` 许可证发布，因此你可以使用 `GTK` 开发开源软件、免费软件，甚至是商业性的非自由软件，而无需支付许可费用或版税。
 
-它之所以被称为 GIMP 工具包，是因为它最初是为了开发通用图像处理程序 (GIMP) 而编写的，但 GTK 已经用于许多软件项目，包括 GNU 网络对象模型环境 (GNOME) 项目。GTK 构建在 PDK (GIMP 绘图包) 之上，PDK 是访问底层窗口函数（在 Windows 下为 Xlib）的底层函数的封装器。GTK 的主要作者有：
+它之所以被称为 GIMP 工具包，是因为它最初是为了开发通用图像处理程序 (`GIMP`) 而编写的，但 `GTK` 已经用于许多软件项目，包括 GNU 网络对象模型环境 (`GNOME`) 项目。`GTK` 构建在 `PDK` (`GIMP` 绘图包) 之上，`PDK` 是访问底层窗口函数（在 Windows 下为 `Xlib`）的底层函数的封装器。`GTK` 的主要作者有：
 
-- Peter Mathis mattis@xc.berkeley.edu
-- Spencer Kimball spencer@xc.berkeley.edu
-- Josh MacDonald jmacd@xc.berkeley.edu
+- Peter Mathis `mattis@xc.berkeley.edu`
+- Spencer Kimball `spencer@xc.berkeley.edu`
+- Josh MacDonald `jmacd@xc.berkeley.edu`
 
 # 2. 入门
 
-GTK 是一个面向对象的编程器接口 (API)。虽然是用 C 语言编写的，但它是使用类和回调函数（函数指针）的思想来实现的。
+`GTK` 是一个面向对象的编程器接口 (`API`)。虽然是用 C 语言编写的，但它是使用类和回调函数（函数指针）的思想来实现的。
 
-还有第三个组件 glib，它包含了几个标准调用的替代方案，以及处理链表的额外函数。这些替代函数被用于增加 GTK 的移植性，因为这里实现的一些函数在其他 Unix 系统上是不可用的或不是标准函数，例如 `g_error()`。另一些对 lib 版本的增强（如 `g_malloc`）也改进了调试工具。
+还有第三个组件 `glib`，它包含了几个标准调用的替代方案，以及处理链表的额外函数。这些替代函数被用于增加 `GTK` 的移植性，因为这里实现的一些函数在其他 Unix 系统上是不可用的或不是标准函数，例如 `g_error()`。另一些对 lib 版本的增强（如 `g_malloc`）也改进了调试工具。
+
+
 
 本教程描述了 GTK 的接口。GTK 有许多其他语言的绑定，如 C++、Go、Perl、Python、Ada、Objective C、Pascal 和 Eiffel。如果你想使用其他语言的 GTK 绑定，请查阅该绑定的文档。在某些情况下，文档可能会描述一些重要的约定（你应该先了解这些），然后引导你参考本教程。对于某些跨平台 API（如 Windows 和 X），你可以将 GTK 作为它们的平台之一使用；同样，请考虑它们的文档。
 
-如果你在 C++ 中开发 GTK 应用程序，需要一些额外的支持。有一个名为 gtkmm 的 GTK C++ 绑定，它为 GTK 提供了类似 C++ 的接口；你可能应该考虑使用这个。如果你出于某种原因不喜欢那种方法，也有使用 GTK 的替代方案。首先，你可以在与 GTK 交互时使用 C++ 的子集并使用 C 接口。其次，通过将所有回调声明为 C++ 类中的函数来使用 GTK 和 C++，再次使用 C 调用 GTK。如果你选择最后这种方法，可以将回调的数据值包含在要操作的对象中（所谓的 "this" 值）。选择这些选项仅取决于偏好，因为在所有三种方法中你都可以使用 C++ 和 GTK。这些方法中都不需要使用特殊的预处理器，无论你选择哪种，都可以将标准 C 与 GTK 使用。
+如果你在 C++ 中开发 GTK 应用程序，需要一些额外的支持。有一个名为 `gtkmm` 的 GTK C++ 绑定，它为 GTK 提供了类似 C++ 的接口；你可能应该考虑使用这个。如果你出于某种原因不喜欢那种方法，也有使用 GTK 的替代方案。首先，你可以在与 GTK 交互时使用 C++ 的子集并使用 C 接口。其次，通过将所有回调声明为 C++ 类中的函数来使用 GTK 和 C++，再次使用 C 调用 GTK。如果你选择最后这种方法，可以将回调的数据值包含在要操作的对象中（所谓的 "this" 值）。选择这些选项仅取决于偏好，因为在所有三种方法中你都可以使用 C++ 和 GTK。这些方法中都不需要使用特殊的预处理器，无论你选择哪种，都可以将标准 C 与 GTK 使用。
 
-本教程旨在尽可能记录 GTK，但绝非完整。本教程假设读者对 C 语言以及如何创建 C++ 程序有良好的理解。读者如果有之前的 X 编程经验将大有益，但并非必须。如果你将 GTK 作为你的第一个组件来学习，请反馈你对本教程的感受以及你是否遇到了困难。请注意，GTK 的 C++ API (gtk-) 正在开发中，所以如果你倾向于使用 C++，你应该考虑使用它。还有 Objective C、ADA、Guile 等其他语言的绑定可用，但我不关注这些。
+本教程旨在尽可能记录 GTK，但绝非完整。本教程假设读者对 C 语言以及如何创建 C++ 程序有良好的理解。读者如果有之前的 X 编程经验将大有益，但并非必须。如果你将 GTK 作为你的第一个组件来学习，请反馈你对本教程的感受以及你是否遇到了困难。请注意，GTK 的 C++ API (`gtk-`) 正在开发中，所以如果你倾向于使用 C++，你应该考虑使用它。还有 Objective C、ADA、Guile 等其他语言的绑定可用，但我不关注这些。
 
-本文档处于“进行中”。请访问 http://www.gtk.org/ http://www.gtk.org/ 查找更新。
+本文档处于“进行中”。请访问 `http://www.gtk.org/` `http://www.gtk.org/` 查找更新。
 
 我非常希望听到任何通过本文档学习 GTK 的反馈，并欢迎关于如何改进的建议。请参见第 25 页更多信息。
 
 # 2 入门
 
-要第一第一是下载 GTK 源码并安装。你可以从 ftp.gtk.org /pub/gtk 获取最新版本。你也可以在 http://www.gtk.org/ 查看关于 GTK 的其他信息。GTK 使用 GNU autoconf 进行配置。配置完成后，输入 `./configure` 查看选项列表。
+要第一第一是下载 GTK 源码并安装。你可以从 `ftp.gtk.org/pub/gtk` 获取最新版本。你也可以在 `http://www.gtk.org/` 查看关于 GTK 的其他信息。GTK 使用 GNU autoconf 进行配置。配置完成后，输入 `./configure` 查看选项列表。
 
 GTK 源码发行版还包含本教程使用的所有示例源码，以及用于编译的 Makefile。
 
@@ -126,7 +89,7 @@ GTK 源码发行版还包含本教程使用的所有示例源码，以及用于�
 #include <gtk/gtk.h>
 ```
 
-# 2 入门
+## 2.0 示例程序
 
 ```c
 int main(int argc,
@@ -146,14 +109,15 @@ int main(int argc,
 /* example-end above */
 ```
 
-你可以使用 gcc 编译上述程序：
+你可以使用 `gcc` 编译上述程序：
 
 ```
 gcc base.c -o base 'gtk-config --cflags --libs'
 ```
 
 常用编译选项的含义下文所示。
-所有程序都会包含 gtk/gtk.h，它声明了在 GTK 应用程序中将使用的变量、函数、结构等。
+
+所有程序都会包含 `gtk/gtk.h`，它声明了在 GTK 应用程序中将使用的变量、函数、结构等。
 
 下一行：
 
@@ -161,25 +125,21 @@ gcc base.c -o base 'gtk-config --cflags --libs'
 gtk_init (&argc, &argv);
 ```
 
-调用函数 gtk_init(int *argc, char ***argv)，该函数将在所有的 GTK 程序中被调用。它为我们设置了一些默认视觉效果和颜色映射，然后继续调用 gdk_init(int *argc, char ***argv)。该函数初始化库以便使用，设置默认信号处理器，并检查传递给应用程序的参数，寻找以下之一：
+调用函数 `gtk_init(int *argc, char ***argv)`，该函数将在所有的 GTK 程序中被调用。它为我们设置了一些默认视觉效果和颜色映射，然后继续调用 `gdk_init(int *argc, char ***argv)`。该函数初始化库以便使用，设置默认信号处理器，并检查传递给应用程序的参数，寻找以下之一：
 
-- - gtk-module
-- g-fatal-warnings
-- gtk-debug
-- gtk-no-debug
-- gdk-debug
-- gdk-no-debug
-- -display
-- -sync
-- -no-xshm
-- -name
-- -class
+- `-gtk-module`
+- `g-fatal-warnings`
+- `gtk-debug`
+- `gtk-no-debug`
+- `gdk-debug`
+- `gdk-no-debug`
+- `-display`
+- `-sync`
+- `-no-xshm`
+- `-name`
+- `-class`
 
-
-
-
-
-## 2. 入门
+### 2.1 创建窗口
 
 ```c
 window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
@@ -237,6 +197,8 @@ void destroy(GtkWidget *widget,
 gpointer      data )
 {}
 ```
+
+
 
 ```c
 gtk_main_quit();
@@ -314,48 +276,44 @@ gcc -Wall -g helloworld.c -o helloworld 'gtk-config --cflags ' \
      'gtk-config --libs'
 ```
 
-这使用了 gtk-config 程序，它随 gtk 一起提供，知道编译使用 gtk 的程序所需的编译器开关。gtk-config --cflags 将输出
+这使用了 `gtk-config` 程序，它随 `gtk` 一起提供，知道编译使用 `gtk` 的程序所需的编译器开关。`gtk-config --cflags` 将输出
 
 ## 2.3 信号与回调理论
 
 除了上述的信号机制外，还有一组反映 X 机制的事件。回调也可以附加到这些事件上。这些事件是：
 
-- event
-- button_press
-- button_release_event
-- motion_notify_event
-
-
-
-
+- `event`
+- `button_press`
+- `button_release_event`
+- `motion_notify_event`
 
 ## 2. 入门
 
-- delete_event
-- destroy_event
-- expose_event
-- key_press_event
-- key_release_event
-- enter_notify_event
-- leave_notify_event
-- configure_in_event
-- focus_in_event
-- focus_out_event
-- map_event
-- unmap_event
-- property_notify_event
-- selection_clear_event
-- selection_request_event
-- selection_notify_event
-- proximity_in_event
-- proximity_out_event
-- drag_begin_event
-- drag_request_event
-- drag_end_event
-- drop_enter_event
-- drop_leave_event
-- drop_data_available_event
-- other_event
+- `delete_event`
+- `destroy_event`
+- `expose_event`
+- `key_press_event`
+- `key_release_event`
+- `enter_notify_event`
+- `leave_notify_event`
+- `configure_in_event`
+- `focus_in_event`
+- `focus_out_event`
+- `map_event`
+- `unmap_event`
+- `property_notify_event`
+- `selection_clear_event`
+- `selection_request_event`
+- `selection_notify_event`
+- `proximity_in_event`
+- `proximity_out_event`
+- `drag_begin_event`
+- `drag_request_event`
+- `drag_end_event`
+- `drop_enter_event`
+- `drop_leave_event`
+- `drop_data_available_event`
+- `other_event`
 
 为了将回调函数连接到这些事件之一，您使用如上所述的 `gtk_signal_connect` 函数，并使用上述事件名称之一作为名称参数。事件的回调函数形式与其略有不同：
 
@@ -365,7 +323,7 @@ void callback_func( GtkWidget *widget,
                     gpointer callback_data );
 ```
 
-GdkEvent 是一个 C 联合体结构（union），取决于发生了上述哪种事件。为了告诉我们发布了哪种事件，每个可能的备选项都有一个类型参数，反映正在发布的事件。事件结构中的其他组件将取决于事件的类型。可能的类型值有：
+`GdkEvent` 是一个 C 联合体结构（union），取决于发生了上述哪种事件。为了告诉我们发布了哪种事件，每个可能的备选项都有一个类型参数，反映正在发布的事件。事件结构中的其他组件将取决于事件的类型。可能的类型值有：
 
 ```
 GDK_NOTHING
@@ -410,7 +368,7 @@ gtk_signal_connect(Gtk_OBJECT(button), "button_press_event",
                NULL);
 ```
 
-这假设 button 是一个 GtkWidget。当鼠标悬停在按钮上并按下鼠标键时，函数 button_press_callback 将被调用。该函数可以声明为：
+这假设 `button` 是一个 `GtkWidget`。当鼠标悬停在按钮上并按下鼠标键时，函数 `button_press_callback` 将被调用。该函数可以声明为：
 
 ```
 static gboolean button_press_event (GtkWidget *widget,
@@ -418,19 +376,21 @@ static gboolean button_press_event (GtkWidget *widget,
                                gpointer data);
 ```
 
-注意，我们可以将第二个参数声明为类型 GdkEventButton，因为我们知道当此函数被调用时会发生什么种类型的事件。
+注意，我们可以将第二个参数声明为类型 `GdkEventButton`，因为我们知道当此函数被调用时会发生什么种类型的事件。
+
+
 
 此函数返回的值指示该事件是否应该由 GTK 事件处理机制传播。返回 `TRUE` 表示事件已处理，不应继续向下传播。返回 `FALSE` 则继续正常的事件处理。有关此传播过程的更多详细信息，请参阅第 18 节。
 
-有关 GdkEvent 类型的详细信息，请参见附录 B。
+有关 `GdkEvent` 类型的详细信息，请参见附录 B。
 
 ## 2.5 逐步解析 Hello World
 
 现在我们知道了这背后的理论，让我们通过遍历 helloworld 程序示例来明确这一点。
 
-以下是当按钮被“点击”时调用的回调函数。在这个示例中，我们忽略了 widget 和数据，但对它们进行某些操作并不困难。下一个示例将使用数据来告诉我们按下了哪一个按钮。
+以下是当按钮被“点击”时调用的回调函数。在这个示例中，我们忽略了 `widget` 和 `data`，但对它们进行某些操作并不困难。下一个示例将使用数据来告诉我们按下了哪一个按钮。
 
-```
+```c
 void hello(GtkWidget *widget,
     gpointer      data )
 {
@@ -438,56 +398,52 @@ void hello(GtkWidget *widget,
 }
 ```
 
-下一个回调有点特殊。当窗口管理器想要关闭窗口时，会发生“delete_event”。在这个示例中我们也忽略了 widget 和数据，但对它们进行某些操作并不困难。下一个示例将使用数据来告诉我们按下了哪一个按钮。
-
-
-
-
+下一个回调有点特殊。当窗口管理器想要关闭窗口时，会发生“delete_event”。在这个示例中我们也忽略了 `widget` 和 `data`，但对它们进行某些操作并不困难。下一个示例将使用数据来告诉我们按下了哪一个按钮。
 
 ## 3. 继续进
 
-```
+```c
 gtk_container_add (GTK_CONTAINER (window), button);
 ```
 
 现在，我们已经完成了所有预期的设置。所有的信号处理器都已就绪，按钮也已放置在窗口中应当的位置，我们请求 GTK 在屏幕上“显示”这些组件。窗口组件被显示，因此整个窗口会在看到窗口弹出后立即跳出，然后是它内部的按钮也会弹出来。尽管在这样一个简单的示例中，你可能察觉不到这一点。
 
-```
+```c
 gtk_widget_show (button);
 gtk_widget_show (window);
 ```
 
 当然，我们调用了 `gtk_main()`，它会等待来自 X 服务器的事件，并在这些事件发生时调用组件发射信号。
 
-```
+```c
 gtk_main ();
 ```
 
 最后是返回。在调用 `gtk_quit()` 后，控制权会返回。
 
-```
+```c
 return 0;
 ```
 
-现在，当我们点击 GTK 按钮上的鼠标时，该组件会发射一个“clicked”（点击）信号。为了使用这个信息，我们的程序设置了一个信号处理器来捕获该信号，并分发我们选择的函数。在我们的示例中，当创建的按钮被“点击”时，将调用带有 NULL 参数的 `hello()` 函数，然后调用该信号的下一个处理器。这会调用 `gtk_widget_destroy` 函数，并将窗口作为参数传递，从而销毁窗口组件。这会导致窗口发射“destroy”（销毁）信号，信号被捕获后调用我们的 `destroy()` 回调函数，该函数简单地退出 GTK。
+现在，当我们点击 GTK 按钮上的鼠标时，该组件会发射一个“clicked”信号。为了使用这个信息，我们的程序设置了一个信号处理器来捕获该信号，并分发我们选择的函数。在我们的示例中，当创建的按钮被“点击”时，将调用带有 NULL 参数的 `hello()` 函数，然后调用该信号的下一个处理器。这会调用 `gtk_widget_destroy` 函数，并将窗口作为参数传递，从而销毁窗口组件。这会导致窗口发射“destroy”信号，信号被捕获后调用我们的 `destroy()` 回调函数，该函数简单地退出 GTK。
 
-另一种事件情况是使用窗口管理器杀死窗口。这将导致发射“delete-event”（删除事件）信号。我们将调用“delete-event”处理器。如果在此处返回 `TRUE`，窗口将保持原样，什么都不会发生。返回 `FALSE` 则将导致 GTK 发射“destroy”信号，从而调用“destroy”回调并退出 GTK。
+另一种事件情况是使用窗口管理器杀死窗口。这将导致发射“delete-event”信号。我们将调用“delete-event”处理器。如果在此处返回 `TRUE`，窗口将保持原样，什么都不会发生。返回 `FALSE` 则将导致 GTK 发射“destroy”信号，从而调用“destroy”回调并退出 GTK。
 
 请注意，这些信号与 Unix 系统信号不同，它们并不是用后者实现的，尽管术语几乎完全相同。
 
-## 3.1 数据类型
+### 3.1 数据类型
 
 在之前的示例中，你可能注意到了一些需要解释的内容。你看到的 `gint`、`gchar` 等分别被重定义为 `int` 和 `char`。这样做是为了避免在进行计算时对简单数据类型的大小产生糟糕的依赖。
 
-一个很好的例子是 "uint32"，对于任何给定的平台，它都被重定义为 32 位整数，无论是 64 位的 alpha 还是 32 位的 i386。这些重定义非常直观易懂。它们都定义在 `glib/glib.h` 中（通过 `gtk.h` 包含）。
+一个很好的例子是 `uint32`，对于任何给定的平台，它都被重定义为 32 位整数，无论是 64 位的 alpha 还是 32 位的 i386。这些重定义非常直观易懂。它们都定义在 `glib/glib.h` 中（通过 `gtk.h` 包含）。
 
 你还会注意到，当函数调用需要 `GtkObject` 时可以使用 `GtkWidget`。GTK 是一种面向对象的设计，而组件就是一个对象。
 
-## 3.2 更多关于信号处理器
+### 3.2 更多关于信号处理器
 
 让我们再次看一眼 `gtk_signal_connect` 的声明。
 
-```
+```c
 gint gtk_signal_connect( GtkObject *object,
       gchar *name,
       GtkSignalFunc func,
@@ -498,7 +454,7 @@ gint gtk_signal_connect( GtkObject *object,
 
 这允许你使用以下代码从列表中移除回调：
 
-```
+```c
 void gtk_signal_disconnect( GtkObject *object,
       gint id );
 ```
@@ -507,13 +463,13 @@ void gtk_signal_disconnect( GtkObject *object,
 
 另一个移除对象中所有信号处理器的函数是：
 
-```
+```c
 void gtk_signal_handlers_destroy( GtkObject *object );
 ```
 
 这个调用非常自显其意。它简单地从第一个参数指定的对象中移除所有当前的信号处理器。
 
-## 3.3 升级版的 Hello World
+### 3.3 升级版的 Hello World
 
 让我们来看一个稍微改进的 helloworld，它包含了更好的回调示例。这也引入了我们的下一个主题：组件装箱（packing）。
 
@@ -618,24 +574,27 @@ return 0;
 }
 ```
 
-
-
-
-
 # 4. 封装部件
 
 ## 4.2 容器的细节
 
 由于这种灵活性，在 GTK 中封装容器初看起来可能会令人困惑。有很多选项，而且它们如何组合在一起并不显而易见。然而，基本上有五种不同的样式。
 
-| gtk_box_new(FALSE, 0); | | FALSE FALSE 0); |
-|---|---|---|---|---|
-| gtk_box_pack(box, button, | | TRUE, FALSE, | 0); |
-| gtk_box_pack(box, button, | | TRUE, TRUE, | 0); |
-| gtk_hbox_new(TRUE, 0); | | button, | TRUE, FALSE, | 0); |
-| gtk_box_pack(box, button, | | TRUE, TRUE, | 0); |
+| `gtk_box_new(FALSE, 0);` | | FALSE FALSE 0); |
 
-每一行包含一个带有多个按钮的水平框 (hbox)。对每个按钮进行 pack 调用是将其每个按钮封装到 hbox 中的调用简写。每个按钮都以相同的方式进行封装（即使用与 `gtk_box_pack_start()` 函数相同的相同的参数）。
+|---|---|---|---|---|
+
+
+
+| `gtk_box_pack(box, button,` | | `TRUE, FALSE,` | `0);` |
+
+| `gtk_box_pack(box, button,` | | `TRUE, TRUE,` | `0);` |
+
+| `gtk_hbox_new(TRUE, 0);` | | `button,` | `TRUE, FALSE,` | `0);` |
+
+| `gtk_box_pack(box, button,` | | `TRUE, TRUE,` | `0);` |
+
+每一行包含一个带有多个按钮的水平框 (`hbox`)。对每个按钮进行 `pack` 调用是将其每个按钮封装到 `hbox` 中的调用简写。每个按钮都以相同的方式进行封装（即使用与 `gtk_box_pack_start()` 函数相同的相同的参数）。
 
 这是 `gtk_box_pack_start` 函数的示例。
 
@@ -649,9 +608,9 @@ void gtk_box_pack_start(GtkBox *box,
 
 第一个参数是你是否正在封装该对象，第二个参数是对象。目前这些对象将都是按钮，所以我们将框封装到框中。
 
-`gtk_box_pack_start()` 和 `gtk_box_pack_end()` 的 `expand` 参数控制小部件在框中的布局，以填充扩展到填充分配区域的额外空间 (TRUE)。或者缩小框以适应部件 (FALSE)。将 `expand` 设置为 `FALSE` 允许你对部件进行右对齐或左对齐。否则，它们将扩展以适应框，这种效果仅使用 `gtk_box_pack_start` 或 `gtk_box_pack_end` 中的任何一个即可实现。
+`gtk_box_pack_start()` 和 `gtk_box_pack_end()` 的 `expand` 参数控制小部件在框中的布局，以填充扩展到填充分配区域的额外空间 (`TRUE`)。或者缩小框以适应部件 (`FALSE`)。将 `expand` 设置为 `FALSE` 允许你对部件进行右对齐或左对齐。否则，它们将扩展以适应框，这种效果仅使用 `gtk_box_pack_start` 或 `gtk_box_pack_end` 中的任何一个即可实现。
 
-`gtk_box_pack` 的 `fill` 参数控制额外的空间是分配给对象本身 (TRUE)，还是作为这些对象周围框的额外内边 (FALSE)。它只有在 `expand` 参数也为 `TRUE` 时才起作用。
+`gtk_box_pack` 的 `fill` 参数控制额外的空间是分配给对象本身 (`TRUE`)，还是作为这些对象周围框的额外内边 (`FALSE`)。它只有在 `expand` 参数也为 `TRUE` 时才起作用。
 
 创建框时，函数形式如下：
 
@@ -660,7 +619,7 @@ GtkWidget *gtk_hbox_new(gint homogeneous,
                                      gint spacing);
 ```
 
-`gtk_hbox_new` 的 `homogeneous` 参数（`gtk_box_new` 相同）控制框是否具有相同的大小（即 hbox 中的宽度，或 vbox 中的高度）。如果设置了该参数，`gtk_box_pack` 句例的 `expand` 参数将始终开启。
+`gtk_hbox_new` 的 `homogeneous` 参数（`gtk_box_new` 相同）控制框是否具有相同的大小（即 `hbox` 中的宽度，或 `vbox` 中的高度）。如果设置了该参数，`gtk_box_pack` 句例的 `expand` 参数将始终开启。
 
 `spacing`（创建框时）和 `padding`（封装元素时）之间的区别是什么？`spacing` 添加在对象之间，而 `padding` 添加在每个对象的两侧。下面的图应该会让它更清晰：
 
@@ -668,7 +627,7 @@ GtkWidget *gtk_hbox_new(gint homogeneous,
 
 这里使用的代码用于创建这些图像。我注释得相当详尽，希望你遵循时不会遇到任何问题。你自己编译并玩玩看吧。
 
-## 4.3 封装演示程序
+### 4.3 封装演示程序
 
 ```c
 /* example-start pack packbox.c */
@@ -793,6 +752,8 @@ gtk_signal_connect (GTK_OBJECT (window), "delete_event",
 gtk_container_set_border_width (GTK_CONTAINER (window), 10);
 ```
 
+
+
 ```c
 - 我们创建了一个垂直框 (vbox) 来封装水平框。
 - 这允许我们将填充有按钮的水平框
@@ -857,13 +818,6 @@ box2 = gtk_box_new(FALSE, 0);
 - spacing = FALSE, padding = 0.
 box2 = gtk_box_new(FALSE, 0);
 
-- expand = FALSE, padding = 0.
-    gtk_box_pack_start(GTK_BOX(box1), label, expand, fill, padding);
-    gtk_widget_show(label);
-
-- spacing = FALSE, padding = 0.
-box2 = gtk_box_new(FALSE, 0);
-
 - 它们将堆叠在一起。
 box1 = gtk_box_new(FALSE, 0);
 
@@ -884,18 +838,17 @@ switch (num) {
 - 显示标签 */
     gtk_box_pack_start(GTK_BOX(box1), label, expand, fill, padding);
     gtk_widget_show(label);
-
-
-
+}
+```
 
 # 4. 打包小组件
 
-```
+```c
 gtk_box_pack_start (GTK_BOX (box1), box2, FALSE, FALSE, 0);
 gtk_widget_show(box2);
 ```
 
-```
+```c
 separator = gtk_hseparator_new ()
 /* gtk_box_pack_start 的最后 3 个参数是 expand, fill, padding。 */
 gtk_box_pack_start (GTK_BOX (box1), separator, FALSE, TRUE, 5);
@@ -960,10 +913,15 @@ gtk_signal_connect_object (GTK_OBJECT (button), "clicked",
 
 ```c
 /* 将按钮打包到 quitbox 中。
-* gtk_box_pack_start 的最后 3 个参数是：
-  * expand, padding。 */
-gtk_box_pack_start (GTK_BOX (quitbox), button, TRUE, FALSE, 0);
 ```
+
+
+
+* `gtk_box_pack_start` 的最后 3 个参数是：
+
+  * `expand`, `padding`。 */
+
+`gtk_box_pack_start` (`GTK_BOX` (`quitbox`), `button`, `TRUE`, `FALSE`, `0`);
 
 ```c
 /* 将 quitbox 打包到 vbox (box1) 中 */
@@ -977,6 +935,7 @@ gtk_container_add (GTK_CONTAINER (window), box1);
 gtk_widget_show (button);
 gtk_widget_show (quitbox);
 gtk_widget_show (box1);
+
 /* 最后显示窗口，这样所有内容会同时弹出。 */
 gtk_widget_show (window);
 
@@ -985,13 +944,12 @@ gtk_main ()
 
 /* 当 gtk_main_quit() 被调用时，控制返回这里，
  * 但使用 gtk_exit 时不会返回。 */
-
 return(0);
 
 /* example-end */
 ```
 
-## 4.4 使用表格
+### 4.4 使用表格
 
 让我们来看看另一种打包方式——表格（Tables）。它们在某些情况下非常有用。
 
@@ -1038,15 +996,11 @@ void gtk_table_attach(GtkTable *table,
 
 `xoptions` 和 `yoptions` 用于指定打包选项，并可以按位或组合。例如：
 
-- **GTK_FILL**：如果单元格大于可用空间且指定了 `GTK_FILL`，则组件将填充空间。
-- **GTK_SHINK**：如果单元格大于可用空间且指定了 `GTK_SHINK`，则组件将缩小。
-- **GTK_EXPAND**：这会允许组件扩展以占据剩余空间。
+- `GTK_FILL`：如果单元格大于可用空间且指定了 `GTK_FILL`，则组件将填充空间。
+- `GTK_SHINK`：如果单元格大于可用空间且指定了 `GTK_SHINK`，则组件将缩小。
+- `GTK_EXPAND`：这会允许组件扩展以占据剩余空间。
 
 `padding` 参数用于设置组件与单元格边缘之间的内边距。
-
-
-
-
 
 ## 5. 小部件概述
 
@@ -1060,12 +1014,9 @@ GTK_SIGNAL_FUNC (delete_event), NULL);
 /* 将退出按钮插入表格的
 * 下方两个象限 */
 gtk_table_attach_defaults(GTK_TABLE(table), button, 0, 2, 1, 2);
-
 gtk_widget_show(button);
-
 gtk_widget_show(table);
 gtk_widget_show(window);
-
 gtk_main() {
   return 0;
 }
@@ -1082,26 +1033,28 @@ gtk_main() {
 
 `gtk_widget_show()` 让 GTK 知道我们正在再次设置组件的属性，并且它已准备好显示。你也可以使用 `gtk_widget_hide` 让它消失。显示组件的顺序并不重要，但我建议最后显示窗口，这样窗口就会弹出，而不是看到组件在形成时一个一个出现在屏幕上。组件的子元素（窗口也是一种组件）在通过 `gtk_widget_show()` 函数显示窗口本身之前，将不会显示。
 
-## 5.1 强制转换
+### 5.1 强制转换
 
 随着学习深入，你会发现 GTK 使用了类型转换系统。该系统使用许多宏来同时测试转换事件的能力并执行转换。你可能会看到的宏有：
 
-- GTK_WIDGET(widget)
-- GTK_OBJECT(object)
-- GTK_SIGNAL_FUNC(function)
-- GTK_CONTAINER(container)
-- GTK_WINDOW(window)
-- GTK_BOX(box)
+- `GTK_WIDGET(widget)`
+- `GTK_OBJECT(object)`
+- `GTK_SIGNAL_FUNC(function)`
+- `GTK_CONTAINER(container)`
+- `GTK_WINDOW(window)`
+- `GTK_BOX(box)`
 
 这些宏用于对函数参数进行类型转换。你会在示例中看到它们，通常只需查看函数的声明就可以判断何时该使用它们。
 
-如你在下面的类层次结构中所见，所有的 GtkWidgets 都继承自 `GtkObject` 基类。这意味着你可以在任何地方像使用对象一样使用组件——只需使用 `GTK_OBJECT()` 宏即可。
+如你在下面的类层次结构中所见，所有的 `GtkWidgets` 都继承自 `GtkObject` 基类。这意味着你可以在任何地方像使用对象一样使用组件——只需使用 `GTK_OBJECT()` 宏即可。
 
 例如：
 
 ```c
 gtk_signal_connect(GTK_OBJECT(button), "clicked", GTK_SIGNAL_FUNC(callback_function), callback_data);
 ```
+
+
 
 这会将按钮转换为对象，并为指向回调函数的函数指针提供类型转换。
 
@@ -1113,97 +1066,97 @@ gtk_signal_connect(GTK_OBJECT(button), "clicked", GTK_SIGNAL_FUNC(callback_funct
 
 为了方便你参考，这里是实现组件的类层次结构树。
 
-- GtkObject
-  - GtkWidget
-    - GtkMisc
-      - GtkLabel
-      - +GtkCellLayout
-      - +GtkTipsQuery
-      - +GtkArrow
-      - +GtkImage
-      - +GtkPixmap
-    - GtkContainer
-      - +GtkBin
-        - +GtkAlignment
-        - +GtkFrame
-          - +GtkAspectFrame
-        - +GtkButton
-        - +GtkToggleButton
-          - +GtkCheckButton
-            - GtkRadioButton
-          - +GtkMenu
-        - +GtkItem
-        - +GtkMenuItem
-          - +GtkCheckMenuItem
-          - +GtkRadioMenuItem
-          - +GtkToffMenuItem
-        - +GtkTree
-        - +GtkTreeView
-        - +GtkScrollWindow
-        - +GtkColorSelection
-          - +GtkDialog
-          - GtkInputDialog
-          - GtkDrawWindow
-          - GtkFileSelection
-          - GtkFontSelectionDialog
-          - GtkPlug
-          - GtkEvent
-          - GtkHandleBox
-          - GtkScrolledWindow
-          - GtkViewport
-          - GtkBox
-          - GtkButton
-          - GtkHButton
-          - GtkWButton
-          - GtkEvent
-          - GtkColorSelection
-          - GtkGamma
-          - GtkHBox
-          - GtkCombo
-          - GtkStatusbar
-          - GtkList
-          - GtkTree
-          - GtkFixed
-          - GtkNotebook
-          - GtkFontSelection
-          - GtkPane
-          - GtkHPane
-          - GtkPane
-          - GtkLayout
-          - GtkList
-          - GtkMenuShell
-          - GtkMenu
-          - GtkPacker
-          - GtkSocket
-          - GtkTable
-          - GtkToolbar
-          - GtkTree
-          - GtkCalendar
-          - GtkDrawingArea
-          - GtkEditable
-          - GtkEntry
-          - GtkSpinButton
-          - GtkText
-          - GtkRuler
-          - GtkHScroll
-          - GtkValue
-          - GtkRange
-          - GtkHScale
-          - GtkVScale
-          - GtkHScroll
-          - GtkVScroll
-          - GtkVSepar
-          - GtkSeparator
-          - GtkHSeparator
-          - GtkPreview
-          - GtkProgressBar
-          - GtkAdjustment
-          - GtkTooltips
-          - GtkFactory
+- `GtkObject`
+  - `GtkWidget`
+    - `GtkMisc`
+      - `GtkLabel`
+      - +`GtkCellLayout`
+      - +`GtkTipsQuery`
+      - +`GtkArrow`
+      - +`GtkImage`
+      - +`GtkPixmap`
+    - `GtkContainer`
+      - +`GtkBin`
+        - +`GtkAlignment`
+        - +`GtkFrame`
+          - +`GtkAspectFrame`
+        - +`GtkButton`
+        - +`GtkToggleButton`
+          - +`GtkCheckButton`
+            - `GtkRadioButton`
+          - +`GtkMenu`
+        - +`GtkItem`
+        - +`GtkMenuItem`
+          - +`GtkCheckMenuItem`
+          - +`GtkRadioMenuItem`
+          - +`GtkToffMenuItem`
+        - +`GtkTree`
+        - +`GtkTreeView`
+        - +`GtkScrollWindow`
+        - +`GtkColorSelection`
+          - +`GtkDialog`
+          - `GtkInputDialog`
+          - `GtkDrawWindow`
+          - `GtkFileSelection`
+          - `GtkFontSelectionDialog`
+          - `GtkPlug`
+          - `GtkEvent`
+          - `GtkHandleBox`
+          - `GtkScrolledWindow`
+          - `GtkViewport`
+          - `GtkBox`
+          - `GtkButton`
+          - `GtkHButton`
+          - `GtkWButton`
+          - `GtkEvent`
+          - `GtkColorSelection`
+          - `GtkGamma`
+          - `GtkHBox`
+          - `GtkCombo`
+          - `GtkStatusbar`
+          - `GtkList`
+          - `GtkTree`
+          - `GtkFixed`
+          - `GtkNotebook`
+          - `GtkFontSelection`
+          - `GtkPane`
+          - `GtkHPane`
+          - `GtkPane`
+          - `GtkLayout`
+          - `GtkList`
+          - `GtkMenuShell`
+          - `GtkMenu`
+          - `GtkPacker`
+          - `GtkSocket`
+          - `GtkTable`
+          - `GtkToolbar`
+          - `GtkTree`
+          - `GtkCalendar`
+          - `GtkDrawingArea`
+          - `GtkEditable`
+          - `GtkEntry`
+          - `GtkSpinButton`
+          - `GtkText`
+          - `GtkRuler`
+          - `GtkHScroll`
+          - `GtkValue`
+          - `GtkRange`
+          - `GtkHScale`
+          - `GtkVScale`
+          - `GtkHScroll`
+          - `GtkVScroll`
+          - `GtkVSepar`
+          - `GtkSeparator`
+          - `GtkHSeparator`
+          - `GtkPreview`
+          - `GtkProgressBar`
+          - `GtkAdjustment`
+          - `GtkTooltips`
+          - `GtkFactory`
 
 ## 5.3 无窗口组件
 
-如果你想捕获事件，必须使用以下 GtkBox。请参见第 10 部分。
+如果你想捕获事件，必须使用以下 `GtkBox`。请参见第 10 部分。
 
 ## 6.1 普通按钮
 
@@ -1211,109 +1164,149 @@ gtk_signal_connect(GTK_OBJECT(button), "clicked", GTK_SIGNAL_FUNC(callback_funct
 
 ```c
 /* buttons.c */
+
 #include <gtk/gtk.h>
 
 /* 创建一个带有图像和标签的 hbox */
+
 GtkWidget *xpm_label_box( GtkWidget *parent,
+
                         gchar *xpm_filename,
+
                         gchar *label_text )
+
 {
+
     GtkWidget *box1;
+
     GtkWidget *label;
+
     GtkWidget *pixmap;
+
     GdkPixmap *mask;
+
     GtkStyle *style;
 
     /* 为 xpm 和标签创建框 */
+
     box1 = gtk_box_new(FALSE, 0);
+
     gtk_container_set_border_width(GTK_CONTAINER(box1), 2);
 
     /* 获取按钮样式以获取背景颜色 */
+
     style = gtk_widget_get_style(parent);
 
     /* 现在处理 xpm */
+
     pixmap = gtk_pixmap_create_from_xpm(parent->window,
+
                                        style->bg[GTK_NORMAL],
+
                                        xpm_filename);
 
     pixmapwidth = gtk_pixmap_new (pixmap, mask);
 
     /* 为按钮创建标签 */
+
     label = gtk_label_new (label_text);
 
     /* 将位图和标签放入框中 */
+
     gtk_box_pack_start(GTK_BOX (box1),
+
                        pixmapwidth, FALSE, FALSE, 3);
 
     gtk_box_pack_start(GTK_BOX (box1), label, FALSE, FALSE, 3);
 
     gtk_widget_show(pixmapwidth);
+
     gtk_widget_show(label);
 
     return(box1);
+
 }
 
 /* 我们常用的回调函数 */
+
 void callback (GtkWidget *widget,
+
                gpointer data)
+
 {
+
     g_print("Hello again - %s was pressed\n", (char *)data);
+
 }
 
 int main (int argc,
+
            char *argv[])
+
 {
+
     /* Gtkwidget 是组件的存储类型 */
-    GtkWidget *window;
-    GtkWidget *button;
-    GtkWidget *box1;
-
-    gtk_init (&argc, &argv);
-
-    /* 创建新窗口 */
-    window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
-    gtk_window_set_title (GTK_WINDOW(window), "Pixmap'd Buttons!");
-
-    /* 对所有窗口这样做是个好主意 */
-    gtk_signal_connect (GTK_OBJECT(window), "destroy",
-    GTK_SIGNAL_FUNC (gtk_exit), NULL);
-
-    gtk_signal_connect (GTK_OBJECT(window), "delete_event",
-    GTK_SIGNAL_FUNC (gtk_exit), NULL);
-
-    /* 设置窗口边框宽度 */
-    gtk_container_set_border_width (GTK_CONTAINER(window), 10);
-    gtk_widget_realize (window);
-
-    /* 创建新按钮 */
-    button = gtk_button_new ();
-
-    /* 将按钮的“点击”信号连接到我们的回调 */
-    gtk_signal_connect (GTK_OBJECT(button), "clicked",
-    GTK_SIGNAL_FUNC (callback), (gpointer) "cool button");
-
-    /* 调用我们创建框的函数 */
-    box1 = xpm_label_box(window, "info.xpm", "cool button");
-
-    /* 打包并显示我们所有的组件 */
-    gtk_widget_add (GTK_CONTAINER(button), box1);
-
-    gtk_widget_show (button);
-
-    gtk_container_add (GTK_CONTAINER(window), button);
-    gtk_widget_show (window);
-
-    /* 留在 gtk_main 中等待乐趣开始 */
-    gtk_main ()
-
-    return(0);
-}
-/* example-end */
 ```
 
 
 
+```c
+GtkWidget *window;
 
+GtkWidget *button;
+
+GtkWidget *box1;
+
+gtk_init (&argc, &argv);
+
+/* 创建新窗口 */
+
+window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+
+gtk_window_set_title (GTK_WINDOW(window), "Pixmap'd Buttons!"); 
+
+/* 对所有窗口这样做是个好主意 */
+
+gtk_signal_connect (GTK_OBJECT(window), "destroy", GTK_SIGNAL_FUNC (gtk_exit), NULL);
+
+gtk_signal_connect (GTK_OBJECT(window), "delete_event", GTK_SIGNAL_FUNC (gtk_exit), NULL);
+
+/* 设置窗口边框宽度 */
+
+gtk_container_set_border_width (GTK_CONTAINER(window), 10);
+
+gtk_widget_realize (window);
+
+/* 创建新按钮 */
+
+button = gtk_button_new ();
+
+/* 将按钮的“点击”信号连接到我们的回调 */
+
+gtk_signal_connect (GTK_OBJECT(button), "clicked", GTK_SIGNAL_FUNC (callback), (gpointer) "cool button");
+
+/* 调用我们创建框的函数 */
+
+box1 = xpm_label_box(window, "info.xpm", "cool button");
+
+/* 打包并显示我们所有的组件 */
+
+gtk_widget_add (GTK_CONTAINER(button), box1);
+
+gtk_widget_show (button);
+
+gtk_container_add (GTK_CONTAINER(window), button);
+
+gtk_widget_show (window);
+
+/* 留在 gtk_main 中等待乐趣开始 */
+
+gtk_main ()
+
+return(0);
+```
+
+/* example-end */
 
 ## 6. 按钮组件 (Button Widget)
 
@@ -1330,12 +1323,13 @@ int main (int argc,
 
 ```
 GtkWidget *gtk_toggle_button_new( void *);
+
 GtkWidget *gtk_toggle_button_new_with_label(gchar *label);
 ```
 
 你可以想象，这些工作方式与普通按钮组件的调用完全相同。第一个创建一个按钮，第二个创建一个内部封装了标签组件的按钮。
 
-要获取切换组件的状态（包括单选按钮和复选按钮），我们使用下面示例所示的 GTK 宏。这在回调函数中测试切换器状态。切换按钮（切换按钮、复选按钮和单选按钮组件）发出的信号是 "toggled" 信号。要检查这些按钮的状态，设置一个信号处理器来捕获 toggled 信号，并使用宏来确定其状态。回调函数如下：
+要获取切换组件的状态（包括单选按钮和复选按钮），我们使用下面示例所示的 `GTK` 宏。这在回调函数中测试切换器状态。切换按钮（切换按钮、复选按钮和单选按钮组件）发出的信号是 `"toggled"` 信号。要检查这些按钮的状态，设置一个信号处理器来捕获 `toggled` 信号，并使用宏来确定其状态。回调函数如下：
 
 ```
 void toggle_button_callback(GtkWidget *widget, gpointer data)
@@ -1353,15 +1347,15 @@ void toggle_button_callback(GtkWidget *widget, gpointer data)
 void gtk_toggle_button_set_active(GtkToggleButton *toggle_button, gboolean state);
 ```
 
-上面的调用可以设置切换按钮及其子组件（单选和复选按钮）的状态。将你创建的按钮作为第一个参数传递，第二个状态参数传递 TRUE 或 FALSE 来指定它是按下（凹陷）还是弹起（释放）。默认是弹起，即 FALSE。
+上面的调用可以设置切换按钮及其子组件（单选和复选按钮）的状态。将你创建的按钮作为第一个参数传递，第二个状态参数传递 `TRUE` 或 `FALSE` 来指定它是按下（凹陷）还是弹起（释放）。默认是弹起，即 `FALSE`。
 
-注意，当你使用 `gtk_toggle_button_set_active()` 函数时，状态实际上发生了改变，这会导致按钮发出 "clicked" 信号。
+注意，当你使用 `gtk_toggle_button_set_active()` 函数时，状态实际上发生了改变，这会导致按钮发出 `"clicked"` 信号。
 
 ```
 void gtk_toggle_button_toggled(GtkToggleButton *toggle_button);
 ```
 
-这只是切换按钮的状态，并发出 "toggled" 信号。
+这只是切换按钮的状态，并发出 `"toggled"` 信号。
 
 ## 6.3 复选按钮 (Check Buttons)
 
@@ -1386,11 +1380,10 @@ GtkWidget *gtk_check_button_new_with_label( gchar *label );
 
 ```
 GtkWidget *gtk_radio_button_new( GList * group );
-GtkWidget *gtk_radio_button_new_with_label( GList *group,
-                                     gchar *label );
+GtkWidget *gtk_radio_button_new_with_label( GList *group, gchar *label );
 ```
 
-你会注意到这些类多了一个额外参数。它们需要一个组来正常工作。第一次调用 `gtk_radio_button_new_with_label` 或 `gtk_radio_button_new_with_label` 应该向第一个参数传递 NULL。然后使用以下代码创建一个组
+你会注意到这些类多了一个额外参数。它们需要一个组来正常工作。第一次调用 `gtk_radio_button_new_with_label` 或 `gtk_radio_button_new_with_label` 应该向第一个参数传递 `NULL`。然后使用以下代码创建一个组
 
 ```
 GList *gtk_radio_button_group( GtkRadioButton *radio_button );
@@ -1409,8 +1402,7 @@ button2 = gtk_radio_button_new_with_label(
 通过以下代码指定哪个按钮应为默认按钮也是一个好主意：
 
 ```
-void gtk_toggle_button_set_active( GtkToggleButton *toggle_button,
-                                               state );
+void gtk_toggle_button_set_active( GtkToggleButton *toggle_button, state );
 ```
 
 这在切换按钮部分已有描述，工作方式完全相同。
@@ -1419,17 +1411,18 @@ void gtk_toggle_button_set_active( GtkToggleButton *toggle_button,
 
 ```
 /* example-start radiobuttons radiobuttons.c */
-
 #include <gtk/gtk.h>
 #include <glib.h>
 
-void close_application(GtkWidget *widget,
-                       GdkEvent *event,
-                       gpointer data )
+void close_application(GtkWidget *widget, GdkEvent *event, gpointer data )
 {
     gtk_main_quit();
 }
+```
 
+
+
+```c
 int main(int argc,
          char *argv[])
 {
@@ -1439,43 +1432,35 @@ int main(int argc,
     GtkWidget *button;
     GtkWidget *separator;
     GList *group;
-
     gtk_init(&argc, &argv);
-
     window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
     gtk_signal_connect(GTK_OBJECT(window), "delete_event",
                        GTK_SIGNAL_FUNC(close_application),
                        NULL);
-
     gtk_window_set_title(GTK_WINDOW(window), "radio buttons");
     gtk_container_add(GTK_CONTAINER(window), box1);
-
     box2 = gtk_vbox_new(FALSE, 10);
     gtk_container_set_border_width(GTK_CONTAINER(box2), 10);
     gtk_box_pack_start(GTK_BOX(box1), box2, TRUE, TRUE, 0);
     gtk_widget_show(box2);
-
     button = gtk_radio_button_with_label(NULL, "button1");
     gtk_box_pack_start(GTK_BOX(box2), button, TRUE, TRUE, 0);
     gtk_widget_show(button);
-
     button = gtk_radio_button_new_with_label(
                                             gtk_radio_button_group (GTK_RADIO_BUTTON (button1)),
                                             "button2");
     gtk_box_pack_start(GTK_BOX(box2), button, TRUE, TRUE, 0);
     gtk_widget_show(button);
-
     button = gtk_radio_button_new_with_label(
                                             gtk_radio_button_group (GTK_RADIO_BUTTON (button2)),
                                             "button3");
     gtk_box_pack_start(GTK_BOX(box2), button, TRUE, TRUE, 0);
     gtk_widget_show(button);
-
     gtk_main();
-
     return(0);
 }
 /* example-end **/
+```
 
 ## 7. 调整器 (Adjustments)
 
@@ -1485,19 +1470,13 @@ GTK+ 有一些组件允许用户使用鼠标或键盘进行视觉调整，正如
 
 GTK+ 使用 `GtkAdjustment` 对象解决了这个问题，它是组件以抽象且灵活的形式存储和传递信息的方式。`GtkAdjustment` 最明显的用途是存储范围组件的配置参数和值。然而，由于 `GtkAdjustment` 源自 `GtkObject`，它们拥有比普通数据结构更多的特殊能力。最重要的是，它们可以像组件一样发射信号，这些信号不仅可以允许程序对可调组件的用户输入做出反应，还可以在可调组件之间传播调整值。
 
-## 7.1 创建调整器
+### 7.1 创建调整器
 
 你创建一个调整器：
 
-```
+```c
 GtkObject *gtk_adjustment_new(gfloat value,
 ```
-
-
-
-
-
-# 7. 调整项
 
 ```c
 gfloat lower;
@@ -1509,7 +1488,7 @@ gfloat page_size);
 
 `value` 参数是您想要赋予调整项的初始值，通常对应于可调整组件的最顶部或最左侧位置。`lower` 参数指定了调整项可以持有的最小值。`step_increment` 参数指定了用户更改数值时的两个增量中“较小”的那一个，而 `page_increment` 则是“较大”的那个增量。`page_size` 参数通常用于代表分页组件的可视区域内容。`upper` 参数用于表示分页组件子项的底部或最右侧坐标。因此，它并不总是 `value` 可以取到的最大值，因为此类组件的 `page_size` 是非零的。
 
-## 7.2 使用简单方法
+### 7.2 使用简单方法
 
 可调整项大致可以分为两类：使用并需要特定单位数值的，以及将数值视为任意数字的。第一类是将所有调整项都视为范围组件（滚动条和滑块、进度条组件和数字调节按钮组件）。这些组件都是用户通常通过鼠标或键盘直接“调整”的组件。它们会将调整项的 `lower` 和 `upper` 值视为一个范围，用户可以在该范围内操作调整项的值。默认情况下，它们只会修改调整项的值。
 
@@ -1524,7 +1503,7 @@ text = gtk_text_new (NULL, NULL);
 scrollbar = gtk_scrollbar_new (GTK_TEXT(text)->vadj);
 ```
 
-## 7.3 调整项内部
+### 7.3 调整项内部
 
 好了，这看起来很好，但如果我想创建自己的处理器来在用户调整范围组件或数字调节按钮时做出响应，我该如何在这些处理器中获取调整项的值呢？为了回答这些以及更多问题，让我们尝试查看 `struct _GtkAdjustment` 本身：
 
@@ -1556,6 +1535,8 @@ void gtk_adjustment_set_value( GtkAdjustment *adjustment,
 ```c
 void (* value_changed) (GtkAdjustment *adjustment);
 ```
+
+
 
 使用 `GtkAdjustment` 的组件会在每次更改值时发射此信号。这发生在当用户输入导致范围组件上的滑块移动时，也发生在当程序通过 `gtk_adjustment_set_value()` 显式更改值时。例如，如果你有一个滑块组件，并且想在图片每次变化时都更改它的旋转角度，你可以创建一个这样的回调函数：
 
@@ -1594,9 +1575,9 @@ gtk_signal_emit_by_name (GTK_OBJECT (adjustment), "changed");
 
 调整项类别包括常见的滚动条组件和不常用的“滑块”组件。虽然这两种组件的用途不同，但在功能和实现上非常相似。所有范围组件共享一组通用元素，每个组件都包含一个“槽”（trough）和一个“滑块”（slider，在其他 GUI 环境中被称为“thumb”）。拖动滑块会在槽内来回。如前所述，所有范围组件都关联一个调整项对象，当用户移动滑块时，范围组件会更改调整项的值。
 
-# 滚动条组件
+## 滚动条组件
 
-这些是标准的滚动条。它们仅用于滚动其他组件，例如列表、文本框或视口（大多数情况下使用滚动窗口更容易）。对于其他用途，你应该使用滑块组件，因为它们更友好且功能更多。水平和垂直滚动条有单独的类型。它们没什么好说的。当你使用以下定义在 <scrollbar.h> 和 <gscroll.h> 中的函数创建它们时：
+这些是标准的滚动条。它们仅用于滚动其他组件，例如列表、文本框或视口（大多数情况下使用滚动窗口更容易）。对于其他用途，你应该使用滑块组件，因为它们更友好且功能更多。水平和垂直滚动条有单独的类型。它们没什么好说的。当你使用以下定义在 `<scrollbar.h>` 和 `<gscroll.h>` 中的函数创建它们时：
 
 ```c
 GtkWidget *gtk_scrollbar_new (GtkAdjustment *adjustment);
@@ -1606,13 +1587,13 @@ GtkWidget *gtk_scroll_new (GtkAdjustment *adjustment);
 
 `adjustment` 参数可以是通过 `gtk_adjustment_new()` 创建的调整项，也可以是 `NULL`，如果是后者，则会为你创建一个。指定 `NULL` 在这种情况下可能是用的，如果你希望将新创建的调整项传递给其他组件的构造函数，由它为你配置，例如文本组件。
 
-# 滑块组件
+## 滑块组件
 
 滑块组件允许用户在特定范围内视觉化选择并操作数值。你可能想使用滑块组件，例如调整图片视图的放大倍率、控制颜色的亮度，或指定屏幕保护程序接管屏幕前的闲置分钟数。
 
-# 创建滑块
+### 创建滑块
 
-和滚动条一样，水平和垂直滑块有单独的组件类型。（大多数程序员似乎倾向于使用水平滑块组件）。由于它们的工作方式基本相同，这里没有必要单独处理它们。以下分别是定义在 <gtkvscale.h> 和 <gtkscale.h> 中的函数：
+和滚动条一样，水平和垂直滑块有单独的组件类型。（大多数程序员似乎倾向于使用水平滑块组件）。由于它们的工作方式基本相同，这里没有必要单独处理它们。以下分别是定义在 `<gtkvscale.h>` 和 `<gtkscale.h>` 中的函数：
 
 ```c
 GtkWidget *gtk_scale_new (GtkAdjustment *adjustment);
@@ -1622,15 +1603,11 @@ GtkWidget *gtk_scale_new (GtkAdjustment *adjustment);
 
 `adjustment` 参数可以是通过 `gtk_adjustment_new()` 创建的调整项，也可以是 `NULL`，如果是后者，则会创建一个匿名的 `GtkAdjustment`，其所有属性将初始化为
 
-
-
-
-
-# 8. 范围小部件
+# 范围小部件
 
 设置为 0.0（在当前情况下并不好用）。为了避免让自己感到困惑，你可能想创建一个 `page_size` 为 0.0 的调整项，这样它的上限值实际上对应于用户可以选择的最大值。（如果你已经彻底get困惑了，请再次阅读第 7 节以获取关于每个调整项的作用以及如何创建和操作它们的解释）。
 
-## 8.2.2 函数与信号（嗯，至少是函数）
+## 函数与信号
 
 缩放小部件（Scale widgets）可以在槽位旁边以数字的形式显示其当前值。默认行为是如此，但你可以通过此函数进行更改：
 
@@ -1661,25 +1638,29 @@ void gtk_scale_set_value_pos(GtkScale *scale,
 
 参数 `pos` 的类型为 `GtkPositionType`，它定义在 `<gtk/gtkens.h>` 中，可以取以下值之一：
 
-- GTK_POS_LEFT
-- GTK_POS_RIGHT
-- GTK_POS_BOTTOM
+- `GTK_POS_LEFT`
+
+- `GTK_POS_RIGHT`
+
+- `GTK_POS_BOTTOM`
 
 如果你将值定位在槽位的“侧面”（例如，在水平缩放小部件的顶部或底部），那么它将随着滑块沿槽位上下移动。
 
 所有之前的函数都定义在 `<gtk/gtkscale.h>` 中。
 
-## 8.3 通用函数
+## 通用函数
 
 `GtkRange` 类以复杂著称，但与其他“基类”小部件一样，它的大部分复杂度只有在你想要对其进行底层修改（hack）时才有意义。此外，它定义的几乎所有函数和信号仅用于编写派生小部件。然而，有几个函数定义在 `<gtk/gtkrange.h>` 中，并适用于所有范围小部件。
 
-## 8.3.1 设置更新策略
+### 设置更新策略
 
 范围小部件的“策略”定义了在用户交互的哪些点上，它会更改 `GtkAdjustment` 的值字段并在该 `GtkAdjustment` 上发射 "value_changed" 信号。在 `<gtk_gtkmenu.h>` 中定义为 `enum GtkUpdateType` 类型的更新策略有：
 
-- GTK_UPDATE_POLICY_CONTINUOUS - 这是默认值。"value_changed" 信号会连续发射，即当滑块发生极微移动时就会。
-- GTK_UPDATE_POLICY_DISCONTINUOUS - 只有当滑块停止移动且用户释放按钮时，才会发射 "value_changed" 信号。
-- GTK_UPDATE_POLICY_DELAYED - 当用户释放鼠标按钮，或者滑块停止移动一段时间后，发射 "value_changed" 信号。
+- `GTK_UPDATE_POLICY_CONTINUOUS` - 这是默认值。"value_changed" 信号会连续发射，即当滑块发生极微移动时就会。
+
+- `GTK_UPDATE_POLICY_DISCONTINUOUS` - 只有当滑块停止移动且用户释放按钮时，才会发射 "value_changed" 信号。
+
+- `GTK_UPDATE_POLICY_DELAYED` - 当用户释放鼠标按钮，或者滑块停止移动一段时间后，发射 "value_changed" 信号。
 
 范围小部件的更新策略可以通过强制转换 `GTK_RANGE (Widget)` 宏并将其传递给此函数来设置：
 
@@ -1687,7 +1668,7 @@ void gtk_scale_set_value_pos(GtkScale *scale,
 void gtk_range_set_update_policy(GtkRange *range, GtkUpdateType policy);
 ```
 
-## 8.3.2 获取和设置调整项
+### 获取和设置调整项
 
 动态获取和设置范围小部件的调整项如其意料地通过以下方式完成：
 
@@ -1697,6 +1678,9 @@ void gtk_range_set_adjustment(GtkRange *range, GtkAdjustment *adjustment);
 ```
 
 `gtk_range_get_adjustment()` 返回范围已经连接的调整项的指针。
+
+
+
 `gtk_range_set_adjustment()` 如果你传递了该范围正在使用的调整项，它将什么都不做，无论你是否更改了它的字段。如果你传递了一个新的 `GtkAdjustment`，它将取消对旧调整项的引用（可能会销毁它），在新调整项上连接相应的信号，并调用函数 `gtk_range_adjustment_changed()`，该函数将（至少，理上应该……）重新计算滑块的大小和位置，并在必要时重绘。正如在调整节中提到的，如果你想重用同一个 `GtkAdjustment`，如果你直接修改了值，你应该在它上发射 "changed" 信号，如下：
 
 ```c
@@ -1715,21 +1699,17 @@ GTK_WIDGET_FLAGS (scrollbar, GTK_CAN_FOCUS);
 
 按键绑定（它们在滚动条和缩放小部件之间略有不同）
 
-## 8.4.1 垂直范围小部件
+### 8.4.1 垂直范围小部件
 
 垂直范围小部件可以通过上下方向键操作，以及 `Page Up` 和 `Page Down` 键。用户还可以通过 `Home` 和 `End` 键将滑块移动到起始或末端。
 
-## 8.4.2 水平范围小部件
+### 8.4.2 水平范围小部件
 
 左右方向键将如你预期的那样工作，让滑块左右移动。`Page Up` 和 `Page Down` 键会按页移动滑块。
 
 ## 8.5 示例
 
 此示例是“范围小部件”示例的修改版本。它基本上放置了连接到同一个调整项的范围小部件。
-
-
-
-
 
 # 8. 范围小部件
 
@@ -1864,6 +1844,8 @@ GTK_SIGNAL_FUNC(cb_pos_menu_select),
 GTK_TO_POINTER (GTK_POS_LEFT));
 gtk_menu_append(GTK_MENU (menu), item);
 ```
+
+
 
 ```c
 item = make_menu_item("Right",
@@ -2035,7 +2017,7 @@ void gtk_label_set_text(GtkLabel *label,
                char*str);
 ```
 
-第一个参数是你创建的标签（使用宏 GTK_LABEL()），第二个是新字符串。
+第一个参数是你创建的标签（使用宏 `GTK_LABEL()`），第二个是新字符串。
 
 新字符串所需的空间会自动调整。你可以通过在标签字符串中放入换行符来产生多行标签。
 
@@ -2055,11 +2037,15 @@ void gtk_label_set_justify(GtkLabel *label,
                               GtkJustification jtype);
 ```
 
-jtype 的值为：
+`jtype` 的值为：
 
-- GTK_JUSTIFY_LEFT
-- GTK_JUSTIFY_RIGHT
-- GTK_JUSTIFY_FILL
+- `GTK_JUSTIFY_LEFT`
+
+
+
+- `GTK_JUSTIFY_RIGHT`
+
+- `GTK_JUSTIFY_FILL`
 
 标签部件还可以自动换行。这可以通过以下方式激活：
 
@@ -2068,7 +2054,7 @@ void gtk_label_set_line_wrap(GtkLabel *label,
                               boolean wrap);
 ```
 
-wrap 参数接受 TRUE 或 FALSE 值。
+`wrap` 参数接受 `TRUE` 或 `FALSE` 值。
 
 如果你希望标签带有下划线，那么你可以在标签上设置一个模式：
 
@@ -2077,13 +2063,9 @@ void gtk_label_set_pattern(GtkLabel *label,
                               const gchar **pattern);
 ```
 
-pattern 参数指示下划线的样式。它由由下划线和空格字符组成的字符串组成。下划线表示标签中对应的字符应该被下划线。
+`pattern` 参数指示下划线的样式。它由由下划线和空格字符组成的字符串组成。下划线表示标签中对应的字符应该被下划线。
 
-下面是一个简单的示例来说明这些函数。该示例利用了 Frame 小部件来更好地演示标签样式。你现在可以忽略它，因为 10.5 小部件在之后会解释。
-
-
-
-
+下面是一个简单的示例来说明这些函数。该示例利用了 `Frame` 小部件来更好地演示标签样式。你现在可以忽略它，因为 10.5 小部件在之后会解释。
 
 ## 9. 杂控件
 
@@ -2158,7 +2140,7 @@ return(0);
 /* example-end */
 ```
 
-## 9.2 箭头
+### 9.2 箭头
 
 箭头控件（Arrow widget）绘制一个箭头，指向多个可能的方向，并有可能的样式。在许多应用程序中，将其放置在按钮上时它非常有用。
 
@@ -2177,17 +2159,23 @@ void gtk_arrow_set( GtkArrow *arrow,
 
 第一个创建一个具有指定类型和外观的新控件。第二个允许追溯地更改这些值。`arrow_type` 参数可以接受以下值之一：
 
-- GTK_ARROW_UP
-- GTK_ARROW_DOWN
-- GTK_ARROW_LEFT
-- GTK_ARROW_RIGHT
+- `GTK_ARROW_UP`
+
+- `GTK_ARROW_DOWN`
+
+- `GTK_ARROW_LEFT`
+
+- `GTK_ARROW_RIGHT`
 
 这些值显然指示了箭头将指向的方向。`shadow_type` 参数可以接受这些值之一：
 
-- GTK_SHADOW_IN
-- GTK_SHADOW_OUT（默认值）
-- GTK_SHADOW_ETCHED_IN
-- GTK_SHADOW_ETCHED_OUT
+- `GTK_SHADOW_IN`
+
+- `GTK_SHADOW_OUT`（默认值）
+
+- `GTK_SHADOW_ETCHED_IN`
+
+- `GTK_SHADOW_ETCHED_OUT`
 
 这里有一个短的示例来说明这种用法。
 
@@ -2221,64 +2209,56 @@ int main( int argc, char *argv[] )
     GtkWidget *window;
     GtkWidget *button;
     GtkWidget *box;
+```
 
 ```c
 /* 初始化工具包 */
+
 gtk_init(&argc, &argv);
 
 /* 创建新窗口 */
+
 window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+
 gtk_window_set_title(GTK_WINDOW(window), "箭头按钮");
 
 /* 对所有窗口执行此操作是个好主意 */
+
 gtk_signal_connect(GTK_OBJECT(window), "destroy", GTK_SIGNAL_FUNC(gtk_main), NULL);
 
 /* 设置窗口的边界宽度 */
+
 gtk_container_set_border_width(GTK_CONTAINER(window), 10);
 
 /* 创建一个框来存放箭头/按钮 */
+
 box = gtk_box_new(FALSE, 0);
-```c
+```
+
 ... 
 
 省略重复代码
 
-## 9.2 箭头
 
-箭头控件（Arrow widget）绘制一个箭头，指向多个可能的方向，并有可能的样式。在许多应用程序中，将其放置在按钮上时它非常有用。
-
-只有两个函数可以用于修改箭头控件：
-
-```c
-GtkWidget *gtk_arrow_new(GtkArrowType arrow_type,
-               GtkShadowType shadow_type);
-```
-
-```c
-void gtk_arrow_set( GtkArrow *arrow,
-               GtkArrowType arrow_type,
-               GtkShadowType shadow_type );
-```
 
 第一个创建一个具有指定类型和外观的新控件。第二个允许追溯地更改这些值。`arrow_type` 参数可以接受以下值之一：
 
-- GTK_ARROW_UP
-- GTK_ARROW_DOWN
-- GTK_ARROW_LEFT
-- GTK_ARROW_RIGHT
+- `GTK_ARROW_UP`
+- `GTK_ARROW_DOWN`
+- `GTK_ARROW_LEFT`
+- `GTK_ARROW_RIGHT`
 
 这些值显然指示了箭头将指向的方向。`shadow_type` 参数可以接受这些值之一：
 
-- GTK_SHADOW_IN
-- GTK_SHADOW_OUT（默认值）
-- GTK_SHADOW_ETCHED_IN
-- GTK_SHADOW_ETCHED_OUT
+- `GTK_SHADOW_IN`
+- `GTK_SHADOW_OUT`（默认值）
+- `GTK_SHADOW_ETCHED_IN`
+- `GTK_SHADOW_ETCHED_OUT`
 
 这里有一个短的示例来说明这种用法。
 
 ```c
 /* example-start arrow arrow.c */
-
 #include <gtk/gtk.h>
 
 /* 创建一个带有指定参数的箭头控件
@@ -2288,15 +2268,11 @@ GtkWidget *create_arrow_button( GtkArrowType arrow_type,
 {
     GtkWidget *button;
     GtkWidget *arrow;
-
     button = gtk_button_new();
     arrow = gtk_arrow_new(arrow_type, shadow_type);
-
     gtk_container_add(GTK_CONTAINER (button), arrow);
-
     gtk_widget_show(button);
     gtk_widget_show(arrow);
-
     return(button);
 }
 
@@ -2306,6 +2282,7 @@ int main( int argc, char *argv[] )
     GtkWidget *window;
     GtkWidget *button;
     GtkWidget *box;
+```
 
 ```c
 /* 初始化工具包 */
@@ -2324,7 +2301,6 @@ gtk_container_set_border_width(GTK_CONTAINER(window), 10);
 /* 创建一个框来存放箭头/按钮 */
 box = gtk_box_new(FALSE, 0);
 ```
-... (此处由于翻译逻辑，原文中存在大量重复代码块和文本，已按指令“不要重复输出原文”的原则进行整合处理，确保核心内容翻译准确)
 
 ## 9.3 提示框 (Tooltips)
 
@@ -2336,16 +2312,12 @@ box = gtk_box_new(FALSE, 0);
 gtk_widget_set_tooltip_text (GtkWidget *widget, const gchar *tooltip_text);
 ```
 
-
-
-
-
 ## 9. 杂项组件
 
-style 参数可以取两个值之一：
+`style` 参数可以取两个值之一：
 
-- GTK_PROGRESS_CONTINUOUS
-- GTK_PROGRESS_DISCRETE
+- `GTK_PROGRESS_CONTINUOUS`
+- `GTK_PROGRESS_DISCRETE`
 
 离散块的数量可以通过调用以下函数来设置：
 
@@ -2380,12 +2352,12 @@ void gtk_progress_bar_set_format_string( GtkProgressBar *progress,
                                             gchar                *format );
 ```
 
-format 参数类似于 C 语言 printf 语句中使用的参数。在该字符串可以使用以下指令：
+`format` 参数类似于 C 语言 `printf` 语句中使用的参数。在该字符串可以使用以下指令：
 
-- %p - 百比
-- %v - 值
-- %d - 下限范围值
-- %u - 上限范围值
+- `%p` - 百比
+- `%v` - 值
+- `%d` - 下限范围值
+- `%u` - 上限范围值
 
 可以使用以下函数切换此文本字符串的显示：
 
@@ -2394,7 +2366,7 @@ void gtk_progress_bar_set_show_text( GtkProgressBar *progress,
                                             gint                show_text );
 ```
 
-show_text 参数是一个布尔值 TRUE/FALSE。可以使用以下函数进一步修改文本的外观：
+`show_text` 参数是一个布尔值 `TRUE`/`FALSE`。可以使用以下函数进一步修改文本的外观：
 
 ```c
 void gtk_progress_bar_set_text_alignment( GtkProgressBar *progress,
@@ -2404,7 +2376,7 @@ void gtk_progress_bar_set_text_alignment( GtkProgressBar *progress,
 
 * 注意
 
-x_align 和 y_align 参数接受 0.0 到 1.0 之间的值。它们的值指示文本字符串在槽位内的位置。两个值均为 0.0 将将字符串放在左上角；0.5（默认值）将文本居中；1.0 则将文本放在右下角。
+`x_align` 和 `y_align` 参数接受 0.0 到 1.0 之间的值。它们的值指示文本字符串在槽位内的位置。两个值均为 0.0 将将字符串放在左上角；0.5（默认值）将文本居中；1.0 则将文本放在右下角。
 
 可以使用以下两个函数，通过当前值或指定的调整值来获取进度对象的当前文本设置。这些函数返回的字符字符串由应用程序释放（使用 `g_free()` 函数）。这些函数返回在槽位内显示的格式化字符串。
 
@@ -2425,6 +2397,8 @@ void gtk_progress_configure(GtkProgress *progress,
 ```
 
 此函数提供了一个简单的接口来获取进度对象的范围和值。其余函数可以用于以各种类型和格式获取和设置进度对象的当前值：
+
+
 
 ```c
 void gtk_progress_set_percentage(GtkProgress *progress,
@@ -2539,9 +2513,6 @@ int main(int argc, char *argv[])
 }
 ```
 
-
-
-
 ## 9. 杂项控件
 
 ```c
@@ -2580,6 +2551,8 @@ GTK_SIGNAL_FUNC(toggle_show_text),
 pdata);
 gtk_widget_show(check);
 ```
+
+
 
 ```c
 /* 添加一个复选按钮来切换活动模式 */
@@ -2665,6 +2638,7 @@ int main () {
 ## 9.5 对话框
 
 对话框非常简单，实际上只是一个预先为你装配了一些组件的窗口。
+
 对话框的结构如下：
 
 ```c
@@ -2714,10 +2688,6 @@ gtk_widget_show (label);
 
 Pixmap 是包含图片的的数据结构。它们可以用于各种地方。只有两种颜色的像素图被称为位图（bitmap）。要使用像素图，你需要了解它们的工作原理。
 
-
-
-
-
 # 9. 杂项组件
 
 ```
@@ -2752,6 +2722,7 @@ GdkBitmap **mask);
 ```
 
 `gtk_pixmap_set` 用于更改组件当前管理的 pixmap。`Val` 是使用 GDK 创建的 pixmap。
+
 以下是在按钮中使用 pixmap 的示例。
 
 ```c
@@ -2775,10 +2746,15 @@ static const char *xpm_data[] = {
 # 9. 杂项组件
 
 = .XXXXXXX =
+
 = .XXXXXXX =
+
 = XXXXXXX =
+
 = "
+
 = "
+
 =);
 
 /* 当被调用（通过信号 delete_event）时，会终止应用程序。 */
@@ -2796,6 +2772,8 @@ void button_clicked( GtkWidget *widget, gpointer data ) {
   printf("button clicked\n");
 }
 ```
+
+
 
 ```c
 int main( int argc, char *argv[]) {
@@ -2879,7 +2857,7 @@ static char *WheelbarrowFull_xpm[] = {
 
 *注：XPM 数据的 OCR 文本严重损坏并跨页面去线性，导致了乱码的类表格字符和解结构的字符串。我已根据碎片中可见的标准 GTK+XPM 模式理清了代码结构。）*
 
-# 9. 杂项组件
+## 9. 杂项组件
 
 ```c
 /* 当被调用（通过信号 delete_event）时，会终止应用程序。 */
@@ -2946,11 +2924,7 @@ gtk_signal_connect(GTK_OBJECT(window), "button_event",
     GTK_SIGNAL_FUNC(close_application), NULL);
 ```
 
-
-
-
-
-## 9. 杂项控件
+### 9. 杂项控件
 
 ```
 void gtk_ruler_set_metric( GtkRuler *ruler,
@@ -2973,17 +2947,19 @@ void gtk_ruler_set_range( GtkRuler *ruler,
    gfloat max_size );
 ```
 
+
+
 `lower` 和 `upper` 参数定义了尺的范围，`max_size` 是将显示的最大数值。`position` 定义了指针指示器在尺子内的初始位置。
 
 垂直尺子可以跨越 800 像素宽的窗口，因此：
 
-```
+```c
 gtk_ruler_set_range( GTK_RULER(ruler), 0, 800, 800 );
 ```
 
 尺子上的标记将从 0 到 800，每 100 像素有一个数字。如果我们让尺的范围从 7 到 16，我们将编写：
 
-```
+```c
 gtk_ruler_set_range(GTK_RULER(ruler), 7, 16, 0, 20);
 ```
 
@@ -3010,91 +2986,70 @@ gtk_signal_connect_object(GTK_OBJECT(area), "motion_notify_event",
 
 /* 此程序在点击关闭按钮时获取控制权 */
 
-```c
 void close_application( GtkWidget *widget, GtkEvent *event, gpointer data ) {
   gtk_main_quit();
 }
-```
 
-```c
 /* 主程序 */
+
 main(int argc, char *argv[]) {
   GtkWidget *window, *table, *area, *hrule, *vrule;
+
+  /* 初始化 GTK 并创建主窗口 */
+  gtk_init(&argc, &argv);
+  window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+  gtk_signal_connect(GTK_OBJECT(window), "delete_event",
+    GTK_SIGNAL_FUNC(close_application ), NULL);
+  gtk_container_set_border_width(GTK_CONTAINER(window), 10);
+
+  /* 为放置尺和绘制区域创建一个空间 */
+  table = gtk_table_new(3, 2, FALSE);
+  gtk_container_add(GTK_CONTAINER(table), table);
+
+  area = gtk_drawing_area();
+  gtk_drawing_area_size((GtkDrawingArea*)area, XSIZE, YSIZE);
+  gtk_table_attach(GTK_TABLE(table), area, 1, 0, 2, 1);
+  GTK_EXPAND(GTK_FILL, GTK_FILL, 0, 0);
+  gtk_widget_set_events(area, GTK_POINTER_MOTION_MASK |
+    GTK_POINTER_MOTION_HINT);
+
+  /* 水平尺位于上方。当鼠标跨越
+   * 绘制区域时，motion_event 将传递给
+   * 尺的相应事件处理器。 */
+  hrule = gtk_hrule_new();
+  gtk_ruler_set_metric(GTK_RULER(hrule), GTK_PIXELS);
+  gtk_ruler_set_range(GTK_RULER(hrule), 7, 13, 0, 20);
+  gtk_signal_connect(GTK_OBJECT(area), "motion_event",
+    GTK_SIGNAL_FUNC(method_handler),
+    motion_event,
+    GTK_RULER(hrule));
+
+  /* 垂直尺位于左侧。当鼠标跨越
+   * 绘制区域时，motion_event 将传递给
+   * 尺的相应事件处理器。 */
+  vrule = gtk_vrule_new();
+  gtk_ruler_set_metric(GTK_RULER(vrule), GTK_PIXELS);
+  gtk_ruler_set_range(GTK_RULER(vrule), 0, YSIZE, 10, YSIZE);
+  gtk_signal_connect(GTK_OBJECT(area), "motion_event",
+    (GtkSignalFunc)GTK_WIDGET_CLASS(GTK_OBJECT(vrule))->class)(
+    motion_event,
+    GTK_RULER(vrule));
+
+  gtk_table_attach(GTK_TABLE(table), vrule, 0, 0, 1, 2);
+  GTK_EXPAND(GTK_FILL), GTK_FILL, 0, 0);
+
+  /* 显示所有内容 */
+  gtk_widget_show( area );
+  gtk_widget_show( hrule );
+  gtk_widget_show( vrule );
+  gtk_widget_show( table );
+  gtk_widget_show( window );
+  gtk_main();
+  return(0);
+  /* example-end */
 ```
 
-```c
-/* 初始化 GTK 并创建主窗口 */
-gtk_init(&argc, &argv);
-
-window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-gtk_signal_connect(GTK_OBJECT(window), "delete_event",
-  GTK_SIGNAL_FUNC(close_application ), NULL);
-gtk_container_set_border_width(GTK_CONTAINER(window), 10);
-```
-
-```c
-/* 为放置尺和绘制区域创建一个空间 */
-table = gtk_table_new(3, 2, FALSE);
-gtk_container_add(GTK_CONTAINER(table), table);
-```
-
-```c
-area = gtk_drawing_area();
-gtk_drawing_area_size((GtkDrawingArea*)area, XSIZE, YSIZE);
-gtk_table_attach(GTK_TABLE(table), area, 1, 0, 2, 1);
-GTK_EXPAND(GTK_FILL, GTK_FILL, 0, 0);
-gtk_widget_set_events(area, GTK_POINTER_MOTION_MASK |
-  GTK_POINTER_MOTION_HINT);
-```
-
-```c
-/* 水平尺位于上方。当鼠标跨越
-* 绘制区域时，motion_event 将传递给
-* 尺的相应事件处理器。 */
-hrule = gtk_hrule_new();
-gtk_ruler_set_metric(GTK_RULER(hrule), GTK_PIXELS);
-gtk_ruler_set_range(GTK_RULER(hrule), 7, 13, 0, 20);
-gtk_signal_connect(GTK_OBJECT(area), "motion_event",
-  GTK_SIGNAL_FUNC(method_handler),
-  motion_event,
-  GTK_RULER(hrule));
-```
-
-```c
-/* 垂直尺位于左侧。当鼠标跨越
-* 绘制区域时，motion_event 将传递给
-* 尺的相应事件处理器。 */
-vrule = gtk_vrule_new();
-gtk_ruler_set_metric(GTK_RULER(vrule), GTK_PIXELS);
-gtk_ruler_set_range(GTK_RULER(vrule), 0, YSIZE, 10, YSIZE);
-gtk_signal_connect(GTK_OBJECT(area), "motion_event",
-  (GtkSignalFunc)GTK_WIDGET_CLASS(GTK_OBJECT(vrule))->class)(
-  motion_event,
-  GTK_RULER(vrule));
-```
-
-```c
-gtk_table_attach(GTK_TABLE(table), vrule, 0, 0, 1, 2);
-GTK_EXPAND(GTK_FILL), GTK_FILL, 0, 0);
-```
-
-```c
-/* 显示所有内容 */
-gtk_widget_show( area );
-```
-
-```c
-gtk_widget_show( hrule );
-gtk_widget_show( vrule );
-gtk_widget_show( table );
-gtk_widget_show( window );
-gtk_main();
-
-return(0);
-
-/* example-end */
-
-## 9.8 状态栏
+### 9.8 状态栏
 
 状态栏是用于显示文本消息的简单控件。它们保持着一个推入的消息栈，因此弹出当前消息将显示之前的文本消息。为了允许应用程序的不同部分使用同一个状态栏显示消息，使用状态栏标识符（Identifiers）来标识。消息按后进先出的顺序堆叠，而不是按标识符。一个状态栏通过调用以下函数创建：
 
@@ -3128,51 +3083,46 @@ void gtk_statusbar_remove( GtkStatus *statusbar,
 
 ```c
 /* example-start statusbar.c */
-```
-
-```c
 #include <gtk/gtk.h>
 #include <glib.h>
 
 GtkWidget *status_bar;
+```
 
 ```c
 void push_item(GtkWidget *widget, gpointer data) {
     static int count = 1;
     char buff[20];
-
     snprintf(buff, 20, "Item %d", count++);
     gtk_statusbar_push(GTK_STATUSBAR(status_bar), context_id, buff);
 }
+
 void pop_item(GtkWidget *widget, gpointer data) {
-    gtk_statusbar_pop(GTK_STATUSBAR(status_bar), context_id);
-}
 ```
+
+
+
+`gtk_statusbar_pop(GTK_STATUSBAR(status_bar), context_id);`
 
 ```c
 int main (int argc, char *argv[]) {
     GtkWidget *window, *table, *area, *hrule, *vrule;
     GtkStatus *status_bar;
     int context_id;
-
     gtk_init(&argc, &argv);
-
     window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
     gtk_signal_connect(GTK_OBJECT(window), "delete_event",
       GTK_SIGNAL_FUNC(close_application ), NULL);
     gtk_container_set_border_width(GTK_CONTAINER(window), 10);
-
     /* 为放置尺和绘制区域创建一个空间 */
     table = gtk_table_new(3, 2, FALSE);
     gtk_container_add(GTK_CONTAINER(table), table);
-
     area = gtk_drawing_area();
     gtk_drawing_area_size((GtkDrawingArea*)area, XSIZE, YSIZE);
     gtk_table_attach(GTK_TABLE(table), area, 1, 0, 2, 1);
     GTK_EXPAND(GTK_FILL, GTK_FILL, 0, 0);
     gtk_widget_set_events(area, GTK_POINTER_MOTION_MASK |
       GTK_POINTER_MOTION_HINT);
-
     /* 水平尺位于上方。当鼠标跨越
     * 绘制区域时，motion_event 将传递给
     * 尺的相应事件处理器。 */
@@ -3183,7 +3133,6 @@ int main (int argc, char *argv[]) {
       GTK_SIGNAL_FUNC(method_handler),
       motion_event,
       GTK_RULER(hrule));
-
     /* 垂直尺位于左侧。当鼠标跨越
     * 绘制区域时，motion_event 将传递给
     * 尺的相应事件处理器。 */
@@ -3194,40 +3143,195 @@ int main (int argc, char *argv[]) {
       (GtkSignalFunc)GTK_WIDGET_CLASS(GTK_OBJECT(vrule))->class)(
       motion_event,
       GTK_RULER(vrule));
-
-
-
-
+```
 
 # 9. 其他小部件
 
-```
+```c
 void gtk_entry_set_editable(GtkEntry *entry,
                 gboolean editable);
 ```
 
-该函数允许我们通过向 `editable` 参数传递 `TRUE` 或 `FALSE` 值来切换 Gtk 小部件的可编辑状态。
+该函数允许我们通过向 `editable` 参数传递 `TRUE` 或 `FALSE` 值来切换 `Gtk` 小部件的可编辑状态。
 
-如果我们在使用 Entry 时，不希望输入的文本可见（例如在输入密码时），可以使用以下函数，该函数也接受一个布尔标志。
+如果我们在使用 `Entry` 时，不希望输入的文本可见（例如在输入密码时），可以使用以下函数，该函数也接受一个布尔标志。
 
-```
+```c
 void gtk_entry_set_visibility(GtkEntry *entry,
                 gboolean visible);
 ```
 
-可以使用以下函数选择文本区域。这通常发生在 Entry 中包含某些默认文本之后，方便用户将其删除。
+可以使用以下函数选择文本区域。这通常发生在 `Entry` 中包含某些默认文本之后，方便用户将其删除。
 
-```
+```c
 void gtk_entry_select_region(GtkEntry *entry,
                 gint start,
                 gint end);
 ```
 
-如果我们想捕获用户输入文本的时刻，可以连接到 `activate` 或 `changed` 信号。当用户在 Entry 小部件中按下回车键时，会触发 `activate` 信号。当文本发生任何变化时（例如每输入或删除一个字符），会触发 `changed` 信号。
+如果我们想捕获用户输入文本的时刻，可以连接到 `activate` 或 `changed` 信号。当用户在 `Entry` 小部件中按下回车键时，会触发 `activate` 信号。当文本发生任何变化时（例如每输入或删除一个字符），会触发 `changed` 信号。
 
-以下代码是使用 Entry 小部件的示例。
+以下代码是使用 `Entry` 小部件的示例。
+
+```c
+/* example-start entry entry.c */
+#include <gtk/gtk.h>
+
+void entry_callback(GtkWidget *widget, GtkWidget *entry)
+{
+gchar *entry_text;
+entry_text = gtk_entry_get_text(GTK_ENTRY(entry));
+printf("Entries: %s\n", entry_text);
+}
+
+void entry_toggle_editable(GtkWidget *checkbox,
+                GtkWidget *entry)
+{
+gtk_entry_set_editable(GTK_ENTRY(entry),
+                GTK_TOGGLE_BUTTON(checkbox)->active);
+}
+
+void entry_toggle_visibility(GtkWidget *checkbox,
+                GtkWidget *entry)
+{
+gtk_entry_set_visibility(GTK_ENTRY(entry),
+                GTK_TOGGLE_BUTTON(checkbox)->active);
+}
+
+int main (int argc, char *argv[])
+{
+GtkWidget *window;
+GtkWidget * vbox, *hbox;
+GtkWidget *entry;
+GtkWidget *button;
+GtkWidget *check;
+```
+
+`gtk_init (&argc, &argv);`
+
+/* 创建新窗口 */
+
+`window = gtk_window_new(GTK_WINDOW_TOPLEVEL);`
+
+`gtk_widget_set_size(GTK_WINDOW(window), 200, 100);`
+
+`gtk_window_set_title(GTK_WINDOW(window), "Gtk Entry");`
+
+`gtk_signal_connect(GTK_OBJECT(window), "delete_event", GtkSignalFunc)gtk_exit, NULL);`
+
+`vbox = gtk_box_new(GTK_FALSE, 0);`
+
+`gtk_container_add(GTK_CONTAINER(window), vbox);`
+
+`gtk_widget_show(vbox);`
+
+`entry = gtk_entry_new_max_length(50);`
+
+`gtk_signal_connect(GTK_OBJECT(entry), "activate", GTK_SIGNAL_FUNC(entry_callback), entry);`
+
+`gtk_entry_set_text(GTK_ENTRY(entry), "hello");`
+
+`gtk_entry_append_text(GTK_ENTRY(entry), " world");`
+
+`gtk_entry_select_region(GTK_ENTRY(entry), 0, GTK_ENTRY(entry)->text_length);`
+
+`gtk_box_pack_start(GTK_BOX(vbox), entry, TRUE, TRUE, 0);`
+
+`gtk_widget_show(vbox);`
+
+`hbox = gtk_box_new(GTK_FALSE, 0);`
+
+`gtk_container_add(GTK_CONTAINER(vbox), hbox);`
+
+`gtk_widget_show(hbox);`
+
+`check = gtk_check_button_new_label("Editable");`
+
+
 
 ```
+gtk_box_pack_start(GTK_BOX(hbox), check, TRUE, TRUE, 0);
+
+gtk_signal_connect(GTK_OBJECT(check), "toggled",
+
+GTK_SIGNAL_FUNC(entry_toggle_editable), entry);
+
+gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(check), TRUE);
+
+gtk_widget_show(check);
+
+check = gtk_check_button_new_label("Visible");
+
+gtk_box_pack_start(GTK_BOX(hbox), check, TRUE, TRUE, 0);
+
+gtk_signal_connect(GTK_OBJECT(check), "toggled",
+
+GTK_SIGNAL_FUNC(entry_toggle_visibility), entry);
+
+gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(check), TRUE);
+
+gtk_widget_show(check);
+
+button = gtk_button_new_label("Close");
+
+gtk_signal_connect(GTK_OBJECT(button), "clicked",
+
+GTK_SIGNAL_FUNC(gtk_exit),
+
+GTK_OBJECT(window));
+
+gtk_box_pack_start(GTK_BOX(vbox), button, TRUE, TRUE, 0);
+
+gtk_widget_set_sensitive(button, GTK_CAN_DEFAULT);
+
+gtk_widget_grab_default(button);
+
+gtk_widget_show(button);
+
+gtk_widget_show(window);
+
+gtk_main();
+
+return(0);
+
+/* example-end */
+```
+
+## 9.10 调旋按钮 (Spin Buttons)
+
+Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
+
+
+
+# 9. 其他小部件
+
+```c
+void gtk_entry_set_editable(GtkEntry *entry,
+                gboolean editable);
+```
+
+该函数允许我们通过向 `editable` 参数传递 `TRUE` 或 `FALSE` 值来切换 `Gtk` 小部件的可编辑状态。
+
+如果我们在使用 `Entry` 时，不希望输入的文本可见（例如在输入密码时），可以使用以下函数，该函数也接受一个布尔标志。
+
+```c
+void gtk_entry_set_visibility(GtkEntry *entry,
+                gboolean visible);
+```
+
+可以使用以下函数选择文本区域。这通常发生在 `Entry` 中包含某些默认文本之后，方便用户将其删除。
+
+```c
+void gtk_entry_select_region(GtkEntry *entry,
+                gint start,
+                gint end);
+```
+
+如果我们想捕获用户输入文本的时刻，可以连接到 `activate` 或 `changed` 信号。当用户在 `Entry` 小部件中按下回车键时，会触发 `activate` 信号。当文本发生任何变化时（例如每输入或删除一个字符），会触发 `changed` 信号。
+
+以下代码是使用 `Entry` 小部件的示例。
+
+```c
 /* example-start entry entry.c */
 
 #include <gtk/gtk.h>
@@ -3262,54 +3366,89 @@ GtkWidget *button;
 GtkWidget *check;
 
 ```
+
 gtk_init (&argc, &argv);
 
 /* 创建新窗口 */
+
 window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
+
 gtk_widget_set_size(GTK_WINDOW(window), 200, 100);
+
 gtk_window_set_title(GTK_WINDOW(window), "Gtk Entry");
+
 gtk_signal_connect(GTK_OBJECT(window), "delete_event",
+
 GtkSignalFunc)gtk_exit, NULL);
 
 vbox = gtk_box_new(GTK_FALSE, 0);
+
 gtk_container_add(GTK_CONTAINER(window), vbox);
+
 gtk_widget_show(vbox);
 
 entry = gtk_entry_new_max_length(50);
+
 gtk_signal_connect(GTK_OBJECT(entry), "activate",
+
 GTK_SIGNAL_FUNC(entry_callback),
+
 entry);
+
 gtk_entry_set_text(GTK_ENTRY(entry), "hello");
+
 gtk_entry_append_text(GTK_ENTRY(entry), " world");
+
 gtk_entry_select_region(GTK_ENTRY(entry), 0, GTK_ENTRY(entry)->text_length);
+
 gtk_box_pack_start(GTK_BOX(vbox), entry, TRUE, TRUE, 0);
+
 gtk_widget_show(vbox);
 
 hbox = gtk_box_new(GTK_FALSE, 0);
+
 gtk_container_add(GTK_CONTAINER(vbox), hbox);
+
 gtk_widget_show(hbox);
 
 check = gtk_check_button_new_label("Editable");
+
 gtk_box_pack_start(GTK_BOX(hbox), check, TRUE, TRUE, 0);
+
 gtk_signal_connect(GTK_OBJECT(check), "toggled",
+
 GTK_SIGNAL_FUNC(entry_toggle_editable), entry);
+
 gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(check), TRUE);
+
 gtk_widget_show(check);
 
 check = gtk_check_button_new_label("Visible");
+
 gtk_box_pack_start(GTK_BOX(hbox), check, TRUE, TRUE, 0);
+
 gtk_signal_connect(GTK_OBJECT(check), "toggled",
+
 GTK_SIGNAL_FUNC(entry_toggle_visibility), entry);
+
 gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(check), TRUE);
+
 gtk_widget_show(check);
 
 button = gtk_button_new_label("Close");
+
 gtk_signal_connect(GTK_OBJECT(button), "clicked",
+
 GTK_SIGNAL_FUNC(gtk_exit),
+
 GTK_OBJECT(window));
+
 gtk_box_pack_start(GTK_BOX(vbox), button, TRUE, TRUE, 0);
+
 gtk_widget_set_sensitive(button, GTK_CAN_DEFAULT);
+
 gtk_widget_grab_default(button);
+
 gtk_widget_show(button);
 
 gtk_widget_show(window);
@@ -3317,280 +3456,35 @@ gtk_widget_show(window);
 gtk_main();
 
 return(0);
+
 /* example-end */
+
 ```
 ```
 
 ## 9.10 调旋按钮 (Spin Buttons)
 
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
+`Spin Button` 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
 
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
+当用户在 `Entry` 小部件中按下回车键时，会触发 `activate` 信号。
 
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
+此处触发 `activate` 信号
 
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
 
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-[/content]
-
-对不起，我发现之前的回复中出现了严重的文本重复错误。在翻译过程中由于原文中存在大量重复内容（“Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。”），我进行了清理。
-
-以下是为您翻译的正确内容：
-
-[content]
-# 9. 其他小部件
-
-```
-void gtk_entry_set_editable(GtkEntry *entry,
-                gboolean editable);
-```
-
-该函数允许我们通过向 `editable` 参数传递 `TRUE` 或 `FALSE` 值来切换 Gtk 小部件的可编辑状态。
-
-如果我们在使用 Entry 时，不希望输入的文本可见（例如在输入密码时），可以使用以下函数，该函数也接受一个布尔标志。
-
-```
-void gtk_entry_set_visibility(GtkEntry *entry,
-                gboolean visible);
-```
-
-可以使用以下函数选择文本区域。这通常发生在 Entry 中包含某些默认文本之后，方便用户将其删除。
-
-```
-void gtk_entry_select_region(GtkEntry *entry,
-                gint start,
-                gint end);
-```
-
-如果我们想捕获用户输入文本的时刻，可以连接到 `activate` 或 `changed` 信号。当用户在 Entry 小部件中按下回车键时，会触发 `activate` 信号。当文本发生任何变化时（例如每输入或删除一个字符），会触发 `changed` 信号。
-
-以下代码是使用 Entry 小部件的示例。
-
-```
-/* example-start entry entry.c */
-
-#include <gtk/gtk.h>
-
-void entry_callback(GtkWidget *widget, GtkWidget *entry)
-{
-gchar *entry_text;
-entry_text = gtk_entry_get_text(GTK_ENTRY(entry));
-printf("Entries: %s\n", entry_text);
-}
-
-void entry_toggle_editable(GtkWidget *checkbox,
-                GtkWidget *entry)
-{
-gtk_entry_set_editable(GTK_ENTRY(entry),
-                GTK_TOGGLE_BUTTON(checkbox)->active);
-}
-
-void entry_toggle_visibility(GtkWidget *checkbox,
-                GtkWidget *entry)
-{
-gtk_entry_set_visibility(GTK_ENTRY(entry),
-                GTK_TOGGLE_BUTTON(checkbox)->active);
-}
-
-int main (int argc, char *argv[])
-{
-GtkWidget *window;
-GtkWidget * vbox, *hbox;
-GtkWidget *entry;
-GtkWidget *button;
-GtkWidget *check;
-
-```
-gtk_init (&argc, &argv);
-
-/* 创建新窗口 */
-window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-gtk_widget_set_size(GTK_WINDOW(window), 200, 100);
-gtk_window_set_title(GTK_WINDOW(window), "Gtk Entry");
-gtk_signal_connect(GTK_OBJECT(window), "delete_event",
-GtkSignalFunc)gtk_exit, NULL);
-
-vbox = gtk_box_new(GTK_FALSE, 0);
-gtk_container_add(GTK_CONTAINER(window), vbox);
-gtk_widget_show(vbox);
-
-entry = gtk_entry_new_max_length(50);
-gtk_signal_connect(GTK_OBJECT(entry), "activate",
-GTK_SIGNAL_FUNC(entry_callback),
-entry);
-gtk_entry_set_text(GTK_ENTRY(entry), "hello");
-gtk_entry_append_text(GTK_ENTRY(entry), " world");
-gtk_entry_select_region(GTK_ENTRY(entry), 0, GTK_ENTRY(entry)->text_length);
-gtk_box_pack_start(GTK_BOX(vbox), entry, TRUE, TRUE, 0);
-gtk_widget_show(vbox);
-
-hbox = gtk_box_new(GTK_FALSE, 0);
-gtk_container_add(GTK_CONTAINER(vbox), hbox);
-gtk_widget_show(hbox);
-
-check = gtk_check_button_new_label("Editable");
-gtk_box_pack_start(GTK_BOX(hbox), check, TRUE, TRUE, 0);
-gtk_signal_connect(GTK_OBJECT(check), "toggled",
-GTK_SIGNAL_FUNC(entry_toggle_editable), entry);
-gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(check), TRUE);
-gtk_widget_show(check);
-
-check = gtk_check_button_new_label("Visible");
-gtk_box_pack_start(GTK_BOX(hbox), check, TRUE, TRUE, 0);
-gtk_signal_connect(GTK_OBJECT(check), "toggled",
-GTK_SIGNAL_FUNC(entry_toggle_visibility), entry);
-gtk_toggle_button_set_active(GTK_TOGGLE_BUTTON(check), TRUE);
-gtk_widget_show(check);
-
-button = gtk_button_new_label("Close");
-gtk_signal_connect(GTK_OBJECT(button), "clicked",
-GTK_SIGNAL_FUNC(gtk_exit),
-GTK_OBJECT(window));
-gtk_box_pack_start(GTK_BOX(vbox), button, TRUE, TRUE, 0);
-gtk_widget_set_sensitive(button, GTK_CAN_DEFAULT);
-gtk_widget_grab_default(button);
-gtk_widget_show(button);
-
-gtk_widget_show(window);
-
-gtk_main();
-
-return(0);
-/* example-end */
-```
-```
-
-## 9.10 调旋按钮 (Spin Buttons)
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
-
-（当用户在 Entry 小部件中按下回车键时，会触发 `activate` 信号。
-
-（此处触发 `activate` 信号）
-
-Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
 
 Spin Button 小部件通常用于允许用户从一组数值范围内选择一个值。它由一个带有向上和向下按钮的输入框组成。
 
 （注：由于原始文本存在大量重复段落，此处翻译已根据逻辑进行了精简，去除了冗余的重复内容。）
 
-
-
-
 # 9. 杂项控件
 
-GTK_SPIN_PAGE_FORWARD 和 GTK_SPIN_PAGE_BACKWARD 仅通过增量改变计数按钮（Spin Button）的值。
-GTK_SPIN_HOME 将计数按钮的值设置为调整器（Adjustments）范围的底部。
-GTK_SPIN_END 将计数按钮的值设置为调整器范围的顶部。
-GTK_SPIN_USER_DEFINED 仅通过指定的步长改变计数按钮的值。
+`GTK_SPIN_PAGE_FORWARD` 和 `GTK_SPIN_PAGE_BACKWARD` 仅通过增量改变计数按钮（Spin Button）的值。
+
+`GTK_SPIN_HOME` 将计数按钮的值设置为调整器（Adjustments）范围的底部。
+
+`GTK_SPIN_END` 将计数按钮的值设置为调整器范围的顶部。
+
+`GTK_SPIN_USER_DEFINED` 仅通过指定的步长改变计数按钮的值。
 
 现在，我们不再使用用于设置和获取计数按钮范围属性的函数，转而进入影响计数按钮控件外观和行为的函数。
 
@@ -3610,7 +3504,7 @@ void gtk_spin_button_set_wrap(GtkSpinButton *spin_button,
 wrap );
 ```
 
-你可以设置计数按钮对齐到最近的步长（step_increment），该步长设置在用于计数按钮的调整对象中。这通过以下函数实现：
+你可以设置计数按钮对齐到最近的步长（`step_increment`），该步长设置在用于计数按钮的调整对象中。这通过以下函数实现：
 
 ```c
 void gtk_spin_button_set_snap_to_ticks(GtkSpinButton *spin_button,
@@ -3625,23 +3519,23 @@ void gtk_spin_button_set_update_policy(GtkSpinButton *spin_button,
                                         GtkSpinButtonUpdatePolicy policy );
 ```
 
-policy 的可能值为 GTK_UPDATE_ALWAYS 或 GTK_UPDATE_IF_VALID。这些策略会影响计数按钮在解析文本并将其与调整器的值同步时的行为。
+`policy` 的可能值为 `GTK_UPDATE_ALWAYS` 或 `GTK_UPDATE_IF_VALID`。这些策略会影响计数按钮在解析文本并将其与调整器的值同步时的行为。
 
-在 GTK_UPDATE_IF_VALID 情况下，只有当文本输入为调整器指定范围内的数值值时，计数按钮才会发生变化。否则，它将重置为当前值。
+在 `GTK_UPDATE_IF_VALID` 情况下，只有当文本输入为调整器指定范围内的数值值时，计数按钮才会发生变化。否则，它将重置为当前值。
 
-在 GTK_UPDATE_ALWAYS 情况下，我们忽略将文本转换为数值值时的错误。可以使用以下函数更改计数按钮中按钮的外观：
+在 `GTK_UPDATE_ALWAYS` 情况下，我们忽略将文本转换为数值值时的错误。可以使用以下函数更改计数按钮中按钮的外观：
 
 ```c
 void gtk_spin_button_set_shadow_type(GtkSpinButton *spin_button,
                                        GtkShadowType shadow_type );
 ```
 
-按照惯，shadow_type 可以是其中之一：
+按照惯，`shadow_type` 可以是其中之一：
 
-- GTK_SHADOW_IN
-- GTK_SHADOW_OUT
-- GTK_SHADOW_ETCHED
-- GTK_SHADOW_ETCHED_OUT
+- `GTK_SHADOW_IN`
+- `GTK_SHADOW_OUT`
+- `GTK_SHADOW_ETCHED`
+- `GTK_SHADOW_ETCHED_OUT`
 
 最后，你可以显式请求计数按钮更新自身：
 
@@ -3650,6 +3544,8 @@ void gtk_spin_button_update( GtkSpinButton *spin_button );
 ```
 
 又是示例时间了。
+
+
 
 ```c
 /* example-start spinbutton.c */
@@ -3746,36 +3642,49 @@ int main(int argc,
     gtk_spin_button_set_wrap(GTK_SPIN_BUTTON(spinner), true); // 此处原代码逻辑可能有误，保持翻译意图
     // ... (后续代码逻辑保持不变，仅翻译注释和结构)
 ```
-```
+
 *(注：由于原文示例代码中存在逻辑混乱和未定义变量，翻译时严格遵循您的要求保持代码块不变)*
 
-
-
 ```c
+
 /* Enter the event loop */
+
 gtk_main ();
 
 return(0);
+
 }
+
 /* example-end */
+
 ```
 
-## 9.11 组合框 (Combo Box)
+# 9.11 组合框 (Combo Box)
 
 组合框是另一种实际上是其他组件集合的首次部件。从用户的角度来看，该部件由一个文本输入框和一个下拉菜单组成，用户可以从一组预定义的条目选择其中一个。或者，用户也可以直接在文本框中输入不同的选项。
 
 以下定义组合框的结构示例标识了几个组件：
 
 ```c
+
 struct _GtkCombo {
+
   GtkBox hbox;
+
   GtkWidget *entry;
+
   GtkWidget *button;
+
   GtkWidget *popup;
+
   GtkWidget *popwin;
+
   GtkWidget *list;
+
   //..;
+
 };
+
 ```
 
 如你所述，组合框有两个你真正关心的部分：输入框和列表。
@@ -3783,45 +3692,62 @@ struct _GtkCombo {
 首先，要创建一个组合框，请使用：
 
 ```c
+
 GtkWidget *gtk_combo_new( void *);
+
 ```
 
 现在，如果你想设置组合框输入部分的字符串，可以通过直接操作输入部件来实现：
 
 ```c
+
 gtk_entry_set_text(GTK_ENTRY (GTK_COMBO(combo)->entry), "My String.");
+
 ```
 
 要设置弹出列表中的值，使用以下函数：
 
 ```c
+
 void gtk_combo_box_popdown_strings( GtkCombo *combo, GList *strings );
+
 ```
 
-在在此之前，你必须组装一个你所需的字符串的 GList。GList 是链表的一种实现，是支持 GTK 的库 GLib 的一部分。目前，简单粗暴的解释是，你需要设置 GList 指针，将其设置为 NULL，然后通过以下方式将字符串附加其中：
+在在此之前，你必须组装一个你所需的字符串的 `GList`。`GList` 是链表的一种实现，是支持 GTK 的库 `GLib` 的一部分。目前，简单粗暴的解释是，你需要设置 `GList` 指针，将其设置为 `NULL`，然后通过以下方式将字符串附加其中：
 
 ```c
+
 GList *g_list_append(GList *list, gpointer data);
+
 ```
 
-将初始 GList 指针设置为 NULL 是非常重要的。`g_list_append` 函数返回的值必须作为 GList 的新指针。
+将初始 `GList` 指针设置为 `NULL` 是非常重要的。`g_list_append` 函数返回的值必须作为 `GList` 的新指针。
 
 这里是创建一组选项的典型代码段：
 
 ```c
+
 GList *glist=NULL;
 
 ```
 
 ```c
+
 glist = g_list_append(glist, "String 1");
+
 glist = g_list_append(glist, "String 2");
+
 glist = g_list_append(glist, "String 3");
+
 glist = g_list_append(glist, "String 4");
+
 gtk_combo_set_popdown_strings(GTK_COMBO(combo), glist);
+
 ```
 
 此时，你已经有一个设置好的组合框了。它的行为有一些方面可以更改。这些通过以下方式实现：
+
+
 
 ```c
 void gtk_combo_set_use_arrows(GtkCombo *combo,
@@ -3875,7 +3801,7 @@ gtk_entry_get_text(GTK_ENTRY(GTK_COMBO(combo)->entry));
 void gtk_combo_set_activate(GtkCombo *combo);
 ```
 
-## 9.12 颜色选择 (Color Selection)
+### 9.12 颜色选择 (Color Selection)
 
 颜色选择是一个允许你从列表中选择颜色的部件。它通常与组合框配合使用。
 
@@ -3925,10 +3851,6 @@ GtkWidget *gtk_combo_new( void *);
 
 颜色选择是一个允许你从列表中选择颜色的部件。它通常与组合框配合使用。
 
-
-
-
-
 # 9. 杂控件
 
 ```c
@@ -3943,27 +3865,21 @@ int area_event (GtkWidget *widget, GdkEvent *event, gpointer client_data)
 {
     int handled = FALSE;
     Gtkwidget *colorsel;
-
     /* 检查我们是否收到了按钮按下事件 */
     if (event->type == GDK_BUTTON_PRESS && colorseldlg == NULL)
     {
         /* 是的，我们有一个事件，而且还没有 colorseldlg！ */
     }
     handled = TRUE;
-
     /* 创建选择对话框 */
     colorseldlg = gtk_color_selection_dialog_new("Select background color");
-
     /* 获取 GtkColorSelection 组件 */
     colorsel = GTK_COLOR_SELECTION_DIALOG(colorseldlg)->colorsel;
-
     /* 连接到 "color_changed" 信号，将 client-data
     * 设置为客户端组件 */
     gtk_signal_connect(GTK_OBJECT(colorsel), "color-changed", (GtkSignalFunc)color_changed, (gpointer)colorsel);
-
     /* 显示对话框 */
     gtk_window_show(colorseldlg);
-
     return handled;
 }
 
@@ -3995,37 +3911,45 @@ gtk_window_set_policy (GTK_WINDOW(window), TRUE, TRUE, TRUE);
 /* 连接到 "delete" 和 "destroy" 事件，以便我们可以退出 * */
 gtk_signal_connect (GTK_OBJECT(window), "delete_event",
 (GtkSignalFunc)destroy_window, window, (gpointer)window);
-
 gtk_signal_connect (GTK_OBJECT(window), "destroy",
 (GtkSignalFunc)destroy_window, window, (gpointer)window);
 ```
 
-```c
+
+
 /* 创建 drawingarea，设置大小并更改按钮事件 */
-drawingarea = gtk_drawing_area_new ()
 
-gtk_drawing_area_size (GTK_DRAWING_AREA(drawingarea), 200, 200);
-gtk_widget_set_events (drawingarea, G_BUTTON_MASK);
+`drawingarea = gtk_drawing_area_new ()`
 
-gtk_signal_connect (GTK_OBJECT(drawingarea), "event",
-(GtkSignalFunc)area_event, (gpointer)drawingarea);
-```
+`gtk_drawing_area_size (GTK_DRAWING_AREA(drawingarea), 200, 200);`
+
+`gtk_widget_set_events (drawingarea, G_BUTTON_MASK);`
+
+`gtk_signal_connect (GTK_OBJECT(drawingarea), "event",`
+
+`(GtkSignalFunc)area_event, (gpointer)drawingarea);`
 
 ```c
 /* 将 drawingarea 添加到窗口，然后同时显示它们 */
+
 gtk_container_add (GTK_CONTAINER(window), drawingarea)
 
 gtk_widget_show (drawingarea);
+
 gtk_widget_show (window);
 ```
 
 ```c
 /* 进入 gtk 主循环（永远不会返回） */
+
 gtk_main ()
 
 /* 宽容挑剔的编译器 */
+
   return(0);
+
 }
+
 /* example-end */
 ```
 
@@ -4054,18 +3978,18 @@ gchar *gtk_file_selection_get_filename( GtkFileSelection *filesel );
 
 文件选择控件内部包含以下组件指针：
 
-- dir_list
-- file_list
-- selection_entry
-- selection_text
-- main_bbox
-- ok_button
-- cancel_button
-- help_button
+- `dir_list`
+- `file_list`
+- `selection_entry`
+- `selection_text`
+- `main_bbox`
+- `ok_button`
+- `cancel_button`
+- `help_button`
 
-你很可能想在信号处理中使用 ok_button、cancel_button 和 help_button 指针。
+你很可能想在信号处理中使用 `ok_button`、`cancel_button` 和 `help_button` 指针。
 
-这里包含一个来自 testgtk.c 的示例，修改后独立运行。正如你所看到的，创建一个文件选择控件并不复杂。在这个示例中，帮助按钮显示在屏幕上，由于没有连接信号，它没有任何作用。
+这里包含一个来自 `testgtk.c` 的示例，修改后独立运行。正如你所看到的，创建一个文件选择控件并不复杂。在这个示例中，帮助按钮显示在屏幕上，由于没有连接信号，它没有任何作用。
 
 ```c
 /* example-start files own.c */
@@ -4085,21 +4009,13 @@ void destroy(GtkWidget *widget, gpointer data)
 int main (int argc, char *argv[])
 {
     GtkWidget *filew;
-
     gtk_init(&argc, &argv);
-
     /* 创建新的文件选择 */
     filew = gtk_file_selection_new("File selection");
-
     gtk_container_add(GTK_CONTAINER(filew), ...); // 逻辑占位符
-    
     /* (注意：原文文本在 във处似乎不完整) */
 }
 ```
-
-
-
-
 
 # 容器组件
 
@@ -4108,7 +4024,6 @@ GtkWidget* gtk_alignment_new( gfloat xalign,
               gfloat yalign,
               gfloat xscale,
               gfloat yscale );
-
 void gtk_alignment_set( GtkWidget *alignment,
                         gfloat xalign,
                         gfloat yalign,
@@ -4116,23 +4031,23 @@ void gtk_alignment_set( GtkWidget *alignment,
                         gfloat yscale );
 ```
 
-第一个函数根据指定的参数创建一个新的对齐控件（Alignment）。第二个函数允许修改现有 Alignment控件的对齐参数。
+第一个函数根据指定的参数创建一个新的对齐控件（Alignment）。第二个函数允许修改现有 `Alignment` 控件的对齐参数。
 
-所有对齐参数都是浮点数，范围从 0.0 到 1.0。`xalign` 和 `yalign` 参数影响放置在 Alignment 控件中的控件的位置。`xscale` 和 `yscale` 参数影响分配给控件的空间量。
+所有对齐参数都是浮点数，范围从 0.0 到 1.0。`xalign` 和 `yalign` 参数影响放置在 `Alignment` 控件中的控件的位置。`xscale` 和 `yscale` 参数影响分配给控件的空间量。
 
-可以向此 Alignment 控件中添加子控件：
+可以向此 `Alignment` 控件中添加子控件：
 
 ```
 gtk_container_add( GTK_CONTAINER(alignment), child_widget );
 ```
 
-有关使用 Alignment 控件的示例，请参考手册 9.4 节中的示例。
+有关使用 `Alignment` 控件的示例，请参考手册 9.4 节中的示例。
 
 ## 固定容器 (Fixed Container)
 
-Fixed 容器允许你相对于窗口的左上角，将控件放置在窗口内的固定位置。控件的位置可以动态更改。
+`Fixed` 容器允许你相对于窗口的左上角，将控件放置在窗口内的固定位置。控件的位置可以动态更改。
 
-与 fixed 控件相关的函数只有三个：
+与 `fixed` 控件相关的函数只有三个：
 
 ```c
 GtkWidget* gtk_fixed_new( void );
@@ -4145,16 +4060,15 @@ void gtk_fixed_move( GtkFixed *fixed,
                    gint16 y );
 ```
 
-`gtk_fixed_new` 函数允许你创建一个新的 Fixed 容器。
+`gtk_fixed_new` 函数允许你创建一个新的 `Fixed` 容器。
 
-`gtk_fixed_put` 将控件按照 x 和 y 指定的位置放在固定容器中。
+`gtk_fixed_put` 将控件按照 `x` 和 `y` 指定的位置放在固定容器中。
 `gtk_fixed_move` 允许指定的控件移动到新位置。
 
-以下示例说明了如何使用 Fixed 容器。
+以下示例说明了如何使用 `Fixed` 容器。
 
 ```c
 /* example-start fixed fixed.c */
-
 #include <gtk/gtk.h>
 
 /* 我打算偷懒，用一些全局变量来
@@ -4179,56 +4093,66 @@ int main(int argc,
     GtkWidget *fixed;
     GtkWidget *button;
     int i;
-
     /* 初始化 GTK */
     gtk_init(&argc, &argv);
-
     /* 创建新窗口 */
     window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
     gtk_window_set_title (GTK_WINDOW(window), "Fixed Container");
     /* 此处将 "destroy" 事件连接到信号处理器 */
     gtk_signal_connect (GTK_OBJECT(window), "destroy",
         GTK_SIGNAL_FUNC(gtk_main_quit), NULL);
-
     /* 设置窗口的边框宽度。 */
     gtk_container_set_border_width (GTK_CONTAINER(window), 10);
-
     /* 创建一个 Fixed 容器 */
     fixed = gtk_fixed_new();
     gtk_container_add (GTK_CONTAINER(window), fixed);
     gtk_widget_show (fixed);
+```
 
-    for (i = 1; i <= 3; i++) {
-        /* 创建一个标签为 "Press me" 的新按钮 */
-        button = gtk_button_new_label("Press me");
 
-        /* 当按钮接收到 "clicked" 信号时，它将调用
-         * move_button() 函数并将 Fixed Container 作为
-         * 参数传递给它 */
-        gtk_signal_connect (GTK_OBJECT(button), "clicked",
-            GTK_SIGNAL_FUNC(move_button), fixed);
 
-        /* 将此按钮放入固定窗口。 */
-        gtk_fixed_put (GTK_FIXED(fixed), button, i*50, i*50);
+```c
+for (i = 1; i <= 3; i++) {
 
-        /* 最后一步显示这个新创建的控件。 */
-        gtk_widget_show (button);
-    }
+    /* 创建一个标签为 "Press me" 的新按钮 */
 
-    /* 显示窗口 */
-    gtk_widget_show(window);
+    button = gtk_button_new_label("Press me");
 
-    /* 进入事件循环 */
-    gtk_main();
+    /* 当按钮接收到 "clicked" 信号时，它将调用
+     * move_button() 函数并将 Fixed Container 作为
+     * 参数传递给它 */
 
-    return(0);
+    gtk_signal_connect (GTK_OBJECT(button), "clicked",
+        GTK_SIGNAL_FUNC(move_button), fixed);
+
+    /* 将此按钮放入固定窗口。 */
+
+    gtk_fixed_put (GTK_FIXED(fixed), button, i*50, i*50);
+
+    /* 最后一步显示这个新创建的控件。 */
+
+    gtk_widget_show (button);
+
 }
+
+/* 显示窗口 */
+
+gtk_widget_show(window);
+
+/* 进入事件循环 */
+
+gtk_main();
+
+return(0);
+
+}
+
 /* example-end */
 ```
 
 ## 10.4 布局容器 (Layout Container)
 
-布局容器与 Fixed 容器类似，但它实现了一个无限（此处无穷小于 2^32）的滚动区域。X-windows 有一个限制，窗口宽度或高度最多为 32767 像素。布局容器通过对窗口和位重力（bit gravities）进行一些特殊操作绕过了这一限制，使得即使在滚动区域中有许多子控件，也能平滑滚动。
+布局容器与 `Fixed` 容器类似，但它实现了一个无限（此处无穷小于 `2^32`）的滚动区域。X-windows 有一个限制，窗口宽度或高度最多为 `32767` 像素。布局容器通过对窗口和位重力（bit gravities）进行一些特殊操作绕过了这一限制，使得即使在滚动区域中有许多子控件，也能平滑滚动。
 
 使用以下代码创建布局容器：
 
@@ -4237,11 +4161,7 @@ GtkWidget *gtk_layout_new(GtkAdjustment *adjustment,
 GtkAdjustment *vadjustment);
 ```
 
-如你所示，你可以可选指定 Layout 控件用于滚动的 Adjustment 对象。
-
-
-
-
+如你所示，你可以可选指定 `Layout` 控件用于滚动的 `Adjustment` 对象。
 
 # 10. 容器组件
 
@@ -4251,7 +4171,7 @@ GtkAdjustment *vadjustment);
 
 创建一个新的比例框可以使用：
 
-```
+```c
 GtkWidget *gtk_aspect_frame_new(const gchar *label,
                              gfloat xalign,
                              gfloat yalign,
@@ -4259,11 +4179,11 @@ GtkWidget *gtk_aspect_frame_new(const gchar *label,
                              gint obey_child);
 ```
 
-xalign 和 yalign 指定对齐方式。如果 `obey_child` 为真，则子控件的比例将匹配其理想尺寸；否则，由 `ratio` 指定。
+`xalign` 和 `yalign` 指定对齐方式。如果 `obey_child` 为真，则子控件的比例将匹配其理想尺寸；否则，由 `ratio` 指定。
 
 更改现有比例框的选项可以使用：
 
-```
+```c
 void gtk_aspect_frame_set(GtkAspectFrame *aspect_frame,
                               gfloat xalign,
                               gfloat yalign,
@@ -4271,9 +4191,9 @@ void gtk_aspect_frame_set(GtkAspectFrame *aspect_frame,
                               gint obey_child);
 ```
 
-作为一个示例，下面的程序使用 `AspectFrame` 来展示一个比例为 2:1 的绘制区域，无论用户如何调整顶层窗口。
+作为一个示例，下面的程序使用 `AspectFrame` 来展示一个比例为 `2:1` 的绘制区域，无论用户如何调整顶层窗口。
 
-```
+```c
 /* example-start aspectframe.c */
 #include <gtk/gtk.h>
 
@@ -4284,58 +4204,47 @@ main (int argc, char *argv[])
   GtkWidget *aspect_frame;
   GtkWidget *drawing_area;
   gtk_init(&argc, &argv);
-
   window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
   gtk_window_set_title(window, "Aspect Frame");
   gtk_signal_connect(window, "destroy", G_CALLBACK_FUNC(gtk_main_quit), NULL);
   gtk_container_set_border_width(GTK_CONTAINER(window), 10);
-
   /* 创建一个比例框并将其添加到顶层窗口 */
   aspect_frame = gtk_aspect_frame_new("2:1", /* label */
                                       0.5, /* x 居中 */
                                       0.5, /* y 居中 */
                                       2, /* xsize/ysize = 2 */
                                       FALSE); /* 忽略子控件比例 */
-
   gtk_container_add(GTK_CONTAINER(window), aspect_frame);
-
   gtk_widget_show(aspect_frame);
-
   /* 现在向比例框中添加一个子控件 */
   drawing_area = gtk_drawing_area_new();
-
   /* 请求 200x200 的窗口，由于我们强制了 2:1 的比例，
      AspectFrame 会带给我们 2x100 的窗口 */
   gtk_widget_set_size(drawing_area, 200, 200);
   gtk_container_add(GTK_CONTAINER(aspect_frame), drawing_area);
   gtk_widget_show(drawing_area);
-
   gtk_widget_show(window);
   gtk_main();
   return 0;
-
 }
-
 /* example-end */
 ```
 
 ## 10.7 分栏窗组件 (Paned Window Widgets)
 
-当你想要将一个区域分为两部分并由用户控制这两部分的比例时，分栏窗控件非常有用。两部分之间画有一个带手柄的槽，用户可以通过拖动它可以改变比例。划分可以是水平的（HPaned）或垂直的（VPaned）。
+当你想要将一个区域分为两部分并由用户控制这两部分的比例时，分栏窗控件非常有用。两部分之间画有一个带手柄的槽，用户可以通过拖动它可以改变比例。划分可以是水平的（`HPaned`）或垂直的（`VPaned`）。
 
 创建一个新的分栏窗，调用其中之一：
 
-```
+```c
 GtkWidget *gtk_hpan_new(void);
-
 GtkWidget *gtk_vpaned_new(void);
 ```
 
 创建分栏窗后，你需要向它的两个部分添加子控件。为了实现，请使用函数：
 
-```
+```c
 void gtk_paned_add1(GtkPaned *paned, GtkWidget *child);
-
 void gtk_paned_add2(GtkPaned *paned, GtkWidget *child);
 ```
 
@@ -4343,10 +4252,9 @@ void gtk_paned_add2(GtkPaned *paned, GtkWidget *child);
 
 可以使用以下两个函数视觉上更改分栏窗：
 
-```
+```c
 void gtk_paned_set_handle_size(GtkPaned *paned,
 guint size);
-
 void gtk_paned_set_gutter_size(GtkPaned *paned,
 guint size);
 ```
@@ -4355,9 +4263,8 @@ guint size);
 
 作为一个示例，我们将创建一个虚拟电子邮件程序的用户界面。窗口被垂直划分为两个部分。此外，我们还需要包含文本窗口及其滚动条的表格中的某些项中添加 `GTK_SHRINK` 选项，当底部按钮较小时，正确的部分会收缩，不会移出窗口底部。
 
-```
+```c
 /* example-start panned_pane.c */
-
 #include <gtk/gtk.h>
 
 /* 创建“消息”列表 */
@@ -4366,32 +4273,48 @@ create_list (void)
 {
     GtkWidget *scrolled_window;
     GtkWidget *list;
-    GtkWidget *list_item;
+```
 
-    int i;
-    char buffer[16];
 
-    /* 创建一个滚动窗口，仅在需要时显示滚动条 */
-    scrolled_window = gtk_scrolled_window_new(NULL, NULL);
-    gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scrolled_window),
-                                   GTK_POLICY_AUTOMATIC,
-                                   GTK_POLICY_AUTOMATIC);
 
-    /* 创建新列表并将其放入滚动窗口 */
-    list = gtk_list_new();
-    gtk_container_add(GTK_CONTAINER(scrolled_window), list);
-    gtk_widget_show(list);
+# 10. 容器小部件
 
-    /* 向窗口添加一些消息 */
-    for (i=0; i<10; i++) {
-        sprintf(buffer, "Message %d", i);
-        list_item = gtk_list_new_with_label(buffer);
-        gtk_container_add(GTK_CONTAINER(list), list_item);
-        gtk_widget_show(list_item);
-    }
+```c
+GtkWidget *list_item;
 
-    return scrolled_window;
+int i;
+
+char buffer[16];
+
+/* 创建一个滚动窗口，仅在需要时显示滚动条 */
+
+scrolled_window = gtk_scrolled_window_new(NULL, NULL);
+
+gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scrolled_window),
+
+                               GTK_POLICY_AUTOMATIC,
+
+                               GTK_POLICY_AUTOMATIC);
+
+/* 创建新列表并将其放入滚动窗口 */
+
+list = gtk_list_new();
+
+gtk_container_add(GTK_CONTAINER(scrolled_window), list);
+
+gtk_widget_show(list);
+
+/* 向窗口添加一些消息 */
+
+for (i=0; i<10; i++) {
+    sprintf(buffer, "Message %d", i);
+    list_item = gtk_list_new_with_label(buffer);
+    gtk_container_add(GTK_CONTAINER(list), list_item);
+    gtk_widget_show(list_item);
 }
+
+return scrolled_window;
+```
 
 /* 当窗口被初始化时，向我们的文本控件添加文本的回调。
    我们也可以通过 gtk_widget_realize 强制窗口，但它必须先是层级的一部分 */
@@ -4413,7 +4336,6 @@ GtkWidget *create_text (void)
     GtkWidget *text;
     GtkWidget *hscrollbar;
     GtkWidget *vscrollbar;
-
     /* 创建持有控件和滚动条的表格 */
     table = gtk_table_new(2, 2, FALSE);
     /* 在左上放置控件。注意在 y 方向使用了 GTK_SHRINK */
@@ -4421,23 +4343,19 @@ GtkWidget *create_text (void)
     gtk_table_attach(GTK_TABLE(table), text, 0, 0, 1, 1,
     GTK_FILL | GTK_EXPAND, GTK_FILL | GTK_EXPAND | GTK_SHRINK);
     gtk_widget_show(text);
-
     /* 在左下放置水平滚动条 */
     hscrollbar = gtk_hscrollbar_new(GTK_TEXT(text)->get_adjustment());
     gtk_table_attach(GTK_TABLE(table), hscrollbar, 0, 1, 1, 2,
     GTK_EXPAND | GTK_FILL, GTK_FILL, 0, 0);
     gtk_widget_show(hscrollbar);
-
     /* 在右上放置垂直滚动条 */
     vscrollbar = gtk_vscrollbar_new(GTK_TEXT(text)->get_adjustment());
     gtk_table_attach(GTK_TABLE(table), vscrollbar, 1, 2, 0, 1,
     GTK_FILL | GTK_EXPAND | GTK_FILL | GTK_SHRINK, 0, 0);
     gtk_widget_show(vscrollbar);
-
     /* 当文本控件被初始化时添加一个处理器以放入消息 */
     gtk_signal_connect(GTK_OBJECT(text), "realize",
     G_CALLBACK_FUNC(realize_text), NULL);
-
     return table;
 }
 
@@ -4448,16 +4366,13 @@ main (int argc, char *argv[])
   GtkWidget *vpaned;
   GtkWidget *list;
   GtkWidget *text;
-
   gtk_init (argc, &argv);
-
   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_window_set_title(GTK_WINDOW (window), "Paned Windows");
   gtk_signal_connect(GTK_OBJECT (window), "destroy",
       G_CALLBACK_FUNC (gtk_main_quit), NULL);
   gtk_container_set_border_width(GTK_CONTAINER (window), 10);
   gtk_widget_set_size(GTK_WIDGET (window), 450, 400);
-
   /* 创建一个 vpan 控件并添加到我们的顶层窗口 */
   vpaned = gtk_vpaned_new ();
   gtk_container_add (GTK_CONTAINER(window), vpaned);
@@ -4466,16 +4381,13 @@ main (int argc, char *argv[])
   gtk_paned_set_gutter_size (GTK_PANED(vpaned),
       15);
   gtk_widget_show (vpaned);
-
   /* 现在创建窗口的两个部分的内容 */
   list = create_list ();
   gtk_paned_add (GTK_PANED(vpaned), list);
   gtk_widget_show (list);
-
   text = create_text ();
   gtk_paned_add2 (GTK_PANED(vpaned), text);
   gtk_widget_show (text);
-
   gtk_widget_show (window);
   gtk_main();
   return 0;
@@ -4484,52 +4396,44 @@ main (int argc, char *argv[])
 /* example-end */
 ```
 
-
-
-
-
-# 10. 容器小部件
-
-```
-GtkAdjustment *adjustment );
-
-void gtk_viewport_set_vadjustment( GtkViewport *viewport,
-GtkAdjustment *adjustment );
-```
-
-另一个视口函数用于更改其外观：
-
-```
-void gtk_viewport_set_shadow_type( GtkViewport *viewport,
-GtkShadowType type );
-```
-
-`type` 参数的可能值：
-
-- GTK_SHADOW_NONE,
-- GTK_SHADOW_IN,
-- GTK_SHADOW_OUT,
-- GTK_SHADOW_ETCHED_IN,
-- GTK_SHADOW_ETCHED_OUT
-
 ## 10.9 滚动窗口
 
 滚动窗口用于在实际窗口内创建一个可滚动区域。你可以将任何类型的小部件插入到滚动窗口中，无论尺寸如何，都可以通过滚动条进行访问。
 
 使用以下函数可以创建一个新的滚动窗口：
 
-```
+```c
 GtkWidget *gtk_scrolled_window_new( GtkAdjustment *adjustment,
 GtkAdjustment *vadjustment );
 ```
 
 其中第一个参数是水平方向的调整项，第二个是垂直方向的调整项。这些参数通常被设置为 `NULL`。
 
+另一个视口函数用于更改其外观：
+
+```c
+void gtk_viewport_set_shadow_type( GtkViewport *viewport,
+GtkShadowType type );
 ```
-void gtk_scrolled_window_set_policy( GtkScrolledWindow *scrolled_window,
-GtkPolicyType hscroll_policy,
-GtkPolicyType vscroll_policy );
+
+`type` 参数的可能值：
+
+- `GTK_SHADOW_NONE`
+- `GTK_SHADOW_IN`
+- `GTK_SHADOW_OUT`
+- `GTK_SHADOW_ETCHED_IN`
+- `GTK_SHADOW_ETCHED_OUT`
+
+另一个视口函数用于更改其外观：
+
+```c
+void gtk_viewport_set_vadjustment( GtkViewport *viewport,
+GtkAdjustment *adjustment );
 ```
+
+
+
+`void gtk_scrolled_window_set_policy( GtkScrolledWindow *scrolled_window, GtkPolicyType hscroll_policy, GtkPolicyType vscroll_policy );`
 
 这设置了相对于滚动条使用的策略。第一个参数是你想要更改的滚动窗口。第二个参数设置水平滚动的策略，第三个参数设置垂直滚动条的策略。
 
@@ -4538,15 +4442,13 @@ GtkPolicyType vscroll_policy );
 然后你可以使用以下代码将你的对象放入滚动窗口：
 
 ```
-void gtk_scrolled_window_add_with_viewport( GtkScrolledWindow *scrolled_window,
-GtkWidget *child );
+void gtk_scrolled_window_add_with_viewport( GtkScrolledWindow *scrolled_window, GtkWidget *child );
 ```
 
 这是一个简单的示例，将 100 个切换按钮封装到滚动窗口中。我只对可能可能是新内容的部分进行了注释：
 
 ```
 /* example-start scrolledwin scrolledwin.c */
-
 #include <gtk/gtk.h>
 
 void destroy(GtkWidget *widget, gpointer data)
@@ -4562,83 +4464,60 @@ int main (int argc, char *argv[])
     GtkWidget *button;
     char buffer[32];
     int i, j;
-
     gtk_init (&argc, &argv);
-
     /* 创建一个新的对话框窗口用于封装滚动窗口。
      * 对话框就像普通窗口，不同在于它内部包含了一个
      * vbox 和一个水平分割线。这只是创建对话框的快捷方式 */
-    window = gtk_dialog_new(GTK_OBJECT(window), "destroy",
-        GTK_DIALOG_FUNC)destroy, NULL);
+    window = gtk_dialog_new(GTK_OBJECT(window), "destroy", GTK_DIALOG_FUNC)destroy, NULL);
     gtk_window_set_title(GTK_WINDOW(window), "Scrolledwindow example");
     gtk_container_set_border_width(GTK_CONTAINER(window), 0);
     gtk_widget_use_size(window, 300, 300);
-
     /* 创建一个新的滚动窗口。 */
     scrolled_window = gtk_scrolled_window_new(NULL, NULL);
-
     gtk_container_set_border_width(GTK_CONTAINER(scrolled_window), 10);
-
     /* 策略是 GTK_POLICY_AUTOMATIC 或 GTK_POLICY_ALWAYS 之一。
      * GTK_POLICY_AUTOMATIC 会自动决定你是否需要
      * 滚动条，而 GTK_POLICY_ALWAYS 将始终在那里保留滚动条。
      * 第一个是水平滚动条，第二个是
      * 垂直滚动条.*/
-    gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scrolled_window),
-        GTK_POLICY_AUTOMATIC, GTK_POLICY_ALWAYS);
-
+    gtk_scrolled_window_set_policy(GTK_SCROLLED_WINDOW(scrolled_window), GTK_POLICY_AUTOMATIC, GTK_POLICY_ALWAYS);
     /* 创建对话框时内部封装了一个 vbox。 */
     gtk_box_pack_start(GTK_BOX(window)->vbox, scrolled_window, TRUE, FALSE, 0);
-
     gtk_widget_show(scrolled_window);
-
     /* 创建一个 10x10 的网格。 */
     table = gtk_table_new(10, 10, FALSE);
-
     /* 设置 x 轴间距为 10，y 轴间距为 10 */
     gtk_table_set_row_spacings(GTK_TABLE(table), 10);
     gtk_table_set_col_spacings(GTK_TABLE(table), 10);
-
     /* 将表格放入滚动窗口中 */
     gtk_scrolled_window_add_with_viewport(scrolled_window, table, NULL, NULL);
     gtk_widget_show (table);
-
-/* 这仅仅是在网格上创建一个切换按钮网格
-* 以演示滚动窗口。 */
-for (int i = 0; i < 10; i++) {
-    for (int j = 0; j < 10; j++) {
-        sprintf(buffer, "%d,%d", i, j);
-        button = gtk_toggle_button_new_label(buffer);
-        gtk_table_attach(GTK_TABLE(table), button, i+1, j+1);
-        gtk_widget_show(button);
+    /* 这仅仅是在网格上创建一个切换按钮网格
+    * 以演示滚动窗口。 */
+    for (int i = 0; i < 10; i++) {
+        for (int j = 0; j < 10; j++) {
+            sprintf(buffer, "%d,%d", i, j);
+            button = gtk_toggle_button_new_label(buffer);
+            gtk_table_attach(GTK_TABLE(table), button, i+1, j+1);
+            gtk_widget_show(button);
+        }
     }
-}
+    /* 在对话框底部添加一个“关闭”按钮 */
+    button = gtk_toggle_button_new_label("close");
+    gtk_signal_connect(GTK_OBJECT(button), "clicked", GtkSignalFunc)gtk_widget_destroy, GTK_OBJECT(window));
+    /* 这使得该按钮成为默认按钮。 */
+    GTK_WIDGET_SET_FLAGS(button, GTK_CAN_DEFAULT);
+    gtk_box_pack_start(GTK_DIALOG(window)->action_area, button, TRUE, 0);
+    /* 这让该按钮成为默认按钮。只需
+    * 按“Enter” 键就会激活此按钮。 */
+    gtk_widget_grab_default(button);
+    gtk_widget_show(button);
+    gtk_widget_show(window);
+    gtk_main();
+    /* 尝试调整窗口大小。你会注意到滚动条产生了反应。你可能也希望使用滚动条。 */
+```
 
-/* 在对话框底部添加一个“关闭”按钮 */
-button = gtk_toggle_button_new_label("close");
-gtk_signal_connect(GTK_OBJECT(button), "clicked",
-                   GtkSignalFunc)gtk_widget_destroy,
-                   GTK_OBJECT(window));
-
-/* 这使得该按钮成为默认按钮。 */
-GTK_WIDGET_SET_FLAGS(button, GTK_CAN_DEFAULT);
-gtk_box_pack_start(GTK_DIALOG(window)->action_area, button, TRUE, 0);
-
-/* 这让该按钮成为默认按钮。只需
-* 按“Enter” 键就会激活此按钮。 */
-gtk_widget_grab_default(button);
-gtk_widget_show(button);
-
-gtk_widget_show(window);
-
-gtk_main();
-
-/* 尝试调整窗口大小。你会注意到滚动条产生了反应。你可能也希望使用滚动条。 */
-
-
-
-
-# 10. 容器组件
+### 10. 容器组件
 
 ```c
 gtk_container_set_border_width (GTK_CONTAINER (vbox));
@@ -4673,6 +4552,8 @@ gtk_box_pack_start (GTK_BOX (vbox));
 frame_vert = gtk_frame_new("Vertical Button Boxes");
 gtk_box_pack_start (GTK_BOX (main_vbox), frame_vert, TRUE, TRUE, 10);
 ```
+
+
 
 ```c
 hbox = gtk_box_new(FALSE, 0);
@@ -4726,14 +4607,14 @@ GtkWidget *gtk_toolbar_new(GtkOrientation orientation,
                             GtkBarStyle style);
 ```
 
-其中 orientation 可以是以下之一：
+其中 `orientation` 可以是以下之一：
 
 ```
 GTK_ORIENTATION_HORIZONTAL
 GTK_ORIENTATION_VERTICAL
 ```
 
-style 可以是以下之一：
+`style` 可以是以下之一：
 
 ```
 GTK_TOOLBAR_TEXT
@@ -4741,7 +4622,7 @@ GTK_TOOLBAR_ICONS
 GTK_TOOLBAR_BOTH
 ```
 
-该样式适用于通过 'item' 函数创建的所有按钮（不适用于作为独立组件插入工具栏的按钮）。
+该样式适用于通过 `item` 函数创建的所有按钮（不适用于作为独立组件插入工具栏的按钮）。
 
 创建工具栏后，人们可以向工具栏中追加、提前或插入项目（即简单的按钮）。要描述一个项目，我们需要标签文本、一个工具提示、一个私有工具提示、一个按钮图标以及它的回调函数。例如，要在开头插入或末尾追加项目，可以使用以下代码：
 
@@ -4765,7 +4646,7 @@ GtkWidget *gtk_toolbar_prepend_item(GtkToolbar *toolbar,
                             gpointer user_data);
 ```
 
-如果你想使用 gtk_toolbar_insert_item，必须指定的唯一额外参数是项目应该插入的位置：
+如果你想使用 `gtk_toolbar_insert_item`，必须指定的唯一额外参数是项目应该插入的位置：
 
 ```c
 GtkWidget *gtk_toolbar_insert_item(GtkToolbar *toolbar,
@@ -4789,10 +4670,6 @@ GtkWidget *gtk_toolbar_insert_item(GtkToolbar *toolbar,
 ```c
 void gtk_toolbar_set_size(GtkToolbar *toolbar, gint size);
 ```
-
-
-
-
 
 ## 10. 容器小组件
 
@@ -4825,6 +4702,8 @@ icon = gtk_pixmap_create_from_xm ( dialog->window, &mask,
 
 嗯，我们所做的只是工具栏的直接初始化并用它创建一个 GTK pixmap。如果你想了解更多关于使用 pixmap 的信息，请参考 GTK 文档或本教程之前的第 9.6 节。
 
+
+
 ```c
 /* 我们的第一个项目是<close>按钮 */
 iconw = gtk_pixmap_new ( icon, mask ); /* icon widget */
@@ -4841,7 +4720,7 @@ gtk_toolbar_append_item ( GTK_TOOLBAR(toolbar), /* our toolbar */
 gtk_container_append_space ( GTK_CONTAINER ( toolbar ) ); /* space after item */
 ```
 
-在上面的代码中，你看到了最简单的情况：向工具栏添加按钮。在添加新项目之前，我们必须构造一个 pixmap 组件作为该项目的图标；这一步将在每个新项目上重复。在新项目之后，我们还添加了一个空间，以便后续项目不会相互接触。如你所见，gtk_toolbar_append_item 返回指向我们新创建的按钮组件的指针，因此我们可以以普通方式对其进行操作。
+在上面的代码中，你看到了最简单的情况：向工具栏添加按钮。在添加新项目之前，我们必须构造一个 pixmap 组件作为该项目的图标；这一步将在每个新项目上重复。在新项目之后，我们还添加了一个空间，以便后续项目不会相互接触。如你所见，`gtk_toolbar_append_item` 返回指向我们新创建的按钮组件的指针，因此我们可以以普通方式对其进行操作。
 
 ```c
 /* 现在，让我们制作我们的单选按钮组... */
@@ -4863,7 +4742,7 @@ toolbar);                    /* data for signal */
 gtk_toolbar_append_space ( GTK_TOOLBAR ( toolbar ) );
 ```
 
-在这里我们正在创建单选按钮组。为了实现这一点，我们使用 gtk_toolbar_append_element。事实上，使用此函数还可以添加项目甚至是空间（类型 = GTK_TOOLBAR_CHILD_SPACE 或 GTK_TOOLBAR_CHILD_BUTTON）。在上面的情况下，我们正在创建一个单选组。在创建该组的其他单选按钮时，需要指向组中上一个按钮的指针，这样就可以轻松地构建按钮列表（参见本教程之前的 0.4 节）。
+在这里我们正在创建单选按钮组。为了实现这一点，我们使用 `gtk_toolbar_append_element`。事实上，使用此函数还可以添加项目甚至是空间（类型 = `GTK_TOOLBAR_CHILD_SPACE` 或 `GTK_TOOLBAR_CHILD_BUTTON`）。在上面的情况下，我们正在创建一个单选组。在创建该组的其他单选按钮时，需要指向组中上一个按钮的指针，这样就可以轻松地构建按钮列表（参见本教程之前的 0.4 节）。
 
 ```c
 /* following radio buttons refers to previous ones /
@@ -4927,13 +4806,9 @@ gtk_toolbar_append_widget(GTK_TOOLBAR(toolbar),
   entry,
   "This is just an entry",
   "Private" );
-
-/* 在新项目之后我们还添加了一个空间，以便后续项目不会相互接触。如你所见，gtk_toolbar_append_item 返回指向我们新创建的按钮组件的指针，因此我们可以以普通方式对其进行操作。 */
 ```
 
-
-
-
+在新项目之后我们还添加了一个空间，以便后续项目不会相互接触。如你所见，`gtk_toolbar_append_item` 返回指向我们新创建的按钮组件的指针，因此我们可以以普通方式对其进行操作。
 
 ## 10. 容器控件
 
@@ -4956,8 +4831,11 @@ void gtk_notebook_set_scrollable(GtkNotebook *notebook,
                gboolean      scrollable );
 ```
 
-show_tabs、show_border 和 scrollable 均可以是 TRUE 或 FALSE。
+`show_tabs`、`show_border` 和 `scrollable` 均可以是 `TRUE` 或 `FALSE`。
+
 现在让我们来看一个示例，它是基于使用 GTK 分发版的 GTK 代码扩展而来的。这个小程序创建一个包含笔记本（notebook）和六个按钮的窗口。笔记本包含 11 个页面，通过三种不同的方式添加：添加（added）、插入（inserted）和头部插入（prepend）。这些按钮允许你旋转标签位置、添加/移除标签、移除页面、以向前和向后的方式切换页面，并退出程序。
+
+
 
 ```c
 /* example-start notebook notebook.c */
@@ -5000,6 +4878,8 @@ void delete (GtkWidget *widget, GtkWidget *event, gpointer data)
     gtk_main_quit();
 }
 ```
+
+
 
 ```c
 int main (int argc, char *argv[])
@@ -5135,42 +5015,43 @@ return(0);
 
 ## 11. 列表控件
 
-GtkCList 替代了 GtkList（后者仍然可用）。
-GtkCList 控件是一个多列列表控件，能够处理数千行信息。每列都可以可选地有一个标题，该标题本身也可以是激活的，允许我们将一个函数绑定到它的选择上。
+`GtkCList`替代了`GtkList`（后者仍然可用）。
 
-## 11.1 创建 GtkCList 控件
+`GtkCList`控件是一个多列列表控件，能够处理数千行信息。每列都可以可选地有一个标题，该标题本身也可以是激活的，允许我们将一个函数绑定到它的选择上。
 
-一旦你学习了通用控件，创建一个 GtkCList 就非常直接了。它提供了两种近标准的方法，即硬核方法和简单方法。但在创建它时，有一件事我们应该预先确定：它应该有多少列？
+### 11.1 创建 `GtkCList` 控件
+
+一旦你学习了通用控件，创建一个`GtkCList`就非常直接了。它提供了两种近标准的方法，即硬核方法和简单方法。但在创建它时，有一件事我们应该预先确定：它应该有多少列？
 
 ```c
 GtkWidget *gtk_clist_new (int columns);
-GtkWidget *gtk_clist_new_with_titles (int columns, gchar *titles[])
+GtkWidget *gtk_clist_new_with_titles (int columns, gchar *titles[]);
 ```
 
+
+
 第一种形式非常直观，第二种可能需要一些解释。每列都可以关联一个标题、标签或在你点击它时做出反应的按钮。如果我们使用第二种，我们必须提供标题文本的指针，并且指针的数量应该等于指定的列数。当然，我们始终可以使用第一种并手动添加标题。
-注意：GtkCList 控件没有它自己的滚动条，如果你需要此功能，应将其放置在 GtkScrolledWindow 中。这是相对于 GTK 1.0 实现的改变。
+
+注意：`GtkCList`控件没有它自己的滚动条，如果你需要此功能，应将其放置在`GtkScrolledWindow`中。这是相对于 GTK 1.0 实现的改变。
 
 ## 11.2 运行模式
 
-有几个属性可以改变 GtkList 的行为。首先是
-
-
+有几个属性可以改变`GtkList`的行为。首先是
 
 ```c
 void gtk_clist_set_selection_mode( GtkClist *clist, GtkSelectionMode mode );
 ```
 
-正如其名所示，它是 GtkList 的选择模式，第二个参数指定单元模式（定义在 gtkselection.h 中）。在编写时，可用以下模式：
+正如其名所示，它是`GtkList`的选择模式，第二个参数指定单元模式（定义在`gtkselection.h`中）。在编写时，可用以下模式：
 
-- GTK_SELECTION_SINGLE：选择为 NULL 或包含指向单个项的 GList 指针。
-- GTK_SELECTION_BROWSE：如果列表不包含控件或不可见控件，选择为 NULL；否则它包含指向一个 GList 结构的 GList 指针，因此恰好有一个列表项。
-- GTK_SELECTION_MULTIPLE：如果没有选择列表项，则选择为 NULL，或者指向第一个项的 GList 指针。随后指向第二个选定项的 GList 结构，依此类推。这是目前 GtkCList 控件的默认值。
-- GTK_SELECTION_EXTENDED：选择始终为 NULL。
+- `GTK_SELECTION_SINGLE`：选择为 NULL 或包含指向单个项的`GList`指针。
+- `GTK_SELECTION_BROWSE`：如果列表不包含控件或不可见控件，选择为 NULL；否则它包含指向一个`GList`结构的`GList`指针，因此恰好有一个列表项。
+- `GTK_SELECTION_MULTIPLE`：如果没有选择列表项，则选择为 NULL，或者指向第一个项的`GList`指针。随后指向第二个选定项的`GList`结构，依此类推。这是目前`GtkCList`控件的默认值。
+- `GTK_SELECTION_EXTENDED`：选择始终为 NULL。
 
 后续的 GTK 版本可能会添加其他的。
-我们还可以定义 GtkCList 控件的边框看起来应该是什么样的。通过
 
-
+我们还可以定义`GtkCList`控件的边框看起来应该是什么样的。通过
 
 ```c
 void gtk_clist_set_shadow_type( GtkClist *clist, GtkShadowType border );
@@ -5178,14 +5059,14 @@ void gtk_clist_set_shadow_type( GtkClist *clist, GtkShadowType border );
 
 第二个参数的可能值为：
 
-- GTK_SHADOW_NONE
-- GTK_SHADOW_IN
-- GTK_SHADOW_ETCHED_IN
-- GTK_SHADOW_ETCHED_OUT
+- `GTK_SHADOW_NONE`
+- `GTK_SHADOW_IN`
+- `GTK_SHADOW_ETCHED_IN`
+- `GTK_SHADOW_ETCHED_OUT`
 
 ## 11.3 标题操作
 
-当你使用 GtkCList 控件时，你会自动获得一组标题按钮。它们位于 GtkClist 顶部，可以作为对按下做出反应的普通按钮，也可以是被动的，在这种情况下它们仅仅是一个标题。有四个调用可以帮助我们设置标题按钮的状态。
+当你使用`GtkCList`控件时，你会自动获得一组标题按钮。它们位于`GtkClist`顶部，可以作为对按下做出反应的普通按钮，也可以是被动的，在这种情况下它们仅仅是一个标题。有四个调用可以帮助我们设置标题按钮的状态。
 
 ```c
 void gtk_clist_set_column_active( GtkClist *clist, int column );
@@ -5203,13 +5084,9 @@ void gtk_clist_set_column_titles_active( GtkClist *clist );
 void gtk_clist_set_column_titles_passive( GtkClist *clist );
 ```
 
-
-
-
-
 ## 11. Clist 控件
 
-激活状态的标题像普通按钮一样工作，而被动状态的标题仅仅是一个标签。上面的前两次调用会激活/停用特定列上方的标题按钮，而最后两次调用则会激活/停用所提供的 clist 中的所有标题按钮。
+激活状态的标题像普通按钮一样工作，而被动状态的标题仅仅是一个标签。上面的前两次调用会激活/停用特定列上方的标题按钮，而最后两次调用则会激活/停用所提供的`clist`中的所有标题按钮。
 
 但当然，在某些情况下，我们并不希望它们全部显示，因此可以使用以下两个调用来隐藏和显示它们：
 
@@ -5229,7 +5106,7 @@ void gtk_clist_set_column_title(GtkClist *clist,
   char *title);
 ```
 
-注意，一次只能设置一列的标题，因此如果从一开始就已知了所有的标题，我建议使用 `gtk_clist_new`（如上所述）来设置它们。这可以节省编码时间，并使你的程序更小。在某些情况下，手动完成工作更好，而且并不是所有的标题都会被设置。GtkClist 为我们提供了标题按钮，实际上它可以包含整个控件，例如一个位图（pixmap）。这通过以下方式完成：
+注意，一次只能设置一列的标题，因此如果从一开始就已知了所有的标题，我建议使用`gtk_clist_new`（如上所述）来设置它们。这可以节省编码时间，并使你的程序更小。在某些情况下，手动完成工作更好，而且并不是所有的标题都会被设置。`GtkClist`为我们提供了标题按钮，实际上它可以包含整个控件，例如一个位图（`pixmap`）。这通过以下方式完成：
 
 ```
 void gtk_clist_set_column_widget(GtkClist *clist,
@@ -5249,14 +5126,14 @@ void gtk_clist_set_column_justification(GtkClist *clist,
   GtkJustification justification);
 ```
 
-`GtkJustification` 类型可以接受以下值：
+`GtkJustification`类型可以接受以下值：
 
-- GTK_JUSTIFY_LEFT - 列中的文本将从左边缘开始。
-- GTK_JUSTIFY_RIGHT - 列中的文本将从右边缘开始。
-- GTK_JUSTIFY_CENTER - 文本放置在列的中间。
-- GTK_JUSTIFY_FILL - 文本将使用列中的所有可用空间。这通常通过在单词之间插入空格（如果是单个单词，则在单个字母之间）来实现。类似于任何普通的 WYSINWYG 文本编辑器。
+- `GTK_JUSTIFY_LEFT` - 列中的文本将从左边缘开始。
+- `GTK_JUSTIFY_RIGHT` - 列中的文本将从右边缘开始。
+- `GTK_JUSTIFY_CENTER` - 文本放置在列的中间。
+- `GTK_JUSTIFY_FILL` - 文本将使用列中的所有可用空间。这通常通过在单词之间插入空格（如果是单个单词，则在单个字母之间）来实现。类似于任何普通的 WYSINWYG 文本编辑器。
 
-下一个函数是一个非常重要的函数，应该是所有 GtkClist 控件设置中的标准配置。当列表创建时，各个列的宽度是根据匹配其标题来选择的，由于这通常不是正确的宽度，我们必须使用以下函数设置：
+下一个函数是一个非常重要的函数，应该是所有`GtkClist`控件设置中的标准配置。当列表创建时，各个列的宽度是根据匹配其标题来选择的，由于这通常不是正确的宽度，我们必须使用以下函数设置：
 
 ```
 void gtk_clist_set_column_width(GtkClist *clist,
@@ -5283,7 +5160,7 @@ void gtk_clist_moveto(GtkClist *clist,
                                gfloat col_align);
 ```
 
-理解 `gfloat_align` 非常重要。它是一个 0.0 到 1.0 之间的值，0.0 意味着我们应该将列表行滚动到顶部，而如果 `row_align` 的值为 1.0，则该行将出现在内部底部。0.0 到 1.0 之间的所有其他值都是有效的，并将行放置在顶部和底部之间。最后一个参数 `gfloat_col_align` 的工作方式相同，只是 0.0 标记左侧，1.0 标记右侧。
+理解`gfloat_align`非常重要。它是一个 0.0 到 1.0 之间的值，0.0 意味着我们应该将列表行滚动到顶部，而如果`row_align`的值为 1.0，则该行将出现在内部底部。0.0 到 1.0 之间的所有其他值都是有效的，并将行放置在顶部和底部之间。最后一个参数`gfloat_col_align`的工作方式相同，只是 0.0 标记左侧，1.0 标记右侧。
 
 根据应用程序的需求，我们不需要滚动到一个我们已经可见的项上。我们如何知道它是可见的呢？因为有一个函数可以查出这一点：
 
@@ -5295,11 +5172,11 @@ GtkVisibility gtk_clist_set_row_visible(GtkClist *clist,
 
 返回值是以下内容之一：
 
-- GTK_VISIBILITY_NONE
-- GTK_VISIBILITY_PARTIAL
-- GTK_VISIBILITY_FULL
+- `GTK_VISIBILITY_NONE`
+- `GTK_VISIBILITY_PARTIAL`
+- `GTK_VISIBILITY_FULL`
 
-注意，它会告诉我们某行是否可见。目前还没有方法确定列的可见性。我们可以获取特定信息，因为如果返回 `GTK_VISIBILITY_PARTIAL`，那么部分内容被隐藏了，但我们不知道它是被列表框下边缘截断的行，还是该行的列在外部。
+注意，它会告诉我们某行是否可见。目前还没有方法确定列的可见性。我们可以获取特定信息，因为如果返回`GTK_VISIBILITY_PARTIAL`，那么部分内容被隐藏了，但我们不知道它是被列表框下边缘截断的行，还是该行的列在外部。
 
 我们还可以更改特定行的前景颜色和背景颜色。这对于标记用户选择的行很有用，我们用于执行此操作的两个函数是：
 
@@ -5309,6 +5186,8 @@ void gtk_clist_set_foreground(GtkClist *clist,
                                int row,
                                GdkColor *color);
 ```
+
+
 
 ```
 void gtk_clist_set_background(GtkClist *clist,
@@ -5334,7 +5213,8 @@ void gtk_clist_set_background(GtkClist *clist,
                                int row,
                                GdkColor *color);
 ```
-（注：此处原文示例代码似乎有误，重复了 row 参数，翻译时按要求保留代码原文）
+
+（注：此处原文示例代码似乎有误，重复了 `row` 参数，翻译时按要求保留代码原文）
 
 我们可以通过以下方式将行提前或追加到列表：
 
@@ -5354,7 +5234,7 @@ void gtk_clist_insert(GtkClist *clist,
                     gchar *text);
 ```
 
-在这些调用中，我们拥有要放入列的集合。`GtkClist` 是第一个参数，后面是我们要的行号和列号。注意，这些已经分配了。`GtkClist_remove` 是一个一个列的类型。如果 `text` 参数为 NULL，则列将没有文本。
+在这些调用中，我们拥有要放入列的集合。`GtkClist` 是第一个参数，后面是我们要的行号和列号。注意，这些已经分配了。`GtkClist_remove` 是一个一个列的类型。如果 `text` 参数为 `NULL`，则列将没有文本。
 
 ```
 void gtk_clist_remove(GtkClist *clist,
@@ -5430,7 +5310,7 @@ gint gtk_clist_get_pixtext(GtkClist *clist,
                     GdkBitmap **mask);
 ```
 
-如果你感兴趣，有必要读回。所有的返回值指针（除单元格外）都是 NULL。如果我们只想读回 `pixtext` 类型的单元格的文本，我们可以如下操作，假设单元格、行号和列号已经存在：
+如果你感兴趣，有必要读回。所有的返回值指针（除单元格外）都是 `NULL`。如果我们只想读回 `pixtext` 类型的单元格的文本，我们可以如下操作，假设单元格、行号和列号已经存在：
 
 ```
 gchar *mytext;
@@ -5438,15 +5318,13 @@ gchar *mytext;
 gtk_clist_get_pixtext(clist, row, column, &mytext, NULL, NULL, NULL);
 ```
 
-
-
-
-
 ## 11. GtkList Widget
 
-- GTK_CELL_PIXMAP
-- GTK_CELL_PIXTEXT
-- GTK_CELL_WIDGET
+- `GTK_CELL_PIXMAP`
+
+- `GTK_CELL_PIXTEXT`
+
+- `GTK_CELL_WIDGET`
 
 还有一个函数可以让我们设置单元格的垂直和水平缩进。缩进值是 `gint` 类型，单位为像素，可以是正值也可以是负值。
 
@@ -5458,9 +5336,10 @@ void gtk_clist_set_shift(GtkClist *clist,
     int horizontal );
 ```
 
-## 11.7存储数据指针
+## 11.7 存储数据指针
 
-使用 GtkClist 可以为每一行设置一个数据指针。该指针对用户不可见，仅为了方便程序员将某行与指向某些额外数据的指针关联起来。
+使用 `GtkClist` 可以为每一行设置一个数据指针。该指针对用户不可见，仅为了方便程序员将某行与指向某些额外数据的指针关联起来。
+
 这些函数本身是非常自俗易懂的。
 
 ```c
@@ -5504,6 +5383,8 @@ void gtk_clist_unselect_row(GtkClist *clist,
 
 还有一个函数可以接收 x 和 y 坐标（例如读取鼠标指针），并将其映射到该列表，返回相应的行和列。
 
+
+
 ```c
 gint gtk_clist_get_selection_info(GtkClist *clist,
     int x,
@@ -5516,15 +5397,17 @@ gint gtk_clist_get_selection_info(GtkClist *clist,
 
 当我们检测到某些感兴趣的内容时，例如指针移动或点击列表中的某处，我们可以读取指针坐标并找出指针在列表中的位置。这很麻烦吗？幸运的是，有一种更简单的方法……
 
-## 11.9 将其整合在一起的信号
+### 11.9 将其整合在一起的信号
 
-与所有组件一样，有几个信号可以使用。GtkCList 组件继承自 GtkContainer 组件，因此它拥有所有的信号，但也包含以下信号：
+与所有组件一样，有几个信号可以使用。`GtkCList`组件继承自`GtkContainer`组件，因此它拥有所有的信号，但也包含以下信号：
 
-- select_row - 这将按顺序发送以下信息：GtkCList *clist, gint row, gint column, KeyEventButton
-- unselect_row - 当用户取消选择某行时，会激活此信号。它发送与 select_row 相同的信息
-- click_column - 发送 GtkCList *clist, gint, column
+- `select_row` - 这将按顺序发送以下信息：`GtkCList *clist`, `gint row`, `gint column`, `KeyEventButton`
 
-所以，如果我们想为 select_row 连接一个回调函数，该回调函数的声明方式如下：
+- `unselect_row` - 当用户取消选择某行时，会激活此信号。它发送与`select_row`相同的信息
+
+- `click_column` - 发送`GtkCList *clist`, `gint`, `column`
+
+所以，如果我们想为`select_row`连接一个回调函数，该回调函数的声明方式如下：
 
 ```c
 void select_row_callback(GtkWidget *widget,
@@ -5543,7 +5426,7 @@ GTK_SIGNAL_FUNC(select_row_callback),
 NULL);
 ```
 
-## 11.10 一个 GtkList 示例
+### 11.10 一个 GtkList 示例
 
 ```c
 /* example-start clist list.c */
@@ -5603,22 +5486,40 @@ void button_hide_show_clicked(gpointer data)
     }
     return;
 }
+```
+
 ```c
 /* 如果我们运行到这里，说明用户选择了列表中的某行。 */
+
 void selection_made(GtkClist *clist,
+
                     int row,
+
                     int column,
+
                     GdkEvent *event,
+
                     gpointer data)
+
 {
+
     gchar *text;
+
     /* 获取被选中行和列中的文本。我们将通过指针获取 */
+
     gtk_clist_get_text(GTK_CLIST(clist), row, column, &text);
 
     /* 输出关于选中行的信息 */
+
     g_print("你选择了第 %d 行，具体点击了第 %d 列，该单元格的文本为 %s\n",
+
            row, column, text);
+
 }
+```
+
+
+
 ```c
 int main(int argc, gchar *argv[])
 {
@@ -5702,23 +5603,17 @@ int main(int argc, gchar *argv[])
 
 ## 12. Tree Widget
 
-树组件的目的是显示层级组织的数据。GTree 组件本身是一个用于 GtkTree 组件的垂直容器。GTree 本身与 GtkList 没有区别——它们都直接继承自 GtkContainer，且 GtkContainer 方法的工作方式相同。区别在于 GTree 组件可以嵌套在其他 GTree 组件中。我们将看到如何实现。
+树组件的目的是显示层级组织的数据。`GTree` 组件本身是一个用于 `GtkTree` 组件的垂直容器。`GTree` 本身与 `GtkList` 没有区别——它们都直接继承自 `GtkContainer`，且 `GtkContainer` 方法的工作方式相同。区别在于 `GTree` 组件可以嵌套在其他 `GTree` 组件中。我们将看到如何实现。
 
-## 12.1 创建树
+### 12.1 创建树
 
-使用通常的方式创建 GtkTree：
+使用通常的方式创建 `GtkTree`：
 
 ```c
 GtkWidget *gtk_tree_new( void );
 ```
 
-由于和 Gtklist 一样，GtkTree 会随着项的添加以及子树的展开而不断增大。由于这个原因，它们几乎总是放置在 GtkScrolledWindow 中。你
-
-
-
-
-
-## 12. 树部件 (Tree Widget)
+由于和 `Gtklist` 一样，`GtkTree` 会随着项的添加以及子树的展开而不断增大。由于这个原因，它们几乎总是放置在 `GtkScrolledWindow` 中。
 
 你可能想在滚动窗口上使用 `gtk_widget_set_size()` 来确保它足够大以便看到树的项，因为 `GtkScrolledWindow` 的默认大小很小。
 
@@ -5740,7 +5635,7 @@ void gtk_tree_prepend(GtkTree *tree,
 
 注意，你必须逐个向 `GtkTree` 添加项——没有等同于 `gtk_list_*items()` 的函数。
 
-## 12.2 添加子树
+### 12.2 添加子树
 
 子树的创建方式与其他任何 `GtkTree` 部件相同。使用以下代码将子添加到树项的另一个分支：
 
@@ -5751,18 +5646,20 @@ void gtk_tree_item_set_subtree( GtkTreeItem *tree_item,
 
 在将子树添加到 `GtkTreeItem` 之前或之后，不需要对子树调用 `gtk_widget_show()`。但在调用 `gtk_tree_item_set_subtree()` 之前，你必须已经将相关的 `GtkTreeItem` 添加到父树中。这是因为从技术上说，子树的父节点不是拥有它的它的 `GtkTree`，而是持有 `GtkTreeItem` 的 `GtkTree`。
 
-当你向 `GtkTreeItem` 添加子树时，它旁边会出现加号或减号，用户可以点击它“展开”或“折叠”，显示或隐藏其子树。GtkTreeItems 默认是折叠状态。请注意，当你折叠一个 `GtkTreeItem` 时，其子树中的任何被选中项仍保持选中状态，这可能不是用户预期的。
+当你向 `GtkTreeItem` 添加子树时，它旁边会出现加号或减号，用户可以点击它“展开”或“折叠”，显示或隐藏其子树。`GtkTreeItems` 默认是折叠状态。请注意，当你折叠一个 `GtkTreeItem` 时，其子树中的任何被选中项仍保持选中状态，这可能不是用户预期的。
 
-## 12.3 处理选择
+### 12.3 处理选择
 
 与 `GtkList` 一样，`GtkTree` 有一个选择字段，可以通过以下方法设置选择类型来（某种程度上）控制树的行为：
+
+
 
 ```
 void gtk_tree_set_selection_mode(GtkTree *tree, 
                                GtkSelectionMode mode );
 ```
 
-各种选择模式的语义在 GListBox 部件的章节中有描述。在 `GtkList` 中，当列表项被选中或取消选择时，会发出 "select_child"、unselect"（见下文 12.4.1 的解释）和 "selection_changed" 。为了利用这些信号，你需要知道它们是由哪一个 `GtkTree` 发出的，以及在哪里可以找到选中项的列表。
+各种选择模式的语义在 `GListBox` 部件的章节中有描述。在 `GtkList` 中，当列表项被选中或取消选择时，会发出 `"select_child"`、`unselect"`（见下文 12.4.1 的解释）和 `"selection_changed"`。为了利用这些信号，你需要知道它们是由哪一个 `GtkTree` 发出的，以及在哪里可以找到选中项的列表。
 
 这是一个潜在的混淆来源。解释此点的最好方法是所有的 `GtkTree` 部件都是平等的，甚至比其他部件更“平等”。所有的 `Gtk` 部件都有自己的 X 窗口，因此可以接收如鼠标点击等事件（如果它们的 `GtkTreeItems` 或其子项没有捕获这些事件的话！）。
 
@@ -5770,7 +5667,7 @@ void gtk_tree_set_selection_mode(GtkTree *tree,
 
 因此，除非你确定它是根树，否则在任意 `Gtk` 部件中直接访问选择字段不是一个好主意。相反，请使用 `GTK_SELECTION (Tree)` 宏，它会以 `GList` 指针的形式提供根树的选择列表。当然，如果选择类型为 `GTK_SELECTION_MULTIPLE`，此列表可能包含不在该子集中的项。
 
-最后，"select_child" 和 "unset_child" 信号由所有树发出，但 "selection_changed" 信号仅由根树发出。因此，如果你想为一棵树及其所有子树处理处理的 "select_child" 信号，你将不得不为每个子树调用 `gtk_signal_connect()`。
+最后，`"select_child"` 和 `"unset_child"` 信号由所有树发出，但 `"selection_changed"` 信号仅由根树发出。因此，如果你想为一棵树及其所有子树处理处理的 `"select_child"` 信号，你将不得不为每个子树调用 `gtk_signal_connect()`。
 
 ## 12.4 树部件内部原理
 
@@ -5806,13 +5703,8 @@ while (children) {
 }
 g_list_free(children);
 ```
-（注：此处根据逻辑补全了代码示例逻辑，原文中代码块不完整，翻译时保持了原意或结构。*修正：根据要求代码块不翻译*）
 
-最后，"select_child" 和 "unset_child" 信号由所有树发出，但 "selection_changed" 信号仅由根树发出。因此，如果你想为一棵树及其所有子树处理 "select_child" 信号，你将不得不为每个子树调用 `gtk_signal_connect()`。
-
-
-
-
+最后，`"select_child"` 和 `"unset_child"` 信号由所有树发出，但 `"selection_changed"` 信号仅由根树发出。因此，如果你想为一棵树及其所有子树处理 `"select_child"` 信号，你将不得不为每个子树调用 `gtk_signal_connect()`。
 
 ## 12. Tree 小部件
 
@@ -5821,47 +5713,47 @@ void gtk_tree_set_view_lines( GtkTree *tree,
                 guint       flag );
 ```
 
-控制是否绘制树项之间的连接线。flag 为 TRUE，则绘制；如果为 FALSE，则不绘制。
+控制是否绘制树项之间的连接线。`flag` 为 `TRUE`，则绘制；如果为 `FALSE`，则不绘制。
 
-GtkTree *GTK_TREE (gpointer obj);
+`GtkTree *GTK_TREE (gpointer obj);`
 
-将通用指针强制转换为 'GtkTree*'。
+将通用指针强制转换为 `'GtkTree*'`。
 
 ```
 GtkTreeClass *GTK_TREE_CLASS (gpointer class);
 ```
 
-将通用指针强制转换为 'GtkTreeClass*'。
+将通用指针强制转换为 `'GtkTreeClass*'`。
 
 ```
 gint GTK_IS_TREE (gpointer obj);
 ```
 
-判断通用指针是否指向一个 'GtkTree' 对象。
+判断通用指针是否指向一个 `'GtkTree'` 对象。
 
 ```
 gint GTK_IS_ROOT_TREE (gpointer obj);
 ```
 
-判断通用指针是否指向一个 'GtkTree' 对象且为根树。虽然此函数可以接受任何指针，但如果传递非指向 GtkTree 的指针，其结果是未定义的且可能是有害的。
+判断通用指针是否指向一个 `'GtkTree'` 对象且为根树。虽然此函数可以接受任何指针，但如果传递非指向 `GtkTree` 的指针，其结果是未定义的且可能是有害的。
 
 ```
 GtkTree *GTK_TREE_ROOT_TREE (gpointer obj);
 ```
 
-返回指向 'GtkTree' 对象的指针的根树。上述警告同样适用。
+返回指向 `'GtkTree'` 对象的指针的根树。上述警告同样适用。
 
 ```
 GList *GTK_TREE_SELECTION (gpointer obj);
 ```
 
-返回 'GtkTree' 对象根树的选择列表。上述警告同样适用。
+返回 `'GtkTree'` 对象根树的选择列表。上述警告同样适用。
 
 ## 12.5 Tree Item 小部件
 
-GtkTreeItem  GtkListBox 一样派生自 GtkItem，而 GtkItem 又派生自 GtkBin。因此，项本身是一个包含恰好一个 widget 的通用容器，该 widget 可以是任何类型。GtkTreeItem 有许多额外字段，但我们只需要关注的是 subtree 字段。
+`GtkTreeItem` `GtkListBox` 一样派生自 `GtkItem`，而 `GtkItem` 又派生自 `GtkBin`。因此，项本身是一个包含恰好一个 widget 的通用容器，该 widget 可以是任何类型。`GtkTreeItem` 有许多额外字段，但我们只需要关注的是 `subtree` 字段。
 
-GtkTreeItem 结构体的定义如下：
+`GtkTreeItem` 结构体的定义如下：
 
 ```
 struct _GtkTreeItem
@@ -5878,9 +5770,9 @@ struct _GtkTreeItem
 };
 ```
 
-pixmaps_field 是一个 GtkEvent，用于捕获加/减符号的点击，这些符号控制展开和折叠。pixmaps 字段指向一个内部数据结构。由于你可以始终通过 GTK_TREE_ITEM_SUBTREE (Item) 宏以（相对）安全的方式获取 GtkTreeItem 的子，因此建议在你不确定自己在做什么的情况下，不要触碰 GtkTreeItem 的内部结构。
+`pixmaps_field` 是一个 `GtkEvent`，用于捕获加/减符号的点击，这些符号控制展开和折叠。`pixmaps` 字段指向一个内部数据结构。由于你可以始终通过 `GTK_TREE_ITEM_SUBTREE (Item)` 宏以（相对）安全的方式获取 `GtkTreeItem` 的子，因此建议在你不确定自己在做什么的情况下，不要触碰 `GtkTreeItem` 的内部结构。
 
-由于它直接派生自 GtkItem，因此可以使用 GTK_ITEM (TreeItem) 宏进行处理。GtkTreeItem 通常带有标签，因此提供了函数 gtk_list_item_new_with_label()。使用如下所示代码也可以实现相同的效果，这些代码实际上是完全从 gtk_tree_item_new_label 复制的：
+由于它直接派生自 `GtkItem`，因此可以使用 `GTK_ITEM (TreeItem)` 宏进行处理。`GtkTreeItem` 通常带有标签，因此提供了函数 `gtk_list_item_new_with_label()`。使用如下所示代码也可以实现相同的效果，这些代码实际上是完全从 `gtk_tree_item_new_label` 复制的：
 
 ```
 tree_item = gtk_tree_item_new ()
@@ -5890,9 +5782,11 @@ gtk_container_add (GTK_CONTAINER (tree_item), label_widget);
 gtk_widget_show (label)
 ```
 
-由于不能直接向 GtkTree 添加 GtkLabel，你也可以向 GtkTree 添加 GtkBox、GtkArrow，甚至 GtkNotebook（在这种情况下，你的应用将非常独特）。
+由于不能直接向 `GtkTree` 添加 `GtkLabel`，你也可以向 `GtkTree` 添加 `GtkBox`、`GtkArrow`，甚至 `GtkNotebook`（在这种情况下，你的应用将非常独特）。
 
-如果你从子树中移除所有项，它将被销毁且这不符合预期，除非你提前引用了它，并且拥有它的 GtkTreeItem 将拥有它。因此，如果你想让它保留，请使用如下代码：
+如果你从子树中移除所有项，它将被销毁且这不符合预期，除非你提前引用了它，并且拥有它的 `GtkTreeItem` 将拥有它。因此，如果你想让它保留，请使用如下代码：
+
+
 
 ```
 gtk_widget_ref (tree);
@@ -5906,47 +5800,43 @@ else
 gtk_widget_unref (tree);
 ```
 
-最后，拖放功能支持 GtkTreeItems。你必须确保你想要变成拖拽项或树项的 GtkTreeItem 不仅被 GtkTree 拥有，而且当你调用 gtk_widget_dnd.drag_set() 或 gtk_widget.dnd.drop_set() 时，每个连续的 widget 都有自己的父级，一直追溯到切换按钮或对话框窗口。否则，会发生奇怪的事情。
+最后，拖放功能支持 `GtkTreeItems`。你必须确保你想要变成拖拽项或树项的 `GtkTreeItem` 不仅被 `GtkTree` 拥有，而且当你调用 `gtk_widget_dnd.drag_set()` 或 `gtk_widget.dnd.drop_set()` 时，每个连续的 `widget` 都有自己的父级，一直追溯到切换按钮或对话框窗口。否则，会发生奇怪的事情。
 
 ## 12.5. 信号
 
-GtkTree 从 GtkItem 继承了 "select"deselect" 和 "toggle" 信号。此外，它还添加了两个自己的信号："expand" 和 "collapse"。
+`GtkTree` 从 `GtkItem` 继承了 `"select"` `"deselect"` 和 `"toggle"` 信号。此外，它还添加了两个自己的信号：`"expand"` 和 `"collapse"`。
 
 ```
 void select (GtkTreeItem *item);
 ```
 
-当项被选中、或者在用户点击它之后、或者当程序调用 gtk_tree_item_select(), gtk_tree_item_select(child) 或 gtk_tree_select_child(child) 时，发射此信号。
+当项被选中、或者在用户点击它之后、或者当程序调用 `gtk_tree_item_select()`, `gtk_tree_item_select(child)` 或 `gtk_tree_select_child(child)` 时，发射此信号。
 
 ```
 void deselect (GtkTreeItem *item) ;
 ```
 
-当项被取消选中、或者在用户点击它之后、或者当程序调用 gtk_tree_item_select(), gtk_tree_item_select(child) 或 gtk_tree_select_child(child) 时，发射此信号。
+当项被取消选中、或者在用户点击它之后、或者当程序调用 `gtk_tree_item_select()`, `gtk_tree_item_select(child)` 或 `gtk_tree_select_child(child)` 时，发射此信号。
 
 ```
 void toggle (GtkTreeItem *item);
 ```
 
-当项切换状态、或者在用户点击它之后、或者当程序调用 gtk_tree_item_select(), gtk_tree_item_select(child) 或 gtk_tree_select_child(child) 时，发射此信号。
+当项切换状态、或者在用户点击它之后、或者当程序调用 `gtk_tree_item_select()`, `gtk_tree_item_select(child)` 或 `gtk_tree_select_child(child)` 时，发射此信号。
 
 ```
 void expand (GtkTreeItem *item);
 ```
 
-当项被展开、或者在用户点击它之后、或者当程序调用 gtk_tree_item_select(), gtk_tree_item_select(child) 或 gtk_tree_select_child(child) 时，发射此信号。
+当项被展开、或者在用户点击它之后、或者当程序调用 `gtk_tree_item_select()`, `gtk_tree_item_select(child)` 或 `gtk_tree_select_child(child)` 时，发射此信号。
 
 ```
 void collapse (GtkTreeItem *item);
 ```
 
-当项被折叠、或者在用户点击它之后、或者当程序调用 gtk_tree_item_select(), gtk_tree_item_select(child) 或 gtk_tree_select_child(child) 时，发射此信号。
+当项被折叠、或者在用户点击它之后、或者当程序调用 `gtk_tree_item_select()`, `gtk_tree_item_select(child)` 或 `gtk_tree_select_child(child)` 时，发射此信号。
 
-
-
-
-
-## 12. 树组件 (Tree Widget)
+# 12. 树组件 (Tree Widget)
 
 ```c
 {
@@ -5990,6 +5880,8 @@ i = i->next;
 }
 }
 ```
+
+
 
 ```c
 int main (int argc, char *argv[])
@@ -6119,13 +6011,15 @@ return 0;
 
 项工厂更容易使用，而使用手动方法创建菜单的新的包装函数可能会增加易用性。使用项工厂时，无法向菜单中添加图像。
 
-## 13.1 手动创建菜单
+### 13.1 手动创建菜单
 
 在传统的教学中，我们将先向你展示硬性方法。制作菜单栏和子菜单有三个组件：
 
-- 菜单项 (menu item)，用户想要选中的内容，例如“保存”
-- 菜单 (menu)，作为菜单项的容器
-- 菜单栏 (menubar)，每个单独菜单的容器
+
+
+- 菜单项 (`menu item`)，用户想要选中的内容，例如“保存”
+- 菜单 (`menu`)，作为菜单项的容器
+- 菜单栏 (`menubar`)，每个单独菜单的容器
 
 由于菜单项组件被用于两种不同的事情，这变得稍微复杂。它们既是打包到菜单中的组件，也是打包到菜单栏中并在选中时激活菜单的组件。
 
@@ -6166,20 +6060,16 @@ save_item = gtk_menu_item_new_with_label("Save");
 quit_item = gtk_menu_item_new_with_label("Quit");
 ```
 
-
-
-
-
 # 13. 菜单 Widget
 
-```
+```c
 /* 将它们添加到菜单中 */
 gtk_menu_append(GTK_MENU (file_menu), open_item);
 gtk_menu_append(GTK_MENU (file_menu), save_item);
 gtk_menu_append(GTK_MENU (file_menu), quit_item);
 ```
 
-```
+```c
 /* 将回调函数连接到 activate 信号 */
 gtk_signal_connect_object(GTK_OBJECT (open_items), "activate",
     GTK_SIGNAL_FUNC (menuitem_response),
@@ -6189,14 +6079,14 @@ gtk_signal_connect_object(GTK_OBJECT (save_items), "activate",
     (pointer) "file.save");
 ```
 
-```
+```c
 /* 将退出项连接到我们的退出函数 */
 gtk_signal_connect_object(GTK_OBJECT (quit_items), "activate",
     GTK_SIGNAL_FUNC (destroy),
     (pointer) "file.quit");
 ```
 
-```
+```c
 /* 我们需要显示菜单项 */
 gtk_widget_show(open_item);
 gtk_widget_show(save_item);
@@ -6205,48 +6095,48 @@ gtk_widget_show(quit_item);
 
 此时，我们已经有了菜单。我们需要为“文件（File）”条目创建一个菜单栏和一个菜单项，并将我们的菜单添加其中。代码如下：
 
-```
+```c
 menu_bar = gtk_menu_bar_new();
 gtk_container_add(GTK_CONTAINER (window), menu_bar);
 gtk_widget_show(menu_bar);
 ```
 
-```
+```c
 file_item = gtk_menu_item_new_with_label("File");
 gtk_widget_show(file_item);
 ```
 
 现在，我们需要将菜单与 `file_item` 关联。这通过函数实现：
 
-```
+```c
 void gtk_menu_item_set_submenu(GtkMenuItem *menu_item, GtkWidget *submenu );
 ```
 
 因此，我们的示例将继续：
 
-```
+```c
 gtk_menu_item_set_submenu(GTK_MENU_ITEM (file_item), file_menu);
 ```
 
-剩下的就是将菜单添加到菜单栏中，这通过使用函数完成：：
+剩下的就是将菜单添加到菜单栏中，这通过使用函数完成：
 
-```
+```c
 void gtk_menu_bar_append(GtkMenuBar *menu_bar, GtkWidget *menu_item );
 ```
 
 在这种情况下，我们的代码如下：
 
-```
+```c
 gtk_menu_bar_append(GTK_MENU_BAR (menu_bar), file_item);
 ```
 
 如果我们想在菜单栏上右对齐（例如帮助菜单通常的做法），我们可以在将其添加到菜单栏之前，使用以下函数（在当前示例中针对 `file_item`）：
 
-```
+```c
 void gtk_menu_item_right_justify(GtkMenuItem *menu_item );
 ```
 
-# 13. 菜单 Widget
+## 13.1 菜单 Widget 步骤总结
 
 以下是创建一个带有附加菜单的菜单栏所需的步骤总结：
 
@@ -6260,12 +6150,15 @@ void gtk_menu_item_right_justify(GtkMenuItem *menu_item );
 创建弹出菜单的方法几乎相同。区别在于，菜单不是由菜单栏“自动”发布的，而是通过在按钮按下事件等地方显式调用 `gtk_menu_popup()` 函数发布的。采取以下步骤：
 
 - 创建一个事件处理函数。它需要如下原型：
+
 ```c
 static gint handler (GtkWidget *widget, GdkEvent *event);
 ```
+
 它将使用事件来确定在何处处。
 - 在事件处理程序中，如果有鼠标按下，将事件视为按钮事件（它确实如此），并在示例代码中使用它将信息传递给 `gtk_menu_popup()`。
 - 使用以下代码将该事件处理程序绑定到控件上：
+
 ```c
 gtk_signal_connect_object(GTK_OBJECT (widget), "event", GTK_SIGNAL_FUNC (handler), GTK_OBJECT (menu));
 ```
@@ -6276,7 +6169,7 @@ gtk_signal_connect_object(GTK_OBJECT (widget), "event", GTK_SIGNAL_FUNC (handler
 
 应该就是这些。让我们来看一个示例来帮助理解。
 
-```
+```c
 /* example-start menu.c */
 
 #include <gtk/gtk.h>
@@ -6300,15 +6193,21 @@ char buf[28];
 int i;
 
 gtk_init(&argc, &argv);
-
 ```
+
 /* 创建一个窗口 */
-window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
-gtk_window_set_size(GTK_WINDOW(window), 200, 100);
-gtk_window_set_title(GTK_WINDOW(window), "Menu");
-g_signal_connect(GTK_OBJECT(window), "delete-event", (GtkSignalFunc) gtk_quit, NULL);
 
-```
+
+
+`window = gtk_window_new(GTK_WINDOW_TOPLEVEL);`
+
+`gtk_window_set_size(GTK_WINDOW(window), 200, 100);`
+
+`gtk_window_set_title(GTK_WINDOW(window), "Menu");`
+
+`g_signal_connect(GTK_OBJECT(window), "delete-event", (GtkSignalFunc) gtk_quit, NULL);`
+
+```c
 /* 初始化菜单项 */
 menu = gtk_menu_new();/* 这是持有菜单项的菜单，当你点击 "Root Menu" 时弹出的那个 */
 gtk_widget_show(menu);
@@ -6318,69 +6217,83 @@ root_menu = gtk_menu_item_new_with_label("Root Menu");
 
 gtk_widget_show(root_menu);/* 现在指定我们新创建的 "menu" 为 "root menu" */
 gtk_menu_item_set_submenu(GTK_MENU_ITEM (root_menu), menu);
-
 ```
+
 /* 创建 vbox： */
-vbox = gtk_box_new(FALSE, 0);
-gtk_container_add(GTK_CONTAINER (window), vbox);
-gtk_widget_show(vbox);
 
-```
+`vbox = gtk_box_new(FALSE, 0);`
+
+`gtk_container_add(GTK_CONTAINER (window), vbox);`
+
+`gtk_widget_show(vbox);`
+
+```c
 /* 创建菜单栏以持有菜单并将其添加到主窗口 */
 menu_bar = gtk_menu_bar_new();
 gtk_box_pack_start(GTK_BOX (vbox), menu_bar, FALSE, 2);
 gtk_widget_show (menu_bar);
-
 ```
+
 /* 创建一个按钮将每个菜单作为弹出窗口附加 */
-button = gtk_button_new_label("press me");
-gtk_signal_connect_object(GTK_OBJECT (button), "event",
-GTK_FUNC (button_press), GTK_OBJECT (menu));
-gtk_box_pack_end(GTK_BOX (vbox), button, TRUE, 2);
-gtk_widget_show (button);
 
-```
+`button = gtk_button_new_label("press me");`
+
+`gtk_signal_connect_object(GTK_OBJECT (button), "event",`
+
+`GTK_FUNC (button_press), GTK_OBJECT (menu));`
+
+`gtk_box_pack_end(GTK_BOX (vbox), button, TRUE, 2);`
+
+`gtk_widget_show (button);`
+
+```c
 /* 最后将菜单项添加到菜单栏 —— 我们一直在讨论的 "root" 菜单项 */
 gtk_menu_bar_append(GTK_MENU_BAR (menu_bar), root_menu);
-
 ```
+
 /* 最后一步显示窗口以便显示 */
-gtk_widget_show (window);
 
-gtk_main ();
+`gtk_widget_show (window);`
 
-return(0);
-}
+`gtk_main ();`
 
-```
+`return(0);`
+
+`}`
+
+```c
 /* 通过传递消息作为 widget 来响应按钮按下。
 注意 "widget" 参数是正在发布的菜单，而不是
 被按下的按钮。 */
 ```
-static gint button_press (GtkWidget *widget, GdkEvent *event) {
 
+```c
+static gint button_press (GtkWidget *widget, GdkEvent *event) {
     if (event->type == GDK_BUTTON_PRESS) {
         GdkButton *bevent = (GdkButton *)event;
         gtk_menu_popup(GTK_MENU (widget), NULL, NULL, NULL,
         bevent->button, button, event->time);
-
         /* 告诉调用代码我们已处理该事件，回调在此停止。 */
         return TRUE;
     }
-
     /* 告诉调用代码我们没有处理此事件；将其传递下去。 */
     return FALSE;
 }
-
 ```
+
+```c
 /* 选择菜单项时打印字符串 */
 ```
+
+```c
 static void menuitem_response(gchar *string)
 {
     printf("%s\n", string);
 }
-/* example-end */
 ```
+
+/* example-end */
+
 你还可以设置菜单项为不可用，并使用加速器表将键绑定到菜单函数。
 
 ## 13.3 使用 GtkItemFactory
@@ -6391,17 +6304,22 @@ static void menuitem_response(gchar *string)
 
 这里是一个使用 GTK 项目工厂的示例。
 
-```
+```c
 /* example-start menu itemfactory.c */
-
 #include <gtk/gtk.h>
 #include <strings.h>
+```
 
 /* 强制的基础回调 */
+
+```c
 static void print_hello(GtkWidget *w, gpointer data)
 {
     g_message("Hello, World!\n");
 }
+```
+
+```c
 /*/* 这是用于生成新菜单的 GtkItemFactory 结构。
 项 1: 菜单路径。下划线下的字母表示菜单打开后的加速键。
 项 2: 对应条目的的加速键。
@@ -6409,7 +6327,6 @@ static void print_hello(GtkWidget *w, gpointer data)
 项 4: 回调动作。这更改了调用函数时的参数。默认值是 0。
 项 5: 项类型，用于定义它是哪种项。
 以下是可能的值：
-
 NULL                -> "Item"
 "<Title>"           -> 创建标题项
 "<Item>"            -> 创建简单项
@@ -6423,20 +6340,17 @@ NULL                -> "Item"
 */
 ```
 
-```
+```c
 static GtkItemFactory menu_items[] = {
     {"/File", NULL, NULL, 0, "Branch" },
     {"/File/New", "<control>N", print_hello, 0,NULL},
     {"/File/Open", "<control>O", print_hello, 0,NULL},
 }
 ```
-```
+
+```c
 /* (其余代码省略) */
 ```
-
-
-
-
 
 # 13. 菜单 Widget
 
@@ -6449,95 +6363,111 @@ static GtkItemFactory menu_items[] = {
 { "/Options/Test", NULL, NULL, 0, NULL },
 { "/Help", NULL, NULL, 0, "<LastBranch>" },
 { "/Help/About", NULL, NULL, 0, NULL };
-
 void get_main_menu(Gtkwidget *window, GtkMenubar *menubar)
 {
   GtkItemFactory *item_factory;
   GtkAccelGroup *accel_group;
   gint menu_items = sizeof(menu_items) / sizeof (menu_items[0]);
-
   accel_group = gtk_accel_group_new (NULL);
-
   /* 此函数初始化了项目工厂。
      参数 1：菜单类型 - 可以是 GTK_TYPE_MENU_BAR, GTK_TYPE_MENU,
      或 GTK_TYPE_OPTION_MENU。
      参数 2：菜单的路径。
      参数 3：指向 gtk_accel_group 的指针。项目工厂在生成菜单时
      会设置加速键。 */
-
   item_factory = gtk_item_factory_new (GTK_TYPE_MENU_BAR, "<main>", accel_group);
-
   /* 此函数生成菜单项。传递项目工厂、
      数组中的项数量、数组本身以及
      用于菜单项的回调数据。 */
   gtk_item_factory_create_items (item_factory, menu_items, menu_items, NULL);
-
   /* 将新的加速组附加到窗口上。 */
-  gtk_accel_group_attach (accel_group, GTK_OBJECT (window));
+```
 
-  if (menubar)
-    /* 最后，返回项目工厂创建的实际菜单栏。 */
-    menubar = gtk_item_factory_get_widget (item_factory, "<main>");
+
+
+```c
+gtk_accel_group_attach (accel_group, GTK_OBJECT (window));
+
+if (menubar)
+
+/* 最后，返回项目工厂创建的实际菜单栏。 */
+
+menubar = gtk_item_factory_get_widget (item_factory, "<main>");
+
 }
 
 int main(int argc, char *argv[])
+
 {
+
   Gtkwidget *window;
+
   Gtkwidget *main_vbox;
+
   Gtkwidget *menubar;
 
   gtk_init (&argc, &argv);
 
   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+
   gtk_signal_connect (GTK_OBJECT (window), "destroy",
+
                       GTK_SIGNAL_FUNC (gtk_main_quit),
+
                       "WM destroy");
 
   gtk_window_set_title(GTK_WINDOW(window), "Item Factory");
+
   gtk_widget_set_size(GTK_WIDGET(window), 300, 200);
 
   main_vbox = gtk_vbox(FALSE, 1);
+
   gtk_container_border_width(GTK_CONTAINER (main_vbox), 1);
+
   gtk_container_add(GTK_CONTAINER (window), main_vbox);
+
   gtk_widget_show(main_vbox);
 
   get_main_menu(window, &menubar);
+
   gtk_box_pack_start(GTK_BOX (main_vbox), menubar, FALSE, FALSE, 0);
+
   gtk_widget_show(menubar);
 
   gtk_widget_show(window);
+
   gtk_main();
 
   return(0);
+
 }
+
 /* example-end */
 ```
 
-目前只有这个示例。稍后将提供说明和大量的代码注释。
-
 ## 14. 文本 Widget
 
-Text widget 允许显示和编辑多行文本。它同时支持多颜色和多字体文本，允许按我们希望的任何方式进行混合。它还拥有一系列基于键的文本编辑命令，这些命令与 Emacs 兼容。
+`Text widget`允许显示和编辑多行文本。它同时支持多颜色和多字体文本，允许按我们希望的任何方式进行混合。它还拥有一系列基于键的文本编辑命令，这些命令与`Emacs`兼容。
 
-文本 widget 支持完整的剪切和粘贴功能，包括使用双击和三击分别选择一个单词和整行。
+文本`widget`支持完整的剪切和粘贴功能，包括使用双击和三击分别选择一个单词和整行。
 
-## 14.1 创建和配置文本框
+### 14.1 创建和配置文本框
 
-只有一个函数用于创建 Text widget。
+只有一个函数用于创建`Text widget`。
 
 ```c
 GtkWidget *gtk_text_new( GtkAdjustment *hadj, GtkAdjustment *vadj);
 ```
 
-这些参数允许我们为 Text widget 传递 Adjustment 指针，可用于跟踪 widget 的视图情况。向其中一个或两个参数传递 NULL 将导致 gtk_text_new 函数创建其自己的 Adjustment。
+这些参数允许我们为`Text widget`传递`Adjustment`指针，可用于跟踪`widget`的视图情况。向其中一个或两个参数传递`NULL`将导致`gtk_text_new`函数创建其自己的`Adjustment`。
 
 ```c
 void gtk_text_set_adjustments( GtkText *text, GtkAdjustment *hadj, GtkAdjustment *vadj );
 ```
 
-上述函数允许随时更改文本 widget 的水平和垂直调整。
+上述函数允许随时更改文本`widget`的水平和垂直调整。
 
-当要显示的文本量对于显示窗口来说过长时，文本 widget 不会自动创建自己的滚动条。因此，我们必须手动创建并将它们添加到显示布局中。
+当要显示的文本量对于显示窗口来说过长时，文本`widget`不会自动创建自己的滚动条。因此，我们必须手动创建并将它们添加到显示布局中。
 
 ```c
 scrollbar = gtk_scrollbar_new(GTK_TEXT(text)->vadj);
@@ -6547,44 +6477,38 @@ gtk_widget_show(scrollbar);
 
 ## 14. 文本 Widget
 
-上面的代码创建一个新的垂直滚动条，并将其附加到垂直调整上。当要显示的文本量对于显示窗口过长时，文本 widget 不会自动创建自己的滚动条。因此，我们必须手动创建并将它们添加到显示布局中。
+上面的代码创建一个新的垂直滚动条，并将其附加到垂直调整上。当要显示的文本量对于显示窗口过长时，文本`widget`不会自动创建自己的滚动条。因此，我们必须手动创建并将它们添加到显示布局中。
 
 （注：此处原文中存在大量重复段落，已按要求完成翻译并保持格式）
 
-
-
-
-
 ## 14. 文本控件 (Text Widget)
 
-- Ctrl-P 上上一行
-- Ctrl-B 向后一个字符
-- Ctrl-F 向前一个字符
-- Alt-B 向后移动一个单词
-- Alt-F 向前一个单词
+- `Ctrl-P` 上上一行
+- `Ctrl-B` 向后一个字符
+- `Ctrl-F` 向前一个字符
+- `Alt-B` 向后移动一个单词
+- `Alt-F` 向前一个单词
 
-## 14.3.2 编辑快捷键
+### 14.3.2 编辑快捷键
 
-- Ctrl-H 向后删除字符（退格键）
-- Ctrl-D 向前删除字符（删除键）
-- Ctrl-W 向后删除一个单词
-- Alt-D 向前删除一个单词
-- Ctrl-K 删除到行尾
-- Ctrl-U 删除整行
+- `Ctrl-H` 向后删除字符（退格键）
+- `Ctrl-D` 向前删除字符（删除键）
+- `Ctrl-W` 向后删除一个单词
+- `Alt-D` 向前删除一个单词
+- `Ctrl-K` 删除到行尾
+- `Ctrl-U` 删除整行
 
-## 14.3.3 选择快捷键
+### 14.3.3 选择快捷键
 
-- Ctrl-X剪切到剪贴板
-- Ctrl-C 复制到剪贴板
-- Ctrl-V 从剪贴板粘贴
+- `Ctrl-X`剪切到剪贴板
+- `Ctrl-C` 复制到剪贴板
+- `Ctrl-V` 从剪贴板粘贴
 
 ## 14.4 一个 GtkText 示例
 
 ```c
 /* example-start text text.c */
-
 /* text.c */
-
 #include <stdio.h>
 #include <gtk/gtk.h>
 
@@ -6620,11 +6544,8 @@ int main (int argc, char *argv[])
   GdkColormap cmap;
   GdkColor colour;
   GdkFont *fixed_font;
-
 FILE *infile;
-
   gtk_init(&argc, &argv);
-
   window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
   gtk_window_set_size(window, 600, 500);
   gtk_window_set_policy(GTK_WINDOW(window), TRUE, TRUE, FALSE);
@@ -6645,50 +6566,69 @@ table = gtk_table_new(2, 2, FALSE);
   gtk_table_set_row_spacing(GTK_TABLE(table), 0, 2);
   gtk_table_set_col_spacing(GTK_TABLE(table), 0, 2);
   gtk_box_pack_start(GTK_BOX(box2), table, TRUE, TRUE, 0);
-  gtk_widget_show(table);
+```
+
+
+
+```c
+gtk_widget_show(table);
 
 /* 创建 GtkText 控件 */
+
 text = gtk_text_new(NULL, NULL);
-  gtk_table_attach(GTK_TABLE(table), text, 0, 0, 1, 0, 1,
+
+gtk_table_attach(GTK_TABLE(table), text, 0, 0, 1, 0, 1,
                   GTK_EXPAND | GTK_SHRINK | GTK_FILL,
                   GTK_EXPAND | GTK_SHRINK | GTK_FILL, 0, 0);
-  gtk_widget_show(text);
+
+gtk_widget_show(text);
 
 /* 为 GtkText 控件添加垂直滚动条 */
+
 vscrollbar = gtk_vscrollbar_new (GTK_TEXT (text));
-  gtk_table_attach (GTK_TABLE (table), vscrollbar, 1, 2, 0, 1,
-  gtk_table_fill (GTK_EXPAND | GTK_SHRINK | GTK_FILL, 0, 0);
-  gtk_widget_show (vscrollbar);
+
+gtk_table_attach (GTK_TABLE (table), vscrollbar, 1, 2, 0, 1,
+gtk_table_fill (GTK_EXPAND | GTK_SHRINK | GTK_FILL, 0, 0);
+
+gtk_widget_show (vscrollbar);
 
 /* 获取系统调色板并分配颜色 */
+
 cmap = gdk_colormap_get_system();
+
 colour.red = 0xffff;
 colour.green = 0;
 colour.blue = 0;
+
 if (gdk_color_alloc(cmap,&colour)) {
   g_error("couldn't allocate colour");
 }
+
 /* 加载固定字体 */
+
 fixed_font = gdk_font_load("misc-fixed-medium-r-*-140-*-*-*");
 
 /* 实现控件会创建一个窗口 */
+
 gtk_widget_realize (text);
 
 /* 冻结控件，准备多次更新 */
+
 gtk_text_freeze (GTK_TEXT (text));
 
 /* 插入一些有色的文本 */
+
 gtk_text_insert (GTK_TEXT (text), NULL, "Supports", black, -1);
 gtk_text_insert (GTK_TEXT (text), NULL, "colored", colour, -1);
 gtk_text_insert (GTK_TEXT (text), NULL, "colored", black, -1);
 
 /* 加载文件 */
+
 infile = fopen("text.c", "r");
 
 if (infile) {
   char buffer[1024];
   int nchars;
-
   while (nchars = fread(buffer, 1, 1024, infile)) {
     gtk_text_insert (GTK_TEXT (text), NULL, buffer, nchars);
   }
@@ -6696,9 +6636,9 @@ if (infile) {
 }
 
 gtk_main ()
-
 return(0);
 }
+
 /* example-end */
 ```
 
@@ -6769,13 +6709,9 @@ GtkStyle *gtk_widget_get_name( GtkWidget *widget );
 void gtk_widget_set_style( GtkWidget *widget,
 ```
 
-
-
-
-
 ## 18. 高级事件与信号处理
 
-- GDK_INPUT_WRITE - 当文件描述符准备好写入时，调用你的函数。
+- `GDK_INPUT_WRITE` - 当文件描述符准备好写入时，调用你的函数。
 
 正如我确定你已经发现的，第三个参数是你希望希望在满足上述条件时调用的函数，第四个参数是要传递给该函数的数据。
 
@@ -6793,7 +6729,7 @@ void input_callback(gpointer data,
                     GdkInputCondition condition);
 ```
 
-其中 source 和 condition 的定义如上所述。
+其中 `source` 和 `condition` 的定义如上所述。
 
 # 17.3 空闲函数 (Idle Functions)
 
@@ -6838,6 +6774,8 @@ guint gtk_signal_connect_object(GtkObject *object,
                                GtkSignalFunc func,
                                GtkObject *slot_object);
 ```
+
+
 
 ## 18. 高级事件与信号处理
 
@@ -6939,17 +6877,17 @@ void gtk_signal_handler_unblock_by_func(GtkObject *object
 
 上述操作的一些后果：
 
-## 19. 管理选择 (Selections)
+## 19. 管理选择
 
-## 19.1 概述
+### 19.1 概述
 
 GTK 选择支持的一种通信类型。选择标识了一了一块数据，例如用户通过某种方式（例如鼠标拖动）选择的部分。在一个显示器上，只有一个应用程序可以拥有特定的选择，因此当选择被某个程序占用时，之前的所有者必须通知该选择已释放。
 
 在大多数情况下，GTK 应用程序不需要处理选择。标准小部件（如 `Entry` 小部件）已经具备在适当的情况下选择（例如用户拖动时）以及检索另一个小部件或应用程序拥有的内容（例如用户点击时）的能力。但在某些情况下，你可能希望其他小部件能够提供选择。
 
-理解处理选择的基础概念是原子（atom）。原子是唯一标识字符串（在显示器）的整数。某些原子由 X 服务器定义，在某些情况下，gtk.h 中有对应这些原子的常量。例如，`GDK_PRIMARY_SELECTION` 对应字符串 "PRIMARY"。其他情况下，你使用 `gdk_atom_intern()` 获取对应字符串的原子，使用 `gdk_atom_name()` 获取原子的名称。字符串和目标都原子标识。
+理解处理选择的基础概念是原子（atom）。原子是唯一标识字符串（在显示器）的整数。某些原子由 X 服务器定义，在某些情况下，`gtk.h` 中有对应这些原子的常量。例如，`GDK_PRIMARY_SELECTION` 对应字符串 "PRIMARY"。其他情况下，你使用 `gdk_atom_intern()` 获取对应字符串的原子，使用 `gdk_atom_name()` 获取原子的名称。字符串和目标都原子标识。
 
-## 19.2 获取选择
+### 19.2 获取选择
 
 获取选择是一个异步过程。要启动该过程，你需要调用：
 
@@ -6973,140 +6911,95 @@ struct GtkSelectionData
 };
 ```
 
-
-
-
-
-# 19. 管理选择
-
-```
+```c
 {
   gint format;
   guchar *data;
   gint length;
-}; 
+};
 ```
 
-selection（选择）和 target（目标）是你在调用 `gtk_selection_convert()` 时提供的值。`type` 是一个原子（atom），用于识别由选择顺序返回的数据类型。某些值为 "STRING"(一组 latin-1 字符的字符串）、"ATOM"(一组原子的字符串）、"INTEGER"(一个整数）等。大多数目标只能返回一种类型。`format` 给出了单位（例如字符）以字节为单位的长度。通常你不需要关心接收数据时的这个值。`data` 是指向返回数据的指针，`length` 是返回数据的长度（以字节计）。如果 `length` 为负数，则发生了错误且无法获取选择。这可能发生在没有应用程序请求该选择，或者你请求了应用程序不支持的目标。缓冲区实际上保证比 `length` 长一个字节；额外的字节将为零，因此没有必要为了终止字符串而对其进行复制。
 
-在下面的示例中，我们获取了特殊的 "TARGETS"，它是一个选择可以转换的所有目标的列表。
+
+`selection`（选择）和 `target`（目标）是你在调用 `gtk_selection_convert()` 时提供的值。`type` 是一个原子（atom），用于识别由选择顺序返回的数据类型。某些值为 `"STRING"`（一组 latin-1 字符的字符串）、`"ATOM"`（一组原子的字符串）、`"INTEGER"`（一个整数）等。大多数目标只能返回一种类型。`format` 给出了单位（例如字符）以字节为单位的长度。通常你不需要关心接收数据时的这个值。`data` 是指向返回数据的指针，`length` 是返回数据的长度（以字节计）。如果 `length` 为负数，则发生了错误且无法获取选择。这可能发生在没有应用程序请求该选择，或者你请求了应用程序不支持的目标。缓冲区实际上保证比 `length` 长一个字节；额外的字节将为零，因此没有必要为了终止字符串而对其进行复制。
+
+在下面的示例中，我们获取了特殊的 `"TARGETS"`，它是一个选择可以转换的所有目标的列表。
 
 ```c
 /* example-selection getargets.c */
 
 #include <gtk/gtk.h>
 
-void selection_received(GtkWidget *widget,
-GtkSelectionData *selection_data,
-gpointer data);
+void selection_received(GtkWidget *widget, GtkSelectionData *selection_data, gpointer data);
 
 /* 用户点击 "Get Targets" 按钮时调用的信号处理函数 */
+
 void get_targets(GtkWidget *widget, gpointer data)
 {
     static GdkAtom targets_atom = GDK_NONE;
-
     /* 获取对应字符串 "TARGETS" 的原子 */
     if (targets_atom == GDK_NONE)
         targets_atom = gdk_atom_intern("TARGETS", FALSE);
-
     /* 为主选择请求 "TARGETS" 目标 */
     gtk_selection_convert(widget, GDK_SELECTION_PRIMARY, targets_atom, GDK_CURRENT_TIME);
 }
 
 /* 当选择所有返回数据时调用的信号处理函数 */
-void selection_received(GtkWidget *widget, GtkSelectionData *selection_data,
-gpointer data)
+void selection_received(GtkWidget *widget, GtkSelectionData *selection_data, gpointer data)
 {
     GdkAtom *atoms;
     GList *item_list;
     int i;
-
     /* **** 重要 **** 检查获取是否成功 */
     if (selection_data->length < 0)
     {
         g_print("Selection retrieval failed\n");
         return;
     }
-```
-
-```c
-/* 打印我们收到的原子 */
-atoms = (GtkAtom *)selection_data->data;
-item_list = NULL;
-for (i=0;i<selection_data->length/sizeof(GtkAtom); i++)
-{
-    char *name;
-    name = gdk_atom_name (atoms[i]);
-    if (name != NULL)
-        g_print("%s\n",name);
-    else
-        g_print("bad atom\n");
+    /* 打印我们收到的原子 */
+    atoms = (GtkAtom *)selection_data->data;
+    item_list = NULL;
+    for (i=0;i<selection_data->length/sizeof(GtkAtom); i++)
+    {
+        char *name;
+        name = gdk_atom_name (atoms[i]);
+        if (name != NULL)
+            g_print("%s\n",name);
+        else
+            g_print("bad atom\n");
+    }
+    return;
 }
-```
 
-```c
-return;
-
-int
-main (int argc, char *argv[])
+int main (int argc, char *argv[])
 {
-GtkWidget *window;
-GtkWidget *button;
-
-gtk_init(&argc, &argv);
-```
-
-```c
-/* 创建顶层窗口 */
-window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
-gtk_window_set_title (GTK_WINDOW (window), "Event Box");
-gtk_container_set_border_width (GTK_CONTAINER (window), 10);
-```
-
-```c
-gtk_signal_connect (GTK_OBJECT (window), "destroy",
-GTK_SIGNAL_FUNC (gtk_exit), NULL);
-```
-
-```c
-/* 创建用户可以点击以获取目标的按钮 */
-button = gtk_button_new_label ("Get Targets");
-gtk_container_add (GTK_CONTAINER (window), button);
-```
-
-```c
-gtk_signal_connect (GTK_OBJECT (button), "clicked",
-GTK_SIGNAL_FUNC (get_targets), NULL);
-gtk_signal_connect (GTK_OBJECT (button), "selection-received",
-GTK_SIGNAL_FUNC (selection_received), NULL);
-```
-
-```c
-gtk_widget_show (button);
-gtk_widget_show (window);
-
-gtk_main();
-
-return 0;
-}
-```
-
-```c
+    GtkWidget *window;
+    GtkWidget *button;
+    gtk_init(&argc, &argv);
+    /* 创建顶层窗口 */
+    window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
+    gtk_window_set_title (GTK_WINDOW (window), "Event Box");
+    gtk_container_set_border_width (GTK_CONTAINER (window), 10);
+    gtk_signal_connect (GTK_OBJECT (window), "destroy", GTK_SIGNAL_FUNC (gtk_exit), NULL);
+    /* 创建用户可以点击以获取目标的按钮 */
+    button = gtk_button_new_label ("Get Targets");
+    gtk_container_add (GTK_CONTAINER (window), button);
+    gtk_signal_connect (GTK_OBJECT (button), "clicked", GTK_SIGNAL_FUNC (get_targets), NULL);
+    gtk_signal_connect (GTK_OBJECT (button), "selection-received", GTK_SIGNAL_FUNC (selection_received), NULL);
+    gtk_widget_show (button);
+    gtk_widget_show (window);
+    gtk_main();
+    return 0;
 }
 /* example-end */
 ```
 
-## 19.3 提供选择
+### 19.3 提供选择
 
 提供选择要复杂一些。你必须注册在当你的选择被请求时调用的处理函数。对于你将处理的每个选择/目标对，你需要调用：
 
 ```c
-void gtk_selection_add_handler( GtkWidget *widget,
-GdkAtom selection,
-GdkAtom target,
-GtkSelectionFunction function,
-GtkSelectionRemoveFunction remove_func,
-gpointer data );
+void gtk_selection_add_handler( GtkWidget *widget, GdkAtom selection, GdkAtom target, GtkSelectionFunction function, GtkSelectionRemoveFunction remove_func, gpointer data );
 ```
 
 `widget`、`selection` 和 `target` 标识了该处理程序将管理的请求。`remove_func` 如果为 `NULL`，则在信号处理程序被移除时被调用。这非常有用，例如对于需要跟踪数据引用计数的解释型语言来说。
@@ -7117,17 +7010,13 @@ gpointer data );
 typedef void (*GtkSelectionFunction)( GtkWidget *widget, GtkSelectionData *selection_data, gpointer data );
 ```
 
-`GtkSelectionData` 与上述相同，但这次我们负责填充 `type`、`format`、`data` 和 `length` 字段。（`format` 实际上非常重要，因为 X 服务器使用它来判断数据是否需要进行字节交换。通常情况下，你不需要关心接收数据时的这个值。）`data` 是指向返回数据的指针，`length` 是返回数据的长度（以字节计）。如果 `length` 为负数，则发生了错误且无法获取选择。这可能发生在没有应用程序请求该选择，或者你请求了应用程序不支持的目标。缓冲区实际上保证比 `length` 长一个字节；额外的字节将为零，因此没有必要为了终止字符串而对其进行复制。
-
-
-
-
+`GtkSelectionData` 与上述相同，但这次我们负责填充 `type`、`format`、`data` 和 `length` 字段。`format` 实际上非常重要，因为 X 服务器使用它来判断数据是否需要进行字节交换。通常情况下，你不需要关心接收数据时的这个值。`data` 是指向返回数据的指针，`length` 是返回数据的长度（以字节计）。如果 `length` 为负数，则发生了错误且无法获取选择。这可能发生在没有应用程序请求该选择，或者你请求了应用程序不支持的目标。缓冲区实际上保证比 `length` 长一个字节；额外的字节将为零，因此没有必要为了终止字符串而对其进行复制。
 
 # 20. glib
 
 （字符串与唯一整数标识符的双向关联）、键值数据列表（可以通过字符串或整数 ID 访问的数据元素列表）、关系和元组（可以在任意数量字段上索引的数据表）以及缓存。
 
-以下是 glib 功能的概述；此处未涵盖具体的函数、数据结构或操作。有关 glib 例行过程的更完整信息，请参阅 glib 文档。glib 文档的一个来源是 http://www.gtk.org/；http://www.gtk.org/。
+以下是 glib 功能的概述；此处未涵盖具体的函数、数据结构或操作。有关 glib 例行过程的更完整信息，请参阅 glib 文档。glib 文档的一个来源是 `http://www.gtk.org/`；`http://www.gtk.org/`。
 
 如果您使用的是 C 以外的语言，则应该咨询您对应语言的绑定文档。在某些情况下，您的语言可能内置了等效的功能，而在另一些情况下可能没有。
 
@@ -7160,35 +7049,51 @@ char gouble;
 
 ```
 unsigned char guchar;
-unsigned short ghort;
-unsigned long gulong;
-unsigned int guint;
 ```
 
-```
-float gfloat;
-double gdouble;
-long double gdouble;
-```
+
+
+`unsigned short` `ghort`;
+
+`unsigned long` `gulong`;
+
+`unsigned int` `guint`;
 
 ```
-void* gpointer;
 ```
 
+`float` `gfloat`;
+
+`double` `gdouble`;
+
+`long double` `gdouble`;
+
 ```
-gint8
-guint8
-gint16
-guint16
-gint32
-guint32
 ```
 
+`void*` `gpointer`;
+
+```
+```
+
+`gint8`
+
+`guint8`
+
+`gint16`
+
+`guint16`
+
+`gint32`
+
+`guint32`
+
+```
 ## 20.2 双向链表
 
-以下函数用于创建、管理和销毁标准的双向链表。列表中的每个元素包含一段数据，并带有指向列表中前一个和后一个元素的指针。数据项类型为 "gpointer"，这意味着数据可以是指向您的实际数据的指针，也可以（通过强制转换转换）数值值（但不要假设它和指针的大小相同！）。这些例行过程在内部分块分配列表元素，这比单独分配元素更高效。
+以下函数用于创建、管理和销毁标准的双向链表。列表中的每个元素包含一段数据，并带有指向列表中前一个和后一个元素的指针。数据项类型为 "`gpointer`"，这意味着数据可以是指向您的实际数据的指针，也可以（通过强制转换转换）数值值（但不要假设它和指针的大小相同！）。这些例行过程在内部分块分配列表元素，这比单独分配元素更高效。
 
-没有专门用于创建列表的函数。相反，只需创建一个类型为 GList* 的变量并将其值设置为 NULL；NULL 为空列表。
+没有专门用于创建列表的函数。相反，只需创建一个类型为 `GList*` 的变量并将其值设置为 `NULL`；`NULL` 为空列表。
 
 要向列表添加元素，请使用 `g_list_append()`、`g_list_prepend()`、`g_list_insert()` 或 `g_list_insert_sorted()` 例行过程。在所有情况下，它们都接受指向列表开头的指针，并返回指向列表开头的（可能已更改的）指针。因此，对于所有添加或删除元素的操作请保存返回值：
 
@@ -7197,14 +7102,14 @@ GList *g_list_append( GList *list,
                     gpointer data );
 ```
 
-这在列表末尾添加一个新元素（值为 data）。
+这在列表末尾添加一个新元素（值为 `data`）。
 
 ```
 GList *g_list_prepend( GList *list,
                     gpointer data );
 ```
 
-这在列表开头添加一个新元素（值为 data）。
+这在列表开头添加一个新元素（值为 `data`）。
 
 ```
 GList *g_list_insert( GList *list,
@@ -7212,22 +7117,22 @@ GList *g_list_insert( GList *list,
                     gint position );
 ```
 
-这在给定的位置向列表中插入一个新元素（值为 data）。如果 position 为 0，则等同于 g_list_prepend()；如果 position 小于 0，则等同于 g_list_append()。
+这在给定的位置向列表中插入一个新元素（值为 `data`）。如果 `position` 为 `0`，则等同于 `g_list_prepend()`；如果 `position` 小于 `0`，则等同于 `g_list_append()`。
 
 ```
 GList *g_list_remove( GList *list,
                     gpointer data );
 ```
 
-这从列表中值为 data 的元素；如果元素不存在，则列表保持不变。
+这从列表中值为 `data` 的元素；如果元素不存在，则列表保持不变。
 
 ```
 void g_list_free( GList *list );
 ```
 
-这释放 GList 使用的所有内存。如果列表元素引用动态分配的内存，则应该释放它们。
+这释放 `GList` 使用的所有内存。如果列表元素引用动态分配的内存，则应该释放它们。
 
-还有许多其他支持双向链表的 glib 函数；更多信息请参阅 glib 文档。以下是一些较实用的函数签名：
+还有许多其他支持双向链表的 `glib` 函数；更多信息请参阅 `glib` 文档。以下是一些较实用的函数签名：
 
 ```
 GList *g_list_remove_link( GList *list,
@@ -7330,7 +7235,7 @@ void g_slist_foreach( GSList *list,
 
 ## 20.4 内存管理
 
-glib 提供了一组内存管理函数，与标准 C 函数相似，但增加了功能。例如，glib 可以分配内存并提供额外的功能。例如，glib 可以分配内存并在不再需要时自动释放。
+`glib` 提供了一组内存管理函数，与标准 C 函数相似，但增加了功能。例如，`glib` 可以分配内存并提供额外的功能。例如，`glib` 可以分配内存并在不再需要时自动释放。
 
 最常用的函数是：
 
@@ -7338,31 +7243,31 @@ glib 提供了一组内存管理函数，与标准 C 函数相似，但增加了
 void* g_malloc( gsize );
 ```
 
-分配指定大小的内存并返回指针。如果分配失败，返回 NULL。
+分配指定大小的内存并返回指针。如果分配失败，返回 `NULL`。
 
 ```
 void g_mallocfree( gpointer* );
 ```
 
-这类似于 g_malloc，但会将分配的内存初始化为零。
+这类似于 `g_malloc`，但会将分配的内存初始化为零。
 
 ```
 void* g_realloc( gpointer ptr, gsize size );
 ```
 
-将 ptr 指向的块调整为指定的大小。如果重新分配失败，原始内存块保持不变。
+将 `ptr` 指向的块调整为指定的大小。如果重新分配失败，原始内存块保持不变。
 
 ```
 void g_free( gpointer ptr );
 ```
 
-释放 ptr 指向的内存。
+释放 `ptr` 指向的内存。
 
-glib 还提供了一些管理内存池的函数，例如 GMemoryPool_new(), alloc() 和 free()。这些函数在您分配和释放许多小对象时非常有用。
+`glib` 还提供了一些管理内存池的函数，例如 `GMemoryPool_new()`, `alloc()` 和 `free()`。这些函数在您分配和释放许多小对象时非常有用。
 
 ## 20.5 定时器
 
-glib 提供了一组测量时间的函数。这些函数可以用于测量代码段的性能。
+`glib` 提供了一组测量时间的函数。这些函数可以用于测量代码段的性能。
 
 最常用的函数是：
 
@@ -7398,7 +7303,7 @@ gdouble g_timer_elapsed(GTimer *timer);
 
 ## 20.6 字符串处理
 
-glib 定义了一种新类型 GString，它类似于 C 字符串但会自动增长。它的字符串数据以零结尾。这可以保护您的程序免受缓冲区错误。这是一个非常重要的功能，因此我建议您使用 GString。GString 本身的定义如下：
+`glib` 定义了一种新类型 `GString`，它类似于 C 字符串但会自动增长。它的字符串数据以零结尾。这可以保护您的程序免受缓冲区错误。这是一个非常重要的功能，因此我建议您使用 `GString`。`GString` 本身的定义如下：
 
 ```
 struct GString
@@ -7408,55 +7313,53 @@ struct GString
 };
 ```
 
-正如你所想的，对 GString 有许多操作。
+正如你所想的，对 `GString` 有许多操作。
 
 ```
 GString *g_string_new(gchar *init);
 ```
 
+
+
 构造一个 GString，将 init 的值复制到 GString 中并返回其指针。可以 NULL 作为空 GString 的参数。
 
-```
+```c
 void g_string_free(GString *string, gint free_segment);
 ```
 
-释放给定 GString 的内存。如果 free_segment 为 TRUE，也会释放其字符数据。
+释放给定 GString 的内存。如果 `free_segment` 为 TRUE，也会释放其字符数据。
 
-```
+```c
 void* g_string_assign(GString *lval, const gchar *rval);
 ```
 
-将 rval 中的字符复制到 lval，销毁 lval 之前的内容。注意 lval 会根据需要延长以容纳字符串内容，这与标准的 strcpy 函数不同。
+将 `rval` 中的字符复制到 `lval`，销毁 `lval` 之前的内容。注意 `lval` 会根据需要延长以容纳字符串内容，这与标准的 `strcpy` 函数不同。
 
-其余函数应该是相对容易理解的（_c 版本接受字符而不是字符串）：
+其余函数应该是相对容易理解的（`_c` 版本接受字符而不是字符串）：
 
-```
+```c
 GString *g_string_truncate(GString *string, gint len);
 ```
 
-```
+```c
 GString *g_string_append(GString *string, gchar *val);
 ```
 
-```
+```c
 GString *g_string_append_c(GString *string, gchar c);
 ```
 
-```
+```c
 GString *g_string_prepend(GString *string, gchar *val);
 ```
 
-```
+```c
 GString *g_string_prepend_c(GString *string, gchar c);
 ```
 
-```
+```c
 void g_string_sprintf(GString *string, gchar *fmt);
 ```
-
-
-
-
 
 # 20. glib
 
@@ -7595,7 +7498,7 @@ rc 文件的格式如下例所示。这是 GTK 分发版中的 testrc 文件，�
 - INSENSITIVE - 当控件处于无效状态且无法激活时，它将采用这些属性。
 - SELECTED - 当 "fg" 和 "bg" 键设置控件颜色时，会选择这些属性。
 
-当使用 <STATE> = { Red, Green, Blue } 时，格式为：
+当使用 `<STATE> = { Red, Green, Blue }` 时，格式为：
 
 ```
 <STATE> = { Red, Green, Blue }
@@ -7628,10 +7531,6 @@ bg_pixmap[NORMAL] = "warning.xpm"
 }
 ```
 
-
-
-
-
 ## 21. GTK 的 rc 文件
 
 ```style
@@ -7639,9 +7538,7 @@ style "scale"
 {
 # 当处于 "NORMAL"
 # 状态时，将前景颜色（字体颜色）设置为红色。
-
 fg[NORMAL] = { 1.0, 0, 0 }
-
 # 将此控件的背景位图设置为其父元素的位图。
 bg_pixmap[NORMAL] = "<parent>"
 }
@@ -7650,23 +7547,33 @@ bg_pixmap[NORMAL] = "<parent>"
 ```style
 style "button"
 {
-# 显示显示按钮所有可能的状态。唯一
-# 不适用的是 SELECTED（已选中）状态。
+```
 
+
+
+# 显示显示按钮所有可能的状态。唯一不适用的是 SELECTED（已选中）状态。
+
+```
 fg[PRELIGHT] = { 0, 1.0, 1.0 }
+
 bg[PRELIGHT] = { 0, 0, 1.0 }
+
 bg[ACTIVE] = { 1.0, 0, 0 }
+
 fg[ACTIVE] = { 0, 1.0, 0 }
+
 bg[NORMAL] = { 1.0, 0, 0 }
+
 fg[NORMAL] = { .99, 0, .99 }
+
 bg[INSENSITIVE] = { 1.0, 1.0, 1.0 }
+
 fg[INSENSITIVE] = { 1.0, 0, 1.0 }
+
 }
 ```
 
-# 在此示例中，我们继承了 "button" 式的属性，
-# 然后在创建新的 "main-button" 样式时覆盖
-# 字体和背景颜色。
+# 在此示例中，我们继承了 "button" 式的属性，然后在创建新的 "main-button" 样式时覆盖字体和背景颜色。
 
 ```style
 style "main_button" = "button"
@@ -7681,9 +7588,7 @@ style "toggle_button" = "button"
 {
 fg[NORMAL] = { 1.0, 0, 0 }
 fg[ACTIVE] = { 1.0, 0, 0 }
-
-# 这将 toggle_button 的背景位图设置为
-# 父控件的（如在应用程序中定义）
+# 这将 toggle_button 的背景位图设置为父控件的（如在应用程序中定义）
 bg_pixmap[NORMAL] = "<parent>"
 }
 ```
@@ -7709,9 +7614,7 @@ font = "adobe-helvetica-medium-r-normal--*-*-s*-s*-*-80--*-*-s*-s*-*"
 # pixmap 路径 "./pixmaps"
 ```
 
-# 这些设置控件类型以使用上面定义的样式。
-# 控件类型列在类层次结构中，但可能也可以
-# 列在本文中供用户参考。
+# 这些设置控件类型以使用上面定义的样式。控件类型列在类层次结构中，但可能也可以列在本文中供用户参考。
 
 ```widget
 widget_class "GtkWindow" style "window"
@@ -7725,22 +7628,20 @@ widget_class "GtkRuler" style "ruler"
 widget_class "GtkText" style "text"
 ```
 
-# 这将所有作为 "main window" 的子元素的按钮
-# 设置为 main_button 样式。这些必须被记录以便能够利用。
-widget main window.GtkButton* style "main_button"
+# 这将所有作为 "main window" 的子元素的按钮设置为 main_button 样式。这些必须被记录以便能够利用。
+`widget main window.GtkButton* style "main_button"`
 
-## 22.1 概述
+### 22.1 概述
 
-尽管 GTK 分发版包含了许多类型的控件，应该涵盖了大多数基础需求，但可能会有那么时刻，你需要创建自己的控件类型。由于 GTK 广泛使用控件继承，并且已经有一个与你的需求非常接近的控件，因此只需几行代码就可以创建一个非常有用的新控件类型。但在编写新控件之前，请先检查一下，确保已经有人写过它。这可以防止重复劳动，并将 GTK 控件的数量保持在最少，这有助于保持不同应用程序代码和界面的一致性。作为此的另一面，当你完成控件后，请向世界宣布它，这样其他人也能受益。这样做最好的地方可能是 gtk-list。
+尽管 GTK 分发版包含了许多类型的控件，应该涵盖了大多数基础需求，但可能会有那么时刻，你需要创建自己的控件类型。由于 GTK 广泛使用控件继承，并且已经有一个与你的需求非常接近的控件，因此只需几行代码就可以创建一个非常有用的新控件类型。但在编写新控件之前，请先检查一下，确保已经有人写过它。这可以防止重复劳动，并将 GTK 控件的数量保持在最少，这有助于保持不同应用程序代码和界面的一致性。作为此的另一面，当你完成控件后，请向世界宣布它，这样其他人也能受益。这样做最好的地方可能是 `gtk-list`。
 
-示例的完整源代码可以在你获取本教程的地方，或从这里获取：
-://www.gtk.org/~ataylor/gtk/tutorial/
+示例的完整源代码可以在你获取本教程的地方，或从这里获取： `://www.gtk.org/~ataylor/gtk/tutorial/`
 
-## 22.2 控件的特殊性
+### 22.2 控件的特殊性
 
 为了创建一个新控件，理解 GTK 对象如何工作至关重要。本节只是一个简短的概述。详情请参见参考文档。
 
-GTK 控件是以面向对象的方式实现的。然而，它们是用 C 语言实现的。与使用 C++ 编译器相比，这大大提高了可移植性和稳定性；但这意味着控件编写者必须注意实现细节。一个类的所有实例的公共信息（例如，所有 Button 控件）存储在类结构中。关于该类的信息只有一份副本，存储在类中（作用类似于 C++ 中的虚函数）。为了支持继承，类结构中的第一个字段必须是父类类结构的副本。GtkButton 类结构的声明如下：
+GTK 控件是以面向对象的方式实现的。然而，它们是用 C 语言实现的。与使用 C++ 编译器相比，这大大提高了可移植性和稳定性；但这意味着控件编写者必须注意实现细节。一个类的所有实例的公共信息（例如，所有 `Button` 控件）存储在类结构中。关于该类的信息只有一份副本，存储在类中（作用类似于 C++ 中的虚函数）。为了支持继承，类结构中的第一个字段必须是父类类结构的副本。`GtkButton` 类结构的声明如下：
 
 ```c
 struct _GtkButtonClass {
@@ -7756,7 +7657,7 @@ void (*enter)(GtkButton *button);
 void (*leave)(GtkButton *button);
 ```
 
-当 GTK 控件被视为容器时，其类结构可以转换为 GtkClass。此外，一个结构用于存储每个实例不同的信息。对于该类的，GtkButton 类结构看起来如下：
+当 GTK 控件被视为容器时，其类结构可以转换为 `GtkClass`。此外，一个结构用于存储每个实例不同的信息。对于该类的，`GtkButton` 类结构看起来如下：
 
 ```c
 struct _GtkButton {
@@ -7768,7 +7669,7 @@ struct _GtkButton {
 
 注意，对于该类结构，第一个字段是父类的。
 
-## 22.3 创建复合控件
+### 22.3 创建复合控件
 
 #### 22.3.1 引言
 
@@ -7776,7 +7677,7 @@ struct _GtkButton {
 
 #### 22.3.2 选择父类
 
-复合控件的父类通常是 Dialog 类。遗憾的是，这看起来很自然。控件的创建被在两个函数之间：一个调用用户的 `new()` 函数，另一个 `init()` 函数来初始化控件。这种分工对于需要知道行和列的 table 效果并不好。除非我们重复 `gtk_table()` 的功能。这是一个 3x3 的网格，当所有对角线被按下时，会触发信号。
+复合控件的父类通常是 `Dialog` 类。遗憾的是，这看起来很自然。控件的创建被在两个函数之间：一个调用用户的 `new()` 函数，另一个 `init()` 函数来初始化控件。这种分工对于需要知道行和列的 `table` 效果并不好。除非我们重复 `gtk_table()` 的功能。这是一个 3x3 的网格，当所有对角线被按下时，会触发信号。
 
 #### 22.3.3 头文件
 
@@ -7801,38 +7702,28 @@ extern "C" {
 #endif /* __cplusplus */
 ```
 
-与函数和结构一起，我们在头文件中声明了三个标准宏 TICTOE(obj)、TOE_CLASS(klass) 和 IS_TACTOE(obj)，它们分别是指向对象或类结构的指针，并检查一个对象是否是 Tactoe 控件。
+与函数和结构一起，我们在头文件中声明了三个标准宏 `TICTOE(obj)`、`TOE_CLASS(klass)` 和 `IS_TACTOE(obj)`，它们分别是指向对象或类结构的指针，并检查一个对象是否是 `Tactoe` 控件。
 
 这里是完整的头文件：
 
 ```cpp
 /* tactoe.h */
-
 #ifndef __CTAOE_H__
 #define __CTAOE_H__
-
 #include <gdk/gdk.h>
 #include <gtk/gtkvbox.h>
-
 #ifdef __cplusplus
 extern "C" {
 #endif /* __cplusplus */
-
 #define TICTOE(obj) GTK_CHECK_CAST(obj, tactoe_get_type (), Tactoe)
 #define TOE_CLASS(klass) GTK_CHECK_CLASS_CAST(klass, tactoe_toe_get_type (), Tactoe)
 #define IS_TACTOE(obj) GTK_CHECK_TYPE(obj, tactoe_get_type ())
-
 typedef struct _Tactoe Tactoe;
 typedef struct _TactoeClass TactoeClass;
-
 struct _Tactoe {
   GtkVbox vbox;
 };
 ```
-
-
-
-
 
 ## 22. 编写自己的小组件
 
@@ -7843,8 +7734,11 @@ GtkWidget *buttons[3][3];
 
 ```c
 struct _TictactoeClass {
-  GtkBoxClass parent_class;
 ```
+
+
+
+`GtkBoxClass` `parent_class`;
 
 ```c
 void (*tictactoe) (Tictactoe *ttt);
@@ -7866,7 +7760,7 @@ void tictactoe_clear (Tictactoe *ttt);
 
 ### 22.3.4 get_type() 函数
 
-我们现在继续实现我们的小组件。每个小组件的核心函数都是 WIDGETNAME_get_type()。该函数在第一次被调用时会告诉 GTK 关于该组件类的信息，并获取一个唯一标识该组件类的 ID。在后续调用中，它会返回该 ID。
+我们现在继续实现我们的小组件。每个小组件的核心函数都是 `WIDGETNAME_get_type()`。该函数在第一次被调用时会告诉 GTK 关于该组件类的信息，并获取一个唯一标识该组件类的 ID。在后续调用中，它会返回该 ID。
 
 ```c
 guint
@@ -7894,7 +7788,7 @@ ttt_type = gtk_type_unique (gtk_get_type (), &ttt_info);
 }
 ```
 
-GtkTypeInfo 结构的定义如下：
+`GtkTypeInfo` 结构的定义如下：
 
 ```c
 struct _GtkTypeInfo {
@@ -7915,36 +7809,30 @@ struct _GtkTypeInfo {
 
 ### 22.3.5 _class_init() 函数
 
-WIDGETNAME_class_init() 函数初始化组件类结构的字段，并为该类设置任何信号。对于我们的 Tictactoe 小组件，它看起来如下：
+`WIDGETNAME_class_init()` 函数初始化组件类结构的字段，并为该类设置任何信号。对于我们的 `Tictactoe` 小组件，它看起来如下：
 
 ```c
 enum {
   TICTAOE_SIGNAL,
   LAST_SIGNAL
 };
-
 static int tictactoe_signals[LAST_SIGNAL] = { 0 };
-
 static void
 tictactoe_class_init(Tictactoe *class)
 {
   GtkObjectClass *object_class;
-
   object_class = (GtkObjectClass*)class;
-
   tictactoe_signals[TICTAOE_SIGNAL] = gtk_signal_new("tictactoe",
     GTK_RUN_FIRST,
     object_class_type,
     GTK_SIGNAL_OFFSET(TictactoeClass, tictactoe),
     gtk_signal_default_marshaller, GTK_TYPE_NONE, 0);
-
   gtk_object_class_add_signals(object_class, tictactoe_signals, LAST_SIGNAL);
-
   class->tictactoe = NULL;
 };
 ```
 
-我们的小组件只有一个信号，即 tictactoe 信号，当行、列或对角线被完全填满时会被调用。并不是每个复合小组件都需要信号，所以如果你是第一次阅读这里，你可能想跳到下一节，因为情况将变得有点复杂。
+我们的小组件只有一个信号，即 `tictactoe` 信号，当行、列或对角线被完全填满时会被调用。并不是每个复合小组件都需要信号，所以如果你是第一次阅读这里，你可能想跳到下一节，因为情况将变得有点复杂。
 
 该函数：
 
@@ -7964,13 +7852,13 @@ gint gtk_signal_new(const gchar *name,
 
 创建一个新信号。参数如下：
 
-- name：信号的名称。
-- run_type：默认处理程序是在用户处理程序之前还是之后运行。这通常是 GTK_RUN_FIRST 或 GTK_RUN_LAST，尽管还有其他可能性。
-- object_type：此信号所应用的对象的 ID。（它也适用于对象的后代类）
-- function_offset：类结构中指向默认处理器的指针的偏移量。
-- marshaller：一个用于调用信号处理器的函数。对于除了发射信号的对象和用户数据外没有其他参数的信号处理器，我们可以使用预提供的默认 marshaller 函数 `gtk_signal_default_marshaller`。
-- return_val：返回值的类型。
-- nparams：信号处理器的参数个数（除上述两个默认参数外）。
+- `name`：信号的名称。
+- `run_type`：默认处理程序是在用户处理程序之前还是之后运行。这通常是 `GTK_RUN_FIRST` 或 `GTK_RUN_LAST`，尽管还有其他可能性。
+- `object_type`：此信号所应用的对象的 ID。（它也适用于对象的后代类）
+- `function_offset`：类结构中指向默认处理器的指针的偏移量。
+- `marshaller`：一个用于调用信号处理器的函数。对于除了发射信号的对象和用户数据外没有其他参数的信号处理器，我们可以使用预提供的默认 marshaller 函数 `gtk_signal_default_marshaller`。
+- `return_val`：返回值的类型。
+- `nparams`：信号处理器的参数个数（除上述两个默认参数外）。
 - ...：参数的类型。
 
 在指定类型时，使用了 Gtk 枚举：
@@ -8003,9 +7891,9 @@ typedef enum
 } GtkType;
 ```
 
-`gtk_signal_new()` 返回信号的唯一标识符，将其存储在 `tictactoe_signals` 数组中并通过枚举进行索引。按照习惯，枚举元素是名称，但这里会与宏 TICTAOE 冲突，所以我们称为 TICTAOE_SIGNAL。创建信号后，我们需要告诉 GTK 将信号与 Tictactoe 类关联。我们通过调用 `gtk_object_class_add_signals()` 实现。我们将指向 'tictactoe' 信号的默认处理器指针设置为 NULL，表示没有默认操作。
+`gtk_signal_new()` 返回信号的唯一标识符，将其存储在 `tictactoe_signals` 数组中并通过枚举进行索引。按照习惯，枚举元素是名称，但这里会与宏 `TICTAOE` 冲突，所以我们称为 `TICTAOE_SIGNAL`。创建信号后，我们需要告诉 GTK 将信号与 `Tictactoe` 类关联。我们通过调用 `gtk_object_class_add_signals()` 实现。我们将指向 'tictactoe' 信号的默认处理器指针设置为 NULL，表示没有默认操作。
 
-### 22.3.6 _init() 函数。
+### 22.3.6 _init() 函数
 
 每个组件类都需要一个函数来初始化对象结构。通常，该函数的作用是将结构设置为默认值。但对于复合小组件，此函数还会创建子组件。
 
@@ -8015,30 +7903,23 @@ tictactoe_init(Tictactoe *ttt)
 {
   GtkWidget *table;
   int i, j;
-
   table = gtk_table_new(3, 3, TRUE);
   gtk_container_add(GTK_CONTAINER(ttt), table);
   gtk_widget_show(table);
-
   for (i=0; i<3; i++) {
     for (j=0; j<3; j++) {
       ttt->buttons[i][j] = gtk_button_new();
       gtk_table_add_defaults(GTK_TABLE(table), ttt->buttons[i][j],
         1, j+1);
       gtk_signal_connect(GTK_OBJECT(ttt->buttons[i][j]), "toggle",
-        GTK_SIGNAL_FUNC(tictactoe_toggle), ttt);
-      gtk_widget_set_size(ttt->buttons[i][j], 20, 20);
-      gtk_widget_show(ttt->buttons[i][j]);
-    }
-  }
-}
-```
+
+
 
 ### 22.3.7 还有...
 
-每个组件（GtkBin 等基类型外）都有一个用户调用来创建类型对象的函数。按照习惯，称为 WIDGETNAME_new()。在某些组件中（不是 Tictactoe 小组件），此函数接收参数并根据参数进行设置。另外两个函数是 Tictactoe 小组件特定的。
+每个组件（`GtkBin` 等基类型外）都有一个用户调用来创建类型对象的函数。按照习惯，称为 `WIDGETNAME_new()`。在某些组件中（不是 `Tictactoe` 小组件），此函数接收参数并根据参数进行设置。另外两个函数是 `Tictactoe` 小组件特定的。
 
-`tictactoe_clear()` 是公共函数，会将组件中的所有按钮重置为初始位置。注意使用 `gtk_signal_handler_block_data()` 以防止信号处理器被意外触发。`tictactoe_toggle()` 是用户点击按钮时调用的信号处理器。它检查是否有任何窗口被切换，如果是，则发射 'tictactoe' 信号。
+` tictactoe_clear()` 是公共函数，会将组件中的所有按钮重置为初始位置。注意使用 `gtk_signal_handler_block_data()` 以防止信号处理器被意外触发。`tictactoe_toggle()` 是用户点击按钮时调用的信号处理器。它检查是否有任何窗口被切换，如果是，则发射 `tictactoe` 信号。
 
 ```c
 GtkWidget*
@@ -8053,7 +7934,6 @@ void
 tictactoe_clear(Tictactoe *ttt)
 {
   int i, j;
-
   for (i=0; i<3; i++)
     for (j=0; j<3; j++) {
       gtk_signal_handler_block_by_data(GTK_OBJECT_BUTTON (ttt->buttons[i][j]), ttt);
@@ -8073,19 +7953,17 @@ tictactoe_toggle(GtkWidget *widget, Tictactoe *ttt)
     { 0, 1, 2 }, { 0, 1, 2 } };
   static int cwins[8][3] = { { 0, 1, 2 }, { 0, 1, 2 }, { 0, 1, 2 },
     { 0, 0, 0 }, { 1, 1, 1 }, { 2, 1, 0 } };
-
   int success, found;
   for (k=0; k<8; k++) {
     success = TRUE;
     found = FALSE;
     for (i=0; i<3; i++) {
-      success = success &&&\
+      success = success &&&
         GTK_TOGGLE_BUTTON(ttt->buttons[rwins[k][i]][cwins[k][i]])->active;
       found = found |||
         ttt->buttons[rwins[k][i]][cwins[k][i]] == widget;
     }
-
-    if (success &&\& found) {
+    if (success &&& found) {
       gtk_signal_emit (GTK_OBJECT (ttt), tictactoe_signals[TICTAOE_SIGNAL]);
       break;
     }
@@ -8093,54 +7971,41 @@ tictactoe_toggle(GtkWidget *widget, Tictactoe *ttt)
 }
 ```
 
-
-
-
-
 ## 编写自己的组件
 
 ```c
 #include <gtk/gtk.h>
 #include "tictactoe"
-
 /* 当行、列或对角线完成时调用 */
 void win (GtkWidget *widget, gpointer data)
 {
   g_print ("Yay!\n");
   tictactoe_clear (TICTACTOE (widget));
 }
-
 int main (int argc, char *argv[])
 {
   GtkWidget *window;
   GtkWidget *ttt;
-
   gtk_init (&argc, &argv);
-
   window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
   gtk_window_set_title (window, "Aspect Frame");
-
   gtk_signal_connect (GTK_OBJECT (window), "destroy",
   GTK_SIGNAL_FUNC (gtk_exit), NULL);
-
   gtk_container_set_border_width (GTK_CONTAINER (window), 10);
-
   /* 创建一个新的 Tictactoe 组件 */
   ttt = tictactoe_new ();
   gtk_container_add (GTK_CONTAINER (window), ttt);
   gtk_widget_show (ttt);
-
   /* 连接到它的 "tictactoe" 信号 */
   gtk_signal_connect (GTK_OBJECT (ttt), "tictactoe",
   GTK_SIGNAL_FUNC (win), NULL);
-
   gtk_widget_show (window);
-
   gtk_main ();
-
   return 0;
 }
 ```
+
+
 
 ## 22.4 从零开始创建组件
 
@@ -8151,11 +8016,10 @@ int main (int argc, char *argv[])
 ### 22.4.2 在屏幕上显示组件
 
 在屏幕上显示涉及多个许多工作。在调用 `WIDGETNAME_new()` 创建组件后，还需要后续几个函数：
-
-- * `WIDGETNAME_realize()` 负责为该组件创建一个 X 窗口（如果它有的话）。
-- * `WIDGETNAME_map()` 在用户调用 `gtk_widget_show()` 后被触发。它负责确保组件实际绘制在屏幕上（映射）。对于容器组件，它还必须调用任何子组件的 `map()` 函数。
-- * `WIDGETNAME_draw()` 被组件或其任一祖先调用。它实际调用绘图函数来在屏幕上绘制组件。对于容器组件，此函数必须为其没有自己窗口的子组件生成 `expose`（暴露）事件。（如果它们有自己的窗口，则 X 会生成 `expose` 事件）。
-- * `WIDGETNAME_expose()` 是组件的 `expose` 事件处理程序。它调用必要的绘图函数来绘制屏幕上被暴露的位置。对于容器组件，此函数必须为其子组件生成 `expose` 事件（如果它们有自己的窗口，则 X 会生成 `expose` 事件）。
+- `WIDGETNAME_realize()` 负责为该组件创建一个 X 窗口（如果它有的话）。
+- `WIDGETNAME_map()` 在用户调用 `gtk_widget_show()` 后被触发。它负责确保组件实际绘制在屏幕上（映射）。对于容器组件，它还必须调用任何子组件的 `map()` 函数。
+- `WIDGETNAME_draw()` 被组件或其任一祖先调用。它实际调用绘图函数来在屏幕上绘制组件。对于容器组件，此函数必须为其没有自己窗口的子组件生成 `expose`（暴露）事件。（如果它们有自己的窗口，则 X 会生成 `expose` 事件）。
+- `WIDGETNAME_expose()` 是组件的 `expose` 事件处理程序。它调用必要的绘图函数来绘制屏幕上被暴露的位置。对于容器组件，此函数必须为其子组件生成 `expose` 事件（如果它们有自己的窗口，则 X 会生成 `expose` 事件）。
 
 你可能会注意到最后几个函数非常相似——每个函数都负责在屏幕上绘制组件。在许多类型的组件中，它们并不不在乎两者之间的区别。组件类中默认的 `draw()` 函数只需为重绘区域生成一个合成的 `expose`。然而，某些类型的组件可以通过区分这两个函数来节省工作。例如，如果一个组件有多个窗口，那么 `expose` 事件可以识别被暴露的窗口，从而只重绘受影响的组件，而 `draw()` 调用是无法做到这一点。
 
@@ -8180,7 +8044,7 @@ int main (int argc, char *argv[])
  *
  * 分发此库的目的是希望它是有用的，
  * 不提供任何保证；即使没有对于商品性或
- * 特定用途的适用性的暗示保证。详情请参阅 GNU
+ * 特定用途的适用性的暗示保证。详情请参阅 GNU 
  * 库通用许可证。
  *
  * 你应该收到一份随本库提供的 GNU 
@@ -8198,7 +8062,6 @@ int main (int argc, char *argv[])
 #ifdef __cplusplus
 extern "C" {
 #endif /* __cplusplus
-
 #define GTK_DIAL(obj) GTK_CHECK_CAST(obj, gtk_dial_get_type(), GtkDial)
 #define GTK_DIAL_CLASS(klass) GTK_CHECK_CAST(klass, gtk_dial_get_type(), GtkDialClass)
 #define GTK_IS_DIAL(obj) GTK_CHECK_TYPE(gtk_dial_get_type())
@@ -8234,12 +8097,8 @@ struct _GtkDialClass {
 #ifdef __cplusplus
 }
 #endif /* __cplusplus */
-
 #endif /* __GTK_DIAL_H__
 ```
-
-
-
 
 ## 22. 编写自己的小部件
 
@@ -8249,12 +8108,9 @@ gtk_dial_new (GtkAdjustment *adjustment)
 {
   GtkDial *dial;
   dial = gtk_type_new (gtk_dial_get_type());
-
   if (!adjustment)
     adjustment = (GtkAdjustment*) gtk_adjustment_new(0.0, 0.0, 0.0, 0.0, 0.0, 0.0);
-
   gtk_dial_set_adjustment(dial, adjustment);
-
   return GTK_WIDGET (dial);
 }
 
@@ -8263,12 +8119,9 @@ gtk_dial_destroy (GtkObject *object)
 {
   g_return_if_fail (object != NULL);
   g_return_if_fail (GTK_IS_DIAL (object));
-
   dial = GTK_DIAL (object);
-
   if (dial->adjustment)
     gtk_unref (GTK_OBJECT (dial->adjustment));
-
   if (GTK_OBJECT_CLASS (parent_class)->destroy)
     (GTK_OBJECT_CLASS (parent_class)->destroy) (object);
 }
@@ -8284,23 +8137,18 @@ gtk_dial_get_adjustment (GtkDial *dial)
 {
   g_return_if_fail (dial != NULL);
   g_return_if_fail (GTK_IS_DIAL (dial), NULL);
-
   return dial->adjustment;
 }
 
 void
 gtk_dial_set_update_policy (GtkDial *dial,
-GtkUpdateType policy)
-{
-  g_return_if_fail (dial != NULL);
-  g_return_if_fail (GTK_IS_DIAL (dial));
-
-  dial->policy = policy;
 ```
+
+
 
 ### 22. 编写自己的小部件
 
-### 22.4.5 gtk_dial_realize()
+#### 22.4.5 `gtk_dial_realize()`
 
 现在我们来看某些类型的函数。首先，我们有一个执行创建 X 窗口任务的函数。注意，传递给 `gdk_window_new()` 函数的是一个掩码（mask），它指定了 `GdkWindowAtt` 结构中哪些字段包含数据（其余字段将具有默认值）。同样值得注意的是，这是小部件被创建时的的事件掩码。我们调用 `gtk_widget_get_events()` 来获取用户为此小部件指定的事件掩码（通过 `gtk_widget_set_events()` 设置），并添加我们感兴趣的事件。
 
@@ -8313,12 +8161,11 @@ gtk_dial_realize (GtkWidget *widget)
     GtkDial *dial;
     GdkWindowAttr attributes;
     gint attributes_mask;
-
     g_return_if_fail (dial != NULL);
     g_return_if_fail (GTK_IS_DIAL (dial));
-
     GTK_WIDGET_SET_FLAGS (widget, GTK_REALIZED);
     dial = GTK_DIAL (widget);
+}
 ```
 
 ```c
@@ -8342,7 +8189,7 @@ gtk_style_set_background (widget->style, widget->window, GTK_STATE_ACTIVE);
 }
 ```
 
-### 22.4.6 尺寸协商
+#### 22.4.6 尺寸协商
 
 在包含小部件的窗口首次显示之前以及每当窗口布局变化时，GTK 都会询问每个子部件其所需的尺寸。由于我们的小部件不是容器小部件，并且对其尺寸没有实际限制，我们只需返回一个合理的默认值。
 
@@ -8364,11 +8211,10 @@ gtk_dial_allocate (GtkWidget *widget,
 GtkAllocation *allocation)
 {
     GtkDial *dial;
-
     g_return_if_fail (dial != NULL);
     g_return_if_fail (GTK_IS_DIAL (dial));
-
     dial = GTK_DIAL (widget);
+}
 ```
 
 ```c
@@ -8392,7 +8238,7 @@ gtk_style_set_background (widget->style, widget->window, GTK_STATE_ACTIVE);
 }
 ```
 
-### 22.4.7 gtk_dial_expose()
+#### 22.4.7 `gtk_dial_expose()`
 
 如上所述，小部件的绘制是在存储在样式中的处理函数中完成的。
 
@@ -8407,52 +8253,61 @@ gtk_dial_expose(GtkWidget *widget,
     int xc, yc;
     int tick_length;
     int i;
-
     g_return_if_fail (dial != NULL);
     g_return_if_fail (GTK_IS_DIAL (dial));
-
     dial = GTK_DIAL (widget);
-
     gdk_window_clear_area(widget->window, 0, 0, allocation->width, allocation->height);
-
     xc = allocation->width/2;
     yc = allocation->height/2;
-
     /* 绘制刻度 */
     for (i=0; i<25; i++)
     {
         tick_length = (i%6 == 0) ? dial->pointer_width : dial->pointer_width/2;
-
         gdk_draw_line(widget->window,
             widget->style->gc,
-            xc + c*(dial->radius - tick_length),
-            yc - s*(dial->radius - tick_length),
-            xc + c*dial->radius,
-            yc - s*dial->radius);
-    }
+```
 
-    /* 绘制指针 */
-    s = sin(dial->angle);
-    c = cos(dial->angle);
 
-    points[0].x = xc + s*dial->pointer_width/2;
-    points[0].y = yc + c*dial->pointer_width/2;
-    points[1].x = xc + c*dial->radius;
-    points[1].y = yc - s*dial->radius;
-    points[2].x = xc - s*dial->pointer_width/2;
-    points[2].y = yc - c*dial->pointer_width/2;
 
-    gtk_draw_polygon(widget->style,
-        widget->window,
-        GTK_STATE_NORMAL,
-        GTK_SHADOW_OUT,
-        points,
-        3,
-        TRUE);
+```
+xc + c*(dial->radius - tick_length),
 
-    return FALSE;
+yc - s*(dial->radius - tick_length),
+
+xc + c*dial->radius,
+
+yc - s*dial->radius);
 }
 ```
+
+/* 绘制指针 */
+
+s = sin(dial->angle);
+
+c = cos(dial->angle);
+
+points[0].x = xc + s*dial->pointer_width/2;
+
+points[0].y = yc + c*dial->pointer_width/2;
+
+points[1].x = xc + c*dial->radius;
+
+points[1].y = yc - s*dial->radius;
+
+points[2].x = xc - s*dial->pointer_width/2;
+
+points[2].y = yc - c*dial->pointer_width/2;
+
+gtk_draw_polygon(widget->style,
+    widget->window,
+    GTK_STATE_NORMAL,
+    GTK_SHADOW_OUT,
+    points,
+    3,
+    TRUE);
+
+return FALSE;
+}
 
 ### 22.4.8 事件处理
 
@@ -8467,10 +8322,6 @@ gtk_dial_button_press(GtkWidget *widget,
     GdkButton *event)
 {
 ```
-
-
-
-
 
 ## 22. 编写自己的小部件
 
@@ -8519,12 +8370,9 @@ if (dial->button &&
     (d_parallel > dial->pointer_width))
 {
     gtk_grab_add (widget);
-
     dial->button = event->button;
-
     gtk_dial_update_mouse (dial, event->x, event->y);
 }
-
 return FALSE;
 ```
 
@@ -8550,12 +8398,10 @@ dial = GTK_DIAL (widget);
 if (dial->button == event->button)
 {
     gtk_grab_remove (widget);
-
     dial->button = 0;
-
 ```
 
-c
+```c
 if (dial->policy == GTK_UPDATE_DELAYED)
     gtk_timeout_remove(dial->timer);
 ```
@@ -8624,6 +8470,7 @@ switch (dial->button)
 if (mods & mask)
     gtk_dial_update_mouse (dial, x, y);
 ```
+
 }
 return FALSE;
 }
@@ -8635,10 +8482,8 @@ gtk_dial_timer (GtkDial *dial)
 {
     g_return_val_if_fail(dial != NULL, FALSE);
     g_return_val_if_fail(GTK_IS_DIAL(dial), FALSE);
-
     if (dial->policy == GTK_UPDATE_DELAYED)
         gtk_signal_emit_by_name(dial, GTK_OBJECT(dial->adjustment), "value_changed");
-
     return FALSE;
 }
 ```
@@ -8649,47 +8494,57 @@ gtk_dial_update_mouse (GtkDial *dial, gint x, gint y)
 {
     gint xc, yc;
     float old_value;
+```
 
-    g_return_if_fail(dial != NULL);
-    g_return_if_fail(GTK_IS_DIAL(dial));
 
-    xc = GTK_WIDGET(dial)->allocation->width / 2;
-    yc = GTK_WIDGET(dial)->allocation->height / 2;
 
-    old_value = dial->adjustment->value;
-    dial->angle = atan2(yc-y, x-xc);
+```c
+g_return_if_fail(dial != NULL);
 
-    if (dial->angle < -M_PI/2)
-        dial->angle += 2*M_PI;
+g_return_if_fail(GTK_IS_DIAL(dial));
 
-    if (dial->angle < -M_PI/6)
-        dial->angle = -M_PI/6;
+xc = GTK_WIDGET(dial)->allocation->width / 2;
 
-    if (dial->angle > 7*M_PI/6)
-        dial->angle = 7*M_PI/6;
+yc = GTK_WIDGET(dial)->allocation->height / 2;
 
-    dial->adjustment->value = dial->adjustment->lower + (7*M_PI/6 - dial->angle) * (dial->adjustment->upper - dial->lower) / (4*M_PI/3);
+old_value = dial->adjustment->value;
 
-    if (dial->adjustment->value != old_value)
+dial->angle = atan2(yc-y, x-xc);
+
+if (dial->angle < -M_PI/2)
+
+    dial->angle += 2*M_PI;
+
+if (dial->angle < -M_PI/6)
+
+    dial->angle = -M_PI/6;
+
+if (dial->angle > 7*M_PI/6)
+
+    dial->angle = 7*M_PI/6;
+
+dial->adjustment->value = dial->adjustment->lower + (7*M_PI/6 - dial->angle) * (dial->adjustment->upper - dial->lower) / (4*M_PI/3);
+
+if (dial->adjustment->value != old_value)
+{
+    if (dial->policy == GTK_UPDATE_CONTINUOUS)
     {
-        if (dial->policy == GTK_UPDATE_CONTINUOUS)
-        {
-            gtk_signal_emit_by_name(dial, GTK_OBJECT(dial->adjustment), "value_changed");
-        }
-        else
-        {
-            gtk_widget_draw(GTK_WIDGET(dial), NULL);
-        }
-
-        if (dial->policy == GTK_UPDATE_DELAYED)
-        {
-            if (dial->timer)
-                gtk_timeout_remove(dial->timer);
-            dial->timer = gtk_timeout_add(GDK_TIMEOUT_LENGTH, (GtkFunction) gtk_dial_timer, (gpointer) dial);
-        }
+        gtk_signal_emit_by_name(dial, GTK_OBJECT(dial->adjustment), "value_changed");
+    }
+    else
+    {
+        gtk_widget_draw(GTK_WIDGET(dial), NULL);
+    }
+    if (dial->policy == GTK_UPDATE_DELAYED)
+    {
+        if (dial->timer)
+            gtk_timeout_remove(dial->timer);
+        dial->timer = gtk_timeout_add(GDK_TIMEOUT_LENGTH, (GtkFunction) gtk_dial_timer, (gpointer) dial);
     }
 }
-}对 Adjustment 的更改通过 'changed' 和 'value_changed' 信号传递给我们的小部件。这些处理函数调用 `gtk_dial_update()` 来验证参数、计算新角度并通过调用 `gtk_widget_draw()` 重绘小部件。
+}
+```
+对 `Adjustment` 的更改通过 `'changed'` 和 `'value_changed'` 信号传递给我们的小部件。这些处理函数调用 `gtk_dial_update()` 来验证参数、计算新角度并通过调用 `gtk_widget_draw()` 重绘小部件。
 
 ```c
 static void
@@ -8768,24 +8623,24 @@ gtk_dial_adjustment_value_changed (GtkAdjustment *adjustment,
 
 我们目前为止描述的小部件大约运行 670 行代码。虽然这听起来很多，但我们通过这些代码实现了很多功能，特别是大部分长度是头文件和样板代码。然而，该小部件可以进行许多增强：
 
-- 如果你尝试这个小部件，你会发现有些闪烁，每次指针移动在重绘之前整个小部件都会被擦除。通常处理此问题的最佳方法是绘制到离屏 pixmap，然后将最终结果复制到屏幕上。（ProgressBar 就是这样绘制的）。
+- 如果你尝试这个小部件，你会发现有些闪烁，每次指针移动在重绘之前整个小部件都会被擦除。通常处理此问题的最佳方法是绘制到离屏 `pixmap`，然后将最终结果复制到屏幕上。(`ProgressBar` 就是这样绘制的)。
 - 用户应该能够使用上、下箭头键来增加和减少值。
-- 如果小部件有按钮可以小步或大步增加和减少值，那就太好了。虽然可以使用嵌入小部件来实现这一点，但我们也希望按钮在按住时能够自动重复，就像滚动条上的箭头一样。实现此行为的大部分代码可以在 GtkRange 中找到。
-- Dial 可以制成一个容器小部件，其单个子控件位于上述按钮之间的底部。用户可以添加他们选择的标签或输入小部件来显示拨的当前值。
+- 如果小部件有按钮可以小步或大步增加和减少值，那就太好了。虽然可以使用嵌入小部件来实现这一点，但我们也希望按钮在按住时能够自动重复，就像滚动条上的箭头一样。实现此行为的大部分代码可以在 `GtkRange` 中找到。
+- `Dial` 可以制成一个容器小部件，其单个子控件位于上述按钮之间的底部。用户可以添加他们选择的标签或输入小部件来显示拨的当前值。
 
 ## 22.5 学习更多
 
-上面只描述了创建小部件涉及的众多细节中的一小部分。如果你想编写自己的小部件，最好的示例来源是 GTK 源码。对小部件提出一些问题：它是一个容器吗？它有自己的窗口吗？
+上面只描述了创建小部件涉及的众多细节中的一小部分。如果你想编写自己的小部件，最好的示例来源是 `GTK` 源码。对小部件提出一些问题：它是一个容器吗？它有自己的窗口吗？
 
 ## 23. Scribble，一个简单的绘程序
 
-## 23.1 概述
+### 23.1 概述
 
-在本节中，我们将构建一个简单的绘程序。在此过程中，我们将检查如何处理鼠标事件、如何在窗口中绘制，以及如何使用后台 pixmap 改进绘制。创建简单程序后，我们将通过添加对输入设备（如数板）的支持来扩展它。GTK 提供的支持程序使得从此类设备获取扩展信息（如压力和倾斜）变得简单。
+在本节中，我们将构建一个简单的绘程序。在此过程中，我们将检查如何处理鼠标事件、如何在窗口中绘制，以及如何使用后台 `pixmap` 改进绘制。创建简单程序后，我们将通过添加对输入设备（如数板）的支持来扩展它。`GTK` 提供的支持程序使得从此类设备获取扩展信息（如压力和倾斜）变得简单。
 
-## 23.2 事件处理
+### 23.2 事件处理
 
-我们已经讨论了高层操作，例如菜单项的选择。然而，有时了解低层事件也是很有用的，例如窗口移动或按下按。也有对应这些低层对应的 GDK 信号。这些信号的处理程序有一个额外的参数，指向包含事件信息的结构指针。例如，运动事件由指向 GdkMotion 结构的指针处理，其部分如下：
+我们已经讨论了高层操作，例如菜单项的选择。然而，有时了解低层事件也是很有用的，例如窗口移动或按下按。也有对应这些低层对应的 `GDK` 信号。这些信号的处理程序有一个额外的参数，指向包含事件信息的结构指针。例如，运动事件由指向 `GdkMotion` 结构的指针处理，其部分如下：
 
 ```
 struct GdkMotion {
@@ -8799,7 +8654,9 @@ struct GdkMotion {
 };
 ```
 
-type 将设置为事件类型，在此情况下为 GDK_MOTION_NOTIFY，window 是事件发生的窗口。x 和 y 给出事件的坐标，state 指定事件发生时的修饰状态（即哪些修饰键和鼠标按钮被按下）。它是以下某些内容的按位或结果：
+
+
+type 将设置为事件类型，在此情况下为 `GDK_MOTION_NOTIFY`，`window` 是事件发生的窗口。`x` 和 `y` 给出事件的坐标，`state` 指定事件发生时的修饰状态（即哪些修饰键和鼠标按钮被按下）。它是以下某些内容的按位或结果：
 
 ```
 GDK_SHIFT_MASK
@@ -8816,7 +8673,6 @@ GDK_BUTTON3_MASK
 GDK_BUTTON4_MASK
 GDK_BUTTON5_MASK
 ```
-
 
 第二个字段指定了我们感兴趣的事件。它是指定不同类型事件的常量的位或或结果。作为参考，事件类型如下：
 
@@ -8843,23 +8699,23 @@ GDK_PROXIMITY_OUT_MASK
 
 在调用 `gtk_widget_set_events()` 时，有几个细微点需要注意。首先，它必须在 GTK 组件的 X 窗口创建之前调用。在实际操作中，这意味着你应该在创建组件后立即调用它。第二个组件必须有一个关联的 X 窗口。为了效率，许多组件类型没有自己的窗口，而是在其父窗口中绘图。这些组件是：
 
-- Gtkalignment
-- GtkArrow
-- GtkBin
-- GtkBox
-- GtkImage
-- GtkItem
-- GtkLabel
-- GtkFmap
-- GtkScrolledWindow
-- GtkSeparator
-- GtkTable
-- GtkAspectFrame
-- GtkFrame
-- GtkVBox
-- GtkHBox
+- `Gtkalignment`
+- `GtkArrow`
+- `GtkBin`
+- `GtkBox`
+- `GtkImage`
+- `GtkItem`
+- `GtkLabel`
+- `GtkFmap`
+- `GtkScrolledWindow`
+- `GtkSeparator`
+- `GtkTable`
+- `GtkAspectFrame`
+- `GtkFrame`
+- `GtkVBox`
+- `GtkHBox`
 
-为了捕捉这些组件的事件，你需要使用 EventBox 组件。详情请参见第 10.1 节。
+为了捕捉这些组件的事件，你需要使用 `EventBox` 组件。详情请参见第 10.1 节。
 
 对于我们的绘图程序，我们想知道鼠标何时被按下以及何时移动，因此我们指定了 `GDK_POINTER_MOTION_MASK` 和 `GDK_BUTTON_PRESS_MASK`。我们还想知道何时重绘窗口，所以指定了 `GDK_EXPOSURE_MASK`。虽然我们希望在窗口大小变化时收到 `Configure` 事件通知，但我们不需要指定相应的 `GDK_STRUCTURE_MASK` 标志，因为它对所有窗口都是自动指定的。
 
@@ -8879,6 +8735,7 @@ GdkModifierType *mask);
 ```
 
 （还有另一个函数 `gtk_widget_get_pointer()`，它的接口更简单，但被证明非常有用，如果它只检索鼠标的位置，而不是按钮被按下的状态）。
+
 为我们的窗口设置它的代码如下：
 
 ```
@@ -8954,34 +8811,39 @@ void gtk_drawing_area_size (GtkDrawingArea *widget, int height);
 # Scribble，一个简单的绘图程序
 
 /* 创建一个新的缓冲区 */
+
 static gint
+
 configure_event(GtkWidget *widget, GdkConfigure *event)
+
 {
+
   if (pixmap)
+
     gdk_pix_unref(pixmap);
 
   pixmap = gdk_pixmap_new(widget->window,
+
                            widget->allocation.width,
+
                            widget->allocation.height,
-                           -1);
 
-  gdk_draw_rectangle(pixmap,
-                      widget->style->white_gc,
-                      TRUE,
-                      0,
-                      0,
-                      widget->allocation.width,
-                      widget->allocation.height);
 
-  return TRUE;
-}
+
+`-1);`
+
+`gdk_draw_rectangle(pixmap, widget->style->white_gc, TRUE, 0, 0, widget->allocation.width, widget->allocation.height);`
+`return TRUE;`
+`}`
+
 ```
-
-`gdk_draw_rectangle` 调用最初将像素图清空为白色。我们稍后会说明这一点。
+gdk_draw_rectangle
+```
+调用最初将像素图清空为白色。我们稍后会说明这一点。
 
 我们的暴露事件处理器只是将像素图的相关部分复制到屏幕上，我们通过暴露事件的 `area` 字段确定需要重绘的区域：
 
-```
+```c
 /* 从缓冲区重绘场景 */
 static gint
 expose_event(GtkWidget *widget, GdkEventExpose *event)
@@ -8991,35 +8853,31 @@ expose_event(GtkWidget *widget, GdkEventExpose *event)
                   pixmap,
                   event->area.x, event->area.y,
                   event->area.width, event->area.height);
-
   return FALSE;
 }
 ```
 
-
-
-
 # 23. Scribble，一个简单的绘图示例程序
 
-```
-gdk_draw_points ()
-gdk_draw_segments ()
+```c
+gdk_draw_points()
+gdk_draw_segments()
 ```
 
-关于这些函数的更多细节，请参考参考文档或头文件 <gdk/gdk.h>。它们都共享前两个参数。第一个参数是要绘制的可绘制对象（drawable），第二个参数是图形上下文（GC）。
+关于这些函数的更多细节，请参考参考文档或头文件 `<gdk/gdk.h>`。它们都共享前两个参数。第一个参数是要绘制的可绘制对象（drawable），第二个参数是图形上下文（GC）。
 
-图形上下文封装了关于图形的信息，如前景颜色、背景颜色和线宽。GDK 拥有一套完整的函数用于创建和修改图形上下文，但为了保持简单，我们仅使用预定义的上下文。每个部件（widget）都有一个关联的样式。（可以在 gtkrc 文件中修改，请参见 GTK 的 rc 文件部分）。除其他外，样式 还存储了多个图形上下文。使用这些图形上下文的示例：
+图形上下文封装了关于图形的信息，如前景颜色、背景颜色和线宽。GDK 拥有一套完整的函数用于创建和修改图形上下文，但为了保持简单，我们仅使用预定义的上下文。每个部件（widget）都有一个关联的样式。（可以在 `gtkrc` 文件中修改，请参见 GTK 的 rc 文件部分）。除其他外，样式 还存储了多个图形上下文。使用这些图形上下文的示例：
 
-```
+```c
 widget->style->white_gc
 widget->style->black_gc
 widget->style->fg_gc[GTK_STATE_NORMAL]
 widget->style->bg_gc[GTK_WIDGET_STATE(widget)]
 ```
 
-fg_gc、bg_gc、dark_gc 和 light_gc 由类型为 GtkStateType 的参数索引，该参数可以取以下值：
+`fg_gc`、`bg_gc`、`dark_gc` 和 `light_gc` 由类型为 `GtkStateType` 的参数索引，该参数可以取以下值：
 
-```
+```c
 GTK_STATE_NORMAL
 GTK_STATE_ACTIVE
 GTK_STATE_PRELIGHT
@@ -9027,11 +8885,11 @@ GTK_STATE_SELECTED
 GTK_STATE_INSENSITIVE
 ```
 
-例如，对于 GTK_STATE_SELECTED，默认前景为白色，默认背景颜色为深蓝色。
+例如，对于 `GTK_STATE_SELECTED`，默认前景为白色，默认背景颜色为深蓝色。
 
-我们在屏幕上执行实际绘制的函数 draw_brush() 定义如下：
+我们在屏幕上执行实际绘制的函数 `draw_brush()` 定义如下：
 
-```
+```c
 /* 在屏幕上画一个矩形 */
 static void
 draw_brush (GtkWidget *widget, double x, double y)
@@ -9046,17 +8904,16 @@ draw_brush (GtkWidget *widget, double x, double y)
 }
 ```
 
-在我们画了代表 pixmap 的矩形后，我们调用函数：
+在我们画了代表 `pixmap` 的矩形后，我们调用函数：
 
-```
-void      gtk_widget_draw      (GtkWidget *widget,
-                               GdkRectangle *area);
+```c
+void gtk_widget_draw (GtkWidget *widget, GdkRectangle *area);
 ```
 
-通知 X area 参数给出的区域需要更新。X 最终将生成一个事件（可能合并了多次调用 gtk_widget_draw() 传递的区域），这会导致我们的事件处理程序拷贝屏幕的相关部分。
+通知 X `area` 参数给出的区域需要更新。X 最终将生成一个事件（可能合并了多次调用 `gtk_widget_draw()` 传递的区域），这会导致我们的事件处理程序拷贝屏幕的相关部分。
 
 现在我们已经涵盖了整个绘图程序，除了创建主窗口等一些细微的细节外。完整的源代码可以从你获取本教程的所在处获得，或者从以下地址获取：
-http://www.gtk.org/otaylor/gtk/tutorial/
+`http://www.gtk.org/otaylor/gtk/tutorial/`
 
 ## 23.4 添加 Xinput
 
@@ -9068,9 +8925,9 @@ http://www.gtk.org/otaylor/gtk/tutorial/
 
 有关 XInput 扩展的信息，请参见 XInput-HOWTO。
 
-如果我们检查 GdkEvent 结构的完整定义，可以看到它拥有支持设备信息的字段。
+如果我们检查 `GdkEvent` 结构的完整定义，可以看到它拥有支持设备信息的字段。
 
-```
+```c
 struct _GdkEventMotion
 {
     GdkEventType type;
@@ -9088,34 +8945,34 @@ struct _GdkEventMotion
 };
 ```
 
-pressure 给出一个 0 到 1 之间的浮点数。xtilt 和 ytilt 的值可以是 -1 到 1 之间，对应于每个方向的倾斜程度。source 和 device 以两种不同的方式指定事件发生的设备。source 提供了关于设备类型的简单信息。它可以取枚举值。
+`pressure` 给出一个 0 到 1 之间的浮点数。`xtilt` 和 `ytilt` 的值可以是 -1 到 1 之间，对应于每个方向的倾斜程度。`source` 和 `device` 以两种不同的方式指定事件发生的设备。`source` 提供了关于设备类型的简单信息。它可以取枚举值。
 
-```
+```c
 GDK_SOURCE_MOUSE
 GDK_SOURCE_PEN
 GDK_SOURCE_ERASER
 GDK_SOURCE_CURSOR
 ```
 
-deviceid 指定设备的唯一 ID。这可以使用 gdk_input_list_devices() 调用（见下文）查找有关该设备的更多信息。特殊值 GDK_CORE_POINTER 用于核心指针设备（通常是鼠标）。
+`deviceid` 指定设备的唯一 ID。这可以使用 `gdk_input_list_devices()` 调用（见下文）查找有关该设备的更多信息。特殊值 `GDK_CORE_POINTER` 用于核心指针设备（通常是鼠标）。
 
-## 23.4.1 启用扩展设备信息
+### 23.4.1 启用扩展设备信息
 
 为了让 GTK 知道我们对扩展设备信息的兴趣，我们只需要在程序中添加一行：
 
-```
+```c
 gtk_widget_set_extension_events (drawing_area, GTDK_EXTENSION_EVENTS_CURSOR);
 ```
 
-通过赋予值 GTDK_EXTENSION_EVENTS_CURSOR，我们表示我们对扩展事件感兴趣，但仅在我们不需要绘制自己的光标时。关于绘制光标的更多信息，请参见第 23.4.4 节。如果我们打算绘制光标，也可以赋予值 GTDK_EXTENSION_EVENTS_ALL，或者赋予 GTDK_EXTENSION_EVENTS_NONE。
+通过赋予值 `GTDK_EXTENSION_EVENTS_CURSOR`，我们表示我们对扩展事件感兴趣，但仅在我们不需要绘制自己的光标时。关于绘制光标的更多信息，请参见第 23.4.4 节。如果我们打算绘制光标，也可以赋予值 `GTDK_EXTENSION_EVENTS_ALL`，或者赋予 `GTDK_EXTENSION_EVENTS_NONE`。
 
-## 23.4.2 使用扩展设备信息
+### 23.4.2 使用扩展设备信息
 
 一旦我们启用了设备，就可以直接使用扩展信息。事实上，即使在没有启用扩展事件的情况下，使用这些信息也是安全的。
 
-我们必须做的更改是调用 gdk_input_window_get_pointer() 而不是 gdk_window_get_pointer。这是因为 gdk_window_get_pointer 不返回扩展设备。
+我们必须做的更改是调用 `gdk_input_window_get_pointer()` 而不是 `gdk_window_get_pointer`。这是因为 `gdk_window_get_pointer` 不返回扩展设备。
 
-```
+```c
 void gdk_input_window_get_pointer( GdkWindow *window,
                     gint32 device,
                     gdouble *x,
@@ -9126,20 +8983,17 @@ void gdk_input_window_get_pointer( GdkWindow *window,
                     GModifierType *mask);
 ```
 
-调用此函数时，我们需要指定 ID 作为窗口。通常，我们会从事件的 device 字段获取设备 ID。在未启用扩展事件的情况下，event->device 将返回值 GDK_CORE_POINTER。
 
 
-
-
+调用此函数时，我们需要指定 ID 作为窗口。通常，我们会从事件的 `device` 字段获取设备 ID。在未启用扩展事件的情况下，`event->device` 将返回值 `GDK_CORE_POINTER`。
 
 ## 23. 涂鸦：一个简单的绘图程序
 
-return TRUE;
-}
+`return TRUE;`
 
 我们还需要对新信息进行一些处理。我们新的 `draw_brush()` 函数会根据每个 `event->source` 使用不同的颜色进行绘图，并根据压力改变画笔大小。
 
-```
+```c
 /* 在屏幕上画一个矩形，大小取决于压力，
    颜色取决于设备类型 */
 static void
@@ -9161,7 +9015,6 @@ draw_brush (GtkWidget *widget, GdkInputSource source,
     default:
       gc = widget->style->light_gc[GTK_WIDGET_STATE(widget)];
   }
-
   update_rect.x = x - 10 * pressure;
   update_rect.y = y - 10 * pressure;
   update_rect.width = 20 * pressure;
@@ -9171,23 +9024,23 @@ draw_brush (GtkWidget *widget, GdkInputSource source,
 }
 ```
 
-## 23.4.3 查找设备信息
+### 23.4.3 查找设备信息
 
 这是一个如何查找设备的示例，我们的程序将打印出每次按下时的设备名称。要获取设备名称，我们可以调用该函数：
 
-```
+```c
 GList *gdk_input_list_devices(void);
 ```
 
 它返回一个包含 `GdkDeviceInfo` 结构的 `GList`（来自 glib 库的链表类型）。`GdkDeviceInfo` 结构定义如下：
 
-```
+```c
 struct _GdkDeviceInfo {
   guint32 deviceid;
   char *name;
 ```
 
-```
+```c
 GdkInputSource source;
 GdkInputMode mode;
 gint has_cursor;
@@ -9202,59 +9055,51 @@ GdkDeviceKey *keys;
 
 我们的 `print_button_press()` 函数遍历返回的列表，直到找到匹配项并打印出设备名称。
 
-```
+```c
 static void
 print_button_press (uint32 deviceid)
 {
  GList *tmp_list;
-
 /* gdk_input_list_devices 返回一个内部列表，所以我们不应该之后释放它 */
 tmp_list = gdk_input_list_devices();
-
 while (tmp_list)
 {
 GdkDeviceInfo *info = (GdkDeviceInfo *)tmp_list->data;
-
 if (info->device == device)
 {
  printf("Button press on %s\n", info->name);
 return;
 }
-
  tmp_list = tmp_list->next;
 }
 ```
 
 这标志着我们程序对 'Xinput' 的修改。与第一个版本一样，完整的源代码可以在你获取此教程的地方获得，或者从以下地址获取：
 
-http://www.gtk.org/otaylor/gtk/tutorial/
+`http://www.gtk.org/otaylor/gtk/tutorial/`
 
-## 23.4.4 进一步的完善
+### 23.4.4 进一步的完善
 
 我们的程序现在对 XInput 的支持相当不错，但它缺少了一些我们我们在全功能应用程序中想要的功能。首先，用户可能不想每次运行程序时都配置设备，因此我们应该允许他们保存设备配置。这是通过遍历 `gdk_input_list_devices()` 的返回值并将配置写入文件来实现的。
 
 为了在下次运行程序时恢复，GDK 提供了更改设备配置的函数：
 
-```
+```c
 gdk_input_set_extension_events()
 ```
 
-```
+```c
 gdk_input_set_source()
 gdk_input_set_mode()
 gdk_input_set_axes()
 gdk_input_set_key()
 ```
 
-（`gdk_input_list_devices()` 返回的列表在附近。（如果当前指针无法直接修改。）最终，这可以在绘图程序 gsumi 中找到。（可以从 http://www.msc.cornell.edu/ataylor/gsumi/ 获取）如果能为所有应用程序提供这种此的标准方法就太好了。这可能属于比 GTK 高一点的层级，也许在 GNOME 库中。
+（`gdk_input_list_devices()` 返回的列表在附近。（如果当前指针无法直接修改。）最终，这可以在绘图程序 gsumi 中找到。（可以从 `http://www.msc.cornell.edu/ataylor/gsumi/` 获取）如果能为所有应用程序提供这种此的标准方法就太好了。这可能属于比 GTK 高一点的层级，也许在 GNOME 库中。
 
-我们提到的另一个主要缺失是缺少光标绘制。XFree8 以外的平台不允许应用程序直接将此类设备作为光标指针。更多信息请参阅 XInput-HOWTO <http://www.msc.cornell.edu/ataylor/xinput/XInput-HOWTO.html>。这意味着想要支持最广泛用户的应用程序需要绘制自己的光标。
+我们提到的另一个主要缺失是缺少光标绘制。XFree8 以外的平台不允许应用程序直接将此类设备作为光标指针。更多信息请参阅 XInput-HOWTO `<http://www.msc.cornell.edu/ataylor/xinput/XInput-HOWTO.html>`。这意味着想要支持最广泛用户的应用程序需要绘制自己的光标。
 
 绘制自己的光标的应用需要做两件事：确定是否需要绘制光标，以及在触笔抬起时让光标消失。前者通过搜索列表完成，后者通过选择设备来实现。绘制自己的光标的示例在 GTK 分布中。
-
-
-
-
 
 # A. GTK 信号
 
@@ -9262,20 +9107,20 @@ gdk_input_set_key()
 
 我们不保证本文档符合其预期用途。本文档仅作为免费资源提供。因此，所提供信息的作者和维护者无法对信息的准确性做出保证。
 
-# A. GTK 信号
+## A. GTK 信号
 
 由于 GTK 是一个面向对象的部件集，它具有继承层次结构。这种继承机制也适用于信号。因此，在使用在本节列出的信号时，您应该参考部件层次树。
 
-## A.1 GtkObject
+### A.1 GtkObject
 
-```
+```c
 void GtkObject::destroy (GtkObject *,
 gpointer);
 ```
 
-## A.2 GtkWidget
+### A.2 GtkWidget
 
-```
+```c
 void GtkWidget::show (GtkWidget *,
 gpointer);
 void GtkWidget::hide (GtkWidget *,
@@ -9303,17 +9148,32 @@ void GtkWidget::size-allocate (GtkWidget *,
 gpointer,
 gpointer);
 void GtkWidget::state-changed (GtkWidget *,
-GtkStateType,
+```
+
+
+
+### GtkStateType
+
+```c
 gpointer);
+```
+
+```c
 void GtkWidget::parent-set (GtkWidget *,
 GtkObject *,
 gpointer);
+```
+
+```c
 void GtkWidget::style-set (GtkWidget *,
 GtkStyle *);
 ```
 
-```
+```c
 gpointer);
+```
+
+```c
 void GtkWidget::add-accelerator (GtkWidget *,
 guint,
 GtkAccelGroup *,
@@ -9323,7 +9183,11 @@ GtkAccelFlags,
 gpointer);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 void GtkWidget::remove-accelerator (GtkWidget *,
 GtkAccelGroup *,
 guint,
@@ -9331,178 +9195,293 @@ GdkModifierType,
 gpointer);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 boolean GtkWidget::event (GtkWidget *,
 GdkEvent *,
 gpointer);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 boolean GtkWidget::button-press-event (GtkWidget *,
 GdkEvent *,
 gpointer);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 boolean GtkWidget::button-release-event (GtkWidget *,
 GdkEvent *,
 gpointer);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 boolean GtkWidget::motion-notify-event (GtkWidget *,
 GdkEvent *,
 gpointer);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 boolean GtkWidget::delete-event (GtkWidget *,
 GdkEvent *,
 gpointer);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 boolean GtkWidget::destroy-event (GtkWidget *,
 GdkEvent *,
 gpointer);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 boolean GtkWidget::expose-event (GtkWidget *,
 GdkEvent *,
 gpointer);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 boolean GtkWidget::key-press-event (GtkWidget *,
 GdkEvent *,
 gpointer);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 boolean GtkWidget::key-release-event (GtkWidget *,
 GdkEvent *,
 gpointer);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 boolean GtkWidget::enter-notify-event (GtkWidget *,
 GdkEvent *,
 gpointer);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 boolean GtkWidget::leave-notify-event (GtkWidget *,
 GdkEvent *,
 gpointer);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 boolean GtkWidget::configure-event (GtkWidget *,
 GdkEvent *,
 gpointer);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 boolean GtkWidget::focus-in-event (GtkWidget *,
 GdkEvent *,
 gpointer);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 boolean GtkWidget::focus-out-event (GtkWidget *,
 GdkEvent *,
 gpointer);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 boolean GtkWidget::map-event (GtkWidget *,
 GdkEvent *);
 ```
 
-```
+```c
 gpointer);
+```
+
+```c
 boolean GtkWidget::unmap-event (GtkWidget *,
 GdkEvent *,
 gpointer*);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 boolean GtkWidget::property-notify-event (GtkWidget *,
 GdkEvent *,
 gpointer*);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 boolean GtkWidget::selection-event (GtkWidget *,
 GdkEvent *,
 gpointer*);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 boolean GtkWidget::selection-request-event (GtkWidget *,
 GdkEvent *,
 gpointer*);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 boolean GtkWidget::selection-notify-event (GtkWidget *,
 GdkEvent *,
 gpointer*);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 void GtkWidget::selection-get (GtkWidget *,
 GtkSelectionData *,
 guint,
 gpointer*);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 void GtkWidget::selection-received (GtkWidget *,
 GtkSelectionData *,
 guint,
 gpointer*);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 boolean GtkWidget::proximity-in-event (GtkWidget *,
 GdkEvent *,
 gpointer*);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 boolean GtkWidget::proximity-out-event (GtkWidget *,
 GdkEvent *,
 gpointer*);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 void GtkWidget::drag-begin (GtkWidget *,
 GtkDragContext *,
 gpointer*);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 void GtkWidget::drag-end (GtkWidget *,
 GtkDragContext *,
 gpointer*);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 void GtkWidget::drag-delete (GtkWidget *,
 GtkDragContext *,
 gpointer*);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 void GtkWidget::drag-leave (GtkWidget *,
 GtkDragContext *,
 guint,
 gpointer*);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 boolean GtkWidget::drag-motion (GtkWidget *,
 GtkDragContext *,
 guint,
@@ -9510,7 +9489,11 @@ gint,
 gpointer*);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 boolean GtkWidget::drag-drop (GtkWidget *,
 GtkDragContext *,
 guint,
@@ -9518,16 +9501,23 @@ gint,
 gpointer*);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 void GtkWidget::drag-data-get (GtkWidget *,
 GtkDragContext *);
 ```
 
-```
+```c
 GtkSelectionData *,
 guint,
 gint,
 gpointer);
+```
+
+```c
 void GtkWidget::drag-data-received (GtkWidget *,
 GtkDragContext *,
 guint,
@@ -9536,24 +9526,43 @@ GtkSelectionData *,
 guint,
 gint,
 gpointer););
+```
+
+```c
+gpointer);
+```
+
+```c
 boolean GtkWidget::client-event (GtkWidget *,
 GdkEvent *,
 gpointer);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 boolean GtkWidget::no-expose-event (GtkWidget *,
 GdkEvent *,
 gpointer);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 boolean GtkWidget::visibility-event (GtkWidget *,
 GdkEvent *,
 gpointer);
 ```
 
+```c
+gpointer);
 ```
+
+```c
 boolean GtkWidget::debug (GtkWidget *,
 GtkString *,
 gpointer);
@@ -9561,148 +9570,87 @@ gpointer);
 
 ## A.3 GtkData
 
-```
+```c
 void GtkData::disconnect (GtkWidget *,
 gpointer);
 ```
 
 ## A.4 GtkContainer
 
-```
+```c
 void GtkContainer::add (GtkContainer *,
 GtkWidget *);
+```
+
+```c
 void GtkContainer::remove (GtkContainer *,
 GtkWidget *);
+```
+
+```c
 void GtkContainer::resize (GtkContainer *,
 gpointer);
+```
+
+```c
 void GtkContainer::set-focus (GtkContainer *,
 GtkType *,
 gpointer);
-void GtkContainer::set-child (GtkContainer *,
-GtkWidget *,
-gpointer);
 ```
+
+
 
 ## A.5 GtkCalendar
 
-```
-void GtkCalendar::changed (GtkCalendar *,
-gpointer);
-void GtkCalendar::day-selected (GtkCalendar *,gpointer);
-void GtkCalendar::double-click (GtkCalendar *,
-gpointer);
+```c
+void GtkCalendar::changed (GtkCalendar *, gpointer);
+void GtkCalendar::day-selected (GtkCalendar *, gpointer);
+void GtkCalendar::double-click (GtkCalendar *, gpointer);
 ```
 
 ## A.6 GtkEditable
 
-```
-void GtkEditable::changed (GtkEditable *,
-gpointer);
-void GtkEditable::insert (GtkEditable *,
-GtkString *,
-guint,
-gpointer);
-void GtkEditable::delete (GtkEditable *,
-guint,
-gpointer);
-void GtkEditable::activate (GtkEditable *,
-gpointer);
-void GtkEditable::set-editable (GtkEditable *,
-boolean,
-gpointer);
-void GtkEditable::move-cursor (GtkEditable *,
-gint,
-gpointer);
-void GtkEditable::move-word (GtkEditable *,
-gint,
-gpointer);
-void GtkEditable::move-page (GtkEditable *,
-gint,
-gpointer);
-void GtkEditable::move-to-row (GtkEditable *,
-gint,
-gpointer);
-void GtkEditable::move-to-column (GtkEditable *,
-gint,
-gpointer);
-void GtkEditable::kill-char (GtkEditable *,
-gint,
-gpointer);
-void GtkEditable::kill-word (GtkEditable *,
-gint,
-gpointer);
-void GtkEditable::kill-line (GtkEditable *,
-gint,
-gpointer);
-void GtkEditable::cut-clipboard (GtkEditable *,
-gpointer);
-void GtkEditable::copy-clipboard (GtkEditable *,
-gpointer);
+```c
+void GtkEditable::changed (GtkEditable *, gpointer);
+void GtkEditable::insert (GtkEditable *, GtkString *, guint, gpointer);
+void GtkEditable::delete (GtkEditable *, guint, gpointer);
+void GtkEditable::activate (GtkEditable *, gpointer);
+void GtkEditable::set-editable (GtkEditable *, boolean, gpointer);
+void GtkEditable::move-cursor (GtkEditable *, gint, gpointer);
+void GtkEditable::move-word (GtkEditable *, gint, gpointer);
+void GtkEditable::move-page (GtkEditable *, gint, gpointer);
+void GtkEditable::move-to-row (GtkEditable *, gint, gpointer);
+void GtkEditable::move-to-column (GtkEditable *, gint, gpointer);
+void GtkEditable::kill-char (GtkEditable *, gint, gpointer);
+void GtkEditable::kill-word (GtkEditable *, gint, gpointer);
+void GtkEditable::kill-line (GtkEditable *, gint, gpointer);
+void GtkEditable::cut-clipboard (GtkEditable *, gpointer);
+void GtkEditable::copy-clipboard (GtkEditable *, gpointer);
 ```
 
 ## A.7 GtkTipsQuery
 
-```
-void GtkTipsQuery::start-query (GtkTipsQuery *,
-gpointer);
-void GtkTipsQuery::stop-query (GtkTipsQuery *,
-gpointer);
-void GtkTipsQuery::widget-entered (GtkTipsQuery *,
-GtkWidget *,
-GtkString *,
-gpointer);
-boolean GtkTipsQuery::widget-selected (GtkTipsQuery *,
-GtkWidget *,
-GtkString *,
-GtkString *,
-GdkEvent *,
-gpointer);
+```c
+void GtkTipsQuery::start-query (GtkTipsQuery *, gpointer);
+void GtkTipsQuery::stop-query (GtkTipsQuery *, gpointer);
+void GtkTipsQuery::widget-entered (GtkTipsQuery *, GtkWidget *, GtkString *, gpointer);
+boolean GtkTipsQuery::widget-selected (GtkTipsQuery *, GtkWidget *, GtkString *, GtkString *, GdkEvent *, gpointer);
 ```
 
 ## A.8 GtkClist
 
-```
-void GtkClist::select-row (GtkClist *,
-gint,
-gint,
-GdkEvent *,
-gpointer);
-void GtkClist::unselect-row (GtkClist *,
-gint,
-gint,
-GdkEvent *,
-gpointer);
-void GtkClist::row-move (GtkClist *,
-gint,
-gint,
-gpointer);
-void GtkClist::click-column (GtkClist *,
-gint,
-gpointer);
-void GtkClist::resize-column (GtkClist *,
-gint,
-gint,
-gpointer);
-void GtkClist::toggle-focus-row (GtkClist *,
-gpointer);
-void GtkClist::select-all (GtkClist *,
-gpointer);
-void GtkClist::unselect-all (GtkClist *,
-gpointer);
-void GtkClist::undo-selection (GtkClist *,
-gpointer);
-void GtkClist::start-selection (GtkClist *,
-gpointer);
-```
-
-
-
-
-
-## A. GTK 信号::end-selection
-
 ```c
-void GtkClist:: (Gtk *, gpointer);
+void GtkClist::select-row (GtkClist *, gint, gint, GdkEvent *, gpointer);
+void GtkClist::unselect-row (GtkClist *, gint, gint, GdkEvent *, gpointer);
+void GtkClist::row-move (GtkClist *, gint, gint, gpointer);
+void GtkClist::click-column (GtkClist *, gint, gpointer);
+void GtkClist::resize-column (GtkClist *, gint, gint, gpointer);
+void GtkClist::toggle-focus-row (GtkClist *, gpointer);
+void GtkClist::select-all (GtkClist *, gpointer);
+void GtkClist::unselect-all (GtkClist *, gpointer);
+void GtkClist::undo-selection (GtkClist *, gpointer);
+void GtkClist::start-selection (GtkClist *, gpointer);
+void GtkClist::end-selection (GtkClist *, gpointer);
 void GtkClist::toggle-add-mode (GtkClist *, gpointer);
 void GtkClist::extend-selection (GtkClist *, GtkScrollType, float, gboolean, gpointer);
 void GtkClist::scroll-vertical (GtkClist *, GtkScrollType, float, gpointer);
@@ -9755,15 +9703,21 @@ void GtkTree::unselect-child (GtkTree *, GtkWidget *, gpointer);
 void GtkButton::pressed (GtkButton *, gpointer);
 void GtkButton::released (GtkButton *, gpointer);
 void GtkButton::clicked (GtkButton *, gpointer);
-void GtkButton::enter (GtkButton *, gpointer);
-void GtkButton::leave (GtkButton *, gpointer);
 ```
+
+
+
+void GtkButton::enter (GtkButton *, gpointer);
+
+void GtkButton::leave (GtkButton *, gpointer);
 
 ## A.15 GtkItem
 
 ```c
 void GtkItem::select (GtkItem *, gpointer);
+
 void GtkItem::deselect (GtkItem *, gpointer);
+
 void GtkItem::toggle (GtkItem *, gpointer);
 ```
 
@@ -9777,6 +9731,7 @@ void GtkWindow::set-focus (GtkWindow *, gpointer, gpointer);
 
 ```c
 void GtkHandleBox::child-attached (GtkHandleBox *, GtkWidget *, gpointer);
+
 void GtkHandleBox::child-detached (GtkHandleBox *, GtkWidget *, gpointer);
 ```
 
@@ -9790,6 +9745,7 @@ void GtkToggleButton::toggled (GtkToggleButton *, gpointer);
 
 ```c
 void GtkMenuItem::activate (GtkMenuItem *, gpointer);
+
 void GtkMenuItem::activate-item (GtkMenuItem *, gpointer);
 ```
 
@@ -9797,14 +9753,23 @@ void GtkMenuItem::activate-item (GtkMenuItem *, gpointer);
 
 ```c
 void GtkListItem::focus-row (GtkListItem *, gpointer);
+
 void GtkListItem::select-all (GtkListItem *, gpointer);
+
 void GtkListItem::unselect-all (GtkListItem *, gpointer);
+
 void GtkListItem::undo-selection (GtkListItem *, gpointer);
+
 void GtkListItem::start-selection (GtkListItem *, gpointer);
+
 void GtkListItem::end-selection (GtkListItem *, gpointer);
+
 void GtkListItem::toggle-add-mode (GtkListItem *, gpointer);
+
 void GtkListItem::extend-selection (GtkListItem *, GtkEnum, float, boolean, gpointer);
+
 void GtkListItem::scroll-vertical (GtkListItem *, GtkEnum, float, gpointer);
+
 void GtkListItem::scroll-horizontal (GtkListItem *, GtkEnum, float, gpointer);
 ```
 
@@ -9812,6 +9777,7 @@ void GtkListItem::scroll-horizontal (GtkListItem *, GtkEnum, float, gpointer);
 
 ```c
 void GtkTreeItem::collapse (GtkTreeItem *, gpointer);
+
 void GtkTreeItem::expand (GtkTreeItem *, gpointer);
 ```
 
@@ -9825,6 +9791,7 @@ void GtkCheckMenuItem::toggled (GtkCheckMenuItem *, gpointer);
 
 ```c
 void GtkInputDialog::enable-device (GtkInputDialog *, guint, gpointer);
+
 void GtkInputDialog::disable-device (GtkInputDialog *, guint, gpointer);
 ```
 
@@ -9838,6 +9805,7 @@ void GtkColorSelection::color-changed (GtkColorSelection *, gpointer);
 
 ```c
 void GtkStatusBar::tree-pulsed (GtkStatusBar *, guint, gpointer);
+
 void GtkStatusBar::tree-popped (GtkStatusBar *, guint, gpointer);
 ```
 
@@ -9845,10 +9813,15 @@ void GtkStatusBar::tree-popped (GtkStatusBar *, guint, gpointer);
 
 ```c
 void GtkTree::tree-select (GtkTree *, guint, gpointer);
+
 void GtkTree::unselect-row (GtkTree *, guint, gpointer);
+
 void GtkTree::tree-expand (GtkTree *, guint, gpointer);
+
 void GtkTree::tree-collapse (GtkTree *, guint, gpointer);
+
 void GtkTree::tree-move (GtkTree *, guint, gpointer);
+
 void GtkTree::change-focus-row (GtkTree *, guint, gpointer);
 ```
 
@@ -9862,6 +9835,7 @@ void GtkCurve::curve-type-changed (GtkCurve *, gpointer);
 
 ```c
 void GtkAdjustment::changed (GtkAdjustment *, gpointer);
+
 void GtkAdjustment::value-changed (GtkAdjustment *, gpointer);
 ```
 
@@ -9869,24 +9843,24 @@ void GtkAdjustment::value-changed (GtkAdjustment *, gpointer);
 
 以下数据类型由 GTK+ 传递到事件处理程序中。对于每种数据类型，列出了使用该类型的信号：
 
-- GdkEvent: drag_end_event
-- GdkEventType: delete_event, destroy_event, map_event, unmap_event, no_expose_event
-- GdkEventExpose: expose_event
-- GdkEventNoExpose
-- GdkEventMotion: motion_notify_event
-- GdkEventButton: button_press_event
-- GdkEventKey: button-press_event, button-release_event
-- GdkEventCrossing: enter_notify_event, leave_notify_event
-- GdkEventFocus: focus_in_event, focus_out_event
-- GdkEventConfigure: configure_event
-- GdkEventProperty: property_notify_event
-- GdkEventSelection: selection_clear_event, selection_request_event, selection_notify_event
-- GdkEventProximity: proximity_in_event, proximity_out_event
-- GdkEventDrag: drag_begin_event, drag_request_event
-- GdkEventDrop: drop_enter_event, drop_leave_event
-- GdkEventData: data_available_event
-- GdkEventClient: client_event
-- GdkEventOther: other_event
+- `GdkEvent`: `drag_end_event`
+- `GdkEventType`: `delete_event`, `destroy_event`, `map_event`, `unmap_event`, `no_expose_event`
+- `GdkEventExpose`: `expose_event`
+- `GdkEventNoExpose`
+- `GdkEventMotion`: `motion_notify_event`
+- `GdkEventButton`: `button_press_event`
+- `GdkEventKey`: `button-press_event`, `button-release_event`
+- `GdkEventCrossing`: `enter_notify_event`, `leave_notify_event`
+- `GdkEventFocus`: `focus_in_event`, `focus_out_event`
+- `GdkEventConfigure`: `configure_event`
+- `GdkEventProperty`: `property_notify_event`
+- `GdkEventSelection`: `selection_clear_event`, `selection_request_event`, `selection_notify_event`
+- `GdkEventProximity`: `proximity_in_event`, `proximity_out_event`
+- `GdkEventDrag`: `drag_begin_event`, `drag_request_event`
+- `GdkEventDrop`: `drop_enter_event`, `drop_leave_event`
+- `GdkEventData`: `data_available_event`
+- `GdkEventClient`: `client_event`
+- `GdkEventOther`: `other_event`
 
 事件类型与其他类型不同，它允许将其转换为特定的事件数据。因此，事件类型定义如下：
 
@@ -9903,28 +9877,51 @@ typedef enum {
   GDK_BUTTON_RELEASE = 5,
   GDK_KEY_PRESS = 6,
   GDK_KEY_RELEASE = 7,
-  GDK_ENTER_NOTIFY = 8,
-  GDK_LEAVE_NOTIFY = 9,
-  GDK_FOCUS_CHANGE = 10,
-  GDK_CONFIGURE = 11,
-  GDK_MAP = 12,
-  GDK_UNMAP = 13,
-  GDK_PROPERTY_NOTIFY = 14,
-  GDK_SELECT_CLEAR = 15,
-  GDK_SELECT_REQUEST = 16,
-  GDK_SELECT_NOTIFY = 17,
-  GDK_PROXIMITY_IN = 18,
-  GDK_PROXIMITY_OUT = 19,
-  GDK_DRAG_BEGIN = 20,
-  GDK_DRAG_REQUEST = 21,
-  GDK_DROP_ENTER = 22,
-  GDK_DROP_LEAVE = 23,
-  GDK_DATA_AVAIL = 24,
-  GDK_CLIENT = 25,
-  GDK_VISIBILITY_NOTIFY = 26,
-  GDK_NO_EXPOSE = 99 /* 已弃用，请使用过滤器 */
-} GdkEventType;
 ```
+
+
+
+`GDK_ENTER_NOTIFY` = 8,
+
+`GDK_LEAVE_NOTIFY` = 9,
+
+`GDK_FOCUS_CHANGE` = 10,
+
+`GDK_CONFIGURE` = 11,
+
+`GDK_MAP` = 12,
+
+`GDK_UNMAP` = 13,
+
+`GDK_PROPERTY_NOTIFY` = 14,
+
+`GDK_SELECT_CLEAR` = 15,
+
+`GDK_SELECT_REQUEST` = 16,
+
+`GDK_SELECT_NOTIFY` = 17,
+
+`GDK_PROXIMITY_IN` = 18,
+
+`GDK_PROXIMITY_OUT` = 19,
+
+`GDK_DRAG_BEGIN` = 20,
+
+`GDK_DRAG_REQUEST` = 21,
+
+`GDK_DROP_ENTER` = 22,
+
+`GDK_DROP_LEAVE` = 23,
+
+`GDK_DATA_AVAIL` = 24,
+
+`GDK_CLIENT` = 25,
+
+`GDK_VISIBILITY_NOTIFY` = 26,
+
+`GDK_NO_EXPOSE` = 99 /* 已弃用，请使用过滤器 */
+
+} `GdkEventType`;
 
 事件类型与其他类型不同，允许将其转换为特定的事件数据。所以，事件类型定义如下：
 
@@ -9948,8 +9945,6 @@ struct _GdkNoExpose {
   GdkWindow *window;
   gint send_event;
   /* XXX: 有人需要 X major_code 或 minor_code 字段吗? */
-
-
 struct _GdkVisibility {
   GdkEventType type;
   GdkWindow *window;
@@ -9997,10 +9992,6 @@ struct _GdkEventKey {
   gint send_event;
 };
 ```
-
-
-
-
 
 # B. GDK 事件类型
 
@@ -10071,8 +10062,7 @@ struct _GdkEventSelection
   guint32 time;
 };
 ```
-
-/* 此事件类型极少使用。它仅重要
+/* 此事件类型极少使用。它仅重要 */
 
 ```c
 struct _GdkEventDropEnter {
@@ -10146,9 +10136,10 @@ struct _GdkClient {
   gushort data_format;
   union {
 ```
-```
 
 # C. 代码示例
+
+
 
 ```c
 char b[20];
@@ -10169,9 +10160,9 @@ struct _GdkEventOther
 
 以下是上文中使用的示例，这些示例在其他地方未完整包含。
 
-## C.1 井井棋 (Tictactoe)
+### C.1 井井棋 (Tictactoe)
 
-## C.1.1 tictactoe
+#### C.1.1 tictactoe
 
 ```c
 /* example-tictactoe-start tictactoe tictactoe.h */
@@ -10205,17 +10196,17 @@ extern "C" {
 #endif /* __cplusplus */
 ```
 
-# C. 代码示例
-
 ```c
 #define TICTATOE(obj) GTK_CHECK_CAST(obj, tictactoe_get_type (), Tictactoe)
 #define TICTATOE_CLASS(klass) GTK_CHECK_CLASS(klass, tictactoe_get_type (), Tictactoe)
 #define IS_TICTATOE(obj) GTK_CHECK_TYPE(obj, tictactoe_get_type ())
 ```
+
 ```c
 typedef struct _Tictactoe Tictactoe;
 struct _TictactoeClass TictactoeClass;
 ```
+
 ```c
 struct _Tictactoe
 {
@@ -10223,6 +10214,7 @@ struct _Tictactoe
   GtkWidget *buttons[3];
 };
 ```
+
 ```c
 struct _TictactoeClass
 {
@@ -10230,44 +10222,67 @@ struct _TictactoeClass
   void (*tictactoe)(Tictactoe *class);
 };
 ```
+
 ```c
 guint tictactoe_get_type (void);
 GtkWidget* tictactoe_new (void);
 void tictactoe_clear (Tictactoe *ttt);
 ```
+
 ```c
 #ifdef __cplusplus
 /* __cplusplus */
 #endif /* _TICTACTOE_H_ */
 ```
+
 ```c
 /* example-end */
+```
 
-## C.1.2 tictactoe.c
+#### C.1.2 tictactoe.c
 
 ```c
 /* example-start tictactoe tictactoe.c */
+
 /* GTK - GIMP 工具包
+
 * 版所有 (C) 1995-1997 Peter Mathis, Spencer Kimball and Josh MacDonald
+
 * 此库是自由软件；你可以根据 GNU 库通用公共许可证
+
 * 的条款重新分发和/或修改它，该许可证由 Free Software Foundation 发布，
+
 * 可以该许可证的第 2 版本，
+
 * 或（根据你的选择）任何后续版本。
 
 * 分发此库的希望它是有用的，
+
 * 但**不提供任何保证**，即使对商品性或
+
 * 特殊用途的适用性的明示保证。更多信息请参阅 GNU
+
 * 库通用公共许可证。
 
 * 你应该在收到此库的同时收到了一份 GNU 库通用公共
+
 * 许可证的副本；如果没有，请写信至
+
 * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+
 * Boston, MA 02111-1307, USA.
+
 */
+
 #include "gtk/signal.h"
+
 #include "gtk/table.h"
+
 #include "gtk/togglebutton.h"
+
 #include "tictactoe.h"
+```
+
 ```c
 enum {
     TICTACTOE_SIGNAL,
@@ -10279,76 +10294,118 @@ static void tictactoe_init (Tictactoe *ttt);
 static void tictactoe_toggle (GtkWidget *widget, Tictactoe *ttt);
 
 static int tictactoe_signals[LAST_SIGNAL] = { 0 };
+```
+
 ```c
 guint tictactoe_get_type () {
+
     static int ttt_type = 0;
 
     if (!ttt_type) {
+
         GTypeInfo ttt_info = {
+
             "Tictactoe",
+
             sizeof(Tictactoe),
+
             sizeof(TictactoeClass),
+
             (GClassInitFunc) tictactoe_class_init,
+
             (GObjectInitFunc) tictactoe_init,
+
             (GtkArgSetFunc) NULL,
+
             (GtkArgGetFunc) NULL
+
         };
 
         ttt_type = gtk_type_unique (gtk_vbox_get_type (), &ttt_info);
+
     }
 
     return ttt_type;
+
 }
 ```
+
 ```c
 static void tictactoe_class_init (TictactoeClass *class) {
+
     GObject *object_class = (GObject*)class->class;
 
     tictactoe_signals[TICTACTOE_SIGNAL] = gtk_signal_new("tictactoe",
+
         GTK_RUN_FIRST,
+
         object_class->offset,
+
         GTK_SIGNAL_OFFSET, tictactoe,
+
         gtk_signal_default_marshaller,
+
         GTK_TYPE_NONE, 0);
 
     gtk_object_class_add_signals (object_class, tictactoe_signals, LAST_SIGNAL);
+
     class->tictactoe = NULL;
+
 }
 ```
+
 ```c
 static void tictactoe_init (Tictactoe *ttt)
+
 {
+
   GtkWidget *table;
+
   int i, j;
 
   table = gtk_table_new (3, 3, TRUE);
+
   gtk_container_add (GTK_CONTAINER(ttt), table);
+
   gtk_widget_show (table);
 
   for (i=0; i<3; i++)
+
     for (j=0; j<3; j++)
+
     {
+
       ttt->buttons[i][j] = gtk_toggle_button_new ();
+
       gtk_table_attach (GTK_TABLE(table), ttt->buttons[i][j], i, j, i+1, j+1);
+
       gtk_signal_connect (GTK_OBJECT (ttt->buttons[i][j]), "toggled",
-                        GTK_SIGNAL_FUNC (tictactoe_toggle), ttt);
-      gtk_widget_set_size (ttt->buttons[i][j], 20, 20);
-      gtk_widget_show (ttt->buttons[i][j]);
-    }
-}
 ```
+
+
+
+GTK_SIGNAL_FUNC (tictactoe_toggle), ttt);
+
+gtk_widget_set_size (ttt->buttons[i][j], 20, 20);
+
+gtk_widget_show (ttt->buttons[i][j]);
+
+}
+
+}
+
 ```c
 GtkWidget* tictactoe_new ()
 {
   return GTK_WIDGET (gtk_type_tictactoe_get_type ());
 }
 ```
+
 ```c
 void
 tictactoe_clear (Tictactoe *ttt)
 {
   int i, j;
-
   for (i=0; i<3; i++)
     for (j=0; j<3; j++)
     {
@@ -10358,6 +10415,7 @@ tictactoe_clear (Tictactoe *ttt)
     }
 }
 ```
+
 ```c
 static void
 tictactoe_toggle (GtkWidget *widget, Tictactoe *ttt)
@@ -10368,7 +10426,6 @@ tictactoe_toggle (GtkWidget *widget, Tictactoe *ttt)
   static int rwins[8][3] = {{ 0, 0, 0 }, { 1, 1, 1 }, { 2, 2, 2 },
                             { 0, 1, 2 }, { 2, 1, 0 },
                             { 0, 2, 1 }, { 1, 2, 0 }, { 2, 0, 1}};
-
   for (k=0; k<8; k++)
   {
     for (i=0; i<3; i++)
@@ -10379,14 +10436,12 @@ tictactoe_toggle (GtkWidget *widget, Tictactoe *ttt)
         break;
       }
     }
-
     if (success)
     {
       found = TRUE;
       break;
     }
   }
-
   if (success && found)
   {
     gtk_signal_emit (GTK_OBJECT (ttt),
@@ -10395,61 +10450,46 @@ tictactoe_toggle (GtkWidget *widget, Tictactoe *ttt)
   }
 }
 ```
+
 ```c
 int
 main (int argc, char *argv[])
 {
     GtkWidget *window;
     GtkWidget *ttt;
-
     gtk_init (&argc, &argv);
-
     window = gtk_window_new (GTK_WINDOW_TOPLEVEL);
-
     gtk_window_set_title (GTK_WINDOW (window), "井井棋")
-
     ttt = tictactoe_new ();
     gtk_container_add (GTK_CONTAINER (window), ttt);
-
     gtk_widget_show_all (window);
-
     gtk_main_connect (window, "destroy", G_CALLBACK (gtk_main_quit), NULL);
-
     gtk_main ();
-
     return 0;
 }
 ```
 
-
-
-
-
 # C. 代码示例
 
-```
+```c
 gtk_signal_connect (GTK_OBJECT (window), "destroy",
       GTK_SIGNAL_FUNC (gtk_exit), NULL);
 ```
 
-```
+```c
 gtk_container_set_border_width (GTK_CONTAINER (window), 10);
-
 ttt = tictacteo_new();
 gtk_container_add (GTK_CONTAINER (window), ttt);
 gtk_widget_show(ttt);
-
 gtk_signal_connect (GTK_OBJECT (ttt), "tictacteo",
       GTK_SIGNAL_FUNC (win), NULL);
-
 gtk_widget_show (window);
-
 int main () {
     return 0;
 }
 ```
 
-```
+```c
 /* example-end */
 ```
 
@@ -10467,12 +10507,10 @@ int main () {
 * GNU 库通用公共许可许可证的条款
 * 重新分发和/或修改它；该许可证的第 2 版本
 * 或（根据您的选择）任何后续版本。
-
 * 分发此库的目的是希望它是有用的，
 * 但不提供任何保证；；不包含对商品性或
 * 特定特定用途的适用性的暗示保证。更多详情请参阅 GNU
 * 库通用公共许可许可证。
-
 * 您应该在收到此库的同时收到一份 GNU 库通用公共
 * 许可证的副本；如果没有，请写信给
 * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
@@ -10505,25 +10543,19 @@ struct _GtkDial
   GtkWidget widget;
   /* 更新策略 GTK_UPDATE_[CONTINUOUS/DELAYED/DISCONTINUOUS] */
   guint policy : 2;
-
   /* 当前按下的按钮，如果没有则为 0 * */
   guint8 button;
-
   /* 旋钮组件的尺寸 */
   int radius,
   gint pointer_width;
-
   /* 更新计时器的 ID，如果没有则为 0 * */
   guint32 timer;
-
   /* 当前角度 * */
   gfloat angle;
-
   /* 从调整对象存储的旧值，以便我们何时发生了变化 */
   gfloat old_value,
   gfloat old_lower,
   gfloat old_upper;
-
   /* 存储此旋钮数据的调整对象 * */
   GtkAdjustment *adjustment;
 };
@@ -10540,9 +10572,13 @@ struct _GtkDialClass
 GtkWidget*          gtk_dial_new            (GtkAdjustment *adjustment);
 guint               gtk_dial_get_type      (void);
 GtkAdjustment*      gtk_dial_get_adjustment (GtkDial *dial);
-void               gtk_dial_set_update_policy (GtkDial *dial, GtkUpdateType policy);
-void               gtk_dial_set_adjustment (GtkDial *dial, GtkAdjustment *adjustment);
 ```
+
+
+
+### void `gtk_dial_set_update_policy` (`GtkDial *dial`, `GtkUpdateType policy`);
+
+### void `gtk_dial_set_adjustment` (`GtkDial *dial`, `GtkAdjustment *adjustment`);
 
 ```c
 #ifdef __cplusplus
@@ -10555,7 +10591,7 @@ void               gtk_dial_set_adjustment (GtkDial *dial, GtkAdjustment *adjust
 /* example-end */
 ```
 
-## C.2.2 gtkdial.c
+## C.2.2 `gtkdial.c`
 
 ```c
 /* example-start gtkdial.c */
@@ -10591,26 +10627,28 @@ void               gtk_dial_set_adjustment (GtkDial *dial, GtkAdjustment *adjust
 
 ```c
 /* 前向声明 */
-static void gtk_dial_class_init(GtkDialClass *klass);
-static void gtk_dial_init(GtkDial *dial);
-static void gtk_dial_destroy(GtkObject *object);
-static void gtk_dial_realize(GtkWidget *widget);
-static void gtk_dial_size_request(GtkWidget *widget, GtkRequisition *requisition);
-static void gtk_dial_size_allocate(GtkWidget *widget, GtkAllocation *allocation);
-static int gtk_dial_expose(GtkWidget *widget, GdkEvent *event);
-static int gtk_dial_button_press(GtkWidget *widget, GdkEvent *event);
-static int gtk_dial_button_release(GtkWidget *widget, GdkEvent *event);
-static int gtk_dial_motion_notify(GtkWidget *widget, GdkEvent *event);
-static void gtk_dial_timer(GtkDial *dial);
-static void gtk_dial_mouse(GtkDial *dial, int x, int y);
-static void gtk_dial_update(GtkDial *dial);
-static void gtk_dial_adjustment_changed(GtkAdjustment *adjustment, gpointer data);
-static void gtk_dial_adjustment_value_changed(GtkAdjustment *adjustment, gpointer data);
+static void `gtk_dial_class_init`(`GtkDialClass *klass`);
+static void `gtk_dial_init`(`GtkDial *dial`);
+static void `gtk_dial_destroy`(`GtkObject *object`);
+static void `gtk_dial_realize`(`GtkWidget *widget`);
+static void `gtk_dial_size_request`(`GtkWidget *widget`, `GtkRequisition *requisition`);
+static void `gtk_dial_size_allocate`(`GtkWidget *widget`, `GtkAllocation *allocation`);
+static int `gtk_dial_expose`(`GtkWidget *widget`, `GdkEvent *event`);
+static int `gtk_dial_button_press`(`GtkWidget *widget`, `GdkEvent *event`);
+static int `gtk_dial_button_release`(`GtkWidget *widget`, `GdkEvent *event`);
+static int `gtk_dial_motion_notify`(`GtkWidget *widget`, `GdkEvent *event`);
+static void `gtk_dial_timer`(`GtkDial *dial`);
+static void `gtk_dial_mouse`(`GtkDial *dial`, int x, int y);
+static void `gtk_dial_update`(`GtkDial *dial`);
+static void `gtk_dial_adjustment_changed`(`GtkAdjustment *adjustment`, gpointer data);
+static void `gtk_dial_adjustment_value_changed`(`GtkAdjustment *adjustment`, gpointer data);
+```
+
 ```c
 /* 本地数据 */
 static GtkWidgetClass *parent_class = NULL;
 
-gint gtk_dial_get_type (void)
+gint `gtk_dial_get_type` (void)
 {
     static GType dial_type = 0;
 
@@ -10619,8 +10657,8 @@ gint gtk_dial_get_type (void)
             "GtkDial",
             sizeof(GtkDial),
             sizeof(GtkDialClass),
-            (GtkClassFunc) gtk_dial_init,
-            (GtkClassFunc) gtk_dial_class_init,
+            (GtkClassFunc) `gtk_dial_init`,
+            (GtkClassFunc) `gtk_dial_class_init`,
             (GtkClassFunc) NULL,
             (GtkClassFunc) NULL,
             (GtkClassFunc) NULL,
@@ -10636,29 +10674,30 @@ gint gtk_dial_get_type (void)
     }
     return dial_type;
 }
+```
+
 ```c
 static void
-gtk_dial_class_init (GtkDialClass *class)
+`gtk_dial_class_init` (`GtkDialClass *class`)
 {
     GtkObjectClass *object_class;
     GtkWidgetClass *widget_class;
-
     object_class = (GtkObjectClass*)class;
     widget_class = (GtkWidgetClass*)class;
-
-    object_class->destroy = gtk_dial_destroy;
-
-    widget_class->realize = gtk_dial_realize;
-    widget_class->expose = gtk_dial_expose;
-    widget_class->size_request = gtk_dial_size_request;
-    widget_class->size_allocate = gtk_dial_size_allocate;
-    widget_class->button_press = gtk_dial_button_press;
-    widget_class->button_release = gtk_dial_button_release;
-    widget_class->motion_notify = gtk_dial_motion_notify;
+    object_class->destroy = `gtk_dial_destroy`;
+    widget_class->realize = `gtk_dial_realize`;
+    widget_class->expose = `gtk_dial_expose`;
+    widget_class->size_request = `gtk_dial_size_request`;
+    widget_class->size_allocate = `gtk_dial_size_allocate`;
+    widget_class->button_press = `gtk_dial_button_press`;
+    widget_class->button_release = `gtk_dial_button_release`;
+    widget_class->motion_notify = `gtk_dial_motion_notify`;
 }
+```
+
 ```c
 static void
-gtk_dial_init (GtkDial *dial)
+`gtk_dial_init` (`GtkDial *dial`)
 {
     dial->button = 0;
     dial->policy = GTK_UPDATE_CONTINUOUS;
@@ -10803,6 +10842,10 @@ GdkEventExpose *event)
 }
 ```
 
+
+
+### `gtk_dial_button_press`
+
 ```c
 static gint
 gtk_dial_button_press (GtkWidget *widget,
@@ -10844,6 +10887,8 @@ GdkEvent *event)
 }
 ```
 
+### `gtk_dial_button_release`
+
 ```c
 static gint
 gtk_dial_button_release (GtkWidget *widget,
@@ -10873,6 +10918,8 @@ GdkButton *event)
     return FALSE;
 }
 ```
+
+### `gtk_dial_motion_notify`
 
 ```c
 static gint
@@ -10921,6 +10968,8 @@ GdkMotionEvent *event)
 }
 ```
 
+### `gtk_dial_timer`
+
 ```c
 static gint
 gtk_dial_timer (GtkDial *dial)
@@ -10934,6 +10983,10 @@ gtk_dial_timer (GtkDial *dial)
     return FALSE;
 }
 ```
+
+
+
+# C. 代码示例
 
 ```c
 static void
@@ -11020,7 +11073,6 @@ static void
 gtk_dial_adjustment_changed (GtkAdjustment *GtkAdjustment *
 ```
 
-
 ```c
 {
   gpointer data) {
@@ -11070,22 +11122,36 @@ gtk_dial_adjustment_value_changed (GtkAdjustment *adjustment,
 /* example-start scribble-scribble-simple.c */
 
 /* * GTK - The GIMP Toolkit
+
  * Copyright (1995-1997 Peter Mattis, Spencer Kimball and Josh MacDonald
+
  * This library is free software, you can redistribute it and/or
+
  * modify it under the terms of the GNU General Public
+
  * Licensed by the Free Software Foundation; either
+
  * version 2 of the License, or (at your option) any later version.
 
 /* * This library is distributed in the hope that it will be useful,
+
  * but WITHOUT ANY WARRANTY; without the implied warranty of
+
  * MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+
  * Library General Public License for more details.
+
  * You should have received a copy of the GNU Library General Public
+
  * License along with this library; if not, write to the
+
  * Free Software Foundation, Inc., 59 Temple Place - Suite 330,
+
  * Boston, MA 02111-1307, USA. */
 
 # C. 代码示例
+
+
 
 ```c
 #include <gtk/gtk.h>
@@ -11224,11 +11290,13 @@ gtk_main();
 return 0;
 }
 /* example-end */
-```## D List Widget
+```
 
-注意：GtkList 组件已被 GTreeView 组件取代。为了完整起见，在此列出它。GtkList 组件设计用于作为 GtkListItem 类型组件的垂直容器。GtkList 组件拥有它自己的接收事件的窗口和背景颜色（通常为白色）。由于它直接派自 GtkContainer，可以使用 GTK_CONTAINER(List) 宏进行处理。用户应该熟悉 GList 的用法及其相关函数 `g_list_*`，以便充分使用 GtkList 组件。
+## D List Widget
 
-在 GtkList 组件的结构定义内部有一个我们感兴趣的字段：
+注意：`GtkList` 组件已被 `GTreeView` 组件取代。为了完整起见，在此列出它。`GtkList` 组件设计用于作为 `GtkListItem` 类型组件的垂直容器。`GtkList` 组件拥有它自己的接收事件的窗口和背景颜色（通常为白色）。由于它直接派自 `GtkContainer`，可以使用 `GTK_CONTAINER(List)` 宏进行处理。用户应该熟悉 `GList` 的用法及其相关函数 `g_list_*`，以便充分使用 `GtkList` 组件。
+
+在 `GtkList` 组件的结构定义内部有一个我们感兴趣的字段：
 
 ```c
 struct _GtkList
@@ -11238,16 +11306,21 @@ struct _GtkList
 };
 ```
 
-`selection` 字段指向所有选中项的链表，如果选择为空则指向 NULL。要了解当前选择，我们读取 `GtkList()->selection` 字段，但不要修改它，因为内部字段由 `gtk_list_*` 函数维护。
+`selection` 字段指向所有选中项的链表，如果选择为空则指向 `NULL`。要了解当前选择，我们读取 `GtkList()->selection` 字段，但不要修改它，因为内部字段由 `gtk_list_*` 函数维护。
 
-GtkList 的 `selection_mode` 决定了 GtkList 的选择机制，因此决定了 `GtkList()->selection` 字段的内容。选择可以是：
+`GtkList` 的 `selection_mode` 决定了 `GtkList` 的选择机制，因此决定了 `GtkList()->selection` 字段的内容。选择可以是：
 
-- GTK_SELECTION_SINGLE - 选择为 NULL 或包含单个选中项的 GList 指针。
-- GTK_SELECTION_BROWSE - 如果列表没有组件或只有禁用组件，则选择为 NULL；否则包含一个列表项。
-- GTK_SELECTION_MULTIPLE - 如果没有列表项，选择为 NULL 或包含第一个选中项的 GList 指针；随后变为第二个选中项的 GList 结构，依此类推。
-- GTK_SELECTION_EXTENDED - 选择始终为 NULL。
+- `GTK_SELECTION_SINGLE` - 选择为 `NULL` 或包含单个选中项的 `GList` 指针。
 
-默认值为 GTK_SELECTION_MULTIPLE。
+
+
+- `GTK_SELECTION_BROWSE` - 如果列表没有组件或只有禁用组件，则选择为 NULL；否则包含一个列表项。
+
+- `GTK_SELECTION_MULTIPLE` - 如果没有列表项，选择为 NULL 或包含第一个选中项的 `GList` 指针；随后变为第二个选中项的 `GList` 结构，依此类推。
+
+- `GTK_SELECTION_EXTENDED` - 选择始终为 NULL。
+
+默认值为 `GTK_SELECTION_MULTIPLE`。
 
 ## D.1 信号
 
@@ -11255,21 +11328,21 @@ GtkList 的 `selection_mode` 决定了 GtkList 的选择机制，因此决定了
 void selection_changed( GtkList *list );
 ```
 
-每当 GtkList 的选择变化时，此信号就会被调用。这在 GtkList 的子被选中或取消选中时发生。
+每当 `GtkList` 的选择变化时，此信号就会被调用。这在 `GtkList` 的子被选中或取消选中时发生。
 
 ```c
 void select_child( GtkList *list,
                    GtkWidget *child);
 ```
 
-当 GtkList 的子组件即将选中时，调用此信号。这主要发生在调用 `gtk_list_select_item(item)`、`gtk_list_select_child(child)`、按钮按下，以及有时在子组件添加到或移出 GtkList 时间接触发。
+当 `GtkList` 的子组件即将选中时，调用此信号。这主要发生在调用 `gtk_list_select_item(item)`、`gtk_list_select_child(child)`、按钮按下，以及有时在子组件添加到或移出 `GtkList` 时间接触发。
 
 ```c
 void unselect_child( GtkList *list,
                      GtkWidget *child);
 ```
 
-当 GtkList 的子组件即将取消选中时，调用此信号。这主要发生在调用 `gtk_list_unset_item(item)`、`gtk_list_unset_child(child)`、按钮按下，以及有时在子组件添加到或移出 GtkList 时间接触发。
+当 `GtkList` 的子组件即将取消选中时，调用此信号。这主要发生在调用 `gtk_list_unset_item(item)`、`gtk_list_unset_child(child)`、按钮按下，以及有时在子组件添加到或移出 `GtkList` 时间接触发。
 
 ## D.2 函数
 
@@ -11277,13 +11350,13 @@ void unselect_child( GtkList *list,
 guint gtk_list_get_type( void );
 ```
 
-返回 ‘GtkList’ 类型标识符。
+返回 `GtkList` 类型标识符。
 
 ```c
 GtkWidget *gtk_list_new( void );
 ```
 
-创建一个新的 GtkList 对象。返回一个指向 GtkWidget 对象的指针作为新组件。失败时返回 NULL。
+创建一个新的 `GtkList` 对象。返回一个指向 `GtkWidget` 对象的指针作为新组件。失败时返回 NULL。
 
 ```c
 void gtk_list_insert_items( GtkList *list,
@@ -11291,35 +11364,34 @@ void gtk_list_insert_items( GtkList *list,
                gint position);
 ```
 
-从位置开始向列表插入项。items 是一个双向链表，其中每个数据指针都预期指向一个新创建的 GtkListItem。items 的 GList 节点将被列表接管。
+从位置开始向列表插入项。`items` 是一个双向链表，其中每个数据指针都预期指向一个新创建的 `GtkListItem`。`items` 的 `GList` 节点将被列表接管。
 
 ```c
 void gtk_list_append_items( GtkList *list,
                GList *items);
 ```
 
-在列表末尾以类似于 `gtk_list_insert_items()` 的方式插入项。items 的 GList 节点将被列表接管。
+在列表末尾以类似于 `gtk_list_insert_items()` 的方式插入项。`items` 的 `GList` 节点将被列表接管。
 
 ```c
 void gtk_list_prepend_items( GtkList *list,
                GList *items);
 ```
 
-在列表最开头以类似于 `gtk_list_insert_items()` 的方式插入项。items 的 GList 节点将被列表接管。
+在列表最开头以类似于 `gtk_list_insert_items()` 的方式插入项。`items` 的 `GList` 节点将被列表接管。
 
 ```c
 void gtk_list_remove_items( GtkList *list,
                GList *items);
 ```
 
-从列表中移除项。items 是一个双向链表，其中每个数据指针都预期指向列表的直接子项。迭代者负责在之后调用 `g_list_free(items)`。此外，调用者必须自己销毁列表项。
+从列表中移除项。`items` 是一个双向链表，其中每个数据指针都预期指向列表的直接子项。迭代者负责在之后调用 `g_list_free(items)`。此外，调用者必须自己销毁列表项。
 
 ```c
 void gtk_list_clear_items( GtkList *list,
                gint start,
                gint end );
 ```
-
 
 从列表中移除并销毁列表项。如果组件在列表中的当前位置处于起始和结束指定的范围内，则该组件会受影响。
 
@@ -11387,7 +11459,7 @@ gint GTK_IS_LIST( gpointer obj);
 
 ## D.3 示例
 
-以下是一个示例程序，它将打印 GtkList 选择的变化，并允许你通过使用鼠标右键选择列表项来将它们“逮捕”到监狱中。
+以下是一个示例程序，它将打印 `GtkList` 选择的变化，并允许你通过使用鼠标右键选择列表项来将它们“逮捕”到监狱中。
 
 ```c
 /* 初始化 gtk+ (随后是 gdk) */
@@ -11421,6 +11493,8 @@ scrolled_widget_set_size(scrolled_window, 200, 150);
 gtk_container_add(GTK_CONTAINER(vbox), scrolled_window);
 gtk_widget_show(scrolled_window);
 ```
+
+
 
 ```c
 /* 创建 Gtklist。
@@ -11521,6 +11595,8 @@ for (i=0; i<10; i++) {
 gtk_list_append(GTK_LIST(dlist), dlist);
 ```
 
+
+
 ```c
 /* 最后我们想看到窗口，不是吗？ */
 gtk_widget_show(window);
@@ -11617,72 +11693,72 @@ void signal_point_selection(GtkWidget *gttklist,
 /* example-end */
 ```
 
-
-
-
 ## D. 列表 Widget
 
-## D.4 列表项 Widget
+### D.4 列表项 Widget
 
-GtkListItem Widget 被设计用于作为一个容器，最多容纳一个子元素，提供选择/取消选择的功能，就像 GtkList 窗口对其子元素需要的那样。
+`GtkListItem` Widget 被设计用于作为一个容器，最多容纳一个子元素，提供选择/取消选择的功能，就像 `GtkList` 窗口对其子元素需要的那样。
 
-GtkListItem 拥有它自己的窗口来接收事件，并有自己的背景颜色（通常为白色）。
-由于它直接派生自 GtkItem，因此可以使用 `GTK_ITEM(ListItem)` 宏对其进行处理，更多信息请参阅 GtkListItem widget。通常，GtkListItem 仅包含一个标签用于标识（例如 GtkList 内部的文件名），因此提供了便利函数 `gtk_list_item_new_with_label()`。通过单独创建一个 GtkLabel 并将其对齐方式设置为 `xalign=0` 且 `yalign=0.5` 也可以实现相同的效果。
-由于并不强制要求向 GtkListItem 添加 GtkLabel，你也可以向 GtkListItem 添加 GtkVBox 或 GtkArrow 等。
+`GtkListItem` 拥有它自己的窗口来接收事件，并有自己的背景颜色（通常为白色）。
 
-## D.5 信号
+由于它直接派生自 `GtkItem`，因此可以使用 `GTK_ITEM(ListItem)` 宏对其进行处理，更多信息请参阅 `GtkListItem` widget。通常，`GtkListItem` 仅包含一个标签用于标识（例如 `GtkList` 内部的文件名），因此提供了便利函数 `gtk_list_item_new_with_label()`。通过单独创建一个 `GtkLabel` 并将其对齐方式设置为 `xalign=0` 且 `yalign=0.5` 也可以实现相同的效果。
 
-GtkListItem 本身不会创建新的信号，而是继承了 GtkItem 的信号。*请参阅 GtkItem:: 获取更多信息。*
+由于并不强制要求向 `GtkListItem` 添加 `GtkLabel`，你也可以向 `GtkListItem` 添加 `GtkVBox` 或 `GtkArrow` 等。
 
-## D.6 函数
+### D.5 信号
+
+`GtkListItem` 本身不会创建新的信号，而是继承了 `GtkItem` 的信号。*请参阅 `GtkItem::` 获取更多信息。*
+
+### D.6 函数
 
 ```
 guint gtk_list_item_get_type( void );
 ```
 
-返回 'GtkListItem' 类型标识符。
+返回 `GtkListItem` 类型标识符。
 
 ```
 GtkWidget *gtk_list_item_new( void );
 ```
 
-创建一个新的 GtkListItem 对象。返回指向新 widget（GtkWidget）对象的指针。失败时返回 NULL。
+创建一个新的 `GtkListItem` 对象。返回指向新 widget（`GtkWidget`）对象的指针。失败时返回 NULL。
 
-``````
+```
 GtkWidget *gtk_list_item_new_with_label( gchar *label );
 ```
 
-创建一个新的 GtkListItem 对象，并包含单个 GtkLabel 作为唯一子元素。返回指向新 widget（GtkWidget）对象的指针。失败时返回 NULL。
+创建一个新的 `GtkListItem` 对象，并包含单个 `GtkLabel` 作为唯一子元素。返回指向新 widget（`GtkWidget`）对象的指针。失败时返回 NULL。
 
 ```
 void gtk_list_item_select( GtkListItem *list_item );
 ```
 
-此函数基本上是对 `gtk_list_item_select (GTK_ITEM (list_item))` 调用的封装，该调用会发出信号。*请参阅 GtkItem:: 获取更多信息。*
+此函数基本上是对 `gtk_list_item_select (GTK_ITEM (list_item))` 调用的封装，该调用会发出信号。*请参阅 `GtkItem::` 获取更多信息。*
 
 ```
 void gtk_list_item_deselect( GtkListItem *list_item );
 ```
 
-此函数基本上是对 `gtk_list_item_deselect (GTK_ITEM (list_item))` 调用的封装，该调用会发出信号。*请参阅 GtkItem:: 获取更多信息。*
+此函数基本上是对 `gtk_list_item_deselect (GTK_ITEM (list_item))` 调用的封装，该调用会发出信号。*请参阅 `GtkItem::` 获取更多信息。*
 
 ```
 GtkListItem *GTK_LIST_ITEM( gpointer obj );
 ```
 
-将通用指针转换为 'GtkListItem'。*请参阅 Standard Macros:: 获取更多信息。*
+将通用指针转换为 `GtkListItem`。*请参阅 `Standard Macros::` 获取更多信息。*
 
 ```
 GtkListItemClass *GTK_LIST_ITEM_CLASS( gpointer class );
 ```
 
-将通用指针转换为 GtkListItemClass*。*请参阅 Standard Macros:: 获取更多信息。*
+将通用指针转换为 `GtkListItemClass*`。*请参阅 `Standard Macros::` 获取更多信息。*
 
 ```
 gint GTK_IS_LIST_ITEM( gpointer obj );
 ```
 
-判断通用指针是否指向一个 'GtkListItem'。*请参阅 Standard Macros:: 获取更多信息。*
+判断通用指针是否指向一个 `GtkListItem`。*请参阅 `Standard Macros::` 获取更多信息。*
 
-## D.7 示例关于关于此内容请参见 GtkList 示例，该示例也涵盖了 GtkListItem 的用法。
+### D.7 示例
 
+关于此内容请参见 `GtkList` 示例，该示例也涵盖了 `GtkListItem` 的用法。

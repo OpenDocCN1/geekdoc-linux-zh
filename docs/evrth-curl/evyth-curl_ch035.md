@@ -1,6 +1,7 @@
+
 # 许可证
 
-curl 和 libcurl 在一个名为 MIT 许可证的开放源代码许可下分发。它简短、简单且易于理解。以下是完整内容：
+`curl`和`libcurl`在一个名为 MIT 许可证的开放源代码许可下分发。它简短、简单且易于理解。以下是完整内容：
 
 ```sh
 COPYRIGHT AND PERMISSION NOTICE

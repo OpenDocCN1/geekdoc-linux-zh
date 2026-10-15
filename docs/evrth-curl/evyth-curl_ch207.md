@@ -1,3 +1,4 @@
+
 # 所有选项
 
 这是`curl_easy_setopt()`可用的选项表。
@@ -39,7 +40,7 @@
 | `CURLOPT_COPYPOSTFIELDS` | 让 libcurl 将数据复制到 POST |
 | `CURLOPT_CRLF` | CRLF 转换 |
 | `CURLOPT_CRLFILE` | 证书吊销列表文件 |
-| `CURLOPT_CURLU` | CURLU *格式的 URL |
+| `CURLOPT_CURLU` | `CURLU *`格式的 URL |
 | `CURLOPT_CUSTOMREQUEST` | 自定义请求方法 |
 | `CURLOPT_DEBUGDATA` | 传递给调试回调的指针 |
 | `CURLOPT_DEBUGFUNCTION` | 调试回调函数 |
@@ -179,6 +180,9 @@
 | `CURLOPT_PROXY_SSL_OPTIONS` | HTTPS 代理 SSL 行为选项 |
 | `CURLOPT_PROXY_SSL_VERIFYHOST` | 将代理证书的名称与主机进行验证 |
 | `CURLOPT_PROXY_SSL_VERIFYPEER` | 验证代理的 SSL 证书 |
+
+
+
 | `CURLOPT_PROXY_SSLCERT_BLOB` | 从内存 blob 中获取的 SSL 代理客户端证书 |
 | `CURLOPT_PROXY_SSLCERT` | HTTPS 代理客户端证书 |
 | `CURLOPT_PROXY_SSLCERTTYPE` | 代理客户端 SSL 证书的类型 |

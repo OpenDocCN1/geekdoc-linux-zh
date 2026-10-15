@@ -1,10 +1,11 @@
-# 介绍 Rocky Linux 操作系统- Eldernode 博客
+
+# 介绍 Rocky Linux 操作系统——Eldernode 博客
 
 > 原文：<https://blog.eldernode.com/rocky-linux-operating-system/>
 
 ![Introduction Rocky Linux Operating System](img/1195a99f5aa8bd35d6e89b439f201e70.png)
 
-Rocky Linux 是一个社区企业操作系统，设计为 100% bug 对 bug 兼容美国顶级企业 Linux 发行版，现在它的下游合作伙伴已经改变了方向。它正由社区集中开发。这篇文章的主题是**介绍 Rocky Linux 操作系统**，我们将在下面详细讨论。如果你想买一个 [**Linux VPS**](https://eldernode.com/linux-vps/) 服务器，你可以在 [Eldernode](https://eldernode.com/) 看到可用的软件包。
+Rocky Linux 是一个社区企业操作系统，设计为 100% bug 对 bug 兼容美国顶级企业 Linux 发行版，现在它的下游合作伙伴已经改变了方向。它正由社区集中开发。这篇文章的主题是介绍 Rocky Linux 操作系统，我们将在下面详细讨论。如果你想买一个 [Linux VPS](https://eldernode.com/linux-vps/) 服务器，你可以在 [Eldernode](https://eldernode.com/) 看到可用的软件包。
 
 ## 洛基 Linux 操作系统简介
 
@@ -14,7 +15,7 @@ Rocky Linux 是一个社区企业操作系统，设计为 100% bug 对 bug 兼�
 
 在会谈中，CentOS 的原始创始人 Gregory Kurtzer 宣布 Linux 将发布 Rocky。Rocky Linux 在概念上与 CentOS 相同，只是它是由一个社区支持和开发的。
 
-### **洛基 Linux 的历史**
+### 洛基 Linux 的历史
 
 2020 年 12 月 8 日，RedHat 宣布停止 CentOS 的开发，CentOS 是 Red Hat Enterprise Linux 的下游版本。支持一个更高版本的流行操作系统“CentOS Stream”。
 
@@ -38,37 +39,33 @@ Rocky Linux 本身的许可是 3 条款 BSD，但是，因为 Linux 发行版是
 
 Rocky Linux 是 RHEL 8 的下游重建，因此符合 RHEL 8 的生命周期，因此将积极维护到 2029 年。
 
-下面是 Rocky Linux 桌面环境的图片:
+下面是 Rocky Linux 桌面环境的图片：
 
 ![Rocky-Linux-Desktop](img/eef3faa0e947b54f0ddb874f8c1d95f8.png)
 
-### **迁移到 Rocky Linux 的技巧**
+### 迁移到 Rocky Linux 的技巧
 
-在这一节中，我们想要解决迁移到 Rocky Linux 时需要考虑的要点。如果您正在计划或迁移到 Rocky Linux，您应该考虑以下几点:
+在这一节中，我们想要解决迁移到 Rocky Linux 时需要考虑的要点。如果您正在计划或迁移到 Rocky Linux，您应该考虑以下几点：
 
 首先，您需要注意您已经定制了操作系统包。这是因为迁移脚本执行同步分发，用 Rocky Linux 存储中的版本替换每个数据包，而不管 repo 版本是比安装的版本新还是旧。
 
 下一个需要注意的要点是 SecureBoot 在 Rocky Linux 上不可用。因为 RHEL 和 CentOS 支持 SecureBoot，所以在迁移系统之前，请确保您的基础架构依赖于 SecureBoot。
 
-需要注意的是，原来的 x86_64 架构目前支持。还提供 ISO 和 aarch64 (ARM64)封装。将来，将提供 ppc64le 支持。
+需要注意的是，原来的 `x86_64` 架构目前支持。还提供 ISO 和 `aarch64`（ARM64）封装。将来，将提供 `ppc64le` 支持。
 
-使用 migrate2rocky.sh 脚本可以非常容易地从其他类型的 EL8 进行迁移。
+使用 `migrate2rocky.sh` 脚本可以非常容易地从其他类型的 EL8 进行迁移。
 
-***注:*** 大多数基于 RHEL8 的操作系统都可以移植。但是如果这些系统是在 Katello、Uyuni 或 SUSE Manager 中注册的，就不能使用这个工具进行迁移。
+注：大多数基于 RHEL8 的操作系统都可以移植。但是如果这些系统是在 Katello、Uyuni 或 SUSE Manager 中注册的，就不能使用这个工具进行迁移。
 
-### **安装洛基 Linux** 的先决条件
+### 安装洛基 Linux 的先决条件
 
-为了能够安装 Rocky Linux 操作系统，您必须注意以下事项并提供它们:
+为了能够安装 Rocky Linux 操作系统，您必须注意以下事项并提供它们：
 
-_ 2 GB 或更多内存
-
-_ 20 GB 或更大的硬盘
-
-_ 2 个 CPU/vcpu(1.1 GHz 处理器)
-
-_ 互联网连接(可选)
-
-_ 可引导介质(USB/DVD)
+- 2 GB 或更多内存
+- 20 GB 或更大的硬盘
+- 2 个 CPU/`vcpu`（1.1 GHz 处理器）
+- 互联网连接（可选）
+- 可引导介质（USB/DVD）
 
 ## 结论
 

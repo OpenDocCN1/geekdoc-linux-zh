@@ -1,12 +1,14 @@
+
+
 # 计算句子中单词总数的程序
 
 > 原文：[`techbyexample.com/number-words-sentence-golang/`](https://techbyexample.com/number-words-sentence-golang/)
 
-## **概述**
+## 概述
 
-给定一个句子，计算其中的单词数。句子中的每个单词仅包含英文字符
+给定一个句子，计算其中的单词数。句子中的每个单词仅包含英文字符。
 
-示例
+### 示例
 
 ```go
 Input: "Hello World"
@@ -16,7 +18,7 @@ Input: "This is hat"
 Output: 3
 ```
 
-## **程序**
+## 程序
 
 下面是相应的程序。
 
@@ -56,9 +58,10 @@ func main() {
 }
 ```
 
-**输出**
+### 输出
 
 ```go
 2
 3
 ```
+

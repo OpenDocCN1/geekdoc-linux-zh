@@ -1,3 +1,4 @@
+
 # 如何在 CentOS 8 - Eldernode 上安装 OpenLiteSpeed
 
 > 原文：<https://blog.eldernode.com/install-openlitespeed-centos-8/>
@@ -18,7 +19,7 @@ OpenLiteSpeed 是一个开源、高性能、轻量级的 HTTP web 服务器。�
 # rpm -Uvh http://rpms.litespeedtech.com/centos/litespeed-repo-1.1-1.el8.noarch.rpm 
 ```
 
-**点**:上面的 rpm 命令将更新我们在系统上搜索和安装软件包时引用的 yum 库列表。
+**点**:上面的 `rpm` 命令将更新我们在系统上搜索和安装软件包时引用的 `yum` 库列表。
 
 ### 第二步:如何安装 OpenLiteSpeed Web 服务器
 
@@ -28,7 +29,7 @@ OpenLiteSpeed 是一个开源、高性能、轻量级的 HTTP web 服务器。�
 # yum install openlitespeed 
 ```
 
-**注意**:默认的 OpenLiteSpeed 安装目录是/usr/local/lsws。
+**注意**:默认的 OpenLiteSpeed 安装目录是`/usr/local/lsws`。
 
 ### 第三步:如何安装和保护 MariaDB 数据库系统
 
@@ -64,17 +65,17 @@ systemctl start mariadb  systemctl enable mariadb
 # /usr/local/lsws/admin/misc/admpass.sh
 ```
 
-或者，您可以为管理帐户设置一个不同的用户名，或者只需按 ENTER 键来保留默认值“admin”。然后，为管理用户设置一个[强密码](https://eldernode.com/how-to-create-strong-password/)，用于从 web 界面管理 OpenLiteSpeed。
+或者，您可以为管理帐户设置一个不同的用户名，或者只需按 `ENTER` 键来保留默认值“admin”。然后，为管理用户设置一个[强密码](https://eldernode.com/how-to-create-strong-password/)，用于从 web 界面管理 OpenLiteSpeed。
 
 ### 第五步:如何测试 OpenLiteSpeed 网页和管理界面
 
-OpenLiteSpeed 已经启动并运行。但是如果您想要启动、停止、重启或验证服务器的状态，请使用标准的 service 命令。
+OpenLiteSpeed 已经启动并运行。但是如果您想要启动、停止、重启或验证服务器的状态，请使用标准的 `service` 命令。
 
 ```
 # service lsws status 
 ```
 
-如果您在系统上运行防火墙，请确保打开系统上的端口 8088 和 7080。
+如果您在系统上运行防火墙，请确保打开系统上的端口 `8088` 和 `7080`。
 
 ```
 # firewall-cmd --zone=public --permanent --add-port=8088/tcp  # firewall-cmd --zone=public --permanent --add-port=7080/tcp  # firewall-cmd --reload
@@ -88,7 +89,7 @@ http://server_domain_or_IP:8088
 
 ![OpenLiteSpeed Web Page](img/20021b18a15ca9e132d07723875a9d22.png)
 
-一旦你对默认的 OpenLiteSpeed 网页感到满意，你现在就可以在 7080 端口使用 HTTPS 访问你的管理界面。
+一旦你对默认的 OpenLiteSpeed 网页感到满意，你现在就可以在 `7080` 端口使用 HTTPS 访问你的管理界面。
 
 ```
 https://server_domain_or_IP:7080

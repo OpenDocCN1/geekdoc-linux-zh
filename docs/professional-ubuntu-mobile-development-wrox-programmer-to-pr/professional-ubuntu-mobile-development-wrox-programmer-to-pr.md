@@ -1,17 +1,11 @@
+
 # Professional Ubuntu Mobile 开发 高级指南
 
-
-
-
-
-在 p2p.wrox.com 参与讨论
-
+在 `p2p.wrox.com` 参与讨论
 
 ![](img/20e1447b223c3f9afa3d43610c6361ee_0_0.png)
 
 ![](img/20e1447b223c3f9afa3d43610c6361ee_0_1.png)
-
-
 
 Ian Robert Lawrence 和 Rodrigo Cesar Lopes Belem
 
@@ -35,7 +29,7 @@ Ian Robert Lawrence 和 Rodrigo Cesar Lopes Belem
 
 # 加入社区
 
-在 newsletter.wrox.com 订阅我们的免费月度通讯
+在 `newsletter.wrox.com` 订阅我们的免费月度通讯
 
 # 浏览
 
@@ -43,32 +37,15 @@ Ian Robert Lawrence 和 Rodrigo Cesar Lopes Belem
 
 # 联系我们。
 
-我们总是欢迎读者的反馈。有书籍想法吗？需要社区支持吗？请发送电子邮件至 wrox-partnerwith@wrox.com 告诉我们。
-
-
-
+我们总是欢迎读者的反馈。有书籍想法吗？需要社区支持吗？请发送电子邮件至 `wrox-partnerwith@wrox.com` 告诉我们。
 
 引言 XXV
 
-
-
-
 Ian Lawrence
+
 Rodrigo Cesar Lopes Belem
 
 ![](img/20e1447b223c3f9afa3d43610c6361ee_6_0.png)
-
-
-
-
-
-
-
-
-
-
-
-
 
 # 关于作者
 
@@ -84,52 +61,62 @@ Felipe Balbi 过去三年一直在开发 Linux 内核驱动程序。他目前为
 
 David Cohen 是计算机科学学士毕业生，目前正在完成同领域的硕士学位。他从事开源工作已有 8 年，过去 5 年一直是 Linux 内核开发者。目前他在 Nokia 工作，为 Maemo 设备的内核开发做出贡献。
 
-
-
-
-
 # 制作谢
 
 执行编辑
+
 Carol Long
 
 副总裁兼执行集团发行人
+
 Richard Swadley
 
 开发编辑
+
 Kenyon Brown
 
 副总裁兼执行发行
+
 Barry Pruett
 
 制作编辑
+
 Daniel Scribner
 
 副发行
+
 Jim Minatel
 
 文字编辑
+
 Nancy Rapaport
 
 封面协调员
+
 Lynsey Stanford
 
 编辑经理
+
 Mary Beth Wakefield
 
 校对
+
 Nancy Carrasco
 
 营销经理
+
 David Mayhew
 
 索引
+
 Ron Strauss
 
 制作经理
+
 Tim Tate
 
 封面图片
+
 © Flying Colours Ltd./Digital Vision/Jupiterimages
 
 # 致谢
@@ -160,28 +147,26 @@ Tim Tate
 
 > Rodrigo Cesar Lopes Belem
 
-
 引言 XXV
 
 # 第 1 章：移动 Linux 1
-
 
 总结 9
 
 # 第 2 章：开发环境 11
 
-
-
-
 | 第 3 章：电源管理 | 35 |
+
 | :--- | :--- |
 
 | 第 4 章：应用开发 | 53 |
-| :--- | :--- |
 
 | :--- | :--- |
 
 | :--- | :--- |
+
+| :--- | :--- |
+
 | 修改它 | 136 |
 
 # 第 7 章：主题化 147
@@ -248,151 +233,264 @@ Tim Tate
 
 ## 创建 Debian 软件包 172
 
-
-
-
-
 # 目录
 
 - 更新自定义内核树 | 175
+
 - 更新 Ubuntu 内核树 | 175
+
 - 更新非 Ubuntu 内核树 | 181
+
 - 动态内核模块支持 | 181
+
 - 深入了解 DKMS 框架 | 182
+
 - 基础 DKMS 命令 | 183
+
 - 总结 | 186
 
 # 第 9 章：测试与可用性 | 187
 
 - 为什么要测试？ | 187
+
 - Ubuntu 桌面 QA | 188
+
 - Mago — 一项桌面测试倡议 | 188
+
 - 为测试构建应用 | 189
+
 - 入门 | 189
+
 - 应用创建 | 190
+
 - 使用 Mago 进行测试 | 193
+
 - 在 Mago 中添加浏览器测试 | 193
+
 - Linux 基础标准 (LSB) 与认证 | 196
+
 - 安装 LSB 应用测试套件 | 196
+
 - 运行 LSB 应用测试套件 | 196
+
 - 其他测试工具 | 197
+
 - Phorenix 测试套件 | 197
+
 - 用于自动化软件包测试的 PBuilder | 200
+
 - 其他常用的 Linux 性能测试工具 | 201
+
 - ps | 201
+
 - top | 201
+
 - time | 201
+
 - procinfo | 201
+
 - free | 202
+
 - memstat | 202
+
 - memcheck 和 Valgrind | 202
+
 - Latenotop | 203
+
 - 测试策略 | 203
+
 - 基础 | 203
+
 - 高级 | 204
+
 - 合规性 | 204
+
 - 漏洞报告 | 205
+
 - 如果你发现了一个漏洞 . . . | 205
+
 - 自动提交漏洞报告 | 206
+
 - 从命令行报告漏洞 | 206
+
 - 总结 | 206
 
 # 第 10 章：技巧与技巧 | 207
 
 - 提高启动速度 | 207
+
 - 硬编码模块 | 207
+
 - 创建一个大小为物理内存一半的 /tmp | 208
+
 - 节能技巧 | 208
+
   - 正确充电 | 209
+
   - 笔记本模式 | 209
+
   - 了解设备上的电池 | 210
+
   - CPUFREQ 和调度器 | 211
+
   - 在磁盘上使用电源管理设置 | 211
+
   - 禁用 time | 212
+
 - 关闭后台服务 | 212
+
 - Adobe Flash | 213
+
 - 配置触摸屏 | 214
+
 - 观察硬盘活动 | 217
+
 - 总结 | 218
 
 # 第 11 章：整合一切 | 219
 
 - 需要考虑的重要事项 | 219
+
 - 检查 Ubuntu 是否支持该架构 | 220
+
 - 检查硬件 | 220
+
 - 调调内核 | 221
+
 - 定义电源策略 | 221
+
 - 它是嵌入式系统吗？ | 221
+
 - 自定义用户界面 | 222
+
   - 启动选择器 | 222
+
   - 显示管理器 | 223
+
   - GDM | 224
+
   - 预配置 GDM | 224
+
 - 设置默认的 Ubuntu、XCFE 和隐藏行为 | 224
+
 - 精细调整构建过程 | 225
+
   - 设置仓库 | 225
+
   - 使用 approx 处理 C 软件包 | 225
+
 - 创建默认 Ubuntu 镜像 | 226
+
   - 选择使用哪种类型的安装程序 | 226
+
   - 何时使用 Debian-Installer (Ubuntu 替代镜像) | 226
+
   - 何时使用 Ubiquity (Ubuntu 桌面镜像) | 226
+
 - 镜像入门：准备环境 | 226
+
   - 最后，构建默认 ISO | 229
+
 - 构建自定义 Ubuntu 镜像 | 230
+
 - 深入了解种子萌发过程 | 231
+
   - 萌发种子 | 232
+
   - 示例：萌发 Ubuntu Netbook Remix | 234
+
 - 软件包与仓库 | 235
+
   - 以 Ubuntu 方式生成元包 | 235
+
   - 构建元包 | 236
+
   - 以简单的方法生成元包 | 238
+
 - 预选安装程序 | 239
+
   - 向镜像添加软件包 | 240
+
   - 最终，构建自定义 ISO | 240
+
 - Ubuntu 策略、商标、版权与常识 | 240
+
   - 什么是派生发行版？ | 241
+
   - 何时使用 LGPL | 241
+
 - 总结 | 242
 
 # 第 12 章：移动方向 | 243
 
 - 选择、改变与机会 | 244
+
 - 进化与软件开发 | 246
+
   - Darwin | 247
+
   - Mendel | 247
+
   - Mayr | 248
+
   - Frankenstein | 248
+
 - 值得思考的大想法 | 249
+
   - 技术的政治 | 249
+
   - 下一个十亿 | 249
+
   - 感官过载 | 249
+
   - 云计算 | 250
+
   - ARM 角斗 | 250
+
   - 移动计算 | 251
+
   - 免费的 | 251
+
   - 在边缘端开发 | 252
+
   - Ubuntu 未来 | 253
+
   - 在移动端工作 | 254
+
   - 总结 | 255
 
 # 第 13 章：常见问题与解决方案 | 257
 
 - 启动问题 | 257
+
   - 界面未出现 | 258
+
   - 双系统启动 | 259
+
   - 自动设置 | 259
+
   - 使用 USB | 260
+
   - 性能问题 | 260
+
   - 使用 UMPC | 261
+
   - 加入 Ubuntu 开发者团队 | 261
+
   - 使用 QEMU | 262
+
   - 问题 | 262
+
   - 总结 | 263
 
 - 附录 A：Ubuntu 的权利 | 265
+
 - 附录 B：Git 使用 | 277
+
 - 附录 C：在 Launchpad 上托管你的项目 | 287
+
 - 附录 D：桌面应用 | 291
+
 - 附录 E：D-Bus 概览 | 307
 
 ## 引言
@@ -408,34 +506,42 @@ Tim Tate
 本书涵盖了以下主题：
 
 - 第 1 章：移动 Linux — 讨论在十亿设备上运行 Linux 的可能性。
+
 - 第 2 章：开发环境 — 指引导你设置工作环境。
+
 - 第 3 章：电源管理 — 研究未来性能型和节能型移动设备之间的差异。
+
 - 第 4 章：应用开发 — 讨论移动设备开发。
+
 - 第 5 章：应用打包 — 演示如何分发应用。
+
 - 第 6 章：应用选择 — 关于如何选择移动设备的外观。
+
 - 第 7 章：主题化 — 展示如何自定义移动设备的外观。
+
 - 第 8 章：内核调优 — 解释靠近硬件的软件层。
+
 - 第 9 章：测试与可用性 — 讨论衡量稳定性和性能的基。
+
 - 第 10 章：技巧与技巧 — 提出一些可以节省时间的建议。
+
 - 第 11 章：整合一切 — 讨论拥有自己的移动发行版的优势和潜在风险，以及如何实际种子和萌发镜像。
+
 - 第 12 章：移动方向 — 讨论 Linux 的未来。
+
 - 第 13 章：常见问题与解决方案 — 识别问题并提供解决方案。
 
 ## 使用本书所需的
 
 本书在运行 Ubuntu Jaun 和 Ubuntu Karmic 的计算机上编写并开发。章节中的代码通常在 Acer Aspire One、Geode、Eee PC 和 Beagleboard 上进行测试和使用。拥有这样一个实际设备或开发板显然更好，但对于充分体验本书并非必需。
 
-
-
-
-
 ## 引言
 
 ## Ubuntu 移动项目的历史与背景
 
-该背景包含了 #ubuntu-mobile IRC 频道上的各种对话，现在构成了 https://wiki.ubuntu.com/MobileTeam/Mobile/History 维基页的基础。
+该背景包含了 `#ubuntu-mobile` IRC 频道上的各种对话，现在构成了 `https://wiki.ubuntu.com/MobileTeam/Mobile/History` 维基页的基础。
 
-该项目始于 Ubuntu Hardy 发布周期之初，Ubuntu 首席技术官（CTO）Matt Zimmermann 向 ubuntu-dev-mobile 邮件列表发布了公告，内容如下：
+该项目始于 Ubuntu Hardy 发布周期之初，Ubuntu 首席技术官（CTO）Matt Zimmermann 向 `ubuntu-dev-mobile` 邮件列表发布了公告，内容如下：
 
 - 显而易见，新型设备——即支持网络功能的小型、手持式、图形化平板电脑——将改变我们的通信和协作方式。这些设备对开源软件提出了新要求，需要创新的图形界面、改进的电源管理以及更好的响应能力。
 
@@ -448,16 +554,24 @@ Tim Tate
 Ubuntu 移动与嵌入团队在 Ubuntu Hardy 发布周期开始工作，该周期的重点工作是将 Hildon 和 Merlin 引入 Ubuntu，并迁移到英特尔的 LPIA 架构：
 
 - Hildon 是由诺基亚开发的移动设备应用框架，现在是 GMAE 的一部分，专注于提供适合手指操作的界面。
+
 - Moblin 是一个英特尔赞助的开源社区应用框架，用于在各种互联网设备（MID）和轻笔记本电脑上创建用户友好的应用程序和用户界面。
-- LPIA（低功耗架构）是一种新架构，虽然它与 i386 相似，但对某些软件包使用了不同的优化选项、配置以及构建选项。具体而言，LPIA 使用 GCC-4 作为系统编译器（取代了 GCC-3）。
+
+- LPIA（低功耗架构）是一种新架构，虽然它与 i386 相似，但对某些软件包使用了不同的优化选项、配置以及构建选项。具体而言，LPIA 使用 `GCC-4` 作为系统编译器（取代了 `GCC-3`）。
 
 ## Ubuntu Hardy 发布
 
 在 Hardy 周期期间，有工作将 Ubuntu 引入基于英特尔 Menlow 和 McCaslin 平台的各种设备中：
 
 - McCaslin 早于 Menlow。它包含一个 Intel Atom Atom/A8 处理器。使用该处理器的设备示例是三星 Galaxy。
+
 - Menlow 是包含 Intel Atom 处理器（代号为 Silverthorne 和 Diamondville）的平台名称。它使用系统控制枢纽（System Controller Hub）。使用该设备的示例是华硕 Eee。
-- PPA（个人包存档）是开发者构建并发布代码、艺术作品、主题或其他对自由软件贡献包的方法。这导致在官方 Hardy 发布一段时间后，Ubuntu MID 的首次发布。
+
+
+
+# PPA（个人包存档）
+
+PPA（个人包存档）是开发者构建并发布代码、艺术作品、主题或其他对自由软件贡献包的方法。这导致在官方 Hardy 发布一段时间后，Ubuntu MID 的首次发布。
 
 虽然其目标是 7 英寸屏幕，但大部分的测试和工作是在三星 Galaxy（作为参考设备）或一些笨陋的开发板上完成的。
 
@@ -469,7 +583,7 @@ Ubuntu 移动与嵌入团队在 Ubuntu Hardy 发布周期开始工作，该周�
 
 完全独立，一组来自原始设备制造商（OEM）团队的 Canonical 开发人员正在研究支持新型轻笔记本设备的技术。OEM 指为他人制造产品进行重新包装和销售的公司。
 
-通过结合 GNOME 代码、部分用于 Ubuntu MID 的工作以及额外的开发，他们产生了粗体基于 Ubuntu Hardy 的“Netbook Remix”。
+通过结合 GNOME 代码、部分用于 Ubuntu MID 的工作以及额外的开发，他们产生了基于 Ubuntu Hardy 的“Netbook Remix”。
 
 生成的 Netbook Remix 在 Ubuntu MID 初版之前发布。关于 Netbook Remix 背后的逻辑和想法，可以查阅 http://www.markshuttlesworth.com/archives/151。Netbook Remix 基于如 Hardy 等 Ubuntu 长期支持（LTS）版本。
 
@@ -487,7 +601,7 @@ Ubuntu 移动与嵌入团队在 Ubuntu Hardy 发布周期开始工作，该周�
 
 Ubuntu 移动版本不包含基于 Hardy 的 Ubuntu MID 中存在的任何硬件设置或硬编码配置，因此并不受限于特定设备。事实上，Intrepid 对 Ubuntu 的一个特定目标之一就是摆脱硬编码，并支持更多种设备（可能包括尺寸合适的硬件，如 Algo MID 或 Sharp D4）。
 
-Intrepid 既有 ubuntu-mid.img 也有 ubuntu-mobile.img。镜像在 cdimage.ubuntu.com 的 Ubuntu 基础设施上正式构建。生成的每日 ubuntu-mobile 版本是一个 beta 版本，在 UMPCPortal（https://www.umpcportal.com/）上经过了充分评审，并引起了一些社区关注。
+Intrepid 既有 `ubuntu-mid.img` 也有 `ubuntu-mobile.img`。镜像在 `cdimage.ubuntu.com` 的 Ubuntu 基础设施上正式构建。生成的每日 `ubuntu-mobile` 版本是一个 beta 版本，在 UMPCPortal（https://www.umpcportal.com/）上经过了充分评审，并引起了一些社区关注。
 
 ## Jaunty
 
@@ -497,13 +611,15 @@ Ubuntu 移动版本基于 Hildon，而 Hildon 基于 Clutter 和 GTK。这为 Ub
 
 Ubuntu 移动 Karmic 版本专注于 Ubuntu Remix 和 Ubuntu 的 ARM 版本（见下文）。此外，推出一次性的 Ubuntu Mobile Remix 是为了演示和对比，同时也展示两个项目的精髓。
 
-在此周期期间，Ubuntu MID 变为社区维护。如果你想加入该项目，请访问 launchpad.net/ubuntu。此版本将基于 Lucid。## 引言
+在此周期期间，Ubuntu MID 变为社区维护。如果你想加入该项目，请访问 `launchpad.net/ubuntu`。此版本将基于 Lucid。
+
+## 引言
 
 ## Ubuntu ARM
 
 2008 年 11 月 13 日，Ubuntu 的商业赞助商 Canonical 宣布，响应制造商的需求，Ubuntu 将支持 ARM。这包括 ARM7 和 ARM9 处理器，它们是迄今为止性能最高、功耗最低的处理器。Ubuntu 于 2009 年 4 月正式可用。
 
-##n
+## 说明
 
 文中没有包含大量步骤，而是通过后续示例提供了说明。
 
@@ -515,7 +631,7 @@ sudo apt-get qemu-common
 
 接下来，将用户名加入 kqemu 组。将用户名加入 kqemu 组可以确保你不需要以 root 用户运行 QEMU。
 
-> kqemu 是加速 QEMU 的模块名称。
+> `kqemu` 是加速 QEMU 的模块名称。
 
 添加用户名：
 
@@ -536,10 +652,6 @@ qemu-system -m 384 -boot d ubuntu-9.04-mid-lpia.img
 在学习本书中的示例时，你可以选择手动输入所有代码，也可以使用随书提供的源码文件。书中使用的所有代码均可在 http://www.wrox.com 下载。到达该网站后，只需找到书名（通过搜索框或标题列表），并点击书籍详情页上的下载链接即可获取该书的所有源码。
 
 下载代码后，使用你最喜欢的解压缩工具对其进行解压。或者，你可以访问 Wrox 主下载页面 http://www.wrox.com/dynamic/books/download.aspx，查看本书以及所有其他 Wrox 书籍的源码。
-
-
-
-
 
 ## 引言
 
@@ -568,8 +680,6 @@ qemu-system -m 384 -boot d ubuntu-9.04-mid-lpia.img
 
 有关如何使用 WP2P 的更多信息，请务必阅读 P2P FAQ（常见问题解答），获取有关论坛软件如何工作以及关于 P2P 和 Wrox 书籍常见问题的解答。要阅读 FAQ，请点击任何 P2P 页面上的 FAQ 链接。
 
-
-
 本章在不同计算机类型演变的背景下介绍了移动计算。更重要的是，它阐述了为什么使用 Linux 和 Ubuntu 开发移动应用程序在经济和技术上都是明智的。
 
 > 超过四之三的受访专家（77%）同意……移动设备——在 2020 年拥有更强大的计算能力——将成为全球大多数人主要的互联网通信平台。
@@ -579,10 +689,6 @@ qemu-system -m 384 -boot d ubuntu-9.04-mid-lpia.img
 ## 迈向移动
 
 自从第一台计算机诞生以来，人们一直在追求更小、更快、更廉价的系统。2008年，便携式电脑首次进入市场。对移动设备的需求日益增长，移动互联网设备（MID）变得随处可见。今天，Linux 和 Ubuntu 已经为这种演变做好了准备。
-
-
-
-
 
 ## 第一章：移动版 Linux
 
@@ -632,10 +738,6 @@ Ubuntu 和 Linux 正处于蓬勃发展的移动市场中心。前方还有无数
 
 他继续说道，“Vista 慢到启动需要 30 分钟。Ubuntu 很好。”
 
-
-
-
-
 ## 第1章：移动 Linux
 
 Ubuntu 已连续位居 DistroWatch Linux 发行版榜单的前列。此外，它还拥有一个强大的社区。Canonical 提供的健康（且富有资金）的协调提供了稳定性和重要的指导方向。2009年初，《纽约时报》对 Canonical 的创始人、Ubuntu 的愿景者马克·舒特尔沃（Mark Shuttleworth）进行了专题报道：
@@ -680,15 +782,17 @@ Ubuntu 仅诞生于四年前（读音为 oo-BOON-too），已成为 Linux 操作
 
 本章展示了你可以访问开始开发所需的开发环境的不同方式。为移动设备开发（其架构可能与你的工作站不同——例如 i386 和低功耗 Intel 架构 (LPIA) 设备），有分离主机（有时称为源）和虚拟机（有时称为目标）环境的必要性。如今最常见的方法是使用虚拟化。
 
-虚拟化将操作系统与底层资源完全分离——可以使用不同的技术来实现这一点。对于 Hardy 版本，Ubuntu 选择将虚拟化方面的精力集中在 KVM 上。内核虚拟机（KVM）是 Linux 内核的一个补丁，允许操作系统直接运行在硬件上。KVM 还采用快速仿真器（QEMU）将 Linux 内核本身转变为虚拟机管理程序（Hypervisor）。
 
-> 虚拟机管理程序（Hypervisor）是允许多个操作系统在主机计算机上并发运行的软件。QEMU 是模拟硬件的虚拟化软件。
 
-那么，KVM 用于处理器具有硬件支持的系统，并且具有在不可用时退回到 QEMU 的额外优势。由于运行在内核上，虚拟机以 Linux 进程的形式出现，并可以像其他应用程序一样进行管理。然而，KVM 目前尚未提供可以帮助开发者快速上手 Ubuntu Mobile 的 GUI。来自 Sun 的 VirtualBox 是一种基于 GPL 的虚拟化解决方案，具有界面且易启动。本章演示了使用 VirtualBox 和 KVM 的示例。最后，为了对开发环境进行最大的控制，你将学习如何从零创建镜像。这种方法提供了更多定制空间，是经验丰富的开发者的首选。
+虚拟化将操作系统与底层资源完全分离——可以使用不同的技术来实现这一点。对于 Hardy 版本，Ubuntu 选择将虚拟化方面的精力集中在 KVM 上。内核虚拟机（`KVM`）是 Linux 内核的一个补丁，允许操作系统直接运行在硬件上。`KVM` 还采用快速仿真器（`QEMU`）将 Linux 内核本身转变为虚拟机管理程序（`Hypervisor`）。
+
+> 虚拟机管理程序（`Hypervisor`）是允许多个操作系统在主机计算机上并发运行的软件。`QEMU` 是模拟硬件的虚拟化软件。
+
+那么，`KVM` 用于处理器具有硬件支持的系统，并且具有在不可用时退回到 `QEMU` 的额外优势。由于运行在内核上，虚拟机以 Linux 进程的形式出现，并可以像其他应用程序一样进行管理。然而，`KVM` 目前尚未提供可以帮助开发者快速上手 Ubuntu Mobile 的 GUI。来自 Sun 的 `VirtualBox` 是一种基于 GPL 的虚拟化解决方案，具有界面且易启动。本章演示了使用 `VirtualBox` 和 `KVM` 的示例。最后，为了对开发环境进行最大的控制，你将学习如何从零创建镜像。这种方法提供了更多定制空间，是经验丰富的开发者的首选。
 
 ### 入门
 
-首先从 http://cdimage.ubuntu.com/releases/jaunty/release/ 下载 Jaunty Ubuntu 版本，并保存到硬盘上的文件夹中。
+首先从 `http://cdimage.ubuntu.com/releases/jaunty/release/` 下载 Jaunty Ubuntu 版本，并保存到硬盘上的文件夹中。
 
 本章演示的所有技术（ARM 部分除外）都是 MID 版本，但它们在 Network 版本上也通过了测试并运行。如果你针对上网笔记本，请下载此版本。
 
@@ -698,28 +802,27 @@ Ubuntu 仅诞生于四年前（读音为 oo-BOON-too），已成为 Linux 操作
 
 ### VirtualBox
 
-Sun 的 VirtualBox 是一系列虚拟机工具，允许开发者同时运行多个操作系统镜像。要查看其效果，首先安装软件。
+Sun 的 `VirtualBox` 是一系列虚拟机工具，允许开发者同时运行多个操作系统镜像。要查看其效果，首先安装软件。
 
 ```
 sudo apt-get install virtualbox-ose
 ```
 
-virtualbox-ose 位于 universe 存储库。要启用此社区维护的存储库，前往系统管理 -> 软件源并勾选 universe 。
-安装后，可以将之前在“入门”部分下载的镜像进行转换，以便在 VirtualBox 中使用。
-运行以下命令（替换为你下载的 .img 文件名）：
+`virtualbox-ose` 位于 `universe` 存储库。要启用此社区维护的存储库，前往系统管理 -> 软件源并勾选 `universe` 。
+
+安装后，可以将之前在“入门”部分下载的镜像进行转换，以便在 `VirtualBox` 中使用。
+
+运行以下命令（替换为你下载的 `.img` 文件名）：
 
 ```
 vboxmanager convertdt ubuntu-9.04-mid-lpia.img ubuntu-9.04-beta-mid-lpia.vdi
 ```
 
-这会将 ubuntu-9.04-beta-mid-lpia.img 转换为 .vdi 格式，以便在 VirtualBox 中作为“硬盘”使用（后文将进行详细介绍）。
-
-
-
+这会将 `ubuntu-9.04-beta-mid-lpia.img` 转换为 `.vdi` 格式，以便在 `VirtualBox` 中作为“硬盘”使用（后文将进行详细介绍）。
 
 ## 第 2 章：开发环境
 
-现在通过选择应用程序 ⇨ VirtualBox 来启动 VirtualBox。你将看到图 2-1 所示的界面。
+现在通过选择应用程序 ⇨ `VirtualBox` 来启动 `VirtualBox`。你将看到图 2-1 所示的界面。
 
 ![](img/20e1447b223c3f9afa3d43610c6361ee_48_0.png)
 
@@ -737,7 +840,7 @@ vboxmanager convertdt ubuntu-9.04-mid-lpia.img ubuntu-9.04-beta-mid-lpia.vdi
 
 图 2-3
 
-点击“下一步”，然后选择“动态扩展存储”（Dynamically expanding storage）选项并再次点击“下一步”。磁盘镜像默认将保存在 ~/VirtualBox/HardDisks；在本例中，图 2-4 所示的硬盘将保存为 /home/VirtualBox/HardDisks 目录下的 .vdi 文件。
+点击“下一步”，然后选择“动态扩展存储”（Dynamically expanding storage）选项并再次点击“下一步”。磁盘镜像默认将保存在 `~/VirtualBox/HardDisks`；在本例中，图 2-4 所示的硬盘将保存为 `/home/VirtualBox/HardDisks` 目录下的 `.vdi` 文件。
 
 ![](img/20e1447b223c3f9afa3d43610c6361ee_49_1.png)
 
@@ -759,96 +862,91 @@ vboxmanager convertdt ubuntu-9.04-mid-lpia.img ubuntu-9.04-beta-mid-lpia.vdi
 
 ![](img/20e1447b223c3f9afa3d43610c6361ee_52_1.png)
 
-点击“选择”（Select）返回“硬盘”屏幕（见图 2-11）。添加的 ubuntu-9.04-beta-amd.vdi 必须设置为 IDE 主从设备（IDE Primary Slave）。
+点击“选择”（Select）返回“硬盘”屏幕（见图 2-11）。添加的 `ubuntu-9.04-beta-amd.vdi` 必须设置为 IDE 主从设备（IDE Primary Slave）。
 
 ![](img/20e1447b223c3f9afa3d43610c6361ee_53_0.png)
 
-点击“确定”（OK），你将返回到之前在图 2-6 中看到的 VirtualBox 管理界面。现在可以通过点击启动（Start）箭头来启动虚拟机。
+点击“确定”（OK），你将返回到之前在图 2-6 中看到的 `VirtualBox` 管理界面。现在可以通过点击启动（Start）箭头来启动虚拟机。
 
 ![](img/20e1447b223c3f9afa3d43610c6361ee_53_1.png)
 
-这意味着 KVM 已安装在主机系统内核中。以前，这意味着你需要重新编译内核。然而在 Ubuntu 中，只需运行以下命令：
+这意味着 `KVM` 已安装在主机系统内核中。以前，这意味着你需要重新编译内核。然而在 Ubuntu 中，只需运行以下命令：
 
 ```bash
 sudo /etc/init.d/kvm stop
 ```
-- 卸载 kvm 模块 kvm_intel
+
+- 卸载 `kvm` 模块 `kvm_intel`
 
 该模块将被卸载。
 
-当虚拟机启动时，按下 F12 键（这将允许选择启动设备），你将看到图 2-13 所示的屏幕。
+当虚拟机启动时，按下 `F12` 键（这将允许选择启动设备），你将看到图 2-13 所示的屏幕。
 
 ![](img/20e1447b223c3f9afa3d43610c6361ee_54_0.png)
 
-选择选项 2，即主从设备（ubuntu-9.04-beta-amd 硬盘）进行启动。然后选择尝试 Ubuntu 的选项，它将进入图 2-14 所示的屏幕。
+选择选项 2，即主从设备（`ubuntu-9.04-beta-amd` 硬盘）进行启动。然后选择尝试 Ubuntu 的选项，它将进入图 2-14 所示的屏幕。
 
 ![](img/20e1447b223c3f9afa3d43610c6361ee_54_1.png)
 
-在虚拟机中，Ubuntu 界面的顶栏包含一个菜单，允许用户更改显示的程序组。点击“首页”（Home）下拉列表并选择“偏好设置”（Preferences）。点击“安装”（Install）图标进行安装。Ubuntu 界面的顶栏包含一个菜单，允许用户更改显示的程序组。点击“首页”（Home）下拉列表并选择“偏好设置”（Preferences）。点击“安装”（Install）图标进行安装。Ubuntu 界面的顶栏包含一个菜单，允许用户更改显示的程序组。点击“首页”（Home）下拉列表并选择“偏好设置”（Preferences）。点击“安装”（Install）图标进行安装。Ubuntu 界面的顶栏包含一个菜单，允许用户更改显示的程序组。点击“首页”（Home）下拉列表并选择“偏好设置”（Preferences）。点击“安装”（Install）图标进行安装。Ubuntu 界面的顶栏包含一个菜单，允许用户更改显示的程序组。点击“首页”（Home）下拉列表并选择“偏好设置”（Preferences）。点击“安装”（Install）图标进行安装。Ubuntu 界面的顶栏包含一个菜单，允许用户更改显示的程序组。点击“首页”（Home）下拉列表并选择“偏好设置”（Preferences）。点击“安装”（Install）图标进行安装。Ubuntu 界面的顶栏包含一个菜单，允许用户更改显示的程序组。点击“首页”（Home）下拉列表并选择“偏好设置”（Preferences）。点击“安装”（Install）图标进行安装。Ubuntu 界面的顶栏包含一个菜单，允许用户更改显示的程序组。点击“首页”（Home）下拉列表并选择“偏好设置”（Preferences）。点击“安装”（Install）图标进行安装。Ubuntu 界面的顶栏包含一个菜单，允许用户更改显示的程序组。点击“首页”（Home）下拉列表并选择“偏好设置”（Preferences）。点击“安装”（Install）图标进行安装。Ubuntu 界面的顶栏包含一个菜单，允许用户更改显示的程序组。点击“首页”（Home）下拉列表并选择“偏好设置”（Preferences）。点击“安装”（Install）图标进行安装。Ubuntu 界面的顶栏包含一个菜单，允许用户更改显示的程序组。点击“首页”（Home）下拉列表并选择“偏好设置”（Preferences）。点击“安装”（Install）图标进行安装。Ubuntu 界面的顶栏包含一个菜单，允许用户更改显示的程序组。点击“首页”（Home）下拉列表并选择“偏好设置”（Preferences）。点击“安装”（Install）图标进行安装。Ubuntu 界面的顶栏包含一个菜单，允许用户更改显示的程序组。点击“首页”（Home）下拉列表并选择“偏好设置”（Preferences）。点击“安装”（Install）图标进行安装。Ubuntu 界面的顶栏包含一个菜单，允许用户更改显示的程序组。点击“首页”（Home）下拉列表并选择“偏好设置”（Preferences）。点击“安装”（Install）图标进行安装。Ubuntu 界面的顶栏包含一个菜单，允许用户更改显示的程序组。点击“首页”（Home）下拉列表并选择“偏好设置”（Preferences）。点击“安装”（Install）图标进行安装。Ubuntu 界面的顶栏包含一个菜单，允许用户更改显示的程序组。点击“首页”（Home）下拉列表并选择“偏好设置”（Preferences）。点击“安装”（Install）图标进行安装。Ubuntu 界面的顶栏包含一个菜单，允许用户更改显示的程序组。点击“首页”（Home）下拉列表并选择“偏好设置”（Preferences）。点击“安装”（Install）图标进行安装。Ubuntu 界面的顶栏包含一个菜单，允许用户更改显示的程序组。点击“首页”（Home）下拉列表并选择“偏好设置”（Preferences）。点击“安装”（Install）图标进行安装。Ubuntu 界面的顶栏包含一个菜单，允许用户更改显示的程序组。点击“首页”（Home）下拉列表并选择“偏好设置”（Preferences）。点击“安装”（Install）图标进行安装。Ubuntu 界面的顶栏包含一个菜单，允许用户更改显示的程序组。点击“首页”（Home）下拉列表并选择“偏好设置”（Preferences）。点击“安装”（Install）图标进行安装。Ubuntu 界面的顶栏包含一个菜单，允许用户更改显示的程序组。点击“首页”（Home）下拉列表并选择“偏好设置”（Preferences）。点击“安装”（Install）图标进行安装。Ubuntu 界面的顶栏包含一个菜单，允许用户更改显示的程序组。点击“首页”（Home）下拉列表并选择“偏好设置”（Preferences）。点击“安装”（Install）图标进行安装。Ubuntu 界面的顶栏包含一个菜单，允许用户更改显示的程序组。点击“首页”（Home）下拉列表并选择“偏好设置”（Preferences）。点击“安装”（Install）图标进行安装。
+在虚拟机中，Ubuntu 界面的顶栏包含一个菜单，允许用户更改显示的程序组。点击“首页”（Home）下拉列表并选择“偏好设置”（Preferences）。点击“安装”（Install）图标进行安装。
 
-选择 Next（下一步），然后选择你的虚拟机允许的内存内存。15. ![](img/20e1447b223c3f9afa3d4361... (由于原文存在重复内容，已根据指令精简保留核心翻译逻辑)
+选择 Next（下一步），然后选择你的虚拟机允许的内存。
 
 | 选项 | 硬盘 |
 | :--- | :--- |
-| 使用 | sda |
-| 使用 | sdb |
-| 使用 | sdc |
+| 使用 | `sda` |
+| 使用 | `sdb` |
+| 使用 | `sdc` |
 | 指定 | 高 |
-
-(注：由于提供的原文后部分存在大量重复的句子，翻译时已根据“注意一定不要重复输出原文”的原则进行了去重处理，确保输出逻辑的流畅性。)
-
-
-
-
 
 ## 第 2 章：开发环境
 
-这将在文件夹中创建一个 .img 文件。接下来，从 http://people.ubuntu.com/~okra/arm/qemu/kernel/vmlinux-2.6.28-versatile 下载一个适用于 ARM 的内核，然后运行 qemu-system-arm，将 .img 文件和内核都作为参数添加：
+这将在文件夹中创建一个 `.img` 文件。接下来，从 `http://people.ubuntu.com/~okra/arm/qemu/kernel/vmlinux-2.6.28-versatile` 下载一个适用于 ARM 的内核，然后运行 `qemu-system-arm`，将 `.img` 文件和内核都作为参数添加：
 
 ```bash
 qemu-system-arm -M Versatilepb -kernel /vmlinux-2.6.28-versatile
 -hda qemu-arm-200904291613.img -m 256 -append root=/dev/sda mem=256M ro
 ```
 
-你需要将 .img 名称替换为脚本创建的名称；`build-arm-roots` 脚本是基于日期的，因此运行它将产生类似 `qemu-arm-YYYYMMDDHMM.img` 的文件。
+你需要将 `.img` 名称替换为脚本创建的名称；`build-arm-roots` 脚本是基于日期的，因此运行它将产生类似 `qemu-arm-YYYYMMDDHMM.img` 的文件。
 
-这将执行 QEMU 并允许你使用 .img 创建期间指定的用户名和密码登录。原生架构可以通过图 2-18 所示进行验证。
+这将执行 `QEMU` 并允许你使用 `.img` 创建期间指定的用户名和密码登录。原生架构可以通过图 2-18 所示进行验证。
 
 ![](img/20e1447b22c3f9afa3d4361c0ee58.png) 图 2-18
 
 ## 使用 KVM
 
-如果你的硬件支持 KVM，下一步是安装软件包：
+如果你的硬件支持 `KVM`，下一步是安装软件包：
 
 ```bash
 $ sudo apt-get install kvm
 ```
 
-接下来，将你的用户添加到 kvm 组。添加用户意味着你不需要以 root 用户身份运行 KVM。为了实现这一点，运行：
+接下来，将你的用户添加到 `kvm` 组。添加用户意味着你不需要以 root 用户身份运行 `KVM`。为了实现这一点，运行：
 
 ```bash
 $ sudo adduser <username> kvm
 ```
 
-添加用户后需要重启虚拟机。接下来，使用以下命令在 KVM 中运行 .img：
+添加用户后需要重启虚拟机。接下来，使用以下命令在 `KVM` 中运行 `.img`：
 
 ```bash
 $ kvm -localtime -m 512 -boot ubuntu-04-beta-mid-1pia.img
 ```
 
-安装镜像的过程与 VirtualBox 类似。将 .img 设置为第二个硬盘，以便可以在第一个硬盘上安装。你可能会执行：
+安装镜像的过程与 `VirtualBox` 类似。将 `.img` 设置为第二个硬盘，以便可以在第一个硬盘上安装。你可能会执行：
 
 ```bash
 $ kvm -localtime -m 512 -hda installed-mid.img -hdb ubuntu-04-beta-mid-lpia.img
 ```
 
-然而，前面的命令将不起！除了 `installed-mid.img` 不存在之外，QEMU 和 KVM 使用的 Bochs 允许在第二个硬盘上启动。作为变通方法，Ubuntu Mobile 提供了一个小于 400KB 的 ISO 镜像，从中可以选择第二个硬盘。这可以在 http://people.ubuntu.com/~loop/isolin.iso 获取。
+然而，前面的命令将不起！除了 `installed-mid.img` 不存在之外，`QEMU` 和 `KVM` 使用的 Bochs 允许在第二个硬盘上启动。作为变通方法，Ubuntu Mobile 提供了一个小于 400KB 的 ISO 镜像，从中可以选择第二个硬盘。这可以在 `http://people.ubuntu.com/~loop/isolin.iso` 获取。
 
-生成 ISO 的脚本可用（见附录 A），你可以在 ubuntu-mobile-dev/scripts 找到。
+生成 ISO 的脚本可用（见附录 A），你可以在 `ubuntu-mobile-dev/scripts` 找到。
 
 部分脚本将在后面的章节中详细描述。
 
-使用以下命令启动 KVM：
+使用以下命令启动 `KVM`：
 
 ```bash
 $ kvm -m 512 -cdrom isolinus.iso -hda installed-mid.img -hdb ubuntu-04-beta-mid-lpia.img
@@ -860,15 +958,15 @@ $ kvm -m 512 -cdrom isolinus.iso -hda installed-mid.img -hdb ubuntu-04-beta-mid-
 $ qemu-img create installed-mid.img 4G
 ```
 
-这里的 4GB 代表 4GB 的虚拟磁盘空间。因为 `installed-mid.img` 是空的，它将使用上述命令指定的 -cdrom 选项。`isolinus.iso` 将提供从第二个硬盘启动并安装到第一个硬盘（其中 grub 也将被安装）。
+这里的 4GB 代表 4GB 的虚拟磁盘空间。因为 `installed-mid.img` 是空的，它将使用上述命令指定的 `-cdrom` 选项。`isolinus.iso` 将提供从第二个硬盘启动并安装到第一个硬盘（其中 `grub` 也将被安装）。
 
-安装本身与 VirtualBox 相同；在虚拟机上，Ubuntu 界面的顶栏包含一个允许你更改正在运行程序的菜单。点击 Home 下拉菜单并选择 Preferences。你会看到一个安装图标。点击图标进行安装。
+安装本身与 `VirtualBox` 相同；在虚拟机上，Ubuntu 界面的顶栏包含一个允许你更改正在运行程序的菜单。点击 Home 下拉菜单并选择 Preferences。你会看到一个安装图标。点击图标进行安装。
 
 > 在主机上使用最大分辨率显示虚拟机 OS 与主机相同的分辨率。在较低分辨率下，安装上的按钮将被隐藏，你可能需要移除主机的面板才能看到它们！这在最后的 Jaunty 版本中应该修复。
 
-安装完成后重启虚拟机，KVM 将从现在安装的 hda.img 启动。
+安装完成后重启虚拟机，`KVM` 将从现在安装的 `hda.img` 启动。
 
-安装后，KVM 命令行可以使用 -cdrom 和 -hdb 标志：
+安装后，`KVM` 命令行可以使用 `-cdrom` 和 `-hdb` 标志：
 
 ```bash
 $ kvm -localtime -m 512 -hda installed-mid.img
@@ -876,7 +974,7 @@ $ kvm -localtime -m 512 -hda installed-mid.img
 
 ## 网络
 
-VirtualBox 和 KVM 的网络都需要以下命令。首先，在虚拟机上，使用之前创建的用户账户登录，打开终端并安装 openssh-server：
+`VirtualBox` 和 `KVM` 的网络都需要以下命令。首先，在虚拟机上，使用之前创建的用户账户登录，打开终端并安装 `openssh-server`：
 
 ```bash
 $ sudo apt-get install openssh-server
@@ -888,13 +986,13 @@ $ sudo apt-get install openssh-server
 $ sudo adduser <username>
 ```
 
-这设置了网络所需的set工具。
+这设置了网络所需的 `set` 工具。
 
-如果你希望主机和虚拟机之间实现全网络，请参见“VirtualBox 和 KVM/QEMU 高网络”部分。
+如果你希望主机和虚拟机之间实现全网络，请参见“`VirtualBox` 和 `KVM/QEMU` 高网络”部分。
 
 ### VirtualBox 中的网络
 
-在主机计算机上，使用 VBoxManage 命令打开用于 SSH 的 TCP 服务端口。然后，运行：
+在主机计算机上，使用 `VBoxManage` 命令打开用于 SSH 的 TCP 服务端口。然后，运行：
 
 ```bash
 $ VBoxManage setextradata "vm name" VBoxInternal/Devices/natnet/0/Config/ssh/HostPort 2222
@@ -902,7 +1000,9 @@ $ VBoxManage setextradata "vm name" VBoxInternal/Devices/natnet/0/Config/GuestPo
 $ VBoxManage setextradata "vm name" VBoxInternal/Devices/natnet/0/Config/Protocol TCP
 ```
 
-上述三个命令应该是单行的。VBoxManage 允许你从虚拟机中获取更多信息，并允许你执行操作和调整。例如，通过运行以下命令获取虚拟机名称：
+
+
+上述三个命令应该是单行的。`VBoxManage` 允许你从虚拟机中获取更多信息，并允许你执行操作和调整。例如，通过运行以下命令获取虚拟机名称：
 
 ```bash
 $ VBoxManage list vms grep Name
@@ -920,29 +1020,29 @@ $ ssh <username>@localhost -p 2222
 $ ssh <username>@localhost -p 2222
 ```
 
-HostPort 必须大于或等于1024。
+`HostPort` 必须大于或等于 `1024`。
 
 ### KVM/QEMU 中的网络
 
-`installed-mid.img` 不存在，QEMU 和 KVM 使用的 Bochs 允许在第二个硬盘上启动。作为变通方法，Ubuntu Mobile 提供了一个小于 400KB 的 ISO 镜像，从中可以选择第二个硬盘。这可以在 http://people.ubuntu.com/~loop/isolin.iso 获取。
+`installed-mid.img` 不存在，QEMU 和 KVM 使用的 Bochs 允许在第二个硬盘上启动。作为变通方法，Ubuntu Mobile 提供了一个小于 `400KB` 的 ISO 镜像，从中可以选择第二个硬盘。这可以在 `http://people.ubuntu.com/~loop/isolin.iso` 获取。
 
-生成 ISO 的脚本可用（见附录 A），你可以在 ubuntu-mobile-dev/scripts 找到。
+生成 ISO 的脚本可用（见附录 A），你可以在 `ubuntu-mobile-dev/scripts` 找到。
 
 下一步是安装必要的软件包：
 
-接下来，将你的用户添加到 kvm 组。添加用户意味着你不需要以 root 用户身份运行 KVM。为了实现这一点，运行：
+接下来，将你的用户添加到 `kvm` 组。添加用户意味着你不需要以 root 用户身份运行 KVM。为了实现这一点，运行：
 
 ```bash
 $ kvm -localtime -m 512 -boot ubuntu-04-beta-mid-1pia.img
 ```
 
-添加用户后需要重启虚拟机。接下来，使用以下命令在 KVM 中运行 .img：
+添加用户后需要重启虚拟机。接下来，使用以下命令在 KVM 中运行 `.img`：
 
 ```bash
 $ kvm -localtime -m 512 -boot ubuntu-04-beta-mid-1pia.img
 ```
 
-安装镜像的过程与 VirtualBox 类似。将 .img 设置为第二个硬盘，以便可以在第一个硬盘上安装。你可能会执行：
+安装镜像的过程与 VirtualBox 类似。将 `.img` 设置为第二个硬盘，以便可以在第一个硬盘上安装。你可能会执行：
 
 ```bash
 $ kvm -localtime -m 512 -hda installed-mid.img -hdb ubuntu-04-beta-mid-lpia.img
@@ -952,16 +1052,16 @@ $ kvm -localtime -m 512 -hda installed-mid.img -hdb ubuntu-04-beta-mid-lpia.img
 
 ### KVM/QEMU 中的高级网络
 
-由于 `installed-mid.img` 是空的，它将使用上述命令指定的 -cdrom 选项。下载一个适用于 ARM 的内核，然后运行 qemu-system-arm，将 .img 文件和内核都作为参数添加：
+由于 `installed-mid.img` 是空的，它将使用上述命令指定的 `-cdrom` 选项。下载一个适用于 ARM 的内核，然后运行 `qemu-system-arm`，将 `.img` 文件和内核都作为参数添加：
 
 ```bash
 qemu-system-arm -M Versatilepb -kernel /vmlinux-2.6.28-versatile
 -hda qemu-arm-200904291613.img -m 256 -append root=/dev/sda mem=256M ro
 ```
 
-你需要将 .img 名称替换为脚本创建的名称；`build-arm-roots` 脚本是基于日期的，因此运行它将产生类似 `qemu-arm-YYYYMMDDHMM.img` 的文件。
+你需要将 `.img` 名称替换为脚本创建的名称；`build-arm-roots` 脚本是基于日期的，因此运行它将产生类似 `qemu-arm-YYYYMMDDHMM.img` 的文件。
 
-这将执行 QEMU 并允许你使用 .img 创建期间指定的用户名和密码登录。原生架构可以通过图 2-18 所示进行验证。
+这将执行 QEMU 并允许你使用 `.img` 创建期间指定的用户名和密码登录。原生架构可以通过图 2-18 所示进行验证。
 
 ![](img/20e1447b22c3f9afa3d4361c0ee58.png) 图 2-18
 
@@ -971,19 +1071,19 @@ qemu-system-arm -M Versatilepb -kernel /vmlinux-2.6.28-versatile
 $ sudo apt-get install kvm
 ```
 
-接下来，将你的用户添加到 kvm 组。添加用户意味着你不需要以 root 用户身份运行 KVM。为了实现这一点，运行：
+接下来，将你的用户添加到 `kvm` 组。添加用户意味着你不需要以 root 用户身份运行 KVM。为了实现这一点，运行：
 
 ```bash
 $ sudo adduser <username> kvm
 ```
 
-添加用户后需要重启虚拟机。接下来，使用以下命令在 KVM 中运行 .img：
+添加用户后需要重启虚拟机。接下来，使用以下命令在 KVM 中运行 `.img`：
 
 ```bash
 $ kvm -localtime -m 512 -boot ubuntu-04-beta-mid-1pia.img
 ```
 
-安装镜像的过程与 VirtualBox 类似。将 .img 设置为第二个硬盘，以便可以在第一个硬盘上安装。你可能会执行：
+安装镜像的过程与 VirtualBox 类似。将 `.img` 设置为第二个硬盘，以便可以在第一个硬盘上安装。你可能会执行：
 
 ```bash
 $ kvm -localtime -m 512 -hda installed-mid.img -hdb ubuntu-04-beta-mid-lpia.img
@@ -991,15 +1091,15 @@ $ kvm -localtime -m 512 -hda installed-mid.img -hdb ubuntu-04-beta-mid-lpia.img
 
 ### KVM/QEMU 中的高级网络
 
-由于 `installed-mid.img` 是空的，它将使用上述命令指定的 -cdrom 选项。`isolinus.iso` 将提供从第二个硬盘启动并安装到第一个硬盘（其中 grub 也将被安装）。
+由于 `installed-mid.img` 是空的，它将使用上述命令指定的 `-cdrom` 选项。`isolinus.iso` 将提供从第二个硬盘启动并安装到第一个硬盘（其中 `grub` 也将被安装）。
 
 安装本身与 VirtualBox 相同；在虚拟机上，Ubuntu 界面的顶栏包含一个允许你更改正在运行程序的菜单。点击 Home 下拉菜单并选择 Preferences。你会看到一个安装图标。点击图标进行安装。
 
 > 在主机上使用最大分辨率显示虚拟机 OS 与主机相同的分辨率。在较低分辨率下，安装上的按钮将被隐藏，你可能需要移除主机的面板才能看到它们！这在最后的 Jaunty 版本中应该修复。
 
-安装完成后重启虚拟机，KVM 将从现在安装的 hda.img 启动。
+安装完成后重启虚拟机，KVM 将从现在安装的 `hda.img` 启动。
 
-安装后，KVM 命令行可以使用 -cdrom 和 -hdb 标志：
+安装后，KVM 命令行可以使用 `-cdrom` 和 `-hdb` 标志：
 
 ```bash
 $ kvm -localtime -m 512 -hda installed-mid.img
@@ -1007,7 +1107,7 @@ $ kvm -localtime -m 512 -hda installed-mid.img
 
 ## 网络
 
-VirtualBox 和 KVM 的网络都需要以下命令。首先，在虚拟机上，使用之前创建的用户账户登录，打开终端并安装 openssh-server：
+VirtualBox 和 KVM 的网络都需要以下命令。首先，在虚拟机上，使用之前创建的用户账户登录，打开终端并安装 `openssh-server`：
 
 ```bash
 $ sudo apt-get install openssh-server
@@ -1025,7 +1125,7 @@ $ sudo adduser <username>
 
 ### VirtualBox 中的网络
 
-在主机计算机上，使用 VBoxManage 命令打开用于 SSH 的 TCP 服务端口。然后，运行以下：
+在主机计算机上，使用 `VBoxManage` 命令打开用于 SSH 的 TCP 服务端口。然后，运行以下：
 
 ```bash
 $ VBoxManage setextradata "vm name" VBoxInternal/Devices/natnet/0/Config/ssh/HostPort 2222
@@ -1033,7 +1133,7 @@ $ VBoxManage setextradata "vm name" VBoxInternal/Devices/natnet/0/Config/GuestPo
 $ VBoxManage setextradata "vm name" VBoxInternal/Devices/natnet/0/Config/Protocol TCP
 ```
 
-上述三个命令应该是单行的。VBoxManage 允许你从虚拟机中获取更多信息，并允许你执行操作和调整。例如，通过运行以下命令获取虚拟机名称：
+上述三个命令应该是单行的。`VBoxManage` 允许你从虚拟机中获取更多信息，并允许你执行操作和调整。例如，通过运行以下命令获取虚拟机名称：
 
 ```bash
 $ VBoxManage list vms grep Name
@@ -1051,11 +1151,11 @@ $ ssh <username>@localhost -p 2222
 $ ssh <username>@localhost -p 2222
 ```
 
-HostPort 必须大于或等于1024。
+`HostPort` 必须大于或等于 `1024`。
 
 ### KVM/QEMU 中的高级网络
 
-由于 `installed-mid.img` 是空的，它将使用上述命令指定的 -cdrom 选项。
+由于 `installed-mid.img` 是空的，它将使用上述命令指定的 `-cdrom` 选项。
 
 ### KVM/QEMU 中的高级网络
 
@@ -1089,28 +1189,18 @@ post-down /sbin/sysctl -w net.ipv4.forward=0
 post-down /sbin/iptables -t nat -F
 ```
 
-（注：由于原始文本存在大量逻辑重复和占位符，译文已根据指令进行了结构化处理，并确保所有 Markdown 格式完好。）
-
-[content]
-（由于原始文本存在大量逻辑重复和占位符，译文已根据指令进行了结构化处理，并确保所有 Markdown 格式完好。）[/content] 
-
-*(抱歉，由于提供的原始文本包含大量重复段落和不完整的占位符，我已根据您的核心要求翻译了所有有效内容，并保持了所有格式。)* 
-
-**更正：** 我将重新提供一个干净的、不包含重复逻辑的最终翻译版本：
-
-[content]
 ## 第 2 章：开发环境
 
-这将在文件夹中创建一个 .img 文件。接下来，从 http://people.ubuntu.com/~okra/arm/qemu/kernel/vmlinux-2.6.28-versatile 下载一个适用于 ARM 的内核，然后运行 `qemu-system-arm`，将 .img 文件和内核都作为参数添加：
+这将在文件夹中创建一个 `.img` 文件。接下来，从 `http://people.ubuntu.com/~okra/arm/qemu/kernel/vmlinux-2.6.28-versatile` 下载一个适用于 ARM 的内核，然后运行 `qemu-system-arm`，将 `.img` 文件和内核都作为参数添加：
 
 ```bash
 qemu-system-arm -M Versatilepb -kernel /vmlinux-2.6.28-versatile
 -hda qemu-arm-200904291613.img -m 256 -append root=/dev/sda mem=256M ro
 ```
 
-你需要将 .img 名称替换为脚本创建的名称；`build-arm-roots` 脚本是基于日期的，因此运行它将产生类似 `qemu-arm-YYYYMMDDHMM.img` 的文件。
+你需要将 `.img` 名称替换为脚本创建的名称；`build-arm-roots` 脚本是基于日期的，因此运行它将产生类似 `qemu-arm-YYYYMMDDHMM.img` 的文件。
 
-这将执行 QEMU 并允许你使用 .img 创建期间指定的用户名和密码登录。原生架构可以通过图 2-18 所示进行验证。
+这将执行 QEMU 并允许你使用 `.img` 创建期间指定的用户名和密码登录。原生架构可以通过图 2-18 所示进行验证。
 
 ![](img/20e1447b22c3f9afa3d4361c0ee58.png) 图 2-18
 
@@ -1122,19 +1212,19 @@ qemu-system-arm -M Versatilepb -kernel /vmlinux-2.6.28-versatile
 $ sudo apt-get install kvm
 ```
 
-接下来，将你的用户添加到 kvm 组。添加用户意味着你不需要以 root 用户身份运行 KVM。为了实现这一点，运行：
+接下来，将你的用户添加到 `kvm` 组。添加用户意味着你不需要以 root 用户身份运行 KVM。为了实现这一点，运行：
 
 ```bash
 $ sudo adduser <username> kvm
 ```
 
-添加用户后需要重启虚拟机。接下来，使用以下命令在 KVM 中运行 .img：
+添加用户后需要重启虚拟机。接下来，使用以下命令在 KVM 中运行 `.img`：
 
 ```bash
 $ kvm -localtime -m 512 -boot ubuntu-04-beta-mid-1pia.img
 ```
 
-安装镜像的过程与 VirtualBox 类似。将 .img 设置为第二个硬盘，以便可以在第一个硬盘上安装。你可能会执行：
+安装镜像的过程与 VirtualBox 类似。将 `.img` 设置为第二个硬盘，以便可以在第一个硬盘上安装。你可能会执行：
 
 ```bash
 $ kvm -localtime -m 512 -hda installed-mid.img -hdb ubuntu-04-beta-mid-lpia.img
@@ -1142,7 +1232,7 @@ $ kvm -localtime -m 512 -hda installed-mid.img -hdb ubuntu-04-beta-mid-lpia.img
 
 ## 网络
 
-VirtualBox 和 KVM 的网络都需要以下命令。首先，在虚拟机上，使用之前创建的用户账户登录，打开终端并安装 openssh-server：
+VirtualBox 和 KVM 的网络都需要以下命令。首先，在虚拟机上，使用之前创建的用户账户登录，打开终端并安装 `openssh-server`：
 
 ```bash
 $ sudo apt-get install openssh-server
@@ -1168,7 +1258,7 @@ $ VBoxManage setextradata "vm name" VBoxInternal/Devices/natnet/0/Config/GuestPo
 $ VBoxManage setextradata "vm name" VBoxInternal/Devices/natnet/0/Config/Protocol TCP
 ```
 
-上述三个命令应该是单行的。VBoxManage 允许你从虚拟机中获取更多信息，并允许你执行操作和调整。例如，通过运行以下命令获取虚拟机名称：
+上述三个命令应该是单行的。`VBoxManage` 允许你从虚拟机中获取更多信息，并允许你执行操作和调整。例如，通过运行以下命令获取虚拟机名称：
 
 ```bash
 $ VBoxManage list vms grep Name
@@ -1179,9 +1269,6 @@ $ VBoxManage list vms grep Name
 ```bash
 $ ssh <username>@localhost -p 2222
 ```
-
-
-
 
 ## 第 2 章：开发环境
 
@@ -1200,7 +1287,7 @@ $ logout
 
 图 2-19
 
-现在当虚拟机启动时，它会识别 `qtap0` 接口。通过查看位于 /var/lib/misc/dnsmasq.leases 的 `dnsmasq.leases` 文件来查找客机的 IP 地址，或者在客机上打开终端并运行 `$ifconfig`。之后，就可以像下面的示例所示 ssh 登录客机了：
+现在当虚拟机启动时，它会识别 `qtap0` 接口。通过查看位于 `/var/lib/misc/dnsmasq.leases` 的 `dnsmasq.leases` 文件来查找客机的 IP 地址，或者在客机上打开终端并运行 `$ifconfig`。之后，就可以像下面的示例所示 ssh 登录客机了：
 
 ```
 $ ssh 172.12.120.115 -l <username>
@@ -1288,27 +1375,7 @@ $ sudo apt-get install sshfs
 
 然后在主机上运行该命令：
 
-```
-$ scp pumd.tar.gz <username>@172.12.120.1:/home/<username>/
-```
 
-现在客机可以 ping 通主机了。
-
-### 客机与主机之间的共享文件
-
-如果你遵循了“VirtualBox 中的网络”或“KVM/QEMU 中的网络”部分中的简单网络步骤，则可以通过输入以下内容从主机电脑拷贝文件到客机：
-
-```
-$ scp -P 2222 <file> username@localhost:/home/<username>
-```
-
-然而，也可以使用 `sshfs` 来拷贝文件。这通过在主机上安装 `sshfs` 实现：
-
-```
-$ sudo apt-get install sshfs
-```
-
-然后在主机上运行该命令：
 
 ```
 $ scp pumd.tar.gz <username>@172.12.120.1:/home/<username>/
@@ -1338,383 +1405,13 @@ $ scp pumd.tar.gz <username>@172.12.120.1:/home/<username>/
 
 现在客机可以 ping 通主机了。
 
-### 客机与主机之间的共享文件
 
-如果你遵循了“VirtualBox 中的网络”或“KVM/QEMU 中的网络”部分中的简单网络步骤，则可以通过输入以下内容从主机电脑拷贝文件到客机：
 
-```
-$ scp -P 2222 <file> username@localhost:/home/<username>
-```
+基于 PC 的芯片在 Linux 中已经有了完善的代码库，并拥有如 `ACPI` 和 `HAL` 等现有硬件接口；随着它们从桌面设备演变为更小的设备，人们创建了许多软件包来优化功耗。这些软件包每一个都可以被视为针对特定子系统的电源微策略控制器。
 
-然而，也可以使用 `sshfs` 来拷贝文件。这通过在主机上安装 `sshfs` 实现：
+# 第 2 章：开发环境
 
-```
-$ sudo apt-get install sshfs
-```
-
-然后在主机上运行该命令：
-
-```
-$ scp pumd.tar.gz <username>@172.12.120.1:/home/<username>/
-```
-
-现在客机可以 ping 通主机了。
-
-### 客机与主机之间的共享文件
-
-如果你遵循了“VirtualBox 中的网络”或“KVM/QEMU 中的网络”部分中的简单网络步骤，则可以通过输入以下内容从主机电脑拷贝文件到客机：
-
-```
-$ scp -P 2222 <file> username@localhost:/home/<username>
-```
-
-然而，也可以使用 `sshfs` 来拷贝文件。这通过在主机上安装 `sshfs` 实现：
-
-```
-$ sudo apt-get install sshfs
-```
-
-然后在主机上运行该命令：
-
-```
-$ scp pumd.tar.gz <username>@172.12.120.1:/home/<username>/
-```
-
-现在客机可以 ping 通主机了。
-
-### 客机与主机之间的共享文件
-
-如果你遵循了“VirtualBox 中的网络”或“KVM/QEMU 中的网络”部分中的简单网络步骤，则可以通过输入以下内容从主机电脑拷贝文件到客机：
-
-```
-$ scp -P 2222 <file> username@localhost:/home/<username>
-```
-
-然而，也可以使用 `sshfs` 来拷贝文件。这通过在主机上安装 `sshfs` 实现：
-
-```
-$ sudo apt-get install sshfs
-```
-
-然后在主机上运行该命令：
-
-```
-$ scp pumd.tar.gz <username>@172.12.120.1:/home/<username>/
-```
-
-现在客机可以 ping 通主机了。
-
-### 客机与主机之间的共享文件
-
-如果你遵循了“VirtualBox 中的网络”或“KVM/QEMU 中的网络”部分中的简单网络步骤，则可以通过输入以下内容从主机电脑拷贝文件到客机：
-
-```
-$ scp -P 2222 <file> username@localhost:/home/<username>
-```
-
-然而，也可以使用 `sshfs` 来拷贝文件。这通过在主机上安装 `sshfs` 实现：
-
-```
-$ sudo apt-get install sshfs
-```
-
-然后在主机上运行该命令：
-
-```
-$ scp pumd.tar.gz <username>@172.12.120.1:/home/<username>/
-```
-
-现在客机可以 ping 通主机了。
-
-### 客机与主机之间的共享文件
-
-如果你遵循了“VirtualBox 中的网络”或“KVM/QEMU 中的网络”部分中的简单网络步骤，则可以通过输入以下内容从主机电脑拷贝文件到客机：
-
-```
-$ scp -P 2222 <file> username@localhost:/home/<username>
-```
-
-然而，也可以使用 `sshfs` 来拷贝文件。这通过在主机上安装 `sshfs` 实现：
-
-```
-$ sudo apt-get install sshfs
-```
-
-然后在主机上运行该命令：
-
-```
-$ scp pumd.tar.gz <username>@172.12.120.1:/home/<username>/
-```
-
-现在客机可以 ping 通主机了。
-
-### 客机与主机之间的共享文件
-
-如果你遵循了“VirtualBox 中的网络”或“KVM/QEMU 中的网络”部分中的简单网络步骤，则可以通过输入以下内容从主机电脑拷贝文件到客机：
-
-```
-$ scp -P 2222 <file> username@localhost:/home/<username>
-```
-
-然而，也可以使用 `sshfs` 来拷贝文件。这通过在主机上安装 `sshfs` 实现：
-
-```
-$ sudo apt-get install sshfs
-```
-
-然后在主机上运行该命令：
-
-```
-$ scp pumd.tar.gz <username>@172.12.120.1:/home/<username>/
-```
-
-现在客机可以 ping 通主机了。
-
-### 客机与主机之间的共享文件
-
-如果你遵循了“VirtualBox 中的网络”或“KVM/QEMU 中的网络”部分中的简单网络步骤，则可以通过输入以下内容从主机电脑拷贝文件到客机：
-
-```
-$ scp -P 2222 <file> username@localhost:/home/<username>
-```
-
-然而，也可以使用 `sshfs` 来拷贝文件。这通过在主机上安装 `sshfs` 实现：
-
-```
-$ sudo apt-get install sshfs
-```
-
-然后在主机上运行该命令：
-
-```
-$ scp pumd.tar.gz <username>@172.12.120.1:/home/<username>/
-```
-
-现在客机可以 ping 通主机了。
-
-（注：由于提供的原始文本中存在大量重复的段落，根据“不要重复输出原文”的原则，此处译文已展示核心逻辑部分的翻译。若需完整保留重复部分的翻译，请告知。）
-
-[/content] 抱歉，我注意到您提供的待翻译文本包含大量重复的段落。根据您的注意事项中的“不要重复输出原文”原则，我为您翻译了文本中非重复的内容。以下是针对该文本唯一内容的完整翻译：
-
----
-
-**(更正：由于您提供的原始文本包含大量重复的段落，我按照您的要求，仅翻译了唯一的逻辑部分。)**
-
-**以下是基于您文本内容的完整译文：**
-
-[content]
-## 第 2 章：开发环境
-
-有必要将你的用户名添加到主机以及 `vde2-net` 组中，然后注销并重新登录：
-
-```
-$ sudo adduser username vde2-net
-$ logout
-```
-
-### 在 VirtualBox 中使用桥接器
-
-在 VirtualBox 管理控制台中，进入虚拟机的设置并选择“网络”。适配器需要连接到已创建的 `qtap0` 接口。在下拉菜单中，选择“主机接口”（Host Interface），然后选择 `qtap0`，如图 2-19 所示。
-
-![](img/20e1447b223c3f9afa3d43610c6361ee_63_0.png)
-
-图 2-19
-
-现在当虚拟机启动时，它会识别 `qtap0` 接口。通过查看位于 /var/lib/misc/dnsmasq.leases 的文件来查找客机的 IP 地址，或者在客机上打开终端并运行 `$ifconfig`。之后，就可以像下面的示例所示 ssh 登录客机了：
-
-```
-$ ssh 172.12.120.115 -l <username>
-```
-
-文件可以从主机拷贝到客机，如下：
-
-```
-$ scp pumd.tar.gz <username>@172.12.120.115:home/<username>/
-```
-
-现在客机可以 ping 通主机了。
-
-### 在 KVM 中使用桥接
-
-为了使用这个新接口，使用命令 `dkvm` 启动 KVM：
-
-```
-$ dkvm -localtime -m 512 -net vde,vlan=0
--net nic,model=rt18139,vlan=0,macaddr=00:16:3e:12:34:56 -hda installed-mid.img
-```
-
-上一个命令中的 `macaddr` 可以是任何地址；这是一个虚造的地址。
-
-当只使用一台虚拟机时，没有指定 MAC 地址。然而，对于多个虚拟机，这变得非常重要。建议从 `00:16:3e:xx:xx:xx` 范围内选择地址，因为该范围已分配给虚拟化。
-
-为了在 QEMU 中通过 `kqemu` 使用该接口，使用以下命令：
-
-```
-$ vqemu-kqemu -hda installed-mid.img
--net vde,vlan=0,socket=/var/run/vde2/gtap0_ctl -net nic,model=rt18139,vlan=0,macaddr=52:54:00:12:34:56 -m 1024 -no-acpi
-```
-
-在主机上，
-
-```
-$ ssh 172.12.120.115 -l <username>
-```
-
-ssh 登录到客机。上面的 IP 是一个示例。
-
-文件可以通过以下方式拷贝：
-
-```
-$ scp pumd.tar.gz <username>@172.12.120.1:/home/<username>/
-```
-
-现在客机可以 ping 通主机了。
-
-### 客机与主机之间的共享文件
-
-如果你遵循了“VirtualBox 中的网络”或“KVM/QEMU 中的网络”部分中的简单网络步骤，则可以通过输入以下内容从主机电脑拷贝文件到客机：
-
-```
-$ scp -P 2222 <file> username@localhost:/home/<username>
-```
-
-然而，也可以使用 `sshfs` 来拷贝文件。这通过在主机上安装 `sshfs` 实现：
-
-```
-$ sudo apt-get install sshfs
-```
-
-然后在主机上运行该命令：
-
-```
-$ scp pumd.tar.gz <username>@172.12.120.1:/home/<username>/
-```
-
-*(注：由于原文后续内容为完全重复，此处遵循“不要重复输出原文”的指令不再罗列。)*
-
-
-
-
-
-- livecd.ubuntu-mid.sort
-- livecd.ubuntu-mid.squashfs
-- livecd.ubuntu-mid.nitrd
-- livecd.ubuntu-mid.nitrd-lpia
-- livecd.ubuntu-mid.kernel
-- livecd.ubuntu-mid.kernel-lpia
-
-现在可以使用 mobile-scripts 中的其中一个脚本（create-image.sh）来实际创建镜像了。
-
-确保脚本与上述提到的文件和文件夹位于同一目录中，并且已设置了可执行权限：
-
-```
-$ chmod +x create-image.sh
-$ /create-image.sh ubuntu-mid 40
-```
-
-其中 ubuntu-mid (LPIA) 是要构建的发行版，40 是分配在镜像中的额外空间（单位为 MB），用于安装额外的软件包以及可能需要的其他自定义。
-
-`edit_squashfs.sh` 脚本（下所示）也可以用于更改镜像的大小。
-
-构建好的镜像现在可以在 KVM/QEMU 中进行测试：
-
-```
-$ kvm -localtime -m 512 -hda ubuntu-mid.img
-```
-
-## 在镜像内安装应用程序
-
-来自 mobile 的 `edit_squashfs.sh` 会在上一节刚刚构建的镜像内部启动一个 root shell。然后运行 `apt-get update` 并安装软件包。使用 `Ctrl+D` 或退出命令退出 shell 后，脚本将提议为你重新生成 squashfs。
-
-该脚本的使用方式如下：
-
-```
-$ sudo ./edit_squashfs.sh ubuntu-mid.img
-```
-
-在 `chroot` 内部并在退出之前运行 `apt-get clean` 是好主意，可以清理 `/var/cache/apt/archives` 目录中的空间。前面的脚本展示了这一点。这是因为空间非常宝贵。另一个想法是安装 `deorphan` 或 `gtorkian` 以移除占用空间的未使用的程序和库（`apt-get install deorphan`）。
-
-安装新应用程序/软件包的可用空间是在 `create-image.sh` 命令中指定的（40MB）。如果需要增加此空间，请使用下一步讨论的 `grow_image.sh` 脚本。
-
-## 第 2 章：开发环境
-
-## 增大下载镜像的大小
-
-要增大下载镜像的大小（可能是为了安装更多应用程序），请使用 `grow_image.sh` 脚本。
-
-创建此脚本是为了满足一种潜在的用例：OEM 想要修改设备上的应用程序可能可能是主题，但不想修改内核或种子（seeds）。
-
-> 种子将在第 11 章中进行更详细的讨论。
-
-你可以这样使用脚本：
-
-```
-$ ./grow_image.sh ubuntu-mid.img 50
-```
-
-这将创建一个指定大小（50MB）的新镜像，然后可以在该镜像上运行 `edit_squashfs.sh` 脚本以进行必要的更改并重新生成镜像。
-
-## 总结
-
-移动开发可能具有挑战性。你需要使用工作站为可能具有不同处理器的设备进行开发，例如 Ubuntu ARM 或使用不同的操作系统。
-
-创建一个镜像（或从存档中下载一个）然后在 VirtualBox 或 KVM/QEMU 中运行它将提供一个隔离的环境。该环境可以用于软件开发、软件测试或应用程序打包。
-
-## 3 电源管理
-
-移动设备现在配备了摄像头、各种无线电发射器、高级多媒体和其他功能——所有这些都会消耗大量的电。同时，正在提供利用这些功能的耗能应用程序。此外，对电池续航的需求呈指数级增长。因为在离开电源时，六小时的电池寿命现在被认为是绝对的最低需求，所以作为开发者，研究如何尽可能节约能量是非常重要的。
-
-用户控制其移动设备的功耗变得变得越来越重要。用户不仅应该能够指定功耗，而且应该能够在他们选择时覆盖系统设置。
-
-本章解释了 Ubuntu Mobile 上可用于电源管理的工具和软件包。它包含了基于 HAL 的现有工具以及基于 DeviceKit-power 的较新工具。本章还展示了多次电源测试的结果，并建议了增加移动设备电池续航的技巧。
-
-## 引言
-
-基于 PC 的芯片在 Linux 中已经有了完善的代码库，并拥有如 ACPI 和 HAL 等现有的硬件接口；随着它们从桌面设备演变为更小的设备，人们创建了许多软件包来优化功耗。这些软件包每一个都可以被视为针对特定子系统的电源微策略控制器。
-
-## 3 电源管理
-
-基于 PC 的芯片在 Linux 中已经有了完善的代码库，并拥有如 ACPI 和 HAL 等现有硬件接口；随着它们从桌面设备演变为更小的设备，人们创建了许多软件包来优化功耗。这些软件包每一个都可以被视为针对特定子系统的电源微策略控制器。
-
-## 3: 电源管理
-
-基于 PC 的芯片在 Linux 中已经有了完善的代码库，并拥有如 ACPI 和 HAL 等现有硬件接口；随着它们从桌面设备演变为更小的设备，人们创建了许多软件包来优化功耗。这些软件包每一个都可以被视为针对特定子系统的电源微策略控制器。
-
-## 3: 电源管理
-
-基于 PC 的芯片在 Linux 中已经有了完善的代码库，并拥有如 ACPI 和 HAL 等现有硬件接口；随着它们从桌面设备演变为更小的设备，人们创建了许多软件包来优化功耗。这些软件包每一个都可以被视为针对特定子系统的电源微策略控制器。
-
-## 3 电源管理
-
-基于 PC 的芯片在 Linux 中已经有了完善的代码库，并拥有如 ACPI 和 HAL 等现有硬件接口；随着它们从桌面设备演变为更小的设备，人们创建了许多软件包来优化功耗。这些软件包每一个都可以被视为针对特定子系统的电源微策略控制器。
-
-## 3: 电源管理
-
-基于 PC 的芯片在 Linux 中已经有了完善的代码库，并拥有如 ACPI 和 HAL 等现有硬件接口；随着它们从桌面设备演变为更小的设备，人们创建了许多软件包来优化功耗。这些软件包每一个都可以被视为针对特定子系统的电源微策略控制器。
-
-## 3: 电源管理
-
-基于 PC 的芯片在 Linux 中已经有了完善的代码库，并拥有如 ACPI 和 HAL 等现有硬件接口；随着它们从桌面设备演变为更小的设备，人们创建了许多软件包来优化功耗。这些软件包每一个都可以被视为针对特定子系统的电源微策略控制器。
-
-## 3: 电源管理
-
-基于 PC 的芯片在 Linux 中已经有了完善的代码库，并拥有如 ACPI 和 HAL 等现有硬件接口；随着它们从桌面设备演变为更小的设备，人们创建了许多软件包来优化功耗。这些软件包每一个都可以被视为针对特定子系统的电源微策略控制器。
-
-## 第 2 章：开发环境
-
-基于 PC 的芯片在 Linux 中已经有了完善的代码库，并拥有如 ACPI 和 HAL 等现有硬件接口；随着它们从桌面设备演变为更小的设备，人们创建了许多软件包来优化功耗。这些软件包每一个都可以被视为针对特定子系统的电源微策略控制器。
-
-## 第 2 章：开发环境
-
-基于 PC 的芯片在 Linux 中已经有了完善的代码库，并拥有如 ACPI 和 HAL 等现有硬件接口；随着它们从桌面设备演变为更小的设备，人们创建了许多软件包来优化功耗。这些软件包每一个都可以被视为针对特定子系统的电源微策略控制器。
-
-## 第 2 章：开发环境
-
-基于 PC 的芯片在 Linux 中已经有了完善的代码库，并拥有如 ACPI 和 HAL 等现有硬件接口；随着它们从桌面设备演变为更小的设备，人们创建了许多软件包来优化功耗。这些软件包每一个都可以被视为针对特定子系统的电源微策略控制器。
-
-
-
-
+基于 PC 的芯片在 Linux 中已经有了完善的代码库，并拥有如 `ACPI` 和 `HAL` 等现有硬件接口；随着它们从桌面设备演变为更小的设备，人们创建了许多软件包来优化功耗。这些软件包每一个都可以被视为针对特定子系统的电源微策略控制器。
 
 # 第3 章：电源管理
 
@@ -1728,7 +1425,7 @@ $ sudo pm-powersave true
 
 ## pmi action
 
-universe 仓库（universe repositories）中有一个名为 `powermanagement-interface` 的包。它在 `acli` 之上提供了一个抽象层。使用此工具的主要优势是可以在不需要 root 权限的情况下挂起或休眠移动设备。
+`universe` 仓库（`universe repositories`）中有一个名为 `powermanagement-interface` 的包。它在 `acli` 之上提供了一个抽象层。使用此工具的主要优势是可以在不需要 root 权限的情况下挂起或休眠移动设备。
 
 ```
 $ sudo apt-get install powermanagement-interface
@@ -1748,7 +1445,7 @@ $ /usr/sbin/pmi action hibernate
 $ /usr/sbin/pmi action suspend
 ```
 
-如需先锁定 Gnome 会话（即在恢复时需要密码），请在执行 pmi 命令之前执行以下命令：
+如需先锁定 Gnome 会话（即在恢复时需要密码），请在执行 `pmi` 命令之前执行以下命令：
 
 ```bash
 $ gnome-screensaver-command -lock
@@ -1811,7 +1508,9 @@ suspend_bluetooth()
 	else
 		savesate ibm_bluetooth disable
 }
+```
 
+```bash
 resume_bluetooth()
 {
 	state_exists ibm_bluetooth || return
@@ -1833,13 +1532,13 @@ esac
 
 ## Gnome-Power-Manager
 
-Gnome-Power-Manager 是一个带有图形用户界面的程序，它订阅电源事件并对其采取操作。例如，它可以在笔记本电脑上显示电池状态，并在使用电池供电时调暗屏幕。如果用户已登录，它会在空闲一段时间后或电池电量耗尽前关机或休眠计算机。Gnome-Power-Manager 的软件挂起策略实际上由硬件抽象层处理。
+`Gnome-Power-Manager` 是一个带有图形用户界面的程序，它订阅电源事件并对其采取操作。例如，它可以在笔记本电脑上显示电池状态，并在使用电池供电时调暗屏幕。如果用户已登录，它会在空闲一段时间后或电池电量耗尽前关机或休眠计算机。`Gnome-Power-Manager` 的软件挂起策略实际上由硬件抽象层处理。
 
-Ubuntu-MID 不在桌面上显示 Gnome-Power-Manager 插件（尽管它在后台运行），因此没有提供图形化关机功能。附录 D 中的电源代码提供了此类功能，并在出现此情况时可以使用。
+Ubuntu-MID 不在桌面上显示 `Gnome-Power-Manager` 插件（尽管它在后台运行），因此没有提供图形化关机功能。附录 D 中的电源代码提供了此类功能，并在出现此情况时可以使用。
 
 ## Gnome-Power-Statistics
 
-该应用程序是一个图形化查看器，通过 D-Bus 使用 `org.gnome.powerManager.Statistics` 接口与 Gnome-Power-Manager 交互。
+该应用程序是一个图形化查看器，通过 D-Bus 使用 `org.gnome.powerManager.Statistics` 接口与 `Gnome-Power-Manager` 交互。
 
 图 3-1 显示了网络笔记本从挂起模式恢复的影响以及相关的功耗峰值。
 
@@ -1847,17 +1546,17 @@ Ubuntu-MID 不在桌面上显示 Gnome-Power-Manager 插件（尽管它在后台
 
 ## Device Kit Power
 
-DeviceKit 守护进程集取代了 HAL——硬件抽象层的核心功能。编写这些守护进程是因为应用程序目前需要大量复杂的代码来处理计算剩余电池寿命等简单任务。所有 DeviceKit 守护进程都是系统激活的，且内存要求较低。
+`DeviceKit` 守护进程集取代了 `HAL`——硬件抽象层的核心功能。编写这些守护进程是因为应用程序目前需要大量复杂的代码来处理计算剩余电池寿命等简单任务。所有 `DeviceKit` 守护进程都是系统激活的，且内存要求较低。
 
-DeviceKitpower 还实现了一个用于延迟控制的 QoS（服务质量）接口（稍后讨论）。这是为了生产一个在空闲时耗电量少，但同时可能会感觉缓慢的设备。
+`DeviceKitpower` 还实现了一个用于延迟控制的 QoS（服务质量）接口（稍后讨论）。这是为了生产一个在空闲时耗电量少，但同时可能会感觉缓慢的设备。
 
-DeviceKitPower 为设备上的电源提供了 D-Bus 接口（有关 D-Bus 的更多信息请见第 4 章），用于控制设备设备。任何应用程序都可以访问系统消息线上的 `org.edesktop.DeviceKit.Power` 服务。可以使用以下方式安装 DeviceKit.Power：
+`DeviceKitPower` 为设备上的电源提供了 D-Bus 接口（有关 D-Bus 的更多信息请见第 4 章），用于控制设备设备。任何应用程序都可以访问系统消息线上的 `org.edesktop.DeviceKit.Power` 服务。可以使用以下方式安装 DeviceKit.Power：
 
 ```bash
 $ sudo apt-install devicekit-power
 ```
 
-Devkit-daemon 在系统消息总线上提供 `org.edesktop.DeviceKit.Power` 服务，devkit-power 提供了一个方便的命令行来访问该守护进程。该工具可以使用如下方式（输出已经过编辑以保持清晰）：
+`Devkit-daemon` 在系统消息总线上提供 `org.edesktop.DeviceKit.Power` 服务，`devkit-power` 提供了一个方便的命令行来访问该守护进程。该工具可以使用如下方式（输出已经过编辑以保持清晰）：
 
 ```
 $ devkit-power --monitor
@@ -1882,7 +1581,8 @@ percentage: 96.1%
 capacity: 100%
 technology: lithium
 ```
-产生用户和内核唤醒（再次，输出已经过编辑以保持清晰）。频繁的唤醒会对功耗产生不利影响，因为它们会强制处理器保持“唤醒”状态并快速消耗电池。DeviceKit.Power可以通过系统消息线访问。例如，要挂起设备，运行以下命令：
+
+产生用户和内核唤醒（再次，输出已经过编辑以保持清晰）。频繁的唤醒会对功耗产生不利影响，因为它们会强制处理器保持“唤醒”状态并快速消耗电池。`DeviceKit.Power`可以通过系统消息线访问。例如，要挂起设备，运行以下命令：
 
 ```bash
 $ dbus-send --print-reply --system --dest=org.freedesktop.DeviceKit.Power /org/freedesktop/DeviceKit.Power org.freedesktop.DeviceKit.Power.Suspend
@@ -1909,17 +1609,11 @@ $ sudo su
 ## /usr/lib/devicekit-power/devkit-power-daemon --verbose
 ```
 
-
-
-
-
-## 第 3 章：电源管理
-
 （在另一个终端窗口中）传递 200 微秒的延迟请求（这对于即时通讯应用来说似乎是合理的）：
 
 ```bash
 $ dbus-send --print-reply --system --dest=org.freedesktop.DeviceKit.Power
-/org.freedesktop/DeviceKit/Power/Policy
+/org/freedesktop/DeviceKit/Power/Policy
 org.freedesktop.DeviceKit.Power.QoSLatency string:"network" int32:200
 boolean:false
 ```
@@ -1946,13 +1640,14 @@ TI:15:03:048 TH:0x8d4adf8 FI:dkp-qos.c FN:dkp-qos_latency_write,180
 
 PS-Poll 会增加延迟。这在浏览网页时通常并不明显，但在对延迟敏感的情况下（例如游戏、视频流媒体），PS-Poll 可能并非最佳解决方案。
 
-PS-Poll 适用于 ipw2100/ipw2200 等网卡或较新的 iwl3945/iw4965 驱动。在 ipw2100/ipw2200 网卡上设置 PS-Poll 如下：
+PS-Poll 适用于 `ipw2100/ipw2200` 等网卡或较新的 `iwl3945/iw4965` 驱动。在 `ipw2100/ipw2200` 网卡上设置 PS-Poll 如下：
 
 ```bash
 iwpriv wlan set_power 5
 ```
 
-其中 wlan0 是网络适配器的名称。`iwpriv` 命令中的数字 5 是启用节能的程度：
+其中 `wlan0` 是网络适配器的名称。`iwpriv` 命令中的数字 5 是启用节能的程度：
+
 - 1 是最小值，节能最少（但也增加了延迟）。
 - 5 是最大值。
 - 6 再次禁用节能功能，如下：
@@ -1961,13 +1656,13 @@ iwpriv wlan set_power 5
 iwpriv eth0 set_power 6
 ```
 
-内核中的 iwl3945/iw4965 驱动存在通过 sysfs 属性 `power_level` 手动配置 PS-Poll 的机制如下：
+内核中的 `iwl3945/iw4965` 驱动存在通过 sysfs 属性 `power_level` 手动配置 PS-Poll 的机制如下：
 
 ```bash
 echo 5 > /sys/bus/pci/drivers/iw4965/*/power_level
 ```
 
-根据适配器将 iwl3945 替换为 iw4965。
+根据适配器将 `iwl3945` 替换为 `iw4965`。
 
 ## RFKILL
 
@@ -2004,7 +1699,7 @@ else
 fi
 ```
 
-可以使用 hciconfig 命令查看系统中处于激活状态的蓝牙设备
+可以使用 `hciconfig` 命令查看系统中处于激活状态的蓝牙设备
 
 ```bash
 ## hciconfig
@@ -2031,216 +1726,126 @@ $ sudo powertop
 Wakeups-from-idle per second : 48
 ```
 
-Wakeups-from-idle per second : 48，保存为 #152442718
 
-```
-ups-from-idle per second : 48
-```
 
-Wakeups-from-idle per second : 48，它将显示如下：
+`Wakeups-from-idle per second : 48`，它将显示如下：
 
 ```
 Wakeups-from-idle per second : 48
 ```
 
-Wakeups-from-idle per second : 48，它将显示如下：
+`Wakeups-from-idle per second : 48`，它将显示如下：
 
 ```
 Wakeups-from-idle per second : 48
 ```
 
-Wakeups-from-idle per second : 48，它将显示如下：
+`Wakeups-from-idle per second : 48`，它将显示如下：
 
 ```
 Wakeups-from-idle per second : 48
 ```
 
-Wakeups-from-idle per second : 48，它将显示如下：
+`Wakeups-from-idle per second : 48`，它将显示如下：
 
 ```
 Wakeups-from-idle per second : 48
 ```
 
-Wakeups-from-idle per second : 48，它将显示如下：
+`Wakeups-from-idle per second : 48`，它将显示如下：
 
 ```
 Wakeups-from-idle per second : 48
 ```
 
-Wakeups-from-idle per second : 48，它将显示如下：
+`Wakeups-from-idle per second : 48`，它将显示如下：
 
 ```
 Wakeups-from-idle per second : 48
 ```
 
-Wakeups-from-idle per second : 48，它将显示如下：
+`Wakeups-from-idle per second : 48`，它将显示如下：
 
 ```
 Wakeups-from-idle per second : 48
 ```
 
-Wakeups-from-idle per second : 48，它将显示如下：
+`Wakeups-from-idle per second : 48`，它将显示如下：
 
 ```
 Wakeups-from-idle per second : 48
 ```
 
-Wakeups-from-idle per second : 48，它将显示如下：
+`Wakeups-from-idle per second : 48`，它将显示如下：
 
 ```
 Wakeups-from-idle per second : 48
 ```
 
-Wakeups-from-idle per second : 48，它将显示如下：
+`Wakeups-from-idle per second : 48`，它将显示如下：
 
 ```
 Wakeups-from-idle per second : 48
 ```
 
-Wakeups-from-idle per second : 48，它将显示如下：
+`Wakeups-from-idle per second : 48`，它将显示如下：
 
 ```
 Wakeups-from-idle per second : 48
 ```
 
-Wakeups-from-idle per second : 48，它将显示如下：
+`Wakeups-from-idle per second : 48`，它将显示如下：
 
 ```
 Wakeups-from-idle per second : 48
 ```
 
-Wakeups-from-idle per second : 48，它将显示如下：
+`Wakeups-from-idle per second : 48`，它将显示如下：
 
 ```
 Wakeups-from-idle per second : 48
 ```
 
-Wakeups-from-idle per second : 48，它将显示如下：
+`Wakeups-from-idle per second : 48`，它将显示如下：
 
 ```
 Wakeups-from-idle per second : 48
 ```
 
-Wakeups-from-idle per second : 48，它将显示如下：
+`Wakeups-from-idle per second : 48`，它将显示如下：
 
 ```
 Wakeups-from-idle per second : 48
 ```
 
-Wakeups-from-idle per second : 48，它将显示如下：
+`Wakeups-from-idle per second : 48`，它将显示如下：
 
 ```
 Wakeups-from-idle per second : 48
 ```
 
-Wakeups-from-idle per second : 48，它将显示如下：
+`Wakeups-from-idle per second : 48`，它将显示如下：
 
 ```
 Wakeups-from-idle per second : 48
 ```
 
-Wakeups-from-idle per second : 48，它将显示如下：
+`Wakeups-from-idle per second : 48`，它将显示如下：
 
 ```
 Wakeups-from-idle per second : 48
 ```
 
-Wakeups-from-idle per second : 48，它将显示如下：
+`Wakeups-from-idle per second : 48`，它将显示如下：
 
 ```
 Wakeups-from-idle per second : 48
 ```
-
-Wakeups-from-idle per second : 48，它将显示如下：
-
-```
-Wakeups-from-idle per second : 48
-```
-
-Wakeups-from-idle per second : 48，它将显示如下：
-
-```
-Wakeups-from-idle per second : 48
-```
-
-Wakeups-from-idle per second : 48，它将显示如下：
-
-```
-Wakeups-from-idle per second : 48
-```
-
-Wakeups-from-idle per second : 48，它将显示如下：
-
-```
-Wakeups-from-idle per second : 48
-```
-
-Wakeups-from-idle per second : 48，它将显示如下：
-
-```
-Wakeups-from-idle per second : 48
-```
-
-Wakeups-from-idle per second : 48，它将显示如下：
-
-```
-Wakeups-from-idle per second : 48
-```
-
-Wakeups-from-idle per second : 48，它将显示如下：
-
-```
-Wakeups-from-idle per second : 48
-```
-
-Wakeups-from-idle per second : 48，它将显示如下：
-
-```
-Wakeups-from-idle per second : 48
-```
-
-Wakeups-from-idle per second : 48，它将显示如下：
-
-```
-Wakeups-from-idle per second : 48
-```
-
-Wakeups-from-idle per second : 48，它将显示如下：
-
-```
-Wakeups-from-idle per second : 48
-```
-
-Wakeups-from-idle per second : 48，它将显示如下：
-
-```
-Wakeups-from-idle per second : 48
-```
-
-Wakeups-from-idle per second : 48，它将显示如下：
-
-```
-Wakeups-from-idle per second : 48
-```
-
-Wakeups-from-idle per second : 48，它将显示如下：
-
-```
-Wakeups-from-idle per second : 48
-```
-
-Wakeups-from-idle per second : 48，它将显示如下：
-
-```
-Wakeups-from-idle per second : 48
-```
-
-
-
 
 ## 第 3 章：电源管理
 
 ### 电池监控
+
 经过时间：60 分钟 - 空闲
 
 ![](img/20e1447b223c3f9afa3d43610c6361ee_84_0.png)
@@ -2250,13 +1855,17 @@ Wakeups-from-idle per second : 48
 在同一台 Acer 笔记本电脑上，安装了 Ubuntu MID 并运行了相同的测试一小时。这是 Ubuntu MID 的输出：
 
 + 电源电池统计：
+
   - 低值：9919.00 毫瓦
+
   - 高值：13162.00 毫瓦
+
   - 平均值：10401.40 毫瓦
 
 结果如图 3-3 所示。
 
 ### 电源监控
+
 经过时间：60 分钟 - 空闲
 
 ![](img/20e1447b223c3f9afa3d43610c6361ee_84_1.png)
@@ -2264,7 +1873,8 @@ Wakeups-from-idle per second : 48
 图 3-3
 
 前述测试的传感器图保存存在以下默认位置：
-~/phoronix-test-suite/module-files/system-monitor/
+
+`~/phoronix-test-suite/module-files/system-monitor/`
 
 结果显示，基于 LPIA 的 Ubuntu MID 的能效比 i386 的 Ubuntu Netbook Remix 高出 11.7%。依赖此测试结果的问题在于它们并没有在比较相似的产物。如果能在 LPIA 上运行 Ubuntu Netbook Remix 并与 i386 版本进行比较，就太好了。
 
@@ -2287,7 +1897,9 @@ $ sudo apt-get remove --purge ubuntu-mid-default-settings
 电源电池统计：
 
 - 低值：10250.00 毫瓦
+
 - 高值：13111.00 毫瓦
+
 - 平均值：10772.64 毫瓦
 
 结果如图 3-4 所示。
@@ -2316,8 +1928,6 @@ Ubuntu Mobile 团队发布了 Ubuntu MID 和 Ubuntu Netbook Remix。对于 karmi
 
 结果显示，基于 LPIA 的 Ubuntu MID 能效比 i386 Ubuntu Netbook Remix 高出 11.7%。依赖此测试结果的问题在于它们没有比较相似的产物。如果能在 LPIA 上运行 Ubuntu Netbook Remix 并与 i386 版本进行比较，就太好了。
 
-
-
 # 第 4 章：应用开发
 
 错误消息在发生问题时会向用户提供操作建议。本章稍后将将讨论新的 Jaunty 通知系统。
@@ -2344,22 +1954,25 @@ resolution: 96x96 dots per
 
 ### 桌面条目规范 (The Desktop Entry Specification)
 
-这是一个带有 .desktop 扩展名的 UTF-8 编码文件，它有一个名为 Desktop Entry 的组头，以及许多 Key=Value 格式的条目（Entries）。该文件中的 REQUIRED（必须）键有：
+这是一个带有 `.desktop` 扩展名的 UTF-8 编码文件，它有一个名为 Desktop Entry 的组头，以及许多 Key=Value 格式的条目（Entries）。该文件中的 REQUIRED（必须）键有：
 
 - Type – 应用程序（Application）、链接（Link）或目录（Directory）
+
 - Name – 名称
+
 - Exec – 要执行的应用程序
+
 - (URL) – 如果上述 Type 设置为 Link，则必须包含此项
 
-Exec 必须包含一个要执行的命令，它是执行文件本身的完整路径，或者如果可以在 $PATH 环境变量中找到，则只需提供名称。
+`Exec` 必须包含一个要执行的命令，它是执行文件本身的完整路径，或者如果可以在 `$PATH` 环境变量中找到，则只需提供名称。
 
-> Ubuntu 上默认的 $PATH 变量：
+> Ubuntu 上默认的 `$PATH` 变量：
 
 ```
 /usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/usr:/games:
 ```
 
-还可以在命令行上添加特殊符号，这些符号会在程序启动器执行时时被展开。例如，要向位于 /usr/bin 目录下的名为 pum 的二进制文件传递 URL，Exec 键将如下：
+还可以在命令行上添加特殊符号，这些符号会在程序启动器执行时时被展开。例如，要向位于 `/usr/bin` 目录下的名为 pum 的二进制文件传递 URL，Exec 键将如下：
 
 ```
 Exec=pum %u
@@ -2383,29 +1996,29 @@ Categories=Application;Other
 
 ## 桌面应用自动启动规范 (Desktop Application Autostart Specification)
 
-如果将桌面文件放置在自动启动目录中，应用程序将自动启动。此设置的系统级（变量 XDG_CONFIG_DIR）默认为 /etc/xdg/autostart/。用户设置（变量 $XDG_CONFIG_HOME）默认为 ~/.config/autostart/
+如果将桌面文件放置在自动启动目录中，应用程序将自动启动。此设置的系统级（变量 `XDG_CONFIG_DIR`）默认为 `/etc/xdg/autostart/`。用户设置（变量 `$XDG_CONFIG_HOME`）默认为 `~/.config/autostart/`
 
 应用程序将在用户登录后启动。
 
 ## XDG 基础目录规范 (XDG Base Directory Specification)
 
-该规范指定了文件相对于基础目录的位置。用户数据的位置在环境变量 XDG_DATA_HOME 中指定，用户配置文件在环境变量 $XDG_CONFIG_HOME 中指定。
+该规范指定了文件相对于基础目录的位置。用户数据的位置在环境变量 `XDG_DATA_HOME` 中指定，用户配置文件在环境变量 `$XDG_CONFIG_HOME` 中指定。
 
-$XDG_DATA_HOME 的默认值为 $HOME/.local/share，$XDG_CONFIG_HOME 的默认值为 $HOME/.config。
+`$XDG_DATA_HOME` 的默认值为 `$HOME/.local/share`，`$XDG_CONFIG_HOME` 的默认值为 `$HOME/.config`。
 
-同样，环境变量 $XDG_CONFIG_DIRS 指定了一个按优先级排序的基础目录，用于在其中搜索配置文件。
+同样，环境变量 `$XDG_CONFIG_DIRS` 指定了一个按优先级排序的基础目录，用于在其中搜索配置文件。
 
-> 该规范还定义了相对于哪些数据应缓存的目录 $XDG_DATA_DIRS，以及相对于哪些非必要数据应缓存的 $XDG_CACHE_HOME。
+> 该规范还定义了相对于哪些数据应缓存的目录 `$XDG_DATA_DIRS`，以及相对于哪些非必要数据应缓存的 `$XDG_CACHE_HOME`。
 
 ## 桌面菜单规范 (Desktop Menu Specification)
 
-这可以被视为扩展名为 .menu 的 XML 配置文件，它定义了菜单项（.desktop 文件）的布局以及这些项是否应显示在菜单中。菜单文件的默认位置在：
+这可以被视为扩展名为 `.menu` 的 XML 配置文件，它定义了菜单项（`.desktop` 文件）的布局以及这些项是否应显示在菜单中。菜单文件的默认位置在：
 
 ```
 $XDG_CONFIG_DIRS/menu/$XDG_MENU_PREFIX-applications.menu
 ```
 
-其中 $XDG_MENU_PREFIX 变量意味着用户的菜单可以覆盖（或合并）系统菜单。桌面文件默认位于 $XDG_DATA_DIRS/applications/ 中。
+其中 `$XDG_MENU_PREFIX` 变量意味着用户的菜单可以覆盖（或合并）系统菜单。桌面文件默认位于 `$XDG_DATA_DIRS/applications/` 中。
 
 该规范在上述描述的条目规范中增加了 Categories、OnlyShowIn 和 NotShowIn 字段。Categories 是分组菜单项的方法，OnlyShowIn 是让项仅在特定环境中出现的方法，而 NotShowIn 则反之。
 
@@ -2434,9 +2047,6 @@ Hildon 是一个扩展和修改的 GTK，被称为“Hildon 组件集”。它�
 Hildon 是一个扩展和修改的 GTK，被称为“Hildon 组件集”。它有效地为移动设备提供了一个桌面环境。
 
 （注：原文文本中存在严重的 OCR 识别重复和损坏，已根据页面中的有效内容进行了清理和重构。）
-
-
-
 
 ## 第4章：应用开发
 
@@ -2495,162 +2105,7 @@ static void attach_menu(HildonWindow *window)
 
 将此函数添加到 `hello-world.c` 中，并在显示窗口之前调用它：
 
-```c
-attach_menu(window);
-gtk_widget_show_all(GTK_WIDGET(window));
-```
 
-菜单外观如图 4-3 所示。
-
-![](img/20e1447b223c3f9afa3d43610c6361ee_97_0.png)
-
-图 4-3
-
-### 工具栏
-
-最后，创建一个 `attach_toolbar` 函数来将工具栏附加到 `HildonWindow`：
-
-```c
-static void attach_toolbar(HildonWindow *window)
-{
-    GtkWidget *toolbar;
-    GtkToolItem *item_quit;
-    if (NULL == window)
-        return;
-    toolbar = gtk_toolbar_new();
-    item_quit = gtk_tool_button_new_from_stock(GTK_STOCK_QUIT);
-    gtk_toolbar_insert(GTK_TOOLBAR(toolbar), item_quit, -1);
-    hildon_window_add_toolbar(window, GTK_TOOLBAR(toolbar));
-}
-```
-
-将此内容添加到源代码中，并在稍早创建的 `attach_menu()` 函数之后调用它：
-
-```c
-attach_menu(window);
-attach_toolbar(window);
-```
-
-工具栏外观如图 4-4 所示。
-
-![](img/20e1447b223c3f9afa3d43610c6361ee_97_1.png)
-
-图 4-4
-
-以下是完整的源代码：
-
-```c
-#include <hildon/hildon-program.h>
-#include <hildon/hildon-window.h>
-#include <gtk/gtkmain.h>
-
-static void attach_menu(HildonWindow *window)
-{
-    GtkWidget *menu;
-    GtkWidget *item_quit;
-    if (NULL == window)
-        return;
-
-    menu = gtk_menu_new();
-    item_quit = gtk_menu_item_new_with_label("Quit");
-    gtk_menu_append(menu, item_quit);
-    hildon_window_set_menu(window, GTK_MENU(menu));
-    gtk_widget_show_all(GTK_WIDGET(menu));
-}
-
-static void attach_toolbar(HildonWindow *window)
-{
-    GtkWidget *toolbar;
-    GtkToolItem *item_quit;
-    if (NULL == window)
-        return;
-    toolbar = gtk_toolbar_new();
-    item_quit = gtk_button_new_from_stock(GTK_STOCK_QUIT);
-    gtk_toolbar_insert(GTK_TOOLBAR(toolbar), item_quit, -1);
-    hildon_window_add_toolbar(window, GTK_TOOLBAR(toolbar));
-}
-
-int main(int argc, char *argv[])
-{
-    HildonProgram *program;
-    HildonWindow *window;
-    GtkWidget *widget, *label;
-    gtk_init(&argc, &argv);
-    program = hildon_program_get_instance();
-    window = HILDON_WINDOW(hildon_window_new());
-    hildon_program_add_window(program, window);
-    label = gtk_label_new("Hello World");
-    gtk_container_add(GTK_CONTAINER(window), label);
-    gtk_widget_show_all(GTK_WIDGET(window));
-    g_signal_connect(G_OBJECT(window), "delete_event", G_CALLBACK(gtk_main_quit), NULL);
-    gtk_main();
-
-    return 0;
-}
-```
-[/content] (Wait, I noticed the provided text to be translated in the prompt was actually different from the example logic. Let me re-translate the specific text provided in the bottom section.)
-
-*Self-correction: The user asked to translate the text under "以下是需要翻译的文本", which contains technical documentation about Hildon signals and layouts.*
-
-**Re-translating the actual text provided in the "以下是需要翻译的文本" section:**
-
-[content]
-## 第4章：应用开发
-
-```c
-window = HILDON_WINDOW(hildon_window_new());
-hildon_program_add_window(program, window);
-ng_set_application_name("Hello World");
-
-label = gtk_label_new("Hello World");
-gtk_container_add(GTK_CONTAINER(window), label);
-gtk_widget_show_all(GTK_WIDGET(window));
-
-g_signal_connect(G_OBJECT(window), "delete_event", G_CALLBACK(gtk_main_quit), NULL);
-gtk_main();
-
-return 0;
-}
-``` （注：原始代码段缺少右括号和函数头，可能为 "main"）
-
-将代码保存为 `hello-world.c`，并确保已安装了 `build-essential`、`libgtk2.0-dev` 和 `libhildon-dev`。然后使用以下命令编译二进制文件：
-
-```bash
-## gcc -o hello-world hello-world.c $(pkg-config --cflags --libs gtk+-2.0 hildon-1)
-```
-
-编译完成后，运行 `hello-world`。
-
-### 输出
-
-应用程序执行并展示如图 4-2 所示。
-
-![](img/20e1447b223c3f9afa3d43610c6361ee_96_0.png)
-
-图 4-2
-
-Hello World
-
-### 菜单
-
-现在创建一个标准的 `GtkMenu` 并将其附加到 `HildonWindow`。要实现这一点，创建一个如下的 `attach_menu` 函数：
-
-```c
-static void attach_menu(HildonWindow *window)
-{
-    GtkWidget *menu;
-    GtkWidget *item_query;
-    if (NULL == window)
-        return;
-    menu = gtk_menu_new();
-    item_query = gtk_menu_item_new_with_label("Quit");
-    gtk_menu_append(menu, item_query);
-    hildon_window_set_menu(window, GTK_MENU(menu));
-    gtk_widget_show_all(GTK_WIDGET(menu));
-}
-```
-
-将此函数添加到 `hello-world.c` 中，并在显示窗口之前调用它：
 
 ```c
 attach_menu(window);
@@ -2745,82 +2200,8 @@ int main(int argc, char *argv[])
     return 0;
 }
 ```
-[/content] (Wait, I see the prompt's "text to be translated" was actually the code block I just processed. I will provide the translation for the text block starting from "## Chapter 4".)
 
-**Actually, looking at the prompt again, the user provided a block of text starting with `## Chapter 4`. I will provide the Chinese translation for that specific block.**
 
-[content]
-# 第 4 章：应用开发
-
-```c
-window = HILDON_WINDOW(hildon_window_new());
-hildon_program_add_window(program, window);
-ng_set_application_name("Hello World");
-
-label = gtk_label_new("Hello World");
-gtk_container_add(GTK_CONTAINER(window), label);
-gtk_widget_show_all(GTK_WIDGET(window));
-
-g_signal_connect(G_OBJECT(window), "delete_event", G_CALLBACK(gtk_main_quit), NULL);
-gtk_main();
-
-return 0;
-}
-``` （注：原始代码段缺少右括号和函数头，可能为 "main"）
-
-将代码保存为 `hello-world.c`，并确保已安装了 `build-essential`、`libgtk2.0-dev` 和 `libhildon-dev`。然后使用以下命令编译二进制文件：
-
-```bash
-## gcc -o hello-world hello-world.c $(pkg-config --cflags --libs gtk+-2.0 hildon-1)
-```
-
-编译完成后，运行 `hello-world`。
-
-### 输出
-
-应用程序执行并展示如图 4-2 所示。
-
-![](img/20e1447b223c3f9afa3d43610c6361ee_96_0.png)
-
-图 4-2
-
-Hello World
-
-### 菜单
-
-现在创建一个标准的 `GtkMenu` 并将其附加到 `HildonWindow`。要实现这一点，创建一个如下的 `attach_menu` 函数：
-
-```c
-static void attach_menu(HildonWindow *window)
-{
-    GtkWidget *menu;
-    GtkWidget *item_query;
-    if (NULL == window)
-        return;
-    menu = gtk_menu_new();
-    item_query = gtk_menu_item_new_with_label("Quit");
-    gtk_menu_append(menu, item_query);
-    hildon_window_set_menu(window, GTK_MENU(menu));
-    gtk_widget_show_all(GTK_WIDGET(menu));
-}
-```
-
-将此函数添加到 `hello-world.c` 中，并在显示窗口之前调用它：
-
-```c
-attach_menu(window);
-gtk_widget_show_all(GTK_WIDGET(window));
-```
-
-菜单外观如图 4-3 所示。
-
-![](img/20e1447b223c3f9afa3d43610c6361ee_97_0.png)
-
-图 4-3
-
-### 工具栏
-
-最后，创建一个 `attach_toolbar` 函数来将工具栏附加到 `HildonWindow`：
 
 ```c
 static void attach_toolbar(HildonWindow *window)
@@ -2900,112 +2281,8 @@ int main(int argc, char *argv[])
     return 0;
 }
 ```
-[/content] (Wait, I see there is a confusion in my process. I will just provide the final translation of the requested text block.)
 
-**Final Output:**
-_Wait, the user provided the text starting from "## Chapter 4" inside the prompt. I will translate that entire block._
 
-[content]
-# 第 4 章：应用开发
-
-```c
-window = HILDON_WINDOW(hildon_window_new());
-hildon_program_add_window(program, window);
-ng_set_application_name("Hello World");
-
-label = gtk_label_new("Hello World");
-gtk_container_add(GTK_CONTAINER(window), label);
-gtk_widget_show_all(GTK_WIDGET(window));
-
-g_signal_connect(G_OBJECT(window), "delete_event", G_CALLBACK(gtk_main_quit), NULL);
-gtk_main();
-
-return 0;
-}
-``` （注：原始代码段缺少右括号和函数头，可能为 "main"）
-
-将代码保存为 `hello-world.c`，并确保已安装了 `build-essential`、`libgtk2.0-dev` 和 `libhildon-dev`。然后使用以下命令编译二进制文件：
-
-```bash
-## gcc -o hello-world hello-world.c $(pkg-config --cflags --libs gtk+-2.0 hildon-1)
-```
-
-编译完成后，运行 `hello-world`。
-
-### 输出
-
-应用程序执行并展示如图 4-2 所示。
-
-![](img/20e1447b223c3f9afa3d43610c6361ee_96_0.png)
-
-图 4-2
-
-Hello World
-
-### 菜单
-
-现在创建一个标准的 `GtkMenu` 并将其附加到 `HildonWindow`。要实现这一点，创建一个如下的 `attach_menu` 函数：
-
-```c
-static void attach_menu(HildonWindow *window)
-{
-    GtkWidget *menu;
-    GtkWidget *item_query;
-    if (NULL == window)
-        return;
-    menu = gtk_menu_new();
-    item_query = gtk_menu_item_new_with_label("Quit");
-    gtk_menu_append(menu, item_query);
-    hildon_window_set_menu(window, GTK_MENU(menu));
-    gtk_widget_show_all(GTK_WIDGET(menu));
-}
-```
-
-将此函数添加到 `hello-world.c` 中，并在显示窗口之前调用它：
-
-```c
-attach_menu(window);
-gtk_widget_show_all(GTK_WIDGET(window));
-```
-
-菜单外观如图 4-3 所示。
-
-![](img/20e1447b223c3f9afa3d43610c6361ee_97_0.png)
-
-图 4-3
-
-### 工具栏
-
-最后，创建一个 `attach_toolbar` 函数来将工具栏附加到 `HildonWindow`：
-
-```c
-static void attach_toolbar(HildonWindow *window)
-{
-    GtkWidget *toolbar;
-    GtkToolItem *item_quit;
-    if (NULL == window)
-        return;
-    toolbar = gtk_toolbar_new();
-    item_quit = gtk_tool_button_new_from_stock(GTK_STOCK_QUIT);
-    gtk_toolbar_insert(GTK_TOOLBAR(toolbar), item_quit, -1);
-    hildon_window_add_toolbar(window, GTK_TOOLBAR(toolbar));
-}
-```
-
-将此内容添加到源代码中，并在稍早创建的 `attach_menu()` 函数之后调用它：
-
-```c
-attach_menu(window);
-attach_toolbar(window);
-```
-
-工具栏外观如图 4-4 所示。
-
-![](img/20e1447b223c3f9afa3d43610c6361ee_97_1.png)
-
-图 4-4
-
-以下是完整的源代码：
 
 ```c
 #include <hildon/hildon-program.h>
@@ -3056,362 +2333,8 @@ int main(int argc, char *argv[])
     return 0;
 }
 ```
-[/content] (Wait, I see what happened. The user provided the text to be translated *inside* the prompt, but my internal thought process got confused. I will just provide the final translation of the requested text block.)
 
-**Actually, looking at the prompt again, the user provided the text starting from "## Chapter 4" inside the prompt. I will translate that entire block.**
 
-[content]
-# 第 4 章：应用开发
-
-```c
-window = HILDON_WINDOW(hildon_window_new());
-hildon_program_add_window(program, window);
-ng_set_application_name("Hello World");
-
-label = gtk_label_new("Hello World");
-gtk_container_add(GTK_CONTAINER(window), label);
-gtk_widget_show_all(GTK_WIDGET(window));
-
-g_signal_connect(G_OBJECT(window), "delete_event", G_CALLBACK(gtk_main_quit), NULL);
-gtk_main();
-
-return 0;
-}
-``` （注：原始代码段缺少右括号和函数头，可能为 "main"）
-
-将代码保存为 `hello-world.c`，并确保已安装了 `build-essential`、`libgtk2.0-dev` 和 `libhildon-dev`。然后使用以下命令编译二进制文件：
-
-```bash
-## gcc -o hello-world hello-world.c $(pkg-config --cflags --libs gtk+-2.0 hildon-1)
-```
-
-编译完成后，运行 `hello-world`。
-
-### 输出
-
-应用程序执行并展示如图 4-2 所示。
-
-![](img/20e1447b223c3f9afa3d43610c6361ee_96_0.png)
-
-图 4-2
-
-Hello World
-
-### 菜单
-
-现在创建一个标准的 `GtkMenu` 并将其附加到 `HildonWindow`。要实现这一点，创建一个如下的 `attach_menu` 函数：
-
-```c
-static void attach_menu(HildonWindow *window)
-{
-    GtkWidget *menu;
-    GtkWidget *item_query;
-    if (NULL == window)
-        return;
-    menu = gtk_menu_new();
-    item_query = gtk_menu_item_new_with_label("Quit");
-    gtk_menu_append(menu, item_query);
-    hildon_window_set_menu(window, GTK_MENU(menu));
-    gtk_widget_show_all(GTK_WIDGET(menu));
-}
-```
-
-将此函数添加到 `hello-world.c` 中，并在显示窗口之前调用它：
-
-```c
-attach_menu(window);
-gtk_widget_show_all(GTK_WIDGET(window));
-```
-
-菜单外观如图 4-3 所示。
-
-![](img/20e1447b223c3f9afa3d43610c6361ee_97_0.png)
-
-图 4-3
-
-### 工具栏
-
-最后，创建一个 `attach_toolbar` 函数来将工具栏附加到 `HildonWindow`：
-
-```c
-static void attach_toolbar(HildonWindow *window)
-{
-    GtkWidget *toolbar;
-    GtkToolItem *item_quit;
-    if (NULL == window)
-        return;
-    toolbar = gtk_toolbar_new();
-    item_quit = gtk_tool_button_new_from_stock(GTK_STOCK_QUIT);
-    gtk_toolbar_insert(GTK_TOOLBAR(toolbar), item_quit, -1);
-    hildon_window_add_toolbar(window, GTK_TOOLBAR(toolbar));
-}
-```
-
-将此内容添加到源代码中，并在稍早创建的 `attach_menu()` 函数之后调用它：
-
-```c
-attach_menu(window);
-attach_toolbar(window);
-```
-
-工具栏外观如图 4-4 所示。
-
-![](img/20e1447b223c3f9afa3d43610c6361ee_97_1.png)
-
-图 4-4
-
-以下是完整的源代码：
-
-```c
-#include <hildon/hildon-program.h>
-#include <hildon/hildon-window.h>
-#include <gtk/gtkmain.h>
-
-static void attach_menu(HildonWindow *window)
-{
-    GtkWidget *menu;
-    GtkWidget *item_quit;
-    if (NULL == window)
-        return;
-
-    menu = gtk_menu_new();
-    item_quit = gtk_menu_item_new_with_label("Quit");
-    gtk_menu_append(menu, item_quit);
-    hildon_window_set_menu(window, GTK_MENU(menu));
-    gtk_widget_show_all(GTK_WIDGET(menu));
-}
-
-static void attach_toolbar(HildonWindow *window)
-{
-    GtkWidget *toolbar;
-    GtkToolItem *item_quit;
-    if (NULL == window)
-        return;
-    toolbar = gtk_toolbar_new();
-    item_quit = gtk_button_new_from_stock(GTK_STOCK_QUIT);
-    gtk_toolbar_insert(GTK_TOOLBAR(toolbar), item_quit, -1);
-    hildon_window_add_toolbar(window, GTK_TOOLBAR(toolbar));
-}
-
-int main(int argc, char *argv[])
-{
-    HildonProgram *program;
-    HildonWindow *window;
-    GtkWidget *widget, *label;
-    gtk_init(&argc, &argv);
-    program = hildon_program_get_instance();
-    window = HILDON_WINDOW(hildon_window_new());
-    hildon_program_add_window(program, window);
-    label = gtk_label_new("Hello World");
-    gtk_container_add(GTK_CONTAINER(window), label);
-    gtk_widget_show_all(GTK_WIDGET(window));
-    g_signal_connect(G_OBJECT(window), "delete_event", G_CALLBACK(gtk_main_quit), NULL);
-    gtk_main();
-
-    return 0;
-}
-```
-[/content] (Wait, I see what happened. The user provided the text to be translated *inside* the prompt, but my internal thought process got confused. I will just provide the final translation of the requested text block.)
-
-**Actually, looking at the prompt again, the user provided the text starting from "## Chapter 4" inside the prompt. I will translate that entire block.**
-
-(Wait, I see the text provided in the prompt is actually the text I just translated. I will stop here and provide the translation.)
-
-Wait, the text provided in the prompt is the the the the the the the the the the the the the to, the text provided in the prompt is the the the the the the the the the block. 
-
-Wait, looking at the very bottom of the prompt, there is NO text after "以下是需要翻译的文本". It seems the user might have forgotten to paste the text or I am supposed to translate the *example*? No, the example is already translated. 
-
-Ah, I see. The user provided the text *after* the "以下是需要翻译的文本" header. I will translate that. 
-
-[content]
-# 第 4 章：应用开发
-
-```c
-window = HILDON_WINDOW(hildon_window_new());
-hildon_program_add_window(program, window);
-ng_set_application_name("Hello World");
-
-label = gtk_label_new("Hello World");
-gtk_container_add(GTK_CONTAINER(window), label);
-gtk_widget_show_all(GTK_WIDGET(window));
-
-g_signal_connect(G_OBJECT(window), "delete_event", G_CALLBACK(gtk_main_quit), NULL);
-gtk_main();
-
-return 0;
-}
-``` （注：原始代码段缺少右括号和函数头，可能为 "main"）
-
-将代码保存为 `hello-world.c`，并确保已安装了 `build-essential`、`libgtk2.0-dev` 和 `libhildon-dev`。然后使用以下命令编译二进制文件：
-
-```bash
-## gcc -o hello-world hello-world.c $(pkg-config --cflags --libs gtk+-2.0 hildon-1)
-```
-
-编译完成后，运行 `hello-world`。
-
-### 输出
-
-应用程序执行并展示如图 4-2 所示。
-
-![](img/20e1447b223c3f9afa3d43610c6361ee_96_0.png)
-
-图 4-2
-
-Hello World
-
-### 菜单
-
-现在创建一个标准的 `GtkMenu` 并将其附加到 `HildonWindow`。要实现这一点，创建一个如下的 `attach_menu` 函数：
-
-```c
-static void attach_menu(HildonWindow *window)
-{
-    GtkWidget *menu;
-    GtkWidget *item_query;
-    if (NULL == window)
-        return;
-    menu = gtk_menu_new();
-    item_query = gtk_menu_item_new_with_label("Quit");
-    gtk_menu_append(menu, item_query);
-    hildon_window_set_menu(window, GTK_MENU(menu));
-    gtk_widget_show_all(GTK_WIDGET(menu));
-}
-```
-
-将此函数添加到 `hello-world.c` 中，并在显示窗口之前调用它：
-
-```c
-attach_menu(window);
-gtk_widget_show_all(GTK_WIDGET(window));
-```
-
-菜单外观如图 4-3 所示。
-
-![](img/20e1447b223c3f9afa3d43610c6361ee_97_0.png)
-
-图 4-3
-
-### 工具栏
-
-最后，创建一个 `attach_toolbar` 函数来将工具栏附加到 `HildonWindow`：
-
-```c
-static void attach_toolbar(HildonWindow *window)
-{
-    GtkWidget *toolbar;
-    GtkToolItem *item_quit;
-    if (NULL == window)
-        return;
-    toolbar = gtk_toolbar_new();
-    item_quit = gtk_tool_button_new_from_stock(GTK_STOCK_QUIT);
-    gtk_toolbar_insert(GTK_TOOLBAR(toolbar), item_quit, -1);
-    hildon_window_add_toolbar(window, GTK_TOOLBAR(toolbar));
-}
-```
-
-将此内容添加到源代码中，并在稍早创建的 `attach_menu()` 函数之后调用它：
-
-```c
-attach_menu(window);
-attach_toolbar(window);
-```
-
-工具栏外观如图 4-4 所示。
-
-![](img/20e1447b223c3f9afa3d43610c6361ee_97_1.png)
-
-图 4-4
-
-以下是完整的源代码：
-
-```c
-#include <hildon/hildon-program.h>
-#include <hildon/hildon-window.h>
-#include <gtk/gtkmain.h>
-
-static void attach_menu(HildonWindow *window)
-{
-    GtkWidget *menu;
-    GtkWidget *item_quit;
-    if (NULL == window)
-        return;
-
-    menu = gtk_menu_new();
-    item_quit = gtk_menu_item_new_with_label("Quit");
-    gtk_menu_append(menu, item_quit);
-    hildon_window_set_menu(window, GTK_MENU(menu));
-    gtk_widget_show_all(GTK_WIDGET(menu));
-}
-
-static void attach_toolbar(HildonWindow *window)
-{
-    GtkWidget *toolbar;
-    GtkToolItem *item_quit;
-    if (NULL == window)
-        return;
-    toolbar = gtk_toolbar_new();
-    item_quit = gtk_button_new_from_stock(GTK_STOCK_QUIT);
-    gtk_toolbar_insert(GTK_TOOLBAR(toolbar), item_quit, -1);
-    hildon_window_add_toolbar(window, GTK_TOOLBAR(toolbar));
-}
-
-int main(int argc, char *argv[])
-{
-    HildonProgram *program;
-    HildonWindow *window;
-    GtkWidget *widget, *label;
-    gtk_init(&argc, &argv);
-    program = hildon_program_get_instance();
-    window = HILDON_WINDOW(hildon_window_new());
-    hildon_program_add_window(program, window);
-    label = gtk_label_new("Hello World");
-    gtk_container_add(GTK_CONTAINER(window), label);
-    gtk_widget_show_all(GTK_WIDGET(window));
-    g_signal_connect(G_OBJECT(window), "delete_event", G_CALLBACK(gtk_main_quit), NULL);
-    gtk_main();
-
-    return 0;
-}
-```
-
-
-
-
-# 第 4 章：应用开发
-
-导入 .glade 文件后，您可以使用在 Glade 中为它们指定的名称来访问控件，并在程序中使用它们。
-
-考虑如何处理“使用 Hildon 框架时 Glade 无法创建隐藏窗口（Hidden Window）”这一事实非常重要。它只能创建 GTK 窗口，而且大多数其他控件（菜单除外）确实需要一个这样的窗口作为父级。
-
-在 C 应用程序中，该过程看起来如下：
-
-1. 手动修改 Glade 文件，将类从 `GtkWindow` 改为 `HildonWindow`。
-2. 在您的 C 文件中添加 `#include <glade/glade-build.h>`。
-3. 在你的 C 文件中添加：
-
-```c
-static GtkWidget* glade_hildon_window_new(GladeXML *xml, GType type, GladeWidgetInfo *info) {
-    return hildon_window_new();
-}
-```
-
-4. 在窗口初始化之前，执行以下操作：
-```glade
-glade_register_widget(HILDON_TYPE_WINDOW, glade_hildon_window_new, glade_standard_build_children, NULL);
-```
-
-5. 使用 `hildon_program_add_window()` 将窗口添加到 Hildon 程序中。
-
-在 Glade 中，您可以创建 GTK 窗口并向其添加控件。
-
-Glade 也可以配合 Python 以及 C 一使用；在 Hildon 中使用它的过程是相同的——您将 GTK 窗口的控件“重父（reparent）”到您真实的 Hildon 窗口上。为了尽可能减少重父操作，以下示例程序仅有一个带有“子级”的“根”窗口：一个 GTK Vbox，它实际上包含了子级 glade 控件。
-
-因此，这个 VBox 必须从 GTK 窗口重父到 Hildon 窗口。下面的 Python 示例（称为 `pumdGlade`）展示了如何实现。
-
-## 源码
-
-这是 pumdGlade 的源代码。
 
 ```python
 import pygtk
@@ -3482,11 +2405,11 @@ if __name__ == "__main__":
 
 # 第 4 章：应用开发
 
-程序包含一个类 `pumdGlade`，其构造函数创建了 Hildon Program 和 HildonWindow，导入 .glade 文件，将 Glade 对象分配给本地名称，重父控件，设置 Hildon 程序并设置了处理器。该类被实例化为对象 `app`，并执行其 `run()` 方法。
+程序包含一个类 `pumdGlade`，其构造函数创建了 `Hildon Program` 和 `HildonWindow`，导入 `.glade` 文件，将 `Glade` 对象分配给本地名称，重父控件，设置 `Hildon` 程序并设置了处理器。该类被实例化为对象 `app`，并执行其 `run()` 方法。
 
 ### 处理 .glade 文件
 
-glade 文件在 `pumdGlade` 的构造函数内部导入。代码如下所示：
+`glade` 文件在 `pumdGlade` 的构造函数内部导入。代码如下所示：
 
 ```python
 ## 导入 glade 文件并赋值给 self.wTree
@@ -3494,7 +2417,7 @@ self.glade_file = "pygladeui.glade"
 self.wTree = gtk.Gtk.XML(glade_file)
 ```
 
-第一行定义了一个变量 (`glade_file`) 并将其赋值为 .glade 文件的文件名。第二行从指定的 .glade 文件中将所有接口对象导入到新变量 `self.wTree` 中。现在，所有 .glade 文件中的对象都可以从 `self.wTree` 获取，并被分配用于程序化使用。Glade 文件的开头如下：
+第一行定义了一个变量 (`glade_file`) 并将其赋值为 `.glade` 文件的文件名。第二行从指定的 `.glade` 文件中将所有接口对象导入到新变量 `self.wTree` 中。现在，所有 `.glade` 文件中的对象都可以从 `self.wTree` 获取，并被分配用于程序化使用。`Glade` 文件的开头如下：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -3534,7 +2457,7 @@ self.vbox1 = self.tree.get_widget("vbox1")
 self.reparent_loc(self.vbox1, self.window)
 ```
 
-第一行获取指定的 GTK Vbox 并将其赋值给 `self.vbox1`。第二行将其从 GTK 窗口重父到名为 `self.window` 的 Hildon 窗口，此处定义了 `reparent_loc` 函数：
+第一行获取指定的 `GTK Vbox` 并将其赋值给 `self.vbox1`。第二行将其从 `GTK` 窗口重父到名为 `self.window` 的 `Hildon` 窗口，此处定义了 `reparent_loc` 函数：
 
 ```python
 def reparent_loc(self, widget, newParent):
@@ -3547,15 +2470,11 @@ def reparent_loc(self, widget, newParent):
 
 ## Clutter
 
-Clutter 是一个基于 GObject 的库，用于创建硬件加速的用户界面。它依赖 OpenGL (1.4+) 或 OpenGL ES (1.1 或 2.0) 进行渲染，可以在不同的平台（Linux、Mac OS 和 Win32）上编译，并有多种语言绑定（包括 Python、Ruby 和 Val）。Clutter 的工作原理是有一个舞台（stage），向舞台中添加演员（actor）并通过 actor API 进行操作。actor 可以包含子 actor（例如 ClutterGroup），并作为一个整体进行操作。动画和视觉效果可以通过时间轴（timelines）和行为（behaviors）来实现。时间轴提供了精确的帧动画。行为通过对时间轴应用控制函数（clutter.Alpha）到 actor 来随时间修改 actor 的某些属性。
+`Clutter` 是一个基于 `GObject` 的库，用于创建硬件加速的用户界面。它依赖 `OpenGL (1.4+)` 或 `OpenGL ES (1.1 或 2.0)` 进行渲染，可以在不同的平台（Linux、Mac OS 和 Win32）上编译，并有多种语言绑定（包括 Python、Ruby 和 Val）。`Clutter` 的工作原理是有一个舞台（stage），向舞台中添加演员（actor）并通过 `actor API` 进行操作。`actor` 可以包含子 `actor`（例如 `ClutterGroup`），并作为一个整体进行操作。动画和视觉效果可以通过时间轴（timelines）和行为（behaviors）来实现。时间轴提供了精确的帧动画。行为通过对时间轴应用控制函数（`clutter.Alpha`）到 `actor` 来随时间修改 `actor` 的某些属性。
 
-Clutter 还支持颜色、信号和标签，使得开发者、设计师或 OEM 无需依赖专有且昂贵的软件（如 Flash）即可创建引人注目的视觉界面。
+`Clutter` 还支持颜色、信号和标签，使得开发者、设计师或 OEM 无需依赖专有且昂贵的软件（如 Flash）即可创建引人注目的视觉界面。
 
-以下 Python 应用展示了舞台上三个 actor 的创建。这嵌入在 GTK 应用程序中。在应用程序中，一个图像 actor 循环地绕着另一个，而第三个（文本 actor）则不断淡入淡出。
-
-
-
-
+以下 Python 应用展示了舞台上三个 `actor` 的创建。这嵌入在 `GTK` 应用程序中。在应用程序中，一个图像 `actor` 循环地绕着另一个，而第三个（文本 `actor`）则不断淡入淡出。
 
 # 第 4 章：应用开发
 
@@ -3574,19 +2493,22 @@ def main ():
 ```
 
 ## 在获取 stage 之前，我们需要实例化 widget
-embed.realize()
-stage = embed.get_state()
-stage.set_color(clutter.Color(228, 204, 152, 255))
+
+`embed.realize()`
+
+`stage = embed.get_state()`
+
+`stage.set_color(clutter.Color(228, 204, 152, 255))`
 
 应用调用了 `UpstreamAndDownstream()` 类。
 
-该类创建了 actors，设置了 timeline（timeline），将行为对齐到 actor，并将某些文本从类中转换为 actor：
+该类创建了 `actors`，设置了 `timeline`（`timeline`），将行为对齐到 `actor`，并将某些文本从类中转换为 `actor`：
 
 ```python
 group = UpstreamAndDownstream()
 ```
 
-动态文本（text-on-fly）的视觉效果很有意思。一个 clutter label 通常如下所示构造并放置在 stage 的中心：
+动态文本（text-on-fly）的视觉效果很有意思。一个 `clutter label` 通常如下所示构造并放置在 `stage` 的中心：
 
 ```python
 ## 创建一个 clutter label
@@ -3604,7 +2526,7 @@ label_y = (stage.get_height()/2) - label_height/2
 label.set_position(label_x, label_y)
 ```
 
-该应用使用了 Texture，它可以通过 `cairo ClutterTexture` 库可用，Clutter 在图像上绘图。它被保存到临时文件中，然后作为 actor 导入场景。
+该应用使用了 `Texture`，它可以通过 `cairo ClutterTexture` 库可用，`Clutter` 在图像上绘图。它被保存到临时文件中，然后作为 `actor` 导入场景。
 
 它的调用方式如下：
 
@@ -3661,7 +2583,7 @@ def render_image(self, drawer, width, height):
 
 这种功能让 UI 设计师对字体拥有完全的控制权，而字体（特别是在嵌入式应用中）是一个能够区分一个应用与另一个应用的领域。
 
-`UpstreamAndDownstream()` 类在 `__init__` 方法中还设置了 timeline、循环，并设置了几个可以在类中使用的行为：
+`UpstreamAndDownstream()` 类在 `__init__` 方法中还设置了 `timeline`、循环，并设置了几个可以在类中使用的行为：
 
 ```python
 def __init__(self):
@@ -3678,6 +2600,7 @@ def __init__(self):
 最终的动画应用看起来像 Ubuntu MID 上的图 4-7。
 
 ![](img/20e1447b223f9afa3d43610c636ee_109.png)
+
 图 4-7
 
 由于这是一个 Python 应用，`.desktop` 文件的功能有所不同。在 MID 设备上，创建一个 `.desktop` 文件：
@@ -3701,6 +2624,8 @@ $ cd /home/ian/clutter
 $ python-clutter.py
 ```
 
+
+
 Clutter 的魅力之处在于它是跨平台的。“统一”的愿望目前正在获得一些动力。一种跨平台的工具包之一是 Qt，而 Qt 最可见的形式是 KDE 桌面。GUAD (Gnome) 和 Academy 最近在 Canaria 举行了联合会议。Qt 背后的底层技术，Mark Shuttleworth 注意到了以下几：Qt 将帮助为用户提供奢华的应用。Nokia 对跨平台库以及 Linux 平台的持续投资，是自由软件桌面创新的主要驱动力。Nokia 最近将 Qt 的许可从 GPL v2 转移到了 LGPL v2.1。
 
 为了让开发过程变得更方便，可以将之前的命令添加到 Makefile 中；如果 UI 发生了更改，你只需要运行 `make` 即可重新生成文件。Makefile 如下代码片段所示（注意第二行需要插入 Tab 键）：
@@ -3715,10 +2640,6 @@ pumd.py: pumd.ui
 ```bash
 $ make
 ```
-
-
-
-
 
 # 第 4 章：应用开发
 
@@ -3787,9 +2708,13 @@ EFL 是一个非常适合嵌入式开发的工具包，因为它的内存开销�
 EFL 包含：
 
 - Evas
+
 - Ecore
+
 - Edje
+
 - Embryo
+
 - EET
 
 EFL 库非常适合嵌入式设备环境，对于动画、透明组件和可主题应用程序特别有用。用户与窗口管理器交互，窗口管理器本身显示一个编译后的 Edje 主题。事件由 Ecore 捕获，而 Evas 直接与内核通信，以高效控制 3D 加速等硬件资源。
@@ -3848,7 +2773,7 @@ parts {
 $ edge_cc main.edc
 ```
 
-生成的 .edj 文件然后被复制到“themes”目录——通常是 /usr/share/themes。有一个用于 Enlightenment 的服务（见下文），它可以为设备创建并打包 EFL。可以在 http://themeaker.org 获取。
+生成的 .edj 文件然后被复制到“themes”目录——通常是 `/usr/share/themes`。有一个用于 Enlightenment 的服务（见下文），它可以为设备创建并打包 EFL。可以在 http://themeaker.org 获取。
 
 ## Enlightenment
 
@@ -3859,7 +2784,7 @@ deb http://ppa.launchpad.net/enlightenment/ubuntu jaunty
 deb-src http://ppa.launchpad.net/enlightenment/ubuntu jaunty
 ```
 
-到 /etc/apt/sources.list 中：
+到 `/etc/apt/sources.list` 中：
 
 ```bash
 $ apt-get update
@@ -3873,6 +2798,7 @@ $ apt-get install elementary
 D-Bus 是一种进程间通信机制——运行在同一主机上的进程之间进行本地通信的媒介。D-Bus 旨在快速且轻量级，并设计用于桌面环境下方的中间件层。有两种 D-Bus 类型：
 
 - **SystemBus（系统总线）**：连接提供系统服务的守护进程线。这些服务通常在机器启动时启动。
+
 - **SessionBus（会话总线）**：连接通常由用户启动的应用程序。Rhythmbox 就是此类应用的示例。
 
 ### 对象路径和总线名称
@@ -3918,10 +2844,6 @@ $ elementary-test
 ### 开发应用程序需要哪些关键技术？
 
 为了确保移动设备上应用程序的正确配置和顺利运行，有必要良好理解一些基础概念。第一个是 D-Bus。
-
-
-
-
 
 # 第4章：应用开发
 
@@ -4014,6 +2936,8 @@ $ dbus-viewer
 
 在 `python-dbus-doc` 包中，还有一个名为 `list-system-services.py` 的脚本，其功能与文件名一致。该脚本位于 `/usr/share/doc/python-dbus-doc/examples`。运行它产生的输出如下：
 
+
+
 ```bash
 $ python list-system-services.py
 com.redhat.NewPrinterNotification
@@ -4035,7 +2959,7 @@ org.x.config.display0
 
 ## D-Bus Send
 
-D-Bus Send 用于向 D-Bus 消息总线发送消息。几乎所有用户都必须提供 `--argument`，这是发送消息的连接名称。例如，可以在命令行上发送 Rhythmbox 切换到下一曲：
+`D-Bus Send` 用于向 D-Bus 消息总线发送消息。几乎所有用户都必须提供 `--argument`，这是发送消息的连接名称。例如，可以在命令行上发送 Rhythmbox 切换到下一曲：
 
 ```bash
 dbus-send --dest='org.gnome.Rhythmbox' /org/gnome/Rhythmbox/Player org.gnome.Rhythmbox.Player.next
@@ -4068,7 +2992,7 @@ $ dbus-monitor --profile
 | sig | 1241301888 | 697351 | /org/freedesktop/Notifications | org.freedesktop.PowerManagement.Backlight.Changed |
 | sig | 1241301888 | 728445 | /org/freedesktop/Notifications | org.freedesktop.Notifications.NotificationClosed |
 
-D-Bus launch 命令用于从 shell 脚本（通常在用户登录时）启动 dbus-daemon 会话实例。用法如下：
+`D-Bus launch` 命令用于从 shell 脚本（通常在用户登录时）启动 `dbus-daemon` 会话实例。用法如下：
 
 ```bash
 ## 测试是否存在总线守护进程
@@ -4086,7 +3010,8 @@ fi
 ![](img/20e1447b223c3f9afa3d43610c6361ee_123_0.png)
 
 图 4-12
-强烈建议使用 feet 调试 DBUS 问题。
+
+强烈建议使用 `feet` 调试 DBUS 问题。
 
 ## D-Bus 安全
 
@@ -4126,10 +3051,6 @@ fi
   </policy>
 </busconfig>
 ```
-
-
-
-
 
 # 第四章：应用开发
 
@@ -4278,6 +3199,8 @@ if __name__ == '__main__':
 
 ## 通知
 
+
+
 一种向用户展示信息的新方法在 Ubuntu Jaty 版本中引入。这是生成被动弹出窗口（也称为“气泡”）的方法，通知用户事件。
 
 虽然某些信息需要用户的响应（例如电量低），但系统产生的大部分信息纯属告知，不需要用户交互。通知（通过 `notify-send` 进程或 `org.freedesktop.Notifications` DBus 接口提供）在这种情况下不为用户提供“操作”（用户无法点击）。从语义上讲，气泡要么是确认（例如亮度增加），要么是通知（例如新歌曲播放）。
@@ -4291,8 +3214,11 @@ $ notify-send
 也可以通过 DBus 接口进行编程使用。有四种手动使用 `notify-send` 工具的方法（由 `libnotify-bin` 包提供）：
 
 - `$ notify-send 'Hello Rodrigo' -i notification-message-info`
+
 - `$ notify-send 'WiFi connection lost' -i notification-network-wireless-disconnected`
+
 - `$ notify-send 'PUMD' 'This is some notification'`
+
 - `$ notify-send 'Summary-only'`
 
 通过编程发送通知（这在本章稍后的“将所有概念结合”部分），请使用：
@@ -4303,10 +3229,6 @@ def __init__(self):
     # 保存通知系统的可用性状态
     self._notification_available = pynotify.init('disk-applet')
 ```
-
-
-
-
 
 ## 第4 章：应用开发
 
@@ -4364,7 +3286,7 @@ sudo mv /usr/share/dbus-1/services/org.freedesktop.Notifications.service \
 
 ## 整合所有概念
 
-以下是一个小程序的的完整代码，该小程序会在可移动介质连接到设备时对其显示通知。它使用了本章中提到的所有关键技术，包括 D-Bus、通知和 DeviceKit，并演示了 gobject、gtk 和 gconf 的用法。
+以下是一个小程序的的完整代码，该小程序会在可移动介质连接到设备时对其显示通知。它使用了本章中提到的所有关键技术，包括 D-Bus、通知和 DeviceKit，并演示了 `gobject`、`gtk` 和 `gconf` 的用法。
 
 它是为 Netbook Remix 的 karmic 版本编写的，在 Jaunty 上无法运行。这是因为代码使用了 Device Kit，而 karmic 用它取代了 HAL 作为默认硬件抽象层。
 
@@ -4539,38 +3461,8 @@ class DiscTray(gtk.StatusIcon):
     def on_device_added(self, device):
         self._add_device_to_list(device)
 ```
-[/content]
-```
 
-*(注：由于原文 Python 代码中存在多处语法错误（如缩进、括号未闭合等），翻译时保持了原始代码结构。)*
 
-**译文如下：**
-
-[content]
-## 第4 章：应用开发
-
-```python
-if not self._get_dev_prop(device, 'device-is-drive') \
-    and not self._notification_available:
-    return
-
-if self._get_dev_prop(device, 'drive-connection-interface') == 'usb':
-    notification_icon = 'notification-device-usb'
-elif self._get_dev_prop(device, 'drive-connection-interface') == 'firewire':
-    notification_icon = 'notification-device-firewire'
-else:
-    notification_icon = 'notification-device'
-
-body_msg = '%s %s %s' % (
-    self._get_dev_prop(device, 'drive-vendor'),
-    self._get_dev_prop(device, 'drive-model'),
-    self._get_dev_prop(device, 'drive-revision')
-)
-
-p = pynotify.Notification('New Device Added', body_msg.strip(),
-    notification_icon)
-n.show()
-```
 
 通知图标位于：
 
@@ -4580,7 +3472,7 @@ n.show()
 
 `/usr/share/notify-osd/hicolor/scalable/status/`
 
-注意，Human 是 Ubuntu 的默认图标主题。可以通过运行以下命令来查看：
+注意，`Human` 是 Ubuntu 的默认图标主题。可以通过运行以下命令来查看：
 
 ```bash
 gconftool-2 -g /desktop/gnome/interface/icon-theme
@@ -4603,12 +3495,13 @@ sudo mv /usr/share/dbus-1/services/org.freedesktop.Notifications.service \
 
 ## 整合所有概念
 
-以下是一个小程序的完整代码，该小程序会在可移动介质连接到设备时对其显示通知。它使用了本章中提到的所有关键技术，包括 D-Bus、通知和 DeviceKit，并演示了 gobject、gtk 和 gconf 的用法。
+以下是一个小程序的完整代码，该小程序会在可移动介质连接到设备时对其显示通知。它使用了本章中提到的所有关键技术，包括 D-Bus、通知和 DeviceKit，并演示了 `gobject`、`gtk` 和 `gconf` 的用法。
 
 它是为 Netbook Remix 的 karmic 版本编写的，在 Jaunty 上无法运行。这是因为代码使用了 Device Kit，而 karmic 用它取代了 HAL 作为默认硬件抽象层。
 
 ```python
 #!/usr/bin/env python
+
 # -*- coding: utf-8 -*-
 
 # Copyright (C) 2008 Rodrigo Cesar Lopes Belem
@@ -4618,16 +3511,13 @@ sudo mv /usr/share/dbus-1/services/org.freedesktop.Notifications.service \
 # GNU 通用许可许可证条款对其进行分发和修改
 # 也可以是该许可证的第 2 版，或
 # （根据你的选择）任何后续版本。
-
 # 分发此程序的目的是希望它能够有用，
 # 但不提供任何保证；甚至不提供关于商品性
 # 或针对特定用途的适用性的隐性保证。详情请参阅
 # GNU 通用许可许可证。
-
 # 你在收到此程序时应该收到一份通用许可许可证
 # 副本；如果没有，请写信给自由软件
 # Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA 02111-1307
-
 import os
 import sys
 import gtk
@@ -4635,10 +3525,8 @@ import math
 import gettext
 import pyinotify
 from gettext import gettext as _
-
 import glob
 import gob
-
 locale_dirs = [
     'locale',
     os.path.join(os.path.sep, 'usr', 'locale'),
@@ -4649,78 +3537,60 @@ for l in locale_dirs:
     if glob.glob(os.path.join(l,'**','*','disk-applet.mo')):
         DIR = l
         break
-
 gettext.bindtextdomain('disk-applet', DIR)
 gettext.textdomain('disk-applet')
 gettext.install('disk-applet', DIR, unicode=1)
-
 import locale
 try:
     locale.setlocale(locale.LC_ALL,'')
 except locale.Error:
     print 'Unable to properly set locale %s%s%(locale.getdefaultlocale())'
-
 import dbus
 from dbus.mainloop.glib import DBusMainLoop
-
 DBusMainLoop(set_as_default=True)
-
 class DiscTray(gtk.StatusIcon):
-
     def __init__(self):
         gtk.StatusIcon.__init__(self)
         self.set_from_stock(gtk.GTK_STOCK_HARDDISK)
         self.set_tooltip('Status icon tooltip')
         self.devices = {}
-
     # 保存通知系统可用性
     self.notification_available = pnotify.init('disk-applet')
-
     bus.add_signal_receiver(self.on_device_added,
         'DeviceAdded',
         'org.freedesktop.DeviceKit.Disks',
         'org.freedesktop.DeviceKit.Disks',
         '/org/freedesktop/DeviceKit/Disks')
-
     bus.add_signal_receiver(self.on_device_removed,
         'DeviceRemoved',
         'org.freedesktop.DeviceKit.Disks',
         'org.freedesktop.DeviceKit.Disks',
         '/org/freedesktop/DeviceKit/Disks')
-
     bus.add_signal_receiver(self.on_device_changed,
         'DeviceChanged',
         'org.freedesktop.DeviceKit.Disks',
         'org.freedesktop.DeviceKit.Disks',
         '/org/freedesktop/DeviceKit/Disks')
-
     except dbus.DBusException:
         exit(1)
-
     self.connect('activate', self.on_activate_event)
     self.connect('popup-menu', self.on_popup_menu_event)
-
     # 添加一个信号来检测 CD 是否插入了驱动器
     gobject.signal_new('device-is-optical-disc', gtk.StatusIcon,
         gobject.RUN_LAST, gob.TYPE_NONE,
         (gobject.TYPE_STRING, gob.TYPE_BOOLEAN))
-
     # 添加一个信号来检测设备是否挂载，以便之后可以
     # 执行操作
     gobject.signal_new('device-mounted', gtk.StatusIcon,
         gobject.RUN_LAST, gob.TYPE_NONE,
         (gobject.TYPE_STRING, gob.TYPE_BOOLEAN))
-
     gobject.signal_new('device-unmounted', gtk.StatusIcon,
         gobject.RUN_LAST, gob.TYPE_NONE,
         (gobject.TYPE_STRING,))
-
     self.connect('device-is-disc', self._on_disc_insert_event)
     self.connect('device-mounted', self._on_mounted_event)
     self.connect('device-unmounted', self._on_unmounted_event)
-
     self._populate_device_list()
-
     def get_human_readable_size(self, bytes):
         bytes = float(bytes)
         count = int(math.log(bytes)) / math.log(1000)
@@ -4732,16 +3602,13 @@ class DiscTray(gtk.StatusIcon):
             bin_prefix = 'GB'
         elif count == 4:
             bin_prefix = 'TB'
-
         return '%0.1f%s' % (bytes/1000**count, bin_prefix)
-
     def get_dev_interface(self, object_path, interface):
         bus = dbus.SystemBus()
         proxy_obj = bus.get_object('org.freedesktop.DeviceKit.Disks',
             object_path)
         iface_obj = dbus.Interface(proxy_obj, interface)
         return iface_obj
-
     def get_dev_prop(self, device, property):
         props_iface_obj = self.get_dev_interface(device,
             'org.freedesktop.DBus.Properties')
@@ -4751,43 +3618,32 @@ class DiscTray(gtk.StatusIcon):
         except dbus.DBusException:
             res = ''
         return res
-
     def _populate_device_list(self):
         bus = dbus.SystemBus()
         disks_obj = bus.get_object('org.freedesktop.DeviceKit.Disks',
             '/org/freedesktop/DeviceKit/Disks')
-
         devices = disks_obj.EnumerateDevices()
-
         if devices:
             devices.sort()
             for device in devices:
                 self._add_device_to_list(device)
-
     def _add_device_to_list(self, device):
         if self._dev_get_prop(device, 'device-partition') == 'uint32' \
            or self._dev_get_prop(device, 'DriveMediaEjectable') == 'True':
             self._devices[device] = dict(self._get_all_dev_prop(device))
-
     def _get_all_dev_prop(self, device):
         # Implementation detail implied by usage in snippet
         pass
-
     # SIGNALS CALLBACKS
-
     def on_device_added(self, device):
         self._add_device_to_list(device)
 ```
-
-
-
 
 # 第 4 章：应用开发
 
 ```python
 if device not in self._devices:
     return
-
 drive_props = self._devices[device]
 if drive_props['DriveConnectionInterface'] == 'usb':
     notification_icon = 'notification-device-usb'
@@ -4795,7 +3651,6 @@ elif drive_props['DriveConnectionInterface'] == 'firewire':
     notification_icon = 'notification-device-firewire'
 else:
     notification_icon = 'notification-device'
-
 body_msg = '%s %s %s' % (
     device_props['DriveVendor'],
     device_props['DriveModel'],
@@ -4816,7 +3671,6 @@ self._devices.pop(device)
 def on_device_changed(self, device):
     if device not in self._devices:
         return
-
     cur_dev_data = self._devices[device]
     new_dev_data = self._get_all_dev_prop(device)
 ```
@@ -4857,188 +3711,306 @@ def on_device_unmounted_event(self, status_icon, device, device):
 def on_mount_volume(self, device, menuitem, device):
     if self._devices['DeviceIsMounted']:
         return False
-
     if device['IdLabel']:
         label = device['IdLabel']
     else:
         label = device['IdUid']
-
     mount_path = os.path.join('/media', label)
-
     if self.device['IdType'] == 'vfat':
         mount_options = ['shortname=mixed', 'uid=%s' % os.getuid(),
             'gid=%s' % os.getgid(), 'shortname=lower', 'dmask=0077',
             'utf8=1', 'flush']
     else:
         mount_options = []
-
     try:
+```
+
+
+
+```
         device_obj = self.get_dev_methods(device)
+
         device_obj.FilesystemUnmount(self.device['IdType'], fs_args,
+
             mount_path)
+
     except DBusException:
+
         return False
 
     return True
 
 def on_unmount_device(self, menuitem, device):
+
     try:
+
         device_obj = self.get_dev_methods(device)
+
         device_obj.FilesystemUnmount([])
+
     except DBusException:
+
         return False
 
     return True
+```
 
-#
 # UI 回调
-#
+
 def _on_activate_event(self, status, icon):
+
     ui_manager = gtk.UIManager()
 
     ui_manager.add_ui(ui_manager.merge_id(), '/', 'popup', 'popup',
+
         GTK_UI_MANAGER_POPUP, False)
 
     action_list = []
 
     if self._devices:
+
         for device_obj_path in self._devices:
+
             device = self._devices[device_obj_path]
+
             if device['IdUsage'] == 'filesystem':
+
                 if device['IdLabel']:
+
                     label = device['IdLabel']
+
                 else:
+
                     label = '%s Filesystem' \
+
                     # self.get_human_readable_size(
+
                         device['DeviceSize'])
+
                 uuid = str(device['IdUuid'])
+
                 ui_manager.add_ui(ui_manager.new_merge_id(), '/popup',
+
                     uuid, uuid, gtk.UI_MANAGER_MENU, False)
 
                 action_list.append((uuid, gtk.STOCK_HARDDISK, label,
+
                     # 子菜单在此
+
                 if device['DeviceIsMounted']:
+
                     # 浏览内容
+
                     ui_manager.add_ui(ui_manager.new_merge_id(),
+
                         '/popup/' + uuid, 'open' + uuid,
+
                         gtk.UI_MANAGER_MENUITEN, False)
+
                     action_list.append(('open' + uuid, gtk.STOCK_OPEN,
+
                         'Browse', None, 'Browse the device contents',
+
                         self.on_about_event))
 
                 # 卸载设备
+
                 ui_manager.add_ui(ui_manager.new_merge_id(),
+
                     '/popup/' + uuid, 'unmount' + uuid,
+
                     unmount + uuid,
+
                     gtk.UI_MANAGER_MENUITEN, False)
+
                 action_list.append(('unmount' + uuid, gtk.STOCK_OPEN,
+
                     'Unmount', None, 'Unmount the device',
+
                     self.on_about_event))
+
             else:
+
                 # 卸载设备
+
                 ui_manager.add_ui(ui_manager.new_merge_id(),
+
                     '/popup/' + uuid, 'mount' + uuid,
+
                     mount + uuid,
+
                     gtk.UI_MANAGER_MENUITEN, False)
+
                 action_list.append(('mount' + uuid, gtk.STOCK_APPLY,
+
                     'Mount', None, 'Mount the device',
+
                     self.on_about_event))
+
             elif device['MediaEjectable']:
+
                 if device['IdLabel']:
+
                     label = device['IdLabel']
+
                 else:
+
                     label = '%s %s %s' % (
+
                         device['DriveModel'],
+
                         device['Revision'])
+
                 ui_manager.add_ui(ui_manager.merge_id(), '/popup',
+
                     label, label, gtk.UI_MANAGER_MENU, False)
+
                 action_list.append((label, gtk.STOCK_CDROM, label,
+
                 if device['DeviceIsMounted']):
+
                     # 浏览内容
+
                     ui_manager.add_ui(ui_manager.new_merge_id(),
+
                         '/popup/' + uuid, 'open' + uuid,
+
                         gtk.UI_MANAGER_MENUITEN, False)
+
                     action_list.append(('open' + uuid, gtk.STOCK_OPEN,
+
                         'Browse', None, 'Browse the device contents',
+
                         self.on_about_event))
 
                     # 卸载设备
+
                     ui_manager.add_ui(ui_manager.new_merge_id(),
+
                         '/popup/' + uuid, 'unmount' + uuid,
+
                         unmount + uuid,
+
                         gtk.UI_MANAGER_MENUITEN, False)
+
                     action_list.append(('unmount' + uuid, gtk.STOCK_OPEN,
+
                         'Unmount', None, 'Unmount the device',
+
                         self.on_about_event))
+
                 else:
+
                     # 卸载设备
+
                     ui_manager.add_ui(ui_manager.new_merge_id(),
+
                         '/popup/' + uuid, 'mount' + uuid,
+
                         mount + uuid,
+
                         gtk.UI_MANAGER_MENUITEN, False)
+
                     action_list.append(('mount' + uuid, gtk.STOCK_APPLY,
+
                         'Mount', None, 'Mount the device',
+
                         self.on_about_event))
+
             else:
+
                 # 卸载设备
+
                 ui_manager.add_ui(ui_manager.new_merge_id(), '/popup',
+
                     'WithoutDisks', 'WithoutDisks',
+
                     gtk.UI_MANAGER_MENUITEN, False)
+
                 action_list.append(('WithoutDisks', gtk.STOCK_DELETE,
+
                     'WithoutDisks', None, 'WithoutDisks',
+
                     self.on_about_event))
 
         action_group = gtk.ActionGroup('actions1')
+
         action_group.add_actions(action_list)
 
         ui_manager.insert_action_group(action_group, 0)
+
         ui_manager.ensure_update()
 
         menu = ui_manager.get_widget('/popup')
+
         menu.show_all()
 
         menu.popup(None, None, gtk.status_icon_position_menu, 1,
+
             gtk.get_current_time(time), status_icon)
 
     def _on_popup_menu_event(self, status_icon, button, activate_time):
 
         action_group = gtk.ActionGroup('actions2')
+
         action_group.add_actions()
 
         ui_string = '''
+
 <ui>
+
     <popup>
+
         <menuitem name="Preferences" action="Preferences"/>
+
         <separator/>
+
         <menuitem name="About" action="About"/>
+
     </popup>
+
 </ui>"""
+
         ui_manager = gtk.UIManager()
+
         ui_manager.add_ui_from_string(ui_string)
+
         ui_manager.insert_action_group(action_group, 0)
 
         menu = ui_manager.get_widget('/popup')
+
         menu.show_all()
+
         menu.popup(None, None, gtk.status_icon_position, button, activate_time, status_icon)
 
     def on_preferences_event(self, *args):
+
         pass
 
     def on_help_event(self, *args):
+
         pass
 
     def on_about_event(self, *args):
+
         pass
 
     def run(self):
+
         try:
+
             gtk.main()
+
         except KeyboardInterrupt:
+
             print('Exiting...')
+
             exit(0)
 
 if __name__ == '__main__':
+
     tray_icon = DiscTray()
+
     tray_icon.run()
 ```
 
@@ -5058,38 +4030,34 @@ if __name__ == '__main__':
 
 要成为一个优秀的打包者，必须对以下工具有所了解（此列表并非详尽，而是我们使用的一些应用程序的示例）：
 
-# configure
+## configure
 
-configure 通常是为在多个平台上运行而设计的。由于这些平台具有不同的编译器和包含文件，因此需要编写 Makefiles（下一项）和构建脚本，使其能够在各种平台上运行。GNU 项目面对这个问题，设计了一套工具来帮助完成这项任务。configure 脚本运行一系列测试来确定关于你机器的重要信息。
+`configure` 通常是为在多个平台上运行而设计的。由于这些平台具有不同的编译器和包含文件，因此需要编写 Makefiles（下一项）和构建脚本，使其能够在各种平台上运行。GNU 项目面对这个问题，设计了一套工具来帮助完成这项任务。`configure` 脚本运行一系列测试来确定关于你机器的重要信息。
 
-# make
+## make
 
-make 是一个用于从程序的源文件生成可执行文件和其他非源文件的工具。
-
-
-
-
+`make` 是一个用于从程序的源文件生成可执行文件和其他非源文件的工具。
 
 ## 第5章：应用程序打包
 
-它通过一个名为 `Makefile` 的文件获取构建构建程序的知识。Makefile 是一个包含 shell 命令的特殊文件，由你创建并命名为 `Makefile`，通过在 Makefile 所在的目录下输入命令 `make` 来执行。当你编写一个程序时，应该为它编写一个 makefile，以便使用 `make` 来构建和安装该程序。
+它通过一个名为 `Makefile` 的文件获取构建构建程序的知识。`Makefile` 是一个包含 shell 命令的特殊文件，由你创建并命名为 `Makefile`，通过在 Makefile 所在的目录下输入命令 `make` 来执行。当你编写一个程序时，应该为它编写一个 makefile，以便使用 `make` 来构建和安装该程序。
 
-apt 是 Advanced Package Tool（高级软件包工具）的缩写。该工具在整书中被广泛使用。以下 apt 命令对打包很有用：
+`apt` 是 Advanced Package Tool（高级软件包工具）的缩写。该工具在整书中被广泛使用。以下 `apt` 命令对打包很有用：
 
-- apt-cache dump — 显示缓存中的每个包。此命令可以配合 `grep` 管道符使用，例如 `apt-cache dump | grep search`，用于查找名称或依赖项包含 bar 的包。
-- apt-cache show — 列出包所在的仓库（main/restricted/universe/multiverse）。
-- apt-cache showsrc — 显示二进制包的信息。
-- apt-cache rdepends — 显示包的依赖关系（哪些包需要所查询的包）。
-- apt-rdepends — 递归列出包依赖关系以及前向构建依赖。
+- `apt-cache dump` — 显示缓存中的每个包。此命令可以配合 `grep` 管道符使用，例如 `apt-cache dump | grep search`，用于查找名称或依赖项包含 bar 的包。
+- `apt-cache show` — 列出包所在的仓库（main/restricted/universe/multiverse）。
+- `apt-cache showsrc` — 显示二进制包的信息。
+- `apt-cache rdepends` — 显示包的依赖关系（哪些包需要所查询的包）。
+- `apt-rdepends` — 递归列出包依赖关系以及前向构建依赖。
 
-dpkg 是一个 Debian 打包工具，可用于安装、查询和卸载包。以下命令对打包很有用：
+`dpkg` 是一个 Debian 打包工具，可用于安装、查询和卸载包。以下命令对打包很有用：
 
-- dpkg -S — 显示特定文件所属的包。
-- dpkg -l — 显示当前安装的包。这类似于 apt-cache dump，但针对的是已安装的包。
-- dpkg -c — 显示二进制包的内容。它有助于确保文件被安装到正确的位置。
-- dpkg -f — 显示二进制包的控制文件。它有助于确保依赖是正确的。
-- dpkg -L — 列出由包（包）“所有”的文件。
-- dpkg -s — 显示包状态详情。
+- `dpkg -S` — 显示特定文件所属的包。
+- `dpkg -l` — 显示当前安装的包。这类似于 `apt-cache dump`，但针对的是已安装的包。
+- `dpkg -c` — 显示二进制包的内容。它有助于确保文件被安装到正确的位置。
+- `dpkg -f` — 显示二进制包的控制文件。它有助于确保依赖是正确的。
+- `dpkg -L` — 列出由包（包）“所有”的文件。
+- `dpkg -s` — 显示包状态详情。
 
 处理源包时一个非常实用的命令：
 
@@ -5097,22 +4065,24 @@ dpkg 是一个 Debian 打包工具，可用于安装、查询和卸载包。以�
 $ dpkg-source -x filename.dsc [output-directory]
 ```
 
-这会提取一个源包。必须提供一个非选项参数，即 Debian 源包的名称 (.dsc)。可以提供第二个可选的非选项参数来指定提取源包的目录——该目录必须不存在。
+
+
+这会提取一个源包。必须提供一个非选项参数，即 Debian 源包的名称（`.dsc`）。可以提供第二个可选的非选项参数来指定提取源包的目录——该目录必须不存在。
 
 如果未指定输出目录，源包将提取到当前工作目录下一个名为 `source-version` 的目录中：
 
 ### dpkg-scanpackages
 
-dpkg-scanpackages 遍历 Debian 二进制包树并创建一个 `Packages.gz` 文件，该文件可以被设备的软件更新工具使用。
+`dpkg-scanpackages` 遍历 Debian 二进制包树并创建一个 `Packages.gz` 文件，该文件可以被设备的软件更新工具使用。
 
 ### dpkg-scansours
 
-dpkg-scanpackages 遍历 Debian 源包树并创建一个 `Packages.gz` 文件，该文件可以被设备的软件更新工具使用。
+`dpkg-scanpackages` 遍历 Debian 源包树并创建一个 `Packages.gz` 文件，该文件可以被设备的软件更新工具使用。
 
-要使用上述两个命令并让你自定义的 Debian 包可以通过 apt-get 安装，你需要在同一目录下准备以下文件：
+要使用上述两个命令并让你自定义的 Debian 包可以通过 `apt-get` 安装，你需要在同一目录下准备以下文件：
 
-- 二进制包 (.deb)
-- 源包 (orig.tar.gz, .diff.gz, 和 .dsc)
+- 二进制包（`.deb`）
+- 源包（`orig.tar.gz`, `.diff.gz`, 和 `.dsc`）
 - 一个可选的覆盖文件
 
 ### diff
@@ -5129,31 +4099,31 @@ dpkg-scanpackages 遍历 Debian 源包树并创建一个 `Packages.gz` 文件，
 
 ### devscripts
 
-devscripts 包含许多脚本，包括 debclean、debiff 和 dget。debclean 用于清除源，debiff 用于比较两个文件。
+`devscripts` 包含许多脚本，包括 `debclean`、`debiff` 和 `dget`。`debclean` 用于清除源，`debiff` 用于比较两个文件。
 
 ### gnupg
 
-gnupg 用于对文件进行数字签名。
+`gnupg` 用于对文件进行数字签名。
 
 ### fakerroot
 
-fakerroot 为构建提供一个 root 环境。
+`fakerroot` 为构建提供一个 root 环境。
 
 ### lintian
 
-lintian 包含了针对 Debian 策略的自动化检查。
+`lintian` 包含了针对 Debian 策略的自动化检查。
 
 ### pbuilder
 
-使用 pbuilder 允许你构建二进制包。
+使用 `pbuilder` 允许你构建二进制包。
 
 ### 使用 PPA
 
-通过 Launchpad 的个人档案 (PPA)，可以构建并发布。
+通过 Launchpad 的个人档案（PPA），可以构建并发布。
 
-### 初始 Debian 化 (Debization)
+### 初始 Debian 化（Debization）
 
-如果没有安装 dh-make，请运行：
+如果没有安装 `dh-make`，请运行：
 
 ```
 $ sudo apt-get install dh-make
@@ -5166,19 +4136,14 @@ $ ln -s ubuntu-golden ubuntu-golden-0.1
 $ dh-make -createorig -indep
 ```
 
-
-
-
-
 ## 第 5 章：应用打包
 
-clean:
+`clean:` 
 
 ```
 dh_testdir
 dh_testroot
 rm -f build-stamp configure-stamp
-
 # 在此处添加构建过程后进行清理的命令。
 $(MAKE) clean
 ```
@@ -5187,7 +4152,7 @@ $(MAKE) clean
 dh_clean
 ```
 
-install: build
+`install: build`
 
 ```
 dh_testdir
@@ -5205,8 +4170,9 @@ $(MAKE) DESTDIR=$(CURDIR)/debian/teste install
 # 在此处构建与架构无关的文件。
 ```
 
+`binary-indep: install`
+
 ```
-binary-indep: install
 dh_testdir
 dh_testroot
 dh_installchangelogs
@@ -5241,12 +4207,10 @@ dh_builddeb
 # 在此处构建与架构相关的文件。
 ```
 
-```
-binary-arch: install
-```
+`binary-arch: install`
 
-binary: binary-indep binary-arch
-.PHONY: build clean binary-indep binary-arch binary install configure
+`binary: binary-indep binary-arch`
+`.PHONY: build clean binary-indep binary-arch binary install configure`
 
 代码中修饰符规则（modifier rules）需要注意的主要是以下代码块：
 
@@ -5259,11 +4223,10 @@ themes/UbuntuGolden/gtk-2.0/; \
   done
 ```
 
-它将我们的构建内容安装到 /usr/UbuntuGolden，然后将权限更改为：
-- 除主题所有者之外，所有人仅限只读。我们删除了默认规则文件以及所有被注释掉的 dh_commands，以及 dh_installexamples、dh_install 和 dh-
-link，这些在本文情况下是不必要的。我们还删除了 configure-stamp 段落和 Make 的相关部分。
+它将我们的构建内容安装到 `/usr/UbuntuGolden`，然后将权限更改为：
+- 除主题所有者之外，所有人仅限只读。我们删除了默认规则文件以及所有被注释掉的 `dh_commands`，以及 `dh_installexamples`、`dh_install` 和 `dh-link`，这些在本文情况下是不必要的。我们还删除了 `configure-stamp` 段落和 Make 的相关部分。
 
-完整的规则所示，请注意各种 dh_commands：
+完整的规则所示，请注意各种 `dh_commands`：
 
 ```
 #!/usr/bin/make -f
@@ -5316,13 +4279,13 @@ binary: binary-indep binary-indep binary-arch install configure
 .PHONY: clean binary_indep
 ```
 
-前面提到的 dh_commands 是每个版本中 debhelper 套件的一部分。它们在编写规则文件（rules file）时可以帮助处理重复性任务。例如，`dh_testdir` 命令尝试确保你在构建 debian 包时处于正确的目录中。要需有关该套件中所有工具的更多信息，请参阅 debhelper 的帮助页（manpages）。
+前面提到的 `dh_commands` 是每个版本中 `debhelper` 套件的一部分。它们在编写规则文件（`rules file`）时可以帮助处理重复性任务。例如，`dh_testdir` 命令尝试确保你在构建 debian 包时处于正确的目录中。要需有关该套件中所有工具的更多信息，请参阅 `debhelper` 的帮助页（`manpages`）。
 
-还有其他制作规则的方法，例如使用 debhelper 7 和 cdbs。有关这些工具的更多信息，请查看 http://manpages.ubuntu.com/Karmic/man7/debhelper.html 和 http://build-common.alloth.debian.org/cdbs-doc.html。
+还有其他制作规则的方法，例如使用 `debhelper 7` 和 `cdbs`。有关这些工具的更多信息，请查看 `http://manpages.ubuntu.com/Karmic/man7/debhelper.html` 和 `http://build-common.alloth.debian.org/cdbs-doc.html`。
 
 ## changelog（变更日志）
 
-changelog 是每个版本中所做更改的列表。它的格式提供了包名、版本、发行版以及谁在何时做了更改的信息。如果你有 GPG 密钥，请确保 changelog 中使用的名称和电子邮件地址与你的密钥一致。创建一个如下 changelog：
+`changelog` 是每个版本中所做更改的列表。它的格式提供了包名、版本、发行版以及谁在何时做了更改的信息。如果你有 GPG 密钥，请确保 `changelog` 中使用的名称和电子邮件地址与你的密钥一致。创建一个如下 `changelog`：
 
 ```
 xfce4-theme-ubuntu-golden (0.1jaun); urgency=low
@@ -5330,11 +4293,13 @@ xfce4-theme-ubuntu-golden (0.1jaun); urgency=low
 - Ian Lawrence <debs@ianlawrence.info> Sat, 28 Feb 2009 19:45:07 +0000
 ```
 
-可以使用工具 `dch` 编辑 changelog。在源码根目录中，输入 `$ dch -e` 来使用你偏好的编辑器编辑 changelog。例如，在发布新版本时递增 changelog，运行 `$ dch -i`。要在当前版本条目后追加新注释，运行 `$ dch -a`。
+可以使用工具 `dch` 编辑 `changelog`。在源码根目录中，输入 `$ dch -e` 来使用你偏好的编辑器编辑 `changelog`。例如，在发布新版本时递增 `changelog`，运行 `$ dch -i`。要在当前版本条目后追加新注释，运行 `$ dch -a`。
 
 设置默认编辑器：
 
+```
 $ update-alternatives --config-editor
+```
 
 ## control（控制文件）
 
@@ -5350,7 +4315,6 @@ Maintainer: Ian Lawrence
 Build-Depends: debhelper ( >= 7.0.0)
 Standards-Version: 3.8.0
 Homepage: http://ianlawrence.info
-
 Package: xfce4-theme-ubuntu-golden
 Architecture: all
 Depends: gtk2-engines-murrine
@@ -5359,130 +4323,63 @@ Description: 一个适用于 Gtk+ 2.0 的金色主题
 ```
 
 包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-（注：由于原文中存在大量重复段落，此处已根据指令“不要重复输出原文”的原则进行了精简处理，保留逻辑翻译）
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-包可以在控制文件中声明它们与其他包的关系。在上面的示例中，`Depends` 显示了对 `gtk2-engines-murrine` 的依赖。
-
-（此处省略重复的翻译内容，核心含义为：包可以在控制文件中声明关系，Depends 显示对 gtk2-engines-murrine 的依赖等）
-
-```
-Source: xfce4-theme-ubuntu-golden <debs@ianlawrence.info
-Section: graphics
-Priority: optional
-Maintainer: Ian Lawrence
-Build-Depends: debhelper ( >= 7.0.0)
-Standards-Version: 3.8.0
-Homepage: http://ianlawrence.info
-
-Package: xfce4-theme-ubuntu-golden
-Architecture: all
-Depends: gtk2-engines-murrine
-Description: 一个适用于 Gtk+ 2.0 的金色主题
-此包包含了用于 gtk2 的 Ubuntu 包。
-```
-
-（后续部分）
-
-
-
-
 
 ## 第 5 章：软件包打包
 
-当自动构建器完成打包后，系统会发送一封电子邮件通知用户此情况。这是一封来自名为 gypsy 的 GPS 守护进程上传的邮件，该进程被作为 REVU 的示例（见下文）打包，可能会纳入 Ubuntu Mobile 发行版。
+当自动构建器完成打包后，系统会发送一封电子邮件通知用户此情况。这是一封来自名为 `gypsy` 的 GPS 守护进程上传的邮件，该进程被作为 REVU 的示例（见下文）打包，可能会纳入 Ubuntu Mobile 发行版。
 
 ```
 Accepted:
 OK: gypsy-0.5.orig.tar.gz
 OK: gypsy-0.5-2jauntly.diff.gz
 OK: gypsy-0.5-2jauntly.dsc
--> Component: universe Section: dev
-Format: 1.8
+```
+
+
+
+# Component: universe Section: dev
+
+Format: `1.8`
+
 Date: Sat, 28 Feb 2009 19:45:07 +0000
-Source: gypsy
-Binary: gypsy gypsy-dbg libgypsy0 libgypsy-dbg libgypsy-dev libgypsy-doc
-Architecture: source
-Version: 0.5-2jauntly
-Distribution: jaunty
-Urgency: low
+
+Source: `gypsy`
+
+Binary: `gypsy` `gypsy-dbg` `libgypsy0` `libgypsy-dbg` `libgypsy-dev` `libgypsy-doc`
+
+Architecture: `source`
+
+Version: `0.5-2jauntly`
+
+Distribution: `jaunty`
+
+Urgency: `low`
+
 Maintainer: Ross Burton <ross@debian.org>
+
 Changed-By: Ian Lawrence <debs@ianlawrence.info>
+
 Description:
-gypsy-GPS multiplexing daemon
-gypsy-dbg-GPS multiplexing daemon (debug files)
-libgypsy-dev-GPS daemon client library (development files)
-libgypsy-doc-GPS multiplexing daemon client library (documentation)
-libgypsy-GPS multiplexing daemon client library
-libgypsy0-dbg-GPS multiplexing daemon client library (debug files)
-```
+
+`gypsy`-GPS multiplexing daemon
+
+`gypsy-dbg`-GPS multiplexing daemon (debug files)
+
+`libgypsy-dev`-GPS daemon client library (development files)
+
+`libgypsy-doc`-GPS multiplexing daemon client library (documentation)
+
+`libgypsy`-GPS multiplexing daemon client library
+
+`libgypsy0-dbg`-GPS multiplexing daemon client library (debug files)
+
+## Changes:
+
+`gypsy (0.5-2jauntly) jaunty; urgency=low`
 
 ```
-Changes:
-gypsy (0.5-2jauntly) jaunty; urgency=low
-```
-
 - * PPA 构建
+```
 
 用户可以通过以下方式将 PPA 添加到他们的源列表中：
 
@@ -5493,7 +4390,7 @@ deb-src http://ppa.launchpad.net/ianlawrence/ppa/ubuntu jaunty main
 
 并，他们可以使用相应的命令安装 PPA 中提供的软件包。
 
-> 如果你向自己的 Launchpad 账户或团队账户添加了另一个 PPA，你必须在 ~/.apt/conf 中添加以下内容：
+> 如果你向自己的 Launchpad 账户或团队账户添加了另一个 PPA，你必须在 `~/.apt/conf` 中添加以下内容：
 
 ```
 [ppa 别名]
@@ -5501,12 +4398,15 @@ fqdn = upload.launchpad.net
 method = ftp
 incoming = <<launchpad username>/ubuntu/other ppa name
 login = anonymous
+```
+
+```
 $ dput <ppa 别名> <changes文件>
 ```
 
 ## REVU
 
-如前所述，提交任何软件包进行审核都是好主意。REVU (http://revu.ubuntu.com) 是一个基于 Web 的工具，供修改过软件包的人将其提交给 Ubuntu 开发者，以便这些经验更丰富的开发者对其进行审查，并决定是否纳入 Ubuntu。
+如前所述，提交任何软件包进行审核都是好主意。`REVU` (http://revu.ubuntu.com) 是一个基于 Web 的工具，供修改过软件包的人将其提交给 Ubuntu 开发者，以便这些经验更丰富的开发者对其进行审查，并决定是否纳入 Ubuntu。
 
 上传到 REVU 的方法如下：
 
@@ -5516,7 +4416,7 @@ $ dput revu gypsy_0.5-2jauntlyl1_source.changes
 
 这会收到包含软件包信息的确认邮件：
 
-有一个新软件包已接受进入 REVU：gypsy
+有一个新软件包已接受进入 REVU：`gypsy`
 
 ```
 Package uploaded at: 2009-02-28, 22:42
@@ -5526,7 +4426,7 @@ REVU URL: http://revu.ubuntu.com/details.py?uid=5306
 
 随后的邮件可能来自经验丰富的开发者——通常带有一些关于如何改进软件包本身的提示。例如：
 
-- 软件包 gypsy 的注释（非主倡性）
+- 软件包 `gypsy` 的注释（非主倡性）
 支持者数量: 0
 软件包上传时间: 2009-02228, 22:42
 软件包上传者: ianlawrence
@@ -5534,7 +4434,7 @@ REVU URL: http://revu.ubuntu.com/details.py?uid=5306
 persilla verter::
 1) 章节划分非常混乱
 2) 为什么要限制架构
-3) /etc/dbus-1/event/d/ 已过时：使用 LSB init 头文件
+3) `/etc/dbus-1/event/d/` 已过时：使用 LSB init 头文件
 4) 变更日志通常在首次上传时会被截断（且版本是奇数）
 5) 上游有新版本可用
 
@@ -5564,9 +4464,9 @@ $ apt-cache show kvm
 
 ## 创建自己的仓库
 
-在某些情况下，使用 PPA 并不理想，在本地提供可用软件包会更方便。这在构建 Ubuntu 的重混版或定制版时尤为如此。如果是这种情况，有两种方法可以创建本地仓库。第一种是“简单”的方法；第二种使用一个名为 repro 的工具，它可以帮助实现该过程。
+在某些情况下，使用 PPA 并不理想，在本地提供可用软件包会更方便。这在构建 Ubuntu 的重混版或定制版时尤为如此。如果是这种情况，有两种方法可以创建本地仓库。第一种是“简单”的方法；第二种使用一个名为 `repro` 的工具，它可以帮助实现该过程。
 
-## 简单仓库
+### 简单仓库
 
 简单仓库不会在子目录中组织软件包。它们仅通过扫描目录来创建一个名为 `Packages.gz` 的软件包列表。
 
@@ -5577,7 +4477,7 @@ dpkg-scanpackages binary /dev/null | gzip -c > Packages.gz
 dpkg-scancours binary /dev/null | gzip -c > Sources.gz
 ```
 
-## 自动仓库
+### 自动仓库
 
 自动仓库并不在子目录中组织软件包。它通过扫描目录来创建一个名为 `Packages.gz` 的软件包列表。
 
@@ -5588,7 +4488,7 @@ dpkg-scanpackages binary /dev/null | gzip -c > Packages.gz
 dpkg-scancours binary /dev/null | gzip -c > Sources.gz
 ```
 
-## 设置仓库
+### 设置仓库
 
 首先，你需要创建目录结构。应该如下：
 
@@ -5605,7 +4505,7 @@ deb file:/path/to/repository/ jaunty main universe universe
 deb-src file:/path/to/repository/ jaunty main universe
 ```
 
-## 将软件包添加到仓库
+### 将软件包添加到仓库
 
 要将软件包添加到仓库，使用：
 
@@ -5613,16 +4513,13 @@ deb-src file:/path/to/repository/ jaunty main universe
 cp /path/to/repository/pool/main
 ```
 
-## 移除软件包
+### 移除软件包
 
 从仓库中移除软件包可以使用：
 
 ```
 rm -
 ```
-
-
-
 
 ## 第 5 章：软件包打包
 
@@ -5654,9 +4551,9 @@ PKGNAME_LOGFILE_EXTENSION="_${s(dpkg - print-architecture)}.build"
 PKGNAME_LOGFILE="*
 ```
 
-这为 pbuilder 提供了相同的默认配置。
+这为 `pbuilder` 提供了相同的默认配置。
 
-可以使用 bash 脚本对 pbuilder 进行脚本。以下脚本允许为任何 Ubuntu 发行版创建 Debian 包（名称作为命令行参数传递给 pbuilder）。将 /home/<user>/pbuilder/ 文件修改为如下代码所示。这仅用于说明。请从 Wx 上的包下载此代码。
+可以使用 `bash` 脚本对 `pbuilder` 进行脚本。以下脚本允许为任何 Ubuntu 发行版创建 Debian 包（名称作为命令行参数传递给 `pbuilder`）。将 `/home/<user>/pbuilder/` 文件修改为如下代码所示。这仅用于说明。请从 Wx 上的包下载此代码。
 
 ```bash
 #USE_SYSTEM_DIST=1
@@ -5684,7 +4581,6 @@ elseif [ -r "debian/changelog" ]; then
   fi
 fi
 fi
-
 if [ -n "$(echo ${UBUNTULIST[@]})" | grep ${DIST})" ]; then
 COMPONENTS=main restricted universe multiverse
 MIRRORSITE=$(UBUNTU_MIRROR)
@@ -5707,48 +4603,42 @@ if [ "${UBUNTU_PROPOSED}" ]; then
 fi
 elif -n "$(echo \${DEBIANLIST[@]} | grep "${DIST}")"; then
     echo "Using a debian pbuilder environment because DIST is \${DIST}"
-
     COMPONENTS="main contrib non-free"
     MIRORS="${DEBIAN_MIRROR}"
-
     # 定义我们在 debian 中将使用的仓库
     if [ "${DEBIAN_SECURITY}\ ]; then
         OTHERMIRROR="${OTHERMIRROR}deb \${DEBIAN_MIRROR} \${DIST}-security ${COMPONENTS}|"
     fi
-
     BASEGETZ="$(dirname \${BASEGETZ}')`/\${DIST}-base.tgz"
-
     #BASEGETZ="/var/cache/pbuilder/\${DIST}-base.tgz"
-
     DISTRIBUTION="${DIST}"
-
     BUILDRESULT="/var/cache/pbuilder/\${DIST}/result/"
     APTCACHE="/var/cache/pbuilder/\${DIST}/aptcache/"
 ```
 
-通过这种方式配置 pbuilder，你将具备为不同的发布版本、发行版和架构构建软件包的能力。
+通过这种方式配置 `pbuilder`，你将具备为不同的发布版本、发行版和架构构建软件包的能力。
 
-要此操作，首先创建 pbuilder：
+要此操作，首先创建 `pbuilder`：
 
-- sudo DIST=karmic pbuilder create
+- `sudo DIST=karmic pbuilder create`
 
-然后将你想要构建的发布版本以及包的 .dsc 文件传递给 pbuilder，如下所示：
+然后将你想要构建的发布版本以及包的 `.dsc` 文件传递给 `pbuilder`，如下所示：
 
-- sudo DIST=karmic pbuilder build package_version.dsc
+- `sudo DIST=karmic pbuilder build package_version.dsc`
 
 要为 Jaunty 版本构建 Ubuntu Mobile 设备的第一个 Hardy 版本（可在 https://edge.launchpad.net~/ianlanlance/~/archive/ppa 获取），请运行以下命令：
 
-- sudo DIST=jaunty pbuilder build mobileguile_0.1-2.dsc
+- `sudo DIST=jaunty pbuilder build mobileguile_0.1-2.dsc`
 
 ## 在 PBuilder 上执行操作
 
-除了之前所示的 create 命令外，还有其他几个简单的操作命令，如 pbuilder update 和 pbuilder build。
+除了之前所示的 `create` 命令外，还有其他几个简单的操作命令，如 `pbuilder update` 和 `pbuilder build`。
 
 这些命令将会有更详细的介绍。
 
 ## 创建发行版环境
 
-`pbuilder create` 命令将创建一个基础 chroot 压缩包 (base.tgz)。所有其他命令都将在生成的 base.tgz 上操作。需要通过发行版命令行选项来指定发行版代号。
+`pbuilder create` 命令将创建一个基础 chroot 压缩包 (`base.tgz`)。所有其他命令都将在生成的 `base.tgz` 上操作。需要通过发行版命令行选项来指定发行版代号。
 
 `debootstrap` 用于创建基础 chroot。
 
@@ -5770,11 +4660,11 @@ $ pbuilder update
 
 ### 使用 pbuilder
 
-常见的工作流如“Backporting”部分所示。开发者可能会尝试在 chroot 内部进行 debuild。从 0.9 版本开始，pbuilder 提供了一种略有不同的操作模式。
+常见的工作流如“Backporting”部分所示。开发者可能会尝试在 chroot 内部进行 `debuild`。从 0.9 版本开始，`pbuilder` 提供了一种略有不同的操作模式。
 
 ## 配置操作
 
-当你想要在 pbuilder 执行期间的特定时刻执行某些操作时，可以使用钩子脚本（Hook scripts）。操作也可以脚本化。
+当你想要在 `pbuilder` 执行期间的特定时刻执行某些操作时，可以使用钩子脚本（Hook scripts）。操作也可以脚本化。
 
 可以通过变量 `HOOKDIR` 定义钩子目录。它可以在命令行中设置：
 
@@ -5788,7 +4678,7 @@ $ sudo HOOKDIR=/path/to/hookdir pbuilder -build file.dsc
 $ sudo pbuilder -hookdir /path/to/hookdir -build file.dsc
 ```
 
-钩子脚本的名称必须采用 `x<digit><digit><任何你想要的内容> hook script` 的格式，它会在构建失败时调用 shell。以下是一个 c0shell 钩子脚本的示例，它会在构建失败时调用 shell：
+钩子脚本的名称必须采用 `x<digit><digit><任何你想要的内容> hook script` 的格式，它会在构建失败时调用 shell。以下是一个 `c0shell` 钩子脚本的示例，它会在构建失败时调用 shell：
 
 ```bash
 #!/bin/bash
@@ -5800,21 +4690,19 @@ bin/bash < /dev/tty > /dev/tty 2 /dev/tty
 
 
 
-
-
 # 第5章：应用打包
 
 此步骤在 chroot 中解压源文件之前、设置好 chroot 环境之后执行。
 
 ## Hook 脚本仓库
 
-使用 Bazaar (sudo apt-get install bzr 检出以下内容：
+使用 Bazaar (`sudo apt-get install bzr`) 检出以下内容：
 
 ```
 bzr branch lp:ubuntu-members/pbbuilder/pbbuilder-hooks
 ```
 
-这包含了一些示例脚本。其中包括非常有用的 D01aptupdate，它会在继续后续之前运行 `apt-get update`，以及列出缺失文件的 B01list-missing。
+这包含了一些示例脚本。其中包括非常有用的 `D01aptupdate`，它会在继续后续之前运行 `apt-get update`，以及列出缺失文件的 `B01list-missing`。
 
 ## 为 UseBuilder 绑定包仓库
 
@@ -5822,35 +4710,40 @@ bzr branch lp:ubuntu-members/pbbuilder/pbbuilder-hooks
 
 ```
 BINDMOUNTS=/var/cache/pbbuilder/result
+```
+```
 # cat /var/cache/pbbuilder/hooks/D07results
 #/bin/sh
+
 cd /var/cache/pbbuilder/result/
+
 /usr/bin/dpkg-scannages /dev/null /var/cache/pbbuilder/result/Packages
+
 /usr/bin/apt-get update
 ```
 
-通过这样，你可以在 OTHERREPOSITORIES 变量中使用开发文件：/var/cache/pbbuilder/result。
+通过这样，你可以在 `OTHERREPOSITORIES` 变量中使用开发文件：`/var/cache/pbbuilder/result`。
 
 ## Ubuntu 策略
 
-位于 http://people.canonical.com/~cjwatson/ubuntu-policy/policy 的 Ubuntu 策略文档描述了“Ubuntu 发行版的策略要求”。它还讨论了与包相关的策略，例如 Ubuntu 发行版每个包必须满足的技术要求。它密切参考了 Debian 策略文档。
+位于 `http://people.canonical.com/~cjwatson/ubuntu-policy/policy` 的 Ubuntu 策略文档描述了“Ubuntu 发行版的策略要求”。它还讨论了与包相关的策略，例如 Ubuntu 发行版每个包必须满足的技术要求。它密切参考了 Debian 策略文档。
 
 该文档极其重要。请阅读它。有一点需要知道 Ubuntu 中的包存档是如何分类的。
 
 ## 类别
 
-类别分为 main（主）、restricted（受限）和 multiverse（多重宇宙），每个类别对于包包含在其中都有不同的要求。
+类别分为 `main`（主）、`restricted`（受限）和 `multiverse`（多重宇宙），每个类别对于包包含在其中都有不同的要求。
 
-- Main — main 中的包在编译或执行时不能依赖 main 之外的包（包不能对非 main 包声明“依赖(Depends)”、“推荐（Recommends)”或“构建依赖(Build-Depends)”关系）。
-- Restricted — restricted 中的包可能不可用，并且可能不允许修改。
-- Universe — 此类别的包不受 Ubuntu 开发者或 Canonical 支持。此外，包在编译或执行时不能依赖 main 和 universe 之外的包（包不能对非 main 且非 universe 包声明“依赖(Depends)”、“推荐(Recommends)”或“构建依赖(Build-Depends)”关系）。
-- Multiverse — 如果源代码不可用、不允许修改，或者受到专利或其他法律问题的限制导致分发出现问题，则必须放置在 multiverse 中。
+- `Main` — `main` 中的包在编译或执行时不能依赖 `main` 之外的包（包不能对非 `main` 包声明“依赖(`Depends`)”、“推荐（`Recommends`）”或“构建依赖(`Build-Depends`)”关系）。
+- `Restricted` — `restricted` 中的包可能不可用，并且可能不允许修改。
+- `Universe` — 此类别的包不受 Ubuntu 开发者或 Canonical 支持。此外，包在编译或执行时不能依赖 `main` 和 `universe` 之外的包（包不能对非 `main` 且非 `universe` 包声明“依赖(`Depends`)”、“推荐(`Recommends`)”或“构建依赖(`Build-Depends`)”关系）。
+- `Multiverse` — 如果源代码不可用、不允许修改，或者受到专利或其他法律问题的限制导致分发出现问题，则必须放置在 `multiverse` 中。
 
-每个包必须在 /usr/share/doc/package/copyright 提供一个版权文件和发行许可。
+每个包必须在 `/usr/share/doc/package/copyright` 提供一个版权文件和发行许可。
 
 ## 章节
 
-上述类别被进一步细分为若干章节。这些章节在 Debian 的控制文件中指定。它们有助于将包组织成逻辑块。可用的章节包括 admin（管理）、graphics（图形）、web（网络）、X11 和 metapackages（元包）。完整列表可在策略文档本身中查找到。元包的使用在第 11 章“整合一切”中介绍。
+上述类别被进一步细分为若干章节。这些章节在 Debian 的控制文件中指定。它们有助于将包组织成逻辑块。可用的章节包括 `admin`（管理）、`graphics`（图形）、`web`（网络）、`X11` 和 `metapackages`（元包）。完整列表可在策略文档本身中查找到。元包的使用在第 11 章“整合一切”中介绍。
 
 > Ubuntu 存档的维护者可能会覆盖章节值以确保 Ubuntu 发行版致性。因此，在包中包含此信息是重要的。
 
@@ -5890,7 +4783,7 @@ sudo apt-get install encryptfs-utils
 sudo encryptfs-setup-private
 ```
 
-encryptfs-setup-private 脚本创建 /home/user/private，可以在其中存储机密。重启设备后，加密数据即可可用。
+`encryptfs-setup-private` 脚本创建 `/home/user/private`，可以在其中存储机密。重启设备后，加密数据即可可用。
 
 ## 文档
 
@@ -5900,11 +4793,11 @@ OpenOffice 是一个免费的跨平台应用程序套件，并与 Microsoft Offi
 
 ## 实际示例
 
-OpenOffice 可能消耗资源，这在移动设备上可能是个问题。由于这个问题，Ubuntu 团队编写了一个名为buchet (treb) 的应用程序，它是显示文件的处理器。
+OpenOffice 可能消耗资源，这在移动设备上可能是个问题。由于这个问题，Ubuntu 团队编写了一个名为`buchet (treb)` 的应用程序，它是显示文件的处理器。
 
-treb 是一个读取 Microsoft Office 创建文件的接口。它通过使用 OpenOffice 作为过滤器将文件转换为 PDF 并启动 Evince 查看结果。当 Evince 关闭后，临时 PDF 文件被删除，treb 本体也关闭。
+`treb` 是一个读取 Microsoft Office 创建文件的接口。它通过使用 OpenOffice 作为过滤器将文件转换为 PDF 并启动 Evince 查看结果。当 Evince 关闭后，临时 PDF 文件被删除，`treb` 本体也关闭。
 
-treb 作为 MID 安装的一部分，也可以通过 apt-get 安装；它可以从命令行运行以显示图 6-1 所示的 GUI。
+`treb` 作为 MID 安装的一部分，也可以通过 `apt-get` 安装；它可以从命令行运行以显示图 6-1 所示的 GUI。
 
 ![](img/20e1447b223c3f9afa3d43610c6361ee_166_0.png)
 
@@ -5912,21 +4805,21 @@ treb 作为 MID 安装的一部分，也可以通过 apt-get 安装；它可以�
 
 ```
 $ apt-get install treb
+
 $ treb
 ```
 
-## 多媒体用户为为多媒体用户提供设备的供应商有一个基于当前智能手机市场的成熟市场。虽然多媒体通常与图像、文本相关，但它也可以意味着整合来自多个独立源数据的程序。在移动设备上实现这一点最知名且最流行的应用程序可能是 Canola。它是使用 Python 和 Enlightenment Foundation Libraries (EFL) 构建的，并使用插件系统启用 YouTube、Flickr 等。已有 Google Summer of Code 2009 项目被批准，用于为 Twitter、Remember the Milk 和 IM 客户端创建插件。
+## 多媒体用户
 
-EFL 在第4 章中有详细介绍。
+为多媒体用户提供设备的供应商有一个基于当前智能手机市场的成熟市场。虽然多媒体通常与图像、文本相关，但它也可以意味着整合来自多个独立源数据的程序。在移动设备上实现这一点最知名且最流行的应用程序可能是 Canola。它是使用 Python 和 Enlightenment Foundation Libraries (`EFL`) 构建的，并使用插件系统启用 YouTube、Flickr 等。已有 Google Summer of Code 2009 项目被批准，用于为 Twitter、Remember the Milk 和 IM 客户端创建插件。
 
-
-
+`EFL` 在第4 章中有详细介绍。
 
 ## 第 6 章：应用选择
 
 ## 实际示例
 
-Entertainer 包含一个私有视频录制器，这意味着它可以用于观看电视电视，并将其录制以备后观看。要安装 entertainer，请将 entertainer PPA 添加到 /etc/apt/sources.list：
+Entertainer 包含一个私有视频录制器，这意味着它可以用于观看电视电视，并将其录制以备后观看。要安装 entertainer，请将 entertainer PPA 添加到 `/etc/apt/sources.list`：
 
 ```
 deb http://ppa.launchpad.net/entertainer-releases/ppa/ubuntu jaun main
@@ -5965,21 +4858,21 @@ Ubuntu Network Remix 上的 Entertainer 如图 6-3 所示。
 
 图 6-3
 
-要退出 Entertainer，请按 Q 键。接下来将解释其他有用的键命令。
+要退出 Entertainer，请按 `Q` 键。接下来将解释其他有用的键命令。
 
 ## Entertainer GUI 中的常用快捷键
 
 Entertainer 通过键盘控制，如下所示：
 
-- F — 切换全屏开启/关闭。
-- P — 在视频或音频播放时切换暂停/播放。
-- S — 停止播放。
-- H — 导航到主屏幕；在任何地方按此键将显示主菜单。
-- I — 在全屏模式下查看照片时切换信息显示。
-- 1, 2, 3, 4 — 更改视频播放宽高比例。
+- `F` — 切换全屏开启/关闭。
+- `P` — 在视频或音频播放时切换暂停/播放。
+- `S` — 停止播放。
+- `H` — 导航到主屏幕；在任何地方按此键将显示主菜单。
+- `I` — 在全屏模式下查看照片时切换信息显示。
+- `1, 2, 3, 4` — 更改视频播放宽高比例。
 - 方向键 — 导航菜单。
-- Enter — 选择当前菜单项。
-- Backspace — 导航到上一个屏幕。
+- `Enter` — 选择当前菜单项。
+- `Backspace` — 导航到上一个屏幕。
 
 ## 社交网络用户
 
@@ -6003,7 +4896,7 @@ Entertainer 通过键盘控制，如下所示：
 
 ## 实际示例
 
-针对这一细分市场的完整操作系统的有趣示例是 gOS 3 Gadgets，可以在 http://thinkgos.com/index.php 。gOS 3 Gadgets 是一个适用于桌面电脑和笔记本电脑的完整桌面操作系统。
+针对这一细分市场的完整操作系统的有趣示例是 gOS 3 Gadgets，可以在 `http://thinkgos.com/index.php` 。`gOS 3 Gadgets` 是一个适用于桌面电脑和笔记本电脑的完整桌面操作系统。
 
 它基于 Ubuntu 8.04，并启动了 Linux 版 Google Gadgets，为桌面引入了超过 100,000 个可能的 iGoogle 和 Google Gadgets。Google Gadgets 是轻量级的 XML 程序，允许您在小部件中放置交互式数据，而 iGoogle 是一个基于 AJAX 的自定义起始页，用于访问这些小部件。
 
@@ -6019,7 +4912,7 @@ Mozilla 允许应用程序在自己的窗口中运行而无需浏览器。它允
 $ sudo apt-get install google-gadgets-gtk
 ```
 
-在存储库 google-gadgets-qt 中也有 QT 版本可用。
+在存储库 `google-gadgets-qt` 中也有 QT 版本可用。
 
 要运行该程序，打开终端并运行：
 
@@ -6041,7 +4934,7 @@ ggl-gtk
 
 对于这一市场细分领域，认为重要的领域是品牌建设、内容和设备设计。
 
-一个针对这一众细分市场的完整操作系统的有趣示例是 gOS 3 Gadgets，可以在 http://thinkgos.com/index.php 。gOS 3 Gadgets 是一个适用于桌面电脑和笔记本电脑的完整桌面操作系统。
+一个针对这一众细分市场的完整操作系统的有趣示例是 gOS 3 Gadgets，可以在 `http://thinkgos.com/index.php` 。`gOS 3 Gadgets` 是一个适用于桌面电脑和笔记本电脑的完整桌面操作系统。
 
 它基于 Ubuntu 8.04，并启动了 Linux 版 Google Gadgets，为桌面引入了超过 100,000 个可能的 iGoogle 和 Google Gadgets。Google Gadgets 是轻量级的 XML 程序，允许您在小部件中放置交互式数据，而 iGoogle 是一个基于 AJAX 的自定义起始页，用于访问这些小部件。
 
@@ -6057,7 +4950,7 @@ Mozilla 允许应用程序在自己的窗口中运行而无需浏览器。它允
 $ sudo apt-get install google-gadgets-gtk
 ```
 
-在存储库 google-gadgets-qt 中也有 QT 版本可用。
+在存储库 `google-gadgets-qt` 中也有 QT 版本可用。
 
 要运行该程序，打开终端并运行：
 
@@ -6079,7 +4972,7 @@ ggl-gtk
 
 对于这一众细分领域，认为重要的领域是品牌建设、内容和设备设计。
 
-一个针对这一众细分市场的完整操作系统的有趣示例是 gOS 3 Gadgets，可以在 http://thinkgos.com/index.php 。gOS 3 Gadgets 是一个适用于桌面电脑和笔记本电脑的完整桌面操作系统。
+一个针对这一众细分市场的完整操作系统的有趣示例是 gOS 3 Gadgets，可以在 `http://thinkgos.com/index.php` 。`gOS 3 Gadgets` 是一个适用于桌面电脑和笔记本电脑的完整桌面操作系统。
 
 它基于 Ubuntu 8.04，并启动了 Linux 版 Google Gadgets，为桌面引入了超过 100,000 个可能的 iGoogle 和 Google Gadgets。Google Gadgets 是轻量级的 XML 程序，允许您在小部件中放置交互式数据，而 iGoogle 是一个基于 AJAX 的自定义起始页，用于访问这些小部件。
 
@@ -6095,7 +4988,7 @@ Mozilla 允许应用程序在自己的窗口中运行而无需浏览器。它允
 $ sudo apt-get install google-gadgets-gtk
 ```
 
-在存储库 google-gadgets-qt 中也有 QT 版本可用。
+在存储库 `google-gadgets-qt` 中也有 QT 版本可用。
 
 要运行该程序，打开终端并运行：
 
@@ -6107,6 +5000,10 @@ $ ggl-gtk
 
 ```
 ggl-gtk
+```
+
+
+
 ```
 
 现在设备启动时，Google Gadgets 将自动启动并显示图 6-4 所示的桌面。
@@ -6133,14 +5030,19 @@ ggl-gtk
 Entertainer 包含一个私有视频录制器，这意味着它可以用于观看电视电视，并将其录制以备后观看。要安装 entertainer，请将 entertainer PPA 添加到 /etc/apt/sources.list：
 
 ```
+
 deb http://ppa.launchpad.net/entertainer-releases/ppa/ubuntu jaun main
+
 deb-src http://ppa.launchpad.net/entertainer-releases/ppa/ubuntu jaun main
+
 ```
 
 然后执行：
 
 ```
+
 $ sudo apt-get update && sudo apt-get install entertainer
+
 ```
 
 此外，将 GPG 密钥添加到您的软件源身份验证中（系统 ➞ 管理 ➞ 软件源 ➞ 身份验证）。选择“导入密钥文件...”并添加在 entertainer 页面上找到的密钥。
@@ -6148,7 +5050,9 @@ $ sudo apt-get update && sudo apt-get install entertainer
 然后运行内容管理器应用程序，并在设备上选择一些媒体文件夹或访问 URL：
 
 ```
+
 $ entertainer-content-manager
+
 ```
 
 内容管理器的界面如图 6-2 所示。
@@ -6160,7 +5064,9 @@ $ entertainer-content-manager
 接下来，运行前端：
 
 ```
+
 $ entertain
+
 ```
 
 Ubuntu Network Remix 上的 Entertainer 如图 6-3 所示。
@@ -6220,7 +5126,9 @@ Mozilla 允许应用程序在自己的窗口中运行而无需浏览器。它允
 可以使用 apt 安装 Google Gadgets：
 
 ```
+
 $ sudo apt-get install google-gadgets-gtk
+
 ```
 
 在存储库 google-gadgets-qt 中也有 QT 版本可用。
@@ -6228,13 +5136,17 @@ $ sudo apt-get install google-gadgets-gtk
 要运行该程序，打开终端并运行：
 
 ```
+
 $ ggl-gtk
+
 ```
 
 要让 Ubuntu Netbook Remix 在启动时启动该程序，请转到  偏好 ⇔ 启动应用程序并点击“添加”。在名称字段中输入 Gadgets，在命令行中输入以下内容：
 
 ```
+
 ggl-gtk
+
 ```
 
 现在设备启动时，Google Gadgets 将自动启动并显示图 6-4 所示的桌面。
@@ -6263,26 +5175,35 @@ ggl-gtk
 首先，安装 Django：
 
 ```
+
 $ sudo apt-get install python-django
+
 ```
 
 在 Home 目录下，创建一个名为 "Web" 的目录并进入该目录：
 
 ```
+
 $ mkdir Web;cd Web
+
 ```
 
 接下来，创建一个目录：
 
 ```
+
 $ mkdir django_projects
+
 ```
 
 进入 Django 项目目录，并使用 Django 的命令行工具启动一个名为 "locate" 的新项目。这将创建一个基础的目录结构和必要的配置文件：
 
 ```
+
 $ cd ~/Web/django_projects
+
 $ django-admin.py startproject locate
+
 ```
 
 > 不要设置 apache、postgresql 或 mysql。（这些应用程序不适用于嵌入式设备）。
@@ -6291,94 +5212,143 @@ $ django-admin.py startproject locate
 编辑 `settings.py` 使其看起来如下：
 
 ```
+
 DATABASE_ENGINE = 'sqlite3'
+
 DATABASE_NAME = os.path.join(os.path.dirname(__file__), 'data', 'locate.db')
+
 DATABASE_USER = '' # sqlite3 不使用
+
 DATABASE_PASSWORD = '' # sqlite3 不使用
+
 ```
 
 代码 `DATABASE_NAME = os.path.join(os.path.dirname(__file__), 'data', 'locate.db')` 是一个技巧，它允许 SQLite 文件系统数据库存储在项目内部名为 `data` 的文件夹中。当在使用版本控制系统时，这是一个优势，因为所有代码都可以存储在分支中。类似的技巧适用于站点媒体——在项目根目录下创建一个名为 `media` 的文件夹，然后在 `settings.py` 中添加：
 
 ```
+
 import os,sys
+
 path = os.path.dirname(sys.argv[0])
+
 full_path = os.path.abspath(os.path.join(path, '../media/'))
+
 ```
 
 然后将 `STATIC_ROOT` 变量设置为 `full_path`：
 
 ```
+
 STATIC_ROOT = full_path
+
 ```
 
 在 `urls` 中，从 `django.conf.Conf` 导入 `media/(?P<path>.*), django.views.static.serve`。将 `static.serve` 设置为
 
 ```
+
 ('document_root': settings.STATIC_ROOT, 'show_indexes': True)
+
 ```
 
 同时在项目根目录下创建一个名为 "server" 的文件夹。在此文件夹内检出独立服务器的副本：
 
 ```
+
 $ wget http://svn.cherrypy.org/trunk/cherrypy/wsgiserver/__init__.py -O wsgiserver.py
+
 ```
 
 创建一个名为 `run.py` 的文件并包含以下内容：
 
 ```python
+
 import wsgiserver
+
 # 如果不是独立运行它，可以从 cherrypy import wsgiserver.
+
 import os
+
 import django.core.handlers.wsgi
 
 if __name__ == "__main__":
+
     os.environ['DJANGO_SETTINGS_MODULE'] = 'locate.settings'
+
     server = wsgiserver.CherryWSGIServer(
+
         ('127.0.0.1', 8000),
+
         django.core.handlers.wsgi.WSGIHandler(),
+
         server_name = 'Locate',
+
         numthreads = 20,
+
     )
+
     try:
+
         server.start()
+
     except KeyboardInterrupt:
+
         server.stop()
+
 ```
 
 在 `/usr/share/applications` 中创建一个桌面文件，它将调用脚本来启动服务器和 midbrowser（Firefox 的定制版本）。
 
 ```ini
+
 [Desktop Entry]
+
 Encoding=UTF-8
+
 Version=1.0
+
 Type=Application
+
 Name=Locate
+
 Comment=Professional Ubuntu Development
+
 Icon=Locate
+
 Categories=Application;Utility;
+
 Exec=/usr/bin/locateit
+
 ```
 
 同时在 `~/user/share/icons/hicolor/48/apps` 中放置一张图片。`locateit` 脚本如下：
 
 ```bash
+
 export PYTHONPATH=$~/home/ubuntu/Web/django_projects/
+
 export DJANGO_SETTINGS_MODULE=locate.settings
+
 python /home/ubuntu/Web/django_projects/locate/server/run.py
+
 midbrowser http://127.0.0.1:8000/geo/
+
 ```
 
 点击图 6-7 所示的图标将执行脚本并启动应用。
 
-![](img/20e1447b223f9afa3d43610c631ee_176.png)
+![](img/20e1447b223c3f9afa3d43610c631ee_176.png)
 
 图 6-7
 
 locate 项目应该是这样的：
 
 ```
+
 $ ls
+
 data __init__.py manage.py settings.py
+
 ```
 
 这是一个完整的项目。
@@ -6388,14 +5358,19 @@ data __init__.py manage.py settings.py
 通过添加以下内容安装 gypsy 守护进程：
 
 ```
+
 deb http://ppa.launchpad.net/ianlawrence/ubuntu main
+
 deb-src http://ppa.launchpad.net/ianlawrence/ubuntu main
+
 ```
 
 到 `/etc/apt/sources.list`，然后执行以下操作：
 
 ```bash
+
 $ sudo apt-get update && sudo apt-get install gypsy
+
 ```
 
 debs（针对5.1）可以在 http://ianlawrence.info/downloads/debian/gypsy-lpia/gypsy_0.5-1_lpia.deb 和 http://ianlawrence.info/downloads/debian/gypsy-lpia/gypsy0.5-1_lpia.deb 获取。
@@ -6403,16 +5378,23 @@ debs（针对5.1）可以在 http://ianlawrence.info/downloads/debian/gypsy-lpia
 使用的蓝牙 GPS 设备是 Nokia Gypsy LD-3W。要与其通信，你需要找到它的地址。确保蓝牙已启用：
 
 ```bash
+
 $ sudo apt-get install bluetooth-utils bluetooth-gnome libbluetooth2 libbtcore libgnome2 nautilus-sendto
+
 ```
 
 运行以下命令：
 
 ```bash
+
 user@host:~ hcitool scan
+
 Scanning ...
+
 00:19:B7:8C:A7:F7 Phone
+
 00:02:76:C5:B2 Nokia LD-3W
+
 ```
 
 返回 GPS 设备地址：00:02:76:C5:B2。
@@ -6422,27 +5404,36 @@ Scanning ...
 与与 gypsy（gypsy.py）交互并显示状态（status.py）的代码由 Rust 编写，采用 LGPL 和 GPL许可。可以通过运行以下命令检查：
 
 ```bash
+
 $ bzr branch http://burtonini.com/bzr/gypsy-status/
+
 ```
 
 将蓝牙地址添加到 gypsy：
 
 ```python
+
 dbus.mainloop.glib.DBusMainLoop(set_as_default=True)
+
 gps = GPS("00:02:76:C5:B2")
+
 gps.Start()
+
 ```
 
 然后在终端内添加以下内容：
 
 ```bash
+
 export DISPLAY=:2
+
 python status.py
+
 ```
 
 显示 GPS 状态，如图 6-8 所示，并带有从地图 API 获取的小型地图。
 
-![](img/20e1447b223f9afa3d43610c631ee_178.png)
+![](img/20e1447b223c3f9afa3d43610c631ee_178.png)
 
 图 6-8
 
@@ -6451,24 +5442,38 @@ python status.py
 不启动循环是不查询 D-Bus 的。XML-RPC 是允许软件在不同系统中运行的一种方法。Django 已经有一个 XML-RPC 服务器，在 `settings.py` 中创建一个方法：
 
 ```python
+
 XMLRPC_METHODS = {
+
     # 在 Django 中暴露的方法 (名称, 函数)
+
     ('django.xmlrpc.views.handle_xmlrpc', 'handle_xmlrpc'),
+
     ('django.xmlrpc.views.handle_gypsy', 'handle_gypsy'),
+
 }
+
 ```
 
 在 `django.xmlrpc` 中，创建一个如下的方法：
 
 ```python
+
 @xmlrpc_func(returns='string', args=['string', 'float', 'float', 'float'])
+
 def handle_gypsy(timestamp, latitude, longitude, altitude):
+
     """从对象获取需要的值并存储它们"""
+
     data = Raw(time=timestamp, lat=latitude, long=longitude, alt=altitude)
+
     data.save()
+
     # 这返回传递函数的值（用于调试）
+
     return "The timestamp is %s, the latitude is %f, the longitude is %f, and the altitude is %f." % (timestamp, latitude, longitude, altitude)
-```
+
+
 
 XML-RPC 客户端需要将 GPS 对象传递给 Django 管理块所示 `handle_gypsy` 函数。
 
@@ -6508,7 +5513,7 @@ def position_changed(fields, timestamp, latitude, longitude, altitude):
 
 代码将 GPS 数据保存到 Django 数据库中。
 
-剩下的只需查询最后的 GPS 位置以便在 Web 界面中使用。创建一个名为 gegeoip 的应用并包含如下 `views.py` 文件：
+剩下的只需查询最后的 GPS 位置以便在 Web 界面中使用。创建一个名为 `gegeoip` 的应用并包含如下 `views.py` 文件：
 
 ```python
 # 在此处创建你的视图。
@@ -6516,10 +5521,6 @@ from django.http import HttpResponse
 from locate.django_xmlrpc.models import Raw
 from django.shortcuts import render_to_response
 ```
-
-
-
-
 
 ## 第6 章：应用选择
 
@@ -6550,9 +5551,9 @@ def get_position(request):
 </html>
 ```
 
-此部分使用了 geohash.org，这是一种由 Gustavo Niemeyer 在编写 geohash.org 的 Web 服务时发明的纬度/经度地理编码系统，并已将其归入公有领域。它通过缩短 URL 来唯一地标识地球上的位置，使得在电子邮件、论坛和网站中引用它们变得更加方便。
+此部分使用了 `geohash.org`，这是一种由 Gustavo Niemeyer 在编写 `geohash.org` 的 Web 服务时发明的纬度/经度地理编码系统，并已将其归入公有领域。它通过缩短 URL 来唯一地标识地球上的位置，使得在电子邮件、论坛和网站中引用它们变得更加方便。
 
-图 6-10 显示了我们编写这段代码的地方（以及编写此书的时间）。
+图 6-10 显示了我们编写这段代码的地方。
 
 ![](img/20e1447b223c3f9afa3d43610c6361ee_180_0.png)
 
@@ -6562,9 +5563,9 @@ def get_position(request):
 
 ## 总结
 
-本章强调了 OEM（原始设备制造商）在考虑设备的“外观和感受”时，可以目标的一些潜在用户群体。这并不是一个详尽的列表，还有其他重要的群体。例如，Ubuntu Mobile 团队成员识别出的一类用户位于亚洲，特别是日本，那里许多人在乘坐公共交通工具时仅使用设备阅读电子书。如何针对此类群体留由你来决定。这种挑战要求 OEM 创造性地思考如何将其提供的产品与市场上的其他产品区分开来。我们希望本章为这一过程提供了一些见解。
+本章强调了 OEM 在考虑设备的“外观和感受”时，可以目标的一些潜在用户群体。这并不是一个详尽的列表，还有其他重要的群体。例如，Ubuntu Mobile 团队成员识别出的一类用户位于亚洲，特别是日本，那里许多人在乘坐公共交通工具时仅使用设备阅读电子书。如何针对此类群体留由你来决定。这种挑战要求 OEM 创造性地思考如何将其提供的产品与市场上的其他产品区分开来。我们希望本章为这一过程提供了一些见解。
 
-## 7
+# 7
 
 ## 主题化 (Theming)
 
@@ -6572,11 +5573,11 @@ def get_position(request):
 
 本章首先通过 `gtckrc` 文件和 GConf 展示了 Ubuntu MID 和 Ubuntu Netbook Remix 上的主题结构。随后展示了一个完全自定义的 Ubuntu MID 主题。最后，涵盖了主题性能和优化，并提供了一些进一步研究的建议。
 
-## 什么是主题？
+### 什么是主题？
 
 一个 GTK+ 主题由三部分组成：
 
-- 一个主题引擎（在 Ubuntu MID 中为 `sapwood`），它是一个共享对象，包含了绘制图形元素的代码
+- 一个主题引擎，在 Ubuntu MID 中为 `sapwood`，它是一个共享对象，包含了绘制图形元素的代码
 - 一个用于设置主题引擎运行和 GTK+ 核心部分的配置文件
 - 用于主题引擎的额外数据文件，例如图像
 
@@ -6593,20 +5594,20 @@ def get_position(request):
 
 在 Ubuntu MID 上，元素通常由发行版或 OEM 根据其偏好进行安装或配置，目前没有可用的工具将元素集成到主题中。
 
-## 主题位于文件系统中吗？
+### 主题位于文件系统中吗？
 
 主题位于 `/usr/share/themes` 或用户主目录下的 `.themes` 目录。
 
-## 什么是主题引擎？它们位于哪里？
+### 什么是主题引擎？它们位于哪里？
 
-GTK 引擎用于渲染按钮和 GTK 窗口“内部”的所有内容。这就是为什么它们被称为 GTK 引擎。有多个 GTK 引擎，它们位于：`/usr/lib/gtk-2.0/2.10/engines/`
+GTK 引擎用于渲染按钮和 GTK 窗口“内部”的所有内容。有多个 GTK 引擎，它们位于：`/usr/lib/gtk-2.0/2.10/engines/`
 
-在这些引擎中，Ubuntu MID 软件版本使用了 `sapwood` 引擎 (`libsapwood.so`)。`gtk2-engines` 包还包括：
+在这些引擎中，Ubuntu MID 软件版本使用了 `sapwood` 引擎 `libsapwood.so`。`gtk2-engines` 包还包括：
 
 - Clearlooks：默认的 GNOME 主题，基于 Bluecurve
 - Crux：以前名为 Easel 引擎
 - High contrast：用于某些辅助功能主题
-- Industrial：来自 Novell（原 Mixian）的著名引擎
+- Industrial：来自 Novell 的著名引擎
 - LighthouseBlue：另一个基于 Bluecurve 的引擎
 - Metal：提供金属质外观
 - Mist：一种扁平且高性能的引擎
@@ -6617,7 +5618,7 @@ GTK 引擎用于渲染按钮和 GTK 窗口“内部”的所有内容。这就�
 
 `Sapwood` 提供了访问主题图像的服务器和客户端库。服务器负责加载与主题相关的图像并分发给客户端。与 `Pixbuf` 引擎相比，`Sapwood` 节省了内存，因为它在应用程序之间共享缓存的图像。
 
-> Sapwood 也快得多，因为它使用 X Server 的 16 位图像。
+> `Sapwood` 也快得多，因为它使用 X Server 的 16 位图像。
 
 你可以在以下位置观察到这一点：
 
@@ -6632,11 +5633,7 @@ $ /usr/share/ubuntu-mid-default-settings/mid-gui-start
 -theme /usr/share/themes/mobilebasic/matchbox/theme.xml
 ```
 
-Compiz 是一个 X Window 系统的合成窗口管理器，它使用 3D 图形硬件创建桌面效果。（注：原文中后续文本包含大量重复和 OCR 错误，已根据要求进行去重和修正）。
-
-
-
-
+Compiz 是一个 X Window 系统的合成窗口管理器，它使用 3D 图形硬件创建桌面效果。
 
 ## 第 7 章：主题化
 
@@ -6646,9 +5643,9 @@ Compiz 是一个 X Window 系统的合成窗口管理器，它使用 3D 图形�
 
 图 7-1
 
-## 主题结构
+### 主题结构
 
-本节探讨了 Ubuntu MID 上的移动主题。该主题基于 Hildon 的主题结构，Ubuntu 是从上游继承了它。布局（位于 /usr/share/themes/mobilebasic）如下：
+本节探讨了 Ubuntu MID 上的移动主题。该主题基于 Hildon 的主题结构，布局位于 `/usr/share/themes/mobilebasic` 如下：
 
 ```
 /usr/share/themes/mobiletheme/gtk-20/
@@ -6661,13 +5658,13 @@ matchbox/
 theme.xml
 ```
 
-该结构中的两个主要文件是 theme.xml 和 gtkrc。
+该结构中的两个主要文件是 `theme.xml` 和 `gtkrc`。
 
-## theme.xml 文件
+#### theme.xml 文件
 
-通过修改 theme.xml 文件中的内容，可以实现简单的窗口装饰自定义。它定义了如主标题栏装饰以及一些装饰。
+通过修改 `theme.xml` 文件中的内容，可以实现简单的窗口装饰自定义。它定义了如主标题栏装饰以及一些装饰。
 
-theme.xml 文件中的三个基本资源是：
+`theme.xml` 文件中的三个基本资源是：
 
 - 颜色
 - 字体
@@ -6685,7 +5682,7 @@ id :definition
 <type id="object name" definition="data" />
 ```
 
-其中 type 是颜色、字体、位图等，id 是对象的唯一名称，definition 是要设置的元数据。
+其中 `type` 是颜色、字体、位图等，`id` 是对象的唯一名称，`definition` 是要设置的元数据。
 
 颜色的定义如下：
 
@@ -6705,50 +5702,43 @@ id :definition
 <pixmap id="dialogoptile" filename="../qgn_plat_dialog_frame_tile_top.png" />
 ```
 
-## gtkFile 类
+### gtkFile 类
 
-涉及更改 gtk 文件的更复杂的自定义在 Ubuntu Netbook Remix 和 Ubuntu MID 的主题化中很常见；从概念上讲，认为 GTK 主题“寄存在”于 gtk 文件内部是有帮助的。文件格式对大小写敏感，注释以 #（散号）标记。也可以使用类似于 C 语言的 /* */ 注释进行多行注释。
+涉及更改 gtk 文件的更复杂的自定义在 Ubuntu Netbook Remix 和 Ubuntu MID 的主题化中很常见；从概念上讲，认为 GTK 主题“寄存在”于 gtk 文件内部是有帮助的。文件格式对大小写敏感，注释以 `#` 标记。也可以使用类似于 C 语言的 `/* */` 注释进行多行注释。
 
-gtk 文件是由一系列声明组成的文本文件。井号 (#) 字符分隔注释，在解析 gtk 文件时，# 之后的行内容将被忽略。
+`gtk` 文件是由一系列声明组成的文本文件。井号 `#` 字符分隔注释，在解析 `gtk` 文件时，`#` 之后的行内容将被忽略。
 
-> 此 gtk 文件对拼写错误和错误不敏感，因此更改代码时请要小心。
+> 此 `gtk` 文件对拼写错误和错误不敏感，因此更改代码时请要小心。
 
-## 自定义 gtkFile 类
+### 自定义 gtkFile 类
 
-以下 gtk 文件将主题应用到所有控件（按钮、滚动条、编辑器）。
+以下 `gtk` 文件将主题应用到所有控件。
 
-从技术上讲，每个控件都派自 GtkWidget。这意味着对 GtkWidget 属性的更改将影响所有控件以及继承的概念。除非另有说明，否则 GtkButton 的属性也将应用于 GtkToggleButton。完整的 GTK 类层次结构请访问 http://library.gnome.org/dev/gtk/class/ch01.html。
+从技术上讲，每个控件都派自 `GtkWidget`。这意味着对 `GtkWidget` 属性的更改将影响所有控件以及继承的概念。除非另有说明，否则 `GtkButton` 的属性也将应用于 `GtkToggleButton`。
 
-这通过样式进行指定。样式可以应用到代码中的实际 GTK 主题系统中，也可以应用于主题所使用的特定主题“引擎”（在 Ubuntu Netbook Remix 中为 Murrine，在 Ubuntu MID 中为 sizeof），如下所示：
+这通过样式进行指定。样式可以应用到代码中的实际 GTK 主题系统中，也可以应用于主题所使用的特定主题“引擎”，如下所示：
 
 ```
 style "default-style {
-  # 修改 x/y 厚度来确定文本与控件边框之间的
-  # 间距：
-    xthickness = 2
-    ythickness = 2
-
-  # 滑动块上的样式
+  xthickness = 2
+  ythickness = 2
   GtkRange::slider-width = 15
 }
 ```
 
 ```
-# 将背景设置为浅灰色
 bg[NORMAL] = "#f6f6f6"
-# 将前景设为黑色
 fg[NORMAL] = "#000000"
-
 class GtkWidget style="default-style"
 ```
 
-该代码创建了样式 default-style，然后为控件、滑动块设置了一些间距，设置了一些颜色，并使用 GtkWidget 应用了该样式。这些将在章节中进行解释。
+该代码创建了样式 `default-style`，然后为控件、滑动块设置了一些间距，设置了一些颜色，并使用 `GtkWidget` 应用了该样式。
 
-## 间距
+#### 间距
 
 这使用 x,y 坐标系设置间距。
 
-## 样式
+#### 样式
 
 样式属性的形式为
 
@@ -6756,7 +5746,7 @@ class GtkWidget style="default-style"
 WidgetName::style-property-name = VALUE
 ```
 
-之前的滑动块看起来所示： 
+例如：
 
 ```
 GtkRange::slider-width = 15
@@ -6765,44 +5755,31 @@ GtkRange::slider-width = 15
 MID 移动主题的全局图像主题样式如下：
 
 ```
-# 全局图像主题。
 GtkWidget::hildon-focus-handling = 1
 GtkWidget::focus-line-width = 0
 GtkWidget::focus-padding = 0
 ```
 
-## 颜色
+#### 颜色
 
-可以更改 gtkrc 文件的一些设置以匹配我们主题的颜色。在前面的代码中，颜色采用以下格式：
+可以更改 `gtkrc` 文件的一些设置以匹配我们主题的颜色。
 
 ```
 bg[NORMAL] = "#f6f6f6"
 ```
 
-bg 代表类别。下表描述了四个有效类别：
+`bg` 代表类别。下表描述了四个有效类别：
 
 | 类别 | 用途 |
 | --- | --- |
-| fg | 前景色。用于按钮上的文本。在某些引擎中也用于按钮边框。 |
+| fg | 前景色。用于按钮上的文本。 |
 | bg | 背景颜色。这是窗口和按钮的背景颜色。 |
 | text | 输入控件和列表的文本颜色。 |
 | base | 控件和列表的背景颜色。 |
 
-## 应用样式
+#### 应用样式
 
-在 GTK 中，有三种应用样式的方法：类、代码或引擎。在前面的代码中，通过这种方式应用样式：
-
-```
-class style="default-style"
-```
-
-这是最重要的方法。结构如下：
-
-- GtkWidget
-- GtkContainer
-- GtkButton
-
-在 GTK 中，有三种应用样式的方法。在前面的代码中，通过这种方式应用样式：
+在 GTK 中，有三种应用样式的方法：类、代码或引擎。
 
 ```
 class style="default-style"
@@ -6810,9 +5787,9 @@ class style="default-style"
 
 这是最重要的方法。结构如下：
 
-- GtkWidget
-- GtkContainer
-- GToggleButton
+- `GtkWidget`
+- `GtkContainer`
+- `GtkButton`
 
 ## MID 主题化
 
@@ -6820,7 +5797,7 @@ class style="default-style"
 
 ### 手动主题化
 
-要基于现有的 mobilebasic 主题创建一个主题，将 mobilebasic 主题拷贝到名为 pumdtheme 的目录，然后将其移动到 matchbox 目录。
+要基于现有的 `mobilebasic` 主题创建一个主题，将 `mobilebasic` 主题拷贝到名为 `pumdtheme` 的目录，然后将其移动到 `matchbox` 目录。
 
 ```
 $ cd /usr/share/themes/
@@ -6831,9 +5808,9 @@ $ cd pumdtheme
 
 ### 自动主题化
 
-也可以使用主题工具来创建并打包新主题。这在“自动主题化”章节中介绍。
+也可以使用主题工具来创建并打包新主题。
 
-打开此文件夹下的 theme.xml并将第一行元数据更改为：
+打开此文件夹下的 `theme.xml` 并将第一行元数据更改为：
 
 ```
 <theme name="pumdtheme" author="Ian Lawrence" desc="A theme created for the book Professional Mobile Development, published by Wiley version="0.1" engine_version="1" cache="false">
@@ -6846,11 +5823,11 @@ $ cd pumdtheme
 <color id="Osso-DialogTextColor" def="#403008" />
 ```
 
-对于 MID 主题，更改 20 文件夹中  文件的定义：
+对于 MID 主题，更改 `20` 文件夹中 文件的定义：
 
 更改了主题中字体的颜色。
 
-现在打开目录下的 theme.index 文件并更改为：
+现在打开目录下的 `theme.index` 文件并更改为：
 
 ```
 [Desktop Entry]
@@ -6865,25 +5842,19 @@ XatchboxTheme=pumdtheme
 X-OperaSkin=default.zip
 ```
 
-还要修改 images 文件夹中的相应图像。处理图像时有一个用的工具 xmag。它由 xll-apps 包提供：
+还要修改 `images` 文件夹中的相应图像。处理图像时有一个用的工具 `xmag`。它由 `xll-apps` 包提供：
 
 ```
 apt-install xll-apps
 ```
 
-完成所有更改并更改相应的图像将创建一个主题。例如，图 7-2 所示的主题基于 Ubuntu MID Intrepid 版本。如果你没有新的图像要添加，可以通过打开终端清晰地看到颜色变化（终端颜色会变化）。
-
-
-
-
-
-# 第 7 章：主题化 (Theming)
+完成所有更改并更改相应的图像将创建一个主题。例如，图 7-2 所示的主题基于 Ubuntu MID Intrepid 版本。
 
 ![](img/20e1447b223c3f9afa3d43610c6361ee_191_0.png)
 
 图 7-2
 
-可以在用户主目录下包含 `.gtkrc-2.0` 文件来加载主题（这之所以有效是因为它加载了图标的 XSETTINGS）。
+可以在用户主目录下包含 `.gtkrc-2.0` 文件来加载主题。
 
 XSETTINGS 是 Linux 上的一种机制，允许配置设置，并使这些设置能够在运行时传播到所有应用程序。
 
@@ -6896,13 +5867,13 @@ include "/usr/share/themes/pumtheme/gtk-2.0/gtkrc"
 
 # 自动为 MID 设置主题
 
-在上一节中，我们手动为 Ubuntu MID 设置了主题。通过使用 `hilden-theme-tools` 软件包可以自动化此过程。使用 `apt` 安装它：
+在上一节中，我们手动为 Ubuntu MID 设置了主题。通过使用 `hilden-theme-tools` 软件包可以自动化此过程。
 
 ```bash
 $ sudo apt-get install hilden-theme-tools
 ```
 
-该包包含了多种用于 Ubuntu MID 主题设置的工具。首先安装 subversion 包：
+该包包含了多种用于 Ubuntu MID 主题设置的工具。首先安装 `subversion` 包：
 
 ```bash
 $ sudo apt-get install subversion
@@ -6914,13 +5885,15 @@ $ sudo apt-get install subversion
 $ hilden-theme-bootstrap
 ```
 
+
+
 这将一个骨架主题下载到指定的目录。将其移动到模板目录，并根据需要使用 GIMP 等图像编辑器编辑 `template.svg`。
 
 确保你选择了第二个选项，`2) hilden-theme-layout-4`，因为 MID 不支持 `layout-3`。
 
 接下来，为了构建主题的 `deb` 包，需要更改 `debian` 文件夹中的若干选项。在 `control` 文件中，删除对 `hilden-theme-cache` 的依赖。在 `postinst` 文件中，删除 `DEHELPER` 之上的一行，该行调用了主题实用程序：
 
-hilden-theme-cache 缓存 `gtkrc` 文件—— Ubuntu MID 不使用它。
+`hilden-theme-cache` 缓存 `gtkrc` 文件—— Ubuntu MID 不使用它。
 
 # 第 7 章：主题化
 
@@ -6946,7 +5919,7 @@ $ dpkg-buildpackage -tc -rfakeroot
 $ dpkg -i hildon-theme-pumd_4.2.0-1-all.deb
 ```
 
-# Ubuntu Network Remix 主题化
+## Ubuntu Network Remix 主题化
 
 Ubuntu Network Remix 的方法与主 Ubuntu 发行版相同。
 
@@ -6986,7 +5959,7 @@ sudo apt-get update && apt-get source xce4-theme-ubuntu-golden
 
 UNR 系统的其他部分也可以自定义，下文可见。
 
-# 启动画面 (Boot Splash)
+### 启动画面 (Boot Splash)
 
 Splash 是一个在启动时绘制启动屏幕的应用程序，带有一个进度动画以显示启动过程。
 
@@ -7006,15 +5979,13 @@ sudo dpkg-buildpackage -d
 
 `Karmisch` 只在某些原因需要延迟启动过程的情况下使用——例如，检查文件系统或询问加密密码。Splash 被 `Plymouth` 取代，后者有助于加速启动过程。
 
-# 创建 gdm 主题
+### 创建 gdm 主题
 
 可以制作 gdm 主题。示例见图 7-3。
 
 ![](img/20e1447b223c3f9afa3d43610c6361ee_193_0.png)
 
-# 第 7 章：主题化
-
-# 自定义网络启动器 (Network Launcher)
+### 自定义网络启动器 (Network Launcher)
 
 Ubuntu Network Remix 中可以自定义网络启动器。结果见图 7-4。
 
@@ -7028,11 +5999,9 @@ Ubuntu Network Remix 中可以自定义网络启动器。结果见图 7-4。
 
 图 7-5
 
-# 第 7 章：主题化
+### 主题性能
 
-# 主题性能
-
-# 主题的性能测试
+#### 主题的性能测试
 
 可以在主题上运行一系列性能测试。最简单的测试是使用 `metacity-theme-viewer`。
 
@@ -7049,7 +6018,7 @@ $ metacity-theme-viewer Human
 Loaded theme "Human" in 0.02 seconds
 Drew 100 frames in 0.61 client-side seconds (6.1 milliseconds per frame) and 3.4817 seconds wall clock time including X server resources (34.8 milliseconds per frame)
 
-# 比较
+#### 比较
 
 主题应在所有标签页中正常渲染。还有一个 Benchmark 标签可以与其他主题比较速度。例如，Ubuntu Remix  Human 主题绘制一个窗口需要 34.817 毫秒，而 Simple 主题需要 88.415 毫秒。
 
@@ -7061,7 +6030,7 @@ Drew 100 frames in 0.61 client-side seconds (6.1 milliseconds per frame) and 3.4
 gtkperf -a c 1000
 ```
 
-# 比较
+#### 比较
 
 上一节主题和网络启动器的测试结果。这是基于 LPIA 系统的 Ubuntu Network Remix。设备是 Acer Aspire One：
 
@@ -7079,12 +6048,6 @@ GtkTextView - Add text - time: 170.83
 GtkTextView - Scroll - time: 17.47
 GtkDrawingArea - Lines - time: 25.75
 ```
-
-
-
-
-
-# 第 7 章：主题化
 
 GtkDrawingArea - 圆形 - 时间: 34.02
 GtkDrawingArea - 文字 - 时间: 31.43
@@ -7177,7 +6140,7 @@ $ sudo checkinstall
 
 这会弹出一些问题。回答 "yes" 以创建默认文档并选择新的包描述。然后为 debian 输入一个包版本并按回车。这将创建一个可以使用 `dpkg -i` 安装的 debian 文件。
 
-## X Window 测试
+##### X Window 测试
 
 如果你的主题中存在无法通过某些修改来解释的昂贵运行时，可以测试 X Window 图形适配器的相对性能，以查看问题所在之处。这是通过使用 x11perf 实现的，它尝试运行大多数 X 绘图操作，并刻画 XServer 在给定时间内可以执行多少次此类操作。
 
@@ -7240,7 +6203,7 @@ $ sudo checkinstall
 
 这将会弹出一些问题。回答 yes 以创建默认文档并选择一个新的包描述。然后为 debian 输入一个包版本，并按回车键。这将创建一个可以使用 `dpkg -i` 安装的 debian 文件。
 
-## X Window 测试
+##### X Window 测试
 
 如果你的主题中存在一种无法通过某些修改来解释的昂贵运行时，可以测试 X Window 图形适配器的相对性能，以查看问题是否在其中。这是通过使用 x11perf 实现的，它尝试运行大多数 X 绘图操作，并刻画 XServer 在给定时间内可以执行多少次此类操作。
 
@@ -7250,7 +6213,9 @@ $ sudo checkinstall
 $ x11perf -all
 ```
 
-两台笔记本电脑的操作系统都已完全更新到最新版本。然后使用 x11perf 对它们进行比较，它会将多次运行的输出合并成非常好的格式。
+
+
+两台笔记本电脑的操作系统都已完全更新到最新版本。然后使用 `x11perf` 对它们进行比较，它会将多次运行的输出合并成非常好的格式。
 
 总的来说，Aspire One 的性能要好得多，正如你在以下结果所示：
 
@@ -7264,15 +6229,15 @@ $ x11perf -all
 
 ## 总结
 
-从这些结果中可以注意的最明显的区别是，LPIA 的性能远差于默认的 Ubuntu Network Remix 基础。此外，默认网络 remix 与 XFCE 版本之间的差异非常小——仅在于 GtkTextView。
+从这些结果中可以注意的最明显的区别是，LPIA 的性能远差于默认的 Ubuntu Network Remix 基础。此外，默认网络 remix 与 XFCE 版本之间的差异非常小——仅在于 `GtkTextView`。
 
-在 xorg 配置中设置选项 "RenderAccel 'true'" 可以获得性能提升，特别是对于 GtkTextView。这样做之前，请备份配置 `/etc/X11/xorg.conf`。一个很好的方法是运行以下：
+在 `xorg` 配置中设置选项 `"RenderAccel 'true'"` 可以获得性能提升，特别是对于 `GtkTextView`。这样做之前，请备份配置 `/etc/X11/xorg.conf`。一个很好的方法是运行以下：
 
 ```
 $ sudo dpkg-reconfigure xserver-xorg
 ```
 
-接受默认设置。使新的 xorg.conf 设备看起来如下所示：
+接受默认设置。使新的 `xorg.conf` 设备看起来如下所示：
 
 | 部分 (Section) | "配置的视频设备 (Configured Video Device)" |
 | --- | --- |
@@ -7280,15 +6245,15 @@ $ sudo dpkg-reconfigure xserver-xorg
 | 选项 (Option) | "RenderAccel" "true" |
 | 结束 (EndSection) | |
 
-设置 RenderAccel 会导致某些意外结果，如屏幕锁死（这就是 Ubuntu 开发者默认不启用它的原因）。请在设备上彻底测试。
+设置 `RenderAccel` 会导致某些意外结果，如屏幕锁死（这就是 Ubuntu 开发者默认不启用它的原因）。请在设备上彻底测试。
 
-在 XFCE 基础上使用 Ubuntu Network remix 设置此项并重启后，GtkTextView 的时间为 150.95，比原始提升了 10 秒。
+在 XFCE 基础上使用 Ubuntu Network remix 设置此项并重启后，`GtkTextView` 的时间为 150.95，比原始提升了 10 秒。
 
-通过使用 GNOME 仓库中最新版本的 Murrine 引擎也可以获得一些性能改进。Murrine Engine 是一个“闪亮”且流行的 GTK2 引擎。
+通过使用 GNOME 仓库中最新版本的 Murrine 引擎也可以获得一些性能改进。`Murrine Engine` 是一个“闪亮”且流行的 `GTK2` 引擎。
 
-要获得这种收益，可以通过向 sources.list 添加 multiverse 和 universe 仓库，将引擎本身编译到 MID 镜像中，并安装依赖项：
+要获得这种收益，可以通过向 `sources.list` 添加 `multiverse` 和 `universe` 仓库，将引擎本身编译到 MID 镜像中，并安装依赖项：
 
-下载最新的 svn：
+下载最新的 `svn`：
 
 ```
 $ svn co http://svn.gnome.org/svn/murrine/trunk/
@@ -7303,19 +6268,19 @@ $ make
 $ sudo checkinstall
 ```
 
-这将会弹出一些问题。回答 yes 以创建默认文档并选择一个新的包描述。然后为 debian 输入一个包版本，并按回车键。这将创建一个可以使用 `dpkg -i` 安装的 debian 文件。
+这将会弹出一些问题。回答 `yes` 以创建默认文档并选择一个新的包描述。然后为 `debian` 输入一个包版本，并按回车键。这将创建一个可以使用 `dpkg -i` 安装的 `debian` 文件。
 
 ## X Window 测试
 
-如果你的主题中存在一种无法通过某些修改来解释的昂贵运行时，可以测试 X Window 图形适配器的相对性能，以查看问题是否在其中。这是通过使用 x11perf 实现的，它尝试运行大多数 X 绘图操作，并刻画 XServer 在给定时间内可以执行多少次此类操作。
+如果你的主题中存在一种无法通过某些修改来解释的昂贵运行时，可以测试 X Window 图形适配器的相对性能，以查看问题是否在其中。这是通过使用 `x11perf` 实现的，它尝试运行大多数 X 绘图操作，并刻画 `XServer` 在给定时间内可以执行多少次此类操作。
 
-为了展示其工作原理，在 eeePC 和 Acer Aspire One 上运行了以下操作（这也可以在 MID 上运行）：
+为了展示其工作原理，在 `eeePC` 和 Acer Aspire One 上运行了以下操作（这也可以在 MID 上运行）：
 
 ```
 $ x11perf -all
 ```
 
-两台笔记本电脑的操作系统都已完全更新到最新版本。然后使用 x11perf 对它们进行比较，它会将多次运行的输出合并成非常好的格式。
+两台笔记本电脑的操作系统都已完全更新到最新版本。然后使用 `x11perf` 对它们进行比较，它会将多次运行的输出合并成非常好的格式。
 
 总的来说，Aspire One 的性能要好得多，正如你在以下结果所示：
 
@@ -7331,7 +6296,7 @@ $ x11perf -all
 
 ### Ubuntu 内核概览
 
-Ubuntu 内核基于 LPIA 架构。这种架构的设计是为了支持 i386。
+Ubuntu 内核基于 LPIA 架构。这种架构的设计是为了支持 `i386`。
 
 ### 内核调优方法
 
@@ -7356,10 +6321,6 @@ Ubuntu 内核基于 LPIA 架构。这种架构的设计是为了支持 i386。
 
 如前所述，这种方法创建一个 Ubuntu 包。Ubuntu 内核源码有很多脚本可以自动地生成各种包。因此，作为该方法的先条件，用户应该从 Ubuntu 获取源码。
 
-
-
-
-
 ## 第 8 章：内核微调
 
 ```bash
@@ -7378,7 +6339,7 @@ $ cd .../
 $ cd config/lpia/
 ```
 
-如你在该目录中所见，有两个配置文件。一个是适用于所有变体（flavors）的通用配置 config。另一个是 `config.lpia`，它是针对 lpia 变体的特定配置。由于新变体是基于当前的 lpia 变体开发的，你可以如下所示拷贝特定的配置文件：
+如你在该目录中所见，有两个配置文件。一个是适用于所有变体（flavors）的通用配置 `config`。另一个是 `config.lpia`，它是针对 `lpia` 变体的特定配置。由于新变体是基于当前的 `lpia` 变体开发的，你可以如下所示拷贝特定的配置文件：
 
 ```bash
 $ cp config.lpia lpiacustom
@@ -7399,7 +6360,7 @@ $ vim config.lpiacustom
 
 也可以通过内核的 curses 前端配置工具来完成：
 
-Ncurses 是一个用于开发在终端运行的类 GUI 应用程序的工具包。在继续之前，必须安装它的头文件。
+`Ncurses` 是一个用于开发在终端运行的类 GUI 应用程序的工具包。在继续之前，必须安装它的头文件。
 
 首先返回父目录：
 
@@ -7420,7 +6381,7 @@ $ make O=debian/build/build-lpiacustom menuconfig
 
 图 8-1
 
-在新变体中，你只需要更改与之相关的属性，其余部分将保持与 "lpia" 变体相同。因此，请如图 8-2 所示，选择高亮的处理器类型（Processor type）和特征（features）选项。
+在新变体中，你只需要更改与之相关的属性，其余部分将保持与 `"lpia"` 变体相同。因此，请如图 8-2 所示，选择高亮的处理器类型（Processor type）和特征（features）选项。
 
 ![](img/20e1447b223c3f9afa3d43610c6361ee_203_1.png)
 
@@ -7468,7 +6429,7 @@ debian/control
 debian/control.stub
 ```
 
-在两个文件中，都需要根据当前的 lpia 包编辑并创建两个新包。包条目为 `linux-image-2.6.28-8-lpia`、`linux-headers-2.6.28-8-lpia` 和 `linux-image-debug-2.6.28-8-lpia`。拷贝文件后，需要编辑它们以编写正确的描述。然而，用户应该有三个条目。第一个是：
+在两个文件中，都需要根据当前的 `lpia` 包编辑并创建两个新包。包条目为 `linux-image-2.6.28-8-lpia`、`linux-headers-2.6.28-8-lpia` 和 `linux-image-debug-2.6.28-8-lpia`。拷贝文件后，需要编辑它们以编写正确的描述。然而，用户应该有三个条目。第一个是：
 
 ```
 Package: linux-image-2.6.28-8-lpia
@@ -7549,7 +6510,7 @@ $ apt-get source linux-image-`uname -r`
 
 这种方法提供了获取内核源码的两种主要方法。与之前的 Ubuntu 方法，可以从 git 或 deb 仓库获取。让我们看到 git 仓库和 deb 仓库。
 
-这里使用的非 Ubuntu git 仓库是 kernel.org 上最新的 linux-2.6 内核树。然而，源仓库可以更改。同样的逻辑也适用于 deb 仓库。初始步骤会有不同——即内核配置、编译和安装步骤都是相同的。
+这里使用的非 Ubuntu git 仓库是 `kernel.org` 上最新的 `linux-2.6` 内核树。然而，源仓库可以更改。同样的逻辑也适用于 deb 仓库。初始步骤会有不同——即内核配置、编译和安装步骤都是相同的。
 
 此步骤的第一步是确保设备上已安装内核所需的所有依赖：
 
@@ -7580,10 +6541,6 @@ $ cd linux-2.6.git/
 $ cp /boot/config- -r .config
 ```
 
-
-
-
-
 ## 第 8 章：内核微调
 
 在离开配置界面之前，请确保在图 8-4 所示的屏幕中选择 Yes，以确保所有内容已正确保存。
@@ -7594,8 +6551,9 @@ $ cp /boot/config- -r .config
 $ make oldconfig
 ```
 
-现在编译并创建 Debian 软件包。在这里我们需要定义两个参数：
-`--append-to-version` 名称和 `--revision` 版本号。第一个参数是目标编译内核的简短描述。第二个参数在未来有多个版本的包时，如果你想让 Debian 软件包管理器知道哪个是较新的编译版本，它就会非常有用。因此，第一次编译将从 1 开始，每个新构建的包的修订版本号都会加 1。
+
+
+现在编译并创建 Debian 软件包。在这里我们需要定义两个参数：`--append-to-version` 名称和 `--revision` 版本号。第一个参数是目标编译内核的简短描述。第二个参数在未来有多个版本的包时，如果你想让 Debian 软件包管理器知道哪个是较新的编译版本，它就会非常有用。因此，第一次编译将从 1 开始，每个新构建的包的修订版本号都会加 1。
 
 为了编译内核并确保内核被正确构建，请执行以下类型的命令：
 
@@ -7614,15 +6572,15 @@ $ ls linux-image-<kernel's version>-1-custom.deb
 $ ls linux-headers-<kernel's version>--1-custom.deb
 ```
 
-如果由于任何原因在编译步骤发生任何问题，请回到内核的任何已知版本——例如在编写本书时使用的 v2.6.29-rc6。每个官方版本在 git 树中都有一个标签（tag）。
+如果由于任何原因在编译步骤发生任何问题，请回到内核的任何已知版本——例如在编写本书时使用的 `v2.6.29-rc6`。每个官方版本在 `git` 树中都有一个标签（tag）。
 
-Git 在附录 B 中有详细解释，但在这里也会进行简要介绍。再次进入内核目录：
+`Git` 在附录 B 中有详细解释，但在这里也会进行简要介绍。再次进入内核目录：
 
 ```
 $ cd linux-2.6.git/
 ```
 
-现在输入以下命令以查看内核 git 树中创建的所有标签。然后选择最新的或其他任何较旧的。
+现在输入以下命令以查看内核 `git` 树中创建的所有标签。然后选择最新的或其他任何较旧的。
 
 ```
 $ git tag
@@ -7645,7 +6603,7 @@ v2.6.29-rc5
 v2.6.29-rc6 ← latest
 ```
 
-由于官方版本是最新的，通过执行此处所示的命令让 git 树回到它：
+由于官方版本是最新的，通过执行此处所示的命令让 `git` 树回到它：
 
 ```
 $ git checkout v2.6.29-rc6
@@ -7680,7 +6638,7 @@ $ sudo dpkg -i linux-image-<kernel's version>-1-custom.deb
 $ sudo dpkg -i linux-headers-<kernel's version>-1-custom.deb
 ```
 
-下载内核源码的另一种方法是通过 dpkg 工具。遗憾的是，使用这种方法将意味着总是下载到过时的内核版本。首要任务是确定哪些版本是可用：
+下载内核源码的另一种方法是通过 `dpkg` 工具。遗憾的是，使用这种方法将意味着总是下载到过时的内核版本。首要任务是确定哪些版本是可用：
 
 ```
 $ sudo apt-get install linux-image-2.6
@@ -7705,17 +6663,7 @@ E: Package linux-source-2.6 has no installation candidate
 $ sudo apt-get install linux-image-2.6
 ```
 
-等等，上面的文本在后几页的 OCR 中似乎是破碎的。让我重新检查提供的 OCR 以提供连贯的流程。
-
-（自我修正：提供的第 210-212 页的 OCR 文本包含大量的重复和来自 OCR 来源的伪影。我将根据提供的文本清理逻辑流。）
-
-应该选择最新的一个：
-
-```
-$ sudo apt-get install linux-image-2.6
-```
-
-下载内核源码的另一种方法是通过 dpkg 工具。遗憾的是，使用这种方法将意味着下载到过时的内核版本。首要任务是确定哪些版本是可用的：
+下载内核源码的另一种方法是通过 `dpkg` 工具。遗憾的是，使用这种方法将意味着下载到过时的内核版本。首要任务是确定哪些版本是可用的：
 
 ```
 $ sudo apt-get install linux-image-2.6
@@ -7733,12 +6681,6 @@ linux-source-2.6.28 2.28-1
 You should explicitly select one to install.
 E: Package linux-source-2.6 has no installation candidate
 ```
-
-（注：第 210-212 页的 OCR 文本看起来高度重复/损坏。我将处理第一页的清理部分。）我将提供清理后的可用版本。
-
-
-
-
 
 ## 第8 章：内核微调
 
@@ -7758,7 +6700,7 @@ E: Package linux-source-2.6 has no installation candidate
 # build
 ```
 
-与 "git status" 不同，这次显示了一个新列表“待提交的更改”。此列表中的每个修改都将使用以下命令进行提交：
+与 `git status` 不同，这次显示了一个新列表“待提交的更改”。此列表中的每个修改都将使用以下命令进行提交：
 
 ```
 $ git commit
@@ -7770,8 +6712,8 @@ $ git commit
 lpia: custom: Customized configuration for lpia
 
 This patch adds the custom flavour
-in lpia arch
 
+in lpia arch
 ```
 
 Signed-off by: User <user@email.com>
@@ -7793,7 +6735,7 @@ Signed-off by: User <user@email.com>
 b/
 ```
 
-此消息与 am-commit 类似，但带有额外的规则。第一个规则是所有以 $w 开头的行都将被忽略。第一行是主题。它的描述应该简短且直接。接着，在一个空行之后是补丁的邮件正文。它需要更长、更完整，可以包含多行。再一个空行之后是补丁的签名（sign-off）。签署“patch-off”的人保证它能够正常工作。在保存文件并退出编辑器后，所有修改将应用到本地工作分支。通过输入下一个命令，可以确认补丁已已保存：
+此消息与 `am-commit` 类似，但带有额外的规则。第一个规则是所有以 `$w` 开头的行都将被忽略。第一行是主题。它的描述应该简短且直接。接着，在一个空行之后是补丁的邮件正文。它需要更长、更完整，可以包含多行。再一个空行之后是补丁的签名（sign-off）。签署“patch-off”的人保证它能够正常工作。在保存文件并退出编辑器后，所有修改将应用到本地工作分支。通过输入下一个命令，可以确认补丁已已保存：
 
 ```
 $ git log
@@ -7825,7 +6767,7 @@ Ubuntu: Start new release
 Ignore: yes
 ```
 
-它并不需要完全相同。可能最后两个条目将不同，第一条也可能存在差异。这里的主要问题是第一个描述必须与之前相同。如果是这样，则可以从 git 获取新分支的状态：
+它并不需要完全相同。可能最后两个条目将不同，第一条也可能存在差异。这里的主要问题是第一个描述必须与之前相同。如果是这样，则可以从 `git` 获取新分支的状态：
 
 ```
 root@esdhcp03540:~/ubuntu-jetty$ git status
@@ -7841,7 +6783,7 @@ root@esdhcp03540:~/ubuntu-jetty$ git status
 $ git checkout master
 ```
 
-在继续更新内核之前，有必要确保工作分支中没有待处理的修改。你可以再次使用 git status 命令：
+在继续更新内核之前，有必要确保工作分支中没有待处理的修改。你可以再次使用 `git status` 命令：
 
 ```
 $ git status
@@ -7859,7 +6801,7 @@ $ git reset --hard HEAD
 $ git pull
 ```
 
-现在会打印很多消息。只有在显示错误消息时才需要担心。如果是这样，最佳操作是再次 pull。此分支是官方 Ubuntu 分支的副本，因此补丁仅应用于“custom”分支。为了实现本节的目标并使“custom”分支更新，让我们检出“custom”分支：
+现在会打印很多消息。只有在显示错误消息时才需要担心。如果是这样，最佳操作是再次 `pull`。此分支是官方 Ubuntu 分支的副本，因此补丁仅应用于“custom”分支。为了实现本节的目标并使“custom”分支更新，让我们检出“custom”分支：
 
 ```
 $ git checkout custom
@@ -7871,9 +6813,9 @@ $ git checkout custom
 $ git rebase
 ```
 
-结果是不可预测的，并且有许多方法可以解决任何冲突。如果一切正常，请继续下一步；如果发生冲突，扎实的 git 知识是关重要的。如果发生了你无法解决的冲突，解决方案是将文件重置到“master”分支然后重做。
+结果是不可预测的，并且有许多方法可以解决任何冲突。如果一切正常，请继续下一步；如果发生冲突，扎实的 `git` 知识是关重要的。如果发生了你无法解决的冲突，解决方案是将文件重置到“master”分支然后重做。
 
-要确定是否存在冲突，请查看 rebase 操作后打印出的如下（目包含错误项）的消息：
+要确定是否存在冲突，请查看 `rebase` 操作后打印出的如下（目包含错误项）的消息：
 
 ```
 First, rewinding to replay your work on top of...
@@ -7893,7 +6835,7 @@ $ git checkout master <file>
 $ git add <file>
 ```
 
-在冲突的情况下，命令将继续 rebase：
+在冲突的情况下，命令将继续 `rebase`：
 
 ```
 $ git rebase --continue
@@ -7911,7 +6853,7 @@ $ git rebase --continue
 $ git pull
 ```
 
-在命令完成后，下一步是更新内核目录中现有 .config 文件的配置。如所示，可以使用 ncurses 界面或简单的文本界面来配置内核。ncurses 通过以下命令呈现：
+在命令完成后，下一步是更新内核目录中现有 `.config` 文件的配置。如所示，可以使用 `ncurses` 界面或简单的文本界面来配置内核。`ncurses` 通过以下命令呈现：
 
 ```
 $ make menuconfig
@@ -7925,10 +6867,6 @@ $ make oldconfig
 
 这种方法稍微复杂一些，因为对于添加到内核的每个新配置都会弹出一个查询。前端界面会自动为每个新项目选择默认值，但在简单的文本界面中，也可以通过对所有问题按回车来实现同样的效果。
 
-
-
-
-
 # 第 8 章：内核微调
 
 - 仅编译和安装驱动程序要简单得多也快速得多。
@@ -7936,7 +6874,7 @@ $ make oldconfig
 - 在某些情况下，出于可靠性考虑，可能禁止使用未经测试的内核。这意味着新的内核版本在推送到终端用户之前，将经过更严格的验证并增加成本。
 - 所需驱动程序（或驱动版本）目前不存在于内核树中。
 
-有许多不同的方法可以开发内核之外的驱动程序，或者当前已应用或未应用于当前内核的新版本驱动。如果没有标准化，驱动开发人员需要花费大量工作来使每个驱动版本兼容现有的许多内核版本和/或 Linux 发行版，最终用户在获取、构建和安装驱动时也需要花费大量精力。
+有许多不同的方法可以开发内核之外的驱动程序，或者当前已应用或未应用于当前内核的新版本驱动。如果没有标准化，驱动开发人员需要花费大量工作来使每个驱动版本兼容现有的许多内核版本和/或 Linux 发行版，最终用户在获取、构建和安装驱动时也需要花费精力。
 
 为了帮助开发者和用户，创建了一个名为动态内核模块支持（Dynamic Kernel Modules Support，DKMS）的框架。它提供了一种非常简单的机制，通过简单的命令和配置来安装新的（或更新的）驱动程序。本节将演示如何使用该框架以及用户可以如何充分利用其作用。
 
@@ -7953,13 +6891,13 @@ DKMS 有它自己的模块树。每个模块在构建和正确安装之前都必
 - 已构建 (Built)
 - 已安装 (Installed)
 
-所需的模块需要位于 /usr/src 路径下的 `<module>-<version>/` 目录下。这是框架查找模块的地方。模块必须正确配置 `dkms.conf` 文件。该配置文件应由提供 DKMS 框架支持的驱动程序提供。
+所需的模块需要位于 `/usr/src` 路径下的 `<module>-<version>/` 目录下。这是框架查找模块的地方。模块必须正确配置 `dkms.conf` 文件。该配置文件应由提供 DKMS 框架支持的驱动程序提供。
 
-为了更好地理解 DKMS 的用法，请想象以下场景：有一个名为 openafs 的模块包，它使用 DKMS 并随 Ubuntu 原生提供。这是一个分布式、跨平台的开源文件系统，用于远程计算机之间的文件共享。目前 Ubuntu 提供的版本是 1.4.9，但最新的稳定版本是 1.4.10。我们将使用 Ubuntu 来演示如何在预安装的调优内核中安装最新版本，同时保留发行版提供的通用内核中安装的 opens 版本。因此，两个版本将同时安装并由 DKMS 框架管理。
+为了更好地理解 DKMS 的用法，请想象以下场景：有一个名为 `openafs` 的模块包，它使用 DKMS 并随 Ubuntu 原生提供。这是一个分布式、跨平台的开源文件系统，用于远程计算机之间的文件共享。目前 Ubuntu 提供的版本是 1.4.9，但最新的稳定版本是 1.4.10。我们将使用 Ubuntu 来演示如何在预安装的调优内核中安装最新版本，同时保留发行版提供的通用内核中安装的 opens 版本。因此，两个版本将同时安装并由 DKMS 框架管理。
 
-#  DKMS 命令
+# DKMS 命令
 
-将安装两个内核：linux-image-2.6.28-11-generic (Ubuntu) 和 linux-image-6-29-custom (Tuned)。
+将安装两个内核：`linux-image-2.6.28-11-generic` (Ubuntu) 和 `linux-image-6-29-custom` (Tuned)。
 
 注意，内核头（headers）也必须安装在内核镜像上。
 
@@ -7969,7 +6907,9 @@ DKMS 有它自己的模块树。每个模块在构建和正确安装之前都必
 # apt-get install opens-modules-dkms
 ```
 
-如你所见，opens 模块会自动编译并安装。这是因为 dkms 命令已经封装在 .deb 安装脚本中。现在 1.4.9 已经安装，有必要下载新版本（1.4.10），以便其与 1.4.9 版本并列安装。最新版本已经存在于 Debian 仓库中，因此下一步是获取它：
+
+
+如你所见，`opens` 模块会自动编译并安装。这是因为 `dkms` 命令已经封装在 `.deb` 安装脚本中。现在 `1.4.9` 已经安装，有必要下载新版本（`1.4.10`），以便其与 `1.4.9` 版本并列安装。最新版本已经存在于 Debian 仓库中，因此下一步是获取它：
 
 ```
 # wget -c http://ftp.debian.org/debian/pool/main/o/opens/opens-modules-dkms-1.4.10-dfsg1-i386.deb
@@ -7977,7 +6917,7 @@ DKMS 有它自己的模块树。每个模块在构建和正确安装之前都必
 
 不建议将驱动程序作为普通文件安装。如果发生这种情况，它将覆盖 Ubuntu 包并完全覆盖旧版本。目标是让 Ubuntu 版本与 Ubuntu 内核保留，并让最新版本留在调优内核中。
 
-deb 文件内部有一个名为 `openafs-1.4.10` 的目录，这是需要的。从 deb 文件中提取它并检查使用 DKMS 安装的路径：
+`deb` 文件内部有一个名为 `openafs-1.4.10` 的目录，这是需要的。从 `deb` 文件中提取它并检查使用 DKMS 安装的路径：
 
 ```
 # ar vx opens-modules-dkms_1.4.10-dfsg1-i386.deb
@@ -7985,30 +6925,30 @@ deb 文件内部有一个名为 `openafs-1.4.10` 的目录，这是需要的。�
 # cp -fr /usr/src/openafs-1.4.10 /usr/src
 ```
 
-运行这些命令后，最新的驱动程序被复制到 /usr/src 路径。该驱动程序不在 DKMS树中。现在可以使用 dkms 命令了。第一个任务是验证树中所有驱动的当前状态。至少会显示 openafs v1.4.9（已安装）：
+运行这些命令后，最新的驱动程序被复制到 `/usr/src` 路径。该驱动程序不在 DKMS树中。现在可以使用 `dkms` 命令了。第一个任务是验证树中所有驱动的当前状态。至少会显示 `openafs v1.4.9`（已安装）：
 
 ```
 # dkms status
 openafs 1.4.9, 2.6.28-11-generic, i386: installed
 ```
 
-如果状态命令后没有显示内容，说明没有安装 opens 模块。opens-modules-dkms 包的安装可能有问题。该步骤必须重做：现在可以将最新的驱动程序添加到树中并将状态更改为“已添加到 DKMS树”：
+如果状态命令后没有显示内容，说明没有安装 `opens` 模块。`opens-modules-dkms` 包的安装可能有问题。该步骤必须重做：现在可以将最新的驱动程序添加到树中并将状态更改为“已添加到 DKMS树”：
 
 ```
 # dkms add -m openafs -v 1.4.10 -k 2.6.29-custom
 ```
 
-与 status 类似，add 是告诉你正在做什么的命令。命令中可以使用三个选项：
+与 `status` 类似，`add` 是告诉你正在做什么的命令。命令中可以使用三个选项：
 
 ```
 # dkms add -m <module> -v <version> -k <kernel> OPTIONS:
 ```
 
-- -m 指向模块名称
-- -v 指向版本
-- -k 指向内核版本
+- `-m` 指向模块名称
+- `-v` 指向版本
+- `-k` 指向内核版本
 
-现在可以重复之前的步骤，查看 dkms status 看到什么：
+现在可以重复之前的步骤，查看 `dkms status` 看到什么：
 
 ```
 # dkms status
@@ -8022,7 +6962,7 @@ openafs 1.4.10, 2.6.29-custom, i386: added
 # dkms build -m openafs -v 1.4.10 -k 2.6.29-custom
 ```
 
-然后 dkms status 现在显示为：
+然后 `dkms status` 现在显示为：
 
 ```
 # dkms status
@@ -8030,13 +6970,13 @@ openafs 1.4.9, 2.6.28-11-generic, i386: installed
 openafs 1.4.10, 2.6.29-custom, i386: built
 ```
 
-由于驱动已经构建，最后一步是 install：
+由于驱动已经构建，最后一步是 `install`：
 
 ```
 # dkms install -m openafs -v 1.4.10 -k 2.6.29-custom
 ```
 
-然后，dkms status 将打印出 Installed 状态：
+然后，`dkms status` 将打印出 `Installed` 状态：
 
 ```
 # dkms status
@@ -8044,7 +6984,7 @@ openafs 1.4.9, 2.6.28-11-generic, i386: installed
 openafs 1.4.10, 2.6.29-custom, i386: installed
 ```
 
-这意味着两个驱动版本都安装了，每个版本对应不同的内核。因为可以使用简单的 DKMS 命令构建/安装模块，也可以卸载它们。uninstall 命令将状态更改为 Built 状态：
+这意味着两个驱动版本都安装了，每个版本对应不同的内核。因为可以使用简单的 DKMS 命令构建/安装模块，也可以卸载它们。`uninstall` 命令将状态更改为 `Built` 状态：
 
 ```
 # dkms uninstall -m openafs -v 1.4.10 -k 2.6.29-custom
@@ -8053,7 +6993,7 @@ openafs 1.4.9, 2.6.28-11-generic, i386: installed
 openafs 1.4.10, 2.6.29-custom, i386: built
 ```
 
-dkms remove 命令会导致驱动程序不在 DKMS树中。之后，需要再次 add/build：
+`dkms remove` 命令会导致驱动程序不在 DKMS树中。之后，需要再次 `add/build`：
 
 ```
 # dkms remove -m openafs -v 1.4.10 -k 2.6.29-custom
@@ -8062,7 +7002,7 @@ openafs 1.4.9, 2.6.28-11-generic, i386: installed
 openafs 1.4.10, 2.6.29-custom, i386: out of DKMS tree
 ```
 
-使用 DKMS 框架非常简单，如所示。然而，这并不是框架能做的所有事情。为了演示这一点，让我们扩展场景。如果 OEM 在许多设备上安装了自定义内核，单独处理每个设备将是一项巨大的工程。DKMS 可以通过以下命令创建 tar 文件：
+使用 DKMS 框架非常简单，如所示。然而，这并不是框架能做的所有事情。为了演示这一点，让我们扩展场景。如果 OEM 在许多设备上安装了自定义内核，单独处理每个设备将是一项巨大的工程。DKMS 可以通过以下命令创建 `tar` 文件：
 
 ```
 # dkms mktarget -m openafs -v 1.4.10 -k 2.6.29-custom
@@ -8073,7 +7013,7 @@ Tarball location:
 # cp /var/lib/dkms/openafs/1.4.10/tarball/openafs-1.4.10-kernel2.2.6.29-i686.dkms.gz
 ```
 
-创建的文件可以复制到任何安装了自定义内核的设备上。如果设备没有安装自定义内核，但 OEM 想测试该功能，可以通过加载 tarball 来模拟。这意味着驱动程序不需要编译步骤。加载 tarball 操作可以通过输入以下命令完成：
+创建的文件可以复制到任何安装了自定义内核的设备上。如果设备没有安装自定义内核，但 OEM 想测试该功能，可以通过加载 `tarball` 来模拟。这意味着驱动程序不需要编译步骤。加载 `tarball` 操作可以通过输入以下命令完成：
 
 ```
 # dkms ldtarball --archive openafs-1.4.10-kernel2.2.6.29-i686.dkms.gz
@@ -8081,10 +7021,6 @@ Tarball location:
 openafs, 1.4.10, 2.6.29-custom, i686: built
 openafs, 1.4.9, 2.6.28-11-generic, i686: installed
 ```
-
-
-
-
 
 ## 总结
 
@@ -8098,15 +7034,13 @@ Ubuntu Mobile 的开发是以高度去中心化的方式进行的。然而，为
 
 独立软件供应商（ISV）是一个商业术语，指专门从事软件销售、如何为大众市场或小基市场创建和测试示例应用程序的公司。
 
-第一章重点介绍了 Ubuntu QA 团队用于桌面自动化的 Mago，以及如何使用辅助功能框架测试设备。接下来，它展示了如何创建并验证其与 Linux 标准基础（LSB）测试工具包的兼容性。
+第一章重点介绍了 Ubuntu QA 团队用于桌面自动化的 `Mago`，以及如何使用辅助功能框架测试设备。接下来，它展示了如何创建并验证其与 Linux 标准基础（LSB）测试工具包的兼容性。
 
 本章讨论了其他测试工具——特别是用于包测试的工具——并展示了一些对通用性能和易用性有工具。最后，本章以对测试策略的讨论结束。它还展示了如果发现错误，如何向 Ubuntu 开发者正确提交错误报告。
 
-# 为什么要测试？
+## 为什么要测试？
 
 测试永远无法完全证明软件的正确。相反，它提供了一种比较，通过某些已知或预期的基准来衡量软件或硬件的状态和行为。这些可能是规范、对比产品、相同产品的旧版本、用户或客户预期以及相关标准。对高质量测试的需求显而易见——据估计，2002 年软件给美国经济带来的损失超过 595 亿美元（http://www.nist.gov/public_affairs/releases/n02-10.htm）。据估计，如果进行更好的软件测试，这些成本中的三分之一是可以避免的。
-
-# 第章：测试与易用性
 
 # Ubuntu Desktop QA
 
@@ -8120,23 +7054,21 @@ AT-SPI 技术目前正在迁移到 D-Bus。更多信息请参见第 4 章和附�
 
 图 9-1
 
-界面在登录 gdm 时启用，因此重启 GNOME 会话（注销并重新登录）。此外，如果桌面启用了 Compiz，辅助功能将无法工作。在这种情况下，请在 gdm 中选择纯 gnome 会话。
+界面在登录 `gdm` 时启用，因此重启 GNOME 会话（注销并重新登录）。此外，如果桌面启用了 Compiz，辅助功能将无法工作。在这种情况下，请在 `gdm` 中选择纯 `gnome` 会话。
 
-接下来，安装 Python 包 python-ldtp、python-distutils-extra 和 python-setuptools（如果尚未安装 Bazaar 也）：
+接下来，安装 Python 包 `python-ldtp`、`python-distutils-extra` 和 `python-setuptools`（如果尚未安装 Bazaar 也）：
 
 ```
 $ sudo apt-get install python-ldtp python-distutils-extra python-setuptools bzr
 ```
 
-# Mago — 桌面测试计划
+## Mago — 桌面测试计划
 
 要使用 Mago，请检出此分支：
 
 ```
 $ bzr branch lp:mago
 ```
-
-# 第章：测试与易用性
 
 进入新创建的文件夹并运行其中一个测试：
 
@@ -8145,13 +7077,13 @@ $ cd mago
 $ PYTHONPATH=./bin/mago -a notify-osd
 ```
 
-这运行了 notify-osd 测试，它验证了新消息守护进程的功能（有关 Ubuntu 中此消息系统的更多信息，请参见第 4 章）。测试结果存储在主目录下的 mago 文件夹中，并可以在浏览器中显示。
+这运行了 `notify-osd` 测试，它验证了新消息守护进程的功能（有关 Ubuntu 中此消息系统的更多信息，请参见第 4 章）。测试结果存储在主目录下的 `mago` 文件夹中，并可以在浏览器中显示。
 
-# 构建测试应用程序
+## 构建测试应用程序
 
 设置一个假设的测试场景，构建并测试一个示例应用程序。这是一个使用 Mozilla 库构建的嵌入浏览器。该应用程序将针对功能及其对 Linux 标准的遵守进行测试。这种嵌入浏览器可能用于亭机式（kiosk）应用程序，不需要浏览器的完整功能。为了某些目的，重点是保持浏览器简单；实际应用程序中的某些 GTK 控件没有挂载到任何地方。然而，可以输入 URI 并访问资源。URI（统一资源标识符）是由用于标识互联网资源的字符串组成的。
 
-# 开始
+### 开始
 
 在终端窗口中，确保可以导入所需的库：
 
@@ -8167,11 +7099,9 @@ Type "help", "credits" or "license" 获取更多信息。
 >>>
 ```
 
-gtkmozbed 在 python-extras 包中可用。
+`gtkmozbed` 在 `python-extras` 包中可用。
 
-# 第 9 章：测试与易用性
-
-# 创建应用程序
+## 创建应用程序
 
 启动 Glade 并创建一个带有窗口、垂直框和工具栏的界面。对于每个项目，设置辅助功能名称和描述。这允许 Mago 使用 AT-SPI 辅助功能层进行测试。Glade 树显示如图 9-2 中主窗口的辅助功能属性。
 
@@ -8179,9 +7109,9 @@ gtkmozbed 在 python-extras 包中可用。
 
 图 9-2
 
-URL 输入框需要激活。要做到这一点，在属性窗口中点击它。然后选择 Signals 标签并选择 Activate。当按下 Enter 键时，文本框会发出 Activate 信号。这将创建一个默认的处理程序 on_entry_activate，这是很好的。
+URL 输入框需要激活。要做到这一点，在属性窗口中点击它。然后选择 Signals 标签并选择 Activate。当按下 Enter 键时，文本框会发出 Activate 信号。这将创建一个默认的处理程序 `on_entry_activate`，这是很好的。
 
-以下代码片段显示了 Glade 文件的开头。它显示了作为辅助功能的 GtkWindow 和 GtkBox 的一些结构，用于测试：
+以下代码片段显示了 Glade 文件的开头。它显示了作为辅助功能的 `GtkWindow` 和 `GtkBox` 的一些结构，用于测试：
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -8199,8 +7129,6 @@ URL 输入框需要激活。要做到这一点，在属性窗口中点击它。�
     <property name="decorated">True</property>
 </widget>
 ```
-
-# 第 9 章：测试与易用性
 
 ```
 <property name="skip_taskbar">False</property>
@@ -8256,12 +7184,6 @@ class BrowserWrapper:
         # 注册为 Gnome 应用程序。
 ```
 
-
-
-
-
-## 第 9 章：可用性测试
-
 ```python
 gnome.init(APPNAME, APPVERSION)
 # 加载 glade 文件
@@ -8276,6 +7198,8 @@ self.mozillaWidget.show()
 self.mozillaWidget.load_url("https://www.ubuntu.com")
 ```
 
+
+
 ```python
 signalDic = {"on_activate": self.on_entry_activate}
 self.mozillaWidget.connect_signals(signalDic)
@@ -8288,7 +7212,7 @@ def on_entry_activate(self, widget):
     gtk.main()
 ```
 
-此示例不会正常退出。你可以轻松地关闭窗口，但仍需使用 Ctrl+C 来杀死程序。将此文件放在一个文件夹中，并创建一个名为 `pixmaps` 的子文件夹，其中包含应用程序的图标；可以在 Glade 文件中通过以下行更改图标：
+此示例不会正常退出。你可以轻松地关闭窗口，但仍需使用 `Ctrl+C` 来杀死程序。将此文件放在一个文件夹中，并创建一个名为 `pixmaps` 的子文件夹，其中包含应用程序的图标；可以在 Glade 文件中通过以下行更改图标：
 
 ```xml
 <property name="icon">pixmaps/hello.png</property>
@@ -8428,10 +7352,6 @@ class PumdTestSuite(SingleApplicationTestSuite):
 
 LSB 标准之所以重要，因为它将开发与结果联系得更紧密，降低了开发成本并实现了应用程序与 LSB 标准之间更紧密的集成。
 
-
-
-
-
 # 第 9 章：测试与可用性
 
 要查看所有可用测试，请运行以下命令：
@@ -8520,10 +7440,10 @@ Kernel: 2.6.28-11-lpia (i686)
 
 ## 使用 pbuilder 自动化软件包测试
 
-你可以使用 pbuilder（第 5 章）来自动化软件包测试。它具有允许使用钩子（hooks）的功能；这些钩子可以在 chroot 中安装软件包，甚至可以卸载它们。一些已知的测试包括：
+你可以使用 `pbuilder`（第 5 章）来自动化软件包测试。它具有允许使用钩子（hooks）的功能；这些钩子可以在 chroot 中安装软件包，甚至可以卸载它们。一些已知的测试包括：
 
-- 自动安装-移除-升级-安装-升级-清理测试套件（以示例 B91dpkg-i 提供，位于 /usr/share/doc/pbuilder/examples 目录）。其中还有一个检查项调用了同一目录下的 execute_installtest.sh。
-- 自动运行 lintian（以示例提供，位于 /usr/share/doc/pbuilder/examples/B90llintian）
+- 自动安装-移除-升级-安装-升级-清理测试套件（以示例 B91dpkg-i 提供，位于 `/usr/share/doc/pbuilder/examples` 目录）。其中还有一个检查项调用了同一目录下的 `execute_installtest.sh`。
+- 自动运行 lintian（以示例提供，位于 `/usr/share/doc/pbuilder/examples/B90llintian`）
 
 要使用此测试套件，需要创建钩子。创建一个目录：
 
@@ -8531,14 +7451,11 @@ Kernel: 2.6.28-11-lpia (i686)
 /var/cache/pbuilder/hooks
 ```
 
-将 B91dpkg-i 脚本添加到此目录。
+将 `B91dpkg-i` 脚本添加到此目录。
 
-> 也可以在命令行中指定 --hookdir /usr/share/doc/pbuilder/examples 来包含所有示例钩子。
+> 也可以在命令行中指定 `--hookdir /usr/share/doc/pbuilder/examples` 来包含所有示例钩子。
 
-一旦这些钩子，就可以运行测试脚本。这些测试脚本放置在被测试软件包的源码中，debian/pbuilder-test/NN_name 文件夹下（NN 为数字）。
-
-
-
+一旦这些钩子，就可以运行测试脚本。这些测试脚本放置在被测试软件包的源码中，`debian/pbuilder-test/NN_name` 文件夹下（NN 为数字）。
 
 # 第 9 章：测试与可用性
 
@@ -8546,7 +7463,7 @@ Valgrind 是一个创建高效软件的优秀开发工具。
 
 ## Latencytop
 
-Intel 开源技术中心发布了 Latencytop，这是一个旨在识别系统延迟发生处的工具。它可以在 Ubuntu Universe 仓库中，可以通过以下命令安装：
+Intel 开源技术中心发布了 `Latencytop`，这是一个旨在识别系统延迟发生处的工具。它可以在 Ubuntu Universe 仓库中，可以通过以下命令安装：
 
 ```bash
 $ sudo apt-get install latencytop
@@ -8571,7 +7488,6 @@ $ sudo latencytop
 | 打开设备命令 | 1.5 msec | 0.4 % |
 | 执行原始 SCSI 命令 | 1.1 msec | 0.4 % |
 | acpi_ec_wait acpi_ec_transaction_unlocked acpi_ec_ | 1.0 msec | 0.0 % |
-
 | Firefox (6030) | 总计: | |
 | --- | --- | --- |
 | 调度器：等待 CPU | 9.1 msec | 52.3 % |
@@ -8580,7 +7496,7 @@ $ sudo latencytop
 
 evolution-data- evolution-exchange firefox gnome-terminal gnome-pty-helper
 
-Latencytop 读取 /proc/latency_stats 文件并显示过去 30 秒内的延迟。在这种情况下，找到用户态锁竞争似乎是提高性能的一个良好突破点。
+`Latencytop` 读取 `/proc/latency_stats` 文件并显示过去 30 秒内的延迟。在这种情况下，找到用户态锁竞争似乎是提高性能的一个良好突破点。
 
 ## 测试策略
 
@@ -8643,6 +7559,8 @@ Latencytop 读取 /proc/latency_stats 文件并显示过去 30 秒内的延迟�
 
 模板如下：
 
+
+
 ```
 Bug 版本/日期:
 用于测试的环境:
@@ -8671,10 +7589,6 @@ Summary:
 
 （注：后续重复的示例内容已按翻译要求处理）
 
-
-
-
-
 ## 正确充电
 
 作为用户，请尽量在不被中断的情况下为设备充电。此外，在首次使用设备时，请将电量耗尽至零然后完全充满。这可以对电池进行校准。
@@ -8692,10 +7606,15 @@ $ sudo apt-get install laptop-mode-tools
 启动笔记本模式，运行 `sudo laptop_mode start`，它将显示以下内容：
 
 + Laptop Mode Tools 1.45
+
 Laptop mode enabled, active
-/dev/sda:
+
+`/dev/sda`:
+
 setting Advanced Power Management level to 0xfe (254)
+
 /dev/sda:
+
 setting standby to 12 (1 minutes)
 
 运行 `laptop_mode` 会增加 `/proc/sys/vm` 中的 `dirty_expire_centis` 和 `dirty_writeback_centis`，这意味着页面写入的频率不会那么那么高。它还更改了脏数据后台回写的比例，两者结合起来，会导致磁盘活动出现快速爆发并产生更休眠状态。
@@ -8721,7 +7640,7 @@ Profiling run completed.
 
 原因：标准建议（程序可能未运行）
 
-初始化脚本：/etc/init.d/anacron (推测)
+初始化脚本：`/etc/init.d/anacron` (推测)
 
 你想在电池模式下禁用此服务吗？[y/N]: Y
 
@@ -8729,7 +7648,7 @@ Profiling run completed.
 
 原因：标准建议（程序可能未运行）
 
-初始化脚本：/etc/init.d/cron (推测)
+初始化脚本：`/etc/init.d/cron` (推测)
 
 你想在电池模式下禁用此服务吗？[y/N]: Y
 
@@ -8737,7 +7656,7 @@ Profiling run completed.
 
 原因：标准建议（程序可能未运行）
 
-初始化脚本：/etc/init.d/atd (推测)
+初始化脚本：`/etc/init.d/atd` (推测)
 
 你想在电池模式下禁用此服务吗？[y/N]: y
 
@@ -8754,22 +7673,34 @@ $ /proc/acpi/battery/BAT0/info
 结果显示设计容量（以及电池的最后充满容量）。在识别电池错误时，此命令可能非常有用：
 
 - present: yes
+
 - design capacity: 28800 mWh
+
 - last full capacity: 22240 mWh
+
 - battery technology: rechargeable
+
 - design voltage: 14400 mV
+
 - design capacity warning: 1112
+
 - design capacity low: 520 mWh
+
 - capacity granularity 1: 1 mW
+
 - capacity granularity 2: 1 mW
+
 - model number: 92P1163
+
 - serial number: 2335
+
 - battery type: LION
+
 - OEM info: SANYO
 
 电池是 SANYO LION，开始出现退化迹象（查看设计容量与最后充满容量之间的差异）。
 
-> 如果你为设备编译了内核，那么 /proc 接口可能不可。在这种情况下，你可以使用命令：
+> 如果你为设备编译了内核，那么 `/proc` 接口可能不可。在这种情况下，你可以使用命令：
 
 ```bash
 $ ls /sys/class/power_supply/BAT0/
@@ -8786,9 +7717,10 @@ $ ls /sys/class/power_supply/BAT0/
 ```bash
 $ /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_governors
 ```
+
 输出如下：
+
 userspace demand powersave conservative performance
-```
 
 当前调节器显示由：
 
@@ -8827,7 +7759,7 @@ ondemand
 
 ```bash
 $ mount -o noatime /dev/sda
-
+```
 
 ## 关闭服务
 
@@ -8871,10 +7803,6 @@ drwxr-xr-x 2 root root 2783 Mar 06 37 user-dirs-update-gtk.desktop
 图 10-1
 
 根据 Adobe，如果有空闲周期，Flash 将始终尽可能地利用 CPU。它这样做是因为为了让用户感知动画播放流畅，每一帧在正确的时间显示至关重要。这样做的问题在于，Linux 内核 2.6.21 版本引入了一种名为“动态滴答”（dynamic tick）的新调度模型，它允许处理器在下一次用户与计算机交互之前几乎完全关闭。Flash 的这种持续轮询不允许这种情况发生，这对功耗产生了毁灭性的影响。
-
-
-
-
 
 # 第10 章：提示与技巧
 
@@ -8970,6 +7898,20 @@ sudo apt-get install xserver-xorg-input-evtouch
 </deviceInfo>
 ```
 
+
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
+
 该文件内容如下所示（注：原文此处有截断，翻译保持对应逻辑）：在某些设备上，结果似乎是反转的。在这种情况下，知道 `x0,y0` 应该是屏幕的左下角很有用。你可能需要调整这些坐标。增加数字会将光标相对于手写笔向右或向上移动。如果你得到的值在 20 或 -20 以下，它们很可能是错误的。
 
 一旦这些值工作正常，请将它们放入新的硬件配置文件 `/etc/hal/fdi/touchscreen-f` 中。
@@ -8981,10 +7923,6 @@ sudo apt-get install xserver-xorg-input-evtouch
 （现在你可以看到 hal 为该设备提供的选项了。）
 
 为了让 hal 配置 X 文件，你需要确保 `xorg.conf` 文件中没有“Input Device”的配置。
-
-
-
-
 
 ## 第10 章：技巧与提示
 
@@ -9018,7 +7956,7 @@ $ iotop -p 7279
 
 我们结合了之前的章节，向你展示如何使用在这些章节中学到的技术和技能，来开展一个示例项目——为 Ubuntu karmic 创建一个定制的 Ubuntu Mobile 镜像，并将其安装在目标设备上。
 
-## 需要考虑的重要事项
+### 需要考虑的重要事项
 
 在创建用于发布的镜像时，有一些关键问题需要询问——这些答案将影响镜像的内容和设备上的默认设置。
 
@@ -9046,7 +7984,7 @@ $ sudo apt-get install hwinfo
 
 它提供了设备上所有硬件的详细报告。
 
-> lshw 程序提供了 hwinfo 呈现信息的子集。此外，lspci 程序在处理硬件时非常有用，因为它会打印关于所有 PCI 总线的详细信息。
+> `lshw` 程序提供了 `hwinfo` 呈现信息的子集。此外，`lspci` 程序在处理硬件时非常有用，因为它会打印关于所有 PCI 总线的详细信息。
 
 其他实用资源包括硬件兼容性列表（HCL）。这些列表列出了在移动终端（Mid）、PDA、手机、媒体播放器、GPS 设备和“可穿戴设备”中使用的硬件组件、部件和插件。例如，检查设备的摄像头支持，请访问 http://tuxmobil.org/laptop/webcams_linux.html - 如果列表中有，选择目标设备。点击 Acer Aspire Z5 将获得有关该设备硬件的所有类型信息。
 
@@ -9070,10 +8008,11 @@ parm:	quirks:Forced device quirks (uint)
 trace:	Trace level bitmap (uint)
 ```
 
-该设备被 Ubuntu 开箱即用。apt-cache 搜索显示仓库中有以下应用程序：
+该设备被 Ubuntu 开箱即用。`apt-cache` 搜索显示仓库中有以下应用程序：
 
-- luvview — USB视频类采集器
-- uvcapture — USB UVC视频类快照软件
+- `luvview` — USB视频类采集器
+
+- `uvcapture` — USB UVC视频类快照软件
 
 因此也许可以添加到种子（seed）中。
 
@@ -9093,17 +8032,17 @@ trace:	Trace level bitmap (uint)
 
 ### 是嵌入式系统吗？
 
-SquashFS 是一种只读文件系统，用于嵌入式系统，因为它经过压缩以节省空间。
+`SquashFS` 是一种只读文件系统，用于嵌入式系统，因为它经过压缩以节省空间。
 
 ### 自定义界面
 
 Ubuntu 的默认行为可以深度修改。从启动选择器到桌面主题。本节讨论了可以进行的一些相关自定义。
 
-### 启动选择器
+#### 启动选择器
 
 对于 karmic，默认的启动选择器是 Grub2。Grub2 是原始启动加载程序的改进，因为它更容易自定义。由于新的设计，其他架构也得到了支持。然而，目前它不能作为 ARM 架构的启动加载器。在这种情况下，使用的是的是 u-boot。
 
-Grub 2 在 /etc/default/grub 中带有一个配置文件，其中包含了旧 Grub menu.list 中的信息。文件内容如下：
+Grub 2 在 `/etc/default/grub` 中带有一个配置文件，其中包含了旧 Grub menu.list 中的信息。文件内容如下：
 
 ```
 GRUB_DEFAULT=0
@@ -9118,23 +8057,25 @@ GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
 #GRUB_DISABLE_LINUX_UUID=true
 ```
 
-除了 /etc/default/grub，/etc/grub.d/ 文件夹包含了在执行 update-grub 或 update-grub2 命令时会被读取的其他文件。这些内容会被导入到 /boot/grub/grub.cfg。
+除了 `/etc/default/grub`，`/etc/grub.d/` 文件夹包含了在执行 `update-grub` 或 `update-grub2` 命令时会被读取的其他文件。这些内容会被导入到 `/boot/grub/grub.cfg`。
 
-
-
-
-
-## 第11 章：整合一切
+### 第11 章：整合一切
 
 这些文件是：
 
-- 00_header
-- 05_debian_theme — 设置背景和文本颜色、主题。
-- 10_hurd
-- 10_linux
-- 20_memtest86+ — 如果存在 `/boot/memtest86+.bin` 文件，则将其作为菜单项包含。
-- 30_os-prober — 搜索其他操作系统并将其在菜单中。
-- 40_custom — 用于添加自定义菜单项的模板，在执行 `update-grub2` 命令时将插入到 `grub.cfg` 中。此文件以及任何其他自定义文件必须具有可执行权限，才能导入到 `grub.cfg`。
+- `00_header`
+
+- `05_debian_theme` — 设置背景和文本颜色、主题。
+
+- `10_hurd`
+
+- `10_linux`
+
+- `20_memtest86+` — 如果存在 `/boot/memtest86+.bin` 文件，则将其作为菜单项包含。
+
+- `30_os-prober` — 搜索其他操作系统并将其在菜单中。
+
+- `40_custom` — 用于添加自定义菜单项的模板，在执行 `update-grub2` 命令时将插入到 `grub.cfg` 中。此文件以及任何其他自定义文件必须具有可执行权限，才能导入到 `grub.cfg`。
 
 随后可以编辑 `05_debian_theme` 文件以更改不同的背景图像，如下所示：
 
@@ -9161,7 +8102,7 @@ fi
 
 将 Windbuchencom 替换为自定义图像后，运行 `grub-install` 命令将更改写入 Grub2 配置中。
 
-## 显示管理器 (Display Manager)
+### 显示管理器 (Display Manager)
 
 显示管理器是一个可以管理 X 显示/会话的程序。X 显示/会话可以由本地或远程主机上的 X Server 启动。如果 X Server 位于远程主机，它将通过 XDCP（X 显示管理器控制协议）向显示管理器请求会话。
 
@@ -9169,11 +8110,11 @@ fi
 
 有多个显示管理器可供选择，但对于此发行版，GDM 是首选。
 
-## GDM
+#### GDM
 
 GDM 是来自 GNOME 项目的显示管理器。它高度可定制，并具有易于配置和预配置的系统。
 
-## 预配置 GDM
+#### 预配置 GDM
 
 可以更改默认 GDM 行为。配置文件遵循 `ini` 文件格式。配置包含多个部分：`daemon`、`security`、`xdmcp`、`gui`、`greeter`、`chooser`、`debug` 和 `servers`。配置文件位于 `/etc/gdm/gdm.conf`。
 
@@ -9197,7 +8138,7 @@ SoundOnLogin=false
 
 GDM 也可以主题化这将在第 7 章“主题化”中解释。
 
-## 设置默认的 Ubuntu、XFACE 和 Hildon 行为
+### 设置默认的 Ubuntu、XFACE 和 Hildon 行为
 
 基于 Gtk 的桌面环境使用 GConf 作为配置数据库。以下文件是如何为 gconf 设置默认配置的示例。该文件通常包含在配置包的 `src/debian` 目录中：
 
@@ -9216,11 +8157,11 @@ GDM 也可以主题化这将在第 7 章“主题化”中解释。
 /desktop/gnome/applications/main-menu/system_monitor baobab.desktop
 ```
 
-## 精细调整构建过程
+### 精细调整构建过程
 
 此处包含了以下两个部分，因为它们都对缩短构建最终 CD 的时间非常有帮助。尝试配置和种子（seeds）比等待软件包要好。
 
-## 设置仓库
+#### 设置仓库
 
 设置 Debian 仓库已在第 5 章介绍过。简而言之，向本地仓库添加 debian 软件包的方法如下：
 
@@ -9230,7 +8171,7 @@ $repropro includedeb <some-debian-package>
 
 在某些情况下，开发者需要向远程服务器添加 debian 软件包（也可以使用 PPA，但如前所述，PPA 可能需要很长时间才能让包可用）。向远程服务器添加 debian 软件包（也可以使用 PPA，但如前所述，PPA 可能需要很长时间才能让包可用）。
 
-## 第 11 章：整合一切
+### 第 11 章：整合一切
 
 在 `/etc/apt/sources.list` 中，添加如下行：
 
@@ -9238,48 +8179,47 @@ $repropro includedeb <some-debian-package>
 deb http://archive.ubuntu.com/ubuntu main
 ```
 
-## 创建默认 Ubuntu 镜像
+### 创建默认 Ubuntu 镜像
 
 现在是考虑创建镜像的时候了。该镜像应该安装在设备上，为了实现这一点，需要一个安装器。
 
 在本章剩余部分演示的技术适用于移动设备，也可以用于为桌面和服务器创建镜像。
 
-## 选择使用的安装器类型
+#### 选择使用的安装器类型
 
 有两种不同类型的安装器；选择哪种在很大程度上取决于目标用户以及你想创建的镜像类型。
 
-## 使用 Debian-Ubuntu (Ubuntu Alternate镜像)
+#### 使用 Debian-Ubuntu (Ubuntu Alternate镜像)
 
-alternate 安装器用于更高级的安装，因为它提供了桌面镜像不提供的选项。这可能包括向内核传递选项或强制静态网络配置。考虑另一个例子：在第 6 章中加密了用户目录。这需要扩展到加密整个硬盘，而此选项仅 alternate 镜像可用。
+`alternate` 安装器用于更高级的安装，因为它提供了桌面镜像不提供的选项。这可能包括向内核传递选项或强制静态网络配置。考虑另一个例子：在第 6 章中加密了用户目录。这需要扩展到加密整个硬盘，而此选项仅 `alternate` 镜像可用。
 
-如果需要在多个设备上自动安装，或者设备内存较小（小于 256MB），也应使用 alternate 安装器。
+如果需要在多个设备上自动安装，或者设备内存较小（小于 256MB），也应使用 `alternate` 安装器。
 
-## 使用 Ubiquity (Ubuntu Desktop镜像)
+#### 使用 Ubiquity (Ubuntu Desktop镜像)
 
-Ubiquity 是一个用于 Ubuntu 的工具，用 Python 编写，使用 deb-installer (d-i) 作为其许多功能的后端。Unity 的诞生是因为 d-i 的原始界面被人认为粗糙。这是因为 d-i 使用基于系统的工具作为界面，并且因为它依赖对问题的响应，它可能缺乏某些灵活性。Ubiquity 的主要关注点是让新用户易用，因此它使用了一个过滤器 debconf，该过滤器位于 d-i 和 debconf 前端之间，拦截 debconf 协议并转换为可以像 GTK+ 或 Qt 等组件库 UI 元素一样处理的事件。
+`Ubiquity` 是一个用于 Ubuntu 的工具，用 Python 编写，使用 deb-installer (d-i) 作为其许多功能的后端。Unity 的诞生是因为 d-i 的原始界面被人认为粗糙。这是因为 d-i 使用基于系统的工具作为界面，并且因为它依赖对问题的响应，它可能缺乏某些灵活性。`Ubiquity` 的主要关注点是让新用户易用，因此它使用了一个过滤器 debconf，该过滤器位于 d-i 和 debconf 前端之间，拦截 debconf 协议并转换为可以像 GTK+ 或 Qt 等组件库 UI 元素一样处理的事件。
 
 > 关于 deb-installer 的更多信息可以访问 http://d-i.alith.debian.org/doc/talks/debconf6/
 
-## 开始制作镜像：准备环境
+### 开始制作镜像：准备环境
 
 有很多方法可以构建 Ubuntu 镜像。许多现有工具可以自动化此任务——例如 remastersys、Ubuntu Customization Kit 以及手动编辑默认 Ubuntu 镜像的方法。本节将介绍 Ubuntu 官方创建镜像的方法。
 
-
-
-
-
-## 第 11 章：整合汇总
+### 第 11 章：整合汇总
 
 从零开始创建镜像涉及四个项目：
 
 - cdmage
+
 - debian-cd
+
 - germinate
+
 - britney
 
 本节将介绍这些中的每一个项目。
 
-cdimage 是驱动整个过程的脚本集，并处理与本地仓库的同步。它从种子文件（seeds）生成 `debian-cd` 任务列表，并调用 `debian-cd` 来刻制完成的 ISO。
+`cdimage` 是驱动整个过程的脚本集，并处理与本地仓库的同步。它从种子文件（seeds）生成 `debian-cd` 任务列表，并调用 `debian-cd` 来刻制完成的 ISO。
 
 创建 ISO 的第一步是布局目录结构：
 
@@ -9304,6 +8244,8 @@ $ bzr branch bzr+ssh://bazaar.launchpad.net/%7Eubuntu-cdimage/debian-cd/ubuntu/d
 ```bash
 $ ln -s debian-cd ubuntu-cdimage/
 ```
+
+
 
 Britney 是一个更新器，它能智能地移动包（最初从 Debian 的不稳定仓库移动到测试仓库），其智能之处源于：包的目标地应该始终是完全可安装的，并且接近发布候选状态（release candidate）。为此分支：
 
@@ -9385,9 +8327,13 @@ secret/dot-gpgup/pubring.gpg import /usr/share/keyrings/ubuntu-archive-keyring.g
 ```
 
 > 如果密钥环将托管“feisty”仓库，则需要以下步骤
+
 （否则，请跳过）：
+
 gpg-no-default-keyring keyring /home/<username>/devel/ubuntu/
+
 mirror-keyring/trustedkeys.gpg-import /usr/share/keyrings/
+
 unknown-archive-keyring.gpg
 
 从 https://launchpad.net/ubuntu/+archivemirrors 列表中选择一个距离你物理位置接近且有可用同步的镜像，然后运行以下命令创建本地镜像：
@@ -9459,15 +8405,12 @@ CDIMAGE_INSTALL=1
 
 *(注：由于原文中的 config 代码块包含较长且逻辑，根据“代码块不需要翻译”的原则，此处保留了结构并翻译了注释部分)*
 
-
-
-
-
 ## 第 11 章：整合一切
 
 在前面的示例中，`pptp-linux` 是一个依赖项。如果它在括号中，则表示该包是推荐的而非强制依赖。例如，接下来的“Online Services”示例就是一个推荐项：
 
 - *Online Services*:
+
 - (ubuntu-client-gnome)
 
 种子文件（seed file）中的感叹号标识一个每个种子的黑名单（per-seed blacklist）。感叹号意味着永远不要包含在该种子或其任何条目中。例如下：
@@ -9484,10 +8427,15 @@ libcodec cannot be shipped on CDS (c.f. Ubuntu technical board resolution
 种子文件中需要注意的其他点是进程替换变量。包含替换变量的包将根据这些变量值的每种组合展开为相应的包。例如如下：
 
 - *Kernel-Stem: linux linux-image
+
 == i386 ==
+
 * $(Kernel-Stem)-generic-pe [i386]
+
 * linux-headers-generic-pe [i386]
+
 * $(Kernel-Stem)-virtual [i386]
+
 * linux-headers-virtual [i386]
 
 种子条目后面也可以跟着方括号。`[powerpc]`。
@@ -9531,9 +8479,11 @@ include BRANCH
 ```
 
 位于下方的该行会导致包含另一个种子分支。
+
 `supported` 种子列出了构建发行版所需的所有包（出于空间考虑，它们不一定在最终镜像中），因此，`germinate` 不会将由于种子包及其依赖项的后续依赖而产生的所有包添加到每个输出中，除非它们在种子列表中。包会被添加到 `supported` 中。与任何其他种子一样，`supported` 种子可能包含它自己的包列表。
 
 `blacklist` 文件没有定义包列表，而是包含了永远不会包含在 `germinate` 输出中的包列表。
+
 `netbook-remix`、`desktop-common`、`live`、`ship-live` 等其他种子可以命名为任何名称，但它们必须存在，并且必须在 `STRUCTURE` 文件中。
 
 ## 示例：发芽 Ubuntu Netbook Remix
@@ -9633,10 +8583,6 @@ universe,multiverse
 
 这是重命名源包。它不是新元包的名字。该名称在 `debian control` 文件的第二个段中定义。
 
-
-
-
-
 # 第11 章：整合一切
 
 接下来，进入 `netbook-meta-1.157` 目录，然后进入 `debian` 子目录。编辑 `control` 文件，并将旧的包名（例如 `ubuntu-netbook-remix`）替换为新的重命名包（例如 `ubuntu-netbook-example`）。一个 `control` 文件示例所示：
@@ -9658,6 +8604,8 @@ This package depends on all of the packages in the Ubuntu Netbook Remix System
 ```
 
 它也被用于确保正确升级，因此建议不要删除它。
+
+
 
 保存此文件，然后编辑 `debian` 文件。如果你更改了 `STRUCTURE` 文件中“Gaining the Seeds”部分的主文件名（例如从 `netbook-remix` 更改为 `netbook-example`），你也应该替换它。这里是一个 `rules` 文件示例：
 
@@ -9747,6 +8695,7 @@ $ dpkg-query -W -f='${Package}, ' | sed 's/,$//' > metapackage-list.txt
 ```
 
 以下是在运行 `karmic` 的 Acer Aspire 设备上运行此命令的片段：
+
 ```
 acpi-support, acpid, adduser, alcarte, alsa-base, alsa-utils, anachron, apmd, app-install-data, apt-install-data-commercial, apparmor, apparmor-utils, apt-pt-gtk, apt, apt-transport-https, apt-utils, apt-xian-ian, aptitude, apturl, aptspell-en, at, at-spi, avahi-autoid, avahi-daemon, avahi-utils, base-files, base-passwd, bash, bash-completion, bc, bind9-host, binfmt-support, binutils, bluetooth, blue-base, blue-cusps, blue-gnome, blue-streamer, blue-utils, bogofilter, bofitter-bd, bofitter-communication, britty, brittle-xl, binutils
 ```
@@ -9764,10 +8713,6 @@ $ dpkg-deb -b metapackage-name.deb
 预置安装程序（Preeding the Installer）意味着什么。
 
 如所述，有两种安装程序类型：`debian-installer` 和 `Ubiquity`。对于 `debian-installer`，如果你更改了 `STRUCTURE` 文件中“Gaining the Seeds”部分的主文件名（例如从 `netbook-remix` 更改为 `netbook-example`），你也应该替换它。对于 `Ubiquity`，如果需要更改，则应切换 `seed_base` 为 `+ubuntu-mobile/ubuntu-seeds` 且 `seed_dist` 为 `mobile.(dist)s`。
-
-
-
-
 
 ## 第 11 章：整合一切
 
@@ -9796,16 +8741,27 @@ $ dpkg-deb -b metapackage-name.deb
 ### 移动计算架构
 
 | 用户应用程序 | 系统应用程序 |
+
 | :--- | :--- |
+
 | | 平台特定用户界面 |
+
 | | 应用框架/语言绑定 |
+
 | | 软件基础核心（例如 Moblin） |
+
 | UI 服务 - 2D/3D 界面，GUI 工具包 | |
+
 | 应用服务 - 音频、视频、媒体、网络、位置、消息总线、内容、电源、Web | |
+
 | 中间件 | |
+
 | 安全/消息/数据库/系统库 | |
+
 | Linux 内核和驱动程序 | |
+
 | 硬件：处理器/内存/I-O/媒体/触摸文件 |
+
 | 丰富媒体/数据 | 存档 |
 
 图 12-1
@@ -9835,10 +8791,6 @@ $ dpkg-deb -b metapackage-name.deb
 当托瓦兹（Torvalds）编写他的第一行代码时，斯托曼（Stallman）正拿着牌子：“应该是自由的”。在《植物杂交实验》的论文中，人们捕捉到了显性基因隐性基因运作的第一种形式。曼德尔是一个典型的业余科学家，他学习了如何创造“优良品种”的结果。
 
 在接下来的十年里，大量微小、渐进的变化席卷了整个行业。今天的技术与几年前已非常不同，并且比十年前进化得更多。由于近期出现了一系列移动技术——硬件和软件，而且开源提供了几乎无限的组合，因此很有可能发生某些奇妙的移动开发。
-
-
-
-
 
 # 第 12 章：移动方向
 
@@ -9910,14 +8862,13 @@ GPS 信息、WiFi/手机定位以及其他地理感知技术确实可以帮助�
 
 我已经在基于 ARM 和基于 Atom 的系统上安装了 Ubuntu。我喜欢 Atom 的处理性能，但我喜欢 ARM 的低功耗。这将是一场令人兴奋的参与战。
 
-
-
-
 ## 第 12 章：移动方向
 
 正如 Ars Technica 当时所言：
 
 英特尔正在投入大量资源推动移动 Linux 的采用，并使 Moblin 成为设备制造商一个可靠的平台。如果英特尔能够解决影响 Linux 设备制造商的问题，并为基于 Atom 的设备提供一个更整合的平台，这对开源操作系统来说可能是一个巨大的胜利。
+
+
 
 2009年1月，英特尔发布了针对笔记本电脑的 Moblin V2 Core 首个 Alpha 版本。随后在3月发布了后续版本。其中一个被广泛讨论的功能是“快速启动（Fastboot）”，它能让笔记本电脑快速运行！
 
@@ -9949,7 +8900,7 @@ GPS 信息、WiFi/手机定位以及其他地理感知技术确实可以帮助�
 
 最初，SheevaPlug 设计用于媒体服务器和备份机等应用，这两者都可以连接到云计算。
 
-通过 SheevaPlug，Marvell 正在采取开源方法——将其设计开源，并鼓励在 http://plugcomputer.org 等网站上开展开发活动。第三方开发者已经将这些设计整合到他们自己的产品和系统中，例如 http://pogoplug.com。
+通过 SheevaPlug，Marvell 正在采取开源方法——将其设计开源，并鼓励在 `http://plugcomputer.org` 等网站上开展开发活动。第三方开发者已经将这些设计整合到他们自己的产品和系统中，例如 `http://pogoplug.com`。
 
 ## 未来
 
@@ -9958,9 +8909,6 @@ GPS 信息、WiFi/手机定位以及其他地理感知技术确实可以帮助�
 我对朋友和大学生进行了自己的调查。特别是，我想了解他们对 Linux 未来的看法。虽然我的调查在统计学上意义并不显著，但显然 Linux 面临着更广泛采纳的障碍。一个朋友这样解释道：
 
 > 经济学中有一个术语叫做“焦点（focal points）”。它指的是在给定区域围绕围绕少数点进行的发展（来自许多同样可能的点）。这就是为什么事情会发生在 Mac OS 和 Windows 上。Mac 上是因为所有酷酷的孩子都聚集在那里，而 Windows 上是因为其他人都在那里。实际上，这要简单得多——事情发生是因为它们发生在那里。”这是 Linux 的主要观点。
-
-
-
 
 ## 第 12 章：移动端方向
 
@@ -9986,7 +8934,7 @@ Linus Torres 做过这样一个观察：
 
 ## 第 13 章：常见问题及可能的解决方案
 
-本章尝试收集在 ubuntu-mobile 邮件列表中发布的几个最常见问题，以及互联网上提供的解决方案。
+本章尝试收集在 `ubuntu-mobile` 邮件列表中发布的几个最常见问题，以及互联网上提供的解决方案。
 
 ### 启动过程停止
 
@@ -10002,13 +8950,13 @@ will mount root from /dev/sdb
 
 答：可能是由未正确写入 USB 盘引起的。
 
-要将镜像拷贝到 USB 盘（假设 USB 盘为 /dev/sdb），请使用以下命令：
+要将镜像拷贝到 USB 盘（假设 USB 盘为 `/dev/sdb`），请使用以下命令：
 
 ```
 $ sudo bs=1024 if=<image file> of=/dev/sdb
 ```
 
-dd 是一个用于原始数据低级拷贝和转换的程序。
+`dd` 是一个用于原始数据低级拷贝和转换的程序。
 
 将镜像写入 USB 盘就像填一个棋盘。如果你不提供 1,024 的块大小参数，它会以一种方式（按行）写入，但使用 `bs=1024` 后，它会按列写入。在测试此项时，仅使用 `dd if=<image> of=<drive>` 的成功率约为 40%，但使用 `bs=1024` 后，这一成功率提升到近 99%。
 
@@ -10018,8 +8966,9 @@ dd 是一个用于原始数据低级拷贝和转换的程序。
 
 答：要让图标出现在桌面上，请遵循以下步骤：
 
-- 1. 将桌面文件安装到 /usr/share/applications/
-- 2. 将图标安装到 /usr/share/icons/hicolor/<size>/<type>（例如，/usr/share/icons/hicolor/64x64/apps/myapp）。
+- 1. 将桌面文件安装到 `/usr/share/applications/`
+
+- 2. 将图标安装到 `/usr/share/icons/hicolor/<size>/<type>`（例如，`/usr/share/icons/hicolor/64x64/apps/myapp`）。
 
 如果步骤 1 执行正确，应用程序应该显示在 UI 中。
 
@@ -10035,7 +8984,7 @@ dd 是一个用于原始数据低级拷贝和转换的程序。
 /desktop/hilden/htmlconfplugin/onlyshowin-filter
 ```
 
-检查 .desktop 文件中的 `OnlyShowIn` 值。如果为 False，则每个桌面都都会显示。执行此命令：
+检查 `.desktop` 文件中的 `OnlyShowIn` 值。如果为 False，则每个桌面都都会显示。执行此命令：
 
 ```
 /onlyshowin_ignore
@@ -10047,11 +8996,13 @@ dd 是一个用于原始数据低级拷贝和转换的程序。
 
 显然，当每个应用程序都是良好公民并符合 freedesktop.org 标准时，这个键应该会消失。
 
-此外，在处理 .desktop 文件时，desktop-file-utils 包提供了一些实用程序。它们是：
+此外，在处理 `.desktop` 文件时，`desktop-file-utils` 包提供了一些实用程序。它们是：
 
-- update-desktop-database — 更新桌面 MIME 映射。
-- desktop-file-validate — 验证桌面文件。
-- desktop-file-install — 安装桌面文件
+- `update-desktop-database` — 更新桌面 MIME 映射。
+
+- `desktop-file-validate` — 验证桌面文件。
+
+- `desktop-file-install` — 安装桌面文件
 
 像这样使用它们：
 
@@ -10069,9 +9020,9 @@ $ desktop-file-validate hello-world.desktop
 
 ### 自动设置标记
 
-问：是否有方法让 configure.ac 在构建架构时设置 USE_HILTON 标记？
+问：是否有方法让 `configure.ac` 在构建架构时设置 `USE_HILTON` 标记？
 
-答：可以在 debian/rules 中添加以下规则：
+答：可以在 `debian/rules` 中添加以下规则：
 
 ```
 ifeq ($(DEB_BUILD_ARCH), lpia):
@@ -10081,23 +9032,19 @@ DEB_CONFIGURE_FLAGS = --enable-hildon
 endif
 ```
 
-这会导致在为该架构构建时调用 configure 带有额外的参数。
+这会导致在为该架构构建时调用 `configure` 带有额外的参数。
 
 ### 使用 USB
 
-问：我使用 Windows Vista，想准备一个 USB 盘在我的三星 Ultra 上安装 ubuntu-mobile.img。最好的方法是什么？
+问：我使用 Windows Vista，想准备一个 USB 盘在我的三星 Ultra 上安装 `ubuntu-mobile.img`。最好的方法是什么？
 
-答：最好的方法是使用 Windows 版的 dd，可以在 http://uranus.it.sw.edu/-jn/linux/rawwrite/dd-old.htm 获取。
+答：最好的方法是使用 Windows 版的 `dd`，可以在 `http://uranus.it.sw.edu/-jn/linux/rawwrite/dd-old.htm` 获取。
 
 ### 在 Freerunner 上运行 Ubuntu
 
 问：Ubuntu MID 有可能运行在像 Neo Freerunner 这样的设备上吗？Freerunner 已经 Debian 版本，所以可能是可能的？
 
 答：没有什么可以阻止这一点，但目前 Ubuntu Mobile 团队的目标并不是支持手机：Ubuntu MID 是关于“MID”，而且更多是关于互联网体验。不过确实，最近的一些 MID 正在配备 SIM 卡和手机功能。
-
-
-
-
 
 # 第13章：常见问题与可能的解决方案
 
@@ -10123,7 +9070,7 @@ A：可以，它可以安装并且运行良好。增加触摸屏的面板大小�
 $ gtool-2 --set /apps/netbook-launcher/tablet_mode --type boolean true
 ```
 
-另一个实用的技巧是更改 $your_fav_theme 的 `gtkrc`，增加滚动条、复选框和单选按钮的 `xpadding` 和 `ypadding` 属性，让 GNOME 更加友好。
+另一个实用的技巧是更改 `$your_fav_theme` 的 `gtkrc`，增加滚动条、复选框和单选按钮的 `xpadding` 和 `ypadding` 属性，让 GNOME 更加友好。
 
 # 使用 apt
 
@@ -10135,13 +9082,13 @@ A：尝试更改你的 apt 仓库源。有时它们会变得不同步，通过�
 
 Q：我如何加入 Ubuntu Mobile 开发者团队？
 
-A：如果你需要 `ubuntu-mobile-repositories` 的写入权限，请在 launchpad.net 上加入 Ubuntu Mobile and Embedded 开发者团队。这是一个受管理的组。不过，对团队做出“持续”贡献就足够被接受了。这可以是代码、文档、艺术作品到宣传工作的任何。
+A：如果你需要 `ubuntu-mobile-repositories` 的写入权限，请在 `launchpad.net` 上加入 Ubuntu Mobile and Embedded 开发者团队。这是一个受管理的组。不过，对团队做出“持续”贡献就足够被接受了。这可以是代码、文档、艺术作品到宣传工作的任何。
 
 # 使用 KVM 或 QEMU
 
 Q：我无法让 KVM 或 QEMU 运行。我该怎么办？
 
-A：如果你遇到这种情况，请确保你已经安装了 KVM 和 QEMU 软件包。接下来，从 http://cdimage.ubuntu.com/mobile/releases/hardy/mid-8.04.kvm.tar.gz 删除旧的 hardy 版本的 MID。
+A：如果你遇到这种情况，请确保你已经安装了 KVM 和 QEMU 软件包。接下来，从 `http://cdimage.ubuntu.com/mobile/releases/hardy/mid-8.04.kvm.tar.gz` 删除旧的 hardy 版本的 MID。
 
 该包包含了一个名为 `root.cow2` 的虚拟镜像（cow2 是 QEMU 磁盘镜像格式）和一个名为 `ubuntu.kvm` 的启动脚本：
 
@@ -10170,7 +9117,7 @@ A：以安全图形模式（Safe Graphics mode）启动 Ubuntu。这将使用 Ve
 
 Q：我在 Ee PC 上安装了 Ubuntu Remix，性能非常差。我安装了默认的 Ubuntu Jaunty 进行测试，性能有了显著提高。
 
-A：由于视频驱动程序的 Bug，这意味着默认没有启用平铺（tiling）（这对于 Ubuntu Network Remix 是关重要的，因为启动器是基于 GL 的）。修复已经完成，可以在此处找到：http://people.ubuntu.com/~apw/lp349314-jaunty/
+A：由于视频驱动程序的 Bug，这意味着默认没有启用平铺（tiling）（这对于 Ubuntu Network Remix 是关重要的，因为启动器是基于 GL 的）。修复已经完成，可以在此处找到：`http://people.ubuntu.com/~apw/lp349314-jaunty/`
 
 需要安装的文件是 `linux-headers-2.6.28-11-generic_2.6.28-11.43~lp349314apw5_i386.deb` 和 `linux-image-2.6.28-11-generic_2.6.28-11.43~lp349314apw5_i386.deb`。将它们下载到文件夹中并运行以下命令进行安装：
 
@@ -10184,10 +9131,6 @@ $ dpkg -i *.deb
 
 这些是关于 Ubuntu Mobile 的常见问题和疑问，经常出现在邮件列表中。如果你有疑问，可以给邮件列表发送邮件。
 
-
-
-
-
 ## 附录 A：Ubuntu 的 Pi ARM
 
 ### 应用想法
@@ -10200,15 +9143,17 @@ $ dpkg -i *.deb
 
 ### OpenCV
 
+
+
 OpenCV（开源计算机视觉）是一个主要面向实时计算机视觉的编程函数库。尽管 OpenCV 已开源很久，但它并不支持 ARM 平台。要让 OpenCV 与 Python 工作需要几十个依赖项。它在图形处理方面对浮点硬件的要求很高（而此版本的 BeagleBone 缺乏浮点硬件）。即使在在 ARM 上运行 Ubuntu 的早期阶段，OpenCV 在 BeagleBone 上运行也非常良好。
 
-### 可迁移性（Relatable）
+## 可迁移性（Relatable）
 
 另一个感兴趣的应用领域是我称为“Relatable”的“Relocatable Computing”（可迁移计算）的简称。可迁移的本质在于，你可以以最少的设置将计算机移动到任何地方。如果网络需要移动（例如在灾难恢复中），Relatable 将非常有用。任何网络基础设施都有被损坏或破坏的风险，可迁移性是一个实用的解决方案。
 
 一个简单的例子是移动 WiFi，无线设备可能不需要基础设施的支持。事实证明，“移动 WiFi”最困难的问题之一是找到为低功耗无线电和计算机供电。通常建筑主会提供放置天线的空间，但没有电源。因此，我们转向太阳能作为可行的电源解决方案。BeagleBone 功耗低，完全可以在太阳能供电的范围内。因此，挑战在于更上一楼。于是产生了一个目标：将一个 BeagleBone 集群构建成一台太阳能驱动的超级计算机。这就是后来为人知的 SWARM。
 
-### ARM 的热点是什么？
+## ARM 的热点是什么？
 
 SWARM 是一个缩写，代表：
 
@@ -10224,17 +9169,13 @@ Marvell 公司慷慨地捐了十台 BeagleBone 来支持这个早期开源创新
 
 2009 年 6 月 16 日，我们花了一天时间配置和测试了一台 BeagleBone。我们安装了最新版本的 Ubuntu 操作系统。来自 Marvell 的 Linux 和 BeagleBone 专家 Rabee Curry 贡献了他的专业知识和帮助。（Rabee 是 BeagleBone 安装程序的作者。他帮助配置了 BeagleBone，使 Linux 内核存储在 NAND Flash 中，而 Ubuntu 系统的其余部分安装在快速的 8GB SD 卡上。）初始配置是横向而非垂直的，设备采用简单的表格布局，如图 A-3 所示。
 
-为了测试每个插口，我们运行了基础 Ubuntu 软件（例如 Python）。然后我们安装了各种额外的 Ubuntu 软件包（如 OpenCV 和 MEMCACHED）。我们计划使用 MEMCACHED 构建一个超级集群。有大量的 Web 服务器在 24/7 天候运行中消耗着巨大的电力。类似于 BeagleBone 的设备或像 SWARM 这样的集群在提供可接受服务器性能的同时，可能会节省大量能量。
+为了测试每个插口，我们运行了基础 Ubuntu 软件（例如 `Python`）。然后我们安装了各种额外的 Ubuntu 软件包（如 `OpenCV` 和 `MEMCACHED`）。我们计划使用 `MEMCACHED` 构建一个超级集群。有大量的 Web 服务器在 24/7 天候运行中消耗着巨大的电力。类似于 BeagleBone 的设备或像 SWARM 这样的集群在提供可接受服务器性能的同时，可能会节省大量能量。
 
 我们最初使用两台千兆交换机将我们的 BeagleBone 连接在一起。（D-Link DGS-2208 10/100/1000 Mbps 8 口桌面绿色以太网交换机在耗电方面非常智能——当插口闲置时它会降低功耗，从而节省电力并减少热量。）我们之后会扩展到更大的交换机。
 
 Sage Radachowsky 带来了他的太阳能电池板、充电控制器、电池和钳子。在一个小时内，他就完成了所有的接线工作，提供了足够的太阳能，让我们我们的十台 BeagleBone 和耗电大户交换机平稳运行。
 
 波士顿 Linux 用户组的成员 Bill Bogstad 负责通过一个巨大的千兆交换机将 BeagleBone 联网。团队确保了 WAAV（装在标准背包内，天线伸向外面）运行正常。这个无线/蜂窝网络适配器迅速投入使用，插入千兆交换机，并作为 DHCP 服务器为每台 BeagleBone 提供网络地址。
-
-
-
-
 
 ## 附录 A：Ubuntu 的 ARM 之路
 
@@ -10276,45 +9217,45 @@ Ubuntu 的通用性——无论是海量的软件库还是对平台的全面覆�
 
 ## Git 使用
 
-Git 是一个分布式版本控制管理 (SCM) 系统，由 Linus Torvalds 在 2005 年编写，用于跟踪 Linux 内核的开发。从那时起，它由全球一群庞大的黑客进行了开发。
+`Git` 是一个分布式版本控制管理 (SCM) 系统，由 Linus Torvalds 在 2005 年编写，用于跟踪 Linux 内核的开发。从那时起，它由全球一群庞大的黑客进行了开发。
 
-git 旨在用于分布式环境，它非常适合在开发者小组中共享工作，无论该小组的大小或地理位置如何。它针对将其他开发者的代码合并到你的仓库中进行了优化。
+`git` 旨在用于分布式环境，它非常适合在开发者小组中共享工作，无论该小组的大小或地理位置如何。它针对将其他开发者的代码合并到你的仓库中进行了优化。
 
-为了让你尽可能快地理解 git，我们根据可能使用的项目类型组织了此附录。除了使用的 git 命令外，还列出了开发者在项目中发挥作用所需的命令。
+为了让你尽可能快地理解 `git`，我们根据可能使用的项目类型组织了此附录。除了使用的 `git` 命令外，还列出了开发者在项目中发挥作用所需的命令。
 
-首先，使用了 git 的基本仓库命令——`clone`、`init`、`fsck` 和 `gc`，然后展示了作为独立开发者在独立项目中使用与 git 交互所需的命令。最后，通过不同的角色（贡献者、维护者和集成者）演示了对多协作项目有用的命令。
+首先，使用了 `git` 的基本仓库命令——`clone`、`init`、`fsck` 和 `gc`，然后展示了作为独立开发者在独立项目中使用与 `git` 交互所需的命令。最后，通过不同的角色（贡献者、维护者和集成者）演示了对多协作项目有用的命令。
 
 ## Git 工作原理
 
-Git 使用三种不同的对象来描述整个项目：blob、tree 和 changeset（更改集）。这些每个对象都有不同的用途，但它们都参与了对你项目内容修改的跟踪。
+`Git` 使用三种不同的对象来描述整个项目：`blob`、`tree` 和 `changeset`（更改集）。这些每个对象都有不同的用途，但它们都参与了对你项目内容修改的跟踪。
 
-## Blob 对象
+### Blob 对象
 
-blob 只是一个二进制数据块，不指代任何内容。blob 中执行的唯一数据验证是通过 SHA1 哈希值进行索引的，此外，它没有属性——没有名称关联，没有权限。它是一个纯数据块，可以转换为文件内容。
+`blob` 只是一个二进制数据块，不指代任何内容。`blob` 中执行的唯一数据验证是通过 SHA1 哈希值进行索引的，此外，它没有属性——没有名称关联，没有权限。它是一个纯数据块，可以转换为文件内容。
 
-## Tree 对象
+### Tree 对象
 
-tree 对象由按名称排序的权限、名称和 blob 数据列表定义。这意味着两个相同的独立的 tree 对象将共享（或指向）相同的 blobs。这在 git 中为你提供了一个非常有趣的特性来跟踪文件重命名。无论如何，我们并没有弄数据，只是通过不同的路径——或不同的 tree 对象进行指向。
+`tree` 对象由按名称排序的权限、名称和 `blob` 数据列表定义。这意味着两个相同的独立的 `tree` 对象将共享（或指向）相同的 `blobs`。这在 `git` 中为你提供了一个非常有趣的特性来跟踪文件重命名。无论如何，我们并没有弄数据，只是通过不同的路径——或不同的 `tree` 对象进行指向。
 
-## Changeset 对象
+### Changeset 对象
 
-changeset 对象在 git 仓库中引入了历史的概念。它不仅仅是给你一个物理状态。
+`changeset` 对象在 `git` 仓库中引入了历史的概念。它不仅仅是给你一个物理状态。
 
 ## Git 对象如何相互关联
 
-如果你理解这些类型的对象是如何相互关联的，理解 git 就会变得简单。图 B-1 显示了 git 如何工作以及它是如何跟踪你的项目内容的。
+如果你理解这些类型的对象是如何相互关联的，理解 `git` 就会变得简单。图 B-1 显示了 `git` 如何工作以及它是如何跟踪你的项目内容的。
 
 ![](img/20e1447b223c3f9afa3d43610c6361ee_313_0.png)
 
 ## 基本仓库命令
 
-在实际开始使用 git 之前，你需要一个仓库来工作。如果你正在启动一个独立项目，将初始化一个空仓库。该命令在你所在的目录中创建一个 .git 目录。
+在实际开始使用 `git` 之前，你需要一个仓库来工作。如果你正在启动一个独立项目，将初始化一个空仓库。该命令在你所在的目录中创建一个 `.git` 目录。
 
-## 创建新仓库
+### 创建新仓库
 
-如果你想从零开始一个新项目，请使用 git `init` 命令。
+如果你想从零开始一个新项目，请使用 `git` `init` 命令。
 
-## 克隆现有仓库
+### 克隆现有仓库
 
 你可能想与现有项目进行协作。在这种情况下，你必须克隆该项目的主树并开始工作。在这种情况下你可以使用以下命令：
 
@@ -10332,19 +9273,15 @@ $ git clone git.kernel:pub/scm/linux/kernel/git/torvalds/linux-2.6.git
 
 克隆实际上会在本地创建一个远程仓库副本，这意味着你拥有项目的完整历史。你可以离线工作、向你的本地副本提交、生成差异、检出旧代码、创建分支，进行任何操作。
 
-因为 git 是一个分布式 SCM，所以你在主远程仓库的本地副本上进行所有这些工作是自然的。没有这种自由，就不可能拥有真正的分布式 SCM。
+因为 `git` 是一个分布式 SCM，所以你在主远程仓库的本地副本上进行所有这些工作是自然的。没有这种自由，就不可能拥有真正的分布式 SCM。
 
-## 检查仓库错误
+### 检查仓库错误
 
 文件系统损坏似乎不可避免。你可以通过以下命令检查仓库的健康状况来尝试避免此类损坏：
 
 ```bash
 $ git fsck
 ```
-
-
-
-
 
 ## 附录 B：Git 使用
 
@@ -10359,19 +9296,19 @@ dangling tree 2eedf3560f4d043b0047f5ceb5bc5f163841e5
 
 ## 仓库的维护
 
-保持仓库整洁非常重要；这有助于 git 更快地工作。在这里你将看到如何删除松散对象（loose objects）、重新创建 git 的包（packs）以及删除不必要的包。首先运行以下命令：
+保持仓库整洁非常重要；这有助于 `git` 更快地工作。在这里你将看到如何删除松散对象（loose objects）、重新创建 `git` 的包（packs）以及删除不必要的包。首先运行以下命令：
 
 ```bash
 $ git gc
 ```
 
-`gc` 会尽力保持你的仓库，并移除松散对象和未使用的包。然而，仅为了常规维护，git 不需要做得太激进。在这种情况下，你可能想要使用以下命令：
+`gc` 会尽力保持你的仓库，并移除松散对象和未使用的包。然而，仅为了常规维护，`git` 不需要做得太激进。在这种情况下，你可能想要使用以下命令：
 
 ```bash
 $ git repack
 ```
 
-通过适当选项，你可以告诉 `git repack` 获取你所有的对象，并且不是创建一个带有增量的增量包，而是只创建一个包含所有对象的单一包。这将节省大量的磁盘空间并帮助 git 运行得更快。要实现这一点，你可以使用 `git repack -a -f -d`。
+通过适当选项，你可以告诉 `git repack` 获取你所有的对象，并且不是创建一个带有增量的增量包，而是只创建一个包含所有对象的单一包。这将节省大量的磁盘空间并帮助 `git` 运行得更快。要实现这一点，你可以使用 `git repack -a -f -d`。
 
 `git-prune` 命令将修剪（删除）仓库中所有未使用的松散对象。也就是说，所有已包含包中的松散对象将被清除。
 
@@ -10389,7 +9326,7 @@ $ git prune-packed
 
 ## 个人开发者
 
-现在你已经有了一系列基础命令，可以开始使用 git 进行一些实际工作了。首先，让我们看看在独立项目中工作的开发者需要什么才能用 git 跟踪其历史。为了实现这一点，首先使用以下命令检查你正在哪个分支上工作：
+现在你已经有了一系列基础命令，可以开始使用 `git` 进行一些实际工作了。首先，让我们看看在独立项目中工作的开发者需要什么才能用 `git` 跟踪其历史。为了实现这一点，首先使用以下命令检查你正在哪个分支上工作：
 
 ```bash
 $ git show-branch
@@ -10442,8 +9379,11 @@ Author: Felipe Balbi <my_email@mydomain.com>
 Date: Wed Feb 25 21:50:39 2009 +0200
 
 commit 3
+
 Long commit description
+
 Signed-off-by: Felipe Balbi <my_email@mydomain.com>
+
 ```bash
 $ git branch
 ```
@@ -10461,6 +9401,7 @@ topic2
 
 ```
 ```
+
 ```bash
 $ git branch branch_name 将创建一个名为 branch_name 的新分支：
 $ git branch topic3
@@ -10476,6 +9417,7 @@ topic3
 
 ```
 ```
+
 ```bash
 $ git branch -m new_name 将你的当前分支重命名为 new_name：
 $ git branch -m master_old
@@ -10490,6 +9432,7 @@ topic3
 ```
 
 ```
+
 ```bash
 $ git branch -d branch_name 将删除一个名为 branch_name 的分支：
 $ git branch -d topic3
@@ -10504,14 +9447,11 @@ topic2
 
 ```
 ```
+
 ```bash
 $ git branch -m new_name 将你的当前分支重命名为 new_name：
 $ git branch -m master_old
 ```
-
-
-
-
 
 ## 在 Launchpad 上托管您的项目
 
@@ -10535,13 +9475,15 @@ Launchpad 是一个用于软件开发项目的托管和协作平台。它提供 
 
 目前，该服务仅限于跟踪每个项目的主分支。
 
-如果你在使用该服务时遇到问题，可以在网络 renode 上的 IRC 频道 #launchpad 中咨询。
 
-互联网中继聊天 (IRC) 是一种即时消息或同步会议的形式。它由 Bazaar 等客户端提供（通过 `sudo apt-get install xchat`）。
+
+如果你在使用该服务时遇到问题，可以在网络 `renode` 上的 IRC 频道 `#launchpad` 中咨询。
+
+互联网中继聊天 `IRC` 是一种即时消息或同步会议的形式。它由 `Bazaar` 等客户端提供（通过 `sudo apt-get install xchat`）。
 
 ## 使用 Bazaar 和 Launchpad
 
-这需要 Launchpad 跟踪您的 SSH 密钥。查找 ssh 密钥的快速方法是运行以下命令：
+这需要 `Launchpad` 跟踪您的 `SSH` 密钥。查找 `ssh` 密钥的快速方法是运行以下命令：
 
 ```bash
 $ cat ~/.ssh/id_rsa.pub
@@ -10558,23 +9500,23 @@ AoQNS999fxxJz0AG0qG7z2DIH/9Y+i+nhYYGhf32J27PccEu5/mi5w100HHVv6nzgbbtqt1VfJ
 ZHPOBEReBs3N3Cnrd/uFFYKkCoLdIsyoat9NHycub9PKFs=SDel1X2b5B2Iw==ian@lawrence
 ```
 
-可以将此内容粘贴到 Update SSH Launchpad 中。
+可以将此内容粘贴到 `Update SSH Launchpad` 中。
 
-如果你没有 ssh 密钥，请以下命令来创建一个：
+如果你没有 `ssh` 密钥，请以下命令来创建一个：
 
 ```bash
 $ ssh-keygen -t dsa
 ```
 
-Bazaar 本身通过以下命令安装并创建一个：
+`Bazaar` 本身通过以下命令安装并创建一个：
 
 ```bash
 $ sudo apt-get install bzr
 ```
 
-在本示例中将托管的代码将是 Ubuntu Mobile 指南的第一版本——Ubuntu 7.10 (Gutsy Gibbon) 开发者 Alpha 版——该版本可以在 http://umeguide.net/ 获取。
+在本示例中将托管的代码将是 `Ubuntu Mobile` 指南的第一版本——`Ubuntu 7.10 (Gutsy Gibbon)` 开发者 `Alpha` 版——该版本可以在 `http://umeguide.net/` 获取。
 
-首先告诉 Bazaar 关于你自己的信息：
+首先告诉 `Bazaar` 关于你自己的信息：
 
 ```bash
 $ bzr whoami 'Ian Lawrence root@ianlawrence.info'
@@ -10582,7 +9524,7 @@ $ bzr whoami 'Ian Lawrence root@ianlawrence.info'
 
 接下来，进入代码文件夹并初始化本地仓库：
 
-查看 Bazaar 的“状态（status）”：
+查看 `Bazaar` 的“状态（status）”：
 
 ```bash
 $ bzr status
@@ -10605,20 +9547,20 @@ validate.sh
 $ bzr add
 ```
 
-该命令会递归添加目录下的所有内容。也可以通过在 add 命令后指定文件来单独添加内容。也可以通过在 remove 命令后指定文件来删除：
+该命令会递归添加目录下的所有内容。也可以通过在 `add` 命令后指定文件来单独添加内容。也可以通过在 `remove` 命令后指定文件来删除：
 
 ```bash
 $ bzr add README
 $ bzr remove README
 ```
 
-当代码处于可以上传的合理状态时，在上传到远程服务器（在此例为 Launchpad）之前，需要将更改提交到本地仓库。这可能会让新用户感到困惑。
+当代码处于可以上传的合理状态时，在上传到远程服务器（在此例为 `Launchpad`）之前，需要将更改提交到本地仓库。这可能会让新用户感到困惑。
 
 ```bash
 $ bzr commit -m "Example repository for the Ubuntu Mobile Book"
 ```
 
-现在可以上传代码了。可以通过执行此类操作让 Launchpad 知道：
+现在可以上传代码了。可以通过执行此类操作让 `Launchpad` 知道：
 
 ```bash
 $ bzr launchpad-login ianlanwerence
@@ -10630,15 +9572,15 @@ $ bzr launchpad-login ianlanwerence
 $ bzr push --use-existing-dir sftp:/ianlanwerence@bazaar.launchpad.net/~ianlanwerence/+junk/mobileguide
 ```
 
-在 URL 中，ianlawrence 是你的 Launchpad 用户名（或团队名称）；project 是 Launchpad URL 中的项目名称（在本例中 +junk 表示该项目在 Launchpad 上不存在），branch 是你想要调的分支。
+在 `URL` 中，`ianlawrence` 是你的 `Launchpad` 用户名（或团队名称）；`project` 是 `Launchpad URL` 中的项目名称（在本例中 `+junk` 表示该项目在 `Launchpad` 上不存在），`branch` 是你想要调的分支。
 
 ## 获取分支并进行开发
 
-如果你想为该指南的开发者 Alpha 版本做出贡献，可以在此处获取代码 bzr launchpad.net/~ianlanwerence/+junk/mobileguide/
+如果你想为该指南的开发者 `Alpha` 版本做出贡献，可以在此处获取代码 `bzr launchpad.net/~ianlanwerence/+junk/mobileguide/`
 
 ## 桌面小插件代码
 
-以下桌面小插件是用 Python 编写的。它依赖于 `python-gnome2 extras` 软件包。因此，你需要使用 apt 安装。
+以下桌面小插件是用 `Python` 编写的。它依赖于 `python-gnome2 extras` 软件包。因此，你需要使用 `apt` 安装。
 
 首先，导入必要的库：
 
@@ -10650,7 +9592,7 @@ from gettext import gettext
 from egg.trayicon import TrayIcon
 ```
 
-注意，显示图标的方法是使用 `StatusIcon`（在 GTK 2 中）而不是 `TrayIcon`。接下来，创建一个 `PowerTray` 类以便方法可用：
+注意，显示图标的方法是使用 `StatusIcon`（在 `GTK 2` 中）而不是 `TrayIcon`。接下来，创建一个 `PowerTray` 类以便方法可用：
 
 ```python
 class PowerTray(TrayIcon):
@@ -10683,10 +9625,6 @@ class PowerTray(TrayIcon):
 # USA
 # depends python-gnome2
 ```
-
-
-
-
 
 ## 附录 D：桌面电源应用插件代码
 
@@ -10840,34 +9778,34 @@ if __name__ == '__main__':
 
 ## D-Bus：概述
 
-这是对官方 D-Bus 教程的精简版本，原文地址：http://dbus.freedesktop.org/doc/dbus-tutorial.html，该教程由 Havoc Pennington、David Wheeler 和 Colin Palmieri 编写。D-Bus 是一种进程间通信（IPC）系统。从架构上来说，它包含几个层：
+这是对官方 `D-Bus` 教程的精简版本，原文地址：`http://dbus.freedesktop.org/doc/dbus-tutorial.html`，该教程由 `Havoc Pennington`、`David Wheeler` 和 `Colin Palmieri` 编写。`D-Bus` 是一种进程间通信（`IPC`）系统。从架构上来说，它包含几个层：
 
-- 一个允许两个应用程序连接的库（libus）。
+- 一个允许两个应用程序连接的库（`libus`）。
+
 - 一个路由消息的消息总进程。
-- 针对 Python 和 KDE-qt 等语言的封装。
 
-D-Bus 是为两个特定场景设计的：
+- 针对 `Python` 和 `KDE-qt` 等语言的封装。
+
+`D-Bus` 是为两个特定场景设计的：
 
 - 同一会话内应用程序之间的通信；允许整个桌面进行集成并处理生命周期。
+
 - 桌面会话与操作系统之间的通信，操作系统通常包括内核和任何守护进程。
 
 ## 附录 E：D-Bus：概述
 
 其他实例是在用户登录时创建的。系统级和用户级守护进程是分离的。正常的会话内通信不涉及系统级，反之亦然。
 
-D-Bus 可能用于其设计目的之外的其他用途（图 E-1）。它与其他 IPC 形式区分开来的通用特征有：
+`D-Bus` 可能用于其设计目的之外的其他用途（图 `E-1`）。它与其他 `IPC` 形式区分开来的通用特征有：
+
+
 
 - 使用异步的二进制协议（类似于 X 窗口系统协议）。
 - 随时间开启的状态化且可靠的连接。
 - 消息总线是一个守护进程，而不是“集群”或分布式架构。
 - 许多实现和部署问题都有明确规定，而不是留下模糊的可配置或可插件化。
-
-
-
-
-
--   语义与现有的 DCOP 系统相似，允许 KDE 轻松地采用。
--   支持消息总线全局模式的安全特性。
+- 语义与现有的 DCOP 系统相似，允许 KDE 轻松地采用。
+- 支持消息总线全局模式的安全特性。
 
 ![](img/20e1447b223c3f9afa3d43610c6361ee_334_0.png)
 
@@ -10877,7 +9815,7 @@ D-Bus 可能用于其设计目的之外的其他用途（图 E-1）。它与其�
 
 ## 原生对象与对象路径
 
-你的编程框架定义了“对象”是什么样子的，通常有一个基类——例如：`java.lang.Object`、`GObject`、`QObject`、Python 的基类 Object 等。我们称之为*原生对象*（native object）。
+你的编程框架定义了“对象”是什么样子的，通常有一个基类——例如：`java.lang.Object`、`GObject`、`QObject`、Python 的基类 `Object` 等。我们称之为*原生对象*（native object）。
 
 底层 D-Bus 协议以及相应的 `libdbus` API 并不关心原生对象。然而，它提供了一种所谓的*对象路径*（object path）。对象路径的概念是，高级绑定可以创建原生对象实例，并允许对它们进行远程引用。
 
@@ -10923,7 +9861,7 @@ Object returnValue = proxy.MethodName(arg1, arg2);
 
 ## 总线名称
 
-当每个应用程序连接到总线守护进程时，该进程会立即为其分配一个名称，称为唯一连接名称。唯一名称以冒号 (:) 开头。这些名称在总线守护进程的生命周期内永远不会重用——这意味着，你知道给定的名称将始终指向同一个应用程序。唯一名称的示例可能是 :34-907。冒号后的数字具有
+当每个应用程序连接到总线守护进程时，该进程会立即为其分配一个名称，称为唯一连接名称。唯一名称以冒号 `:` 开头。这些名称在总线守护进程的生命周期内永远不会重用——这意味着，你知道给定的名称将始终指向同一个应用程序。唯一名称的示例可能是 `:34-907`。冒号后的数字具有
 
 当一个名称映射到特定的应用程序连接时，该连接被分配给该名称的所有者。
 
@@ -10953,12 +9891,12 @@ D-Bus 通过在进程之间发送消息来工作。如果你使用高级绑定�
 
 有四种消息类型：
 
--   方法调用：请求调用方法。
--   方法返回：返回调用方法的结果。
--   错误消息：返回异常。
--   信号消息：通知事件发生。
+- 方法调用：请求调用方法。
+- 方法返回：返回调用方法的结果。
+- 错误消息：返回异常。
+- 信号消息：通知事件发生。
 
-每条消息都有一个头部（包含字段）和一个正文（包含参数）。你可以将头部视为消息的路由信息，将正文视为代理。头部字段可能包括发送者名称、目标名称、方法或信号名称等。头部字段之一是描述正文中值的签名。例如，字母“i”意味着“32位整数”，“ii”意味着载荷。
+每条消息都有一个头部（包含字段）和一个正文（包含参数）。你可以将头部视为消息的路由信息，将正文视为代理。头部字段可能包括发送者名称、目标名称、方法或信号名称等。头部字段之一是描述正文中值的签名。例如，字母 `i` 意味着“32位整数”，`ii` 意味着载荷。
 
 ## 调用方法：场景
 
@@ -10968,26 +9906,20 @@ D-Bus 中的方法调用由两条消息组成：从进程 A 发送到进程 B �
 
 D-Bus 中方法调用的步骤如下：
 
--   绑定可能提供代理，这样调用进程对象就会调用另一个进程中的远程方法。如果是这样，应用程序调用代理上的方法，代理构造发送到远程进程的方法调用。
--   对于更底层的 API，应用程序可以自己构造方法调用，而不使用代理。
--   无论何种情况，方法调用都包含：属于远程进程的总线名称；方法名称；方法的参数；进程内部的对象路径；以及可选的指定方法的接口名称。
--   方法调用被发送到总线守护进程。
--   总线守护进程查看目标总线名称。如果某个进程拥有该名称，守护进程将方法调用转发给该进程。否则，总线守护进程创建一个错误消息并作为方法调用的回复返回。
--   接收进程解包方法调用。在简单的底层 API 情况下，它可能会立即运行方法并将方法回复发送到总线守护进程。使用高级绑定 API 时，绑定可能会检查对象路径、接口和
-
-
-
-
+- 绑定可能提供代理，这样调用进程对象就会调用另一个进程中的远程方法。如果是这样，应用程序调用代理上的方法，代理构造发送到远程进程的方法调用。
+- 对于更底层的 API，应用程序可以自己构造方法调用，而不使用代理。
+- 无论何种情况，方法调用都包含：属于远程进程的总线名称；方法名称；方法的参数；进程内部的对象路径；以及可选的指定方法的接口名称。
+- 方法调用被发送到总线守护进程。
+- 总线守护进程查看目标总线名称。如果某个进程拥有该名称，守护进程将方法调用转发给该进程。否则，总线守护进程创建一个错误消息并作为方法调用的回复返回。
+- 接收进程解包方法调用。在简单的底层 API 情况下，它可能会立即运行方法并将方法回复发送到总线守护进程。使用高级绑定 API 时，绑定可能会检查对象路径、接口和
 
 # 附录 E：D-Bus 概览
 
-方法名称，并将方法调用转换为对原生对象（如 Object、`java.lang.Object`、QObject 等））方法的调用，然后将原生方法的返回值转换为总线消息回复。
+方法名称，并将方法调用转换为对原生对象（如 `Object`、`java.lang.Object`、`QObject` 等））方法的调用，然后将原生方法的返回值转换为总线消息回复。
 
-- 7. 总线守护进程接收方法回复，并将其发送给发起方法调用的进程。
-
-- 8. 发起方法调用的进程查看方法回复，并利用回复中包含的任何返回值。回复也可能指示发生了错误。在使用绑定（binding）时，方法回复可能会被转换为代理方法的返回值，或者转换为一个异常。
-
-- 9. 总线守护进程会重新排消息顺序。也就是说，如果你向同一个接收者发送两个方法调用，它们将按照发送顺序被接收。然而，接收者并不要求按顺序回复调用；例如，它可能在不同的线程中处理每个调用，并在线程完成时以未定义的顺序返回消息。方法调用由方法调用者分配一个唯一的序列号，以便将回复消息与调用相匹配。
+- 总线守护进程接收方法回复，并将其发送给发起方法调用的进程。
+- 发起方法调用的进程查看方法回复，并利用回复中包含的任何返回值。回复也可能指示发生了错误。在使用绑定（binding）时，方法回复可能会被转换为代理方法的返回值，或者转换为一个异常。
+- 总线守护进程会重新排消息顺序。也就是说，如果你向同一个接收者发送两个方法调用，它们将按照发送顺序被接收。然而，接收者并不要求按顺序回复调用；例如，它可能在不同的线程中处理每个调用，并在线程完成时以未定义的顺序返回消息。方法调用由方法调用者分配一个唯一的序列号，以便将回复消息与调用相匹配。
 
 ## 发射信号：幕后
 
@@ -10997,17 +9929,14 @@ D-Bus 中的信号由单个消息组成，由一个进程发送到任意数量�
 
 在 D-Bus 中发射信号的过程如下：
 
-- 1. 创建信号并发送到总线守护进程。使用低级 API 时可以手动完成；使用某些绑定时，可以通过绑定原生对象发射原生信号或事件来由绑定为你完成。
-
-- 2. 信号消息包含指定信号的接口名称、信号名称、发送信号的进程的总线名称以及任何参数。
-
-- 3. 总线上的任何进程都可以注册“匹配规则”，指示它感兴趣的信号。总线拥有一份已注册的匹配规则列表。
-
-- 4. 总线守护进程检查信号并确定哪些进程对它感兴趣。它将信号发送给这些进程。
+- 创建信号并发送到总线守护进程。使用低级 API 时可以手动完成；使用某些绑定时，可以通过绑定原生对象发射原生信号或事件来由绑定为你完成。
+- 信号消息包含指定信号的接口名称、信号名称、发送信号的进程的总线名称以及任何参数。
+- 总线上的任何进程都可以注册“匹配规则”，指示它感兴趣的信号。总线拥有一份已注册的匹配规则列表。
+- 总线守护进程检查信号并确定哪些进程对它感兴趣。它将信号发送给这些进程。
 
 每个接收信号的进程都会决定如何处理它；如果使用绑定，绑定可能会选择在代理对象上发射原生信号。如果使用低级 API，进程可能只需查看信号发送者和名称，并根据看到的内容决定如何操作。
 
-## 内省 (Introspection)
+## 内省 Introspection
 
 D-Bus 对象可能支持 `org.freedesktop.DBus.Introspectable` 接口。该接口有一个方法 `introspect`，它不接受参数并返回一个 XML 字符串。该 XML 字符串描述了对象的接口、方法和信号。
 
@@ -11033,14 +9962,14 @@ system_bus = dbus.SystemBus()
 
 D-Bus 应用可以导出对象供其他应用程序使用。要开始操作另一个应用程序中的对象，你需要知道以下信息：
 
-- **总线名称 (bus name)** —— 这标识了你想通信的应用程序。你将通过已知名称标识应用程序，这是一个带有反转域名的点分隔字符串，例如 `org.freedesktop.NetworkManager` 或 `com.example.word`。
-- **对象路径 (object path)** —— 可以导出许多对象。例如，example.com 的文字处理器可能会提供一个代表处理器本身的对象，并为每个打开的文档窗口提供一个对象，或者可能为文档中的每个段落提供一个对象。
+- **总线名称 bus name** —— 这标识了你想通信的应用程序。你将通过已知名称标识应用程序，这是一个带有反转域名的点分隔字符串，例如 `org.freedesktop.NetworkManager` 或 `com.example.word`。
+- **对象路径 object path** —— 可以导出许多对象。例如，example.com 的文字处理器可能会提供一个代表处理器本身的对象，并为每个打开的文档窗口提供一个对象，或者可能为文档中的每个段落提供一个对象。
 
 要标识你想与哪一个交互，你使用对象路径，这是一个类似于文件名的斜杠分隔字符串。例如，example.com 的文字处理器可能在 `/` 处提供一个代表处理器本身的对象，并在 `/documents/123` 和 `/documents/345` 处提供代表打开的文档窗口的对象。
 
 正如预期的，对远程对象可以的操作主要之一就是调用它们的方法。在 Python 中，方法可以有参数，并可能返回一个或多个值。
 
-## 代理对象 (Proxy Objects)
+## 代理对象 Proxy Objects
 
 要与远程对象交互，你使用代理对象。这是一个作为远程对象代理或“替身”的 Python 对象。当你在代理对象上调用方法时，这会导致 `dbus-Python` 在远程对象上执行方法调用，并将远程对象方法的任何返回值作为代理方法的返回值返回。
 
@@ -11062,37 +9991,36 @@ session_bus = dbus.SessionBus()
 proxy = session_bus.get_object('org.freedesktop.NetworkManager', '/org/freedesktop/NetworkManager')
 ```
 
-
-
-
-
 ## atime, 禁止, 212
-- ATK. 参见 LSB 应用测试包 (ATK)
-- AT-SPI (辅助功能技术提供者接口), 188
+
+- ATK. 参见 LSB 应用测试包 ATK
+- AT-SPI 辅助功能技术提供者接口, 188
 - 自动重复, 创建, 118
 - 自动设置标记, 259–260
-- 自动主题化 (MID), 156–157
-- 自启动配置（桌面应用程序）, 57
-- 唤醒状态（电源）, 36
+- 自动主题化 MID, 156–157
+- 自启动配置 桌面应用程序, 57
+- 唤醒状态 电源, 36
 
 ## business
+
 - 作为机会的 MIDs, 129
 - 移动市场的不可预测性, 243
 - MIDs 的用户, 129–131
 
 ## C
+
 - 缓存包, 225–226
 - 回调函数，信号和 66
-- 菜油籽（应用）, 81, 131
+- 菜油籽 应用, 81, 131
 - 手机. 另另 iPhones
 - ARM 架构和 250
 - 历史, 4
 - 与 PC 比较, 255
 - LSB 认证, 196–197
 - angelog 文件, 112, 238
-- 更改集对象 (Git), 278
-- checkout 命令 (Git), 283
-- 克隆并删除仓库 (Git), 279
+- 更改集对象 Git, 278
+- checkout 命令 Git, 283
+- 克隆并删除仓库 Git, 279
 - 云计算, 250
 - Clutter 库, xwv, 70–75
 - 颜色，主题化，和 153, 155
@@ -11100,6 +10028,7 @@ proxy = session_bus.get_object('org.freedesktop.NetworkManager', '/org/freedeskt
 - 命令
 
 ## B
+
 - 后台服务，关闭, 212–213
 - KVM 反向移植, 119
 - Barton, George, 254
@@ -11111,9 +10040,9 @@ proxy = session_bus.get_object('org.freedesktop.NetworkManager', '/org/freedeskt
 - Bazaar
 - 与 Launchpad, 288–289
 - 获取脚本, 30–31
-- 绑定监控 (pdbuild), 126
+- 绑定监控 pdbuild, 126
 - 黑名单文件, 233–234
-- blob 对象 (Git), 277
+- blob 对象 Git, 277
 - Bluetooth
   - 与 GPS 应用, 138, 142
   - 开启/关闭, 45–46
@@ -11124,13 +10053,13 @@ proxy = session_bus.get_object('org.freedesktop.NetworkManager', '/org/freedeskt
   - 双系统, 259
   - MID 设备和主题化, 149
   - 故障排除, 257–258
-- branch 命令 (Git), 282–283
+- branch 命令 Git, 282–283
 - 浏览器，使用 Mago 进行测试, 193–195
 - bug, 205–206
 - 构建过程，精调, 225–226
-- build-essential 包 (dpkg), 107
+- build-essential 包 dpkg, 107
 - Burton, Ross, 142
-- 总线名称 (D-Bus), 309
+- 总线名称 D-Bus, 309
 - apt, 已列出, 106
 - DKMS, 183–185
 - dpkg, 已列出, 106–107
@@ -11138,24 +10067,24 @@ proxy = session_bus.get_object('org.freedesktop.NetworkManager', '/org/freedeskt
 - 合规性, 204–205
 - /configure 应用, 105
 - 配置
-  - 操作 (pdbuilder), 125
+  - 操作 pdbuilder, 125
   - Ubuntu/xfce/Hildon 行为的默认配置, 224
-  - GConf (默认), 224
+  - GConf 默认, 224
   - pubuilder, 120–123
   - 预配置 GDM, 224
-  - 仓库配置 (Git), 285
+  - 仓库配置 Git, 285
   - 触摸屏, 214–217
 - 连接网络。生成：高等教育专业人员需要了解当今学生的什么，134
-- 贡献者命令 (Git), 284
+- 贡献者命令 Git, 284
 - 下载内核源码
-- 控制文件 (PPA), 112–113
+- 控制文件 PPA, 112–113
 - 复制小部件, 136
 - 复制
   - dch 工具, 238
   - Windows 版本的 dd, 260
   - debhelper 工具套件, 112
 - Debian
-  - 版权文件 (PPA), 113–114
+  - 版权文件 PPA, 113–114
   - 与 Ubuntu, 240–242
   - debian-installers, 226, 239
   - 创建内核包, 172–175
@@ -11176,537 +10105,967 @@ proxy = session_bus.get_object('org.freedesktop.NetworkManager', '/org/freedeskt
     - 菜单规范, 57–58
     - XDG 数据库规范, 74
 - 交叉编译器，定义, 22
+
+
+
 - Ubuntu Mobile 的自定义发行版。参见 Ubuntu Mobile 镜像示例
 
 ## D
+
 - Darwin, Charles, 247
+
 - 软件开发 Darwin 模型
-- .desktop 文件, 226
+
+- `.desktop` 文件, 226
+
 - Desktop power apple (Python), 299–303
+
 - DeviceKit-power, 41–44
-- devscripts 工具, 107
-- dd (installer), 111–112
-- d-i (installer), 226
+
+- `devscripts` 工具, 107
+
+- `dd` (installer), 111–112
+
+- `d-i` (installer), 226
+
 - Diamond, David, 246
 
 ### D-Bus
+
 - 地址, 310
+
 - 应用, 306–307
+
 - 基础知识, 83–84, 309
+
 - Send, 87
+
 - Viewer, 85–86
-- dbus-launch 命令, 88
-- dbus-monitor 命令, 87
+
+- `dbus-launch` 命令, 88
+
+- `dbus-monitor` 命令, 87
+
 - D-feet 调试器, 88
+
 - 导出对象, 84–85
+
 - 与 GPS 应用, 138, 143–145
+
 - 接口, 308
+
 - 接口, 314
+
 - Introspect 方法, 313
+
 - 方法调用, 311–312
+
 - 方法和信号, 308
+
 - 嵌套组件，命名, 310
+
 - 对象路径, 83–84
+
 - 概述, 82
+
 - 代理对象, 308–309, 314
+
 - 与 Python, 313
+
 - 安全性, 89–91
+
 - 连接到, 85
+
 - 信号, 312
+
 - 目录，XDG 数据库规范, 57
+
 - 发行版, 240–241
+
 - 发行版环境 (player), 124
+
 - Django 框架, 138, 139, 143–144
+
 - DKMS (动态内核支持): 参见内核支持 (DKMS)
+
 - (动态内核支持): 参见内核支持 (DKMS)
+
 - DNS 和缓存服务器，设置, 27
+
 - 文档，OpenOffice, 130
+
 - 下载内核源码, 166
+
 - 为内核源码, 175
-- dpkg 工具
-- dpkg-scanpackages, 107
-- dpkg-sources, 107
-- dpkg-put 工具, 115
+
+- `dpkg` 工具
+
+- `dpkg-scanpackages`, 107
+
+- `dpkg-sources`, 107
+
+- `dpkg-put` 工具, 115
+
 - 驱动程序，更新 (DKMS), 181–185
+
 - 双系统, 259
+
 - 动态内核支持 (DKMS)
+
 - 命令, 183–185
+
 - 框架，内部工作, 182–183
+
 - 概述, 181–182
+
 - 修复问题。参见问题和解决方案
+
 - 标记 (HILDON)，自动设置, 259–260
+
 - Flash, Adobe, 213–214
+
 - 弗兰肯斯坦软件开发模型, 248
-- free（内存）应用, 202
+
+- `free`（内存）应用, 202
+
 - 自由桌面标准, 56–58
+
 - 自由软件, 247, 251
+
 - 运行 Ubuntu, 260
-- fsck 命令 (Git), 279–280
+
+- `fsck` 命令 (Git), 279–280
+
 - Linux 的未来, 243, 255
+
 - 移动行业未来, 253–254
 
 ## E
+
 - Eee PC 测试结果, 162–163
+
 - EFL (Enlightenment Foundation Libraries), 79–81
+
 - Elementary 组件set (Enlightenment suite), 81–82
+
 - 嵌入式系统, 221–222
+
 - 加密，设置, 130
+
 - Enders, Rob, 266
+
 - 能量提示, 208–212
+
 - 引擎，主题, 148, 157
+
 - Enlightenment Foundation Libraries. 参见 EFL (Enlightenment Foundation Libraries)
+
 - 娱乐媒体中心示例, 131–133
+
 - 事件循环 (GTK), 64–65
+
 - 使用 D-Bus 导出对象, 84–85
 
 ## G
+
 - 小部件 (gadgets)
+
 - Google Gadgets, 134, 135–137
+
 - gOS 3 Gadgets, 134–138
-- g 命令 (Git), 280
+
+- `g` 命令 (Git), 280
+
 - gConf
+
   - 启动 MID 设备, 149
+
   - 默认配置，设置, 224
+
   - 概述, 91–94
+
   - 用户界面和, 54–55
+
 - GDM 显示管理器
+
   - 预配置, 224
+
   - 创建主题, 158–159
+
 - Generation Y (Gen Y), 134
+
 - geash.org, 145
+
 - Generate 程序, 231–235
+
 - germinate 工具, 234, 235
 
 ## F
-- fakeroot 工具, 108
+
+- `fakeroot` 工具, 108
+
 - Feldman, Jerry, 271
+
 - 文件系统
+
   - 嵌入式, 221–222
+
   - 它们位置, 148
+
 - 文件
+
   - office, 参见 treo (Trebuchet)
+
   - 应用
+
     - 原始种子, 231–232
+
     - 种子种子, 231
+
     - 访客与主机之间的共享, 29–31
+
 - 文件命令
+
   - 贡献者命令, 284
+
   - 个人开发者命令, 280–284
+
 - 集成器角色, 284
+
 - 维护者角色, 284–285
+
 - 对象, 277–284
+
 - 概述, 277
+
 - 仓库管理, 285
+
 - 仓库命令, 279–280
+
 - 仓库配置, 285
+
 - 工具, 171–175
+
 - 树, 173
 
 ## 安装程序
+
 - Glade, 190–191
+
 - 界面, 66
+
 - 另见 GNOME
+
 - Gnome-Power, 40
+
 - Gnome-Statistics, 40
+
 - Hildon 应用框架, 和 57
+
 - Human humanity主题, 160–163
+
 - Human Netbook Theme, 54
-- hwinfo 程序, 220
+
+- `hwinfo` 程序, 220
+
 - hybrid-supers 模式, 37–38
+
 - Hypervisor软件, 11
+
 - GTK+, 主题, 148, 157
+
 - GTK 规范, 56–57
+
 - 使用 D-Bus 导出对象, 84–85
 
 ## I
+
 - 图标，应用, 258–259
+
 - 图像。另见多媒体
+
   - 定制化的, 32–33, 230–235
+
   - 创建, 226–230
+
   - 默认 Ubuntu 镜像, 226–230
-  - .img 名称
+
+  - `.img` 名称
+
   - 增加下载大小, 34
+
   - 内部的应用程序, 33
+
   - 修改它们, 155–156
+
   - 用于写入的脚本, 31–32
+
   - 主图像, 148–149
+
   - 写入 USB, 257–258
+
 - 独立软件版本 (ISV), 187
-- init 命令 (Git), 279
+
+- `init` 命令 (Git), 279
+
 - H
+
   - 硬编码模块, 207–208
+
   - 硬盘
+
     - 在 VirtualBox 中添加, 16–17
+
     - 监控活动, 217–218
+
   - 硬件
+
     - 架构, 220
+
   - 硬件抽象层 (hal), 定义, 215
+
   - 硬件兼容列表 (HCL), 220
+
   - Hello World 应用 (Hildon), 60–64
+
   - 休眠电源模式, 36–40
+
   - 休眠电源模式, Hildon
+
   - Hildon 应用框架
+
     - 概述, xx, 58
+
     - 主题和, 155–156
+
     - 用户界面默认行为, 224
+
   - Holems, Lain, 139
-  - h 命令, 125–126
+
+  - `h` 命令, 125–126
+
   - 水平框, 65–66
+
   - 水平框， 与 GTK, 66
+
   - 在 Launchpad 上托管项目, 287–289
+
   - HTTP 请求，与 GPS 应用, 143–145
+
   - Human humanity主题, 160–163
+
   - Human Netbook Theme, 54
-  - hwinfo 程序, 220
+
+  - `hwinfo` 程序, 220
+
   - hybrid-supers 模式, 37–38
+
   - Hypervisor软件, 11
-
-
-
-
 
 ## 安装
 
 - 在镜像内安装应用程序, 33
+
 - 在 QEMU 上运行 ARM, 22–23
+
 - KVM, 23–24
+
 - LSB Ubuntu 测试套件 (ATK), 196
+
 - Ubuntu MID 镜像, 24
+
 - UMP上的 Ubuntu Netbook Remix, 261
+
 - VirtualBox, 12
+
 - 动态内核模块支持。参见动态内核模块支持 (DKMS)
+
 - 已定义的内核, 165
+
 - Linux 内核, 165
+
 - 非 Ubuntu 内核树，更新, 181
+
 - 概述, 165–166
+
 - 原因, 165
+
 - Ubuntu Karmic 示例及, 222
+
 - Ubuntu 内核树，更新, 175–181
+
 - Ubuntu 软件包，创建, 166–171
+
 - 集成器方法 (Git), 284
 
 ## 接口
 
 - GUI 的更改, 78
+
 - D.Bus, 308, 314
+
 - 互联网中继聊天 (IRC), 定义, 288
+
 - 进程间通信 (IPC), 305
+
 - Intrepid, xxv
+
 - 内省方法 (D-Bus), 313
+
 - 发明
+
 - 发明：思想的关怀与喂, 224
+
 - 阶段, 244–255
+
 - Torvalds 与, 246
+
 - iot 应用, 217
+
 - IP电话
 
 ## 键盘
 
 - 上的 Entertainer 控件, 133
+
 - 屏幕, 224
+
 - Koury, Rabeeh, 269
+
 - Kidder, Tracy, 246
+
 - KVM (虚拟机)
+
 - 反向移植, 119
+
 - 婴儿, 21–24
+
 - KVM/QEMU 网络, 26–34
+
 - 故障排除, 262
+
 - 使用桥, 29
 
 ## L
 
 - 笔记本电脑模式, 209–210
+
 - Latencycop 工具, 203
+
 - 启动器。参见 Ubuntu Netbook Remix
+
 - Launchpad。参见 PPA (个人存档)
+
 - 在上面托管项目, 287–289
+
 - 布局, GTK+ 和, 65
+
 - DP (Linux 桌面项目), 187
+
 - LGPL (库文件通用公共许可证), 241–242
-- 库, libdbus (D-Bus), 305
-- lintian 工具, 108
+
+- 库, `libdbus` (D-Bus), 305
+
+- `lintian` 工具, 108
+
 - Linux。参见 Moblin 计划
+
 - 未来, 245, 255
+
 - 热插拔项目, 306
+
 - Linux 桌面测试项目 (LDP), 187
+
 - LSB 应用测试套件 (ATK), 196–197
+
 - 移动计算与, 245–255
+
 - 性能测试工具, 201–203
+
 - 故事, 246
+
 - 学生使用, 254
+
 - 校园内, 253, 254
+
 - 历史, 3–4
+
 - iPod 历史, 3–4
+
 - ISO 镜像
+
 - 构建自定义, 240
+
 - 构建默认值, 229–301
+
 - ISV, 定义, 187
 
 ## J
 
 - Jaunty Ubuntu Mobile 定义, xxv
+
 - MID 发布，下载, 12
+
 - Junco, Reyol, 134
+
 - 纯属娱乐：一个意外革命者的故事, 246
 
 ## K
 
 - Karmic, Ubuntu。参见 Ubuntu Mobile 镜像示例
+
 - 内核微调
+
 - Debian 软件包，创建, 172–175
 
 ## 笔记本电脑
 
 - Linux 标准基础 (LSB) 测试工具包, 187
+
 - 位置用户, 138。参见支持 GPS 的独立 Web 应用程序 (MID 设备)
+
 - 长期支持 (LTS) 版本, 219
+
 - Lotus 开发, 247
+
 - LPIA (低功耗英特尔架构)
+
 - 标志，自动设置, 259
+
 - LPIA Ubuntu MID 发布, 50
+
 - 概述, xiii
+
 - Ubuntu MID 内核及, 165
+
 - LSB 应用工具包 (ATK), 196–197
+
 - Ishw 程序, 220
+
 - lucvview 应用, 220
+
 - 构建, 236–238
+
 - 生成, 235–236, 238–239
+
 - 方法
+
 - 接口和 (D-Bus), 314
+
 - 方法调用 (D-Bus), 311–313
+
 - 信号 (D-Bus), 308
+
 - MID, Ubuntu, 54–55
+
 - 移动计算
+
 - 架构, 243–244
+
 - 设备, 253–255
+
 - 移动技术
+
 - 历史, 2–5
+
 - 市场不可预测性, 243
+
 - 移动开发者团队, 262
+
 - 移动环境。参见 Ubuntu 环境
+
 - 移动互联网设备 (MIDs), 1, 129
+
 - Obama 与, 249
+
 - 概述, 1
+
 - 政治, 249
+
 - Shuttleworth 关于, 254–255
+
 - Moblin 计划, 252, 250–251,
+
 - 模块。参见动态内核模块支持 (DKMS)
+
 - 硬编码, 207-
+
 - MONITOR 环境变量, 48
+
 - 边界软件包仓库 (发布者), 126
+
 - “移动目标问题”, xxl
+
 - Mozilla Prism, 135
+
 - 多媒体用户, 131–133
+
 - 多源软件包分类 (Ubuntu), 127
+
 - Murrine 引擎, 以及 157
 
 ## M
 
 - 使用 Mago 进行测试, 188–189, 193–195
+
 - 主软件包分类 (Ubuntu), 126
+
 - 维护者角色 (Git), 284–285
-- make 工具, 105–106
+
+- `make` 工具, 105–106
+
 - MID 手动测试, 154–256
+
 - 市场 (移动设备)
+
 - 流行增长, 243
+
 - 剃须和刀片定价, 251
+
 - 不可预测性, 243
+
 - Mastrodicasa, Jeanne, 134
+
 - Maximus 守护进程, 54
+
 - Mayr, Ernst, 248
+
 - Mayr 软件开发模型, 248
+
 - McCashlin 平台, xiv
+
 - memcheck, 202
+
 - memstat 应用, 202
+
 - Mengel, Gregor Johann, 247
+
 - Mengel 软件开发模型, 247–248
+
 - Menlow 平台, xiv
+
 - 桌面菜单规范, 57–58
+
 - 外部创建菜单 (Hildon), 59
+
 - 创建菜单 (Hello World), 61–62
+
 - 消息
+
 - 消息守护进程 (D-Bus), 305
+
 - 发送 (D-Bus), 310–311
+
 - metacity-theme-viewer, 160–163
+
 - 元软件包
 
 ## N
 
 - 命名
+
 - 总线名称, 83
+
 - 总线名称 (D-Bus), 309
+
 - 原生对象/对象路径 (D-Bus), 308
+
 - Neo Freeinner, 260
+
 - 笔记本电脑
+
 - 历史, 6
+
 - Linux, Ubuntu 和, 744
 
 ## 网络
 
 - 网络
+
 - 连接, 251–252
+
 - 在 KVM/QEMU 中, 26–34
+
 - 在 VirtualBox 中, 25–34
+
 - The Billion Network, 249
+
 - Niemeyer, Gustavo, 145
+
 - Nokia 无线 GPS 模块 D-3W, 142
+
 - 通知 (D-Bus), 93–94
 
 ## O
 
 - 对象
+
 - 使用 D-Bus , 84–85
+
 - Git, 277–278
+
 - 对象路径, D-Bus, 83
+
 - 物种的起源, 247, 251–252
+
 - 开源软件 (OSS), 249
+
 - OpenCV (开源视觉), 267–268
+
 - OpenOffice, 130–131
 
 ## P
 
 - P2P 形式, xxvii
+
 - 软件包
+
 - 添加到, 119
+
 - 从仓库移除, 119
+
 - 构建 (PPA), 115
+
 - 缓存, 225–226
+
 - 分类, 126–127
+
 - 萌芽和, 234
+
 - apt apt, 261–262
+
 - 元软件包
+
 - 构建, 236–238
+
 - 生成, 235–236, 238–239
+
 - 方法
+
 - 接口和 (D-Bus), 314
+
 - 方法调用 (D-Bus), 311–313
+
 - 信号 (D-Bus), 308
+
 - MID, Ubuntu, 54–55
+
 - 移动计算
+
 - 架构, 243–244
+
 - 设备, 253–255
+
 - 移动技术
+
 - 历史, 2–5
+
 - 市场不可预测性, 243
+
 - 移动开发者团队, 262
+
 - 移动环境。参见 Ubuntu 环境
+
 - 移动互联网设备 (MIDs), 1, 129
+
 - Obama 与, 249
+
 - 概述, 1
+
 - 政治, 249
+
 - Shuttleworth 关于, 254–255
+
 - Moblin 计划, 252, 250–251,
+
 - 模块。参见动态内核模块支持 (DKMS)
+
 - 硬编码, 207-
+
 - MONITOR 环境变量, 48
+
 - 边界软件包仓库 (发布者), 126
+
 - “移动目标问题”, xxl
+
 - Mozilla Prism, 135
+
 - 多媒体用户, 131–133
+
 - 多源软件包分类 (Ubuntu), 127
+
 - Murrine 引擎, 以及 157
-
-
-
-
 
 ## 太阳能驱动集群，构建 SWARM
 
 - 太阳能驱动集群，(SWARM), 270–276
+
 - 《新机器的灵魂》(Kidder), 246
+
 - 源代码，何处找到，xxvi
+
 - squashes 文件系统
+
 - Stallman, Richard, 247
+
 - 待机状态（电源）, 36
+
 - 节电, 36
+
 - STRUCTURE 文件, 232–234, 237
+
 - 样式、主题化与, 153–154
+
 - 挂起状态（电源）, 36–40
+
 - SWARM, 268–276
+
 - 系统总线类型, 82, 313
+
 - 嵌入，式系统, 221–222
 
 ### LSB 应用测试套件 (ATK), 196–197
+
 - 概述,
+
 - 使用 Mago 进行测试, 193–195
 
 ### 主题 (themes)
+
 - 已定义, 147
+
 - 结构, 151–154
+
 - 主题引擎, 148
+
 - theme.xml 文件, 151–152
+
 - 修改工具, 150–151
 
 ### 主题化 (theming)
+
 - 目标, 150
+
+
+
 - 概述, 147–150
+
 - 性能测试, 160–163
+
 - Ubuntu MID, 148
+
 - 自动运行 Ubuntu MID, 156–157
+
 - 手动 Ubuntu MID, 154–156
+
 - Ubuntu Net Remix, 157–159
 
 ## T
 
 ### 技术世界 (technology world)
+
 - 变化, 247
+
 - 与 Obama, 249
+
 - 政治与, 249
 
 - 版权文件模板, 114
 
 ### 测试 (testing)
+
 - 辅助功能库, 188
+
 - 用于构建的应用程序。参见测试
+
 - 应用，构建（示例）
+
 - 电池, 47–50
+
 - 错误报告, 205–206
+
 - 合规性, 204–205
+
 - 免费应用程序用于, 202
+
 - gypso 连接到 GPS, 142
+
 - 延迟工具, 203
+
 - memcheck, 202
+
 - memstat 应用, 202
+
 - 用于包测试的 pubuilder, 202
+
 - Phoronix Test Suite, 197–200
+
 - Procinfo 工具, 201
+
 - ps 工具, 201
+
 - 原因, 187
+
 - 策略, 203–205
+
 - 主题化性能, 160–163
+
 - 时间工具, 201
+
 - treb top, 201
+
 - Valgrind 工具, 202–203
 
 - 时间。同样在时间处，禁用
+
 - 时间工具, 201
+
 - 时间线 (Clutter), 70
+
 - zmp/ 大, 208
 
 - 工具栏，创建 (Hello World), 62–64
+
 - 工具栏，创建 (Hildon), 59
+
 - 工具包。另见 GTK (Gimp Toolkit)
 
 - EFL, 79–81
+
 - Glade, 66–70
+
 - 工具。另见用于应用程序打包的 pbuilder 工具, 105–108
+
 - 用于自动化镜像构建, 226
+
 - 图形基准操作, 156
+
 - 用于缓存包, 225
+
 - Linux 性能测试工具, 201–203
+
 - LSB 应用测试套件, 196
+
 - 用于修改主题, 150–151
+
 - Phoronix Test Suite, 197–200
+
 - 用于测试, 197–203
 
 - top 工具, 201
+
 - torvaldis, Linux, 7, 246–247, 255, 277
+
 - 触摸屏，配置, 214–214
+
 - temarkarks, Ubuntu, 240–242
+
 - treb (Trechet) 应用, 131
+
 - 树对象, (故障排除。参见调试；问题与解决方案
 
 - 测试应用，构建（示例）
+
 - 创建应用, 190–192
 
 ## 垂直边框，GTK 和
@@ -11714,111 +11073,191 @@ proxy = session_bus.get_object('org.freedesktop.NetworkManager', '/org/freedeskt
 ## U
 
 - 软件包与仓库, 235–240
+
 - 策略/商标/版权, 240–242
+
 - 电源策略，定义, 221
 
 ## Ubiquity 图形安装程序, 226, 239
 
 - Ubuntu 默认行为，设置, 224
+
 - 用户界面，自定义, 222–224
+
 - xfe 默认行为，设置, 224
 
 ## Ubuntu
 
 ## Ubuntu 网络团队
-- * 备用镜像 (Alternate Image)*, 226
+
+- *备用镜像 (Alternate Image)*, 226
+
 - ARM, xxv
+
 - 桌面社区, 226
+
 - 开发者社区, 245–246
+
 - Hardy 版本, xiii, xxiii
+
 - Intrepid MPC 项目, 261
+
 - Mark Shuttworth 与, 248
+
 - 移动与嵌入式项目, xiii
+
 - 移动计算与, 254–255
+
 - 移动开发者团队，加入, 262
+
 - 移动项目, xiii
+
 - 移动团队, xxiv
+
 - 笔记本与, 6–8
+
 - 运行在 Arima 上, 261
+
 - 运行在 Freeruner 上, 260
+
 - ubuntu-vm-builder 工具, 30
+
 - 用户界面，默认行为, 224
+
 - 终止, 234–235
+
 - 安装在 UMPs 上, 261
+
 - 启动器, 154
+
 - 概述, 54
+
 - 性能不佳, 263
+
 - 主题化与, 159
 
 - Ubuntu 策略，打包, 126
+
 - Intrepid, xx
 
 ## UMPs (超移动电脑)
+
 - 运行 Net Remix 上, 261
+
 - 唯一名称 (D-Bus), 309
+
 - 宇宙 (universe), 124
+
 - 升级环境, 24
+
 - USB (通用串线)
 
 ## Ubuntu 镜像
+
 - 架构支持, 220
+
 - 构建过程, 225–226
+
 - 自定义镜像, 230
+
 - 默认镜像，创建, 226–235
+
 - 嵌入式系统与, 221–222
+
 - 默认行为, 224
+
 - 重要考虑因素, 219
+
 - 节电, 221
+
 - 应用程序, 158
+
 - 上传到 PPA
 
 ## V
+
 - Valgrind 工具集, 202–203
+
 - 虚拟交换机, 26
+
 - 垂直边框，GTK 和, 66
 
 ## Vesa 图驱动程序
+
 - Vesa 图驱动程序, 262
+
 - 视频录制 (Enter), 132
+
 - 虚拟镜像，构建, 31
+
 - 网络在, 25–34
+
 - KVM, 24
+
 - 网络在 KVM/QEMU, 34
+
 - 网络在 VirtualBox, 21
 
 ## Ubuntu 移动用户
+
 - 业务, 129–131
+
 - 媒体用户, 138
+
 - 社交网络用户, 133–137
+
 - 用户界面，自定义, 222–224
+
 - 移动项目, xxx
 
 ## W
+
 - Walters, Colin, 305
+
 - 网站，下载
+
 - Windows 版, 260
+
 - 修复 Net Remix, 263
+
 - GNU Hare, 259
+
 - gOS 3 小组件, 134–138
+
 - Ubuntu 图形输出
+
 - Netbook Remix, 233
+
 - Jaunty MID 版本, 12
+
 - LSB 应用测试套件, 196
+
 - 软件, 252
+
 - MID 旧版本, 262
+
 - 策略工具 (D-Bus), 90–91
+
 - 源代码, xxvi
 
 ## X
+
 - debuild 命令, 15
+
 - x86 架构, 250
+
 - XDG 目录规范，桌面, 57
+
 - xfe 默认行为，设置, 224
+
 - xmag 工具 (图像), 155
+
 - XSETTINGS (Linux), 156
 
 ## Z
+
 - zenity 工具集 (GTK 控件), 150
+
 - Zimmerman, Matt, xxxiii
 
 ## 程序员到程序员™
@@ -11828,35 +11267,53 @@ proxy = session_bus.get_object('org.freedesktop.NetworkManager', '/org/freedeskt
 现在，无论您身在何处，都可以在线访问 200 多本完整的 Wrox 书籍。只要订阅了 **Wrox 参考库**，所有的图表、描述、截图和代码示例均可用。在需要的地方，访问 wrox.books24x7.com 订阅即可获取答案！
 
 ## 查找书籍
-- * ASP.NET
-- * C#/C++
-- * 数据库
-- * 通用
-- * Java
-- * Mac
-- * Microsoft Office
-- * .NET
-- * 开源
-- * PHP/MySQL
-- * SQL Server
-- * Visual Basic
-- * WX
-- * XML
 
+- ASP.NET
 
+- C#/C++
 
+- 数据库
+
+- 通用
+
+- Java
+
+- Mac
+
+- Microsoft Office
+
+- .NET
+
+- 开源
+
+- PHP/MySQL
+
+- SQL Server
+
+- Visual Basic
+
+- WX
+
+- XML
 
 ## 开源软件开发者的必读书籍
 
 作为当今最流行的开源操作系统，Ubuntu Linux 最近发布了版本，旨在面向基于 Atom 和 ARMEL 架构构建互联网化手持设备的设备制造商。这本令人兴奋的书籍概述了你在定制移动互联网设备时需要理解的工具和技术，并提供了循序渐进的教程，引导你完成一些常见任务。该书由 Ubuntu Mobile 社区开发者编写，首先概述了 Linux 的领域概况，然后介绍了为移动设备进行设置、开发、打包和构建发行版的过程。
 
 - 讨论了为什么设备的外观和感受非常重要
+
 - 回顾了如何选择合适的应用程序
+
 - 展示了如何为移动设备开发应用程序
+
 - 解释了如何为发行准备应用程序
+
 - 提供了微调内核的技术
+
 - 引导你“定制”并构建自己的自己的发行版
+
 - 讨论了如何针对稳定性和性能进行测试
+
 - 揭示了处理常见问题和执行解决方案的技巧
 
 Ian Lawrence 是诺基亚技术学院（Instituto Nokia de Tecnologia）的 Scrum Master。他是 Ubuntu 巴西社区和 Debian 社区的创始成员。
@@ -11878,4 +11335,3 @@ Wrox 专业指南由在职程序员计划并编写，旨在满足程序员、开
 ## 更多
 
 查找数百本书的文章、电子书、示例图表和目录，以及关于你关心的编程主题的更多资源。
-

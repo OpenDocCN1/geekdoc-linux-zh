@@ -1,19 +1,22 @@
-+   - man 5 updatedb.conf
 
-The updatedb.conf file should include a directive to prune paths like /tmp/ and /media, among others. Given what you know about the FHS: Why do you think it's a good idea to prune these paths from the locate database? Why is it a good idea to prune filesystem types like nfs and proc?
+# Task 1:
+
+- `man 5 updatedb.conf`
+
+`updatedb.conf` 文件应包含一条指令，用于修剪类似 `/tmp/` 和 `/media` 等路径。鉴于你对 FHS 的了解：你认为从 `locate` 数据库中修剪这些路径有什么好处？为什么修剪 `nfs` 和 `proc` 等文件系统类型是个好主意？
 
 # Task 2:
 
-Now run:
+现在运行：
 
-+   - which which
-+   - which locate
-+   - whereis locate
-+   - whereis updatedb
-+   - whereis whereis
+- `which which`
+- `which locate`
+- `whereis locate`
+- `whereis updatedb`
+- `whereis whereis`
 
-which shows you the absolute location of a given (relative) command, while whereis expands on this by showing other related files like config files, databases, and man pages.
+`which` 显示给定（相对）命令的绝对位置，而 `whereis` 在此基础上扩展，显示其他相关文件，如配置文件、数据库和手册页。
 
 # Notes:
 
-Many common Linux tools are fairly complicated C programs; which is one exception. It is a short shell script which, with a bit of practice, you could understand in its entirety. Take a look at the /bin/which file and see how much of it makes sense to you!
+许多常见的 Linux 工具是相当复杂的 C 程序；`which` 是一个例外。它是一个简短的 shell 脚本，稍加练习，你就可以完全理解它。查看 `/bin/which` 文件，看看其中有多少内容对你有意义！

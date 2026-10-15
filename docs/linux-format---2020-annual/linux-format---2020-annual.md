@@ -1,50 +1,23 @@
+
 # Linux 格式 - 2020 年度刊
 
-
-
-
-
-
-
-
-
 欢迎收阅 2020 年《Linux Format》年度特刊。从最热门的发行版到最佳的调优方法，这些页面充满了 Linux 爱好者所需的一切。无论你是正准备迈出逃离 Windows 的第一几步，还是一个想要从开源系统中获取更多价值的专家级用户，你都能在这里找到所需的一切。学习如何让易于使用的发行版 Mint 变得更加健壮，探索加密，保护你的云存储，锁定你的桌面等许多内容。此外，查看一系列有趣的编程和制作项目，从构建虚拟机到探索量子计算。我们还整理了最强大的开源工具包，帮助你在任何时间、任何地完成你想要做的事。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 www.future.com
 
 连接器
+
 创作者
+
 制作者
 
 首席执行官：Zihang-Boang Thorne
+
 非执行、资深行业领袖
+
 首席财务官：James
+
 电话 +44 (0) 1322 462 344
-
-
-
-
-
-
-
-
-
-
 
 Mayank Sharma 无法帮助你找到人生目标，但他可以帮你找到适合你目标的发行版。
 
@@ -55,10 +28,6 @@ Linux 内核本身对我们大多数人来说并没有太大用处。0.01 版本
 晚些时候，Peter McDonald 创建了 Softlanding Linux System（SLS），它提供了一套最近才移植到 Linux 的软件集合。SLS 变成了两个主要的发行版。第一个是 Slackware，于 1993 年 7 月创建，它是目前仍在活跃维护的最老的 Linux 发行版。另一个也开发了几个月，1994 年 1 月发布的 v0.91 是其首次公开发，包含了一个可以安装和卸载包的简单包系统。
 
 这三个发行版共同构成了现代 Linux 发行版的生态基石。
-
-
-
-
 
 # 选择你的“毒”
 
@@ -89,18 +58,23 @@ Linux 内核本身对我们大多数人来说并没有太大用处。0.01 版本
 ## 初学者发行版
 
 ### >> DEEPIN
+
 一个优雅的基于 Debian 的发行版，拥有直观的桌面以及一系列自定义工具。
 
 ### >> PINGUOS
+
 它的定制版本将让新老 Linux 用户都同样惊艳，但它有一些奇怪的要求。
 
 ### >> ELEMENTARY OS
+
 另一个具有美感的发行版，默认带有精美制作的且受限的程序缓存。
 
 ### >> ZORIN
+
 它的独特卖点（USP）是其吸引人的特性，这会让 Gnome 桌面看起来像 Windows，从而造福新用户。
 
 ### >> LINUX Lite
+
 它的一系列自定义工具（如软件实用程序和欢迎界面）让日常的桌面任务变得轻而易举。
 
 Linux Format Annual 2020 | 11
@@ -135,15 +109,11 @@ Remaster 一直是将 Ubuntu 安装转换为可启动 ISO 的最流行的脚本�
 
 II | Linux Format Annual 2020
 
-
-
-
-
 # 前 20 发行版
 
 个人和用户数据。然后你可以安全地分发这些而无需共享敏感信息。此选项专为制作自定义发行版而设计。此外，你可以在无密码的情况下测试用户。除了这些选项外，还有针对发行版的选项，它们将过程分为两个步骤，并允许你向 ISO 镜像中填充文件。
 
-另一组有趣的选项列在以下方法下方：你可以在不对环境和已安装系统进行更改的情况下编辑 GRUB 配置。你还可以创建一个自定义 Plymouth 主题。你可以在 www.linux-kernel.org/ 找到更多信息并学习如何定制你的发行版。你可以使用 `sudo apt install plymouth-themes` 将它们安装到系统上。然后下载并解压到 /usr/share/plymouth/themes。接着你可以使用 `sudo update-alternatives --install /usr/share/plymouth/themes/ default plymouth <theme>` 将新的 plymouth 主题设为默认。
+另一组有趣的选项列在以下方法下方：你可以在不对环境和已安装系统进行更改的情况下编辑 GRUB 配置。你还可以创建一个自定义 Plymouth 主题。你可以在 `www.linux-kernel.org/` 找到更多信息并学习如何定制你的发行版。你可以使用 `sudo apt install plymouth-themes` 将它们安装到系统上。然后下载并解压到 `/usr/share/plymouth/themes`。接着你可以使用 `sudo update-alternatives --install /usr/share/plymouth/themes/ default plymouth <theme>` 将新的 plymouth 主题设为默认。
 
 # 滚动发行版
 
@@ -153,7 +123,7 @@ II | Linux Format Annual 2020
 
 > 确保在用 Clear 清空它之前，你已将 ISO 镜像复制到工作目录。
 
-你需要在 /etc/skel/Desktop 目录中创建一个桌面文件。例如，为你的用户创建一个桌面图标，首先使用 `midir -p /etc/skel/Desktop` 创建桌面图标。然后创建一个包含以下内容的自定义 `.desktop` 文件：
+你需要在 `/etc/skel/Desktop` 目录中创建一个桌面文件。例如，为你的用户创建一个桌面图标，首先使用 `midir -p /etc/skel/Desktop` 创建桌面图标。然后创建一个包含以下内容的自定义 `.desktop` 文件：
 
 ```
 [Desktop Entry]
@@ -169,19 +139,19 @@ Type=Application
 
 # 橱柜里的“骨架 (Skeleton)
 
-下一步是将你的桌面自定义传输到 ISO。这里将使用骨架 (/etc/skel) 来初始化新用户的家目录。在此过程中，当创建用户时，任何新文件都将复制到每个新用户的家目录。骨架目录包含了新用户的所有默认设置。
+下一步是将你的桌面自定义传输到 ISO。这里将使用骨架 (`/etc/skel`) 来初始化新用户的家目录。在此过程中，当创建用户时，任何新文件都将复制到每个新用户的家目录。骨架目录包含了新用户的所有默认设置。
 
 # MANJARRO
 
 基于 Arch Linux，专注于用户友好性，并支持 Gnome、KDE 和 XFCE 桌面上的所有发行版。
 
-要将这些更改带自定义发行版，请复制 ISFIG 目录。某些程序会使用 /etc/skel/ 目录下的家目录，因此你可以创建比最初的系统类型更多的账户相关信息，例如密码，或者如果你也将它们传输到你的自定义发行版。如果你愿意，你将在 /etc/skel/ 下安装图标和主题，并且也应该复制到 /etc/skel。
+要将这些更改带自定义发行版，请复制 ISFIG 目录。某些程序会使用 `/etc/skel/` 目录下的家目录，因此你可以创建比最初的系统类型更多的账户相关信息，例如密码，或者如果你也将它们传输到你的自定义发行版。如果你愿意，你将在 `/etc/skel/` 下安装图标和主题，并且也应该复制到 `/etc/skel`。
 
 # SABAYON
 
 一个基于 Gentoo 的 64 位发行版，使用 Calamar 安装程序并带有自带的包管理系统：Entropy。
 
-/etc/skel/ 目录代表新用户的家目录。如果你想在你自定义发行版的桌面上放置一个自定义图标：
+`/etc/skel/` 目录代表新用户的家目录。如果你想在你自定义发行版的桌面上放置一个自定义图标：
 
 # SOLUS
 
@@ -215,10 +185,6 @@ Type=Application
 
 # Linux Format 2020
 
-
-
-
-
 # 前 20 发行版
 
 ```
@@ -228,25 +194,25 @@ Type=Application
 sudo ./linux-install.sh
 ```
 
-将你的桌面自定义拷贝到自定义系统中的机制。首先，在已安装的系统中按照要求配置你的桌面。当你从主目录将配置文件复制到 /etc/ 时：
+将你的桌面自定义拷贝到自定义系统中的机制。首先，在已安装的系统中按照要求配置你的桌面。当你从主目录将配置文件复制到 `/etc/` 时：
 
 # ANTX
 
 Fedora 的 Live CDs 是为 Fedora 等基于 RPM 的发行版构建的。antix 和 MEPS 共同努力，该发行版以其用户友好性和一系列自定义工具著称。
 
-cp -r /home/bodhi/local/$INSTALL_ROOT, $INSTALL_ROOT/etc/skel/
+`cp -r /home/bodhi/local/$INSTALL_ROOT, $INSTALL_ROOT/etc/skel/`
 
 # 轻量级发行版
 
-从提到的存储库中获取。你可以直接指定存储库的 URL（使用 --baseurl 选项）或让它从镜像列表中选择（使用 --mirrorlist 选项），从第三方存储库（如 RPMFusion）安装包，以获取专有软件，如 Steam、Google Chrome、Nvidia 驱动程序和 Fedora 发行版。但我们让这个过程变得简单。如果你需要处理大量包，请将其替换为 generic-release 和 generic-logos。基于 Debian 的发行版并未附带四种版本的轻量级桌面。
+从提到的存储库中获取。你可以直接指定存储库的 URL（使用 `--baseurl` 选项）或让它从镜像列表中选择（使用 `--mirrorlist` 选项），从第三方存储库（如 RPMFusion）安装包，以获取专有软件，如 Steam、Google Chrome、Nvidia 驱动程序和 Fedora 发行版。但我们让这个过程变得简单。如果你需要处理大量包，请将其替换为 generic-release 和 generic-logos。基于 Debian 的发行版并未附带四种版本的轻量级桌面。
 
 ## MX LINUX
 
 最后，post 部分允许你在包安装并下载到目标位置后运行所有命令。你可以在此创建自定义用户、文件、配置网络并进行许多有趣的操作。该发行版使用窗口管理器，尽管配置配置，但可以用于各种用途。我们通过以下方式正确识别我们的版本 /fedora-release 文件：
 
-sed -i 's/generic-release/fedora/g'
+`sed -i 's/generic-release/fedora/g'`
 
-%post 部分中的命令将在 liveCD 中新安装的文件系统中运行一次。但还有一种将文件拷贝到文件系统 /etc/ 的机制。%post-chroot 部分允许你从外部与自定义环境进行交互。这使你能够将文件拷贝到你的主安装中：
+`%post` 部分中的命令将在 liveCD 中新安装的文件系统中运行一次。但还有一种将文件拷贝到文件系统 `/etc/` 的机制。`%post-chroot` 部分允许你从外部与自定义环境进行交互。这使你能够将文件拷贝到你的主安装中：
 
 ```
 %post-chroot
@@ -264,7 +230,7 @@ Customstart 提供了两种方式来处理构建过程中安装所有包的自�
 cp -r /home/bodhi/Pictures/wallpapers/ $INSTALL_ROOT/etc/skel/
 ```
 
-这将将壁纸硬盘中的大量图像拷贝到主机的自定义硬盘。我们将其放置在骨架目录（/etc/skel/），以便自定义硬盘中的用户可以使用。完成此操作的时间取决于你电脑的 live 压缩过程以及从互联网获取的包。完成后，它将在 rectify 目录下留下一个用于你自定义硬盘的 ISO。在将其传递给朋友或感兴趣的人之前，你可以在虚拟机上对其测试。
+这将将壁纸硬盘中的大量图像拷贝到主机的自定义硬盘。我们将其放置在骨架目录（`/etc/skel/`），以便自定义硬盘中的用户可以使用。完成此操作的时间取决于你电脑的 live 压缩过程以及从互联网获取的包。完成后，它将在 rectify 目录下留下一个用于你自定义硬盘的 ISO。在将其传递给朋友或感兴趣的人之前，你可以在虚拟机上对其测试。
 
 ## BODHI LINUX
 
@@ -282,11 +248,9 @@ Linux Format Annual 2020
 
 虽然 bootobuilder 和 live-creator 都能让你在花费大量后创建一个自定义版本，但如果你有耐心从 Linux Mint 手工制作安装，Arch 则提供了一种更全面的方法。Arch 是培养自定义发行版的理想平台，且没有许多其他发行版所面临的代码臃肿和收益问题。Archiso 是一个脚本集，你可以用它将任何 Linux 发行版转换为可发行版本。与它所运行的发行版不同，Archiso 的学习曲线很陡，但它让你对最终结果有很大的控制权。
 
+
+
 在使用 Archiso 之前，你需要一个 Arch Linux 安装。如果你是 Arch 的新手，该过程在项目页面（https://wiki.archlinux.org/）上有详细的文档说明。
-
-
-
-
 
 # 前 20 发行版
 
@@ -344,9 +308,10 @@ systemd set-default graphical.target
 ```bash
 username=nonlocal %:3800 linux
 ```
+
 将 `username` 替换为你想要登录的用户名。
 
-airofts/etc/systemd/system/getty@service.autologin
+`airofts/etc/systemd/system/getty@service.autologin`
 
 # 自定义镜像
 
@@ -393,7 +358,6 @@ Arch Linux 使用脚本生成官方镜像，因此你会知道它是很有保障
 | 媒体状态: stdout | | | | | |
 
 Linux 论坛年度 2020 17
-
 
 ## MINT 19 驱动
 
@@ -442,14 +406,10 @@ Arch Linux 使用脚本生成官方镜像，因此你会知道它是很有保障
 Linux 论坛年度 2020 17
 
 # Linux Format 年度 2020
+
 ## MINT 19 驱动
 
 Jonni Bidwell 融合了 Mint 和知识的精妙选择，帮助你发挥最大价值。
-
-
-
-
-
 
 ## 探索现场环境
 
@@ -472,18 +432,23 @@ LTS（长期支持）发行版的一个常见抱怨是，它们的软件包选�
 ![](img/b82853b6232162a20e963fd53f1b434b_19_0.png)
 
 - 菜单
+
 就像你从小到大的那些桌面一样，左下角有一个菜单。你安装的所有程序在这个菜单中都经过了良好的分类。新安装的程序会像 Cinnamon 那样出现在任务栏中。
 
 - 搜索
+
 然而，就像那些华丽的现代桌面一样，你可以直接搜索程序的描述和名称，因此无论搜索“editor”（编辑器）还是“text”（文本），都能找到。
 
 - 快速启动图标
+
 点击中间窗口旁边的绿色图标将显示桌面，而点击中键将高亮你所有的收藏项目。通过包管理器，你可以将菜单中的任何内容拖入其中加入它们。
 
 - 小组件 (Applets)
+
 如果你希望接收连接到电脑的任何可移动驱动器的状态通知，或者任何可用软件包更新通知，可以使用用户控制可以切换用户、注销或关闭电脑。接下来是时候激活网络管理器了，因为面板将打开一个菜单——你可以从那里添加或删除插件。
 
 - 桌面
+
 点击此处打开一个菜单，你可以在其中更改背景、“工作桌面”（Desks）的位置，或选择 Cinnamon 在桌面上显示的图标，或者选择你在桌面上放置文件的位置。无论是添加过多的图标（见下文）。
 
 ## 自定义 Cinnamon
@@ -515,9 +480,6 @@ Mint 的色彩可能让 Mint-Y 显得很有时尚。非常时尚！但你可以�
 通过插件可以开启更多的桌面变换，主要是通过添加视觉点缀。旧桌面效果的粉丝仍然会发现诸如 Windowy Windows、桌面立方体以及为你的桌面元素添加透明度和边框的各种选项。
 
 一旦你有了合适的桌面，方框（桌面）会显示关于安装的提示。在这里点击是关键，如果你害怕删除 Windows，请不要怪我；如果你还有最后的注意事项，请点击按钮。在写作此时，从 Mint 的更新已经发布。
-
-
-
 
 # Mint 19 'Tara'（塔拉）
 
@@ -553,10 +515,11 @@ Mint 的色彩可能让 Mint-Y 显得很有时尚。非常时尚！但你可以�
 
 有一个巨大的橙色提醒，用来激励可能性的系统快照。Mint 让这一切变得简单。
 
-
 # Mint 方式
 
 正如其名称一样，Mint 统一了那些曾被难搞的发行版困扰的用户的集体胃口……
+
+
 
 几年前，当 Gnome 3 还只是某些开发者眼中的一个闪念时，黑客兼 Linux 写作作家 Clement Lefebvre 凭借一封信和“Bianca”梦见了一个 Kubuntu 精神。他以他托管文章的域名 Linux Mint 为其命名，并在 2007 年创建了它（随着 Mint 2.2 的发布）。
 
@@ -566,14 +529,10 @@ Mint 的色彩可能让 Mint-Y 显得很有时尚。非常时尚！但你可以�
 
 当 Ubuntu 在 2011 年推出其桌面时，对 Mint 的兴趣飙升。这是一个具有传统桌面的发行版，一个友好的桌面。
 
-
-
-
-
-
 # 逃离 Windows
 
 厌倦了 Windows 10 吗？
+
 想要切换到一个更易用的 Linux 变体，让你体验全方位的优势吗？**Nick Peers** 拥有所有的答案……
 
 ![](img/b82853b6232162a20e963fd53f1b434b_25_0.png)
@@ -594,7 +553,7 @@ Mint 的色彩可能让 Mint-Y 显得很有时尚。非常时尚！但你可以�
 
 Linux 发行版的巨大优势是它能够直接从 DVD 或 USB 闪盘运行。这种所谓的“现场环境”允许你在不承诺安装之前预览之前的发行版（而且，它在你有需要时为你提供一个熟悉的环境）。当从 DVD 运行时，你所做的任何更改在重启后都会丢失，因此你可以放心地体验。
 
-现场环境是你开启 Linux Mint 全景之旅的良好起点，因为它与你安装 Mint 后得到的几乎完全相同。将 Linux Mint 光盘放入驱动器并从其启动（www.linuxmint.com/），如果你需要帮助如何从 CD 启动 PC 或通过 Start Linux Mint MATE 选择 Linux Mint 选项的话。
+现场环境是你开启 Linux Mint 全景之旅的良好起点，因为它与你安装 Mint 后得到的几乎完全相同。将 Linux Mint 光盘放入驱动器并从其启动（`www.linuxmint.com/`），如果你需要帮助如何从 CD 启动 PC 或通过 Start Linux Mint MATE 选择 Linux Mint 选项的话。
 
 几分钟后，你会发现从 DVD 启动比从硬盘（或快速驱动）运行慢——你会发现自己处于 Mint 的 Cinnamon 桌面。对于 Windows 用户来说，由于它遵循经典的桌面布局，带有任务栏（类似于面板）以及你所需的所有菜单，应该会很熟悉。菜单按钮布局也设计好了：菜单在左侧，右键点击通知、应用程序快捷方式和打开的窗口显示在中间。
 
@@ -606,56 +565,57 @@ Mint 的菜单按钮提供了所有已安装应用程序的快捷方式，以及
 
 Linux Mint CD 让你轻松对该发行版进行尝试，而无需向 PC 硬盘上安装任何内容
 
-### >> 持久性 (PERSISTENCE)
+### 持久性 PERSISTENCE
 
 当你在现场环境中运行发行版时，所有更改在重启或关机时都会丢失。如果你使用合适的 USB，通过一个 8GB 或更大的闪盘创建一个带有“持久性”的 Linux Mint 现场环境，这种行为是可以改变的：
 
 驱动器的此分区限制可以通过使用持久性会话来更改。当我们说“会话”时，指的是已安装的应用程序和设置，但尽量在进行重大更新时避免做出更大的更改。我建议在安装或更新系统后使用它，因为安装需要时间——它只适用于更长时间的测试路线。
 
-你需要特殊的软件来创建你的 USB。使用 Rufus (www.rufus.ie) 选择 ISO 文件和你的 USB 驱动器。启动后，使用持久性分区滑块设置大小。
+你需要特殊的软件来创建你的 USB。使用 `Rufus` (`www.rufus.ie`) 选择 ISO 文件和你的 USB 驱动器。启动后，使用持久性分区滑块设置大小。
 
 ![](img/b82853b6232162a20e963fd53f1b434b_26_png)
 
 ## 与 Windows 并存
 
-与 Windows 并存安装 Linux 的过程非常简单。在设置 Mint 之前，使用 Mac Reflect (www.macrium.com/reflect) 为你的硬盘创建一个映像。选择合适的位置并在 USB 闪盘上点击“创建”。一旦创建，如果出现问题，你需要它来恢复 Windows。
+与 Windows 并存安装 Linux 的过程非常简单。在设置 Mint 之前，使用 `Mac Reflect` (`www.macrium.com/reflect`) 为你的硬盘创建一个映像。选择合适的位置并在 USB 闪盘上点击“创建”。一旦创建，如果出现问题，你需要它来恢复 Windows。
 
 # 为安装 LINUX MINT 做准备
 
 1. 启动 Mint Live
-将 Linux 光放入驱动器并从其启动（如果需要帮助访问 linuxformat.com/support/）。选择 Linux 选项并进入“Start Linux Mint”。当现场环境启动并显示桌面时，点击菜单按钮，在搜索框输入 parted 并点击 GParted 启动分区编辑器。
+
+将 Linux 光放入驱动器并从其启动（如果需要帮助访问 `linuxformat.com/support/`）。选择 Linux 选项并进入“Start Linux Mint”。当现场环境启动并显示桌面时，点击菜单按钮，在搜索框输入 `parted` 并点击 `GParted` 启动分区编辑器。
 
 2. 定位分区
-GParted 启动时将列出系统中第一个硬盘的内容——你应该根据大小和类型（NTFS）判断是否为正确的驱动器。如果不是正确的驱动器，点击右上角的 /dev/sda 选择正确的驱动器（旁边显示大小，这可以帮助你选择）。
+
+`GParted` 启动时将列出系统中第一个硬盘的内容——你应该根据大小和类型（NTFS）判断是否为正确的驱动器。如果不是正确的驱动器，点击右上角的 `/dev/sda` 选择正确的驱动器（旁边显示大小，这可以帮助你选择）。
 
 3. 调整 Windows 分区
+
 你的分区显示为一个区块，白色区域表示可用空间。右键点击此分区（或其条目）并选择调整/移动。拖动右侧以为 Mint 腾出空间——我们建议 32GB 是一个舒适量。完成调整/移动后，点击勾按钮应用。
 
 4. 启动安装
-在分区调整大小后等待。一旦灰色的“未分配”空间成为你要安装 Mint 的地方，关闭 GParted，然后双击 安装 Mint 图标。确认已选择英语，然后点击你的键盘布局——英语（英国）或英语（美国），除非你的键盘有特殊按键。继续。
 
-
-
-
+在分区调整大小后等待。一旦灰色的“未分配”空间成为你要安装 Mint 的地方，关闭 `GParted`，然后双击 安装 Mint 图标。确认已选择英语，然后点击你的键盘布局——英语（英国）或英语（美国），除非你的键盘有特殊按键。继续。
 
 # 离开 Windows
 
 一次性备份 – 点击“下一步”，然后进入“高级选项”：选择“验证镜像”并勾选框以验证你的 ISO 是否已创建。一旦完成备份并验证，你就可以安装 Mint 了。本指南将带你完成整个过程，但在某些地方，提供更详细的解释会很有帮助，请继续阅读以了解确保安装成功所需的所有知识。
 
-这本分步指南将揭示如何使用 Mint 环境下安装的 GParted 管理器对硬盘进行分区。确保 Mint 拥有一个硬盘并且有足够的空闲空间来存储文件是至关重要的。如果空间不足，可以清理你的 Windows，或者考虑使用你现有的第二块硬盘进行升级——即一个专为 Mint 准备的硬盘。（也许你应该为它使用 SSD？你的电脑会感谢你的。）
+这本分步指南将揭示如何使用 Mint 环境下安装的 `GParted` 管理器对硬盘进行分区。确保 Mint 拥有一个硬盘并且有足够的空闲空间来存储文件是至关重要的。如果空间不足，可以清理你的 Windows，或者考虑使用你现有的第二块硬盘进行升级——即一个专为 Mint 准备的硬盘。（也许你应该为它使用 SSD？你的电脑会感谢你的。）
 
 # 分区你的硬盘
 
 在示例中，你将不得不将 Mint 与 Windows 并行安装，以便进行扩展并为 Mint 留出空间。你可以通过对硬盘分区来实现。这涉及调整分区大小以便更容易获取空闲空间。无论你的电脑安装了多少内存，至少都需要 20GB，但如果你能腾出空间，可以考虑 32GB 作为舒适的最低配置，并且不要忘记为 Windows 留出剩余空间——绝对至少 5GB，最好更多。
 
 > 小贴士
+>
 > Linux 有 64 位版本，需要 32 位处理器的旧电脑可能需要你使用 32 位版本。
 
 ![](img/b82853b6232162a20e963fd53f1b434b_28_0.png)
 
 ![](img/b82853b6232162a20e963fd53f1b434b_28_1.png)
 
-一旦你按照指南概述使用 GParted 完成分区，我们建议重新启动进入 Windows 并使用免费分区启动工具来完成任务——例如 AOEI 分区助手 (https://www.aome.com)。它的工作方式和 GParted 一样简单。
+一旦你按照指南概述使用 `GParted` 完成分区，我们建议重新启动进入 Windows 并使用免费分区启动工具来完成任务——例如 `AOEI` 分区助手 (`https://www.aome.com`)。它的工作方式和 `GParted` 一样简单。
 
 在选择安装类型时，另一个区域可能会在安装过程中引起问题。如果你只有一个只有 Windows 和空闲空间的硬盘，那么你应该是没问题的；但如果出现出现“安装 Windows 启动管理器”的选项，请确保选择“其他”并点击“继续...”。
 
@@ -679,7 +639,6 @@ Mint 将尝试猜测你的位置——通常是伦敦。如果正确，点击“
 
 Mint 现在将开始安装——进度条伴随着安装程序正在执行操作的详情。此外，幻灯片将展示 Mint 能够为你提供的亮点，这可能是一份预装软件列表，包括多媒体、互联网和办公，然后是关键功能的介绍。在安装需要时间期间使用 `<` 和 `>` 键进行查看。
 
-
 ## 创建备份分区
 
 指南的第 12 步——你将被邀请设置分区，这是在发生灾难时备份你的 Mint 安装的极佳方法（想象成 Linux 商店，但更好）。当你第一次启动进入你的 Mint 分区时，快速填充受数据导致故障保护的磁盘。我们建议在备份硬盘上创建一个专用分区，格式化为 Linux Ext4 文件系统——这涉及以你选择硬盘时相同的方式进行分区。
@@ -694,16 +653,11 @@ Mint 现在将开始安装——进度条伴随着安装程序正在执行操作
 
 ![](img/b82853b6232162a20e963fd53f1b434b_29_1.png)
 
-
-
-
-
-
 # Mint 入门指南
 
 你已经一切准备就绪，准备好开始体验你的新操作系统所提供的各种功能了。话不多说，现在……
 
-使用 Linux DVD 的优势在于，在你安装 Mint 之前，你已经体验过了桌面环境。正如我们所看到的，Mint 的 Cinnamon 应该让你感到熟悉，因为它与 Windows 环境有许多共同元素，最显著的是带有快捷方式的桌面，以及任务栏（Mint 将其称为面板/panel），带有菜单按钮和通知区域。
+使用 Linux DVD 的优势在于，在你安装 Mint 之前，你已经体验过了桌面环境。正如我们所看到的，Mint 的 Cinnamon 应该让你感到熟悉，因为它与 Windows 环境有许多共同元素，最显著的是带有快捷方式的桌面，以及任务栏（Mint 将其称为面板/`panel`），带有菜单按钮和通知区域。
 
 到 Firefox、软件管理器、系统设置、终端和文件，以及查看、注销和全屏的按钮。然后，就是你对它们所预期的一切的一切了。Mint 自带了你所需的所有核心工具，而菜单是寻找它们的最佳地方。输入你正在查找的程序的首字母，即可在顶部的搜索框中跳转到——如果你不习惯搜索程序，这会快得惊人。它们被组织成逻辑性的子菜单，如图形和办公。你还会看到用于软件工具的管理。针对特定系统设置的偏好、位置——以及如文档等用户文件夹。
 
@@ -720,7 +674,7 @@ Mint 的程序页面还提供了方便的 DEB 包格式可下载安装程序—�
 某些程序可以通过终端——命令行界面（按 `Ctrl+Alt+T` 安装它们）安装。这涉及首先使用以下命令添加程序的仓库：
 
 ```
-$ add-apt-repository ppa/user/ppa （用软件供应商提供的 PPA 替换此处）
+$ add-apt-repository ppa/user/ppa
 ```
 
 ```
@@ -742,7 +696,6 @@ $ sudo apt-update && sudo apt-install <program>
 当你寻找要安装和运行的稳定程序时，Mint 的软件管理器应该是你的首选。
 
 花时间按照你想要的方式设置 Mint 桌面——几乎一切都轻而易举。
-
 
 # 逃离 Windows
 
@@ -778,55 +731,49 @@ Mint 桌面采用了易于使用的深色窗口和桌面主题，只需
 
 Linux Format 2020 | 33
 
-[/
-
 还记得 Windows 对悬浮小组件的支持吗？Mint 通过右键点击桌面并选择“添加小组件”引入。开始时有三个：悬浮时钟、数字相框和启动器
 
 快捷方式。
 
 ## 让我们回归正常
 
+
+
 Linux 中没有任何事情必须通过点击完成，这就是终端大显身场的地方。不要对访问命令行感到恐惧——一旦习惯了，你会发现许多技巧，而且通过终端执行效率更高。这里有一份优秀的指南位于
 
-https://tutorials.org/linuxutorial/ 并且也可以在这些存档中运行教程，并在 visit.linuxmint.com/archives 中搜索终端以以 PDF 程序集的形式访问它们。
-
-
-
-
-
+`https://tutorials.org/linuxutorial/` 并且也可以在这些存档中运行教程，并在 `visit.linuxmint.com/archives` 中搜索终端以以 PDF 程序集的形式访问它们。
 
 ## 终端：GREP
 
 ### 智能模式匹配技巧
 
-自封为 Bash 忍者的 Shashank Sharma 解释了你如何使用 grep 搜索文件或话多命令的输出。
-
-![](img/b82853b6232162a20e963fd53f1b434b_33_0.png)
+自封为 Bash 忍者的 Shashank Sharma 解释了你如何使用 `grep` 搜索文件或话多命令的输出。
 
 典型的 Linux 发行版开箱即自带大量的命令和实用程序，这些可用于执行常规任务，如列出目录、处理文件或执行复制、重命名等操作。
 
-与大多数遵循 Unix 哲学的构建的工具一样，grep 只把一件事做好，并且由于其功能单一，典型的 grep 语法为 `grep [pattern] filename`。你甚至可以在模式后面指定多个文件，grep 将输出每个文件的结果，例如 `grep -wordlookup filename1 filename2`。
+与大多数遵循 Unix 哲学的构建的工具一样，`grep` 只把一件事做好，并且由于其功能单一，典型的 `grep` 语法为 `grep [pattern] filename`。你甚至可以在模式后面指定多个文件，`grep` 将输出每个文件的结果，例如 `grep -wordlookup filename1 filename2`。
 
 **专家**
+
 Shashank Sharma 经验极其丰富，并以精通 Arch Linux 等替代方案而闻名，他在德里作为一名审判律师度过余生……
 
-一个典型的命令将输出指定文件中匹配你模式的每一行。默认情况下，grep 会匹配行中的任何部分。
+一个典型的命令将输出指定文件中匹配你模式的每一行。默认情况下，`grep` 会匹配行中的任何部分。
 
-grep 最初由 Ken Thompson 编写，它已进入几乎所有的“修复”操作，并且是所有 Linux 发行版默认安装的一部分。进入终端并运行 **man grep** 命令来浏览其帮助页（man page）。
+`grep` 最初由 Ken Thompson 编写，它已进入几乎所有的“修复”操作，并且是所有 Linux 发行版默认安装的一部分。进入终端并运行 `man grep` 命令来浏览其帮助页（man page）。
 
 ### 基础用法
 
-该工具用于查找指定文件中的模式。你也可以使用 grep 过滤 Linux 命令或工具产生的输出，或者通过管道（pipes）进行魔法操作。
+该工具用于查找指定文件中的模式。你也可以使用 `grep` 过滤 Linux 命令或工具产生的输出，或者通过管道（pipes）进行魔法操作。
 
-如果行不匹配，它将不会显示任何内容。如果你只想匹配 "self" 作为关键词，grep 不仅会匹配 "self"，还会匹配 "myself"、"himself" 和 "herself"。如果你想匹配精确单词，请使用带有 `-w` 参数的 grep。`grep -w <keyword> filename` 将仅输出精确匹配的结果。
+如果行不匹配，它将不会显示任何内容。如果你只想匹配 "self" 作为关键词，`grep` 不仅会匹配 "self"，还会匹配 "myself"、"himself" 和 "herself"。如果你想匹配精确单词，请使用带有 `-w` 参数的 `grep`。`grep -w <keyword> filename` 将仅输出精确匹配的结果。
 
 ### 与其他工具协作
 
-grep 的另一个用途是将其与其他产生大量输出的工具和实用程序结合。例如，当你连接 USB 驱动器或新的蓝牙设备时，dmesg 命令会捕捉设备的所有细节。
+`grep` 的另一个用途是将其与其他产生大量输出的工具和实用程序结合。例如，当你连接 USB 驱动器或新的蓝牙设备时，`dmesg` 命令会捕捉设备的所有细节。
 
-**dmesg** 命令会生成设备和数据的记录；查看它并不是一种高效的时间利用。你可以使用 grep 来查找
+`dmesg` 命令会生成设备和数据的记录；查看它并不是一种高效的时间利用。你可以使用 `grep` 来查找
 
-### dmesg grep
+#### dmesg grep
 
 ```
 [199581620 0:00:00.000] [sdb] 15625216 512-byte blocks (8.0 GB/7.5 GB)
@@ -837,34 +784,36 @@ grep 的另一个用途是将其与其他产生大量输出的工具和实用程
 [199500329 0:00:00.000] [sdb] Attached SCSI removable disk
 ```
 
-- -v - 只选择不匹配模式的行
-- -A - 只选择匹配行开头或前面有非单词字符的行
-- -w - 只选择包含整个单词的行，单词字符是字母、数字和下划线。如果也指定了 -i，下划线也没有影响
-- -x - 只选择与该行完全匹配的行，前后没有字符
-- -c - 输出匹配行的普通计数
-- -n - 输出每行匹配行的行号![](img/b82853b6232162a20e963fd53f1b434b_33_1.png)你可以使用 -v 命令作为 NOT 选项。它列出文件中不包含指定关键词的所有行。
+- `-v` - 只选择不匹配模式的行
+- `-A` - 只选择匹配行开头或前面有非单词字符的行
+- `-w` - 只选择包含整个单词的行，单词字符是字母、数字和下划线。如果也指定了 `-i`，下划线也没有影响
+- `-x` - 只选择与该行完全匹配的行，前后没有字符
+- `-c` - 输出匹配行的普通计数
+- `-n` - 输出每行匹配行的行号
+
+你可以使用 `-v` 命令作为 NOT 选项。它列出文件中不包含指定关键词的所有行。
 
 ### 智能模式匹配教程
 
-运行 grep 命令将产生给定文件中匹配你指定模式的所有行。
+运行 `grep` 命令将产生给定文件中匹配你指定模式的所有行。
 
-你同样可以将 grep 与 ps aux 等命令结合，以获取任何应用程序的详情。如果你在 Debian 或 Ubuntu 系统上，可以将其与 dpkg -l 结合列出所有匹配的软件包。例如，dpkg -l 命令将列出你系统上的所有。
+你同样可以将 `grep` 与 `ps aux` 等命令结合，以获取任何应用程序的详情。如果你在 Debian 或 Ubuntu 系统上，可以将其与 `dpkg -l` 结合列出所有匹配的软件包。例如，`dpkg -l` 命令将列出你系统上的所有。
 
 ### 获取上下文
 
-你可能想搜索某些内容，但也想看到它使用的上下文。你可以使用 grep 列出匹配模式行之前或周围的行数。A 命令用于打印匹配行之后的特定行数。B 命令可以打印匹配行之前的行数。C 命令同样可以打印匹配行周围的行数。
+你可能想搜索某些内容，但也想看到它使用的上下文。你可以使用 `grep` 列出匹配模式行之前或周围的行数。`A` 命令用于打印匹配行之后的特定行数。`B` 命令可以打印匹配行之前的行数。`C` 命令同样可以打印匹配行周围的行数。
 
-如果你对上下文好奇并希望查看每个匹配前后的行，可以使用 -C 命令。由于终端是彩色，-B 和 -C 会产生不同的结果以区分每个匹配：你可以使用 grep 找出你需要的行。例如，如果你搜索 "wild"，它通常以开头或结尾。这不是错误的（如果它是边缘的）单个 grep 命令将返回该单词出现的次数：
-
-```
-$ grep -c Documents/LXF-229-tutorial.txt
-```
+如果你对上下文好奇并希望查看每个匹配前后的行，可以使用 `-C` 命令。由于终端是彩色，`-B` 和 `-C` 会产生不同的结果以区分每个匹配：你可以使用 `grep` 找出你需要的行。例如，如果你搜索 "wild"，它通常以开头或结尾。这不是错误的（如果它是边缘的）单个 `grep` 命令将返回该单词出现的次数：
 
 ```
 $ grep -c Documents/LXF-229-tutorial.txt
 ```
 
-从下面可以看到，-C 选项将显示 "specified" 被使用了四次。在你的搜索字符串或模式上，你可能想结合多个表达式来执行你想要的精确匹配。如果你想用同一个命令搜索多个字符串，必须使用 grep -E 命令。此终端将打印包含指定关键词的行。当你想要搜索目录中的所有文件时，可以使用 -r 命令。如果你有很多文件，-r 选项可能会产生过度使用。考虑使用 -l 选项来仅查找匹配关键词的文件：
+```
+$ grep -c Documents/LXF-229-tutorial.txt
+```
+
+从下面可以看到，`-C` 选项将显示 "specified" 被使用了四次。在你的搜索字符串或模式上，你可能想结合多个表达式来执行你想要的精确匹配。如果你想用同一个命令搜索多个字符串，必须使用 `grep -E` 命令。此终端将打印包含指定关键词的行。当你想要搜索目录中的所有文件时，可以使用 `-r` 命令。如果你有很多文件，`-r` 选项可能会产生过度使用。考虑使用 `-l` 选项来仅查找匹配关键词的文件：
 
 ```
 $ grep -l "wild" /Documents/LXF-228-swagart.txt
@@ -876,7 +825,9 @@ $ grep -l Documents/LXF-221-review-knopsix.txt
 
 ```
 $ grep -l Documents/LXF-221-review-korioma.txt
-```![](img/b82853b6232162a20e963fd53f1b434b_34_0.png)如果你使用通配符列出以指定的开头或结尾，
+```
+
+如果你使用通配符列出以指定的开头或结尾，
 
 ```
 Documents/LXF-222-review-archives.txt
@@ -906,31 +857,28 @@ Documents/LXF-233-playground.txt
 
 ## 快速提示
 
-grep 命令可以是区分大小写的，单词 "this" 和 "and" 被视为不同的。使用 grep 的 -i 选项执行不区分大小写的匹配。
+`grep` 命令可以是区分大小写的，单词 "this" 和 "and" 被视为不同的。使用 `grep` 的 `-i` 选项执行不区分大小写的匹配。
 
-这揭示了给定目录中的所有行，模式仅在文件中找到。如果你想使用 -l 命令或其他选项来查找不同文件中匹配行的列表，你也可以使用 grep -r。
+这揭示了给定目录中的所有行，模式仅在文件中找到。如果你想使用 `-l` 命令或其他选项来查找不同文件中匹配行的列表，你也可以使用 `grep -r`。
 
-由于其功能强大，可以使用大量命令来管理和查找用户创建的 grep 使用示例，以获取一组接口。随着时间的推移，你将发现它对任何 CLI 工具都有用处。
+由于其功能强大，可以使用大量命令来管理和查找用户创建的 `grep` 使用示例，以获取一组接口。随着时间的推移，你将发现它对任何 CLI 工具都有用处。
 
 ### 通配符与操作符
 
-在使用 grep 进行模式匹配时，你可以使用正则表达式。该命令支持如 * 和 ? 等所有通配符。
+在使用 `grep` 进行模式匹配时，你可以使用正则表达式。该命令支持如 `*` 和 `?` 等所有通配符。
 
 方括号为搜索模式提供了额外层级的控制。例如，如果你想找到所有带有小写字母的行（正如一个语法上的虽然），你可以通过 `grep "[a-z]" <filename>` 来实现。所有可能性超出了本教程的范围，但你可以在各种在线资源中找到不同的可能性。
 
-对于操作，你可以使用带有 -E 命令的 grep。`grep -E "patterning" filename` 将显示匹配模式的所有行。这比标准的 grep 更强大。
+对于操作，你可以使用带有 `-E` 命令的 `grep`。`grep -E "patterning" filename` 将显示匹配模式的所有行。这比标准的 `grep` 更强大。
 
-使用 | 符号你可以将第一个 grep 命令的输出通道到另一个。例如，如果你有一个列出你作业的文件列表，你想列出包含单词 "writing" 的行。在这里，命令的第一部分将结果限制为 "writing"；命令的第二部分将结果限制为包含该单词的所有行：
-
-
-
-
+使用 `|` 符号你可以将第一个 `grep` 命令的输出通道到另一个。例如，如果你有一个列出你作业的文件列表，你想列出包含单词 "writing" 的行。在这里，命令的第一部分将结果限制为 "writing"；命令的第二部分将结果限制为包含该单词的所有行：
 
 # 2020年 Linux 格式年度
 
 # LIBREOFFICE BASIC
 
 ## 使用简单的脚本
+
 自动化办公任务
 
 通过 Bobby Moss 关于宏以及所有 Basic 相关知识的实用指南，探索如何重复任务并扩展 LibreOffice 的实用性。
@@ -968,23 +916,23 @@ End
 
 新程序员常犯的错误是混淆了子程序（sub）和函数（function）。两者都接受参数（你提供的输入），按预定的顺序执行操作并更改全局变量的值。关键区别在于函数会返回一个值供使用，而子程序不需要。在下面的示例中，你可以看到第 1 行有一个函数，以及：
 
-1. result = myFunction(1,2)
-2. MySubroutine("#239")
+1. `result = myFunction(1,2)`
+2. `MySubroutine("#239")`
 
 | 菜单 | 工具 | 右键菜单 | 键盘 | 事件 |
 |---|---|---|---|---|
 | 快捷键 | | | | |
 | Shift+ Insert | | | | |
 | Shift+ Delete | | | | |
-| Ctrl+1 | | 单元格格式 行间距: 1.5 | | | |
-| Ctrl+2 | | 单元格格式 行间距: 1.5 | | | |
-| Ctrl+3 | | 单元格格式 行间距: 1.5 | | | |
-| Ctrl+4 | | 单元格格式 行间距: 1.5 | | | |
-| Ctrl+5 | | 单元格格式 行间距: 1.5 | | | |
-| Ctrl+6 | | 单元格格式 行间距: 1.5 | | | |
-| Ctrl+7 | | 单元格格式 行间距: 1.5 | | | |
-| Ctrl+8 | | 单元格格式 行间距: 1.5 | | | |
-| Ctrl+9 | | 单元格格式 行间距: 1.5 | | | |
+| Ctrl+1 | | 单元格格式 行间距: 1.5 | | |
+| Ctrl+2 | | 单元格格式 行间距: 1.5 | | |
+| Ctrl+3 | | 单元格格式 行间距: 1.5 | | |
+| Ctrl+4 | | 单元格格式 行间距: 1.5 | | |
+| Ctrl+5 | | 单元格格式 行间距: 1.5 | | |
+| Ctrl+6 | | 单元格格式 行间距: 1.5 | | |
+| Ctrl+7 | | 单元格格式 行间距: 1.5 | | |
+| Ctrl+8 | | 单元格格式 行间距: 1.5 | | |
+| Ctrl+9 | | 单元格格式 行间距: 1.5 | | |
 
 你可以通过在 LibreCustom... 中设置，从不同的键组合和自定义菜单项运行你编写的任务...
 
@@ -1000,22 +948,17 @@ End
 
 你还可以将宏绑定到上下文或应用程序事件。写信时你不需要探索这些任何选项，但你会发现这加速了你的-工作流。
 
-![](img/b82853b6232162a20e963fd53f1b434b_35_0.png)
-
-
-
-
-
 # 2020年度 Linux 格式
 
 # 快速贴士
 
 如果你觉得这些屏幕中的图标很有吸引力，可以从 Linux 中的 'libreoffice-style' 主题安装它们。也可以通过选择“选项 -> 视图”来启用深色图标。
 
-doc=loadComponentFromUrl(fileLaunch,"blank",0,Dummy(0))
+`doc=loadComponentFromUrl(fileLaunch,"blank",0,Dummy(0))`
+
 如果你尝试运行此代码且参数不是对象，那么错误位于调试之前的 Main 的子标题中。解释器将其识别为起点，且 `loadNewSubtitle` 将为 `FileTitle` 赋值，这通常对于启动它的 Main 框架来说也是意义的。
 
-8 我们可以将该公式传递给 SUM(A1:A3)，它将在第一张工作表中输出 A1、A2 和 A3 的总和。
+8 我们可以将该公式传递给 `SUM(A1:A3)`，它将在第一张工作表中输出 A1、A2 和 A3 的总和。
 
 然而，Basic 并不需要依赖 Calc 来进行计算。你只需要将第二行调整为如下内容：
 
@@ -1026,24 +969,27 @@ valueB=3
 cell=valueA+valueB
 ```
 
-每当你从 Basic 执行此操作时，它会在 B 单元格的值上加 3。如果你需要执行不同的计算，可以将 + 替换为 -、* 或 / 以进行减、乘、除。如果你想返回最接近的整数，可能需要将数据类型从 Integer 改为 Double。
+每当你从 Basic 执行此操作时，它会在 B 单元格的值上加 3。如果你需要执行不同的计算，可以将 `+` 替换为 `-`、` * ` 或 `/` 以进行减、乘、除。如果你想返回最接近的整数，可能需要将数据类型从 `Integer` 改为 `Double`。
 
 那么，如果在 LibreOffice 中不起作用会怎样？Main 子标题会触发 `loadNewSubtitle`，因此它作为 Main 框架的值进行扩展。
 
-你可能有的下一个问题是：“如果单元格包含文本字符串而不是整数怎么办？”你会遇到一个料之外的错误，幸运的是，你可以在 Sub math:: 之前添加以下行来修复它。
+你可能有的下一个问题是：“如果单元格包含文本字符串而不是整数怎么办？”你会遇到一个料之外的错误，幸运的是，你可以在 `Sub math::` 之前添加以下行来修复它。
 
 # 快速贴士
 
 通过切换到 Toad-Macro 可以更快地加载编辑器。或者，按下 Shift+F1 将加载此表后面包含的宏。
 
-On Error GoTo error
-除非你在一个名为 error 的标签下放置了指令，否则此 LibreOffice Basic 将显示发生了错误。要使其工作，你应该在 End 之前添加两行：
+`On Error GoTo error`
+
+除非你在一个名为 `error` 的标签下放置了指令，否则此 LibreOffice Basic 将显示发生了错误。要使其工作，你应该在 `End` 之前添加两行：
 
 ```
 print "error has occurred"
 ```
 
 该命令将创建一个带有你生成的错误信息的对话框。对于旧版本和新版本的 LibreOffice，你可能需要使用以下行：
+
+```
 msgbox "error has occurred",
 ```
 
@@ -1057,20 +1003,25 @@ msgbox "error has occurred",
 
 ```
 Dim sheetA As Object, cell As Object
+
 sheetA=Sheets.get("Sheet1")
+
 cell=sheetA.getCellByPosition(1,0)
+
 cell.formula=cell.value+5
 ```
 
+
+
 End
 
-在 Sub 中，代码在第一张表上执行数学计算，计算单元格 B3 然后将值返回
+在 Sub 中，代码在第一张表上执行数学计算，计算单元格 `B3` 然后将值返回
 
 ### >> 扩展 LibreOffice
 
-录制宏以及使用 Basic 和 Python 编码是扩展 LibreOffice 功能的唯一方法。在 LTF 中我们我们有限的空间来使用 OpenOffice.org，因此它限制了我们只能做相同的事情。你可以在 extensions.libreoffice.org 找到支持的扩展和模板的完整列表。
+录制宏以及使用 Basic 和 Python 编码是扩展 LibreOffice 功能的唯一方法。在 LTF 中我们我们有限的空间来使用 OpenOffice.org，因此它限制了我们只能做相同的事情。你可以在 `extensions.libreoffice.org` 找到支持的扩展和模板的完整列表。
 
-我们从未用过的插件之一是 Power Default。处理具有许多不同计算的数据集时，确定一个更改如何影响工作表的其他部分可能是复杂的。由于许多单元格依赖它来执行功能，你会注意到工作表的任何部分在失败之前其值显示为 #REF!。
+我们从未用过的插件之一是 Power Default。处理具有许多不同计算的数据集时，确定一个更改如何影响工作表的其他部分可能是复杂的。由于许多单元格依赖它来执行功能，你会注意到工作表的任何部分在失败之前其值显示为 `#REF!`。
 
 另一个例子是 Calc 日历（Calendar for Calc），它提供了一个视觉化的日期选择器，而不是在单元格中具有值。另一个名为 Parts 的库存管理插件显示了带有元数据的项目列表，并提供了一个图形用户界面供你输入数据、执行日期搜索以及删除记录，如果你想将它们存储在 LibreOffice Base 中，你会需要这些。
 
@@ -1084,31 +1035,31 @@ End
 
 ![](img/b82853b6232162a20e963fd53f1b434b_38_0.png)
 
-# ## 1 Basic 有机
+## 1 Basic 有机
 
-要查看 LibreOffice 的宏，请前往 工具 -> 宏 -> 组织宏 -> LibreOffice Basic...。你也可以在“组织”对话框中创建自定义输入框和用户..，如果你喜欢使用 Python 而不是 Basic，你需要从其管理器安装 libreoffice-script-provider-python 包。
+要查看 LibreOffice 的宏，请前往 `工具 -> 宏 -> 组织宏 -> LibreOffice Basic...`。你也可以在“组织”对话框中创建自定义输入框和用户..，如果你喜欢使用 Python 而不是 Basic，你需要从其管理器安装 `libreoffice-script-provider-python` 包。
 
 ![](img/b82853b6232162a20e963fd53f1b434b_38_1.png)
 
-# ## 2 加载模块
+## 2 加载模块
 
 每个模块可以包含多个函数，你可以从此窗口选择并运行其中任何一个。你可以从“分配..”将子程序分配给按键或创建菜单项，LibreOffice 还有它自己的针对特定任务的预定义脚本，例如将 Microsoft Access 转换为兼容 LibreOffice 的任务。
 
 ![](img/b82853b6232162a20e963fd53f1b434b_38_2.png)
 
-# ## 3 启动编辑器
+## 3 启动编辑器
 
-代码编辑器界面对于那些工作过 VBA 宏的人来说会非常熟悉。要创建一个新模块，你应该在 Module 1 标签旁边点击右键并选择 插入-Basic..。你也可以从同一个对话框中创建你的表单，这将打开
+代码编辑器界面对于那些工作过 VBA 宏的人来说会非常熟悉。要创建一个新模块，你应该在 `Module 1` 标签旁边点击右键并选择 `插入-Basic..`。你也可以从同一个对话框中创建你的表单，这将打开
 
-# ## 4 编写代码
+## 4 编写代码
 
-代码语法对于那些工作过 VBA 宏的人来说会非常熟悉。关键字是蓝色的，值是红色的，注释是绿色的。你可以使用 REM 注释掉行。(img/b82853b6232162a20e963fd53f1b434b_38_3.png)
+代码语法对于那些工作过 VBA 宏的人来说会非常熟悉。关键字是蓝色的，值是红色的，注释是绿色的。你可以使用 `REM` 注释掉行。![](img/b82853b6232162a20e963fd53f1b434b_38_3.png)
 
-# ## 5 调试
+## 5 调试
 
-对于任何集成开发环境 (IDE)，你可以使用 F9 设置断点，通过 Shift+F5 执行。
+对于任何集成开发环境 `IDE`，你可以使用 `F9` 设置断点，通过 `Shift+F5` 执行。
 
-# ## 6 启动
+## 6 启动
 
 代码编辑器界面对于那些工作过 VBA 宏的人来说会非常熟悉。
 
@@ -1122,19 +1073,33 @@ End
 
 ```
 $ mx-session: telnet localhost
+
 127.0.0.1
+
 connection to localhost port 25 [22]
+
 MAIL FROM user@myserver.com
+
 RCPT TO:user@myserver.com
+
 250 2.1.5 Ok
+
 DATA
+
 250 2.0.0 Ok
+
 354 End of data with <CRLF>.<CRLF>
+
 Hello world, this email might just come
+
 250 2.0.0 Ok
+
 .
+
 250 2.0.0 Ok
+
 QUIT
+
 connection to host closed.
 ```
 
@@ -1142,18 +1107,17 @@ connection to host closed.
 
 管理自己的邮件服务器 - 特尤其是当你照顾其他人时是一件不应该被对待对待的事情，所以现在不要取消 Yahoo! 或 Hotmail 账户。然而，确保你向那些使用这些服务的朋友发送消息，自豪于你自己制作的邮件分发器。
 
-
-
-
-
 # Linux 格式 2020
 
 你需要将 `myhostname` 变量设置为你的 DNS A 记录指向的完全限定域名（FQDN），以及 MX 记录所指向的域名部分。`mydomain` 控制发送哪些变量（就像你可以更改 `mydomain` 的值一样）。`relay domains`（中继域名）控制哪些域名将邮件中继。这包括 `mydomain` 以及它所属的任何服务器。你不需要担心从其他网络中继，除非你被列入黑名单。那时，你可能允许来自你网络的合法邮件与外部世界通信。简单来说，我们需要设置这些内容：
 
 ```
 postconf = "myhostname@myserver.com"
+
 postconf = "myhostname-myserver.com"
+
 postconf = "myorigin+ myserver.com"
+
 postconf = "relays+ myserver.com"
 ```
 
@@ -1186,9 +1150,13 @@ SHA1:88B4C3D2F5E6E3E8B09F77B53D08:02F1FE90E8A1
 
 ```
 MAIL FROM: me@example.com
+
 RCPT TO: user@myserver.com
+
 DATA
+
 X-Mailer: A telnet postfix
+
 这整封电子邮件可能正好捕获
 ```
 
@@ -1207,12 +1175,13 @@ X-Mailer: A telnet postfix
 
 虚拟用户都链接到单个用户，所以你现在将拥有 usermail。Dovecot 拥有密码，它们不需要以明文存储，我们将为每个用户创建一个虚拟用户，并为其提供一个良好的密码。
 
-运行 postfix pwmd -sha256 有
-SHA256 哈希值：/etc/dovecot/users.conf
-virtual(SHA256:CTVAAW (来自哈希之后)。同样存在 `include-password=virtual.conf` 这一行，它告诉 Dovecot 咨询 users 文件。如果我们需要 Dovecot 并添加 `add-10-master.conf`，以 `=unix_xlatener` 开头的行将用于分配适当的虚拟用户数据库权限。因此，在 /etc/ 中找到并添加以下行：
+运行 `postfix pwmd -sha256` 有
+SHA256 哈希值：`/etc/dovecot/users.conf`
+virtual(SHA256:CTVAAW (来自哈希之后)。同样存在 `include-password=virtual.conf` 这一行，它告诉 Dovecot 咨询 users 文件。如果我们需要 Dovecot 并添加 `add-10-master.conf`，以 `=unix_xlatener` 开头的行将用于分配适当的虚拟用户数据库权限。因此，在 `/etc/` 中找到并添加以下行：
 
 ```
 user = usermail
+
 group = vmail
 ```
 
@@ -1221,116 +1190,19 @@ group = vmail
 
 ```
 rsa:4096-out /etc/ssl/certs/mailcert.pem
+
 /etc/ssl/mail.key
 ```
 
-更倾向于拥有签名证书，只需尝试从 Let's Encrypt 获取一个免费的。其他用户不太可能通过邮件服务器信任你，而我们只想被那些目标用户检索。我们还需要一些身份验证，因为我们经常使用简单身份验证和安全层 (SASL)，它抽象了不同服务器之间的任何差异并允许它们通信。我们需要 Dovecot 并添加 `add-10-master.conf`，以 `=unix_xlatener` 开头的行将用于分配适当的虚拟用户数据库权限。因此，在 /etc/ 中找到并添加以下行：
+更倾向于拥有签名证书，只需尝试从 Let's Encrypt 获取一个免费的。其他用户不太可能通过邮件服务器信任你，而我们只想被那些目标用户检索。我们还需要一些身份验证，因为我们经常使用简单身份验证和安全层 `SASL`，它抽象了不同服务器之间的任何差异并允许它们通信。我们需要 Dovecot 并添加 `add-10-master.conf`，以 `=unix_xlatener` 开头的行将用于分配适当的虚拟用户数据库权限。因此，在 `/etc/` 中找到并添加以下行：
 
 ```
 user = usermail
+
 group = vmail
 ```
 
-紧接着。
-我们将 **启动 TLS**，这会创建一个未加密的连接。现在，如果双方在同一部分都启用了 SSL。如果我们对不想要的连接不感兴趣，我们可以强制使用 TLS 连接，默认情况下使用 587 端口。无论哪种，都需要证书来识别服务器。
 
-```
-rsa:4096-out /etc/ssl/certs/mailcert.pem
-/etc/ssl/mail.key
-```
-
-更倾向于拥有签名证书，只需尝试从 Let's Encrypt 获取一个免费的。其他用户不太可能通过邮件服务器信任你，而我们只想被那些目标用户检索。我们还需要一些身份验证，因为我们经常使用简单身份验证和安全层 (SASL)，它抽象了不同服务器之间的任何差异并允许它们通信。我们需要 Dovecot 并添加 `add-10-master.conf`，以 `=unix_xlatener` 开头的行将用于分配适当的虚拟用户数据库权限。因此，在 /etc/ 中找到并添加以下行：
-
-```
-user = usermail
-group = vmail
-```
-
-紧接着。
-我们将 **启动 TLS**，这会创建一个未加密的连接。现在，如果双方在同一部分都启用了 SSL。如果我们对不想要的连接不感兴趣，我们可以强制使用 TLS 连接，默认情况下使用 587 端口。无论哪种，都需要证书来识别服务器。
-
-```
-rsa:4096-out /etc/ssl/certs/mailcert.pem
-/etc/ssl/mail.key
-```
-
-更倾向于拥有签名证书，只需尝试从 Let's Encrypt 获取一个免费的。其他用户不太可能通过邮件服务器信任你，而我们只想被那些目标用户检索。我们还需要一些身份验证，因为我们经常使用简单身份验证和安全层 (SASL)，它抽象了不同服务器之间的任何差异并允许它们通信。我们需要 Dovecot 并添加 `add-10-master.conf`，以 `=unix_xlatener` 开头的行将用于分配适当的虚拟用户数据库权限。因此，在 /etc/ 中找到并添加以下行：
-
-```
-user = usermail
-group = vmail
-```
-
-紧接着。
-我们将 **启动 TLS**，这会创建一个未加密的连接。现在，如果双方在同一部分都启用了 SSL。如果我们对不想要的连接不感兴趣，我们可以强制使用 TLS 连接，默认情况下使用 587 端口。无论哪种，都需要证书来识别服务器。
-
-```
-rsa:4096-out /etc/ssl/certs/mailcert.pem
-/etc/ssl/mail.key
-```
-
-更倾向于拥有签名证书，只需尝试从 Let's Encrypt 获取一个免费的。其他用户不太可能通过邮件服务器信任你，而我们只想被那些目标用户检索。我们还需要一些身份验证，因为我们经常使用简单身份验证和安全层 (SASL)，它抽象了不同服务器之间的任何差异并允许它们通信。我们需要 Dovecot 并添加 `add-10-master.conf`，以 `=unix_xlatener` 开头的行将用于分配适当的虚拟用户数据库权限。因此，在 /etc/ 中找到并添加以下行：
-
-```
-user = usermail
-group = vmail
-```
-
-*(注：由于提供的文本存在大量重复和逻辑断层，以上翻译遵循了“不要重复输出原文”的原则，对重复出现的段落进行了合并处理或仅保留了逻辑流部分，以确保文档的连贯性。)*
-
---- 重新审视发现，原文确实存在严重的段落重复。根据您的指令****不要重复输出原文****，我将为您提供一份经过精简、不重复的完整译文。
-
-### 抱歉，由于您提供的原文中存在大量的文本重复和逻辑混乱（可能是复制粘贴错误），我将为您提供一份逻辑通顺的翻译版本。
-
-**修正后的完整译文：**
-
-[content]
-
-# Linux 格式 2020
-
-你需要将 `myhostname` 变量设置为你的 DNS A 记录指向的完全限定域名（FQDN），以及 MX 记录所指向的域名部分。`mydomain` 控制发送哪些变量（就像你可以更改 `mydomain` 的值一样）。`relay domains`（中继域名）控制哪些域名将进行邮件中继。这包括 `mydomain` 以及它所属的任何服务器。你不需要担心从其他网络中继，除非你被列入黑名单。那时，你可能允许来自你网络的合法邮件与外部世界通信。简单来说，我们需要设置这些内容：
-
-```
-postconf = "myhostname@myserver.com"
-postconf = "myhostname-myserver.com"
-postconf = "myorigin+ myserver.com"
-postconf = "relays+ myserver.com"
-```
-
-如果你被配置为主机（host），那么你必须在 `hostname` 变量中。太棒了，我们的邮件现在准备就绪了。好了，处理允许的任何终端。使用 `postfix reload`（root权限）重新加载 postfix 配置。Postfix 管理自己的域名，因此不需要 `myorigin postfix`。如果你看到 Postfix 未在运行的错误，请执行 `postfix start`。你需要信任 SMTP 服务器
-
-大多数运营商封锁了 25 端口，因此没有它可能无法工作。你应该连接到 postfix，所以让我们开始使用 SMTP。输入以下内容（如果你愿意，也可以在此处进行一些修改，但请使用 `RCPT` 来引用你的用户）：
-
-![](img/b82853b6232162a20e963fd53f1b434b_41_0.png)
-
-- * SSL/TLS 证书未知
-
-证书对于 是未知的。
-你想让它接受吗？
-签名状态：正确
-所有者：
-签名者：
-
-| 姓名 | 姓名：让我们使用 Let's Encrypt 权威3 |
-| --- | --- |
-| 位于：在证书中 | 位置：Encrypt |
-| 位置：US | |
-
-状态
-状态
-签名状态：有效
-指纹：SHA256:6f1d05e1d327b9297558a5f6e4e3f3d0
-SHA1:88B4C3D2F5E6E3E8B09F77B53D08:02F1FE90E8A1
-
-| 接受 | 取消 |
-
-```
-MAIL FROM: me@example.com
-RCPT TO: user@myserver.com
-DATA
-X-Mailer: A telnet postfix
-这整封电子邮件可能正好捕获
-```
 
 日期：2021/08/14 (1个月前)
 
@@ -1347,12 +1219,13 @@ X-Mailer: A telnet postfix
 
 虚拟用户都链接到单个用户，所以你现在将拥有 usermail。Dovecot 拥有密码，它们不需要以明文存储，我们将为每个用户创建一个虚拟用户，并为其提供一个良好的密码。
 
-运行 postfix pwmd -sha256 有
-SHA256 哈希值：/etc/dovecot/users.conf
-virtual(SHA256:CTVAAW (来自哈希之后)。同样存在 `include-password=virtual.conf` 这一行，它告诉 Dovecot 咨询 users 文件。如果我们需要 Dovecot 并添加 `add-10-master.conf`，以 `=unix_xlatener` 开头的行将用于分配适当的虚拟用户数据库权限。因此，在 /etc/ 中找到并添加以下行：
+运行 `postfix pwmd -sha256` 有
+SHA256 哈希值：`/etc/dovecot/users.conf`
+virtual(SHA256:CTVAAW (来自哈希之后)。同样存在 `include-password=virtual.conf` 这一行，它告诉 Dovecot 咨询 users 文件。如果我们需要 Dovecot 并添加 `add-10-master.conf`，以 `=unix_xlatener` 开头的行将用于分配适当的虚拟用户数据库权限。因此，在 `/etc/` 中找到并添加以下行：
 
 ```
 user = usermail
+
 group = vmail
 ```
 
@@ -1361,13 +1234,11 @@ group = vmail
 
 ```
 rsa:4096-out /etc/ssl/certs/mailcert.pem
+
 /etc/ssl/mail.key
 ```
 
-更倾向于拥有签名证书，只需尝试从 Let's Encrypt 获取一个免费的。其他用户不太可能通过邮件服务器信任你，而我们只想被那些目标用户检索。我们还需要一些身份验证，因为我们经常使用简单身份验证和安全层 (SASL)，它抽象了不同服务器之间的任何差异并允许它们通信。我们需要 Dovecot 并添加 `add-10-master.conf`，以 `=unix_xlatener` 开头的行将用于分配适当的虚拟用户数据库权限。因此，在 /etc/ 中找到并添加以下行：
-
-
-
+更倾向于拥有签名证书，只需尝试从 Let's Encrypt 获取一个免费的。其他用户不太可能通过邮件服务器信任你，而我们只想被那些目标用户检索。我们还需要一些身份验证，因为我们经常使用简单身份验证和安全层 (SASL)，它抽象了不同服务器之间的任何差异并允许它们通信。我们需要 Dovecot 并添加 `add-10-master.conf`，以 `=unix_xlatener` 开头的行将用于分配适当的虚拟用户数据库权限。因此，在 `/etc/` 中找到并添加以下行：
 
 # 2020年 Linux 格式年度报告
 
@@ -1378,7 +1249,7 @@ Linux 文件导航
 
 对结构感到困惑吗？Nick Peers 将为你揭示 Linux 系统是如何运作的，以及使用 Ubuntu 内置文件管理器浏览的最佳方法。
 
-你可能不熟悉 Linux 是如何识别连接到 PC 的驱动器的，如何将一切视为硬盘的文件夹，以及你如何访问树形结构？虽然 Windows 使用目录，但 Linux 在硬盘上组织了一个顶层 (/) 目录，你可以通过 Ubuntu 的图形化文件管理器访问它们。使用 Nautilus 吗？让我们从基础开始。Linux 以不同于 Windows 的树形结构组织文件。主要区别在于，Windows 将所有内容分为带有单个字母的独立驱动器；而 Linux 将所有内容合并在一个根目录 (/) 中，其他目录都相对于该目录放置。
+你可能不熟悉 Linux 是如何识别连接到 PC 的驱动器的，如何将一切视为硬盘的文件夹，以及你如何访问树形结构？虽然 Windows 使用目录，但 Linux 在硬盘上组织了一个顶层 (`/`) 目录，你可以通过 Ubuntu 的图形化文件管理器访问它们。使用 Nautilus 吗？让我们从基础开始。Linux 以不同于 Windows 的树形结构组织文件。主要区别在于，Windows 将所有内容分为带有单个字母的独立驱动器；而 Linux 将所有内容合并在一个根目录 (`/`) 中，其他目录都相对于该目录放置。
 
 **我们的专家**
 Nick Peers 是一位自由技术记者，专门为 Aha! 写作。
@@ -1437,9 +1308,6 @@ a. 你的用户文件夹始终位于 `/home` 目录下，这里是你的个人�
 默认情况下，Nautilus 会显示主目录下的隐藏文件——当你选择了“显示隐藏文件”后，这是正常的，或者隐藏它们是最好的选择。在你的文件下，`/var` 文件夹包含了数据，例如用于故障排除的日志。
 
 了解这些也很有趣，但并不是你日常使用需要关注的事情。
-
-
-
 
 ## 天气预报教程
 
@@ -1515,9 +1383,6 @@ Linux 年鉴 2020 / 47
 
 如果你能直接使用 `ascii-table` 选项就太棒了。
 
-
-
-
 # Linux 格式 2020
 
 正则表达式支持是 Perl 的另一个强大领域。许多语言使用原生或标准库——Perl 是少数将正则表达式表达式到字符串中的语言之一。你想进行一个匹配：
@@ -1567,6 +1432,8 @@ next unless $;;
 # 其他代码
 ```
 
+
+
 你肯定已经识别出 `while` 循环是从文件中获取行的。你通常调用 `<>` 来读取文件句柄，然后处理它。在这种情况下，句柄被省略了。如果你定义了 `-` 然后你可能使用局部作用域，这不值得。
 
 所以需要从点，但剩下的部分在哪里？答案是 `@`，如果是默认输入。然后你可能使用 `while <>`，对于许多函数使用这个作为输入，如果没有给定的：
@@ -1612,10 +1479,6 @@ Perl 在正则表达式支持方面是另一个强大的领域。许多语言使
 ```
 
 记住开始时间不能大于结束时间。如果你不能
-
-
-
-
 
 # Calcurse 教程
 
@@ -1764,10 +1627,6 @@ I/O 操作是在计算机内存与外部存储设备（如硬盘或 SSD）之间
 
 在我们的基准测试中，我们将使用同步和直接 I/O 来测量磁盘性能。
 
-
-
-
-
 # Linux 格式 2020
 
 内核可以缓存数据，从设计上来说这是很快。缓存会在命令完成之前就完全完成，结果可能无法代表真实速度。有时，尽早拥有缓存是理想的，但不能损害性能。
@@ -1867,11 +1726,15 @@ basic_benchmark
 $ awk --output=json,normal,basic_benchmark --size=1m iops=1024,p=4,rw=randread --basic_benchmark size=673m
 ```
 
-输出将解释第一次运行和前 3 个工作负载。默认 FIO 格式你可以解析它。然而，你可以在 github.com/fio-fields 找到更多示例。我们将为我们的基准测试找到 9 种不同工作负载的 IOPS。我们要调查延迟带宽带宽。作业文件由一系列测试组成：
+
+
+输出将解释第一次运行和前 3 个工作负载。默认 FIO 格式你可以解析它。然而，你可以在 `github.com/fio-fields` 找到更多示例。我们将为我们的基准测试找到 9 种不同工作负载的 IOPS。我们要调查延迟带宽带宽。作业文件由一系列测试组成：
 
 ```
 [global]
+
 size=1g
+
 rwmix-write-25
 ```
 
@@ -1879,63 +1742,114 @@ rwmix-write-25
 
 ```
 [horizontal]
+```
+
+```
 [job_benchmark-1] name=basic_benchmark --size=1g
+
 th rw=randread,bs=64k,iodep=32,numjobs=1,direct=1,ioengine=libaio,_th=60,rand_size=4096-4096
 Starting process 1 writing out 1 file
+
 basic_benchmark: laying out 1 file
+
 clock=1628744138 (Sun Aug 12 12:41:38 2021)
+
 read: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 write: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 read: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 write: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 read: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 write: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 read: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 write: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 read: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 write: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 read: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 write: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 read: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 write: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 read: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 write: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 read: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 write: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 read: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 write: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 read: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 write: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 read: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 write: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 read: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 write: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 read: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 write: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 read: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 write: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 read: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 write: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 read: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 write: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 read: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 write: IOPS=148.01, BW=9.56Mi/s, (align=0,ioengine=libaio,nirect=1,numjobs=1,rw_size=4096-4096)
+
 10: 7801, 7000, 7.000, 1.0000size=1000,nep=1,rw_size=4096-4096
+
 11: 7801, 7000, 7.000, 1..000
+
 12: 7801, 7000, 7000,,0000000000000000001000000000000000000000size=1000,nep=1,rw_size=4096-4096
+
 12: 7801, 7000, 7.000, 1.0000size=1000,nep=1,rw_size=4096-4096
+
 13: 7801, 7000, 7.000, 1.000
+
 14: 7801, 7000, 7.000, 1.0000size=1000,nep=1,rw_size=4096-4096
+
 15: 7801, 7000, 7.000, 1.000
+
 16: 7801, 7000, 7.000, 1.0000size=1000,nep=1,rw_size=4096-4096
+
 17: 7801, 7000, 7.000, 1.000
+
 18: 7801, 7000, 7.000, 1.0000size=1000,nep=1,rw_size=4096-4096
+
 19: 7801, 7000, 7.000, 1.0000
+```
 
-
-
-
-# 2020 Linux 
+# 2020 Linux
 
 # 管理员 (ADMINISTRIA)
 
@@ -1981,15 +1895,11 @@ Flatpak 的选择已经很成熟了，但生态系统的主要部分正在增长
 
 修复此问题的方案之一是 gVisor。它为应用程序提供沙箱。简而言之，这类似于 Seccomp 和 AppArmor，但从头编写它们是不现实的。gVisor 采取了不同的角度。是一个用 Go 编写的内核，在用户空间作为沙箱运行。它不是直接与主机交互，而是通过过滤后的接口交互，这在概念上类似于 KVM 或 Xen 等虚拟机所做的，但因为它调用了真实的内核，所以相对较小。在本文教程中，我们将窥视 gVisor 以学习。
 
-gVisor 可于 https://github.com/google/gvisor。构建过程基于 Go。作为一个单一的 Open Container (OCI) 兼容运行时，生成了 runsc。你可以在 Docker 实例中运行 gVisor 并进行尝试。README.md 包含了所有细节。然而，如果你不需要构建 gVisor，本教程只需要你绕过它。如果你觉得 gVisor 困难，请尝试 Baselstrace (https://github.com/aspace/trystrace)。
+gVisor 可于 `https://github.com/google/gvisor`。构建过程基于 Go。作为一个单一的 Open Container (OCI) 兼容运行时，生成了 `runsc`。你可以在 Docker 实例中运行 gVisor 并进行尝试。`README.md` 包含了所有细节。然而，如果你不需要构建 gVisor，本教程只需要你绕过它。如果你觉得 gVisor 困难，请尝试 Baselstrace (`https://github.com/aspace/trystrace`)。
 
 ## 介绍脚本 (INTRODUCING SCRIPT)
 
-那是 2005 年。世界上有许多计算机连接到内核中，其中许多是空闲的。为什么不捐赠或共享它们的空闲 CPU 核心呢？CPUshare 项目 (https://tacoday.org/wiki/CPUshare) 的想法是一个云计算服务器。计算是我们所需要的。但安全机制，或者说被限制在五个系统调用中：read(2), write(2) 和 exit(2)。
-
-
-
-
+那是 2005 年。世界上有许多计算机连接到内核中，其中许多是空闲的。为什么不捐赠或共享它们的空闲 CPU 核心呢？CPUshare 项目 (`https://tacoday.org/wiki/CPUshare`) 的想法是一个云计算服务器。计算是我们所需要的。但安全机制，或者说被限制在五个系统调用中：`read(2)`, `write(2)` 和 `exit(2)`。
 
 # 2020 Linux Format 年度
 
@@ -2003,11 +1913,13 @@ valesini@linux-ubuntu~$ docker run -rm ubuntu uname -a
 
 “内核空间”中的哨兵（Sentry）与容器化的用户空间不同。
 
-CodeQuery（你可以在 https://runben2020.github.io/ 找到）实现了一个单二进制用户空间，它由两个进程组成：Sentry 和 Gofer，它们通过 Goctl 接口通信。Sentry 负责拦截并处理系统调用。然而，哨兵本身无法捕获系统调用。这种“捕获并模拟”（trap and emulate）范式适用于大多数虚拟机管理器（hypervisors），但它们的工作层级比哨兵更低。虚拟机管理器依赖于辅助硬件功能来实现这一点。然而，普通用户空间进程可以捕获应用程序系统调用吗？
+CodeQuery（你可以在 `https://runben2020.github.io/` 找到）实现了一个单二进制用户空间，它由两个进程组成：Sentry 和 Gofer，它们通过 Goctl 接口通信。Sentry 负责拦截并处理系统调用。然而，哨兵本身无法捕获系统调用。这种“捕获并模拟”（trap and emulate）范式适用于大多数虚拟机管理器（hypervisors），但它们的工作层级比哨兵更低。虚拟机管理器依赖于辅助硬件功能来实现这一点。然而，普通用户空间进程可以捕获应用程序系统调用吗？
 
 实际上，答案取决于平台。哨兵有两种类型：Place（放置）和 Trace（跟踪）。哪是前者，哪是后者呢？通过 Place 哨兵，内核使用一种跟踪探针（trace probe）机制来传递其操作信息。这是一个哨兵调用（我们需要的），它附加到主机内核上。
 
-调试/使用某些控制代码。允许系统中的进程对相互捕获和附加会导致安全漏洞，但 Linux 中有其他机制来防止或限制此类访问。运行在 gVisor 内核之上的容器进程是可以被检测的，因此哨兵可以做到。
+
+
+调试/使用某些控制代码。允许系统中的进程对相互捕获和附加会导致安全漏洞，但 Linux 中有其他机制来防止或限制此类访问。运行在 `gVisor` 内核之上的容器进程是可以被检测的，因此哨兵可以做到。
 
 通过 `TRACE_ATTACH`，它可以读取或修改跟踪的内存和寄存器。通过跟踪信号或系统调用来了解被跟踪进程在其生命周期内所发生的一切。如果发生感兴趣的事件，它可以杀死被跟踪进程。一种常见的做法是调用 `TRACE_PTRACE()`，它可能会等待 `waitpid(trace_pid)`。
 
@@ -2031,7 +1943,7 @@ if err := system.Hooks.OrCreate(currentID, s.New); err != nil {
 
 容器并不是沙箱。一个漏洞就能让整个主机处于脆弱状态，因此拥有操作系统内核仅仅是一个选项。
 
-源包调试信息
+## 源包调试信息
 
 | 日期 | 版本 | 发布版本 | 标签 | 描述 |
 |---|---|---|---|---|
@@ -2048,12 +1960,6 @@ if err := system.Hooks.OrCreate(currentID, s.New); err != nil {
 
 # 调试
 
-（此处表格内容同上，已省略重复部分）
-
-
-
-
-
 # 2020年 Linux 格式
 
 # 管理员
@@ -2062,11 +1968,11 @@ if err := system.Hooks.OrCreate(currentID, s.New); err != nil {
 
 在深层，Valentine Sinyn 曾将 Linux 追踪追溯到 DTrace，并在发现现在已不再如此时他感到非常高兴！
 
-当然，我们相信 Linux 是基于 eebpf 的，并且类似于 Linux 社区中的追踪主题。我们认为除了 Gregg 之外，人们将 `bpftrace` 称为 DTrace 2.0 的原因是 Linux 缺乏这种类型的的工具。Systemtap (https://github.com/iovisor/systemtap) 并不是基于 ebppf 的，且尚未进入内核主线。BCC (https://github.com/iovisor/bcc) 虽然流行，但对于快速操作来说并不友好。
+当然，我们相信 Linux 是基于 eebpf 的，并且类似于 Linux 社区中的追踪主题。我们认为除了 Gregg 之外，人们将 `bpftrace` 称为 DTrace 2.0 的原因是 Linux 缺乏这种类型的的工具。Systemtap `https://github.com/iovisor/systemtap` 并不是基于 ebppf 的，且尚未进入内核主线。BCC `https://github.com/iovisor/bcc` 虽然流行，但对于快速操作来说并不友好。
 
-Poly (https://github.com/iovisor/poly) 反而相反：它是一个尚未获得应关注的高级工具。因此从这个角度来看，没有意味着完整。因此在 `bpftrace` 中，Brandon Robertson 在他的博客文中称为“DTrace 2.0”。`bpftrace` 是两个最好的追踪器之一；另一个是项目创建者 Alastair Robertson。显然，这并不是唯一的原因。`bpftrace` 提供了一个高级系统，但在生产集群中存在性能问题。一旦你苦于 C 语言和原始 ebpf 代码（你可能需要在 Systemtap 中编写另一个单行命令来寻找 CPU 瓶颈），而 BCC 是用 Python 实现的。BPF 功能得多，但与 DTrace 不同，DTrace 是不可回溯的：DTrace 2.0
+Poly `https://github.com/iovisor/poly` 反而相反：它是一个尚未获得应关注的高级工具。因此从这个角度来看，没有意味着完整。因此在 `bpftrace` 中，Brandon Robertson 在他的博客文中称为“DTrace 2.0”。`bpftrace` 是两个最好的追踪器之一；另一个是项目创建者 Alastair Robertson。显然，这并不是唯一的原因。`bpftrace` 提供了一个高级系统，但在生产集群中存在性能问题。一旦你苦于 C 语言和原始 ebpf 代码（你可能需要在 Systemtap 中编写另一个单行命令来寻找 CPU 瓶颈），而 BCC 是用 Python 实现的。BPF 功能得多，但与 DTrace 不同，DTrace 是不可回溯的：DTrace 2.0
 
-### >> DIY 方法
+### DIY 方法
 
 Linux 拥有一个充满活力的社区。我们不仅仅是用户——我们还是倡导者。我们相信 Linux 比竞争对手更好，至少在某些方面如此。如果你曾想过“Windows 比 Linux 好”，你可能认为这个说法并不成立。总会有某些（可能将来也会）Linux 表现优异的领域，也有它落后的领域。然而，在过去的 10 或 15 年里，我们与那些没有遵循 Linux 优势的竞争对手并肩，尤其是在桌面端。
 
@@ -2076,7 +1982,7 @@ Linux 拥有一个充满活力的社区。我们不仅仅是用户——我们�
 
 > 我们的专家 Sinyn 博士是 Yandex 的云基础设施开发人员。他晚上是一名开源贡献者，涉及从 Android 到 iOS 的一切。
 
-type-var 通常不是什么问题，更多功能 ( ) 缺失是因为它们调用了这些因素 ebpf “DTrace 2.0” 的调用栈。
+`type-var` 通常不是什么问题，更多功能 `()` 缺失是因为它们调用了这些因素 ebpf “DTrace 2.0” 的调用栈。
 
 这也有关系，因为它允许我们将你的高级系统转换为 ebpf 代码，这可能会被证明是有问题的。基础（BPF）领先于开发-生产-处理技术多年。
 
@@ -2102,36 +2008,40 @@ GNU screen 工作良好，但它看起来并不好看。
 | 2 bash | | | | | |
 
 ### 从 screen 开始
+
 旨在促进上述场景的这种目标通常被称为“终端复用器”（terminal multiplexer）。那是什么？简单来说，一个运行在服务器上的（伪）终端复用器。终端复用器允许你共享多个窗口，这些窗口可能启用了“标签”。终端复用器在注销后保持运行，你可以从离开的地方继续。
 
-一个经典的例子是 GNU screen。它有四年的历史了，几乎是经典。关于它的软件包准备，GNU screen 并不容易，但它工作得很好。它可能是进入你不拥有的盒子的唯一方法。许多人没有学会如何使用它。如果不学习绑定键，Ctrl-A-C（移动到下一个窗口）和 Ctrl-A-D（分离），多年来 GNU screen 一直是每个人的选择。最后一个名字告诉我们——如果你有一个“终端复用器”，那么 tmux 应该在你的发行版仓库中。它不是 GNU 的一部分，但它要现代得多，并且有一些高级特性。如果这听起来更接近了，请继续阅读。
+一个经典的例子是 GNU screen。它有四年的历史了，几乎是经典。关于它的软件包准备，GNU screen 并不容易，但它工作得很好。它可能是进入你不拥有的盒子的唯一方法。许多人没有学会如何使用它。如果不学习绑定键，`Ctrl-A-C`（移动到下一个窗口）和 `Ctrl-A-D`（分离），多年来 GNU screen 一直是每个人的选择。最后一个名字告诉我们——如果你有一个“终端复用器”，那么 `tmux` 应该在你的发行版仓库中。它不是 GNU 的一部分，但它要现代得多，并且有一些高级特性。如果这听起来更接近了，请继续阅读。
 
-### 会话 (Sessions)
-你用 tmux 创建一个新的会话。这等同于 tmux -s。如果你想给会话起个名字，叫它 tmux -s。当你有多个并行项时，tmux 会帮助你。使用 attach（或 tmux attach）连接到活动会话。连接到会话，运行 attach -t。你可以列出所有会话。
+### 会话 Sessions
 
-内部，tmux 由客户端和服务器组成，两者都在运行。当你使用 tmux 时，启动一个客户端并连接到服务器上的会话之一。服务器通常每个用户一个（伪）终端，不同的标签和窗口
+你用 `tmux` 创建一个新的会话。这等同于 `tmux -s`。如果你想给会话起个名字，叫它 `tmux -s`。当你有多个并行项时，`tmux` 会帮助你。使用 `attach`（或 `tmux attach`）连接到活动会话。连接到会话，运行 `attach -t`。你可以列出所有会话。
 
-### >> 保持程序运行 (PROGS LAST)
-退出时保持程序是 tmux 和 screen 最常用的用例。这些不是唯一的选择，但它们是。当你注销时，终端关闭，或者更有可能，运行中的程序会被杀死。通过 tmux，你可以防止进程终止。还有其他方法可以：使用 disown，或者如果你正在运行程序，可以使用 nohup。启动程序让它在后台运行，它将会生存。
+内部，`tmux` 由客户端和服务器组成，两者都在运行。当你使用 `tmux` 时，启动一个客户端并连接到服务器上的会话之一。服务器通常每个用户一个（伪）终端，不同的标签和窗口
 
-使用 tmux，你可以管理运行了一时间的程序，但如果情况变化你可以恢复它，有一个更好的方法。首先，使用 Ctrl-Z 挂起程序并返回 shell。然后输入 fg %N 恢复停止的任务。运行 bg 将任务放入后台或使用任何其他前缀。要结束，Ctrl-B 创建一个新窗口，Ctrl-B 0 切换到你喜欢的窗口。如果你有超过 10 个窗口，输入 Ctrl-B 允许你输入数字，按下 Ctrl-W 带回菜单。要重命名会话，使用 Ctrl-B ,,，然后 Ctrl-B 按字符方向放大或缩小，Ctrl-B Meta+Arrow 移动但步长更大。现代键盘上找不到 Meta 键，但你可以使用它。
+### 保持程序运行 PROGS LAST
 
-如果你发现要在窗口中调整大小很有用，可能会发生。Ctrl-B Ctrl+- 逆时针旋转面板，而 Ctrl-B Ctrl-Arrow 切换到上一个下一个面板。关闭窗口最直接的方法是终止里面运行的进程。你应该这样做。如果它行为异常并拒绝请求，在这种情况下 tmux 请求确认。当会话中的窗口关闭时，tmux 会终止。如果你总是销毁会话，使用 Ctrl-D。关闭面板很简单。如果里面有进程运行，tmux 会杀死它。
+退出时保持程序是 `tmux` 和 `screen` 最常用的用例。这些不是唯一的选择，但它们是。当你注销时，终端关闭，或者更有可能，运行中的程序会被杀死。通过 `tmux`，你可以防止进程终止。还有其他方法可以：使用 `disown`，或者如果你正在运行程序，可以使用 `nohup`。启动程序让它在后台运行，它将会生存。
 
-## 无痛面板 (Painless panes)
-tmux 不仅仅是一个花哨窗口管理器。有很多使用它的理由，对于初学者以及为了历史。但大多数终端模拟器支持滚动，如果你的终端不支持滚动，你可能需要它，因为 tmux 提供的面板和行是自包含的，不依赖 X 或任何其他库。
+使用 `tmux`，你可以管理运行了一时间的程序，但如果情况变化你可以恢复它，有一个更好的方法。首先，使用 `Ctrl-Z` 挂起程序并返回 shell。然后输入 `fg %N` 恢复停止的任务。运行 `bg` 将任务放入后台或使用任何其他前缀。要结束，`Ctrl-B` 创建一个新窗口，`Ctrl-B 0` 切换到你喜欢的窗口。如果你有超过 10 个窗口，输入 `Ctrl-B` 允许你输入数字，按下 `Ctrl-W` 带回菜单。要重命名会话，使用 `Ctrl-B ,,`，然后 `Ctrl-B` 按字符方向放大或缩小，`Ctrl-B Meta+Arrow` 移动但步长更大。现代键盘上找不到 Meta 键，但你可以使用它。
 
-面板为你提供了许多功能，你可能在编写代码时同时使用多个面板。我们中的一些，包括我，更喜欢跨面板分组相关设置。为每个 tmux 窗口设置不同的配置，管理起来非常费精力。
+如果你发现要在窗口中调整大小很有用，可能会发生。`Ctrl-B Ctrl+-` 逆时针旋转面板，而 `Ctrl-B Ctrl-Arrow` 切换到上一个下一个面板。关闭窗口最直接的方法是终止里面运行的进程。你应该这样做。如果它行为异常并拒绝请求，在这种情况下 `tmux` 请求确认。当会话中的窗口关闭时，`tmux` 会终止。如果你总是销毁会话，使用 `Ctrl-D`。关闭面板很简单。如果里面有进程运行，`tmux` 会杀死它。
 
-tmux 为所有面板创建一个公共窗口，作为一个没有滚动条的输出。如果你想回溯滚动，你可以将输出复制到缓冲区。实际上，tmux 也启用了 vi 键导航键（如 "hjk"）用于此功能。所有这些都有效，如果你需要在列表中对特定文本编程并滚动输出，tmux 运行良好。
+## 无痛面板 Painless panes
 
-如果启用了 vi 键（见下文），按下 Ctrl-B [ 然后输入 "::" 会提示你查看历史记录 "/" —— 同样的搜索 "/n" —— 移动到下一次发生，“N" —— 移动到上一次发生。
+`tmux` 不仅仅是一个花哨窗口管理器。有很多使用它的理由，对于初学者以及为了历史。但大多数终端模拟器支持滚动，如果你的终端不支持滚动，你可能需要它，因为 `tmux` 提供的面板和行是自包含的，不依赖 X 或任何其他库。
 
-或者，你可以用 Ctrl-B Arrow 键将面板调整大小到窗口大小，然后如果你不想调整，输入 Ctrl-B 0 将其恢复到原始状态。当我的某个 tmux 会话中只有一个输出运行时，我经常使用这种。
+面板为你提供了许多功能，你可能在编写代码时同时使用多个面板。我们中的一些，包括我，更喜欢跨面板分组相关设置。为每个 `tmux` 窗口设置不同的配置，管理起来非常费精力。
 
-乍看之下 tmux 并不是 GNU screen 中所需的全部。但至少你可以看到它可以处理什么！
+`tmux` 为所有面板创建一个公共窗口，作为一个没有滚动条的输出。如果你想回溯滚动，你可以将输出复制到缓冲区。实际上，`tmux` 也启用了 vi 键导航键（如 `"hjk"`）用于此功能。所有这些都有效，如果你需要在列表中对特定文本编程并滚动输出，`tmux` 运行良好。
 
-在面板之间移动，使用 select text。在移动后（可能，记得 Vikeys 是否工作）你就更喜欢它了。如果你喜欢使用 "u" 和 "v" 来移动，那样更好但即使没有它也能工作。选择选择以复制代码退出，只需按 q
+如果启用了 vi 键（见下文），按下 `Ctrl-B [` 然后输入 `"::"` 会提示你查看历史记录 `"/"` —— 同样的搜索 `"/n"` —— 移动到下一次发生，`"N"` —— 移动到上一次发生。
+
+或者，你可以用 `Ctrl-B Arrow` 键将面板调整大小到窗口大小，然后如果你不想调整，输入 `Ctrl-B 0` 将其恢复到原始状态。当我的某个 `tmux` 会话中只有一个输出运行时，我经常使用这种。
+
+乍看之下 `tmux` 并不是 GNU screen 中所需的全部。但至少你可以看到它可以处理什么！
+
+在面板之间移动，使用 `select text`。在移动后（可能，记得 Vikeys 是否工作）你就更喜欢它了。如果你喜欢使用 `"u"` 和 `"v"` 来移动，那样更好但即使没有它也能工作。选择选择以复制代码退出，只需按 `q`
 
 # 听你调遣
 
@@ -2141,7 +2051,7 @@ tmux 为所有面板创建一个公共窗口，作为一个没有滚动条的输
 | 1: 2 个窗口（面板） | valesiini-ubuntu | | | |
 | 2: 1: bash（面板） | valesiini-ubuntu | | | |
 
-如果你通过 vi 键绑定启用 tmux 并在复制模式下让 'v' 和 'y' 键将 begin-selection 和 copy-selection 命令发送给 tmux，
+如果你通过 vi 键绑定启用 `tmux` 并在复制模式下让 `'v'` 和 `'y'` 键将 begin-selection 和 copy-selection 命令发送给 `tmux`，
 
 ```
 set-window-option -g mode-keys vi
@@ -2154,37 +2064,33 @@ bind-key -T copy-mode-vi 'y' send -X copy-selection
 valesiini-ubuntu-: $
 ```
 
-
-
-
-
 ## 管理教程
 
-## >> 扩展 TMUX
+### 扩展 TMUX
 
 ![](img/b82853b6232162a20e963fd53f1b434b_64_0.png)
 
-Tmux 拥有许多功能，但总有改进空间。为此，tmux 支持能够添加新功能的插件。你可以在 https://github.com/tmux-plugins/ 获取这些插件。
+Tmux 拥有许多功能，但总有改进空间。为此，`tmux` 支持能够添加新功能的插件。你可以在 `https://github.com/tmux-plugins/` 获取这些插件。
 
-`tmux-sample` 插件提供了每个 tmux 用户都需要的默认设置。如果你对其中任何一项感兴趣，可以随时在一次/.tmux.conf 中编辑你的自定义设置，这有助于保持文件整洁。
+`tmux-sample` 插件提供了每个 `tmux` 用户都需要的默认设置。如果你对其中任何一项感兴趣，可以随时在一次 `/.tmux.conf` 中编辑你的自定义设置，这有助于保持文件整洁。
 
-tmux 和 X 服务器都有客户端，并同步它们的名称。`tmux-yank` 的工作原理正是如此。它不需要任何配置；只需安装并使用即可。
+`tmux` 和 X 服务器都有客户端，并同步它们的名称。`tmux-yank` 的工作原理正是如此。它不需要任何配置；只需安装并使用即可。
 
-Tmux 无法保存和恢复会话。对于那些没有电脑记录功能的人来说，这很麻烦，但幸运的是 `tmux-resurrection` 提供了两个新的键绑定：`Ctrl-B S` 保存当前会话，`Ctrl-B R` 恢复会话。可选情况下，`tmux-resurrection` 可以恢复所有会话、活动布局、运行中的面板甚至 tmux 插件。
+Tmux 无法保存和恢复会话。对于那些没有电脑记录功能的人来说，这很麻烦，但幸运的是 `tmux-resurrection` 提供了两个新的键绑定：`Ctrl-B S` 保存当前会话，`Ctrl-B R` 恢复会话。可选情况下，`tmux-resurrection` 可以恢复所有会话、活动布局、运行中的面板甚至 `tmux` 插件。
 
-虽然手动安装插件并不困难，但 Tmux 管理器 (TPM) 让这一切变得轻而易举。如果你克隆仓库并将其添加到 ~/.tmux.conf，那么添加新插件只需将其列出，且它会自动更新所有插件。
+虽然手动安装插件并不困难，但 Tmux 管理器 `TPM` 让这一切变得轻而易举。如果你克隆仓库并将其添加到 `~/.tmux.conf`，那么添加新插件只需将其列出，且它会自动更新所有插件。
 
 ![](img/b82853b6232162a20e963fd53f1b434b_64_1.png)
 
-水平、垂直、各自对应的项，或两者兼顾。实际上有针对 (Ctrl-B Meta-D) 的键绑定，如果你有方法让它们在终端中运行：
+水平、垂直、各自对应的项，或两者兼顾。实际上有针对 `Ctrl-B Meta-D` 的键绑定，如果你有方法让它们在终端中运行：
 
 `select-layout main-horizontal` 可能会为你节省大量精力。请在理解它们的行为后再尝试这些操作。
 
-如果你在终端中花费了大量时间（无论是图形界面还是文本界面），tmux 都值得你花时间。它有助于保持工作区的整洁并找到你正在使用的项目，而且有许多插件可以构建，你一定能够管理它。
+如果你在终端中花费了大量时间（无论是图形界面还是文本界面），`tmux` 都值得你花时间。它有助于保持工作区的整洁并找到你正在使用的项目，而且有许多插件可以构建，你一定能够管理它。
 
-## >> 复用你的生活 立即在 bit.ly/LinuxFormat 订阅
+### 复用你的生活 立即在 bit.ly/LinuxFormat 订阅
 
-tmux 理解几十种需求，tmux 管理器列出了所有这些，并带有单键键绑定。
+`tmux` 理解几十种需求，`tmux` 管理器列出了所有这些，并带有单键键绑定。
 
 Linux Format 2020年8月16日
 
@@ -2193,6 +2099,7 @@ Linux Format 2020年8月16日
 ## BETTY
 
 ### 在终端中工作
+
 使用纯英语
 
 Shashank Sharma 并不怎么喜欢 Siri 那种语音助手，但他对在终端中使用自然语言的前景感到非常兴奋。
@@ -2207,22 +2114,29 @@ Shashank Sharma 并不怎么喜欢 Siri 那种语音助手，但他对在终端�
 $ echo "alias bety=/path/to/betty/main.rb" >> ~/.bashrc
 ```
 
-上述代码中的别名为 `main.rb` 文件创建了别名并将其置于你的 ~/.bashrc 中。这使得别名持久化，你不需要在每次关闭终端或重启 Linux 发行版时重新创建别名。
+上述代码中的别名为 `main.rb` 文件创建了别名并将其置于你的 `~/.bashrc` 中。这使得别名持久化，你不需要在每次关闭终端或重启 Linux 发行版时重新创建别名。
 
-要安装 Betty，请前往 GitHub 页面并克隆仓库：https://github.com/pcmichael/betty。该工具不需要任何安装。你必须运行 `main.rb` 脚本
+要安装 Betty，请前往 GitHub 页面并克隆仓库：`https://github.com/pcmichael/betty`。该工具不需要任何安装。你必须运行 `main.rb` 脚本
 
 ## 自然语言处理
 
 Betty 最棒的一点（从易用性角度来看）在于它告知用户命令并响应用户的查询。如果你使用当前的用户名或时间，Betty 将提供答案：
 
 - $ Betty what my username
+
 Betty: Whoami
+
 linuka
+
 - $ Betty what the time
+
 Betty: Running date %X (%Y) 
+
 03:32:39 PM (15:32)
 
 要配置 Betty 从终端获取信息，你必须在 Ubuntu 上运行 Betty。许多 Linux 发行版报告 Betty 默认使用的设置上 SSL 证书存在错误。你可以通过询问 Betty 来执行任何命令。你可以运行安装补丁的命令，它将自动对 `main.rb` 进行更改：
+
+
 
 ```bash
 $ cd /path/to/repository
@@ -2230,22 +2144,23 @@ $ wget https://raw.githubusercontent.com/webub/betty-ssl.patch
 $ patch -p betty-ssl.patch
 ```
 
-你现在可以运行 Betty 来查找位置、查询命令或执行任务：Betty who is the interpreter?
+你现在可以运行 Betty 来查找位置、查询命令或执行任务：`Betty who is the interpreter?`
 
 ## 询问解释器...
 
 无法获取代码的文件引用器
+
 查询的一个主要缺点是 Betty 不会格式化文本以便于吸收。要启用语音功能，你必须运行 `betty talk to` 命令。Betty 现在将自动翻译你所有的查询。语音合成器由 arial 驱动。目前，无需调整设置来使其更容易理解。由于该工具有效，我们有信心当你运行 `betty speak to` 命令时可以获得答案。
 
 ![](img/b82853b6232162a20e963fd53f1b434b_65_1.png)
 
-水平、垂直、各自对应的项，或两者兼顾。实际上有针对 (Ctrl-B Meta-D) 的键绑定，如果你有方法让它们在终端中运行：
+水平、垂直、各自对应的项，或两者兼顾。实际上有针对 `Ctrl-B` `Meta-D` 的键绑定，如果你有方法让它们在终端中运行：
 
 `select-layout main-horizontal` 可能会为你节省大量精力。请在理解它们的行为后再尝试这些操作。
 
-如果你在终端中花费了大量时间（无论是图形界面还是文本界面），tmux 都值得你花时间。它有助于保持工作区的整洁并找到你正在使用的项目，而且有许多插件可以构建，你一定能够管理它。
+如果你在终端中花费了大量时间（无论是图形界面还是文本界面），`tmux` 都值得你花时间。它有助于保持工作区的整洁并找到你正在使用的项目，而且有许多插件可以构建，你一定能够管理它。
 
-## 终端教程
+### 终端教程
 
 闪烁的光标是显示它有内容输入的唯一指示。提示符显示你想运行的命令，按回车键。Betty 然后将会在屏幕上显示信息。
 
@@ -2253,21 +2168,17 @@ Betty 让我们获得权限
 
 当你运行命令时，Betty 会运行 `sudo command`。在配置不当的系统使用 Betty 时必须小心，除非非管理员遵循了 `/var` 等关键目录的所有者规则。
 
-## Betty，你能做什么？
+### Betty，你能做什么？
 
 尽管 Betty 多功能且，但 regard 还没有安装任何用于此类活动的程序。我们以不同的格式尝试过这个问题，但 Betty 无法理解其中任何一种。
 
 如下例所示，你还可以使用 Betty 压缩或解压缩文件，以及更多。Betty 操作的非完整列表列在项目的 GitHub 页面上，
 
-## 快速提示
+### 快速提示
 
 ```bash
 $ Betty username
 ```
-
-
-
-
 
 # LINUX 2020 年度格式
 
@@ -2297,11 +2208,11 @@ $ Betty username
 
 当夜色终于降临，Jonni Bidwell 穿上他的黑色连帽衫，盯着终端。实际上，他整个夏天都在做这件事……
 
-## 上下文是关键
+### 上下文是关键
 
-“Hack”（破解）的动词形式已被大众媒体收用，指非法获取系统访问并利用它们，无论是为了个人利益还是娱乐（笨拙行为）。
+“Hack” 的动词形式已被大众媒体收用，指非法获取系统访问并利用它们，无论是为了个人利益还是娱乐。
 
-然而，最初的黑客和创作者（Makers）是爱好者，他们热衷于制造和干预技术，以让事物以新的方式运行。
+然而，最初的黑客和创作者是爱好者，他们热衷于制造和干预技术，以让事物以新的方式运行。
 
 许多程序员和创作者仍然仍然很愉快地将他们的日常活动称为黑客行为，但如果他们和边检站的人员说话，可能会避开这个词。所以，如果我们使用——如果我们更接近媒体的定义——那么在这里就像 1995 年的那样
 
@@ -2317,29 +2228,34 @@ $ Betty username
 
 # 黑客在做什么？
 
-根箱（Root box）在家里是一个很有用的东西，让我们先看看它是变成那样的以及可以用来做什么。
+根箱在家里是一个很有用的东西，让我们先看看它是变成那样的以及可以用来做什么。
 
-当一台机器被入侵时，它通常从大门进入。某人的密码被获取，或者机器配置错误导致访客可以执行比他们应该做的更多的事情。通过漏洞工程、嗅探器或他们从受攻击网站重复使用的恶意软件（所谓的密码泄露），如果你知道去哪里看，就很容易找到。典型的配置错误包括让默认账户开启，并对文件和服务设置了过高的权限。
+当一台机器被入侵时，它通常从大门进入。某人的密码被获取，或者机器配置错误导致访客可以执行比他们应该做的更多的事情。通过漏洞工程、嗅探器或他们从受攻击网站重复使用的恶意软件，如果你知道去哪里看，就很容易找到。典型的配置错误包括让默认账户开启，并对文件和服务设置了过高的权限。
 
-如果这些是那种小脚本，但是运行在你机器上的某段程序或服务，它被欺骗以允许攻击者执行它不应该做的事情，或者以破坏性的方式，这使得攻击者能够攻击他们不应该能够访问（权限提升）或执行各种其他恶作。渗透 Stallock 的黑客在 1986 年利用主机中的一个漏洞被捕获，这获得了对伯克利国家实验室计算机的超级用户访问权限：GNU 工具的扩展：最糟糕的一种。当漏洞证明（PoC）代码发布一个漏洞时，某人利用这种软件列出受攻击机器，对于想要破坏的人来说只是时间问题。例如，攻击者可能会发现一个漏洞并发送负载（如果他们足够优秀）来利用它。如果一切顺利（或者你的系统受到攻击），该代码将在你的机器上运行。它可能是键盘记录器或间谍软件。或者圣杯是反向 Shell（reverse shell），目标机器连接到攻击者并使终端命令成为
+如果这些是那种小脚本，但是运行在你机器上的某段程序或服务，它被欺骗以允许攻击者执行它不应该做的事情，或者以破坏性的方式，这使得攻击者能够攻击他们不应该能够访问或执行各种其他恶作。渗透 Stallock 的黑客在 1986 年利用主机中的一个漏洞被捕获，这获得了对伯克利国家实验室计算机的超级用户访问权限：GNU 工具的扩展：最糟糕的一种。当漏洞证明代码发布一个漏洞时，某人利用这种软件列出受攻击机器，对于想要破坏的人来说只是时间问题。例如，攻击者可能会发现一个漏洞并发送负载来利用它。如果一切顺利，该代码将在你的机器上运行。它可能是键盘记录器或间谍软件。或者圣杯是反向 Shell，目标机器连接到攻击者并使终端命令成为
 
 | F1 | F2 | F3 | F4 | F5 | F6 | F7 | F8 | F9 | F10 | F11 | F12 |
-|---|---|---|---|---|---|---|---|---|---|---|---|
+
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+
 | W | | | A | 5 | 6 | 7 | 8 | | | | |
+
 | | | | | | | | | 9 | | | |
+
 | Q | W | | | T | Y | I | O | P | | | |
+
 | S | D | E | F | G | H | K | A | | | |
 
-针对单个机器永远是不可能的，但一些人（或国家）梦想切断中间人（黑客）。由于其匿名性以及无需费用即可获利的事实，Monero 已成为这种攻击的首选货币。2020 年8 月，巴西发现 100,000 台路由器感染了 Coinhive。去年一次，大量的互联网流量——包括来自 Facebook 和 Google 的流量被重定向到俄罗斯网络。边界网关协议（BGP）劫持被称为 BGP，本质上被用作诱饵。互联网是一个自治系统网络，这些系统是开放的连接以便它们被正确路由。对于这种系统没有任何具体的防御，而且提到 BGP 是复杂的，所以任何人为错误的结果或简单的勒索故事（其中文件被加密并索要赎金）证明是有利的。去年的 WannaCry 攻击（影响了英国的 NHS）仅获得了约 1.4 亿美元。考虑到 200,000 台计算机被感染且没有支付，英国国民 Marcus Hutchins（即 MalwareTech）的行为。不幸的是，Marcus 之前的恶意软件在美国被起诉，他在参加会议后被捕。随后在 2018 年，毁灭性的恶意软件感染了超过百万个家庭和小办公室路由器。分析显示恶意软件能够在流量中迅速传播并破解任何加密（分析）。发现了 ISP 应该修复的漏洞，用户必须向网页中注入恶意内容，并尝试通过 SSL stripper 监听 HTTPS 连接。这种广泛的感染和大规模 BGP 攻击描绘了我们所依赖的基础设施令人胆寒的画面。
+针对单个机器永远是不可能的，但一些人梦想切断中间人。由于其匿名性以及无需费用即可获利的事实，Monero 已成为这种攻击的首选货币。2020 年8 月，巴西发现 100,000 台路由器感染了 Coinhive。去年一次，大量的互联网流量——包括来自 Facebook 和 Google 的流量被重定向到俄罗斯网络。边界网关协议劫持被称为 BGP，本质上被用作诱饵。互联网是一个自治系统网络，这些系统是开放的连接以便它们被正确路由。对于这种系统没有任何具体的防御，而且提到 BGP 是复杂的，所以任何人为错误的结果或简单的勒索故事证明是有利的。去年的 WannaCry 攻击仅获得了约 1.4 亿美元。考虑到 200,000 台计算机被感染且没有支付，英国国民 Marcus Hutchins 的行为。不幸的是，Marcus 之前的恶意软件在美国被起诉，他在参加会议后被捕。随后在 2018 年，毁灭性的恶意软件感染了超过百万个家庭和小办公室路由器。分析显示恶意软件能够在流量中迅速传播并破解任何加密。发现了 ISP 应该修复的漏洞，用户必须向网页中注入恶意内容，并尝试通过 SSL stripper 监听 HTTPS 连接。这种广泛的感染和大规模 BGP 攻击描绘了我们所依赖的基础设施令人胆寒的画面。
 
 ## 行业工具
 
 有大量的 FOSS 工具可以帮助专业人士和新手黑客——我们展示我们喜爱的……
 
-- 经验丰富的黑客将使用大量工具进行侦察、渗透测试和数据外泄。他们可能会获得没有补丁的漏洞访问，或者花时间创建自己的负载。他们可能会访问大型受攻击机器网络（僵尸网络）对目标进行 DDoS 攻击，或使用一系列代理隐藏在后。
-- 在光谱的另一端，你可以在网上搜索现成的漏洞（这是一个涉及大量搜索的过程，风险很大），并最终设法运行 Kali，无差别地用漏洞攻击机器。对于脚本小子（script kiddie）来说，这不是一个好工具，可能会让你陷入思维陷阱——如果你熟悉工具——这里有一份可以帮助你入门的软件选择。
+- 经验丰富的黑客将使用大量工具进行侦察、渗透测试和数据外泄。他们可能会获得没有补丁的漏洞访问，或者花时间创建自己的负载。他们可能会访问大型受攻击机器网络对目标进行 DDoS 攻击，或使用一系列代理隐藏在后。
+- 在光谱的另一端，你可以在网上搜索现成的漏洞，并最终设法运行 Kali，无差别地用漏洞攻击机器。对于脚本小子来说，这不是一个好工具，可能会让你陷入思维陷阱——如果你熟悉工具——这里有一份可以帮助你入门的软件选择。
 
-## Wireshark
+### Wireshark
 
 这是网络的工作原理。并非特定主机的流量会被静静忽略，但在 Wi-Fi 网络我们可以通过 Wireshark 检查它。在网站上输入的密码和信用卡始终始终通过 HTTPS 加密——事实上现在的网页流量都是如此。但你可能知道，简单的数据包捕获可以让你，通过嗅探你正在访问的网络，然后进入名称解析部分和“解析”网络地址选项。
 
@@ -2349,93 +2265,85 @@ Wireshark 适用于研究专有应用程序的行为，查看它们正在与之�
 
 Wireshark 捕获“线缆”，因此你可以在 GUI 的舒适环境中研究它们。如果你在一个繁忙的网络上，会有大量的流量，所以 Wireshark 允许你按机器或协议进行过滤。人们在开始使用 Wireshark 和其他数据包捕获工具时经常遇到问题，因为不需要 root 权限。它无法运行，但这是一个坏主意。使用 `usermod` 将你的用户名添加到 wireshark 组，然后重新登录。这比以 root 运行整个应用程序安全。Wireshark 使用权限在后台运行带有 setuid 的 `dumpcap`。
 
-
-
-
-
-## 黑客秘密
+### 黑客秘密
 
 ![](img/b82853b6232162a20e963fd53f1b434b_72_0.png)
 
-全 TCP 扫描（左侧）比 Nmap 的 SYN 扫描（右侧）噪音要大得多。此外，Wireshark 过滤器非常强大。
+全 TCP 扫描比 Nmap 的 SYN 扫描噪音要大得多。此外，Wireshark 过滤器非常强大。
 
-单词开头是字母，末尾是数字。在 `John's syntax` 中，这被写为随机字符 [A-Z]。生成密码的简单方法是将字典单词组合成密码，并尝试随机的大写字母和替换。比特币的 BIP39 标准也采用了类似的方法，不同的是每个单词都通过其前四个字母来标识。
+单词开头是字母，末尾是数字。在 `John's syntax` 中，这被写为随机字符 `[A-Z]`。生成密码的简单方法是将字典单词组合成密码，并尝试随机的大写字母和替换。比特币的 BIP39 标准也采用了类似的方法，不同的是每个单词都通过其前四个字母来标识。
 
-## Kismet
+### Kismet
 
 如果使用了 WEP 加密或其他任何加密方式，破解无线密钥都是轻而易举的。然而，有时我们不需要解密就能获取它。2019 年，一组黑客使用的一种攻击宣布了他们通过将流量吸引到第三方来入侵目标。敏感数据本应该被暴露的，这是一个非常令人担忧的问题，但几乎所有 Wi-Fi 设备仍然存在漏洞这一事实使得一个可能的列表仍然完全存在。
 
-在我们担心入侵网络之前，首先需要对它们进行映射。在地理区域内绘制网络地图被称为“漫游”（wardriving），而 Kismet 就是帮助你实现此点的工具。如果你需要支持监听模式的设备，你需要运行驱动程序。根据你调查的位置，你可能还需要很多支持。
+在我们担心入侵网络之前，首先需要对它们进行映射。在地理区域内绘制网络地图被称为“漫游”，而 Kismet 就是帮助你实现此点的工具。如果你需要支持监听模式的设备，你需要运行驱动程序。根据你调查的位置，你可能还需要很多支持。
 
-## Nmap
+### Nmap
 
-此外，绘制目标地图的第一步是查看它们上运行着哪些端口和服务。虽然有很多端口扫描工具，但 Nmap 是最受推崇的工具之一。它是一个命令行工具，但也基于发行版构建了 GUI（Zenmap），这对于可视化映射网络非常有帮助。Nmap 结果还可以导出为 XML，并导入到其他工具进行进一步分析。它还可以直接导入 Metabase 数据库，例如，这样就可以从不同的主机检测不同的攻击。
+此外，绘制目标地图的第一步是查看它们上运行着哪些端口和服务。虽然有很多端口扫描工具，但 Nmap 是最受推崇的工具之一。它是一个命令行工具，但也基于发行版构建了 GUI，`Zenmap`，这对于可视化映射网络非常有帮助。Nmap 结果还可以导出为 XML，并导入到其他工具进行进一步分析。它还可以直接导入 Metabase 数据库，例如，这样就可以从不同的主机检测不同的攻击。
 
 Nmap 的内容之多，使其页面跨越了 3000 行，因此我们在这里不会涵盖所有内容。然而，遵循 Kali Linux 的模式，“当你变得安静时，他们就越吵。”端口扫描之后。
 
-声明的 TCP 扫描涉及三次握手（我们使用 SYN 标志，如果端口打开，目标会响应 SYN-ACK，然后我们发送 ACK），这意味着扫描器和目标之间建立了瞬时的 TCP 会话。目标机器可能会产生大量的日志，而端口扫描产生的大量连接很容易被发现。
+声明的 TCP 扫描涉及三次握手，我们使用 SYN 标志，如果端口打开，目标会响应 SYN-ACK，然后我们发送 ACK，这意味着扫描器和目标之间建立了瞬时的 TCP 会话。目标机器可能会产生大量的日志，而端口扫描产生的大量连接很容易被发现。
 
-Nmap 的扫描略有不同。然而，如果攻击避免了对方的回，留下的足迹就会更少。足迹扫描非常安静，它没有使用 sockets API，因此它需要权限。你甚至可以在截图中（左侧）中检测到 TCP 扫描。扫描本身并不是，但传输了数据包以获取相同的信息（当数据包关闭或被拦截时）。
+Nmap 的扫描略有不同。然而，如果攻击避免了对方的回，留下的足迹就会更少。足迹扫描非常安静，它没有使用 sockets API，因此它需要权限。你甚至可以在截图中中检测到 TCP 扫描。扫描本身并不是，但传输了数据包以获取相同的信息。
 
 # 社会工程学
 
-社会攻击在通过利用受影响的零日漏洞或精心设计的钓鱼计划来获取信息方面同样有效。不仅随着手机恐慌的兴起，人们被欺骗获取账户或地址的远程访问权限以使用他们的银行详情。然而，其他形式的攻击也是可能的。例如，在 2018 年 8 月的 攻击中，黑客能够通过交换账户和使用验证码转发攻击（VCA），击败移动网络上的短信双重身份验证（2FA）。通过拦截旨在抵抗供应商发送的 2FA 令牌的消息，攻击者获取了访问权限。
+社会攻击在通过利用受影响的零日漏洞或精心设计的钓鱼计划来获取信息方面同样有效。不仅随着手机恐慌的兴起，人们被欺骗获取账户或地址的远程访问权限以使用他们的银行详情。然而，其他形式的攻击也是可能的。例如，在 2018 年 8 月的 攻击中，黑客能够通过交换账户和使用验证码转发攻击，击败移动网络上的短信双重身份验证。通过拦截旨在抵抗供应商发送的 2FA 令牌的消息，攻击者获取了访问权限。
 
-社会攻击比我们所知的那些要有效得多。犯罪分子在获取访问权限之前，通常花时间对高调目标进行钓鱼。这个过程被称为“诱导”或更具体的“钓鱼”。他们可能拥有这类实践手段，即使他们已经破解了社交媒体账户。查看公共信息源和收集开源情报（OSINT）需要时间，但非常强大的 Malfercan 可以实现这一过程。通过使用从搜索引擎到 Twitter 以及 GeoIP 数据库的各种数据源（“转换器”），所有的关系都可以被检测到。
+社会攻击比我们所知的那些要有效得多。犯罪分子在获取访问权限之前，通常花时间对高调目标进行钓鱼。这个过程被称为“诱导”或更具体的“钓鱼”。他们可能拥有这类实践手段，即使他们已经破解了社交媒体账户。查看公共信息源和收集开源情报需要时间，但非常强大的 Malfercan 可以实现这一过程。通过使用从搜索引擎到 Twitter 以及 GeoIP 数据库的各种数据源，所有的关系都可以被检测到。
 
 ![](img/b82853b6232162a20e963fd53f1b434b_72_0.png)
 
 ## METASPLOIT 框架
 
-一旦安装完成，你就可以通过 `msfconsole` 简单命令运行 Metploit。它是一个仅用于攻击的工具，这会让渗透测试的生活变得简单。Metploit 具有许多类型的模块。它们被归类为辅助模块（如扫描器等）、利用模块（用于使用载荷利用漏洞）、载荷（在已入侵的机器上执行）。还存在第三方模块。模块用 Ruby 语言编写，并有数千个模块可用。在正文中，你需要运行 Nmap 扫描，但也有一个 Metploit 模块可以完成此任务。对于首次加载，让我们看看选项并自救（毕竟，良好的习惯从这里这里在这里）。
+一旦安装完成，你就可以通过 `msfconsole` 简单命令运行 Metploit。它是一个仅用于攻击的工具，这会让渗透测试的生活变得简单。Metploit 具有许多类型的模块。它们被归类为辅助模块、利用模块、载荷。还存在第三方模块。模块用 Ruby 语言编写，并有数千个模块可用。在正文中，你需要运行 Nmap 扫描，但也有一个 Metploit 模块可以完成此任务。对于首次加载，让我们看看选项并自救。
 
 较新版本使用 Vagrant 和 Packer 从 GitHub 仓库动态获取虚拟机，因此设置起来稍微复杂一些，但你将会。
 
-## 在 UBUNTU 上安装 METASPLOIT
+### 在 UBUNTU 上安装 METASPLOIT
 
-等等，你应该查看 https://rapid7.com/install-metasploit-on-ubuntu-linux-64。
+等等，你应该查看 `https://rapid7.com/install-metasploit-on-ubuntu-linux-64`。
 
 注意，指南规定构建镜像需要 6.5 GB 的可用空间，因此你无法在 Kali Live 环境中执行，或者在添加了一些额外内容后执行。我们将展示如何在 Ubuntu 中构建 VMware 或 VirtualBox 镜像，但在任何地方首先都可以这样做。
 
-- apt install git packer vagrant
-- sudo plugin install vagrant-reload
-- sudo plugin install vagrant-github
-- sudo plugin install vagrant-libvirt
+- `apt install git packer vagrant`
+- `sudo plugin install vagrant-reload`
+- `sudo plugin install vagrant-github`
+- `sudo plugin install vagrant-libvirt`
+- `use auxiliary/scanner/portscan/tcp`
+- `set RHOSTS 127.0.0.1`
+- `run`
+- `git clone https://github.com/rapid7/metasploit3`
 
-- use auxiliary/scanner/portscan/tcp
-- set RHOSTS 127.0.0.1
-- run
+### 黑客秘密
 
-- git clone https://github.com/rapid7/metasploit3
-
-
-
-
-
-## 黑客秘密
-
-下一阶段是使用 Packer 构建虚拟机。你可能倾向于构建 VirtualBox 镜像，因此在命令中使用 `-only` 参数指定为 `virtualbox-iso`。默认情况下，该过程使用 `/tmp` 来存储临时文件。如果你使用 `/tmp` 将它们存储在内存（tmpfs）存储中并填满它，可能会遇到磁盘空间不足的错误。我们将使用 `/var/tmp`。
+下一阶段是使用 Packer 构建虚拟机。你可能倾向于构建 VirtualBox 镜像，因此在命令中使用 `-only` 参数指定为 `virtualbox-iso`。默认情况下，该过程使用 `/tmp` 来存储临时文件。如果你使用 `/tmp` 将它们存储在内存存储中并填满它，可能会遇到磁盘空间不足的错误。我们将使用 `/var/tmp`。
 
 ```
 $ cd mapstable/
 $ TMP_DIR=/var/tmp packer build --qemu -config mapstable/ubuntu_1404.hcl
 ```
 
-一个 Qemu 窗口会弹出来，但你需要拒绝输入，Packer 会处理一切（几秒钟后自动完成）。它会等待你选择选项，所以只需等待并观察演示，去泡杯茶，或者就等候。当准备好后，你就可以从它构建 Vagrant 镜像：
+一个 Qemu 窗口会弹出来，但你需要拒绝输入，Packer 会处理一切。它会等待你选择选项，所以只需等待并观察演示，去泡杯茶，或者就等候。当准备好后，你就可以从它构建 Vagrant 镜像：
 
 ```
 $ vagrant up mapstable/builds/ubuntu_1404_libvirt_0.11.2-name-mapstable-ub1404-provider-virtualbox
 ```
 
-Vagrant 主机存储在 `~/.vagrant/hosts`，但如果你的主目录没有此类目录（基础目录占用了空间），你可以通过设置环境变量 `VAGRANT_HOME` 来创建它。我们将完成下一步操作 `$ vagrant up ub1404-provider-libvirt`。
+Vagrant 主机存储在 `~/.vagrant/hosts`，但如果你的主目录没有此类目录，你可以通过设置环境变量 `VAGRANT_HOME` 来创建它。我们将完成下一步操作 `$ vagrant up ub1404-provider-libvirt`。
 
 系统会要求你输入密码，以便在主机上进行导出。然而，如果找不到 SSH 连接——它可能会使用 r 命令，我们发现这是因为与较版本的 Vagrant 访客不兼容。如果失败，可以通过运行 `vagrant destroy ub1404`，然后编辑 `Vagrantfile`，使用 `config.synced_folder "/", disabled: true` 命令然后再次运行 `vagrant up`。
 
-如果你使用了好用的 libvirt GUI，该机器应该出现在“虚拟机管理器”（Virtual Machine Manager）中。如果你不需要使用它，可以找到 IP 地址并使用用户名和密码 `vagrant` 登录机器。你可以在这里找到 IP 地址。如果你想从主机（或在 libvirt 虚拟机）查找额外的连接，可以启动 `nmap`（如果尚未安装）并对其扫描：
+如果你使用了好用的 libvirt GUI，该机器应该出现在“虚拟机管理器”中。如果你不需要使用它，可以找到 IP 地址并使用用户名和密码 `vagrant` 登录机器。你可以在这里找到 IP 地址。如果你想从主机查找额外的连接，可以启动 `nmap` 并对其扫描：
 
 ```
 $ nmap mapstable
 ```
+
+
 
 你应该找到一个服务列表，可用但不限于 SSH。我们在上面发现了一个 HTTP 服务器。还有其他服务在运行，但它们仅本地可用。你可以通过 SSH 登录 Vagrant 虚拟机并运行 `netstat -lpn` 查看这些内容。
 
@@ -2459,14 +2367,12 @@ SQL 注入在 2018 年依然非常流行。有效负载是否可以在 Metasploi
 
 我们时间很紧，而且不喜欢惊喜，所以我们将看到大多数要使用的漏洞和利用方法。但为了权衡精力，让我们看看在端口 6667 (6699) 上运行的 `iirc` 守护进程。如果你在 Metasploitable 虚拟机上发现一个不真实的地址（在 `/opt/unreal/` 目录下），你会发现我们运行的是 3.2.2 版本。这有点旧了，但对于带有我们 `iirc` 客户端的 Unreal 虚拟机来说已经足够了，你会发现这个特定版本带有后门，并且 Metasploitable 有一个针对该漏洞的模块。要启动并获取 shell，重启，只需（替换下面的有效负载）：
 
-- use exploit/iirc/unreal_iirc_3281_backdoor
-- use REPORT 6667
+- `use exploit/iirc/unreal_iirc_3281_backdoor`
+- `use REPORT 6667`
 
 现在你可以执行命令并探索系统了，前提是你有一个常规的 SSH 连接。如果 `whoami` 运行在 `boba_fett` 上，那么这就是我们拥有的访问权限。如果我们完全进入了 shell，我们就可以获取目录，而目录没有返回成功，但它是持续的。
 
 > 通过 Deal 我们可以从 Metasploitable 虚拟机中识别 Unreal 的版本。
-
-Linux Annual Forum 2023
 
 # Linux Format 2020
 
@@ -2506,27 +2412,14 @@ SQL 注入在 2018 年依然非常流行。有效负载是否可以在 Metasploi
 
 我们时间很紧，而且不喜欢惊喜，所以我们将看到大多数要使用的漏洞和利用方法。但为了权衡精力，让我们看看在端口 6667 (6699) 上运行的 `iirc` 守护进程。如果你在 Metasploitable 虚拟机上发现一个不真实的地址（在 `/opt/unreal/` 目录下），你会发现我们运行的是 3.2.2 版本。这有点旧了，但对于带有我们 `iirc` 客户端的 Unreal 虚拟机来说已经足够了，你会发现这个特定版本带有后门，并且 Metasploitable 有一个针对该漏洞的模块。要启动并获取 shell，重启，只需（替换下面的有效负载）：
 
-- use exploit/iirc/unreal_iirc_3281_backdoor
-- use REPORT 6667
+- `use exploit/iirc/unreal_iirc_3281_backdoor`
+- `use REPORT 6667`
 
 现在你可以执行命令并探索系统了，前提是你有一个常规的 SSH 连接。如果 `whoami` 运行在 `boba_fett` 上，那么就是我们拥有的访问权限。如果我们完全进入了 shell，我们就可以获取目录，而目录没有返回成功，但它是持续的。
 
 > 通过 Deal 我们可以从 Metasploitable 虚拟机中识别 Unreal 的版本。
 
 Linux Annual Forum 2023
-
-# Linux Format 2020
-
-## 事物是如何崩溃的
-
-让我们深入探讨利用错误（errata）为了更大的利益而进行的奇妙方式。
-
-自从人们将 PHP 连接到数据库以来，一直存在 SQL 注入攻击。这些攻击利用未清洗的——对 Web 表单中的每个输入进行清洗，使得攻击者能够运行任意查询。经典的例子是执行类似……的操作。……
-
-SQL 注入在 2018 年依然非常流行。有效负载是否可以在 Metasploitable 虚拟机的其他地方复用？
-
-
-
 
 # Linux Format 年度 2020
 
@@ -2541,8 +2434,6 @@ SQL 注入在 2018 年依然非常流行。有效负载是否可以在 Metasploi
 加固系统是一场没有终点的旅程（好吧，我们写的这个过程只有八页纸——Ed.），它是在保持系统安全与维持某些防御之间的一种平衡。在浏览器中禁用 JavaScript 固然很好，但如果你用这种眼光看待任何你喜欢的网站，可能会导致它们崩溃。事实上，如果你想保护自己免受所有互联网恶意程序的侵害，方法只有一个：拔掉路由器。你明白问题所在了。尽管如此，我们提供了一些更有用的技巧来保持 Mint 的安全（从任何 Linux 发行版的浏览器微调，到备份，再到更复杂的操作，如运行防火墙和加密 DNS——这是所有加入我们的人的旅程起点，但 Linux Mint 及其提供的无数工具是防止被数字职业人士和作剧者咬伤、释放或其他侵害的极佳防御）。
 
 学习如何完全安全地观看有趣的在线视频。
-
-## 加固 Mint 19.1
 
 ### 关于 Mint 与作剧
 
@@ -2566,7 +2457,7 @@ Linux Mint 是一个备受尊重且强大的发行版。然而，这并不意味
 
 ### 双重身份验证 (2FA)
 
-2FA 为你的账户增加了一层额外的安全性。即使密码被盗，如果没有第二个因子（例如来自身份验证器应用的代码或像 Yubikey这样的硬件密钥），攻击者无法访问你的账户。
+2FA 为你的账户增加了一层额外的安全性。即使密码被盗，如果没有第二个因子（例如来自身份验证器应用的代码或像 Yubikey 这样的硬件密钥），攻击者无法访问你的账户。
 
 ## 使用 Timeshift 备份文件
 
@@ -2579,10 +2470,6 @@ Timeshift 最广为人知的特征之一是易设置。你可以创建系统文�
 Ubuntu 包含了 Déjà-dup，它是命令行工具 `Dup` 的前端。这几乎是你备份文件时需要的所有工具。它可以进行加密、备份到远程位置，还可以进行在线备份。为了使用远程存储，你可以在 Mint 软件中找到 Déjà-dup，但如果它没有作为依赖安装 Déjà-dup，你也可以手动安装。
 
 一旦你在菜单中找到“备份”（Backups），你可以选择要备份哪些文件夹以及排除哪些文件夹。你还可以选择备份位置，例如本地 Nextcloud 服务器或 Google Drive（或任何由 Google 账户后端支持的其他地方）。最后，你可以制定时间表。你可以选择无限保存、保存一年或几个月。在空间不足的情况下，旧备份可能会被清理。
-
-
-
-
 
 ## 加固 Mint 19.1
 
@@ -2636,6 +2523,8 @@ Linux Mint 论坛 2021 | 1
 
 所以让我们快速检查一下。在 Firefox 或 Chrome（或 Chromium）中查看安装了什么。如果任何东西看起来可疑，请将其删除以防止进一步的入侵。下载视频和音频的插件，与各种平台合作，但更改主题经常被那些人不喜欢，但是。我们已经无数次提到 HTTPS 的重要性以及地址栏中那个小锁的重要性。本质上，通过 HTTPS 传输的信息是加密的——这样你的浏览器和服务器之间的任何内容都是加密的。新的加密方案（即完美正向安全）为每个会话使用加密密钥，所以如果你使用，服务器的私密钥是随机生成的，过去会话的流量不会被破坏。公共网站没有理由使用。并不是所有扩展都是坏的。Mozilla Firefox 将帮助你阻止 Facebook 和你的其他目标。
 
+
+
 ![](img/b82853b6232162a20e963fd53f1b434b_82)
 
 ## 加固 Mint 19
@@ -2662,7 +2551,7 @@ Mint 包含了 Backup Tool，它会处理你的个人文件。
 
 Linux Mint 论坛 2021 | 1
 
-# Linux  格式 2020
+# Linux 格式 2020
 
 ## 加固你的浏览器
 
@@ -2692,7 +2581,7 @@ Linux Mint 论坛 2021 | 1
 
 > 密码非常受保护，但这并不能停止从你查看的任何网页上收集个人数据。
 
-# >> DNS OVER HTTPS
+# DNS OVER HTTPS
 
 使用 Cloudflare 将减少你的浏览器隐藏持有者 DNS 的可能性，但忽视那些请求仍然加密的事实是愚的。如果你担心（并且发现 DNS over HTTPS 对大多数手动用户来说太复杂），你可以设置 DNS over TLS 或 DNSCrypt，在 DNS 查询上增加一个加密层，防止它们被嗅探。DNSCrypt 只能缓存条目，或者你可以使用任何其他方法，例如 Unbound。我们不会进入如何设置的细节，因为这占据的空间比这个框允许的更多，但只有当加密 DNS（服务器名称）识别变得更广泛地支持时，其益处都是有限的。
 
@@ -2700,13 +2589,13 @@ Linux Mint 论坛 2021 | 1
 sudo nano /etc/resolv.conf
 ```
 
-并注释掉任何以 # 开头的行。然后添加行 nameserver 1.1.1.1
+并注释掉任何以 # 开头的行。然后添加行 `nameserver 1.1.1.1`
 
-更改将生效，但浏览器缓存会导致你需要关闭并重新打开窗口以确保更改应用。注意这并不是需要的。在某些情况下，你的机器仍然请求本地 IP 地址（格式为 192.168.x.x）并在同时通过 NetworkManager 解析域名（包括 Mint）这是通过调用 resolvconf.utility 完成。
+更改将生效，但浏览器缓存会导致你需要关闭并重新打开窗口以确保更改应用。注意这并不是需要的。在某些情况下，你的机器仍然请求本地 IP 地址（格式为 192.168.x.x）并在同时通过 NetworkManager 解析域名（包括 Mint）这是通过调用 `resolvconf.utility` 完成。
 
-我们可以通过选择系统托盘中的网络图标并选择网络设置来配置 NetworkManager 使用 DNS 服务器。选择有线网络并点击齿轮按钮。在左面板设置 IPv4，然后选择自动，并在 DNS 部分输入 1.1.1.1
+我们可以通过选择系统托盘中的网络图标并选择网络设置来配置 NetworkManager 使用 DNS 服务器。选择有线网络并点击齿轮按钮。在左面板设置 IPv4，然后选择自动，并在 DNS 部分输入 `1.1.1.1`
 
-你也可以勇敢一点，添加 Cloudflare 的 DNS over:1.0.0.1。你可以以类似的方式配置 IPv6 的 DNS，只是这里是 2606:4700:4700::1111 和 2606:4700:4700::1001。关闭对话框，然后连接
+你也可以勇敢一点，添加 Cloudflare 的 DNS over:`1.0.0.1`。你可以以类似的方式配置 IPv6 的 DNS，只是这里是 `2606:4700:4700::1111` 和 `2606:4700:4700::1001`。关闭对话框，然后连接
 
 ## 插件要小心
 
@@ -2714,12 +2603,10 @@ sudo nano /etc/resolv.conf
 
 使用 Cloudflare 将减少你的浏览器隐藏持有者 DNS 的可能性，但忽视那些请求仍然加密的事实是愚的。如果你担心（并且发现 DNS over HTTPS 对大多数手动用户来说太复杂），你可以设置 DNS over TLS 或 DNSCrypt，在 DNS 查询上增加一个加密层，防止它们被嗅探。DNSCrypt 只能缓存条目，或者你可以使用任何其他方法，例如 Unbound。我们不会进入如何设置的细节，因为这占据的空间比这个框允许的更多，但只有当加密 DNS（服务器名称）识别变得更广泛地支持时，其益处都是有限的。
 
-
-
-
 # 2020年 Linux Format 年度
 
 ## 防火墙的优势
+
 仅仅因为你没着火，并不意味着你不应该运行防火墙。
 
 大多数 Linux 发行版都预装了 IPTables 或其继者 nftables，并配有操作内核 netfilter 的命令行工具。这些工具非常强大，但并不“省力”。它们对用户并不友好，而且复杂。事实上，有一个名为 Ufw（简单防火墙）的基于文本的前端，它已经包含在 Ubuntu 和 Mint 中一段时间了。
@@ -2747,15 +2634,21 @@ Mint 会在你的主目录下创建一个“公共 (Public)”文件夹，所以
 ## 如何设置加密目录
 
 - 1. 准备你的系统
+
   我们不能在要加密的主目录下保留任何打开的文件。注销桌面仍然意味着（对于 PulseAudio 和 GUI 视图）最好在“用户和组 (Users and Groups)”应用中添加一个用户（这需要权限，请选择“账户 Account”）和一个密码。重启并使用该用户登录。
 
 - 2. 开始加密
+
   Mint 上应该已经安装了所需的工具，但 Ubuntu 上没有。检查这些工具：
+
   `sudo apt install encryptfs-utils`
+
   备份你主文件夹中的所有数据。然后运行加密命令，将 `<username>` 替换为你的用户名：
+
   `sudo encryptfs-migrate -u <username>`
 
 - 3. 测试目录
+
   仔细阅读输出。如果你可以使用它（使用 `Ctrl-Alt-F1` 进入 TTY），那么例如可以安全地删除备份文件夹。你会看到一个关于缺少密钥的警告，这是没关系的。留在 TTY 中，运行 `encrypt-passphrase`，输入你的密码并记录输出。可以安全地删除目录。
 
 ## 加固 Mint 19.1
@@ -2771,9 +2664,6 @@ Mint 会在你的主目录下创建一个“公共 (Public)”文件夹，所以
 互联网。这不应该担心，因为你的 ISP 或网络管理员应该已经配置了路由器，就像我们配置防火墙一样，来阻止连接。
 
 在我们之前，简单谈一下更多物理威胁，即加密。如果电脑（甚至只是驱动器）已分区，请加密你的主目录，这样就没有人能访问你的文件。这意味着如果你丢失了密码，你将无法访问你的文件。
-
-
-
 
 ## Syncing+EnCS 教程
 
@@ -2792,9 +2682,11 @@ EnFS 在普通（正向）模式下可以在你指定的挂载点提供明文文
 正在创建新空目录。
 
 [... 更多程序输出已裁剪 ...]
+
 现在你需要为你的文件系统输入密码。你必须记住这个密码，因为没有恢复机制。在使用 EnFS 之后可以以后更改密码。
 
 新 EnFS 密码
+
 验证 EnFS 密码：
 
 - 当你第一次运行 EnFS 时，它会在目录的左侧（左侧下方）创建一个明文文件（clear enfs.txt），该文件将填充你的离线密码。将密码写在某处以防丢失是一个好主意。你也可以将其打印在纸质复件上。解密你的文件需要此密码，没有密码它就无法解密这些文件。
@@ -2806,6 +2698,7 @@ EnFS 在普通（正向）模式下可以在你指定的挂载点提供明文文
 ```
 
 EnFS 密码：
+
 如果你想快速查看 EnFS 是否正在运行，请浏览明文目录并查看文件是否可见。如果 EnFS 正在运行，停止 EnFS，只需取消明文注释。
 
 ![](img/b82853b6232162a20e963fd53f1b434b_86_0.png)
@@ -2816,13 +2709,14 @@ EnFS 密码：
 
 随发行附的说明文件和其他在线文档网站易于使用。最好的办法可能是将 Syncing 程序放在桥接器上。你可以通过将其放在主目录中来实现。如果你需要帮助设置 Syncing，可以获取更多信息。
 
-对于 Raspberry Pi 桥接计算机，请下载 ARM 版本。根据你的安装，这些版本已准备启动时运行。要使用 LXDE 桌面管理器的自动启动，请在 /config/autostart/ 中创建一个非同步的桌面文件。
+对于 Raspberry Pi 桥接计算机，请下载 ARM 版本。根据你的安装，这些版本已准备启动时运行。要使用 LXDE 桌面管理器的自动启动，请在 `/config/autostart/` 中创建一个非同步的桌面文件。
 
 ## 文件系统
 
 你可以使用一个大型 USB 驱动器在同步到离线之前汇总你的加密文件。FAT32 文件系统将兼容（Linux, Mac, Windows）。这对于我们来说不可行，因为我们还希望在系统分区中存储快照仓库，这需要权限支持，而 FAT32 无法满足。此外，FAT32 的 4GB 大小限制可能是一个问题。请注意，如果你在可移动驱动器上使用 Linux 文件系统，可能会保留文件权限。如果桥接器用于没有相同用户名的多个系统，你必须使用 root 来更改所有权和组信息。
 
 > 小贴士
+
 > 使用命令行选项，Syncing 能够记录许多活动。启用后，日志将保存在 Actions/logs 中。
 
 ## Linux 格式 2020
@@ -2830,16 +2724,23 @@ EnFS 密码：
 ![](img/b82853b6232162a20e963fd53f1b434b_87_0.png)
 
 [Desktop Entry]
+
 Type=Application
+
 Name=RunSync
+
 Icon=
+
 Exec=sync-no-browser
+
 Startup-file=
+
 As=
 
 在首次运行创建 .stfolder 之前，确保 EnsureSync 正在运行，然后将其他内容复制到明文点下的明文目录中。挂载点仅用于 EnSync 捕获、加密并将它们存储在那里。
 
 Syncrill 将运行并从你的工作计算机收集文件。在这一过程中，针对你的计算机的同步引擎有不同的设置。
+
 当明文目录中准备好启动时，你就知道汇总完成了。它们将以加密形式存储在其他地方，但如有需要可以使用加密目录。
 
 同步设置后，远程站点 .stversions 目录中仍会有一个副本。你还可以遵循此 syncing-control 桌面文件，通过 KDE 桌面管理器在计算机上创建一个图标来运行同步 Web 浏览器控制面板。
@@ -2849,19 +2750,28 @@ Syncrill 将运行并从你的工作计算机收集文件。在这一过程中�
 一旦设置汇总，添加另一个连接桥接计算机的同步链接。
 
 [Desktop Entry]
+
 Type=Application
+
 Name=Synching Control
+
 Icon=
+
 Exec=epiphany 127
+
 Startup-file=
+
 As=
 
 在首次运行创建 .stfolder 之前，确保 EnsureSync 正在运行，然后将任何内容复制到明文点下的明文目录中。挂载点仅用于 EnSync 捕获、加密并将它们存储在那里。
 
+
+
 Syncrill 将运行并从你的工作计算机收集文件。在这一过程中，针对你的计算机的同步引擎有不同的设置。
+
 当明文目录中准备好启动时，你就知道汇总完成了。它们将以加密形式存储在其他地方，但如有需要可以使用加密目录。
 
-同步设置后，远程站点 .stversions 目录中仍会有一个副本。你还可以遵循此 syncing-control 桌面文件，通过 KDE 桌面管理器在计算机上创建一个图标来运行同步 Web 浏览器控制面板。
+同步设置后，远程站点 `.stversions` 目录中仍会有一个副本。你还可以遵循此 `syncing-control` 桌面文件，通过 KDE 桌面管理器在计算机上创建一个图标来运行同步 Web 浏览器控制面板。
 
 ## 汇总文件
 
@@ -2870,7 +2780,6 @@ Syncrill 将运行并从你的工作计算机收集文件。在这一过程中�
 ```
 sync.sh:0.0
 rsync -avz --delete /home/pi/cleartext/ /mnt/point/uUSB/sync_ofsite/encrypted/
-/
 //pi/cleartext/
 ```
 
@@ -2879,7 +2788,6 @@ rsync -avz --delete /home/pi/cleartext/ /mnt/point/uUSB/sync_ofsite/encrypted/
 ```
 sync.sh:0.0
 rsync -avz --delete /home/pi/cleartext/ /mnt/point/uUSB/sync_ofsite/encrypted/
-/
 //pi/cleartext/
 ```
 
@@ -2887,45 +2795,50 @@ rsync -avz --delete /home/pi/cleartext/ /mnt/point/uUSB/sync_ofsite/encrypted/
 
 知道如何恢复数据非常重要。如果汇总保存在桥接计算机上，答案很简单：浏览到时间戳并将你的文件复制回这里即可。
 
-然后学习如何从远程站点恢复文件。一种是手动在远程计算机上汇总加密文件，并将明文文件同步到桥接计算机。这应该使用 Mighty Commander 或 ssh/rsync 等程序完成。
-
-
-
+然后学习如何从远程站点恢复文件。一种是手动在远程计算机上汇总加密文件，并将明文文件同步到桥接计算机。这应该使用 Mighty Commander 或 `ssh/rsync` 等程序完成。
 
 ## 同步+Encfs 教程
 
-"ffff" (xxxx-yyyy) 上的错误：文件夹标记丢失。如果你正在使用它，请也检查你的同步 encfs 详情。
+`"ffff"` (`xxxx-yyyy`) 上的错误：文件夹标记丢失。如果你正在使用它，请也检查你的同步 encfs 详情。
+
 可以手动重新创建。
+
 如果你使用可选的忽略文件，
+
 重新创建它，以便在同步响应时不会留下任何文件。你必须使用文本编辑器来制作同步文件，因为 GUI 界面已不同步。
+
 如果文件不同步，只需使用 midair 重新创建它。
 
-# >> 干扰文件 (CHAFF FILES)
+### >> 干扰文件 (CHAFF FILES)
 
 为了增加额外的隐私保护，你可以将不同的加密文件集混合到加密目录中。在创建和使用同步加密之前，请务必将第一个 xml 文件排除在外（重命名或移动到不同的目录）。一次只能使用一个 xml 文件。
 
 在同一个目录上使用重叠的多个加密集会让加密文件看起来像一个集合，尽管这些项目是用不同的文件和目录加密的。
 
 encfs 快捷方式使用明文目录中基于文件名和密码的显示。每个 xml 文件都可以启用所有加密文件的唯一子集。
+
 例如，你可以定义一个加密集并隐藏其他的，以允许人们访问某些子集。
 
 有了这两个同步文件，有两种方法恢复你的文件。假设你删除了或损坏了两个文件，并且离线 GUI 的报告完全错误，而它在版本目录中仍有良好的副本。通过使用 GUILS，你需要两个 SSH 连接从远程计算机（或者你可以）恢复到离线同步文件。
 
 - 允许将同步文件重新创建到离线位置，然后使用桥接计算机离线同步和优化同步环。
 - 从离线目录复制所有文件的副本。如果你处理的是单个文件，请查看关于如何找到加密文件路径和名称的说明。
-- 将同步计算机环更改为仅发送 (Send Only)，并将桥接计算机离线同步改为 Encfs。
+- 将同步计算机环更改为仅发送 (`Send Only`)，并将桥接计算机离线同步改为 Encfs。
 - 取消两台电脑的推送并让同步进行。
 
 encfs 快捷删除将删除所有在没有匹配密码的情况下无法删除的加密目录，所有文件将显示为不存在。这可能意味着你需要隐藏例如 10000 个用一个 xml 文件加密的文件，三个用第二个 xml 文件加密的文件，且密码存储在某处。除非知道如何设置其中一个，否则没人知道某个 xml 文件被通过。
 
 将加密文件转换为明文，它们将通过通过过的明文同步环同步回你的计算机。
-这就是为什么你的 Encfs 页面指示需要使用环境变量 ENCFS_CONFIG 从远程计算机解码数据（
+
+这就是为什么你的 Encfs 页面指示需要使用环境变量 `ENCFS_CONFIG` 从远程计算机解码数据（
+
 如果你使用作为真实数据目录的 xml 文件，则没有必要。
+
 然而，如果你使用 xml 文件并使用任何环境变量：
 
 你可能需要使用离线 GUI 覆盖，强制将远程侧的所有更改应用到桥接并接收。在两台计算机上进行。
 
-# 加速恢复
+## 加速恢复
 
 如果在同步中发生了两次连续失败并完全或部分合并，如果你使用 Sync 版本的“最后良好”版本，可能会发生冲突。然而，如果你使用 Sync 版本，它将通过附加同步开始时的时间戳来修改加密文件。
 
@@ -2938,7 +2851,8 @@ do
 mv $file ${file::-16}
 fi
 ```
-因为 Midnight Commander、rsync 或 Sync 会将其拉回到桥接计算机。Encfs 将
+
+因为 Midnight Commander、`rsync` 或 Sync 会将其拉回到桥接计算机。Encfs 将
 
 不同步
 
@@ -2949,11 +2863,11 @@ fi
 | Sync | TNE9Y3H6K6I6K6I6K6I6K6I6I... | | | | 64.4 KB / 60.0 KB |
 | Sync | | | | | 64.4 KB / 60.0 KB |
 | Sync | mAglmrmptWAmAmWAmhUCIT-W4RYQK2KQQIT... | | | | 64.1 KB / 60.1 MB |
-| Sync | SuV6S6S6S6S6S6S6S... | | | | 64.4 KB / 60.4 KB |
+| Sync | SuV6S6S6S6S6S6S6S6S6... | | | | 64.4 KB / 60.4 KB |
 | Sync | x-13H1H7H1H7H17H1Z6L6Z6L6B6... | | | | 80.2 KB / 64.1 KB |
 | Sync | | | | | 64.1 KB |
 
-# >> 提升你的 LINUX 技能 订阅访问 http:///LinuxFormat
+### >> 提升你的 LINUX 技能 订阅访问 http:///LinuxFormat
 
 Linux Format 2020 | 8/19
 
@@ -2961,27 +2875,25 @@ Linux Format 2020 | 8/19
 
 # 管理
 
-# ## 更安全的浏览和内存管理
+## 更安全的浏览和内存管理
 
 当涉及到网络浏览器时，Valentine Sitsyn 产生了通常的怀旧情绪，然后想起最新的安全措施是关键的。
 
 ![](img/b2853b6232162a20e963fd53f1b49_0.png)
 
 **Dr Sitsyn** 是一位已离开的 KDE 贡献者。
+
 他喜欢构建 Linux 云和文章。
-
-
-
 
 # 虚拟管理：在压力下生存
 
 Linux 中的内存管理并非什么魔法，是时候按照你想要的方式来管理内存了。
 
-回想一下你被任命负责一台服务器的时候。某一天（实际上是深夜），你可能会因为服务器掉线连接而被叫醒。你通过 SSH 登录，迅速发现机箱内没有正在运行的服务器。尽管如此，你查看了 `/proc/self/memstat` 发现没有致命错误。进程消失了。这里发生了一些奇怪的事情。
+回想一下你被任命负责一台服务器的时候。某一天（实际上是深夜），你可能会因为服务器掉线连接而被叫醒。你通过 `SSH` 登录，迅速发现机箱内没有正在运行的服务器。尽管如此，你查看了 `/proc/self/memstat` 发现没有致命错误。进程消失了。这里发生了一些奇怪的事情。
 
 如果这是你第一次查看内存，恭喜你。你是第一批 OOM killer（内存溢出杀手）受害者。TLA 代表 Out of Memory（内存溢出），这是内核为了拯救系统获取内存的最后手段。你成为受害者了吗？你的 Web 服务器并不是元凶，而是 Linux 选择了牺牲，你能做些什么来避免再次被叫醒？在本篇指南中，我们将探索 Linux 内存以及你可以使用哪些旋钮来调整这一乱局面。
 
-内存管理过程发生在内核中，而这并不是世界上最简单的事情。复杂的映射最好通过示例来学习。因此，考虑 `char *buf = malloc(1024);` 如果 (buf) // 不可能发生 //
+内存管理过程发生在内核中，而这并不是世界上最简单的事情。复杂的映射最好通过示例来学习。因此，考虑 `char *buf = malloc(1024);` 如果 `(buf)` // 不可能发生 //
 
 想象你最喜欢的语言中有一个相关的结构，它可能需要分配这么多内存，并且需要去内核请求页（简单起见是 4K 块）。为了此目的分配内存有两种主要方式：
 
@@ -2997,7 +2909,7 @@ if (security_vm_enough(mm, vmap, len) < PAGE_SHIFT)
     return -ENOMEM;
 ```
 
-mm 指向当前进程的内存描述符。在向进程发出内存请求之前会进行几次检查。首先，它确保拥有的内存映射超过 `vm.max_map_count` 设置允许范围。默认值是 65535，在正常情况下你永远不需要这个值。但如果你需要许多内存映射，请增加 `vm.max_map_count` 或使用 `mmap` 获取空闲内存。这是一个拥有可用内存的技巧。然后，内核将“分配”一些内存。如果你好奇为什么代码中这个词看起来像：Pmap 需要一个与它们对齐的进程映射以及权限位。[Anon] 可能 malloc 得到。
+`mm` 指向当前进程的内存描述符。在向进程发出内存请求之前会进行几次检查。首先，它确保拥有的内存映射超过 `vm.max_map_count` 设置允许范围。默认值是 65535，在正常情况下你永远不需要这个值。但如果你需要许多内存映射，请增加 `vm.max_map_count` 或使用 `mmap` 获取空闲内存。这是一个拥有可用内存的技巧。然后，内核将“分配”一些内存。如果你好奇为什么代码中这个词看起来像：Pmap 需要一个与它们对齐的进程映射以及权限位。[Anon] 可能 `malloc` 得到。
 
 ## 会员专属
 
@@ -3021,9 +2933,9 @@ vma->total += len << PAGE_SHIFT;
 vma->data += len << PAGE_SHIFT;
 ```
 
-对于非超级用户请求，vma_admin_keys（通常为 128MB）也是设置的。这是为了在内存不足时留出一些空间。否则，当涉及到内存分配时，Linux 是一个只在触碰 `addr + len` 之前记录的。如果你在 `top` 的 VIRT 或 DATA 列中看到大值，那是因为它消耗了太多内存。这把我们引向了另一个主题……
+对于非超级用户请求，`vma_admin_keys`（通常为 128MB）也是设置的。这是为了在内存不足时留出一些空间。否则，当涉及到内存分配时，Linux 是一个只在触碰 `addr + len` 之前记录的。如果你在 `top` 的 VIRT 或 DATA 列中看到大值，那是因为它消耗了太多内存。这把我们引向了另一个主题……
 
-overcommit_memory=2 ("never") 禁用了过度提交。在这种情况下，内核根据内存请求进行严格限制。如果将其设置为绝对值，默认内核将失败 RAM 分配。交换空间也包含在内。内核处理 vma_admin_keys 以及 user_reserve。
+`overcommit_memory=2` ("never") 禁用了过度提交。在这种情况下，内核根据内存请求进行严格限制。如果将其设置为绝对值，默认内核将失败 RAM 分配。交换空间也包含在内。内核处理 `vma_admin_keys` 以及 `user_reserve`。
 
 ## 内存过度提交 (Memory overcommit)
 
@@ -3047,13 +2959,9 @@ overcommit_memory=2 ("never") 禁用了过度提交。在这种情况下，内�
 
 ## OOM killer
 
-事实上，Linux 有许多方法可以触发 OOM：除了页分配失败外，当（组）中的内存消耗超过 LXHT 时，会调用 OOM killer。你也可以通过 SysRq-F 触发它，或者如果你创建了快照储。
+事实上，Linux 有许多方法可以触发 OOM：除了页分配失败外，当（组）中的内存消耗超过 LXHT 时，会调用 OOM killer。你也可以通过 `SysRq-F` 触发它，或者如果你创建了快照储。
 
 Linux 知道如何杀死东西。当 Linux 内存耗尽时，会发生这些事情：OOM。如果你设置 `vm.cgroup.alloc_kill_threshold` 为一个值，那么内存溢出进程将作为内核线程启动，除非所需内存的 cgroup 未被免于 OOM。简而言之，你想杀死占用大量内存但最不重要的进程。Linux 将此转换为一个数值。得分最低的进程（当然，如果你考虑这一个）会胜出。
-
-
-
-
 
 # 2020年 Linux 年度报告
 
@@ -3092,7 +3000,7 @@ set saved
 # 将 3 分钟后禁用。
 ```
 
-###花园花园
+### 花园花园
 
 像 Facebook 这样的现代花园通过 API 运行，引入第三方开发者在平台上构建。开放网络的未来似乎正在显现。这些“花园派”允许第三方开发者在这些流行服务之上构建新应用，并为用户访问和与其交互提供更多选择。
 
@@ -3100,9 +3008,11 @@ set saved
 
 然而，开放网络的状况仍然缺乏标准。它们需要能够提供它们的标准，人们可以据此进行修改。如果你想改变你喜欢的东西或添加一个你看重的功能，了解如何与服务交互并使用它是至关重要的。
 
-W3C 拥有一争议历史。我们看到关于允许将 DRM 加密媒体扩展（EME）引入 HTML 的讨论。这一举遭到了批评，并且当电子边界基金（EFF）在 W3C 于 2017 年 9 月发布 EME 规范后退出时陷入停止。
 
-这种情况也适用于媒体格式。mp3 音频格式具有专利历史，已在 2007 年获得自由。现在通过 HTML5，有了使用多媒体内容的新方法，可以处理 Ogg 和 Matroska 等开放格式。通过去标准化网络，我们赋予用户转向开放格式而非专有格式的能力。
+
+W3C 拥有一争议历史。我们看到关于允许将 DRM 加密媒体扩展（`EME`）引入 HTML 的讨论。这一举遭到了批评，并且当电子边界基金（`EFF`）在 W3C 于 2017 年 9 月发布 `EME` 规范后退出时陷入停止。
+
+这种情况也适用于媒体格式。`mp3` 音频格式具有专利历史，已在 2007 年获得自由。现在通过 `HTML5`，有了使用多媒体内容的新方法，可以处理 `Ogg` 和 `Matroska` 等开放格式。通过去标准化网络，我们赋予用户转向开放格式而非专有格式的能力。
 
 在接下来的列表中，我们将展示如何使用你的服务来逃离围墙花园版本。默认情况下，服务只能从连接到你家庭网络的计算机和设备访问。从那时起，你需要从 ISP 获取静态 IP 地址，或使用动态 DNS 服务并在路由器上开放端口以方便访问。
 
@@ -3110,23 +3020,7 @@ W3C 定义了开放标准，多年来它为开放网络演化出了若干规范�
 
 然而，凭自己管理服务是不可行的。因此，我们将寻找其他社区并找到你可以更改的替代方案，以改变所有去中心化的网络服务。
 
-## >> 你真的离线生活了吗？
-
-W3C 定义了开放标准，多年来它为开放网络演化出了若干规范和标准。
-
-开放网络的状况仍然缺乏标准。它们需要能够提供它们的标准，人们可以据此进行修改。如果你想改变你喜欢的东西或添加一个你看重的功能，了解如何与服务交互并使用它是至关重要的。
-
-W3C 定义了开放标准，多年来它为开放网络演化出了若干规范和标准。
-
-然而，凭自己管理服务是不可行的。因此，我们将寻找其他社区并找到你可以更改的替代方案，以改变所有去中心化的网络服务。
-
-W3C 定义了开放标准，多年来它为开放网络演化出了若干规范和标准。
-
-开放网络的状况仍然缺乏标准。它们需要能够提供它们的标准，人们可以据此进行修改。如果你想改变你喜欢的东西或添加一个你看重的功能，了解如何与服务交互并使用它是至关重要的。
-
-W3C 定义了开放标准，多年来它为开放网络演化出了若干规范和标准。
-
-然而，凭自己管理服务是不可行的。因此，我们将寻找其他社区并找到你可以更改的替代方案，以改变所有去中心化的网络服务。
+## 你真的离线生活了吗？
 
 W3C 定义了开放标准，多年来它为开放网络演化出了若干规范和标准。
 
@@ -3140,11 +3034,7 @@ W3C 定义了开放标准，多年来它为开放网络演化出了若干规范�
 
 **是时候托管自己的云了。**
 
-设置 Seafile 并不费费精力。Seafile 有 Android 客户端，且 Android 客户端使用秘密加密库。
-
-
-
-
+设置 `Seafile` 并不费费精力。`Seafile` 有 `Android` 客户端，且 `Android` 客户端使用秘密加密库。
 
 # 逃离云端
 
@@ -3160,30 +3050,29 @@ W3C 定义了开放标准，多年来它为开放网络演化出了若干规范�
 
 个人资料字段。如果个人资料中的现有项目不起作用，你可以将它们替换为符合你需求的内容，并创建你自己的字段。
 
-为了在设计自定义个人页面时更具灵活性，你可以使用流行的 Profile Manager。如果你想刷新首页，请启用 Front Page Disco。Egg 带有超过 30 多个插件，例如博客、页面和通知。你可能想要激活的插件包括 Sites Pages，它允许你创建显示所有标签的简单网页。
+为了在设计自定义个人页面时更具灵活性，你可以使用流行的 `Profile Manager`。如果你想刷新首页，请启用 `Front Page Disco`。`Egg` 带有超过 30 多个插件，例如博客、页面和通知。你可能想要激活的插件包括 `Sites Pages`，它允许你创建显示所有标签的简单网页。
 
 # 在你的根目录之外
 
-有很多开源软件使得在你的自己的服务器上复制流行的社交服务成为可能。但花精力去设置它们并不是每个人都愿意。通过 Disco，你可以使用所有常用的服务，而没有广告、跟踪或通常与它们关联的任何类型的数据收集。
+有很多开源软件使得在你的自己的服务器上复制流行的社交服务成为可能。但花精力去设置它们并不是每个人都愿意。通过 `Disco`，你可以使用所有常用的服务，而没有广告、跟踪或通常与它们关联的任何类型的数据收集。
 
-Disco 提供了免费的一切内容，你可以通过一个名为 RainLoop 的自定义 Web 客户端访问，该客户端还支持 GIF。还有 4GB 由 Nextcloud 驱动的免费云存储。网络中还有一个 Disco 可供用于去中心化网络。你还获得了由 Matrix 驱动的去中心化聊天，Matrix 是一种用于托管邮件列表或论坛的去中心化协议。此外，Disco 还提供 Etherpad 和 FileShare 用于在线共享文档和文件。还有一个 pasteebinary，一种临时文件托管和共享服务，以及一个查询 DuckDuckGo 等多个搜索引擎的匿名搜索。
+`Disco` 提供了免费的一切内容，你可以通过一个名为 `RainLoop` 的自定义 Web 客户端访问，该客户端还支持 GIF。还有 4GB 由 `Nextcloud` 驱动的免费云存储。网络中还有一个 `Disco` 可供用于去中心化网络。你还获得了由 `Matrix` 驱动的去中心化聊天，`Matrix` 是一种用于托管邮件列表或论坛的去中心化协议。此外，`Disco` 还提供 `Etherpad` 和 `FileShare` 用于在线共享文档和文件。还有一个 `pasteebinary`，一种临时文件托管和共享服务，以及一个查询 `DuckDuckGo` 等多个搜索引擎的匿名搜索。
 
 要访问这些服务，你需要注册一个位于阿姆斯特丹的免费账户。注册过程除了用户名和密码外，不会询问任何个人信息，服务还提供删除账户的选项。
 
 ## 提供一个优雅的解决方案
 
-Egg 是最多功能的社交软件之一，提供了启动社交网络网站所需的一切，包括博客、功能和 wiki。它的设置非常简单且文档记录详尽。
+`Egg` 是最多功能的社交软件之一，提供了启动社交网络网站所需的一切，包括博客、功能和 wiki。它的设置非常简单且文档记录详尽。
 
-默认的 Egg 界面非常像你更好的自己。你可以自定义顶端显示的菜单项顺序，还可以添加自定义菜单项。你还可以修改默认的
+默认的 `Egg` 界面非常像你更好的自己。你可以自定义顶端显示的菜单项顺序，还可以添加自定义菜单项。你还可以修改默认的
 
 # Facebookers 匿名管理
 
 | 插件 | | | | | | | | |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 全部 | 激活的插件 特性 | 通知 | 非加固 | 管理员 | 通信 | 内容 |
-| 开发 | 增强 | 安全与隐私 | 审查 | 社交 | 其他 | |
+| 开发 | 增强 | 安全与隐私 | 审查 | 社交 | 其他 |
 | Web 服务 | 小部件 | | | | | |
-
 | 说明 |
 | :--- | :--- |
 | 博客 | 允许在博客中创建条目 |
@@ -3199,7 +3088,7 @@ Egg 是最多功能的社交软件之一，提供了启动社交网络网站所�
 
 ![](img/b82853b6232162a20e963fd53f1b434b_96_2.png)
 
-除了官方插件外，Egg 的社区还分享了数百个插件。
+除了官方插件外，`Egg` 的社区还分享了数百个插件。
 
 Linux 论坛年刊 2020 197
 
@@ -3211,7 +3100,7 @@ Linux 论坛年刊 2020 197
 
 演变成了一个全方位的、功能丰富的通信媒介。它不再仅仅是关于短信。一次简短的 IM 会话可以促进图像、音频甚至视频的交换。IM 的主要用户是家庭用户，IM 也被企业竞争对手采用。两者都使用不同的工具集和大量的即时消息服务，以满足日益增长的即时消息需求。
 
-为即时消息创建一个统一的标准，包括 IETF 的会话建立协议 (SIP)、用于即时消息和存在利用的 SIP (SIMPLE) 以及 XML 扩展消息和存在协议 (XMPP)。然而，这些协议都没有获得过像 Jabber 那样的接受程度。Jabber 已经吸收了各种新功能。迭代是其中之一。你可以用来部署和管理 Jabber 服务器而无需出现任何问题。使用一个流行服务的最大缺点是它们通过中央服务器路由所有私有数据。所以如果你使用一个，许多服务无法提供良好的安全性和隐私，这就是为什么你应该部署自己的。
+为即时消息创建一个统一的标准，包括 IETF 的会话建立协议 (`SIP`)、用于即时消息和存在利用的 SIP (`SIMPLE`) 以及 XML 扩展消息和存在协议 (`XMPP`)。然而，这些协议都没有获得过像 `Jabber` 那样的接受程度。`Jabber` 已经吸收了各种新功能。迭代是其中之一。你可以用来部署和管理 `Jabber` 服务器而无需出现任何问题。使用一个流行服务的最大缺点是它们通过中央服务器路由所有私有数据。所以如果你使用一个，许多服务无法提供良好的安全性和隐私，这就是为什么你应该部署自己的。
 
 在 IM 客户端可以在互联网上流传输文本、音频或视频之前，它们需要首先将其处理转换为适合流的格式。已经多次尝试
 
@@ -3219,41 +3108,37 @@ Linux 论坛年刊 2020 197
 
 如前面提到的，运行你自己的（LXF240）电子邮件服务器是棘刻的。这是因为缺乏用于构建堆栈的高质量开源软件。事实上，世界上许多服务器都是开源驱动的。运行你自己的服务器的问题有很多。管理 25 端口的流量可能非常困难。而且由于安全性，来自不受信任用户的垃圾邮件会被许多电子邮件服务器和服务过滤。
 
-电子邮件服务器是一个涉及各个服务器组件的复杂怪兽。管理和组装许多组件可能花费更多的时间和精力。然而，最后有一些易于安装的合一电子邮件服务器解决方案。它包含了 SMTP、Dovecot、Roundcube Webmail、SpamAssassin 用于过滤、邮件 用于备份、fail2ban 用于入侵防御等。它的部署是在不阻塞出站流量的虚拟服务器上，如 DigitalOcean、Vultr、Linode。
+电子邮件服务器是一个涉及各个服务器组件的复杂怪兽。管理和组装许多组件可能花费更多的时间和精力。然而，最后有一些易于安装的合一电子邮件服务器解决方案。它包含了 `SMTP`、`Dovecot`、`Roundcube Webmail`、`SpamAssassin` 用于过滤、`邮件` 用于备份、`fail2ban` 用于入侵防御等。它的部署是在不阻塞出站流量的虚拟服务器上，如 `DigitalOcean`、`Vultr`、`Linode`。
 
-你不需要运行自己的电子邮件服务器来保护自己，因为许多公共电子邮件提供商都考虑了安全性。我们提到了 Discord。然后 ProtonMail 提供免费和付费的电子邮件服务。它托管在瑞士并提供端到端加密。服务器的一个重要功能是能够发送带有过期日的加密消息，就像 Snapchat 一样。你也可以向非 ProtonMail 用户发送带有过期日的加密消息。接收者将获得一个伙伴，可以提示他们如何通过或其他方式打开消息。
+你不需要运行自己的电子邮件服务器来保护自己，因为许多公共电子邮件提供商都考虑了安全性。我们提到了 Discord。然后 `ProtonMail` 提供免费和付费的电子邮件服务。它托管在瑞士并提供端到端加密。服务器的一个重要功能是能够发送带有过期日的加密消息，就像 Snapchat 一样。你也可以向非 `ProtonMail` 用户发送带有过期日的加密消息。接收者将获得一个伙伴，可以提示他们如何通过或其他方式打开消息。
 
-Openfire 服务器可以部署在 Windows、OS X 和包括 Debian、Ubuntu 和 Fedora 在内的 Linux 发行版。如果你想使用 DEB 部署服务器，你需要从本地仓库或官方仓库安装包。安装 Openfire 后，你可以通过运行在 9090 端口的 Web 界面远程配置和控制服务器。默认 Openfire 安装带有 20 个插件，这些插件增加了有用功能，并帮助它连接到网络上的服务，如 Aster PBX 或任何服务器。
+`Openfire` 服务器可以部署在 Windows、`OS X` 和包括 `Debian`、`Ubuntu` 和 `Fedora` 在内的 Linux 发行版。如果你想使用 DEB 部署服务器，你需要从本地仓库或官方仓库安装包。安装 `Openfire` 后，你可以通过运行在 9090 端口的 Web 界面远程配置和控制服务器。默认 `Openfire` 安装带有 20 个插件，这些插件增加了有用功能，并帮助它连接到网络上的服务，如 `Aster PBX` 或任何服务器。
 
 98 Linux Format 年刊 2020
 
-
-
-
-
 ## 逃离云
 
-控制台。为了增加安全性，你还可以通过选择提供的两种加密算法之一（Blowfish 和 AES）并指定密钥来对属性进行加密。
+控制台。为了增加安全性，你还可以通过选择提供的两种加密算法之一（`Blowfish` 和 `AES`）并指定密钥来对属性进行加密。
 
-在下一步中，你需要选择一个数据库来存储用户配置文件等信息。如果你在移动网络上部署 Openfire，请考虑使用不需要你设置外部服务器的本地 NoSQL 数据库。如果你正在为数百名用户提供服务，你应该选择连接到 MySQL 等外部数据库。在下一步之前，你需要选择一个获取用户身份验证的机制。如果你已经有一个用于管理用户的目录，可以使用 LDAP 为 Openfire 提供管理服务。在最后一步中，你需要为主管理员选择一个电子邮件地址，并提供在后续页面中管理界面的密码。你的 Openfire 服务器已准备好接受并处理网络内部的连接。
+在下一步中，你需要选择一个数据库来存储用户配置文件等信息。如果你在移动网络上部署 `Openfire`，请考虑使用不需要你设置外部服务器的本地 NoSQL 数据库。如果你正在为数百名用户提供服务，你应该选择连接到 `MySQL` 等外部数据库。在下一步之前，你需要选择一个获取用户身份验证的机制。如果你已经有一个用于管理用户的目录，可以使用 `LDAP` 为 `Openfire` 提供管理服务。在最后一步中，你需要为主管理员选择一个电子邮件地址，并提供在后续页面中管理界面的密码。你的 `Openfire` 服务器已准备好接受并处理网络内部的连接。
 
-如果你没有更改管理界面设置的端口，可以访问之前的相同地址来管理服务器。在配置向导内部，你将看到一个登录页面。输入你在配置向导最后一步中指定的用户名和密码以访问 Openfire 管理界面。一旦服务器启动，你就可以从计算机通过网络 IC 客户端连接到它。你可以使用其他多 IC 客户端（如 Pidgin）使用 Openfire。在登录凭据和服务器 IP 地址中，你需要确保客户端使用 XMPP 协议连接到 Openfire。为了获得完整的体验，你应该使用 Openfire Spark。
+如果你没有更改管理界面设置的端口，可以访问之前的相同地址来管理服务器。在配置向导内部，你将看到一个登录页面。输入你在配置向导最后一步中指定的用户名和密码以访问 `Openfire` 管理界面。一旦服务器启动，你就可以从计算机通过网络 IC 客户端连接到它。你可以使用其他多 IC 客户端（如 `Pidgin`）使用 `Openfire`。在登录凭据和服务器 IP 地址中，你需要确保客户端使用 `XMPP` 协议连接到 `Openfire`。为了获得完整的体验，你应该使用 `Openfire Spark`。
 
 # 妈妈看，没用手机了
 
-Tox 即时消息协议是对对开源、注重安全且去中心化平台的需求进行激烈讨论的结果。有两项技术对 Tox 至关重要：P2P 提供用户之间的直接连接，消除了对可能被攻击或崩溃的枢纽的需求。在 Tox 中，它使用对等节点网络而不是用户账户，并且允许更大的匿名性。此外，它们都是相互连接的。
+`Tox` 即时消息协议是对对开源、注重安全且去中心化平台的需求进行激烈讨论的结果。有两项技术对 `Tox` 至关重要：P2P 提供用户之间的直接连接，消除了对可能被攻击或崩溃的枢纽的需求。在 `Tox` 中，它使用对等节点网络而不是用户账户，并且允许更大的匿名性。此外，它们都是相互连接的。
 
-为了方便起见，你可以使用 ToxMe，这是一个将电子邮件地址样式映射到 Tox 的服务。
+为了方便起见，你可以使用 `ToxMe`，这是一个将电子邮件地址样式映射到 `Tox` 的服务。
 
-通过使用原生库，有应用程序可以使用该协议连接，其中最流行的之一是 Qtox，它支持多个平台。
+通过使用原生库，有应用程序可以使用该协议连接，其中最流行的之一是 `Qtox`，它支持多个平台。
 
-由于没有中央服务器，用户无需注册服务或账户即可注册并添加好友。Tox 网络中的每个用户都是字节字符串，这就是他们的 Tox ID。登录后，你可以通过两种方法添加新联系人：通过加密邮件等方式发送你的 Tox ID；或者如果你是 Tox 移动版的朋友，你可以向他们发送客户端生成的 QR 码。
+由于没有中央服务器，用户无需注册服务或账户即可注册并添加好友。`Tox` 网络中的每个用户都是字节字符串，这就是他们的 `Tox ID`。登录后，你可以通过两种方法添加新联系人：通过加密邮件等方式发送你的 `Tox ID`；或者如果你是 `Tox` 移动版的朋友，你可以向他们发送客户端生成的 QR 码。
 
-Tox 的用户界面类似于传统的 IC 客户端。一旦与朋友连接，你就可以像使用普通 IC 客户端一样交互。最棒的部分是你的对话没有通过中央服务器。Tox 聊天没有激活音视频通话的按钮。你还可以使用按钮创建聊天组并发送文件。
+`Tox` 的用户界面类似于传统的 IC 客户端。一旦与朋友连接，你就可以像使用普通 IC 客户端一样交互。最棒的部分是你的对话没有通过中央服务器。`Tox` 聊天没有激活音视频通话的按钮。你还可以使用按钮创建聊天组并发送文件。
 
-Qtox 使用直观，Tox 网站上的文档补充了 Tox 的特定要求。有一个 FAQ 可以帮助用户熟悉新的消息协议。Tox 协议涵盖了更广泛的平台。Linux、BSD 32 和 64 位、Windows 客户端，以及 Mac OS 的实验性版本。虽然 Tox 本身没有移动平台的构建，但你可以使用它连接到其他客户端。iOS 和 Android 有 Antidote。
+`Qtox` 使用直观，`Tox` 网站上的文档补充了 `Tox` 的特定要求。有一个 FAQ 可以帮助用户熟悉新的消息协议。`Tox` 协议涵盖了更广泛的平台。Linux、`BSD` 32 和 64 位、`Windows` 客户端，以及 Mac OS 的实验性版本。虽然 `Tox` 本身没有移动平台的构建，但你可以使用它连接到其他客户端。iOS 和 Android 有 `Antidote`。
 
-- 用户可以使用 ProtonMail 桥接，将 ProtonMail 与 Thunderbird 等任何桌面电子邮件客户端集成。
+- 用户可以使用 `ProtonMail` 桥接，将 `ProtonMail` 与 `Thunderbird` 等任何桌面电子邮件客户端集成。
 
 # 2020 年 Linux 格式年度
 
@@ -3263,35 +3148,31 @@ Qtox 使用直观，Tox 网站上的文档补充了 Tox 的特定要求。有一
 
 无论你托管什么，通过 HTTPS 提供网络服务总是一个好主意。
 
-为你的服务器获取 X.509 证书的过程曾是昂贵的，而且以前从未如此。Let's Encrypt 的出现使其通过自动化过程免费提供这些证书。
+为你的服务器获取 X.509 证书的过程曾是昂贵的，而且以前从未如此。`Let's Encrypt` 的出现使其通过自动化过程免费提供这些证书。
 
-Let's Encrypt 使用 ACME：自动证书管理环境协议，有几个兼容的客户端可以用于安装 TLS/SSL 证书。由电子基金会开发的 Certbot (https://certbot.org/) 是最流行的客户端，只需几个命令即可为服务器获取并安装证书。事实上，你甚至不需要依赖服务器。有很多对点 (P2P) 服务通过在你和朋友之间建立连接来工作。
+`Let's Encrypt` 使用 `ACME`：自动证书管理环境协议，有几个兼容的客户端可以用于安装 TLS/SSL 证书。由电子基金会开发的 `Certbot` (`https://certbot.org/`) 是最流行的客户端，只需几个命令即可为服务器获取并安装证书。事实上，你甚至不需要依赖服务器。有很多对点 (P2P) 服务通过在你和朋友之间建立连接来工作。
 
-除了电子邮件，社交网络是你每天使用得最广泛的服务之一。你可以用联邦社交网络或去中心化网络来代替它们。这些服务构建在区块链上，允许用户与 Mastodon 和 Friendica 等任何其他网络通信。因为它是与协议无关且不断扩展的，你不需要建立自己的服务器来保护你的数据免受落入他人。
+除了电子邮件，社交网络是你每天使用得最广泛的服务之一。你可以用联邦社交网络或去中心化网络来代替它们。这些服务构建在区块链上，允许用户与 `Mastodon` 和 `Friendica` 等任何其他网络通信。因为它是与协议无关且不断扩展的，你不需要建立自己的服务器来保护你的数据免受落入他人。
 
 ## 为什么要提供免费分发版？
 
-Trisquel/Linux 是 Free Foundation 推荐的从内核到桌面的发行版。作为普通用户，你可能会注意到基于 Ubuntu 的发行版删除了所有不符合 Ubuntu 指南的非自由包。但不仅仅是替换 Ubuntu。Trisquel 在在开发者取出非自由组件时也删除非自由软件，他们还确保这些软件留在免费版本中，这涉及到复杂且繁琐的工作。
+`Trisquel/Linux` 是 Free Foundation 推荐的从内核到桌面的发行版。作为普通用户，你可能会注意到基于 Ubuntu 的发行版删除了所有不符合 Ubuntu 指南的非自由包。但不仅仅是替换 Ubuntu。`Trisquel` 在在开发者取出非自由组件时也删除非自由软件，他们还确保这些软件留在免费版本中，这涉及到复杂且繁琐的工作。
 
-该项目的主要目标是通过使用其系统在后台自动连接地理位置等事项，来提高自由软件的易用性。除了捆绑软件外，Trisquel 在其自己的仓库中带有自由软件软件包，这些包都经过了审查和自定义，以移除任何非自由部分。
+该项目的主要目标是通过使用其系统在后台自动连接地理位置等事项，来提高自由软件的易用性。除了捆绑软件外，`Trisquel` 在其自己的仓库中带有自由软件软件包，这些包都经过了审查和自定义，以移除任何非自由部分。
 
 # 匿名共享
 
 看到许多人害怕互联网，但不信任 Dropbox 或 Google 等流行服务？这里有两种替代方案：一个方便又安全，而另一个是。
 
-第一个是 OnionShare，它通过 Tor 网络传输文件。你只需获取并安装 OnionShare 客户端，然后添加你想要共享的文件。程序将生成一个 onion URL，你可以将其传递给另一端不需要 OnionShare 的人。他们必须使用 Tor 浏览器打开该 URL。
+第一个是 `OnionShare`，它通过 `Tor` 网络传输文件。你只需获取并安装 `OnionShare` 客户端，然后添加你想要共享的文件。程序将生成一个 onion URL，你可以将其传递给另一端不需要 `OnionShare` 的人。他们必须使用 `Tor` 浏览器打开该 URL。
 
-如果你喜欢那个，还可以使用用 Python 编写的 Wormhole (https://github.com/varner/wormhole)。它是一个你可以通过简单的 wormhole 在任何发行版上使用的库。一旦安装，
+如果你喜欢那个，还可以使用用 Python 编写的 `Wormhole` (`https://github.com/varner/wormhole`)。它是一个你可以通过简单的 wormhole 在任何发行版上使用的库。一旦安装，
 
 ## 逃离云
 
-为了让 Sync 能够与另一个设备同步文件，它必须通过交换设备 ID（或通过 Sync 应用扫描其 QR 码）与设备进行配对，这些设备使用加密安全的标识符。由于所有 Sync 设备都会创建一个具有相同文件夹的默认同步目录，它们将拥有图表的副本。你可以添加更多设备并选择你想要共享的计算机。
+为了让 `Sync` 能够与另一个设备同步文件，它必须通过交换设备 ID（或通过 `Sync` 应用扫描其 QR 码）与设备进行配对，这些设备使用加密安全的标识符。由于所有 `Sync` 设备都会创建一个具有相同文件夹的默认同步目录，它们将拥有图表的副本。你可以添加更多设备并选择你想要共享的计算机。
 
-在共享时，当远程计算机上的文件更改时，使用 Sync 会更改原始计算机上的文件。
-
-
-
-
+在共享时，当远程计算机上的文件更改时，使用 `Sync` 会更改原始计算机上的文件。
 
 # 2020 Linux 论坛年度
 
@@ -3303,15 +3184,15 @@ Linux Towers 的驻场教授 Jonny Bidwell 深清楚你喜爱自托管的 LAMP �
 
 ![](img/b82853b6232162a20e963fd53f1b434b_101_0.png)
 
-Nextcloud 是一个开源的、自托管的存储、共享与协作平台，它让逃离专有云服务变得非常美好，几乎就像我们建议的那样：非常美好。Nextcloud（owncloud 的一个开放分支，我们在 LP25 中介绍过它）可以很好地替代 Dropbox 或 Google Drive，但它的功能远不止于此。
+`Nextcloud` 是一个开源的、自托管的存储、共享与协作平台，它让逃离专有云服务变得非常美好，几乎就像我们建议的那样：非常美好。`Nextcloud`（`owncloud` 的一个开放分支，我们在 LP25 中介绍过它）可以很好地替代 Dropbox 或 Google Drive，但它的功能远不止于此。
 
-特别得益于 Colabora Online，它可以托管并显示使用免费、自托管 Office 服务器创建的文档和电子表格。Nextcloud 也可以运行在远程服务器上——无论哪种方式，项目都是一样的。不过，你可以利用网络路由器和接口创建一个家庭实例，使其供外界访问。而且通过 URL 也可以轻松访问免费服务。
+特别得益于 `Colabora Online`，它可以托管并显示使用免费、自托管 Office 服务器创建的文档和电子表格。`Nextcloud` 也可以运行在远程服务器上——无论哪种方式，项目都是一样的。不过，你可以利用网络路由器和接口创建一个家庭实例，使其供外界访问。而且通过 URL 也可以轻松访问免费服务。
 
-运行自己的服务是一种赋权，而且方法也很简单，但这里应该执行常规的规范。如果 Nextcloud 发现了漏洞，它可能会很快被修补。然而，更新你的实例取决于你个人。
+运行自己的服务是一种赋权，而且方法也很简单，但这里应该执行常规的规范。如果 `Nextcloud` 发现了漏洞，它可能会很快被修补。然而，更新你的实例取决于你个人。
 
-有解决方案可以实现它自动更新，例如官方的 Nextcloud VM（我们在 https://nextcloud.com/nextcloud-vm 中提到过它）。通常情况下，发行版中提供了 Nextcloud 软件包，但现在应用是直接从提供商安装的，这可能存在风险。
+有解决方案可以实现它自动更新，例如官方的 `Nextcloud VM`（我们在 `https://nextcloud.com/nextcloud-vm` 中提到过它）。通常情况下，发行版中提供了 `Nextcloud` 软件包，但现在应用是直接从提供商安装的，这可能存在风险。
 
-幸运的是，Nextcloud 有一个可以通过 Web 界面使用的机制。只需以管理员身份登录并返回设置窗口。你会收到可用更新的提醒，我们建议至少每月检查一次。
+幸运的是，`Nextcloud` 有一个可以通过 Web 界面使用的机制。只需以管理员身份登录并返回设置窗口。你会收到可用更新的提醒，我们建议至少每月检查一次。
 
 ![](img/b82853b6232162a20e963fd53f1b434b_101_1.png)
 
@@ -3327,6 +3208,8 @@ Nextcloud 是一个开源的、自托管的存储、共享与协作平台，它�
 - 管理
 - 共享
 - 监控
+
+
 
 保持 Nextcloud 更新非常重要，特别是如果你运行的是面向云的实例。这个界面让操作变得简单。
 
@@ -3345,6 +3228,7 @@ $ sudo apt install mariadb-server libapache2-mod-php70
 最后一个是 Apache 的 PHP 模块，它告诉 PHP 解释本教程中的脚本。我们将使用官方 PHP 软件包和 PHP 服务器。由于我们要手动安装 Nextcloud，不受包管理器的控制，我们还必须安装所需的 PHP 模块。这些模块相当多，因此你可能希望从官方文档 https://docs.nextcloud.com 查看并复制。
 
 > 我们的经验
+>
 > Jonny Bidwell 曾被吸血鬼咬过。在随后的混乱中，他邀请了 Linux 新闻业的未来，结果文章因加密货币拍卖而延迟了。最好不要……
 
 ## 快速提示
@@ -3355,18 +3239,16 @@ DNS 和 SSL 证书的设置非常简单，我们无法把指令全部写在这�
 
 Nextcloud 需要 LAMP/LEMP 栈才能运行，因此我们先设置它。如果你是初学者，请参阅 https://nextcloud.com/docs/installation.html 中的手册。
 
-
-
-
-
 # Linux Format 2020
 
 接下来我们将获取 PGP 签名并进行验证：
-* wget https://nextcloud.com/server/releases/nextcloud-13.0.4.tar.bz2
-* gpg verify nextcloud-13.0.4.tar.bz2.asc
+
+* `wget https://nextcloud.com/server/releases/nextcloud-13.0.4.tar.bz2`
+* `gpg verify nextcloud-13.0.4.tar.bz2.asc`
 
 如果你看到一行以 `pg: Good signature from "Nextcloud Security" <security@nextcloud.com>` 开头的文字，那么你就可以松口气了。这说明我们下载的公钥确实来自 Nextcloud 且未被篡改。为了确保万无一，如果你收到（或看到）LXF223-224，请信任 John Lane 的签名：请合理确保它确实是 Nextcloud 的真实签名：
-* tar -xvf nextcloud-13.0.4.tar.bz2
+
+* `tar -xvf nextcloud-13.0.4.tar.bz2`
 
 这会将所有内容解压到 `nextcloud/` 目录，除非你已经领先了一步，正处于目标机器的家目录中。我们需要 Web 服务器能够看到 Nextcloud 文件，因此让它们移动到 Apache 的文档根目录并适当更改所有权：
 
@@ -3389,23 +3271,23 @@ sudo nano /etc/apache2/sites-available/nextcloud.conf
 
 ![](img/b82853b6232162a20e963fd53f1b434b_103_0.png)
 
-## 1 选择管理员凭据
+### 1 选择管理员凭据
 
 首先为管理员账户输入用户名和密码。该账户对 Nextcloud 的所有内部机制具有绝对控制权，因此我们创建一个通用用户。还剩下三步：请配置我们之前设置的数据库详细信息（数据库、用户、密码：`nextcloudpassword`）。服务器可以保持为 `localhost`：
 
 ![](img/b82853b6232162a20e963fd53f1b434b_103_1.png)
 
-## 2 可选应用
+### 2 可选应用
 
 等待后，你最终会看到欢迎界面。这会将你引导至桌面、Android（由于 Nextcloud 现在是免费的）和 iOS 应用，并将你的桌面日历、联系人和文件与你的 Nextcloud 集成。在此阶段你不需要进行这些任何操作；现在不做呢？
 
 ![](img/b82853b6232162a20e963fd53f1b434b_103_2.png)
 
-## 3 默认用户
+### 3 默认用户
 
 默认文件已安装。已安装的应用（最初仅安装 Activity 和 Gallery）通过左上角的图标访问。查看“文档”和“照片”文件夹，可以看到导航和预览的工作情况。头像出现在右上角的菜单中，可以在那里配置应用、设置和用户。
 
-## 4 创建新用户
+### 4 创建新用户
 
 要添加新用户，请使用上述名称并选择。然后只需在框中输入用户名和密码并创建。你可以添加组（默认只存在 admin 组），并添加用户，以及控制他们的存储配额或直接删除账户。我们可以安全地退出管理员账户。
 
@@ -3434,13 +3316,18 @@ SetEnv HTTP_VAR /var/www/nextcloud
 ```
 
 - 现在启用新定义的站点：
-sudo a2enite nextcloud
-sudo a2enmod
-sudo a2mod env
-sudo a2enmod dir
+
+`sudo a2enite nextcloud`
+
+`sudo a2enmod`
+
+`sudo a2mod env`
+
+`sudo a2enmod dir`
 
 你会看到一条消息，提示重加载 Apache 使更改生效，但在之前我们启用额外的 Apache 模块以便 Nextcloud 能够完成...
-sudo systemctl restart apache
+
+`sudo systemctl restart apache`
 
 最后三个在全新的 Debian 安装中是默认启用的，但检查它们并没有坏处。你需要重启 Apache 服务器。在此阶段，Nextcloud 正在通过其 IP 地址工作。你现在可以连接它，例如在本地机器的浏览器上访问 `http://192.168.1.100/`。希望 Nextcloud 安装顺利。在 `nextcloud` 目录中，检查 MariaDB 是否运行（`sudo systemctl mysql`）并双重检查所需包是否已安装。将服务器的 IP 地址添加到你想访问的机器的 `/hosts` 文件中。你可以通过添加以下行来实现：192.168.1.100
 
@@ -3449,11 +3336,13 @@ sudo systemctl restart apache
 ## 最后调整
 
 在继续之前，有几件事需要配置。首先，没有人喜欢长 URL，所以我们可以使用 Nextcloud 重写。编辑（或覆盖）`/nextcloud/config/config.php`，在最后一行之前添加（如果你有主机名），该命令直到我们运行维护脚本之前生效：
+
 ```
 sudo -u www-data php /var/www/nextcloud/occ maintenance:update
 ```
 
 注意我们在上述步骤使用了 `https` 而不是 `http`。启用（并强制）加密是一个好主意，因为敏感数据可能会被窃听，我们需要处理：
+
 ```
 sudo a2enmod ssl
 sudo systemctl restart apache
@@ -3489,7 +3378,7 @@ Nextcloud 可以通过不断增长的应用选择进行扩展，你可以以管�
 
 # 终端：LSHELL
 
-# 限制用户对你个人发行版的访问
+## 限制用户对你个人发行版的访问
 
 担心用户通过无限制的访问搞乱你的系统吗？**Shashank Sharma** 使用 lshell 来限制他们的使用。
 
@@ -3518,10 +3407,10 @@ Shashank Sharma 是德里的一位律师，也是热爱的 Linux 用户。他总
 
 确定默认 shell。你可以使用 `chsh -s /usr/bin/lshell` 更改用户的 shell。
 
-- [global] - 全局范围设置，例如日志记录。
-- [default] - 适用于所有用户和组的设置。
-- [username] - 仅适用于特定用户的中心化设置。
-- [groupname] - 适用于组及其所有成员设置。
+- `[global]` - 全局范围设置，例如日志记录。
+- `[default]` - 适用于所有用户和组的设置。
+- `[username]` - 仅适用于特定用户的中心化设置。
+- `[groupname]` - 适用于组及其所有成员设置。
 
 ## 配置 lshell
 
@@ -3531,10 +3420,10 @@ Shashank Sharma 是德里的一位律师，也是热爱的 Linux 用户。他总
 
 | 字段 | 描述 |
 |---|---|
-| [global] | 全局范围设置，例如日志记录。 |
-| [default] | 适用于所有用户和组的设置 |
-| [username] | 仅适用于特定用户的中心化设置 |
-| [groupname] | 适用于组及其所有成员设置 |
+| `[global]` | 全局范围设置，例如日志记录。 |
+| `[default]` | 适用于所有用户和组的设置 |
+| `[username]` | 仅适用于特定用户的中心化设置 |
+| `[groupname]` | 适用于组及其所有成员设置 |
 
 配置的优先级是：用户 > 组 > 默认。这意味着 lshell 首先查找用户设置并应用其中提供的设置，然后是组和默认设置。在冲突的情况下，用户名设置将覆盖组设置。
 
@@ -3556,9 +3445,6 @@ $ 禁止命令: name
 
 用户只能运行受限于所有路径和命令列表的 lshell 命令
 
-
-
-
 loglevel 取值。它接受从 0 到 4 的设置，其中 0 表示不记录日志，而 4 会记录用户输入的每一个命令。
 
 默认情况下，该工具使用 syslog 记录日志，但也支持自定义格式。例如，如果你使用 ver logs，请将 /etc/syslog.conf 中的 logname 替换为 logname-suffix。
@@ -3569,7 +3455,6 @@ allowed 选项用于提供所有允许运行的命令列表。如果你想让用
 
 - allowed: ['all', ['var/*','cd','cp','mv']]
 - forbidden: ['/var/*','/usr/local/*']
-
 - [user]
 - allowed: ['+pwd','ping','cp']
 - forbidden: ['+etc']
@@ -3608,13 +3493,14 @@ set shell=/bin/bash
 现在用户可以恢复全功能的 bash，而不是只有最基本命令且容易逃逸的 bash Raspberry。这种技术也适用于 shell 本身，但仅当你在允许列表中使用它时。使用简短的允许命令列表效果更好，即允许所有并阻止访问少数几个。
 
 > 小贴士
-当使用文本编辑器时没有自动将 /usr/bin/ 添加到 shell/ /etc/shells 文件时，请确保在文件末尾留有一个换行符。
+>
+> 当使用文本编辑器时没有自动将 /usr/bin/ 添加到 shell/ /etc/shells 文件时，请确保在文件末尾留有一个换行符。
 
 # 2020 Linux 格式年度报告
 
 # 安全
 
-# 保持你的桌面安全可靠
+## 保持你的桌面安全可靠
 
 Linux 本身可以阻止大多数攻击，但 Mayank Sharma 可以随时帮助你为计算机周围建立一个 10 级强力力场……
 
@@ -3623,6 +3509,8 @@ Mayank Sharma 是一位技术作家，他花费大量时间玩与其他不同的
 运行 Linux仅仅是因为你认为它比 Windows 好？重新想一下。Linux 的安全性是直接从内核到桌面的内置功能，但它仍然留下了让别人知道你的 /Home 文件夹的空间。Linux 对为 Windows 编写的病毒和蠕虫免疫，但攻击者还有其他技巧可以非法访问你珍贵的比特和字节，这可能会让一切变得相等发送给你信用卡的邮件。
 
 用用户名和密码锁定数据应该是你唯一的防线，它无法挡住坚定的攻击者。随着攻击数量和种类的日益增加，你应该花精力采取额外措施来完全保护你的计算机。
+
+
 
 所有主流 Linux 发行版（如 Debian、Ubuntu 和 Fedora）都与软件包配合，确保你跟上任何安全漏洞。它们还相互协作，确保在发现漏洞时能够尽快提供安全补丁。
 
@@ -3636,21 +3524,21 @@ Mayank Sharma 是一位技术作家，他花费大量时间玩与其他不同的
 
 在像 Linux 这样的多用户系统上，使用用户名和密码锁定数据应该是你唯一的防线，它无法挡住坚定的攻击者。
 
-赋予 root 权限。                                             允许用户在通过 SSH 连接时运行的命令。另一方面，符号 - 用于限制用户在通过 SSH 连接时运行 sc 命令。
+赋予 root 权限。允许用户在通过 SSH 连接时运行的命令。另一方面，符号 `-` 用于限制用户在通过 SSH 连接时运行 sc 命令。
 
-如之前，我们使用 over 选项描述了 Default 部分中允许用户 inumala 运行的额外命令。另一方面，符号 - 用于限制用户在通过 SSH 连接时运行或 sc 命令。
+如之前，我们使用 over 选项描述了 Default 部分中允许用户 inumala 运行的额外命令。另一方面，符号 `-` 用于限制用户在通过 SSH 连接时运行或 sc 命令。
 
-# 绕过受限 shell (RESTRICTED SHELL)
+## 绕过受限 shell (RESTRICTED SHELL)
 
 它们本身，Bash、Ksh 和 Zsh 都都具有一个受限 shell。如果你的 Linux 发行版中将 bash 定义为你的 shell，你可能已经安装了 bash。受限 shell bash 具有每种有限的能力。
 
 如果你安装了 bash，可以将其作为终端、受限 shell 来运行。
 
-你可以通过在终端上运行 bash 来启动受限 bash。要将其设置为默认 shell，而不是更改 shell，请设置 PATH 或 SHELL 变量：
+你可以通过在终端上运行 bash 来启动受限 bash。要将其设置为默认 shell，而不是更改 shell，请设置 `PATH` 或 `SHELL` 变量：
 
-当运行受限 shell 时，用户不允许运行 PATH 或 SHELL 变量以外的命令，重定向输出到：
+当运行受限 shell 时，用户不允许运行 `PATH` 或 `SHELL` 变量以外的命令，重定向输出到：
 
-使用受限 bash 的缺点是用户可以使用它。例如，如果 /bin/ 在 PATH 中，用户可以使用 bash 逃逸受限 shell，然后运行完整版本的
+使用受限 bash 的缺点是用户可以使用它。例如，如果 `/bin/` 在 `PATH` 中，用户可以使用 bash 逃逸受限 shell，然后运行完整版本的
 
 ```
 adina@raspberry-budget:~$
@@ -3660,7 +3548,8 @@ set shell=/bin/bash
 现在用户可以恢复全功能的 bash，而不是只有最基本命令且容易逃逸的 bash Raspberry。这种技术也适用于 shell 本身，但仅当你在允许列表中使用它时。使用简短的允许命令列表效果更好，即允许所有并阻止访问少数几个。
 
 > 小贴士
-当使用文本编辑器时没有自动将 /usr/bin/ 添加到 shell/ /etc/shells 文件时，请确保在文件末尾留有一个换行符。
+
+当使用文本编辑器时没有自动将 `/usr/bin/` 添加到 shell/ `/etc/shells` 文件时，请确保在文件末尾留有一个换行符。
 
 # 2020 Linux 格式年度报告
 
@@ -3672,7 +3561,7 @@ Linux 本身可以阻止大多数攻击，但 Mayank Sharma 可以随时帮助�
 
 Mayank Sharma 是一位技术作家，他花费大量时间玩与其他不同的 Linux 游戏。
 
-运行 Linux仅仅是因为你认为它比 Windows 好？重新想一下。Linux 的安全性是直接从内核到桌面的内置功能，但它仍然留下了让别人知道你的 /Home 文件夹的空间。Linux 对为 Windows 编写的病毒和蠕虫免疫，但攻击者还有其他技巧可以非法访问你珍贵的比特和字节，这可能会让一切变得相等发送给你信用卡的邮件。
+运行 Linux 仅仅是因为你认为它比 Windows 好？重新想一下。Linux 的安全性是直接从内核到桌面的内置功能，但它仍然留下了让别人知道你的 `/Home` 文件夹的空间。Linux 对为 Windows 编写的病毒和蠕虫免疫，但攻击者还有其他技巧可以非法访问你珍贵的比特和字节，这可能会让一切变得相等发送给你信用卡的邮件。
 
 用用户名和密码锁定数据应该是你唯一的防线，它无法挡住坚定的攻击者。随着攻击数量和种类的日益增加，你应该花精力采取额外措施来完全保护你的计算机。
 
@@ -3688,14 +3577,12 @@ Mayank Sharma 是一位技术作家，他花费大量时间玩与其他不同的
 
 在像 Linux 这样的多用户系统上，使用用户名和密码锁定数据应该是你唯一的防线，它无法挡住坚定的攻击者。
 
-
-
-
-# Linux  2020
+# Linux 2020
 
 关联宇宙。然而，它将阻止其直接修改 `/etc/shadow` 文件。`/etc/shadow` 文件包含了密码以及其他信息，例如账户密码过期值。该文件的所有者是 `root` 组，已设置为 shadow。在您系统的 shadow 文件上，感知 PAM 的应用程序或其他常见的 Linux 库会使用 PAM。PAM 可能会允许。
 
 > 快速提示
+>
 > **使用 change 命令获取有关用户账户的详细信息，包括账户过期日期和上次更改密码的时间。**
 
 尽管如此，仍然没有需要执行的密码更改操作。您也可以使用 PAM 在 `/etc/pam.d/` 目录中选择和存储配置文件。这里有一个适用于所有请求 PAM 认证的程序的配置文件。当你查看这些文件的内部进行内容时，你会看到几行调用其他模块以提供通用信息的代码。例如，`/etc/pam/passwd` 文件。这些通用配置文件应该单独修改。
@@ -3711,9 +3598,13 @@ Mayank Sharma 是一位技术作家，他花费大量时间玩与其他不同的
 为了跟踪 PAM，使用该库编写了各个认证模块。命令 `/usr/bin/passwd -l | grep /` 显示了所有：
 
 - passwd [success=default-ignore] pam_unix
+
 shadow-sha5
+
 - passwd requisite pam_denys
+
 - passwd required
+
 - passwd optional pam_crypt_lockout
 
 我们感兴趣的是 PAM 规则定义在某些文件中的事实。某些规则定义了如何使用 SHAS2 对密码进行加密。抽象参数允许根据使用的不同字符类型的数量设置复杂度。
@@ -3781,14 +3672,11 @@ UFW 有一个名为 Gufw 的图形用户界面。Gufw 让管理 iptables 的痛�
 
 在设置好入站和出站策略后，您可以为单个程序和服务定义特定规则。创建规则，在扩展部分后点击 Add 按钮。这打开了一个带有三个标签页的窗口，允许以不同方式创建规则。Preconfigured 标签页允许您选择特定程序或服务的预制规则，而其他标签页允许您为特定端口定义规则。我们建议用户使用 Preconfigured 标签页通过下拉菜单控制流量，Gufw 会自动定义有效规则。根据安全需要，您应该选择性地添加您使用的程序和服务的规则，例如网络浏览器、即时
 
-
-
-
-
 # 2020年 Linux 格式年度
 
 # MUNIN 与 MONIT
- 监控高级用户和管理员
+
+监控高级用户和管理员
 
 Mihalis Tsoukalos 为你解释了开始使用 Munin 和 Monit 监控你的 Linux 服务器时需要了解的知识。
 
@@ -3837,9 +3725,13 @@ Munin 服务会生成关于 Linux 机器运行情况的精美且信息丰富的�
 ```bash
 munin config --help
 ```
+
 你调用了一个无法识别的名称。你并不打算使用它，但也可能是拼写错误。请检查你的类型。更多帮助请查看 [Munin]
+
 用法：munin [option] [file]
+
 --option [value]
+
 --format [type]
 
 ```bash
@@ -3859,24 +3751,24 @@ asterisk_chamchannels
 
 ## Munin 工具
 
-Munin 带有许多工具——其中一些在 /usr/bin，另一些在 /usr/sbin：
+Munin 带有许多工具——其中一些在 `/usr/bin`，另一些在 `/usr/sbin`：
 
 ```bash
 $ cd /usr/bin; ls munin-check munin-cron
 $ cd /usr/sbin/; ls munin*
 ```
 
-munin-check 工具用于修复 munin 文件，而 munin-cron 工具由 cron 进程执行。munind 工具是 Munin 的文档。新闻是 munind 支持插件的配置，在 bash 提示符处按下键：--help 显示 munind 命令的各种输出功能。
+`munin-check` 工具用于修复 munin 文件，而 `munin-cron` 工具由 cron 进程执行。`munind` 工具是 Munin 的文档。新闻是 munind 支持插件的配置，在 bash 提示符处按下键：--help 显示 munind 命令的各种输出功能。
 
-Munin 从运行 munin 的机器收集数据，可以在 /usr/share/munin/munin-update 找到
+Munin 从运行 munin 的机器收集数据，可以在 `/usr/share/munin/munin-update` 找到
 
 ## 配置 Munin
 
-Munin 需要在 /etc 中配置文件并修改 munin 配置文件，这将在下一部分加载。本部分关于配置 Munin 以收集你想要的数据。munin.conf 文件可能是你为了让 Munin 运行而需要修改的文件。
+Munin 需要在 `/etc` 中配置文件并修改 munin 配置文件，这将在下一部分加载。本部分关于配置 Munin 以收集你想要的数据。`munin.conf` 文件可能是你为了让 Munin 运行而需要修改的文件。
 
-Munin 支持插件——可以通过查看 /usr/share/munin/plugins 目录找到所有可用 Munin 插件列表。此外，你可以通过列出 /etc/munin/ 的内容找到许多插件。
+Munin 支持插件——可以通过查看 `/usr/share/munin/plugins` 目录找到所有可用 Munin 插件列表。此外，你可以通过列出 `/etc/munin/` 的内容找到许多插件。
 
-我们将修改 /etc/munin/munin.conf 以适应变量值，这使得 munin.conf 比预期的要短。具体来说，etc/munin/munin.conf 如下：
+我们将修改 `/etc/munin/munin.conf` 以适应变量值，这使得 munin.conf 比预期的要短。具体来说，etc/munin/munin.conf 如下：
 
 ```bash
 $ cat /etc/munin/munin.conf
@@ -3885,7 +3777,7 @@ address 127.0.0.1
 use_name = yes
 ```
 
-之后，munin-configure 命令将返回 Munin 插件列表，启用取决于你想监控的 munin 系统：命令的输出如下：
+之后，`munin-configure` 命令将返回 Munin 插件列表，启用取决于你想监控的 munin 系统：命令的输出如下：
 
 | 插件 | 建议 | 进程 |
 | :--- | :--- | :--- |
@@ -3893,12 +3785,18 @@ use_name = yes
 | apache_volume | no | yes |
 | cpu | yes | yes |
 | disk | no | yes |
+
+
+
 | forks | no | yes |
+
 | postfix_mysql | not found | yes |
+
 | quantum | no | yes |
+
 | volatile | no | yes |
 
-图 3：要查看此内容，请选择 Munin进程并向下滚动到图表。
+图 3：要查看此内容，请选择 Munin 进程并向下滚动到图表。
 
 ## 提示
 
@@ -3906,14 +3804,15 @@ use_name = yes
 
 ## 日志文件
 
-如果 Munin 或 Monit 有问题，请检查它们的日志文件。Munin 的日志文件位于 /var/log/munin/。Monitor 日志位于 /var/log/monitor/。使用 tail 命令扫描 Munin 日志。/var/log/munin/munin.log 中的每条目都会帮助你了解更多关于 Munin 的状态：
+如果 Munin 或 Monit 有问题，请检查它们的日志文件。Munin 的日志文件位于 `/var/log/munin/`。Monitor 日志位于 `/var/log/monitor/`。使用 `tail` 命令扫描 Munin 日志。`/var/log/munin/munin.log` 中的每条目都会帮助你了解更多关于 Munin 的状态：
 
 2018-08-01 12:05:00 [INFO] Munin-update failed (4.2 sec)
+
 2018-08-01 12:05:05 [ERROR] Munin-update
 
-要查看如何使用 munin-update，获取并进入 munin-update.log 内容。这将验证 Munin 及其 Web 界面正在工作：[EEST Aug 10:45:49] info: Munin 5.2.1 with http interface at 127.0.0.1:2882 [EEST Aug 10:45:49] info: 'ubuntu' Munin 5.2.1 started
+要查看如何使用 `munin-update`，获取并进入 `munin-update.log` 内容。这将验证 Munin 及其 Web 界面正在工作：[EEST Aug 10:45:49] info: Munin 5.2.1 with http interface at 127.0.0.1:2882 [EEST Aug 10:45:49] info: 'ubuntu' Munin 5.2.1 started
 
-现在，你必须重启 Munin 以使更改生效。Munin 将开始监控这些 Apache 属性，这可以通过 service apache2 status 的输出进行验证。你需要等一会儿，让 Munin 更新并包含关于这些 Apache 属性的信息。
+现在，你必须重启 Munin 以使更改生效。Munin 将开始监控这些 Apache 属性，这可以通过 `service apache2 status` 的输出进行验证。你需要等一会儿，让 Munin 更新并包含关于这些 Apache 属性的信息。
 
 # 快速贴士
 
@@ -3921,14 +3820,17 @@ use_name = yes
 
 ## 为 Munin 配置 Apache
 
-为了在网页浏览器中查看 Munin 的状态，你需要在网络上的虚拟主机上安装 Apache。此外，你必须启用该模块。如果尚未启用，可以通过执行 `apache2ctl -M` 检查 Apache 模块。如果未启用，可以通过执行 `a2enmod` 启用它——该模块可以在 libapache2-mod 包中找到。
+为了在网页浏览器中查看 Munin 的状态，你需要在网络上的虚拟主机上安装 Apache。此外，你必须启用该模块。如果尚未启用，可以通过执行 `apache2ctl -M` 检查 Apache 模块。如果未启用，可以通过执行 `a2enmod` 启用它——该模块可以在 `libapache2-mod` 包中找到。
 
-Munin 配置 Apache 非常简单，因为 Munin 使用位于 /etc/munin/apache24.conf 的 Apache 配置文件。因此，你需要执行以下命令：
+Munin 配置 Apache 非常简单，因为 Munin 使用位于 `/etc/munin/apache24.conf` 的 Apache 配置文件。因此，你需要执行以下命令：
+
 - `cp /etc/apache2/sites-available/apache24.conf /etc/apache2/sites-enabled/`
+
 - `a2ensite apache2.conf`
+
 - `systemctl restart apache2`
 
-请注意，上述过程创建了 /etc/munin/apache24.conf 的新副本，并保留原始版本的 /etc/munin/apache24.conf，以便如果你监控不同的 Web 服务器，你需要按照不同的流程为 Munin 的输出添加 Web 服务器支持。
+请注意，上述过程创建了 `/etc/munin/apache24.conf` 的新副本，并保留原始版本的 `/etc/munin/apache24.conf`，以便如果你监控不同的 Web 服务器，你需要按照不同的流程为 Munin 的输出添加 Web 服务器支持。
 
 图 2 显示了 Munin 站点的默认输出，可以通过 http:/// 访问
 
@@ -3941,30 +3843,28 @@ set status=/var/lib/munin/status
 
 图 4 显示了 Munin 站点的默认输出，可以通过 http:/// 访问
 
-Munin 从运行 munin 的机器收集数据，可以在 /usr/share/munin/munin-update 找到
-
-（注：此处原文内容存在大量重复，已按要求完整翻译）
+Munin 从运行 munin 的机器收集数据，可以在 `/usr/share/munin/munin-update` 找到
 
 ## Munin 工具
 
-Munin 带有许多工具——其中一些在 /usr/bin，另一些在 /usr/sbin：
+Munin 带有许多工具——其中一些在 `/usr/bin`，另一些在 `/usr/sbin`：
 
 ```bash
 $ cd /usr/bin; ls munin-check munin-cron
 $ cd /usr/sbin/; ls munin*
 ```
 
-munin-check 工具用于修复 munin 文件，而 munin-cron 工具由 cron 进程执行。munind 工具是 Munin 的文档。新闻是 munind 支持插件的配置，在 bash 提示符处按下键：--help 显示 munind 命令的各种输出功能。
+`munin-check` 工具用于修复 munin 文件，而 `munin-cron` 工具由 `cron` 进程执行。`munind` 工具是 Munin 的文档。新闻是 `munind` 支持插件的配置，在 bash 提示符处按下键：`--help` 显示 `munind` 命令的各种输出功能。
 
-Munin 从运行 munin 的机器收集数据，可以在 /usr/share/munin/munin-update 找到
+Munin 从运行 munin 的机器收集数据，可以在 `/usr/share/munin/munin-update` 找到
 
 ## 配置 Munin
 
-Munin 需要在 /etc 中配置文件并修改 munin 配置文件，这将在下一部分加载。本部分关于配置 Munin 以收集你想要的数据。munin.conf 文件可能是你为了让 Munin 运行而需要修改的文件。
+Munin 需要在 `/etc` 中配置文件并修改 munin 配置文件，这将在下一部分加载。本部分关于配置 Munin 以收集你想要的数据。`munin.conf` 文件可能是你为了让 Munin 运行而需要修改的文件。
 
-Munin 支持插件——可以通过查看 /usr/share/munin/plugins 目录找到所有可用 Munin 插件列表。此外，你可以通过列出 /etc/munin/ 的内容找到许多插件。
+Munin 支持插件——可以通过查看 `/usr/share/munin/plugins` 目录找到所有可用 Munin 插件列表。此外，你可以通过列出 `/etc/munin/` 的内容找到许多插件。
 
-我们将修改 /etc/munin/munin.conf 以适应变量值，这使得 munin.conf 比预期的要短。具体来说，etc/munin/munin.conf 如下：
+我们将修改 `/etc/munin/munin.conf` 以适应变量值，这使得 `munin.conf` 比预期的要短。具体来说，`etc/munin/munin.conf` 如下：
 
 ```bash
 $ cat /etc/munin/munin.conf
@@ -3973,20 +3873,29 @@ address 127.0.0.1
 use_name = yes
 ```
 
-之后，munin-configure 命令将返回 Munin 插件列表，启用取决于你想监控的 munin 系统：命令的输出如下：
+之后，`munin-configure` 命令将返回 Munin 插件列表，启用取决于你想监控的 munin 系统：命令的输出如下：
 
 | 插件 | 建议 | 进程 |
+
 | :--- | :--- | :--- |
+
 | apache_access | no | yes |
+
 | apache_volume | no | yes |
+
 | cpu | yes | yes |
+
 | disk | no | yes |
+
 | forks | no | yes |
+
 | postfix_mysql | not found | yes |
+
 | quantum | no | yes |
+
 | volatile | no | yes |
 
-图 3：要查看此内容，请选择 Munin进程并向下滚动到图表。
+图 3：要查看此内容，请选择 Munin 进程并向下滚动到图表。
 
 ## 提示
 
@@ -3994,14 +3903,15 @@ use_name = yes
 
 ## 日志文件
 
-如果 Munin 或 Monit 有问题，请检查它们的日志文件。Munin 的日志文件位于 /var/log/munin/。Monitor 日志位于 /var/log/monitor/。使用 tail 命令扫描 Munin 日志。/var/log/munin/munin.log 中的每条目都会帮助你了解更多关于 Munin 的状态：
+如果 Munin 或 Monit 有问题，请检查它们的日志文件。Munin 的日志文件位于 `/var/log/munin/`。Monitor 日志位于 `/var/log/monitor/`。使用 `tail` 命令扫描 Munin 日志。`/var/log/munin/munin.log` 中的每条目都会帮助你了解更多关于 Munin 的状态：
 
 2018-08-01 12:05:00 [INFO] Munin-update failed (4.2 sec)
+
 2018-08-01 12:05:05 [ERROR] Munin-update
 
-要查看如何使用 munin-update，获取并进入 munin-update.log 内容。这将验证 Munin 及其 Web 界面正在工作：[EEST Aug 10:45:49] info: Munin 5.2.1 with http interface at 127.0.0.1:2882 [EEST Aug 10:45:49] info: 'ubuntu' Munin 5.2.1 started
+要查看如何使用 `munin-update`，获取并进入 `munin-update.log` 内容。这将验证 Munin 及其 Web 界面正在工作：[EEST Aug 10:45:49] info: Munin 5.2.1 with http interface at 127.0.0.1:2882 [EEST Aug 10:45:49] info: 'ubuntu' Munin 5.2.1 started
 
-现在，你必须重启 Munin 以使更改生效。Munin 将开始监控这些 Apache 属性，这可以通过 service apache2 status 的输出进行验证。你需要等一会儿，让 Munin 更新并包含关于这些 Apache 属性的信息。
+现在，你必须重启 Munin 以使更改生效。Munin 将开始监控这些 Apache 属性，这可以通过 `service apache2 status` 的输出进行验证。你需要等一会儿，让 Munin 更新并包含关于这些 Apache 属性的信息。
 
 # 快速贴士
 
@@ -4009,14 +3919,17 @@ use_name = yes
 
 ## 为 Munin 配置 Apache
 
-为了在网页浏览器中查看 Munin 的状态，你需要在网络上的虚拟主机上安装 Apache。此外，你必须启用该模块。如果尚未启用，可以通过执行 `apache2ctl -M` 检查 Apache 模块。如果未启用，可以通过执行 `a2enmod` 启用它——该模块可以在 libapache2-mod 包中找到。
+为了在网页浏览器中查看 Munin 的状态，你需要在网络上的虚拟主机上安装 Apache。此外，你必须启用该模块。如果尚未启用，可以通过执行 `apache2ctl -M` 检查 Apache 模块。如果未启用，可以通过执行 `a2enmod` 启用它——该模块可以在 `libapache2-mod` 包中找到。
 
-Munin 配置 Apache 非常简单，因为 Munin 使用位于 /etc/munin/apache24.conf 的 Apache 配置文件。因此，你需要执行以下命令：
+Munin 配置 Apache 非常简单，因为 Munin 使用位于 `/etc/munin/apache24.conf` 的 Apache 配置文件。因此，你需要执行以下命令：
+
 - `cp /etc/apache2/sites-available/apache24.conf /etc/apache2/sites-enabled/`
+
 - `a2ensite apache2.conf`
+
 - `systemctl restart apache2`
 
-请注意，上述过程创建了 /etc/munin/apache24.conf 的新副本，并保留原始版本的 /etc/munin/apache24.conf，以便如果你监控不同的 Web 服务器，你需要按照不同的流程为 Munin 的输出添加 Web 服务器支持。
+请注意，上述过程创建了 `/etc/munin/apache24.conf` 的新副本，并保留原始版本的 `/etc/munin/apache24.conf`，以便如果你监控不同的 Web 服务器，你需要按照不同的流程为 Munin 的输出添加 Web 服务器支持。
 
 图 2 显示了 Munin 站点的默认输出，可以通过 http:/// 访问
 
@@ -4031,19 +3944,15 @@ set status=/var/lib/munin/status
 
 ## 其他监控
 
-Munin 并不是唯一的可用监控软件。其他的包括 Nagios (nagios.org)、MRTG (oss.opteler.org)、Cacti (cacti.net)、Zabbix (zabbix.org) 和 LGTT (org)。Icing (icing.com)、OpenNMS (opnms.org) 等都可监控你的服务器。
+Munin 并不是唯一的可用监控软件。其他的包括 Nagios (`nagios.org`)、`MRTG` (`oss.opteler.org`)、`Cacti` (`cacti.net`)、`Zabbix` (`zabbix.org`) 和 LGTT (`org`)。Icing (`icing.com`)、`OpenNMS` (`opnms.org`) 等都可监控你的服务器。
 
 所有工具都有依赖项——在这些监控工具之间选择的最佳方法是尝试它们，然后决定什么最适合你的需求。Munin 非常简单易用，然而，它只能监控事物而无法调试 Linux 机器的服务。Cacti（带有 RFTIS）、MRTG 和 MuninRRRD 用于图表，这意味着它们需要你。
 
 另一方面，Nagios 功能强大但需要更多时间来学习和配置。然而，Nagios 可以监控多个服务器并在出现问题时提醒你。此外，它拥有巨大的插件库，允许你监控数据库服务器和 Web 应用程序。尽管如此，从像 Munin 这样简单的工具开始总是个好主意。对于此类企业级解决方案
 
-
-
-
-
 # Munin 和 Monit 教程
 
-etc/conf-enabled/apache2 具有让 Monit 监控 apache 的权限——你可以查看 /etc/conf-enabled/apache2 的内容，如果你的 apache 使用了不同的端口或其他自定义参数，可以对其进行任何修改。然后，你需要重启 Monit 以使更改生效。
+`etc/conf-enabled/apache2` 具有让 Monit 监控 apache 的权限——你可以查看 `/etc/conf-enabled/apache2` 的内容，如果你的 apache 使用了不同的端口或其他自定义参数，可以对其进行任何修改。然后，你需要重启 Monit 以使更改生效。
 
 在这个最终版本中，我们将修改所使用的 Monit 配置文件，其中还包含了启用 Monit Web 界面的细节。现在你可以管理 Monit 你的服务器（这需要一个运行良好的邮件服务器作为后盾），我们将留给已经在 Linux 机器上拥有可用邮件服务器的读者作为练习。
 
@@ -4051,15 +3960,20 @@ etc/conf-enabled/apache2 具有让 Monit 监控 apache 的权限——你可以�
 
 Monit: The HTTP interface is not enabled, please enable the web server and use the option “allow to connect” to monit
 
-如果 Web 界面配置不当，monit 将成功运行并在 `monit status` 显示以下内容时返回有用信息：
+如果 Web 界面配置不当，`monit` 将成功运行并在 `monit status` 显示以下内容时返回有用信息：
 
 # Process ‘apache’
 
 | status | does not exist |
+
 | :--- | :--- |
+
 | monitoring status | active |
+
 | monitoring mode | active |
+
 | on reboot | start |
+
 | data | Tue Jul 21 2018 22:54:28 |
 
 之前的输出显示：Apache 目前未在运行。Monit 将启动 Apache，因此之前的输出将被替换为以下内容：
@@ -4067,11 +3981,17 @@ Monit: The HTTP interface is not enabled, please enable the web server and use t
 # Process ‘mysql’
 
 | status | OK |
+
 | :--- | :--- |
+
 | monitoring status | Monitored |
+
 | monitoring mode | active |
+
 | on reboot | start |
+
 | pid | 6304 |
+
 | data collected | Tue Jul 21 2018 22:54:28 |
 
 所以你应该检查以获取 Monit 的摘要状态，你应该执行带有路由的 `monit summary` 命令——其输出大致与你从 Monit 界面获得的内容相似。
@@ -4080,7 +4000,7 @@ Monit: The HTTP interface is not enabled, please enable the web server and use t
 
 Monit 有一个 Web 界面，应该通过它启用——本节将说明该过程。但你们都应该意识到，Monit 有它自己的 Web 服务器，你不需要做任何操作来添加对 Monit 的支持。毕竟，如果 Monit 的 Web 界面未启用，它如何监控你的服务器并获取信息呢？
 
-monit 文件中启用 Monit Web 界面的命令如下：
+`monit` 文件中启用 Monit Web 界面的命令如下：
 
 ```
 set http port 2082
@@ -4089,7 +4009,7 @@ allow localhost
 allow admin monit
 ```
 
-第一条命令设置 Web 界面使用 TCP 端口 2082，这是 monit 的默认端口号。第二个命令指定 monit Web 服务器监听的地址，第三条命令仅接受来自本地机器的 TCP 连接。最后一个命令要求每个 HTTP 连接都使用用户名 (admin) 和密码 (monit)。以下输出验证了 Monit 连接到端口 2082 (127.0.0.1)，这是正确的配置；结果如下：
+第一条命令设置 Web 界面使用 TCP 端口 2082，这是 `monit` 的默认端口号。第二个命令指定 `monit` Web 服务器监听的地址，第三条命令仅接受来自本地机器的 TCP 连接。最后一个命令要求每个 HTTP 连接都使用用户名 (`admin`) 和密码 (`monit`)。以下输出验证了 Monit 连接到端口 2082 (127.0.0.1)，这是正确的配置；结果如下：
 
 ```bash
 # monit netstat -tupln | grep monit
@@ -4114,20 +4034,27 @@ Dennis Jaredcke 在他的家庭服务器上托管了一个网站，对所有人�
 
 ### 虚拟和物理适配器
 
-假设你正在使用 OpenVPN 访问网络而无需他人知晓。这就像运行你的你的脚。发出的数据包在虚拟网络 (tun0) 上加密，通过路由表转发到物理适配器 (eth0)，然后发送到。来自物理适配器 (eth0) 的传入数据包通过 OpenSSL 解密并发送到 Apache 等程序。
+假设你正在使用 OpenVPN 访问网络而无需他人知晓。这就像运行你的你的脚。发出的数据包在虚拟网络 (`tun0`) 上加密，通过路由表转发到物理适配器 (`eth0`)，然后发送到。来自物理适配器 (`eth0`) 的传入数据包通过 OpenSSL 解密并发送到 Apache 等程序。
 
 下面的图显示了数据如何流：
-- 物理 (eth0)
+
+- 物理 (`eth0`)
+
 - 防火墙 (转发)
-- 虚拟 (tun0)
+
+- 虚拟 (`tun0`)
+
 - 防火墙 (输入与输出)
-- OpenVPN 认证、加密和解密，由 tun0 处理。
+
+- OpenVPN 认证、加密和解密，由 `tun0` 处理。
 
 OpenSSL 是一个用于创建和管理公钥基础设施 (PKI) 的通用密码库。虽然你可能熟悉，但它是 OpenVPN 配置过程中的主要组件。当两个人想要创建私钥和公钥时，交换公钥，同时保持他们的信息使用公钥加密并仅通过匹配的私钥解密。消息可以使用私钥签名并使用公钥验证。这些消息可以使用任何框架加密和解密。公钥通常被称为证书，或 CA。
 
 这种情况通常由证书颁发机构或 CA 引起，CA 是一个个人或组织。CA 的作用是签署其他人的证书。换句话说，CA 增加了额外的验证层。对于 OpenVPN 服务器，当通过 HTTPS 连接 Web 服务器时，服务器发送由 CA 签名的证书到你的浏览器。浏览器将使用 CA 的公证书验证证书。服务器随后使用服务器的公钥加密数据并发送给你。浏览器和网站之间的通信将使用该对称加密。使用 OpenVPN 时，客户端机器将拥有 CA 证书以及公私钥来验证其自身（如下所示）。当客户端连接到 OpenVPN 服务器时，双方交换证书并用 CA 验证。然后，两台电脑将生成密钥，用彼此的数据进行加密并交换。数据随后使用这些密钥加密。
 
-现在有了这些解释，让我们进入真实的 OpenVPN 配置。你需要两台电脑来完成。一台作为服务器，另一台作为客户端。例如，OpenVPN 服务器是 4.2，客户端是笔记本电脑。设置并运行你想隐藏的服务器。两台电脑都需要安装 OpenVPN。客户端和服务器 OpenVPN 软件没有区别，你可以从你的发行管理器安装它。OpenVPN 服务器需要 ypper 并安装。
+
+
+现在有了这些解释，让我们进入真实的 OpenVPN 配置。你需要两台电脑来完成。一台作为服务器，另一台作为客户端。例如，OpenVPN 服务器是 4.2，客户端是笔记本电脑。设置并运行你想隐藏的服务器。两台电脑都需要安装 OpenVPN。客户端和服务器 OpenVPN 软件没有区别，你可以从你的发行管理器安装它。OpenVPN 服务器需要 `ypper` 并安装。
 
 ## 用户空间
 
@@ -4137,7 +4064,7 @@ OpenSSL 是一个用于创建和管理公钥基础设施 (PKI) 的通用密码�
 
 接下来运行命令 `easyrsa-build-server-nopass` 将通过你的 CA。命令将创建 `/etc/easyrsa-pnki/server.crt` 和 `/etc/easyrsa-pnki/server.key`。服务器密钥和证书现在已验证。这将自动同步你的服务器与 CA 证书。
 
-要创建客户端密钥和证书，运行命令 `easyrsa-build-client-nopass`将在 `/etc/easyrsa-pnki/` 创建 `client.crt` 和 `client.key`。客户端文件将由 CA 自动签名。
+要创建客户端密钥和证书，运行命令 `easyrsa-build-client-nopass` 将在 `/etc/easyrsa-pnki/` 创建 `client.crt` 和 `client.key`。客户端文件将由 CA 自动签名。
 
 现在用命令 `easyrsa-gen-dh` 构建 Diffie-Hellman 参数。这很重要，因为 RSA 密钥用于身份验证，而不是用于跨隧道加密数据。它太慢了。有了 Diffie-Hellman 参数，你现在可以创建：
 
@@ -4151,25 +4078,21 @@ OpenSSL 是一个用于创建和管理公钥基础设施 (PKI) 的通用密码�
 
 ## Diffie Hellman
 
-创建密钥和证书证明是简单的。OpenVPN 命令可能很复杂，所以这个名为 easy-rsa 的框架让密钥和证书变得简单。运行 ypper 并安装 easyrsa 以安装。
+创建密钥和证书证明是简单的。OpenVPN 命令可能很复杂，所以这个名为 easy-rsa 的框架让密钥和证书变得简单。运行 `ypper` 并安装 `easyrsa` 以安装。
 
-安装后，导航到 `/etc/easyrsa/` 并修改 var 文件，如果你想更改任何细节。如果是第一次，等直到你不是
-
-
-
-
+安装后，导航到 `/etc/easyrsa/` 并修改 `var` 文件，如果你想更改任何细节。如果是第一次，等直到你不是
 
 # 2020 Linux 格式年度
 
 为了加密数据，这种方法更快，且适用于持久连接的重密钥。
 
-最后，还有另一个命令可以为 SSL/TLS 握手添加额外的签名以进行完整性验证。运行 `opensvpn --secret ta key`并将 `ta` 放置在 `/etc/easy-rsa/ta`。
+最后，还有另一个命令可以为 SSL/TLS 握手添加额外的签名以进行完整性验证。运行 `opensvpn --secret ta key` 并将 `ta` 放置在 `/etc/easy-rsa/ta`。
 
 首先，在客户端机器上将 `ca.cert`、`server.key`、`server.crt` 和 `ta` 拷贝到 `/etc/openvpn/`。
 
 ## 安全服务器
 
-接下来，让我们看看下面的配置文件：server.conf 并将其放入 `/etc/openvpn`。
+接下来，让我们看看下面的配置文件：`server.conf` 并将其放入 `/etc/openvpn`。
 
 | 文件名 | 需要项 | 用途 | 密钥 |
 | --- | --- | --- | --- |
@@ -4220,7 +4143,10 @@ R 2606260229262 18020900156506
 ```
 
 要撤销证书，输入：
+
+```
 easy-rsa revoke [client-name]
+```
 
 一个有效的证书已被撤销，并且已经撤销。你将在最右侧确认证书的通用名称（common name）。
 
@@ -4233,6 +4159,7 @@ easy-rsa revoke joe
 `easy-rsa` 命令会在名为 `crl.pem` 的文件中生成证书列表。现在将 `crl.pem` 拷贝到 `/etc/openvpn/crl.pem`，修改 `/etc/openvpn/server.conf` 并重启你的 OpenVPN 服务器。OpenVPN 现在以 `nobody` 身份运行，因此我们必须确保 `priv-crt.pem` 是全局可读。然后你需要做的就是拷贝后的 `crl.pem` 文件。
 
 现在让我们启动 OpenVPN 服务器。如果你遇到失败问题，打开配置文件并运行：
+
 `iptables -A input --p udp --port 1194 -j ACCEPT`。然后启动命令 `opensvpn --config /etc/openvpn/server.conf`。在 `/etc/easy-rsa/ca.local`
 
 ## 客户端配置
@@ -4250,7 +4177,9 @@ persist-tun
 ```
 
 使用 `top` 命令找到正在运行的 OpenVPN
+
 使用 `ifconfig` 或添加 `route` 显示地址为 10.0.0.0/24
+
 使用 `route` 命令设置路由到 `tun`
 
 ## 私有教程
@@ -4270,11 +4199,8 @@ comp-l
 ```
 
 在这里我们将客户端声明为笔记本，`remote` 选项指向服务器。确保你将 `openvpn-hostname` 替换为服务器的 WAN IP。然后将其放入 `tun`。接下来，连接到服务器。最后，使用 `firstly-config /etc/openvpn/client.conf` 启动 OpenVPN
+
 你可以通过以下方式验证：
-
-
-
-
 
 ## 深度解析加密
 
@@ -4292,7 +4218,6 @@ comp-l
 
 | 加密 | 解密 |
 | :--- | :--- |
-
 明文/密文字母表：... 选择字母表：大写字母 (A-Z) 显示字母表
 
 在加密之前从文本中过滤掉非字母字符。
@@ -4340,10 +4265,6 @@ comp-l
 
 如果你尝试，你会发现没有免费的隐写术，尽管你应该意识到 - 出于秘密原因 - 隐写术不被认为是安全的加密。另一方面，如果你通过将数据嵌入图片或音频文件中来加密数据，你可以两全兼得。
 
-
-
-
-
 # 深度解析密码
 
 波比机（Bombe computer）现在已广为人知。它代表了破译者的重大胜利，但没过多久破译机器就反击了。
@@ -4384,33 +4305,28 @@ Linux 年度论坛 2020 | 123
 
 ![](img/b82853b6232162a20e963fd53f1b434b_124_0.png)
 
+
+
 # LINUX 格式
 
-# 项目
+## 项目
 
 利用 Linux 和开源软件（FOSS）做更多
 
 - 126 虚拟化
 随时、随地、随处运行 Linux...
-
 - 136 量子计算
 了解它是什么以及如何开始
-
 - 140 构建你自己的插件
 扩展 WordPress 的功能
-
 - 144 学习更快、更好地编码视频
 掌握工具和技术
-
 - 148 创建 3D 照片
 你不需要昂贵的特殊设备
-
 - 152 最好的 Maker 项目
 是时候上手操作了
-
 - 162 创建你自己的
 设置
-
 - 164 最好的 Maker 项目
 是时候上手操作了
 
@@ -4428,24 +4344,21 @@ Linux 年度论坛 2020 | 123
 
 ![](img/b82853b6232162a20e963fd53f1b434b_126_0.png)
 
-
-
-
-
 # Linux 格式 2020
 
 ## VirtualBox
-通过名副其实的 VirtualBox，轻松开启虚拟机世界的大门。
+
+通过名副其实的 `VirtualBox`，轻松开启虚拟机世界的大门。
 
 ![](img/b82853b6232162a20e963fd53f1b434b_127_0.png)
 
-创建你的第一台虚拟机并不容易——困难之处在于硬件选择。VMware 和 VirtualBox 为所有操作系统（包括 Linux）提供了免费工具。在 Windows 上，你可以使用 Hyper-V，通过其“快速创建”功能，可以启动一个 Ubuntu 实例，该实例可以宣告：“微软对开源更广泛范围的专利实践是‘锁定视图’。”我们将选择 VirtualBox，因为它根据 GPL 第 2 版许可协议（适用于提供 USB 透传和 NVMe 设备等功能的扩展包 Extension Pack 除外，不要将扩展包与增强功能 Guest Additions——后者也是 GPL 协议——混淆），而且它在所有操作系统上看起来都一样。如果你已经开始运行，请按照步骤（指南）操作；如果你已经熟悉操作，就可以深入研究它一些不为人知的特性。
+创建你的第一台虚拟机并不容易——困难之处在于硬件选择。`VMware` 和 `VirtualBox` 为所有操作系统（包括 Linux）提供了免费工具。在 Windows 上，你可以使用 `Hyper-V`，通过其“快速创建”功能，可以启动一个 Ubuntu 实例，该实例可以宣告：“微软对开源更广泛范围的专利实践是‘锁定视图’。”我们将选择 `VirtualBox`，因为它根据 GPL 第 2 版许可协议（适用于提供 USB 透传和 NVMe 设备等功能的扩展包 `Extension Pack` 除外，不要将扩展包与增强功能 `Guest Additions`——后者也是 GPL 协议——混淆），而且它在所有操作系统上看起来都一样。如果你已经开始运行，请按照步骤（指南）操作；如果你已经熟悉操作，就可以深入研究它一些不为人知的特性。
 
 ## 虚拟机调优
 
-假设你已经按照我们的要求操作，启动了机器并在 VirtualBox 中安装了 Ubuntu。如果没有，你应该这样做——因为操作系统在真实世界中的运行速度要比虚拟机快得多。当虚拟机启动时，你会看到一条关于指针整合的消息。这是客机和主机之间一个很有实用的功能。当你使用不支持此功能的客机时，需要使用键盘快捷键（右侧 Ctrl）将指针从客机或主机的沉浸状态中释放出来。
+假设你已经按照我们的要求操作，启动了机器并在 `VirtualBox` 中安装了 Ubuntu。如果没有，你应该这样做——因为操作系统在真实世界中的运行速度要比虚拟机快得多。当虚拟机启动时，你会看到一条关于指针整合的消息。这是客机和主机之间一个很有实用的功能。当你使用不支持此功能的客机时，需要使用键盘快捷键（右侧 Ctrl）将指针从客机或主机的沉浸状态中释放出来。
 
-VirtualBox 的默认设置对于安装来说很好，但总有改进空间。你首先会注意到虚拟机分辨率很低，且冻结窗口是没有意义的，因为虚拟显卡只有 16MB 内存且没有加速功能。我们需要对虚拟机进行如下设置：从左侧选择虚拟机，点击工具栏中的“设置（Settings）”，然后进入“显示（Display）”部分。在这里你可以定义![](img/b82853b6232162a20e963fd53f1b434b_127_1.png)
+`VirtualBox` 的默认设置对于安装来说很好，但总有改进空间。你首先会注意到虚拟机分辨率很低，且冻结窗口是没有意义的，因为虚拟显卡只有 16MB 内存且没有加速功能。我们需要对虚拟机进行如下设置：从左侧选择虚拟机，点击工具栏中的“设置（Settings）”，然后进入“显示（Display）”部分。在这里你可以定义![](img/b82853b6232162a20e963fd53f1b434b_127_1.png)
 
 共享剪贴板选项允许在客机和主机之间进行复制粘贴。一个小说明：那是 X 中间剪贴板，仅是紧邻……的那个。
 
@@ -4454,23 +4367,23 @@ VirtualBox 的默认设置对于安装来说很好，但总有改进空间。你
 ![](img/b82853b6232162a20e963fd53f1b434b_127_2.png)
 
 - 1 **下载 VirtualBox**
-如果你使用的是 macOS 或 Windows，请访问 www.virtualbox.org 链接并按照下载的二进制文件进行安装。在 Linux 上，VirtualBox 在你的发行版仓库中完全免费的。在 Ubuntu 上，只需执行 `apt install virtualbox`。从应用程序菜单（或你系统的名称）启动它。
+如果你使用的是 macOS 或 Windows，请访问 `www.virtualbox.org` 链接并按照下载的二进制文件进行安装。在 Linux 上，`VirtualBox` 在你的发行版仓库中完全免费的。在 Ubuntu 上，只需执行 `apt install virtualbox`。从应用程序菜单（或你系统的名称）启动它。
 
 - 2 **创建新虚拟机**
-点击 VirtualBox 界面左上角的“新建（New）”按钮。我们将在这里创建一个 Ubuntu。但你也可以在这里点击任何你想点的。将机器类型设置为 Linux，版本设置为 Ubuntu (64位)，除非你想运行 32 位的虚拟机。如果你有信心，点击“专家模式（Expert Mode）”，否则点击“下一步”。
+点击 `VirtualBox` 界面左上角的“新建（New）”按钮。我们将在这里创建一个 Ubuntu。但你也可以在这里点击任何你想点的。将机器类型设置为 Linux，版本设置为 Ubuntu (64位)，除非你想运行 32 位的虚拟机。如果你有信心，点击“专家模式（Expert Mode）”，否则点击“下一步”。
 
 - 3 **选择内存**
 分配给虚拟机的内存取决于你如何使用它以及主机有多少内存。现代应用程序（特别是浏览器）会乐情地消耗 2GB，如果你给虚拟机分配了太多内存，主机将会崩溃。
 
 ## 虚拟化
 
-虚拟显卡的规格。为了显示更高的分辨率和色彩，你需要更多的视频内存。在默认设置下，它使用系统内存而非显存，所以你可以提供至少 2GB。也可以使用 VBoxManage 工具将此值设置得比默认更高……
+虚拟显卡的规格。为了显示更高的分辨率和色彩，你需要更多的视频内存。在默认设置下，它使用系统内存而非显存，所以你可以提供至少 2GB。也可以使用 `VBoxManage` 工具将此值设置得比默认更高……
 
 现代桌面出现在二维表面，都使用 3D 加速（使用 OpenGL、OpenGL ES 或让它们渲染）。通过启用 3D 加速，我们让虚拟机直接访问主机的显卡，或访问其显存。如果你使用集成显卡（或非常小的显存），点击 2D 加速框是简单的，但仅适用于 DirectDraw 加速。
 
 我们还可以分配 CPU 核心。默认分配是一个 CPU；这在需要多任务处理的情况下是非常痛苦的。选择左侧的“处理器（Processor）”部分并选择 CPU 数量（如果你的处理器支持超线程或多线程，请调整数量）。如果你给客机分配了太多 CPU，主机将会痛苦，反过来导致虚拟机痛苦。一个合理的限制是不超过可用 CPU 的一半，这样可以确保虚拟机不会占用整个主机核心，这有助于某些负载。
 
-某些操作系统需要“启用/NX”框，这将允许 32 位虚拟机访问超过 4GB 的内存。如果你正在设置 Ubuntu 服务器客机（你必须这样做），请在“机器类型”中设置![](img/b82853b6232162a20e963fd53f1b434b_128_0.png)许多 Linux 发行版现在都包含了增强功能，即这里描述的有用功能。但你需要在客机中安装它们。通过“加速（Acceleration）”标签页，你会发现 VT-x 和嵌套分页（Nested Paging）都被勾选了。不建议为虚拟磁盘使用主机 I/O 缓存。这关闭了默认的 VirtualBox
+某些操作系统需要“启用/NX”框，这将允许 32 位虚拟机访问超过 4GB 的内存。如果你正在设置 Ubuntu 服务器客机（你必须这样做），请在“机器类型”中设置![](img/b82853b6232162a20e963fd53f1b434b_128_0.png)许多 Linux 发行版现在都包含了增强功能，即这里描述的有用功能。但你需要在客机中安装它们。通过“加速（Acceleration）”标签页，你会发现 VT-x 和嵌套分页（Nested Paging）都被勾选了。不建议为虚拟磁盘使用主机 I/O 缓存。这关闭了默认的 `VirtualBox`
 
 ## 明智地共享资源
 
@@ -4479,41 +4392,48 @@ VirtualBox 的默认设置对于安装来说很好，但总有改进空间。你
 ![](img/b82853b6232162a20e963fd53f1b434b_128_1.png)
 
 ## 4 虚拟磁盘
+
 我们需要为虚拟机准备一些分区。现代 Linux 倾向于安装在小于 8GB 的任何地方，如果你可以分配多次，在虚拟机之间共享它以避免填满家目录。
 
 ## 5 自定义虚拟存储
-选择默认的 VDI 存储，动态调整大小。动态存储灵活得多，在这些可能需要增加 I/O 开销的日子，你可以通过右侧的小图标指定文件位置，否则它会进入 /VirtualBox VMs
+
+选择默认的 `VDI` 存储，动态调整大小。动态存储灵活得多，在这些可能需要增加 I/O 开销的日子，你可以通过右侧的小图标指定文件位置，否则它会进入 `/VirtualBox VMs`
 
 ## 6 启动你的虚拟机
+
 如果你需要 ISO 镜像来启动虚拟机，可以从 DVD 复制一个。进入“设置>存储”，选择光驱驱动器，点击右侧的下拉菜单选择你的 ISO，然后点击“启动！”
 
 ## QEMU 和 Libvirt
-VirtualBox 是虚拟机客机的平台。它有一个好听的名字、友好的界面并且是跨平台的。但 Linux 上还有其他选项。人们积极使用 VirtualBox 是因为它与 QEMU 的关联（来自某个小地方）继承了 Sun 自2010 年开始的软件优势。QEMU 是一个更符合标准 Linux 命令行、抽象配置文件并忽略错误信息的工具。QEMU 是一个模拟器，但在 KVM 的力量下它变成了一个强大的虚拟化工具。
 
-在其他，Libvirt 为 QEMU（以及其他）虚拟机提供了平台。它解决了定义虚拟网络和存储的头疼问题，并允许远程管理和访问所有虚拟机。关于这三层的更彻底的解释，请参阅 LXFormat 中的虚拟化技巧。Libvirt 可用于管理 QEMU virt manager，它提供了访问 QEMU 的
+`VirtualBox` 是虚拟机客机的平台。它有一个好听的名字、友好的界面并且是跨平台的。但 Linux 上还有其他选项。人们积极使用 `VirtualBox` 是因为它与 `QEMU` 的关联（来自某个小地方）继承了 Sun 自2010 年开始的软件优势。`QEMU` 是一个更符合标准 Linux 命令行、抽象配置文件并忽略错误信息的工具。`QEMU` 是一个模拟器，但在 KVM 的力量下它变成了一个强大的虚拟化工具。
+
+在其他，`Libvirt` 为 `QEMU`（以及其他）虚拟机提供了平台。它解决了定义虚拟网络和存储的头疼问题，并允许远程管理和访问所有虚拟机。关于这三层的更彻底的解释，请参阅 LXFormat 中的虚拟化技巧。`Libvirt` 可用于管理 `QEMU virt manager`，它提供了访问 `QEMU` 的
 
 ![](img/b82853b6232162a20e963fd53f1b434b_129_0.png)
 
-QEMU 设备会让桌面变得非常痛苦，尽管我们可以通过简洁的图形化界面做得更好。但让我们先尝试唯一的方法。要在 Ubuntu 18.04（及其衍生版本）上安装 QEMU（以及我们将使用的所需的 Libvirt 组件），请执行以下操作：
+`QEMU` 设备会让桌面变得非常痛苦，尽管我们可以通过简洁的图形化界面做得更好。但让我们先尝试唯一的方法。要在 Ubuntu 18.04（及其衍生版本）上安装 `QEMU`（以及我们将使用的所需的 `Libvirt` 组件），请执行以下操作：
 
 ```bash
 $ sudo apt install qemu-libvirt libvirt-daemon-system bridge-utils virtmanager
 ```
 
 ## 我的第一个 QEMU 虚拟机
-如果我们必须创建虚拟机，我们需要虚拟存储。最简单的方法是使用 qemu-img：
+
+如果我们必须创建虚拟机，我们需要虚拟存储。最简单的方法是使用 `qemu-img`：
 
 ```bash
 $ qemu-img create -f qcow2 myvm.qcow2 20G
 ```
-这将创建一个 qcow2 镜像，它不会立即占用20GB 的磁盘空间。确保你在有足够空间的地方创建它，否则你的根分区会在镜像增长时耗尽。也可以使用稀疏镜像，这在某些情况下可能提供性能优势，但由于你刚开始学习 Linux，让我们使用最简单的方法。
+
+这将创建一个 `qcow2` 镜像，它不会立即占用20GB 的磁盘空间。确保你在有足够空间的地方创建它，否则你的根分区会在镜像增长时耗尽。也可以使用稀疏镜像，这在某些情况下可能提供性能优势，但由于你刚开始学习 Linux，让我们使用最简单的方法。
 
 ## 引入 VIR
-虚拟机 GUI 允许我们连接到 QXL 设备，只需点击按钮。它还允许我们使用 3D 加速，这要好得多并甚至超过 VirtualBox 的 3D 加速能力。
 
-根据我们的经验，Libvirt（一个广泛认可的项目）在 Cross 操作系统虚拟机程序上比 QEMU 快得多。激活 Libvirt 可以将 OpenGL 直接传递主机，以极快的速度增加 3D 加速。通过 virt-manager（见下文选项）激活意外地简单，但完成后，只需勾选“显示”部分的正确按钮即可恢复 3D 加速。
+虚拟机 GUI 允许我们连接到 `QXL` 设备，只需点击按钮。它还允许我们使用 3D 加速，这要好得多并甚至超过 `VirtualBox` 的 3D 加速能力。
 
-在虚拟机内部，我们可以通过运行 $ dmesg | grep libvirt 来检查 Libvirt 是否正在运行，并寻找
+根据我们的经验，`Libvirt`（一个广泛认可的项目）在 Cross 操作系统虚拟机程序上比 `QEMU` 快得多。激活 `Libvirt` 可以将 OpenGL 直接传递主机，以极快的速度增加 3D 加速。通过 `virt-manager`（见下文选项）激活意外地简单，但完成后，只需勾选“显示”部分的正确按钮即可恢复 3D 加速。
+
+在虚拟机内部，我们可以通过运行 `$ dmesg | grep libvirt` 来检查 `Libvirt` 是否正在运行，并寻找
 
 ```bash
 libvirt-daemon: started
@@ -4535,13 +4455,9 @@ libvirt-daemon: started
 
 当虚拟机中运行 Mint 时，你会再次看到此警告。
 
-
-
-
-
 ## 虚拟机管理器
 
-QEMU 使用基础 NAT 进行设置，这在很多情况下都是可以的，但它无法让你通过 SSH 访问虚拟机。勾选（下方）的复选框以获得更高级的网络选项。我们也可以像真实操作那样添加并安装 Element。虚拟光驱介质将弹出，你应该双击凭据。你还会发现，多给一点内存运行速度会快得多，但可能离裸机（bare metal）的理想状态还有很大差距。QEMU 配置了一个 VGA 显卡，你可以在我们的 Element 中（需要时）使用它。它能够处理更高的分辨率，但有更好的选项。如果你使用具有 2D 加速的半虚拟化 QXL 视频设备，你可以（需要时）使用 spice 协议来获得更流畅的体验。完成虚拟机后，尝试重新启动 QEMU。
+`QEMU` 使用基础 NAT 进行设置，这在很多情况下都是可以的，但它无法让你通过 SSH 访问虚拟机。勾选（下方）的复选框以获得更高级的网络选项。我们也可以像真实操作那样添加并安装 Element。虚拟光驱介质将弹出，你应该双击凭据。你还会发现，多给一点内存运行速度会快得多，但可能离裸机（bare metal）的理想状态还有很大差距。`QEMU` 配置了一个 VGA 显卡，你可以在我们的 Element 中（需要时）使用它。它能够处理更高的分辨率，但有更好的选项。如果你使用具有 2D 加速的半虚拟化 `QXL` 视频设备，你可以（需要时）使用 `spice` 协议来获得更流畅的体验。完成虚拟机后，尝试重新启动 `QEMU`。
 
 为了使用 `virt-manager`，我们需要 `libvirt` 服务正在运行，由于这可能会让你迷上虚拟机，我们大可将该服务设置为开机启动：
 
@@ -4559,17 +4475,13 @@ qemu-system-x86_64 -drive file=/mnt/storage/VM.qcow2 -enable-kvm -m 3G
 
 - QXL 半虚拟化显卡
 
-而且你应该也可以通过“设置->显示”访问更高的分辨率。你还可以为 QXL 设备分配更多内存（默认为为 16MB），以处理高达 1080p（32 位色深）的视频，但你至少需要 4GB 内存才能使用它。在命令末尾添加选项 `-qxl-video-ram-size=64M`。还有其他管理 KVM 内存的选项——`vmem` 和 `ram`，但我们将留给你自己研究它们之间的区别。请记住，其中某些选项需要额外的内存，并且无法与 3D 加速配合（别担心，我们稍后会介绍）。
+而且你应该也可以通过“设置->显示”访问更高的分辨率。你还可以为 `QXL` 设备分配更多内存（默认为为 16MB），以处理高达 1080p（32 位色深）的视频，但你至少需要 4GB 内存才能使用它。在命令末尾添加选项 `-qxl-video-ram-size=64M`。还有其他管理 KVM 内存的选项——`vmem` 和 `ram`，但我们将留给你自己研究它们之间的区别。请记住，其中某些选项需要额外的内存，并且无法与 3D 加速配合（别担心，我们稍后会介绍）。
 
-使用默认设置，QEMU 模拟一个带有 IDE 磁盘控制器和基础视频的 Intel 440FX 芯片组。这对于今天的标准来说是标准的，这是一件好事；它让事情更容易理解。除了 QXL 设备或 VGA 驱动外，还可以使用 `virtio-nic-pci` 模拟这种行为（这是我们在 QEMU 中默认使用的）。然而，使用旧设备时，你可以通过创建精简的虚拟硬件并将数据汇到我们硬件机器的相应部分来节省精力。这被称为半虚拟化（paravirtualization），启用 KVM 的魔法技术被称为 `VirtIO`。QXL 设备在半虚拟化意义上是指它提供了对宿主机资源的访问，因此它不会打破任何记录。但使用 VirtIO 驱动可以带来巨大的益处；VirtIO 网络适配器可以带来更延迟并加速吞吐量。VirtIO 驱动程序在所有 Linux 发行版中都可用，你可以在 https://virt.org/wiki/virtio-direct/ 找到它们。virtio 设备可以使用命令行设置，但这很快就会导致复杂性。使用由 `libvirt` 驱动的界面管理器要简单得多。我们之前方便地安装了它，
+使用默认设置，`QEMU` 模拟一个带有 IDE 磁盘控制器和基础视频的 Intel 440FX 芯片组。这对于今天的标准来说是标准的，这是一件好事；它让事情更容易理解。除了 `QXL` 设备或 VGA 驱动外，还可以使用 `virtio-nic-pci` 模拟这种行为（这是我们在 `QEMU` 中默认使用的）。然而，使用旧设备时，你可以通过创建精简的虚拟硬件并将数据汇到我们硬件机器的相应部分来节省精力。这被称为半虚拟化（paravirtualization），启用 KVM 的魔法技术被称为 `VirtIO`。`QXL` 设备在半虚拟化意义上是指它提供了对宿主机资源的访问，因此它不会打破任何记录。但使用 `VirtIO` 驱动可以带来巨大的益处；`VirtIO` 网络适配器可以带来更延迟并加速吞吐量。`VirtIO` 驱动程序在所有 Linux 发行版中都可用，你可以在 `https://virt.org/wiki/virtio-direct/` 找到它们。`virtio` 设备可以使用命令行设置，但这很快就会导致复杂性。使用由 `libvirt` 驱动的界面管理器要简单得多。我们之前方便地安装了它，
 
 性能（Performance）选项卡中的图表对于查看哪些虚拟机正在运行仍然有用。
 
 最后，有一个选择网络选项的，默认网络是 NAT，但你可能想使用桥接（bridge）。这些设置大部分都可以更改。
-
-
-
-
 
 # 2020年 Linux 报告
 
@@ -4583,45 +4495,47 @@ qemu-system-x86_64 -drive file=/mnt/storage/VM.qcow2 -enable-kvm -m 3G
 
 # 安装 Docker
 
-如果你熟悉熟悉的内核技术（通过 cgroups 进行资源管理和通过 namespaces 进行隔离），那么容器只是隔离机制的自然演进。从另一个角度来看，容器意味着：如果放弃虚拟机的隔离性并放弃构建复杂操作系统的需求会怎样？从实用主义的角度来看，容器使得一切可能
+如果你熟悉熟悉的内核技术（通过 `cgroups` 进行资源管理和通过 `namespaces` 进行隔离），那么容器只是隔离机制的自然演进。从另一个角度来看，容器意味着：如果放弃虚拟机的隔离性并放弃构建复杂操作系统的需求会怎样？从实用主义的角度来看，容器使得一切可能
 
-Ubuntu 仓库中有一个 docker，但它与容器完全没有关系，就像 VirtualWindow 管理器一样。要在 Ubuntu 18.04 上安装 Docker，你可以直接使用 Snap（从软件中心获取），或者添加 Docker 仓库。后者的工作量稍大，但也能保持更新到最新。首先确保一切都已更新：
+Ubuntu 仓库中有一个 `docker`，但它与容器完全没有关系，就像 `VirtualWindow` 管理器一样。要在 Ubuntu 18.04 上安装 Docker，你可以直接使用 Snap（从软件中心获取），或者添加 Docker 仓库。后者的工作量稍大，但也能保持更新到最新。首先确保一切都已更新：
 
-- sudo update && apt upgrade
+- `sudo update && apt upgrade`
 
 然后为 Apt 安装一些扩展和辅助工具，并添加 Docker GPG 密钥：
 
-- sudo apt-get install apt-transport-https ca-certificates software-properties curl -fsSL https://download.docker.com/linux/ubuntu | apt-key add
+- `sudo apt-get install apt-transport-https ca-certificates software-properties curl -fsSL https://download.docker.com/linux/ubuntu | apt-key add`
 
 现在添加 Docker 仓库并更新包列表：
 
-- sudo apt-add-repository [arch=amd64] https://download.docker.com/linux/ubuntu ubuntu stable
+- `sudo apt-add-repository [arch=amd64] https://download.docker.com/linux/ubuntu ubuntu stable`
 
 最后，我们可以通过以下命令安装 Docker 社区版：
 
-- sudo apt install docker-ce
+- `sudo apt install docker-ce`
 
 # >> KU, KU, KUBERNETES:
 
-如果你正苦于跟上所有这些趋势和时尚，那么了解“创新绝非无意义”这一点可能会有所帮助。随着云原生应用的兴起，值得注意的是，已经没有人在裸机上运行任何东西了。Kubernetes（由 Google 设计，现于云原生基金会的护持下开发）已成为基础设施-微服务架构中编排和管理容器的事实标准方式。微服务是指让你在容器中运行许多独特的服务，每个服务都运行自己的事务（但做得很好），并连接到公共堆栈上。
+如果你正苦于跟上所有这些趋势和时尚，那么了解“创新绝非无意义”这一点可能会有所帮助。随着云原生应用的兴起，值得注意的是，已经没有人在裸机上运行任何东西了。`Kubernetes`（由 Google 设计，现于云原生基金会的护持下开发）已成为基础设施-微服务架构中编排和管理容器的事实标准方式。微服务是指让你在容器中运行许多独特的服务，每个服务都运行自己的事务（但做得很好），并连接到公共堆栈上。
 
-容器的安全性（与虚拟机相比）一直是争议的话题。人们可能会认为，尽管在必须与宿主内核通信的多租户环境中如此，缺乏隔离性仍然是一个问题。容器可以使用 AppArmor 或 SELinux 安全配置文件进行锁定，但这些解释通常很复杂。
+容器的安全性（与虚拟机相比）一直是争议的话题。人们可能会认为，尽管在必须与宿主内核通信的多租户环境中如此，缺乏隔离性仍然是一个问题。容器可以使用 `AppArmor` 或 `SELinux` 安全配置文件进行锁定，但这些解释通常很复杂。
 
-容器带有自己的内核运行，并利用 CPU 特性提供类似虚拟机的轻量级容器。我们困惑了吗？这就是为什么我们要在 https://katakcontainers.io 学习更多内容。
+容器带有自己的内核运行，并利用 CPU 特性提供类似虚拟机的轻量级容器。我们困惑了吗？这就是为什么我们要在 `https://katakcontainers.io` 学习更多内容。
 
 # 也许神的邮件
 
-LXF24 向你展示了如何使用自己的邮件服务器。它涵盖了问题的三个部分，如果你是忠实读者，你知道如何设置一个容器化的邮件服务器（Web 邮箱界面、垃圾邮件拦截和其他人的传输），只需点击按钮即可完成。我们几乎做到了。
+`LXF24` 向你展示了如何使用自己的邮件服务器。它涵盖了问题的三个部分，如果你是忠实读者，你知道如何设置一个容器化的邮件服务器（Web 邮箱界面、垃圾邮件拦截和其他人的传输），只需点击按钮即可完成。我们几乎做到了。
 
 当然，这像以往一样简单，但我们不会涵盖使用你的域名和 MX 记录的所有错误操作。你还需要确保你的路由器/防火墙允许适当的端口。检查 `https://github.com/maildock/dockerized-mail` 并参考其余配置以获取更多信息。
 
-maildock dockerized 包含两个通过 Docker Compose 的魔法连接的不同容器。Docker Compose（YAML 标记语言）文件定义了应用程序使用的所有和服务卷，并让容器之间进行通信。卷（Volumes）是容器（或其他手段）持久化数据的机制，每当我们启动容器时，生成的所有数据都会消失。maildock dockerized 套件包含六项服务。
+`maildock dockerized` 包含两个通过 Docker Compose 的魔法连接的不同容器。`Docker Compose`（YAML 标记语言）文件定义了应用程序使用的所有和服务卷，并让容器之间进行通信。卷（Volumes）是容器（或其他手段）持久化数据的机制，每当我们启动容器时，生成的所有数据都会消失。`maildock dockerized` 套件包含六项服务。
 
 ## 虚拟化
 
 # 获取并进入
 
-Docker Compose 通过我们讨论过的仓库发布，或者直接从 GitHub 获取。
+`Docker Compose` 通过我们讨论过的仓库发布，或者直接从 GitHub 获取。
+
+
 
 ```bash
 $ sudo curl https://github.com/maildock/dockerized-mail/releases
@@ -4639,11 +4553,7 @@ $ git clone https://github.com/maildock/maildock-dockerized
 
 然后我们必须检查 `umask` 的输出，我们必须检查 `umask` 的输出，我们必须检查 `umask` 的输出，我们必须检查 `umask` 的输出，我们必须检查 `umask` 的输出，我们必须检查 `umask` 的输出，我们必须检查 `umask` 的输出，我们必须检查 `umask` 的输出。
 
-
-
-
-
-## 量子计算深度解析
+# 量子计算深度解析
 
 量子计算机的历史始于量子物理学。1900年，马克斯·普朗克首次将光称为“光量子”。这一发现后来让爱因斯坦认为普朗克是正确的。在测量光电效应时，科学家们观察到了波行为。这些发现后来导致了量子物理学的发展。科学家们深入研究事物的本质，试图解释其工作原理。对于量子计算而言，最令人有趣的进展是纠缠和叠加。叠加是指粒子同时存在于许多地方。基于此，科学家推测可以构建量子计算机。量子计算机是一种可以在单次操作中执行多次计算的设备。
 
@@ -4651,7 +4561,7 @@ $ git clone https://github.com/maildock/maildock-dockerized
 
 著名的薛定谔设计了一个思想实验。在实验中，盒子里有一只猫和一个气体容器。当原子放射性衰变释放气体后，箱子随猫一起变化。这个过程一直持续，直到观察者打开盒子来判断猫的死活。在量子物理学中，这意味着猫在被观察之前，既是活着的也是死死的。这关乎量子现实。薛定谔认为，必须有另一种解释——一种尚未被发现的解释。
 
-另一个现象是纠缠，两个粒子可以处于交织的状态。这意味着当它们成对时，一个粒子的状态与另一个相反。在量子计算机中，在软件的支持下，CNOT 门可以创建这种状态。
+另一个现象是纠缠，两个粒子可以处于交织的状态。这意味着当它们成对时，一个粒子的状态与另一个相反。在量子计算机中，在软件的支持下，`CNOT` 门可以创建这种状态。
 
 为了利用量子物理学中展示的所有现象，科学家需要一种描述其行为的方法。小规模量子计算机需要逻辑操作。量子门和逻辑门的作用是有限的。量子计算增加了创建叠加和纠缠的功能。
 
@@ -4665,7 +4575,7 @@ $ git clone https://github.com/maildock/maildock-dockerized
 
 彼得·秀尔在 1994 年发现了 Shor 算法。他的算法解决了大数质因数分解的问题。所有加密的核心在于，量子可以在合理时间内解决这个问题。
 
--   程序使用布洛赫球来演示量子门如何操纵量子比特（qubits）。
+- 程序使用布洛赫球来演示量子门如何操纵量子比特（qubits）。
 
 > “这个过程是随机的，所以观察者在打开盒子之前不知道猫死活。在量子物理学中，猫既是活着的也是死死的。”
 
@@ -4678,10 +4588,6 @@ $ git clone https://github.com/maildock/maildock-dockerized
 一个问题是量子计算机是否会让加密方案面临风险。最著名的是 RSA 加密方案。该方案之所以安全，是因为它依赖于一个条件：将大数分解为质数是非常耗时的。在尝试寻找质数时，有很多策略，最简单的是猜测和尝试。试错法行不通，因为 2048 位密钥有数十亿种解决方案，但即使是最有效的方法也需要多年时间。有了正确的算法，量子计算机可以在实际水平上对其分解。
 
 虽然事实如此，但量子计算机在 15 年内能造成的风险仍然很低。现有的量子计算机缺乏程序。为它们编写程序寥寥无几且遥无期日。正如你在本文的其他部分看到的，距离切换状态还有几个量子比特的距离。目前看来，转变为一个精细调整的加密破解器更有可能是一个遥不可及的前景。
-
-
-
-
 
 ## 量子计算深度解析
 
@@ -4747,13 +4653,13 @@ Linux Format 2020年1月 | 他们
 
 ### 目录
 
-插件将位于 wp-content/plugins 文件夹中。另一些带有单独的文件。例如，WooCommerce 将位于一个文件夹中。
+插件将位于 `wp-content/plugins` 文件夹中。另一些带有单独的文件。例如，WooCommerce 将位于一个文件夹中。
 
 ### 要求
 
 WordPress 插件的前 12 行左右会提供关于此的细节。合理的命名使其易于理解。
 
-让我们打开 hello.php 文件并查看内部构造。为了方便起见，我们复制 hello.php 并将其重命名为 our_plugin.php。在进行这些更改后，刷新仪表板并查看我们的插件列表！
+让我们打开 `hello.php` 文件并查看内部构造。为了方便起见，我们复制 `hello.php` 并将其重命名为 `our_plugin.php`。在进行这些更改后，刷新仪表板并查看我们的插件列表！
 
 ### 执行
 
@@ -4762,9 +4668,6 @@ WordPress 插件的前 12 行左右会提供关于此的细节。合理的命名
 - 小提示：WordPress 插件的前 12 行左右会提供关于此的细节。合理的命名让用户轻松了解它们的作用。
 
 一旦插件被激活，我们刷新管理页面并查看右上角。我们将看到一个来自 Hello Dolly 函数的随机字符串。如果再次刷新，我们可以看到可以将随机字符串更改为来自 WordPress 的显示歌。
-
-
-
 
 ## 建立你自己的编码 ACADEMY
 
@@ -4783,6 +4686,7 @@ add_action('admin_head', 'dummy_cs');
 运行代码以使文件可用：`chmod 777 wp-content/plugins/our-plugin.php`。之后，一旦我们的插件文件激活，如果我们使用版本控制或具有历史记录的编辑器，我们就能获得更好的工作流和整体安全性。
 
 > 快速提示
+>
 > 在 DVD 上获取此项目的代码，或访问 www.linux.com/archives 下载它
 
 虽然上面的示例使用了“钩子” `add action` 操作来插入到代码中，但在 WordPress 插件开发中，还有另一种交叉方式，我们称之为 `add filter`。
@@ -4792,6 +4696,7 @@ add_action('admin_head', 'dummy_cs');
 共享主机账户上的 WordPress 安装允许编辑插件文件。鉴于此，确保所有管理员都能访问他们需要的内容是非常重要的。
 
 从本质上，在最新版本的 WordPress 中，`add action` 和 `filter` 更加常见。这些参数从 `add filter` 返回——其代码显示如下：
+
 `function add_action($tag,$hook,$priority,$args),`
 
 除了编辑文件外，确保只有受信任的人员才能访问 WordPress 和数据库也是重要的。然而，当文件可以通过通过用户名和密码从互联网访问的账户进行修改时，我们我们必须考虑这一点。
@@ -4842,16 +4747,11 @@ WordPress 创建……在 `is_front_page` 后的第一个括号到下一个大�
 
 现在我们已经知道代码如何在页面上运行，让我们查看其余细节。假设有人加载了主页，我们可以看到什么：从开始，我们可以从原始主题中复制 12 行。之后，我们可以自定义这些行，因为它包含了描述文件用途的权力。
 
-*(注：由于提供的 OCR 文本在第 140 和 141 页之间存在大量重复/碎片，我已根据提供的唯一内容重构了逻辑流。)*
-
-
-
-
 # 构建你自己的编码 ACADEMY
 
 ## WORDPRESS 插件库
 
-WordPress 插件库可以在 https://wordpress.org/plugins 找到，拥有超过 52,000 个插件。此外，还有许多来自电子商务、缓存、SEO 等领域的插件。然而，某些插件是免费的，而许多插件需要付费，或对“专业版”版本收取额外费用。
+WordPress 插件库可以在 `https://wordpress.org/plugins` 找到，拥有超过 52,000 个插件。此外，还有许多来自电子商务、缓存、SEO 等领域的插件。然而，某些插件是免费的，而许多插件需要付费，或对“专业版”版本收取额外费用。
 
 为了找到我们需要的插件，我们可以从网站成员身份进入 WordPress 后台，在“word membership（插件成员）”中进行搜索。例如，让我们有一个列表供选择。
 
@@ -4861,10 +4761,13 @@ WordPress 插件库可以在 https://wordpress.org/plugins 找到，拥有超过
 
 既然我们现在掌握了这些技能，就可以利用这些知识来修改我们想要创建的其他插件，但我们需要进行一些调整以完全按照我们的需求进行自定义。通过学习这些操作，在本课程中，我们将掌握编码和测试。
 
-如果我们计划在本地服务器上使用此，可以将整个 WordPress 插件导出到 html 文件中。然后我们可以创建一个数据库并将 SQL 导入新数据库，并插入我们的用户数据，这样我们就能从新创建的数据库中知道该插件是否匹配。
+
+
+如果我们计划在本地服务器上使用此，可以将整个 `WordPress` 插件导出到 `html` 文件中。然后我们可以创建一个数据库并将 `SQL` 导入新数据库，并插入我们的用户数据，这样我们就能从新创建的数据库中知道该插件是否匹配。
 
 > 快速提示
-> WordPress 插件库中有超过 50,000 多个插件，如果我们知道如何构建插件，我们也会知道我们使用的其他插件的结构和位置。
+>
+> `WordPress` 插件库中有超过 50,000 多个插件，如果我们知道如何构建插件，我们也会知道我们使用的其他插件的结构和位置。
 
 对于那些可以从任何计算机编辑并对网站进行修改的插件：
 
@@ -4875,19 +4778,24 @@ WordPress 插件库可以在 https://wordpress.org/plugins 找到，拥有超过
 ```php
 add_action('content', 'our_php_code');
 ```
+
 让我们在这里插入一些代码。
+
 该代码将显示在头部之后、第一个内容之后、最后一个内容标签之前。
+
 这段代码将显示我们当前用户的 ID、名称和注册日期：
-```
 
 ```php
 global $wpdb;
+
 $users = $wpdb->get_query("SELECT * FROM $wpdb->users");
+
 print_r($users);
 ```
 
 ```php
 <?php
+
 foreach($users as $user) {
 echo "<td>" . $user->ID . "</td>";
 echo "<td>" . $user->user_login . "</td>";
@@ -4896,6 +4804,8 @@ echo "<td>" . $user->user_registered . "</td>";
 }
 echo ?>
 ```
+
+
 
 ## 结论
 
@@ -4988,10 +4898,6 @@ H264 在 4k 下无法正常工作，但这是一个小问题。在 H264 的更�
 
 如果你出于任何原因需要取消，我们特别喜欢提供的四个选项，你可以点击红色停止按钮。点击当前并下一步：首先当前，并继续编码。
 
-
-
-
-
 # Linux 格式 2020
 
 通过 720p 分辨率和立体声，我们成功将一个从 16.6GB 缩小到仅 1GB 多一点的文件！
@@ -5043,10 +4949,6 @@ H264 在 4k 下无法正常工作，但这是一个小问题。在 H264 的更�
 # 视频教程 (video TUTORIALS)
 
 点击编辑图标，再次选择你的源轨道。这次通过编码器 AC3 路径，以及其他轨道……
-
-
-
-
 
 # 2020年 Linux Format 年度
 
@@ -5111,9 +5013,6 @@ PhotoMaker 实际上是图像处理的标准，如果你正在开发软件，非
 
 用于处理和立体显示器的专用透镜软件似乎非常短缺。完全来说，我们最好找到一个类似于 Windows 立体制作（SterePhoto Maker）的开源软件 (http://stereo.jpg.org/stphker/index.html)。
 
-
-
-
 在这里可以正常工作。如果你喜欢 Linux 工具，或许可以看看基于 Java 的 AnaBuilder (http://anabuilder.free.fr/)。对于 Linux 用户来说，可行的第一步是手动进行一些处理。你可以使用大多数功能全的照片软件来完成，但如果你有任何合适的工具，请使用 GIMP。此处的说明假设你使用的是 GIMP，尽管无论你使用什么工具，其原理都是相同的。
 
 ## 乐趣加倍
@@ -5149,9 +5048,6 @@ Linux Format 2020 Annual | 115
 聚集在烙铁的温度旁，学习使用 Jonni Bidwell 的冬季项目盒制作东西。
 
 树莓派和更广泛的创客运动赋予了人们巨大的力量。有了正确的工具，将疯狂的想法变为现实变得更容易了。制作原型曾是昂贵的，但现在一切都触手可及。
-
-
-
 
 # 2020 Linux Linux 年度报告
 
@@ -5215,10 +5111,6 @@ Pi 一直有几种选择：三线 LCD 显示器和低分辨率显示器和 Pi �
 
 - **拍照** Smart Pi Touch 外壳包含适用于官方 Pi 的 LEGO 兼容外壳。将排线穿过槽。将外壳固定在...
 
-
-
-
-
 # IqAudio Hi-Fi HAT
 
 在你的 Pi 上收听高清音频，让你那老旧、笨重的 hi-fi 设备焕新生。
@@ -5270,9 +5162,29 @@ Linux 格式 2020 年
 对于这个项目，我们使用面包板来分配电源。它的电流（在最大运行时，高达 600mA，但我们没有做任何事情）。再次，如果你的 Arduino 为这个项目提供了足够的功率，你应该将舵连接到面包板而不是 USB。舵上的信号连接到 Arduino 的引脚 9。向传感器发送一个脉冲。它发出高频声音。如果这个声音从附近的物体反射，它将以脉冲的形式返回传感器；结合声速（330 m/s），我们能够确定传感器和物体之间的距离。这就像蝙蝠使用的定位方法，但频率高得多。通过结合舵和超声波传感器，我们可以做一些神奇的事情。以下代码将传感器左右移动，实现一种雷达项目：
 
 ```cpp
-const int trigPin = 10;
-const int echoPin = 11;
-Servo myServo;
+```
+
+
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
+
+`const int trigPin = 10;`
+
+`const int echoPin = 11;`
+
+`Servo myServo;`
+
+```cpp
 void setup() {
   Serial.begin(9600);
   myServo.attach(9);
@@ -5294,10 +5206,6 @@ for(int i=0; i<150; i++) {
 它运行了 - 我们的传感器正在构建周围对象的虚拟地图！哇！
 
 我们使用舵来旋转舵的旋转，我们可以从传感器监视器获取一些数据信息并发送这些数据，或者通过我们计算的距离。我们将此留作练习，或者直接查看下面的链接：没有它也可以走远，但可能性是无限的。我们想象我们的项目在 https://yobj/object-detector 被检测到，然后使用 Processing 语言绘制一个超声波图。图像清晰可见，并且当传感器左右扫描时具有模糊效果，底层硬件是相同的。这是一个在 Arduino 上收集数据，然后在更强大的硬件上进行处理和可视化的示例。
-
-
-
-
 
 # 2020年 Linux Format 年刊
 
@@ -5359,10 +5267,6 @@ Pimon 的 Unicorn HAT 具有 8x8 的 RGB LED 矩阵，被证明非常受欢迎�
 
 RetroPie 项目（https://retropie.org/）包含了许多模拟器，如 SNES 和 Gameboy（以及更多）。它也适用于 Pi SD 卡（推荐方法），也可以手动安装。提供了单核版本（Pi 1 和 Retro 2）和多核版本（Pi 3）的独立镜像。它还适用于 Linux 上的 RetroArch，这是一个许多游戏主机的前端。RetroArch 支持许多内核，你可以从在线数据库下载它们。
 
-
-
-
-
 # 自定义点唱机教程
 
 ## 启动应用程序偏好
@@ -5373,14 +5277,14 @@ RetroPie 项目（https://retropie.org/）包含了许多模拟器，如 SNES �
 | Snap 用户自动启动助手 | | 移除 |
 | 帮助 | 添加启动程序 | 编辑 |
 | 名称 | 启动 Silverje | |
-| 命令: | /home/jukebox/startjukebox.sh | 浏览... |
-| 注释 | 在 Kiosk（亭台）模式下启动 Silverje | | |
+| 命令: | `/home/jukebox/startjukebox.sh` | 浏览... |
+| 注释 | 在 Kiosk（亭台）模式下启动 Silverje | |
 
 向你的音乐库中添加内容并管理音乐库设置。由于 NUC 的硬盘容量有限，我们正在使用外部设置来存储库。根据你的设置，你的文件可能在本地驱动器、外部 USB 驱动器或你的网络上。Silverje 允许你从这些选项中的任何一个添加音乐。要查看 Silverje 如何选择和识别你的音乐文件（例如，包括 zip 文件），默认设置应该可以工作。一旦你添加了源，Silverje 将重新启动扫描。这可能需要一些时间，因此按照传统做法，我们建议你喝杯茶。
 
 ![](img/b82853b6232162a20e963fd53f1b434b_162_0.png)
 
-# 选择你的设计
+## 选择你的设计
 
 在标签栏上共有八种皮肤可以选择（从在网上寻找更多到一个已删除的），以及旧式（Old-Style）皮肤。如果你发现某些导航按钮太小，Silverje 带有调整大小的控件变得非常简单。在“标签”选项卡中，我们可以将字体大小设置为 18 或 90 百比。默认情况下，它更多地利用了我们对空间的选择，并通过触摸和限制添加到队列来选择曲目，但它具有敏感性，可以防止曲目被两次加入队列，并防止在没有返回帮助的情况下出现重复。自动控制条将指定如果队列中没有曲目，Silverje 在播放前会等待多长时间。你还可以在“编辑音乐”模式下选择 Silverje 如何自动选择要播放的曲目，可以用于选择选择，例如根据日期选择“20世纪70年代的音乐”。这些选择随后可以通过设置 Silverje 自动开始播放曲目来使用。这将让你沉浸在 70 年代的迪斯科主题中。Kiosk 模式将 Silverje 进入全屏模式。然而，没有 GUI 来在 kiosk 模式下设置 Silverje，因此你将通过脚本来实现。标签允许你配置希望人们在运行 Kiosk 模式时允许使用的功能。例如，你可能调整音量或达到超时时间。你还可以限制音乐选择为最后保存。再次，是为了你的显示目的。设置你的第一个点唱机涉及启用虚拟键盘，这对于人们来说是无法搜索的。当你启用此时，你需要选择美国国际布局，因为 Silverje 将默认使用英国（UK）键盘。
 
@@ -5388,9 +5292,10 @@ RetroPie 项目（https://retropie.org/）包含了许多模拟器，如 SNES �
 
 ```
 #!/bin/bash
-
 silverje -kiosk
 ```
+
+
 
 # 快速设置
 
@@ -5400,7 +5305,7 @@ silverje -kiosk
 
 你所有的好主意都是重启系统并使用键盘前往点吧，让一切都符合预期。
 
-# >> 更多
+# 更多
 
 封面艺术比任何点唱机体验都更加真实，如果你都有正确的封面，你的点唱机将帮助你导航。如果封面艺术嵌入在音乐文件中，Silverje 就能识别它，如果它有能力搜索互联网上的封面，它就会下载，但它对于批量更新其他内容并不理想。
 
@@ -5412,1817 +5317,9 @@ silverje -kiosk
 
 可以通过从 `--kiosk` 切换启动来将 Silverje 配置为 kiosk 模式。
 
-# 终极开源工具包！
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- >> 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
-# 终极开源工具包
-
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
-
-- 目录
-- 图像工具 ........................... 38
-- 音频视频 ........................ 39
-- 磁盘和文件 .......................... 40
-- 文件管理 ........................ 41
-- 通信 ........................ 42
-- 生产力 .......................... 43
-- 系统管理 ........................ 44
-- 互联网 ................................ 45
-- 安全 ................................ 46
-- 开发者 ............................ 47
-
 # 终极开源工具包
 
-正如 **Mayank Sharma** 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
+正如 `Mayank Sharma` 所知的，为工作准备正确的工具至关重要。这就是为什么他付出了努力，为你带了这些火热的开源软件。
 
 - 目录
 - 图像工具 ........................... 38
@@ -7235,10 +5332,6 @@ silverje -kiosk
 - 互联网 ................................ 45
 - 安全 ................................ 46
 - 开发者 ............................ 47
-
-
-
-
 
 # 终极开源工具箱
 
@@ -7248,9 +5341,9 @@ silverje -kiosk
 
 ## UMS
 
-这台流媒体服务器会将你的 Linux 桌面转换为终极媒体流媒体广播，传输到其他计算机、智能手机、平板电脑、游戏机等。UMS 通过通用即插即用 (UPnP) 协议向符合 DLNA 的设备进行流传输。你需要部署 UMS，尽管该过程非常简单。
+这台流媒体服务器会将你的 Linux 桌面转换为终极媒体流媒体广播，传输到其他计算机、智能手机、平板电脑、游戏机等。UMS 通过通用即插即用 `UPnP` 协议向符合 DLNA 的设备进行流传输。你需要部署 UMS，尽管该过程非常简单。
 
-第一次启动它时，UMS 会引导你通过一个基础的三步配置向导。你可以在什么都不配置的情况下启动，UMS 包含了高级的可定制选项和引导新用户的提示。它还包含一个用于流传输内容的极简 Web 界面。www.universalmediaser.com
+第一次启动它时，UMS 会引导你通过一个基础的三步配置向导。你可以在什么都不配置的情况下启动，UMS 包含了高级的可定制选项和引导新用户的提示。它还包含一个用于流传输内容的极简 Web 界面。`www.universalmediaser.com`
 
 ## EMBY
 
@@ -7260,49 +5353,49 @@ silverje -kiosk
 
 一个资源意识型视频播放器，在现代机器上同样外观良好。MPV 基于 mplayer2，通过引入优化且代码整洁的选项和功能，延续了命令行（CLI）的传统。它提供了一个不干扰操作的极简用户界面，让你能够流畅观看视频。
 
-https://mpv.io
+`https://mpv.io`
 
 ## SHCUT
 
 一个相当先进的视频编辑器。Shotcut 是少数支持 4K 视频、音频和视频格式以及多种过渡和效果的工具之一。它拥有很长的功能列表和系列教程，帮助你创建第一段视频。
 
-https://shotcut.org
+`https://shotcut.org`
 
 ## CURLE
 
 由 ffmpeg 库驱动。Curdle 是一个易用的媒体转换器。它具有裁剪、填充视频以及仅转换文件部分的能力。选择适用于各种设备的预设设置之一，你还可以在转换前进行预览。
 
-https://curdle.sourceforge.net
+`https://curdle.sourceforge.net`
 
 ## AIRSON
 
 基于已关闭的项目，AirSonic 流媒体器让你的音乐令人印象深刻。它设计有许多功能，可以同时向多个播放器流传输任何格式的文件。
 
-https://airsonic.github.io
+`https://airsonic.github.io`
 
 ## TUPIPE
 
 一组鼓励孩子们创建 2 个动画的工具集。Tupipe 拥有易用的 Web 界面以及大量的文本和视频文档帮助你入门。
 
-www.maefeestro.com
+`www.maefeestro.com`
 
 ## PICARD
 
 这是一个小工具，Picard 将让你的音乐集恢复正轨。该程序可以对你的音乐库排序、重命名文件并识别不完整的专辑。
 
-musicpicard.org
+`musicpicard.org`
 
 ## TRAVERSO DAW
 
 一个强大的录制和编辑平台。Traverso 是一个数字音频工具，可以帮助你创建简单的记录并编辑多轨道音频。
 
-traverso-daw.org
+`traverso-daw.org`
 
 ## MIXXX
 
 如果你需要在活动中担任 DJ，可以使用 mixxx 运行你的音乐库，并使用可刮擦的波形跟踪轨道节奏并更改音调以创建你自己的混音。
 
-www.mixxx.org
+`www.mixxx.org`
 
 2020 年 Linux 论坛年度
 
@@ -7314,21 +5407,21 @@ www.mixxx.org
 
 ## FOG
 
-大量重复性任务（如运行检查、排查故障、更换故障驱动器、反复进行全新安装）可以节省系统能量并管理网络规模。通过 FOG，你可以从管理员的各个领域舒适地管理和克隆机器，并使用字段来描述镜像。它还可以将它们分组以便于管理。有多个选项可以调度映像制作过程。FOG 可用于调试已映像的计算机、擦除主机等。服务器处理如安装软件等众多任务，并可以管理网络上的打印机。FOG 服务器是可扩展的，可以管理跨越同一建筑内多个位置或地球另一端的大型网络。FOG 服务器最用的功能之一（特别是对于大型网络的管理员而言）是多播传输能力。使用此功能，你可以一次性部署多台机器。对不同网络的支持意味着你可以配置多个 FOG 安装作为存储服务器，在映像计算机时分担主 FOG 服务器的负载。https://project.org
+大量重复性任务（如运行检查、排查故障、更换故障驱动器、反复进行全新安装）可以节省系统能量并管理网络规模。通过 FOG，你可以从管理员的各个领域舒适地管理和克隆机器，并使用字段来描述镜像。它还可以将它们分组以便于管理。有多个选项可以调度映像制作过程。FOG 可用于调试已映像的计算机、擦除主机等。服务器处理如安装软件等众多任务，并可以管理网络上的打印机。FOG 服务器是可扩展的，可以管理跨越同一建筑内多个位置或地球另一端的大型网络。FOG 服务器最用的功能之一（特别是对于大型网络的管理员而言）是多播传输能力。使用此功能，你可以一次性部署多台机器。对不同网络的支持意味着你可以配置多个 FOG 安装作为存储服务器，在映像计算机时分担主 FOG 服务器的负载。`https://project.org`
 
 FOG 是一个复杂的软件，并提供了许多选项，具有
 
 ## DUPLICATI
 
-一个易用的备份应用程序。Duplicate 允许你通过过滤或包含排除某些文件类型的选项，精细调整你想要保留的位置列表。你可以通过基于浏览器的界面进行管理。该程序分解了复杂的标准，并为当前任务暴露正确的功能，带有下拉菜单的高级选项。www.duplicate.com
+一个易用的备份应用程序。Duplicate 允许你通过过滤或包含排除某些文件类型的选项，精细调整你想要保留的位置列表。你可以通过基于浏览器的界面进行管理。该程序分解了复杂的标准，并为当前任务暴露正确的功能，带有下拉菜单的高级选项。`www.duplicate.com`
 
 ## PHOTOREC
 
-PhotoRec 恢复被删除的文件。当你选择一个文件系统时，它将扫描其占据的空间而不包含其他文件。尽管名字如此，该实用程序可以嗅探没有常规元数据的原始文件。www.cgsecurity.org/PhotoRec
+PhotoRec 恢复被删除的文件。当你选择一个文件系统时，它将扫描其占据的空间而不包含其他文件。尽管名字如此，该实用程序可以嗅探没有常规元数据的原始文件。`www.cgsecurity.org/PhotoRec`
 
 ## GPARTED
 
-管理分区的最佳工具之一，你可以使用 Gparted 删除、移动和复制分区，同时保留它们持有的数据。该程序适用于所有磁盘、SSD 和 RAID，并支持所有盛行的文件系统。https://gparted.org
+管理分区的最佳工具之一，你可以使用 Gparted 删除、移动和复制分区，同时保留它们持有的数据。该程序适用于所有磁盘、SSD 和 RAID，并支持所有盛行的文件系统。`https://gparted.org`
 
 ## SECURE-DELETE
 
@@ -7348,7 +5441,7 @@ PhotoRec 恢复被删除的文件。当你选择一个文件系统时，它将�
 
 ## EICIEL (ACL)
 
-在 Linux 中，一切皆可访问的，访问控制列表 (ACL) 有助于确定每个文件的权限。你可以通过命令行修改权限，它存在于发行版的官方仓库中。https://github.com/roger-ferrier/acl
+在 Linux 中，一切皆可访问的，访问控制列表 `ACL` 有助于确定每个文件的权限。你可以通过命令行修改权限，它存在于发行版的官方仓库中。`https://github.com/roger-ferrier/acl`
 
 ## NEXTCLOUD
 
@@ -7356,17 +5449,13 @@ PhotoRec 恢复被删除的文件。当你选择一个文件系统时，它将�
 
 ## FSLIT
 
-你可以使用图形化的 slit 工具对文件系统进行彻底清理。它可以删除临时文件，以及其他难以定位和删除的文件，例如无效名称的目录条目和错误的 ID。https://www.pixel.com/slit
+你可以使用图形化的 slit 工具对文件系统进行彻底清理。它可以删除临时文件，以及其他难以定位和删除的文件，例如无效名称的目录条目和错误的 ID。`https://www.pixel.com/slit`
 
 Nextcloud 拥有一个扩展框架，允许你将其用于许多部署。
 
 ## OPEN MEDIA VAULT
 
-如果你需要比简单的备份解决方案更多的数据，那么你需要将 Raspberry Pi 上的未压缩视频转换为专用网络存储 (NAS)，使用基于 Debian 的 Open Media Vault (OMV) 服务器。由于其设计良好的用户界面，OMV 易于部署和管理，非常适合非技术用户。它支持所有流行的部署机制、多种服务器 RAID 级别，并且你可以使用所有流行的协议（如 SSH、SMB/CIFS、FTP 和 FTP）访问数据。具有丰富的权限来控制服务器和文件夹。服务器可以通过官方和第三方插件进行扩展。你可以将 NAS 变成比特客户端，直接下载数据到 NAS，或使用它跨网络流传输音乐。
-
-
-
-
+如果你需要比简单的备份解决方案更多的数据，那么你需要将 Raspberry Pi 上的未压缩视频转换为专用网络存储 `NAS`，使用基于 Debian 的 Open Media Vault `OMV` 服务器。由于其设计良好的用户界面，OMV 易于部署和管理，非常适合非技术用户。它支持所有流行的部署机制、多种服务器 RAID 级别，并且你可以使用所有流行的协议（如 SSH、SMB/CIFS、FTP 和 FTP）访问数据。具有丰富的权限来控制服务器和文件夹。服务器可以通过官方和第三方插件进行扩展。你可以将 NAS 变成比特客户端，直接下载数据到 NAS，或使用它跨网络流传输音乐。
 
 # Linux 格式 2020
 
@@ -7376,11 +5465,9 @@ Nextcloud 拥有一个扩展框架，允许你将其用于许多部署。
 
 ## JITSI
 
-Jitsi 是一款功能全的消息应用程序，拥有令人印象深刻的音频和视频会议功能。作为一个 VoIP 客户端，它允许你使用会话发起协议（SIP）拨打电话，并具备你对软电话所期望的所有功能，如挂起、转移和恢复通话。它还可以向局域网上的其他 Jitsi 用户发起注册-SIP 话。
+Jitsi 是一款功能全的消息应用程序，拥有令人印象深刻的音频和视频会议功能。作为一个 VoIP 客户端，它允许你使用会话发起协议 `SIP` 拨打电话，并具备你对软电话所期望的所有功能，如挂起、转移和恢复通话。它还可以向局域网上的其他 Jitsi 用户发起注册-SIP 话。
 
-你可以使用 Jitsi 在 SIP 和 XMPP 网络上与一个或多个用户进行视频通话，同时使用 Jitsi Videobridge，你可以托管多用户视频通话。这是一个功能强大的 IM（即消息）客户端，具有独特的功能，包括同时共享和共享通话双方桌面的能力。https://jitsi.org/
-
-![](img/b82853b6232162a20e963fd53f1b434b_169_0.png)
+你可以使用 Jitsi 在 SIP 和 XMPP 网络上与一个或多个用户进行视频通话，同时使用 Jitsi Videobridge，你可以托管多用户视频通话。这是一个功能强大的 IM（即消息）客户端，具有独特的功能，包括同时共享和共享通话双方桌面的能力。`https://jitsi.org/`
 
 ## ROCKET.CHAT
 
@@ -7390,29 +5477,25 @@ Rocket.Chat 定位为“终极聊天平台”，充满了实用的功能。除�
 
 ## TOX
 
-如果普通客户端使用起来不安全，请使用 TOX 协议，该协议使用 NaCl 加密加密所有通话，且没有秘密服务器身份，路由器通过用户之间的其他直接 P2P（点对点）连接进行传输。Tox ID 是像素块的组合，而不是用户账户，这允许具有更高的匿名性。https://tox.chat
-
-![](img/b82853b6232162a20e963fd53f1b434b_169_1.png)
+如果普通客户端使用起来不安全，请使用 TOX 协议，该协议使用 NaCl 加密加密所有通话，且没有秘密服务器身份，路由器通过用户之间的其他直接 P2P（点对点）连接进行传输。Tox ID 是像素块的组合，而不是用户账户，这允许具有更高的匿名性。`https://tox.chat`
 
 有多个应用程序可以使用 Tox 协议进行通信，其中之一是 qorx，它支持多个平台。
 
-Rocket Chat 还允许你与团队进行视频会议。你还可以向公共或私有对话录制并发送语音消息。https://rocket.chat/
+Rocket Chat 还允许你与团队进行视频会议。你还可以向公共或私有对话录制并发送语音消息。`https://rocket.chat/`
 
 ## BEEBEEEP
 
-BeeBeep 是一款与众 IM 客户端，旨在让你与网络上的伙伴直接连接。它会自动检测网络上的其他用户，并提供现代聊天客户端的所有功能，从加密消息到文件共享。https://beebeep.org/
+BeeBeep 是一款与众 IM 客户端，旨在让你与网络上的伙伴直接连接。它会自动检测网络上的其他用户，并提供现代聊天客户端的所有功能，从加密消息到文件共享。`https://beebeep.org/`
 
 ## OPENFIRE
 
-有很多 XMPP 服务器可用，但 Openfire 是最容易管理的之一。它实现了 XMPP 协议的许多常用功能。你可以使用任何兼容 XMPP 的 IM 客户端通过 Openfire 进行聊天。它与其自己的客户端配合工作。https://openfire.org/
-
-![](img/b82853b6232162a20e963fd53f1b434b_169_2.png)
+有很多 XMPP 服务器可用，但 Openfire 是最容易管理的之一。它实现了 XMPP 协议的许多常用功能。你可以使用任何兼容 XMPP 的 IM 客户端通过 Openfire 进行聊天。它与其自己的客户端配合工作。`https://openfire.org/`
 
 Rocket Chat 还允许你查看对话期间共享链接，包括 Twitter 和 YouTube 等流行服务。
 
 # SIGNAL
 
-Signal 应用帮助通过移动网络进行安全通信。该应用得到了专家背书，并使用端到端加密来保护你所有的文本、音频和视频通话。https://signal.org
+Signal 应用帮助通过移动网络进行安全通信。该应用得到了专家背书，并使用端到端加密来保护你所有的文本、音频和视频通话。`https://signal.org`
 
 # RIOT.IM
 
@@ -7420,15 +5503,15 @@ Matrix 协议允许注册于一个提供商的用户基于联邦制的 Matrix �
 
 # RETROSHARE
 
-RetroShare 是一个 P2P 通信和文件共享平台，在朋友之间创建加密连接。你可以私下共享你所有的密钥，或通过聊天服务器交换它们。https://retroshare.net
+RetroShare 是一个 P2P 通信和文件共享平台，在朋友之间创建加密连接。你可以私下共享你所有的密钥，或通过聊天服务器交换它们。`https://retroshare.net`
 
 # SOGO
 
-Sogo 是 MS Exchange 的最佳替代方案之一，它拥有所有必要的功能以及原生移动客户端。在自己的服务器上部署它之前，请先尝试演示版。https://sogo.org
+Sogo 是 MS Exchange 的最佳替代方案之一，它拥有所有必要的功能以及原生移动客户端。在自己的服务器上部署它之前，请先尝试演示版。`https://sogo.org`
 
 # HUMHUB
 
-通过 HumHub，你可以在互联网上部署自己的社交网络。它具有你预期的标准网络功能，项目网站有一个在线演示地址：www.humhub.org
+通过 HumHub，你可以在互联网上部署自己的社交网络。它具有你预期的标准网络功能，项目网站有一个在线演示地址：`www.humhub.org`
 
 Linux 格式 2020 年度报告
 
@@ -7440,7 +5523,7 @@ Linux 格式 2020 年度报告
 
 # OSMO
 
-个人信息管理器（PIM）帮助你跟踪和组织来自各种来源的信息。Osmo 是一个轻量级 PIM，用于管理预约、任务、联系人和笔记。它拥有直观且集成的界面，顶部有四个用于日历、任务、联系人和笔记的标签页。当你切换组件时，程序顶部还有与操作关联的按钮。
+个人信息管理器 `PIM` 帮助你跟踪和组织来自各种来源的信息。Osmo 是一个轻量级 PIM，用于管理预约、任务、联系人和笔记。它拥有直观且集成的界面，顶部有四个用于日历、任务、联系人和笔记的标签页。当你切换组件时，程序顶部还有与操作关联的按钮。
 
 日历提供了一个简单的功能性日历，并带有相关信息，如周和距离年底的天数。你可以双击添加笔记，或右键删除任务。
 
@@ -7448,7 +5531,7 @@ Linux 格式 2020 年度报告
 
 你可以使用联系人窗格存储联系人的地址。它还具有额外功能，如搜索、生日提醒，以及在 Google Maps 上标注联系人地址的能力。笔记窗格允许使用编辑功能合并文本，你还可以选择使用 Osmo 复制所有条目。
 
-https://clippy.org/osmo
+`https://clippy.org/osmo`
 
 # FOCUSWRITER
 
@@ -7458,21 +5541,19 @@ https://clippy.org/osmo
 
 Gateway 是一个简单的网页过滤器，运行在树莓派上。它易于部署和配置。Gateway 根据内容类型对流量进行身份验证。简单的代理可以显示数据统计。
 
-https://gatesentry.org
+`https://gatesentry.org`
 
 # KIMAI2
 
 Kimai 跟踪你的工作并打印活动摘要。它可以用于单个用户或多个客户并管理任务。该程序具有基于浏览器的界面。
 
-https://v2.kimai.org
+`https://v2.kimai.org`
 
 # SSR 
 
 与其名称相反，SSR 是用于截图功能的，并提供了相当的截图控制。该工具可以录制整个会话，并允许选择和录制桌面上的窗口。
 
-https://martinbart.be/
-
-![](img/b82853b6232162a20e963fd53f1b434b_170_0.png)
+`https://martinbart.be/`
 
 Gateway可以在设备上安装后过滤 HTTPS。
 
@@ -7480,37 +5561,33 @@ Gateway可以在设备上安装后过滤 HTTPS。
 
 一个专注于 turtl 的笔记工具。它拥有令人印象深刻的功能列表。它可以处理不同类型的笔记和媒体，供你附加到创建的笔记中
 
-https://turtapp.com
+`https://turtapp.com`
 
 # DICTION
 
 一个命令行工具，D 用于标记误用的单词。可以通过标记带有初级错误的单词来创建更好的帖子：
 
-https://gnu.org/software/diction
+`https://gnu.org/software/diction`
 
 # TASK COACH
 
 一个简单的待办事项管理器，Task Coach 简化了定义和跟进任务的过程。你可以使用该工具跟踪带有截止日期可选提醒的任务。
 
-https://taskcoach.com
+`https://taskcoach.com`
 
 # ECONOMIZE
 
 Economize 是一款支出管理器，界面整洁并包含了你组织财务所需的所有功能。它可以跟踪单个或多个账户和预算。
 
-https://economize.org
+`https://economize.org`
 
 # STRETCHLY
 
 一个简单的应用程序，通过提醒你来休息。它有一组预设的休息时间以及当你放松时的休息时间。你可以从图标启动该工具。
 
-https://hovanc.net/stretchly
+`https://hovanc.net/stretchly`
 
 Linux 论坛2020年度 | 171
-
-
-
-
 
 # 2020年 Linux 年度报告
 
@@ -7520,43 +5597,43 @@ Linux 论坛2020年度 | 171
 
 ## GLANCES
 
-Glances 是一个 Python 脚本，可以在终端窗口内智能地显示有关当前会话的信息列表。你可以使用该工具监控远程机器，并使用浏览器通过内置的 Web 监控 https://nicolargo.github.io/glances
+Glances 是一个 Python 脚本，可以在终端窗口内智能地显示有关当前会话的信息列表。你可以使用该工具监控远程机器，并使用浏览器通过内置的 Web 监控 `https://nicolargo.github.io/glances`
 
 ## PORTAINER
 
-通过终端使用 Docker 并不完全困难，而且该工具的文档齐全。为了让你的生活更轻松，你可以使用 **Portainer**，它是一个开源的基于 Web 的前端，支持 Docker API 暴露的所有功能。你可以用它管理容器、网络、卷，它还可以管理独立的 Docker 环境或 Docker Swarm。
+通过终端使用 Docker 并不完全困难，而且该工具的文档齐全。为了让你的生活更轻松，你可以使用 `Portainer`，它是一个开源的基于 Web 的前端，支持 Docker API 暴露的所有功能。你可以用它管理容器、网络、卷，它还可以管理独立的 Docker 环境或 Docker Swarm。
 
-从仪表板中，你可以创建容器并管理所有可用容器。你可以从浏览器窗口获取各种运行容器的 CPU 和内存使用等实时统计数据，甚至访问容器的控制台。**Portainer** 可以以 Docker 容器的形式提供，可以通过单个命令进行安装。然后你可以使用预定义的模板之一。该工具适用于多层级用户，并具有实用的用户管理功能。你可以使用此示例来定义其他用户的访问级别，以及他们可以在 **Portainer** 中管理的 Docker 方面 https://portainer.io
+从仪表板中，你可以创建容器并管理所有可用容器。你可以从浏览器窗口获取各种运行容器的 CPU 和内存使用等实时统计数据，甚至访问容器的控制台。`Portainer` 可以以 Docker 容器的形式提供，可以通过单个命令进行安装。然后你可以使用预定义的模板之一。该工具适用于多层级用户，并具有实用的用户管理功能。你可以使用此示例来定义其他用户的访问级别，以及他们可以在 `Portainer` 中管理的 Docker 方面 `https://portainer.io`
 
 ## FIREJAIL
 
-Firejail 通过将程序和进程隔离在沙箱环境中来增强安全性。通过锁定网络浏览器或任何可能被攻击的工具，firejail 防止了访问文件系统的关键区域 https://firejail.wordpress.com
+Firejail 通过将程序和进程隔离在沙箱环境中来增强安全性。通过锁定网络浏览器或任何可能被攻击的工具，firejail 防止了访问文件系统的关键区域 `https://firejail.wordpress.com`
 
 ## BOOTSTR
 
-启动时间长的主要原因之一是系统在启动时启动了不必要的工具和服务。你可以使用它们来更好地了解启动过程中发生了什么。**Bootish** 是一个增强你的 Linux 启动过程并帮助管理不同加载时间的简单实用程序。如果与 systemd 合并，启动终端运行 **system-analyze** 即可了解启动时间的明细。类似的 **system-analyze** blame 将按启动耗时列出所有运行的单元。生成一个启动分析图的日志镜像。从这张图中你可以看到所有活动进程及其原因。例如，某个进程在启动时占用了 CPU。它还能帮助发现占用所有资源导致其他进程变慢的进程 www.boot.com
+启动时间长的主要原因之一是系统在启动时启动了不必要的工具和服务。你可以使用它们来更好地了解启动过程中发生了什么。`Bootish` 是一个增强你的 Linux 启动过程并帮助管理不同加载时间的简单实用程序。如果与 systemd 合并，启动终端运行 `system-analyze` 即可了解启动时间的明细。类似的 `system-analyze blame` 将按启动耗时列出所有运行的单元。生成一个启动分析图的日志镜像。从这张图中你可以看到所有活动进程及其原因。例如，某个进程在启动时占用了 CPU。它还能帮助发现占用所有资源导致其他进程变慢的进程 `www.boot.com`
 
 ## BO CUSTOMIZER
 
-有几个理由让你改变默认的启动行为，而 **Boot Customizer** 将帮助你实现。该图形化工具可以修改启动过程的所有方面，甚至可以看到屏幕是如何显示的：https://launchpad.net/boot-customizer
+有几个理由让你改变默认的启动行为，而 `Boot Customizer` 将帮助你实现。该图形化工具可以修改启动过程的所有方面，甚至可以看到屏幕是如何显示的：`https://launchpad.net/boot-customizer`
 
 ## REMMINA
 
-一个非常实用的桌面客户端，Remmina 支持广泛的协议。性能良好，并提供了随时更改连接设置的灵活性 https://remmina.org
+一个非常实用的桌面客户端，Remmina 支持广泛的协议。性能良好，并提供了随时更改连接设置的灵活性 `https://remmina.org`
 
-一个 CLI 工具，列出你网络中的所有硬件信息。通过它你可以收集有关设备、驱动配置等详细信息 https://github.com/smi
+一个 CLI 工具，列出你网络中的所有硬件信息。通过它你可以收集有关设备、驱动配置等详细信息 `https://github.com/smi`
 
 ## POWERTOP
 
-开发 PowerTOP是为了追踪消耗笔记本电池的应用程序。该 CLI 实用程序易于使用，通过电源工具榨出更多笔记本电池性能 https://os.org/powertop
+开发 PowerTOP是为了追踪消耗笔记本电池的应用程序。该 CLI 实用程序易于使用，通过电源工具榨出更多笔记本电池性能 `https://os.org/powertop`
 
 ## STACER
 
-Stacer 是一个帮助你跟踪安装不同方面的监控器。它还可以显示参数超过某些阈值的警报 https://uzhaninan.github.com/Stacer-Web
+Stacer 是一个帮助你跟踪安装不同方面的监控器。它还可以显示参数超过某些阈值的警报 `https://uzhaninan.github.com/Stacer-Web`
 
 ## LOGWATCH
 
-Logwatch 解析、分析并过滤你的系统日志，然后生成报告。该实用程序也用于控制报告的详细程度 https://sourceforge.net/projects/logwatch
+Logwatch 解析、分析并过滤你的系统日志，然后生成报告。该实用程序也用于控制报告的详细程度 `https://sourceforge.net/projects/logwatch`
 
 ## 终极开源工具包
 
@@ -7566,7 +5643,7 @@ Logwatch 解析、分析并过滤你的系统日志，然后生成报告。该�
 
 ## UGET
 
-轻量级 uGet 下载管理器依赖于 curl，如果你安装了 aria2 包，它可以启用更多功能，例如下载种子文件的能力。uGet 下载器具有你对下载管理器所期望的所有功能。它具有暂停和恢复下载的功能，还支持通过并行流抓取文件进行下载。此外，批量下载是它的特长。你可以用它来优化下载队列并单独调节下载。uGet 可以在完成所有文件下载后关闭或让电脑休眠 https://getdm.com
+轻量级 uGet 下载管理器依赖于 curl，如果你安装了 aria2 包，它可以启用更多功能，例如下载种子文件的能力。uGet 下载器具有你对下载管理器所期望的所有功能。它具有暂停和恢复下载的功能，还支持通过并行流抓取文件进行下载。此外，批量下载是它的特长。你可以用它来优化下载队列并单独调节下载。uGet 可以在完成所有文件下载后关闭或让电脑休眠 `https://getdm.com`
 
 ## RAMBOX
 
@@ -7576,15 +5653,15 @@ Logwatch 解析、分析并过滤你的系统日志，然后生成报告。该�
 
 ## BRAVE
 
-虽然 Brave 自带跟踪器，但 Brave 承诺提供速度。其中之一是通过拦截广告实现的 https://brave.com
+虽然 Brave 自带跟踪器，但 Brave 承诺提供速度。其中之一是通过拦截广告实现的 `https://brave.com`
 
 ## WALLABAG
 
-一个列表阅读器 wallabag 创建于 2013 年。你可以将其安装在服务器上，或使用它自己的服务 www.wallabag.com
+一个列表阅读器 wallabag 创建于 2013 年。你可以将其安装在服务器上，或使用它自己的服务 `www.wallabag.com`
 
 ## TOR BROWSER
 
-Tor 使用户能够匿名浏览网页。它包含了你所需的一切 https://www.torproject.org
+Tor 使用户能够匿名浏览网页。它包含了你所需的一切 `https://www.torproject.org`
 
 ## WORMHOLE
 
@@ -7592,15 +5669,11 @@ Tor 使用户能够匿名浏览网页。它包含了你所需的一切 https://w
 
 ## UBLOCK ORIGIN
 
-uBlock Origin 扩展是一个拦截广告和（跟踪）的广告拦截器 https://github.com/gorilla/ublock
+uBlock Origin 扩展是一个拦截广告和（跟踪）的广告拦截器 `https://github.com/gorilla/ublock`
 
 ## QUITTERSS
 
 QuitterSS 具有你对新阅读器所期望的所有功能。它可以抓取 RSS 和 Atom 馈，享受每一篇文章目，并提供丰富的自定义功能。
-
-
-
-
 
 # 2020 Linux 年度报告
 
@@ -7612,15 +5685,15 @@ QuitterSS 具有你对新阅读器所期望的所有功能。它可以抓取 RSS
 
 虽然你可以使用用户账户和文件权限访问计算机上的数据，但这些不足以防止有心意的内部人员访问你的私有文件。你自己保护个人数据的唯一可靠机制是对其进行加密。处理加密数据是一个复杂的过程，但它将极大地增强你的安全性并隔离你的数据。
 
-ZuluCrypt 是一款图形化加密工具，具有直观且易于操作的界面。该程序可以在文件、分区或 USB 闪盘内创建一个加密设备。它还可以使用 GPG 加密每个文件。ZuluCrypt 可以执行解密操作，这意味着它可以将所有内容加密到一个秘密设备中。该设备可以是整个磁盘、分区或挂载为回环设备的文件。通过块设备加密，用户在块设备上创建文件系统，加密层会在数据写入实际的底层块设备之前透明地对其进行加密。在加密状态下，存储区域看起来就像一大堆随机数据，甚至无法显示其目录结构。所有这些功能都可以通过出色的用户界面访问。http://ZuluCrypt
+ZuluCrypt 是一款图形化加密工具，具有直观且易于操作的界面。该程序可以在文件、分区或 USB 闪盘内创建一个加密设备。它还可以使用 GPG 加密每个文件。ZuluCrypt 可以执行解密操作，这意味着它可以将所有内容加密到一个秘密设备中。该设备可以是整个磁盘、分区或挂载为回环设备的文件。通过块设备加密，用户在块设备上创建文件系统，加密层会在数据写入实际的底层块设备之前透明地对其进行加密。在加密状态下，存储区域看起来就像一大堆随机数据，甚至无法显示其目录结构。所有这些功能都可以通过出色的用户界面访问。`http://ZuluCrypt`
 
 ## GUFW
 
-GUFW 是 UFW 的图形化前端，UFW 是 iptables 最简单的前端之一。该工具具有简单的界面，并提供了用于调节入站和出站流量的设计配置。你可以根据需求更改配置入站和出站策略。你还可以使用 GUFW 为单个应用程序和服务定义特定的过滤规则。http://gufw.org
+GUFW 是 UFW 的图形化前端，UFW 是 iptables 最简单的前端之一。该工具具有简单的界面，并提供了用于调节入站和出站流量的设计配置。你可以根据需求更改配置入站和出站策略。你还可以使用 GUFW 为单个应用程序和服务定义特定的过滤规则。`http://gufw.org`
 
 ## BITWARDEN
 
-Bitwarden 密码管理器执行端到端加密，并使用 AES 256 位 PBKDF2 来保护你的数据。它之所以有效是因为它将你的库存储在远程 Microsoft Azure 云端中。你还可以从来源导入密码。https://bitwarden.com
+Bitwarden 密码管理器执行端到端加密，并使用 AES 256 位 PBKDF2 来保护你的数据。它之所以有效是因为它将你的库存储在远程 Microsoft Azure 云端中。你还可以从来源导入密码。`https://bitwarden.com`
 
 ## 隐术
 
@@ -7628,29 +5701,29 @@ Bitwarden 密码管理器执行端到端加密，并使用 AES 256 位 PBKDF2 �
 
 你可以使用 OSQuery 工具监控你的网络，查看除了数据库之外执行的每一个查询。
 
-切换到“报告”（Report）标签页获取行流量报告。
+切换到“报告”标签页获取行流量报告。
 
-隐术是一项非常强大的工具，可以在图像内部隐藏测试消息以及任何类型的文件。你可以选择该工具，指向想要隐藏的文件并输入密钥。再次从图像中获取秘密文件时，使用提取（Extract）按钮配合密钥从图像中获取隐藏的文件和消息。https://steganography.org
+隐术是一项非常强大的工具，可以在图像内部隐藏测试消息以及任何类型的文件。你可以选择该工具，指向想要隐藏的文件并输入密钥。再次从图像中获取秘密文件时，使用提取按钮配合密钥从图像中获取隐藏的文件和消息。`https://steganography.org`
 
 ## MTR
 
-MTR 是一种网络诊断工具，结合了 traceroute 和 ping 的功能，通过显示数据包路径提供了丰富的相关信息。http://www.jreport.org/
+MTR 是一种网络诊断工具，结合了 traceroute 和 ping 的功能，通过显示数据包路径提供了丰富的相关信息。`http://www.jreport.org/`
 
 ## AIDE
 
-你可以使用 AIDE 通过比较文件属性（例如初始运行时创建的基线数据库）来检查文件的完整性。http://aide.sourceforge.net
+你可以使用 AIDE 通过比较文件属性（例如初始运行时创建的基线数据库）来检查文件的完整性。`http://aide.sourceforge.net`
 
 ## NIKTO2
 
-一个 CLI Web 扫描器，用于寻找服务器配置错误和版本过旧等问题。它还可以针对安全漏洞进行自动测试。https://cert.net/nikto2
+一个 CLI Web 扫描器，用于寻找服务器配置错误和版本过旧等问题。它还可以针对安全漏洞进行自动测试。`https://cert.net/nikto2`
 
 ## JOHN THE RIPPER
 
-一个密码破解器。John the Ripper 用于暴露弱密码。它是一个带有图形界面的 CLI 工具，通过名为 John exposes 的图形界面展示了其各种命令行功能。https://github.com/johnjohnjohn
+一个密码破解器。John the Ripper 用于暴露弱密码。它是一个带有图形界面的 CLI 工具，通过名为 John exposes 的图形界面展示了其各种命令行功能。`https://github.com/johnjohnjohn`
 
 ## MALTRAIL
 
-Maltrail 是一种恶意流量检测系统，使用黑列表和自定义列表来检测并记录任何恶意流量。https://github.com/stallion/maltrail
+Maltrail 是一种恶意流量检测系统，使用黑列表和自定义列表来检测并记录任何恶意流量。`https://github.com/stallion/maltrail`
 
 # 终极开源工具包
 
@@ -7660,44 +5733,40 @@ Maltrail 是一种恶意流量检测系统，使用黑列表和自定义列表�
 
 - ATOM
 
-Atom 将自己描述为宜居的文本编辑器。该工具由 GitHub 开发，内置了包管理器，允许用户从内部搜索并安装插件。默认自带约 80 个插件。它最引人注目的特性之一是回溯（rewind）功能，它可以修改任何类型的文本。
-Atom 也可以作为 IDE 使用，其亮点之一是自动补全功能。它还有一个括号匹配器，可以高亮光标所在行的右括号。你还可以定义键位绑定，并通过包为最小缩略图（minimap）和语法片段库添加更多功能。详情请访问 https://atom.io。
+Atom 将自己描述为宜居的文本编辑器。该工具由 GitHub 开发，内置了包管理器，允许用户从内部搜索并安装插件。默认自带约 80 个插件。它最引人注目的特性之一是回溯功能，它可以修改任何类型的文本。
+Atom 也可以作为 IDE 使用，其亮点之一是自动补全功能。它还有一个括号匹配器，可以高亮光标所在行的右括号。你还可以定义键位绑定，并通过包为最小缩略图（minimap）和语法片段库添加更多功能。详情请访问 `https://atom.io`。
 
 - BYPTON
 
-这是一个基于 Python 的工具，在终端窗口内提供现代 IDE 功能。你可以使用默认设置启动它，然后使用配置文件对其进行自定义。代码将显示预期的参数列表。它会在你输入时高亮语法，回溯功能会检查留下标记的条目。https://bypythonter.org
+这是一个基于 Python 的工具，在终端窗口内提供现代 IDE 功能。你可以使用默认设置启动它，然后使用配置文件对其进行自定义。代码将显示预期的参数列表。它会在你输入时高亮语法，回溯功能会检查留下标记的条目。`https://bypythonter.org`
 
 - ETHERPAD
 
-协作是任何项目的关键。Etherpad 编辑器允许用户实时协作。它在 浏览器中运行，允许参与者通过基于文本的聊天进行交互。功能丰富，你可以将其用于任何网站。http://etherpad.org
+协作是任何项目的关键。Etherpad 编辑器允许用户实时协作。它在 浏览器中运行，允许参与者通过基于文本的聊天进行交互。功能丰富，你可以将其用于任何网站。`http://etherpad.org`
 
 - VIRT-MANAGER
 
-虚拟机管理器是创建 KVM-VM 的开源前端。它使用 qemu-kvm 管理器，包含为运行的虚拟机提供 VIP 和 SPICE 功能。https://virt-manager.org
+虚拟机管理器是创建 KVM-VM 的开源前端。它使用 qemu-kvm 管理器，包含为运行的虚拟机提供 VIP 和 SPICE 功能。`https://virt-manager.org`
 
 - TURNKEY APPLIANCES
 
-在服务器上安装网络软件或 Web 应用是一项巨大的任务，因为它们需要大量的基础设施。从数据库到基础组件，在部署之前你需要组装一个功能完整的 Web 服务器。简单来说，Turnkey 设备是一个具有功能完整的 Web 应用界面的包含式系统。它可以在裸机或虚拟硬件上运行。Turnkey 设备根据你想要部署的硬件提供多种格式，从 Docker 到 Stack。尽管如此，无论在什么平台上，它们都能立即运行并提供相同的界面进行管理。turnkey.linux.org
+在服务器上安装网络软件或 Web 应用是一项巨大的任务，因为它们需要大量的基础设施。从数据库到基础组件，在部署之前你需要组装一个功能完整的 Web 服务器。简单来说，Turnkey 设备是一个具有功能完整的 Web 应用界面的包含式系统。它可以在裸机或虚拟硬件上运行。Turnkey 设备根据你想要部署的硬件提供多种格式，从 Docker 到 Stack。尽管如此，无论在什么平台上，它们都能立即运行并提供相同的界面进行管理。`turnkey.linux.org`
 
 - OCELOT GUI
 
-该数据库客户端可以连接并交互 MySQL 或 MariaDB 服务器。你可以使用高亮功能进行创建和查询以获取数据库结果，https://github.com/ocelot-ocelot
+该数据库客户端可以连接并交互 MySQL 或 MariaDB 服务器。你可以使用高亮功能进行创建和查询以获取数据库结果，`https://github.com/ocelot-ocelot`
 
 - DOXYGEN
 
-使用此工具从代码中的注释生成 HTML 文档。该工具支持许多格式，并支持文档与代码交叉引用：doxygen.in
+使用此工具从代码中的注释生成 HTML 文档。该工具支持许多格式，并支持文档与代码交叉引用：`doxygen.in`
 
 - INFER
 
-如果你使用 Java、C++ 或对象语言，可以使用 Infer 寻找奇怪的 Bug。该工具包含了各种分析和兴趣功能，可以跨多个文件进行工作。https://inferbin.com
+如果你使用 Java、C++ 或对象语言，可以使用 Infer 寻找奇怪的 Bug。该工具包含了各种分析和兴趣功能，可以跨多个文件进行工作。`https://inferbin.com`
 
 - MARK TEXT
 
-该 Markdown 编辑器支持 GitHub 标记和 CommonMark 规范。它具有实时预览功能，支持导出和主题。数学支持和导出选项：https://marktext.github.io/.
-
-
-
-
+该 Markdown 编辑器支持 GitHub 标记和 CommonMark 规范。它具有实时预览功能，支持导出和主题。数学支持和导出选项：`https://marktext.github.io/`.
 
 ## 探索精彩指南与特辑
 
@@ -7720,7 +5789,7 @@ Atom 也可以作为 IDE 使用，其亮点之一是自动补全功能。它还�
 数以千计的优质书目，许多其他地方无法买到
 全球送货，订单超级安全
 
-www.myfitemagazines.co.uk 杂志、过刊与书刊杂志。
+`www.myfitemagazines.co.uk` 杂志、过刊与书刊杂志。
 
 ## 来自排名第一的 Linux 杂志的所有精彩内容
 
@@ -7737,4 +5806,3 @@ www.myfitemagazines.co.uk 杂志、过刊与书刊杂志。
 
 ### 创客项目
 一系列值得尝试的实用项目，以及用于探索和实验的终极开源工具包
-

@@ -1,3 +1,4 @@
+
 # 引言
 
 *Everything curl* 是 curl 所有事物的全面指南。项目、命令行工具、库、一切是如何开始的以及它是如何成为今天的有用工具的。它解释了我们如何进一步开发它，使用它的要求，如何通过代码或错误报告进行贡献，以及为什么数百万现有用户使用它。
@@ -14,27 +15,27 @@
 
 ## 网站
 
-[`everything.curl.dev`](https://everything.curl.dev)是这本书的家园。它以网络版的形式提供在线书籍。
+[`everything.curl.dev`](https://everything.curl.dev) 是这本书的家园。它以网络版的形式提供在线书籍。
 
-这本书也提供了[PDF](https://daniel.haxx.se/everything-curl/everything-curl.pdf)和[ePUB](https://daniel.haxx.se/everything-curl/everything-curl.epub)版本。
+这本书也提供了 [PDF](https://daniel.haxx.se/everything-curl/everything-curl.pdf) 和 [ePUB](https://daniel.haxx.se/everything-curl/everything-curl.epub) 版本。
 
-该书的网站由 Fastly 托管。自 2024 年 3 月 18 日起，书籍内容由[mdBook](https://github.com/rust-lang/mdBook)渲染。
+该书的网站由 Fastly 托管。自 2024 年 3 月 18 日起，书籍内容由 [mdBook](https://github.com/rust-lang/mdBook) 渲染。
 
 ## 内容
 
-所有书籍内容都托管在 GitHub 的[`github.com/curl/everything-curl`](https://github.com/curl/everything-curl)仓库中。
+所有书籍内容都托管在 GitHub 的 [`github.com/curl/everything-curl`](https://github.com/curl/everything-curl) 仓库中。
 
 ## 作者
 
 希望能成为这本书的合著者之一，我是丹尼尔·斯特伯格。我创立了 curl 项目，本质上我是一个开发者——为了乐趣和利润。我住在瑞典斯德哥尔摩，并在那里工作。
 
-关于丹尼尔的所有信息都可以在[`daniel.haxx.se`](https://daniel.haxx.se/)上找到。
+关于丹尼尔的所有信息都可以在 [`daniel.haxx.se`](https://daniel.haxx.se/) 上找到。
 
 ## 贡献
 
 如果你在这份文档中发现了错误、遗漏、错误或明显的谎言，请发送受影响段落的更新版本给我们，我们将进行修改和更新。我们感谢并认可所有帮助的人。
 
-最好，你可以在书的 GitHub 页面提交[错误](https://github.com/curl/everything-curl/issues)或[拉取请求](https://github.com/curl/everything-curl/pulls)。
+最好，你可以在书的 GitHub 页面提交 [错误](https://github.com/curl/everything-curl/issues) 或 [拉取请求](https://github.com/curl/everything-curl/pulls)。
 
 ## 贡献者
 
@@ -44,4 +45,4 @@ GitHub 上的 AaronChen0，alawvt，Amin Khoshnood，amnkh，Anders Roxell，Ang
 
 ## 许可证
 
-本文档遵循[Creative Commons Attribution 4.0 许可协议](https://creativecommons.org/licenses/by/4.0/)。
+本文档遵循 [Creative Commons Attribution 4.0 许可协议](https://creativecommons.org/licenses/by/4.0/)。

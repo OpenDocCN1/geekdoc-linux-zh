@@ -1,44 +1,7 @@
+
 # macOS、Linux 和 Windows 版 ASP.NET Core 入门指南
 
-
-
-
-
-
 ![](img/03410162e36ac22ee4df2780b4d3848c_0_0.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 源代码
 
@@ -136,9 +99,9 @@ ASP.NET Core 是一个用于构建 Web 和云应用的轻量级可组合框架�
 
 你可以在 macOS 上看到 .NET Core SDK 1.1。
 
-# 欢迎使用 Microsoft .NET Core 1.1.0 - SDK 1.0.0 Preview 2.1-003177 (x64) 安装
+### 欢迎使用 Microsoft .NET Core 1.1.0 - SDK 1.0.0 Preview 2.1-003177 (x64) 安装
 
-# Microsoft .NET Core CLI
+### Microsoft .NET Core CLI
 
 .NET Core 是一个用于构建命令行应用程序、微服务和现代网站的开发平台。它是开源、跨平台的，并由微软支持。如果你喜欢它，请考虑加入活跃的开发者社区……（注：原文此处有大量重复的描述性文本，已按翻译要求保留核心信息）
 
@@ -151,15 +114,15 @@ ASP.NET Core 是一个用于构建 Web 和云应用的轻量级可组合框架�
 
 你可以在 macOS 上看到 .NET Core SDK 1.1。
 
-# 欢迎使用 Microsoft .NET Core 1.1.0 - SDK 1.0.0 Preview 2.1-003177 (x64) 安装
+### 欢迎使用 Microsoft .NET Core 1.1.0 - SDK 1.0.0 Preview 2.1-003177 (x64) 安装
 
-# Microsoft .NET Core CLI
+### Microsoft .NET Core CLI
 
 .NET Core 是一个用于构建命令行应用程序、微服务和现代网站的开发平台。它是开源、跨平台的，并由微软支持。如果你喜欢它，请考虑加入活跃的开发者社区……
 
 ![](img/03410162e36ac22ee4df2780b4d3848c_9_0.png)
 
-## 2.3 测试
+### 2.3 测试
 
 为了测试我们的 .NET Core，我们构建了一个简单的控制台应用程序。在终端中输入这些命令。
 
@@ -195,6 +158,7 @@ Time elapsed 00:00:01.1428534
 ```
 
 Hello World!
+
 agusk$
 
 # 3. ASP.NET Core MVC 开发
@@ -203,13 +167,15 @@ agusk$
 
 ### 3.1 入门
 
+
+
 在本章中，我们学习如何从零为 ASP.NET Core MVP 编写程序。
 
 ### 3.2 ASP.NET Core 模板
 
-为了简化开发，我们可以使用 yo 的 ASP.NET Core 模板。首先，你的电脑应该已经安装 Node.js (https://nodejs.org/)。
+为了简化开发，我们可以使用 `yo` 的 ASP.NET Core 模板。首先，你的电脑应该已经安装 Node.js (`https://nodejs.org/`)。
 
-安装 Node.js 后，你可以安装 yo 和 ASP.NET Core 模板。输入这些命令。
+安装 Node.js 后，你可以安装 `yo` 和 ASP.NET Core 模板。输入这些命令。
 
 ```
 $ npm install -g bower
@@ -224,15 +190,11 @@ $ yo aspnet
 
 你应该能看到模板列表，如下所示。
 
-
-
-
-
 现在你已经准备好开发 ASP.NET Core 了。
 
 ## 3.3 构建你的第一个 ASP.NET Core MVC 应用程序
 
-在本例中，我们为 ASP.NET Core MVC 构建一个简单的程序。我们使用来自 yo aspnet 的模板。
+在本例中，我们为 ASP.NET Core MVC 构建一个简单的程序。我们使用来自 `yo aspnet` 的模板。
 
 ### 3.3.1 创建项目
 
@@ -242,7 +204,7 @@ $ yo aspnet
 $ yo aspnet
 ```
 
-选择使用 Bootstrap 作为 UI 框架的 Web （Web Application）。输入项目名称，例如 MvcDemo。
+选择使用 Bootstrap 作为 UI 框架的 Web （Web Application）。输入项目名称，例如 `MvcDemo`。
 
 ```
 codes – TERM_PROGRAM=Apple_Terminal SHELL=/bin/bash — 80×26
@@ -282,29 +244,41 @@ $ dotnet run
 
 ![](img/03410162e36ac22ee4df2780b4d3848c_14_0.png)
 
-MvcDemo - dotnet run - 80x26
-MvcDemo (.NETCoreApp.Version=v1.0) will be compiled because project is not safe for incremental compilation. Use --build-profile flag for more information.
-Compiling MvcDemo for (.NETCoreApp.Version=v1.0)
-Bundling with configuration from /Users/agusk/Documents/MyBooks/pepress/aspnet_core/codes/MvcDemo/bundleconfig.json
+`MvcDemo` - `dotnet run` - 80x26
+
+`MvcDemo` (.NETCoreApp.Version=v1.0) will be compiled because project is not safe for incremental compilation. Use --build-profile flag for more information.
+
+Compiling `MvcDemo` for (.NETCoreApp.Version=v1.0)
+
+Bundling with configuration from `/Users/agusk/Documents/MyBooks/pepress/aspnet_core/codes/MvcDemo/bundleconfig.json`
+
 Processing www://root/css/site.min.css
+
 Processing www://root/site.min.js
 
 Compilation succeeded.
 
 +   0 Warning(s)
+
 0 Error(s)
 
 Time elapsed 00:00:03.045627
+
 (The compilation time can be improved. Run dotnet build --build-profile for more information)
 
 +   - Microsoft.Extensions.DependencyInjection.DataProtectionServices[0]
+
 - User profile is available. Using '/Users/agusk/.aspnet/DataProtection-Keys' at key repository; key will not be encrypted at rest.
+
 - Hosting environment: Production
-Content root path: /Users/agusk/Documents/MyBooks/pepress/aspnet_core/codes/MvcDemo
+
+Content root path: `/Users/agusk/Documents/MyBooks/pepress/aspnet_core/codes/MvcDemo`
+
 Now listening on: http://localhost:5000
+
 Application started. Press Ctrl+C to shut down.
 
-你可以打开浏览器并导航到 http://localhost:5000。你可以看到下方所示的表单。
+你可以打开浏览器并导航到 `http://localhost:5000`。你可以看到下方所示的表单。
 
 ## 3.4 构建 ASP.NET Core MVC 应用程序
 
@@ -319,13 +293,13 @@ Application started. Press Ctrl+C to shut down.
 
 ### 3.4.1 创建项目
 
-首先，我们通过 yo aspnet 创建项目。打开终端并输入此命令：
+首先，我们通过 `yo aspnet` 创建项目。打开终端并输入此命令：
 
 ```
 $ yo aspnet
 ```
 
-请选择空 Web 应用（Empty Web Application）。输入项目名称，ProductApp。
+请选择空 Web 应用（Empty Web Application）。输入项目名称，`ProductApp`。
 
 ![](img/03410162e36ac22ee4df2780b4d3848c_16_0.png)
 
@@ -340,6 +314,8 @@ $ yo aspnet
 - Controllers（控制器）
 - Models（模型）
 - Views（视图）
+
+
 
 ```json
 {
@@ -410,13 +386,13 @@ $ yo aspnet
 
 ![](img/03410162e36ac22ee4df2780b4d3848c_18_0.png)
 
-## 3.4.3 编写程序
+### 3.4.3 编写程序
 
 在本节中，我们编写 ASP.NET Core 程序。
 
-### 3.4.3.1 创建模型
+#### 3.4.3.1 创建模型
 
-模型持有数据。在本例中，我们创建一个名为 Product 的模块，它包含四个属性。创建一个名为 `Product.cs` 的文件并编写此代码：
+模型持有数据。在本例中，我们创建一个名为 `Product` 的模块，它包含四个属性。创建一个名为 `Product.cs` 的文件并编写此代码：
 
 ```csharp
 using System.ComponentModel.Annotations;
@@ -438,11 +414,11 @@ namespace ProductApp.Models
 }
 ```
 
-将此文件保存到 Models 文件夹。
+将此文件保存到 `Models` 文件夹。
 
-### 3.4.3.2 创建控制器
+#### 3.4.3.2 创建控制器
 
-现在我们创建一个 MVC 控制器，名为 HomeController。创建一个名为 `HomeController.cs` 的文件并编写此代码：
+现在我们创建一个 MVC 控制器，名为 `HomeController`。创建一个名为 `HomeController.cs` 的文件并编写此代码：
 
 ```csharp
 using System;
@@ -473,10 +449,6 @@ namespace ProductApp.Controllers
 }
 ```
 
-
-
-
-
 ```csharp
 // 执行数据库处理
 /////
@@ -500,22 +472,24 @@ public IActionResult Save()
 }
 ```
 
-### 3.4.3.3 创建视图
+#### 3.4.3.3 创建视图
 
 我们按照如下方式创建三个页面文件：
 
-- Index.cshtml
-- Create.cshtml
-- Save.cshtml
-- _Layout.cshtml
+- `Index.cshtml`
+- `Create.cshtml`
+- `Save.cshtml`
+- `_Layout.cshtml`
 
-在 Views 文件夹内部创建一个名为 Home 的文件夹。然后，添加 Index.cshtml、Create.cshtml 和 Save.cshtml 文件。此外，创建一个名为 Shared 的文件夹。然后在该文件夹内添加 _Layout.cshtml 文件。
+在 `Views` 文件夹内部创建一个名为 `Home` 的文件夹。然后，添加 `Index.cshtml`、`Create.cshtml` 和 `Save.cshtml` 文件。此外，创建一个名为 `Shared` 的文件夹。然后在该文件夹内添加 `_Layout.cshtml` 文件。
 
 你可以从下图中查看视图结构。
 
+
+
 ![](img/03410162e36ac22ee4df2780b4d3848c_23_0.png)
 
-我们还创建了一个布局文件 _Shared.cshtml。它用于视图模板。编写此脚本。
+我们还创建了一个布局文件 `_Shared.cshtml`。它用于视图模板。编写此脚本。
 
 ```html
 <!DOCTYPE html>
@@ -553,7 +527,7 @@ public IActionResult Save()
 </html>
 ```
 
-以下是 Index.cshtml 文件的脚本脚本。
+### `Index.cshtml` 文件的脚本
 
 ```razor
 {
@@ -567,7 +541,7 @@ public IActionResult Save()
 </div>
 ```
 
-以下是 Create.cshtml 文件的脚本。
+### `Create.cshtml` 文件的脚本
 
 ```razor
 @using ProductApp.Models
@@ -617,7 +591,7 @@ public IActionResult Save()
 </fieldset>
 ```
 
-以下是 Save.cshtml 文件的脚本。
+### `Save.cshtml` 文件的脚本
 
 ```razor
 @using ProductApp.Models
@@ -633,8 +607,9 @@ public IActionResult Save()
 </div>
 ```
 
+App 将通过执行 `Startup.cs` 文件启动。请修改此文件并写入以下代码。
 
-App 将通过执行 Startup.cs 文件启动。请修改此文件并写入以下代码。
+
 
 ```csharp
 using System;
@@ -690,11 +665,11 @@ namespace ProductAPI
 
 ## 4.2.2 为 ASP.Net Core API 编写程序
 
-下一步是在 ASP.Net Core MVC 上编写 RESTful API。你将创建一个控制器 ProductController.cs 和一个模型 Product.cs。你可以看到如下项目结构。
+下一步是在 ASP.Net Core MVC 上编写 RESTful API。你将创建一个控制器 `ProductController.cs` 和一个模型 `Product.cs`。你可以看到如下项目结构。
 
 ![](img/03410162e36ac22ee4df2780b4d3848c_33_0.png)
 
-以下是 Product 模型的代码。
+以下是 `Product` 模型的代码。
 
 ```csharp
 using System.ComponentModel.DataAnnotations;
@@ -717,7 +692,7 @@ namespace ProductAPI.Models
 }
 ```
 
-在 Product 控制器中，我们暴露了 Get 方法为 Product 生成一个随机列表。以下是代码实现。
+在 `Product` 控制器中，我们暴露了 `Get` 方法为 `Product` 生成一个随机列表。以下是代码实现。
 
 ```csharp
 using System;
@@ -765,7 +740,9 @@ $ dotnet build
 $ dotnet run
 ```
 
-如果完成，你可以打开浏览器并导航到 http://localhost:5000/product。你应该看到产品列表。你可以查看下中的输出。
+如果完成，你可以打开浏览器并导航到 `http://localhost:5000/product`。你应该看到产品列表。你可以查看下中的输出。
+
+
 
 ```json
 {"name":"Product 0","productCode":"PR0","quantity":0,"isDiscount":true},{"name":"Product 1","productCode":"PR1","quantity":1,"isDiscount":true},{"name":"Product 2","productCode":"PR2","quantity":2,"isDiscount":true},{"name":"Product 3","productCode":"PR3","quantity":3,"isDiscount":true},{"name":"Product 4","productCode":"PR4","quantity":4,"isDiscount":true},{"name":"Product 5","productCode":"PR5","quantity":5,"isDiscount":true},{"name":"Product 6","productCode":"PR6","quantity":6,"isDiscount":true},{"name":"Product 7","productCode":"PR7","quantity":7,"isDiscount":true},{"name":"Product 8","productCode":"PR8","quantity":8,"isDiscount":true},{"name":"Product 9","productCode":"PR9","quantity":9,"isDiscount":true}
@@ -779,7 +756,7 @@ $ dotnet run
 
 ### 4.3.1 创建控制器
 
-首先，我们创建一个 MVC 的控制器。创建一个 HomeController.cs 文件并写入此代码。
+首先，我们创建一个 MVC 的控制器。创建一个 `HomeController.cs` 文件并写入此代码。
 
 ```csharp
 using System.Collections.Generic;
@@ -803,11 +780,11 @@ namespace ProductAPI.Controllers
 
 ### 4.3.2 创建视图，Layout.cshtml 作为模板，Index.cshtml 作为 UI
 
-我们创建两个页面：Layout.cshtml 作为模板，Index.cshtml 作为 UI。你可以看到下中的视图结构。
+我们创建两个页面：`Layout.cshtml` 作为模板，`Index.cshtml` 作为 UI。你可以看到下中的视图结构。
 
 ![](img/03410162e36ac22ee4df2780b4d3848c_36_0.png)
 
-我们还创建了一个布局 Layout.cshtml。写入此脚本。
+我们还创建了一个布局 `Layout.cshtml`。写入此脚本。
 
 ```html
 <!DOCTYPE html>
@@ -856,14 +833,16 @@ namespace ProductAPI.Controllers
 </html>
 ```
 
-以下是 Index.cshtml 文件。
+以下是 `Index.cshtml` 文件。
+
+
 
 ```html
 @{
     Layout = "_Shared/_Layout";
     ViewBag.Title = "Home Page";
 }
-<div class="umbotron">
+<div class="jumbotron">
   <h1>ASP.NET MVC Demo</h1>
   <p class="lead">Access ASP.NET API.</p>
   <p><a href="#" id="get-data" class="btn btn-primary">Get JSON data</a></p>
@@ -913,10 +892,6 @@ $(document).ready(function () {
 </script>
 ```
 
-
-
-
-
 # ASP.NET Core MVC 演示
 
 访问 ASP.NET Core API。
@@ -945,13 +920,17 @@ $(document).ready(function () {
 ## 5.1 入门
 
 在本节中，我们将开发一个简单的应用程序来配合 ASP.NET RESTful 和 AngularJS 使用。
-AngularJS 是由 Google 维护的开源 JavaScript 框架，你可以访问其官方网站 http://angularjs.org/。
+
+AngularJS 是由 Google 维护的开源 JavaScript 框架，你可以访问其官方网站 `http://angularjs.org/`。
+
 在本章中，我们将探索如何将 Angular 2 集成到 ASP.NET Core 中。
 
 ## 5.2 ASP.NET Core 和 Angular 2 项目模板
 
-你可以在官方网站 https://angular.io 学习 Angular 2。我们使用 JavaScript 和 TypeScript 开发 Angular 2。
-将 ASP.NET Core MVC 和 Angular 2 整合的思路是将这两个项目（ASP.NET Core 和 Angular 2）合并。幸运的是，我们可以使用 aspnetcore spa 模板，https://github.com/aspnet/JavaScriptServices。
+你可以在官方网站 `https://angular.io` 学习 Angular 2。我们使用 JavaScript 和 TypeScript 开发 Angular 2。
+
+将 ASP.NET Core MVC 和 Angular 2 整合的思路是将这两个项目（ASP.NET Core 和 Angular 2）合并。幸运的是，我们可以使用 `aspnetcore` `spa` 模板，`https://github.com/aspnet/JavaScriptServices`。
+
 你可以在终端中输入此命令来使用该模板。
 
 ```
@@ -962,7 +941,7 @@ $ npm install -g yo generator-aspnetcore-spa
 
 ## 5.3 运行演示：ASP.NET Core Angular SPA
 
-在本节中，我们运行 aspnetcore spa 模板中的程序示例。
+在本节中，我们运行 `aspnetcore` `spa` 模板中的程序示例。
 
 ### 5.3.1 创建项目
 
@@ -1010,11 +989,11 @@ agusk$$ yo
 ![](img/03410162e36ac22ee4df2780b4d3848c_41_1.png)
 
 - 框架 Angular 2。
-- 你想创建什么类型的项目？project.json (兼容 .NET Core 工具预览 2 和 Visual Studio 2015)
+- 你想创建什么类型的项目？`project.json` (兼容 .NET Core 工具预览 2 和 Visual Studio 2015)
 - 你想包含单元测试吗？否
-- 你的项目名称 (aspnetcore_angular2) ProductAng
+- 你的项目名称 (`aspnetcore_angular2`) ProductAng
 
-## 5.3.2 运行程序
+### 5.3.2 运行程序
 
 要运行程序，像往常一样操作。打开终端并导航到项目文件夹。然后输入这些命令。
 
@@ -1024,7 +1003,7 @@ $ dotnet build
 $ dotnet run
 ```
 
-打开浏览器并导航到 http://localhost:5000/。你应该能看到带有 Angular 2 的 SPA。
+打开浏览器并导航到 `http://localhost:5000/`。你应该能看到带有 Angular 2 的 SPA。
 
 ![](img/03410162e36ac22ee4df2780b4d3848c_42_0.png)
 
@@ -1040,6 +1019,9 @@ $ dotnet run
 为了帮助你入门，我们已经设置了：
 
 - 客户端导航。例如，点击 Counter 然后点击 Back 返回此处。
+
+
+
 - 服务端渲染。为了更快的初始加载和改进 SEO，你的 Angular 2 应用生成的 HTML 将传输到浏览器，那里有一个客户端副本。
 - Webpack 开发中间件。在开发模式下，当你修改任何文件时都会更新。
 - 热模块替换。在开发模式下，你无需刷新页面。
@@ -1049,7 +1031,7 @@ $ dotnet run
 
 ## 5.4 接下来是什么？
 
-你可以通过阅读网络上的教程或书籍了解更多关于 AngularJS。我写了一本关于 AngularJS 的书。请访问我的博客 http://aguskiawan.net/post/AngularJS . 我正在编写一本关于 Angular 2 的新书。
+你可以通过阅读网络上的教程或书籍了解更多关于 AngularJS。我写了一本关于 AngularJS 的书。请访问我的博客 `http://aguskiawan.net/post/AngularJS`。我正在编写一本关于 Angular 2 的新书。
 
 ![](img/03410162e36ac22ee4df2780b4d3848c_44_0.png)
 
@@ -1096,7 +1078,7 @@ ALTER TABLE product OWNER TO postgres;
 
 ### 6.4.3 配置数据库
 
-接下来，将连接字符串添加到 appsettings.json。
+接下来，将连接字符串添加到 `appsettings.json`。
 
 ```json
 {
@@ -1111,9 +1093,6 @@ ALTER TABLE product OWNER TO postgres;
   }
 }
 ```
-
-
-
 
 为了操作 Product 表，我们在我们的对象中定义了两个方法：`Save()` 和 `GetProductByCode()`。
 
@@ -1153,9 +1132,11 @@ namespace PostgresDemo.Data
 
 这些对象将从 Controller 中调用。
 
-## 6.4.5 开发 ASP.Net MVC 
+## 6.4.5 开发 ASP.Net MVC
 
 我们创建了 Product Controller 来处理视图并将数据推送到 UI。以下是 ProductCategory 类的实现。
+
+
 
 ```csharp
 using System;
@@ -1253,13 +1234,13 @@ public void ConfigureServices(IServiceCollection services)
 }
 ```
 
-## 6.4.6 开发 ASP.NET Core MVC 视图
+### 6.4.6 开发 ASP.NET Core MVC 视图
 
 开发完 Controller 后，我们开发视图。我们在 Views 中创建 Product。然后创建如图所示的四个视图文件。
 
 ![](img/03410162e36ac22ee4df2780b4d3848c_52_0.png)
 
-以下是 Index.cshtml 文件的实现。
+以下是 `Index.cshtml` 文件的实现。
 
 ```cshtml
 @{
@@ -1274,7 +1255,9 @@ public void ConfigureServices(IServiceCollection services)
 </div
 ```
 
-以下是 Create.cshtml 文件的实现。
+以下是 `Create.cshtml` 文件的实现。
+
+
 
 ```cshtml
 @using PostgresDemo.Models
@@ -1373,7 +1356,7 @@ $ dotnet build
 $ dotnet run
 ```
 
-打开浏览器并导航到 http://localhost:5000/product。
+打开浏览器并导航到 `http://localhost:5000/product`。
 
 ![](img/03410162e36ac22ee4df2780b4d3848c_55_0.png)
 
@@ -1388,10 +1371,6 @@ $ dotnet run
 ![](img/03410162e36ac22ee4df2780b4d3848c_57_0.png)
 
 你可以在 PostgreSQL 管理器中验证数据。
-
-
-
-
 
 ![](img/03410162e36ac22ee4df2780b4d3848c_58_0.png)
 
@@ -1412,11 +1391,11 @@ $ dotnet run
 
 # 源代码
 
-源代码可以在 http://www.aguskurniawan.net/book/aspnetcore26st.zip 下载。
+源代码可以在 `http://www.aguskurniawan.net/book/aspnetcore26st.zip` 下载。
 
 # 联系方式
 
-如果您有任何与此书相关的问题，请通过 aguskur@hotmail.com 与我联系。我的博客：http://blog.aguskurniawan.net。
+如果您有任何与此书相关的问题，请通过 `aguskur@hotmail.com` 与我联系。我的博客：`http://blog.aguskurniawan.net`。
 
 # 目录
 
@@ -1472,8 +1451,12 @@ $ dotnet run
 - 6.4.3 配置 ASP.NET Core MVC 项目 48
 - 6.4.4 开发数据访问层 48
 - 6.4.5 开发 ASP.NET Core MVC 控制器 50
-- 6.4.6 开发 ASP.NET Core MVC 视图 52
-- 6.4.7 测试 55
+
+
+
+### 6.4.6 开发 ASP.NET Core MVC 视图 52
+
+### 6.4.7 测试 55
 
 源代码 61
 

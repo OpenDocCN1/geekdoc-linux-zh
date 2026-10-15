@@ -1,78 +1,5 @@
+
 # Linux 傻瓜指南 第二版 附 CD-ROM
-
-
-
-
-
-要访问内容，请点击章节和节标题。
-
-
-
-搜索本书：
-
-
-## 关于作者
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-产品 | 联系我们 | 关于我们 | 隐私 | 广告信息 | 首页
-
-
-要访问内容，请点击章节和节标题。
-
-
-
-搜索本书：
-
 
 欢迎使用 Linux！它是一款正吸引世界关注的可靠且强大的操作系统（OS）。在撰写本文时，Linux 和 Windows NT 是唯一正在获得市场份额的操作系统。大多数其他操作系统要么停滞不前，要么正在失去份额给 Linux 或 Windows NT。
 
@@ -116,10 +43,6 @@ Linux 以及 UNIX 的一个有趣之处在于，学习新方法和工具几乎�
 
 随着其新获得的流行，Linux 鼓励了 Oracle、Sybase、Corel 等大型软件开发商为 Linux 系统开发其应用程序的版本。世界开始认真对待 Linux——一点赞助就能走很远！这本身就产生了额外的媒体兴趣，Linux 的报道已从晦涩出版物中的好奇心转变为对其他公司重量级产品的可行商业选择和替代方案。这是个好消息，因为进入 Linux 领域的开发人员越多，这个操作系统环境就越受欢迎和易于访问！
 
-
-
-
-
 随着 Linux 的出现，基础设施（即使 UNIX 如此稳健的核心部分）突然可以免费获得。在一个普通商业 UNIX 的桌面许可费用高达数千美元的世界里，这无疑是一个非常好的突破。它使 Linux 进入了那些因价格限制而从未考虑过 UNIX 的环境。
 
 毫无疑问，其受欢迎程度很大程度上源于其价格：免费下载，或如果您想要包装成 CD，则不到 50 美元——或者如果您购买了本书，您就获得了更好的交易！它绝对是为销售而定价的。Linux 的商业发行版包含额外的商业软件，进一步增强了其解决额外业务类型问题的价值。
@@ -136,35 +59,39 @@ Linux 对于 UNIX 来说是一个新概念。它可以免费获得，支持尖�
 
 ## Conventions
 
+
+
 *The Complete Idiot’s Guide to Linux* 旨在帮助你启动并运行你的新 Linux 操作系统。为此，本书使用了以下约定：
 
 - **Bold** 表示你输入的文本、你选择、点击和按下的项目，以及你在屏幕上看到的文本。
+
 - 你会看到 `monospace` 文本用于 URL、屏幕信息和命令输出。
+
 - 任何正在定义或强调的词语都会以 *italics* 出现。
 
 另外，请注意以下功能：
 
 > **Check This Out:**
+>
 > 你会在整本书中发现“Check This Out”部分。我会用它们来指出值得注意的事情、需要警惕的东西、绝佳的技巧——基本上，它们将充满信息，增加你对 Linux 的理解，甚至可能让你说，“哇！”
 
 > **Techno Talk:**
+>
 > 每个人都知道技术主题有时会让你抓头挠耳，想知道那冗长的解释到底是什么意思。好吧，不用担心。我会转向“Techno Talk”框来提醒你仔细阅读。这是会突出术语、方法或聪明的东西的地方，你不一定需要知道，但这确实有助于你更好地理解 Linux。
 
 > **Note:**
+>
 > “Note”框将用于传递交叉引用，指向本书的其他部分，或我认为你应该看一下的任何内容。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_15_0.png)
 
 要访问内容，请点击章节和节标题。
 
-
-
 Search this book:
-
 
 ## About the Author
 
-Manuel Alberto Ricart 是 Paradigm Research, Inc.（http://www.pri.com）的培训师和工程师，Paradigm Research, Inc. 是一家位于硅谷的培训公司。Alberto 为 Java 和互联网编程技术开发教学材料。Paradigm Research, Inc. 将其培训材料交付给众多财富 500 强和知名高科技公司，包括 Hewlett-Packard、MCI、Ford 和 Netscape Communications, Inc.
+Manuel Alberto Ricart 是 Paradigm Research, Inc.（`http://www.pri.com`）的培训师和工程师，Paradigm Research, Inc. 是一家位于硅谷的培训公司。Alberto 为 Java 和互联网编程技术开发教学材料。Paradigm Research, Inc. 将其培训材料交付给众多财富 500 强和知名高科技公司，包括 Hewlett-Packard、MCI、Ford 和 Netscape Communications, Inc.
 
 Alberto 自 20 世纪 70 年代末起就开始接触计算机，当时他在当时最先进的 IBM system 32 上接触到编程，该系统拥有惊人的 32KB RAM 和一个微小的硬盘。从那时起，他为 Macintosh 操作系统（OS）、NEXTSTEP OS 以及最近的 Java 开发了许多软件产品。Alberto 自 20 世纪 80 年代中期以来一直为各种客户提供 UNIX 和互联网网络支持。他拥有威斯康星大学密尔沃基分校的学士（1987 年）和硕士（1989 年）学位。
 
@@ -198,13 +125,10 @@ Alberto 专注于软件产品和工具的发明与设计。他的重点是互联
 最后，Mr. Zero，Stephen Asbury——自 NeXT 时代以来的朋友，我们分享了对技术中善与恶的独特务实理解——在开发这本书的“上坡”部分时耐心倾听我五彩缤纷的抱怨。
 
 **Note:**
+
 Linux 是一个不断发展的操作系统。这就是为什么它越发
 
-
-
-
-
-对你来说，定期检查 Caldera Systems 网站以获取公司公告和软件补丁非常重要。以下是你可以找到本书附带的 Linux 版本相关信息的网址：http://www.calderasystems.com 请务必查看“News & Features”栏目以获取新闻、评论和产品更新。
+对你来说，定期检查 Caldera Systems 网站以获取公司公告和软件补丁非常重要。以下是你可以找到本书附带的 Linux 版本相关信息的网址：`http://www.calderasystems.com` 请务必查看“News & Features”栏目以获取新闻、评论和产品更新。
 
 ## Tell Us What You Think!
 
@@ -216,14 +140,19 @@ Linux 是一个不断发展的操作系统。这就是为什么它越发
 
 写信时，请务必包含本书的标题和作者，以及你的姓名和电话或传真号码。我会仔细审阅你的评论，并与本书的作者和编辑分享。
 
-Fax: 317-581-4663
-E-mail: opsys@mcp.com
-Mail: Executive Editor
-Operating Systems
-Macmillan Computer Publishing
-201 West 103rd Street
-Indianapolis, IN 46290 USA
+Fax: `317-581-4663`
 
+E-mail: `opsys@mcp.com`
+
+Mail: Executive Editor
+
+Operating Systems
+
+Macmillan Computer Publishing
+
+201 West 103rd Street
+
+Indianapolis, IN 46290 USA
 
 ## SPIDER KILLER
 
@@ -235,35 +164,33 @@ SEARCH ITKNOWLEDGE
 
 To access the contents, click the chapter and section titles.
 
-
-
 Bookmark it
 
 Search this book:
 
 Previous Table of Contents Next
 
-
 好吧，你已经安装了 Linux（第 4 部分会指导你完成安装），并且准备好面对这头猛兽了。猜猜怎么着：你会感到惊讶！第 1 部分带你领略 Linux 更温和的一面——K 桌面环境，或称 KDE。本节中的章节会指导你使用应用程序、管理文件，以及在网上交流。我们甚至还会看看如何自定义 KDE，使其外观和操作方式符合你的喜好。你准备好开始这场冒险了吗？换上你的步行鞋，准备一些路上的零食，让我们出发吧！
 
-
 本节假定你已经安装了 Caldera OpenLinux。如果你没有阅读前言，我建议你现在就阅读，因为前言解释了本书的逻辑顺序以及通篇使用的一些约定。
-
-
 
 BROWSE BY TOPIC
 
 Keyword
+
 Brief Full
+
 Advanced Search
+
 Search Tips
 
 在本章中，你将学习如何使用 K 桌面环境，或简称 KDE，进入和退出 Linux。KDE 是一个图形用户环境，你可以使用图标、菜单和窗口来完成工作。你将对屏幕和 KDE 环境提供的一些用户界面（UI）元素进行简短的游览。
 
-
 在使用 Linux 之前，你必须登录。登录允许你使用计算机，并通过仅允许你访问自己的文件来保护你的工作免受其他用户的影响。Linux 是一个多用户操作系统，多个用户可以同时工作。登录确保只有授权用户才能使用计算机。
 
 如果你按照我在附录 A 中建议的方式安装了 Caldera OpenLinux 和 KDE（标准系统安装时默认已安装 KDE），你的登录提示将类似于这样：
+
+
 
 ```
 Caldera OpenLinux(TM)
@@ -279,7 +206,8 @@ login:
 
 在你输入正确信息后，登录面板将消失，你将进入桌面。如果你输入密码有误，你会看到一条消息，提示登录不正确，需要重新输入登录名和密码。
 
-登录成功后，你将被允许进入系统。然而你将面对的是文本界面。要启动图形界面，在提示符下输入 kde。（注意：手动启动 kde 看起来像是 Caldera OpenLinux 1.3 的一个错误，未来 Caldera 网站上的补丁可能会修复它。）
+登录成功后，你将被允许进入系统。然而你将面对的是文本界面。要启动图形界面，在提示符下输入`kde`。（注意：手动启动`kde`看起来像是 Caldera OpenLinux 1.3 的一个错误，未来 Caldera 网站上的补丁可能会修复它。）
+
 ## The KDE Desktop
 
 *桌面* 是你在计算机上工作的地方。它是你启动和运行程序、创建文件、组织文件以及做你想用计算机做的任何事情的工作区。当你第一次进入桌面时，它看起来会与以下图所示类似。
@@ -293,9 +221,10 @@ Linux 在 KDE 桌面激活时的外观。
 让我们看看 KDE 桌面的组件：
 
 - 屏幕底部的 *面板*
-- 屏幕顶部的 *任务栏*
-- *桌面*
 
+- 屏幕顶部的 *任务栏*
+
+- *桌面*
 
 *面板* 是屏幕底部带有图标的条。它用于启动应用程序；每个图标代表一个应用程序、一个命令或一个菜单（菜单上有一个黑色三角形）。菜单提供对其他功能和应用程序的访问。
 
@@ -306,26 +235,20 @@ Linux 在 KDE 桌面激活时的外观。
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_21_1.png)
 
 Application Starter 为你提供对应用程序的访问以及退出系统的能力。
+
 ### The Taskbar
 
 屏幕顶部的条称为 *任务栏*。每当你启动一个新应用程序时，就会显示一个以该应用程序命名的按钮。这些按钮中的每一个都代表在 KDE 环境中执行的任务或应用程序。单击鼠标上的任务按钮即可进入该应用程序。看起来被按下的按钮属于当前活动的应用程序。如果应用程序被隐藏，其名称会显示在括号中。要显示该应用程序，只需单击其按钮。右键单击按钮会显示一个菜单，允许你控制应用程序窗口的一些选项。
 
 任务栏上的每个按钮代表一个正在运行的应用程序。
 
-面板和任务栏都是由一个名为 KPanel 的应用程序提供的服务，该应用程序在你登录系统并在 KDE 下工作时始终运行。
+面板和任务栏都是由一个名为`KPanel`的应用程序提供的服务，该应用程序在你登录系统并在 KDE 下工作时始终运行。
 
 Previous Table of Contents Next
-
-
-
-
-
-
 
 要访问内容，请点击章节和节标题。
 
 搜索本书：
-
 
 桌面是任务栏和面板之间的彩色区域。单个程序窗口浮动在其上方。在 KDE 中你有多个桌面。你通过点击面板上标有“One”、“Two”、“Three”和“Four”的按钮来控制当前所在的桌面。
 
@@ -333,43 +256,50 @@ Previous Table of Contents Next
 
 桌面可作为临时位置放置你正在处理的文档和其他东西。
 
-
-应用程序是呈现信息在窗口中的程序，你可以从桌面打开或关闭它们。以下图所示的 KEdit 应用程序就是一个简单的文本编辑器，可用于编辑文件。要启动 KEdit，只需点击面板上的其图标即可。
+应用程序是呈现信息在窗口中的程序，你可以从桌面打开或关闭它们。以下图所示的`KEdit`应用程序就是一个简单的文本编辑器，可用于编辑文件。要启动`KEdit`，只需点击面板上的其图标即可。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_23_0.png)
 
 KEdit：一个简单易用的文本编辑器。
 
-KEdit 与大多数应用程序一样有菜单。菜单位于应用程序标题栏的正下方。（KEdit 的菜单包括 File、Edit、Options 和 Help。）菜单列出了你可以选择的命令，让应用程序执行某些操作。
-
+`KEdit`与大多数应用程序一样有菜单。菜单位于应用程序标题栏的正下方。（`KEdit`的菜单包括 File、Edit、Options 和 Help。）菜单列出了你可以选择的命令，让应用程序执行某些操作。
 
 光标通常是一个小黑箭头，随着你移动鼠标而移动。你使用光标指向对象。光标的外观会根据你指向的内容而改变。
 
 光标的其他变体包括：
 
 - 编辑文本时的 I 形光标
+
 - 光标位于桌面上方时的 X
 
 桌面上的其他居民是图标。图标是文件、应用程序或计算机中其他事物的图形表示。
 
 除了输入文本外，你几乎可以用鼠标完成计算机上的所有操作。鼠标控制光标的位置。你滑动鼠标以指向屏幕上的对象。如果滑动鼠标时空间不够，你可以将其拿起并放在鼠标垫上的其他位置；鼠标在空中时光标不会移动。无论你移动鼠标多远，光标都会停留在屏幕上。
+
 ## 基本鼠标操作
 
 当你让鼠标指向某物、某个图标或某个单词时，你使用鼠标按钮执行以下操作之一：
 
 - 单击：不移动鼠标，按下并释放左鼠标按钮。
-- 右键单击：不移动鼠标，按下并释放右鼠标按钮。
-- 中键单击：不移动鼠标，按下并释放中键鼠标按钮。如果你的鼠标只有两个按钮，同时按下两个按钮即可模拟中键单击。（使用三键鼠标感觉更好。）
-- 按住：不移动鼠标，按下左鼠标按钮并保持按住。
-- 拖动：按住鼠标按钮，移动光标（你仍在按住按钮，对吧？），然后释放鼠标按钮。成功拖动的秘诀是抵制松手的诱惑，直到你拖动的对象正好位于想要的位置。
-- 双击：快速连续单击两次。如果你单击在文本上，I 形光标会被放置在字符之间。如果你双击，你会选中正在操作的单词。某些应用程序可能会使用三击来选择段落或执行其他应用程序定义的函数。
 
+- 右键单击：不移动鼠标，按下并释放右鼠标按钮。
+
+- 中键单击：不移动鼠标，按下并释放中键鼠标按钮。如果你的鼠标只有两个按钮，同时按下两个按钮即可模拟中键单击。（使用三键鼠标感觉更好。）
+
+- 按住：不移动鼠标，按下左鼠标按钮并保持按住。
+
+- 拖动：按住鼠标按钮，移动光标（你仍在按住按钮，对吧？），然后释放鼠标按钮。成功拖动的秘诀是抵制松手的诱惑，直到你拖动的对象正好位于想要的位置。
+
+- 双击：快速连续单击两次。如果你单击在文本上，I 形光标会被放置在字符之间。如果你双击，你会选中正在操作的单词。某些应用程序可能会使用三击来选择段落或执行其他应用程序定义的函数。
 
 现代 UI 的基本控件可分为三类：
 
 - 按钮
+
 - 列表和菜单
+
 - 文本字段
+
 ## 按钮
 
 按钮通常位于应用程序窗口中，以便你轻松访问某些命令。按钮有各种形状和大小。它们通常用文字和图形标记以指示其功能。要激活按钮，只需单击它即可。如果按钮只是图像，当你将光标移过它时，按钮可能会在其周围绘制边框，以让你知道它确实是一个按钮并且可以单击它。如果你将光标悬停在按钮上一段时间，按钮可能会显示一个“工具提示”，告诉你按钮的作用。
@@ -399,6 +329,7 @@ KEdit 与大多数应用程序一样有菜单。菜单位于应用程序标题�
 其他按钮称为*单选按钮*，允许你在组中仅启用一个选项。单击不同选项会禁用先前选中的选项，同时启用新选项。X Windows 下的单选按钮以菱形呈现。
 
 > **注意：**
+
 > 单选按钮之所以得名，是因为它们就像你汽车音响中的收音机按钮：它们一次只能设置为一个选项。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_26_0.png)
@@ -420,11 +351,14 @@ Options 标签存储了一些控件…
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_26_3.png)
 
 滑块允许你在受限范围内设置值，例如在你的音响上选择音量级别。
+
 ## 列表和菜单
 
 你通过命令告诉应用程序做什么。命令通常位于菜单中。应用程序的菜单位于其窗口标题栏正下方。
 
 使用菜单与使用按钮类似。如果你单击菜单按钮（也称为菜单项），菜单会打开，然后你可以单击其中一个命令。
+
+
 
 你也可以在菜单上单击并拖动。你在释放鼠标时光标下的选项将成为所选命令。
 
@@ -434,17 +368,13 @@ Options 标签存储了一些控件…
 
 在分层菜单中，单击显示箭头的菜单项会打开一个包含附加命令或子菜单的子菜单。
 
-省略号 (...) 标记打开窗口或对话框的命令。永远不要害怕探索带有省略号的菜单命令，因为你始终可以用无害的方式取消对话框。
+省略号 `...` 标记打开窗口或对话框的命令。永远不要害怕探索带有省略号的菜单命令，因为你始终可以用无害的方式取消对话框。
 
-命令也可以通过输入键盘快捷键来调用。例如，你可以在 K 文件管理器（或 KFM）窗口处于活动状态时通过输入 Ctrl+T 来调用打开终端命令，如前图所示。
+命令也可以通过输入键盘快捷键来调用。例如，你可以在 `K` 文件管理器（或 `KFM`）窗口处于活动状态时通过输入 `Ctrl+T` 来调用打开终端命令，如前图所示。
 
+不同的应用程序可能会将 `Ctrl+T` 用于不同的目的。
 
-
-
-
-不同的应用程序可能会将 Ctrl+T 用于不同的目的。
-
-带有下划线 (_) 的菜单项可以通过按 Alt+字母 的方式使用键盘打开。
+带有下划线 `_` 的菜单项可以通过按 `Alt+字母` 的方式使用键盘打开。
 
 变暗的命令当前不可用，无法选择。
 
@@ -462,7 +392,6 @@ Options 标签存储了一些控件…
 
 …and like this after you release the mouse.
 
-
 当应用程序需要以文本形式输入额外信息时，您会将该信息输入到文本字段或其较大的表亲文本区域中。标签通常会指示文本字段的用途。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_28_3.png)
@@ -471,7 +400,7 @@ Options 标签存储了一些控件…
 
 在使用文本字段时，会显示 I-beam 形光标，表示您可以在此处输入文本。要移动到另一个字段或使字段获得焦点，请单击它。
 
-要选择文本的一部分，请在要开始选择的位置单击鼠标按钮并拖动到要结束的位置。（在某些应用程序中，您也可以单击然后 Shift+单击 选择的末尾。）
+要选择文本的一部分，请在要开始选择的位置单击鼠标按钮并拖动到要结束的位置。（在某些应用程序中，您也可以单击然后 `Shift+单击` 选择的末尾。）
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_28_4.png)
 
@@ -481,47 +410,41 @@ Options 标签存储了一些控件…
 
 ...and then drag to where you want the selection to end. The selected text is highlighted, and typing replaces the current selection.
 
-
-您可以通过按 Tab 键在控件和表单（控件的集合）之间移动。当前活动的控件会显示黑色轮廓以指示其已被选中。然后您可以使用键盘更改其当前设置，如果控件是文本字段则输入数据，或如果它是某种按钮则选择它。
+您可以通过按 `Tab` 键在控件和表单（控件的集合）之间移动。当前活动的控件会显示黑色轮廓以指示其已被选中。然后您可以使用键盘更改其当前设置，如果控件是文本字段则输入数据，或如果它是某种按钮则选择它。
 
 您可以使用键盘上的箭头键更改滑块的设置。
 
 如果控件可以被单击，您也可以在控件被选中的情况下按空格键来激活它。
 
-要向后移动，您可以按 Shift+Tab。
-
+要向后移动，您可以按 `Shift+Tab`。
 
 在工作会话结束时，您可以注销。如果您几天内不打算使用计算机，则应将其关闭。记住在执行这些操作之前保存您的工作。关闭系统的过程对磁盘的健康至关重要，所以不要直接关闭电源按钮！
 
 > Check This Out:
+>
 > Don’t turn off the power to your computer until the computer says that the system has been halted. Otherwise, you can damage your computer.
 
-要注销，请从应用程序启动器（X 图标）中选择注销，或单击 KDE 面板中的注销图标。如果您有应用程序处于打开状态，您将收到“Session prepared for logout”对话框，显示您可能丢失的数据。此时您可以改变主意，如果需要返回保存信息。
+要注销，请从应用程序启动器（X 图标）中选择注销，或单击 `KDE` 面板中的注销图标。如果您有应用程序处于打开状态，您将收到“Session prepared for logout”对话框，显示您可能丢失的数据。此时您可以改变主意，如果需要返回保存信息。
 
 要关闭计算机，首先注销，然后在登录面板上选择关机。在出现的面板上再次选择关机。计算机停止后，您可以关闭电源。
 
 要重新启动计算机而不是简单地停止它，请注销，然后在登录面板上选择关机。在 resulting 对话框中，选择重启。
 
-如果由于某种奇怪的原因您的桌面停止响应，您可以通过按 Ctrl+Alt+Backspace 强制退出。这样做将终止 X 服务器（KDE）并带您返回控制台。这里再次体现了 Linux 的一个优点：您可以在不重新启动机器的情况下退出卡住的 GUI。
+如果由于某种奇怪的原因您的桌面停止响应，您可以通过按 `Ctrl+Alt+Backspace` 强制退出。这样做将终止 `X` 服务器（`KDE`）并带您返回控制台。这里再次体现了 Linux 的一个优点：您可以在不重新启动机器的情况下退出卡住的 GUI。
 
 要访问内容，请单击章节和节标题。
 
-
-
 Search this book:
 
-
-
-
-在 Linux 下，您可以选择在以下界面中工作：一种是控制台（由多个 shell 程序之一生成的基于文本的界面）；另一种是使用图形用户界面（GUI），例如 X Window System，更 commonly known as X Windows。在 GUI 中，窗口代表应用程序和文档。即使窗口只是控制台的花哨界面，窗口化环境也能让您更高效，因为您可以同时与多个应用程序和程序交互。
+在 Linux 下，您可以选择在以下界面中工作：一种是控制台（由多个 shell 程序之一生成的基于文本的界面）；另一种是使用图形用户界面（GUI），例如 `X Window System`，更 commonly known as `X Windows`。在 GUI 中，窗口代表应用程序和文档。即使窗口只是控制台的花哨界面，窗口化环境也能让您更高效，因为您可以同时与多个应用程序和程序交互。
 
 > Techno Talk:
-> Unlike other operating systems, X Windows, the windowing environment on UNIX and UNIX-like environments like Linux, allows you to choose your interface. In X Windows terms, the look and feel of your windows are provided by a window manager.
+>
+> Unlike other operating systems, `X Windows`, the windowing environment on UNIX and UNIX-like environments like Linux, allows you to choose your interface. In `X Windows` terms, the look and feel of your windows are provided by a window manager.
 
-窗口管理器定义了用户界面的外观和感觉。KDE 是一个具有许多额外且 desirable 功能的窗口管理器，但您可以用其他管理器替代它。有些已经内置在您的系统中。
+窗口管理器定义了用户界面的外观和感觉。`KDE` 是一个具有许多额外且 desirable 功能的窗口管理器，但您可以用其他管理器替代它。有些已经内置在您的系统中。
 
-
-KDE 窗口的行为与其它操作系统中的对应窗口相似。窗口通常分为两类：
+`KDE` 窗口的行为与其它操作系统中的对应窗口相似。窗口通常分为两类：
 
 - Standard application windows
 - Dialogs and panels
@@ -530,15 +453,15 @@ KDE 窗口的行为与其它操作系统中的对应窗口相似。窗口通常�
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_32_0.png)
 
-KEdit，一个文本编辑器，是应用程序窗口及其元素的良好示例。
+`KEdit`，一个文本编辑器，是应用程序窗口及其元素的良好示例。
 
-窗口顶部有一个标题栏，显示窗口的名称。通常，此名称将是应用程序或您正在工作的文档的名称。有时，对话框可能会在此区域显示其他信息性消息。标题过长的 KDE 标题栏会显示有趣的动画：标题在疯狂的乒乓舞中来回弹跳。
+窗口顶部有一个标题栏，显示窗口的名称。通常，此名称将是应用程序或您正在工作的文档的名称。有时，对话框可能会在此区域显示其他信息性消息。标题过长的 `KDE` 标题栏会显示有趣的动画：标题在疯狂的乒乓舞中来回弹跳。
 
 窗口通常还具有滚动条，沿窗口右侧和底部的滑块型控件，用于在文档视图中移动。当文档大于窗口可显示的内容时会出现滚动条。
 
 对话框和面板是让您输入信息以告诉应用程序该做什么的窗口。您通常会在发出菜单命令或激活需要您确认的某些应用程序功能时看到它们，例如退出应用程序、保存文件等。
 
-其他面板允许您输入命令所需的额外信息。例如，KEdit 应用程序中的查找面板需要有关要查找文本的信息。
+其他面板允许您输入命令所需的额外信息。例如，`KEdit` 应用程序中的查找面板需要有关要查找文本的信息。
 
 一些面板，称为对话框，会向您提问并提供按钮供您提供答案。其他对话框只是通知您正在发生的某些事件，需要您确认以关闭该框。
 
@@ -553,13 +476,14 @@ KEdit，一个文本编辑器，是应用程序窗口及其元素的良好示例
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_33_1.png)
 
 一些对话框框只需您确认即可将其关闭。
+
 ## Window Controls
 
 窗口提供多个操作控件。其中许多控件显示在窗口的标题栏区域。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_33_2.png)
 
-KDE 窗口的标题栏区域有几个按钮。
+`KDE` 窗口的标题栏区域有几个按钮。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_33_3.png)
 
@@ -571,6 +495,8 @@ KDE 窗口的标题栏区域有几个按钮。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_33_5.png)
 
+
+
 图标化按钮将窗口折叠到任务栏。单击任务栏上的其任务按钮将使窗口重新出现在桌面上。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_33_6.png)
@@ -581,18 +507,11 @@ KDE 窗口的标题栏区域有几个按钮。
 
 关闭按钮关闭窗口并终止应用程序。
 
-
-
-
-
 要访问内容，请点击章节和节标题。
-
-
 
 搜索本书：
 
 上一页 目录 下一页
-
 
 要使用一个窗口，该窗口需要获得焦点或处于活动状态。活动窗口是标题栏为深色的那个。如果开始输入，它将接收按键。同一时间只能有一个活动窗口。
 
@@ -603,7 +522,6 @@ KDE 窗口的标题栏区域有几个按钮。
 如何激活窗口取决于焦点策略。基本上，有两种主要方式可以激活窗口：第一种是通过点击窗口（KDE 中的默认设置）；另一种是通过将光标移动到你想要激活的窗口上（其他窗口管理器的默认设置）。
 
 我喜欢点击来切换活动窗口，因为我可以通过点击窗口上的任意位置来激活窗口并将其置于前台。另一种策略虽然在一天中可能为你节省一些点击次数，但要求你小心放置鼠标。
-
 
 窗口可能完全重叠，以至于一个完全覆盖另一个。在这种情况下，你可能需要将窗口图标化以将其移开，或者通过菜单或任务栏访问你想要的窗口。
 
@@ -623,7 +541,7 @@ KDE 窗口的标题栏区域有几个按钮。
 
 ## 调整窗口大小
 
-可以通过抓住窗口的边缘或角落来调整窗口大小。当你处于调整大小区域时，光标会变为窗口调整大小光标（参见第 1 章，“KDE 桌面上的首次登录。”
+可以通过抓住窗口的边缘或角落来调整窗口大小。当你处于调整大小区域时，光标会变为窗口调整大小光标（参见第 1 章，“KDE 桌面上的首次登录。”）
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_35_2.png)
 
@@ -650,31 +568,38 @@ KDE 窗口的标题栏区域有几个按钮。
 ## Linux完全傻瓜指南
 
 （出版社：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 搜索本书：
 
 ## 第 3 章
+
 浏览文件系统
 
 ## 本章内容
 
 - 介绍 Linux 文件系统
+
 - 通过 KFM 查看的文件系统
+
 - 打开文件和文件夹
+
 - 介绍文件权限
 
 计算机在文件和文件夹中保存和组织信息。文件可以是你畅销小说的章节，也可以是你最喜欢的地球地点的图像扫描。文件也可以是用于创建其他文件的程序或应用程序。文件夹可以包含其他文件夹和文件，而这些文件夹和文件又可以包含更多文件夹和文件，嵌套的层级可以任意多。
 
 你计算机中的文件和文件夹构成了文件系统。在你计算机的文件系统最顶层是一个根文件夹，其中包含计算机中存储的所有文件和目录。
 
-你计算机中的每个文件和文件夹都有一个名称来标识其内容。例如，包含你的电子邮件文件的文件夹可能恰当地命名为 "Mail"。包含你的待办事项列表的文件可能称为 "todo"。
+你计算机中的每个文件和文件夹都有一个名称来标识其内容。例如，包含你的电子邮件文件的文件夹可能恰当地命名为 `Mail`。包含你的待办事项列表的文件可能称为 `todo`。
 
-Linux 中的文件名长度可达 256 个字符。它们可以包含数字和大小写字母。你可以使用大多数字符；然而，有一些字符应避免使用。星号 (*)、问号 (?)、与号 (&)、竖线 (|)、脱字符 (^)、引号 (") 和撇号 (') 等字符永远不应使用，因为这些字符对 shell 来说是特殊的。连字符 (-) 和空格等字符也不应使用，因为它们在 shell 中难以处理和删除。（连字符用于指定程序参数。一些工具在文件名以连字符开头时会感到困惑，因为它们会认为你是在指定参数而不是文件名。）空格会使 shell 认为你是在指定两个不同的文件。（用引号将其括起来以便从 shell 访问。）即使你只打算通过 KDE 或其他图形环境工作，也应避免这些字符。
+Linux 中的文件名长度可达 256 个字符。它们可以包含数字和大小写字母。你可以使用大多数字符；然而，有一些字符应避免使用。星号（*）、问号（?）、与号（&）、竖线（|）、脱字符（^）、引号（"）和撇号（'）等字符永远不应使用，因为这些字符对 shell 来说是特殊的。连字符（-）和空格等字符也不应使用，因为它们在 shell 中难以处理和删除。（连字符用于指定程序参数。一些工具在文件名以连字符开头时会感到困惑，因为它们会认为你是在指定参数而不是文件名。）空格会使 shell 认为你是在指定两个不同的文件。（用引号将其括起来以便从 shell 访问。）即使你只打算通过 KDE 或其他图形环境工作，也应避免这些字符。
 
-除了描述性名称外，文件和文件夹还有一个路径名，用于标识其在文件系统中的位置。路径名列出了从根开始你必须遍历以到达该文件的所有文件夹。文件路径中的所有名称均以斜杠 (/) 分隔。路径名开头的斜杠代表根文件夹。
+除了描述性名称外，文件和文件夹还有一个路径名，用于标识其在文件系统中的位置。路径名列出了从根开始你必须遍历以到达该文件的所有文件夹。文件路径中的所有名称均以斜杠（/）分隔。路径名开头的斜杠代表根文件夹。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_38_0.png)
 
@@ -683,6 +608,7 @@ Linux 中的文件名长度可达 256 个字符。它们可以包含数字和大
 在 Linux 下你所做的一切都需要与文件系统交互。在 Linux 下有两种访问文件的方式：
 
 - 通过 KDE 等图形环境
+
 - 通过 shell 或命令提示符
 
 本节重点介绍使用图形工具 K File Manager (KFM)，它是 KDE 环境的一部分。其他 X 环境提供自己的工具，或作为最后的手段提供 xfm（X 文件管理器）。
@@ -692,42 +618,53 @@ Linux 中的文件名长度可达 256 个字符。它们可以包含数字和大
 KFM 是 KDE 的文件管理器。KFM 提供网络透明的文件访问。此术语意味着如果你的计算机连接到网络，你可以使用图形界面通过 FTP（文件传输协议）或 HTTP（超文本传输协议，Web 使用的协议）等标准互联网协议访问存储在其他计算机上的资源。此功能非常强大，因为它允许你以同等的轻松浏览位于你磁盘上的信息或位于中国计算机上的信息。
 
 > 查看此内容：
+>
 > 通过 shell 访问文件在第 11 章“Shells and Consoles”中有详细介绍。
 
-在 KFM 中，图标代表文件和文件夹。统一资源定位符（URLs）代表文件路径。URL 就像加强版的文件路径：它指定你可以使用各种协议访问的文件（资源）的位置。URL 通常提供
-
-
+在 KFM 中，图标代表文件和文件夹。统一资源定位符（URLs）代表文件路径。URL 就像加强版的文件路径：它指定你可以使用各种协议访问的文件（资源）的位置。URL 通常提供：
 
 - 协议（如何访问资源）
+
 - 机器名（存储资源的机器）
+
 - 资源路径
 
-除非你在过去几年里与世隔绝，否则你一定听说过互联网——并且可能熟悉像 http://www.aol.com 或 http://www.yahoo.com 这样的互联网地址。这些地址就是 URL。
+除非你在过去几年里与世隔绝，否则你一定听说过互联网——并且可能熟悉像 `http://www.aol.com` 或 `http://www.yahoo.com` 这样的互联网地址。这些地址就是 URL。
 
-文件 URL 看起来与 HTTP URL 相似：file:/home/alberto。明显的区别之一是使用的协议称为 file 而不是 http。文件协议指定本地计算机、你的计算机中的一个文件。另一个区别是冒号后只有一个斜杠，而不是你在访问网络时可能看到或使用过的两个斜杠。
+文件 URL 看起来与 HTTP URL 相似：`file:/home/alberto`。明显的区别之一是使用的协议称为 file 而不是 http。文件协议指定本地计算机、你的计算机中的一个文件。另一个区别是冒号后只有一个斜杠，而不是你在访问网络时可能看到或使用过的两个斜杠。
 
 KFM 窗口为你提供菜单、带有导航工具的工具栏、输入文件路径和 URL 的位置字段，以及用于消息和文件额外信息的状态区域。
 
 通常你通过点击面板上的主页按钮来打开 KFM 窗口。KFM 窗口的其他功能包括：
 
 - Toolbar — 为你在文件系统中移动和操作文件提供快捷方式。
+
 - Location field — 指定你正在浏览的 URL。
+
 - Status area — 显示有关文件和文件选择的信息。（在窗口底部）
+
 - Home button (KFM) — 点击此按钮可创建文件查看器窗口。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_39_0.png)
 
-KFM 显示的根目录如下所示。注意状态区域中为 vmlinuz 文件显示的额外信息。
+KFM 显示的根目录如下所示。注意状态区域中为 `vmlinuz` 文件显示的额外信息。
 
 ## The KFM Navigation Toolbar
 
 KFM 工具栏为你在目录之间移动和操作文件提供了方便的按钮：
 
 - Up 按钮将使你从当前位置向上移动一个文件夹。
+
 - Back 按钮将使你返回到上一个位置。如果你已在位置栏中输入了目录，后退按钮将按你导航历史的相反顺序移动你。
+
 - Forward 按钮将在你的导航历史中向前移动。（你必须先使用过后退按钮，此按钮才会被启用。）
+
 - Home 按钮将带你到你的主目录。
+
 - Refresh 按钮将重新加载目录并使你所做的任何更改可见。
+
+
+
 - Copy 和 Paste 按钮在第 6 章“组织你的文件”中进行了解释。
 - Help 按钮打开帮助程序，其中包含有关 KDE 的信息。
 - Task 按钮在进行长时间任务时会动画显示。如果你点击它，可以创建一个新的 KFM 窗口。
@@ -740,10 +677,10 @@ KFM 的工具栏提供各种按钮来帮助你在文件系统中导航。
 
 ## Complete Idiot's Guide to Linux
 
-（出版商：Macmillan Computer Publishing）
-作者：Manuel Ricart
-ISBN：078971826x
-出版日期：12/22/98
+- 出版商：Macmillan Computer Publishing
+- 作者：Manuel Ricart
+- ISBN：078971826x
+- 出版日期：12/22/98
 
 Search this book:
 
@@ -759,7 +696,7 @@ Previous Table of Contents Next
 
 要选择一个文件夹而不打开它，按住 Ctrl 键的同时点击它。
 
-点文件——以句点 ( . ) 开头的名称的文件——通常会从文件列表中省略。要使用 KFM 查看点文件，请从 View 菜单中选择 Show Dot Files 命令。
+点文件——以句点（`.`）开头的名称的文件——通常会从文件列表中省略。要使用 KFM 查看点文件，请从 View 菜单中选择 `Show Dot Files` 命令。
 
 当你打开一个目录时，显示前一个文件夹内容的视图将被新文件夹的内容所取代。
 
@@ -771,7 +708,7 @@ Previous Table of Contents Next
 
 要选择一个文件而不打开它，按住 Ctrl 键的同时点击它。
 
-KFM 使用各种方法来尝试确定文件的类型。它使用的一种方法是查看文件扩展名（通常是文件名末尾句点后跟随的三个字符名称）。另一种方法会查看文件的内容。
+KFM 使用各种方法来尝试确定文件的类型。它使用的一种方法是查看文件扩展名（通常是文件名末尾句点（`.`）后跟随的三个字符名称）。另一种方法会查看文件的内容。
 
 如果 KFM 无法确定你的文件由哪个应用程序打开，该文件将显示一个带有问号的图标。
 
@@ -791,12 +728,13 @@ KFM 使用各种方法来尝试确定文件的类型。它使用的一种方法�
 
 ## A Tree View
 
-KFM 提供了一个树视图，你可以用它轻松地在文件夹之间跳转。你可以通过 View 菜单中的 Show Tree 选项启用树视图。
+KFM 提供了一个树视图，你可以用它轻松地在文件夹之间跳转。你可以通过 View 菜单中的 `Show Tree` 选项启用树视图。
 
 > **Check This Out:**
+>
 > 要将文件与 KDE 应用程序关联，请参阅第 10 章“自定义 KDE。”
 
-Show Tree 命令显示三个文件夹：根文件夹（/）、一个名为“My Home”的指向你自己主目录的快捷方式，以及一个名为“Desktop”的目录。
+`Show Tree` 命令显示三个文件夹：根文件夹（`/`）、一个名为“My Home”的指向你自己主目录的快捷方式，以及一个名为“Desktop”的目录。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_43_0.png)
 
@@ -804,15 +742,15 @@ Show Tree 命令显示三个文件夹：根文件夹（/）、一个名为“My 
 
 ## A File List
 
-你可以以包含每个文件的额外信息的方式列出当前文件夹的内容，例如其大小、所有者、权限和最后修改时间。要查看额外的文件详细信息，请在 View 菜单中选择 Long View 选项。
+你可以以包含每个文件的额外信息的方式列出当前文件夹的内容，例如其大小、所有者、权限和最后修改时间。要查看额外的文件详细信息，请在 View 菜单中选择 `Long View` 选项。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_43_1.png)
 
-Long View 选项提供有关文件的更多信息。
+`Long View` 选项提供有关文件的更多信息。
 
 ## What the Listing Means
 
-当你使用 Long View 显示文件夹的内容时，以下额外信息会以表格格式显示：
+当你使用 `Long View` 显示文件夹的内容时，以下额外信息会以表格格式显示：
 
 - 文件名
 - 权限
@@ -845,36 +783,35 @@ Long View 选项提供有关文件的更多信息。
 
 权限之所以有效，是因为所有用户都必须在访问计算机之前登录到 Linux。每当你访问一个文件时，系统都会检查你是否对该文件具有适当的权限。如果没有，系统会拒绝你的请求。有几种权限级别：
 
-- 读取权限 (r) 表示谁可以读取文件
-- 写入权限 (w) 表示谁可以修改文件
-- 执行权限 (x) 表示谁可以运行程序或读取目录
-- 权限缺失由破折号 (-) 表示
+- 读取权限（`r`）表示谁可以读取文件
+- 写入权限（`w`）表示谁可以修改文件
+- 执行权限（`x`）表示谁可以运行程序或读取目录
+- 权限缺失由破折号（`-`）表示
 
 权限指定为三组；以下是权限的读取方式：
 
+```
 -rw-r--r-- 所有者权限可读可写
 -rw-r--r-- 组权限可读
 -rw-r----- 其他人权限可读
 drwxr-xr-x 一个“d”标记文件夹或“目录”
 lrwxrwxrwx 一个“l”标记指向文件或文件夹的链接
+```
 
 ## Bookmarks
 
 KFM 能够通过“书签”记住你文件系统中的位置。书签允许你保存一个位置，以便无论它有多深，你都可以快速返回。在这方面，它们的功能类似于网络书签。
 
 要创建书签：
+
 1. 使用 KFM 导航到所需位置
-2. 在 Bookmarks 菜单下选择 Add Bookmark 命令
+2. 在 Bookmarks 菜单下选择 `Add Bookmark` 命令
 
 书签可以通过 KFM 窗口中的 Bookmarks 菜单或通过右键单击桌面空白区域来访问。
 
 ## Selecting Files and Folders
 
-在 KFM 中，如果按住 Ctrl
-
-
-
-key while making your selection. From the keyboard, you can use the arrow keys to move among icons. To select an icon, press the Spacebar. To open the icon, press Enter.
+在 KFM 中，如果按住 Ctrl key while making your selection. From the keyboard, you can use the arrow keys to move among icons. To select an icon, press the Spacebar. To open the icon, press Enter.
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_45_0.png)
 
@@ -892,10 +829,10 @@ To access the contents, click the chapter and section titles.
 
 ## Complete Idiot's Guide to Linux
 
-(Publisher: Macmillan Computer Publishing)
-Author(s): Manuel Ricart
-ISBN: 078971826x
-Publication Date: 12/22/98
+- Publisher: Macmillan Computer Publishing
+- Author(s): Manuel Ricart
+- ISBN: 078971826x
+- Publication Date: 12/22/98
 
 Bookmark it
 
@@ -903,35 +840,38 @@ Search this book:
 
 Previous Table of Contents Next
 
-## Chapter 4
-Working with Applications
+## Chapter 4: Working with Applications
 
-## In This Chapter
+### In This Chapter
 
 - Various ways you can launch and stop applications
 - How to work with multiple applications
-- How to use virtual desktops
-- A list of some of the KDE applications that you might find in your application starter
+
+
+
+## How to use virtual desktops
+
+## A list of some of the KDE applications that you might find in your application starter
 
 Both KDE and Linux come with a number of applications ready to use. This chapter teaches you how to work with applications in a graphical environment. You'll see that working with multiple applications at the same time is very easy under a graphical environment such as KDE.
 
 > Techno Talk: Applications, Programs, and Tools
+>
 > So what is the difference between an application, a program, and a tool? All of them are programs. A program is something that runs in your computer.
-> 
+>
 > In general, an application is a program that is interactive, uses a graphical user interface (GUI), and is flexible for a number of tasks.
-> 
+>
 > A tool can sometimes be interactive and guide you through various steps, but it is more limited in scope. Typically, tools run in the command line, but depending on the tool, it could also have a GUI.
-> 
+>
 > In this book I use the terms interchangeably; however, most of the time, an
 
 ### Manually Starting an Application
 
 There are several ways you can start an application:
-
 - If the application appears on the panel, you can click its icon.
-- If you are browsing using KFM and you see the applications icon in a window, you can also click it to start it up.
+- If you are browsing using `KFM` and you see the applications icon in a window, you can also click it to start it up.
 - If you know the name of the application’s program file, or “binary,” you can type it into a shell to launch it. (You will get information on how to work with a shell in Part 2 of this book, “Working on the Command Line.”)
-- Finally, if the application is available on the Application Starter (K Menu), you can launch it by picking the appropriate entry in the menu. The Application starter is shown in the following figure.
+- Finally, if the application is available on the Application Starter (`K Menu`), you can launch it by picking the appropriate entry in the menu. The Application starter is shown in the following figure.
 
 When an application is launched, Linux will load it into memory and start it. After a few seconds of disk activity, you will see its window appear. A task button is also added to the taskbar to represent it.
 
@@ -939,12 +879,13 @@ When an application is launched, Linux will load it into memory and start it. Af
 
 The KDE Desktop gives you several ways of starting an application.
 
-Documents or applications stored in Autostart are launched when you start the session. Applications can also be started by typing their name on the command line.
+Documents or applications stored in `Autostart` are launched when you start the session. Applications can also be started by typing their name on the command line.
 
 An application can also be started by clicking on the icon for a document associated with it. If you click on a document, its application will start up and display the contents of the document.
 
 > **Check This Out:**
-> Applications and documents are associated via kdelnk files. Kdelnk files have a `.kdelnk` extension. These files provide information that allows KFM to associate icons, documents, and applications. Having these associations allows KFM to open your document with an application when you click on a document’s icon. For more information on `.kdelnk` files, see Chapter 10.
+>
+> Applications and documents are associated via `kdelnk` files. `kdelnk` files have a `.kdelnk` extension. These files provide information that allows `KFM` to associate icons, documents, and applications. Having these associations allows `KFM` to open your document with an application when you click on a document’s icon. For more information on `.kdelnk` files, see Chapter 10.
 
 ### Working with Multiple Applications
 
@@ -960,9 +901,19 @@ There are two ways that you can switch between applications: If the application 
 
 Switching between applications.
 
-You can also switch between applications by pressing Alt+Tab. If you keep the Alt key pressed and then hit Tab, you will see a series of icons representing all running applications. Hitting Tab again (while still holding the Alt key) will display the next application on the list. When you have found the application you want to make active, let go of the Alt key.
 
-### Hiding an Application
+
+# Complete Idiot's Guide to Linux
+
+- Publisher: Macmillan Computer Publishing
+- Author(s): Manuel Ricart
+- ISBN: 078971826x
+- Publication Date: 12/22/98
+- Search this book:
+
+You can also switch between applications by pressing `Alt+Tab`. If you keep the Alt key pressed and then hit Tab, you will see a series of icons representing all running applications. Hitting Tab again (while still holding the Alt key) will display the next application on the list. When you have found the application you want to make active, let go of the Alt key.
+
+## Hiding an Application
 
 You can hide an application by clicking its iconify (also called minimize) button. The application is still running and available, but its windows are removed from the screen. A hidden application continues to display a button in the taskbar.
 
@@ -972,16 +923,7 @@ When you click the application’s button in the taskbar, the application and it
 
 To access the contents, click the chapter and section titles.
 
-## Complete Idiot's Guide to Linux
-
-(Publisher: Macmillan Computer Publishing)
-Author(s): Manuel Ricart
-ISBN: 078971826x
-Publication Date: 12/22/98
-
-Search this book:
-
-### Virtual Desktops
+## Virtual Desktops
 
 In KDE you have the ability to work in more than one desktop at a time. This ability is useful if you perform different tasks that require various groups of applications running at the same time.
 
@@ -991,9 +933,9 @@ In KDE you can have up to eight different virtual desktops. By default, however,
 
 The Virtual desktops feature and KDE’s Workspace Auto-restore feature make a powerful combination. You will find more information on the KDE Workspace Auto-restore feature later in the section “The KDE Workspace Auto-restore Feature.”
 
-### Switching Between Desktops
+## Switching Between Desktops
 
-To switch between virtual desktops, click the desktop button in the panel (see the following figure). If you like keyboard commands, you can also press Ctrl+Fn, where n is the number of the virtual desktop you want to view. You can also press Ctrl+Tab to cycle between the various desktops.
+To switch between virtual desktops, click the desktop button in the panel (see the following figure). If you like keyboard commands, you can also press `Ctrl+Fn`, where `n` is the number of the virtual desktop you want to view. You can also press `Ctrl+Tab` to cycle between the various desktops.
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_50_0.png)
 
@@ -1001,15 +943,17 @@ To switch between desktops, click the button for the desktop you want to visit.
 
 If you click on a task button for an application that is active in a different desktop, you will also switch to that desktop.
 
-To switch between applications and desktops and get a list of the current tasks organized by desktop, press Ctrl+Esc. (Alt+Esc also works for this purpose. And, you can use the Windowlist menu in the panel for this purpose. See "Accessing Windows that Overlap" in Chapter 2, "Working with Windows.")
+To switch between applications and desktops and get a list of the current tasks organized by desktop, press `Ctrl+Esc`. (`Alt+Esc` also works for this purpose. And, you can use the Windowlist menu in the panel for this purpose. See "Accessing Windows that Overlap" in Chapter 2, "Working with Windows.")
 
-### Sending an Application to a Different Desktop
+## Sending an Application to a Different Desktop
 
 To send an application to a different desktop, you can use the window menu and pick the appropriate desktop from the To desktop submenu. The window menu is accessible from all KDE windows (see the following figure).
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_50_1.png)
 
 Use the To Desktop submenu to move an application to a different desktop.
+
+
 
 Alternatively, you can right-click the window’s title bar to display a number of menu commands, including the To desktop submenu. Note that the icon displayed for this menu will be different depending on the application you are running.
 
@@ -1023,10 +967,6 @@ There are some applications that you must use in all desktops. A good example of
 
 To “pin” a window and make it visible from all desktops, click the pin icon on a window’s title bar.
 
-
-
-
-
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_51_0.png)
 
 固定一个窗口会使其在所有桌面上显示。在此图中，KFM 窗口被所有虚拟桌面共享。
@@ -1037,7 +977,7 @@ KDE 还包含一个名为 Desktop Pager 的桌面分页器应用程序。桌面�
 
 在桌面和应用程序之间切换只需选择正确的按钮和所需的应用程序即可。应用程序窗口会根据其所属的应用程序进行标记。
 
-Desktop Pager 可从应用程序启动器菜单中的系统应用程序组获得。您也可以通过在 shell 中发出命令 kwmpager 来启动分页器。
+Desktop Pager 可从应用程序启动器菜单中的系统应用程序组获得。您也可以通过在 shell 中发出命令 `kwmpager` 来启动分页器。
 
 ## 启用活动桌面边框选项
 
@@ -1047,7 +987,7 @@ Desktop Pager 可从应用程序启动器菜单中的系统应用程序组获得
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_51_1.png)
 
-Desktop Pager（kwmpager）显示带有所有虚拟桌面缩略图视图的按钮。要更改桌面，只需单击所需的桌面按钮即可。
+Desktop Pager（`kwmpager`）显示带有所有虚拟桌面缩略图视图的按钮。要更改桌面，只需单击所需的桌面按钮即可。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_52_0.png)
 
@@ -1064,8 +1004,11 @@ To access the contents, click the chapter and section titles.
 ## Complete Idiot's Guide to Linux
 
 (Publisher: Macmillan Computer Publishing)
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
 
 Search this book:
@@ -1104,39 +1047,45 @@ KDE 桌面有一个名为 Autostart 的特殊目录。Autostart 目录中的任�
 
 ## KDE 应用程序帮助：kdehelp
 
-大多数 KDE 应用程序都提供内置帮助。可以通过帮助菜单访问此帮助系统。从帮助菜单中选择内容命令将打开 kdehelp 查看器。此工具是用于帮助信息的专用浏览器。如果您熟悉使用 Web 浏览器，您将不会有任何问题来浏览此系统。简而言之，下划线文本是超链接。单击超链接将带您到文档中讨论该主题的位置。
+大多数 KDE 应用程序都提供内置帮助。可以通过帮助菜单访问此帮助系统。从帮助菜单中选择内容命令将打开 `kdehelp` 查看器。此工具是用于帮助信息的专用浏览器。如果您熟悉使用 Web 浏览器，您将不会有任何问题来浏览此系统。简而言之，下划线文本是超链接。单击超链接将带您到文档中讨论该主题的位置。
 
-kdehelp 工具也可以从面板访问（参见下图）。
+`kdehelp` 工具也可以从面板访问（参见下图）。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_55_0.png)
 
-kdehelp 工具是用于浏览 KDE 文档的专用 Web 浏览器。
+`kdehelp` 工具是用于浏览 KDE 文档的专用 Web 浏览器。
 
 此窗口的功能包括：
 
-- 所有 KDE 应用程序都有帮助菜单。选择内容命令以打开 kdehelp 工具并选择内容。
+- 所有 KDE 应用程序都有帮助菜单。选择内容命令以打开 `kdehelp` 工具并选择内容。
 - 单击下划线文本将向您显示有关下划线主题的更详细信息。
-- kdehelp 工具也可以通过单击面板上前一图中指出的图标来启动。
+- `kdehelp` 工具也可以通过单击面板上前一图中指出的图标来启动。
 
 ## 退出应用程序
+
+
 
 要退出应用程序，您可以单击主窗口的关闭按钮或使用文件菜单下的退出命令。由于您使用的某些应用程序的行为可能不一致，因此在单击窗口的关闭按钮之前始终保存文档是个好主意。行为良好的应用程序在退出前应给您保存工作的机会。
 
 To access the contents, click the chapter and section titles.
 
-## Complete Idiot's Guide to Linux
+# Complete Idiot's Guide to Linux
 
 (Publisher: Macmillan Computer Publishing)
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
 
 Search this book:
 
 ## Chapter 5
+
 创建、编辑和保存文件
 
-## 本章内容
+### 本章内容
 
 - 创建新文件
 - 打开现有文件
@@ -1146,10 +1095,7 @@ Search this book:
 
 文件将信息存储在计算机磁盘上。当您在编辑器窗口中给朋友打字时，您输入的文本存储在计算机内存中。您的信件通常被称为文档。如果您在先将文档保存到计算机磁盘上的文件之前退出程序，信息就会丢失。当您将文档保存到文件时，您以后可以打开它并继续编辑上次保存时中断的地方。
 
-在本章中，您将学习如何在应用程序内部处理文件：如何打开和保存文件以及如何保存文件的不同副本。本章还作为如何使用原型应用程序的介绍，例如 KDE 提供的编辑器 KEdit。（KEdit 是随 KDE 捆绑的简单文本编辑器。）
-
-
-
+在本章中，您将学习如何在应用程序内部处理文件：如何打开和保存文件以及如何保存文件的不同副本。本章还作为如何使用原型应用程序的介绍，例如 KDE 提供的编辑器 `KEdit`。`KEdit` 是随 KDE 捆绑的简单文本编辑器。
 
 ## 创建和保存文件
 
@@ -1157,7 +1103,7 @@ Search this book:
 
 ### 创建新文件
 
-通常，当你想要创建新文件时，你会打开一个应用程序并开始工作。通常，应用程序会以空文件开始（有时是文档，但不总是）。如果应用程 [已经运行]，你可能需要创建一个新的文档窗口，方法是运行新实例或使用应用程序的“新建”命令。通常，这个命令在 KDE 中会在“文件”菜单下找到。一些应用程序允许你同时工作于多个文档；一些则只允许你一次编辑一个文档。如果你的应用程序只支持单个文档，你可以通过启动另一个应用程序的实例来绕过这个限制。在下面的图中，你会看到 KEdit（一个文本编辑器）。
+通常，当你想要创建新文件时，你会打开一个应用程序并开始工作。通常，应用程序会以空文件开始（有时是文档，但不总是）。如果应用程 [已经运行]，你可能需要创建一个新的文档窗口，方法是运行新实例或使用应用程序的“新建”命令。通常，这个命令在 KDE 中会在“文件”菜单下找到。一些应用程序允许你同时工作于多个文档；一些则只允许你一次编辑一个文档。如果你的应用程序只支持单个文档，你可以通过启动另一个应用程序的实例来绕过这个限制。在下面的图中，你会看到 `KEdit`（一个文本编辑器）。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_57_0.png)
 
@@ -1167,8 +1113,8 @@ Search this book:
 
 - 文件菜单，提供处理文档和应用程序的命令，如“新建”用于创建新文件，“打开”用于打开现有文件，“保存”用于保存文件，“关闭”用于关闭文档，“退出”用于退出应用程序。
 - 选择“新建”来创建新文档。如果你想同时工作于多个文档，可以使用“新建窗口”命令或启动另一个应用程序实例。
-- KEdit 图标是右侧第二个图标（铅笔带绿色封面）：在面板上点击它的图标来启动 KEdit。
-- 未保存窗口的标题是“Untitled”。
+- `KEdit` 图标是右侧第二个图标（铅笔带绿色封面）：在面板上点击它的图标来启动 `KEdit`。
+- 未保存窗口的标题是“`Untitled`”。
 
 当你在应用程序中保存工作时，它会存储在文件中，以便你稍后读取或修改。第一次保存文件时，你需要为文件命名。
 
@@ -1186,7 +1132,7 @@ Search this book:
 
 当你点击文件时，“打开”面板会消失，文档会加载到应用程序中。
 
-### 自定义“打开”面板
+#### 自定义“打开”面板
 
 “打开”面板提供了许多选项，你可以使用它们来配置文件的显示方式。要更改配置，请选择“配置”按钮（见下面的图）。
 
@@ -1194,7 +1140,7 @@ Search this book:
 
 你可以在该对话框中自定义“打开”面板的许多元素。
 
-### “打开”面板的自定义设置
+#### “打开”面板的自定义设置
 
 大多数自定义设置都显而易见。我最喜欢的自定义是混合目录和文件（见下面的图）以及取消勾选单击一次打开文件或目录。（双击打开可以减少因单击误打开错误文件的可能性。）
 
@@ -1218,7 +1164,7 @@ Search this book:
 
 点击“确定”保存文件。
 
-当你保存文件时，你的工作会保存到指定目录的磁盘中。已保存文档的标题栏会从“Untitled”变为显示文件的名称和路径（见下面的图）。
+当你保存文件时，你的工作会保存到指定目录的磁盘中。已保存文档的标题栏会从“`Untitled`”变为显示文件的名称和路径（见下面的图）。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_59_2.png)
 
@@ -1229,43 +1175,46 @@ Search this book:
 ### 完整的傻瓜指南 to Linux
 
 （出版社：Macmillan Computer Publishing）
+
 作者（s）：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 搜索这本书：
 
-### 文件命名
+#### 文件命名
 
 你几乎可以为文件命名任何你想要的样子。但是，你需要遵守一些限制。
 
 新文件名不能与同一目录中的另一个文件重复。如果发生这种情况，现有文件将被新文件替换。
 
-文件名区分大小写；也就是说，Linux 将 introduction.txt 和 Introduction.txt 视为不同的文件。
+文件名区分大小写；也就是说，Linux 将 `introduction.txt` 和 `Introduction.txt` 视为不同的文件。
 
-某些字符——如星号（*）、问号（?）、井号（&）、竖线（|）、脱落号（^）、双引号（"）和撇号（'）——绝对不要使用，因为这些字符对 shell 具有特殊意义。
+某些字符——如星号（`*`）、问号（`?`）、井号（`&`）、竖线（`|`）、脱落号（`^`）、双引号（`"`）和撇号（`'`）——绝对不要使用，因为这些字符对 shell 具有特殊意义。
 
-像破折号（-）和空格这样的字符不应使用，因为它们在使用 shell 时会带来困难，并且在删除时会很麻烦。破折号用于指定程序参数。一些工具在文件名以破折号开头时会出错，因为它们会误以为你是在指定参数而非文件名。空格会让 shell 认为你指定了两个不同的文件（通过引号将它们括起来可以在 shell 中访问它们）。即使你只通过 KDE 或其他图形界面工作，也应避免这些字符。
+像破折号（`-`）和空格这样的字符不应使用，因为它们在使用 shell 时会带来困难，并且在删除时会很麻烦。破折号用于指定程序参数。一些工具在文件名以破折号开头时会出错，因为它们会误以为你是在指定参数而非文件名。空格会让 shell 认为你指定了两个不同的文件（通过引号将它们括起来可以在 shell 中访问它们）。即使你只通过 KDE 或其他图形界面工作，也应避免这些字符。
 
-文件名通常包含一个扩展名，用于指示文件类型。这个扩展名很重要，因为它告诉 KFM 在点击文件时使用哪个应用程序打开它。
+文件名通常包含一个扩展名，用于指示文件类型。这个扩展名很重要，因为它告诉 `KFM` 在点击文件时使用哪个应用程序打开它。
 
 一些常见的文件类型如下：
 
-- .txt 用于文本文件
-- .gif 用于 GIF 图像
-- .jpeg 或 .jpg 用于 JPEG 图像
-- .zip 用于压缩文件
-- .gz 用于 gzip 压缩文件
-- .tar 用于 tar 归档
-- .pl 用于 Perl 脚本
+- `.txt` 用于文本文件
+- `.gif` 用于 GIF 图像
+- `.jpeg` 或 `.jpg` 用于 JPEG 图像
+- `.zip` 用于压缩文件
+- `.gz` 用于 gzip 压缩文件
+- `.tar` 用于 tar 归档
+- `.pl` 用于 Perl 脚本
 
-### 保存文档的修改
+#### 保存文档的修改
 
 如果你在创建文件后对其进行修改，你需要再次保存它以存储新修改。为此，你可以使用应用程序“文件”菜单中的“保存”命令。
 
 在工作会话期间，你应该频繁保存文件，以防止因程序错误或电源故障导致工作丢失。
 
-### 保存新版本
+#### 保存新版本
 
 许多时候，在创建文档时，直接基于现有文件创建新文档更为方便。你可以使用“另存为”命令将文档保存到另一个文件中，从而重用和修改现有文档，同时保留旧文档。你也可以使用“另存为”命令创建文档的不同版本。这样，你可以回到之前的编辑版本。
 
@@ -1275,7 +1224,7 @@ ISBN：078971826x
 
 大多数文本编辑都基于“选择”的概念。选择是指通过点击并拖动来高亮的文本。通常，高亮文本是因为它是其他命令的目标。继续阅读，了解更多关于选择文本的信息。
 
-### 选择文本
+#### 选择文本
 
 要选择文本，点击你想要开始选择的位置，然后拖动鼠标到你想要结束的位置（见下面的图）。高亮区域即为选择。你可以对当前选择应用格式和编辑命令。
 
@@ -1284,8 +1233,6 @@ ISBN：078971826x
 要选择文本，点击你想要开始的位置，然后拖动到你想要结束的位置。
 
 一些应用程序允许你通过点击来定义选择，然后拖动。
-
-
 
 
 
@@ -1304,27 +1251,27 @@ To copy information, select the text you want to copy and choose the Copy comman
 To move text, first select the text and then choose Cut from the Edit menu. Then click your mouse where you want to place the information and choose Paste from the Edit menu. Paste will insert text that you copied or cut. You can even use this technique to move text between applications.
 
 > Check This Out:
+>
 > Under X (and KDE!), a shortcut to the copy and paste routine is to select text as you normally do, move your cursor where you want to place a copy, and then middle-click the mouse. (Or as you learned in Chapter 1, “The First Login on the KDE Desktop,” if you are using a two-button mouse, you can click both buttons simultaneously to simulate a middle click. However, for this to work, you must have specified the correct settings when you configured X Windows. See Appendix A, “Linux Installation.”)
 
 Text and information that you move in this way is placed in the clipboard. The clipboard is shared between running applications. This means that a selection you copy or move from one application can be inserted into another open application. Although this is true for most applications, some not-so-friendly applications don’t make their clipboard available to the rest of the system.
 
 To access the contents, click the chapter and section titles.
 
-## Complete Idiot's Guide to Linux
+# Complete Idiot's Guide to Linux
 
-(Publisher: Macmillan Computer Publishing)
-Author(s): Manuel Ricart
-ISBN: 078971826x
-Publication Date: 12/22/98
+- Publisher: Macmillan Computer Publishing
+- Author(s): Manuel Ricart
+- ISBN: 078971826x
+- Publication Date: 12/22/98
 
 Search this book:
 
 Previous Table of Contents Next
 
-## Chapter 6
-Organizing Your Files
+## Chapter 6: Organizing Your Files
 
-## In This Chapter
+### In This Chapter
 
 - Creating Folders
 - Working with Files and Folders
@@ -1332,7 +1279,7 @@ Organizing Your Files
 - Setting File and Folder Permissions
 - KDE Templates
 
-## Getting Organized: Creating a Folder
+### Getting Organized: Creating a Folder
 
 Folders, or directories, allow you to group your files along some criteria. (For example, files for a book project all go in one folder, and files for your correspondence go in another.) This grouping capability will help you locate your files more easily. This will be more important as the number of files you create and store grows.
 
@@ -1350,17 +1297,19 @@ The New command under the File menu is customizable, which is why you have to na
 
 In this panel, type the name of the new folder you want to create.
 
-## Copying Files and Folders
+### Copying Files and Folders
 
-You can copy files and folders into other folders. When you copy a folder, all the files and folders it contains are copied, too. In KFM, there are two ways that you can copy files and directories: using drag-and-drop and using the Clipboard with Copy and Paste.
+
+
+You can copy files and folders into other folders. When you copy a folder, all the files and folders it contains are copied, too. In `KFM`, there are two ways that you can copy files and directories: using drag-and-drop and using the Clipboard with `Copy` and `Paste`.
 
 ## Copying Files Using Drag and Drop
 
-When you copy files using drag and drop, you click and drag the file you want to copy into another directory, onto the desktop, or into another KFM window. A menu appears asking you if you want to copy, move, or link the item (see the next figure).
+When you copy files using drag and drop, you click and drag the file you want to copy into another directory, onto the desktop, or into another `KFM` window. A menu appears asking you if you want to copy, move, or link the item (see the next figure).
 
 ## Copying Files Using the Clipboard
 
-You can also copy files and folders using the clipboard. To copy a file, select it (Ctrl+Click) and then choose Copy from the Edit menu. Navigate in the KFM window to the directory where you would like to place the copy and choose Paste from the Edit menu.
+You can also copy files and folders using the clipboard. To copy a file, select it (`Ctrl+Click`) and then choose `Copy` from the `Edit` menu. Navigate in the `KFM` window to the directory where you would like to place the copy and choose `Paste` from the `Edit` menu.
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_64_2.png)
 
@@ -1368,23 +1317,23 @@ Copying a folder using drag-and-drop.
 
 ## Moving Files and Folders
 
-Moving files and folders is almost the same as copying the files using drag-and-drop. Instead of picking Copy from the pop-up menu, you pick Move (see the previous figure). Similar to copying a folder, if you move a folder, all files and folders inside the directory are also moved.
+Moving files and folders is almost the same as copying the files using drag-and-drop. Instead of picking `Copy` from the pop-up menu, you pick `Move` (see the previous figure). Similar to copying a folder, if you move a folder, all files and folders inside the directory are also moved.
 
 ## Linking Files and Folders
 
 If you often find yourself copying files in order to have easy access to them, Linux has a better solution: links.
 
-A link is a pointer to a file or folder that is somewhere else in the file system. A link looks and acts like the file or folder it points to. If you are viewing it through KFM, it will have the same icon (with the exception that it will have a little arrow next to it). When you open a link, you see the same file contents as the file the link points to.
+A link is a pointer to a file or folder that is somewhere else in the file system. A link looks and acts like the file or folder it points to. If you are viewing it through `KFM`, it will have the same icon (with the exception that it will have a little arrow next to it). When you open a link, you see the same file contents as the file the link points to.
 
-Links are created in the same way you copy or move files using drag and drop. You click and drag the file you want to link into another folder or the desktop, and when you let go of the mouse button, you choose Link from the menu that is displayed.
+Links are created in the same way you copy or move files using drag and drop. You click and drag the file you want to link into another folder or the desktop, and when you let go of the mouse button, you choose `Link` from the menu that is displayed.
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_65_0.png)
 
 ## Replacing a File or a Folder
 
-If you drag and drop a file whose name already exists in the directory, KFM will ask you if you would like to replace the original file or abort the operation (see the next figure).
+If you drag and drop a file whose name already exists in the directory, `KFM` will ask you if you would like to replace the original file or abort the operation (see the next figure).
 
-Replacing a folder or a file permanently removes the file you are replacing. When you go to replace a file, KFM presents you with a dialog box that allows you to do one of three things: Rename the file (if you don’t want to replace the original), skip the operation, or overwrite the file. If you drag multiple files, you can answer the dialog box a file at a time, or you can overwrite all files without any additional warnings.
+Replacing a folder or a file permanently removes the file you are replacing. When you go to replace a file, `KFM` presents you with a dialog box that allows you to do one of three things: Rename the file (if you don’t want to replace the original), skip the operation, or overwrite the file. If you drag multiple files, you can answer the dialog box a file at a time, or you can overwrite all files without any additional warnings.
 
 Be careful when you replace files. It’s important to remember that files that you overwrite are not recoverable.
 
@@ -1392,7 +1341,7 @@ Be careful when you replace files. It’s important to remember that files that 
 
 ## Deleting a File or Folder
 
-To delete a file or a folder, select it and then choose Delete from the Edit menu. The file or folder will be destroyed after you confirm your action (see the following figure). Deleted files are not recoverable.
+To delete a file or a folder, select it and then choose `Delete` from the `Edit` menu. The file or folder will be destroyed after you confirm your action (see the following figure). Deleted files are not recoverable.
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_65_2.png)
 
@@ -1400,13 +1349,15 @@ box.
 
 ## Moving a File or Folder to the Trash
 
-A safer way to remove files than using Delete is to move them to the Trash. The Trash is a special folder on your Desktop where you can put files you want to get rid of. Instead of immediately being deleted, the file remains in the trash until you empty it. This allows you some extra time to ensure that you won’t be needing the file.
+A safer way to remove files than using `Delete` is to move them to the Trash. The Trash is a special folder on your Desktop where you can put files you want to get rid of. Instead of immediately being deleted, the file remains in the trash until you empty it. This allows you some extra time to ensure that you won’t be needing the file.
 
-To move a file to the trash, select it and then choose the Move to Trash command from the Edit menu.
+To move a file to the trash, select it and then choose the `Move to Trash` command from the `Edit` menu.
 
 You can also move files to the Trash using drag and drop. Just click on the file you want to move to the trash and, without letting go of the mouse button, drag the mouse over the Trash icon on your desktop; then release the mouse.
 
 ## Retrieving a File or Folder from the Trash
+
+
 
 Files moved into the Trash remain there until you empty the Trash. If you haven’t emptied the Trash since you moved a file there, you can get it back. The Trash is just a special folder for holding documents you are about to delete. You can open it as you do other folders by clicking on it. To rescue a file, just click it and move it out of the Trash.
 
@@ -1418,17 +1369,16 @@ As the amount of trash grows, you might wish to empty it to regain the disk spac
 
 To empty the Trash, right-click the Trash Bin icon and choose Empty Trash Bin from the resulting menu.
 
-
-
-
-
 要访问内容，请单击章节和节标题。
 
 ## 完全傻瓜的 Linux 使用指南
 
 （出版商：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 搜索本书：
@@ -1537,73 +1487,73 @@ KDE 提供了一个有用的功能：Templates。模板允许你创建原型文�
 
 
 
-
-
-当你在桌面上的 Templates 目录中放置文件和文件夹时，你是在自定义在文件菜单中的 New 命令下会看到的内容。你放置在其中的文件或文件夹的名称将显示在子菜单中。当你想要创建一个模板的自定义副本时，只需从菜单中选择其名称。系统会为你创建一个文档或文件夹结构的副本以供自定义。这在你想要重新创建某种目录或文件组织时很有用。如果你在此目录中放置普通文件，你就可以将这些文件用作新文档的起点，而无需搜索目录。
-
-Previous | Table of Contents | Next
-
-要访问内容，请单击章节和节标题。
-
-## Complete Idiot's Guide to Linux
+# Complete Idiot's Guide to Linux
 
 (Publisher: Macmillan Computer Publishing)
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
 
 Search this book:
 
 ## Chapter 7
-Working with Disks
 
-## In This Chapter
+### Working with Disks
 
+#### In This Chapter
 - Starting a Superuser Session
 - Configuring Floppy and CD-ROM Drives
 - Granting Access to Disk Devices
 - Working with Floppies and CD-ROMs
 
+当你在桌面上的 `Templates` 目录中放置文件和文件夹时，你是在自定义在文件菜单中的 `New` 命令下会看到的内容。你放置在其中的文件或文件夹的名称将显示在子菜单中。当你想要创建一个模板的自定义副本时，只需从菜单中选择其名称。系统会为你创建一个文档或文件夹结构的副本以供自定义。这在你想要重新创建某种目录或文件组织时很有用。如果你在此目录中放置普通文件，你就可以将这些文件用作新文档的起点，而无需搜索目录。
+
+Previous | Table of Contents | Next
+
+要访问内容，请单击章节和节标题。
+
 在 Linux 中使用磁盘与在其他操作系统中略有不同。在 Linux 和 UNIX 中，磁盘被挂载到文件系统中。挂载文件系统会将磁盘的内容合并到目录树中。当你完成对磁盘的操作后，通常会卸载它。卸载文件系统会将其从文件树中移除。挂载不仅仅限于磁盘。通过网络可用的卷（网络驱动器）也可以被挂载和卸载。
 
-卷可以挂载在文件系统的任何位置。在 Linux 下，它们默认的挂载位置是 /mnt。/mnt 目录将至少为你的软盘和 CD-ROM 驱动器各有一个目录；这些目录通常分别命名为 floppy 和 cdrom。floppy 和 cdrom 目录是空的，只有在磁盘或卷被挂载到该目录时才会包含文件和文件夹。如果你将卷挂载到包含文件的目录上，该目录的内容将被隐藏且无法访问，直到卷被卸载为止。
+卷可以挂载在文件系统的任何位置。在 Linux 下，它们默认的挂载位置是 `/mnt`。`/mnt` 目录将至少为你的软盘和 CD-ROM 驱动器各有一个目录；这些目录通常分别命名为 `floppy` 和 `cdrom`。`floppy` 和 `cdrom` 目录是空的，只有在磁盘或卷被挂载到该目录时才会包含文件和文件夹。如果你将卷挂载到包含文件的目录上，该目录的内容将被隐藏且无法访问，直到卷被卸载为止。
 
 默认情况下，将磁盘挂载到文件系统中是一个受限操作。为了使普通用户能够访问这些设备，你需要告诉系统允许用户挂载该设备。你将在下一部分学习如何操作。
 
 ## Configuring the System to Allow Users to Access the CD-ROM and the Floppy
 
-系统在 /etc/fstab 中保存磁盘及其挂载位置的配置文件。此配置文件只是一个普通文本文件，你可以使用任何文本编辑器（包括 KEdit）进行编辑。然而，修改此文件的权限仅限于 root，即超级用户；要更改和修改此文件，你需要拥有此权限。
+系统在 `/etc/fstab` 中保存磁盘及其挂载位置的配置文件。此配置文件只是一个普通文本文件，你可以使用任何文本编辑器（包括 `KEdit`）进行编辑。然而，修改此文件的权限仅限于 `root`，即超级用户；要更改和修改此文件，你需要拥有此权限。
 
 你可以通过两种方式获得此权限：
-
-- 你可以退出系统，以 root 身份登录，然后重新进入系统
-- 你可以启动一个具有超级用户（root）权限的文件管理器
+- 你可以退出系统，以 `root` 身份登录，然后重新进入系统
+- 你可以启动一个具有超级用户（`root`）权限的文件管理器
 
 为了学习一个新技巧，让我们逐步介绍第二个选项。
 
-## Starting a Superuser KFM Session
+### Starting a Superuser KFM Session
 
-要以超级用户身份启动 KFM 窗口，你可以进入 Application Starter|System 并选择 File manager (Superuser Mode) 命令（见下图）。
+要以超级用户身份启动 `KFM` 窗口，你可以进入 `Application Starter|System` 并选择 `File manager (Superuser Mode)` 命令（见下图）。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_74_0.png)
 
-从 System 子菜单启动具有超级用户权限的 KFM 窗口。
+从 System 子菜单启动具有超级用户权限的 `KFM` 窗口。
 
-这将显示一个要求输入 root 密码的窗口。输入后，将显示一个与你之前使用过的类似的 KFM 窗口。
+这将显示一个要求输入 `root` 密码的窗口。输入后，将显示一个与你之前使用过的类似的 `KFM` 窗口。
 
-超级用户 KFM 窗口与普通 KFM 窗口的区别在于一个红色标签，提醒你在操作文件和目录时要谨慎（见下图）。一次错误的操纵就可能破坏你的系统。
+超级用户 `KFM` 窗口与普通 `KFM` 窗口的区别在于一个红色标签，提醒你在操作文件和目录时要谨慎（见下图）。一次错误的操纵就可能破坏你的系统。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_74_1.png)
 
-超级用户 KFM 窗口在菜单栏面板上有一个红色标签。
+超级用户 `KFM` 窗口在菜单栏面板上有一个红色标签。
 
-在 root KFM 窗口的位置字段中输入 /etc/fstab 并按 Enter。将会启动一个新的 KEdit。此实例继承了超级用户权限，允许你修改文件。
+在 `root` `KFM` 窗口的位置字段中输入 `/etc/fstab` 并按 Enter。将会启动一个新的 `KEdit`。此实例继承了超级用户权限，允许你修改文件。
 
-在完成文件编辑后，如“Creating kdelnk Files for the Floppy and CD”一节所述，关闭 KEdit 窗口和 KFM root 窗口，以确保你不会无意中使用这些具有权限的应用程序。
+在完成文件编辑后，如“Creating kdelnk Files for the Floppy and CD”一节所述，关闭 `KEdit` 窗口和 `KFM` `root` 窗口，以确保你不会无意中使用这些具有权限的应用程序。
 
-## Enabling Regular Users to Access Disk Devices
+### Enabling Regular Users to Access Disk Devices
 
-你的 /etc/fstab 将包含类似以下内容的文本：
+你的 `/etc/fstab` 将包含类似以下内容的文本：
 
 ```
 /dev/hda1 / ext2 defaults 0 1
@@ -1613,28 +1563,33 @@ Working with Disks
 /dev/fd0 /mnt/floppy ext2 defaults,noauto 0 0
 ```
 
-要使任何用户都能访问软盘，你需要修改以 /dev/fd 开头的行。通常，它被称为 /dev/fd0，即代表软盘的设备。如果你有多个软盘驱动器，/dev/fd0 代表 DOS 驱动器 A:（第一个软盘驱动器），/dev/fd1 代表 DOS 驱动器 B:（第二个软盘驱动器），以此类推。/etc/fstab 中软盘驱动器的条目需要修改为如下所示：
+要使任何用户都能访问软盘，你需要修改以 `/dev/fd` 开头的行。通常，它被称为 `/dev/fd0`，即代表软盘的设备。如果你有多个软盘驱动器，`/dev/fd0` 代表 DOS 驱动器 A:（第一个软盘驱动器），`/dev/fd1` 代表 DOS 驱动器 B:（第二个软盘驱动器），以此类推。`/etc/fstab` 中软盘驱动器的条目需要修改为如下所示：
 
 ```
 /dev/fd0 /mnt/floppy auto user,defaults,noauto 0 0
 ```
 
-在此条目中，我将 ext2 改为 auto；这将允许系统检测并读取 DOS 和 Windows 软盘，以及原生 Linux 软盘。我还通过在 defaults 选项前添加 user 选项来修改选项列表。这将使普通用户能够挂载软盘。请注意，逗号和选项之间没有空格。
+在此条目中，我将 `ext2` 改为 `auto`；这将允许系统检测并读取 DOS 和 Windows 软盘，以及原生 Linux 软盘。我还通过在 `defaults` 选项前添加 `user` 选项来修改选项列表。这将使普通用户能够挂载软盘。请注意，逗号和选项之间没有空格。
 
-### Techno Talk:
+#### Techno Talk
 
-/etc/fstab 文件中的每一行具有以下格式：
+`/etc/fstab` 文件中的每一行具有以下格式：
 
 ```
 device mountpath fstype options dump_order check_order
 ```
 
-- device 指定代表磁盘的设备文件的名称。UNIX 设备如你的软盘由设备文件表示。这些是特殊文件，当被访问时，它们实际上与你的硬件交互。设备文件位于 /dev 目录中。当程序需要使用设备时，它会像操作普通文件一样对其进行读写。这简化了程序与不同硬件通信的方式。对于软盘，设备文件名以 /dev/fd 开头。文件名末尾的数字允许使用同一种类的多个设备。你的 CD-ROM 通常为 /dev/cdrom，这实际上是一个链接到更具体的<|message|>
-- mountpath 指定设备挂载的位置。通常，这将是 /mnt/floppy 或 /mnt/cdrom，分别对应你的软盘和 CD-ROM 驱动器。
-- fstype 指定文件系统的格式。如果你指定 auto，系统将尝试为你检测磁盘类型。
-- options 指定一个以逗号分隔的选项列表，告诉系统如何处理设备。例如，有选项告诉系统以下内容：是否应解释文件上的某些位，是否允许用户挂载设备，设备是否应在启动时自动挂载，或设备应以读写方式还是只读方式挂载。要了解所有选项，你可以使用 kdehelp（在第 4 章“Working with Applications”中讨论）或 man 命令（第 15 章“Help Please”），并在 UNIX 手册页中搜索 fstab 和 mount。
-- dump_order 指定 dump 程序转储文件系统的顺序，dump 程序用于将文件系统备份到磁带（见第 19 章 "Backups: Safeguarding Your Work"）。
-- check_order 为 fsck（文件系统检查）提供信息，指定检查磁盘的顺序。如果系统被不适当关闭，下次启动系统时，你的磁盘将被检查是否有错误。此选项指定的数字告诉系统以何种顺序执行检查。有关 fsck 的更多信息，请使用 man 命令（第 15 章）。
+- `device` 指定代表磁盘的设备文件的名称。UNIX 设备如你的软盘由设备文件表示。这些是特殊文件，当被访问时，它们实际上与你的硬件交互。设备文件位于 `/dev` 目录中。当程序需要使用设备时，它会像操作普通文件一样对其进行读写。这简化了程序与不同硬件通信的方式。对于软盘，设备文件名以 `/dev/fd` 开头。文件名末尾的数字允许使用同一种类的多个设备。你的 CD-ROM 通常为 `/dev/cdrom`，这实际上是一个链接到更具体的
+
+- `mountpath` 指定设备挂载的位置。通常，这将是 `/mnt/floppy` 或 `/mnt/cdrom`，分别对应你的软盘和 CD-ROM 驱动器。
+
+- `fstype` 指定文件系统的格式。如果你指定 `auto`，系统将尝试为你检测磁盘类型。
+
+- `options` 指定一个以逗号分隔的选项列表，告诉系统如何处理设备。例如，有选项告诉系统以下内容：是否应解释文件上的某些位，是否允许用户挂载设备，设备是否应在启动时自动挂载，或设备应以读写方式还是只读方式挂载。要了解所有选项，你可以使用 `kdehelp`（在第 4 章“Working with Applications”中讨论）或 `man` 命令（第 15 章“Help Please”），并在 UNIX 手册页中搜索 `fstab` 和 `mount`。
+
+- `dump_order` 指定 `dump` 程序转储文件系统的顺序，`dump` 程序用于将文件系统备份到磁带（见第 19 章 "Backups: Safeguarding Your Work"）。
+
+- `check_order` 为 `fsck`（文件系统检查）提供信息，指定检查磁盘的顺序。如果系统被不适当关闭，下次启动系统时，你的磁盘将被检查是否有错误。此选项指定的数字告诉系统以何种顺序执行检查。有关 `fsck` 的更多信息，请使用 `man` 命令（第 15 章）。
 
 Previous Table of Contents Next
 
@@ -1642,26 +1597,27 @@ Products | Contact Us | About Us | Privacy | Ad Info | Home
 
 Use of this site is subject to certain Terms & Conditions. Copyright © 1996-2000 EarthWeb Inc. All rights reserved. Reproduction whole or in part in any form or medium without express written permission of EarthWeb is prohibited.
 
-
-
-
-
 要访问内容，请单击章节和节标题。
 
 ## Linux完全傻瓜指南
 
 （出版商：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 搜索本书：
 
 上一页 目录 下一页
 
-要使普通用户能够挂载 /mnt/floppy 中的软盘，您需要在软盘设备的选项列表中添加一个逗号（,）然后添加 user 选项。
 
-要使普通用户能够使用 CD-ROM，您需要修改包含文本 /mnt/cdrom 和文件系统类型 iso9660 的条目。在我的例子中，我的 IDE CD-ROM 的条目以 /dev/hdd 开头。要允许普通用户挂载 CD-ROM 驱动器，请在 CD-ROM 设备的选项列表中添加一个逗号（,）然后添加 user 选项，如下所示：
+
+要使普通用户能够挂载`/mnt/floppy`中的软盘，您需要在软盘设备的选项列表中添加一个逗号（`,`），然后添加`user`选项。
+
+要使普通用户能够使用 CD-ROM，您需要修改包含文本`/mnt/cdrom`和文件系统类型`iso9660`的条目。在我的例子中，我的 IDE CD-ROM 的条目以`/dev/hdd`开头。要允许普通用户挂载 CD-ROM 驱动器，请在 CD-ROM 设备的选项列表中添加一个逗号（`,`），然后添加`user`选项，如下所示：
 
 ```
 /dev/hdd /mnt/cdrom auto ro,noauto,user 0 0
@@ -1673,11 +1629,11 @@ ISBN：078971826x
 
 在您使 CD 和软盘驱动器对所有用户可访问后，您将希望通过图标轻松访问设备。这将允许您使用鼠标挂载卷，而不必使用命令行工具。
 
-KDE 有特殊的文件，其名称具有 .kdelnk 扩展名。这些文件用于多种用途，包括将设备与图标关联。虽然创建其中一个文件有点笨拙，但如果我们使用内置于 KDE 的设备模板，则并不难做到。
+KDE 有特殊的文件，其名称具有`.kdelnk`扩展名。这些文件用于多种用途，包括将设备与图标关联。虽然创建其中一个文件有点笨拙，但如果我们使用内置于 KDE 的设备模板，则并不难做到。
 
-要为您的软盘驱动器创建图标，首先在桌面上右键单击。在出现的弹出菜单中，选择 New，然后选择 Device。会出现一个窗口，要求为您的图标输入文件名。将默认名称 "Device.kdelnk" 替换为代表您的软盘驱动器的名称，例如 "Floppy.kdelnk"。桌面上会出现一个新图标；图标将是一个问号，表示新设备尚未配置。
+要为您的软盘驱动器创建图标，首先在桌面上右键单击。在出现的弹出菜单中，选择 New，然后选择 Device。会出现一个窗口，要求为您的图标输入文件名。将默认名称`Device.kdelnk`替换为代表您的软盘驱动器的名称，例如`Floppy.kdelnk`。桌面上会出现一个新图标；图标将是一个问号，表示新设备尚未配置。
 
-要配置设备，右键单击图标并从弹出菜单中选择 Properties。这将导致 KFM 显示其用于配置 .kdelnk 文件的窗口。选择窗口顶部的 Device 选项卡以显示与挂载相关的选项。在标记为 Device 的框中，输入 /dev/fd0，但不要按 Enter。不要在 Mount Point 或 Filesystems 框中输入任何内容。
+要配置设备，右键单击图标并从弹出菜单中选择 Properties。这将导致 KFM 显示其用于配置`.kdelnk`文件的窗口。选择窗口顶部的 Device 选项卡以显示与挂载相关的选项。在标记为 Device 的框中，输入`/dev/fd0`，但不要按 Enter。不要在 Mount Point 或 Filesystems 框中输入任何内容。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_78_0.png)
 
@@ -1685,9 +1641,10 @@ KDE 有特殊的文件，其名称具有 .kdelnk 扩展名。这些文件用于�
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_78_1.png)
 
-KFM 使用特殊窗口来配置 .kdelnk 文件。
+KFM 使用特殊窗口来配置`.kdelnk`文件。
 
 要配置设备图标：
+
 - 选择窗口顶部的 Device 选项卡。
 - 在 Device 框中输入设备文件名。
 - 选择设备挂载时的图标。
@@ -1699,9 +1656,9 @@ KFM 使用特殊窗口来配置 .kdelnk 文件。
 
 选择图标窗口。当您单击按钮选择图标时，KDE 会向您展示一个面板，您可以在其中选择代表设备的图标。通常每种类型有两个图标。旁边有绿色方块的图标代表活动设备。如果您分配该对，KDE 将更改图标以提供已挂载设备的视觉反馈。
 
-要配置您的 CD-ROM 驱动器，请按照相同的步骤进行操作，但将您的图标文件命名为 **CD-ROM.kdelnk**，在 Device 框中输入 **/dev/cdrom**，并选择与个人 CD 播放器中的 CD 非常相似的图标。
+要配置您的 CD-ROM 驱动器，请按照相同的步骤进行操作，但将您的图标文件命名为`CD-ROM.kdelnk`，在 Device 框中输入`/dev/cdrom`，并选择与个人 CD 播放器中的 CD 非常相似的图标。
 
-要测试设备图标，请插入 CD-ROM 或软盘并单击匹配的图标。会出现一个窗口，通知您磁盘正在挂载。片刻之后，将出现一个 KFM 窗口，显示磁盘的内容，现在位于 **/mnt/floppy** 或 **/mnt/cdrom**，具体取决于您正在测试的设备。请注意，桌面上的图标旁边出现了一个小绿灯；这表示磁盘当前已挂载。
+要测试设备图标，请插入 CD-ROM 或软盘并单击匹配的图标。会出现一个窗口，通知您磁盘正在挂载。片刻之后，将出现一个 KFM 窗口，显示磁盘的内容，现在位于`/mnt/floppy`或`/mnt/cdrom`，具体取决于您正在测试的设备。请注意，桌面上的图标旁边出现了一个小绿灯；这表示磁盘当前已挂载。
 
 在弹出软盘或 CD 之前，您必须始终确保它已卸载，否则您可能会丢失数据。要卸载磁盘，请右键单击设备图标并选择 Unmount 命令。小绿灯现在消失，表示您的设备已卸载。现在可以安全地弹出设备。
 
@@ -1717,64 +1674,67 @@ KFM 使用特殊窗口来配置 .kdelnk 文件。
 
 ## 打开和保存文件到软盘
 
-打开和保存文件到软盘与在目录之间保存相同。只需挂载软盘并将文件保存在 **/mnt/floppy** 目录中。确保您保存的文件适合磁盘上的可用空间。
+打开和保存文件到软盘与在目录之间保存相同。只需挂载软盘并将文件保存在`/mnt/floppy`目录中。确保您保存的文件适合磁盘上的可用空间。
 
 要访问内容，请单击章节和节标题。
 
-## Linux完全傻瓜指南
+## Linux 完全傻瓜指南
 
 （出版商：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 搜索本书：
 
 ## 访问 CD-ROM
 
-访问 CD-ROM 本质上与访问软盘相同。要访问磁盘，您必须已挂载 CD。CD-ROM 的默认挂载点为 /mnt/cdrom。如果您单击与 CD-ROM 关联的 kdelnk 文件，KFM 将打开一个聚焦于 /mnt/cdrom 的窗口，您可以在其中访问文件。
+访问 CD-ROM 本质上与访问软盘相同。要访问磁盘，您必须已挂载 CD。CD-ROM 的默认挂载点为`/mnt/cdrom`。如果您单击与 CD-ROM 关联的`kdelnk`文件，KFM 将打开一个聚焦于`/mnt/cdrom`的窗口，您可以在其中访问文件。
 
 ## 准备新的软盘
 
-KDE 为您提供了一个用于格式化软盘的应用程序，kfloppy。kfloppy 可从应用程序启动器实用程序组访问（参见下图）。
+KDE 为您提供了一个用于格式化软盘的应用程序，`kfloppy`。`kfloppy`可从应用程序启动器实用程序组访问（参见下图）。
 
-该应用程序允许您选择驱动器和用于软盘的文件系统格式。请注意，kfloppy 只能在磁盘未挂载时格式化磁盘。
+该应用程序允许您选择驱动器和用于软盘的文件系统格式。请注意，`kfloppy`只能在磁盘未挂载时格式化磁盘。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_81_0.png)
 
 Kfloppy 允许您格式化软盘。
 
 > 查看此内容：
+>
 > 当您格式化磁盘时，您会擦除磁盘包含的所有文件。在格式化之前，请确保软盘不包含您将来需要的任何文件。
 
 KDE 软盘格式化程序在您想要准备软盘时向您提供以下选项：
+
 - 选择软盘的大小和驱动器。
 - 选择密度格式。高密度磁盘（HD）可存储 1440K 的信息。双密度磁盘（DD）可存储 720K。
-- 文件系统选择为 ext2fs（Linux 原生文件系统，DOS 和 Windows 无法读取）或 DOS 格式。DOS 格式将创建可在 Windows 95/98 长文件名或旧系统上的 MS-DOS 文件名下同样工作的磁盘。
+- 文件系统选择为`ext2fs`（Linux 原生文件系统，DOS 和 Windows 无法读取）或 DOS 格式。DOS 格式将创建可在 Windows 95/98 长文件名或旧系统上的 MS-DOS 文件名下同样工作的磁盘。
 - 选择选项后，单击 format 以初始化磁盘。
 - 快速擦除不会执行低级格式化，它只是在磁盘上创建新的文件系统。
 - 完全格式化对软盘执行低级格式化并在其上创建新的文件系统。
 - 单击以退出应用程序。
 
-
-
-
-
 要访问内容，请点击章节和节标题。
 
-## Linux完全傻瓜指南
+## Linux 完全傻瓜指南
 
 （出版社：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 搜索本书：
 
-## 第8章
-访问网络
+## 第 8 章：访问网络
 
-## 本章内容
+### 本章内容
 
 - 连接到网络
 - 配置新的拨号账户
@@ -1784,57 +1744,60 @@ ISBN：078971826x
 
 本章介绍如何使用 Linux 连接到互联网的基础知识。
 
-你如何将计算机连接到网络取决于你拥有的硬件。如果你的计算机已参与网络并且可以通过网络直接访问互联网，你只需要一块以太网卡即可。如果你在安装 Linux 之前就安装了该卡，安装程序会配置该卡以便你使用。你可能需要做的唯一事情是配置你的名称服务，以便你的计算机知道如何访问域名系统（DNS；本章后面“配置 DNS 服务器”部分会详细介绍）。如果你在添加网络卡之前就安装了 Linux，你将不得不使用 lisa 来更改硬件配置（有关如何使用 lisa 的提示，请参阅第 21 章“ LISA—Linux 安装和系统管理实用程序”）。
+你如何将计算机连接到网络取决于你拥有的硬件。如果你的计算机已参与网络并且可以通过网络直接访问互联网，你只需要一块以太网卡即可。如果你在安装 Linux 之前就安装了该卡，安装程序会配置该卡以便你使用。你可能需要做的唯一事情是配置你的名称服务，以便你的计算机知道如何访问域名系统（DNS；本章后面“配置 DNS 服务器”部分会详细介绍）。如果你在添加网络卡之前就安装了 Linux，你将不得不使用`lisa`来更改硬件配置（有关如何使用`lisa`的提示，请参阅第 21 章“LISA—Linux 安装和系统管理实用程序”）。
 
-如果你的计算机没有直接访问互联网，你需要使用调制解调器并与互联网服务提供商（ISP）建立点对点协议（PPP）连接。ISP 以适中的月费提供到互联网的连接服务。当你连接到 ISP 时，你的计算机将“上网”，你就可以使用 http（www）、ftp、news 等网络服务。
+如果你的计算机没有直接访问互联网，你需要使用调制解调器并与互联网服务提供商（ISP）建立点对点协议（PPP）连接。ISP 以适中的月费提供到互联网的连接服务。当你连接到 ISP 时，你的计算机将“上网”，你就可以使用`http`（www）、`ftp`、`news`等网络服务。
 
 ### 使用拨号（PPP）连接连接到网络
 
-Linux 包含 PPP 和其他协议，可用于连接到互联网和私有网络。PPP 是目前 ISP 支持的最流行的拨号网络协议。通常，在 UNIX 下设置 PPP 对新手来说是一项艰巨的任务。幸运的是，KDE 提供了一个图形工具 kppp，你可以用它轻松配置拨号连接。
 
-在你能够连接之前，你需要知道 ISP 的连接详细信息，例如拨号号码、登录名、密码、网关和 DNS 服务器 IP 地址。
 
-### 使用 Kppp 添加互联网连接
+Linux 包含 `PPP` 和其他协议，可用于连接到互联网和私有网络。`PPP` 是目前 `ISP` 支持的最流行的拨号网络协议。通常，在 `UNIX` 下设置 `PPP` 对新手来说是一项艰巨的任务。幸运的是，`KDE` 提供了一个图形工具 `kppp`，你可以用它轻松配置拨号连接。
 
-在使用 kppp 配置 PPP 连接之前，你需要编辑 /etc/ppp/options 文件。默认情况下，此文件可能包含带有 lock 选项的行。此选项用于 PPP 软件管理对连接和硬件的锁定。kppp 本身就会执行此操作，因此你需要删除此选项。要编辑 /etc/ppp/options 文件，你需要具有超级用户（root）权限。为此，你可以注销系统并以 root 身份登录，或按照第 7 章“使用磁盘”中概述的“启动超级用户 KFM 会话”程序进行操作。
+在你能够连接之前，你需要知道 `ISP` 的连接详细信息，例如拨号号码、登录名、密码、网关和 `DNS` 服务器 `IP` 地址。
 
-你可能需要对文件进行的唯一更改是注释掉 lock 选项（/etc/ppp/options 文件默认的唯一选项）。要注释掉某行，请在该行的第一字母前加上井号或哈希符号（#）。编辑后的文件应如下所示：
+## 使用 `Kppp` 添加互联网连接
 
-```
+在使用 `kppp` 配置 `PPP` 连接之前，你需要编辑 `/etc/ppp/options` 文件。默认情况下，此文件可能包含带有 `lock` 选项的行。此选项用于 `PPP` 软件管理对连接和硬件的锁定。`kppp` 本身就会执行此操作，因此你需要删除此选项。要编辑 `/etc/ppp/options` 文件，你需要具有超级用户（`root`）权限。为此，你可以注销系统并以 `root` 身份登录，或按照第 7 章“使用磁盘”中概述的“启动超级用户 `KFM` 会话”程序进行操作。
+
+你可能需要对文件进行的唯一更改是注释掉 `lock` 选项（`/etc/ppp/options` 文件默认的唯一选项）。要注释掉某行，请在该行的第一字母前加上井号或哈希符号（`#`）。编辑后的文件应如下所示：
+
+``` 
 #lock
 ```
 
-井号告诉 PPP 忽略该行的其余部分。保存文件并退出任何超级用户 KFM 窗口和 KEdit 会话。如果你选择以 root 身份登录，你应该再次使用自己的账户登录。现在你已准备好开始配置到 ISP 的 PPP 连接。
+井号告诉 `PPP` 忽略该行的其余部分。保存文件并退出任何超级用户 `KFM` 窗口和 `KEdit` 会话。如果你选择以 `root` 身份登录，你应该再次使用自己的账户登录。现在你已准备好开始配置到 `ISP` 的 `PPP` 连接。
 
-要启动 kppp，你可以进入应用程序启动菜单并在 Internet 程序组下选择 kppp。选择 kppp 后，你会看到下一幅图所显示的对话框。
+要启动 `kppp`，你可以进入应用程序启动菜单并在 `Internet` 程序组下选择 `kppp`。选择 `kppp` 后，你会看到下一幅图所显示的对话框。
 
-如果已定义连接，你可以选择它，提供 PPP 账户的登录名和密码，然后单击 Connect 拨号。默认情况下，不会为你设置任何可用的连接，因此你必须定义一个。你可以通过单击 Setup 按钮来完成。这将为你呈现一个如以下图所示的窗口。
+如果已定义连接，你可以选择它，提供 `PPP` 账户的登录名和密码，然后单击 `Connect` 拨号。默认情况下，不会为你设置任何可用的连接，因此你必须定义一个。你可以通过单击 `Setup` 按钮来完成。这将为你呈现一个如以下图所示的窗口。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_85_0.png)
 
-kppp 可以从应用程序启动菜单下的 Internet 程序组启动。
+`kppp` 可以从应用程序启动菜单下的 `Internet` 程序组启动。
 
-### Techno Talk：迷你命令行
+## Techno Talk：迷你命令行
 
-KDE 桌面为你提供了一种无需使用 shell 即可输入命令的简便方法。迷你命令行是一个小型面板，你可以在其中输入命令、程序名称，甚至是文件路径以启动新的 KFM 窗口。输入命令并按 Enter 后，minicli（该程序的名称）将消失并执行你的命令。
+`KDE` 桌面为你提供了一种无需使用 `shell` 即可输入命令的简便方法。迷你命令行是一个小型面板，你可以在其中输入命令、程序名称，甚至是文件路径以启动新的 `KFM` 窗口。输入命令并按 `Enter` 后，`minicli`（该程序的名称）将消失并执行你的命令。
 
-要访问 minicli 窗口，请在键盘上按 Alt+F2。在显示的小面板上，输入你想要访问的命令或程序的名称。例如，输入 kppp 以启动该程序。
+要访问 `minicli` 窗口，请在键盘上按 `Alt+F2`。在显示的小面板上，输入你想要访问的命令或程序的名称。例如，输入 `kppp` 以启动该程序。
 
-Minicli 还可以打开 KFM 窗口。要打开聚焦到目录的 KFM 窗口，请在 minicli 面板中输入该目录的路径并按 Enter。如果指定的是文件名而不是目录，则将打开为该文件类型注册的应用程序（在许多情况下，这将是 KDE 编辑器 KEdit）。
+`Minicli` 还可以打开 `KFM` 窗口。要打开聚焦到目录的 `KFM` 窗口，请在 `minicli` 面板中输入该目录的路径并按 `Enter`。如果指定的是文件名而不是目录，则将打开为该文件类型注册的应用程序（在许多情况下，这将是 `KDE` 编辑器 `KEdit`）。
 
-要阅读 man 文档页面，请输入 man:programname，其中 programname 是你想要了解的工具或命令的名称。有关使用 man 的更多信息，请参阅第 15 章“Help Please”。
+要阅读 `man` 文档页面，请输入 `man:programname`，其中 `programname` 是你想要了解的工具或命令的名称。有关使用 `man` 的更多信息，请参阅第 15 章“Help Please”。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_85_1.png)
 
-kppp 窗口。Connect to 菜单允许你选择要连接的 ISP。Login ID 和 Password 对应于 ISP 分配给你的信息。Show Log Window 框对于调试连接很有用，因为你可以实时查看连接的详细信息。
+`kppp` 窗口。`Connect to` 菜单允许你选择要连接的 `ISP`。`Login ID` 和 `Password` 对应于 `ISP` 分配给你的信息。`Show Log Window` 框对于调试连接很有用，因为你可以实时查看连接的详细信息。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_85_2.png)
 
-kppp 配置窗口是配置 ISP 设置的地方。
+`kppp` 配置窗口是配置 `ISP` 设置的地方。
 
 Products | Contact Us | About Us | Privacy | Ad Info | Home
 
 使用本网站须遵守特定条款和条件。版权所有 © 1996-2000 EarthWeb Inc。
+
 保留所有权利。未经 EarthWeb 明确书面许可，不得以任何形式或媒介全部或部分复制。
 
 要访问内容，请点击章节和节标题。
@@ -1842,8 +1805,11 @@ Products | Contact Us | About Us | Privacy | Ad Info | Home
 ## Linux完全傻瓜指南
 
 （出版社：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 搜索本书：
@@ -1853,8 +1819,8 @@ ISBN：078971826x
 - Accounts 选项卡—显示所有当前定义的条目。
 - Device 选项卡—单击以设置调制解调器连接的设备。
 - Modem 选项卡—单击以设置特殊调制解调器选项。
-- PPP 选项卡—单击以设置 kppp 的一些选项。
-- About 选项卡—单击以了解有关 kppp 的更多信息。
+- PPP 选项卡—单击以设置 `kppp` 的一些选项。
+- About 选项卡—单击以了解有关 `kppp` 的更多信息。
 - 条目列表—选择一个条目并单击 Edit 以编辑它。
 - Edit 按钮—单击以编辑当前选中的条目。
 - New 按钮—单击以定义新账户。
@@ -1866,17 +1832,17 @@ ISBN：078971826x
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_87_0.png)
 
-拨号配置提供多个面板来设置拨号信息、机器的 IP 地址和 DNS 服务器设置等。
+拨号配置提供多个面板来设置拨号信息、机器的 `IP` 地址和 `DNS` 服务器设置等。
 
 ## 添加新的拨号配置
 
-创建账户时，你需要定义几件事。首先你需要通过新账户窗口中的 Dial 选项卡配置拨号设置。此窗口要求你为 ISP 提供一个名称。此名称由 Connect to 菜单显示。你需要提供的其他信息是 ISP 调制解调器组的电话号码。Authentication 菜单选择如何连接到 ISP。如果你的 ISP 支持从 Windows 95/98/NT 的连接，很可能 PAP 认证是你所需要的。其他认证方法在该方法不起作用时可用，但它们要求你创建一个小的“chat”脚本。我将在后面“使用登录脚本”部分向你展示如何创建一个。
+创建账户时，你需要定义几件事。首先你需要通过新账户窗口中的 Dial 选项卡配置拨号设置。此窗口要求你为 `ISP` 提供一个名称。此名称由 Connect to 菜单显示。你需要提供的其他信息是 `ISP` 调制解调器组的电话号码。Authentication 菜单选择如何连接到 `ISP`。如果你的 `ISP` 支持从 Windows 95/98/NT 的连接，很可能 PAP 认证是你所需要的。其他认证方法在该方法不起作用时可用，但它们要求你创建一个小的“chat”脚本。我将在后面“使用登录脚本”部分向你展示如何创建一个。
 
 ## 配置 IP 设置
 
-接下来你需要为连接定义 IP 地址设置。特殊网络设备，称为路由器，负责在网络之间传递数据包。大多数 ISP 动态分配 IP 地址。当你的计算机连接到 ISP 时，它将被分配一个在会话持续时间内使用的 IP 地址。下次连接时，你会得到一个不同的号码。
+接下来你需要为连接定义 `IP` 地址设置。特殊网络设备，称为路由器，负责在网络之间传递数据包。大多数 `ISP` 动态分配 `IP` 地址。当你的计算机连接到 `ISP` 时，它将被分配一个在会话持续时间内使用的 `IP` 地址。下次连接时，你会得到一个不同的号码。
 
-PPP 协议可以处理动态分配的 IP 地址。面板中的 IP 选项卡允许你指定 kppp 应使用的设置，如下一图所示。
+`PPP` 协议可以处理动态分配的 `IP` 地址。面板中的 `IP` 选项卡允许你指定 `kppp` 应使用的设置，如下一图所示。
 
 > **Techno Talk：那么所有这些 IP 东西到底是什么？**
 > 
@@ -1890,13 +1856,9 @@ PPP 协议可以处理动态分配的 IP 地址。面板中的 IP 选项卡允�
 > 
 > 尽管 IP 提供了发送数据的信息，但它并不能说明计算机如何交换这些信息。运行在 IP 之上的其他协议负责此事。互联网上计算机之间的数据传输通常使用两种主要协议之一：TCP 或 UDP。
 
-
-
-
-
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_89_0.png)
 
-新账户窗口的 IP 选项卡。
+新账户窗口的 `IP` 选项卡。
 
 ## 技术谈：好吧，聪明人，TCP、UDP 和 PPP 到底是什么？
 
@@ -1904,9 +1866,11 @@ TCP 代表传输控制协议。TCP 使用 IP 在计算机之间传递信息数�
 
 UDP 代表用户数据报协议。UDP 是一种无连接协议。它是一种最小化协议，速度非常快。唯一的问题是 UDP 不保证数据能到达目的地。通常，UDP 用于在计算机之间发送非常短的消息，其中建立 TCP 连接的时间成本远超需求。大多数通过 UDP 发送的信息只使用一个数据包发送。
 
+
+
 PPP 是通过串行线路进行 IP 网络的一种机制。还有其他串行线路协议，例如 SLIP（串行线路互联网协议），但 PPP 部分是因为其灵活性而确立了主导地位，无需固定 IP 地址。PPP 连接通常在你连接到 ISP 时协商 IP 地址。
 
-如果你的 ISP 动态分配 IP，请勾选动态 IP 地址按钮。如果你有一个专用 IP 地址（静态地址），请在静态 IP 地址部分输入该地址和子网掩码。如果你希望 kppp 在临时设置计算机的域名和主机名以匹配 ISP 分配的地址时，请点击从此 IP 自动配置主机名。
+如果你的 ISP 动态分配 IP，请勾选动态 IP 地址按钮。如果你有一个专用 IP 地址（静态地址），请在静态 IP 地址部分输入该地址和子网掩码。如果你希望 `kppp` 在临时设置计算机的域名和主机名以匹配 ISP 分配的地址时，请点击从此 IP 自动配置主机名。
 
 上一页 | 目录 | 下一页
 
@@ -1915,43 +1879,51 @@ PPP 是通过串行线路进行 IP 网络的一种机制。还有其他串行线
 ## Linux 完全 idiot's Guide
 
 （出版商：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 搜索本书：
 
 ## 配置调制解调器设备
 
-在配置好账户后，你需要将调制解调器设备标识给 kppp。你需要查看在 Windows 下调制解调器使用的 COM 端口的原始笔记。作为替代方案，你也可以尝试四种 COM 设置直到能正常工作。为了启用将调制解调器用作 /dev/modem，你需要使用 lisa（参见第 21 章）或简单地从 /dev/ttySx 创建到 /dev/modem 的链接（参见第 12 章，“在 Shell 上操作文件”）。
+在配置好账户后，你需要将调制解调器设备标识给 `kppp`。你需要查看在 Windows 下调制解调器使用的 COM 端口的原始笔记。作为替代方案，你也可以尝试四种 COM 设置直到能正常工作。为了启用将调制解调器用作 `/dev/modem`，你需要使用 `lisa`（参见第 21 章）或简单地从 `/dev/ttySx` 创建到 `/dev/modem` 的链接（参见第 12 章，“在 Shell 上操作文件”）。
 
-调制解调器设备位于 /dev/ttySx，其中 x 是 0 到 3 之间的数字。各种 /dev/ttySx 设备映射到各种 COM 端口。表 8.1 显示了它们的列表。
+调制解调器设备位于 `/dev/ttySx`，其中 `x` 是 0 到 3 之间的数字。各种 `/dev/ttySx` 设备映射到各种 COM 端口。表 8.1 显示了它们的列表。
 
 ### 表 8.1 设备到 COM 端口映射
 
 | 调制解调器设备 | COM 端口 |
 |---|---|
-| /dev/ttyS0 | COM1 |
-| /dev/ttyS1 | COM2 |
-| /dev/ttyS2 | COM3 |
-| /dev/ttyS3 | COM4 |
+| `/dev/ttyS0` | COM1 |
+| `/dev/ttyS1` | COM2 |
+| `/dev/ttyS2` | COM3 |
+| `/dev/ttyS3` | COM4 |
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_91_0.png)
 
-使用 kppp 面板设置调制解调器设备。
+使用 `kppp` 面板设置调制解调器设备。
 
 要配置你的调制解调器设备，必须设置以下选项。
 
 - 调制解调器设备—选择代表你的设备的设备；参见表 8.1。
-- 流量控制—选择 CRTSCTS 以启用硬件流量控制。
-- 行终止—选择 CR/LF 行终止。
+
+- 流量控制—选择 `CRTSCTS` 以启用硬件流量控制。
+
+- 行终止—选择 `CR/LF` 行终止。
+
 - 连接速度—选择适合你调制解调器的速度。使用 14.4 kbps 调制解调器的用户应选择 57600 bps。拥有更快调制解调器的用户应选择 115200 bps。如果你的调制解调器在你选择的速度下出现问题，你可以稍后降低它。
-- 调制解调器锁文件—指定锁文件放置的位置；保持原样。如果尝试启动另一个连接并且找到此文件，kppp 将检查拥有该文件的进程是否存在。如果存在，它会告诉你调制解调器正忙。
+
+- 调制解调器锁文件—指定锁文件放置的位置；保持原样。如果尝试启动另一个连接并且找到此文件，`kppp` 将检查拥有该文件的进程是否存在。如果存在，它会告诉你调制解调器正忙。
+
 - 调制解调器超时—指定放弃等待的时间。保持 60 秒默认值。
 
 ## 调试连接
 
-如果你已进行到这里，你的配置应该已准备好进行测试。点击 kppp 配置窗口底部的确定以接受你的配置更改。在 kppp 窗口中，选择你的服务提供商，并勾选显示日志窗口选项。这将显示一个窗口，显示你从 ISP 接收的信息以及你的计算机或脚本发送的信息。此工具对于查看登录脚本中的问题点非常宝贵（参见接下来的两个图）。
+如果你已进行到这里，你的配置应该已准备好进行测试。点击 `kppp` 配置窗口底部的确定以接受你的配置更改。在 `kppp` 窗口中，选择你的服务提供商，并勾选显示日志窗口选项。这将显示一个窗口，显示你从 ISP 接收的信息以及你的计算机或脚本发送的信息。此工具对于查看登录脚本中的问题点非常宝贵（参见接下来的两个图）。
 
 大多数 ISP 使用 PAP，因为这是 Windows 驱动机器的默认身份验证方案。
 
@@ -1969,9 +1941,9 @@ ISBN：078971826x
 
 通过本地网络连接到互联网不使用前面章节中讨论的 PPP。
 
-要搜索 DNS 服务器，你需要编辑名为 /etc/resolv.conf 的文件。正如你所料，此文件应在具有超级用户权限（root）的情况下编辑。或者你也可以使用 lisa。（参见第 24 章以定义这些网络设置。有时直接编辑文件更简单更快。）
+要搜索 DNS 服务器，你需要编辑名为 `/etc/resolv.conf` 的文件。正如你所料，此文件应在具有超级用户权限（root）的情况下编辑。或者你也可以使用 `lisa`。（参见第 24 章以定义这些网络设置。有时直接编辑文件更简单更快。）
 
-在此文件中，你将指定由网络管理员提供的名称服务器的 IP 地址。我的 /etc/resolv.conf 看起来像这样：
+在此文件中，你将指定由网络管理员提供的名称服务器的 IP 地址。我的 `/etc/resolv.conf` 看起来像这样：
 
 ```
 domain execpc.com
@@ -1979,9 +1951,9 @@ nameserver 165.207.1.3
 nameserver 204.29.202.6
 ```
 
-关键字 domain 指定你的网络的域名。nameserver 关键字指定在将名称解析为其 IP 时要搜索的 DNS 服务器的 IP 地址。
+关键字 `domain` 指定你的网络的域名。`nameserver` 关键字指定在将名称解析为其 IP 时要搜索的 DNS 服务器的 IP 地址。
 
-编辑文件后，只要你的网络硬件在安装时已正确配置，你应该能够使用任何程序访问网络。如果没有，你将不得不使用 lisa—（参见第 21 章）来配置你的网卡和路由器（网关）信息。
+编辑文件后，只要你的网络硬件在安装时已正确配置，你应该能够使用任何程序访问网络。如果没有，你将不得不使用 `lisa`—（参见第 21 章）来配置你的网卡和路由器（网关）信息。
 
 上一页 目录 下一页
 
@@ -1990,66 +1962,82 @@ nameserver 204.29.202.6
 ## Linux 完全 idiot's Guide
 
 （出版商：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 搜索本书：
 
 ## 第 9 章
+
 通信：Web、FTP、电子邮件和新闻
 
 ## 本章内容
 
 - 访问万维网
+
 - 使用 FTP 传输文件
+
 - 发送和接收电子邮件
+
 - 参与新闻组
 
 ## 访问网络
 
 现在你的连接已设置好，你可以访问网络。Caldera 的 OpenLinux 预装了 Netscape Communicator。Netscape Communicator 拥有你阅读新闻和电子邮件（Messenger）、访问网络（Navigator）、参与讨论（新闻）组（Collabra）所需的所有工具，甚至可以开发自己的 HTML 网络页面。
 
-在 KDE 中，KFM（文件查看器）也是网络感知的。KFM 提供了一个基本浏览器，能够访问简单的网站。对于快速粗略的网络冲浪，KDE 可能已足够你需要。对于更广泛的冲浪，Navigator 提供了更多功能和能力，这些功能被更流行的网站使用。其中一些功能使查看网站成为更具交互性的体验。Netscape 还充分利用了 Linux 提供的强大网络能力和多任务处理。网站似乎比在 Windows 或 Macintosh 等其他平台上下载和显示得更快（参见下图）。
+在 KDE 中，`KFM`（文件查看器）也是网络感知的。`KFM` 提供了一个基本浏览器，能够访问简单的网站。对于快速粗略的网络冲浪，KDE 可能已足够你需要。对于更广泛的冲浪，Navigator 提供了更多功能和能力，这些功能被更流行的网站使用。其中一些功能使查看网站成为更具交互性的体验。Netscape 还充分利用了 Linux 提供的强大网络能力和多任务处理。网站似乎比在 Windows 或 Macintosh 等其他平台上下载和显示得更快（参见下图）。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_94_0.png)
 
 KFM 对 www.yahoo.com 网站的描绘。
 
-要使用 KDE 访问网络，请连接到你的 ISP 并在 KFM 浏览器的位置字段中输入任何网络地址。KFM 将按适当方式渲染该页面。要移动到不同页面或网站的不同部分，请点击链接。链接通常显示为带下划线的文本甚至是图像。链接是进入另一页的入口点（超文本引用），提供额外信息。链接可以是本地网站，也可以是不同网站的一部分。链接使网络成为网络。
+要使用 KDE 访问网络，请连接到你的 ISP 并在 `KFM` 浏览器的位置字段中输入任何网络地址。`KFM` 将按适当方式渲染该页面。要移动到不同页面或网站的不同部分，请点击链接。链接通常显示为带下划线的文本甚至是图像。链接是进入另一页的入口点（超文本引用），提供额外信息。链接可以是本地网站，也可以是不同网站的一部分。链接使网络成为网络。
 
-并非所有浏览器都以相同方式渲染信息。请注意 KFM（在前一图中）和 Netscape 渲染页面的差异（在下图中）。更好的网站利用了 Netscape 和 Internet Explorer 上的功能。要获得这些增强页面，你必须使用 Netscape Navigator。（Internet Explorer 尚未适用于 Linux，尽管一些 UNIX 端口开始出现。）
+并非所有浏览器都以相同方式渲染信息。请注意 `KFM`（在前一图中）和 Netscape 渲染页面的差异（在下图中）。更好的网站利用了 Netscape 和 Internet Explorer 上的功能。要获得这些增强页面，你必须使用 Netscape Navigator。（Internet Explorer 尚未适用于 Linux，尽管一些 UNIX 端口开始出现。）
 
 标准浏览器窗口的功能包括：
 
 - 位置栏—输入 URL 并按 Enter 前往该站点。
+
 - 后退和前进按钮—后退按钮使你能够返回到之前访问的页面。如果你后退，前进按钮允许你返回到上次所在的位置。
+
 - 主页按钮—默认情况下带你到 www.netscape.com，但你可以使用编辑菜单中的首选项命令更改此操作的 Navigator 首选项。
+
 - 书签图标—使你能够将当前页面的地址拖到书签区域（位置栏正下方的区域），以便轻松返回此页面。
+
 - 书签区域—书签站点可从这些图标获得。
+
 - 状态区域—显示消息和鼠标悬停的链接地址。
+
 - 链接—图像或带下划线的文本可以代表到另一页的链接。点击链接前往该页面。
+
 - 搜索按钮—带你到各种搜索引擎，你可以使用它们查找你感兴趣的信息。
+
 - Navigator 图标—点击以打开新的 Navigator（浏览器）窗口。
+
 - Messenger 图标—点击以访问 Netscape Communicator 的电子邮件组件 Messenger。
+
 - Collabra 图标—点击以使用 Collabra 组件打开讨论组（新闻组）列表。
 
-
-
-
-
 - Composer 图标—点击打开文本编辑器
+
 dlike application you can use for designing your own Web pages.
 
-要使用 Netscape 访问 Web，请调用一个 minicli 窗口（参见第 8 章“访问网络”中的“Mini Command Line”）并输入 `netscape`。你也可以从应用程序开始菜单下的 Applications 中访问 Netscape Communicator。几秒钟后，你会看到 Netscape 的一些面板，告诉你它正在为你创建配置文件以及放置缓存文件的位置。
+
+
+要使用 Netscape 访问 Web，请调用一个`minicli`窗口（参见第 8 章“访问网络”中的“Mini Command Line”）并输入`netscape`。你也可以从应用程序开始菜单下的 Applications 中访问 Netscape Communicator。几秒钟后，你会看到 Netscape 的一些面板，告诉你它正在为你创建配置文件以及放置缓存文件的位置。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_95_0.png)
 
-Netscape 对 www.yahoo.com 网站的描绘。请注意信息的呈现方式与前一图不同。
+Netscape 对`www.yahoo.com`网站的描绘。请注意信息的呈现方式与前一图不同。
 
 Previous Table of Contents Next
 
-## SPIDER KILLER
+# SPIDER KILLER
 
 ## spider catcher
 
@@ -2070,8 +2058,11 @@ To access the contents, click the chapter and section titles.
 ## Complete Idiot's Guide to Linux
 
 (Publisher: Macmillan Computer Publishing)
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
 
 Bookmark it
@@ -2090,50 +2081,51 @@ FTP (File Transfer Protocol) is a protocol used to move files between computers.
 ftp://somehost.somedomain.com
 ```
 
-Somehost.somedomain.com is the fully qualified name of the machine you want to connect to. If that machine supports anonymous FTP, connections for which you don’t need a login and password, KFM will display the contents available at that location. To navigate, use KFM as if it was your local hard disk. You can copy files between your local machine and the server or from the server to your local machine by dragging and dropping files between KFM windows (see the next figure).
+`Somehost.somedomain.com` is the fully qualified name of the machine you want to connect to. If that machine supports anonymous FTP, connections for which you don’t need a login and password, `KFM` will display the contents available at that location. To navigate, use `KFM` as if it was your local hard disk. You can copy files between your local machine and the server or from the server to your local machine by dragging and dropping files between `KFM` windows (see the next figure).
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_96_0.png)
 
-To FTP a file using KFM, type the URL for the FTP site and browse for the file you want. Then click and drag the file to your desktop or to another KFM window focused to your local computer.
+To FTP a file using `KFM`, type the URL for the FTP site and browse for the file you want. Then click and drag the file to your desktop or to another `KFM` window focused to your local computer.
 
 Because some files you transfer will be large, the speed of the copy will be much slower than you normally experience. But don’t despair— the file will be transmitted across the wire.
 
-## BROWSE BY TOPIC
+### BROWSE BY TOPIC
 
 If the server doesn’t allow anonymous connections, you’ll need to specify your login name, like this:
 
-ftp://user@somehost.somedomain.com
+`ftp://user@somehost.somedomain.com`
 
-user is your user name, followed by an at symbol (@), then followed by the fully qualified name of the machine. When you enter FTP URLs like this, more advanced programs raise a panel that asks you for your password.
+`user` is your user name, followed by an at symbol (`@`), then followed by the fully qualified name of the machine. When you enter FTP URLs like this, more advanced programs raise a panel that asks you for your password.
 
-You can also enter your password right in the URL; however, I don’t recommend that you do this, as the password might be displayed for other people to see in the URL. KFM removes the password from the URL when you have connected. To supply your password on the URL, enter it like this:
+You can also enter your password right in the URL; however, I don’t recommend that you do this, as the password might be displayed for other people to see in the URL. `KFM` removes the password from the URL when you have connected. To supply your password on the URL, enter it like this:
 
-ftp://user:password@somehost.somedomain.com
+`ftp://user:password@somehost.somedomain.com`
 
-The username and password are separated by a colon (:), like this:
+The username and password are separated by a colon (`:`), like this:
 
-ftp://me:mypassword@ftp.netscape.com
+`ftp://me:mypassword@ftp.netscape.com`
 
-The same technique for accessing files using FTP can be used with a browser such as Netscape Navigator. To access the site, enter the URL, and you are delivered. Instead of clicking and dragging to move files across the network, just right-click on the link and choose the Save Link As command from the context-sensitive menu that is displayed. Use the Save panel that is displayed to navigate your way to the location where you want to save the file.
+The same technique for accessing files using FTP can be used with a browser such as Netscape Navigator. To access the site, enter the URL, and you are delivered. Instead of clicking and dragging to move files across the network, just right-click on the link and choose the `Save Link As` command from the context-sensitive menu that is displayed. Use the Save panel that is displayed to navigate your way to the location where you want to save the file.
 
 ## Email
 
-KDE provides an email program called kmail that you can use to read and write email messages. Although this program gets the job done, I am a little partial toward Netscape Messenger, as it provides more features than kmail. One nice feature of kmail over Netscape Messenger, however, is that kmail can manage multiple email accounts for you. Netscape allows you to set up multiple remote IMAP mailboxes but only a single POP mail account. Most users have several POP mailboxes. IMAP, though more powerful and useful to power users, is not as popular between ISPs. I also like having a spell-checker accessible right from the application, as Netscape Messenger offers. At the time of this writing, kmail doesn’t allow me to spell-check my messages. In this section, you will learn how to set up Netscape Messenger to handle your email.
 
-Techno Talk: POP and IMAP? What’s that?
+
+# KDE Email Overview
+
+KDE provides an email program called `kmail` that you can use to read and write email messages. Although this program gets the job done, I am a little partial toward Netscape Messenger, as it provides more features than `kmail`. One nice feature of `kmail` over Netscape Messenger, however, is that `kmail` can manage multiple email accounts for you. Netscape allows you to set up multiple remote IMAP mailboxes but only a single POP mail account. Most users have several POP mailboxes. IMAP, though more powerful and useful to power users, is not as popular between ISPs. I also like having a spell-checker accessible right from the application, as Netscape Messenger offers. At the time of this writing, `kmail` doesn’t allow me to spell-check my messages. In this section, you will learn how to set up Netscape Messenger to handle your email.
+
+## Techno Talk: POP and IMAP? What’s that?
 
 IMAP and POP are two different protocols used to access your email.
 
 IMAP stands for Interactive Message Access Protocol. It allows you to manipulate and organize a remote mailbox as if it were local to your computer—and it does it without the need to transfer your entire mailbox to your computer. This is cool because your mailbox is then centralized on the network. No matter what computer you use and where you are, your entire mailbox is accessible. Many ISPs don’t like giving IMAP mailboxes, because users tend to collect copious amounts of email. For example, yours truly has an 80MB mailbox—yeah, there are things I should delete. But then again, disk space is cheap.
 
-POP, which stands for Post Office Protocol, is a much simpler interface to
-
-your mailbox. It doesn’t allow you to organize your inbox in any way, but it allows you to download your messages to a local mailbox for reading.
+POP, which stands for Post Office Protocol, is a much simpler interface to your mailbox. It doesn’t allow you to organize your inbox in any way, but it allows you to download your messages to a local mailbox for reading.
 
 The process of setting up your email reader is very similar for most email applications. You will need to know the following:
-
 - Your email address
-- The type of email account that you have (IMAP or POP)
+- The type of email account that you have (`IMAP` or `POP`)
 - The username and password needed to access your account
 - The name of the machine where your incoming mail is stored
 - The name for the SMTP (outgoing) mail server
@@ -2144,11 +2136,10 @@ To access the contents, click the chapter and section titles.
 
 ## Complete Idiot's Guide to Linux
 
-(Publisher: Macmillan Computer Publishing)
+Publisher: Macmillan Computer Publishing
 Author(s): Manuel Ricart
 ISBN: 078971826x
 Publication Date: 12/22/98
-
 Search this book:
 
 ## Configuring Your Identity for Netscape Messenger
@@ -2162,9 +2153,8 @@ Identity panel in Netscape Preferences.
 ## Configuring Your Mail Server
 
 The next step in configuring your email program is to configure your mail servers so that Messenger can receive and send your email (see the following figure). Information to be entered here includes:
-
 - Name of your email account (don’t put a domain name on it).
-- Name of mail server that sends your mail (SMTP).
+- Name of mail server that sends your mail (`SMTP`).
 - Name of mail server that stores email sent to you.
 - Type of mail server. If it’s a POP account, check whether if you want to leave incoming messages on the server (Otherwise messages are deleted from your ISP’s server after they are downloaded. If it’s an IMAP server, your mailboxes are kept on the server.
 
@@ -2174,24 +2164,25 @@ Messenger’s Mail Server Configuration panel stores information about sending a
 
 ## Reading Email
 
-After configuring your identity and mail server settings, Messenger is ready to send and receive email. To start a Messenger session, choose the Messenger Mailbox command under the Communicator menu in a Navigator window. Messenger displays four main areas (from top to bottom):
-
+After configuring your identity and mail server settings, Messenger is ready to send and receive email. To start a Messenger session, choose the `Messenger Mailbox` command under the `Communicator` menu in a Navigator window. Messenger displays four main areas (from top to bottom):
 - Menus and buttons—Access to commands and functions
 - Mailboxes—Access to separate mailboxes
 - Mailbox contents
 - Message body
 
+
+
 See the following figure for a description of the most important buttons and areas.
 
 Different buttons in the Messenger window include:
 
-- Get Msg—Click to download new messages.
-- New Msg—Click to compose a new message.
-- Reply—Click to reply to sender of the current message.
-- Forward—Click to send a copy of the current message to another person.
-- Delete—Click to delete the message from your mailbox.
+- `Get Msg`—Click to download new messages.
+- `New Msg`—Click to compose a new message.
+- `Reply`—Click to reply to sender of the current message.
+- `Forward`—Click to send a copy of the current message to another person.
+- `Delete`—Click to delete the message from your mailbox.
 
-You can also organize your messages into different boxes. To select a different message box, click the Inbox menu.
+You can also organize your messages into different boxes. To select a different message box, click the `Inbox` menu.
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_100_1.png)
 
@@ -2199,11 +2190,7 @@ The Netscape Messenger window.
 
 ## Composing an Email Message
 
-Sending email is just as easy as reading email. To send a message, click the New Msg button (see the previous figure). This will present you with a window where you can compose and address an email message like the one shown in the following figure. When done composing a message, click Send Now to forward your email message to your mail server for delivery.
-
-
-
-
+Sending email is just as easy as reading email. To send a message, click the `New Msg` button (see the previous figure). This will present you with a window where you can compose and address an email message like the one shown in the following figure. When done composing a message, click `Send Now` to forward your email message to your mail server for delivery.
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_101_0.png)
 
@@ -2213,51 +2200,56 @@ Kmail 在界面上与 Netscape 的 Messenger 组件非常相似。然而，目�
 
 ## 新闻
 
-如果你有时间在 Usenet 上闲逛，无疑会找到很多有用和无用的东西。如果你想冲浪，你需要一个像样的新闻阅读器。同样，你的选择有几种：在 KDE 下你有 knews，在任何 X-Windows 下，包括 KDE，你有 Netscape 的 Collabra。
+如果你有时间在 Usenet 上闲逛，无疑会找到很多有用和无用的东西。如果你想冲浪，你需要一个像样的新闻阅读器。同样，你的选择有几种：在 KDE 下你有 `knews`，在任何 X-Windows 下，包括 KDE，你有 Netscape 的 `Collabra`。
 
 > Techno Talk：什么是 Usenet？
+>
 > Usenet 是一个全球分布式讨论系统。它由按主题分类的主题层级组成（新闻组）。信息在新闻服务器之间广播和传播。一些组是经过审核的，这意味着用户发布的信息需要在发布前得到批准。其他组则未经过审核。
-> 
+>
 > 有关 Usenet 是什么以及不是什么的详细描述，请参阅 http://www.cis.ohio-state.edu/hypertext/faq/usenet/usenet/what-is/part1/faq.html
 
-Collabra 对电子邮件和新闻的区别不大。虽然访问它们的配置不同，但结果相似。你使用 Collabra 订阅你感兴趣的新闻组，然后使用 Messenger 阅读和发布信息。但是，在阅读新闻之前，你需要先下载一份可用的信息列表。当你点击其中一个时，该信息将被下载，你就可以查看它。如果你想发布信息，你基本上像撰写电子邮件一样撰写，但它会被发布到新闻服务器。从那里，信息会在全球范围内传播。
+`Collabra` 对电子邮件和新闻的区别不大。虽然访问它们的配置不同，但结果相似。你使用 `Collabra` 订阅你感兴趣的新闻组，然后使用 Messenger 阅读和发布信息。但是，在阅读新闻之前，你需要先下载一份可用的信息列表。当你点击其中一个时，该信息将被下载，你就可以查看它。如果你想发布信息，你基本上像撰写电子邮件一样撰写，但它会被发布到新闻服务器。从那里，信息会在全球范围内传播。
 
-将你的系统配置为使用新闻很简单：你连接到一个新闻服务器（nntp 服务器；该机器的名称由你的 ISP 提供），并从该服务器下载一份非常长且很大的可用新闻组列表。（有成千上万个不同的组。）然后你选择所有感兴趣的组并开始阅读（见接下来的三个图）。作为 sanity check，你可能想为每天做这件事分配一定的时间。很容易沉迷于阅读新闻而没有意识到几个小时已经过去了。作为选择，我倾向于除非在搜索特定信息时，否则不查看新闻组。几年前，我曾经花费比任何人份额都多的时间阅读新闻。今天我尽量远离；很容易被噪音淹没。
+将你的系统配置为使用新闻很简单：你连接到一个新闻服务器（`nntp` 服务器；该机器的名称由你的 ISP 提供），并从该服务器下载一份非常长且很大的可用新闻组列表。（有成千上万个不同的组。）然后你选择所有感兴趣的组并开始阅读（见接下来的三个图）。作为 sanity check，你可能想为每天做这件事分配一定的时间。很容易沉迷于阅读新闻而没有意识到几个小时已经过去了。作为选择，我倾向于除非在搜索特定信息时，否则不查看新闻组。几年前，我曾经花费比任何人份额都多的时间阅读新闻。今天我尽量远离；很容易被噪音淹没。
 
-如果你的 ISP 在特殊端口下提供新闻服务，请在 Port 空间中输入；否则保留默认的 119。组织也使用新闻来分发信息。其中一些新闻组只能通过需要身份验证的安全服务器访问：如果你的新闻服务器需要此功能，请在 Port 空间旁边的 Secure 复选框中进行勾选。
+如果你的 ISP 在特殊端口下提供新闻服务，请在 `Port` 空间中输入；否则保留默认的 `119`。组织也使用新闻来分发信息。其中一些新闻组只能通过需要身份验证的安全服务器访问：如果你的新闻服务器需要此功能，请在 `Port` 空间旁边的 `Secure` 复选框中进行勾选。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_102_0.png)
 
-新闻配置面板。要配置你的新闻，请在 Communicator 的任何窗口中使用 Edit 菜单下的 Preferences 命令。
+新闻配置面板。要配置你的新闻，请在 Communicator 的任何窗口中使用 `Edit` 菜单下的 `Preferences` 命令。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_102_1.png)
 
 在你定义新闻服务器后，你将看到此窗口。在这里，你可以从你的新闻服务器提供的组中选择要加入的组。
 
-如果你知道感兴趣的新闻组名称，请在 Discussion Group 旁输入并点击 Join。
+如果你知道感兴趣的新闻组名称，请在 `Discussion Group` 旁输入并点击 `Join`。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_102_2.png)
 
 Messenger 显示的新闻组列表。
 
-使用 Reply 按钮回复帖子。如果你按住它，会出现一个菜单，允许你选择回复方式：回复到组、回复给发帖人，或两者兼顾。加粗列出的帖子表示尚未阅读。
+使用 `Reply` 按钮回复帖子。如果你按住它，会出现一个菜单，允许你选择回复方式：回复到组、回复给发帖人，或两者兼顾。加粗列出的帖子表示尚未阅读。
 
 ## Telnet
 
-Telnet 是与 Internet 上另一台计算机交互的另一种方式。它是一个仅限命令行程序，允许你通过命令行界面访问远程类 UNIX 计算机。Telnet 在第 17 章“Command Toolbox: Useful Shell Commands and Shortcuts”中讨论。
+`Telnet` 是与 Internet 上另一台计算机交互的另一种方式。它是一个仅限命令行程序，允许你通过命令行界面访问远程类 UNIX 计算机。`Telnet` 在第 17 章“Command Toolbox: Useful Shell Commands and Shortcuts”中讨论。
 
 要访问内容，请点击章节和节标题。
 
 ## Complete Idiot's Guide to Linux
 
 （出版商：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 搜索本书：
 
 ## 第 10 章
+
 自定义 KDE
 
 ## 本章内容
@@ -2266,50 +2258,53 @@ ISBN：078971826x
 - 其他 KDE 选项
 - KDE 控制中心
 
-KDE 具有相当高的可定制性；以下是你可以自定义桌面的快速指南。KDE 大部分是通过使用 kdelnk 文件进行自定义的（文件扩展名为 kdelnk）。这些文件提供 KDE 用于将文件与应用程序关联、将图标与应用程序和文档关联、将磁盘驱动器等设备与图标关联（见第 7 章“Working with Disks”）等配置信息。
+KDE 具有相当高的可定制性；以下是你可以自定义桌面的快速指南。KDE 大部分是通过使用 `kdelnk` 文件进行自定义的（文件扩展名为 `kdelnk`）。这些文件提供 KDE 用于将文件与应用程序关联、将图标与应用程序和文档关联、将磁盘驱动器等设备与图标关联（见第 7 章“Working with Disks”）等配置信息。
 
 KDE 面板可以通过多种方式进行自定义。以下各节介绍了其中一些最有用的方法。
 
 ## 将应用程序添加到面板或应用程序启动器
 
-将应用程序添加到面板是一个简单的两步过程。首先，你需要创建一个提供有关要添加应用程序信息的 kdelnk 文件。该文件将可执行程序与图标及其文件关联。然后你通过将其拖入面板或将其放在应用程序启动器会找到的特殊目录中来安装 kdelnk 文件。
+将应用程序添加到面板是一个简单的两步过程。首先，你需要创建一个提供有关要添加应用程序信息的 `kdelnk` 文件。该文件将可执行程序与图标及其文件关联。然后你通过将其拖入面板或将其放在应用程序启动器会找到的特殊目录中来安装 `kdelnk` 文件。
 
 ### 创建代表应用程序的 Kdelnk 文件
 
-为应用程序创建 .kdelnk 文件很容易。该过程与我们在第 7 章“Working with Disks”中为软盘和 CD-ROM 驱动器创建 .kdelnk 文件的过程非常相似。右键单击桌面上的空白区域。当弹出菜单出现时，选择 New 然后 Program。会出现一个窗口，要求你为此 kdelnk 文件提供名称。将名称从默认的“Program.kdelnk”更改为代表你的程序的名称，例如“Netscape.kdelnk”。一个看起来像齿轮的图标出现在你的桌面上。
+为应用程序创建 `.kdelnk` 文件很容易。该过程与我们在第 7 章“Working with Disks”中为软盘和 CD-ROM 驱动器创建 `.kdelnk` 文件的过程非常相似。右键单击桌面上的空白区域。当弹出菜单出现时，选择 `New` 然后 `Program`。会出现一个窗口，要求你为此 `kdelnk` 文件提供名称。将名称从默认的“`Program.kdelnk`”更改为代表你的程序的名称，例如“`Netscape.kdelnk`”。一个看起来像齿轮的图标出现在你的桌面上。
 
-创建图标后，右键单击它并选择 Properties 命令。这将为你呈现一个面板，如下图所示。
+创建图标后，右键单击它并选择 `Properties` 命令。这将为你呈现一个面板，如下图所示。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_104_0.png)
 
-此窗口控制 kdelnk 文件的属性。
+此窗口控制 `kdelnk` 文件的属性。
 
-点击 Execute 选项卡以更改将图标与实际程序关联的设置。Execute 面板看起来像下一个图中的那样。
+点击 `Execute` 选项卡以更改将图标与实际程序关联的设置。`Execute` 面板看起来像下一个图中的那样。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_104_1.png)
 
-执行选项卡允许你将程序与 kdelnk 文件关联。
+执行选项卡允许你将程序与 `kdelnk` 文件关联。
 
-如果你知道程序文件的位置，只需将其输入 Execute 字段即可。例如，Netscape 程序的路径是 /opt/netscape/communicator/netscape。如果你不知道确切路径，你也可以使用 Browse 按钮手动查找文件。
+如果你知道程序文件的位置，只需将其输入 `Execute` 字段即可。例如，Netscape 程序的路径是 `/opt/netscape/communicator/netscape`。如果你不知道确切路径，你也可以使用 `Browse` 按钮手动查找文件。
 
-一些程序使用特殊目录作为其工作目录，在那里保存文件。当程序这样做时，它们会常规地在该工作目录中查找与程序关联的文件。这样的程序需要填写 Working directory 字段。
 
-Swallowing on 面板选项适用于运行后成为面板上小图标的应用程序，如 CD 播放器。Run in terminal 按钮适用于你想为其提供图标的命令行程序。
+
+一些程序使用特殊目录作为其工作目录，在那里保存文件。当程序这样做时，它们会常规地在该工作目录中查找与程序关联的文件。这样的程序需要填写 `Working directory` 字段。
+
+`Swallowing on` 面板选项适用于运行后成为面板上小图标的应用程序，如 CD 播放器。`Run in terminal` 按钮适用于你想为其提供图标的命令行程序。
 
 要将图标与文件关联，请点击包含齿轮图标的按钮。这将打开一个面板，你可以用它为你的程序选择图标（见下图）。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_105_0.png)
 
-使用 Select icon 面板为你的程序关联图标。
+使用 `Select icon` 面板为你的程序关联图标。
 
-Select icon 面板有一个弹出菜单，你可以用它在 KDE 的图标区域 /opt/kde/share/icons 或你的主目录中的 kde/share/icons 目录中找到图标。请注意，此目录通常不可见，因为它以句点开头；要在 KFM 窗口中显示它，请在 View 菜单中激活 Show Dot Files 选项。点击你喜欢的图标，然后点击 OK。（Netscape 的图标看起来像船舵。）
+`Select icon` 面板有一个弹出菜单，你可以用它在 KDE 的图标区域 `/opt/kde/share/icons` 或你的主目录中的 `kde/share/icons` 目录中找到图标。请注意，此目录通常不可见，因为它以句点开头；要在 KFM 窗口中显示它，请在 View 菜单中激活 `Show Dot Files` 选项。点击你喜欢的图标，然后点击 OK。（Netscape 的图标看起来像船舵。）
 
 > **Check This Out:**
-> 你可以使用 Paint 应用程序添加自己的图标。图标使用 XPM 格式保存，大小为 32 像素宽乘 32 像素高。如果你将它们存储在主目录中的 kde/share/icons 目录中，你将能够将它们关联起来。
 
-配置 kdelnk 文件的最后一步是将文件类型和程序名称与 kdelnk 文件关联。这将允许 KFM 在你浏览文件系统时将图标与程序关联（见下图）。
+> 你可以使用 Paint 应用程序添加自己的图标。图标使用 XPM 格式保存，大小为 32 像素宽乘 32 像素高。如果你将它们存储在主目录中的 `kde/share/icons` 目录中，你将能够将它们关联起来。
 
-要将你的图标与实际程序关联，请在 Binary Pattern 字段中输入程序名称后跟分号（;）。KDE 将使用此名称在你浏览文件系统时显示图标。
+配置 `kdelnk` 文件的最后一步是将文件类型和程序名称与 `kdelnk` 文件关联。这将允许 KFM 在你浏览文件系统时将图标与程序关联（见下图）。
+
+要将你的图标与实际程序关联，请在 `Binary Pattern` 字段中输入程序名称后跟分号（;）。KDE 将使用此名称在你浏览文件系统时显示图标。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_105_1.png)
 
@@ -2317,13 +2312,9 @@ Application 选项卡将文件类型和图标与程序关联。注释区域在�
 
 注释字段在将鼠标悬停在显示此图标的项目上时显示为 ToolTip。
 
-应用程序名称是程序在你语言中的名称。如果你手动编辑此 .kdelnk 文件，你将能够为应用程序名称提供多种翻译。
+应用程序名称是程序在你语言中的名称。如果你手动编辑此 `.kdelnk` 文件，你将能够为应用程序名称提供多种翻译。
 
-底部两个列表是特殊的。左侧列表代表应用程序能够打开的 MIME（Multimedia Internet Mail Extensions）类型。MIME 类型有时很难确定，但在 Netscape 的情况下，你需要关联 text/html 类型。要消除
-
-
-
-associations that don’t match, select them from the left list and click the arrow pointing right (->). To add an association from the list, select the type you want and click the arrow pointing left (<-).
+底部两个列表是特殊的。左侧列表代表应用程序能够打开的 MIME（Multimedia Internet Mail Extensions）类型。MIME 类型有时很难确定，但在 Netscape 的情况下，你需要关联 `text/html` 类型。要消除 associations that don’t match, select them from the left list and click the arrow pointing right (->). To add an association from the list, select the type you want and click the arrow pointing left (<-).
 
 When you are done with your selections, click OK to save and dismiss the panel. The icon will change from a gear to the icon you selected for this program. The next step will make it visible to KFM.
 
@@ -2334,8 +2325,11 @@ To access the contents, click the chapter and section titles.
 ## 完全傻瓜Linux指南
 
 (Publisher: Macmillan Computer Publishing)
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
 
 Search this book:
@@ -2344,7 +2338,7 @@ Previous Table of Contents Next
 
 ## 将应用程序与 KFM 和应用程序启动器关联
 
-要使 KFM 使用 kdelnk 文件，需要将其放置在特殊目录中。此目录会根据您是希望使关联对系统范围有效还是仅对个人工作区有效而有所不同。
+要使 KFM 使用 `kdelnk` 文件，需要将其放置在特殊目录中。此目录会根据您是希望使关联对系统范围有效还是仅对个人工作区有效而有所不同。
 
 要将文件安装到个人工作区，请将其移动到主目录中的 `.kde/share/applnk` 目录或其子目录之一。注销后重新登录，您在浏览 `/opt/netscape/communicator/netscape` 时将能够看到正确的图标。此操作还具有将项目添加到个人应用程序菜单的效果。
 
@@ -2352,17 +2346,17 @@ Previous Table of Contents Next
 
 ## 面板管理：添加和删除应用程序
 
-要将应用程序添加到面板（屏幕底部的图标栏），将上一节中创建的 kdelnk 文件拖到面板上。将显示一个按钮，您可以单击它来启动应用程序。
+要将应用程序添加到面板（屏幕底部的图标栏），将上一节中创建的 `kdelnk` 文件拖到面板上。将显示一个按钮，您可以单击它来启动应用程序。
 
-要删除应用程序，只需在其面板按钮上右键单击并选择 Remove 即可。
+要删除应用程序，只需在其面板按钮上右键单击并选择 `Remove` 即可。
 
 ## 其他 KDE 选项
 
-KDE 允许您配置与面板和任务栏相关的其他设置。要配置这些设置，请在空白区域右键单击面板并选择 Configure。您也可以使用应用程序启动器中面板菜单中的 Configure 命令。各种选项包含在三个选项卡中（见接下来的两幅图）：
+KDE 允许您配置与面板和任务栏相关的其他设置。要配置这些设置，请在空白区域右键单击面板并选择 `Configure`。您也可以使用应用程序启动器中面板菜单中的 `Configure` 命令。各种选项包含在三个选项卡中（见接下来的两幅图）：
 
-- Panel 提供面板的位置和外观配置设置
-- Options 提供用于配置菜单 ToolTips、Clock 和面板及任务栏的自动隐藏设置的设置
-- Desktop 提供用于控制虚拟桌面数量的选项（见第 4 章，“Working with Applications”）
+*   Panel 提供面板的位置和外观配置设置
+*   Options 提供用于配置菜单 ToolTips、Clock 和面板及任务栏的自动隐藏设置的设置
+*   Desktop 提供用于控制虚拟桌面数量的选项（见第 4 章，“Working with Applications”）
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_108_0.png)
 
@@ -2370,7 +2364,7 @@ KPanel Configuration 面板允许您自定义面板和任务栏的位置、行�
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_108_1.png)
 
-Options 选项卡允许您配置设置，例如 ToolTips（信息标签，告诉您按钮或图标的作用）的显示。您还可以自定义面板和任务栏是否自动隐藏以及时钟是否显示。Personal First 按钮控制应用程序启动器中菜单的顺序。个人菜单具有球体图标。
+Options 选项卡允许您配置设置，例如 ToolTips（信息标签，告诉您按钮或图标的作用）的显示。您还可以自定义面板和任务栏是否自动隐藏以及时钟是否显示。`Personal First` 按钮控制应用程序启动器中菜单的顺序。个人菜单具有球体图标。
 
 ## KDE 控制中心
 
@@ -2383,6 +2377,7 @@ KDE 控制中心可从应用程序启动器访问，并为您提供机会根据�
 KDE 控制中心提供对许多可个性化设置的集中访问。
 
 > **Check This Out: What else can you do with KDE?**
+
 > Well, let’s say you aren’t comfy-cozy with English. Guess what—KDE can be customized to the language of your choice! At last count, KDE supported about 25 different languages.
 
 随着 KDE 环境的成熟，您可以预期 KDE 控制中心将提供更多设置。
@@ -2394,64 +2389,67 @@ Previous Table of Contents Next
 To access the contents, click the chapter and section titles.
 
 Complete Idiot's Guide to Linux
+
 (Publisher: Macmillan Computer Publishing)
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
 
 ## Part 2
+
 Working on the Command Line
 
-Now that wasn’t so bad was it? As you saw in Part 1, KDE helps make using Linux a breeze. But maybe you’re thinking to yourself, “What did users do before KDE?” or “What if I’m just a rebel and I want to see the nuts and bolts of Linux?” We’ve got you covered! Part 2 shows you Linux features without the glitz of KDE—you get to try your hand at working on the command line. The chapters in this section talk about consoles, getting help, and shells (sorry, not the kind you find on the beach—it’s not that kind of adventure). We even take a peek in the command toolbox at some useful shell commands and shortcuts. Well, if you’re ready, the command line awaits!
+
+
+Now that wasn’t so bad was it? As you saw in Part 1, `KDE` helps make using `Linux` a breeze. But maybe you’re thinking to yourself, “What did users do before `KDE`?” or “What if I’m just a rebel and I want to see the nuts and bolts of `Linux`?” We’ve got you covered! Part 2 shows you `Linux` features without the glitz of `KDE`—you get to try your hand at working on the command line. The chapters in this section talk about consoles, getting help, and shells (sorry, not the kind you find on the beach—it’s not that kind of adventure). We even take a peek in the command toolbox at some useful shell commands and shortcuts. Well, if you’re ready, the command line awaits!
 
 ## Chapter 11
-Shells and Consoles
+### Shells and Consoles
 
-## In This Chapter
-
+#### In This Chapter
 - Introduction to the UNIX shell
 - Basic shell navigation commands
 
-Throughout the previous chapters I have focused on using Linux by using a graphical user interface (GUI or UI for short). If you use your computer as a workstation, that is how you’ll use it most of the time. However, that is only half the story. Although KDE’s ergonomics are nice, they are not yet as
+Throughout the previous chapters I have focused on using `Linux` by using a graphical user interface (`GUI` or `UI` for short). If you use your computer as a workstation, that is how you’ll use it most of the time. However, that is only half the story. Although `KDE`’s ergonomics are nice, they are not yet as polished as the graphical environment available to `Windows` or `Macintosh` users; but it is an excellent start.
 
-polished as the graphical environment available to Windows or Macintosh users; but it is an excellent start.
+At this point, you know how to work under `Linux` using `KDE`. And while the tour was not really technologically driven, I hope you feel confident enough to do quite a few things without the command line.
 
-At this point, you know how to work under Linux using KDE. And while the tour was not really technologically driven, I hope you feel confident enough to do quite a few things without the command line.
+In this section of the book, I will tell you how to work on `Linux` (and `UNIX`!) using a command line. No matter how much you want to stay away from the command line, the truth is that this evil interface is actually quite powerful, and in certain ways it is indispensable. (Of course, the shell’s interface isn’t really evil; it just isn’t as intuitive as a graphical environment such as `KDE`.) When you learn how to use a shell, you will have a powerful tool in your bag of tricks. Let’s get our hands dirty for the first time using a shell.
 
-In this section of the book, I will tell you how to work on Linux (and UNIX!) using a command line. No matter how much you want to stay away from the command line, the truth is that this evil interface is actually quite powerful, and in certain ways it is indispensable. (Of course, the shell’s interface isn’t really evil; it just isn’t as intuitive as a graphical environment such as KDE.) When you learn how to use a shell, you will have a powerful tool in your bag of tricks. Let’s get our hands dirty for the first time using a shell.
+### The UNIX Command Prompt
 
-## The UNIX Command Prompt
+The `UNIX` command prompt, or *shell*, as it’s also called, provides you with direct access to the operating system. It is a command interpreter: It interprets and executes all of your commands. The shell is really just another program that sits between your keyboard, the operating system, and other programs. Unlike `DOS`, the shell is a separate program from the operating system, or kernel.
 
-The UNIX command prompt, or *shell*, as it’s also called, provides you with direct access to the operating system. It is a command interpreter: It interprets and executes all of your commands. The shell is really just another program that sits between your keyboard, the operating system, and other programs. Unlike DOS, the shell is a separate program from the operating system, or kernel.
+Though powerful, shells are lacking in the ergonomics department: They just don’t provide a friendly and intuitive `GUI`. And no matter how ergonomic the shell, the fact remains it is a shell, and it wants you to type in commands.
 
-Though powerful, shells are lacking in the ergonomics department: They just don’t provide a friendly and intuitive GUI. And no matter how ergonomic the shell, the fact remains it is a shell, and it wants you to type in commands.
+Yes, shells are by nature arcane and typing intensive, but they also are powerful. Shells provide many options unavailable to `GUI`-only systems. When you learn how to use a shell, you won’t be able to do without one! Granted, most things are easier to do with a `GUI` application, but many other things are not. The shell is then the right interface for certain kinds of problems.
 
-Yes, shells are by nature arcane and typing intensive, but they also are powerful. Shells provide many options unavailable to GUI-only systems. When you learn how to use a shell, you won’t be able to do without one! Granted, most things are easier to do with a GUI application, but many other things are not. The shell is then the right interface for certain kinds of problems.
+If you are accessing an `UNIX` box remotely, you will more than likely do so through a shell interface. Shells come in different flavors and knowing how to use a shell is a good thing. It is a wise person who is familiar with at least two different shells. It will be of tremendous help if you ever have shell access to a system that doesn’t sport your favorite shell.
 
-If you are accessing an UNIX box remotely, you will more than likely do so through a shell interface. Shells come in different flavors and knowing how to use a shell is a good thing. It is a wise person who is familiar with at least two different shells. It will be of tremendous help if you ever have shell access to a system that doesn’t sport your favorite shell.
+Most shells in `UNIX` are programmable, so if you find yourself writing the same commands over and over, it is easy to create a shell program (similar to a `.bat` file in `DOS` and `Windows`) that automates those commands for you. But you can worry about this when the time comes.
 
-Most shells in UNIX are programmable, so if you find yourself writing the same commands over and over, it is easy to create a shell program (similar to a `.bat` file in DOS and Windows) that automates those commands for you. But you can worry about this when the time comes.
+Shells are accessible through a terminal program. In `KDE`, there’s an application that provides you with shell access from within the graphic environment. This useful program is called `kvt`.
 
-Shells are accessible through a terminal program. In KDE, there’s an application that provides you with shell access from within the graphic environment. This useful program is called kvt.
+
 
 Shells are also accessible through a terminal program or a console. Remember when Linux first booted? It had a text interface. That’s the console. Linux also provides virtual consoles, which are discussed later in this chapter.
 
-
-
-
-
 ## Shell 种类
 
-可供选择的 shell 有很多。为什么？因为人们喜欢以不同的方式做事，而且许多程序员创建了新的 shell 来解决他们喜欢的 shell 中的某些不足。这里列出的内容实际上是一棵多物种的 shell 进化树。第一个 shell（sh）的特性进行了交叉授粉，帮助了特性的演进：
+可供选择的 shell 有很多。为什么？因为人们喜欢以不同的方式做事，而且许多程序员创建了新的 shell 来解决他们喜欢的 shell 中的某些不足。这里列出的内容实际上是一棵多物种的 shell 进化树。第一个 shell（`sh`）的特性进行了交叉授粉，帮助了特性的演进：
 
-- sh—起初，这是你唯一的选项。它被称为 Bourne shell。不幸的是，它没有提供你在 shell 中真正想要的东西，例如命令行编辑。
-- ksh—Korn shell。这是一个非常流行的 UNIX shell。在过去，如果你安装了特定品牌的 UNIX，才能使用这个 shell。
-- csh—C shell。这个 shell 在交互使用（在屏幕上输入）方面与其他两个相似，但在其编程语法上却非常不同。C shell 是第一个提供作业控制（一种管理运行命令的方式）和命令历史的 shell。
-- tcsh—tcsh 是增强版的 C shell（csh）。这个 shell 与 csh 相似，但提供了命令和文件名补全以及一些命令行编辑功能。
-- bash—这是大多数 Linux 发行版中的默认 shell。它被称为“Bourne Again Shell”，由自由软件基金会（GNU）创建和分发。这是一个非常好的 shell 可供学习；它具有命令行编辑和文件名补全，并且与原始的 Bourne shell 兼容。
-- zsh—这是所有 shell 中最新的一种。它与 Bourne shell 兼容。
+- `sh`—起初，这是你唯一的选项。它被称为 Bourne shell。不幸的是，它没有提供你在 shell 中真正想要的东西，例如命令行编辑。
+- `ksh`—Korn shell。这是一个非常流行的 UNIX shell。在过去，如果你安装了特定品牌的 UNIX，才能使用这个 shell。
+- `csh`—C shell。这个 shell 在交互使用（在屏幕上输入）方面与其他两个相似，但在其编程语法上却非常不同。C shell 是第一个提供作业控制（一种管理运行命令的方式）和命令历史的 shell。
+- `tcsh`—`tcsh` 是增强版的 C shell（`csh`）。这个 shell 与 `csh` 相似，但提供了命令和文件名补全以及一些命令行编辑功能。
+- `bash`—这是大多数 Linux 发行版中的默认 shell。它被称为“Bourne Again Shell”，由自由软件基金会（GNU）创建和分发。这是一个非常好的 shell 可供学习；它具有命令行编辑和文件名补全，并且与原始的 Bourne shell 兼容。
+- `zsh`—这是所有 shell 中最新的一种。它与 Bourne shell 兼容。
 
 Check This Out:
+
 大多数 shell 都提供自己的编程语言。你在 Linux 下运行的许多程序实际上都是为这里介绍的 shell 或其他命令解释器（如 Perl 和 Python）编写的 shell 脚本。
 
 要访问内容，请单击章节和节标题。
@@ -2459,8 +2457,11 @@ Check This Out:
 ## Complete Idiot's Guide to Linux
 
 （Publisher: Macmillan Computer Publishing）
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
 
 Search this book:
@@ -2469,21 +2470,21 @@ Previous Table of Contents Next
 
 ## Graphic Consoles
 
-即使你正在运行图形终端，终端也只是让 shell 与你通信的花哨前端。KDE 提供了一个名为 kvt 的应用程序，你可以用它来访问 shell。你可以通过单击面板上的 kvt 图标来启动终端。该图标如图下一图所示。
+即使你正在运行图形终端，终端也只是让 shell 与你通信的花哨前端。KDE 提供了一个名为 `kvt` 的应用程序，你可以用它来访问 shell。你可以通过单击面板上的 `kvt` 图标来启动终端。该图标如图下一图所示。
 
-面板上的 kvt 按钮看起来像这样。
+面板上的 `kvt` 按钮看起来像这样。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_113_0.png)
 
-kvt 终端程序通过 KVT 提供对 shell 的直接访问。（其他终端仿真器，例如称为 xterm 的仿真器，也可供你使用。）
+`kvt` 终端程序通过 KVT 提供对 shell 的直接访问。（其他终端仿真器，例如称为 `xterm` 的仿真器，也可供你使用。）
 
-如果你正在运行 X，现在按 Ctrl+Alt+F2 进入控制台。我希望你能充分体验在命令行上工作的感觉，并放弃图形环境提供的一些便利。这会让你的体验更“纯粹”。
+如果你正在运行 X，现在按 `Ctrl+Alt+F2` 进入控制台。我希望你能充分体验在命令行上工作的感觉，并放弃图形环境提供的一些便利。这会让你的体验更“纯粹”。
 
 ## Check This Out:
 
-如果你在控制台上工作，你可以同时在多个控制台上工作。每次切换时，你可以通过按 Alt+Fn 来访问虚拟控制台，其中 Fn 为 F1–F6。你将获得一个全新的虚拟控制台，包含登录提示等一切内容。
+如果你在控制台上工作，你可以同时在多个控制台上工作。每次切换时，你可以通过按 `Alt+Fn` 来访问虚拟控制台，其中 `Fn` 为 `F1–F6`。你将获得一个全新的虚拟控制台，包含登录提示等一切内容。
 
-如果你已登录 X（KDE），你仍然可以访问虚拟控制台。你可以通过按 Ctrl+Alt+Fn 来激活虚拟控制台，其中 Fn 为 F2–F6。要返回到运行 KDE 的 X 会话，请按 Alt+F7。（默认情况下 X 会话在终端 7 下运行。）
+如果你已登录 X（KDE），你仍然可以访问虚拟控制台。你可以通过按 `Ctrl+Alt+Fn` 来激活虚拟控制台，其中 `Fn` 为 `F2–F6`。要返回到运行 KDE 的 X 会话，请按 `Alt+F7`。（默认情况下 X 会话在终端 7 下运行。）
 
 ## Logging in Through a Console
 
@@ -2503,19 +2504,20 @@ Password: mypassword
 
 ## What Shell Are You Running?
 
-默认情况下，除非你的系统由其他人配置，否则你应该正在运行 bash。要检查你正在运行什么 shell，请输入 echo $SHELL。
+默认情况下，除非你的系统由其他人配置，否则你应该正在运行 `bash`。要检查你正在运行什么 shell，请输入 `echo $SHELL`。
 
-前面带有美元符号的词表示该词实际上是一个变量的名称。echo 命令将打印该 $SHELL 环境变量中找到的值。结果应类似于此处所示的内容：
+前面带有美元符号的词表示该词实际上是一个变量的名称。`echo` 命令将打印该 `$SHELL` 环境变量中找到的值。结果应类似于此处所示的内容：
 
 ```
 [alberto@digital alberto]$ echo $SHELL
 /bin/bash
 ```
 
-如果由于某种奇怪的原因你运行的不是 bash，请在提示符下输入命令 bash 以在本次会话的剩余时间内开始使用 bash shell。
+如果由于某种奇怪的原因你运行的不是 `bash`，请在提示符下输入命令 `bash` 以在本次会话的剩余时间内开始使用 `bash` shell。
 
 > Check This Out:
-> 在向 shell 输入命令时，请记住 Linux 是区分大小写的，因此 BASH、bash、Bash 和 BaSH 对 shell 来说是不同的命令。通常你输入的命令将全部为小写。
+>
+> 在向 shell 输入命令时，请记住 Linux 是区分大小写的，因此 `BASH`、`bash`、`Bash` 和 `BaSH` 对 shell 来说是不同的命令。通常你输入的命令将全部为小写。
 
 ## Command Line Program Syntax
 
@@ -2527,13 +2529,14 @@ commandname [flags] arg1 arg2 argn
 
 术语定义如下：
 
-- *commandname* 是命令的名称。
-- *flags* 或参数是在程序名称之后给出的选项，用于控制程序的行为。标志通常通过前导的破折号或双破折号与其它类型的参数区分开，如 `-h` 或 `--help`。其他类型的参数可以是文件名或某些程序定义的关键字。标志是区分大小写的，并且具有许多选项的工具会使用大小写字母来命名其选项。
-- *arg1-argn* 是程序要处理的参数列表。通常这将是文件列表、目录名称或程序所需的东西。
+- `commandname` 是命令的名称。
+- `flags` 或参数是在程序名称之后给出的选项，用于控制程序的行为。标志通常通过前导的破折号或双破折号与其它类型的参数区分开，如 `-h` 或 `--help`。其他类型的参数可以是文件名或某些程序定义的关键字。标志是区分大小写的，并且具有许多选项的工具会使用大小写字母来命名其选项。
+- `arg1-argn` 是程序要处理的参数列表。通常这将是文件列表、目录名称或程序所需的东西。
 
 一些常用命令，例如 `ls` 和 `pwd`，也内置于某些 shell 中以提高性能。我们将在下一节讨论这些命令。
 
 > **Note:**
+>
 > 要永久更改你的 shell，请参阅第 17 章“Command Toolbox: Useful Shell Commands and Shortcuts”中的“Changing Your Shell”部分。
 
 ## Navigating the File System
@@ -2546,7 +2549,7 @@ commandname [flags] arg1 arg2 argn
 
 ## Where Are You?: pwd
 
-你可能想知道的第一件事是你在哪一个文件系统中。如果你刚登录，你可能在你的主目录中。即使我们知道这一点，为了学习体验，在提示符下输入 pwd：
+你可能想知道的第一件事是你在哪一个文件系统中。如果你刚登录，你可能在你的主目录中。即使我们知道这一点，为了学习体验，在提示符下输入 `pwd`：
 
 ```
 [alberto@digital alberto]$ pwd
@@ -2558,6 +2561,7 @@ commandname [flags] arg1 arg2 argn
 Products | Contact Us | About Us | Privacy | Ad Info | Home
 
 Use of this site is subject to certain Terms & Conditions. Copyright © 1996-2000 EarthWeb Inc.
+
 All rights reserved. Reproduction whole or in part in any form or medium without express written permission of EarthWeb is prohibited.
 
 To access the contents, click the chapter and section titles.
@@ -2565,15 +2569,20 @@ To access the contents, click the chapter and section titles.
 ## Complete Idiot's Guide to Linux
 
 （Publisher: Macmillan Computer Publishing）
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
 
 Search this book:
 
 ## Listing Files
 
-接下来你想做的事情是列出当前目录中的文件。这是通过 ls 命令完成的，其代表 list：
+接下来你想做的事情是列出当前目录中的文件。这是通过 `ls` 命令完成的，其代表 list：
+
+
 
 ```
 [alberto@digital alberto]$ ls
@@ -2582,17 +2591,17 @@ Mail         kde         nsmail        test.txt<
 html         lg          test.rc       todo.txt
 ```
 
-正如你所见，ls 的普通调用并不能很好地区分目录（文件夹）和文件。
+正如你所见，`ls`的普通调用并不能很好地区分目录（文件夹）和文件。
 
-要让 ls 为你提供有关找到的文件的更多信息，你需要指定 -F 标志。此选项使 ls 在文件名后附加一个字符以指示其类型。
+要让`ls`为你提供有关找到的文件的更多信息，你需要指定`-F`标志。此选项使`ls`在文件名后附加一个字符以指示其类型。
 
 文件类型指示符为
 
-- * 用于程序或可执行脚本
-- / 用于目录
-- @ 用于符号链接
-- | 用于管道
-- = 用于套接字
+- `*`用于程序或可执行脚本
+- `/`用于目录
+- `@`用于符号链接
+- `|`用于管道
+- `=`用于套接字
 - 无用于普通文件
 
 ```
@@ -2602,26 +2611,21 @@ Mail/         kde/         nsmail/        test.txt<
 html/         lg/          test.rc        todo.txt
 ```
 
-现在你可以区分基本类型。ls 提供了许多更多选项。更有用的选项在下表中列出。
+现在你可以区分基本类型。`ls`提供了许多更多选项。更有用的选项在下表中列出。
 
 ## Useful ls Options
 
 | Option | Action |
 |--------|--------|
+| `-F` | 标记文件类型 |
+| `-l` | 显示长列表 |
+| `-a` | 列出所有文件包括隐藏文件 |
+| `-s` | 打印文件大小 |
+| `-t` | 按文件时间排序，新文件在前 |
+| `-R` | 递归列出文件包括其他目录的内容 |
+| `-i` | 列出文件 inode |
 
-
-
-
-
--F	标记文件类型
--l	显示长列表
--a	列出所有文件包括隐藏文件
--s	打印文件大小
--t	按文件时间排序，新文件在前
--R	递归列出文件包括其他目录的内容
--i	列出文件 inode
-
-你可以将多个标志组合在一起，如 ls -Flai。这与 ls -F -l -a -i 相同，只是节省了一些击键。以下是该选项的输出：
+你可以将多个标志组合在一起，如`ls -Flai`。这与`ls -F -l -a -i`相同，只是节省了一些击键。以下是该选项的输出：
 
 ```
 [alberto@digital alberto]$ ls -Flai
@@ -2656,10 +2660,10 @@ total 9
 ## Techno Talk: Links, Sockets, and Inodes???
 
 - 这是什么链接？符号链接（在其他操作系统中也称为别名或快捷方式）是一个指向另一个文件的文件，是常用的工具。硬链接很少由用户创建，是指向具有多个其他文件名的同一数据块的文件名。
-- 这是什么管道和套接字？管道和套接字是程序之间通信创建的特殊文件。它们很少被看到，但你可能在 /dev 目录中看到一两个套接字。
-- 这是什么 inode？inode 是磁盘块的地址。当你通过 ls 请求查看 inode 信息时，ls 会打印文件中第一个块的地址。你可以使用此信息来判断两个文件是否实际上是具有不同名称的同一文件。我们在谈论链接时会再多谈一点。
+- 这是什么管道和套接字？管道和套接字是程序之间通信创建的特殊文件。它们很少被看到，但你可能在`/dev`目录中看到一两个套接字。
+- 这是什么 inode？inode是磁盘块的地址。当你通过`ls`请求查看 inode 信息时，`ls`会打印文件中第一个块的地址。你可以使用此信息来判断两个文件是否实际上是具有不同名称的同一文件。我们在谈论链接时会再多谈一点。
 
-你不需要进入一个目录就可以列出它。如果你向 ls 提供文件或目录的路径名，ls 将列出请求的文件或目录：
+你不需要进入一个目录就可以列出它。如果你向`ls`提供文件或目录的路径名，`ls`将列出请求的文件或目录：
 
 ```
 [alberto@digital alberto]$ ls /opt
@@ -2670,9 +2674,9 @@ bin/        kde/        man/        netscape/
 
 ## ls in Technicolor
 
-随 Linux 发行的 ls 版本具有以不同颜色显示不同文件类型的功能。此功能非常有用，因为它使区分文件、目录和程序变得容易。
+随 Linux 发行的`ls`版本具有以不同颜色显示不同文件类型的功能。此功能非常有用，因为它使区分文件、目录和程序变得容易。
 
-要启用此行为，你可以输入 ls --color，事情就会发生。最流行文件类型的颜色在下表中列出。
+要启用此行为，你可以输入`ls --color`，事情就会发生。最流行文件类型的颜色在下表中列出。
 
 ### Typical File Colors (ls --color)
 
@@ -2689,42 +2693,47 @@ bin/        kde/        man/        netscape/
 
 ## Complete Idiot's Guide to Linux
 
-(Publisher: Macmillan Computer Publishing)
+Publisher: Macmillan Computer Publishing
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
 
 Search this book:
 
 ## Making Shell Options the Default
 
-如果你发现这些选项有用，很可能你会想让它们成为默认值。当你运行 shell 时，有许多环境变量控制 shell 的行为。对于 bash shell，Linux 中的默认 shell，此默认信息存储在 /etc/profile 文件上。
+如果你发现这些选项有用，很可能你会想让它们成为默认值。当你运行 shell 时，有许多环境变量控制 shell 的行为。对于`bash` shell，Linux 中的默认 shell，此默认信息存储在`/etc/profile`文件上。
 
-你可以通过向主目录中的 .bashrc 文件添加条目来覆盖某些选项。由于此文件名以点开头，默认情况下它是不可见的（并称为点文件——你以为 Linux 名称会很困难！），但它确实存在。要使 ls 默认以颜色工作，将类似以下条目添加到你的 .bashrc 文件末尾。（使用 KEdit，因为你还不知道如何使用命令行编辑器。）以下是一些示例：
+你可以通过向主目录中的`.bashrc`文件添加条目来覆盖某些选项。由于此文件名以点开头，默认情况下它是不可见的（并称为点文件——你以为 Linux 名称会很困难！），但它确实存在。要使`ls`默认以颜色工作，将类似以下条目添加到你的`.bashrc`文件末尾。（使用 KEdit，因为你还不知道如何使用命令行编辑器。）以下是一些示例：
 
 ```
 alias ls='ls --color'
 ```
 
-要使 ls 使用 -F 选项，添加类似以下的行：
+要使`ls`使用`-F`选项，添加类似以下的行：
 
 ```
 alias ls='ls -F'
 ```
 
-要使 ls 同时使用 -F 和 --color 选项，添加类似以下的行：
+要使`ls`同时使用`-F`和`--color`选项，添加类似以下的行：
 
 ```
 alias ls='ls -F --color'
 ```
 
-正如你所猜测的，alias 将名称与命令关联。要在 bash 中创建别名，你使用关键字 alias，后跟别名的名称，后跟等号 (=) 标志，后跟命令的名称。如果命令长于一个词（即它有参数），你需要用单引号 (') 括起命令及其参数。你可以为别名使用任何你喜欢的名称。如果别名的名称与某个系统命令相同，则别名是执行的命令。
+正如你所猜测的，`alias`将名称与命令关联。要在`bash`中创建别名，你使用关键字`alias`，后跟别名的名称，后跟等号`=`标志，后跟命令的名称。如果命令长于一个词（即它有参数），你需要用单引号`'`括起命令及其参数。你可以为别名使用任何你喜欢的名称。如果别名的名称与某个系统命令相同，则别名是执行的命令。
 
-查看你的 .bashrc 以查看已为你定义的别名。
+查看你的`.bashrc`以查看已为你定义的别名。
 
 ## Changing Directories: cd
 
-现在你知道如何找出你所在的位置以及列出目录中的文件，是时候学习如何去某个地方了。为此，你使用 cd 命令。cd 代表 change directory。要去某个地方，输入 cd 命令，后跟你想去的目录的名称：
+现在你知道如何找出你所在的位置以及列出目录中的文件，是时候学习如何去某个地方了。为此，你使用`cd`命令。`cd`代表 change directory。要去某个地方，输入`cd`命令，后跟你想去的目录的名称：
+
+
 
 ```
 [alberto@digital alberto]$ cd /
@@ -2735,12 +2744,12 @@ bin/      home/     lost+found/ root/     var/
 boot/     initrd/   mnt/      sbin/     vmlinuz
 ```
 
-此示例带你到根 (/) 目录。
+此示例带你到根 (`/`) 目录。
 
-要返回到你的主目录，输入不带任何参数的 cd 命令：
+要返回到你的主目录，输入不带任何参数的 `cd` 命令：
 
 ```
-[alberto@digital /]$ cd
+[alberto@digital alberto]$ cd
 [alberto@digital alberto]$ ls
 Desktop/    images/    linkToImages@  test.txt
 Mail/       kde/       nsmail/        test.txt<
@@ -2749,7 +2758,7 @@ html/       lg/        test.rc        todo.txt
 
 ## Relative and Absolute Paths
 
-如果你在指定的路径中不提供前导斜杠 (/)，路径就是相对的。shell 会将当前工作目录附加到你指定的路径，如下所示：
+如果你在指定的路径中不提供前导斜杠 (`/`)，路径就是相对的。shell 会将当前工作目录附加到你指定的路径，如下所示：
 
 ```
 [alberto@digital alberto]$ cd images/anotherdir
@@ -2757,13 +2766,13 @@ html/       lg/        test.rc        todo.txt
 /home/alberto/images/anotherdir
 ```
 
-如果目录 images 位于 /home/alberto/images，则第一行等同于指定以下内容：
+如果目录 `images` 位于 `/home/alberto/images`，则第一行等同于指定以下内容：
 
 ```
 cd /home/alberto/images/anotherdir
 ```
 
-指定相对路径时，有用的是知道当前目录可以用句点 (.) 指定，而父目录，即包含当前目录的目录，可以用两个句点 (..) 指定，给定如下目录结构：
+指定相对路径时，有用的是知道当前目录可以用句点 (`.`) 指定，而父目录，即包含当前目录的目录，可以用两个句点 (`..`) 指定，给定如下目录结构：
 
 ```
 [alberto@digital alberto]$ ls
@@ -2785,18 +2794,15 @@ html/       lg/        test.rc        todo.txt
 
 ## Techno Talk: The PATH Environment Variable
 
-shell 在 PATH 环境变量中存储的文件路径列表中查找命令和程序。环境变量存储其他程序和命令可以访问的信息。环境变量存储诸如你使用的 shell、你的登录名和你的当前
+shell 在 `PATH` 环境变量中存储的文件路径列表中查找命令和程序。环境变量存储其他程序和命令可以访问的信息。环境变量存储诸如你使用的 shell、你的登录名和你的当前 working directory。要查看当前已定义的所有环境变量的列表，请在提示符下输入 `set`。
 
+当你在 shell 提示符下输入命令时，shell 会按顺序在 `PATH` 变量列出的每个目录中查找该命令的程序文件。找到的第一个与你输入的命令匹配的程序将被运行。如果命令的程序文件不在你的 `PATH` 环境变量列出的目录中，shell 会返回 `command not found` 错误。
 
-working directory. 要查看当前已定义的所有环境变量的列表，请在提示符下输入 set。
+默认情况下，shell 不会在你的当前工作目录或主目录中查找命令。这实际上是一种安全机制，可以防止你意外执行程序。如果恶意用户在你的主目录中放置了一个名为 `ls` 的有害程序怎么办？如果你输入 `ls` 而 shell 在 `/bin` 目录中的真实程序之前先在你的主目录中查找假程序，你认为会发生什么？如果你认为会发生坏事，你的想法是对的。
 
-当你在 shell 提示符下输入命令时，shell 会按顺序在 PATH 变量列出的每个目录中查找该命令的程序文件。找到的第一个与你输入的命令匹配的程序将被运行。如果命令的程序文件不在你的 PATH 环境变量列出的目录中，shell 会返回 “command not found” 错误。
+由于你的 `PATH` 中没有当前目录 (`.`) 作为搜索位置，因此当前目录中的程序必须使用绝对路径或相对路径 `./programname` 指定调用。
 
-默认情况下，shell 不会在你的当前工作目录或主目录中查找命令。这实际上是一种安全机制，可以防止你意外执行程序。如果恶意用户在你的主目录中放置了一个名为 ls 的有害程序怎么办？如果你输入 ls 而 shell 在 /bin 目录中的真实程序之前先在你的主目录中查找假程序，你认为会发生什么？如果你认为会发生坏事，你的想法是对的。
-
-由于你的 PATH 中没有当前目录 (.) 作为搜索位置，因此当前目录中的程序必须使用绝对路径或相对路径 ./programname 指定调用。
-
-要查看哪些目录是你的 PATH 的一部分，输入以下命令：
+要查看哪些目录是你的 `PATH` 的一部分，输入以下命令：
 
 ```
 echo $PATH
@@ -2812,8 +2818,11 @@ echo $PATH
 ## Complete Idiot's Guide to Linux
 
 (Publisher: Macmillan Computer Publishing)
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
 
 Search this book:
@@ -2822,9 +2831,9 @@ Search this book:
 
 正如我前面所说，shell 并不是很符合人体工学，大多数人都不喜欢经常输入命令或长路径名。根据你使用的 shell，你可能有 shell 为你补全文件名和命令名的能力。每当你指定的路径部分不会引起混淆时，shell 就会这样做。
 
-要在 bash 上激活补全，你所需要做的就是在输入足够字符后按 Tab。如果你想要列出 /usr/local/bin 目录的内容，你可以输入 ls /u<Tab>/lo<Tab>/b<Tab>，shell 会为你展开每条路径，节省你的按键次数。
+要在 `bash` 上激活补全，你所需要做的就是在输入足够字符后按 Tab。如果你想要列出 `/usr/local/bin` 目录的内容，你可以输入 `ls /u<Tab>/lo<Tab>/b<Tab>`，shell 会为你展开每条路径，节省你的按键次数。
 
-如果 shell 无法完成扩展，因为存在多个可能的补全，再次按 Tab 会列出所有可能的匹配项。这在你忘记命令名称时非常有用。例如，如果你输入 l<Tab><Tab>，shell 会响应并列出所有以 l 开头的程序：
+如果 shell 无法完成扩展，因为存在多个可能的补全，再次按 Tab 会列出所有可能的匹配项。这在你忘记命令名称时非常有用。例如，如果你输入 `l<Tab><Tab>`，shell 会响应并列出所有以 l 开头的程序：
 
 ```
 [alberto@digital alberto]$ l<Tab><Tab>
@@ -2842,9 +2851,9 @@ less         listres      locate       lpqall.faces
 
 ## Exiting the Console
 
-要退出控制台，请发出 logout 命令。此命令将结束你的会话，清除屏幕并返回到登录提示符。要从控制台重新启动计算机，可以按 Ctrl+Alt+Delete。
+要退出控制台，请发出 `logout` 命令。此命令将结束你的会话，清除屏幕并返回到登录提示符。要从控制台重新启动计算机，可以按 Ctrl+Alt+Delete。
 
-如果使用 kvt 或 xterm 等终端模拟器，你只需关闭窗口并像以前一样退出系统即可。
+如果使用 `kvt` 或 `xterm` 等终端模拟器，你只需关闭窗口并像以前一样退出系统即可。
 
 如果你让系统保持登录状态（这在你的家庭机器上可能是可以接受的），请记住任何人都可以查看和编辑你的文件。然而，永远不要让 root 会话保持打开状态，因为这可能导致致命的安全问题甚至灾难性的用户错误。
 
@@ -2852,11 +2861,11 @@ less         listres      locate       lpqall.faces
 
 ## Shutting Down a Linux Box
 
-关闭系统与你在 PC 上习惯的方式有点不同。与 DOS 或其他一些系统不同，类 UNIX 系统需要温和地关闭。即使没有人登录，也会运行许多进程。这些进程需要正确停止，否则会发生坏事。关闭是通过 shutdown 命令完成的。
+关闭系统与你在 PC 上习惯的方式有点不同。与 DOS 或其他一些系统不同，类 UNIX 系统需要温和地关闭。即使没有人登录，也会运行许多进程。这些进程需要正确停止，否则会发生坏事。关闭是通过 `shutdown` 命令完成的。
 
-在使用 shutdown 命令之前，你需要拥有 root 权限。这意味着你需要在使用该命令之前以 root 身份登录。
+在使用 `shutdown` 命令之前，你需要拥有 root 权限。这意味着你需要在使用该命令之前以 root 身份登录。
 
-shutdown 命令接受多个参数。这些选项指定系统将如何关闭以及何时关闭。此处必需的选项是 -h，表示“halt”，以及关键字 now，表示系统应立即开始关闭。
+`shutdown` 命令接受多个参数。这些选项指定系统将如何关闭以及何时关闭。此处必需的选项是 `-h`，表示“halt”，以及关键字 `now`，表示系统应立即开始关闭。
 
 要在 root 控制台上优雅地关闭系统，输入以下内容：
 
@@ -2864,9 +2873,11 @@ shutdown 命令接受多个参数。这些选项指定系统将如何关闭以�
 [root@digital root]# shutdown -h now
 ```
 
+
+
 ## Rebooting a Linux Box
 
-重启只是重新启动计算机的 fancy 名称。前面显示的 shutdown 命令可用于重启，如果你指定 -r 选项而不是 -h 选项。-r 选项表示 reboot：
+重启只是重新启动计算机的 fancy 名称。前面显示的`shutdown`命令可用于重启，如果你指定`-r`选项而不是`-h`选项。`-r`选项表示 reboot：
 
 ```
 [root@digital root]# shutdown -r now
@@ -2877,43 +2888,48 @@ shutdown 命令接受多个参数。这些选项指定系统将如何关闭以�
 ## Complete Idiot's Guide to Linux
 
 (Publisher: Macmillan Computer Publishing)
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
 
 To access the contents, click the chapter and section titles.
 
 ## Chapter 12
-Working with Files on the Shell
+
+## Working with Files on the Shell
 
 ## In This Chapter
 
 - How to Manage and Organize Your Files Using a Shell
+
 - How to Read Files
 
 ## Working with Files and Folders
 
 在第 11 章“Shells and Consoles”中，你学习了如何登录和注销以及如何使用 shell 导航文件系统。在本章中，你将继续探索 UNIX shell 并学习如何使用它来操作文件和目录。
 
-## Creating a New Empty File: touch
+## Creating a New Empty File: `touch`
 
 大多数时候，你会通过使用某些应用程序或 shell 程序来创建文件。出于教学目的，我在这里介绍一个允许你创建空文件的命令。这种凭空生成文件的能力将使你的探索更有趣一些。
 
-如果你需要创建空文件，可以轻松使用 touch 命令完成。touch 的目的是修改文件的访问和创建时间，但作为副作用，如果文件尚不存在，它会创建文件。
+如果你需要创建空文件，可以轻松使用`touch`命令完成。`touch`的目的是修改文件的访问和创建时间，但作为副作用，如果文件尚不存在，它会创建文件。
 
-要创建文件，输入命令 touch 后跟文件名：
+要创建文件，输入命令`touch`后跟文件名：
 
 ```
 [alberto@digital alberto]$ touch afile
 ```
 
-要验证文件是否已创建，你可能想使用第 11 章中解释的 ls 命令。
+要验证文件是否已创建，你可能想使用第 11 章中解释的`ls`命令。
 
 你可以向该命令提供多个文件名。文件名可以使用相对或绝对路径，或两者混合指定。命令执行时，它会创建指定的文件。
 
-## Removing Files: rm
+## Removing Files: `rm`
 
-要删除文件，使用 rm 命令。这个命令非常危险，原因只有一个：在 Linux（或通常的 UNIX）下删除的文件，除非你在磁带、软盘或其他介质上有备份，否则无法恢复。
+要删除文件，使用`rm`命令。这个命令非常危险，原因只有一个：在 Linux（或通常的 UNIX）下删除的文件，除非你在磁带、软盘或其他介质上有备份，否则无法恢复。
 
 要删除文件，输入以下内容：
 
@@ -2921,38 +2937,39 @@ Working with Files on the Shell
 [alberto@digital alberto]$ rm afile
 ```
 
-由于其固有的危险，rm 命令提供了一个选项，可以询问你尝试删除的任何文件。如果你提供 -i 选项，它会先询问你的意图：
+由于其固有的危险，`rm`命令提供了一个选项，可以询问你尝试删除的任何文件。如果你提供`-i`选项，它会先询问你的意图：
 
 ```
 [alberto@digital alberto]$ rm -i afile
 rm: remove `afile'? y
 ```
 
-命令别名在第 11 章“Making Shell Options the Default”部分描述。要查看已激活的命令别名列表，在命令提示符下输入 alias。所有活动的别名列表将被打印出来供你检查。
+命令别名在第 11 章“Making Shell Options the Default”部分描述。要查看已激活的命令别名列表，在命令提示符下输入`alias`。所有活动的别名列表将被打印出来供你检查。
 
 > Check This Out:
+
 > Oops! I deleted file x rm on tape or another disk, can I get it back?
+
 > Is there a backup on tape or another disk?
+
 > • Yes: yes, you can.
+
 > • No: nope, the file is gone.
 
-## Creating a Directory: mkdir
+## Creating a Directory: `mkdir`
 
-要创建目录，使用命令 mkdir 并指定目录名称（通常，名称可以是“相对”文件名或绝对路径）：
+要创建目录，使用命令`mkdir`并指定目录名称（通常，名称可以是“相对”文件名或绝对路径）：
 
 ```
 [alberto@digital alberto]$ mkdir adir
 ```
 
-如果你需要创建整个目录树，指定选项 -p 和你需要的路径：
+如果你需要创建整个目录树，指定选项`-p`和你需要的路径：
 
 ```
 [alberto@digital alberto]$ mkdir -p
 adir/anotherdir/yetanother
 ```
-
-
-
 
 如果路径的某些部分已经存在，则保留这些部分并将缺失的部分添加到路径中。
 
@@ -2964,45 +2981,48 @@ adir/anotherdir/yetanother
 
 如果你没有登录到自己的账户，立即创建一个！有关更多信息，请参阅第 18 章“用户、组和密码”。
 
-## 删除空目录：rmdir
+## 删除空目录：`rmdir`
 
-要删除空目录，请使用 rmdir 命令。rmdir 命令是“安全”的，因为它只会在目录为空时才删除目录。其用法如下：
+要删除空目录，请使用`rmdir`命令。`rmdir`命令是“安全”的，因为它只会在目录为空时才删除目录。其用法如下：
 
 ```
 [alberto@digital alberto]$ mkdir empty
 [alberto@digital alberto]$ rmdir empty
 ```
 
-## 同时删除文件和目录：rm -R
+## 同时删除文件和目录：`rm -R`
 
-通常当你想要擦除一个目录时，你也想处理掉它包含的所有文件。在 UNIX 和 Linux 中，此任务使用你之前看到的 rm 命令完成。
+通常当你想要擦除一个目录时，你也想处理掉它包含的所有文件。在 UNIX 和 Linux 中，此任务使用你之前看到的`rm`命令完成。
 
-要产生这种效果，rm 需要在删除目录之前递归删除找到的文件。虽然这是正确的做法，但要小心：你很容易在意识到发生了什么之前就擦除大量内容。不要忘记，shell 操作非常快。在删除文件时要小心；当你以 root 身份登录时尤其重要，因为一条命令就可能摧毁你的整个文件系统。
+要产生这种效果，`rm`需要在删除目录之前递归删除找到的文件。虽然这是正确的做法，但要小心：你很容易在意识到发生了什么之前就擦除大量内容。不要忘记，shell 操作非常快。在删除文件时要小心；当你以 root 身份登录时尤其重要，因为一条命令就可能摧毁你的整个文件系统。
 
 要访问内容，请点击章节和节标题。
 
 ## Linux 完全傻瓜指南
 
 （出版社：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 搜索本书：
 
-## 复制文件：cp
+## 复制文件：`cp`
 
-要复制文件，请使用 cp 命令。cp 的语法如下：
+要复制文件，请使用`cp`命令。`cp`的语法如下：
 
 ```
 cp [options] source destination
 ```
 
-source 是你想要复制的文件名，destination 是你创建的副本的名称。
+`source`是你想要复制的文件名，`destination`是你创建的副本的名称。
 
-如果 destination 是一个目录（路径未指定文件名），文件将以其原始名称复制到指定目录中。
+如果`destination`是一个目录（路径未指定文件名），文件将以其原始名称复制到指定目录中。
 
-options 参数用方括号括起来，表示选项是可选的。我们将在下一节中使用 cp 命令的一个选项。
+`options`参数用方括号括起来，表示选项是可选的。我们将在下一节中使用`cp`命令的一个选项。
 
 这里有一个例子：
 
@@ -3017,15 +3037,15 @@ ad ir/  alink@  hello
 fvw mrca00455  helloworld*  install.log  screens/
 ```
 
-你可以通过在单个命令中列出多个用空格分隔的源文件，将多个文件复制到单个目录中。唯一的要求是最后一个参数（destination）必须是目录。
+你可以通过在单个命令中列出多个用空格分隔的源文件，将多个文件复制到单个目录中。唯一的要求是最后一个参数（`destination`）必须是目录。
 
 ## 复制目录
 
-复制目录的方式与复制文件非常相似。复制目录时，你需要告诉 cp 你想要递归复制源目录包含的所有文件和目录。这可以通过 -R 选项轻松完成。语法如下：
+复制目录的方式与复制文件非常相似。复制目录时，你需要告诉`cp`你想要递归复制源目录包含的所有文件和目录。这可以通过`-R`选项轻松完成。语法如下：
 
-## 移动文件和目录：mv
+## 移动文件和目录：`mv`
 
-要移动文件或目录，你使用 mv 命令。移动文件与复制文件类似。最大的区别是新副本创建后原始文件会被删除。mv 命令遵循以下语法：
+要移动文件或目录，你使用`mv`命令。移动文件与复制文件类似。最大的区别是新副本创建后原始文件会被删除。`mv`命令遵循以下语法：
 
 ```
 mv [options] source destination
@@ -3041,18 +3061,21 @@ Xrootenv.0  adir/      alink@     anotherlink  file2
     helloworld*
 ```
 
-mv 命令也可以用于移动整个目录树。
+`mv`命令也可以用于移动整个目录树。
 
-mv 命令提供多个选项。有关更多信息，请参阅其手册页。
+`mv`命令提供多个选项。有关更多信息，请参阅其手册页。
 
 > 注意：
+
 > 要阅读 UNIX 工具或命令的文档，请参阅第 15 章“帮助请”。
 
 ## 技术谈：符号链接
 
-链接是指向文件系统其他位置的文件或文件夹的指针。链接看起来并像它指向的文件或文件夹一样工作。如果你通过 KFM 查看它，它将具有相同的图标（区别是它旁边会有一个小箭头）。如果你对 ls 命令指定 -F 标志，你会看到一个 at 符号（@）附加在链接文件名的末尾。当你打开一个链接时，你会看到链接指向的文件的相同文件内容。
 
-链接作为组织工具非常有用。它们允许你方便地访问可能存储在文件系统深处（因此具有长而难以输入的文件路径）或甚至在网络不同部分的<|message|>。无需遍历长路径来访问文件，你只需访问一个方便位置的链接即可。
+
+链接是指向文件系统其他位置的文件或文件夹的指针。链接看起来并像它指向的文件或文件夹一样工作。如果你通过 `KFM` 查看它，它将具有相同的图标（区别是它旁边会有一个小箭头）。如果你对 `ls` 命令指定 `-F` 标志，你会看到一个 `at` 符号（`@`）附加在链接文件名的末尾。当你打开一个链接时，你会看到链接指向的文件的相同文件内容。
+
+链接作为组织工具非常有用。它们允许你方便地访问可能存储在文件系统深处（因此具有长而难以输入的文件路径）或甚至在网络不同部分。无需遍历长路径来访问文件，你只需访问一个方便位置的链接即可。
 
 链接也可以用于节省磁盘空间。不要复制大文件以便随时使用，你可以在方便的地方创建指向它们的链接。链接占用非常少的磁盘空间，只有几个字节。
 
@@ -3066,7 +3089,7 @@ mv 命令提供多个选项。有关更多信息，请参阅其手册页。
 
 正如你所见，硬链接与文件写入的实际磁盘存储绑定。因此，硬链接不能跨越磁盘边界。
 
-另一个小的区别是硬链接只引用文件——永远不引用目录。唯一能区分硬链接和文件的方法是使用 ls 的 -i 和 -l 选项，并且 ls 报告硬链接计数大于一并且打印的 inode 地址相同：
+另一个小的区别是硬链接只引用文件——永远不引用目录。唯一能区分硬链接和文件的方法是使用 `ls` 的 `-i` 和 `-l` 选项，并且 `ls` 报告硬链接计数大于一并且打印的 inode 地址相同：
 
 ```
 [alberto@digital alberto]$ ls -il
@@ -3075,26 +3098,29 @@ mv 命令提供多个选项。有关更多信息，请参阅其手册页。
 169688 -rwxrwxr-x  2 alberto  alberto      74 Aug 26 12:19 hello.pl
 ```
 
-在前面的例子中，hello.pl 和 bye.pl 具有相同的 inode：169688。注意，两者都说它们有两个硬链接。两个文件实际上是同一个文件，只是名称不同！
+在前面的例子中，`hello.pl` 和 `bye.pl` 具有相同的 inode：`169688`。注意，两者都说它们有两个硬链接。两个文件实际上是同一个文件，只是名称不同！
 
 ## Linux 完全傻瓜指南
 
 （出版社：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 要访问内容，请点击章节和节标题。
 
-## 创建链接：ln
+## 创建链接：`ln`
 
-链接是使用 ln 命令创建的。ln 用于创建软链接和硬链接。命令的语法是
+链接是使用 `ln` 命令创建的。`ln` 用于创建软链接和硬链接。命令的语法是
 
 ```
 ln [options] source destination
 ```
 
-要创建符号（软）链接，你指定 -s 选项，表示 symbolic。以下是列出目录的示例：
+要创建符号（软）链接，你指定 `-s` 选项，表示 symbolic。以下是列出目录的示例：
 
 ```
 [alberto@digital alberto]$ ls -l
@@ -3115,7 +3141,7 @@ drwxrwxr-x  3 alberto alberto      1024 Aug  1 20:41 adir/
 [alberto@digital alberto]$ ln -s file file3
 ```
 
-以下是再次列出目录的语法。注意 file3 指向 file：
+以下是再次列出目录的语法。注意 `file3` 指向 `file`：
 
 ```
 [alberto@digital alberto]$ ls -l
@@ -3132,9 +3158,7 @@ lrwxrwxrwx  1 alberto alberto         4 Aug  2 13:15 file3 -> file
 [alberto@digital alberto]$ rm file
 ```
 
-
-
-这里是再次列出文件的语法。请注意 file3 现在指向一个不存在的文件！
+这里是再次列出文件的语法。请注意 `file3` 现在指向一个不存在的文件！
 
 ```
 [alberto@digital alberto]$ ls -l
@@ -3144,28 +3168,28 @@ drwxrwxr-x   3 alberto alberto      1024 Aug  1 20:41 adir/
 lrwxrwxrwx   1 alberto alberto          4 Aug  2 13:15 file3 -> file
 ```
 
-链接在 Linux 中经常被使用，以便文件可以同时放置在多个目录中。例如，目录 /usr/X11R6 包含 X Windows 使用的文件。一些较旧的 X Windows 程序安装到 /usr/X11R5 或 /usr/X11R4 中。通过一系列符号链接，Linux 可以使来自三个目录中的文件都出现在更通用的 X Windows 目录 /usr/X11 中，以便于访问。这种组织方式是符号链接的主要用途之一。
+链接在 Linux 中经常被使用，以便文件可以同时放置在多个目录中。例如，目录 `/usr/X11R6` 包含 X Windows 使用的文件。一些较旧的 X Windows 程序安装到 `/usr/X11R5` 或 `/usr/X11R4` 中。通过一系列符号链接，Linux 可以使来自三个目录中的文件都出现在更通用的 X Windows 目录 `/usr/X11` 中，以便于访问。这种组织方式是符号链接的主要用途之一。
 
 ## 读取文件
 
 能够移动和组织文件是一项重要的技能。最终，计算机主要用于存储和检索信息。以下是当你在终端上时可用于读取文件的几个命令：
 
-- cat: 将文件内容复制到终端
-- less: 一屏一屏地分页显示内容
-- head: 查看文件中的前几行
-- tail: 查看文件中的后几行
+- `cat`: 将文件内容复制到终端
+- `less`: 一屏一屏地分页显示内容
+- `head`: 查看文件中的前几行
+- `tail`: 查看文件中的后几行
 
-## 拼接：cat
+### 拼接：`cat`
 
-cat 命令读取一个或多个文件并将结果打印到屏幕上。 （它将所有文件拼接至屏幕。）cat 是一个通用命令，在将多个命令链接在一起时使用频率非常高。当我们在第 14 章“让 Shell 发挥作用”中探讨重定向时，我会向你展示 cat 的真正用法。
+`cat` 命令读取一个或多个文件并将结果打印到屏幕上。 （它将所有文件拼接至屏幕。）`cat` 是一个通用命令，在将多个命令链接在一起时使用频率非常高。当我们在第 14 章“让 Shell 发挥作用”中探讨重定向时，我会向你展示 `cat` 的真正用法。
 
-cat 的基本语法是
+`cat` 的基本语法是
 
 ```
 cat [options] files
 ```
 
-以下是使用 cat 查看 /etc/passwd 文件的示例（这是存储用户信息的文件）：
+以下是使用 `cat` 查看 `/etc/passwd` 文件的示例（这是存储用户信息的文件）：
 
 ```
 [alberto@digital alberto]$ cat /etc/passwd
@@ -3189,48 +3213,54 @@ postgres:!!:100:101:PostreSQL Server:/var/lib/pgsql:/bin/bash
 alberto:YMMhuMSrulhME:501:501:AlbertoRicart:/home/alberto:/bin/bash
 ```
 
-正如你所见，cat 打开了文件 /etc/passwd 并将每一行打印到控制台。
+正如你所见，`cat` 打开了文件 `/etc/passwd` 并将每一行打印到控制台。
 
-cat 命令提供了几个选项；最有用的列在表 12.1 中。
+`cat` 命令提供了几个选项；最有用的列在表 12.1 中。
 
-## 表 12.1 cat 命令选项
+## 表 12.1 `cat` 命令选项
 
 | Option | Description |
 |--------|-------------|
-| -n | Number all lines |
-| -s | Squeeze multiple blank lines into one |
-| -v | Display all characters (invisible characters, too, with the exception of tabs and newlines) |
-| -A | Display all characters (invisible characters, too) |
+| `-n` | Number all lines |
+| `-s` | Squeeze multiple blank lines into one |
+
+
+
+| `-v` | Display all characters (invisible characters, too, with the exception of tabs and newlines) |
+| `-A` | Display all characters (invisible characters, too) |
 
 要访问内容，请点击章节和节标题。
 
 ## Complete Idiot's Guide to Linux
 
-(Publisher: Macmillan Computer Publishing)
+Publisher: Macmillan Computer Publishing
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
 
 Search this book:
 
 ## 一次查看一页：less
 
-当你使用 cat 时，你可能已经发现如果文件大小超过屏幕所能容纳的范围，内容滚动得太快而无法阅读。处理这种情况的一种方法是使用分页命令。
+当你使用 `cat` 时，你可能已经发现如果文件大小超过屏幕所能容纳的范围，内容滚动得太快而无法阅读。处理这种情况的一种方法是使用分页命令。
 
-分页器允许你一次查看一屏（或一页）信息。有两个命令可以使用：原始分页器 more 和更好的分页器 less。在这些程序的情况下，less 实际上是 more。例如，less 允许你“后退”并向上滚动，而 more 不允许。less 也不会在你告诉它之前退出。
+分页器允许你一次查看一屏（或一页）信息。有两个命令可以使用：原始分页器 `more` 和更好的分页器 `less`。在这些程序的情况下，`less` 实际上是 `more`。例如，`less` 允许你“后退”并向上滚动，而 `more` 不允许。`less` 也不会在你告诉它之前退出。
 
-当 less 打印一屏内容时，它会在屏幕底部放置一个冒号 (:)。这意味着当前页之后还有更多信息。在冒号显示时，你可以与 less 交互并向其发送命令。以下是一些更有用的命令：
+当 `less` 打印一屏内容时，它会在屏幕底部放置一个冒号 (`:`)。这意味着当前页之后还有更多信息。在冒号显示时，你可以与 `less` 交互并向其发送命令。以下是一些更有用的命令：
 
 - 要向前（或向下）滚动另一屏，请按空格键
-- 要向后（或向上）滚动一屏，请按 B
-- 要显示当前正在查看的文件名以及你在文件中的位置信息，请按 =
-- 要停止阅读，请按 Q
+- 要向后（或向上）滚动一屏，请按 `B`
+- 要显示当前正在查看的文件名以及你在文件中的位置信息，请按 `=`
+- 要停止阅读，请按 `Q`
 
-当你到达文件末尾时，less 会恰当地在屏幕底部打印“END”；如果想退出程序，请按 Q。
+当你到达文件末尾时，`less` 会恰当地在屏幕底部打印“END”；如果想退出程序，请按 `Q`。
 
 ## 查看前几行：head
 
-有时你不想读取整个文件，只想看前几行。用于此的命令称为 head，它打印文件中的前十行：
+有时你不想读取整个文件，只想看前几行。用于此的命令称为 `head`，它打印文件中的前十行：
 
 ```
 [alberto@digital alberto]$ head /etc/passwd
@@ -3246,7 +3276,7 @@ mail:x:8:12:mail:/var/spool/mail:
 news:x:9:13:news:/var/spool/news:
 ```
 
-如果传递 -n 选项，你可以控制 head 打印的行数：
+如果传递 `-n` 选项，你可以控制 `head` 打印的行数：
 
 ```
 [alberto@digital alberto]$ head -n 1 /etc/passwd
@@ -3255,7 +3285,7 @@ root:x:0:0:root:/root:/bin/bash
 
 ## 查看最后几行：tail
 
-head 的对应物是 tail。默认情况下它打印最后十行。如果提供 -n 选项，head 将从文件末尾打印该数量的行：
+`head` 的对应物是 `tail`。默认情况下它打印最后十行。如果提供 `-n` 选项，`head` 将从文件末尾打印该数量的行：
 
 ```
 [alberto@digital alberto]$ tail -n 1 /etc/passwd
@@ -3266,19 +3296,23 @@ alberto:x:100:100:Alberto Ricart:/home/alberto:/bin/bash
 
 ## Complete Idiot's Guide to Linux
 
-(Publisher: Macmillan Computer Publishing)
+Publisher: Macmillan Computer Publishing
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
 
 Search this book:
 
 Previous Table of Contents Next
 
-## Chapter 13
-在 Shell 下进行文本编辑
+# Chapter 13
 
-## 本章内容
+## 在 Shell 下进行文本编辑
+
+### 本章内容
 
 - 使用 Vim 视觉编辑器
 - 使用 XEmacs
@@ -3288,50 +3322,55 @@ Previous Table of Contents Next
 
 最受欢迎的编辑器是
 
-- 视觉编辑器 (vi)
+- 视觉编辑器 (`vi`)
 - Emacs
 
-vi 是任何类 UNIX 操作系统上最广泛可用的编辑器。仅凭这一点，它就应该是你需要学习的编辑器。知道 vi 可以在所有系统中找到是一个令人安心的想法；无论你明天使用什么版本的 UNIX，你都将能够编辑文件。
+`vi` 是任何类 UNIX 操作系统上最广泛可用的编辑器。仅凭这一点，它就应该是你需要学习的编辑器。知道 `vi` 可以在所有系统中找到是一个令人安心的想法；无论你明天使用什么版本的 UNIX，你都将能够编辑文件。
 
 > Techno Talk:
+>
 > 通常，当你使用终端时，你应该能够按 Backspace 键并删除最后一个字符。如果你按 Backspace 却得到像 "^?" 这样的奇怪字符，你的终端没有正确设置。
-> 
-> 通常，这种配置问题会在你通过 telnet 远程工作时出现。修复问题实际上非常容易，有 stty 程序的帮助。 （stty 程序实际上非常复杂，但你不需要知道太多关于它如何工作的细节——只需要足够修复你的问题。）
+>
+> 通常，这种配置问题会在你通过 `telnet` 远程工作时出现。修复问题实际上非常容易，有 `stty` 程序的帮助。 （`stty` 程序实际上非常复杂，但你不需要知道太多关于它如何工作的细节——只需要足够修复你的问题。）
 
-stty 程序遵循此格式：stty command characters，其中 command 是选项的名称，characters 是你在 shell 或编辑器中使用它们时看到打印的字符。
+`stty` 程序遵循此格式：`stty command characters`，其中 `command` 是选项的名称，`characters` 是你在 shell 或编辑器中使用它们时看到打印的字符。
 
 经常使用的命令是
 
-- erase （将退格键关联）
-- kill （删除光标左侧的字符）
+- `erase` （将退格键关联）
+- `kill` （删除光标左侧的字符）
 - `intr` （中断程序）
 - `susp` （挂起程序）
 
-对于我在 UNIX 下的日常工作，我使用 Emacs 或其表亲 XEmacs。两者编辑器之间的主要区别是 vi 比 Emacs 小约 20 倍。如果你曾经（希望你永远不会）需要进行灾难恢复，vi 可以放入软盘；Emacs 不能。就功能而言，Emacs 拥有全部，而且这不是夸张。
+对于我在 UNIX 下的日常工作，我使用 Emacs 或其表亲 XEmacs。两者编辑器之间的主要区别是 `vi` 比 Emacs 小约 20 倍。如果你曾经（希望你永远不会）需要进行灾难恢复，`vi` 可以放入软盘；Emacs 不能。就功能而言，Emacs 拥有全部，而且这不是夸张。
 
 ## 改进的视觉编辑器：Vim
 
-Linux 发行版将 vi 作为 vim 的链接。Vim 是 vi 的改进版本（见下图）：最初名称为 Vi Imitation，但现在不再如此。Vim 提供了原始程序中缺少的一系列功能，但基本命令相同。因此，如果你学习更新的 vim 编辑器，你将不会有使用 vi 的问题，只是你会错过额外的功能。
+Linux 发行版将 `vi` 作为 `vim` 的链接。`Vim` 是 `vi` 的改进版本（见下图）：最初名称为 Vi Imitation，但现在不再如此。`Vim` 提供了原始程序中缺少的一系列功能，但基本命令相同。因此，如果你学习更新的 `vim` 编辑器，你将不会有使用 `vi` 的问题，只是你会错过额外的功能。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_137_0.png)
 
-你可以在这里看到一个运行在 KDE 内的 vim 的图形版本。
+你可以在这里看到一个运行在 KDE 内的 `vim` 的图形版本。
 
 ## 交互式 Vim 教程
 
-学习 vim 的最简单方法是使用在线教程。就 vim 而言，此教程（系统中的一个文件）比阅读书籍更好也更有趣，因为它是一个交互式教程。以下是如何访问它。
+学习 `vim` 的最简单方法是使用在线教程。就 `vim` 而言，此教程（系统中的一个文件）比阅读书籍更好也更有趣，因为它是一个交互式教程。以下是如何访问它。
 
-要通过教程，你首先需要将一个文件复制到你的主目录。教程只是一个包含如何使用 vim 的说明的文本文件。
+要通过教程，你首先需要将一个文件复制到你的主目录。教程只是一个包含如何使用 `vim` 的说明的文本文件。
 
 要安装教程，将 `/usr/doc/vim-4.5-2/tutor/tutor` 复制到你的主目录。你的安装中版本号可能已更新，因此这样复制：
 
 ```
-cp /usr/doc/vim*/tutor/tutor ~/ 
+cp /usr/doc/vim*/tutor/tutor ~/
 ```
 
-此过程会将教程文件 tutor 放入你的主目录。
+此过程会将教程文件 `tutor` 放入你的主目录。
 
 要开始教程，输入以下两个命令：
+
+
+
+# 《Linux 完全傻瓜指南》：在 Shell 下进行文本编辑
 
 ```
 alberto@digital alberto]$ cd
@@ -3359,31 +3398,28 @@ to learn them properly.
 Now, make sure that your Shift-Lock key is NOT depressed and
 ```
 
-
-
-
-
-## 《Linux 完全傻瓜指南》：在 Shell 下进行文本编辑
-
 ```
 press the j key enough times to move the cursor so that Lesson 1.1 completely fills the screen.
 ```
 
-正如你所见，输入这些命令会让你直接进入 vim 会话，教程显示在屏幕上。按照说明操作，你就开始了。教程所需时间大约为 20 到 60 分钟，取决于有多少干扰（例如电话）。
+正如你所见，输入这些命令会让你直接进入 `vim` 会话，教程显示在屏幕上。按照说明操作，你就开始了。教程所需时间大约为 20 到 60 分钟，取决于有多少干扰（例如电话）。
 
-+   上一页 | 目录 | 下一页
++ 上一页 | 目录 | 下一页
 
-+   产品 | 联系我们 | 关于我们 | 隐私 | 广告信息 | 首页
++ 产品 | 联系我们 | 关于我们 | 隐私 | 广告信息 | 首页
 
 使用本网站须遵守特定条款和条件。版权所有 © 1996-2000 EarthWeb Inc。保留所有权利。未经 EarthWeb 书面明确许可，不得以任何形式或媒介全部或部分复制。
 
 要访问内容，请点击章节和节标题。
 
-## 《Linux 完全傻瓜指南》
+**《Linux 完全傻瓜指南》**
 
 （出版商：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 搜索本书：
@@ -3392,9 +3428,9 @@ ISBN：078971826x
 
 如果你只是想掌握其用法，这里有一个最基本的教程。
 
-Vim 是一个模式编辑器。这意味着当你使用 vim 时，程序的行为会根据你处于命令模式还是编辑模式而有所不同。
+Vim 是一个模式编辑器。这意味着当你使用 `vim` 时，程序的行为会根据你处于命令模式还是编辑模式而有所不同。
 
-开始吧。用 vim 创建并编辑一个文件。在你的命令行中执行以下操作：
+开始吧。用 `vim` 创建并编辑一个文件。在你的命令行中执行以下操作：
 
 ```
 [alberto@digital alberto]$ vim tutorial
@@ -3404,54 +3440,54 @@ Vim 是一个模式编辑器。这意味着当你使用 vim 时，程序的行�
 "tutorial" [New File]
 ```
 
-图形版本的 vim 可以通过在 KDE 中发出命令 gvim（图形 vim）启动。
+图形版本的 `vim` 可以通过在 KDE 中发出命令 `gvim`（图形 vim）启动。
 
-发出命令后，编辑器将接管你的终端。空行用波浪号（~）标记。Vim 目前处于其命令模式。它正在等待你告诉它该做什么。
+发出命令后，编辑器将接管你的终端。空行用波浪号（`~`）标记。Vim 目前处于其命令模式。它正在等待你告诉它该做什么。
 
 在命令模式下，你可以移动文档（假设有一些文本可供导航，在新文档中不会有这种情况）并发出命令。表 13.1 列出了所有光标移动命令。（正如你所见，其中一些映射到键盘上的特殊键。）
 
 ### 表 13.1 在文档中移动
 
 | 键 | 功能 |
-|---|---|
-| l 或 右箭头 | 向前移动到下一个字符 |
-| h 或 左箭头 | 向后移动一个字符 |
-| j 或 下箭头 | 向下移动一行 |
-| k 或 上箭头 | 向上移动一行 |
-| w | 向前移动一个词 |
-| b | 向后移动一个词 |
+| --- | --- |
+| `l` 或右箭头 | 向前移动到下一个字符 |
+| `h` 或左箭头 | 向后移动一个字符 |
+| `j` 或下箭头 | 向下移动一行 |
+| `k` 或上箭头 | 向上移动一行 |
+| `w` | 向前移动一个词 |
+| `b` | 向后移动一个词 |
 
-通常，你通过使用箭头键（或其 hjkl 对应键——我很少能记住这些）来移动光标。要滚动文档，你使用 Page Up 和 Page Down。
+通常，你通过使用箭头键（或其 `hjkl` 对应键——我很少能记住这些）来移动光标。要滚动文档，你使用 Page Up 和 Page Down。
 
 光标不会换行或移动到行首或行尾之外。当你到达末尾时，计算机将会鸣响。要转到下一行或上一行，请分别使用向下或向上箭头键。
 
-当你开始一个新空白文档时，你没什么可做的；没有文本可编辑或导航。要添加文本，你需要进入插入模式。此模式允许你像在其他程序中一样输入文本；你仍然可以使用箭头键移动。（在插入模式下，hjkl 键会输入字母。）输入 i 进入插入模式。表 13.2 列出了你在命令模式下可以使用的一系列编辑命令。
+当你开始一个新空白文档时，你没什么可做的；没有文本可编辑或导航。要添加文本，你需要进入插入模式。此模式允许你像在其他程序中一样输入文本；你仍然可以使用箭头键移动。（在插入模式下，`hjkl` 键会输入字母。）输入 `i` 进入插入模式。表 13.2 列出了你在命令模式下可以使用的一系列编辑命令。
 
 ### 表 13.2 Vi（Vim）编辑命令
 
 | 命令 | 描述 |
-|---|---|
-| i | 插入文本（开始编辑） |
-| x | 删除光标下的字符（命令模式） |
-| dw | 删除字符直到词尾 |
-| d$ | 删除文本直到行尾 |
-| dd | 删除当前行 |
-| u | 撤销上一个命令 |
-| U | 撤销对该行的任何更改 |
-| Ctrl+R | 重做任何撤销操作 |
-| Esc | 返回命令模式，取消当前操作——重复直到 vim 发出蜂鸣声 |
+| --- | --- |
+| `i` | 插入文本（开始编辑） |
+| `x` | 删除光标下的字符（命令模式） |
+| `dw` | 删除字符直到词尾 |
+| `d$` | 删除文本直到行尾 |
+| `dd` | 删除当前行 |
+| `u` | 撤销上一个命令 |
+| `U` | 撤销对该行的任何更改 |
+| `Ctrl+R` | 重做任何撤销操作 |
+| `Esc` | 返回命令模式，取消当前操作——重复直到 `vim` 发出蜂鸣声 |
 
-要返回命令模式，按住 Esc 键直到 vim 向你发出蜂鸣声。然后你可以输入 : + 命令。命令是通过按冒号（:）后跟命令名称发出的。表 13.3 列出了让你退出 vim 的基本命令。
+要返回命令模式，按住 `Esc` 键直到 `vim` 向你发出蜂鸣声。然后你可以输入 `: + 命令`。命令是通过按冒号（`:`）后跟命令名称发出的。表 13.3 列出了让你退出 `vim` 的基本命令。
 
 ### 表 13.3 Vi（Vim）退出命令
 
 | 命令 | 描述 |
-|---|---|
-| :q! | 不保存退出 |
-| :wq | 保存并退出 |
-| :wfilename | 将缓冲区写入 filename |
+| --- | --- |
+| `:q!` | 不保存退出 |
+| `:wq` | 保存并退出 |
+| `:wfilename` | 将缓冲区写入 `filename` |
 
-Vim 有一些编辑命令——以及至关重要的撤销。这些编辑命令在 vim 处于命令模式时有效。
+Vim 有一些编辑命令——以及至关重要的撤销。这些编辑命令在 `vim` 处于命令模式时有效。
 
 ### 命令乘数：重复操作多次
 
@@ -3464,31 +3500,34 @@ This is one line of text.
 This is another line of text.
 ```
 
-要删除单词 This 和 is，将光标移至 T 下。确保你处于命令模式，按 Esc 直到 vim 发出蜂鸣声；然后输入 2dw。要删除两行文本，将光标放在第一行的任何位置并输入 2dd。
+要删除单词 This 和 is，将光标移至 T 下。确保你处于命令模式，按 `Esc` 直到 `vim` 发出蜂鸣声；然后输入 `2dw`。要删除两行文本，将光标放在第一行的任何位置并输入 `2dd`。
 
-乘数也适用于在文档中移动。要向下移动五行，你可以输入 5，然后是向下箭头。
+乘数也适用于在文档中移动。要向下移动五行，你可以输入 `5`，然后是向下箭头。
 
 ### 从 Vim 访问 Shell
 
-你可以通过在命令前加上感叹号（!）来执行 shell 命令：
+你可以通过在命令前加上感叹号（`!`）来执行 shell 命令：
 
 ```
 :!shellcommand
 ```
 
-命令执行完毕后，会提示你按 Enter 返回编辑器。要获得交互式 shell，将 shell 的名称作为 shellcommand 输入（bash）。完成 shell 工作后，在 shell 提示符下输入 exit，你将返回编辑器。
+命令执行完毕后，会提示你按 Enter 返回编辑器。要获得交互式 shell，将 shell 的名称作为 `shellcommand` 输入（`bash`）。完成 shell 工作后，在 shell 提示符下输入 `exit`，你将返回编辑器。
 
 ### 其他内容
 
-Vim 相当强大。它支持多个文档——或称为缓冲区——以及许多其他功能。这里介绍的命令只是你使用终端编辑文件所需的最基本知识。我鼓励你通过教程并访问 vim 的主页 http://www.vim.org。你会很高兴你这样做了。
+Vim 相当强大。它支持多个文档——或称为缓冲区——以及许多其他功能。这里介绍的命令只是你使用终端编辑文件所需的最基本知识。我鼓励你通过教程并访问 `vim` 的主页 http://www.vim.org。你会很高兴你这样做了。
 
 要访问内容，请点击章节和节标题。
 
-## 《Linux 完全傻瓜指南》
+**《Linux 完全傻瓜指南》**
 
 （出版商：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 搜索本书：
@@ -3507,6 +3546,8 @@ Emacs 是一个可扩展的编辑器。使用一种名为 Lisp 的编程语言�
 
 XEmacs 在控制台上看起来像这样。
 
+
+
 从 Emacs 你可以阅读、编写和组织你的电子邮件和日历，管理和组织你的文件，浏览网络，阅读新闻，开发软件，通过网络传输 FTP 文件等等。不管你在 UNIX 下做什么，很可能你都可以通过 Emacs 来做。当然，Emacs 也编辑文件。如果你觉得 Emacs 实际上是一个环境，你是对的。这就是 Emacs 与其他编辑器的区别。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_144_0.png)
@@ -3517,60 +3558,59 @@ Emacs 通过模式完成所有操作。模式只是一种专门用于与特定�
 
 ### 启动 XEmacs 和 XEmacs 教程
 
-要进入 Emacs（XEmacs），只需在命令提示符下输入 xemacs。Emacs 会用欢迎信息和选项列表迎接你。Emacs 下的大多数按键操作如下：
+要进入 Emacs（XEmacs），只需在命令提示符下输入 `xemacs`。Emacs 会用欢迎信息和选项列表迎接你。Emacs 下的大多数按键操作如下：
 
 ```
 Ctrl+letter letter
 ```
 
-当你看到命令列为 C-t h 时，意味着你必须先按 Ctrl+t，然后单独按 h。是的，Emacs 有很多命令键，需要一点时间来适应；不过这段时间是值得的。
+当你看到命令列为 `C-t h` 时，意味着你必须先按 `Ctrl+t`，然后单独按 `h`。是的，Emacs 有很多命令键，需要一点时间来适应；不过这段时间是值得的。
 
-要退出 Emacs，输入 Ctrl+c Ctrl+x；这会将你返回到 shell。教授 Emacs 超出了本书的范围，但可以说，如果你要进行大量文本编辑，探索它是值得的。
+要退出 Emacs，输入 `Ctrl+c Ctrl+x`；这会将你返回到 shell。教授 Emacs 超出了本书的范围，但可以说，如果你要进行大量文本编辑，探索它是值得的。
 
 Emacs 的一个令人印象深刻的功能是，你可以通过 FTP 编辑文件，就像它们在你的磁盘上本地一样。对于从事 Web 相关服务工作的用户来说，这个功能非常棒。如果你的文件可以通过 FTP 访问，它们就可以像本地文件一样进行编辑和操作。然而，这是一个高级主题，留待另一本书讨论。
 
 如果你是程序员，Emacs 会即时进行源代码格式化，因此你的源代码始终以可读的方式格式化。在阅读他人的代码时，能够以你可读的方式重新格式化代码的能力非常宝贵。Emacs 还提供了一个 IDE（集成开发环境）：你可以直接从 Emacs 构建程序并调试它。
 
-Emacs 还有一个在线教程。要访问教程，启动 Emacs，并在欢迎窗口中输入 C-h t。
-
-
-
-
+Emacs 还有一个在线教程。要访问教程，启动 Emacs，并在欢迎窗口中输入 `C-h t`。
 
 ## 检查拼写：Ispell
 
-在 Linux 中，可以使用一个名为 Ispell 的程序从命令行进行拼写检查。Ispell 代表交互式拼写检查。Ispell 使您能够使用编辑器编写文档（该编辑器可能直接与 ispell 集成），然后从 shell 中检查它，如下所示：
+在 Linux 中，可以使用一个名为 `Ispell` 的程序从命令行进行拼写检查。`Ispell` 代表交互式拼写检查。`Ispell` 使您能够使用编辑器编写文档（该编辑器可能直接与 `ispell` 集成），然后从 shell 中检查它，如下所示：
 
 ```
 ispell filenames
 ```
 
-如果您提供多个文件，Ispell 可以同时检查多个文件。您可以将单词添加到自己的私人词典中。如果未发现拼写错误，程序将不带任何消息退出。
+如果您提供多个文件，`Ispell` 可以同时检查多个文件。您可以将单词添加到自己的私人词典中。如果未发现拼写错误，程序将不带任何消息退出。
 
-Ispell 非常友好且易于使用。下面的图显示了正在运行 ispell 的终端。
+`Ispell` 非常友好且易于使用。下面的图显示了正在运行 `ispell` 的终端。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_145_0.png)
 
-Ispell，即交互式拼写检查器，从 shell 中使用起来很容易。
+`Ispell`，即交互式拼写检查器，从 shell 中使用起来很容易。
 
-Ispell 会突出显示有问题的单词并显示其出现的上下文。如果它找到可能的更正，它会显示它们的列表。要接受其中一个建议的替换，只需键入其编号即可。其他操作如窗口或屏幕底部所列。
+`Ispell` 会突出显示有问题的单词并显示其出现的上下文。如果它找到可能的更正，它会显示它们的列表。要接受其中一个建议的替换，只需键入其编号即可。其他操作如窗口或屏幕底部所列。
 
 要访问内容，请单击章节和节标题。
 
 ## Linux 完全傻瓜指南
 
 （出版商：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 搜索本书：
 
-## 第 14 章
+### 第 14 章
 
-## 让 Shell 发揮作用
+### 让 Shell 发揮作用
 
-## 本章内容
+#### 本章内容
 
 +   - 输出和输入重定向
 +   - 将命令链接在一起
@@ -3579,9 +3619,9 @@ ISBN：078971826x
 
 在第 11–13 章中，您学习了一些关于命令和 shell 的基础知识。虽然单个命令很可能就是您要做的最多的事情，但 shell 的真正威力在于您能够将一系列命令串联起来执行比任何单个命令都能完成的更复杂的任务。Shell 允许您这样做，在本章中，您将学习如何利用这种能力，以及一些其他不错的命令 shell 技巧。
 
-## 同时使用多个命令
+### 同时使用多个命令
 
-您可以同时发出多个命令；只需用分号（;）分隔每个命令即可。以下是一个示例：
+您可以同时发出多个命令；只需用分号（`;`）分隔每个命令即可。以下是一个示例：
 
 ```
 [alberto@digital alberto]$ pwd; cd ..; pwd; ls -lg
@@ -3596,11 +3636,11 @@ drwxr-xr-x 7 root root 1024 Aug 14 08:09 httpd/
 
 在这个例子中我做了几件事：
 
-我使用 pwd 列出了当前工作目录，然后我通过键入两个句点（ . . ）将目录更改为父目录（向上一级）。我还列出了新的当前工作目录并要求列出其中的文件。
+我使用 `pwd` 列出了当前工作目录，然后我通过键入两个句点（`..`）将目录更改为父目录（向上一级）。我还列出了新的当前工作目录并要求列出其中的文件。
 
-当我要求 cd 向上一个目录时，它就这样做了，当所有命令执行完毕后，我被留在最后一个影响我当前目录的命令停止的地方（/home 目录——如果您查看我 shell 提示符的末尾，您可以看出这一点）。
+当我要求 `cd` 向上一个目录时，它就这样做了，当所有命令执行完毕后，我被留在最后一个影响我当前目录的命令停止的地方（`/home` 目录——如果您查看我 shell 提示符的末尾，您可以看出这一点）。
 
-## 命令组和子 Shell
+### 命令组和子 Shell
 
 *命令组* 允许您在子 shell 中执行一系列命令。当您创建命令组时，Linux 会启动一个新的 shell 子进程，与您的当前 shell 不同，以执行它。当命令组执行完毕后，它会将控制权返回给您的 shell。
 
@@ -3617,19 +3657,19 @@ drwxr-xr-x 7 root root 1024 Aug 14 08:09 httpd/
 [alberto@digital alberto]$
 ```
 
-如果您真的很注意，您还会注意到当您执行命令组时，当前环境不会受到影响。请注意我的起始目录是 alberto，而命令组结束后的最终目录仍然是 alberto...尽管其中一个命令向上移动了一个目录！
+如果您真的很注意，您还会注意到当您执行命令组时，当前环境不会受到影响。请注意我的起始目录是 `alberto`，而命令组结束后的最终目录仍然是 `alberto`...尽管其中一个命令向上移动了一个目录！
 
-这种移动的原因是命令组的执行会创建子 shell。子 shell 有自己的环境。 （其初始环境与您当前的环境相匹配。）当子 shell 执行 cd 命令时，它会更改子 shell 的环境。但是，它不会影响父 shell 的环境，即我键入命令的 shell。
+这种移动的原因是命令组的执行会创建子 shell。子 shell 有自己的环境。 （其初始环境与您当前的环境相匹配。）当子 shell 执行 `cd` 命令时，它会更改子 shell 的环境。但是，它不会影响父 shell 的环境，即我键入命令的 shell。
 
-## 重定向
+### 重定向
 
 Shell 的大部分有用性来自于将输入和输出重定向到和来自文件的能力。大多数 shell 程序设计为使用流处理数据。
 
 流只不过是作为输入或输出流动的数据。例如，命令的输入流通常来自键盘，其输出流通常流向终端显示。在 UNIX 下，所有程序都使用三个流与外部世界通信：
 
-+   - STDOUT—标准输出流（通常是显示器）
-+   - STDIN—标准输入流（通常是键盘）
-+   - STDERR—标准错误流（通常是显示器
++   - `STDOUT`—标准输出流（通常是显示器）
++   - `STDIN`—标准输入流（通常是键盘）
++   - `STDERR`—标准错误流（通常是显示器
 
 流可以通过 shell 轻松互连或以不同的方式连接。您的 shell 可以使程序使用文件作为其输入流，并使用输出流将结果写回文件。这称为重定向。
 
@@ -3638,23 +3678,26 @@ Shell 的大部分有用性来自于将输入和输出重定向到和来自文�
 ## Linux 完全傻瓜指南
 
 （出版商：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 搜索本书：
 
 上一页 目录 下一页
 
-## STDOUT
+### STDOUT
 
-您迄今为止使用的大多数程序都会将其结果发送到标准输出流 STDOUT，该流通常“连接”到您的控制台。只要您在控制台（屏幕）上看到打印的内容，很可能它是通过 STDOUT 流发送的。
+您迄今为止使用的大多数程序都会将其结果发送到标准输出流 `STDOUT`，该流通常“连接”到您的控制台。只要您在控制台（屏幕）上看到打印的内容，很可能它是通过 `STDOUT` 流发送的。
 
-让我们尝试一下将 STDOUT 重定向到文件。
+让我们尝试一下将 `STDOUT` 重定向到文件。
 
-## 重定向到文件：>
+### 重定向到文件：>
 
-要将输出重定向到文件，您使用大于号（>）并提供一个接收输出的文件名：
+要将输出重定向到文件，您使用大于号（`>`）并提供一个接收输出的文件名：
 
 ```
 [alberto@digital alberto]$ ls -l > /tmp/listing
@@ -3665,16 +3708,19 @@ total 2
 drwxrwxr-x 2 alberto groupfil 1024 Aug 4 22:13 groupfiles
 ```
 
-在这个例子中我就是这样做的。我要求列出我的文件，但不是将列表显示在屏幕上，而是将 ls 命令的输出重定向到文件 /tmp/listing。为了证明它有效，我随后使用您在第 12 章“Shell 上的文件操作”中学习过的 cat 命令将 /tmp/listing 文件的内容发送到屏幕。这种技术对于创建目录中文件的列表很有用。
 
-注意：安全第一！避免文件被覆盖：noclobber
+
+在这个例子中我就是这样做的。我要求列出我的文件，但不是将列表显示在屏幕上，而是将 `ls` 命令的输出重定向到文件 `/tmp/listing`。为了证明它有效，我随后使用您在第 12 章“Shell 上的文件操作”中学习过的 `cat` 命令将 `/tmp/listing` 文件的内容发送到屏幕。这种技术对于创建目录中文件的列表很有用。
+
+### 注意：安全第一！避免文件被覆盖：`noclobber`
+
 重定向流有一个危险的副作用：它会杀死文件。在将输出重定向到文件时，如果文件不存在，Linux 会自动创建它。这种好处也带来了一个问题。如果文件已经存在会怎样？现有文件会被自动覆盖。这意味着 shell 会用新数据替换现有文件的数据——无需提示甚至通知您！
 
-大多数 shell 都有设置 noclobber 变量的能力。此变量告诉 shell 拒绝会导致文件被销毁的重定向，并拒绝在文件不存在时追加到文件。
+大多数 shell 都有设置 `noclobber` 变量的能力。此变量告诉 shell 拒绝会导致文件被销毁的重定向，并拒绝在文件不存在时追加到文件。
 
 在处理 shell 时启用此功能是一个好主意，因为它使 shell 产生您未打算的副作用的可能性降低。
 
-要在 bash shell 中启用 noclobber，键入以下内容：
+要在 `bash` shell 中启用 `noclobber`，键入以下内容：
 
 ```
 noclobber=1
@@ -3695,9 +3741,9 @@ set noclobber=1
 bash: file: Cannot clobber existing file
 ```
 
-如果您收到相同的错误，则 noclobber 已正确设置。我尝试将 date 命令的输出重定向到 file。由于 file 已存在，这种重定向会导致 file 的内容被 date 打印的内容替换。当您在环境中定义了 noclobber 时，不允许执行此类操作。 （date 命令在第 17 章“命令工具箱：有用的 Shell 命令和快捷方式”中介绍。）
+如果您收到相同的错误，则 `noclobber` 已正确设置。我尝试将 `date` 命令的输出重定向到 `file`。由于 `file` 已存在，这种重定向会导致 `file` 的内容被 `date` 打印的内容替换。当您在环境中定义了 `noclobber` 时，不允许执行此类操作。 （`date` 命令在第 17 章“命令工具箱：有用的 Shell 命令和快捷方式”中介绍。）
 
-现在您知道了重定向，让我向您展示一个不错的技巧：让我们使用 cat 命令作为最小文本编辑器。我们可以通过发出 cat 命令然后将输出重定向到文件来实现，如下所示：
+现在您知道了重定向，让我向您展示一个不错的技巧：让我们使用 `cat` 命令作为最小文本编辑器。我们可以通过发出 `cat` 命令然后将输出重定向到文件来实现，如下所示：
 
 ```
 [alberto@digital alberto]$ cat > /tmp/message.txt
@@ -3713,13 +3759,13 @@ I can even enter new lines.
 [alberto@digital alberto]$
 ```
 
-使用重定向，您可以将 cat 用作简单的编辑器。您可以编辑正在处理的当前行，因为 shell 不会在您按 Enter 之前捕获字符。要完成输入文本，只需按 Ctrl+D 即可。
+使用重定向，您可以将 `cat` 用作简单的编辑器。您可以编辑正在处理的当前行，因为 shell 不会在您按 Enter 之前捕获字符。要完成输入文本，只需按 Ctrl+D 即可。
 
-## 追加文件：>>
+## 追加文件：`>>`
 
 重定向非常有用，但有时您不想替换文件的先前内容。相反，您可能想要在文件末尾添加信息。也许您想维护一个您最喜欢的网站列表。在这种情况下，添加新条目不应替换整个文件，而应对其进行扩充。
 
-而不是使用单个 >，您使用 >> 来告诉 shell 追加新输出而不是覆盖。如果文件不存在，它将被创建，如下所示：
+而不是使用单个 `>`，您使用 `>>` 来告诉 shell 追加新输出而不是覆盖。如果文件不存在，它将被创建，如下所示：
 
 ```
 [alberto@digital alberto]$ cat > /tmp/websites
@@ -3731,16 +3777,13 @@ www.mcp.com
 www.caldera.com
 ```
 
-
-
-
-
 ## 《Linux 完全傻瓜指南：让 Shell 发光发热》
 
-www.redhat.com
-www.mcp.com
+`www.redhat.com`
 
-为什么我不能对第一个 cat 使用 append (>>)？因为我启用了 noclobber 功能，>> 命令会导致错误。当 noclobber 设置时，追加到不存在的文件会产生错误。 （另一种选择是在使用 cat 之前发出 touch /tmp/websites。）
+`www.mcp.com`
+
+为什么我不能对第一个 `cat` 使用 append (`>>`)？因为我启用了 `noclobber` 功能，`>>` 命令会导致错误。当 `noclobber` 设置时，追加到不存在的文件会产生错误。 （另一种选择是在使用 `cat` 之前发出 `touch /tmp/websites`。）
 
 Previous Table of Contents Next
 
@@ -3748,28 +3791,31 @@ To access the contents, click the chapter and section titles.
 
 ## 《Linux 完全傻瓜指南》
 
-(Publisher: Macmillan Computer Publishing)
+Publisher: Macmillan Computer Publishing
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
 
 Search this book:
 
 ## STDERR
 
-标准错误流，或 STDERR，是错误消息发送到的地方。随着你在 shell 上输入更复杂的命令，你可能希望将诊断或警告消息发送到日志文件。将错误消息重定向到新文件在调试 shell 脚本时尤其有用。
+标准错误流，或 `STDERR`，是错误消息发送到的地方。随着你在 shell 上输入更复杂的命令，你可能希望将诊断或警告消息发送到日志文件。将错误消息重定向到新文件在调试 shell 脚本时尤其有用。
 
 ### Redirecting Errors
 
-默认情况下，STDERR 和 STDOUT 都指向你的控制台，以便你可以看到诊断消息。当你重定向 STDOUT 时，STDERR 仍指向你的控制台，任何错误仍会打印在那里。要重定向错误，你需要指定一个文件号。
+默认情况下，`STDERR` 和 `STDOUT` 都指向你的控制台，以便你可以看到诊断消息。当你重定向 `STDOUT` 时，`STDERR` 仍指向你的控制台，任何错误仍会打印在那里。要重定向错误，你需要指定一个文件号。
 
-在 shell 中，输入、输出和错误流有分配的文件号：STDOUT 为 0，STDIN 为 1，STDERR 为 2。你可以组合文件号和重定向操作符。要将错误重定向到其他位置，你可以这样指定重定向：
+在 shell 中，输入、输出和错误流有分配的文件号：`STDOUT` 为 `0`，`STDIN` 为 `1`，`STDERR` 为 `2`。你可以组合文件号和重定向操作符。要将错误重定向到其他位置，你可以这样指定重定向：
 
 ```
 command > outputfile 2> errorfile
 ```
 
-打印到标准错误流 STDERR 的消息将进入 errorfile，而标准输出到 STDOUT 将重定向 outputfile。
+打印到标准错误流 `STDERR` 的消息将进入 `errorfile`，而标准输出到 `STDOUT` 将重定向 `outputfile`。
 
 例如，假设你想创建一个系统中所有文件的列表。根据你的用户 ID，你可能无权进入某些目录。以下命令行将权限访问错误重定向到不同的文件，同时将好的输出捕获到单独的文件中：
 
@@ -3791,7 +3837,7 @@ pwd; cd ..; pwd; ls -l > /tmp/listing
 (pwd; cd ..; pwd; ls -l) > /tmp/listing
 ```
 
-这会将每个程序的输出依次放入 /tmp/listing 文件中。
+这会将每个程序的输出依次放入 `/tmp/listing` 文件中。
 
 ### Pipes: One Program’s Output Is Another’s Input
 
@@ -3799,7 +3845,7 @@ Shell 的真正威力在输出从一个程序变成另一个程序的输入时�
 
 但以更直接的方式，你可以用管道互连程序。管道非常有用：它们允许你使用一个程序的输出流作为另一个程序的输入流，而无需临时文件。
 
-例如，如果你想列出当前登录系统的所有用户，可以使用 who 命令。who 命令按每行一个用户显示每个活动用户的信息。如果你只想知道系统上有多少用户，但不需要 who 提供的所有额外信息，你需要使用一些技巧。UNIX 有一个名为 wc 的命令，可以计算文件包含的单词数、行数和字符数。知道 who 输出每行一个用户的信息，你很快意识到你希望 wc 统计 who 显示的行数。你可以通过管道将 who 和 wc 连接起来实现：
+例如，如果你想列出当前登录系统的所有用户，可以使用 `who` 命令。`who` 命令按每行一个用户显示每个活动用户的信息。如果你只想知道系统上有多少用户，但不需要 `who` 提供的所有额外信息，你需要使用一些技巧。UNIX 有一个名为 `wc` 的命令，可以计算文件包含的单词数、行数和字符数。知道 `who` 输出每行一个用户的信息，你很快意识到你希望 `wc` 统计 `who` 显示的行数。你可以通过管道将 `who` 和 `wc` 连接起来实现：
 
 ```
 [alberto@digital alberto]$ who | wc
@@ -3807,7 +3853,7 @@ Shell 的真正威力在输出从一个程序变成另一个程序的输入时�
 1
 ```
 
-正如你所见，who 和 wc 命令可以通过连接竖线 (|) 进行管道。你可以连接任意多的程序。然而，鉴于我们有限的命令词汇，目前我们能做的还不多。
+正如你所见，`who` 和 `wc` 命令可以通过连接竖线 (`|`) 进行管道。你可以连接任意多的程序。然而，鉴于我们有限的命令词汇，目前我们能做的还不多。
 
 ### Check This Out: Throwing unwanted output away
 
@@ -3818,20 +3864,22 @@ ls -R / > filelist.txt >
 error.txt
 ```
 
-你知道这个命令将计算机中所有文件的列表发送到 filelist.txt，并将其遇到的访问错误发送到 error.txt。如果你只想保存或知道错误，有什么办法可以在命令运行时丢弃长长的文件列表吗？
+你知道这个命令将计算机中所有文件的列表发送到 `filelist.txt`，并将其遇到的访问错误发送到 `error.txt`。如果你只想保存或知道错误，有什么办法可以在命令运行时丢弃长长的文件列表吗？
 
-UNIX 计算机在 /dev 目录下都有一个特殊文件，称为 /dev/null，也 commonly 称为位桶。发送到 /dev/null 的任何数据流都会立即被丢弃。要丢弃文件列表并只保留错误，你需要输入：
+
+
+UNIX 计算机在 `/dev` 目录下都有一个特殊文件，称为 `/dev/null`，也 commonly 称为位桶。发送到 `/dev/null` 的任何数据流都会立即被丢弃。要丢弃文件列表并只保留错误，你需要输入：
 
 ```
 ls -R / > /dev/null 2>
 error.txt
 ```
 
-错误仍会保存在 error.txt 中，但现在你不必处理长长的文件列表。
+错误仍会保存在 `error.txt` 中，但现在你不必处理长长的文件列表。
 
-管道与 ls 命令结合使用是一种常见用法。如果你列出包含许多文件的目录，例如 /dev 目录，输出会比你能看到的速度更快地滚动过去。你认为解决方案是什么？
+管道与 `ls` 命令结合使用是一种常见用法。如果你列出包含许多文件的目录，例如 `/dev` 目录，输出会比你能看到的速度更快地滚动过去。你认为解决方案是什么？
 
-如果你想到在 ls 和分页器如 less 之间建立管道，你就对了！列出 /dev 目录的命令是：
+如果你想到在 `ls` 和分页器如 `less` 之间建立管道，你就对了！列出 `/dev` 目录的命令是：
 
 ```
 ls -l /dev | less
@@ -3842,8 +3890,11 @@ To access the contents, click the chapter and section titles.
 ## 《Linux 完全傻瓜指南》
 
 (Publisher: Macmillan Computer Publishing)
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
 
 Search this book:
@@ -3852,9 +3903,9 @@ Search this book:
 
 你可以以与重定向输出相同的方式重定向输入。当程序的输入流从文件重定向时，程序使用文件中包含的字符，就好像你已在键盘上输入它们一样。
 
-输入重定向最好用示例来说明。假设你的工作是准备备忘录以便传阅。每次你的老板告诉你备忘录准备好处理时，你都会执行一系列复杂的任务。首先，你将文件 /incoming/memo.txt 加载到 vi 中。然后，你删除包含一些控制信息的前十行文本，并保存文件。最后，你将文件复制到 /outgoing/memo.txt，你的老板在那里检索它并发送给其他人。有没有更简单的方法来做这件事？
+输入重定向最好用示例来说明。假设你的工作是准备备忘录以便传阅。每次你的老板告诉你备忘录准备好处理时，你都会执行一系列复杂的任务。首先，你将文件 `/incoming/memo.txt` 加载到 `vi` 中。然后，你删除包含一些控制信息的前十行文本，并保存文件。最后，你将文件复制到 `/outgoing/memo.txt`，你的老板在那里检索它并发送给其他人。有没有更简单的方法来做这件事？
 
-意识到你一次又一次使用相同的按键序列，你决定使用输入重定向简化你的任务。利用你在第 13 章“在 Shell 下的文本编辑”中学到的关于 vi 的知识，你创建一个名为 prepare.txt 的文本文件，其内容如下：
+意识到你一次又一次使用相同的按键序列，你决定使用输入重定向简化你的任务。利用你在第 13 章“在 Shell 下的文本编辑”中学到的关于 `vi` 的知识，你创建一个名为 `prepare.txt` 的文本文件，其内容如下：
 
 ```
 10dd
@@ -3868,13 +3919,13 @@ Search this book:
 vi /incoming/memo.txt < prepare.txt
 ```
 
-当你按 Enter 执行命令时，vi 响应：
+当你按 Enter 执行命令时，`vi` 响应：
 
 ```
 Vim: Warning: Input is not from a terminal
 ```
 
-这是在告诉你 vi 将其标准输入流从你创建的文件重定向。几分钟后，你的 shell 提示符返回。检查文件 /outgoing/memo.txt 后，你确认备忘录已正确处理。使用输入重定向，复杂任务变得更简单。
+这是在告诉你 `vi` 将其标准输入流从你创建的文件重定向。几分钟后，你的 shell 提示符返回。检查文件 `/outgoing/memo.txt` 后，你确认备忘录已正确处理。使用输入重定向，复杂任务变得更简单。
 
 ## Regular Expressions
 
@@ -3882,7 +3933,7 @@ Vim: Warning: Input is not from a terminal
 
 正则表达式，或 REGEXs，正如它们也被称为，被各种程序使用——包括你的 shell。有时用于表示模式的符号含义会略有变化，但总的来说，基本语法是相同的。
 
-这里有一个你可能想用 REGEXs 做的事情的例子：假设你有一个包含四个文件 file1.txt、file2.txt、file3.txt 和 info.txt 的目录，你想将它们移动到另一个目录。你会怎么做？
+这里有一个你可能想用 REGEXs 做的事情的例子：假设你有一个包含四个文件 `file1.txt`、`file2.txt`、`file3.txt` 和 `info.txt` 的目录，你想将它们移动到另一个目录。你会怎么做？
 
 你可以执行此命令：
 
@@ -3900,72 +3951,73 @@ mv * ../somedirectory
 
 星号，或星，是一组称为元字符中的特殊字符。星号定义一种匹配任何内容的模式。让我们看看元字符以及如何使用它们。
 
-## Match Anything: *
+## Match Anything: `*`
 
-星号匹配任何字符序列。这就是我可以说 mv * 来移动所有文件的原因。你可以在其他字母之间放置星号，以便它匹配可能包含其他字符的单词。参见表 14.1，了解使用星号的示例。
+星号匹配任何字符序列。这就是我可以说 `mv *` 来移动所有文件的原因。你可以在其他字母之间放置星号，以便它匹配可能包含其他单词的字符。参见表 14.1，了解使用星号的示例。
 
-Table 14.1 Examples of Using the Star
+### Table 14.1 Examples of Using the Star
 
 | Examples | Description |
 |---|---|
+| `*.txt` | 匹配所有以 `.txt` 结尾的文件 |
+| `file*` | 匹配所有以单词 `file` 开头的文件 |
+| `file*.txt` | 匹配所有以单词 `file` 开头并以 `.txt` 结尾的文件 |
 
+## Match Any Letter: `?`
 
+星号非常强大，无可否认。有时，事实上它太强大了。因为它可以代表任意数量的字符，它可能会匹配你不想匹配的内容。幸运的是，有一个更克制的元字符：`?` 将精确匹配一个字母，无论该位置的字符是什么。但是，如果你指定的位置没有字母，就不会匹配。参见表 14.2 中的示例。
 
-| *.txt | 匹配所有以 .txt 结尾的文件 |
-| file* | 匹配所有以单词 file 开头的文件 |
-| file*.txt | 匹配所有以单词 file 开头并以 .txt 结尾的文件 |
-
-## Match Any Letter: ?
-
-星号非常强大，无可否认。有时，事实上它太强大了。因为它可以代表任意数量的字符，它可能会匹配你不想匹配的内容。幸运的是，有一个更克制的元字符：? 将精确匹配一个字母，无论该位置的字符是什么。但是，如果你指定的位置没有字母，就不会匹配。参见表 14.2 中的示例。
-
-## Table 14.2 Examples of Using the Question Mark
+### Table 14.2 Examples of Using the Question Mark
 
 | Example | Description |
-| file?.txt | 匹配所有以 file 开头，其后跟一个字符并以 .txt 结尾的文件 |
-| ? | 匹配所有名称为一个字母的文件 |
-| ?? | 匹配所有名称为两个字母的文件 |
+|---|---|
+| `file?.txt` | 匹配所有以 `file` 开头，其后跟一个字符并以 `.txt` 结尾的文件 |
+| `?` | 匹配所有名称为一个字母的文件 |
+| `??` | 匹配所有名称为两个字母的文件 |
 
-## Match in a Range: []
+## Match in a Range: `[]`
 
-有时你想要匹配多种选项。假设你想使用元字符来查找 file1.txt 和 file2.txt 但不查找 file3.txt。在这种情况下，你需要提供一组用括号括起来的选项，像这样：
+有时你想要匹配多种选项。假设你想使用元字符来查找 `file1.txt` 和 `file2.txt` 但不查找 `file3.txt`。在这种情况下，你需要提供一组用括号括起来的选项，像这样：
 
 ```
 file[12].txt
 ```
 
-此模式将匹配 file1.txt 和 file2.txt——其他文件不会匹配。
+此模式将匹配 `file1.txt` 和 `file2.txt`——其他文件不会匹配。
 
-如果你想查找连续的字符范围——比如你想匹配 0 到 5 的数字——你可以将它们指定为 [0–5] 而不是 [012345]。
+如果你想查找连续的字符范围——比如你想匹配 0 到 5 的数字——你可以将它们指定为 `[0–5]` 而不是 `[012345]`。
 
 To access the contents, click the chapter and section titles.
 
 ## Complete Idiot's Guide to Linux
 
 (Publisher: Macmillan Computer Publishing)
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
 
 Search this book:
 
 Previous Table of Contents Next
 
-## Negating a Range: !
+## Negating a Range: `!`
 
-有时指定你不想匹配的内容更容易。例如，如果你有名为 f11、f12、f13、f14 和 f15 的文件，并且你只想移动 f12-f15，你可以像我在这里做的那样指定范围。但使用 f11[!1] 指定你不想的文件可能更容易。在这种情况下，除了 f11 之外的每个文件都会被匹配。
+有时指定你不想匹配的内容更容易。例如，如果你有名为 `f11`、`f12`、`f13`、`f14` 和 `f15` 的文件，并且你只想移动 `f12-f15`，你可以像我在这里做的那样指定范围。但使用 `f11[!1]` 指定你不想的文件可能更容易。在这种情况下，除了 `f11` 之外的每个文件都会被匹配。
 
 ## Command History
 
-每当你在 shell 上输入命令时，shell 都会在称为历史列表的内容中记住它。你可以通过在 bash 提示符下输入 history 来查看历史记录。所有你输入的命令列表将被列出。每个命令都有一个与其关联的编号。
+每当你在 shell 上输入命令时，shell 都会在称为历史列表的内容中记住它。你可以通过在 `bash` 提示符下输入 `history` 来查看历史记录。所有你输入的命令列表将被列出。每个命令都有一个与其关联的编号。
 
-你可以“回收”历史记录中出现的命令，以避免重新输入它们。要重新执行出现在命令历史记录中的命令，只需输入感叹号 (!) 后跟你想要重新执行的命令的编号：
+你可以“回收”历史记录中出现的命令，以避免重新输入它们。要重新执行出现在命令历史记录中的命令，只需输入感叹号（`!`）后跟你想要重新执行的命令的编号：
 
 ```
 [alberto@digital alberto]$ !138
 ```
 
-你输入的最后一个命令是特殊的。如果你想重复它，只需输入两个感叹号 (!!)。例如，你可以输入：
+你输入的最后一个命令是特殊的。如果你想重复它，只需输入两个感叹号（`!!`）。例如，你可以输入：
 
 ```
 [alberto@digital alberto]$ !!
@@ -3973,11 +4025,11 @@ Previous Table of Contents Next
 
 你可以通过使用键盘上的向上箭头向上浏览命令历史记录。这样会将命令放在你的提示符上，以便你在重新执行之前有机会编辑它。
 
-你的历史记录保存多少个命令取决于 HISTSIZE 环境变量的设置。默认情况下，它设置为记住你最后 100 个命令。
+你的历史记录保存多少个命令取决于 `HISTSIZE` 环境变量的设置。默认情况下，它设置为记住你最后 100 个命令。
 
 ## Jobs: Working on Multiple Things Using a Shell
 
-某些命令行作业完成需要一段时间。例如，命令 ls -R / > filelist.txt 2> error.txt 在完成之前可能需要几分钟。如果有很多文件并且正在列出多个网络驱动器，预计它会运行半个小时左右。
+某些命令行作业完成需要一段时间。例如，命令 `ls -R / > filelist.txt 2> error.txt` 在完成之前可能需要几分钟。如果有很多文件并且正在列出多个网络驱动器，预计它会运行半个小时左右。
 
 由于 Linux 是多任务的，你可能希望在命令运行时做其他事情。你可以通过并发运行命令或在后台运行命令非常轻松地做到这一点。要在后台执行相同的命令，输入以下内容：
 
@@ -3985,7 +4037,9 @@ Previous Table of Contents Next
 ls -R / >filelist.txt 2>error.txt &
 ```
 
-关键是命令行的末尾的与号 (&)。这告诉 shell 在后台运行作业。发出命令后，你会看到如下内容：
+关键是命令行的末尾的与号（`&`）。这告诉 shell 在后台运行作业。发出命令后，你会看到如下内容：
+
+
 
 ```
 [alberto@digital alberto]$ ls -R / > filelist.txt 2> error.txt &
@@ -3993,7 +4047,7 @@ ls -R / >filelist.txt 2>error.txt &
 [alberto@digital alberto]$
 ```
 
-作业开始，你的命令行返回。方括号中的数字是分配给你的命令的作业编号或进程 ID。872 是系统范围进程列表中作业的进程 ID。作业的进程 ID 在你需要终止作业时很有用（参见第 22 章“系统监控：关注你的系统”中的“终止进程：kill”）。作业比 872 的进程 ID 更容易记住。当引用作业编号时，始终在前面加上百分号 (%) 符号。两者都为你提供了一种控制命令并将其返回前台的方法。当作业完成后，你会看到如下行：
+作业开始，你的命令行返回。方括号中的数字是分配给你的命令的作业编号或进程 ID。`872`是系统范围进程列表中作业的进程 ID。作业的进程 ID 在你需要终止作业时很有用（参见第 22 章“系统监控：关注你的系统”中的“终止进程：`kill`”）。作业比 `872`的进程 ID 更容易记住。当引用作业编号时，始终在前面加上百分号 (`%`) 符号。两者都为你提供了一种控制命令并将其返回前台的方法。当作业完成后，你会看到如下行：
 
 ```
 [1]-  Done              ls -R / >filelist.txt 2>errors.txt
@@ -4007,15 +4061,15 @@ ls -R / >filelist.txt 2>error.txt &
 [1]+  Stopped (tty output)    telnet localhost
 ```
 
-这意味着作业需要输入，并已暂停等待你的按键。要将作业带回前台并输入所需的按键，请使用 fg 命令：
+这意味着作业需要输入，并已暂停等待你的按键。要将作业带回前台并输入所需的按键，请使用 `fg` 命令：
 
 ```
 [alberto@digital alberto]$ fg %1
 ```
 
-这会将作业编号一 (%1) 带回前台。请注意，作业编号前有一个百分号 (%)。
+这会将作业编号一 (`%1`) 带回前台。请注意，作业编号前有一个百分号 (`%`)。
 
-要列出从当前 shell 启动的所有作业，请使用 jobs 命令，如下所示：
+要列出从当前 shell 启动的所有作业，请使用 `jobs` 命令，如下所示：
 
 ```
 [alberto@digital alberto]$ jobs
@@ -4024,7 +4078,7 @@ ls -R / >filelist.txt 2>error.txt &
 
 ## Suspending a Job
 
-你可以通过按 Ctrl+Z 来暂停在前台运行的进程。这会使进程进入睡眠状态：
+你可以通过按 `Ctrl+Z` 来暂停在前台运行的进程。这会使进程进入睡眠状态：
 
 ```
 [alberto@digital alberto]$ ls -R / > filelist.txt 2> errors.txt
@@ -4037,24 +4091,24 @@ ls -R / >filelist.txt 2>error.txt &
 [1]+ ls -R / >filelist.txt 2>errors.txt &
 ```
 
-在此列表中，我在前台启动了一个冗长的进程。然后我通过按 Ctrl+Z 将其置于睡眠状态（停止它），并使用 bg %1 在后台将其恢复。bg 与 fg 命令相反。
+在此列表中，我在前台启动了一个冗长的进程。然后我通过按 `Ctrl+Z` 将其置于睡眠状态（停止它），并使用 `bg %1` 在后台将其恢复。`bg` 与 `fg` 命令相反。
 
 ## Killing a Job
 
-要终止当前前台进程，你可以发出 Ctrl+C。这将终止进程。要终止在后台运行的作业，你可以使用 kill 命令，后跟其作业编号或其进程 ID：
+要终止当前前台进程，你可以发出 `Ctrl+C`。这将终止进程。要终止在后台运行的作业，你可以使用 `kill` 命令，后跟其作业编号或其进程 ID：
 
 ```
 [alberto@digital alberto]$ kill %1
 [alberto@digital alberto]$ kill 872
 ```
 
-正如你所见，shell 既强大又复杂。即使我们只触及了它的皮毛，你所知道的知识也能帮助你完成大量工作！
+正如你所见，`shell` 既强大又复杂。即使我们只触及了它的皮毛，你所知道的知识也能帮助你完成大量工作！
 
 ## SPIDER KILLER
 
 ## spider catcher
 
-HOME ACCOUNT INFO SUBSCRIBE LOGIN SEARCH MY ITKNOWLEDGE FAQ SITEMAP CONTACT US
+`HOME` `ACCOUNT` `INFO` `SUBSCRIBE` `LOGIN` `SEARCH` `MY ITKNOWLEDGE` `FAQ` `SITEMAP` `CONTACT US`
 
 To access the contents, click the chapter and section titles.
 
@@ -4075,6 +4129,7 @@ Search this book:
 Previous Table of Contents Next
 
 ## Chapter 15
+
 Help Please
 
 ## In This Chapter
@@ -4095,18 +4150,17 @@ Help Please
 
 Linux 有趣的一点是它文档齐全。其他操作系统（OS）为你提供有关系统某些方面的详细信息的，而你很快就会意识到 Linux 提供了关于其中几乎所有已安装内容的丰富信息。这主要是由于 Linux 的开放性质。在一个工具由分散的程序员集合添加的世界中，
 
-
 唯一能带来秩序的方式就是通过文档。Linux 有大量文档——如果你知道去哪里找的话。
 
 Linux 在类 Unix 系统中算是相当“标准”的 Unix。有几本通用的 Unix 书籍可以帮助你获得更深入的知识和更高级的主题。本章末尾列出了推荐阅读书目。此外，如果你能访问互联网，还有几个有价值的信息来源可以利用，包括邮件列表和 Usenet 新闻组。正确使用它们将帮助你获得所需的答案。
 
 ## UNIX 手册页
 
-你获取信息的第一个地方是 UNIX man 手册页。如果你在使用某个命令或其他系统工具时遇到问题，那么该工具很可能附带了以 man 手册页形式提供的文档。man 手册页是 man 程序使用的标准 UNIX 在线文档格式。
+你获取信息的第一个地方是 UNIX man 手册页。如果你在使用某个命令或其他系统工具时遇到问题，那么该工具很可能附带了以 man 手册页形式提供的文档。`man` 手册页是 `man` 程序使用的标准 UNIX 在线文档格式。
 
 UNIX 手册正慢慢变得像恐龙一样，因为已有更好的程序来阅读文档。UNIX 手册唯一积极的一点是它存在于所有 Unix 系统中，无论是 Linux 还是其他。因此，学会正确使用它很重要。
 
-要阅读 UNIX 手册，你使用 man 命令，并作为参数给出你想了解的程序名称。以下示例显示了当你请求有关 bash shell 的信息时 man 输出的一部分：
+要阅读 UNIX 手册，你使用 `man` 命令，并作为参数给出你想了解的程序名称。以下示例显示了当你请求有关 `bash` shell 的信息时 `man` 输出的一部分：
 
 ```
 [alberto@digital alberto]$ man bash
@@ -4128,30 +4182,35 @@ DESCRIPTION
 :
 ```
 
-如你所见，man 命令提供了在线手册的格式化版本。列表末尾的冒号 (:) 表示还有更多信息。Man 信息会通过一个名为 less 的分页程序传递。你可能记得 less 会一次显示一屏信息。以下是你可以用 less 做的事情：
+如你所见，`man` 命令提供了在线手册的格式化版本。列表末尾的冒号 (`:`) 表示还有更多信息。Man 信息会通过一个名为 `less` 的分页程序传递。你可能记得 `less` 会一次显示一屏信息。以下是你可以用 `less` 做的事情：
 
 - 按空格键查看下一页。
-- 输入 /word 其中 word 是你要查找的词。这将在文档中搜索你指定的词，并在该词的首次出现处停止分页。
-- 输入 q 返回到命令提示符。
+- 输入 `/word` 其中 `word` 是你要查找的词。这将在文档中搜索你指定的词，并在该词的首次出现处停止分页。
+- 输入 `q` 返回到命令提示符。
 
-尝试使用 man 命令阅读有关 man 命令本身的一些信息（man man）。
+尝试使用 `man` 命令阅读有关 `man` 命令本身的一些信息（`man man`）。
 
 ## Linux 完全傻瓜指南
 
 （出版社：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 搜索本书：
 
+
+
 ## 搜索工具：apropos
 
-如果你知道感兴趣的命令名称，Man 非常有用。你可以执行 man commandname，然后就可以开始了。但如果不知道要找的命令名称怎么办？
+如果你知道感兴趣的命令名称，`Man` 非常有用。你可以执行 `man commandname`，然后就可以开始了。但如果不知道要找的命令名称怎么办？
 
-这时 apropos 命令就派上用场了：它允许你按关键字搜索。结果，它会显示可能与你的问题相关的文档列表。
+这时 `apropos` 命令就派上用场了：它允许你按关键字搜索。结果，它会显示可能与你的问题相关的文档列表。
 
-太好了！只有一个小问题：apropos 搜索的数据库，即 whatis 数据库，在你创建它之前并不存在。（你将在“构建 whatis 数据库：makewhatis”一节中学习如何做到这一点。）构建完成后，你就可以用 apropos 命令查询数据库，例如查找与你的磁带驱动器相关的命令：
+太好了！只有一个小问题：`apropos` 搜索的数据库，即 `whatis` 数据库，在你创建它之前并不存在。（你将在“构建 whatis 数据库：makewhatis”一节中学习如何做到这一点。）构建完成后，你就可以用 `apropos` 命令查询数据库，例如查找与你的磁带驱动器相关的命令：
 
 ```
 [alberto@digital alberto]$ apropos tape
@@ -4160,7 +4219,7 @@ smtbar (1)          - shell script for backing up SMB shares directly to UNIX ta
 st (4)              - SCSI tape device
 ```
 
-从这些信息中，你知道至少有三页手册（使用 man 命令）与你的磁带驱动器相关。你看到的括号中的数字表示手册章节。
+从这些信息中，你知道至少有三页手册（使用 `man` 命令）与你的磁带驱动器相关。你看到的括号中的数字表示手册章节。
 
 UNIX 手册分为几个章节。每个章节按主题组织。表 15.1 列出了这些章节。
 
@@ -4171,20 +4230,20 @@ UNIX 手册分为几个章节。每个章节按主题组织。表 15.1 列出了
 | 1 | 用户命令、程序和应用程序 |
 | 2 | 系统调用和内核错误代码 |
 | 3 | 库函数调用 |
-| 4 | 特殊文件（/dev 目录中的内容） |
+| 4 | 特殊文件（`/dev` 目录中的内容） |
 | 5 | 标准文件格式 |
 | 6 | 游戏和其他有趣类型的程序 |
 | 7 | 各种不属于其他地方的东西 |
 
-如果你未指定章节，man 会先搜索涵盖命令的章节；通常顺序为第 1、8 和 6 章。
+如果你未指定章节，`man` 会先搜索涵盖命令的章节；通常顺序为第 1、8 和 6 章。
 
-一个命令可能在手册的多个章节中都有描述。要查看特定章节的文档，请这样指定 man 命令：
+一个命令可能在手册的多个章节中都有描述。要查看特定章节的文档，请这样指定 `man` 命令：
 
 ```
 man section command
 ```
 
-在前面的示例中，man 命令被列了两次：第 1 章和第 7 章。要阅读第 7 章的信息，输入此命令：
+在前面的示例中，`man` 命令被列了两次：第 1 章和第 7 章。要阅读第 7 章的信息，输入此命令：
 
 ```
 man 7 man
@@ -4192,24 +4251,25 @@ man 7 man
 
 ## 获取简要命令描述：whatis
 
-有时你不想读五段 UNIX 手册的文字只为弄清某个命令的作用。在这种情况下，whatis 工具也可以用来获取命令的简要描述。要以此模式运行，你需要提供工具名称作为参数。
+有时你不想读五段 UNIX 手册的文字只为弄清某个命令的作用。在这种情况下，`whatis` 工具也可以用来获取命令的简要描述。要以此模式运行，你需要提供工具名称作为参数。
 
-试试这个：构建 whatis 数据库：makewhatis
-要构建 whatis 数据库，你需要使用 makewhatis 命令。要开始构建数据库，输入此命令：
+试试这个：构建 `whatis` 数据库：`makewhatis`
+
+要构建 `whatis` 数据库，你需要使用 `makewhatis` 命令。要开始构建数据库，输入此命令：
 
 ```
 /usr/sbin/makewhatis
 ```
 
-请注意，你必须是 root（你也可以是 su 并执行该命令），否则该程序无法正常工作。几分钟后，数据库将被构建。如果你的计算机较旧，此操作可能需要一段时间。
+请注意，你必须是 `root`（你也可以是 `su` 并执行该命令），否则该程序无法正常工作。几分钟后，数据库将被构建。如果你的计算机较旧，此操作可能需要一段时间。
 
-whatis 会打印出命令做什么的一行描述。我发现 whatis 是一个很棒的探索工具。如果你进入 /sbin 等程序目录，可以通过发出以下命令快速了解那里的命令的作用：
+`whatis` 会打印出命令做什么的一行描述。我发现 `whatis` 是一个很棒的探索工具。如果你进入 `/sbin` 等程序目录，可以通过发出以下命令快速了解那里的命令的作用：
 
 ```
 cd directory; whatis *
 ```
 
-这会带你进入你指定的 directory 目录，并在该目录中找到的所有文件上执行 whatis。* 是一个正则表达式，指定该目录中找到的所有文件：
+这会带你进入你指定的 `directory` 目录，并在该目录中找到的所有文件上执行 `whatis`。`*` 是一个正则表达式，指定该目录中找到的所有文件：
 
 ```
 [alberto@localhost alberto]$ cd /sbin; whatis *
@@ -4221,20 +4281,21 @@ arp (8)               - manipulate the system ARP cache
 
 ## 搜索标准位置：whereis
 
-有时你需要的帮助是定位你要找的文件或程序。如前所述，你的 shell 通过查找环境变量来找到命令。当你发出命令名称时，PATH 环境变量中列出的目录会被搜索以匹配命令。如果找到，命令将被执行；否则，你会得到令人讨厌的“command not found”响应。
+有时你需要的帮助是定位你要找的文件或程序。如前所述，你的 `shell` 通过查找环境变量来找到命令。当你发出命令名称时，`PATH` 环境变量中列出的目录会被搜索以匹配命令。如果找到，命令将被执行；否则，你会得到令人讨厌的“command not found”响应。
 
-由于某些存放工具的目录未包含在默认用户路径中，你的 shell 将看不到它们。在这种情况下，你可以使用 whereis 工具来找到你要使用的工具的实际路径。
+由于某些存放工具的目录未包含在默认用户路径中，你的 `shell` 将看不到它们。在这种情况下，你可以使用 `whereis` 工具来找到你要使用的工具的实际路径。
 
 注意：
+
 有关正则表达式的更多信息，请参阅第 14 章“让 Shell 工作”。
 
-whereis 不仅能定位二进制文件，还能定位你提供的名称的源代码和手册页。命令格式如下：
+`whereis` 不仅能定位二进制文件，还能定位你提供的名称的源代码和手册页。命令格式如下：
 
 ```
 whereis command
 ```
 
-在以下示例中，我搜索 passwd 命令：
+在以下示例中，我搜索 `passwd` 命令：
 
 ```
 [alberto@digital alberto]$ whereis passwd
@@ -4244,24 +4305,24 @@ passwd: /usr/bin/passwd /etc/passwd /etc/passwd.OLD
 
 ## 内置命令信息
 
-大多数最新命令都在程序内部存储了基本的使用信息。在 Linux 下，你始终可以尝试对命令名称加上 --help 或 -h 参数。通常列出的信息会超过一屏，因此请记住将输出通过管道传递给 less：
+大多数最新命令都在程序内部存储了基本的使用信息。在 Linux 下，你始终可以尝试对命令名称加上 `--help` 或 `-h` 参数。通常列出的信息会超过一屏，因此请记住将输出通过管道传递给 `less`：
 
 ```
 commandname --help | less
 ```
 
-如果你使用的命令是一个“智能”的 UNIX 命令，即使它不理解 --help 标志，它也会以合理的方式响应。通常，当程序遇到未知参数时，它会退回到输出其使用信息。使用信息会告诉你命令的基本格式以及它支持的标志。显然，这并不会告诉你程序做什么（除非你已经知道），但总比没有信息好。如果 man 失败了，你可能需要上网查找一些信息。我发现用 Yahoo 等搜索引擎搜索命令名称通常能把我引向正确的方向。
-
-
-
+如果你使用的命令是一个“智能”的 UNIX 命令，即使它不理解 `--help` 标志，它也会以合理的方式响应。通常，当程序遇到未知参数时，它会退回到输出其使用信息。使用信息会告诉你命令的基本格式以及它支持的标志。显然，这并不会告诉你程序做什么（除非你已经知道），但总比没有信息好。如果 `man` 失败了，你可能需要上网查找一些信息。我发现用 Yahoo 等搜索引擎搜索命令名称通常能把我引向正确的方向。
 
 要访问内容，请单击章节和节标题。
 
 ## Linux完全傻瓜指南
 
 （出版社：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 搜索本书：
@@ -4270,18 +4331,17 @@ ISBN：078971826x
 
 ## 通过 /usr/doc 在线帮助
 
-Linux 将许多文档和补充信息文件存储在 /usr/doc 中。该目录布满了按所属程序或工具命名的系列目录。在每个目录中，你通常会找到一个 README 文件，其中包含有关该程序的最后一刻信息以及有关该程序功能或问题的常见问题解答（FAQs）。这些信息除了你可能通过 man 或其他文档阅读器找到的任何文档之外。
+Linux 将许多文档和补充信息文件存储在 `/usr/doc` 中。该目录布满了按所属程序或工具命名的系列目录。在每个目录中，你通常会找到一个 `README` 文件，其中包含有关该程序的最后一刻信息以及有关该程序功能或问题的常见问题解答（FAQs）。这些信息除了你可能通过 `man` 或其他文档阅读器找到的任何文档之外。
 
-/usr/doc 目录中的在线帮助还包含计算机上最重要的通用 Linux 信息：
+`/usr/doc` 目录中的在线帮助还包含计算机上最重要的通用 Linux 信息：
 
 - Linux 安装和入门指南—这是 Linux 文档项目为 Linux 初学者创建的“入门”手册。Linux 文档项目是一项旨在为 Linux 计算机创建完整的在线手册集的计划。
 - Linux 系统管理员指南—该手册关于 UNIX 系统管理，由 Linux 文档项目创建。
-- Linux 网络管理员指南—该手册描述了如何在网络环境中使用 Linux 以及如何管理大型基于 Linux 的网络。该手册也是由 Linux 文档项目创建的。
+- Linux 网络管理员指南—该手册描述了如何在网络环境中使用 Linux 以及如何管理大型基于 Linux 的网络。该手册也是由 Linux 文档项目创建。
 - Linux 文档项目作者创建的其他功能文本。
+- HOWTO 文档—这些是关于如何完成某些高级任务的功能指南，例如配置软件或某些有趣的网络工具。
 
-• HOWTO 文档—这些是关于如何完成某些高级任务的功能指南，例如配置软件或某些有趣的网络工具。
-
-这些文档位于 /usr/doc/html 中，但它们以 HTML 格式存储，这意味着你不想用 less 等分页器来阅读它们。你可以通过两种方式访问它们，具体取决于你是在 KDE（X）会话中还是在控制台中。在 KDE 会话中，启动 Netscape Navigator 以查看在线手册。实际 URL 是 file:/usr/doc/html/index.html；按原样提供时，Navigator 配置为默认打开指向此页面的链接。如果你正在从控制台工作，通过在命令行输入“lynx”启动基于文本的 Lynx 浏览器。Lynx 也配置为默认转到此页面。
+这些文档位于 `/usr/doc/html` 中，但它们以 HTML 格式存储，这意味着你不想用 `less` 等分页器来阅读它们。你可以通过两种方式访问它们，具体取决于你是在 KDE（X）会话中还是在控制台中。在 KDE 会话中，启动 Netscape Navigator 以查看在线手册。实际 URL 是 `file:/usr/doc/html/index.html`；按原样提供时，Navigator 配置为默认打开指向此页面的链接。如果你正在从控制台工作，通过在命令行输入“`lynx`”启动基于文本的 Lynx 浏览器。`Lynx` 也配置为默认转到此页面。
 
 除了使用 Navigator 和 Lynx，如果你在 KDE 中，你可以将 URL 输入到 KFM 的 URL 位置字段中，KFM 将为你显示文档。
 
@@ -4291,9 +4351,11 @@ Linux 将许多文档和补充信息文件存储在 /usr/doc 中。该目录布�
 
 其中许多文档是无价的。然而，大多数文档太长（平均文档长约 60 页！）并且往往包含大量外围信息。这可能会给 Linux 新手带来一些困难；他们的背景水平与黑客不同。但这就是你得到的。在一个免费的操作系统中，很难找到一位优秀的技术作家，能够从你需要知道的内容中提炼出你想要知道的内容。
 
-OpenLinux 1.3 系统上的 HOWTO 文档可以通过访问我们在上一节中讨论的 /usr/doc 中的在线文档 URL 来找到。
+OpenLinux 1.3 系统上的 HOWTO 文档可以通过访问我们在上一节中讨论的 `/usr/doc` 中的在线文档 URL 来找到。
 
 ## Mini HOWTOs
+
+
 
 迷你 HOWTO 在精神上与 HOWTO 文档相似；然而，迷你 HOWTO 往往更自由形式且更短。HOWTO 文档遵循某些格式标准，而这些标准并不约束迷你 HOWTO。
 
@@ -4303,17 +4365,17 @@ OpenLinux 1.3 系统上的 HOWTO 文档可以通过访问我们在上一节中�
 
 LDP 可能是关于 Linux 的最有用和最有帮助的在线信息。LDP 的目标是为 Linux 创建可靠的文档，涵盖安装、内核开发、内核信息、网络管理、系统管理和用户指南。LDP 的作者确保随 Linux 分发的文档准确且最新。
 
-正如我们已经讨论过的，LDP 开发的一些手册可在你的系统上在线获得。其他则可通过互联网获得。如果你有互联网访问权限，你可以在 http://sunsite.unc.edu/LDP 查看最新文档。
+正如我们已经讨论过的，LDP 开发的一些手册可在你的系统上在线获得。其他则可通过互联网获得。如果你有互联网访问权限，你可以在 `http://sunsite.unc.edu/LDP` 查看最新文档。
 
 除了提供在线手册和 HOWTO 文档外，LDP 还负责维护许多关于 Linux 的常见问题解答（FAQ）文档。这些可以在互联网上的 LDP 主页上找到。
 
 ## 阅读压缩文档：zless
 
-偶尔，你可能会在 /usr/doc 或 Linux 计算机上的其他帮助区域遇到压缩文档。压缩文档可以通过以下文件名扩展名来识别：.gz、.z 或 .Z。
+偶尔，你可能会在 `/usr/doc` 或 Linux 计算机上的其他帮助区域遇到压缩文档。压缩文档可以通过以下文件名扩展名来识别：`.gz`、`.z` 或 `.Z`。
 
 当你在 Linux 计算机上遇到压缩文档时，你需要先将其解压缩后再阅读，或使用一种可以窥视压缩文档的特殊实用程序。
 
-zless 是一个工具，允许你使用 less 分页器查看压缩文本文件（文件名以 .gz、.z 或 .Z 结尾）。如果 zless 命令不可用，你可以通过使用 zcat 和 less 管道来实现相同效果：
+`zless` 是一个工具，允许你使用 `less` 分页器查看压缩文本文件（文件名以 `.gz`、`.z` 或 `.Z` 结尾）。如果 `zless` 命令不可用，你可以通过使用 `zcat` 和 `less` 管道来实现相同效果：
 
 ```
 zcat filename | less
@@ -4324,8 +4386,11 @@ zcat filename | less
 ## Linux完全傻瓜指南
 
 （出版社：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 搜索本书：
@@ -4334,15 +4399,15 @@ ISBN：078971826x
 
 ## Info 页面
 
-越来越多的开发人员开始使用 GNU 的 info 来编写文档。GNU info 系统使用超文本来关联不同的信息片段。info 的目标是通过提供在文档的不同部分之间跳转的方式，使阅读文档页面变得更容易。
+越来越多的开发人员开始使用 GNU 的 `info` 来编写文档。GNU `info` 系统使用超文本来关联不同的信息片段。`info` 的目标是通过提供在文档的不同部分之间跳转的方式，使阅读文档页面变得更容易。
 
-这个概念类似于使用 Web 浏览器。要阅读文档，你使用 info 命令，后跟你感兴趣的工具的名称。如果你没有提供工具名称，info 将向你显示它所知道的所有命令的列表以及 info 文档本身的一些入口点。以下图示显示了 info 中的一个屏幕。
+这个概念类似于使用 Web 浏览器。要阅读文档，你使用 `info` 命令，后跟你感兴趣的工具的名称。如果你没有提供工具名称，`info` 将向你显示它所知道的所有命令的列表以及 `info` 文档本身的一些入口点。以下图示显示了 `info` 中的一个屏幕。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_170_0.png)
 
-info 程序。
+`info` 程序。
 
-在 info 中移动的基本命令列在表 15.2 中。
+在 `info` 中移动的基本命令列在表 15.2 中。
 
 ## 表 15.2 Info 命令
 
@@ -4361,15 +4426,15 @@ info 程序。
 | f | Cross reference (type cross reference name or ? for a list of options) |
 | d | Show a directory of all the documents info knows about |
 
-info 文档中的每个页面都称为一个节点。节点可以包含菜单和交叉引用。菜单是同一文档内的相关节点。交叉引用通常位于不同文档中的节点。
+`info` 文档中的每个页面都称为一个节点。节点可以包含菜单和交叉引用。菜单是同一文档内的相关节点。交叉引用通常位于不同文档中的节点。
 
-学习如何使用 info 的最简单方法是完成其交互式教程。要访问教程，在命令提示符下输入 info，然后键入 h 以遵循说明。在 Emacs 中，你可以通过键入 Ctrl+h i 进入 info。
+学习如何使用 `info` 的最简单方法是完成其交互式教程。要访问教程，在命令提示符下输入 `info`，然后键入 `h` 以遵循说明。在 Emacs 中，你可以通过键入 `Ctrl+h i` 进入 `info`。
 
 ## Usenet：互联网新闻组
 
 如果你可以访问互联网和新闻组，你可以在许多地方找到有关 Linux 的信息。组是按主题组织的。世界各地的人们向他们感兴趣的组发布问题和答案。
 
-有数千个新闻组涵盖所有主题和兴趣。但在像 OpenLinux 1.3 随附的 Netscape Communicator 的 Colabra 这样优秀的阅读器的帮助下，你可以浏览多个帖子，直到找到你想要的内容。（执行 man -k news 以查找系统上安装的控制台功能新闻工具。）
+有数千个新闻组涵盖所有主题和兴趣。但在像 OpenLinux 1.3 随附的 Netscape Communicator 的 Colabra 这样优秀的阅读器的帮助下，你可以浏览多个帖子，直到找到你想要的内容。（执行 `man -k news` 以查找系统上安装的控制台功能新闻工具。）
 
 一些新闻组是经过审核的。经过审核的组会由组的维护者审查帖子，然后决定你的帖子是否值得分发。
 
@@ -4380,11 +4445,6 @@ Usenet 新闻组充满了噪音，因为很多用户在没有自己研究问题�
 一些 Linux 组如下：
 
 - comp.os.linux.advocacy—一个专门用于争论 Linux 比其他操作系统更好的新闻组。
-
-
-
-
-
 - `comp.os.linux.announce`—这是一个经过审核的组，用于发布关于 Linux 开发、错误修复、软件发布等公告。这可能是所有组中最“信息性”的，关于 Linux 世界正在发生的事情。
 - `comp.os.linux.development.apps`—该组面向有兴趣将应用程序移植到 Linux 的程序员。
 - `comp.os.linux.development.system`—该组面向有兴趣开发内核和系统软件的程序员。
@@ -4406,8 +4466,11 @@ Usenet 新闻组充满了噪音，因为很多用户在没有自己研究问题�
 ## Linux 完全 idiot's Guide
 
 （出版商：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 搜索本书：
@@ -4439,10 +4502,13 @@ ISBN：078971826x
 
 现在想象一下 400 个陌生人翻阅你的文件！你有两个解决方案：
 
+
+
 1. 不要保留或编写你不想让他人阅读的任何敏感材料——这是一种激进但非常安全的方法。
+
 2. 利用 UNIX 权限机制来避免大多数不必要的窥探。
 
-我们将探讨第二个选项。每个用户在账户创建时被分配一定的访问级别。访问级别由用户的组成员身份表示。系统的管理员（root）可以随时更改这些成员身份。当用户登录时，系统会将用户与特定的身份关联起来。利用此身份和文件权限系统，Linux 决定用户被允许做什么以及用户被允许读取或操作哪些文件。
+我们将探讨第二个选项。每个用户在账户创建时被分配一定的访问级别。访问级别由用户的组成员身份表示。系统的管理员（`root`）可以随时更改这些成员身份。当用户登录时，系统会将用户与特定的身份关联起来。利用此身份和文件权限系统，Linux 决定用户被允许做什么以及用户被允许读取或操作哪些文件。
 
 在最基本层面上，权限系统实际上非常简单。系统中的每个文件都由恰好一个用户拥有并与恰好一个组相关。每个文件还具有九个开关的集合，控制谁可以读取、写入或执行该文件。（还有更多开关，但我将在下一节“有效用户 ID”中讨论它们。）
 
@@ -4468,7 +4534,7 @@ ISBN：078971826x
 
 组成员仅被允许读取和执行权限。任何不是所有者或组成员的人都不能读取、写入或执行程序；如果所讨论的文件是目录，则此类用户也不能遍历它。
 
-让我们看一个例子来演示权限通常如何表示。你可以使用带有 -l 选项的 ls 命令显示文件的权限信息：
+让我们看一个例子来演示权限通常如何表示。你可以使用带有 `-l` 选项的 `ls` 命令显示文件的权限信息：
 
 ```
 [root@digital alberto]# ls -l
@@ -4482,6 +4548,7 @@ Previous | Table of Contents | Next
 Products | Contact Us | About Us | Privacy | Ad Info | Home
 
 Use of this site is subject to certain Terms & Conditions, Copyright © 1996-2000 EarthWeb Inc.
+
 All rights reserved. Reproduction whole or in part in any form or medium without express written permission of EarthWeb is prohibited.
 
 要访问内容，请单击章节和节标题。
@@ -4489,8 +4556,11 @@ All rights reserved. Reproduction whole or in part in any form or medium without
 ## Linux 完全 idiot's Guide
 
 （出版商：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 搜索本书：
@@ -4499,40 +4569,36 @@ Previous Table of Contents Next
 
 权限显示为每行开头的十个破折号和/或字母的序列。
 
-- 第一个字符位置告诉你文件的类型。普通文件如 readme.txt 在此位置显示破折号（–）。目录如前例中的“stuff”显示 d。链接显示 l，而其它特殊文件——如设备、套接字和管道——分别显示 c 或 b、s 和 =。
-- 接下来的九个位置代表九个权限开关。前三个开关适用于文件的所有者，中间三个适用于文件组的成员，最后三个适用于“其他”用户。每组三个开关包含一个读取开关、一个写入开关和一个执行开关，按此顺序。当开关打开（授予权限）时，会出现字母：r 表示读取，w 表示写入，x 表示执行。当开关关闭（拒绝权限）时，会出现破折号（–）。在上面的 readme.txt 中，你可以看到所有者有权读取和写入，组有权读取和写入，其他人只有读取权限。在上面的名为 stuff 的目录中，所有用户都有读取和执行权限（这意味着所有用户都可以 cd 进入该目录）。然而，只有所有者和组具有写入权限，并且只有他们被允许在 stuff 目录中创建文件。
+- 第一个字符位置告诉你文件的类型。普通文件如 `readme.txt` 在此位置显示破折号（–）。目录如前例中的“`stuff`”显示 `d`。链接显示 `l`，而其它特殊文件——如设备、套接字和管道——分别显示 `c` 或 `b`、`s` 和 `=`。
+- 接下来的九个位置代表九个权限开关。前三个开关适用于文件的所有者，中间三个适用于文件组的成员，最后三个适用于“其他”用户。每组三个开关包含一个读取开关、一个写入开关和一个执行开关，按此顺序。当开关打开（授予权限）时，会出现字母：`r` 表示读取，`w` 表示写入，`x` 表示执行。当开关关闭（拒绝权限）时，会出现破折号（–）。在上面的 `readme.txt` 中，你可以看到所有者有权读取和写入，组有权读取和写入，其他人只有读取权限。在上面的名为 `stuff` 的目录中，所有用户都有读取和执行权限（这意味着所有用户都可以 `cd` 进入该目录）。然而，只有所有者和组具有写入权限，并且只有他们被允许在 `stuff` 目录中创建文件。
 
-## 有效用户 ID
+### 有效用户 ID
 
 对文件和进程的访问将取决于你的当前用户名和当前组成员身份。我说“当前”是因为在会话期间，你可以假设另一个用户的 id（即，如果你知道该用户的密码）。
 
-要查看你的有效用户 id 和组成员身份列表，你可以使用 id 工具。id 命令打印有关你的当前用户名、当前组的信息和
+要查看你的有效用户 id 和组成员身份列表，你可以使用 `id` 工具。`id` 命令打印有关你的当前用户名、当前组的信息和你所属的所有组列表。此信息也可以使用 `whoami` 和 `groups` 命令获得。然而，`id` 命令提供的信息更多，并且也可以用于其他目的。
 
-
-
-你所属的所有组列表。此信息也可以使用 whoami 和 groups 命令获得。然而，id 命令提供的信息更多，并且也可以用于其他目的。
-
-要查看你所属的组，在 shell 中，输入 id：
+要查看你所属的组，在 shell 中，输入 `id`：
 
 ```
 [alberto@digital alberto]$ id
 uid=501(alberto) gid=501(alberto) groups=501(alberto)
 ```
 
-正如你通过执行此命令所看到的，我的用户名 alberto 被分配了用户 ID（UID）501 和组 ID（GID）501。操作系统通过数字来跟踪你的用户名和组归属。这种系统更高效，并且可以跟踪大约 65,536 个不同的 UID！
+正如你通过执行此命令所看到的，我的用户名 `alberto` 被分配了用户 ID（UID）`501` 和组 ID（GID）`501`。操作系统通过数字来跟踪你的用户名和组归属。这种系统更高效，并且可以跟踪大约 65,536 个不同的 UID！
 
-以超级用户（root）运行相同的命令会得到不同的信息：
+以超级用户（`root`）运行相同的命令会得到不同的信息：
 
 ```
 [root@digital alberto]# id
 uid=0(root) gid=0(root) groups=0(root)
 ```
 
-正如你所看到的，root 的 UID 和 GID 都是 0。任何 UNIX 系统上的 root 用户的 UID 都是 0，并且始终至少属于一个组，其 ID 也是 0。root 也可以属于更多组。
+正如你所看到的，`root` 的 UID 和 GID 都是 `0`。任何 UNIX 系统上的 `root` 用户的 UID 都是 `0`，并且始终至少属于一个组，其 ID 也是 `0`。`root` 也可以属于更多组。
 
-## 替代用户：su
+### 替代用户：`su`
 
-在工作和配置软件时，通常需要成为 root 用户——或者其他任何用户。与其注销后再次以不同用户登录，更好的替代方案可能是使用 su 命令。此命令有效地将你当前的 UID 和 GID 替换为你要成为的用户的 UID 和 GID，并授予你 su 到该用户的所有权限。以下是一个示例：
+在工作和配置软件时，通常需要成为 `root` 用户——或者其他任何用户。与其注销后再次以不同用户登录，更好的替代方案可能是使用 `su` 命令。此命令有效地将你当前的 UID 和 GID 替换为你要成为的用户的 UID 和 GID，并授予你 `su` 到该用户的所有权限。以下是一个示例：
 
 ```
 [alberto@digital alberto]$ su root
@@ -4543,97 +4609,96 @@ exit
 [alberto@digital alberto]$
 ```
 
-在此示例中，我执行了 su 命令。作为参数，我提供了我想要成为的用户名。在本例中我指定了 root；请注意，单独使用 su 默认假设为 "su root"。
+在此示例中，我执行了 `su` 命令。作为参数，我提供了我想要成为的用户名。在本例中我指定了 `root`；请注意，单独使用 `su` 默认假设为 "`su root`"。
 
-请注意，su 将要求你要 su 进入的用户的密码。为了返回到我的常规用户账户，我执行了 exit 命令（你也可以按 Ctrl+D）。此操作终止了 root shell 并将我返回到原始会话。完成需要 su 的任务后，务必记得返回到你的用户账户。
+请注意，`su` 将要求你要 `su` 进入的用户的密码。为了返回到我的常规用户账户，我执行了 `exit` 命令（你也可以按 Ctrl+D）。此操作终止了 `root` shell 并将我返回到原始会话。完成需要 `su` 的任务后，务必记得返回到你的用户账户。
 
-## 当心 root 的权力！
+### 当心 root 的权力！
 
-Root 是一个特殊的管理员账户，授予对整个系统的不受限制的访问权限。当你需要执行系统管理类型的任务时，这种权力非常宝贵，但这不是你希望用于其他任何目的的账户。root 账户可以执行某些不可逆的操作，例如擦除磁盘上的所有文件或其他某种灾难性操作！
+`Root` 是一个特殊的管理员账户，授予对整个系统的不受限制的访问权限。当你需要执行系统管理类型的任务时，这种权力非常宝贵，但这不是你希望用于其他任何目的的账户。`root` 账户可以执行某些不可逆的操作，例如擦除磁盘上的所有文件或其他某种灾难性操作！
 
-在你对 Linux 和 UNIX 有更多了解之前，我建议你不要使用 root 账户，除非绝对必要。示例包括添加软件或配置系统中的某些方面，这些方面 specifically 要求你以 root 身份登录。
+在你对 Linux 和 UNIX 有更多了解之前，我建议你不要使用 `root` 账户，除非绝对必要。示例包括添加软件或配置系统中的某些方面，这些方面 specifically 要求你以 `root` 身份登录。
 
-## 更改组：newgrp
+### 更改组：`newgrp`
 
-每当你创建文件时，你的默认组是分配给文件组所有权的组。如果你是多个组的成员，可以使用 newgrp 工具更改你的有效 GID。newgrp 工具类似于 su，因为你提供你想要作为会话默认使用的组的名称。如果你不是该组的成员，则不允许更改你的有效 GID。
+每当你创建文件时，你的默认组是分配给文件组所有权的组。如果你是多个组的成员，可以使用 `newgrp` 工具更改你的有效 GID。`newgrp` 工具类似于 `su`，因为你提供你想要作为会话默认使用的组的名称。如果你不是该组的成员，则不允许更改你的有效 GID。
 
-## 特殊用户
+### 特殊用户
 
 你的 Linux 系统已经预先创建了几个账户。
 
-其中许多账户（bin、adm、lp、sync、halt、mail 等）是为了程序或某些其他系统功能而存在的。这些所谓的伪用户账户对于系统能够在仍然维护权限机制的同时执行某些任务非常重要。
+其中许多账户（`bin`、`adm`、`lp`、`sync`、`halt`、`mail` 等）是为了程序或某些其他系统功能而存在的。这些所谓的伪用户账户对于系统能够在仍然维护权限机制的同时执行某些任务非常重要。
 
-## 主目录
+### 主目录
 
-每个用户名都有自己的主目录。默认情况下，Linux 将主账户放在 /home 目录下。唯一明显的例外是伪用户的账户。（你不应尝试更改这些账户的位置。）
+每个用户名都有自己的主目录。默认情况下，Linux 将主账户放在 `/home` 目录下。唯一明显的例外是伪用户的账户。（你不应尝试更改这些账户的位置。）
 
-传统上，类 UNIX 操作系统并未开箱即用如此彻底地配置。相反，系统管理员必须自行明确组织主目录。然而，标准 Linux 系统将用户账户保存在 /home 中。
+传统上，类 UNIX 操作系统并未开箱即用如此彻底地配置。相反，系统管理员必须自行明确组织主目录。然而，标准 Linux 系统将用户账户保存在 `/home` 中。
 
-## 更改文件权限
+### 更改文件权限
 
-如果你是文件的拥有者或超级用户，你可以更改文件上的权限。为此，你使用 chmod 命令。
+如果你是文件的拥有者或超级用户，你可以更改文件上的权限。为此，你使用 `chmod` 命令。
 
-chmod 命令提供了一种符号模式，在其中你可以添加或减去权限，以及一种数字模式，在其中你可以指定你想要的文件权限。在使用 chmod 命令之前，你需要知道如何使用其数字和符号模式。
+
+
+`chmod` 命令提供了一种符号模式，在其中你可以添加或减去权限，以及一种数字模式，在其中你可以指定你想要的文件权限。在使用 `chmod` 命令之前，你需要知道如何使用其数字和符号模式。
 
 ## 按数字设置权限：4、2、1 和 0
 
 权限可以设置为数字。虽然这种方法对初学者来说可能看起来有点复杂，但实际上并不复杂。首先，你只需要担心四个数字：
+- 数字 `4` 指定读权限
+- 数字 `2` 指定写权限
+- 数字 `1` 指定执行权限
+- 数字 `0` 指定没有任何权限
 
-- 数字 4 指定读权限
-- 数字 2 指定写权限
-- 数字 1 指定执行权限
-- 数字 0 指定没有任何权限
+如果你想启用读和写权限，你将值相加：`4+2=6`，所以你分配数字 `6`。
 
-如果你想启用读和写权限，你将值相加：4+2=6，所以你分配数字 6。
+如果你想启用读和执行权限，你再次将值相加：因为 `4+1=5`，所以你使用值 `5`。
 
-如果你想启用读和执行权限，你再次将值相加：因为 4+1=5，所以你使用值 5。
-
-如果你想启用读、写和执行，你将 4+2+1 相加得到 7，这是你应该分配的值。各个权限的值被设计成在各种组合中形成唯一值。
+如果你想启用读、写和执行，你将 `4+2+1` 相加得到 `7`，这是你应该分配的值。各个权限的值被设计成在各种组合中形成唯一值。
 
 简单吗？我认为很简单。然而，可能使事情复杂化的一点是，你需要同时为所有三个角色指定权限：拥有者、组和其他人。为此，将这三个权限的序列串联起来。结果是一个称为模式的数字。
 
-要给文件的拥有者和组读和写权限，但只给所有其他用户读权限，将模式指定为 664：拥有者为 (4+2)，组为 (4+2)，其他人为 (4)。
+要给文件的拥有者和组读和写权限，但只给所有其他用户读权限，将模式指定为 `664`：拥有者为 `(4+2)`，组为 `(4+2)`，其他人为 `(4)`。
 
 ## 使用符号设置权限：u、g、o、r、w 和 x
 
 有时使用符号设置权限很有用，因为它们允许你一次设置一个角色的权限或一次设置一个权限。例如，你可以在不知道文件拥有者或其他用户的权限的情况下授予文件组读权限。
 
-为了使用符号设置权限，你必须记住与某些单词对应的字母：用户或拥有者 (u)、组 (g)、其他人 (o)、读 (r)、写 (w) 和执行 (x)。
+为了使用符号设置权限，你必须记住与某些单词对应的字母：用户或拥有者 (`u`)、组 (`g`)、其他人 (`o`)、读 (`r`)、写 (`w`) 和执行 (`x`)。
 
 基于符号的权限字符串遵循以下两种格式之一：
-
 - `identity-permissions` 用于拒绝权限
 - `identity+permissions` 用于授予权限
 
 以下是一些示例权限字符串；其含义应该会变得越来越清晰。
 
-## 表 16.1 使用符号授予权限
+### 表 16.1 使用符号授予权限
 
 | string | Permissions | Granted to |
 |---|---|---|
-| ugo+rwx | read, write, execute | owner, group, and others |
-| ug+w | write | owner and group |
-| g+rx | read and execute | group |
+| `ugo+rwx` | read, write, execute | owner, group, and others |
+| `ug+w` | write | owner and group |
+| `g+rx` | read and execute | group |
 
-## 表 16.2 使用符号拒绝权限
+### 表 16.2 使用符号拒绝权限
 
 | string | Permissions | Denied to |
 |---|---|---|
-| ugo-rwx | read, write, execute | owner, group, and others |
-| o-rw | read and write | others |
-| go-x | execute | group and others |
+| `ugo-rwx` | read, write, execute | owner, group, and others |
+| `o-rw` | read and write | others |
+| `go-x` | execute | group and others |
 
-请注意，字符串 "ugo" 可以用 "a" 代替，表示 "all"。例如，"ugo+w" 和 "a+w" 都授予每个人写权限。
+请注意，字符串 `"ugo"` 可以用 `"a"` 代替，表示 `"all"`。例如，`"ugo+w"` 和 `"a+w"` 都授予每个人写权限。
 
 ## 使用 chmod 更改权限
 
-要更改文件的权限，你取计算出的模式或所需的符号并使用 chmod 命令。语法是 chmod [options] mode filename [filename...]
+要更改文件的权限，你取计算出的模式或所需的符号并使用 `chmod` 命令。语法是 `chmod [options] mode filename [filename...]`
 
 让我们在计算机上试试。让我们创建以下内容：
-
-- 两个普通文件，名为 fileone 和 filetwo
-- 一个名为 adir 的目录
-- 一个名为 filethree 的符号链接
+- 两个普通文件，名为 `fileone` 和 `filetwo`
+- 一个名为 `adir` 的目录
+- 一个名为 `filethree` 的符号链接
 
 ```
 [alberto@digital alberto]$ touch fileone filetwo
@@ -4648,11 +4713,7 @@ lrwxrwxrwx 1 alberto alberto 7 Aug 4 18:05 filethree -> fileone
 -rw-rw-r-- 1 alberto alberto 0 Aug 4 18:05 filetwo
 ```
 
-现在让我们将 filetwo 和 filethree 更改为模式 644。我们还将拒绝（移除）adir 的所有写权限。
-
-
-
-
+现在让我们将 `filetwo` 和 `filethree` 更改为模式 `644`。我们还将拒绝（移除）`adir` 的所有写权限。
 
 ```
 [alberto@digital alberto]$ chmod 644 filetwo filethree
@@ -4671,51 +4732,56 @@ lrwxrwxrwx 1 alberto alberto 7 Aug 4 18:05 filethree -> fileone
 -rw-r--r-- 1 alberto alberto 0 Aug 4 18:05 filetwo
 ```
 
-发生了什么？filetwo 和 adir 的权限按预期发生了变化，但 filethree 的模式保持不变。出现这种奇怪现象的原因是 chmod 不会更改符号链接的模式——符号链接的权限永远不会被使用。它所做的是更改链接指向的文件的模式——fileone！因此 fileone 和 filetwo 的模式为 644 (4+2) (4) (4)，即所有者可读写，组和其他用户只读。adir 的所有 w，即写开关都已关闭。
+发生了什么？`filetwo` 和 `adir` 的权限按预期发生了变化，但 `filethree` 的模式保持不变。出现这种奇怪现象的原因是 `chmod` 不会更改符号链接的模式——符号链接的权限永远不会被使用。它所做的是更改链接指向的文件的模式——`fileone`！因此 `fileone` 和 `filetwo` 的模式为 `644` `(4+2) (4) (4)`，即所有者可读写，组和其他用户只读。`adir` 的所有 `w`，即写开关都已关闭。
 
 上一页 目录 下一页
 
 ## Linux 完全傻瓜指南
 
 （出版社：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 要访问内容，请点击章节和节标题。
 
 ## Setuid、Setgid 和 Sticky 位
 
-除了“按数字设置权限：4、2、1 和 0”一节中描述的权限位之外，UNIX 还提供了另外三个用于其他目的的位。setuid 位将正在运行程序的用户 ID 设置为程序所有者的用户 ID。这样，程序就可以使用程序使用者本身不一定拥有的权限运行。程序在运行时有效地具有与文件所有者相同的用户 ID。类似地，setgid 位以程序所属组的组 ID 运行程序。这种分配允许程序访问文件和进程，而运行程序的用户通常无权访问。
+除了“按数字设置权限：4、2、1 和 0”一节中描述的权限位之外，UNIX 还提供了另外三个用于其他目的的位。`setuid` 位将正在运行程序的用户 ID 设置为程序所有者的用户 ID。这样，程序就可以使用程序使用者本身不一定拥有的权限运行。程序在运行时有效地具有与文件所有者相同的用户 ID。类似地，`setgid` 位以程序所属组的组 ID 运行程序。这种分配允许程序访问文件和进程，而运行程序的用户通常无权访问。
 
-在 Linux 下，setgid 位还有一个特殊用途。当设置在目录上时，它会设置添加到该目录的文件的组所有权。这样，即使特定用户的默认组与该组不同，它也会被分配给项目目录——确保在其中创建的文件可供组成员访问。
+在 Linux 下，`setgid` 位还有一个特殊用途。当设置在目录上时，它会设置添加到该目录的文件的组所有权。这样，即使特定用户的默认组与该组不同，它也会被分配给项目目录——确保在其中创建的文件可供组成员访问。
 
-Sticky 位与目录结合使用以保护目录包含的文件，尽管它最初是为不同目的设计的。设置后，它只允许目录所有者、文件所有者或超级用户删除目录包含的文件。Sticky 位的存在就是像 /tmp 这样由许多用户共享的目录比使用标准权限设置时具有更多隐私的原因。
+Sticky 位与目录结合使用以保护目录包含的文件，尽管它最初是为不同目的设计的。设置后，它只允许目录所有者、文件所有者或超级用户删除目录包含的文件。Sticky 位的存在就是像 `/tmp` 这样由许多用户共享的目录比使用标准权限设置时具有更多隐私的原因。
 
-setuid、setgid 和 sticky 位的值分别为 4000、2000 和 1000，并使用 chmod 命令设置。要使用它们，只需将
+`setuid`、`setgid` 和 sticky 位的值分别为 `4000`、`2000` 和 `1000`，并使用 `chmod` 命令设置。要使用它们，只需将
 
 搜索本书：
 
 上一页 目录 下一页
 
-文件模式添加到您想要的值（或组合）中。要使用符号模式授予或拒绝 setuid/setgid 或 sticky 权限，请使用 s 表示 setuid 和 setgid，使用 t 表示 sticky。
+文件模式添加到您想要的值（或组合）中。要使用符号模式授予或拒绝 `setuid`/`setgid` 或 sticky 权限，请使用 `s` 表示 `setuid` 和 `setgid`，使用 `t` 表示 sticky。
 
-例如，如果目录的模式为 777（意味着所有用户都有 RWX 权限），您可以通过将其模式更改为 1777 来设置 sticky 位。要设置 setgid，您将把同一目录的模式更改为 2777。使用符号，设置文件的 suid 位，您将使用 "u+s"。要设置 setgid 位，请使用 "g+s"。要设置 sticky 位，请使用 "a+t。"
+例如，如果目录的模式为 `777`（意味着所有用户都有 RWX 权限），您可以通过将其模式更改为 `1777` 来设置 sticky 位。要设置 `setgid`，您将把同一目录的模式更改为 `2777`。使用符号，设置文件的 suid 位，您将使用 `"u+s"`。要设置 `setgid` 位，请使用 `"g+s"`。要设置 sticky 位，请使用 `"a+t"`。
 
 ## 默认文件模式：umask
 
 所有文件都是根据文件类型（普通文件或目录）以默认模式创建的。如果您可以以某种方式定义创建文件时想要的设置，那不是很酷吗？好吧，您可以！
 
-此过程涉及使用 umask 命令。您提供给 umask 命令的数字与模式的数字类似，只是它们的位已被反转。这意味着它们的工作方式并不那么直接。不要问我为什么没有更不奇怪的方式设置这些位；这就是它的方式。
+此过程涉及使用 `umask` 命令。您提供给 `umask` 命令的数字与模式的数字类似，只是它们的位已被反转。这意味着它们的工作方式并不那么直接。不要问我为什么没有更不奇怪的方式设置这些位；这就是它的方式。
 
-要查看当前的 umask，请在 shell 中输入 umask：
+要查看当前的 `umask`，请在 shell 中输入 `umask`：
 
 ```
 [alberto@digital alberto]$ umask
 022
 ```
 
-为了方便您，我提供了一个包含合理 umask 值的表格，您可以设置（见表 16.3）。如果表中没有您需要的数值，您可以使用 chmod 命令即时设置这些权限。（当 umask 命令需要太多思考时，我就是这么做的。）
+
+
+为了方便您，我提供了一个包含合理 `umask` 值的表格，您可以设置（见表 16.3）。如果表中没有您需要的数值，您可以使用 `chmod` 命令即时设置这些权限。（当 `umask` 命令需要太多思考时，我就是这么做的。）
 
 ### 表 16.3 常见 umask 值
 
@@ -4728,34 +4794,38 @@ setuid、setgid 和 sticky 位的值分别为 4000、2000 和 1000，并使用 c
 | 037 | rwx | r-x | --- |
 | 077 | rwx | --- | --- |
 
-现在您只需输入 umask 命令，后跟您想要设置的值。从那时起，您在当前会话期间创建的所有文件都将具有这些属性。
+现在您只需输入 `umask` 命令，后跟您想要设置的值。从那时起，您在当前会话期间创建的所有文件都将具有这些属性。
 
-私有组（见“组所有权和用户私有组”）。如果您的帐户有 UPG，默认 umask 为 002；否则为 022。
+私有组（见“组所有权和用户私有组”）。如果您的帐户有 `UPG`，默认 `umask` 为 `002`；否则为 `022`。
 
 ## 组所有权和用户私有组
 
 有时您会想与不同用户在项目上协作。这种情况可能意味着您希望编辑他人创建的文件，他们也希望编辑您创建的文件。为了在保护工作不被其他用户访问的同时使这种协作工作，您需要使用组。
 
-通常，为项目创建一个组，并将用户添加到该组。用于组协作的文件将放在系统中的“中性”目录中。该目录将允许组成员读取、写入和执行特权。为了确保在目录中创建的文件属于该组，将在目录上设置“Setuid、Setgid 和 Sticky 位”一节中提到的 setgid 位。（创建组在第 18 章“用户、组和密码”中讨论。）
+通常，为项目创建一个组，并将用户添加到该组。用于组协作的文件将放在系统中的“中性”目录中。该目录将允许组成员读取、写入和执行特权。为了确保在目录中创建的文件属于该组，将在目录上设置“Setuid、Setgid 和 Sticky 位”一节中提到的 `setgid` 位。（创建组在第 18 章“用户、组和密码”中讨论。）
 
-这种方法唯一的问题是文件的权限将根据用户的 umask 设置，并且反过来取决于用户是否具有用户私有组（UPG）。
+这种方法唯一的问题是文件的权限将根据用户的 `umask` 设置，并且反过来取决于用户是否具有用户私有组（`UPG`）。
 
-当使用 UPG 时，而不是用户属于通用组“users”，Linux 会在帐户添加时为用户创建一个 UPG。用户是（并且应该是）其自己组的唯一成员。这种排他性允许用户使用 002 的 umask，而不会损害任何个人文件的安全性。默认情况下，umask 为 002 允许文件所有者和与文件关联的组完全控制文件。在 UPG 的情况下，与文件关联的组也是所有者，因此是安全的。
+当使用 `UPG` 时，而不是用户属于通用组 `users`，Linux 会在帐户添加时为用户创建一个 `UPG`。用户是（并且应该是）其自己组的唯一成员。这种排他性允许用户使用 `002` 的 `umask`，而不会损害任何个人文件的安全性。默认情况下，`umask` 为 `002` 允许文件所有者和与文件关联的组完全控制文件。在 `UPG` 的情况下，与文件关联的组也是所有者，因此是安全的。
 
-如果未使用 UPG 机制，组成员将不得不系统地使用创建项目文件时使用的 umask。鉴于人性，结果是一系列文件只能由所有者编辑，要求所有者对文件执行 chmod 以允许其他组成员修改文件。UPG 机制为此问题提供了解决方案——因此它非常酷。
+如果未使用 `UPG` 机制，组成员将不得不系统地使用创建项目文件时使用的 `umask`。鉴于人性，结果是一系列文件只能由所有者编辑，要求所有者对文件执行 `chmod` 以允许其他组成员修改文件。`UPG` 机制为此问题提供了解决方案——因此它非常酷。
 
 要访问内容，请点击章节和节标题。
 
 ## Linux 完全傻瓜指南
 
 （出版社：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 搜索本书：
 
 ## 第 17 章
+
 命令工具箱：有用的 Shell 命令和快捷方式
 
 ## 本章内容
@@ -4763,9 +4833,9 @@ ISBN：078971826x
 - 用户实用程序
 - 查找文件
 - 文本和文件实用程序
-- 将文件拆分为较小文件：split
-- 通过网络访问计算机：telnet
-- 在控制台上工作：setfont
+- 将文件拆分为较小文件：`split`
+- 通过网络访问计算机：`telnet`
+- 在控制台上工作：`setfont`
 - UNIX 打印入门
 - UNIX 文本处理
 
@@ -4775,11 +4845,9 @@ ISBN：078971826x
 
 在您的工作过程中，有时您会想要更改密码、更改 shell、查找文件、搜索文件等等。以下是一些可以帮助您的命令。
 
-## 更改密码：passwd
+### 更改密码：`passwd`
 
-使用 passwd 命令更改您的密码。由于该命令是交互式的，它会要求您输入当前密码（以确保其他用户在您离开计算机时不会更改您的密码），然后要求您输入新密码。成功确认密码后，系统会接受它。请注意，出于避免被附近的人窥视的原因，密码永远不会回显到屏幕上，如以下代码所示：
-
-
+使用 `passwd` 命令更改您的密码。由于该命令是交互式的，它会要求您输入当前密码（以确保其他用户在您离开计算机时不会更改您的密码），然后要求您输入新密码。成功确认密码后，系统会接受它。请注意，出于避免被附近的人窥视的原因，密码永远不会回显到屏幕上，如以下代码所示：
 
 ```
 [alberto@digital alberto]$ passwd
@@ -4790,7 +4858,7 @@ Retype new UNIX password: ********
 passwd: all authentication tokens updated successfully
 ```
 
-超级用户 root 可以使用相同的 passwd 命令更改系统中的任何密码。当超级用户向命令提供用户名作为选项时，他或她可以更改系统中的任何用户的密码。超级用户无需验证用户的密码。作为超级用户更改用户密码看起来像这样：
+超级用户 `root` 可以使用相同的 `passwd` 命令更改系统中的任何密码。当超级用户向命令提供用户名作为选项时，他或她可以更改系统中的任何用户的密码。超级用户无需验证用户的密码。作为超级用户更改用户密码看起来像这样：
 
 ```
 [root@digital /root]# passwd alberto
@@ -4799,9 +4867,9 @@ Retype new UNIX password: ********
 passwd: all authentication tokens updated successfully
 ```
 
-## 更改你的 Shell：chsh
+### 更改你的 Shell：`chsh`
 
-如果你不喜欢你的 shell，可以使用 chsh 命令来更改它。只有 /etc/shells 中列出的 shell 才可接受使用。它可以交互式使用，如下所示：
+如果你不喜欢你的 shell，可以使用 `chsh` 命令来更改它。只有 `/etc/shells` 中列出的 shell 才可接受使用。它可以交互式使用，如下所示：
 
 ```
 alberto@digital alberto]$ more /etc/shells
@@ -4817,11 +4885,11 @@ New shell [/bin/tcsh]: /bin/bash
 Shell changed.
 ```
 
-如果喜欢的 shell 未列出，请在 /etc/shells 文件中添加一个条目，然后你就可以设置它了。
+如果喜欢的 shell 未列出，请在 `/etc/shells` 文件中添加一个条目，然后你就可以设置它了。
 
-## 更改个人信息：chfn
+### 更改个人信息：`chfn`
 
-chfn（change finger name）命令更改有关你的附加信息，例如你的全名、办公室地址以及办公室和家庭电话号码。此信息可使用 finger 命令访问（该命令在大多数系统中通常被禁用，因为它存在某些安全风险）。一些程序使用它来确定你的全名和其他信息。chfn 命令与 passwd 命令类似，是交互式的：
+`chfn`（change finger name）命令更改有关你的附加信息，例如你的全名、办公室地址以及办公室和家庭电话号码。此信息可使用 `finger` 命令访问（该命令在大多数系统中通常被禁用，因为它存在某些安全风险）。一些程序使用它来确定你的全名和其他信息。`chfn` 命令与 `passwd` 命令类似，是交互式的：
 
 ```
 [alberto@digital alberto]$ chfn
@@ -4835,9 +4903,9 @@ Home Phone []: not listed
 Finger information changed.
 ```
 
-## 系统上有哪些人：who 和 w
+### 系统上有哪些人：`who` 和 `w`
 
-who 和 w 命令可用于查看谁登录到系统。w 会告诉你谁登录上了以及他们在做什么：
+`who` 和 `w` 命令可用于查看谁登录到系统。`w` 会告诉你谁登录上了以及他们在做什么：
 
 ```
 [alberto@digital /etc]$ w
@@ -4847,7 +4915,7 @@ alberto tty1 11:51am 5:25m 33.95s 0.13s xinit /etc/X11/
 alberto ttypo 192.168.0.10 5:07pm 1.00s 0.50s 0.08s w
 ```
 
-who 命令只是告诉你谁登录到系统：
+`who` 命令只是告诉你谁登录到系统：
 
 ```
 [alberto@digital /etc]$ who
@@ -4855,57 +4923,65 @@ alberto tty1 Sep 20 11:51
 alberto ttypo Sep 20 17:07 (192.168.0.10)
 ```
 
-这两个命令都指出了通过远程终端登录的用户。w 命令中的 FROM 列（上一节中的第一个示例）列出了远程用户的 IP 地址。who 命令也在括号之间显示远程用户的地址。
+这两个命令都指出了通过远程终端登录的用户。`w` 命令中的 `FROM` 列（上一节中的第一个示例）列出了远程用户的 IP 地址。`who` 命令也在括号之间显示远程用户的地址。
 
 上一页 目录 下一页
 
 ## 完全傻瓜 Linux 使用指南
 
 （出版社：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 搜索本书：
 
 上一页 目录 下一页
 
-## 查看和设置日期和时间：date
+## 查看和设置日期和时间：`date`
 
-date 命令允许你读取当前日期和时间，以及设置系统的时钟（如果你以 root 身份运行）。它提供了大量选项，允许你使用多种格式来表示日期和时间。
+`date` 命令允许你读取当前日期和时间，以及设置系统的时钟（如果你以 `root` 身份运行）。它提供了大量选项，允许你使用多种格式来表示日期和时间。
 
-默认情况下，如果你输入 date 命令，它会打印当前日期和时间。要格式化日期，请提供 + 参数，后跟一个格式化字符串。格式化字符串的各种选项（见表 17.1）前面都有一个百分号（%）符号。
+默认情况下，如果你输入 `date` 命令，它会打印当前日期和时间。要格式化日期，请提供 `+` 参数，后跟一个格式化字符串。格式化字符串的各种选项（见表 17.1）前面都有一个百分号（`%`）符号。
 
 ### 表 17.1 日期选项
 
 | Option | Description |
 |---|---|
-| %H | Print hour in 24-hour format with leading zeros (00..23) |
-| %I | Print hour in 12-hour format with leading zeros (01..12) |
-| %k | Print hour in 24-hour format (0..23) |
-| %l | Print hour in 12-hour format (1..12) |
-| %M | Print minutes (00..59) |
-| %p | Print AM or PM |
-| %r | Print time in 12-hour format with AM/PM (hh:mm:ss AM) |
-| %s | Print the number of seconds since 1/1/70 |
-| %S | Print second (00..61) |
-| %T | Print time in 24-hour format (hh:mm:ss) |
-| %X | Print time in locale's time representation (%H:%M:%S) |
-| %Z | Print time zone (e.g., CST) |
-| %a | Print locale's abbreviated weekday name (Sun) |
-| %A | Print locale's full weekday name, variable length (Sunday) |
-| %b | Print locale's abbreviated month name (Jan) |
-| %B | Print locale's full month name (January) |
-| %d | Print day of month (01..31) |
-| %D | Print date as mm/dd/yy |
-| %j | Print the number of the day in the year (001..366) |
-| %m | Print the month (01..12) |
-| %U | Print week number of year (00..53) |
-| %w | Print day of week (0..6), with 0 corresponding to Sunday |
-| %W | Print week number of year with Monday as first day of week (00..53) |
-| %x | Print locale's date representation (mm/dd/yy) |
-| %y | Print last two digits of year (00..99) |
-| %Y | Print the year using 4 digits (1970...) |
+
+
+
+# 日期格式
+
+| `%H` | Print hour in 24-hour format with leading zeros (00..23) |
+| `%I` | Print hour in 12-hour format with leading zeros (01..12) |
+| `%k` | Print hour in 24-hour format (0..23) |
+| `%l` | Print hour in 12-hour format (1..12) |
+| `%M` | Print minutes (00..59) |
+| `%p` | Print AM or PM |
+| `%r` | Print time in 12-hour format with AM/PM (hh:mm:ss AM) |
+| `%s` | Print the number of seconds since 1/1/70 |
+| `%S` | Print second (00..61) |
+| `%T` | Print time in 24-hour format (hh:mm:ss) |
+| `%X` | Print time in locale's time representation (`%H:%M:%S`) |
+| `%Z` | Print time zone (e.g., CST) |
+| `%a` | Print locale's abbreviated weekday name (Sun) |
+| `%A` | Print locale's full weekday name, variable length (Sunday) |
+| `%b` | Print locale's abbreviated month name (Jan) |
+| `%B` | Print locale's full month name (January) |
+| `%d` | Print day of month (01..31) |
+| `%D` | Print date as mm/dd/yy |
+| `%j` | Print the number of the day in the year (001..366) |
+| `%m` | Print the month (01..12) |
+| `%U` | Print week number of year (00..53) |
+| `%w` | Print day of week (0..6), with 0 corresponding to Sunday |
+| `%W` | Print week number of year with Monday as first day of week (00..53) |
+| `%x` | Print locale's date representation (mm/dd/yy) |
+| `%y` | Print last two digits of year (00..99) |
+| `%Y` | Print the year using 4 digits (1970...) |
 
 例如，要以长格式打印日期，你需要输入：
 
@@ -4914,14 +4990,14 @@ date 命令允许你读取当前日期和时间，以及设置系统的时钟（
 Sunday September 20 1998
 ```
 
-请注意，格式字符串 %A %B %d %Y 用引号括起来。 （用引号括住字符串是必要的，这样 shell 就不会认为它接收到四个单独的参数。）当你用引号括住字符串时，你可以在字符串内部添加任何文本作为分隔符。例如，要在日期后添加逗号，你需要输入：
+请注意，格式字符串 `%A %B %d %Y` 用引号括起来。 （用引号括住字符串是必要的，这样 `shell` 就不会认为它接收到四个单独的参数。）当你用引号括住字符串时，你可以在字符串内部添加任何文本作为分隔符。例如，要在日期后添加逗号，你需要输入：
 
 ```
 [alberto@digital alberto]$ date "+%A, %B %d %Y"
 Sunday, September 20 1998
 ```
 
-要以 YYYYMMDD 模式将日期打印为数字，请执行以下操作：
+要以 `YYYYMMDD` 模式将日期打印为数字，请执行以下操作：
 
 ```
 [alberto@digital alberto]$ date +%Y%m%d
@@ -4934,15 +5010,15 @@ Sunday, September 20 1998
 date MMDDhhmmYYYY
 ```
 
-- MM 是月份的两位数（01–12）
-- DD 是日期的两位数（01–31）
-- hh 是 24 小时制下的两位数小时（00 为午夜，23 为晚上 11 点）
-- mm 是两位数分钟（00–59）
-- YYYY 是四位数年份（1998）
+- `MM` 是月份的两位数（01–12）
+- `DD` 是日期的两位数（01–31）
+- `hh` 是 24 小时制下的两位数小时（00 为午夜，23 为晚上 11 点）
+- `mm` 是两位数分钟（00–59）
+- `YYYY` 是四位数年份（1998）
 
-## 获取日历：cal
+## 获取日历：`cal`
 
-cal 命令打印日历。默认情况下，它会打印当前月份的日历：
+`cal` 命令打印日历。默认情况下，它会打印当前月份的日历：
 
 ```
 [alberto@digital alberto]$ cal
@@ -4972,7 +5048,7 @@ November
 December
 ```
 
-请注意，cal 98 和 cal 1998 将打印出非常不同的日历，因为 98 和 1998 是完全不同的年份。
+请注意，`cal 98` 和 `cal 1998` 将打印出非常不同的日历，因为 `98` 和 `1998` 是完全不同的年份。
 
 要显示某一年中的特定月份，请提供两个参数。第一个被视为月份，第二个被视为年份：
 
@@ -4990,8 +5066,11 @@ Su Mo Tu We Th Fr Sa
 ## 完全傻瓜 Linux 使用指南
 
 （出版社：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 要访问内容，请点击章节和节标题。
@@ -5000,23 +5079,24 @@ ISBN：078971826x
 
 ## 查找文件
 
-在第 15 章“Help Please”中，你学习了 whereis 和 which 命令，它们可用于在特定位置查找程序和其他系统相关文件。UNIX 还提供了其他工具，以便你可以使用更离散的标准搜索文件。
+在第 15 章“Help Please”中，你学习了 `whereis` 和 `which` 命令，它们可用于在特定位置查找程序和其他系统相关文件。UNIX 还提供了其他工具，以便你可以使用更离散的标准搜索文件。
 
-在本节中，你将学习如何使用 find 和 locate 命令。
+在本节中，你将学习如何使用 `find` 和 `locate` 命令。
 
-### 按名称查找文件：find
+### 按名称查找文件：`find`
 
-UNIX find 命令是一个难以掌握的命令。它提供了大量选项，可能令许多用户望而生畏。然而，经过一点指导，你就可以学会如何使用 find 来满足你 90% 的需求。find 命令的基本语法是
+UNIX `find` 命令是一个难以掌握的命令。它提供了大量选项，可能令许多用户望而生畏。然而，经过一点指导，你就可以学会如何使用 `find` 来满足你 90% 的需求。`find` 命令的基本语法是
 
 ```
 find paths expression
 ```
 
-find 命令在提供的 paths 中搜索与 expression 匹配的文件。你可以搜索多个路径的文件，因为表达式列表直到 find 找到以破折号（-）开头的参数时才开始。
+`find` 命令在提供的 `paths` 中搜索与 `expression` 匹配的文件。你可以搜索多个路径的文件，因为表达式列表直到 `find` 找到以破折号（`-`）开头的参数时才开始。
 
-最基本的选项是 -name。它告诉 find 这是你正在搜索的文件名。如果使用通配符（*、? 和 []）指定名称，此选项会更强大。（参见第 14 章“Putting the Shell to Work”中的“Regular Expressions”部分。）
+最基本的选项是 `-name`。它告诉 `find` 这是你正在搜索的文件名。如果使用通配符（`*`、`?` 和 `[]`）指定名称，此选项会更强大。（参见第 14 章“Putting the Shell to Work”中的“Regular Expressions”部分。）
 
--print 选项告诉 find 将任何匹配项打印到终端。在 Linux 下这是可选的，但在其他 UNIX 系统中的某些 find 版本需要它，因为默认情况下 find 不会打印任何结果。
+`-print` 选项告诉 `find` 将任何匹配项打印到终端。在 Linux 下这是可选的，但在其他 UNIX 系统中的某些 `find` 版本需要它，因为默认情况下 `find` 不会打印任何结果。
+
 这是一个简单的示例：
 
 ```
@@ -5029,8 +5109,6 @@ find 命令在提供的 paths 中搜索与 expression 匹配的文件。你可�
 /home/alberto/Hello World.txt
 /home/alberto/test/test.txt
 ```
-
-
 
 
 
@@ -5050,9 +5128,9 @@ find: /tmp/XF86Setup514: Permission denied
 /tmp/file.txt
 ```
 
-在这个示例中，我想查找 /home/alberto 或 /tmp 中所有文件名以 .txt 结尾的文件。请注意，我用引号将表达式括起来，以避免 shell glob（解释并展开）星号本身。请注意，在结果中，find 无法搜索我没有权限的目录。
+在这个示例中，我想查找 `/home/alberto` 或 `/tmp` 中所有文件名以 `.txt` 结尾的文件。请注意，我用引号将表达式括起来，以避免 shell glob（解释并展开）星号本身。请注意，在结果中，`find` 无法搜索我没有权限的目录。
 
-尽管正则表达式有助于查找匹配项，但它仍然区分大小写；扩展名为 .TXT 的文件不会被找到。将 -name 选项替换为 -iname 可使搜索不区分大小写，因此以 .txt 和 .TXT 结尾的文件都会被找到：
+尽管正则表达式有助于查找匹配项，但它仍然区分大小写；扩展名为 `.TXT` 的文件不会被找到。将 `-name` 选项替换为 `-iname` 可使搜索不区分大小写，因此以 `.txt` 和 `.TXT` 结尾的文件都会被找到：
 
 ```
 [alberto@digital alberto]$ find /home/alberto /tmp -iname "*.txt" -print
@@ -5070,7 +5148,7 @@ find: /tmp/XF86Setup514: Permission denied
 ...
 ```
 
-find 命令提供了多种选项，包括按修改日期和访问日期搜索文件的功能。此外，find 还能够使用找到的文件作为命令的参数来执行命令。这是通过 -exec 选项完成的。以下是一个示例：
+`find` 命令提供了多种选项，包括按修改日期和访问日期搜索文件的功能。此外，`find` 还能够使用找到的文件作为命令的参数来执行命令。这是通过 `-exec` 选项完成的。以下是一个示例：
 
 ```
 [alberto@digital alberto]$ find /home/alberto -iname "*.txt" -exec wc {} \;
@@ -5090,30 +5168,33 @@ find 命令提供了多种选项，包括按修改日期和访问日期搜索文
       0        0        0 /home/alberto/afile.txt
 ```
 
-请注意，在此示例中，在调用 wc 命令之后，有一对大括号 ({ })。这些大括号会被与搜索匹配的文件名替换——然后它就成为 wc 命令的参数。还请注意，在末尾有一个分号 (;)。它告诉 find -exec 选项已完成。为了避免 shell 将分号解释为命令组，分号后面跟着反斜杠 (\ )。
+请注意，在此示例中，在调用 `wc` 命令之后，有一对大括号 `{}`。这些大括号会被与搜索匹配的文件名替换——然后它就成为 `wc` 命令的参数。还请注意，在末尾有一个分号 `;`。它告诉 `find` `-exec` 选项已完成。为了避免 shell 将分号解释为命令组，分号后面跟着反斜杠 `\`。
 
 Previous Table of Contents Next
 
 ## Complete Idiot's Guide to Linux
 
-(Publisher: Macmillan Computer Publishing)
+Publisher: Macmillan Computer Publishing
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
 
 To access the contents, click the chapter and section titles.
 
 ## Locating Files: locate
 
-正如你所能看出，查找文件需要很长时间。find 命令需要搜索磁盘以查找你指定的文件。如果你是在文件名上进行搜索，有更好的、更快的办法：locate。
+正如你所能看出，查找文件需要很长时间。`find` 命令需要搜索磁盘以查找你指定的文件。如果你是在文件名上进行搜索，有更好的、更快的办法：`locate`。
 
-locate 命令通过预先构建所有已知文件名的数据库来获得其速度。不是扫描磁盘来匹配，而是使用复杂的数据库技术来瞬间找到文件——或者接近瞬间。这一特性的缺点是，如果你要搜索的文件是在数据库更新后创建的，数据库中就不会有它的条目，因此 locate 就无法找到它。通常这不是问题，因为 locate 每天大约在凌晨 5:55 更新其数据库。什么，你的电脑在那个时间没有开机？好吧，你也可以手动运行该命令。
+`locate` 命令通过预先构建所有已知文件名的数据库来获得其速度。不是扫描磁盘来匹配，而是使用复杂的数据库技术来瞬间找到文件——或者接近瞬间。这一特性的缺点是，如果你要搜索的文件是在数据库更新后创建的，数据库中就不会有它的条目，因此 `locate` 就无法找到它。通常这不是问题，因为 `locate` 每天大约在凌晨 5:55 更新其数据库。什么，你的电脑在那个时间没有开机？好吧，你也可以手动运行该命令。
 
-## Building the locate Database: updatedb
+### Building the locate Database: updatedb
 
-要创建 locate 数据库，你必须以 root 身份并发出命令 /usr/bin/updatedb。该程序运行需要一段时间，但完成后，你就可以开始使用了。
+要创建 `locate` 数据库，你必须以 root 身份并发出命令 `/usr/bin/updatedb`。该程序运行需要一段时间，但完成后，你就可以开始使用了。
 
-## Finding a File: locate
+### Finding a File: locate
 
 要搜索文件，只需输入其名称或其部分名称（无通配符），任何与搜索匹配的文件路径都将被打印出来。以下是一个示例：
 
@@ -5132,11 +5213,11 @@ locate 命令通过预先构建所有已知文件名的数据库来获得其速�
 /var/lib/LST/installed/netkit-telnet
 ```
 
-剩下的就是你决定想要哪个文件了！不坏。相同的命令如果使用 find 命令可能需要 10 分钟才能完成。
+剩下的就是你决定想要哪个文件了！不坏。相同的命令如果使用 `find` 命令可能需要 10 分钟才能完成。
 
-## Finding Files that Contain a Word or Pattern: grep
+### Finding Files that Contain a Word or Pattern: grep
 
-而 find 命令根据文件系统属性（文件名、修改时间等）查找匹配项，grep 命令则在文件中搜索模式。例如，如果你想查找包含单词 command 的文件，可以这样用 grep：
+而 `find` 命令根据文件系统属性（文件名、修改时间等）查找匹配项，`grep` 命令则在文件中搜索模式。例如，如果你想查找包含单词 `command` 的文件，可以这样用 `grep`：
 
 ```
 [alberto@digital alberto]$ grep command *.txt
@@ -5146,7 +5227,9 @@ intro2.txt:Through a command line interface
 intro2.txt:using Linux you have to be as comfortable in a command line
 ```
 
-请注意，grep 会打印找到匹配的文本行。如果文件中有多个匹配项，它们都会被打印。一个特殊的选项 -c 会打印该单词在文件中匹配的次数：
+
+
+请注意，`grep` 会打印找到匹配的文本行。如果文件中有多个匹配项，它们都会被打印。一个特殊的选项 `-c` 会打印该单词在文件中匹配的次数：
 
 ```
 [alberto@digital alberto]$ grep command -c *.txt
@@ -5161,7 +5244,7 @@ intro2.txt:2
 kdetools.txt:0
 ```
 
-grep 命令也可以与管道一起使用，以过滤从其他程序获得的输出。例如，要查看系统中来自以 192.168 开头的 IP 的用户列表，你应该输入以下内容：
+`grep` 命令也可以与管道一起使用，以过滤从其他程序获得的输出。例如，要查看系统中来自以 192.168 开头的 IP 的用户列表，你应该输入以下内容：
 
 ```
 [alberto@digital alberto]$ w | grep 192.168
@@ -5169,28 +5252,28 @@ alberto tty p0 192.168.0.10 5:07pm 4:53 1.17s 1.03s -bash
 alberto tty p1 192.168.0.10 5:54pm 0.00s 0.64s 0.09s w
 ```
 
-grep 命令非常强大，你可以将其与正则表达式结合起来进行搜索。有关更多信息，请参阅手册页。
+`grep` 命令非常强大，你可以将其与正则表达式结合起来进行搜索。有关更多信息，请参阅手册页。
 
 ## Text and File Utilities
 
 以下是用于处理文本信息的实用程序。其中许多实用程序可以创造性地用于与文本处理完全不同的目的。
 
-## Counting Lines, Words, and Characters: wc
+## Counting Lines, Words, and Characters: `wc`
 
-词计数 wc 实用程序在许多方面都很有用——它允许你统计一个或多个文件中出现的单词、行数和字符数。其语法很简单：
+词计数 `wc` 实用程序在许多方面都很有用——它允许你统计一个或多个文件中出现的单词、行数和字符数。其语法很简单：
 
 ```
 wc [options] files
 ```
 
-wc 提供的选项有
+`wc` 提供的选项有
 
-- -c 仅打印字节数（字符数）
-- -w 仅打印单词数
+- `-c` 仅打印字节数（字符数）
+- `-w` 仅打印单词数
 
 ### Print only the number of lines
 
-如果你提供多个文件，wc 很乐意为你提供所有文件的汇总报告。如果你不提供选项，它会打印所有信息，行数、单词数和字符数——按此顺序。以下是使用此命令处理 /etc/passwd 和 /etc/group 文件的示例：
+如果你提供多个文件，`wc` 很乐意为你提供所有文件的汇总报告。如果你不提供选项，它会打印所有信息，行数、单词数和字符数——按此顺序。以下是使用此命令处理 `/etc/passwd` 和 `/etc/group` 文件的示例：
 
 ```
 [alberto@digital alberto]$ wc /etc/passwd /etc/group
@@ -5199,30 +5282,23 @@ wc 提供的选项有
       47      54    1116 total
 ```
 
-虽然乍一看你可能认为你不需要这个命令（你可能是对的），但在许多情况下，创造性地使用 wc 命令可以为你提供所需的信息。
-
-Previous Table of Contents Next
-
-
-
-
+虽然乍一看你可能认为你不需要这个命令（你可能是对的），但在许多情况下，创造性地使用 `wc` 命令可以为你提供所需的信息。
 
 ## 完全傻瓜指南 Linux
 
 (Publisher: Macmillan Computer Publishing)
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
 
-To access the contents, click the chapter and section titles.
+## 对文本行进行排序：`sort`
 
-Search this book:
+`sort` 命令允许你根据数值、字母顺序或电话簿顺序对文件中的行进行排序。`sort` 命令使用了“字段”的概念，其中文本行代表各种位（字段）的数据，而文件中的每一行代表一条记录。字段通常由特殊字符分隔，例如冒号、制表符、逗号或文件开发者想到的任何其他字符。
 
-## 对文本行进行排序：sort
-
-sort 命令允许你根据数值、字母顺序或电话簿顺序对文件中的行进行排序。sort 命令使用了“字段”的概念，其中文本行代表各种位（字段）的数据，而文件中的每一行代表一条记录。字段通常由特殊字符分隔，例如冒号、制表符、逗号或文件开发者想到的任何其他字符。
-
-sort 最常用的选项是
+`sort` 最常用的选项是
 
 - `-t` 指定字段分隔符
 - `-n` 指定数值排序
@@ -5230,7 +5306,7 @@ sort 最常用的选项是
 - `-f` 忽略大小写（字母“B”和“b”被视为相等）
 - `-r` 反转结果
 
-如果你想根据用户名对 /etc/password 文件进行排序，可以输入以下命令：
+如果你想根据用户名对 `/etc/password` 文件进行排序，可以输入以下命令：
 
 ```
 [alberto@digital alberto]$ sort /etc/passwd
@@ -5244,7 +5320,7 @@ sync:x:5:0:sync:/sbin:/bin/sync
 uucp:x:10:14:uucp:/var/spool/uucp:
 ```
 
-要根据 UID（用户 ID，用户在第三个字段）对文件进行数值排序，请使用以下命令。请注意，在 /etc/passwd 文件中，字段由冒号分隔：
+要根据 UID（用户 ID，用户在第三个字段）对文件进行数值排序，请使用以下命令。请注意，在 `/etc/passwd` 文件中，字段由冒号分隔：
 
 ```
 [alberto@digital alberto]$ sort -t : -k 3 -n /etc/passwd
@@ -5256,9 +5332,9 @@ adm:x:3:4:adm:/var/adm:
 nobody:x:65534:65534:Nobody::/bin/false
 ```
 
-## 格式化文本：fmt
+## 格式化文本：`fmt`
 
-如果你使用基于控制台的编辑器编写文件，编辑器可能不会将你的文本换行成行。如果你要打印该文件，文本可能不会为你换行。大多数用户喜欢文件行宽约为 75 个字符，因为那是文本终端中可容纳的文本量。你可以使用 fmt 命令对任何文件应用换行。以下是一个示例：
+如果你使用基于控制台的编辑器编写文件，编辑器可能不会将你的文本换行成行。如果你要打印该文件，文本可能不会为你换行。大多数用户喜欢文件行宽约为 75 个字符，因为那是文本终端中可容纳的文本量。你可以使用 `fmt` 命令对任何文件应用换行。以下是一个示例：
 
 ```
 [alberto@digital alberto]$ cat intro.txt
@@ -5283,7 +5359,7 @@ readily available Linux and UNIX reference material.
 ...
 ```
 
-如果查看输出，你会注意到单词在错误的位置被断开了。使用 fmt 命令，我可以轻松地重新格式化此文件，以便更好地打印和在屏幕上阅读：
+如果查看输出，你会注意到单词在错误的位置被断开了。使用 `fmt` 命令，我可以轻松地重新格式化此文件，以便更好地打印和在屏幕上阅读：
 
 ```
 [alberto@digital alberto]$ fmt -w 68 intro.txt
@@ -5294,7 +5370,9 @@ Among other things, this book is about 300 pages (and then some). This book is a
 This book is not intended as a comprehensive guide to Linux - on the contrary, in order to keep the book from being yet another comprehensive reference guide, I’ve been selective about covering the things you are most likely to use early in your Linux hacking career. For more information, check out the voluminous and readily available Linux and UNIX reference material.
 ```
 
-好多了！fmt 命令有许多选项；然而，-w 和 -s 选项是最重要的。-w 选项告诉 fmt 行宽应为多少。如果不提供 -w 选项，fmt 将恢复使用 75 个字符作为行宽。-s 选项告诉 fmt 仅拆分行。如果你有一些较短的示例文本，默认行为是 fmt 先连接行，然后根据其内部规则拆分它们。
+
+
+好多了！`fmt`命令有许多选项；然而，`-w`和`-s`选项是最重要的。`-w`选项告诉`fmt`行宽应为多少。如果不提供`-w`选项，`fmt`将恢复使用75个字符作为行宽。`-s`选项告诉`fmt`仅拆分行。如果你有一些较短的示例文本，默认行为是`fmt`先连接行，然后根据其内部规则拆分它们。
 
 Previous Table of Contents Next
 
@@ -5305,28 +5383,32 @@ Use of this site is subject to certain Terms & Conditions. Copyright © 1996-200
 ## Complete Idiot's Guide to Linux
 
 (Publisher: Macmillan Computer Publishing)
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
 
 Search this book:
 
 Previous Table of Contents Next
 
-## 将文件拆分为较小文件：split
+### 将文件拆分为较小文件：`split`
 
 Check This Out:
+
 Compression is discussed in Chapter 20, "Installing Programs and Applications," in the section "UNIX Compressed Archives: Gzip and Compress."
 
-假设你想将一个文件复制到软盘上，但该文件即使压缩后也远大于单张磁盘的容量。你如何处理这个问题？一种方法是使用 split 命令。split 命令的语法如下：
+假设你想将一个文件复制到软盘上，但该文件即使压缩后也远大于单张磁盘的容量。你如何处理这个问题？一种方法是使用`split`命令。`split`命令的语法如下：
 
 ```
 split [option] size file outfile name
 ```
 
-选项有 -l 用于按行数拆分文本文件，以及 -b 用于按字节数拆分文件。选项之后指定大小。使用字节选项时，可以添加 b 表示字节、k 表示千字节或 m 表示兆字节。File 是你要拆分的文件名，outfile name 是命令将用于命名所有块的基础名称。不同的文件名是通过在文件后附加扩展名生成的。
+选项有`-l`用于按行数拆分文本文件，以及`-b`用于按字节数拆分文件。选项之后指定大小。使用字节选项时，可以添加`b`表示字节、`k`表示千字节或`m`表示兆字节。`File`是你要拆分的文件名，`outfile name`是命令将用于命名所有块的基础名称。不同的文件名是通过在文件后附加扩展名生成的。
 
-要将一个大文件拆分为 1395K 的块，以便每个块都能放入标准软盘：
+要将一个大文件拆分为1395K的块，以便每个块都能放入标准软盘：
 
 ```
 [alberto@digital splitter]$ ls -l
@@ -5343,29 +5425,29 @@ split [option] size file outfile name
  -rw-rw-r-- 1 alberto alberto 201634 Sep 20 18:39 book.zip.ae
 ```
 
-没有 join 命令，因此要将文件连接成一个大文件，使用你已知的命令 cat：
+没有`join`命令，因此要将文件连接成一个大文件，使用你已知的命令`cat`：
 
 ```
 cat book.zip.?? > book.zip
 ```
 
-文件将被串联（复制）到一个大文件中。表达式 ?? 匹配任意两个字符（上例中为 aa 到 ae）。这之所以有效，是因为 shell 按字母顺序排列文件，因此 ab 有保证跟在 aa 之后。
+文件将被串联（复制）到一个大文件中。表达式`??`匹配任意两个字符（上例中为`aa`到`ae`）。这之所以有效，是因为`shell`按字母顺序排列文件，因此`ab`有保证跟在`aa`之后。
 
-## 通过网络访问计算机：telnet
+### 通过网络访问计算机：`telnet`
 
-telnet 命令允许你使用 shell 登录到远程计算机。就实际用途而言，你正在远程计算机的控制台上工作，并且可以像物理上坐在该计算机键盘前一样使用任何命令。telnet 命令非常易于使用：只需输入 telnet 后跟你想要工作的系统的主机名。这将为你提供一个登录提示，与过去几节中使用的提示大致相同。
+`telnet`命令允许你使用`shell`登录到远程计算机。就实际用途而言，你正在远程计算机的控制台上工作，并且可以像物理上坐在该计算机键盘前一样使用任何命令。`telnet`命令非常易于使用：只需输入`telnet`后跟你想要工作的系统的主机名。这将为你提供一个登录提示，与过去几节中使用的提示大致相同。
 
-telnet 会话的一个问题是，有时你的键盘不会按预期工作。要修复此问题，请参阅第 13 章“在 Shell 下进行文本编辑”中关于 stty 命令的边栏讨论。
+`telnet`会话的一个问题是，有时你的键盘不会按预期工作。要修复此问题，请参阅第13章“在Shell下进行文本编辑”中关于`stty`命令的边栏讨论。
 
-要退出 telnet 会话，输入 exit 或在提示符下按 Ctrl+D。
+要退出`telnet`会话，输入`exit`或在提示符下按`Ctrl+D`。
 
-## 在控制台上工作：setfont
+### 在控制台上工作：`setfont`
 
-如果你使用文本界面在 EGA/VGA 控制台上工作，你可能会想知道为什么你只能看到 24 行文本。好吧，有办法修复这个问题：setfont 命令。
+如果你使用文本界面在EGA/VGA控制台上工作，你可能会想知道为什么你只能看到24行文本。好吧，有办法修复这个问题：`setfont`命令。
 
-setfont 命令更改控制台使用的字体大小。更改字体大小也会更改最大行宽和你可以看到的行数；因此，你选择的字体将决定你的可见工作空间。
+`setfont`命令更改控制台使用的字体大小。更改字体大小也会更改最大行宽和你可以看到的行数；因此，你选择的字体将决定你的可见工作空间。
 
-许多字体安装在 /usr/lib/kbd/consolefonts 目录中。字体文件使用类型命名；通常，你希望选择名称以 default 开头的一个（因为字符类型会根据字体而变化）以及一个大小。标准 VGA 字体大小为 16（高 16 像素），因此使用更小的字体会带来巨大差异。字体类型/大小组合也会极大地影响可读性，相同大小的不同字体在屏幕上看起来会非常不同。一些字体文件包含三种大小：8、14 和 16。要指定正确的大小，只需提供一个连字符 (-) 后跟大小（setfont 在需要时会提示你）。如果你的屏幕出现混乱，只需再次输入 setfont 即可返回默认设置。
+许多字体安装在`/usr/lib/kbd/consolefonts`目录中。字体文件使用类型命名；通常，你希望选择名称以`default`开头的一个（因为字符类型会根据字体而变化）以及一个大小。标准VGA字体大小为16（高16像素），因此使用更小的字体会带来巨大差异。字体类型/大小组合也会极大地影响可读性，相同大小的不同字体在屏幕上看起来会非常不同。一些字体文件包含三种大小：8、14和16。要指定正确的大小，只需提供一个连字符(`-`)后跟大小（`setfont`在需要时会提示你）。如果你的屏幕出现混乱，只需再次输入`setfont`即可返回默认设置。
 
 要更改字体，指定字体文件名（你不需要给出完整路径）：
 
@@ -5381,82 +5463,86 @@ Setfont /usr/lib/kbd/consolefonts/alt-8x8
 
 尝试不同类型和大小，直到找到最适合你的可读性。
 
-
-
-
-
 ## 完全傻瓜的 Linux 使用指南
 
 （出版社：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 搜索本书：
 
-## UNIX 打印入门
+### UNIX 打印入门
 
-在这本书中，我有点忽略了告诉你如何打印文件，部分原因是如果你使用的是 StarOffice、WordPerfect 或 Applix 等文字处理器，这些程序已经知道如何打印而无需经过这些麻烦（StarOffice 包含在这本书附带的 CD 上。）
+在这本书中，我有点忽略了告诉你如何打印文件，部分原因是如果你使用的是StarOffice、WordPerfect或Applix等文字处理器，这些程序已经知道如何打印而无需经过这些麻烦（StarOffice包含在这本书附带的CD上。）
 
-如果你想从命令行进行 UNIX 文本处理（与在 GUI 中进行文字处理相对），有几件事你需要知道，这会影响你打印的文档的最终呈现。Linux 和 UNIX 下的打印与 Windows 或 Macintosh 下的打印截然不同。从命令行打印涉及三个步骤：
+如果你想从命令行进行UNIX文本处理（与在GUI中进行文字处理相对），有几件事你需要知道，这会影响你打印的文档的最终呈现。Linux和UNIX下的打印与Windows或Macintosh下的打印截然不同。从命令行打印涉及三个步骤：
 
-- 1. 使用文本编辑器创建文档，并在需要时添加格式命令。这些格式命令或宏将取决于你使用的格式化程序。然而，文本标记（UNIX 人喜欢称之为文本处理）的概念是相同的。
-- 2. 将你的文档通过一个或多个过滤器运行（某些过滤器可能像我之前提到的 fmt 命令一样基础）；最终的过滤器通常会生成一个包含所有必要打印机控制代码以呈现文档的文件。有时，过滤器可以直接将此输出发送到打印机。
-- 3. 使用名为 lpr 的程序将过滤后的文件发送到打印机。
+- 1. 使用文本编辑器创建文档，并在需要时添加格式命令。这些格式命令或宏将取决于你使用的格式化程序。然而，文本标记（UNIX人喜欢称之为文本处理）的概念是相同的。
+- 2. 将你的文档通过一个或多个过滤器运行（某些过滤器可能像我之前提到的`fmt`命令一样基础）；最终的过滤器通常会生成一个包含所有必要打印机控制代码以呈现文档的文件。有时，过滤器可以直接将此输出发送到打印机。
+- 3. 使用名为`lpr`的程序将过滤后的文件发送到打印机。
 
-如果你只需要打印一个纯文本文件，你必须做几件事。你使用的程序将取决于你拥有的打印机类型。通常，打印机分为两类：具有 PostScript 的和不具有 PostScript 的。
+如果你只需要打印一个纯文本文件，你必须做几件事。你使用的程序将取决于你拥有的打印机类型。通常，打印机分为两类：具有PostScript的和不具有PostScript的。
 
-如果你的打印机具有 PostScript 支持，你可能会使用一个名为 enscript 的程序。如果没有，你将使用一个名为 pr 的程序。在表面上，这些程序是等效的——只是 enscript 利用了 PostScript 可用的功能，因此功能更多。这些程序在基本层面上允许你指定页边距、页眉和文本行的长度。
+如果你的打印机具有PostScript支持，你可能会使用一个名为`enscript`的程序。如果没有，你将使用一个名为`pr`的程序。在表面上，这些程序是等效的——只是`enscript`利用了PostScript可用的功能，因此功能更多。这些程序在基本层面上允许你指定页边距、页眉和文本行的长度。
 
 不花哨，但它们提供了生成一个相当朴素外观文档所需的基本格式化功能。
 
-这里有一个例子。如果你想打印一个名为 intro.txt 的文本文件，你会将其发送给 pr：
+这里有一个例子。如果你想打印一个名为`intro.txt`的文本文件，你会将其发送给`pr`：
 
 ```
 pr intro.txt
 ```
 
-将同一文件发送到 PostScript 打印机将是这样做的：
+将同一文件发送到PostScript打印机将是这样做的：
 
 ```
 enscript intro.txt
 ```
 
-pr 和 enscript 都可以将输出发送到打印机，并且默认情况下它们就是这样做的。抛开这一点，这些基本调用几乎不会产生你期望的输出。页边距是什么？行在哪里折叠？你明白了。你需要在 pr 或 enscript 上设置所有这些选项，否则你的文档将使用打印机的默认设置。你的默认值将类似于从纸张边缘起左侧和顶部页边距为 1/2"，行长度约为 72 个字符宽，以及 Courier（打字机）字体——很可能不是你想要的。那你该怎么办？
 
-你需要做的第一件事是阅读 man 手册并弄清楚你想要的 pr 或 enscript 的默认设置。除此之外，你可能还必须使用另一个格式化命令，例如 fmt。当你弄清楚各种设置后，你只需反复使用它们。
 
-我的典型 enscript 会话大致如下：
+`pr` 和 `enscript` 都可以将输出发送到打印机，并且默认情况下它们就是这样做的。抛开这一点，这些基本调用几乎不会产生你期望的输出。页边距是什么？行在哪里折叠？你明白了。你需要在 `pr` 或 `enscript` 上设置所有这些选项，否则你的文档将使用打印机的默认设置。你的默认值将类似于从纸张边缘起左侧和顶部页边距为 1/2"，行长度约为 72 个字符宽，以及 Courier（打字机）字体——很可能不是你想要的。那你该怎么办？
+
+你需要做的第一件事是阅读 `man` 手册并弄清楚你想要的 `pr` 或 `enscript` 的默认设置。除此之外，你可能还必须使用另一个格式化命令，例如 `fmt`。当你弄清楚各种设置后，你只需反复使用它们。
+
+我的典型 `enscript` 会话大致如下：
 
 ```
 [alberto@digital alberto]$ fmt -w 65 intro.txt | enscript --margins=100:100:100:100 -h -B
 [ 1 pages * 1 copy ] sent to printer
 ```
 
-我使用 fmt 创建约 65 个字符宽的行，然后将输出通过管道传递给 enscript。我将页边距选项设置为 100 像素（72 像素 = 1"），并且使用 -h 选项，抑制横幅页的打印（该页说明谁打印了文件并浪费纸张）。-B 选项抑制通常显示文档标题、上次保存时间和页码的页眉行的打印。
+我使用 `fmt` 创建约 65 个字符宽的行，然后将输出通过管道传递给 `enscript`。我将页边距选项设置为 100 像素（72 像素 = 1"），并且使用 `-h` 选项，抑制横幅页的打印（该页说明谁打印了文件并浪费纸张）。`-B` 选项抑制通常显示文档标题、上次保存时间和页码的页眉行的打印。
 
-我也可以使用 pr 产生类似的输出，如下所示：
+我也可以使用 `pr` 产生类似的输出，如下所示：
 
 ```
 fmt -w 65 intro.txt | pr -o 15
 ```
 
--o 选项指定左侧页边距的字符数；15 个字符约为 1.5"。
+`-o` 选项指定左侧页边距的字符数；15 个字符约为 1.5"。
 
 要访问内容，请点击章节和节标题。
 
-## 完全傻瓜的 Linux 使用指南
+# 完全傻瓜的 Linux 使用指南
 
 （出版社：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 搜索本书：
 
 ## UNIX 文本处理
 
-要生成更精美的输出，例如粗体文本、不同字体等，你需要使用 UNIX 的格式化程序之一，例如 groff（传统 troff 格式化程序的 GNU 版本）。如果你查看 man 页的源代码，你会看到你在使用 groff 时使用的格式化代码。（要查看源代码，请对 /usr/man/man1/ 中的任何文档使用 zless。）这是一个你会看到的例子：
+要生成更精美的输出，例如粗体文本、不同字体等，你需要使用 UNIX 的格式化程序之一，例如 `groff`（传统 `troff` 格式化程序的 GNU 版本）。如果你查看 `man` 页的源代码，你会看到你在使用 `groff` 时使用的格式化代码。（要查看源代码，请对 `/usr/man/man1/` 中的任何文档使用 `zless`。）这是一个你会看到的例子：
 
 ```
 .TH man 1 "September 2, 1995"
@@ -5482,52 +5568,53 @@ only looks in that section of the manual.
 You may also specify the order to search the sections for entries
 ```
 
-正如你从此源文本中看到的，groff（troff！）格式化的文件没有任何空行。格式化命令（宏）必须从左边缘开始。宏的名称通常以点（.）或撇号（'）开头。格式化一直持续到另一个宏覆盖它为止。
+正如你从此源文本中看到的，`groff`（`troff`！）格式化的文件没有任何空行。格式化命令（宏）必须从左边缘开始。宏的名称通常以点（`.`）或撇号（`'`）开头。格式化一直持续到另一个宏覆盖它为止。
 
-你使用的宏将取决于你设计的文档类型。前面列表中的宏是为格式化 UNIX 手册页而设计的。例如，Man 定义了诸如 .B 用于粗体和 .I 用于斜体以及更复杂的用于定义标题、描述等的宏。如果你曾经使用文本编辑器编写过 HTML 页面，从 UNIX 命令行格式化文本在概念上并没有那么不同，只是标记标签不同。标记标签会根据你使用的宏包而改变。例如，另一个名为 ms 的包提供了论文的格式化。
+你使用的宏将取决于你设计的文档类型。前面列表中的宏是为格式化 UNIX 手册页而设计的。例如，`Man` 定义了诸如 `.B` 用于粗体和 `.I` 用于斜体以及更复杂的用于定义标题、描述等的宏。如果你曾经使用文本编辑器编写过 HTML 页面，从 UNIX 命令行格式化文本在概念上并没有那么不同，只是标记标签不同。标记标签会根据你使用的宏包而改变。例如，另一个名为 `ms` 的包提供了论文的格式化。
 
-正如你可能已经猜到的，你实际上能做什么取决于你拥有的宏。除了前面提到的 man 宏之外，其他库如 ms、mm 和 me 用于格式化其他类型的文档（请参阅 UNIX 手册第 7 节中的 groff_ms、groff_mm、man 和 me；要进入那里，输入 man 7 keyword）。代码以及它们如何格式化文档因包而异。
+正如你可能已经猜到的，你实际上能做什么取决于你拥有的宏。除了前面提到的 `man` 宏之外，其他库如 `ms`、`mm` 和 `me` 用于格式化其他类型的文档（请参阅 UNIX 手册第 7 节中的 `groff_ms`、`groff_mm`、`man` 和 `me`；要进入那里，输入 `man 7 keyword`）。代码以及它们如何格式化文档因包而异。
 
-当你的文本以这种（有些别扭）的方式格式化时，你可以使用 groff 命令生成文本、PostScript、HTML、LaserJet 打印机和其他格式的输出。然后你将生成的此文件发送给 lpr 命令以打印它。lpr 命令接受你提供的内容并将其排队到打印机。语法如下所示：
+当你的文本以这种（有些别扭）的方式格式化时，你可以使用 `groff` 命令生成文本、PostScript、HTML、LaserJet 打印机和其他格式的输出。然后你将生成的此文件发送给 `lpr` 命令以打印它。`lpr` 命令接受你提供的内容并将其排队到打印机。语法如下所示：
 
 ```
 nroff -Tps -macropackage filename | lpr
 ```
 
-将 macropackage 替换为宏的名称（man 用于手册页，ms、me、mm 等）和 filename 替换为你的文件名。
+将 `macropackage` 替换为宏的名称（`man` 用于手册页，`ms`、`me`、`mm` 等）和 `filename` 替换为你的文件名。
 
-正如你所知，要生成一个简单格式化的文档，你需要知道很多东西。UNIX 文本处理并不止于 groff。其他更复杂的排版系统如 TeX 和 LaTeX 可以生成专业格式的文档。许多印刷的技术出版物都是使用 TeX 和 LaTeX 开发和印刷的。
+正如你所知，要生成一个简单格式化的文档，你需要知道很多东西。UNIX 文本处理并不止于 `groff`。其他更复杂的排版系统如 `TeX` 和 `LaTeX` 可以生成专业格式的文档。许多印刷的技术出版物都是使用 `TeX` 和 `LaTeX` 开发和印刷的。
 
 那么为什么这么复杂？UNIX 命令行打印系统的意图是使用任何可以显示和正确打印到各种设备的文本编辑器生成文件。因此，你可以生成手册页，在纸上打印它们，生成 HTML 页面，并生成 pdf（Adobe Acrobat）文件，所有这些都来自同一个格式化的文件。如果你只是想使用文字处理或桌面出版，请坚持使用 GUI 文字处理器，例如 StarOffice 中包含的文字处理器。当你只需要一份漂亮的纸质文档时，它会为你节省时间。
 
-
-
-
-
 To access the contents, click the chapter and section titles.
 
-## 完全傻瓜Linux指南
+# 完全傻瓜Linux指南
 
 (Publisher: Macmillan Computer Publishing)
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
 
 Search this book:
 
 ## Part 3
-Linux下的基本系统任务
 
-你已经体验过 KDE，并且已经深入使用命令行。接下来还要做什么？与生活中的其他事情一样，在 Linux 中也有那些必须做的事情。别担心，情况并没有听起来那么糟糕——第 3 部分的信息会帮助你。 这些章节会指导你备份你的机器、安装软件、监控系统，你甚至会认识 LISA。还有一章专门为真正喜欢冒险的人介绍如何定制你的 Linux 系统。先给你提个醒，现在就开始吧！
+### Linux下的基本系统任务
+
+你已经体验过 `KDE`，并且已经深入使用命令行。接下来还要做什么？与生活中的其他事情一样，在 Linux 中也有那些必须做的事情。别担心，情况并没有听起来那么糟糕——第 3 部分的信息会帮助你。 这些章节会指导你备份你的机器、安装软件、监控系统，你甚至会认识 LISA。还有一章专门为真正喜欢冒险的人介绍如何定制你的 Linux 系统。先给你提个醒，现在就开始吧！
 
 ## Chapter 18
-用户、组和密码
 
-## In This Chapter
+### 用户、组和密码
+
+#### In This Chapter
 
 - Adding Users
-- Modifying Users: usermod
-- Deleting Users: userdel
+- Modifying Users: `usermod`
+- Deleting Users: `userdel`
 - Adding, Modifying, and Removing Groups
 - Users and Passwords
 - Linux and Shadow Passwords
@@ -5540,7 +5627,9 @@ Linux下的基本系统任务
 
 添加、删除和管理用户是一项管理任务。幸运的是，如今这项任务已相当自动化，因为工具更灵活，能够处理许多步骤。在早期，你必须手工添加、删除和管理用户，或许借助自己开发的自定义脚本。
 
-尽管工具在某种程度上自动化了流程，了解幕后发生的事情仍然很有用。这些活动的核心是 /etc/passwd、/etc/shadow 和 /etc/group。这些文件实际上是包含用户和组信息的系统数据库。/etc/passwd 文件存储以下内容：
+
+
+尽管工具在某种程度上自动化了流程，了解幕后发生的事情仍然很有用。这些活动的核心是 `/etc/passwd`、`/etc/shadow` 和 `/etc/group`。这些文件实际上是包含用户和组信息的系统数据库。`/etc/passwd` 文件存储以下内容：
 
 - 用户名列表（登录名）
 - 代表登录的 User ID（UID）号码
@@ -5549,30 +5638,30 @@ Linux下的基本系统任务
 - 主目录的位置
 - 用户的默认 shell
 
-组数据库 /etc/group 存储以下内容：
+组数据库 `/etc/group` 存储以下内容：
 
 - 用户组列表
 - 组的密码（组名可以被启用为账户工作，尽管这种类型的公共使用账户通常是非常糟糕的主意）
 - GID 号码
 - 属于该组的所有用户名列表，以逗号分隔
 
-仅 root 可读的 shadow 密码文件 /etc/shadow 存储每个登录的加密密码
+仅 root 可读的 shadow 密码文件 `/etc/shadow` 存储每个登录的加密密码
 
-让我们看看如果你不使用工具需要做什么。当你添加一个用户时，你需要在 /etc/passwd 和 /etc/group 文件中输入适当的信息。你还必须创建用户的主目录，将所有必要的初始化文件复制到新主目录（“rc”文件如 .bashrc、.login、.logout 和 .profile），为用户创建邮箱，如果用户属于某种邮件别名，则添加别名。至关重要的是，你必须保持 UID 和 GID 的唯一且不重复。完成所有这些后，你必须验证为用户创建的目录，如用户主目录，具有适当的权限等等。最终，这是一项繁琐的工作，尤其是当你需要添加不止几个用户时！
+让我们看看如果你不使用工具需要做什么。当你添加一个用户时，你需要在 `/etc/passwd` 和 `/etc/group` 文件中输入适当的信息。你还必须创建用户的主目录，将所有必要的初始化文件复制到新主目录（“rc”文件如 `.bashrc`、`.login`、`.logout` 和 `.profile`），为用户创建邮箱，如果用户属于某种邮件别名，则添加别名。至关重要的是，你必须保持 UID 和 GID 的唯一且不重复。完成所有这些后，你必须验证为用户创建的目录，如用户主目录，具有适当的权限等等。最终，这是一项繁琐的工作，尤其是当你需要添加不止几个用户时！
 
-幸运的是，如今 UNIX 工具管理了大部分繁琐工作。有些工具做得比其他工具更好。你用于管理的工具取决于你的选择以及你需要管理的用户数量。其中一些工具，如 useradd，表现平平，而有些，如 adduser，则非常出色！
+幸运的是，如今 UNIX 工具管理了大部分繁琐工作。有些工具做得比其他工具更好。你用于管理的工具取决于你的选择以及你需要管理的用户数量。其中一些工具，如 `useradd`，表现平平，而有些，如 `adduser`，则非常出色！
 
-useradd 和 adduser 工具安装在 /usr/sbin 目录中。如果你以 root 登录，你的 shell 应该能看到这些程序。管理用户账户是超级用户的特权角色。
+`useradd` 和 `adduser` 工具安装在 `/usr/sbin` 目录中。如果你以 root 登录，你的 shell 应该能看到这些程序。管理用户账户是超级用户的特权角色。
 
-### Adding Users
+# Adding Users
 
-所以你需要添加一个用户。你该怎么做？你的选择是使用 adduser 和 useradd。
+所以你需要添加一个用户。你该怎么做？你的选择是使用 `adduser` 和 `useradd`。
 
-#### adduser
+## adduser
 
-adduser 是一个用于添加用户账户的命令行工具。它很有趣，因为它同时管理 /etc/passwd 和 /etc/group 来实现 User Private Groups（UPGs；参见第 16 章），这是一种策略，即每个用户都被设为仅他自己所属的组的成员。使用 UPGs 简化了用户之间共享文件的过程，仅凭这一点，adduser 就应该是你为系统添加账户时使用的程序。如果你按照指示使用标准安装选项安装了 OpenLinux，adduser 应该已经在你的系统上。如果没有，你可以从 CD 安装它。
+`adduser` 是一个用于添加用户账户的命令行工具。它很有趣，因为它同时管理 `/etc/passwd` 和 `/etc/group` 来实现 User Private Groups（UPGs；参见第 16 章），这是一种策略，即每个用户都被设为仅他自己所属的组的成员。使用 UPGs 简化了用户之间共享文件的过程，仅凭这一点，`adduser` 就应该是你为系统添加账户时使用的程序。如果你按照指示使用标准安装选项安装了 OpenLinux，`adduser` 应该已经在你的系统上。如果没有，你可以从 CD 安装它。
 
-要添加新用户，只需输入 adduser username，像这样：
+要添加新用户，只需输入 `adduser username`，像这样：
 
 ```
 [root@digital alberto]# adduser flower
@@ -5587,29 +5676,29 @@ Creating mailbox: /var/spool/mail/flower...done.
 Don't forget to set the password.
 ```
 
-此命令迅速找到了下一个可用的 UID 和 GID，并在 /etc/passwd 和 /etc/group 中为它们创建了条目。它创建了主目录 /home/flower，从 /etc/skel 复制了所有启动文件，然后创建了邮箱。
+此命令迅速找到了下一个可用的 UID 和 GID，并在 `/etc/passwd` 和 `/etc/group` 中为它们创建了条目。它创建了主目录 `/home/flower`，从 `/etc/skel` 复制了所有启动文件，然后创建了邮箱。
 
-尽管这是工作的主体，但关于用户的可选细节，如用户的真实姓名，并未设置。要设置这些细节，你可以使用 chfn 命令。参见第 17 章“Command Toolbox: Useful Shell Commands and Shortcuts”中“Changing Your Personal Information: chfn”部分。
+尽管这是工作的主体，但关于用户的可选细节，如用户的真实姓名，并未设置。要设置这些细节，你可以使用 `chfn` 命令。参见第 17 章“Command Toolbox: Useful Shell Commands and Shortcuts”中“Changing Your Personal Information: chfn”部分。
 
 一个更重要的未默认设置的细节是账户密码。要为账户设置密码，请参见第 17 章中“Changing Your Password: passwd”部分。
 
 添加用户时需要注意的一点是，用户名应保持在八个字符或更少。较长的用户名无法被系统和/或其他程序正确处理。
 
-#### Useradd
+## Useradd
 
-Useradd 与 adduser 类似；唯一的问题是它不管理组数据库，也不实现 UPG 方案，这可以在长远来看简化你所做的大部分工作。要通过 useradd 添加账户，只需输入以下内容：
+`useradd` 与 `adduser` 类似；唯一的问题是它不管理组数据库，也不实现 UPG 方案，这可以在长远来看简化你所做的大部分工作。要通过 `useradd` 添加账户，只需输入以下内容：
 
 ```
 useradd -m username
 ```
 
--m 选项创建主目录。账户的密码仍需设置，用户的真实姓名和其他用户信息也必须设置。
+`-m` 选项创建主目录。账户的密码仍需设置，用户的真实姓名和其他用户信息也必须设置。
 
-### Modifying Users: usermod
+# Modifying Users: usermod
 
-随着时间的推移，一些用户需要对其账户进行某些更改。使用 usermod 进行更改很容易，因为它提供了各种可设置的选项。
+随着时间的推移，一些用户需要对其账户进行某些更改。使用 `usermod` 进行更改很容易，因为它提供了各种可设置的选项。
 
-#### Moving a Home Directory
+## Moving a Home Directory
 
 要移动主目录，使用以下语法：
 
@@ -5618,11 +5707,11 @@ usermod -d newdirpath -m login
 [root@digital root]# usermod -d /home/newflower -m flower
 ```
 
-此选项修改 /etc/passwd 文件指定的主目录位置，使其指向 -d 选项指定的目录。它还会创建主目录（如果不存在）。-m 选项将旧主目录的内容移动到新目录中。
+此选项修改 `/etc/passwd` 文件指定的主目录位置，使其指向 `-d` 选项指定的目录。它还会创建主目录（如果不存在）。`-m` 选项将旧主目录的内容移动到新目录中。
 
 如果你更改主目录的名称，你可能还想更改用户的登录名。此选项仅更改主目录名称；登录名保持不变。
 
-#### Changing a Login Name
+## Changing a Login Name
 
 要更改登录名，输入以下内容：
 
@@ -5631,12 +5720,9 @@ usermod -l newlogin currentlogin
 [root@digital root]# usermod -l newflower flower
 ```
 
+此选项更改用户的登录名。所有其他信息保持不变。通常，当你更改登录名时，你也希望更改或移动主目录，如前一节所述。在这里显示的示例中，登录名 `flower` 被更改为 `newflower`。
 
-
-
-此选项更改用户的登录名。所有其他信息保持不变。通常，当你更改登录名时，你也希望更改或移动主目录，如前一节所述。在这里显示的示例中，登录名 flower 被更改为 newflower。
-
-## 更改次要组隶属关系
+# 更改次要组隶属关系
 
 要更改次要组隶属关系，输入以下命令：
 
@@ -5650,19 +5736,19 @@ flower : flower users
 flower : flower wheel database
 ```
 
-groups 命令打印用户当前所有组隶属关系的列表。如果未提供登录名，它会假设你想知道当前用户的组隶属关系。
+`groups` 命令打印用户当前所有组隶属关系的列表。如果未提供登录名，它会假设你想知道当前用户的组隶属关系。
 
 要更改所有次要组隶属关系（不是默认组），提供一个用逗号分隔的组名列表，且中间没有空格。如果省略某个组，则该成员资格将被移除。唯一的例外是用户的首要组。
 
-## 删除用户：userdel
+# 删除用户：userdel
 
-要从系统中删除用户，可以使用 userdel 命令。userdel 以用户的登录名作为参数。这将从 /etc/passwd 文件中删除指定的用户。然而，用户的主目录、邮箱、UPG 以及其他组隶属关系仍会被保留。语法如下：
+要从系统中删除用户，可以使用 `userdel` 命令。`userdel` 以用户的登录名作为参数。这将从 `/etc/passwd` 文件中删除指定的用户。然而，用户的主目录、邮箱、UPG 以及其他组隶属关系仍会被保留。语法如下：
 
 ```
 [root@digital root]# userdel newflower
 ```
 
-通常，在删除用户之前，你应该备份相应的账户和邮箱，或在删除账户前请用户自行备份。在采取必要的预防措施后，使用 userdel 删除用户。然后使用 groupdel 删除用户的 UPG 条目。你还必须使用文本编辑器从 /etc/group 文件中的所有其他条目中删除已移除的登录名。
+通常，在删除用户之前，你应该备份相应的账户和邮箱，或在删除账户前请用户自行备份。在采取必要的预防措施后，使用 `userdel` 删除用户。然后使用 `groupdel` 删除用户的 UPG 条目。你还必须使用文本编辑器从 `/etc/group` 文件中的所有其他条目中删除已移除的登录名。
 
 如果你使用 UPG 并且用户的默认组是对应的 UPG，可以通过输入以下命令减少步骤数：
 
@@ -5670,13 +5756,13 @@ groups 命令打印用户当前所有组隶属关系的列表。如果未提供�
 usermod -G username username
 ```
 
-这将移除用户除 UPG（默认组）之外的所有组隶属关系。默认组作为 -G 的参数提供，因为 usermod 需要它。在完成上一步后，你可以输入以下命令：
+这将移除用户除 UPG（默认组）之外的所有组隶属关系。默认组作为 `-G` 的参数提供，因为 `usermod` 需要它。在完成上一步后，你可以输入以下命令：
 
 ```
 userdel username
 ```
 
-这会从 /etc/passwd 文件中删除用户。你可以通过从 /etc/group 中删除 UPG 来完成任务。最后通过删除用户的主目录和他的邮箱来完成移除（确保你先备份了！），如下所示：
+这会从 `/etc/passwd` 文件中删除用户。你可以通过从 `/etc/group` 中删除 UPG 来完成任务。最后通过删除用户的主目录和他的邮箱来完成移除（确保你先备份了！），如下所示：
 
 ```
 rm -R /home/username /usr/spool/mail/username
@@ -5689,32 +5775,37 @@ Previous Table of Contents Next
 ## Complete Idiot's Guide to Linux
 
 (Publisher: Macmillan Computer Publishing)
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
+
+
 
 Search this book:
 
 ## 添加、修改和删除组
 
-管理组与管理账户类似。请注意，这些命令提供的一些功能也可以通过 usermod 等程序实现。你选择的取决于你当时正在做什么。
+管理组与管理账户类似。请注意，这些命令提供的一些功能也可以通过 `usermod` 等程序实现。你选择的取决于你当时正在做什么。
 
 ### Groupadd
 
-在你使用组之前，需要先创建它。创建组很容易；只需使用 groupadd 命令：
+在你使用组之前，需要先创建它。创建组很容易；只需使用 `groupadd` 命令：
 
 ```
 groupadd -g GID groupname
 [root@digital alberto]# groupadd -g 600 weirdgroup
 ```
 
-使用 groupadd 的唯一需要注意的是，你需要提供一个 /etc/group 文件当前未使用的 GID。为了便于编号，你可能希望将自定义组指定为从 GID 30000 或其他小于 65536（最大值）的较大数字开始。
+使用 `groupadd` 的唯一需要注意的是，你需要提供一个 `/etc/group` 文件当前未使用的 `GID`。为了便于编号，你可能希望将自定义组指定为从 `GID` 30000 或其他小于 65536（最大值）的较大数字开始。
 
 ### 管理组成员资格：gpasswd
 
-gpasswd 程序用于管理组文件。添加和删除用户的[content]
+`gpasswd` 程序用于管理组文件。添加和删除用户的
 
-此选项更改用户的登录名。所有其他信息保持不变。通常，当你更改登录名时，你也希望更改或移动主目录，如前一节所述。在这里显示的示例中，登录名 flower 被更改为 newflower。
+此选项更改用户的登录名。所有其他信息保持不变。通常，当你更改登录名时，你也希望更改或移动主目录，如前一节所述。在这里显示的示例中，登录名 `flower` 被更改为 `newflower`。
 
 ## 更改次要组隶属关系
 
@@ -5730,19 +5821,19 @@ flower : flower users
 flower : flower wheel database
 ```
 
-groups 命令打印用户当前所有组隶属关系的列表。如果未提供登录名，它会假设你想知道当前用户的组隶属关系。
+`groups` 命令打印用户当前所有组隶属关系的列表。如果未提供登录名，它会假设你想知道当前用户的组隶属关系。
 
 要更改所有次要组隶属关系（不是默认组），提供一个用逗号分隔的组名列表，且中间没有空格。如果省略某个组，则该成员资格将被移除。唯一的例外是用户的首要组。
 
 ## 删除用户：userdel
 
-要从系统中删除用户，可以使用 userdel 命令。userdel 以用户的登录名作为参数。这将从 /etc/passwd 文件中删除指定的用户。然而，用户的主目录、邮箱、UPG 以及其他组隶属关系仍会被保留。语法如下：
+要从系统中删除用户，可以使用 `userdel` 命令。`userdel` 以用户的登录名作为参数。这将从 `/etc/passwd` 文件中删除指定的用户。然而，用户的主目录、邮箱、UPG 以及其他组隶属关系仍会被保留。语法如下：
 
 ```
 [root@digital root]# userdel newflower
 ```
 
-通常，在删除用户之前，你应该备份相应的账户和邮箱，或在删除账户前请用户自行备份。在采取必要的预防措施后，使用 userdel 删除用户。然后使用 groupdel 删除用户的 UPG 条目。你还必须使用文本编辑器从 /etc/group 文件中的所有其他条目中删除已移除的登录名。
+通常，在删除用户之前，你应该备份相应的账户和邮箱，或在删除账户前请用户自行备份。在采取必要的预防措施后，使用 `userdel` 删除用户。然后使用 `groupdel` 删除用户的 UPG 条目。你还必须使用文本编辑器从 `/etc/group` 文件中的所有其他条目中删除已移除的登录名。
 
 如果你使用 UPG 并且用户的默认组是对应的 UPG，可以通过输入以下命令减少步骤数：
 
@@ -5750,13 +5841,13 @@ groups 命令打印用户当前所有组隶属关系的列表。如果未提供�
 usermod -G username username
 ```
 
-这将移除用户除 UPG（默认组）之外的所有组隶属关系。默认组作为 -G 的参数提供，因为 usermod 需要它。在完成上一步后，你可以输入以下命令：
+这将移除用户除 UPG（默认组）之外的所有组隶属关系。默认组作为 `-G` 的参数提供，因为 `usermod` 需要它。在完成上一步后，你可以输入以下命令：
 
 ```
 userdel username
 ```
 
-这会从 /etc/passwd 文件中删除用户。你可以通过从 /etc/group 中删除 UPG 来完成任务。最后通过删除用户的主目录和他的邮箱来完成移除（确保你先备份了！），如下所示：
+这会从 `/etc/passwd` 文件中删除用户。你可以通过从 `/etc/group` 中删除 UPG 来完成任务。最后通过删除用户的主目录和他的邮箱来完成移除（确保你先备份了！），如下所示：
 
 ```
 rm -R /home/username /usr/spool/mail/username
@@ -5769,30 +5860,33 @@ To access the contents, click the chapter and section titles.
 ## Complete Idiot's Guide to Linux
 
 (Publisher: Macmillan Computer Publishing)
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
 
 Search this book:
 
 ## Adding, Modifying, and Removing Groups
 
-Managing groups is similar to managing accounts. Note that some of the functionality provided by these commands can also be attained through programs like usermod. Your choice of which one to use will depend on what you are doing at that moment.
+Managing groups is similar to managing accounts. Note that some of the functionality provided by these commands can also be attained through programs like `usermod`. Your choice of which one to use will depend on what you are doing at that moment.
 
 ### Groupadd
 
-Before you can work with a group, you need to create it. Creating a group is easy; just use the groupadd command:
+Before you can work with a group, you need to create it. Creating a group is easy; just use the `groupadd` command:
 
 ```
 groupadd -g GID groupname
 [root@digital alberto]# groupadd -g 600 weirdgroup
 ```
 
-The one catch with groupadd is that you need to supply a GID that your /etc/group file is not currently using. To make numbering easy on you, you might want to designate custom groups to start with a GID of 30000 or some other large number less than 65536 (the maximum number).
+The one catch with `groupadd` is that you need to supply a GID that your `/etc/group` file is not currently using. To make numbering easy on you, you might want to designate custom groups to start with a GID of 30000 or some other large number less than 65536 (the maximum number).
 
 ### Managing Group Memberships: gpasswd
 
-The gpasswd program is used to manage the group file. The basic functionality for adding and removing users is straightforward. The -a flag is used to add users (note that the group must already exist), like this:
+The `gpasswd` program is used to manage the group file. The basic functionality for adding and removing users is straightforward. The `-a` flag is used to add users (note that the group must already exist), like this:
 
 ```
 gpasswd -a username groupname
@@ -5802,7 +5896,7 @@ gpasswd -a username groupname
 [root@digital alberto]# gpasswd -a flower users
 ```
 
-The -d flag is used to delete users, like this:
+The `-d` flag is used to delete users, like this:
 
 ```
 gpasswd -d username groupname
@@ -5824,9 +5918,12 @@ UNIX (and Linux) security begins with proper password selection. Therefore, it i
 - Mix upper- and lower-case.
 - Add numbers and punctuation marks to make it harder to guess. Your final password should probably be random letters and numbers.
 - Change your password every two months or any time that you think your password might have become compromised.
-- Good passwords should roll out of your fingers and be easy to type. Many people are very adept at telling what you type from the motion of your fingers. If you have to think about it, it is probably not a good password for you.
 
-## Linux and Shadow Passwords
+
+
+Good passwords should roll out of your fingers and be easy to type. Many people are very adept at telling what you type from the motion of your fingers. If you have to think about it, it is probably not a good password for you.
+
+# Linux and Shadow Passwords
 
 If you are managing a computer that is connected to the Internet and that supports several users, you should consider enabling shadow passwords in your system. Shadow passwords are installed by default as a part of the standard installation. To see if shadow passwords are currently installed on your system, try this:
 
@@ -5836,17 +5933,17 @@ $ ls /etc/shadow
 $
 ```
 
-You should have received the same response. If ls responds instead like this, you should install shadow password support immediately:
+You should have received the same response. If `ls` responds instead like this, you should install shadow password support immediately:
 
 ```
 ls: /etc/shadow: No such file or directory
 ```
 
-Shadow passwords protect system passwords by making the file that actually contains passwords (/etc/shadow) readable only by root. The /etc/passwd file will contain stars (*) where the encrypted password was previously found. This is because even though passwords are encrypted in the /etc/passwd file, low-end computers have become very fast and able to decrypt them in a short amount of time. In the late 1980s, it probably would have taken days or weeks to decrypt this information. With today’s technology, however, it can take only a few minutes. By making the password file readable only by root, this establishes yet another security layer around this information.
+Shadow passwords protect system passwords by making the file that actually contains passwords (`/etc/shadow`) readable only by root. The `/etc/passwd` file will contain stars (`*`) where the encrypted password was previously found. This is because even though passwords are encrypted in the `/etc/passwd` file, low-end computers have become very fast and able to decrypt them in a short amount of time. In the late 1980s, it probably would have taken days or weeks to decrypt this information. With today’s technology, however, it can take only a few minutes. By making the password file readable only by root, this establishes yet another security layer around this information.
 
-For more information on shadow passwords and how to enable them, you should take a look at your man documentation for shadow (section 5 of the UNIX manual, man 5 shadow), pwconv, and pwunconv.
+For more information on shadow passwords and how to enable them, you should take a look at your man documentation for `shadow` (section 5 of the UNIX manual, `man 5 shadow`), `pwconv`, and `pwunconv`.
 
-## SPIDER KILLER
+# SPIDER KILLER
 
 ## spider catcher
 
@@ -5854,11 +5951,14 @@ HOME ACCOUNT INFO SUBSCRIBE LOGIN SEARCH MY ITKNOWLEDGE FAQ SITEMAP CONTACT US
 
 To access the contents, click the chapter and section titles.
 
-## Complete Idiot's Guide to Linux
+# Complete Idiot's Guide to Linux
 
-(Publisher: Macmillan Computer Publishing)
+Publisher: Macmillan Computer Publishing
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
 
 Bookmark it
@@ -5868,23 +5968,23 @@ Search this book:
 Previous Table of Contents Next
 
 ## Chapter 19
+
 ### Backups: Safeguarding Your Work
 
-## In This Chapter
+#### In This Chapter
 
 - Media Are Just Devices
 - What to Back Up
 - Simple Backups
-- Tape Archive: tar
+- Tape Archive: `tar`
 - A Backup Strategy
 - Graphical Backup Programs
 
 Without a doubt the most important maintenance task that you can perform on any computer is a backup. Backups can be tedious tasks, but it’s usually when you have neglected to do it that you most need it! Having a backup for your data can mean the difference between an inconvenience and a catastrophe. Without a backup, you’ll have a déjà vu experience recreating the work you lose. As you might already know, that is no fun. Restoring your system from a backup can be an inconvenience, and maybe a few hours of work will be lost, but it is much different than losing work you’ve created throughout past weeks, months, or even years!
 
-A backup might be required even for simple user errors such as deleting important files. Unlike Windows or other operating systems, under UNIX/Linux there’s no “undelete” program, Norton Undelete, or any other tool to restore deleted files. If the file is deleted, it is gone. The reason these
+A backup might be required even for simple user errors such as deleting important files. Unlike Windows or other operating systems, under UNIX/Linux there’s no “undelete” program, Norton Undelete, or any other tool to restore deleted files. If the file is deleted, it is gone. The reason these utilities don’t exist for UNIX/Linux is the way that disk space is allocated: When you delete a file and release its storage space, this space will probably be written over next. So even if such tools existed, it is likely that they would be useless. Your only guarantee of getting a file back is to have a backup.
 
 
-utilities don’t exist for UNIX/Linux is the way that disk space is allocated: When you delete a file and release its storage space, this space will probably be written over next. So even if such tools existed, it is likely that they would be useless. Your only guarantee of getting a file back is to have a backup.
 
 Although backing up is not difficult, it can be tedious and time-consuming. However, you should consider it an essential task and time investment. To put it in perspective, some backup is better than none at all. How often you should do it will depend on many issues. The answer is that it depends. A server that constantly has new information on it needs to be backed up more often than a standalone user workstation that rarely changes. If your system acts as a file server on which users or other programs store data, all bets are off. You don’t have the luxury of determining what is a good interval; you should back it up daily.
 
@@ -5896,15 +5996,18 @@ To see a list of compatible tape drives, see Appendix B, “OpenLinux Compatibil
 
 ## Media Are Just Devices
 
-The programs you can use for backing up under UNIX/Linux have been around for a long time and are very stable. None of these programs rely on a particular piece of hardware to perform their function and can all work equally well outputting their data to a floppy, a tape, any kind of disk, or a file. The file used for a backup is often just the device (/dev) file where you point your backup to go.
+The programs you can use for backing up under UNIX/Linux have been around for a long time and are very stable. None of these programs rely on a particular piece of hardware to perform their function and can all work equally well outputting their data to a floppy, a tape, any kind of disk, or a file. The file used for a backup is often just the device (`/dev`) file where you point your backup to go.
 
 How you handle your backup strategy is really a matter of personal preference. If you establish policies, such as describing what you back up, it becomes easier to do many system administration tasks. Also, it is important to have the right hardware for making backups. By “right hardware” I mean that the disks you back up must fit onto a convenient backup medium; otherwise, you’ll have more tapes or disks than you’ll know what to do with. If you can afford it, buy a tape drive. This medium is inexpensive and can hold a lot of data. Other backup solutions might also work on your network, depending on how much data you need to back up.
 
 ## Complete Idiot's Guide to Linux
 
 Publisher: Macmillan Computer Publishing
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
 
 ## Backup Media
@@ -5931,6 +6034,8 @@ These media are described in the following sections.
 Floppy disks are the most convenient backup medium available because your system likely has a built-in floppy disk drive. The standard capacity is 1.44MB. Some 2.88MB drives made it into the market a few years back, but they never caught on. The drawback of floppy disks is that they are slow, fairly expensive (about 30–60 cents per disk), and not very useful for backing up anything that requires more than a couple of disks. The one advantage is that most computers are equipped with one.
 
 ### Floptical Disks
+
+
 
 These higher-capacity disks take advantage of optical tracking technology to improve head positioning and therefore maximize the amount of data that can be packed onto the surface of a disk. Floptical drives can read standard 1.44MB and 720KB floppy disks. Density of information can be anywhere from a few megabytes to 200MB per disk.
 
@@ -5960,17 +6065,16 @@ Sometimes tapes created on one vendor’s drive are not readable by another vend
 
 Travan tapes are similar in size to minicartridge QIC tapes but store 120–8000MB per tape depending on the type of tape drive mechanism used. Travan tapes are compatible with the minicartridge QIC tape formats, making them attractive if you have legacy minicartridge QIC tapes. Its price, capacity, and performance make this system a very attractive option.
 
-
-
-
-
 To access the contents, click the chapter and section titles.
 
 ## 完全傻瓜的 Linux 使用指南
 
 (Publisher: Macmillan Computer Publishing)
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
 
 Search this book:
@@ -5980,6 +6084,8 @@ Search this book:
 新技术和价格下降使得 CD-R 成为多媒体爱好者的热门选择。CD-R 使用的技术与普通 CD 相似，但不是“压制”而成，而是使用类似于 MO 磁盘的过程进行刻录。用 CD-R 创建的 CD 不像压制 CD 那样坚固，但如果妥善保管磁盘，它们可以使用很长时间。这些磁盘与任何具有 CD-ROM 的桌面系统兼容，这有助于使其成为一种流行的写入一次读取多次 (WORM) 格式。当前容量约为 600MB。记录速度较慢——通常为 2–8X 速度，而大多数 CD-ROM 的读取速度可达 32X。正在研发中的新型 CD-ROM 格式将提供 17GB 的存储空间，使其成为备份和归档任务的非常有趣的解决方案。
 
 ## 可重写 CD-ROM
+
+
 
 CD-R 的流行为一种更新的介质铺平了道路：CD-RW。基于 CD-R 的相同技术，CD-RW 是一种可以重复使用的介质，很像软盘。CD-RW 使用的介质材料和驱动器与标准 CD-R 不同，但过程基本上是相同的概念。
 
@@ -5993,7 +6099,7 @@ Jaz 驱动器是 Zip 驱动器的更高性能、更高容量版本。Jaz 驱动�
 
 ## 九轨磁带
 
-这是一种旧的磁带格式，以 800、1600 或 6250BPI（每英寸位数）密度写入。今天这种格式除在旧大型机上外已不常用。一些程序如 dump，一种备份程序，使用这种格式作为其磁带容量计算的基础。
+这是一种旧的磁带格式，以 800、1600 或 6250BPI（每英寸位数）密度写入。今天这种格式除在旧大型机上外已不常用。一些程序如 `dump`，一种备份程序，使用这种格式作为其磁带容量计算的基础。
 
 ## 4mm 数字音频磁带
 
@@ -6020,23 +6126,23 @@ DAT，可在 60 米磁带上存储 1.3GB 的信息（90m 为 1.95GB，120m 为 2
 
 ## 简单备份
 
-简单备份是指将文件复制到另一种介质上。没有策略，因此操作简单——前提是您知道要保存什么。您可以使用 cp 命令复制文件，也可以使用 tar 等归档工具，我将在后面描述。
+简单备份是指将文件复制到另一种介质上。没有策略，因此操作简单——前提是您知道要保存什么。您可以使用 `cp` 命令复制文件，也可以使用 `tar` 等归档工具，我将在后面描述。
 
 ## 磁带归档：tar
 
-最简单的备份实用程序是 tar。它的功能相当简单：它创建归档其他文件的归档文件。在 UNIX 中，分发程序通常以 tar 文件形式出现。（tar 文件类似于 PC 世界中的 zip 文件。）现代版本的 tar 不仅可以归档，还可以压缩数据，使 tar 文件更小。请注意，在磁带上压缩 tar 文件是不推荐的，因为 tar 然后无法从磁带错误中恢复。
+最简单的备份实用程序是 `tar`。它的功能相当简单：它创建归档其他文件的归档文件。在 UNIX 中，分发程序通常以 `tar` 文件形式出现。（`tar` 文件类似于 PC 世界中的 zip 文件。）现代版本的 `tar` 不仅可以归档，还可以压缩数据，使 `tar` 文件更小。请注意，在磁带上压缩 `tar` 文件是不推荐的，因为 `tar` 然后无法从磁带错误中恢复。
 
-tar 程序有许多选项。我建议您阅读其 man 手册页以了解它提供的功能（请参阅第 15 章“Help Please”，了解访问 man 手册页的信息）。在下一节中，您将学习使用 tar 所需的最少知识。
+`tar` 程序有许多选项。我建议您阅读其 `man` 手册页以了解它提供的功能（请参阅第 15 章“Help Please”，了解访问 `man` 手册页的信息）。在下一节中，您将学习使用 `tar` 所需的最少知识。
 
 ## 创建 tar 文件
 
-tar 命令的格式遵循以下模式：
+`tar` 命令的格式遵循以下模式：
 
 ```
 tar options destination source
 ```
 
-要将我的主目录 /home/alberto 备份到文件 /tmp/bkup.tar，我会输入以下内容：
+要将我的主目录 `/home/alberto` 备份到文件 `/tmp/bkup.tar`，我会输入以下内容：
 
 ```
 tar cvf archiveName pathsToArchive
@@ -6046,17 +6152,17 @@ tar cvf archiveName pathsToArchive
 tar cvf /tmp/bkup.tar /home/alberto
 ```
 
-在 tar 中，参数通常不带破折号给出。选项 (cvf) 的顺序及其后跟随的参数很重要。在我们的例子中，cvf 选项告诉 tar
+在 `tar` 中，参数通常不带破折号给出。选项 (`cvf`) 的顺序及其后跟随的参数很重要。在我们的例子中，`cvf` 选项告诉 `tar`
 
-- 创建一个归档 (c 选项)
-- 详细显示并列出其操作 (v 选项)
-- 将归档放在文件或设备上 (f 选项)
+- 创建一个归档 (`c` 选项)
+- 详细显示并列出其操作 (`v` 选项)
+- 将归档放在文件或设备上 (`f` 选项)
 
-f 选项期望下一个参数为 tar 文件将被创建的文件名或设备。在我们的例子中，它是 /tmp 目录中的一个常规文件，名为 bkup.tar：/tmp/bkup.tar 该文件可以被替换为您要写入文件的备份设备的名称。（我将在本节后面讨论这一点。）
+`f` 选项期望下一个参数为 `tar` 文件将被创建的文件名或设备。在我们的例子中，它是 `/tmp` 目录中的一个常规文件，名为 `bkup.tar`：`/tmp/bkup.tar` 该文件可以被替换为您要写入文件的备份设备的名称。（我将在本节后面讨论这一点。）
 
-f 命令会将我的主目录中的所有文件备份到我称为 bkup.tar 的文件中。关于 tar 的一个重要点是，如果我提供一个要备份的路径，该路径会被保留。因此当我“解包”文件时（我们将在后面“从 tar 归档中提取文件”一节中看到），它会在不存在时创建一个 home/alberto 目录。请注意，起始的正斜杠 (/) 被删除。
+`f` 命令会将我的主目录中的所有文件备份到我称为 `bkup.tar` 的文件中。关于 `tar` 的一个重要点是，如果我提供一个要备份的路径，该路径会被保留。因此当我“解包”文件时（我们将在后面“从 tar 归档中提取文件”一节中看到），它会在不存在时创建一个 `home/alberto` 目录。请注意，起始的正斜杠 (`/`) 被删除。
 
-在文件参数之后指定的所有路径和文件都会被忠实地复制。在我的例子中，我只提供了 /home/alberto，但我同样可以输入：
+在文件参数之后指定的所有路径和文件都会被忠实地复制。在我的例子中，我只提供了 `/home/alberto`，但我同样可以输入：
 
 ```
 tar cvf /tmp/bkup.tar /home/alberto /var/spool/mail/alberto
@@ -6066,63 +6172,64 @@ tar cvf /tmp/bkup.tar /home/alberto /var/spool/mail/alberto
 
 ## 从 tar 归档中提取文件
 
-没有“untar”命令。要提取文件，您使用 tar 命令并提供不同的选项。要提取我在前一节中创建的 tar 文件中的文件，我会输入：
+没有“untar”命令。要提取文件，您使用 `tar` 命令并提供不同的选项。要提取我在前一节中创建的 `tar` 文件中的文件，我会输入：
 
 ```
 tar xvf archive destination_or_name_of_file_to_extract
 tar xvf /tmp/bkup.tar /
 ```
 
-第一个参数包含 tar 命令的选项。在这种情况下，xvt 选项告诉 tar
+第一个参数包含 `tar` 命令的选项。在这种情况下，`xvt` 选项告诉 `tar`
 
-- 提取文件 (x 选项)
-- 详细显示并列出其操作 (v 选项)
-- 从提供的归档文件读取 (f 选项)
+- 提取文件 (`x` 选项)
+- 详细显示并列出其操作 (`v` 选项)
+- 从提供的归档文件读取 (`f` 选项)
 
-第二个参数指定归档的名称 (/tmp/bkup.tar)。
+第二个参数指定归档的名称 (`/tmp/bkup.tar`)。
 
-最后一个参数 (/) 是可选的，指定我希望从归档中提取的文件的放置路径。如果我不提供此选项，归档将在我的 shell 当前所在位置提取。请记住，当我创建文件时，我指定了 /home/alberto。当 tar 创建归档时，它删除了开头的 /，以便归档可以提取到任何目录。出于选择，我将归档提取回 /，这将把所有文件放入 /home/alberto，有效地替换任何同名文件。
+最后一个参数 (`/`) 是可选的，指定我希望从归档中提取的文件的放置路径。如果我不提供此选项，归档将在我的 `shell` 当前所在位置提取。请记住，当我创建文件时，我指定了 `/home/alberto`。当 `tar` 创建归档时，它删除了开头的 `/`，以便归档可以提取到任何目录。出于选择，我将归档提取回 `/`，这将把所有文件放入 `/home/alberto`，有效地替换任何同名文件。
 
-如果您提供的路径既不是绝对路径也不是相对路径，则被视为要提取的归档中的特定文件，tar 将只尝试提取此文件。唯一的注意事项是您需要知道归档中文件的路径。如果我知道我想恢复 /home/alberto/nsmail，我可以输入：
+如果您提供的路径既不是绝对路径也不是相对路径，则被视为要提取的归档中的特定文件，`tar` 将只尝试提取此文件。唯一的注意事项是您需要知道归档中文件的路径。如果我知道我想恢复 `/home/alberto/nsmail`，我可以输入：
 
 ```
 tar xvf bkup.tar home/alberto/nsmail
 ```
 
-Tar 只会提取路径 home/alberto/nsmail，并将其放入当前目录（请记住，tar 默认会删除您提供的任何路径的起始斜杠 [/]）。
-
-
-
-
+`tar` 只会提取路径 `home/alberto/nsmail`，并将其放入当前目录（请记住，`tar` 默认会删除您提供的任何路径的起始斜杠 `[/]`）。
 
 要访问内容，请点击章节和节标题。
 
 ## Linux 完全傻瓜指南
 
 （出版社：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 搜索本书：
 
 ## 提取文件到设备
 
-虽然创建 tar 文件很容易，但这并不是 tar 的用途。更重要的是，你可以直接提取到设备中。设备（通常是磁带驱动器）不会有文件系统，因此无法像访问磁盘那样挂载或访问它。但是，它会像文件一样存储数据。因此，如果你将数据 tar 到磁带或软盘，整个磁带或软盘将被视为一个大型 tar 文件。（可以在磁带上放置多个 tar 文件；我稍后会谈到这一点。）在软盘的情况下，你将无法挂载它，因为它没有可以存储文件的文件系统。（请记住，我们在第 7 章“使用磁盘”中讨论过挂载。）
+虽然创建 `tar` 文件很容易，但这并不是 `tar` 的用途。更重要的是，你可以直接提取到设备中。设备（通常是磁带驱动器）不会有文件系统，因此无法像访问磁盘那样挂载或访问它。但是，它会像文件一样存储数据。因此，如果你将数据 `tar` 到磁带或软盘，整个磁带或软盘将被视为一个大型 `tar` 文件。（可以在磁带上放置多个 `tar` 文件；我稍后会谈到这一点。）在软盘的情况下，你将无法挂载它，因为它没有可以存储文件的文件系统。（请记住，我们在第 7 章“使用磁盘”中讨论过挂载。）
 
 ## 将数据 tar 到设备
 
-将数据 tar 到设备与将数据 tar 到文件相同。唯一的区别是归档的存储位置是代表备份硬件的设备的路径。你想要使用的基本设备是软盘和磁带驱动器。
+将数据 `tar` 到设备与将数据 `tar` 到文件相同。唯一的区别是归档的存储位置是代表备份硬件的设备的路径。你想要使用的基本设备是软盘和磁带驱动器。
 
 ### 软盘设备
 
-要在软盘上创建 tar 文件，你使用 /dev/fd x 设备，其中 x 是你的软盘驱动器的编号。通常，如果你只有一个软盘，这将是 0，或者如果你有两个软盘，则是 0 或 1：
+
+
+要在软盘上创建 tar 文件，你使用`/dev/fd x`设备，其中`x`是你的软盘驱动器的编号。通常，如果你只有一个软盘，这将是`0`，或者如果你有两个软盘，则是`0`或`1`：
 
 ```
 tar cvf /dev/fd0 /etc /home/alberto/nsmail
 ```
 
-此命令会将 /etc 和 /home/alberto/nsmail tar 到软盘驱动器。它应该全部适合备份介质；如果不适合，你会收到错误。我将在本章后面的“跨多个磁盘或磁带”部分向你展示如何跨多个磁盘或磁带。
+此命令会将`/etc`和`/home/alberto/nsmail` tar 到软盘驱动器。它应该全部适合备份介质；如果不适合，你会收到错误。我将在本章后面的“跨多个磁盘或磁带”部分向你展示如何跨多个磁盘或磁带。
 
 ### 磁带设备
 
@@ -6131,12 +6238,13 @@ tar cvf /dev/fd0 /etc /home/alberto/nsmail
 - `st`
 - `rft`
 
-`st` 设备对应 SCSI 磁带驱动器。`rft` 设备对应使用软盘控制器或“软盘-磁带”设备的磁带驱动器。（廉价的 PC 磁带驱动器，例如 QIC 类型驱动器，通常使用此选项。）与其他设备一样，可能不止一个，因此设备通过它们使用的驱动器编号来区分。
+`st`设备对应 SCSI 磁带驱动器。`rft`设备对应使用软盘控制器或“软盘-磁带”设备的磁带驱动器。（廉价的 PC 磁带驱动器，例如 QIC 类型驱动器，通常使用此选项。）与其他设备一样，可能不止一个，因此设备通过它们使用的驱动器编号来区分。
 
 > **技术谈：**
+>
 > 如果你使用的是软盘磁带设备，你可能需要重新构建内核以提供对其的支持。如果你的磁带驱动器似乎不受支持，请查看第 24 章“自定义你的 Linux 内核”以获取如何操作的说明。
 
-因此，SCSI 磁带的标准设备文件为 `/dev/st0` 和 `/dev/st1`。软盘-磁带驱动器的标准设备文件为 `/dev/rft0` 和 `/dev/rft1`。
+因此，SCSI 磁带的标准设备文件为`/dev/st0`和`/dev/st1`。软盘-磁带驱动器的标准设备文件为`/dev/rft0`和`/dev/rft1`。
 
 因此，要备份到我的磁带设备（SCSI 驱动器），我输入以下命令：
 
@@ -6146,11 +6254,11 @@ tar cvf /dev/st0 /etc/alberto/nsmail
 
 这些磁带设备的默认行为是在写入操作完成后倒带磁带。如果你的磁带驱动器能够存储几 GB 的数据，这可能会相当浪费，因为磁带的大部分可能仍然为空。出于这个原因，有不倒带的设备版本，允许你将多个文件放在同一磁带上。
 
-不倒带的磁带设备为 SCSI 设备的 `/dev/nst0` 和 `/dev/nst1`，以及软盘-磁带设备的 `/dev/nrft0` 和 `/dev/nrft1`。当你使用这些设备向磁带写入时，磁带不会被倒带，从而允许你向其写入另一个归档。在每个文件之间，你会向磁带写入标记。你可以通过使用 `mt` 命令将磁带倒带和快进到所需的归档。
+不倒带的磁带设备为 SCSI 设备的`/dev/nst0`和`/dev/nst1`，以及软盘-磁带设备的`/dev/nrft0`和`/dev/nrft1`。当你使用这些设备向磁带写入时，磁带不会被倒带，从而允许你向其写入另一个归档。在每个文件之间，你会向磁带写入标记。你可以通过使用`mt`命令将磁带倒带和快进到所需的归档。
 
 ## mt 命令
 
-`mt` 命令允许你对磁带执行许多操作，包括使用不倒带设备接口按文件（按其包含的归档）倒带和快进磁带。
+`mt`命令允许你对磁带执行许多操作，包括使用不倒带设备接口按文件（按其包含的归档）倒带和快进磁带。
 
 要倒带磁带，使用以下语法：
 
@@ -6164,9 +6272,9 @@ mt /dev/nst0 rewind
 mt /dev/nst0 fsf 2
 ```
 
-使用此命令的一个技巧是意识到 mt 没有当前归档的概念，因此你需要确保你有一份磁带上归档的列表。此外，作为健全性检查，你需要在将磁带向前快进之前发出倒带命令，以确保你是从磁带的开头开始计数。
+使用此命令的一个技巧是意识到`mt`没有当前归档的概念，因此你需要确保你有一份磁带上归档的列表。此外，作为健全性检查，你需要在将磁带向前快进之前发出倒带命令，以确保你是从磁带的开头开始计数。
 
-同样，重要的是要记住磁带驱动器会在不同归档之间写入标记。这是 mt 用于检测不同归档的信息。在你从一个归档中提取数据后，为了处理其他归档，你需要通过发出以下命令将磁带向前移动到下一个归档：
+同样，重要的是要记住磁带驱动器会在不同归档之间写入标记。这是`mt`用于检测不同归档的信息。在你从一个归档中提取数据后，为了处理其他归档，你需要通过发出以下命令将磁带向前移动到下一个归档：
 
 ```
 mt /dev/nst0 fsf 1
@@ -6184,13 +6292,13 @@ tar xvf device path
 
 如果不提供目标位置，所有文件都将提取到当前目录，同时保留其路径组织。如果提供绝对或相对路径，文件将被放置在那里。如果提供的路径既不是绝对也不是相对，则被视为要提取的归档中的文件。
 
-从多归档磁带提取时，请记住使用不倒带接口和 mt 来快进磁带。
+从多归档磁带提取时，请记住使用不倒带接口和`mt`来快进磁带。
 
 ## 跨多个磁盘或磁带
 
-如果要归档的文件不适合单个软盘或磁带，你需要为 tar 指定 M 选项。M 选项告诉设备跨多个磁盘或磁带。每个磁带或磁盘都是一个完整且独立的归档（唯一例外是任何磁盘或磁带上的最后一个文件可能被分割在磁盘或磁带之间）。这意味着你可以像处理自己的归档一样提取和处理每个磁盘或磁带。
+如果要归档的文件不适合单个软盘或磁带，你需要为`tar`指定`M`选项。`M`选项告诉设备跨多个磁盘或磁带。每个磁带或磁盘都是一个完整且独立的归档（唯一例外是任何磁盘或磁带上的最后一个文件可能被分割在磁盘或磁带之间）。这意味着你可以像处理自己的归档一样提取和处理每个磁盘或磁带。
 
-要将我的 nsmail 目录备份到多个软盘，我输入以下命令：
+要将我的`nsmail`目录备份到多个软盘，我输入以下命令：
 
 ```
 tar cMvf /dev/fd0 /home/alberto/nsmail
@@ -6204,13 +6312,13 @@ tar cMvf /dev/fd0 /home/alberto/nsmail
 tar xMvf /dev/fd0
 ```
 
-Tar 会按顺序要求每个卷（在这种情况下为软盘）。确保你拥有全部。
+`Tar`会按顺序要求每个卷（在这种情况下为软盘）。确保你拥有全部。
 
-tar 的一个缺点是它不会跟踪需要备份的文件。为了使用 tar，你需要决定要备份哪些文件并向程序提供这些文件列表。虽然它提供了一些解决此限制的设施，但有更好的程序可用于此任务。如果你想进行增量备份并让程序跟踪需要备份的文件，你需要使用 dump。
+`tar`的一个缺点是它不会跟踪需要备份的文件。为了使用`tar`，你需要决定要备份哪些文件并向程序提供这些文件列表。虽然它提供了一些解决此限制的设施，但有更好的程序可用于此任务。如果你想进行增量备份并让程序跟踪需要备份的文件，你需要使用`dump`。
 
 ## 备份策略
 
-在 UNIX/Linux 下进行增量备份意味着使用 dump 实用程序。此实用程序功能强大。它可以处理跨多个磁带的备份并可以创建增量备份。如果你可以将整个备份放入单个磁带中，你将能够自动化备份。只需启动备份，让它运行即可。因为 dump 实际上会跟踪之前已转储的内容，并且只备份已更改的内容，所以你可以使用一些技巧来仅备份自安装系统以来添加和修改的项目（不包括“未配置”的操作系统）。
+在 UNIX/Linux 下进行增量备份意味着使用`dump`实用程序。此实用程序功能强大。它可以处理跨多个磁带的备份并可以创建增量备份。如果你可以将整个备份放入单个磁带中，你将能够自动化备份。只需启动备份，让它运行即可。因为`dump`实际上会跟踪之前已转储的内容，并且只备份已更改的内容，所以你可以使用一些技巧来仅备份自安装系统以来添加和修改的项目（不包括“未配置”的操作系统）。
 
 我的策略是在明确的时间进行备份：
 
@@ -6218,17 +6326,13 @@ tar 的一个缺点是它不会跟踪需要备份的文件。为了使用 tar，
 - 系统软件安装并配置后
 - 任何时候安装和配置了额外软件
 
-使用此策略，事情的顺序是系统安装后立即备份系统。这是通过一个名为 /dev/null 的特殊设备文件完成的，该文件只是丢弃发送给它的任何数据。因为 dump 会跟踪上次转储的日期，后续备份将只存储在此日期之后修改过的内容。这是一个巧妙的技巧，因为你的备份集不会包含系统的软件发行版。这将为 dump 实用程序设置操作的时间起点。此转储的备份级别应为 0 级；它必须包含新安装系统中的所有内容。
+使用此策略，事情的顺序是系统安装后立即备份系统。这是通过一个名为`/dev/null`的特殊设备文件完成的，该文件只是丢弃发送给它的任何数据。因为`dump`会跟踪上次转储的日期，后续备份将只存储在此日期之后修改过的内容。这是一个巧妙的技巧，因为你的备份集不会包含系统的软件发行版。这将为`dump`实用程序设置操作的时间起点。此转储的备份级别应为`0`级；它必须包含新安装系统中的所有内容。
 
-Dump 使用级别的概念来确定要备份的内容。0 级（零）备份所有内容。1 级备份 0 级转储后修改的所有内容。2 级仅转储自上次较低级别转储以来更改的备份项目，以此类推。
+`Dump`使用级别的概念来确定要备份的内容。`0`级（零）备份所有内容。`1`级备份`0`级转储后修改的所有内容。`2`级仅转储自上次较低级别转储以来更改的备份项目，以此类推。
 
-后续备份应以 8 级或 9 级执行。这将有效地备份自第一次备份以来机器中修改过的所有内容。
+后续备份应以`8`级或`9`级执行。这将有效地备份自第一次备份以来机器中修改过的所有内容。
 
-
-
-
-
-要恢复使用 `dump` 实用程序创建的磁带上存储的文件，请使用本章后面所述的 `restore` 程序，见“`restore` 命令”一节。
+要恢复使用`dump`实用程序创建的磁带上存储的文件，请使用本章后面所述的`restore`程序，见“`restore`命令”一节。
 
 使用本网站须遵守特定条款和条件。版权所有 © 1996-2000 EarthWeb Inc. 保留所有权利。未经 EarthWeb 明确书面许可，不得以任何形式或媒介全部或部分复制。
 
@@ -6237,38 +6341,41 @@ Dump 使用级别的概念来确定要备份的内容。0 级（零）备份所�
 ## Linux 完全傻瓜指南
 
 （出版商：Macmillan Computer Publishing）
+
 作者：Manuel Ricart
+
 ISBN：078971826x
+
 出版日期：12/22/98
 
 搜索本书：
 
 ## dump 命令
 
-`dump` 实用程序默认未安装在您的系统上，但包含在您的 CD 上。在 col/install/rpms 目录中，它应命名为类似 dump-x.i386.rpm，其中 x 将是与程序版本相关的某些数字。要安装程序，请访问 CD 上的 col/install/rpms 目录。作为 root，发出以下命令：
+`dump`实用程序默认未安装在您的系统上，但包含在您的 CD 上。在`col/install/rpms`目录中，它应命名为类似`dump-x.i386.rpm`，其中`x`将是与程序版本相关的某些数字。要安装程序，请访问 CD 上的`col/install/rpms`目录。作为 root，发出以下命令：
 
 ```
 rpm -i dump*.rpm
 ```
 
-`dump` 命令使用以下语法：
+`dump`命令使用以下语法：
 
 ```
 /usr/etc/dump [options[argument ...]
 filesystem]
 ```
 
-`dump` 命令通过为每个备份分配一个级别来跟踪备份的范围。级别范围从 0 到 9。级别 0 复制整个文件系统。后续的 dump 级别仅复制自最近一次具有更低级别编号的 dump 以来已更改的文件。
+`dump`命令通过为每个备份分配一个级别来跟踪备份的范围。级别范围从`0`到`9`。级别`0`复制整个文件系统。后续的`dump`级别仅复制自最近一次具有更低级别编号的`dump`以来已更改的文件。
 
-典型的策略是以级别 0 dump 开始，然后定期进行增量备份。应极其谨慎地执行级别 0 dump；它们应在单用户模式下运行机器，并且在 dump 之前应运行 fsck（文件系统一致性检查器）以验证文件系统是否一致。这很重要，因为如果您不打算用 CD 替代级别 0 备份，您恢复的大多数文件将来自 dump 级别 0 磁带！有关更多信息，请参阅 fsck 和 dump 手册页。
+典型的策略是以级别`0` `dump`开始，然后定期进行增量备份。应极其谨慎地执行级别`0` `dump`；它们应在单用户模式下运行机器，并且在`dump`之前应运行`fsck`（文件系统一致性检查器）以验证文件系统是否一致。这很重要，因为如果您不打算用 CD 替代级别`0`备份，您恢复的大多数文件将来自`dump`级别`0`磁带！有关更多信息，请参阅`fsck`和`dump`手册页。
 
-值得注意的一个缺点是 `dump` 无法备份单个目录或文件；它只能用于备份整个文件系统。要备份单个文件或目录，请使用 tar 或 cpio。有关如何使用这些程序的信息，请参阅您的 Linux 文档。
+值得注意的一个缺点是`dump`无法备份单个目录或文件；它只能用于备份整个文件系统。要备份单个文件或目录，请使用`tar`或`cpio`。有关如何使用这些程序的信息，请参阅您的 Linux 文档。
 
 ### Techno Talk：以单用户模式启动
 
-Linux 可以以单用户模式启动。此设置跳过所有系统配置，并在询问您的 root 密码后启动 root shell。此模式仅应用于特殊维护任务，例如执行级别 0 dump 或其他紧急类型任务。要以单用户模式启动系统，在启动提示符下，键入 Linux 映像的名称（按 tab 查看可用映像列表）后跟单词 single。
+Linux 可以以单用户模式启动。此设置跳过所有系统配置，并在询问您的 root 密码后启动 root shell。此模式仅应用于特殊维护任务，例如执行级别`0` `dump`或其他紧急类型任务。要以单用户模式启动系统，在启动提示符下，键入 Linux 映像的名称（按 tab 查看可用映像列表）后跟单词`single`。
 
-正在运行的系统也可以使用 shutdown 命令“降级”到单用户模式，不带 -r（重启）或 -h（停止）选项，通过在命令提示符下发出以下命令：
+正在运行的系统也可以使用`shutdown`命令“降级”到单用户模式，不带`-r`（重启）或`-h`（停止）选项，通过在命令提示符下发出以下命令：
 
 ```
 shutdown now
@@ -6276,13 +6383,15 @@ shutdown now
 
 片刻后，您将被要求输入 root 密码，然后您将被“丢弃”到单用户模式。
 
-请注意，在一种硬件/软件配置下创建的磁带通常不能移植到其他操作系统或驱动器。在某些环境中，甚至使用旧版本 dump 程序创建的磁带也无法被 restore 程序的新版本读取。因此，在升级时测试您的备份，并保留旧版本的程序。
+
+
+请注意，在一种硬件/软件配置下创建的磁带通常不能移植到其他操作系统或驱动器。在某些环境中，甚至使用旧版本 `dump` 程序创建的磁带也无法被 `restore` 程序的新版本读取。因此，在升级时测试您的备份，并保留旧版本的程序。
 
 ## 磁带容量
 
 `dump` 的一个问题是它不会为您计算磁带可以容纳多少数据。因此，您需要自己计算容量，以便正确使用磁带。
 
-这似乎很容易——但事实并非如此。每种磁带系统都有不同的密度（每英寸磁带可写入的数据量）。磁带长度不同，且 dump 根据九轨磁带以 1600 字节/英寸运行且默认磁带长度为 2300 英尺来计算所有这些设置。听起来很 confusing？不要放弃。
+这似乎很容易——但事实并非如此。每种磁带系统都有不同的密度（每英寸磁带可写入的数据量）。磁带长度不同，且 `dump` 根据九轨磁带以 1600 字节/英寸运行且默认磁带长度为 2300 英尺来计算所有这些设置。听起来很 confusing？不要放弃。
 
 计算您的磁带驱动器容量的基本数学如下：
 
@@ -6292,7 +6401,7 @@ shutdown now
 - 4. 将步骤 3 的计算结果除以步骤 2 中计算的数字。这就是您的磁带密度。
 - 5. 将步骤 3 中的数字除以 32,768。这就是您的磁带能够容纳的 32K 块数。
 - 6. 将步骤 5 计算的数字乘以 21.18。这就是基于 1600 字节/英寸的磁带大小。
-- 7. 将步骤 6 中的数字除以 12 并舍去任何小数部分。这就是您应为 dump 指定的磁带长度。
+- 7. 将步骤 6 中的数字除以 12 并舍去任何小数部分。这就是您应为 `dump` 指定的磁带长度。
 
 以下是一个 90m 1.95GB DDS 磁带的示例：
 
@@ -6304,63 +6413,59 @@ shutdown now
 - 6. 磁带大小（按 1600 字节/英寸）：63,897 × 21.18 = 1,353,338
 - 7. 调整后的磁带长度（英尺）：1,353,338 / 12 = 112,778
 
-哇！在磁带密度可以通过查询设备自动计算的世界里，似乎很傻要做这个。但嘿，这个程序最初是在很久以前完成的，并且鉴于不同类型的磁带设备（SCSI 或其他），开发这项任务也可能具有挑战性！另外，请记住检查您制造商的网站。它可能发布了如何使用其硬件与 dump 的信息。
+哇！在磁带密度可以通过查询设备自动计算的世界里，似乎很傻要做这个。但嘿，这个程序最初是在很久以前完成的，并且鉴于不同类型的磁带设备（SCSI 或其他），开发这项任务也可能具有挑战性！另外，请记住检查您制造商的网站。它可能发布了如何使用其硬件与 `dump` 的信息。
 
 无论如何，请记住写下这个数字并将其贴在驱动器的底部。这样您就不会再次计算它。如果您手边没有计算器，请记住 KDE 有一个应该可以正常工作。
 
 ## dump 示例
 
-以下命令将在由 -f 标志指定的设备上（在本例中为 /dev/nst0）创建级别 0 dump（由 0 表示），针对指定的磁盘 /dev/hda1（请参阅 /etc/fstab 以获取您的磁盘设备名称）：
+以下命令将在由 `-f` 标志指定的设备上（在本例中为 `/dev/nst0`）创建级别 0 `dump`（由 0 表示），针对指定的磁盘 `/dev/hda1`（请参阅 `/etc/fstab` 以获取您的磁盘设备名称）：
 
 ```
 dump -0u -f /dev/nst0 -s 112778 /dev/hda1
 ```
 
-用您磁带设备的适当名称替换 nst0，并用您的根分区使用的设备替换 hda1。此 dump 将包括设备上找到的所有文件。如果您有额外的磁盘，您将必须为每个磁盘再次运行 dump。如果您指定 u 选项并且备份成功完成，dump 将记住此备份的日期、时间和级别。这有效地设置了一个起点，可用于评估下次需要转储哪些文件。
+用您磁带设备的适当名称替换 `nst0`，并用您的根分区使用的设备替换 `hda1`。此 `dump` 将包括设备上找到的所有文件。如果您有额外的磁盘，您将必须为每个磁盘再次运行 `dump`。如果您指定 `u` 选项并且备份成功完成，`dump` 将记住此备份的日期、时间和级别。这有效地设置了一个起点，可用于评估下次需要转储哪些文件。
 
-要创建仅包括自上次较低级别备份以来修改过的文件的增量备份，在本例中为 0，请使用更高级别的 dump：
+要创建仅包括自上次较低级别备份以来修改过的文件的增量备份，在本例中为 0，请使用更高级别的 `dump`：
 
-默认情况下，dump 将其输出写入默认磁带单元；您需要记住指定 -f 选项，后跟您的磁带驱动器的设备。
+默认情况下，`dump` 将其输出写入默认磁带单元；您需要记住指定 `-f` 选项，后跟您的磁带驱动器的设备。
 
-您可以使用 -f 选项将备份重定向到文件：
+您可以使用 `-f` 选项将备份重定向到文件：
 
 ```
 dump -9uf /tmp/backup /dev/hda1
 ```
 
-前面的命令将在 /tmp 目录中创建一个名为 backup 的文件。要将 dump 的输出重定向到 STDOUT（标准输出），请指定破折号 (-) 而不是文件名：
+前面的命令将在 `/tmp` 目录中创建一个名为 `backup` 的文件。要将 `dump` 的输出重定向到 STDOUT（标准输出），请指定破折号 (`-`) 而不是文件名：
 
 ```
 dump -9uf - /dev/hda1 | gzip > /dev/st0
 ```
 
-在前面的示例中，dump 的输出被发送到 STDOUT 并通过管道传输到 gzip（见第 20 章，“安装程序和应用程序”）程序进行压缩。如果您的磁带不提供硬件压缩，使用前面的命令可以有效增加磁带容量。
+在前面的示例中，`dump` 的输出被发送到 STDOUT 并通过管道传输到 `gzip`（见第 20 章，“安装程序和应用程序”）程序进行压缩。如果您的磁带不提供硬件压缩，使用前面的命令可以有效增加磁带容量。
 
-有关 dump 提供的众多选项的完整信息，请阅读您系统的文档。
+有关 `dump` 提供的众多选项的完整信息，请阅读您系统的文档。
 
 ## restore 命令
 
-
-
-
-
-要提取使用 dump 备份的文件，请使用 restore。restore 会将存储在 dump 磁带或文件中的文件复制到当前目录。需要注意的是，使用 restore 会覆盖同名已存在的文件。restore 在提取文件之前也会创建所需的任何目录或目录树。如果您知道自己在做什么，此功能非常强大。如有疑问，请将文件使用 restore 提取到一个空目录，然后手动移动文件。restore 的语法如下：
+要提取使用 `dump` 备份的文件，请使用 `restore`。`restore` 会将存储在 `dump` 磁带或文件中的文件复制到当前目录。需要注意的是，使用 `restore` 会覆盖同名已存在的文件。`restore` 在提取文件之前也会创建所需的任何目录或目录树。如果您知道自己在做什么，此功能非常强大。如有疑问，请将文件使用 `restore` 提取到一个空目录，然后手动移动文件。`restore` 的语法如下：
 
 ```
 restore [options [argument ...]]
 ```
 
-要指定备份所在的设备，请使用 -f 选项并在其后跟上 dump 的位置。
+要指定备份所在的设备，请使用 `-f` 选项并在其后跟上 `dump` 的位置。
 
-restore 命令具有易于使用的交互式 shell 类似界面，允许您像在文件系统一样浏览 dump 磁带。通过使用 -i 选项启动交互式会话：
+`restore` 命令具有易于使用的交互式 shell 类似界面，允许您像在文件系统一样浏览 `dump` 磁带。通过使用 `-i` 选项启动交互式会话：
 
 ```
 restore -f /dev/nst0 -i
 ```
 
-当 restore 加载后，您可以使用诸如 cd 和 ls 之类的命令在磁带目录中移动。这些命令是 restore 内置的，与 shell 中使用的命令不同。
+当 `restore` 加载后，您可以使用诸如 `cd` 和 `ls` 之类的命令在磁带目录中移动。这些命令是 `restore` 内置的，与 shell 中使用的命令不同。
 
-要将文件添加到要提取（恢复）的文件列表中，输入 add filename，其中 filename 是您要提取的文件名。如果添加一个目录，其包含的所有文件和目录都会被添加。要从列表中删除文件，输入 del filename。此命令不会从磁带中删除文件；它只是将其从提取列表中移除。要提取文件，只需输入 extract。提取结束时，会询问您是否要为 '.' 设置所有者/模式？[yn] 您应回答 no，因为这可能会更改 restore 将要提取文件的目录的所有者和模式。
+要将文件添加到要提取（恢复）的文件列表中，输入 `add filename`，其中 `filename` 是您要提取的文件名。如果添加一个目录，其包含的所有文件和目录都会被添加。要从列表中删除文件，输入 `del filename`。此命令不会从磁带中删除文件；它只是将其从提取列表中移除。要提取文件，只需输入 `extract`。提取结束时，会询问您是否要为 '.' 设置所有者/模式？[yn] 您应回答 no，因为这可能会更改 `restore` 将要提取文件的目录的所有者和模式。
 
 下面是一个示例会话：
 
@@ -6398,7 +6503,9 @@ restore -f /dev/nst0 -i
 31: afile
 ```
 
-我使用的 Linux 版本附带的 restore 有一个问题。如果您尝试添加一个文件，它会给出错误信息。解决方法是添加一个目录，例如 home（参见上一列表的第 5 行）。请注意，当您添加文件或目录时，restore 会在旁边放置一个星号 (*) 来标记它（参见第 8 行）。添加此目录后，删除它（参见第 10 行）。然后您可以按需添加文件。父目录将被自动添加。当您完成文件选择后，输入 extract（参见第 21 行）。Dump 会要求您读取磁带。如果您的 dump 仅跨越一个磁带，输入 1；否则，输入用于此 dump 的最后一个磁带的编号。要获取 dump 的信息，输入 what。要获取交互式 restore 的帮助，输入 help 或 ?，它会打印以下信息：
+我使用的 Linux 版本附带的 `restore` 有一个问题。如果您尝试添加一个文件，它会给出错误信息。解决方法是添加一个目录，例如 `home`（参见上一列表的第 5 行）。请注意，当您添加文件或目录时，`restore` 会在旁边放置一个星号 (*) 来标记它（参见第 8 行）。添加此目录后，删除它（参见第 10 行）。然后您可以按需添加文件。父目录将被自动添加。当您完成文件选择后，输入 `extract`（参见第 21 行）。`Dump` 会要求您读取磁带。如果您的 `dump` 仅跨越一个磁带，输入 1；否则，输入用于此 `dump` 的最后一个磁带的编号。要获取 `dump` 的信息，输入 `what`。要获取交互式 `restore` 的帮助，输入 `help` 或 `?`，它会打印以下信息：
+
+
 
 ```
 restore > ?
@@ -6423,23 +6530,26 @@ If no `arg' is supplied, the current directory is used
 ## Complete Idiot's Guide to Linux
 
 (Publisher: Macmillan Computer Publishing)
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
 
 Search this book:
 
 ## restore Examples
 
-交互式恢复比使用命令行更容易。然而，您也可以这样做。要恢复特定文件，请指定 -x 选项并提供相对于根的路径，如下所示：
+交互式恢复比使用命令行更容易。然而，您也可以这样做。要恢复特定文件，请指定 `-x` 选项并提供相对于根的路径，如下所示：
 
 ```
 restore -x home/alberto/file.rtf -f /dev/nst0
 ```
 
-前面的命令将提取 (-x) 指定的文件 (/home/alberto/file.rtf) 从磁带到当前目录。如果目录路径不存在，restore 将创建它们。最好将目录更改为 /tmp，这样恢复的文件会进入安全位置，并且不会覆盖现有文件。文件恢复后，您可以将文件移动到最终目的地。
+前面的命令将提取 (`-x`) 指定的文件 (`/home/alberto/file.rtf`) 从磁带到当前目录。如果目录路径不存在，`restore` 将创建它们。最好将目录更改为 `/tmp`，这样恢复的文件会进入安全位置，并且不会覆盖现有文件。文件恢复后，您可以将文件移动到最终目的地。
 
-要从 dump 磁带上的文件创建目录列表，请使用 -t 选项。除非您知道磁带驱动器支持读写后验证，否则最好始终从磁带创建目录列表。这将确保您制作的备份磁带包含正确的信息并且磁带可读。
+要从 dump 磁带上的文件创建目录列表，请使用 `-t` 选项。除非您知道磁带驱动器支持读写后验证，否则最好始终从磁带创建目录列表。这将确保您制作的备份磁带包含正确的信息并且磁带可读。
 
 要创建目录列表，输入以下内容：
 
@@ -6447,7 +6557,7 @@ restore -x home/alberto/file.rtf -f /dev/nst0
 restore -t -f /dev/nts0 > tapecat.txt
 ```
 
-这将创建一个名为 tapecat.txt 的文件，其中包含磁带上文件的列表。
+这将创建一个名为 `tapecat.txt` 的文件，其中包含磁带上文件的列表。
 
 ## Graphical Backup Programs
 
@@ -6455,7 +6565,7 @@ restore -t -f /dev/nts0 > tapecat.txt
 
 ## BRU2000
 
-目前，OpenLinux 包含 BRU2000 的许可证，这是一个可以通过命令行和图形界面执行类似 dump 的系统备份的程序。与 dump 相比，其最大的优势在于使用其图形用户界面，因此易于使用。无需担心磁带大小和其他棘手细节，这可能非常值得。程序的使用是自解释的。您首先选择备份设备（/dev/nst0 或适用于您的设备）。要创建备份设备，只需在文件菜单下使用新建设备命令。在选择备份设备后，您需要从选项菜单下的备份命令中选择备份选项。对话框将要求各种设置。然后点击备份按钮。这会提示您选择要备份的文件。从那里，点击开始备份按钮，您就可以开始了。
+目前，OpenLinux 包含 BRU2000 的许可证，这是一个可以通过命令行和图形界面执行类似 dump 的系统备份的程序。与 dump 相比，其最大的优势在于使用其图形用户界面，因此易于使用。无需担心磁带大小和其他棘手细节，这可能非常值得。程序的使用是自解释的。您首先选择备份设备（`/dev/nst0` 或适用于您的设备）。要创建备份设备，只需在文件菜单下使用新建设备命令。在选择备份设备后，您需要从选项菜单下的备份命令中选择备份选项。对话框将要求各种设置。然后点击备份按钮。这会提示您选择要备份的文件。从那里，点击开始备份按钮，您就可以开始了。
 
 与 dump 一样，BRU 支持增量备份，因此您可以实施“备份策略”一节中讨论的备份策略。
 
@@ -6470,16 +6580,20 @@ restore -t -f /dev/nts0 > tapecat.txt
 ## Complete Idiot's Guide to Linux
 
 (Publisher: Macmillan Computer Publishing)
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
 
 Search this book:
 
-## Chapter 20
-Installing Programs and Applications
+# Chapter 20
 
-## In This Chapter
+## Installing Programs and Applications
+
+### In This Chapter
 
 - RPM: The Red Hat Package Manager
 - Installing, Upgrading, Downgrading, and Removing Software
@@ -6495,8 +6609,6 @@ RPM 是一个开放的软件和源代码打包系统。它最初为 Linux 开发
 
 RPM 是一个很棒的打包系统，因为它不仅像其他系统多年来所做的那样处理软件安装，而且还维护一个数据库
 
-
-
 已安装的软件及其相互依赖关系。此数据库可搜索，因此您可以查找文件属于哪个软件包，甚至可以检查文件自初始安装以来是否已被修改、意外损坏或删除。就依赖关系而言，RPM 确保您安装其他软件运行可能需要的任何必需软件包。
 
 RPM 可以通过 FTP 工作，因此您无需下载软件即可安装它；RPM 可以同时完成这两项工作。它还管理着配置文件，因此当您升级软件或系统时，这些自定义设置会得以保留。这是自升级开始以来所有操作系统和软件安装一直存在的问题。
@@ -6511,7 +6623,7 @@ RPM 可以通过 FTP 工作，因此您无需下载软件即可安装它；RPM �
 
 仅凭您可以在系统上安装、升级和降级软件，并在无需手动操作的情况下将其从系统中删除这一事实，就足以成为安装 rpm 软件的理由。
 
-## 安装
+### 安装
 
 安装软件包极其简单。以下是语法：
 
@@ -6521,23 +6633,23 @@ rpm -i mypackage-1.0-2.i386.rpm
 
 通常，您可能需要具有 root 权限才能安装软件包。RPM 会负责安装所有内容——软件和文档——将所有内容放在正确的位置。
 
-安装时可能会出现一些错误。如果 RPM 检测到新软件包将覆盖另一个软件包的文件，它会通知您冲突。要覆盖，可以提供 --replacefiles 选项：
+安装时可能会出现一些错误。如果 RPM 检测到新软件包将覆盖另一个软件包的文件，它会通知您冲突。要覆盖，可以提供 `--replacefiles` 选项：
 
 ```
 rpm -i --replacefiles mypackage-1.0-2.i386.rpm
 ```
 
-如果软件包依赖于另一个软件包，您会看到一个错误，提示该软件包需要另一个软件包。您应该获取所需的软件包，然后重试软件的安装。您也可以使用 --nodeps 选项覆盖此警告；但是，这样做会给自己带来问题。
+如果软件包依赖于另一个软件包，您会看到一个错误，提示该软件包需要另一个软件包。您应该获取所需的软件包，然后重试软件的安装。您也可以使用 `--nodeps` 选项覆盖此警告；但是，这样做会给自己带来问题。
 
-如果软件已经安装，您会收到一个错误，提示该软件包已安装。要覆盖安装该软件包，您应提供 --replacepkgs 选项，如下所示：
+如果软件已经安装，您会收到一个错误，提示该软件包已安装。要覆盖安装该软件包，您应提供 `--replacepkgs` 选项，如下所示：
 
 ```
 rpm -i --replacepkgs mypackage-1.0-2.i386.rpm
 ```
 
-## 升级
+### 升级
 
-升级应用程序与安装一样简单。不是指定 -i 选项，而是指定 -U 选项，如下所示：
+升级应用程序与安装一样简单。不是指定 `-i` 选项，而是指定 `-U` 选项，如下所示：
 
 ```
 rpm -U mypackage-1.0-4.i386.rpm
@@ -6545,23 +6657,25 @@ rpm -U mypackage-1.0-4.i386.rpm
 
 需要记住的是，升级软件包实际上会卸载之前的安装。如果升级版本的配置文件不兼容，您会看到一条消息告知您。RPM 会为您保存原始配置文件，以便您与新文件进行核对。
 
-## 降级
+### 降级
 
-有时升级实际上是升级到新的不良错误。要降级回您在获取错误之前使用的软件，只需升级到旧软件包并提供 --oldpackage 选项即可。
+有时升级实际上是升级到新的不良错误。要降级回您在获取错误之前使用的软件，只需升级到旧软件包并提供 `--oldpackage` 选项即可。
 
 ```
 rpm -U --oldpackage myoldpackage-1.0-1.i386.rpm
 ```
 
-## 卸载
+### 卸载
 
-如果您发现自己不需要已安装的软件，请使用 -e（Erase）标志。这次，只提供软件包的基本名称。对于名为 mypackage-1.0-4.i386.rpm 的软件包，只需输入以下内容：
+如果您发现自己不需要已安装的软件，请使用 `-e`（Erase）标志。这次，只提供软件包的基本名称。对于名为 `mypackage-1.0-4.i386.rpm` 的软件包，只需输入以下内容：
 
 ```
 rpm -e mypackage
 ```
 
 ## SPIDER KILLER
+
+
 
 ## spider catcher
 
@@ -6572,8 +6686,11 @@ HOME ACCOUNT INFO SUBSCRIBE LOGIN SEARCH MY ITKNOWLEDGE FAQ SITEMAP CONTACT US
 ## Complete Idiot's Guide to Linux
 
 (Publisher: Macmillan Computer Publishing)
+
 Author(s): Manuel Ricart
+
 ISBN: 078971826x
+
 Publication Date: 12/22/98
 
 Bookmark It
@@ -6584,11 +6701,11 @@ Previous Table of Contents Next
 
 ## 已安装软件的数据库
 
-RPM 中最有趣的功能是能够查询有关系统上已安装文件和软件包的信息。此功能非常强大，因为您可以查询 RPM 以搜索已安装软件列表中的许多内容。查询（搜索）使用 -q 选项进行。
+RPM 中最有趣的功能是能够查询有关系统上已安装文件和软件包的信息。此功能非常强大，因为您可以查询 RPM 以搜索已安装软件列表中的许多内容。查询（搜索）使用 `-q` 选项进行。
 
-## 查找有关软件包的信息
+### 查找有关软件包的信息
 
-要查找有关软件包文件的信息，请对软件包执行 rpm 查询。您应输入以下内容：
+要查找有关软件包文件的信息，请对软件包执行 `rpm` 查询。您应输入以下内容：
 
 ```
 rpm -qip packagefile
@@ -6617,8 +6734,9 @@ Description :
  Don't rely too much on it -- but without testing, there would be
  no further improvement! Interleave with another backup method
 would be a good idea.
+```
 
-## 查找拥有文件 的软件包
+### 查找拥有文件 的软件包
 
 如果您想知道文件来自哪个软件包，请输入以下命令：
 
@@ -6628,7 +6746,7 @@ rpm -q -f filepath
 dump-0.4b4-1
 ```
 
-## 查找由软件包拥有的文件
+### 查找由软件包拥有的文件
 
 要查看软件包拥有的所有文件，只需输入以下内容：
 
@@ -6657,7 +6775,7 @@ rpm -q -l packagename
 /usr/man/man8/rrestore.8.gz
 ```
 
-## 查找与软件包相关的文档
+### 查找与软件包相关的文档
 
 假设您想了解与特定软件包一起安装的所有文档来源。RPM 也能在这里提供帮助。只需输入以下内容：
 
@@ -6681,29 +6799,27 @@ rpm -q -d packagename
 
 现在您知道要为您的软件包阅读什么了！
 
-## 验证您的系统
+### 验证您的系统
 
-很多时候您可能需要能够检查文件或应用程序，甚至整个系统是否存在损坏的迹象。RPM 会跟踪校验和（一种计算出可用于确定文件内容是否更改的唯一数字的复杂计算）。通过发出一个简单的命令（rpm -Va）您可以验证整个系统！
+很多时候您可能需要能够检查文件或应用程序，甚至整个系统是否存在损坏的迹象。RPM 会跟踪校验和（一种计算出可用于确定文件内容是否更改的唯一数字的复杂计算）。通过发出一个简单的命令（`rpm -Va`）您可以验证整个系统！
 
-如果 RPM 打印出某些内容，很可能该软件包需要重新安装。如果您看不到任何消息，则验证过程成功。指定 rpm -Vf 将仅验证单个文件。请注意，您修改的一些配置文件将被列出，但这是正常的。
+如果 RPM 打印出某些内容，很可能该软件包需要重新安装。如果您看不到任何消息，则验证过程成功。指定 `rpm -Vf` 将仅验证单个文件。请注意，您修改的一些配置文件将被列出，但这是正常的。
 
-要将已安装的软件包与软件包文件进行比较，您将输入 rpm -Vp fullpackagename，如以下示例所示
+要将已安装的软件包与软件包文件进行比较，您将输入 `rpm -Vp fullpackagename`，如以下示例所示
 
 ```
 rpm -Vp mypackage-1.0-4.i386.rpm
 ```
 
+
+
 ## RPM 的图形前端
 
-有几个 RPM 的图形前端可用：一个是 KDE 环境的一部分，称为 kpackage（kpackage-0.9.02-1.i386.rpm；请参阅下图），另一个称为 glint（glint-2.3-3.rpm）。虽然拥有 UI 版本的程序是朝着正确方向迈出的一步，但命令行工具提供了 UI 中无法访问的许多功能。出于这个原因，我将介绍该程序的命令行版本。
+有几个 RPM 的图形前端可用：一个是 KDE 环境的一部分，称为 `kpackage`（`kpackage-0.9.02-1.i386.rpm`；请参阅下图），另一个称为 `glint`（`glint-2.3-3.rpm`）。虽然拥有 UI 版本的程序是朝着正确方向迈出的一步，但命令行工具提供了 UI 中无法访问的许多功能。出于这个原因，我将介绍该程序的命令行版本。
 
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_248_0.png)
 
-这是 kpackage 工具的屏幕截图。它为安装 RPM 软件包提供了一个不错的前端；然而，它缺乏 RPM 程序提供的许多强大的查询功能。
-
-
-
-
+这是 `kpackage` 工具的屏幕截图。它为安装 RPM 软件包提供了一个不错的前端；然而，它缺乏 RPM 程序提供的许多强大的查询功能。
 
 ## Linux完全傻瓜指南
 
@@ -6718,9 +6834,9 @@ Previous Table of Contents Next
 
 ## 非 RPM 包
 
-虽然 RPM 很棒，但有时你要安装的软件不会以 RPM 包的形式提供。像 http://sunsite.unc.edu/pub/Linux/distributions/redhat/contrib/i386/ 这样的 FTP 站点上有大量已经打包成 RPM 的程序，所以你应该先去那里查看你需要的东西是否已以包格式提供。
+虽然 RPM 很棒，但有时你要安装的软件不会以 RPM 包的形式提供。像 `http://sunsite.unc.edu/pub/Linux/distributions/redhat/contrib/i386/` 这样的 FTP 站点上有大量已经打包成 RPM 的程序，所以你应该先去那里查看你需要的东西是否已以包格式提供。
 
-如果没有，很可能它会以 tar 或压缩 tar 文件的形式提供。关于使用 tar 程序进行备份的讨论在第 19 章“备份：保护你的工作”中有详细说明。如果你需要安装一个不以 RPM 格式打包的程序，最好将此程序安装到 /opt 目录下的独立目录中。/opt 目录主要包含第三方软件，例如 KDE、Netscape 等。为了使程序对 shell 可见，你可以在 /opt/bin 目录中为其可执行文件创建一个链接。如果该目录不存在，你应该创建它并将其添加到你的 PATH 环境变量中。
+如果没有，很可能它会以 tar 或压缩 tar 文件的形式提供。关于使用 `tar` 程序进行备份的讨论在第 19 章“备份：保护你的工作”中有详细说明。如果你需要安装一个不以 RPM 格式打包的程序，最好将此程序安装到 `/opt` 目录下的独立目录中。`/opt` 目录主要包含第三方软件，例如 KDE、Netscape 等。为了使程序对 shell 可见，你可以在 `/opt/bin` 目录中为其可执行文件创建一个链接。如果该目录不存在，你应该创建它并将其添加到你的 `PATH` 环境变量中。
 
 ## Tar
 
@@ -6728,47 +6844,58 @@ Previous Table of Contents Next
 
 - 1. 创建一个用于存放归档文件内容的目录。tar 文件可能会将许多文件散布到当前目录，因此最好创建一个新目录来接收文件。
 - 2. 将 tar 归档移动到目标目录。
-- 3. 使用 cd 进入该目录。
-- 4. 使用 tar 提取文件：tar xvf afile.tar。
+- 3. 使用 `cd` 进入该目录。
+- 4. 使用 `tar` 提取文件：`tar xvf afile.tar`。
 
-如果制作 tar 文件的人足够细心，将所有文件都放在一个目录中，你就准备好了。有时 tar 文件会包含一个名为 install.sh 或其他安装脚本的文件。请按照任何自述文件中的说明进行操作（使用 less 等分页器查看它们）。
+如果制作 tar 文件的人足够细心，将所有文件都放在一个目录中，你就准备好了。有时 tar 文件会包含一个名为 `install.sh` 或其他安装脚本的文件。请按照任何自述文件中的说明进行操作（使用 `less` 等分页器查看它们）。
 
 ## UNIX 压缩归档：Gzip 和 Compress
 
-很多时候 tar 文件会以压缩格式分发；压缩文件的典型扩展名为 .gz（gnu zip 或 gzip）、compress 程序的 .Z 以及 Windows zip 压缩归档的 .zip。如果文件名为 file.tar.gz，则该文件是 gnu zip 压缩的 tar 文件。要提取它，你需要向 tar 指定 z 选项：
+很多时候 tar 文件会以压缩格式分发；压缩文件的典型扩展名为 `.gz`（gnu zip 或 gzip）、compress 程序的 `.Z` 以及 Windows zip 压缩归档的 `.zip`。如果文件名为 `file.tar.gz`，则该文件是 gnu zip 压缩的 tar 文件。要提取它，你需要向 `tar` 指定 `z` 选项：
 
 ```
 [alberto@digital /tmp]$ tar -xzvf file.tar.gz
+
 nsmail/
+
 nsmail/Drafts
+
 nsmail/.Drafts.summary
+
 nsmail/Trash
+
 nsmail/.Trash.summary
+
 nsmail/Sent
+
 nsmail/.Sent.summary
+
 nsmail/Unsent Messages
+
 nsmail/.Unsent Messages.summary
+
 nsmail/Inbox
+
 nsmail/.Inbox.summary
 ```
 
-另一种完成相同任务的方法是使用管道使用 gzcat 程序（类似于 cat）。该程序读取压缩归档中的信息，对其进行解压缩，然后将其复制到 STDOUT。以下是如何将 gzcat 和 tar 一起使用的示例：
+另一种完成相同任务的方法是使用管道使用 `gzcat` 程序（类似于 `cat`）。该程序读取压缩归档中的信息，对其进行解压缩，然后将其复制到 STDOUT。以下是如何将 `gzcat` 和 `tar` 一起使用的示例：
 
 ```
 gzcat file.tar.gz | tar -xf -
 ```
 
-在此示例中，gzcat 将结果输出，即一个 tar 文件，通过管道传递给 tar 程序。tar 程序会在其 STDIN 流中查找数据，因为 - 提供了给 f 选项作为参数。
+在此示例中，`gzcat` 将结果输出，即一个 tar 文件，通过管道传递给 `tar` 程序。`tar` 程序会在其 STDIN 流中查找数据，因为 `-` 提供了给 `f` 选项作为参数。
 
-另一种方法是先解压缩 gzip 文件，然后再正常使用 tar。这效率更低，如果磁盘空间不足，可能会导致空间耗尽：
+另一种方法是先解压缩 gzip 文件，然后再正常使用 `tar`。这效率更低，如果磁盘空间不足，可能会导致空间耗尽：
 
 ```
 gunzip file.tar.gz; tar -xf file.tar
 ```
 
-gunzip、gzcat 和 tar 的 z 选项可以处理 .gz 或 Z 扩展名的文件。如果你找到一个非常旧的归档，你可能会发现它带有 .z 扩展名；这也是一个 gzip 压缩文件。
+`gunzip`、`gzcat` 和 `tar` 的 `z` 选项可以处理 `.gz` 或 Z 扩展名的文件。如果你找到一个非常旧的归档，你可能会发现它带有 `.z` 扩展名；这也是一个 gzip 压缩文件。
 
-如果文件不是用 tar 压缩的，它只是带有 .gz 扩展名。你可以使用 gunzip 来解压缩它，如下所示：
+如果文件不是用 tar 压缩的，它只是带有 `.gz` 扩展名。你可以使用 `gunzip` 来解压缩它，如下所示：
 
 ```
 gunzip file.gz
@@ -6776,28 +6903,41 @@ gunzip file.gz
 
 ## Windows 压缩归档：Zip
 
-zip 归档格式（.zip）最初由 Phil Katz 为 DOS 开发，现已被几乎每台 Windows 计算机使用。Linux 用户也可以使用 unzip 和 zip 工具提取和创建这种文件格式。
+`zip` 归档格式（`.zip`）最初由 Phil Katz 为 DOS 开发，现已被几乎每台 Windows 计算机使用。Linux 用户也可以使用 `unzip` 和 `zip` 工具提取和创建这种文件格式。
 
-要解压文件，只需使用 unzip 命令：
+要解压文件，只需使用 `unzip` 命令：
 
 ```
 [alberto@digital /tmp]$ unzip file.zip
+
 Archive:  file.zip
+
   creating: nsmail/
+
  extracting: nsmail/Drafts
+
   inflating: nsmail/.Drafts.summary
+
   inflating: nsmail/Trash
+
   inflating: nsmail/.Trash.summary
+
   inflating: nsmail/Sent
+
   inflating: nsmail/.Sent.summary
+
  extracting: nsmail/Unsent Messages
+
   inflating: nsmail/.Unsent Messages.summary
+
   inflating: nsmail/Inbox
+
   inflating: nsmail/.Inbox.summary
 ```
 
-## 第 21 章
-LISA: Linux 安装和系统管理实用程序
+
+
+# 第 21 章 LISA: Linux 安装和系统管理实用程序
 
 ## 本章内容
 
@@ -6837,13 +6977,7 @@ LISA 将其功能分为三个类别：
 - **自动内核分析**：内核分析显示系统当前使用的内核信息。它包括内核版本、构建者、用于构建的编译器、支持的文件系统和当前设备等信息。
 - **自动硬件分析**：硬件区域显示有关硬件的更详细信息，例如已安装的处理器的类型、RAM 数量、交换磁盘的大小、有关显卡、磁盘驱动器、PCMCIA 和其他硬件设备的信息。
 - **自动分区分析**：此区域显示计算机中磁盘分区的信息。它按设备名称列出分区，并为每个分区提供大小和类型。
-- **自动网络分析**：网络区域提供
-
-
-
-有关您的网络设备和配置的信息。它显示了以太网设备处理的流量信息以及详细的配置信息（IP、网络掩码、广播地址等）。
-此外，它还显示当前的路由表。（此信息显示数据包如何从您的计算机转发到其他网络。）
-
+- **自动网络分析**：此区域提供有关您的网络设备和配置的信息。它显示了以太网设备处理的流量信息以及详细的配置信息（IP、网络掩码、广播地址等）。此外，它还显示当前的路由表。（此信息显示数据包如何从您的计算机转发到其他网络。）
 - **显示启动过程消息**：此区域显示上次启动的启动消息。在安装新内核后检查此区域可以告诉您硬件是否被正确识别。当计算机启动时，很难跟上这些消息，因为它们滚动得太快。此信息也可以从 `/var/log/messages` 获取，但该文件包含每次启动以及其他运行信息。启动过程区域更为简洁。
 - **显示脚本配置文件**：此区域显示 `/etc/lst.cnf` 文件。该文件包含软件包用来查找有关系统信息的资料。您不应手工编辑此文件。它会根据您的兴趣提供有趣或无聊的阅读内容。
 - **显示系统配置文件**：此区域显示另一个配置文件 `/etc/system.cnf`，系统用它来配置自身。您不应手工更改此文件。
@@ -6861,9 +6995,9 @@ LISA 将其功能分为三个类别：
 
 ## Linux 完全傻瓜指南
 
-出版社：Macmillan Computer Publishing
-作者：Manuel Ricart
-ISBN：078971826x
+出版社：Macmillan Computer Publishing  
+作者：Manuel Ricart  
+ISBN：078971826x  
 出版日期：12/22/98
 
 ## 系统配置
@@ -6913,21 +7047,17 @@ ISBN：078971826x
 
 ### 主机表配置
 
-此选项允许您通过界面查看和操作 /etc/hosts 文件。它具有以下命令
+此选项允许您通过界面查看和操作 `/etc/hosts` 文件。它具有以下命令：
 
-- 显示当前的 /etc/hosts 文件
-- 向 /etc/hosts 文件添加新条目
-- 从 /etc/hosts 文件中删除条目
+- 显示当前的 `/etc/hosts` 文件
+- 向 `/etc/hosts` 文件添加新条目
+- 从 `/etc/hosts` 文件中删除条目
 
-/etc/hosts 文件跟踪网络上的计算机，以便用户可以通过名称而不是 IP 地址引用它们。如果您的网络很大，您将不会使用 /etc/hosts；您将使用域名系统（DNS）系统来提供名称到 IP 和 IP 到名称的转换。如果没有 /etc/hosts 文件或 DNS 提供的此类转换服务，您将需要知道您想要通信的每台机器的 IP 地址。
+`/etc/hosts` 文件跟踪网络上的计算机，以便用户可以通过名称而不是 IP 地址引用它们。如果您的网络很大，您将不会使用 `/etc/hosts`；您将使用域名系统（DNS）系统来提供名称到 IP 和 IP 到名称的转换。如果没有 `/etc/hosts` 文件或 DNS 提供的此类转换服务，您将需要知道您想要通信的每台机器的 IP 地址。
 
-如果您有一个小型网络（用于家中几台 PC 的微型局域网，或 TAN），您可以使用 /etc/hosts 来提供您的
+如果您有一个小型网络（用于家中几台 PC 的微型局域网，或 TAN），您可以使用 `/etc/hosts` 来提供您的 Linux 机器需要能够通过 TCP/IP 访问你的其他计算机。 （请注意 LAN 并不是一个技术术语，但我投票认为它应该是。许多家庭开始将多台计算机用线连接在一起。）
 
-
-
-Linux 机器需要能够通过 TCP/IP 访问你的其他计算机。 （请注意 LAN 并不是一个技术术语，但我投票认为它应该是。许多家庭开始将多台计算机用线连接在一起。）
-
-## 网络访问配置
+### 网络访问配置
 
 网络访问配置区域允许你配置以太网卡并输入路由器信息。
 
@@ -6938,7 +7068,7 @@ Linux 机器需要能够通过 TCP/IP 访问你的其他计算机。 （请注�
 
 有关你的网络的信息应使用此组件添加或修改。
 
-## 通用网络服务配置
+### 通用网络服务配置
 
 通用网络服务配置区域允许你配置网络卡、基本网络服务如 DNS、NIS 和电子邮件。
 
@@ -6946,25 +7076,24 @@ Linux 机器需要能够通过 TCP/IP 访问你的其他计算机。 （请注�
 
 - **配置域名服务：** 此区域允许你定义你的 DNS 服务器。
 - **配置 NIS：** 这允许你配置你的工作站以使用 NIS（网络信息服务）作为客户端或作为服务器。
-- **选择邮件传输代理：** 此区域允许你配置你首选的邮件传输代理。目前它只提供一个选项：sendmail。
+- **选择邮件传输代理：** 此区域允许你配置你首选的邮件传输代理。目前它只提供一个选项：`sendmail`。
 
 ## 启动管理器配置
 
-此区域显示有关 lilo（Linux Loader）的信息。在具有多个分区的系统上，这将允许你配置启动分区和其他设置。你将在第 24 章学习有关 lilo 的内容。
+此区域显示有关 `lilo`（Linux Loader）的信息。在具有多个分区的系统上，这将允许你配置启动分区和其他设置。你将在第 24 章学习有关 `lilo` 的内容。
 
 ## 完全傻瓜 Linux 指南
 
-（出版商：Macmillan Computer Publishing）
-作者：Manuel Ricart
-ISBN：078971826x
+（出版商：Macmillan Computer Publishing）  
+作者：Manuel Ricart  
+ISBN：078971826x  
 出版日期：12/22/98
 
 要访问内容，请点击章节和节标题。
 
 搜索本书：
 
-## 第 22 章
-系统监控：关注你的系统
+# 第 22 章 系统监控：关注你的系统
 
 ## 本章内容
 
@@ -6983,51 +7112,71 @@ ISBN：078971826x
 
 有几个程序可以告诉你计算机内存发生了什么。
 
-### 内存有多少：free
+### 内存有多少：`free`
 
-这些程序中最简单的是 free。它显示你可用的内存量，既有真实的 RAM 也有虚拟内存，如以下代码所示：
+这些程序中最简单的是 `free`。它显示你可用的内存量，既有真实的 RAM 也有虚拟内存，如以下代码所示：
+
+
 
 ```
 [alberto@digital alberto]$ free
+
               total       used       free     shared    buffers     cached
+
 Mem:         38956     10196     28760      8468        836      5292
+
 -/+ buffers/cache:          4068     34888
+
 Swap:        39276          0     39276
 ```
 
 ### Procinfo
 
-Procinfo 显示与 free 类似的信息，外加更多信息。procinfo 显示的信息由内核在 /proc 目录中收集。以下是我的轻负载 Linux 笔记本电脑显示的屏幕转储：
+`Procinfo` 显示与 `free` 类似的信息，外加更多信息。`procinfo` 显示的信息由内核在 `/proc` 目录中收集。以下是我的轻负载 Linux 笔记本电脑显示的屏幕转储：
 
 ```
 [alberto@digital alberto]$ procinfo
+
 Linux 2.0.33 (root@buildmeister.caldera.com) (gcc 2.7.2.3) #1  [digital]
 
 Memory:     Total      Used      Free    Shared    Buffers    Cached
+
 Mem:        38956     10316     28640      8540        836      5356
 
 Swap:       39276         0     39276
+
 Bootup: Sat Oct 03 09:46:52 1998 Load average: 0.00 0.01 0.00 2/32  544
 
 user  :      0:00:07.88   0.2%  page in : 5623   disk 1: 1563r 633w
+
 nice  :      0:00:00.00   0.0%  page out:    787
+
 system:      0:00:11.74   0.2%  swap in :        1
+
 idle  :      1:23:49.60  99.6%  swap out:       0
+
 uptime:      1:24:09.21          context :    31137
 
 irq  0:     504922 timer                 irq  8:          0
+
 irq  1:         2 keyboard               irq  9:          1
+
 irq  2:         0 cascade [4]            irq 10:          1
+
 irq  3:      1872 smc91c92_cs            irq 11:      1 182365
+
 irq  4:         1                        irq 12:          0
+
 irq  5:         1                        irq 13:          1  math error
+
 irq  6:         2                        irq 14:     12829 ide0+
+
 irq  7:         1                        irq 15:          0
 ```
 
 除了当前的内存使用情况外，它还会告诉你系统上次启动的时间以及过去 1、5 和 15 分钟的负载平均值（0.00、0.01 和 0.00）。此信息后面跟着可运行进程的数量（列表中的 2/32），以及最后运行的进程（544）。
 
-接下来，procinfo 显示系统在用户代码、系统代码或空闲中花费的时间。Nice 时间是优先级较低运行的用户代码。它还给出机器已运行的总时间。
+接下来，`procinfo` 显示系统在用户代码、系统代码或空闲中花费的时间。Nice 时间是优先级较低运行的用户代码。它还给出机器已运行的总时间。
 
 下一列显示有关虚拟内存和磁盘活动的信息。Page in 和 page out 表示有多少数据已从磁盘移入或移出到内存中。一个页面等于 1K 的数据。Swap in 和 swap out 表示从磁盘交换到内存和从内存交换到磁盘的页面数。Context，如前面的屏幕转储所示，是已发生的上下文切换次数。磁盘列（如果你有多个磁盘，它会显示更多磁盘）将显示自系统启动以来读取次数（1564r）和写入次数（633w）。
 
@@ -7055,55 +7204,73 @@ ISBN：078971826x
 
 ### 列出当前前台进程：top
 
-Top 为你提供对计算机正在做什么的实时查看。在你启动它后，它每秒刷新一次，显示计算机上主要进程的信息。
+`Top` 为你提供对计算机正在做什么的实时查看。在你启动它后，它每秒刷新一次，显示计算机上主要进程的信息。
 
 这里是一个示例屏幕：
 
 ```
 20:33:53 up  2:05,  2 users,  load average: 0.17, 0.07, 0.02
+
 35 processes: 34 sleeping, 1 running, 0 zombie, 0 stopped
+
 CPU states: 4.6% user,  6.3% system, 0.0% nice, 88.6% idle
+
 Mem:  38956K av, 12376K used, 26580K free, 10640K shrd, 1156K buff
+
 Swap: 39276K av,     0K used,  39276K free       5908K cached
 
 PID USER      PRI  NI  SIZE  RSS SHARE STAT LIB %CPU %MEM   TIME COMMAND
+
 655 alberto   20   0   612  612  452 S    0  9.7  1.5   0:10 top
+
 656 root       8   0   592  592  436 R    0  1.7  1.5   0:00 top
+
 1   root       0   0   340  340  268 S    0  0.0  0.8   0:02 init
+
 2   root       0   0     0    0    0 SW   0  0.0  0.0   0:00 kflushd
+
 3   root     -12 -12    0    0    0 SW<  0  0.0  0.0   0:00 kswapd
+
 444 alberto    0   0   696  696  404 S    0  0.0  1.7   0:00 login
+
 363 root       0   0   344  344  272 S    0  0.0  0.8   0:00 getty
+
 177 root       0   0   304  304  240 S    0  0.0  0.7   0:00 rpc.rstatd
+
 19  root       0   0     0    0    0 SW   0  0.0  0.0   0:00 nfsiod
+
 20  root       0   0     0    0    0 SW   0  0.0  0.0   0:00 nfsiod
+
 21  root       0   0     0    0    0 SW   0  0.0  0.0   0:00 nfsiod
+
 22  root       0   0     0    0    0 SW   0  0.0  0.0   0:00 nfsiod
+
 107 root       0   0   328  328  260 S    0  0.0  0.8   0:00 inetd
+
 57  root       0   0   260  260  208 S    0  0.0  0.6   0:00 update
+
 109 bin        0   0   312  312  244 S    0  0.0  0.8   0:00 rpc.portmap
+
 116 root       0   0   356  356  276 S    0  0.0  0.9   0:00 syslogd
 ```
-
-
-
-
 
 ```
 119 root      0  0  476  476  276 S      0  0.0  1.2   0:00 klogd
 ```
 
-在列表开头，top 会显示有关系统的总体信息。第一行显示当前时间、系统已运行的时间、用户数量以及过去 1、5 和 15 分钟的负载平均值。
+
+
+在列表开头，`top` 会显示有关系统的总体信息。第一行显示当前时间、系统已运行的时间、用户数量以及过去 1、5 和 15 分钟的负载平均值。
 
 第二行显示系统中运行的总进程数以及它们正在做什么：睡眠进程，即当前未执行任何操作的进程；僵尸进程，即本应已死亡但由于某种原因仍存在的进程；以及停止的进程。
 
-第三行显示各种 CPU 状态，例如计算机执行用户代码或系统代码所花费的时间，或 nice 时间。Nice 时间表示以较低优先级执行的进程所花费的时间。这些进程用正优先级表示，因为它们对其他进程友好（典型优先级为 0）。负优先级进程会分配更多 CPU，因此具有更高优先级并获得更多运行机会。
+第三行显示各种 CPU 状态，例如计算机执行用户代码或系统代码所花费的时间，或 `nice` 时间。`Nice` 时间表示以较低优先级执行的进程所花费的时间。这些进程用正优先级表示，因为它们对其他进程友好（典型优先级为 0）。负优先级进程会分配更多 CPU，因此具有更高优先级并获得更多运行机会。
 
 在第四行和第五行，你可以看到有关实际内存和虚拟内存的信息。虚拟内存是使用交换磁盘来容纳比 RAM 所能运行的进程更多的进程的那种内存。
 
-在总体信息区域之后，是所有主要进程的列表，包括进程的 ID（PID）、所有者和优先级以及 CPU 和内存的资源消耗。
+在总体信息区域之后，是所有主要进程的列表，包括进程的 ID（`PID`）、所有者和优先级以及 CPU 和内存的资源消耗。
 
-当 top 运行时，你可以指定许多选项来自定义其显示的信息。其中一些更有用的选项如表 22.1 所示。
+当 `top` 运行时，你可以指定许多选项来自定义其显示的信息。其中一些更有用的选项如表 22.1 所示。
 
 ## 表 22.1 Top 选项
 
@@ -7141,7 +7308,7 @@ ISBN：078971826x
 
 ## 进程状态：ps
 
-ps（process status）命令也显示与 top 命令类似的有关进程的信息。ps 命令对于查找进程的 PID 很有用，以便你可以终止或重新 nice 它。 （重新 nice 一个进程会更改其当前优先级。我将在后面的“为进程 nice：nice 和 renice”部分更详细地谈论重新 nice。）要显示系统中运行的所有进程的列表，请输入以下内容：
+`ps`（process status）命令也显示与 `top` 命令类似的有关进程的信息。`ps` 命令对于查找进程的 `PID` 很有用，以便你可以终止或重新 `nice` 它。 （重新 `nice` 一个进程会更改其当前优先级。我将在后面的“为进程 nice：nice 和 renice”部分更详细地谈论重新 nice。）要显示系统中运行的所有进程的列表，请输入以下内容：
 
 ```
 ps aux
@@ -7183,30 +7350,30 @@ root       188  0.0  1.5 1108  604 ?  S    11:51   0:00 httpd -f
 
 ## 终止进程：kill
 
-你可以使用 kill 命令终止进程。kill 命令应作为终止未正确工作的程序的最后手段。kill 命令向程序发送信号（有许多种信号；kill 只是其中之一），这应该会导致它做出适当的反应。否则，它将被杀死：
+你可以使用 `kill` 命令终止进程。`kill` 命令应作为终止未正确工作的程序的最后手段。`kill` 命令向程序发送信号（有许多种信号；`kill` 只是其中之一），这应该会导致它做出适当的反应。否则，它将被杀死：
 
 ```
 kill pid
 ```
 
-假设我想杀死我的 Web 服务器（前面列出的 httpd 进程），我将发出此命令：
+假设我想杀死我的 Web 服务器（前面列出的 `httpd` 进程），我将发出此命令：
 
 ```
 [root@digital /]# kill 188
 ```
 
-如果你不是该进程的所有者（请参阅 ps 输出的第一列中的所有者），你需要是 root 才能杀死它。
+如果你不是该进程的所有者（请参阅 `ps` 输出的第一列中的所有者），你需要是 `root` 才能杀死它。
 
-有时， rogue 程序不会对默认的 kill 信号做出适当响应。在这种情况下，有时有必要使用更强的 kill，即 KILL（无条件 kill）信号，也称为 Linux 中的“信号 9”。信号 9 是一种非常强的药剂，只有在 rogue 程序拒绝以其他任何方式死亡时才应使用。要在 Linux 中使用 KILL 信号杀死程序，请使用以下任一方法：
+有时，rogue 程序不会对默认的 `kill` 信号做出适当响应。在这种情况下，有时有必要使用更强的 `kill`，即 `KILL`（无条件 `kill`）信号，也称为 Linux 中的“信号 9”。信号 9 是一种非常强的药剂，只有在 rogue 程序拒绝以其他任何方式死亡时才应使用。要在 Linux 中使用 `KILL` 信号杀死程序，请使用以下任一方法：
 
 ```
 kill -KILL pid
 kill -9 pid
 ```
 
-用你要终止的进程的编号替换 pid。没有进程可以忽略或逃脱 KILL 信号。
+用你要终止的进程的编号替换 `pid`。没有进程可以忽略或逃脱 `KILL` 信号。
 
-一些作为守护进程运行的进程，例如 httpd，可以通过发送 -HUP（挂断）信号来重新启动。重新启动将使进程重新读取其配置文件并重新启动，如下所示：
+一些作为守护进程运行的进程，例如 `httpd`，可以通过发送 `-HUP`（挂断）信号来重新启动。重新启动将使进程重新读取其配置文件并重新启动，如下所示：
 
 ```
 [root@digital /]# kill -HUP 188
@@ -7216,32 +7383,33 @@ kill -9 pid
 
 有时你会有大作业要运行——比如你需要处理几百兆的日志文件以获取有关 Web 服务器的一些统计信息。也许你想要信息尽快获得，但让计算机全力以赴地获取它会不利地影响系统中其他所有内容的性能。也有可能是你需要该作业尽可能快地运行，将其他所有内容置于第二优先级。
 
-要以较低优先级启动此类进程，只需在命令名称前输入 nice。这将以 nice 状态启动命令：
+要以较低优先级启动此类进程，只需在命令名称前输入 `nice`。这将以 `nice` 状态启动命令：
 
 ```
 nice dobigjob
 ```
 
-使用 nice，可以设置进程执行的优先级。优先级范围从 19（最 nice 的程序）到 -20（最高优先级）。只有 root 才能为进程分配较高的（负）优先级。
+使用 `nice`，可以设置进程执行的优先级。优先级范围从 19（最 `nice` 的程序）到 -20（最高优先级）。只有 `root` 才能为进程分配较高的（负）优先级。
 
-Nice 设置为将任何默认优先级为零的进程的当前优先级增加 10。
+`Nice` 设置为将任何默认优先级为零的进程的当前优先级增加 10。
 
-你也可以通过提供 -n 标志和优先级设置后跟 PID 来指定优先级：
+你也可以通过提供 `-n` 标志和优先级设置后跟 `PID` 来指定优先级：
 
 ```
 nice -n 12 dobigjob
 ```
 
-Nice 仅对尚未启动的作业有效。要使现有进程 nice，你使用 renice。如果你想让 Web 服务器优先于所有其他进程，root 可以这样调整它：
+`Nice` 仅对尚未启动的作业有效。要使现有进程 `nice`，你使用 `renice`。如果你想让 Web 服务器优先于所有其他进程，`root` 可以这样调整它：
 
-```
-[root@digital httpd]# renice -10 188
+
+
+[root@digital httpd]# `renice -10 188`
+
 188: old priority 0, new priority -10
-```
 
 ## 监控你的磁盘
 
-Linux 不喜欢磁盘空间用完。监控磁盘空间很容易。你可以使用两个程序：du 和 df。
+Linux 不喜欢磁盘空间用完。监控磁盘空间很容易。你可以使用两个程序：`du` 和 `df`。
 
 上一页 | 目录 | 下一页
 
@@ -7256,9 +7424,9 @@ ISBN：078971826x
 
 搜索本书：
 
-## 找出磁盘文件占用多少空间：du
+### 找出磁盘文件占用多少空间：du
 
-磁盘使用程序 du 允许你获取目录占用多少空间的列表，以 1K 为增量。默认情况下，它会为找到的每个目录打印一个条目，如下所示：
+磁盘使用程序 `du` 允许你获取目录占用多少空间的列表，以 1K 为增量。默认情况下，它会为找到的每个目录打印一个条目，如下所示：
 
 ```
 [alberto@digital alberto]$ du
@@ -7278,7 +7446,7 @@ ISBN：078971826x
 1       ./kde/share/apps/kppp/Rules
 ```
 
-要汇总输出，请指定 -s 选项，如下所示：
+要汇总输出，请指定 `-s` 选项，如下所示：
 
 ```
 [alberto@digital alberto]$ du -s
@@ -7296,19 +7464,15 @@ ISBN：078971826x
 583     ftp
 1582    httpd
 1       public
-```
-
-
-
-
 1       samba
 1       test_project
+```
 
 In this example, all home directories are summarized.
 
-## Finding the Amount of Free Disk Space: df
+### Finding the Amount of Free Disk Space: df
 
-To find the amount of disk space to devices available in your system, use the df (disk free) command, as shown in the following:
+To find the amount of disk space to devices available in your system, use the `df` (disk free) command, as shown in the following:
 
 ```
 [root@digital /home]# df
@@ -7318,7 +7482,7 @@ Filesystem           1024-blocks   Used Available Capacity Mounted on
 
 The command produces a nice table specifying how much space is available. Numbers are expressed in kilobytes.
 
-In UNIX/Linux, just because there’s free space doesn’t mean that you can create files. If the file system’s inode table fills up (unlikely, but possible if a disk holds a great deal of tiny files), your system would be unable to create additional files. To see how you are doing on inodes, provide the -i option to df:
+In UNIX/Linux, just because there’s free space doesn’t mean that you can create files. If the file system’s inode table fills up (unlikely, but possible if a disk holds a great deal of tiny files), your system would be unable to create additional files. To see how you are doing on inodes, provide the `-i` option to `df`:
 
 ```
 [root@digital /home]# df -i
@@ -7326,19 +7490,19 @@ Filesystem     Inodes   IUsed   IFree %IUsed Mounted on
 /dev/hda1       177480   34971  142509    20% /
 ```
 
-If you compare the regular df output, you’ll see that under normal circumstances, there are plenty of inodes left. On my disk, I have used 93% of my disk, yet only 20% of the inodes.
+If you compare the regular `df` output, you’ll see that under normal circumstances, there are plenty of inodes left. On my disk, I have used 93% of my disk, yet only 20% of the inodes.
 
 ## Log Files
 
 Many of the programs that run in the background, Web server, email, FTP, and so on generate logs for errors or just as a record of someone accessing it. This type of information is recorded, for example, every time a user logs in or out of the system.
 
-## Monitoring Logins: last
+### Monitoring Logins: last
 
 Linux keeps very good track of users and their logins. This information is particularly useful when you are in a networked environment, and as a security precaution, you check to make sure that no “weird” traffic is going on in your machine.
 
-By default, Linux is set up to keep track of logins and logouts. You can browse the login record using the last command.
+By default, Linux is set up to keep track of logins and logouts. You can browse the login record using the `last` command.
 
-To filter output to a specific user, provide the username as an argument to last:
+To filter output to a specific user, provide the username as an argument to `last`:
 
 ```
 [alberto@digital log]$ last alberto
@@ -7354,38 +7518,45 @@ alberto  tty1       Tue Sep 29 11:10 - down     (00:10)
 alberto  tty1       Mon Sep 28 17:36 - down     (00:47)
 ```
 
+
+
 The last command prints the username, the terminal used to access the system, where the user came from (IP address) if the login was remote, and the date and duration of the session.
 
-If the log file /var/log/wtmp doesn’t exist in your system, the system will not keep track of login information. To enable (or disable) this feature, just create or delete this file.
+If the log file `/var/log/wtmp` doesn’t exist in your system, the system will not keep track of login information. To enable (or disable) this feature, just create or delete this file.
 
 ## Monitoring Bad Logins: lastb
 
-The lastb command keeps track of bad (unsuccessful) logins. To enable bad login accounting, as root create the file /var/log/btmp. You can do this using the touch command (touch /var/log/btmp).
+The `lastb` command keeps track of bad (unsuccessful) logins. To enable bad login accounting, as root create the file `/var/log/btmp`. You can do this using the `touch` command (`touch /var/log/btmp`).
 
-To review bad logins, use the lastb command. Unfortunately, Caldera OpenLinux doesn’t currently support lastb use.
+To review bad logins, use the `lastb` command. Unfortunately, Caldera OpenLinux doesn’t currently support `lastb` use.
 
 If an account has an unusual number of bad logins, it is possible that the account is under attack by someone. Such accounts should be disabled and the user owning the account should be notified.
 
 ## Disabling an Account
 
-The easiest way to disable an account is to put an asterisk (*) before the encrypted password in the /etc/passwd file. (The password is the second field in /etc/passwd.) Fields are separated by colons (:), like this:
+The easiest way to disable an account is to put an asterisk (`*`) before the encrypted password in the `/etc/passwd` file. (The password is the second field in `/etc/passwd`.) Fields are separated by colons (`:`), like this:
 
 ```
 me:*Ms.7kvaAYyHbU:500:100:Me:/home/me:/bin/sh
 ```
 
-If you are using shadow passwords, the easiest way to disable an account is to use usermod and expire it with a date in the past:
+If you are using shadow passwords, the easiest way to disable an account is to use `usermod` and expire it with a date in the past:
 
 ```
 usermod -e MM/DD/YY login
+```
+
+```
 [root@digital alberto]# usermod -e 09/01/98 me
 ```
+
+
 
 (Usermod is introduced in Chapter 18. "Users, Groups, and Passwords.")
 
 To access the contents, click the chapter and section titles.
 
-## Complete Idiot's Guide to Linux
+# Complete Idiot's Guide to Linux
 
 (Publisher: Macmillan Computer Publishing)
 Author(s): Manuel Ricart
@@ -7397,10 +7568,10 @@ Search this book:
 ## Chapter 23
 Sharing Files over the Network
 
-## In This Chapter
+### In This Chapter
 
 - The Network File System
-- Using the mount and umount Commands
+- Using the `mount` and `umount` Commands
 - Navigating the File System with FTP
 - Uploading and Downloading Files
 - Controlling File Access
@@ -7409,9 +7580,7 @@ Sharing files over the network allows you to collaborate more easily with others
 
 The most popular ways for sharing files under UNIX are FTP (File Transfer Protocol), NFS (Network File System), and HTTP (the Web). Other protocols, such as Gopher, have given way to Web counterparts. Windows-based PCs share files using the SMB (Server Message Block) protocol. Linux can easily be a client to an SMB server and provides you with an FTP-like interface to a server.
 
-If the information here should awaken your interest, feel free to read the online documentation (see Chapter 15, “Help Please”). Accessing a service (being a client) is easy. Setting up a server is slightly (a few orders of magnitude) more complicated, and entire books have been written on the various subjects. Given
-
-the limited space, I have covered what I consider the least you should need to know to publish data and to access data from other servers.
+If the information here should awaken your interest, feel free to read the online documentation (see Chapter 15, “Help Please”). Accessing a service (being a client) is easy. Setting up a server is slightly (a few orders of magnitude) more complicated, and entire books have been written on the various subjects. Given the limited space, I have covered what I consider the least you should need to know to publish data and to access data from other servers.
 
 ## NFS
 
@@ -7419,44 +7588,38 @@ The NFS is how you share files between UNIX-based machines. Originally developed
 
 NFS allows a directory tree to be grafted into the file system by other computers on the network in much the same way you mount a floppy disk or CD-ROM.
 
-One issue with NFS is that file system security is based on the same mechanism your local file system uses: User IDs (UIDs) and Group IDs (GIDs) of files. If the UID of a user accessing a remote NFS volume doesn’t match the user’s own, the user will lack the necessary privileges. This means that in order to use NFS effectively, there needs to be a mechanism that shares login and password information. Luckily, such a system does exist; it is called NIS (Network Information Services). A long time ago, NIS was called Yellow-Pages. Configuring NIS and NFS requires more depth of information than a few paragraphs can offer. This section will only show you how to export and import an NFS volume. For in-depth configuring information, you should consult the online documentation and how-to guides and perhaps even acquire a book on NIS and NFS. Linux implementation is fairly standard, and you should have no problem adapting that information to your system.
+One issue with NFS is that file system security is based on the same mechanism your local file system uses: User IDs (`UIDs`) and Group IDs (`GIDs`) of files. If the UID of a user accessing a remote NFS volume doesn’t match the user’s own, the user will lack the necessary privileges. This means that in order to use NFS effectively, there needs to be a mechanism that shares login and password information. Luckily, such a system does exist; it is called NIS (Network Information Services). A long time ago, NIS was called Yellow-Pages. Configuring NIS and NFS requires more depth of information than a few paragraphs can offer. This section will only show you how to export and import an NFS volume. For in-depth configuring information, you should consult the online documentation and how-to guides and perhaps even acquire a book on NIS and NFS. Linux implementation is fairly standard, and you should have no problem adapting that information to your system.
 
-## Exporting an NFS Volume
+### Exporting an NFS Volume
 
-Before you can export NFS volumes, you’ll need to enable the NFS Server services in your computer. This is done through LISA under Configure daemon/server autostart under the System Configuration area; then you’ll need to reboot your computer. LISA, as you learned in Chapter 21, “LISA: Linux Installation and System Administration Utility,” is a command line program that manages your hardware and software configuration for the more important portions of your system.
+Before you can export NFS volumes, you’ll need to enable the NFS Server services in your computer. This is done through `LISA` under `Configure daemon/server autostart` under the System Configuration area; then you’ll need to reboot your computer. `LISA`, as you learned in Chapter 21, “LISA: Linux Installation and System Administration Utility,” is a command line program that manages your hardware and software configuration for the more important portions of your system.
 
-With NFS, you don’t need to export an entire disk volume; a directory of your choosing will suffice. To export a directory, you merely need to edit the file /etc/exports. When you export a directory, you choose how you make it available and the permissions that others may have on the volume. Typically, unless you know what you are doing, you should just export the volume read-only. This way, users can see and access files, but they won’t be able to modify or delete files.
+With NFS, you don’t need to export an entire disk volume; a directory of your choosing will suffice. To export a directory, you merely need to edit the file `/etc/exports`. When you export a directory, you choose how you make it available and the permissions that others may have on the volume. Typically, unless you know what you are doing, you should just export the volume read-only. This way, users can see and access files, but they won’t be able to modify or delete files.
 
-```
-/share   (ro,insecure,all_squash)
-```
 
-In the entry shown, /share is exported with several options; here’s what they
 
-mean. `ro` 选项请求将文件系统导出为只读：用户可以查看和访问文件，但不能修改它们。`Insecure` 允许不使用保留端口的 NFS 客户端访问此卷。通常，NFS 希望只允许在特定端口上连接的服务客户端。`all_squash` 选项将 `/share` 中找到的所有 UID 和 GID 映射到匿名用户的那些。 此设置会将 `/share` 目录导出到全世界！
-
-有关其他选项的更多信息，请阅读 `exports` 的手册页。
-
-Previous Table of Contents Next
-
-## Complete Idiot's Guide to Linux
+# Complete Idiot's Guide to Linux
 
 (Publisher: Macmillan Computer Publishing)
 Author(s): Manuel Ricart
 ISBN: 078971826x
 Publication Date: 12/22/98
 
-To access the contents, click the chapter and section titles.
-
-Search this book:
-
 ## Mounting an NFS Volume
 
-挂载 NFS 卷与挂载 CD-ROM 或软盘驱动器非常相似。通常，mount 命令是特权的，只有超级用户或 root 才能指定它。用户唯一能挂载文件系统的方式是如果 /etc/fstab 文件中的挂载描述包含 user 选项。
+```
+/share   (ro,insecure,all_squash)
+```
+
+In the entry shown, `/share` is exported with several options; here’s what they mean. `ro` 选项请求将文件系统导出为只读：用户可以查看和访问文件，但不能修改它们。`Insecure` 允许不使用保留端口的 NFS 客户端访问此卷。通常，NFS 希望只允许在特定端口上连接的服务客户端。`all_squash` 选项将 `/share` 中找到的所有 UID 和 GID 映射到匿名用户的那些。此设置会将 `/share` 目录导出到全世界！
+
+有关其他选项的更多信息，请阅读 `exports` 的手册页。
+
+挂载 NFS 卷与挂载 CD-ROM 或软盘驱动器非常相似。通常，`mount` 命令是特权的，只有超级用户或 root 才能指定它。用户唯一能挂载文件系统的方式是如果 `/etc/fstab` 文件中的挂载描述包含 `user` 选项。
 
 ### The mount Command
 
-mount 命令将设备或网络中的文件系统 graft 到本地系统的目录中。如果该目录有文件，则在挂载移除之前这些文件会被隐藏。文件 /etc/fstab 包含计算机中所有挂载的列表。如果 fstab 文件的一行包含 user 选项，则非 root 用户可以使用 mount 命令挂载它。只需指定设备或挂载的名称或其挂载点即可访问文件系统。考虑以下内容：
+`mount` 命令将设备或网络中的文件系统 graft 到本地系统的目录中。如果该目录有文件，则在挂载移除之前这些文件会被隐藏。文件 `/etc/fstab` 包含计算机中所有挂载的列表。如果 `fstab` 文件的一行包含 `user` 选项，则非 root 用户可以使用 `mount` 命令挂载它。只需指定设备或挂载的名称或其挂载点即可访问文件系统。考虑以下内容：
 
 ```
 [root@digital nfs]# more /etc/fstab
@@ -7468,7 +7631,7 @@ digital://share /net/digital nfs ro
 /
 ```
 
-我的 /etc/fstab 文件包含我的根分区 (/dev/hda1) 的挂载条目，以及其他东西，例如我的软盘 (/dev/fd0)。软盘可由任何用户挂载（参见 user 选项），并且它们挂载在 /mnt/floppy 目录中。网络挂载以机器名称开头，后跟冒号 (:) 和它们导出的路径，后跟挂载点、其类型 (nfs) 和 ro 选项（只读）。
+我的 `/etc/fstab` 文件包含我的根分区 (`/dev/hda1`) 的挂载条目，以及其他东西，例如我的软盘 (`/dev/fd0`)。软盘可由任何用户挂载（参见 `user` 选项），并且它们挂载在 `/mnt/floppy` 目录中。网络挂载以机器名称开头，后跟冒号 (:) 和它们导出的路径，后跟挂载点、其类型 (`nfs`) 和 `ro` 选项（只读）。
 
 要挂载我的软盘，我只需要输入以下内容：
 
@@ -7483,13 +7646,13 @@ mount host:/path dir
 mount -ro digital://share /net/digital
 ```
 
-如果您只计划临时挂载 NFS 卷，则无需将其添加到 /etc/fstab 文件中。
+如果您只计划临时挂载 NFS 卷，则无需将其添加到 `/etc/fstab` 文件中。
 
 但是，经常挂载的卷应为方便和正确性而添加。
 
 ### The umount Command
 
-要从文件系统移除挂载，您使用 umount 命令。作为参数提供挂载位置：
+要从文件系统移除挂载，您使用 `umount` 命令。作为参数提供挂载位置：
 
 ```
 umount mountpath
@@ -7498,20 +7661,20 @@ umount /net/digital
 
 ## FTP
 
-在第 9 章“通信：Web、FTP、电子邮件和新闻”中，您学习了如何使用 KDE 和 Netscape 从 FTP 站点下载文件。正如您所想象的，有一个命令行等价物可用于下载文件，称为 ftp。
+在第 9 章“通信：Web、FTP、电子邮件和新闻”中，您学习了如何使用 KDE 和 Netscape 从 FTP 站点下载文件。正如您所想象的，有一个命令行等价物可用于下载文件，称为 `ftp`。
 
-FTP 既是一项服务，也是终端用户工具。首先，我们将看看如何使用 ftp 命令，然后，我们将讨论如何启用用户使用 ftp 进入您的机器。
+FTP 既是一项服务，也是终端用户工具。首先，我们将看看如何使用 `ftp` 命令，然后，我们将讨论如何启用用户使用 `ftp` 进入您的机器。
 
 ### Connecting to an FTP Site
 
-ftp 命令易于使用。只需指定您要连接的主机名称，如下所示：
+`ftp` 命令易于使用。只需指定您要连接的主机名称，如下所示：
 
 ```
 ftp hostname
+
 [root@digital /etc]# ftp localhost
 Connected to localhost.
-220 digital.bordersoft.com FTP server (Version wu-2.4.2-academ[BETA-15] (1) Wed J
-an 7 01:03:55 MST 1998) ready.
+220 digital.bordersoft.com FTP server (Version wu-2.4.2-academ[BETA-15] (1) Wed Jan 7 01:03:55 MST 1998) ready.
 Name (localhost:alberto): alberto
 331 Password required for alberto.
 Password:********
@@ -7529,6 +7692,8 @@ drwxr-xr-x 10 root root 1024 Sep 25 21:39 ..
 -rw-rw-r-- 1 alberto alberto 998 Sep 26 15:42 .bash_history
 ```
 
+
+
 连接后，您需要登录。如果您在要连接的系统上拥有帐户，您可以使用您的登录名和密码，您将被带到您的主目录。如果您没有帐户，您可以尝试以用户 "ftp"（有时是 "anonymous"）登录，密码与您的电子邮件地址匹配。这称为匿名 FTP。匿名 FTP 仅限于系统的特定区域。
 
 To access the contents, click the chapter and section titles.
@@ -7536,7 +7701,7 @@ To access the contents, click the chapter and section titles.
 ## Complete Idiot's Guide to Linux
 
 (Publisher: Macmillan Computer Publishing)
-Author(s): Manuel Ricart
+Author(s): Manuel Ricard
 ISBN: 078971826x
 Publication Date: 12/22/98
 
@@ -7544,47 +7709,47 @@ Search this book:
 
 ## Hosting an FTP Service
 
-虽然大多数时候您将是 FTP 站点的客户端，但您可能希望通过 FTP 使一些文件可用。要从其他机器启用 FTP 访问，您必须在 /etc/inetd.conf 中启用 FTP 服务。有关如何启用这些服务的详细信息，请参阅“网络服务”注释。）在 /etc/inetd.conf 中启用服务后，您可以使用 FTP 访问您的机器并使用您的登录名和密码。
+虽然大多数时候您将是 FTP 站点的客户端，但您可能希望通过 FTP 使一些文件可用。要从其他机器启用 FTP 访问，您必须在`/etc/inetd.conf`中启用 FTP 服务。有关如何启用这些服务的详细信息，请参阅“网络服务”注释。）在`/etc/inetd.conf`中启用服务后，您可以使用 FTP 访问您的机器并使用您的登录名和密码。
 
-要启用 FTP 服务，您需要确保已安装 wu-ftpd 包。如果您进行了标准安装，它已安装。
+要启用 FTP 服务，您需要确保已安装`wu-ftpd`包。如果您进行了标准安装，它已安装。
 
-Linux 默认安装的 FTP 服务称为 wu-ftpd。Wu-ftpd 最初在华盛顿大学圣路易斯分校开发。这种强大的 FTP 服务器软件被支持数千用户的站点使用。
+Linux 默认安装的 FTP 服务称为`wu-ftpd`。`Wu-ftpd`最初在华盛顿大学圣路易斯分校开发。这种强大的 FTP 服务器软件被支持数千用户的站点使用。
 
-提供匿名 FTP 默认情况下已启用，因为您的 /etc/passwd 包含 FTP 用户的条目。以 FTP 登录到系统的用户将被放入 /home/ftp 目录。该目录由 FTP 守护进程（运行 FTP 服务的软件）以不同的方式处理。就匿名用户而言，/home/ftp 看起来像一个根文件系统。用户无法更改到它之外的目录，并且只能访问其中的目录。FTP 守护进程通过将 FTP 进程的服务器根更改为 /home/ftp 目录来实现这一点。该目录包含最小的 /etc 和 /bin 目录，其中包含足够的信息和软件以允许匿名用户访问系统。您不应修改 /home/ftp/etc 和 /home/ftp/bin 目录的内容，除非您知道自己在做什么。
+提供匿名 FTP 默认情况下已启用，因为您的`/etc/passwd`包含 FTP 用户的条目。以 FTP 登录到系统的用户将被放入`/home/ftp`目录。该目录由 FTP 守护进程（运行 FTP 服务的软件）以不同的方式处理。就匿名用户而言，`/home/ftp`看起来像一个根文件系统。用户无法更改到它之外的目录，并且只能访问其中的目录。FTP 守护进程通过将 FTP 进程的服务器根更改为`/home/ftp`目录来实现这一点。该目录包含最小的`/etc`和`/bin`目录，其中包含足够的信息和软件以允许匿名用户访问系统。您不应修改`/home/ftp/etc`和`/home/ftp/bin`目录的内容，除非您知道自己在做什么。
 
-要发布文件，以 root 身份在 /home/ftp/pub 内创建一个目录，并确保目录权限为 755。匿名用户将能够从那里下载文件，但不能写入（put）文件。
+要发布文件，以 root 身份在`/home/ftp/pub`内创建一个目录，并确保目录权限为 755。匿名用户将能够从那里下载文件，但不能写入（put）文件。
 
-### Techno Talk: Network Services: /etc/inetd and tcpd
+### Techno Talk: Network Services: `/etc/inetd` and `tcpd`
 
-网络服务由一个名为 inetd 的程序处理。Inetd 侦听网络连接，并在收到连接时确保正确的服务器与客户端连接。
+网络服务由一个名为`inetd`的程序处理。`Inetd`侦听网络连接，并在收到连接时确保正确的服务器与客户端连接。
 
-由于安全问题，您可能希望仅向特定客户端提供某些服务。例如，您可能不希望每个人都能尝试通过 FTP 连接到您的系统。为满足此类需求，有一个名为 tcpd 的程序处理 FTP 和 Telnet 等程序的请求。当收到连接请求时，系统会尝试根据用户来自何处确定是否应允许连接。Tcpd 会咨询文件 /etc/hosts.allow 和 /etc/hosts.deny，以查看客户端（尝试连接的系统）是否属于这些类别。默认情况下，未明确允许的任何客户端将被明确拒绝访问。
+由于安全问题，您可能希望仅向特定客户端提供某些服务。例如，您可能不希望每个人都能尝试通过 FTP 连接到您的系统。为满足此类需求，有一个名为`tcpd`的程序处理 FTP 和 Telnet 等程序的请求。当收到连接请求时，系统会尝试根据用户来自何处确定是否应允许连接。`Tcpd`会咨询文件`/etc/hosts.allow`和`/etc/hosts.deny`，以查看客户端（尝试连接的系统）是否属于这些类别。默认情况下，未明确允许的任何客户端将被明确拒绝访问。
 
-要为其他主机启用访问，您需要编辑 /etc/hosts.allow 文件。这些文件的配置信息可在在线手册中找到。（执行 man 5 hosts_access 以阅读有关配置格式的信息。）
+要为其他主机启用访问，您需要编辑`/etc/hosts.allow`文件。这些文件的配置信息可在在线手册中找到。（执行`man 5 hosts_access`以阅读有关配置格式的信息。）
 
-例如，要为所有域的所有服务启用访问，您将在 /etc/hosts.allow 文件中输入以下内容：
+例如，要为所有域的所有服务启用访问，您将在`/etc/hosts.allow`文件中输入以下内容：
 
 ```
 ALL: ALL
 ```
 
-阅读 tcpd、inetd 和 hosts_access 的手册页以获取更多信息。
+阅读`tcpd`、`inetd`和`hosts_access`的手册页以获取更多信息。
 
 创建传入目录（匿名用户可以放置文件的目录）有点棘手。如果您的计算机在互联网上并且您在没有采取充分预防措施的情况下放置了此类目录，那么在您意识到之前，您的计算机就会成为盗版软件和可疑文档和图像的分发节点。要创建不易受此类型问题影响的传入目录，请输入以下内容：
 
 ```
 [root@digital /root]# cd /home/ftp/pub
+
 [root@digital pub]# mkdir incoming
+
 [root@digital pub]# chmod 1733 incoming
 ```
 
+
+
 这将创建一个目录，允许匿名用户放置文件，但他们无法列出他们上传的文件。知道传入目录中文件名称的用户仍然能够下载它，但他们无法列出目录的内容。
 
-您可以对匿名用户施加许多选项和限制来控制对站点的访问，包括控制并发用户数量和他们来自何处。Ftpd 还有许多选项可以记录所有进出内容。要利用这些功能，请阅读 ftpd 的手册文档。（执行 rpm -qd wu-ftpd 以查看所有文档的列表及其安装位置。）
-
-
-
-
+您可以对匿名用户施加许多选项和限制来控制对站点的访问，包括控制并发用户数量和他们来自何处。`Ftpd`还有许多选项可以记录所有进出内容。要利用这些功能，请阅读`ftpd`的手册文档。(`rpm -qd wu-ftpd`以查看所有文档的列表及其安装位置。)
 
 Products | Contact Us | About Us | Privacy | Ad Info | Home
 
@@ -7612,14 +7777,17 @@ There are many popular Web servers that run on a variety of systems. By far, the
 
 Apache’s default configuration, as installed, is fairly adequate and secure. If you need to tinker and you are maintaining a public Web server, you should really take a look at a book on Apache. A good one is my book The Apache Server Survival Guide, ISBN: 1-57521-175-0. It covers all the topics that you need to know about setting up and maintaining an Internet server. It doesn’t assume much but provides in-depth information and many examples. It also orients you on HTML and CGI programming.
 
-Apache’s configuration files can be found at /etc/httpd/apache/conf. Configuration of an Apache server is done in three text files: httpd.conf, access.conf, and srm.conf. Configuration for Apache is straightforward. Directives appear one per line. The first word on the line is the directive; the rest are the parameters or configuration settings. Fire up your editor and open /etc/httpd/apache/conf/httpd.conf to see what I am talking about. You’ll see the following:
+Apache’s configuration files can be found at `/etc/httpd/apache/conf`. Configuration of an Apache server is done in three text files: `httpd.conf`, `access.conf`, and `srm.conf`. Configuration for Apache is straightforward. Directives appear one per line. The first word on the line is the directive; the rest are the parameters or configuration settings. Fire up your editor and open `/etc/httpd/apache/conf/httpd.conf` to see what I am talking about. You’ll see the following:
 
-- The httpd.conf file is the primary Web server configuration file. This file sets the default behavior of the server, such as its name, the port it runs under, the location of configuration, logs, and error files. Without getting into the depths of it, here is the only directive that you need to change in this file:
-  - ServerName—This should reflect a valid DNS name for your system. If you don’t know the fully qualified DNS name for your system, leave this as localhost.
-- The srm.conf configuration file keeps track of where information published by the Web server resides. It also provides a mapping between icons and files that the Web server uses when generating automatic file indexes. There are two directives that are important for you to know about:
-  - DocumentRoot—This directive specifies where your HTML documents are found. By default on Linux, this points to /home/httpd/html. This directory contains HTML help Linux documentation pages (if you are running Caldera’s distribution) or the Apache Server documentation.
-  - UserDir—This directive specifies the name of a directory users can create in their accounts. Files in this directory are accessible using a browser and a URL such as http://servername/~username/ (note the tilde (~) before the username).
-  - DirectoryIndex—This directive specifies the name of files that will be loaded when a user requests a directory instead of an HTML file. If you take a look at the URL in the preceding item (http://servername/~username/), this URL doesn’t request a file, it requests a directory. (This is similar to when you request http://www.caldera.com; this is just the name of a machine!). This directive specifies a filename to search when incomplete URLs are specified; if the file is found, it is sent to the browser. Otherwise, the server will generate an automatic server index, listing all files contained in the directory. You can define multiple DirectoryIndex files like this:
+- The `httpd.conf` file is the primary Web server configuration file. This file sets the default behavior of the server, such as its name, the port it runs under, the location of configuration, logs, and error files. Without getting into the depths of it, here is the only directive that you need to change in this file:
+  - `ServerName`—This should reflect a valid DNS name for your system. If you don’t know the fully qualified DNS name for your system, leave this as `localhost`.
+- The `srm.conf` configuration file keeps track of where information published by the Web server resides. It also provides a mapping between icons and files that the Web server uses when generating automatic file indexes. There are two directives that are important for you to know about:
+  - `DocumentRoot`—This directive specifies where your HTML documents are found. By default on Linux, this points to `/home/httpd/html`. This directory contains HTML help Linux documentation pages (if you are running Caldera’s distribution) or the Apache Server documentation.
+  - `UserDir`—This directive specifies the name of a directory users can create in their accounts. Files in this directory are accessible using a browser and a URL such as `http://servername/~username/` (note the tilde (`~`) before the username).
+  - `DirectoryIndex`—This directive specifies the name of files that will be loaded when a user requests a directory instead of an HTML file. If you take a look at the URL in the preceding item (`http://servername/~username/`), this URL doesn’t request a file, it requests a directory. (This is similar to when you request `http://www.caldera.com`; this is just the name of a machine!). This directive specifies a filename to search when incomplete URLs are specified; if the file is found, it is sent to the browser. Otherwise, the server will generate an automatic server index, listing all files contained in the directory. You can define multiple `DirectoryIndex` files like this:
+```
+
+
 
 ```
 DirectoryIndex index.html index.htm dir.html dir.txt
@@ -7627,7 +7795,7 @@ DirectoryIndex index.html index.htm dir.html dir.txt
 
 Maintaining a Web server or any other sort of public Internet service is serious business. In the coziness of an intranet, you only have to worry about security from your peers. On the Internet, you need to worry about the entire world. There are some evil people out there that could do serious damage to your system.
 
-## Complete Idiot's Guide to Linux
+# Complete Idiot's Guide to Linux
 
 (Publisher: Macmillan Computer Publishing)
 Author(s): Manuel Ricart
@@ -7642,43 +7810,51 @@ Search this book:
 
 Another skill that you’ll need when publishing Web pages is to protect materials from general users, unless they are able to provide an acceptable login and password. This is very simple to do, and it requires that you do a couple of things.
 
-To protect a number of documents, create a directory. You can call it anything you want. Inside this directory, create a file called .htaccess (note that the name of the file begins with a period [ . ]).
+To protect a number of documents, create a directory. You can call it anything you want. Inside this directory, create a file called `.htaccess` (note that the name of the file begins with a period [ . ]).
 
 Inside this file, put the following text:
 
 ```
 AuthUserFile /home/yourusername/.htpasswd
+
 AuthName Alberto's Secured Area
+
 AuthType Basic
+
 require valid-user
 ```
 
-AuthUserFile specifies the location for a password file that will be used to validate users. Note that this file lives outside the public_html directory or the DocumentRoot tree. Replace yourusername with your login name.
+`AuthUserFile` specifies the location for a password file that will be used to validate users. Note that this file lives outside the `public_html` directory or the `DocumentRoot` tree. Replace `yourusername` with your login name.
 
-AuthName is a name that identifies this set of documents. It’s typically displayed by the browser on the password request dialog.
+`AuthName` is a name that identifies this set of documents. It’s typically displayed by the browser on the password request dialog.
 
-AuthType defines the type of authentication used. We’ll use Basic.
+`AuthType` defines the type of authentication used. We’ll use `Basic`.
 
-Require specifies that the only authenticated users should be let in (valid-user option).
+`Require` specifies that the only authenticated users should be let in (`valid-user` option).
 
 After you put this file in the secured directory, all files and directories under this are protected.
 
 ## Creating an htpasswd File
 
-Web server passwords are managed by a tool called htpasswd. This tool exists in /home/httpd/bin/htpasswd. The arguments are simple:
+Web server passwords are managed by a tool called `htpasswd`. This tool exists in `/home/httpd/bin/htpasswd`. The arguments are simple:
 
 ```
 htpasswd [-c] filename username
 ```
 
-The -c option creates the password file using the filename specified (in my case, I defined mine in /home/yourusername/.htpasswd), followed by the name of the user to add to the file:
+The `-c` option creates the password file using the filename specified (in my case, I defined mine in `/home/yourusername/.htpasswd`), followed by the name of the user to add to the file:
 
 ```
 [alberto@digital stuff]$ /home/httpd/bin/htpasswd -c /home/alberto/.htpasswd alberto
+
 Adding password for alberto.
+
 New password:**********
+
 Re-type new password: **********
 ```
+
+
 
 That's all. Anyone trying to access the directory will be asked to authenticate. If the authentication succeeds, they have access to the page(s).
 
@@ -7690,15 +7866,15 @@ SAMBA is the common name for the service that allows you to do this. SAMBA is an
 
 This service is complex and well-developed; however, it has many gotchas—especially if you are trying to connect to Windows NT 4.0 SP3 or Windows 98 computers.
 
-To use SAMBA, you first need to download the latest version from http://samba.gorski.net/samba/samba.html. The versions shipped by most manufacturers are out of date. There are RPM packages you can install available right at the site.
+To use SAMBA, you first need to download the latest version from `http://samba.gorski.net/samba/samba.html`. The versions shipped by most manufacturers are out of date. There are RPM packages you can install available right at the site.
 
-## Accessing a PC Network Drive from Linux: smbclient
+## Accessing a PC Network Drive from Linux: `smbclient`
 
-You use smbclient to access a PC network drive. The command has many options, and some systems—such as Windows NT and Windows 95—are picky about wanting to talk with Linux. For this reason I will refer you to the SAMBA documentation in the /usr/doc/samba-1.9.18p8-Caldera.1 directory for more information on installation and configuration.
+You use `smbclient` to access a PC network drive. The command has many options, and some systems—such as Windows NT and Windows 95—are picky about wanting to talk with Linux. For this reason I will refer you to the SAMBA documentation in the `/usr/doc/samba-1.9.18p8-Caldera.1` directory for more information on installation and configuration.
 
 ## Listing Services
 
-To see a list of the services provided by a PC host, provide the -L option to the smbclient command. By default, Linux will attach your UNIX login name. If your login is different on the PC, specify it with the -U option, like this:
+To see a list of the services provided by a PC host, provide the `-L` option to the `smbclient` command. By default, Linux will attach your UNIX login name. If your login is different on the PC, specify it with the `-U` option, like this:
 
 ```
 smbclient -L smbhostname -U pcloginname
@@ -7708,25 +7884,31 @@ It is possible that some hosts will give you grief if you supply a login name th
 
 ```
 [alberto@digital alberto]$ smbclient -L pri -U ARICART
+
 Added interface ip=192.168.0.2 bcast=192.168.0.255 nmask=255.255.255.0
+
 Got a positive name query response from 192.168.0.1 ( 192.168.0.1 )
+
 Server time is Sat Sep 26 18:39:17 1998
+
 Timezone is UTC-5.0
+
 Password: ******
+
 Domain=[WORKGROUP] OS=[Windows NT 4.0] Server=[NT LAN Manager 4.0]
+
 security=user
+
 Server=[PRI] User=[] Workgroup=[WORKGROUP] Domain=[]
 ```
+
+
 
 | Sharename | Type | Comment |
 |------------|------|---------|
 | ADMIN$     | Disk | Remote Admin |
 | C$         | Disk | Default share |
 | CD         | Disk |  |
-
-
-
-
 
 This machine has a browse list:
 
@@ -7753,7 +7935,7 @@ From the listing, I know that this machine has several resources I can use, incl
 
 To access the contents, click the chapter and section titles.
 
-## Complete Idiot's Guide to Linux
+# Complete Idiot's Guide to Linux
 
 (Publisher: Macmillan Computer Publishing)
 Author(s): Manuel Ricart
@@ -7765,14 +7947,14 @@ Search this book:
 ## Chapter 24
 Customizing Your Linux Kernel
 
-## In This Chapter
+### In This Chapter
 
 + - Customizing your kernel with LISA
 + - Customizing your kernel by recompiling
 + - Building a new kernel
 + - Configuring, compiling, and installing new kernels and modules
 
-### Customizing Your Linux Kernel with LISA
+#### Customizing Your Linux Kernel with LISA
 
 The easiest way to customize your kernel is to add and remove driver modules using LISA. The standard installation of Caldera OpenLinux contains a large number of drivers for various types of hardware. These drivers can be inserted and removed from your system automatically by LISA without the need for further work on your part. Although some users—such as those requiring advanced power management—will need to recompile their kernel to make use of their hardware, others will be served just as well by the kernel-management facilities offered by LISA.
 
@@ -7781,13 +7963,11 @@ For more information on using LISA to configure your system, see Chapter 21, "LI
 > Note:
 > This chapter is not for the faint of heart. It gets into the nitty gritty about working with kernels...something Linux beginners need to take great caution with. It might even be something you should wait to tackle until after you've had more hands-on experience with Linux.
 
-### Customizing Your Linux Kernel by Recompiling
+#### Customizing Your Linux Kernel by Recompiling
 
 Kernel configuration sounds like a scary topic, but it really isn't. The one caveat is that if you are not careful, you can make your system unbootable. But then again, understanding Linux and avoiding problems are the reasons why you bought this book.
 
-As you already know, the Linux kernel installed on your system by default seems to provide support for most of the hardware installed by most machines. This is very cool because it enabled you to do a great number of
-
-things before you even knew that kernel building was something you wanted to do. If you are happy with what you’ve got, read no further, you don’t need to customize your kernel. Even Caldera will tell you this.
+As you already know, the Linux kernel installed on your system by default seems to provide support for most of the hardware installed by most machines. This is very cool because it enabled you to do a great number of things before you even knew that kernel building was something you wanted to do. If you are happy with what you’ve got, read no further, you don’t need to customize your kernel. Even Caldera will tell you this.
 
 Customizing your kernel can improve the performance of your system, but given today’s speedy boxes it is not likely that you’ll be able to tell a great difference between a custom kernel and a generic one. There are several reasons why you’d want to build your own kernel:
 
@@ -7815,19 +7995,17 @@ There are several steps that you need to accomplish in order to build and instal
 + 5. Configuring and reinstalling LILO to see the new kernel
 + 6. Configuring the new modules and rebooting
 
-```
-In addition to the gcc compiler, you need the following packages.
-(Note that the version of your package might be better than the one
-I list.) The linux-source-doc package is not necessary to build the
-kernel but is good to have around. If you do a standard install, this
-package is already on your disk; otherwise it is included on your
-CD.linux-kernel-include-2.0.35-1.i386.rpm
-linux-source-common-2.0.35-1.i386.rpm
-linux-source-1386-2.0.35-1.i386.rpm
-linux-source-doc-2.0.35-1.i386.rpm
-```
 
-If you do a standard install, your kernel sources will be located in the /usr/src/linux directory. This directory is just a link to the current kernel sources Linux-2.0.35 or whatever you have.
+
+In addition to the gcc compiler, you need the following packages.
+
+(Note that the version of your package might be better than the one I list.) The linux-source-doc package is not necessary to build the kernel but is good to have around. If you do a standard install, this package is already on your disk; otherwise it is included on your CD.
+`linux-kernel-include-2.0.35-1.i386.rpm`
+`linux-source-common-2.0.35-1.i386.rpm`
+`linux-source-1386-2.0.35-1.i386.rpm`
+`linux-source-doc-2.0.35-1.i386.rpm`
+
+If you do a standard install, your kernel sources will be located in the `/usr/src/linux` directory. This directory is just a link to the current kernel sources `Linux-2.0.35` or whatever you have.
 
 As usual, it is a good idea to read the documentation included with the kernel. A nice README file contains information on how to build the kernel. Some steps might be missing or not as well elaborated, but between this book and that document you will have enough support to build your own kernel.
 
@@ -7840,7 +8018,7 @@ As you configure your kernel, you’ll be offered the option to include support 
 
 Use built-in support instead of module support when the supported device is required in order to boot your computer. If you have a specific networking or SCSI card, and you make use of that card as the computer is starting, compile support into the kernel. This makes the kernel bigger, so limit it to things you know will be loaded no matter what.
 
-Features that you might use on and off (such as PPP support) might be better as a module. When not in use for extended periods of time the module can be removed from memory using LISA, thus releasing your valuable resources.
+Features that you might use on and off (such as PPP support) might be better as a module. When not in use for extended periods of time the module can be removed from memory using `LISA`, thus releasing your valuable resources.
 
 Caldera uses the module approach for its generic kernel. If your hardware requires the service, the module is loaded. If not, it just occupies a little of your disk.
 
@@ -7861,23 +8039,25 @@ Search this book:
 
 Kernel compiling is done with special tools included in the Linux kernel source. You have three tools to choose from:
 
-+ - config
-+ - menuconfig
-+ - xconfig
++ - `config`
++ - `menuconfig`
++ - `xconfig`
 
-Config is an interactive script that asks you questions for each of the options about which it needs information to configure properly. I find an interactive program is better for this sort of exercise. Use menuconfig if you are using a shell or xconfig if you are working under X (or KDE as it is also called).
+`config` is an interactive script that asks you questions for each of the options about which it needs information to configure properly. I find an interactive program is better for this sort of exercise. Use `menuconfig` if you are using a shell or `xconfig` if you are working under X (or KDE as it is also called).
 
-To start the configuration tool, first change to the /usr/src/linux directory and enter:
+To start the configuration tool, first change to the `/usr/src/linux` directory and enter:
 
 ```
 make toolname
 ```
 
+
+
 ![](img/edf072a03d4de1f8f4a13465ac79e7fb_289_0.png)
 
 Xconfig provides buttons to configure the various options.
 
-Where toolname is the name of the tool you want to use. Here's the screen you'll see if you use xconfig.
+Where `toolname` is the name of the tool you want to use. Here's the screen you'll see if you use `xconfig`.
 
 In this window, take a look at the options included. Xconfig gives you buttons for the following configuration settings:
 
@@ -7909,17 +8089,25 @@ If you happen to be among those who have an easy sound card, then the process of
 
 ```
 Sound card support (CONFIG_SOUND) [Y/n/m/?]
+
 /dev/dsp and /dev/audio support (CONFIG_AUDIO) [Y/n/?]
+
 MIDI interface support (CONFIG_MIDI) [Y/n/?]
+
 FM synthesizer (YM3812/OPL-3) support (CONFIG_YM3812) [Y/n/?]
+
 ProAudioSpectrum 16 support (CONFIG_PAS) [N/y/?]
+
 Sound Blaster (SB, SBPro, SB16, clones) support (CONFIG_SB)
+
 [Y/n/?]
+
 Generic OPL2/OPL3 FM synthesizer support (CONFIG_ADLIB) [Y/n/?]
+
 Gravis Ultrasound support (CONFIG_GUS) [N/y/?]
 ```
 
-For basic sound support, always answer yes to the CONFIG_SOUND, CONFIG_AUDIO, and CONFIG_ADLIB options. You’ll also need to choose at least one sound card to support. If you know the model and make of your sound card, then you’re in good shape and can answer Y to the right one. After you choose your card, you’ll need to answer a couple of questions about it (IRQ, base address, and so on). With an easy sound card, the setup isn’t much different than setting up SCSI controllers, multiport serial boards, or parallel devices.
+For basic sound support, always answer yes to the `CONFIG_SOUND`, `CONFIG_AUDIO`, and `CONFIG_ADLIB` options. You’ll also need to choose at least one sound card to support. If you know the model and make of your sound card, then you’re in good shape and can answer Y to the right one. After you choose your card, you’ll need to answer a couple of questions about it (IRQ, base address, and so on). With an easy sound card, the setup isn’t much different than setting up SCSI controllers, multiport serial boards, or parallel devices.
 
 If you’re one of the unfortunate souls who has a hard sound card, like the Creative AWE Plug’N’Play cards, you’re better off without sound for a while. The concepts you’ll need to know to get this type of sound card going are something for the more seasoned Linux user rather than the beginner, so hang in there!
 
@@ -7931,41 +8119,42 @@ Compiling builds binary files that your computer is able to execute. To build yo
 [root@digital linux]# make dep
 ```
 
-
-
-
 ## 《Linux 完全傻瓜指南》：自定义 Linux 内核
 
 ```
 [root@digital linux]# make clean
+
 [root@digital linux]# make zImage
+
 [root@digital linux]# make modules
 ```
 
-前面的命令（尤其是 make zImage）会花费一段时间。所需时间从几分钟（在 Pentium 计算机上）到数天（在 386 计算机上）不等，具体取决于你的选择和硬件速度。如果它们全部在没有任何错误的情况下完成，你就可以准备安装新的内核了。
+
+
+前面的命令（尤其是 `make zImage`）会花费一段时间。所需时间从几分钟（在 Pentium 计算机上）到数天（在 386 计算机上）不等，具体取决于你的选择和硬件速度。如果它们全部在没有任何错误的情况下完成，你就可以准备安装新的内核了。
 
 ## 安装新内核
 
-新编译的内核位于 /usr/src/linux/arch/i386/boot/zImage。在安装它之前，你需要确保不会覆盖现有的内核。这些内核存储为 /vmlinuz 以及 /boot/vmlinuz-2.0.35-modular（版本取决于你的安装）。你不需要移动它们，只需确保不要覆盖它们。如果这样做并且新内核无法正常工作，你的系统可能会无法启动。
+新编译的内核位于 `/usr/src/linux/arch/i386/boot/zImage`。在安装它之前，你需要确保不会覆盖现有的内核。这些内核存储为 `/vmlinuz` 以及 `/boot/vmlinuz-2.0.35-modular`（版本取决于你的安装）。你不需要移动它们，只需确保不要覆盖它们。如果这样做并且新内核无法正常工作，你的系统可能会无法启动。
 
-将新内核复制到 /boot 目录，并使用新名称：
+将新内核复制到 `/boot` 目录，并使用新名称：
 
 ```
 # cp /usr/src/linux/arch/i386/boot/zImage /boot/vmlinuz-2.0.35-apm
 ```
 
-我为新内核命名了其版本并添加了 apm（高级电源管理）部分，以便将其与现有内核区分开来。任何附加名称都可以，只要不覆盖现有内核即可。
+我为新内核命名了其版本并添加了 `apm`（高级电源管理）部分，以便将其与现有内核区分开来。任何附加名称都可以，只要不覆盖现有内核即可。
 
 ## 《Linux 完全傻瓜指南》
 
-Publisher: Macmillan Computer Publishing
-Author(s): Manuel Ricart
-ISBN: 078971826x
+Publisher: Macmillan Computer Publishing  
+Author(s): Manuel Ricart  
+ISBN: 078971826x  
 Publication Date: 12/22/98
 
 ## 安装新模块
 
-模块的安装稍微棘手一些，因为默认情况下，模块安装会想要覆盖现有模块。模块安装在 /lib/modules 目录中，位于一个以内核版本命名的目录下。（内核版本可通过 uname -r 命令获得。）对于我的设置，这意味着路径为 /lib/modules/2.0.35。
+模块的安装稍微棘手一些，因为默认情况下，模块安装会想要覆盖现有模块。模块安装在 `/lib/modules` 目录中，位于一个以内核版本命名的目录下。（内核版本可通过 `uname -r` 命令获得。）对于我的设置，这意味着路径为 `/lib/modules/2.0.35`。
 
 为保存当前模块，将它们移开：
 
@@ -7983,6 +8172,7 @@ Publication Date: 12/22/98
 
 ```
 [root@digital linux]# mv /lib/modules/2.0.35 /lib/modules/2.0.35-apm
+
 [root@digital linux]# mv /lib/modules/2.0.35-old /lib/modules/2.0.35
 ```
 
@@ -7994,10 +8184,10 @@ Publication Date: 12/22/98
 
 ```
 [root@digital /]# more /etc/lilo.conf
+
 #
 # general section
 #
-
 boot = /dev/sdb1
 install = /boot/boot.b
 ```
@@ -8018,10 +8208,11 @@ image = /vmlinuz
 
 根据系统的配置，你可能看不到与示例完全相同的行。但从示例中可以看出，至少已定义了一个 Linux 条目。默认条目是在超时时间过去后启动的条目。你可以将新内核安装为默认项，只要保存之前的条目，以防新内核的行为与你预期不同即可。
 
-在旧内核条目之上插入新内核的条目。以旧条目作为部分指南。你需要为 image（内核文件）、label（启动时显示的名称）和 root（与旧内核条目相同）指定值。在末尾添加 "read-only" 行，以指定每次启动此内核时都要检查文件系统。 resulting /etc/lilo.conf 将类似于
+在旧内核条目之上插入新内核的条目。以旧条目作为部分指南。你需要为 `image`（内核文件）、`label`（启动时显示的名称）和 `root`（与旧内核条目相同）指定值。在末尾添加 `read-only` 行，以指定每次启动此内核时都要检查文件系统。 resulting `/etc/lilo.conf` 将类似于
 
 ```
 [root@digital /]# more /etc/lilo.conf
+
 #
 # general section
 #
@@ -8044,7 +8235,8 @@ image = /vmlinuz
 #
 ```
 
-编辑 /etc/lilo.conf 文件后，使用 [root@digital /boot]# lilo -v -t 测试它是否有效
+编辑 `/etc/lilo.conf` 文件后，使用 `[root@digital /boot]# lilo -v -t` 测试它是否有效
+```
 LILO version 20, Copyright 1992-1997 Werner Almesberger
 Reading boot sector from /dev/hda
 Merging with /boot/boot.b
@@ -8056,12 +8248,14 @@ Added modular
 Boot image: /vmlinuz
 Added linux
 The boot sector and the map file have *NOT* been altered.
+```
 
 如果一切正常，那么你可以通过发出以下命令创建引导扇区
 
 ```
 [root@digital /boot]# lilo -v
 LILO version 20, Copyright 1992-1997 Werner Almesberger
+
 Reading boot sector from /dev/hda
 Merging with /boot/boot.b
 Mapping message file /boot/message
@@ -8081,7 +8275,7 @@ Writing boot sector.
 
 一旦成功启动到新内核，你可能会认为自己完成了，但事实并非如此。你编译为模块的驱动程序尚未激活。要使它们激活，你需要进行一些配置。
 
-Caldera 启动系统会在 /etc/modules 目录中查找一个以你构建的内核版本命名的目录。（在我示例中，此目录的完整路径为 /etc/modules/2.0.35。）在此目录中，它期望找到一个以内核构建时间和日期命名并以 .default 结尾的文件：
+Caldera 启动系统会在 `/etc/modules` 目录中查找一个以你构建的内核版本命名的目录。（在我示例中，此目录的完整路径为 `/etc/modules/2.0.35`。）在此目录中，它期望找到一个以内核构建时间和日期命名并以 `.default` 结尾的文件：
 
 ```
 #1 Tue Jan 6 16:44:51 MET 1998.default
@@ -8100,7 +8294,9 @@ Caldera 启动系统会在 /etc/modules 目录中查找一个以你构建的内�
 # find /lib/modules/2.0.35-apm -name "*.o" -print > " /etc/modules/2.0.35/ $(uname -v).default"
 ```
 
-此命令查找新模块目录中的所有模块，列出它们，并将列表发送到 /etc/modules/2.0.35 目录中的正确文件。如果没有这样复杂的命令，这项工作会很繁琐，目前没有任何工具可以自动化此过程。如果你不这样做，你的新模块在计算机启动时不会自动加载。
+
+
+此命令查找新模块目录中的所有模块，列出它们，并将列表发送到`/etc/modules/2.0.35`目录中的正确文件。如果没有这样复杂的命令，这项工作会很繁琐，目前没有任何工具可以自动化此过程。如果你不这样做，你的新模块在计算机启动时不会自动加载。
 
 完成此操作后，再次关闭并使用新内核重新启动。如果一切按计划进行，你的新模块现在将处于活动状态。欢迎使用你的新系统！
 
@@ -8133,8 +8329,6 @@ Linux Installation
 - Configuring X-Windows
 
 在计算机上安装 Linux 并不会比安装 Windows 或任何其他操作系统（OS）更困难。如果你曾经
-
-
 
 安装操作系统到一台 PC 上，你一定知道这有多令人沮丧。原因不明，“即插即用”设备有时无法被识别，或者随硬件提供的驱动程序与你正在安装的操作系统版本并不真正兼容；更糟的是，随操作系统一起提供的驱动程序与你的硬件不兼容。正如你所知，安装操作系统是一件棘手的事情。
 
@@ -8231,7 +8425,6 @@ Msd 可以为你提供有关计算机硬件的许多信息。
 如果你的当前操作系统的分区使用所有可用磁盘空间，你仍然可能能够安装 Linux，前提是在分区内有可用空间。随 Linux 发行版一起提供有软件，允许你在不破坏磁盘当前内容的情况下重新分区硬盘。该软件称为 fips。
 
 在运行 fips 之前，你需要对磁盘进行碎片整理，以确保重新分区过程有足够的空间。你的操作系统应该有这样的工具
-
 
 as defrag.exe 或 optimize.exe 用于此目的。如果没有，有几种商业厂商提供的可用工具（Norton Utilities 就是其中之一）可以完成工作。Fips 只能处理 DOS 和 Windows 95 风格的分区。如果你运行的是 Windows NT 或 OS2，可能需要查看像 PartitionMagic（见 http://www.powerquest.com）这样的商业产品，它还支持 NTFS 和 HPFS——甚至 Linux 驱动器。
 
@@ -8332,7 +8525,6 @@ fips 程序连同一些你在安装前应 definitely 阅读的 readme 文件，�
 例如，我的网络卡是 LynkSys Ether16，这张卡未被 Linux 自动识别。然而，许多 PC 以太网卡与 NE2000/NE1000 兼容。如果你向下滚动文档，你会看到它的条目，告诉你 NE2000/NE1000 需要两个参数——IO 和 IRQ 设置。记下这一点，然后按 q 退出帮助文档。这将返回到安装帮助系统。选择“退出此帮助系统（退出）”选项并按 Enter。按 Alt+F1 返回到安装窗口，选择正确的模块（就我而言是 NE2000/NE1000），并根据你的安装列表提供参数。
 
 如果你绝对无法弄清楚要为模块提供哪些正确参数，请尝试在不指定任何参数的情况下使用该模块。虽然
-
 
 this is not recommended, some modules will work this way.
 
@@ -8442,10 +8634,6 @@ Select your printer from the list of available printer types. If a driver or mod
 
 ## Setting the Root Password
 
-
-
-
-
 在提示输入 root 密码时，你猜会问什么？这里就是设置 root 密码的地方。现在，你可能会问，世界上 root 到底是什么？Root 是一个特殊的管理员账户，只能用于系统配置。这个密码至关重要。不管你把它设成什么，都一定要记住。否则，你可能不得不重新安装系统。请注意，在输入密码时你的字符不会显示出来。这样别人就无法从你身后窥视并窃取你的密码。输入一次后，系统会要求你再次输入，以确保你输入正确。
 
 账户将在本书的前几章中详细介绍。目前，只要记住这个密码即可。
@@ -8462,7 +8650,7 @@ Select your printer from the list of available printer types. If a driver or mod
 
 在 shell 选择中，将 GNU bash 保留为默认选项。
 
-输入你的全名并为你的账户提供一个密码。同样，在输入时你的字符不会显示，并且系统会要求你输入两次密码。
+输入你的全名并为你的账户提供一个密码。同样，在输入时你的字符不会显示出来，并且系统会要求你输入两次密码。
 
 不要忘记你的用户名和密码；你需要它们来登录。请注意，密码和登录名区分大小写。
 
@@ -8535,10 +8723,6 @@ Select your printer from the list of available printer types. If a driver or mod
 ## 选择分辨率
 
 要开始分辨率配置，请选择显示顶部的 Modeselection 按钮。你将看到下图所示的屏幕。根据视频卡拥有的视频 RAM 数量，可能可以指定各种分辨率和颜色设置。默认情况下，X-Windows 将使用卡可以处理的最大的分辨率。在某些环境中，这意味着启用虚拟屏幕，其中屏幕从右侧和底部边缘掉落。将光标移动到右侧或底部边缘会滚动你所看到的内容。对我来说，这种设置很令人不安，所以我指定与我的显示器功能相匹配的设置。
-
-
-
-
 
 颜色深度选择由面板底部的四个按钮激活：8 bpp（每像素位数）将产生 256 种颜色，16bpp 将产生 32768 种颜色，而 24 和 32bpp 分别将产生 65535 和数百万种颜色。请注意，并非所有显卡都支持所有显示深度。
 
@@ -8775,10 +8959,6 @@ CyCDROM 940i 和 520ie 驱动器，虽然连接到 IDE 接口，但不是 IDE �
 |  | DEC chips 21040(no SROM)/21041A | de4x5 |
 |  | DEC chips 21140A | de4x5 |
 
-
-
-
-
 | 厂商 | 型号 | 驱动程序 |
 |---|---|---|
 | Digi | RightSwitch SE/x | dgrs |
@@ -9009,10 +9189,6 @@ Linux 内核中的通用串行端口驱动程序支持串行鼠标设备。如�
 | BusLogic | BT-757S | BusLogic |
 | BusLogic | BT-946C | BusLogic |
 | BusLogic | BT-948 | BusLogic |
-
-
-
-
 
 |  |  |  |
 |---|---|---|
@@ -9287,8 +9463,6 @@ SCSI 和 IDE 磁带驱动器没有特定的驱动程序；对它们的支持会�
 |  | GE64 | S3 |
 |  | ProStar | SVGA |
 |  | ProStar 64 | SVGA |
-
-
 
 | 制造商 | 型号 | 兼容性 |
 |---|---|---|
@@ -9572,10 +9746,6 @@ SCSI 和 IDE 磁带驱动器没有特定的驱动程序；对它们的支持会�
 |  | Trio64+ (通用) | S3 |
 |  | Trio64V2 (通用) | S3 |
 
-
-
-
-
 | 制造商 | 型号 | 兼容性 |
 |---|---|---|
 |  | Trio64V2/DX (Generic) | S3 |
@@ -9770,7 +9940,6 @@ adding
   users, 174-175, 209-210
 adduser tool, 209
 ampersand (&), running jobs in background, 161
-Apache Web server, configuring, 271-272
 Application Launcher, adding applications to, 105
   kdelnk file, creating, 106-108
   kdelnk file, using, 108
@@ -9784,13 +9953,8 @@ applications
   hiding, 42
   installing, 235-236
 
-kvt, using, 117
-multiple, working with, 41
-non-RPM packages
-    overview of, 240
-    tar files, extracting files from, 241
-    UNIX compressed archive files, extracting files from, 241-242
-    Windows compressed archive files, extracting files from, 242
+kdelnk file, creating, 106-108
+kdelnk file, using, 108
 querying database, 237-239
 restoring using Auto-restore feature, 48
 starting, 40-41, 48
@@ -9833,14 +9997,6 @@ overview of, 215-216
 programs for, 216
 simple backups, 221
 strategies for, 226
-tar utility
-extracting files from, 222-223
-extracting from devices, 225
-extracting into devices, 223
-extracting into floppy devices, 223
-extracting into tape devices, 224
-making tar files, 221-222
-spanning multiple disks or tapes, 225-226
 bash, default shell, 119
 bash (Bourne Again shell), 117
 Bourne Again shell, 117
@@ -9995,9 +10151,6 @@ whereis，167
 who 和 w，187
 编译内核，281，283
 撰写电子邮件消息，100
-压缩文件
-  从中提取文件，241-242
-  读取，169
 计算机
   重启，127
   重新启动，19
@@ -10088,25 +10241,6 @@ date 命令，选项，188-189
   IDE-SCSI，327
   鼠标指向，321
   跨多个，225-226
-对话框窗口，23
-对话框，显示设置，47
-使用 kppp 添加拨号配置
-  DNS 服务器，85-86
-  网关，配置，86
-  IP 设置，83，85
-  登录脚本，使用，87
-数字音频磁带（4mm）和备份，219
-目录
-  /usr/doc，168-169
-  更改，123
-  复制，132
-  创建，130
-  删除，131
-  远程列出，122
-  移动，133
-
-打开，33
-选择备份，220-221
 禁用账户，261
 磁盘空闲 df 命令，使用监控磁盘，259
 磁盘空间，安装 Linux 的要求，293
@@ -10174,10 +10308,6 @@ Emacs。另见 XEmacs
 Caldera OpenLinux Release 1.3 支持的以太网卡，314-318
 感叹号 ！ 元字符，160
 执行权限，66
-退出
-应用程序，50
-控制台，126
-vim，146
 导出 NFS 卷，264
 提取文件
 dump 备份，230-232
@@ -10352,26 +10482,26 @@ XT，341
 
 硬链接，135
 
-硬件
-
-备份，216
-
-安装 Linux 前识别，290-291
-
-安装 Linux 前盘点，292
-
-安装 Linux 的最低要求，292-293
-
-不支持，342
-
-硬件配置区域（LISA），246
-
 head 命令，139
 
 Help 按钮（KFM 工具栏），33
 帮助来源
 
 /usr/doc，168-169
+
+apropos 命令，165
+
+内置命令信息，167
+
+GNU 的 info 系统，170-171
+
+UNIX man 页面，164-166
+
+USENET，171-172
+
+whatis 命令，166
+
+whereis 命令，167
 
 隐藏应用程序，42
 历史列表，160
@@ -10397,13 +10527,6 @@ Caldera OpenLinux Release 1.3 支持的 IDE-SCSI 设备，327
 IMAP（交互式邮件访问协议），97
 inetd 程序和网络服务，270
 info 系统（在线文档），170-171
-inode，122
-输入和输出
-  互连，157-158
-  重定向
-    命令组，156
-    STDERR 流，156
-    STDOUT 流，153，155
 安装源选择，安装 Linux，300
 安装
   应用程序，235-236
@@ -10547,8 +10670,6 @@ URL 和，31
 KFM 上下文菜单，63-64
 KFM 工具栏按钮，32
 KFM 窗口，启动，70
-kill 命令，使用监控进程，257
-杀死作业，162
 kmail，使用邮件访问，97
 knews，使用阅读邮件，101
 Korn shell，117
@@ -10586,7 +10707,6 @@ LILO 启动管理器，安装 Linux 后配置，303-304
   符号链接，134
 Linux，安装。参见安装，Linux
 Linux 文档项目（LDP），169
-Linux 安装与系统管理。参见 LISA
 Linux 新闻组，172
 LISA（Linux 安装与系统管理）
   启动管理器配置区域，249
@@ -10604,20 +10724,9 @@ LISA（Linux 安装与系统管理）
   远程目录，122
   文件，120-122
 列表，操作，17
-ln 命令，136
-本地网络，通过本地网络连接到互联网，90-91
 locate 命令，193-194
 locate 数据库，构建，193
 定位文件，193-194
-日志文件，监控
-  last 命令，260
-  lastb 命令，261
-登录
-  控制台，使用，118
-  错误，10
-注销，19
-登录名，更改，211
-登录脚本，使用，87
 logout 命令，126
 Long View 命令（View 菜单），35-36
 ls 命令，120
@@ -10674,12 +10783,6 @@ mkdir 命令，130
   Caldera OpenLinux Release 1.3 支持的指向设备，321
   类型，在安装 Linux 时配置，302
   使用，13
-移动
-  文件和目录，133
-  将文件和文件夹移至回收站，62
-  主目录，210
-  文本，57-58
-  窗口，27
 msd（Microsoft System Diagnostics），使用其识别硬件，290
 mt 命令，回绕磁带，224-225
 多启动系统，安装 Linux，293
@@ -10859,37 +10962,59 @@ PC 卡，Caldera 网站，321
   umask 命令，181-182
   用户，174-175
 个人资料，更改，187
-管道
-  描述，122
-  互联输入和输出，157-158
-点对点协议（PPP），使用其连接到网络
-  调试连接，89
-  描述，85
-添加拨号配置，83，85-87
-添加互联网连接，80，83
-配置调制解调器设备，88-89
-邮局协议（POP），97
-PostScript 和打印，200
-PPP。参见点对点协议
-按下鼠标按钮，14
-打印机
-  在安装 Linux 时选择，302
-  在网络内共享，273-275
-打印
-  日历，189-190
-  在 Linux 和 UNIX 下，200-201
-进程，监控
-  kill 命令，257
-  nicing，258
-  ps 命令，256
-  top 程序，254-255
-procinfo 程序，使用其监控内存，252-253
-编程语言和 shell，117
-程序，40
-项目，共享文件，182-183
-ps 命令，使用其监控进程，256
-pwd 命令，120
-Q-R
+Panel
+从中添加和删除应用程序，109
+添加应用程序到，105
+创建 kdelnk 文件，106-108
+使用 kdelnk 文件，108
+
+桌面上的面板，11
+面板窗口，23
+Caldera OpenLinux Release 1.3 支持的并行端口 CD-ROM 驱动器，313
+分区表，在安装 Linux 时更改，299
+
+分区
+为多启动系统创建，294
+在安装 Linux 时创建
+主分区，299
+根分区，300
+交换分区，299
+在安装 Linux 时保存更改，300
+passwd 命令，186
+密码
+  更改，186
+  指南，213
+  登录，10
+  阴影密码，213
+Paste 命令（Edit 菜单），58
+PATH 环境变量，125
+文件路径名，30
+路径，相对和绝对，124-125
+PC 卡，Caldera 网站，321
+性能监控，251
+权限
+  描述，37
+  设置
+    文件和文件夹，65-67
+    使用符号，179-180
+  类型，66
+权限机制
+  账户，178
+  chmod 命令，178，180
+  显示信息，175
+  组，182-183
+  组，更改，177
+  主目录，178
+  id 命令，176
+  概述，173
+  root 账户，177
+  设置权限为数字，178-180
+  su 命令，176
+  umask 命令，181-182
+  用户，174-175
+个人资料，更改，187
+
+## Q-R
 四分之一英寸盒式磁带和备份，218
 查询数据库，237-239
 问号（?）元字符，160
@@ -11027,28 +11152,8 @@ shutdown 命令，127
 简单备份，221
 单用户模式启动，227
 站点。参见 FTP 站点；Web 站点
-滑块
-更改设置，18
-描述，16
-智能 UNIX 命令，167
-SMB（服务器消息块），273-275
-套接字，122
-软件包管理区域（LISA），245
-sort 命令，196
-排序文本行，196
-Linux 的声音支持，282
-拼写检查器，ispell，149
-split 命令，198
-分割文件，198
 标准应用程序窗口，22
 星号（*）元字符，159
-启动
-  应用程序，40-41，48
-  安装，296
-STDERR 流，156
-STDOUT 流
-  追加文件，155
-  重定向到文件，153
 Stick or Pin 按钮，24
 sticky 位，181
 备份策略，226
@@ -11130,7 +11235,6 @@ telnet 命令，199
     创建和编辑文件，144-145
     访问教程，143
   XEmacs，147-149
-文本字段，18
 文本处理（UNIX）
   groff 格式化程序，201-203
   打印，200-201
@@ -11154,7 +11258,6 @@ Trash（KFM）
 ## U
 关闭计算机，19
 UDP（用户数据报协议），85
-umask 命令，181-182
 统一资源定位符（URLs），31
 卸载应用程序，237
 UNIX，使用文本处理
@@ -11162,9 +11265,6 @@ UNIX，使用文本处理
   打印，200-201
 UNIX 命令提示符，116
 UNIX 压缩归档文件，从中提取文件，241-242
-UNIX 手册页
-  访问，164-165
-  Linux 下的章节，166
 Up 按钮（KFM 工具栏），32
 updatedb 命令，193
 升级应用程序，237
@@ -11196,86 +11296,44 @@ usermod 命令，210-211
   字数统计（wc），195
 
 ## V
-变量
-  环境（PATH），125
-  noclobber，154
-验证系统，240
-视频卡
-  为 X Windows 配置，306
-  XFree86 3.3.2 服务器支持的，329-341
-视图菜单命令
-  长视图，35-36
-  显示树，35
-查看
-  命令别名，130
-  日期和时间，188-189
-  文件夹，33
-  谁登录到系统，187
-vim（文本编辑器）
-  命令乘数，146
-  导航文档，145
-  执行 shell 命令，146
-  退出，146
-  创建和编辑文件，144-145
-  概述，143
-  访问教程，143
-  网站，147
-虚拟控制台访问，118
-虚拟桌面
-  更改数量，47
-  使用 Active Desktop Borders 功能配置，45
-  自定义，47
-  Desktop Pager，45
-  面板和，11
-  发送应用程序到其他桌面，44
-  跨虚拟桌面共享应用程序，44
-  在之间切换，43
-虚拟内存，252
-
-
-
-
-
-## W
-
-- Visual Editor (vi)，141
-- w command，187
-- Web，访问
-  - KDE，使用，94
-  - Netscape，使用，95
-  - 概述，93
-- Web pages，控制访问，272-273
-- Web sites
-  - Caldera
-    - OpenLinux，311
-    - PC Card Support，321
-    - sound card compatibility，342
-  - Linux Documentation Project (LDP)，169
-  - Netcraft，271
-  - Usenet，101
-  - vim，147
-  - XFree86，341
-- whatis command，166
-- whatis database，166
-- whereis command，167
-- who command，187
-- windowed environment，21-22
-- windows
-  - accessing overlapping，26
-  - active，25
-  - categories of，22
-  - closing，28
-  - controls，24-25
-  - dialog boxes，23
-  - KFM，31
-  - moving，27
-  - panel，23
-  - resizing，27
-  - scrollbars，26
-  - standard application，22
-- Windows compressed archive files，提取文件，242
-- word count (wc) utility，195
-- write-once CD-ROMs and backups，219
+Visual Editor (vi)，141
+w command，187
+Web，访问
+  KDE，使用，94
+  Netscape，使用，95
+  概述，93
+Web pages，控制访问，272-273
+Web sites
+  Caldera
+    OpenLinux，311
+    PC Card Support，321
+    sound card compatibility，342
+  Linux Documentation Project (LDP)，169
+  Netcraft，271
+  Usenet，101
+  vim，147
+  XFree86，341
+whatis command，166
+whatis database，166
+whereis command，167
+who command，187
+windowed environment，21-22
+windows
+  accessing overlapping，26
+  active，25
+  categories of，22
+  closing，28
+  controls，24-25
+  dialog boxes，23
+  KFM，31
+  moving，27
+  panel，23
+  resizing，27
+  scrollbars，26
+  standard application，22
+Windows compressed archive files，提取文件，242
+word count (wc) utility，195
+write-once CD-ROMs and backups，219
 
 ## X
 
@@ -11303,4 +11361,3 @@ vim（文本编辑器）
 - zsh (shell)，117
 
 目录
-

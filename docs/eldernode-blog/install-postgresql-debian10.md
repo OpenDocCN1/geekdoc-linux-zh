@@ -1,3 +1,4 @@
+
 # 如何在 Debian 上安装 Debian 10 - postgre 中的 PostgreSQL 数据库
 
 > 原文：<https://blog.eldernode.com/install-postgresql-debian10/>

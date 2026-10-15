@@ -1,12 +1,13 @@
+
 # 数列中的第 n 位数字程序
 
 > 原文：[`techbyexample.com/nth-digit-sequence-program/`](https://techbyexample.com/nth-digit-sequence-program/)
 
-## **概述**
+## 概述
 
-给定一个整数 n，找出无限序列 {1, 2, 3, 4 ….. 无限} 中的第 n 位数字。
+给定一个整数 `n`，找出无限序列 {1, 2, 3, 4 ….. 无限} 中的第 `n` 位数字。
 
-示例
+示例：
 
 ```go
 Input: 14
@@ -15,7 +16,7 @@ Output: 1
 
 数列 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 … 的第 14 位是 1，它是数字 12 的一部分。
 
-示例 2
+示例 2：
 
 ```go
 Input: 17
@@ -24,7 +25,7 @@ Output: 3
 
 数列 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13 … 的第 17 位是 3，它是数字 13 的一部分。
 
-## **程序**
+## 程序
 
 下面是相应的程序。
 
@@ -81,7 +82,7 @@ func main() {
 
 	output = findNthDigit(17)
 	fmt.Println(output)
-} 
+}
 ```
 
 **输出**

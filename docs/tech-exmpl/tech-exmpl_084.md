@@ -1,10 +1,12 @@
-# 统计数字序列转换为字母的所有可能解码￼
+
+
+# 统计数字序列转换为字母的所有可能解码
 
 > 原文：[`techbyexample.com/count-possible-decodings-digit/`](https://techbyexample.com/count-possible-decodings-digit/)
 
-## **概述**
+## 概述
 
-假设我们有下面的数字到字母的映射
+假设我们有下面的数字到字母的映射：
 
 ```go
 'A' -> "1"
@@ -13,9 +15,9 @@
 'Z' -> "26"
 ```
 
-目标是统计给定数字序列的所有可能解码方式
+目标是统计给定数字序列的所有可能解码方式。
 
-示例
+示例：
 
 ```go
 Input: '15'
@@ -24,9 +26,9 @@ Output: 2
 15 can be decoded as "AE" or "O"
 ```
 
-## **程序**
+## 程序
 
-这是相应的程序。
+这是相应的程序：
 
 ```go
 package main
@@ -97,8 +99,9 @@ func main() {
 }
 ```
 
-**输出**
+## 输出
 
 ```go
 2
 ```
+

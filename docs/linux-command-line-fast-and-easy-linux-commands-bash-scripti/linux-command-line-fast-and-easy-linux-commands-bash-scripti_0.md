@@ -1,15 +1,9 @@
+
 # Linux 命令行：快速易学！Linux 命令、Bash 脚本技巧、Linux Shell 编程技巧与 Bash 单行命令
-
-
-
-![](img/00054.jpeg)
-
-
-
 
 ## 免责声明
 
-尽管已尽一切努力验证书中提供的信息，但作者对书中包含的错误、遗漏或对主题的相反的解释不承担任何责任。书中提供的信息仅供教育和娱乐目的之用。
+尽管已尽一切努力验证书中提供的信息，但作者对书中包含的错误、遗漏或对主题的相反解释不承担任何责任。书中提供的信息仅供教育和娱乐目的之用。
 
 ## 引言
 
@@ -23,31 +17,27 @@ Linux 的开发始于 1983 年，当时理查德·斯尔曼（Richard Stallman�
 
 让我们探索从你开始所需的基础命令到复杂的 Linux 命令。要打开命令行，请在桌面上点击右键并选择 `Open Terminal`（打开终端）。如果不可用，在桌面顶部找到 `Applications`（应用程序）。点击后，选择 `Accessories`（附件）。选择 `Open terminal`（打开终端）。打开一个你喜欢的文本编辑器，如 Gedit 或 Vim。要打开 Gedit 文本编辑器，只需在搜索栏中搜索它。要在命令行中打开被称为 vi 编辑器的 Vim，输入命令：
 
-```
+```bash
 vi filename
 ```
-
-
-
 
 其中 `filename` 是文件的名称。我将文件命名为 `myfile`。按下回车键后，将打开 `vi` 编辑器。现在你可以向文件中添加任意的文本。请注意，要从 `vi` 编辑器的命令模式切换，你必须按下字母 `i`，否则你将无法向文件中添加任何文本。
 
 文本内容如下：
 
 Linux 命令行是程序员来说中一个非常强大的工具。
+
 通过它可以实现很多功能。
 
 然后，你可以将文件保存到你可以方便访问的地方，例如桌面。在 `vi` 编辑器中，只需按下 `Esc` 键然后输入 `wq` 即可。这将保存文件。
 
 在命令行中，输入以下命令然后按回车键：
 
-```
+```bash
 cat myfile
 ```
 
-按下回车键后，你在文件中添加的文本将显示在标准输出上。如下图所示：
-
-![](img/00001.jpeg)
+按下回车键后，你在文件中添加的文本将显示在标准输出上。
 
 这表明 `cat` 命令用于在标准输出上显示文件的内容。然而，请用它来显示短文件的内容。
 
@@ -55,19 +45,19 @@ cat myfile
 
 有时，你可能需要更改工作目录。可以通过终端使用 `cd`（更改目录）命令来实现，如下所示：
 
-```
+```bash
 cd /home
 ```
 
 上面的命令将工作目录更改为 home 目录，由于使用了正斜杠，它是相对于根目录的，即 `/`。无论当前的工作目录是什么，上述命令都将执行。输入以下命令：
 
-```
+```bash
 cd httpd
 ```
 
 在按下回车键后，完整的工作目录将变为 `/home/httpd`，这意味着我们已经切换到了 `httpd` 目录，但相对于 `/home` 目录。要切回用户的家目录，请使用以下命令：
 
-```
+```bash
 cd ~
 ```
 
@@ -77,13 +67,13 @@ cd ~
 
 在 Linux 中，`cp`（copy files）用于复制文件。在复制过程中，会在指定位置创建一个原始文件的副本，这意味着初始文件不会被删除。要为文件 `myfile` 创建一个副本，请运行以下命令：
 
-```
+```bash
 cp myfile myfile2
 ```
 
 上面的命令将创建文件 `myfile` 的副本并将其命名为 `myfile2`。这两个文件将非常相似，但命名有所不同。然而，运行上述命令是有风险的，因为如果目录中已经存在文件 `myfile2`，它将在不发出警告的情况下被覆盖。为了这个问题，应该使用如下所示的 `-i` 选项：
 
-```
+```bash
 cp –i myfile myfile2
 ```
 
@@ -91,7 +81,7 @@ cp –i myfile myfile2
 
 你可能需要将某个目录中包含的所有文件复制到另一个目录。可以使用以下命令完成：
 
-```
+```bash
 cp –dpr originaldirectory finaldirectory
 ```
 
@@ -103,17 +93,17 @@ cp –dpr originaldirectory finaldirectory
 
 如果你不指定上述选项，则将应用默认选项。这不建议这样做，因为你可能需要保留链接和文件属性，而默认选项可能无法完成这些操作。
 
-每个挂载的文件系统都占用了磁盘上的一些空间。要此每个文件系统的空间大小，请使用命令：
+每个挂载的文件系统都占用了磁盘上的一些空间。要查看每个文件系统的空间大小，请使用命令：
 
-```
+```bash
 df
 ```
 
 ### less 命令
 
-此命令与“more”命令几乎相似，区别在于，使用此命令时你可以通过文件向上和向下移动页面。考虑下面的命令：
+此命令与 `more` 命令几乎相似，区别在于，使用此命令时你可以通过文件向上和向下移动页面。考虑下面的命令：
 
-```
+```bash
 less myfile
 ```
 
@@ -121,39 +111,39 @@ less myfile
 
 ### ln 命令
 
-要为你的文件创建符号链接，请使用 `ln` 命令。输入下所示命令：
+要为你的文件创建符号链接，请使用 `ln` 命令。输入如下所示命令：
 
-```
+```bash
 ln –s myfile mlink
 ```
 
-上面的命令将创建一个名为 `mlink` 的符号链接以链接到文件 `myfile`。要显示两个文件不同且包含不同的索引节点（inodes），请使用命令
+上面的命令将创建一个名为 `mlink` 的符号链接以链接到文件 `myfile`。要显示两个文件不同且包含不同的索引节点（inodes），请使用命令：
 
-```
+```bash
 ln –i myfile mlink
 ```
 
 ### locate 命令
 
-如果你需要在数据库中进行搜索，请使用 `locate` 命令。考虑下所示命令：
+如果你需要在数据库中进行搜索，请使用 `locate` 命令。考虑如下所示命令：
 
-```
+```bash
 slocate –u
 ```
 
-该命令将创建一个数据库并将其命名为 `slocate`。问题是该过程可能需要很长时间，因此需要耐心。但该命令是重要的，因为在没有运行它之前你就无法搜索文件。听过 `cron` 吗？它被用于调度任务。它会定期运行上述命令，因此你可能不需要手动执行。输入下所示命令并运行它：
+该命令将创建一个数据库并将其命名为 `slocate`。问题是该过程可能需要很长时间，因此需要耐心。但该命令是重要的，因为在没有运行它之前你就无法搜索文件。听过 `cron` 吗？它被用于调度任务。它会定期运行上述命令，因此你可能不需要手动执行。输入如下所示命令并运行它：
 
-```
+```bash
 locate whois
 ```
 
-上面的命令将搜索你系统中包含的所有名称中包含“whois”字符串的文件。
+上面的命令将搜索你系统中包含的所有名称中包含 `whois` 字符串的文件。
 
 ### logout 命令
 
 此命令仅注销当前登录的用户。打开终端并输入以下内容：
 
-```
+```bash
 logout
 ```
 
@@ -161,43 +151,37 @@ logout
 
 ### ls 命令
 
-此命令用于列出当前登录的用户（注：此处应为文件）。使用此命令列出特定目录包含的文件，`ls` 意味着列出。该命令有许多相关选项需要理解。输入下所示命令并按下回车键：
+此命令用于列出当前登录的用户（注：此处应为文件）。使用此命令列出特定目录包含的文件，`ls` 意味着列出。该命令有许多相关选项需要理解。输入如下所示命令并按下回车键：
 
-```
+```bash
 ls
 ```
 
 该命令将列出当前目录包含的文件。
 
-![](img/00002.jpeg)
+上面的图显示了目录中包含的文件。然而，如果该目录包含以点（`.`）开头的文件，使用此命令将无法列出。假设你想知道文件的大小、创建日期以及相关的权限，你可以通过以下命令实现：
 
-上面的图显示了目录中包含的文件。然而，如果该目录包含以点（`.`）开头的文件，使用此命令将无法无法列出。假设你想知道文件的大小、创建日期以及相关的权限，你可以通过以下命令实现：
-
-```
+```bash
 ls –al
 ```
 
-![](img/00003.jpeg)
-
-如你在图中所示，输出更加详细。第一部分以“d”或“-”开头，其中“d”表示目录，而“-”表示这是一个文件。`rwx` 代表权限，其中 `r` 代表读取权限，`w` 代表写入权限，而 `x` 表示执行权限。文件的大小和创建日期也可见。
+如你在图中所示，输出更加详细。第一部分以 `d` 或 `-` 开头，其中 `d` 表示目录，而 `-` 表示这是一个文件。`rwx` 代表权限，其中 `r` 代表读取权限，`w` 代表写入权限，而 `x` 表示执行权限。文件的大小和创建日期也可见。
 
 ### more 命令
 
 使用此命令，文件的内容将发送到屏幕上。这将按页的方式进行。该命令也适用于管道输出。
 
-输入并运行下所示命令：
+输入并运行如下所示命令：
 
-```
+```bash
 more /etc/profile
 ```
 
 上面的命令将输出 `/etc/profile` 文件的内容。该文件包含了有关系统的详细信息。按下回车键后，输出如下所示：
 
-![](img/00004.jpeg)
-
 注意，这是一个内置文件，它随操作系统自带。该文件还包含大量内容，无法在一个页面显示完。通过上述命令，这些内容将逐页显示。输入并运行下面的命令：
 
-```
+```bash
 ls –al | more
 ```
 
@@ -205,27 +189,23 @@ ls –al | more
 
 ### mv 命令
 
-`mv` 命令用于移动或重命名文件，`mv` 代表移动。输入下所示命令：
+`mv` 命令用于移动或重命名文件，`mv` 代表移动。输入如下所示命令：
 
-```
+```bash
 mv –i myfile file
 ```
 
-上面的命令将文件 `myfile` 重命名为 `file`，这意味着它已被移动。这是在 Linux 中重命名命名文件最简单的方法。考虑以下命令：
+上面的命令将文件 `myfile` 重命名为 `file`，这意味着它已被移动。这是在 Linux 中重命名文件最简单的方法。考虑以下命令：
 
-```
+```bash
 mv /directory1/myfile
 ```
 
 上面的命令将文件 `myfile` 从目录 `/directory1` 移动到当前工作目录中。这非常简单，并展示了 `mv` 命令的功能。
 
-
-
-
-
 问题是，什么是工作目录？这是你当前正在工作的目录。要查看你所所在的目录，请使用以下命令：
 
-```
+```bash
 pwd
 ```
 
@@ -249,8 +229,6 @@ shutdown –r now
 
 你可能需要检查你之前运行过的命令。原因可能是你更改了某些内容，而现在你想要撤销这些更改。要查看这些命令的列表，请运行如下所示的 `history` 命令：
 
-![](img/00005.jpeg)
-
 上图显示了我最近运行的命令。
 
 ### sudo 命令
@@ -273,39 +251,27 @@ sudo apt-get upgrade
 
 上述命令将升级你系统中正在使用的操作系统版本。同样，你必须连接互联网。注意，在 Red Hat Linux 中，该命令被 `yum` 命令取代，因此 Red Hat Linux 不支持 `sudo` 命令。
 
-mkdir 命令
+### mkdir 命令
 
-`mkdir` 代表“make directory”（创建目录）。它用于创建新目录。如果代表目录的文件夹已经存在，你将收到一个告知该情况的错误。让我创建一个目录并将其命名为 myfiles。
+`mkdir` 代表“make directory”（创建目录）。它用于创建新目录。如果代表目录的文件夹已经存在，你将收到一个告知该情况的错误。让我创建一个目录并将其命名为 `myfiles`。
 
 ```bash
 mkdir myfiles
 ```
 
-上述命令显示我将创建一个名为 `myfiles` 的目录。这可以通过底图所示来说：
-
-![](img/00006.jpeg)
-
-注意，在创建目录后，我使用了 `list` 命令，该目录将列在可用目录列表中。这说明它已被创建。如果上述命令运行失败，请在前面加上 `sudo` 命令，并在提示时提供密码。
+上述命令显示我将创建一个名为 `myfiles` 的目录。在创建目录后，我使用了 `list` 命令，该目录将列在可用目录列表中。这说明它已被创建。如果上述命令运行失败，请在前面加上 `sudo` 命令，并在提示时提供密码。
 
 ### cal 命令
 
-此命令显示特定年份的月份。这一年份可以是当前的、过去的、甚至是未来的。只需打开命令提示符并输入命令 `cal` 即可。按回回车键：
-
-![](img/00007.jpeg)
+此命令显示特定年份的月份。这一年份可以是当前的、过去的、甚至是未来的。只需打开命令提示符并输入命令 `cal` 即可。按回车键：
 
 如所示，它显示了当天的日期，并且是正确的。现在，让我们显示 1980 年的 5 月，这是一个过去的年份：
 
-![](img/00008.jpeg)
-
 你也可以显示未来年份的月份，如下所示：
-
-![](img/00009.jpeg)
 
 ### date 命令
 
-如果你需要显示当前的时间日期，请使用如下所示的命令：
-
-![](img/00010.jpeg)
+如果你需要显示当前的日期和时间，请使用如下所示的命令：
 
 执行 `date` 命令后，当前的日期和时间将形成上图所示的输出。然而，你可能会发现系统上的日期是错误的。
 
@@ -319,7 +285,7 @@ date –set='1 April 2015 19:30'
 
 ### grep 命令
 
-有时，你可能需要从某个文件中搜索模式或字符串。在大多数情况下，各种 Linux 发行版都都预装了此命令。
+有时，你可能需要从某个文件中搜索模式或字符串。在大多数情况下，各种 Linux 发行版都预装了此命令。
 
 然而，如果你发现没有安装，也可以通过以下命令进行安装：
 
@@ -333,63 +299,41 @@ sudo apt-get install grep
 yum install grep
 ```
 
-记得我们创建了文件并将其命名为 `myfile`，内容如下：
-
-![](img/00011.jpeg)
+记得我们创建了文件并将其命名为 `myfile`，内容如前所述。
 
 我们想使用 `grep` 命令对其进行搜索。要在文件中搜索单词 `powerful`，应该使用以下方法：
 
 ```bash
-grep ‘powerful’ myfile
+grep 'powerful' myfile
 ```
-
-这通过下图所示进行了说明：
-
-![](img/00012.jpeg)
 
 该命令输出文件中包含搜索词的行，并将搜索词标为红色。这将其与其他单词区分开来。注意，搜索是区分大小写的。
 
 让我们搜索单词 `Powerful` 而不是 `powerful`：
 
-![](img/00013.jpeg)
-
 如上述输出所示，文件中不存在 `Powerful` 单词。这是因为我们使用了大写字母。然而，可以进行不区分大小写的搜索。这可以通过如下所示的 `-i` 参数来实现：
-
-![](img/00014.jpeg)
 
 `-i` 让 `powerful` 和 `Powerful` 相同，因此我们将得到结果。
 
-要执行多重搜索，即一次性搜索多个单词，我们仍然可以使用 `grep` 命令。演示如下：
-
-![](img/00015.jpeg)
-
-注意在图中，我们正在搜索两个单词，即 `powerful`。`-i` 让不区分大小写，所以不要被它困扰。
+要执行多重搜索，即一次性搜索多个单词，我们仍然可以使用 `grep` 命令。注意在图中，我们正在搜索两个单词，即 `powerful`。`-i` 让不区分大小写，所以不要被它困扰。
 
 要查看包含单词 `powerful` 的文件行号，请使用如下所示的命令：
 
 ```bash
-grep -n ‘powerful’ myfile
+grep -n 'powerful' myfile
 ```
-
-![](img/00017.jpeg)
 
 考虑下面的命令及其输出：
 
 ```bash
-grep -i1 ‘can’ myfile
+grep -i1 'can' myfile
 ```
 
-上述命令输出如下：
-
-![](img/00018.jpeg)
-
-该命令输出了符合我们搜索标准 `can` 的一行。这是因为我们使用了 `1`。如果我们使用 `2`，输出将如下：
-
-![](img/00019.jpeg)
+上述命令输出了符合我们搜索标准 `can` 的一行。这是因为我们使用了 `1`。如果我们使用 `2`，输出将包含两行。
 
 ### tail 命令
 
-Linux 中非常常用的命令，用于提供文件的末部分。它提供指定文件的最后 10 行。如果你需要获取 `myfile` 的最后 10 行，请使用以下命令：
+Linux 中非常常用的命令，用于提供文件的末尾部分。它提供指定文件的最后 10 行。如果你需要获取 `myfile` 的最后 10 行，请使用以下命令：
 
 ```bash
 tail myfile
@@ -405,13 +349,7 @@ tail myfile
 tail myfile –n 2
 ```
 
-![](img/00020.jpeg)
-
 如所示，我们指定了只想输出 `myfile` 的最后 2 行。这就是我们输出的内容。`-n` 选项在使用此命令时用于指定形成输出的行数。
-
-
-
-
 
 ```bash
 tail -f myfile | grep 24.13.152.12
@@ -425,9 +363,7 @@ tail -f myfile | grep 24.13.152.12
 tail –c5 myfile
 ```
 
-![](img/00021.jpeg)
-
-输出结果意味着只有“it”这个单词和句号（`.`）构成了文件的最后 5 个字节。还可以将上述选项与加号（`+`）符号结合，从某个字节开始打印字节。
+输出结果意味着只有 `it` 这个单词和句号（`.`）构成了文件的最后 5 个字节。还可以将上述选项与加号（`+`）符号结合，从某个字节开始打印字节。
 
 考虑下面所示的命令：
 
@@ -435,9 +371,7 @@ tail –c5 myfile
 tail –c+10 first
 ```
 
-上述命令将打印从第 10 个字节开始的文件最后几个字节。输出如下所示：
-
-![](img/00022.jpeg)
+上述命令将打印从第 10 个字节开始的文件最后几个字节。
 
 ### wc 命令
 
@@ -447,23 +381,19 @@ tail –c+10 first
 wc –l <myfile
 ```
 
-该命令输出以下内容：
-
-![](img/00023.jpeg)
-
 该命令给出了文件 `myfile` 中包含的行数，共三行。如果你还需要获取文件名，请使用以下命令：
 
 ```bash
 wc –l myfile
 ```
 
-![](img/00024.jpeg)
-
 运行下面所示的命令：
 
 ```bash
 wc myfile
 ```
+
+
 
 以下内容将形成文件的输出：
 
@@ -473,15 +403,13 @@ wc myfile
 
 当像下面所示分割上述输出时，就变得简单了：
 
-`wc –c myfile`– 这将输出构成文件的总字节数。
-
-`wc –w myfile`– 输出文件中包含的单词数。
-
-`wc –m myfile`– 将输出构成文件的字符数。
+- `wc –c myfile`– 这将输出构成文件的总字节数。
+- `wc –w myfile`– 输出文件中包含的单词数。
+- `wc –m myfile`– 将输出构成文件的字符数。
 
 如果你无法记住第一条命令使用的顺序，那么建议你使用上述简单的替代选项。
 
-### last 命令
+### `last` 命令
 
 当你想要知道最近登录系统的用户时，这个命令非常有用。这在工业界安全目的中非常有价值。用户不会否认曾在某个时间登录过系统。打开命令行并输入命令 `last`。观察输出：
 
@@ -544,29 +472,41 @@ echo David{John,Julius}
 ```bash
 tail –c5 myfile
 ```
+
 （注：此处原文逻辑可能有误或引用了 tail，此处保持原意）
+
 如你所见，大括号内的列表出现在 `David` 字符串之后。这种方式如下所示：
 
 ```bash
 echo David{John,Julius}
 ```
+
 （注：此处原文逻辑似乎重复，按原意翻译）
+
 如你所见，大括号内的列表出现在 `David` 字符串之后。这种方式如下所示：
 
 ```bash
 echo David{John,Julius}
 ```
+
 （注：此处原文逻辑似乎重复，按原意翻译）
+
 如你所见，大括号内的列表出现在 `David` 字符串之后。这种方式如下所示：
+
 ```bash
 echo David{John,Julius}
 ```
+
 （注：此处原文逻辑似乎重复，按原意翻译）
+
 如你所见，大括号内的列表出现在 `David` 字符串之后。这种方式如下所示：
+
 ```bash
 echo David{John,Julius}
 ```
+
 （注：此处原文逻辑似乎重复，按原意翻译）
+
 如你所见，大括号内的列表出现在 `David` 字符串之后。
 
 （注：此处原文似乎存在多处重复逻辑错误）
@@ -640,13 +580,11 @@ echo $day
 
 ![](img/0036.jpeg)
 
-
-
 将显示当前日期。通过上述样式，命令可以轻松嵌套，并且会变得易于阅读。
 
 特定命令的输出也可以重定向到特定文件。操作如下所示：
 
-```
+```bash
 find / -name file > result.txt
 ```
 
@@ -707,7 +645,7 @@ find -name file.sh | d /tmp/result2.txt 2>&1
 
 提示符将变为如下所示：
 
-```
+```text
 (reverse-i-search)`':
 ```
 
@@ -816,29 +754,19 @@ echo "Mr. /Mrs. $name, good bye friend"
 
 Shell 变量有两类：
 
-1.  **系统变量**：这些由操作系统创建并维护。它们用大写字母定义。
-2.  **用户定义变量**：用户创建并维护。它们用小写字母定义。
+1. **系统变量**：这些由操作系统创建并维护。它们用大写字母定义。
+2. **用户定义变量**：用户创建并维护。它们用小写字母定义。
 
 以下是一些 shell 系统变量：
 
-`BASH`: shell 的名称。
-
-`HOME`: 我们的家目录
-
-`LOGNAME`: 我们的登录名。
-
-`PATH`: 我们的路径设置。
-
-`USERNAME`: 当前登录的用户。
-
-
-
-
-`COLUMNS` - 构成屏幕的列数。
-
-`OSTYPE` - 我们正在运行的操作系统类型。
-
-`PWD` - 当前工作目录。
+- `BASH`：shell 的名称。
+- `HOME`：我们的家目录。
+- `LOGNAME`：我们的登录名。
+- `PATH`：我们的路径设置。
+- `USERNAME`：当前登录的用户。
+- `COLUMNS`：构成屏幕的列数。
+- `OSTYPE`：我们正在运行的操作系统类型。
+- `PWD`：当前工作目录。
 
 上述内容仅为系统变量的示例。如果你想打印上述任何变量，可以使用如下所示的 `echo` 命令和 `$` 符号：
 
@@ -851,13 +779,13 @@ echo $PWD
 
 使用以下语法定义用户自定义变量：
 
-```
+```text
 variable name=value
 ```
 
 `name` 指用于指代变量的名称。`value` 是该变量的内容。这通常是一个数字或字符串。示例：
 
-```
+```text
 num=10
 name=Mary
 ```
@@ -865,6 +793,7 @@ name=Mary
 ### 变量命名的小贴士
 
 1. 等号两边不应该有空格。例如：
+
 ```bash
 num=12- this is right
 num= 12- this is wrong
@@ -873,11 +802,13 @@ num = 12- this is wrong
 ```
 
 2. 变量名应以下划线或字母、数字开头。随后可以跟任何字母或数字。以下是有效变量的示例：
+
 - `PWD`
 - `SYSTEM_VERSION`
 - `num`
 
 3. 变量名是大小敏感的。例如：
+
 ```bash
 Num=2
 num=6
@@ -885,6 +816,7 @@ nUm=9
 nuM=10
 NUM=90
 ```
+
 上述示例显示变量名是不相等的。要打印上述任何一个，也请确保指定正确。例如，要打印 10，请使用以下代码：
 
 ```bash
@@ -892,14 +824,18 @@ echo $nuM
 ```
 
 4. 要定义空变量，请执行以下操作：
+
 ```bash
 num=
 num=""
 ```
+
 要打印它，请使用以下代码：
+
 ```bash
 E=echo $num
 ```
+
 然而，请注意由于变量是空的，将不会显示任何内容。
 
 5. 某些字符不应用于命名变量。这些包括星号 `*` 和问号 `?`。
@@ -908,11 +844,11 @@ E=echo $num
 
 循环代表一组重复执行的指令。
 
-### for 循环
+### `for` 循环
 
 该循环遵循以下语法：
 
-```
+```text
 for { name of the variable} in {list }
 do
     逐一个执行列表中的项目，直到完成。
@@ -927,13 +863,14 @@ do
     echo "Test for for loop"
 done
 ```
+
 运行上述程序后，你将看到输出。程序的操作首先定义变量 `j` 并将其值设置为从 1 到 5。程序的行 `echo "Test for for loop"` 将执行 5 次，因为 `j` 的值将递增到最大 5。这解释了输出。
 
-### while 循环
+### `while` 循环
 
 Shell 中的 `while` 循环采用以下语法：
 
-```
+```text
 while [ condition]
 do
     1st command
@@ -943,15 +880,16 @@ do
     ....
 done
 ```
+
 只要你指定的条件为真，循环就会一直执行。
 
-### case 语句
+### `case` 语句
 
 这在 Linux 中也很常见。人们可以使用它来代替 `if-else` 语句。
 
 它采用以下语法：
 
-```
+```text
 case $name_of_the_variable in
     1st pattern) command
         ...
@@ -971,7 +909,10 @@ case $name_of_the_variable in
         ;;
 esac
 ```
+
 注意我们以 `case` 开始，但以 `esac` 语句结束。考虑下面的示例：
+
+
 
 ```bash
 if [ -y $1 ]
@@ -991,9 +932,9 @@ case $r in
 esac
 ```
 
-## 用于决策的 if-else-fi
+## 用于决策的 `if-else-fi`
 
-`if-else-fi` 命令可以在 Shell 编程中用于决策目的。程序员指定一个条件，一旦满足，就会执行一条命令；如果不满足，则执行另一条命令。它采用以下语法：
+`if-else-fi` 命令可以在 Shell 编程中用于决策目的。程序员指定一个条件，一旦满足，就会执行一条命令；如果不满足，则会执行另一条命令。它采用以下语法：
 
 ```
 if condition
@@ -1004,6 +945,7 @@ else
     ... 执行命令
 fi
 ```
+
 考虑下面的示例：
 
 ```bash
@@ -1017,40 +959,42 @@ fi
 ## 第 5 章：Bash - 操作文件
 
 1. **截断文件大小**：使用 `>` 命令。如果文件存在，其大小会被截断；如果不存在，则会创建它。注意该运算符。
-```bash
-echo "string" > file
-```
+
+    ```bash
+    echo "string" > file
+    ```
 
 2. **向文件添加字符串**：单行命令使用 `>>` 运算符向文件中追加某些内容。如果操作符未找到文件，则会创建一个新的。示例：
-```bash
-echo "content" >> file
-```
+
+    ```bash
+    echo "content" >> file
+    ```
 
 3. **将文件的第一行赋值给变量**：在这种情况下，你需要读取文件的第一行并将其赋值给变量。使用输入运算符 `<`。
-```bash
-read -r myline < file
-```
+
+    ```bash
+    read -r myline < file
+    ```
 
 4. **读取文件**：`read` 命令可以与 `while` 循环结合，以便逐行读取文件。下例所示：
 
-```bash
-while IFS read -r myline; do
-    # 对变量 myline 进行操作
-done < file
-```
-当 `read` 命令遇到结束时，将返回失败代码。`while` 循环随后将停止。注意我们将 `< file` 放在了末尾。为了避免这种情况，将文件内容通过到 while 循环，如下所示：
+    ```bash
+    while IFS read -r myline; do
+        # 对变量 myline 进行操作
+    done < file
+    ```
 
-```bash
-cat file | while IFS= read -r myline; do
-    # 对变量 myline 进行操作
-done
-```
+    当 `read` 命令遇到结束时，将返回失败代码。`while` 循环随后将停止。注意我们将 `< file` 放在了末尾。为了避免这种情况，将文件内容通过到 `while` 循环，如下所示：
 
-
-
+    ```bash
+    cat file | while IFS= read -r myline; do
+        # 对变量 myline 进行操作
+    done
+    ```
 
 ### 5. 读取文件的任意行并将其赋值给变量
-外部程序可以协助 bash 读取程序的行。请考虑下面的代码：
+
+外部程序可以协助 `bash` 读取程序的行。请考虑下面的代码：
 
 ```bash
 read -r rline < <(shuf file)
@@ -1058,31 +1002,31 @@ read -r rline < <(shuf file)
 
 `shuf` 在现代 Linux 系统可用，并对此提供帮助。上述代码将读取文件的随机行并将其赋值给变量 `rline`。
 
-### 6. 要提取 tar 归档，请使用以下命令：
+### 6. 要提取 tar 归档，请使用以下命令
 
 ```bash
 tar xvf b.tar
 ```
 
-### 7. 查找两个文件之间的公共行数：
+### 7. 查找两个文件之间的公共行数
 
 ```bash
 sort doc1 doc2 | uniq –d
 ```
 
-### 8. 随机打乱文件的行：
+### 8. 随机打乱文件的行
 
 ```bash
 shuf filename.txt
 ```
 
-### 9. 求某一列的和：
+### 9. 求某一列的和
 
 ```bash
 awk '{ sum+=$1} END {print sum}' document.txt
 ```
 
-# 结论
+## 结论
 
 可以得出结论，Linux 是开源操作系统，拥有多种发行版。开发 Linux 的背后理念是为计算机开发一个免费的类 Unix 操作系统。每个 Linux 发行版都有两个版本，即服务器版本和桌面版本。桌面版本同时支持图形用户界面（GUI）和命令行。
 
@@ -1098,71 +1042,72 @@ Linux 命令行可以用于系统所需的几乎一切。当人们成为 Linux �
 
 1. Linux 命令行：成为 Linux 专家！（涵盖输入/输出重定向、通配符、文件安全、进程管理、Shell 编程高级特性、GUI 元素、实用的 Linux 命令）
 
-[`www.amazon.com/gp/product/B00XGUO4E4?Version=1&entries=0`](http://www.amazon.com/gp/product/B00XGUO4E4?Version=1&entries=0)
+   [`www.amazon.com/gp/product/B00XGUO4E4?Version=1&entries=0`](http://www.amazon.com/gp/product/B00XGUO4E4?Version=1&entries=0)
 
-![](img/00042.jpeg)
+   ![](img/00042.jpeg)
 
 2. 初学者 PHP 和 MySQL 编程：从零到专业的逐步进课程
 
-[`www.amazon.com/gp/product/B00XQBYXVW?Version=1&entries=0`](http://www.amazon.com/gp/product/B00XQBYXVW?Version=1&entries=0)
+   [`www.amazon.com/gp/product/B00XQBYXVW?Version=1&entries=0`](http://www.amazon.com/gp/product/B00XQBYXVW?Version=1&entries=0)
 
-![](img/00043.jpeg)
+   ![](img/00043.jpeg)
 
 3. Python 编程：通过学习 Python 编程基础知识快速入门。
 
-[`www.amazon.com/gp/product/B00WUNSH6Y?Version=1&entries=0`](http://www.amazon.com/gp/product/B00WUNSH6Y?Version=1&entries=0)
+   [`www.amazon.com/gp/product/B00WUNSH6Y?Version=1&entries=0`](http://www.amazon.com/gp/product/B00WUNSH6Y?Version=1&entries=0)
 
-![](img/00044.jpeg)
+   ![](img/00044.jpeg)
 
 4. 安卓编程：面向初学者的完整介绍 - 逐步指南如何轻松创建你自己的 Android 应用！
 
-[`www.amazon.com/gp/product/B00WPK68IQ?Version=1&entries=0`](http://www.amazon.com/gp/product/B00WPK68IQ?Version=1&entries=0)
+   [`www.amazon.com/gp/product/B00WPK68IQ?Version=1&entries=0`](http://www.amazon.com/gp/product/B00WPK68IQ?Version=1&entries=0)
 
-![](img/00045.jpeg)
+   ![](img/00045.jpeg)
 
 5. 安卓游戏编程：面向初学者的完整介绍：逐步指南如何轻松创建你自己的 Android 应用！
 
-[`www.amazon.com/gp/product/B011R2H2JQ?Version=1&entries=0`](http://www.amazon.com/gp/product/B011R2H2JQ?Version=1&entries=0)
+   [`www.amazon.com/gp/product/B011R2H2JQ?Version=1&entries=0`](http://www.amazon.com/gp/product/B011R2H2JQ?Version=1&entries=0)
 
-![](img/00046.jpeg)
+   ![](img/00046.jpeg)
 
 6. DOCKER：掌握 Docker 所需的所有知识（Docker 容器、容器链接、Whalesay 镜像、在 Mac OS X 和 Windows 上安装 Docker）
 
-[`www.amazon.com/gp/product/B013X2RPT0?Version=1&entries=0`](http://www.amazon.com/gp/product/B013X2RPT0?Version=1&entries=0)
+   [`www.amazon.com/gp/product/B013X2RPT0?Version=1&entries=0`](http://www.amazon.com/gp/product/B013X2RPT0?Version=1&entries=0)
 
-![](img/00047.jpeg)
+   ![](img/00047.jpeg)
 
 7. Docker：生产环境 Docker 指南（编程简单系列第 8 本）
 
-[`www.amazon.com/gp/product/B01452V9IA?Version=1&entries=0`](http://www.amazon.com/gp/product/B01452V9IA?Version=1&entries=0)
+   [`www.amazon.com/gp/product/B01452V9IA?Version=1&entries=0`](http://www.amazon.com/gp/product/B01452V9IA?Version=1&entries=0)
 
-![](img/00048.jpeg)
+   ![](img/00048.jpeg)
 
 8. Excel VBA 编程：快速学习 Excel 编程！（编程简单系列第 9 本）
 
-[`www.amazon.com/gp/product/B014DGVW?Version=1&entries=0`](http://www.amazon.com/gp/product/B014DGVW?Version=1&entries=0)
+   [`www.amazon.com/gp/product/B014DGVW?Version=1&entries=0`](http://www.amazon.com/gp/product/B014DGVW?Version=1&entries=0)
 
-![](img/00049.jpeg)
+   ![](img/00049.jpeg)
 
 9. VAGRANT：用 VAGRANT 让生活更简单。快速掌握 VAGRANT！（编程简单系列第 10 本）
 
-[`www.amazon.com/gp/product/B0151GIRCA?Version=1&entries=0`](http://www.amazon.com/gp/product/B0151GIRCA?Version=1&entries=0)
+   [`www.amazon.com/gp/product/B0151GIRCA?Version=1&entries=0`](http://www.amazon.com/gp/product/B0151GIRCA?Version=1&entries=0)
 
-![](img/00050.jpeg)
+   ![](img/00050.jpeg)
 
 10. Scala 编程：快速学习 Scala 编程！（编程简单系列第 11 本）
 
-http://www.amazon.com/gp/product/B0151TBXEQ?Version=1&entries=0
+    [`http://www.amazon.com/gp/product/B0151TBXEQ?Version=1&entries=0`](http://www.amazon.com/gp/product/B0151TBXEQ?Version=1&entries=0)
 
-![](img/00051.jpeg)
+    ![](img/00051.jpeg)
 
 11. Node. JS：初学者实用指南（编程简单系列第 12 本）
 
-[`www.amazon.com/gp/product/B01588CXAS?Version=1&entries=0`](http://www.amazon.com/gp/product/B01588CXAS?Version=1&entries=0)
+    [`www.amazon.com/gp/product/B01588CXAS?Version=1&entries=0`](http://www.amazon.com/gp/product/B01588CXAS?Version=1&entries=0)
 
-![](img/00052.jpeg)
+    ![](img/00052.jpeg)
 
 12. iOS 8 应用开发：快速轻松地开发你自己的应用！
 
-http://www.amazon.com/gp/product/B015CMEJVQ?Version=1&entries=0![](img/00053.jpeg)
+    [`http://www.amazon.com/gp/product/B015CMEJVQ?Version=1&entries=0`](http://www.amazon.com/gp/product/B015CMEJVQ?Version=1&entries=0)
 
+    ![](img/00053.jpeg)

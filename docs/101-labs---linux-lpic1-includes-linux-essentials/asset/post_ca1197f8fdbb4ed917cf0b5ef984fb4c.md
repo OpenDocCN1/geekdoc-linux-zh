@@ -1,24 +1,29 @@
 
 ## LAB 55
-### Basic File Editing: vi Modes
+
+### Basic File Editing: `vi` Modes
 
 **Lab Objective:**
-Learn how to use modes within the vi editor.
+
+Learn how to use modes within the `vi` editor.
 
 **Lab Purpose:**
-In this lab, you will learn about one of the classic (but often opaque to new users) Linux text editors, vi.
+
+In this lab, you will learn about one of the classic (but often opaque to new users) Linux text editors, `vi`.
 
 **Lab Tool:**
+
 Ubuntu 18.04 (or another distro of your choice)
 
 **Lab Topology:**
+
 A single Linux machine, or virtual machine
 
 ### Lab Walkthrough:
 
 #### Task 1
 
-Open the Terminal and run `vi Tab55.txt`. Now, explore the modes of vi:
+Open the Terminal and run `vi Tab55.txt`. Now, explore the modes of `vi`:
 
 - Type `i` to enter insertion mode, and enter a few lines of text. Type `ESC` to leave this mode.
 - Navigate to the middle of a line and type `a` to enter insertion mode one character after the cursor's position. Enter more text or hit `ESC` to exit the mode.
@@ -31,23 +36,29 @@ Open the Terminal and run `vi Tab55.txt`. Now, explore the modes of vi:
 - Finally, use `:q!` to quit, or if you’ve written something useful, `:w!` to save it. You may also use `:wq`, `:x`, or `ZZ` to save and quit.
 
 **Notes:**
+
 Hopefully, you can see that there is symmetry among `vi` commands—`a`/`A`, `o`/`O`, `y`/`yy` and `d`/`dd`, etc. Now that you’re a `vi` pro, install and try its improved version, `vim`!
 
 ## LAB 56
+
 ### Create Partitions and Filesystems
 
 **Lab Objective:**
+
 Learn how to configure disk partitions and filesystems.
 
 **Lab Purpose:**
+
 In this lab, you will learn about partitioning disks using tools such as `parted`, and creating filesystems with tools such as `mkfs`.
 
 Note: `fdisk` was covered extensively in Lab 32, and so will not be covered here. It is recommended to do Lab 32 to learn more about `fdisk`.
 
 **Lab Tool:**
+
 Ubuntu 18.04 (or another distro of your choice)
 
 **Lab Topology:**
+
 A single Linux machine, or virtual machine
 
 ### Lab Walkthrough:
@@ -110,18 +121,23 @@ Clean up:
 In this lab you only created an ext4 filesystem—ext4 is one of the most common filesystems used on Linux today, but it is far from the only option. Under what circumstances might you choose XFS, VFAT, exFAT, or Btrfs, instead?
 
 ## LAB 57
+
 ### Maintain the Integrity of Filesystems
 
 **Lab Objective:**
+
 Learn how to verify filesystem integrity and repair basic problems.
 
 **Lab Purpose:**
+
 In this lab, you will use tools such as `fsck` and `xfs_repair` to search for filesystem problems, as well as learn how to monitor free space and inodes.
 
 **Lab Tool:**
+
 Ubuntu 18.04 (or another distro of your choice)
 
 **Lab Topology:**
+
 A single Linux machine, or virtual machine
 
 ### Lab Walkthrough:

@@ -1,3 +1,4 @@
+
 # 注意事项
 
 ## 第五章 注意事项
@@ -10,7 +11,7 @@
 
 如果你想创建一个目录并授予 777 权限，你需要怎么做？查看 Go 的 API 文档我们可以这样写。
 
-源文件为 mkdir.go。
+源文件为`mkdir.go`。
 
 ```
 package main
@@ -41,7 +42,7 @@ drwxr-xr-x   2 tobe  wheel    68B Dec 30 10:06 gotest
 
 ## 正确做法
 
-代码在 mkdir_umask.go 中。
+代码在`mkdir_umask.go`中。
 
 ```
 package main

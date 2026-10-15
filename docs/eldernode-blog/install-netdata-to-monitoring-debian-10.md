@@ -1,3 +1,4 @@
+
 # 如何安装 NetData 来监控 Debian 10 - Eldernode 博客
 
 > 原文：<https://blog.eldernode.com/install-netdata-to-monitoring-debian-10/>
@@ -16,11 +17,7 @@
 
 **3-** 按照 Debian 10 的[初始设置进行设置](https://blog.eldernode.com/initial-setup-with-debian-10/)
 
-由于 NetData 被设计为安装在每一个 Linux 系统上，所以请阅读本文，了解如何将这个开源工具和监控代理安装到监控 Debian 10 上，以了解您的
-
-[Linux](https://blog.eldernode.com/tag/linux/)
-
-.
+由于 NetData 被设计为安装在每一个 Linux 系统上，所以请阅读本文，了解如何将这个开源工具和监控代理安装到监控 Debian 10 上，以了解您的 [Linux](https://blog.eldernode.com/tag/linux/)。
 
 ## 安装 NetData 来监控 Debian 10
 
@@ -48,7 +45,7 @@ sudo apt-get install zlib1g-dev uuid-dev libmnl-dev gcc make git autoconf autoco
 
 ### 如何安装 Netdata
 
-在此步骤中，官方安装脚本将帮助您开始安装 NetData。为了确保这一点，您为您的 shell 运行了 **bash** ，键入:
+在此步骤中，官方安装脚本将帮助您开始安装 NetData。为了确保这一点，您为您的 shell 运行了 `bash`，键入:
 
 ```
 bash
@@ -66,7 +63,7 @@ git clone https://github.com/firehol/netdata.git --depth=1 ~/netdata
 cd netdata
 ```
 
-运行以下命令，使用 netdata-installer.sh 脚本安装 Netdata:
+运行以下命令，使用 `netdata-installer.sh` 脚本安装 Netdata:
 
 ```
 sudo ./netdata-installer.sh
@@ -116,7 +113,7 @@ sudo ufw reload
 
 ### 如何访问 Netdata Web 界面
 
-要查看监控界面，您需要在 web 浏览器中键入 URL**http://your-server-IP:19999**以重定向到 Netdata 仪表板。
+要查看监控界面，您需要在 web 浏览器中键入 URL `http://your-server-IP:19999` 以重定向到 Netdata 仪表板。
 
 ```
 http://<your-server-IP>:19999

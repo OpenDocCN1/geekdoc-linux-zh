@@ -1,4 +1,5 @@
-# 专用服务器教程- ElderNode 博客
+
+# 专用服务器教程：ElderNode 博客
 
 > 原文：<https://blog.eldernode.com/tag/dedicated-server/>
 

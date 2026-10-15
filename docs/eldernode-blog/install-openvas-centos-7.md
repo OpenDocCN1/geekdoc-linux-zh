@@ -1,24 +1,21 @@
-# 在 CentOS 7 Linux 上安装 open vas-open vas 软件管理
+
+# 在 CentOS 7 Linux 上安装 OpenVAS 软件管理
 
 > 原文：<https://blog.eldernode.com/install-openvas-centos-7/>
 
 ![Install OpenVAS on CentOS 7 Linux](img/66a38d764c6fa85a26bcba39a5501491.png)
 
-我们带着另一篇 [CentOS 7 Linux](https://eldernode.com/linux-vps/) 文章**回来了。**今天你将学习如何在 CentOS 7 Linux 上安装 **OpenVAS** 。它是免费软件，基本上使用 **Nessus** 软件引擎来检查和测试安全漏洞。
+我们带着另一篇 [CentOS 7 Linux](https://eldernode.com/linux-vps/) 文章回来了。今天你将学习如何在 CentOS 7 Linux 上安装 **OpenVAS** 。它是免费软件，基本上使用 **Nessus** 软件引擎来检查和测试安全漏洞。
 
-自 2005 年 Nessus software 从开源模式转为闭源版本(带激活许可)以来， [GreenBone](https://www.greenbone.net/) 继续其开源项目，并初步开发了一款名为 GNessUs 的易受攻击的扫描仪软件，后来更名为 OpenVAS。OpenVAS 代表开放漏洞评估系统，现在可以免费扫描您的整个网络并识别安全漏洞。安装 OpenVAS 的步骤非常简单，您所要做的就是运行一些 Linux 命令。
+自 2005 年 Nessus software 从开源模式转为闭源版本（带激活许可）以来，[GreenBone](https://www.greenbone.net/) 继续其开源项目，并初步开发了一款名为 GNessUs 的易受攻击的扫描仪软件，后来更名为 OpenVAS。OpenVAS 代表开放漏洞评估系统，现在可以免费扫描您的整个网络并识别安全漏洞。安装 OpenVAS 的步骤非常简单，您所要做的就是运行一些 Linux 命令。
 
-**你可能感兴趣:**
+**你可能感兴趣：**
 
-[如何在 Ubuntu 20.04 上安装和配置 node . js](https://eldernode.com/install-and-config-node-js-on-ubuntu-20-04/)
+- [如何在 Ubuntu 20.04 上安装和配置 node . js](https://eldernode.com/install-and-config-node-js-on-ubuntu-20-04/)
+- [如何在 CentOS 7 Linux 上安装 VNC](https://eldernode.com/install-vnc-centos-7/)
+- [如何在 Windows 上安装 node . js](https://eldernode.com/install-node-js-on-windows/)
 
-[如何在 CentOS 7 Linux 上安装 VNC](https://eldernode.com/install-vnc-centos-7/)
-
-和
-
-[如何在 Windows 上安装 node . js](https://eldernode.com/install-node-js-on-windows/)
-
-## 在 CentOS 7 Linux 上安装 open vas
+## 在 CentOS 7 Linux 上安装 OpenVAS
 
 **1-** 首先，连接你的 CentOS 7 终端环境。
 
@@ -42,7 +39,7 @@ yum -y install openvas
 openvas-setup
 ```
 
-**请注意**:在安装过程中，您需要输入您的用户名和密码来连接到 OpenVAS 界面。完成安装步骤后，将显示类似下面的短语。
+**请注意**：在安装过程中，您需要输入您的用户名和密码来连接到 OpenVAS 界面。完成安装步骤后，将显示类似下面的短语。
 
 ```
 Setup complete, you can now access GSAD at:  https://<IP>:939
@@ -86,11 +83,13 @@ openvasmd
 
 **9-** 完全启动后，在浏览器中输入服务器的 IP 地址和端口 9392。
 
-##### 您正在学习如何在 CentOS 7 Linux 上安装 open vas
+您正在学习如何在 CentOS 7 Linux 上安装 OpenVAS。
 
-例如，想要的 IP 地址是 192.168.1.10，您应该在浏览器中按如下方式输入地址。
+例如，你想要的 IP 地址是 `192.168.1.10`，您应该在浏览器中按如下方式输入地址。
 
-https://192 . 168 . 1 . 10:9392
+```
+https://192.168.1.10:9392
+```
 
 ![openvas login page](img/c3b52d6956c16c2193a3870282d1bd27.png)
 

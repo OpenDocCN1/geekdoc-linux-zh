@@ -1,3 +1,4 @@
+
 # 元数据
 
 `curl_ws_recv()`和`curl_ws_meta()`都返回一个指向`curl_ws_frame`结构的指针，该结构提供了关于传入 WebSocket 数据的信息。在这种情况下，WebSocket“帧”是 WebSocket 片段的一部分。它*可以*是一个完整的片段，但也可能只是其中的一部分。`curl_ws_frame`包含有关帧的信息，以告知您详细信息。

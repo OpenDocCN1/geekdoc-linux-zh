@@ -1,15 +1,7 @@
+
 # Linux 命令手册
 
-
-
-
-
-
 ![](img/0c7b9b0aff6a10fb1e91386acabb3c33_0_0.png)
-
-
-
-
 
 ## 前言
 
@@ -107,9 +99,9 @@ Bash 的意思是 `Bourne-again shell`（再次出生的 Bourne Shell）。`sh` 
 
 这是一个 man（手册）页面。手册对于开发者来说是必不可少的工具。它们包含的信息非常多，以至于有时让人过载。
 
-上面的截图只是 ls 命令说明的 14 个屏幕之一。
+上面的截图只是 `ls` 命令说明的 14 个屏幕之一。
 
-大多数时候当我需要快速学习一个命令时，我会使用这个名为 tldr 的工具：https://tldr.sh/。这是一个你可以安装的命令，然后像这样运行：tldr <command>，它会提供一个非常快速的概述，以及一些常用场景的方便示例：
+大多数时候当我需要快速学习一个命令时，我会使用这个名为 `tldr` 的工具：https://tldr.sh/。这是一个你可以安装的命令，然后像这样运行：`tldr <command>`，它会提供一个非常快速的概述，以及一些常用场景的方便示例：
 
 ```tldr ls
 ls
@@ -120,9 +112,7 @@ ls
  使用人类可读单位（KB, MB, GB）显示大小的详细格式列表：ls -lh
 - 按大小（降序）排序的详细格式列表：ls -S
 - 按修改日期（最早在前）排序的所有文件详细格式列表：ls -ltr
-```这不是 man 的替代品，而是防止在大量信息中迷失的方便工具。然后可以使用 man 页面来探索你可以使用的不同选项和参数。
-
-
+```这不是 `man` 的替代品，而是防止在大量信息中迷失的方便工具。然后可以使用 man 页面来探索你可以使用的不同选项和参数。
 
 ```bash
 ~ ls -al /bin
@@ -152,20 +142,26 @@ drwxr-xr-x 30 root wheel      960 Feb  8 15:32
 从左到右你拥有：
 
 - 文件权限（如果你的系统支持 ACL，你还会获得一个 ACL 标志）
+
 - 指向文件的链接数
+
 - 文件的所有者
+
 - 文件的组
+
+
+
 - 以字节为单位的文件大小
 - 文件的修改日期
 - 文件名
 
-这些数据是由 `l` 选项生成的。而 `a` 选项则显示隐藏文件。
+这些数据是由`l`选项生成的。而`a`选项则显示隐藏文件。
 
-隐藏文件是以点（ . ））开头的文件。
+隐藏文件是以点（`.`）开头的文件。
 
-## cd
+## `cd`
 
-一旦你有了一个文件夹，就可以使用 `cd` 命令进入其中。`cd` 的意思是“切换目录”（change directory）。你在调用它时指定一个要进入的文件夹。你可以指定文件夹名称，也可以指定路径。
+一旦你有了一个文件夹，就可以使用`cd`命令进入其中。`cd`的意思是“切换目录”（change directory）。你在调用它时指定一个要进入的文件夹。你可以指定文件夹名称，也可以指定路径。
 
 示例：
 
@@ -174,15 +170,15 @@ mkdir fruits
 cd fruits
 ```
 
-现在你处于 fruits 文件夹中。
+现在你处于`fruits`文件夹中。
 
-你可以使用特殊路径 `..` 来表示父文件夹。
+你可以使用特殊路径`..`来表示父文件夹。
 
 ```bash
 cd .. #返回到主目录
 ```
 
-`#` 字符表示注释的开始，在找到它后，该行后续内容都会变为注释。
+`#`字符表示注释的开始，在找到它后，该行后续内容都会变为注释。
 
 你可以用它来构建路径：
 
@@ -193,9 +189,9 @@ cd fruits
 cd ../cars
 ```
 
-另一个特殊路径指示符是 `.` ，它表示当前文件夹。
+另一个特殊路径指示符是`.`，它表示当前文件夹。
 
-你也可以使用绝对路径，它从根目录 `/` 开始：
+你也可以使用绝对路径，它从根目录`/`开始：
 
 ```bash
 cd /etc
@@ -203,9 +199,9 @@ cd /etc
 
 此命令在 Linux、macOS、WSL 以及任何你有 UNIX 环境的地方都有效。
 
-## pwd
+## `pwd`
 
-每当你觉得在文件系统中迷了路时，调用 `pwd` 命令来确定你所在的位置：
+每当你觉得在文件系统中迷了路时，调用`pwd`命令来确定你所在的位置：
 
 ```bash
 pwd
@@ -213,9 +209,9 @@ pwd
 
 它将打印当前文件夹路径。
 
-## mkdir
+## `mkdir`
 
-你使用 `mkdir` 命令创建文件夹：
+你使用`mkdir`命令创建文件夹：
 
 ```bash
 mkdir fruits
@@ -227,7 +223,7 @@ mkdir fruits
 mkdir cars
 ```
 
-你还可以通过添加 `-p` 选项来创建嵌套文件夹：
+你还可以通过添加`-p`选项来创建嵌套文件夹：
 
 ```bash
 mkdir -p fruits/apples
@@ -235,11 +231,11 @@ mkdir -p fruits/apples
 
 UNIX 命令中的选项通常采用这种格式。你将它们放在命令之后，它们会改变命令的行为。你通常也可以组合多个选项。
 
-你可以通过输入 `man <command>` 来查找该命令支持哪些选项。尝试输入 `man mkdir`（按 `q` 键退出 man 页面）。man 页面是 UNIX 的内置帮助。
+你可以通过输入`man <command>`来查找该命令支持哪些选项。尝试输入`man mkdir`（按`q`键退出 man 页面）。`man`页面是 UNIX 的内置帮助。
 
-## rmdir
+## `rmdir`
 
-正如你可以使用 `mkdir` 创建文件夹，你可以使用 `rmdir` 删除文件夹：
+正如你可以使用`mkdir`创建文件夹，你可以使用`rmdir`删除文件夹：
 
 ```bash
 mkdir fruits
@@ -255,7 +251,7 @@ rmdir cars
 
 你要删除的文件夹必须是空的。
 
-要删除包含文件的文件夹，我们将使用更通用的 `rm` 命令，它可以删除文件和文件夹，并使用 `-rf` 选项：
+要删除包含文件的文件夹，我们将使用更通用的`rm`命令，它可以删除文件和文件夹，并使用`-rf`选项：
 
 ```bash
 rm -rf fruits
@@ -263,9 +259,9 @@ rm -rf fruits
 
 注意，此命令不会询问就会立即删除你要求删除的任何内容。从命令行删除文件时，恢复丢失的文件可能是困难的。
 
-## find
+## `find`
 
-每当你觉得在文件系统中迷了路时，调用 `find` 命令确定你所在的位置：
+每当你觉得在文件系统中迷了路时，调用`find`命令确定你所在的位置：
 
 ```bash
 find .
@@ -277,33 +273,33 @@ find .
 find . -name "filename*"
 ```
 
-你还可以按类型搜索，`f` 代表文件，`d` 代表目录：
+你还可以按类型搜索，`f`代表文件，`d`代表目录：
 
 ```bash
 find . -type f
 ```
 
-你还可以按大小搜索，使用 `-size`。例如，搜索大于 100MB 的文件：
+你还可以按大小搜索，使用`-size`。例如，搜索大于 100MB 的文件：
 
 ```bash
 find . -size +100M
 ```
 
-以及按修改时间搜索，使用 `-mtime`。例如，搜索过去 7 天内修改过的文件：
+以及按修改时间搜索，使用`-mtime`。例如，搜索过去 7 天内修改过的文件：
 
 ```bash
 find . -mtime -7
 ```
 
-`find` 命令非常强大，可以用于许多复杂任务。例如，你可以找到所有特定扩展的文件并删除它们：
+`find`命令非常强大，可以用于许多复杂任务。例如，你可以找到所有特定扩展的文件并删除它们：
 
 ```bash
 find . -name "*.log" -delete
 ```
 
-## cp
+## `cp`
 
-`cp` 命令用于复制文件和目录。语法为：
+`cp`命令用于复制文件和目录。语法为：
 
 ```bash
 cp [options] <source> <destination>
@@ -315,21 +311,21 @@ cp [options] <source> <destination>
 cp file.txt file_copy.txt
 ```
 
-要复制目录，必须使用 `-r` 选项：
+要复制目录，必须使用`-r`选项：
 
 ```bash
 cp -r folder/ folder2/
 ```
 
-你还可以使用 `-p` 选项来保留文件属性，如所有权和时间戳：
+你还可以使用`-p`选项来保留文件属性，如所有权和时间戳：
 
 ```bash
 cp -p file.txt file_copy.txt
 ```
 
-## rm
+## `rm`
 
-`rm` 命令用于删除文件和目录。语法为：
+`rm`命令用于删除文件和目录。语法为：
 
 ```bash
 rm [options] <file or directory>...
@@ -341,23 +337,23 @@ rm [options] <file or directory>...
 rm file.txt
 ```
 
-要删除目录，必须使用 `-r` 选项：
+要删除目录，必须使用`-r`选项：
 
 ```bash
 rm -r folder/
 ```
 
-`-f` 选项强制删除且不询问：
+`-f`选项强制删除且不询问：
 
 ```bash
 rm -f file.txt
 ```
 
-警告：使用 `rm -rf` 时要极其小心，因为它会永久删除一切。
+警告：使用`rm -rf`时要极其小心，因为它会永久删除一切。
 
-## mv
+## `mv`
 
-`mv` 命令用于移动或重命名文件和目录。语法为：
+`mv`命令用于移动或重命名文件和目录。语法为：
 
 ```bash
 mv [options] <source> <destination>
@@ -381,9 +377,9 @@ mv file.txt /path/to/destination/
 mv folder/ /path/to/destination/
 ```
 
-另一个特殊路径指示符是 `.` ，它表示当前文件夹。
+另一个特殊路径指示符是`.`，它表示当前文件夹。
 
-你也可以使用绝对路径，它从根目录 `/` 开始：
+你也可以使用绝对路径，它从根目录`/`开始：
 
 ```bash
 mv fruits /etc/
@@ -391,22 +387,19 @@ mv fruits /etc/
 
 此命令在 Linux、macOS、WSL 以及任何你有 UNIX 环境的地方都有效。
 
+你可以使用`ln`命令的`-s`选项创建软链接：
 
-
-
-你可以使用 `ln` 命令的 `-s` 选项创建软链接：
-
-```
+```bash
 ln -s <original> <link>
 ```
 
-例如，假设你有一个名为 `recipes.txt` 的文件。你可以使用以下命令为它创建一个软链接：
+例如，假设你有一个名为`recipes.txt`的文件。你可以使用以下命令为它创建一个软链接：
 
-```
+```bash
 ln -s recipes.txt newrecipes.txt
 ```
 
-在这种情况下，当你使用 `ls -al` 列出文件时，你会看到有一个特殊的 `-l` 标记，并且文件名末尾有一个 `@` 符号，如果你开启了颜色显示，它的颜色也会与众不同：
+在这种情况下，当你使用`ls -al`列出文件时，你会看到有一个特殊的`-l`标记，并且文件名末尾有一个`@`符号，如果你开启了颜色显示，它的颜色也会与众不同：
 
 ![](img/0c7b9b0aff6a10fb1e91386acabb3c33_24_0.png)
 
@@ -414,83 +407,85 @@ ln -s recipes.txt newrecipes.txt
 
 ![](img/0c7b9b0aff6a10fb1e91386acabb3c33_24_1.png)
 
-## gzip
+## `gzip`
 
-你可以使用 `gzip` 命令通过名为 LZ77 的 gzip 压缩协议来压缩文件。
+你可以使用`gzip`命令通过名为 LZ77 的 gzip 压缩协议来压缩文件。
 
 这里是最简单的用法：
 
-```
+```bash
 gzip filename
 ```
 
-这会压缩文件并为其添加一个 `.gz` 扩展名。原始文件会被删除。为了防止这种情况，你可以使用 `-c` 选项并利用输出重定向将输出写入 `filename.gz` 文件：
+这会压缩文件并为其添加一个`.gz`扩展名。原始文件会被删除。为了防止这种情况，你可以使用`-c`选项并利用输出重定向将输出写入`filename.gz`文件：
 
-```
+```bash
 gzip -c filename > filename.gz
 ```
 
-> - -c 选项指定输出将流向标准流，保持原始文件完好无损
+> - `-c`选项指定输出将流向标准流，保持原始文件完好无损
 
-或者你可以使用 `-k` 选项：
+或者你可以使用`-k`选项：
 
-```
+```bash
 gzip -k filename
 ```
 
 有多种压缩级别。压缩率越高，压缩（以及解压）所需的时间越长。级别范围从 1（最快，压缩率最低）到 9（最慢，压缩率最高），默认级别为 6。
 
-你可以通过 `-<NUMBER>` 选项选择特定级别：
+你可以通过`-<NUMBER>`选项选择特定级别：
 
-```
+```bash
 gzip -1 filename
 ```
 
 你可以通过列出多个文件来压缩多个文件：
 
-```
+```bash
 gzip filename1 filename2
 ```
 
-你可以使用 `-r` 选项递归地压缩目录下的所有文件：
+你可以使用`-r`选项递归地压缩目录下的所有文件：
 
-```
+```bash
 gzip -r a_folder
 ```
 
-`-v` 选项会打印压缩百分比信息。这里是它与 `-k`（保留）选项一起使用的示例：
+`-v`选项会打印压缩百分比信息。这里是它与`-k`（保留）选项一起使用的示例：
 
 ![](img/0c7b9b0aff6a10fb1e91386acabb3c33_26_0.png)
 
-`gzip` 也可以使用 `-d` 选项解压文件：
+`gzip`也可以使用`-d`选项解压文件：
 
-```
+```bash
 gzip -d filename.gz
 ```
 
-## gunzip
+## `gunzip`
 
-`gunzip` 命令基本上相当于 `gzip` 命令，区别是 `-d` 选项默认总是开启的。
+`gunzip`命令基本上相当于`gzip`命令，区别是`-d`选项默认总是开启的。
 
 你可以以这种方式调用该命令：
 
-```
+```bash
 gunzip filename.gz
 ```
 
-这将解压并移除 `.gz` 扩展名，将结果放入 `filename` 文件中。如果该文件存在，它将覆盖它。
+这将解压并移除`.gz`扩展名，将结果放入`filename`文件中。如果该文件存在，它将覆盖它。
 
-你可以使用 `-c` 选项通过输出重定向提取到不同的文件名：
+你可以使用`-c`选项通过输出重定向提取到不同的文件名：
 
-```
+```bash
 gunzip -c filename.gz > anotherfilename
 ```
 
-## tar
+## `tar`
 
-`tar` 命令用于创建归档，将多个文件分组到一个文件中。
+`tar`命令用于创建归档，将多个文件分组到一个文件中。
 
-它的名字源于过去，意为 `tape archive`（带带归档）。过去归档存储在磁带上。
+它的名字源于过去，意为`tape archive`（带带归档）。过去归档存储在磁带上。
+
+
 
 此命令创建一个名为 `archive.tar` 的归档，内容包含 `file1` 和 `file2`：
 
@@ -555,9 +550,6 @@ tar -xf archive.tar.gz
 ```
 alias ll='ls -al'
 ```
-
-
-
 
 ## tail
 
@@ -776,12 +768,19 @@ sort 工具按行对文本和二进制文件进行排序。行由换行符（默
 命令行如下：
 
 - -c, --check-all：检查输入文件是否排序。如果文件未排序，sort 会产生错误并以代码 1退出，否则返回 0。如果指定了 --check-all，sort 不产生输出。这是 -c 的“静默”版本。
+
 - -merge：合并假设已排序的输入文件。如果它们未排序，输出顺序未定义。
+
 - -output=file：将输出到输出文件而不是标准输出。
+
 - -size, --buffer-size：用于内存缓冲区的大小。修饰符 N,D,K,M
+
 - -dir, --directory=dir：将临时文件存储在目录中。如果没有定义 TMPDIR，默认路径为 /tmp。
+
 - -u：唯一。抑制所有具有相同键的行，类似于 -c。
+
 - -s：稳定排序。此选项保持具有相等键记录的原始顺序。这是一个非标准功能，但被广泛接受和使用。
+
 - --version：打印版本并静默退出。
 
 ## uniq
@@ -789,6 +788,10 @@ sort 工具按行对文本和二进制文件进行排序。行由换行符（默
 `uniq` 是一个用于对文本行排序的命令。
 
 你可以从文件中获取这些行，或通过管道从另一个命令的输出获取：
+
+
+
+# uniq
 
 ```
 uniq dogs.txt
@@ -852,11 +855,8 @@ sort dogs.txt | uniq -c | sort -nr
 ```
 
 然后按频率从高到低排序这些行：
+
 50
-
-
-
-
 
 ```
 ~ sort dogs.txt | uniq -c | sort -nr
@@ -869,7 +869,7 @@ sort dogs.txt | uniq -c | sort -nr
 ~
 ```
 
-## diff
+# diff
 
 `diff` 是一个非常有用的命令。假设你有两个文件，包含几乎相同的信息，但你找不到它们之间的差异。
 
@@ -980,7 +980,7 @@ SYNOPSIS
  -F RE --show-function-line=RE
 ```
 
-## echo
+# echo
 
 `echo` 命令只完成一件简单的工作：将传递给它的输出参数打印到输出。
 
@@ -1046,9 +1046,9 @@ echo $ls -al
 echo {1..5}
 ```
 
-## chown
+# chown
 
-在像 Linux 或 macOS 这样的操作系统（以及所有类 Unix 系统）中，每个文件/目录都有一个**所有者**。
+在像 Linux 或 macOS 这样的操作系统（以及所有类 Unix 系统）中，每个文件/目录都有一个所有者。
 
 文件的所有者可以对其进行任何操作。它可以决定该文件的命运。所有者（以及 `root` 用户）可以使用 `chown` 命令将所有者更改另一个用户：
 
@@ -1064,18 +1064,14 @@ chown flavio test.txt
 
 如果你有一个由 `root` 拥的文件，你无法作为另一个用户写入它。你可以使用 `chown` 将所有权转移给你。
 
-(注：原始文本中存在大量重复的错误片段，已按核心逻辑进行翻译)
-
-
-
-
-
-## umask
+# umask
 
 当你创建一个文件时，你不需要提前决定权限。
+
 权限有默认值。
 
 可以使用 `umask` 命令来控制和修改这些默认值。
+
 直接输入不带参数的 `umask` 将显示当前的 umask，在此情况下为 `0022`：
 
 ![](img/0c7b9b0aff6a10fb1e91386acabb3c33_65_0.png)
@@ -1097,7 +1093,13 @@ chown flavio test.txt
 这里有一个数字对应含义的列表：
 
 - 0 读、写、执行
+
 - 1 读和写
+
+
+
+## 权限数字表示
+
 - 2 读和执行
 - 3 仅读
 - 4 写和执行
@@ -1121,7 +1123,7 @@ umask g+r
 
 ## du
 
-du 命令将计算整个目录的大小：
+`du` 命令将计算整个目录的大小：
 
 ```
 flavio — bash /Users/flavio — bash — 38×5
@@ -1144,7 +1146,7 @@ bash-3.2$ du *
 bash-3.2$ 
 ```
 
-你可以使用 `du -m` 设置 du 以兆字节（MegaBytes）显示值，使用 `du -g` 以吉字节（GigaBytes）显示。
+你可以使用 `du -m` 设置 `du` 以兆字节（MegaBytes）显示值，使用 `du -g` 以吉字节（GigaBytes）显示。
 
 `-h` 选项显示人类可读的大小表示法，并根据大小进行调整：
 
@@ -1160,7 +1162,7 @@ bash-3.2$
 du -h <directory> | sort -nr
 ```
 
-然后通过管道 head 以获取前 10 个结果：
+然后通过管道 `head` 以获取前 10 个结果：
 
 ```bash
 bash-3.2$ du -h vuehandbook | sort -nr | head
@@ -1179,7 +1181,7 @@ bash-3.2$
 
 ## df
 
-df 命令用于（` df -h`）将以人类可读的格式显示值。
+`df` 命令用于（`df -h`）将以人类可读的格式显示值。
 
 它的基本形式将打印关于挂载卷的信息：
 
@@ -1207,7 +1209,7 @@ map auto_home                               0 0 100% 0 100% /System/Volumes/Data
 
 ## basename
 
-basename 命令用于获取路径中的最后一个部分：
+`basename` 命令用于获取路径中的最后一个部分：
 
 ```
 basename /home/users/flavier/fish
@@ -1216,7 +1218,7 @@ fish
 
 ## dirname
 
-dirname 命令用于获取路径中的目录部分：
+`dirname` 命令用于获取路径中的目录部分：
 
 ```bash
 dirname /home/users/flavier/fish
@@ -1225,21 +1227,19 @@ dirname /home/users/flavier/fish
 
 ## ps
 
-ps 命令用于查看当前运行的进程：
+`ps` 命令用于查看当前运行的进程：
 
 ```
 bash-3.2$ ps
 ```
 
+`ps` 返回的列表示了一些关键信息。
 
+第一条信息是 `PID`，即进程 ID。当你想要在另一个命令中引用此进程（例如杀掉它）时，这是至关重要的。
 
-ps 返回的列表示了一些关键信息。
+然后是 `TT`，它告诉我们所使用的终端 ID。
 
-第一条信息是 PID，即进程 ID。当你想要在另一个命令中引用此进程（例如杀掉它）时，这是至关重要的。
-
-然后是 TT，它告诉我们所使用的终端 ID。
-
-然后 STAT 告诉我们进程的状态：
+然后 `STAT` 告诉我们进程的状态：
 
 - I: 进程处于空闲状态（睡眠超过 20 秒）
 - R: 可运行状态的进程
@@ -1250,13 +1250,13 @@ ps 返回的列表示了一些关键信息。
 
 如果你有多个字母，第二个字母代表进一步的信息，这些信息可能很有技术性。
 
-通常会有 `+` 号，表示进程处于其终端的前台。S 表示该进程是一个会话领导者。
+通常会有 `+` 号，表示进程处于其终端的前台。`S` 表示该进程是一个会话领导者。
 
-TIME 告诉我们进程已运行了多久。
+`TIME` 告诉我们进程已运行了多久。
 
 ## top
 
-top 命令快速指南，用于列出系统中正在运行的进程。
+`top` 命令快速指南，用于列出系统中正在运行的进程。
 
 `top` 命令用于显示系统运行运行进程的实时信息。
 
@@ -1309,24 +1309,24 @@ kill -CONT <PID>
 kill -STOP <PID>
 ```
 
-HUP 意味着**挂起**（hang up）。当启动进程的终端窗口在进程终止前关闭时，会自动发送该信号。
+`HUP` 意味着**挂起**（hang up）。当启动进程的终端窗口在进程终止前关闭时，会自动发送该信号。
 
-INT 意味着**中断**（interrupt），它发送与我们在终端中按下 `ctrl-C` 相同的信号，这会终止进程。
+`INT` 意味着**中断**（interrupt），它发送与我们在终端中按下 `ctrl-C` 相同的信号，这会终止进程。
 
-KILL 不是发送给进程的，而是发送给操作系统内核，内核会立即停止并终止该进程。
+`KILL` 不是发送给进程的，而是发送给操作系统内核，内核会立即停止并终止该进程。
 
-TERM 意味着**终止**（terminate）。进程将接收它并自终止。它是 `kill` 发送的默认信号。
+`TERM` 意味着**终止**（terminate）。进程将接收它并自终止。它是 `kill` 发送的默认信号。
 
-CONT 意味着**继续**（continue）。它可以用于恢复已停止的进程。
+`CONT` 意味着**继续**（continue）。它可以用于恢复已停止的进程。
 
-STOP 不是发送给进程的，而是发送给操作系统内核，内核会立即停止（但不终止）进程。
+`STOP` 不是发送给进程的，而是发送给操作系统内核，内核会立即停止（但不终止）进程。
 
-- 1 对应 HUP。
-- 2 对应 INT。
-- 9 对应 KILL。
-- 15 对应 TERM。
-- 18 对应 CONT。
-- 15 对应 STOP。（注：原文此处可能存在误写）
+- 1 对应 `HUP`。
+- 2 对应 `INT`。
+- 9 对应 `KILL`。
+- 15 对应 `TERM`。
+- 18 对应 `CONT`。
+- 15 对应 `STOP`。（注：原文此处可能存在误写）
 
 ## killall
 
@@ -1339,6 +1339,8 @@ killall <name>
 ```
 
 其中 `name` 是程序的名称。例如，你可能运行了多个 `top` 程序的实例，`killall top` 将终止它们。
+
+
 
 你可以指定信号，像 `kill` 一样（并查看 `kill` 教程以了解更多特定类型的信号），例如：
 
@@ -1416,13 +1418,16 @@ Networks: packets: 434852/666 in, 4274873/256 out.
 一个命令可以是以下四种类型之一：
 
 - 可执行文件
+
 - shell 内置命令
+
 - shell 函数
+
 - 别名
 
 `type` 命令可以帮助弄清楚这些，当我们想知道或者只是好奇时。它会告诉你命令是如何被解释的。
 
-输出取决于所使用的 shell。这是 Bash：
+输出取决于所使用的 shell。这是`Bash`：
 
 ```
 flavio@bash ~
@@ -1447,7 +1452,7 @@ top is hashed (/usr/bin/top)
 bash-32$
 ```
 
-这是 Zsh：
+这是`Zsh`：
 
 ```
 flavio@zsh ~ % type ls
@@ -1516,11 +1521,11 @@ type top
 top is /usr/bin/top
 ```
 
-这里最有趣的事情之一是，`alias` 会告诉你别名指向了什么。在 Bash 和 Zsh 中，你可以看到 `ll` 别名，但 Fish 默认提供了它，所以它会告诉你这是一个内置的 shell 函数。
+这里最有趣的事情之一是，`alias` 会告诉你别名指向了什么。在 `Bash` 和 `Zsh` 中，你可以看到 `ll` 别名，但 `Fish` 默认提供了它，所以它会告诉你这是一个内置的 shell 函数。
 
 ## which
 
-假设你有一个可以执行的命令，因为它在 shell 的搜索路径（path）中，但你想知道它位于何处。
+假设你有一个可以执行的命令，因为它在 shell 的搜索路径 `path` 中，但你想知道它位于何处。
 
 你可以使用 `which`。该命令将返回指定命令的路径：
 
@@ -1557,7 +1562,7 @@ flavio — fish /Users/flavio — -fish — 40x6
 command1 | xargs command2
 ```
 
-我们使用管道 (|) 将输出传递给 `xargs`。它将处理运行 `command2`，并将 `command1` 的输出作为它的参数。
+我们使用管道 `|` 将输出传递给 `xargs`。它将处理运行 `command2`，并将 `command1` 的输出作为它的参数。
 
 让我们来看一个简单的例子。你想从目录删除某些特定的文件。这些文件列在一个文本文件中。
 
@@ -1603,7 +1608,7 @@ command1 | xargs -I % /bin/bash -c 'command2 %; command3 %'
 
 ## vim
 
-vim 是非常流行的编辑器，特别是在程序员中。它开发活跃并频繁更新，周围有一个非常大的社区。甚至还有 Vim 大会！现代系统中的 `vi` 只是 `vim` 的别名，这意味着 vi 被证明了。你通过在命令行运行 `vi` 来启动它。
+`vim` 是非常流行的编辑器，特别是在程序员中。它开发活跃并频繁更新，周围有一个非常大的社区。甚至还有 Vim 大会！现代系统中的 `vi` 只是 `vim` 的别名，这意味着 vi 被证明了。你通过在命令行运行 `vi` 来启动它。
 
 ![](img/0c7b9b0aff6a10fb1e91386acabb3c33_94_0.png)
 
@@ -1616,6 +1621,7 @@ vi test.txt
 你必须知道 Vim 有两种模式：
 
 - 命令模式（或普通模式）
+
 - 插入模式
 
 当你启动编辑器时，你处于命令模式。你无法像在 GUI 编辑器那样输入文本。你必须进入**插入模式**。你可以通过按下 `i` 键来实现。一旦这样做，编辑器底部会显示 INSERT：
@@ -1643,35 +1649,42 @@ vi test.txt
 这些是使用 Vim 的基础：
 
 - `x` 删除当前高亮的字符
+
 - `A` 跳到行尾
+
 - `0` 跳到行首
+
 - `dw` 删除该单词
+
 - `e` 代替 `w`，保留下一个单词
+
 - 在 `d` 和 `w` 之间使用数字删除多个 1 单词，例如使用 `3w` 删除 3 个单词
+
 - `dd` 删除整行
+
 - `d$` 删除从光标处到行尾的所有行
 
 要了解更多关于 Vim 的信息，我推荐查看 Vim FAQ，特别是运行 `vimutor`，它应该已经安装在你的系统中，并将极大帮助你开始探索。
 
 ## emacs
 
-emacs 是一个很棒的编辑器，历史上被视为 UNIX 系统的编辑器。著名的 vi vs emacs 口战和激烈讨论导致了全球开发者浪费了许多无用的时间。
+`emacs` 是一个很棒的编辑器，历史上被视为 UNIX 系统的编辑器。著名的 vi vs emacs 口战和激烈讨论导致了全球开发者浪费了许多无用的时间。
 
-emacs 非常强大。有些人整天将其作为一种操作系统来使用（https://news.ycombinator.com/item?id=1912758）。我们只讨论基础。
+`emacs` 非常强大。有些人整天将其作为一种操作系统来使用（https://news.ycombinator.com/item?id=1912758）。我们只讨论基础。
 
 你可以通过简单调用 `emacs` 来开启一个 emacs 会话：
 
 ![](img/0c7b9b0aff6a10fb1e91386acabb3c33_99_0.png)
 
-macOS 用户，现在停一下。如果你在 Linux 上，没有问题，但 macOS 不分发使用 GPLv3 的应用程序，而且每个更新到 GPLv3 的内置 UNIX 命令都没有更新。虽然我目前列出的命令存在一点小问题，但在这种情况下，使用 2007 年的 emacs 版本与经过 12 年改进和改变的版本并不完全相同。这对 Vim 来说不是问题，因为它是更新的。要修复这个问题，运行 `brew install emacs`，然后运行 emacs 将使用来自 Homebrew 的新版本（确保你已安装 Homebrew）。
+
+
+macOS 用户，现在停一下。如果你在 Linux 上，没有问题，但 macOS 不分发使用 GPLv3 的应用程序，而且每个更新到 GPLv3 的内置 UNIX 命令都没有更新。虽然我目前列出的命令存在一点小问题，但在这种情况下，使用 2007 年的`emacs`版本与经过 12 年改进和改变的版本并不完全相同。这对`Vim`来说不是问题，因为它是更新的。要修复这个问题，运行 `brew install emacs`，然后运行`emacs`将使用来自 Homebrew 的新版本（确保你已安装 Homebrew）。
 
 你也可以通过调用 `emacs <filename>` 来编辑现有文件：
 
 ![](img/0c7b9b0aff6a10fb1e91386acabb3c33_100_0.png)
 
 你可以开始编辑，一旦完成，按下 `ctrl-x` 然后按下 `ctrl-w`。你确认文件夹：
-
-
 
 ```
 File Edit Options Buffers Tools Minibuf Help
@@ -1705,7 +1718,7 @@ File Edit Options Buffers Tools Text Text Help
 
 关于 Emacs 有很多需要了解的内容。我在这简短的介绍中无法写完。我鼓励你打开 Emacs，并按下 `ctrl-h r` 打开内置手册，按下 `ctrl-h t` 打开官方教程。
 
-## nano
+## `nano`
 
 nano 是一个对初学者友好的编辑器。
 
@@ -1715,9 +1728,9 @@ nano 是一个对初学者友好的编辑器。
 
 ![](img/0c7b9b0aff6a10fb1e91386acabb3c33_103_0.png)
 
-pico 与之大体相同，尽管 nano 是 pico 的 GNU 版本，而 pico 在历史上的某个时期并不是开源的，nano 的克隆版是为了满足 GNU 操作系统的许可证要求而创建的。
+pico 与之大体相同，尽管 `nano` 是 `pico` 的 GNU 版本，而 `pico` 在历史上的某个时期并不是开源的，`nano` 的克隆版是为了满足 GNU 操作系统的许可证要求而创建的。
 
-## whoami
+## `whoami`
 
 输入 `whoami` 可以打印当前登录到终端会话的用户名：
 
@@ -1730,7 +1743,7 @@ flavio
 
 > 注意：这与 `who am i` 命令不同，后者会打印更多信息。
 
-## who
+## `who`
 
 `who` 命令显示登录到系统的用户。
 
@@ -1747,7 +1760,7 @@ flavio ttys013 Aug 28 16:49
 → ~
 ```
 
-```为什么会有多次？因为每个打开的 shell 都会被计为一次访问。
+为什么会有多次？因为每个打开的 shell 都会被计为一次访问。
 
 你可以看到所使用的终端名称，以及会话启动的时间/日期。
 
@@ -1767,7 +1780,7 @@ flavio ttys013 Aug 28 16:49
 | flavio | ttys011 | Aug 21 10:20 | | 18855 | term=0 exit=0 |
 | flavio | ttys013 | Aug 28 16:49 | 01:33 | 5086 | |
 
-```特殊的 `who i` 命令将列出当前的终端会话：
+特殊的 `who i` 命令将列出当前的终端会话：
 
 ```
 flavio — fish /Users/flavio —-fish — 45x5
@@ -1782,7 +1795,7 @@ USER LINE WHEN IDLE PID
 flavio ttys004 Sep 2 12:22 71365
 ```
 
-## su
+## `su`
 
 当你以一个用户的身份登录终端 shell 时，你可能需要切换到另一个用户。
 
@@ -1798,11 +1811,13 @@ su <username>
 
 如果你以用户身份登录，运行不带其他参数的 `su` 将提示你输入 root 密码，因为那是默认的。
 
-![](img/0c7b9b0aff6a10fb1e91386acabb3c33_107_0.png) 将以另一个用户的身份启动一个新的 shell。
+![](img/0c7b9b0aff6a10fb1e91386acabb3c33_107_0.png)
+
+将以另一个用户的身份启动一个新的 shell。
 
 当你完成后，在 shell 中输入 `exit` 将关闭该 shell 并返回到当前用户的 shell。
 
-## sudo
+## `sudo`
 
 `sudo` 通常用于以 root 身份运行命令。
 
@@ -1828,7 +1843,7 @@ sudo nano /etc/hosts
 sudo -u flavio ls /Users/flavio
 ```
 
-## passwd
+## `passwd`
 
 Linux 用户都分配了密码。你可以使用 `passwd` 命令更改密码。
 
@@ -1852,17 +1867,19 @@ passwd <username> <new password>
 
 在这种情况下，你不需要输入旧密码。
 
-## ping
+## `ping`
 
 `ping` 命令用于 ping 本地网络或互联网上的特定网络主机。
 
 你使用的语法是 `ping <host>`，其中 `<host>` 可以是域名或 IP 地址。
 
-这里有一个 ping `google.com` 的示例：
+这里有一个 `ping google.com` 的示例：
 
 ![](img/0c7b9b0aff6a10fb1e91386acabb3c33_111_0.png)
 
 命令向服务器发送请求，服务器返回响应。
+
+
 
 `ping` 默认每秒持续发送一次请求，直到你用 `ctrl-C` 停止它，除非你通过 `-c` 选项传递你想要尝试的次数：`ping -c 2 google.com`。
 
@@ -1881,13 +1898,13 @@ Request timeout for icmp_seq 3
 
 有时这样做是有故意的，为了“隐藏”服务器，或者为了减少负载。ping 包也可以被防火墙过滤。
 
-ping 使用 ICMP 协议（互联网控制消息报协议），这是一种类似于 TCP 或 UDP 的网络层协议。
+`ping` 使用 `ICMP` 协议（互联网控制消息报协议），这是一种类似于 `TCP` 或 `UDP` 的网络层协议。
 
-ping 向服务器发送带有 ECHO_REQUEST 消息的包，服务器返回 ECHO_REPLY 消息。我不会详细介绍，但这是基本概念。
+`ping` 向服务器发送带有 `ECHO_REQUEST` 消息的包，服务器返回 `ECHO_REPLY` 消息。我不会详细介绍，但这是基本概念。
 
 ## traceroute
 
-当你尝试访问互联网上的主机时，你会经过你的家庭路由器，到达 ISP 网络，然后 ISP 又通过它自己的上游网络路由器，依此类推，直到到达主机。
+当你尝试访问互联网上的主机时，你会经过你的家庭路由器，到达 `ISP` 网络，然后 `ISP` 又通过它自己的上游网络路由器，依此类推，直到到达主机。
 
 你是否想知道你的数据包经过了哪些步骤？
 
@@ -1905,11 +1922,7 @@ traceroute <host>
 
 ![](img/0c7b9b0aff6a10fb1e91386acabb3c33_113_0.png)
 
-并不是每个经过的路由器都会返回其信息。在这种情况下，`traceroute` 会打印 ***。否则，我们可以看到主机名、IP 地址以及一些性能指标。
-```
-
-
-
+并不是每个经过的路由器都会返回其信息。在这种情况下，`traceroute` 会打印 `***`。否则，我们可以看到主机名、`IP` 地址以及一些性能指标。
 
 对于每个路由器我们都能看到 3 个样本，这意味着 `traceroute` 默认会尝试 3 次以获取到达该路由所需的良好指示。这就是为什么执行 `traceroute` 比简单地对该主机执行 `ping` 需要花费的时间。
 
@@ -1917,20 +1930,35 @@ traceroute <host>
 
 ```
 traceroute -q 1 flaviocopes.com
+
 tracoute: Warning: flaviocopes.com has multiple addresses; using 167.99.137.12
+
 tracoute to flaviocopes.com (167.99.137.12), 64 hops max, 52 byte packets
+
 1 192.168.1.1 (192.168.1.1) 6.441 ms
+
 2 ppoae-server.neg.gi (81.174.0.21) 17.438 ms
+
 3 *
+
 4 10.40.83.89 (10.40.83.89) 30.463 ms
+
 5 10.40.4.177 (10.40.4.177) 22.037 ms
+
 6 mro-b2-link.telia.net (62.115.57.249) 20.573 ms
+
 7 ffm-bb2-link.telia.net (62.115.116.172) 27.682 ms
+
 8 *
+
 9 digitalocean-ic-328178-ffm-b4.c.telia.net (80.239.128.233) 137.439 ms
+
 10 *
+
 11 *
+
 12 *
+
 13 167.99.137.12 (167.99.137.12) 35.460 ms --
 ~
 ```
@@ -1977,11 +2005,17 @@ history | grep docker
 
 ```
 bash-3.2$ history | grep docker
+
 7 git clone https://github.com/docker/getting-started.git
+
 8 git clone https://github.com/docker/getting-started.git
+
 14 docker container stop $(docker container ls)
+
 15 docker container stop $(docker container ls)
+
 16 docker container stop $(docker container ls)
+
 130 history | grep docker
 ```
 
@@ -2043,11 +2077,11 @@ export -n TEST
 
 ## crontab
 
-Cron任务是在按特定间隔运行的任务。它们非常强大，特别是在服务器上执行维护和自动化。
+`Cron` 任务是在按特定间隔运行的任务。它们非常强大，特别是在服务器上执行维护和自动化。
 
-`crontab` 命令是处理 cron任务的入口。
+`crontab` 命令是处理 `cron` 任务的入口。
 
-你可以做的第一件事是探索定义了哪些 cron任务：
+你可以做的第一件事是探索定义了哪些 `cron` 任务：
 
 ```
 crontab -l
@@ -2063,19 +2097,21 @@ crontab -l
 crontab -e
 ```
 
-来编辑 cron任务并添加新的。默认情况下这会用默认编辑器打开，通常是 `vim`。我更喜欢 `nano`，你可以使用这一行使用不同的编辑器：
+来编辑 `cron` 任务并添加新的。默认情况下这会用默认编辑器打开，通常是 `vim`。我更喜欢 `nano`，你可以使用这一行使用不同的编辑器：
 
 ```
 EDITOR=nano crontab -e
 ```
 
-现在你可以为每个 cron任务添加一行。定义 cron任务的语法有点吓人。这就是为什么我通常使用网站来生成它以避免错误：https://crontab-generator.org/
+
+
+现在你可以为每个 cron 任务添加一行。定义 cron 任务的语法有点吓人。这就是为什么我通常使用网站来生成它以避免错误：https://crontab-generator.org/
 
 ![](img/0c7b9b0aff6a10fb1e91386acabb3c33_22_0.png)
 
 Darwin（内核）版本是 macOS 内核的名字。内核是操作系统的“核心”，而整个操作系统被称为 macOS。
 
-你为 cron任务选择一个时间间隔，并输入执行的命令。我选择每 12 小时运行一次位于 /Users/flavio/test.sh 的脚本。这是我需要运行的 crontab 行：
+你为 cron 任务选择一个时间间隔，并输入执行的命令。我选择每 12 小时运行一次位于 `/Users/flavio/test.sh` 的脚本。这是我需要运行的 crontab 行：
 
 ```
 * */12 * * * /Users/flavio/test.sh >dev/null 2>&1
@@ -2087,11 +2123,11 @@ Darwin（内核）版本是 macOS 内核的名字。内核是操作系统的“�
 EDITOR=nano crontab -e
 ```
 
-添加该行，然后按 `ctrl-X` 并按 `y` 保存。如果一切顺利，cron任务就设置好了：
+添加该行，然后按 `ctrl-X` 并按 `y` 保存。如果一切顺利，cron 任务就设置好了：
 
 ![](img/0c7b9b0aff6a10fb1e91386acabb3c33_23_0.png)
 
-完成后，你可以通过运行以下命令查看活跃 cron任务的列表：
+完成后，你可以通过运行以下命令查看活跃 cron 任务的列表：
 
 ```
 crontab -l
@@ -2099,16 +2135,19 @@ crontab -l
 
 ![](img/0c7b9b0aff6a10fb1e91386acabb3c33_23_1.png)
 
-你可以再次运行 `crontab -e` 来移除 cron任务，删除该行并退出编辑器：
+你可以再次运行 `crontab -e` 来移除 cron 任务，删除该行并退出编辑器：
 
 ```
 GNU nano 2.0.6 File: /tmp/crontab Modified
+
 Save modified buffer (ANSWERING "No" WILL DESTROY CHANGES?) Y N No ^C Cancel
 ```
 
 ```
 bash-3.2$ EDITOR=nano crontab -e
+
 crontab: installing new crontab
+
 bash-3.2$ crontab -l
 
 bash-3.2$
@@ -2120,8 +2159,11 @@ bash-3.2$
 
 ```
 flavio — fish /Users/flavio —fish —448
+
 → ~ uname
+
 Darwin
+
 → ~
 ```
 
@@ -2129,8 +2171,11 @@ Darwin
 
 ```
 flavio — fish /Users/flavio —fish —448
+
 → ~ uname -mp
+
 x86_64 i386
+
 → ~
 ```
 
@@ -2138,10 +2183,15 @@ x86_64 i386
 
 ```
 flavio — fish /Users/flavio —fish —448
+
 → ~ uname -srv
+
 Darwin 19.6.0 Kernel Version 19.6.0:
+
 Thu Jun 18 20:49:00 PDT 2020; root:xnu-6153.141
+
 ~1/RELEASE_X86_64
+
 → ~
 ```
 
@@ -2149,16 +2199,17 @@ Thu Jun 18 20:49:00 PDT 2020; root:xnu-6153.141
 
 ```
 flavio — fish /Users/flavio —fish —448
+
 → ~ uname -n
+
 webp.local
+
 → ~
 ```
 
 `a` 选项打印所有可用信息：
 
 在 macOS 上你还可以使用 `sw_vers` 命令打印关于 macOS 系统的更多信息。请注意这与 Darwin（内核）版本不同。
-
-
 
 你可以传递一个环境变量：
 
@@ -2170,6 +2221,7 @@ env -i NAME=flavio node app.js
 
 ```
 flavio
+
 undefined
 ```
 

@@ -1,3 +1,4 @@
+
 # 如何在 Centos 7 - Eldernode 博客上安装和配置 Wazuh
 
 > 原文：<https://blog.eldernode.com/install-and-configure-wazuh-on-centos-7/>
@@ -12,53 +13,41 @@
 
 ### Wazuh 主要特性(在 Centos 7 上配置 Wazuh)
 
-1-安全分析
-
-2-入侵分析
-
-3-测井数据分析
-
-4-文件完整性监控
-
-5-漏洞检测
-
-6-配置评估
-
-7-事件响应
-
-8-法规遵从性
-
-9-云安全
-
-10-集装箱安全
+1. 安全分析
+2. 入侵分析
+3. 测井数据分析
+4. 文件完整性监控
+5. 漏洞检测
+6. 配置评估
+7. 事件响应
+8. 法规遵从性
+9. 云安全
+10. 集装箱安全
 
 ### 瓦祖赫组件
 
 瓦祖赫系统由几个部分组成:
 
-**1-**OSSEC HIDS-基于主机的入侵检测系统
-
-**2-**OpenSCAP–开放漏洞评估语言
-
-**3-** Elastic Stack – Filebeat, Elasticsearch, Kibana
-
-**4-** Wazuh 装载了许多有价值的功能。
+1. OSSEC HIDS - 基于主机的入侵检测系统
+2. OpenSCAP - 开放漏洞评估语言
+3. Elastic Stack - Filebeat, Elasticsearch, Kibana
+4. Wazuh 装载了许多有价值的功能。
 
 ## 在 Centos 7 上安装 Wazuh 服务器
 
-1)首先，设置主机名和启动终端:
+1. 首先，设置主机名和启动终端:
 
 ```
 hostnamectl set-hostname wazuh-server
 ```
 
-2)与往常一样，您应该更新 CentOS 和包:
+2. 与往常一样，您应该更新 CentOS 和包:
 
 ```
 yum update -y
 ```
 
-3)使用以下命令安装 NTP 并检查其服务状态:
+3. 使用以下命令安装 NTP 并检查其服务状态:
 
 ```
 yum install ntp
@@ -68,15 +57,15 @@ yum install ntp
 systemctl status ntpd
 ```
 
-4)您可能会遇到服务未启动的情况，因此运行以下命令来启动它:
+4. 您可能会遇到服务未启动的情况，因此运行以下命令来启动它:
 
-5)要在系统启动时启用 NTP，请键入以下命令:
+5. 要在系统启动时启用 NTP，请键入以下命令:
 
 ```
 systemctl enable ntpd
 ```
 
-6)现在您需要修改规则以允许 NTP 服务，因此，键入以下命令以启用服务:
+6. 现在您需要修改规则以允许 NTP 服务，因此，键入以下命令以启用服务:
 
 ```
 firewall-cmd --add-service=ntp --zone=public --permanent
@@ -103,7 +92,13 @@ vim /etc/yum.repos.d/wazuh.repo
 接下来，将以下内容添加到文件中。
 
 ```
-[wazuh_repo]  gpgcheck=1  gpgkey=https://packages.wazuh.com/key/GPG-KEY-WAZUH  enabled=1  name=Wazuh repository  baseurl=https://packages.wazuh.com/3.x/yum/  protect=1
+[wazuh_repo]
+gpgcheck=1
+gpgkey=https://packages.wazuh.com/key/GPG-KEY-WAZUH
+enabled=1
+name=Wazuh repository
+baseurl=https://packages.wazuh.com/3.x/yum/
+protect=1
 ```
 
 现在，您可以保存并退出该文件。
@@ -134,7 +129,7 @@ systemctl status wazuh-manager
 curl --silent --location https://rpm.nodesource.com/setup_8.x | bash -
 ```
 
-*注意*:要运行 Wazuh API，需要 NodeJS > = 4.6.1。关注我们关于[如何在 CentOS 7](https://blog.eldernode.com/install-node-js-centos-7/) 上安装 Node.js 的文章。
+*注意*: 要运行 Wazuh API，需要 NodeJS >= 4.6.1。关注我们关于[如何在 CentOS 7](https://blog.eldernode.com/install-node-js-centos-7/) 上安装 Node.js 的文章。
 
 或者安装 node.js
 
@@ -164,10 +159,11 @@ node htpasswd -Bc -C 10 user darshana
 systemctl restart wazuh-api
 ```
 
-此外，如果需要，您可以手动更改端口。文件/var/ossec/API/configuration/config . js 包含参数:
+此外，如果需要，您可以手动更改端口。文件`/var/ossec/api/configuration/config.js`包含参数:
 
 ```
-// TCP Port used by the API.  config.port = "55000";
+// TCP Port used by the API.
+config.port = "55000";
 ```
 
 ### 如何安装 Filebeat
@@ -189,7 +185,14 @@ vim /etc/yum.repos.d/elastic.repo
 向服务器添加以下内容:
 
 ```
-[elasticsearch-7.x]  name=Elasticsearch repository for 7.x packages  baseurl=https://artifacts.elastic.co/packages/7.x/yum  gpgcheck=1  gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch  enabled=1  autorefresh=1  type=rpm-md
+[elasticsearch-7.x]
+name=Elasticsearch repository for 7.x packages
+baseurl=https://artifacts.elastic.co/packages/7.x/yum
+gpgcheck=1
+gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
+enabled=1
+autorefresh=1
+type=rpm-md
 ```
 
 要安装 Filebeat:
@@ -226,7 +229,7 @@ chmod go+r /etc/filebeat/wazuh-template.json
 curl -s https://packages.wazuh.com/3.x/filebeat/wazuh-filebeat-0.1.tar.gz | sudo tar -xvz -C /usr/share/filebeat/module
 ```
 
-现在，您必须添加 Elasticsearch 服务器 IP。编辑“filebeat.yml”
+现在，您必须添加 Elasticsearch 服务器 IP。编辑`filebeat.yml`
 
 ```
 vim /etc/filebeat/filebeat.yml
@@ -241,14 +244,16 @@ output.elasticsearch.hosts: ['http://ELASTIC_SERVER_IP:9200']
 运行以下命令以启用并启动 Filebeat 服务:
 
 ```
-systemctl daemon-reload  systemctl enable filebeat.service  systemctl start filebeat.service
+systemctl daemon-reload
+systemctl enable filebeat.service
+systemctl start filebeat.service
 ```
 
 ### 如何安装弹性堆栈
 
 在本步骤中，您将使用 ELK 配置第二台 Centos 服务器。您可以在您的弹性堆栈服务器上做到这一点。
 
-正如您所猜测的，第一步是设置-hostname:
+正如您所猜测的，第一步是设置 hostname:
 
 ```
 hostnamectl set-hostname elk
@@ -277,7 +282,14 @@ vim /etc/yum.repos.d/elastic.repo
 将以下内容添加到文件中:
 
 ```
-[elasticsearch-7.x]  name=Elasticsearch repository for 7.x packages  baseurl=https://artifacts.elastic.co/packages/7.x/yum  gpgcheck=1  gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch  enabled=1  autorefresh=1  type=rpm-md
+[elasticsearch-7.x]
+name=Elasticsearch repository for 7.x packages
+baseurl=https://artifacts.elastic.co/packages/7.x/yum
+gpgcheck=1
+gpgkey=https://artifacts.elastic.co/GPG-KEY-elasticsearch
+enabled=1
+autorefresh=1
+type=rpm-md
 ```
 
 ### 如何安装 Elasticsearch
@@ -285,10 +297,10 @@ vim /etc/yum.repos.d/elastic.repo
 对 Elasticsearch 包运行以下命令:
 
 ```
-yum install elasticsearch-7.5.1.
+yum install elasticsearch-7.5.1
 ```
 
-默认情况下，Elasticsearch 监听环回接口(localhost)。因此，您需要通过编辑/etc/Elasticsearch/elastic search . yml 并取消对 network.host 配置的注释，将 elastic search 配置为侦听非环回地址。调整您想要连接的 IP 值:
+默认情况下，Elasticsearch 监听环回接口(localhost)。因此，您需要通过编辑`/etc/elasticsearch/elasticsearch.yml`并取消对 `network.host` 配置的注释，将 elasticsearch 配置为侦听非环回地址。调整您想要连接的 IP 值:
 
 ```
 network.host: 0.0.0.0
@@ -297,7 +309,10 @@ network.host: 0.0.0.0
 顺便说一下，你可以改变防火墙规则。
 
 ```
-firewall-cmd --permanent --zone=public --add-rich-rule='  rule family="ipv4"  source address="34.232.210.23/32"  port protocol="tcp" port="9200" accept'
+firewall-cmd --permanent --zone=public --add-rich-rule='
+rule family="ipv4"
+source address="34.232.210.23/32"
+port protocol="tcp" port="9200" accept'
 ```
 
 并重新加载防火墙规则:
@@ -308,13 +323,13 @@ firewall-cmd --reload
 
 但是，弹性搜索配置文件需要进一步的配置。
 
-编辑“elasticsearch.yml”文件。
+编辑`elasticsearch.yml`文件。
 
 ```
 vim /etc/elasticsearch/elasticsearch.yml
 ```
 
-现在，更改或编辑“节点.名称”和“群集.初始 _ 主节点”。
+现在，更改或编辑`node.name`和`cluster.initial_master_nodes`。
 
 ```
 node.name: <node_name>
@@ -395,12 +410,14 @@ elasticsearch.hosts: ["http://localhost:9200"]
 再次运行下面的命令来启用和启动 Kibana 服务:
 
 ```
-systemctl daemon-reload  systemctl enable kibana.service  systemctl start kibana.service
+systemctl daemon-reload
+systemctl enable kibana.service
+systemctl start kibana.service
 ```
 
 ### 如何将 Wazuh API 添加到 Kibana 配置中
 
-首先，你需要编辑“wazuh.yml。”
+首先，你需要编辑`wazuh.yml`。
 
 ```
 vim /usr/share/kibana/plugins/wazuh/wazuh.yml
@@ -418,9 +435,8 @@ systemctl restart kibana.service
 
 在这一步中，您需要传递两个部分:
 
-**1-** 添加 Ubuntu 服务器
-
-**2-** 安装所需的软件包
+1. 添加 Ubuntu 服务器
+2. 安装所需的软件包
 
 ```
 apt-get install curl apt-transport-https lsb-release gnupg2
@@ -444,7 +460,7 @@ apt-get update
 
 ### 教程安装 Wazuh 代理(在 Centos 7 上配置 Wazuh)
 
-blow 命令的作用是在安装 wazuh-agent 时自动将“waz uh _ MANAGER”IP 添加到 waz uh-agent 配置中。
+blow 命令的作用是在安装 wazuh-agent 时自动将`WAZUH_MANAGER` IP 添加到 wazuh-agent 配置中。
 
 ```
 WAZUH_MANAGER="52.91.79.65" apt-get install wazuh-agent
@@ -467,7 +483,13 @@ vim /etc/yum.repos.d/wazuh.repo
 增加以下内容:
 
 ```
-[wazuh_repo]  gpgcheck=1  gpgkey=https://packages.wazuh.com/key/GPG-KEY-WAZUH  enabled=1  name=Wazuh repository  baseurl=https://packages.wazuh.com/3.x/yum/  protect=1
+[wazuh_repo]
+gpgcheck=1
+gpgkey=https://packages.wazuh.com/key/GPG-KEY-WAZUH
+enabled=1
+name=Wazuh repository
+baseurl=https://packages.wazuh.com/3.x/yum/
+protect=1
 ```
 
 使用以下命令安装代理。
@@ -490,26 +512,28 @@ http://IP or hostname:5601/
 
 如果你点击“Wazuh”图标，你会去它的仪表板，你可以看到“Wazuh”仪表板如下。
 
+
+
 ![Wazuh Dashboard](img/906a3b79a1efd2aea9cfa8ea5ccbdd88.png)
 
-现在，您应该看到连接的代理、安全信息管理等。单击安全事件以查看事件的图形视图。
+现在，您应该看到连接的代理、安全信息管理等。单击“安全事件”以查看事件的图形视图。
 
 ![Security Events](img/8656443b1fcc56f942654625f6108e83.png)
 
-### 卸载代理:
+### 卸载代理：
 
 ```
 apt-get remove wazuh-agent
 ```
 
-由于某些软件包管理器不会从文件系统中删除这些文件，因此您应该运行以下命令来提供完整的文件删除:
+由于某些软件包管理器不会从文件系统中删除这些文件，因此您应该运行以下命令来提供完整的文件删除：
 
 ```
-apt-get remove --purge wazuh-agent 
+apt-get remove --purge wazuh-agent
 ```
 
 至此，您已经完成了在 CentOS 上安装和配置 Wazuh 服务器所需的全部学习。
 
 ## 结论
 
-在本文中，您了解了如何在 Centos 7 上安装和配置 Wazuh。由于您的操作系统以及您是否希望从源代码进行构建，安装 Wazuh 服务器有几种选择。如果你有兴趣阅读更多内容，可以找到我们关于如何在 CentOS 7 上安装 CWP 的文章。
+在本文中，您了解了如何在 CentOS 7 上安装和配置 Wazuh。由于您的操作系统以及您是否希望从源代码进行构建，安装 Wazuh 服务器有几种选择。如果你有兴趣阅读更多内容，可以找到我们关于如何在 CentOS 7 上安装 CWP 的文章。

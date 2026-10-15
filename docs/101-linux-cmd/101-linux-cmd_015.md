@@ -1,3 +1,4 @@
+
 # `gzip` 命令
 
 Linux/Unix 中的 `gzip` 命令用于压缩/解压缩数据。
@@ -13,8 +14,7 @@ Linux/Unix 中的 `gzip` 命令用于压缩/解压缩数据。
 **命令：**
 
 ```sh
-      gzip file_name 
-
+gzip file_name
 ```
 
 ## 解压缩一个文件
@@ -26,11 +26,10 @@ Linux/Unix 中的 `gzip` 命令用于压缩/解压缩数据。
 **命令：**
 
 ```sh
-      gzip -d archive_01.gz 
-
+gzip -d archive_01.gz
 ```
 
-## 压缩多个文件：
+## 压缩多个文件
 
 **操作：** --- 压缩多个文件
 
@@ -39,11 +38,10 @@ Linux/Unix 中的 `gzip` 命令用于压缩/解压缩数据。
 **命令：**
 
 ```sh
-      gzip file_name_01 file_name_02 file_name_03 
-
+gzip file_name_01 file_name_02 file_name_03
 ```
 
-## 解压缩多个文件：
+## 解压缩多个文件
 
 **操作：** --- 解压缩多个文件
 
@@ -52,11 +50,10 @@ Linux/Unix 中的 `gzip` 命令用于压缩/解压缩数据。
 **命令：**
 
 ```sh
-      gzip -d archive_01.gz archive_02.gz archive_03.gz 
-
+gzip -d archive_01.gz archive_02.gz archive_03.gz
 ```
 
-## 压缩一个目录：
+## 压缩一个目录
 
 **操作：** --- 解压缩目录中的所有文件
 
@@ -65,11 +62,10 @@ Linux/Unix 中的 `gzip` 命令用于压缩/解压缩数据。
 **命令：**
 
 ```sh
-      gzip -r directory_name 
-
+gzip -r directory_name
 ```
 
-## 解压缩一个目录：
+## 解压缩一个目录
 
 **操作：** --- 解压缩目录中的所有文件
 
@@ -78,11 +74,10 @@ Linux/Unix 中的 `gzip` 命令用于压缩/解压缩数据。
 **命令：**
 
 ```sh
-      gzip -dr directory_name 
-
+gzip -dr directory_name
 ```
 
-## 压缩时的详细（详细）输出：
+## 压缩时的详细（详细）输出
 
 **操作：** --- 以更详细的方式压缩一个文件
 
@@ -91,6 +86,5 @@ Linux/Unix 中的 `gzip` 命令用于压缩/解压缩数据。
 **命令：**
 
 ```sh
-      gzip -v file_name 
-
+gzip -v file_name
 ```

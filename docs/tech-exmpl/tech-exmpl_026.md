@@ -1,8 +1,9 @@
+
 # 通过删除找到字典中最长单词的程序
 
 > 原文：[`techbyexample.com/longest-word-dictionary/`](https://techbyexample.com/longest-word-dictionary/)
 
-# **概述**
+## 概述
 
 给定一个字符串和一个单词字典。目标是找到字典中作为子序列出现在给定字符串中的最长单词。如果可能的结果数量超过 1，则返回字典序最小的最长单词。
 
@@ -20,7 +21,7 @@ s = "mbacnago", dictionary = ["ba","ag"]
 Output: "ag"
 ```
 
-# **程序**
+## 程序
 
 以下是相同程序的代码
 

@@ -1,56 +1,50 @@
+
 # 信任与暴力：关于现代关系的论述
 
+**信任与暴力**
 
-
-# 信任与暴力
-
-
-英文翻译 © 2012 Princeton University Press
-
-由 Princeton University Press 出版，地址：新泽西州普林斯顿 William Street 41 号 08540
-在英国：Princeton University Press，牛津郡伍德斯托克 Oxford Street 6 号 OX20 1TW
-
-press.princeton.edu
-
+英文翻译 © 2012 Princeton University Press  
+由 Princeton University Press 出版，地址：新泽西州普林斯顿 William Street 41 号 08540  
+在英国：Princeton University Press，牛津郡伍德斯托克 Oxford Street 6 号 OX20 1TW  
+press.princeton.edu  
 版权所有
 
 国会图书馆编目数据
-Reentsma, Jan Philipp.
-[Vertrauen und Gewalt. English]
-信任与暴力：论一种现代关系 / Jan Philipp Reentsma；Dominic Bonfiglio 译。
-p. cm.
-包括书目参考（p. ）。
-ISBN 978-0-691-14296-8（精装）
-1. 权力（社会科学） 2. 信任。 3. 社会互动。 I. 标题。
-HN49.P6R4413 2012
-302—dc23 2011037117
 
+Reentsma, Jan Philipp.  
+\[Vertrauen und Gewalt. English\]  
+信任与暴力：论一种现代关系 / Jan Philipp Reentsma；Dominic Bonfiglio 译。  
+p. cm.  
+包括书目参考（p. ）。  
+ISBN 978-0-691-14296-8（精装）  
+1\. 权力（社会科学） 2. 信任。 3. 社会互动。 I. 标题。  
+HN49.P6R4413 2012  
+302—dc23 2011037117  
 大英图书馆编目数据可查
 
 本书翻译由 Geisteswissenschaften International 资助 — 人文与社会科学德语著作翻译基金，由 Fritz Thyssen 基金会、德国联邦外交部、版权集体管理组织 VG WORT 以及德国出版商与书商协会 Börsenverein des Deutschen Buchhandels 联合发起。
 
-本书采用 Minion 字体排版
-印刷于无酸纸上。∞
+本书采用 Minion 字体排版  
+印刷于无酸纸上。∞  
 印刷于美利坚合众国
 
 > “糖果师！糖果师！糖果师！” …
+>
 > “人是什么，又能成为什么？”
-> 
+>
 > —E.T.A. HOFFMANN，《胡桃夹子和老鼠王》
-
+>
 > 我突然感到自由了！
-> 
+>
 > —JEAN RENOIR，《科尔代利医生遗嘱》
-
+>
 > “[L]小孩子们不喜欢听到这个。”
-> 
+>
 > —SIGMUND FREUD，《文明及其不满》
 
 此页 intentionally left blank
 
-
 - *前言* — ix
-- *导论：谜团* — 1
 - *第一章：信任与现代性* — 9
   - *托马斯·曼《费利克斯·克鲁尔的自白》中的两个场景* — 10
   - *信任* — 12
@@ -84,57 +78,46 @@ HN49.P6R4413 2012
   - *去妖魔化的动态* — 95
   - *参与性权力与暴力* — 97
   - *现代性与暴力* — 99
-
-## 第三章：去合法化/再合法化 101
-
-- 马尔西亚斯 101
-- 马克斯保持坐姿 102
-- 被允许、被禁止、被强制 103
-- 文明与野蛮 106
-- 自我与人性观念 110
-- 厌恶 116
-- 莎士比亚与暴力即错误的日渐觉醒 127
-- 限制暴力与维护信任 145
-- 再合法化（1）：民族与文明使命的修辞 153
-- 划定民族边界 167
-- 断头台与小狗 169
-- 再合法化（2）：末世净化的修辞 175
-- 再合法化（3）：种族灭绝的修辞 180
-- 现代性及其不满 184
-
-## 第四章：对暴力的信任 187
-
-- 暴力—信任—权力：魔鬼与小主教 187
-- 奥斯维辛—古拉格—广岛 191
-- 升级暴力工具 196
-- 现代化与帮派 205
-- 去现代化与帮派 219
-- 恐怖的逻辑 231
-- 马克白 239
-- 为什么是犹太人？ 242
-- 当不可能成为可能时 246
-- 对暴力的信任与人格的作用 248
-- 对暴力的信任与自我信任 250
-
-## 第五章：暴力与沟通 259
-
-- 科拉·詹蒂莱发言 259
-- 社会学的沉默 261
-- 第三方的消失 266
-- 应对（1）：通过刑事程序的去合法化与第三方的排除 274
-- 应对（2）：受害者的权威与第三方的替代 278
-- 应对（3）：工具性解释与沟通的否认 280
-- 插曲：亡命徒的简短理论，或，威廉·退尔真的解放了瑞士吗？ 287
-- 再次展示酷刑工具？ 302
-- 焦虑与自信 305
-- 波洛涅斯、他的机智与遗嘱 309
-
-## 注释 313
-
-## 参考书目 359
-
-
-
+- 第三章：去合法化/再合法化 — 101
+  - 马尔西亚斯 — 101
+  - 马克斯保持坐姿 — 102
+  - 被允许、被禁止、被强制 — 103
+  - 文明与野蛮 — 106
+  - 自我与人性观念 — 110
+  - 厌恶 — 116
+  - 莎士比亚与暴力即错误的日渐觉醒 — 127
+  - 限制暴力与维护信任 — 145
+  - 再合法化（1）：民族与文明使命的修辞 — 153
+  - 划定民族边界 — 167
+  - 断头台与小狗 — 169
+  - 再合法化（2）：末世净化的修辞 — 175
+  - 再合法化（3）：种族灭绝的修辞 — 180
+  - 现代性及其不满 — 184
+- 第四章：对暴力的信任 — 187
+  - 暴力—信任—权力：魔鬼与小主教 — 187
+  - 奥斯维辛—古拉格—广岛 — 191
+  - 升级暴力工具 — 196
+  - 现代化与帮派 — 205
+  - 去现代化与帮派 — 219
+  - 恐怖的逻辑 — 231
+  - 马克白 — 239
+  - 为什么是犹太人？ — 242
+  - 当不可能成为可能时 — 246
+  - 对暴力的信任与人格的作用 — 248
+  - 对暴力的信任与自我信任 — 250
+- 第五章：暴力与沟通 — 259
+  - 科拉·詹蒂莱发言 — 259
+  - 社会学的沉默 — 261
+  - 第三方的消失 — 266
+  - 应对（1）：通过刑事程序的去合法化与第三方的排除 — 274
+  - 应对（2）：受害者的权威与第三方的替代 — 278
+  - 应对（3）：工具性解释与沟通的否认 — 280
+  - 插曲：亡命徒的简短理论，或，威廉·退尔真的解放了瑞士吗？ — 287
+  - 再次展示酷刑工具？ — 302
+  - 焦虑与自信 — 305
+  - 波洛涅斯、他的机智与遗嘱 — 309
+- 注释 — 313
+- 参考书目 — 359
 
 ## 前言
 
@@ -142,10 +125,9 @@ HN49.P6R4413 2012
 
 在回答这些问题时，我的志向既不是写一部新的现代性历史，也不是写一部新的现代性社会学。虽然我经常借鉴历史学和社会学研究，但我并不隶属于任何一门学科。因此，例如，虽然现有的关于信任的研究令人着迷，但在结论上却可能截然相反，这也是我采取自己方法的原因。同样，我也考虑了以往关于身体暴力现象学及其与权力关系的思考，但我也超越了它。这是一类试图通过为熟悉领域投射新光来获得新鲜视角的著作。因此，它与其说是与现代性的其他观点竞争，不如说是对其的补充。它采用了一种描述技巧，在宏观概览和精准研究之间交替，后者补充了前者的 sweeping 特征。由于我广泛搜集细节来说明我的论点，材料的选取可能显得随意。无论如何，我希望读者能原谅我将社会学和历史反思与文本分析穿插在一起，而文本分析正是像我这样受文学学者训练的人的拿手好戏。我也恳请他们对我大量引用汉堡学院出版社出版的书籍给予同样的宽容，该出版社是汉堡社会研究所的出版公司。确实，我是该研究所的创始人和主任；同样真实的是，其研究对我的工作产生了关键性的塑造。的确，如果没有在那里历经多年发生的对话的裨益，我既不会着手这个项目，更不会完成它。
 
-我特别感激汉堡社会研究所的研究单元“暴力理论与历史”，该单元由 Bernd Greiner 主持，它引发了许多与我的工作直接相关的富有成果的讨论。对于发人深省的见解，该研究所的其他研究单元——《联邦德国社会》（由 Heinz Bude 主持）和《国家与社会》（由 Ulrich Bielefeld 主持）——也值得感激地提及。我还从与 Regina Mühlhäuser 和 Gaby Zipfel 关于性暴力、与 Wolfgang Kraushaar 关于现代恐怖主义，以及与 Michael Wildt 关于暴力与公共领域 的讨论中获益。我要特别感谢 Martin Bauer，他在最终编辑前通读了整部手稿，并指出了许多需要澄清的段落。最后，我要向汉堡学院出版社的负责人 Birgit Otte 表示最深切的感谢。她不仅编辑了我在此所依赖的许多书籍；她也编辑了这本书。
+我特别感激汉堡社会研究所的研究单元“暴力理论与历史”，该单元由 Bernd Greiner 主持，它引发了许多与我的工作直接相关的富有成果的讨论。对于发人深省的见解，该研究所的其他研究单元——《联邦德国社会》（由 Heinz Bude 主持）和《国家与社会》（由 Ulrich Bielefeld 主持）——也值得感激地提及。我还从与 Regina Mühlhäuser 和 Gaby Zipfel 关于性暴力、与 Wolfgang Kraushaar 关于现代恐怖主义，以及与 Michael Wildt 关于暴力与公共领域的讨论中获益。我要特别感谢 Martin Bauer，他在最终编辑前通读了整部手稿，并指出了许多需要澄清的段落。最后，我要向汉堡学院出版社的负责人 Birgit Otte 表示最深切的感谢。她不仅编辑了我在此所依赖的许多书籍；她也编辑了这本书。
 
 最后一点说明。一些读者可能会觉得我频繁自引的做法——我在书目中是引用最多的作者——有些不寻常。我想向他们保证，这并非源于失控的自恋。《信任与暴力》汇集了我过去几年写下的思想，有时加以延伸，有时加以修改，有时则原样使用。由于这项工作的范围在准备过程中明显扩大，我无法像在我的论文和讲座中那样详尽，因此希望为有兴趣进一步探索特定主题的读者提供帮助。
-
 
 
 
@@ -156,10 +138,6 @@ with the victim's fat," though he immediately wondered whether this was in fact 
 在“普通家庭男人”的背景下提出的“怎么可能”的问题之所以具有启发性，正是因为它明显荒谬。它是一个屏障问题，就像弗洛伊德所说的屏障记忆。真正的问题，屏障后面的问题是：杀人犯怎么会成为我们的“普通”父亲？这个问题令人痛苦，因为它在我们内部需要一种令人窒息的矛盾，同时让我们面对一系列未解决的道德问题——它们是否能得到解决又是另一回事了。尽管1968年的许多真实和虚构的革命以及无数次对我们父亲和祖父的文学清算，这个问题仍然如此。¹ 但在这里我们也必须问是什么困扰着我们。 certainly not every son or daughter of a murderer father has been so disturbed by the latter's deeds as to turn to endless theorizing. 这是因为我所说的痛苦的矛盾性建立在一个根本的矛盾之上：使行为合法化的道德与我们用来评判它的道德之间存在差距。否认大屠杀并高呼“光荣与荣誉归于德国国防军”的那一代孙辈的、令人庆幸的少数份额并不知道这种矛盾。而在某些地方——比如苏联的继承国——大规模谋杀通常被视为要么由他人犯下，要么是现代化与为祖国而战的必要附带产物——这在那里是例外。¹²
 
 关于行为的合法化是否后来会失去其有效性的问题同样适用于所有二十世纪的恐怖，正如广岛和长崎的案例提醒我们的那样。¹² 在德国，取消合法化的过程尤其彻底。对此纽伦堡审判是一个必要但不充分的条件，这一事实在随后的几十年里一再得到证明，直到1990年代末围绕汉堡社会研究所策划的德国国防军罪行展览的争议。¹³ 尽管如此，1945年后几年里确实发生了与纳粹时代的道德决裂。德国所谓的崩溃的解释，以及由此应得出的结论，自战争以来一直引发诸多争议。如果这是在1945年之前，当英雄化父辈罪恶是常态时，德国人会声称解释是唯一有争议的点。此时此刻与现在之间的道德间隙的一个标志是我们拒绝使用“only”这个词。
-
-
-
-
 
 关于普通人的表达，还有另一点必须指出：普通一词的含义在波动。它可以指“精神上的普通”，即这些人并非临床意义上的施虐狂，否则他们在1945年之后本会自发地继续下去。¹³它也可以指“那个时代的典型”，即这些人并非意识形态狂热分子，也未被宣传洗脑（考虑到他们的年轻，这对大多数人来说是可以说的）。最后，普通还可以指“像你我这样的人”。这正是新教式的谦卑发声并说阿门的地方。但对自身道德勇气的怀疑被高估了。¹⁶过去与现在的道德差距使我们能够提出令人不安的问题，也应促使我们坚持认为这些并非普通人，这些人并不像你我一样，因为那种普通的标准已不再有效。我们必须承认这一事实，并坚守新的（或重新夺回的）标准。对“普通人怎么会……？”这一问题的回答是，普通的标准是可以改变的。
 
@@ -177,18 +155,22 @@ with the victim's fat," though he immediately wondered whether this was in fact 
 
 在《论战争与死亡的思考》（1915年）中，西格蒙德·弗洛伊德写道，世界大战的暴力——当时没人知道它很快会成为那个世纪的两次战争中的第一次——粉碎了我们关于文明能够防止倒退回野蛮的希望。²²普里莫·莱维关于奥斯维辛写了类似的话：即使奥斯维辛并未超越过去几个世纪的人类野蛮，其特殊的臭名昭著依然存在，因为我们以为自己已经抛弃了这种行为。²³这种特殊的幻灭形式是由十八世纪末出现的历史乐观主义所促成的，无疑在十九世纪和二十世纪的部分时期占主导地位，但在1950年代正是因为
 
-
 普遍的幻灭。弗洛伊德写道，这些失望的教训有助于建立我们的现实感。然而，如果对二十世纪的神秘感无非是对幻灭感的表达，那么一旦幻灭感让位于现实，前者就会消失，但事情并非如此。
 
 每个世纪都有其自身的人类学教训。个人，套用马克思的著名公式，是其历史条件——过去、现在和未来——的总和。而个人总是能够做到以前似乎不可能的事——无论善事还是恶事。然而我们知道标准变化得有多快。是什么阻止我们只是给过去的教训再增添一条呢？
+
+
 
 我们称之为*现代性*的生活形式，不仅*本不该*与二十世纪过度暴力的发生相容；一旦这种暴力确实发生——出于非神秘的、可明确指出的原因——现代性至少*理应因此消亡*。阿多诺写道，奥斯维辛之后的所有文化和文化批评都是垃圾。²⁴ 这是一个道德宣言（见上文），而非经验描述，最终表达的是这样一种愤慨：艺术和文化未能削弱我们杀人的倾向。但正如阿多诺自己所深知，这种对艺术和文化的反对仅仅是纸面上的反对；其目的是警告我们不要以自我野蛮化来回应野蛮。²⁵ 尽管我们知道现代性并非我们原先设想的那样，我们却仍然对它保持持续的信任，这正是本书的主题。
 
 ## 第一章：信任与现代性
 
 > 生命的脉搏跳动得多么强劲而纯净！
+>
 > 亲爱的大地，这一夜你依然未被动摇，
+>
 > 你在我脚下焕然呼吸；我向你致意，
+>
 > 你这缥缈的黎明！
 >
 > —约翰·沃尔夫冈·冯·歌德，*《浮士德》第二部*
@@ -227,10 +209,6 @@ with the victim's fat," though he immediately wondered whether this was in fact 
 
 “也祝您好运，主任检查员，”我回答。“请代我向您的妻子和孩子问好。”
 
-
-
-
-
 > “是的，谢谢——嗯，你知道的！”他尴尬地笑了，言语混杂得有些奇怪，急忙离开。但在出门时他绊倒了一个并不存在的障碍，他被这份人情味完全扰乱了。¹
 
 即使在三等车厢，现代性的行为准则依然盛行。社会学家称之为功能分化；激进社会批判的代理人称之为异化。熟悉这片地形的人知道，当路径交叉时会发生什么。准则提供了一种信任感——相信人们会恪守其社会分配的角色——从这个意义上说，对现代性总体项目的信任与对火车服务的信任并无不同。事情仍可能脱轨这一点，由 Krull 与他亲切交流后列车员的踉跄所证明。教训是：履行一个角色也意味着将自己局限于其中。对角色的局限确保了适当的举止，但也传达出人们意识到人远不止其扮演的角色。这种对角色的严格遵守与认识到那些角色只是表象的结合，构成了独特现代的社会互动形式。
@@ -253,14 +231,15 @@ with the victim's fat," though he immediately wondered whether this was in fact 
 
 对信任这一概念的理解范围之广，既打开了冲突观点的门，也构成了其理论魅力与智识吸引力。更重要的是，试图将其简化为抽象或人际的尝试都是不令人信服的。⁹ 社会中的信任并非源于我们能够在理论上验证其可信度的信念，而是源于
 
-
 every member. Nor is it plausible to think that interpersonal trust gives rise to social trust as it moves from the intimate to the institutional. David Hume disputed that a continuum existed between the two, pointing out that trust in people is different in kind from trust in political systems.¹⁰ (To see the truth of this, consider how distrusting others differs from distrusting institutions. I will say more about the difference below.) The absence of a continuum does not mean that there is nothing connecting the abstract with the interpersonal, however. There can be no trust in institutions or society in general without a relationship to the individual. It wouldn’t make sense to speak of social trust if we didn’t assume it affected our behavioral expectations of others.
 
-I want to address this relationship not on its own but as it pertains to conditions of social cohesion. One might argue that sociologists must presume the precariousness of social stability in order to discover what prevents its disintegration, whereas members of society, even if sociologists by training, must presume the robustness of social stability in order to act at all— at least until this presumption is palpably refuted. Even then, if they outlive the period of instability they’ll try to go on with their lives regarding it as an exception, or by henceforth expecting the unexpected.¹¹
+
+
+I want to address this relationship not on its own but as it pertains to conditions of social cohesion. One might argue that sociologists must presume the precariousness of social stability in order to discover what prevents its disintegration, whereas members of society, even if sociologists by training, must presume the robustness of social stability in order to act at all—at least until this presumption is palpably refuted. Even then, if they outlive the period of instability they’ll try to go on with their lives regarding it as an exception, or by henceforth expecting the unexpected.¹¹
 
 Thomas Hobbes is the first thinker to see trust as a cornerstone of social stability, and the first to build an entire political philosophy around it. This became possible only after forms of premodern trust became obsolete—in other words, only after interpersonal and local-level trust ceased to provide sufficient certainty about others’ behavior.¹² Hobbes developed his concept of state sovereignty as an answer to a universal problem: how to keep ourselves safe from others. Hobbes is notorious for his belief that the state of nature is “a war of all against everyone,” a condition of permanent insecurity, “continual fear, and danger of violent death.”¹³ According to Giddens, the existential anxiety that characterizes this world represents the absolute antithesis of trust.¹⁴
 
-In Leviathan the “continual fear” that “anything is possible” is subject to a threefold temporalization. It is that which was before, that which looms in the future, and that which is still the case elsewhere:
+In *Leviathan* the “continual fear” that “anything is possible” is subject to a threefold temporalization. It is that which was before, that which looms in the future, and that which is still the case elsewhere:
 
 > It may peradventure be thought, there was never such a time nor condition of war as this; and I believe it was never generally so, over all the world.
 
@@ -270,10 +249,9 @@ Hobbes used the concept of “war of all against all” to describe what would h
 
 Let’s turn again to the general notion of trust. Since its meaning is disputed, I would like to propose my own definition. The everyday sense of the word is a good place to start. What does it mean to be trustworthy? We are trustworthy when we keep our promises, the implicit as well as the explicit. But this is only half the story. We wouldn’t call someone trustworthy who threatens to hurt us and then makes good on it. Reliability alone does not make a person trustworthy. Being trustworthy is not only about keeping promises; it means refraining from saying and doing certain things. No less important than knowing what to expect from a person is knowing what not to expect. “One is not likely to be reassured by someone who says, ‘I promise not to murder you,’” Bernard Williams once wrote.¹⁶ In some situations a statement like this could destroy trust itself.
 
+
+
 Just as we can trust in specific people (or not), we can trust in society (or not). Assume we heard on the morning radio that the government had decided to suspend all punishable laws for four weeks as part of an experiment to overhaul the legal system.¹⁷ How would this change our lives? For starters, we’d have many new questions to consider. What if my neighbor dislikes me? What if another neighbor owes me money? How violent are the skinheads I see on the bus in the mornings? Should I pack my kitchen knife before leaving the house? For most of us, these are thoughts we don’t entertain because we have no reason to entertain them. If I become a victim of a violent crime, no one will blame me for not being armed. I know it’s possible to become a victim, but it’s not something I expect. And even if I did, the society in which I live makes it difficult to prepare for such a scenario to begin with. Strict gun laws are part of Europe’s normative framework, which is why Europeans are so proud of them. Life in European society is, to the point of compulsion, fundamentally shaped by the existence of social trust.
-
-
-
 
 除了对人和对社会的信任之外，还有对整个世界的信任。这种信任体现在我们确信明天太阳还会升起。与其他形式的信任一样，对世界的信任超越了可靠性。合恩角的居民可以指望多风的天气，但这并不意味着他们信任水域。为此他们需要知道洋流不会使他们偏离航线，风也不会使他们的船倾覆。生活在风险地区的人必须采取那些生活在更安全地区的人不需要的预防措施。在德国，人们没有理由在早上抖鞋；在有蝎子的地区，他们就需要这样做。
 
@@ -297,18 +275,19 @@ Just as we can trust in specific people (or not), we can trust in society (or no
 
 换句话说，把信任给予某物或某人意味着在不确定的情况下变得主动。像信心一样，我的信任也可能令人失望，而与信心不同的是，我的信任是我必须决定去信任。
 
-卢曼的信心概念的问题在于那些卢曼所写“你不知道还能做什么”的情况。我对自然规律持续有效性的信心，与我对不会发生车祸的信心是不同类型的，因为在后一种情况下我至少可以
-
-
-比如说，通过检查轮胎胎面，让自己确信我的车并不是特别容易发生事故。我建议我们这样定义信心：当期望落空的可能性从不或很少出现时，这些期望就可以说是有信心的。试想一个反例。我们对政客没有信心。我们不确定他们会设法防止战争和/或按照我们的最佳利益行事。我们对政客没有信心，与我们对万有引力定律有信心，是出于同一原因：我们不知道还能怎么办。但我们仍然可以决定信任一个政客。我们之所以能够如此，是因为我们经常参与各种实践，以确保政客们为了社会利益而诚实工作。我们回答关于他们个人信誉的民调，阅读分析他们品格的文章，关注调查委员会的报告，并留意弹劾听证会得出的结论。我们通常并不相信政客们说的话，但依然保持乐观。我们从事的实践使我们能够做出一些可能反事实（并在凄凉时刻被视为异想天开）的假设，但只有当我们不参与政治进程时，这些假设才是天真或失职的。正如无视明显贪污迹象的州检察官没有尽到职责一样，如果我们认真对待一个经常发表拙劣演讲的政客，那我们就是白痴。我们没有听过这些演讲，这不能成为借口。我们通过亲身参与来换取政治信任的权利。
+卢曼的信心概念的问题在于那些卢曼所写“你不知道还能做什么”的情况。我对自然规律持续有效性的信心，与我对不会发生车祸的信心是不同类型的，因为在后一种情况下我至少可以比如说，通过检查轮胎胎面，让自己确信我的车并不是特别容易发生事故。我建议我们这样定义信心：当期望落空的可能性从不或很少出现时，这些期望就可以说是有信心的。试想一个反例。我们对政客没有信心。我们不确定他们会设法防止战争和/或按照我们的最佳利益行事。我们对政客没有信心，与我们对万有引力定律有信心，是出于同一原因：我们不知道还能怎么办。但我们仍然可以决定信任一个政客。我们之所以能够如此，是因为我们经常参与各种实践，以确保政客们为了社会利益而诚实工作。我们回答关于他们个人信誉的民调，阅读分析他们品格的文章，关注调查委员会的报告，并留意弹劾听证会得出的结论。我们通常并不相信政客们说的话，但依然保持乐观。我们从事的实践使我们能够做出一些可能反事实（并在凄凉时刻被视为异想天开）的假设，但只有当我们不参与政治进程时，这些假设才是天真或失职的。正如无视明显贪污迹象的州检察官没有尽到职责一样，如果我们认真对待一个经常发表拙劣演讲的政客，那我们就是白痴。我们没有听过这些演讲，这不能成为借口。我们通过亲身参与来换取政治信任的权利。
 
 ## 社会信任的实践
 
 我对明天石头不会飘向天空的信心，与我对政客大体诚实的信任，其区别并不在于前者涉及自然现象，而后者涉及社会现象。而在于后一种情况存在使信任成为可能的实践，前一种情况则不存在。这种情况可能会改变，有时会变得很快。与法国漫画《阿斯特里克斯历险记》中那些在其他方面无所畏惧的主角们不同，我们通常并不担心天会塌下来砸到我们头上。但我们确实目睹了苏梅克-列维9号彗星撞击木星，偶尔我们也会自问，类似的事情是否可能降临到我们头上。这种忧虑并不新鲜。自从我们不再将彗星和流星视为未来的预兆，而是开始将它们视为自然现象以来，它就一直伴随着我们。20 多亏了对地球和月球的地质研究以及计算机模拟，我们现在相当清楚一颗大型小行星的撞击会给我们的星球带来什么后果。
 
-对天穹稳定性的信心可能会崩塌，但那些积极不信任它的人（至少在我们这个时代）从未能掀起超过轻微的大众歇斯底里波澜。这种担忧在很大程度上仅限于一种  
-第一个人：五十亿。  
+对天穹稳定性的信心可能会崩塌，但那些积极不信任它的人（至少在我们这个时代）从未能掀起超过轻微的大众歇斯底里波澜。这种担忧在很大程度上仅限于一种
+
+第一个人：五十亿。
+
 第二个人：真是松了口气！我还以为你说的是五百万。
+
+
 
 现在设想把这个笑话讲给一个阿兹特克人听。每隔五十二年，当历法周期的最后几天重合时，阿兹特克人便会认为世界可能终结。这时太阳神有被黑夜吞噬的危险；据信，这种情形会导致地球上发生大规模地震和饥荒。为了做准备，阿兹特克人熄灭火焰、砸碎陶器、毁坏圣像（最后一项是为了防止受冤屈的神灵在黑暗的掩护下进行报复）。随后，在最后一夜的中段，祭司在主神庙顶部献祭一名囚犯，并在受害者胸膛上点燃火焰。如果翌日清晨太阳升起，就意味着黑暗势力已被战胜——这一次——而阿兹特克人将这一成功归功于他们在过去几十年里献祭的人数。一旦确信世界还能再存续五十二年，阿兹特克人便迅速恢复对邻近部族的长期战争，以确保稳定的牺牲品供应——以及以人肉为补充的饮食。25
 
@@ -331,71 +310,127 @@ Just as we can trust in specific people (or not), we can trust in society (or no
 在个人层面也是如此，正如歌德在《浮士德》中的这段所展示的：
 
 > 玛格丽特：向我保证，亨利希。
+> 
 > 浮士德：凡我所能做到的一切！
+> 
 > 玛格丽特：那么告诉我，你对宗教怎么看。
+> 
 > 我知道你是个善良的好人，
+> 
 > 但我猜想，它对你来说无足轻重。
+> 
 > 浮士德：亲爱的，我们别谈这个。你知道
+> 
 > 我愿为你献出生命，我是如此爱你；
+> 
 > 我不愿夺走任何人的信仰。
+> 
 > 玛格丽特：人必须有信仰！你说的不对！
+> 
 > 浮士德：啊，必须有吗？
+> 
 > 玛格丽特：哦，要是我能让你明白就好了！
+> 
 > 你不尊重神圣的圣礼，是吗？
+> 
 > 浮士德：我尊重。
+> 
 > 玛格丽特：但你并不想要它们！你不去
+> 
 > 做弥撒，也不去忏悔，这我知道。
+> 
 > 你信上帝吗？
+> 
 > 浮士德：亲爱的，谁敢
+> 
 > 说：我信他？
+> 
 > 去问牧师，去问学者，
+> 
 > 而他们所有的回答似乎
+> 
 > 只是在嘲弄提问者。
+> 
 > 玛格丽特：那你就是不信？
+> 
 > 浮士德：我甜美的爱儿，别误解
+> 
 > 我的意思！谁敢说出上帝之名？
+> 
 > 谁敢宣称
+> 
 > 他信上帝？
+> 
 > 又有谁的心如此麻木，
+> 
 > 竟敢大胆地说：
+> 
 > 不，我不信？
+> 
 > 拥抱万物，
+> 
 > 维系万物，
+> 
 > 祂难道不维系着你、
+> 
 > 我，甚至祂自己？
+> 
 > 天上那伟大的穹顶难道不在上方，
+> 
 > 而下方的大地，难道不是稳固地矗立着？
-
-
-
 
 ## 24 第一章
 
 > 永恒的星辰，闪耀着爱，
+> 
 > 不在我们头顶的天空升起吗？
+> 
 > 我们难道不就在这里，彼此对视？
+> 
 > 这一切难道不包围
+> 
 > 你的心灵和心，
+> 
 > 并在看不见的可见性中编织
+> 
 > 在你周围它的永恒奥秘？
+> 
 > 哦，让你的心充满这一切，
+> 
 > 当你因这种喜悦而溢满
+> 
 > 这样的感受时，称之为你喜欢的任何名字！
+> 
 > 称之为快乐，或你的心，或爱，或上帝！
+> 
 > 我对此没有名字。感受就是全部。
+> 
 > 那个名字只是更多的噪音和烟雾——它有什么用
+> 
 > 除了遮蔽天堂的光辉？
+> 
 > 玛格丽塔：嗯，我想这一切都说得通；
+> 
 > 我想牧师也说了类似的话——
+> 
 > 只是措辞上有差别。
+> 
 > 浮士德：这就是所有人所说的，
+> 
 > 在祝福的日子下所有人类心灵
+> 
 > 说出同样的信息，各自
+> 
 > 用自己的语言：
+> 
 > 我难道不能用我的语言来说吗？
+> 
 > 玛格丽塔：听起来都很好，很不错，
+> 
 > 但其中还是有些不对劲，
+> 
 > 因为你不是基督徒，我真的怀疑！
+> 
 > （3413–67）³¹
 
 信仰的问题后来被称为格雷琴之问，以玛格丽塔的昵称命名。这是一个关键的问题，而浮士德回答得并不好。他的演讲很好地证明了宗教怀疑论者的雄辩，他不愿切断与自己怀疑之物的所有联系。³² 而它也精彩地运用了神学中蕴含的诗意可能性，这种神学通过诉诸无限来避免采取明确立场。但这些品质也是诱惑者的标志，是一个诚实与不诚实并存的人。³³
@@ -407,24 +442,34 @@ Just as we can trust in specific people (or not), we can trust in society (or no
 浮士德和玛格丽塔生活在一个社会信任的不同实践并存并偶尔碰撞的历史时刻。在这个潜在碰撞的时代，一个人的可信度无法一劳永逸地确定。玛格丽塔意识到了这一点，但她没有得出相应的结论，而是屈服了，让浮士德说服她给那位耳尖的母亲（最终致命的）安眠药。尽管浮士德未能理解玛格丽塔问题的含义，它仍然触动了他的情感，这就是为什么他必须斥责梅菲斯特的讽刺：
 
 对你那卑劣的心灵来说，当然，这只是可爱
+
 那位充满信仰的亲爱的灵魂，
 
-
-
 她所知道的通往天堂的唯一道路，
+
 竟让她如此折磨自己，可怜的圣徒，
+
 以为她的恋人被判处永恒的死亡！
+
 （3522–27）
 
 浮士德将玛格丽特的信仰私有化，正如他对待自己的信仰一样，享受着她纯真所带来的情欲诱惑，却不承担哪怕一丝义务。梅菲斯特则不受此类无聊事的束缚。作为一名讽刺者，他完全理解玛格丽特的问题：
 
 我全神贯注地听着。
+
 那位博学的博士受到了教理问答！
+
 我希望他觉得这一切都很有益。
+
 女孩们总是会查验，如果她们明智的话，
+
+
+
 看一个人是否保有那种老派的虔诚；
+
 她们的理论是，如果他吞下
 所有那些东西，他就会任我们摆布。
+
 （3528–33）
 
 梅菲斯特不仅是讽刺者；他还是个犬儒主义者（这是对他契约伙伴兼未来朋友那种狂喜式狂欢的补偿）。他为浮士德提供了对“格雷琴之问”的解释，但浮士德无法接受。如果他接受了，他就会看到自己恳求的卑微和自己行为的真正动机，而诱惑要么会失败，要么会变成危险的勾搭式的算计。无论哪种情况，浮士德都无法再相爱。而这正是他想要的感觉，无论是出于厌倦还是出于某种不那么无害的动机。受过训练相信浪漫依恋不过是性上的高估的弗洛伊德主义者，真的能真正坠入爱河吗？他们当然可以，而且确实如此，但理论的声音在这一过程中必须降到耳语。
@@ -438,9 +483,6 @@ Just as we can trust in specific people (or not), we can trust in society (or no
 问题不在于，我们是否正确地描绘了自己？问题是，我们是否相信彼此？我们是否相信对方？这种信念取决于社会关系，而直觉上我们知道社会关系在根本上是建构的。然而我们直觉上抗拒那些使社会关系的建构性显明化的社会学理论，因为这种真理的模糊化是确保信任的前提条件。为了有效，保障信任的实践必须代表并持续再生产常态的条件。常态的定义可以改变，而当它改变时几乎总是由于危机，正如我对浮士德的讨论所阐明的。但无论在危机时期还是秩序时期，我们都是通过不断重申关于什么是正常的信念集合来创造社会信任。而要做到这一点，我们必须继续预设我们想要重申的信念集合。我们的信念是灵活的——我们可以修改其中一些而不质疑全部——因此能够在微观层面上抵御危机。社会信任的实践为我们不断提供对以下问题的答案：我是谁？你是谁？我们是谁？³⁸
 
 尽管我已论证我们必须抗拒将信念物化为体系的诱惑，关于应优先考虑哪些保障信任的实践的决定却是持续冲突的来源，有时甚至达到生存的程度。索福克勒斯的《安提戈涅》是对这种冲突的诗意记述。两种解读
-
-
-
 主导了其接受度。一种看法把安提戈涅视为象征着反抗底比斯国王克里翁专制企图的整个人类。另一种更符合希腊悲剧观念的看法，则认为两者之间存在着不可调和的冲突，即两个同等正当的原则之间的冲突。39 第三种更令人信服的说法来自克里斯蒂安·迈尔，他指出克里翁禁止在底比斯安葬波利尼克斯的决定符合当时的习俗，该习俗禁止叛徒在城邦内安葬。40
 
 安提戈涅，波利尼克斯的妹妹，在秘密地向她兄弟的尸体上撒土进行象征性安葬时遵循了其中一种习俗。当官员们清除泥土时，她重复了这一仪式，但这次她被抓获并被带到克里翁面前。在为自己辩护时，她认为克里翁的法令无法凌驾于神灵不可改变的法律之上。41 当克里翁援引绝对的政治权力时，安提戈涅坚持一种前政治的——也就是说，传统的——法律秩序。克里翁的立场依赖于底比斯的公民有意识地放弃传统职责和虔诚，并宣誓效忠于城邦以及体现城邦的君主。克里翁的暴政就是城市的法律；他通过声称若无他在位将导致无政府状态来为其合法化：
@@ -460,11 +502,14 @@ Just as we can trust in specific people (or not), we can trust in society (or no
 安提戈涅的立场赢得了同情。克里翁的儿子海蒙谴责国王的专断：
 
 HAIMON: 那不是底比斯人民共同拥有这座城市的人所说的。
-KREON: 这座城市应该告诉我该下达什么命令吗？
 
+KREON: 这座城市应该告诉我该下达什么命令吗？
 我必须为别人而不是为自己统治这片土地吗？
+
 HAIMON: 没有一座城市只属于一个人。
+
 KREON: 统治者统治的城市不就是他的吗？
+
 HAIMON: 你最好去统治某个荒无人烟的地方作为唯一的统治者。44
 
 对海蒙来说，统治者永远不能把自己理解为自主的权威，即使他是唯一做决定的人。到克里翁最终接受这种思维方式时，一切都为时已晚。安提戈涅被判处死刑后自杀了，与她相爱的海蒙也自杀了，克里翁的妻子也无法忍受活过自己的儿子。最终合唱对克里翁呼喊道：“啊，你似乎也认识到什么是正义，但为时已晚！”45
@@ -473,64 +518,19 @@ HAIMON: 你最好去统治某个荒无人烟的地方作为唯一的统治者。
 
 希腊城邦的一个显著特征是对宗教事务的敏感性。据报道，有三位著名的宗教怀疑论者被放逐出雅典：普罗塔戈拉，据称他说过关于诸神的话，“我既不能知道他们存在，也不能知道他们不存在”，其著作后来被焚毁；16 阿那克萨戈拉，被罚款并被放逐；17 以及臭名昭著的狄阿戈拉斯，他仅因带着悬赏逃离城市才逃脱定罪。在他极具可读性的《苏格拉底审判》中，I. F. Stone 激烈否认这些事件发生过。48 但即使它们没有发生，我们也可以肯定苏格拉底因不敬神而受审。对他的指控也有政治方面的内容。苏格拉底在贵族圈子中活动，其成员同情斯巴达——斯巴达在伯罗奔尼撒战争中的胜利增强了雅典贵族的政治权力——并且除了缺乏爱国主义外，还被怀疑有宗教上的自由思想。49 十六
 
-
-
-
 早在 415 年 BCE，雅典舰队启程前往西西里之前不久，醉酒的青年人就破坏了排列在城街道上的赫尔墨斯石柱。事件的事实从未得到澄清，但在调查过程中却发现，雅典金色青年中的新星、与苏格拉底交往的阿基比亚德斯，近期曾在一次私人聚会上通过戏仿亵渎了 Eleusinian Mysteries。阿基比亚德斯后来被缺席审判并被判处死刑。这起事件只进一步强化了苏格拉底腐蚀青年并崇拜假神的看法。
 
 民主雅典的宗教不宽容源于政治的激进至上，而这正是索福克勒斯所警告的。对雅典而言，Gretchenfrage 是“你对城邦的神祇怎么看？”正确答案——“我尊重他们”——绝不会接着说“但你不想要他们！”关键在于通过参与象征其政治可靠性的集体实践来证明政治上的可靠性。尽管苏格拉底像安提戈涅一样为自己的行为援引神圣权威，但他的行为根植于自主性。苏格拉底以自己为自己制定的法律为依据，证明自己可以不参与民主的公共生活。50 根据柏拉图，苏格拉底“遵从神谕寻求和探索”，使他“既无暇从事政治”，也无暇处理“自己的事务”。51 苏格拉底不是一个可靠的公民，也不想成为一个可靠的公民。他拒绝遵守悔过被告的惯例，宣示了他对雅典民主的不信任。这种不信任最终要了他性命。雅典的历史声誉在伯里克利的鲁莽规划、伯罗奔尼撒战争的灾难、帝国主义的修辞、战争的毁损以及阿里斯托芬的猛烈攻击中幸存下来，但它从未从苏格拉底之死中恢复过来。52 后世会一直震惊，但它从未把握住自主性（由内而外强加的法律）与他律性（由外而内强加的法律）之间的根本冲突，以及这种冲突在关于集体信任保障实践意义的斗争中的象征性表达。53
 
-罗马对基督徒的迫害源于类似的冲突：一个少数群体自主希望免于参与由主导群体用来证明政治可信度的实践。随着迫害的持续并在地理上扩大，原初问题被内部动态所遮蔽，但这丝毫不减损其重要性。小普林尼在担任小亚细亚比提尼亚的帝国总督期间，就如何处理基督徒一事写信向特拉扬征求意见，这些基督徒唯一的“罪行”就是迷信。皇帝建议审慎行事，并写道“不可能为此制定一个固定的通用规则”。“这些人”，他解释道，“不应被搜捕；如果他们被带到你面前并且指控得到证实，他们必须受罚，但对于任何否认自己是基督徒的人，只要他通过向我们的神祇祈祷并表明自己不是基督徒，就应因其悔改而被赦免，无论其过去行为多么可疑。”54 特拉扬说的是我们的神祇，而不是神祇。Jan Assmann 所称的摩西区分，即正确神祇与错误神祇的区分，尚未到达地中海的这一部分。55 私下崇拜其他神祇并非犯罪，前提是公开崇拜罗马神祇。只有，忠诚的这种展示——罗马神祇被认为保护着罗马帝国——与基督徒自主的宗教观念相矛盾。他们的上帝概念的合法性源于摩西区分。他们对“我们是谁？”这一问题的回答仅为“我们是基督徒”。56 保罗认为自己作为基督徒的身份与自己作为罗马公民的身份是兼容的，这一信念并未获得神学上的认可，尽管它本可以让双方的生活都更轻松。57 拒绝参与信任保障实践，对于基督徒形成基督徒身份而言，与罗马人归属基督徒身份而言同样相关（并反过来形成罗马身份）。普林尼在写给特拉扬的一封信中写道：
 
-> 我认为，对于那些否认自己是或曾经是基督徒的人，只要他们在我之后重复向诸神祈祷的公式，并向你的雕像献上酒和乳香——我已下令为此目的将雕像连同诸神的形象一起带入法庭——并且进一步诋毁基督的名，我就应将其释放；我了解到，没有任何真正的基督徒会被诱导去做这些事。59
+                                                                                                                                                                                                                                                                                                                                                                                                                                           
 
-*社会信任的实践在我们服从并调整以适应由外而内强加给我们的法律的程度上，相互确认我们是谁以及我们是什么。*
-
-历史上，遵守他律性法律的义务，以及逃避者所要承担的后果，差异很大。例如，苏族的男性成员可以通过成为 winktes——穿着女装并从事传统上分配给女性的任务的男人——来免除成年人的要求。58 当然，这与其说是完全逃避他律性法律，不如说是遵守另一套法律。这种习俗是谨慎地让一个小而紧密的战士社会免于处理多数人视为懦弱者、胆小鬼和抱怨者的人的一种方式。无论这是否是一种半心半意的宽容，还是一种特别阴险的不宽容，在此并不重要。重要的是要指出，社会并不拥有某种由仪式守护的核心文化，而所有人必须从中汲取身份，否则就会被排斥。蒙古帝国是当时最真正宽容的社会，甚至对被征服人口中的宗教不宽容行为进行惩罚。这绝不是
-
-惊讶的是，蒙古人的征服冲动源于唯一的欲望：要突破喀喇昆仑的局限。与此形成对比的是，穆斯林的征服是由宗教驱动的。它们证明是一次同样戏剧性但后果远为深远的转折。
-
-最近对伊比利亚半岛在穆斯林统治下状况的理想化倾向，受到了寻找多元文化天堂的历史证明的欲望的推动。虽然安达卢西亚的建筑可能优于西班牙，但人们忘记了十一世纪格拉纳达发生了针对犹太人的大屠杀。尽管如此，值得注意的是，尽管穆斯林世界具有宗教动机的扩张主义，其中的一个地区仍允许思想和表达自由。安达卢西亚由伊斯兰教主导，但格蕾琴问题并未决定谁能参与社会。那里繁荣的启蒙运动在通常意义上并没有什么可启蒙的：科学和思想在一种多元的环境中展开，这种环境对学科单一主义一无所知。60
-
-对类似智力自由主义形式的实验将深刻动摇沿巴黎-罗马轴线的基督教西方。就像古代世界某些地区的政治激进化一样，基督教西方的宗教垄断预示着现代极权主义。极权宗教的政治是极权主义作为政治宗教的前身。61 问题不在于无误论或普遍主义或激进化的摩西区分的主张，而在于对基督教社会中基督教生活的约束力。
-
-1277年3月7日，巴黎主教公布了一份219条哲学论题的清单，自此被谴责。被谴责的教义并不代表与基督教竞争的官方统一理论，而是接受过亚里士多德、阿威罗伊和阿维森纳训练的中世纪学者的不同观点。62 无论摆脱教会教义的独立性反映了对自治的渴望还是源于新的异己法律，这些学者所持的立场都是异端的。以下是一些例子：
-
-- (24) 除了哲学学科之外，所有的科学都是必要的，但仅出于人类习俗。
-- (40) 没有比研究哲学更优秀的状态。
-- (145) 没有任何哲学家不应该争论和确定的理性可争议的问题，因为理由源于事物。考虑所有事物属于哲学家在其各个部分之一的范畴。
-- (150) 人不应以权威为满足，以对任何问题获得确信。
-- (180) 人并不会因为他知道神学而知道更多东西。
-- (182) 基督教法阻碍学习。63
-
-1277年的谴责案打破了学术自由数个世纪。 （直到1817年，黑格尔在提名让·保罗获得荣誉博士学位后，还不得不消除人们对他是无神论者的恐惧。）但对谴责案还有另一种理解。通过划定可以思考和教授的内容，它们确保了知识的积累并防止其消散，基督教的教条主义和侵略性主导将政治、民族、语言、地方和经济不平等的拼凑转变为一种单一文化，在这种文化中，相互交替的主张、依赖、竞争和合作形式并存。64 从僵硬的宗教框架中产生了地方政治的特殊性以及遍及欧洲的大学制度。65 基督教也试图为一种虔诚实践赋予统一的形状，这种实践与它一样异质，也一样无处不在。维系欧洲宗教体验的东西是共同的信念，即世界不仅仅是表象所呈现的那样。 “人们认识到，”费迪南德·塞布特指出，“存在一个超世俗的领域，无论是被安排成等级制度的神圣军团所充斥，还是以某种其他形式的迷信为特征……超验世界是真实的，并且真正交织在几乎每个人的行为和思想中。”66 天主教的使命是通过制度化、皈依以及消除一切真实或想象的替代品，将对超验世界的信仰转变为一种对所有人开放的宗教。正是在这里，我们在天主教中找到了人类思想的谱系起源。
-
-## 我们无法不信任
-
-不信任需要一个怀疑的立足点。在自由落体中是不可能不信任的。例如，我们可以用信任或不信任的态度进入一个房间。以前者而言，我们之所以进入房间，是因为我们信任周围的人。以不信任而言，我们之所以进入房间——如果我们进入房间——是因为我们拥有另一种类型的信任。我们信任自己的力量，信任自己的武器，或信任我们派去在角落站岗的人的武器。 （任何看过西部片的人都知道这个场景。）在每一种情况下，我们都会为我们认为在正常情况下可以预期的事情做好准备。社会不会仅仅因为情况看起来黯淡就陷入混乱。也不仅仅因为我们这些生活在更稳定区域的人认为从表面上看它们必须如此。相反，社会会根据情况重新调整信任和不信任的程度，而生活其中的人们也会相应地调整他们的期望。有些人不可避免地会被压垮、崩溃、表现笨拙，或感到晴天霹雳，但这些是例外，而不是规则。信任和不信任都是在情况不明、世界提出我们无法满足的要求时应对的策略。
-
-
-
-
-即便末日迫近，信任仍有可能。在诸如此类的情境中，“信任”并不意味着听天由命的屈服、丧失希望或精神崩溃。只要我们知道末日何时降临，以及在此之前需要做些什么来减轻冲击，我们就能继续过自己的日子。六世纪初，基督教世界的大部分居民都相信末日将至。祈祷帮助他们熬过了那段时光，端正的态度也是如此。预想末日给他们的生活带来了秩序；否则世界就会显得错乱，成为一个堕落的所在，寻常的信任与不信任策略再也无法应付。真正的信任危机直到后来才出现——当时灾难接踵而至，瘟疫、饥荒、地震、洪水——但预想中的末日却并未发生。只要人们还盯着日历，他们就能靠修建新的教堂来安慰自己。然而当末日没有降临时，城市便被大规模的歇斯底里所笼罩，有时持续数月之久。67 在其他情况下，人们会改变策略，转而回归异教。
-
-正统基督教在拜占庭行省的出现，正是对这些事件的回应。542年，即瘟疫抵达君士坦丁堡的那一年，查士丁尼废除了执政官——罗马政治传统的最后一个象征——并逐渐将元首制转变为神圣帝国。（此后皇帝便以带有基督属性的形象呈现。）这一转向使拜占庭帝国卸下了末日的忧虑。由于有了崇高的君主和以圣索菲亚大教堂为中心的祭仪社群，基督在某种程度上成了希腊传统中的庇护神。制造奇迹圣像的活动开始了，圣母崇拜也得以确立，以抵御瘟疫。
-
-在法国大革命的年代，许多社会地位使其处境危险的人，通过内在和外在的移居形式度过了危机。真正的信任危机发生在那些受到不可预见之变威胁的人中间，正如“大恐惧”和九月屠杀所表明的那样。在西班牙征服美洲期间，一些部落无法适应威胁其世界的危机。成年人停止生育，并杀掉所有出生的婴儿。有时整个群体都诉诸自杀。恰帕斯主教巴托洛梅·德拉斯·卡萨斯曾记载：“有些大家庭的成员集体上吊自尽，还有村庄敦促其他社区加入它们，以团结的姿态走向死亡。”据说一位征服者评论道：“（古巴人）习性恶劣，满口谎言，记性很差，也谈不上什么毅力。他们为了逃避劳作而服毒自杀。另一些人则亲手将自己吊死。”68
-
-自杀倾向在多大程度上是对饥荒、瘟疫和战争的回应，我们只能猜测。69 我们从三十年战争中所知的情况尚无定论。纳粹德国最后的日子里，有一些文献指向了自我毁灭的行为。70 然而，面对信任危机，通常的应对是重新定向。正是这种重新定向带领人们走出了550年的危机，并帮助构建了一种在未来一千年里定义欧洲的信任观念。
-
-## 重新定向
 
 古代晚期的终结标志着社会信任模式的重大转变。在古典时代，信任——一般而言——是排他性的。凡是不参与某些社会实践的人，都被视为不可信，要么离开社群，要么因叛国罪而面临惩罚。71 相比之下，从基督教西方的开端直到近代前夕，信任是包容性的。基督教对包容性的主张甚至延伸到了那些因拒绝或未能参与维护信任的实践而无法融入社会的人。例如，异端分子在被处决之前，应当放弃自己的信仰，公开拥抱天主教正统，从而在事后参与一种维护信任的仪式。这正是“auto-da-fé”即“信仰行为”这一概念成为火刑处决同义词的由来。即使因非宗教罪名被判刑的人，如果其忏悔信仰恰好偏离天主教教义，也必须服从这一程序。72
 
 基督教“我们”的力量如此之大，以至于它延伸到了所有人，包括那些尚不为人所知的人。西班牙对中美洲的征服，连同随之而来的合法性模式，至今仍是一个极具启发性的历史例证。1550年发生在巴利亚多利德的哲学家胡安·希内斯·德·塞普尔维达与巴托洛梅·德拉斯·卡萨斯之间的争论，就是一个著名事件。塞普尔维达为美洲原住民遭受的剥削和惩罚辩护，而拉斯·卡萨斯则主张将他们纳入一种专制福利国家（他后来试图建立这样的国家——结果对当地居民而言是灾难性的、血腥的）。拉斯·卡萨斯依据的是1537年的教皇诏书，保罗三世在其中这样描述教会的五旬节使命：“（耶稣说，）‘去使万民作我的门徒。’”他说“万民”而不加区分，因为所有人都能接受信仰的训导。73 塞普尔维达则认为，当原住民抵抗皈依时，一切形式的强制都是正当的。74
 
-两人都没有质疑基督教至高无上的主张——在这样一场旨在确立教会认可的殖民政策基本前提的官方辩论中，情形几乎不可能不是如此。双方都持有一种共识：所有人都可以皈依，因为所有人都被呼召在包罗万象的基督教社群中得救。将他们区分开来的具体是两个问题。首先，拉斯·卡萨斯认为人被呼召得救，因为他引用圣约翰·屈梭多模的《辩护辞》说：“没有
-
-
-
-在所有人——无论野蛮人还是智者——的得救呼召上存在差异，因为上帝的恩典能够纠正野蛮人的心智，使他们拥有合理的理解。⁷⁵ 相反，塞普尔维达认为人类虽蒙召得救，但相信存在某些不平等之人，这基于亚里士多德的观念：有些人生来就是奴隶。⁷⁶ 其次，塞普尔维达支持奥古斯丁的观点，即“一个未受洗礼而死去之人的灵魂丧失，其严重性超过无数受害者的死亡。”⁷⁷ 拉斯·卡萨斯不同意。“将孩子扔进井里以施行洗礼并拯救其灵魂，倘若因此导致孩子死亡，那将是极大的混乱和致命的罪过，”他写道。⁷⁸ 拉斯·卡萨斯的立场不仅表达了异议；它违背了基督教的包容理念。从拉斯·卡萨斯的角度看，基督教归信的强制性要求并未界定人性的边界；相反，人性理念设定了基督教归信的限度。塞普尔维达只能通过大幅限制包容概念来反驳这一观点。无论如何，包容理念都无法应对新大陆的发现给旧大陆带来的新问题。
+两人都没有质疑基督教至高无上的主张——在这样一场旨在确立教会认可的殖民政策基本前提的官方辩论中，情形几乎不可能不是如此。双方都持有一种共识：所有人都可以皈依，因为所有人都被呼召在包罗万象的基督教社群中得救。将他们区分开来的具体是两个问题。首先，拉斯·卡萨斯认为人被呼召得救，因为他引用圣约翰·屈梭多模的《辩护辞》说：“没有在所有人——无论野蛮人还是智者——的得救呼召上存在差异，因为上帝的恩典能够纠正野蛮人的心智，使他们拥有合理的理解。⁷⁵ 相反，塞普尔维达认为人类虽蒙召得救，但相信存在某些不平等之人，这基于亚里士多德的观念：有些人生来就是奴隶。⁷⁶ 其次，塞普尔维达支持奥古斯丁的观点，即“一个未受洗礼而死去之人的灵魂丧失，其严重性超过无数受害者的死亡。”⁷⁷ 拉斯·卡萨斯不同意。“将孩子扔进井里以施行洗礼并拯救其灵魂，倘若因此导致孩子死亡，那将是极大的混乱和致命的罪过，”他写道。⁷⁸ 拉斯·卡萨斯的立场不仅表达了异议；它违背了基督教的包容理念。从拉斯·卡萨斯的角度看，基督教归信的强制性要求并未界定人性的边界；相反，人性理念设定了基督教归信的限度。塞普尔维达只能通过大幅限制包容概念来反驳这一观点。无论如何，包容理念都无法应对新大陆的发现给旧大陆带来的新问题。
 
 尽管巴利亚多利德辩论最终不过是历史上的一个脚注，而且拉斯·卡萨斯在辩论中失败了——值得肯定的是，他后来呼吁西班牙完全撤出美洲——但仍有两件事需要铭记。塞普尔维达关于人类之间自然不平等的亚里士多德式观念并不反映共识观点（尽管这一事实在实践中没有改变任何东西），而拉斯·卡萨斯拒绝了奥古斯丁关于洗礼具有绝对优先性的信念。鉴于十六世纪美洲的血腥屠杀，这些思想史上的注脚或许显得轻浮，但从中推断出无意义也是不明智的，因为后果的显现往往是滞后的。⁷⁹ 巴利亚多利德是社会信任及其实践完全重构的早期标志。而巴利亚多利德之所以成为这样一个标志，是在欧洲——一个由基督教理念统一但被文化、经济和政治所分裂的等级社会——无法满足其解释迅速变化世界的需求之时。自尼西亚会议以来，基督教虽竭力建立一套连贯、统一的教义，却始终无法为领土扩张问题提供权威框架。
 
@@ -538,11 +538,7 @@ HAIMON: 你最好去统治某个荒无人烟的地方作为唯一的统治者。
 
 扩张对基督教提出的过度要求，加上基督教自身因依赖一种未获政治权力充分支撑的信任实践而承受的过度要求，使得压力倍增。如果说基督教的普世化主张确实为欧洲各自为政的政府和地区创造了一个共同的文化框架，那么同样正确的是，只要基督教没有建立欧洲神权政体，这种普世化主张就永远只能是一个框架。在卢曼看来，基督教从未建立神权政体这一事实，是欧洲对功能分化实验独特开放性的最重要先决条件之一。⁸¹
 
-芭芭拉·塔奇曼将文艺复兴时期教皇的政策——尤其是他们尽管普遍认为改革必要却臭名昭著地拒绝发起改革——作为她所谓“愚蠢”的一个例子。⁸² 从其行为结果——即宗教改革（塔奇曼认为这场分裂是可以预见的）——来看，这确实是愚蠢之举。但从另一个角度，一个塔奇曼未讨论的角度来看，这不是愚蠢而是失败：即教会在传统教皇国之外未能获得世俗权力。教皇们的政治权谋、军事冒险以及规模宏大的艺术与建筑展示（对欧洲文化发展影响深远）都可以理解为一种实现该目标并加以象征性强化的努力。这些教皇没有忘记他们的基督教信仰；他们赋予了古老的“凯旋教会”这一表述以新的意义。一方面，这放松了教义控制，并在这一过程中推动了文艺复兴。另一方面，它也导致罗马在远离教皇权力、且毫无教会辉煌可言的地区，激起了路德、加尔文和茨温利的基本主义回潮。这些改革者的抗议若未在与罗马斗争中获得政治保护，便注定徒劳无功，这正是为何他们这些人尽管怀有宗教热忱，最终却无意中削弱了宗教对世俗世界的掌控。一旦出现了多元的基督教形态（而不仅仅是像有时那样出现多元教皇），
-
-
-
-基督教作为一种信仰告白已不再成为一种有效，或至少是普世化的社会信任载体。阿尔布雷希特·冯·瓦伦斯坦（Albrecht von Wallenstein）组建的军队就是一个揭示性的例子。通过它为皇帝在反宗教改革一方成功作战，这支军队信仰混杂，而瓦伦斯坦本人只是对天主教的一种政治性皈依。这种对传统信任实践的抛弃在当时是超前的，但它也引发了严重的猜忌，最终对瓦伦斯坦造成了致命后果。
+芭芭拉·塔奇曼将文艺复兴时期教皇的政策——尤其是他们尽管普遍认为改革必要却臭名昭著地拒绝发起改革——作为她所谓“愚蠢”的一个例子。⁸² 从其行为结果——即宗教改革（塔奇曼认为这场分裂是可以预见的）——来看，这确实是愚蠢之举。但从另一个角度，一个塔奇曼未讨论的角度来看，这不是愚蠢而是失败：即教会在传统教皇国之外未能获得世俗权力。教皇们的政治权谋、军事冒险以及规模宏大的艺术与建筑展示（对欧洲文化发展影响深远）都可以理解为一种实现该目标并加以象征性强化的努力。这些教皇没有忘记他们的基督教信仰；他们赋予了古老的“凯旋教会”这一表述以新的意义。一方面，这放松了教义控制，并在这一过程中推动了文艺复兴。另一方面，它也导致罗马在远离教皇权力、且毫无教会辉煌可言的地区，激起了路德、加尔文和茨温利的基本主义回潮。这些改革者的抗议若未在与罗马斗争中获得政治保护，便注定徒劳无功，这正是为何他们这些人尽管怀有宗教热忱，最终却无意中削弱了宗教对世俗世界的掌控。一旦出现了多元的基督教形态（而不仅仅是像有时那样出现多元教皇），基督教作为一种信仰告白已不再成为一种有效，或至少是普世化的社会信任载体。阿尔布雷希特·冯·瓦伦斯坦（Albrecht von Wallenstein）组建的军队就是一个揭示性的例子。通过它为皇帝在反宗教改革一方成功作战，这支军队信仰混杂，而瓦伦斯坦本人只是对天主教的一种政治性皈依。这种对传统信任实践的抛弃在当时是超前的，但它也引发了严重的猜忌，最终对瓦伦斯坦造成了致命后果。
 
 在奥格斯堡和约中制定的“君权即教权”（cuius regio, eius religio）原则——即统治者的宗教本应决定被统治者的宗教——在实践中仍然不稳定。三十年战争才最终确立了政治的至上性，以及随之而来的基督教的多教派性。教派并非对因此成为欧洲历史上最血腥的战争负有责任，但它们确实证明自己无力在战争一旦开始后终结战争。1648年《威斯特伐利亚和约》所规范的，正是战争从一开始就围绕的核心：国家之间的政治冲突。在这场冲突中发挥作用的，是人们看待暴力的方式发生了变化。在后文的章节中，我将对这种新态度及其与社会信任的关系做更多阐述。
 
@@ -552,31 +548,46 @@ HAIMON: 你最好去统治某个荒无人烟的地方作为唯一的统治者。
 
 ## 前现代社会信任的承载者
 
-莎士比亚读过马基雅维利，和他一样对权力毫无幻想，但他对权力的实践理解得无与伦比。86 这要归功于他某种意义上超越了时代，生活在文艺复兴结束之后，现代性尚未完全开始之前。此外，作为一名戏剧人，莎士比亚观察的不仅是权力，还有观察权力的人。87 在《理查三世》中，格洛斯特公爵假装拒绝他为之杀人夺来的王冠：“唉，你为何要把这些忧虑加在我身上？”（III.7.203）。88 当最初拒绝提议时，理查诉诸于他所服务的国家和威严；事实上，整个社会对他而言并不比对贝京厄姆公爵更重要，后者在劝说理查接受时谈到他的“心肠的温柔...” / 我们已注意到你在亲属中， / 而且确实对所有阶层都一样”（III.7.209–12）。将理查的王室成员身份与共同利益联系起来是讽刺的——理查已经杀死了许多自己的亲属——但这并不意味着此类言论是虚假和意识形态的。相反，它代表了权力主张所登记的语言形式。外表与现实之间的常见区分未能捕捉到问题的实质。正如我在下一章中所解释的，权力依赖于信任。为了权力关系能够运作，参与者必须传达信任的基础。这不仅仅是行为的简单呈现，因为行为本身将是不可理解的。任何以值得信赖的方式行事的人都隐含地参照了熟悉的情况和模式。格言是“确认，而非惊讶”。在席勒的《皮科洛米尼》中，瓦伦斯坦的弱点正被定位于此。当他的姐夫问他：“但又有谁能知道你是否认真 / 除非行动跟随言语？”，瓦伦斯坦回应：“你怎么知道我不真心... / 让你所有人都显得愚蠢？你认识我吗？我认为我从未让你看到 / 我心中的秘密....”89 这种态度只有在忠诚的臣民能够微笑时才有效，并且
 
 
-点头，确信他们比他更了解自己的主君。在大多数情况下，统治者都像之前的统治者一样行事。现代革命者通过将自己呈现为一个体现他们作为个人所代表美德的群体，成功创造了一种新型统治者。罗伯斯庇尔不受旧制度的污秽和腐败玷污，将他对被控制者的对待方式模仿自古罗马的律师-客户关系。这——而不是拉·蒙塔涅喧闹而邋遢的风格——才是革命本应呈现的样子。列宁也是新类型的一种，但人民早已为此做好了准备。职业革命者党是一个成功的政治工具，也是资产阶级领袖合适的栖息地。列宁是革命的总经理，总是穿着西装领带出现。至少在他1917年3月前往瑞典时，卡尔·拉狄克敦促他添置一些体面衣物之后，他是这样出现的。“我们好歹哄着他买了双新鞋，”拉狄克回忆道。“他穿着带大钉的登山靴旅行。”90 正是在他在瑞典的逗留期间，列宁的照片首次出现在报纸上。
+莎士比亚读过马基雅维利，和他一样对权力毫无幻想，但他对权力的实践理解得无与伦比。86 这要归功于他某种意义上超越了时代，生活在文艺复兴结束之后，现代性尚未完全开始之前。此外，作为一名戏剧人，莎士比亚观察的不仅是权力，还有观察权力的人。87 在《理查三世》中，格洛斯特公爵假装拒绝他为之杀人夺来的王冠：“唉，你为何要把这些忧虑加在我身上？”（III.7.203）。88 当最初拒绝提议时，理查诉诸于他所服务的国家和威严；事实上，整个社会对他而言并不比对贝京厄姆公爵更重要，后者在劝说理查接受时谈到他的“心肠的温柔...” / 我们已注意到你在亲属中， / 而且确实对所有阶层都一样”（III.7.209–12）。将理查的王室成员身份与共同利益联系起来是讽刺的——理查已经杀死了许多自己的亲属——但这并不意味着此类言论是虚假和意识形态的。相反，它代表了权力主张所登记的语言形式。外表与现实之间的常见区分未能捕捉到问题的实质。正如我在下一章中所解释的，权力依赖于信任。为了权力关系能够运作，参与者必须传达信任的基础。这不仅仅是行为的简单呈现，因为行为本身将是不可理解的。任何以值得信赖的方式行事的人都隐含地参照了熟悉的情况和模式。格言是“确认，而非惊讶”。在席勒的《皮科洛米尼》中，瓦伦斯坦的弱点正被定位于此。当他的姐夫问他：“但又有谁能知道你是否认真 / 除非行动跟随言语？”，瓦伦斯坦回应：“你怎么知道我不真心... / 让你所有人都显得愚蠢？你认识我吗？我认为我从未让你看到 / 我心中的秘密....”89 这种态度只有在忠诚的臣民能够微笑时才有效，并且点头，确信他们比他更了解自己的主君。在大多数情况下，统治者都像之前的统治者一样行事。现代革命者通过将自己呈现为一个体现他们作为个人所代表美德的群体，成功创造了一种新型统治者。罗伯斯庇尔不受旧制度的污秽和腐败玷污，将他对被控制者的对待方式模仿自古罗马的律师-客户关系。这——而不是拉·蒙塔涅喧闹而邋遢的风格——才是革命本应呈现的样子。列宁也是新类型的一种，但人民早已为此做好了准备。职业革命者党是一个成功的政治工具，也是资产阶级领袖合适的栖息地。列宁是革命的总经理，总是穿着西装领带出现。至少在他1917年3月前往瑞典时，卡尔·拉狄克敦促他添置一些体面衣物之后，他是这样出现的。“我们好歹哄着他买了双新鞋，”拉狄克回忆道。“他穿着带大钉的登山靴旅行。”90 正是在他在瑞典的逗留期间，列宁的照片首次出现在报纸上。
 
 自称值得信赖意味着首先对自己认同或被分配到的社会阶层值得信赖。 [在现代革命者的例子中，社会美德意味着与不受欢迎者划清界限，并将自己塑造为有德者之一。] 但对于整个社会而言，这种信任的展示也需要得到强化：尤其是在危机时期，值得信赖必须被视为惠及证明自己值得信赖的社会阶层以外的人。在中世纪，平民本应从贵族像绅士一样行事中获益，即使贵族并不假装是为了人民而这样做。封爵特里斯坦后，马克王给了他一些忠告：
 
 [S]it dir nu swert gesegenet ist
+
 und sit du ritter worden bist,
+
 nu bedenke ritterlichen pris
+
 und ouch dich selbē, wer du sis.
+
 din geburt und din edelkeit
+
 si dienen ougen vür geleit,
+
 wis diemüete und wis unbetrogen,
+
 wis wärhaft und wis wolgezogen;
+
 den armen den wis iemer guot,
+
 den richen iemer höchgemuot
+
 ziere unde werde dienen lip,
+
 êre unde minne elliu wip;
+
 wis milte unde getriuwe
 
 und iemer dar an niuwe!
+
 wan ôf mîn êre nim ich daz,
+
 daz golt noch zobel gestuont nie baz
+
 dem sper unde dem schilte
+
 dan triuwe unde milte
 
 [现在你的剑已被祝圣，你已成为骑士，请思考骑士的荣耀，以及你自己和你的身份。让你的出身和贵族身份始终铭记于心。做谦逊且坦率的人：做诚实且有教养的人；永远善待贫贱者：对权贵永远保持高傲。打扮并使你的身体变得有价值；尊敬并爱慕所有女性；做慷慨且忠诚的人，永远对此不厌倦！因为我以我的荣誉起誓，金子和貂皮从未像忠诚和慷慨那样更好地装饰矛和盾]
@@ -584,12 +595,19 @@ dan triuwe unde milte
 Triuwe（忠诚）和 milte（慷慨）都是值得信赖的属性。虽然真正慷慨的人并不因为期望得到回报而给予，但慷慨的行为，正如瓦尔特·冯·德·福格尔魏德所强调的，是一种赐予信任的行为，仍然值得有所回报：
 
 diu milte lônet sam diu sat,
+
 diu wunnegeliche wider gât
+
 dar nach man sie geworfen hât:
+
 wirf von dir milteclîche.
+
 swelch künic der milte geben kan,
+
 si git im daz er nie gewan.
+
 wie Alexander sich versan!
+
 der gap und gap, dô gap si im elliu riche.
 
 [她的报酬如同撒下的种子 / 在荣耀中再次升起 / 按播种的量度。 / 那么慷慨地抛弃它吧！ / 慷慨地给予的国王 / 她赐予他从未获得之物。 / 亚历山大是多么睿智的人！ / 他给予，给予，她便赐予他所有王国。]²
@@ -597,12 +615,15 @@ der gap und gap, dô gap si im elliu riche.
 Triuwe 和 milte 是贵族的美德——对非贵族并不期望拥有真正的美德——但它们不仅仅是对其他社会阶层施行的美德；它们也是其他阶层所依赖的美德。正如古尔内曼茨在沃尔夫拉姆·冯·埃申巴赫的史诗中对帕齐法尔所说：
 
 Ir mugt wol volkes hërre sin,
+
 ist hôch und hoehst sich iwer art,
+
 lât iuweren willen des bewart,
+
 iuch sol erbarmen nôtêe her:
 
-
 gein des kamber sit ze wer
+
 mit milte und mit güete.
 
 > [You … may well be ruler of a people. If you are indeed of high, aspiring race, bear this in mind: compassionate the needy, ward off their distress with kindness and generosity.]⁹³
@@ -610,10 +631,15 @@ mit milte und mit güete.
 Parzival “may well be ruler” 之上的人民无法要求这些美德，但他们必须相信这些美德会被认真对待，并且在美德未被兑现时能够表达不满。但如何信任超越阶级的崇高美德呢？如何相信统治者会践行它们？在区分一个等级与另一个等级的我们/他们背后，存在着一种并列的我们，它在维系阶级边界的同时，将阶级的义务建立在某种超越共识之上的东西上，而统治者可以選擇忽视这种共识。在中欧的封建贵族中，这种并列的我们是由所有等级都归属的共同宗教所产生的。再一次，我们面对的是格雷琴之问。Parzival 著名的倒数第二段写道：
 
 swes lebn sich sô verendet,
+
 daz got niht wird gepfendet
+
 der sêle durch des libes schulde,
+
 und der doch der werlde hulde
+
 behalten kan mit werdekeit,
+
 daz ist ein nütziu arbeit.
 
 > [When a man’s life ends in such a way that God is not robbed of his soul because of the body’s sinning and who nevertheless succeeds in keeping his fellows’ good will and respect, this is useful toil.]⁹⁴
@@ -621,20 +647,20 @@ daz ist ein nütziu arbeit.
 这些话语在莱辛对《智者纳森》中戒指的描述中回响——那枚戒指“具有魔力，使佩戴者/凭借其力量而为上帝和世人所爱”⁹⁵——阐明了在哈特曼·冯·阿乌的《埃雷克》和戈特弗里德·冯·施特劳斯堡的《崔斯坦》中出现的主题。在后者作品中，道德教诲 *moraliteit*，“待人接物的艺术”被说成是
 
 gemeine
+
 mit der werlde und mit gote
 
 > [in harmony with God and the world]⁹⁶
 
 与基督教理想不同，贵族理想从未在于拒绝一切世俗之事。事实上，直到基督教被视为人们以值得信赖的方式生活的保证时，它才对社会获得了特别的重要性。正如《Parzival》的结尾所表明的那样，个人的救赎并非一切。贵族的精英心态是抵御基督教固有的禁欲诱惑所必需的，而基督教则是防止这种贵族精英心态蜕变为傲慢和鲁莽所必需的。
 
+
+
 贵族对下属应表现多少慷慨，可以从哈特曼·冯·阿乌的《Iwein》中的一个场景看出。一名骑士带着请求来到亚瑟王面前，但在国王承诺满足其请求之前拒绝说明想要什么。当亚瑟拒绝时，骑士愤怒地冲出城堡，大声质疑国王慷慨美名的可信度。圆桌骑士敦促亚瑟为了宫廷的名声重新考虑此事。稍作思考后，亚瑟同意了。他们派人召回那名骑士，骑士回来后——随即要求迎娶王后。⁹⁷这一情节与中世纪诗歌中的许多其他情节一样，探讨了社会信任以何种不同方式被表达并受个人权利和义务的约束。⁹⁸
 
 在并非由单一个人体现的中世纪制度中，游说贵族是一种恶习——想要自己无权得到的东西——而其成功则标志着有序行政的崩溃。在这种语境下，游说表达了一种特定的不信任，但它也可以是应对需要不信任的局面的技巧。在缺乏基于透明度、监督和记录保存的法律体系的情况下，游说宫廷关系在确保社会信任方面发挥了至关重要的作用。向统治者陈情的权利——其慷慨的必要前提——与统治者实际和象征上需要保持难以接近之间的平衡，由那些将信息传达给王冠的易于接近的宫廷官员来维持。
 
 所谓“抓住统治者剑柄的带子”这一可能性，以限制任意权力为前提，以便防止权力结构本身受到质疑。普鲁士著名的无忧宫磨坊主的故事展示了下层阶级成员如何在不表达对制度不信任的情况下挑战国王。据传说，腓特烈大帝下令拆除其夏宫的一座嘈杂的风车。磨坊主提出异议并诉诸法庭，法官裁定对他有利。在这种社会信任的重定向中，国王是其自身也受约束的法律秩序的担保人。由于绝对君主完全可以選擇忽视判决，磨坊主诉诸腓特烈的荣誉感，而这种荣誉感正是在一个受法律治理的社会中得以维系
-
-
-
 
 is no longer required. At first, Frederick looks like Arthur of Camelot, a “prisoner of his own honor” obsessed with public perception.⁹⁹ By the end of the tale, though, the problem that remains aporetic in *Iwein* receives its historical resolution.
 
@@ -644,9 +670,9 @@ Without a common point of reference outside the divided and divisive relation of
 
 ## THE PROBLEM OF TRUST WITHIN MODERNITY
 
-This transformation of trust coincided with the shift from stratified differentiation to functional differentiation, from a world where what was important was social hierarchy to a world where our social roles became essential. Luhmann
+This transformation of trust coincided with the shift from stratified differentiation to functional differentiation, from a world where what was important was social hierarchy to a world where our social roles became essential. Luhmann stresses that this development was “an extremely improbable event,” though he identifies several circumstances that made it less so: the special importance of property, the development of a system of estate, and the limitation of kinship structures to small groups that did not form clans.¹⁰² Another factor Luhmann names is one we have already seen: Christianity’s inability to achieve its theo-cratic pretensions in the political sphere.
 
-stresses that this development was “an extremely improbable event,” though he identifies several circumstances that made it less so: the special importance of property, the development of a system of estate, and the limitation of kinship structures to small groups that did not form clans.¹⁰² Another factor Luhmann names is one we have already seen: Christianity’s inability to achieve its theo-cratic pretensions in the political sphere.
+
 
 The process was more than extremely improbable. The transformation from stratified differentiation to functional differentiation was also ridden with crisis. According to many commentators, the classic text documenting this crisis—and the text on which later complaints of alienation and lost unity among the Romantics would build—is Schiller’s On the Aesthetic Education of Man (1795):
 
@@ -654,19 +680,22 @@ The process was more than extremely improbable. The transformation from stratifi
 
 But Schiller’s level of reflection became possible only once the move toward functional differentiation had started, when Christianity no longer constituted a framework for social trust and the Gretchenfrage elicited nothing but bemused reactions. This decline in the binding power of religion accelerated dramatically at the end of the eighteenth century. Its speed in Germany is best measured by the shift in public opinion that took place between the so-called Fragmentenstreit (1774–78) and the publication of Christoph Martin Wieland’s novel Agathodämon (1799). The controversy surrounding the appearance of passages from an anonymous work in defense of natural religion was so heated that the censor placed Lessing under ban just for publishing them. Twenty years later, Wieland’s Agathodämon provoked no outrage whatsoever, despite repeating some of the very claims that became fodder for scandal in the Fragmentenstreit—namely, that the biblical accounts of the resurrection were contradictory and implausible, and in all likelihood the body of Jesus was stolen or his death feigned.¹⁰⁵
 
-Modernity never succeeded in creating a framework that adequately replaced religion. Its failure is what Lukács’s notion of transcendental homelessness was meant to elegize. The question is whether his lament refers to the sense of transience felt by those who could still remember what was lost or whether it refers to a functional problem of society, which the invoking of the
-
-past symptomatizes but doesn’t solve. Can what Luhmann describes as modernity’s “differentiated function systems” generate sufficient trust in their proper operation and, by extension, sufficient trust in the proper operation of the whole (or in the idea that the one assists or indicates the other) so as to bring about social cohesion?
+Modernity never succeeded in creating a framework that adequately replaced religion. Its failure is what Lukács’s notion of transcendental homelessness was meant to elegize. The question is whether his lament refers to the sense of transience felt by those who could still remember what was lost or whether it refers to a functional problem of society, which the invoking of the past symptomatizes but doesn’t solve. Can what Luhmann describes as modernity’s “differentiated function systems” generate sufficient trust in their proper operation and, by extension, sufficient trust in the proper operation of the whole (or in the idea that the one assists or indicates the other) so as to bring about social cohesion?
 
 Morality in modernity occupies an analogous position. In a functionally differentiated society, morality is unable to integrate across levels, since the codes of the function systems do not align with moral categories. In Luhmann’s words: “The autonomy of function systems each anchored in its own code precludes meta-regulation by a moral super-code.” This does not mean that the concept of morality ceases to play a role altogether. Luhmann continues: “Attempts to sabotage code—corruption in the political and legal spheres, doping in sports, paying for love, fudging empirical data—become a moral problem.” The moral function of these codes is also a mode of social trust. The codes tell us what is supposed to happen, and they ensure that what is supposed to happen usually does. Aberrations occur but they are the exception and are punished. We know on whom we can rely when our trust is violated.
+
+
 
 The trust that people place in one another as bearers of social roles is analogous to the trust shared by members of a class. In Thomas Mann’s Buddenbrooks, we see how aristocrats’ sense of self-worth can accord with trust in an accountant’s report. The code of a Hanseatic family of merchants in the second half of the nineteenth century no longer required that each of its members find fulfillment in the family business. Unlike those of aristocratic birth, who remain aristocrats even when forced into beggary, merchants can relinquish their role, say, by selling the shares to their father’s company. It’s part of the elasticity of a modern, viable society that the boundaries of convention, good behavior, and supra-individual trustworthiness remain fluid. In Mann’s novel, Christian—a co-owner of the Buddenbrook company and the playboy of the family—commits a string of faux pas attracting public attention. Christian’s older brother, Thomas, aware of the possible consequences, gives him a dressing down:
 
 > "Someone at the Harmony told me about a remark you made yesterday evening at the Club—a remark so out of place, so indescribably tactless that I cannot find words for it. And the fiasco was soon complete—you were given the most dreadful dressing-down on the spot. Do you care to recall the incident?"
+
 > 
 > "Oh, now I know what you mean. Who told you all this?"
+
 > 
 > "What does that matter? Döhlmann. And, of course, he told me in a voice so loud that people who perhaps hadn’t heard about it yet could gloat over it, too."
+
 > 
 > "Yes, Tom, I must tell you, I felt quite embarrassed for Hagenström."
 
@@ -682,13 +711,19 @@ The trust that people place in one another as bearers of social roles is analogo
 
 "Well, 'ass' is a bit ..." Christian said with a chagrined, anxious look on his face.107
 
+
+
+# 角色的不确定性与俱乐部
+
 This passage is densely packed. It reveals an uncertainty about roles, both those of Christian as the person who cracked the joke and those of the public, who must decided whether to regard Christian as a carouser among the carousing or a representative of family and profession. What in one case is only jest—and Hagenström's response only embarrassing—is in the other case an unpardonable betrayal with repercussions for family and reputation. Here we detect a holdover from the aristocracy: the obligation to legitimize one's class before nonmembers. Christian makes his remark in a club of "both businessmen and professionals," a place two classes cohabit outside their societal roles. Yet the club is not an environment where people are first and foremost human
-
-
 
 存在者。充其量，他们可以分享这种幻觉，但正如哈根施特伦姆的反应所表明的，这是一种容易被戳破的幻觉。在俱乐部里，一个人是作为商人和专业人士的人。俱乐部之所以能兼容这两个阶层，仅仅是因为这种兼容在其他任何地方都是不可能的。克里斯蒂安轻率的玩笑把这种兼容性置于谈判之中，这给了哈根施特伦姆一个摘掉手套、质疑克里斯蒂安作为商人的体面的机会。商人之间的荣誉要点——他们仅凭握手就能达成交易的能力——对轻浮的容忍程度不比对反讽和居高临下的观察更高。一个人不应该拿被排斥的可能性开玩笑；正因为这是一个游戏，它才可能被当真，并且像在克里斯蒂安的案例中那样，影响股价。这就是为什么托马斯·布登勃洛克如此震惊，为什么他哑口无言，为什么他打手势、提高嗓门、开始颤抖、失去冷静。
 
+# 排斥与功能分化
+
 由于这次失足以及其他种种，克里斯蒂安被迫离开了公司。信任危机只能通过排斥来解决。这既不需要外部的合法化，也不需要考虑被排斥者的命运。这正是功能分化系统相互稳定的效应所在：共享环境中的刺激被视为系统内部事务，在系统内部解决。但这也是问题所在。昔日商人克里斯蒂安·布登勃洛克最终被关进了精神病院。108没有遭受过像克里斯蒂安那样的排斥的人，会通过认为他们罪有应得来使这种排斥变得可以接受。（在《布登勃洛克一家》中，其他人物认为克里斯蒂安的命运因其糟糕的业务能力而理所应当。）但在功能分化社会中，社会排斥并不总是基于共同认可的归咎观念，因为集体判断的设想预设了一套超越社会功能系统的价值观。即使必须假定有一套共同的价值观，判断也不是机械的：某种排斥并不必然意味着某种归咎。
+
+# 托马斯与克里斯蒂安的冲突
 
 他们母亲去世后不久，托马斯和克里斯蒂安·布登勃洛克之间的紧张关系再次升级。在分家时，克里斯蒂安坚持要拿走他那一份餐具和亚麻织物。托马斯问他打算怎么处理这些东西，克里斯蒂安透露了他结婚的计划。听到这个消息——该女子出身低于家族社会地位，而婚姻将使她有权获得母亲遗产的一部分——托马斯勃然大怒：
 
@@ -696,11 +731,15 @@ This passage is densely packed. It reveals an uncertainty about roles, both thos
 
 克里斯蒂安确实进了精神病院，并不是因为他哥哥兑现了诺言。在受到哥哥的一顿痛骂之后，克里斯蒂安没有勇气继续执行他的计划。直到托马斯去世后，克里斯蒂安才结婚，而正是他的新婚妻子阿琳，利用克里斯蒂安的古怪行为，并在医生的帮助下，把他送进了精神病院。从理论的角度来看，更有趣的是，托马斯在发出威胁时，在多大程度上仍然符合他所处的时代。他无助，这是理所当然的；他的怒火只灼烧了自己。
 
+# 信任悖论与道德
+
 在功能分化社会中，信任问题导致了一个悖论。在一个角色中失去信任并不会自动转移到其他角色上，因为没有任何角色能产生超越自身、延伸到整体的信任盈余。相反，信任的存在恰恰基于这样一个事实：其盈余并不是我们能够要求的。因此，我们不必为角色之外发生的事情负责。这就是道德问题如此棘手的原因。道德针对的是整体，而不是我们所扮演的特定角色。110这其中既有行善的潜力，也有作恶的潜力。为了避免后者，道德必须拒绝总体化的主张，并从对个体的关切中汲取其基础。
 
 在现代，对整体的信任在于整体不进入计算。因此，当一个国家要求其公民履行公民义务时，一定程度的怀疑是恰当的。为了防止这种强加——爱国主义要求个人为所有人产生信任盈余——维兰德认为，即使公民身份也是一种角色。在《阿里斯提普和他的几个同时代人》（Aristippus and Some of His Contemporaries）（1800-1802）中，我们读到：“自然，我之母，亦为万物之母……使我成为人，而非公民……人不是为了成为公民而成为人，而是为了成为人而成为公民；也就是说，为了能更好、更可靠地成为一个人按其天性所应成为的一切。”111 人的概念可以用来抗议排斥的风险，在……
 
 功能性社会，但它也可以被用来抗议将社会信任强制置于某个社群中，从而剥夺人们从功能分化中获得解脱。
+
+# 民族国家与信任
 
 对一种总体社会框架的探寻——席勒及其后的奥古斯特·威廉·施莱格尔、黑格尔、马克思以及许多后继者都曾积极从事这一探寻，尽管带有纲领性的无奈——最终在欧洲权力领域重组为民族国家中找到了答案，以此作为对功能分化问题的补偿。用乌尔里希·比勒费尔德的话说，“世界”
 
@@ -716,69 +755,74 @@ This passage is densely packed. It reveals an uncertainty about roles, both thos
 
 对作为子系统的经济的信任，与这样一种假设紧密相连：功能分化的过程仍然是不完整的。上述笑点的含义表明这一假设的一个无意识后果：政治对手可能以个人破产为代价来为其信念的成功买单。或者，他们可以坚持自己作为顾客的角色，将经济与政治分离，并忽略这样一个事实：只有在利害关系仍然很低的情况下，分化与统一才会继续合作。
 
+
+
 答案的第二部分与民族作为国家的功能有关。这里再次引用比勒费尔德：“民族需要……一个像国家那样管理的领土。现代民族只有在拥有领土和国家时才自我确定。”115 国家是民族可触摸的一面，也是社会分化在可能范围内的保障者。国家的任务是执行法律，这种法律允许我只是特定合同的当事方（客户、合伙人、卖方等）。分化的承诺在于一种法律规制的保证：永远不必承担超出社会子系统中某个角色的责任。法律既是执行我权利的工具，也是我抵御超出社会角色界限的要求的手段。这就是为什么在现代社会中，爱国主义只获得了有限的法律制度化。即使在美国教室里展示国旗颜色也不无争议，更不用说焚烧国旗的合法性了。我必须能够信任国家保护我免受过度爱国主义要求的承诺。纯粹的宪法爱国主义是否足以支撑这种信任，这个问题触及了包含在……中的那种模糊性。
-
-
 
 民族的概念。*在现代性中，信任以双重形式出现：一是对功能分化稳定性的信任，二是对这些功能分化由国家所体现的民族虚构统一性来保障的信任。然而，这两种信任形式背后，都存在着国家对暴力的垄断，没有这种垄断，两者都不可能实现。*
 
-尽管我在下文会论证，国家对暴力的垄断并非一种静态状况，而是一个过程——暴力垄断化——中的一个环节，但两者之间的联系似乎显而易见，甚至微不足道。在黑格尔看来，这种表面上的琐碎性恰恰体现了信任关系的本质：“纯真情感的直接反应，就是以信任的信念依附于公认的真理，并将自己的行为和生活立场建立在这一坚实的基础之上。”¹¹⁶ 事实证明，事情要复杂得多。
+尽管我在下文会论证，国家对暴力的垄断并非一种静态状况，而是一个过程——暴力垄断化——中的一个环节，但两者之间的联系似乎显而易见，甚至微不足道。在黑格尔看来，这种表面上的琐碎性恰恰体现了信任关系的本质：“纯真情感的直接反应，就是以信任的信念依附于公认的真理，并将自己的行为和生活立场建立在这一坚实的基础之上。”116 事实证明，事情要复杂得多。
 
 ## 现代性中的信任
 
-许多愿望的不切实际期望，暴露了我们对所居世界的顺从。有人渴望一位超越宪法机关、超越整体简单代表的总统，一个定下文化政治基调的人，一个提振信心的人，一个为抑郁民众提供治疗的人，或者某种其他让总统体现整体功能的角色。对这类领袖的渴望改变不了什么，这一渴望始终未得到满足这一事实也改变不了什么（尽管给予它象征性和个人化的代表，是确保它永远不被满足的绝妙方式）。古拉格社会主义的倒退特征中，有一个更微妙的例子发生在1950年，当时斯大林在《真理报》上发表一系列文章，介入了一场语言学争论。斯大林之后很久，社会主义国家仍继续将博学多才的代表安排在最高层，而这些人除了当权者之外谁也没有教化。就连戈尔巴乔夫这样的人，也抽出时间将他所说或所写的一切……用精美的摩洛哥皮和金字印刷出来。¹¹⁷ 他要把自己的话付诸纸面的愿望，并没有改变没人想读它们的事实。
+许多愿望的不切实际期望，暴露了我们对所居世界的顺从。有人渴望一位超越宪法机关、超越整体简单代表的总统，一个定下文化政治基调的人，一个提振信心的人，一个为抑郁民众提供治疗的人，或者某种其他让总统体现整体功能的角色。对这类领袖的渴望改变不了什么，这一渴望始终未得到满足这一事实也改变不了什么（尽管给予它象征性和个人化的代表，是确保它永远不被满足的绝妙方式）。古拉格社会主义的倒退特征中，有一个更微妙的例子发生在1950年，当时斯大林在《真理报》上发表一系列文章，介入了一场语言学争论。斯大林之后很久，社会主义国家仍继续将博学多才的代表安排在最高层，而这些人除了当权者之外谁也没有教化。就连戈尔巴乔夫这样的人，也抽出时间将他所说或所写的一切……用精美的摩洛哥皮和金字印刷出来。117 他要把自己的话付诸纸面的愿望，并没有改变没人想读它们的事实。
 
 一个功能分化的社会不需要某个人来代表整体。事实上，只有当某个人明显实际上并不代表整体时，这种社会才能容忍他代表整体。乔治三世国王的精神疾病虽然广为人知，却并未对政治产生显著影响，更重要的是，它并未削弱人们对英国政治体制和总体稳定的信任。在功能分化的社会中，顶端并没有一个整个信任所依赖的人，也没有人会向公民提出像马克王对特里斯坦提出的那种要求。德国联邦银行董事会成员无需被封为骑士，只要他们的业余活动不质疑其专业能力，他们就可以自由追求自身利益。
 
-再说一遍：现代性对整体的信任，在于整体不进入考量范围。我们仍然信任整体，但整体的维系落在每个人的肩上。对功能分化稳定性的信任，并非现代性可以要求的东西；任何这样做的尝试都会因其自身的荒谬而变得无害。现代信任建立在这种信念之上：这种要求的缺席是有保障的。这种保障源于法律规定，这些规定使我们能够作为合同当事人、作为某些法律权利的受益人而相互交往。¹¹⁸ 国家对暴力的垄断强制执行这些法律规定，由此产生一个社会：在这个社会中，个人或团体被禁止使用暴力解决争端，如果这样做就会受到惩罚。这种相互信任感——即在交往中期待非暴力——是暴力垄断的结果，同时也是它的前提。
+再说一遍：现代性对整体的信任，在于整体不进入考量范围。我们仍然信任整体，但整体的维系落在每个人的肩上。对功能分化稳定性的信任，并非现代性可以要求的东西；任何这样做的尝试都会因其自身的荒谬而变得无害。现代信任建立在这种信念之上：这种要求的缺席是有保障的。这种保障源于法律规定，这些规定使我们能够作为合同当事人、作为某些法律权利的受益人而相互交往。118 国家对暴力的垄断强制执行这些法律规定，由此产生一个社会：在这个社会中，个人或团体被禁止使用暴力解决争端，如果这样做就会受到惩罚。这种相互信任感——即在交往中期待非暴力——是暴力垄断的结果，同时也是它的前提。
 
-我并不是说现代性中的信任是机械的。仅仅知道国家垄断暴力禁止并惩罚个人暴力行为是不够的。我们知道国家无法阻止每一起暴力事件，而且我们也不想要一个能够做到这一点的国家。¹¹⁹ 尽管如此，我们大多数人并不生活在对攻击的持续预期中。这不是因为我们粗心大意，而是因为除非我们全副武装，否则我们无法以那种方式生活。对国家暴力垄断的信任意味着彼此信任。不期待暴力是我们现代文化的一部分。这使我们变得脆弱，也正是为什么我们对自己身体或其延伸物——公寓、财产、汽车——受到攻击的反应，比其他文化中的人们更加恐惧。¹²⁰ 我们的文明理想让我们的皮变得相当薄，但这种对创伤的更高敏感性也是其成就之一。
+我并不是说现代性中的信任是机械的。仅仅知道国家垄断暴力禁止并惩罚个人暴力行为是不够的。我们知道国家无法阻止每一起暴力事件，而且我们也不想要一个能够做到这一点的国家。119 尽管如此，我们大多数人并不生活在对攻击的持续预期中。这不是因为我们粗心大意，而是因为除非我们全副武装，否则我们无法以那种方式生活。对国家暴力垄断的信任意味着彼此信任。不期待暴力是我们现代文化的一部分。这使我们变得脆弱，也正是为什么我们对自己身体或其延伸物——公寓、财产、汽车——受到攻击的反应，比其他文化中的人们更加恐惧。120 我们的文明理想让我们的皮变得相当薄，但这种对创伤的更高敏感性也是其成就之一。
 
 如果社会信任源于规范的持续生产和强化，源于对“我们是谁”这一问题的不断回答，那么它也依赖于我们不去做某些事、不说某些话。如果社会信任是每种文化基本框架的一部分，那么戒除暴力就是现代社会凝聚力的一个决定性因素。然而，尽管有这种戒除，极端暴力仍持续发生。由此产生的张力是现代性最有趣的问题之一，接下来的章节将转向这一张力。
 
-
-
-
 ## 第二章
-## 权力与暴力
+
+### 权力与暴力
 
 我的房屋有三层楼高；
+
 进入者
+
 不会很快离开。
+
 窗户非常高，但
+
 他从不向外眺望。
+
 它们在阳光下不闪耀；
+
 冰雹不打窗扉；
+
 屋顶无瓦片坠落。
+
 房屋矗立在旷野之中。
 
 > ——约翰·彼得·赫贝尔，谜语第102则
 
-## 克拉托斯与比亚
+#### 克拉托斯与比亚
 
 学者们对《被缚的普罗米修斯》是否出自埃斯库罗斯之手意见不一。与他的《奥瑞斯提亚》——那部以法律与社会契约的建立而告终的宏大的文明三部曲——相比，《普罗米修斯》狂野而古拙。剧作开场，工匠神赫淮斯托斯将普罗米修斯锁在高加索山上，惩罚他过度的爱人类。赫淮斯托斯勉强执行任务——他对普罗米修斯心怀同情——但对宙斯这位篡位者、令人恐惧的暴君的畏惧，迫使他继续下去。监督他工作的是克拉托斯和比亚，分别代表“强力”与“暴力”。克拉托斯催促赫淮斯托斯，威胁他，讥笑他的怜悯。而比亚始终沉默。开场这一幕中，仅有赫淮斯托斯与克拉托斯之间的对话。这段两人对话是埃斯库罗斯的创造。在此前的戏剧中，人物只能与歌队交谈；直到后来索福克勒斯的作品中，才有第三个人物加入对话。《被缚的普罗米修斯》的奇特之处在于，它以舞台上三个人物开场。为何埃斯库罗斯坚持让比亚与克拉托斯、赫淮斯托斯同台——尽管按照戏剧惯例，她必须扮演一个沉默的角色？或许这正是用意所在？
 
 会不会是这惊人的戏剧手法意在将强力与暴力的关系主题化？希腊戏剧在摆脱僵化形式主义的过程中，是否带来了一种希腊政治哲学未能察觉的抽象层面？无论如何，我们能说的是：在《被缚的普罗米修斯》中，强力言辞犀利；暴力则如影子般沉默。然而，比亚虽不言语，她的在场却意味深长。人们不禁想知道，那位演员戴着什么样的面具。
 
-## 身体暴力的现象学
+#### 身体暴力的现象学
 
 暴力首先是身体暴力，是对他人身体未经同意的侵害。“首先”意味着身体暴力是其他非身体暴力形式的参照点。有人反驳说，身体暴力的威胁往往比身体暴力本身更糟糕——这恰恰强调了身体暴力是多么可怕。身体暴力提供了比较的标准，并为我们描述心理折磨增添了强度。告别可以是“痛苦的”，被迫分离更是如此。在我们的灵魂能够表达痛苦之前，我们需要为它提供一个可以哀叹其遭受虐待的身体。当我们想要更精确、想要被更好地理解时，我们便增加话语的具身性：悲伤像刀割般锐痛，重担压在灵魂上，心碎了。躯体症状常常出现，印证我们隐喻的恰当性。
 
-我们最初认识到自己是与世界不同的实体，是因为不快和痛苦教会我们身体有边界。¹ 婴儿离开子宫，经历寒冷，进入温热的浴水，再次暴露于冷空气中，逐渐认识轻柔与不那么轻柔的触碰。前者传达出边界模糊或消失的愉悦感；后者指示出界限所在。饥饿和干渴也教会我们界限。婴儿在感到需求之痛前，世界并不会提供养分。饥饿先来；随后婴儿啼哭。若幸运，他会得到填饱肚子的东西。这确实是运气问题：人类婴儿发育成一个自立的“我”十分缓慢，在那之前，完全仰赖世界的仁慈。这种无助感伴随着自我的发展，它潜伏其中，但可被唤醒。（“在上帝手中”的感觉是成人的一种无助表现。）面对全能而任意的力量，婴儿只能祈求最好的结果。德语谚语说：*Lehrt beten*——苦难教人祈祷。痛苦是暴力的一部分，但当我们面对无限可能性的无边无际时所感到的压倒性冲击，同样也是暴力的一部分。阿根廷军政府中的一名刽子手对一名囚犯说得如此简洁，你可能会以为他事先打磨过措辞：“对你来说，我们就是一切……我们是上帝。”²
+我们最初认识到自己是与世界不同的实体，是因为不快和痛苦教会我们身体有边界。1 婴儿离开子宫，经历寒冷，进入温热的浴水，再次暴露于冷空气中，逐渐认识轻柔与不那么轻柔的触碰。前者传达出边界模糊或消失的愉悦感；后者指示出界限所在。饥饿和干渴也教会我们界限。婴儿在感到需求之痛前，世界并不会提供养分。饥饿先来；随后婴儿啼哭。若幸运，他会得到填饱肚子的东西。这确实是运气问题：人类婴儿发育成一个自立的“我”十分缓慢，在那之前，完全仰赖世界的仁慈。这种无助感伴随着自我的发展，它潜伏其中，但可被唤醒。（“在上帝手中”的感觉是成人的一种无助表现。）面对全能而任意的力量，婴儿只能祈求最好的结果。德语谚语说：*Lehrt beten*——苦难教人祈祷。痛苦是暴力的一部分，但当我们面对无限可能性的无边无际时所感到的压倒性冲击，同样也是暴力的一部分。阿根廷军政府中的一名刽子手对一名囚犯说得如此简洁，你可能会以为他事先打磨过措辞：“对你来说，我们就是一切……我们是上帝。”2
+
+只有在过去十几年里，社会学才开始主要从其身体层面来理解暴力。3 那么这种方法从何开始呢？研究身体暴力的社会学家通常会考虑更广泛的情境，主要是因为他们关注其原因。将问题框定为要寻找*什么*，实际上就是（通常是隐含的）关于*在哪里*寻找它的假设的一组假设。我在本书中提出的一个论点是，对原因的强调是现代性对暴力问题的困境的一部分。我希望从一开始就将因果问题搁置一边，搁置动机、意图和心理倾向的问题。在某些情况下，将暴力行为视为达到目的的手段、作为一种心理状态的表达，或作为特定群体的特征可能是有用的，有时我也会谈论暴力是“工具性的”。但当我使用它时，并不是严格地与“非工具性”暴力相对立，正如流行的区分所认为的那样，而是以一种更不根本的意义：指出一种特定的目的和合法化模式。
+
+我建议根据其与身体的现象学关系，将以下形式的身体暴力区分开来：定位暴力、掠夺性暴力以及自目的暴力。4 *定位暴力*将他人的身体视为需要分配的物体。它发出命令“从这里移开！”或“移到那里去！”定位暴力并不以身体本身为中心，而是以可被置换的实体为中心——挡路的东西、需要按需移动的东西。*掠夺性暴力*将身体用作执行某种（通常是性）行为的场所。*自目的暴力*寻求损害或摧毁身体。
 
 
-
-
-
-只有在过去十几年里，社会学才开始主要从其身体层面来理解暴力。³ 那么这种方法从何开始呢？研究身体暴力的社会学家通常会考虑更广泛的情境，主要是因为他们关注其原因。将问题框定为要寻找*什么*，实际上就是（通常是隐含的）关于*在哪里*寻找它的假设的一组假设。我在本书中提出的一个论点是，对原因的强调是现代性对暴力问题的困境的一部分。我希望从一开始就将因果问题搁置一边，搁置动机、意图和心理倾向的问题。在某些情况下，将暴力行为视为达到目的的手段、作为一种心理状态的表达，或作为特定群体的特征可能是有用的，有时我也会谈论暴力是“工具性的”。但当我使用它时，并不是严格地与“非工具性”暴力相对立，正如流行的区分所认为的那样，而是以一种更不根本的意义：指出一种特定的目的和合法化模式。
-
-我建议根据其与身体的现象学关系，将以下形式的身体暴力区分开来：定位暴力、掠夺性暴力以及自目的暴力。⁴ *定位暴力*将他人的身体视为需要分配的物体。它发出命令“从这里移开！”或“移到那里去！”定位暴力并不以身体本身为中心，而是以可被置换的实体为中心——挡路的东西、需要按需移动的东西。*掠夺性暴力*将身体用作执行某种（通常是性）行为的场所。*自目的暴力*寻求损害或摧毁身体。
 
 这种分类似乎表明定位暴力是工具性的，在某种程度上这是正确的：定位暴力将身体用于某种目的，串联起一种手段-目的的计算。但这也是误导性的。*人们永远不会仅出于工具性动机而行动；他们的决定中总是有非工具性的成分。* 行为总是包含某种吸引施为者超越其结果的东西。每一次行动都向我们提供了关于施为者是谁以及他想成为什么的信息。换句话说，每一次行动*都具有沟通的方面。* 这对于无人看见的行为也同样成立，因为行动者本身就是见证者——他所做的说明了他是谁。暴力行为，无论是否被见证，都没有不同。很难想象一个银行劫匪不愿意持械并对惊恐的人大声呵斥。从一个意义上说，绑架勒索人质是工具性行动的直接案例——绑匪威胁人质以迫使他人支付赎金。从另一个意义上说，没有人会同意这样复杂且风险极高的事情，如果行为本身不是以某种方式令人满意的，无论是在力量的感觉中还是在控制的愉悦中。⁵ 除此之外，我的术语纯粹是现象学的。它描述的是身体暴力的形式——不是施暴者或他的意图，而是行为与施加其上的身体之间的关系。
 
 ## 定位暴力
 
 > [A]n old man's life is an eternity! And now my path would be clear and smooth before me, but for this miserable lump of tough flesh that bars the way to my treasures.
+>
 > —FRIEDRICH SCHILLER, THE ROBBERS
 
 重申一遍，定位暴力并不针对身体本身，而是针对可被处置的实体，其位置由暴力决定。定位暴力必然与那些以身体以外的事物为目标的行为相联系。身体可以是一个需要被消除的实体（我称之为处置性暴力）或需要被监禁的实体（我称之为囚禁性暴力）。在暴力性的位移行为中，身体是一个必须消失的障碍。它如何消失并不重要。它可以被推到一边或被杀死，被威胁驱使其“自行”消失，或被伤害以防止抵抗。囚禁性暴力的目的是将身体保持在指定地点。定位暴力是我们通常与政治领域或犯罪与惩罚相关联的那种暴力。
@@ -786,8 +830,6 @@ This passage is densely packed. It reveals an uncertainty about roles, both thos
 军事暴力。在战争中，一方寻求阻止另一方实现其目标，无论是在狭义上防止其获取补给或财富，还是在广义上保护王位或首都。所有军事技术最终都指向摧毁敌人限制自身行动的能力（士兵、剑、箭、火箭、毒气）并增强自身自由行动的能力（盾牌、盔甲、伪装）。毫无疑问，战争中存在超出定位的破坏实例。但在现代性中，这些被视为异常。我们的文化将对战俘的酷刑视为野蛮，并试图禁止那些不仅仅使士兵丧失战斗能力的武器。
 
 现代性主要将军事暴力理解为位移性的。当敌人不再成为障碍——当它离开战场并放下武器、放弃其防御工事并投降时——战争就结束了。战俘随后会被释放，前提是囚禁性暴力是位移性的——也就是说，其意图是让士兵远离战场。正如我们所知，即使在二十世纪，这也不是一直如此。有时俘虏的目的就是把他们变成奴隶、祭品或食物。现代性禁止此类目的。这就是为什么战俘不得被迫做俘虏者想要的任何事情；这就是为什么使用
-
-
 
 德国军火工业使用奴隶劳动是一种罪行；这正是启发了电影《大桥头》的灵感。这些例子指向对本书而言至关重要的一个问题：用来为特定类型的暴力辩护的合法化形式会因时代和文化的不同而有所变化。
 
@@ -809,10 +851,6 @@ This passage is densely packed. It reveals an uncertainty about roles, both thos
 
 在政治暴力的背景下，酷刑通常被合法化为必要的工具。 如此多的人接受其必要性这一事实表明，现代合法化形式能够有力地塑造我们认为真实的东西。 通常认为国家应采取措施消除潜在袭击，而酷刑通常被理解为这一努力中的工具：囚犯被酷刑折磨直到他披露（此前未知的）国家敌人，而这种披露又证明了酷刑的合理性。 然而酷刑的现实对其效用提出了质疑。 拉丁美洲军事独裁者运营的酷刑营酷似疯狂的屠宰场。 这类事件的细节教会我们，酷刑在功能上至少是工具性的。 这种“倾向”概念本身就是现代观点的产物，现代观点认为所有暴力行为都始于定位性（或工具性），只有在极端情况下才会脱轨——此时最好将其归因于犯罪者的精神状态或其它“变态”，这些变态抗拒进一步分析。
 
-
-
-
-
 ## 强占性暴力
 
 > 阿玛利亚归这伙人！
@@ -833,26 +871,23 @@ This passage is densely packed. It reveals an uncertainty about roles, both thos
 >
 > —弗里德里希·席勒，《强盗》
 
+
+
 如果说位置性暴力关乎身体的移置，强占性暴力关乎身体的占有，那么*自身目的性暴力则关乎身体的毁灭*。即使其结果并非致命，暴力也可以是自身目的性的。同样，仅仅因为暴力最终损害或摧毁了身体，它并不就是自身目的性的。在某些位置性暴力中，敌人被枪杀、击倒、炸毁；然而一旦从战场上移除，对手便无需再遭受进一步的暴力，除非目标是彻底阻止他们卷土重来。（这正是俘虏敌军士兵的做法变得普遍的原因。）对于位置性暴力来说，最终关键的*是*身体不再成为某一目标的障碍，*而非*身体如何不再成为某一目标的障碍。强占性暴力也可能造成严重或致命的伤害，例如强奸犯杀死受害者以消除目击者。毁灭可能伴随强占性暴力，正如它可能伴随位置性暴力一样，但在自身目的性暴力中，*身体的毁灭不仅仅是可能的结果，而是其意义所在。*
 
 位置性、强占性和自身目的性暴力各自具有自身的目论性特征。位置性暴力的目的在其自身之外，因此它可以被理解为工具性暴力的范式。强占性暴力也追求某种在其自身之外的目标，尽管在这里，行为与目标趋于一致。相比之下，自身目的性暴力的目的，如其名称所示，完全在其自身之内：为了毁灭他者的身体而毁灭他者的身体。
 
-在这三种暴力形式中，自身目的性暴力最令我们不安，因为它是三者中最难以理解和解释的——至少在今天——因此我们称之为“无意义的残忍”。在讨论他所谓的“令人困惑的暴行”时，德国心理学家亚历山大·米切利希从专业分析转向对自身恐惧的记录：“里约热内卢或圣保罗那些组成esquadrão da morte（死亡中队）的警官展现出了怎样的人格发展？当他们执行他们的
-
-
-vigilante justice，他们向一名受害者开了超过 300 发子弹，对另一名受害者开了 250 或 300 发子弹——谁会做出这种事？⁹ 对自为性暴力的存在接受起来存在一种情感上的厌恶（从而也产生智识上的厌恶）。因此，人们倾向于将其视为追求其他目标的例外、极其怪异的偏离。那名士兵把敌人的尸体取来像狗撕扯布娃娃一样撕成碎片，被认为发狂了，他的行为疯狂，是病理性的变异，而由于我们将其视为例外，很少需要更深入的审视。¹⁰ 同样的说法也适用于杀害并残害受害者的强奸犯；或黑帮分子、游击队员、士兵、切下敌人阴茎并塞进自己嘴里的美洲原住民；或把活手榴弹塞进越南女孩阴道里的美军士兵；或把受害者的身体部位当作装饰品的士兵。但事实是，这些例子都不是对某种所谓暴力标准的简单偏离。汉斯·彼得·杜尔无疑是正确的，当他指责诺贝特·埃利亚斯对“现代性”持“雾气朦胧的看法”时，认为在现代，这类例子只会“作为例外现象，作为‘病态’的退化”出现。¹¹
+在这三种暴力形式中，自身目的性暴力最令我们不安，因为它是三者中最难以理解和解释的——至少在今天——因此我们称之为“无意义的残忍”。在讨论他所谓的“令人困惑的暴行”时，德国心理学家亚历山大·米切利希从专业分析转向对自身恐惧的记录：“里约热内卢或圣保罗那些组成esquadrão da morte（死亡中队）的警官展现出了怎样的人格发展？当他们执行他们的vigilante justice，他们向一名受害者开了超过 300 发子弹，对另一名受害者开了 250 或 300 发子弹——谁会做出这种事？⁹ 对自为性暴力的存在接受起来存在一种情感上的厌恶（从而也产生智识上的厌恶）。因此，人们倾向于将其视为追求其他目标的例外、极其怪异的偏离。那名士兵把敌人的尸体取来像狗撕扯布娃娃一样撕成碎片，被认为发狂了，他的行为疯狂，是病理性的变异，而由于我们将其视为例外，很少需要更深入的审视。¹⁰ 同样的说法也适用于杀害并残害受害者的强奸犯；或黑帮分子、游击队员、士兵、切下敌人阴茎并塞进自己嘴里的美洲原住民；或把活手榴弹塞进越南女孩阴道里的美军士兵；或把受害者的身体部位当作装饰品的士兵。但事实是，这些例子都不是对某种所谓暴力标准的简单偏离。汉斯·彼得·杜尔无疑是正确的，当他指责诺贝特·埃利亚斯对“现代性”持“雾气朦胧的看法”时，认为在现代，这类例子只会“作为例外现象，作为‘病态’的退化”出现。¹¹
 
 那么处决呢，消除破坏社会秩序的个人？其定位功能原则上不能通过终身监禁来实现吗？那么那些不仅杀人，还规定让垂死之人被钳子和锤子折磨然后被开膛破肚的处决呢？这是威慑的一种特别强调的形式吗？撇开威慑论证历来可疑不谈，它从未在这些形式的惩罚中发挥核心作用。惩罚的目的不仅是杀人，而且是通过逐步的破坏阶段来杀人，并在死后继续通过肢解和展览尸体来实施，这些惩罚通过其方法为自己辩护。正如我上面所强调的，报应律和其他形式的镜像惩罚并不遵循某种工具性逻辑，而是寻求通过伤害和摧毁身体来恢复宇宙秩序。还应强调的是，无论此类惩罚遵循何种计算，它都必然预设一种权力结构，使得权力持有者不必止步于受害者的身体表面，一种赋予施害者撕裂身体、将其翻转的权利的权力。
 
 当这种权利被主张时，无论是明示还是默示，摧毁活体身体的行为——我们称之为酷刑——随之而来。反之，当存在酷刑时，人们会认为这种权利已被主张。现代性更无可争议的成就之一是对身体摧毁作为惩罚、伸张正义和强化统治的手段进行道德排斥。尽管如此，二十世纪在世界许多地区是酷刑的世纪。当 2004 年春季曝光美军系统性地——正如后来所证实的那样——酷刑虐待伊拉克囚犯时，许多人感到震惊，但许多人也持一种 resigned 的观点，认为如果不保持警惕，这种事注定会发生。在这两种情况下，都提出了适当的问题——为什么？——但很少得到回答。而原因在于，我们的文化在面对自为性暴力时存在严重困难。这种类型的暴力对我们来说是陌生的；它代表了基督教传统上在宇宙秩序中赋予特殊地位的东西：地狱。
 
-每当自为性暴力缺乏合法性时，其发生就会引发一个问题，而为解释这个问题，魔鬼被发明出来：一种并非仅仅是善的匮乏的邪恶。像信任和暴力一样，邪恶在近年已成为热门话题——在神学中（再次兴起）、在心理学中（兴趣重新觉醒），以及在哲学中（几乎被遗忘之后）。12 对康德而言，彻底的邪恶不过是按照虚假的格言行事，这包括出于欲望而非义务行善。对康德而言，善的主要对手是利己主义。对他而言，为了作恶而作恶、且对行为者毫无效用，是不可理解的。这与叔本华形成对比，后者对作恶者要求过高，归于他“omnes, quantum poetes, laede”的格言（尽可能伤害所有人）。13 尼古拉·哈特曼等人试图坚持这样一种观点：没有人“为了作恶而作恶……[他]总是怀有某种积极有价值的目的。”14 这种观点当然很重要，因为它提醒我们审视救赎的承诺如何导致了二十世纪的末日。但它忽视了经验事实，其邪恶的过剩无法用好意走偏来解释，
+每当自为性暴力缺乏合法性时，其发生就会引发一个问题，而为解释这个问题，魔鬼被发明出来：一种并非仅仅是善的匮乏的邪恶。像信任和暴力一样，邪恶在近年已成为热门话题——在神学中（再次兴起）、在心理学中（兴趣重新觉醒），以及在哲学中（几乎被遗忘之后）。12 对康德而言，彻底的邪恶不过是按照虚假的格言行事，这包括出于欲望而非义务行善。对康德而言，善的主要对手是利己主义。对他而言，为了作恶而作恶、且对行为者毫无效用，是不可理解的。这与叔本华形成对比，后者对作恶者要求过高，归于他“omnes, quantum poetes, laede”的格言（尽可能伤害所有人）。13 尼古拉·哈特曼等人试图坚持这样一种观点：没有人“为了作恶而作恶……[他]总是怀有某种积极有价值的目的。”14 这种观点当然很重要，因为它提醒我们审视救赎的承诺如何导致了二十世纪的末日。但它忽视了经验事实，其邪恶的过剩无法用好意走偏来解释。
 
 对我们而言，自为性暴力的恐怖在于它无法通过成本效益分析来合理化。我们所体验的恐怖源于我们无法将自为性暴力归入一种熟悉的暴力概念，这就是为什么我们谈论“无意义的残酷”。有人可能会反驳：但“有意义的残酷”这种东西不存在吗？当然存在，回应者会说。否则我们为什么要这样谈论？想想那个在抢劫时殴打某人的男人。行为并不体面，但这就是世界有时运作的方式，这就是为什么我们有警察和法院。如果这个男人杀死受害者以消除潜在证人，我们也会说同样的话。他是冷血的杀人犯，但他的行为保留了一种逻辑。现在想象这个强盗慢慢折磨受害者致死。这个想法让我们既感到恐惧又感到无助。毫无疑问，有司法范畴来描述这一行为，但它真的把握了发生了什么吗？我们绝不天真；恰恰相反：我们麻木了。但这？这种恐怖可以是文化特定的吗？
 
-文明最早的文献中就记录了暴力超出目标的问题。《伊利亚特》讲述了阿喀琉斯在得知帕特洛克洛斯——他的战友兼恋人——死于赫克托尔之手后愤怒的故事。当消息传到
-
-他结束了在场边的抗议，回到战场寻求复仇。杀死赫克托尔还不够；阿喀琉斯必须亵渎他的尸体，将其拖拽在帕特洛克洛斯的坟墓周围：
+文明最早的文献中就记录了暴力超出目标的问题。《伊利亚特》讲述了阿喀琉斯在得知帕特洛克洛斯——他的战友兼恋人——死于赫克托尔之手后愤怒的故事。当消息传到，他结束了在场边的抗议，回到战场寻求复仇。杀死赫克托尔还不够；阿喀琉斯必须亵渎他的尸体，将其拖拽在帕特洛克洛斯的坟墓周围：
 
 于是他得意洋洋，现在决意侮辱，羞辱高贵的赫克托尔。他刺穿脚踝到脚跟之间双脚的肌腱，用生皮带将它们系住，拴在战车上，让头部拖行，登上战车，把那著名的武器装上车，鞭打马队狂奔，头也不回地飞驰，毫不收敛。于是从被拖行的那人身上扬起厚厚的尘云，他那乌黑的头发围绕着那曾经英俊的头颅，在尘土中全部散乱。15
 
@@ -868,10 +903,9 @@ vigilante justice，他们向一名受害者开了超过 300 发子弹，对另�
 
 ## 归约为身体
 
-暴力有两个组成部分：施加它和承受它。将两者统一的是将遭受暴力的人归约为其身体。所有形式的暴力——地域性、掠夺性、自为性——都将遭受它的人归约为其身体性。地域性暴力的受害者被归约为作为工具的身体；掠夺性暴力的受害者被归约为作为占有和效用对象的身体；自为性暴力的受害者被归约为作为毁灭对象的身体。在这些情况下，所运作的归约类型与日常的归约不同。通常，当我们说“某人被归约为某物”时，我们的意思是我们从单一视角感知他或她。我们所有人都以这种方式归约某些人；否则我们无法过正常的生活。而且我们都知道，我们可以从唯一一个方面感知一个人，而不因此实施或准备暴力行为，即使我们感知他们的唯一方面是其身体性。13 我只把面包店的人看作卖给我面包的人，尽管我几乎每天都见到他，如果我们在不同情境下相遇，我可能认不出他。一个社区越是人口众多、复杂、多元化，这种归约对于生存就越必要，尽管它们被哀叹为现代性冷漠非人性的表现。通过只从一个方面感知面包师，我并没有归约他的个人，只是我的对他的感知，而只有毫不掩饰的建构主义者才会否认这种差异。直到我阻止面包师进行——
 
 
-以他喜欢的方式呈现自己——而直到我通过约束他来主动这样做，我才试图把他个人贬低为一个角色，而我是否真的成功，取决于他或社会框架是否允许我这样对待他。如果我确实成功施加了这种暴力，我的行为就会把面包师还原为他的身体。我将决定他这个人身上哪些部分仍然算数；我将决定他是否继续是拥有法律权利的公民。*所有暴力行为中都存在的向身体的还原，正是暴力必须被首先理解为身体行为的原因。*
+暴力有两个组成部分：施加它和承受它。将两者统一的是将遭受暴力的人归约为其身体。所有形式的暴力——地域性、掠夺性、自为性——都将遭受它的人归约为其身体性。地域性暴力的受害者被归约为作为工具的身体；掠夺性暴力的受害者被归约为作为占有和效用对象的身体；自为性暴力的受害者被归约为作为毁灭对象的身体。在这些情况下，所运作的归约类型与日常的归约不同。通常，当我们说“某人被归约为某物”时，我们的意思是我们从单一视角感知他或她。我们所有人都以这种方式归约某些人；否则我们无法过正常的生活。而且我们都知道，我们可以从唯一一个方面感知一个人，而不因此实施或准备暴力行为，即使我们感知他们的唯一方面是其身体性。13 我只把面包店的人看作卖给我面包的人，尽管我几乎每天都见到他，如果我们在不同情境下相遇，我可能认不出他。一个社区越是人口众多、复杂、多元化，这种归约对于生存就越必要，尽管它们被哀叹为现代性冷漠非人性的表现。通过只从一个方面感知面包师，我并没有归约他的个人，只是我的对他的感知，而只有毫不掩饰的建构主义者才会否认这种差异。直到我阻止面包师进行——以他喜欢的方式呈现自己——而直到我通过约束他来主动这样做，我才试图把他个人贬低为一个角色，而我是否真的成功，取决于他或社会框架是否允许我这样对待他。如果我确实成功施加了这种暴力，我的行为就会把面包师还原为他的身体。我将决定他这个人身上哪些部分仍然算数；我将决定他是否继续是拥有法律权利的公民。*所有暴力行为中都存在的向身体的还原，正是暴力必须被首先理解为身体行为的原因。*
 
 在战争中，敌方士兵被称为“软目标”，非预期的平民死亡被称为“附带损害”。为这类术语背后的犬儒主义哀叹并无多大意义，因为它们反映了军事行动的现实。¹⁹ 人质，无论他是被用来胁迫、恫吓还是敲诈，都会把自己看作一块肉，被留着以防绑架者需要割下一片邮寄出去。受害者并不是在隐喻或寓言意义上感知这种向身体的还原。他并不“像”一块肉那样感觉，也不“好像”他是一块肉。“像”或“好像”是后来的事，前提是受害者有机会。在暴力发生时，受害者的自我感知是迟钝的。精神，与其所经历的身体还原保持一致，变成了肉。²⁰ 让·阿梅里描述了那些从酷刑中幸存下来的人所恢复的“微弱的理性力量”如何由以下内容构成：
 
@@ -885,17 +919,15 @@ vigilante justice，他们向一名受害者开了超过 300 发子弹，对另�
 
 盯着女人的乳沟，看她裙摆下露出的双腿，看她衣着勾勒出的曲线，这确实是一种还原。但仅从目光本身，无法判断它在如何还原。目光就是目光。它不隐藏什么，也不揭示什么。它只显现自身。它的意义是由接下来发生的事决定的。如果目光始终只是目光，那么对它的解读便留给想象。
 
-
-
 of the one being looked at. Tact consists in knowing how differently looks can be interpreted.
 
 ## PSYCHOLOGICAL VIOLENCE/AUTOTELIC BIAS
 
-> Proudly walking. Whom were you trying to walk like? Forget: a dispossessed. With mother’s money order, eight shillings, the banging door of the post office slammed in your face by the usher. Hunger toothache. Encore deux minutes. Look clock. Must get. Fermé Hired dog! Shoot him to bloody bits with a bang shotgun, bits man spattered walls and brass buttons. Bits all khrrrrklak in place clack back. Not hurt? O, that’s all right. Shake hands.
-> 
+> Proudly walking. Whom were you trying to walk like? Forget: a dispossessed. With mother's money order, eight shillings, the banging door of the post office slammed in your face by the usher. Hunger toothache. Encore deux minutes. Look clock. Must get. Fermé Hired dog! Shoot him to bloody bits with a bang shotgun, bits man spattered walls and brass buttons. Bits all khrrrrklak in place clack back. Not hurt? O, that's all right. Shake hands.
+>
 > —JAMES JOYCE, ULYSSES
 
-心理暴力只能在身体暴力的背景下被理解。要理解心理暴力是如何运作的，我们必须将视角转移到受害者身上。心理暴力在于被降格为身体的威胁。对某人进行身体暴力威胁是一种同义反复，但值得更仔细地审视。威胁除了包含“如果你不做 x 我就做 y”这种也许是有条件的宣告之外，还包含什么？威胁只有在激活想象时才有效，如果被威胁者想象自己的反应、自己的忍痛能力、自己的勇气、自己的特殊弱点、自己的懦弱、自己的生存机会、自己作为幸存者的生活等等。暴力威胁会让被威胁者想象自己是已经正在遭受暴力的人。他完全从自己想象的暴力行为的角度来规划未来。他的世界和自我感知因此变得狭窄。他已经被降格为威胁他的暴力。
+心理暴力只能在身体暴力的背景下被理解。要理解心理暴力是如何运作的，我们必须将视角转移到受害者身上。心理暴力在于被降格为身体的威胁。对某人进行身体暴力威胁是一种同义反复，但值得更仔细地审视。威胁除了包含“如果你不做 `x` 我就做 `y`”这种也许是有条件的宣告之外，还包含什么？威胁只有在激活想象时才有效，如果被威胁者想象自己的反应、自己的忍痛能力、自己的勇气、自己的特殊弱点、自己的懦弱、自己的生存机会、自己作为幸存者的生活等等。暴力威胁会让被威胁者想象自己是已经正在遭受暴力的人。他完全从自己想象的暴力行为的角度来规划未来。他的世界和自我感知因此变得狭窄。他已经被降格为威胁他的暴力。
 
 心理暴力当然超越了身体暴力的威胁。它的内容如此多样且存在争议，以至于找到一个单一的共同分母，更不用说上面提到的那个特定分母，似乎不太可能。心理暴力的一种类别是隐含的威胁。关于身体暴力威胁所说的许多内容同样适用于它。另一类包括漠视和轻蔑、言语和非言语的 dismissiveness、欺凌，以及美国人所说的“dissing”。这些蔑视形式让人回想起早期的恐惧来源。每个孩子本能地确信自己的脆弱，潜意识地意识到自己对环境和控制它的人的依赖。忽视、冷漠、敌意代表着致命危险，即使是最受宠爱的孩子也会时而经历它们并以恐慌作出反应。成年人在日常生活中所遭受的拒绝和轻蔑可以触及这些恐惧，尽管它们是否被激活取决于个人、情境和其他因素。
 
@@ -903,11 +935,11 @@ of the one being looked at. Tact consists in knowing how differently looks can b
 
 不要误解：我并不是说感知到心理暴力的人要负责任。相反，他可以而且应该期望他人知道自己在做什么。某种“不愿配合”的态度可能只是缺乏敏感。阿多诺对日常粗俗的轻微表现如同盖世太保就在门口一样退缩的倾向，相比之下则是敏感的表达。敏感意味着什么？这取决于一个人将什么体验为可怕。莱辛的《拿撒勒人》中的纳森因在迫害中看到家人被活活烧死而受到创伤；后来，当他的家在火灾中被毁时，他拒绝相信自己的养女可能幸存下来。26
 
+
+
 什么时候一个人是敏感的，什么时候是过度敏感的？当存在疑问时，两者都不适用。必须仔细审视每个案例；也许会产生分歧。为了理解分歧，考虑其原因是有用的：害怕被降格为身体。因为每一次暴力行为都包含创伤的可能性，因而包含心理毁灭的元素，所以在每一次暴力行为中都可以感知到自足暴力的元素。受害者可以将所有暴力视为潜在的自足暴力，因为所有暴力都是潜在的毁灭性的，或者因为暴力形式之间的差异在他的痛苦中不起主要作用。然而它们确实起了一定作用。虽然每个暴力受害者都有一种受文化影响的关于暴力是什么、在何种形式和情境下可以发生的事前观念，但所遭受的痛苦可能如此剧烈，以至于受害者会将所有暴力视为自足的。这是促进斯德哥尔摩综合征的因素之一。采取人质劫持者的视角，他的事件观、他的目的-手段计算使人质能够从外部体验到施加在他身上的囚禁暴力。27 作为一种心理策略，这种试图否认暴力行为的毁灭性和自足性本质的尝试永远不会奏效。
 
 受害者的恐怖在施害者的眼中反映为胜利。每一次暴力行为都将自己置于社会面前。在暴力被允许的地方，有赢家和输家，前者通常会得到回报，无论是物质上的还是社会声望上的。在暴力被强制的地方，执行暴力的人会收集随之而来的红利
-
-
 
 履行自己的职责，并在行为涉及风险时赢得勇敢的名声。在*禁止*暴力的地方，实施暴力的人为自己制定规则，既挑战了社会的规范，也让受害者尖叫不止。*实施地点性或劫持性暴力的施害者通常处于一种有权使用自为性暴力（autotelic violence）的权力地位。* 无论施害者是否知道或只是模糊地感觉到，无论受害者是否知道或只是模糊地感觉到，施害者与受害者形成了一个二元体，在其中前者可能会或可能不会为了纯粹的毁灭而行使他优越的权力。如果施害者没有行使这种权力，那是因为他抵制了这样做的内在诱惑。然而，并非每个人都能抵制这种诱惑，这就是为什么每一次地点性或劫持性暴力都可能突然发生变形的缘故。简单的杀人犯可以决定利用他对他人身体的控制权，用三百发子弹将之撕成碎片；原本打算强奸的人后来可以决定摧毁他用于性满足的身体。
 
@@ -927,10 +959,6 @@ of the one being looked at. Tact consists in knowing how differently looks can b
 
 婴儿的“欢欣活动”源于摆脱其无助和脆弱的期望。在看到自己的镜像时，婴儿“预见了他在图像中力量的成熟。”³² 对拉康而言，镜像阶段是自我形成的关键部分，自我形成“在梦中被象征为一个设防的营地，甚至是一个体育场。”³³ 这种意象暗示着与弗洛伊德的自我相似的功能。当极端暴力让婴儿戏剧性地意识到他试图逃避的无助时，镜子就破碎了。极端暴力使婴儿的面容在内在镜子的倒影中变得模糊不清。
 
-
-
-
-
 运气好的话，对写作社会功能的感知将是其中之一，作者会写出一本甚至能吸引完全对他或她命运漠不关心的人的书。如果现代性让我们对暴力变得敏感，它也为我们提供了一种超越创伤的方式。
 
 ## COMPLEMENTARY OPPOSITES
@@ -941,15 +969,11 @@ of the one being looked at. Tact consists in knowing how differently looks can b
 
 *掠夺性暴力行为的非暴力互补对立面是相互欲望的行为。* 与我关于暴力的其他论点一样，这不是一个心理层面的主张；也不是关于性暴力的病因学的主张。我并不是假设，例如，强奸犯经历了不足程度的非暴力性行为。我只是在说，在纯粹的现象学层面上，这些行为是相同的*在将他人降格为身体的意义上*，并且这些行为无论是否涉及暴力都是如此。这并不意味着前者是其本质属性而后者只是偶然的。从不同的视角来看，暴力的议题将是决定性的。我强调的是，每一个行为与身体的关系都以降格为特征。但是，肯定会有人说，相互欲望中发生的“身体的融合”与掠夺性暴力对身体的关系是不同的。的确，在这方面两者之间存在巨大的差距。在相互欲望中，相互的降格模糊了身体之间的界限，*个体化原理*不再占上风。在掠夺性暴力中，强奸者的身体和被强奸者的身体被尖锐地分隔开来，而这种尖锐的分隔正是强奸者快感的来源。然而，尽管两者有差异，掠夺性暴力和相互欲望仍是人类性行为的互补两面。
 
-*定位性暴力的互补对立面是合意的权力行使。* 如果在相互欲望中，降格为身体是互惠行为而非征服行为，那么在合意的权力行使中，身体是实现共同目标的联盟的一部分，而非从赛场上移除的障碍或置于某人处置之下的工具。³⁷ 考虑：脱离部队加入敌人的士兵；打开大门并分得战利品的守卫；战败的战斗人员在交出武器前先装填武器。³⁸ 在这些例子中，敌人变成了兄弟，对手的令人恐惧的打手变成了同伴。压制和施加痛苦的暴力的互补对立面是一种在相互性中变得更强大的共同力量。从这一事实我们可以得出两个结论。第一，*在谈论权力与暴力之间的联系时，必须具体谈论权力与定位性暴力之间的联系。* 掠夺性暴力也涉及压制受害者，但与自主性暴力一样，真正的目标在于执行。第二，社会学无助地试图理解权力与暴力之间的关系，其结果源于一种误解。社会学要么最终将权力与暴力混为一谈，要么坚持权力与暴力是彼此像水和
 
 
-
-
+*定位性暴力的互补对立面是合意的权力行使。* 如果在相互欲望中，降格为身体是互惠行为而非征服行为，那么在合意的权力行使中，身体是实现共同目标的联盟的一部分，而非从赛场上移除的障碍或置于某人处置之下的工具。³⁷ 考虑：脱离部队加入敌人的士兵；打开大门并分得战利品的守卫；战败的战斗人员在交出武器前先装填武器。³⁸ 在这些例子中，敌人变成了兄弟，对手的令人恐惧的打手变成了同伴。压制和施加痛苦的暴力的互补对立面是一种在相互性中变得更强大的共同力量。从这一事实我们可以得出两个结论。第一，*在谈论权力与暴力之间的联系时，必须具体谈论权力与定位性暴力之间的联系。* 掠夺性暴力也涉及压制受害者，但与自主性暴力一样，真正的目标在于执行。第二，社会学无助地试图理解权力与暴力之间的关系，其结果源于一种误解。社会学要么最终将权力与暴力混为一谈，要么坚持权力与暴力是彼此像水和油。两者都错了。在下面的章节中，我将更详细地探讨这种关系。
 
 ## POWER—WITHOUT VIOLENCE
-
-油。两者都错了。在下面的章节中，我将更详细地探讨这种关系。
 
 近四十年前，汉娜·阿伦特回忆起乔治·索雷尔在二十世纪初说过的一句话：“暴力的难题仍然非常模糊。”对阿伦特来说，这一论断在她那个时代丝毫没有失去其有效性，原因在于“人们普遍不愿将暴力作为一种现象本身来对待”。“如果，”阿伦特指出，“我们转向对权力现象的讨论，我们很快就会发现，从左到右的政治理论家之间存在共识，即暴力不过是权力的最明显表现。”39
 
@@ -973,8 +997,6 @@ of the one being looked at. Tact consists in knowing how differently looks can b
 
 通过谈论建立在舆论之上的政府，休谟认为被统治者已同意统治他们的政府。44 同意这一要素对阿伦特也很关键，尽管她对统治者与被统治者之间的关系不如对夺取和保有权力的群体感兴趣。在阿伦特的理解中，权力对应于一个群体行动的能力和意愿。一个群体的权力以另一个群体的权力为界限，因此在没有其他权力存在的情况下，“一个相对较小但组织良好的团体可以无限期地统治庞大而人口众多的帝国。”45 但他们是如何做到这一点的呢？他们如何以马克斯·韦伯所说的“不同程度的永久性”维持其权力地位呢？46 一种可能的方式是通过暴力阻止可能挑战他们的群体的形成。对阿伦特来说，这一例子偏离了重点。“虽然暴力可以摧毁权力，”她写道，“但它永远无法成为权力的替代品。”47 即便如此，消灭潜在的反对派确实具有保护掌权者的效果。当然，消灭对手的能力本身并不能保证权力得以保留。权力持续的时间仅限于它未被外部摧毁并且掌权群体保持凝聚力。阿伦特再次说道：“行动的短暂时刻过去后是什么使人们保持在一起（我们今天称之为‘组织’），同时又是什么通过
 
-
-
 “remaining together is power”48 这一观点源于阿伦特对权力的定义，在此意义上它在逻辑上是一致的，但也仅此而已。阿伦特几乎没有告诉我们权力关系是如何运作的——处于权力优越地位的人与处于权力劣势地位的人之间是怎样的关系。事实上，阿伦特并不真正关心人们如何保留和行使权力。让她感兴趣的是权力出现的时刻——或者应该说“绽放”？阿伦特的描述近乎狂喜；“权力只有在言语与行动尚未分离时才得以实现，在言语不空洞、行动不残暴时，在言语不是用来掩盖意图而是揭示现实，行动不是用来侵犯和破坏而是建立关系并创造新现实时，”49
 
 尽管政治共同体（无血地）获得权力的悲怆时刻不足以充分解释权力的社会关系，阿伦特的观点仍然具有启发性。因为它向我们展示了，即使是最暴力的获取权力与优越性的努力也包含非暴力的要素。任何比“有权势者”与“无权势者”粗暴并置更复杂的权力关系都绝非纯粹的权力关系。一旦掌权者的少数人的希望进入方程，一旦他们尊重服从并获得支持，权力关系就不再仅仅由暴力构成。仅凭暴力工具，即使是最有权势的人也只能在保持清醒的情况下行使权力。几天后他就需要一个不以强制行动的助手。如果助手是被吓到才帮忙，那只是因为他看不到自己的自由。
@@ -993,30 +1015,25 @@ of the one being looked at. Tact consists in knowing how differently looks can b
 
 卢曼立场的一个有趣后果是，权力关系的分析不必依赖于对人们如果权力关系不同本会如何做的推测。⁵⁴ 权力不是冲突关系，尽管卢曼意义上的权力行使可以被理解为一种
 
-
 means of avoiding conflict.55 无论如何，权力仍然局限于一种操作，即要么做 x，要么面临强制措施 y。卢曼写道，“爱、金钱、以及对价值观达成共识的劝说”，
 
 > 不能被定义为权力的实例……权力情境的初始前提可能确实建立在权力持有者的积极表现之上：例如，对保护的承诺、对爱的展示、对付款的承诺。但真正的权力只有在权力客体的行为所立即依赖的不是那些表现的延续，而是其中止时才产生。56
 
 ## THE TEMPORALITY OF POWER 权力的时间性
 
+
+
 对阿伦特而言，权力意味着凭借集体热情获得影响力的能力；对卢曼而言，权力意味着强制的能力。这两位思想家都忽略了时间性，以及与之相关的权力本身的本质。获得权力不仅仅是获得权力；它是维持和行使权力这一项目的一部分。同样，维持权力不仅仅是瞬间维持权力；它是创造权力永久连续体的项目的一部分。维持权力可以被理解为持续的获得权力，而获得权力的过程则预见到维持权力所需的条件。因此，权力包含双重时间性：它的现在和它的未来。我将在下面详细说明；在这里，我只想强调，没有任何权力关系仅基于单一时刻。相反，它取决于参与者对其下一步将发生什么的假设。相信自己即将失去权力的处于优势地位的人已经失去了它。知道自己明天无法忍受酷刑的囚犯今天也将无法忍受。无论权力格局如何，双方通常对自己在近期可用的选择都有清晰的认识。对特定权力关系的信任产生于参与者的行动传达出对现状的相互接受。
 
 ## REWARD POWER, COERCIVE POWER, AND VIOLENCE 奖赏权力、强制权力与暴力
 
-如果一个团体设法获得权力并破坏现状，它不仅是通过以强制措施威胁其对手来实现的，而且
-
-通过向支持者（以及，也许，中立的旁观者）承诺奖励来实现。维持权力也并非不同，必然同时依赖于棍子和胡萝卜。阿伦特认为权力可以在没有强制的情况下持久地得到保障是错误的，卢曼认为权力可以在没有奖励的情况下持久地得到保障也是错误的。卢曼确实承认权力可以通过奖励获得，但他坚持认为只有强制才能维持它。关于卢曼的这一限定，有两点需要注意。首先，必须区分权力和单纯的影响力。影响力通常依赖于奖励（这可以包括非物质优势，例如知识），但权力如果没有强制的可能性就无法存在。其次，有些奖励是无法撤回的，要么是因为缺乏足够的强制权力，要么是因为其受益者已经消耗了它们。最多只能拒绝提供更多。在权力被行使的对象一方存在一种预期要素，其中对持续奖励的希望变得难以与对撤回的恐惧区分开来。卢曼在论证权力需要强制方面是正确的，因为没有它权力就无法持久。然而，权力不仅仅是在强制潜力发挥作用时才成为权力。权力只有在它既有奖励能力又有强制能力时，才能获得持久的基础。
+如果一个团体设法获得权力并破坏现状，它不仅是通过以强制措施威胁其对手来实现的，而且通过向支持者（以及，也许，中立的旁观者）承诺奖励来实现。维持权力也并非不同，必然同时依赖于棍子和胡萝卜。阿伦特认为权力可以在没有强制的情况下持久地得到保障是错误的，卢曼认为权力可以在没有奖励的情况下持久地得到保障也是错误的。卢曼确实承认权力可以通过奖励获得，但他坚持认为只有强制才能维持它。关于卢曼的这一限定，有两点需要注意。首先，必须区分权力和单纯的影响力。影响力通常依赖于奖励（这可以包括非物质优势，例如知识），但权力如果没有强制的可能性就无法存在。其次，有些奖励是无法撤回的，要么是因为缺乏足够的强制权力，要么是因为其受益者已经消耗了它们。最多只能拒绝提供更多。在权力被行使的对象一方存在一种预期要素，其中对持续奖励的希望变得难以与对撤回的恐惧区分开来。卢曼在论证权力需要强制方面是正确的，因为没有它权力就无法持久。然而，权力不仅仅是在强制潜力发挥作用时才成为权力。权力只有在它既有奖励能力又有强制能力时，才能获得持久的基础。
 
 下图说明了奖赏权力与强制权力之间的相互关系：
 
 ![](img/1cc4e4fe32b20136851bebfbe4f29b1a_92_0.png)
 
-授予奖励的对应物是受损。强制权力在撤回已授予之物时与奖赏权力相交。授予（不受强制的授予）与伤害相反。中间存在临时授予（可能被撤回）和因没收而受损（重新占有已授予之物或与先前奖励授予无关之物）。整个结构代表权力，其组成部分的相互作用赋予权力持久的稳定性。给定权力关系中的所有各方都会（或多或少）预期这一结构，并将自己定位为其中的支持者或对象。情况总是会出现，处于优势地位的人可以暂时仅凭强制或凭
-
-
-
-奖励本身，而是片面的做法很少见：强制的威胁需要对执行威胁者做出奖励的承诺；奖励的承诺需要强制的威胁来表明在某些条件下奖励可以被撤销或没收。
+授予奖励的对应物是受损。强制权力在撤回已授予之物时与奖赏权力相交。授予（不受强制的授予）与伤害相反。中间存在临时授予（可能被撤回）和因没收而受损（重新占有已授予之物或与先前奖励授予无关之物）。整个结构代表权力，其组成部分的相互作用赋予权力持久的稳定性。给定权力关系中的所有各方都会（或多或少）预期这一结构，并将自己定位为其中的支持者或对象。情况总是会出现，处于优势地位的人可以暂时仅凭强制或凭奖励本身，而是片面的做法很少见：强制的威胁需要对执行威胁者做出奖励的承诺；奖励的承诺需要强制的威胁来表明在某些条件下奖励可以被撤销或没收。
 
 以这种方式思考权力纠正了权力是一种独立的实体的错误信念。与流行的观点相反，权力并不是可以随意储存和分配的资源。它是两个或更多承认它的人之间的关系。（稍后我会更详细地谈论这种承认。）此外，处于权力优势地位的人必须掌握多种技术才能获得和维持权力。暴力在上述模式中处于什么位置？答案很容易看出：伤害的能力是权力的暴力一面，而没收的能力正是建立在这一面之上的。权力并非建立在暴力之上。权力可以有暴力也可以没有暴力地实现。权力可以在短期内仅凭暴力或完全不使用暴力来主张。但只有当它能够实施暴力而不完全依赖暴力时，才能长期主张。
 
@@ -1040,71 +1057,93 @@ means of avoiding conflict.55 无论如何，权力仍然局限于一种操作�
 
 《理查三世》是部署战略暴力并使其制度化的教科书案例。然而理查最终失败了。为什么？可以合理地认为他的敌人太强大了。但我们也必须牢记，理查以自己的错误帮助了对手（莎士比亚对其胜利的审视与对其失败的审视一样彻底）。简单地说：理查从未成功赢得建制派的支持，只赢得了个人。尽管他通过谋杀和婚姻获得了合法性，理查仍然是个暴发户。他缺乏在个人效忠之外创造依赖性的诀窍。他是一个没有完整帮派的帮派头目，而支持他的人远远构不成一个执政精英。最具破坏性的是，他没有认识到慷慨的必要性，或者至少没有认识到兑现承诺的重要性。理查未能领会权力只有在能够既奖励又惩罚其臣民时才能得以维持。
 
-痴迷于暴力，理查试图仅凭强制来确保他作为国王的主权。两个可能有一天挑战他王位主张的孩子
-
-
-
-王冠被锁在伦敦塔里，但只要他们还活着，理查德就担心自己不过是个占位者，于是他决定让他们去死。他转向自己的得力助手白金汉，这个人曾在言语和行动上忠诚地支持他上位。理查德以为一个简短的点头就足以让白金汉行动起来。但后者却犹豫不决，要求考虑片刻：
+痴迷于暴力，理查试图仅凭强制来确保他作为国王的主权。两个可能有一天挑战他王位主张的孩子王冠被锁在伦敦塔里，但只要他们还活着，理查德就担心自己不过是个占位者，于是他决定让他们去死。他转向自己的得力助手白金汉，这个人曾在言语和行动上忠诚地支持他上位。理查德以为一个简短的点头就足以让白金汉行动起来。但后者却犹豫不决，要求考虑片刻：
 
 KING RICHARD: Stand all apart. Cousin of Buckingham!
-BUCKINGHAM: My gracious sovereign!
-KING RICHARD: Give me thy hand.
-Thus high, by thy advice
-And thy assistance is King Richard seated.
-But shall we wear these glories for a day.
-Or shall they last, and we rejoice in them?
-BUCKINGHAM: Still live they, and for ever let them last!
-KING RICHARD: Ah, Buckingham, now do I play the touch
-To try if thou be current gold indeed.
-Young Edward lives—think now what I would speak?
-BUCKINGHAM: Say on, my loving lord.
-KING RICHARD: Why Buckingham, I say I would be King.
-BUCKINGHAM: Why so you are, my thrice-renowned lord.
-KING RICHARD: Ha, am I King? 'Tis so—but Edward lives.
-BUCKINGHAM: True, noble Prince.
-KING RICHARD: O bitter consequence,
-That Edward should live—true noble prince!
-Cousin, thou wast not wont to be so dull.
-Shall I be plain? I wish the bastards dead,
-And I would have it suddenly perform'd.
-And what say'st thou now? Speak suddenly, be brief.
-BUCKINGHAM: Your Grace may do your pleasure.
-KING RICHARD: Tut, tut, thou art all ice; thy kindness freezes.
-Say, have I thy consent that they shall die?
-BUCKINGHAM: Give me some little breath, some pause, dear lord,
-Before I positively speak in this;
-I will resolve you herein presently. Exit.
 
-(IV.2.1–26)
+BUCKINGHAM: My gracious sovereign!
+
+KING RICHARD: Give me thy hand.
+
+Thus high, by thy advice
+
+And thy assistance is King Richard seated.
+
+But shall we wear these glories for a day.
+
+Or shall they last, and we rejoice in them?
+
+BUCKINGHAM: Still live they, and for ever let them last!
+
+KING RICHARD: Ah, Buckingham, now do I play the touch
+
+To try if thou be current gold indeed.
+
+Young Edward lives—think now what I would speak?
+
+BUCKINGHAM: Say on, my loving lord.
+
+KING RICHARD: Why Buckingham, I say I would be King.
+
+BUCKINGHAM: Why so you are, my thrice-renowned lord.
+
+KING RICHARD: Ha, am I King? 'Tis so—but Edward lives.
+
+BUCKINGHAM: True, noble Prince.
+
+KING RICHARD: O bitter consequence,
+
+That Edward should live—true noble prince!
+
+Cousin, thou wast not wont to be so dull.
+
+Shall I be plain? I wish the bastards dead,
+
+And I would have it suddenly perform'd.
+
+And what say'st thou now? Speak suddenly, be brief.
+
+BUCKINGHAM: Your Grace may do your pleasure.
+
+KING RICHARD: Tut, tut, thou art all ice; thy kindness freezes.
+
+Say, have I thy consent that they shall die?
+
+
+
+> BUCKINGHAM: Give me some little breath, some pause, dear lord,  
+> Before I positively speak in this;  
+> I will resolve you herein presently. Exit.  
+> (IV.2.1–26)
 
 白金汉去考虑时，理查德召来另一位潜在的劊子手，一位名为泰勒尔的腐败贵族，其“家境贫寒”。他表现出极大的合作意愿，并立即着手执行任务。与此同时，白金汉带着答复回来：“我的主，我已在脑中考虑过 / 您刚才向我提出的请求”（IV.2.82–83）。他既没有说愿意谋杀，也没有说不愿意，尽管他暗示愿意谈判。但那时理查德已经收买了泰勒尔，不再在意：“好吧，就此作罢”（IV.2.84）。此时，白金汉试图结算，要求支付已提供的服务的报酬。理查德通过装作忽视来搪塞他的要求：
 
-> **BUCKINGHAM:** My lord, I claim the gift, my due by promise,
-> For which your honour and your faith is pawn’d:
-> Th’earldom of Hereford, and the moveables
-> . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-> What says your highness to my just demand?
-> **KING RICHARD:** I do remember me, Henry the Sixth
-> Did prophesy that …
-> . . . . . . . . . . . . . . . . . . . . . . . . . . . .
-> **BUCKINGHAM:** My lord!
-> **KING RICHARD:** How chance the prophet could not, at that time,
-> Have told me—I being by—that I should kill him?
-> **BUCKINGHAM:** My lord, your promise for the earldom—
-> **KING RICHARD:** Ay—what’s o’clock?
+> **BUCKINGHAM:** My lord, I claim the gift, my due by promise,  
+> For which your honour and your faith is pawn’d:  
+> Th’earldom of Hereford, and the moveables  
+> . . . . . . . . . . . . . . . . . . . . . . . . . . . .  
+> What says your highness to my just demand?  
+> **KING RICHARD:** I do remember me, Henry the Sixth  
+> Did prophesy that …  
+> . . . . . . . . . . . . . . . . . . . . . . . . . . . .  
+> **BUCKINGHAM:** My lord!  
+> **KING RICHARD:** How chance the prophet could not, at that time,  
+> Have told me—I being by—that I should kill him?  
+> **BUCKINGHAM:** My lord, your promise for the earldom—  
+> **KING RICHARD:** Ay—what’s o’clock?  
 > (IV.2.87–107)
 
 就这样继续下去，直到白金汉明白封建主义的规则不再适用。这是黑帮的世界，对于多余的人来说，这里非常危险。白金汉决定趁还能脱身时叛变：
 
-> **KING RICHARD:** … I am not in the giving vein today.
-> **BUCKINGHAM:** May it please you to resolve me in my suit?
-> **KING RICHARD:** Thou troublest me; I am not in the vein.
-> *Exit followed by all save Buckingham.*
-> **BUCKINGHAM:** And is it thus? Repays he my deep service
-> With such contempt? Made I him King for this?
-> O let me think on Hastings, and be gone
-> To Brecknock while my fearful head is on.
-> *Exit.*
+> **KING RICHARD:** … I am not in the giving vein today.  
+> **BUCKINGHAM:** May it please you to resolve me in my suit?  
+> **KING RICHARD:** Thou troublest me; I am not in the vein.  
+> *Exit followed by all save Buckingham.*  
+> **BUCKINGHAM:** And is it thus? Repays he my deep service  
+> With such contempt? Made I him King for this?  
+> O let me think on Hastings, and be gone  
+> To Brecknock while my fearful head is on.  
+> *Exit.*  
 > (IV.2.116–22)
 
 理查德试图以否定方式巩固他的权力。就像一个人试图通过拆除支撑房屋的木梁来使其防火一样，理查德杀死了家族中所有可能威胁他的人。到最后，他与一名雇佣杀手说话的语气变得十分熟悉，仿佛他们俩正在村里的小酒馆里分享一杯啤酒。理查德的垮台可能是莎士比亚对政治精英的劝诫：权力既不能仅靠暴力获得，也不能仅靠暴力维持。它始终需要自愿的支持、容忍和长期的忠诚。权力政治问题就是个人政治问题。白金汉知道这一点；理查德不知道。这就是为什么最后他的王国只值一匹用来逃跑的马，而连那匹马他也找不到。
@@ -1114,9 +1153,6 @@ I will resolve you herein presently. Exit.
 在他的权力社会学研究《Phänomene der Macht》中，海因里希·波皮茨描述了一段情节，一群新乘客成功垄断了游轮上的甲板椅。虽然该群体的行为很残忍，但只有少数情况下会威胁暴力，而其有限的暴力威胁并不能解释其成功。波皮茨将此归因于两个因素。第一个是更强的组织能力。该群体遵循一个协调良好的计划，而其他乘客仍是一群分散的个体。波皮茨称第二个因素为“合法性的相互承认”。群组成员不仅单独占有甲板椅；他们还确保其他成员不会失去自己的椅子。每当另一名乘客试图拿走群组成员的椅子时，整个群体都会一致并愤怒地做出反应，仿佛拥有座位是他们的道德权利。波皮茨描述了这种策略的荒谬有效性：
 
 > An order, in particular a political order, achieves legitimacy in Max Weber’s sense when it is acknowledged as “in itself binding.” This acknowledgment is of a fundamental nature. It introduces an additional motive, beyond mere habit and opportunity, to behave in conformity with this order. … Now … Weber sees legitimation along a vertical social axis, as it were: as a relation from below to above or from above to below. The rulers assert a claim to legitimacy toward those below, and the ruled address their belief in [the] legitimacy [of the order] toward those above. This simplification makes sense for describing fully developed structures of legitimacy. But it can be misleading when inquiring into the origin of that which regulates legitimacy—insofar as this simplification traces of this process. On the cruise ship, a new order formed that privileged a particular group. For whom was this new order first legitimate? How did legitimacy crystallize? The answer is as easy as the question. The order first appeared legitimate to the privileged themselves.
-
-
-
 
 该秩序的合法性不仅仅基于个人的权利观念。它还源于
 
@@ -1134,6 +1170,8 @@ I will resolve you herein presently. Exit.
 
 ## 参与性权力、信任与法律规制
 
+
+
 权力要获得完全表达所需的多数的同意，其本身就是一种权力形式，具体而言即参与性权力。61 我在这里说的是本来意义上的权力，而不只是潜在权力或权力状态，以强调参与性权力的能动性质及其自身进行奖赏和强制的能力。波皮茨解释了参与性权力是如何形成的：“既有秩序的价值在日常经验中变得显而易见，只要……既有秩序……[进入]这种经验。”62 既有秩序在日常经验中的一种表现，就是对这一体系的利益投入。这种投入在于
 
 > 无数微小的日常行动……将关系网络与既有秩序联结起来。这些行动绝不预设对既有秩序的肯定，也不需要某种特殊形式的机会主义。它们只预设足够的顺从，以避免英雄主义行为。但[这些行动]所蕴含的远不止[顺从]。正如每个人都对保有自己行动的成果怀有兴趣，他也对维系自己所投入的秩序的存续怀有兴趣。63
@@ -1144,9 +1182,7 @@ I will resolve you herein presently. Exit.
 
 对“整体”的信任——相信它能撑得住、能存续——依赖于构成完整参与谱系的实践，从引人注目的集体姿态，到产生社会凝聚力的“无数微小的日常行动”；而且，如果这些实践不能带来那种凝聚力感，我们便无法从事它们。
 
-参与性权力的意义可以从其内部分化中看出，即波皮茨所称的“依附阶层”、“中立阶层”和“the
-
-pariah class."64 Popitz 认为，第一组的权力是由掌权者授予的，尽管在我看来它也可能具有参与性成分。中立阶级由“旁观者、那些不受影响的人”组成。他们拥有一种特殊的参与性权力。他们必须被说服，任何夺取或扩大权力的企图，包括由此爆发的任何冲突，都不会影响到他们。中立阶级是“最终最重要的、夺取权力的决定性辅助力量”。65 但根据 Popitz 的说法，它所扮演的角色完全是消极的：中立阶级无力夺取权力，也无法与其他群体结成联盟。它对被动性的回报是与下方贱民阶级之间清晰而稳定的界限。“被剥夺权利的群体……的形成……可以得到[中立阶级]的认可，即那些留在[秩序]阳光下、非被剥夺权利的人。”66
+参与性权力的意义可以从其内部分化中看出，即波皮茨所称的“依附阶层”、“中立阶层”和“the pariah class."64 Popitz 认为，第一组的权力是由掌权者授予的，尽管在我看来它也可能具有参与性成分。中立阶级由“旁观者、那些不受影响的人”组成。他们拥有一种特殊的参与性权力。他们必须被说服，任何夺取或扩大权力的企图，包括由此爆发的任何冲突，都不会影响到他们。中立阶级是“最终最重要的、夺取权力的决定性辅助力量”。65 但根据 Popitz 的说法，它所扮演的角色完全是消极的：中立阶级无力夺取权力，也无法与其他群体结成联盟。它对被动性的回报是与下方贱民阶级之间清晰而稳定的界限。“被剥夺权利的群体……的形成……可以得到[中立阶级]的认可，即那些留在[秩序]阳光下、非被剥夺权利的人。”66
 
 中立阶级的权力并非被授予。掌权者既不将其托付以特定任务，也不监督其表现。相反，中立阶级的权力源于让强者为所欲为。在某些情况下——例如当暴民获得豁免权时——自满可能导致的结果与国家主导的恐怖一样糟糕。Victor Klemperer 关于德累斯顿普通公民骚扰犹太人的记述说明了类似的现象。被授予的权力是“你应当”的权力。参与性权力是“你可以”的权力。
 
@@ -1178,13 +1214,11 @@ pariah class."64 Popitz 认为，第一组的权力是由掌权者授予的，�
 
 国家权力并不服务于特定目的。国家规制基于奖励的权力并垄断强制性权力，作为回报则支持在理的公民和机构。*国家权力的行使——至少在和平时期——在于分配、监管和执行社会可获得的权力机会。*
 
+
+
 碎片化和法律规制凸显了一个问题，每当权力和暴力重合时就会出现这个问题。君主如何确保他的持剑者不会杀了他？答案是他无法确保。相反，他必须——撇开列宁不谈——信任他。信任——既是普遍的、制度性的信任，也是直接的、个人化的信任——在权力与暴力关系中作为关键纽带的作用，可以从这种关系破裂时所引发的戏剧中看出。凯撒在高卢战争期间组建的军队足够庞大，以至于罗马的领导人怀疑这位行省总督在家乡有独裁野心。元老院的反对者担心凯撒可能会用他的军团士兵对付他们，下令他解散军队。凯撒立即通过渡过卢比孔河并进军罗马证实了他们的担忧。1700年后，斐迪南二世在寻求终止瓦伦斯坦对帝国军队的指挥时遇到了类似的问题。你如何削弱神圣罗马帝国最有权势的人？在席勒的三部曲中，皇帝将一部分军队调离并置于新统治之下；此后瓦伦斯坦寻求与瑞典结盟，但在完成谈判前被暗杀。在二十世纪，图哈切夫斯基和其他红军将领也是基于类似理由被谋杀的。
 
-奥古斯都，凯撒的继任者，将独裁与罗马共和国的制度结构结合起来。⁷¹ 他通过分割行省行政管理来解决武装权力问题，将其中一部分置于元老院控制之下
-
-
-
-and the other under the emperor. Within the cities, where troops were forbidden, power was secured by the Praetorians, the emperor’s personal bodyguards. To keep them in line, Caligula dispatched a contingent of troops from Germany who didn’t speak Latin and hence were unable to form alliances with local forces.<sup>72</sup> A millennium and a half later, Ivan the Terrible proceeded in similar fashion, dividing Russia into the Zemshchina, ruled by boyars, and the czar-controlled Oprichnina, where boyars were forbidden from owning land.<sup>73</sup> Some dictatorial regimes apply this approach to terror, using private death squads for arbitrary repressions and police for controlling the death squads.
+奥古斯都，凯撒的继任者，将独裁与罗马共和国的制度结构结合起来。⁷¹ 他通过分割行省行政管理来解决武装权力问题，将其中一部分置于元老院控制之下 and the other under the emperor. Within the cities, where troops were forbidden, power was secured by the Praetorians, the emperor’s personal bodyguards. To keep them in line, Caligula dispatched a contingent of troops from Germany who didn’t speak Latin and hence were unable to form alliances with local forces.<sup>72</sup> A millennium and a half later, Ivan the Terrible proceeded in similar fashion, dividing Russia into the Zemshchina, ruled by boyars, and the czar-controlled Oprichnina, where boyars were forbidden from owning land.<sup>73</sup> Some dictatorial regimes apply this approach to terror, using private death squads for arbitrary repressions and police for controlling the death squads.
 
 The regulation of violence with violence is a possible solution but it does not solve the problem. Two armies, one under the control of the executive branch, the other under the control of the legislature, would only undermine the state’s monopoly on violence. *The state, therefore, must ultimately trust that the institutions licensed to use violence will not turn against it.* This is true both for centralized autocracies and for systems that are fragmented and legally regulated, *though the latter conceal the problem by replacing trust with control by law. The concealment is an illusion—a mostly effective one, but vulnerable to surprises nonetheless.*
 
@@ -1192,12 +1226,13 @@ The legal regulation of power makes coercion predictable. For the vast majority 
 
 Whenever reality contradicts the presumption of legality there’s potential for catastrophe. In the summer of 1973, as Chile’s coup d’état loomed near, Salvador Allende continued to aver the loyalty of the military, and on one occasion he angrily dismissed a journalist for raising doubts. The truth was that he had no alternative. Had he taken action against the military he would have incited the coup he intended to prevent. By affirming the military’s allegiance, Allende was trying to reinforce trust between the government and the armed forces. Juan Carlos I responded in similar fashion in 1981 when Antonio Tejero and his insurgents attempted to overthrow the Spanish government. In a national television address, Juan Carlos appeared in full military regalia and denounced the coup, appealing to his people as both their king and their head of state. In contrast to Allende, Juan Carlos succeeded and the coup collapsed.
 
+
+
 Historical moments like these remind us that the legal regulation of institutional powers in their relation to one another differs from the legal regulation of institutional powers in their relation to violence. *Only organized, institutionalized violence can defy regulation without the threat of violent coercion.* The legal regulation of power and violence is so ingrained in our sense of normality that we forget how easily a coup d’état can occur. And it can lead us to overlook the fact that the division of labor between institutions licensed to use violence is, politically speaking, a matter of divide-and-conquer. Nevertheless, these institutions—the police, the military, and so on—are not in competition with one another, for each has its own task. The purpose of the division of labor is to set boundaries in the event of arbitrary violence. Assigning one and the same institution to watch over external and internal security would erase the line between them, and give military leaders more room for political maneuvering. Conversely, armies that differentiate between normal soldiers and military police do a better job at policing themselves. What happens when the legal regulation of one or more parts of the power structure is repealed?
 
 ## THE DYNAMICS OF DEMONOPOLIZATION
 
 The answer depends on which part. If deregulation affects everyday affairs, then society may change—a government that relaxes or repeals workplace regulations is bound to increase anxiety for employees—but changes to the opportunities for power will not affect the power structure itself. For that to happen, deregulation must affect the state’s monopoly on violence. This occurs, for example, when people lose their legally guaranteed access to vital resources and must resort to violence for survival. This can also occur when a group gains access to resources it was previously refused and the elite responds with violence to reclaim what had once been theirs exclusively. Again, as long as the monopoly on violence remains unaffected, deregulation in parts of society will not damage the power structure as a whole. *Should laws governing the state monopoly on violence be effectively dismantled, however, a general trend toward deregulation will result.* The deregulation of a sector of society can increase risks for certain groups in that sector. But the
-
 
 国家暴力的去监管化会增加每个人的风险，并在过程中改变社会及其权力结构。原因很简单。当国家暴力经历去监管化时，其内部的任何法律关系都可能被破坏或中止。
 
@@ -1205,18 +1240,17 @@ The answer depends on which part. If deregulation affects everyday affairs, then
 
 分裂的权力体系只有在极少数情况下才会彻底变成独裁。在大多数情况下，会出现双重国家。在这种国家中想要崛起和繁荣的人必须时刻准备正确地、并且比任何人都更快地回答 Qui vive？ 这个问题。现代独裁政权那种特有的超现实且弥漫的恐惧感，来源于的并非独裁权力本身——尽管它可能在任何时刻意外出现——而是它与分裂且受法律监管的权力共存并交织在一起。⁴ 这种方式摇摆的权力结构在消除政治选择方面非常有效。它们在执行高度依赖国家的经济项目时也很有效，因为它们缩短了决策时间。这种权力结构倾向于有利于社会不流动，同时更容易受到经济危机的冲击。它们造成的苦难跨越世代。
 
-这种摇摆解释了为什么生活在独裁政权中的人们会为服从提供矛盾的理由。一方面，他们只是“机器中的齿轮”，因此对自己的行为不负责任。另一方面，他们声称自己生活在被监禁或处决的持续威胁之下。第一种解释更适用于功能分化且受法律监管的社会，其公民各有角色并恪守其职。这在独裁政权中也可能是真的，但存在差异。经验上和直觉上，我们知道生活在极权社会中的人确实会受到恐吓；“持续威胁”可能并不夸大。其权力关系在独裁与分裂权力这两个极点之间摇摆的体系那种令人不安的模糊
-
-特征会产生如此矛盾的理由，因为每一种形式都有能力补充并加剧另一种形式的令人沮丧的潜力。理论上和政治上都有益的是，通过密切研究二十世纪独裁政权的崩溃（希腊、阿根廷、东欧集团国家和南斯拉夫）来识别摇摆权力特有的弱点。无论弱点如何：国家在分裂的、受法律监管的权力与独裁权力之间摇摆时，可能向前者或后者发展。它们也可能崩溃为相互竞争的权力中心。
+这种摇摆解释了为什么生活在独裁政权中的人们会为服从提供矛盾的理由。一方面，他们只是“机器中的齿轮”，因此对自己的行为不负责任。另一方面，他们声称自己生活在被监禁或处决的持续威胁之下。第一种解释更适用于功能分化且受法律监管的社会，其公民各有角色并恪守其职。这在独裁政权中也可能是真的，但存在差异。经验上和直觉上，我们知道生活在极权社会中的人确实会受到恐吓；“持续威胁”可能并不夸大。其权力关系在独裁与分裂权力这两个极点之间摇摆的体系那种令人不安的模糊特征会产生如此矛盾的理由，因为每一种形式都有能力补充并加剧另一种形式的令人沮丧的潜力。理论上和政治上都有益的是，通过密切研究二十世纪独裁政权的崩溃（希腊、阿根廷、东欧集团国家和南斯拉夫）来识别摇摆权力特有的弱点。无论弱点如何：国家在分裂的、受法律监管的权力与独裁权力之间摇摆时，可能向前者或后者发展。它们也可能崩溃为相互竞争的权力中心。
 
 国家社会主义倾向于走第三条路。长刀之夜重新确立了恩斯特·罗姆质疑的垄断权这一事实似乎提供了反证，但事实并非如此。相反，SA——冲锋队，纳粹党的准军事分支——的瓦解揭示了纳粹统治的一个决定性特征：通过使用竞争性的暴力形式来控制暴力。纳粹政权利用了一个被许可使用暴力的组织来消除另一个被许可使用暴力的组织。75 在一种完全以 das Volk 为导向的意识形态中，行动的视野更加模糊，因为权力关系不是由法律而是由效用所支配，这使权力个人化并将法令统治神化。76 民族主义的逻辑延伸是领袖国家，在那里领导人拥有追随者，但缺乏任何类似宪法合法性的东西。追随者反过来争夺权力，不是以国家工具的身份，而是作为按照自身利益行动的个人。
 
 斯大林主义则不同。它的神秘之处在于，大清洗并没有导致权力的崩溃。在纳粹主义中，暴力的排斥与同样暴力的包容承诺并行不悖。种族政策以相当直接的方式表明谁属于德国，谁则自担风险留下。在斯大林主义中，那些确信自己符合官方意识形态的人可以为自己发出自己的包容承诺。然而在某个时候，大多数人意识到，当真正重要时，党籍、嘉奖或与党首的个人联系都价值不大。通常，一个国家的权力结构无法实现持久稳定，除非其大多数公民获得可信的安全承诺，并且处于上级权力位置的人比处于下级权力位置的人拥有更多安全。77 斯大林主义两者皆无。为什么它仍然保持稳定？
 
+
+
 ## 参与式权力与暴力
 
 外部因素可能发挥了作用，但它们并不能提供答案。斯大林主义稳定性的关键在于其将不安全感转变为一种形式
-
 
 life. Secure in this state of insecurity, the citizens of the USSR lived in constant anticipation of what was to come. In such a world, denunciation is habit-forming. Life isn't pretty but people can live it, as history has so often shown. Out at sea with no coast in sight, people have to swim, even when there's no guarantee they won't drown. Denunciation is a form of violent participation that does not challenge the state monopoly on violence. It's the trust-stabilizing practice par excellence for states that use terrorism as a means of control. One should not underestimate the satisfaction that informers, otherwise powerless, derive from this negative power, negative in the sense that, while they can destroy the lives of those they denounce, denunciation does nothing to improve their own. While those without power in a totalitarian system have even less power than those without power in other political systems, they can still destroy others' lives. This is an option that those in other systems cannot so easily exercise, except in times of war. (The informer in the fascist Volksgemeinschaft must also adhere to the guidelines he's given.) Stalinism's problem was that it could not contain the practice of denunciation after unleashing it. The bureaucracy became swamped with denunciations, and the apparatus threatened to come to a standstill.
 
@@ -1232,28 +1266,26 @@ In Nazi Germany as well as in the USSR, state violence depended on the participa
 
 ## MODERNITY AND VIOLENCE
 
+
+
 The picture I have painted of modernity—in some sense, the picture that modernity paints of itself—is that of a fragmented and legally regulated power structure underwritten by a state monopoly on violence. This power structure allows functional differentiation to thrive and determines modernity’s practices of social trust. It also defines the risks: institutions licensed to use violence that cannot themselves be controlled by violence; the deregulation of the entire power structure should those institutions turn against the state; the subversion of the power structure when too much of the population participates in violence. These risks can be described as crises of trust, and crises of trust are always crises about the trust of others. Consider when, to prevent lawlessness and preserve trust in the whole, a government undoes the legal ties binding organizations responsible for violence or encourages the population to take part in violent demonstrations of trust and to watch vigilantly for those who show too little.
 
 As I argue in chapter 1, trust consists of practices that stabilize it collectively. These practices serve to provide mutual assurance that, barring anomalies or willful eccentricities, life will continue as it has. These practices can be ritualistic in character, or they can take place at the level of the social institution or in everyday interaction, where they assume an eminently communicative character, informing us who we are and who we want to be. Trust must be permanently manufactured through the interplay of three essential elements:
 
 ![](img/1cc4e4fe32b20136851bebfbe4f29b1a_110_0.png)
 
-
-
-
 由于在现代性中整体的概念不可得，我们的集体信念转而依附于社会互动的形式。当暴力爆发时，现代性的制度会实施控制措施（其范围随着国家对暴力的垄断扩大而延伸）。现代性的总体图式因此是：
 
 社会互动 — 控制措施
+
 集体信念
 
 控制措施并不排除暴力的可能性；事实上，政府试图排除一切暴力就会压垮暴力垄断，或迫使国家诉诸恐怖。现代国家仅在社会互动偏离预期进程时才会介入。现代性的信任模式基于一种普遍信念，即在我们彼此交往中不必担心遭受暴力袭击。我们容忍某些不安全区域——比如凌晨两点后的火车站——因为它们是可以合理避免的。这种对暴力的看法构成了我们集体信念的一部分：我们在地理和历史意义上是谁，我们的自我概念，称自己为文明意味着什么。每个文化都有在某些地方和某些时间合法化暴力、在其他所有地方和时间非法的任务。现代性特有的合法化与非合法化形式使其区别于所有其他文化。
 
-## 第三章
-
-## 非合法化/再合法化
+## 第三章 非合法化/再合法化
 
 > “在这次集会上似乎有一些敏感的耳朵无法忍受‘血’这个词的声音。”
-> 
+>
 > —格奥尔格·比希纳，《丹东之死》
 
 ### 马尔西亚斯
@@ -1261,12 +1293,19 @@ As I argue in chapter 1, trust consists of practices that stabilize it collectiv
 *Nec quicquam nisi vulnus erat*——无非是伤口。这是奥维德在《变形记》中对马尔西亚斯的描述。马尔西亚斯的处境源于阿波罗，他因敢于挑战阿波罗进行音乐竞赛而被阿波罗活剥皮：
 
 > [他]成了一道巨大的伤口，鲜血流淌，
+>
 > 神经暴露，血管没有皮肤覆盖
+>
 > 在其搏动表面之上，肺部和肠脏
+>
 > 在其运作时清晰可见。乡野之人，
+>
 > 林地之神、牧神、他的同伴萨提尔，
+>
 > 仙女们，甚至奥林匹斯[他的朋友和弟子]，他所爱慕
+>
 > 在他所有的痛苦中，都为他哭泣
+>
 > 每一位在那些山坡上放牧的牧羊人。¹
 
 这一情节的特殊血腥程度，即使以奥维德的标准来看也极端，表明阿诺·施密特的名言“你无法分辨一个尖叫男人的国籍”在严格意义上可能是真的，但其隐含的诉求却带有现代性的无可置疑的印记。奥维德对赤裸暴力的临床描述——赤裸在其直白之处，以及它剥去身体最后一道防线的方式——揭示了前现代的同情在很大程度上取决于谁在尖叫。在马尔西亚斯的案例中，奥林匹斯山的诸神毫无怜悯。² 只有仙女和牧神才为他感到悲伤。
@@ -1277,48 +1316,67 @@ As I argue in chapter 1, trust consists of practices that stabilize it collectiv
 
 如果拳击场是一个仅受地点限制的无规制暴力场所，它可能很迷人，但事件不会产生叙事，只会产生凄惨的轶事。拳击手之所以能成为我们想象的持久对象，正是因为与社会一样，擂台也是受规则支配的。社会与拳击场的区别在于，后者允许前者通常禁止的活动。因为拳击手必须像我们一样遵守规则，我们也知道他们与我们一样是人。这就是我们知道他们是战士，而非怪物的方式。
 
-## 被允许、被禁止、被强制
+### 被允许、被禁止、被强制
 
 文化从来不是本身就是暴力的，也从来不是本身就是和平的。也不容易论证一种文化比另一种文化更暴力或更不暴力。事实是，文化以不同的方式暴力。这些不同方式可以被视为不同的文明形式。我使用文明这一术语，因为一个认为自己是文明的社会相信它对暴力施加了合理且连贯的限制。我们称那些似乎不施加此类限制的文化为野蛮。文明与野蛮之间的区别——一种减少关于何为人类认知失调的方法——将在下一节再次讨论。在这里，我想强调文明观念与暴力观念之间隐含的联系。具体而言，一个文明的形式以其暴力区域为特征——其禁止、允许、
-
 
 _或单独或联合地强制施行暴力。_任何严谨的暴力研究都不能忽视这些区域，因为它们是所有关于暴力的言论得以展开的背景。_对暴力的每一次正当化（或去正当化）都在试图强化（或改变）人们预设的许可、禁止和强制暴力的区域。_这些区域与作为文明特征的那种社会信任有着根本性的关联。事实上，_社会信任就建立在这些区域的稳定之上。_
 
 当我们谈论“暴力的人”时，我们描述的并非一般行为，而是一种特定特质——在此即越界的倾向。当我们谈论“和平的人”时，情况也是如此。如果我们担心暴力者会在不恰当的时机出手，那么我们同样应该担心和平者会在恰当的时机拒绝出手。军中的勋章授予的是勇气而非暴力，也没有人会为一个人没有挑起酒吧斗殴而颁发嘉奖。
+
+
 
 对任何形式的文明而言，最重要的区分莫过于战争与和平。这虽不是许可暴力与禁止暴力之间的绝对区分，但它依然是一条泾渭分明的界限：它规定了暴力在何时是强制性的，在何时不是。对于投身战争者——无论是小规模遭遇战还是大规模会战——暴力不仅是容许的，而且是必须的。请注意，这一命令式要求并不等同于普遍许可。古今战争都曾设定过边界。在三十年战争与第二次世界大战之间，战争被限制在特定的战场地域，并通过为战斗人员配发制服来承认和强调战斗人员与非战斗人员之间的区别。⁶尽管未在战斗中施暴的士兵会因怯懦而受罚，但他们既不得杀死也不得伤害已经投降的对手。相比之下，在许多前现代战争中，任何情况下屠杀敌人都被完全接受；真正令人反感的反而是饶他一命或将其俘虏。往往一开始就不存在这个选项。战争工具也受到类似的限制。几乎在每个时代，某些武器无论是否可得都被视为禁忌。毒气在第一次世界大战中曾被试用，在第二次世界大战中遭到禁止，尽管二战伴随着骇人听闻的暴行，这一禁令仍然有效。在更早的时代，弩被认为会造成不公平的优势，这促使一位教皇宣布其为非法，至少在对抗基督徒时如此。
 
 战争通常以强制性暴力为特征，但也存在被许可的非强制性暴力形式。例如，中世纪就有围攻城市的惯例。攻城一方有特定时间强攻城墙，在此期间，被围居民会等待援军。如果援军没有到来，攻城一方会向城市发出最后通牒：投降，否则一旦攻城得手，便面临被劫掠的命运。在莎士比亚的*亨利五世*中，我们找到了这一通牒的理由。亨利国王解释道：
 
 > 城中的总督如今如何决断？
+> 
 > 这是我们愿意接受的最后一次会谈。
+> 
 > 因此，把你们自己交给我们最大的仁慈吧，
+> 
 > 否则，像那些以毁灭为傲的人，
+> 
 > 向我们最可怕的怒火挑战；因为，身为一名士兵——
+> 
 > 一个在我心中最为相称的名字——
+> 
 > 若我再度发起攻城，
+> 
 > 我不会离开这尚未完全攻克的哈弗勒尔，
+> 
 > 直到她葬身于自己的灰烬之中。
+> 
 > 仁慈之门将全部关闭，
+> 
 > 那饱经战阵的士兵，粗野而铁石心肠，
+> 
 > 将放开屠戮之手，到处横行，
+> 
 > 良心宽阔如地狱，如割草一般
+> 
 > 残害你们娇嫩贞洁的少女和含苞待放的婴儿。
+> 
 > ……当放纵的邪恶冲下山坡，狂飙猛进之时，
+> 
 > 什么缰绳能够勒住它？
+> 
 > 我们向那怒不可遏的士兵下令不得劫掠，
+> 
 > 如同向利维坦颁布戒律
+> 
 > 让它上岸一样徒劳无益。因此，哈弗勒尔的人们，
+> 
 > 趁我的士兵还在我的号令之下，
+> 
 > 怜惜你们的城市和你们的人民吧。
 
 (III.3.1–29)
 
 在暴力被许可的时代，胜利的军队可以为所欲为：劫掠、拆毁、夷平、强奸、酷刑、杀戮。我们从文学和历史文献中所知的那种劫掠性、自为性的暴力狂欢，只受空间（被围城市的城墙）和时间的限制（即在必须归队报到之前可以劫掠的那段时间）。⁷
 
-现代暴力的历史，就是一张不断变化的边界网络的历史，这些边界既从外部（暴力的场所）也从内部（暴力的规则）限制着暴力。想一想枪支在平民生活中的角色。大多数现代国家禁止枪支，但即使不禁枪的国家也会为枪支使用制定明确的规则。西部片坚持这一原则。你可以尽情斗殴，但除非对方先拔枪射你，否则你不得向他人开枪——在这种情况下，治安官会询问证人，并查看死者之手是否还握在左轮手枪上。有些时代有决斗，另一些时代则
-
-并非如此，但那些允许它的人也并非对所有人都允许。另一个例子是家庭暴力。多年以来，家庭是被允许施暴的场所。父母被允许殴打自己的孩子，丈夫被允许殴打自己的妻子，甚至在妻子拒绝性行为时强奸她们。9 逐渐地，国家通过立法使家庭成为无暴力区。学校也是如此，在不久的过去，教师可以对不服从的学生进行掌掴、藤条鞭打或殴打而逍遥法外。
+现代暴力的历史，就是一张不断变化的边界网络的历史，这些边界既从外部（暴力的场所）也从内部（暴力的规则）限制着暴力。想一想枪支在平民生活中的角色。大多数现代国家禁止枪支，但即使不禁枪的国家也会为枪支使用制定明确的规则。西部片坚持这一原则。你可以尽情斗殴，但除非对方先拔枪射你，否则你不得向他人开枪——在这种情况下，治安官会询问证人，并查看死者之手是否还握在左轮手枪上。有些时代有决斗，另一些时代则并非如此，但那些允许它的人也并非对所有人都允许。另一个例子是家庭暴力。多年以来，家庭是被允许施暴的场所。父母被允许殴打自己的孩子，丈夫被允许殴打自己的妻子，甚至在妻子拒绝性行为时强奸她们。9 逐渐地，国家通过立法使家庭成为无暴力区。学校也是如此，在不久的过去，教师可以对不服从的学生进行掌掴、藤条鞭打或殴打而逍遥法外。
 
 通常不可能通过程度来区分被禁止、被强制和被允许的暴力形式。哪种文化更暴力？是那种在法律规定的某些情况下允许掠夺和大屠杀的文化，还是那种禁止此类行为却在战场上用爆炸物和毒气制造成千上万死伤者的文化？我并不是说这类问题没有答案，只是每个答案都会反映出某些关于哪些行为应被禁止、强制或允许，哪些不应如此的偏好。当我们说一个社会比另一个社会更暴力时，是因为我们认为其中包含的暴力更难以合理化。
 
@@ -1330,10 +1388,7 @@ _或单独或联合地强制施行暴力。_任何严谨的暴力研究都不能
 
 阿兹特克人发动战争是为了尽可能多地俘获新俘虏。其目的不是为了经济剥削他们——奴隶不会增加该地区贫瘠土壤的产量——而是为了献祭他们。¹⁴ 阿兹特克人将俘虏带到特诺奇蒂特兰，关在笼子里喂养。当献祭的日子到来时，他们将俘虏带到主金字塔顶上，挖出他们的心脏。焚烧心脏后，他们会食用尸体，通常以辣椒调味的炖肉形式。
 
-相比之下，西班牙人发动战争是为了杀戮。他们只用了七十五天就攻占了特诺奇蒂特兰——征服者声称这座城市比西班牙任何城市都大而且更美——并将其夷为平地。考虑到围城期间饿死的人，西班牙人估计阿兹特克人的损失在10万到24万人之间。¹⁵ 假设西班牙人在此前的战斗中的损失被在古巴脱离迭戈·韦拉斯克斯的士兵所抵消，科尔特斯进入特诺奇蒂特兰时大约有五百名士兵。只有大约七十名士兵，或西班牙部队的七分之一，在围城期间被俘。注意，是“被俘”，而不是“被杀”。因为阿兹特克人想要献祭而不是仅仅杀死敌人，所以他们极力设法活捉西班牙人，为此付出了巨大的损失。如果这不是他们的目标，如果阿兹特克人发动的是灭绝战争，结果肯定会不同。因为他们所俘获的俘虏数量——尽管对手在技术上占优，尽管他们自身遭受了损失——证明了
-
-
-关键在于：同样的体能若用于杀戮，本可以确保阿兹特克人获胜。
+相比之下，西班牙人发动战争是为了杀戮。他们只用了七十五天就攻占了特诺奇蒂特兰——征服者声称这座城市比西班牙任何城市都大而且更美——并将其夷为平地。考虑到围城期间饿死的人，西班牙人估计阿兹特克人的损失在10万到24万人之间。¹⁵ 假设西班牙人在此前的战斗中的损失被在古巴脱离迭戈·韦拉斯克斯的士兵所抵消，科尔特斯进入特诺奇蒂特兰时大约有五百名士兵。只有大约七十名士兵，或西班牙部队的七分之一，在围城期间被俘。注意，是“被俘”，而不是“被杀”。因为阿兹特克人想要献祭而不是仅仅杀死敌人，所以他们极力设法活捉西班牙人，为此付出了巨大的损失。如果这不是他们的目标，如果阿兹特克人发动的是灭绝战争，结果肯定会不同。因为他们所俘获的俘虏数量——尽管对手在技术上占优，尽管他们自身遭受了损失——证明了关键在于：同样的体能若用于杀戮，本可以确保阿兹特克人获胜。
 
 当然，即使阿兹特克人最初击败了西班牙人，饥荒和疾病也会确保他们的胜利昙花一现。但这不是重点。阿兹特克人在特诺奇蒂特兰的失败，是因为他们无法采用一种不同形式的战争。对阿兹特克人来说，杀死成千上万的人并让他们在开阔的原野上腐烂，是毫无意义且野蛮的行为；而对西班牙人来说，人祭和食人则是魔鬼的标志。
 
@@ -1343,6 +1398,8 @@ _或单独或联合地强制施行暴力。_任何严谨的暴力研究都不能
 
 *当允许或要求实施的暴力范围扩大时，新的暴力工具便会进入考量，而此前它们从未被纳入考量。*
 
+
+
 国家社会主义者对苏联发动战争，不仅针对其军队，还针对其人民，他们以此作为长期安全的理由。17 这种战争风格代表了一种新的军事战略，但其新并不源于其他现代军队忽视了它；其他现代军队之所以拒绝这一战略，是因为它违反了现代战争的原则。这就是为什么德国军队中的一些军官尽管积极参与战争，且认同纳粹意识形态，却仍然反抗。18 大多数军官在某种程度上是反犹的，容忍激进观点，并支持总体战争目标。问题在于这些目标所必然带来的那种战争。少数考虑过后果的人选择了反抗；他们作为士兵的自我认知，与一种已经成为常态而非例外（对于例外，他们或许会乐意视而不见）的战争风格格格不入。
 
 许多历史学家觉得难以理解这些人的顾虑。当7月20日密谋案的参与者没有坚决反对纳粹政权，也没有公开反对入侵波兰和苏联时，怎么能认为他们的行为是道德的呢？另一些历史学家则认为，德国的战争风格必然源于纳粹世界观的宗旨。因此，密谋者们的信念一定是不真诚的（他们只是在德国胜利变得不太可能时才反对纳粹），或者他们一定是突然醒悟了。19 然而，对于德国军官来说，手段—目的计算只有当他们按照纳粹所倡导的那种新的、扩展了的暴力观念来构想战争时才说得通。如果他们从传统的战争概念出发，就会把关于灭绝犹太布尔什维克的言论视为战争时期政客和军官们常说的空洞大话。20 他们不会认为这与战争目标有关。
@@ -1350,9 +1407,6 @@ _或单独或联合地强制施行暴力。_任何严谨的暴力研究都不能
 在阿金库尔战役中发生了另一种形式的反抗。长弓的成功使英国人俘获了如此之多的法国骑士，以至于没有足够的士兵来看管他们。英国国王亨利五世担心战俘可能压过看守，并从后方袭击英军，于是下令处决他们。他的命令违反了此前生效的每一条战争惯例，其冲击波直到莎士比亚时代仍能感受到。21 然而，历史资料表明，英国骑士从未执行他的命令。物质考量可能起了一定作用——死去的骑士带不来赎金——但更重要的是这道命令违反了骑士荣誉。尽管战争模式已经改变，但这种新的战争风格并非完全受工具理性的支配。工具理性从不单独出现，即使在战争中也是如此。它总是在规范框架下运作，而这一规范框架决定了哪些手段和目的会进入考量。
 
 亨利国王想要发动的战争，并不是英国骑士们想要打的战争，他们拒绝为禁止和实施暴力范围的改变承担责任。国王试图绕过骑士们，将命令传给弓箭手，其中一些弓箭手是在绞刑架前排着队被征召入伍的。与骑士不同，弓箭手没有阶级特权，因此也缺乏随之而来的荣誉准则。他们
-
-
-
 
 ## 我与人性观念
 
@@ -1368,12 +1422,7 @@ _或单独或联合地强制施行暴力。_任何严谨的暴力研究都不能
 
 虽然笛卡尔的体系是欧洲思想中最伟大的成就之一，但最终它不过是一场噱头。把不确定性作为渴望的确定性的基础的想法很精彩，但这种精彩所必需的情感——关乎生死——太过强烈，而这种精彩只是对系统本身所缺乏的东西的一种补偿。笛卡尔为蒙田在不确定性中、在开放式的思想实验中、在怀疑与不一致中公开表现出的愉悦而焦躁不安，并且为蒙田的“我”的强大而困扰。30 因此笛卡尔将第一人称单数从一种可疑的东西转变为其哲学的基石。但一座掩藏其基石的房子值多少钱呢？笛卡尔的《方法论谈》是莱布尼茨《神义论》的配饰。建筑师大肆炫耀使用圆规和水平仪，然而其建筑中的不规则性和令人瞠目的空隙却无法忽视。这是经过深思熟虑的粗心大意，还是超验的无家可归的征兆？笛卡尔必须付出如此努力的原因很简单：他什么都不信。他所有试图征服世界的主宰企图都无法收拢“我思”。从此以后，即便是基督教信条听起来也不一样了。上帝现在有赖于第一人称单数的恩典。后来的思想家会将这种错误的推论视为抹杀上帝本身。31 哲学未能摆脱对确定性承诺的渴望而使自己自由，而宗教和神学早已不再在意提供这种承诺，这是西方知识史的灾难之一，如果不是其悲剧之一的话。32 但那是另一个故事。
 
-笛卡尔和蒙田代表着对立的两极，但他们是同一个新开端的对立两极。在新世界被发现以及旧世界的灾难之后，一个全新的开始是必要的——蒙田
-
-
-见证了笛卡尔作为白山战役志愿士兵参与其中的事件。笛卡尔体系中那些已然钝化、无用，却依然显眼且令人难忘的东西，延续在了蒙田的《随笔》中。到十八世纪末，这些要素已结晶为一种具有约束力的世界观。33 对尼克拉斯·卢曼而言，这一世界观最恰当的特征是，它在多元中看到了统一。个体是
-
-从一个点所见的世界，在自身中得以实现，因而可为他人所及。基于这一观念的是这样一个事实：[个体]只能在自由的领域中实现自我，否则他既不会被自动代表，也不会是独一无二的……[个]体被期望通过对其个体性的指涉来确认自我，而这只能意味着：通过对其与他人区别之处的指涉。自我观察和自我描述已不再能依循社会地位、归属或包容。个体被期望通过自我观察和自我描述来回溯其个体性。这至少意味着：以一种适合于在多元、不可整合的情境中生活和交往的方式来理解自己。他的唯一对位者，他的身份的唯一相关物，是世界。34
+笛卡尔和蒙田代表着对立的两极，但他们是同一个新开端的对立两极。在新世界被发现以及旧世界的灾难之后，一个全新的开始是必要的——蒙田见证了笛卡尔作为白山战役志愿士兵参与其中的事件。笛卡尔体系中那些已然钝化、无用，却依然显眼且令人难忘的东西，延续在了蒙田的《随笔》中。到十八世纪末，这些要素已结晶为一种具有约束力的世界观。33 对尼克拉斯·卢曼而言，这一世界观最恰当的特征是，它在多元中看到了统一。个体是从一个点所见的世界，在自身中得以实现，因而可为他人所及。基于这一观念的是这样一个事实：[个体]只能在自由的领域中实现自我，否则他既不会被自动代表，也不会是独一无二的……[个]体被期望通过对其个体性的指涉来确认自我，而这只能意味着：通过对其与他人区别之处的指涉。自我观察和自我描述已不再能依循社会地位、归属或包容。个体被期望通过自我观察和自我描述来回溯其个体性。这至少意味着：以一种适合于在多元、不可整合的情境中生活和交往的方式来理解自己。他的唯一对位者，他的身份的唯一相关物，是世界。34
 
 这一世界的构成在从前现代向现代的过渡中获得了不同种类的意义。前现代个体以包容的方式出现——被假定整体（城邦、家庭、等级）的最小统一体。现代个体则以排斥的方式出现。卢曼写道：“‘社会’不再为个体提供一个他可以作为‘社会存在’而存在的场所。他只能生活在社会之外；他只能在社会周围的世界中作为自身系统来再生产自己。”35 蒙田在其家族庄园的自我囚禁，源于他在尚未发生功能分化转向且不存在其他选择的社会中，需要为自己找到一个经验空间。个体既无法体验整体，也无法代表整体；他获取世界进入的唯一可能，是主张自身的差异。后来，一旦功能分化确立，个体对其自身差异的主张便带来了部分包容的可能性。卢曼解释道：
 
@@ -1381,16 +1430,15 @@ _或单独或联合地强制施行暴力。_任何严谨的暴力研究都不能
 
 最终，蒙田走出了他的隐居。一旦他意识到自己不是作为个体而是作为有能力的个体被需要时，他便进入政界，成为波尔多市长这样成功的官僚。波尔多也好，巴黎——《随笔》出版地——也好，政治也好，都不代表世界的整体。
 
+
+
 在现代性中，对世界的进入始于个体。这种进入方式使所有试图垄断个体整体或强制将其纳入整体的做法失去合法性。个体性的拥有者是反全体主义情感的承载者，无论是对宗教政治还是政治宗教。社会不能要求人们吃完布丁，而它却无布丁可供。那些彰显对整体归属的戏剧性姿态——在异端裁判中的公开忏悔、为净化灵魂而被活活烧死、通过酷刑进行自我归罪等等——失去了合法性主张，沦为令人厌恶和憎恶的对象。正如后来的全体主义体系中一样，前现代对个体的毁灭意味着个体对整体并非必不可少。37 对现代性而言，个体的毁灭是毁灭一种独特进入世界的方式，因而本身就是毁灭一个独特世界。通过肉体折磨的强制也毁灭了一个可能的世界——即最好的可能世界——而取而代之的是一个仅在个体化多元的可能性中才可能的世界。里斯本大地震的真正灾难并非形而上的，而是千百倍的个体性的。这就是为什么现代个体性的到来伴随着对死亡本身的抗议。抗议注定徒劳并不使其可笑。蒙田深知这一点，并在《随笔》中将相当一部分篇幅 devoted 于这一主题。接受死亡的不可避免性是个体性的关切，但抗议残酷与暴力则是所有个体的关切。它始于对他人苦难的觉知：
 
 > 我对他人的苦难怀有最温柔的同情，并乐于因同感而落泪——如果我真的知道如何为任何事落泪的话。没有什么比眼泪更能引诱我的泪水。38
 
 它继续作为对暴力的抗议：
 
-> 我生活在一个时代，由于我们内战的放纵，难以置信的残酷恶习的例子盛行；你在古代史中找不到比我们每天所见证的更极端的例子。但这绝没有使我屈服。如果我没有亲眼见到，我几乎无法使自己相信，世上竟有如此怪诞的灵魂，他们会为纯粹的乐趣而杀人；会砍
-
-
-砍下另一个人的肢体，再将其截断，绞尽脑汁发明异乎寻常的酷刑和新的杀人方式，并非出于仇恨或利益，而仅仅是为了欣赏一个在痛苦中垂死之人那可怜的姿态和抽搐的愉快景象，同时倾听他的尖叫和呻吟。因为在这里，你触及了残忍所能达到的极致：“人杀人，不是出于愤怒或恐惧，而仅仅是为了观赏。”
+> 我生活在一个时代，由于我们内战的放纵，难以置信的残酷恶习的例子盛行；你在古代史中找不到比我们每天所见证的更极端的例子。但这绝没有使我屈服。如果我没有亲眼见到，我几乎无法使自己相信，世上竟有如此怪诞的灵魂，他们会为纯粹的乐趣而杀人；会砍下另一个人的肢体，再将其截断，绞尽脑汁发明异乎寻常的酷刑和新的杀人方式，并非出于仇恨或利益，而仅仅是为了欣赏一个在痛苦中垂死之人那可怜的姿态和抽搐的愉快景象，同时倾听他的尖叫和呻吟。因为在这里，你触及了残忍所能达到的极致：“人杀人，不是出于愤怒或恐惧，而仅仅是为了观赏。”
 
 随着整体观念失去力量，它所提供的保护也随之消失。现代个体是赤裸的。施加在他身上的痛苦不仅使他成为他自身，也象征着他的被遗弃。阿根廷监狱里的刑讯者曾说：“我们对你们就是一切……我们就是上帝。”他告诉受害者他们的身体早已知道的事实——一切尽失——而在这句关于绝对支配的格言中，一种现代的上帝观念得到了表达。*现代性中第一人称单数的使用，反映了一种根本改变的暴力观，不仅涉及允许、禁止和强制何种形式的暴力，也涉及暴力现象本身。* 这种新视角依赖于将他人作为他者来认同的可能性。事实上，现代个体性把每一个他人变成了他者。与他者的亲近在于其差异性，而不在于其相同性，也就是说，不在于他属于同一个社会、政治或宗教整体。通过将社会邻人变成他者，现代个体性将社会他者变成邻人。将每一个个体与其他个体联系在一起的纽带，是人类种族的成员身份。但是，当共同的信仰、爱和希望观念——一切使与他人亲近和认同成为可能的东西——不再可用时，人类种族的成员身份由什么构成？答案是身体及其对苦难的脆弱性。当他人谈论幸福，甚至悲伤时，我不知道那意味着什么，但当他人因痛苦而哭喊时，我知道那意味着什么。“野蛮人烤食死者尸体带给我的不安，远不及那些迫害者折磨活人身体带给我的不安，”蒙田在《随笔集》中写道。殖民主义的历史表明，每当一个人的类成员身份受到质疑时，人们就会认为他承受痛苦的能力较弱。我们在上帝面前人人平等的观念并没有使酷刑失去合法性，尽管有“爱邻如己”的诫命。*真正*使酷刑失去合法性的，是我们在痛苦面前人人平等的观念。在现代性中，丑闻不再是上帝的苦难，而是人类的苦难。
 
@@ -1399,22 +1447,26 @@ _或单独或联合地强制施行暴力。_任何严谨的暴力研究都不能
 ## 厌恶
 
 > “那些可爱的往昔时光，卡克先生，”克利奥帕特拉说，“有着宜人的堡垒、亲爱的古老地牢、愉快的酷刑场所、浪漫的复仇、如画的攻击和围城，以及一切让生活真正迷人的事物！我们堕落得多么可怕！”
+
 > “是啊，我们确实可悲地衰退了，”卡克先生说。
+
 > ——查尔斯·狄更斯，《董贝父子》
 
 米歇尔·福柯选择用来寓言化现代身体政治的图景，是一棵被弯回笔直的树。康德说我们是由歪曲的木料制成的，并相信人几乎无法改变这一点。在《年轻的鲁滨逊》中，约阿希姆·海因里希·坎佩——康德的同时代人——将鲁滨逊·克鲁索的岛屿重新想象为一所文化精修学校，旨在“将美德、虔诚和顺从天意的种子播入孩子们的心中。”24 马克斯·韦伯谈到“钢铁牢笼”，仿佛现代性就是埃德加·爱伦·坡的深坑，只是没有钟摆和燃烧的墙壁。许多来自遥远过去的隐喻被用来描述我们当前的时代。某人“被拷问”意味着承受巨大压力，而歌德在《浮士德》第一部中写道：
 
 > 逻辑会好好训练你的头脑；
+
 > 像审判官的靴子那样紧紧夹住你，
+
 > 你的思想将学会蹑手蹑脚，
+
 > 并且永远不会迷失方向。
+
 > （《浮士德》第一部，1912–15）
 
 “审判官的靴子”并不是指合脚的鞋靴，而是一种刑具。该装置由两块木头组成，围绕小腿和胫骨放置，并用螺丝或楔子收紧，先挤压肌肉，然后碾碎骨头。该装置造成的永久损伤，确保犯法者将来会更加小心行事。
 
-歌德知道自己在说什么。格蕾琴在狱中的疯狂与其说是一种普遍状态，不如说是一种具体的症状。她被指控不仅谋杀了自己的孩子和母亲；杀死母亲的药水也使她涉嫌巫术。在歌德《瓦尔普吉斯之夜》序列的原始版本中，合唱队提到“穿灰袍和黑袍的兄弟会”，暗指方济各会和多明我会修士所穿的会服。这些修士传统上负责拷问女巫，而他们在这个场景中的出现
-
-暗示格雷琴在他们的手下受苦。48 因此，当在《浮士德》的出版版本中墨菲斯托说“她不是第一个！”时，他的意思远不止一个婚外生子的女人。浮士德的回应“猎犬！可憎的怪物！”乍看像是过度反应——魔鬼还能说什么呢？——但这种蔑视必须放在其历史背景中看待：格雷琴并不是第一个被当作女巫而受刑的女人，她也不会是最后一个。在欧洲某些地区，孤立的女巫迫害案件一直持续到十九世纪。
+歌德知道自己在说什么。格蕾琴在狱中的疯狂与其说是一种普遍状态，不如说是一种具体的症状。她被指控不仅谋杀了自己的孩子和母亲；杀死母亲的药水也使她涉嫌巫术。在歌德《瓦尔普吉斯之夜》序列的原始版本中，合唱队提到“穿灰袍和黑袍的兄弟会”，暗指方济各会和多明我会修士所穿的会服。这些修士传统上负责拷问女巫，而他们在这个场景中的出现暗示格雷琴在他们的手下受苦。48 因此，当在《浮士德》的出版版本中墨菲斯托说“她不是第一个！”时，他的意思远不止一个婚外生子的女人。浮士德的回应“猎犬！可憎的怪物！”乍看像是过度反应——魔鬼还能说什么呢？——但这种蔑视必须放在其历史背景中看待：格雷琴并不是第一个被当作女巫而受刑的女人，她也不会是最后一个。在欧洲某些地区，孤立的女巫迫害案件一直持续到十九世纪。
 
 这并不是说《浮士德》主要是为了抗议审判女巫而写成的。歌德为此已经太晚了，尽管这个话题并不算完全过时。1750年，图林根选帝侯国总理、威廉译莎士比亚的城堡主人瓦尔豪森伯爵下令释放了两名因涉嫌女巫而被监禁的妇女。47
 
@@ -1424,9 +1476,7 @@ _或单独或联合地强制施行暴力。_任何严谨的暴力研究都不能
 
 > 在上述1559年的四旬期，鲁埃尔盖斯的卡普特被烧死；拉蒙被车裂；阿尔诺被钳子拷问；布尔斯凯被凌迟；弗里蒙被绞死，勒内古特在瓦兰德尔桥附近、弗里埃花园前被绞死；普约特在罗克德阿尔克附近被烧死。53
 
-C. V. 韦奇伍德引用了一份1620年旅行者的报告，他在从德累斯顿前往布拉格的途中清点
-
-七十多座绞架和车刑架，盗贼被吊在那里，有的刚死，有的半腐烂，凶手的尸体被肢解后挂在车轮上。
+C. V. 韦奇伍德引用了一份1620年旅行者的报告，他在从德累斯顿前往布拉格的途中清点七十多座绞架和车刑架，盗贼被吊在那里，有的刚死，有的半腐烂，凶手的尸体被肢解后挂在车轮上。
 
 1536年至1571年间，奥格斯堡公开处决了三十二人，该城在城墙内外设有指定的刑场。在某些地方，尸体被陈列多年。更常见的做法，而且在十九世纪仍在进行，是出售被处决者的血液，甚至手指。
 
@@ -1435,9 +1485,13 @@ C. V. 韦奇伍德引用了一份1620年旅行者的报告，他在从德累斯�
 《埃格蒙特》中的人物也说着这种酷刑的语言，尽管到歌德时代它已过时：
 
 > 耶特：你注意到他的穿着了吗？那是最新款式，西班牙剪裁。
+
 > 木匠：一位英俊的绅士。
+
 > 耶特：他的脖子对刽子手来说会是一场真正的盛宴。
+
 > 索斯特：你疯了吗？你的脑子里在想什么？
+
 > 耶特：是的，这已经够傻了，脑子里冒出来的东西。只是我当时感受到的。当我看到一个漂亮修长的脖子时，我立刻忍不住想：那是斧头的绝佳对象……所有这些该死的处决！人根本无法从脑海中抹去。当年轻人们去游泳，我看到一个赤裸的背部，立刻就想起我见过几十个被九尾鞭抽打的人。如果我遇到一个真正肥大的肚子，我已经能看到它在火刑柱上烤了。夜里在梦中我感觉全身的肢体都被捏住。简直就是人一小时都无法无忧无虑。各种愉悦或欢乐很快就被遗忘了；但可怕的幻象似乎被烙在我的额头上，它们从未离开我。
 
 在《规训与惩罚》中，米歇尔·福柯引用了一位十九世纪同时代人的话，他“回忆起童年时代仿佛是过去的时代”：“我见过地面布满车轮、绞架、绞架、枷锁；我见过车轮上恐怖地拉伸着的骷髅。”
@@ -1455,7 +1509,6 @@ C. V. 韦奇伍德引用了一份1620年旅行者的报告，他在从德累斯�
 酷刑的废除主要发生在十八世纪下半叶和十九世纪上半叶。一些著名例子：普鲁士（1754年）、巴登（1767年）、梅克伦堡（1769年）、不伦瑞克（1770年）、丹麦（1770年）、奥地利（1776年）、法国（1789年）、俄罗斯（1801年）、巴伐利亚（1809年）、符腾堡（1809年）、汉诺威（1822年）、萨克森-科堡-哥达（1828年）、苏黎世（1831年）、施维茨（1848年）、那不勒斯（1851年）和楚格（1869年）。传统上，酷刑的根除被视为启蒙运动的成就，而普鲁士的腓特烈二世在大陆上发挥了先锋作用的例子也支持这一观点。但在十八世纪及其一系列地方性禁令之前很久，酷刑就开始引起反感。莎士比亚在《理查三世》和《李尔王》中表达了这种反感，74 这也促使英格兰于1689年明确禁止酷刑。在德语国家，酷刑以及最残酷的处决形式（活活烧死、煮沸、活活烧死、车裂）的显著减少发生在十七世纪中叶，三十年战争结束后不久。正如 Van Dülmen 所观察到的：“即使在启蒙运动将旧制度贬为野蛮和不公正之前，一些事情已经发生了变化。这是处决仪式功能转变的结果。由于国家权威和控制得到加强，严厉的惩罚不再像以前那样必要，因此执行的频率也降低了。”75
 
 Van Dülmen 通过功利主义解释了这种独立于……启蒙思想家的“人性化”：国家放弃了残酷，因为它不再有用。这种解释基于这样一个假设，即在其他条件相同的情况下，人们更愿意少残酷而不是更残酷。然而，这一假设反映的是一种在现代化进程开始后才发生的态度转变。它是新残酷态度的结果，而非新……的条件
-
 
 对残忍的态度。诚然，人们可以举出普鲁士腓特烈二世的例子：他起初暂停使用酷刑，当他看到酷刑不再有实用理由时，便彻底废除了它。但这种观点假定，作为启蒙思想家的腓特烈二世拒绝酷刑，是因为它已经不再具有工具性。事实上，他拒绝酷刑，是因为作为一种传统的统治手段，酷刑已经令他感到厌恶。
 
@@ -1481,24 +1534,24 @@ Van Dülmen 通过功利主义解释了这种独立于……启蒙思想家的�
 
 > “别怕，夏洛，”他喊道。“我们不想伤害你，而是想毁掉你的工具。从今往后，夏洛，你必须让你的顾客死而无痛。”
 
-
-
 铁匠提出要求——刽子手应当摒弃以自身为目的的暴力，转而采用暴力的处所化形式——公众随即沸腾，庆祝起来：
 
 > 绞刑架和它所有的附件，在比写下这段记述更短的时间里就被拆得粉碎，扔到了为焚烧囚犯尸体而备好的柴堆上；可怕的刑轮被放在柴堆顶端，好似一顶王冠。火把柴堆点燃了，男男女女手拉着手，围成巨大的圆圈，绕着噼啪作响的火堆跳舞，直到它化作灰烬。欢乐像电火花一样从一个人传到另一个人，广场和通往广场的街道很快便响彻压倒一切的呼喊和欢呼。
+
+
 
 然而，这是1788年。到了19世纪，各国已在努力终止公开处决，甚至对刑场的景象也感到厌恶和羞耻。1808年，兰茨胡特的警察局长致信慕尼黑的上级，说：“恐怖统治的厄运岁月已经结束，但它们畸形的遗迹——绞架和刑台——仍然刺痛着旅人明亮的眼睛，使他的思绪不由自主地回到刽子手还是国家最忙碌的仆人之一的年代。”
 
 即便如此，德国文学经典里的主角们，依然是在绞架与刑轮之旁长大的。在卡尔·菲利普·莫里茨的*《安德烈亚斯·哈特克诺夫》*（1785）中，我们读到：
 
 > 第二天早晨，哈特克诺夫醒来的时候，房间里有一扇小窗开着。透过窗子，他看到远处有一座山丘，盖尔恩豪森的刑场就立在上面。
-> 
+>
 > 那座山丘望得见四周极为可爱的景致。仿佛是为了加倍惩罚那个在此丧命的罪犯：要他离开这片美好尘世之前，先把尘世的美好展示给他看。
-> 
+>
 > 哈特克诺夫小时候常在绞刑架下的山坡上玩耍……[在那里]他第一次看到了上帝世界的美，还常常问父亲，那露天的门洞[即刑架]是怎么一回事，为什么上面挂着破布条和发黑的骨头……
-> 
+>
 > “这些印象在他心里扎得如此之深，以致他每看到一座绞刑架，便自动想起一片赏心悦目的风景；每看到一片赏心悦目的风景，便自动想起一座绞刑架。
-> 
+>
 > 当他望着那座系着他全部甜蜜童年记忆的同一座绞刑架时，心中忽然充满一种难以言表的惆怅——曾经盛开的正在凋谢，已经凋谢的如今零落殆尽。”
 
 当然，在普鲁斯特那里，唤起童年记忆的是玛德琳蛋糕，而不是刑架。
@@ -1517,8 +1570,7 @@ Van Dülmen 通过功利主义解释了这种独立于……启蒙思想家的�
 
 双方军队造成的浩劫与饥荒，无需细述。只须指出一点就够了：人们曾一度开始看守墓地，以防止死者被啃食。直到德国国防军入侵苏联，欧洲才再次发生类似的事。三十年战争之后，各国开始限制战争的范围，把冲突局限在战场上，并让士兵穿上军装、住进军营，从而与平民区分开来。军队仍会夺取敌方领土，但正如歌德关于法国占领法兰克福的报告所记载，其方式完全可以彬彬有礼：
 
-> 1月2日，一列纵队从萨克森豪森过桥，穿过通道巷，一直开到警察局，随即停下来，制伏了……
-
+1月2日，一列纵队从萨克森豪森过桥，穿过通道巷，一直开到警察局，随即停下来，制伏了……
 
 little commando conducting it through, took possession of that station, marched down the Row, and forced the main station to surrender too, after a slight resistance. In the twinkling of an eye these peaceful streets were transformed into a theater of war. The troops remained and bivouacked in them until accommodations could be arranged for them through regular billeting.
 
@@ -1526,13 +1578,14 @@ This unexpected burden, one they had been free of for many years, was a dreadful
 
 The lieutenant in question was François de Théas Comte de Thoranc. His stay at Goethe’s home boded well for the houseowner. Their conversation concerned the various rooms, some of which were to be given up, others to remain with the family, and when the count heard a room full of paintings mentioned he immediately, although it was nighttime, asked permission to see the pictures, at least cursorily by candlelight. He was more than pleased with them, and treated my father, who was accompanying him, with the greatest courtesy. When he heard that most of the painters were still alive and residing in and around Frankfurt, he declared that it was his dearest wish to meet them very soon and set them to work.
 
+
+
 The art-loving count behaved impeccably. “He would not even have his maps nailed to the walls, for fear of ruining the new wallpaper,” Goethe writes. His courtesy had its limits, though. When news of a French victory prompted Goethe’s father to tell the count to go to hell, even though the victory had spared Frankfurt certain devastation, Thoranc became furious and ordered his arrest. The house interpreter, who was also Goethe’s cousin, tried to persuade the count to reconsider. He initially resisted: “This houseowner of yours, what does he want? A fireball would probably be bursting into these rooms, immediately followed by another—into these rooms with that confounded Peeking wallpaper I have spared.” But just after insisting on the importance of duty and honor, the count unexpectedly relented. “We have already wasted too many words,” he told the interpreter. “Now begone—and get your thanks from those ingrates I am sparing!”⁹⁴
 
-## SHAKESPEARE AND THE DAWNING AWARENESS
-OF VIOLENCE AS WRONG
+## SHAKESPEARE AND THE DAWNING AWARENESS OF VIOLENCE AS WRONG
 
 > Bad is the world.
-> 
+>
 > —WILLIAM SHAKESPEARE, *RICHARD III* (III.6.13)
 
 Karl Kraus claimed that Shakespeare had foreknowledge of everything; Harold Bloom argued that Shakespeare invented the human.⁹⁵ Such assertions may seem to express nothing more than adoration, but they are also in keeping with the fundamentally flawed and mannered tradition that attempts to reduce the genius to his times. This is the American story line of “the right man at the right time in the right place,” and the tale of the “dead white male,” besides. Nevertheless, as a matter of pure description this tradition has it right. Genius does not manifest in timelessness but in lasting and measurable contribution to the history of human experience. Shakespeare’s time was less a time than a field of tension, a period of instability at the threshold between the archaic and the contemporary, between the Renaissance and the modern era.
@@ -1556,20 +1609,21 @@ The original reads:
 > Plead my successive title with your swords.
 > I am his first-born son that was the last
 
-
-
 那戴着罗马的帝国冠冕：
+
 那么就让我的父亲的荣誉在我身上延续，
+
 不要以这种侮辱来玷污我的年岁。
+
 (1.1.1–8)
 
 放荡少年时代、年纪过大而不被视为年轻男子的时代，当无礼的口吻盛行而尊崇一朵花意味着采摘它，这种时代在迪伦马特的改编中仍在延续，这对我们来说弊大于利。然而迪伦马特的戏剧结构仍带来某种愉悦。他的提图斯与其说是发人深省的改编，不如说是现代读者读到莎士比亚文本时所受震惊的表达。扬·科特解释道：
 
-如果《泰特斯·安德洛尼克斯》有六幕，莎士比亚就不得不让坐在包厢第一排的观众死于痛苦，因为在舞台上，除了卢修斯之外，没有人存活。第一幕开场前，提图斯的二十二个儿子已经死了。随后一直如此，直到第五幕末的全面屠杀为止。除了士兵、仆人和无关紧要的人物外，这部剧中死了三十五个人。至少有十起重大谋杀是在观众面前犯下的。而且这些谋杀都极其巧妙。提图斯被砍掉一只手臂；拉维尼亚被割掉舌头和双手；奶妈被勒死。除此之外还有强奸、食人以及酷刑。与这部文艺复兴戏剧相比，我们今天的“黑色”美国文学可能显得像一首甜美的田园诗。77
+> 如果《泰特斯·安德洛尼克斯》有六幕，莎士比亚就不得不让坐在包厢第一排的观众死于痛苦，因为在舞台上，除了卢修斯之外，没有人存活。第一幕开场前，提图斯的二十二个儿子已经死了。随后一直如此，直到第五幕末的全面屠杀为止。除了士兵、仆人和无关紧要的人物外，这部剧中死了三十五个人。至少有十起重大谋杀是在观众面前犯下的。而且这些谋杀都极其巧妙。提图斯被砍掉一只手臂；拉维尼亚被割掉舌头和双手；奶妈被勒死。除此之外还有强奸、食人以及酷刑。与这部文艺复兴戏剧相比，我们今天的“黑色”美国文学可能显得像一首甜美的田园诗。77
 
 文学评论家罗尔夫·福尔曼提供了如下概括：
 
-《泰特斯·安德洛尼克斯》……一位愚蠢的罗马将军，他一有儿子年纪够大能拿起剑就把他们带上战场，结果带回了二十具尸体。他在另一次对哥特人的胜利行动中失去了第二十一个儿子。剩下的四个儿子必须为此死亡复仇，杀死被俘的哥特女王[塔莫拉]的长子。[提图斯]刺死了他的第二十二个儿子，当他试图阻止他所支持的新加冕皇帝与他已订婚的妹妹[拉维尼亚]结婚时。当第二十三个和第二十四个儿子牵涉到杀害妹妹未婚夫的阴谋时，[提图斯]再次站在皇帝的所谓权威一边，只是为他们求情。他们被杀后，他的女儿被……塔莫拉的儿子们[皇帝现在娶了她]凌辱并毁容，提图斯的灵魂震颤。在与女儿的感人时刻，他……策划复仇。他……付诸行动……杀死[塔莫拉]的儿子们。最后，他在皇帝面前刺死了塔莫拉和自己的女儿。作为回应，皇帝刺死了提图斯，而皇帝又被提图斯的第二十五个儿子刺死，后者随后成为皇帝。98
+> 《泰特斯·安德洛尼克斯》……一位愚蠢的罗马将军，他一有儿子年纪够大能拿起剑就把他们带上战场，结果带回了二十具尸体。他在另一次对哥特人的胜利行动中失去了第二十一个儿子。剩下的四个儿子必须为此死亡复仇，杀死被俘的哥特女王[塔莫拉]的长子。[提图斯]刺死了他的第二十二个儿子，当他试图阻止他所支持的新加冕皇帝与他已订婚的妹妹[拉维尼亚]结婚时。当第二十三个和第二十四个儿子牵涉到杀害妹妹未婚夫的阴谋时，[提图斯]再次站在皇帝的所谓权威一边，只是为他们求情。他们被杀后，他的女儿被……塔莫拉的儿子们[皇帝现在娶了她]凌辱并毁容，提图斯的灵魂震颤。在与女儿的感人时刻，他……策划复仇。他……付诸行动……杀死[塔莫拉]的儿子们。最后，他在皇帝面前刺死了塔莫拉和自己的女儿。作为回应，皇帝刺死了提图斯，而皇帝又被提图斯的第二十五个儿子刺死，后者随后成为皇帝。98
 
 《泰特斯·安德洛尼克斯》是一部早期作品，可能写于1593年至1594年之间，或更早。99 尽管最初相当受欢迎，但在二十年内，这部剧及其写作方式已过时。100 1687年的修订版删去了一些暴力场景并否认了莎士比亚的作者身份。在十九世纪，原作仅上演了三次。它在现代舞台上的首次成功直到彼得·布鲁克1955年在斯特拉福德与劳伦斯·奥利弗合作的制作。科特认为这部剧与莎士比亚的其他作品相比“幼稚”且“可笑”，但仍称布鲁克的制作“感人”。101
 
@@ -1577,237 +1631,259 @@ The original reads:
 
 年轻的莎士比亚在《泰特斯·安德洛尼克斯》中既嘲弄又利用马洛取悦了自己和同时代的观众。“如果他们想要浮夸和血腥，那就让他们得到吧！”似乎是激活这场血腥的内在冲动，是莎士比亚版的我们现在在斯蒂芬·金和许多电影中感受到的东西……如果你把这部剧读作真正的悲剧，那么你就证实了约翰逊博士的不满：“这里展示的残暴景象和普遍的大屠杀，几乎无法想象能被任何观众容忍。”102
 
+
+
 《泰特斯·安德洛尼克斯》的德语译本，即莎士比亚剧作的首个德语译本，于1620年问世，正值三十年战争中期；荷兰版于1641年出版，比《威斯特伐利亚和约》早七年。这些日期绝非偶然：这部剧描绘的世界是一连串无休止的谋杀、酷刑和强奸。尽管科特同意布鲁克的观点，即《泰特斯·安德洛尼克斯》以胚胎形式包含了后期的莎士比亚，但他对它的价值仍有保留：
 
 毫无疑问，提图斯的苦难预示了李尔王将要走过的地狱。至于卢修斯，如果他不是去哥特人的营地，而是去维滕贝格大学，他肯定会回来成为一个哈姆雷特。哥特女王塔莫拉，若她愿意审视自己的内心，本应与麦克白夫人相似。她缺乏对罪行的觉知，正如拉维尼亚缺乏让奥菲利亚陷入疯狂的那种对痛苦的觉知一样。103
 
-
-
-
-
 科特最后的这番话颇耐人寻味。考虑一下塔摩拉的儿子们掳走拉维尼亚的场景：
 
-拉维尼亚：我恳求的是眼前的死亡，还有一件事
-女人之口不便言说。
-噢，救我远离他们比杀戮更可怕的欲望，
-把我抛进某个令人厌恶的深坑
-让世上任何男人的眼睛都看不见我的身体。
-做到这一点，你就是一个仁慈的杀人犯。
-塔摩拉：那样我岂不是要剥夺我亲爱的儿子们的报酬。
-不，让他们在你身上满足他们的欲望。
-德米特里乌斯：[对拉维尼亚说]
-走开，你已经耽误我们太久了。
-拉维尼亚：没有怜悯？没有女性之情？啊，野兽般的家伙，
-我们共同名声的污点和敌人，
-愿混乱降临——
-基隆：不，那我就堵住你的嘴。
-[抓住她，捂住她的嘴。]
-塔摩拉：再见，我的儿子们；确保她安全。
-
-现在我要去寻找我可爱的摩尔人，
-让脾气暴躁的儿子们玷污这个荡妇。
-[II.2.173–91]
+> 拉维尼亚：我恳求的是眼前的死亡，还有一件事  
+> 女人之口不便言说。  
+> 噢，救我远离他们比杀戮更可怕的欲望，  
+> 把我抛进某个令人厌恶的深坑  
+> 让世上任何男人的眼睛都看不见我的身体。  
+> 做到这一点，你就是一个仁慈的杀人犯。  
+> 塔摩拉：那样我岂不是要剥夺我亲爱的儿子们的报酬。  
+> 不，让他们在你身上满足他们的欲望。  
+> 德米特里乌斯：[对拉维尼亚说]  
+> 走开，你已经耽误我们太久了。  
+> 拉维尼亚：没有怜悯？没有女性之情？啊，野兽般的家伙，  
+> 我们共同名声的污点和敌人，  
+> 愿混乱降临——  
+> 基隆：不，那我就堵住你的嘴。  
+> [抓住她，捂住她的嘴。]  
+> 塔摩拉：再见，我的儿子们；确保她安全。  
+> 现在我要去寻找我可爱的摩尔人，  
+> 让脾气暴躁的儿子们玷污这个荡妇。  
+> [II.2.173–91]
 
 这一刻的戏剧性再也无法更强烈了：在一桩强奸之前，女性之间进行了一场言语交锋。拉维尼亚呼吁塔摩拉的女性团结感，或许只是她的同理心，但无论如何塔摩拉仍然非常是英雄的母亲。“我怎能吝啬让我的儿子们享乐呢？”她问道，就在此时，那些儿子们便强奸了拉维尼亚并割掉了她的舌头。拉维尼亚血腥的沉默比莎士比亚自己的语言更能表达这桩暴行的恐怖。当马库斯目睹被残害的拉维尼亚时所说的话，并没有后来将在莎士比亚戏剧中填补可言说与不可言说之间空白的强有力隐喻。泰特斯·安德洛尼库斯只提供了花哨的闲聊：
 
-马库斯：你为什么不跟我说话？
-唉，一条温暖的猩红血河，
-像被风搅动的冒泡的喷泉，
-
-在你玫瑰色的唇间升起又落下，
-随着你甜美的呼吸来去。
-(II.3.21–25)
+> 马库斯：你为什么不跟我说话？  
+> 唉，一条温暖的猩红血河，  
+> 像被风搅动的冒泡的喷泉，  
+> 在你玫瑰色的唇间升起又落下，  
+> 随着你甜美的呼吸来去。  
+> (II.3.21–25)
 
 将其与《尤利乌斯·凯撒》中的一段话相比：
 
-安东尼：……看，在这里卡西乌斯的匕首刺穿了：
-看卡斯卡嫉妒地造成的裂口：
-布鲁图斯就从这里刺入，
-当他拔出那把被诅咒的钢刃时，
-看凯撒的血如何跟随它，
-像从门里冲出来以便弄清
-布鲁图斯是否如此无情地敲门；
-因为布鲁图斯，如你所知，是凯撒的天使。
-(III.2.172–79)
+> 安东尼：……看，在这里卡西乌斯的匕首刺穿了：  
+> 看卡斯卡嫉妒地造成的裂口：  
+> 布鲁图斯就从这里刺入，  
+> 当他拔出那把被诅咒的钢刃时，  
+> 看凯撒的血如何跟随它，  
+> 像从门里冲出来以便弄清  
+> 布鲁图斯是否如此无情地敲门；  
+> 因为布鲁图斯，如你所知，是凯撒的天使。  
+> (III.2.172–79)
 
 这些意象——伤口流出的血被等同于在听到不耐烦的敲门声时跑到门口的主人；刀伤被寓言化为身体的门；匕首被比作寻求进入的客人——是如此离谱地不恰当，以至于它们有助于唤醒听众对谋杀的愤慨，比任何散文叙述都更生动地再现了杀戮。安东尼展示了斗篷及其血迹斑斑的撕裂，描述了致命的划伤，并在谈到布鲁图斯的作用时切换到慢动作，追踪匕首如何刺入血肉并带着血流退出身体，并讲述凯撒在意识到挚友参与后所感到的恐惧：“[当]高贵的凯撒看见他刺……他的伟大心脏便……爆裂了……” (III.2.84)。
 
 在《尤利乌斯·凯撒》中，谋杀扰乱了世界秩序。在《泰特斯·安德洛尼库斯》中，马库斯华丽、炉火纯青的修辞证实了谋杀是系统的一部分。人们为自己的生命或速死哀求，然后无论如何都被强奸、残害并被折磨致死。他们受苦、尖叫、啜泣，正如爱他们的人一样，而其他人只是耸耸肩。这很可怕，但你能怎么办？《泰特斯·安德洛尼库斯》中有一个场景，却暗示了比屠宰场的单调更甚的东西。在这里，我们在扬·科特所指出的十个显要死亡之外，还发现了第十一个，即一只苍蝇的死亡：
 
-泰特斯：……马库斯，你用刀刺向什么？
-马库斯：刺向我杀死的那个东西，我的主人——一只苍蝇。
-泰特斯：滚开，杀人犯。你杀死了我的心。
-我的眼睛被暴政的景象弄得厌倦；
+> 泰特斯：……马库斯，你用刀刺向什么？  
+> 马库斯：刺向我杀死的那个东西，我的主人——一只苍蝇。  
+> 泰特斯：滚开，杀人犯。你杀死了我的心。  
+> 我的眼睛被暴政的景象弄得厌倦；  
+> 对无辜者施行的死亡之举  
+> 不配泰特斯的兄弟。走开；  
+> 我看你不适合与我同行。  
+> 马库斯：唉，我的主人，我不过杀了一只苍蝇。  
+> 泰特斯：“不过”？  
+> 如果那只苍蝇有父亲和母亲怎么办？  
+> 他会如何垂下他纤细镀金的翅膀  
+> 并在空中嗡嗡地哀悼。  
+> 可怜无害的苍蝇，  
+> 那用它悦耳的嗡嗡旋律  
+> 来到这里取悦我们，而你却杀死了它。  
+> 马库斯：请原谅我，先生，那是一只黑而丑陋的苍蝇，  
+> 像女皇的摩尔人。因此我杀死了它。  
+> 泰特斯：噢，噢，噢！  
+> 那么请原谅我责备你，  
+> 因为你做了一件仁慈的事。  
+> 把你的刀给我；我要凌辱它，  
+> 自欺欺人地以为那是摩尔人  
+> 特意来到这里毒害我。  
+> [拿起刀并刺击。]  
+> 这是给你自己的，这是给塔摩拉的。  
+> 啊，你这个家伙！  
+> 我却认为我们还没有沦落到如此地步  
+> 以至于我们之间不能杀死一只苍蝇  
+> 它以煤黑摩尔人的模样出现。  
+> 马库斯：唉，可怜的人！悲伤如此折磨了他  
+> 他把虚假的影子当作真实的实体。  
+> (III.2.53–81)
 
-对无辜者施行的死亡之举
-不配泰特斯的兄弟。走开；
-我看你不适合与我同行。
-马库斯：唉，我的主人，我不过杀了一只苍蝇。
-泰特斯：“不过”？
-如果那只苍蝇有父亲和母亲怎么办？
-他会如何垂下他纤细镀金的翅膀
-并在空中嗡嗡地哀悼。
-可怜无害的苍蝇，
-那用它悦耳的嗡嗡旋律
-来到这里取悦我们，而你却杀死了它。
-马库斯：请原谅我，先生，那是一只黑而丑陋的苍蝇，
-像女皇的摩尔人。因此我杀死了它。
-泰特斯：噢，噢，噢！
-那么请原谅我责备你，
-因为你做了一件仁慈的事。
-把你的刀给我；我要凌辱它，
-自欺欺人地以为那是摩尔人
-特意来到这里毒害我。
-[拿起刀并刺击。]
-这是给你自己的，这是给塔摩拉的。
-啊，你这个家伙！
-我却认为我们还没有沦落到如此地步
-以至于我们之间不能杀死一只苍蝇
-它以煤黑摩尔人的模样出现。
-马库斯：唉，可怜的人！悲伤如此折磨了他
-他把虚假的影子当作真实的实体。
-(III.2.53–81)
-
-泰特斯因拉维尼亚所发生的事而震动，这种短暂的状态松动了某种东西，如果不是他的其余性格如此格格不入的话，或许可以称之为人性。泰特斯对一只苍蝇死亡的悲痛使他睁开了眼睛，看清了他迄今毫不眨眼地犯下的暴行。¹⁰⁴一旦他的眼睛睁开，一旦他不再将死亡视为只应免于他和他所爱的人的东西，一旦死亡不再是他可以随意强加给别人的东西，他便在世界中发现了美：飞行昆虫的声音，它翅膀的精致与色彩。与剧中其他一切相比，泰特斯的反应完全是疯狂。只有在马库斯摇头并用言语明确给出诊断之后，泰特斯才从中清醒过来。当泰特斯开始像
-
+泰特斯因拉维尼亚所发生的事而震动，这种短暂的状态松动了某种东西，如果不是他的其余性格如此格格不入的话，或许可以称之为人性。泰特斯对一只苍蝇死亡的悲痛使他睁开了眼睛，看清了他迄今毫不眨眼地犯下的暴行。104一旦他的眼睛睁开，一旦他不再将死亡视为只应免于他和他所爱的人的东西，一旦死亡不再是他可以随意强加给别人的东西，他便在世界中发现了美：飞行昆虫的声音，它翅膀的精致与色彩。与剧中其他一切相比，泰特斯的反应完全是疯狂。只有在马库斯摇头并用言语明确给出诊断之后，泰特斯才从中清醒过来。当泰特斯开始像
 
 were Tamora’s Moorish lover, the world is right once more: he is no longer mourning death and destruction; he is imagining how to bring them about. The world of Titus has not advanced to the point where not killing is an option.
 
 The bloodbath that is Titus Andronicus expresses an understanding between murderers and victims: this is how the world works. Everyone wants to be among the winners, but not a soul wishes success for anyone else. They cry out when others smite them, and they take revenge by smiting others, but at no point do they feel the pangs of conscience. The episode with the fly suggests things could be otherwise, but it also shows that the world of Titus Andronicus offers no room for alternatives. The situation is dramatically different in Richard III, a more complicated work all around. Though most believe that Richard III predates Titus Andronicus,105 part of its significance lies in making the worldview of Titus Andronicus seem wholly outdated.
 
+
+
 “Tragedies always assume… that each adversary is in the right…. Dramas have no use for monsters—that is why Richard III is its author’s weakest work.” This definition of tragic conflict is surprising when one considers that its source, the playwright Richard Hoghuth, once boasted of putting “absolute evil” on stage.106 How many definitions of tragic conflict have been put forth over the years? When does a dramatic figure kill because he believes he is in the right, and when is he nothing more than a vicious killer? A theory of tragedy that characterizes Richard III as Shakespeare’s weakest work might animate us to make other sorts of radical claims, but this is its only virtue. I do not want to discuss alternative notions of tragedy or the place of Richard III among them. I defer instead to Jan Kott, who regards the work as a masterpiece, arguing that it lays bare the mechanism that Shakespeare’s other history plays exemplify. Kott cites the dialogue between Margaret and the Duchess of York in particular:
 
 > MARGARET: … I had an Edward, till a Richard kill’d him;
+
 > I had a husband, till a Richard kill’d him;
+
 > Thou hadst an Edward, till a Richard kill’d him;
+
 > Thou hadst a Richard, till a Richard kill’d him.
+
 > DUCHESS: I had a Richard too, and thou didst kill him;
+
 > I had a Rutland too; thou holp’st to kill him.
 
 > MARGARET: … Thy Edward he is dead, that kill’d my Edward;
+
 > Thy other Edward dead, to quit my Edward;
+
 > young York, he is but boot.
+
 > (IV.3.40–45; 63–65)
 
 The disquieting thing about this passage is the one victim too many—the “young York”—a victim who is unnecessary, a mere encore, so to speak. If we divest Richard III of its accoutrements, paring it down as much as Dürrenmatt did his adaptation of Titus Andronicus, it recalls the bare-bones advice of Machiavelli. But Shakespeare is smarter than Machiavelli, and has a better understanding of power. To regard him as an allegorist would be absurd. The figure of Richard no more personifies evil than does the hump on his back. His statement that he is “determined to prove a villain” (1.1.30) is the refusal of psychology; his assertion that he hates “the idle pleasures of these days” (1.1.31) is not a source of motivation but a reference to a system of aesthetic rules. Shakespeare presents political reality as he thinks we should see it. His intention is to exhibit the strategies for gaining power within that reality,107 and he conceives a figure suited to the task: an unscrupulous villain whom, as with Ferdinand of Aragon, Machiavelli would have thoroughly admired. Richard seeks nothing but power and in this sense can thank his lucky stars he was not made for idle pleasures, which might have distracted him from his machinations. He knows nothing about erotic flirtation, but he does know how to seduce a woman as she stands beside the body of the husband he murdered. He can do this because what he wants from her is so far outside what she expects that she views everything as possible, even the possibility of submitting to him.
 
+
+
 In 1987 Michael Bogdanov, the founder of the English Shakespeare Company and the later artistic director of the Deutsches Schauspielhaus, premiered The War of the Roses, his multiday production of Shakespearean histories dramatizing the York–Lancaster feud. Bogdanov’s modern stagings would have come off flat were it not for the power of his overall idea. The actors in Richard II wear nineteenth-century clothing; the soldiers in Henry V are outfitted in uniforms from World War I; in the opening scene of Richard III, the party decor is in the style of the late 1920s and the ladies appear in Charleston dresses. Yet Bogdanov consistently rejected the obvious allegorical reference: his Richard was no Hitler. Instead he created a timeless ensemble with a variety of props. Richard fights with a sword and calls out for a horse in the final battle, but earlier, just after he assumes power, we see him sitting all alone in a white-leather office chair in front of a computer. Richard’s isolation in this scene is a reminder of all those he slaughtered on the way to the top. By now, even his trusted henchman has abandoned him. When Richard asks Buckingham to kill the two young princes locked in the Tower of London, the man who was once so reliable hesitates, and Richard must find someone else for the job. He turns to his page for advice:
 
-> KING RICHARD: Know’st thou not any whom corrupting gold
+> KING RICHARD: Know’st thou not any whom corrupting gold  
 > Will tempt unto a close exploit of death?
-
-
-
-
 
 ## 去合法化/再合法化
 
-> PAGE: 我认识一位不满的绅士，
-> 他的微薄家资配不上他高傲的精神；
-> 黄金和二十位演说家一样好，
-> 无疑会诱使他去做任何事。
-> KING RICHARD: 他叫什么名字？
-> PAGE: 他的名字，我的 lord，是泰勒尔。
-> KING RICHARD: 我略知此人：去叫他过来。
-> （IV.2.34–41）
+> PAGE: 我认识一位不满的绅士，  
+> 他的微薄家资配不上他高傲的精神；  
+> 黄金和二十位演说家一样好，  
+> 无疑会诱使他去做任何事。  
+> KING RICHARD: 他叫什么名字？  
+> PAGE: 他的名字，我的 lord，是泰勒尔。  
+> KING RICHARD: 我略知此人：去叫他过来。  
+
+（IV.2.34–41）
 
 侍从召来泰勒尔，他出现在国王面前：
 
-> TYRREL: 詹姆斯·泰勒尔，您的最顺从臣民。
-> KING RICHARD: 你真是吗？
-> TYRREL: 请您考验我，我仁慈的 lord。
-> KING RICHARD: 你敢决意杀害我的朋友吗？
-> TYRREL: 倘蒙您允准；但我宁愿杀两个敌人。
-> （IV.2.67–70）
+> TYRREL: 詹姆斯·泰勒尔，您的最顺从臣民。  
+> KING RICHARD: 你真是吗？  
+> TYRREL: 请您考验我，我仁慈的 lord。  
+> KING RICHARD: 你敢决意杀害我的朋友吗？  
+> TYRREL: 倘蒙您允准；但我宁愿杀两个敌人。  
+
+（IV.2.67–70）
 
 泰勒尔不仅乐意为之；他聪明而巧妙地警告国王不要抛弃政治的修辞而改用黑帮的术语。理查德勉强恢复了镇定：
 
-> KING RICHARD: 那么你就有了它；两个深仇大敌，
-> 扰我安宁、搅我甜美睡眠的仇敌，
-> 就是我要你对付的人。
-> 泰勒尔，我指的是塔里的那些私生子。
-> （IV.2.71–74）
+> KING RICHARD: 那么你就有了它；两个深仇大敌，  
+> 扰我安宁、搅我甜美睡眠的仇敌，  
+> 就是我要你对付的人。  
+> 泰勒尔，我指的是塔里的那些私生子。  
+
+（IV.2.71–74）
 
 在最后一句里，理查德失去了刚刚恢复的镇定。他不仅想确保自己的统治免受被囚太子们的王朝主张威胁；他想要孩子们被勒死。他的王位在这方面既是手段也是障碍。他保持皇家修辞两行；然后他直呼其名。对泰勒尔——这个答应照办一切的人——理查德表现出一副不配为王的熟悉态度。在博格达诺夫的舞台呈现中，理查德——人人都想觐见的人——身体前倾，把嘴凑到泰勒尔耳边近到足以让这个雇凶者感受到他激动的呼吸。也许他的嘴唇触到了那只伸出的耳朵；也许他的话只在效果上相触，像一个为求共同立场而吹出的飞吻：
 
-> KING RICHARD: 你唱得好听。听，过来，泰勒尔：
-> 按此信物去。起身，借我一耳。
+> KING RICHARD: 你唱得好听。听，过来，泰勒尔：  
+> 按此信物去。起身，借我一耳。  
+> [他在他耳边低语。]  
+> 就这么多：说它已完成，  
+> 我就爱你，并因此提拔你。  
 
-[他在他耳边低语。]
-就这么多：说它已完成，
-我就爱你，并因此提拔你。
 （IV.2.77–80）
 
 泰勒尔拒绝了这种亲密的举动并离去——“我会立刻去办。”他回来向观众描述谋杀，但听到国王接近时突然停住。见到泰勒尔时，理查德似乎从臀部开始扭动。他调暗灯光并在他耳边低语：
 
-KING RICHARD: 亲爱的泰勒尔，我在你的消息中幸福吗？
-TYRREL: 如果完成您交代的事能带来您的幸福，那么就幸福吧，
-因为它已完成。
-KING RICHARD: 但你亲眼看见他们死了吗？
-TYRREL: 我看见了，我的 lord。
-KING RICHARD: 而且埋葬了，温柔的泰勒尔？
-TYRREL: 塔里的牧师已埋葬了他们，
-但在哪里，说实话，我不知道。
-KING RICHARD: 晚餐后不久来见我，
-那时你再讲述他们死亡的过程。
-同时，想想我如何能对你好，
-并成为你欲望的继承者。
-那时再见。
-TYRREL: 我恭敬地告退。
+> KING RICHARD: 亲爱的泰勒尔，我在你的消息中幸福吗？  
+> TYRREL: 如果完成您交代的事能带来您的幸福，那么就幸福吧，  
+> 因为它已完成。  
+> KING RICHARD: 但你亲眼看见他们死了吗？  
+> TYRREL: 我看见了，我的 lord。  
+> KING RICHARD: 而且埋葬了，温柔的泰勒尔？  
+> TYRREL: 塔里的牧师已埋葬了他们，  
+> 但在哪里，说实话，我不知道。  
+> KING RICHARD: 晚餐后不久来见我，  
+> 那时你再讲述他们死亡的过程。  
+> 同时，想想我如何能对你好，  
+> 并成为你欲望的继承者。  
+> 那时再见。  
+> TYRREL: 我恭敬地告退。  
+
 （IV.3.24–35）
 
 “我在你的消息中幸福吗？”这个问题不只是询问。理查德想要感到安全，被包围。他调情并讨好（“晚餐后不久来见我……[T]想想我如何能对你好……”）；他也娇嗔（“而且埋葬了，温柔的泰勒尔？”）。但这种娇嗔也可能是个学会了稳妥行事、面面俱到的人的话。“但你亲眼看见他们死了吗？”他问。泰勒尔说看见了，但理查德想要知道更多。泰勒尔真的看见他们被埋葬了吗？理查德不赌博，至少不赌小事。尽管他对杀手卑躬屈膝（“我幸福吗？”；“温柔的泰勒尔”；“想想我如何……成为你欲望的继承者”），他也在确保一切都按计划进行。
 
 这一令人毛骨悚然的事件——伦敦塔中孩子们被认为被谋杀的部分今天被称为血塔——在理查德与泰勒尔之间形成了一种亲密关系，但其中也有一些东西，就像《泰特斯·安德洛尼克斯》中的苍蝇场景一样，照亮了谋杀的常规。那种东西在泰勒尔讲述他的行动时变得清晰，并且足以解释为什么《理查三世》被称为悲剧：
 
-> 暴虐而血腥的行动已完成；
-> 这片土地有史以来最恶毒的残忍大屠杀。
-> 迪顿和福雷斯特，我怂恿他们
-> 去做这件无情的屠戮——
-> 尽管他们是血肉之躯的恶棍、血腥的狗——
-> 却因温柔与仁慈而融化，
-> 像两个孩子一样为他们死亡的悲惨故事哭泣。
-> “哦，就这样，”迪顿说，“躺着温柔的婴儿”；
-> “就这样，就这样，”福雷斯特说，“他们互相环抱
-> 在他们象牙般无辜的臂弯里；
-> 他们的嘴唇是茎上四朵红玫瑰，
-> 在他们夏日的美丽中彼此亲吻。
-> 一个祈祷书躺在他们的枕头上，
-> 哪本，”福雷斯特说，“几乎改变了我的心意。
-> 但哦，魔鬼——” “那里恶棍停住了。
-> 当迪顿这样继续说：‘我们扼杀了
-> 自然最丰盈甜美的作品，
-> 自创世以来她所塑造的。’”
-> 因此两人皆因良心与悔恨而离去
-> 他们无法言语，于是我把他们两人留下
-> 去把这消息带给血腥的国王。
+> 暴虐而血腥的行动已完成；  
+> 这片土地有史以来最恶毒的残忍大屠杀。  
+> 迪顿和福雷斯特，我怂恿他们  
+> 去做这件无情的屠戮——  
+> 尽管他们是血肉之躯的恶棍、血腥的狗——  
+> 却因温柔与仁慈而融化，  
+> 像两个孩子一样为他们死亡的悲惨故事哭泣。  
+> “哦，就这样，”迪顿说，“躺着温柔的婴儿”；  
+> “就这样，就这样，”福雷斯特说，“他们互相环抱  
+> 在他们象牙般无辜的臂弯里；  
+> 他们的嘴唇是茎上四朵红玫瑰，  
+> 在他们夏日的美丽中彼此亲吻。  
+> 一个祈祷书躺在他们的枕头上，  
+> 哪本，”福雷斯特说，“几乎改变了我的心意。  
+> 但哦，魔鬼——” “那里恶棍停住了。  
+> 当迪顿这样继续说：‘我们扼杀了  
+> 自然最丰盈甜美的作品，  
+> 自创世以来她所塑造的。’”  
+> 因此两人皆因良心与悔恨而离去  
+> 他们无法言语，于是我把他们两人留下  
+> 去把这消息带给血腥的国王。  
 
 （IV.3.1–21）
 
-《泰特斯·安德洛尼克斯》的世界是德意志民族在三十年战争中认识到的世界（因此德译本大获成功）。在《理查三世》中，莎士比亚为当代知识分子和鉴赏家塑造了一个文艺复兴时期的权力政治故事，这个故事今天看来和其主人公的建议一样冷酷无情（这很可能是霍赫胡特认为理查德这个人物造作的原因）。然而在上面这段中，莎士比亚重新安排了文艺复兴的背景，并在其中打断了“我曾有爱德华，直到理查德杀了他”的长篇列举。 whereas 在《泰特斯》中，苍蝇场景仍处于戏剧无尽杀戮链的神秘咒语之下，受害者的哭喊出自疯子之口，在《理查三世》中，被谋杀者的哭喊由两个雇凶者传达，他们在执行任务时产生了疑虑，而 carrying
+《泰特斯·安德洛尼克斯》的世界是德意志民族在三十年战争中认识到的世界（因此德译本大获成功）。在《理查三世》中，莎士比亚为当代知识分子和鉴赏家塑造了一个文艺复兴时期的权力政治故事，这个故事今天看来和其主人公的建议一样冷酷无情（这很可能是霍赫胡特认为理查德这个人物造作的原因）。然而在上面这段中，莎士比亚重新安排了文艺复兴的背景，并在其中打断了“我曾有爱德华，直到理查德杀了他”的长篇列举。 whereas 在《泰特斯》中，苍蝇场景仍处于戏剧无尽杀戮链的神秘咒语之下，受害者的哭喊出自疯子之口，在《理查三世》中，被谋杀者的哭喊由两个雇凶者传达，他们在执行任务时产生了疑虑，而 carrying 出于血腥的罪行。泰勒尔的话将理查德从政客转变为凶手，并在这样做的同时预示了在十六、十七世纪德国、法国和英格兰的危机之后，将成为现代性中心痴迷之一的东西：消除过剩的暴力。
 
 
-出于血腥的罪行。泰勒尔的话将理查德从政客转变为凶手，并在这样做的同时预示了在十六、十七世纪德国、法国和英格兰的危机之后，将成为现代性中心痴迷之一的东西：消除过剩的暴力。
 
 《理查三世》在泰勒尔独白之前和之后都表达了对暴力的其他疑虑。第一幕中，理查德派两名凶手前往塔楼杀害他的兄弟克拉伦斯公爵，爱德华四世——他的另一个兄弟——曾在一次早期的阴谋中将他囚禁。凶手们在门口出示了手令，被允许进入克拉伦斯熟睡的房间。他们争论是否要在他熟睡时杀害他。受害者会认为他们是懦夫吗？他怎么会这么想？他会死。还有上帝？
 
 第一凶手：为什么，那么他会说我们刺杀了他睡觉时。
+
 第二凶手：那个“审判”一词的催促，在我心中产生了一种悔恨。
+
 第一凶手：什么，你害怕？
+
 第二凶手：不是害怕杀他——有手令——而是害怕因杀他而被谴责，从中没有任何手令能保护我。
+
 第一凶手：我以为你很坚决。
+
 第二凶手：是的——让他活下去。
+
 第一凶手：我会回到格洛斯特公爵那里，告诉他这样。
+
 第二凶手：不，我求你稍等一下：我希望我这种激动的情绪会改变。它过去只持续到有人数到二十。
+
 第一凶手：你现在感觉如何？
+
 第二凶手：我心中仍有一些良知的残渣。
+
 第一凶手：记住，事成之后我们的报酬。
+
 第二凶手：见鬼，他要死了！我忘了报酬。
+
 第一凶手：你的良知现在在哪？
+
 第二凶手：哦，在格洛斯特公爵的钱袋里。
+
 第一凶手：当他打开钱袋给我们报酬时，你的良知就飞出来了？
+
 第二凶手：没关系；让它去吧。很少有人，或根本没有人会收留它。
+
 第一凶手：如果它再次来找你怎么办？
+
 第二凶手：我不会理它；它使人成为懦夫。一个男人不能偷窃，它就会指控他；一个男人不能发誓，它就会制止他；一个男人不能与邻居的妻子通奸，它就会揭发他。这是一种脸红、羞愧的精神，在人的胸中作乱。它使人充满障碍；它曾让我一次归还偶然找到的一袋金币。它使保留它的人变得贫穷；它因危险而被逐出城镇和城市；每一个想好好生活的人都努力依靠自己，抛弃它而活。
 
 *(1.4.103–43)*
@@ -1815,9 +1891,13 @@ TYRREL: 我恭敬地告退。
 他们就这样继续了一会儿，直到第一凶手感到良知的刺痛，但他们硬撑了下来，选择将克拉伦斯溺死在酒桶中。与此同时克拉伦斯醒来，并在为自己辩护时援引了第五条诫命。第一凶手的回答清楚地表明克拉伦斯自己也是个凶手，也是个伪证者。克拉伦斯乞求宽恕、同情：
 
 > 你们中的哪一个……
+> 
 > 如果两个像你们这样的凶手来找你们，
+> 
 > 会不求饶地乞求生命？是的，你们会乞求，
+> 
 > 如果你们处于我的困境中。
+> 
 > [对第二凶手] 我的朋友，我在你的眼中看到了一些怜悯。
 
 *(1.4.256–62)*
@@ -1825,7 +1905,9 @@ TYRREL: 我恭敬地告退。
 凶手们除了杀死克拉伦斯别无他法，但他们不愿在他注视下动手，于是叫他转过头去。第一凶手将克拉伦斯刺死后，第二凶手评论道：
 
 > 一件血腥的罪行，被残忍地执行。
+> 
 > 我多么希望像彼拉多一样洗净我的手，
+> 
 > 脱离这桩最可怕的谋杀。
 
 *(1.4.268–70)*
@@ -1833,8 +1915,10 @@ TYRREL: 我恭敬地告退。
 散文中的诙谐良知争辩在无韵诗中变得严肃起来。第二凶手确实有良知，准备放弃他的赏金；第一凶手嘲笑他。在《理查三世》中，良知只属于下属。君王没有良知，而理查德说话时似乎自己就是道德谱系的作者。在最后决战开始前不久，理查德梦见他的受害者的灵魂回来诅咒他。他清醒地醒来：
 
 > 理查王：耶稣，求你怜悯！——慢，我只是做梦。
+> 
 > 懦弱的良知，你怎么折磨我！
-> （V.3.179–80）
+
+（V.3.179–80）
 
 ——但很快就开始恍惚：
 
@@ -1867,11 +1951,9 @@ TYRREL: 我恭敬地告退。
 
 对理查德说话的是他的良知吗？汉娜·阿伦特认为确实是，并引用了这段话在她的论文《思考与道德考量》中。她指出良知有两个含义：“一丝不苟的顾忌”或“对某事的意识”（正如哈姆雷特所说，“于是良知使我们都成了懦夫”[V.3.83]）。在理查德的案例中，这些含义在摇摆不定。
 
-
-
-
 你将冒犯他，并延长他的激情；
 吃吧，不要理睬他。
+
 (III.4.41–57)
 
 麦克白夫人安抚宾客，告诉他们这是她丈夫的正常行为，但对他，她却问道：“你还是个男人吗？”麦克白的幻象以他的恐惧为养料——在班柯被杀的那天夜里，一把匕首出现在他面前——于是他试图面对鬼魂来证明自己的勇气，但这只会让他的妻子更难堪：
@@ -1885,6 +1967,7 @@ TYRREL: 我恭敬地告退。
 由她的祖母来证实。真丢脸！
 你为什么要做这些鬼脸？说到底，
 你不过是在看一张凳子。
+
 (III.4.59–67)
 
 麦克白坚持他所看见的是真实的：
@@ -1898,20 +1981,22 @@ TYRREL: 我恭敬地告退。
 头上带着二十处致命伤，
 把我们从座位上推开。这比这样的谋杀
 还要奇怪。
+
 (III.4.74–82)
 
 麦克白看见的鬼魂是一种现代幽灵，一种打断了生命与社群传统的东西。从某种意义上说，死者拒绝继续死去，是道德人性化的一个迟来效应。麦克白在这里走对了路，或者至少比他妻子更接近正轨。因为尽管麦克白夫人在心理上更为老练（她了解自己的丈夫，即使她拒绝相信他见到了鬼魂），她却完全没有良心。麦克白得以评论道
 
 让我的血液变稠……
-
 到我女人的乳房来，
 把我的乳汁当作苦胆吧。
+
 (1.5.42; 45-47)
 
 最终她说服了他，麦克白杀死了邓肯王。之后，她对她那充满负罪感的丈夫说
 
 去，拿点水来，
 把这肮脏的见证从你手上洗掉。——
+
 (11.2.45-46)
 
 这些话出自一个对血腥之事经验丰富的人之口。对麦克白来说，洗手是一种象征性的行为：
@@ -1925,12 +2010,14 @@ TYRREL: 我恭敬地告退。
 ……我们回寝宫去吧。
 一点水就能洗清我们这桩罪行：
 多么容易啊！
+
 (11.2.59-67)
 
 麦克白夫人惊讶于经历了这一切之后她的心依然纯洁，但她错了。她当作无关紧要而置之不理的东西，却留在了她心里：
 
 要不是他睡着时的模样
 像我父亲，我早就动手了。
+
 (11.2.12-13)
 
 她没有杀死邓肯的唯一原因，就是他长得像她的父亲。相比之下，麦克白在报告邓肯之死时，避免提到红色：
@@ -1941,15 +2028,16 @@ TYRREL: 我恭敬地告退。
 为毁灭的肆意闯入敞开着：那里，凶手们
 浸透在他们行当的颜色里，他们的匕首
 无礼地裹着血污。
+
 (II.3.109–10)
 
 随着戏剧的推进，麦克白变得越来越不自省，血很快变成了某种熟悉的东西，某种他所侍奉的东西。然而到了最后，他再也承受不住了。不是因为良心呼唤；问题在于过饱。对被他杀害了妻子和孩子的麦克德夫，他说：“退回去，我的灵魂已经沾了太多你的血”（V.8.5–6）。但当麦克德夫拒绝他的提议，并称他为“更血腥的恶棍”时，麦克白选择战斗，他白皙的脸色早已泛红。事实上，在与麦克德夫对峙前的几场戏中，麦克白因为仆人脸色苍白而侮辱他：
 
 ……你这个奶油脸的蠢货！
 你从哪里得到那副鹅一样的神情？
-
 去，刺你的脸，把你那恐惧染红，
 你这个百合肝的小子。
+
 (V.3.11–12; 14–15)
 
 至于麦克白夫人，她试图掉头，把血从手上擦掉，但谋杀之夜和城堡中的梦游之夜合而为一。那血，无论真实还是想象，绘成了一幅图画，而洗手成了一种强迫性的行为。她最重要的一句台词是“做过的事无法挽回”（V.1.69）。她说这话是为了给一个因恐惧而脸色苍白的男人打气，但它的真理却源自一颗邪恶的良心。不再有幽灵出现，没有幸存者或亡灵威胁复仇。剩下的只是清洗一颗被玷污的“如此洁白的心”的徒劳。
@@ -1961,6 +2049,8 @@ TYRREL: 我恭敬地告退。
 在本章和上一章中，我已经描述了现代性如何被国家对暴力的垄断、以及……的碎片化和去管制所塑造。
 
 权力、第一人称世界观、普遍的人性观念、对残忍的厌恶、相互的非暴力主张、社会分化、宗教解释垄断权的削弱、新世界的发现，以及思想通过印刷机的传播和增殖。¹¹⁰ 这些发展的众多后果之一是人与暴力的关系发生了根本改变。
+
+
 
 我所说的“根本”并不是指突然的转变。而是希望引起人们对一个将现代性与所有其他文明形态区分开来的鲜明差异的注意：即努力扩大受禁止的暴力范围，同时限制被允许和受命实施的暴力范围。正如我已论证的，国家对暴力的垄断不是静态的，而是演进的；它是一个垄断化的过程。这是出于偶然的原因：总有其他利益集团反对它，尤其是那些不信任现代性的群体。美国的全国步枪协会就是一个例子。经典西部片及其后继者，特别是《绞死他们》（Hang ’Em High，1968）和《不可饶恕》（Unforgiven，1992），则代表了另一种情况。席勒的《威廉·退尔》也是如此，这位手持弩机的自由斗士，与西部荒野的亡命之徒一样，坚持扰乱国家垄断的权利。¹¹¹
 
@@ -1980,9 +2070,6 @@ TYRREL: 我恭敬地告退。
 >
 > ... 我在罗马时正巧赶上处决一个名叫卡泰纳的臭名昭著的窃贼。当他被绞死时，人群没有表现出任何情绪；但当他被分尸时，刽子手每砍一下，人群都伴以哀嚎和惊叹，仿佛每个人都把自己的感受转移到了那具尸体上。¹¹³
 
-
-
-
 政府偶尔会遵循蒙田的观点，在公开肢解之前先勒死被判刑者。（当他们这样做时，并未通知公众。）但无论这种做法可能产生多大的威慑效果，在活人肢解被废除之后，对死尸的肢解几乎完全停止了。事实是，从未有任何一种死刑仅仅因为未能起到威慑作用而被废除。关于是否必须虐待囚犯以防止他人效仿的疑问，始终源于先前为该行为辩护的需要，并在无法提供正当理由时追求更人道的行为方式。关于死刑威慑价值的讨论默认认为，在可能的情况下最好不用死刑。那些不默认这一点的人——例如康德以及其他报应正义的倡导者——不会参与此类讨论。
 
 前现代主权者的暴力是一种自我庆祝的无限权力展示，并非相对于法律界限——法律界限甚至在权力被系统性规制之前就已存在——而是相对于身体而言。最后一次大规模的过度暴力公开展示，是对主权者攻击的回应。在达米安案中，即企图刺杀路易十五的男子，官员们需要重新熟悉一种已不再属于标准执行方式的处决方法。现代性通常将死刑视为权力持续庆祝的表现，并认为清除这种嫌疑意味着消除其自目的性特征，也就是说，在可能的情况下将痛苦排除在程序之外。114
@@ -1997,26 +2084,33 @@ TYRREL: 我恭敬地告退。
 
 将暴力与一种辩护性的*尚未到来*配对，并不限于黑格尔式的包罗万象的哲学建构。它也是一种日常的合法化形式。时机尚未成熟。我们还没有走得足够远。我们现在必须接受它。暴力的任务不仅仅是防止具体的暴力事件，而是促进一个更不暴力的未来。当社会打击犯罪或发动战争时，它也在想象它们的消除。服务于预防的暴力服务于理想。*现代性认为只有当暴力被认为能终结暴力或防止更极端的暴力时才是正当的。* 在这种合法化模式盛行的地方，和平抵抗有成功的机会，前提是它能引起能够质疑合法性的机构的注意（新闻媒体、议会等等）。
 
-当人们强烈想要否定暴力的合法性时，他们会赋予其时间上的倒退感。他们称暴力为“中世纪的”或“原始的”。多年来，人们普遍认为国家社会主义是回到黑暗时代。“野蛮的”暴力唤起了阿诺德·施瓦辛格饰演的柯南形象——肌肉发达、兽皮、带角头盔等等。更一般地说，野蛮唤起了现代性最强烈希望抛在身后的自目的性暴力。这种时间化策略也可以反向运作。谈论“现代酷刑”——对现代性低暴力形象的批评——将自目的性暴力的传统血腥与肮脏，与当今所使用的隐秘、冷酷、工具性和间接手段形成对比。反驳“现代酷刑”存在的说法并未挫败现代性
+当人们强烈想要否定暴力的合法性时，他们会赋予其时间上的倒退感。他们称暴力为“中世纪的”或“原始的”。多年来，人们普遍认为国家社会主义是回到黑暗时代。“野蛮的”暴力唤起了阿诺德·施瓦辛格饰演的柯南形象——肌肉发达、兽皮、带角头盔等等。更一般地说，野蛮唤起了现代性最强烈希望抛在身后的自目的性暴力。这种时间化策略也可以反向运作。谈论“现代酷刑”——对现代性低暴力形象的批评——将自目的性暴力的传统血腥与肮脏，与当今所使用的隐秘、冷酷、工具性和间接手段形成对比。反驳“现代酷刑”存在的说法并未挫败现代性is modern enough to torture in modern fashion. It was long believed that what made Nazi mass murder a specifically modern phenomenon was its “industrial” character. The metaphor of industry invokes hygiene, rationality, effectiveness, and cold-bloodedness. In truth, however, these images better correspond to the Nazi ideal than to its brutal and chaotic reality.
 
 
-is modern enough to torture in modern fashion. It was long believed that what made Nazi mass murder a specifically modern phenomenon was its “industrial” character. The metaphor of industry invokes hygiene, rationality, effectiveness, and cold-bloodedness. In truth, however, these images better correspond to the Nazi ideal than to its brutal and chaotic reality.
 
 With temporalization comes spatialization, which is legitimation by way of geographical difference. It’s when we distinguish between a here—the birthplace of modernity, say, where ethnic groups aren’t supposed to beat each other to a pulp—and a there—Turkey, say, where we accept that they do. Had the U.S. administration called the 1994 mass murder of Tutsis “genocide,” modernity would have gone global. Instead, the United States legitimized the situation in Rwanda by insisting that it was a “tribal conflict,” and the UN did not intervene.122 Sometimes the “civilized” put themselves on equal footing with the “barbarians,” as when white soldiers from the West took up scalp hunting or when the German Kaiser encouraged his troops to spread terror like the Huns. In all cases, spatialization and temporalization join forces. Far away violence dominates for now. The objective is to bring peace to the far away by incorporating it with the here. This is the white man’s burden, the civilizing mission, and it is one of the most important topoi in modernity’s relegitimation of violence.
 
 The ultimate form of delegitimizing autotelic violence is denial. By relating illegitimate violence to an instrumental objective, we may explain it, but we also explain away the possibility of autotelic violence. A passage in *Thus Spoke Zarathustra* portrays the autotelic in coexistence with the instrumental:
 
 > Thus speaks the red judge: “Why did this criminal kill? He wanted to rob.” But I say to you: his soul wanted blood, not robbery. He thirsted for the bliss of the knife!
+
 > 
+
 > But his poor reason did not comprehend this madness and it persuaded him.
+
 > 
+
 > “What does blood matter?” it said. “Don’t you at least want to commit robbery in the process?”
+
 > 
+
 > And so he listened to his poor reason, like lead its speech lay upon him—and he robbed as he murdered.123
 
 We find this position culturally untenable. For the idea that autotelic violence is a normal part of human behavior destabilizes our trust in the sustainability and self-regulation of civilization. This is why we cling to instrumental interpretations of violence as long as we can, as long as the price is right, so to speak. We—evil people all of us—understand it when someone kills for thousands of dollars. But when a person beats to death a taxi driver for a few bucks we are appalled, less on account of the deed than because the deed defies explanation. The perpetrator, who could not have known in advance how much the driver had on him, was prepared to do murder for pocket change. When instrumental explanation fails, we pathologize; when that fails, we mystify.
 
 The image of the Nazi criminal immediately after the war was the pathological sadist. In 1952 the director of the Max Planck Institute in Heidelberg, Hermann Rein, hesitated to inform the public of Nazi medical experiments, since he believed that the doctors who committed them “were pathologically deviant.”124 Mitscherlich refuted this diagnosis by pointing out the sheer number of people implicated.125 Mystification began once the public accepted that pathology explained little. How could so many have been involved? How could doctors perpetrate an act like this? Or the classic question I discussed in the introduction: how could ordinary family men do such a thing?
+
+
 
 The general public seems more likely to accept perpetrators who kill out of desperation or from religious conviction than to assume that the power of autotelic violence outweighs the loss of life, whereas academics commonly resort to instrumental interpretation. Thinkers have interpreted Nazi crimes as a diversion from class struggle, as a consequence of demographic or social policy, and as a means of individual or collective gain. This insistence on utility as the sole cause and motivation for the crimes reveals a massive resistance to other interpretations. But while the argument, say, that suicide bombers are pawns in a larger strategy might make their leaders’ actions plausible, it cannot account for their recruitment success.
 
@@ -2026,15 +2120,12 @@ In the previous section I named the three factors that constitute modern trust:
 
 Control measures to limit everyday violence are the most obvious and important means of building trust. Social interactions secure trust by demonstrating we have nothing to fear from one another. Collective beliefs provide the framework of assumptions in which control measures and social interactions take place: that society strives to keep violence at a minimum; that we are protected from the return of past violence by a historical barrier; and that autotelic violence is repulsive, illegitimate, and pathological. The only violence we accept as legitimate is violence that prevents greater violence in the future. When violence cannot be justified in this way, we declare it illegitimate.
 
-These are the ways we claim that the state monopoly on violence works, and it is how we confirm to one another that our ideas of self are ethical and viable concepts that accord with reality. Freud doubted whether we’d succeed with
-
-
-
-后一项任务。事实上，精神分析对理解文化最重要的贡献，在于它洞察到：维持对现代性的信任，所要求的与它所给予的一样多。对低暴力现代性的信任减少了我们的恐惧，但维持这种信任既需要严肃的智识努力，也需要严肃的心理否认。
+These are the ways we claim that the state monopoly on violence works, and it is how we confirm to one another that our ideas of self are ethical and viable concepts that accord with reality. Freud doubted whether we’d succeed with 后一项任务。事实上，精神分析对理解文化最重要的贡献，在于它洞察到：维持对现代性的信任，所要求的与它所给予的一样多。对低暴力现代性的信任减少了我们的恐惧，但维持这种信任既需要严肃的智识努力，也需要严肃的心理否认。
 
 ## 重新合法化（1）：民族与文明使命的修辞
 
 > 现在我们要痛打它。
+>
 > ——库尔特·图霍尔斯基，《德意志之角纪念碑》
 
 无论怎样发挥想象力，现代性中的暴力水平真的能被认为是低的吗？甚至在二十世纪的暴行之前，就有恐怖统治时期的处决、旺代战争中的大规模屠杀、拿破仑战争的杀戮、柯尼希格雷茨战役中后装步枪造成的大量伤亡、美国内战的破坏，以及殖民主义在美洲、亚洲、非洲、太平洋和澳大利亚留下的血腥足迹。但是说现代性中的暴力水平低，并不是要否认或相对化诸如此类的暴力事件。正如指出这些事件并不是要美化前现代时期，也不是要否认现代性中已经取得的真正进步，尽管现代性本身被理想化了。理解现代性中的暴力，尤其是二十世纪现代性中的暴力，要求我们对其去神秘化。我们必须解释，为什么极端暴力的持续爆发——无论是定位性的还是自为目的性的——不会削弱我们对现代性的持续信任。在信任与极端暴力之间不稳定的共存中起关键作用的是合法化的修辞，它们调节着社会的社会互动、控制措施和集体信念。
@@ -2051,17 +2142,20 @@ These are the ways we claim that the state monopoly on violence works, and it is
 
 现代社会信任的实践在民族框架内展开，既参照又强化这一框架，但它们也超越了这一框架。如果不是这样，就不会有全球经济、可靠的货币兑换、国际或多国法律。从这个意义上说，民族似乎是前现代性的残余，但历史上并非如此。当民族为了自身利益或为了生存而服务于军事暴力的合法化时，它显得最为过时。国家间战争危及现代性的世界主义成分，这就是为什么致力于世界主义理想的启蒙思想家们以怀疑的态度回应，批评君主们为了王朝琐事而让臣民死在战场上。
 
-劳伦斯·奥利维尔在莎士比亚《亨利五世》（1944）电影改编版中所描绘的爱国悲情无法掩盖文本本身：英国国王对法国王位的要求基于法律和王朝的理据。他在第五幕中的亲法态度是一位君主的任性：“我们是礼仪的制定者，凯特”（V.2.268–69）。在战前演说中，亨利试图激发勇气和毅力，他所援引的不是民族共同体，而是寻求集体荣耀的军事共同体：“因为今天他与我一同流血”
-
-
-
+劳伦斯·奥利维尔在莎士比亚《亨利五世》（1944）电影改编版中所描绘的爱国悲情无法掩盖文本本身：英国国王对法国王位的要求基于法律和王朝的理据。他在第五幕中的亲法态度是一位君主的任性：“我们是礼仪的制定者，凯特”（V.2.268–69）。在战前演说中，亨利试图激发勇气和毅力，他所援引的不是民族共同体，而是寻求集体荣耀的军事共同体：“因为今天他与我一同流血”  
 我 / 将成为我的兄弟；无论他多么卑贱，/ 今日将使他身份高贵”（第五幕第二场第61–63行）。128 在整个十八世纪上半叶，为国家而战的军事行动主要与军人勇武联系在一起。在某个时刻，这种联系变得岌岌可危，因为士兵的暴力无法与工具性辩护的观念相协调。在军事暴力的语境中，工具性只意味着“谁的工具”和“达到什么目的”。伏尔泰曾谈到，有些国王让他们的臣民在加拿大几平方英里的冰雪荒原上相互射击。
 
 一旦旧的王朝合法化与法定性形式失效，要求军事暴力在特定情况下获得授权的说法就显得怪异起来。托马斯·阿布特在1761年出版的《为祖国而死》中批评他所见的普遍时代精神，写道：“理性反思认为，与其为了虚荣的荣誉而被枪杀，不如与亲人一起平静舒适地吃面包。”129
 
 《为祖国而死》出版之时，后来被称为七年战争的冲突已进入第五个年头。130 这场战争对历史学家而言格外引人关注。普鲁士在欧洲的霸权空前地岌岌可危；使这场战争成为可能的联盟——法国站在奥地利一边——令同时代人震惊；而法国与普鲁士的盟友英格兰之间的冲突蔓延至北美，使其具有了世界大战的性质。在德意志帝国，除军事冲突外，还存在关于战争合法性的争议。历史学家约翰内斯·库尼施写道：
 
+
+
+# 七年战争与爱国意识的形成
+
 > [七]年战争是那种在旧制度主权国家之间无休止竞争中以规则间隔发生的国家行为之一。所有参与者都视其为一场国家间的战争，其中君主及其政治与军事官员是决定性行动者。……但有趣的是，七年战争还展现了一个维度，其全部影响只有在回顾时才会显现：一种爱国意识与身份认同感的形成，它开始弥合专制时代权威与臣民之间的鸿沟。131
+
+## 战争第一阶段的辩护理由
 
 战争第一阶段，参战各方给出了零零碎碎的辩护理由。奥地利声称自己是在应对非法占领；普鲁士先发制人地进军萨克森，并辩称这是自卫。这些都是老一套。然而，在法国与奥地利结盟之后，另一种声音变得清晰起来：普鲁士称这场战争为宗教战争。132 这一观点基于一个百年之久的经验模式。自三十年战争末期，信奉天主教的法国与新教瑞典联手对抗奥地利以来，联盟的概念已被彻底打开。这在普鲁士人心中引发了三种恐惧：因外部干预而导致的漫长而毁灭性的国内冲突；天主教对《威斯特伐利亚和约》条款的修正；以及十七世纪下半叶法国吞并政策的延续。这些恐惧并非没有根据。在1757年出版的一本小册子中，当时正值德国历史上最危险的时期之一，我们读到：“……德意志人[已]被长期战争弄得精疲力竭，无法对法国日益增长的力量进行足够的抵抗。”133
 
@@ -2069,10 +2163,9 @@ These are the ways we claim that the state monopoly on violence works, and it is
 
 > 公民就是一切。这就是我对君主制的想象。我是否可以推断，每个臣民都是公民，正如公民在最自由的共和国中也是臣民？一切都服从法律。没有人是自由的。每个人都按照其所在宪法的精神行事……当我的出生或我的自由决定使我归属于一个国家，我服从其有益的法律，而这些法律为整体利益所取走的自由不超过必要的限度，那么我就称这个国家为我的祖国。139
 
-阿布特所设想的是一个宪政国家，其中君主是保护该国的宪法的化身，因此也是值得保护的国家之代表。“一个民族从幼年时起就将君主视为将保护它的君主，同时也是一个民族必须珍视的珍贵保证。”140 这种君主立宪制不是别的，正是民族，它尤其存在于集体想象中，存在于像崇敬国王那样庆祝“我们”的实践中。在君主立宪制中，人们
+阿布特所设想的是一个宪政国家，其中君主是保护该国的宪法的化身，因此也是值得保护的国家之代表。“一个民族从幼年时起就将君主视为将保护它的君主，同时也是一个民族必须珍视的珍贵保证。”140 这种君主立宪制不是别的，正是民族，它尤其存在于集体想象中，存在于像崇敬国王那样庆祝“我们”的实践中。在君主立宪制中，人们并不为国王及其利益而死，而是为集体我们及其忠诚与荣誉的理念而死。
 
-
-并不为国王及其利益而死，而是为集体我们及其忠诚与荣誉的理念而死。
+## 维兰德对阿布特的回应
 
 在它诞生之初，国家概念就要求一个整体的理念，而这个整体与现代性社会分化之间存在着无法调和的紧张关系。维兰德的最后一部伟大小说 *Aristippus und einige seiner Zeitgenossen* 读起来就像是对阿卜特的回应。背景设定在苏格拉底时代的雅典。维兰德通过小说的主人公、塞勒尼的哲学家阿里斯提普斯发声：
 
@@ -2084,8 +2177,9 @@ These are the ways we claim that the state monopoly on violence works, and it is
 
 对一个奖励愿意死去和杀戮的国家的过度重视，体现在社会包容与排斥的激进化上。正如比勒菲尔德所写，“不是微妙的差异，而是粗暴的隔离标志着国家包容的统治……[T]排斥源于包容。对我们的影响进行主题化和制度化的形式影响了排斥的形式——在这种情况下，是他者的定义。”143
 
-现代的我们主题化发生在寻求为军事暴力合法化的论述中。因为传统军事暴力表现形式——宗教战争、王朝战争——在现代性中已不再合法，军事暴力必须被视为服务于受威胁的国家集体的利益，作为一种现在的位置性、工具性正当化的暴力。这在普鲁士诉诸三十年战争提供的经验模式时就很明显。当一个国家的对手诉诸非法的暴力形式时，它别无选择，只能以非法的暴力形式进行自卫，而由于这是自卫，因此可以被正当化为现代的。这就是普鲁士看待七年战争中兼并萨克森的方式。该行动违背了当时的法律标准，但普鲁士将其正当化为军事战略中必要且因此工具性的部分。144 普鲁士官员声称即将爆发宗教战争，谈到“掠夺士兵”和“外国劫掠者的任性”，他们“像蝗虫一样覆盖了日耳曼尼亚，像那厚重的群落一样遮蔽了白昼的光线和
+## 军事暴力合法化论述
 
+现代的我们主题化发生在寻求为军事暴力合法化的论述中。因为传统军事暴力表现形式——宗教战争、王朝战争——在现代性中已不再合法，军事暴力必须被视为服务于受威胁的国家集体的利益，作为一种现在的位置性、工具性正当化的暴力。这在普鲁士诉诸三十年战争提供的经验模式时就很明显。当一个国家的对手诉诸非法的暴力形式时，它别无选择，只能以非法的暴力形式进行自卫，而由于这是自卫，因此可以被正当化为现代的。这就是普鲁士看待七年战争中兼并萨克森的方式。该行动违背了当时的法律标准，但普鲁士将其正当化为军事战略中必要且因此工具性的部分。144 普鲁士官员声称即将爆发宗教战争，谈到“掠夺士兵”和“外国劫掠者的任性”，他们“像蝗虫一样覆盖了日耳曼尼亚，像那厚重的群落一样遮蔽了白昼的光线和
 
 sun and plagued . . . the Egyptians.*145 这里起作用的与其说是蝗虫“害虫”的含义，不如说是古代威胁的意象。普鲁士人通过想象即将到来的暴行使这种威胁变得具体。法国军队——来自西方的威胁——由“所有类型、每个想与年轻女性睡觉的迪克和汤姆”组成。*146 这是对梅毒的暗示，普鲁士人称之为“法国病”，也是对强奸的暗示。虽然法国人被认为倾向于掠夺性暴力，但俄罗斯人——来自东方的威胁——被认为倾向于自为性暴力：
 
@@ -2093,27 +2187,42 @@ sun and plagued . . . the Egyptians.*145 这里起作用的与其说是蝗虫“
 
 这里再次出现了“野蛮人”的托poi，即因为似乎遵循着不同的暴力规则，而成为无界暴力典范的那个人。野蛮人的“彼方”也暗示着文明进步的“此方”。“穴居”的俄罗斯人并未接受基督教的人性化学校。正如另一位官员所写，“这种缺乏使他们变成了野蛮人。这种缺乏使他们变成了没有感情的人。正因如此，霍屯督人才是霍屯督人，食人族才是食人族。”*148
 
-诗人约翰·威廉·路德维希·格莱姆描述俄罗斯人是一个“尚未成为人”的民族，即使像腓特烈大帝这样“人类的朋友”也必须“拿起武器”与之对抗。*149 在1757年的诗《利萨战役后的凯歌》（“Siegeslied nach der Schlacht bei Lissa”）中，格莱姆爆发出了对自为性暴力的幻想：
+诗人约翰·威廉·路德维希·格莱姆描述俄罗斯人是一个“尚未成为人”的民族，即使像腓特烈大帝这样“人类的朋友”也必须“拿起武器”与之对抗。*149 在1757年的诗《利萨战役后的凯歌》“Siegeslied nach der Schlacht bei Lissa”中，格莱姆爆发出了对自为性暴力的幻想：
 
 残酷的战争欲望
+
 杀戮尚未
+
 进入我们的胸膛，
+
 或踢到我们的脸上。
+
 但现在，父亲！我们没有
+
 心，只有愤怒
+
 我们带着杀戮的欲望看见敌人
+
 我们渴望他的鲜血！
+
 . . .
+
 非人地，我们停止聆听
+
 那些跪在我们面前哀求和乞求的人。
 
 我们以前会多快地听见啊！
 
 . . . . . . . . . .
 
+
+
 不是老虎，而是人类，
+
 在战争中彼此熊熊燃烧，就像你一样！
+
 我们，人类，冲进战斗中喊叫
+
 “你们这些狗，去死吧！”对人类。*150
 
 最后两行可能暗示了人类堕落深度的悲伤，但这并不是本意。
@@ -2146,7 +2255,6 @@ out 总统布什与石油行业的联系。1890 年，普鲁士陆军前总参�
 
 那些不受欧洲走向世界大战影响的少数观察者将其视为对正常性信念的深刻重构。其中最
 
-
 important literary records of this transformation is Karl Kraus’s *The Last Days of Mankind*. Kraus was the first person to recognize World War I as what later historians would take for granted: the fundamental catastrophe of the twentieth century. In the following dialogue, Kraus describes the madness of war in the voice of one of modernity’s discontents:
 
 GRUMBLER: In the past, war was a tournament of the few, and now it involves the multitude. It used to be a contest between the strong, now it is a battle of machines.
@@ -2161,6 +2269,8 @@ GRUMBLER: No, for if we still had imagination, we would no longer wage war.
 
 OPTIMIST: Why not?
 
+
+
 GRUMBLER: Because then the stimulus of a phraseology left over from a decrepit ideal would not befog our brains. Because we would be able to imagine even the most unimaginable horror and would anticipate how quickly the road is traversed from the colorful phrases and all the flags of enthusiasm to the field-gray of misery. Because the prospect of dying of dysentery for the fatherland or of having one’s feet get frostbitten would no longer set ringing oratory into motion. Because we would at least know with certainty that in setting out for the front we would get full of lice for the fatherland. And because we would know that man has invented the machine only to be overpowered by it, and because we would not outdo the madness of having invented it with the worse madness of letting ourselves be killed by it. Because we would defend ourselves against an enemy from whom we see nothing but rising smoke. Because we would have realized [or] sensed that our munitions factory does not provide sufficient protection against our enemy's [sic]. Had we imagination, we would know that it is a crime to expose life to chance, and a sin to degrade death to chance. That it is folly to build armored ships if one builds torpedo boats to outwit them. Folly, to make mortars if, as a defense against them, one digs trenches in which only the man who first sticks his head out is lost. Folly, to chase mankind into mouseholes, in flight before his own weapons, and henceforth to let mankind enjoy peace only under the earth…. Isn’t it noticeable how our individual destinies sneak us off from the whole ensemble, in which everyone is a hero for lack of one?¹⁶¹
 
 In the failure of moral and intellectual forces to constrain the possibilities unleashed by technological advance lies the effort to cling to an idea of self completely at odds with reality. Alone, the legitimation of war would not have contradicted this idea of self. But the nature of that war—its technology, its massive scale—required a mass mobilization that brought increased emphasis on the idea of nation and the rhetoric of civilizing mission, which, together, suddenly broke free from all forms of practiced moderation. (The furor against human rights is just one example.) When increased emphasis on the nation exceeds a certain degree, modern differentiation, along with its system of multiple political parties, gives way to the idea of the nation as a racially defined Volksgemeinschaft.
@@ -2170,20 +2280,32 @@ The Volksgemeinschaft represented a new idea of social coexistence. It changed e
 > A VIENNESE MAN: (holding a speech from a bench): — we must obey the Manes of the murdered heir to the throne. Back then there was no playing around. That's why I say to you, fellow citizens, we must join the fatherland in this great era as one man, our flags waving. We are surrounded by enemies! We are waging a holy war of resources! ... And that's why I say to you: it is everyone's duty who wants to be a citizen to stand shoulder to shoulder and do his part.... And that's why I say to you: you must all stand together as one man! Just so the enemies hear it: we are waging a holy war of resources. We stand like a phoenix through which they will not break.... Austria will rise like a phalanx from the world's ashes!¹⁶²
 
 > VOICES FROM THE CROWD: Bravo! Right!—Serbia must die!—Whether willing or not!—Every Serbian must die!
-> PERSON IN THE CROWD: And every Russki!
-> SECOND: (yelling): A pleasure!
-> THIRD: A fool!
-> FOURTH: A shot!
-> ALL: That's right! A shot! Bravo!
-> SECOND: And for every frog?
-> THIRD: A horse! (laughter)
-> FOURTH: A blow!
-> ALL: Bravo! A blow! That's right!
-> THIRD: And for every Brit?
-> FOURTH: A kick!
-> ALL: Very good! For every Brit a kick! Bravo!
-> PANHANDLER: God punish England!¹⁶³
 
+> PERSON IN THE CROWD: And every Russki!
+
+> SECOND: (yelling): A pleasure!
+
+> THIRD: A fool!
+
+> FOURTH: A shot!
+
+> ALL: That's right! A shot! Bravo!
+
+> SECOND: And for every frog?
+
+> THIRD: A horse! (laughter)
+
+> FOURTH: A blow!
+
+> ALL: Bravo! A blow! That's right!
+
+> THIRD: And for every Brit?
+
+> FOURTH: A kick!
+
+> ALL: Very good! For every Brit a kick! Bravo!
+
+> PANHANDLER: God punish England!¹⁶³
 
 
 
@@ -2212,13 +2334,21 @@ SECOND POSTAL SERVICE ADMIRER: 而之后是犹太人。我们会清理干净！�
 像这样的爆发在现代是前所未有的，此前只出现在社会规范的边缘。在歌德关于美因茨围城的报告中，例如，我们读到法国军队撤离城市时的气氛：
 
 > [T]he crowd had become quite agitated; they shouted curses and threats. The women criticized their men for letting these worthless creatures pass without incident, for they were certainly carrying in their bundles many a piece of property that rightfully belonged to true citizens of Mainz....
+
 >
+
 > Precisely in this most dangerous moment there appeared a procession which certainly would have wished to be far away from this scene. A handsome man rode up on horseback without any special protective detachment, his uniform not precisely a military one, at his side a well-formed and very beautiful woman in men’s clothing, behind them followed a number of four-in-hands packed with boxes and crates; the quiet was ominous. Suddenly there was a murmur in the crowd and a cry: “Stop him! Kill him! That’s the scoundrel of an architect who plundered the cathedral chapter and then set fire to it!” It would have taken only one determined person to set off the crowd.
+
 >
+
 > Without thinking of anything else than preserving the peace in front of the Duke’s quarters, and imagining in a flash what the sovereign and general would say if he returned and had trouble reaching his front door because of the debris left by such unlawful vengeance, I sprang downstairs, raced outside, and cried out with an authoritative voice: “Halt!”
+
 >
+
 > ... [T]hese were the quarters of the Duke of Weimar and the plaza was sacred; if they wanted to make a disturbance and wreak vengeance, then they should go somewhere else. The King had promised safe conduct to all the French, and if he had wanted to set conditions and except certain people from the safe conduct, he would have stationed observers and either turned back or taken prisoner those who were guilty.... And they, the people in the crowd, no matter who they were and how they got there, had no other role to play here in the midst of the German army than to remain peaceful spectators; their misfortune and their hatred, I said, gave them no rights here, and once and for all I would not allow any violence in this place.
+
 >
+
 > ... I said impatiently: “It is simply in my nature, I prefer to commit an injustice rather than endure disorder.”¹⁶⁶
 
 这种无序将在第一次世界大战的欧洲变得司空见惯，并在1930年代的德国和奥地利以及第二次世界大战中以更猛烈的形式卷土重来。然而，接受生活中的无序的人并非有意识地这样做。有些人可能会感受到强烈的情绪、精神高涨或兴奋。但如果他们知道自己在过程中正在丧失自我，就不会体验到这些愉悦的感觉。采纳《人类最后的日子》的视角会使他们陷入信心危机并削弱其行动能力。这种程度的自我丧失无法像战壕中的炮弹休克一样融入日常生活。对民族和Volksgemeinschaft思想的强调日益增加，除了助长集体暴力外，还帮助维持了社会文明的形象，尽管社会处于无序状态，从而限制了认知失调的机会。
@@ -2228,11 +2358,10 @@ SECOND POSTAL SERVICE ADMIRER: 而之后是犹太人。我们会清理干净！�
 在《人类最后的日子》中，两名战争投机者，被认同为神话生物歌革和玛各，在一列瑞士火车上进行了如下对话：
 
 > GOG: 你怎么看他们反对毒气战的宣言？
+
 > MAGOG: 说明我们的毒气有效。
+
 > GOG: 对。我们德国人愉快地支持国际法，但我们拒绝当冤大头。
-
-
-
 
 关于当兵的事，他在集市上是个好射手。当局起初觉得他的故事荒唐，拒绝了他的申请。直到他第二次自愿报名，才被允许入伍。
 
@@ -2242,6 +2371,8 @@ SECOND POSTAL SERVICE ADMIRER: 而之后是犹太人。我们会清理干净！�
 
 九年后，达恩为类似的法律原则辩护。个人有权利也有义务
 
+
+
 > 检视其所在国家的法律制度，看它是否……为和平提供了一个总体框架。只有当答案是肯定的，他才可以欣然服从国家。如果答案是否定的，他仍然必须服从国家……但他还有额外的义务，致力于和平地改变法律中不合理的部分。¹⁷¹
 
 人人皆知，国际人权、战争法以及体现在普通法中的惯例，常常未能实现其宗旨。尽管如此，认为国际法只服务于强者，既属愤世嫉俗，也与事实不符。马蒂·科斯肯涅米恰如其分地将国际法描述为“温和的国家文明者”。尽管存在种种合理的怀疑，这确实是它的功能。¹⁷² 国际规范的存在本身就宣告着
@@ -2249,14 +2380,12 @@ SECOND POSTAL SERVICE ADMIRER: 而之后是犹太人。我们会清理干净！�
 ## 断头台与小狗
 
 > 雅各宾派的例子具有启发性。
+>
 > ——弗拉基米尔·I·列宁，《人民的敌人》
 
 即使在今天看来似乎只包含野蛮屠杀和赤裸裸的权力展示的时代，死刑的实施也始终遵循着一定的程序。事实上，明确的规则是其被接受的关键要素。174 每当刽子手偏离标准程序或搞砸了行刑，他就有被愤怒的人群私刑处死的风险。以斩首为例。直到十八世纪，斩首主要保留给贵族，作为最快、最无痛，而且——当用剑执行时，剑是贵族的首选武器——最不耻辱的处决方式。但斩首存在许多风险。如果刀刃碰到骨头，就可能需要再砍一次。如果囚犯移动了位置，或者刽子手身体状况不佳，或因连续执行多次处决而疲劳，剑可能会砍到后脑勺或肩膀，使事情变得比本已血腥的状况更加恐怖。如果下一个待处决者看到之前斩首的血迹，他很可能会失去勇气。正是这些风险，使得当局在十二和十三世纪开始试验能够更可靠完成这一任务的装置。与用剑斩首一样，这些早期装置只供贵族使用。175 如果它们的使用反映的是人们对残忍的普遍反感，而非社会阶级的区分，那么它们本应适用于所有人。尽管这种选择性的部署，杀戮的自动化后来为将处决理解为一种处所性暴力铺平了道路。
 
-到了十八世纪，部分由于切萨雷·贝卡里亚《论犯罪与刑罚》（1764）的影响，欧洲对死刑的审查日益严格。1777年，让·保罗·马拉写道，死刑只应适用于“最严重的罪行”：“弑自由、弑父、弑兄弟、谋杀朋友或恩人。”惩罚可能因罪犯的罪行而使其蒙羞，但“绝不应残酷”。176 批评者还要求，处决的形式不应反映社会阶级，而应反映个人罪责的程度。1783年，马克西米连·罗伯斯庇尔提交了一篇关于“废除不名誉刑罚”的竞赛论文，在其中他主张普遍化
-
-
-斩首的观念是为了让罪犯的家人免于因绞架和车裂而蒙受的耻辱。
+到了十八世纪，部分由于切萨雷·贝卡里亚《论犯罪与刑罚》（1764）的影响，欧洲对死刑的审查日益严格。1777年，让·保罗·马拉写道，死刑只应适用于“最严重的罪行”：“弑自由、弑父、弑兄弟、谋杀朋友或恩人。”惩罚可能因罪犯的罪行而使其蒙羞，但“绝不应残酷”。176 批评者还要求，处决的形式不应反映社会阶级，而应反映个人罪责的程度。1783年，马克西米连·罗伯斯庇尔提交了一篇关于“废除不名誉刑罚”的竞赛论文，在其中他主张普遍化斩首的观念是为了让罪犯的家人免于因绞架和车裂而蒙受的耻辱。
 
 1789年12月1日，医生兼国民议会议员约瑟夫-伊格纳兹·居里昂提出了一项使惩罚更平等、更公正的法律。其第一条规定：“同类罪行应受到同类惩罚，不论罪犯的等级或身份如何。”同样，法律还规定，惩罚不应使受害者家属蒙羞，而对家属进行诋毁的公民应受到司法训诫。最后一篇文章定义了最严厉的惩罚形式：“无论罪犯犯何种罪行，法律判处死刑的所有人所使用的惩罚方法都应相同。罪犯将被斩首。斩首应通过一种简单的机械装置来执行。”在议会面前发言时，居里昂赞扬了后来以他名字命名的装置的优点，声称被处决者只会感觉到“颈后一阵凉风”。议员们对居里昂的演讲报以笑声，无疑这是他们自身不安的体现。
 
@@ -2266,30 +2395,25 @@ SECOND POSTAL SERVICE ADMIRER: 而之后是犹太人。我们会清理干净！�
 
 公民们，议会不知不觉地偏离了真正的问题。这里没有审判。路易不是被告。你们不是法官。你们不是，也不能成为任何其他身份，只能是政治家和国家的代表。你们没有对某个人作出判决的权力，而是有实施公共拯救措施、执行国家天命的职责……以任何方式提出将路易送上审判台，都是对王权和宪法专制主义的倒退；这是反革命的想法，因为这意味着将革命本身置于争议之中。事实上，如果路易仍可被审判，那么他就可能被宣告无罪；他可能是无辜的；我在说什么！他在被审判之前被推定为无罪。如果路易被宣告无罪，如果路易可以被推定为无罪，革命会怎样？如果路易是无辜的，那么所有自由的捍卫者就都成了诽谤者……巴黎人民，法兰西帝国的全体爱国者都有罪。¹⁸⁷
 
-这是1792年12月。次年，谈及革命政府的原则时，罗伯斯庇尔指出革命的目标是
-
-
-
-建立一个“胜利且和平的自由体系”，以“引导国家的道德和物质力量”。相比之下，革命本身“是自由对其敌人的战争……它受制于不那么统一和不那么严格的规则，因为它存在的环境是动荡和多变的……革命政府对好公民负有充分的国家保护义务；对人民的敌人，它除了死亡之外一无所有。”¹⁸⁸ 在1794年2月5日的演讲中，罗伯斯庇尔重申了这一区别。“在平静的水域中”，他认为，民主政府必须“对人民信任，对自身严厉”，以美德为其“基本原则”。¹⁸⁹ 当“风暴肆虐”而革命政府处于战争状态时，这一原则不再适用：
+这是1792年12月。次年，谈及革命政府的原则时，罗伯斯庇尔指出革命的目标是建立一个“胜利且和平的自由体系”，以“引导国家的道德和物质力量”。相比之下，革命本身“是自由对其敌人的战争……它受制于不那么统一和不那么严格的规则，因为它存在的环境是动荡和多变的……革命政府对好公民负有充分的国家保护义务；对人民的敌人，它除了死亡之外一无所有。”¹⁸⁸ 在1794年2月5日的演讲中，罗伯斯庇尔重申了这一区别。“在平静的水域中”，他认为，民主政府必须“对人民信任，对自身严厉”，以美德为其“基本原则”。¹⁸⁹ 当“风暴肆虐”而革命政府处于战争状态时，这一原则不再适用：
 
 如果在和平时期，人民政府的主弹簧是美德，那么在革命中，它同时是美德和恐怖：美德，没有它恐怖是致命的；恐怖，没有它美德是无力的。恐怖不过是迅速、严厉、不可动摇的正义；因此它是美德的流露……有人说恐怖是专制政府的主弹簧……革命政府是自由对暴政的专制。¹⁹⁰
 
 罗伯斯庇尔认为，在与那些试图摧毁革命所取得的自由和平等的敌人战斗中，任何形式的暴力都是正当的：人民的敌人、遣返的流亡者、投机者、外国代理人，所有那些“在我们周围游荡”、“窃听我们的秘密”、“迎合我们的激情”并“试图影响我们甚至我们的观点”的人。¹⁹¹
 
-罗伯斯庇尔的语言包含了后来成为二十世纪革命修辞基本特征的要素：紧急状态、以自由之名进行的压迫、为赢得和平而进行的战争、处处威胁革命的叛徒、大规模逮捕和大规模屠杀的必要性。在这个世界里，恐怖仅仅是对自由敌人的工具性清除，仅此而已。革命的仇恨本应只表现在对其反对者的永久性清除上，而非对其的折磨。现实——断头台的景象、群众日益加剧的残暴、旁观者观看流浪狗舔食鲜血时的快感、刽子手在夏洛特·科尔黛被斩首后扇她耳光——证明了这一主张的明显荒谬性。尽管如此，革命的语言仍然是它本来的样子：一种合法化的修辞。当革命的公诉人安托万·昆汀·富歇-蒂尼维尔自己在狱中等待执行时，他写信给妻子说：“我为我的国家而死，无可指责，我很满足；后来，我的清白将被认可。”¹⁹² 相信革命的恐怖与
-
-*旧制度的残酷性*在本质上不同，使得被合法化为工具性和局部的暴力可以演变成一种自目的性的毁灭狂欢。
+罗伯斯庇尔的语言包含了后来成为二十世纪革命修辞基本特征的要素：紧急状态、以自由之名进行的压迫、为赢得和平而进行的战争、处处威胁革命的叛徒、大规模逮捕和大规模屠杀的必要性。在这个世界里，恐怖仅仅是对自由敌人的工具性清除，仅此而已。革命的仇恨本应只表现在对其反对者的永久性清除上，而非对其的折磨。现实——断头台的景象、群众日益加剧的残暴、旁观者观看流浪狗舔食鲜血时的快感、刽子手在夏洛特·科尔黛被斩首后扇她耳光——证明了这一主张的明显荒谬性。尽管如此，革命的语言仍然是它本来的样子：一种合法化的修辞。当革命的公诉人安托万·昆汀·富歇-蒂尼维尔自己在狱中等待执行时，他写信给妻子说：“我为我的国家而死，无可指责，我很满足；后来，我的清白将被认可。”¹⁹² 相信革命的恐怖与*旧制度的残酷性*在本质上不同，使得被合法化为工具性和局部的暴力可以演变成一种自目的性的毁灭狂欢。
 
 在菲德尔·卡斯特罗的游击队抵达哈瓦那、巴蒂斯塔政权在古巴崩溃几年后，埃内斯托“切”·格瓦拉上校出版了《古巴革命战争的片段》，记述了他在大山游击战期间的经历。其中一件虽小却完美概括了革命道德的事件。格瓦拉的游击队在追击政府军时发现，他们在营地养的小狗跟了上来。他们试图赶走它，但这只小狗不断返回，而且更糟的是，最终开始嚎叫。在多次安抚动物无果后，格瓦拉下令将其杀死。负责照顾小狗的士兵，一个名叫费利克斯的人，用“目光空洞”看着切。士兵随后“拿出一根绳子，绕在动物的脖子上，开始收紧……伴随着最后一次神经质的抽搐，小狗停止了动弹。它就那样躺着，身体摊开，小脑袋散落在树枝上。”¹⁹³ 这里的问题不在于人们在战争时期被迫做什么，而在于事后他们如何谈论它。一个刚刚被任命为“革命武装力量训练部部长”的人，一个负责清洗军队队伍、惩罚被推翻政权罪行、处理叛徒的人，想要向人民传播什么信息？¹⁹⁴
 
-由于巴蒂斯塔政权的领导层早早逃离或躲进使馆，由格瓦拉作为“最高检察官”决定命运的人大多是小喽啰和战俘。一些报道表明格瓦拉很宽容，只在严重案件中判处死刑，并采取措施确保酷刑受害者不会审判他们的施虐者。但也有任意处决的实例。例如，卡斯特罗的兄弟劳尔就下令处决七十名战俘并将他们埋入集体坟墓。¹⁹⁵ 虽然格瓦拉并非直接负责，但这显示了革命即使在菲德尔上台后仍具有战争性质。国内的清洗是山地冲突的延续。格瓦拉像罗伯斯庇尔在国民公会前发言一样，明确表示消灭敌人是目标。在一封信中，他写道：“枪决并不是古巴人民的需要，而且也是人民的强制。”¹⁹⁶ 当一位医生朋友问他关于他在处决中的角色时，切告诉他：“听着，在这件事上你必须在他们杀你之前先杀了他们。”¹⁹⁷ 在古巴共产党赞助的一次活动中，格瓦拉说：“[U]要清楚地理解，这种清算并不是出于报复，甚至不仅仅是
 
 
-精神正义，但因为需要确保所有这些人的目标能在最短的时间内实现……整个古巴民族都应成为一支游击队。”198 杀敌于敌杀你之前这一原则将始终是格瓦拉政治思想的基石。当他的政治失败时，他在别处发动游击战，先是在非洲，然后在玻利维亚。通过设想一个以无情且无法无天的军队为模式的社会，他摧毁了文明本身的概念。像罗伯斯庇尔一样，格瓦拉宣扬专制，像鲁登道夫将军一样，他热爱计划经济。“谁有权说每年只能毕业10名律师，而100名工业化学家应该毕业？”格瓦拉在圣地亚哥大学的演讲中问道。“[有人会说]这是独裁，没错：这就是独裁。”199 一次又一次地，他警告叛徒——无一例外，是任何对事业热情不足的人——以及他们对革命构成的威胁。当格瓦拉在玻利维亚丛林中踉跄前行，衣衫褴褛、面色阴沉，试图在那些勉强糊口、从革命中除了速死别无所得的农民中寻找志愿者时，被沃尔夫·比尔曼称为“手持枪械的耶稣”的那个人开始使用恐怖。在他的日记中格瓦拉写道，“农民基础尚未建立，尽管通过有计划的恐怖我们能够中和其中一些人；支持将会随后到来。没有一个[玻利维亚人]应征入伍”200 格瓦拉对玻利维亚灾难的私人印象透露了革命出版物文章中沉默不语的内容：骚扰和恐吓人民的不仅仅是巴蒂斯塔的军队；革命的游击队也是如此。事实是，很少有人愿意为一个不确定的未来冒生命危险，而大多数人愿意，或认为自己愿意，接受压迫他们的政权。他们并不期望出现在门口的那个破衣烂衫的武装者会是救世主。在考虑合作之前，他们必须确信这位救世主可以像他们所知的那个恶魔一样邪恶。这种策略对古巴革命者很有效。相比之下，在玻利维亚，一个告密者向受中央情报局训练的军队举报了格瓦拉的乌合之众。
+# 巴蒂斯塔政权后的清洗与格瓦拉
+
+由于巴蒂斯塔政权的领导层早早逃离或躲进使馆，由格瓦拉作为“最高检察官”决定命运的人大多是小喽啰和战俘。一些报道表明格瓦拉很宽容，只在严重案件中判处死刑，并采取措施确保酷刑受害者不会审判他们的施虐者。但也有任意处决的实例。例如，卡斯特罗的兄弟劳尔就下令处决七十名战俘并将他们埋入集体坟墓。¹⁹⁵ 虽然格瓦拉并非直接负责，但这显示了革命即使在菲德尔上台后仍具有战争性质。国内的清洗是山地冲突的延续。格瓦拉像罗伯斯庇尔在国民公会前发言一样，明确表示消灭敌人是目标。在一封信中，他写道：“枪决并不是古巴人民的需要，而且也是人民的强制。”¹⁹⁶ 当一位医生朋友问他关于他在处决中的角色时，切告诉他：“听着，在这件事上你必须在他们杀你之前先杀了他们。”¹⁹⁷ 在古巴共产党赞助的一次活动中，格瓦拉说：“[U]要清楚地理解，这种清算并不是出于报复，甚至不仅仅是精神正义，但因为需要确保所有这些人的目标能在最短的时间内实现……整个古巴民族都应成为一支游击队。”198 杀敌于敌杀你之前这一原则将始终是格瓦拉政治思想的基石。当他的政治失败时，他在别处发动游击战，先是在非洲，然后在玻利维亚。通过设想一个以无情且无法无天的军队为模式的社会，他摧毁了文明本身的概念。像罗伯斯庇尔一样，格瓦拉宣扬专制，像鲁登道夫将军一样，他热爱计划经济。“谁有权说每年只能毕业10名律师，而100名工业化学家应该毕业？”格瓦拉在圣地亚哥大学的演讲中问道。“[有人会说]这是独裁，没错：这就是独裁。”199 一次又一次地，他警告叛徒——无一例外，是任何对事业热情不足的人——以及他们对革命构成的威胁。当格瓦拉在玻利维亚丛林中踉跄前行，衣衫褴褛、面色阴沉，试图在那些勉强糊口、从革命中除了速死别无所得的农民中寻找志愿者时，被沃尔夫·比尔曼称为“手持枪械的耶稣”的那个人开始使用恐怖。在他的日记中格瓦拉写道，“农民基础尚未建立，尽管通过有计划的恐怖我们能够中和其中一些人；支持将会随后到来。没有一个[玻利维亚人]应征入伍”200 格瓦拉对玻利维亚灾难的私人印象透露了革命出版物文章中沉默不语的内容：骚扰和恐吓人民的不仅仅是巴蒂斯塔的军队；革命的游击队也是如此。事实是，很少有人愿意为一个不确定的未来冒生命危险，而大多数人愿意，或认为自己愿意，接受压迫他们的政权。他们并不期望出现在门口的那个破衣烂衫的武装者会是救世主。在考虑合作之前，他们必须确信这位救世主可以像他们所知的那个恶魔一样邪恶。这种策略对古巴革命者很有效。相比之下，在玻利维亚，一个告密者向受中央情报局训练的军队举报了格瓦拉的乌合之众。
 
 不可能说格瓦拉对暴力和死亡的热爱是促使他参战的原因，还是他在战争中获得了这种热爱。很可能他和大多数人一样，寻求一个能够发挥其才能的环境；他只是恰好在革命中找到了它。他的行动让他的医学训练呈现出不同的光彩。他在公开场合以悲情描述的一次处决，在他的日记中却得到了冷静而临床式的处理，包括他如何抢劫尸体的描述。“万岁，死亡！”的不断呼喊最终演变成一场国际战争的幻想，通过这场战争人类将重获新生。
 
-## 再合法化（2）：末世净化的修辞
+# 再合法化（2）：末世净化的修辞
 
 九月，我用贵族的残肢断体喂养了革命的幼崽。我的声音从贵族和富人的黄金中为人民锻造武器。我的声音是飓风，让专制主义的走狗在刺刀的潮汐中溺亡。
 
@@ -2300,13 +2424,10 @@ SECOND POSTAL SERVICE ADMIRER: 而之后是犹太人。我们会清理干净！�
 在《丹东之死》中，罗伯斯庇尔这样表述革命信条：
 
 > 我告诉你们，谁在我拔剑时拉住我的手臂，他就是我的敌人。他的动机无关紧要。谁阻碍我在自卫时，就是杀了我，就像他亲手攻击我一样……
-> 
+
 > …社会革命尚未完成。半途而废地进行革命就是挖自己的坟墓。特权阶层的社会尚未死亡。人民的强健力量必须取代这个完全腐朽的阶级。恶必须受到惩罚，美德必须通过恐怖统治。201
 
-罗伯斯庇尔最初反对死刑；列宁无法想象没有死刑的革命。当有人告诉他第二届苏维埃代表大会通过了废除处决的决议时，他暴怒道：“胡说八道，没有行刑队怎么进行革命？你指望通过解除武装来对付你的敌人吗？”202 在文明使命的修辞中，
-
-
-敌人是蛮族；在末世净化的修辞中，敌人是革命尚未（还未）实现目标的人所归因的对象。换句话说，敌人就是叛徒，尽管这里起作用的并不是这些词语。富歇-蒂尼维尔和布尔什维克的告密者和刽子手也谈论过害虫，但这个词对他们来说并不是构成性的，就像我在下一节中论证的那样，它在种族灭绝的语言中才是构成性的。在末世净化的修辞中，叛徒被定义得如此宽泛，以至于没有人能确信自己不是其中之一。当然，革命历来都有明确的敌人概念：贵族、资产阶级、富农。但这些人到底是谁呢？被认定为富农就足以让人被杀。富裕本应是一个线索，但在20世纪20年代末，谁能被视为富裕的农民呢？那个把山羊藏起来以免被劫掠的士兵掠夺的旅行者，可能因为是富农而被枪杀，无论部队是奉政府命令行事还是仅仅出于自身冲动。相反，资产阶级或贵族可以站在革命一边，就像奥尔良公爵在法国大革命中以菲利普·埃加利特之名支持革命一样。
+罗伯斯庇尔最初反对死刑；列宁无法想象没有死刑的革命。当有人告诉他第二届苏维埃代表大会通过了废除处决的决议时，他暴怒道：“胡说八道，没有行刑队怎么进行革命？你指望通过解除武装来对付你的敌人吗？”202 在文明使命的修辞中，敌人是蛮族；在末世净化的修辞中，敌人是革命尚未（还未）实现目标的人所归因的对象。换句话说，敌人就是叛徒，尽管这里起作用的并不是这些词语。富歇-蒂尼维尔和布尔什维克的告密者和刽子手也谈论过害虫，但这个词对他们来说并不是构成性的，就像我在下一节中论证的那样，它在种族灭绝的语言中才是构成性的。在末世净化的修辞中，叛徒被定义得如此宽泛，以至于没有人能确信自己不是其中之一。当然，革命历来都有明确的敌人概念：贵族、资产阶级、富农。但这些人到底是谁呢？被认定为富农就足以让人被杀。富裕本应是一个线索，但在20世纪20年代末，谁能被视为富裕的农民呢？那个把山羊藏起来以免被劫掠的士兵掠夺的旅行者，可能因为是富农而被枪杀，无论部队是奉政府命令行事还是仅仅出于自身冲动。相反，资产阶级或贵族可以站在革命一边，就像奥尔良公爵在法国大革命中以菲利普·埃加利特之名支持革命一样。
 
 敌人概念的另一个困难在于，一旦革命掌权，内战结束，敌人就消失了，至少在原则上是如此。此时，革命所要做的就是实施其为之而发起的措施。为了维持“敌人”，革命必须引入叛徒的概念，叛徒阻碍其目标的实现。这可以是传统阶级敌人的形式，即秘密破坏者，也可以是腐败而意志薄弱的同志。末世净化的修辞将任何阻碍革命繁荣的人都视为敌人。敌人是对革命事业的叛徒，而革命事业现在已成为国家或全人类的普遍事业。
 
@@ -2321,14 +2442,11 @@ SECOND POSTAL SERVICE ADMIRER: 而之后是犹太人。我们会清理干净！�
 - 1. 绞死（并确保绞刑在人民面前公开进行）不少于一百名已知的富农、富人、吸血鬼。
 - 2. 公布他们的姓名。
 - 3. 没收他们所有的粮食。
-
-
-
-
-4. 按照昨天的电报指定人质。实施时，要让周围数百公里的人们都能看到、颤抖、知晓：他们正在绞死并将绞死那些吸血富农。
+- 4. 按照昨天的电报指定人质。实施时，要让周围数百公里的人们都能看到、颤抖、知晓：他们正在绞死并将绞死那些吸血富农。
 
 请电告收悉和执行情况。  
 你的，列宁  
+
 找一些真正心狠手辣的人。²⁰⁵
 
 随后，他进一步明确了要实施的恐怖手段：
@@ -2336,6 +2454,8 @@ SECOND POSTAL SERVICE ADMIRER: 而之后是犹太人。我们会清理干净！�
 彻底击溃尤登尼奇（正是要彻底击溃……给他狠狠一顿揍）至关重要。如果（他的）攻势已经展开，难道不能动员两万彼得格勒工人加上一万资产者，在他们身后架设大炮，枪毙几百人，从而对尤登尼奇产生真正的群体性冲击吗？²⁰⁶
 
 列宁在给托洛茨基副手的便条中写道：
+
+
 
 好一个漂亮的计划。同捷尔任斯基一起完成它。伪装成“绿军”（事后把罪责推给他们），我们推进10-20俄里，绞死富农、神父和地主绅士。每绞死一人，赏金10万卢布。²⁰⁷
 
@@ -2351,7 +2471,9 @@ SECOND POSTAL SERVICE ADMIRER: 而之后是犹太人。我们会清理干净！�
 还有什么药太苦？  
 为了消灭卑劣  
 什么卑劣你不能忍受？  
+
 . . . . . . . . . .  
+
 沉入污秽  
 拥抱屠夫，但是  
 改变世界：它需要改变！²⁰⁹
@@ -2361,9 +2483,6 @@ SECOND POSTAL SERVICE ADMIRER: 而之后是犹太人。我们会清理干净！�
 > 多么美妙、近乎超人的音乐！我总自豪地想——也许这是我的天真——人类能创造出多么奇妙的东西。……但我不能经常听音乐。它会刺激我的神经，使我宁愿说些蠢话，抚摸那些生活在这肮脏地狱中却仍能创造如此之美的人们的头。但现在不是抚摸头的时候——你的手可能会被咬掉。我们必须毫不留情地打人们的头，即使我们在原则上反对任何人与人之间的暴力。²¹⁰
 
 *正如所有这些例子所表明的，末世论清洗的修辞不仅把暴力变成了一种被允许且被授权的行动手段；它还把暴力本身变成了一种美德。* 然而，只有革命尚未取得最终胜利时，暴力才是一种美德。革命乌托邦——一个平等与和平的社会——建立在这样的信念之上：犯罪是革命前社会的恶习，一旦敌人被打败，政治暴力将不再需要，也就没有什么能阻止革命实现其目标了。无论现实多么与这一信念相悖，这种信念正是末世论清洗修辞与现代性所共有的东西。
-
-
-
 
 ## 再合法化（3）：种族灭绝的修辞
 
@@ -2381,14 +2500,17 @@ SECOND POSTAL SERVICE ADMIRER: 而之后是犹太人。我们会清理干净！�
 
 有趣的是，这种修辞很少以赤裸裸的形式出现。军事领导人并没有强迫士兵处决平民，并且常常不愿承认自己下令的暴力。217 传递大规模屠杀行为的官僚语言与其说是伪装——唯一可能破译它的人已经知道其含义——不如说是拒绝抛弃现代文明的约束。在看到那眼神之后
 
-
 of men who had just performed an execution, the police chief Erich von dem Bach-Zelewski, an upper-level SS officer, claims to have asked Himmler, “What kind of followers are we training here? Either neurotics or savages?”[21] This worry can be taken seriously; other Nazi officials shared it too. No less serious was Himmler’s famous speech in Poznan, in which he said that the murderers “remained upstanding” and called the executions “a glorious chapter” that “may never be mentioned.”[219] Himmler said never but meant not yet. The rhetoric of genocide culminates in the idealization of violence for its own sake—the canonization of autotelic violence.
+
+
 
 The rhetoric of genocide does not simply lead to genocide. It accustoms people to the idea before it becomes reality. One example of the rhetoric of genocide at work occurred as part of a Nazi scheme to relocate Jews to Madagascar—the so-called Madagascar Plan.[220] The Nazis were not the first to propose the idea; the governments of France, Britain, and Poland had toyed with similar plans. Christopher K. Browning writes: “The Poles … sent a three-man investigating team [the Lepecky commission] to study the feasibility of relocating Polish Jews there. [The team] concluded that 5,000–7,000 families could be settled on Madagascar, although the more optimistic of the two Jewish members of the commission thought a mere 500 families was the maximum.” Browning then dryly observes, “If such a fantastic idea was seductive even to the French and the Poles, obviously it could not escape attention in Germany.”[221] Fantastic indeed: debate continues today about whether the plan was ever serious or just a Nazi ploy to deceive the Jews and the international public about the true nature of the genocide.[222] It is true that the Nazis never came close to realizing the plan; it wasn’t supposed to be implemented until after they won the war. But the plan was no mere flight of fancy, either. Germans went so far as to think about the number of Jews to be deported, the population density on the island, the legal status of the colony, the duration of the deportation, the international reaction, and so forth.[223]
 
 The Madagascar Plan was one of several ideas devised by Germans to deport European Jews. In 1939 Heydrich spoke of a “Jewish reservation” in Poland, and Eichmann was sent to scout out possible locations in the area around Lublin. There, David Cesarani writes, Eichmann “hit upon a tiny village called Nisko on the river San, an insignificant settlement in sparsely populated wetland which was conveniently near a railroad.”[224] Several thousand Jews were relocated outside the village before the project was put on ice. Conditions in Nisko, as the Nazis knew, were not suited for the settlement of many thousands. In Madagascar they were even less suited for the settlement of many millions. Michael Wildt correctly points out that the Madagascar Plan “already contained . . . an exterminatory dimension, since the planners were well aware that the island offered little chance of survival for the millions of people who were supposed to be deported there.”[225] Nevertheless, talk of the plan stopped short of indulgence in murderous fantasy. In May 1940 Himmler wrote that the “Bolshevist method of physical extermination” is “too un-German, too impossible.”[226] For a political leadership not yet set on genocide, a plan resulting in de facto mass death may have seemed fantastic. But it was everything but fantastic when one considers its role in helping German leaders believe in their own rhetoric of genocide.[227]
 
 Julius Streicher defended himself in Nuremberg by arguing that his violent antisemitic rhetoric was not meant literally.[228] This was how antisemites spoke, he said, and many had done so before him without being accused of inciting murder. This defense was not entirely implausible. Streicher had not taken part directly in mass murder and it’s not clear how much he knew about what was happening. The question whether the genocide was the result of cumulative radicalization misunderstands the issue, however. Yes, genocide would have been inconceivable without the antisemitic rhetoric that was an integral component of National Socialism. But genocide was not just the implementation of this rhetoric. *The speakers of the rhetoric of genocide first came to believe their own words.* One can’t accuse a powerless agitator of having planned a genocide. But what about when the agitator suddenly receives political power and his violent rhetoric becomes reality? Is the rhetoric the part of the plan?
+
+
 
 A common antisemitic argument is that Jews live from the work of others, which is why they must be forced to make an honest living. During the late-nineteenth-century Berlin Antisemitism controversy Wilhelm Endner had this to say:
 
@@ -2414,8 +2536,6 @@ The message was clear: let’s see if the lazy bums get the hint. In Nisko the J
 
 > 男人放弃这种攻击倾向的满足显然并不容易。他们没有它就不舒服……。只要还有其他人可以接受他们的攻击性表现，就总有可能把相当多的人团结在爱中……。在这方面，散布各地的犹太人民为他们所寄居国家的文明做出了最有用的服务；但不幸的是，中世纪对犹太人的所有大屠杀都不足以使那个时期对他们的基督徒同胞更加和平安全。当保罗使徒一旦把人与人之间的普遍之爱确立为其基督教团体的基础时，基督教世界对那些仍在它之外的人的极端不宽容便成为不可避免的后果……。也不是偶然的，德国世界霸权的梦想需要反犹主义作为其补充；并且可以理解的是，建立新的共产主义文明的尝试在
 
-
-
 俄罗斯应当在迫害资产阶级中找到心理支撑。人们只会忧心忡忡地猜测，苏维埃在消灭了他们的资产阶级之后，又会做什么呢？[^238]
 
 我难以轻易接受弗洛伊德的观点，但也不能对其视而不见。问题并不在于攻击性本身。每一种动物物种都需要某种形式的攻击性才能生存；因此，这一术语属于生物学和行为学研究的范畴。问题在于，一种文明在多大程度上将攻击性表现视为暴力，并将其定性为允许、禁止或强制。现代性对暴力的厌恶并非普遍，而是特定且偶然的。现代性无法改变一个事实：人类仍然有能力实施暴力，而且即使是最不被合法化的暴力形式——摧毁他人的身体——依然能提供某种最高层次的快感。现代性之所以为现代，正是因为它禁止自为目的的暴力，并将其视为例外。实施这种暴力，就是将现代文明的要求抛诸脑后。
@@ -2424,14 +2544,17 @@ The message was clear: let’s see if the lazy bums get the hint. In Nisko the J
 
 ## 第四章
 
-## 信任暴力
+### 信任暴力
 
 > 抓起一根重两倍的棍棒 / 将他打死！
+>
 > ——海因里希·冯·克莱斯特，《赫尔曼战役》
 
-### 暴力—信任—权力：魔鬼与小主教
+#### 暴力—信任—权力：魔鬼与小主教
 
 俗话说，污物是放错了位置的物质；同理，邪恶便是放错了位置的暴力——在错误的时间，施加于错误的人，由错误的人实施。诀窍在于将暴力限制在恰当的框架内。想想民间故事《魔鬼罗伯特》。一位公爵夫人祈祷求子却始终未获回应，于是向路西法求助，之后她立刻怀孕了。然而，事情并不顺利。孩子逾期许久未出生，最终分娩时，产程痛苦而漫长。这个男孩，她取名为罗伯特，对于新生儿来说发育得过分成熟，他长全的牙齿咬向喂养他的乳房。随着罗伯特长大，他表现出暴力倾向，刺死了自己的老师，并加入了一伙流氓——正如歌德在《浮士德》第二部中所写，他们“随心所欲地祸害百姓”（9002）.1 直到母亲恐惧地转身离他而去，罗伯特才意识到自己的错误。他杀死了同伙，把掠夺的赃物归还给遭劫的人，并前往罗马寻求教皇的指点。教皇将罗伯特送到一位隐士那里，隐士规定了赎罪方式：保持沉默，装疯卖傻，除了从狗嘴里抢食外什么也不吃，直到上帝给出启示。罗伯特遵命而行，过了一段时间，他谋得一份差事，成为皇帝的宫廷弄臣。皇帝怜悯他，常把额外的残羹扔给猎犬。与此同时，一个邪恶的朝臣因遭皇帝女儿拒绝而蒙羞，便与撒拉森人密谋对抗罗马。战争爆发，在决胜之战中，正当皇帝的军队即将落败之际，罗伯特接到了上帝的命令去消灭异教徒。他骑着一匹白马，身披银色铠甲，冲入战场，以上帝授权的暴力来赎偿过去的罪恶。皇帝的女儿认出他是罗马的秘密救星后，罗伯特赢得了她的婚约，并获得了一半帝国。
+
+
 
 1967年的电影《十二金刚》讲述了一个类似的故事。那是1944年，一群美国军事罪犯面临选择：要么听凭司法处置（其中一些人被判苦役，另一些人则在死囚牢中），要么自愿执行一项深入敌后的危险任务，成功就能得到赦免。随着电影的展开，观众对这些盗贼和杀人犯产生了同情，他们炼狱般的训练将他们变成了一支战备就绪的士兵队伍。尽管每个人都有着犯罪前科，但只有一个人令我们不安：阿彻·马戈特，他因强奸并谋杀一名英国妇女而入狱，其精神病态的冲动最终危及了整个任务。最后，这支小队只有一名成员幸存。
 
@@ -2440,15 +2563,16 @@ The message was clear: let’s see if the lazy bums get the hint. In Nisko the J
 路德维希·蒂克在其1831年的中篇小说《女巫安息日》（Der Hexen-Sabbath，英译 The Witches' Sabbath）中，将暴力这种恼人的可能性作为主题。那是中世纪晚期，阿拉斯的人们相信自己已经告别了宗教裁判所的恐怖，进入了一个更加开明的时代。一位高级神职人员和一位富有寡妇之间的对话，说明了当时的普遍观点：
 
 > “教士的古老统治已经结束，如果他们不顺应世界，他们的权力将在各地崩溃。薄伽丘的书籍和故事，以及其他才俊之士的作品，已为所有人接受。如今，连农民都会嘲笑那些三十年前他还会满怀敬畏地跪拜的事物……”
+
 > 
+
 > “那么你是认为，”凯瑟琳说，“那种可怕的黑暗、疯狂的迷信、宗教裁判所以及殉道者——每当我们翻开旧史书，就惊恐地读到的那些——再也不会重演了吗？”
+
 > 
+
 > “当然不会，”教长说。“一切导致谬误和疯狂的事物都已终结。那种灵魂的疾病已经耗尽……因此，我们亲爱的主教大人——这个小虾米——所行所想的一切都只是可笑。他性格中最可笑之处，在于他相信自己拥有最精妙、最广博的人性知识。”²
 
-但事实证明，教长关于“可怕的黑暗”已成为过去的判断错了，而他嘲笑的那个矮小主教正是那个……
-
-
-one who initiates a new witch hunt in Arras. The bishop succeeds not because the people of Arras really believe in witches or are susceptible to collective hysteria. What Tieck presents is a chilling set of accidental circumstances—intrigue, jealousy, political maneuvering—which result in no one standing up to a man who has clearly gone mad. But the fact that people burn at the stake on the market square represents more than a failure to act. It also requires someone to set in motion the disaster that in retrospect will seem authorless. Someone like the bishop: a person who, with a mere glance, purports to discern conspiracy, sex with the devil, black magic, and other forms of transgressions behind the façade of normality. Tieck’s masterful grasp of psychology shows us there is nothing mysterious about such people and the violence they unleash, even if their victims have no clue.
+但事实证明，教长关于“可怕的黑暗”已成为过去的判断错了，而他嘲笑的那个矮小主教正是那个…… one who initiates a new witch hunt in Arras. The bishop succeeds not because the people of Arras really believe in witches or are susceptible to collective hysteria. What Tieck presents is a chilling set of accidental circumstances—intrigue, jealousy, political maneuvering—which result in no one standing up to a man who has clearly gone mad. But the fact that people burn at the stake on the market square represents more than a failure to act. It also requires someone to set in motion the disaster that in retrospect will seem authorless. Someone like the bishop: a person who, with a mere glance, purports to discern conspiracy, sex with the devil, black magic, and other forms of transgressions behind the façade of normality. Tieck’s masterful grasp of psychology shows us there is nothing mysterious about such people and the violence they unleash, even if their victims have no clue.
 
 *In Der Hexen-Sabbath* a somewhat eccentric old woman is accused of being a witch and arrested. As the bishop crosses the market square on the way to the interrogation, he overhears two “common whores” talking about the case:
 
@@ -2464,9 +2588,9 @@ one who initiates a new witch hunt in Arras. The bishop succeeds not because the
 
 > “Mr. Taket,” replied the bishop spitefully, “who gives you the right to interfere with my official business? These young witches have come to the attention of the Inquisition and are to be put to death.… ”
 
-> Taket looked closely at the clergyman and looked again at the crying strumpets, who had thrown themselves at the feet of both men.… In an indignant and strict tone he replied, “Bishop, sir, I doubt your right to proceed in this manner. You are first to instruct the jurymen of these offenses. If your charges are grounded, they
+> Taket looked closely at the clergyman and looked again at the crying strumpets, who had thrown themselves at the feet of both men.… In an indignant and strict tone he replied, “Bishop, sir, I doubt your right to proceed in this manner. You are first to instruct the jurymen of these offenses. If your charges are grounded, they will be handled by our town's authorities.... How do you know that these unhappy women are witches? To what are you referring by this name?²
 
-will be handled by our town's authorities.... How do you know that these unhappy women are witches? To what are you referring by this name?²
+
 
 Two things are brought against the bishop's madness: insistence on certain legal norms and doubt about his right to do what he intends to do. The bishop knows that the secular and enlightened authority may foil his plans, so he resorts to threat: nobody, not even the alderman, can escape the Inquisition. Taket is stunned, but he remains persistent:
 
@@ -2476,33 +2600,29 @@ After the alderman's speech, the crowd rises up against the bishop. Stones are t
 
 > "Anyone who assaults officials shall be banished from the Church. Anyone who does not immediately cease this evil work shall be cursed."
 
-—Everything became quiet and the bailiffs returned and took possession of the prostitutes again. The officials who had followed the alderman stood there motionless. The bishop waved again and continued with increased force. "First, I order that the bailiffs seize this malicious heretic and sorcerer Johann Taket, who sought to cause a commotion here. The sorceress Elsbeth named him as a member in her satanic coven."
+Everything became quiet and the bailiffs returned and took possession of the prostitutes again. The officials who had followed the alderman stood there motionless. The bishop waved again and continued with increased force. "First, I order that the bailiffs seize this malicious heretic and sorcerer Johann Taket, who sought to cause a commotion here. The sorceress Elsbeth named him as a member in her satanic coven."
 
 Everyone stood silent and pale. The alderman looked for the justice officials, but they had withdrawn in fear.... "Citizens and other valiant people here," exclaimed Taket in exasperation, "can you tolerate that a man that you all know as beyond reproach is mishandled by this madness? That I should be condemned as a sorcerer in league with Satan on the basis of an accusation made by a mad beggar woman who has lived off my charity?"
 
 He looked around, but everyone had shied away... all gripped by silent fear, and he too grew quiet as he realized that resistance was futile. The bailiffs then proceeded to lead him to the Inquisition.⁵
 
-Jewish veterans of World War I reacted with similar disbelief after 1933. It's the reaction of anyone who realizes there are those who can turn the world on its head from one day to the next. How? Tieck's novella contains the open secret: "I know," said the bishop to the dean, 'that you regarded me as a weak
+Jewish veterans of World War I reacted with similar disbelief after 1933. It's the reaction of anyone who realizes there are those who can turn the world on its head from one day to the next. How? Tieck's novella contains the open secret: "I know," said the bishop to the dean, "that you regarded me as a weak man……看看我现在拥有的力量与权势。人民和他们的规则对我毫无意义："⁶⁶ 市议员被捕后，镇上的人失去勇气是理所当然的。但那些习惯于神秘莫测的人会问：为什么塔克特被捕？为什么没有人反抗？主教的言辞如何解开谜团？
 
-man……看看我现在拥有的力量与权势。人民和他们的规则对我毫无意义：“⁶⁶ 市议员被捕后，镇上的人失去勇气是理所当然的。但那些习惯于神秘莫测的人会问：为什么塔克特被捕？为什么没有人反抗？主教的言辞如何解开谜团？
-
-正如我在第二章所讨论的，波皮茨认为，权力依赖于“默许的暗示性力量”，依赖于“某种强烈信念——即某事是正确且恰当的——所具有的难以置信的传染性”。⁷ 这种传染通过预期起作用：感觉夺取权力者所寻求的合法化模式已然实现。正是这种预期使得主教能够掌控局面，尽管阿拉斯镇的居民合在一起要强大得多——或者说，如果他们意识到自己人数上的力量，就会强大得多。但意识到自己人数上的力量，则意味着对社会秩序失去信任——在这个秩序中，成员本无需关注自己的人数优势。无论哪种方式，他们所熟悉的信任都会瓦解。可以说，当有人从堆叠中抽出最底层的汤罐时，阿拉斯的社会秩序便崩溃了。这场危机可能是想象出来的——最底层的汤罐或许依然在原处——但因为每个人都相信情况并非如此，一个新的真相便得以形成，颠覆了先前的关系。信任需要实践来维持稳定。如果信任被暴力破坏，那么我们便会学会信任那些破坏它的暴力实践。由此，一种新的稳定出现了：对暴力的信任。
+正如我在第二章所讨论的，波皮茨认为，权力依赖于"默许的暗示性力量"，依赖于"某种强烈信念——即某事是正确且恰当的——所具有的难以置信的传染性"。⁷ 这种传染通过预期起作用：感觉夺取权力者所寻求的合法化模式已然实现。正是这种预期使得主教能够掌控局面，尽管阿拉斯镇的居民合在一起要强大得多——或者说，如果他们意识到自己人数上的力量，就会强大得多。但意识到自己人数上的力量，则意味着对社会秩序失去信任——在这个秩序中，成员本无需关注自己的人数优势。无论哪种方式，他们所熟悉的信任都会瓦解。可以说，当有人从堆叠中抽出最底层的汤罐时，阿拉斯的社会秩序便崩溃了。这场危机可能是想象出来的——最底层的汤罐或许依然在原处——但因为每个人都相信情况并非如此，一个新的真相便得以形成，颠覆了先前的关系。信任需要实践来维持稳定。如果信任被暴力破坏，那么我们便会学会信任那些破坏它的暴力实践。由此，一种新的稳定出现了：对暴力的信任。
 
 ## 奥斯维辛——古拉格——广岛
 
-那些试图为二十世纪暴力的极端行为命名的人，通常会提到“奥斯维辛”、“古拉格”或“广岛”。但为什么不是“凡尔登”呢？这是一个切中要害的问题，因为没有第一次世界大战，国家社会主义和布尔什维主义的成功将是不可想象的。正如我所指出的，赫尔穆特·冯·毛奇在1890年曾预言一场将持续数年乃至数十年的新战争。然而，有意延长一场战役以消灭整整一代人的想法是全新的，它使得克劳斯所说的“战场灰暗”——战场的恐怖——显得过时而近乎可笑。⁶ 请注意，我们谈论的不是现实，不是个体为生存必须忍受的东西，不是人口统计上的影响，而是对现代性信任的冲击；这种信任在第一次世界大战中遭受的损害，已超出了时间化和空间化这两种经典应对策略所能处理的范围。只消想想克劳斯的《人类末日》这个书名。或者弗洛伊德《战争与死亡时代的思考》中的这段话：“[战争带来的]失望……在于一种幻想的破灭。我们欢迎幻想，因为它们使我们免于不愉快的感觉，并使我们可以享受满足感。因此，如果它们时不时地与现实的某一部分发生碰撞并被其击碎，我们就不应抱怨。”⁹ “实际上，”弗洛伊德在结尾处总结道，“我们的同胞并没有堕落到我们恐惧的程度，因为他们从未上升到我们相信的高度。”¹⁰ 但在其尖锐的强调中，弗洛伊德描述了某种决定性的东西：新事物的出现。克劳斯也是如此。《人类末日》构建了一种消逝的视角，在其中，德国士兵逐渐揭示出前所未见的噩梦。1933年标志着震惊的开端——文学的雄辩未能阻止噩梦的重演。克劳斯在1914年选择了雄辩的沉默，但现实最终超越了他。1920年，即《人类末日》首次问世一年后，他写了《人类的最后时日》，评论一起火车事故中死者被洗劫的事件。¹¹ 1924年的一篇报道《战后的世界》描述了流浪猫被围捕和毒气杀害的情形。“当然，”克劳斯讽刺地说，“布德韦斯的猫凭什么就应该比战争中的人过得好呢？”¹² 今天读到这篇文章的人，想到的将不仅仅是第一次世界大战。
-
-这场大战在当今的意识中之所以不像某些同时代作家所经历的那样被视为文明的冲击，要归因于后来发生的种种暴行。但它也基于某种误解。我选择凡尔登，是因为这场战役集中体现了我们与该战争联系在一起的一切：在战壕中为几米土地的得失而发生的集体死亡。¹³ 诚然，第一次世界大战的堑壕战，尽管死伤成千上万、动用坦克和毒气，就其暴力发生在战场而言，仍是常规的。¹⁴ 但是——误解正在于此——这场战争并非始终且处处如此常规。想想德国军队在比利时的暴行，以及塔米讷、鲁汶和迪南的大屠杀。历史记录对这些事件多有隐晦之处，但认为它们仅仅源于鲁莽——从德国的角度来看最不丢人的解释——并不准确；它们还包含一种毁灭性的狂怒，这种狂怒并未因对游击式法朗提勒尔袭击的恐惧而有所缓和。¹⁵ 或者想想德国从波罗的海地区撤军时自由军团的行径。国防军部长、社会民主党人古斯塔夫·诺斯克恰如其分地称这些掠夺性团伙的首领——最初被构想为镇压革命左翼的敢死队——“小瓦伦斯坦们”。¹⁶ 恩斯特·冯·萨洛蒙参与了这场谋杀与毁灭的狂欢，他回忆了那种基本情绪：“我们不知道我们想要什么，而我们知道的东西，我们并不想要。战争与冒险，暴乱
+那些试图为二十世纪暴力的极端行为命名的人，通常会提到"奥斯维辛"、"古拉格"或"广岛"。但为什么不是"凡尔登"呢？这是一个切中要害的问题，因为没有第一次世界大战，国家社会主义和布尔什维主义的成功将是不可想象的。正如我所指出的，赫尔穆特·冯·毛奇在1890年曾预言一场将持续数年乃至数十年的新战争。然而，有意延长一场战役以消灭整整一代人的想法是全新的，它使得克劳斯所说的"战场灰暗"——战场的恐怖——显得过时而近乎可笑。⁶ 请注意，我们谈论的不是现实，不是个体为生存必须忍受的东西，不是人口统计上的影响，而是对现代性信任的冲击；这种信任在第一次世界大战中遭受的损害，已超出了时间化和空间化这两种经典应对策略所能处理的范围。只消想想克劳斯的《人类末日》这个书名。或者弗洛伊德《战争与死亡时代的思考》中的这段话："[战争带来的]失望……在于一种幻想的破灭。我们欢迎幻想，因为它们使我们免于不愉快的感觉，并使我们可以享受满足感。因此，如果它们时不时地与现实的某一部分发生碰撞并被其击碎，我们就不应抱怨。"⁹ "实际上，"弗洛伊德在结尾处总结道，"我们的同胞并没有堕落到我们恐惧的程度，因为他们从未上升到我们相信的高度。"¹⁰ 但在其尖锐的强调中，弗洛伊德描述了某种决定性的东西：新事物的出现。克劳斯也是如此。《人类末日》构建了一种消逝的视角，在其中，德国士兵逐渐揭示出前所未见的噩梦。1933年标志着震惊的开端——文学的雄辩未能阻止噩梦的重演。克劳斯在1914年选择了雄辩的沉默，但现实最终超越了他。1920年，即《人类末日》首次问世一年后，他写了《人类的最后时日》，评论一起火车事故中死者被洗劫的事件。¹¹ 1924年的一篇报道《战后的世界》描述了流浪猫被围捕和毒气杀害的情形。"当然，"克劳斯讽刺地说，"布德韦斯的猫凭什么就应该比战争中的人过得好呢？"¹² 今天读到这篇文章的人，想到的将不仅仅是第一次世界大战。
 
 
 
-和毁灭，以及一种未知的、折磨人的驱动力，它从心灵的每个角落鞭策着我们！¹¹⁷
+这场大战在当今的意识中之所以不像某些同时代作家所经历的那样被视为文明的冲击，要归因于后来发生的种种暴行。但它也基于某种误解。我选择凡尔登，是因为这场战役集中体现了我们与该战争联系在一起的一切：在战壕中为几米土地的得失而发生的集体死亡。¹³ 诚然，第一次世界大战的堑壕战，尽管死伤成千上万、动用坦克和毒气，就其暴力发生在战场而言，仍是常规的。¹⁴ 但是——误解正在于此——这场战争并非始终且处处如此常规。想想德国军队在比利时的暴行，以及塔米讷、鲁汶和迪南的大屠杀。历史记录对这些事件多有隐晦之处，但认为它们仅仅源于鲁莽——从德国的角度来看最不丢人的解释——并不准确；它们还包含一种毁灭性的狂怒，这种狂怒并未因对游击式法朗提勒尔袭击的恐惧而有所缓和。¹⁵ 或者想想德国从波罗的海地区撤军时自由军团的行径。国防军部长、社会民主党人古斯塔夫·诺斯克恰如其分地称这些掠夺性团伙的首领——最初被构想为镇压革命左翼的敢死队——“小瓦伦斯坦们”。¹⁶ 恩斯特·冯·萨洛蒙参与了这场谋杀与毁灭的狂欢，他回忆了那种基本情绪：“我们不知道我们想要什么，而我们知道的东西，我们并不想要。战争与冒险，暴乱和毁灭，以及一种未知的、折磨人的驱动力，它从心灵的每个角落鞭策着我们！¹¹⁷
 
 历史学家花了这么长时间才看到第一次世界大战的这一面——以及第二次世界大战的前奏——一个原因是德国的罪行几乎完全没有受到惩罚。¹⁸ 然而更重要的是，第一次世界大战对文明确定性构成的威胁有助于通过新的修辞形式推动暴力的再合法化。¹⁹ 那些使用末世净化修辞的人将帝国为世界霸权而进行的斗争视为从“史前史到真正的历史”转变的又一证据，而那些使用种族灭绝修辞的人则将《凡尔赛条约》视为现代性是骗局的又一证据，其目的是阻止优等种族自我主张。
 
 这些修辞形式将在第一次世界大战后的岁月里被用来为暴力极端行为的典型例子提供合法性。按时间顺序来说，这些是古拉格、奥斯维辛和广岛。一次说出这些词无疑是一项冒险的尝试，因为它暗示它们所指的事件在根本上是相同的，只是同一现象的不同变体。任何提出这一点的人都可能被指责为相对化其中一个或多个。这种指责已经变得反射性，成为一种世界观的断言，但其含义随时间而波动。在 1940 年代末和 1950 年代初，“不要忘记”这一口号指的是欧洲犹太人的种族灭绝，表达了一种真正的担忧。阿伦特在 1965 年《道德哲学的若干问题》的讲义笔记中写道：
 
-人们经常注意到，俄国革命造成的社会动荡和社会改造是前所未有的，甚至在纳粹德国激进法西斯独裁的余波中也是如此，后者确实几乎保持了财产关系完整，并没有消除社会中的主导群体。从这一点，通常得出结论，第三帝国发生的事情在本质上不仅是历史的偶然，而且是更不持久和不极端的。²⁰
+> 人们经常注意到，俄国革命造成的社会动荡和社会改造是前所未有的，甚至在纳粹德国激进法西斯独裁的余波中也是如此，后者确实几乎保持了财产关系完整，并没有消除社会中的主导群体。从这一点，通常得出结论，第三帝国发生的事情在本质上不仅是历史的偶然，而且是更不持久和不极端的。²⁰
 
 阿伦特反对这种观点，认为斯大林的罪行是“老式的”——存在着行为、虚伪和双重言论之间的关系——而纳粹的罪行则以道德崩溃为前提。在 1990 年代，《法兰克福汇报》曾想知道谁能预见到奥斯维辛会成为公认的二十世纪的核心事件。今天在同一意义上提到广岛似乎几乎是亵渎的，尽管阿多诺从不淡化大屠杀，但他确实这样做了。²¹
 
@@ -2512,10 +2632,7 @@ man……看看我现在拥有的力量与权势。人民和他们的规则对�
 
 诺尔特声称奥斯维辛是预防性种族灭绝，是对 perceived 布尔什维克威胁的担忧反应，只需一个问题就可以驳倒，这个问题是戈洛·曼向约阿希姆·费斯特提出的：“即使[希特勒]有这种恐惧，而他并没有，天哪，这与犹太人的灭绝有什么关系？”²³ 争论纳粹的反人类罪与布尔什维克的哪一个更糟是愚蠢的。这些问题中唯一在道德上相关的疑问是，在某些情况下，通常被称为罪行的东西是否可以得到正当化。如果一个国家在导弹攻击下派出空军摧毁敌方发射装置，而其喷气式飞机无意中击中了一家医院，平民死亡永远无法得到正当化，但我们永远不会得出结论说袭击本身就是犯罪。不能为这种相对化服务的比较就没有任何作用。道德如果从邪恶的等级制出发，就必须小心不要在寻找越来越令人发指的表现时迷失自我。
 
-沉迷于比较造成的相对化的人可能会用美学取代伦理。²⁴ 什么让我们更毛骨悚然——当施害者是疯子时，还是当他是一个普通的家庭男人时？关于
-
-
-一个受过教育、热爱艺术的施暴者？让最多人厌恶地摇头的情景胜出。
+沉迷于比较造成的相对化的人可能会用美学取代伦理。²⁴ 什么让我们更毛骨悚然——当施害者是疯子时，还是当他是一个普通的家庭男人时？关于一个受过教育、热爱艺术的施暴者？让最多人厌恶地摇头的情景胜出。
 
 如果比较并非严肃思考者之事，那它的目的是什么？我必须通过比较来辨别差异，这种想法是错误的。我为何要辨别差异？我又在比较什么？比较唯一真正的意义在于理解暴力的动力机制。就此而言，奥斯维辛、古拉格和广岛几乎没有共同之处。但在另一方面，它们共享一个重要特点：每一个都以其自身的方式，使我们对升级的理解发生了永久改变。
 
@@ -2528,9 +2645,12 @@ man……看看我现在拥有的力量与权势。人民和他们的规则对�
 ## 升级暴力工具
 
 > 伯恩斯和我的同伴们仿佛飘在空中。
+>
 > ——哈里·S·杜鲁门
 
 康拉德·阿登纳称战术核武器“只是另一种火炮”，在某种意义上他说得没错。正如可以说，每一种现代武器在某种意义上都是棍棒和手斧的另一种形式。从它们演变出大头棒、战斧和剑。将手斧装在一根长杆上，就成了长矛；将手斧置于投石索中，就几乎成了一台投石机；把两者的缩小版组合起来，就有了弓箭。如此等等——也许是吧。我们可以把从投石机到火炮再到导弹的发展阶段视为一个连续体，也可以强调它们之间质的差异。在萨迦中，有非凡之剑：Excalibur、Balmung、Mimung、Eckesachs。而在中世纪，正如我前面讨论过的，有弩和英格兰长弓，两者都能在远距离射出穿甲箭。在柯尼希格雷茨战役中，后装枪使普鲁士人的射击速度是使用前装枪的奥地利人的五倍，
+
+
 
 and the Prussians could even do it lying down. 有人认为能够在远处杀人而不必看见对方——尤其是空中轰炸——改变了战争的本质。其他武器也有其独特的气质。在《尼伯龙根之歌》中我们读到：
 
@@ -2554,8 +2674,7 @@ and the Prussians could even do it lying down. 有人认为能够在远处杀人
 > Which ne’er shook hands, nor bade farewell to him,
 > Till he unseam’d him from the nave to th’ chops,
 > And fix’d his head upon our battlements.
-
-(1.2.7–23)
+> (1.2.7–23)
 
 这里麦克白仍在为邓肯王而战，站在正义的一方，读者可能会被这种激情所感染。但请不要误会：这段文字也邀请我们去享受麦克白造成的毁灭。描写此类场景的大师是荷马，他以近乎慢动作的方式描述英雄们的暴力行为。在奥德修斯屠戮佩涅洛佩求婚者的场景中，他用只有自己能拉开的弓，瞄准了其中最显眼的一个：
 
@@ -2572,19 +2691,15 @@ and the Prussians could even do it lying down. 有人认为能够在远处杀人
 > 他踢翻了桌子——
 > 食物洒满地面，
 > 面包和肉在血腥污秽中打转。
-
-(22.8–21)79
+> (22.8–21)79
 
 在1966年的意大利西部片《Django》中，亡命徒扛着一口棺材，里面装着他打算用来对付种族主义帮派的机关枪，以报复他们杀害其妻子之仇。当他第一次开火时，我们无言以对，但不久之后，我们感到满足——毕竟这些都是残忍的恐怖分子。Django从弱者转变为生死的主宰令我们兴奋。我们在观看肯尼斯·布拉纳1989年版《亨利五世》中的阿金库尔战役时感受到同样的兴奋：“我们少数人，我们幸福的少数人，我们兄弟连”；一支装备精良、武器林立、清晨阳光下闪闪发光的法国上等军队；英军把木桩钉进泥地；法国人迅速逼近；英军惊恐的睁大眼睛；进攻的命令；恐惧化为愤怒，部队冲锋；致命的英格兰箭矢呼啸而下，倾泻在敌人身上；倒下的法国战马在泥沼中喘息；英格兰战士冲过，矛、剑、斧头都已出鞘。
 
 相比之下，卡尔·迈为儿童改写的版本无害得多：
 
 > “好吧，那等我们落入你手中时再杀我们——这还没发生呢。”
->
+> 
 > “呸！你以为你能逃脱吗？”
-
-
-
 
 关于盟军自身秘密武器的争论至今仍在继续。军事历史学家理查德·B·弗兰克持当时美国战争部长亨利·史汀生的观点，他认为对日本使用原子弹的决定是“最不令人憎恶的选择”。32 弗兰克认为，由于日本不愿投降，常规战争将导致双方遭受巨大损失。战争至少还会拖延两年，除了更多的轰炸外，还将需要入侵本土。弗兰克估计，仅日本一国死亡人数，包括饥荒受害者，将达五百万。这一预测成败取决于以下说法：“[N]o pre-Hiroshima document has been produced from Japan demonstrating that any one of these eight men [the Supreme Council for the Direction of the War, the emperor, and the Keeper of the Privy Seal] ever contemplated a termination of the war on any terms that could, or should, have been acceptable to the United States and her allies.”33
 
@@ -2610,6 +2725,8 @@ and the Prussians could even do it lying down. 有人认为能够在远处杀人
 
 对末日的恐惧抵消了挑起它的诱惑。第一次原子弹试验的报告揭示了武器创造者声音中的宗教颤音。J.罗伯特·奥本海默如今广为流传的“千个太阳的光辉”源自《薄伽梵歌》。他当时已经知道这段经文，还是专门为此场合准备的？一位目击者，托马斯·F·法雷尔准将，用圣经的术语描述了这一事件：
 
+
+
 > 其效果可以很好地称为前所未有的、壮丽的、美丽的、惊人的和可怕的。……爆炸后三十秒，首先是气浪猛烈地冲击着人和物，紧接着几乎立即响起强劲、持续的令人敬畏的咆哮，预示着末日来临，让我们觉得我们这些渺小之物竟敢干预迄今为止只为全能者保留的力量是亵渎的。41
 
 这里是物理学家欧内斯特·O·劳伦斯的记述：
@@ -2619,31 +2736,27 @@ and the Prussians could even do it lying down. 有人认为能够在远处杀人
 这些报告的语气所暴露的，少于看到魔鬼出瓶的恐怖，而更多的是让它出来的那个人自恋的战栗。类似的现象也发生在政治领域，虽然这种情绪并没有促使美国使用炸弹，但它伴随着决策。1945年7月16日，即试验当天，第一份报告被电报发给战争部长斯蒂姆森和总统杜鲁门：“今晨已手术。诊断尚未完成，但结果似乎令人满意，且已超出预期。”43 7月18日他们收到第二封电报：
 
 > 医生刚刚回来，对LITTLE BOY像他哥哥一样强壮充满热情和信心。他的眼中闪烁的光芒从这里能看到Highhold
-
-我甚至能从这里听到他从我农场传来的尖叫声……非正式的密码意味着爆炸可在250英里外看到，50英里外可听到。44
+> 我甚至能从这里听到他从我农场传来的尖叫声……非正式的密码意味着爆炸可在250英里外看到，50英里外可听到。44
 
 这种奇怪的亢奋不仅是情绪的表达，也是出于保密目的。7月21日又有消息传来：
 
-这是一份极其有力的文件，写得清晰流畅，并附有最高重要性的支持文件。
+> 这是一份极其有力的文件，写得清晰流畅，并附有最高重要性的支持文件。
 
 它对试验的巨大成功做了相当完整而有力的报告，并显示出比我们预期的更大的破坏力。
 
 同日，约翰·麦克洛伊在日记中写道：
 
-今天收到了关于灾变事件的报告……[其]描述几乎毫无疑问地表明我们正处于一个新世界的边缘——原子力世界。这可能比发现电更为重要。爆炸的现象如此生动，以至于描述它的人似乎词穷。45
+> 今天收到了关于灾变事件的报告……[其]描述几乎毫无疑问地表明我们正处于一个新世界的边缘——原子力世界。这可能比发现电更为重要。爆炸的现象如此生动，以至于描述它的人似乎词穷。45
 
 报告还包括以下内容：
 
-在新墨西哥州阿拉莫戈多空军基地的偏远地区，首次对内爆型原子裂变炸弹进行了全尺寸试验。历史上首次发生了核爆炸……试验的成功超出了任何人的最乐观预期……产生了巨大的冲击效应……在20英里半径内产生了相当于正午数个太阳的照明效果；形成了一个巨大的火球，持续了数秒。这个火球蘑菇状膨胀并升至一万多英尺……整个集会的感觉是……深深的敬畏。46
+> 在新墨西哥州阿拉莫戈多空军基地的偏远地区，首次对内爆型原子裂变炸弹进行了全尺寸试验。历史上首次发生了核爆炸……试验的成功超出了任何人的最乐观预期……产生了巨大的冲击效应……在20英里半径内产生了相当于正午数个太阳的照明效果；形成了一个巨大的火球，持续了数秒。这个火球蘑菇状膨胀并升至一万多英尺……整个集会的感觉是……深深的敬畏。46
 
 以下是杜鲁门7月25日日记摘录：
 
-我们发现了人类历史上最可怕的炸弹。它可能是诺亚和他那神话般的方舟之后，幼发拉底河谷时代所预言的火之毁灭。47
+> 我们发现了人类历史上最可怕的炸弹。它可能是诺亚和他那神话般的方舟之后，幼发拉底河谷时代所预言的火之毁灭。47
 
 杜鲁门和其他人品味着崇高，但从精神分析的角度来说，他们是以置换的方式去做的。他们鞠躬（想想纳森：“我，尘土？我，无物？”），但他们鞠躬的对象是他们自己（想想魔法学徒：“凭我的精神力量，我也能创造奇迹”）。他们没有因敬畏和恐惧而僵住；他们没有问自己所做或计划做的事是否合乎伦理。
-
-
-
 
 他们欣喜若狂，兴奋不已。以下是斯蒂姆森对杜鲁门在总统写下“人类历史上最可怕的炸弹”同一天的描述：
 
@@ -2657,9 +2770,7 @@ and the Prussians could even do it lying down. 有人认为能够在远处杀人
 
 为什么丘吉尔的设想没有成为现实？其一，苏联在罗斯福伯格夫妇的帮助下，很快就拥有了原子弹。从那时起，谋杀与自杀变得如此接近以至于难以区分，而像希特勒那样的末日思想领导人已证明是幸好罕见的。历史没有按丘吉尔想象的那样发展还有另一个原因，那就是圈外人所感受到的恐惧。杜鲁门的参谋长威廉·D·里海海军上将称原子弹为“野蛮的武器”。其使用标志着“与黑暗时代蛮族相同的道德标准。”“我从未被教导，”他补充道，“要以那种方式发动战争，而战争不能通过摧毁妇女和儿童来赢得。”51 英国将军哈斯廷斯·伊斯梅爵士表达了“厌恶”。52
 
-所需要的就是适当的合法化，而在当时的情况下，唯一的选择就是声称如果不用炸弹会造成更多暴力。这种解释在今天仍可公开接受，可以而且应该受到批评，不仅因为它不真实，而且因为我们可能有义务为了受害者的记忆而避免声称，综合来看，他们的死亡拯救了
-
-生命。³ 另一方面，对传统合法化形式的顽固坚持为世界的稳定做出了很大贡献。在原子时代的最初几年，这种坚持有助于确保盟国政治家感到不负责任行为的诱惑像轻微的嗡鸣一样迅速消失。为了保持他们认为自己本应成为的人，他们必须忘记他们在短暂时刻所成为的人。后来杜鲁门会说，授权使用炸弹“不是什么重大决定。”“它只是正义军械库中的又一件强大武器...” 这是一项纯粹的军事决定，以结束战争。²⁵⁴ 这种特殊形式的合法化如此强大，现代认知也如此配置，以至于即使是该决定的批评者也无非是把服务于合法化的工具性解释换成服务于去合法化的工具性解释。每种解释都假定暴力的目的具有定位性：要么中和日本军队的抵抗，要么通过以苏联军队威胁他们来迫使其中和。但这两种解释都以其他东西为前提：原子弹的部署是一场展示——一场毁灭性力量的展示。
+所需要的就是适当的合法化，而在当时的情况下，唯一的选择就是声称如果不用炸弹会造成更多暴力。这种解释在今天仍可公开接受，可以而且应该受到批评，不仅因为它不真实，而且因为我们可能有义务为了受害者的记忆而避免声称，综合来看，他们的死亡拯救了生命。³ 另一方面，对传统合法化形式的顽固坚持为世界的稳定做出了很大贡献。在原子时代的最初几年，这种坚持有助于确保盟国政治家感到不负责任行为的诱惑像轻微的嗡鸣一样迅速消失。为了保持他们认为自己本应成为的人，他们必须忘记他们在短暂时刻所成为的人。后来杜鲁门会说，授权使用炸弹“不是什么重大决定。”“它只是正义军械库中的又一件强大武器...” 这是一项纯粹的军事决定，以结束战争。²⁵⁴ 这种特殊形式的合法化如此强大，现代认知也如此配置，以至于即使是该决定的批评者也无非是把服务于合法化的工具性解释换成服务于去合法化的工具性解释。每种解释都假定暴力的目的具有定位性：要么中和日本军队的抵抗，要么通过以苏联军队威胁他们来迫使其中和。但这两种解释都以其他东西为前提：原子弹的部署是一场展示——一场毁灭性力量的展示。
 
 在短暂的历史瞬间，授权使用原子武器的那些人看到了它本来的面目：一种自为的暴力狂欢。有限规模的末日可能性给了他们一种可以有恃无恐地违抗人类规则的方式。他们只迈出了两步，但他们所迈出的步伐却产生了深远的后果，今天核武器在缺乏冷战威慑模式的国家中的扩散可能会严重改变二十一世纪的进程。尽管如此，广岛和长崎对我们现代性观念的影响远不及奥斯维辛和古拉格，原因正是盟国成功地将其包装为正常的战争行为。人们害怕即将到来的核灾难；已经发生的灾难仍在现代战争的框架内，几乎未触及我们的社会互动、控制措施和集体信念。广岛和长崎的自为的过度行为未被察觉，我们的现代性观念完好无损地得以延续，即使核武器已经颠倒了升级的动态。
 
@@ -2671,22 +2782,21 @@ and the Prussians could even do it lying down. 有人认为能够在远处杀人
 
 特里娜——他们的厨娘，特里娜，直到现在一直是个忠诚可靠的女孩——突然表现出明显的反抗迹象……布登布鲁克夫人觉得有必要因一道做坏了的香葱酱而训斥她，随后
 
-
-
 > 特里娜把赤裸的胳膊支在臀上，表达如下：“你等着瞧吧，夫人，很快就不会这样了，事情会变得不一样。到时候我会穿着丝绸裙子坐在沙发上，而你得伺候我，因为……” 不言而喻，她立刻就被解雇了。
+
 >
+
 > 托马斯·曼，《布登勃洛克一家》
 
 在本节中，我想考察一个世俗的实验，即共产主义。这个实验有许多方面，有的更突出，有的较不突出，但所有方面对于理解苏维埃政权的暴力动态都至关重要。
 
 十月革命在圣彼得堡之所以对其敌人和支持者都如此迷人，在于它的不可思议。即使与富有魅力的托洛茨基结盟后，布尔什维克仍然是一个狂热分子的教派，其绝大多数人都不相信革命会到来。它之所以到来，是因为列宁——他大部分神一般的光环是死后才获得的——对抗多数派而坚持己见。革命来势汹汹，因为没有任何东西阻挡它；它靠纯粹的自愿主义成功了。⁵⁵ 没有人采取行动阻止布尔什维克接管圣彼得堡的铁路管理局、邮局、电报局、国家银行、电话交换台或发电厂。⁵⁶ 冬季宫的暴风，后来被称为这样的行动，是一场闹剧。必要的部队被耽搁了，而来自彼得保罗要塞的信号从未发出，因为负责点灯的指挥官在泥泞中滑倒了。（即使他成功点亮了灯，信号也不会产生预期效果：灯的颜色不对。）在得知这一惨败后，列宁简单地通知圣彼得堡苏维埃的集会，亚历山大·克伦斯基的临时政府已经垮台。与此同时，俄罗斯巡洋舰“阿芙罗拉”号，替彼得保罗要塞中不幸的部队补上空缺，开始炮击冬宫。尽管大多数炮弹落入水中，但除克伦斯基外的所有部长都决定投降。（总理设法在一辆从美国大使馆偷来的汽车里逃脱。）列宁在立宪会议上宣布了这一消息，布尔什维克通过程序上的花招获得了比应得更多的席位，尽管是明显的少数派，却取得了控制权。一些政变批评者立即抗议离开。其他人留下来足够长的时间来以现在著名的言辞谴责托洛茨基：“你们是可怜的破产者，你们的角色已经结束；去你们该去的地方——历史的垃圾堆吧！”⁵⁷ 离开时，一名抗议者对列宁的手下喊道：“总有一天你们会明白自己参与的是怎样的罪行。”⁵⁸ 不幸的是，已经没有人能站出来对抗这一罪行了。
 
+
+
 布尔什维克之所以获得权力，是因为每个人——政府和圣彼得堡苏维埃中非布尔什维克的多数派——都认为他们已经拥有了权力，而他们之所以这样认为，是因为布尔什维克表现得好像他们拥有权力一样。⁵⁹ 尽管缺乏真正的权力，大多数布尔什维克表现出暴力的 temperament；他们衣衫不整，穿着皮质军装，看起来就像一群来劫掠城市的强盗。革命成功的另一个更重要的原因我已经提到过：没有人认为它会成功。对领导布尔什维克来说，这在十月革命前后都是如此。一旦布尔什维克掌权，许多人认为托洛茨基十四年前所预测的那样：要保持权力，政权必须成为由强人控制的党派独裁。加米涅夫和季诺维也夫辞去了中央委员会的职务，随后向《消息报》寄出一封公开抗议信，他们在信中写道，纯粹的布尔什维克政府只能靠政治恐怖维持，而一旦实施，就会“导致一个无法无天的政权的建立，以及革命和国家的毁灭。”⁶⁰ 其他人则认为革命无论如何也撑不过几周。但正是这种看似不可思议的特质，成为了政权崛起的一个重要因素。正如奥兰多·费格斯所观察到的，“反布尔什维克力量……几乎不存在……[而]社会革命党和立宪民主党，作为这种力量的最可能领导者，竟如此确信政权即将崩溃，以至于他们没有组织起来对抗它。”⁶¹ 这与茨威格在他的小说中所描述的现象相同：一旦主教断言他能战胜全镇，市政官——他一直认为这种疯狂是不可能的——就屈服了。这种机制，在希特勒上任帝国总理的崛起中也起作用，对于革命和恐怖政权的形成至关重要。
 
-我想稍作离题，来讨论一个每当谈论二十世纪暴力政权时都会出现的问题：它们有多“现代”？那些认为国家社会主义和斯大林主义是现代现象的人指出它们的科技发展、大规模工业项目、对秩序的痴迷、社会设计，以及对传统社会的敌意。⁶² 怀疑论者则指出它们统治的方式。约尔格·巴贝罗夫斯基写道，斯大林和毛泽东可能梦想着“ brave new worlds ”，但他们的政权“既不官僚也不有序”。“那些赋予二十世纪极权政权整齐面貌的宏伟立面，只掩盖了在这些立面背后进行的史前战争，不仅针对邻国，也针对本国人口。”⁶³ 虽然我认为现代与前现代暴力的区分值得怀疑，但在战争的情况下似乎至少是合理的。现代的有界战争的观念与国防军的战争毫无共同之处
-
-
-annihilation.（后者是更前现代还是更后现代的特征是另一个问题。）我在这本书中定义的现代一词，意义上指的不是一种暴力，而是一种对待暴力的态度。在这种意义上，无论是毛的中国还是波尔布特的柬埔寨都不能被描述为现代政权，尽管两者都采纳了马克思主义（一种在现代性中发展起来的世界观）作为对资本主义（同上）的反应。64 随着列宁的革命和斯大林的独裁，情况就不那么简单了。斯大林及其追随者受到了俄罗斯乡村中暴力常态的塑造——我将在下面进一步讨论这一点——而列宁和托洛茨基周围的团体则成长于以西方为榜样的城市文化。一些布尔什维克看起来像流氓，身穿黑衬衫和皮靴；一些布尔什维克将自己视为先锋，他们的革命中心将不是圣彼得堡或莫斯科，而是柏林或巴黎。每一种都代表了同一枚硬币的不同一面。重要的是——为了把讨论拉回正题——在圣彼得堡有这样一些人，他们可以用无情暴力的威胁来震慑他们。
+我想稍作离题，来讨论一个每当谈论二十世纪暴力政权时都会出现的问题：它们有多“现代”？那些认为国家社会主义和斯大林主义是现代现象的人指出它们的科技发展、大规模工业项目、对秩序的痴迷、社会设计，以及对传统社会的敌意。⁶² 怀疑论者则指出它们统治的方式。约尔格·巴贝罗夫斯基写道，斯大林和毛泽东可能梦想着“ brave new worlds ”，但他们的政权“既不官僚也不有序”。“那些赋予二十世纪极权政权整齐面貌的宏伟立面，只掩盖了在这些立面背后进行的史前战争，不仅针对邻国，也针对本国人口。”⁶³ 虽然我认为现代与前现代暴力的区分值得怀疑，但在战争的情况下似乎至少是合理的。现代的有界战争的观念与国防军的战争毫无共同之处 annihilation.（后者是更前现代还是更后现代的特征是另一个问题。）我在这本书中定义的现代一词，意义上指的不是一种暴力，而是一种对待暴力的态度。在这种意义上，无论是毛的中国还是波尔布特的柬埔寨都不能被描述为现代政权，尽管两者都采纳了马克思主义（一种在现代性中发展起来的世界观）作为对资本主义（同上）的反应。64 随着列宁的革命和斯大林的独裁，情况就不那么简单了。斯大林及其追随者受到了俄罗斯乡村中暴力常态的塑造——我将在下面进一步讨论这一点——而列宁和托洛茨基周围的团体则成长于以西方为榜样的城市文化。一些布尔什维克看起来像流氓，身穿黑衬衫和皮靴；一些布尔什维克将自己视为先锋，他们的革命中心将不是圣彼得堡或莫斯科，而是柏林或巴黎。每一种都代表了同一枚硬币的不同一面。重要的是——为了把讨论拉回正题——在圣彼得堡有这样一些人，他们可以用无情暴力的威胁来震慑他们。
 
 到制宪会议召开时——在许多非布尔什维克左翼人士眼中，这是革命的真正成果——布尔什维克不仅组建了政府；他们还创建了一个秘密警察部队，即契卡，并给予其首任主任费利克斯·捷尔任斯基全权让他为所欲为。第一次会议的召开是在一队醉酒的红卫兵的护卫下进行，他们在议员发言时不时地用步枪瞄准他们。在受到惊吓的代表们离开塔夫里达宫之后——他们被命令休会，因为卫兵们累了——布尔什维克锁上了大门并宣布会议解散。65 如果没有布尔什维克煽动的恐怖，就无法充分解释十月革命的成功。革命是现代性的现象，其后果代表了现代化的一种路径。
 
@@ -2700,12 +2810,17 @@ annihilation.（后者是更前现代还是更后现代的特征是另一个问�
 
 在这一层面上缺乏问责的危险在历史上已被频繁记录。早期例子是提比略麾下禁卫军长官塞扬努斯。在提比略从罗马撤离并迁往卡普里之后，塞扬努斯成为他的事实上的替代者，是外界与厌倦治理的皇帝之间唯一的联络人。据一则记载，塞扬努斯随后行使了压迫性和任意的统治。他策划阴谋、进行告密、与皇室联姻并占据关键职位，所有这些都是为了继任罗马皇帝。提比略最终认识到威胁。他以授予法庭权力的承诺诱使塞扬努斯进入元老院，却只让他被逮捕并立即绞死。
 
+尼古拉·叶若夫是一个二十世纪的案例。72 最初他在中央委员会担任人事登记负责人，他迅速晋升，成为内务人民委员部的负责人，即契卡的继承组织。72 高级杀手很少表现出如此的奉献精神：叶若夫有时会刚从审讯回来就出现在早上的政治局会议上，袖口上还沾着血迹。73 他唯一认真对待的事情除了酷刑之外就是酒精和性，他曾醉酒吹嘘说他可以随意逮捕政治局中他喜欢的任何人。另一次他被指控曾呼吁谋杀斯大林。他的暴发导致他失去了职位并招致不忠的指控；但他仍在中央委员会担任水运人民委员一段时间；只有后来他才消失了。叶若夫在内务人民委员部的继任者拉夫连季·贝利亚在斯大林死后幸存下来，尽管不清楚这是否是因为贝利亚杀了他，正如他后来所声称的那样。令人惊讶的是，斯大林死后贝利亚试图缓和政权，但指挥链证明过于模糊。赫鲁晓夫，这位斯大林令人厌恶的爪牙，他对去斯大林化的理解不同，让贝利亚被逮捕并枪杀。74
 
 
 
-尼古拉·叶若夫是一个二十世纪的案例。最初他在中央委员会担任人事登记负责人，他迅速晋升，成为内务人民委员部的负责人，即契卡的继承组织。72 高级杀手很少表现出如此的奉献精神：叶若夫有时会刚从审讯回来就出现在早上的政治局会议上，袖口上还沾着血迹。73 他唯一认真对待的事情除了酷刑之外就是酒精和性，他曾醉酒吹嘘说他可以随意逮捕政治局中他喜欢的任何人。另一次他被指控曾呼吁谋杀斯大林。他的暴发导致他失去了职位并招致不忠的指控；但他仍在中央委员会担任水运人民委员一段时间；只有后来他才消失了。叶若夫在内务人民委员部的继任者拉夫连季·贝利亚在斯大林死后幸存下来，尽管不清楚这是否是因为贝利亚杀了他，正如他后来所声称的那样。令人惊讶的是，斯大林死后贝利亚试图缓和政权，但指挥链证明过于模糊。赫鲁晓夫，这位斯大林令人厌恶的爪牙，他对去斯大林化的理解不同，让贝利亚被逮捕并枪杀。74
+# 古拉格的产生与权力维护
+
+## 集中恐怖与监狱系统混乱
 
 古拉格的产生源于通过集中恐怖来维护权力的需要。布尔什维克反制度的努力使旧的监狱系统陷入混乱。一些囚犯遭受了悲惨的死亡；另一些人由于气候温和而得以苟延残喘。无论如何，安全状况混乱到几乎不存在。圣彼得堡一所监狱的苏联官员回忆道，“唯一没有逃跑的人是那些太懒的人。”75 古拉格的首要任务是将政治犯与普通罪犯分开，并将前者安置在更安全的营地。问题在于苏联从未制定过政治犯罪的官方定义，而个人决定往往留给地方官员。76 契卡拥有事实上识别苏联制度敌人 的权力。正如巴贝罗夫斯基所观察到的，这种权力“并非针对真正的反对者，而是针对被认为不受欢迎的集体：贵族、地主、军官、牧师、哥萨克和富农……敌人并不自知；他只存在于共产党人的头脑中。”77
+
+## 特别营地与暴力机构化
 
 第一个苏联集中营由托洛茨基和列宁构想，是布列斯特-立陶夫斯克条约签署后契卡管理的旧监狱营地。这些所谓的特别营地最终与普通监狱合并，形成一个单一系统，正如安妮·阿普尔鲍姆所言，“契卡将吞噬其对手。”78 契卡的崛起——从国家政治保卫局到内务人民委员部再到克格勃——创造了一种国家化和集中的暴力形式，但这种暴力仍然是个人化的，依赖于秘密警察指定的敌人以及政治领导人做出的决定。
 
@@ -2717,7 +2832,7 @@ annihilation.（后者是更前现代还是更后现代的特征是另一个问�
 
 根据对数据的分析，阿普尔鲍姆得出结论，“1929年至1953年间，有一千八百万苏联公民经过营地和劳改所。”83 这一数字不包括被判强制劳动但未被监禁的人；战俘；或在该时期被驱逐的富农、波兰人、波罗的海人、高加索人、鞑靼人、伏尔加德意志人和其他群体。阿普尔鲍姆将置于某种形式强制劳动的人数总数定为2870万。84 古拉格中死亡人数（不包括运输途中死亡者）占被监禁人数的比例在0.67%（1953年）至24.9%（1942年）之间。85 根据这些数据和对后几年的研究，历史学家推测，约有一千至两千万人在布尔什维克手中丧生。86
 
-
+## 革命初期的无序暴力
 
 少数民族“每人二十五卢布”，正如高尔基愤怒地写道（这是在他开始钦佩古拉格秩序之前）87——他们喝光了能找到的每一瓶酒。肮脏的掠夺者身上散发着香水的味道，佩戴着珠宝，在城市街道上游荡，而愤怒的暴民在乡村游荡，有时是为了抢劫，有时是为了惩罚盗窃。在掠夺之间穿插着自足性暴力的爆发，导致许多人被殴打、溺死或被折磨致死。
 
@@ -2727,50 +2842,53 @@ annihilation.（后者是更前现代还是更后现代的特征是另一个问�
 
 这些暴力和盗窃行为不仅仅制造了混乱的氛围。它们还给现实涂上了一种新秩序的釉色，在这种秩序中，暴力服务于革命，盗窃服务于再分配，而暴行服务于正义。由契卡运营的所谓人民法庭，给这些事件增添了额外的革命祝福。正如布尔什维克统治和新机构一样，国家对暴力的垄断只有在被断言之后才变得真实。司法人民委员伊萨克·斯坦因贝格在1918年就认识到暴力发展的方向。“我们为什么还要司法人民委员部呢？”他问列宁。“让我们坦率地称之为‘社会灭绝人民委员部’，就此了结吧！”列宁回答说：“说得好，这正是它应该的样子；但我们不能这么说。”91 高尔基在《新生活》的版面上表达了他的回应：“俄罗斯人很多，杀人犯也很多……大规模消灭思想不同的人，是一种古老而经过检验的俄罗斯政府的方法，从伊凡雷帝到尼古拉二世……那么弗拉基米尔·列宁为什么要放弃这种简单的方法呢？”92
 
+## 现代化与系统化恐怖
+
 从某种意义上说，布尔什维克建立的国家暴力垄断是现代化进程的又一步。正如菲格斯提醒我们的那样，“捷尔任斯基本人于1922年写道，契卡所做的一切只是给‘无产阶级对其压迫者的几个世纪的仇恨’‘给予明智的方向’，这种仇恨如果不加以引导，可能会‘表现为无意义和血腥的事件’。”93 但布尔什维克独裁所产生的现代化是奇怪的，因为布尔什维克对暴力的集中并没有带来暴力的减少。相反，它建立了一个以不可预测的暴力无处不在为基础的社会。首先是一系列无组织和无系统的血腥事件；接下来是由契卡实施的一系列无组织和无系统的血腥事件；最后——这正是布尔什维克恐怖如此怪异的原因——出现了有组织和系统的群众恐怖。这种现象在历史上是独一无二的，很难理解。一个政权下令在一个地区处决x千人会有什么兴趣？那些不是任何人的敌人、从其谋杀中几乎得不到任何好处、也不挡任何人路的人呢？无论是革命的性质，还是在杀人和凶杀问题上的创造性保守主义，都无法解释一个社会——用尤里·奥尔洛夫的话来说——几十年来“在血泊和呕吐物中翻滚”。94
+
+## 暴力文化的根源
 
 巴贝罗夫斯基认为，对斯大林主义起决定性作用的是两种经历的融合：农村生活的暴力和内战的暴力。虽然伊万·冈察洛夫在《奥勃洛莫夫》第九章中描绘的宁静俄罗斯村庄的画面可能包含一些真实，但这并不是全部真相。巴贝罗夫斯基写道：“‘乡村生活’充斥着酗酒、贪婪和暴力。男人殴打妇女和孩子；外来者被孤立或被社区放逐；醉酒导致打斗，往往以致命告终……’”95 这种暴力的经历延伸到个人——斯大林曾被母亲惨烈殴打——也延伸到集体：那些在斯大林政权中获得职位的地方社会爬升者习惯于用武力解决问题。据说斯大林的朋友谢尔戈·奥尔忠尼启则会殴打对手，而克里缅特·伏罗希洛夫则对一位批评者回应：“你这个骗子，你这个混蛋，你活该挨一拳。”96 斯大林的通信和批注语气类似，他在工作中的行为也是如此：有一次，他抓住秘书的头发，把他的头砸在桌子上。97 乡村生活的这些偏好在俄国内战事件中得到了进一步放大，在内战中，双方都有大规模杀戮，敌人被刺穿、钉十字架和撕成碎片。98 对于那些同时经历过这两种情况的斯大林主义官僚——暴力的乡村生活和暴力的内战——暴力就成了，正如巴贝罗夫斯基所说，“生命的灵药”。
 
+斯大林、莫洛托夫、加加诺维奇、伏罗希洛夫、奥尔忠尼启则、基洛夫、叶若夫——这些人体现了斯大林主义官僚的政治风格、语言和习惯。斯大林，列宁称他为“了不起的格鲁吉亚人”，是他们的偶像。他集中了他们圈子中认为重要的所有特质：简单、果断，以及对暴力的倾向。99
+
+在《社会学》中，格奥尔格·齐美尔认为社会与个人在职业中达成和谐。100 如果这是真的，那么斯大林就是其令人毛骨悚然的体现。他不仅像叶若夫一样亲自观看酷刑现场，并指示如何最好地进行；在某种意义上，他的个人倾向本身就对斯大林主义负责。巴贝罗夫斯基解释说：“……布尔什维克项目”导致了大规模恐怖，部分原因在于独裁者喜欢让人被杀。101 斯大林死后，大规模杀戮停止了。当然，如果那些与斯大林一起崛起的人也不喜欢杀戮，斯大林主义根本就不可能出现。也许他的亲信和打手在1953年后停止了大规模处决，是因为他们厌倦了生活在持续的恐惧中。
+
+## 暴力作为补偿机制
+
+除了其他所有原因之外，政权的暴力还有另一个来源：对未能实现新秩序的补偿。非市场经济试图通过消除经济不平等来确保政治平等，但这样做却消除了政治自由并 unleashed 政治恐怖。102 在俄国内战期间、在惩罚列宁新经济政策受益者的努力期间，以及在强制集体化期间，农村地区发生了大规模的突袭。武装团体侵入村庄，抢走所需的一切，并杀害居民。7.6万人的“粮食军”由失业者、流离失所者、过客和无家可归者组成。正如菲格斯指出的，布尔什维克可能将内战视为“不过是阶级斗争的暴力形式”，但其中许多战斗者都是只能以牺牲他人为代价获益的人。103
 
 
-斯大林、莫洛托夫、加加诺维奇、伏罗希洛夫、奥尔忠尼启则、基洛夫、叶若夫——这些人体现了斯大林主义官僚的政治风格、语言和习惯。斯大林，列宁称他为“了不起的格鲁吉亚人”，是他们的偶像。他集中了他们圈子中认为重要的所有特质：简单、果断，以及对暴力的倾向。⁹⁹
-
-在《社会学》中，格奥尔格·齐美尔认为社会与个人在职业中达成和谐。¹⁰⁰ 如果这是真的，那么斯大林就是其令人毛骨悚然的体现。他不仅像叶若夫一样亲自观看酷刑现场，并指示如何最好地进行；在某种意义上，他的个人倾向本身就对斯大林主义负责。巴贝罗夫斯基解释说：“……布尔什维克项目”导致了大规模恐怖，部分原因在于独裁者喜欢让人被杀。¹⁰¹ 斯大林死后，大规模杀戮停止了。当然，如果那些与斯大林一起崛起的人也不喜欢杀戮，斯大林主义根本就不可能出现。也许他的亲信和打手在1953年后停止了大规模处决，是因为他们厌倦了生活在持续的恐惧中。
-
-除了其他所有原因之外，政权的暴力还有另一个来源：对未能实现新秩序的补偿。非市场经济试图通过消除经济不平等来确保政治平等，但这样做却消除了政治自由并 unleashed 政治恐怖。¹⁰² 在俄国内战期间、在惩罚列宁新经济政策受益者的努力期间，以及在强制集体化期间，农村地区发生了大规模的突袭。武装团体侵入村庄，抢走所需的一切，并杀害居民。7.6万人的“粮食军”由失业者、流离失所者、过客和无家可归者组成。正如菲格斯指出的，布尔什维克可能将内战视为“不过是阶级斗争的暴力形式”，但其中许多战斗者都是只能以牺牲他人为代价获益的人。¹⁰³
 
 鉴于政权最初几十年的艰难和暴力，帮派的形成是可以理解的。然而帮派也是国家机构失败的迹象。通过裙带关系、客户主义和血缘关系，才使得恐怖、指令经济和控制的结合成为可能。一旦这种补偿性策略被证明成功，政权就一再使用它。在1932-33年的饥荒期间，当人肉在城镇市场上被兜售时，国家试图通过大规模逮捕、驱逐和突袭来应对危机。¹⁰⁴
 
 一个依赖恐怖的政权会摧毁其机构并用个人关系网络取而代之。¹⁰⁵ 在苏联这样的大型且经济复杂的国家，指令经济强化了这一过程。
 
-计划和完成计划的虚构需要一个集体体系，在其中每个人都相信，即使他们都知道它已经破裂。这种社会模式是帮派。其社会可接受的形式是家庭。两者共同的特点是，它们可以通过爱或恨，或两者兼有来维持。106 重要的是共同的虚构，即生活将继续如常。这就是为什么家庭构成了信任的核心。信任一个系统能够无限期地持续下去，尽管人们知道它的缺陷，这取决于社会功能与个人的融合，或混淆。在机构中，人员流失或变动不会影响系统，而在两个人之间的关系中，人们可以害怕对方的死亡或希望对方死亡，但其中一方的缺席总是会终止关系。家庭和帮派则不同：成员不能轻易被替换，但如果他们离开或死亡，单位也不会瓦解。它们在功能上是人际的，在性格上是个人化的，为成员提供一种普遍的连续感。
+计划和完成计划的虚构需要一个集体体系，在其中每个人都相信，即使他们都知道它已经破裂。这种社会模式是帮派。其社会可接受的形式是家庭。两者共同的特点是，它们可以通过爱或恨，或两者兼有来维持。¹⁰⁶ 重要的是共同的虚构，即生活将继续如常。这就是为什么家庭构成了信任的核心。信任一个系统能够无限期地持续下去，尽管人们知道它的缺陷，这取决于社会功能与个人的融合，或混淆。在机构中，人员流失或变动不会影响系统，而在两个人之间的关系中，人们可以害怕对方的死亡或希望对方死亡，但其中一方的缺席总是会终止关系。家庭和帮派则不同：成员不能轻易被替换，但如果他们离开或死亡，单位也不会瓦解。它们在功能上是人际的，在性格上是个人化的，为成员提供一种普遍的连续感。
 
-中央委员会和政治局的环境也具有这种类似帮派或类似家庭的气氛。巴贝罗夫斯基写道：“政治决策是在克里姆林宫或斯大林别墅的夜间宴会上做出的，这些宴会持续到凌晨。”107 苏联领导层生活在克里姆林宫的狭小空间里，酗酒、把纸条滑到彼此的门下、看电影。斯大林的个人偏好无疑影响了其他人的行为。希特勒，生活在类似的环境中，要求他的随从在他观看最喜欢的电影时加入他。这种私人领域的暴力扩张，在亲密和哥们义气可以自发爆发为侵略的地方，很久以来一直是独裁权力的组成部分。108 斯大林的宴会就像家庭聚会：它们紧张且可能暴力，但也强化了对系统连续性的信任。109 帮派和家庭是暴力与凝聚力共存的地方。这是因为它们提出了群体和谐的希望，同时允许成员用他们对他人施加的痛苦来补偿他们所遭受的痛苦。简而言之，它们承诺成员天堂，却给了他们地狱。
+中央委员会和政治局的环境也具有这种类似帮派或类似家庭的气氛。巴贝罗夫斯基写道：“政治决策是在克里姆林宫或斯大林别墅的夜间宴会上做出的，这些宴会持续到凌晨。”¹⁰⁷ 苏联领导层生活在克里姆林宫的狭小空间里，酗酒、把纸条滑到彼此的门下、看电影。斯大林的个人偏好无疑影响了其他人的行为。希特勒，生活在类似的环境中，要求他的随从在他观看最喜欢的电影时加入他。这种私人领域的暴力扩张，在亲密和哥们义气可以自发爆发为侵略的地方，很久以来一直是独裁权力的组成部分。¹⁰⁸ 斯大林的宴会就像家庭聚会：它们紧张且可能暴力，但也强化了对系统连续性的信任。¹⁰⁹ 帮派和家庭是暴力与凝聚力共存的地方。这是因为它们提出了群体和谐的希望，同时允许成员用他们对他人施加的痛苦来补偿他们所遭受的痛苦。简而言之，它们承诺成员天堂，却给了他们地狱。
 
-布尔什维克党的中央权力较少由一党专政构成，而更多由其成员之间的客户主义关系构成。党只是建立此类关系的场所。巴贝罗夫斯基写道，它是“一个由个人网络和效忠等级制度维系的协会，而不是由抽象规则和法律维系。家庭关系、忠诚和荣誉是新秩序的基础。”110 一旦这些美德成为义务，而它们的展示成为维持权力的策略，它们就开始播下不信任。从此以后，在布尔什维克国家中政治生存需要不断展示忠诚。揭发敌人是最好的方式，以免自己被视为敌人。巴贝罗夫斯基解释道：
+布尔什维克党的中央权力较少由一党专政构成，而更多由其成员之间的客户主义关系构成。党只是建立此类关系的场所。巴贝罗夫斯基写道，它是“一个由个人网络和效忠等级制度维系的协会，而不是由抽象规则和法律维系。家庭关系、忠诚和荣誉是新秩序的基础。”¹¹⁰ 一旦这些美德成为义务，而它们的展示成为维持权力的策略，它们就开始播下不信任。从此以后，在布尔什维克国家中政治生存需要不断展示忠诚。揭发敌人是最好的方式，以免自己被视为敌人。巴贝罗夫斯基解释道：
 
-
-
-斯大林主义的主体是警觉的，他是告密者，是那个为了证明自己的忠诚而忘却朋友和亲属的人。告密是热情的布尔什维克的生活方式。告密者被歌颂，并在为其树立的纪念碑中得到纪念。人们因荣誉受损、贪婪或怨恨而成为告密者。告密是下属在日常生活中抵御敌人的武器。它让民众得以将国家的惩罚之臂工具化以服务于自身利益。111
+斯大林主义的主体是警觉的，他是告密者，是那个为了证明自己的忠诚而忘却朋友和亲属的人。告密是热情的布尔什维克的生活方式。告密者被歌颂，并在为其树立的纪念碑中得到纪念。人们因荣誉受损、贪婪或怨恨而成为告密者。告密是下属在日常生活中抵御敌人的武器。它让民众得以将国家的惩罚之臂工具化以服务于自身利益。¹¹¹
 
 在一个工厂管理不善、建筑质量低劣等问题往往被归咎于破坏者的氛围中，有针对性的告密是摆脱自己不喜欢的人——同事、工厂负责人，甚至党内职能人员——的简便方法。这并不完全是“自下而上的斯大林主义”——恐怖始终与中央权威相系——但赋予人民的权力依然令人瞩目。
 
 我在第2章中描述的参与式权力动态有助于解释为何广泛的告密没有摧毁苏维埃社会，以及为何社会凝聚力不需要政权的外部支持：即告密有助于稳定信任。重要的是要知道该怎么做，以便生活得以继续——对个人而言，对整体而言。用流放或杀害敌人来应对系统的危机是疯狂的，但这正是延续系统的那种疯狂。这种策略让人想起一个关于火车乘客的笑话，他会定期从车窗往外洒几滴液体。当另一名乘客问他在做什么时，这人说液体是“吉里吉里”水，用来赶走大象。“但这里根本没有大象，”第二个人回应道。“没错，”第一个人说。“你看它多有效？”
 
-当然，苏联体制存在它无法解决的真正问题。但在生活中，只有极少数问题是真正得到解决的。新的情况会产生新的问题，新的问题也会自行产生。此外，很难相信存在大规模的集体妄想。某处必须有一些真相的内核。112 我们都知道有人撒谎却在别人不相信他时勃然大怒：他因被贴上说谎者的标签而产生的愤慨，超过了他内心对自己撒谎的认知。斯大林责骂内务人民委员部，因为该部为一次表演审判伪造的文件中引用了一家丹麦酒店的名字，而这家酒店早已不存在，这个失误引起了外国记者的注意。“你们要那家酒店干什么！”斯大林大喊。“你们本该写‘火车站’。车站永远都在。”113 斯大林惯常下达高得离谱的处决配额，但有一次，在审阅赫鲁晓夫递给他的一份名单时，他惊呼道：“不可能有这么多！”114 这种现象的另一个例子出现在翁贝托·埃科《玫瑰之名》的电影版本中。宗教裁判官贝尔纳·居伊用酷刑从一名被指控异端的驼背僧侣身上逼出供词。后来这人必须在法庭前承认自己的罪行。他演得太好了——他知道如果不这么做就会被酷刑折磨——以至于宗教裁判官厌恶地打断了他。总的来说，告密者通过告发他人表明自己是“我们”中的一员，而不是“他们”中的一员。告密是发展“我们”感的一种策略，它通过建立事业、提升社会地位和规避危险而在个人层面产生回报。归根结底，告密是毁掉他人生活的方式。告密的许可就是间接杀人的许可。115
+当然，苏联体制存在它无法解决的真正问题。但在生活中，只有极少数问题是真正得到解决的。新的情况会产生新的问题，新的问题也会自行产生。此外，很难相信存在大规模的集体妄想。某处必须有一些真相的内核。¹¹² 我们都知道有人撒谎却在别人不相信他时勃然大怒：他因被贴上说谎者的标签而产生的愤慨，超过了他内心对自己撒谎的认知。斯大林责骂内务人民委员部，因为该部为一次表演审判伪造的文件中引用了一家丹麦酒店的名字，而这家酒店早已不存在，这个失误引起了外国记者的注意。“你们要那家酒店干什么！”斯大林大喊。“你们本该写‘火车站’。车站永远都在。”¹¹³ 斯大林惯常下达高得离谱的处决配额，但有一次，在审阅赫鲁晓夫递给他的一份名单时，他惊呼道：“不可能有这么多！”¹¹⁴ 这种现象的另一个例子出现在翁贝托·埃科《玫瑰之名》的电影版本中。宗教裁判官贝尔纳·居伊用酷刑从一名被指控异端的驼背僧侣身上逼出供词。后来这人必须在法庭前承认自己的罪行。他演得太好了——他知道如果不这么做就会被酷刑折磨——以至于宗教裁判官厌恶地打断了他。总的来说，告密者通过告发他人表明自己是“我们”中的一员，而不是“他们”中的一员。告密是发展“我们”感的一种策略，它通过建立事业、提升社会地位和规避危险而在个人层面产生回报。归根结底，告密是毁掉他人生活的方式。告密的许可就是间接杀人的许可。¹¹⁵
 
-尽管告密提供了稳定性，如果没有与德国的战争，苏联政权可能早就垮台了。毕竟，斯大林起初竭尽全力协助希特勒获胜：他杀害了最有能力的将军以在波兰清理缓冲地带，若无此举，德国永远无法发动突袭入侵；他阻止红军在德军沿边境集结时进入警戒状态；他不回应德国挑衅的命令导致整个苏联空军尚未起飞就被摧毁。1941年6月底，斯大林被记录为说过：“一切都完了。我放弃了。列宁创立了我们的国家，我们把它搞砸了。”116 斯大林预计自己会被逮捕，但他的同志们显然不知道没有他该怎么办。117
+尽管告密提供了稳定性，如果没有与德国的战争，苏联政权可能早就垮台了。毕竟，斯大林起初竭尽全力协助希特勒获胜：他杀害了最有能力的将军以在波兰清理缓冲地带，若无此举，德国永远无法发动突袭入侵；他阻止红军在德军沿边境集结时进入警戒状态；他不回应德国挑衅的命令导致整个苏联空军尚未起飞就被摧毁。1941年6月底，斯大林被记录为说过：“一切都完了。我放弃了。列宁创立了我们的国家，我们把它搞砸了。”¹¹⁶ 斯大林预计自己会被逮捕，但他的同志们显然不知道没有他该怎么办。¹¹⁷
 
-面对失败的可能性和纯粹的生存需求，斯大林决定做出让步，这最终保住了苏联体制。他允许私人农耕以确保粮食供应，工厂也被命令开垦周边土地以养活工人。向战时经济的过渡是苏联的一项重要成就，当然也极大得益于盟国的帮助，但我们不应忘记，苏联经济政策第一阶段的榜样是鲁登道夫和兴登堡领导下的德国军事独裁以及拉特瑙所谓的战争社会主义。118 正如马丁·E·马利亚所指出的，该体制“本质上是一种政治军事的社会组织模式”。一旦战争爆发，它就开始“在它天然的环境中运作”。119
+面对失败的可能性和纯粹的生存需求，斯大林决定做出让步，这最终保住了苏联体制。他允许私人农耕以确保粮食供应，工厂也被命令开垦周边土地以养活工人。向战时经济的过渡是苏联的一项重要成就，当然也极大得益于盟国的帮助，但我们不应忘记，苏联经济政策第一阶段的榜样是鲁登道夫和兴登堡领导下的德国军事独裁以及拉特瑙所谓的战争社会主义。¹¹⁸ 正如马丁·E·马利亚所指出的，该体制“本质上是一种政治军事的社会组织模式”。一旦战争爆发，它就开始“在它天然的环境中运作”。¹¹⁹
 
-战争并未结束对斯大林不信任者的镇压——伏尔加德意志人、车臣人和鞑靼人——古拉格囚犯的数量继续增长，形成了一支维持和扩大战争生产的预备力量。1941年12月，就在德军停止莫斯科攻势后不久，斯大林开始修建营地，苏联战俘归来后将被关押在其中以叛国罪名。逮捕于1945年立即开始。120
+战争并未结束对斯大林不信任者的镇压——伏尔加德意志人、车臣人和鞑靼人——古拉格囚犯的数量继续增长，形成了一支维持和扩大战争生产的预备力量。1941年12月，就在德军停止莫斯科攻势后不久，斯大林开始修建营地，苏联战俘归来后将被关押在其中以叛国罪名。逮捕于1945年立即开始。¹²⁰
 
 苏联在战争中遭受了惨重损失，但仍崛起为世界强国。斯大林现在成为大三强之一，与美国总统和英国首相并列。这并未影响斯大林的心态；
 
-
-
-
 the mass terror and murder that brought the Bolshevik gang to power did not relent, and denunciation remained a means of social cohesion. Nevertheless, the regime carried a country beset by poverty and malnourishment into the modern age, at least in the technological sense. (Aside from becoming a military superpower, the Soviet Union launched the first satellite and put the first human being into outer space.) The accelerating erosion of the command economy necessitated sweeping changes, but the last chair of the Communist Party of the Soviet Union failed to understand his country and its political structure. It was as if Al Capone’s successor became mayor and ordered his men to enforce prohibition. Gorbachev lost his party, dominion over Eastern Europe, and the Soviet Union. After the coup meant to forestall the Soviet Union’s demise failed miserably, Gorbachev met with the Parliament. There, Malia writes, “he was met with hostile cries that the Party was a ‘criminal enterprise’” and had to watch as Yeltsin ‘signed a prepared decree suspending the Party throughout Russia.’¹²¹
+
+
 
 But the party was not the only criminal enterprise in the Soviet Union. A shadow economy had operated in the USSR since its founding, and during the Brezhnev era it became the system’s cornerstone.¹²² The black market compensated for the rigidity of the planned economy, and it solved problems—lack of resources, unavailability of spare parts, and so forth—that could not be solved any other way. Eventually, the shadow economy partly fused with the Communist Party: mafia bosses who ran the black market occupied party posts and local party chairs became mafia bosses. Two particularly extreme cases occurred in Uzbekistan. As Malia explains, one high-ranking official “kept a harem and had a torture chamber for his critics, while the Uzbek republic Party boss inflated the cotton production figures for which Moscow paid him.”¹²³ The mafia in Dnepropetrovsk, to give another example, consisted solely of friends and relatives of Brezhnev’s. From their ranks would come several of the businessmen to amass great wealth after the collapse of the command economy—the so-called oligarchs.
 
@@ -2781,14 +2899,16 @@ The revolution put the Soviet Union on the road to modernity. After Stalin's dea
 ## DEMODERNIZATION AND THE GANG
 
 > A shock. I never thought it possible.
+>
 > —KLAUS MANN, DIARY ENTRY FROM JANUARY 1, 1933
 
 > Hitler—Goebbels—Göring—Himmler. What a crew! You can't make up stuff like this. Nothing comparable existed in the East.
+>
 > —WALTER KEMPOWSKI, CULPA
 
-Every system of political terror tends to replace the institution with the individual, removing violence from the formal control of laws and putting it under the informal control of persons.124 The Nazi regime was typical in this regard. It persecuted its enemies and used fairly traditional means to do it: arbitrary arrests, torture, disappearances, secret prisons, concentration camps. But in other aspects the Nazi regime was different from conventional systems of political terror. From the very beginning the Nazis understood themselves as more than a political party: they were a movement. They had a leader, not a chairman, and he remained their leader even after he assumed office, where he bore the title Führer and Reichskanzler. And unlike other terrorist regimes, the power of the Nazi Party did not begin at the end of a gun barrel. Its only attempt at a coup, the Beer Hall Putsch, ended rather feebly, despite Ernst Jünger's claims to the contrary.125 The ballot box, and backroom discussions among conservative party heads, were what brought the Nazis to power. Still, the street fights and saloon brawls of the 1920s left a decisive mark on the party. The Nazis quickly formed two paramilitary organizations, the one uniformed in the color of fecal brown, the other in black adorned with skull and bones. Reich Chancellor Hitler was unable to endure the traditional tailcoat for long; he needed to return to the fantasy-fulfilling outfit of the Führer, to know once again the feel of leather across his feet, waist, and shoulders.
 
 
+Every system of political terror tends to replace the institution with the individual, removing violence from the formal control of laws and putting it under the informal control of persons.124 The Nazi regime was typical in this regard. It persecuted its enemies and used fairly traditional means to do it: arbitrary arrests, torture, disappearances, secret prisons, concentration camps. But in other aspects the Nazi regime was different from conventional systems of political terror. From the very beginning the Nazis understood themselves as more than a political party: they were a movement. They had a leader, not a chairman, and he remained their leader even after he assumed office, where he bore the title Führer und Reichskanzler. And unlike other terrorist regimes, the power of the Nazi Party did not begin at the end of a gun barrel. Its only attempt at a coup, the Beer Hall Putsch, ended rather feebly, despite Ernst Jünger's claims to the contrary.125 The ballot box, and backroom discussions among conservative party heads, were what brought the Nazis to power. Still, the street fights and saloon brawls of the 1920s left a decisive mark on the party. The Nazis quickly formed two paramilitary organizations, the one uniformed in the color of fecal brown, the other in black adorned with skull and bones. Reich Chancellor Hitler was unable to endure the traditional tailcoat for long; he needed to return to the fantasy-fulfilling outfit of the Führer, to know once again the feel of leather across his feet, waist, and shoulders.
 
 纳粹政权发动的战争，除了其他一切之外，也是巨大的掠夺行为。它们使个人受益——希特勒用被盗的艺术品填满博物馆；戈林在家中展出它们；托特和斯佩尔用奴工为他们的项目服务；士兵们把战利品塞满背包——也使集体受益：强制劳动弥补了青壮年男性的短缺，并阻止了妇女不得不工作；从被驱逐的犹太人家中没收的货物以廉价家具和其他家庭用品充斥市场。126 “公民社会，”迈克尔·维尔特写道，“变成了一个猖獗的盗窃共同体。”127
 
@@ -2798,17 +2918,13 @@ Every system of political terror tends to replace the institution with the indiv
 
 民众思想中的混乱令人震惊。一位非常冷静和随和的邮递员，以及同样年老的普雷托里乌斯，他根本不是国家社会主义者，对我说的话如出一辙：“好吧，他只是判处了他们。”一位总理判处并枪杀了他自己私人军队中的成员128
 
-纳粹清洗自己队伍的唯一一次，方式与布尔什维克清洗他们的方式有任何相似之处，其前有一系列耐人寻味的事件。纳粹夺权后不久，希特勒在党内和党外都承受着压力，要求铲除SA。1934年6月17日，弗朗茨·冯·帕彭在马尔堡大学发表了一场煽动性的演讲，他警告说SA恐怖可能引发“自下而上的革命”。129 陆军领导层向兴登堡施压，国防部长维尔纳·冯·勃洛姆堡告诉希特勒，如果希特勒不采取行动对付SA，兴登堡将宣布戒严。130 同时，海德里希和希姆莱散布关于SA即将叛乱的谣言。戈培尔一度相信纳粹将对帕彭等人发动打击，但
-
-当三千名SA成员在慕尼黑抗议，横冲直撞地游荡于城市并高喊“背叛”时，希特勒下定决心，下令处决整个SA领导层。131（罗姆在拒绝自杀后被杀。）受害者还包括希特勒想清算旧账的人。库尔特·冯·施莱歇尔，一位将军和前帝国总理，在家中被枪杀。132 克斯豪描述了公众的反应：
+纳粹清洗自己队伍的唯一一次，方式与布尔什维克清洗他们的方式有任何相似之处，其前有一系列耐人寻味的事件。纳粹夺权后不久，希特勒在党内和党外都承受着压力，要求铲除SA。1934年6月17日，弗朗茨·冯·帕彭在马尔堡大学发表了一场煽动性的演讲，他警告说SA恐怖可能引发“自下而上的革命”。129 陆军领导层向兴登堡施压，国防部长维尔纳·冯·勃洛姆堡告诉希特勒，如果希特勒不采取行动对付SA，兴登堡将宣布戒严。130 同时，海德里希和希姆莱散布关于SA即将叛乱的谣言。戈培尔一度相信纳粹将对帕彭等人发动打击，但当三千名SA成员在慕尼黑抗议，横冲直撞地游荡于城市并高喊“背叛”时，希特勒下定决心，下令处决整个SA领导层。131（罗姆在拒绝自杀后被杀。）受害者还包括希特勒想清算旧账的人。库尔特·冯·施莱歇尔，一位将军和前帝国总理，在家中被枪杀。132 克斯豪描述了公众的反应：
 
 在德国之外，人们对这场屠杀感到震惊，对国家领导人使用的黑帮手段更是如此。在德国国内，情况则不同。对希特勒的感激之情表达并不久。就在7月1日，国防部长勃洛姆堡……称赞了“领导人在攻击和粉碎‘叛徒和叛乱分子’时表现出的士兵般的决心和典范的勇气”。他补充说，武装部队的感激之情将以“忠诚和忠心”来体现。133
 
 希特勒也谈到了“叛乱”：“叛乱是按照永恒的、铁的法则被打破的。如果我被指责没有诉诸法庭判决，我只能说：在这一刻，我对德国民族的命运负责，因此是德国人民的最高法官。”134
 
-希特勒被视为从煽动性的街头暴民手中夺回平静和秩序的人。事实上，希特勒使暴民的方法成为合法的统治手段。军队的反应值得注意：当一名与SA无关的将军被枪杀时，军官们并未退缩。更何况，勃洛姆堡在已经发表了对纳粹政权的大量赞美言论后，于1934年8月1日签署文件，使希特勒在兴登堡去世后自动成为武装部队总司令。勃洛姆堡和部长办公室负责人瓦尔特·冯·赖兴瑙起草了一项新誓词，将德国士兵束缚于元首个人。“倡议，”克斯豪写道，“来自国防军领导层，而不是希特勒……在军官中，对誓词的反应不一。有些人持怀疑或怀疑态度。‘我一生中最黑暗的一天’，贝克据报道曾如此评论……但大多数人很少花时间反思其含义。”135
-
-其中一个含义涉及未来的反对。“对于后来犹豫是否加入反希特勒阴谋的人，”克斯豪继续说，“誓词也将提供一个借口。”136 现代士兵通常宣誓效忠国家或宪法。在君主时代，他们向国王宣誓，而不是作为个人而是作为制度。如果国王去世，臣民不会重复宣誓；他们的效忠会自动转移到新君主。相比之下，向个人宣誓效忠是黑帮的 defining 特征。
+希特勒被视为从煽动性的街头暴民手中夺回平静和秩序的人。事实上，希特勒使暴民的方法成为合法的统治手段。军队的反应值得注意：当一名与SA无关的将军被枪杀时，军官们并未退缩。更何况，勃洛姆堡在已经发表了对纳粹政权的大量赞美言论后，于1934年8月1日签署文件，使希特勒在兴登堡去世后自动成为武装部队总司令。勃洛姆堡和部长办公室负责人瓦尔特·冯·赖兴瑙起草了一项新誓词，将德国士兵束缚于元首个人。“倡议，”克斯豪写道，“来自国防军领导层，而不是希特勒……在军官中，对誓词的反应不一。有些人持怀疑或怀疑态度。‘我一生中最黑暗的一天’，贝克据报道曾如此评论……但大多数人很少花时间反思其含义。”135 其中一个含义涉及未来的反对。“对于后来犹豫是否加入反希特勒阴谋的人，”克斯豪继续说，“誓词也将提供一个借口。”136 现代士兵通常宣誓效忠国家或宪法。在君主时代，他们向国王宣誓，而不是作为个人而是作为制度。如果国王去世，臣民不会重复宣誓；他们的效忠会自动转移到新君主。相比之下，向个人宣誓效忠是黑帮的 defining 特征。
 
 
 
@@ -2822,6 +2938,10 @@ In this regard, Bolshevism and Nazism took opposite courses. The Bolshevik gover
 
 This deterioration included increasingly brutal forms of state terror such as the elimination of civil rights, arbitrary arrests, detention in concentration camps, torture, and murder. Only those who condoned such practices could find “order” in them. The problem is that many did, and willingness to collaborate was correspondingly high. Here again is Kershaw:
 
+
+
+# 历史背景与集中营的建立
+
 By June, the numbers in “protective custody”—most of them workers—had doubled. A good number of those arrested were the victims of denunciations by neighbors or workmates. So great was the wave of denunciations following the Malicious Practices Act of 21 March 1933 that even the police criticized it. Just outside the town of Dachau about twelve miles from Munich, the first concentration camp was set up in a former powder-mill on 22 March.
 
 There was no secret about the camp’s existence. Himmler had even held a press conference two days earlier to announce it.¹⁴²
@@ -2832,7 +2952,7 @@ The history of the genocide of European Jews has been told many times and I will
 
 The Nazi regime declared the “Jewish question” a central political problem during phases of intensive antisemitic propaganda. In 1933, 1935, and 1938 it conveyed the impression that a pure Nazi Volksgemeinschaft was to be had only by “liberating” Germany from purportedly oppressive Jewish influence. The exclusion of Jews from the economy… maintaining the purity of German blood, [and] the “de-Jewification” of public and cultural life were considered basic elements of a comprehensive purge needed to realize the ethnic utopia of National Socialism. In all three phases of intensive antisemitic agitation, the regime made plain that the removal of Jews was no mere side project but the primary goal. The Nazis used the elimination of Jews from all areas of life to expand their basis of power. Antisemitic propaganda thus served to indicate the strengthening of the Nazi movement that accompanied the
 
-
+# 关于德国反犹主义的讨论
 
 关于德国反犹主义的讨论，始终无法摆脱某种“是……但是”式的张力。一方面，在投票给纳粹党的人中，只有少数是狂热的反犹主义者；另一方面，即使那些并非狂热分子的人，也容忍了他们的政党对一个群体进行诋毁和致命威胁这一事实。所有纳粹选民都体验到了反犹主义作为一种凝聚群体的“我们”，有些人是因为自己就是反犹主义者，另一些人则是因为他们的同路人如此。尽管那些并非反犹主义者的纳粹支持者，反思之下或许对他人所持的反犹观点感到不满，但这并不等同于明确的反对。
 
@@ -2842,35 +2962,33 @@ The Nazi regime declared the “Jewish question” a central political problem d
 
 但在狂热的反犹主义之上，还有反犹主义编码，它基于一种普遍信念，即“犹太人存在问题”，而这问题源于犹太人的特性。人们在使用这种编码时，会表达他们担心犹太医生、犹太记者或犹太演员太多了；会暗示他们不希望女儿嫁给犹太人，但又补充说有许多一流的犹太男性；会强调犹太人勤劳，却以一种令人略感不安的语气说出来；会评论犹太人的聪明，却又暗示他们缺乏创造力。使用这一编码的人群范围极为广泛，从认为犹太人问题必须得到“解决”的人，到听到一个可疑名字时只问一句“他是犹太人吗？”的人，不一而足。
 
-人们可以通过训练来摒弃这种编码。而1945年之后，这种编码日益成为禁忌。在20世纪60年代末，我曾有一位老师说：“希特勒把犹太人送给了所有人，但没人想要。他还能怎么办呢？”十年之后，同一位老师就会因此丢掉工作。这种反犹编码在多大程度上仅仅改变了形式——如今或许表现为反以色列情绪——仍有争议，但有迹象表明它确实如此。我不想讨论这种编码的持续存在有多邪恶（而不仅仅是冒犯或令人烦恼）。但有一点应当显而易见：当某个群体的世界观或语言体系以激进反犹主义为特征，而该群体一旦掌权，公开使用这种编码的时刻就会立刻改变。在一个犹太人正被逐出艺术界的时代，如果说“演员中犹太人的比例高得不成——”——
-
+人们可以通过训练来摒弃这种编码。而1945年之后，这种编码日益成为禁忌。在20世纪60年代末，我曾有一位老师说：“希特勒把犹太人送给了所有人，但没人想要。他还能怎么办呢？”十年之后，同一位老师就会因此丢掉工作。这种反犹编码在多大程度上仅仅改变了形式——如今或许表现为反以色列情绪——仍有争议，但有迹象表明它确实如此。我不想讨论这种编码的持续存在有多邪恶（而不仅仅是冒犯或令人烦恼）。但有一点应当显而易见：当某个群体的世界观或语言体系以激进反犹主义为特征，而该群体一旦掌权，公开使用这种编码的时刻就会立刻改变。在一个犹太人正被逐出艺术界的时代，如果说“演员中犹太人的比例高得不成——”
 
 “Jewish” 在犹太人已成为文化世界中被接受的一部分的时代说出来，其含义与在犹太人被接受的时代说出来不同。无论发言者多么真诚或坚决地拒绝反犹主义的方法，他仍然肯定了其法典。
+
+
 
 除了传达“犹太人存在问题”的信念之外，使用这种法典也是区分 *we* 与 *they* 的手段。这种情况可以发生——而且通常是无意识地发生的。阿尔伯特·施佩尔后来表示他对犹太人大屠杀一无所知。我们现在所知道的一切都告诉我们他撒谎了，即使在他二十年刑期中的每一天他自己都相信这一点。施佩尔始终否认自己是反犹主义者，他在狱中写信给女儿说：“我读到报纸上说你可能在一年中的一部分时间里住在一户好心的犹太人家中。如果是这样，你应该对此感到非常高兴……我们在纽伦堡的医生是犹太人……我从未与他们有过任何问题。”¹⁵⁰ 他的话近乎 caricature，但它们揭示了一个重要的机制：你可以生活在一种信念中，即 *你不分享政权的杀戮痴迷，同时仍然分享支撑它的我们概念。*
 
 当然，纳粹时代的反犹主义远不止无意识地分享一种 *we* 的感觉。普通民众表现出激进形式的反犹主义，并通过告密行为显示出愿意与纳粹合作的意愿。*与布尔什维克一样，国家社会主义者给予民众相当大的参与权。然而，与布尔什维克不同的是，他们指明了谁是敌人，谁不是。* 纳粹并不普遍鼓励告密，也不为告密者树立纪念碑。在 *National Socialism* 中，告密加强了我们概念，因此属于社会信任的实践。但德国人参与告密并不是为了成为德国社会的一部分；他们按定义已经属于它。*因此，德国人可以在不担心遭到反告密的情况下告发所谓的国家敌人。* 弗里德兰德指出，根据对维尔茨堡州档案馆文件的一项1990年研究，盖世太保在进行逮捕时主要依靠“告密者的大量涌入”。“《纽伦堡法案》”，弗里德兰德继续说，“为告密者提供了一种模糊的法律依据，他们可以用各种方式利用它，并且在随后的几年里，告密的数量急剧增长。”¹⁵¹ 然而，当事情后来威胁要失控时——人们因久远的事件而被告发——戈林介入并下令停止这种“麻烦”。¹⁵²
 
-除了告密、资产没收、企业“雅利安化”和艺术品盗窃之外，犹太人还面临暴力及其无处不在的威胁。纳粹政权在光天化日之下进行抵制、暴行和驱逐，而德国媒体则对欧洲犹太人数量的下降发出威胁性的暗示。1943年，《Völkischer Beobachter》估计犹太人的世界人口为1350万，并引用美国和巴勒斯坦的人口最高，分别为480万和55万。与1931年《Der Große Brockhaus》中的数据相比，犹太人口必须减少了150万至250万。隆格里希写道：“一个警觉的读者会注意到该报道称巴勒斯坦拥有第二大犹太人口。这意味着布罗克豪斯所描述的波兰（350万）、苏联（275万）、罗马尼亚（83.4万）和德国（56.4万）的社区已不再以这种规模存在……”153
+除了告密、资产没收、企业“雅利安化”和艺术品盗窃之外，犹太人还面临暴力及其无处不在的威胁。纳粹政权在光天化日之下进行抵制、暴行和驱逐，而德国媒体则对欧洲犹太人数量的下降发出威胁性的暗示。1943年，《Völkischer Beobachter》估计犹太人的世界人口为1350万，并引用美国和巴勒斯坦的人口最高，分别为480万和55万。与1931年《Der Große Brockhaus》中的数据相比，犹太人口必须减少了150万至250万。隆格里希写道：“一个警觉的读者会注意到该报道称巴勒斯坦拥有第二大犹太人口。这意味着布罗克豪斯所描述的波兰（350万）、苏联（275万）、罗马尼亚（83.4万）和德国（56.4万）的社区已不再以这种规模存在……”¹⁵³
 
 犹太人所面临的威胁的另一个组成部分来自德国民众，他们被赋予了一定程度的自行使用暴力的许可。克莱姆佩勒的日记描述了无数次公开爆发、言语虐待、诡计和袭击的案例：
 
-[1935年9月16日：] 昨天有一个典型的场景：Prager Strasse 交通堵塞。人群、汽车。一个年轻男子，脸色苍白、僵硬、面目疯狂，不停地对另一个我看不到的人喊道：“谁从犹太人那里购买就是民族的叛徒，就是民族的叛徒！……我说了……”等等等等无穷无尽。所有人都感到不安、尴尬，没有人干预。没有警察在场……154
+[1935年9月16日：] 昨天有一个典型的场景：Prager Strasse 交通堵塞。人群、汽车。一个年轻男子，脸色苍白、僵硬、面目疯狂，不停地对另一个我看不到的人喊道：“谁从犹太人那里购买就是民族的叛徒，就是民族的叛徒！……我说了……”等等等等无穷无尽。所有人都感到不安、尴尬，没有人干预。没有警察在场……¹⁵⁴
 
-[1938年12月2日：] 她告诉我们SA是如何在莱比锡发动袭击的，向犹太会堂和犹太百货商店里倒汽油，消防队只被允许保护周围建筑物而不被允许扑灭火灾本身，百货商店老板随后因纵火和保险欺诈被逮捕……特鲁德指着街对面一个敞开的凸窗。它已经敞开好几天了；人们已被带走。155
+[1938年12月2日：] 她告诉我们SA是如何在莱比锡发动袭击的，向犹太会堂和犹太百货商店里倒汽油，消防队只被允许保护周围建筑物而不被允许扑灭火灾本身，百货商店老板随后因纵火和保险欺诈被逮捕……特鲁德指着街对面一个敞开的凸窗。它已经敞开好几天了；人们已被带走。¹⁵⁵
 
-[1939年1月1日：] 在乌尔姆，拉比被追赶（由暴民，也就是人民，而不是只是执行命令的SA！）围着市场喷泉跑，胡子被点燃，当他试图触摸胡子时被打手；之后他因烧伤住院。156
+[1939年1月1日：] 在乌尔姆，拉比被追赶（由暴民，也就是人民，而不是只是执行命令的SA！）围着市场喷泉跑，胡子被点燃，当他试图触摸胡子时被打手；之后他因烧伤住院。¹⁵⁶
 
-[1941年11月1日：] 前天第一次遭受了一些虐待：在Chemnitzer Platz 一群希特勒青年团的小鬼。“一个犹太佬，一个犹太佬！”157
+[1941年11月1日：] 前天第一次遭受了一些虐待：在Chemnitzer Platz 一群希特勒青年团的小鬼。“一个犹太佬，一个犹太佬！”¹⁵⁷
 
-[1942年3月7日：] 房屋搜查已经进行到Wasastrasse。药剂师斯坦伯格被告知：“你们为什么不都上吊自杀？”他们还向他展示了如何制作绞索。158
+[1942年3月7日：] 房屋搜查已经进行到Wasastrasse。药剂师斯坦伯格被告知：“你们为什么不都上吊自杀？”他们还向他展示了如何制作绞索。¹⁵⁸
 
-[1942年4月18日：] 就在我们房子外，一个年轻男子，金发、面目凶残，从车里喊道：“你这个坏蛋，为什么还活着？”159
+[1942年4月18日：] 就在我们房子外，一个年轻男子，金发、面目凶残，从车里喊道：“你这个坏蛋，为什么还活着？”¹⁵⁹
 
-[1942年12月21日：] 一位犹太女士在购物归来时被韦泽[一名盖世太保检查员]拦住。在入口大厅，他从她手中夺过她的大包，把里面的东西全部倒出来（就像他对埃娃做的那样），然后用空包狠狠打她的脸。就在她被打得眼花时，他同时拽她的手提包并拿出东西。后来女士发现她的钱包不见了。——那个人是一名公务员……160
-
-
-
+[1942年12月21日：] 一位犹太女士在购物归来时被韦泽[一名盖世太保检查员]拦住。在入口大厅，他从她手中夺过她的大包，把里面的东西全部倒出来（就像他对埃娃做的那样），然后用空包狠狠打她的脸。就在她被打得眼花时，他同时拽她的手提包并拿出东西。后来女士发现她的钱包不见了。——那个人是一名公务员……¹⁶⁰
 
 [1942年12月31日]：此前不久，[施泰尼茨]从牙医那里出来，在布拉格大街被一名盖世太保拦住：“你无权待在这里；滚到旁边的小巷去！”¹⁶¹
 
@@ -2891,6 +3009,7 @@ The Nazi regime declared the “Jewish question” a central political problem d
 我们在纳粹政权中看到的是一个这样的体制：它把国家垄断暴力的传统形式与武装的政党组织结合起来。
 
 
+
 以及新的机构以一种模糊它们之间界限的方式存在。这个体系由一个人维系——希姆莱——他控制着除国防军之外的一切，并设立了办公室来宣扬极端民族主义的世界观。尽管机构职能既不受定义也不受限制，但在集中营事实上无法律的区域之外，某些行政规则最初仍在生效。我们开始不久后，波兰的国防军与 Einsatzgruppen 之间的紧张关系促使希姆莱援引“元首的特别命令”，该命令赋予准军事部队为所欲为的权力。SS 和警察的领导，而非军队，将负责决定谁属于“犹太-布尔什维克”知识分子。通过让 Einsatzgruppen 脱离帝国受规制社会的法律障碍，这些特别命令为种族灭绝打开了道路。[^173]
 
 对 Einsatzgruppen 暴行的态度在不同的国防军军官之间差异很大。有些人认为它们是合法的；另一些人则不这么认为。无论如何，当地指挥官在决定谁是敌人方面拥有一定的自由裁量权。自1648年以来，欧洲从未见过如此的暴力非管制化。*摧毁国家对暴力垄断的法律基础、被许可使用暴力的组织之间的竞争，以及一场由世俗定义的战争，很快带来了曾经认为不可能的极端暴力水平。*
@@ -2904,15 +3023,14 @@ Michael Wildt 指出，尽管缺乏透明度和指挥链的混乱，纳粹政权
 ## 恐怖的逻辑
 
 > “别问为什么！”
+>
 > —MAYA KAVTARADZE，引用自 SIMON SEBAG MONTEFIORE，《斯大林》
 
 > 对恐怖现象及其影响不愿正视并充分探索的态度本身就是恐怖的遗留现象。
+>
 > —LEO LÖWENTHAL，“THE ATOMIZATION OF MAN”
 
-在 Michael Frayn 的精彩闹剧《Noises Off》（1982）中，讲述了一个剧团试图上演一部庸俗的性喜剧的故事，其中一名演员抱怨他无法演好自己的角色，除非他知道角色的动机。他想知道，为什么他要端着一盘沙丁鱼走进隔壁书房。导演回应道：“Freddie，亲爱的，为什么任何人做任何事？” 这个回答把所有心理学和社会学的根本问题都一笔带过，认为它无解，而且无关紧要。我们真的应该就此作罢吗？绝对不。思考需要某种英雄主义，卡缪呼吁我们把西西弗斯想象成一个快乐的人，这同样适用于心理学家和社会学家。与此同时，我们也不应完全忽视导演的观点。为什么我们会问自己某人为什么做某事，却不问某人为什么想某事？当某人想某事时，我们最多会好奇为什么他
-
-
-认为这是个好主意。当有人做了某事时，我们会好奇他为什么要这么做。我们并不为“思想可能凭空产生”这个想法而困扰；事实上，我们会觉得荒谬的是，人们会故意选择自己要产生哪些思想。我们评判思想的标准是它们是否正确或错误，是否相关或无关，是否有趣或无聊。至于行动，我们不仅评判其后果；我们还会探寻促使它们的欲望。
+在 Michael Frayn 的精彩闹剧《Noises Off》（1982）中，讲述了一个剧团试图上演一部庸俗的性喜剧的故事，其中一名演员抱怨他无法演好自己的角色，除非他知道角色的动机。他想知道，为什么他要端着一盘沙丁鱼走进隔壁书房。导演回应道：“Freddie，亲爱的，为什么任何人做任何事？” 这个回答把所有心理学和社会学的根本问题都一笔带过，认为它无解，而且无关紧要。我们真的应该就此作罢吗？绝对不。思考需要某种英雄主义，卡缪呼吁我们把西西弗斯想象成一个快乐的人，这同样适用于心理学家和社会学家。与此同时，我们也不应完全忽视导演的观点。为什么我们会问自己某人为什么做某事，却不问某人为什么想某事？当某人想某事时，我们最多会好奇为什么他认为这是个好主意。当有人做了某事时，我们会好奇他为什么要这么做。我们并不为“思想可能凭空产生”这个想法而困扰；事实上，我们会觉得荒谬的是，人们会故意选择自己要产生哪些思想。我们评判思想的标准是它们是否正确或错误，是否相关或无关，是否有趣或无聊。至于行动，我们不仅评判其后果；我们还会探寻促使它们的欲望。
 
 关于动机谈论的社交游戏必须学习，因为它绝非自然。当你问小孩子为什么做这或那时，他们会回答：“因为我想！”而当问他们为什么想做这或那时，他们会说：“因为我做了！”在某个阶段，他们掌握了这类问题的伦理。当有人问我为什么要做一次讲座时，我不会回答：“因为我想。”提问者会把这看作一种轻蔑。我也不会说：“因为我是个虚荣的人，我想证明我对这个主题的见解比某某多。”这也不行，甚至也不行（尽管这确实是做讲座的一个动机）。相反，我首先指出我受邀做这次演讲，也就是说，我这么做不是为了我自己，而是为了别人。然后我会谈谈这个话题的重要性。我很谦虚（“在我看来，这个问题今天之所以重要是因为……”），但方式上却清楚地表明我也在服务公共利益。背后的伦理问题是：当我们谈论自己的动机时，我们寻求为自己的行动正名。
 
@@ -2926,21 +3044,17 @@ Michael Wildt 指出，尽管缺乏透明度和指挥链的混乱，纳粹政权
 
 把这类反应看作正当化尝试将是最大的错误。我们这里处理的不是一种残酷的养育方式，也不是一种严厉的爱的做法，它说：“这会很疼，但有一天你会感谢我的。”179
 
-
-
-
 被折磨的人或许还有未来，但这仅仅是一种可能性。折磨他的人可能放他走，或者，就像某起案例那样，将他从飞机上扔下去。酷刑不是为了惩罚；而是为了行使绝对权力。伴随酷刑的言语，是旨在确认这种绝对性的言语行为。再回忆一次阿根廷集中营里折磨者说过的那句话：“我们对你们就是一切……我们是上帝。”
 
 实施恐怖者与承受恐怖者之间，不存在关于合法性的协商。每一种赋予合法性的言语行为，都以自身的可争议性为前提。事实上，每一种赋予合法性的言语行为，都源于一种潜在争议的情境：那是对的吗？你可以那样做吗？为某事赋予合法性的行为本身，就承认了自身权力的相对性。通过排除这种承认，绝对权力消除了合法性的一切可能。
 
+
+
 工具性解释的第二个局限，出现在目的与手段的关系之中。谈论工具理性时，我们预设了某种共识是可能的——要么通过目的（它们是否正当？），要么通过手段（它们是否被目的证明为正当？）。然而，共识可能存在，并不意味着它已经存在。我并不是想说，那些试图用工具性模型理解奥斯维辛的历史学家，与鲁道夫·霍斯暗地里有共同事业。但他们忘记了，工具理性始终是一种合法化的手段，因为——请允许我再次强调——除了在绝对技术性的意义上，并不存在纯粹的工具性行为；即便是在那种意义上，它也离不开一个目标超出了手段—目的计算范围的语境。阿多诺将这种辩证法概括为：我们的目的无法免于我们借以实现它们的手段的影响。人们并不是先选择目的，然后才考虑合适的手段。登月的愿望并非偶然的奇思妙想，而是一个尤其包含火箭的复杂幻想的一部分。那些不在乎火箭的人，也不会在乎登月飞行。就连烹饪也不完全服从于纯粹工具逻辑。是的，你需要盐，但如果一个人感觉不到食材与捻起一撮盐或撒下一点盐的手指之间的直接关联，他永远做不出一顿像样的饭菜。
 
-工具性解释的所有行动都存在一个根本缺陷。没有人做某事只是为了去做另一件事。他们所做之事中总有一刻是愉悦的。瓦格纳的格言“德国人做事就是为了事情本身”并不是对奥斯维辛的唯一解释，但没有它，我们根本无法解释奥斯维辛。德国演员沃尔夫冈·诺伊斯称之为“对刀锋的投入”。换一个政治方面的例子：那些不喜欢与男人同帐而眠的男人、不欣赏长途行军艰辛的男人、惧怕战斗的男人、不喜欢杀死法西斯分子这个想法的男人、对美女的倾慕目光无动于衷的男人，都不会出发去参加国际纵队，去反对
-
-男人打仗的原因是，在战场上，*不打仗*比打仗更危险。[^180] 但在苏联，官员们本可以放弃政治，那他们为什么没有放弃？要解释政治局为什么仍然是一个有吸引力的工作场所，唯一的原因就是：*对于恐怖体系的积极参与者而言，心理回报大于风险。* 集中营里之所以有卡波，并不是因为那些成为卡波的人具有某种人格特质。只有在囚犯得到机会却拒绝（或者如果得到机会就会拒绝）的情况下，成为卡波的决定才可以被指责。许多卡波*比工作需要更为残暴*，是因为恐怖体系为那些从残暴中获取快感的人提供了职业机会。（晋升并不能让卡波免于毒气室，那是另一回事。）*绝对权力是由不受任何限制的任意妄为这一神圣属性构成的：亚当和夏娃吃了知识树上的果子，但那棵树是上帝种的。*
+工具性解释的所有行动都存在一个根本缺陷。没有人做某事只是为了去做另一件事。他们所做之事中总有一刻是愉悦的。瓦格纳的格言“德国人做事就是为了事情本身”并不是对奥斯维辛的唯一解释，但没有它，我们根本无法解释奥斯维辛。德国演员沃尔夫冈·诺伊斯称之为“对刀锋的投入”。换一个政治方面的例子：那些不喜欢与男人同帐而眠的男人、不欣赏长途行军艰辛的男人、惧怕战斗的男人、不喜欢杀死法西斯分子这个想法的男人、对美女的倾慕目光无动于衷的男人，都不会出发去参加国际纵队，去反对男人打仗的原因是，在战场上，*不打仗*比打仗更危险。[^180] 但在苏联，官员们本可以放弃政治，那他们为什么没有放弃？要解释政治局为什么仍然是一个有吸引力的工作场所，唯一的原因就是：*对于恐怖体系的积极参与者而言，心理回报大于风险。* 集中营里之所以有卡波，并不是因为那些成为卡波的人具有某种人格特质。只有在囚犯得到机会却拒绝（或者如果得到机会就会拒绝）的情况下，成为卡波的决定才可以被指责。许多卡波*比工作需要更为残暴*，是因为恐怖体系为那些从残暴中获取快感的人提供了职业机会。（晋升并不能让卡波免于毒气室，那是另一回事。）*绝对权力是由不受任何限制的任意妄为这一神圣属性构成的：亚当和夏娃吃了知识树上的果子，但那棵树是上帝种的。*
 
 恐怖逻辑也解释了斯大林逮捕配额的含义。对于任何想要找到并逮捕真正的破坏者和叛徒的人来说，这种做法是荒谬的。即便是那些仅仅想维持破坏者和叛徒的幻觉的人，也不能这样行事。我们可以假设，斯大林和其他恐怖代理人相信他们谈论的破坏者和叛徒确实存在，哪怕仅仅是因为，对他们来说，正如我前面论述过的，恐怖实践是一种社会信任的实践，而社会信任的实践不容忍反讽。[^181] 我们也可以假设，他们并*不*相信那些被捕者同等有罪，因为那将与设定配额的目的相矛盾。斯大林确实处于撕裂之中，一边怀疑疯狂与现实能否被区分，一边确信他自己的实践本身就定义了现实。[^182] 末世论清洗的修辞脱离了传统的有罪与无辜模式。它所关注的不是个案（如罗伯斯庇尔或布莱希特的《措施》所关注的），而是捍卫革命。那一世界性使命的历史性冲击，将革命暴力转化为一种只能朝一个方向运动的自然力，就像水冲破水坝，淹没途中的一切。这种暴力的另一个隐喻，也许是一张撒得足够广、足以网住所有想要的鱼的网。一些额外的鱼被缠在网里，但这只是它们运气不好。在斯大林的恐怖体系中，领导者们认为，捕到足够的鱼符合每个人的利益，而一张宽网是他们能确信成功的唯一方法。因为他们本来就不是在追捕那些显而易见的候选人，所以聪明的伪装也救不了受害者。那张网捕获了沿途的所有人，而这一策略的区别对待性质，加剧了每个人心中的恐怖与无助感。*那表面上的非理性*
-
 
 斯大林的逮捕配额在恐怖的逻辑中完全合理，因为配额服务于杀手的全能感。如果他们只针对真正的罪犯，就会有规则和出错的可能性。那些可以随意决定在 X 地区逮捕一万人的人，已经超出了人类参照的范畴。例如，叶若夫的个人格言：“宁可过头，也不要不够。”“打，打烂，不加甄别。”“如果在这次行动中多枪毙一千人，那也没什么大不了。”¹⁸³
 
@@ -2956,14 +3070,13 @@ Michael Wildt 指出，尽管缺乏透明度和指挥链的混乱，纳粹政权
 
 类似的现象在历史上反复出现。在斯巴达，斯巴达人少数派通过间歇性的恐怖行为确保了他们对希洛特多数派的统治。结果，他们的镇压措施使斯巴达人长期生活在报复的恐惧中（斯巴达的门锁在希腊备受追捧）。为了减少希洛特的数量，据说斯巴达人曾将希洛特士兵派往驻扎在伯罗奔尼撒以外的斯巴达军队。他们还据说张贴公告，承诺给予在战斗中表现突出的希洛特老兵自由。那些站出来的人中有两千人被选中，在一次公开庆祝后，他们被带出城并被屠杀。无论这个故事是否真实，其意图都很清楚：消灭战斗能力最强、渴望自由的希洛特，并向其他人展示不服从的后果。¹⁸⁹ 1957年的中国大鸣大放运动也是出于同样的目的（尽管是否如此构思尚不清楚）。在鼓励人民对政权提出批评之后，中国官员逮捕了最显眼的批评者并将他们关押在监狱营地。¹⁹⁰
 
-如果没有恐怖的逻辑，就无法理解布尔什维克主义在俄罗斯的传播。尽管布尔什维克政权认为自己摆脱了沙皇俄国对地区和民族群体的统治，但自决权与布尔什维克集权相矛盾，而民族群体的传统主义和农民身份与工业化现代性的理念相矛盾。¹⁹¹ 结果是对斯拉夫核心地区资产阶级精英和神职人员的斗争，以及对边缘地区部落首领、穆夫提和被禁止的民族政党成员的斗争。¹⁹² 但斗争并未就此结束。在恐怖的逻辑中，它预防性地扩展到所有可能与被杀害和被流放者产生同情的人。很快，整个民族群体都成为受制对象
-
-
-to terror. 1937年，那些仍留在苏联的前波兰战俘。后来，是所有波兰间谍，最后，是所有波兰人。叶若夫认为波兰人必须被彻底消灭。巴贝罗夫斯基写道，
+如果没有恐怖的逻辑，就无法理解布尔什维克主义在俄罗斯的传播。尽管布尔什维克政权认为自己摆脱了沙皇俄国对地区和民族群体的统治，但自决权与布尔什维克集权相矛盾，而民族群体的传统主义和农民身份与工业化现代性的理念相矛盾。¹⁹¹ 结果是对斯拉夫核心地区资产阶级精英和神职人员的斗争，以及对边缘地区部落首领、穆夫提和被禁止的民族政党成员的斗争。¹⁹² 但斗争并未就此结束。在恐怖的逻辑中，它预防性地扩展到所有可能与被杀害和被流放者产生同情的人。很快，整个民族群体都成为受制对象 to terror. 1937年，那些仍留在苏联的前波兰战俘。后来，是所有波兰间谍，最后，是所有波兰人。叶若夫认为波兰人必须被彻底消灭。巴贝罗夫斯基写道，
 
 从波兰与乌克兰边境地区驱逐了超过35,000名波兰人。类似的驱逐行动也发生在其他已成为敌对民族的族群身上：拉脱维亚人、爱沙尼亚人、朝鲜人、芬兰人、库尔德人、希腊人、亚美尼亚人、保加利亚人，以及生活在苏联各共和国的其他少数民族。¹⁹³
 
 巴贝罗夫斯基引用了一位奥地利科学家的说法，这位科学家曾被内务人民委员部关押在哈尔科夫，后来回忆起民族少数群体的到来：
+
+
 
 > “[T]he news spread that they had arrested the Latvians and then the Armenians. We could not understand the meaning of that. We thought it impossible that the GPU used a criterion for repressive measures as unessential for the political views of a person as ethnicity. Then we heard that on a certain day all prisoners delivered were Latvian. On another they were Armenian.”¹⁹⁴
 
@@ -2973,12 +3086,12 @@ to terror. 1937年，那些仍留在苏联的前波兰战俘。后来，是所�
 
 莎士比亚的《麦克白》，正如我在别处所论，是一部浸透鲜血的爱情故事。¹⁹⁶ 它也是，正如我在第三章中所论，现代良知历史的一个阶段。更重要的是，除了它所代表的一切之外，《麦克白》还是对恐怖逻辑的评论。人们常将《麦克白》解读为一个被女巫预言注定成为卡多勋爵和苏格兰国王的男人的故事。按这种解读，预言的第一部分立即应验，第二部分则在麦克白夫人说服丈夫杀死国王后才实现。然而，这种解读忽略了文本中两个关键段落。麦克白夫人在第一幕第七场的一句话表明，她的丈夫在荒原上遇到女巫之前就已萌生“意图”谋杀邓肯并夺取权力（1.7.26）。促使麦克白实施行动的与其说是预言，不如说是邓肯决定在他的城堡过夜。先前的意图解释了他对预言的震惊反应——王权的预见也是谋杀的预见——以及他试图安抚自己的话：“如果命运要我为王，为什么，/ 命运可以加冕我，/ 无需我行动”（1.3.142–44）。麦克白不愿杀害邓肯王，因为他害怕事情会弄糟——他知道这无法被合法化——但也是因为他直觉到支配他的那种动态。一个天生的杀人犯，他会享受这个行为，而实施它只会让他越陷越深。在一位王室使者带来头衔的消息后，麦克白说了以下独白：
 
-> I am Thane of Cawdor:
-> If good, why do I yield to that suggestion
-> Whose horrid image doth unfix my hair,
-> And make my seated heart knock at my ribs,
-> Against the use of nature? Present fears
-> Are less than horrible imaginings.
+> I am Thane of Cawdor:  
+> If good, why do I yield to that suggestion  
+> Whose horrid image doth unfix my hair,  
+> And make my seated heart knock at my ribs,  
+> Against the use of nature? Present fears  
+> Are less than horrible imaginings.  
 > (1.3.133–38)
 
 想到这件事就激活了麦克白的全部想象。当他最终在妻子的怂恿下、在幻影匕首的引领下进入国王寝室实施行动时，他超出了目标。计划是给国王的卫兵下药并用血弄脏他们的衣服。但一旦麦克白尝到禁忌的鲜血，他就无法控制自己，甚至也杀死了卫兵。
@@ -2987,37 +3100,37 @@ to terror. 1937年，那些仍留在苏联的前波兰战俘。后来，是所�
 
 当麦克白在皇家宴会上看到被谋杀的班柯的灵魂时，他失去了控制，他的妻子必须向客人为他的行为找借口。后来角色互换了。麦克白保持冷静，而麦克白夫人开始走上导致她发疯的道路：
 
-MACBETH: It will have blood, they say: blood will have blood:
-Stones have been known to move, and trees to speak;
-Augures, and understood relations, have
-By magot-pies, and choughs, and rooks, brought
-forth
-The secret’st man of blood.—What is the night?
-
-
-
-
-
-LADY MACBETH: 几乎与黎明相悖，到底哪个是哪个。
-MACBETH: 你说，麦克达夫拒绝出席，
-在我们的大宴上？
-LADY MACBETH: 您派人去请他了吗，先生？
-MACBETH: 我在路上听说；但我会派人去。
-他们没有一个不是在我家
-养着一个吃食的仆人。我明天
-（而且我会很早）去见那三个女巫：
-她们还要多说几句；因为我现在决意要知道，
-用最坏的手段，知道最坏的事。为我自己的好处，
-一切原因都得让路：我已深陷血泊，
-踏入其中如此之深，以至于若不再继续涉水，
-回头也和继续向前一样乏味。
-我脑中有些怪事，欲付诸行动，
-必须先行实施，才能被审视。
-LADY MACBETH: 你缺乏所有本性的季节，睡眠。
-MACBETH: 来吧，我们去睡觉。我那怪异而自虐的
-正是初生之惧，缺乏艰难的磨练：
-我们尚只是初学者，在行动上。
-(III.4.122–43)
+> MACBETH: It will have blood, they say: blood will have blood:  
+> Stones have been known to move, and trees to speak;  
+> Augures, and understood relations, have  
+> By magot-pies, and choughs, and rooks, brought forth  
+> The secret’st man of blood.—What is the night?  
+>
+> LADY MACBETH: 几乎与黎明相悖，到底哪个是哪个。  
+>
+> MACBETH: 你说，麦克达夫拒绝出席，  
+> 在我们的大宴上？  
+>
+> LADY MACBETH: 您派人去请他了吗，先生？  
+>
+> MACBETH: 我在路上听说；但我会派人去。  
+> 他们没有一个不是在我家  
+> 养着一个吃食的仆人。我明天  
+> （而且我会很早）去见那三个女巫：  
+> 她们还要多说几句；因为我现在决意要知道，  
+> 用最坏的手段，知道最坏的事。为我自己的好处，  
+> 一切原因都得让路：我已深陷血泊，  
+> 踏入其中如此之深，以至于若不再继续涉水，  
+> 回头也和继续向前一样乏味。  
+> 我脑中有些怪事，欲付诸行动，  
+> 必须先行实施，才能被审视。  
+>
+> LADY MACBETH: 你缺乏所有本性的季节，睡眠。  
+>
+> MACBETH: 来吧，我们去睡觉。我那怪异而自虐的  
+> 正是初生之惧，缺乏艰难的磨练：  
+> 我们尚只是初学者，在行动上。  
+> (III.4.122–43)
 
 麦克白仍在班柯之魂的魔咒之下，继续谈论着愤怒的天性。血债需血偿的洞见是暧昧的：被洒的血为复仇而呼喊，但一桩罪行牵连另一桩。突然麦克白变得冷静。他询问时间，麦克达夫是否出席了宴会。间谍遍布各地，他在暴政的事业中已走得足够远，以至于知道人们回避他的交往意味着什么。他计划明天处理麦克达夫的事。在此期间他去寻找女巫，她们已沦为线人的地步。他想知道最坏的情况下等待他的是什么。至于血腥和谋杀，他得习惯那件事；跨过界线的人最好继续走他们选择的道路。他克服了幻象带来的恐惧，并对自己的行为做出解释：新手的神经性痉挛，可以说“我们尚只是初学者，在行动上。”在菲利普·卡森对该剧的导演中，由朱迪·丹奇饰演的 Lady Macbeth 在听到他说这些话时感到近乎肉体的疼痛。
 
@@ -3041,28 +3154,21 @@ MACBETH: 来吧，我们去睡觉。我那怪异而自虐的
 
 ## WHY THE JEWS?
 
-阿伦特在《极权主义的起源》第一章开头就批评了反犹主义的标准解释。第一种是所谓的替罪羊理论：犹太人——“一个完全无力、卷入当时普遍且无解冲突的群体”——可以轻易被归咎于任何事情。这个解释的问题在于其任意性：“这种解释的最佳例证——也是最佳反驳——是第一次世界大战后流传的一个笑话。亲。阿伦特在《极权主义的起源》第一章开头就批评了反犹主义的标准解释。第一种是所谓的替罪羊理论：犹太人——“一个完全无力、卷入当时普遍且无解冲突的群体”——可以轻易被归咎于任何事情。这个解释的问题在于其任意性：“这种解释的最佳例证——也是最佳反驳——是第一次世界大战后流传的一个笑话。一个反犹主义者声称犹太人导致了战争；回答是：是的，犹太人和自行车手。为什么自行车手呢？问第一个人。为什么犹太人呢？问另一个人。”¹⁹⁸ 另一种理论是“永恒的反犹主义”理论，即犹太仇恨是一种正常且自然的反应，历史只给予多或少的机会。”¹⁹⁹ 使这种观点如此“危险且令人困惑”的原因是反犹主义者和犹太史学家都认同它。前者用它来为他们的仇恨辩护为自然
+阿伦特在《极权主义的起源》第一章开头就批评了反犹主义的标准解释。第一种是所谓的替罪羊理论：犹太人——“一个完全无力、卷入当时普遍且无解冲突的群体”——可以轻易被归咎于任何事情。这个解释的问题在于其任意性：“这种解释的最佳例证——也是最佳反驳——是第一次世界大战后流传的一个笑话。一个反犹主义者声称犹太人导致了战争；回答是：是的，犹太人和自行车手。为什么自行车手呢？问第一个人。为什么犹太人呢？问另一个人。”¹⁹⁸ 另一种理论是“永恒的反犹主义”理论，即犹太仇恨是一种正常且自然的反应，历史只给予多或少的机会。”¹⁹⁹ 使这种观点如此“危险且令人困惑”的原因是反犹主义者和犹太史学家都认同它。前者用它来为他们的仇恨辩护为自然；后者则用它来讲述持续受苦的故事。根据阿伦特，这两种解释反犹主义的方式都回避了对历史和政治的细致研究，因而使犹太人和非犹太人免于各自对此应承担的责任。
 
 
-ral; 后者则用它来讲述持续受苦的故事。根据阿伦特，这两种解释反犹主义的方式都回避了对历史和政治的细致研究，因而使犹太人和非犹太人免于各自对此应承担的责任。
 
 我在这里的兴趣并不是重建阿伦特关于反犹主义和极权统治的复杂分析。我只想问，与阿伦特相反，“永恒反犹主义”的理论是否有些道理。并非就其字面意义上的“永恒”而言，而是就其“持续”而言。这并不是说中世纪基督徒对犹太人的仇恨与十九世纪的反犹主义之间存在无缝的连续体。但认为前者只是宗教争端的产物而后者只是生物学建构的产物，未免过于简单。马太福音并不仅仅批评犹太教；它指控犹太教犯了弑神罪。在彼拉多洗手之后，犹太人诅咒了自己：“他的血归到我们和我们的子孙身上”（太 27:25）。这就是洗礼本意要洁净的诅咒。除了改宗的犹太人之外，这并没有帮助。在第一次大规模犹太人迫害期间，即十字军东征前夕，谋杀和强迫洗礼是同时进行的。²⁰⁰ 黑死病期间的第二次犹太人迫害浪潮，指责所有犹太人，甚至受洗者，犯了各种各样的罪行，从投毒污染水源到亵渎圣体圣事。²⁰¹ 十九世纪的历史学家罗伯特·霍宁格写道，“这些迫害中的仇恨如此之深，以至于在没有犹太居民居住的地方……官员们会辨认出受洗的犹太人并将他们活活烧死。”²⁰²
 
-对改宗基督教的犹太人的迫害是建立在“一旦是犹太人，永远是犹太人”的信念之上的。种族方面的因素并未被后来的评论家所忽视。维克托·克莱珀尔注意到纽伦堡法令和十五世纪西班牙法律之间的相似性，而历史学家本齐昂·内塔尼亚胡则谈到了这一时期“种族主义的兴起”。²⁰³ 这是一个宗教动机的反犹太主义很容易过渡到种族主义反犹主义的氛围。²⁰⁴ 到摩尔人于1492年向格拉纳达投降时，对西班牙犹太人的暴行已成为某种传统，从自发的屠杀到扭曲的托尔托萨辩论，后者让海涅写下了一首可怕的诗。²⁰⁵ 格拉纳达陷落后不久，斐迪南和伊莎贝拉给西班牙犹太人下了最后通牒：接受基督教或在四个月内离开国家。十五万犹太人离开了西班牙，而五万人改宗并留了下来。这本应解决了西班牙的“犹太人问题”，但西班牙人仍然把 conversos 看作犹太人。这就是他们坚持称他们为 Marranos 的原因；如果他们认为他们是真正的基督徒，就没有必要进行语言上的区分。旧的“犹太人问题”——犹太人在基督教国家内的存在——
+对改宗基督教的犹太人的迫害是建立在“一旦是犹太人，永远是犹太人”的信念之上的。种族方面的因素并未被后来的评论家所忽视。维克托·克莱珀尔注意到纽伦堡法令和十五世纪西班牙法律之间的相似性，而历史学家本齐昂·内塔尼亚胡则谈到了这一时期“种族主义的兴起”。²⁰³ 这是一个宗教动机的反犹太主义很容易过渡到种族主义反犹主义的氛围。²⁰⁴ 到摩尔人于1492年向格拉纳达投降时，对西班牙犹太人的暴行已成为某种传统，从自发的屠杀到扭曲的托尔托萨辩论，后者让海涅写下了一首可怕的诗。²⁰⁵ 格拉纳达陷落后不久，斐迪南和伊莎贝拉给西班牙犹太人下了最后通牒：接受基督教或在四个月内离开国家。十五万犹太人离开了西班牙，而五万人改宗并留了下来。这本应解决了西班牙的“犹太人问题”，但西班牙人仍然把 conversos 看作犹太人。这就是他们坚持称他们为 Marranos 的原因；如果他们认为他们是真正的基督徒，就没有必要进行语言上的区分。旧的“犹太人问题”——犹太人在基督教国家内的存在——变成了一个新的“犹太人问题”；怀疑 Marranos 仍然是真正的犹太人，秘密地遵循犹太信仰及其习俗。官员们监视 conversos，询问屠夫他们是否买猪肉，检查安息日他们的烟囱是否冒烟。诬告、逮捕和杀戮很快就开始了。Marranos 在宗教裁判所的号召下自愿承认自己信奉犹太教的人冒着被禁止从事其职业的风险。
 
-变成了一个新的“犹太人问题”；怀疑 Marranos 仍然是真正的犹太人，秘密地遵循犹太信仰及其习俗。官员们监视 conversos，询问屠夫他们是否买猪肉，检查安息日他们的烟囱是否冒烟。诬告、逮捕和杀戮很快就开始了。Marranos 在宗教裁判所的号召下自愿承认自己信奉犹太教的人冒着被禁止从事其职业的风险。
+西班牙人对犹太人有疑虑当然是有原因的：毕竟他们是强迫犹太人改宗的。但真正的问题是，就像十九世纪的德国人一样，西班牙人并不相信犹太人的同化。对他们来说，犹太人永远是犹太人。犹太人同化得越多，西班牙人就越有理由怀疑这是狡猾的欺骗。就在这里，恐怖的逻辑接管了：迫害成为其自身的理由，而被迫害的群体成为一个种族共同体。
 
-西班牙人对犹太人有疑虑当然是有原因的：毕竟他们是强迫犹太人改宗的。但真正的问题是，就像十九世纪的德国人一样，西班牙人并不相信犹太人的同化。对他们来说，犹太人永远是犹太人。犹太人同化得越多，西班牙人就越有理由怀疑这是狡猾的欺骗。*就在这里，恐怖的逻辑接管了：迫害成为其自身的理由，而被迫害的群体成为一个种族共同体。*
+西班牙法律无疑是德国种族政策的前身，即使从未被如此研究。像纽伦堡法令的制定者一样，西班牙人必须决定谁属于哪个群体。根据西班牙法律，犹太人是指任何改宗者的后裔。limpieza de sangre，血统纯洁的概念，用来防止各群体混杂。莱昂·波利亚科夫写到一位名叫埃斯科瓦尔·德尔·科罗的种族主义意识形态者：
 
-西班牙法律无疑是德国种族政策的前身，即使从未被如此研究。像纽伦堡法令的制定者一样，西班牙人必须决定谁属于哪个群体。根据西班牙法律，犹太人是指任何改宗者的后裔。*limpieza de sangre*，血统纯洁的概念，用来防止各群体混杂。莱昂·波利亚科夫写到一位名叫埃斯科瓦尔·德尔·科罗的种族主义意识形态者：
+> 根据他说，身体与灵魂之间的关系是完全僵硬的，道德属性以与身体特征相同的方式遗传。否认自由意志，这位基督徒宣称……conversos 是不可挽回地被玷污了。这种“人类学”使他哀叹西班牙的不幸，直到永远暴露在犹太人的传染之下，“受安息日崇拜者和他们被感染的后代的奴役。”
 
-> 根据他说，身体与灵魂之间的关系是完全僵硬的，道德属性以与身体特征相同的方式遗传。否认自由意志，这位基督徒宣称……*conversos* 是不可挽回地被玷污了。这种“人类学”使他哀叹西班牙的不幸，直到永远暴露在犹太人的传染之下，“受安息日崇拜者和他们被感染的后代的奴役。”
-
-阿伦特指出，反犹主义者荒谬地利用“永恒迫害”的概念来为自己的行为辩护。同样疯狂的是让-保罗·萨特所说的“犹太人一定有什么问题”的论点。就好像有人不喜欢番茄就会说它们有些不对劲。尽管如此，这一论点一次又一次地浮现。当莱辛发表《犹太人》时，人们告诉他，在基督徒对犹太人所做的一切之后，像他剧中主人公那样正直的人是不可能的。基督教民族主义者海因里希·冯·特赖奇克在1879年题为“Unsere Aussichten”（我们的前景）的文章中提出了类似的论点。在那里他呼吁犹太公民接受“我们是一个基督教民族并且希望保持如此”。他认为，在德国社会中拥有自己的公共宗教或文化身份是不可能的。犹太人“必须适应其基督教同胞的风俗和思想……剩下的就是我们的犹太人
-
-
-
-同胞们需要全心全意地决定成为德国人。210 为此，他主张“种族”混合，以便“日耳曼人”最终能同化“闪米特人”。他承认有些犹太人将无法被同化：“自塔西佗抱怨‘对人类之敌的憎恨’（odium generis humani）以来，欧洲人与闪米特人之间就存在一道深渊。总有一些犹太人不过是说德语东方人。”211 特赖奇克特别提到了西方犹太人与波兰犹太人之间的差异：“我们德国人……必须面对波兰分支的犹太人，他们身上带着数世纪基督教暴政留下的深深伤痕。根据经验，他们与欧洲人，尤其是与德国民族性格，更为格格不入。”212 读到这些句子时，德籍犹太哲学家曼努埃尔·约埃尔只能摇头。在给特赖奇克的一封公开信中，他提醒对方：“波兰犹太人就是被驱逐到波兰的德国犹太人。”随后他强调了另一个关键点：
+阿伦特指出，反犹主义者荒谬地利用“永恒迫害”的概念来为自己的行为辩护。同样疯狂的是让-保罗·萨特所说的“犹太人一定有什么问题”的论点。就好像有人不喜欢番茄就会说它们有些不对劲。尽管如此，这一论点一次又一次地浮现。当莱辛发表《犹太人》时，人们告诉他，在基督徒对犹太人所做的一切之后，像他剧中主人公那样正直的人是不可能的。基督教民族主义者海因里希·冯·特赖奇克在1879年题为“Unsere Aussichten”（我们的前景）的文章中提出了类似的论点。在那里他呼吁犹太公民接受“我们是一个基督教民族并且希望保持如此”。他认为，在德国社会中拥有自己的公共宗教或文化身份是不可能的。犹太人“必须适应其基督教同胞的风俗和思想……剩下的就是我们的犹太人同胞们需要全心全意地决定成为德国人。210 为此，他主张“种族”混合，以便“日耳曼人”最终能同化“闪米特人”。他承认有些犹太人将无法被同化：“自塔西佗抱怨‘对人类之敌的憎恨’（odium generis humani）以来，欧洲人与闪米特人之间就存在一道深渊。总有一些犹太人不过是说德语东方人。”211 特赖奇克特别提到了西方犹太人与波兰犹太人之间的差异：“我们德国人……必须面对波兰分支的犹太人，他们身上带着数世纪基督教暴政留下的深深伤痕。根据经验，他们与欧洲人，尤其是与德国民族性格，更为格格不入。”212 读到这些句子时，德籍犹太哲学家曼努埃尔·约埃尔只能摇头。在给特赖奇克的一封公开信中，他提醒对方：“波兰犹太人就是被驱逐到波兰的德国犹太人。”随后他强调了另一个关键点：
 
 > 如您所写，若“数世纪的基督教暴政”是针对犹太人的，那么受虐待者的后代必须为施虐者的罪过赎罪，您又如何调和您的正义感？您是否将那句（对世界历史而言无疑痛苦而准确的）经文中关于上帝“追讨父亲的罪孽，直到儿女”的话，解释为儿女如今必须为他人父亲的罪过赎罪？213
 
@@ -3078,8 +3184,6 @@ ral; 后者则用它来讲述持续受苦的故事。根据阿伦特，这两种
 
 
 
-
-
 兰克林走在正确的道路上：他说服观众相信不可思议的事情，并非尽管其卑劣，而是正因为其卑劣。但他没有做到的是说服观众安妮也相信不可思议。成功的舞台呈现会是什么样子？来看这样一个假设场景。理查德和安妮身处一座小教堂，国王亨利的遗体就摆在他们面前。安妮手持一根点燃的蜡烛；其余地方一片黑暗。当理查德解释说他是出于对她的爱才杀死了爱德华时，安妮放下了蜡烛，火焰熄灭了。理查德用他完好的那只手捡起蜡烛，放在她手中，并用打火机点燃它。在他们交谈时，他从她手中取走蜡烛，用它点燃周围的其他蜡烛。他照亮了一个此前她未曾知晓的世界，而她也一路跟随。我要表达的重点是：理查德试图用“爱上了寡妇”这一理由为谋杀辩解是荒谬的。这种荒谬唯有在接受者已将其视为事实时，才可能开启新的可能性之门。如果安妮相信理查德有可能通过求婚来解释她丈夫的被谋杀，那么一切皆有可能——甚至嫁给她最憎恨的男人。
 
 那位小主教在其成功之秘中看到了对人和规则的冷漠，而他是对的。道德作为一个抽象实体存在于世界之外，就如同我们不存在一样。道德正如黑格尔对哲学所说，是“以思想把握的自己的时代”。没有一种“应当”是不与日常生活相关联的，无论是肯定还是批判。因为任何批判都需要肯定作为其基础，而这种肯定无处不在，只存在于我们面前所见的现实之中。这就是黑格尔所说的“否定之否定”的含义。我们对现实所作的否定性判断的基础，来源于除社会信任之外的任何东西。社会信任由这样一种正常预期构成：生活将如既往地继续下去，这其中包括相信某些事情根本不会发生。如果我们认为不可能的事情突然发生并主导了生活，它最初会在我们心中引发震惊的难以理解。如果生活在这一切之后仍继续下去，我们就会适应新的条件——从此以后据此行事。
@@ -3090,9 +3194,7 @@ ral; 后者则用它来讲述持续受苦的故事。根据阿伦特，这两种
 
 ## 信任暴力与人格的作用
 
-此前我引用了齐美尔关于个人与社会在职业中和谐的观点，并以斯大林作为其惨烈体现。在《通往奴役之路》（1944）一书中，约翰·塞尔将其评为二十世纪最重要的著作，弗里德里希·冯·哈耶克提出了一种人格理论，将斯大林的案例进行了概括。在第10章《为何最坏的人上位》中，哈耶克指出了极权政体领导者和支持者的典型特征。首先也是最重要的是，这些人表现出愿意使用暴力来实现目标，并将一切置于其下的意愿。这种行为预设了智力的僵化、狂热、易受蒙骗以及我们对他们的人际心态。哈耶克写道，这种最后一种属性“是任何能够牢固团结一个群体共同行动的信条中的必备成分”。原因在于“人们更容易就负面纲领达成一致，就对敌人的仇恨，就对比自己更好的人的嫉妒达成一致，而非就任何积极任务达成一致”。我们对他们的人际区分也是必要的，因为群体必然是特殊主义的：
-
-
+此前我引用了齐美尔关于个人与社会在职业中和谐的观点，并以斯大林作为其惨烈体现。在《通往奴役之路》一书中，约翰·塞尔将其评为二十世纪最重要的著作，弗里德里希·冯·哈耶克提出了一种人格理论，将斯大林的案例进行了概括。在第10章《为何最坏的人上位》中，哈耶克指出了极权政体领导者和支持者的典型特征。首先也是最重要的是，这些人表现出愿意使用暴力来实现目标，并将一切置于其下的意愿。这种行为预设了智力的僵化、狂热、易受蒙骗以及我们对他们的人际心态。哈耶克写道，这种最后一种属性“是任何能够牢固团结一个群体共同行动的信条中的必备成分”。原因在于“人们更容易就负面纲领达成一致，就对敌人的仇恨，就对比自己更好的人的嫉妒达成一致，而非就任何积极任务达成一致”。我们对他们的人际区分也是必要的，因为群体必然是特殊主义的：
 
 也许，确实可以质疑是否有人能够现实地设想一种集体主义纲领，而不只是为一个有限的群体服务，集体主义是否能在任何形式上存在，而不只是某种特殊主义，无论是民族主义、种族主义还是阶级主义……这一观点的必然结果是，一个人仅作为群体成员才受到尊重，也就是说，仅在他为被认可的共同目标工作时才受到尊重，并且他全部的尊严仅源于这种成员身份，而非仅仅因为他是一个人。事实上，人性和因此任何形式的国际主义概念完全都是个人主义对人观的产物……“代表一个群体行动似乎使人们摆脱了许多在群体内部作为个体行为时所受的道德约束。”221
 
@@ -3100,7 +3202,7 @@ ral; 后者则用它来讲述持续受苦的故事。根据阿伦特，这两种
 
 获得和维持权力既需要残忍和暴行，又在人民中灌输这些品质。那些对传统道德观念有所认同的人会发现这些属性毫无吸引力。优柔寡断和犹豫不决的人要么采纳它们，要么在尝试中失败。但正如哈耶克所写，“对残忍和无原则的人来说，将会有特殊的机会。”而且，“会有一些工作要做，这些工作本身的恶劣无人怀疑，但必须为了某种更高的目的而去执行，并且必须像其他工作一样以同样的专业和效率来执行……[T]做坏事的意愿成为晋升和权力的途径。”223
 
-布尔什维克主义和国家社会主义的历史证明，哈耶克的描述绝非夸张。然而，这些政权取得的权力需要的不仅仅是做坏事的准备。许多人指出，他们的领导人并未赢得多少信任。不仅仅是因为斯大林的语法（哪位政治领袖说话完美无缺？）或因为戈林看起来像一个臃肿的嘉年华王子，戈培尔像舞台情节剧中的魔鬼，希姆莱像一名校长，而希特勒像一个二流的卓别林模仿者（哪位政治领袖长得好看？）。最主要的是他们未能赢得信任，因为他们显然无能。例如，戈林的空军无法保护德国人民，到1941年，数以万计的国防军士兵在苏联阵亡。224 阻止大规模起义的是国家恐怖与对占领区日耳曼民族的优待措施相结合。225 但还有另一个因素。斯大林和希特勒的政权各自创造了一种秩序和常态，确保生活会继续
+布尔什维克主义和国家社会主义的历史证明，哈耶克的描述绝非夸张。然而，这些政权取得的权力需要的不仅仅是做坏事的准备。许多人指出，他们的领导人并未赢得多少信任。不仅仅是因为斯大林的语法哪位政治领袖说话完美无缺？或因为戈林看起来像一个臃肿的嘉年华王子，戈培尔像舞台情节剧中的魔鬼，希姆莱像一名校长，而希特勒像一个二流的卓别林模仿者哪位政治领袖长得好看？。最主要的是他们未能赢得信任，因为他们显然无能。例如，戈林的空军无法保护德国人民，到1941年，数以万计的国防军士兵在苏联阵亡。224 阻止大规模起义的是国家恐怖与对占领区日耳曼民族的优待措施相结合。225 但还有另一个因素。斯大林和希特勒的政权各自创造了一种秩序和常态，确保生活会继续
 
 德国历史学家亚历山大·德曼特称罗马皇帝的职位为“欧洲文化史上前所未有的人类学实验”，在那里可以“以最小的约束和最大的自由”生活。227 但即使统治者体现了俗语所说的“凯撒的疯狂”，也很难说出其中有多少归因于个人疾病，有多少归因于不受限制的权力的病理。罗马皇帝不仅因其犯下的残酷行为而引人注目，也因其实施的政策而引人注目。228 阿洛伊斯·温特林认为，卡利古拉的怪异想法——尤其是他相信人民应将他作为神来崇拜——是对他从前任那里继承的有问题的治理体系的回应。奥古斯都建立了一个事实上的君主制，但仍然像共和国结构仍然有效一样统治。他征求元老院的建议，但他知道他们只会告诉他他想听的话。在灵活性更差、政治才能更低的提比略身上，这种安排演变为闹剧：提比略将事情按字面理解，并没有像皇帝那样统治。准备好为君主服务的元老们，看到提比略是一个忽视职责的人。卡利古拉通过将他事实上的权力付诸实践——或者更确切地说付诸行动——来规避可能的沟通问题。当时流传的一个著名轶事说，有一次卡利古拉生病时，一位元老自愿为皇帝的健康向神献上自己的生命。在这位元老兑现承诺之前，卡利古拉的病情好转。但卡利古拉没有慷慨地奖励这位元老的忠诚，反而命令他自杀。229
 
@@ -3110,10 +3212,13 @@ ral; 后者则用它来讲述持续受苦的故事。根据阿伦特，这两种
 
 例如，考虑一下盖世太保在德累斯顿对犹太人住宅的突袭。特工们翻箱倒柜、尖叫并殴打居民，就像我们所预期的那样。231 但也有惊喜。一名盖世太保特工在检查一名妇女的购物袋中是否有违禁食品时偷走了她的钱包。其他特工则进行掠夺
 
-
 盖世太保们表现得像一群挣脱束缚、兴高采烈的孩子，被自己的行径逗得乐不可支。更有甚者，他们还会偷些钱然后跑掉。
 
 受过弗洛伊德《性学三论》或埃里希·弗罗姆《人的破坏性解剖》训练的精神分析倾向者，绝不会看不到肛欲与施虐之间的联系。[237] 这种联系是正确的，但本节开头提出的问题依然存在。盖世太保特工的行为支持了肛欲-施虐性格的论断，但如果精神分析学家只了解这位特工的私人生活，他或她会得出这样的诊断吗？我们有理由推测，某些类型的人会根据名声、制服或公开表现被某些类型的组织所吸引。然而，历史教会我们别的东西：在某些情境下，人们会表现出似乎对其人格至关重要的性格特征，但在另一些情境下，这些特征又不再主导。这并不意味着任何人什么都能做得出来。这确实意味着很多人能够做出大量的恶行。那些不愿或不能做这种事的人，会离开这些恶行发生的框架，要么主动地、通过身体上抽身而去，要么被动地、通过无视命令。
+
+
+
+# 伴随极端暴力和等级制度的怪异行为实例
 
 让我们再看几个伴随极端暴力和等级制度的怪异行为实例。1938年11月12日，即水晶之夜两天后，戈林召集了一次纳粹高官会议。他在开场白中解释了会议目的：“我收到一封信，是元首副手、参谋长博尔曼按照元首指示写给我的，信中指出，犹太人问题现在应以集中方式处理，并以这样或那样的形式加以解决。”[238] 戈林明确表示，该政权对“解决犹太人问题”是认真的。他没有具体说明手段，但这正是关键所在：这种模糊性——以这样或那样的形式——从来不是为了限制；它标志着传统的顾虑已不再重要。会议议程上的第一项是赔偿暴动期间造成的损失。德国保险业代表爱德华·希尔加德表达了严重关切。弗里德兰德写道：“仅犹太人商店被毁的窗玻璃的保险金额就约为六百万美元，而且由于玻璃是比利时的，至少一半的金额必须以外国货币支付。”但戈林通过发布他两天前已经从希特勒那里接到的命令来消除希尔加德的担忧：“犹太人将承担修复其店铺的全部费用；帝国将没收德国保险公司支付的所有赔款。”“德国国籍的犹太人，”戈林总结道，“将作为一个整体向德意志帝国缴纳10亿帝国马克的捐款。”[239]
 
@@ -3123,8 +3228,9 @@ ral; 后者则用它来讲述持续受苦的故事。根据阿伦特，这两种
 
 我们面对的是一帮青少年，各自扮演着不同的角色：希姆莱是候补队长；戈培尔是不擅长运动的好友，特别喜欢自己的皮风衣；戈林是恶霸和班级小丑。他们都想在缺席的领袖面前表现出色。最重要的是，
 
-
 不过，他们在知道有一群人完全任由他们摆布时，获得了难以形容的快感。每个人都幻想着自己最觉得好笑的事情：一个喜欢驱逐和运输（也许他在家也有模型火车？）；另一个喜欢禁止和封锁；第三个喜欢羞辱和玷污。有人可能会说我在贬低他们，但这真的算是漫画式夸张吗？当身处前所未有的权力地位的成年人放纵自己幼稚的冲动，且不受约束、毫不妥协时，这真的无害吗？这种疯狂的片面性是冷漠以及对冷漠的退行性快感的最佳心理前提。它通过消灭文明本身的一部分来消除文明的不满。
+
+## 纳粹时代的疯狂与恐怖：人体实验
 
 我想再探讨一个纳粹时代疯狂与恐怖重叠的案例：人体实验。[244] 今天人们争论，是否应该允许使用违反医学伦理的研究得出的治疗方法。支持方的论点：任何能拯救人类生命的东西都必须使用，即使是在犯罪情况下发现的。反对方的论点：以这种方式使用此类研究可能会使那些以医学进步为借口来为谋杀辩护的医生合法化。我并不声称能对这个问题给出普遍答案。今天我们之所以禁止此类实验，原因很清楚，但这与要讨论的无关。至于由先前的伦理违规而实现的治疗，两难困境无法一劳永逸地解决，只能逐案处理，而且无论哪种方式都充满困境。[245]
 
@@ -3138,57 +3244,53 @@ ral; 后者则用它来讲述持续受苦的故事。根据阿伦特，这两种
 
 类似的例子还有很多。一些没有外科经验的医生为练习而对囚犯进行手术，最终导致他们死亡。其他医生尽管事先知道
 
-
 致命后果。253 还有一些人则撬开囚犯的颅骨，“以观察人类大脑是如何运作的。”252 这些医生就像拆开玩具来弄明白它如何运作的孩子一样，一旦玩具被拆坏，就把它扔掉，因为他们的架子上还有满满的其他玩具。医生们收集头骨和眼球，或用人体皮肤制作灯罩和书皮，或制作包含纹身皮肤样本的相册。其中一篇题为“论纹身问题”的论文获得了最高分。253 这就是孩子撕下苍蝇翅膀、短暂地惊奇地看着然后失去兴趣的好奇心。
+
+## 根本性的退化
 
 为什么会发生这种根本性的退化？人们在成熟过程中学会了没有人是全能的。首先他们意识到自己不是；然后他们意识到父母也不是。那些通过参与违背现代性规则的暴力政权而忘记这些教训的人，可能会感受到一种温柔的东西伴随着不寒而栗的诡异感：“所以，归根结底，这确实是真的”父母是全能的。在1960年代，我的一个同学告诉我，他曾观察到他的祖母从床头柜上取下希特勒的照片，轻轻抚摸它，并说：“他有一双如此善良的眼睛。”我们也知道“斯大林爸爸”和他臂弯里的女孩的图像，或希特勒像对待儿子一样拍着男孩脸颊的图像。亚历山大和玛格丽特·米切尔利奇问道，为什么德国人没有为他们心爱的偶像的丧失而哀悼。他们的回答是，这种爱是自恋的。德国人没有体验到悲伤，而是体验到了忧郁，这是一种防御机制，用来否认纳粹罪行的现实。但还有另一种解释：对于大多数德国人来说，战败彻底驳斥了全能的幻觉，以至于他们再也无法维持对父亲的移情。
 
-那些在纳粹时代像许多德国人一样体验到极度优越感或对他人绝对权力的人会怎样？他们学会了全能确实存在。这种全能感与自信的极大提升相伴而行。对自己和世界的信任在绝对权力的媒介中变得更加强大。重新发现全能的人会说我知道你一直把我看作弱者。现在看看我的力量和权力。他们变得像《我将作证》中那个小男孩一样大喊：“杀了他！——老犹太人，老犹太人！”参与不受约束的暴力的人获得了自我信任，因为他们所信任的暴力始终唾手可得。在社会允许的范围内，全能的重新发现使个人回到了他们最初相信它的发展阶段。254 他们开始做一些事情，以工具理性所设定的期望来衡量，是毫无意义的。问题在于，没有任何活动或暴力行为仅仅遵循工具理性，而这种退行的“让我们看看如果我这样做会怎样”的心态也符合恐怖的逻辑。因此，疯狂和越界变得无法区分。
-
-一些历史学家和社会学家认为，我们对现代性的信任只能通过将这种无法区分性强行纳入工具理性的框架来维持。是否可以在不否认现实的情况下做到这一点仍然是一个悬而未决的问题。在我们甚至考虑这个问题之前，我们必须问为什么人们会失去他们对暴力的信任。答案可能简单到这种程度：对末日（想象的）现实的愉悦最终让位于对它的恐惧。暴力为苏联铺平了通往现代性的道路，然而为了留在那条道路上，苏联不得不遏制带来他们到此的某些暴力。德国对暴力力量的信心使它能够征服欧洲的大部分地区并犯下大规模屠杀，但这种信心只持续了“十二年”。这些案例表明，历史事件——古拉格、奥斯维辛、广岛——正是驳斥了对暴力的信任。255 但如果这是真的，那么这些历史事件本应也摧毁我们对现代性的信任才对。相反，我们继续前行，仿佛二十世纪的灾难只是历史道路上的小颠簸。这可能是因为我们未能理解暴力的另一个、至关重要的方面：沟通。某种程度上的不理解可能是福音。但不理解丝毫没有阻止二十世纪的灾难，显然，它也没有为理解它们做出任何贡献。它所做的只是引发了坎波夫斯基母亲提出的问题：“这到底是怎么回事？”
 
 
+那些在纳粹时代像许多德国人一样体验到极度优越感或对他人绝对权力的人会怎样？他们学会了全能确实存在。这种全能感与自信的极大提升相伴而行。对自己和世界的信任在绝对权力的媒介中变得更加强大。重新发现全能的人会说我知道你一直把我看作弱者。现在看看我的力量和权力。他们变得像《我将作证》中那个小男孩一样大喊：“杀了他！——老犹太人，老犹太人！”参与不受约束的暴力的人获得了自我信任，因为他们所信任的暴力始终唾手可得。在社会允许的范围内，全能的重新发现使个人回到了他们最初相信它的发展阶段。<sup>254</sup>他们开始做一些事情，以工具理性所设定的期望来衡量，是毫无意义的。问题在于，没有任何活动或暴力行为仅仅遵循工具理性，而这种退行的“让我们看看如果我这样做会怎样”的心态也符合恐怖的逻辑。因此，疯狂和越界变得无法区分。
 
+一些历史学家和社会学家认为，我们对现代性的信任只能通过将这种无法区分性强行纳入工具理性的框架来维持。是否可以在不否认现实的情况下做到这一点仍然是一个悬而未决的问题。在我们甚至考虑这个问题之前，我们必须问为什么人们会失去他们对暴力的信任。答案可能简单到这种程度：对末日（想象的）现实的愉悦最终让位于对它的恐惧。暴力为苏联铺平了通往现代性的道路，然而为了留在那条道路上，苏联不得不遏制带来他们到此的某些暴力。德国对暴力力量的信心使它能够征服欧洲的大部分地区并犯下大规模屠杀，但这种信心只持续了“十二年”。这些案例表明，历史事件——古拉格、奥斯维辛、广岛——正是驳斥了对暴力的信任。<sup>255</sup>但如果这是真的，那么这些历史事件本应也摧毁我们对现代性的信任才对。相反，我们继续前行，仿佛二十世纪的灾难只是历史道路上的小颠簸。这可能是因为我们未能理解暴力的另一个、至关重要的方面：沟通。某种程度上的不理解可能是福音。但不理解丝毫没有阻止二十世纪的灾难，显然，它也没有为理解它们做出任何贡献。它所做的只是引发了坎波夫斯基母亲提出的问题：“这到底是怎么回事？”
 
-## 第五章
-## 暴力与沟通
+## 第五章 暴力与沟通
 
 > “翻译员。”
+>
 > —— 集中营毛特豪森囚犯用来称呼看守警棍的词语。
 
 ### 科拉·詹蒂莱发言
 
 1949年，科拉·詹蒂莱——一位出生于西西里的费城黑帮成员，因逃避即将到来的毒品指控而返回西西里并加入当地黑手党——与一名年轻的大学生共度了一个下午。他的目的似乎是解释并为自己的职业辩护。那名学生安德烈亚·卡米莱里，如今是意大利著名的犯罪小说作家，后来回忆起了詹蒂莱的一些话：
 
-杜图雷杜 ["小教授"——这是詹蒂莱对卡米莱里的绰号]，如果我空手进来，而你拿起一把手枪，对准我并说：“科拉·詹蒂莱，跪下。” 我该怎么办？我跪下。这并不意味着你因为强迫科拉·詹蒂莱下跪就成了黑手党。这意味着你只是一个手里拿着手枪的蠢货。
-
-现在如果我，尼科拉·詹蒂莱，空手进来，而你也空手，并且我对你说：“杜图雷杜，听着，我有点麻烦。我得请你跪下。” 你问我“为什么？” 我说：“杜图雷杜，让我解释一下。” 我成功说服你必须下跪。当你跪下时，这才使我成为黑手党。
-
-如果你拒绝下跪，那么我就得开枪打你。但这并不意味着我赢了：我输了，杜图雷杜。
+> 杜图雷杜 [“小教授”——这是詹蒂莱对卡米莱里的绰号]，如果我空手进来，而你拿起一把手枪，对准我并说：“科拉·詹蒂莱，跪下。” 我该怎么办？我跪下。这并不意味着你因为强迫科拉·詹蒂莱下跪就成了黑手党。这意味着你只是一个手里拿着手枪的蠢货。
+>
+> 现在如果我，尼科拉·詹蒂莱，空手进来，而你也空手，并且我对你说：“杜图雷杜，听着，我有点麻烦。我得请你跪下。” 你问我“为什么？” 我说：“杜图雷杜，让我解释一下。” 我成功说服你必须下跪。当你跪下时，这才使我成为黑手党。
+>
+> 如果你拒绝下跪，那么我就得开枪打你。但这并不意味着我赢了：我输了，杜图雷杜。
 
 根据这段回忆，人们可能会认为卢曼是基于西西里黑手党建立了他的暴力理论。比较詹蒂莱的评论与卢曼《权力》中的一段：
 
-对人有意施加的身体暴力之所以与以行动为导向的权力媒介相关，是因为它通过行动消除行动，从而排除了对减少决策前提的沟通传递。凭借这些特质，身体暴力不能成为权力，但它构成了权力所形成的回避替代方案的不可避免的边界案例。²
+> 对人有意施加的身体暴力之所以与以行动为导向的权力媒介相关，是因为它通过行动消除行动，从而排除了对减少决策前提的沟通传递。凭借这些特质，身体暴力不能成为权力，但它构成了权力所形成的回避替代方案的不可避免的边界案例。<sup>2</sup>
 
 暴力的威胁只有在詹蒂莱威胁的人通过屈从于要求而避免他兑现威胁时才具有权力。如果他威胁的人不服从，他就必须执行威胁。但如果詹蒂莱杀人，他就输了。在这里，詹蒂莱和卢曼似乎与阿伦特的观点一致：
 
-[1] 说权力与暴力不同是不够的。权力与暴力是相反的：此一绝对统治之处，彼即缺席。暴力出现在权力处于危险之时，但任其发展，它将导致权力的消失。³
+> [1] 说权力与暴力不同是不够的。权力与暴力是相反的：此一绝对统治之处，彼即缺席。暴力出现在权力处于危险之时，但任其发展，它将导致权力的消失。<sup>3</sup>
 
-詹蒂莱的情景中却有些奇怪：到最后他忘记了自己的前提。他一开始假设自己空手进入房间。他必须这样假设，否则他打算威胁的人可能会因为他枪套里的手枪而下跪，而不是因为他是黑手党，这就偏离了重点。但当詹蒂莱考虑某人拒绝下跪的可能情况时，他用本不该有的武器开枪射杀了他。黑手党历史学家约翰·迪基冷淡地评论道，“詹蒂莱显然连在想象中也无法维持一个没有枪在手的自己的画面。”⁴
+詹蒂莱的情景中却有些奇怪：到最后他忘记了自己的前提。他一开始假设自己空手进入房间。他必须这样假设，否则他打算威胁的人可能会因为他枪套里的手枪而下跪，而不是因为他是黑手党，这就偏离了重点。但当詹蒂莱考虑某人拒绝下跪的可能情况时，他用本不该有的武器开枪射杀了他。黑手党历史学家约翰·迪基冷淡地评论道，“詹蒂莱显然连在想象中也无法维持一个没有枪在手的自己的画面。”<sup>4</sup>
 
 1963年，接近八十岁并已退休的詹蒂莱决定写他的回忆录。我们不知道确切的促使原因；我们只知道他是第一位出版自传的西西里黑手党成员。迪基认为詹蒂莱自己的解释是最合理的：
 
-围绕詹蒂莱决定动机的 lingering 神秘仍然存在。正如意大利一贯的情况，政治背景可能与此有关。然而最简单的动机，即詹蒂莱本人提出的动机，很可能才是最重要的。他形容自己是一个心怀怨恨的老人。他的孩子们都已在专业领域站稳脚跟，但他们为自己福祉的犯罪起源感到羞耻，回避为他们的教育、房屋付钱的那个人。⁵
+> 围绕詹蒂莱决定动机的 lingering 神秘仍然存在。正如意大利一贯的情况，政治背景可能与此有关。然而最简单的动机，即詹蒂莱本人提出的动机，很可能才是最重要的。他形容自己是一个心怀怨恨的老人。他的孩子们都已在专业领域站稳脚跟，但他们为自己福祉的犯罪起源感到羞耻，回避为他们的教育、房屋付钱的那个人。<sup>5</sup>
 
 尽管如此，人们推测在退休前，詹蒂莱不会说出这样的话，就像在耶路撒冷受审之前，阿道夫·艾希曼也不会说出那些让阿伦特将无思与邪恶联系起来的话。
 
-
-
-
-
 那些谈论自己所犯暴力的行为者使用的是合法化的语言。这种语言会因其是在暴力被允许（或被假定为被允许或被宣布为被允许）的区域中说出，还是在暴力被禁止的区域中说出而有所不同。在任何一种情况下，合法化的语言并非全是借口和谎言。人们想要为自己的行为作出解释，而要做到这一点，他们通常必须（或认为必须）遵循周围人所使用的语言。那些使用不遵守强制/禁止/允许区分的暴力语言的人会引发沟通的崩溃。超出这一框架的语言只有在同时指向另一个与说话者持有相同假设的人，并且这种崩溃构成了一种沟通的统一体时，才能传达意义。下面我将讨论这个所谓的第三方——在暴力现象中扮演的角色。
 
-## 社会学的沉默
+### 社会学的沉默
 
 我提到过人们普遍不愿将暴力作为一种独立的现象来处理。
 
@@ -3196,24 +3298,25 @@ ral; 后者则用它来讲述持续受苦的故事。根据阿伦特，这两种
 
 在转向第三方问题之前，我想讨论社会学对暴力的理解中一个显而易见的不足，这一不足在近年被反复提出：它倾向于主要将暴力视为一种道德或政治现象。问题不在于社会学为道德和政治留出了空间，而在于其道德和政治前提遮蔽了暴力的社会维度。这一观察是显而易见的，正如它尽管显而易见却不断被忽视这一事实一样。所有研究在范围上都是有限的，并且都带有某些未经质疑的信念。当被追问时，研究人员必须将其未经质疑的信念作为证据呈现，而此时反对者会嘲讽地指出其臆断的谬误。这就是学术界的工作方式——一切都很好，只要讨论不止于此。
 
-1997年，德语社会学界的领先期刊《科隆社会学与社会心理学杂志》发表了一期关于暴力的特刊。其导言认可了我已在第三章讨论过的阿伦特的评价。卷册编辑特鲁茨·冯·特罗塔写道：“阿伦特作出这一断言将近三十年后，对暴力的研究仍然大多缺失……暴力仍然是主流社会学理论的分析上的继子。”⁶ 马克思认为暴力是次要的（他称其为“助产士”）
+1997年，德语社会学界的领先期刊《科隆社会学与社会心理学杂志》发表了一期关于暴力的特刊。其导言认可了我已在第三章讨论过的阿伦特的评价。卷册编辑特鲁茨·冯·特罗塔写道：“阿伦特作出这一断言将近三十年后，对暴力的研究仍然大多缺失……暴力仍然是主流社会学理论的分析上的继子。”<sup>6</sup> 马克思认为暴力是次要的（他称其为“助产士”）
 
-总体而言，暴力在社会学中占据突出地位的唯一领域是偏差社会学。正如其名称所示，偏差社会学将暴力视为属于社会边缘的东西。冯·特罗塔指出，研究偏差的社会学家并不关心暴力作为
+总体而言，暴力在社会学中占据突出地位的唯一领域是偏差社会学。正如其名称所示，偏差社会学将暴力视为属于社会边缘的东西。冯·特罗塔指出，研究偏差的社会学家并不关心暴力作为分析对象……而是关心……暴力的社会原因……“[暴力]的病因理论告诉我们很多，我敢说‘一切’关于风险、社会和经济劣势、失业、父母的不足、学校的问题、对社会地位的不满、精神和社会病理——简而言之，一切似乎‘错误’的东西”<sup>12</sup>
 
-分析对象……而是关心……暴力的社会原因……“[暴力]的病因理论告诉我们很多，我敢说‘一切’关于风险、社会和经济劣势、失业、父母的不足、学校的问题、对社会地位的不满、精神和社会病理——简而言之，一切似乎‘错误’的东西”12
-
-相比之下，“真正的暴力社会学必须从暴力本身开始，尤其是从暴力的现象学开始。”13 比尔吉塔·内德尔曼支持冯·特罗塔的观点，并认为任何暴力社会学都必须以身体伤害的事实为基础。14
+相比之下，“真正的暴力社会学必须从暴力本身开始，尤其是从暴力的现象学开始。”<sup>13</sup> 比尔吉塔·内德尔曼支持冯·特罗塔的观点，并认为任何暴力社会学都必须以身体伤害的事实为基础。<sup>14</sup>
 
 为什么社会学顽固地拒绝正面处理暴力？指出怪癖，无论在个别案例中多么合理，都无济于事。我怀疑，许多社会学家不愿仔细审视这一主题，是因为本能地对自己可能发现的东西感到恐惧。这不仅仅是盲目的厌恶；这是预防性的卫生措施。在他们真正算账之前，社会学家就有一种情感上的预感，放弃现代性的幻觉所付出的代价将是他们无法承受的。这里的真正问题是，真正的暴力社会学能否与经典社会学相调和，如果不能，会发生什么。
 
-让我们以两位经典社会学家为例。在《社会如何可能？》中，齐美尔写道：“社会化[ Vergesellschaftung——字面意思是成为社会一部分的过程]这一事实使个人处于[一种]双重位置”，在其中“他既为社会而存在，也为自己而存在”，既“从内部也从外部存在于个体之中。”15 这种位置是脆弱的，因为它以“个人与整个社会之间无可置疑的和谐”为前提，以“他的生活与周围社会之间根本性的相关性”为前提。16 无论何处这种和谐缺失，社会化也随之不存在。
+让我们以两位经典社会学家为例。在《社会如何可能？》中，齐美尔写道：“社会化[ Vergesellschaftung——字面意思是成为社会一部分的过程]这一事实使个人处于[一种]双重位置”，在其中“他既为社会而存在，也为自己而存在”，既“从内部也从外部存在于个体之中。”<sup>15</sup> 这种位置是脆弱的，因为它以“个人与整个社会之间无可置疑的和谐”为前提，以“他的生活与周围社会之间根本性的相关性”为前提。<sup>16</sup> 无论何处这种和谐缺失，社会化也随之不存在。
 
-一种从受苦的体验开始的暴力社会学——将难以容纳这一定义。因为极端暴力的体验以自我与周围环境之间所有相关性的丧失为特征。这种“从世界中坠落”的感觉与社会化完全相反。17 这并不是说齐美尔的立场排除了他看到暴力，只是他所看到的暴力总是发生在社会之外。在
+一种从受苦的体验开始的暴力社会学——将难以容纳这一定义。因为极端暴力的体验以自我与周围环境之间所有相关性的丧失为特征。这种“从世界中坠落”的感觉与社会化完全相反。<sup>17</sup> 这并不是说齐美尔的立场排除了他看到暴力，只是他所看到的暴力总是发生在社会之外。在齐美尔的理解中，操练、行军或列队的军队占据着“交往”的位置。但战斗本身呢？最迟到集体屠杀发生时，就不能再被归入齐美尔的社会概念了。这未必是一个严重的反对意见；我们可以有几分理由坚持像齐美尔那样使用“社会”一词。但如果我们这样做，就还必须解释，比如说，纳粹集中营中谋杀的城市化，以及它对德国经济的重大意义。将极端暴力视为社会之外的东西是没有意义的，即使现代理想所塑造的道德立场让我们觉得不得不这样做。一个无法构想恐怖与灭绝的社会学，如何能认真地为二十世纪的理论做出贡献？<sup>18</sup>
 
 
-齐美尔的理解中，操练、行军或列队的军队占据着“交往”的位置。但战斗本身呢？最迟到集体屠杀发生时，就不能再被归入齐美尔的社会概念了。这未必是一个严重的反对意见；我们可以有几分理由坚持像齐美尔那样使用“社会”一词。但如果我们这样做，就还必须解释，比如说，纳粹集中营中谋杀的城市化，以及它对德国经济的重大意义。将极端暴力视为社会之外的东西是没有意义的，即使现代理想所塑造的道德立场让我们觉得不得不这样做。一个无法构想恐怖与灭绝的社会学，如何能认真地为二十世纪的理论做出贡献？¹⁸
+
+# 卢曼与双重偶然性
 
 第二个例子是卢曼，他以双重偶然性的方式提出了齐美尔的问题。对卢曼而言，问题不在于社会如何可能，而在于“自我指涉决定的循环”如何能被打破。¹⁹ 卢曼的双重偶然性观念——一个自我和一个他我，必须预判对方的行动却无法确定这些行动——并不预设行动者之间的对称性。权力差异是可能的，暴力也可能发挥作用（哪怕只是以威胁来支撑权力）。卢曼的观念所预设的是自由。²⁰ 但是，一个被判入毒气室的人能被称为自由的吗？他可以选择要么耐心排队等候，要么冲出去直面即刻死亡？也许可以；伊姆雷·凯尔泰斯的《无命运》的主人公无论如何都坚持这一点。但如果这是自由，那也只是抽象意义上的自由，它似乎更像是为了挑衅或制造一个阴森可怖的观点，而非准确描述现实。这样一种情境——一个人的所作所为或所欲所求已不再重要，因为每一种选择都通向死亡——只有以丧失可信度为代价才能被卢曼的模型捕捉。社会继续运转，它持续从双重偶然性中涌现，但最终终结于极端暴力。
+
+# 波皮茨与暴力
 
 现在让我们转向波皮茨，他是唯一系统分析过暴力的社会学家。他的观点是否与真正的暴力社会学相容？我在第二章中并没有对波皮茨关于权力与暴力关系的理解进行彻底批判，这里也不会。波皮茨的论证即使在你不同意的时候也是有价值且发人深省的。关键问题在于：波皮茨似乎突破了某种范式，却依然受制于它。在《权力的现象》（Phänomene der Macht）中，波皮茨认为暴力主要发生在他所称的“行动权力”（Aktionsmacht）这种权力形式中。在他识别的其他权力类型——工具性权力、权威性权力和创生数据的权力——中，暴力被搁置一旁。只有在工具性权力中，即波皮茨所定义的“通过威胁和许诺对他人的行为进行控制”，暴力才发挥作用。²¹ 但“非——”
 
@@ -3226,7 +3329,6 @@ ral; 后者则用它来讲述持续受苦的故事。根据阿伦特，这两种
 观看艾希曼审判的影像时，人们很难不同意阿伦特对被告的评估——一个不知道自己正在做什么的、无思想的大屠杀组织者，“平庸之恶”的化身。但正如我们现在从萨森录音带中所知，这一印象具有欺骗性。²⁹ 威廉·萨森是前武装党卫队成员，在逃离英方羁押后逃往阿根廷。在庇隆政府的保护下，萨森公开与其他前党卫队军官交往，并为纳粹流亡者群体撰稿。大约在1955年至1956年间，他与艾希曼会面，提议合作撰写一本新书：从纳粹视角对“最终解决”的记述。³⁰ 艾希曼急于宣传他在驱逐行动中的角色，同意帮忙。在持续五个月、包含近七百页的访谈记录中，艾希曼展现为一个自信而投入的谋杀者，而非他后来所塑造的那种卑微走卒。他表达的唯一遗憾是，他缺乏足够的刚毅、决心和毅力去杀死欧洲所有的犹太人：
 
 > 不，我毫无遗憾，也完全没有低声下气。在你整理整个事情的这四个月里，在你努力唤起我记忆的过程中，很多东西被重新唤起了。为了迎合当下的舆论，我完全可以轻易地、合理地扮演一个“扫罗变成了保罗”的角色。但我必须告诉你，我做不到，因为我的内心深处拒绝承认我们做错了什么。不——我必须坦诚地告诉你，如果[统计学家]科赫尔所显示的1030万犹太人中的
-
 
 我们现在知道，我们杀死了1030万，那么我就满意了。我会说“好吧。我们消灭了一个敌人。”31
 
@@ -3246,28 +3348,33 @@ ral; 后者则用它来讲述持续受苦的故事。根据阿伦特，这两种
 
 现代政治恐怖主义一直试图通过将自己的行动视为以行动为宣传来为自己辩护。布尔什维克希望他们的行动
 
-
 would serve as a start signal for general revolution. If a small group attacked the czarist system, so their thinking went, the majority would abandon their fear and follow suit. Fyodor Dostoevsky's Devils (also known as The Possessed; 1872) sends up a travesty of this idea: a man decides to kill himself so as to redeem humankind by demonstrating that death is nothing to fear. Even the actions of the RAF, a group self-referential to the point of autism, were designed to be communicative in function, up to and including the suicides of Andreas Baader, Gudrun Ensslin, and Jan-Carl Raspe at Stammheim prison.37
+
+
 
 It should be noted that some third parties are interested in an instance of violence without being the intended recipient of its message. An important component in the dynamic of partisan movements and terrorist groups, these “interested” third parties have a stake in the victory of those who use violence and in the disruptive potential they represent.39 In the Vietnam War, the Soviet Union was the interested third party; in the Nicaraguan insurgency, it was the United States. Once the interested third party becomes visible as an indirect participant in a conflict—by supplying money and/or weapons, by boosting one side's image—it makes the actions of those it supports into its own communicative act (one not necessarily endorsed by the agents, but which they must accept all the same).
 
 Generally, when torture is institutionalized, it serves as a sign of threat and a badge of power. In modern state terror, torture is typically not official policy; it functions as an open secret. No one knows where people go when they disappear, but they do know it's someplace terrible. Some are kidnapped in broad daylight, some are returned to their families, some disappear without a trace.39 The state inflicts extreme violence on a few to put fear and terror into the hearts of many. The institution of torture shows that violence need not be seen, only known, to fulfill its communicative function. Those who think torture only occurs between the dyad of perpetrator and victim fail to understand its function as an instrument of rule. Torture plays out between two persons but it also communicates with a third party, whose reception of the message lends the act social significance.
 
+
+
 The communicative function of war is probably easiest for us to understand. First, because diplomatic communications often include the threat of war; second, because every combat operation sends the message, “This will continue if you do not capitulate”; and third, because every war won, especially when won boldly, says, “Don't try it again.” Even the war dead have a communicative function: “Renounce support for your government,” they say to the survivors. Hannibal, after his victory at Lake Trasimeno, executed the Roman prisoners but released the captives who had fought alongside the Empire. By sending the message that the war was directed against Rome alone, Hannibal wanted to encourage Rome’s allies to defect. The Nazis’ treatment of Soviet prisoners of war and their indiscriminate plunder of occupied territories, even in places where German soldiers had been greeted as liberators, were also communicative acts; their purpose was to indicate the kind of war being waged. In Henry V, the English king’s decision to execute a looter anticipates the scene in the last act where he courts the French princess without laying claim to her. In all forms of war, the bullet is meant for two soldiers: the one it strikes and the one it does not. With the first soldier, the intention is to kill. With the second, the intention is to communicate that he’s next. If the second soldier decides to remain in battle, this does not mean that he has failed to hear the message or that he flouts it. He understands it, he takes note of it; indeed, by saying “no” to it, he keeps the message in circulation. The bullet builds the triad of gunman/victim/bystander. If there is no bystander, then the violence is an isolated act and the kill assumes no social significance. This changes the moment a third party discovers the corpse. The communication of the violent act always includes information about the relationship between control measures, social interactions, and collective beliefs as they pertain to violence. Answering Lenin’s famous question—Who whom?—it announces what is permitted, mandated, and prohibited. It delivers (at times complicated) messages about how things are and how they ought to be. It also provides images of what and who we are, or of what and who we ought to be, or want to be, or are able to be. For instance, the dagger once worn on men’s sides communicated information about the state monopoly on violence, about the individual readiness to use the dagger, about the expectation that others would know how to use theirs. The practice was part of a reciprocal form of communication that conveyed the conditions of coexistence.
 
 The general tendency is to understand sociology’s silence about violence as the meaningful kind. Few see it as odd that a young and explicitly “modern” academic discipline shares in modernity’s aversion to violence.40 Sociology remains silent about violence by overlooking the third party. It is more or less common opinion that terrorism has a communicative function. This view, used to rate terrorist violence as far more instrumental than it is, is based on a one-dimensional understanding of violence, and of communication.41 Communication always conveys meaning but it does not always do so with a purpose. The communication of violence is first and foremost just talk, however serious its consequences.
 
-
-
 unique physiognomy by harming or killing others. Generally speaking, such violence is not communicative, however; it just happens. And when it is communicative, thinking of it as an “expression” misunderstands its social dimension. Expressive violence evokes an image of a lonely individual, one who sends out a signal to surroundings that are as opaque as he is. There are cases in which this image may be apt, but it is not pertinent for a theory of violence as social phenomenon.
+
+
 
 More typically, sociology understands violence as a dyad rather than as an expression of individual desire. How does this fixation on the dyad reflect modernity’s concept of itself? Luhmann reads modernity’s aversion to violence as a means of “complicating, refining, and perpetuating conflict systems. When physical force is allowed, conflicts are either not risked at all or, when they break out, are decided relatively quickly and simply.”42 For Luhmann, the use of force in conflicts is analogous to blackmail, a dyad of the extortionist and the extorted. Whether as threat or as deed, violence presents us with the either/or of an avoidance alternative, and hence is directly tied to the exercise of power. In this view, violence is nothing but an instrument to strengthen the value of power as a medium of communication. No wonder that Luhmann endorses the old argument according to which all political power is founded on violence.43 Luhmann’s systematic underestimation of violence’s social and communicative function is also an overestimation, for in his final analysis power is always violence. The reduction of power to violence results from an exclusively instrumental understanding of violence, according to which any other manifestation of it is deemed irrational or pathological or mysterious, a matter for those who study deviant behavior.
 
-*What violence communicates is its autotelic side, which is to say, the threat of destruction.*
+What violence communicates is its autotelic side, which is to say, the threat of destruction.
 
 In chapter 2, I argued that the victim experiences all violence as autotelic. And what applies to the victim applies mutatis mutandis to the third party. The problem is that, as visual traces of violence vanish from the public sphere, condemnation of the autotelic increases, making its analysis ever more difficult.
 
 Luhmann’s blackmail model fails to understand violence as a medium of communication. To say that the bullet is meant for the one it doesn’t strike as well as the one it does implies a locative message: better run, or the next bullet is for you. But the locative cannot account for the effectiveness of the threat. It functions not through calculation but through horror, through the shocking awareness of the body’s own destructibility. The corpse displayed on the wheel does not say, “Think again before you steal.” It says, “The authorities can eviscerate you like a chicken.” When the mob murders a judge in Sicily, it sends a wave of fear through the country’s other judges, who will think twice before putting a mafioso behind bars again. But through the act the mafia also declares to the world: “We can do this, and we will continue to do this.” Bomb attacks on cities urge civilians to abandon their government, but they are also designed to trigger terror and desperation. Supporters of the NATO bombing of Belgrade justified it as communicative act, saying in effect, “Putting up with the Milošević regime is futile.” And it is as communicative act that the NATO bombing was criticized. Behind the objections lay the hunch that the insistence on “message” had introduced an autotelic form of violence.44 This is why NATO commanders attempted to justify the bombing militarily—a means to render the war machinery useless—and to call everything else “collateral damage.” The actual violent act communicated something different: “Your government cannot support you, and we can destroy you and yours anytime we want.” When Eisenhower neither confirmed nor denied knowledge of U2 surveillance flights, he made clear that U.S. planes could enter Soviet air space at will.
+
+
 
 Criminal violence communicates too, though outside mafia violence the message is usually not intentional. Information about the crime, its reenactment on TV, its discussion on talk shows, threatens the public, making them into what Winfried Hassemer calls “virtual victims.”45 Every violent act we hear about—whether communicated by singers of murder ballads or by the modern media—relays complex information about people, about security, and about insecurity. The information we receive can lead us to act irrationally, but it’s still just information, distinct from a directed message.46 The sense of safety accompanying a report that violent crime is on the decline has nothing in common with the message sent by the photograph of a murdered man’s corpse. My sense of, and need for, security depends not on statistics but on the awareness of my own vulnerability and the willingness of others to do me harm. *When violence communicates, it communicates its autotelic aspect. We are accustomed to understanding this aspect as an expression of bizarre or antisocial behavior, but this aspect is precisely that which converts violence into social action.*
 
@@ -3287,9 +3394,9 @@ Simmel’s analysis of this triadic constellation is crucial for our understandi
 
 要理解纽伦堡审判的功能，就必须理解它们所对抗的是什么。政治暴力的交流视域本质上是开放的。腓特烈二世入侵西里西亚所记录的不仅仅是领土主张；它记录了欧洲在未来几个世纪将不得不面对的政治风格。（一生都厌恶腓特烈大帝的玛丽亚·特蕾西亚立刻就明白了这一点。）罗伯斯庇尔特意将路易十六的审判解释为对政治的一种回应，而法国大革命则向欧洲其他国家传达了这一信息。56纳粹对犹太人的政策从一开始就是针对所有其他人——包括德国境内外——的政治宣言。57
 
-刑事程序旨在消除政治暴力的交流视域。其目的是终结性的：描述行为、确定罪责、作出终审判决并执行刑罚。58法院并不
+刑事程序旨在消除政治暴力的交流视域。其目的是终结性的：描述行为、确定罪责、作出终审判决并执行刑罚。58法院并不 address the world as third party; it addresses itself as its own third party. *纽伦堡审判的重要性在于阻止了纳粹罪行的进一步传播。* 戈林预言他死后五十年人们会为他竖立纪念碑，这一预言从未实现。纽伦堡被告们的可悲表现无疑是原因之一。同样重要的是，他们和十五年后艾希曼一样，没有可以用来沟通的第三方。
 
-address the world as third party; it addresses itself as its own third party. *纽伦堡审判的重要性在于阻止了纳粹罪行的进一步传播。* 戈林预言他死后五十年人们会为他竖立纪念碑，这一预言从未实现。纽伦堡被告们的可悲表现无疑是原因之一。同样重要的是，他们和十五年后艾希曼一样，没有可以用来沟通的第三方。
+
 
 在 *Legitimation durch Verfahren*（1969）中，卢曼为我们提供了一种不同的语言来描述法庭的功能。卢曼认为，行政程序的一般目的，尤其是刑事程序，是为了使机构合法化。相当多的法学家认为，法院判决之所以获得合法性，是因为在审判过程中，接受判决的人学会了是非对错。卢曼持不同观点：刑事程序通过让被告成为一个过程的积极参与者而使自身合法化，这个过程以他们不熟悉的形式和他们很少人能理解的语言呈现他们的行为。对卢曼而言，法院程序的最终目的在于削弱投诉的合法性。被定罪的人可以尽情发泄，但社会不必倾听他们；法院已经发言。在这方面，至关重要的是要防止被定罪者效仿海因里希·冯·克莱斯特的《米夏埃尔·科尔哈斯》，后者将个人抗议转变为普遍事业。卢曼写道：
 
@@ -3302,9 +3409,6 @@ address the world as third party; it addresses itself as its own third party. *�
 戈林一旦认罪不成立，他就开始积极参与自己的去合法化。革命者和独裁者在法庭上坚持自己的清白始终是错误的。因为一旦他们采纳了支配法庭的代码，他们就否定了支配其行为的代码。他们用对错的语言取代了强者和弱者的语言。在法庭上，曾有权势的人无权势，但只要问题在于无权势本身，每个人仍处于权力的代码之内。只有当被废黜的独裁者或被挫败的革命者采纳了对错的代码——只有当他为自己的清白辩护之后——他才接受权力不再是重点。卢曼归于普通法院程序的功能在涉及政治犯罪时更适用——因此纽伦堡使用刑事法院，南非使用真相委员会，卢旺达使用加卡卡法院。64 根据卢曼的说法，法院是一种政治中和力量，它“防止党派、认同和相互支持等机制将特定冲突转变为将……民众分裂的普遍冲突的结晶点。”65
 
 尽管德国左派和右派认为纽伦堡不过是胜利者正义的一个例子，但审判恰恰完成了它们本应完成的事情：使曾经有权势的人失去合法性。通过将被告实施的暴力行为从强者和弱者的领域转移到对错的领域，审判剥夺了这些行为的沟通力量。剩下的可供沟通的只是法律已被违反，而此类违反不会不受惩罚。二十世纪的暴行打破了现代性的内在承诺——即向越来越少暴力的进步，尽管道路坎坷曲折——并且以现代性从未想象过的方式打破了它。尽管如此，现代性抵制了重复导致难以想象成为现实的现代理想撤退的诱惑。简而言之，纽伦堡阻止了种族灭绝成为一种信息。
-
-
-
 
 ## COPING (2): 受害者的权威与第三方的替代
 
@@ -3320,9 +3424,9 @@ address the world as third party; it addresses itself as its own third party. *�
 
 受害者所获得的显赫地位的奇怪之处在于，他们的解释权威不仅限于个人经验的领域；它延伸到生命本身。人们相信极端而狭窄的人类谱系的片段的记述可以代表一般的人类状况，这种信念偶尔会产生荒谬的结果。1995年，一位名叫 Binjamin Wilkomirski 的男子出版了《Fragments: Memories of a Wartime Childhood》，一本关于他作为一名幼儿在德国集中营经历的书。据 Wilkomirski 说，这些事件的创伤如此之大，以至于记忆被埋藏在他潜意识中。解放后被安置在克拉科夫的孤儿院，后来被一个瑞士家庭收养，他声称自己在成长过程中不知道自己真正的身份。只有在成年后接受心理治疗师治疗时，他才恢复了童年记忆，并决定写下《Fragments》。这本书获得了大量的评论好评，在美国和欧洲获得了文学奖，其作者获得了近乎圣人的地位。然后，在1998年，一位瑞士记者对该作品的真实性提出了质疑。到次年，一位历史学家向该书的出版商提交了确凿的证据，证明 Wilkomirski 是一个骗子。他的真名是 Bruno Dössekker，他从未被关押在集中营。71 人们感到愤怒，书籍销量暴跌，其作为小说的价值也被一概否定。交替-
 
-
-
 The interesting thing about the Wilkomirski case is that it represents the reversal of a classic psychological desire: the wish to be born of higher parentage.² Jean Paul’s Der Komet (1820–22) begins with a son’s search to find his real father, whom he believes (and hopes) is a wealthy margrave.⁷³ The man who wrote Fragments spins a completely different kind of fantasy: one of unknown lineage, missing parents, and a traumatic childhood.
+
+
 
 Today the interpretative authority of the Holocaust victim now extends to all victims of violent crimes. As a victim of violent crime myself—I was kidnapped and held captive for several weeks in 1996—I have experienced this attribution of authority firsthand. Complete strangers have told me that they identify with my fate or that they worried about me while I was being held (which is complete nonsense because the kidnapping was not made public until after my release). Others have read the book I wrote about my ordeal as an answer to their own life problems.⁷⁴ Such matters aside, the attention all victims of violent crime now receive has brought positive change to criminal law, strengthening the legal status of victims on the witness stand and as joint plaintiffs. It also, of course, has exposed victims to media exploitation, but exploring the abusive potential that accompanies the new public perception would carry us too far afield.⁷⁵
 
@@ -3330,12 +3434,13 @@ One issue I address in this chapter is how modernity manages to preserve its mod
 
 ## COPING (3): INSTRUMENTAL INTERPRETATION AND THE DENIAL OF COMMUNICATION
 
-Going hand in hand with the denial of autotelic violence is the denial of its communication. I already discussed how the news of unprecedented destruction fascinated Truman and Churchill.⁷⁷ Soon thereafter, Hiroshima and Nagasaki sent a message to the Soviet Union; a few years later and Stalin could return the message. The Cold War was bloody at its peripheries, but the apocalypse never came, and the reason can be attributed to a breakdown in communication. Conventional warfare transmits messages through the threat of escalation. "If you do x, or if you don't do y, then I'll do z." It assumes that everything is possible until one side—the side that turns out to be inferior—surrenders. The atomic bomb destroyed this communicative logic; at least in the bipolar structure of the Cold War.⁷⁸ Nuclear weapons made it possible for a conflict to begin worse than any prior conflict had ended. A first strike could annihilate the opponent's population and make its environment completely uninhabitable. Each opponent was at risk, and each lived in fear of apocalyptic prevention. This dynamic eliminated the communicative element from war and military threat, or at least reduced it to the coarsest of gestures. The generals in charge of maneuvers moved the troops about in virtual sand boxes, and let their young men run wild through the fields and forests, until someone called in for nuclear support—and with that, the exercise was over, the ability to simulate apocalypse being severely limited. Of course, there were plans for that eventuality, but in terms of communication, nuclear threat meant just one thing: the breakdown of communication.
+Going hand in hand with the denial of autotelic violence is the denial of its communication. I already discussed how the news of unprecedented destruction fascinated Truman and Churchill.⁷⁷ Soon thereafter, Hiroshima and Nagasaki sent a message to the Soviet Union; a few years later and Stalin could return the message. The Cold War was bloody at its peripheries, but the apocalypse never came, and the reason can be attributed to a breakdown in communication. Conventional warfare transmits messages through the threat of escalation. "If you do `x`, or if you don't do `y`, then I'll do `z`." It assumes that everything is possible until one side—the side that turns out to be inferior—surrenders. The atomic bomb destroyed this communicative logic; at least in the bipolar structure of the Cold War.⁷⁸ Nuclear weapons made it possible for a conflict to begin worse than any prior conflict had ended. A first strike could annihilate the opponent's population and make its environment completely uninhabitable. Each opponent was at risk, and each lived in fear of apocalyptic prevention. This dynamic eliminated the communicative element from war and military threat, or at least reduced it to the coarsest of gestures. The generals in charge of maneuvers moved the troops about in virtual sand boxes, and let their young men run wild through the fields and forests, until someone called in for nuclear support—and with that, the exercise was over, the ability to simulate apocalypse being severely limited. Of course, there were plans for that eventuality, but in terms of communication, nuclear threat meant just one thing: the breakdown of communication.
+
+
 
 The logic of noncommunication in the Cold War was not to threaten the opponent with a nuclear strike but to convey one's willingness to push the button if... This logic was momentarily suspended when the Soviets attempted to station nuclear missiles on Cuba, and it was reestablished during the crisis that followed.⁷⁹ Though Israel is generally assumed to possess nuclear weapons, it avoids using this fact for the purposes of communication. Other countries communicate the possibility of partial apocalypse. The People's Republic of China was the first country to employ this variation, which it mainly directed inward: we too have nukes, and if we're attacked it's not the end of the world. Next came India and Pakistan. Other countries may soon follow suit.
 
 During the Cold War the possession of nuclear weapons served to demonstrate that that they would never be used. While there were always military strategists who viewed a small-scale nuclear war as winnable, this belief never determined military planning. In the current age of partial apocalypses, nuclear weapons have regained the communicative value they initially, if briefly, possessed. Now, the possession of nuclear arms means that a country is willing to use them, that its leaders are ready to kill on a massive scale. To reestablish a Cold War level of deterrence, all nuclear powers would have to sign a treaty stipulating that if any signatory launches a nuclear strike, then all the others will attack it. Such a treaty would be monstrous, of course. A nuclear retaliation may be a justified means for a country to protect itself from complete annihilation;
-
 
 在当前冲突中未参与的国家为阻止未来冲突而彻底消灭一个人口的做法在伦理上是不可接受的。但一个知道局部末日威胁的未来很可能产生这样的怪物，并在过程中改变我们对可接受性的认知。
 
@@ -3351,7 +3456,6 @@ During the Cold War the possession of nuclear weapons served to demonstrate that
 
 这种破坏性暴力回答了“谁对谁？”的问题。它说明谁可以感到安全，谁不能，谁属于，谁不属于。这种暴力传递出明确无误的信息：它是认真的。维尔特在描述那些被控种族亵渎者的公共表演时写道，“群众陪同游行。妇女、儿童、青年沿途行走，嬉笑、嘲弄、辱骂、向受害者吐口水。”对前现代公开羞辱实践的回归和
 
-
 颈手枷是逐步发展出“另一种法律秩序”——一个针对市民法的对应方案——的第一步。⁸⁵ 纳粹的对应方案试图建立一种替代的信任模式以及一套替代的法律体系。对自为暴力的工具性解读，以及对其交流功能的否认，掩盖了该对应方案已经推进到何种程度。
 
 现代性无法理解作为一种生命形式的暴力。现代思想家们一次又一次地试图将恐怖主义暴力理解为革命暴力的“小兄弟”。这种解读与大多数恐怖组织的观点相吻合，这些组织将暴力指向“制度的代表”。然而，问题在于这种解读忽略了我第四章中所指出的令人不快的事实：人们决定去做某件事的一个原因，是因为他们从中获得快感。⁸⁶ 那些不爱暴力或不迷恋武器的人不会成为恐怖分子；他们无法适应。⁸⁷
@@ -3361,6 +3465,9 @@ During the Cold War the possession of nuclear weapons served to demonstrate that
 > 目标是斗争，
 > 斗争产生斗争——
 > 这永远无法相互对抗；
+
+
+
 > 唯有团结才能成功；
 > 团结不仅是否定。
 > 那该死的“压制性二元关系”——
@@ -3382,9 +3489,7 @@ During the Cold War the possession of nuclear weapons served to demonstrate that
 
 > 抛开一切讨论——因为我们不能像过去三十年那样再继续谈论三十年——我要问你们，哪一种更好：缓慢的方式，包括写社会小说以及官僚式地在纸上提前一千年预定人类的命运……还是你们宁愿要一个快速的解决方案，无论它可能是什么……？⁹⁶
 
-为什么人们会认真对待这种胡言乱语？首先，它采用了非恐怖主义左翼所讲的一种流行词汇。其次，它引发了良知与迷恋的混合。左翼的马克思主义者和无政府主义者相信
-
-他们相信暴力的必要性，但大多数人——由于已经很好地融入了他们想要改变的社会——并没有拿起武器。相反，他们告诉自己，时机到来时会与战友并肩而立，并试图通过唱革命歌曲来忘记这种想法的不快，比如沃尔夫·比尔曼献给格瓦拉的颂歌：“拿着枪的耶稣基督 / 你的形象带领我们上战场！”有些人已经摘下了手套，但他们的时机不对——革命条件尚未成熟。许多人仍期望在自己的有生之年看到革命，就像早期基督徒以为自己会亲眼目睹世界末日一样。红军派的恐怖分子则表现得像古代犹太奋锐党人，那些企图迫使弥赛亚降临的“末日催促者”。红军派批评左派是懦夫，有些人觉得他们说得很对。左派的怯懦证明了他们的理智，但他们仍然感到羞愧。
+为什么人们会认真对待这种胡言乱语？首先，它采用了非恐怖主义左翼所讲的一种流行词汇。其次，它引发了良知与迷恋的混合。左翼的马克思主义者和无政府主义者相信他们相信暴力的必要性，但大多数人——由于已经很好地融入了他们想要改变的社会——并没有拿起武器。相反，他们告诉自己，时机到来时会与战友并肩而立，并试图通过唱革命歌曲来忘记这种想法的不快，比如沃尔夫·比尔曼献给格瓦拉的颂歌：“拿着枪的耶稣基督 / 你的形象带领我们上战场！”有些人已经摘下了手套，但他们的时机不对——革命条件尚未成熟。许多人仍期望在自己的有生之年看到革命，就像早期基督徒以为自己会亲眼目睹世界末日一样。红军派的恐怖分子则表现得像古代犹太奋锐党人，那些企图迫使弥赛亚降临的“末日催促者”。红军派批评左派是懦夫，有些人觉得他们说得很对。左派的怯懦证明了他们的理智，但他们仍然感到羞愧。
 
 某种天真并非红军派愿意使用暴力的唯一原因。这也是一个以受屈者之名实施以自身为目的的暴力的机会，并可以用现代性最伟大的目标之一来为其辩护：一劳永逸地消除暴力。为此，只需要最后一次暴力——以此标记，你必将取胜。然而，恐怖分子最终让位给另一种形象：亡命之徒。他诞生于现代性的白日梦，拒绝工具理性与国家施加的限制，拥抱以自身为目的的暴力的律令。他是自己事业的立法者，也是他人事业的立法者——既是法官，又是行刑者。
 
@@ -3398,7 +3503,7 @@ During the Cold War the possession of nuclear weapons served to demonstrate that
 
 问威廉·退尔是否解放了瑞士有什么意义？他当然解放了。至少据传说是如此。
 
-在维兰德的叙事诗《巴黎的审判》（Urt-heil des Paris）中，退尔是那个“给了你们自由”的人；在席勒剧本的结尾，我们读到：“退尔万岁！我们的弓手，我们土地的救星！”（3281）。席勒的表达再清楚不过了。但只有一个问题：如果没有这句台词，没有一个人会从这部戏剧中得出结论，认为这确实是退尔的角色。这一奇怪的事实并非没有被注意到。十九世纪批评家路德维希·伯尔内读《威廉·退尔》，本想找一个革命者，结果却找到一个奴仆，他写道：
+在维兰德的叙事诗《巴黎的审判》中，退尔是那个“给了你们自由”的人；在席勒剧本的结尾，我们读到：“退尔万岁！我们的弓手，我们土地的救星！”（3281）。席勒的表达再清楚不过了。但只有一个问题：如果没有这句台词，没有一个人会从这部戏剧中得出结论，认为这确实是退尔的角色。这一奇怪的事实并非没有被注意到。十九世纪批评家路德维希·伯尔内读《威廉·退尔》，本想找一个革命者，结果却找到一个奴仆，他写道：
 
 虽然说出这话让我心痛，亲爱的老退尔是个十足的市侩。他把自己的一言一行都掂量得仿佛生死攸关。面对无边的苦难和巍峨的群山，他那有节制的行为毫无品味……不必走出他的处境，他就能从自己的阁楼窗户看到处境之外的东西。这使他聪明，也使他焦虑……他是个好人，不吝惜履行自己的职责，但也只做要求他做的，不多也不少……他是好公民、好父亲、好丈夫……他行动勇敢，言语胆怯；他的手很快，脑子却很迟钝；他那好心的顾虑使他躲到灌木丛后，干出一场可鄙的暗杀，而不是以高贵的反抗去做一件善行……他填满了自然、公民社会和偶然赋予他的位置，而且知道如何站稳脚跟。但他看不到整体，也不为此操心……紧急时刻，他灵巧且乐于帮助被围困者，也帮助自己，但他不能也不愿为普遍而工作……退尔拒绝向杆上的帽子鞠躬，然而这其中有某种东西让我们不快。它不是源于通过自由而生的高贵反抗……而是市侩的骄傲，一种经不起审视的骄傲。退尔骨子里有荣誉，也有恐惧。为了调和荣誉与恐惧，他垂着眼皮走过旗杆，以便能说自己没有看见帽子，没有违反法律。当格斯勒要求他对违抗行为作出回答时，退尔很温顺，温顺得让我们替他感到羞耻。他回答说，他没有向帽子行礼是因为粗心大意，而且不会再犯了……退尔这个人会信守诺言。射苹果的那一枪始终是一个谜；
 
@@ -3419,30 +3524,31 @@ more, it was a mystery.... 一个父亲可以不惜一切拯救孩子的生命�
 尽管这些批评者的反对，泰尔这位自由战士的神话在德国文学经典中仍然流传。对这部剧的重读揭示了这种观点有多么偏离。考虑一下泰尔这位熟练的舵手决定帮助一名瑞士人逃脱的场景——该瑞士人因杀死一名试图强奸他妻子的哈布斯堡总督而被通缉——泰尔在暴风雨中驾船将他渡过湖泊。正如席勒不厌其烦地提醒我们的那样，这并不是反抗行为。当泰尔的妻子海德薇对他大胆的行为表示震惊时——“暴风之湖。/ 那是奇迹/ 你得以逃脱。你难道不能为/ 妻子和孩子着想吗？”——泰尔回答道：“’Twas of you I thought, / And so I saved a father for his children” (1525–28)。在其他场景中，我们了解到瑞士的政治局势及其与哈布斯堡王朝的复杂关系，但泰尔对这些问题毫无看法。面对向帽子鞠躬以象征性地向哈布斯堡统治致敬的号召，泰尔采取了静默主义的立场：
 
 Here is the deed we need:
+
 To stop our tongues from wagging, and be patient.
 
 Let every man live quietly at home.
+
 The man of peace is gladly left in peace.
+
 (420–21; 427–28)
+
+
 
 泰尔的态度背后体现的与其说是原始的政治理论，不如说是天真的世俗智慧：“Left undisturbed, snakes will not bite. / The governors will weary of the game / When they see how the cantons keep their counsel” (429–31)。州代表维尔纳·施陶法赫，一个不愿接受这种不干预哲学的代表，试图说服泰尔改变想法：
 
-STAUFFACHER: We might do much if we but stood together.
-TELL: The shipwrecked man fends easier for himself.
-STAUFFACHER: So coldly then you scout the common cause?
-TELL: ’Tis only on himself a man may count.
-STAUFFACHER: Even the weak find strength in unity.
-TELL: The strong man’s strongest when he acts alone.
-STAUFFACHER: So if the country in its desperate plight
-Must take to arms, we cannot count on you.
-Tell clasps his hand.
-TELL: The straying lamb Tell rescues from the cliff.
-Will he desert his friends in their distress?
-But whatso’er you do, seek not my words
-
-
-
-
+STAUFFACHER: We might do much if we but stood together.  
+TELL: The shipwrecked man fends easier for himself.  
+STAUFFACHER: So coldly then you scout the common cause?  
+TELL: ’Tis only on himself a man may count.  
+STAUFFACHER: Even the weak find strength in unity.  
+TELL: The strong man’s strongest when he acts alone.  
+STAUFFACHER: So if the country in its desperate plight  
+Must take to arms, we cannot count on you.  
+Tell clasps his hand.  
+TELL: The straying lamb Tell rescues from the cliff.  
+Will he desert his friends in their distress?  
+But whatsoe’er you do, seek not my words  
 
 > 在商议时，我对辩论毫无胃口。
 > 然而如果你需要我去执行某项特殊任务，
@@ -3483,10 +3589,6 @@ But whatso’er you do, seek not my words
 >
 > （1930–33）
 
-
-
-
-
 令众人难以置信，泰尔举起了他的弩。他颤抖着，眼中噙满泪水，再次乞求死亡。盖斯勒却态度坚决：“我要的是射箭，而不是你的性命”（1985）。更进一步，他提高了赌注。在场所有人都会丧命，除非泰尔射中那支箭。“当需要救援时，你们却对风暴视而不见。/ 所以，你们这些能拯救所有人的人，现在就拯救自己吧”（1987）。当泰尔瞄准时，盖斯勒随从中的一名骑士，乌尔里希·冯·鲁登茨上前，指责总督的严厉；随之展开了一场激烈的争论。鲁登茨宣称自己忠于皇帝，但拒绝哈布斯堡家族对他的管辖权：
 
 > 我不是像这些人一样——
@@ -3495,11 +3597,7 @@ But whatso’er you do, seek not my words
 > 如果有人靠近——
 > （2027–29）
 
-就在鲁登茨拔剑的瞬间，泰尔已站到舞台上游，射出了他的箭，苹果应声落地。这一安排经过精心策划：再次，瑞士独立的政治叙事与泰尔的个人叙事分道扬镳。鲁登茨和盖斯勒争论政治时，泰尔则关注自己的事情。在前景中，哈布斯堡家族试图将瑞士变成私人权力基地的企图，与瑞士人坚持与帝国保持直接关系的诉求形成对立。（瑞士起义并非关于建立新的关系，而是恢复旧的关系。）在背景中，泰尔的箭命中了目标。盖斯勒不敢相信自己的眼睛：“他射出了箭？这简直是疯狂的胡闹”（2033）。盖斯勒曾料定泰尔会胆怯。他想击垮他，逼他放弃希望、屈服——或向他自己的儿子射击。陷阱完美无缺。但为什么盖斯勒要设下它，又为什么泰尔要冒险前往它可能合拢的地方？
-
-泰尔前往阿尔特多夫之旅基于他“若不被打扰，蛇是不会咬人的”这一预设。泰尔理所当然地认为镇压会沿着正常路径进行，哈布斯堡的统治不会超出某种程度的暴力。沉默寡言的泰尔并未明说，但他在说“所以我避开他。他不会来找我”时暗示了这一点。他相信他和盖斯勒都不想冲突。这就是为什么泰尔在盖斯勒离开前就直接启程前往阿尔特多夫，而不是等待。这一决定是一种实验，或是一种赌注，尽管泰尔并不想过度冒险。他计划用“来吧，朋友，放我走”或“如果我停下来思考，我就不是泰尔了”之类的台词从任何困境中脱身。只有在最坏的情况下，他才需要奋力突围。泰尔的想法在正常情况下完全合理。但
-
-盖斯勒却违背了所有预期。他这样做，一是因为当泰尔无法控制阿尔特多夫的煽动者时，他必须介入以平息潜在的叛乱，二是因为他反应过度，这引发了与鲁登茨的对峙。像泰尔一样，鲁登茨也预期镇压的程度是正常的。他预期市场广场的叛乱会被戟兵镇压；他没有料到一个父亲会被迫向自己的儿子射箭。“阁下总督，”鲁登茨宣布，“你不能再继续下去……/ 你已经达到了目的。但严厉过度/ 必然会超出其目的”（1994）。是什么推动盖斯勒走向如此极端？答案是弩。盖斯勒对泰尔说：
+泰尔前往阿尔特多夫之旅基于他“若不被打扰，蛇是不会咬人的”这一预设。泰尔理所当然地认为镇压会沿着正常路径进行，哈布斯堡的统治不会超出某种程度的暴力。沉默寡言的泰尔并未明说，但他在说“所以我避开他。他不会来找我”时暗示了这一点。他相信他和盖斯勒都不想冲突。这就是为什么泰尔在盖斯勒离开前就直接启程前往阿尔特多夫，而不是等待。这一决定是一种实验，或是一种赌注，尽管泰尔并不想过度冒险。他计划用“来吧，朋友，放我走”或“如果我停下来思考，我就不是泰尔了”之类的台词从任何困境中脱身。只有在最坏的情况下，他才需要奋力突围。泰尔的想法在正常情况下完全合理。但盖斯勒却违背了所有预期。他这样做，一是因为当泰尔无法控制阿尔特多夫的煽动者时，他必须介入以平息潜在的叛乱，二是因为他反应过度，这引发了与鲁登茨的对峙。像泰尔一样，鲁登茨也预期镇压的程度是正常的。他预期市场广场的叛乱会被戟兵镇压；他没有料到一个父亲会被迫向自己的儿子射箭。“阁下总督，”鲁登茨宣布，“你不能再继续下去……/ 你已经达到了目的。但严厉过度/ 必然会超出其目的”（1994）。是什么推动盖斯勒走向如此极端？答案是弩。盖斯勒对泰尔说：
 
 > 开始干活吧。现在看看携带武器会带来什么。
 > 携带杀人武器是危险的：
@@ -3511,12 +3609,11 @@ But whatso’er you do, seek not my words
 > 但我为你的瞄准提供目标。
 > （1972–79）
 
+
+
 盖斯勒试图垄断暴力的工具。而与他相对的，竟是所有人中那个非政治的泰尔。他在离开前往阿尔特多夫前加固自己的房屋绝非偶然：“好了！那扇门应该还能再用一年。/ 家里备把斧头就能省去木工的活儿”（1513–14）。读到这段话时若能察觉到对手艺人的致敬，那便抓住了要点。像任何热衷于家居改善的人一样，泰尔展现出一种自足的个人主义，其中带有某种倒退的、近乎前现代的东西，仿佛整个分工制度从未被发明过。泰尔与其说是社会的一员，不如说是一个寻求捍卫自身自主权的人，即便这意味着与社会为敌。他紧紧抓住自己对房屋、家园和攻击性武器的权利，不论挡在他面前的是哈布斯堡家族还是一个渴望现代化的社区。泰尔并非职业弓箭手，他的弩也不是职业工具；他携带弩的决定是存在性的。席勒笔下的泰尔让人想起查尔顿·赫斯顿在全国步枪协会大会上，整场演讲都在不懈而倔强地举着步枪。
 
-然而在命令泰尔向自己的儿子射箭时，盖斯勒却远远超出了禁止持枪权的范畴。文明社会的代表以破坏性的方式超越了每一个政治和法律目的，甚至切入了自然本身。“所以山丘真的开始颤抖了吗？”泰尔问道。“大地本身也变得善变了”（2666–67）。泰尔为他那奇怪地不英雄的第二次射击辩护——那次
-
-
-旨在对格塞勒——作为一种自卫行为：“那些在天真中的可怜孩子，/ 一位忠实的妻子，我必须保护她免受 / 你的狂怒”（2577–79）。为了使泰尔的解释更具说服力，席勒在稍早的场景中加入了格塞勒威胁一名妇女的情节，该妇女因他错误定罪其丈夫而向他提出申诉。席勒从这个角度为他的英雄提供了掩护，但问题远不止于此。在第四幕泰尔的长篇独白中我们读到：
+然而在命令泰尔向自己的儿子射箭时，盖斯勒却远远超出了禁止持枪权的范畴。文明社会的代表以破坏性的方式超越了每一个政治和法律目的，甚至切入了自然本身。“所以山丘真的开始颤抖了吗？”泰尔问道。“大地本身也变得善变了”（2666–67）。泰尔为他那奇怪地不英雄的第二次射击辩护——那次旨在对格塞勒——作为一种自卫行为：“那些在天真中的可怜孩子，/ 一位忠实的妻子，我必须保护她免受 / 你的狂怒”（2577–79）。为了使泰尔的解释更具说服力，席勒在稍早的场景中加入了格塞勒威胁一名妇女的情节，该妇女因他错误定罪其丈夫而向他提出申诉。席勒从这个角度为他的英雄提供了掩护，但问题远不止于此。在第四幕泰尔的长篇独白中我们读到：
 
 > 我的生活平静，我未曾作恶。
 > 我的箭的目标是林间的野兽。
@@ -3548,31 +3645,26 @@ But whatso’er you do, seek not my words
 > 最伟大的事并承受了比任何人都多的苦难？
 > 来吧，大家都去他家
 > 在那里颂扬拯救了我们所有人的那个人。
-
 > （3082–86）
 
 泰尔最终解放了瑞士吗？起义被准备、延迟，然后按计划进行。只剩下一个问题未解决，而且是经典问题：如何限制暴力并实现和平革命。
 
-> **瓦尔特·菲尔斯特：** 做必须做的事，但不要超出。
-> 我们将驱逐总督及其爪牙
-> 并摧毁他们所有的堡垒，
-> 然而，如果可能，我们将不流血。
-> . . . . . . . . . . . . . .
-> **斯陶夫哈赫：** 我只担心格塞勒会抵抗。
-> 在他周围虎视眈眈的骑兵阵列下
-> 他绝不会无流血地撤离战场：
-> 而且即使被放逐，他仍会构成威胁。
-> 几乎危险的是饶他一命。
-> . . . . . . . . . . . . . .
-> **雷丁：** 时光会带来良策。现在请耐心
-> 并相信能够塑造事件的时刻。
-
-> （1366–69；1428–32；1437–38）
+`瓦尔特·菲尔斯特：` 做必须做的事，但不要超出。
+我们将驱逐总督及其爪牙
+并摧毁他们所有的堡垒，
+然而，如果可能，我们将不流血。
+. . . . . . . . . . . . . .
+`斯陶夫哈赫：` 我只担心格塞勒会抵抗。
+在他周围虎视眈眈的骑兵阵列下
+他绝不会无流血地撤离战场：
+而且即使被放逐，他仍会构成威胁。
+几乎危险的是饶他一命。
+. . . . . . . . . . . . . .
+`雷丁：` 时光会带来良策。现在请耐心
+并相信能够塑造事件的时刻。
+（1366–69；1428–32；1437–38）
 
 最后一句是对泰尔行为的明显预示，他是靠命运的偶然和戏剧的情节才走到这一步。联邦同盟者准备杀人，但他们担心自己的自由会被鲜血玷污。在胜利庆祝中瓦尔特·菲尔斯特说：“幸好你们没有用 / 鲜血玷污我们的胜利”（2912）。而一群孩子齐声回响：“我们自由了！我们自由了！”（2913）。
-
-
-
 
 盖斯勒的暗杀充其量只是一个政治象征，但并非必要的象征。它的功能在于拯救政治免于其自身的可能性，因为泰尔在非政治的理由下实施了一桩在政治上不可避免的谋杀。从政治视角来看，杀死盖斯勒是一项正当的私人行为，据称是为了自卫。从泰尔的视角来看，这关乎纠正对自然犯下的不公。在下一幕中，施瓦本公爵约翰，皇帝的孙子和凶手，对泰尔说：“噢，我本希望能在这里找到些仁慈，/ 因为你报了仇——”（3174）。105 泰尔回应道：
 
@@ -3596,30 +3688,47 @@ Django 是长长一串意大利式西部片亡命徒中的一员，他们遵循�
 
 这些沟通局限的结果是，没有人真正了解亡命徒。人们可以钦佩他，有时甚至爱他，但他们并不理解他。玛丽安娜·科赫在 A Fistful of Dollars 中对克林特·伊斯特伍德投去的精彩告别目光就捕捉到了这一点，同时充满了爱、钦佩和惊讶。（这一目光弥补了科赫在七十年代在德国电视上做的那些挂衣广告。）泰尔也只是被钦佩，而非被理解。就连他自己的妻子也无法理解他。苹果事件后，赫德维格拥抱儿子时说：
 
-
 这是真的吗？活着，而且毫发无损？
 （她焦急地看着他。）
 怎么可能？他怎么能瞄准你？
 他怎么能？哦，他没有心！他居然
+
+
+
 能向自己的小儿子射箭！
 
 各州代表试图解释，但她一概不听：
 
 **富斯特：** 可他当时惊恐万分，悲痛欲绝，
+
 是在死亡威胁下被迫为之。
+
 **海德薇：** 他若还有一颗做父亲的心，宁死千次
+
 也不会这么做。
+
 **施陶法赫：** 你不如赞颂上帝的旨意，
+
 是它引导了这件事。
+
 **海德薇：** 我怎能忘记
+
 另一种可能？亲爱的上帝！即便
+
 我活上八十年，那孩子也会
+
 永远被捆绑，他父亲正引弓瞄准，
+
 飞箭射穿我的心。
+
 **梅尔希塔尔：** 您可知他受到了多大的挑衅？
+
 **海德薇：** 这些粗野顽固的男人！只要他们的自尊
+
 受到触动，就什么都不顾了。
+
 当盲目的竞技狂热占据心头，
+
 他们就会拿自己孩子的头颅、一颗母亲的心去下注。
 
 (2314–32)
@@ -3635,18 +3744,28 @@ Django 是长长一串意大利式西部片亡命徒中的一员，他们遵循�
 最后一行——普遍领域的流亡者——简洁地定义了亡命之徒。从这个意义上说，退尔与亚伯拉罕相似，但有着现代差异。亚伯拉罕的上帝是整全的，既是独一又是一切。退尔虽然习惯呼求上帝之名，却只认识自然。自然世界只是分裂神性的一部分。其另一些部分，以严格的辩证方式，是由盖斯勒所体现的兽性——正是他下令谋杀退尔的儿子——以及取代信仰的武器。亚伯拉罕的信仰在于克服他的主观怀疑，并随之克服主观性本身。命令献祭以撒的上帝与拯救的上帝，在信仰和顺服中是同一位。相比之下，对退尔而言，作为武器的信仰与分裂的神性相冲突，并站到自然一边。这种自然只有通过与那分裂它的东西相隔绝，才能确保统一。武器划出一条界线，退尔——或者说意大利西部片中的亡命之徒——退到这条界线之后，在与社群多样性的隔绝中体验统一。从这个角度，我们就能更好地理解退尔所召唤的那种不祥的自然。在克尔凯郭尔那里，不再由普遍者中介的个体空间是超验地岌岌可危的。在席勒那里，个体就是字面意义上的自然。在阿尔特多夫郊外的乌里要塞的一场戏中，我们看到：
 
 > 退尔：这里不吉利。我们继续走吧。
+> 
 > 施陶法赫：那我是在乌里吗——自由之乡？
+> 
 > 工头：哦，先生！要是您看过这里的地牢，
+> 
 > 就在塔楼下面！一个被扔进那里的人……
-
-Will ne’er again hear cock crow in the morning.
-STAUFFACHER: Oh God!
-MASTER-MASON: Look at these walls, these buttresses!
-You’d say they’re made for all eternity.
-TELL: What hands can make needs only hands to break.
-(Pointing to the mountains.)
-There is the home of freedom. God built that.
-(380–88)
+> 
+> Will ne’er again hear cock crow in the morning.
+> 
+> STAUFFACHER: Oh God!
+> 
+> MASTER-MASON: Look at these walls, these buttresses!
+> 
+> You’d say they’re made for all eternity.
+> 
+> TELL: What hands can make needs only hands to break.
+> 
+> (Pointing to the mountains.)
+> 
+> There is the home of freedom. God built that.
+> 
+> (380–88)
 
 最后一句可以从政治上理解：城墙可以被夷平，但群山却能为任何哈布斯堡军队提供持久的庇护。它们也表达了泰尔与人造世界脱离的态度。“山里出生的人从不惧怕群山”，他后来对赫德薇解释道（1512）。
 
@@ -3655,15 +3774,18 @@ There is the home of freedom. God built that.
 像泰尔这样的亡命徒接下来会怎样？真的有“接下来”吗？库尔特·托霍尔斯基认为，正因如此，戏剧在落幕前迅速迎来大团圆结局是有道理的，而这在席勒的戏剧中也不例外。泰尔唯一可能的续篇，已预示在另一部绝望叙事中——詹姆斯·芬尼莫尔·库珀的《皮袜子故事》。与泰尔一样，纳蒂·邦波也是阈限空间的占据者，一位著名的猎人和神枪手——而且难以适应社会规范。在因在禁猎期射杀一只母鹿而服刑后，纳蒂离开城镇向西而去，在草原上的拓荒者中找到了进行边缘性邂逅的空间。但这种形式的进展——逃向荒野——并不适合泰尔的故事。瑞士是一个空间狭小的国度，只向其贫瘠的上层开放。如果更多的瑞士变成瑞士社会，泰尔可能无法走到下一幕。而如果他做到了，他很可能会表现不佳，正如他自己也明白的那样：
 
 Since nature did not mold me for a shepherd…
+
 I must for ever chase some fleeting target
+
 And I can only find the zest of life
+
 When I must capture it each day afresh.
+
 (1487–90)
 
 赫德薇批评泰尔没有考虑他所从事的冒险给她带来的恐惧，但这只是他无知的一部分。泰尔不仅没有考虑妻子的需求；他也没有考虑自己终有一天会因偷猎而被捕所要遵守的法律。按照戏剧逻辑延展下去，他的未来就是牢狱。“泰尔——在监狱里！”赫德薇感叹道，“自由是他的呼吸／但死亡潜伏在地牢与洞穴的空气中”（2361–62）。泰尔与《众神疯了》（1980）这部阈限空间喜剧中的丛林人一样，都不适合坐牢。但对于他和他这一类人来说，还有什么其他选择呢？
 
 现代恐怖主义与亡命徒及其穿越自然前沿的旅程相去甚远，但它确实共享了他反现代、反制度的态度：正如第一代红军派成员在施塔姆海姆监狱秘密传递的信息中所写的那样，援引反殖民斗争的权威和弗朗茨·法农的理论，他们希望创造“一种新人”。这种态度的目的，我们在席勒的作品中处处可见，是为了抗议伴随现代性而来的异化。弗洛伊德认为这种态度是对文明强加的本质性反抗。最重要的是，它是对通过暴力实现自我赋权的迷恋。这种迷恋使群体凝聚在一起，并使它们闪耀。作为一种生活方式，恐怖主义提供了现代性所不提供之物。（纳粹人民共同体的煽动种族仇恨的暴民是最接近的。）对于虚构作品中的亡命徒而言，对暴力自我赋权的迷恋植根于神秘感与可信度的混合。虽然亡命徒颠倒了道德和普通战士的伦理，但他怀着信念行动，有时甚至是神启般的信念，骑着城镇或整片土地上的坏人。现代恐怖主义与神秘亡命徒的关联性邻近性掩盖了它不神秘的真相。亡命徒的神秘行为在红军派成员支离破碎的结巴和他们为其所谓更高使命辩护而提出的伪理论中重现。反恐斗争中的重要武器之一——可以追溯到陀思妥耶夫斯基——就是摧毁更深
-
 
 ## 再次展示酷刑的工具？
 
@@ -3671,16 +3793,17 @@ meaning that envelops it. 现代伊斯兰恐怖主义并没有世俗人士无法
 
 自2001年9月11日袭击事件以来，伊斯兰恐怖主义的威胁为一个此前提出过但直到现在才引起公众兴趣的问题增添了力量：现代文明的核心成就之一——对酷刑的绝对禁止——是我们能够坚持的吗？有人认为不能。为了证明这一点，他们向我们展示了定时炸弹场景。在一个版本中，当局在一片人口密集区发现了一枚脏弹。唯一能拆除炸弹的方法是使用一个秘密密码，而唯一知道密码的人是一名拒绝合作的被警方拘留的恐怖分子。鉴于有多少生命处于危险之中，酷刑难道不是正当的吗？¹⁰⁹
 
-在德国，辩论包括了2002年沃尔夫冈·达施纳案，这位法兰克福副警察局长在绑架犯拒绝透露受害者下落后威胁要对其造成严重伤害。绑架犯最终开口了，但当警察找到他时，受害者——一名十一岁的男孩——已经死亡。这一真实事件与《肮脏的哈里》（1971年）中颇具争议的场景相似，在该场景中，侦探卡拉汉——当然由克林特·伊斯特伍德饰演——对电影中施虐的反派斯考皮奥进行酷刑，直到他供出埋活的少女的藏身地点。警察赶到现场，但女孩的氧气供应已经用尽。更糟的是，由于他遭受的残酷对待，斯考皮奥被无罪释放。警察局长因侵犯嫌疑人权利而训斥卡拉汉。卡拉汉的回应是：那死去的女孩的权利呢？谁为她发声？达施纳和卡拉汉的例子包含着某种矛盾。对受害者的关切越大，使用暴力的意愿就越大。这种视角的转变，即对受害者的同情增加可能导致对施害者的同情减少，会掩盖这样一个事实：刑事司法系统将我们所有人都视为潜在的受害者，也将我们所有人都视为潜在的被告。
+
+
+# 酷刑的合法化辩论
+
+在德国，辩论包括了2002年沃尔夫冈·达施纳案，这位法兰克福副警察局长在绑架犯拒绝透露受害者下落后威胁要对其造成严重伤害。绑架犯最终开口了，但当警察找到他时，受害者——一名十一岁的男孩——已经死亡。这一真实事件与《肮脏的哈里》1971年中颇具争议的场景相似，在该场景中，侦探卡拉汉——当然由克林特·伊斯特伍德饰演——对电影中施虐的反派斯考皮奥进行酷刑，直到他供出埋活的少女的藏身地点。警察赶到现场，但女孩的氧气供应已经用尽。更糟的是，由于他遭受的残酷对待，斯考皮奥被无罪释放。警察局长因侵犯嫌疑人权利而训斥卡拉汉。卡拉汉的回应是：那死去的女孩的权利呢？谁为她发声？达施纳和卡拉汉的例子包含着某种矛盾。对受害者的关切越大，使用暴力的意愿就越大。这种视角的转变，即对受害者的同情增加可能导致对施害者的同情减少，会掩盖这样一个事实：刑事司法系统将我们所有人都视为潜在的受害者，也将我们所有人都视为潜在的被告。
 
 再次强调：当前的辩论围绕的是在酷刑可能挽救无辜生命时将其合法化，而不是一般性地合法化酷刑。在德国，核心问题是宪法第1条第1款——“人的尊严不可侵犯。尊重和保护它应是所有国家权力的义务”——是否允许或要求在这种情况下使用酷刑。一些法学家认为，虽然德国宪法当然禁止酷刑，因为它违反了人的尊严，但它也要求国家保护人的尊严，而在酷刑服务于这一目的的范围内，即使被禁止，也可能被要求。在支持这种可能性时，主张者指出了一个类似案例：为拯救人质的生命而射杀并杀死劫持人质者。在这里，禁止和要求同样矛盾——取人性命的禁令与拯救生命的义务——但在这种情况下，德国联邦宪法法院已裁定此类行为符合宪法，当两者冲突时，优先考虑无辜受害者的权利而非施害者的权利。那么，为了拯救无辜生命而对劫持人质者施以酷刑，与为了拯救无辜生命而射杀劫持人质者有何不同？另一条论证依据德国刑法，该法允许私人人士在为自己或他人抵御严重伤害时使用暴力。换句话说，在某些情况下，私人人士可以像达施纳或卡拉汉一样行事。问题是这种许可是否延伸到国家代理人。如果不延伸，警察就必须在法律上阻止一名父亲对他儿子的绑架犯进行身体胁迫以透露男孩的下落。我们能接受这样的后果吗？我们应该接受吗？
 
 支持酷刑例外的宪法论点已进入 Maunz 和 Dürig 对德国宪法的标准评注。虽然它们不代表“占主导地位的观点”，但在讨论中占有被接受的地位。我因声称这些法律论点本身是合理的而疏远了一些同事和听众。尽管如此，我也认为，合法化酷刑例外将对社会和法律体系产生灾难性影响，而法律先验论证的逻辑并未考虑这些影响。110 在这种情况下，与其试图消除它而危及我们的法律体系，不如忍受一个可能无法解决的法律不一致。
 
-在我看来，反对合法化酷刑例外的六个核心论点如下。第一，像达施纳这样的案件，正如他自己的审判所证明的那样，可以通过现有的法律实践来处理：酷刑通常是被禁止的，但在发生违规时，法院会考虑情境和动机。第二，合法化酷刑例外将从根本上改变执法的方式。在可能通过施压嫌疑人来拯救无辜生命的情况下——例如在审讯中——警察目前会问自己可以走多远。如果在这些情况下酷刑是合法的，警察就必须问自己必须走多远。是酷刑被要求的情况，还是不是？很容易想象警察为了安全起见而施加暴力。第三，每个职业都会吸引那些
-
-
-像是在做他们的工作。偶尔使用酷刑的警察部队不可避免地会吸引那些喜欢这种想法的人进入警察学院，而他们因此会倾向于忽视诸如“有疑问时，不要使用酷刑”之类的指导原则。
+在我看来，反对合法化酷刑例外的六个核心论点如下。第一，像达施纳这样的案件，正如他自己的审判所证明的那样，可以通过现有的法律实践来处理：酷刑通常是被禁止的，但在发生违规时，法院会考虑情境和动机。第二，合法化酷刑例外将从根本上改变执法的方式。在可能通过施压嫌疑人来拯救无辜生命的情况下——例如在审讯中——警察目前会问自己可以走多远。如果在这些情况下酷刑是合法的，警察就必须问自己必须走多远。是酷刑被要求的情况，还是不是？很容易想象警察为了安全起见而施加暴力。第三，每个职业都会吸引那些像是在做他们的工作。偶尔使用酷刑的警察部队不可避免地会吸引那些喜欢这种想法的人进入警察学院，而他们因此会倾向于忽视诸如“有疑问时，不要使用酷刑”之类的指导原则。
 
 第四，支持合法化酷刑例外的人特别强调，只有在嫌疑人的罪行确定无疑，并且通过酷刑获取的信息确实能挽救生命时才可适用。问题在于，没有任何办法能确切知道这些条件是否成立。为了排除此类错误，你必须彻底禁止酷刑，否则法院就可能得出结论：审讯者行为不当，但出于其所知。换句话说，在某个时候，一定会有人被酷刑折磨，而他并不掌握能挽救生命的信息，而这种始终存在的可能性将实质上废除现代国家禁止酷刑其公民的禁令。
 
@@ -3688,7 +3811,7 @@ meaning that envelops it. 现代伊斯兰恐怖主义并没有世俗人士无法
 
 第六，任何对酷刑的限制都需要法律明文规定。民选代表需要就具体细节进行辩论，在政党纲领上公开其立场，并向好奇的选民说明。报纸社论、脱口秀讨论以及与政治家的电视访谈很快就会随之而来。简而言之，我们将面临一场关于酷刑应如何最好地适用的公共辩论。
 
-我们应记住，二十世纪里每一个中止法治的国家都实际上合法化了酷刑，而在酷刑被实际上合法化的地方，法治都崩溃了。在例外情况下合法化酷刑将重新谈判现代性的这一核心原则：国家对自身暴力的自我限制，其有效且象征性的表达就是禁止酷刑。¹¹¹ 那些以自卫为由为打击恐怖主义中使用酷刑辩护的人忘记了，酷刑改变了他们想要捍卫的“自我”的本质。恐怖主义不仅是对我们身体存在的践踏；它还向我们珍视其保存的文化宣战。恩斯特·图根哈特曾写道：“我们只能拷问一种生活方式的‘如何’。”¹¹² 但这假定我们首先就希望维护这种生活方式。如果我们不这样做，我们就会追随二十世纪上半叶的模式，克服现代性对暴力的厌恶，转而培养对暴力的信任。
+我们应记住，二十世纪里每一个中止法治的国家都实际上合法化了酷刑，而在酷刑被实际上合法化的地方，法治都崩溃了。在例外情况下合法化酷刑将重新谈判现代性的这一核心原则：国家对自身暴力的自我限制，其有效且象征性的表达就是禁止酷刑。111 那些以自卫为由为打击恐怖主义中使用酷刑辩护的人忘记了，酷刑改变了他们想要捍卫的“自我”的本质。恐怖主义不仅是对我们身体存在的践踏；它还向我们珍视其保存的文化宣战。恩斯特·图根哈特曾写道：“我们只能拷问一种生活方式的‘如何’。”112 但这假定我们首先就希望维护这种生活方式。如果我们不这样做，我们就会追随二十世纪上半叶的模式，克服现代性对暴力的厌恶，转而培养对暴力的信任。
 
 ## 焦虑与自信
 
@@ -3696,68 +3819,85 @@ meaning that envelops it. 现代伊斯兰恐怖主义并没有世俗人士无法
 >
 > ——卡尔·马克思，《1844年经济哲学手稿》
 
-正如我一再指出的那样，现代性未能忠于自身的原则——经常且轻易地克服对暴力的厌恶——但它却不断设法否认自己的背叛，即便在二十世纪的暴行之后亦然。否认不仅未能阻止进一步的暴行；它还导致了试图重新合法化过去极端暴力的修辞言论。把这种无知当作一种智识上的“掩耳盗铃”式的希望来坚持并不是一个选项。只要我们在谈论替代方案，绝望也不是选项。尽管我们失望，我们别无选择，只能像理查德·罗蒂反对某些后现代主义者的立场时所说的那样，“振作起来，再试一次。”¹¹³
+正如我一再指出的那样，现代性未能忠于自身的原则——经常且轻易地克服对暴力的厌恶——但它却不断设法否认自己的背叛，即便在二十世纪的暴行之后亦然。否认不仅未能阻止进一步的暴行；它还导致了试图重新合法化过去极端暴力的修辞言论。把这种无知当作一种智识上的“掩耳盗铃”式的希望来坚持并不是一个选项。只要我们在谈论替代方案，绝望也不是选项。尽管我们失望，我们别无选择，只能像理查德·罗蒂反对某些后现代主义者的立场时所说的那样，“振作起来，再试一次。”113
 
 是否应在现代性严重背离其理想的情况下仍坚持现代性的理想这一问题是误导性的。那些对现代性暴行感到战栗的人分享着它的理想，而那些拒绝其理想的人将对任何事情都不战栗。霍克海默的短篇《堕落的概念》适用于此：
 
 > 一位声望卓著、且同情社会主义的学者听见一位在科学餐桌谈话中不带偏见的参与者谈到人性。他满面怒容，斥责了这位毫无防备的人。“通过最坏的资本主义做法，这种做法被用作几个世纪的伪装，人性的概念变得不名誉且毫无意义，”他说。“体面的人再也不能认真对待它，也不再使用它。”“一位激进的学者，”我想。“但在这种情况下，还有哪些术语可以用来指称善良的东西呢？因为它们被用来掩盖不良实践，难道它们不也被彻底贬低得像‘人性’一样吗？”
-
-数周后，这位学者关于基督教现实的一本书出版了。起初，我感到惊讶，但后来我发现他指的是事物本身而非词语。¹¹⁴
+>
+> 数周后，这位学者关于基督教现实的一本书出版了。起初，我感到惊讶，但后来我发现他指的是事物本身而非词语。114
 
 霍克海默的这位学者不仅反对*人性*这一术语；他反对的是其所代表的可能性本身。对于那些同样激烈地拒绝现代性的人来说，本书中的论点将毫无意义。
 
-
-
-
 但我的目的并不是说服这样的人改变想法。也不是提出如何让现代性的观念重新与现实相符。尽管如此，我还是想提供一些关于我们需要怎样的态度才能重新振作起来的思考。
 
-我曾经问过听众，他们认为这种态度必须包含什么。有人回答：“勇气和希望。” 我回应说我对希望并不看重。这引起了一些担忧。没有希望，发言者认为，我们现在就可以放弃了。对此我回答：我们不需要对自己的行动会成功抱有希望去做我们认为好的事；我们应该因为事情本身就是好的而去做它。听众对这个回应也难以接受。康德正确地指出，人们并不满足于仅仅知道什么是善；他们希望自己的善行能让世界变得更好。但康德也批判了这种希望，他或许会称之为“虔诚的软弱”，借用莱辛的说法。¹⁵ 布莱希特的《圣女贞德》，在第3章我引用的段落中，将这种希望变成了一种命令：“当你离开世界时要当心 / 你不仅是善良的而且要留下 / 一个美好的世界！” 对于现代性的子女来说，希望的价值很高， presumably 因为他们许多最重要的希望都已落空。
+我曾经问过听众，他们认为这种态度必须包含什么。有人回答：“勇气和希望。” 我回应说我对希望并不看重。这引起了一些担忧。没有希望，发言者认为，我们现在就可以放弃了。对此我回答：我们不需要对自己的行动会成功抱有希望去做我们认为好的事；我们应该因为事情本身就是好的而去做它。听众对这个回应也难以接受。康德正确地指出，人们并不满足于仅仅知道什么是善；他们希望自己的善行能让世界变得更好。但康德也批判了这种希望，他或许会称之为“虔诚的软弱”，借用莱辛的说法。15 布莱希特的《圣女贞德》，在第3章我引用的段落中，将这种希望变成了一种命令：“当你离开世界时要当心 / 你不仅是善良的而且要留下 / 一个美好的世界！” 对于现代性的子女来说，希望的价值很高， presumably 因为他们许多最重要的希望都已落空。
 
 请考虑另一部经典中的一段。 在歌德《浮士德》第二部中的化装舞会场景中，智慧进入宫殿，伴随着两位女性，恐惧和希望的化身，她们被锁链拴着在两侧行走。智慧，“一位苗条的美人”，向大厅里的宾客宣告：
 
 > 不要让恐惧或希望感染你们！
+>
 > 看，我把她们锁链捆绑带来；
+>
 > 因此——退后，让开道路！—
+>
 > 我要从这些鞭笞中保护你们。
-> 
+>
 > （5441–44）
 
-恐惧和希望——分别是邪恶或善的期待——可以追溯到希腊概念 elpis。在赫西俄德的《工作与时日》中，elpis 有两种含义。第一种是对未来的正确预见。这种 elpis 是潘多拉魔盒中包含的可怕神赐之一，也是唯一没有被释放出来的，这就是为什么人类不知道未来会怎样。第二种 elpis 的含义，也可以在《传道书》中找到，是对更好事物的令人麻痹的希望。¹⁶ 在埃斯库罗斯的《被缚的普罗米修斯》中，elpis 被用作一种盲目的希望，用来补偿我们无法看透未来的无能。¹⁷ 在歌德的《浮士德》中，elpis 的两个形象呈现出濒临精神疾病的症状。¹⁸ 恐惧是偏执的，把每个人都看作迫害者：
+恐惧和希望——分别是邪恶或善的期待——可以追溯到希腊概念 elpis。在赫西俄德的《工作与时日》中，elpis 有两种含义。第一种是对未来的正确预见。这种 elpis 是潘多拉魔盒中包含的可怕神赐之一，也是唯一没有被释放出来的，这就是为什么人类不知道未来会怎样。第二种 elpis 的含义，也可以在《传道书》中找到，是对更好事物的令人麻痹的希望。16 在埃斯库罗斯的《被缚的普罗米修斯》中，elpis 被用作一种盲目的希望，用来补偿我们无法看透未来的无能。17 在歌德的《浮士德》中，elpis 的两个形象呈现出濒临精神疾病的症状。18 恐惧是偏执的，把每个人都看作迫害者：
 
 ## VIOLENCE AND COMMUNICATION
 
 > 愚蠢的恶作剧者围着我，
+>
 > 咧嘴露出虚假诱惑的笑容！
+
+
+
 > 我所有的敌人都围着我
+> 
 > 在这个充满背叛诡计的夜晚。
+> 
 > 这个人曾是我的朋友：我看见
+> 
 > ‘透过他现在和他的伪装。
+> 
 > ‘那个人试图谋杀我，
+> 
 > 现在他逃离我的锐利目光。
+> 
 > 
 > （5411–18）
 
 希望是头脑发热，对未来风险视而不见：
 
 > 我们将漫步在自己的道路上
+> 
 > 在阳光明媚的夏日，
+> 
 > 自由地穿过绿色的草甸，
+> 
 > 单独或结伴，选择
+> 
 > 活跃或休憩。
+> 
 > 缺少什么都没有，无忧无虑，
+> 
 > 我们在那里所求皆得；
+> 
 > 每个人都是受欢迎的客人，
+> 
 > 我们可以随意进入；
+> 
 > 轻松地寻求幸福，
+> 
 > 确信能找到最好的。
+> 
 > 
 > （5426–40）
 
 这种观点代表了阳光般的乌托邦，希望的原则——以及对世界最卓越的误解。希望并不是相信所欲之事会实现，而是相信我们尽管不确定也能指望它。如果我们让行动依赖于希望，一旦失望就会瘫痪。另一个极端，在每一步都预期邪恶，也不会让我们好受多少。无论哪种方式，我们都未能认识到历史以及世界的开放性。由希望或恐惧驱动的行动预设了一个既定的东西，而事实并非如此。如果我们在“必须防御我们所恐惧的东西”的前提下行动，我们的行动视野就会变窄。同样，如果我们只有在确信结果会回报我们的努力时才行动。俗语“希望长存”意味着一旦希望消失就没有什么能激励我们，善恶最终取决于情感的偶然性。超越恐惧和希望应采取的正确态度是什么？我认为，答案是 angst。
-
-
-
-
 
 “焦虑”这一概念——在英语中大致对应 anxiety 或 anguish——让人联想到各种哲学关联，尤其是存在主义思想。然而，我在这里并不是以真正的哲学意义来使用它。它与海德格尔写下的“人在面对焦虑 [angst] 时所面对的是作为此在的在世”¹¹⁹ 无关。它也与克尔凯郭尔关于自由和原罪的思考关系不大¹²⁰。但它确实与一位思想家的思想有关，而这位思想家的思想源于海德格尔和克尔凯郭尔。在《存在与虚无》中，萨特区分恐惧 peur 与焦虑 angoisse，即 angst 的法语译法，如下：
 
@@ -3777,7 +3917,6 @@ meaning that envelops it. 现代伊斯兰恐怖主义并没有世俗人士无法
 
 启蒙运动的塞特姆布里尼式特质让许多人不满意，但理性主义是有其正当理由的。思想家无论力量多小，一个把反思工作分配给人们的社会仍会相信思想的效用。托马斯·曼《魔山》中那个雷奥·纳普塔角色可能是一个激进分子，但他加入贝格霍夫疗养院的讨论这一事实证明了塞特姆布里尼是对的。关于历史和社会进行理论化的意义在于理论化本身的发生，因为它开启了一种形式
 
-
 civility. “谁思考，”阿多诺指出，“谁就在不带愤怒地批评：思考升华了愤怒。因为思考者不会把愤怒施加于自己，他也就没有欲望把愤怒施加于他人。”124
 
 不过也有另一面。思想者的冷静是靠热空气拖延的。任何被扣为人质并被威胁致死的囚犯都知道，想要通过与绑架者讲道理来延缓谋杀的欲望。阿多诺和霍克海默关于荷马的论述，同样适用于他们和其他现代性作家，也适用于欧洲启蒙运动的奠基人物：“胜过肉体力量的言语无法约束自身。它的滔滔不绝伴随着意识流，伴随着思想本身，如同一种戏仿：思想不屈不挠的自主性，当它以言语进入现实时，便带上了一丝狂躁的愚蠢。”125
@@ -3789,21 +3928,24 @@ civility. “谁思考，”阿多诺指出，“谁就在不带愤怒地批评�
 再次，莎士比亚在这本书中扮演着关键角色，因为他生活在两个时代的门槛之间：文艺复兴时代的权力与肉体力量世界，以及现代世界对暴力的厌恶。他所创造的人物未能注意到暴力，正如后来的历史人物也会如此。其中最离谱的就是波洛涅斯。他是王室顾问，却一无所知。他既不知道克劳狄斯杀死了哈姆雷特国王，也不知道格特鲁德提供了协助。他把哈姆雷特的疯癫解读为对女儿的爱，而事实上哈姆雷特正在策划复仇。波洛涅斯喋喋不休地唠叨，直到死亡。在戏剧开场时，他对即将前往巴黎求学的儿子莱尔忒斯说了些陈词滥调的忠告：注意言辞；不要做不当之事；待人友善，但不要寻求所有人的友谊；交友要谨慎，但对已交的朋友要忠诚；避免争端，但在不可避免时，要表现得值得称赞；经常求教，但很少提供建议；既不要借钱也不要借出钱；穿着得体，但不要装腔作势。这些父亲自古以来就对儿子说过的话，让儿子们十分懊恼。波洛涅斯最后的忠告也不例外：
 
 > This above all: to thine own self be true,
+> 
 > And it must follow, as the night the day,
+> 
 > Thou canst not then be false to any man.
+> 
 > Farewell, my blessing season this in thee.
+> 
 > (1.3.78–81)
 
 这很荒谬，但他还能说什么呢？也许是这样：为了被认真对待，我们有时必须表现得荒谬。
+
+
 
 在第三幕第四场，波洛涅斯躲在挂毯后面偷听格特鲁德，而格特鲁德在他的怂恿下，正与哈姆雷特进行一次严肃的谈话。谈话进行几句后，格特鲁德因恐惧生命而呼喊求救，躲在藏身处的波洛涅斯喊道，“What ho! help!” 哈姆雷特怀疑是克劳狄斯，惊呼道，“How now? A rat! Dead for a ducat, dead,” 并盲目地向挂毯刺去（III.4.22–23）。意识到那是波洛涅斯后，哈姆雷特对垂死的男子说，“Thou wretched, rash, intruding fool, farewell! I took thee for thy better,” 然后又补充道，“Thou find’st to be too busy is some danger”（III.4.31–33）。但哈姆雷特在最后一点上是错误的。因为如果波洛涅斯“更忙碌”一些，如果他从挂毯后走出来并坚持不懈地与哈姆雷特交谈，他可能不会逃脱死亡，尽管他可能会延缓死亡。更多的唠叨对他来说会更明智。正如阿多诺和霍克海默所说：
 
 > [T]he astute hero is always tempted to ignore the proverbial wisdom that silence is golden. He is driven objectively by the fear that, if he does not constantly uphold the fragile advantage the word has over violence, this advantage will be withdrawn by violence.127
 
 对此我无话可加。
-
-
-
 
 ## Notes
 
@@ -3823,134 +3965,79 @@ civility. “谁思考，”阿多诺指出，“谁就在不带愤怒地批评�
 - 12. 参见 Aleksandar Tišma 精彩的故事 “Stan”（The Apartment），收录于其文集 *Škola bezbožništva*（School of Atheism）（Izdavač: Nolit，1978）。
 - 13. 参见第4章，“Escalating the Instruments of Violence。”
 - 14. 有关纽伦堡审判的更多内容，参见第5章，“Coping (1)。” 有关展览的更多内容，参见汉堡社会研究所编辑的以下卷册：Eine Ausstellung und ihre Folgen: Zur Rezeption der Ausstellung "Vernichtungskrieg: Verbrechen der Wehrmacht 1941 bis 1944"（汉堡：Hamburger Edition，1999）；Besucher einer Ausstellung: Die Ausstellung "Vernichtungskrieg: Verbrechen der Wehrmacht 1941 bis 1944" in Interview und Gespräch（汉堡：Hamburger Edition，1998）；以及 *Krieg ist ein Gesellschaftszustand: Reden zur Eröffnung der Ausstellung "Vernichtungskrieg: Verbrechen der Wehrmacht 1941 bis 1944"*（汉堡：Hamburger Edition，1998）。
-
 - 15. 在他的小说 Suspicion 中，Friedrich Dürrenmatt 设想了这样一个荒诞的场景。参见 Friedrich Dürrenmatt，Suspicion，载于 The Inspector Barlach Mysteries: The Judge and His Hangman/Suspicion，Joel Agee 译（芝加哥：University of Chicago Press，2006），99–202页。
-
 - 16. 参见 Jan Philipp Reemtsma，“Wie hätte ich mich verhalten?”: Gedanken über eine populäre Frage”，载于 Wie hätte ich mich verhalten? und andere nicht nur deutsche Fragen: Reden und Aufsätze（慕尼黑：Beck，2001），9–29页。
-
 - 17. Friedrich Schiller，《The Thirty Years’ War》，A. J. W. Morrison 译（纽约：Harper & Brothers，1846），2页。
-
 - 18. 第一次战争也有停顿，至少在地区上如此，传统上分为波希米亚起义、丹麦、瑞典和法国干预。
-
 - 19. Theodor W. Adorno，《Minima Moralia: Reflections from Damaged Life》，E. F. N. Jephcott 译（伦敦：Verso，1974），54–55页。
-
 - 20. Thomas Mann，《Tagebücher, 1944–1.4.1946》，Inge Jens 编（法兰克福：S. Fischer，1986），198–99页。
-
 - 21. Hannah Arendt，“What Remains? The Language Remains”: A Conversation with Günter Gauss” 载于 Essays in Understanding, 1930–1954，Jerome Kohn 编（纽约：Harcourt, Brace & Co., 1994），14页。
-
 - 22. 更多内容，参见 Jan Philipp Reemtsma，《Warum Hagen Jung-Ortlieb erschlug: Ungeziemendes über Krieg und Tod》（慕尼黑：Beck，2003），7–14页的导言。
-
 - 23. 参见 Primo Levi，《The Drowned and the Saved》，Raymond Rosenthal 译（纽约：Summit Books，1988），20–21页。
-
 - 24. Theodor W. Adorno，《Negative Dialectics》，E. B. Ashton 译（伦敦：Routledge & Kegan Paul，1973），367页。
+
+
 
 - 25. 参见 Adorno，《Minima Moralia》，43–45页。
 
 ## Chapter 1: Trust and Modernity
 
 - 1. Thomas Mann，《Confessions of Felix Krull, Confidence Man》，Denver Lindley 译（纽约：Knopf，1955），119–20页。
-
 - 2. 同上，259页。
-
 - 3. Niklas Luhmann，《Trust》，载于 Trust and Power: Two Works by Niklas Luhmann，Howard Davis、John Raffan 和 Kathryn Rooney 译（Chicester：Wiley，1979），8，n. 1。
-
 - 4. Martin Hartmann，“Einführung”，载于 Vertrauen: Die Grundzüge des sozialen Zusammenhalts，Martin Hartmann 和 Claus Offe 编（法兰克福：Campus，2001），7页。
-
 - 5. 参见 Piotr Sztompka，《Trust: A Sociological Theory》（剑桥：Cambridge University Press，1999），ix；以及 Martin Endress，《Vertrauen》（Bielefeld：Transcript，2001），10页。
-
 - 6. 同上，4页。
-
 - 7. Anthony Giddens，《The Consequences of Modernity》（斯坦福：Stanford University Press，1990），83页。另见 Claus Offe，“Wie können wir unseren Mitbürgern vertrauen?” 载于 Vertrauen: Die Grundzüge des sozialen Zusammenhalts，Hartmann 和 Claus Offe 编（法兰克福：Campus，2001），245页。
+- 8. 关于对理性选择理论的批评，见什托姆普卡《信任》，第66页。
+- 9. 见奥菲《我们如何能够信任我们的同胞？》；以及什托姆普卡《信任》，第45页。
+- 10. 见大卫·休谟《道德原则研究：评注版》（牛津：牛津大学出版社，2006年），第21页。
+- 11. 海因茨·布德，《最终无计可施：社会学对20世纪灾难史有何言说？》，《中途》36，第6期（1994年）：第46页。
+- 12. 吉登斯，《现代性的后果》，第107–109页。
+- 13. 托马斯·霍布斯，《利维坦》，埃德温·柯利编（印第安纳波利斯：哈克特，1994年），第76页。
+- 14. 吉登斯，《现代性的后果》，第107页。
+- 15. 霍布斯，《利维坦》，第77页。
+- 16. 伯纳德·威廉斯，《真理与真诚》（普林斯顿：普林斯顿大学出版社，2002年），第89页。
+- 17. 温弗里德·哈塞默与扬·菲利普·雷姆茨马，《犯罪受害者：法律与正义》（慕尼黑：C. H. 贝克出版社，2002年），第132页及以下。
+- 18. 关于信任的脆弱性，见施穆埃尔·N. 艾森施塔特，《信任的建构、集体认同以及民主政体的脆弱性与延续性》，载于《比较文明与多元现代性：S. N. 艾森施塔特论文集》（莱顿：布里尔，2003年），第877–908页。关于基本信任的概念，见扬·菲利普·雷姆茨马，《尝试从精神分析角度理解人类的残忍》，载于《福伦及其他：演讲与文章》（柏林：蒂亚马特出版社，1992年），第254–255页。
+- 19. 尼克拉斯·卢曼，《熟悉、信心、信任：问题与替代方案》，载于《信任：合作关系的建立与破坏》，迭戈·甘贝塔编（牛津：巴西尔·布莱克威尔，1988年），第97页。
+- 20. 关于古老焦虑的描绘，见约翰·沃尔夫冈·冯·歌德，《铁手骑士格茨·冯·贝利欣根》，西拉·哈姆林译，载于《歌德作品集》（纽约：苏尔坎普出版社，1983–1989年），第7卷，第66–68页。
+- 21. 伦茨·普吕廷，《“世界末日之化妆派对”：关于戏剧演出 KAFF 68ff. 的若干评论》，《巴尔格费尔德信使：阿诺·施密特作品研究资料》77–78（1984年）：第14–15页。
+- 22. 据希腊传说，曾有一位将军在日食时试图用一件斗篷遮住一名军官的眼睛来安慰他。“遮住太阳的东西，”将军解释道，“就像我的斗篷一样，只是更大而已。”《旧约》对宇宙持有不同的看法——在约书亚记中，上帝让太阳停住，以帮助以色列人在基遍作战——但两种传统都对星象命运心存疑虑。
 
-
-
-
-
-8. 关于对理性选择理论的批评，见什托姆普卡《信任》，第66页。
-
-9. 见奥菲《我们如何能够信任我们的同胞？》；以及什托姆普卡《信任》，第45页。
-
-10. 见大卫·休谟《道德原则研究：评注版》（牛津：牛津大学出版社，2006年），第21页。
-
-11. 海因茨·布德，《最终无计可施：社会学对20世纪灾难史有何言说？》，《中途》36，第6期（1994年）：第46页。
-
-12. 吉登斯，《现代性的后果》，第107–109页。
-
-13. 托马斯·霍布斯，《利维坦》，埃德温·柯利编（印第安纳波利斯：哈克特，1994年），第76页。
-
-14. 吉登斯，《现代性的后果》，第107页。
-
-15. 霍布斯，《利维坦》，第77页。
-
-16. 伯纳德·威廉斯，《真理与真诚》（普林斯顿：普林斯顿大学出版社，2002年），第89页。
-
-17. 温弗里德·哈塞默与扬·菲利普·雷姆茨马，《犯罪受害者：法律与正义》（慕尼黑：C. H. 贝克出版社，2002年），第132页及以下。
-
-18. 关于信任的脆弱性，见施穆埃尔·N. 艾森施塔特，《信任的建构、集体认同以及民主政体的脆弱性与延续性》，载于《比较文明与多元现代性：S. N. 艾森施塔特论文集》（莱顿：布里尔，2003年），第877–908页。关于基本信任的概念，见扬·菲利普·雷姆茨马，《尝试从精神分析角度理解人类的残忍》，载于《福伦及其他：演讲与文章》（柏林：蒂亚马特出版社，1992年），第254–255页。
-
-19. 尼克拉斯·卢曼，《熟悉、信心、信任：问题与替代方案》，载于《信任：合作关系的建立与破坏》，迭戈·甘贝塔编（牛津：巴西尔·布莱克威尔，1988年），第97页。
-
-20. 关于古老焦虑的描绘，见约翰·沃尔夫冈·冯·歌德，《铁手骑士格茨·冯·贝利欣根》，西拉·哈姆林译，载于《歌德作品集》（纽约：苏尔坎普出版社，1983–1989年），第7卷，第66–68页。
-
-21. 伦茨·普吕廷，《“世界末日之化妆派对”：关于戏剧演出 KAFF 68ff. 的若干评论》，《巴尔格费尔德信使：阿诺·施密特作品研究资料》77–78（1984年）：第14–15页。
-
-22. 据希腊传说，曾有一位将军在日食时试图用一件斗篷遮住一名军官的眼睛来安慰他。“遮住太阳的东西，”将军解释道，“就像我的斗篷一样，只是更大而已。”《旧约》对宇宙持有不同的看法——在约书亚记中，上帝让太阳停住，以帮助以色列人在基遍作战——但两种传统都对星象命运心存疑虑。
-
-当席勒写作《华伦斯坦》三部曲时，他最初忽略了主人公现实中因占星而闻名的事实，但歌德说服了他，让他认识到其中蕴含的诗意潜力。这一建议正中要害。席勒的《华伦斯坦》包含了关于政治宣传中命运修辞的精彩描绘。然而，读到华伦斯坦对占星术的爱好，并不能帮助我们更好地理解他的性格，因为我们不禁会想，像华伦斯坦这样的人物——绝非传统模式中虔诚的将领——究竟在多大程度上认真对待自己的信仰。关于中世纪晚期和文艺复兴时期占星术的细致历史，见迪特尔·布卢默，《天穹的统治者：中世纪与文艺复兴时期的占星图像》（柏林：学院出版社，2000年）。
-
-23. 为我们带回这些图像的空间探测器后来遭遇了同样的命运：2003年，NASA工程师对“伽利略”号进行编程，使其坠入木星大气层。
-
-24. 见乌尔夫·冯·劳赫豪普特，《独立日：美国人为什么要用探测器撞击彗星？这难道不危险吗？》，《法兰克福汇报周日版》，2005年7月16日。
-
-25. 关于阿兹特克宇宙观的更多内容，见阿尔弗雷多·洛佩斯·奥斯汀，《阿兹特克人的宇宙观、宗教与历法》，载于《阿兹特克人》展览图录，爱德华多·马托斯·莫克特苏马与费利佩·索利斯·奥金编（伦敦：皇家艺术研究院，2002年），第30–38页。关于阿兹特克食人习俗的更多内容，见休·托马斯，《征服墨西哥》（伦敦：哈钦森，1993年），第318页；以及马文·哈里斯，《我们的同类：我们是谁，我们从何而来，我们往何处去》（纽约：哈珀/长青出版社，1990年），第432–435页。
-
-26. 见阿多诺，《否定辩证法》，第361–362页；以及苏珊·奈曼，《现代思想中的恶》（普林斯顿：普林斯顿大学出版社，2002年），第238–267页。
-
-27. 约翰·沃尔夫冈·冯·歌德，《我的生平：诗与真》，罗伯特·R. 海特纳译，载于《歌德作品集》（纽约：苏尔坎普出版社，1983–1989年），第4卷，第35页。
-
-28. 戈特弗里德·威廉·莱布尼茨，《神义论：论上帝的善意、人的自由与恶的起源》，E. M. 哈格德译（芝加哥：开放法庭出版社，1985年），第215–216页。
-
-29. 格奥尔格·毕希纳，《丹东之死》，载于《丹东之死、莱昂斯与莱娜、沃伊采克》，维克多·普赖斯译（牛津：牛津大学出版社，1988年），第23页。
-
-30. 歌德，《我的生平：诗与真》，第4卷，第36页。
-
-31. 所有行号均指约翰·沃尔夫冈·冯·歌德，《浮士德》第一部，大卫·卢克译（牛津：牛津大学出版社，1998年）。
-
-32. 这里或许会让人想起克里斯托夫·马丁·维兰临终前的一句评论：即使是对虚无的信仰，长此以往也会令人厌倦。
-
-33. 见阿尔布雷希特·舍内，《歌德作品评注》，载于约翰·沃尔夫冈·冯·歌德，《全集》（法兰克福：德国经典出版社，1994年），第7卷，第2分册，第332页。
-
-
-
+  当席勒写作《华伦斯坦》三部曲时，他最初忽略了主人公现实中因占星而闻名的事实，但歌德说服了他，让他认识到其中蕴含的诗意潜力。这一建议正中要害。席勒的《华伦斯坦》包含了关于政治宣传中命运修辞的精彩描绘。然而，读到华伦斯坦对占星术的爱好，并不能帮助我们更好地理解他的性格，因为我们不禁会想，像华伦斯坦这样的人物——绝非传统模式中虔诚的将领——究竟在多大程度上认真对待自己的信仰。关于中世纪晚期和文艺复兴时期占星术的细致历史，见迪特尔·布卢默，《天穹的统治者：中世纪与文艺复兴时期的占星图像》（柏林：学院出版社，2000年）。
+- 23. 为我们带回这些图像的空间探测器后来遭遇了同样的命运：2003年，NASA工程师对“伽利略”号进行编程，使其坠入木星大气层。
+- 24. 见乌尔夫·冯·劳赫豪普特，《独立日：美国人为什么要用探测器撞击彗星？这难道不危险吗？》，《法兰克福汇报周日版》，2005年7月16日。
+- 25. 关于阿兹特克宇宙观的更多内容，见阿尔弗雷多·洛佩斯·奥斯汀，《阿兹特克人的宇宙观、宗教与历法》，载于《阿兹特克人》展览图录，爱德华多·马托斯·莫克特苏马与费利佩·索利斯·奥金编（伦敦：皇家艺术研究院，2002年），第30–38页。关于阿兹特克食人习俗的更多内容，见休·托马斯，《征服墨西哥》（伦敦：哈钦森，1993年），第318页；以及马文·哈里斯，《我们的同类：我们是谁，我们从何而来，我们往何处去》（纽约：哈珀/长青出版社，1990年），第432–435页。
+- 26. 见阿多诺，《否定辩证法》，第361–362页；以及苏珊·奈曼，《现代思想中的恶》（普林斯顿：普林斯顿大学出版社，2002年），第238–267页。
+- 27. 约翰·沃尔夫冈·冯·歌德，《我的生平：诗与真》，罗伯特·R. 海特纳译，载于《歌德作品集》（纽约：苏尔坎普出版社，1983–1989年），第4卷，第35页。
+- 28. 戈特弗里德·威廉·莱布尼茨，《神义论：论上帝的善意、人的自由与恶的起源》，E. M. 哈格德译（芝加哥：开放法庭出版社，1985年），第215–216页。
+- 29. 格奥尔格·毕希纳，《丹东之死》，载于《丹东之死、莱昂斯与莱娜、沃伊采克》，维克多·普赖斯译（牛津：牛津大学出版社，1988年），第23页。
+- 30. 歌德，《我的生平：诗与真》，第4卷，第36页。
+- 31. 所有行号均指约翰·沃尔夫冈·冯·歌德，《浮士德》第一部，大卫·卢克译（牛津：牛津大学出版社，1998年）。
+- 32. 这里或许会让人想起克里斯托夫·马丁·维兰临终前的一句评论：即使是对虚无的信仰，长此以往也会令人厌倦。
+- 33. 见阿尔布雷希特·舍内，《歌德作品评注》，载于约翰·沃尔夫冈·冯·歌德，《全集》（法兰克福：德国经典出版社，1994年），第7卷，第2分册，第332页。
 
 智慧的标志。对于讽刺态度与参与态度之间的区别，参见理查德·罗蒂，《反讽、偶然性、团结》（剑桥：剑桥大学出版社，1989）。
 
-39. 对于前一种观点的一个例子，参见贝托尔特·布莱希特改编的《安提戈涅》新序言（“昔日人类曾昂首挺立”）（《索福克勒斯的安提戈涅》，载于《二十卷全集》[法兰克福：苏尔坎普出版社，1993]，第6卷，2328页）。对于后一种观点的一个例子，参见黑格尔的《宗教哲学讲演录》。他在其中写道：
+- 39. 对于前一种观点的一个例子，参见贝托尔特·布莱希特改编的《安提戈涅》新序言（“昔日人类曾昂首挺立”）（《索福克勒斯的安提戈涅》，载于《二十卷全集》[法兰克福：苏尔坎普出版社，1993]，第6卷，2328页）。对于后一种观点的一个例子，参见黑格尔的《宗教哲学讲演录》。他在其中写道：
 
-> 两大最高伦理力量的冲突在悲剧所提供的绝对范例中以塑性方式被描绘出来……例如，在《安提戈涅》中，家庭之爱、神圣的、内在的、属于情感的东西……与国家的权利发生冲突。克里翁不是暴君，而是另一种伦理力量的捍卫者。克里翁并非错在一方；他坚持认为必须维护国家法律、政府权威，并对违反行为进行惩罚。这两方各自只实现另一方的其中一面，其内容只有一面（《宗教哲学讲演录：单卷本，1827年讲义》，R. F. 布朗、P. C. 霍奇森和J. M. 斯图尔特译，H. S. 哈里斯协助[牛津：克拉伦登出版社，2006]，353页）。
+  > 两大最高伦理力量的冲突在悲剧所提供的绝对范例中以塑性方式被描绘出来……例如，在《安提戈涅》中，家庭之爱、神圣的、内在的、属于情感的东西……与国家的权利发生冲突。克里翁不是暴君，而是另一种伦理力量的捍卫者。克里翁并非错在一方；他坚持认为必须维护国家法律、政府权威，并对违反行为进行惩罚。这两方各自只实现另一方的其中一面，其内容只有一面（《宗教哲学讲演录：单卷本，1827年讲义》，R. F. 布朗、P. C. 霍奇森和J. M. 斯图尔特译，H. S. 哈里斯协助[牛津：克拉伦登出版社，2006]，353页）。
+- 40. 更多内容参见克里斯蒂安·迈尔，《希腊悲剧的政治艺术》（慕尼黑：贝克出版社，1988），208–25页。
+- 41. 参见同上，210页。
+- 42. 索福克勒斯，《安提戈涅》，雷金纳德·吉本斯和查尔斯·塞加尔译（牛津：牛津大学出版社，2003），83页。
+- 43. 蒂图斯·李维乌斯，《罗马史：前八卷》，D. 斯皮兰译（伦敦：亨利·G·博恩，1853），744–45页。
+- 44. 索福克勒斯，《安提戈涅》，85页。
+- 45. 同上，111页。
+- 46. 引自大卫·塞德利编，《剑桥希腊罗马哲学指南》（剑桥：剑桥大学出版社，2003），80页。
+- 47. 参见罗宾·沃特菲尔德译，《第一批哲学家：前苏格拉底派与诡辩家》（牛津：牛津大学出版社，2000），116–33页。
+- 48. I. F. 斯通，《苏格拉底审判》（伦敦：皮姆利科，1997），231页起。
 
-40. 更多内容参见克里斯蒂安·迈尔，《希腊悲剧的政治艺术》（慕尼黑：贝克出版社，1988），208–25页。
 
-41. 参见同上，210页。
-
-42. 索福克勒斯，《安提戈涅》，雷金纳德·吉本斯和查尔斯·塞加尔译（牛津：牛津大学出版社，2003），83页。
-
-43. 蒂图斯·李维乌斯，《罗马史：前八卷》，D. 斯皮兰译（伦敦：亨利·G·博恩，1853），744–45页。
-
-44. 索福克勒斯，《安提戈涅》，85页。
-
-45. 同上，111页。
-
-46. 引自大卫·塞德利编，《剑桥希腊罗马哲学指南》（剑桥：剑桥大学出版社，2003），80页。
-
-47. 参见罗宾·沃特菲尔德译，《第一批哲学家：前苏格拉底派与诡辩家》（牛津：牛津大学出版社，2000），116–33页。
-
-48. I. F. 斯通，《苏格拉底审判》（伦敦：皮姆利科，1997），231页起。
 
 49. 色诺芬，《回忆苏格拉底》，E. C. 马钱特译（剑桥：哈佛大学出版社，1923），17页。
 
 50. 在《申辩》中，苏格拉底解释道：
-
 > 因此，先生们，我远非为自己辩护，正如人们可能认为的那样，我实际上是在为你们辩护，以免你们因判我有罪而误用上帝的恩赐。如果你们处死我，你们就不会轻易找到可以取代我的人。坦率地说（即使听起来有点滑稽）上帝把我分配给这座城，就像把我分配给一匹体型庞大的纯种马一样，因为它由于体型巨大而倾向于懒惰，需要某种刺痛的苍蝇来刺激它（柏拉图，《申辩》，载于《苏格拉底的最后日子》，休·特雷登尼克和哈罗德·塔兰特译[1954；重印，伦敦：企鹅图书，2003]，57页[30d–e]）。
 
 51. 同上，46–47页（23b–c）。
@@ -3989,8 +4076,6 @@ civility. “谁思考，”阿多诺指出，“谁就在不带愤怒地批评�
 
 83. 迈尔特别提到了君士坦丁堡（542年）和阿米达（560年）。
 
-
-
 68. Laurette Séjourné, 编，Altamerikanische Kulturen (Frankfurt am Main: Fischer Bücherei, 1971), 40–41。
 
 69. 社会学家 Lars Clausen 提出了一组集体自毁开始的条件的集合。参见其“Übergang zum Untergang”载于 Krasser sozialer Wandel (Opladen: Leske and Budrich, 1994), 13–50。
@@ -4000,7 +4085,6 @@ civility. “谁思考，”阿多诺指出，“谁就在不带愤怒地批评�
 71. 不应忘记，古典时代的社会信任实践仅适用于公民，而不适用于奴隶。
 
 72. 在他的 Gesellschaft der Frühen Neuzeit: Kulturelles Handeln und sozialer Prozess 中，Richard van Dülmen 更详细地描述了这些最后一刻的皈依：
-
 自反宗教改革时期起，神职人员开始利用这个机会不仅安慰被判刑者，还将他们皈依基督教，因此不让他们在断头台上作为真宗教的见证人而灭亡。由于这些可怜的灵魂在有生之年很少得到如此个人的关注，一些神父相当成功。他们甚至可以皈依犹太人（尽管犹太人知道他们可以指望以此换取一种减轻的惩罚形式）。如果罪犯不响应神父的敦促，就会被归因于“顽固”，并以无情的方式对待。这一准备期对法官如此重要，以至于在必要时，他们会推迟执行，直到被判刑者找到“心灵的平静”为止（[Vienna: Böhlau, 1993], 119）。
 
 73. 引自 Todorov, The Conquest of America, 161。有趣的是，教皇保罗三世得出结论，“印第安人……不得被剥夺其自由和财产所有权”（引自 ibid.）。
@@ -4031,6 +4115,8 @@ civility. “谁思考，”阿多诺指出，“谁就在不带愤怒地批评�
 
 89. Friedrich Schiller, The Piccolomini, in The Robbers and Wallenstein, trans. F. J. Lamport (Harmondsworth: Penguin, 1979), 250。
 
+
+
 90. Robert Service, Lenin: A Biography (Cambridge: Harvard University Press, 2000), 259。
 
 91. Gottfried von Strassburg, Tristan: Translated Entire for the First Time, with the Surviving Fragments of the “Tristan” of Thomas, trans. A. T. Hatto (Harmondsworth, U.K.: Penguin, 1974), 110。
@@ -4055,9 +4141,7 @@ civility. “谁思考，”阿多诺指出，“谁就在不带愤怒地批评�
 
 101. Ibid., 39。
 
-102. 基督教失败的一个促成因素是印刷术的发明。正如教皇本笃十六世从不厌倦地指出的那样，用文字的权威取代权威的解释，为现代打开了洪流
-
-相对主义。这解释了为什么像路德宗或加尔文宗这样的原教旨主义运动，带着“唯独圣经”的战斗口号，成为现代化的先驱。回归到任何识字者都能接触到的原文本，增加了诠释的自由度，并因此产生了众多的新教教派。当本笃十六世否认新教是教会时，从神学上讲，他是正确的。莱辛对福音书对基督教重要性的否定也只是这一发展的又一个后果。一旦权威解释被圣经诠释学取代，圣经诠释学很快又被文本批判和伦理辩论取代，二者共同宣告了宗教的终结。最终，分裂使基督教代表一个包罗万象的整体的能力经受了一场它无法通过的考验。从德国思想史的角度来看，基督教失败的决定性一步是由莱辛的《Eine Parabel》提供的。
+102. 基督教失败的一个促成因素是印刷术的发明。正如教皇本笃十六世从不厌倦地指出的那样，用文字的权威取代权威的解释，为现代打开了洪流相对主义。这解释了为什么像路德宗或加尔文宗这样的原教旨主义运动，带着“唯独圣经”的战斗口号，成为现代化的先驱。回归到任何识字者都能接触到的原文本，增加了诠释的自由度，并因此产生了众多的新教教派。当本笃十六世否认新教是教会时，从神学上讲，他是正确的。莱辛对福音书对基督教重要性的否定也只是这一发展的又一个后果。一旦权威解释被圣经诠释学取代，圣经诠释学很快又被文本批判和伦理辩论取代，二者共同宣告了宗教的终结。最终，分裂使基督教代表一个包罗万象的整体的能力经受了一场它无法通过的考验。从德国思想史的角度来看，基督教失败的决定性一步是由莱辛的《Eine Parabel》提供的。
 
 103. Luhmann, Die Gesellschaft der Gesellschaft, 2:707.
 
@@ -4085,6 +4169,8 @@ civility. “谁思考，”阿多诺指出，“谁就在不带愤怒地批评�
 
 119. State is synonymous with a monopoly on violence; failed state is synonymous with the failure to achieve a monopoly on violence. On the state’s inability to stop violence entirely, see Hassemer and Reentsma, "Verbrechensopfer," 16–22.
 
+
+
 120. Jan Philipp Reentsma, "Nachbarschaft als Gewalt ressource," Mittelweg 36 13, no. 5 (2004): 114–15.
 
 ## Chapter 2: Power and Violence
@@ -4101,23 +4187,36 @@ civility. “谁思考，”阿多诺指出，“谁就在不带愤怒地批评�
 
 6. For an early example of instrumental punishment, see the last section of Aeschylus’s The Eumenides, in The Oresteia, trans. Alan Shapiro and Peter Burian (Oxford: Oxford University Press, 2003), 174–87.
 
-7. Freud called man the "prosthetic god" in reference to human beings’ ability to compensate for their weaknesses to the point of virtual omnipotence through tools, technology, or—as with slaves—other people. Revealingly, the Greek word for slave is
+7. Freud called man the "prosthetic god" in reference to human beings’ ability to compensate for their weaknesses to the point of virtual omnipotence through tools, technology, or—as with slaves—other people. Revealingly, the Greek word for slave is andrapoda，字面意为“人足”，暗示奴隶被贬低为有用的物件，仅凭行走方式区别于野兽。
 
-andrapoda，字面意为“人足”，暗示奴隶被贬低为有用的物件，仅凭行走方式区别于野兽。
+8. 稍后我将分析权力问题，因为它涉及政治领域。
 
-- 8. 稍后我将分析权力问题，因为它涉及政治领域。
-- 9. Alexander Mitscherlich，“Zwei Arten der Grausamkeit”，载于《Gesammelte Schriften》，由Klaus Menne编（法兰克福：Suhrkamp出版社，1983年），第5卷，第322–42页。
-- 10. 这一例证特指乔纳森·谢伊在《越南的阿喀琉斯：战斗创伤与性格的消解》（纽约：Scribner出版社，1994年）第116–17页中所引述的证词。
-- 11. 汉斯·彼得·杜尔，《Obszönität und Gewalt》（法兰克福：Suhrkamp出版社，1993年），第288–89页；诺贝特·埃利亚斯，《文明的进程：社会发生与心理发生研究》，由埃德蒙·杰夫科特译（牛津：Blackwell出版社，2000年），第163页。
-- 12. 权威的德语哲学参考著作《哲学历史辞典》未收录“das Böse”（恶）这一词条，仅简要提及“Bosheit”（恶意）。关于恶的一般讨论，参见卡尔·海因茨·博雷尔，《恐惧的美学：悲观浪漫主义与恩斯特·荣格尔的早期作品》（柏林：Ullstein出版社，1995年）；卡斯滕·科尔佩与威廉·施密特-比格曼，《恶：对不可解释之物的历史现象学》（法兰克福：Suhrkamp出版社，1993年）；欧根·德雷韦曼，《恶的结构》（帕德博恩：F. Schöningh出版社，1978年）；赫伯特·哈格，《面对恶而束手无策？》（慕尼黑：R. Piper出版社，1978年）；萨姆·基恩，《敌人的面孔：敌对想象力的反思》（纽约：Harper & Row出版社，1986年）；苏珊·奈曼，《现代思想中的恶：一部另类的哲学史》（普林斯顿：普林斯顿大学出版社，2002年）；阿诺·普拉克，《社会与恶：对主流道德的批判》（慕尼黑：List出版社，1967年）；吕迪格·萨弗兰斯基，《恶，或自由的戏剧》（慕尼黑：C. Hanser出版社，1997年）；克里斯托夫·舒尔特，《彻底之恶：从康德到尼采的恶的历程》（慕尼黑：Fink出版社，1988年）；亚历山大·舒勒与沃尔夫拉姆·冯·拉登编，《另一种力量：论恶的复兴》（柏林：Akademie Verlag出版社，1993年）；汉斯·施瓦茨，《恶的罗网：罪、灾祸、过错》（哥廷根：Vandenhoeck & Ruprecht出版社，1993年）；汉斯-于尔根·泽曼与赖纳·迈尔，《恶的原则：日常刁难》（魏因海姆：Beltz出版社，1988年）；以及安德鲁·瓦克斯与克劳斯·莱格维，《论恶》（安德鲁·瓦克斯与克劳斯·莱格维访谈录）（法兰克福：Eichborn出版社，1994年）。
-- 13. 叔本华，《论道德的基础》，第136页。另见叔本华，《作为意志和表象的世界》，由E. F. J. 佩恩译（纽约：Dover出版社，1958年），第1卷，第331–33页。
-- 14. 引自《哲学历史辞典》，“Bosheit”词条（罗纳德·贝纳撰写）。
-- 15. 荷马，《伊利亚特》，由罗伯特·伊格尔斯译（英国哈蒙兹沃思：Penguin出版社，1998年），第554–55页。
-- 16. 同上，第607页。
-- 17. 欧里庇得斯，《特洛伊妇女》，由艾伦·夏皮罗译（牛津：牛津大学出版社，2009年），第57页。
-- 18. 下文我将讨论对这一主张的偶尔反对意见。
-- 19. 因此，政治不将战争简化为军事行动，以及当我们看到政治话语开始采用军事术语时感到担忧，就显得更加重要。
-- 20. 从这个视角，我们可以在基督教地狱教义中看到那背信弃义的报复法则：其肉体痛苦是对感官享乐之肉欲的惩罚。
+9. Alexander Mitscherlich，“Zwei Arten der Grausamkeit”，载于《Gesammelte Schriften》，由Klaus Menne编（法兰克福：Suhrkamp出版社，1983年），第5卷，第322–42页。
+
+10. 这一例证特指乔纳森·谢伊在《越南的阿喀琉斯：战斗创伤与性格的消解》（纽约：Scribner出版社，1994年）第116–17页中所引述的证词。
+
+11. 汉斯·彼得·杜尔，《Obszönität und Gewalt》（法兰克福：Suhrkamp出版社，1993年），第288–89页；诺贝特·埃利亚斯，《文明的进程：社会发生与心理发生研究》，由埃德蒙·杰夫科特译（牛津：Blackwell出版社，2000年），第163页。
+
+12. 权威的德语哲学参考著作《哲学历史辞典》未收录“das Böse”（恶）这一词条，仅简要提及“Bosheit”（恶意）。关于恶的一般讨论，参见卡尔·海因茨·博雷尔，《恐惧的美学：悲观浪漫主义与恩斯特·荣格尔的早期作品》（柏林：Ullstein出版社，1995年）；卡斯滕·科尔佩与威廉·施密特-比格曼，《恶：对不可解释之物的历史现象学》（法兰克福：Suhrkamp出版社，1993年）；欧根·德雷韦曼，《恶的结构》（帕德博恩：F. Schöningh出版社，1978年）；赫伯特·哈格，《面对恶而束手无策？》（慕尼黑：R. Piper出版社，1978年）；萨姆·基恩，《敌人的面孔：敌对想象力的反思》（纽约：Harper & Row出版社，1986年）；苏珊·奈曼，《现代思想中的恶：一部另类的哲学史》（普林斯顿：普林斯顿大学出版社，2002年）；阿诺·普拉克，《社会与恶：对主流道德的批判》（慕尼黑：List出版社，1967年）；吕迪格·萨弗兰斯基，《恶，或自由的戏剧》（慕尼黑：C. Hanser出版社，1997年）；克里斯托夫·舒尔特，《彻底之恶：从康德到尼采的恶的历程》（慕尼黑：Fink出版社，1988年）；亚历山大·舒勒与沃尔夫拉姆·冯·拉登编，《另一种力量：论恶的复兴》（柏林：Akademie Verlag出版社，1993年）；汉斯·施瓦茨，《恶的罗网：罪、灾祸、过错》（哥廷根：Vandenhoeck & Ruprecht出版社，1993年）；汉斯-于尔根·泽曼与赖纳·迈尔，《恶的原则：日常刁难》（魏因海姆：Beltz出版社，1988年）；以及安德鲁·瓦克斯与克劳斯·莱格维，《论恶》（安德鲁·瓦克斯与克劳斯·莱格维访谈录）（法兰克福：Eichborn出版社，1994年）。
+
+13. 叔本华，《论道德的基础》，第136页。另见叔本华，《作为意志和表象的世界》，由E. F. J. 佩恩译（纽约：Dover出版社，1958年），第1卷，第331–33页。
+
+14. 引自《哲学历史辞典》，“Bosheit”词条（罗纳德·贝纳撰写）。
+
+15. 荷马，《伊利亚特》，由罗伯特·伊格尔斯译（英国哈蒙兹沃思：Penguin出版社，1998年），第554–55页。
+
+16. 同上，第607页。
+
+17. 欧里庇得斯，《特洛伊妇女》，由艾伦·夏皮罗译（牛津：牛津大学出版社，2009年），第57页。
+
+18. 下文我将讨论对这一主张的偶尔反对意见。
+
+19. 因此，政治不将战争简化为军事行动，以及当我们看到政治话语开始采用军事术语时感到担忧，就显得更加重要。
+
+20. 从这个视角，我们可以在基督教地狱教义中看到那背信弃义的报复法则：其肉体痛苦是对感官享乐之肉欲的惩罚。
+
+
+
 - 21. 让·阿梅里，“酷刑”，载于《精神极限：一位幸存者对奥斯维辛及其现实的沉思》，由西德尼·罗森菲尔德与斯特拉·P. 罗森菲尔德译（布鲁明顿：印第安纳大学出版社，1989年），第39–40页。
 - 22. 约阿希姆·C. 费斯特，《谋划希特勒之死：德国抵抗运动史》，由布鲁斯·利特尔译（纽约：Metropolitan Books出版社，1996年），第278页。
 - 23. 扬·菲利普·雷姆茨马，“‘理解RAF历史’意味着什么？”，载于《RAF与左翼恐怖主义》，由沃尔夫冈·克劳沙尔编（汉堡：Hamburger Edition出版社），第1卷，第1364页。
@@ -4135,27 +4234,20 @@ andrapoda，字面意为“人足”，暗示奴隶被贬低为有用的物件�
 - 35. 参见雷姆茨马，《在地下室》。
 - 36. 请试着理解一种宗教的邪恶，它试图剥夺人们的这一选择——用永罚的承诺来威胁那些希望避免被强加的殉道而宁愿自杀的人。参见弗里德里希·冯·施佩，《刑事慎议，或论巫术审判》，由马库斯·赫利尔译（夏洛茨维尔：弗吉尼亚大学出版社，2003年），第74页。
 - 37. 某些所谓的变态是否属于位置性暴力与攫取性暴力互补对立面的一部分？从事BDSM的人通常有一个安全词，以使
-
-
 sure the acts remain consensual, and thus nonviolent. What about consensual cannibalism? It’s virtually impossible to think of killing and eating another person as being anything but violent, even if the victim consents to be eaten beforehand and doesn’t protest during the process. These cases are oddities that challenge linguistic and legal categories. Hence the utility of the word “perverse.”
-
 - 38. 斯德哥尔摩综合征就涉及这种幻想。
-
 - 39. Hannah Arendt, *On Violence* (New York: Harcourt, Brace & World, 1970), 35.
-
 - 40. Dieter Claessens, “Macht und Herrschaft, soziale Zwänge und Gewalt,” in *Einführung in Hauptbegriffe der Soziologie*, ed. Hermann Korte and Bernhard Schäfers (Opladen: Leske & Budrich, 2000), 161.
-
 - 41. Urs Jaeggi, “Macht,” in *Handbuch Soziologie: Zur Theorie und Praxis sozialer Beziehungen*, ed. Harald Kerber and Arnold Schmieder (Reinbek bei Hamburg: Rowohlt Taschenbuch Verlag, 1984), 343–47. I should note here that Max Weber’s understanding of power is more complicated than these sociologists make it sound. According to Weber, power must be considered in combination with domination (*Herrschaft*), which he defines as “the probability that a command with a given specific content will be obeyed by a given group of persons” (*Economy and Society: An Outline of Interpretative Sociology*, trans. Ephraim Fischhoff and others [Berkeley: University of California Press, 1978], 53). Weber explains further: “The concept of power is sociologically amorphous. All conceivable qualities of a person and all conceivable combinations of circumstances may put him in a position to impose his will in a given situation. The sociological concept of domination must hence be more precise and can only mean the probability that a command will be obeyed” (ibid.).
-
-    These remarks make it clear that Weber’s concept of power is far less martial than the sociologists I cite suggest. Power is sociologically amorphous because it cannot be traced back to other means. To have power is to carry out one’s will despite resistance. Many Weber interpreters understand resistance as the test power must pass for it to be considered power at all. But Weber uses despite in a different sense. Power exists when obedience is expected (which is to say, in situations of domination), but not only there. Power can also exist without resistance. Sociologists who see violence as an essential element in Weber’s concept of Macht with Herrschaft.
-
+These remarks make it clear that Weber’s concept of power is far less martial than the sociologists I cite suggest. Power is sociologically amorphous because it cannot be traced back to other means. To have power is to carry out one’s will despite resistance. Many Weber interpreters understand resistance as the test power must pass for it to be considered power at all. But Weber uses despite in a different sense. Power exists when obedience is expected (which is to say, in situations of domination), but not only there. Power can also exist without resistance. Sociologists who see violence as an essential element in Weber’s concept of Macht with Herrschaft.
 - 42. Wolfgang Sofsky and Rainer Paris, *Figurationen sozialer Macht: Autorität – Stellvertretung – Koalition* (Frankfurt am Main: Suhrkamp, 1994), 343–44.
+
+
 
 - 43. David Hume, “Of the First Principles of Government,” in *Hume: Political Essays*, ed. Knud Haakonssen (Cambridge: Cambridge University Press, 1994), 16.
 
 - 44. Are these empirical questions or questions of definition? This depends on the definition. To learn about the relationship between power and violence one must leave room for surprises. Those who define violence as the foundation of all power relations limit their own possibilities. They must either flat-out reject counterexamples or refute them by way of complicated assumptions. They must claim, for instance, that the weaker person in a power relation is always aware of an implicit threat of violence even when explicit violence is absent, insofar as the weaker person extrapolates the violence that will ultimately befall him from the negative consequences of insubordination. Or they claim that obedience is taught by threats of violence, so that the weaker party perceives explicit threat in every command. These assumptions may be correct, or not. In either case, though, such far-reaching assumptions should not be made at the outset of a study. Restricted definitions result from a restricted selection of examples. “It is a mistake,” Giddens argues, “to treat power as inherently divisive, but there is no doubt that some of the most bitter conflicts in social life are accurately seen as ‘power struggles’” (*The Constitution of Society: Outline of the Theory of Structuration* [Cambridge: Polity Press, 1984], 283). Giddens criticizes not only the idea that violence is the foundation of power but the tendency to see power relations in every potential conflict. Like Arendt, Giddens sets himself apart from an intellectual tradition:
-
-    > Marxism and socialism more generally, as Durkheim discerned, share a good deal in common with their nineteenth-century opponent, utilitarian liberalism. Each participates in a “flight from power,” and each ties power inherently to conflict. Since in Marx power is grounded in class conflict, it poses no specific threat in the anticipated society of the future: class division will be overcome as part and parcel of the initiation of that society. For liberals, however, who deny the possibility of achieving such a revolutionary reorganization of society, the threat of power is omnipresent (ibid., 256–57).
+> Marxism and socialism more generally, as Durkheim discerned, share a good deal in common with their nineteenth-century opponent, utilitarian liberalism. Each participates in a “flight from power,” and each ties power inherently to conflict. Since in Marx power is grounded in class conflict, it poses no specific threat in the anticipated society of the future: class division will be overcome as part and parcel of the initiation of that society. For liberals, however, who deny the possibility of achieving such a revolutionary reorganization of society, the threat of power is omnipresent (ibid., 256–57).
 
 - 45. Hannah Arendt, *The Human Condition* (Chicago: University of Chicago Press, 1958), 200.
 
@@ -4166,18 +4258,14 @@ sure the acts remain consensual, and thus nonviolent. What about consensual cann
 - 48. Ibid., 201.
 
 - 49. Ibid., 200. A few pages later, Arendt writes:
-
-    > Perhaps nothing in our history has been so short-lived as trust in power, nothing more lasting than the Platonic and Christian distrust of the splendor attending its space of appearance, nothing—finally in the modern age—more common than the conviction that “power corrupts.” The words of Pericles, as Thucydides reports them, are perhaps unique in their supreme confidence that men can enact and save their greatness at the same time…. Pericles’ speech, though it certainly corresponded to and articulated the innermost convictions of the people of Athens, has always been read with the sad wisdom of hindsight by men who knew that his words were spoken at the beginning of the end (ibid., 204–205).
-
-    That which Arendt claims to have ended never actually began. Arendt idealizes this historical period to prevent her definition of power from colliding with reality. In doing so, she avoids power’s ambivalence, relying solely on its meaning as *dynamis* and ignoring the senses contained in *kratos*, *arche*, and *potestas*.
+> Perhaps nothing in our history has been so short-lived as trust in power, nothing more lasting than the Platonic and Christian distrust of the splendor attending its space of appearance, nothing—finally in the modern age—more common than the conviction that “power corrupts.” The words of Pericles, as Thucydides reports them, are perhaps unique in their supreme confidence that men can enact and save their greatness at the same time…. Pericles’ speech, though it certainly corresponded to and articulated the innermost convictions of the people of Athens, has always been read with the sad wisdom of hindsight by men who knew that his words were spoken at the beginning of the end (ibid., 204–205).
+That which Arendt claims to have ended never actually began. Arendt idealizes this historical period to prevent her definition of power from colliding with reality. In doing so, she avoids power’s ambivalence, relying solely on its meaning as *dynamis* and ignoring the senses contained in *kratos*, *arche*, and *potestas*.
 
 - 50. Luhmann, *Power*, 107.
 
 - 51. Ibid., 114.
 
 - 52. Ibid., 121.
-
-
 
 53. 同上，121。
 
@@ -4194,6 +4282,8 @@ sure the acts remain consensual, and thus nonviolent. What about consensual cann
 59. 同上，第199页。
 
 60. 同上，第223页。
+
+
 
 61. 韦伯的三种统治类型将人们对权力秩序作用的信任合理化。魅力型统治是矛盾的，因为它既增加了参与性权力，又否定了这种权力。
 
@@ -4221,9 +4311,7 @@ sure the acts remain consensual, and thus nonviolent. What about consensual cann
 
 73. 参见罗伯特·佩恩和尼基塔·罗曼诺夫，《伊凡雷帝》（纽约：克罗韦尔出版社，1975年）。
 
-74. 矛盾的是，人们在独裁统治下感受到的那种弥漫的恐惧源于自我保护策略。一旦心存疑虑，他们总是先假定存在独裁模式。
-
-这避免了令人不快的意外，但求安全就意味着永远存疑。加入国家安全机构是一条出路。
+74. 矛盾的是，人们在独裁统治下感受到的那种弥漫的恐惧源于自我保护策略。一旦心存疑虑，他们总是先假定存在独裁模式。这避免了令人不快的意外，但求安全就意味着永远存疑。加入国家安全机构是一条出路。
 
 75. 冲锋队本身并非国家组织，但它确实恐吓了纳粹政权的现实和潜在反对者。通常，实行国家恐怖的政权依赖准军事组织（敢死队、秘密警察等）。这些团体做国家的脏活，但也削弱了国家对暴力的垄断：当恐怖结束后，国家必须与它雇来实施暴力的那些势力作战。
 
@@ -4253,69 +4341,78 @@ sure the acts remain consensual, and thus nonviolent. What about consensual cann
 
 - 7. 参见汉斯·雅各布·克里斯托费尔·冯·格里梅尔斯豪森，《痴儿西木传》，载《作品集》，迪特尔·布罗伊尔编（美因河畔法兰克福：苏尔坎普出版社，1989年），第1卷/第1册：第27–30页。
 
-- 8. 婚内强奸在德国直到最近才被定为犯罪。有人会质疑婚内“强奸”一开始就是合法的说法，但这只是语义问题。事实是
+- 8. 婚内强奸在德国直到最近才被定为犯罪。有人会质疑婚内“强奸”一开始就是合法的说法，但这只是语义问题。事实是 a husband was permitted to force himself on a wife who refused him sex. The point of the new legislation was to attach the term “rape”—a crime no one was keen on legitimizing—to a still legal and, for many, still legitimate act, and delegitimize it in the process. Accepting the delegitimation that accompanied illegalization has proven difficult, however. The zones of the permitted and the prohibited are slow to change.
 
-a husband was permitted to force himself on a wife who refused him sex. The point of the new legislation was to attach the term “rape”—a crime no one was keen on legitimizing—to a still legal and, for many, still legitimate act, and delegitimize it in the process. Accepting the delegitimation that accompanied illegalization has proven difficult, however. The zones of the permitted and the prohibited are slow to change.
+- 9. As Saladin says to Nathan: “A man like you does not remain where chance / Of birth has cast him” (Lessing, Nathan the Wise, 230).
 
-9. As Saladin says to Nathan: “A man like you does not remain where chance / Of birth has cast him” (Lessing, Nathan the Wise, 230).
+- 10. Of course, this is also the very reason the ironist distrusts seriousness. The most concise formulation of the role of seriousness in world history was written by Douglas Adams: “We’re not obsessed by anything, you see,” insisted Ford. “...” “And that’s the deciding factor. We can’t win against obsession. They care, we don’t. They win.” See Douglas Adams, Life, the Universe and Everything (1982; reprint, New York: Del Rey, 2005), 111.
 
-10. Of course, this is also the very reason the ironist distrusts seriousness. The most concise formulation of the role of seriousness in world history was written by Douglas Adams:
+- 11. Todorov, The Conquest of America, xii.
 
-“We’re not obsessed by anything, you see,” insisted Ford.
+- 12. For more on the encounter, see Richard Lee Marks, Cortés: The Great Adventurer and the Fate of Aztec Mexico (New York: Knopf, 1993); Jan Philipp Reemtsma, “Cortéz et al.,” in u.a. Folum: Reden und Aufsätze (Berlin: Edition Tiamat, 1992), 167–88; and Reemtsma, “Die Idee des Vernichtungskrieges.”
 
-“...”
+- 13. Keegan, A History of Warfare, 12.
 
-“And that’s the deciding factor. We can’t win against obsession. They care, we don’t. They win.”
+- 14. It is unclear whether cannibalism was the primary purpose of the slaughter, as Marvin Harris argues, or whether it was merely a welcome by-product. See Harris, Good to Eat: Riddles of Food and Culture (New York: Simon and Schuster, 1985), 229.
 
-See Douglas Adams, Life, the Universe and Everything (1982; reprint, New York: Del Rey, 2005), 111.
+- 15. Hernán Cortés, The Conquest of Mexico (Greeley: Museum of Anthropology, University of Northern Colorado, 1980). Women and children were not included in any of their figures. See Marks, Cortés, 255.
 
-11. Todorov, The Conquest of America, xii.
 
-12. For more on the encounter, see Richard Lee Marks, Cortés: The Great Adventurer and the Fate of Aztec Mexico (New York: Knopf, 1993); Jan Philipp Reemtsma, “Cortéz et al.,” in u.a. Folum: Reden und Aufsätze (Berlin: Edition Tiamat, 1992), 167–88; and Reemtsma, “Die Idee des Vernichtungskrieges.”
 
-13. Keegan, A History of Warfare, 12.
+### 16.
+See Barbara Tuchman, A Distant Mirror: The Calamitous 14th Century (New York: Ballantine, 1978), 82–85; John Keegan, The Face of Battle: A Study of Agincourt, Waterloo, and the Somme (New York: Penguin, 1978), 78–116; and Hans Delbrück, History of the Art of War, Volume 3: Medieval Warfare, trans. Walter J. Renfroe, Jr. (Lincoln: University of Nebraska Press, 1975), 385–427. Unlike Tuchman and Keegan, Delbrück sees war as a transhistorical and rational undertaking in which cultural factors play little to no role.
 
-14. It is unclear whether cannibalism was the primary purpose of the slaughter, as Marvin Harris argues, or whether it was merely a welcome by-product. See Harris, Good to Eat: Riddles of Food and Culture (New York: Simon and Schuster, 1985), 229.
+### 17.
+See, for instance, the May 2, 1941, quotation from General Erich Hoepner in Hamburger Institut für Sozialforschung, “Besucher einer Ausstellung,” 42.
 
-15. Hernán Cortés, The Conquest of Mexico (Greeley: Museum of Anthropology, University of Northern Colorado, 1980). Women and children were not included in any of their figures. See Marks, Cortés, 255.
+### 18.
+The Nazi ideology was not a consistent set of beliefs but a patchwork of views, held with differing levels of emphasis and united only by their radicality.
 
-16. See Barbara Tuchman, A Distant Mirror: The Calamitous 14th Century (New York: Ballantine, 1978), 82–85; John Keegan, The Face of Battle: A Study of Agincourt, Waterloo, and the Somme (New York: Penguin, 1978), 78–116; and Hans Delbrück, History of the Art of War, Volume 3: Medieval Warfare, trans. Walter J. Renfroe, Jr. (Lincoln: University of Nebraska Press, 1975), 385–427. Unlike Tuchman and Keegan, Delbrück sees war as a transhistorical and rational undertaking in which cultural factors play little to no role.
+### 19.
+The military and political leadership of the Nazi regime made a similar argument.
 
-17. See, for instance, the May 2, 1941, quotation from General Erich Hoepner in Hamburger Institut für Sozialforschung, “Besucher einer Ausstellung,” 42.
+### 42.
+Christoph Martin Wieland, *Die Geschichte des weisen Danischmend und der drei Kalender*, in *Sämtliche Werke* (1794; reprint, Hamburg: Hamburger Stiftung zur Förderung von Wissenschaft und Kultur, 1984), 3/8:5–6.
 
-18. The Nazi ideology was not a consistent set of beliefs but a patchwork of views, held with differing levels of emphasis and united only by their radicality.
+### 43.
+Arthur Schopenhauer, *On the Basis of Morality*, 92.
 
-19. The military and political leadership of the Nazi regime made a similar argument.
+### 44.
+Montaigne, *The Complete Essays*, 488.
 
-42. Christoph Martin Wieland, *Die Geschichte des weisen Danischmend und der drei Kalender*, in *Sämtliche Werke* (1794; reprint, Hamburg: Hamburger Stiftung zur Förderung von Wissenschaft und Kultur, 1984), 3/8:5–6.
+### 45.
+Joachim Heinrich Campe, *Robinson the Younger* (Frankfurt am Main: F. Wilmans, 1807), ix.
 
-43. Arthur Schopenhauer, *On the Basis of Morality*, 92.
+### 46.
+Albrecht Schöne, *Götterzeichen, Liebeszauber, Satanskult: Neue Einblicke in alte Goethetexte* (Munich: C. H. Beck, 1982), 184ff.
 
-44. Montaigne, *The Complete Essays*, 488.
+### 47.
+On Wieland’s sojourn at Warthausen Castle, see Friedrich Sengle, *Wieland* (Stuttgart: J. B. Metzler, 1949).
 
-45. Joachim Heinrich Campe, *Robinson the Younger* (Frankfurt am Main: F. Wilmans, 1807), ix.
-
-46. Albrecht Schöne, *Götterzeichen, Liebeszauber, Satanskult: Neue Einblicke in alte Goethetexte* (Munich: C. H. Beck, 1982), 184ff.
-
-47. On Wieland’s sojourn at Warthausen Castle, see Friedrich Sengle, *Wieland* (Stuttgart: J. B. Metzler, 1949).
-
-48. Some estimates are in the millions, while others are no higher than several thousand. The current consensus is that the upper range has been greatly exaggerated. Most historians now speak of between 50,000 and 100,000 victims over a 350-year period. See Riedl, *Der Hexerei verdächtig: Das Inquisitions- und Revisionsverfahren der Pen zlerin Bürgerin Benigna Schulzen* (Göttingen: Wallstein Verlag, 1998), 19 and 36. Between the years 1540 and 1689, men made up 5 to 20 percent of those accused of witchcraft in Schleswig-Holstein (see Rolf Schulte, *Hexenverfolgungen in Schleswig-Holstein vom 16.-18. Jahrhundert* [Heide: Boyens & Co., 2001], 94). In France the percentage of men at times reached 60 percent (see Gerda Riedel, *Der Hexerei verdächtig*, 40). But as Lyndal Roper observes, “the image of the witch was remarkably consistent: she was an old woman, and she attacked young children.” “There were,” Roper continues,
+### 48.
+Some estimates are in the millions, while others are no higher than several thousand. The current consensus is that the upper range has been greatly exaggerated. Most historians now speak of between 50,000 and 100,000 victims over a 350-year period. See Riedl, *Der Hexerei verdächtig: Das Inquisitions- und Revisionsverfahren der Pen zlerin Bürgerin Benigna Schulzen* (Göttingen: Wallstein Verlag, 1998), 19 and 36. Between the years 1540 and 1689, men made up 5 to 20 percent of those accused of witchcraft in Schleswig-Holstein (see Rolf Schulte, *Hexenverfolgungen in Schleswig-Holstein vom 16.-18. Jahrhundert* [Heide: Boyens & Co., 2001], 94). In France the percentage of men at times reached 60 percent (see Gerda Riedel, *Der Hexerei verdächtig*, 40). But as Lyndal Roper observes, “the image of the witch was remarkably consistent: she was an old woman, and she attacked young children.” “There were,” Roper continues,
 
 > exceptions to this rule: in the very first trials in Switzerland, men outnumbered women, but they soon fell behind; in France, the proportions of men whose appeals against conviction for witchcraft were heard by the Parlement of Paris were always high. In Normandy, the world was turned upside-down: there, men made up three-quarters of those convicted, though many were actually priests misusing sacred objects for weather magic. But in England, as in Scotland, witches tended to be old women who cursed their neighbours, killed their cattle and made children ill when their requests for alms were not met. . . . In some areas, women made up 90 per cent or more of the victims (*Witch Craze: Terror and Fantasy in Baroque Germany* [New Haven: Yale University Press, 2006], 17–18).
 
-49. Ibid., 37. Roper puts the number of deaths in Baden-Württemberg and Bavaria at nine thousand, “a third of the German total” (*Witch Craze*, 19).
+### 49.
+Ibid., 37. Roper puts the number of deaths in Baden-Württemberg and Bavaria at nine thousand, “a third of the German total” (*Witch Craze*, 19).
 
-50. See Riedl, *Der Hexerei verdächtig*, 39; and Schulte, *Hexenverfolgung in Schleswig-Holstein*, 67–71.
+### 50.
+See Riedl, *Der Hexerei verdächtig*, 39; and Schulte, *Hexenverfolgung in Schleswig-Holstein*, 67–71.
 
-51. Richard van Dülmen, “Das Schauspiel des Todes: Hinrichtungsrituale in der frühen Neuzeit,” *Volkskultur: Zur Wiederentdeckung des vergessenen Alltags (16.-20. Jahrhundert)*, ed. Richard Dülmen and Norbert Schindler (Frankfurt am Main: Fischer, 1984), 244.
+### 51.
+Richard van Dülmen, “Das Schauspiel des Todes: Hinrichtungsrituale in der frühen Neuzeit,” *Volkskultur: Zur Wiederentdeckung des vergessenen Alltags (16.-20. Jahrhundert)*, ed. Richard Dülmen and Norbert Schindler (Frankfurt am Main: Fischer, 1984), 244.
+
+### 52.
+Fernand Braudel，《商业之轮》，Sian Reynolds 译（纽约：Harper & Row，1982），518。
+
+### 53.
+同上，517–18。
+
+### 54.
+C. V. Wedgwood，《三十年战争》（1938；重印，纽约：The New York Review of Books，2005）。
 
 
-
-52. Fernand Braudel，《商业之轮》，Sian Reynolds 译（纽约：Harper & Row，1982），518。
-
-53. 同上，517–18。
-
-54. C. V. Wedgwood，《三十年战争》（1938；重印，纽约：The New York Review of Books，2005）。
 
 55. 参见 Walter Pötzl，《Mörder, Räuber, Hexen: Kriminalgeschichte des Mittelalters und der Frühen Neuzeit》（奥格斯堡：Heimatverein für den Landkreis Augsburg，2004），107 和 110。
 
@@ -4369,56 +4466,91 @@ See Douglas Adams, Life, the Universe and Everything (1982; reprint, New York: D
 
 80. 同上，74。
 
-
-
 正如十九世纪末对这些暴行痴迷一样，过去的残忍行径在此再次浮现。起决定性作用的与其说是这本书的真实性，不如说是它对事件的诠释。
 
 87. 理查德·J. 埃文斯，《报应仪式》，第225–26页。
+
 88. 卡尔·菲利普·哈特克诺夫，《安德烈亚斯·哈特克诺夫：一种寓言》，载于《卡尔·菲利普·哈特克诺夫：两卷本作品集》，海德·霍尔默与阿尔伯特·迈耶编（法兰克福：德意志经典出版社，1997–99年），第1卷，第546–47页。
+
 89. 贝恩德·勒克，《仿佛你们要撼动世界：一座城市在三十年战争时代》（慕尼黑：C. H. 贝克出版社，2006年），第112页。勒克接着指出，许多报道可能是为了羞辱敌人而写。
+
 90. 韦奇伍德，《三十年战争》，第419–20页。
+
 91. 歌德，《我的生平：诗与真》，载于《歌德文集》，第4卷，第72–73页。
+
 92. 同上，第73页。
+
 93. 同上，第86页。
+
 94. 同上，第87页。
+
 95. 扬·菲利普·雷姆茨马，“哈罗德·布鲁姆：莎士比亚。没有他我们会怎样？当语文学家们陶醉时——致威廉·莎士比亚的一封情书”，《文学》第10期（2000年），第48页。
+
 96. 弗里德里希·迪伦马特，《泰特斯·安德洛尼克斯：一部根据莎士比亚改编的喜剧》（苏黎世：阿尔谢出版社，1970年），第7页。
+
 97. 扬·科特，《莎士比亚，我们的同时代人》（纽约：诺顿出版社，1974年），第345页。
+
 98. 罗尔夫·福尔曼，《莎士比亚的方舟：谋杀与美的字母表》（内尔德林根：F. 格雷诺出版社，1988年），第457–58页。
+
 99. 参见乌尔里希·苏尔鲍姆，《莎士比亚指南》（斯图加特：雷克拉姆出版社，2001年），第236–37页。
+
 100. 同上，第327页。
+
 101. 科特，《莎士比亚，我们的同时代人》，第346页。
+
+
+
 102. 哈罗德·布鲁姆，《莎士比亚：人的发明》（纽约：里弗海德出版社，1998年），第78页。
+
 103. 科特，《莎士比亚，我们的同时代人》，第346–47页。
+
 104. 类似的哀悼场景可见于戈特弗里德·凯勒的《小受难曲》，那是一首为在九月晴朗的日子里夹死于书页间的蚊子所作的挽歌。阿诺·施密特称这首诗中所表达的怜悯为“一切道德的基础”。参见戈特弗里德·凯勒，《诗歌》，载于《七卷本全集》，托马斯·伯宁等人编（法兰克福：德意志经典出版社，1985–96年），第1卷，第686–87页；以及阿诺·施密特，“温柔的非人：一百年《暮秋》”，载于《作品集》，第二组，阿诺·施密特基金会编（苏黎世：哈夫曼斯出版社，1989–1990年），第2卷，第61–85页。
+
 105. 苏尔鲍姆指出，该剧现存最早的明确证据是其1597年的印刷本。参见《莎士比亚指南》，第194页。
+
 106. 罗尔夫·霍赫胡特，“西科尔斯基与丘吉尔”，载于霍赫胡特，《行动者与思考者：从恺撒到容格的肖像与问题》（斯图加特：德意志出版社，1987年），第111页。霍赫胡特所指的“绝对邪恶”由《代理》中医生这一人物来体现。
+
 107. 在第一章中，我论述了理查德维持权力的困难。
+
 108. 参见汉娜·阿伦特，“思考与道德考量”，载于《责任与判断》，杰罗姆·科恩编（纽约：肖肯出版社，2003年），第183页。
+
 109. 关于《麦克白》的更多论述，参见扬·菲利普·雷姆茨马，“配对——激情：麦克白夫妇”，《莎士比亚年鉴》第104期（2004年），第130–50页。
+
 110. 关于暴力垄断与权力规训之间的关系，卢曼写道：
 
 [法律若要超越仅仅对物理暴力加以条件化，就必须以已然确保的和平状态为出发点。这指的便是法律的演化对政治系统平行演化的依赖性；政治系统通过一种对社会的原始剥夺，从社会中抽走权力与物理暴力的手段，并在此基础上巩固自身的权力。（《法作为社会系统》，克劳斯·齐格特译 [牛津：牛津大学出版社，2004年]，第262页）。]
 
 111. 我在第五章详细讨论了《威廉·退尔》。
+
 112. 杰弗里·帕克，《军事革命：军事创新与西方的崛起，1500–1800》（剑桥：剑桥大学出版社，1996年），第144页。
+
 113. 蒙田，《随笔集》，第482–84页。
+
 114. 电椅在美国被引入，理由是它能提供无痛死亡。尽管这种处决方式后来被证明尤为残忍，但少数保留它的州仍坚持声称其具有人道性。
+
 115. 参见米切利希，“两种残忍”。
+
 116. 塞涅卡，《书信集》第66–92篇，理查德·M. 古默里译（剑桥：哈佛大学出版社，1962年），第70封信，第56–71页。
+
 117. G. W. F. 黑格尔，《历史哲学导论：附《法哲学原理》选段》，利奥·劳赫译（印第安纳波利斯：哈克特出版社，1988年），第37–38页。
+
 118. 同上，第18页。
+
 119. 同上，第37页。
+
 120. 尼克拉斯·卢曼，《权力》，第150页。关于卢曼对暴力与系统理解的更多论述，参见尼克拉斯·卢曼，“太初并无不义”，载于卢曼，《社会结构与语义学：知识社会学研究》（法兰克福：苏尔坎普出版社，1999年），第3卷，第11–64页。
+
 121. 黑格尔，《历史哲学导论》，第49页。
+
 122. 参见艾莉森·利布哈夫斯基·德福尔热，《“勿留一人讲述故事”：卢旺达种族灭绝》（纽约：人权观察，1999年），第638–39页。
+
 123. 弗里德里希·尼采，《查拉图斯特拉如是说：一本为所有人而又不为任何人的书》，阿德里安·德尔·卡罗译（剑桥：剑桥大学出版社，2006年），第26–27页。
+
 124. 引自汉斯-马丁·洛曼，《亚历山大·米切利希》（赖因贝克：罗沃尔特出版社，1987年），第73页。另见恩斯特·克利，《第三帝国的德国医学：1945年前后的职业生涯》（法兰克福：S. 费舍尔出版社，2001年）。
+
 125. 参见洛曼，《亚历山大·米切利希》，第73–74页。
+
 126. 乌尔里希·比勒费尔德，《民族与社会》，第66页。
-
-
-
 
 127. 同上，67–68。
 
@@ -4476,6 +4608,8 @@ See Douglas Adams, Life, the Universe and Everything (1982; reprint, New York: D
 
 154. 引自 Thomas F. A. Smith，《What Germany Thinks, Or the War as Germans See It》（纽约：Doan，1915），102。
 
+
+
 155. 同上。
 
 156. 同上。
@@ -4512,60 +4646,101 @@ See Douglas Adams, Life, the Universe and Everything (1982; reprint, New York: D
 
 172. 这也是国际刑事法的功能。参见 Gerhard Stuby，《“Internationale Strafrechtsbarkeit und staatliche Souveränität”》，载于 Gerd Hankel 和 Gerhard Stuby 编《Strafgericht gegen Menschenheitsverbrechen: Zum Völkerstrafrecht 50 Jahre nach den Nürnberger Prozessen》（汉堡：Hamburger Edition，1995），429–64。
 
-
-
 173. 有关人权模糊性的更多内容，参见 Michael Ignatieff，《作为政治与偶像崇拜的人权》（普林斯顿：普林斯顿大学出版社，2001）。
+
 174. 参见 Richard van Dülmen，《恐怖剧场：近代早期的司法实践与惩罚仪式》（慕尼黑：Beck，1985），151–60。
+
 175. 在使用这些装置的国家中，苏格兰是这一规则的唯一例外。参见 Daniel Arasse，《断头台与恐怖》，译者 Christopher Miller（纽约：企鹅出版社，1989），15。
+
 176. 同上，13。
+
 177. 同上，11。
+
 178. 同上。
+
 179. 参见同上，16–26。
+
 180. 参见 Robespierre 1791年5月30日的演讲，“关于废除死刑”，载于 Laura Mason 和 Tracey Rizzo 编，《法国大革命：文献集》（波士顿：Houghton Mifflin，1999），114–16。
+
 181. Charles Henri Sanson，“致司法部长的报告：关于斩首方式”，引自 Arasse，《断头台与恐怖》，185。
+
 182. 引自同上，21。
+
 183. 引自同上，22。
+
 184. 同上，23。 在《法国大革命：历史》（1837）中，Thomas Carlyle 评论了 Guillotin 命运的讽刺：
 
 Singular Guillotin, respectable practitioner, doomed by a satiric destiny to the strangest immortal glory that ever kept obscure mortal from his resting-place, the bosom of oblivion! Guillotin can improve the ventilation of the Hall; in all cases of medical police and hygiène, be a present aid: but, greater far, he can produce his “Report on the Penal Code”, and reveal therein a cunningly devised Beheading Machine, which shall become famous and world-famous. This is the product of Guillotin’s endeavours, gained not without meditation and reading; which popular gratitude or levity christens by a feminine derivative name, as if it were his daughter: La Guillotine! “With my machine, Messieurs, I whisk off your head in a twinkling, and you have no pain”...whereat they all laugh. Unfortunate Doctor! For two-and-twenty years he, ungullotined, shall hear nothing but guillotine, see nothing but guillotine; then dying shall through long centuries wander, as it were, a disconsolate ghost, on the wrong side of Styx and Lethe; his name like to outlive Caesar’s ([New York: Harper, 1867], 1:139)。
 
 185. 参见 Arasse，《断头台与恐怖》，108。
+
 186. 参见同上，111。
+
 187. Maximilien Robespierre，《美德与恐怖》，译者 John Howe（伦敦：Verso，2007），57–58。
+
 188. 同上，99。
+
 189. 引自 Keith Michael Baker 编，《旧制度与法国大革命》（芝加哥：芝加哥大学出版社，1987），371 和 374。
 
 190. 引自同上，374–75。
+
 191. Robespierre，《美德与恐怖》，103。
+
 192. 引自 Olivier Blanc，《最后的信件：法国大革命的囚犯，1793–1794》（伦敦：A. Deutsch，1987），210。
+
 193. 引自 Jon Lee Anderson，《切·格瓦拉：革命者的一生》（纽约：Grove Press，1997），288。
+
 194. 参见同上，376 和 385。
+
 195. 参见同上，388。
+
 196. 引自同上，375。
+
 197. 引自同上，476。
+
 198. 引自同上，392。
+
 199. 引自同上，449。
+
 200. 引自同上，716。
+
 201. Büchner，《丹东之死》，22。
+
 202. 引自 Orlando Figes，《人民的悲剧：俄罗斯革命：1891–1924》（纽约：企鹅，1998），630。
+
 203. Yves Ternon 指出，杀戮以交替循环进行。某一天杀男人；第二天杀女人；第三天杀儿童；第四天杀工人，等等。参见 Yves Ternon，《犯罪国家：20世纪的种族灭绝》（巴黎：Seuil，1995），217。
+
 204. Service，《列宁》，441–42。
+
 205. 同上，365。
+
 206. 同上，395。
+
+
+
 207. 同上，411。
+
 208. Bertolt Brecht，《股票交易所的圣女贞德》，译者 Frank Jones（布卢明顿：印第安纳大学出版社，1969），120。
+
 209. Bertolt Brecht，《采取的措施及其他教学剧》，译者 Carl R. Mueller（伦敦：Eyre Methuen，1977），25。
+
 210. 引自 Gyorgy Lukács，《列宁：其思想统一性研究》，译者 Nicholas Jacobs（伦敦：Verso，2009），90–91。
+
 211. 引自 Hamburger Institut für Sozialforschung 编，《国防军的罪行：1941–1944年毁灭性战争的规模》（汉堡：Hamburger Edition，2002），42。
+
 212. 引自同上。
+
 213. 参见同上，98。
+
 214. 参见同上，83。
+
 215. 引自同上，138。
+
 216. 参见 Wildt，《不妥协的一代》，217–42。
+
 217. 即使是专门为此目的组建的警察营的成员也是如此。参见 Browning，《普通人》，171。
+
 218. 引自 Christopher R. Browning，《最终解决方案的起源：纳粹犹太政策的演变，1939年9月–1942年3月》（林肯：内布拉斯加大学出版社，2004），353。
-
-
 
 219. 参见米夏埃尔·维尔特，“纳粹是野蛮人吗？”，载《Mittelweg 36》第15卷第2期（2006年），第8–26页。
 
@@ -4602,29 +4777,48 @@ Singular Guillotin, respectable practitioner, doomed by a satiric destiny to the
 ## 第四章：对暴力的信任
 
 - 1. [译文略有改动。——译者注]
+
 - 2. 路德维希·蒂克，*女巫安息日*，载*文集*（柏林：格奥尔格·赖默出版社，1846年），第20卷，第233–34页。
+
 - 3. 同上，第363–64页。
+
 - 4. 同上，第366页。
+
 - 5. 同上，第366–67页。
+
 - 6. 同上，第367页。
+
 - 7. 波皮茨，*权力现象*，第159–60页。
+
 - 8. 参见耶胡达·瓦拉赫，*战争理论：其在19世纪和20世纪的发展*（美因河畔法兰克福：伯纳德与格雷费出版社，1972年）；以及雷姆茨马，“歼灭战思想”。
+
 - 9. 西格蒙德·弗洛伊德，“对战争与死亡的当代思考”，载*西格蒙德·弗洛伊德心理学著作标准版全集*，第14卷，第280页。
+
 - 10. 同上，第300页。
+
 - 11. 卡尔·克劳斯，“人类最后的时日”，载*卡尔·克劳斯文集*，第16卷，第103–107页。
+
 - 12. 卡尔·克劳斯，“战后的世界”，载*卡尔·克劳斯文集*，第16卷，第299页。
+
 - 13. 参见迪特尔·朗格维舍，“战争意愿在历史进程中升级了吗？”，载约尔格·巴罗夫斯基编，*现代时代？20世纪的战争、革命与暴力*（哥廷根：范登霍克与鲁普雷希特出版社，2006年），第28页。
+
 - 14. 参见第三章中的“允许、禁止、强制”和“厌恶”两节。
+
 - 15. 参见约翰·霍恩与艾伦·克雷默，*1914年德军的暴行：一部否认史*（纽黑文：耶鲁大学出版社，2001年），第38–53页和第435–44页。
+
 - 16. 引自维哈斯·G·柳莱维丘斯，*东线的战争之地：第一次世界大战中的文化、民族认同与德国占领*（剑桥：剑桥大学出版社，2000年），第230页。
+
 - 17. 引自同上，第242页。
+
 - 18. 关于莱比锡战争罪审判的更多内容，参见格尔德·汉克尔，*莱比锡审判：第一次世界大战后的德国战争罪行及其刑事追诉*（汉堡：汉堡出版社，2003年）。
+
 - 19. 参见第三章中关于暴力重新合法化的各节。
+
 - 20. 汉娜·阿伦特，“道德哲学的若干问题”，载*责任与判断*，第53页。
+
 - 21. 特奥多尔·W·阿多诺，“理论与实践札记”，载亨利·W·皮克福德译，*批判模式：介入与口号*（纽约：哥伦比亚大学出版社，1998年），第262页。
+
 - 22. 参见于尔根·哈贝马斯，“一种损害赔偿清算：论德国历史书写中的辩白倾向”，载恩斯特·皮珀编、詹姆斯·诺尔顿与特鲁埃特·凯茨译，*永远在希特勒的阴影下？*（新泽西州大西洋高地：人文出版社，1993年），第41页。
-
-
 
 23. Golo Mann，《Briefe 1932–1992》（Göttingen: Wallstein, 2006），301–302。
 
@@ -4650,6 +4844,8 @@ Singular Guillotin, respectable practitioner, doomed by a satiric destiny to the
 
 34. 参见 Gar Alperovitz，《The Decision to Use the Atomic Bomb and the Architecture of an American Myth》（New York: Knopf, 1995）。
 
+
+
 35. Günther Anders，《Die Antiquiertheit des Menschen》（Munich: Beck, 1987），1: 233–324。
 
 36. Hans Henny Jahnn，“Thesen gegen Atomrüstung”，载于《Werke》，编者 Ulrich Bitz und Uwe Schweikert（Hamburg: Hoffmann und Campe, 1974），2:488。Jahnn 特别批评了德国物理学家 Pascal Jordan 声称核 fallout 辐射造成的伤害并不比我们每天接触到的辐射更糟。Jahnn 的话可能启发了 Arno Schmidt 在 1964 年一次广播播出时修改其故事《Cows in Half Mourning》中的一句。在 1961 年完成的原版中，村庄酒馆里的农民被说成“对‘Green Deal’的理解与 EINSTEIN 对原子弹的理解一样好；也就是说，一方面相当好，另一方面则完全不了解”（Arno Schmidt，“Cows in Half Mourning”，载于《The Collected Stories of Arno Schmidt》，3:143）。在广播播出中，爱因斯坦的名字被替换成了 Pascal Jordan 的名字。
@@ -4661,6 +4857,7 @@ Singular Guillotin, respectable practitioner, doomed by a satiric destiny to the
 39. Neidhardt von Gneisenau，“Plan zur Vorbereitung eines Volksaufstands”，载于《Guerrilleros, Partisanen, Theorie und Praxis》，编者 Joachim Schickel（Munich: C. Hanser, 1970），60；以及 Reemtsma，《“Grausamkeit und Nachtviole”》，130–43。
 
 40. 参见 Bernd Greiner，《Kuba-Krise: 13 Tage im Oktober》（Nördlingen: F. Greno, 1988）。
+
 Ronald Donaldson 的《Thirteen Days》（2000）中对这些会议的描绘——嗜战的军人对抗理智的政治家，尤其是肯尼迪兄弟——并未得到录音带的证实。
 
 41. 引自 Alperovitz，《The Decision to Use the Atomic Bomb》，251。
@@ -4709,35 +4906,62 @@ Ronald Donaldson 的《Thirteen Days》（2000）中对这些会议的描绘—�
 
 63. Jörg Baberowski，“Moderne Zeiten? Einführende Bemerkungen”，载于《Moderne Zeiten! Krieg, Revolution und Gewalt im 20. Jahrhundert》，9。
 
-
-
 64. 关于柬埔寨的情况，参见 Michael Sontheimer，“Entkolonialisieriung Kambodscha”，载于 200 Tage und 1 Jahrhundert: Gewalt und Destruktivität im Spiegel des Jahres 1945，编者 Hamburger Institut für Sozialforschung（汉堡：Hamburger Edition，1995），145–66。
+
 65. Figes, A People’s Tragedy, 516–17。
+
 66. 同上，504–505。
+
 67. 同上，502–503。
+
 68. 参见第 2 章，“Participatory Power, Trust, Legal Regulation。”
+
 69. 引自 Figes, A People’s Tragedy, 510–11。
+
 70. 这就是 Augusto Pinochet 在智利军政府统治中占据主导地位的秘密。参见 Ingo Kletten，“Durch Terror zum modernen Staat: Der chilenische Geheimdienst DINA”，载于 Folter, 37–72。
+
 71. Suetonius, Lives of the Caesars, trans. Catharine Edwards（牛津：Oxford University Press，2000），129–30。
+
 72. 参见 Simon Sebag Montefiore, Stalin: The Court of the Red Tsar（纽约：Knopf，2004），171。
+
 73. 同上，245。
+
 74. 参见同上，652。
+
 75. 引自 Anne Applebaum, Gulag: A History（纽约：Doubleday，2003），8。
+
 76. 同上，6。
+
 77. Baberowski, Der rote Terror, 37–38。
+
 78. Applebaum, Gulag, 12。
+
 79. 参见 Tomasz Kizny, Gulag: Life and Death Inside the Soviet Concentration Camps（Richmond Hill, Ont.：Firefly Books，2004）。
+
 80. Robert Conquest, The Great Terror: Stalin’s Purge of the Thirties（纽约：Macmillan，1968），532。
+
 81. 参见 Applebaum, Gulag, 578。
+
 82. 同上，579–80。囚犯“离开”古拉格“是因为他们死了，因为他们逃跑了，因为他们刑期短，因为他们被释放进入红军，或者因为他们被提升到行政职位”（同上）。
+
 83. 同上。
+
 84. 同上，581。
+
 85. 同上，582。Applebaum 勉强引用这些数字，因为它们基于 NKVD 报告，并且不包括“特殊流放者”（同上）。
+
+
+
 86. Applebaum 提及 Stéphane Courtois 等人，The Black Book of Communism: Crimes, Terror, Repression, trans. Jonathan Murphy and Mark Kramer（剑桥：Harvard University Press，1999），4。
+
 87. Gorky 引自同上，526。关于高尔基对古拉格制度的钦佩，更多内容参见 Applebaum, Gulag, 67ff. 和 Kizny, Gulag, 38。
+
 88. 引自同上，529。
+
 89. Figes, A People’s Tragedy, 526。
+
 90. 同上，528–29。
+
 91. 引自同上，536。
 
 92. 同上。
@@ -4824,8 +5048,6 @@ Ronald Donaldson 的《Thirteen Days》（2000）中对这些会议的描绘—�
 
 137. 参见第 2 章，“Monopoly。”
 
-
-
 138. 正是在这里，法律开始渗透测量，反之亦然。有关纳粹政权中法律与测量之间关系的更多内容，请参阅 Wildt，《“Die politische Ordnung der Volksgemeinschaft.”》
 
 139. Ian Kershaw, *Hitler 1935–1945: Nemesis* (New York: W. W. Norton, 2000), 57.
@@ -4836,211 +5058,314 @@ Ronald Donaldson 的《Thirteen Days》（2000）中对这些会议的描绘—�
 
 142. Kershaw, *Hitler 1889–1936*, 463–64.
 
-143. 大屠杀文学的两部标准著作是 Gerald Reitlinger, *The Final Solution: The Attempt to Exterminate the Jews of Europe, 1939–1945* (Northvale, N.J.: J. Aronson, 1987) 和 Raul Hilberg, *The Destruction of the European Jews* (Chicago: Quadrangle Books, 1961)。值得注意的近期著作包括 Leni Yahil, *The Holocaust: The Fate of European Jewry, 1932–1945*, trans. Ina Friedman and Haya Galai (New York: Oxford University Press, 1990); Philippe Burin, *Hitler and the Jews: The Genesis of the Holocaust*, trans. Patsy Southgate (New York: Edward Arnold, 1994); Peter Longerich, *Politik der Vernichtung: Eine Gesamtdarstellung der nationalsozialistischen Judenverfolgung* (Munich: Piper, 1998) 以及他的 *The Unwritten Order: Hitler’s Role in the Final Solution* (Stroud: Tempus, 2001); Dieter Pohl, *Holocaust: Die Ursachen, das Geschehen, die Folgen* (Freiburg: Herder, 2000); Christopher Browning, *The Origins of the Final Solution*; 以及 Saul Friedländer 的两卷本 *Nazi Germany and the Jews*。
 
-144. Peter Longerich, “*Davon haben wir nichts gewusst!*”: *Die Deutschen und die Judenverfolgung 1933–1945* (Munich: Siedler, 2006), 313–14.
 
-145. 同上, 66.
+### 143.
+大屠杀文学的两部标准著作是 Gerald Reitlinger, *The Final Solution: The Attempt to Exterminate the Jews of Europe, 1939–1945* (Northvale, N.J.: J. Aronson, 1987) 和 Raul Hilberg, *The Destruction of the European Jews* (Chicago: Quadrangle Books, 1961)。值得注意的近期著作包括 Leni Yahil, *The Holocaust: The Fate of European Jewry, 1932–1945*, trans. Ina Friedman and Haya Galai (New York: Oxford University Press, 1990); Philippe Burin, *Hitler and the Jews: The Genesis of the Holocaust*, trans. Patsy Southgate (New York: Edward Arnold, 1994); Peter Longerich, *Politik der Vernichtung: Eine Gesamtdarstellung der nationalsozialistischen Judenverfolgung* (Munich: Piper, 1998) 以及他的 *The Unwritten Order: Hitler’s Role in the Final Solution* (Stroud: Tempus, 2001); Dieter Pohl, *Holocaust: Die Ursachen, das Geschehen, die Folgen* (Freiburg: Herder, 2000); Christopher Browning, *The Origins of the Final Solution*; 以及 Saul Friedländer 的两卷本 *Nazi Germany and the Jews*。
 
-146. 同上, 130–31.
+### 144.
+Peter Longerich, “*Davon haben wir nichts gewusst!*”: *Die Deutschen und die Judenverfolgung 1933–1945* (Munich: Siedler, 2006), 313–14。
 
-147. 同上, 321.
+### 145.
+同上, 66。
 
-148. Frank Bajohr, “*Arisierung*” in Hamburg: *Die Verdrängung der jüdischen Unternehmen 1933–1945* (Hamburg: Christians, 1997).
+### 146.
+同上, 130–31。
 
-149. Matthias N. Lorenz, “*Auschwitz drängt uns auf einen Fleck*”: *Juden darstellung und Auschwitzdiskurs bei Martin Walser* (Stuttgart: Metzler, 2005).
+### 147.
+同上, 321。
 
-150. 引自 Gitta Sereny, *Albert Speer: His Battle with Truth* (New York: Alfred A. Knopf, 1995), 626.
+### 148.
+Frank Bajohr, “*Arisierung*” in Hamburg: *Die Verdrängung der jüdischen Unternehmen 1933–1945* (Hamburg: Christians, 1997)。
 
-151. Saul Friedländer, *Nazi Germany and the Jews, Volume 1: The Years of Persecution, 1933–1939*, 161. Friedländer 引用的研究是 Robert Gellately, *The Gestapo and German Society: Enforcing the Racial Policy 1933–1945* (Oxford: Oxford University Press, 1990)。
+### 149.
+Matthias N. Lorenz, “*Auschwitz drängt uns auf einen Fleck*”: *Juden darstellung und Auschwitzdiskurs bei Martin Walser* (Stuttgart: Metzler, 2005)。
 
-152. Friedländer, *Nazi Germany and the Jews, Volume 1: The Years of Persecution, 1933–1939*, 325.
+### 150.
+引自 Gitta Sereny, *Albert Speer: His Battle with Truth* (New York: Alfred A. Knopf, 1995), 626。
 
-153. Longerich, “*Davon haben wir nichts gewusst!*” 296.
+### 151.
+Saul Friedländer, *Nazi Germany and the Jews, Volume 1: The Years of Persecution, 1933–1939*, 161. Friedländer 引用的研究是 Robert Gellately, *The Gestapo and German Society: Enforcing the Racial Policy 1933–1945* (Oxford: Oxford University Press, 1990)。
 
-154. Victor Klemperer, *I Will Bear Witness: A Diary of the Nazi Years, 1933–1941*, 133.
+### 152.
+Friedländer, *Nazi Germany and the Jews, Volume 1: The Years of Persecution, 1933–1939*, 325。
 
-155. 同上, 277.
+### 153.
+Longerich, “*Davon haben wir nichts gewusst!*” 296。
 
-156. 同上, 289.
+### 154.
+Victor Klemperer, *I Will Bear Witness: A Diary of the Nazi Years, 1933–1941*, 133。
 
-157. 同上, 442.
+### 155.
+同上, 277。
 
-158. Victor Klemperer, *I Will Bear Witness: A Diary of the Nazi Years, 1942–1945*, trans. Martin Chalmers (New York: Random House, 1998), 25.
+### 156.
+同上, 289。
 
-159. 同上, 39.
+### 157.
+同上, 442。
 
-160. 同上, 177.
+### 158.
+Victor Klemperer, *I Will Bear Witness: A Diary of the Nazi Years, 1942–1945*, trans. Martin Chalmers (New York: Random House, 1998), 25。
 
-161. 同上, 181.
+### 159.
+同上, 39。
 
-162. 同上, 254.
+### 160.
+同上, 177。
 
-163. 同上, 272.
+### 161.
+同上, 181。
 
-164. Friedländer, *Nazi Germany and the Jews, Volume 1: The Years of Persecution, 1933–1939*, 276.
+### 162.
+同上, 254。
 
-165. Klemperer, *I Will Bear Witness: A Diary of the Nazi Years, 1933–1941*, 130.
+### 163.
+同上, 272。
 
-166. 参见 Michael Wildt, “*Der muß hinaus! Der muß hinaus!*” *Mittelweg 36* 10, no. 4 (2001): 21.
+### 164.
+Friedländer, *Nazi Germany and the Jews, Volume 1: The Years of Persecution, 1933–1939*, 276。
 
-167. 同上, 22.
+### 165.
+Klemperer, *I Will Bear Witness: A Diary of the Nazi Years, 1933–1941*, 130。
 
-168. 引自同上, 14.
+### 166.
+参见 Michael Wildt, “*Der muß hinaus! Der muß hinaus!*” *Mittelweg 36* 10, no. 4 (2001): 21。
 
-169. 同上, 24.
+### 167.
+同上, 22。
 
-170. Saul Friedländer, *Nazi Germany and the Jews, Volume 2: The Years of Extermination, 1939–1945* (New York: HarperCollins, 2007), 54.
+### 168.
+引自同上, 14。
 
-171. SD，即 *Sicherheitsdienst*，最终被重组为 *Reichssicherheitshauptamt*。更多内容请参阅 Wildt, *An Uncompromising Generation*; 以及 Michael Wildt 编, *Nachrichtendienst, Politische Elite, Mordeinheit: Der Sicherheitsdienst des Reichsführers SS* (Hamburg: Hamburger Edition, 2003)。
+### 169.
+同上, 24。
 
-172. 参见 Dieter Pohl 和 Andrej Angrick, *Einsatzgruppen C and D in the Invasion of the Soviet Union*, trans. Donald Bloxham and Ian Gronbach (London: Holocaust Educational Trust, 2000)。
+### 170.
+Saul Friedländer, *Nazi Germany and the Jews, Volume 2: The Years of Extermination, 1939–1945* (New York: HarperCollins, 2007), 54。
 
-173. 参见 Wildt, *An Uncompromising Generation*, 441 和 443。
+### 171.
+SD，即 *Sicherheitsdienst*，最终被重组为 *Reichssicherheitshauptamt*。更多内容请参阅 Wildt, *An Uncompromising Generation*; 以及 Michael Wildt 编, *Nachrichtendienst, Politische Elite, Mordeinheit: Der Sicherheitsdienst des Reichsführers SS* (Hamburg: Hamburger Edition, 2003)。
 
-174. 同上, 858.
+### 172.
+参见 Dieter Pohl 和 Andrej Angrick, *Einsatzgruppen C and D in the Invasion of the Soviet Union*, trans. Donald Bloxham and Ian Gronbach (London: Holocaust Educational Trust, 2000)。
 
-175. 参见 Dietrich Dörner, *Die Logik des Misslingens: Strategisches Denken in komplexen Situationen* (Hamburg: Rowohlt, 1989), 22–31。
+### 173.
+参见 Wildt, *An Uncompromising Generation*, 441 和 443。
 
-176. 参见第 3 章，“Permitted, Prohibited, Mandated。”
+### 174.
+同上, 858。
 
-177. 更多内容请参阅 Hassamer and Reemtsma, *Verbrechensopfer*, 131ff。
+### 175.
+参见 Dietrich Dörner, *Die Logik des Misslingens: Strategisches Denken in komplexen Situationen* (Hamburg: Rowohlt, 1989), 22–31。
 
-178. 引自 Jan Philipp Reemtsma, “*Das Heer schützt den Menschen als solchen: Ein neues Jahrhundert der Folter*,” in *Folter*, 195。
+### 176.
+参见第 3 章，“Permitted, Prohibited, Mandated。”
 
-179. 参见 Irme Kertész, *Fatelessness: A Novel*, trans. Tim Wilkinson (New York: Vintage International, 2004)。另见 Jan Philipp Reemtsma, “*Überleben als erzwungenes Einverständnis: Gedanken bei der Lektüre von Imre Kertész’ Roman eines Schicksalslosen*,” in *Trauma*, ed. Wolfram Mauser and Carl Pietzcker (Würzburg: Königshausen & Neumann, 2000), 55–78。
+### 177.
+更多内容请参阅 Hassamer and Reemtsma, *Verbrechensopfer*, 131ff。
 
-180. 参见 John Keegan, *A History of Warfare*, 79ff。
+### 178.
+引自 Jan Philipp Reemtsma, “*Das Heer schützt den Menschen als solchen: Ein neues Jahrhundert der Folter*,” in *Folter*, 195。
 
-181. 另见第 1 章，“Trust and Seriousness。”
 
-182. 参见 Montefiore, *Stalin*, 357。
 
-183. 引自同上, 229–30。
+### 179.
+参见 Irme Kertész, *Fatelessness: A Novel*, trans. Tim Wilkinson (New York: Vintage International, 2004)。另见 Jan Philipp Reemtsma, “*Überleben als erzwungenes Einverständnis: Gedanken bei der Lektüre von Imre Kertész’ Roman eines Schicksalslosen*,” in *Trauma*, ed. Wolfram Mauser and Carl Pietzcker (Würzburg: Königshausen & Neumann, 2000), 55–78。
 
-184. 引自同上, 231。
+### 180.
+参见 John Keegan, *A History of Warfare*, 79ff。
 
+### 181.
+另见第 1 章，“Trust and Seriousness。”
 
+### 182.
+参见 Montefiore, *Stalin*, 357。
 
-185. 有关斯德哥尔摩综合征的更多内容，参见 Hassemer 和 Reemtsma 的 Verbrechen-soffer，第 123–24 页；以及 Reemtsma 的 In the Cellar，第 172 页。
+### 183.
+引自同上, 229–30。
 
-186. Klemperer，《我将作证：纳粹时期的日记，1942–1945》，第 144–45 页。
+### 184.
+引自同上, 231。
 
-187. Arno Schmidt，《黄金边缘的黄昏》，John E. Woods 译（纽约：Harcourt Brace Jovanovich，1980），第 165 页。
+### 185.
+有关斯德哥尔摩综合征的更多内容，参见 Hassemer 和 Reemtsma 的 Verbrechen-soffer，第 123–24 页；以及 Reemtsma 的 In the Cellar，第 172 页。
 
-188. Klemperer，《我将作证：纳粹时期的日记，1942–1945》，第 176 页。
+### 186.
+Klemperer，《我将作证：纳粹时期的日记，1942–1945》，第 144–45 页。
 
-189. 参见 Thucydides《伯罗奔尼撒战争》第 1 部分第 4 书，Martin Hammond 译（牛津：牛津大学出版社，2009）。Karl-Wilhelm Welwei 认为这个故事只是谣言。参见 Karl-Wilhelm Welwei，《斯巴达：一个古代大国的兴衰》（斯图加特：Klett-Cotta，2004），第 225–26 页。
+### 187.
+Arno Schmidt，《黄金边缘的黄昏》，John E. Woods 译（纽约：Harcourt Brace Jovanovich，1980），第 165 页。
 
-190. 参见 Jan Philipp Reemtsma 的“国家恐怖”，收录于 Manfred Oechmichen 编辑的 Malreatment and Torture（吕贝克：Schmidt-Römhild，1998），第 53–67 页。1952 年至少有 1000 万人被监禁（占人口的 1.75%）。有关中国惩罚制度的更多内容，参见 Jean-Luc Domenach，《被遗忘的群岛：中国》（巴黎：Fayard，1992）。
+### 188.
+Klemperer，《我将作证：纳粹时期的日记，1942–1945》，第 176 页。
 
-191. 参见 Jörg Baberowski，《独断的独裁：沙皇俄国与早期苏联的矛盾与暴力》，收录于《现代时代？20 世纪的战争、革命与暴力》，第 37–59 页。
+### 189.
+参见 Thucydides《伯罗奔尼撒战争》第 1 部分第 4 书，Martin Hammond 译（牛津：牛津大学出版社，2009）。Karl-Wilhelm Welwei 认为这个故事只是谣言。参见 Karl-Wilhelm Welwei，《斯巴达：一个古代大国的兴衰》（斯图加特：Klett-Cotta，2004），第 225–26 页。
 
-192. 同上，第 52 页。
+### 190.
+参见 Jan Philipp Reemtsma 的“国家恐怖”，收录于 Manfred Oechmichen 编辑的 Malreatment and Torture（吕贝克：Schmidt-Römhild，1998），第 53–67 页。1952 年至少有 1000 万人被监禁（占人口的 1.75%）。有关中国惩罚制度的更多内容，参见 Jean-Luc Domenach，《被遗忘的群岛：中国》（巴黎：Fayard，1992）。
 
-193. 参见 Baberowski，《红色恐怖》，第 198 页。
+### 191.
+参见 Jörg Baberowski，《独断的独裁：沙皇俄国与早期苏联的矛盾与暴力》，收录于《现代时代？20 世纪的战争、革命与暴力》，第 37–59 页。
 
-194. 同上，第 199 页。
+### 192.
+同上，第 52 页。
 
-195. 参见 Primo Levi，《在奥斯维辛的生存：纳粹对人性的攻击》，Stuart Woolf 译（纽约：Touchstone，1996），第 103 页。
+### 193.
+参见 Baberowski，《红色恐怖》，第 198 页。
 
-196. 参见 Reemtsma，《情侣——激情：麦克白夫妇》，第 130–50 页。
+### 194.
+同上，第 199 页。
 
-197. 参见同上，第 144 页。
+### 195.
+参见 Primo Levi，《在奥斯维辛的生存：纳粹对人性的攻击》，Stuart Woolf 译（纽约：Touchstone，1996），第 103 页。
 
-198. Hannah Arendt，《极权主义的起源》（纽约：Harcourt, Brace, Jovanovich，1973），第 5 页。
+### 196.
+参见 Reemtsma，《情侣——激情：麦克白夫妇》，第 130–50 页。
 
-199. 同上，第 7 页。
+### 197.
+参见同上，第 144 页。
 
-200. Léon Poliakov，《反犹太主义史》（费城：宾夕法尼亚大学出版社，2003），第 1 卷第 41–72 页。
+### 198.
+Hannah Arendt，《极权主义的起源》（纽约：Harcourt, Brace, Jovanovich，1973），第 5 页。
 
-201. 同上，第 2 卷第 147 页起。
+### 199.
+同上，第 7 页。
 
-202. 引自 Jan Philipp Reemtsma 的“反种族主义的陷阱”，收录于 u.a. Falun，第 303 页。
+### 200.
+Léon Poliakov，《反犹太主义史》（费城：宾夕法尼亚大学出版社，2003），第 1 卷第 41–72 页。
 
-203. 参见 Klemperer，《我将作证：纳粹时期的日记，1933–1941》，第 13 页；以及 Benzion Netanyahu，《西班牙十五世纪宗教裁判所的起源》（纽约：Random House，1995），第 975 页。另见 Cecil Roth，《马拉诺人与种族反犹太主义：平行研究》，《犹太社会研究》第 2 卷第 3 期（1940 年）：第 239–48 页。
+### 201.
+同上，第 2 卷第 147 页起。
 
-204. 参见 Poliakov，《反犹太主义史》第 2 卷；Henry Charles Lea，《西班牙宗教裁判所史》（纽约：The Macmillan Company，1906–1907），第 1、2 卷；以及 Robert Lemm，《西班牙宗教裁判所：历史与神话之间》（坎彭：Kok Agora，1993）。
+### 202.
+引自 Jan Philipp Reemtsma 的“反种族主义的陷阱”，收录于 u.a. Falun，第 303 页。
 
-205. 至少有一场大规模屠杀发生在 1066 年，当时在摩尔人控制的格拉纳达。
+### 203.
+参见 Klemperer，《我将作证：纳粹时期的日记，1933–1941》，第 13 页；以及 Benzion Netanyahu，《西班牙十五世纪宗教裁判所的起源》（纽约：Random House，1995），第 975 页。另见 Cecil Roth，《马拉诺人与种族反犹太主义：平行研究》，《犹太社会研究》第 2 卷第 3 期（1940 年）：第 239–48 页。
 
-206. Léon Poliakov，《反犹太主义史》，第 2 卷第 226 页。
+### 204.
+参见 Poliakov，《反犹太主义史》第 2 卷；Henry Charles Lea，《西班牙宗教裁判所史》（纽约：The Macmillan Company，1906–1907），第 1、2 卷；以及 Robert Lemm，《西班牙宗教裁判所：历史与神话之间》（坎彭：Kok Agora，1993）。
 
-207. 参见 Jean-Paul Sartre，《反犹太主义者与犹太人》，George J. Becker 译（纽约：Grove Press，1962），第 10 页。
+### 205.
+至少有一场大规模屠杀发生在 1066 年，当时在摩尔人控制的格拉纳达。
 
-208. Johann David Michaelis，《〈戏剧图书馆〉第 1 部分书评》，收录于 Gotthold Ephraim Lessing，《作品与书信十二卷》，Wilfried Barner 等编辑（法兰克福：Deutscher Klassiker Verlag，1985–2003），第 1 卷第 1251–52 页。
+### 206.
+Léon Poliakov，《反犹太主义史》，第 2 卷第 226 页。
 
-209. 引自 Boelch，《柏林反犹太主义争论》，第 92 页。
+### 207.
+参见 Jean-Paul Sartre，《反犹太主义者与犹太人》，George J. Becker 译（纽约：Grove Press，1962），第 10 页。
 
-210. 引自同上，第 14 页。
+### 208.
+Johann David Michaelis，《〈戏剧图书馆〉第 1 部分书评》，收录于 Gotthold Ephraim Lessing，《作品与书信十二卷》，Wilfried Barner 等编辑（法兰克福：Deutscher Klassiker Verlag，1985–2003），第 1 卷第 1251–52 页。
 
-211. 引自同上，第 16 页。
+### 209.
+引自 Boelch，《柏林反犹太主义争论》，第 92 页。
 
-212. 引自同上，第 10 页。
+### 210.
+引自同上，第 14 页。
 
-213. 同上，第 21 页。
+### 211.
+引自同上，第 16 页。
 
-214. 同上，第 39 页。
+### 212.
+引自同上，第 10 页。
 
-215. 同上，第 47 页。
+### 213.
+同上，第 21 页。
 
-216. 引自 Poliakov，《反犹太主义史》，第 3 卷第 89 页。
+### 214.
+同上，第 39 页。
 
-217. 与批评者常说的不同，萨特从未说过犹太人这个词只是反犹太主义者使用的一个称号，或说犹太身份仅仅是歧视和迫害的产物。
+### 215.
+同上，第 47 页。
 
-218. Klemperer，《我将作证：纳粹时期的日记，1942–1945》，第 355 页。
+### 216.
+引自 Poliakov，《反犹太主义史》，第 3 卷第 89 页。
 
-219. Friedrich A. Hayek，《奴役之路：文本与文献》（纽约：Routledge，2008），第 143 页
+### 217.
+与批评者常说的不同，萨特从未说过犹太人这个词只是反犹太主义者使用的一个称号，或说犹太身份仅仅是歧视和迫害的产物。
 
-220. 同上。
+### 218.
+Klemperer，《我将作证：纳粹时期的日记，1942–1945》，第 355 页。
 
-221. 同上，第 161–63 页。
+### 219.
+Friedrich A. Hayek，《奴役之路：文本与文献》（纽约：Routledge，2008），第 143 页
 
-222. 同上，第 166 页。
+### 220.
+同上。
 
-223. 同上，第 169 页。
+### 221.
+同上，第 161–63 页。
 
-224. 当然，在 1960 年代，一些德国人试图通过事后相对化纳粹的无能来为其辩护，认为希特勒“至少”让失业者离开了街头，而他入侵法国是军事上的辉煌成功。
+### 222.
+同上，第 166 页。
 
-225. 与德国族裔相关的供给仅与第一次世界大战相比才算充足。有关此主题的更多内容，参见 Aly，《希特勒的受益者》：另见对 Aly 的批评，见 Friedländer，《纳粹德国与犹太人，第 2 卷：灭绝的岁月，1939–1945》，第 656 页；以及 Michael Wildt，《Aly 的人民国家：科学的傲慢与简单》，《Mittelweg 36》第 3 期（2005 年）：第 69–80 页。
+### 223.
+同上，第 169 页。
 
-226. Suetonius，《罗马皇帝传》，[37] 第 216–17 页。
+### 224.
+当然，在 1960 年代，一些德国人试图通过事后相对化纳粹的无能来为其辩护，认为希特勒“至少”让失业者离开了街头，而他入侵法国是军事上的辉煌成功。
 
-227. Alexander Demandt，《罗马皇帝的私生活》（慕尼黑：C. H. Beck，1996），第 228 页。
+### 225.
+与德国族裔相关的供给仅与第一次世界大战相比才算充足。有关此主题的更多内容，参见 Aly，《希特勒的受益者》：另见对 Aly 的批评，见 Friedländer，《纳粹德国与犹太人，第 2 卷：灭绝的岁月，1939–1945》，第 656 页；以及 Michael Wildt，《Aly 的人民国家：科学的傲慢与简单》，《Mittelweg 36》第 3 期（2005 年）：第 69–80 页。
 
-228. 当然，我们必须对历史记载持一定怀疑态度。塔西佗绝不是 sine ira et studio 的。更何况，关于卡利古拉和尼禄的许多轶事都是由他们的政治对手传播的。（参见例如 Aloys Winterling，《卡利古拉：传记》（慕尼黑：Beck，2003），第 175–80 页。）最终，对于我的目的而言，历史记载是否准确或人们是否只是愿意相信它们并不重要：在许多情况下，两者之间的界限是模糊的。
+### 226.
+Suetonius，《罗马皇帝传》，[37] 第 216–17 页。
 
-229. 同上，第 70 页。
+### 227.
+Alexander Demandt，《罗马皇帝的私生活》（慕尼黑：C. H. Beck，1996），第 228 页。
 
+### 228.
+当然，我们必须对历史记载持一定怀疑态度。塔西佗绝不是 sine ira et studio 的。更何况，关于卡利古拉和尼禄的许多轶事都是由他们的政治对手传播的。（参见例如 Aloys Winterling，《卡利古拉：传记》（慕尼黑：Beck，2003），第 175–80 页。）最终，对于我的目的而言，历史记载是否准确或人们是否只是愿意相信它们并不重要：在许多情况下，两者之间的界限是模糊的。
 
+### 229.
+同上，第 70 页。
 
-230. 同上。100。
+### 230.
+同上。100。
 
-231. Klemperer，《我将作证：纳粹时期的日记，1942–1945》，72。
+### 231.
+Klemperer，《我将作证：纳粹时期的日记，1942–1945》，72。
 
-232. 同上，73。
+### 232.
+同上，73。
 
-233. 同上，59。
+### 233.
+同上，59。
 
-234. 同上，58–59。
+### 234.
+同上，58–59。
 
-235. 同上，59。
+### 235.
+同上，59。
 
-236. "Wie kommt denn der Spinat auf das Dach? Die Kuh kann doch nicht fliegen!" ("How did the spinach get on the roof? Cows can't fly!")
+### 236.
+"Wie kommt denn der Spinat auf das Dach? Die Kuh kann doch nicht fliegen!" ("How did the spinach get on the roof? Cows can't fly!")
 
-237. 参见 Sigmund Freud，《性学三论》，载于《西格蒙德·弗洛伊德心理学著作全集标准版》，7:125–253；以及 Erich Fromm，《人类破坏性解剖》（纽约：Holt, Rinehart and Winston, 1973），313–61。
+### 237.
+参见 Sigmund Freud，《性学三论》，载于《西格蒙德·弗洛伊德心理学著作全集标准版》，7:125–253；以及 Erich Fromm，《人类破坏性解剖》（纽约：Holt, Rinehart and Winston, 1973），313–61。
 
-238. Friedländer，《纳粹德国与犹太人，第一卷：迫害的岁月》，281。
+### 238.
+Friedländer，《纳粹德国与犹太人，第一卷：迫害的岁月》，281。
 
-239. 同上，281。
+### 239.
+同上，281。
 
-240. 引自同上。
+### 240.
+引自同上。
 
-241. 引自同上，282。
+### 241.
+引自同上，282。
 
-242. 引自同上。
+### 242.
+引自同上。
 
-243. 引自同上。
+### 243.
+引自同上。
+
+
 
 244. 参见 Alexander Mitscherlich 和 Fred Mielke 在《Das Diktat der Menschenverachtung, eine Dokumentation》（海德堡：L. Schneider, 1947）以及《The Death Doctors》，James Cleugh 译（伦敦：Elek Books, 1962）中的开创性工作。
 
@@ -5048,96 +5373,158 @@ Ronald Donaldson 的《Thirteen Days》（2000）中对这些会议的描绘—�
 
 246. 参见 Ernst Klee，《Auschwitz, die NS-Medizin und ihre Opfer》（法兰克福 am Main：S. Fischer, 1997），144–50。
 
-## Chapter 5: Violence and Communication
+# Chapter 5: Violence and Communication
 
 ## 第 5 章：暴力与沟通
 
 1. 引自 John Dickie，《Cosa Nostra: A History of the Sicilian Mafia》（纽约：Palgrave Macmillan, 2004），177。
+
 2. Luhmann，《Power》，149。
+
 3. Arendt，《On Violence》，56。
+
 4. Dickie，《Cosa Nostra》，177。
+
 5. 同上，176。
+
 6. Trutz von Trotha，"Zur Soziologie der Gewalt," *Kölner Zeitschrift für Soziologie und Sozialpsychologie* 37 (1997): 9。
+
 7. 同上，12。
+
 8. 同上。
+
 9. 同上。
+
 10. Niklas Luhmann，"Rechtszwang und politische Gewalt," in *Ausdifferenzierung des Rechts: Beiträge zur Rechtssoziologie und Rechtstheorie*（法兰克福 am Main：Suhrkamp, 1999），170。
+
 11. 有关 Canetti 对暴力的观点，参见《Crowds and Power》，Carol Stewart 译（纽约：Farrar, Straus and Giroux, 1988）中“幸存者”和“统治者与偏执狂”两章，分别见 227–80 和 411–33。
+
 12. Trutz von Trotha，"Zur Soziologie der Gewalt," 19–20。
+
 13. 同上。
+
 14. Birgitta Nedelmann，"Gewaltsoziologie am Scheideweg," 74ff。
+
 15. Georg Simmel，"How Is Society Possible?" 350。
+
 16. 同上，353–4。
+
 17. 关于这一隐喻的更多内容，参见 Reemtsma，《In the Cellar》，72。
-18. 有人声称，社会学对暴力的处理在 20 世纪 80 年代末开始发生变化。例如 Nedelmann 就指出了该领域的若干创新者。她特别强调了 Wolfgang Sofsky，他发表了一部关于暴力的论著，并对德国集中营中的暴力进行了首次全面研究。但尽管 Nedelmann 赞扬他具有开创性的方法，她也批评他将暴力本质化，并批评他冷酷无情的风格。参见 Wolfgang Sofsky，《Traktat über die Gewalt》（法兰克福 am Main：S. Fischer, 1996）；以及《Die Ordnung des Terrors: Das Konzentrationslager》（法兰克福 am Main：S.Fischer, 1993）。关于 Nedelmann 的评论，参见她的 "Gewaltsoziologie am Scheideweg," 79。Lars Clausen 是另一位提供独特而引人入胜方法的社会学家：他将暴力视为一种特定类型的工作。这为工作社会学提供了令人惊讶而富有启发性的见解，但并未产生类似暴力社会学的东西。参见 Lars Clausen，《Produktive Arbeit, destruktive Arbeit: Soziologische Grundlagen》（柏林：Walter de Gruyter, 1988）；以及他的论文 "Übergang zum Untergang." 
+
+18. 有人声称，社会学对暴力的处理在 20 世纪 80 年代末开始发生变化。例如 Nedelmann 就指出了该领域的若干创新者。她特别强调了 Wolfgang Sofsky，他发表了一部关于暴力的论著，并对德国集中营中的暴力进行了首次全面研究。但尽管 Nedelmann 赞扬他具有开创性的方法，她也批评他将暴力本质化，并批评他冷酷无情的风格。参见 Wolfgang Sofsky，《Traktat über die Gewalt》（法兰克福 am Main：S. Fischer, 1996）；以及《Die Ordnung des Terrors: Das Konzentrationslager》（法兰克福 am Main：S.Fischer, 1993）。关于 Nedelmann 的评论，参见她的 "Gewaltsoziologie am Scheideweg," 79。Lars Clausen 是另一位提供独特而引人入胜方法的社会学家：他将暴力视为一种特定类型的工作。这为工作社会学提供了令人惊讶而富有启发性的见解，但并未产生类似暴力社会学的东西。参见 Lars Clausen，《Produktive Arbeit, destruktive Arbeit: Soziologische Grundlagen》（柏林：Walter de Gruyter, 1988）；以及他的论文 "Übergang zum Untergang."
+
 19. 参见 Niklas Luhmann，《Einführung in die Systemtheorie》（海德堡：Carl-Auer-Verlag, 2002），321；以及 Niklas Luhmann《Social Systems》，John Bednarz, Jr. 译，Dirk Baecker 协助（斯坦福：斯坦福大学出版社, 1995），103。
 
-
-
-
-# 20. 卢曼在 *社会系统* 中写道：“只要存在一个体验意义的心灵系统，双重偶然性问题实际上就始终在场。它以一种未聚焦的方式伴随所有体验，直到体验遭遇另一个人或一个被赋予了自由选择的社会系统。此时，它就作为行为一致的问题而变得相关”（第105页）。
+### 20. 卢曼在 *社会系统* 中写道：“只要存在一个体验意义的心灵系统，双重偶然性问题实际上就始终在场。它以一种未聚焦的方式伴随所有体验，直到体验遭遇另一个人或一个被赋予了自由选择的社会系统。此时，它就作为行为一致的问题而变得相关”（第105页）。
 
 - 21. 波皮茨，*权力现象*，第79页。
+
 - 22. 同上。但这并未考虑工具性威胁（或其缺失）对其他权力形式的影响。尤其是创造事实的权力——即以改变自然或环境的方式来重塑他人行动范围的能力——如果涉及工具性威胁，将会呈现出完全不同的面貌。
+
 - 23. 同上，第48页。
+
 - 24. 同上，第52页。
+
 - 25. 同上，第60页。
 
 - 26. 我在为于尔根·哈贝马斯获颁德国书业和平奖时所致的颂词中详细阐述了这些优点。参见扬·菲利普·雷姆茨马，《颂词》，载于尔根·哈贝马斯，*信仰与知识：2001年德国书业和平奖*（苏尔坎普出版社：美因河畔法兰克福，2001），第35–57页。
+
 - 27. 这并不适用于哈贝马斯的政治著作。在那些著作中，他审视的主题，如人道主义干预，与暴力及其合法性密切相关。
+
 - 28. 卢曼，*权力*，第152页。我还在第3章题为“限制暴力与维护信任”一节中讨论了时间化问题。
 
 - 29. 正如弗朗西斯卡·奥格施泰因所写：“倘若汉娜·阿伦特知道萨森录音带，她很可能对国家社会主义本质的描述会有所不同”（《行为与行为人》，载汉娜·阿伦特，*论恶：关于伦理问题的讲座*，乌尔苏拉·卢茨译 [慕尼黑：皮珀出版社，2006]，第185页）。
+
 - 30. 参见塞萨拉尼，《成为艾希曼》，第218页。
+
 - 31. 引自同上书，第219页。
+
 - 32. 参见奥格施泰因，《行为与行为人》，第186页。
+
 - 33. 汉娜·阿伦特与卡尔·雅斯贝尔斯，*汉娜·阿伦特与卡尔·雅斯贝尔斯通信集：1926—1969*，罗伯特·金伯与丽塔·金伯译（纽约：哈考特·布雷斯·约万诺维奇出版社，1992），第434页。
+
 - 34. 同上，第411页。
+
 - 35. 同上。
 
 - 36. 尽管这些情绪不利于雅斯贝尔斯的政治判断，但并未腐蚀他的道德行动。参见汉娜·阿伦特，《卡尔·雅斯贝尔斯：一篇颂词》，克拉拉与理查德·温斯顿译，载 *黑暗时代的人们*（纽约：哈考特·布雷斯公司，1968），第71–80页。
+
 - 37. 参见沃尔夫冈·克劳斯哈尔、扬·菲利普·雷姆茨马、汉斯·马格努斯·恩岑斯贝格尔，《“他们从未有过政治要求……”：与作家汉斯·马格努斯·恩岑斯贝格尔谈红军派背景》，载 *红军派与左翼恐怖主义*，第1392–1411页。
+
 - 38. 参见罗尔夫·施勒尔斯，*游击队员：“抵抗中的人”*（明斯特：沃图姆出版社，1989）。
 
 《受害者要求惩罚犯罪者的权利——作为一个问题》，载《暴力不言说：三篇演讲》（斯图加特：雷克拉姆出版社，2002），第47–83页。对刑法的批评始终受到那些利用暴力让世人听到自己的犯罪者的魅惑所驱动。瓦尔特·本雅明的《暴力批判》正是为这类人树立的一座简短而令人不安的纪念碑。
 
 64. 参见格尔德·汉克尔，《“我确实什么都没做”：卢旺达告别免罚文化》，《Mittelweg 36》第13卷，第1期（2004）：第28–51页。
+
 65. 卢曼，《通过程序的正当性》，第122页。
+
 66. 有关公众认知的这一变化，参见哈塞默与雷姆茨马，《犯罪受害者》，第30–46页。
+
 67. 参见扬·菲利普·雷姆茨马，《幸存者回忆录：一种20世纪的文学体裁》，载《海滩谋杀案》，第227–53页。幸存者回忆录只有两个相关的先驱：陀思妥耶夫斯基的《死屋手记》（1862年）——一个被判罪的杀人犯被监禁在沙皇劳改营的虚构故事——以及南方的前奴隶们的叙述（部分虚构，部分真实）。
+
 68. 让·埃默里，《心灵的极限》，载《心灵的极限》，第1页。
+
 69. 同上，《酷刑》，载《心灵的极限》，第40页。
+
 70. 参见普里莫·莱维，《奥斯维辛中的知识分子》，载《被淹没与被拯救的》，第127–48页。
+
+
+
 71. 参见宾雅明·维尔科米尔斯基，《碎片：战时童年记忆》，卡罗尔·布朗·詹韦译（纽约：朔肯出版社，1996）；斯特凡·梅希勒，《维尔科米尔斯基事件：一部传记真相研究》，约翰·E. 伍兹译（纽约：朔肯出版社，2001）；丹尼尔·甘茨弗里德，《又名维尔科米尔斯基：大屠杀戏仿：一桩文学丑闻的揭露与记录》（柏林：苏尔坎普犹太出版社，2002）；以及伊雷妮·迪克曼与尤利乌斯·H. 肖普斯编，《维尔科米尔斯基综合征：虚构的记忆，或，渴望成为受害者》（苏黎世：彭多出版社，2002）。
+
 72. 参见西格蒙德·弗洛伊德，《家庭罗曼史》，载《西格蒙德·弗洛伊德心理学著作标准版全集》，第9卷，第235–42页。
+
 73. 参见让·保尔，《彗星》，载 *作品集*（慕尼黑：汉泽尔出版社，1975），第6卷，第563–1036页。
+
 74. 参见雷姆茨马，《在地窖里》。
+
 75. 参见扬·菲利普·雷姆茨马，《受害者利益究竟是什么？》，《法医学》第15卷，第2期（2005）：第86–91页。
+
 76. 这一点阿多诺已在《否定的辩证法》中指出。另参见第3章“限制暴力与维护真相”。
+
 77. 参见第4章“暴力工具的升级”。
+
 78. 关于冷战中的热战，参见贝恩德·格赖纳、克里斯蒂安·穆勒、迪尔克·瓦尔特编，《冷战中的热战》（汉堡：汉堡出版社，2006）。
+
 79. 关于古巴导弹危机，参见格赖纳，《古巴危机》。
+
 80. 参见丹·迪纳，《历史理解与反理性：作为认识论视角的犹太委员会》，载《超越可设想：关于德国、纳粹主义与大屠杀的研究》（伯克利：加利福尼亚大学出版社，2000），第130–37页。
 
-
-
 81. 汉娜·阿伦特，《社会科学技术与集中营研究》，载于《理解的尝试 1930–1954》，第241页。
+
 82. 参见苏珊娜·海姆和戈茨·阿利，《“最终解决方案”的经济学：人类毁灭与经济新秩序》，载于《社会政策与犹太人大屠杀：是否存在最终解决方案的政治经济学》（柏林：罗特布赫出版社，1987），第7–90页；阿利，《希特勒的受益者》；苏珊娜·海姆和戈茨·阿利，《毁灭的先驱：奥斯维辛与德国对新欧洲秩序的计划》（汉堡：霍夫曼和坎佩出版社，1991）；以及戈茨·阿利，《“最终解决方案”：纳粹人口政策与欧洲犹太人的屠杀》，译者贝琳达·库珀和艾莉森·布朗（伦敦：牛津大学出版社，1999）。
+
 83. 参见第三章，“规制（3）：种族灭绝的修辞”。
+
 84. 迈克尔·维尔特，《作为自我授权的民族共同体：1919至1939年德国省份对犹太人的暴力》（汉堡：汉堡版，2007），第354–56页。
+
 85. 同上，第366页。
+
 86. 更多内容参见雷姆茨马，《“何谓理解RAF的历史？”》；扬·菲利普·雷姆茨马，《“别的什么吗？或者：卡利班是谁？”》，载于《为何哈根·容格-奥特利格被杀》，第267–80页；以及扬·菲利普·雷姆茨马，《“恐怖暴力：动机问题澄清了什么？”》，载于《恐怖的图像，图像的恐怖？9月11日前后危机报道》，编者迈克尔·博伊特纳、约阿希姆·布特勒等（科隆：冯·哈勒姆出版社，2003），第330–59页。
+
 87. 关于RAF的武器恋物癖，更多内容参见卡林·维兰德，《安德烈亚斯·巴阿德》，载于《RAF与左翼恐怖主义》，第332–49页。
+
 88. 参见克劳斯哈，雷姆茨马和恩岑斯贝格，《“他们从未提出过政治要求……”》
+
 89. 费奥多尔·陀思妥耶夫斯基，《恶魔》，译者迈克尔·R·卡茨（牛津：牛津大学出版社，1999），第683页。
+
 90. 参见爱德华·哈雷特·卡尔，《浪漫流亡者：十九世纪肖像画廊》（哈蒙沃思，英国：企鹅出版社，1949），第343页。
+
 91. 参见雷姆茨马，《“何谓理解RAF的历史？”》
+
 92. 引自于尔根·塞弗特，《乌尔里克·迈因霍夫》，载于《RAF与左翼恐怖主义》，第350–71页。
+
 93. 参见维兰德，《阿里斯提普及其一些同时代人》，第760页。
+
 94. 引自古德伦·布劳恩斯贝格，《谢尔盖·涅恰耶夫与陀思妥耶夫斯基的恶魔：恐怖主义精神中一部小说的诞生》（法兰克福：彼得·朗出版社，2002），第129页。
+
 95. 陀思妥耶夫斯基，《恶魔》，第548–49页。
+
 96. 同上，第432页。
+
 97. 正如维克多·雨果在《悲惨世界》中有力地描述的那样，这种天真一旦筑起街垒变得无效，其魅力便荡然无存。
+
 98. 在《暴力的批判》中，本雅明描述了“伟大”的罪犯，他“无论其目的多么令人憎恶，都激起了公众的秘密钦佩”（第271页）。
 
 99. 沃尔克·施皮特尔，《“我们想要一切，同时又什么都不想要”：前恐怖分子沃尔克·施皮特尔谈他在西德城市游击队中的经历》，《明镜周刊》，1980年8月11日，第30–36页。
@@ -5168,8 +5555,6 @@ Ronald Donaldson 的《Thirteen Days》（2000）中对这些会议的描绘—�
 
 112. 恩斯特·图根哈特，《“我们应如何理解道德？”》，载于《论文集 1992–2000》（苏尔坎普：法兰克福，2001），第182页。关于图根哈特道德哲学的形成，参见扬·菲利普·雷姆茨马，《“一位革新者如何塑造死亡”》（为恩斯特·图根哈特在获颁迈斯特·埃克哈特奖时所作的颂词，德国柏林，2005年12月5日）。
 
-
-
 (Cambridge: Cambridge University Press, 1996), 93–216；以及《“理论上是对的，但在实践中无用”这一俗语的批判》，载于《实践哲学》，编者及译者 Mary J. Gregor (Cambridge: Cambridge University Press, 1996), 273–310。关于 Jürgen Habermas 对康德的看法，见其《信仰与知识的边界》，载于《论康德宗教哲学之接受与当代重要性》，收录于《在自然主义与宗教之间：哲学论文集》，译者 Ciaran Cronin (Cambridge: Polity Press, 2008), 209–48。
 
 116. 见 Hesiod，《工作与时日》，载于《神谱，工作与时日》，译者 Glenn W. Most (Cambridge: Harvard University Press, 2006), 93–95，第 80–105 行；以及 125–28，第 498–503 行。
@@ -5185,6 +5570,8 @@ Ronald Donaldson 的《Thirteen Days》（2000）中对这些会议的描绘—�
 121. Jean-Paul Sartre，《存在与虚无》，译者 Hazel E. Barnes (London: Methuen & Co., 1958), 29。
 
 122. 路加福音 18:11–13。
+
+
 
 123. 这些个人的故事可在 Eva Fogelman 的著作《良知与勇气：大屠杀期间拯救犹太人的救援者》(New York: Anchor Book, 1994) 中找到。关于自我确信与道德的更多内容，见 Jan Philipp Reemtsma，《“根据托多罗夫和卢曼的道德理论”》，载于《“我会如何行事”》，75–101。
 
@@ -5228,78 +5615,138 @@ Améry, Jean. "At the Mind's Limits." 载于 At the Mind's Limits: Contemplation
 
 ———。"Torture." 载于 At the Mind's Limits: Contemplations by a Survivor on Auschwitz and Its Realities, 21–40。译者 Sidney Rosenfeld 和 Stella P. Rosenfeld。Bloomington: Indiana University Press, 1998。
 
-
-
-
 安德斯，古恩特。人的过时性。慕尼黑：贝克出版社，1987。
+
 阿普尔鲍姆，安妮。《古拉格：历史》。纽约：道布尔戴出版社，2003。
+
 阿拉斯，丹尼尔。《断头台与恐怖》。克里斯托弗·米勒译。纽约：企鹅出版社，1989。
+
 阿伦特，汉娜。《人的境况》。芝加哥：芝加哥大学出版社，1958。
+
 ——。《卡尔·雅斯贝尔斯：颂词》。克拉拉和理查德·温斯顿译。载于《黑暗时代的人们》，71–80页。纽约：哈考特·布雷斯公司，1968。
+
 ——。《论暴力》。纽约：哈考特、布雷斯与世界出版社，1970。
+
 ——。《社会科学技术与集中营研究》。载于《理解的论文 1930–1954》，232–47页。杰罗姆·科恩编。纽约：哈考特布雷斯，1994。
+
 ——。《道德哲学的若干问题》。载于《责任与判断》，49–146页。杰罗姆·科恩编。纽约：舒肯图书公司，2003。
+
 ——。《思考与道德考量》。载于《责任与判断》，159–89页。杰罗姆·科恩编。纽约：舒肯图书公司，2003。
+
 ——。《“余下的是什么？语言仍然存在”：与格unter高斯的对话》。载于《理解的论文，1930–1954》，1–23页。杰罗姆·科恩编。纽约：哈考特、布雷斯公司，1994。
+
 阿伦特，汉娜，与卡尔·雅斯贝尔斯。《汉娜·阿伦特/卡尔·雅斯贝尔斯通信，1926–1969》。罗伯特和丽塔·金伯译。纽约：哈考特布雷斯约瓦诺维奇，1992。
+
 亚里士多德。《政治学》。载于《亚里士多德全集》，2:1986–2129。班杰明·乔伟特译。普林斯顿：普林斯顿大学出版社，1984。
+
 阿斯曼，扬。《一神论的代价》。罗伯特·萨维奇译。斯坦福：斯坦福大学出版社，2010。
+
 奥格斯坦，弗朗齐斯卡。“行为与行为者”。载于汉娜·阿伦特，《论邪恶：伦理学讲座》，177–95页。乌尔苏拉·卢茨译。慕尼黑：皮珀出版社，2006。
+
 奥古斯丁。《忏悔录》。亨利·查德威克译。牛津：牛津大学出版社，2008。
+
 艾尔斯，玛丽。《母婴依恋与精神分析：羞耻之眼》。纽约：布鲁纳-劳特利奇，2003。
+
 巴布罗夫斯基，约尔格。“明确的独裁：沙皇俄国与早期苏联的矛盾与暴力”。载于《现代时代？20世纪的战争、革命与暴力》，37–59页。约尔格·巴布罗夫斯基编。哥廷根：范登霍克与鲁普雷希特出版社，2006。
+
 ——。“现代时代！导言性评论”。载于《现代时代？20世纪的战争、革命与暴力》，7–11页。约尔格·巴布罗夫斯基编。哥廷根：范登霍克与鲁普雷希特出版社，2006。
+
 ——。《红色恐怖：斯大林主义的历史》。慕尼黑：德意志出版社，2003。
+
 巴约尔，弗兰克。“‘雅利安化’在汉堡：犹太企业家的驱逐，1933–1945”。汉堡：克里斯蒂安斯出版社，1997。
 
 贝克，基思·迈克尔，编。《旧制度与法国大革命》。芝加哥：芝加哥大学出版社，1987。
+
 鲍曼，齐格蒙特。《现代性与矛盾》。剑桥：波利蒂出版社，1993。
+
 本雅明，瓦尔特。《选集》。第1卷，1913–1926。剑桥：哈佛大学出版社，1996。
+
 比勒费尔德，乌尔里希。《民族与社会：法国与德国的自我主题化》。汉堡：汉堡版，2003。
+
 布朗，奥利维尔。《最后的信件：法国大革命的囚犯与囚徒，1793–1794》。伦敦：A. 德意志，1987。
+
 布莱兴，约亨。《奥古斯都：传记》。柏林：A. 费斯特，1998。
+
+
+
+# 参考文献
+
 布利茨，汉斯-马丁。《出于对祖国的爱：18世纪的德意志民族》。汉堡：汉堡版，2000。
+
 布鲁姆，哈罗德。《莎士比亚：人类之发明》。纽约：里弗黑德图书，1998。
+
 布鲁梅，迪特尔。《天堂的统治者：中世纪与文艺复兴的占星图像》。柏林：学院出版社，2000。
+
 博埃利施，瓦尔特。《柏林反犹主义争论》。法兰克福：因泽尔出版社，1965。
+
 伯梅，格诺特，与哈特穆特·伯梅。《理性的另一面：以康德为例的理性结构发展》。法兰克福：苏尔坎普出版社，1983。
+
 博勒尔，卡尔·海因茨。《恐怖的美学：悲观浪漫主义与恩斯特· Jünger早期作品》。柏林：乌尔斯坦，1995。
+
 伯内，路德维希。“论席勒戏剧中威廉·退尔的性格”。载于《 collected writings》，4:317–21。汉堡：霍夫曼与坎佩，1862。
+
 布劳代尔，费尔南。《商业之轮》。西安·雷诺兹译。纽约：哈珀与罗出版社，1982。
+
 布劳恩斯佩格尔，古德伦。《谢尔盖·涅恰耶夫与陀思妥耶夫斯基的《群魔》：恐怖主义精神中小说的诞生》。法兰克福：彼得·朗出版社，2002。
+
 布莱希特，贝托尔特。《索福克勒斯的《安提戈涅》》。载于《二十卷全集》，6:227–327。法兰克福：苏尔坎普，1993。
+
 ——。《采取的措施及其他教学剧》。卡尔·R·穆勒译。伦敦：艾尔·梅休恩，1977。
+
 ——。《股票交易所的圣女贞德》。弗兰克·琼斯译。布卢明顿：印第安纳大学出版社，1969。
+
 布雷希特肯，马格努斯。“马达加斯加给犹太人”：1885–1945年的反犹主义思想与政治实践。慕尼黑：奥尔登堡，1997。
+
 布劳宁，克里斯托弗·R。《普通人：101后备警察营与波兰的最终解决方案》。1992年再版。纽约：哈珀常青，1993。
+
 ——。《最终解决方案的起源：纳粹犹太政策的演变，1939年9月–1942年3月》。林肯：内布拉斯加大学出版社，2004。
+
 比希纳，格奥尔格。《丹东之死》。载于《丹东之死，莱昂斯与莱娜，沃伊采克》，1–72页。维克多·普赖斯译并导言。牛津：牛津大学出版社，1988。
 
-
-
-
 布德，汉斯。“无计可施的终点：社会学对20世纪灾难史有何话说？”《Mittelweg 36》3卷，第6期（1994）：40–46。
+
 布林，菲利普。《希特勒与犹太人：大屠杀的起源》。译者：帕齐·南盖特。纽约：爱德华·阿诺德出版社，1994。
+
 凯撒，尤利乌斯。《高卢战争七篇评注》。译者：卡罗琳·哈蒙德。牛津：牛津大学出版社，2008。
+
 坎佩，约阿希姆·海因里希。《年轻的罗宾逊》。法兰克福：F. Wilmans，1807。
+
 加缪，阿爾貝。《卡利古拉及其他三部剧作》。译者：斯图尔特·吉尔伯特。纽约：诺夫出版社，1958。
+
 ——。《鼠疫》。译者：斯图尔特·吉尔伯特。纽约：Vintage International，1991。
+
 卡内蒂，埃利亚斯。《人群与权力》。译者：卡罗尔·斯图尔特。纽约：法拉尔、斯特劳斯和吉鲁出版社，1988。
+
 卡莱尔，托马斯。《法国大革命：历史》。纽约：哈珀，1867。
+
 卡尔，爱德华·哈雷特。《浪漫流亡者：19世纪肖像画廊》。哈蒙沃思，英国：企鹅出版社，1949。
+
 切萨拉尼，大卫。《成为艾希曼：重新思考“办公桌杀手”的生平、罪行与审判》。剑桥，马萨诸塞州：Da Capo Press，2006。
+
 克拉森斯，迪特尔。“权力与统治、社会强制与暴力”。载于《社会学核心概念导论》，159–70页。编者：赫尔曼·科尔特与伯恩哈德·舍费尔斯。奥普拉登：莱斯凯与布德里希出版社，2000。
+
 克劳森，拉尔斯。《生产性劳动、破坏性劳动：社会学基础》。柏林：瓦尔特·德·格吕特尔出版社，1988。
+
 ——。“走向衰亡的过渡”。载于《剧烈社会变迁》，13–50页。奥普拉登：莱斯凯与布德里希出版社，1994。
+
 克洛， André。《穆斯林西班牙：八至十五世纪》。巴黎：佩兰出版社，1999。
+
 科尔佩，卡斯滕，与威廉·施密特-比格曼。《邪恶：不可解释之物的历史现象学》。法兰克福：苏尔坎普出版社，1993。
+
 康奎斯特，罗伯特。《大恐怖：斯大林三十年代的大清洗》。纽约：麦克米伦出版社，1968。
+
 科尔特斯，埃尔南。《墨西哥征服》。格里利：北科罗拉多大学人类学博物馆，1980。
+
 达尔海姆，维尔纳。《尤利乌斯·凯撒：战士的荣誉与国家的困境》。帕德博恩：F. Schöningh，2005。
+
 达恩，费利克斯。“战士法”。载于《基石：收集的小论文》，5/1:1–44。柏林：奥托·扬克出版社，1884。
+
 ——。“法律的形成与本质”。载于《基石：收集的小论文》，4/1:291–310。柏林：奥托·扬克出版社，1883。
+
 达莱尔，罗梅奥。《与魔鬼握手：卢旺达的人性失败》。纽约：卡罗尔与格拉夫出版社，2004。
+
 德尔布吕克，汉斯。《战争艺术史》。第3卷，中世纪战争。译者：沃尔特·J. 伦弗罗 Jr. 林肯：内布拉斯加大学出版社，1975。
+
 德曼特，亚历山大。《罗马皇帝的私生活》。慕尼黑：C. H. Beck，1996。
 
 德斯·福尔热，阿莉森。“《让无人讲述故事》：卢旺达大屠杀”。纽约：人权观察，1999。
@@ -5342,47 +5789,83 @@ Améry, Jean. "At the Mind's Limits." 载于 At the Mind's Limits: Contemplation
 
 恩德雷斯，马丁。《信任》。比勒费尔德：特兰斯克里普特出版社，2001。
 
-
-
 Enzensberger, Hans Magnus. Schreckens Männer: Versuch über den radikalen Verlierer. Frankfurt am Main: Suhrkamp, 2006.
+
 Eschbaumer, Gloria. Bescheidenliche Tortur: Der ehrbare Rat der Stadt Nördlingen im Hexenprozeß 1593/94 gegen die Kronenwirtin Maria Holl. Nördlingen: Verlag der Buchhandlung Greno, 1983.
+
 Euripides. Trojan Women. Translated by Alan Shapiro. Oxford: Oxford University Press, 2009.
+
 Evans, Richard J. Rituals of Retribution: Capital Punishment in Germany, 1600–1987. Oxford: Oxford University Press, 1996.
+
 Fest, Joachim C. Inside Hitler’s Bunker: The Last Days of the Third Reich. Translated by Margot Bettauer Dembo. New York: Farrar, Straus and Giroux, 2004.
+
+
+
 ——. Plotting Hitler’s Death: The Story of the German Resistance. Translated by Bruce Little. New York: Metropolitan Books, 1996.
+
 Figes, Orlando. A People’s Tragedy: The Russian Revolution: 1891–1924. New York: Penguin, 1998.
+
 Flasch, Kurt, ed. Aufklärung im Mittelalter? Die Verurteilung von 1277: Das Dokument des Bischofs von Paris. Mainz: Dieterich, 1989.
+
 ——. Augustin: Einführung in sein Denken. Reclam: Stuttgart, 1994.
+
 ——. Die geistige Mobilmachung: Die deutschen Intellektuellen und der Erste Weltkrieg. Berlin: A. Fest, 2000.
+
 Fogelman, Eva. Conscience and Courage: Rescuers of Jews During the Holocaust. New York: Anchor Book, 1994.
+
 Fortin, Ernest L., and Peter D. O’Neill, trans. “Condemnation of 219 Propositions.” In Medieval Political Philosophy: A Sourcebook, 335–54. Edited by Ralph Lerner and Muhsin Mahdi. New York: Free Press of Glencoe, 1963.
+
 Foucault, Michel. Discipline & Punish: The Birth of the Prison. New York: Pantheon Books, 1977.
+
 Frank, Richard B. “No Bomb, No End.” In What If? 2: Eminent Historians Imagine What Might Have Been, 367–81. Edited by Robert Cowley. New York: Putnam, 2001.
+
 Frederick the Great. Abhandlung über die Gründe, Gesetze einzuführen oder abzuschafen. In Friedrich der Große—Potsdammer Ausgabe, 6,261–304. Translated by Brunhilde Wehinger and edited by Anne Ballstaedt and Brunhilde Wehinger. Berlin: Akademie Verlag, 2007.
+
 Freud, Sigmund. Civilization and Its Discontents. In The Standard Edition of the Complete Psychological Works of Sigmund Freud, 21:57–146. Edited and translated by James Strachey. London: Hogarth Press, 1953–74.
+
 ——. “Family Romances.” In The Standard Edition of the Complete Psychological Works of Sigmund Freud, 9,235–42. Edited and translated by James Strachey. London: Hogarth Press, 1953–74.
+
 ——. The Ego and the Id. In The Standard Edition of the Complete Psychological Works of Sigmund Freud, 19,12–63. Edited and translated by James Strachey. London: Hogarth Press, 1953–74.
+
 ——. Group Psychology and the Analysis of the Ego. In The Standard Edition of the Complete Psychological Works of Sigmund Freud, 18:65–144. Edited and translated by James Strachey. London: Hogarth Press, 1953–74.
+
 ——. “Thoughts for the Times on War and Death.” In The Standard Edition of the Complete Psychological Works of Sigmund Freud, 14:273–300. Edited and translated by James Strachey. London: Hogarth Press, 1953–74.
+
 ——. “Three Essays on the Theory of Sexuality.” In The Standard Edition of the Complete Psychological Works of Sigmund Freud, 7:125–253. Edited and translated by James Strachey. London: Hogarth Press, 1953–74.
+
 ——. “The Uncanny.” In The Standard Edition of the Complete Psychological Works of Sigmund Freud, 17:217–52. Edited and translated by James Strachey. London: Hogarth Press, 1953–74.
+
 ——. “Why War?” In The Standard Edition of the Complete Psychological Works of Sigmund Freud, 22:195–216. Edited and translated by James Strachey. London: Hogarth Press, 1953–74.
+
 Friedländer, Saul. Die Entdecker des Ich: Montaigne—Pascal—Diderot. Munich: R. Piper, 1969.
+
 Friedländer, Saul. Nazi Germany and the Jews. Volume 1, The Years of Persecution, 1933–1939. New York: HarperCollins, 1997.
+
 ——. Nazi Germany and the Jews. Volume 2, The Years of Extermination, 1939–1945. New York: HarperCollins, 2007.
+
 Fromm, Erich. The Anatomy of Human Destructiveness. New York: Holt, Rinehart and Winston, 1973.
+
 Gänzfried, Daniel. Alias Wilkomirski: Die Holocaust-Travestie: Enthüllung und Dokumentation eines literarischen Skandals. Berlin: Jüdische Verlagsanstalt, 2002.
+
 Gernhardt, Robert. Gedichte: 1954–1994. Zurich: Haffmans Verlag, 1996.
+
 Giddens, Anthony. The Consequences of Modernity. Stanford: Stanford University Press, 1990.
+
 ——. The Constitution of Society: Outline of the Theory of Structuration. Cambridge: Polity Press, 1984.
+
 Gnesenau, Neidhardt von. “Plan zur Vorbereitung eines Volksaufstands.” In Guerrilleros, Partisanen: Theorie und Praxis, 41–68. Edited by Joachim Schickel. Munich: C. Hansen, 1970.
+
+
+
 Goethe, Johann Wolfgang von. Egmont. Translated by Michael Hamburger. In Goethe’s Collected Works, 7:83–152. New York: Suhrkamp Publishers, 1983–89.
+
 ——. Faust Part One. Translated with an introduction by David Luke. Oxford: Oxford University Press, 1998.
+
 ——. Faust Part Two. Translated with an introduction by David Luke. Oxford: Oxford University Press, 1998.
+
 ——. From My Life: Poetry and Truth. Translated by Robert R. Heitner. In Goethe’s Collected Works, 4/5:1–605. New York: Suhrkamp Publishers, 1983–89.
+
 ——. Goetz von Berlichingen with the Iron Hand. Translated by Cyrus Hamlin. In Goethe’s Collected Works, 7:1–82. New York: Suhrkamp Publishers, 1983–89.
-
-
 
 ——, 《The Siege of Mainz》。Thomas P. Saine 译。收录于《Goethe’s Collected Works》，5:609–776。New York: Suhrkamp Publishers, 1983–89。
 
@@ -5430,6 +5913,8 @@ Hassemer, Winfried. 《Einführung in die Grundlagen des Strafrechts》。2nd ed
 
 Hassemer, Winfried, and Jan Philipp Reemtsma. 《Verbrechensopfer: Gesetz und Gerechtigkeit》。Munich: C. H. Beck, 2002。
 
+
+
 Hassrick, Royal B. 《The Sioux: Life and Customs of a Warrior Society》。Norman: University of Oklahoma Press, 1964。
 
 Hayek, Friedrich A. 《The Road to Serfdom: Text and Documents》。New York: Routledge, 2008。
@@ -5447,8 +5932,6 @@ Heidegger, Martin. 《Being and Time》。John Macquarrie 和 Edward Robinson �
 Heim, Susanne, and Götz Aly. “Die Ökonomie der ‘Endlösung’: Menschenvernichtung und wirtschaftliche Neuordnung” 收录于《Sozialpolitik und Judenvernichtung: Gibt es eine politische Ökonomie der Endlösung?》，7–90。Berlin: Rotbuch Verlag, 1987。
 
 ———, 《Vordenker der Vernichtung: Auschwitz und die deutschen Pläne für eine neue europäische Ordnung》。Hamburg: Hoffmann and Campe, 1991。
-
-
 
 Helbing, Franz, and Max Bauer. *酷刑：历代各国刑事诉讼中酷刑的历史*. Berlin: P. Langenscheidt, 1926.
 
@@ -5500,6 +5983,8 @@ Keller, Gottfried. *《诗歌》*. In *《七卷本全集》*, 1:686–87. Edite
 
 Kempowski, Walter. *《回声测深仪：巴巴罗萨'41；一本集体日记》*. Munich: Knaus, 2002.
 
+
+
 Kempowski, Walter. *《哈米特。1990年日记》*. Munich: Knaus, 2006.
 
 Kempowski, Walter. *《无可指摘的与沃尔夫：一个资产阶级小说》*. 1971. Reprint. Munich: btb Verlag, 1996.
@@ -5540,25 +6025,42 @@ Kraus, Karl. *《人类的最后日子》*. In *Karl Kraus: Schriften*, volume 1
 
 Kraus, Karl. *《这些伟大的时代：卡尔·克劳斯读本》*. Translated by Joseph Fabry and Max Knight. Montreal: Engendra Press, 1976.
 
-
-
 ———, “Die Welt nach dem Kriege.” In Karl Kraus: Schriften, 16:297–99. Edited by Christian Wagenknecht. Suhrkamp: Frankfurt am Main, 1986–94.
+
 Krause, Jens-Uwe. Kriminalgeschichte der Antike. Munich: Beck, 2004.
+
 Kraushaar, Wolfgang. Die Protest-Chronik 1949–1959: Eine illustrierte Geschichte von Bewegung, Widerstand und Utopie. Hamburg: Rogner & Bernhard, 1996.
+
 Kraushaar, Wolfgang, Jan Philipp Reemtsma, and Hans Magnus Enzensberger. “Sie hatten nie eine politische Forderung …”: Ein Gespräch mit dem Schriftsteller Hans Magnus Enzensberger über die Hintergründe der RAF.” In Die RAF und der linke Terrorismus, 1:1392–1411. Edited by Wolfgang Kraushaar. Hamburg: Hamburger Edition, 2006.
+
 Lacan, Jacques. “The Mirror Stage as Formative of the I Function as Revealed in Psychoanalytic Experience.” In Écrits: The First Complete Edition in English, 75–81. Translated by Bruce Fink. New York: W. W. Norton & Co., 2006.
+
 Langewiesche, Dieter. “Eskalierte die Kriegsgewalt im Laufe der Geschichte?” In Moderne Zeiten? Krieg, Revolution und Gewalt im 20. Jahrhundert, 12–36. Edited by Jörg Baberowski. Göttingen: Vandenhoeck & Ruprecht, 2006.
+
 Laqueur, Thomas. “Von Agincourt bis Flandern: Nation, Name und Gedächtnis.” In Bilder der Nation: Kulturelle und politische Konstruktionen des Nationalen am Beginn der europäischen Moderne, 351–78. Edited by Ulrich Bielefeld and Gisela Engel. Hamburg: Hamburger Edition, 1998.
+
 Le Goff, Jacques. The Birth of Purgatory. Translated by Arthur Goldhammer. Chicago: Chicago University Press, 1984.
+
 Lea, Henry Charles. The History of the Inquisition of Spain. New York: The Macmillan Company, 1906–1907.
+
 ———. The Inquisition of the Middle Ages. New York: Macmillan, 1961.
+
+
+
 Leibniz, Gottfried Wilhelm. Theodicy: Essays on the Goodness of God, the Freedom of Man and the Origin of Evil. Edited by Austin Farrar. Translated by E. M. Huggard. Chicago: Open Court, 1985.
+
 Lemm, Robert. De Spaanse inquisitie: tussen geschiedenis en mythe. Kampen: Kok Agora, 1993.
+
 Lessing, Gotthold Ephraim. Nathan the Wise. Translated by Bayard Quincy Morgan. In Nathan the Wise, Minna von Barnhelm, and Other Plays and Writings, 173–276. Edited by Peter Demetz. New York: Continuum, 1991.
+
 Levi, Primo. The Drowned and the Saved. Translated by Raymond Rosenthal. New York: Summit Books, 1988.
-———. Survival in Auschwitz: The Nazi Assault on Humanity. Translated by Stuart Woolf. New York: Touchstone, 1996.
+
+——. Survival in Auschwitz: The Nazi Assault on Humanity. Translated by Stuart Woolf. New York: Touchstone, 1996.
+
 Lifton, Robert Jay, and Greg Mitchell. Hiroshima in America: Fifty Years of Denial. New York: Putnam’s Sons, 1995.
+
 Liulevicius, Vejas G. War Land on the Eastern Front: Culture, National Identity and German Occupation in World War I. Cambridge: Cambridge University Press, 2000.
+
 Livius, Titus. The History of Rome: The First Eight Books. Translated by D. Spillan. London: Henry G. Bohn, 1853.
 
 Lohmann, Hans-Martin. Alexander Mitscherlich. Reinbek: Rowohlt, 1987.
@@ -5607,69 +6109,128 @@ Mächler, Stefan. The Wilkomirski Affair: A Study in Biographical Truth. Transla
 
 Malia, Martin E. The Soviet Tragedy: A History of Socialism in Russia, 1917–1991. New York: The Free Press, 1994.
 
-
-
 Mann, Golo. 《书信，1932–1992年》。哥廷根：Wallstein，2006年。
+
+
+
 Mann, Thomas. 《布登勃洛克一家：一个家族的衰落》。John E. Woods 译。纽约：Knopf，1993年。
+
 ———.《费利克斯·克鲁尔的自白，一个投机者》。Denver Lindley 译。纽约：Knopf，1955年。
+
 ———.《日记，1944年–1946年4月1日》。Inge Jens 编。美因河畔法兰克福：S. Fischer，1986年。
+
 Marks, Richard Lee. 《科尔特斯：伟大冒险家与阿兹特克墨西哥的命运》。纽约：Knopf，1993年。
+
 May, Karl. 《银湖宝藏：一部旅行叙事》。Herbert Windolf 译。南达科他州皮尔庞特：Nemsis Books，2005年。
+
 Mehring, Franz. “威廉·退尔。”载于《全集》，第10卷，第259–65页。柏林：Dietz，1960–1967年。
+
 Meier, Christian. 《雅典：世界历史的新开端》。柏林：Siedler Verlag，1993年。
+
 ———.《凯撒》。David McLintock 译。纽约：BasicBooks/HarperCollins，1995年。
+
 ———.《希腊悲剧的政治艺术》。慕尼黑：Beck，1988年。
+
 Meier, Mischa. 《查士丁尼：统治、帝国与宗教》。慕尼黑：Beck，2004年。
+
 Merkel, Reinhard, 编. 《科索沃战争与国际法》。美因河畔法兰克福：Suhrkamp，2000年。
+
 ———.“纽伦堡审判。”载于《200天与一个世纪：以1945年为镜的暴力与破坏》。汉堡社会研究所编。汉堡：Hamburger Edition，1995年。
+
 Michaelis, Johann David. “对《戏剧图书馆》第一部分的评论。”载于《戈特霍尔德·埃夫莱姆·莱辛。十二卷本著作与书信》，第1卷，第1251–52页。Wilfried Barner 等人编。美因河畔法兰克福：Deutscher Klassiker Verlag，1985–2003年。
+
 Michel, Kai. “对马尔叙阿斯毫无怜悯：希腊人仔细观看暴力表现。”《法兰克福汇报》，2004年1月21日。
+
 Mitscherlich, Alexander. “两种残忍。”载于《全集》，第5卷，第322–42页。Klaus Menne 编。美因河畔法兰克福：Suhrkamp，1983年。
+
 ———.《死亡医生》。James Cleugh 译。伦敦：Elek Books，1962年。
+
 Mitscherlich, Alexander 和 Fred Mielke. 《蔑视人类的命令：一份文献》。海德堡：L. Schneider，1947年。
+
 Moltke, Helmuth Graf von. 《陆军元帅赫尔穆特·冯·毛奇伯爵的论文、演讲与回忆录》。Charles Flint McClumpha、C. Barter 少校和 Mary Herms 译。伦敦：J. R. Osgood, McIlvaine，1893年。
+
 Montaigne, Michel de. 《随笔全集》。M. A. Screech 译。哈蒙兹沃思：Penguin，1991年。
+
 Montefiore, Simon Sebag. 《斯大林：红色沙皇的宫廷》。纽约：Knopf，2004年。
+
 Münkler, Herfried. 《权力瓦解：以黑森州弗里德贝格县为例展示第三帝国的最后日子》。柏林：Siedler，1985年。
+
 Nassehi, Armin. 《现代性的社会学话语》。美因河畔法兰克福：Suhrkamp，2006年。
+
 Naumann, Klaus. 《民主中的将军：联邦国防军精英的代际历史研究》。汉堡：Hamburger Edition，2007年。
+
 Nedelmann, Birgitta. “暴力社会学在十字路口。”《科隆社会学与社会心理学杂志》第37卷（1997年）：第59–85页。
+
 Neiman, Susan. 《现代思想中的恶：一部另类哲学史》。普林斯顿：Princeton University Press，2002年。
+
 Netanyahu, Benzion. 《十五世纪西班牙宗教裁判所的起源》。纽约：Random House，1995年。
+
 Nietzsche, Friedrich. 《查拉图斯特拉如是说：一本为所有人而又不为任何人的书》。Adrian Del Caro 译。剑桥：Cambridge University Press，2006年。
+
 Offe, Claus. “我们如何信任我们的同胞？”载于《信任：社会凝聚力的基础》，第241–94页。Hartmann 和 Claus Offe 编。美因河畔法兰克福：Campus，2001年。
+
 Orlov, Yuri. 《危险思想：俄罗斯生活回忆录》。纽约：W. Morrow，1991年。
+
 Overy, Richard. 《审讯：盟军手中的纳粹精英，1945年》。纽约：Viking，2001年。
+
 Ovid. 《变形记》。Rolfe Humphries 译。布卢明顿：Indiana University Press，1955年。
+
 Paczensky, Gert von. 《白人统治：殖民主义史》。美因河畔法兰克福：Suhrkamp，1982年。
+
 Parker, Geoffrey. 《军事革命：军事创新与西方的崛起，1500–1800年》。剑桥：Cambridge University Press，1996年。
+
 Paul, Jean. 《彗星》。载于《作品集》，第6卷，第563–1036页。慕尼黑：Hanser，1975年。
+
 Payne, Robert 和 Nikita Romanoff. 《伊凡雷帝》。纽约：Crowell，1975年。
+
 Peters, Edward. 《酷刑》。纽约：Blackwell，1985年。
+
 Pirker, Theo 等人. 《计划作为命令与虚构：东德经济管理：对话与分析》。奥普拉登：Westdeutscher Verlag，1995年。
+
 Plack, Arno. 《社会与恶：对主流道德的批判》。慕尼黑：List，1967年。
+
 Plato. 《苏格拉底的最后日子》。Hugh Tredennick 和 Harold Tarrant 译。伦敦：Penguin Books，2003年。
+
 Plessner, Helmut. 《笑与哭：人类行为界限的研究》。James Spencer Churchill 和 Marjorie Grene 译。伊利诺伊州埃文斯顿：Northwestern University Press，1970年。
+
 Pliny the Younger. 《小普林尼书信集》。Betty Radice 译。伦敦：Penguin，1963年。
+
 Pohl, Dieter. 《大屠杀：原因、经过、后果》。弗赖堡：Herder，2000年。
+
 Pohl, Dieter 和 Andrej Angrick. 《入侵苏联中的C和D特别行动队》。Donald Bloxham 和 Ian Gronbach 译。伦敦：Holocaust Educational Trust，2000年。
+
 Poliakov, Léon. 《反犹主义史》。Richard Howard 译。费城：University of Pennsylvania Press，2003年。
 
-
-
 - 约瑟夫·波利申斯基（Josef Polišenský）、约瑟夫·科尔曼（Josef Kollmann）。《华伦斯坦：三十年战争中的统帅》。赫伯特·兰格译。科隆：伯劳出版社，1997。
+
 - 海因里希·波皮茨。《权力的现象》。蒂宾根：莫尔·西贝克出版社，1992。
+
 - 瓦尔特·珀策尔。《凶手、强盗、女巫：中世纪与近代早期的犯罪史》。奥格斯堡：奥格斯堡县乡土协会，2004。
+
 - 伦茨·普吕廷。“世界末日的霉菌：关于戏剧演出《KAFF 68!!》的几点评注”。《巴尔格费尔德信使：阿诺·施密特作品资料》第77–78期（1984年）：3–16页。
+
 - 伯顿·拉费尔译。《尼伯龙根之歌》。纽黑文：耶鲁大学出版社，2006。
+
 - 约瑟夫·拉青格（教宗本笃十六世）。《纳匝肋的耶稣：从约旦河受洗到显圣容》。阿德里安·J·沃克译。纽约：道布尔迪出版社，2007。
+
 - ——。《真理与宽容：基督信仰与世界宗教》。亨利·泰勒译。旧金山：伊格纳修斯出版社，2004。
+
 - 乌尔夫·冯·劳赫豪普特。“独立日：美国人为什么要用鱼雷炸彗星？这不危险吗？”。《法兰克福汇报·周日版》，2005年7月16日。
+
 - 扬·菲利普·雷姆茨马。《自我之书：克里斯蒂安·马丁·维兰德的〈阿里斯提波斯〉与他的一些同代人》。苏黎世：哈夫曼斯出版社，1993。
+
 - ——。“科尔蒂斯等”。载《法伦及其他：演讲与文章》，第167–88页。柏林：蒂阿马特出版社，1992。
+
 - ——。“对《奥德赛》第24歌第426至438行的几点思考”。载《为什么哈根杀死容-奥特利布：不合时宜地谈战争与死亡》，第15–35页。慕尼黑：贝克出版社，2003。
+
 - ——。“反种族主义的陷阱”。载《法伦及其他：演讲与文章》，第303–22页。柏林：蒂阿马特出版社，1992。
+
 - ——。《法治国家中的酷刑？》。汉堡：汉堡出版社，2005。
+
+
+
+## 参考文献
+
 - ——。“残酷与夜紫罗兰：试评海因里希·冯·克莱斯特作品中的战争”。载《为什么哈根杀死容-奥特利布：不合时宜地谈战争与死亡》，第95–201页。慕尼黑：贝克出版社，2003。
 - ——。“哈罗德·布鲁姆：莎士比亚。没有他我们会怎样？当语文学者痴迷——向威廉·莎士比亚的告白”。《Literaturen》第10期（2000年）：48–50页。
 - ——。“军队把人作为人来衡量：酷刑的新世纪”。载《酷刑：对一种统治手段的分析》，第25–35页。扬·菲利普·雷姆茨马编。汉堡：尤尼乌斯出版社，1991。
@@ -5688,83 +6249,109 @@ Poliakov, Léon. 《反犹主义史》。Richard Howard 译。费城：Universit
 - ——。“没别的了？或者：卡利班是谁？”。载《为什么哈根杀死容-奥特利布：不合时宜地谈战争与死亡》，第267–80页。慕尼黑：贝克出版社，2003。
 - ——。“国家恐怖”。载《虐待与酷刑》，第53–67页。曼弗雷德·厄米兴编。吕贝克：施密特-罗姆希尔德出版社，1998。
 - ——。“恐怖主义暴力：追问动机能澄清什么？”。载《恐怖的图像，图像的恐怖：9月11日当天及之后的危机报道》，第330–59页。米夏埃尔·博伊特纳、约阿希姆·布特勒等编。科隆：冯·哈勒姆出版社，2003。
+- ———, "汉森花园将如何？关于象征化能力不断丧失的思考。" 载于《多数人的不可言说之不哀悼的知识》，9–42页。慕尼黑：Beck，2005年。
+- ———, "创新者如何塑造死亡。" 为恩斯特·图根哈特在获颁迈斯特·埃卡特奖时所作的颂词，德国柏林，2005年12月5日。
+- ———, "我会如何行事？" 关于一个流行问题的思考。" 载于《我会如何行事？及其他不仅是德国的问题：演讲与论文集》，9–29页。慕尼黑：Beck，2001年。
+- ———, 《与西格蒙德·弗洛伊德何去何从？》 汉堡：汉堡版，2008年。
+- ———, "我们一切都为你！" 代序：一个研究纲领的草图。" 载于《酷刑：对一种统治手段的分析》，7–23页。由扬·菲利普·雷姆茨马编。汉堡：Junius，1991年。
+- Reichert, Klaus. 《陌生的莎士比亚》。慕尼黑：Hanser，1998年。
+- Reitlinger, Gerald. 《最终解决方案：企图灭绝欧洲犹太人，1939–1945》。Northvale, N.J.：Aronson，1987年。
+- Riedel, Gerda. 《被怀疑为女巫：彭茨林市民贝尼格娜·舒尔岑的宗教裁判与复审程序》。哥廷根：Wallstein Verlag，1998年。
+- Robespierre, Maximilien. "关于废除死刑"，114–17页。载于《法国大革命：文献集》。由Laura Mason 和 Tracey Rizzo 编。波士顿：Houghton Mifflin，1999年。
+- ———, 《美德与恐怖》。由 John Howe 译。伦敦：Verso，2007年。
+- Roeck, Bernd. 《仿佛世界即将破裂：三十年战争时代的一座城市》。慕尼黑：C. H. Beck，2006年。
+- Rolf, Malte. 《苏联群众集会》。汉堡：汉堡版，2006年。
+- Roper, Lyndal. 《女巫狂热：巴洛克德国的恐怖与幻想》。New Haven：Yale University Press，2006年。
+- Rorty, Richard. "人权、理性与感伤主义" 载于《真理与进步》，167–85页。剑桥：Cambridge University Press，1998年。
+- ———, 《反讽、偶然性、团结》。剑桥：Cambridge University Press，1989年。
+- Roth, Cecil. "马拉诺人与激进反犹主义：平行研究。" 《犹太社会研究》2卷，第3期（1940年）：239–48页。
+- Safranski, Rüdiger. 《邪恶，或，自由的戏剧》。慕尼黑：C. Hanser，1997年。
+- Sallust. 《喀提林阴谋》。载于《喀提林阴谋；朱古达战争；史记》，10–48页。由 William W. Batstone 译。牛津：Oxford University Press，2010年。
+- Sanson, Henri, 编译。 《桑松回忆录：摘自私人笔记与文件》。伦敦：Chatto and Windus，1876年。
+- Sartre, Jean-Paul. 《反犹主义者与犹太人》。由 George J. Becker 译。纽约：Grove Press，1962年。
+- ———, 《存在与虚无》。由 Hazel E. Barnes 译。伦敦：Methuen & Co.，1958年。
+- Schabas, William A. "‘可憎的瘟疫’：种族灭绝罪演变的解释。" 载于《战争罪与人权：关于死刑、正义与问责的论文集》，807–24页。伦敦：Cameron May，2008年。
+- ———, 《国际法中的种族灭绝：罪恶之罪》。剑桥：Cambridge University Press，2000年。
+- Scheerer, Thomas M. "布宜诺斯艾利斯的‘夜与雾’。" 载于《酷刑：对一种统治手段的分析》，91–154页。由 Jan Philipp Reemtsma 编。汉堡：Junius，1991年。
+- Schiller, Friedrich. 《论人的审美教育》。由 Reginald Snell 译。Mineola, N.Y.：Dover，2004年。
+- ———, 《皮科洛米尼》。载于《强盗与瓦伦斯坦》，215–318页。由 F. J. Lamport 译。Harmondsworth：Penguin，1979年。
+- ———, 《三十年战争》。由 A.J.W. Morrison 译。纽约：Harper & Brothers，1846年。
+- ———, 《威廉·退尔》。由 William F. Mainland 译。芝加哥：University of Chicago Press，1972年。
+- Schmidt, Arno. "半身穿孝的母牛。" 载于《阿诺·施密特短篇小说集》，第3卷，139–50页。由 James E. Woods 译。Normal, Ill.：Dalkey，1996年。
+- ———, 《黄金边缘的黄昏》。由 John E. Woods 译。纽约：Harcourt Brace Jovanovich，1980年。
+- ———, "利维坦。" 载于《短篇小说集》，25–55页。由 John E. Woods 译。Normal, Ill.：Dalkey Archive Press，1994年。
+- ———, "温柔的去人性化：‘晚夏’一百周年。" 载于《作品》，第二组，第2卷，61–85页。由 Arno Schmidt Stiftung 编。苏黎世：Haffmanns Verlag，1989–90年。
+- Schmitt, Carl. "领袖保护法律。" 载于《与魏玛-日内瓦-凡尔赛斗争中的立场与概念，1923–39》，227–32页。柏林：Duncker & Humblot，1994年。
+- Schmoeckel, Matthias. 《人道与国家理性：欧洲酷刑的废除以及自中世纪以来普通刑事诉讼与证据法的演变》。科隆：Böhlau，2000年。
+- Schöne, Albrecht. 《神祇记号、爱情巫术、撒旦崇拜：对旧歌德文本的新见解》。慕尼黑：C. H. Beck，1982年。
 
 
 
-———, "汉森花园将如何？关于象征化能力不断丧失的思考。" 载于《多数人的不可言说之不哀悼的知识》，9–42页。慕尼黑：Beck，2005年。
-———, "创新者如何塑造死亡。" 为恩斯特·图根哈特在获颁迈斯特·埃卡特奖时所作的颂词，德国柏林，2005年12月5日。
-———, "我会如何行事？" 关于一个流行问题的思考。" 载于《我会如何行事？及其他不仅是德国的问题：演讲与论文集》，9–29页。慕尼黑：Beck，2001年。
-———, 《与西格蒙德·弗洛伊德何去何从？》 汉堡：汉堡版，2008年。
-———, "我们一切都为你！" 代序：一个研究纲领的草图。" 载于《酷刑：对一种统治手段的分析》，7–23页。由扬·菲利普·雷姆茨马编。汉堡：Junius，1991年。
-Reichert, Klaus. 《陌生的莎士比亚》。慕尼黑：Hanser，1998年。
-Reitlinger, Gerald. 《最终解决方案：企图灭绝欧洲犹太人，1939–1945》。Northvale, N.J.：Aronson，1987年。
-Riedel, Gerda. 《被怀疑为女巫：彭茨林市民贝尼格娜·舒尔岑的宗教裁判与复审程序》。哥廷根：Wallstein Verlag，1998年。
-Robespierre, Maximilien. "关于废除死刑"，114–17页。载于《法国大革命：文献集》。由Laura Mason 和 Tracey Rizzo 编。波士顿：Houghton Mifflin，1999年。
-———, 《美德与恐怖》。由 John Howe 译。伦敦：Verso，2007年。
-Roeck, Bernd. 《仿佛世界即将破裂：三十年战争时代的一座城市》。慕尼黑：C. H. Beck，2006年。
-Rolf, Malte. 《苏联群众集会》。汉堡：汉堡版，2006年。
-Roper, Lyndal. 《女巫狂热：巴洛克德国的恐怖与幻想》。New Haven：Yale University Press，2006年。
-Rorty, Richard. "人权、理性与感伤主义" 载于《真理与进步》，167–85页。剑桥：Cambridge University Press，1998年。
-———, 《反讽、偶然性、团结》。剑桥：Cambridge University Press，1989年。
-Roth, Cecil. "马拉诺人与激进反犹主义：平行研究。" 《犹太社会研究》2卷，第3期（1940年）：239–48页。
-Safranski, Rüdiger. 《邪恶，或，自由的戏剧》。慕尼黑：C. Hanser，1997年。
-Sallust. 《喀提林阴谋》。载于《喀提林阴谋；朱古达战争；史记》，10–48页。由 William W. Batstone 译。牛津：Oxford University Press，2010年。
-Sanson, Henri, 编译。 《桑松回忆录：摘自私人笔记与文件》。伦敦：Chatto and Windus，1876年。
-Sartre, Jean-Paul. 《反犹主义者与犹太人》。由 George J. Becker 译。纽约：Grove Press，1962年。
-———, 《存在与虚无》。由 Hazel E. Barnes 译。伦敦：Methuen & Co.，1958年。
-Schabas, William A. "‘可憎的瘟疫’：种族灭绝罪演变的解释。" 载于《战争罪与人权：关于死刑、正义与问责的论文集》，807–24页。伦敦：Cameron May，2008年。
-———, 《国际法中的种族灭绝：罪恶之罪》。剑桥：Cambridge University Press，2000年。
-Scheerer, Thomas M. "布宜诺斯艾利斯的‘夜与雾’。" 载于《酷刑：对一种统治手段的分析》，91–154页。由 Jan Philipp Reemtsma 编。汉堡：Junius，1991年。
-Schiller, Friedrich. 《论人的审美教育》。由 Reginald Snell 译。Mineola, N.Y.：Dover，2004年。
-———, 《皮科洛米尼》。载于《强盗与瓦伦斯坦》，215–318页。由 F. J. Lamport 译。Harmondsworth：Penguin，1979年。
-———, 《三十年战争》。由 A.J.W. Morrison 译。纽约：Harper & Brothers，1846年。
-———, 《威廉·退尔》。由 William F. Mainland 译。芝加哥：University of Chicago Press，1972年。
-Schmidt, Arno. "半身穿孝的母牛。" 载于《阿诺·施密特短篇小说集》，第3卷，139–50页。由 James E. Woods 译。Normal, Ill.：Dalkey，1996年。
-———, 《黄金边缘的黄昏》。由 John E. Woods 译。纽约：Harcourt Brace Jovanovich，1980年。
-———, "利维坦。" 载于《短篇小说集》，25–55页。由 John E. Woods 译。Normal, Ill.：Dalkey Archive Press，1994年。
-———, "温柔的去人性化：‘晚夏’一百周年。" 载于《作品》，第二组，第2卷，61–85页。由 Arno Schmidt Stiftung 编。苏黎世：Haffmanns Verlag，1989–90年。
-Schmitt, Carl. "领袖保护法律。" 载于《与魏玛-日内瓦-凡尔赛斗争中的立场与概念，1923–39》，227–32页。柏林：Duncker & Humblot，1994年。
-Schmoeckel, Matthias. 《人道与国家理性：欧洲酷刑的废除以及自中世纪以来普通刑事诉讼与证据法的演变》。科隆：Böhlau，2000年。
-Schöne, Albrecht. 《神祇记号、爱情巫术、撒旦崇拜：对旧歌德文本的新见解》。慕尼黑：C. H. Beck，1982年。
 ———, 《约翰·沃尔夫冈·歌德评注》。载于《约翰·沃尔夫冈·歌德全集》，第7/2卷。法兰克福：Deutscher Klassiker Verlag，1994年。
+
 Schopenhauer, Arthur. 《道德的基础》。由 E. F. J. Payne 译。印第安纳波利斯：Hackett，1998年。
+
 ———, 《意志与表象的世界》。由 E. F. J. Payne 译。纽约：Dover，1958年。
+
 Schroers, Rolf. 《游击队员：‘抵抗中的人’》。明斯特：Votum，1989年。
+
 Schuller, Alexander, and Wollert von Rahden, 编。 《另一种力量：邪恶的复兴》。柏林：Akademie Verlag，1993年。
+
 Schulte, Christoph. 《彻底邪恶：从康德到尼采的邪恶生涯》。慕尼黑：Fink，1988年。
+
 Schulte, Rolf. 《16–18世纪石勒苏益格-荷尔斯泰因的女巫迫害》。Heide：Boyens & Co.，2001年。
+
 Schwarz, Hans. 《在邪恶的网中：罪、恶、罪责》。哥廷根：Vandenhoeck & Ruprecht，1993年。
 
-
-
 Sedley, David, ed. *剑桥希腊与罗马哲学伴侣.* Cambridge: Cambridge University Press, 2003.
+
 Seemann, Hans-Jürgen, and Rainer Meier. *邪恶原则：刁难的日常性.* Weinheim: Beltz, 1988.
+
 Seibt, Ferdinand. *中世纪的辉煌与困境：一段有限的历史.* Berlin: Siedler, 1987.
+
 Seifert, Jürgen. “Ulrike Meinhof” In *红军派与左翼恐怖主义*, 350–71. Edited by Wolfgang Kraushaar. Hamburg: Hamburger Edition, 2006.
+
 Seitschek, Hans Otto. “对极权主义作为宗教的解释。” In *极权主义与政治宗教*, 3:121–63. Translated by Jodi Bruhn and edited by Hans Maier. London: Routledge, 2004–2007.
+
 Sémelin, Jacques. *净化与毁灭：大屠杀与种族灭绝的政治用途.* Translated by Cynthia Schoch. London: Hurst & Company, 2007.
+
 Seneca. *书信* 66–92. Translated by Richard M. Gummere. Cambridge: Harvard University Press, 1962.
+
 Sengle, Friedrich. *维兰德.* Stuttgart: J. B. Metzler, 1949.
+
 Sereny, Gitta. *阿尔伯特·施佩尔：他与真相的斗争.* New York: Alfred A. Knopf, 1995.
+
 Service, Robert. *列宁：传记.* Cambridge: Harvard University Press, 2000.
+
 Shakespeare, William. *阿登莎士比亚全集.* Edited by Richard Proudfoot, Ann Thompson, and David Scott Kastan. Walton-on-Thames: Thomas Nelson, 1998.
+
 Shay, Jonathan. *越南的阿喀琉斯：战斗创伤与人格的瓦解.* New York: Scribner, 1994.
+
 Simmel, Georg. “社会如何可能？” In *Georg Simmel, 1858–1918: 论文集、译文与书目*, 337–56. Edited and translated by Kurt H. Wolff. Columbus: Ohio State University Press, 1959.
+
 Smith, Thomas F. A. *德国人怎么想，或德国人眼中的战争.* New York: Doan, 1915.
+
 Sofsky, Wolfgang. *恐怖的秩序：集中营.* Frankfurt am Main: S. Fischer, 1993.
-———. *论暴力.* Frankfurt am Main: S. Fischer, 1996.
+
+———, *论暴力.* Frankfurt am Main: S. Fischer, 1996.
+
 Sofsky, Wolfgang, and Rainer Parin. *社会权力的图式：权威—代理—联盟.* Frankfurt am Main: Suhrkamp, 1994.
+
 Sontheimer, Michael. “去殖民化：柬埔寨。” In *200天与一个世纪：1945年暴力与破坏性的镜像*, 145–66. Edited by Hamburger Institut für Sozialforschung. Hamburg: Hamburger Edition, 1995.
+
 Sophocles. *安提戈涅.* Translated by Reginald Gibbons and Charles Segal. Oxford: Oxford University Press, 2003.
+
 Spee, Friedrich von. *Cautio Criminalis，或，关于巫术审判之书.* Translated by Marcus Hellyer. Charlottesville: University of Virginia Press, 2003.
+
 Speitel, Volker. “‘我们想要一切，同时又什么都不想要’：前恐怖分子 Volker Speitel 谈他在西德城市游击队中的经历。” *Der Spiegel*, August 11, 1980.
+
 Starobinski, Jean. *在运动中的蒙田.* Chicago: University of Chicago Press, 1985.
 
 ## BIBLIOGRAPHY 379
 
 Stone, I. F. *苏格拉底审判*. London: Pimlico, 1997.
 
-Stuby, Gerhard. “国际刑事司法与国家主权。” In *对人类罪行的审判：纽伦堡审判50年后之国际刑法*, 429–64. Edited by Gerd Hankel and Gerhard Stuby. Hamburg: Hamburger Edition, 1995.
+Stuby, Gerhard. “国际刑事司法与国家主权。” In *对人类罪行的审判：纽伦堡审判50年之后国际刑法*, 429–64. Edited by Gerd Hankel and Gerhard Stuby. Hamburg: Hamburger Edition, 1995.
 
 Suerbaum, Ulrich. *莎士比亚指南*. Stuttgart: Reclam, 2001.
 
@@ -5790,49 +6377,70 @@ Trotha, Trutz von. “论暴力的社会学。” *Kölner Zeitschrift für Sozi
 
 Tuchman, Barbara. *遥远的镜子：灾难性的14世纪*. New York: Ballantine, 1978.
 
-———. *愚行之路：从特洛伊到越南*. New York: Knopf, 1984.
+———, *愚行之路：从特洛伊到越南*. New York: Knopf, 1984.
 
 Tugendhat, Ernst. “我们应如何理解道德？” In *论文集 1992–2000*, 163–84. Suhrkamp: Frankfurt am Main, 2001.
 
-Vachss, Andrew, and Claus Leggewie. *论邪恶：Andrew Vachss 与 Klaus Leggewie 对话*. Frankfurt am Main: Eichborn, 1994.
-
-Volkogonov, Dmitri. *帝国的尸检：建立苏联政权的七位领导人*. New York: Free Press, 1998.
-
-Vollmann, Rolf. *莎士比亚方舟：谋杀与美的字母表*. Nördlingen: F. Greno, 1988.
-
-Waldmann, Peter. *恐怖主义：权力的挑衅*. Munich: Gerling Akademie Verlag, 1998.
-
-Wallach, Jehuda. *战争理论：其在19世纪与20世纪的发展*. Frankfurt am Main: Bernard & Graefe, 1972.
-
-Walther von der Vogelweide. *瓦尔特·冯·德·福格尔魏德：单诗节歌词*. Translated by Frederick Golden. New York: Routledge, 2003.
-
-Waterfield, Robin, trans. *第一批哲学家：前苏格拉底派与诡辩家*. Oxford: Oxford University Press, 2000.
-
-Weber, Max. *经济与社会：诠释社会学大纲*. Translated by Ephraim Fischoff and others. Berkeley: University of California Press, 1978.
 
 
+## 参考文献
 
+Vachss, Andrew, and Claus Leggewie. `论邪恶：Andrew Vachss 与 Klaus Leggewie 对话`. Frankfurt am Main: Eichborn, 1994.
+
+Volkogonov, Dmitri. `帝国的尸检：建立苏联政权的七位领导人`. New York: Free Press, 1998.
+
+Vollmann, Rolf. `莎士比亚方舟：谋杀与美的字母表`. Nördlingen: F. Greno, 1988.
+
+Waldmann, Peter. `恐怖主义：权力的挑衅`. Munich: Gerling Akademie Verlag, 1998.
+
+Wallach, Jehuda. `战争理论：其在19世纪与20世纪的发展`. Frankfurt am Main: Bernard & Graefe, 1972.
+
+Walther von der Vogelweide. `瓦尔特·冯·德·福格尔魏德：单诗节歌词`. Translated by Frederick Golden. New York: Routledge, 2003.
+
+Waterfield, Robin, trans. `第一批哲学家：前苏格拉底派与诡辩家`. Oxford: Oxford University Press, 2000.
+
+Weber, Max. `经济与社会：诠释社会学大纲`. Translated by Ephraim Fischoff and others. Berkeley: University of California Press, 1978.
 
 C. V. 韦奇伍德. 《三十年战争》. 1938. 再版. 纽约：纽约书评出版社，2005.
-卡尔-威廉·维尔魏. 《斯巴达：一个古代强国的兴衰》. 斯图加特：克莱特-科塔出版社，2004.
-斯坦利·韦斯顿. 《重量级冠军》. 纽约：Ace Book出版社，1976.
-克里斯托夫·马丁·维兰德. 《亚里斯提卜及其几位同时代人》. 载《全集》第6卷，1794. 再版. 汉堡：汉堡促进科学与文化基金会，1984.
-———， “论自然的爱国主义：思考、问题与怀疑。” 载《政治著作，尤其是关于法国大革命》第3卷，第125–37页. 扬·菲利普·雷姆茨马与汉斯和约翰娜·拉德西皮勒主编. 讷德林根：F. 格雷诺出版社，1988.
-卡琳·维兰德. “安德烈亚斯·巴德尔。” 载《红军派与左翼恐怖主义》，第332–49页. 沃尔夫冈·克劳斯哈尔主编. 汉堡：汉堡出版社，2006.
-米夏埃尔·维尔特. “阿利的人民国家：一门学问的傲慢与简单化。” 《Mittelweg 36》第3期（2005）：69–80.
-———， “他必须出去！他必须出去！” 《Mittelweg 36》第10卷，第4期（2001）：2–25.
-———， 《不妥协的一代：帝国安全总局的纳粹领导层》. 汤姆·兰珀特译. 麦迪逊：威斯康星大学出版社，2009.
-———， 《情报机构、政治精英、谋杀机构：党卫队全国领袖的安全处》. 汉堡：汉堡出版社，2003.
-———， “民族共同体国家的政治秩序：重审恩斯特·弗伦克尔的《双重国家》。” 《Mittelweg 36》第12卷，第2期（2003）：45–61.
-———， “纳粹是野蛮人吗？” 载《Mittelweg 36》第15卷，第2期（2006）：8–26.
-———， 《作为自我赋权的民族共同体：1919至1939年德国外省针对犹太人的暴力》. 汉堡：汉堡出版社，2007.
-本杰明·维尔科米尔斯基. 《碎片：战时童年回忆》. 卡罗尔·布朗·詹纳韦译. 纽约：朔肯出版社，1996.
-伯纳德·威廉斯. 《真理与真诚》. 普林斯顿：普林斯顿大学出版社，2002.
-唐纳德·伍兹·温尼科特. “母亲与家庭在儿童发展中的镜像角色。” 载《游戏与现实》，第111–18页. 伦敦：塔维斯托克出版社，1971.
-阿洛伊斯·温特林. 《卡利古拉：一部传记》. 慕尼黑：贝克出版社，2003.
-卡罗尔·沃伊蒂瓦（若望·保禄二世）. 《记忆与身份：千年之交的对话》. 纽约：里佐利出版社，2005.
-沃尔夫拉姆·冯·埃申巴赫. 《帕尔齐法尔》. A. T. 哈托译. 英国哈蒙兹沃思：企鹅出版社，1980.
-色诺芬. 《回忆苏格拉底》. E. C. 马钱特译. 剑桥：哈佛大学出版社，1923.
-莱尼·亚希尔. 《大屠杀：欧洲犹太人的命运，1932–1945》. 伊娜·弗里德曼和哈雅·加莱译. 纽约：牛津大学出版社，1990.
-安德烈·日丹诺夫. 《联共（布）党章修正案：在联共（布）第十八次代表大会上的报告，1939年3月18日》. 莫斯科：外国文书籍出版局，1939.
 
+卡尔-威廉·维尔魏. 《斯巴达：一个古代强国的兴衰》. 斯图加特：克莱特-科塔出版社，2004.
+
+斯坦利·韦斯顿. 《重量级冠军》. 纽约：Ace Book出版社，1976.
+
+克里斯托夫·马丁·维兰德. 《亚里斯提卜及其几位同时代人》. 载《全集》第6卷，1794. 再版. 汉堡：汉堡促进科学与文化基金会，1984.
+
+———， “论自然的爱国主义：思考、问题与怀疑。” 载《政治著作，尤其是关于法国大革命》第3卷，第125–37页. 扬·菲利普·雷姆茨马与汉斯和约翰娜·拉德西皮勒主编. 讷德林根：F. 格雷诺出版社，1988.
+
+卡琳·维兰德. “安德烈亚斯·巴德尔。” 载《红军派与左翼恐怖主义》，第332–49页. 沃尔夫冈·克劳斯哈尔主编. 汉堡：汉堡出版社，2006.
+
+米夏埃尔·维尔特. “阿利的人民国家：一门学问的傲慢与简单化。” 《Mittelweg 36》第3期（2005）：69–80.
+
+———， “他必须出去！他必须出去！” 《Mittelweg 36》第10卷，第4期（2001）：2–25.
+
+———， 《不妥协的一代：帝国安全总局的纳粹领导层》. 汤姆·兰珀特译. 麦迪逊：威斯康星大学出版社，2009.
+
+———， 《情报机构、政治精英、谋杀机构：党卫队全国领袖的安全处》. 汉堡：汉堡出版社，2003.
+
+———， “民族共同体国家的政治秩序：重审恩斯特·弗伦克尔的《双重国家》。” 《Mittelweg 36》第12卷，第2期（2003）：45–61.
+
+———， “纳粹是野蛮人吗？” 载《Mittelweg 36》第15卷，第2期（2006）：8–26.
+
+———， 《作为自我赋权的民族共同体：1919至1939年德国外省针对犹太人的暴力》. 汉堡：汉堡出版社，2007.
+
+本杰明·维尔科米尔斯基. 《碎片：战时童年回忆》. 卡罗尔·布朗·詹纳韦译. 纽约：朔肯出版社，1996.
+
+伯纳德·威廉斯. 《真理与真诚》. 普林斯顿：普林斯顿大学出版社，2002.
+
+唐纳德·伍兹·温尼科特. “母亲与家庭在儿童发展中的镜像角色。” 载《游戏与现实》，第111–18页. 伦敦：塔维斯托克出版社，1971.
+
+阿洛伊斯·温特林. 《卡利古拉：一部传记》. 慕尼黑：贝克出版社，2003.
+
+卡罗尔·沃伊蒂瓦（若望·保禄二世）. 《记忆与身份：千年之交的对话》. 纽约：里佐利出版社，2005.
+
+沃尔夫拉姆·冯·埃申巴赫. 《帕尔齐法尔》. A. T. 哈托译. 英国哈蒙兹沃思：企鹅出版社，1980.
+
+色诺芬. 《回忆苏格拉底》. E. C. 马钱特译. 剑桥：哈佛大学出版社，1923.
+
+莱尼·亚希尔. 《大屠杀：欧洲犹太人的命运，1932–1945》. 伊娜·弗里德曼和哈雅·加莱译. 纽约：牛津大学出版社，1990.
+
+安德烈·日丹诺夫. 《联共（布）党章修正案：在联共（布）第十八次代表大会上的报告，1939年3月18日》. 莫斯科：外国文书籍出版局，1939.

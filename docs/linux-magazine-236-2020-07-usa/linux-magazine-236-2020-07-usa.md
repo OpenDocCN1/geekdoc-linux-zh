@@ -1,49 +1,15 @@
+
 # Linux Magazine 第236 期 2020-07 美国
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 LINUX 新媒体
+
 开源的脉动
 
-
 直播你的
+
 更智能的目录
+
 后院鸟巢
-
-
 
 更智能的目录
 
@@ -73,12 +39,12 @@ FOSSPicks
 - StarCharter
 - SteamCAD 火车
 - 带有 ChordPro 的和弦图
-
 - 高级 Markdown 编辑器
 - maddog: 笔记本上的 Linux
 - KMyMoney
 
 存储开发者大会
+
 2020年9月21-24日
 
 - 持久内存
@@ -87,9 +53,7 @@ FOSSPicks
 - 计算存储
 - 数据安全及更多
 
-
-在 www.snia.org/SDcode 注册并使用代码 SDC20LINUXPRO 即可立免 200 美元注册费。
-
+在 `www.snia.org/SDcode` 注册并使用代码 `SDC20LINUXPRO` 即可立免 200 美元注册费。
 
 # 编辑观点
 
@@ -105,7 +69,6 @@ FOSSPicks
 
 作为其第一季度报告的一部分，沃尔玛刚刚静静地合并了 Jet.com，这种低调的业务已经进行了一段时间，当然，但承认这并不完全由于疫情引发的突发变化。老牌供应商在突然试图通过收购来重新定义自己时，看起来总是有些绝望。这让人想起微软的转型方式以及在风险投资中的其他失误。但认真地说，资本家们预测了30年。无论你是否尝试在以前不存在的地方建立一个内部，甚至更大。沃尔玛掷了骰子。观察者说他们输了赌，正如通常一样，事实要复杂得多。自从收购 Jet.com 以来，沃尔玛逐渐将 Jet.com 集成到自己的平台中，包括最初帮助区分 Jet.com（以及其他供应商）的关键功能。Joe Casad 现在是沃尔玛自有电子商务部门的负责人。互联网初创公司每天都在发生。故事有趣的地方在于，沃尔玛决定维持 Jet.com 作为一个独立品牌没有意义。他们可以以沃尔玛的身份经营，并与在线巨头直接竞争。我们正在见证低科技与高科技之间界限的模糊吗？当沃尔玛和其他实体商家计划围攻亚马逊的在线 LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM 
 
-
 2020年7月
 
 ## 新闻
@@ -113,96 +76,117 @@ FOSSPicks
 ## 封面故事
 
 08 新闻
+
 16 语义文件组织
 
-
 - Linux 使用率正在上升
+
 根据定义标准命名文件可以节省时间，并最大化日后找到文件的几率。
+
 - 联想正在加入 Linux 笔记本风潮
+
 全球计算机系统中使用的嵌套文件和目录的严格结构是在几十年前创建的，并且
+
 - 一款 Linux 笔记本正在制作中
+
 - Ubuntu 20.04 发布
+
 - Git 2.26 发布
 
 专家认为我们可以做得更好。本月，你将学习关于 Linux 中语义文件标记的一些脚本。此外还有：
 
 12 内核新闻
+
 - 适应 COVID-19
+
 - 133 安全
+
 - 使用 ProjectLibre 管理人员和项目（第30页）
+
 - 使用 OpenCart 构建电子商务（第36页）
 
 如果你一直想知道如何用 Rasp Pi 浇植物，请参阅 MakerSpace，并查看 LinuxVoice 获取两个实用的
 
 ## 评论
+
 ## 深度
 
-
-
-
 22 发行版漫游
+
 26 编程快照 – Markdown 编辑器。
 
 几个领先的 Linux 发行版正在采取措施应对新冠肺炎带来的挑战。
 
 Go 切片 (Slices)
+
 春季是应用之季！Mike
 
 ## 服务
+
 Schil 挖掘了一个 Google 工程面试中被提出的问题，并用 Go 解释了一个可能的解决方案。
-
-
-
-
 
 ## 深度
 
 # 创客空间
 
 30 ProjectLibre
+
 ProjectLibre 帮助你使用 SSH组织并创建监控仪表板，优化包含大量命令行工具和 Node-RED 移动部分的复杂项目。
 
 58 自动灌溉
+
 使用由 Raspberry Pi Zero W、模拟数转换器和一个廉价灌溉套件组成的自动浇水系统来养护你的植物。
 
 36 OpenCart
+
 这个开源电子商务系统让你能在几分钟内让商店上线。
 
 42 创建电子书
+
 使用 LibreOffice Writer 和 Calibre，你可以发布自己的电子书，其效果比大多数在线转换工具都要好。
 
 65 欢迎
+
 76 theShell
+
 本期 Linux Voice 内容。
 
 这款精简桌面展示了，如果你跳出过时的常规，易用界面可以长什么样。
 
 66 Doghouse – 笔记本电脑上的 Linux
+
 Maddog 研究了笔记本电脑制造商、电脑商店和 Linux 用户之间复杂的关系。
 
 46 命令行 – debfoster
-当要在 Debian 系统上剔除不必要的软件包时，debfoster 让你能够方便地将所有清理功能整合到一个单一命令中。
+
+当要在 Debian 系统上剔除不必要的软件包时，`debfoster` 让你能够方便地将所有清理功能整合到一个单一命令中。
 
 82 FOSSPicks
+
 Graham 展望了 Inkscape 1.0、PCem、StarCharter、Falcon、Squeezer、Simula、vitetris 等！
 
 68 ChordPro
+
 如果你弹弦乐器并想记录歌词和和弦变化，ChordPro 提供了一种优雅且方便的方法，将这一切记录在纸上。
 
 49 Charly – 运动检测
+
 Charly 在他花园的鸟巢里运行了多年初代 Raspberry Pi，但树莓派最终遭了马黄蜂的侵害。现在 Charly 用一个带有 Noir 摄像头和运动检测的 RPi3 替换了它。
 
 50 bauh
-bauh 包管理器可以处理 Flatpaks、Snaps、AppImages、AUR 和原生 Web 应用。
+
+`bauh` 包管理器可以处理 Flatpaks、Snaps、AppImages、AUR 和原生 Web 应用。
 
 90 KMyMoney
+
 72 Mark Text 和 VNote
+
 个人财务程序 Markdown 编辑器 Mark Text 和 KMyMoney 可以帮助你在规划财务未来时跟踪收支。
 
 以及选项
 
-
 ## 两个极佳发行版的双面 DVD！
+
 详情请参阅第 6 页
 
 本月 DVD：Ubuntu 20.04 桌面版和 Fedora 32。
@@ -212,7 +196,9 @@ bauh 包管理器可以处理 Flatpaks、Snaps、AppImages、AUR 和原生 Web �
 主题 – 包含了 Gnome 36，其中包含。它默认启用显示了改进的字体支持以及对 Gnome 浏览器的修复进展得有多快。另一个新功能是 Linux 内核 5.4。Fedora 32 的另一个重大变化是 earlyoom [3]，它包含了 Linux 内核锁定（lockdown），该组件旨在通过限制对内核的访问来解决问题。Ubuntu 20.04 还包含了一些具有争议性的选择。内存和交换空间受到限制。基本上，如果内存低于 10%，earlyoom 将杀掉第一个占用内存最大的 Amazon 应用。由于该功能占用内存最多，当总内存低于 5% 时，earlyoom 也会杀掉该进程。如果没有 earlyoom，系统将会挂起，用户只能重启来恢复。此类情况可能会变得复杂，开发者正尝试决定最佳解决方向。争议的一个可能原因是，earlyoom 随着时间的推移并没有消失。Ubuntu 20.04 还增加了对企业测试场使用的 ZFS 根文件系统的改进支持。在 Ubuntu 19.04 中，ZFS 曾被 Linus Torvalds 批评，理由是没有得到原始开发者的支持。此外，ZFS 的 CDDL 许可证与内核的 GNU 通用公共许可证 v2.0 不兼容。尽管内核不支持 ZFS，但 Ubuntu 一极支持 ZFS 提供了增强的安全性和数据保护。
 
 额外资源
+
 缺陷光盘将被更换。
+
 - [1] Ubuntu 20.04: https://omubuntu.co.uk/2019/10/ubuntu-20-04-release
 - [2] Fedora 32: https://fedoramagine.org/announcing-the-best-release-of-fedora-32-beta/
 - [3] earlyoom: https://fedaproject.org/wiki/
@@ -222,9 +208,11 @@ bauh 包管理器可以处理 Flatpaks、Snaps、AppImages、AUR 和原生 Web �
 Enable_EarlyOOM
 
 # 逛商店
+
 shop.linuxnewmedia.com
 
 ## 使用 101 个 Linux 技巧提高效率
+
 通过这本为 Linux 极客设计的灵感技巧和快捷键集合提升你的 Linux 技能。
 
 - 恢复丢失的文件
@@ -232,10 +220,6 @@ shop.linuxnewmedia.com
 - 在 Shell 中运行 C 单行语句
 - 禁用摄像头和麦克风
 - 以及更多！
-
-
-
-
 
 ## 新闻
 
@@ -257,13 +241,13 @@ COVID-19 疫情对经济和消费习惯产生了严重影响。许多企业已�
 
 在你感到太兴奋之前，这并不是说 Linux 突然超越了 Windows 或 macOS。事实上，Linux 桌面端的使用率仍处于位数。然而，相比之下，Linux 在 4 月的增长率实际上超过了 Windows 和 macOS。
 
-这些数据描绘了一幅有趣的画面，直接指向 Ubuntu。在 4 月份，Ubuntu 的市场份额增加了 1.61%（从 0.27% 增加到 1.88%），而 Linux 整体增加了 1.51%（从 1.36% 增加到 2.87%）。这恰好与 Ubuntu 20.04 (https://releases.ubuntu.com/20.04/) 的发布相吻，该版本获得了一致好评。
+这些数据描绘了一幅有趣的画面，直接指向 Ubuntu。在 4 月份，Ubuntu 的市场份额增加了 1.61%（从 0.27% 增加到 1.88%），而 Linux 整体增加了 1.51%（从 1.36% 增加到 2.87%）。这恰好与 Ubuntu 20.04 (`https://releases.ubuntu.com/20.04/`) 的发布相吻，该版本获得了一致好评。
 
 当 Linux 上升近两个百分点时，Microsoft Windows 下降了两个百分点，从 89% 降至 87%。与此同时，macOS 上升了一个百分点。
 
 尽管这意味着 Linux 已统治市场且其统治世界的梦想很快就会实现，但开源桌面市场份额的任何增长都是一种胜利。
 
-信息来源：https://netmarketshare.com/operating-system-marketshare.aspx
+信息来源：`https://netmarketshare.com/operating-system-marketshare.aspx`
 
 ## 联想加入 Linux 笔记本电脑热潮
 
@@ -299,7 +283,7 @@ Pymp – 类 OpenMP 的 Python 编程
 
 - Chris Binnie
 
-目前尚未公布有关发布日期或定价的信息。一项新旧结合的功能允许你在 AWS Lambda 层中运行 Bash 脚本。易于部署的云原生应用包 容器部署 来源：https://fedoramagazine.org/coming-soon-fedora-on-lenovo-laptops/
+目前尚未公布有关发布日期或定价的信息。一项新旧结合的功能允许你在 AWS Lambda 层中运行 Bash 脚本。易于部署的云原生应用包 容器部署 来源：`https://fedoramagazine.org/coming-soon-fedora-on-lenovo-laptops/`
 
 ## 一款新的 Linux 笔记本电脑正在制作中
 
@@ -309,9 +293,6 @@ TUXEDO Computers 正与 Manjaro Linux 团队合作，打造一款基于 Manjaro 
 
 - Martin Loschwitz
 
-
-
-
 协议版本 2 会随着客户端请求自动启动，并为客户端告知服务器其感兴趣的引用提供方法。因此，如果客户端请求单个分支，那就是客户端收到的唯一信息。
 
 从 Git 协议版本 1 切换到版本 2意味着 Git 在处理大型项目时效率将显著提高。
@@ -319,32 +300,27 @@ TUXEDO Computers 正与 Manjaro Linux 团队合作，打造一款基于 Manjaro 
 其他令人兴奋的功能包括：
 
 - *改进的 fsmonitor-watchman 钩，将避免之前版本中存在的竞态条件*
+- *取消了每周在收件箱中使用多线程 grep 的限制*
+- *更低的内存占用使得 Git name-rev 函数性能更好*
+- *命令行界面颜色现在为包含的七种颜色提供了更亮的颜色变体选项*
 
 ## 获取最新消息
 
 - * 取消了每周在收件箱中使用多线程 grep 的限制*
-
 - *更低的内存占用使得 Git name-rev 函数性能更好*
-
 - *命令行界面颜色现在为包含的七种颜色提供了更亮的颜色变体选项*
 
 ## 免费订阅
 
 - 许多错误修复
 
-
-更多信息，请阅读 Git 的官方公告（https://github.bit.ly/Linux-Update-blog/2020-03-22-highlights-from-git-2-26/）。
-
-
-
-
+更多信息，请阅读 Git 的官方公告（`https://github.bit.ly/Linux-Update-blog/2020-03-22-highlights-from-git-2-26/`）。
 
 ## 访问商店
 
 想要订阅吗？在寻找那个你真希望在报刊亭买过的期数吗？
 
 ## 在 Linux New Media 在线商店探索过去并投资新一年的 IT 解决方案。
-
 
 ## 数字与纸质订阅
 
@@ -382,13 +358,13 @@ Kees Cook 对该补丁表示认可，Al Viro 则提出了一些建议以规范�
 
 在线互动确实与众不同。这也许是那种允许邮件列表上发生持续数月的口水战，但面对面会议中争吵少得多的区别。
 
-他补充道：“明年会议将于 2021 年 5 月 12-14 日在棕榈泉的 Riviera 酒店举行。将再次举行新的征稿（CFP）和注册，以及新一轮邀请。程序委员会将保持不变，明年我们将选择新成员。”
 
+
+他补充道：“明年会议将于 2021 年 5 月 12-14 日在棕榈泉的 Riviera 酒店举行。将再次举行新的征稿（CFP）和注册，以及新一轮邀请。程序委员会将保持不变，明年我们将选择新成员。”
 
 想要订阅吗？在寻找那个你真希望在报刊亭买过的期数吗？
 
-## 在 Linux New Media 在线商店探索过去并投资新一年的 IT 解决方案。
-
+# 在 Linux New Media 在线商店探索过去并投资新一年的 IT 解决方案
 
 ## 数字与纸质订阅
 
@@ -402,7 +378,7 @@ Kees Cook 对该补丁表示认可，Al Viro 则提出了一些建议以规范�
 
 ## 新闻
 
-内核新闻
+### 内核新闻
 
 Zack 的内核新闻
 
@@ -411,8 +387,6 @@ Zack 的内核新闻
 # I33t 安全
 
 持续的 COVID-19 流行病确实
-
-*(注：原文后续存在大量重复段落，已根据要求不重复输出原文原则进行处理)*
 
 “而且你得_内化_它，接受一个 `const void *addr` 作为输入，攻击者试图替换其中的一部分，而不是嗤之以鼻。我很好奇为什么指针必须是带有黑客自己的常量的内核代码。他将原型追溯到 Linux v2.1.44，该版本更改了你随后引入的关于指针从 `void *` 变为 `const void *` 的补丁，但”
 
@@ -466,15 +440,15 @@ struct mystruct {
 
 “那是错的。”“所以在分配之前不是 `const`，但在之后变成了 `const`，而且释放它不会改变这一点，它只是在未来杀死了某人-整个-生命周期。”
 
-
-
 第 236 期
+
 2020年7月
+
 13
 
 ## 新闻
 
-内核新闻
+### 内核新闻
 
 “所以 `free()` 应该接受一个 `const`”
 
@@ -534,11 +508,7 @@ David Howells 建议实际上向 GCC 开发者提到这一点，
 
 Q Q Q
 
-
-
-
-
-## LINUX 更新
+# LINUX 更新
 
 ## 需要更多 Linux 吗？
 
@@ -549,11 +519,11 @@ Q Q Q
 - 关于 Bash 脚本和其他高级技巧的提示
 - 仅供邮件订阅者的折扣和特别优惠
 
-## 封面故事
+# 封面故事
 
 ## 语义化文件组织
 
-## 基于语义标签重新发明文件存储 标记它！
+### 基于语义标签重新发明文件存储 标记它！
 
 根据定义的标准分配文件名可以节省时间，并最大限度地增加以后找到文件的概率。作者：Karl Voit。每个人都对丢失在自己电脑上整齐存储的数据感到熟悉。在无数目录中导航并不会带来预期的结果，因为你寻找的数据可能在一个随机命名的文件中——或者一个你当时认为是逻辑性的、但后来证明是容易遗忘的名字中。
 
@@ -573,13 +543,9 @@ Q Q Q
 
 个人信息管理（PIM）领域的研究在三十年来取得了非常好的改进。然而，该领域的几乎没有发现进入过我们今天使用的计算机系统（见标题为“ ”的框）。
 
-
-
-
-
 ## 封面故事
 
-## 语义化文件组织
+### 语义化文件组织
 
 向后兼容性仍然超过了高级概念。概念始于一种文件命名约定。标签随后随文件去往任何地方——没有吸取在与 Tagstore 项目工作中学的教训。用例中，采用适应的 ISO-8601 格式的日期或时间戳，脚本的目标是为感兴趣的用户提供一种简单开始应用语义化文件原则的方法，因为微软系统不允许标签中包含冒号。Tagstore 是某研究所文件管理研究的结果。在上述的示例中，你可以简单地在通用目录中存储 Bob 关于 MyProject 的笔记，并将其命名为 Tree。Tagstore 项目的目的是创建 Tree 来显示同时包含 Bob 的内容和 MyProject 内容的文件。
 
@@ -594,9 +560,6 @@ Q Q Q
 传统文件存储架构的问题。假设一个名为 Bob 的用户发给你一个关于名为 Myname 项目的想法的文件。在经典的存储范式中，你必须决定一个足够清晰描述文件又足够短以便于读的名字——是将该文件存储在包含其他文件的目录中。Tagstore 网站上的一个例子最好说明了这个问题加载或数字化日期。
 
 基础文件名后面跟着一个可选部分，由决定是否保存它
-
-
-
 
 ## 语义化文件组织
 
@@ -628,8 +591,7 @@ Q Q Q
 
 - 根据惯例，标签用小写字母和数字定义。
 - 本文没有考虑多用户之间共享文件和目录的许多影响。根据个人实践和一些科学研究的发现，我建议遵循以下指南：
-
-- 直接源于文件类型的标签，例如针对 .jpeg 和 .avi 扩展文件的图像和电影；
+- 直接源于文件类型的标签，例如针对 `.jpeg` 和 `.avi` 扩展文件的图像和电影；
 - 将自己限制在一个预定义的标签集中，或者用科学术语来说，受控词表（CV）。其范围越小越好。包含几百条目的受控词表比有帮助更有困惑。
 - * 如果每个文件需要许多标签，搜索是更好的选择。
 
@@ -643,16 +605,13 @@ README 文件解释了如何安装和集成工具。
 appendfilename --text="foo bar" 2019-09-26T14.52.36.jpg
 ```
 
-
-
-
 你无需担心分隔符，这些工具让你的数字生活变得更容易。你可以在标签前面找到一个 `a`。在线系列视频中的第一行命令演示了列表 3 的主要功能，而第二行的命令结果是生成了名为 `foo -- bar baz.txt` 的文件名 [6]。第 3 行的命令格式将其转换回 `foo.txt`。
 
 # 列表 2: 封装 Appendfilename
 
 ## 列表 3: 添加标签 (Adding Tags)
 
-```
+```bash
 /usr/bin/gnome-terminal 
 --geometry=90x5+330+5
 $ filetags --text "bar baz" "foo.txt"
@@ -661,7 +620,6 @@ $ filetags --text "baz" "foo -- bar.txt"
 -x appendfilename "${@}"
 $ filetags --remove --text "baz bar" "foo -- bar baz.txt
 ```
-
 
 ## 头条故事
 
@@ -708,13 +666,15 @@ move_file "${file}" "$HOME/correspondence/insurance/";
 
 `Guess-target-folder.sh` 是一个简单但高度个性化的 Shell 脚本。该文本文件的结构非常简单。列表 5 概述了基本机制：每行包含一个或多个标签。如果多个标签在同一行，Filetags 的处理方式非常相似，但它不会将它们视为互斥。
 
-```。基于 `.filetags` 支持的模式识别，如果你向最终文件夹结构中添加一个 `foo -- draft.txt` 标签（其中目录名由 `ar-` 文件组成），Filetags 将自动将 `draft` 标签替换为 `final` 路径（例如 `$HOME/archive/`）和年份，而不是直接追加它。
 
-如果需要，可以使用 Pip3 安装这两个 Python 脚本。Windows 系统上特别令人烦恼的集成问题促成了 `Integrationthis` [12] 的开发，用 Python 编写的 `Guessfilename` [10] 工具有助于轻松集成到 Windows 资源管理器中。文件名经常出现重复的情况，通过模式识别并解析文件内容，它可以确定文件名的变体。没有理由不让它学习与 Geeqie、Thunar 等其他界面集成。如果你在 GitHub 上有它，我们将非常欢迎。
+
+基于 `.filetags` 支持的模式识别，如果你向最终文件夹结构中添加一个 `foo -- draft.txt` 标签（其中目录名由 `ar-` 文件组成），`Filetags` 将自动将 `draft` 标签替换为 `final` 路径（例如 `$HOME/archive/`）和年份，而不是直接追加它。
+
+如果需要，可以使用 `Pip3` 安装这两个 Python 脚本。Windows 系统上特别令人烦恼的集成问题促成了 `Integrationthis` [12] 的开发，用 Python 编写的 `Guessfilename` [10] 工具有助于轻松集成到 Windows 资源管理器中。文件名经常出现重复的情况，通过模式识别并解析文件内容，它可以确定文件名的变体。没有理由不让它学习与 `Geeqie`、`Thunar` 等其他界面集成。如果你在 GitHub 上有它，我们将非常欢迎。
 
 当每月工资单以 PDF 文件（如 `Salary.pdf`）的形式发送时，它会根据配置的模式识别 `Salary` 字符串和 PDF 文件类型，并生成新文件名：`2019-09-29 Pay slip September -- company.pdf`。
 
-只有当你考虑到某些额外功能以及工具之间的交互时，本文介绍的方法优势才能充分发挥真实潜力。例如，Filetags 使用 `--switch` 选项创建一个适合你需求的临时名称——在你输入一个或多个标签后，它实际上是一个模板视图，显示所有待自定义的文件。如果需要，要自定义这个关键的 `derive_new_file-from_old_filename()` 函数，你需要基础的 Python 编程技能。
+只有当你考虑到某些额外功能以及工具之间的交互时，本文介绍的方法优势才能充分发挥真实潜力。例如，`Filetags` 使用 `--switch` 选项创建一个适合你需求的临时名称——在你输入一个或多个标签后，它实际上是一个模板视图，显示所有待自定义的文件。如果需要，要自定义这个关键的 `derive_new_file-from_old_filename()` 函数，你需要基础的 Python 编程技能。
 
 临时视图由预定义临时目录中的链接组成。为了抵消开销，你可以看到日常文件处理中的许多简化。`Appendfilename` 和 `Filetags` 都设计为递归处理所有子目录。我使用 `Guessfilename` 在重命名链接文件时更改原始文件，这不仅适用于工资单，还适用于音频录制。
 
@@ -729,9 +689,6 @@ move_file "${file}" "$HOME/correspondence/insurance/";
 - 18 年无缝运行
 - 所有语言
 - 全新内容
-
-
-
 
 隐私、安全、自由软件和去中心化是使用相同方法进行的第二次处理。对于他来说，一个用于 File-tags 的包装脚本也很重要。在在他的博客（https://karl-voit.at/）中，将其映射到了 T 快捷键。这让他能够轻松地标记关于数字信息管理的文章。
 
@@ -751,10 +708,10 @@ move_file "${file}" "$HOME/correspondence/insurance/";
 - [12] Integratethis：https://github.com/novoid/integratethis
 - [13] 作者的博客：https://karl-voit.at
 
-
 2020年7月
 
 ## 什么？！
+
 我能**更早地**拿到我的杂志吗？
 
 随时随地获取！订阅数字订阅，享受关于热门话题、评论、酷炫项目等内容的最新文章……shop.linuxnewmedia.com/digisub
@@ -778,8 +735,6 @@ move_file "${file}" "$HOME/correspondence/insurance/";
 在我撰写这篇文章时，一个似乎处于媒体关注中心的话题是 COVID-19 的传播。发行版（又称为 distros）塑造了我们对 Linux 的体验。所有 Linux 发行版都使用 Linux 内核，但包管理、应用程序和其他组件存在巨大差异。持续的疫情对 Apple 和 Google 这样的公司产生了重大影响，部分是因为它们的业务模式，部分是因为它们的大部分制造位于中国，而那里遭受了早期且严重的打击。许多大型公司已与世界卫生组织会面，讨论如何应对疫情。
 
 尽管面对面的交流正被聊天和视频会议取代，但总的来说，DistroWatch 列出了 273 个发行版，其中许多开源软件（FOSS）的日常工作似乎一如既常，尽管许多项目也在寻找对抗疫情的方法。切换发行版通常感觉像更换操作系统一样。
-
-
 
 以过渡开启。Shuttleworth 补充说，所有的 SUSECON 2020 原定在都尔林举行。由于已宣布进入紧急状态，Fedora 支持服务仍保持 24x7 全天可用，该公司已做准备应对高达 15% 的缺勤率。Planet openSUSE [6] 还包含了 Ish Sookun 的定期报告，介绍了毛里求斯如何应对疫情，而这个国家通常不会在媒体中被。
 
@@ -825,9 +780,11 @@ move_file "${file}" "$HOME/correspondence/insurance/";
 ## 商店
 
 ## 发现
+
 LibreOffice 包含 Windows、macOS 和 Linux 2019 版完整版
 
 ## 探索免费
+
 全球商务人士使用的办公套件！
 
 创建你自己的：
@@ -839,6 +796,7 @@ LibreOffice 包含 Windows、macOS 和 Linux 2019 版完整版
 无论你在 Windows PC、Mac 还是 Linux 系统上工作，今天就可以使用 LibreOffice 开始。这本单本特辑将成为你的指南！
 
 ## 在线订：
+
 适用于 Windows、macOS 和 Linux 用户！
 
 ## 深度
@@ -853,7 +811,7 @@ LibreOffice 包含 Windows、macOS 和 Linux 2019 版完整版
 
 候选人对谜题的唯一线索在结尾。
 
-为了解决这个问题，一个合理的候选人会首先创建一个数据模型。由于磁片排列为三行四列且颜色为绿色、蓝色或红色，列表 1 第 13 行的类型定义将磁片位置封装在一个名为 pos（代表 position）的类型中。一个 lead。这就是 Google 引用 lead 的。
+为了解决这个问题，一个合理的候选人会首先创建一个数据模型。由于磁片排列为三行四列且颜色为绿色、蓝色或红色，列表 1 第 13 行的类型定义将磁片位置封装在一个名为 `pos`（代表 position）的类型中。一个 lead。这就是 Google 引用 lead 的。
 
 他们经常故意提出模糊的数维数组问题，然后描述网格，这些为概念设定方向的工程师心中其实有自己的数。在这种情况下，使用整数值代表团队中的其他工程师。第一行并没有完全清楚“连接”的真正含义：第三列的蓝色方格是连接的吗？经理们通常不干预，这意味着：从技术事务开始的陈述主要关注与行连接的第一行单元，会自动将这些列为人员配置并激励他们的下属。可选地，下方的“连接”方格或常量 0、1 和 2，多亏于 TechLead 频道上的那一集吗？当被问及时，面试官在第一个元素后使用了 关键字。
 
@@ -877,7 +835,7 @@ LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM
 
 编程快照 – Go 切片（Slices）
 
-它已经覆盖了瓦片，避免位于非连续组的瓦片。不必要的工作或陷入无限循环。为了实现，它使用了一个辅助结构，由另一个布尔值的二维切片组成。在脚本语言中，简单创建另一个由之前在第13行 X/Y 坐标处声明的 pos 结构组成的矩阵可能轻而易举。切片字面量的大括号初始化变量以最初创建一个空切片。具有相同的维度并填充布尔类型，但由于其严格的类型检查，Go 需要一些额外的步骤。
+它已经覆盖了瓦片，避免位于非连续组的瓦片。不必要的工作或陷入无限循环。为了实现，它使用了一个辅助结构，由另一个布尔值的二维切片组成。在脚本语言中，简单创建另一个由之前在第13行 X/Y 坐标处声明的 `pos` 结构组成的矩阵可能轻而易举。切片字面量的大括号初始化变量以最初创建一个空切片。具有相同的维度并填充布尔类型，但由于其严格的类型检查，Go 需要一些额外的步骤。
 
 第 35 行和第 36 行的双对 for 循环遍历瓦片矩阵的行和列，并在每个元素上调用 `explore()` 函数。它传递了矩阵本身、当前元素的位置以及追踪器，函数在追踪器中突出显示已访问过的元素，以便能够跟踪行并为对应原始矩阵列数的每个行分配一个布尔切片。从当前元素开始，`explore()` 开始寻找匹配的相邻元素，可能会覆盖整个区域。一旦这样初始化，该结构允许你使用 `seen[x][y]` 来查询程序是否已经见过位置 x 和 y 处的瓦片。多亏了追踪，因为即使 for 循环固执地扫描每个元素，x 坐标也从矩阵的顶部到底部（从 0 开始），y 坐标从左到右。例如，访问 `tiles[2][3]` 选择了右下角的瓦片。多亏于
 
@@ -925,7 +883,6 @@ func main() {
 	}
 
 	max := []pos{}
-
 	for x := 0; x < rows; x++ {
 		for y := 0; y < cols; y++ {
 			if tiles[x][y] == Green && !seen[x][y] {
@@ -936,102 +893,90 @@ func main() {
 			}
 		}
 	}
+```
 
-	fmt.Printf("Largest Group: %v\n", max)
-	// 注意：这是洪泛填充问题的简化表示
-	// 实际算法遵循文本。
-}
 
-func explore(tiles [][]int, x, y int, seen [][]bool) []pos {
-	// 文本描述的实现
-	return nil
+
+`fmt.Printf("Largest Group: %v\n", max)`
+
+```
+// 注意：这是洪泛填充问题的简化表示
+// 实际算法遵循文本。
 }
 ```
+
+`func explore(tiles [][]int, x, y int, seen [][]bool) []pos`
+
+```
+// 文本描述的实现
+return nil
+}
+```
+
 *（等待，OCR文本非常乱。我将根据提供的逻辑提供一个正确的重构文本。）*
 
-（后进先出”）在运行时会被使用，它使用了 `add()` 函数，该函数接收包含所有瓦格的矩阵、起始位置以及已访问的记事本。在寻找 `explore()` 之前，它会执行“深度优先”搜索：首先向下钻取，以确保通过这种方式找到的邻居确实是邻居，这通过一个名为 `examine` 的待办列表直接查找相邻邻居。同样的逻辑（即确保它们不在边界之外），如果算法调用 `append()` 将 `examined` 范围之外的候选添加到在 `max` 或 `coord` 中定义的初始帧数组切片末尾，则该行为将适用。它随后会通过重新赋值切片（减去新邻居后的切片）来从切片头部移除处理项。在第 11 行中，将第一个元素 `examine[1:]` 重新赋值给 `examine` 变量。一个良好的候选方案可以对所有不同的实现策略进行权衡。图 3：算法已经找到了最大的。第 22 行调用的 `neighbors()` 函数定义在列表 3 中，它搜索所有相邻瓦格。它返回一个数组切片，其元素是彼此相邻的连续组，并在网格中高亮显示。
+“后进先出”在运行时会被使用，它使用了 `add()` 函数，该函数接收包含所有瓦格的矩阵、起始位置以及已访问的记事本。在寻找 `explore()` 之前，它会执行“深度优先”搜索：首先向下钻取，以确保通过这种方式找到的邻居确实是邻居，这通过一个名为 `examine` 的待办列表直接查找相邻邻居。同样的逻辑，即确保它们不在边界之外，如果算法调用 `append()` 将 `examined` 范围之外的候选添加到在 `max` 或 `coord` 中定义的初始帧数组切片末尾，则该行为将适用。它随后会通过重新赋值切片减去新邻居后的切片来从切片头部移除处理项。在第 11 行中，将第一个元素 `examine[1:]` 重新赋值给 `examine` 变量。一个良好的候选方案可以对所有不同的实现策略进行权衡。图 3：算法已经找到了最大的。第 22 行调用的 `neighbors()` 函数定义在列表 3 中，它搜索所有相邻瓦格。它返回一个数组切片，其元素是彼此相邻的连续组，并在网格中高亮显示。
 
-列表 2: explore.go
-
-列表 3: neighbors.go
+### 列表 2: explore.go
 
 ```go
-01
 package main
 
-01
+func explore(tiles [][]int, p pos, seen [][]bool) []pos {
+results := []pos{}
+examine := []pos{p}
+color := tiles[p.x][p.y]
+
+if max.x < 2 {
+panic("Illegal array")
+for len(examine) > 0 {
+corpos := examine[0]
+examine = examine[1:]
+found := []pos{}
+if seen[corpos.x][corpos.y] {
+continue
+}
+add(&found, pos(cur.x - 1, cur.y), max)
+add(&found, pos(cur.x + 1, cur.y), max)
+add(&found, pos(cur.x, cur.y - 1), max)
+add(&found, pos(cur.x, cur.y + 1), max)
+if tiles[corpos.x][corpos.y] == color {
+results = append(results, corpos)
+}
+seen[corpos.x][corpos.y] = true
+examine = append(examine, neighbors(tiles, pos{corpos.x, corpos.y})...)
+}
+return results
+}
+```
+
+### 列表 3: neighbors.go
+
+```go
 package main
 
-02
+func neighbors(tiles [][]int, cur pos) []pos {
+var max pos
+max.x = len(tiles) - 1
+max.y = len(tiles[0]) - 1
 
-03
-func explore(tiles [][]][]int, p pos,
+found := []pos{}
+add(&found, pos(cur.x - 1, cur.y), max)
+add(&found, pos(cur.x + 1, cur.y), max)
+add(&found, pos(cur.x, cur.y - 1), max)
+add(&found, pos(cur.x, cur.y + 1), max)
 
-03
-func neighbors(
-
-04 seen [][]bool) []pos {
-04 tiles [][]][]int, cur pos) []pos {
-05 results := []pos{}
-
-05 var max pos
-06 examine := []pos{p}
-06 max.x = len(tiles) - 1
-07 color := tiles[p.x][p.y]
-```
-
-```go
-07 if max.x < 2 {
-08
-08 panic("Illegal array")
-09 for len(examine) > 0
-10 corpos := examine[0]
-10 max.y = len(tiles[0]) - 1
-11 examine = examine[1:]
-11
-12
-12 found := []pos{}
-13 if seen[corpos.x][corpos.y] {
-13 continue
-14 add(&found, pos(cur.x - 1, cur.y), max)
-14 add(&found, pos(cur.x + 1, cur.y), max)
-15 add(&found, pos(cur.x, cur.y - 1), max)
-16 add(&found, pos(cur.x, cur.y + 1), max)
-17 if tiles[corpos.x]
-[corpos.y] ==
-17
-18 color
-```
-
-```go
-18 return found
-19 results = append(results, corpos)
-19
+return found
 }
-20 seen[corpos.x][corpos.y] = true
-20
-21 examine = append(examine,
-21
-func add(
-22 neighbors(tiles,
-22 found *[]pos, cand pos, max pos) {
-23 pos{corpos.x, corpos.y}}...
-23 if cand.x > 0 && cand.y > 0 && 
-24 cand.x <= max.x && cand.y <= max.y {
-25
-25 *found = append(*found, cand)
-26
-27 return results
-26 }
+
+func add(found *[]pos, cand pos, max pos) {
+if cand.x > 0 && cand.y > 0 && cand.x <= max.x && cand.y <= max.y {
+*found = append(*found, cand)
+}
+}
 ```
 
-```
-28
-}
-27
-}
-28
-```
+
 
 2020年7月
 第236期
@@ -1039,19 +984,15 @@ LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM
 
 ## 深度解析
 
-编程快照 – Go Slice
+### 编程快照 – Go Slice
 
 为了让第 21 行的 `add()` 函数的更改在主过程中可见——或者说列表 1 知道在列表 3 中哪里找到 `dump()` 函数不仅读取了数组切片（仅仅是因为它们被传递给了它），还修改了它，该调用——这是因为尽管 Go 是按值传递数组切片的，但列表 3 中 `seen` 数据结构的第二个维度由的是指向数组切片的指针。在工作面试中，使用 `&` 符号表示指针并不罕见。在从第 21 行开始的 `add()` 函数声明中，`found` 因此也被标记为指向子程序的指针，因此找到了一个解决方案：如果是一个指向 `pos` 结构体数组切片的指针，那么如果“连续”是结构体，它将必须被更改（`found *[]pos`）。通过指针，使得主程序不仅适用于共享一个角并触及邻居的瓦格，而且符合预期的数据结构。第 25 行调用的 `append()` 函数是 Go 内置的，它通过首先解引用传入的指针来停止数组切片。
 
 关于这种“值或指针”的更多信息（此处此处略）。
 
-
-
-## 深度解析
-
 ## ProjectLibre：使用 ProjectLibre 可视化复杂项目
 
-赶羊（Herding Cats）
+### 赶羊（Herding Cats）
 
 ProjectLibre 帮助你组织和优化具有许多活动部分的复杂项目。
 
@@ -1075,7 +1016,7 @@ ProjectLibre 和即将推出的 ProjectLibre Cloud 只能读取（不能写入�
 
 ### 在 Ubuntu 上安装 ProjectLibre
 
-在 Ubuntu 上安装 ProjectLibre 相对简单。下载一个 .deb 包并使用 `dpkg` 安装：
+在 Ubuntu 上安装 ProjectLibre 相对简单。下载一个 `.deb` 包并使用 `dpkg` 安装：
 
 `sudo dpkg -i projectlibre_1.9.1-1.deb`
 
@@ -1087,8 +1028,6 @@ ProjectLibre 和即将推出的 ProjectLibre Cloud 只能读取（不能写入�
 
 历史上，项目管理中使用网络图有两种主要方法：箭头图法（ADM）和前置网络图法（PDM）。ADM 将事件表示为节点，而在 PDM 中，活动是框，箭头连接这些框。ProjectLibre 的界面（图 4）工作方式与“理解”部分讨论的理论工作流略有不同。大型项目的经理甚至不打算将一切都记在脑子里。在界面的顶部，放置命令丝带（图 5）控制框。它将以每月订阅服务的形式提供。ProjectLibre 用 Java 编写。
 
-
-
 如今，PDM 比 ADM 更流行。虽然 PDM 涉及的投入（例如数据或文档）或人力资源会更复杂，但它更加准确。PDM 图支持概率计算，并预测问题将在何时、何处出现。
 
 在理想的世界中，PERT 图是首要要绘制和验证的内容，用以决定项目应该启动以及如何启动。接下来，通过 WBS 将 PERT 工作流划分成若干区块，以指定为每个任务应分配多少的人员和其他资源。下一步是生成一个具有具体开始日期、结束日期、中间里程碑和检查点的甘特图。甘特图能让你轻松地看到某些任务是可以按顺序执行还是可以同时进行。与此同时，RBS 图可以提供每个组成部分总成本的良好概述。
@@ -1099,7 +1038,7 @@ ProjectLibre 和即将推出的 ProjectLibre Cloud 只能读取（不能写入�
 
 前置时间（Lead time）是完成一项任务所需的时间，或者在前一个任务完成之前开始该任务所节省的时间。滞后时间（Lag time）是不可避免的延迟。另一个被称为“松”（slack）的指标显示了任务可以延迟多久而不会对项目的其他部分产生问题。
 
-## ProjectLibre
+### ProjectLibre 使用
 
 一旦将项目的所有初步数据输入 ProjectLibre，你就可以在甘特图视图（图 4）开始实际规划。
 
@@ -1115,16 +1054,9 @@ ProjectLibre 和即将推出的 ProjectLibre Cloud 只能读取（不能写入�
 
 **图 5：ProjectLibre 顶部菜单中的每个项目都有自己的命令功能带。**
 
-
-
-
-## 深度解析
-
-ProjectLibre
-
 而且你的老板想要知道他们的任务，并确保一切都在控制之中。点击主界面上的“视图 (View)”，然后点击命令区中的“报告 (Report)”，即可生成如图 10 所示的可打印报告。或者，你也可以将这些报告导出为 CSV、HTML、XLS 和其他格式。
 
-## 结论
+### 结论
 
 目前，ProjectLibre 桌面版有两个可能成为障碍的局限性。首先，它对预算计算和分析的支持非常少。其次，完整的项目数据以及所有成本和资源使用统计只能作为 Microsoft Project XML 格式导入和导出，而不是更易于重复利用的格式。此外，虽然用户手册很好，但只能通过网站上的一个链接访问，该链接指向 Google Docs 中一个无法导出的相应文件。为什么？
 
@@ -1154,57 +1086,33 @@ LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM | 第 236 期 | 2020年7月
 
 ## LINUX MAGAZINE
 
-## 快照保护你的数据
+### 快照保护你的数据
 
 一种保护你数据的更好方法？Linux 5.9 独立的企业版随插件发生变化
 
-## LINUX MAGAZINE
+### 快照
 
-## 快照
+### GIT 技巧 选择一个 GUI
 
-## GIT 技巧 选择一个 GUI
+### 能量消耗监控应用程序
 
-## LINUX MAGAZINE
+### 能量消耗
 
-## 能量消耗监控应用程序
+### 廉价的 IoT
 
-## LINUX MAGAZINE
+### 对小众分发版的聚光
 
-## 能量消耗
+### 平铺化布局
 
-## LINUXOI 
+### 匿名电影
 
-## 廉价的 IoT
+### 矢量图形
 
-## LINUX MAGAZINE
+### 自动化
 
-## 对小众分发版的聚光
+Linux Magazine 是你进入 Linux 世界的指南。阅读内文获取在其他地方找不到的高级技术信息！
 
-## LINUX MAGAZINE
-
-## LINUX MAGAZINE
-
-## 对小众分发版的聚光
-
-## LINUX MAGAZINE
-
-## 平铺化布局
-
-## LINUX MAGAZINE
-
-## 匿名电影
-
-## 矢量图形
-
-## 自动化
-
-## LINUXVOICE
-
-## LINUX MAGAZINE
-
-## Linux Magazine 是你进入 Linux 世界的指南。阅读内文获取在其他地方找不到的高级技术信息！
-
-## 通过以下扩展你的 Linux 技能：
+### 通过以下扩展你的 Linux 技能：
 - 关于热门话题的深度文章，包括比特币、勒索软件、云计算等！
 - 关于实用工具的入门指南和教程，它们将为你节省时间并保护你的数据
 - 故障排除和优化技巧
@@ -1212,18 +1120,16 @@ LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM | 第 236 期 | 2020年7月
 - 关于 Raspberry Pi、Arduino 和其他开源项目
 - 订阅 Linux，不再错过任何一期！
 
-## 立即订阅！
+### 立即订阅！
 linuxmedia.com/
 
 ## 虚拟商店
 
 ## 深度解析
 
-## OpenCart
+### OpenCart
 
-## 设置 OpenCart
-
-## 虚拟商店
+#### 设置 OpenCart
 
 使用 OpenCart 这种免费、开源的电子商务系统，你可以在几分钟内建立在线商店。Rubén Lorente 当互联网上有许多电子商务系统时，PrestaShop、OsCommerce 和 Magento，商家在销售商品时有许多选择。一种保护你数据的更好方法？企业版随插件发生变化。[1]。如果你想更改他们的数据和服务条款，或需要某些功能，可以将其迁移到其他地方。
 
@@ -1240,7 +1146,7 @@ linuxmedia.com/
 | XML | |
 | Zlib | |
 
-## 安装
+### 安装
 
 [1]。OpenCart 是一个用于创建和管理在线商店的免费开源电子商务平台。
 
@@ -1248,15 +1154,11 @@ linuxmedia.com/
 
 OpenCart 是一个免费、开源的电子商务系统。
 
-
-
-
-
 ## 深度解析
 
-## OpenCart
+### OpenCart
 
-## 构建 LAMP 服务器
+#### 构建 LAMP 服务器
 
 LAMP (Linux, Apache, MySQL, PHP/Perl/Python) 服务器是托管 OpenCart 等应用程序的常用堆栈。你必须配置 OpenCart 将使用的数据库。第一步是通过运行以下脚本来增强数据库的安全性：在示例中，我使用的是 MariaDB，它是 MySQL 的无缝替换版本。
 
@@ -1284,7 +1186,7 @@ LAMP (Linux, Apache, MySQL, PHP/Perl/Python) 服务器是托管 OpenCart 等应�
 
 <输入密码>
 
-然后创建一个名为 `opencart` 的数据库以及一个同名的具有访问权限的用户。选择一个良好的密码，并在下面的示例中使用它替换 $PASSWORD：
+然后创建一个名为 `opencart` 的数据库以及一个同名的具有访问权限的用户。选择一个良好的密码，并在下面的示例中使用它替换 `$PASSWORD`：
 
 ```
 ## a2enmod ssl
@@ -1296,8 +1198,8 @@ MariaDB [(none)]> create database opencart;
 ```
 
 ```sql
-
 如果你的发行版 Apache 没有自动创建证书，你将必须手动创建 [4]。自签名证书不适用于生产环境，但对于测试完全足够。如果你打算将此服务器迁移到生产环境，你需要从证书颁发机构购买并安装证书 [5]。原生情况下，你可以使用 Let's Encrypt 服务获取免费证书 [6]。
+```
 
 ```sql
 MariaDB [(none)]> GRANT ALL PRIVILEGES ON opencart.* TO 'opencart'@'localhost' IDENTIFIED BY '$PASSWORD';
@@ -1314,7 +1216,9 @@ OpenCart 同样适用于 OpenBSD 的自定义 httpd 服务器，但该设置没�
 > 图 1：安装脚本将确保你在继续之前符合安装前提条件。
 
 LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM
+
 第 236 期
+
 2020年7月
 
 图 2：OpenCart 需要数据库访问凭据才能正常工作。
@@ -1326,6 +1230,8 @@ LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM
 ```
 ## rm -r /var/www/html/install
 ```
+
+
 
 探索商店的核心配置。“目录”（Catalog）部分允许你向商店目录上传新产品（图 5）并将其按类别进行分组。前往“目录 | 信息”（Catalog | Information）来指定你网站的术语和条件，以及你可能提供的其他法律信息。
 
@@ -1371,27 +1277,32 @@ LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM
 
 因此，在扩展程序方面，OpenCart 比 PrestaShop 等替代品要便宜得多。
 
-
-
 （图9）。
 
 ## 支付方式
+
 - 货到付款 (COD)、银行转账、支票、PayPal、BrainTree
 
 ## 模块
+
 - 固定费率、重量计费、免费送、店内自提
 
 ## 文档
+
 反垃圾功能
+
 - 基础验证码（不推荐）、Google 验证码
 
 OpenCart 严重缺乏技术文档。营销优惠券、联盟营销计划、礼品券、网站地图等提及。虽然项目有很多用户文档，但关于构建扩展的实际说明很少。
 
 LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM
+
 第 236 期
+
 2020年7月
 
 ## opencart
+
 - 主题
 - 语言
 - 支付网关
@@ -1403,6 +1314,7 @@ LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM
 - 其他\VQMod
 
 ## 导航
+
 - 仪表板
 - 目录
 - 扩展
@@ -1416,12 +1328,15 @@ LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM
 - 营销
 
 ## 主题编辑器
+
 首页 主题编辑器
 
 ### 编辑主题
+
 主题编辑器使用 Twig 模板语言。你可以在此处阅读有关 Twig 语法。
 
 选择你的商店
+
 ```
 account login.twig
 {% if account.errors %}
@@ -1438,6 +1353,7 @@ account login.twig
 ```
 
 ## 深度解析：OpenCart
+
 图 6：OpenCart 有一个活跃的市场 [8]，你可以在那里购买扩展。
 
 图 7：默认主题可以使用，但你可能会觉得它太通用了。
@@ -1445,12 +1361,17 @@ account login.twig
 图 8：使用主题编辑器修改构建用户界 Twig 模板。
 
 ## 扩展安装器
+
 首页 > 扩展安装器
+
 上传你的扩展
+
 - * 上传文件 [上传]
 
 安装进度
+
 进度
+
 安装历史
 
 | 文件名 | 添加日期 | 操作 |
@@ -1463,25 +1384,37 @@ account login.twig
 请记住，OpenCart 需要关于如何在高可用配置中托管实例的提示，以缓解跨站脚本 (CSS) 攻击和其他恶意活动的风险。没有关于向客户发送电子邮件的说明（例如，订单确认消息）。你需要单独构建一个或聘请专门的供应商，这样当你的一台服务器宕机时，你的网站将继续运行。
 
 ## 结论
+
 OpenCart 远非完美。最后，网站本身是无法收集用户的。一旦你的网站运行起来，你就需要投入一个良好的营销计划，因为它缺乏适当的文档。然而，OpenCart 提供了一些商家可能会觉得实用的额外功能。它安装非常快，并允许你找到自己的在线商店。
 
 ## 附加功能
+
 开箱即用的联盟营销计划支持允许你为他人引导流量到这里而付费。内置的评论系统允许用户对你的产品留下意见。反垃圾措施是默认提供的，但请注意内-
 
 [1] OpenCart: https://www.opencart.com/
+
 [2] 以 Bitnami 栈分发的 OpenCart：https://bitnami.com/stack/apache/（等等，文中说是 https://bitnami.com/stack/ubuntu - 可能是 bitnami.com/stack/apache/）
+
 [3] “Docker、Snap 和公司的替代品”，Erik Bärwaldt，Linux Magazine，第 223 期，2019年6月：Rubén Llorente 是一位机械工程师，他的工作是确保小型诊所 IT 基础设施的安全措施符合法律且安全。他还是一个 OpenBSD 爱好者和武器收藏家。
+
 [4] 创建并安装自签名证书：https://tecadmin.net/create-index.php?route=marketplace/
+
 [5] 在此处安装 SSL 证书：https://cheapsslsecurity.com/
+
 [6] Let's Encrypt：https://letsencrypt.org/getting-started/
+
 [7] OpenCart 基础实践：http://docs.opencart.com/en-gb/
+
 [8] OpenCart 市场：https://www.opencart.com/
+
 [9] OpenCart 文档：http://docs.opencart.com/
 
 ## 深度解析：自定义出版
+
 使用免费软件设计电子书
 
 ## 自定义转换
+
 通过 LibreOffice Writer 和 Calibre，你可以发布自己的电子书，结果比大多数在线转换工具都要好。作者：Bruce Byfield
 
 如果你正在出版电子书，你可以在网上找到许多转换工具。问题在于，大多数这些工具和表格只有部分有效，而且这些工具让你对结果的控制力非常微小。
@@ -1490,7 +1423,6 @@ OpenCart 远非完美。最后，网站本身是无法收集用户的。一旦�
 - 使用书签代替交叉引用。
 - 如果你正在使用同一个文件制作电子书的纸质版，最好避免这样做。大多数情况下，定位和文本设置应该是有效的。但经常结果的格式糟糕，部分是因为层叠样式表 (CSS，用于格式化电子书的语言）局局性，但主要由于-阅读器可以添加分页符或使用标题样式来指示新页的开始。
 - 不要担心字体。在电子书阅读器上，用户通常设置自己的字体。因此，如果你想嵌入字体，需要在 CSS 中编写
-
 
 你自己进行转换，而不是坚持使用某些工具。它们不会让电子书文件无故变大。作为一名专家，你可以更好地更好地完成初始的电子书格式转换。
 
@@ -1511,16 +1443,21 @@ OpenCart 远非完美。最后，网站本身是无法收集用户的。一旦�
 图 1：简单文档可以从从 Writer 转换为 EPUB。
 
 42
+
 2020年7月
+
 第236期
+
 LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM
 
 ## Eleanor Arason
+
 大平原曼哈顿
 
 ![](img/8295b48fa67fe82b58801e13f9267227_233_0.png)
 
 ## 聚焦
+
 定制出版
 
 最可能的格式是 EPUB 和 MOBI (Kindle)，但其他格式可用。你可以维护同一书目的多个格式，并点击格式在摘要窗中打开选定的文件。无论何种方式，通过打开电子书并检查结果来决定你的下一步。
@@ -1550,8 +1487,11 @@ EPUB 导出
 图 3：编辑书籍窗口是 Calibre 用于手动编辑和从界面打开的-编辑-窗口的主要地方。
 
 LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM
+
 第236期
+
 2020年7月
+
 43
 
 ## CSS 教程
@@ -1594,6 +1534,7 @@ CSS 是一种描述 HTML 文档样式的语言。CSS 描述 HTML 元素应该如
 - 升级书籍内部
 
 ## 聚焦
+
 定制出版
 
 通过对现有代码建模来做出小更改。
@@ -1633,10 +1574,8 @@ CSS，虽然最好的选择可能是完全避免此类功能，但幸运的是�
 图 5：Calibre 的工具菜单包含许多与原始相同的名称。要添加一个工具。如果你正在使用工具对电子书进行润色。
 
 44
+
 2020年7月
-
-
-
 
 使用 debfoster 管理你的 Debian 包
 
@@ -1646,38 +1585,51 @@ CSS，虽然最好的选择可能是完全避免此类功能，但幸运的是�
 
 ## 命令行 – debfoster
 
-使用 debfoster 管理你的 Debian 包
+使用 `debfoster` 管理你的 Debian 包
 
 维护清理
 
-在处理 Debian 系统中剔除不必要的软件包时，debfoster 让你能够方便地将所有的维护功能整合到一个命令中。*作者 Bruce Byfield：提供了关于已安装软件包的信息，并作为替代方案执行相同的功能，但仅提供使用 autoremove 子命令来删除它们的选项（对于 apt-get 而言）。*
+在处理 Debian 系统中剔除不必要的软件包时，`debfoster` 让你能够方便地将所有的维护功能整合到一个命令中。*作者 Bruce Byfield：提供了关于已安装软件包的信息，并作为替代方案执行相同的功能，但仅提供使用 `autoremove` 子命令来删除它们的选项（对于 `apt-get` 而言）。*
 
-Debian 是最早拥有现代软件包系统的发行版之一。几十年来，一个围绕着它建立的整个信任生态系统已经壮起来，包含了各种相关的命令，包括像 apt-get 这样的前端，以及最近的 apt（图 1）。你可以通过运行不带选项或选择的命令来开始使用 debfoster（表 1）。一方面，创建软件包数据库的目标默认是保留你想要保留的软件包。相比之下，apt-get 和 apt 仅仅是基础的包管理器 dpkg，并且每次启动时都会重复其关于孤立包的信息。对于普通系统来说，由于每个安装的软件包都会被查询。然而，一旦数据库填充完毕，后续会话至少需要 20 分钟，此外，你可以选择只删除软件包 (n) 或其依赖项，通常只涉及少数几个软件包。如果你发现你不小心保留了一个软件包——这很容易发生，在 Debian 10 的 Stable 仓库搜索“apt”返回了 54 个结果，(l) 在做出决策之前。同样，搜索“deb”返回了 68 个结果。
+Debian 是最早拥有现代软件包系统的发行版之一。几十年来，一个围绕着它建立的整个信任生态系统已经壮起来，包含了各种相关的命令，包括像 `apt-get` 这样的前端，以及最近的 `apt`（图 1）。你可以通过运行不带选项或选择的命令来开始使用 `debfoster`（表 1）。一方面，创建软件包数据库的目标默认是保留你想要保留的软件包。相比之下，`apt-get` 和 `apt` 仅仅是基础的包管理器 `dpkg`，并且每次启动时都会重复其关于孤立包的信息。对于普通系统来说，由于每个安装的软件包都会被查询。然而，一旦数据库填充完毕，后续会话至少需要 20 分钟，此外，你可以选择只删除软件包 (n) 或其依赖项，通常只涉及少数几个软件包。如果你发现你不小心保留了一个软件包——这很容易发生，在 Debian 10 的 Stable 仓库搜索“apt”返回了 54 个结果，(l) 在做出决策之前。同样，搜索“deb”返回了 68 个结果。
 
-与此同时，搜索“deb”返回了 68 个结果。你可以退出 debfoster 而不执行——这在第一次操作时很容易做到，因为你记得，在提交更改后，响应将变为自动——你可以随时指示或否，或者在不保存任何更改的情况下退出并重试。
+与此同时，搜索“deb”返回了 68 个结果。你可以退出 `debfoster` 而不执行——这在第一次操作时很容易做到，因为你记得，在提交更改后，响应将变为自动——你可以随时指示或否，或者在不保存任何更改的情况下退出并重试。
 
-这个生态系统中少为人知但更实用的成员之一是 debfoster [1]，它的主要目的是剔除不必要的软件包。更重要的是，许多软件包没有依赖项且永远不再需要，像 apt 一样，debfoster 实际上结合了其他几个功能：显示孤立包、安装和移除软件包。这些包在它们不再被需要后可能仍然留存。为了安装所有内容，debfoster 提供了一种更具操作性的、更不容易出错的方法，配合结构，高级用户。作者 Bruce Byfield 是一位计算机记者、自由职业作家和编辑，专精自由和开源软件的包管理。他可能会喜欢它。除了他的写作项目，他还教授直播和在线课程。在空闲时间，Bruce 撰写关于西北海岸艺术（http://brucebyfield.wordpress.com）。他还是 Prentice Pieces 的联合创始人，那是一个关于写作和幻想的博客，地址为 https://prenticepieces.com/。
+这个生态系统中少为人知但更实用的成员之一是 `debfoster` [1]，它的主要目的是剔除不必要的软件包。更重要的是，许多软件包没有依赖项且永远不再需要，像 `apt` 一样，`debfoster` 实际上结合了其他几个功能：显示孤立包、安装和移除软件包。这些包在它们不再被需要后可能仍然留存。为了安装所有内容，`debfoster` 提供了一种更具操作性的、更不容易出错的方法，配合结构，高级用户。作者 Bruce Byfield 是一位计算机记者、自由职业作家和编辑，专精自由和开源软件的包管理。他可能会喜欢它。除了他的写作项目，他还教授直播和在线课程。在空闲时间，Bruce 撰写关于西北海岸艺术（http://brucebyfield.wordpress.com）。他还是 Prentice Pieces 的联合创始人，那是一个关于写作和幻想的博客，地址为 https://prenticepieces.com/。
 
 ## 命令选项
 
-debfoster 的选项以数字开头，用于对已安装软件包进行查询。
+`debfoster` 的选项以数字开头，用于对已安装软件包进行查询。
 
-- --show-keeper (-a) 列出需要保留的文件（图 2），
-- --show-orphans (-s) 列出作为依赖项安装但由于系统更改而不再需要的软件包。
-- --show-depends PACKAGE (-d) 或 
-- --show-related PACKAGE (-r) 列出指定软件包所依赖的软件包（图 4），
-- --show-providers PACKAGE (-p) 列出指定软件包仅作为依赖项安装的软件包——这种情况在某些情况下会发生
-- --config FILE (-c) 创建一个干净的配置文件
-- --keeperfile FILE (-k) 创建一个干净的数据库，然后用新创建的文件替换已传输的文件。
-- --mark-only (-m) 进行空运行，以便你可以在任何内容删除之前看到答案的结果。
-- --verbose (-v) 选项有时可以让你更详细地查看正在发生的情况。
-- --upgrade (-u)， 无论是否提交了软件包，移除不需要的软件包并在不进一步提问的情况下退出。
-- --force (-f) 执行所有删除操作。
-- --quiet (-q) 静默模式
+- `--show-keeper (-a)` 列出需要保留的文件（图 2），
+
+
+
+- `--show-orphans` `-s` 列出作为依赖项安装但由于系统更改而不再需要的软件包。
+
+- `--show-depends PACKAGE` `-d` 或 
+
+- `--show-related PACKAGE` `-r` 列出指定软件包所依赖的软件包（图 4），
+
+- `--show-providers PACKAGE` `-p` 列出指定软件包仅作为依赖项安装的软件包——这种情况在某些情况下会发生
+
+- `--config FILE` `-c` 创建一个干净的配置文件
+
+- `--keeperfile FILE` `-k` 创建一个干净的数据库，然后用新创建的文件替换已传输的文件。
+
+- `--mark-only` `-m` 进行空运行，以便你可以在任何内容删除之前看到答案的结果。
+
+- `--verbose` `-v` 选项有时可以让你更详细地查看正在发生的情况。
+
+- `--upgrade` `-u`， 无论是否提交了软件包，移除不需要的软件包并在不进一步提问的情况下退出。
+
+- `--force` `-f` 执行所有删除操作。
+
+- `--quiet` `-q` 静默模式
 
 ## 配置 debfoster
 
-debfoster 的默认配置文件是 /etc/debfoster.conf。文件中的所有字段均不受大小写，最常用的字段（表 2）位于文件开头。如果需要，可以指定备用配置文件。
+`debfoster` 的默认配置文件是 `/etc/debfoster.conf`。文件中的所有字段均不受大小写，最常用的字段（表 2）位于文件开头。如果需要，可以指定备用配置文件。
 
 ## 表 1：debfoster 响应选项
 
@@ -1685,42 +1637,40 @@ debfoster 的默认配置文件是 /etc/debfoster.conf。文件中的所有字�
 | :--- | :--- |
 | Yes | 保留软件包（默认） |
 | No | 删除软件包。也会删除任何软件包依赖项；这些软件包的列表显示在提示符上方。 |
-| Skip | 下次运行 debfoster 时会再次提问。 |
+| Skip | 下次运行 `debfoster` 时会再次提问。 |
 | Help | ? |
 | Information | 显示软件包详情。 |
 | Undo | 作用于上一次响应 |
 | Quit | 未移除任何软件包；所有更改丢失 |
-| Exit | 对 debfoster 数据库执行已指定的更改。 |
+| Exit | 对 `debfoster` 数据库执行已指定的更改。 |
 
-其他选项会影响 debfoster 的运行方式。为了防止错误，--mark-only (-m) 执行空运行，以便你可以在任何内容删除之前看到答案的结果。如果你认为结果没有意外，则可以使用带有 --force (-f) 选项运行 debfoster 以执行所有删除。这在最近的发布中很少发生。大多数情况下，这些字段不需要返回消息。
-
-
-
-
+其他选项会影响 `debfoster` 的运行方式。为了防止错误，`--mark-only` `-m` 执行空运行，以便你可以在任何内容删除之前看到答案的结果。如果你认为结果没有意外，则可以使用带有 `--force` `-f` 选项运行 `debfoster` 以执行所有删除。这在最近的发布中很少发生。大多数情况下，这些字段不需要返回消息。
 
 ## 深度解析
 
-命令行 – debfoster
+命令行 – `debfoster`
 
 年龄或是否为依赖，这限制了它的实用性。然而，其他查询选项对于了解应该保留哪些包是有用的。孤立包的数量可能会让你惊讶，尤其是当你从官方仓库之外安装软件包时。
 
 图 3：孤立包是已删除软件包的依赖项。
 
-图 4：debfoster 可以列出软件包的依赖项。
+图 4：`debfoster` 可以列出软件包的依赖项。
 
 LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM
+
 第 236 期 | 2020年7月 | 47
 
-要进行更改，尽管如果你处于 Essential（核心）、MaxPriority（最高优先级）或 KeepSections（保留章节）中，其他命令。由于这些优势和 NokeepSections 字段，你正在使用 apt 的习惯可以告诉你关于软件包的一些信息，这些信息你本可以通过 `apt install` 找到。想要将 InstallCmd 的值更改为。
+要进行更改，尽管如果你处于 `Essential`、`MaxPriority` 或 `KeepSections` 中，其他命令。由于这些优势和 `NokeepSections` 字段，你正在使用 `apt` 的习惯可以告诉你关于软件包的一些信息，这些信息你本可以通过 `apt install` 找到。想要将 `InstallCmd` 的值更改为。
 
 一个方便的安排
 
-哪里，但可能不会，因为运行 debfoster 没有为 Debian 运行添加任何新功能。其他字段会影响 debfoster 的运行方式。某些字段（如 MaxPriority 或 UseHold）基于软件包设置，跨越多个不同的命令。debfoster 很快证明了这几分钟价值，而像 Verbose（详细）或 Quiet（静默）这样的选项需要学习其基本工作原理。Q Q Q
+哪里，但可能不会，因为运行 `debfoster` 没有为 Debian 运行添加任何新功能。其他字段会影响 `debfoster` 的运行方式。某些字段（如 `MaxPriority` 或 `UseHold`）基于软件包设置，跨越多个不同的命令。`debfoster` 很快证明了这几分钟价值，而像 `Verbose` 或 `Quiet` 这样的选项需要学习其基本工作原理。Q Q Q
 
-相反，它的优势在于 debfoster 命令方便的选项。/etc/defboster.conf 中的字段可以在单个命令中被重写或重新排列。此外，除了问题的可能答案数量外，通过命令行选项，特别是 --ignore-default-rules (-i)，可以快速学习，用户在可能会看到过 UseHold、Use-command-line 的设置。
+相反，它的优势在于 `debfoster` 命令方便的选项。`/etc/defboster.conf` 中的字段可以在单个命令中被重写或重新排列。此外，除了问题的可能答案数量外，通过命令行选项，特别是 `--ignore-default-rules` `-i`，可以快速学习，用户在可能会看到过 `UseHold`、`Use-command-line` 的设置。
 
 信息
-[1] debfoster: https://manpages.ubuntu.com/manpages/trusty/debfoster.html
+
+[1] `debfoster`: https://manpages.ubuntu.com/manpages/trusty/debfoster.html
 
 ## 表 2：配置字段及其默认值
 
@@ -1736,7 +1686,7 @@ Charly 在他花园的鸟巢里运行了多年第一代树莓派，但树莓派�
 
 让我们先看看我的硬件，指的是鸟巢。对于我的目的，它必须是一个有两个室的鸟巢：一个用于技术，另一个用于以下命令：birds。接下来，使用以下命令克隆软件：
 
-德国莱茵-威斯特法伦州监狱经营的木工坊提供了多种木材的高质量鸟巢 [1]。git clone https://github.com/silvanmelchior/RPi_Cam_Web_Interface 我选择了图 1 中的高层模型，它有两个上下排列的室。
+德国莱茵-威斯特法伦州监狱经营的木工坊提供了多种木材的高质量鸟巢 [1]。`git clone https://github.com/silvanmelchior/RPi_Cam_Web_Interface` 我选择了图 1 中的高层模型，它有两个上下排列的室。
 
 在新创建的目录中，调用：
 
@@ -1746,7 +1696,7 @@ sudo ./install.sh
 
 带有 Pi NoIR 摄像头的第三代树莓派提供直播流。
 
-这里需要 sudo，因为安装程序必须安装额外的软件包。在安装过程中，你可以影响几个参数。由于程序员选择了理性的默认设置，除非你的性能很低，否则并不需要更改它们。重启后，直播流将等待我在树莓派的 IP 地址上访问它，这是对发生情况的完美视图（图 2）。在筑巢室的入口处，你可能想要替换掉饥饿的 Apache Web 服务器。
+这里需要 `sudo`，因为安装程序必须安装额外的软件包。在安装过程中，你可以影响几个参数。由于程序员选择了理性的默认设置，除非你的性能很低，否则并不需要更改它们。重启后，直播流将等待我在树莓派的 IP 地址上访问它，这是对发生情况的完美视图（图 2）。在筑巢室的入口处，你可能想要替换掉饥饿的 Apache Web 服务器。
 
 图 1：鸟类的舒适的别墅：Charly 花园里的双层鸟巢。
 
@@ -1777,41 +1727,41 @@ sudo ./install.sh
 | Force | no | 移除软件包时不提问，类似于 -f 选项 |
 | Quiet | no | 对任何软件包都不进行交互，类似于 -q 选项 |
 
-
-
-
-在 Arch Linux 及其衍生版上，你会感到非常满意。如果缺少某些依赖，可以通过 Arch 用户仓库 (AUR) 通过 AUR 软件包格式安装 bauh。通过在追踪包管理器界面的终端中输入 `bauh`，你可以搜索并安装额外的软件包（有时是应用程序）、安装更新、删除未安装的应用，并避免在找不到软件包或出现版本号冲突时发生崩溃。
+在 Arch Linux 及其衍生版上，你会感到非常满意。如果缺少某些依赖，可以通过 Arch 用户仓库 `AUR` 通过 AUR 软件包格式安装 `bauh`。通过在追踪包管理器界面的终端中输入 `bauh`，你可以搜索并安装额外的软件包（有时是应用程序）、安装更新、删除未安装的应用，并避免在找不到软件包或出现版本号冲突时发生崩溃。
 
 Snap、Flatpak 和 AppImage 等下一代工具通过将依赖项封装在包中解决了依赖问题。由于它们携带了依赖项，这些现代格式具有良好的可移植性，只要有兼容的包管理器，就可以安装在任何 Linux 系统上。
 
-但为什么这么多格式呢？在 Linux 伟大的传统中，社区以几种不同的方式解决了同一个问题。这意味着你需要使用几个不同的包管理器来读取 Snap、Flatpak 和 AppImage 格式吗？不再需要了。bauh [1] 是一个图形化包管理器，它可以处理支持的格式并根据需要开启或关闭单个格式。
+但为什么这么多格式呢？在 Linux 伟大的传统中，社区以几种不同的方式解决了同一个问题。这意味着你需要使用几个不同的包管理器来读取 Snap、Flatpak 和 AppImage 格式吗？不再需要了。`bauh` [1] 是一个图形化包管理器，它可以处理支持的格式并根据需要开启或关闭单个格式。
 
 图 1：使用右下角的齿轮显示支持的格式，并根据需要开启或关闭单个格式。
 
 2020年7月
+
 第 236 期
+
 LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM
 
 ![](img/8295b48fa67fe82b58801e13f9267227_283_0.png)
+
 ![](img/8295b48fa67fe82b58801e13f9267227_283_1.png)
 
 ## 深度解析
 
 ## bauh
 
-最后，bauh 支持 Web 应用的集成。如果你选择此选项，系统将自动导入某些所需的依赖，包括 Node.js、Electron 和 nativefier [6]。你必须确保 Arch 上安装了 `python-lxml` 和 `python-beautifulsoup4`，而在 Debian 上安装了 `beautifulsoup4` 和 `lxml`。这两个软件包在 Debian 存档中可用，因此你需要像之前描述的那样使用 pip 安装它们。
+最后，`bauh` 支持 Web 应用的集成。如果你选择此选项，系统将自动导入某些所需的依赖，包括 Node.js、Electron 和 nativefier [6]。你必须确保 Arch 上安装了 `python-lxml` 和 `python-beautifulsoup4`，而在 Debian 上安装了 `beautifulsoup4` 和 `lxml`。这两个软件包在 Debian 存档中可用，因此你需要像之前描述的那样使用 pip 安装它们。
 
 ## 配置
 
-一旦你满足了所需格式的所有要求，bauh 将向你显示系统中已存在属于激活格式的所有应用程序。首先点击右下角的蓝色齿轮，然后点击“应用程序类型”（Application types）。打开的窗口现在应该显示所有支持的格式（图 1）。你可以根据需要在此窗口中（去）激活这些格式。如果列表不包含所需的格式，你需要重新检查依赖项。
+一旦你满足了所需格式的所有要求，`bauh` 将向你显示系统中已存在属于激活格式的所有应用程序。首先点击右下角的蓝色齿轮，然后点击“应用程序类型”`Application types`。打开的窗口现在应该显示所有支持的格式（图 1）。你可以根据需要在此窗口中（去）激活这些格式。如果列表不包含所需的格式，你需要重新检查依赖项。
 
-在 Debian、Ubuntu 及其衍生版上，使用 Python 宇宙中的 pip-installer 安装 bauh。首先：
+在 Debian、Ubuntu 及其衍生版上，使用 Python 宇宙中的 pip-installer 安装 `bauh`。首先：
 
 ```bash
 sudo apt install python3-pip
 ```
 
-首次启动 bauh（它由 Python 3 和 Qt5 开发）后，应用程序会自动找到所有属于你已启用格式的之前安装的应用程序。然后输入安装 bauh 的命令：
+首次启动 `bauh`（它由 Python 3 和 Qt5 开发）后，应用程序会自动找到所有属于你已启用格式的之前安装的应用程序。然后输入安装 `bauh` 的命令：
 
 ```bash
 sudo pip3 install bauh
@@ -1819,17 +1769,17 @@ sudo pip3 install bauh
 
 例如，Debian 依赖项是 `sqlite3` 和 `wget`，而 Arch Linux 需要的是 `sqlite` 和 `wget`。或者，为了实现多线程快速下载，你可以安装 `aria2` 下载器。
 
-在下一步中，如果你还没有这样做，请务必安装你想用 bauh 管理的包格式的基础组件。Flatpak 最容易直接从 Flathub [3] 网站安装，它是 Flatpak 的中心仓库。到达那里后，点击“快速设置”（Quick Setup）按钮，并在下一步中选择 Debian、Arch Linux 或基于其的发行版之一。由发行版社区维护的存档支持 AUR。你将收到关于如何安装 Flatpak 基本（包括 Flathub 仓库集成）的指令。为了能用 bauh 管理 Snap，你需要安装 `snapd`。从 16.04 版本开始的 Ubuntu、Solus 以及 Zorin OS 已开箱即用该服务；其他发行版在 Snapcraft [4] 中尚未正式提供。安装 `snapd` 后，你需要注销并重新登录或重启系统以激活。
+在下一步中，如果你还没有这样做，请务必安装你想用 `bauh` 管理的包格式的基础组件。Flatpak 最容易直接从 Flathub [3] 网站安装，它是 Flatpak 的中心仓库。到达那里后，点击“快速设置”`Quick Setup` 按钮，并在下一步中选择 Debian、Arch Linux 或基于其的发行版之一。由发行版社区维护的存档支持 AUR。你将收到关于如何安装 Flatpak 基本（包括 Flathub 仓库集成）的指令。为了能用 `bauh` 管理 Snap，你需要安装 `snapd`。从 16.04 版本开始的 Ubuntu、Solus 以及 Zorin OS 已开箱即用该服务；其他发行版在 Snapcraft [4] 中尚未正式提供。安装 `snapd` 后，你需要注销并重新登录或重启系统以激活。
 
-AppImage 是一个较旧的格式，由于 Flatpak 和 Snap 的流行正变得越来越受欢迎。bauh 只能用于通过 AppImageHub [5] 提供并同时托管在 GitHub 上的应用。这包含了超过 1000 个程序，正如你在 AppImageHub 上看到的那样。
+AppImage 是一个较旧的格式，由于 Flatpak 和 Snap 的流行正变得越来越受欢迎。`bauh` 只能用于通过 AppImageHub [5] 提供并同时托管在 GitHub 上的应用。这包含了超过 1000 个程序，正如你在 AppImageHub 上看到的那样。
 
-图 2：在首次启动后，bauh 将向你显示所有属于启用格式的应用程序。首先点击右下角的蓝色齿轮，然后点击“应用程序类型”。
+图 2：在首次启动后，`bauh` 将向你显示所有属于启用格式的应用程序。首先点击右下角的蓝色齿轮，然后点击“应用程序类型”。
 
 图 3：点击蓝色信息按钮显示已安装应用的信息。
 
 图 4：点击紫色相机图标查看应用程序的截图。
 
-图 5：如果满足 Web 应用的要求，bauh 还会将互联网服务集成到系统中，例如 Facebook、Instagram、Slack 或 Gmail。
+图 5：如果满足 Web 应用的要求，`bauh` 还会将互联网服务集成到系统中，例如 Facebook、Instagram、Slack 或 Gmail。
 
 图 6：搜索结果视图为你提供了启动选项。
 
@@ -1837,13 +1787,13 @@ AppImage 是一个较旧的格式，由于 Flatpak 和 Snap 的流行正变得�
 
 ## 切换视图
 
-bauh 的工作可以用几个字来解释。在右上角，程序显示图标，指示视图是否包含已安装的应用程序，或者有多少建议的软件包。这些被标记为 *Installed*（已安装）、*Proposals*（建议）和 *Upgrade*（升级）。后一个图标仅在有更新时通知你。后者的优势是，安装或更新时只需要普通用户权限。我们在 Debian 上安装时遇到一个小问题，以用户安装未成功；错误消息显示缺少权限。为了规避这个问题，将 `/var/tmp` 中的权限从 755 更改为 1777。使用命令：
+`bauh` 的工作可以用几个字来解释。在右上角，程序显示图标，指示视图是否包含已安装的应用程序，或者有多少建议的软件包。这些被标记为 *Installed*（已安装）、*Proposals*（建议）和 *Upgrade*（升级）。后一个图标仅在有更新时通知你。后者的优势是，安装或更新时只需要普通用户权限。我们在 Debian 上安装时遇到一个小问题，以用户安装未成功；错误消息显示缺少权限。为了规避这个问题，将 `/var/tmp` 中的权限从 755 更改为 1777。使用命令：
 
 `sudo chmod 1777 /var/tmp`
 
 这里重要的是粘滞位（sticky bit）。如果设置了该位，只有文件或目录的所有者才允许删除或重命名相应对象。这不影响写、读和执行权限。
 
-最新版本 bauh 0.9.3 支持 Web 应用的集成。根据视图的不同，左侧的过滤器也会发生。例如，如果你指定了某些选项，它将以 `bauh.yml` 命名。
+最新版本 `bauh` 0.9.3 支持 Web 应用的集成。根据视图的不同，左侧的过滤器也会发生。例如，如果你指定了某些选项，它将以 `bauh.yml` 命名。
 
 中心配置文件位于 `~/.config/bauh.yml`。在文件中，你可以指定是全局安装还是为用户安装 Flatpak。
 
@@ -1851,16 +1801,13 @@ bauh 的工作可以用几个字来解释。在右上角，程序显示图标，
 
 如果你使用了多个包管理器
 
+由 `bauh` 管理的格式（图 3），使用此图 3) 和更新后的多功能包管理器提供了许多益处。该程序节省了管理和更新已安装包，或恢复旧版本应用或库的时间。Bauch 还会针对你搜索的程序提供替代方案。使用顶部的搜索栏。在各种应用中心深处，隐藏着许多未被发现的宝藏应用待你挖掘。如果你最后得到了你不喜欢的东西，得益于 `bauh`，你可以快速无痕地删除它；这在传统的软件包管理系统中并不容易做到。
 
+图 6：与其在视图（图 4）浏览器中通过 URL 调用 Evernote，现在你现在可以直接从 `bauh` 或通过桌面启动记事本。
 
+`Bauh` 的界面可以升级一下，但这不影响功能。我希望看到的一个功能是在“更新（Updates）”和“应用（Apps）”字段以及在安装前通过相机图标选择“类型（Type）”和“类别（Category）”列表中直接更改主机沙箱上应用程序访问权限的能力。还有按名称过滤应用的可能性。
 
-由 bauh 管理的格式（图 3），使用此图 3) 和更新后的多功能包管理器提供了许多益处。该程序节省了管理和更新已安装包，或恢复旧版本应用或库的时间。Bauch 还会针对你搜索的程序提供替代方案。使用顶部的搜索栏。在各种应用中心深处，隐藏着许多未被发现的宝藏应用待你挖掘。如果你最后得到了你不喜欢的东西，得益于 bauh，你可以快速无痕地删除它；这在传统的软件包管理系统中并不容易做到。
-
-图 6：与其在视图（图 4）浏览器中通过 URL 调用 Evernote，现在你现在可以直接从 bauh 或通过桌面启动记事本。
-
-Bauh 的界面可以升级一下，但这不影响功能。我希望看到的一个功能是在“更新（Updates）”和“应用（Apps）”字段以及在安装前通过相机图标选择“类型（Type）”和“类别（Category）”列表中直接更改主机沙箱上应用程序访问权限的能力。还有按名称过滤应用的可能性。
-
-除此之外，当你在搜索栏中输入匹配的 URL 或服务名称时（图 5），bauh 还支持安装原生 Web 应用。例如，如果你更倾向于基于 Web 的 Evernote 云笔记本而不是原生的 Linux 替代品，你在这里就能找到。决定 Flatpak 可以访问哪些服务和服务。
+除此之外，当你在搜索栏中输入匹配的 URL 或服务名称时（图 5），`bauh` 还支持安装原生 Web 应用。例如，如果你更倾向于基于 Web 的 Evernote 云笔记本而不是原生的 Linux 替代品，你在这里就能找到。决定 Flatpak 可以访问哪些服务和服务。
 
 ### 过滤器（Filters）
 
@@ -1868,20 +1815,28 @@ Bauh 的界面可以升级一下，但这不影响功能。我希望看到的一
 
 ### 信息（Info）
 
-[1] bauh: https://github.com/vinifmor/bauh
+[1] `bauh`: https://github.com/vinifmor/bauh
+
 [2] 依赖 (Dependencies): https://github.com/vinifmor/bauh#basic-requirements
+
 [3] Flathub: https://flathub.org
+
 [4] Snapcraft: https://snapcraft.io/docs/installing-snap
+
 [5] AppImageHub: https://appimage.github.io
+
 [6] nativeifier: https://github.com/jiahog/nativefier
+
 [7] Evernote: https://www.evernote.com/Login.action?targetUrl=%2Fclient%2Fweb
 
 作者
+
 Ferdinand Thommes 居住在柏林，担任 Linux 开发人员、自由撰稿人和导游游。
 
 图 7：搜索功能不仅返回当前搜索的命中结果，还会返回与搜索词匹配的替代方案。
 
 LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM
+
 第 236 期 | 2020年7月 | 53
 
 ## 监控旧设备
@@ -1890,11 +1845,13 @@ LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM
 
 使用 SSH、命令行工具和 Node-RED 创建监控仪表板。Pete Metcalfe 编写
 
-有一些优秀的技术和软件包可用于监控计算机硬件。对于带有较旧或低端服务器的较小系统，对于中大型系统，简单网络监控协议（SNMP）方法通常是首选方案。这些命令行工具可以通过安全外壳（SSH）远程使用，并对输出进行解析以仅返回关键数据值，然后在 Node-RED Web 仪表板中进行图形显示（图 1）。在本文，我将演示使用 iostat 工具 [1] 监控 CPU 利用率，使用 lm-sensors 包 [2] 以及 hddtemp 工具 [3] 在仪表板上监控温度的示例。
+有一些优秀的技术和软件包可用于监控计算机硬件。对于带有较旧或低端服务器的较小系统，对于中大型系统，简单网络监控协议（SNMP）方法通常是首选方案。这些命令行工具可以通过安全外壳（SSH）远程使用，并对输出进行解析以仅返回关键数据值，然后在 Node-RED Web 仪表板中进行图形显示（图 1）。在本文，我将演示使用 `iostat` 工具 [1] 监控 CPU 利用率，使用 `lm-sensors` 包 [2] 以及 `hddtemp` 工具 [3] 在仪表板上监控温度的示例。
 
 图 1：通过 SSH 向 Node-RED 仪表板发送命令。
 
 ### CPU 利用率
+
+
 
 iostat 工具是 sysstat 包的一部分，它可能已经在你的旧系统上加载了。如果没有，可以通过 `apt-get install sysstat` 进行安装。
 
@@ -1916,15 +1873,17 @@ pete@ubuntu: ~$ iostat -c | sed -n 4p
 ```
 
 ## 现在获取第 6 个字符串
+
 ```bash
 pete@ubuntu: ~$ iostat -c | sed -n 4p | awk '{print $6}'
 87.02
 ```
-使用 awk（第 11 行）在行尾获取第六个字符串项（第 12 行）。
+
+使用 `awk`（第 11 行）在行尾获取第六个字符串项（第 12 行）。
 
 ## 监控旧设备
 
-## 基于芯片的温度
+### 基于芯片的温度
 
 要安装 lm-sensors 包中的硬件传感器，输入 `sensors-detect` 来检测哪些传感器可用于监控。这一步会弹出若干个关于需要扫描哪些传感器的提示。一旦扫描步骤完成，`sensors` 命令将返回其找到的所有硬件的结果。可以使用以下命令显示特定传感器：
 
@@ -1934,7 +1893,7 @@ $ sshpass -p password ssh username@192.168.0.116 sensors <chip name>
 
 ## 列表 2：解析传感器数据
 
-列表 2 显示了使用 `sensors` 命令查看 dell_smm-virtual-0 芯片组的示例。CPU 温度值（在第 5 行）可以使用 grep（第 10 行）进行解析，它查找包含“CPU”的行；然后，awk（第 14 行）输出字符串的第二项（第 15 行）。
+列表 2 显示了使用 `sensors` 命令查看 `dell_smm-virtual-0` 芯片组的示例。CPU 温度值（在第 5 行）可以使用 `grep`（第 10 行）进行解析，它查找包含“CPU”的行；然后，`awk`（第 14 行）输出字符串的第二项（第 15 行）。
 
 ```bash
 ## 获取 CPU 温度
@@ -1943,6 +1902,7 @@ CPU: +40.0°C
 ```
 
 ## 只返回温度
+
 ```bash
 pete@ubuntu: ~$ sensors dell_smm-virtual-0 | grep 'CPU' | awk '{print $2}'
 +40.0°C
@@ -1950,7 +1910,7 @@ pete@ubuntu: ~$ sensors dell_smm-virtual-0 | grep 'CPU' | awk '{print $2}'
 
 ### 列表 3：CPU 和硬盘温度
 
-hddtemp 硬盘温度监控包通过 `apt-get install hddtemp` 安装，用户名/密码作为命令行选项。
+`hddtemp` 硬盘温度监控包通过 `apt-get install hddtemp` 安装，用户名/密码作为命令行选项。
 
 ```bash
 $ sshpass -p password ssh username@192.168.0.116 hddtemp /dev/sda
@@ -1961,46 +1921,62 @@ $ sshpass -p password ssh username@192.168.0.116 hddtemp /dev/sda
 
 ## 远程命令
 
-默认情况下，hddtemp 需要超级用户权限，为了让非超级用户可以使用结果，请使用 `sudo chmod u+s /usr/sbin/hddtemp`。与其让远程 Linux 服务器将数据发送到中央监控节点，不如中央节点可以定期轮询远程服务器获取数据。ssh-keygen 方法推荐用于大多数应用程序，因为它不会暴露密码。对于手动测试，我使用 sshpass 方法，在接下来的 Node-RED 项目中，要查看硬盘的温度，
-
+默认情况下，`hddtemp` 需要超级用户权限，为了让非超级用户可以使用结果，请使用 `sudo chmod u+s /usr/sbin/hddtemp`。与其让远程 Linux 服务器将数据发送到中央监控节点，不如中央节点可以定期轮询远程服务器获取数据。`ssh-keygen` 方法推荐用于大多数应用程序，因为它不会暴露密码。对于手动测试，我使用 `sshpass` 方法，在接下来的 Node-RED 项目中，要查看硬盘的温度，
 
 该命令包含许多标准
+
 输入其设备名称。例如
 
-查看 /dev/sda，使用：
+查看 `/dev/sda`，使用：
 
 工具包括：
 
-- 1. ssh-keygen，它生成一个 SSH
-sudo apt-get install sshpass
+- 1. `ssh-keygen`，它生成一个 SSH
+
+`sudo apt-get install sshpass`
 
 ```
 $ hddtemp /dev/sda
 ```
 
-/dev/sda: WDC WD3200BPVT-75JJ5T: U
+`/dev/sda`: WDC WD3200BPVT-75JJ5T: U
+
 存储在一个用户
+
 目录中，启用 stan-
+
 的
+
 34°C
-再次，你可以使用 awk 命令来
+
+再次，你可以使用 `awk` 命令来
+
 解析输出以仅获取温度-
+
 可以直接运行而不需要
+
 你输入密-
+
 码dard SSH 客户端
+
 结构。在本示例中，温度是
+
 字符串的第四项，因此命-
+
 令显示该值，如下所示：
+
 字。
 
-- 2. sshpass，它
+- 2. `sshpass`，它
 
 是一个 SSH 客户端
+
 它包含了
 
-$ hddtemp /dev/sda | awk '{print $4}'
+`$ hddtemp /dev/sda | awk '{print $4}'`
 
 图 2：从管理（Manage）面板菜单中安装节点
+
 34°C
 
 菜单。
@@ -2010,9 +1986,7 @@ $ hddtemp /dev/sda | awk '{print $4}'
 ### 工作流 1
 
 - 节点 (Dig)
-
 - 树莓派 (Raspberry Pi)
-
 - 仪表板 (dashboard)
 - 网络 (network)
 - 调试 (debug)
@@ -2021,7 +1995,7 @@ $ hddtemp /dev/sda | awk '{print $4}'
 
 192.168.0.118:
 
-commandIn
+`commandIn`
 
 ```
 commandLine "sensors | grep temp1 | awk '{print $2}'" ,
@@ -2040,9 +2014,7 @@ input: [(192.168.0.118)]
 ### 工作流 1
 
 - 调试 (debug)
-
 - 树莓派 (Raspberry Pi)
-
 - 仪表板 (dashboard)
 - 网络 (network)
 
@@ -2059,6 +2031,7 @@ input: [(192.168.0.118)]
 ### Dell 处理器温度
 
 20:43:00
+
 MAX 36.5
 
 ![](img/8295b48fa67fe82b58801e13f9267227_317_0.png)
@@ -2066,69 +2039,111 @@ MAX 36.5
 Dell 处理器温度
 
 32.5
+
 Deg C
 
 ![](img/8295b48fa67fe82b58801e13f9267227_317_1.png)
 
 ## 监控旧设备的设备
 
-host，以及 ssh-key-
+host，以及 `ssh-keygen` 密码。该
 
-gen 密码。该
 bigssh 节点将
+
 它的第一个输出
-(commandLine) 传递给
+
+(`commandLine`) 传递给
+
 调试（Debug）节点。调试
+
 节点将
+
 消息和付-
+
 负载信息发送到
+
 调试标签页。如果
 
 图 3：使用 Inject、Big SSH 和 Debug 节点的基本轮询测试电路（从左到右）。
 
 调试节点
+
 没有显示
+
 预期的 SSH 命令结果，那么
+
 bigssh 的第三个输出（minError）会显示定时器节点，
+
 s 调度数据
+
 轮询。
 
 在我在测试逻辑中成功运行了所有的 SSH
+
 命令后，我更改了逻辑，使用一个
+
 bigtimer 节点进行调度，某些
+
 组件可以
+
 手动安装，或者使用
+
 仪表板节点进行显示（图-
+
 the Manage pal-
+
 菜单选项
+
 ure 4）。bigtimer 节点具有很好的
+
 调度和定时选择。
+
 （图 2）。
 
 在三个 Big Timer 输出中，
+
 基础测试电-
+
 路的中间输出引脚每分钟产生一个
+
 脉冲。
 
 列表 3 显示了如何手动
+
 轮询 Linux 服务器（第 1 行）
+
 和硬盘（第 13 行）温度。
+
 并返回温度，这会使用一个
+
 你有多种
+
 仪表板展示的选择。
+
 *Inject、bigssh 和 Debug* 节点（图-
+
 3）。*Inject* 节点用于触发
+
 逻辑。
-如你之前所示，grep 和 awk 调用
+
+如你之前所示，`grep` 和 `awk` 调用
+
 可以用于仅显示所需的
+
 对于一个简单的
+
 *图表* 节点。
+
 用于 CPU 的首-
+
 值：
 
 双击这些仪表板
+
 节点中的每一个来编辑
+
 属性，如 la-
+
 标签和刻度。
 
 ```
@@ -2136,14 +2151,19 @@ $ sshpass -p mypassword U
 ```
 
 会打开一个编辑配置窗口。在
+
 myssh 字段中，你输入用户名，逻辑完成后，点击
+
 菜单栏右侧的
+
 Deploy 按钮运行你更新后的项目。
 
 +30.5°C
 
 Node-RED Web 仪表板位于
+
 http:// <your-node-red-ip>:1880/ ui/
+
 以及（图 5）。
 
 以及对于硬盘：
@@ -2152,35 +2172,42 @@ http:// <your-node-red-ip>:1880/ ui/
 $ sshpass -p mypassword U
 ```
 
-ssh username@192.168.0.116 U
+`ssh username@192.168.0.116 U`
 
-sensors | grep temp1 U
+`sensors | grep temp1 U`
 
-| awk '{print $2}'
+`| awk '{print $2}'`
 
- 结语
+结语
 
 在这篇文章中，我只查看了三个
+
 命令行工具；然而，许多其他工具
+
 可以使用这种技术。
 
-ssh username@192.168.0.116 U
+`ssh username@192.168.0.116 U`
 
-hddtemp /dev/sda/ | awk '{print $3}'
+`hddtemp /dev/sda/ | awk '{print $3}'`
 
 39°C
 
 此时，已有一种机制可以
+
 获取远程
+
 Linux 节点的值。下一步是
+
 将值发送到 Node-RED 仪表板。
 
 [1] iostat:
+
 man-pages/ iostat. 
 
 Node-RED
 
 [2] lm-sensors:
+
 man-sensors/ lm-sensors
 
 Node-RED
@@ -2190,24 +2217,28 @@ Node-RED
 Node-RED
 
 [4] 是一个基于 Web 的
+
 Node-RED
 
 [5] 开始使用 Node-
 
 编程环境，具有丰富的
+
 节点，可以用于创建逻辑。在树莓派
+
 平台上，Node-RED 是预装的
+
 可视化环境，带有仪表板。
+
 Pi，树莓派可以提供，但这是我忘记的一点
+
 在 Raspbian 镜像中。要安装 Node-
 
 手动安装或使用 Node-
+
 Node-RED 在其他系统中也已预装。请查看
+
 docs。
-
-
-
-
 
 这里选择的是 MCP3008，它的价格仅需 4 美元（2.50 欧元，3 英镑）。将泵的正极连接到树莓派的一个 GPIO 端口。
 
@@ -2242,6 +2273,7 @@ A/D 转换器通过 SPI 接口控制，必须在 raspi-config 中激活。或者
 控制灌溉系统被证明有些复杂，因为水与水管在花盆位置之间的相互实际上不是二元的。事实上，一个不断开关传感器直到传感器报告潮湿的算法可能会淹死植物。同时，园艺师还需要考虑不同植物耗水量不同。
 
 图 4：泵连接到继电器的电路。
+
 图 5：单植物灌溉系统设置。
 
 ## 列表 1：首次测试
@@ -2278,11 +2310,17 @@ while True:
 ## 列表 2：灌溉算法
 
 - 每单位单位时间测量一次湿度。
+
 如果测量值大于阈值值，则：
+
     浇水 X 秒。
+
 在 Y 秒后再次测量（Y 小于时间单位）。
+
 如果未达到阈值值，则：
+
     额外喷一次水。
+
 跳转 01
 
 ## 列表 3：灌溉程序
@@ -2298,121 +2336,212 @@ while True:
 ## 列表 4：配置
 
 ```yaml
+
 ## 配置文件
+
 ficus1:
+
   threshold: 800
+
   x: 5
+
   y: 60
+
 ```
+
+```python
+
+import datetime
+
+import time
+
+import Adafruit_GPIO.SPI as SPI
+
+import Adafruit_MCP3008
+
+import RPi.GPIO as GPIO
+
+import threading
+
+import yaml
+
+import pprint
+
+import smtplib
+
+from influxdb import InfluxDBClient
+
+class PotThread(threading.Thread):
+
+    def __init__(self, group=None, monitorly=False, influxclient=None, target=None, threadname=None, debug=None, args=()):
+
+        threading.Thread.__init__(group=group, target=target, name=threadname)
+
+        self.influxclient = influxclient
+
+        self.monitoronly = monitoronly
+
+        self.debug = debug
+
+        self.active = True
+
+        if 'pot' in args:
+
+            self.potconfig = args['pot']
+
+        else:
+
+            self.potconfig = {}
+
+        self.threadname = threadname
+
+        if self.potconfig and "name" in self.potconfig:
+
+            self.threadname = self.potconfig['name']
+
+        else:
+
+            self.threadname = "Unknown"
+
+    def run(self):
+
+        while True:
+
+            if self.active:
+
+                humidity = self.get_sync_humidity(self.potconfig['sensorchannel'], self.potconfig['sensorgpio'])
+
+                if self.debug:
+
+                    print(str(datetime.datetime.now()) + " " + self.threadname + " Humidity: " + str(humidity))
+
+                measurement = {
+
+                    'measurement': 'humidity',
+
+                    'tags': {
+
+                        'name': self.threadname
+
+                    },
+
+                    'time': time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
+
+                    'fields': {
 
 
 
 ```python
-import datetime
-import time
-import Adafruit_GPIO.SPI as SPI
-import Adafruit_MCP3008
-import RPi.GPIO as GPIO
-import threading
-import yaml
-import pprint
-import smtplib
-from influxdb import InfluxDBClient
+'level': humidity
 
-class PotThread(threading.Thread):
-    def __init__(self, group=None, monitorly=False, influxclient=None, target=None, threadname=None, debug=None, args=()):
-        threading.Thread.__init__(group=group, target=target, name=threadname)
-        self.influxclient = influxclient
-        self.monitoronly = monitoronly
-        self.debug = debug
-        self.active = True
-        if 'pot' in args:
-            self.potconfig = args['pot']
-        else:
-            self.potconfig = {}
-        self.threadname = threadname
-        if self.potconfig and "name" in self.potconfig:
-            self.threadname = self.potconfig['name']
-        else:
-            self.threadname = "Unknown"
+}
 
-    def run(self):
-        while True:
-            if self.active:
-                humidity = self.get_sync_humidity(self.potconfig['sensorchannel'], self.potconfig['sensorgpio'])
-                if self.debug:
-                    print(str(datetime.datetime.now()) + " " + self.threadname + " Humidity: " + str(humidity))
-                measurement = {
-                    'measurement': 'humidity',
-                    'tags': {
-                        'name': self.threadname
-                    },
-                    'time': time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
-                    'fields': {
-                        'level': humidity
-                    }
-                }
-                measurements = []
-                measurements.append(measurement)
-                if self.influxclient:
-                    try:
-                        self.influxclient.write_points(measurements)
-                    except:
-                        print("Influx failed for " + self.threadname)
+}
 
-            if humidity > int(self.potconfig['limitval']):
-                if self.debug:
-                    print(str(datetime.datetime.now()) + " " + self.threadname + " Setting active to: " + str(True))
-                self.active = True
-                self.pump_on(self.potconfig['pumpseconds'], self.potconfig['relaygpio'])
-                if self.debug:
-                    print(str(datetime.datetime.now()) + " " + self.threadname + " Pump on ")
-            
-            time.sleep(self.potconfig['measuringbreak'])
-            # This logic seems to follow another humidity sensor logic based on OCR text
-            time.sleep(self.potconfig['measuringbreak2'])
+measurements = []
 
-    def pump_on(self, seconds, gpio):
-        GPIO.setmode(GPIO.BCM)
-        GPIO.setwarnings(False)
-        GPIO.setup(gpio, GPIO.OUT)
-        GPIO.output(gpio, 1)
-        time.sleep(int(seconds))
-        GPIO.output(gpio, 0)
+measurements.append(measurement)
 
-    def get_sync_humidity(self, sensorchannel, sensorgpio):
-        SPI_PORT = 0
-        SPI_DEVICE = 0
-        mcp = Adafruit_MCP3008.MCP3008(SPI_PORT, SPI_DEVICE)
-        if self.debug:
-            print("Tank: " + str(hum))
-        hum = mcp.read_adc(sensorchannel)
-        mcp.spi.close()
-        return hum
+if self.influxclient:
 
-    def set_active(self, active):
-        if self.debug:
-            print(str(datetime.datetime.now()) + " " + self.threadname + " Setting active to: " + str(active))
-        self.active = active
+    try:
+
+        self.influxclient.write_points(measurements)
+
+    except:
+
+        print("Influx failed for " + self.threadname)
+
+if humidity > int(self.potconfig['limitval']):
+
+    if self.debug:
+
+        print(str(datetime.datetime.now()) + " " + self.threadname + " Setting active to: " + str(True))
+
+    self.active = True
+
+    self.pump_on(self.potconfig['pumpseconds'], self.potconfig['relaygpio'])
+
+    if self.debug:
+
+        print(str(datetime.datetime.now()) + " " + self.threadname + " Pump on ")
+
+time.sleep(self.potconfig['measuringbreak'])
+
+# This logic seems to follow another humidity sensor logic based on OCR text
+
+time.sleep(self.potconfig['measuringbreak2'])
+
+def pump_on(self, seconds, gpio):
+
+    GPIO.setmode(GPIO.BCM)
+
+    GPIO.setwarnings(False)
+
+    GPIO.setup(gpio, GPIO.OUT)
+
+    GPIO.output(gpio, 1)
+
+    time.sleep(int(seconds))
+
+    GPIO.output(gpio, 0)
+
+def get_sync_humidity(self, sensorchannel, sensorgpio):
+
+    SPI_PORT = 0
+
+    SPI_DEVICE = 0
+
+    mcp = Adafruit_MCP3008.MCP3008(SPI_PORT, SPI_DEVICE)
+
+    if self.debug:
+
+        print("Tank: " + str(hum))
+
+    hum = mcp.read_adc(sensorchannel)
+
+    mcp.spi.close()
+
+    return hum
+
+def set_active(self, active):
+
+    if self.debug:
+
+        print(str(datetime.datetime.now()) + " " + self.threadname + " Setting active to: " + str(active))
+
+    self.active = active
 
 # Main logic reconstructed from OCR fragments
+
 with open('config.yml', 'r') as configyml:
+
     config = yaml.load(configyml, Loader=yaml.Loader)
+
 configfile.close()
 
 influxclient = None
+
 if "influx" in config:
+
     influxclient = InfluxDBClient(config['influx']['server'], 8086, config['influx']['user'], config['influx']['password'], config['influx']['database'])
 
 debug = config['debug']
+
 monitoronly = False
+
 if "monitoronly" in config:
+
     monitoronly = config["monitoronly"]
 
 children = []
+
 for pot in config['pots']:
+
     pt = PotThread(debug=debug, influxclient=influxclient, monitoronly=monitoronly, args=(pot,))
+
     pt.start()
+
     children.append(pt)
 ```
 
@@ -2421,6 +2550,7 @@ for pot in config['pots']:
 ### 列表 3：浇程序（续）
 
 ## 列表 4：config.yml
+
 ```yaml
 pots:
   - pot:
@@ -2459,6 +2589,8 @@ mail:
   to: watering@local
 ```
 
+
+
 同时，脚本将测量值输入 Influx 数据库（列表3，第39-55行）。基于此数据库，可以获取概览（例如使用 Grafana），以便在分析后更好地调整参数。
 
 信息
@@ -2471,9 +2603,6 @@ mail:
 [7] 署名-共享 4.0 国际许可：https://creativecommons.org/licenses/by-sa/4.0/
 
 作者：Konstantin Agouros 是 Matrix Technology AG 的技术总监，他和他的团队就开源和云领域的客户提供建议。他的新书 *Software De-*
-
-
-
 
 （列表 4，第 36-40 行），以及每个框中的电子邮件 pa-。在这里，一些经验丰富的网络：实践与控制-ram 位于邮件块中（第 42-45 行）。
 
@@ -2490,7 +2619,7 @@ LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM
 63
 
 ## 公共资金
-公共代码
+### 公共代码
 
 ![](img/8295b48fa67fe82b58801e13f9267227_368_0.png)
 
@@ -2536,7 +2665,7 @@ LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM
 
 ## LINUX 之声 DOGHOUSE – 笔记本电脑上的 Linux
 
-MADDOG 的狗屋
+### MADDOG 的狗屋
 
 Jon "maddog" Hal 是一位作家、教育工作者、计算机科学家和自由软件先驱，自 1994 年起他一直是 Linux 的热衷支持者，那时他第一次遇到 Linus Torvalds 并促成了 Linux 移植到 64 位系统。他担任 Linux International ® 的总裁。
 
@@ -2592,8 +2721,6 @@ CPU 的型号是什么？品牌是什么？就像超市不卖一样。
 
 作为 OEM，东芝可能可能也可能实际上制造了自己的主板。如果他们制造了，那么他们可能是将软件许可应用到板上的那些。如果没有，并且他们满足了你的需求，我们就买吧。我的观点是，与其对模型和发行发发不满，不如感谢他们并鼓励更多的发行版和模型。
 
-
-
 减号占位符、歌词作者、艺术家、专辑发行年份、替代双冒号的内容，以及更多内容。
 
 一旦你解决了所有依赖项（可选），就有了颜色高亮显示的可能：你只需三步即可安装 ChordPro：点亮和弦。为此，请添加 *{chordcolour}: perl Makefile.PL, make, and make install <Color>* 指令；该指令接受各种标识符（后者的根目录通常是工作根目录）。要使用红色、绿色或蓝色（使用名称），或使用十六进制（通过图形界面），你还需要 wxWidgets 的 Perl 绑定程序，你可以在基于 Debian 的发行版中找到名为 *libwx-perl.* 的包。ChordPro 还支持在歌词内部更改颜色。要实现这一点，在像 openSUSE、Fedora 或 Mageia 等基于 RPM 的系统上，只需设置一个带有空颜色指定的 `chordcolour` 语句即可。*perl-Wx.* 规范中指定的文件格式可以从 ChordPro wiki [2] 获取。
@@ -2626,53 +2753,98 @@ ChordPro 会自动创建一个 A4 纵向格式的 PDF 文件，每页大约容�
 
 ```ini
 [Desktop Entry]
+
 Version=1.0
+
 Name=ChordPro
+
 Comment=Lyrics and chords formatting program
+
 Exec=wxchordpro
+
 Icon=applications-multimedia
+
 Terminal=false
+
 Type=Application
+
 Categories=AudioVideo;Music;
+
 StartupNotify=true
 ```
 
-###配置文件
+### 配置文件
 在浏览命令行选项时，你会不断发现某些内容对配置文件的引用。事实上，这种处理方式比图形界面强大得多。关于配置文件的详细描述可以在 wiki [6] 中找到。需要外部控制的典型示例包括为 Okular 文档查看器未直接显示的乐器打印指法图，3：歌词和和弦到“Greensleeves”，
 
 ```
 $ chordspro --help
+
 这是 ChordPro 版本 0.974.1
+
 用法: /usr/local/bin/chordspro [options] [ file ... ]
 
 选项:
+
   --help                从 PDF 添加和弦页
+
   --cover=FILE           打印指法图
+
   --diagramM            打印指法图 (UTF-8)
+
   --filelist=FILE        从文件读取名称
+
 --title=-t             将输出保存到文件
+
 --output=CONFIG -c     默认定义方法
+
 --start-page-number p 起页码
+
 --tabs                生成目录
+
 --transcode=x         转码记法系统
+
 --transcodeSV=x       转码 ABC
+
 --version -V           打印版本并退出
 
 和弦兼容性:
+
 标记为 * 的选项最好在配置文件中指定。
+
 *--chord-factFMB *      设置支持指法图。
+
 *--chord-grid *         按键设置和弦格顺序
+
 *--chord-size *        设置和弦大小 [9]
+
 *--dump-chords          导出和弦定义（文本）
-*--dump-text -d         将文本换行输出
-*--odd-page-number left
-*--odd-page-grid -d      禁用打印指法图
-*--page-number-logical -n 逻辑页数而非物理页数
-*--page-size -s          特定页面大小（默认）
-*--simple-scale -x       自动转码为无和弦的简单音阶。
 ```
 
 
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
+
+*--dump-text -d* 将文本换行输出
+
+*--odd-page-number left*
+
+*--odd-page-grid -d* 禁用打印指法图
+
+*--page-number-logical -n* 逻辑页数而非物理页数
+
+*--page-size -s* 特定页面大小（默认）
+
+*--simple-scale -x* 自动转码为无和弦的简单音阶。
 
 支持、输出替代指法，并显示 ChordPro 不认识且因此你必须显式指定的和弦。列表 4 显示了一个 wiki 指法图像示例，为了我们的目的对其进行了微调，它在配置文件中定义了低音区和高音区的 B 大和弦变体。
 
@@ -2696,7 +2868,7 @@ chordpro
 ```
 
 [1] ChordPro:
---chord-grid-size=90
+`--chord-grid-size=90`
 https://github.com/ChordPro/chordpro
 Greensleeves.cho
 
@@ -2717,17 +2889,17 @@ https://lilypond.org
 // -1 表示消弦。
 https://sourceforge.net/projects/chordii/
 
-"chords" : [
+`"chords"` : [
 
 [6] 配置文件描述：
 
 ```
 {
-// github.com/ChordPro/chordpro/wiki
-"name" : "B(low)",
-"base" : 1,
-"frets" : [ 1, 1, 3, 3, 3, 1 ],
-"fingers" : [ 1, 1, 2, 3, 4, 1],
+ // github.com/ChordPro/chordpro/wiki
+ "name" : "B(low)",
+ "base" : 1,
+ "frets" : [ 1, 1, 3, 3, 3, 1 ],
+ "fingers" : [ 1, 1, 2, 3, 4, 1],
 }
 ```
 
@@ -2736,10 +2908,10 @@ https://github.com/vim-scripts/chordpro.vim/blob/master/syntax/chordpro.vim
 
 ```
 {
-"name" : "B(high)",
-"base" : 6,
-"frets" : [ 1, 3, 3, 2, 1, 1 ],
-"fingers" : [ 1, 3, 4, 2, 2, 1, 1 ],
+ "name" : "B(high)",
+ "base" : 6,
+ "frets" : [ 1, 3, 3, 2, 1, 1 ],
+ "fingers" : [ 1, 3, 4, 2, 2, 1, 1 ],
 }
 ```
 
@@ -2753,15 +2925,15 @@ LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM
 
 本教程将使用以下工具。它们被用于向服务器发送客户端消息并管理协议状态。
 
-- curl
-- telnet
-- openssl
-- socat
-- netcat (ncat)
+- `curl`
+- `telnet`
+- `openssl`
+- `socat`
+- `netcat` (`ncat`)
 
 我们将使用以下命令来测试与服务器的连接：
 
-1. 使用 telnet 连接到服务器
+1. 使用 `telnet` 连接到服务器
 2. 向服务器发送消息
 
 如果连接成功，你将看到服务器的响应。否则，请检查错误信息。
@@ -2784,10 +2956,6 @@ LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM
 当你启动 Mark Text 时，迎接你的是一个没有任何修饰的界面。虽然它重达 103MB，但它提供了运行 Mark Text 最直接的方式。双击即可启动编辑器。
 
 图 4：ChordPro 中的各种命令行和配置选项选择是充分可视化未知和弦的唯一方法。打印输出中的其他所有内容都可以通过配置文件设置。
-
-
-
-
 
 该编辑器允许你处理单个文档，同时也让你能够打开整个文件夹。这一简单的功能对于处理包含多个 Markdown 文件的项目（如书籍和文档）来说是不可或缺的。当你打开一个文件夹时，其内容将以层级树的形式显示在左侧栏中。该树可以让你快速访问已打开文件夹中的所有文件以及子文件夹及其内容。在左侧栏中选择一个文件，它将在单独的页中打开。得益于对标签的支持，你可以根据需要打开任意数量的文件，并在它们之间轻松切换。
 
@@ -2814,9 +2982,6 @@ VNote 也支持标签，因此你可以打开多个 Markdown 文件并进行工�
 你还可以直接在编辑器内管理和组织笔记。后者的编辑模式计数通常更高，因为它包含了阅读模式下不可可见的字符。统计数据还显示了包含和不包含空格的字符数。这一切给你了一个更细致、更准确的字数估计。
 
 与 Mark Text 不同，VNote 并没有试图将其功能封装在精美的外壳下，而是通过一个功能但有些繁忙的界面展示其所有功能（图 6）。不过，它建立了一些规范，并将所有迎合其目标受众的核心功能置于你的触手可及。在编辑方面，VNote 提供了多种功能。首先是行号功能，提供了多种行号选项。虽然 VNote 没有专门的“聚焦”模式，但它提供了一个用光标高亮选中行的选项。任何优秀的编辑器应该具备的功能在这里一应俱全。这包括对浅色和深色主题的支持，以及广泛的配置选项。
-
-
-
 
 两者定期进行。QQQ
 
@@ -2874,15 +3039,20 @@ Gateway（入口）是 Shell 的中央控制元素，是一个应用程序选择
 ```bash
 ## wget -O - https://vicr123.com/repo/apt/vicr12345.gpg.key | apt-key add -
 ```
+
 ```bash
 ## add-apt-repository 'deb https://vicr123.com/repo/apt/ubuntu bionic main'
 ```
+
 ```bash
 ## apt update
 ```
+
 ```bash
 ## apt install --no-recommends x11
 ```
+
+
 
 LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM
 期号 236
@@ -2891,10 +3061,7 @@ LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM
 
 ## 安装
 
-因为 Shell 是集成到发行版中作为替代桌面的，所以现有的工作环境基于 Qt 还是 GTK 并不重要。
-
-
-
+因为 Shell 是集成到发行版中作为替代桌面的，所以现有的工作环境基于 `Qt` 还是 `GTK` 并不重要。
 
 图 4：通知窗口保存了会话期间所有的消息。
 
@@ -2908,29 +3075,29 @@ LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM
 
 ![](img/8295b48fa67fe82b58801e13f9267227_436_0.png)
 
-# Shell  Linux 之声 (THE SHELL LINUX VOICE)
+# Shell Linux 之声 (THE SHELL LINUX VOICE)
 
-如果历史记录过长，或者你不再需要旧的通知，可以点击窗口右下角的清除全部（Clear All）。请注意，Shell 在会话结束后会自动删除所有通知。
+如果历史记录过长，或者你不再需要旧的通知，可以点击窗口右下角的清除全部（`Clear All`）。请注意，Shell 在会话结束后会自动删除所有通知。
 
-资源
+### 资源
 
-与你可能因为那些时而要求的视觉效果而想的相反相反，Shell 在资源利用上非常节约。在空闲模式下，内存占用约为 330 到 370MB RAM（图 5），该界面不仅能与 MATE、Xfce、LXDE 等轻量级环境并肩，而且在某些情况下甚至更胜一筹，使得 Shell 成为旧电脑的理想选择。
+与你可能因为那些时而要求的视觉效果而想的相反相反，Shell 在资源利用上非常节约。在空闲模式下，内存占用约为 330 到 370MB RAM（图 5），该界面不仅能与 `MATE`、`Xfce`、`LXDE` 等轻量级环境并肩，而且在某些情况下甚至更胜一筹，使得 Shell 成为旧电脑的理想选择。
 
-Shell 操作系统
+### Shell 操作系统
 
-除了独立部署的桌面环境外，开发者还提供了一个基于 Arch Linux 的操作系统，即 Shell 用户界面。
+除了独立部署的桌面环境外，开发者还提供了一个基于 `Arch Linux` 的操作系统，即 Shell 用户界面。
 
 图 5：在内存方面，Shell 比许多轻量级桌面更节省资源。
 
-由于 Shell OS 舍除了其他桌面，你将有机会尝试它的所有吸引力。另一个积极方面是 Shell 内置应用程序的低资源需求和非常敏捷的工作流，尽管提供了视觉效果，这些应用仍包含了终端、文件管理器和自定义方法在内的工具。系统更新和批评（此处）的主要图形前端问题是，软件包管理与第三方桌面环境的元素整合尚未实现无缝对接。另一个类似于 KDE Plasma 上 Yakuake 的终端应用程序可能更精简，这有时会导致窗口设计成以下拉式终端的形式显示和隐藏，而这与 Shell 的原生外观有所不同。
+由于 Shell OS 舍除了其他桌面，你将有机会尝试它的所有吸引力。另一个积极方面是 Shell 内置应用程序的低资源需求和非常敏捷的工作流，尽管提供了视觉效果，这些应用仍包含了终端、文件管理器和自定义方法在内的工具。系统更新和批评（此处）的主要图形前端问题是，软件包管理与第三方桌面环境的元素整合尚未实现无缝对接。另一个类似于 `KDE Plasma` 上 `Yakuake` 的终端应用程序可能更精简，这有时会导致窗口设计成以下拉式终端的形式显示和隐藏，而这与 Shell 的原生外观有所不同。
 
-然而，该项目已经展示了在操作系统陈旧惯例之外，易用桌面可以是什么样子的。默认情况下，当前版本的 Shell OS 解锁了标准的 Arch Linux 仓库，你可以像传统的 Arch Linux 用户一样使用该操作系统。对于喜欢实验的用户，Shell 是一个有趣的选择。
+然而，该项目已经展示了在操作系统陈旧惯例之外，易用桌面可以是什么样子的。默认情况下，当前版本的 Shell OS 解锁了标准的 `Arch Linux` 仓库，你可以像传统的 `Arch Linux` 用户一样使用该操作系统。对于喜欢实验的用户，Shell 是一个有趣的选择。
 
 Q Q Q
 
 ## 结论
 
-虽然许多 Linux 桌面在外观和功能上更像其他操作系统的工作环境，但 Shell 独辟蹊径。凭借新的操作范式和以 Gateway 作为中心程序启动器，该桌面环境与大多数已 Linux 桌面不同，同时仍然支持直观的使用。
+虽然许多 Linux 桌面在外观和功能上更像其他操作系统的工作环境，但 Shell 独辟蹊径。凭借新的操作范式和以 `Gateway` 作为中心程序启动器，该桌面环境与大多数已 Linux 桌面不同，同时仍然支持直观的使用。
 
 [1] the Shell: https://vicr123.com/theshell
 
@@ -2972,29 +3139,29 @@ FOSSPicks 自由开源软件世界中的宝石与新品发布
 
 Graham Morrison 终于找到了一个 Linux 合法的理由来投资虚拟现实，因为有了新的 VR 桌面以及现在通过 Proton 在 Linux 上运行的 6000 款 Windows 游戏。作者：GRAHAM MORISON
 
-矢量编辑器
+### 矢量编辑器
 
-Inkscape 1.0
+#### Inkscape 1.0
 
 2004 年的 Linux 拥趸可能并不很多，它从未进入 0.92.5 (2020)。但终于，在多年之后，我们发现了一些并不知道 Inkscape，或者至少没有用过它来制作生日贺卡、临时海报或 Logo 的用户。它是亮点之一。
 
-正如你所想象的，该项目的规模并不庞大，但它实现了基于矢量的绘图、变换、书法、铅笔工具、位图追踪、布尔运算和抗锯齿输出。重点一直放在文档编写和获取新的原生 macOS 认证上（这对 Mac 用户来说是个大新闻！），此外还支持高 DPI 支持，且 Inkscape 1.0 终于使用了 GTK+3。尽管如此，这份简短的更新日志并不意味着我们不能庆祝这一巨大的里程碑。
+正如你所想象的，该项目的规模并不庞大，但它实现了基于矢量的绘图、变换、书法、铅笔工具、位图追踪、布尔运算和抗锯齿输出。重点一直放在文档编写和获取新的原生 macOS 认证上（这对 Mac 用户来说是个大新闻！），此外还支持高 DPI 支持，且 Inkscape 1.0 终于使用了 `GTK+3`。尽管如此，这份简短的更新日志并不意味着我们不能庆祝这一巨大的里程碑。
 
 Firefox 也有类似的问题，因为不断的滚动发布会迅速掩盖任何重大的新功能；我们从未能够关于 Inkscape 的情况是，它的版本号仅仅跳跃了一个百分位，或者像 Adobe Illustrator 之类的产品。但最引人注目的是，尽管存在争议、通常是订阅制的加速，以及无数其他功能，它的版本号仍然是 1.0 版本。在整个项目期间，在 0.92.5 和 1.0 版本之间实现了新功能。尽管如此，该项目已经展示了在操作系统陈旧惯例之外，易用桌面可以是什么样子的。其他第三方桌面环境，你将有机会尝试它的所有吸引力。
 
-矢量编辑器
+### 矢量编辑器
 
-Inkscape 1.0
+#### Inkscape 1.0
 
 2004 年的 Linux 拥趸可能并不很多，它从未进入 0.92.5 (2020)。但终于，在多年之后，我们发现了一些并不知道 Inkscape，或者至少没有用过它来制作生日贺卡、临时海报或 Logo 的用户。它是亮点之一。
 
-正如你所想象的，该项目的规模并不庞大，但它实现了基于矢量的绘图、变换、书法、铅笔工具、位图追踪、布尔运算和抗锯齿输出。重点一直放在文档编写和获取新的原生 macOS 认证上（这对 Mac 用户来说是个大新闻！），此外还支持高 DPI 支持，且 Inkscape 1.0 终于使用了 GTK+3。尽管如此，这份简短的更新日志并不意味着我们不能庆祝这一巨大的里程碑。
+正如你所想象的，该项目的规模并不庞大，但它实现了基于矢量的绘图、变换、书法、铅笔工具、位图追踪、布尔运算和抗锯齿输出。重点一直放在文档编写和获取新的原生 macOS 认证上（这对 Mac 用户来说是个大新闻！），此外还支持高 DPI 支持，且 Inkscape 1.0 终于使用了 `GTK+3`。尽管如此，这份简短的更新日志并不意味着我们不能庆祝这一巨大的里程碑。
 
 Firefox 也有类似的问题，因为不断的滚动发布会迅速掩盖任何重大的新功能；我们从未能够关于 Inkscape 的情况是，它的版本号仅仅跳跃了一个百分位，或者像 Adobe Illustrator 之类的产品。但最引人注目的是，尽管存在争议、通常是订阅制的加速，以及无数其他功能，它的版本号仍然是 1.0 版本。
 
-旧式 PC 模拟器
+### 旧式 PC 模拟器
 
-PCem
+#### PCem
 
 混合组合组件，从处理器及其相关插槽，到显卡和声卡。
 
@@ -3015,8 +3182,9 @@ PCem
 项目网站
 https://pcem-emulator.co.uk/
 
-天文工具
-StarCharter
+### 天文工具
+
+#### StarCharter
 
 Linux 有大量出色的、清晰的、简洁且准确的地图。例如，Stellarium 可以生成特定天空区域内恒星之间关系的写实级（但写实的）图像。
 
@@ -3039,8 +3207,9 @@ LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM
 
 ## LINUX 之声 FOSSPICKS
 
-SQL 编辑器
-Falcon
+### SQL 编辑器
+
+#### Falcon
 
 即使它们是你的一部分你想要编辑或查询远程……你的日常工作，如果不诉诸命令行，数据库可能很难处理。它是……。然而，Falcon 是解决同一个问题的一种非常出色且现代的方法。它是你数据库的前端 GUI，具有两个主要功能：它将连接或加载许多不同类型的数据库，并且你的查询被执行并显示结果。这并不是因为它们在原理上难以理解，而是因为即使是最简单的组织，一旦数据开始增长，就会很快变得复杂。当与数据库的唯一界面是……看到许多漂亮的图表，导出它们，并且永远不要害怕……，管理起来变得更加困难。
 
@@ -3068,40 +3237,36 @@ http://www.mzuther.de/en/software/trakmeter/
 项目网站
 http://www.mzuther.de/en/software/squeezer/
 
-- 左键点击：使用 (7)（轻点，这样你就不需要一直按到底才点击）。
-- 右键点击：使用 (1)。
+- 左键点击：使用 `(7)`（轻点，这样你就不需要一直按到底才点击）。
+- 右键点击：使用 `(1)`。
 - 滚动：按住并移动控制器。
-- 测试拖动：按住 (7) 并拖动。
-- 窗口移动：指向窗口并拖动，同时按住 (6)，移动你的控制器。窗口应该跟随你的控制器。
-- 窗口缩放：指向窗口，按住 (6)，然后在 (2) 上向上或向下滚动。
+- 测试拖动：按住 `(7)` 并拖动。
+- 窗口移动：指向窗口并拖动，同时按住 `(6)`，移动你的控制器。窗口应该跟随你的控制器。
+- 窗口缩放：指向窗口，按住 `(6)`，然后在 `(2)` 上向上或向下滚动。
 
 ![](img/8295b48fa67fe82b58801e13f9267227_471_0.png)
 ![](img/8295b48fa67fe82b58801e13f9267227_471_1.png)
 
-- 左键点击：使用 (7)（轻点，这样你就不需要一直按到底才点击）。
-- 右键点击：使用 (1)。
+- 左键点击：使用 `(7)`（轻点，这样你就不需要一直按到底才点击）。
+- 右键点击：使用 `(1)`。
 - 滚动：按住并移动控制器。
-- 测试拖动：按住 (7) 并拖动。
-- 窗口移动：指向窗口并拖动，同时按住 (6)，移动你的控制器。窗口应该跟随你的控制器。
-- 窗口缩放：指向窗口，按住 (6)，然后在 (2) 上向上或向下滚动。
+- 测试拖动：按住 `(7)` 并拖动。
+- 窗口移动：指向窗口并拖动，同时按住 `(6)`，移动你的控制器。窗口应该跟随你的控制器。
+- 窗口缩放：指向窗口，按住 `(6)`，然后在 `(2)` 上向上或向下滚动。
 
-- 左键点击：使用 (7)（轻点，这样你就不需要一直按到底才点击）。
-- 右键点击：使用 (1)。
+- 左键点击：使用 `(7)`（轻点，这样你就不需要一直按到底才点击）。
+- 右键点击：使用 `(1)`。
 - 滚动：按住并移动控制器。
-- 测试拖动：按住 (7) 并拖动。
-- 窗口移动：指向窗口并拖动，同时按住 (6)，移动你的控制器。窗口应该跟随你的控制器。
-- 窗口缩放：指向窗口，按住 (6)，然后在 (2) 上向上或向下滚动。
+- 测试拖动：按住 `(7)` 并拖动。
+- 窗口移动：指向窗口并拖动，同时按住 `(6)`，移动你的控制器。窗口应该跟随你的控制器。
+- 窗口缩放：指向窗口，按住 `(6)`，然后在 `(2)` 上向上或向下滚动。
 
-- 左键点击：使用 (7)（轻点，这样你就不需要一直按到底才点击）。
-- 右键点击：使用 (1)。
+- 左键点击：使用 `(7)`（轻点，这样你就不需要一直按到底才点击）。
+- 右键点击：使用 `(1)`。
 - 滚动：按住并移动控制器。
-- 测试拖动：按住 (7) 并拖动。
-- 窗口移动：指向窗口并拖动，同时按住 (6)，移动你的控制器。窗口应该跟随你的控制器。
-- 窗口缩放：指向窗口，按住 (6)，然后在 (2) 上向上或向下滚动。
-
-
-
-
+- 测试拖动：按住 `(7)` 并拖动。
+- 窗口移动：指向窗口并拖动，同时按住 `(6)`，移动你的控制器。窗口应该跟随你的控制器。
+- 窗口缩放：指向窗口，按住 `(6)`，然后在 `(2)` 上向上或向下滚动。
 
 ## FOSSPICKS LINUX VOICE
 
@@ -3139,15 +3304,19 @@ LINUX VOICE 教程 – KMyMoney
 正在寻找帮助你管理资金的软件吗？许多人通过一个简单的系统就能应付。如果你一直在通过账户（例如 Ubuntu）跟踪财务状况，你可能需要卸载……你可以传输现有的数据源，从 KDE 下载可用……你可以通过 `Settings | Configure KMyMoney` 设置加密。在对话框中，进入 `Encryption` 并勾选使用 GPG 加密。在密钥选择中……安装完成后，你可以直接点击菜单快捷方式，也可以使用命令启动程序：
 
 ```bash
-sudo apt install kmmoney
 ```
 
-启动后，会显示你的财务摘要（图 2）。接下来，通过 *Settings | Configure* 选择想要在概览中显示的账户类型和类别。除其他外，你可能希望程序能找到你现有账户（资产）的概览，并更好地规划你的财务未来。如果你丢失了……它支持 QIF、OFX 和 QFX 格式，典型的……（图 1）。
 
+
+`sudo apt install kmmoney`
+
+
+
+启动后，会显示你的财务摘要（图 2）。接下来，通过 `Settings | Configure` 选择想要在概览中显示的账户类型和类别。除其他外，你可能希望程序能找到你现有账户（资产）的概览，并更好地规划你的财务未来。如果你丢失了……它支持 `QIF`、`OFX` 和 `QFX` 格式，典型的……（图 1）。
 
 创建（图 1）。
 
-以及启动屏幕上的负债。KMyMoney 2020年7月
+以及启动屏幕上的负债。`KMyMoney` 2020年7月
 
 第 236 期
 
@@ -3157,12 +3326,12 @@ LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM
 
 ## KMyMoney 文件设置
 
-选择与你使用 KMyMoney 的方式相匹配的账户组。你选择的每个组都将帮助组织账户和类别，使其与你的需求相关。你以后可以创建额外的账户。
+选择与你使用 `KMyMoney` 的方式相匹配的账户组。你选择的每个组都将帮助组织账户和类别，使其与你的需求相关。你以后可以创建额外的账户。
 
 | 账户类型 | 说明 |
 | --- | --- |
-| 使用 0.0 | KMyMoney 0.6 的默认值 |
-| 使用 0.8 | KMyMoney 0.8 的默认值 |
+| 使用 0.0 | `KMyMoney` 0.6 的默认值 |
+| 使用 0.8 | `KMyMoney` 0.8 的默认值 |
 | 自定义 | 更多详细信息 |
 
 | 类别 | 描述 |
@@ -3191,7 +3360,7 @@ LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM
 
 为了确保账户包含正确的-
 
-打开一个新窗口显示账户详情。在数值中，你首先需要输入初始。在“常规”（General）选项卡中，你会找到每个账户的余额字段。要为此操作，请点击余额。在“类型”（Type）中，你可以指定账户是支票、储蓄或其他类型的账户-左侧边栏中的账户图标。按类型分组（例如，你会在那里找到储蓄。支票首选账户添加账户（列为资产类型的账户）。在右键点击后，在主屏幕上显示概览，这样你就能找到图 2：一旦你设置好 KMyMoney，每次启动程序时你都会看到当前财务状况的概览。
+打开一个新窗口显示账户详情。在数值中，你首先需要输入初始。在“常规”`General`选项卡中，你会找到每个账户的余额字段。要为此操作，请点击余额。在“类型”`Type`中，你可以指定账户是支票、储蓄或其他类型的账户-左侧边栏中的账户图标。按类型分组（例如，你会在那里找到储蓄。支票首选账户添加账户（列为资产类型的账户）。在右键点击后，在主屏幕上显示概览，这样你就能找到图 2：一旦你设置好 `KMyMoney`，每次启动程序时你都会看到当前财务状况的概览。
 
 LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM
 
@@ -3205,59 +3374,56 @@ LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM
 
 ## LINUX VOICES 教程 – KMYMONEY
 
-看到账户余额直接-的。你可以直接看到账户余额。“机构”（Institution）选项卡新的安全（图 3）。按“完成”允许你输入细节，如国际银行向导。
+看到账户余额直接-的。你可以直接看到账户余额。“机构”`Institution`选项卡新的安全（图 3）。按“完成”允许你输入细节，如国际银行向导。
 
 银行账户的账号 (IBAN) 代码。
 
-你将输入你的证券的数量和价格。点击概览中的“账本”（Ledgers），数量将在账户概览中出现。
+你将输入你的证券的数量和价格。点击概览中的“账本”`Ledgers`，数量将在账户概览中出现。
 
-“层级”（Hierarchy）选项卡让你决定账户位于-在左侧并选择所需的证券-账户。“限制”（Limits）也有实用的工具。你可以在左上角的下拉菜单中计数。在右键设置一个最小余额，以便 KMyMoney 显示-点击一个仍然空的概览，选择当账户余额低于新时发出警告。在“活动”（Activity）下，点击“添加份额”以输入此金额，你的股票组合。你还可以标明你何时买入或卖出股份。“税务”（Tax）选项卡对企业主很有用。
+“层级”`Hierarchy`选项卡让你决定账户位于-在左侧并选择所需的证券-账户。“限制”`Limits`也有实用的工具。你可以在左上角的下拉菜单中计数。在右键设置一个最小余额，以便 `KMyMoney` 显示-点击一个仍然空的概览，选择当账户余额低于新时发出警告。在“活动”`Activity`下，点击“添加份额”以输入此金额，你的股票组合。你还可以标明你何时买入或卖出股份。“税务”`Tax`选项卡对企业主很有用。
 
-如果你的业务支付销售税，勾选 VAT 账户。在“证券”（Securities）选项卡中，选择你刚刚描述的证券。此外，勾选“包含在税务报告中”（Include on Tax Reports）仅输入上述的数据，然后为业务账户添加所需项目。对于个人财务，并非所有账户记录与计数都相关。要输入当前的证券价格，返回到左侧边栏中的“投资”（Investments）。在那里，你将看到证券的概览；现在你想要应用-在税务报告中的类别。点击-数量也会出现在那里。点击“确定”保存设置并返回账户概览。
+如果你的业务支付销售税，勾选 VAT 账户。在“证券”`Securities`选项卡中，选择你刚刚描述的证券。此外，勾选“包含在税务报告中”`Include on Tax Reports`仅输入上述的数据，然后为业务账户添加所需项目。对于个人财务，并非所有账户记录与计数都相关。要输入当前的证券价格，返回到左侧边栏中的“投资”`Investments`。在那里，你将看到证券的概览；现在你想要应用-在税务报告中的类别。点击-数量也会出现在那里。点击“确定”保存设置并返回账户概览。
 
 在证券上，你就可以添加价格。你可以删除任何不必要的账户子类别-选择手动添加价格或从互联网检索价格以保持账户易于管理。你
 
-如果需要，也可以添加更多账户。这将为你提供支票账户、收入和支出、储蓄账户、现金和证券账户、信用卡和贷款的概览。在完成设置阶段后，你可以开始记录交易。现在输入收入和支出-账户开始发挥作用。KMyMoney 计算这些账户，你可以在左侧边栏中找到它们，“类别”（Categories）。例如，类别可能包括-免费费用或自由稿写作收入。支付一笔贷款分期，你支票账户的余额在-你记录的交易。首先浏览这些交易是有意义的。例如，当-支付一笔贷款分期时，余额会减少。
+如果需要，也可以添加更多账户。这将为你提供支票账户、收入和支出、储蓄账户、现金和证券账户、信用卡和贷款的概览。在完成设置阶段后，你可以开始记录交易。现在输入收入和支出-账户开始发挥作用。`KMyMoney` 计算这些账户，你可以在左侧边栏中找到它们，“类别”`Categories`。例如，类别可能包括-免费费用或自由稿写作收入。支付一笔贷款分期，你支票账户的余额在-你记录的交易。首先浏览这些交易是有意义的。例如，当-支付一笔贷款分期时，余额会减少。
 
-在你输入所有现有账户的初始余额后，KMyMoney 将根据你记录的交易计算未来的账户余额。例如，当-在 ATM 取款时，你的支票账户余额会减少，但现金金额会增加。
+在你输入所有现有账户的初始余额后，`KMyMoney` 将根据你记录的交易计算未来的账户余额。例如，当-在 ATM 取款时，你的支票账户余额会减少，但现金金额会增加。
 
-你可以为类别分配新名称或在账户框架内移动类别的位置。企业主也可能希望-证券账户是一个特殊情况。这意味着当你买入或卖出股票或债券等资产时，KMyMoney 只发布税务金额，但由于价格波动。由于这些原因，跟踪证券有点复杂，但 KMyMoney 始终提供证券价值的最新概览。决定类别是否应将其包含在税务报告中。通过这种方式，你拥有所得税所需的所有数据。创建-类别。
+你可以为类别分配新名称或在账户框架内移动类别的位置。企业主也可能希望-证券账户是一个特殊情况。这意味着当你买入或卖出股票或债券等资产时，`KMyMoney` 只发布税务金额，但由于价格波动。由于这些原因，跟踪证券有点复杂，但 `KMyMoney` 始终提供证券价值的最新概览。决定类别是否应将其包含在税务报告中。通过这种方式，你拥有所得税所需的所有数据。创建-类别。
 
 ## 发布交易
 
-要发布新交易，点击左侧边栏中的“账本”（Ledgers）。到达那里后，在上方选择菜单中选择正确的账户（例如：现金）。右键点击仍然是-你现在将看到此账户所有记录的概览。按 Ctrl+Insert 或在上下文菜单中选择“新建”（New）允许你发布新投资。窗口底部的输入字段用于图 3：输入数据有点复杂-新投资向导，命名并描述其他（例如：从支票账户到现金），或-此新项目现在出现。这将启动-
+要发布新交易，点击左侧边栏中的“账本”`Ledgers`。到达那里后，在上方选择菜单中选择正确的账户（例如：现金）。右键点击仍然是-你现在将看到此账户所有记录的概览。按 `Ctrl+Insert` 或在上下文菜单中选择“新建”`New`允许你发布新投资。窗口底部的输入字段用于图 3：输入数据有点复杂-新投资向导，命名并描述其他（例如：从支票账户到现金），或-此新项目现在出现。这将启动-
 
-取款（支出）。例如，如果你在报刊亭购买本期杂志，KMyMoney 奖励你付出的努力，后者是正确的选择。在最新的和准确的左侧-你中，你创建数据记录，帮助你改进你的-财务规划。要生成这些详细信息，转到左侧边栏并选择“报告”（Reports）。除非你在经营业务，否则你可能希望简单留空此字段，而不是为每个个人收款人输入。KMyMoney 可以向你展示钱花在了什么地方，帮助你发现降低成本的机会。
+取款（支出）。例如，如果你在报刊亭购买本期杂志，`KMyMoney` 奖励你付出的努力，后者是正确的选择。在最新的和准确的左侧-你中，你创建数据记录，帮助你改进你的-财务规划。要生成这些详细信息，转到左侧边栏并选择“报告”`Reports`。除非你在经营业务，否则你可能希望简单留空此字段，而不是为每个个人收款人输入。`KMyMoney` 可以向你展示钱花在了什么地方，帮助你发现降低成本的机会。
 
-在“类别”字段中输入支出计数（在本例中）。现在输入日期和金额，还有空间用于备注（Memo）。“状态”（Status）项目仅与你的银行账户相关，你在那里存储是否已与你的银行单对账。
+在“类别”字段中输入支出计数（在本例中）。现在输入日期和金额，还有空间用于备注 `Memo`。“状态”`Status`项目仅与你的银行账户相关，你在那里存储是否已与你的银行单对账。
 
-程序还提供有关你投资状况的报告，从中你可以得出未来投资的建议。根据你过去的交易，KMyMoney 还会生成未来收入和支出的预测。KMyMoney 还处理拆分交易，
-
-
-
+程序还提供有关你投资状况的报告，从中你可以得出未来投资的建议。根据你过去的交易，`KMyMoney` 还会生成未来收入和支出的预测。`KMyMoney` 还处理拆分交易，
 
 你与你的报税单：AI 分类（即你分配支付项之前已标记为与税务相关的交易，例如分配到多个收入或支出账户）。对于与收入相关的支出和捐赠，如果你在一家商店购买了食物、衣服、办公用品和杂志并使用信用卡支付，那么你的信用卡账户上只会显示总金额。
 
 ## 结论
 
-本文概述了 KMyMoney 巨大功能集的介绍。然而，初学者需要投入一些精力和精力将这些内容拆分到合适的支出账户中。要做到这一点，请按照上述说明操作：至关重要的是先将“类别”（Category）字段留空，熟悉计数原理，转而点击其右侧的小按钮。系统会弹出一个新的对话框用于记录财务记录。一旦克服了这个障碍，你就可以输入不同的类别及其部分金额（见图 4）。KMyMoney 呈现为一个清晰且易于使用的财务管理程序。该应用程序的方法基于管理你的个人财务，但并没有冷落自由职业者、小型商业企业和关注人士。
+本文概述了 `KMyMoney` 巨大功能集的介绍。然而，初学者需要投入一些精力和精力将这些内容拆分到合适的支出账户中。要做到这一点，请按照上述说明操作：至关重要的是先将“类别”`Category`字段留空，熟悉计数原理，转而点击其右侧的小按钮。系统会弹出一个新的对话框用于记录财务记录。一旦克服了这个障碍，你就可以输入不同的类别及其部分金额（见图 4）。`KMyMoney` 呈现为一个清晰且易于使用的财务管理程序。该应用程序的方法基于管理你的个人财务，但并没有冷落自由职业者、小型商业企业和关注人士。
 
 ## 网上银行
 
-理想情况下，你不需要手动输入银行账户交易记录，因为你可以在线检索它们。根据你所在的地区、银行以及需求，可用的资源是非常重要的。项目页面和邮件列表上提供了良好的文档，当程序更新时你可以在那里获得帮助，因此请从查阅 KMyMoney 用户手册 [3] 开始。目前，该程序可以用于检索银行记录。理想情况下，你可以以 CSV 格式将你的账户状态加载到程序中。许多银行在其网上银行程序的 Web 端向客户提供此导出功能。然后可以通过 `文件 | 导入 | CSV` 将 CSV 文件加载到 KMyMoney。
+理想情况下，你不需要手动输入银行账户交易记录，因为你可以在线检索它们。根据你所在的地区、银行以及需求，可用的资源是非常重要的。项目页面和邮件列表上提供了良好的文档，当程序更新时你可以在那里获得帮助，因此请从查阅 `KMyMoney` 用户手册 [3] 开始。目前，该程序可以用于检索银行记录。理想情况下，你可以以 CSV 格式将你的账户状态加载到程序中。许多银行在其网上银行程序的 Web 端向客户提供此导出功能。然后可以通过 `文件 | 导入 | CSV` 将 CSV 文件加载到 `KMyMoney`。
 
-[1] KMyMoney: https://kmymoney.org
-[2] CMake: https://cmake.org
-[3] KMyMoney 用户手册: https://kmymoney.org/documentation.html
-[4] KMyMoney 邮件列表: https://mail.kde.org/mailman/listinfo/kmymoney
-[5] KMyMoney 论坛: https://forum.kde.org/viewforum.php?f=69
-[6] GnuCash: https://www.gnucash.org
+[1] `KMyMoney`: https://kmymoney.org
+[2] `CMake`: https://cmake.org
+[3] `KMyMoney` 用户手册: https://kmymoney.org/documentation.html
+[4] `KMyMoney` 邮件列表: https://mail.kde.org/mailman/listinfo/kmymoney
+[5] `KMyMoney` 论坛: https://forum.kde.org/viewforum.php?f=69
+[6] `GnuCash`: https://www.gnucash.org
 [7] “整洁管理和处理 PGP/GnuPG 密钥环”，Frank Hofmann，《Linux 杂志》，第 192 期，2016 年 11 月，第 68 页，https://www.linux-magazine.com/Issues/2016/192/GPG-Key-Management/
-[8] KMyMoney 恢复功能: https://kmymoney.org/recovery.php
+[8] `KMyMoney` 恢复功能: https://kmymoney.org/recovery.php
 
 图 4：拆分交易功能允许你记录信用卡购买的总金额，以及在每个类别（如食物或衣物）上花费的明细。
 
-[4] KMyMoney 用户手册复版: https://kmymoney.org/documentation.html
+[4] `KMyMoney` 用户手册复版: https://kmymoney.org/documentation.html
 
 LINUX-MAGAZINE.COM | LINUXPROMAGAZINE.COM
 第 236 期 | 2020年7月 | 93
@@ -3267,12 +3433,12 @@ shop.linuxnewmedia.com
 
 ## 专家触点
 
-《Linux 手册》（The Linux Handbook）现已发行！
+《Linux 手册》`The Linux Handbook`现已发行！
 本版包含了许多配置和排排除系统的工具。
 
 ![](img/8295b48fa67fe82b58801e13f9267227_509_0.png)
 
-《Shell 手册》（The Shell Handbook）提供了对终端窗口世界的全面展望。你将学习如何导航、操作文本、使用正则表达式以及自定义你的 Bash 设置。
+《Shell 手册》`The Shell Handbook`提供了对终端窗口世界的全面展望。你将学习如何导航、操作文本、使用正则表达式以及自定义你的 Bash 设置。
 
 以下是你在新的《Shell 手册》中将看到的部分内容：
 - 自定义 Bash
@@ -3299,14 +3465,14 @@ shop.linuxnewmedia.com/specials
 过往期刊
 LINUX NEWSSTAND 在线购买：https://bit.ly/Linux-Newsstand
 
-《Linux 杂志》（Linux Magazine）是你通往 Linux 世界的指南。每期都包含了你在其他地方找不到的高级技术文章和教程。探索我们的过往期刊完整目录，完善你的收藏。
+《Linux 杂志》`Linux Magazine`是你通往 Linux 世界的指南。每期都包含了你在其他地方找不到的高级技术文章和教程。探索我们的过往期刊完整目录，完善你的收藏。
 
 ## Systemd 新动态
-Systemd 是一个谜，它让领先的 init 系统不断改变你对主目录的认知。本月，我们将仔细观察 systemd。
+`Systemd` 是一个谜，它让领先的 init 系统不断改变你对主目录的认知。本月，我们将仔细观察 systemd。
 光盘包含：Knoppix 8.6 和 OpenMandriva Lx Plasma。
 
 ## 边缘计算
-“边缘”（Edge）是高科技新闻中流行的词汇，但它到底意味着什么？我们向你介绍一种令人兴奋的新技术，它可能会改变我们看待云的方式。
+“边缘”`Edge`是高科技新闻中流行的词汇，但它到底意味着什么？我们向你介绍一种令人兴奋的新技术，它可能会改变我们看待云的方式。
 光盘包含：Manjaro 19.02 Gnome 版和 SystemRescue
 
 ## 传输到你的电视
@@ -3349,9 +3515,6 @@ http://ct.isc-events.com/click.php?id=138
 Cloud Foundry Summit Virtual
 6月24日至25日 全球
 https://www.cloudfoundry.org/events/summit/
-
-
-
 
 Linux 安全峰会
 6月24-26日
@@ -3528,4 +3691,3 @@ Zielstr. 1, 8079 慕尼黑。
 237 期
 发售 2020年7月31日
 英国 / 欧洲 / 美国 / 澳大利亚
-

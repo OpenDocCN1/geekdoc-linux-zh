@@ -1,14 +1,15 @@
+
 # 乘法运算程序：两个字符串的乘法
 
 > 原文：[`techbyexample.com/program-multiply-two-strings/`](https://techbyexample.com/program-multiply-two-strings/)
 
-## **概述**
+## 概述
 
 编写一个程序来乘以两个字符串。
 
-示例
+示例：
 
-```go
+```
 Input: "12"*"12"
 Output: 144
 
@@ -16,7 +17,7 @@ Input: "123"*"12"
 Output: 1476
 ```
 
-## **程序**
+## 程序
 
 以下是相应的程序。
 
@@ -79,7 +80,7 @@ func main() {
 
 **输出**
 
-```go
+```
 144
 1476
 ```

@@ -1,17 +1,15 @@
+
 # Linux 命令示例：快速学习 Linux 命令的实用指南
 
-
-
-![cover](img/image-21I757U4.jpg)![cover](img/image-21I757U4.jpg)
-
-
+![cover](img/image-21I757U4.jpg)
 
 Copyright © 2018 Khaled Jamal
+
 版权所有所有。
 
 ISBN: 9781370151974
 
-### 前言
+## 前言
 
 本书旨在想要快速获取基础到中级 Linux 知识的 IT 同事。
 
@@ -101,7 +99,9 @@ Cygwin 是大型开源工具集，在 Windows 上提供类似于 Linux 发行版
 
 输入以下命令：（按 q 退出手册页）
 
-`man mkdir`
+```
+man mkdir
+```
 
 你的控制台应该显示类似以下的内容：
 
@@ -144,7 +144,9 @@ SYNOPSIS：粗体单词是要实际输入的单词。下划线单词必须替换
 
 输入以下命令：
 
-`man cp`
+```
+man cp
+```
 
 你的控制台显示如下摘要：
 
@@ -164,10 +166,6 @@ SYNOPSIS
 `cp [OPTION]... SOURCE... DIRECTORY`：这次你可以将一个或多个文件（`SOURCE...`）复制到目录（`DIRECTORY`）。这一切同样可以使用多个选项引导。
 
 `cp [OPTION]... -t DIRECTORY SOURCE...`：使用 `-t` 参数可以先指定目录，然后是源文件。
-
-
-
-
 
 `cp [OPTION]... -t DIRECTORY SOURCE...` : 这意味着我们也可以先写目录 (DIRECTORY)，后面紧跟一个或多个文件 (SOURCE...)。请注意，在这种情况下，必须使用 `-t` 参数，该参数不再位于方括号中。
 
@@ -189,7 +187,7 @@ SYNOPSIS
 
 ### …
 
-`file` 命令必须以 "file" 开头（该词已加**粗体**处理）。这是符合逻辑的。
+`file` 命令必须以 "file" 开头（该词已加粗处理）。这是符合逻辑的。
 
 然后你可以使用选项 `-bcdEh…` 之一（你可以使用 `-b`，也可以使用 `-bc`、`-d`、`-dEs`、`-dcdEh` ...）。这些选项位于方括号中，因此是可选的。
 
@@ -342,6 +340,7 @@ $ man df
 ```
 $ pwd
 ```
+
 /home/Khaled Jamal
 
 ### cd
@@ -352,6 +351,7 @@ $ pwd
 $ cd /etc
 $pwd
 ```
+
 /etc
 
 ```
@@ -366,6 +366,7 @@ $ cd /
 $ cd
 $pwd
 ```
+
 /home/Khaled Jamal
 
 ```
@@ -373,8 +374,11 @@ $pwd
 要返回直接父目录，请使用 `cd` 后跟双点（`..`）：
 
 ```
+
 $ cd ..
+
 $pwd
+
 ```
 /home
 
@@ -386,9 +390,10 @@ $pwd
 $ cd ../..
 $pwd
 ```
+
 /
 
-###绝对路径和相对路径
+### 绝对路径和相对路径
 
 当你输入以斜杠（`/`）开头的路径时，你正在使用从根开始的绝对路径。记住，Linux 有一个根，即斜杠（`/`）。从目录树的任何地方，你都可以使用绝对路径精确到达你想去的地方：
 
@@ -396,6 +401,7 @@ $pwd
 $ cd /usr/bin
 $pwd
 ```
+
 /usr/bin
 
 ```
@@ -403,8 +409,11 @@ $pwd
 从根目录开始：
 
 ```
+
 $ cd /
+
 $ls
+
 ```
 bin cygdrive Cygwin.bat Cygwin.ico Cygwin-Terminal.ico etc home lib proc bin tmp var
 $pwd
@@ -418,6 +427,7 @@ $pwd
 $ cd etc
 $pwd
 ```
+
 /etc
 
 ```
@@ -444,11 +454,14 @@ $ man df
 
 ```
 $ cd
-$pwd
-/home/Khaled Jamal
-$ ls -a
-.. .bash_history .bashinfo .bashrc .inputrc .profile .lessrc .swp
 
+$pwd
+
+/home/Khaled Jamal
+
+$ ls -a
+
+.. .bash_history .bashinfo .bashrc .inputrc .profile .lessrc .swp
 ```
 
 这就是我们所说的相对路径。它是相对于当前目录的路径。Tab 补全
@@ -471,13 +484,17 @@ $ man /
 
 ```
 $ cd /
+
 $ls-l
+```
+
 ```
 total 309
 drwxr-xr-x 1 Jamal Jamal 0 15 Oct. 00:49 bin
 dr-xr-xr-x 1 Jamal Jamal 0 15 Oct. 02:09 cygdrive
 -rwxr-xr-x 1 Jamal Jamal 57 20 Jul. 20:12 Cygwin.bat
 -rw-r--r-- 1 Jamal Jamal 157097 20 Jul. 20:12 Cygwin.ico
+```
 
 ### …
 
@@ -487,13 +504,17 @@ dr-xr-xr-x 1 Jamal Jamal 0 15 Oct. 02:09 cygdrive
 
 ```
 $ cd /
+
 $ls -lh
+```
+
 ```
 total 309
 drwxr-xr-x 1 Jamal Jamal 0 15 Oct. 00:49 bin
 dr-xr-xr-x 1 Jamal Jamal 0 15 Oct. 02:09 cygdrive
 -rwxr-xr-x 1 Jamal Jamal 57 20 Jul. 20:12 Cygwin.bat
 -rw-r--r-- 1 Jamal Jamal 157K 20 Jul. 20:12 Cygwin.ico
+```
 
 ### …
 
@@ -503,33 +524,33 @@ dr-xr-xr-x 1 Jamal Jamal 0 15 Oct. 02:09 cygdrive
 
 ```
 $cd /
+
 $ls -lhF
+```
+
+
+
+# 1. 目录列表详解
+
 ```
 total 309
 drwxr-xr-x 1 Jamal Jamal 0 15 Oct. 00:49 bin/
 dr-xr-xr-x 1 Jamal Jamal 0 15 Oct. 02:09 cygdrive/
 -rwxr-xr-x 1 Jamal Jamal 57 20 Jul. 20:12 Cygwin.bat*
 -rw-r--r-- 1 Jamal Jamal 157K 20 Jul. 20:12 Cygwin.ico
+```
 
-### …
+带有斜杠后缀的项是目录（`bin/`、`cygdrive/`），这里是不同的指示符：
 
-带有斜杠后缀的项是目录（bin/, cygdrive/），这里是不同的指示符：
+- `/` 是目录。
+- `@` 是符号链接。
+- `|` 是命名管道。
+- `=` 是套接字。
+- `*` 用于可执行文件。
 
-/ 是目录。
+# 2. 文件排序
 
-
-
-
-
-`@` 是符号链接。
-
-`|` 是命名管道。
-
-`=` 是套接字。
-
-`*` 用于可执行文件。
-
-### ls -lt
+## `ls -lt`
 
 `-t` 选项按修改时间对项目进行排序，最新的显示在前：
 
@@ -545,9 +566,9 @@ dr… Nov. 1 21:37 home
 …
 ```
 
-### ls -lrt
+## `ls -lrt`
 
-`-rt` 选项用于在排序时反转顺序，假设你有一个长列表要显示，并且你想将最新修改的文件放在最后（以避免向上滚动屏幕），你需要使用 `-rt` 选项：
+`-rt` 选项用于在排序时反转顺序。假设你有一个长列表要显示，并且你想将最新修改的文件放在最后（以避免向上滚动屏幕），你需要使用 `-rt` 选项：
 
 ```bash
 $ ls -lrt /
@@ -561,9 +582,11 @@ dr… Dec. 18 00:54 proc
 dr… Dec. 18 00:54 cygdrive
 ```
 
-### mkdir
+# 3. 目录操作
 
-`mkdir` (make directories) 命令在目录不存在时创建一个或多个目录：
+## `mkdir`
+
+`mkdir`（make directories）命令在目录不存在时创建一个或多个目录：
 
 ```bash
 $ cd
@@ -575,103 +598,106 @@ drwxr-xr-x+ 1 … 0 Jan. 16 17:41 movies
 drwxr-xr-x+ 1 … 0 Jan. 16 17:41 projects
 ```
 
-### 波浪号 ~
+## 波浪号 `~`
 
-波浪号 `~` 用于引用当前用户的家目录，该目录通常位于 `/home/username`。
+波浪号 `~` 用于引用当前用户的家目录，该目录通常位于`/home/username`。
 
-例如，下面我们将进入 `/etc`，然后使用波浪号进入当前用户目录下的 `document` 文件夹：
+例如，下面我们将进入`/etc`，然后使用波浪号进入当前用户目录下的`document`文件夹：
 
 ```bash
 $ echo ~
 /home/Khaled Jamal
+
 $ cd /etc
+
 $ cd ~/document/
-$pwd
+
+$ pwd
 /home/Khaled Jamal/document
 ```
 
-## 4. 文件操作
+# 4. 文件操作
 
-在 Linux 世界中，一切皆文件，甚至目录也是一种特殊文件，每个分区或进程，一切事物都表示为一个文件，并且文件对大小写敏感，这意味着名为 `host` 的文件与名为 `Host` 的文件是不同的。
+在 Linux 世界中，一切皆文件，甚至目录也是一种特殊文件，每个分区或进程，一切事物都表示为一个文件，并且文件对大小写敏感，这意味着名为`host`的文件与名为`Host`的文件是不同的。
 
-### file
+## `file`
 
-`file` 命令确定文件类型。
+`file`命令确定文件类型。
 
-以下命令返回 `/etc/` 下所有文件的文件类型：
+以下命令返回`/etc/`下所有文件的文件类型：
 
 ```bash
 $ file /etc/*
-/etc/alternatives:directory
-/etc/bash.bash_logout:ASCII text
-/etc/bash.bashrc:ASCII text
-/etc/defaults:directory
-/etc/fstab.d:sticky, directory
-/etc/hosts:symbolic link to /cygdrive/c/Windows/System32/drivers/etc/hosts
+/etc/alternatives: directory
+/etc/bash.bash_logout: ASCII text
+/etc/bash.bashrc: ASCII text
+/etc/defaults: directory
+/etc/fstab.d: sticky, directory
+/etc/hosts: symbolic link to /cygdrive/c/Windows/System32/drivers/etc/hosts
 …
 ```
 
-注意：星号 `*` 代表零或多个字符，我们将在后面的章节介绍通配符。
+注意：星号`*`代表零或多个字符，我们将在后面的章节介绍通配符。
 
-### touch
+## `touch`
 
-`touch` 命令创建空文件：
+`touch`命令创建空文件：
 
 ```bash
 $ cd
-$pwd
+$ pwd
 /home/Khaled Jamal
-$touch notes.txt
-$ls -lh
+$ touch notes.txt
+$ ls -lh
 total 0
 -rw-r--r-- 1 … 0 15 Oct. 16:12 notes.txt
 ```
 
-### rm
+## `rm`
 
-`rm` 命令永久删除文件或目录：
+`rm`命令永久删除文件或目录：
 
 ```bash
-$rm notes.txt
-$ls -lh
+$ rm notes.txt
+$ ls -lh
 total 0
 ```
 
-### rm -i
+## `rm -i`
 
-使用 `rm` 命令配合 `-i` 选项可以防止意外删除文件：
+使用`rm`命令配合`-i`选项可以防止意外删除文件：
 
 ```bash
-$touch notes.txt
-$ls -lh
+$ touch notes.txt
+$ ls -lh
 total 0
 -rw-r--r-- 1 … 0 15 Oct. 16:12 notes.txt
-$rm -i notes.txt
+$ rm -i notes.txt
 rm: remove regular empty file 'notes.txt'? yes
-$ls -lh
+$ ls -lh
 total 0
 ```
 
-### rm -rf
+## `rm -rf`
 
-`rm -rf` (`-recursive -force`) 命令用于递归删除目录及其所有内容。
+`rm -rf`（`-recursive -force`）命令用于递归删除目录及其所有内容。
 
-让我们创建这个结构 `folder/subfolder/`，`mkdir -p` 是实现它的快速方法：
+让我们创建这个结构`folder/subfolder/`，`mkdir -p`是实现它的快速方法：
 
 ```bash
 $ cd
-$pwd
+$ pwd
 /home/Khaled Jamal
-$mkdir -p folder/subfolder
-$touch folder/subfolder/notes.txt
+$ mkdir -p folder/subfolder
+$ touch folder/subfolder/notes.txt
 ```
 
-我们使用 `ls -R` 命令递归列出子目录：
+我们使用`ls -R`命令递归列出子目录：
 
 ```bash
-$pwd
+$ pwd
 /home/Khaled Jamal
-$ls –R
+$ ls -R
 .:
 folder
 ./folder:
@@ -680,26 +706,26 @@ subfolder
 notes.txt
 ```
 
-注意：点 (`./folder`) 仅表示当前目录。
+注意：点（`./folder`）仅表示当前目录。
 
-最后我们使用 `rm -rf` 除文件夹及其所有内容：
+最后我们使用`rm -rf`删除文件夹及其所有内容：
 
 ```bash
-$rm -rf folder
-$ls -lhF
+$ rm -rf folder
+$ ls -lhF
 total 0
 ```
 
-### cp
+## `cp`
 
-要复制文件，使用 `cp` 并带有源和目标参数。
+要复制文件，使用`cp`并带有源和目标参数。
 
-让我们创建一个名为 `notes.txt` 的文件并将其复制到另一个新创建的文件 `notescopy.txt` 中：
+让我们创建一个名为`notes.txt`的文件并将其复制到另一个新创建的文件`notescopy.txt`中：
 
 ```bash
-$pwd
+$ pwd
 /home/Khaled Jamal
-$touch notes.txt
+$ touch notes.txt
 $ cp notes.txt notescopy.txt
 $ ls -lh
 total 0
@@ -707,22 +733,22 @@ total 0
 -rw-r--r-- 1 … 0 Jan. 16 21:14 notescopy.txt
 ```
 
-之后，我们创建一个名为 `folder` 的目录并将这些文件复制到其中：
+之后，我们创建一个名为`folder`的目录并将这些文件复制到其中：
 
 ```bash
-$mkdir folder
-$cp notes.txt notescopy.txt folder/
+$ mkdir folder
+$ cp notes.txt notescopy.txt folder/
 $ ls -lh folder
 total 0
 -rw-r--r-- 1 … 0 17 Oct. 22:18 notes.txt
 -rw-r--r-- 1 … 0 17 Oct. 22:18 notescopy.txt
 ```
 
-### cp -r
+## `cp -r`
 
-要复制目录以及所有子目录中的所有文件，使用 `cp -r`（递归）。
+要复制目录以及所有子目录中的所有文件，使用`cp -r`（递归）。
 
-我们这样做并将 `folder` 目录复制到 `/tmp/` 目录：
+我们这样做并将`folder`目录复制到`/tmp/`目录：
 
 ```bash
 $ cp -r folder /tmp
@@ -733,11 +759,11 @@ folder
 notes.txt notescopy.txt
 ```
 
-### mv
+## `mv`
 
-如果源和目标都是文件，则 `mv` 用于重命名。
+如果源和目标都是文件，则`mv`用于重命名。
 
-将 `notescopy.txt` 文件重命名为 `backup.txt`：
+将`notescopy.txt`文件重命名为`backup.txt`：
 
 ```bash
 $ ls
@@ -747,18 +773,18 @@ $ ls
 folder notes.txt backup.txt
 ```
 
-## 5. 文件内容操作
+# 5. 文件内容操作
 
-在本章中，我们将学习如何使用 `head`、`tail`、`cat`、`more` 和 `less` 显示文件内容。
+在本章中，我们将学习如何使用`head`、`tail`、`cat`、`more`和`less`显示文件内容。
 
-### head
+## `head`
 
-`head` 命令输出文件的开头。
+`head`命令输出文件的开头。
 
-在下面的示例中，我们显示 `/etc/` 的前十行：
+在下面的示例中，我们显示`/etc/`的前十行：
 
 ```bash
-$pwd
+$ pwd
 /home/Khaled Jamal
 $ cd /etc
 $ head profile
@@ -770,21 +796,21 @@ $ head profile
 $ head -2 profile
 ```
 
-### tail
+## `tail`
 
-可以使用 `tail` 命令显示文件的结尾。
+可以使用`tail`命令显示文件的结尾。
 
-让我们显示 `/etc/bash.bashrc` 的最后两行：
+让我们显示`/etc/bash.bashrc`的最后两行：
 
 ```bash
 $ tail -2 /etc/bash.bashrc
 ```
 
-### cat
+## `cat`
 
 `cat`（连接缩写）用于在屏幕上查看一个或多个文件的内容。
 
-让我们使用 `echo` 和 `>>` 创建两个文件，然后使用 `cat` 显示：
+让我们使用`echo`和`>>`创建两个文件，然后使用`cat`显示：
 
 ```bash
 $ echo 'This is demo1' >> demo1.txt
@@ -797,7 +823,7 @@ $ cat demo2.txt
 This is demo2
 ```
 
-`cat` 命令也用于将文件合并成更大的文件：
+`cat`命令也用于将文件合并成更大的文件：
 
 ```bash
 $ cat demo1.txt demo2.txt > demos.txt
@@ -808,9 +834,9 @@ This is demo1
 This is demo2
 ```
 
-cat 同样用于创建文本文件。
+`cat`同样用于创建文本文件。
 
-输入 `cat > text-file.txt`，按回车输入一行或多行，每行以回车结束。在最后一行之后，按回车然后按 Ctrl+d：
+输入`cat > text-file.txt`，按回车输入一行或多行，每行以回车结束。在最后一行之后，按回车然后按 `Ctrl+d`：
 
 ```bash
 $ cat > text-file.txt
@@ -818,37 +844,30 @@ This is the first line
 This is the second line
 $ ls -l
 total 4
+-rw-r--r-- 1 … 47 2 Nov. 21:03 text-file.txt
 ```
 
+## `more`
 
+`more`命令用于显示超过一屏内容的的内容。
 
-
-
-`-rw-r--r-- 1 … 47 2 Nov. 21:03 text-file.txt`
-
-## more
-
-`more` 命令用于显示超过一屏内容的的内容。
-
-输入以下命令来显示 `/etc/profile` 的内容：
+输入以下命令来显示`/etc/profile`的内容：
 
 ```bash
 more /etc/profile
 ```
 
-在法律允许的范围内，作者已无尽投入所有
+为了逐行浏览文件，请按`Enter`键，或者按`Spacebar`（空格键）每次向下翻一页，页面大小为您的当前终端屏幕尺寸。
 
-为了逐行浏览文件，请按 `Enter` 键，或者按 `Spacebar`（空格键）每次向下翻一页，页面大小为您的当前终端屏幕尺寸。
+要退出命令，请按`q`键。
 
-要退出命令，请按 `q` 键。
-
-`more` 命令的一个有用选项是 `-number` 开关，它允许你设置每页包含的行数，输入以下命令并进行文件导航：
+`more`命令的一个有用选项是`-number`开关，它允许你设置每页包含的行数。输入以下命令并进行文件导航：
 
 ```bash
 more -10 /etc/profile
 ```
 
-`more` 命令也可以与许多 Linux 命令的管道一起使用，以缩小它们的屏幕输出，允许你滚动查看结果。
+`more`命令也可以与许多 Linux 命令的管道一起使用，以缩小它们的屏幕输出，允许你滚动查看结果。
 
 要理解这一点，请输入以下命令并查看返回结果：
 
@@ -856,23 +875,23 @@ more -10 /etc/profile
 ls -l /usr/bin | more -10
 ```
 
-命令 `(ls -l /usr/bin)` 显示 `/usr/bin` 下的文件列表。
+命令`(ls -l /usr/bin)`显示`/usr/bin`下的文件列表。
 
-管道 (`|`) 将左侧程序（`ls -l /usr/bin`）的输出作为右侧程序（`more -10`）的输入。
+管道（`|`）将左侧程序（`ls -l /usr/bin`）的输出作为右侧程序（`more -10`）的输入。
 
-命令 `(more -10)` 显示管道输入的十行内容。
+命令`(more -10)`显示管道输入的十行内容。
 
-## less
+## `less`
 
-与 `more` 类似，`less` 命令允许你查看文件内容并进行导航。`more` 和 `less` 的主要区别在于 `less` 命令更快，并允许使用上/下方向键和其他键进行导航。
+与`more`类似，`less`命令允许你查看文件内容并进行导航。`more`和`less`的主要区别在于`less`命令更快，并允许使用上/下方向键和其他键进行导航。
 
-使用 `less` 输入之前相同的命令：
+使用`less`输入之前相同的命令：
 
 ```bash
 less /etc/profile
 ```
 
-通过按 `Enter`、`Spacebar`、`up/down` 键浏览文件，按 `G` 移动到文件最后一行，`1G` 移动到文件第一行。
+通过按`Enter`、`Spacebar`、`up/down`键浏览文件，按`G`移动到文件最后一行，`1G`移动到文件第一行。
 
 要从特定行号开始显示文件，请使用以下语法：
 
@@ -880,30 +899,32 @@ less /etc/profile
 less +10 /etc/profile
 ```
 
-如果你需要用 `less` 命令跟踪每一行的编号，请这样使用 `-N` 选项：
+如果你需要用`less`命令跟踪每一行的编号，请这样使用`-N`选项：
 
 ```bash
 less -N /etc/profile
 ```
 
-##### `1 # 在法律允许的范围内，作者(s) …`
-##### `2 # 著作权及相关及相邻权利归 …`
-##### `3 # 全球公有领域。此软件是 …`
+```
+1 # 在法律允许的范围内，作者(s) …
+2 # 著作权及相关及相邻权利归 …
+3 # 全球公有领域。此软件是 …
+```
 
 `/etc/profile`
 
 要在模式第一次出现的地方打开文件，请使用以下语法：
 
-这里的模式是单词 "shell"。
+这里的模式是单词 "shell"：
 
 ```bash
 less +/shell /etc/profile
 ```
 
-## `/etc/profile`: 由命令解释器为登录 shell 执行。
+## `/etc/profile`：由命令解释器为登录 shell 执行。
 ## 位于 Cygwin Setup 程序安装的最新版本始终可以在 `/etc/defaults/etc/profile` 找到。
 
-此命令的一个有用功能是使用 `/word-to-search` 选项。
+此命令的一个有用功能是使用`/word-to-search`选项。
 
 输入此命令：
 
@@ -911,11 +932,11 @@ less +/shell /etc/profile
 less /etc/profile
 ```
 
-然后输入 `/shell` 并按 `Enter` 搜索关键词 "shell"，按 `n` 向正向重复搜索，或按 `N` 向反向重复搜索。
+然后输入`/shell`并按`Enter`搜索关键词 "shell"，按`n`向正向重复搜索，或按`N`向反向重复搜索。
 
-# 在法律允许的范围内，作者(s) 已将对此软件的所有著作权及相关及相邻权利无尽给
+在法律允许的范围内，作者(s) 已将对此软件的所有著作权及相关及相邻权利无尽投入全球公有领域。
 
-## 6 IO 重定向
+# 6. IO 重定向
 
 我们在命令行运行的每个程序都连接了三个数据流。
 
@@ -925,11 +946,11 @@ less /etc/profile
 
 管道和重定向是我们在程序和文件之间连接这些流的方法，以便以有趣且有用的方式重定向数据。
 
-### 重定向
+## 重定向
 
-大于运算符 (`>`) 告知命令行，我们希望将程序的输出保存到文件中，而不是打印到屏幕上。
+大于运算符（`>`）告知命令行，我们希望将程序的输出保存到文件中，而不是打印到屏幕上。
 
-让我们来看将 `ls` 输出重定向到文件的示例：
+让我们来看将`ls`输出重定向到文件的示例：
 
 ```bash
 pwd
@@ -938,10 +959,12 @@ ls /etc > output.txt
 cat output.txt
 ```
 
+```
 替代方案
 bash.bash_logout
 bash.bashrc
 defaults
+```
 
 注意，会先创建文件（如果它不存在），然后运行程序，并将输出保存到文件中。
 
@@ -951,80 +974,82 @@ defaults
 echo This is a test > output.txt
 cat output.txt
 ```
-这是一个测试
 
-我们可以改用双大于运算符 (`>>`) 将新数据追加到文件中：
+```
+这是一个测试
+```
+
+我们可以改用双大于运算符（`>>`）将新数据追加到文件中：
 
 ```bash
 echo 'This line will be appended to the file' >> output.txt
 cat output.txt
 ```
+
+```
 这是一个测试
 这一行将被追加到文件中
+```
 
-小于运算符 (`<`) 向另一个方向发送数据。我们从文件中读取数据并通过其 `STDIN` 流将其馈入程序。
+小于运算符（`<`）向另一个方向发送数据。我们从文件中读取数据并通过其`STDIN`流将其馈入程序。
 
-例如，在这里我们统计 `output.txt` 文件中的行数：
+例如，在这里我们统计`output.txt`文件中的行数：
 
 ```bash
 wc -l < output.txt
 ```
 
-我们可以轻松地将两种重定向形式组合成单个命令。在下面的示例中，我们在 `output.txt` 文件中查找带有 'appended' 的行，然后将结果放在另一个新创建的文件中：
+我们可以轻松地将两种重定向形式组合成单个命令。在下面的示例中，我们在`output.txt`文件中查找带有单词 'appended' 的行，然后将结果放在另一个新创建的文件中：
 
 ```bash
 grep 'appended' output.txt > newfile.txt
 ```
-(注：原文此处示例代码不完整，根据逻辑推全为)
-在 `output.txt` 文件中查找包含单词 'appended' 的行，然后将结果放在另一个新创建的文件中：
 
-(注：原文命令 `(ls -l /usr/bin)` 之后的逻辑描述)
+在`output.txt`文件中查找包含单词 'appended' 的行，然后将结果放在另一个新创建的文件中。
 
-命令 `(ls -l /usr/bin)` 显示 `/usr/bin` 下的文件列表。
+命令`(ls -l /usr/bin)`显示`/usr/bin`下的文件列表。
 
-管道 (`|`) 将左侧程序（`ls -l /usr/bin`）的输出作为右侧程序（`more -10`）的输入。
+管道（`|`）将左侧程序（`ls -l /usr/bin`）的输出作为右侧程序（`more -10`）的输入。
 
-命令 `(more -10)` 显示管道输入的十行内容。
+命令`(more -10)`显示管道输入的十行内容。
 
-(此处为原文描述的重复或逻辑延续，已按要求翻译并保持格式)
-
-(注：原文文本在 `less` 之后存在多处 `echo This is a test > output.txt` 类似的描述，已已逐行翻译)
-
-我们可以改用双大于运算符 (`>>`) 将新数据追加到文件中：
+我们可以改用双大于运算符（`>>`）将新数据追加到文件中：
 
 ```bash
 echo 'This line will be appended to the file' >> output.txt
 cat output.txt
 ```
+
+```
 这是一个测试
 这一行将被追加到文件中
+```
 
-小于运算符 (`<`) 向另一个方向发送数据。我们从文件中读取数据并通过其 `STDIN` 流将其馈入程序。
+小于运算符（`<`）向另一个方向发送数据。我们从文件中读取数据并通过其`STDIN`流将其馈入程序。
 
-例如，在这里我们统计 `output.txt` 文件中的行数：
+例如，在这里我们统计`output.txt`文件中的行数：
 
 ```bash
 wc -l < output.txt
 ```
 
-我们可以轻松地将两种重定向形式组合成单个命令。在下面的示例中，我们在 `output.txt` 文件中查找带有单词 'appended' 的行，然后将结果放在另一个新创建的文件中：
+我们可以轻松地将两种重定向形式组合成单个命令。在下面的示例中，我们在`output.txt`文件中查找带有单词 'appended' 的行，然后将结果放在另一个新创建的文件中：
 
 ```bash
 grep 'appended' output.txt > newfile.txt
 ```
-(注：原文此处示例代码不完整，根据逻辑推全为)
-
-(注：原文文本在 `less` 之后存在多处 `echo This is a test > output.txt` 类似的描述，已已逐行翻译)
-
-(注：由于提供的原文文本包含部分重复的描述或逻辑片段，此处已严格遵循“不要重复输出原文”的原则，确保翻译内容准确且对应)
-
-(原文原文 `echo This is a test > output.txt` 之后)，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，翻译翻译)
 
 
 
+> 注：原文此处示例代码不完整，根据逻辑推全为。
+>
+> 注：原文文本在 `less` 之后存在多处 `echo This is a test > output.txt` 类似的描述，已逐行翻译。
+>
+> 注：由于提供的原文文本包含部分重复的描述或逻辑片段，此处已严格遵循“不要重复输出原文”的原则，确保翻译内容准确且对应。
+>
+> 原文 `echo This is a test > output.txt` 之后，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，原文，翻译翻译。
 
-
-```
+```bash
 $ unset NAME
 ```
 
@@ -1046,7 +1071,7 @@ $ echo $NAME
 
 环境变量的值是局部的，这意味着它们特定于设置它们的运行进程，或为该进程设置的进程。
 
-这意味着，如果我们打开两个终端窗口（这意味着我们有两个独立的 `bash` 进程在运行），并并在其中一个窗口中更改环境变量的值，那么该更改不会在另一个窗口的 shell 或桌面上当前运行的任何其他程序中生效。
+这意味着，如果我们打开两个终端窗口（这意味着我们有两个独立的 `bash` 进程在运行），并在其中一个窗口中更改环境变量的值，那么该更改不会在另一个窗口的 shell 或桌面上当前运行的任何其他程序中生效。
 
 ### 脚本文件
 
@@ -1056,12 +1081,12 @@ $ echo $NAME
 
 以下是一些常见的脚本文件，按执行顺序排列，请记住，进程后执行的文件中的设置具有优先级。
 
-- `/etc/profile`: 此文件在用户登录后立即执行。它是一个系统级初始化文件，主要用于设置系统环境变量。
-- `/etc/bashrc`: 此文件在 `/etc/profile` 之后执行。它也是一个系统级文件，通常由单个用户的 `.bashrc` 文件调用。它最常用于别名（aliases）和函数。
-- `~/.bash_profile` 或 `~/bash_login` 或 `~/.profile`: 在 `/etc/profile` 执行后，系统会在用户家目录下搜索这些文件。这些是可选文件，用户可以在其中创建特定于系统的设置。
-    - `~/.bash_profile` 先执行。
-    - `~/.bash_login` 只有在缺少 `~/.bash_profile` 的情况下执行。
-    - `~/.profile` 只有在前两个都不存在的情况下执行。
+- `/etc/profile`：此文件在用户登录后立即执行。它是一个系统级初始化文件，主要用于设置系统环境变量。
+- `/etc/bashrc`：此文件在 `/etc/profile` 之后执行。它也是一个系统级文件，通常由单个用户的 `.bashrc` 文件调用。它最常用于别名（aliases）和函数。
+- `~/.bash_profile` 或 `~/bash_login` 或 `~/.profile`：在 `/etc/profile` 执行后，系统会在用户家目录下搜索这些文件。这些是可选文件，用户可以在其中创建特定于系统的设置。
+  - `~/.bash_profile` 先执行。
+  - `~/.bash_login` 只有在缺少 `~/.bash_profile` 的情况下执行。
+  - `~/.profile` 只有在前两个都不存在的情况下执行。
 
 ### 现实场景
 
@@ -1074,8 +1099,11 @@ $ echo $NAME
 ```bash
 $ pwd
 /home/Khaled Jamal
+
 $ echo '#!/bin/sh' > my-script.sh
+
 $ echo 'echo Hello ${MYNAME}' >> my-script.sh
+
 $ chmod 755 my-script.sh
 ```
 
@@ -1086,12 +1114,13 @@ $ ./my-script.sh
 Hello
 ```
 
-注意：要执行脚本，请使用 `chmod` 赋予执行权限（我们稍后会讨论），然后输入脚本的全路径。由于点 (`.`) 指的是脚本所在的目录（在我们的案例中为 `/home/Khaled Jamal`），我们直接使用了 `./my-script.sh`。
+注意：要执行脚本，请使用 `chmod` 赋予执行权限（我们稍后会讨论），然后输入脚本的全路径。由于点（`.`）指的是脚本所在的目录（在我们的案例中为 `/home/Khaled Jamal`），我们直接使用了 `./my-script.sh`。
 
 脚本查找一个名为 `MYNAME` 的不存在的环境，输入此命令创建它并重新执行：
 
 ```bash
 $ MYNAME=Jamal
+
 $ ./my-script.sh
 Hello
 ```
@@ -1100,6 +1129,7 @@ Hello
 
 ```bash
 $ export MYNAME
+
 $ ./my-script.sh
 Hello Jamal
 ```
@@ -1113,6 +1143,7 @@ Hello Jamal
 ```bash
 $ pwd
 /home/ Khaled Jamal
+
 $ ls -a
 . .. .bash_history .bash_profile .bashrc .profile
 ```
@@ -1122,13 +1153,15 @@ $ ls -a
 ```bash
 $ pwd
 /home/Khaled Jamal
+
 $ echo export MYNAME=Jamal >> .bash_profile
 ```
 
-使用 `source` 命令重新加载 `~/.bash_profile` 然后执行脚本：（或关闭终端并打开一个新的终端然后执行）
+使用 `source` 命令重新加载 `~/.bash_profile`，然后执行脚本（或关闭终端并打开一个新的终端，然后执行）：
 
 ```bash
 $ source .bash_profile
+
 $ ./my-script.sh
 Hello Jamal
 ```
@@ -1141,17 +1174,17 @@ Hello Jamal
 
 它不会显示，你必须在另一个用户的 `~/.bash_profile` 中定义它，或者你可以在 `/etc/profile` 中定义它使其对所有用户可用。
 
-### 8 通配符
+## 8 通配符
 
 命令可以使用通配符同时对多个文件执行操作。
 
-#### 星号 *
+### 星号 `*`
 
 星号在所有通配符中含义最广泛，因为它可以代表零或多个字符。
 
 例如，`ls *.jpg` 会告诉 `ls` 命令提供当前目录下所有具有 `.jpg` 扩展的文件名。
 
-同样，以下命令将 `/etc` 中所有名称中包含 'stab' 字符串的文件复制到 `/tmp` 目录：
+同样，以下命令将 `/etc` 中所有名称中包含 `stab` 字符串的文件复制到 `/tmp` 目录：
 
 ```bash
 $ cp -rfv /etc/*stab* /tmp
@@ -1162,196 +1195,192 @@ $ cp -rfv /etc/*stab* /tmp
 
 ```bash
 $ ls /tmp/*stab*
+
 /tmp/fstab
 /tmp/fstab.d
 ```
 
-这里的另一个例子是列出 `/etc` 中以 'bash' 字符串开头的条目：
+这里的另一个例子是列出 `/etc` 中以 `bash` 字符串开头的条目：
 
 ```bash
 $ ls -l /etc/bash*
 ```
 
-- -rw-r--r-- 1 … 856 1 Nov. 21:37 /etc/bash.bash_logout
-- -rw-r--r-- 1 … 1176 1 Nov. 21:37 /etc/bash.bashrc
+- `-rw-r--r-- 1 … 856 1 Nov. 21:37 /etc/bash.bash_logout`
+- `-rw-r--r-- 1 … 1176 1 Nov. 21:37 /etc/bash.bashrc`
 
-列出所有具有 '.conf' 扩展的文件呢：
+列出所有具有 `.conf` 扩展的文件：
 
 ```bash
 $ ls -l /etc/*.conf
 ```
 
-- -rw-r--r-- 1 … 5139 1 Nov. 21:37 /etc/man_db.conf
-- -rw-r--r-- 1 … 393 1 Nov. 21:37 /etc/nsswitch.conf
+- `-rw-r--r-- 1 … 5139 1 Nov. 21:37 /etc/man_db.conf`
+- `-rw-r--r-- 1 … 393 1 Nov. 21:37 /etc/nsswitch.conf`
 
-尝试弄清楚这个命令是如何工作的：
+尝试弄清楚这个命令是如何工作的。
 
-记住，星号 (`*`) 代表零或多个字符，所以 `/*/` 意味着根目录下的任何目录。
+记住，星号（`*`）代表零或多个字符，所以 `/*/` 意味着根目录下的任何目录。
 
 ```bash
 $ ls /*/*conf*
 ```
 
-- /bin/cyglsa-config /bin/cygserver-config /bin/getconf.exe /etc/man_db.conf /etc/nsswitch.conf
+- `/bin/cyglsa-config /bin/cygserver-config /bin/getconf.exe /etc/man_db.conf /etc/nsswitch.conf`
 
-#### 问号 ?
+### 问号 `?`
 
-问号 (`?`) 被用作通配符字符，表示恰好一个字符。
+问号（`?`）被用作通配符字符，表示恰好一个字符。
 
-在下面的示例中，我们列出了从第四位开始包含 'file' 字符串的每个条目：
+在下面的示例中，我们列出了从第四位开始包含 `file` 字符串的每个条目：
 
 ```bash
 $ ls -l /etc/???file*
 ```
 
-- -rw-r--r-- 1 … 5171 1 Nov. 21:37 /etc/profile
-- `/etc/profile.d`:
-  total 24
-  -rw-r--r-- 1 … 1107 20 Oct. 09:55 gawk.csh
-  -rw-r--r-- 1 … 757 20 Oct. 09:55 gawk.sh
+- `-rw-r--r-- 1 … 5171 1 Nov. 21:37 /etc/profile`
+- `/etc/profile.d`：
+  - `total 24`
+  - `-rw-r--r-- 1 … 1107 20 Oct. 09:55 gawk.csh`
+  - `-rw-r--r-- 1 … 757 20 Oct. 09:55 gawk.sh`
 
-### …
+### 其他示例
 
-我们的命令列出了 `/etc` 下直接直接的一个文件，其名称为 `profile`，以及 `/etc/profile.d` 目录的内容。
+我们的命令列出了 `/etc` 下直接的一个文件，其名称为 `profile`，以及 `/etc/profile.d` 目录的内容。
 
-#### 方括号 []
+### 方括号 `[]`
 
 第三种通配符是一对方括号，代表括号内包含的任意字符。
 
-例如，下面的操作将提供所有扩展名以 b、c 或 i 开头的对象信息：
+例如，下面的操作将提供所有扩展名以 `b`、`c` 或 `i` 开头的对象信息：
 
 ```bash
 $ file /etc/*.[bci]*
 ```
 
-- /etc/bash.bash_logout: ASCII text
-- /etc/bash.bashrc: ASCII text
-- /etc/man_db.conf: ASCII text
-- /etc/nsswitch.conf: ASCII text
-- /etc/rebase.db.i386: data
+- `/etc/bash.bash_logout: ASCII text`
+- `/etc/bash.bashrc: ASCII text`
+- `/etc/man_db.conf: ASCII text`
+- `/etc/nsswitch.conf: ASCII text`
+- `/etc/rebase.db.i386: data`
 
 当方括号通配符中两个字符之间使用连字符时，它表示包含这两个字符的范围。
 
-以下将列出所有以 b 到 d 任意字母开头的文件：
+以下将列出所有以 `b` 到 `d` 任意字母开头的文件：
 
 ```bash
 $ cd /etc
+
 $ ls [b-d]*
 ```
 
-- bash.bash_logout bash.bashrc
-- defaults: etc
+- `bash.bash_logout bash.bashrc`
+- `defaults: etc`
 
 有时拥有一连续的方括号通配符很有用：
 
 ```bash
 $ cd /etc
+
 $ ls *.[a-ci-k][0-9]*
 ```
 
-- rebase.db.i386
+- `rebase.db.i386`
 
 之前的命令显示了所有扩展名以字母开头的文件：
-从 a 到 c，意味着点后的第一个字母可以是 a、b 或 c
-或者
-从 i 到 k，意味着点后的第一个字母可以是 i、j 或 k
-该字母后面跟着一个 0 到 9 的数字，然后紧跟着零或多个字符。
 
-## 9 正则表达式 (REGEX)
+- 从 `a` 到 `c`，意味着点后的第一个字母可以是 `a`、`b` 或 `c`；
+- 或者从 `i` 到 `k`，意味着点后的第一个字母可以是 `i`、`j` 或 `k`；
+- 该字母后面跟着一个 `0` 到 `9` 的数字，然后紧跟着零或多个字符。
+
+## 9 正则表达式（REGEX）
 
 正则表达式是描述特定搜索模式的文本字符串。
 
 不同的应用程序和编程语言实现正则表达式的方式略有不同。我们将探索 `grep` 命令描述模式的一个子集。
 
-#### 插入符号 ^
+### 插入符号 `^`
 
 此符号用于匹配行的开头。
 
-在下面的示例中，`grep '^#'` 搜索 `.bash_profile` 中所有以 '#' 开头的行，并将其输出重定向到 `head` 命令以显示一行：
+在下面的示例中，`grep '^#'` 搜索 `.bash_profile` 中所有以 `#` 开头的行，并将其输出重定向到 `head` 命令以显示一行：
 
 ```bash
 $ pwd
 /home/Khaled Jamal
+
 $ grep '^#' .bash_profile | head -1
 ```
-
-
-
-
 
 # 在法律允许的范围内，作者（们）……
 
 你也可以查找以字符串开头的行：
 
-```
+```bash
 $ grep '^export' /etc/profile
 ```
 
-### export `PROFILEREAD PATH ORIGINAL_PATH` …
+### `export PROFILEREAD PATH ORIGINAL_PATH` …
 
-### 美元符号 $
+### 美元符号 `$`
 
 此符号用于匹配行尾。
 
-在接下来的示例中，`find` 命令列出 `/etc` 下的所有文件和目录，管道符将输出发送给 `grep` 命令，该命令只显示以单词 `'profile'` 结尾的行：
+在接下来的示例中，`find` 命令列出 `/etc` 下的所有文件和目录，管道符将输出发送给 `grep` 命令，该命令只显示以单词 `profile` 结尾的行：
 
-```
+```bash
 $ find /etc | grep 'profile$'
 ```
 
-### `/etc/defaults/etc/profile`
+### 匹配结果
 
-### `/etc/defaults/etc/skel/.bash_profile`
-
-### `/etc/defaults/etc/skel/.profile`
-
-### `/etc/profile`
-
-### `/etc/skel/.bash_profile`
-
-### `/etc/skel/.profile`
+- `/etc/defaults/etc/profile`
+- `/etc/defaults/etc/skel/.bash_profile`
+- `/etc/defaults/etc/skel/.profile`
+- `/etc/profile`
+- `/etc/skel/.bash_profile`
+- `/etc/skel/.profile`
 
 注意：别担心，我们将在另一章节中讨论 `find` 命令。
 
-### 点 (.)
+### 点 `.`
 
 点 `.` 在正则表达式中表示在指定位置可以存在任何单个字符。
 
-例如，如果我们想匹配在 `'dedi'` 和 `'ted'` 之间有两个字符的任何内容，可以使用以下模式：
+例如，如果我们想匹配在 `dedi` 和 `ted` 之间有两个字符的任何内容，可以使用以下模式：
 
-```
+```bash
 $ cat .bash_profile | grep 'dedi..ted'
 ```
 
-### # … 在法律允许的范围内，作者（们）已奉献所有
+### `#` … 在法律允许的范围内，作者（们）已奉献所有
 
-### 方括号 []
+### 方括号 `[]`
 
-我们之前讨论过它，现在让我们来看一个例子，查找以字母 a 或 b 或 c 结尾的文件：
+我们之前讨论过它，现在让我们来看一个例子，查找以字母 `a`、`b` 或 `c` 结尾的文件：
 
-```
+```bash
 $ ls /etc | grep '[abc]$'
 ```
 
-### bash.bashrc
+匹配结果包括：
 
-### fstab
+- `bash.bashrc`
+- `fstab`
+- `mtab`
 
-### mtab
-
-方括号内的连字符作为范围操作，因此类似于 `[a-cr-y]` 的内容意味着字母之一：a 或 b 或 c，或者 r 或 s 或 t 或 y。
+方括号内的连字符作为范围操作，因此类似于 `[a-cr-y]` 的内容意味着字母之一：`a`、`b` 或 `c`，或者 `r`、`s`、`t` 或 `y`。
 
 方括号内的脱字符 `^` 表示该字符不在所包含的字符之中：
 
+```bash
+$ ls /etc | grep '[c-e][^abc]$'
 ```
-##### $ ls /etc | grep '[c-e][^abc]$'
-```
 
-### 替代方案
+匹配结果包括：
 
-### 服务
-
-### skel
+- `服务`
+- `skel`
 
 ### 0 次或多个
 
@@ -1360,64 +1389,65 @@ $ ls /etc | grep '[abc]$'
 - 星号 `*`：意味着前面的字符可以重复 0 次或多次。
 - 加号 `+`：意味着前面的字符可以重复 1 次或多次。
 
-假设我们想找到任何以 `#` 开头并以句结尾的行，可以使用以下表达式：
+假设我们想找到任何以 `#` 开头并以句号结尾的行，可以使用以下表达式：
 
-```
-##### $ cat .bash_profile | grep "^#.*\.$"
+```bash
+$ cat .bash_profile | grep "^#.*\.$"
 ```
 
 `~/.bash_profile`：由 `bash(1)` 为登录 shell 执行。
+
 （省略其余注释）
 
 让我们来详细解析这个正则表达式：
 
-`^#` 用于匹配行首的 `#`。
-`.*` 点号后的星号意味着任何字符可以被重复零次或多次。
-`\.$` 用于匹配行尾的句号，结尾的点经过了转义，因此它表示一个字面上的点，而不是通常的“任何字符”的含义。
+- `^#` 用于匹配行首的 `#`。
+- `.*` 点号后的星号意味着任何字符可以被重复零次或多次。
+- `\.$` 用于匹配行尾的句号，结尾的点经过了转义，因此它表示一个字面上的点，而不是通常的“任何字符”的含义。
 
 让我们用加号代替星号：
 
-```
-##### $ cat .bash_profile | grep "^#.+\.$"
+```bash
+$ cat .bash_profile | grep "^#.+\.$"
 ```
 
 什么都没有显示，好像加号没有起作用。
 
 实际上有许多类型的正则表达式，我们说明如下：
 
-- 基本正则表达式 (BRE)：`("^" , "$" , "*" , "." , "[]")`
-- 扩展正则表达式 (ERE)：`("?" , "+" , "{" , "|" , "(" , ")")`
+- 基本正则表达式（BRE）：`("^", "$", "*", ".", "[]")`
+- 扩展正则表达式（ERE）：`("?", "+", "{", "|", "(", ")")`
 
-如所述，加号是 ERE 运算符之一，为了在 `grep` 命令中使用用 ERE，我们应该使用 `-E` 选项：
+如所述，加号是 ERE 运算符之一。为了在 `grep` 命令中使用 ERE，我们应该使用 `-E` 选项：
 
-```
-##### $ cat .bash_profile | grep -E "^#.+\.$"
+```bash
+$ cat .bash_profile | grep -E "^#.+\.$"
 ```
 
 另一种使其生效的方法是对加号运算符进行转义：
 
-```
-##### $ cat .bash_profile | grep "^#.\+\.$"
+```bash
+$ cat .bash_profile | grep "^#.\+\.$"
 ```
 
-### 圆括号 ()
+### 圆括号 `()`
 
-圆括号用于将多个字符分组以便像一个整体一样运行。
+圆括号用于将多个字符分组，以便像一个整体一样运行。
 
 让我们分析以下命令：
 
-```
-##### $ cat .bash_profile | grep -E 'HOME.*/(bin|etc)'
+```bash
+$ cat .bash_profile | grep -E 'HOME.*/(bin|etc)'
 ```
 
-该命令查找包含字符串 `'HOME'` 的行，后面跟着零个或多个字符（`.*`），然后是 `/`，最后是 `bin` 或 `etc`。
+该命令查找包含字符串 `HOME` 的行，后面跟着零个或多个字符（`.*`），然后是 `/`，最后是 `bin` 或 `etc`。
 
 为了表示选择关系，我们使用管道字符 `|`。这些通常用于圆括号分组内，以指定两个或多个可能性中的其中一个被视为匹配。
 
-假设你想修改命令使 `'HOME'` 字符串成为可选的，为此，我们将使用圆括号将 `HOME` 的字符分组，并作为一个单元对它们应用操作符：
+假设你想修改命令，使 `HOME` 字符串成为可选的。为此，我们将使用圆括号将 `HOME` 的字符分组，并作为一个单元对它们应用操作符：
 
-```
-##### $ cat .bash_profile | grep -E '(HOME)?.*/(bin|etc)'
+```bash
+$ cat .bash_profile | grep -E '(HOME)?.*/(bin|etc)'
 ```
 
 我们上面使用的问号 `?` 代表前面单元（`HOME`）出现零次或一次。
@@ -1426,46 +1456,50 @@ $ ls /etc | grep '[abc]$'
 
 在本章中我们将学习最常用的过滤器，如 `grep`、`cut`、`tr`、`wc`、`sort`、`sed` 和 `awk`。
 
-### grep
+### `grep`
 
 `grep` 命令用于过滤包含或不包含特定字符串的文本行。
 
 让我们准备一个文件来实验这个命令：
 
-```
+```bash
 $ pwd
 /home/Khaled Jamal
+
 $ echo This is the first line >> sample.txt
+
 $ echo This is the second line >> sample.txt
+
 $ cat sample.txt
 This is the first line
 This is the second line
 ```
 
-以下命令只带我们找到包含 `'first'` 字符串的行：
+以下命令只带我们找到包含 `first` 字符串的行：
 
-```
+```bash
 $ cat sample.txt | grep first
 ```
 
 你可以通过提供文件名直接使用 `grep`：
 
-```
+```bash
 $ grep first sample.txt
 This is the first line
 ```
 
 `grep` 的 `-i` 选项忽略大小写区分：
 
-```
+```bash
 $ echo THIS IS THE LINE >> sample.txt
+
 $ grep -i line
 THIS IS THE LINE
 ```
 
 要选择不匹配的行，使用 `-v` 选项：
 
-```
+```bash
 $ grep -v line sample.txt
 This is the first line
 This is the second line
@@ -1473,7 +1507,7 @@ This is the second line
 
 要过滤多个单词，使用引号：
 
-```
+```bash
 $ grep "first line" sample.txt
 ```
 
@@ -1481,12 +1515,16 @@ $ grep "first line" sample.txt
 
 在下面的示例中我们创建一个 `tmp` 目录，并向其中创建一个 `notes.txt` 文件：
 
-```
+```bash
 $ cd
+
 $ pwd
 /home/Khaled Jamal
+
 $ mkdir tmp
+
 $ touch tmp/notes.txt
+
 $ ls -R
 .:
 sample.txt
@@ -1496,29 +1534,43 @@ notes.txt
 
 然后我们向 `notes.txt` 添加几行：
 
-```
+```bash
 $ echo This is the first line >> tmp/notes.txt
+```
+
+
+
+```bash
 $ echo This is the second line >> tmp/notes.txt
+
 $ cat tmp/notes.txt
+
 This is the first line
+
 This is the second line
 ```
 
 最后我们利用 `-r` 选项在 `tmp` 目录中递归搜索：
 
-```
-##### $ grep -r 'the first' tmp
+```bash
+$ grep -r 'the first' tmp
+
 tmp/notes.txt:This is the first line
 ```
 
 我们也可以在不带 `[FILE]` 参数的情况下使用 `grep` 来查看当前目录：
 
-```
+```bash
 $ cd
-$pwd
+
+$ pwd
+
 /home/Khaled Jamal
+
 $ grep -r 'the first'
+
 sample.txt:This is the first line
+
 tmp/notes.txt:This is the first line
 ```
 
@@ -1526,33 +1578,41 @@ tmp/notes.txt:This is the first line
 
 假设我们要获取以字符串 `'export'` 开头的行的文件名，让我们在 `/etc` 下的所有文件中查找：
 
-```
+```bash
 $ grep -l '^export' /etc/*
 ```
 
 我们得到了许多指示目录无效的错误信息，`-s` 选项允许抑制这些错误信息：
 
-```
+```bash
 $ grep -sl '^export' /etc/*
+
 /etc/bash.bashrc
+
 /etc/profile
 ```
 
 你也可以使用 `-r` 选项进行递归搜索：
 
-```
+```bash
 $ grep -srl '^export' /etc/*
+
 /etc/bash.bashrc
+
 /etc/defaults/etc/bash.bashrc
+
 /etc/defaults/etc/profile
 ```
 
 显然，如果你移除 `-l` 选项，你将获得完整结果（文件名和行）：
 
-```
-##### $ grep -sr '^export' /etc/*
+```bash
+$ grep -sr '^export' /etc/*
+
 /etc/bash.bashrc:export EXECIGNORE="*.dll"
+
 /etc/defaults/etc/bash.bashrc:export EXECIGNORE= …
+
 /etc/defaults/etc/profile:export PROFILEREAD PATH
 ```
 
@@ -1562,326 +1622,450 @@ $ grep -srl '^export' /etc/*
 
 通过输入 `cd` 返回你的主目录：
 
-```
+```bash
 $ cd
+
 $ pwd
 ```
-
-
-
 
 `/home/Khaled Jamal`
 
 使用以下命令删除当前目录下的所有内容：
 
-```
+```bash
 $ rm -R *
 ```
 
 ```bash
 $ ls -l
 ```
+
+```text
 total 0
+```
 
 创建一个文件并向其中填充分隔符文本：
 
 ```bash
 $ touch notes.txt
+
 $ echo kevin:root:xw123 >> notes.txt
+
 $ echo bruce:user:pass@q >> notes.txt
+
 $ cat notes.txt
 ```
+
+```text
 kevin:root:xw123
 bruce:user:pass@q
+```
 
 现在让我们使用 `cut` 命令来提取登录名和密码：
 
 ```bash
 $ cut -d: -f2,3 notes.txt
 ```
+
+```text
 root:xw123
 user:pass@q
+```
 
-`-d` 选项用于更改默认分隔符。 
+`-d` 选项用于更改默认分隔符。  
 `-f` 选项指定第二个和第三个字段。
- 
+
 你可以结合 `grep` 和 `cut` 命令来提取特定信息：
 
 ```bash
 $ grep kevin notes.txt | cut -d: -f2,3
 ```
+
+```text
 root:xw123
+```
 
 当在 `cut` 中使用空格作为分隔符时，你必须为空格加引号：
 
 ```bash
 $ touch space-delimited.txt
+
 $ echo This is the first line >> space-delimited.txt
+
 $ echo This is the second line >> space-delimited.txt
+
 $ cut -d' ' -f3-5 space-delimited.txt | tail -1
 ```
+
+```text
 the second line
+```
 
 ### tr
 
 `tr` 命令用于翻译、删除或压缩重复字符。
+
 下面的示例展示了 `notes.txt` 内容的大写格式，并更改了冒号分隔符：
 
 ```bash
-$pwd
+$ pwd
+
 /home/Khaled Jamal
+
 $ cat notes.txt | tr 'a-z' 'A-Z' | tr ':' ';'
 ```
+
+```text
 KEVIN;ROOT;XW123
 BRUCE;USER;PASS@Q
+```
 
 让我们清空当前目录并创建一个新文件：
 
 ```bash
 $ rm -R *
+
 $ touch notes.txt
+
 $ echo '-----This is the first line-----' >> notes.txt
+
 $ cat notes.txt
 ```
------This is the first line-----
 
-你可以使用 `-d` (`--delete`) 选项通过删除字符 `-` 来显示干净的内容：
+```text
+-----This is the first line-----
+```
+
+你可以使用 `-d`（`--delete`）选项通过删除字符 `-` 来显示干净的内容：
 
 ```bash
 $ cat notes.txt | tr -d -
 ```
-This is the first line
 
-最后，你可以使用 `-s` (`--squeeze-repeats`) 选项将多个重复的空格或字符替换为单个：
+```text
+This is the first line
+```
+
+最后，你可以使用 `-s`（`--squeeze-repeats`）选项将多个重复的空格或字符替换为单个：
 
 ```bash
 $ echo 'This is the second line' >> notes.txt
+
 $ cat notes.txt
 ```
+
+```text
 -----This is the first line-----
 This is the second line
+```
 
 ```bash
 $ cat notes.txt | tr -d - | tr -s ' '
 ```
+
+```text
 This is the first line
 This is the second line
+```
 
 ### wc
 
-`wc` (word count) 命令用于统计文件中换行数、单词数、字节数和字符数。
+`wc`（word count）命令用于统计文件中换行数、单词数、字节数和字符数。
+
 下面的命令统计行数：
 
 ```bash
 $ wc -l notes.txt
 ```
+
+```text
 2 notes.txt
+```
 
 这个命令统计字符数：
 
 ```bash
 $ wc -c notes.txt
 ```
+
+```text
 98 notes.txt
+```
 
 而这个命令统计单词数：
 
 ```bash
 $ wc -w notes.txt
 ```
+
+```text
 10 notes.txt
+```
 
 ### sort
 
 `sort` 命令是一个用于文本文件排序的工具。它支持按字母顺序、逆序、数字、月份排序，还可以删除重复项。
+
 `sort` 命令默认按字母顺序进行排序：
 
 ```bash
-$pwd
+$ pwd
+
 /home/Khaled Jamal
+
 $ rm -R *
+
 $ touch notes.txt
+
 $ echo 'Java
+
 > Cobol
+
 > C++
+
 > Php
+
 > Linux' > notes.txt
 ```
 
 ```bash
 $ sort notes.txt
 ```
+
+```text
 C++
 Cobol
 Java
 Linux
 Php
+```
 
 `sort` 命令并没有更改文件；它只是以排序的方式显示其内容。输入 `cat notes.txt` 来确认一下这一点：
 
 ```bash
 $ cat notes.txt
 ```
+
+```text
 Java
 Cobol
 C++
 Php
 Linux
+```
 
 使用 `-r` 选项按逆序排序：
 
 ```bash
 $ sort -r notes.txt
 ```
+
+```text
 Php
 Linux
 Java
 Cobol
 C++
+```
 
 要进行排序并删除重复项，请传递 `-u` 选项（unique）。这将向标准输出写入排序后的列表并移除重复。
+
 让我们向文件中添加一个重复条目：
 
 ```bash
 $ echo C++ >> notes.txt
+
 $ cat notes.txt
 ```
+
+```text
 Java
 Cobol
 C++
 Php
 Linux
 C++
+```
 
 ```bash
 $ sort -u notes.txt
 ```
+
+```text
 C++
 Cobol
 Java
 Linux
 Php
+```
 
 要按分隔符排序，请传递 `-t` 选项以及分隔符值。它可以与 `-k` 选项结合使用以对 CSV 中的字段进行排序。
+
 这是一个示例：
 
 ```bash
 $ touch notes.csv
+
 $ echo "5;Java;Programming
+
 > 3;SAP;ERP
+
 > 1;Linux;System
+
 > 4;Cisco;Networking" >> notes.csv
 ```
 
 ```bash
 $ sort -t ";" -k 2 notes.csv
 ```
+
+```text
 4;Ciso;Networking
 5;Java;Programming
 1;Linux;System
 3;SAP;ERP
+```
 
 ```bash
 $ sort -t ';' -k 1 notes.csv
 ```
+
+```text
 1;Linux;System
 3;SAP;ERP
 4;Cisco;Networking
 5;Java,Programming
+```
 
 ### sed
 
 `sed` 是一个流编辑器，用于对文件或来自管道输入执行基础文本处理。
-`sed` 最重要的用途之一是替换。
-替换命令将正则表达式的所有出现处更改为新值。
+
+`sed` 最重要的用途之一是替换。替换命令将正则表达式的所有出现处更改为新值。
+
 输入以下命令准备 `substitution.txt` 文件：
 
 ```bash
 $ cat /etc/profile | head -3 > substitution.txt
+
 $ cat substitution.txt
 ```
+
+```text
 # 在法律允许的范围内，作者(s) …
 # 版权及相关邻接权利所有 ……
 # 全球公共领域。此软件是 ……
+```
 
 替换模式的语法为 `s/regex/replacement/`。
+
 因此要将行开头所有的 `#` 符号替换为空格，请使用：（此处替换内容为空）
 
 ```bash
 $ sed 's/^#//' substitution.txt
 ```
+
+```text
 在法律允许的范围内，作者(s) …
 版权及相关邻接权利所有 ……
 全球公共领域。此软件是 ……
+```
 
 你可以通过使用 `-e` 选项进行多次替换，在下面的示例中；我们保留了最后一个模式，并添加了一个替换所有 'this' 出现处的新模式：
 
 ```bash
 $ sed -e 's/^#//' -e 's/this/THIS/' substitution.txt
 ```
+
+```text
 在法律允许的范围内，作者(s) …
 版权及相关邻接权利所有 ……
 全球公共领域。此软件是 ……
+```
 
 你可以通过使用 `-e` 选项进行多次替换，在下面的示例中；我们保留了最后一个模式，并添加了一个替换所有 'this' 出现处的新模式：
 
 ```bash
 $ sed -e 's/^#//' -e 's/this/THIS/' substitution.txt
 ```
+
+```text
 在法律允许的范围内，作者(s) …
 版权及相关邻接权利所有 ……
 全球公共领域。此软件是 ……
+```
 
-`sed` 需要处理扩展正则表达式 (ERE)，如果你忘记了它（`?`, `+`, `{`, `|`, `(`, `)`）。
+`sed` 需要处理扩展正则表达式（ERE），如果你忘记了它（`?`、`+`、`{`、`|`、`(`、`)`）。
+
 下面的示例在没有 `-r` 或 `-E` 选项的情况下无法工作，它将所有的 'This' 或 'this' 替换为 'THIS'：
 
 ```bash
 $ sed 's/(This|this/THIS' substitution.txt
 ```
+
+```text
 法律允许的的范围内，((s)
 
 及相关邻接权利所有 ……
+
 全球公共领域。此软件是
+```
 
 注意在上面的所有示例中我们都没有更改 `substitution.txt` 文件，让我们检查一下：
 
 ```bash
 $ cat substitution.txt
 ```
+
+```text
 # 在法律允许的范围内，作者(s) …
 # 版权及相关邻接权利所有 ……
 # 全球公共领域。此软件是 ……
+```
 
 帮助信息告诉我们 `-i` 允许原地编辑文件，并在提供 `SUFFIX` 时可以备份：
 
 ```bash
 $ sed --help
 ```
+
+```text
 Usage: sed [OPTION]... {script-only-if-no-other-script} [input-file]...
 
-#### -i[SUFFIX], --in-place[=SUFFIX]
+-i[SUFFIX], --in-place[=SUFFIX]
 
 原地编辑文件（如果提供了 SUFFIX 则备份）
+```
 
 下面的示例使用了 `-i` 选项并提供了 `_backup` 后缀：
 
 ```bash
 $ sed -i_backup -e 's/^#//' substitution.txt
+
 $ ls
 ```
+
+```text
 substitution.txt substitution.txt_backup
+```
 
 ```bash
 $ cat substitution.txt
 ```
+
+```text
 版权及相关邻接权利所有 ……
+```
 
 ```bash
 $ cat substitution.txt_backup
 ```
+
+```text
 # 在法律允许的范围内，作者(s) …
 # 版权及相关邻接权利所有 ……
 # 全球公共领域。此软件是
+```
 
 ### awk
 
@@ -1891,14 +2075,11 @@ $ cat substitution.txt_backup
 
 ```bash
 $ echo 'Kevin;Java;Junior
+
+> Bruce;C++;高级
+
+> Jason;PHP;高级 ' > test.csv
 ```
-
-
-
-
-Bruce;C++;高级
-
-Jason;PHP;高级 '`> test.csv
 
 以下命令提取 csv 文件的第一列和第三列，注意 `awk` 的默认分隔符是空格，要更改分隔符，我们使用 `-F` 选项，后跟用引号括起来的新分隔符：
 
@@ -1906,11 +2087,13 @@ Jason;PHP;高级 '`> test.csv
 $ awk -F';' '{print $1, $3}' test.csv
 ```
 
+```text
 Kevin 初级
 
 Bruce 高级
 
 Jason 高级
+```
 
 你也可以使用 `NF` 变量来获取最后一列，它是一个内置变量，表示记录中的字段总数：
 
@@ -1918,16 +2101,19 @@ Jason 高级
 $ awk -F';' '{print $1,$NF}' test.csv
 ```
 
+```text
 Kevin 初级
 
 Bruce 高级
 
 Jason 高级
+```
 
 现在你已经对 `awk` 有了了解，检查一下它的语法：
 
 ```bash
 awk '/search pattern1/ {Actions}
+
 /search pattern2/ {Actions}' file
 ```
 
@@ -1945,7 +2131,9 @@ awk '/search pattern1/ {Actions}
 $ awk -F';' '/^K/ {print $1 "\t" $2 "\t" $NF}' test.csv
 ```
 
+```text
 Kevin Java 初级
+```
 
 这一个查找包含 java 或 Java 字符串的行：
 
@@ -1953,7 +2141,9 @@ Kevin Java 初级
 $ awk -F';' '/[jJ]ava/ {print $1 "\t" $2 "\t" $NF}' test.csv
 ```
 
+```text
 Kevin Java 初级
+```
 
 最后一个命令查找包含 java、Java 或 C++ 字符串的行：
 
@@ -1961,13 +2151,15 @@ Kevin Java 初级
 $ awk -F';' '/([jJ]ava|C++)/ {print $1 "\t" $2 "\t" $NF}' test.csv
 ```
 
+```text
 Kevin Java 初级
 
 Bruce C++ 高级
+```
 
 动作 `print` 使用制表符（`\t`）分隔所有的 csv 列。
 
-## 11 有用工具 I 
+## 11 有用工具 I
 
 本章介绍了查找和压缩文件的工具，以及其他作为后台作业执行命令的常用工具。
 
@@ -1979,16 +2171,25 @@ Bruce C++ 高级
 
 ```bash
 $ pwd
+
 /home/Khaled Jamal
 
 $ find
+
 .
+
 ./.bashrc
+
 ./.bash_history
+
 ./.bash_profile
+
 ./.inputrc
+
 ./.lesshst
+
 ./.minttyrc
+
 ./.profile
 ```
 
@@ -1996,11 +2197,17 @@ $ find
 
 ```bash
 $ find /etc
+
 /etc
+
 /etc/alternatives
+
 /etc/alternatives/README
+
 /etc/bash.bashrc
+
 /etc/bash.bash_logout
+
 /etc/defaults
 ```
 
@@ -2012,11 +2219,17 @@ $ find /etc
 
 ```bash
 $ find /etc -name README
+
 /etc/alternatives/README
+
 /etc/pki/ca-trust/extracted/java/README
+
 /etc/pki/ca-trust/extracted/openssl/README
+
 /etc/pki/ca-trust/extracted/pem/README
+
 /etc/pki/ca-trust/extracted/README
+
 /etc/pki/ca-trust/source/README
 ```
 
@@ -2026,14 +2239,15 @@ $ find /etc -name README
 $ find /etc/s* -name "*.bash*"
 ```
 
-```bash
+```text
 /etc/skel/.bashrc
+
 /etc/skel/.bash_profile
 ```
 
 上述命令在 `/etc` 下递归搜索任何名称以字母 s 开头的目录。
 
-在搜索文件名时，忽略大小写通常很有用。要做到做到这一点，请使用 `-iname` 选项代替 `-name` 选项：
+在搜索文件名时，忽略大小写通常很有用。要做到这一点，请使用 `-iname` 选项代替 `-name` 选项：
 
 ```bash
 $ find /etc/s* -name "*.BASH*"
@@ -2041,7 +2255,9 @@ $ find /etc/s* -name "*.BASH*"
 
 ```bash
 $ find /etc/s* -iname "*.BASH*"
+
 /etc/skel/.bashrc
+
 /etc/skel/.bash_profile
 ```
 
@@ -2051,14 +2267,21 @@ $ find /etc/s* -iname "*.BASH*"
 
 ```bash
 $ find /etc -type f -iname "profile*"
+
 /etc/defaults/etc/profile
+
 /etc/profile
 ```
 
 我们使用 `-type d` 仅查找目录：
 
 ```bash
+
+
+
+```bash
 $ find /etc -type d -iname "profile*"
+
 /etc/defaults/etc/profile.d
 /etc/profile.d
 ```
@@ -2067,6 +2290,7 @@ $ find /etc -type d -iname "profile*"
 
 ```bash
 $ find /etc /home -type f -iname "*profile*"
+
 /etc/defaults/etc/profile
 /etc/defaults/etc/skel/.bash_profile
 /etc/defaults/etc/skel/.profile
@@ -2086,13 +2310,12 @@ $ find /etc /home -type f -iname "*profile*"
 $ find /etc -type f -iname "profile*" -exec ls -l {} \;
 ```
 
+```text
 -rwxr-xr-x 1 … Sep. 26 2015 /etc/defaults/etc/profile
 -rw-r--r-- 1 … Nov. 1 21:37 /etc/profile
+```
 
-`-exec`: 在结果上执行命令。
-
-
-
+`-exec`：在结果上执行命令。
 
 执行脚本后，你必须等待 20 秒直到它完成打印。
 
@@ -2131,7 +2354,7 @@ $ nohup ./shell-script.sh &
 
 链接通常用于在不同的地方存储同一个文件的多个副本，但仍然引用同一个文件。
 
-### 符号链接 (Symbolic links)
+### 符号链接（Symbolic links）
 
 符号链接类似于指向实际文件或目录的快捷方式或引用，它们经常用于链接库，并确保文件在不移动或复制原始文件的情况下处于一致的位置。
 
@@ -2147,6 +2370,7 @@ $ mkdir practice
 $ cd practice/
 $ cp /etc/profile profile
 $ ls –ila profile
+
 2251799814816612 -rw-r--r-- 1 … 8 Nov. 15:53 profile
 ```
 
@@ -2156,9 +2380,13 @@ $ ls –ila profile
 
 ```bash
 $ pwd
+
 /tmp/practice
+
 $ ln -s profile slinkprofile
+
 $ ls -ila slinkprofile
+
 20547673300372152 lrwxrwxrwx 1 … slinkprofile -> profile
 ```
 
@@ -2167,14 +2395,19 @@ $ ls -ila slinkprofile
 在接下来的示例中，我们正在编辑链接以查看更改是否会应用到真实文件：
 
 ```bash
-$pwd
+$ pwd
+
 /tmp/practice
+
 $ echo '#something' >> slinkprofile
+
 $ tail -2 slinkprofile
+
 export PROFILEREAD PATH ORIGINAL…
 #something
 
 $ tail -2 profile
+
 export PROFILEREAD PATH ORIGINAL…
 #something
 ```
@@ -2182,10 +2415,14 @@ export PROFILEREAD PATH ORIGINAL…
 让我们移动 `/tmp/practice/profile` 看看是否会导致任何问题：
 
 ```bash
-$pwd
+$ pwd
+
 /tmp/practice
+
 $ mv profile ../
+
 $ cat slinkprofile
+
 cat: slinkprofile: No such file or directory
 ```
 
@@ -2193,7 +2430,7 @@ cat: slinkprofile: No such file or directory
 
 请记住，符号链接可以引用不同硬盘/卷上的文件或文件夹；并且引用的是抽象的文件名/目录，而不是物理位置。它们有自己的 inode。
 
-### 硬链接 (Hard links)
+### 硬链接（Hard links）
 
 这种链接与符号链接的区别在于以下几点：
 
@@ -2205,12 +2442,17 @@ cat: slinkprofile: No such file or directory
 进入 `/tmp/practice`，将 `profile` 文件移回初始位置（`/tmp/practice`）并创建一个名为 `hlinkprofile` 的硬链接：
 
 ```bash
-$pwd
+$ pwd
+
 /tmp/practice
+
 # 将父目录中的文件移动到当前目录
 $ mv ../profile .
+
 $ ln profile hlinkprofile
+
 $ ls -ila hlinkprofile profile
+
 2251799814816612 -rw-r--r-- 2 … 8 Nov. 15:53 hlinkprofile
 2251799814816612 -rw-r--r-- 2 … 8 Nov. 15:53 profile
 ```
@@ -2222,10 +2464,14 @@ $ ls -ila hlinkprofile profile
 让我们移动原始文件：
 
 ```bash
-$pwd
+$ pwd
+
 /tmp/practice
+
 $ mv profile ../
+
 $ tail -2 hlinkprofile
+
 export PROFILEREAD PATH ORIGINAL…
 #something
 ```
@@ -2239,10 +2485,14 @@ export PROFILEREAD PATH ORIGINAL…
 输入以下命令并查看发生了什么：
 
 ```bash
-$pwd
+$ pwd
+
 /tmp/practice
+
 $ rm hlinkprofile
+
 $ ls ../
+
 #### practice profile
 ```
 
@@ -2252,19 +2502,21 @@ $ ls ../
 
 ```bash
 $ cd
-$pwd
+
+$ pwd
+
 /home/Khaled Jamal
+
 $ mkdir -p project/linux/prod/l1/batch
+
 $ mkdir -p project/linux/prod/l2/batch
 ```
-
-
-
 
 ```bash
 $ ls -l
 
 total 1
+
 -rw-r--r-- 1 … 21 11 Nov. 22:42 my-script.sh
 ```
 
@@ -2274,6 +2526,7 @@ total 1
 
 ```bash
 $ ./my-script.sh
+
 -bash: ./my-script.sh: Permission denied
 ```
 
@@ -2283,11 +2536,15 @@ $ ./my-script.sh
 
 ```bash
 $ chmod u+x,g+x,o+x my-script.sh
+
 $ ls -l
 
 total 1
+
 -rwxr-xr-x 1 … 21 11 Nov. 22:42 my-script.sh
+
 $ ./my-script.sh
+
 Hello
 ```
 
@@ -2295,16 +2552,19 @@ Hello
 
 ```bash
 $ chmod u-x,g-x,o-x my-script.sh
+
 $ ./my-script.sh
+
 -bash: ./my-script.sh: Permission denied
 ```
 
-接下来的示例中，我们将再次授予这些权限，但这次我们将使用八进制方法，首先类型输入 `ls -l` 命令：
+接下来的示例中，我们将再次授予这些权限，但这次我们将使用八进制方法，首先输入 `ls -l` 命令：
 
 ```bash
 $ ls -l
 
 total 1
+
 -rw-r--r-- 1 … 21 11 Nov. 22:42 my-script.sh
 ```
 
@@ -2312,9 +2572,11 @@ total 1
 
 ```bash
 $ chmod 755 my-script.sh
+
 $ ls -l
 
 total 1
+
 -rwxr-xr-x 1 … 21 11 Nov. 22:42 my-script.sh
 ```
 
@@ -2322,9 +2584,11 @@ total 1
 
 ```bash
 $ chmod 644 my-script.sh
+
 $ ls -l
 
 total 1
+
 -rw-r--r-- 1 … 21 11 Nov. 22:42 my-script.sh
 ```
 
@@ -2336,7 +2600,9 @@ total 1
 
 ```bash
 $ cd /tmp
+
 $ mkdir jamal-folder
+
 $ touch jamal-folder/notes.txt jamal-folder/contacts.txt
 ```
 
@@ -2344,10 +2610,13 @@ $ touch jamal-folder/notes.txt jamal-folder/contacts.txt
 
 ```bash
 $ ls -ld jamal-folder/
+
 drwxr-xr-x+ 1 … 0 13 Dec. 23:59 jamal-folder/
 
 $ ls -l jamal-folder/
+
 total 0
+
 -rw-r--r-- 1 … 0 13 Dec. 23:59 contacts.txt
 -rw-r--r-- 1 … 0 13 Dec. 23:59 notes.txt
 ```
@@ -2356,11 +2625,15 @@ total 0
 
 ```bash
 $ chmod -R o+w jamal-folder/
+
 $ ls -ld jamal-folder/
+
 drwxr-xrwx+ 1 … 0 13 Dec. 23:59 jamal-folder/
 
 $ ls -l jamal-folder/
+
 total 0
+
 -rw-r--rw- 1 … 0 13 Dec. 23:59 contacts.txt
 -rw-r--rw- 1 … 0 13 Dec. 23:59 notes.txt
 ```
@@ -2378,8 +2651,10 @@ vi 编辑器是一个文件中写入内容并编辑这些内容的工具。它�
 在接下来的示例中，我们将 `/bin` 下的所有文件列表重定向到 `file-list.txt`：
 
 ```bash
-$pwd
+$ pwd
+
 /home/Khaled Jamal
+
 $ ls -lh /bin > file-list.txt
 ```
 
@@ -2391,46 +2666,46 @@ $ ls -lh /bin > file-list.txt
 
 以下是在当前行内移动的最常用导航命令：
 
-- `0`: 移动到当前行首。
-- `$`: 移动到当前行尾。
-- `w`: 移动到下一个单词的开头。
-- `b`: 回移动到上一个单词的开头。
+- `0`：移动到当前行首。
+- `$`：移动到当前行尾。
+- `w`：移动到下一个单词的开头。
+- `b`：回移动到上一个单词的开头。
 
 以下是在当前屏幕内移动的最常用导航命令：
 
-- `H`: 移动到屏幕的第一行。
-- `M`: 移动到屏幕中间。
-- `L`: 移动到屏幕的最后一行。
+- `H`：移动到屏幕的第一行。
+- `M`：移动到屏幕中间。
+- `L`：移动到屏幕的最后一行。
 
 以下是在文件中移动的最常用导航命令：
 
-- `G`: 移动到最后一行。
-- `1G`: 移动到第一行。
-- `f`: 向前移动到字符。
-- `b`: 向后移动到字符。
+- `G`：移动到最后一行。
+- `1G`：移动到第一行。
+- `f`：向前移动到字符。
+- `b`：向后移动到字符。
 
 ### 删除和替换
 
 在命令模式下，这些是删除命令：
 
-- `x`: 删除光标下方的字符。
-- `X`: 删除光标前的字符。
-- `r`: 替换光标下的字符。
+- `x`：删除光标下方的字符。
+- `X`：删除光标前的字符。
+- `r`：替换光标下的字符。
 
 ### 撤销和重复
 
 在命令模式下，可以使用 `u` 撤销错误。
 
-- `.`: 重复上一个命令。
+- `.`：重复上一个命令。
 
 ### 剪切、复制和粘贴
 
 当光标位于目标行时，你可以：
 
-- `dd`: 剪切该行。
-- `yy`: 复制该行。
-- `p`: 在行之后粘贴。
-- `P`: 在行之前粘贴。
+- `dd`：剪切该行。
+- `yy`：复制该行。
+- `p`：在行之后粘贴。
+- `P`：在行之前粘贴。
 
 ### 合并或添加新行
 
@@ -2442,9 +2717,9 @@ $ ls -lh /bin > file-list.txt
 
 按下冒号（`:`）允许你向 vi 发出指令：
 
-- `:w`: 写入（保存）文件。
-- `:q!`: 退出并丢弃任何更改。
-- `:wq`: 保存并退出。
+- `:w`：写入（保存）文件。
+- `:q!`：退出并丢弃任何更改。
+- `:wq`：保存并退出。
 
 将当前文件另存为其他文件名请使用：`:w fileName`
 
@@ -2468,23 +2743,20 @@ $ ls -lh /bin > file-list.txt
 
 有时在留在 vi 会话中同时运行 Linux 命令是非常实用的。
 
-你还可以执行搜索和替换命令。要替换所有字符串 `old` 为 `new`，正如我们所说的按下冒号，然后输入以下命令：`:1,$ s/old/new/g`。`1,$ 表示从第一行到最后一行执行。
+你还可以执行搜索和替换命令。要替换所有字符串 `old` 为 `new`，正如我们所说的按下冒号，然后输入以下命令：`:1,$ s/old/new/g`。`1,$` 表示从第一行到最后一行执行。
 
 ### 插入模式
 
 记住，当你像这样启动 vi 时：`vi [filename]`，你最初处于命令模式。这里是进入插入模式以便在文件中输入文本的命令：
 
-- `i`: 在光标前插入文本，直到按下 `<Esc>`。
-- `a`: 在光标后追加文本，直到按下 `<Esc>`。
+- `i`：在光标前插入文本，直到按下 `<Esc>`。
+- `a`：在光标后追加文本，直到按下 `<Esc>`。
 
-一个非常重要的概念是，当你处于 vi 插入模式时，通过按下 [Esc] 键可以轻松地返回命令模式。
+一个非常重要的概念是，当你处于 vi 插入模式时，通过按下 `[Esc]` 键可以轻松地返回命令模式。
 
 ## 15 bash 脚本 I
 
 shell 是一个命令行解释器，提供了对操作系统内部功能的访问。在大多数 Linux 系统上，名为 `bash` 的程序作为 shell。除了 `bash` 之外，Linux 系统上还可以安装其他 shell 程序（例如 `sh`、`ksh`、`csh`、`tcsh`、`zsh`）。
-
-
-
 
 我们将学习 `bash`，因为 Linux 默认都安装了它，它比 `sh` 编写脚本编写更简单，并且比 `ksh` 和 `zsh` 更常用。
 
@@ -2494,10 +2766,13 @@ shell 是一个命令行解释器，提供了对操作系统内部功能的访�
 
 我们继续使用 `Cygwin`。首先，输入以下命令来设置一个 `bash` 脚本：
 
-```
+```bash
 $ pwd
+
 /home/Khaled Jamal
+
 $ touch bash-script.sh
+
 $ chmod 755 bash-script.sh
 ```
 
@@ -2507,7 +2782,7 @@ $ chmod 755 bash-script.sh
 
 我们将经常使用 `truncate` 命令来清空 bash 脚本：
 
-```
+```bash
 $ truncate -s 0 bash-script.sh
 ```
 
@@ -2519,93 +2794,127 @@ $ truncate -s 0 bash-script.sh
 
 ```bash
 #!/bin/bash
+
 subject=Greeting
+
 recipient=Kevin
+
 message="Hello $recipient, I hope you are well"
+
 signature='Khaled Jamal'
 
 echo $subject
+
 echo
+
 echo $message
+
 echo
+
 echo $signature
 ```
 
-第一行指示了用于解释脚本中其余行的程序的路径（在我们案例中是 `bash`）；它必须位于最第一行，且周围或中间不能有空格。
 
-然后，使用基本的等号（周围无空格）和 `echo` 命令设置并打印了三个变量。
 
-要读取变量，我们只需在变量名前面加一个 `$` 符号。`${variable}` 是另一种语法，用作歧义机制，所以当你想要变量 `dir` 的内容后跟 `01072018` 时，可以说 `${dir}01072018`，而 `$dir01072018` 则意味着变量 `dir01072018` 的内容。
+第一行指示了用于解释脚本中其余行的程序的路径（在我们案例中是`bash`）；它必须位于最第一行，且周围或中间不能有空格。
 
-为了让变量存储多个单词，我们需要使用引号（例如 `signature` 变量）。
+然后，使用基本的等号（周围无空格）和`echo`命令设置并打印了三个变量。
 
-必须使用双引号来允许在变量值中引用变量（例如我们在 `message` 变量的值中引用了 `$recipient`）。
+要读取变量，我们只需在变量名前面加一个`$`符号。`${variable}`是另一种语法，用作歧义机制，所以当你想要变量`dir`的内容后跟`01072018`时，可以说`${dir}01072018`，而`$dir01072018`则意味着变量`dir01072018`的内容。
+
+为了让变量存储多个单词，我们需要使用引号（例如`signature`变量）。
+
+必须使用双引号来允许在变量值中引用变量（例如我们在`message`变量的值中引用了`$recipient`）。
 
 执行脚本：
 
-```
+```bash
 $ ./bash-script.sh
+
 Greeting
+
 Hello Kevin, I hope you are well
+
 Khaled Jamal
 ```
 
-除了用户设置的普通变量，`bash` 还有一些由系统预设的内置变量。
+除了用户设置的普通变量，`bash`还有一些由系统预设的内置变量。
 
 清空 bash 脚本并编写这段代码：
 
 ```bash
 #!/bin/bash
+
 echo
+
 echo The name of the current script is $0
+
 echo
+
 echo Here are the command line supplied arguments: $1 - $2
+
 echo
+
 echo The process ID of the current script is $$
+
 echo
+
 echo The username of the current user is $USER
 ```
 
-执行脚本，这次我们提供了两个参数 `arg1`, `arg2`：
+执行脚本，这次我们提供了两个参数`arg1`、`arg2`：
 
-```
+```bash
 $ ./bash-scripting.sh arg1 arg2
+
 The name of the current script is ./bash-scripting.sh
+
 Here are the command line supplied arguments: arg1 - arg2
+
 The process ID of the current script is 12228
+
 The username of the current user is Khaled Jamal
 ```
 
-该示例自说明了一切，注意你可以向 `bash` 脚本提供最多 9 个参数（从 `$1` 到 `$9`）。
+该示例自说明了一切，注意你可以向`bash`脚本提供最多 9 个参数（从`$1`到`$9`）。
 
-在结束本节之前最后要讨论的一点是命令替换，它允许将命令的结果赋值给变量，为了做到这一点，我们将命令放在圆括号内，并在前面加上 `$` 符号。
+在结束本节之前最后要讨论的一点是命令替换，它允许将命令的结果赋值给变量，为了做到这一点，我们将命令放在圆括号内，并在前面加上`$`符号。
 
 这里有一个示例：
 
 ```bash
 #!/bin/bash
+
 result=$(ls -l /etc | grep '^d' | wc -l)
+
 echo There are $result directories under /etc
+
 echo
+
 echo There are $(ls -l /etc | grep '^d' | wc -l)
+
 directories under /etc
 ```
 
-`$(command)` 可以直接用于评估命令并返回其输出（正如我们在最后几行中所做的那）。
+`$(command)`可以直接用于评估命令并返回其输出（正如我们在最后几行中所做的那）。
 
 执行脚本：
 
-```
+```bash
 $ ./bash-scripting.sh
+
 There are 11 directories under /etc
+
 There are 11 directories under /etc
 ```
 
-还有另一种形式使用反引号（代替 `$` 和圆括号）：
+还有另一种形式使用反引号（代替`$`和圆括号）：
 
-```
+```bash
 $ echo There are `ls -l /etc | grep '^d' | wc -l`
+
 directories under /etc
+
 There are 11 directories under /etc
 ```
 
@@ -2613,29 +2922,27 @@ There are 11 directories under /etc
 
 ### 条件
 
-`if` 语句的基本语法是：
+`if`语句的基本语法是：
 
 ```bash
 if [ test ]
+
 then
+
 echo "Hello"
+
 fi
 ```
 
-再次，格式非常重要，注意 `'test'` 条件周围的空格，并且 `then` 应该写在新的一行。
+再次，格式非常重要，注意`test`条件周围的空格，并且`then`应该写在新的一行。
 
-要将 `then` 写在同一行，你必须在括号后添加分号，实际上这是你可能会遇到的另一种语法，如下：
+要将`then`写在同一行，你必须在括号后添加分号，实际上这是你可能会遇到的另一种语法，如下：
 
 ```bash
 if [ test ]; then
+
 echo "Hello"
-```
 
-
-
-
-
-```bash
 echo No given argument
 
 fi
@@ -2645,17 +2952,21 @@ fi
 
 ```bash
 ./bash-script.sh
+
 No given argument
 ```
 
-#### `$ ./bash-script.sh /etc/fstab
-`/etc/fstab` 是文件
+#### `$ ./bash-script.sh /etc/fstab`
 
-#### `$ ./bash-script.sh /bin
-`/bin` 是一个目录
+`/etc/fstab`是文件。
 
-#### `$ ./bash-script.sh /system
-`/system` 不存在
+#### `$ ./bash-script.sh /bin`
+
+`/bin`是一个目录。
+
+#### `$ ./bash-script.sh /system`
+
+`/system`不存在。
 
 ## 16 BASH 脚本编程
 
@@ -2665,37 +2976,51 @@ No given argument
 
 循环允许根据需要重复执行某部分代码。
 
-下面的程序是一个 `while` 循环的示例：
+下面的程序是一个`while`循环的示例：
 
 ```bash
 #!/bin/bash
+
 index=1
+
 while [ $index -lt 6 ]
+
 do
+
   printf "$index "
+
   sleep 1
+
   let index++
+
 done
 ```
 
-注意：你可以在另起的一行输入 `do` 关键字，否则你应该在括号后添加一个分号（`while [ $index -lt 6 ]; do`）：
+注意：你可以在另起的一行输入`do`关键字，否则你应该在括号后添加一个分号（`while [ $index -lt 6 ]; do`）。
 
 该代码每秒打印从 1 到 5 的数字：
 
 ```bash
 ./bash-script.sh
+
 1 2 3 4 5
 ```
 
-下面的程序使用 `for` 循环实现了相同的功能：
+下面的程序使用`for`循环实现了相同的功能：
 
 ```bash
 #!/bin/bash
+
 for index in {1..5}
+
 do
+
   printf "$index "
+
   sleep 1
+
   let index++
+
 done
 ```
 
@@ -2703,11 +3028,17 @@ done
 
 ```bash
 #!/bin/bash
+
 index=1
+
 for e in $( ls / | grep -iv ^c )
+
 do
+
   echo Entry ${index}: $e
+
   let index++
+
 done
 ```
 
@@ -2715,12 +3046,19 @@ done
 
 ```bash
 ./bash-script.sh
+
 Entry 1: bin
+
 Entry 2: desktop
+
 Entry 3: dev
+
 Entry 4: etc
+
 Entry 5: home
+
 Entry 6: lib
+
 Entry 7: proc
 ```
 
@@ -2729,13 +3067,19 @@ Entry 7: proc
 我想提一下，你可以像这样使用分号在终端中编写所有这些代码：
 
 #### `$ index=1;for e in $(ls / | grep -iv ^c); do echo Entry ${index}: $e;let index++;done`
+
 ```text
 Entry 1: bin
+
 Entry 2: desktop
+
 Entry 3: dev
+
 Entry 4: etc
+
 Entry 5: home
 ```
+
 …
 
 ### 函数
@@ -2746,20 +3090,31 @@ Entry 5: home
 
 ```bash
 #!/bin/bash
+
 # 这是定义函数的方法
+
 executepwd (){
+
   echo The current working directory is $(pwd)
+
 }
 
 # 这是另一种定义函数的方法
+
 function executeps {
+
   echo Processes currently on the system:
+
   ps
+
 }
 
 echo
+
 executepwd
+
 echo
+
 executeps
 ```
 
@@ -2767,23 +3122,35 @@ executeps
 
 ```bash
 ./bash-scripting.sh
+
 The current working directory is /home/Khaled Jamal
+
 Processes currently on the system:
+
 PID PPID PGID WINPID TTY UID STIME COMMAND
+
 4720 6732 4720 840 pty0 1539555 15:52:56 /usr/bin/bash
+
 11056 4720 4720 8004 pty0 1539555 15:52:56 /usr/bin/ps
 ```
+
 …
 
 我们可以像向脚本传递参数一样向函数传递参数。在下面的示例中，我们定义了一个函数，用于统计作为参数传递的目录（`/etc`）下的目录数量：
 
 ```bash
 #!/bin/bash
+
 countDirectories() {
+
   local count=$(ls -l $1 | grep '^d' | wc -l)
+
   echo There are $count directories under $1
+
 }
+
 echo
+
 countDirectories /etc
 ```
 
@@ -2791,6 +3158,7 @@ countDirectories /etc
 
 ```bash
 ./bash-scripting.sh
+
 There are 11 directories under /etc
 ```
 
@@ -2798,38 +3166,57 @@ There are 11 directories under /etc
 
 ```bash
 #!/bin/bash
+
 countDirectories() {
+
   local count=$(ls -l $1 | grep '^d' | wc -l)
+
   echo There are $count directories under $1
+
 }
+
 echo
+
 countDirectories $1
 ```
 
 执行输出为：
 
-#### `$ ./bash-scripting.sh /dev
+#### `$ ./bash-scripting.sh /dev`
+
 There are 2 directories under /dev
 
-#### `$ ./bash-scripting.sh /etc
+#### `$ ./bash-scripting.sh /etc`
+
 There are 11 directories under /etc
 
-另一个需要讨论的重要点是 `local variable`（局部变量）。简而言之，在函数中，声明为 `local` 的变量仅在该函数内部可见。
+另一个需要讨论的重要点是`local variable`（局部变量）。简而言之，在函数中，声明为`local`的变量仅在该函数内部可见。
 
 下面的程序清楚地演示了这一概念：
 
 ```bash
 #!/bin/bash
+
 printMessage() {
+
   local name=Kevin
+
   echo Hello $name
+
 }
+
 # 这是一个全局变量
+
 name=Bruce
+
 # printMessage 将打印最近的局部变量 (name)
+
 printMessage
+
 # 这将打印 Bruce 而不是 Kevin，因为局部
+
 # 变量在声明它们的函数外部是不可可见的
+
 echo Hello $name
 ```
 
@@ -2837,78 +3224,110 @@ echo Hello $name
 
 ```bash
 ./bash-scripting.sh
+
 Hello Kevin
+
 Hello Bruce
 ```
 
-### Here document (在此文档)
+### Here document（在此文档）
 
-`here document` 用于将输入重定向到交互式 shell 脚本或程序。
+`here document`用于将输入重定向到交互式 shell 脚本或程序。
 
-`here document 的通用形式为：
+`here document`的通用形式为：
 
 ```bash
 command << delimiter
+
 text or commands
+
 delimiter
 ```
 
-shell 将 `<<` 运算符解释为指令，读取输入直到找到包含指定分隔符的行。直到包含分隔符的行之前的所有输入行都将作为命令的标准输入。
+shell 将`<<`运算符解释为指令，读取输入直到找到包含指定分隔符的行。直到包含分隔符的行之前的所有输入行都将作为命令的标准输入。
 
-分隔符告诉 shell `here document` 已经完成。如果没有它，shell 将无限地读取下去。分隔符必须是一个不包含空格或制表符的单词。
+分隔符告诉 shell `here document`已经完成。如果没有它，shell 将无限地读取下去。分隔符必须是一个不包含空格或制表符的单词。
 
-下面的示例提供了相关思路，在 `eof` 分隔符之间的文本行被发送给 `cut` 命令，该命令会提取第一个字段：
+下面的示例提供了相关思路，在`eof`分隔符之间的文本行被发送给`cut`命令，该命令会提取第一个字段：
 
 ```bash
 $ cut -d';' -f1 << eof
+
 bruce;java
+
 kevin;linux
+
 eof
 ```
+
 ```text
 bruce
+
 kevin
 ```
 
 既然我们已经讨论了文本行，那么向交互式程序或命令提供命令列表又是怎样的。
 
-首先，我们将创建两个文件`demo1.txt` 和 `demo2.txt`：
+首先，我们将创建两个文件`demo1.txt`和`demo2.txt`：
 
 ```bash
 $ cd
-$pwd
+
+$ pwd
+
 /home/Khaled Jamal
+
 $ echo Hello Kevin > demo1.txt
+
 $ echo Hello Bruce > demo2.txt
+
 $ cat demo1.txt demo2.txt
 ```
+
 ```text
 Hello Kevin
+
 Hello Bruce
 ```
 
-假设你需要遍历当前用户主目录下的所有文本文件，并将字符串 `Hello` 替换为 `Hi` 来编辑每个文件。
+假设你需要遍历当前用户主目录下的所有文本文件，并将字符串`Hello`替换为`Hi`来编辑每个文件。
 
 ```bash
 #!/bin/bash
+
 ORIGINAL=Hello
+
 REPLACEMENT=Hi
+
 for word in $(fgrep -l $ORIGINAL ~/*.txt)
+
 do
+
   # 向每个 vi 输入两个命令
+
   vi $word <<EOF
+
 :%s/$ORIGINAL/$REPLACEMENT/g
+
 :wq
+
 EOF
+
 done
 ```
 
 ```bash
 # 检查文件：
+
 ./bashing.txt
+
 Hi
+
 Hi
 ```
+
+
+
 
 ## 17 配置 LINUX 环境
 
@@ -2930,7 +3349,7 @@ Hi
 
 安装完成后，双击桌面上的 VirtualBox 图标。你应该能看到类似的内容：
 
-![](img/image-DUI8IKQF.jpg
+![](img/image-DUI8IKQF.jpg)
 
 ### 创建虚拟机
 
@@ -2952,32 +3371,29 @@ Hi
 
 [`www.ubuntu.com/download/desktop`](https://www.ubuntu.com/download/desktop)
 
-
-
-
-完成后，回到 VirtualBox 并选择创建的虚拟机，然后点击`Settings（设置）：
+完成后，回到 VirtualBox 并选择创建的虚拟机，然后点击 `Settings（设置）`：
 
 ![](img/image-REYNJCJC.jpg)
 
-选择`Storage（存储）菜单，选择`Empty（为空），点击右侧的`CD` 图标并点击`Choose Virtual Optical Disk File（选择虚拟光盘映像文件），选择你下载的 ISO 文件。
+选择 `Storage（存储）` 菜单，选择 `Empty（为空）`，点击右侧的 `CD` 图标并点击 `Choose Virtual Optical Disk File（选择虚拟光盘映像文件）`，选择你下载的 ISO 文件。
 
-选择`System（系统）菜单，并将启动顺序更改如下所示，然后点击`OK：
+选择 `System（系统）` 菜单，并将启动顺序更改如下所示，然后点击 `OK`：
 
 ![](img/image-XGNCOFH2.jpg)
 
-你的虚拟机现在已准备就绪，从列表中选择它并点击`Start!（启动！）。操作系统开始安装，系统会询问你是想尝试 Ubuntu 还是安装它，选择`Install Ubuntu（安装 Ubuntu）。
+你的虚拟机现在已准备就绪，从列表中选择它并点击 `Start!（启动！）`。操作系统开始安装，系统会询问你是想尝试 Ubuntu 还是安装它，选择 `Install Ubuntu（安装 Ubuntu）`。
 
-保持默认设置并点击 continue（继续），直到到达此屏幕
+保持默认设置并点击 continue（继续），直到到达此屏幕：
 
 ![](img/image-QUOO4IZ8.jpg)
 
-不要担心，保留`Erase disk and install Ubuntu（擦除磁盘并安装 Ubuntu）选项，点击`Install Now（立即安装）。可能会弹出一个确认窗口，只需点击`Continue（继续）。
+不要担心，保留 `Erase disk and install Ubuntu（擦除磁盘并安装 Ubuntu）` 选项，点击 `Install Now（立即安装）`。可能会弹出一个确认窗口，只需点击 `Continue（继续）`。
 
-选择你的位置并点击`Continue（继续）。
+选择你的位置并点击 `Continue（继续）`。
 
-选择你的键盘布局并点击`Continue（继续）。
+选择你的键盘布局并点击 `Continue（继续）`。
 
-输入你的姓名、用户名和密码，并点击`Continue（继续（请记住用户名和密码）。
+输入你的姓名、用户名和密码，并点击 `Continue（继续）`（请记住用户名和密码）。
 
 最后阶段是等待文件完成复制和安装完成。
 
@@ -2987,7 +3403,7 @@ Hi
 
 ![](img/image-A6QN3PZH.jpg)
 
-点击`Restart Now（立即重启）。
+点击 `Restart Now（立即重启）`。
 
 ### 设置网络
 
@@ -2997,53 +3413,53 @@ Hi
 
 客机（guest）：在本例中是 Ubuntu。
 
-进入`Control panel（控制面板）`，然后进入`Network connections（网络连接）`，你注意到有一个名为`Virtual Box Host-Only Network（VirtualBox 仅主机网络）`的新连接吗？它是当你安装 VirtualBox 时添加的，将用于网络问题。
+进入 `Control panel（控制面板）`，然后进入 `Network connections（网络连接）`，你注意到有一个名为 `Virtual Box Host-Only Network（VirtualBox 仅主机网络）` 的新连接吗？它是当你安装 VirtualBox 时添加的，将用于网络问题。
 
-让我们从共享 Internet 连接开始，右键点击你的网络连接，然后点击`Sharing（共享）`面板：
+让我们从共享 Internet 连接开始，右键点击你的网络连接，然后点击 `Sharing（共享）` 面板：
 
-- 勾选`Allow other network users to connect through this computer’s Internet connection（允许其他网络用户通过此计算机的 Internet 连接连接）。`
-- 选择`Virtual Box Host-Only Network`。
-- 点击`OK`。
+- 勾选 `Allow other network users to connect through this computer’s Internet connection（允许其他网络用户通过此计算机的 Internet 连接连接）`。
+- 选择 `Virtual Box Host-Only Network`。
+- 点击 `OK`。
 
 ![](img/image-2AK4QO1S.jpg)
 
 消息通知你 VirtualBox 连接将设置为使用 IP 地址 `192.168.137.1`。
 
-点击`Yes（是）。
+点击 `Yes（是）`。
 
 注意：数字 `137` 在你的系统中可能是其他数字，无论它是什么，请记住它，因为我们稍后会用到。
 
-我们必须配置虚拟机使用 VirtualBox 连接。回到 VirtualBox，选择 Ubuntu 虚拟机并点击`Settings（设置）。
+我们必须配置虚拟机使用 VirtualBox 连接。回到 VirtualBox，选择 Ubuntu 虚拟机并点击 `Settings（设置）`。
 
-选择`Network（网络）`菜单并选择以下配置：
+选择 `Network（网络）` 菜单并选择以下配置：
 
 ![](img/image-ZUHNAPJA.jpg)
 
-点击`Ok`。
+点击 `Ok`。
 
-点击`start（启动）当当 Ubuntu 启动时，右键点击右上角的图标并点击`Edit Connections…（编辑连接…`.
+点击 `start（启动）`。当 Ubuntu 启动时，右键点击右上角的图标并点击 `Edit Connections…（编辑连接…）`。
 
 ![](img/image-LWU2WDZD.jpg)
 
-出现一个小窗口，选择`Wired connection 1（有线连接 1）`并点击`Edit（编辑）。
+出现一个小窗口，选择 `Wired connection 1（有线连接 1）` 并点击 `Edit（编辑）`。
 
-在`IPv4 Settings（IPv4 设置）`面板上，选择`Manual（手动）`方法，点击`Add（添加）`并输入如下 IP 配置：
+在 `IPv4 Settings（IPv4 设置）` 面板上，选择 `Manual（手动）` 方法，点击 `Add（添加）` 并输入如下 IP 配置：
 
 将 `137` 替换为你共享 Internet 连接时获得的任何数字。
 
 ![](img/image-7NGUBKE7.jpg)
 
-点击`Save（保存）。
+点击 `Save（保存）`。
 
 测试连通性：
 
-点击 Windows 上的开始菜单，在搜索或运行行中输入`cmd`，按回车并输入：
+点击 Windows 上的开始菜单，在搜索或运行行中输入 `cmd`，按回车并输入：
 
-```
+```text
 ping 192.168.137.2 –t
 ```
 
-切换回 Ubuntu，点击左上角的按钮并输入`Terminal（终端`:
+切换回 Ubuntu，点击左上角的按钮并输入 `Terminal（终端）`：
 
 ![](img/image-FOP9Z27Z.jpg)
 
@@ -3053,11 +3469,11 @@ ping 192.168.137.2 –t
 ping 192.168.137.1
 ```
 
-如果任何端都没有回复，右键点击右上角的网络图标并取消勾选`Enable Networking（启用网络）。
+如果任何端都没有回复，右键点击右上角的网络图标并取消勾选 `Enable Networking（启用网络）`。
 
 ![](img/image-M2Z4UXAF.jpg)
 
-再次右键点击该图标并勾选`Enable Networking（启用网络）。
+再次右键点击该图标并勾选 `Enable Networking（启用网络）`。
 
 ![](img/image-HROLIVW8.jpg)
 
@@ -3071,9 +3487,9 @@ ping 192.168.137.1
 
 Putty 是一个 SSH 和 telnet 客户端，重点是将它安装在你的主机操作系统并远程连接到 Ubuntu 虚拟机。
 
-你可以在这里下载它`http://www.putty.org/`，安装非常简单，尽管尝试。
+你可以在这里下载它 `http://www.putty.org/`，安装非常简单，尽管尝试。
 
-要与 Ubuntu 建立 SSH 客户端连接，你需要在 Ubuntu 上安装`openssh-server`，运行终端并输入以下命令：
+要与 Ubuntu 建立 SSH 客户端连接，你需要在 Ubuntu 上安装 `openssh-server`，运行终端并输入以下命令：
 
 ```bash
 sudo apt-get update
@@ -3082,9 +3498,10 @@ sudo apt-get update
 ### …
 
 Fetched 30.6 MB in 2min 7s (239 kb/s)
+
 Reading package lists… Done
 
-注意：`apt-get` 需要超级用户的权限；在不切换到 root 的情况下执行此操作的快捷方法是`sudo` 命令，它允许以超级用户身份运行程序。
+注意：`apt-get` 需要超级用户的权限；在不切换到 root 的情况下执行此操作的快捷方法是 `sudo` 命令，它允许以超级用户身份运行程序。
 
 等待命令完成后输入：
 
@@ -3092,7 +3509,7 @@ Reading package lists… Done
 sudo apt-get install openssh-server
 ```
 
-完成后，回到主机桌面，双击 Putty 图标，输入客机 IP 地址并点击`Open（打开），之后点击`Yes（是）。
+完成后，回到主机桌面，双击 Putty 图标，输入客机 IP 地址并点击 `Open（打开）`，之后点击 `Yes（是）`。
 
 ![](img/image-VLBJK9C8.jpg)
 
@@ -3102,15 +3519,15 @@ sudo apt-get install openssh-server
 
 ### 安装 WinSCP
 
-WinSCP 是一个开源的 SFTP 客户端。此目的是允许在本地和远程计算机之间进行安全复制。在这里下载 WinSCP`https://winscp.net/`，保持默认设置并安装它。
+WinSCP 是一个开源的 SFTP 客户端。此目的是允许在本地和远程计算机之间进行安全复制。在这里下载 WinSCP `https://winscp.net/`，保持默认设置并安装它。
 
 ![](img/image-GTS121.jpg)
 
-还有一个非常有趣的“Find（查找）”功能可以使用。它的作用与`find` 命令相同。
+还有一个非常有趣的“Find（查找）”功能可以使用。它的作用与 `find` 命令相同。
 
 ![](img/image-G72NMH.jpg)
 
-等待，等 the the the the the the the the the the the the the the the the the the the the the the the the the the …
+等待，等 the the the the the the the the the the the the the the the the the the the the the the the the the …
 
 注意：我们将在接下来的章节中使用此环境。
 
@@ -3122,7 +3539,7 @@ WinSCP 是一个开源的 SFTP 客户端。此目的是允许在本地和远程�
 
 ### apt-get
 
-Linux 没有像 Windows 那样的安装程序 (.exe)，它有我们称为包的东西。包是一个包含所有程序文件的压缩文件夹。格式为 `.deb`。它包含了安装程序所需的所有指令。
+Linux 没有像 Windows 那样的安装程序（`.exe`），它有我们称为包的东西。包是一个包含所有程序文件的压缩文件夹。格式为 `.deb`。它包含了安装程序所需的所有指令。
 
 Linux 程序很少独立运行。通常，它使用其他程序或其他程序碎片，称为库。我们说程序有依赖关系。
 
@@ -3139,16 +3556,14 @@ grep "^#]" /etc/apt/sources.list
 ```
 
 `deb http://ma.archive.ubuntu.com/ubuntu/ xenial …`
+
 `deb http://ma.archive.ubuntu.com/ubuntu/ xenial …`
 
 ### …
 
-
-
-
 例如，安装 filezilla ftp 客户端，可以使用如下 `apt-get install` 命令：
 
-```
+```bash
 $ sudo apt-get install filezilla
 ```
 
@@ -3192,8 +3607,11 @@ Linux 上的 `ps` 命令是查看系统中运行进程最基础的命令之一�
 
 ```bash
 $ ps
+
 PID TTY TIME CMD
+
 2294 pts/2 00:00:00 bash
+
 2412 pts/2 00:00:00 ps
 ```
 
@@ -3205,9 +3623,13 @@ PID TTY TIME CMD
 
 ```bash
 $ ps -aux | less
+
 USER PID %CPU %MEM VSZ RSS TTY STAT START TIME COMMAND
+
 root 1 0.8 0.3 24944 5004 ? Ss 14:27 0:14 /sbin/init splash
+
 root 2 0.0 0.0 0 0 ? S 14:27 0:00 [kthreadd]
+
 root 4 0.0 0.0 0 0 ? S< 14:27 0:00 [kworker/0:0H]
 ```
 
@@ -3223,7 +3645,9 @@ root 4 0.0 0.0 0 0 ? S< 14:27 0:00 [kworker/0:0H]
 
 ```bash
 $ ps -aux --sort=-pcpu,+pmem | head -5
+
 USER PID %CPU %MEM VSZ RSS TTY STAT START TIME COMMAND
+
 jamal 1512 9.9 8.2 294740 126456 ? Ssl 14:30 3:53 compiz
 ```
 
@@ -3233,7 +3657,9 @@ jamal 1512 9.9 8.2 294740 126456 ? Ssl 14:30 3:53 compiz
 
 ```bash
 $ ps -up 1512
+
 USER PID %CPU %MEM VSZ RSS TTY STAT START TIME COMMAND
+
 jamal 1512 8.3 8.0 291932 123752 ? Ssl 14:30 3:57 compiz
 ```
 
@@ -3241,11 +3667,17 @@ jamal 1512 8.3 8.0 291932 123752 ? Ssl 14:30 3:57 compiz
 
 ```bash
 ~$ echo '#!/bin/bash
+
 > for i in {1..20}
+
 > do
+
 > sleep 1
+
 > done' > shell-script.sh
+
 $ chmod 755 shell-script.sh
+
 $ ./shell-script.sh &
 ```
 
@@ -3255,7 +3687,9 @@ $ ./shell-script.sh &
 
 ```bash
 $ ps -p 2986
+
 PID TTY TIME CMD
+
 2986 pts/2 00:00:00 shell-script.sh
 ```
 
@@ -3263,7 +3697,9 @@ PID TTY TIME CMD
 
 ```bash
 $ ps -p 2986
+
 PID TTY TIME CMD
+
 [1]+ Done ./shell-script.sh
 ```
 
@@ -3271,15 +3707,19 @@ PID TTY TIME CMD
 
 ### du
 
-`du` (Disk Usage) 命令用于检查文件和目录的磁盘占用信息。
+`du`（Disk Usage）命令用于检查文件和目录的磁盘占用信息。
 
 例如，使用这种方法查找 `/home` 目录树及其每个子目录的磁盘占用摘要：
 
 ```bash
 $ du -h /home | less
+
 32K /home/kevin
+
 4.0K /home/jamal/.local/share/unity-settings-daemon
+
 4.0K /home/jamal/.local/share/evolution/mail/trash
+
 8.0K /home/jamal/.local/share/evolution/mail
 ```
 
@@ -3289,6 +3729,7 @@ $ du -h /home | less
 
 ```bash
 $ du -sh /home
+
 18M /home
 ```
 
@@ -3296,12 +3737,9 @@ $ du -sh /home
 
 ```bash
 $ du -ch /home/jamal
+
 4.0K /home/jamal/.local/share/unity-settings-daemon
 ```
-
-
-
-
 
 ```bash
 $ grep '^UUID' /etc/fstab | while read line; do findfs $( echo $line | cut -d' ' -f1 ); echo $line;done
@@ -3317,35 +3755,44 @@ $ grep '^UUID' /etc/fstab | while read line; do findfs $( echo $line | cut -d' '
 
 注意：作为一个练习，请尝试分析上一个示例中的命令（`findfs` 允许通过标签或 UUID 查找文件系统）。
 
-输出我们 `/dev/sda1` 挂载在根目录 (`/`) 上。我们可以通过使用不带参数的 `mount` 命令来获取更多信息：
+输出我们 `/dev/sda1` 挂载在根目录（`/`）上。我们可以通过使用不带参数的 `mount` 命令来获取更多信息：
 
 ```bash
 $ mount
 ```
 
-```
+```text
 sysfs on /sys type sysfs …
+
 proc on /proc type proc …
+
 udev on /dev type devtmpfs …
+
 devpts on /dev/pts type …
+
 tmpfs on /run type tmpfs …
+
 /dev/sda1 on / type ext4 …
+
 …
 ```
 
-`udev`, `tmpfs` 或 `sysfs` 文件系统是本书中不会讨论的高级主题，因此为了只显示挂载在 `/dev` 的文件系统类型：
+`udev`、`tmpfs` 或 `sysfs` 文件系统是本书中不会讨论的高级主题，因此为了只显示挂载在 `/dev` 的文件系统类型：
 
 ```bash
 $ mount | grep '^/dev'
 ```
 
-```
+```text
 /dev/sda1 on / type ext4 …
 ```
 
-再次，这简单意味着第一个 SCSI 驱动器 (`sda1`) 挂载在根目录 `/` 上。
 
-为了练习挂载命令，我们将在 `/dev` 目录中查找光驱设备并将其挂载到 `/media/VBox_GAs_5.2.1`：
+
+
+再次，这简单意味着第一个 SCSI 驱动器（`sda1`）挂载在根目录`/`上。
+
+为了练习挂载命令，我们将在`/dev`目录中查找光驱设备并将其挂载到`/media/VBox_GAs_5.2.1`：
 
 ```bash
 $ pwd
@@ -3360,13 +3807,13 @@ crw-rw----+ 1 root cdrom 21, 0 Dec 25 22:05 sg0
 brw-rw----+ 1 root cdrom 11, 0 Dec 25 22:05 sr0
 ```
 
-`cdrom` 设备的名称为 `sr0`，如果该设备已经挂载，请输入以下命令卸载设备：
+`cdrom`设备的名称为`sr0`，如果该设备已经挂载，请输入以下命令卸载设备：
 
 ```bash
 $ sudo umount /dev/sr0
 ```
 
-现在让我们创建挂载点，我们说的是 `/media/VBox_GAs_5.2.1`：
+现在让我们创建挂载点，我们说的是`/media/VBox_GAs_5.2.1`：
 
 ```bash
 $ cd /media
@@ -3376,7 +3823,7 @@ $ sudo mkdir VBox_GAs_5.2.1
 [sudo] password for jamal:
 ```
 
-然后我们使用 `mount` 命令：
+然后我们使用`mount`命令：
 
 ```bash
 $ sudo mount -t iso9660 /dev/sr0 /media/VBox_GAs_5.2.1
@@ -3386,7 +3833,7 @@ $ sudo mount -t iso9660 /dev/sr0 /media/VBox_GAs_5.2.1
 mount: no medium found on /dev/sr0
 ```
 
-发生了一个错误消息；它表示在 `/dev/sr0` 上没有找到介质，我们应该向设备设备插入光驱才能使挂载工作。（如果你以前这样做过，将不会收到此错误，直接跳过此部分）
+发生了一个错误消息；它表示在`/dev/sr0`上没有找到介质，我们应该向设备插入光驱才能使挂载工作。（如果你以前这样做过，将不会收到此错误，直接跳过此部分）
 
 在虚拟 Box 上，选择虚拟机并点击设置：
 
@@ -3404,9 +3851,9 @@ $ sudo mount -t iso9660 /dev/sr0 /media/VBox_GAs_5.2.1/
 mount: /dev/sr0 is write-protected, mounting read-only
 ```
 
-`-t` 选项用于指定特定的文件系统类型。
+`-t`选项用于指定特定的文件系统类型。
 
-`iso9660` 参数描述了在 CD/DVD ROM 上使用的标准默认文件系统结构。
+`iso9660`参数描述了在 CD/DVD ROM 上使用的标准默认文件系统结构。
 
 要检查挂载情况，输入：
 
@@ -3428,7 +3875,7 @@ $ ls /media/VBox_GAs_5.2.1/
 64Bit autorun.sh OS2 TRANS.TBL VBoxSolarisAdditions.pkg VBoxWindowsAdditions.exe
 ```
 
-要卸载 `/dev/sr0` 设备，使用 `umount` 命令：
+要卸载`/dev/sr0`设备，使用`umount`命令：
 
 ```bash
 $ sudo umount /dev/sr0
@@ -3439,9 +3886,9 @@ $ mount | grep '^/dev'
 /dev/sda1 on / type ext4 …
 ```
 
-### df 命令
+## df 命令
 
-你也可以使用 `df` 命令显示哪些文件系统挂载在哪些点，并获取关于总使用的信息：
+你也可以使用`df`命令显示哪些文件系统挂载在哪些点，并获取关于总使用的信息：
 
 ```bash
 $ df -hT
@@ -3458,11 +3905,11 @@ tmpfs tmpfs 708M 0 708M 0% /sys/fs/cgroup
 …
 ```
 
-`h` 选项（或 `--human-readable`）将输出转换为普通用户理解的形式。
+`h`选项（或`--human-readable`）将输出转换为普通用户理解的形式。
 
-`T` 选项打印文件系统类型（`Type` 列）。
+`T`选项打印文件系统类型（`Type`列）。
 
-`df` 特别用于显示包含特定文件或目录的文件系统的可用磁盘空间：
+`df`特别用于显示包含特定文件或目录的文件系统的可用磁盘空间：
 
 ```bash
 $ df -h /home
@@ -3473,9 +3920,8 @@ Filesystem Size Used Avail Use% Mounted on
 /dev/sda1 8.8G 4.2G 4.2G 51% /
 ```
 
-### 结束
+## 结束
 
-到此，你应该对 Linux 命令和 bash 脚本有了了丰富的知识，我希望如此。
+到此，你应该对 Linux 命令和 bash 脚本有了丰富的知识，我希望如此。
 
-如果你有一点时间，请告诉我你的反馈，我的电子邮箱是 `jamalbayi@gmail.com`。
-
+如果你有一点时间，请告诉我你的反馈，我的电子邮箱是`jamalbayi@gmail.com`。

@@ -1,16 +1,17 @@
+
 # 字符串交错程序
 
 > 原文：[`techbyexample.com/interleaving-string-program/`](https://techbyexample.com/interleaving-string-program/)
 
-**概述**
+## 概述
 
-给定三个字符串**s1**、**s2**、**s3**。判断字符串**s3**是否是字符串的交错组合。
+给定三个字符串 `s1`、`s2`、`s3`，判断字符串 `s3` 是否是字符串的交错组合。
 
-如果满足以下条件，**s3**将是字符串**s1**和**s2**的交错字符串。
+如果满足以下条件，`s3` 将是字符串 `s1` 和 `s2` 的交错字符串：
 
-+   **s3**包含**s1**和**s2**的所有字符，并且每个字符串中的字符顺序保持不变。
+- `s3` 包含 `s1` 和 `s2` 的所有字符，并且每个字符串中的字符顺序保持不变。
 
-示例
+### 示例
 
 ```go
 s1: aabcc
@@ -20,9 +21,9 @@ s3: aadbbcbcac
 Output: true
 ```
 
-## **递归解法**
+## 递归解法
 
-以下是相同问题的递归解法
+以下是相同问题的递归解法：
 
 ```go
 package main
@@ -72,7 +73,7 @@ func isInterleaveUtil(s1, s2, s3 []rune, x, y, z, lenS1, lenS2, lenS3 int) bool 
 }
 ```
 
-**输出**
+### 输出
 
 ```go
 true
@@ -81,9 +82,9 @@ true
 
 如果你注意到上面的程序，许多子问题被反复计算，因此该解法的复杂度是指数级的。我们可以在这里使用动态规划来降低整体时间复杂度。
 
-这是相同问题的程序
+这是相同问题的程序。
 
-## **动态规划解法**
+## 动态规划解法
 
 ```go
 package main
@@ -162,7 +163,7 @@ func isInterleave(s1 string, s2 string, s3 string) bool {
 }
 ```
 
-**输出**
+### 输出
 
 ```go
 true

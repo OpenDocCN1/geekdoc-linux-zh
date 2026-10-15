@@ -1,3 +1,4 @@
+
 # 如何在 Windows Server 2019 - Eldernode 上安装和配置 DNS 服务器
 
 > 原文：<https://blog.eldernode.com/install-and-configure-dns-server-on-windows/>
@@ -10,13 +11,13 @@
 
 [***购买 Windows VPS 托管在 Eldernode***](https://eldernode.com/windows-vps/)
 
-### 1)如何打开服务器管理器并添加角色和功能
+## 1) 如何打开服务器管理器并添加角色和功能
 
 **A-** 第一步，按下 Windows 按钮，从开始菜单中键入服务器管理器并打开。
 
 ![How to Install and Configure DNS Server on Windows Server 2019](img/eba6b884ddf8db0a8b6e6c77229d6f59.png)
 
-**B-** 点击进入下一页；
+**B-** 点击进入下一页。
 
 ![How to Install and Configure DNS Server on Windows Server 2019](img/9ccfdf7c6b070cf3d58a47e99842f17a.png)
 
@@ -28,7 +29,7 @@
 
 ![How to Install and Configure DNS Server on Windows Server 2019](img/901463a555bf51425e08ed094e7244ef.png)
 
-### 如何选择 DNS 服务器并添加功能
+## 如何选择 DNS 服务器并添加功能
 
 ![How to Install and Configure DNS Server on Windows Server 2019](img/9c2fdeddb322565857b02283f9513d2b.png)
 
@@ -36,7 +37,7 @@
 
 ![How to Install and Configure DNS Server on Windows Server 2019](img/ad775a4df3066787fd3a5a8eee92ae33.png)
 
-如果您之前没有配置静态 IP ，您将会收到如下所示的消息。
+如果您之前没有配置静态 IP，您将会收到如下所示的消息。
 
 **2-** 点击继续。
 
@@ -56,9 +57,9 @@
 
 ![How to Install and Configure DNS Server on Windows Server 2019](img/e55711a1924166fa5883b03174f433dd.png)
 
-如何确认和安装
+## 如何确认和安装
 
-### 确认您的选择，然后点击安装。
+确认您的选择，然后点击安装。
 
 ![How to Install and Configure DNS Server on Windows Server 2019](img/08a97f9aabc981c7e18cab9898ab8f6a.png)
 

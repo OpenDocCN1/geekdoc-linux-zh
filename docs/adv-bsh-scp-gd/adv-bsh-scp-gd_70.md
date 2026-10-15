@@ -1,4 +1,5 @@
-# O.1\. 分析脚本
+
+# O.1. 分析脚本
 
 > 原文：[`tldp.org/LDP/abs/html/scriptanalysis.html`](https://tldp.org/LDP/abs/html/scriptanalysis.html)
 
@@ -50,14 +51,14 @@ DIRNAME=/usr/bin
 FILETYPE="shell script"
 LOGFILE=logfile
 
-file "$DIRNAME"/* &#124; fgrep "$FILETYPE" &#124; tee $LOGFILE &#124; wc -l
+file "$DIRNAME"/* | fgrep "$FILETYPE" | tee $LOGFILE | wc -l
 
 exit 0
 ```
 
 ---
 
-检查并解释以下脚本。提示可能参考 find 和 stat 的列表。
+检查并解释以下脚本。提示可能参考`find`和`stat`的列表。
 
 ```sh
 #!/bin/bash
@@ -66,7 +67,7 @@ exit 0
 # This code is released to the public domain.
 # The author gave permission to use this code snippet in the ABS Guide.
 
-find -maxdepth 1 -type f -printf '%f\000'  &#124; {
+find -maxdepth 1 -type f -printf '%f\000'  | {
    while read -d $'\000'; do
       mv "$REPLY" "$(date -d "$(stat -c '%y' "$REPLY") " '+%Y%m%d%H%M%S'
       )-$REPLY"
@@ -96,10 +97,10 @@ done < `tail -f /var/log/messages`
 
 ```sh
 export SUM=0; for f in $(find src -name "*.java");
-do export SUM=$(($SUM + $(wc -l $f &#124; awk '{ print $1 }'))); done; echo $SUM
+do export SUM=$(($SUM + $(wc -l $f | awk '{ print $1 }'))); done; echo $SUM
 ```
 
-提示：首先，将脚本分解成小块。然后，仔细检查其使用双括号算术、export 命令、find 命令、wc 命令和 awk。
+提示：首先，将脚本分解成小块。然后，仔细检查其使用双括号算术、`export`命令、`find`命令、`wc`命令和`awk`。
 
 ---
 

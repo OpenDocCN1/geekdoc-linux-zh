@@ -1,4 +1,5 @@
-# 教程重置 Almalinux 8.4 - Eldernode 博客上的 Root 密码
+
+# 教程：在 Almalinux 8.4 上重置 Root 密码（Eldernode 博客）
 
 > 原文：<https://blog.eldernode.com/reset-root-password-on-almalinux/>
 
@@ -8,16 +9,16 @@ AlmaLinux 是一个基于 RedHat 的 Linux 发行版，用于服务器和桌面�
 
 ## 如何在 Almalinux 8.4 上重置 Root 密码
 
-### **在 Almalinux 8.4 上重置 Root 密码的先决条件**
+### 在 Almalinux 8.4 上重置 Root 密码的先决条件
 
-在本节中，我们将向您展示如何在 Almalinux 8.4 上重置 Root 密码。这样做的第一步是**重启[alma Linux](https://blog.eldernode.com/install-and-use-almalinux/)T3。当**启动菜单**出现时，你必须按下键盘上的 **e** 键。如下图所示，这将打开 **Grub 引导编辑界面**:**
+在本节中，我们将向您展示如何在 Almalinux 8.4 上重置 Root 密码。这样做的第一步是**重启** AlmaLinux。当**启动菜单**出现时，你必须按下键盘上的 **e** 键。如下图所示，这将打开 **Grub 引导编辑界面**：
 
 ![Edit-Boot-Menu-AlmaLinux](img/1529d7807344c3ac8561cacbe4710cd1.png)
 
-在下一步中，您需要使用箭头键。然后，您必须在 initrd 的 **/swap** 和**之前添加下面一行。**要记住的一件事是，如果一个 **rhg 行**是安静的，就在 **/swap** 之后删除它。
+在下一步中，您需要使用箭头键。然后，您必须在 `initrd` 的 `/swap` 之前添加下面一行。要记住的一件事是，如果有一个 `rhg` 行是安静的，就在 `/swap` 之后删除它。
 
 ```
-- rd.break enforcing= 0
+rd.break enforcing= 0
 ```
 
 ![Chnage-Grub-boot-configuration on almalinux](img/081f89863f3663caeaf70968bf996288.png)
@@ -26,13 +27,13 @@ AlmaLinux 是一个基于 RedHat 的 Linux 发行版，用于服务器和桌面�
 
 ![Commands-to-reset-AlmaLinux-root-password](img/c84836152650002bcb04206d751cc8cb.png)
 
-接下来，您需要使用以下命令创建对 **sysroot 文件系统**的读写访问权限:
+接下来，您需要使用以下命令创建对 `sysroot` 文件系统的读写访问权限：
 
 ```
 mount -o remount,rw /sysroot
 ```
 
-现在，您应该能够使用以下命令在受限环境中访问 Sysroot 文件:
+现在，您应该能够使用以下命令在受限环境中访问 `sysroot` 文件：
 
 ```
 chroot /sysroot
@@ -40,37 +41,37 @@ chroot /sysroot
 
 ## 在 Almalinux 8.4 上重置 Root 密码
 
-在上一节中，我们做了更改 root 密码的必要先决条件。现在，您可以通过运行以下命令轻松重置密码:
+在上一节中，我们做了更改 root 密码的必要先决条件。现在，您可以通过运行以下命令轻松重置密码：
 
 ```
 passwd root
 ```
 
-系统现在会要求您输入新的**密码**。需要注意的一点是，输入密码时，屏幕上没有显示任何内容。您必须指定一个**强密码**。该密码必须至少有**个 8 位数字**长，否则，它会警告密码不安全。最后，完成后按下 **Enter** 键。
+系统现在会要求您输入新的**密码**。需要注意的一点是，输入密码时，屏幕上没有显示任何内容。您必须指定一个**强密码**。该密码必须至少有**8 位数字**长，否则，它会警告密码不安全。最后，完成后按下 **Enter** 键。
 
 ![Commands-to-reset-AlmaLinux-root-password](img/622542c8c1dcd1b28ccfe2b481e9246f.png)
 
-使用以下命令退出 Sysroot :
+使用以下命令退出 `sysroot`：
 
 ```
 exit
 ```
 
-正如您刚才看到的，我们将访问权限从只读更改为读/写。现在，您需要在退出系统之前重置它:
+正如您刚才看到的，我们将访问权限从只读更改为读/写。现在，您需要在退出系统之前重置它：
 
 ```
 mount -o remount,ro /sysroot
 ```
 
-您可以使用以下命令退出当前交换机根会话并重新启动系统:
+您可以使用以下命令退出当前交换机根会话并重新启动系统：
 
 ```
 exit
 ```
 
-### **如何用新密码登录 root**
+### 如何用新密码登录 root
 
-查看 AlmaLinux 登录页面时，使用您的新用户名和**密码**登录。注意，重置密码后，最好使用以下命令清理以加密格式存储系统密码的 **/etc/shadow** 系统密码。这样做将删除任何剩余的输入:
+查看 AlmaLinux 登录页面时，使用您的新用户名和**密码**登录。注意，重置密码后，最好使用以下命令清理以加密格式存储系统密码的 `/etc/shadow` 系统密码。这样做将删除任何剩余的输入：
 
 ```
 restorecon /etc/shadow

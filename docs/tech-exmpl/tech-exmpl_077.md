@@ -1,8 +1,9 @@
+
 # 分区链表的程序
 
 > 原文：[`techbyexample.com/program-partition-linked-list/`](https://techbyexample.com/program-partition-linked-list/)
 
-## **概述**
+## 概述
 
 给定一个链表，并且给定一个目标值。将链表进行分区，使得所有小于目标值的节点排在大于目标值的节点之前。
 
@@ -16,7 +17,7 @@ Target: 1->4->5->3
 
 原始顺序应保持不变
 
-## **程序**
+## 程序
 
 以下是相应的程序。
 

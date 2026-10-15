@@ -1,3 +1,4 @@
+
 # 附录 K. 本地化
 
 > 原文：[`tldp.org/LDP/abs/html/localization.html`](https://tldp.org/LDP/abs/html/localization.html)
@@ -24,7 +25,7 @@ error()
   exit $E_CDERROR
 }
 
-cd $var &#124;&#124; error "`eval_gettext \"Can\'t cd to \\\$var.\"`"
+cd $var || error "`eval_gettext \"Can\'t cd to \\\$var.\"`"
 #  The triple backslashes (escapes) in front of $var needed
 #+ "because eval_gettext expects a string
 #+ where the variable values have not yet been substituted."
@@ -92,13 +93,14 @@ read -p "`gettext \"Enter the value: \"`" var
 #+ of the 'echo' command.
 #  ------------------------------------------------------------------
 ```
+
 ```sh
 bash$ **bash -D localized.sh**
 "Can't cd to %s."
  "Enter the value: "
-```  |
+```
 
-这列出了所有本地化文本。（`-D` 选项列出了以 $ 为前缀的双引号字符串，而不执行脚本。）
+这列出了所有本地化文本。（`-D` 选项列出了以 `$` 为前缀的双引号字符串，而不执行脚本。）
 
 ```sh
 bash$ **bash --dump-po-strings localized.sh**
@@ -112,12 +114,13 @@ bash$ **bash --dump-po-strings localized.sh**
 
 Bash 的 `--dump-po-strings` 选项类似于 `-D` 选项，但使用 gettext 的 "po" 格式。
 
-| ![注意](img/068cd6dc5ba56f1437f9ae6e0cb52ede.png) | Bruno Haible 指出：从 gettext-0.12.2 版本开始，建议使用 **xgettext -o - localized.sh** 而不是 **bash --dump-po-strings localized.sh**，因为 **xgettext** . . .1\. 理解 gettext 和 eval_gettext 命令（而 bash --dump-po-strings 只理解其已弃用的 $"..." 语法）2\. 可以提取程序员放置的注释，这些注释旨在由翻译者阅读。这个 shell 代码现在不再特定于 Bash；它以相同的方式与 Bash 1.x 和其他 /bin/sh 实现一起工作。 |
+| ![注意](img/068cd6dc5ba56f1437f9ae6e0cb52ede.png) | Bruno Haible 指出：从 gettext-0.12.2 版本开始，建议使用 `xgettext -o - localized.sh` 而不是 `bash --dump-po-strings localized.sh`，因为 `xgettext` . . .1\. 理解 `gettext` 和 `eval_gettext` 命令（而 `bash --dump-po-strings` 只理解其已弃用的 `$"..."` 语法）2\. 可以提取程序员放置的注释，这些注释旨在由翻译者阅读。这个 shell 代码现在不再特定于 Bash；它以相同的方式与 Bash 1.x 和其他 `/bin/sh` 实现一起工作。 |
+
 | --- | --- |
 
 现在，为脚本将要翻译成每种语言创建一个 `language.po` 文件，并指定 `*msgstr*`。Alfredo Pironti 提供了以下示例：
 
-fr.po:
+`fr.po`:
 
 ```sh
 #: a:6
@@ -133,7 +136,7 @@ msgstr "Entrez la valeur : "
 #+ variable names that make sense!
 ```
 
-然后，运行 msgfmt。
+然后，运行 `msgfmt`。
 
 `**msgfmt -o localized.sh.mo fr.po**`
 
@@ -146,9 +149,10 @@ TEXTDOMAIN=localized.sh
 
 如果一个法语系统的用户运行该脚本，她将获得法语消息。
 
-| ![注意](img/068cd6dc5ba56f1437f9ae6e0cb52ede.png) | 在较旧的 Bash 或其他 shell 版本中，本地化需要使用 gettext，并使用 `-s` 选项。在这种情况下，脚本将变为：
+| ![注意](img/068cd6dc5ba56f1437f9ae6e0cb52ede.png) | 在较旧的 Bash 或其他 shell 版本中，本地化需要使用 `gettext`，并使用 `-s` 选项。在这种情况下，脚本将变为：
 
-&#124;  ```sh #!/bin/bash
+```sh
+#!/bin/bash
 # localized.sh
 
 E_CDERROR=65
@@ -159,12 +163,10 @@ error() {
   printf "$(gettext -s "$format")" "$@" >&2
   exit $E_CDERROR
 }
-cd $var &#124;&#124; error "Can't cd to %s." "$var"
+cd $var || error "Can't cd to %s." "$var"
 read -p "$(gettext -s "Enter the value: ")" var
 # ...
-```  &#124;
-
-|
+```
 
 需要设置并导出 `TEXTDOMAIN` 和 `TEXTDOMAINDIR` 变量到环境变量中。这应该在脚本内部完成。
 

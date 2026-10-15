@@ -1,3 +1,4 @@
+
 # 如何在 Mikrotik - Eldernode 博客上安装和管理 Hotspot
 
 > 原文：<https://blog.eldernode.com/install-and-manage-hotspot-on-mikrotik/>
@@ -6,11 +7,11 @@
 
 之前，您已经阅读了关于 Mikrotik 的各种相关主题。无需登录或启动，您就可以使用 Mikrotik 作为强大的路由器来提高启动速度并提供自动性能。您可以在计算机和服务上安装基于 Linux 内核的 Mikrotik 服务器。在本文中，您将学习如何在 Mikrotik 上安装和管理 Hotspot。此外，为了提供一个 [Mikrotik VPS](https://eldernode.com/mikrotik-vps-server/) 服务器， [Eldernode](https://eldernode.com/) 的软件包可以提供最优惠的价格和支持。
 
-## **教程在 Mikrotik** 上安装和管理热点
+## 教程在 Mikrotik 上安装和管理热点
 
 加入我们来看看什么是 Hotspot 以及它在路由器上的配置和设置方式。您可以为任何环境设置热点。请注意，如果您使用向导模式来设置热点以保持对路由器的访问，效果会更好。在本指南的以下内容中，您将阅读 TLS 证书的描述。此外，您还会发现为什么要定义 SMTP 服务器和 T2 DNS 服务器，以及应该使用什么结构来定义 DNS 名称。要查看热点激活后动态创建的部分，请继续阅读，直到结束。
 
-### **如何设置热点服务器**
+### 如何设置热点服务器
 
 在这一部分中，您将学习如何使用不同的配置文件来设置 Hotspot 服务器。
 
@@ -28,7 +29,7 @@
 
 现在，您的两个接口都已配置好并正常工作。因此，您可以将您的 [Mikrotik](https://blog.eldernode.com/tag/mikrotik/) ROS 设置为 DNS 服务器，因为这是设置 DNS 服务器的一个非常好的实践。
 
-### **如何在 Mikrotik** 上配置热点
+### 如何在 Mikrotik 上配置热点
 
 很明显，我们使用 Hotspot 快速方便地访问互联网。要访问热点，请导航至 IP >热点。
 
@@ -62,7 +63,7 @@
 
 在这一步中，您将被要求输入 DNS 名称。热点 DNS 名称应该具有 FQDN 结构。
 
-注意 FQDN 结构是由一个点分隔的两部分。例如:Eldernode.local
+注意 FQDN 结构是由一个点分隔的两部分。例如:`Eldernode.local`
 
 ![DNS name of local hotspot server](img/851ccdb9a2a1eb33467410e248b24c73.png)
 

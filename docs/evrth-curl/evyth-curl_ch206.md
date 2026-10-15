@@ -1,6 +1,7 @@
+
 # TLS 选项
 
-在撰写本文时，curl_easy_setopt 至少有**四十**个不同的选项是专门用于控制 libcurl 如何进行 SSL 和 TLS。
+在撰写本文时，`curl_easy_setopt`至少有**四十**个不同的选项是专门用于控制 libcurl 如何进行 SSL 和 TLS。
 
 使用 TLS 进行的传输使用安全默认值，但由于 curl 被用于许多不同的场景和配置中，您可能会遇到想要更改这些行为的情况。
 

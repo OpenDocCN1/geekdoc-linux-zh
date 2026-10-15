@@ -1,20 +1,19 @@
+
 # 检查给定的树是否是二叉搜索树
 
 > 原文：[`techbyexample.com/tree-is-bst/`](https://techbyexample.com/tree-is-bst/)
 
-## **概述**
+## 概述
 
 我们可以使用以下策略来判断给定的树是否是二叉搜索树（BST）。
 
-+   对于给定的当前节点，如果左子树和右子树都是二叉搜索树（BST）
-
-+   左子树中的最大值小于当前节点值
-
-+   右子树中的最小值大于当前节点值
++ 对于给定的当前节点，如果左子树和右子树都是二叉搜索树（BST）
++ 左子树中的最大值小于当前节点值
++ 右子树中的最小值大于当前节点值
 
 下面是相应的程序。
 
-## **程序**
+## 程序
 
 ```go
 package main
@@ -106,4 +105,5 @@ func main() {
 true
 ```
 
-+   [bst](https://techbyexample.com/tag/bst/)*   [树](https://techbyexample.com/tag/tree/)
++ [bst](https://techbyexample.com/tag/bst/)
++ [树](https://techbyexample.com/tag/tree/)

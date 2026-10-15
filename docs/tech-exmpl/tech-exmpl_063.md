@@ -1,12 +1,14 @@
+
+
 # 一组句子中的最大单词数
 
 > 原文：[`techbyexample.com/maximum-words-group-sentences/`](https://techbyexample.com/maximum-words-group-sentences/)
 
-## **概述**
+## 概述
 
 给定一组句子。找出在该组句子中出现最多单词的句子。
 
-示例
+### 示例
 
 ```go
 Input: ["Hello World", "This is hat]
@@ -16,7 +18,7 @@ Input: ["Hello World", "This is hat", "The cat is brown"]
 Output: 4
 ```
 
-## **程序**
+## 程序
 
 下面是相应的程序。
 
@@ -70,9 +72,10 @@ func main() {
 }
 ```
 
-**输出**
+### 输出
 
 ```go
 3
 4
 ```
+

@@ -1,50 +1,37 @@
+
 # 井字棋游戏的系统设计
 
 > 原文：[`techbyexample.com/system-design-tic-tac-toe-game/`](https://techbyexample.com/system-design-tic-tac-toe-game/)
 
-目录
+## 目录
 
-+   概述
+- 概述
+- UML 图
+- 低级设计
+- 程序
+- 完整工作代码
+- 结论
 
-+   UML 图
+## 概述
 
-+   低级设计
+井字棋是一种棋盘游戏。首先让我们理解游戏规则。在本教程中，我们将：
 
-+   程序
+- 首先通过一个例子了解井字棋游戏
+- 查看低级设计的 UML 图
+- 然后我们将看到用 Go 语言表达的低级设计
+- 最后，我们将看到一个具有适当设计的完整工作代码
 
-+   完整工作代码：
+首先通过一个例子了解井字棋游戏：
 
-+   结论
+- 这是一个 `n*n` 的棋盘，每个块只能标记为**十字**或**圆圈**，前提是该块为空。
+- 两个玩家同时进行游戏，每个玩家轮流行动。
+- 第一玩家在其回合时在棋盘上的任意一个空块上标记一个**十字**。而第二玩家在其回合时在棋盘上的任意一个空块上标记一个**圆圈**。
+- 游戏的目标是让某一方在一整行、一整列或一条对角线上占满任意一个符号，**十字**或**圆圈**。
+- 两个玩家将尽力阻止对方实现目标。谁先实现目标，谁就获胜。
+- 如果棋盘上的所有块都已满，且没有任何玩家能够用其符号标记整行、整列或对角线，则游戏结果为平局。
+- 一旦有一方获胜，游戏将不再允许任何移动。
 
-## **概述**
-
-井字棋是一种棋盘游戏。首先让我们理解游戏规则。在本教程中，我们将
-
-+   首先通过一个例子了解井字棋游戏
-
-+   查看低级设计的 UML 图
-
-+   然后我们将看到用 Go 语言表达的低级设计
-
-+   最后，我们将看到一个具有适当设计的完整工作代码
-
-首先通过一个例子了解井字棋游戏
-
-+   这是一个 n*n 的棋盘，每个块只能标记为**十字**或**圆圈**，前提是该块为空。
-
-+   两个玩家同时进行游戏，每个玩家轮流行动。
-
-+   第一玩家在其回合时在棋盘上的任意一个空块上标记一个**十字**。而第二玩家在其回合时在棋盘上的任意一个空块上标记一个**圆圈**。
-
-+   游戏的目标是让某一方在一整行、一整列或一条对角线上占满任意一个符号，**十字**或**圆圈**。
-
-+   两个玩家将尽力阻止对方实现目标。谁先实现目标，谁就获胜。
-
-+   如果棋盘上的所有块都已满，且没有任何玩家能够用其符号标记整行、整列或对角线，则游戏结果为平局。
-
-+   一旦有一方获胜，游戏将不再允许任何移动。
-
-让我们通过一个例子来理解这个游戏。假设是一个 3*3 的网格。点（‘.’）表示一个空白块。
+让我们通过一个例子来理解这个游戏。假设是一个 `3*3` 的网格。点（`.`）表示一个空白块。
 
 ```go
 Player 1 Move with Symbol * at Position X:1 Y:1
@@ -88,33 +75,28 @@ o.o
 ***
 ```
 
-在上面的游戏中，第一玩家获胜，因为第三行全部被**十字**符号‘*’占据。
+在上面的游戏中，第一玩家获胜，因为第三行全部被**十字**符号`*`占据。
 
-## **UML 图**
+## UML 图
 
 让我们先看看同样的 UML 图。
 
 ![](img/75cbd2f93eabd5a1cdbe3a7f29e54a4b.png)
 
-以下是 UML 图中的一些思路
+以下是 UML 图中的一些思路：
 
-+   有一个符号枚举（Symbol Enum），表示棋盘上使用的不同符号。符号可以是**十字**、**圆圈**或**点**。**点**表示棋盘中的一个空白块。
+- 有一个符号枚举（`Symbol` Enum），表示棋盘上使用的不同符号。符号可以是**十字**、**圆圈**或**点**。**点**表示棋盘中的一个空白块。
+- 有一个`iPlayer`接口，表示游戏中的玩家。
+- 玩家可以是人类玩家或计算机玩家。因此，有一个`humanPlayer`类和一个`computerPlayer`类，它们实现了`iPlayer`接口。
+- 有一个棋盘类，仅用于捕获棋盘的细节。根据棋盘的状态，它会告诉你是否有某一行、列或对角线已经被完成，并且是哪个符号。它与玩家或游戏本身无关。它知道如何打印棋盘。这个棋盘类将会被游戏类使用，正如我们接下来所见。
+- 有一个游戏状态枚举类（`Game Status` Enum），定义了游戏的不同状态。游戏可以处于进行中（`Inprogresss`）、平局（`Draw`）、第一玩家胜（`FirstPlayerWin`）或第二玩家胜（`SecondPlayerWin`）状态。
+- 有一个游戏类用于控制游戏的执行。它包含了棋盘对象，以及两个玩家对象作为其字段。除此之外，它还有其他字段，如`gameStatus`（游戏状态）、`moveIndex`（步数索引）等。
 
-+   有一个 iPlayer 接口，表示游戏中的玩家。
-
-+   玩家可以是人类玩家或计算机玩家。因此，有一个**humanPlayer**类和一个**computerPlayer**类，它们实现了 iPlayer 接口。
-
-+   有一个棋盘类，仅用于捕获棋盘的细节。根据棋盘的状态，它会告诉你是否有某一行、列或对角线已经被完成，并且是哪个符号。它与玩家或游戏本身无关。它知道如何打印棋盘。这个棋盘类将会被游戏类使用，正如我们接下来所见。
-
-+   有一个游戏状态枚举类（Game Status Enum），定义了游戏的不同状态。游戏可以处于进行中（Inprogresss）、平局（Draw）、第一玩家胜（FirstPlayerWin）或第二玩家胜（SecondPlayerWin）状态。
-
-+   有一个游戏类用于控制游戏的执行。它包含了棋盘对象，以及两个玩家对象作为其字段。除此之外，它还有其他字段，如 gameStatus（游戏状态）、moveIndex（步数索引）等。
-
-## **低级设计**
+## 低级设计
 
 让我们来看一下用 Go 编程语言表达的该问题的低级设计。
 
-**iPlayer 接口**
+### `iPlayer`接口
 
 ```go
 type iPlayer interface {
@@ -124,7 +106,7 @@ type iPlayer interface {
 }
 ```
 
-**人类玩家类**
+### 人类玩家类
 
 ```go
 type humanPlayer struct {
@@ -138,7 +120,7 @@ func (h *humanPlayer) getNextMove() (int, int, error)
 func (h *humanPlayer) getID() int
 ```
 
-**计算机玩家类**
+### 计算机玩家类
 
 ```go
 type computerPlayer struct {
@@ -153,7 +135,7 @@ func (c *computerPlayer) getNextMove() (int, int, error)
 func (c *computerPlayer) getID() int 
 ```
 
-**符号枚举**
+### 符号枚举
 
 ```go
 type Symbol uint8
@@ -165,7 +147,7 @@ const (
 )
 ```
 
-**游戏状态枚举**
+### 游戏状态枚举
 
 ```go
 type GameStatus uint8
@@ -178,7 +160,7 @@ const (
 )
 ```
 
-**棋盘类**
+### 棋盘类
 
 ```go
 type board struct {
@@ -193,7 +175,7 @@ func (b *board) checkWin(i, j int, symbol Symbol) bool
 func (b *board) printBoard()
 ```
 
-**游戏类**
+### 游戏类
 
 ```go
 type game struct {
@@ -216,11 +198,11 @@ func (g *game) printMove(player iPlayer, x, y int)
 func (g *game) printResult() 
 ```
 
-## **程序**
+## 程序
 
 这是完整的工作代码。
 
-**symbol.go**
+### `symbol.go`
 
 ```go
 package main
@@ -234,7 +216,7 @@ const (
 )
 ```
 
-**iPlayer.go**
+### `iPlayer.go`
 
 ```go
 package main
@@ -246,7 +228,7 @@ type iPlayer interface {
 }
 ```
 
-**humanPlayer.go**
+### `humanPlayer.go`
 
 ```go
 package main
@@ -284,7 +266,7 @@ func (h *humanPlayer) getID() int {
 }
 ```
 
-**computerPlayer.go**
+### `computerPlayer.go`
 
 ```go
 package main
@@ -308,7 +290,7 @@ func (c *computerPlayer) getID() int {
 }
 ```
 
-**gameStatus.go**
+### `gameStatus.go`
 
 ```go
 package main
@@ -323,7 +305,7 @@ const (
 )
 ```
 
-**board.go**
+### `board.go`
 
 ```go
 package main
@@ -408,7 +390,9 @@ func (b *board) checkWin(i, j int, symbol Symbol) bool {
 }
 ```
 
-**game.go**
+### `game.go`
+
+
 
 ```go
 package main
@@ -520,7 +504,7 @@ func (g *game) printResult() {
 
 **输出**
 
-在上面的程序中，我们已经在**humanPlayer.go**文件中固定了两个玩家的步伐。基于这些步伐，以下是输出结果。
+在上面的程序中，我们已经在`humanPlayer.go`文件中固定了两个玩家的步伐。基于这些步伐，以下是输出结果。
 
 ```go
 Player 1 Move with Symbol * at Position X:1 Y:1
@@ -564,11 +548,13 @@ o.o
 ***
 ```
 
-## **完整工作代码：**
+## 完整工作代码：
 
 这是一个文件中的完整工作代码。
 
-**main.go**
+`main.go`
+
+
 
 ```go
 package main
@@ -850,9 +836,9 @@ func main() {
 }
 ```
 
-**输出**
+## 输出
 
-在上述程序中，我们同样在**humanPlayer 类**中固定了两个玩家的步伐。基于这些步伐，以下是输出结果。
+在上述程序中，我们同样在`humanPlayer`类中固定了两个玩家的步伐。基于这些步伐，以下是输出结果。
 
 ```go
 Player 1 Move with Symbol * at Position X:1 Y:1
@@ -896,6 +882,6 @@ o.o
 ***
 ```
 
-## **结论**
+## 结论
 
 这就是关于设计井字棋游戏的内容。希望你喜欢这个教程。请在评论中提供你的反馈。

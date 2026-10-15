@@ -1,18 +1,19 @@
+
 # Debian 9 中的 Python 3.6 安装教程——教程 Linux | Eldernode
 
 > 原文：<https://blog.eldernode.com/python-3-6-installation-tutorial-in-debian-9/>
 
 ![Python 3.6 installation tutorial in Debian 9](img/ddbc3b4959ba7e1284095550872beee8.png)
 
-如何在 Debian 9 中安装 Python 3.6？
+## 如何在 Debian 9 中安装 Python 3.6？
 
 在 [Debian 9 教程](https://eldernode.com/tag/tutorial-debian-9/)系列的这一节，我们将教你如何在 Debian 9 中安装 Python 3.6，这样如果你需要使用 Python，你只需输入几个命令就可以安装了。
 
-**Python 是什么？**
+## Python 是什么？
 
 Python 是一种综合性的、高级的、面向对象的、脚本化的开源编程语言，由 Fan Rasam 于 1991 年在荷兰设计。
 
-它的创建哲学强调了两个主要目标:编写程序的高可读性和它的简短性和相对高效率。
+它的创建哲学强调了两个主要目标：编写程序的高可读性和它的简短性和相对高效率。
 
 这种语言的关键字以最少的方式准备，并且在用户可用的库面前非常广泛。
 
@@ -20,50 +21,51 @@ Python 是一种综合性的、高级的、面向对象的、脚本化的开源�
 
 好了，到目前为止，我们已经用这个 [Python](https://www.python.org/) 定义为你服务了。现在请继续关注在 Debian 9 上安装 Python 3.6 的更多内容。
 
-注意:请注意，所有命令都将使用 root 访问权限输入，如果您没有 root 访问权限，则必须使用 sudo 组中的用户执行命令，并在所有命令之前输入 Sudo 命令。
+> 注意：请注意，所有命令都将使用 `root` 访问权限输入，如果您没有 `root` 访问权限，则必须使用 `sudo` 组中的用户执行命令，并在所有命令之前输入 `sudo` 命令。
 
-### **Debian 9 中 Python 3.6 安装教程**
+## Debian 9 中 Python 3.6 安装教程
 
-1)首先，输入以下命令来更新一次储罐和包。
+1. 首先，输入以下命令来更新一次储罐和包。
 
-```
-apt-get update && sudo apt-get upgrade 
-```
-
-2)更新完成后，输入以下命令以安装 Python 3.6 先决条件。
-
-```
-apt-get install -y make build-essential libssl-dev zlib1g-dev  apt-get install -y libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm  apt-get install -y libncurses5-dev libncursesw5-dev xz-utils tk-dev 
+```bash
+apt-get update && sudo apt-get upgrade
 ```
 
-3)现在，通过输入以下命令，从官方网站下载 Python 包。
+2. 更新完成后，输入以下命令以安装 Python 3.6 先决条件。
 
-```
-wget https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tgz 
-```
-
-4)下载后解压。
-
-```
-tar xvf Python-3.6.4.tgz 
+```bash
+apt-get install -y make build-essential libssl-dev zlib1g-dev apt-get install -y libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm apt-get install -y libncurses5-dev libncursesw5-dev xz-utils tk-dev
 ```
 
-5)从压缩模式中删除文件后，输入以下命令转到 Python 目录。
+3. 现在，通过输入以下命令，从官方网站下载 Python 包。
 
-```
-cd Python-3.6.4 
-```
-
-6)现在该输入以下命令安装 Python 了。
-
-```
-./configure --enable-optimizations  make -j8 
+```bash
+wget https://www.python.org/ftp/python/3.6.4/Python-3.6.4.tgz
 ```
 
-7)最后，输入以下命令安装 Python。
+4. 下载后解压。
 
+```bash
+tar xvf Python-3.6.4.tgz
 ```
-make altinstall 
+
+5. 从压缩模式中删除文件后，输入以下命令转到 Python 目录。
+
+```bash
+cd Python-3.6.4
+```
+
+6. 现在该输入以下命令安装 Python 了。
+
+```bash
+./configure --enable-optimizations
+make -j8
+```
+
+7. 最后，输入以下命令安装 Python。
+
+```bash
+make altinstall
 ```
 
 这样，你就可以直接从官方网站安装 Python 了。

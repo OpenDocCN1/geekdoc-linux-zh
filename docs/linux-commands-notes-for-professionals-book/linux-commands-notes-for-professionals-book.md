@@ -1,10 +1,11 @@
+
 # Linux 命令 专业人士笔记
 
 ## 关于
 
 请随意免费将此 PDF 分享给任何人，本书的最新版本可从以下地址下载：[https://goalkicker.com/LinuxBook](https://goalkicker.com/LinuxBook)
 
-这本 *Linux® 专业版笔记* 书籍汇编自 Stack Overflow 文档，内容由 Stack Overflow 的优秀人士撰写。文本内容在知识共享署名-相同方式共享许可下发布，请参见本书末尾的致谢部分，那里列出了为各个章节做出贡献的人员。除非另有说明，图像可能受其各自所有者的版权保护。
+这本 `Linux® 专业版笔记` 书籍汇编自 Stack Overflow 文档，内容由 Stack Overflow 的优秀人士撰写。文本内容在知识共享署名-相同方式共享许可下发布，请参见本书末尾的致谢部分，那里列出了为各个章节做出贡献的人员。除非另有说明，图像可能受其各自所有者的版权保护。
 
 这是一本为教育目的创建的非官方免费书籍，与官方 Linux® 组或公司以及 Stack Overflow 无关。所有商标和注册商标均为其相应公司所有者的财产。
 
@@ -12,20 +13,17 @@
 
 请将反馈和更正发送至 [web@petercv.com](web@petercv.com)
 
-
-
-
 ## 第 1 章：GNU/Linux 入门
 
 ### 第 1.1 节：实用快捷键
 
 #### 使用终端
 
-> 本文档中的示例假设你正在使用 POSIX 兼容（例如 **bash**、**sh**、**zsh**、**ksh**）的 shell。
+> 本文档中的示例假设你正在使用 POSIX 兼容（例如 `bash`、`sh`、`zsh`、`ksh`）的 shell。
 
-GNU/Linux 的许多功能是通过终端实现的。大多数 Linux 发行版都包含终端模拟器，允许用户从桌面环境中与 shell 进行交互。Shell 是一种命令行解释器，用于执行用户输入的命令。**Bash**（Bourne Again Shell）是许多 Linux 发行版中常见的默认 shell，也是 macOS 的默认 shell。
+GNU/Linux 的许多功能是通过终端实现的。大多数 Linux 发行版都包含终端模拟器，允许用户从桌面环境中与 shell 进行交互。Shell 是一种命令行解释器，用于执行用户输入的命令。`Bash`（Bourne Again Shell）是许多 Linux 发行版中常见的默认 shell，也是 macOS 的默认 shell。
 
-如果你使用的是 *emacs* 键绑定（默认设置）的 **Bash**，以下快捷键将生效：
+如果你使用的是 `emacs` 键绑定（默认设置）的 `Bash`，以下快捷键将生效：
 
 #### 打开终端
 
@@ -46,7 +44,7 @@ GNU/Linux 的许多功能是通过终端实现的。大多数 Linux 发行版都
 - `Ctrl + U` 剪贴从当前位置到行首的内容，并将其添加到剪贴板中。如果你位于行末，则剪贴整行内容。
 - `Ctrl + K` 剪贴从当前位置到行末的内容，并将其添加到剪贴板中。如果你位于行首，则剪贴整行内容。
 - `Ctrl + W` 删除光标前的单词，并将其添加到剪贴板中。
-- `Ctrl + Y` 粘贴剪贴板中最近剪切的内容（撤销在**当前**光标位置的最近一次删除）。
+- `Ctrl + Y` 粘贴剪贴板中最近剪切的内容（撤销在`当前`光标位置的最近一次删除）。
 - `Alt + T` 交换光标前的最后两个单词。
 - `Alt + L` 将光标处的单词转换为小写直至单词末尾。
 - `Alt + U` 将光标处的单词转换为大写直至单词末尾。
@@ -66,12 +64,12 @@ GNU/Linux 的许多功能是通过终端实现的。大多数 Linux 发行版都
 
 #### 终端控制
 
-- `Ctrl + L` 清屏，类似于 clear 命令。
+- `Ctrl + L` 清屏，类似于 `clear` 命令。
 - `Ctrl + S` 停止所有屏幕输出。这在运行产生大量长输出的命令时很有用。但这不会停止正在运行的命令。
-- `Ctrl + Q` 在通过 Ctrl+S 停止输出后恢复屏幕输出。
+- `Ctrl + Q` 在通过 `Ctrl+S` 停止输出后恢复屏幕输出。
 - `Ctrl + C` 结束当前正在运行的进程并返回提示符。
-- `Ctrl + D` 注销当前 shell 会话，类似于 exit 或 logout 命令。在某些命令中，它充当文件结束（End of File）信号，表示已到达文件末尾。
-- `Ctrl + Z` 挂起（暂停）当前正在运行的前台进程，并返回 shell 提示符。然后你可以使用 bg 命令让该进程在后台运行。要将该进程再次带到前台，请使用 fg 命令。要查看所有后台进程，请使用 jobs 命令。
+- `Ctrl + D` 注销当前 shell 会话，类似于 `exit` 或 `logout` 命令。在某些命令中，它充当文件结束（End of File）信号，表示已到达文件末尾。
+- `Ctrl + Z` 挂起（暂停）当前正在运行的前台进程，并返回 shell 提示符。然后你可以使用 `bg` 命令让该进程在后台运行。要将该进程再次带到前台，请使用 `fg` 命令。要查看所有后台进程，请使用 `jobs` 命令。
 - `Tab` 自动补全文件和目录名称。
 - `Tab Tab` 当输入字符无法唯一匹配到某个文件或目录名称时，显示所有可能性。
 
@@ -125,21 +123,21 @@ GNU/Linux 的许多功能是通过终端实现的。大多数 Linux 发行版都
 | `cp -p source destination` | 将文件从 `source` 复制到 `destination`。`-p` 代表保留属性。它在复制时保留文件的原始属性，如文件所有者、时间戳、组、权限等。 |
 | `cp -R source_dir destination_dir` | 递归地将源目录复制到指定的目标目录。 |
 | `mv file1 file2` | 在 Linux 中没有 `rename` 命令。因此 `mv` 将 file1 移动/重命名为 file2。 |
-| `rm -i filename` | 在删除每个文件前询问确认。**如果你是 Linux 命令行的新用户，你应该始终使用 `rm -i`。** 你可以指定多个文件。 |
+| `rm -i filename` | 在删除每个文件前询问确认。`如果你是 Linux 命令行的新用户，你应该始终使用 `rm -i``。 你可以指定多个文件。 |
 | `rm -R dir-name` | 递归删除目录 `dir-name`。 |
-| `rm -rf dir-name` | 递归删除目录 `dir-name`，忽略不存在的文件，并且绝不会提示任何内容。**使用此命令时要小心！** 你可以指定多个目录。 |
+| `rm -rf dir-name` | 递归删除目录 `dir-name`，忽略不存在的文件，并且绝不会提示任何内容。`使用此命令时要小心！` 你可以指定多个目录。 |
 | `rmdir dir-name` | 如果目录 `dir-name` 为空，则将其删除。此命令只能删除空目录。 |
 | `mkdir dir-name` | 创建目录 `dir-name`。 |
+
+
+
 | `mkdir -p dir-name/dir-name` | 创建目录层级。如果需要，创建父目录（如果它们不存在）。你可以指定多个目录。 |
+
 | `touch filename` | 如果文件 `filename` 不存在则创建它，否则将文件的时间戳更改为当前时间。 |
 
 #### 文件/目录权限和组
 
 | 命令 | 功能 |
-
-
-
-
 
 ## 第 1.3 节：Hello World
 
@@ -162,42 +160,71 @@ Linux 几乎针对任何任务都有对应的命令，且大多数命令直观�
 ### 在 Linux 中获取帮助
 
 | 命令 | 用途 |
+
 | :--- | :--- |
+
 | `man <name>` | 阅读 `<name>` 的手册页。 |
+
 | `man <section> <name>` | 阅读与指定章节相关的 `<name>` 手册页。 |
+
 | `man -k <keyword>` | 输出所有手册页中包含 `<keyword>` 关键词的软件。 |
+
 | `man -K <keyword>` | 输出所有包含 `<keyword>` 的手册页。 |
+
 | `apropos <keyword>` | 输出所有一行描述与 `<keyword>` 匹配的应用程序。当无法想起应用程序名称时，使用此命令。 |
+
 | `help` | 在 Bash shell 中，这将显示所有可用的 bash 命令列表。 |
+
 | `help <name>` | 在 Bash shell 中，这将显示关于 `<name>` bash 命令的信息。 |
+
 | `info <name>` | 查看关于 `<name>` 的所有信息。 |
+
 | `dpkg -l` | 在基于 Debian 的系统上输出所有已安装软件包的列表。 |
+
 | `dpkg -L <package>` | 在 Debian 系统中列出给定软件包的文件安装详情和路径信息。 |
+
 | `dpkg -l \| grep -i <edit>` | 返回所有包含 `<edit>` 的 .deb 已安装软件包，忽略大小写。 |
+
 | `less /var/lib/dpkg/available` | 返回所有可用软件包的描述。 |
+
 | `whatis vim` | 列出 vim 的一行描述。 |
+
 | `<command-name> --help` | 显示关于 `<tool-name>` 的使用信息。有时命令 -h 也有效，但并非对所有命令都适用。 |
 
 ### 用户身份识别及 Linux 世界中的“谁是谁”
 
 | 命令 | 用途 |
+
 | :--- | :--- |
+
 | `hostname` | 显示系统的主机名。 |
+
 | `hostname -f` | 显示系统的完全限定域名 (FQDN)。 |
+
 | `passwd` | 更改当前用户的密码。 |
+
 | `whoami` | 在终端登录的用户名。 |
+
 | `who` | 列出当前作为用户登录的所有用户。 |
+
 | `w` | 显示当前系统状态、时间、持续时间、当前在系统上登录的用户列表及其他用户信息。 |
+
 | `last` | 最近使用过该系统的用户。 |
-| `last root` | **root** 最后一次作为用户登录是什么时候。 |
+
+| `last root` | `root` 最后一次作为用户登录是什么时候。 |
+
 | `lastb` | 显示所有失败的登录尝试。 |
+
 | `chmod` | 更改文件或目录的权限 - 读取、写入、执行。 |
 
 ### 进程相关信息
 
 - `top` 按当前系统资源使用情况排序列出所有进程。显示进程的持续更新视图（默认每 3 秒一次）。使用 q 键退出 top。
+
 - `ps` 列出当前 shell 会话中正在运行的进程
+
 - `ps -u root` 列出 root 正在运行的所有进程和命令
+
 - `ps aux` 列出当前系统上所有用户的所有进程
 
 ## 第 1.5 节：按名称/内容模式搜索文件
@@ -248,7 +275,7 @@ grep font /var/www/html/
 grep: /var/www/html/: Is a directory
 ```
 
-你需要使用 -R 选项让 **grep** 递归搜索才能使其工作：
+你需要使用 -R 选项让 `grep` 递归搜索才能使其工作：
 
 ```bash
 grep -R font /var/www/html/
@@ -263,7 +290,7 @@ grep -R font /var/www/html/
 /var/www/html/style.css:		font-family: monospace;
 ```
 
-注意，当 **grep** 匹配多个文件时，它会在匹配行前加上文件名作为前缀。如果你想要去掉这个前缀，可以使用 -h 选项。
+注意，当 `grep` 匹配多个文件时，它会在匹配行前加上文件名作为前缀。如果你想要去掉这个前缀，可以使用 -h 选项。
 
 更多信息：
 
@@ -389,18 +416,20 @@ user@linux-computer:~$ ls -l
 
 将输出类似以下内容：
 
+
+
 ```bash
 -rw-r--r-- 1 user users     70 Jul 22 13:36 someFile.txt
 drwxrwxrwx 2 user users  4096 Jul 21 07:18 test
 ```
 
-权限格式为 drwxrwxrwx。第一个字符代表文件类型，如果是目录则为 d，否则不是。接下来的三个 rwx 是用户对文件的权限，再接下来的三个是组对文件的权限，最后三个是其他所有人对文件的权限。
+权限格式为 `drwxrwxrwx`。第一个字符代表文件类型，如果是目录则为 `d`，否则不是。接下来的三个 `rwx` 是用户对文件的权限，再接下来的三个是组对文件的权限，最后三个是其他所有人对文件的权限。
 
-rwx 中的 r 代表是否可以读取文件，w 代表是否可以修改文件，x 代表是否可以执行文件。如果未授予任何权限，则 r、w 或 x 的位置将是 -。
+`rwx` 中的 `r` 代表是否可以读取文件，`w` 代表是否可以修改文件，`x` 代表是否可以执行文件。如果未授予任何权限，则 `r`、`w` 或 `x` 的位置将是 `-`。
 
-因此，从上例中可以看出，用户可以读取和修改 someFile.txt，但组只有只读权限。
+因此，从上例中可以看出，用户可以读取和修改 `someFile.txt`，但组只有只读权限。
 
-如果你有 sudo 权限，可以使用 `chmod ### fileName` 命令来更改权限。r 由值 4 表示，w 由 2 表示，x 由 1 表示。因此，如果你只想能够修改 test 目录的内容
+如果你有 `sudo` 权限，可以使用 `chmod ### fileName` 命令来更改权限。`r` 由值 `4` 表示，`w` 由 `2` 表示，`x` 由 `1` 表示。因此，如果你只想能够修改 `test` 目录的内容
 
 ```bash
 Owner rwx = 4+2+1 = 7
@@ -420,9 +449,9 @@ chmod 755 test
 drwxr-xr-x 2 user users  4096 Jul 21 07:20 test
 ```
 
-### 可读大小
+## 可读大小
 
-与 l 选项一起使用的 h 选项显示人类可读的文件大小。运行
+与 `l` 选项一起使用的 `h` 选项显示人类可读的文件大小。运行
 
 ```bash
 user@linux-computer:~$ ls -lh
@@ -436,9 +465,9 @@ total 4166
 drwxrwxrwx 2 user users  4.0K Jul 21 07:18 test
 ```
 
-### 隐藏文件
+## 隐藏文件
 
-要查看隐藏文件，使用 a 选项。例如
+要查看隐藏文件，使用 `a` 选项。例如
 
 ```bash
 user@linux-computer:~$ ls -a
@@ -446,11 +475,7 @@ user@linux-computer:~$ ls -a
 
 可能列出
 
-
-
-
-
-# 总目录大小
+## 总目录大小
 
 要查看当前目录的大小，请使用 `s` 选项（也可以使用 `h` 选项使大小更易读）。
 
@@ -466,9 +491,9 @@ someFile.txt
 test
 ```
 
-# 递归视图
+## 递归视图
 
-假设 test 目录中有一个名为 anotherFile 的文件，并且你希望从根文件夹查看它，你可以使用 R 选项，它会列出递归树。
+假设 `test` 目录中有一个名为 `anotherFile` 的文件，并且你希望从根文件夹查看它，你可以使用 `R` 选项，它会列出递归树。
 
 ```
 user@linux-computer:~$ ls -R
@@ -528,7 +553,7 @@ Ubuntu 12.04.5 LTS \n \l
 
 此方法适用于 Arch、CentOS、CoreOS、Debian、Fedora、Mageia、openSUSE、Red Hat Enterprise Linux、SUSE Linux Enterprise Server、Ubuntu 及其他系统的新版本。这种广泛的适用性使其成为首选方法，如果还需要识别较旧的系统，可以回退到其他方法。
 
-查看 `/etc/os-release`。具体来说，查看变量 NAME、VERSION、ID、VERSION_ID 和 PRETTY_NAME。
+查看 `/etc/os-release`。具体来说，查看变量 `NAME`、`VERSION`、`ID`、`VERSION_ID` 和 `PRETTY_NAME`。
 
 在 Fedora 上，该文件可能如下所示：
 
@@ -571,9 +596,9 @@ REDHAT_SUPPORT_PRODUCT="centos"
 REDHAT_SUPPORT_PRODUCT_VERSION="7"
 ```
 
-该文件在 freedesktop 网站上有文档说明；原则上，它并不特定于 systemd——但它将存在于所有基于 systemd 的发行版中。
+该文件在 freedesktop 网站上有文档说明；原则上，它并不特定于 `systemd`——但它将存在于所有基于 `systemd` 的发行版中。
 
-从 bash shell 中，你可以 source `/etc/os-release` 文件，然后直接使用各种变量，如下所示：
+从 `bash` shell 中，你可以 `source` `/etc/os-release` 文件，然后直接使用各种变量，如下所示：
 
 ```
 $ ( source /etc/os-release && echo "$PRETTY_NAME" )
@@ -582,7 +607,7 @@ Fedora 24 (Workstation Edition)
 
 ## 2.3 节：检测你正在使用的 RHEL / CentOS / Fedora 发行版
 
-查看 /etc/redhat-release 的内容
+查看 `/etc/redhat-release` 的内容
 
 ```
 cat /etc/redhat-release
@@ -600,15 +625,17 @@ Release:            24
 Codename:           TwentyFour
 ```
 
+
+
 ## 2.4 节：Uname - 打印当前系统信息
 
-**Uname** 是 *unix name* 的简称。只需在控制台输入 `uname` 即可获得关于操作系统的信息。
+`Uname` 是 `unix name` 的简称。只需在控制台输入 `uname` 即可获得关于操作系统的信息。
 
 ```
 uname [OPTION]
 ```
 
-如果未指定 *OPTION*，`uname` 假定使用 `-s` 选项。
+如果未指定 `OPTION`，`uname` 假定使用 `-s` 选项。
 
 - `-a` 或 `--all` - 打印所有信息，如果信息未知则省略 `-p` 和 `-i`。
 
@@ -671,7 +698,7 @@ Linux Scibearspace 3.16.0-4-amd64 #1 SMP Debian 3.16.7-ckt25-2+deb8u3 (2016-07-0
 
 ## 2.7 节：查找你的 linux os（debian 和 rpm）的名称和发行版本号
 
-大多数 linux 发行版将版本信息存储在一个名为 /etc/lsb-release（debian）或 /etc/redhat-release（基于 RPM）的文件中。使用以下通用命令应该能让你越过大多数 Debian 和 RPM 衍生版，如 Linux Mint 和 Cent-OS。
+大多数 linux 发行版将版本信息存储在一个名为 `/etc/lsb-release`（debian）或 `/etc/redhat-release`（基于 RPM）的文件中。使用以下通用命令应该能让你越过大多数 Debian 和 RPM 衍生版，如 Linux Mint 和 Cent-OS。
 
 Ubuntu 机器上的示例：
 
@@ -716,19 +743,15 @@ Print certain system information. With no OPTION, same as -s.
 - `--version` output version information and exit
 ```
 
-
-
-
-
 # 第 4 章：Shell（外壳）
 
 Shell 会根据其提示符执行程序。当您输入命令时，Shell 会搜索该程序，然后执行它。例如，当您输入命令 `ls` 时，Shell 会搜索名为 `ls` 的工具/程序，然后在 Shell 中运行它。您为工具提供的参数和选项可能会影响您得到的结果。Shell 也被称为 CLI，即命令行界面。
 
 ## 4.1 节：更改默认 Shell
 
-大多数现代 Linux 发行版都会预装并配置 BASH（**Bourne Again Shell**）作为默认 Shell。
+大多数现代 Linux 发行版都会预装并配置 BASH（`Bourne Again Shell`）作为默认 Shell。
 
-负责在 Linux 中更改 Shell 的命令（实际上是一个可执行二进制文件，即 ELF）是 `chsh`（**change shell**）。
+负责在 Linux 中更改 Shell 的命令（实际上是一个可执行二进制文件，即 ELF）是 `chsh`（`change shell`）。
 
 我们可以首先使用 `chsh -l` 命令检查我们的机器上已经安装并配置了哪些 Shell，该命令的输出结果类似于以下内容：
 
@@ -782,7 +805,10 @@ Shell changed.
 - `-s shell`
   - 将 shell 设置为登录 Shell。
 - `-l, --list-shells`
-  - 打印 /etc/shells 中列出的 Shell 列表并退出。
+  - 打印 `/etc/shells` 中列出的 Shell 列表并退出。
+
+
+
 - `-h, --help`
   - 打印用法消息并退出。
 - `-v, --version`
@@ -792,7 +818,7 @@ Shell changed.
 
 ### 自定义 Shell 提示符
 
-默认的命令提示符可以被更改，使其外观不同且更简短。如果当前目录路径很长，默认的命令提示符就会变得太大。在这种情况下，使用 PS1 会很有用。一个简短且自定义的命令提示符既美观又优雅。在下表中，PS1 配合多个参数使用，以显示不同形式的 Shell 提示符。默认的命令提示符看起来像这样：user@host: ~ $。在我的情况下，它看起来像这样：bruce@gotham ~ $。可以按照下表进行更改：
+默认的命令提示符可以被更改，使其外观不同且更简短。如果当前目录路径很长，默认的命令提示符就会变得太大。在这种情况下，使用 `PS1` 会很有用。一个简短且自定义的命令提示符既美观又优雅。在下表中，`PS1` 配合多个参数使用，以显示不同形式的 Shell 提示符。默认的命令提示符看起来像这样：`user@host: ~ $`。在我的情况下，它看起来像这样：`bruce@gotham ~ $`。可以按照下表进行更改：
 
 | 命令 | 用途 |
 | :--- | :--- |
@@ -838,7 +864,7 @@ alias command_alias='actual_command'
 alias install='sudo apt-get -y install'
 ```
 
-将新的命令别名 `install` 映射到实际命令 `sudo apt-get -y install`。这意味着当你在终端中使用 **install** 时，bash 会将其解释为 **sudo apt-get -y install**。
+将新的命令别名 `install` 映射到实际命令 `sudo apt-get -y install`。这意味着当你在终端中使用 `install` 时，bash 会将其解释为 `sudo apt-get -y install`。
 
 ## 4.4 节：定位系统中的文件
 
@@ -872,7 +898,7 @@ find / -name mykey.pem -print
 
 有时可能需要找出哪个目录消耗了多少磁盘空间，尤其是当你使用 `df -h` 并意识到可用磁盘空间较低时。
 
-**du 命令：**
+**`du` 命令：**
 
 `du` 命令总结一组文件的磁盘使用情况，对于目录则递归计算。
 
@@ -961,7 +987,7 @@ du -sch .[!.]* *
 769M 	total
 ```
 
-**最重要的是**，正确地在根目录上使用 du 命令是找出哪个应用程序/服务或用户正在大量消耗你的磁盘空间的救命行动。例如，对于 Web 和邮件服务器，如果可用磁盘空间水平低得离谱，原因可能是你的邮件服务遭受了垃圾邮件攻击，你只需使用 du 命令即可诊断。
+**最重要的是**，正确地在根目录上使用 `du` 命令是找出哪个应用程序/服务或用户正在大量消耗你的磁盘空间的救命行动。例如，对于 Web 和邮件服务器，如果可用磁盘空间水平低得离谱，原因可能是你的邮件服务遭受了垃圾邮件攻击，你只需使用 `du` 命令即可诊断。
 
 调查根目录的磁盘使用情况：
 
@@ -993,21 +1019,32 @@ du: cannot access '/proc/18221/task/18221/fdinfo/4': No such file or directory
 du: cannot access '/proc/18221/fd/4': No such file or directory
 ```
 
+`du`: 无法访问 `'/proc/18221/fdinfo/4'`: 没有那个文件或目录
+
+0 `/proc`
+
+20K `/root`
+
+`du`: 无法访问 `'/run/user/1000/gvfs'`: 权限被拒绝
+
+9,4M `/run`
 
 
 
-du: 无法访问 '/proc/18221/fdinfo/4'：没有那个文件或目录
-0 /proc
-20K /root
-du: 无法访问 '/run/user/1000/gvfs'：权限被拒绝
-9,4M /run
-13M /sbin
-4,0K /srv
-0 /sys
-72K /tmp
-3,5G /usr
-639M /var
-0 /vmlinuz
+13M `/sbin`
+
+4,0K `/srv`
+
+0 `/sys`
+
+72K `/tmp`
+
+3,5G `/usr`
+
+639M `/var`
+
+0 `/vmlinuz`
+
 5,8G 总计
 
 最后，最佳的实践方式是添加一个阈值大小值来忽略较小的目录。此命令将仅显示位于根目录下、大小超过 1GB 且延伸至文件系统目录树最远分支的文件夹：
@@ -1044,9 +1081,9 @@ tmpfs                   245M     0  245M   0% /dev/shm
 /dev/sda1               485M   47M  413M  11% /boot
 ```
 
-在这个基本示例中，我们可以看到 / 分区仅使用了 9%。
+在这个基本示例中，我们可以看到 `/` 分区仅使用了 9%。
 
-对于一个更复杂的示例，涵盖使用 df 查看各个挂载点，请参阅下文：
+对于一个更复杂的示例，涵盖使用 `df` 查看各个挂载点，请参阅下文：
 
 ```
 [root@mail ~]# df -h
@@ -1062,23 +1099,23 @@ tmpfs                   500M   86M  415M  18% /var/nginx_pagspeed_cache
 
 在这个示例中，我们有一个 95% 已满的 `/` 分区，以及一个仅 36% 已满的额外 `/var` 分区。它还有一个挂载在 `/mnt/test` 上的 2T 外部网络挂载，以及一个挂载在 `/var/ngx_pagespeed_cache` 上的 500M 内存盘/tmpfs 挂载。
 
-## 第 6 章：获取系统信息
+# 第 6 章：获取系统信息
 
 获取系统相关信息的命令集合。
 
-### 6.1 节：关于 CPU、内存、网络和磁盘（I/O 操作）的统计数据
+## 6.1 节：关于 CPU、内存、网络和磁盘（I/O 操作）的统计数据
 
 要获取 Linux 系统主要组件的一般统计数据，`stat` 系列命令极其有用
 
-#### CPU
+### CPU
 
-要获取与处理器相关的统计数据，您可以使用 mpstat 命令，但配合某些选项可以获得更好的可视性：
+要获取与处理器相关的统计数据，您可以使用 `mpstat` 命令，但配合某些选项可以获得更好的可视性：
 
 ```
 $ mpstat 2 10
 ```
 
-#### 内存
+### 内存
 
 我们都知道命令 `free` 用于显示（剩余）RAM 的数量，但要查看包括 I/O 操作在内的所有统计信息：
 
@@ -1086,40 +1123,40 @@ $ mpstat 2 10
 $ vmstat 2 10
 ```
 
-#### 磁盘
+### 磁盘
 
-要实时获取有关磁盘操作的一般信息，您可以利用 iostat。
+要实时获取有关磁盘操作的一般信息，您可以利用 `iostat`。
 
 ```
 $ iostat -kx 2
 ```
 
-#### 网络
+### 网络
 
 为了能够查看网络服务正在发生什么，您可以使用 `netstat`
 
 ```
-$ `netstat` -ntl # 打开的 TCP 套接字
-$ `netstat` -nul # 打开的 UDP 套接字
-$ `netstat` -nxl # 打开的 Unix 套接字
+$ netstat -ntl # 打开的 TCP 套接字
+$ netstat -nul # 打开的 UDP 套接字
+$ netstat -nxl # 打开的 Unix 套接字
 ```
 
 但您可以找到有用的监控工具来实时查看网络流量：
 
 ```
-$ `sudo` iftop
+$ sudo iftop
 ```
 
-#### 可选
+### 可选
 
-要实时生成与所有组件 I/O 操作相关的统计数据，您可以使用 dstat。该工具是 `vmstat`、iostat 和 ifstat 的多功能替代方案
+要实时生成与所有组件 I/O 操作相关的统计数据，您可以使用 `dstat`。该工具是 `vmstat`、`iostat` 和 `ifstat` 的多功能替代方案
 
-### 6.2 节：使用 lscpu 和 lshw 等工具
+## 6.2 节：使用 lscpu 和 lshw 等工具
 
-通过使用 lscpu 等工具，因为 lscpu 是获取 CPU 信息的简单方式。
+通过使用 `lscpu` 等工具，因为 `lscpu` 是获取 CPU 信息的简单方式。
 
 ```
-$ `lscpu`
+$ lscpu
 架构:        x86_64
 CPU 操作模式:      32位, 64位
 字节顺序:          小端序
@@ -1142,7 +1179,7 @@ L2 缓存: 2048K
 NUMA 节点0 CPU(s): 0-3
 ```
 
-通过使用 lshw 工具
+通过使用 `lshw` 工具
 
 ```
 $ lshw | grep cpu
@@ -1168,11 +1205,11 @@ df1-ws-5084
  width: 64 bits
 ```
 
-### 6.3 节：列出硬件
+## 6.3 节：列出硬件
 
 **Ubuntu：**
 
-**lshw** 是一个提取机器硬件配置详细信息的小型工具。它可以报告确切的内存配置、固件版本、主板配置、CPU 版本和速度、缓存配置、总线速度等。
+`lshw` 是一个提取机器硬件配置详细信息的小型工具。它可以报告确切的内存配置、固件版本、主板配置、CPU 版本和速度、缓存配置、总线速度等。
 
 ```
 $ sudo lshw | less (或 more)
@@ -1212,7 +1249,7 @@ $ hdparm -tT /dev/sda # 对磁盘 sda 进行读取速度测试
 $ badblocks -s /dev/sda # 测试磁盘 sda 上的不可读块
 ```
 
-### 6.4 节：查找 CPU 型号/速度信息
+## 6.4 节：查找 CPU 型号/速度信息
 
 **Ubuntu：**
 
@@ -1221,6 +1258,8 @@ $ cat /proc/cpuinfo
 ```
 
 示例输出：
+
+
 
 ```
 processor       : 0
@@ -1249,7 +1288,9 @@ clflush size    : 64
 cache alignment : 64
 address sizes   : 36 bits physical, 48 bits virtual
 power management:
+```
 
+```
 model          : 15
 model name     : Intel(R) Core(TM)2 Quad CPU  Q6600 @ 2.40GHz
 stepping       : 11
@@ -1275,7 +1316,7 @@ address sizes  : 36 bits physical, 48 bits virtual
 power management:
 ```
 
-**统计处理器（包括核心）：**
+### 统计处理器（包括核心）
 
 ```
 $ grep -c processor /proc/cpuinfo
@@ -1285,9 +1326,9 @@ $ grep -c processor /proc/cpuinfo
 
 总体而言，在 linux 主机上监控进程有两种方式
 
-**静态监控**
+#### 静态监控
 
-最常用的命令是 *ps*（即，进程状态），该命令用于提供有关当前运行进程的信息，包括它们的进程标识符（PIDs）。
+最常用的命令是 `ps`（即，进程状态），该命令用于提供有关当前运行进程的信息，包括它们的进程标识符（PIDs）。
 
 这里有一些用于收集特定信息的有用选项。
 
@@ -1315,9 +1356,7 @@ $ ps -e -orss=,args= | sort -b -k1,1n | pr -T$COLUMNS
 $ ps -C firefox-bin -L -o pid,tid,pcpu,state
 ```
 
-找到特定进程后，您可以使用 *lsof* 收集与该进程相关的信息，以列出该进程 ID 打开的路径
-
-
+找到特定进程后，您可以使用 `lsof` 收集与该进程相关的信息，以列出该进程 ID 打开的路径
 
 或者基于路径查找拥有指定路径打开的进程列表
 
@@ -1325,7 +1364,7 @@ $ ps -C firefox-bin -L -o pid,tid,pcpu,state
 $ lsof ~
 ```
 
-## 交互式监控
+#### 交互式监控
 
 最常用于动态监控的工具是：
 
@@ -1333,9 +1372,9 @@ $ lsof ~
 $ top
 ```
 
-这是一个默认命令，拥有大量选项，可以在实时情况下过滤和展示信息（与 ps 命令相比）。
+这是一个默认命令，拥有大量选项，可以在实时情况下过滤和展示信息（与 `ps` 命令相比）。
 
-当然，还有一些更高级的选项可以考虑并安装作为 **top** 的替代方案
+当然，还有一些更高级的选项可以考虑并安装作为 `top` 的替代方案
 
 ```bash
 $ htop -d 5
@@ -1347,7 +1386,7 @@ $ htop -d 5
 $ atop
 ```
 
-atop 能够将所有活动记录到日志文件中（默认的 atop 会每隔 600 秒记录一次所有活动）。在这个列表中，还有少数专业命令，例如 iotop 或 iftop
+`atop` 能够将所有活动记录到日志文件中（默认的 `atop` 会每隔 600 秒记录一次所有活动）。在这个列表中，还有少数专业命令，例如 `iotop` 或 `iftop`
 
 ```bash
 $ sudo iotop
@@ -1360,24 +1399,38 @@ $ sudo iotop
 选项完整列表：
 
 - `ls` -a 列出所有文件，包括以 `.` 开头的隐藏文件
+
 - `ls` --color 彩色列表 [ =always/never/auto]
+
 - `ls` -d 列出目录 - 带有 `*/`
+
 - `ls` -F 在条目后添加一个字符 `*/>=@|`
+
 - `ls` -i 列出文件的 inode 索引号
+
 - `ls` -l 以长格式列表显示 - 展示权限
+
 - `ls` -la 长格式列表，包含隐藏文件
+
 - `ls` -lh 长格式列表，显示可读的文件大小
+
 - `ls` -ls 带文件大小的长格式列表
+
 - `ls` -r 以逆序列出
+
 - `ls` -R 递归列出目录树
+
 - `ls` -s 列出文件大小
+
 - `ls` -S 按文件大小排序
+
 - `ls` -t 按时间 & 日期排序
+
 - `ls` -X 按扩展名排序
 
 ### 7.2 节：ls 命令及其常用选项
 
-ls 显示当前工作目录下的文件和目录。（如果未传递参数。）（默认情况下，它不会显示以 . 开头的隐藏文件。）
+`ls` 显示当前工作目录下的文件和目录。（如果未传递参数。）（默认情况下，它不会显示以 . 开头的隐藏文件。）
 
 ```bash
 user@ubuntu14:~/usr$ ls
@@ -1403,10 +1456,14 @@ Pictures/    Templates/    Videos/
 在此，结尾字符用于区分文件和文件夹。
 
 - `/` 表示目录。
+
 - `*` 表示可执行文件。
+
 - `@` 表示符号链接。
 
 要获取更多关于文件和目录的详细信息，请使用 `ls -l`
+
+
 
 ```bash
 user@Ubuntu14:~/example$ ls -l
@@ -1423,34 +1480,34 @@ lrwxrwxrwx 1 user group      6 Dec 24 12:04 a_link -> a_file
 
 然后，每个文件/目录按字母顺序排列一个条目，大写字母在小写字母之前。
 
-第一个字符表示类型（例如 d - 目录，l - 链接）。
+第一个字符表示类型（例如 `d` - 目录，`l` - 链接）。
 
 接下来的 9 个字符显示用户、组和其他人的权限。
 
 随后是硬链接的数量，然后是所有者名称和组。
 
-下一个字段是以字节为单位的文件大小。通过添加 -h 选项，可以以人类友好的形式显示，例如 6586816 显示为 6.3M
+下一个字段是以字节为单位的文件大小。通过添加 `-h` 选项，可以以人类友好的形式显示，例如 `6586816` 显示为 `6.3M`
 
 然后是一个时间戳（通常是修改时间）。
 
 最后一个字段是名称。注意：链接也会显示链接的目标。
 
-## 第 8 章：使用 'tar' 命令进行文件压缩
+# 第 8 章：使用 'tar' 命令进行文件压缩
 
-### 常用选项
+## 常用选项
 
 - `-c --create` 创建新归档。
 - `-x --extract` 从归档中提取文件。
 - `-t --list` 列出归档的内容。
-- `-f --file=ARCHIVE` 使用归档文件或目录 ARCHIVE。
+- `-f --file=ARCHIVE` 使用归档文件或目录 `ARCHIVE`。
 - `-v --verbose` 详细列出处理的文件。
 
-### 压缩选项
+## 压缩选项
 
 - `-a --auto-compress` 使用归档后缀确定压缩程序。
-- `-j --bzip2` 通过 bzip2 过滤归档。
-- `-J --xz --lzma` 通过 xz 过滤归档。
-- `-z --gzip` 通过 gzip 过滤归档。
+- `-j --bzip2` 通过 `bzip2` 过滤归档。
+- `-J --xz --lzma` 通过 `xz` 过滤归档。
+- `-z --gzip` 通过 `gzip` 过滤归档。
 
 ### 8.1 节：压缩文件夹
 
@@ -1460,25 +1517,25 @@ lrwxrwxrwx 1 user group      6 Dec 24 12:04 a_link -> a_file
 tar -cf ./my-archive.tar ./my-folder/
 ```
 
-详细输出显示哪些文件和目录被添加到归档中，请使用 -v 选项：
+详细输出显示哪些文件和目录被添加到归档中，请使用 `-v` 选项：
 
 ```bash
 tar -cvf ./my-archive.tar ./my-folder/
 ```
 
-要使用 'gzip' 压缩归档文件夹，你必须使用 -z 选项：
+要使用 `gzip` 压缩归档文件夹，你必须使用 `-z` 选项：
 
 ```bash
 tar -czf ./my-archive.tar.gz ./my-folder/
 ```
 
-你也可以使用 -j 选项，用 'bzip2' 压缩归档：
+你也可以使用 `-j` 选项，用 `bzip2` 压缩归档：
 
 ```bash
 tar -cjf ./my-archive.tar.bz2 ./my-folder/
 ```
 
-或者使用 -J 选项，用 'xz' 压缩：
+或者使用 `-J` 选项，用 `xz` 压缩：
 
 ```bash
 tar -cJf ./my-archive.tar.xz ./my-folder/
@@ -1518,7 +1575,7 @@ Folder-In-Archive/Another-Folder/file2
 tar -tvf archive.tar
 ```
 
-选项 -t 用于列表。要列出 tar.gz 归档的内容，你必须使用 -z 选项：
+选项 `-t` 用于列表。要列出 `tar.gz` 归档的内容，你必须使用 `-z` 选项：
 
 ```bash
 tar -tzvf archive.tar.gz
@@ -1526,7 +1583,7 @@ tar -tzvf archive.tar.gz
 
 ### 8.5 节：压缩并排除一个或多个文件夹
 
-如果你想提取一个文件夹，但在提取期间想要排除一个或多个文件夹，你可以使用 --exclude 选项。
+如果你想提取一个文件夹，但在提取期间想要排除一个或多个文件夹，你可以使用 `--exclude` 选项。
 
 ```bash
 tar -cf archive.tar ./my-folder/ --exclude="my-folder/sub1" --exclude="my-folder/sub3"
@@ -1551,7 +1608,7 @@ my-folder/
 
 ### 8.6 节：剥离前导组件
 
-要剥离任意数量的前导组件，请使用 --strip-components 选项：
+要剥离任意数量的前导组件，请使用 `--strip-components` 选项：
 
 ```text
 --strip-components=NUMBER
@@ -1564,7 +1621,7 @@ my-folder/
 tar -xf --strip-components=1 archive-name.tar
 ```
 
-## 第 9 章：服务
+# 第 9 章：服务
 
 ### 9.1 节：列出 Ubuntu 上正在运行的服务
 
@@ -1576,9 +1633,9 @@ service --status-all
 
 `service --status-all` 的输出列出了由 System V 控制的服务状态。
 
-+ 表示服务正在运行，- 表示服务已停止。你可以通过运行 service SERVICENAME status 来查看 + 和 - 服务。
+`+` 表示服务正在运行，`-` 表示服务已停止。你可以通过运行 `service SERVICENAME status` 来查看 `+` 和 `-` 服务。
 
-一些服务由 **Upstart** 管理。你可以使用 sudo initch 1 list 检查所有 Upstart 服务的状态。任何由 Upstart 管理的服务也会显示在 service --status-all 提供的列表中，但会被标记为 ?。
+一些服务由 `Upstart` 管理。你可以使用 `sudo initch 1 list` 检查所有 Upstart 服务的状态。任何由 Upstart 管理的服务也会显示在 `service --status-all` 提供的列表中，但会被标记为 `?`。
 
 参考：[https://askubuntu.com/questions/407075/how-to-read-service-status-all-results](https://askubuntu.com/questions/407075/how-to-read-service-status-all-results)
 
@@ -1620,15 +1677,11 @@ service --status-all
 systemctl daemon-reload
 ```
 
-
-
-
-
-## 第 10 章：管理服务
+# 第 10 章：管理服务
 
 ### 10.1 节：诊断服务问题
 
-在使用 systemd 的系统上，例如 Fedora >= 15、Ubuntu（服务器版和桌面版）>= 15.04，以及 RHEL/CentOS >= 7：
+在使用 `systemd` 的系统上，例如 Fedora >= 15、Ubuntu（服务器版和桌面版）>= 15.04，以及 RHEL/CentOS >= 7：
 
 ```bash
 systemctl status [servicename]
@@ -1637,6 +1690,8 @@ systemctl status [servicename]
 ...其中 `[servicename]` 是指定服务；例如，`systemctl status sshd`。
 
 这将显示基本状态信息以及最近记录的错误。
+
+
 
 你可以使用 `journalctl` 查看更详细的错误。例如，`journalctl -xe` 会将最近 1000 条日志加载到分页器（如 `less`）中，并跳转到末尾。你还可以使用 `journalctl -f`，它会跟随新进入的日志消息。
 
@@ -1826,7 +1881,7 @@ Include conf/extra/httpd-vhosts.conf
 
 并且你必须在 `/etc/httpd/conf/extra/httpd-vhosts.conf` 中添加所有虚拟域名。（如果你想要测试这些虚拟域名，还需添加到 `/etc/hosts` 中）
 
-编辑 `/etc/httpd/conf/extra/httpd-default.conf` 并将 **ServerSignature** 更改为 `Off`，将 **ServerToken** 更改为 `Prod`，以隐藏关键数据。
+编辑 `/etc/httpd/conf/extra/httpd-default.conf` 并将 `ServerSignature` 更改为 `Off`，将 `ServerToken` 更改为 `Prod`，以隐藏关键数据。
 
 #### PHP
 
@@ -1875,21 +1930,23 @@ sh /usr/bin/mysql_secure_installation
 
 至此，你就拥有了一个可以随时按需定制的 Web 服务器。
 
+
+
 ### 12.2 节：在 Ubuntu 上安装 LAMP
 
-安装 apache：
+安装 `apache`：
 
 ```bash
 sudo apt-get install apache2
 ```
 
-安装 MySQL：
+安装 `MySQL`：
 
 ```bash
 sudo apt-get install mysql-server
 ```
 
-安装 PHP：
+安装 `PHP`：
 
 ```bash
 sudo apt-get install php5 libapache2-mod-php5
@@ -1901,7 +1958,7 @@ sudo apt-get install php5 libapache2-mod-php5
 sudo systemctl restart apache2
 ```
 
-检查 PHP 安装：
+检查 `PHP` 安装：
 
 ```bash
 php -r 'echo "\n\nYour PHP installation is working fine.\n\n\n";'
@@ -1911,13 +1968,13 @@ php -r 'echo "\n\nYour PHP installation is working fine.\n\n\n";'
 
 #### 安装 Apache Web 服务器
 
-第一步是安装 Web 服务器 Apache。
+第一步是安装 Web 服务器 `Apache`。
 
 ```bash
 sudo yum -y install httpd
 ```
 
-安装完成后，启用（以便开机自启）并启动 Apache Web 服务器服务。
+安装完成后，启用（以便开机自启）并启动 `Apache` Web 服务器服务。
 
 ```bash
 sudo systemctl enable --now httpd
@@ -1925,29 +1982,29 @@ sudo systemctl enable --now httpd
 
 将浏览器指向：
 
-http://localhost
+`http://localhost`
 
-你将看到默认的 Apache Web 服务器页面。
+你将看到默认的 `Apache` Web 服务器页面。
 
 #### 安装 MariaDB 服务器
 
-第二步是安装 MariaDB：
+第二步是安装 `MariaDB`：
 
 ```bash
 sudo yum -y install mariadb-server
 ```
 
-然后启动并启用（开机自启）MariaDB 服务器：
+然后启动并启用（开机自启）`MariaDB` 服务器：
 
 ```bash
 sudo systemctl enable --now mariadb
 ```
 
-如有需要，使用 **mysql_secure_installation** 来保护你的数据库。
+如有需要，使用 `mysql_secure_installation` 来保护你的数据库。
 
 此脚本将允许你执行以下操作：
 
-- 更改 root 用户的密码
+- 更改 `root` 用户的密码
 - 删除测试数据库
 - 禁用远程访问
 
@@ -1957,33 +2014,30 @@ sudo systemctl enable --now mariadb
 sudo yum -y install php php-common
 ```
 
-然后重启 Apache 的 httpd 服务。
+然后重启 `Apache` 的 `httpd` 服务。
 
 ```bash
 sudo systemctl restart httpd
 ```
 
-要测试 PHP，在 **/var/www/html** 中创建一个名为 **index.php** 的文件。
+要测试 `PHP`，在 `/var/www/html` 中创建一个名为 `index.php` 的文件。
 
 然后向该文件添加以下行：
-
-
-
 
 ## 第 13 章：tee 命令
 
 | 选项 | 描述 |
 | --- | --- |
-| -a, --append | 追加到指定的 FILES。不覆盖。 |
-| -i, --ignore-interrupts | 忽略中断信号。 |
-| --help | 显示帮助信息，并退出。 |
-| --version | 显示版本信息，并退出。 |
+| `-a`, `--append` | 追加到指定的 `FILES`。不覆盖。 |
+| `-i`, `--ignore-interrupts` | 忽略中断信号。 |
+| `--help` | 显示帮助信息，并退出。 |
+| `--version` | 显示版本信息，并退出。 |
 
-**tee** - 从标准输入读取，并写入标准输出和文件。
+`tee` - 从标准输入读取，并写入标准输出和文件。
 
-**tee** 命令得名于管道系统中的 T 型三通管，它将水分成两个方向，形状像一个大写字母 T。
+`tee` 命令得名于管道系统中的 T 型三通管，它将水分成两个方向，形状像一个大写字母 T。
 
-**tee** 将数据从标准输入复制到每个 FILE，同时也复制到标准输出。实质上，**tee** 会复制其输入，并将其同时路由到多个输出。
+`tee` 将数据从标准输入复制到每个 `FILE`，同时也复制到标准输出。实质上，`tee` 会复制其输入，并将其同时路由到多个输出。
 
 ### 第 13.1 节：将输出写入 stdout 和文件
 
@@ -1999,7 +2053,7 @@ $ ls
 $ ls > file
 ```
 
-以下命令（借助 **tee** 命令）将输出同时写入屏幕（stdout）和文件。
+以下命令（借助 `tee` 命令）将输出同时写入屏幕（stdout）和文件。
 
 ```bash
 $ ls | tee file
@@ -2007,9 +2061,9 @@ $ ls | tee file
 
 ### 第 13.2 节：将管道链中部的输出写入文件并将其传回管道
 
-你还可以使用 **tee** 命令将命令的输出存储在文件中，并将相同的输出重定向到另一个命令。
+你还可以使用 `tee` 命令将命令的输出存储在文件中，并将相同的输出重定向到另一个命令。
 
-以下命令将当前 crontab 条目写入文件 crontab-backup.txt，并将 crontab 条目传递给 **sed** 命令，后者将执行替换操作。替换完成后，它将被添加为一个新的 cron 任务。
+以下命令将当前 `crontab` 条目写入文件 `crontab-backup.txt`，并将 `crontab` 条目传递给 `sed` 命令，后者将执行替换操作。替换完成后，它将被添加为一个新的 `cron` 任务。
 
 ```bash
 $ crontab -l | tee crontab-backup.txt | sed 's/old/new/' | crontab -
@@ -2017,7 +2071,7 @@ $ crontab -l | tee crontab-backup.txt | sed 's/old/new/' | crontab -
 
 ### 第 13.3 节：将输出写入多个文件
 
-你可以使用 **tee** 将输出管道传输到多个文件（包括终端），如下所示：
+你可以使用 `tee` 将输出管道传输到多个文件（包括终端），如下所示：
 
 ```bash
 $ ls | tee file1 file2 file3
@@ -2025,7 +2079,7 @@ $ ls | tee file1 file2 file3
 
 ### 第 13.4 节：指示 tee 命令追加到文件
 
-默认情况下，**tee** 命令会覆盖文件。你可以使用 -a 选项指示 **tee** 追加到文件，如下所示。
+默认情况下，`tee` 命令会覆盖文件。你可以使用 `-a` 选项指示 `tee` 追加到文件，如下所示。
 
 ```bash
 $ ls | tee -a file
@@ -2033,39 +2087,39 @@ $ ls | tee -a file
 
 ## 第 14 章：安全外壳（SSH）
 
-安全外壳用于通过加密连接从客户端远程访问服务器。OpenSSH 被用作 Telnet 连接的替代方案，后者可以实现远程 shell 访问但未加密。OpenSSH 客户端默认安装在大多数 GNU/Linux 发行版上，用于连接服务器。这些示例展示了如何使用 SSH 套件来接受 SSH 连接以及连接到另一台主机。
+安全外壳用于通过加密连接从客户端远程访问服务器。`OpenSSH` 被用作 `Telnet` 连接的替代方案，后者可以实现远程 shell 访问但未加密。`OpenSSH` 客户端默认安装在大多数 GNU/Linux 发行版上，用于连接服务器。这些示例展示了如何使用 SSH 套件来接受 SSH 连接以及连接到另一台主机。
 
 ### 第 14.1 节：连接远程服务器
 
-要连接服务器，我们必须在客户端使用 SSH，如下所示，
+要连接服务器，我们必须在客户端使用 `SSH`，如下所示，
 
 ```bash
 # ssh -p port user@server-address
 ```
 
-- **port** - 服务器监听的 ssh 端口（默认端口 22）。
-- **user** - 必须是服务器上具有 SSH 权限的现有用户。
-- **server address** - 服务器的 IP/域名。
+- `port` - 服务器监听的 `ssh` 端口（默认端口 22）。
+- `user` - 必须是服务器上具有 SSH 权限的现有用户。
+- `server address` - 服务器的 IP/域名。
 
-作为一个实际示例，假设你正在制作一个网站。你选择托管该网站的公司告诉你，服务器位于 **web-servers.com**，使用自定义端口 **2020**，并且你的账户名 **usr1** 已被选为在服务器上创建具有 SSH 权限的用户。在这种情况下，使用的 SSH 命令如下
+作为一个实际示例，假设你正在制作一个网站。你选择托管该网站的公司告诉你，服务器位于 `web-servers.com`，使用自定义端口 `2020`，并且你的账户名 `usr1` 已被选为在服务器上创建具有 SSH 权限的用户。在这种情况下，使用的 SSH 命令如下
 
 ```bash
 # ssh -p 2020 usr1@web-servers.com
 ```
 
-如果远程系统上的账户名与本地客户端上的相同，你可以省略用户名。因此，如果你在两个系统上都是 usr1，那么你可以简单地使用 web-servers.com 而不是 usr1@web-servers.com。
+如果远程系统上的账户名与本地客户端上的相同，你可以省略用户名。因此，如果你在两个系统上都是 `usr1`，那么你可以简单地使用 `web-servers.com` 而不是 `usr1@web-servers.com`。
 
-当你要连接的服务器无法直接访问时，可以尝试使用 ProxyJump 开关通过另一台可访问的服务器进行连接，该服务器可以连接到目标服务器。
+当你要连接的服务器无法直接访问时，可以尝试使用 `ProxyJump` 开关通过另一台可访问的服务器进行连接，该服务器可以连接到目标服务器。
 
 ```bash
 # ssh -J usr1@10.0.0.1:2020 usr2@10.0.0.2 -p 2222
 ```
 
-这将使你能够通过位于 10.0.0.1 的服务器（在端口 2020 上运行 ssh）连接到位于 10.0.0.2 的服务器（在端口 2222 上运行 ssh）。当然，你需要在两台服务器上都有账户。还要注意，-J 开关是在 OpenSSH 版本 7.3 中引入的。
+这将使你能够通过位于 `10.0.0.1` 的服务器（在端口 `2020` 上运行 `ssh`）连接到位于 `10.0.0.2` 的服务器（在端口 `2222` 上运行 `ssh`）。当然，你需要在两台服务器上都有账户。还要注意，`-J` 开关是在 `OpenSSH` 版本 7.3 中引入的。
 
 ### 第 14.2 节：安装 OpenSSH 套件
 
-连接远程 SSH 服务器和接受 SSH 连接都需要安装 openssh
+连接远程 SSH 服务器和接受 SSH 连接都需要安装 `openssh`
 
 Debian：
 
@@ -2089,7 +2143,7 @@ Yum：
 
 首先，我们必须编辑 SSH 守护进程配置文件。尽管在不同的 Linux 发行版中它可能位于不同的目录，但它通常存储于 `/etc/ssh/ssh_config` 下
 
-使用你的文本编辑器更改该文件中设置的值，所有以 # 开头的行都是注释，必须移除该字符才能生效。以下是一组建议：
+使用你的文本编辑器更改该文件中设置的值，所有以 `#` 开头的行都是注释，必须移除该字符才能生效。以下是一组建议：
 
 ```text
 Port (选择 0 - 65535 之间的一个数字，通常大于四位数)
@@ -2103,7 +2157,7 @@ AllowUsers user1 user2 ...etc
 
 首先，你需要拥有一对密钥。如果你还没有，请查看“生成公钥和私钥主题”。
 
-你的密钥对由私钥（id_rsa）和公钥（id_rsa.pub）组成。你所需要做的只是将公钥复制到远程主机，并将其内容添加到 ~/.ssh/authorized_keys 文件中。
+你的密钥对由私钥 `id_rsa` 和公钥 `id_rsa.pub` 组成。你所需要做的只是将公钥复制到远程主机，并将其内容添加到 `~/.ssh/authorized_keys` 文件中。
 
 一种简单的方法是：
 
@@ -2125,19 +2179,21 @@ ssh <user>@<ssh-server> -i id_rsa
 ssh-keygen [-t rsa | rsa1 | dsa ] [-C <comment>] [-b bits]
 ```
 
+
+
 例如：
 
 ```bash
 ssh-keygen -t rsa -b 4096 -C myemail@email.com
 ```
 
-默认位置是私钥位于 ~/.ssh/id_rsa，公钥位于 ~/.ssh/id_rsa.pub。
+默认位置是私钥位于 `~/.ssh/id_rsa`，公钥位于 `~/.ssh/id_rsa.pub`。
 
-如需更多信息，请访问 man.openbsd.org
+如需更多信息，请访问 `man.openbsd.org`
 
 ### 第 14.6 节：禁用 ssh 服务
 
-这将禁用 SSH 服务器端服务，如果需要，这将确保客户端无法通过 ssh 连接
+这将禁用 SSH 服务器端服务，如果需要，这将确保客户端无法通过 `ssh` 连接
 
 Ubuntu
 
@@ -2164,27 +2220,27 @@ sudo systemctl disable sshd.service
 
 ### 第 15.1 节：安全复制
 
-**scp** 命令用于安全地复制文件到远程位置或从远程位置复制文件。如果文件在当前工作目录中，仅文件名就足够了；否则，需要包含远程主机名的完整路径，例如 remote_user@some_server.org/path/to/file
+`scp` 命令用于安全地复制文件到远程位置或从远程位置复制文件。如果文件在当前工作目录中，仅文件名就足够了；否则，需要包含远程主机名的完整路径，例如 `remote_user@some_server.org/path/to/file`
 
-# 将 CWD 中的本地文件复制到新目录
+#### 将 CWD 中的本地文件复制到新目录
 
 ```bash
 scp localfile.txt /home/friend/share/
 ```
 
-# 将远程文件复制到当前工作目录
+#### 将远程文件复制到当前工作目录
 
 ```bash
 scp rocky@arena51.net:/home/rocky/game/data.txt ./
 ```
 
-# 将文件从一个远程位置复制到另一个远程位置
+#### 将文件从一个远程位置复制到另一个远程位置
 
 ```bash
 scp mars@universe.org:/beacon/light/bitmap.conf jupiter@universe.org:/beacon/night/
 ```
 
-# 要复制目录和子目录，请使用 "-r" 递归选项用于 scp
+#### 要复制目录和子目录，请使用 "-r" 递归选项用于 scp
 
 ```bash
 scp -r user@192.168.0.4:~/project/* ./workspace/
@@ -2203,10 +2259,6 @@ scp foobar.md user@remotehost.com:/remote/dest
 scp -i my_key.pem foobar.md user@remotehost.com:/remote/dest
 ```
 
-
-
-
-
 ## 第 16 章：GnuPG (GPG)
 
 GnuPG 是一个高级密钥管理系统，允许安全地签署或加密数据。GPG 是一个命令行工具，用于创建和操作 GnuPG 密钥。
@@ -2217,15 +2269,15 @@ GnuPG 最广泛的用途是在建立 SSH（安全外壳协议）连接时免密�
 
 ### 16.1 节：导出你的公钥
 
-为了使你的公钥私钥对有用，你必须让你的公钥可以被他人自由获取。请确保你正在处理的是你的**公钥**，因为你*永远*不应该分享你的私钥。你可以使用以下命令导出你的公钥：
+为了使你的公钥私钥对有用，你必须让你的公钥可以被他人自由获取。请确保你正在处理的是你的 `公钥`，因为你 `永远` 不应该分享你的私钥。你可以使用以下命令导出你的公钥：
 
 ```bash
 gpg --armor --export EMAIL_ADDRESS > public_key.asc
 ```
 
-其中 EMAIL_ADDRESS 是与该密钥关联的电子邮件地址。
+其中 `EMAIL_ADDRESS` 是与该密钥关联的电子邮件地址。
 
-或者，你可以将你的公钥上传到公共密钥服务器，例如 keys.gnupg.net，以便其他人可以使用。为此，在终端中输入以下命令：
+或者，你可以将你的公钥上传到公共密钥服务器，例如 `keys.gnupg.net`，以便其他人可以使用。为此，在终端中输入以下命令：
 
 ```bash
 gpg --list-keys
@@ -2237,13 +2289,13 @@ gpg --list-keys
 gpg --send-keys PRIMARY_ID
 ```
 
-其中 PRIMARY_ID 是该密钥的实际 ID。
+其中 `PRIMARY_ID` 是该密钥的实际 ID。
 
 现在，公钥已上传到密钥服务器并可供公共访问。
 
 ### 16.2 节：快速创建和使用 GnuPG 密钥
 
-安装 haveged（例如 `sudo apt-get install haveged`）以加速随机字节生成过程。然后：
+安装 `haveged`（例如 `sudo apt-get install haveged`）以加速随机字节生成过程。然后：
 
 ```bash
 gpg --gen-key
@@ -2268,11 +2320,11 @@ gpg --keyserver pgp.mit.edu --send-keys NNNNNNNN
 
 ## 第 17 章：网络配置
 
-本文档涵盖了 TCP/IP 网络、网络管理和系统配置基础知识。Linux 可以支持多个网络设备。设备名称从 0 开始编号并向上计数。例如，拥有两块网卡（NIC）的计算机将有两个分别标记为 eth0 和 eth1 的设备。
+本文档涵盖了 TCP/IP 网络、网络管理和系统配置基础知识。Linux 可以支持多个网络设备。设备名称从 0 开始编号并向上计数。例如，拥有两块网卡（NIC）的计算机将有两个分别标记为 `eth0` 和 `eth1` 的设备。
 
 ### 17.1 节：本地 DNS 解析
 
-文件：*/etc/hosts* 包含一个本地解析（而非通过 DNS 解析）的主机列表。
+文件：`/etc/hosts` 包含一个本地解析（而非通过 DNS 解析）的主机列表。
 
 文件内容示例：
 
@@ -2285,7 +2337,7 @@ XXX.XXX.XXX.XXX node-name
 
 ### 17.2 节：配置 DNS 服务器以进行域名解析
 
-文件：*/etc/resolv.conf* 包含用于域名解析的 DNS 服务器列表。
+文件：`/etc/resolv.conf` 包含用于域名解析的 DNS 服务器列表。
 
 文件内容示例：
 
@@ -2350,19 +2402,23 @@ $ ip route show # 列出路由表
 示例：
 
 - 将默认网关设置为 1.2.3.254：`ip route add default via 1.2.3.254`
-- 通过本地网关 192.168.1.1（在设备 eth0 上可达）添加一条默认路由（针对所有地址）：`ip route add default via 192.168.1.1 dev eth0`
+- 通过本地网关 192.168.1.1（在设备 `eth0` 上可达）添加一条默认路由（针对所有地址）：`ip route add default via 192.168.1.1 dev eth0`
 
 ### 17.4 节：为网络中的其他系统配置主机名
 
-你可以配置你的 Linux（或 macOS）系统，以便将标识符 <hostname> 绑定到网络中某个其他系统的 IP 地址。你可以按如下方式配置：
 
-- 系统级。你应该修改 /etc/hosts 文件。你只需要在该文件中添加一行新内容，包含：
-    1. 远程系统的 IP 地址 <ip_rem>，
+
+你可以配置你的 Linux（或 macOS）系统，以便将标识符 `<hostname>` 绑定到网络中某个其他系统的 IP 地址。你可以按如下方式配置：
+
+- 系统级。你应该修改 `/etc/hosts` 文件。你只需要在该文件中添加一行新内容，包含：
+
+    1. 远程系统的 IP 地址 `<ip_rem>`，
     2. 一个或多个空格，以及
-    3. 标识符 <hostname>。
-- 针对单个用户。你应该修改 ~/.hosts 文件 —— 你必须先创建它。它不像系统级配置那样简单。在这里你可以看到解释。
+    3. 标识符 `<hostname>`。
 
-例如，你可以使用 cat Unix 工具添加此行。假设你想 ping 本地网络中 IP 地址为 192.168.1.44 的 PC，并且你想仅通过 remote_pc 来引用该 IP 地址。那么你必须在你的 shell 中写入：
+- 针对单个用户。你应该修改 `~/.hosts` 文件 —— 你必须先创建它。它不像系统级配置那样简单。在这里你可以看到解释。
+
+例如，你可以使用 `cat` Unix 工具添加此行。假设你想 ping 本地网络中 IP 地址为 192.168.1.44 的 PC，并且你想仅通过 `remote_pc` 来引用该 IP 地址。那么你必须在你的 shell 中写入：
 
 ```bash
 $ echo "192.168.1.44 remote_pc" | sudo tee -a /etc/hosts
@@ -2452,13 +2508,13 @@ Settings for eth0:
 $ ip link show
 ```
 
-将接口 eth0 重命名为 wan：
+将接口 `eth0` 重命名为 `wan`：
 
 ```bash
 $ ip link set dev eth0 name wan
 ```
 
-启动（或关闭）接口 eth0：
+启动（或关闭）接口 `eth0`：
 
 ```bash
 $ ip link set dev eth0 up
@@ -2513,13 +2569,12 @@ iface eth0 inet static
 *注意：原文有两行 `dns-nameservers`。标准语法通常将它们合并或列在一行中，但如果结构有效我会保留，或者如果明显错误则更正为标准形式。在 Debian/Ubuntu 中，你可以将它们列在一行或有多行。我将保留原始行，但确保它们是不同的。*
 
 实际上，标准语法通常允许：
+
 `dns-nameservers 10.10.1.20 10.10.1.30`
+
 或者根据版本不同，有时使用单独的行。我将保留原始的换行，但如果这是错误则修复重复项，但在这里看起来像是两个独立的条目，这可能是有效的，也可能只是格式不良。我将按照 OCR 块中提供的方式保留它们，但格式整洁。
 
 这些更改在系统重启后仍然有效。
-
-
-
 
 ## 使用 `ifconfig` 工具进行静态配置（临时更改）
 
@@ -2535,28 +2590,30 @@ $ ifconfig <interface> <ip-address>/<mask> up
 $ ifconfig eth0 10.10.50.100/16 up
 ```
 
+
+
 ## 第 18 章：Midnight Commander
 
-Midnight Commander 或 mc 是一个控制台文件管理器。本章包括对其功能的描述以及如何使用它发挥其全部潜力的示例和技巧。
+Midnight Commander 或 `mc` 是一个控制台文件管理器。本章包括对其功能的描述以及如何使用它发挥其全部潜力的示例和技巧。
 
 ### 第 18.1 节：Midnight Commander 浏览模式下的功能键
 
 以下列出了在 Midnight Commander 文件系统浏览模式下，通过键盘上的功能键触发的操作列表。
 
-- **F1** 显示帮助
-- **F2** 打开用户菜单
-- **F3** 显示所选文件的内容
-- **F4** 在内部文件编辑器中打开所选文件
-- **F5** 将所选文件复制到第二个面板中打开的目录
-- **F6** 将所选文件移动到第二个面板中打开的目录
-- **F7** 在当前面板中打开的目录下创建新目录
-- **F8** 删除所选文件或目录
-- **F9** 聚焦到屏幕顶部的主菜单
-- **F10** 退出 mc
+- `F1` 显示帮助
+- `F2` 打开用户菜单
+- `F3` 显示所选文件的内容
+- `F4` 在内部文件编辑器中打开所选文件
+- `F5` 将所选文件复制到第二个面板中打开的目录
+- `F6` 将所选文件移动到第二个面板中打开的目录
+- `F7` 在当前面板中打开的目录下创建新目录
+- `F8` 删除所选文件或目录
+- `F9` 聚焦到屏幕顶部的主菜单
+- `F10` 退出 `mc`
 
 ### 第 18.2 节：Midnight Commander 文件编辑模式下的功能键
 
-Midnight Commander 内置了一个编辑器，当在浏览模式下将光标移至目标文件并按 F4 功能键时启动。也可以通过执行以下命令以独立模式调用：
+Midnight Commander 内置了一个编辑器，当在浏览模式下将光标移至目标文件并按 `F4` 功能键时启动。也可以通过执行以下命令以独立模式调用：
 
 ```bash
 mcedit <filename>
@@ -2564,24 +2621,24 @@ mcedit <filename>
 
 以下列出了在编辑模式下可以触发的操作列表。
 
-- **F1** 显示帮助
-- **F2** 保存当前文件
-- **F3** 标记文本选择的起始位置。将光标向任意方向移动以进行选择。第二次按下标记选择的结束位置。
-- **F4** 调出文本搜索/替换对话框
-- **F5** 将所选文本复制到光标位置（复制/粘贴）
-- **F6** 将所选文本移动到光标位置（剪切/粘贴）
-- **F7** 调出文本搜索对话框
-- **F8** 删除所选文本
-- **F9** 聚焦到屏幕顶部的主菜单
-- **F10** 退出编辑器
+- `F1` 显示帮助
+- `F2` 保存当前文件
+- `F3` 标记文本选择的起始位置。将光标向任意方向移动以进行选择。第二次按下标记选择的结束位置。
+- `F4` 调出文本搜索/替换对话框
+- `F5` 将所选文本复制到光标位置（复制/粘贴）
+- `F6` 将所选文本移动到光标位置（剪切/粘贴）
+- `F7` 调出文本搜索对话框
+- `F8` 删除所选文本
+- `F9` 聚焦到屏幕顶部的主菜单
+- `F10` 退出编辑器
 
-## 第 19 章：更改根目录 (chroot)
+## 第 19 章：更改根目录 (`chroot`)
 
-更改根目录 (chroot) 是一种更改当前运行进程及其子进程的表面根目录的操作。在这样修改后的环境中运行的程序无法访问该环境目录树之外的文件和命令。
+更改根目录 (`chroot`) 是一种更改当前运行进程及其子进程的表面根目录的操作。在这样修改后的环境中运行的程序无法访问该环境目录树之外的文件和命令。
 
 ### 第 19.1 节：要求
 
-- root 权限
+- `root` 权限
 - 另一个可用的 Linux 环境，例如 Live CD 引导或现有的发行版
 - `chroot` 源和目标环境架构匹配（使用 `uname -m` 检查当前环境架构）
 - 在 `chroot` 环境中可能需要加载的内核模块必须已加载（例如，使用 `modprobe`）
@@ -2589,82 +2646,81 @@ mcedit <filename>
 ### 第 19.2 节：在目录中手动更改根目录
 
 1. 确保您满足了所有要求，参见“要求”部分
-
 2. 挂载临时 API 文件系统：
 
-   ```bash
-   cd /location/of/new/root
-   mount -t proc proc proc/
-   mount --rbind /sys sys/
-   mount --rbind /dev dev/
-   mount --rbind /run run/ (可选)
-   ```
+```bash
+cd /location/of/new/root
+mount -t proc proc proc/
+mount --rbind /sys sys/
+mount --rbind /dev dev/
+mount --rbind /run run/ (可选)
+```
 
-3. 如果您需要在 chroot 环境中使用互联网连接，请复制 DNS 详细信息：
+3. 如果您需要在 `chroot` 环境中使用互联网连接，请复制 DNS 详细信息：
 
-   ```bash
-   cp /etc/resolv.conf etc/resolv.conf
-   ```
+```bash
+cp /etc/resolv.conf etc/resolv.conf
+```
 
-4. 更改根目录到 /location/of/new/root，指定 shell（在此示例中为 /bin/bash）：
+4. 更改根目录到 `/location/of/new/root`，指定 shell（在此示例中为 `/bin/bash`）：
 
-   ```bash
-   chroot /location/of/new/root /bin/bash
-   ```
+```bash
+chroot /location/of/new/root /bin/bash
+```
 
-5. 在 chroot 之后，可能需要加载本地 bash 配置：
+5. 在 `chroot` 之后，可能需要加载本地 bash 配置：
 
-   ```bash
-   source /etc/profile
-   source ~/.bashrc
-   ```
+```bash
+source /etc/profile
+source ~/.bashrc
+```
 
-6. 可选地，创建一个独特的提示符以能够区分您的 chroot 环境：
+6. 可选地，创建一个独特的提示符以能够区分您的 `chroot` 环境：
 
-   ```bash
-   export PS1="(chroot) $PS1"
-   ```
+```bash
+export PS1="(chroot) $PS1"
+```
 
-7. 完成 chroot 操作后，您可以通过以下方式退出：
+7. 完成 `chroot` 操作后，您可以通过以下方式退出：
 
-   ```bash
-   exit
-   ```
+```bash
+exit
+```
 
 8. 卸载临时文件系统：
 
-   ```bash
-   cd /
-   umount --recursive /location/of/new/root
-   ```
+```bash
+cd /
+umount --recursive /location/of/new/root
+```
 
-### 第 19.3 节：使用 chroot 的原因
+### 第 19.3 节：使用 `chroot` 的原因
 
 更改根目录通常用于在无法引导和/或登录的系统上进行系统维护。
 
 常见示例包括：
 
 - 重新安装引导加载程序
-- 重建 initramfs 镜像
+- 重建 `initramfs` 镜像
 - 升级或降级软件包
 - 重置被遗忘的密码
 - 在干净的根环境中构建软件
 
 ## 第 20 章：包管理器
 
-### 第 20.1 节：如何使用 apt 包管理器更新软件包
+### 第 20.1 节：如何使用 `apt` 包管理器更新软件包
 
-高级包工具，俗称 'apt' 包管理器，可以处理 Debian、Slackware 和其他 Linux 发行版上软件的安装和移除。以下是一些简单的使用示例：
+高级包工具，俗称 '`apt`' 包管理器，可以处理 Debian、Slackware 和其他 Linux 发行版上软件的安装和移除。以下是一些简单的使用示例：
 
-**update**
+`update`
 
-此选项获取并扫描 Packages.gz 文件，以便获取新包和更新包的信息。为此，输入以下命令：
+此选项获取并扫描 `Packages.gz` 文件，以便获取新包和更新包的信息。为此，输入以下命令：
 
 ```bash
 sudo apt-get update
 ```
 
-**upgrade**
+`upgrade`
 
 此选项用于安装系统当前安装的所有软件包的最新版本。获取并升级有新版本可用的当前安装软件包；在任何情况下，当前安装的软件包都不会被移除，或者未安装的软件包不会被获取并安装。要升级，输入以下命令：
 
@@ -2672,15 +2728,15 @@ sudo apt-get update
 sudo apt-get upgrade
 ```
 
-**dist-upgrade**
+`dist-upgrade`
 
-除了执行升级功能外，dist-upgrade 还会智能地处理新版本软件包的依赖关系变化。如果有必要，它会尝试升级最重要的软件包，而牺牲不那么重要的软件包。为此，输入以下命令：
+除了执行升级功能外，`dist-upgrade` 还会智能地处理新版本软件包的依赖关系变化。如果有必要，它会尝试升级最重要的软件包，而牺牲不那么重要的软件包。为此，输入以下命令：
 
 ```bash
 sudo apt-get dist-upgrade
 ```
 
-### 第 20.2 节：如何使用 pacman 包管理器安装软件包
+### 第 20.2 节：如何使用 `pacman` 包管理器安装软件包
 
 要在数据库中搜索软件包，同时搜索软件包的名称和描述：
 
@@ -2696,7 +2752,7 @@ sudo pacman -S package_name1 package_name2 …
 
 *source*
 
-### 第 20.3 节：如何使用 pacman 包管理器更新软件包
+### 第 20.3 节：如何使用 `pacman` 包管理器更新软件包
 
 要更新特定程序：
 
@@ -2710,9 +2766,9 @@ sudo pacman -S <programName>
 sudo pacman -Sy
 ```
 
-### 第 20.4 节：如何使用 yum 更新软件包
+### 第 20.4 节：如何使用 `yum` 更新软件包
 
-Yellowdog Updater, Modified，Yellow Dog Linux 最后留下的遗迹之一，是 Red Hat、Fedora 和 CentOS 系统及其衍生版本使用的包管理器。它可以处理这些 Linux 发行版中打包为 rpms 的软件的安装和移除。以下是一些简单的使用示例：
+Yellowdog Updater, Modified，Yellow Dog Linux 最后留下的遗迹之一，是 Red Hat、Fedora 和 CentOS 系统及其衍生版本使用的包管理器。它可以处理这些 Linux 发行版中打包为 `rpms` 的软件的安装和移除。以下是一些简单的使用示例：
 
 #### search
 
@@ -2738,7 +2794,7 @@ sudo yum install <packageName>
 sudo yum update
 ```
 
-与 apt 不同，大多数 yum 命令如果最近没有进行库元数据检查（或如果强制进行），也会自动检查库元数据的更新，并获取和扫描更新后的元数据，以便在请求操作执行之前，关于新软件和更新软件的信息可用。
+与 `apt` 不同，大多数 `yum` 命令如果最近没有进行库元数据检查（或如果强制进行），也会自动检查库元数据的更新，并获取和扫描更新后的元数据，以便在请求操作执行之前，关于新软件和更新软件的信息可用。
 
 ## 第 21 章：编译 Linux 内核
 
@@ -2750,7 +2806,7 @@ sudo yum update
 
 选项 A) 使用 Git
 
-如果您希望保持与最新 Ubuntu 内核源代码同步，请使用 git。详细指令可以在内核 Git 指南中找到。git 仓库不包含必要的控制文件，因此您必须通过以下命令构建它们：
+如果您希望保持与最新 Ubuntu 内核源代码同步，请使用 `git`。详细指令可以在内核 Git 指南中找到。`git` 仓库不包含必要的控制文件，因此您必须通过以下命令构建它们：
 
 ```bash
 fakeroot debian/rules clean
@@ -2770,40 +2826,42 @@ sudo apt-get build-dep linux-image-$(uname -r)
 
 这是适用于希望修改或尝试 Ubuntu 打补丁的内核源代码的用户。
 
-1. 从 kernel.org 获取最新的内核源代码。
-
-2. 将存档解压到目录并 cd 进入该目录：
-
-   ```bash
-   tar xf linux-*.tar.xz
-   cd linux-*
-   ```
-
-3. 构建 ncurses 配置界面：
-
-   ```bash
-   make menuconfig
-   ```
-
-4. 要接受默认配置，按 `→` 高亮显示 `< Exit >`，然后按 `Return`。
-
-5. 再次按 `Return` 保存配置。
-
-6. 使用 make 构建内核：
-
-   ```bash
-   make
-   ```
-
-请注意，您可以使用 -j 标志并行编译文件并利用多核优势。
-
-压缩的内核镜像可以在 arch/[arch]/boot/bzImage 中找到，其中 [arch] 等于 `uname -a`。
 
 
+# 构建 Linux 内核
+
+### 1. 从 `kernel.org` 获取最新的内核源代码。
+
+### 2. 将存档解压到目录并 `cd` 进入该目录：
+
+```bash
+tar xf linux-*.tar.xz
+cd linux-*
+```
+
+### 3. 构建 `ncurses` 配置界面：
+
+```bash
+make menuconfig
+```
+
+### 4. 要接受默认配置，按 `→` 高亮显示 `< Exit >`，然后按 `Return`。
+
+### 5. 再次按 `Return` 保存配置。
+
+### 6. 使用 `make` 构建内核：
+
+```bash
+make
+```
+
+请注意，您可以使用 `-j` 标志并行编译文件并利用多核优势。
+
+压缩的内核镜像可以在 `arch/[arch]/boot/bzImage` 中找到，其中 `[arch]` 等于 `uname -a`。
 
 ## 致谢
 
-衷心感谢 Stack Overflow Documentation 的所有人员，他们帮助提供了这些内容。如需发布或更新新内容，请将更多修改发送至 **web@petercv.com**。
+衷心感谢 Stack Overflow Documentation 的所有人员，他们帮助提供了这些内容。如需发布或更新新内容，请将更多修改发送至 `web@petercv.com`。
 
 | 贡献者 | 贡献内容 |
 | :--- | :--- |

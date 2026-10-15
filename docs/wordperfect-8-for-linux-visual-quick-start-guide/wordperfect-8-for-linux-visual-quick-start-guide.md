@@ -1,34 +1,5 @@
+
 # Linux 的 WordPerfect 8：Visual 快速启动指南
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 This book is dedicated to the world of
 
@@ -53,39 +24,6 @@ Harold who helped me get everything up and running. Without him this book wouldn
 and
 
 Julian, my wonderful little guy, for putting up with Mama while she pounded away at the keyboard. K!
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ### THE BASICS
 
@@ -125,8 +63,11 @@ WordPerfect 功能丰富。如果你一步一步来，很快就能创建专业�
 如果你想了解更多关于 Linux 的信息，我丈夫的精彩书籍将帮助你更快地入门（不，我不是偏心的！）。他的书：《Red Hat Linux 6: Visual QuickPro Guide》作者 Harold Davis（Peachpit Press）。这本书随附 CD-ROM 上的完整可用的 Linux 副本。
 
 一些你可以访问以获取更多关于 Linux 和 Linux 社区信息的网站：
+
 非常有用的 Linux 链接：http://www.bearhome.com/linux/links.html
+
 Red Hat 主页：http://www.redhat.com/
+
 Linux Links，Linux 信息门户：http://www.linuxlinks.com/
 
 #### Companion Web Sites
@@ -143,7 +84,7 @@ WordPerfect 8 是一个功能齐全的文字处理程序，可用于创建各种
 
 WordPerfect 8 文档在文档窗口中创建。程序窗口在启动 WordPerfect 时出现。使用程序窗口进行的任何更改都会影响 WordPerfect 中创建的所有文档。
 
-文档以 WordPerfect 8 .wpd 文件格式保存。它们可以从其他文件格式导入或导出到其他文件格式。
+文档以 WordPerfect 8 `.wpd` 文件格式保存。它们可以从其他文件格式导入或导出到其他文件格式。
 
 插入点用于在页面上定位文本、图形、表格和图表。插入点还显示你在文档中的位置。阴影光标让你可以在文档中的任何位置定位文本，即使之前那里没有输入任何内容。
 
@@ -171,10 +112,6 @@ WordPerfect 让你可以自由发挥字符格式。你可以更改字体、字�
 
 完成文档后，文件可以打印。如果创建了 Web 文档，它可以以 HTML 格式保存到互联网。
 
-
-
-
-
 ### WordPerfect 8 屏幕（图 1）
 
 1A 标题栏 1B 当前打开文档 2 菜单栏 3 WordPerfect 8 工具栏 4 属性栏
@@ -196,39 +133,53 @@ WordPerfect 让你可以自由发挥字符格式。你可以更改字体、字�
 ### WordPerfect 8 屏幕说明
 
 #### 1A–B 标题栏
+
 显示程序名称和当前文档名称。
 
 #### 2 菜单栏
+
 点击任意菜单标题即可访问命令弹出菜单、对话框，以及各种工具栏、视图和尺规栏。
 
 #### 3 WordPerfect 8 工具栏
+
 作为十六个工具栏之一，WordPerfect 8 工具栏的按钮和下拉列表可快速访问标准文字处理命令，如新建、打开、保存、打印、剪切、复制、粘贴、撤销和重做。它还包含多个 WordPerfect 8 命令，如创建列和创建表格。
 
 #### 4 属性栏
+
 属性栏是一个上下文相关的工具栏。按钮和下拉列表会根据所选内容动态变化。这使您可以轻松访问与所选工具或项目相关的最重要的命令。
 
 #### 5A–D 尺规栏
+
+
+
 尺规栏显示当前标签和左右边距设置、缩进以及列边界。它可用于设置所有这些内容。您可以通过右键单击尺规栏并使用出现的快速菜单来快速访问与尺规栏相关的命令。
 
-#### 6 插入点
+### 6 插入点
+
 这个闪烁的垂直条显示您在文档中的位置。您可以使用它来定位文本、图形或表格。
 
-#### 7 阴影光标
+### 7 阴影光标
+
 WordPerfect 的精彩功能之一，阴影光标让您可以在文档的任何位置放置文本、图形、表格或图表，甚至在空白区域中。无需通过按键盘上的 Enter 键手动插入空行来移动到想要放置项目的位置。
 
-#### 8 边距指南线
+### 8 边距指南线
+
 这些非打印的水平和垂直灰线显示顶部、底部、左侧和右侧的边距边界。使用表格和列时也会显示指南线。
 
-#### 9 程序窗口
+### 9 程序窗口
+
 启动 WordPerfect 时会出现这个较小的窗口。使用程序窗口所做的任何更改都会影响所有文档。
 
-#### 10 文档窗口
+### 10 文档窗口
+
 这里是主要操作发生的地方。您创建的文档会显示在文档窗口中。所有文本、图形、表格、图表等都显示在此处。您在文档窗口中所做的任何更改仅影响当前打开和活动的文档。您一次可以打开多达 100 个文档窗口。
 
-#### 11A–B 应用程序栏
+### 11A–B 应用程序栏
+
 文档窗口底部的这个微小水平面板显示有关文档的重要信息，包括当前页和位置、日期、时间以及当前选定的文本对齐方式。它还可以快速将日期和时间插入文档。
 
-#### 12A–B 滚动条
+### 12A–B 滚动条
+
 根据需要出现在文档窗口底部和右侧的水平和垂直条。（由于图 1 中显示了整个页面的宽度，因此不需要水平滚动条；因此它不存在。）滚动条可通过单击滚动箭头或拖动滚动框来浏览文档。
 
 ### 本书中使用的术语
@@ -242,37 +193,40 @@ WordPerfect 的精彩功能之一，阴影光标让您可以在文档的任何�
 
 图 2a–g 显示了您在操作 WordPerfect 8 对话框时将使用的控件。
 
-图 2a. 文本框和微调按钮。您可以在文本框中输入文本或数字。微调按钮用于增加或减少数字。要增加数字，请单击上箭头。要减少数字，请单击下箭头。
+#### 图 2a. 文本框和微调按钮
+您可以在文本框中输入文本或数字。微调按钮用于增加或减少数字。要增加数字，请单击上箭头。要减少数字，请单击下箭头。
 
-图 2b. 推送按钮。推送按钮通常启动用户指定的操作和/或关闭对话框、取消操作，或对操作回答否以防止其开始。选中的推送按钮周围有一条黑色边框。推送按钮上的文本后跟省略号 (...) 时，单击它会打开另一个对话框。
+#### 图 2b. 推送按钮
+推送按钮通常启动用户指定的操作和/或关闭对话框、取消操作，或对操作回答否以防止其开始。选中的推送按钮周围有一条黑色边框。推送按钮上的文本后跟省略号 `...` 时，单击它会打开另一个对话框。
 
-图 2c. 下拉列表。下拉列表提供可供选择的项目列表。要打开列表，请单击列表框按钮或列表框右侧的小箭头。某些下拉列表允许您输入文本。
+#### 图 2c. 下拉列表
+下拉列表提供可供选择的项目列表。要打开列表，请单击列表框按钮或列表框右侧的小箭头。某些下拉列表允许您输入文本。
 
-图 2d. 列表按钮。列表按钮在对话框中出现两种外观：第一种是按钮上的小文件夹，第二种是左指三角形。单击列表按钮时，会打开文件管理器对话框以让您选择文件或移动到另一个目录。
+#### 图 2d. 列表按钮
+列表按钮在对话框中出现两种外观：第一种是按钮上的小文件夹，第二种是左指三角形。单击列表按钮时，会打开文件管理器对话框以让您选择文件或移动到另一个目录。
 
-图 2e. 复选框。单击复选框可打开或关闭选项。根据您的 WordPerfect 设置，选中时框中可能会或可能不会出现复选标记（如果没有复选标记，整个框将为较深的灰色）。WordPerfect 的默认设置是不显示复选标记，因此本书记载时即为这种方式。在此示例中，闪烁光标和图形已被选中。
+#### 图 2e. 复选框
+单击复选框可打开或关闭选项。根据您的 WordPerfect 设置，选中时框中可能会或可能不会出现复选标记（如果没有复选标记，整个框将为较深的灰色）。WordPerfect 的默认设置是不显示复选标记，因此本书记载时即为这种方式。在此示例中，闪烁光标和图形已被选中。
 
-图 2f. 单选按钮。单选按钮通常包含在某个区域中，您只能从两个或多个选项中选择一个。单击菱形即可选择一个选项。较深灰色的菱形（本例中为文档）即为选中状态。有些人称之为选项按钮。
+#### 图 2f. 单选按钮
+单选按钮通常包含在某个区域中，您只能从两个或多个选项中选择一个。单击菱形即可选择一个选项。较深灰色的菱形（本例中为文档）即为选中状态。有些人称之为选项按钮。
 
-图 2g. 预览区域。某些对话框包含预览区域，让您在单击确定并将更改应用到文档之前查看更改效果。随着您添加和删除字符或选项，这些项目会在预览中出现或消失。
-
-
-
-
+#### 图 2g. 预览区域
+某些对话框包含预览区域，让您在单击确定并将更改应用到文档之前查看更改效果。随着您添加和删除字符或选项，这些项目会在预览中出现或消失。
 
 ### 菜单
 
 菜单栏上共有 8 个菜单可用。这些菜单提供了对命令、飞出菜单（从主菜单打开的子菜单）以及对话框的访问。
 
-#### 打开菜单并选择项目：
+#### 打开菜单并选择项目
 
-- 1. 将鼠标指针定位到菜单标题上并单击。菜单将打开（图 3）。如果在菜单项右侧看到一个小箭头，则表示存在可用的飞出菜单。要打开飞出菜单，请单击小箭头（图 4）。
-- 2. 将鼠标向下移动以突出显示要选择的项目。
-- 3. 单击以选择该项目。
+1. 将鼠标指针定位到菜单标题上并单击。菜单将打开（图 3）。如果在菜单项右侧看到一个小箭头，则表示存在可用的飞出菜单。要打开飞出菜单，请单击小箭头（图 4）。
+2. 将鼠标向下移动以突出显示要选择的项目。
+3. 单击以选择该项目。
 
 ### 提示
 
-- 菜单项后带有省略号 (...) 表示该项将打开一个对话框。
+- 菜单项后带有省略号 `...` 表示该项将打开一个对话框。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_18_0.png)
 
@@ -286,9 +240,9 @@ WordPerfect 的精彩功能之一，阴影光标让您可以在文档的任何�
 
 ### 键盘快捷键
 
-许多菜单命令都有键盘等效项。键盘快捷键（也称为热键）始终使用 Ctrl、Shift 或 Alt 键（或它们的组合）加上字母或数字键。很多时候该字母是助记符。例如，Copy 命令使用字母 C。
+许多菜单命令都有键盘等效项。键盘快捷键（也称为热键）始终使用 `Ctrl`、`Shift` 或 `Alt` 键（或它们的组合）加上字母或数字键。很多时候该字母是助记符。例如，`Copy` 命令使用字母 `C`。
 
-例如，Copy 命令的键盘快捷键是 Ctrl+C。
+例如，`Copy` 命令的键盘快捷键是 `Ctrl+C`。
 
 有关如何创建自定义键盘快捷键的详细信息，请参阅第 210–212 页。
 
@@ -318,31 +272,27 @@ WordPerfect 8 for Linux 有三个版本可供使用：可下载的免费版、�
 
 WordPerfect 8 中共有十六个工具栏。它们只需单击按钮即可访问命令和对话框。首次启动 WordPerfect 时，默认情况下有两个工具栏可用。它们是 WordPerfect 8 工具栏和属性栏。
 
-#### 访问工具栏：
+#### 访问工具栏
 
-- 1. 从 View 菜单中选择 Toolbars（图 7）。Toolbars 对话框将打开（图 8）。
-- 2. 在 Available toolbars 列表框中，选择要显示的工具栏旁边的复选框。
-- 3. 单击 OK。Toolbars 对话框将关闭，您选择的工具栏将出现。
+1. 从 `View` 菜单中选择 `Toolbars`（图 7）。`Toolbars` 对话框将打开（图 8）。
+2. 在 `Available toolbars` 列表框中，选择要显示的工具栏旁边的复选框。
+3. 单击 `OK`。`Toolbars` 对话框将关闭，您选择的工具栏将出现。
 
 或
 
-在文档窗口顶部右键单击一个工具栏，并从出现的 QuickMenu 中选择要显示的工具栏（图 9）。
+在文档窗口顶部右键单击一个工具栏，并从出现的 `QuickMenu` 中选择要显示的工具栏（图 9）。
 
-图 7. 从 View 菜单中选择 Toolbars。
+图 7. 从 `View` 菜单中选择 `Toolbars`。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_20_0.png)
 
-图 8. 从 Available toolbars 列表框中选择要查看的工具栏，然后单击 OK。
+图 8. 从 `Available toolbars` 列表框中选择要查看的工具栏，然后单击 `OK`。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_20_1.png)
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_20_2.png)
 
-图 9. 右键单击一个工具栏，并从 QuickMenu 中选择要查看的工具栏。
-
-
-
-
+图 9. 右键单击一个工具栏，并从 `QuickMenu` 中选择要查看的工具栏。
 
 ### 早期 WordPerfect 版本的用户
 
@@ -352,33 +302,33 @@ WordPerfect 8 中共有十六个工具栏。它们只需单击按钮即可访问
 
 使用 Linux 版 WordPerfect 8，您可以设置键盘使其像 WordPerfect 6 for DOS，或 WordPerfect 5.1、6、7 或 8 for Windows 那样工作。您也可以将 WordPerfect 8 工具栏更改为 WordPerfect 6 或 7 工具栏。
 
-![](img/02dde5e0b11c4f9add393f2d6c89d9a5_21_0.png)
+#### 将键盘设置更改为早期 WordPerfect 版本
 
-#### 将键盘设置更改为早期 WordPerfect 版本：
+1. 在程序窗口中选择 `Preferences`（首选项）（图 10）。首选项对话框将打开（图 11）。
+2. 单击 `Keyboard`（键盘）。键盘首选项对话框将出现（图 12）。
+3. 从 `Keyboards` 列表框中选择您想要使用的键盘。
+4. 单击 `Select`（选择）。键盘首选项对话框将关闭。
+5. 单击 `Close`（关闭）以关闭首选项对话框并返回到文档窗口。
 
-1. 在程序窗口中选择 Preferences（首选项）（图 10）。首选项对话框将打开（图 11）。
-2. 单击 Keyboard（键盘）。键盘首选项对话框将出现（图 12）。
-3. 从 Keyboards 列表框中选择您想要使用的键盘。
-4. 单击 Select（选择）。键盘首选项对话框将关闭。
-5. 单击 Close（关闭）以关闭首选项对话框并返回到文档窗口。
+
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_21_1.png)
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_21_2.png)
 
-#### 显示 WordPerfect for Windows 6 或 7 工具栏：
+### 显示 WordPerfect for Windows 6 或 7 工具栏
 
-1. 在 WordPerfect 8 工具栏上右键单击。QuickMenu 将出现（图 13）。
-2. 从 QuickMenu 中选择 WordPerfect 7 或 WordPerfect 6。您选择的工具栏将出现在文档窗口顶部。
+1. 在 WordPerfect 8 工具栏上右键单击。`QuickMenu` 将出现（图 13）。
+2. 从 `QuickMenu` 中选择 `WordPerfect 7` 或 `WordPerfect 6`。您选择的工具栏将出现在文档窗口顶部。
 
-### 提示
+#### 提示
 
-当工具栏显示时，QuickMenu 上该项目旁边会出现一个小方块。
+当工具栏显示时，`QuickMenu` 上该项目旁边会出现一个小方块。
 
-#### 隐藏 WordPerfect 8 工具栏：
+### 隐藏 WordPerfect 8 工具栏
 
-1. 在 WordPerfect 8 工具栏上右键单击。QuickMenu 将出现（图 14）。
-2. 从 QuickMenu 中选择 WordPerfect 8。WordPerfect 8 工具栏将从文档窗口顶部消失。
+1. 在 WordPerfect 8 工具栏上右键单击。`QuickMenu` 将出现（图 14）。
+2. 从 `QuickMenu` 中选择 `WordPerfect 8`。`WordPerfect 8` 工具栏将从文档窗口顶部消失。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_22_0.png)
 
@@ -390,20 +340,19 @@ Figure 14. Right-click on the WordPerfect 8 toolbar, then choose WordPerfect 8 f
 
 ### 查看文档
 
-View 菜单为您提供了两个用于更改视图质量的命令。视图质量是指文档在文档窗口中的显示方式。
+`View` 菜单为您提供了两个用于更改视图质量的命令。视图质量是指文档在文档窗口中的显示方式。
 
 这两种视图质量，即草稿视图和页面视图，都在 WYSIWYG（所见即所得）环境中显示文档，模仿打印时的外观。这种模仿包括在文档窗口中使用打印机打印时使用的字体。字体属性，包括粗体、斜体和下划线，都在文档窗口中显示为打印页面上的外观。
 
 然而，这两种视图之间存在一些差异。以下是每种视图的简要描述：
 
 - 草稿视图（图 15）在处理大型或复杂文档时非常方便。它在屏幕上重绘速度更快，并且使用更少的屏幕空间，因为诸如页眉、页脚和脚注等项目不会显示。此外，分页符使用双线显示。
-
 - 页面视图（图 16）显示文档中的所有内容，包括页眉、页脚、脚注和水印。每次出现新页面时，整个页面都会以图形方式显示，这意味着页面的任何未使用部分都会显示。
 
-#### 更改视图质量：
+#### 更改视图质量
 
-1. 通过单击菜单标题打开 View 菜单（图 17）。
-2. 从 View 菜单中选择 Draft 或 Page。
+1. 通过单击菜单标题打开 `View` 菜单（图 17）。
+2. 从 `View` 菜单中选择 `Draft` 或 `Page`。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_23_0.png)
 
@@ -411,18 +360,18 @@ View 菜单为您提供了两个用于更改视图质量的命令。视图质量
 
 ### 放大和缩小以查看文档
 
-Zoom 命令用于放大或缩小文档的视图。您可以放大以查看细节或缩小以查看整个文档。放大或缩小不会影响文档或文本的大小，只会影响您对它的查看方式。
+`Zoom` 命令用于放大或缩小文档的视图。您可以放大以查看细节或缩小以查看整个文档。放大或缩小不会影响文档或文本的大小，只会影响您对它的查看方式。
 
-#### 放大到不同的缩放比例：
+#### 放大到不同的缩放比例
 
-单击 WordPerfect 8 工具栏上的 Zoom 按钮，然后从下拉列表中选择您想要的缩放比例（图 18）。
+单击 WordPerfect 8 工具栏上的 `Zoom` 按钮，然后从下拉列表中选择您想要的缩放比例（图 18）。
 
 或
 
-1. 从 View 菜单中选择 Zoom（图 19）。Set Zoom 对话框将打开（图 20）。
-2. 选择您想要使用的缩放比例旁边的单选按钮，然后单击 OK。文档将在文档窗口中放大或缩小。
+1. 从 `View` 菜单中选择 `Zoom`（图 19）。`Set Zoom` 对话框将打开（图 20）。
+2. 选择您想要使用的缩放比例旁边的单选按钮，然后单击 `OK`。文档将在文档窗口中放大或缩小。
 
-Figure 17. Choose either Draft or Page from the View menu or press Ctrl+F5 or Shift+Ctrl+F5, respectively.
+Figure 17. Choose either Draft or Page from the View menu or press `Ctrl+F5` or `Shift+Ctrl+F5`, respectively.
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_24_0.png)
 
@@ -438,10 +387,6 @@ Figure 19. Choose Zoom from the View menu.
 
 Figure 20. Select a magnification from the Zoom area, then click OK.
 
-
-
-
-
 ### 属性栏
 
 属性栏（图 21），默认位于文档窗口顶部 WordPerfect 8 工具栏下方，是一个上下文相关的命令栏。它根据所选工具或项目（例如图形或表格）显示不同的按钮和选项。例如，当选择图形时，属性栏仅包含与图形相关的命令。
@@ -454,14 +399,14 @@ Figure 20. Select a magnification from the Zoom area, then click OK.
 
 当你在 Gnome 或 KDE 桌面上右键单击时，会出现一个弹出菜单，你可以使用它来选择命令或打开对话框（图 22）。（有些人只是称这些为弹出窗口。）Gnome 和 KDE 都将此项目称为“弹出菜单”。
 
-WordPerfect 也使用弹出菜单，但称之为 QuickMenus。它们在 WordPerfect 在线帮助文件和随个人版附带的 WordPerfect 用户指南中均称为 QuickMenus。为了避免任何混淆，以下是本书中这些有用菜单的命名方式：
+WordPerfect 也使用弹出菜单，但称之为 `QuickMenus`。它们在 WordPerfect 在线帮助文件和随个人版附带的 WordPerfect 用户指南中均称为 `QuickMenus`。为了避免任何混淆，以下是本书中这些有用菜单的命名方式：
 
 - 在第 2 章和第 3 章中使用 Gnome 和 KDE 桌面时，我使用术语弹出菜单。
-- 在 WordPerfect 中工作时，我使用术语 QuickMenu。
+- 在 WordPerfect 中工作时，我使用术语 `QuickMenu`。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_25_1.png)
 
-图 22。此弹出菜单带有一个打开的飞出菜单，通过在 Gnome 桌面上右键单击访问。弹出菜单在 WordPerfect 8 中称为 QuickMenus。
+图 22。此弹出菜单带有一个打开的飞出菜单，通过在 Gnome 桌面上右键单击访问。弹出菜单在 WordPerfect 8 中称为 `QuickMenus`。
 
 ### 应用程序栏
 
@@ -469,7 +414,7 @@ WordPerfect 也使用弹出菜单，但称之为 QuickMenus。它们在 WordPerf
 
 你可以自定义应用程序栏以显示其他信息，包括日期和时间、所用字体、键盘选择和缩放放大倍数。添加到应用程序栏的任何项目也都有另一个用途：你可以单击它们来更改设置。例如，如果你单击应用程序栏上的缩放按钮，将打开设置缩放对话框（图 20），让你选择另一个缩放设置。
 
-你可以通过右键单击应用程序栏，然后从 QuickMenu 中选择设置来自定义应用程序栏（图 24）。应用程序栏首选项对话框将打开（图 25），准备帮助你自定义应用程序栏。有关自定义应用程序栏的完整讨论，请参阅第 153-154 页。
+你可以通过右键单击应用程序栏，然后从 `QuickMenu` 中选择设置来自定义应用程序栏（图 24）。应用程序栏首选项对话框将打开（图 25），准备帮助你自定义应用程序栏。有关自定义应用程序栏的完整讨论，请参阅第 153-154 页。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_26_0.png)
 
@@ -479,7 +424,7 @@ WordPerfect 也使用弹出菜单，但称之为 QuickMenus。它们在 WordPerf
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_26_1.png)
 
-图 24。右键单击应用程序栏并从 QuickMenu 中选择设置。
+图 24。右键单击应用程序栏并从 `QuickMenu` 中选择设置。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_26_2.png)
 
@@ -491,7 +436,7 @@ WordPerfect 8 for Linux 附带了一个全面的在线帮助系统，该系统�
 
 - 用户指南——这是随 WordPerfect 8 个人版附带的纸质手册。你可以在闲暇时阅读它，甚至远离计算机。
 - 在线帮助——这会打开一个窗口，你可以在其中使用目录或搜索引擎查找主题（图 26）。
-- PerfectExpert——PerfectExpert 是一位导师，它会逐步指导你完成特定任务（图 27）。
+- PerfectExpert——`PerfectExpert` 是一位导师，它会逐步指导你完成特定任务（图 27）。
 - QuickTips——这些是当鼠标经过工具栏上的按钮或下拉列表时出现的气球（图 28）。
 - 技术支持——购买 WordPerfect 8 for Linux 个人版的人有权从购买之日起享受 30 天免费支持。如需美国的技术帮助，请拨打 1-613-728-6852，并准备好你的许可证号码。
 
@@ -501,53 +446,70 @@ WordPerfect 8 for Linux 附带了一个全面的在线帮助系统，该系统�
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_27_1.png)
 
+
+
 图 28。当你将鼠标移过按钮或菜单项时，会出现一个 QuickTip，告诉你该项目的作用。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_27_2.png)
 
 图 27。PerfectExpert 会逐步引导你完成创建文档所需的任务。
 
-
-
-
-
 #### 打开在线帮助或 PerfectExpert：
-- 1. 单击菜单栏上的帮助菜单标题（图 29）。
-- 2. 选择您想要使用的帮助类型：
-  ◆ 选择 Contents 以浏览帮助文件的目录。
-  ◆ 选择 Search for Help on 以查找特定主题。
-  ◆ 选择 PerfectExpert 以打开 PerfectExpert 窗口。
+
+1. 单击菜单栏上的帮助菜单标题（图 29）。
+
+2. 选择您想要使用的帮助类型：
+
+   - 选择 Contents 以浏览帮助文件的目录。
+   - 选择 Search for Help on 以查找特定主题。
+   - 选择 PerfectExpert 以打开 PerfectExpert 窗口。
 
 ### 提示
+
 如果您正在使用宏，并且需要帮助，请从帮助菜单中选择 Macros。这将打开一个特定于宏的帮助文件。
 
 #### 查看 QuickTips：
+
 缓慢地将鼠标指针移过任何按钮。气泡帮助窗口将会出现，告诉您该按钮的作用。
 
 #### 显示/隐藏 QuickTips：
-- 1. 在程序窗口中，选择 Preferences（图 10）。Preferences 对话框将会打开（图 11）。
-- 2. 单击 Environment。Environment Preferences 对话框将会打开（图 30）。
-- 3. 在 Menu 区域，使用 Show Quick Tips 下拉列表选择 QuickTip 将显示多长时间。
-- 4. 单击 OK 关闭 Environment Preferences 对话框。
-- 5. 再次单击 OK 关闭 Preferences 对话框并返回到文档窗口。
+
+1. 在程序窗口中，选择 Preferences（图 10）。Preferences 对话框将会打开（图 11）。
+
+2. 单击 Environment。Environment Preferences 对话框将会打开（图 30）。
+
+3. 在 Menu 区域，使用 Show Quick Tips 下拉列表选择 QuickTip 将显示多长时间。
+
+4. 单击 OK 关闭 Environment Preferences 对话框。
+
+5. 再次单击 OK 关闭 Preferences 对话框并返回到文档窗口。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_28_0.png)
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_28_1.png)
 
 ### 在对话框中移动
+
 使用键盘或鼠标在对话框中移动非常容易。使用鼠标时很明显：单击您想要选择的项目或移动到对话框的不同区域。如果您不想把手从键盘上移开，您可以使用各种按键来移动：
-- Tab 将您移动到下一个选项
-- Shift+Tab 将您移动到上一个选项
+
+- `Tab` 将您移动到下一个选项
+
+- `Shift+Tab` 将您移动到上一个选项
+
 - 箭头键用于在列表框或一组选项中移动
-- Esc 就像 Cancel 按钮一样，关闭对话框且不做任何更改
-- Enter 就像 OK 按钮一样，开始所选操作
+
+- `Esc` 就像 Cancel 按钮一样，关闭对话框且不做任何更改
+
+- `Enter` 就像 OK 按钮一样，开始所选操作
 
 ### 硬件考虑
+
 虽然 Linux 可以在几乎任何类型的 Intel 兼容计算机上运行，但建议使用 486 处理器和最少 4 MB RAM。对于 WordPerfect 8 for Linux，Corel Corporation 建议完整安装至少需要 9 MB 内存和 87 MB 硬盘空间。请记住，这些只是最低建议，如果您使用的是当前硬件，您无疑会更喜欢使用 WordPerfect。
 
 ### 摘要
+
 在本章中您学习了关于：
+
 - 您可能使用 Linux 的原因
 - Linux on the Web
 - Peachpit 配套网站
@@ -558,6 +520,7 @@ WordPerfect 8 for Linux 附带了一个全面的在线帮助系统，该系统�
 - QuickMenus 与弹出菜单
 
 您还学习了如何：
+
 - 使用菜单
 - 使用键盘快捷键
 - 访问工具栏
@@ -567,6 +530,7 @@ WordPerfect 8 for Linux 附带了一个全面的在线帮助系统，该系统�
 - 获取帮助
 
 ### 安装 WordPerfect 8
+
 术语 Linux 有两层含义。首先，它指的是 Linux 操作系统的内核或核心。其次，它指的是围绕 Linux 内核构建的软件程序发行版。
 
 最新的 Linux 发行版都包含了 Linux 内核的 2 版本。在这种意义上，发行版的核心是相同的。然而，构成发行版的程序可能会有很大差异。例如，Red Hat 发行版与 Caldera 发行版不同，尽管两者都基于相同的 Linux 内核。
@@ -578,10 +542,6 @@ WordPerfect 8 for Linux 附带了一个全面的在线帮助系统，该系统�
 目前最常见的桌面环境是 Gnome 和 KDE。Red Hat——Linux 最畅销的发行版——将其 Gnome 桌面作为默认安装。Caldera——第二畅销的发行版——默认使用 KDE。从 WordPerfect for Linux 用户的角度来看，您使用哪一个并不重要，因为 WordPerfect 在任一桌面环境中都工作相同。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_30_0.png)
-
-
-
-
 
 在撰写《WordPerfect 8 for Linux：Visual QuickStart Guide》时，我使用了 Red Hat Linux 6 发行版以及 Gnome 桌面。这就是本书中图示桌面时你所看到的样子。
 
@@ -611,14 +571,17 @@ WordPerfect 8 for Linux 有三个版本可供选择：可免费下载的版本�
 
 本节描述如何安装随 CD-ROM 发行的 WordPerfect 8 个人版。如果你想了解如何下载和安装免费版本，请翻到第 29 页。
 
-要在你的计算机上安装 WordPerfect 8 个人版，你需要挂载 CD-ROM 驱动器，然后使用终端窗口进入命令行。要执行这两项操作，你必须以 root 身份登录或 su 到 root。如果你无法访问 root，请联系你的系统管理员。
+要在你的计算机上安装 WordPerfect 8 个人版，你需要挂载 CD-ROM 驱动器，然后使用终端窗口进入命令行。要执行这两项操作，你必须以 `root` 身份登录或 `su` 到 `root`。如果你无法访问 `root`，请联系你的系统管理员。
 
 #### 挂载 CD-ROM 驱动器：
 
-- 1. 将 WordPerfect CD-ROM 插入计算机的 CD-ROM 驱动器。
-- 2. 在 Gnome 主菜单的 System 弹出菜单中选择 Disk Management（图 1）。User Mount Tool 对话框将打开（图 2）。
-- 3. 点击位于计算机 CD-ROM 位置右侧的 Mount 按钮。在图 2 中，该位置为 /mnt/cdrom。CD-ROM 驱动器将被挂载，你刚刚点击的按钮将显示为“Unmount”。
-- 4. 点击 Exit 关闭 User Mount Tool 对话框。
+1. 将 WordPerfect CD-ROM 插入计算机的 CD-ROM 驱动器。
+
+2. 在 Gnome 主菜单的 System 弹出菜单中选择 Disk Management（图 1）。User Mount Tool 对话框将打开（图 2）。
+
+3. 点击位于计算机 CD-ROM 位置右侧的 Mount 按钮。在图 2 中，该位置为 `/mnt/cdrom`。CD-ROM 驱动器将被挂载，你刚刚点击的按钮将显示为“Unmount”。
+
+4. 点击 Exit 关闭 User Mount Tool 对话框。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_32_0.png)
 
@@ -626,26 +589,22 @@ WordPerfect 8 for Linux 有三个版本可供选择：可免费下载的版本�
 
 #### 安装 WordPerfect：
 
-- 1. 创建你想要安装 WordPerfect 的目录（图 3）。该目录通常创建在 /usr 目录下。
-- 2. 点击 Gnome 面板上的终端仿真程序按钮（图 4）。终端窗口将打开（图 5）。
-- 3. 切换到 CD-ROM 挂载的目录（图 6）。这是 User Mount Tool 对话框中显示的同一路径名（图 2）。在图 5 中，已输入命令 cd /mnt/cdrom 以更改目录。
+1. 创建你想要安装 WordPerfect 的目录（图 3）。该目录通常创建在 `/usr` 目录下。
+
+2. 点击 Gnome 面板上的终端仿真程序按钮（图 4）。终端窗口将打开（图 5）。
+
+
+
+- 3. 切换到 CD-ROM 挂载的目录（图 6）。这是 User Mount Tool 对话框中显示的同一路径名（图 2）。在图 5 中，已输入命令 `cd /mnt/cdrom` 以更改目录。
 - 4. 按键盘上的 Enter 键。
-- 5. 输入 pwd 然后按键盘上的 Enter 键。这将验证你是否位于正确的位置（图 7）。
-- 6. 输入 ls 然后按键盘上的 Enter 键。这将列出你所在目录的内容。
+- 5. 输入 `pwd` 然后按键盘上的 Enter 键。这将验证你是否位于正确的位置（图 7）。
+- 6. 输入 `ls` 然后按键盘上的 Enter 键。这将列出你所在目录的内容。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_33_0.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_33_1.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_33_2.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_33_3.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_33_4.png)
-
-
-
-
 
 ### 安装 WordPerfect 8
 
@@ -654,83 +613,56 @@ WordPerfect 8 for Linux 有三个版本可供选择：可免费下载的版本�
 **图 8.** 输入 `./install.wp` 来开始安装。
 
 - 7. 输入 `./install.wp` 然后在键盘上按下 Enter 键（图 8）。WordPerfect 安装程序将启动，并且安装配置对话框的第一个面板将打开（图 9）。此面板用于设置您想要使用的语言。
-
 - 8. 单击您希望在安装过程中使用的语言旁边的按钮。在图 9 中已选择英语。
-
 - 9. 单击 OK。下一个面板将打开，显示许可协议（图 10）。
-
 - 10. 单击 Agree 继续安装。面板将打开（图 11）。此面板用于告诉安装程序将 WordPerfect 安装到何处。
-
 - 11. 输入您在步骤 1 中创建的目录的完整路径名。在图 11 中，目录路径名为 `/usr/wp`。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_34_1.png)
-
 **图 9.** 选择您想要在安装时使用的语言。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_34_2.png)
-
 **图 10.** 单击 Accept 继续安装。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_34_3.png)
-
 **图 11.** 输入您想要安装 WordPerfect 8 的目录的完整路径名。
 
 12. 单击 OK。下一个面板将打开（图 12）。此面板用于选择您想要的安装类型——Full、Medium 或 Minimum。
-
 13. 选择您想要的安装类型，然后单击 OK。下一个面板将打开（图 13）。如果您的计算机上已安装了另一个版本的 WordPerfect，您可以设置此安装以模仿该之前的安装。这意味着您已在使用的任何打印机或终端驱动程序都将作为此新的 WordPerfect 8 安装的默认值出现。
 
 #### 安装类型有哪些？
 
 - 最小安装包括运行 WordPerfect 所需的所有程序和数据文件；不过，它不包括中等或完整安装中列出的功能。它最多需要 44 MB 的可用硬盘空间。
-
 - 中等安装包括最小安装中安装的所有内容，外加 GrammAtik 和同义词库。它最多需要 54 MB 的可用硬盘空间。
-
 - 完整安装包括中等安装中安装的所有内容，外加在线帮助、示例宏和在线宏帮助、WordPerfect Draw 和示例图形文件、示例文档以及声音功能。它最多需要 87 MB 的可用硬盘空间。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_35_0.png)
-
 图 12. 选择您想要的安装类型，然后单击 OK。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_35_1.png)
-
 图 13. 如果您希望模仿另一个 WordPerfect 安装，请在 Pattern Directory 文本框中输入现有 WordPerfect 软件安装的完整路径名。否则，请将文本框留空。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_35_2.png)
-
 图 14. 输入您的注册号码，然后单击 OK 继续。
 
 ### 安装 WordPerfect 8
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_36_0.png)
-
 图 15. 单击 Update the magic file 旁边的按钮，然后单击 OK。
 
 14. 如果您希望模仿另一个 WordPerfect 安装，请在 Pattern Directory 文本框中输入现有 WordPerfect 软件安装的完整路径名。否则，请将文本框留空。
-
 15. 单击 OK。下一个面板将出现（图 14）。此面板用于输入随 WordPerfect 副本提供的注册号码。
-
 16. 在文本框中输入注册号码。
-
-17. 单击 OK。下一个面板将显示（图 15）。此对话框用于编辑 magic 文件。与 Windows 不同，Windows 操作系统通过文件后缀“知道”文件类型——例如，WordPerfect 文档的 .wpd——Linux 没有内置方法来区分文件类型。在 Linux 中，magic 文件用于存储有关文件类型的信息，以便操作系统区分文件类型。
-
+17. 单击 OK。下一个面板将显示（图 15）。此对话框用于编辑 magic 文件。与 Windows 不同，Windows 操作系统通过文件后缀“知道”文件类型——例如，WordPerfect 文档的 `.wpd`——Linux 没有内置方法来区分文件类型。在 Linux 中，magic 文件用于存储有关文件类型的信息，以便操作系统区分文件类型。
 18. 如果您希望更新 magic 文件，而您很可能希望这样做，请选择 Update the magic file 旁边的单选按钮来选中它。Linux magic 文件将在 WordPerfect 安装时自动更新。WordPerfect 将与 Linux 和 magic 文件协同工作以区分您创建的文件类型。
-
 19. 单击 OK。下一个面板将打开（图 16）。此面板让您可以选择想要安装的语言。
-
 20. 单击您想要安装的语言旁边的复选框（可选择多个）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_36_1.png)
-
 图 16. 单击您想要安装的语言旁边的复选框，然后单击 OK。
 
-
-
-
-
 21. 单击“确定”。下一个面板将显示（图 17）。此面板用于选择您正在使用的打印机对应的打印机驱动程序。
-
 22. 选择打印机驱动程序的方法：
-
 - A. 向下滚动打印机驱动程序列表，直到找到您想要安装的驱动程序，然后单击以突出显示它。要选择多个驱动程序，请按住 Ctrl 键的同时单击。
 - B. 单击“Select”以选择打印机。列表中每个已选驱动程序旁边会出现一个星号。
 
@@ -739,42 +671,31 @@ WordPerfect 8 for Linux 有三个版本可供选择：可免费下载的版本�
 向下滚动打印机驱动程序列表，直到找到您想要安装的驱动程序，然后双击以选择它。所选打印机驱动程序旁边会出现一个星号。
 
 23. 要查看您已选择的打印机驱动程序列表，请单击“List”。“Selected Entries”对话框将打开（图 18）。
-
 24. 查看完列表后，单击“OK”关闭“Selected Entries”对话框并返回“Install Configuration”窗口。
-
 25. 要删除您已选择的打印机驱动程序，请在列表中滚动找到该打印机驱动程序，然后双击它。
-
 26. 要删除所有已选择的打印机驱动程序，请在“Install Configuration”窗口中单击“None”。
-
 27. 完成选择打印机驱动程序后，单击“OK”。下一个面板将出现（图 19）。此面板用于将打印机驱动程序分配给安装在您的 Linux 计算机上的打印机。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_37_0.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_37_1.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_37_2.png)
 
 ### Installing WordPerfect 8
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_38_0.png)
-
 Figure 20. Use the Destinations dialog box to assign a printer driver to a printer.
 
 28. 突出显示您想要分配给打印机的打印机驱动程序。
-
 29. 单击“Assign”以定位打印机。“Destinations”对话框将打开（图 20）。
-
 30. 通过单击它来突出显示打印机设备（图 21）。
-
 31. 单击“OK”关闭“Destinations”对话框并返回“Install Configuration”窗口。
-
 32. 完成将打印机驱动程序分配给特定打印机后，单击“OK”。下一个面板将打开（图 22）。此面板用于选择可选功能。这些功能是：
-
 - CDE Desktop Icon—此项将在您的桌面上放置一个 WP 图标。
 - Word Perfect Online Manual
 - Netscape Browser 3.04
-
 33. 单击您想要安装的可选功能旁边的复选框，然后单击“OK”。下一个面板将打开（图 23）此面板让您可以查看您已选择安装选项。
+
+
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_38_1.png)
 
@@ -807,14 +728,10 @@ Figure 23. You can review the installation options you've selected by highlighti
 #### To unmount the CD-ROM:
 
 - 1. 从 Gnome 主菜单的 System 弹出菜单中选择 Disk Management（图 1）。“User Mount Tool”对话框将打开（图 26）。
-- 2. 单击位于您计算机 CD-ROM 位置右侧的“Unmount”按钮。在图 2 中，此位置为 /mnt/cdrom。CD-ROM 驱动器将被卸载，您刚刚单击的按钮将显示为“Mount”。
+- 2. 单击位于您计算机 CD-ROM 位置右侧的“Unmount”按钮。在图 2 中，此位置为 `/mnt/cdrom`。CD-ROM 驱动器将被卸载，您刚刚单击的按钮将显示为“Mount”。
 - 3. 单击“Exit”关闭对话框。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_39_2.png)
-
-
-
-
 
 ### 下载和安装 WordPerfect 免费版
 
@@ -822,7 +739,7 @@ WordPerfect 免费版可以从 Corel Corporation 的网站下载。虽然该程�
 
 #### 下载 Corel WordPerfect 8：
 
-- 1. 在您的互联网浏览器中打开 http://linux.corel.com/linuxproducts_wp8.htm Corel 的 Linux 产品网站将打开（图 27）。
+- 1. 在您的互联网浏览器中打开 `http://linux.corel.com/linuxproducts_wp8.htm` Corel 的 Linux 产品网站将打开（图 27）。
 - 2. 点击网页左侧 WordPerfect 8 for Linux 下方的 Free Download 链接。Corel 免费下载网页将打开（图 28）。
 - 3. 点击 CNET Downloads 按钮继续前往 Download.com。CNET 下载页面将在新的浏览器窗口中打开（图 29）。
 
@@ -845,9 +762,7 @@ Click here
 Figure 29. Click the Download Now button.
 
 4. 点击 Download Now。包含 Corel WordPerfect for Linux 用户协议的新窗口将打开（图 30）。
-
 5. 点击左下角的 Yes, I Accept 按钮。用户协议窗口将关闭，CNET 下载窗口将打开，显示完整和分段下载（图 31）。
-
 6. 点击下载整个文件为一次下载，或依次点击下载七个分段中的每一个，逐个下载。
 
 ### Tip
@@ -856,10 +771,10 @@ Figure 29. Click the Download Now button.
 
 #### 安装 WordPerfect 免费版：
 
-- 1. 创建您想要安装 WordPerfect 的目录（图 32）。通常该目录创建在 /usr 目录下。
+- 1. 创建您想要安装 WordPerfect 的目录（图 32）。通常该目录创建在 `/usr` 目录下。
 - 2. 将您下载的文件（或文件）复制到新目录中。
 - 3. 点击 Gnome 面板上的 Terminal 按钮（图 33）。终端窗口将打开（图 34）。
-- 4. 切换到您刚刚复制下载文件所在的目录。如果您下载了一个文件，其名称为 gui0.gz。如果您下载了七个分段，它们将命名为 gui00.gz...gui06.gz。
+- 4. 切换到您刚刚复制下载文件所在的目录。如果您下载了一个文件，其名称为 `gui0.gz`。如果您下载了七个分段，它们将命名为 `gui00.gz`...`gui06.gz`。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_41_0.png)
 
@@ -883,37 +798,36 @@ Figure 34. The Terminal window.
 
 #### 5. 解压文件：
 
-输入 gunzip gui0.gz ; tar -xvf gui0 如果您下载的是单个文件，然后在键盘上按 Enter（图 35）。
+输入 `gunzip gui0.gz ; tar -xvf gui0` 如果您下载的是单个文件，然后在键盘上按 Enter（图 35）。
 
 *or*
 
-- A. 输入 gunzip gui00.gz ; tar -xvf gui00 然后按 Enter 键解压第一个分段，如果您下载了七个分段。
-- B. 输入 gunzip gui01.gz ; tar -xvf gui01 然后按 Enter 键解压第二个分段。
+- A. 输入 `gunzip gui00.gz ; tar -xvf gui00` 然后按 Enter 键解压第一个分段，如果您下载了七个分段。
+- B. 输入 `gunzip gui01.gz ; tar -xvf gui01` 然后按 Enter 键解压第二个分段。
 - C. 继续输入顺序命令，直到解压全部七个分段。
 
 #### 6.
 
-解压文件完成后，输入 ./Runme 启动安装程序。按照第 23 页开始的步骤 8–32 安装 WordPerfect 免费版。
+解压文件完成后，输入 `./Runme` 启动安装程序。按照第 23 页开始的步骤 8–32 安装 WordPerfect 免费版。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_42_2.png)
 
-Figure 35. Type gunzip gui0.gz ; tar -xvf gui0 to unzip the single file download or type gunzip gui00.gz ; tar -xvf gui00 to unzip the first segment of the seven download.
+Figure 35. Type `gunzip gui0.gz ; tar -xvf gui0` to unzip the single file download or type `gunzip gui00.gz ; tar -xvf gui00` to unzip the first segment of the seven download.
 
 ### Tips
 
 - 您不需要许可证号码来安装 WordPerfect 免费版，但每次使用 WordPerfect 免费版时都会被要求提供一个。要获取免费版的许可证号码，请按照第 32 页上的步骤操作。
 - 如果您没有获取许可证号码并将其与您的免费版 WordPerfect 注册，WordPerfect 免费版程序将在 90 天后停止工作。
 
-
-
-
-
 ### 获取免费版许可证号码：
 
-1. 在您的 Internet 浏览器中打开 http://venus.corel.com/nasapps/wp811nxreg/register.html。Corel 的 Linux 注册网站将会打开（图 36）。
+1. 在您的 Internet 浏览器中打开 `http://venus.corel.com/nasapps/wp811nxreg/register.html`。Corel 的 Linux 注册网站将会打开（图 36）。
 2. 填写注册表单。
 3. 单击提交。您的许可证号码将出现在下一页上。
 4. 写下许可证号码或打印该网页。
+
+
+
 5. 在安装过程中提示时输入许可证号码，或在启动 WordPerfect 时在初始框中输入该号码。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_43_0.png)
@@ -950,7 +864,7 @@ Figure 35. Type gunzip gui0.gz ; tar -xvf gui0 to unzip the single file download
 1. 从 Gnome 主菜单上的 Settings 弹出菜单中选择 Menu editor（图 2）。GNOME 菜单编辑器对话框将打开，并在树视图窗口中选择了 User Menus（图 3）。
 2. 在菜单栏上，单击 New Item 在 User Menus 下添加新的菜单项。
 3. 在 Basic 选项卡页面上，在 Name 文本框中输入 WordPerfect（图 4）。
-4. 在 Command 文本框中输入 WordPerfect 安装位置的完整路径名加上启动 WordPerfect 的命令。在图 4 中，已输入 /usr/wp/wpbin/ ./wp。
+4. 在 Command 文本框中输入 WordPerfect 安装位置的完整路径名加上启动 WordPerfect 的命令。在图 4 中，已输入 `/usr/wp/wpbin/` `./wp`。
 5. 单击 Icon 按钮选择合适的图标。
 6. 单击保存。
 7. 通过单击关闭按钮关闭 GNOME 菜单编辑器对话框。WordPerfect 菜单项将出现在 Gnome 主菜单上（图 5）。
@@ -978,56 +892,39 @@ Figure 35. Type gunzip gui0.gz ; tar -xvf gui0 to unzip the single file download
 #### 将菜单项放在 K 主菜单上：
 
 1. 从 K 主菜单上的 Utilities 弹出菜单中选择 Menu Editor（图 6）。菜单编辑器窗口将出现（图 7）。
-2. 右键单击 Empty 按钮并从弹出菜单中选择 New（图 8）。kmenuedt 对话框将打开（图 9）。
+2. 右键单击 Empty 按钮并从弹出菜单中选择 New（图 8）。`kmenuedt` 对话框将打开（图 9）。
 3. 在 Name 文本框中输入 WordPerfect。
 4. 单击对话框右侧的图标按钮并从 Select Icon 对话框中选择一个图标。
-5. 在 Execute 选项卡页面上，在 Execute 文本框中输入 WordPerfect 安装位置的完整路径名加上启动 WordPerfect 的命令。在图 9 中，已输入 /usr/wp/wpbin1/.wpw。
-6. 单击确定关闭 kmenuedt 对话框并返回到菜单编辑器窗口。
+5. 在 Execute 选项卡页面上，在 Execute 文本框中输入 WordPerfect 安装位置的完整路径名加上启动 WordPerfect 的命令。在图 9 中，已输入 `/usr/wp/wpbin1/.wpw`。
+6. 单击确定关闭 `kmenuedt` 对话框并返回到菜单编辑器窗口。
 7. 从文件菜单中选择保存。
-8. 在键盘上按 Ctrl+Q 关闭菜单编辑器。WordPerfect 菜单项将出现在 K 主菜单的 Personal 弹出菜单下（图 10）。
+8. 在键盘上按 `Ctrl+Q` 关闭菜单编辑器。WordPerfect 菜单项将出现在 K 主菜单的 Personal 弹出菜单下（图 10）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_46_0.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_46_1.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_46_2.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_46_3.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_46_4.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_46_5.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_46_6.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_46_7.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_46_8.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_46_9.png)
-
-
-
-
 
 #### 在 Gnome 桌面上放置快捷方式：
 
-- 1. 右键单击 Gnome 桌面。会出现一个弹出菜单（图 11）。
-- 2. 从 New 弹出菜单中选择 Launcher。桌面条目属性对话框将会出现（图 12）。
-- 3. 在 Basic 选项卡页面，在 Name 文本框中输入 WordPerfect。
-- 4. 在 Command 文本框中输入 WordPerfect 程序安装的完整路径（图 13）。在图 13 中，已输入 /usr/wp/wpbin/xwp。（请注意，这不是典型的 Linux 命令行。通常，在 /xwp 之前会有一个句点 (.)，如图 4 所示。）
-- 5. 从 Type 下拉列表中选择 Application。
-- 6. 单击 Icon 按钮，从 Choose an icon 对话框中选择合适的图标。
-- 7. 单击 OK。快捷方式将出现在桌面上（图 14）。
+1. 右键单击 Gnome 桌面。会出现一个弹出菜单（图 11）。
+2. 从 New 弹出菜单中选择 Launcher。桌面条目属性对话框将会出现（图 12）。
+3. 在 Basic 选项卡页面，在 Name 文本框中输入 WordPerfect。
+4. 在 Command 文本框中输入 WordPerfect 程序安装的完整路径（图 13）。在图 13 中，已输入 `/usr/wp/wpbin/xwp`。（请注意，这不是典型的 Linux 命令行。通常，在 `/xwp` 之前会有一个句点 `.`，如图 4 所示。）
+5. 从 Type 下拉列表中选择 Application。
+6. 单击 Icon 按钮，从 Choose an icon 对话框中选择合适的图标。
+7. 单击 OK。快捷方式将出现在桌面上（图 14）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_47_0.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_47_1.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_47_2.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_47_3.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_48_0.png)
 
 Figure 15. Click the Terminal emulation program button on the Gnome panel.
@@ -1042,7 +939,7 @@ Figure 17. Use the Terminal window to move to the directory where WordPerfect is
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_48_3.png)
 
-Figure 18. Change to the wpbin directory, then type ./xwp and press Enter on the keyboard to launch WordPerfect.
+Figure 18. Change to the wpbin directory, then type `./xwp` and press Enter on the keyboard to launch WordPerfect.
 
 #### 使用菜单项或快捷方式启动 WordPerfect：
 
@@ -1050,14 +947,16 @@ Figure 18. Change to the wpbin directory, then type ./xwp and press Enter on the
 
 或
 
-如果您使用的是 K 桌面，请从 K 主菜单上的 Personal 弹出菜单中选择 WordPerfect（图 10）。
 
-#### 从命令行启动 WordPerfect：
 
-- 1. 单击 Gnome 面板上的 Terminal emulation program 按钮（图 15）或单击 K 面板上的 Terminal Emulation 按钮（图 16）。终端窗口将会打开（图 17）。
+如果您使用的是 K 桌面，请从 K 主菜单上的 `Personal` 弹出菜单中选择 `WordPerfect`（图 10）。
+
+### 从命令行启动 WordPerfect：
+
+- 1. 单击 Gnome 面板上的 `Terminal emulation program` 按钮（图 15）或单击 K 面板上的 `Terminal Emulation` 按钮（图 16）。终端窗口将会打开（图 17）。
 - 2. 在提示符下，切换目录到 WordPerfect 的安装位置。
-- 3. 切换到 wpbin 目录。
-- 4. 输入 ./xwp（图 18），然后在键盘上按 Enter 启动 WordPerfect。
+- 3. 切换到 `wpbin` 目录。
+- 4. 输入 `./xwp`（图 18），然后在键盘上按 Enter 启动 WordPerfect。
 
 ### 开始新文档
 
@@ -1065,52 +964,43 @@ Figure 18. Change to the wpbin directory, then type ./xwp and press Enter on the
 
 #### 开始新文档并关闭当前文档：
 
-- 1. 从 File 菜单中选择 New（图 19）。新文档将会打开。如果您对当前文档进行了更改，将会出现一个 Save 对话框，询问是否要保存更改（图 20）。
+- 1. 从 `File` 菜单中选择 `New`（图 19）。新文档将会打开。如果您对当前文档进行了更改，将会出现一个 `Save` 对话框，询问是否要保存更改（图 20）。
 - 2. 您可以：
-  - 单击 Yes 在关闭之前保存当前文档；
-  - 单击 No 在不保存的情况下关闭当前文档；或
-  - 单击 Cancel 取消新建文档命令，并返回活动文档。
+  - 单击 `Yes` 在关闭之前保存当前文档；
+  - 单击 `No` 在不保存的情况下关闭当前文档；或
+  - 单击 `Cancel` 取消新建文档命令，并返回活动文档。
 
 #### 开始新文档并保持当前文档打开：
 
-使用程序窗口，从 Program 菜单中选择 New Window（图 21）或在键盘上按 Ctrl+N。新的窗口将打开在活动窗口之上。
+使用程序窗口，从 `Program` 菜单中选择 `New Window`（图 21）或在键盘上按 `Ctrl+N`。新的窗口将打开在活动窗口之上。
 
 ### 文档窗口卷起
 
 如果您同时处理多个文档并想将其中一个移开，双击标题栏。文档窗口将会卷起。再次双击标题栏即可展开文档窗口。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_49_0.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_49_1.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_49_2.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_49_3.png)
 
 ### 使用 ExpressDocs
 
-您创建的每个文档都基于一个模板。模板设置了文档的格式和布局。您可以使用模板多次创建外观相同且内容相似的文档。如果您经常使用某种特定类型的文档，例如信头，或需要生成报告，这会特别有用。您可以创建自己的模板或使用随 WordPerfect 一起提供的模板，称为 ExpressDocs。
+您创建的每个文档都基于一个模板。模板设置了文档的格式和布局。您可以使用模板多次创建外观相同且内容相似的文档。如果您经常使用某种特定类型的文档，例如信头，或需要生成报告，这会特别有用。您可以创建自己的模板或使用随 WordPerfect 一起提供的模板，称为 `ExpressDocs`。
 
-WordPerfect 附带了超过 70 个 ExpressDocs，可让您快速创建专业文档。其中许多属于文档套件，包括使用相同布局和设计以保持一致外观的信件、备忘录和宣传册等项目。有多个套件，包括 Contemporary、Cosmopolitan、Elegant 和 Traditional。
+WordPerfect 附带了超过 70 个 `ExpressDocs`，可让您快速创建专业文档。其中许多属于文档套件，包括使用相同布局和设计以保持一致外观的信件、备忘录和宣传册等项目。有多个套件，包括 `Contemporary`、`Cosmopolitan`、`Elegant` 和 `Traditional`。
 
 #### 使用 ExpressDocs 开始新文档：
 
-- 1. 从 File 菜单中选择 ExpressDocs（图 22）。第一次使用 ExpressDocs 时，会出现 Personal Info 对话框（图 23）以及 ExpressDocs 对话框（图 24）。您在此对话框中输入的信息可用于以后使用 ExpressDocs 创建的文档。
-- 2. 如需，在 Personal Info 对话框的相应文本框中输入您的个人信息。
-- 3. 完成信息输入后，单击 OK 关闭对话框并返回 ExpressDocs 对话框。
-- 4. 向下滚动 Document Template 列表框，直到找到您想要创建的文档类型。
+- 1. 从 `File` 菜单中选择 `ExpressDocs`（图 22）。第一次使用 `ExpressDocs` 时，会出现 `Personal Info` 对话框（图 23）以及 `ExpressDocs` 对话框（图 24）。您在此对话框中输入的信息可用于以后使用 `ExpressDocs` 创建的文档。
+- 2. 如需，在 `Personal Info` 对话框的相应文本框中输入您的个人信息。
+- 3. 完成信息输入后，单击 `OK` 关闭对话框并返回 `ExpressDocs` 对话框。
+- 4. 向下滚动 `Document Template` 列表框，直到找到您想要创建的文档类型。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_50_0.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_50_1.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_50_2.png)
 
-
-
-
-
-5. 单击该项目以突出显示它，然后单击 Select。在图 24 中，Memo – Contemporary 样式已被选中。根据您选择的 ExpressDoc 类型，将会出现各种对话框，提示您输入信息（图 25）。在当代备忘录样式示例中，已出现一个请求收件人姓名的对话框。
+5. 单击该项目以突出显示它，然后单击 `Select`。在图 24 中，`Memo – Contemporary` 样式已被选中。根据您选择的 `ExpressDoc` 类型，将会出现各种对话框，提示您输入信息（图 25）。在当代备忘录样式示例中，已出现一个请求收件人姓名的对话框。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_51_0.png)
 
@@ -1120,42 +1010,42 @@ WordPerfect 附带了超过 70 个 ExpressDocs，可让您快速创建专业文�
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_51_1.png)
 
-图 27。 要使 ExpressDocs 文档在新的文档窗口中打开，请单击 Open New Document Window 旁边的复选框。
+图 27。 要使 `ExpressDocs` 文档在新的文档窗口中打开，请单击 `Open New Document Window` 旁边的复选框。
 
-7. 每次完成一个对话框时，单击 OK 关闭该对话框并进入下一个。
+7. 每次完成一个对话框时，单击 `OK` 关闭该对话框并进入下一个。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_51_2.png)
 
-图 28。从 File 菜单中选择 Save As。
+图 28。从 `File` 菜单中选择 `Save As`。
 
-8. 当 ExpressDocs 模板完成向您请求信息后，文档将出现，准备好在文档窗口中开始输入（图 26）。
+8. 当 `ExpressDocs` 模板完成向您请求信息后，文档将出现，准备好在文档窗口中开始输入（图 26）。
 
 ### Tips
 
-- 如果您希望 ExpressDocs 模板在新的文档窗口中创建文档，请确保在 ExpressDocs 对话框中选中 Open New Document Window 旁边的复选框（图 27）。否则，ExpressDoc 模板将在活动文档窗口中创建文档。
-- 您可以更改 ExpressDocs 模板添加到文档中的任何文本。
-- 如果您想更改在 Personal Info 对话框中输入的个人信息，请单击 ExpressDocs 对话框右侧的 User Info（图 24）。
+- 如果您希望 `ExpressDocs` 模板在新的文档窗口中创建文档，请确保在 `ExpressDocs` 对话框中选中 `Open New Document Window` 旁边的复选框（图 27）。否则，`ExpressDoc` 模板将在活动文档窗口中创建文档。
+- 您可以更改 `ExpressDocs` 模板添加到文档中的任何文本。
+- 如果您想更改在 `Personal Info` 对话框中输入的个人信息，请单击 `ExpressDocs` 对话框右侧的 `User Info`（图 24）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_51_3.png)
 
-图 29。在 Save As 对话框中，使用 Directory List 框移动到 /wp/wpexpdocs/ 目录。
+图 29。在 `Save As` 对话框中，使用 `Directory List` 框移动到 `/wp/wpexpdocs/` 目录。
 
 #### To create your own ExpressDocs:
 
 - 1. 创建您想要用作模板的文档。
-- 2. 从文件菜单中选择 Save As（图 28）或在键盘上按 F3。Save As 对话框将打开（图 29）。
-- 3. 使用 Directory List 框移动到 WordPerfect 安装的目录。
-- 4. 更改为 wpexdocs 目录。
-- 5. 在 Filename/Current Selection 文本框中，输入模板的名称并加上 .wpt 扩展名。
-- 6. 单击 OK 关闭对话框。
-- 7. 从 File 菜单中选择 ExpressDocs（图 22）。ExpressDocs 对话框将打开，您的模板将显示为文档模板列表框顶部的前 4 个星号（图 30）。
-- 8. 在 ExpressDocs 对话框中单击 File Info。ExpressDocs Template File Info 对话框将打开（图 31）。
-- 9. 在 Template Description 文本框中输入模板的描述。
-- 10. 单击 OK。您的模板将出现在文档模板列表框中，准备使用（图 32）。
+- 2. 从文件菜单中选择 `Save As`（图 28）或在键盘上按 `F3`。`Save As` 对话框将打开（图 29）。
+- 3. 使用 `Directory List` 框移动到 WordPerfect 安装的目录。
+- 4. 更改为 `wpexdocs` 目录。
+- 5. 在 `Filename/Current Selection` 文本框中，输入模板的名称并加上 `.wpt` 扩展名。
+- 6. 单击 `OK` 关闭对话框。
+- 7. 从 `File` 菜单中选择 `ExpressDocs`（图 22）。`ExpressDocs` 对话框将打开，您的模板将显示为文档模板列表框顶部的前 4 个星号（图 30）。
+- 8. 在 `ExpressDocs` 对话框中单击 `File Info`。`ExpressDocs Template File Info` 对话框将打开（图 31）。
+- 9. 在 `Template Description` 文本框中输入模板的描述。
+- 10. 单击 `OK`。您的模板将出现在文档模板列表框中，准备使用（图 32）。
 
 ### Tip
 
-如果您没有正确的权限，就无法将文档保存到 wpexdocs 目录。您需要以 root 身份登录或联系系统管理员寻求帮助。
+如果您没有正确的权限，就无法将文档保存到 `wpexdocs` 目录。您需要以 root 身份登录或联系系统管理员寻求帮助。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_52_0.png)
 
@@ -1163,7 +1053,7 @@ WordPerfect 附带了超过 70 个 ExpressDocs，可让您快速创建专业文�
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_52_1.png)
 
-图 31。在 ExpressDocs Template File Info 对话框中，在 Template Description 文本框中输入模板的描述，然后单击 OK。
+图 31。在 `ExpressDocs Template File Info` 对话框中，在 `Template Description` 文本框中输入模板的描述，然后单击 `OK`。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_52_2.png)
 
@@ -1171,66 +1061,61 @@ WordPerfect 附带了超过 70 个 ExpressDocs，可让您快速创建专业文�
 
 #### To open an existing document:
 
-- 1. 在程序窗口处于活动状态时，从 Program 菜单中选择 Open Window（图 33）。Open 对话框将出现（图 34）。
+- 1. 在程序窗口处于活动状态时，从 `Program` 菜单中选择 `Open Window`（图 33）。`Open` 对话框将出现（图 34）。
 - 2. 使用目录和文件列表选择要打开的文件。
-- 3. 单击 OK。文档将在新的文档窗口中打开。
+- 3. 单击 `OK`。文档将在新的文档窗口中打开。
 
 or
 
-- 1. 在文档窗口中从 File 菜单中选择 Open（图 35）。Open 对话框将出现（图 34）。
+- 1. 在文档窗口中从 `File` 菜单中选择 `Open`（图 35）。`Open` 对话框将出现（图 34）。
 - 2. 使用目录和文件列表选择要打开的文件。
-- 3. 单击 Open。Save 对话框将出现，询问您是否要保存当前文档（图 20）。
+- 3. 单击 `Open`。`Save` 对话框将出现，询问您是否要保存当前文档（图 20）。
 - 4. 您可以：
-  - • 单击 Yes 保存文档；
-  - • 单击 No 关闭文档而不保存更改；或
-  - • 单击 Cancel 取消打开文档命令并返回到活动文档。
-- 5. 如果您单击了 Yes 或 No，Save 对话框将关闭，您选择的文件将在文档窗口中打开。
+  - 单击 `Yes` 保存文档；
+  - 单击 `No` 关闭文档而不保存更改；或
+  - 单击 `Cancel` 取消打开文档命令并返回到活动文档。
+
+
+
+- 5. 如果您单击了 `Yes` 或 `No`，`Save` 对话框将关闭，您选择的文件将在文档窗口中打开。
 
 ### Tip
 
-- 要快速打开最近处理的其中一个文档，请在程序窗口中从 Program 菜单底部选择它。
+- 要快速打开最近处理的其中一个文档，请在程序窗口中从 `Program` 菜单底部选择它。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_53_0.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_53_1.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_53_2.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_53_3.png)
-
-
-
-
 
 #### 导入文档：
 
-- 1. 在文档窗口中，从文件菜单中选择 **Open** (**Figure 40**)。打开对话框将会出现 (**Figure 41**)。
+- 1. 在文档窗口中，从文件菜单中选择 `Open` (**Figure 40**)。打开对话框将会出现 (**Figure 41**)。
 - 2. 使用目录列表框移动到文档存储的目录。
 - 3. 使用文件列表框选择文件。
-- 4. 单击 Open。转换文件对话框可能会打开 (**Figure 42**)。
+- 4. 单击 `Open`。转换文件对话框可能会打开 (**Figure 42**)。
 - 5. 如果转换文件对话框出现，使用转换文件格式列表框选择文件类型。
-- 6. 单击 OK。文件将在活动文档窗口中打开。
+- 6. 单击 `OK`。文件将在活动文档窗口中打开。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_55_0.png)
 
 ### Tips
 
-- ▪ 导入文档后，您应该保存它。从文件菜单中选择 Save 以使用相同名称保存文件，或从文件菜单中选择 Save As 以使用不同名称保存文件。
+- ▪ 导入文档后，您应该保存它。从文件菜单中选择 `Save` 以使用相同名称保存文件，或从文件菜单中选择 `Save As` 以使用不同名称保存文件。
 - ▪ 当导入 WordPerfect 5.x 或 6.0 格式的文档（来自任何平台，DOS、OS/2、UNIX 或 Windows）时，转换文件对话框不会出现，因为 WordPerfect 8 会自动为您转换文件。
 - ▪ 要查看 WordPerfect 8 支持的文件格式列表，请翻到随个人版附带的 *WordPerfect 8 User's Guide* 第 58 页。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_55_1.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_55_2.png)
 
 #### 导出文档：
 
 - 1. 创建您想要导出的文档。
-- 2. 从文件菜单中选择 Save As (Figure 43)。保存为对话框将会打开 (Figure 44)。
+- 2. 从文件菜单中选择 `Save As` (Figure 43)。保存为对话框将会打开 (Figure 44)。
 - 3. 使用目录列表移动到您想要保存文件的目录。
 - 4. 在文件名/当前选择文本框中输入文件名称。
 - 5. 使用保存选项区域中的文件格式下拉列表选择您想要将文件保存为的文件类型 (Figure 45)。
-- 6. 单击 OK 关闭对话框并以新的文件格式保存文档。
+- 6. 单击 `OK` 关闭对话框并以新的文件格式保存文档。
 
 ### Tip
 
@@ -1242,11 +1127,11 @@ or
 
 WordPerfect 使用多个文件扩展名：
 
-- • .wpd—这是原生 WordPerfect 文件扩展名，保存文档时会自动附加到您的文档上。
-- • .ltr—您可以使用此文件扩展名保存文档以表示一封信。
-- • .wpt—一个 ExpressDocs 模板。
+- • `.wpd`—这是原生 WordPerfect 文件扩展名，保存文档时会自动附加到您的文档上。
+- • `.ltr`—您可以使用此文件扩展名保存文档以表示一封信。
+- • `.wpt`—一个 ExpressDocs 模板。
 
-Figure 43. 从文件菜单中选择 Save As。
+Figure 43. 从文件菜单中选择 `Save As`。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_56_0.png)
 
@@ -1266,28 +1151,18 @@ WordPerfect QuickList 用于指定您最常使用的目录和文件列表。您�
 
 #### 创建 QuickList：
 
-- 1. 从文件菜单中选择 Open (Figure 35)。打开对话框将会出现 (Figure 46)。
+- 1. 从文件菜单中选择 `Open` (Figure 35)。打开对话框将会出现 (Figure 46)。
 - 2. 如果 QuickList 框未显示，请单击对话框右下角附近的 QuickList 旁边的复选框 (Figure 47)。QuickList 框将在目录列表框上方打开 (Figure 48)。
 - 3. 右键单击 QuickList 框。QuickMenu 将会出现 (Figure 49)。
-- 4. 从 QuickMenu 对话框底部选择 Edit QuickList 对话框将会打开 (Figure 50)。
-- 5. 单击 Add。添加 QuickList 项目对话框将会打开 (Figure 51)。
+- 4. 从 QuickMenu 对话框底部选择 `Edit QuickList` 对话框将会打开 (Figure 50)。
+- 5. 单击 `Add`。添加 QuickList 项目对话框将会打开 (Figure 51)。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_57_0.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_57_1.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_57_2.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_57_3.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_57_4.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_57_5.png)
-
-
-
-
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_58_0.png)
 
 图 50. 编辑 QuickList 对话框用于添加、编辑和删除 QuickList 条目。
@@ -1314,7 +1189,7 @@ WordPerfect QuickList 用于指定您最常使用的目录和文件列表。您�
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_58_2.png)
 
-图 52. 文件或目录出现在 QuickList 框中。如果添加了目录，则条目前面会出现 [D]（如图所示）。如果添加了文件，则条目前面会出现 [F]。
+图 52. 文件或目录出现在 QuickList 框中。如果添加了目录，则条目前面会出现 `[D]`（如图所示）。如果添加了文件，则条目前面会出现 `[F]`。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_58_3.png)
 
@@ -1330,16 +1205,15 @@ WordPerfect QuickList 用于指定您最常使用的目录和文件列表。您�
 
 ### 提示
 
-QuickList 也可用于 SaveAs 对话框中。您可以使用 QuickList 快速移动到要保存文件的目录，或选择经常覆盖的文档文件。
+QuickList 也可用于 `SaveAs` 对话框中。您可以使用 QuickList 快速移动到要保存文件的目录，或选择经常覆盖的文档文件。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_59_1.png)
 
 #### 关闭文档：
 
-在文档窗口的“文件”菜单中选择“关闭”（图 56），或按键盘上的 Ctrl+F4，或单击文档窗口右上角的“关闭”按钮（图 57）。
+在文档窗口的“文件”菜单中选择“关闭”（图 56），或按键盘上的 `Ctrl+F4`，或单击文档窗口右上角的“关闭”按钮（图 57）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_59_2.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_59_3.png)
 
 ### 保存工作区
@@ -1349,13 +1223,20 @@ QuickList 也可用于 SaveAs 对话框中。您可以使用 QuickList 快速移
 #### 保存工作区：
 
 +   1. 在文档打开的情况下，在程序窗口中选择“首选项”（图 58）。将打开“首选项”对话框（图 59）。
-+   2. 单击“环境”按钮。将打开“环境首选项”对话框（图 60）。
-+   3. 在“保存工作区”区域中，为要选择的项目选择单选按钮：
+
+
+
+2. 单击“环境”按钮。将打开“环境首选项”对话框（图 60）。
+
+3. 在“保存工作区”区域中，为要选择的项目选择单选按钮：
+
     - 始终自动保存您的工作区，无需询问；
     - 从不总是打开新文档窗口（默认）；
     - 退出时提示询问您是否要保存工作区。
-+   4. 单击“确定”关闭“环境首选项”对话框。
-+   5. 单击“关闭”关闭“首选项”对话框。
+
+4. 单击“确定”关闭“环境首选项”对话框。
+
+5. 单击“关闭”关闭“首选项”对话框。
 
 ### 提示
 
@@ -1379,7 +1260,7 @@ QuickList 也可用于 SaveAs 对话框中。您可以使用 QuickList 快速移
 
 #### 退出适用于 Linux 的 WordPerfect 8：
 
-在文档窗口处于活动状态时，按键盘上的 Ctrl+Shift+F4。
+在文档窗口处于活动状态时，按键盘上的`Ctrl+Shift+F4`。
 
 或者
 
@@ -1411,10 +1292,6 @@ QuickList 也可用于 SaveAs 对话框中。您可以使用 QuickList 快速移
 - 保存您的工作区
 - 退出 WordPerfect
 
-
-
-
-
 ## 使用文本
 
 文字处理程序的强大功能永远改变了人们的工作方式。在恐龙时代，人们使用打字机创建文档。（是的，我是一只恐龙。我是在 IBM Selectric 上学会打字的！）不幸的是，一旦出现错误，就需要使用涂改液或橡皮擦。文档的副本必须使用复印机复印或使用复写纸制作。带有美术作品的通讯必须用剪刀和胶水剪切并粘贴。
@@ -1440,7 +1317,7 @@ QuickList 也可用于 SaveAs 对话框中。您可以使用 QuickList 快速移
 
 #### 开始新段落：
 
-当你完成输入一个段落后，按键盘上的 Enter 键。插入点将向下移动到下一行，在那里你可以开始输入下一段（图 3）。
+当你完成输入一个段落后，按键盘上的`Enter`键。插入点将向下移动到下一行，在那里你可以开始输入下一段（图 3）。
 
 ### 提示
 
@@ -1448,7 +1325,7 @@ QuickList 也可用于 SaveAs 对话框中。您可以使用 QuickList 快速移
 
 #### 开始新页面：
 
-将插入点定位在你想要新页面开始的位置，然后按键盘上的 Ctrl+Enter。
+将插入点定位在你想要新页面开始的位置，然后按键盘上的`Ctrl+Enter`。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_63_0.png)
 
@@ -1458,7 +1335,7 @@ QuickList 也可用于 SaveAs 对话框中。您可以使用 QuickList 快速移
 
 ### 阴影光标
 
-你可能已经注意到，当你将鼠标指针移到文档窗口中页面上的文本或空白处时，会出现一条小小的蓝色线和箭头。这就是阴影光标。阴影光标显示当你单击鼠标时插入点会出现的位置。你不需要按键盘上的 Enter 键在文本或图片之间插入空白行。你所需要做的就是单击你想要文本出现的位置，然后开始打字。
+你可能已经注意到，当你将鼠标指针移到文档窗口中页面上的文本或空白处时，会出现一条小小的蓝色线和箭头。这就是阴影光标。阴影光标显示当你单击鼠标时插入点会出现的位置。你不需要按键盘上的`Enter`键在文本或图片之间插入空白行。你所需要做的就是单击你想要文本出现的位置，然后开始打字。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_64_0.png)
 
@@ -1476,14 +1353,10 @@ QuickList 也可用于 SaveAs 对话框中。您可以使用 QuickList 快速移
 
 如果你是文字处理程序的新手，有几件事你应该知道：
 
-- 当你输入文档时，你不需要在每行末尾按 Enter 键。WordPerfect 会自动在你用完空间时将你移至下一行。这称为自动换行。你只需要按 Enter 键时你想要开始新段落。
+- 当你输入文档时，你不需要在每行末尾按`Enter`键。WordPerfect 会自动在你用完空间时你将你移至下一行。这称为自动换行。你只需要按`Enter`键时你想要开始新段落。
 - 如果你犯了错误，你可以通过删除错误来修复它。你可以在文档中的任何位置随时添加或删除文本。
-- 如果你想缩进文本，请使用 Tab 键，不要按空格键。你可以使用标尺设置制表位。这在第 5 章，格式化你的文本中进行了讨论。
+- 如果你想缩进文本，请使用`Tab`键，不要按空格键。你可以使用标尺设置制表位。这在第 5 章，格式化你的文本中进行了讨论。
 - 文档中未使用的区域称为空白。
-
-
-
-
 
 ### 图 10. 使用 Shadow Cursor 区域设置选项。
 
@@ -1535,6 +1408,8 @@ QuickList 也可用于 SaveAs 对话框中。您可以使用 QuickList 快速移
 
 ### 提示
 
+
+
 当你向现有文本添加字符时，插入点右侧的任何文本都会自动向右移动，为新字符腾出空间，并且自动换行会自动调整文本行。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_67_0.png)
@@ -1543,14 +1418,14 @@ QuickList 也可用于 SaveAs 对话框中。您可以使用 QuickList 快速移
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_68_0.png)
 
-图 17. 将插入点定位到你想要删除文本的位置。如果你按下 Backspace 键，插入点右侧的文本将被删除。如果你按下 Delete 键，插入点左侧的文本将被删除。
+图 17. 将插入点定位到你想要删除文本的位置。如果你按下 `Backspace` 键，插入点右侧的文本将被删除。如果你按下 `Delete` 键，插入点左侧的文本将被删除。
 
-#### 删除文本：
+### 删除文本：
 
 - 1. 使用阴影光标或键盘按键将插入点移动到你想要删除文本的位置（图 17）。
-- 2. 按键盘上的 Backspace 键删除插入点右侧的字符。
+- 2. 按键盘上的 `Backspace` 键删除插入点右侧的字符。
   或
-- 按键盘上的 Delete 键删除插入点左侧的字符。
+- 按键盘上的 `Delete` 键删除插入点左侧的字符。
 
 ### 提示
 
@@ -1558,30 +1433,27 @@ QuickList 也可用于 SaveAs 对话框中。您可以使用 QuickList 快速移
 
 ### 有用的按键
 
-下面是一些可用于快速在文档中移动的按键列表。如果列出了键组合，例如 Ctrl+↑，请在按下 ↑ 键之前先按下 Ctrl 键。
+下面是一些可用于快速在文档中移动的按键列表。如果列出了键组合，例如 `Ctrl+↑`，请在按下 `↑` 键之前先按下 `Ctrl` 键。
 
 | 按键 | 移动到 | 按键 | 移动到 |
 |---|---|---|---|
-| ↑ | 向上移动一行 | Home | 行首 |
-| ↓ | 向下移动一行 | End | 行尾 |
-| ← | 向左移动一个字符 | Page Up | 向上移动一页或到文档窗口顶部 |
-| → | 向右移动一个字符 | Page Down | 向下移动一页或到文档窗口底部 |
-| Ctrl+↑ | 向上移动一个段落 | Ctrl+Home | 文档开头 |
-| Ctrl+↓ | 向下移动一个段落 | Ctrl+End | 文档末尾 |
-| Ctrl+← | 向左移动一个词 |  |  |
-| Ctrl+→ | 向右移动一个词 |  |  |
-
-
-
-
+| `↑` | 向上移动一行 | `Home` | 行首 |
+| `↓` | 向下移动一行 | `End` | 行尾 |
+| `←` | 向左移动一个字符 | `Page Up` | 向上移动一页或到文档窗口顶部 |
+| `→` | 向右移动一个字符 | `Page Down` | 向下移动一页或到文档窗口底部 |
+| `Ctrl+↑` | 向上移动一个段落 | `Ctrl+Home` | 文档开头 |
+| `Ctrl+↓` | 向下移动一个段落 | `Ctrl+End` | 文档末尾 |
+| `Ctrl+←` | 向左移动一个词 |  |  |
+| `Ctrl+→` | 向右移动一个词 |  |  |
 
 ### 插入符号
 
 除了键盘上的常规字符外，您还可以在文档中插入特殊符号。这些符号包括其他语言、数学、科学和排版中的字符。
 
 #### 插入符号：
+
 1. 在文档中将插入点定位到希望符号出现的位置。
-2. 从“插入”菜单中选择“符号”（图 18），或按键盘上的 Ctrl+W。将出现“符号”对话框（图 19）。
+2. 从“插入”菜单中选择“符号”（图 18），或按键盘上的 `Ctrl+W`。将出现“符号”对话框（图 19）。
 3. 使用“设置”下拉列表选择所需的字符类型（图 20）。
 4. 在“符号”网格中，单击要使用的字符。
 5. 单击“插入”将字符添加到文档中（图 21），并保持“符号”对话框打开。
@@ -1601,6 +1473,7 @@ QuickList 也可用于 SaveAs 对话框中。您可以使用 QuickList 快速移
 使用键盘，您可以创建上一页访问的符号集未包含的字符。如果您想创建自定义字符，您应该知道有些打印机不具备打印它们的能力。
 
 #### 创建自定义符号：
+
 1. 在文档中将插入点定位到希望自定义符号出现的位置。
 2. 从“格式”菜单的“排版”子菜单中选择“叠印”（图 22）。将打开“叠印”对话框（图 23）。
 3. 在“字符”文本框中，键入您希望以叠印方式打印的字符。字符之间不要添加空格。此外，字符顺序无关紧要。
@@ -1611,7 +1484,7 @@ QuickList 也可用于 SaveAs 对话框中。您可以使用 QuickList 快速移
 
 ### 提示
 
-要在“叠印”对话框的“字符”文本框中插入符号，请在“叠印”对话框打开时按键盘上的 Ctrl+W。将出现“符号”对话框，您可以选择并插入所需的符号。
+要在“叠印”对话框的“字符”文本框中插入符号，请在“叠印”对话框打开时按键盘上的 `Ctrl+W`。将出现“符号”对话框，您可以选择并插入所需的符号。
 
 图 22. 从“格式”菜单的“排版”子菜单中选择“叠印”。
 
@@ -1633,7 +1506,7 @@ QuickList 也可用于 SaveAs 对话框中。您可以使用 QuickList 快速移
 
 #### 选择字符：
 
-将插入点定位到字符左侧，按住键盘上的 Shift 键，然后按右箭头键。
+将插入点定位到字符左侧，按住键盘上的 `Shift` 键，然后按右箭头键。
 
 或
 
@@ -1644,6 +1517,7 @@ QuickList 也可用于 SaveAs 对话框中。您可以使用 QuickList 快速移
 将鼠标置于单词上方，然后双击。
 
 或
+
 1. 将阴影光标定位到要选择文本的左侧。
 2. 按住鼠标左键并拖动，直到文本被选中（图 26）。
 3. 释放鼠标按钮。
@@ -1655,10 +1529,6 @@ QuickList 也可用于 SaveAs 对话框中。您可以使用 QuickList 快速移
 将插入点定位到句子中，然后从“编辑”菜单的“选择”子菜单中选择“句子”（图 27）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_71_2.png)
-
-
-
-
 
 ### 选择段落：
 
@@ -1706,7 +1576,7 @@ QuickList 也可用于 SaveAs 对话框中。您可以使用 QuickList 快速移
 - 1. 选择要复制的文本。
 - 2. 从编辑菜单中选择复制（图 31）。
   或
-  在键盘上按 Ctrl+C。
+  在键盘上按 `Ctrl+C`。
   或
   单击 WordPerfect 8 工具栏上的复制按钮。
   或
@@ -1722,7 +1592,7 @@ QuickList 也可用于 SaveAs 对话框中。您可以使用 QuickList 快速移
 - 1. 选择要剪切的文本。
 - 2. 从编辑菜单中选择剪切（图 33）
   或
-  在键盘上按 Ctrl+X。
+  在键盘上按 `Ctrl+X`。
   或
   单击 WordPerfect 8 工具栏上的剪切按钮。
   或
@@ -1741,14 +1611,20 @@ X Clipboard 由所有 X Windows 程序使用。 （有关 X Windows 程序的更
 - 2. 将插入点移动到要粘贴文本的位置。
 - 3. 从编辑菜单中选择粘贴（图 35）。
 
-或
-在键盘上按 Ctrl+V。
+
 
 或
+
+在键盘上按 `Ctrl+V`。
+
+或
+
 单击 WordPerfect 8 工具栏上的粘贴按钮。
 
 或
+
 右键单击并从出现的 QuickMenu 中选择粘贴（图 36）。
+
 文本出现在插入点的右侧。
 
 ### 提示
@@ -1763,7 +1639,7 @@ X Clipboard 由所有 X Windows 程序使用。 （有关 X Windows 程序的更
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_74_1.png)
 
-图 35. 从编辑菜单中选择粘贴或在键盘上按 Ctrl+V。
+图 35. 从编辑菜单中选择粘贴或在键盘上按 `Ctrl+V`。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_74_2.png)
 
@@ -1771,14 +1647,14 @@ X Clipboard 由所有 X Windows 程序使用。 （有关 X Windows 程序的更
 
 #### 使用拖放移动文本：
 
-- 1. 选择要剪切和粘贴的文本。
-- 2. 将鼠标指针定位在选定文本上。
-- 3. 按住鼠标左键并拖动，直到插入点出现在要粘贴文本的位置（图 37）。鼠标指针上会附带一个小矩形。
-- 4. 松开鼠标按钮。文本会从旧位置“跳”到新位置（图 38）。
+1. 选择要剪切和粘贴的文本。
+2. 将鼠标指针定位在选定文本上。
+3. 按住鼠标左键并拖动，直到插入点出现在要粘贴文本的位置（图 37）。鼠标指针上会附带一个小矩形。
+4. 松开鼠标按钮。文本会从旧位置“跳”到新位置（图 38）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_75_0.png)
 
-**图 37.** 将插入点拖动到要移动文本的位置。
+图 37. 将插入点拖动到要移动文本的位置。
 
 ### ✓ 提示
 
@@ -1786,26 +1662,22 @@ X Clipboard 由所有 X Windows 程序使用。 （有关 X Windows 程序的更
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_75_1.png)
 
-**图 38.** 松开鼠标按钮后，文本会以选中状态出现在新位置。
+图 38. 松开鼠标按钮后，文本会以选中状态出现在新位置。
 
 #### 使用拖放复制和粘贴文本：
 
-- 1. 选择要复制和粘贴的文本。
-- 2. 将鼠标指针定位在选定文本上。
-- 3. 按住键盘上的 Ctrl 键，按住鼠标左键，然后拖动，直到插入点出现在要粘贴文本的位置（图 39）。
-- 4. 松开鼠标按钮，然后松开 Ctrl 键。文本将被复制并粘贴到新位置（图 40）。
+1. 选择要复制和粘贴的文本。
+2. 将鼠标指针定位在选定文本上。
+3. 按住键盘上的 `Ctrl` 键，按住鼠标左键，然后拖动，直到插入点出现在要粘贴文本的位置（图 39）。
+4. 松开鼠标按钮，然后松开 `Ctrl` 键。文本将被复制并粘贴到新位置（图 40）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_75_2.png)
 
-**图 39.** 选择要复制和粘贴的文本。
+图 39. 选择要复制和粘贴的文本。
 
 #### 替换文本：
 
 选择要替换的文本，然后开始输入。选定的文本将被删除，新文本会出现在其位置。
-
-
-
-
 
 ### 保存你的东西
 
@@ -1841,14 +1713,14 @@ WordPerfect 8 for Linux 配备了一个令人惊叹的功能，你可以使用�
 
 #### 一次撤销或重做多个操作：
 
-- 1. 从编辑菜单中选择撤销/重做历史（图 43）。撤销/重做历史对话框将会打开（图 44）。此对话框显示你在文档上执行过的最多 300 个撤销和重做操作。
-- 2. 一次撤销多个操作：
-- A. 使用撤销列表框选择你想要撤销的操作，按住 Ctrl 键，然后点击各个撤销操作（图 45）。
-- B. 点击撤销按钮。你选择的操作将被撤销。
-- 或
-- A. 使用重做列表框选择你想要重做的操作，按住 Ctrl 键，然后点击各个重做操作（图 46）。
-- B. 点击重做按钮。你选择的操作将被重做。
-- 3. 当你完成选择撤销和重做操作后，点击关闭以关闭对话框并返回到你的文档。
+1. 从编辑菜单中选择撤销/重做历史（图 43）。撤销/重做历史对话框将会打开（图 44）。此对话框显示你在文档上执行过的最多 300 个撤销和重做操作。
+2. 一次撤销多个操作：
+   - A. 使用撤销列表框选择你想要撤销的操作，按住 `Ctrl` 键，然后点击各个撤销操作（图 45）。
+   - B. 点击撤销按钮。你选择的操作将被撤销。
+   - 或
+   - A. 使用重做列表框选择你想要重做的操作，按住 `Ctrl` 键，然后点击各个重做操作（图 46）。
+   - B. 点击重做按钮。你选择的操作将被重做。
+3. 当你完成选择撤销和重做操作后，点击关闭以关闭对话框并返回到你的文档。
 
 ### 提示
 
@@ -1866,19 +1738,19 @@ WordPerfect 使查找和/或替换文档中任何类型的单词或短语变得�
 
 #### 查找单词或短语：
 
-- 1. 将插入点定位到你希望搜索开始的位置。
-- 2. 从编辑菜单中选择查找和替换（图 48）或在键盘上按 Ctrl+F2。查找和替换文本对话框将会出现（图 49）。
-- 3. 在查找文本框中输入你想要定位的单词或短语。
-- 4. 点击查找下一个。WordPerfect 将在文档中搜索该单词或短语的下一个出现位置。
-- 5. 再次点击查找下一个以找到该单词或短语的下一个出现位置。
-- 6. 继续点击查找下一个，直到完成搜索。
-- 7. 点击关闭以关闭对话框。
+1. 将插入点定位到你希望搜索开始的位置。
+2. 从编辑菜单中选择查找和替换（图 48）或在键盘上按 `Ctrl+F2`。查找和替换文本对话框将会出现（图 49）。
+3. 在查找文本框中输入你想要定位的单词或短语。
+4. 点击查找下一个。WordPerfect 将在文档中搜索该单词或短语的下一个出现位置。
+5. 再次点击查找下一个以找到该单词或短语的下一个出现位置。
+6. 继续点击查找下一个，直到完成搜索。
+7. 点击关闭以关闭对话框。
 
 ### 提示
 
-- ▪ 如果你在打开查找和替换文本对话框之前选择了文本，所选文本将在对话框打开时出现在查找文本框中。
-- ▪ 你可以在查找和替换文本对话框打开时继续处理文档。如果想要浏览文档并检查各种项目，这会很有用。
-- ▪ 如果你尝试查找文档中不存在的文本，警告对话框将会打开，告诉你未找到该文本（图 50）。点击确定以关闭对话框。
+- 如果你在打开查找和替换文本对话框之前选择了文本，所选文本将在对话框打开时出现在查找文本框中。
+- 你可以在查找和替换文本对话框打开时继续处理文档。如果想要浏览文档并检查各种项目，这会很有用。
+- 如果你尝试查找文档中不存在的文本，警告对话框将会打开，告诉你未找到该文本（图 50）。点击确定以关闭对话框。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_78_0.png)
 
@@ -1888,21 +1760,17 @@ WordPerfect 使查找和/或替换文档中任何类型的单词或短语变得�
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_78_3.png)
 
-
-
-
-
 #### 替换单词或短语：
 
-- 1. 将插入点定位到你希望搜索开始的位置。
-- 2. 从编辑菜单中选择查找和替换（图 48）或在键盘上按 Ctrl+F2。查找和替换文本对话框将会出现（图 51）。
-- 3. 在查找文本框中输入你想要定位的单词或短语。
-- 4. 在替换为文本框中输入替换文本。
-- 5. 单击替换。WordPerfect 将在文档中搜索该单词或短语的下一个出现位置并将其替换为新文本。
-- 6. 再次单击替换以移动到下一个出现位置并替换文本。
-- 7. 继续单击替换，直到完成对文档的搜索。当 WordPerfect 完成搜索时，将出现一个替换对话框，告诉你已替换了多少个出现次数（图 52）。
-- 8. 单击确定关闭替换对话框。
-- 9. 单击关闭关闭查找和替换文本对话框并返回到文档窗口。
+1. 将插入点定位到你希望搜索开始的位置。
+2. 从编辑菜单中选择查找和替换（图 48）或在键盘上按 `Ctrl+F2`。查找和替换文本对话框将会出现（图 51）。
+3. 在查找文本框中输入你想要定位的单词或短语。
+4. 在替换为文本框中输入替换文本。
+5. 单击替换。WordPerfect 将在文档中搜索该单词或短语的下一个出现位置并将其替换为新文本。
+6. 再次单击替换以移动到下一个出现位置并替换文本。
+7. 继续单击替换，直到完成对文档的搜索。当 WordPerfect 完成搜索时，将出现一个替换对话框，告诉你已替换了多少个出现次数（图 52）。
+8. 单击确定关闭替换对话框。
+9. 单击关闭关闭查找和替换文本对话框并返回到文档窗口。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_79_0.png)
 
@@ -1914,9 +1782,11 @@ Figure 52. When the entire document has been searched, a Replace dialog box open
 
 ### Tips
 
-- 如果你想删除正在搜索的文本而不使用新文本替换它，请在替换为文本框中输入 <Nothing>。
+- 如果你想删除正在搜索的文本而不使用新文本替换它，请在替换为文本框中输入 `<Nothing>`。
 - 如果你想替换文档中单词或短语的所有出现次数，请在查找和替换文本对话框中单击全部替换。
 - 如果你尝试查找文档中不存在的文本，将会打开一个警告对话框，告诉你未找到该文本（图 53）。单击确定关闭此对话框。
+
+
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_79_2.png)
 
@@ -1928,7 +1798,7 @@ Figure 53. If the word or phrase is not found a Warning dialog box opens. "Warni
 
 #### 设置查找和替换选项：
 
-- 1. 从编辑菜单中选择查找和替换（图 48）或在键盘上按 Ctrl+F2。查找和替换文本对话框将会出现（图 54）。
+- 1. 从编辑菜单中选择查找和替换（图 48）或在键盘上按 `Ctrl+F2`。查找和替换文本对话框将会出现（图 54）。
 - 2. 在相应的文本框中输入你想要查找和/或替换的文本。
 - 3. 要设置 WordPerfect 搜索特定匹配项，请选择匹配菜单项。匹配菜单将会打开（图 55）。你可以设置 WordPerfect 以匹配：
   - 整个单词仅查找整个单词。
@@ -1938,7 +1808,7 @@ Figure 53. If the word or phrase is not found a Warning dialog box opens. "Warni
   - 从文档顶部开始查找
   - 在文档开头/结尾处换行——搜索从插入点移动到文档末尾，然后从文档开头继续。
   - 限制查找在所选内容内——搜索仅查看所选文本。
-  
+
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_80_0.png)
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_80_1.png)
@@ -1947,8 +1817,7 @@ Figure 53. If the word or phrase is not found a Warning dialog box opens. "Warni
 
 - 在查找中包含页眉、页脚等——搜索将检查文档中的所有文本，包括页眉等中的文本。如果未选择此选项，搜索将仅在文档正文中进行。
 - 限制更改次数——当在查找和替换文本对话框中单击全部替换时，搜索将限制替换次数。
-
-5. 完成选择选项后，使用查找和替换文本对话框执行搜索。
+- 5. 完成选择选项后，使用查找和替换文本对话框执行搜索。
 
 ### 格式符号和代码的隐藏世界
 
@@ -1958,21 +1827,17 @@ Figure 53. If the word or phrase is not found a Warning dialog box opens. "Warni
 
 #### 显示格式符号：
 
-从视图菜单中选择显示 ¶（图 57）。隐藏的符号将出现在你的文档中（图 58）。
+从视图菜单中选择`显示 ¶`（图 57）。隐藏的符号将出现在你的文档中（图 58）。
 
 ### Tip
 
-- 要隐藏符号，只需再次从视图菜单中选择显示 ¶。
+- 要隐藏符号，只需再次从视图菜单中选择`显示 ¶`。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_81_0.png)
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_81_1.png)
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_81_2.png)
-
-
-
-
 
 #### 指定显示哪些符号：
 
@@ -1985,7 +1850,7 @@ Figure 53. If the word or phrase is not found a Warning dialog box opens. "Warni
 
 ### Tip
 
-如果在文档中看不到显示的符号，你需要打开它们。从 View 菜单中选择 Show ¶（图 57）。
+如果在文档中看不到显示的符号，你需要打开它们。从 View 菜单中选择`Show ¶`（图 57）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_82_0.png)
 
@@ -2016,18 +1881,18 @@ Figure 61. 使用 Display Preferences 对话框选择的要显示的符号会出
 #### To make text bold:
 
 - 1. 选择要格式化的文本。
-- 2. 单击 Property Bar 上的 Bold 按钮或在键盘上按 Ctrl+B。
+- 2. 单击 Property Bar 上的 Bold 按钮或在键盘上按 `Ctrl+B`。
 - 或
-- A. 从 Format 菜单中选择 Font（图 1）或在键盘上按 F9。Font 对话框将打开（图 2）。
+- A. 从 Format 菜单中选择 Font（图 1）或在键盘上按 `F9`。Font 对话框将打开（图 2）。
 - B. 在 Appearance 区域，单击 Bold 旁边的复选框（图 3）。
 - C. 单击 OK 关闭对话框。
 - 文本将变为粗体（图 4）。
 
 或
 
-- 1. 在输入时，单击 Property Bar 上的 Bold 按钮或在键盘上按 Ctrl+B。
+- 1. 在输入时，单击 Property Bar 上的 Bold 按钮或在键盘上按 `Ctrl+B`。
 - 2. 输入粗体文本。
-- 3. 通过再次单击 Property Bar 上的 Bold 按钮或在键盘上按 Ctrl+B 来关闭粗体格式。
+- 3. 通过再次单击 Property Bar 上的 Bold 按钮或在键盘上按 `Ctrl+B` 来关闭粗体格式。
 - 文本将变为粗体（图 4）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_85_0.png)
@@ -2039,11 +1904,11 @@ Figure 61. 使用 Display Preferences 对话框选择的要显示的符号会出
 #### To add italics:
 
 - 1. 选择要格式化的文本。
-- 2. 单击 Property Bar 上的 Italic 按钮或在键盘上按 Ctrl+I。
+- 2. 单击 Property Bar 上的 Italic 按钮或在键盘上按 `Ctrl+I`。
 
 或
 
-- A. 从 Format 菜单中选择 Font（图 1）或在键盘上按 F9。Font 对话框将打开（图 2）。
+- A. 从 Format 菜单中选择 Font（图 1）或在键盘上按 `F9`。Font 对话框将打开（图 2）。
 - B. 在 Appearance 区域，单击 Italic 旁边的复选框（图 5）。
 - C. 单击 OK 关闭对话框。
 
@@ -2051,9 +1916,9 @@ Figure 61. 使用 Display Preferences 对话框选择的要显示的符号会出
 
 或
 
-- 1. 在输入时，单击 Property Bar 上的 Italic 按钮或在键盘上按 Ctrl+I。
+- 1. 在输入时，单击 Property Bar 上的 Italic 按钮或在键盘上按 `Ctrl+I`。
 - 2. 输入斜体文本。
-- 3. 通过再次单击 Property Bar 上的 Italic 按钮或在键盘上按 Ctrl+I 来关闭斜体格式。
+- 3. 通过再次单击 Property Bar 上的 Italic 按钮或在键盘上按 `Ctrl+I` 来关闭斜体格式。
 
 文本将变为斜体（图 6）。
 
@@ -2073,26 +1938,26 @@ Figure 5. 单击 Italic 旁边的复选框，然后单击 OK。
 
 Figure 6. 你选择的或输入的文本为斜体。
 
-
-
-
-
 ### 下划线文本：
+
 - 1. 选择要格式化的文本。
-- 2. 单击属性栏上的下划线按钮或在键盘上按 Ctrl+U。
+- 2. 单击属性栏上的下划线按钮或在键盘上按 `Ctrl+U`。
 - 或
-- A. 从格式菜单中选择字体（图 1）或在键盘上按 F9。字体对话框将打开（图 2）。
+
+
+
+- A. 从格式菜单中选择字体（图 1）或在键盘上按 `F9`。字体对话框将打开（图 2）。
 - B. 在外观区域，单击下划线旁边的复选框（图 7）。
 - C. 单击确定关闭对话框。
 - 文本将被下划线（图 8）。
 - 或
-- 1. 在输入时，单击属性栏上的下划线按钮或在键盘上按 Ctrl+U。
+- 1. 在输入时，单击属性栏上的下划线按钮或在键盘上按 `Ctrl+U`。
 - 2. 输入下划线文本。
-- 3. 通过再次单击属性栏上的下划线按钮或在键盘上按 Ctrl+U 关闭下划线格式。
+- 3. 通过再次单击属性栏上的下划线按钮或在键盘上按 `Ctrl+U` 关闭下划线格式。
 - 文本将被下划线（图 8）。
 
 ### 提示
-- - 要删除下划线，请选择已下划线的文本，然后单击属性栏上的下划线按钮。
+- 要删除下划线，请选择已下划线的文本，然后单击属性栏上的下划线按钮。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_87_0.png)
 
@@ -2104,20 +1969,20 @@ Figure 6. 你选择的或输入的文本为斜体。
 
 #### 插入日期：
 - 1. 将插入点定位到你希望日期出现的位置。
-- 2. 在键盘上按 Ctrl+D。
+- 2. 在键盘上按 `Ctrl+D`。
 
 ### 提示
-- - 如果你希望日期单独在一行上右对齐，请在键盘上按 Shift+Ctrl+F7。
+- 如果你希望日期单独在一行上右对齐，请在键盘上按 `Shift+Ctrl+F7`。
 
 ### 添加其他类型的文本格式：
 - 1. 选择要格式化的文本。
-- 2. 从格式菜单中选择字体（图 1）或在键盘上按 F9。字体对话框将出现（图 2）。
+- 2. 从格式菜单中选择字体（图 1）或在键盘上按 `F9`。字体对话框将出现（图 2）。
 - 3. 在外观区域，选择你想要使用的格式类型（图 7）。图 9 显示了你可以选择的某些格式选项。
 - 4. 单击确定关闭对话框。你选择的文本将以你选择的格式重新绘制。
 
 ### 使文本上标或下标：
 - 1. 选择要更改的文本。
-- 2. 从格式菜单中选择字体（图 1）或在键盘上按 F9。字体对话框将出现（图 2）。
+- 2. 从格式菜单中选择字体（图 1）或在键盘上按 `F9`。字体对话框将出现（图 2）。
 - 3. 使用位置下拉列表选择上标或下标（图 10）。
 - 4. 单击确定关闭对话框。你选择的文本将重新绘制为上标或下标（图 11）。
 
@@ -2139,28 +2004,24 @@ WordPerfect 还允许你快速居中单行文本，或使用称为右对齐的�
 
 #### 居中一行文本：
 - 1. 将插入点定位到你希望居中文本行位置。
-- 2. 从格式菜单上的行弹出菜单中选择居中（图 12）或在键盘上按 Shift+F7。
-- 3. 输入居中的文本行，然后在键盘上按 Enter（图 13）。
+- 2. 从格式菜单上的行弹出菜单中选择居中（图 12）或在键盘上按 `Shift+F7`。
+- 3. 输入居中的文本行，然后在键盘上按 `Enter`（图 13）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_89_0.png)
 
 #### 将文本右对齐：
 - 1. 将插入点定位到你希望添加右对齐文本的位置。
-- 2. 从格式菜单上的行弹出菜单中选择右对齐或在键盘上按 Shift+Ctrl+F7。
-- 3. 输入右对齐的文本行，然后在键盘上按 Enter（图 13）。
+- 2. 从格式菜单上的行弹出菜单中选择右对齐或在键盘上按 `Shift+Ctrl+F7`。
+- 3. 输入右对齐的文本行，然后在键盘上按 `Enter`（图 13）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_89_1.png)
 
 #### 使用点状引导线将文本右对齐：
 - 1. 将插入点定位到你希望添加右对齐文本的位置。
 - 2. 从格式菜单上的行弹出菜单中选择带点状引导线的右对齐（图 14）。点状引导线（点状引导线）将出现在文档窗口中插入点旁边。
-- 3. 在点状引导线旁边输入右对齐的文本行，然后在键盘上按 Enter（图 13）。
+- 3. 在点状引导线旁边输入右对齐的文本行，然后在键盘上按 `Enter`（图 13）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_89_2.png)
-
-
-
-
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_90_0.png)
 
@@ -2171,7 +2032,6 @@ Figure 15. 要更改所选文本的大小写，请在编辑菜单上的 Convert 
 HAVE YOU EVER PRESSED THE CAPS LOCK KEY BY MISTAKE? I have! WordPerfect makes it very easy to correct such a situation. There's no need to retype the text.
 
 #### To change text capitalization:
-
 - 1. Select the text you want to change.
 - 2. Choose Convert Case from the Edit menu to open the fly-out (Figure 15).
 - 3. Choose the capitalization you would like from the fly-out, lowercase, uppercase, or initial capitals, where the first letter of each word is capitalized. The selected text will change to the capitalization you selected.
@@ -2179,7 +2039,6 @@ HAVE YOU EVER PRESSED THE CAPS LOCK KEY BY MISTAKE? I have! WordPerfect makes it
 ### A WordPerfect Font Primer
 
 Fonts come in several types and work in different ways in WordPerfect:
-
 - **Printer fonts** are built-in to your printer. Every printer has the capability to print at least one font.
 - **Type 1 fonts**, also called soft fonts, are sold like software on disks or are downloadable from the Web. Over 130 Type 1 fonts ship on the WordPerfect 8 Personal Edition CD-ROM.
 - **Font cartridges** let you add printer fonts by inserting a font cartridge directly into a printer.
@@ -2193,116 +2052,100 @@ To install the Type 1 fonts that come with the Personal Edition, you will have t
 
 ### Choosing a New Font and Font Size
 
-There are several ways you can add or change fonts and font sizes in a document. You can select a new font and/or size, then type text, select text that you want to change to another font and/or size, or insert a font code in existing text, changing the typeface and/or size from that spot on until the end of the document (or until another font code is encountered).
 
-Font sizes are set in points, an old system that predates computers and even typewriters. Just to give you an idea of relative sizes, 72 point type is 1" high (2.5 cm) and 18 point type is ¼" high (6 mm).
 
-#### To change fonts:
+There are several ways you can add or change fonts and font sizes in a document. You can select a new font and/or size, then type text, select text that you want to change to another font and/or size, or insert a font code in existing text, changing the typeface and/or size from that spot on until the end of the document or until another font code is encountered.
 
+Font sizes are set in points, an old system that predates computers and even typewriters. Just to give you an idea of relative sizes, 72 point type is 1" high 2.5 cm and 18 point type is ¼" high 6 mm.
+
+### To change fonts:
 - 1. Select the text you want to change.
 - or
 - Position the insertion point where you want to change the font.
-- 2. Use the Font drop-down list on the Property Bar to select a new font (Figure 16).
+- 2. Use the `Font` drop-down list on the `Property Bar` to select a new font `Figure 16`.
 - or
-- A. Choose Font from the Format menu (Figure 1) or press F9 on the keyboard. The Font dialog box will open (Figure 2).
-- B. Use the Font Face list box to select a new font (Figure 17). You can see the font you’ve selected in the preview pane near the bottom left of the dialog box.
-- C. Click OK.
+- A. Choose `Font` from the `Format` menu `Figure 1` or press `F9` on the keyboard. The `Font` dialog box will open `Figure 2`.
+- B. Use the `Font Face` list box to select a new font `Figure 17`. You can see the font you’ve selected in the preview pane near the bottom left of the dialog box.
+- C. Click `OK`.
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_91_0.png)
-
 Figure 16. The Font drop-down list lets you choose a new font and shows a preview of the selected font.
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_91_1.png)
-
 Preview pane
-
 Figure 17. Use the Font Face list box to select a new font. The font you choose is displayed in the preview pane.
 
-#### To change font size:
-
+### To change font size:
 - 1. Select the text you want to change or position the insertion point where you want to change the font.
-- 2. Use the Font Size drop-down list on the Property Bar to select a new font size (Figure 18).
+- 2. Use the `Font Size` drop-down list on the `Property Bar` to select a new font size `Figure 18`.
 - or
-- A. Choose Font from the Format menu (Figure 1) or press F9 on the keyboard. The Font dialog box will open (Figure 2).
-- B. Use the Font Size list box to select a new font size (Figure 19). You can see the size you’ve selected in the preview pane near the bottom left of the dialog box.
-- C. Click OK to close the dialog box.
+- A. Choose `Font` from the `Format` menu `Figure 1` or press `F9` on the keyboard. The `Font` dialog box will open `Figure 2`.
+- B. Use the `Font Size` list box to select a new font size `Figure 19`. You can see the size you’ve selected in the preview pane near the bottom left of the dialog box.
+- C. Click `OK` to close the dialog box.
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_92_0.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_92_1.png)
 
 ### Setting Relative Font Sizes
-
 Instead of setting absolute font sizes in points, you can also change font size by setting sizes relatively smaller or larger than the currently selected font size. For instance, a setting of Extra Large is 200% bigger than the current font size and a setting of Fine is 60% smaller than the current font size.
 
 #### To set a relative font size:
-
 - 1. Select the text you want to make smaller or bigger or position the insertion point where you want to change the font.
-- 2. Choose Font from the Format menu (Figure 1) or press F9 on the keyboard. The Font dialog box will open (Figure 2).
-- 3. Use the Relative Size drop-down list to select a new size (Figure 20).
-- 4. Click OK to close the dialog box.
+- 2. Choose `Font` from the `Format` menu `Figure 1` or press `F9` on the keyboard. The `Font` dialog box will open `Figure 2`.
+- 3. Use the `Relative Size` drop-down list to select a new size `Figure 20`.
+- 4. Click `OK` to close the dialog box.
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_92_2.png)
 
-
-
-
-
 ### 设置新的默认字体
-
-您创建的每个文档都有一个文档默认字体。这是 WordPerfect 用于每个文档的字体，除非您选择其他字体。WordPerfect 使用此字体用于文档正文中的文本以及页眉和页脚中的文本。（有关页眉和页脚的详细信息，请参阅第 8 章《页面和文档设置》。）
+您创建的每个文档都有一个文档默认字体。这是 WordPerfect 用于每个文档的字体，除非您选择其他字体。WordPerfect 使用此字体用于文档正文中的文本以及页眉和页脚中的文本。有关页眉和页脚的详细信息，请参阅第 8 章《页面和文档设置》。
 
 #### 设置当前文档的新默认字体：
-
-- 1. 在打开文档的情况下，从格式菜单中选择字体（图 21）或在键盘上按 F9。字体对话框将打开（图 22）。
-- 2. 单击初始字体。文档默认字体对话框将打开（图 23）。
+- 1. 在打开文档的情况下，从格式菜单中选择字体 `图 21` 或在键盘上按 `F9`。字体对话框将打开 `图 22`。
+- 2. 单击初始字体。文档默认字体对话框将打开 `图 23`。
 - 3. 使用字体样式列表框选择一种字体。
 - 4. 使用字体大小列表框选择一个大小。
 - 5. 完成选择新的默认字体后，单击确定返回字体对话框。
 - 6. 单击确定返回文档。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_93_0.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_93_1.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_93_2.png)
 
 #### 设置所有新文档的新默认字体：
-
-- 1. 从格式菜单中选择字体（图 21）或在键盘上按 F9。字体对话框将打开（图 22）。
-- 2. 单击初始字体。文档默认字体对话框将打开（图 24）。
+- 1. 从格式菜单中选择字体 `图 21` 或在键盘上按 `F9`。字体对话框将打开 `图 22`。
+- 2. 单击初始字体。文档默认字体对话框将打开 `图 24`。
 - 3. 使用字体样式列表框选择一种字体。
 - 4. 使用字体大小列表框选择一个大小。
-- 5. 确保选中“设为打印机初始字体”旁边的框（图 25）。
+- 5. 确保选中“设为打印机初始字体”旁边的框 `图 25`。
 - 6. 完成选择新的默认字体后，单击确定返回字体对话框。
 - 7. 单击确定返回文档。下次您开始新文档时，您选择的字体将成为默认字体。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_94_0.png)
-
 Figure 24. 使用默认字体对话框选择新字体、字号和字体样式作为所有新文档的默认值。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_94_1.png)
-
 Figure 25. 确保选中“设为打印机初始字体”旁边的框，然后单击确定。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_94_2.png)
-
 Figure 26. 打开一个终端窗口，然后移动到 WordPerfect 安装的目录。
 
 ### 字体都在哪里？
 
+
+
 WordPerfect Personal Edition CD-ROM 附带 130 种不同的字体，您可以使用它们创建专业文档。为了安装任何字体，您需要以管理员身份启动 WordPerfect（这与以 root 用户登录 Linux 不同）。如果您没有执行此操作的权限，您需要与系统管理员联系。
 
-#### 安装字体：
+### 安装字体：
 
-- 1. 以 root 用户登录或 su 到 root。
+- 1. 以 root 用户登录或 `su` 到 `root`。
 - 2. 将 WordPerfect CD-ROM 插入计算机的 CD-ROM 驱动器。
 - 3. 挂载 CD-ROM 驱动器（有关如何执行此操作的说明请参阅第 21 页）。
 - 4. 要以管理员身份启动 WordPerfect，请打开一个终端窗口（图 26）。（有关如何执行此操作的详细信息请参阅第 22 页。
-- 5. 移动到 WordPerfect 安装的目录。在图 27 中，该目录为 /usr/wp。
-- 6. 更改为 wpbin 目录。
-- 7. 输入 ./xwp -adm（图 27），然后在键盘上按 Enter。WordPerfect 将启动。
-- 8. 从格式菜单中选择字体（图 21）或在键盘上按 F9。字体对话框将打开（图 22）。
+- 5. 移动到 WordPerfect 安装的目录。在图 27 中，该目录为 `/usr/wp`。
+- 6. 更改为 `wpbin` 目录。
+- 7. 输入 `./xwp -adm`（图 27），然后在键盘上按 Enter。WordPerfect 将启动。
+- 8. 从格式菜单中选择字体（图 21）或在键盘上按 `F9`。字体对话框将打开（图 22）。
 - 9. 单击安装字体按钮（图 28）（当您正常运行 WordPerfect 时，此按钮不可用且为灰色）。选择字体类型对话框将出现（图 29）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_95_0.png)
@@ -2312,10 +2155,10 @@ WordPerfect Personal Edition CD-ROM 附带 130 种不同的字体，您可以使
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_95_2.png)
 
 - 10. 在安装区域中，单击 Type 1 按钮。选择字体用于 [Type 1] 对话框将打开（图 30）。
-- 11. 单击字体目录右侧的列表按钮。字体目录对话框将打开（图 31）。当前目录可能显示为 /usr/wp/sh1b10/ 等。sh1b10 目录是默认的 WordPerfect 字体目录。
-- 12. 使用目录列表框移动到 WordPerfect CD-ROM 上的字体目录（图 32）。在图 32 中，该目录为 /mnt/cdrom/fonts/。
+- 11. 单击字体目录右侧的列表按钮。字体目录对话框将打开（图 31）。当前目录可能显示为 `/usr/wp/sh1b10/` 等。`sh1b10` 目录是默认的 WordPerfect 字体目录。
+- 12. 使用目录列表框移动到 WordPerfect CD-ROM 上的字体目录（图 32）。在图 32 中，该目录为 `/mnt/cdrom/fonts/`。
 - 13. 单击确定关闭字体目录对话框并返回到选择字体用于 [Type 1] 对话框。您选择的目录将出现在对话框顶部的文件类型目录区域中字体目录右侧（图 33）。
-- 14. 单击 .pfb 目录右侧的列表按钮。字体目录对话框将打开（图 31）。
+- 14. 单击 `.pfb` 目录右侧的列表按钮。字体目录对话框将打开（图 31）。
 
 (continued)
 
@@ -2329,29 +2172,20 @@ Figure 31. 字体目录对话框用于告诉 WordPerfect 将要安装的字体�
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_96_2.png)
 
-Figure 32. 在计算机的目录中移动，直到找到 WordPerfect CD-ROM 上的字体目录。在此图中，目录为 /mnt/cdrom/fonts/。
+Figure 32. 在计算机的目录中移动，直到找到 WordPerfect CD-ROM 上的字体目录。在此图中，目录为 `/mnt/cdrom/fonts/`。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_96_3.png)
 
 Figure 33. 在选择字体用于 [Type 1] 对话框的文件类型目录区域中，您选择的目录出现在字体目录右侧。
 
-
-
-
-
-15. 使用目录列表框移动到 WordPerfect CD-ROM 上的字体目录（图 32）。在图 32 中，该目录为 /mnt/cdrom/fonts/。
-
-16. 单击 OK 关闭字体目录对话框并返回到“为 [Type 1] 选择字体”对话框。您选择的目录将显示在对话框顶部的“文件类型目录”区域中 .pfb 目录右侧（图 34）。CD-ROM 上的字体将出现在“可用字体”区域中，已被选中（图 35）。
-
+15. 使用目录列表框移动到 WordPerfect CD-ROM 上的字体目录（图 32）。在图 32 中，该目录为 `/mnt/cdrom/fonts/`。
+16. 单击 OK 关闭字体目录对话框并返回到“为 [Type 1] 选择字体”对话框。您选择的目录将显示在对话框顶部的“文件类型目录”区域中 `.pfb` 目录右侧（图 34）。CD-ROM 上的字体将出现在“可用字体”区域中，已被选中（图 35）。
 17. 如果您想取消选择所有字体，请单击“取消标记所有字体”按钮。（此按钮可切换——一旦您取消标记所有字体，按钮将显示为“标记所有字体”。）
-
 18. 向下滚动“可用字体”列表框，单击要安装的每个字体旁边的复选框。（您可以安装的字体数量受限于计算机上的可用空间。）
-
 19. 选择完字体后，单击 OK。将会打开“字体文件位置”对话框（图 36），告知您计算机在 CD-ROM 上找到字体的目录与计算机上存储 WordPerfect 字体的目录不同（当然是不同的）。对话框还询问您是否要将字体复制到计算机上存储 WordPerfect 字体的目录（您需要这样做）。
-
 20. 单击 Yes。字体将被安装，并在安装完成后出现 WordPerfect 字体安装对话框（图 37）。
 
-Figure 34. 在“为 [Type 1] 选择字体”对话框的“文件类型目录”区域中，您选择的目录显示在 .pfb 目录右侧。
+Figure 34. 在“为 [Type 1] 选择字体”对话框的“文件类型目录”区域中，您选择的目录显示在 `.pfb` 目录右侧。
 
 Figure 35. CD-ROM 上的字体在“可用字体”列表框中显示为已选中。
 
@@ -2380,20 +2214,13 @@ Figure 39a. 您安装的字体会出现在字体对话框的字体样式列表�
 Figure 39b. 新字体也会出现在属性栏上的字体下拉列表中。
 
 21. 安装完字体后，单击 Exit WPFL。（如果您想安装更多字体，请单击 Continue。）信息对话框将会出现（图 38），告知您必须重新启动 WordPerfect 才能在字体对话框中看到您刚刚安装的字体。
-
 22. 单击 OK 返回到字体对话框。
-
 23. 单击 OK 关闭字体对话框。
-
-24. 通过在键盘上按 Ctrl+Shift+F4，或单击程序窗口上的关闭按钮，退出 WordPerfect 程序。
-
+24. 通过在键盘上按 `Ctrl+Shift+F4`，或单击程序窗口上的关闭按钮，退出 WordPerfect 程序。
 25. 再次启动 WordPerfect（您不需要这次以管理员身份运行 WordPerfect，您可以像平常一样启动 WordPerfect）。
-
 26. 从格式菜单中选择字体（图 21）。字体对话框将打开（图 22）。
-
 27. 您安装的字体将出现在字体对话框中的字体样式列表框以及属性栏上的字体下拉列表中（图 39a-b）。您现在可以在文档中使用这些字体。
-
-28. 确保卸载 CD-ROM（有关如何执行此操作的详细信息，请参阅第 28 页）并注销 root。
+28. 确保卸载 CD-ROM（有关如何执行此操作的详细信息，请参阅第 28 页）并注销 `root`。
 
 ### 段落格式
 
@@ -2404,7 +2231,6 @@ Figure 39b. 新字体也会出现在属性栏上的字体下拉列表中。
 - 1. 将插入点定位在您希望对齐开始的位置。（这将影响插入点所在的段落以及后续所有段落。）
 - 或
 - 选择您想要对齐的段落。
-
 - 2. 单击属性栏上的对齐按钮，从下拉列表中选择一种对齐方式（图 40）。
 - 或
 - 从格式菜单上的对齐弹出菜单中选择一种对齐类型（图 41）。
@@ -2423,36 +2249,34 @@ Figure 41. 从格式菜单上的对齐弹出菜单中选择对齐类型。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_99_2.png)
 
-
-
-
-
 ### 行距
 
 使用 WordPerfect，您可以通过两种方式设置行与行之间的间距：绝对方式，使用精确的测量值（这称为 leading），或自动方式，WordPerfect 通过将行高乘以您设置的线距值来确定行距。
 
 #### 设置精确行高：
 
-- 1. 将插入点定位到您希望行高更改开始的位置，或选择要更改的段落。
-- 2. 在“格式”菜单上的“行”下拉菜单中选择“高度”（图 42）。“行高”对话框将出现（图 43）。
-- 3. 单击“固定”旁边的单选按钮。
-- 4. 在“固定”文本框中输入精确的测量值。
-- 5. 单击“确定”返回文档。
+
+
+1. 将插入点定位到您希望行高更改开始的位置，或选择要更改的段落。
+2. 在“格式”菜单上的“行”下拉菜单中选择“高度”（图 42）。“行高”对话框将出现（图 43）。
+3. 单击“固定”旁边的单选按钮。
+4. 在“固定”文本框中输入精确的测量值。
+5. 单击“确定”返回文档。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_100_0.png)
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_100_1.png)
 
-#### 设置行距：
+### 设置行距：
 
-- 1. 将插入点定位到您希望行距更改开始的位置，或选择要更改的段落。
-- 2. 在“格式”菜单上的“行”下拉菜单中选择“间距”（图 44）。“行距”对话框将出现（图 45）。
-- 3. 在“间距”文本框中输入您想要的行距。
-- 4. 单击“确定”。
+1. 将插入点定位到您希望行距更改开始的位置，或选择要更改的段落。
+2. 在“格式”菜单上的“行”下拉菜单中选择“间距”（图 44）。“行距”对话框将出现（图 45）。
+3. 在“间距”文本框中输入您想要的行距。
+4. 单击“确定”。
 
-### 提示
+#### 提示
 
-- 要更改整个文档的行距，请按 Ctrl+Home 移至文档顶部，然后按照上述步骤操作。
+- 要更改整个文档的行距，请按 `Ctrl+Home` 移至文档顶部，然后按照上述步骤操作。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_100_2.png)
 
@@ -2462,16 +2286,16 @@ Figure 41. 从格式菜单上的对齐弹出菜单中选择对齐类型。
 
 #### 设置段落之间的间距：
 
-- 1. 将插入点定位到您希望行距更改开始的位置。
-- 或
-- 选择要更改的段落。
-- 2. 在“格式”菜单上的“段落”下拉菜单中选择“格式”（图 46）。“段落格式”对话框将打开（图 47）。
-- 3. 使用“段落间距”文本框设置段落之间想要的行数。您输入的行数预览将出现在预览窗格中。
-- 4. 单击“确定”返回文档。
+1. 将插入点定位到您希望行距更改开始的位置。
+   或
+   选择要更改的段落。
+2. 在“格式”菜单上的“段落”下拉菜单中选择“格式”（图 46）。“段落格式”对话框将打开（图 47）。
+3. 使用“段落间距”文本框设置段落之间想要的行数。您输入的行数预览将出现在预览窗格中。
+4. 单击“确定”返回文档。
 
-### 提示
+#### 提示
 
-- 如果您想更改整个文档的段落间距，请在键盘上按 Ctrl+Home 移至文档顶部，然后按照上述步骤操作。
+- 如果您想更改整个文档的段落间距，请在键盘上按 `Ctrl+Home` 移至文档顶部，然后按照上述步骤操作。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_101_0.png)
 
@@ -2493,19 +2317,19 @@ Figure 47. Enter the number of lines you would like between each paragraph in th
 
 #### 在文本行中插入制表位：
 
-- 1. 将插入点定位到您想要插入制表位的位置（段落开头是典型位置）。
-- 2. 按键盘上的 Tab 键。
+1. 将插入点定位到您想要插入制表位的位置（段落开头是典型位置）。
+2. 按键盘上的 `Tab` 键。
 
 #### 缩进段落：
 
-- 1. 选择要缩进的段落。
-- 2. 在“格式”菜单上的“段落”下拉菜单中选择您想要使用的缩进类型（图 48）。您可以从“缩进”、“悬挂缩进”或“双重缩进”中选择（图 49）。
+1. 选择要缩进的段落。
+2. 在“格式”菜单上的“段落”下拉菜单中选择您想要使用的缩进类型（图 48）。您可以从“缩进”、“悬挂缩进”或“双重缩进”中选择（图 49）。
 
 或
 
-- 1. 将插入点定位到您希望缩进段落开始的位置。
-- 2. 在“格式”菜单上的“段落”下拉菜单中选择您想要使用的缩进类型（图 48）。您可以从“缩进”、“悬挂缩进”或“双重缩进”中选择（图 49）。
-- 3. 输入您的段落，然后按 Enter 结束缩进。
+1. 将插入点定位到您希望缩进段落开始的位置。
+2. 在“格式”菜单上的“段落”下拉菜单中选择您想要使用的缩进类型（图 48）。您可以从“缩进”、“悬挂缩进”或“双重缩进”中选择（图 49）。
+3. 输入您的段落，然后按 `Enter` 结束缩进。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_102_0.png)
 
@@ -2517,24 +2341,20 @@ Figure 49. Depending upon the type of indentation you choose, the paragraph will
 
 #### 快捷键和缩进
 
-您可以使用一些键盘快捷键来插入缩进：F7 添加缩进，Ctrl+F7 添加悬挂缩进。
+您可以使用一些键盘快捷键来插入缩进：`F7` 添加缩进，`Ctrl+F7` 添加悬挂缩进。
 
+#### 缩进每段落的第一行：
 
+1. 选择你想要缩进的段落。
+   或
+   将插入点定位到你希望缩进开始的位置。
+2. 从格式菜单的段落下拉菜单中选择格式（图 50）。段落格式对话框将会出现（图 51）。
+3. 在首行缩进文本框中输入一个测量值。你输入的测量值的预览将会出现在预览窗格中。
+4. 点击确定关闭对话框并返回到文档窗口。
 
+#### 提示
 
-
-### 缩进每段落的第一行：
-
-- 1. 选择你想要缩进的段落。
-- 或
-- 将插入点定位到你希望缩进开始的位置。
-- 2. 从格式菜单的段落下拉菜单中选择格式（图 50）。段落格式对话框将会出现（图 51）。
-- 3. 在首行缩进文本框中输入一个测量值。你输入的测量值的预览将会出现在预览窗格中。
-- 4. 点击确定关闭对话框并返回到文档窗口。
-
-### 提示
-
-- 若要缩进整个文档中的段落，请按 Ctrl+Home 将插入点移动到文档顶部，然后按照上述步骤操作。
+- 若要缩进整个文档中的段落，请按 `Ctrl+Home` 将插入点移动到文档顶部，然后按照上述步骤操作。
 - 使用段落格式对话框，你还可以设置段落左右两侧的缩进量。为此，在段落调整区域的左侧和右侧边距调整文本框中输入你希望每侧缩进的量（图 52）。
 
 图 50. 从格式菜单的段落下拉菜单中选择格式。
@@ -2553,7 +2373,7 @@ Figure 49. Depending upon the type of indentation you choose, the paragraph will
 
 制表符条显示在数字测量值下方（图 53）。微小的三角形指示制表符设置的位置。默认情况下，WordPerfect 将这些制表符设置每 0.5 英寸（1.3 厘米）放置一次。
 
-当你更改制表符设置时，更改将从插入点所在的段落开始生效。要更改特定段落的制表符设置，请选择该段落。要更改整个文档的制表符设置，请按 Ctrl+Home 移动到文档顶部，然后更改设置。请记住，制表符设置会影响制表符和缩进。
+当你更改制表符设置时，更改将从插入点所在的段落开始生效。要更改特定段落的制表符设置，请选择该段落。要更改整个文档的制表符设置，请按 `Ctrl+Home` 移动到文档顶部，然后更改设置。请记住，制表符设置会影响制表符和缩进。
 
 不同类型制表符设置的完整列表可以在第 97 页的侧边栏中找到。
 
@@ -2571,12 +2391,12 @@ Figure 49. Depending upon the type of indentation you choose, the paragraph will
 
 #### 移动制表符设置：
 
-- 1. 将插入点定位到你想要更改制表符设置的位置。
-- 或
-- 选择你想要更改制表符设置的段落。
-- 2. 将鼠标指针定位到你想要移动的制表符设置上。
-- 3. 按住鼠标左键并将其拖动到新位置（图 55）。拖动时，一条垂直线会从制表符设置向下延伸穿过文档，让你了解制表符停止位置与文档页面的关系。
-- 4. 当制表符设置位于正确位置时释放鼠标按钮。
+1. 将插入点定位到你想要更改制表符设置的位置。
+   或
+   选择你想要更改制表符设置的段落。
+2. 将鼠标指针定位到你想要移动的制表符设置上。
+3. 按住鼠标左键并将其拖动到新位置（图 55）。拖动时，一条垂直线会从制表符设置向下延伸穿过文档，让你了解制表符停止位置与文档页面的关系。
+4. 当制表符设置位于正确位置时释放鼠标按钮。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_105_0.png)
 
@@ -2584,13 +2404,13 @@ Figure 49. Depending upon the type of indentation you choose, the paragraph will
 
 #### 创建新的制表符设置：
 
-- 1. 将插入点定位到你想要更改制表符设置的位置。
-- 或
-- 选择你想要更改制表符设置的段落。
-- 2. 在制表符条的两个制表符设置之间的空白区域右键单击。会出现一个快速菜单（图 56）。
-- 3. 从快速菜单中选择你想要创建的制表符设置类型。在图 56 中已选择右制表符设置。
-- 4. 将鼠标指针定位到标尺栏上你希望制表符设置出现的位置。
-- 5. 单击。新的制表符设置将出现在标尺栏上（图 57）。
+1. 将插入点定位到你想要更改制表符设置的位置。
+   或
+   选择你想要更改制表符设置的段落。
+2. 在制表符条的两个制表符设置之间的空白区域右键单击。会出现一个快速菜单（图 56）。
+3. 从快速菜单中选择你想要创建的制表符设置类型。在图 56 中已选择右制表符设置。
+4. 将鼠标指针定位到标尺栏上你希望制表符设置出现的位置。
+5. 单击。新的制表符设置将出现在标尺栏上（图 57）。
 
 或
 
@@ -2598,11 +2418,7 @@ Figure 49. Depending upon the type of indentation you choose, the paragraph will
 
 图 56. 在制表符条的空白区域右键单击，并从快速菜单中选择你想要使用的制表符设置类型。
 
-
-
-
-
-### 新标签设置
+#### 新标签设置
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_106_0.png)
 
@@ -2610,35 +2426,39 @@ Figure 49. Depending upon the type of indentation you choose, the paragraph will
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_106_1.png)
 
-图 58。从在标签条上右键单击时出现的 QuickMenu 中选择 Tab Set。
 
-- 1. 将插入点定位到你想要更改标签设置的位置。
-- 或
-- 选择你想要更改标签设置的段落。
-- 2. 在标签条上右键单击并从出现的 QuickMenu 中选择 Tab Set（图 58）。Tabs 对话框将会出现（图 59）。
-- 或
-- 从格式菜单上的 Line 弹出菜单中选择 Tab Set（图 60）。Tabs 对话框将会出现（图 59）。
-- 3. 使用 Type 下拉列表选择你想要添加的标签设置类型（图 61）。
-- 4. 使用 Position 文本框输入标签将出现的位置的测量值。
-- 5. 单击 Set。标签设置将出现在标签条上。
-- 6. 随意创建尽可能多的标签设置。
-- 7. 完成后，单击 OK 关闭对话框并返回文档。
 
-### 删除标签设置：
+图 58。从在标签条上右键单击时出现的 `QuickMenu` 中选择 `Tab Set`。
 
-- 1. 将插入点定位到你想要更改标签设置的位置。
-- 或
-- 选择你想要更改标签设置的段落。
-- 2. 将鼠标指针定位到你想要移除的标签设置上，按住鼠标左键并将标签设置拖离标签条。当你释放鼠标按钮时，标签设置将消失。
+### 设置标签设置
+
+1. 将插入点定位到你想要更改标签设置的位置。
+   或
+   选择你想要更改标签设置的段落。
+2. 在标签条上右键单击并从出现的 `QuickMenu` 中选择 `Tab Set`（图 58）。`Tabs` 对话框将会出现（图 59）。
+   或
+   从格式菜单上的 `Line` 弹出菜单中选择 `Tab Set`（图 60）。`Tabs` 对话框将会出现（图 59）。
+3. 使用 `Type` 下拉列表选择你想要添加的标签设置类型（图 61）。
+4. 使用 `Position` 文本框输入标签将出现的位置的测量值。
+5. 单击 `Set`。标签设置将出现在标签条上。
+6. 随意创建尽可能多的标签设置。
+7. 完成后，单击 `OK` 关闭对话框并返回文档。
+
+### 删除标签设置
+
+1. 将插入点定位到你想要更改标签设置的位置。
+   或
+   选择你想要更改标签设置的段落。
+2. 将鼠标指针定位到你想要移除的标签设置上，按住鼠标左键并将标签设置拖离标签条。当你释放鼠标按钮时，标签设置将消失。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_107_0.png)
 
-### 删除所有标签设置：
+### 删除所有标签设置
 
-- 1. 将插入点定位到你想要更改标签设置的位置。
-- 或
-- 选择你想要更改标签设置的段落。
-- 2. 在标签条上右键单击并从出现的 QuickMenu 中选择 Clear All Tabs（图 62）。
+1. 将插入点定位到你想要更改标签设置的位置。
+   或
+   选择你想要更改标签设置的段落。
+2. 在标签条上右键单击并从出现的 `QuickMenu` 中选择 `Clear All Tabs`（图 62）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_107_1.png)
 
@@ -2670,24 +2490,20 @@ Figure 49. Depending upon the type of indentation you choose, the paragraph will
 | Spaghetti | Artichoke | White sauce | 12.50 | Page 123 |
 | Tortellini | Red pepper | Pesto | ¥890 | Page 125 |
 
-
-
-
-
 ### 断字
 
-WordPerfect 会自动将过长的单词在行尾进行分割，而不是将整个单词换到下一行。这就是所谓的断字。断字在段落文字为全角对齐时看起来尤其美观。
+`WordPerfect` 会自动将过长的单词在行尾进行分割，而不是将整个单词换到下一行。这就是所谓的断字。断字在段落文字为全角对齐时看起来尤其美观。
 
-#### 如何开启断字：
+#### 如何开启断字
 
-- 1. 将插入点定位到你希望断字开始的位置。
-- 2. 在 Tools 菜单上的 Language 弹出菜单中选择 Hyphenation（图 63）。Line Hyphenation 对话框将会打开（图 64）。
-- 3. 选中 Hyphenation On 旁边的复选框。
-- 4. 单击 OK。对话框将会关闭，断字将被开启。
+1. 将插入点定位到你希望断字开始的位置。
+2. 在 `Tools` 菜单上的 `Language` 弹出菜单中选择 `Hyphenation`（图 63）。`Line Hyphenation` 对话框将会打开（图 64）。
+3. 选中 `Hyphenation On` 旁边的复选框。
+4. 单击 `OK`。对话框将会关闭，断字将被开启。
 
 ### 提示
 
-- 要关闭断字，请按照上述步骤操作，但确保 Hyphenation On 旁边的框未被选中。
+要关闭断字，请按照上述步骤操作，但确保 `Hyphenation On` 旁边的框未被选中。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_109_0.png)
 
@@ -2708,7 +2524,7 @@ Figure 64. In the Line Hyphenation dialog box, select the check box next to Hyph
 - 更改字体和字号
 - 设置相对字号
 - 设置新的默认字体
-- 安装随 WordPerfect Personal Edition 提供的字体
+- 安装随 `WordPerfect Personal Edition` 提供的字体
 - 设置段落对齐方式
 - 更改行距和行高
 - 使用制表位和缩进
@@ -2716,16 +2532,16 @@ Figure 64. In the Line Hyphenation dialog box, select the check box next to Hyph
 
 ## CLIPART, LINES, & CHARTS
 
-剪贴画、形状和图表能快速为你的专业文档增添特色、组织性和趣味性。WordPerfect 8 Personal Edition 在 CD-ROM 上附带了数百张剪贴画图像。拥有如此丰富的图像库触手可及！在文档中插入图像非常简单，让我们马上开始吧！
+剪贴画、形状和图表能快速为你的专业文档增添特色、组织性和趣味性。`WordPerfect 8 Personal Edition` 在 CD-ROM 上附带了数百张剪贴画图像。拥有如此丰富的图像库触手可及！在文档中插入图像非常简单，让我们马上开始吧！
 
-### 如何插入剪贴画：
+### 如何插入剪贴画
 
-- 1. 将插入点定位到你希望图形出现的位置。（如果你想在文档中没有文字的区域放置图形，阴影光标对此非常有用。）
-- 2. 在 Insert 菜单上的 Graphics 弹出菜单中选择 From File（图 1）。Insert Image 对话框将会打开，并选择默认的 WordPerfect 图形目录（图 2）。
-- 3. 在 File List 框中突出显示一个剪贴画文件。
-  或
-  使用 Directory List 框移动到存储剪贴画图像的另一个目录。
-- 4. 在 Insert Image 对话框中单击 Insert。剪贴画图像将会出现在文档中并被选中（图 3）。
+1. 将插入点定位到你希望图形出现的位置。（如果你想在文档中没有文字的区域放置图形，阴影光标对此非常有用。）
+2. 在 `Insert` 菜单上的 `Graphics` 弹出菜单中选择 `From File`（图 1）。`Insert Image` 对话框将会打开，并选择默认的 `WordPerfect` 图形目录（图 2）。
+3. 在 `File List` 框中突出显示一个剪贴画文件。
+   或
+   使用 `Directory List` 框移动到存储剪贴画图像的另一个目录。
+4. 在 `Insert Image` 对话框中单击 `Insert`。剪贴画图像将会出现在文档中并被选中（图 3）。
 
 Figure 1. Choose From File from the Graphics fly-out on the Insert menu.
 
@@ -2739,20 +2555,20 @@ Figure 3. The clipart image appears in the document window.
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_110_2.png)
 
-### 如何从 Personal Edition CD-ROM 插入剪贴画：
+### 如何从 Personal Edition CD-ROM 插入剪贴画
 
-- 1. 挂载 CD-ROM（有关如何操作的说明请翻到第 21 页）。
-- 2. 将插入点定位到你希望图形出现的位置。（如果你想在文档中没有文字的区域放置图形，阴影光标对此非常有用。）
-- 3. 在 Insert 菜单上的 Graphics 弹出菜单中选择 From File（图 1）。Insert Image 对话框将会打开，并选择默认的 WordPerfect 图形目录（图 2）。
-- 4. 使用 Directory List 框移动到 CD-ROM 上的 Clipart 目录（图 4）。在图 4 中，目录为 /mnt/cdrom/clipart/clipart/。请注意 Directory List 框中有许多剪贴画目录。剪贴画按目录分类组织。
-- 5. 双击与你想要插入的剪贴画图像类别相匹配的目录。
-- 6. 在 File List 框中突出显示一个剪贴画文件（图 5）。
-- 7. 单击 Insert。剪贴画图像将会出现在文档中并被选中（图 6）。
-- 8. 卸载 CD-ROM。
+1. 挂载 CD-ROM（有关如何操作的说明请翻到第 21 页）。
+2. 将插入点定位到你希望图形出现的位置。（如果你想在文档中没有文字的区域放置图形，阴影光标对此非常有用。）
+3. 在 `Insert` 菜单上的 `Graphics` 弹出菜单中选择 `From File`（图 1）。`Insert Image` 对话框将会打开，并选择默认的 `WordPerfect` 图形目录（图 2）。
+4. 使用 `Directory List` 框移动到 CD-ROM 上的 `Clipart` 目录（图 4）。在图 4 中，目录为 `/mnt/cdrom/clipart/clipart/`。请注意 `Directory List` 框中有许多剪贴画目录。剪贴画按目录分类组织。
+5. 双击与你想要插入的剪贴画图像类别相匹配的目录。
+6. 在 `File List` 框中突出显示一个剪贴画文件（图 5）。
+7. 单击 `Insert`。剪贴画图像将会出现在文档中并被选中（图 6）。
+8. 卸载 CD-ROM。
 
 ### 提示
 
-- 如果你想删除图像，只需在文档窗口中选中它，然后按下键盘上的 Delete 键。
+如果你想删除图像，只需在文档窗口中选中它，然后按下键盘上的 `Delete` 键。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_111_0.png)
 
@@ -2760,20 +2576,20 @@ Figure 3. The clipart image appears in the document window.
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_111_2.png)
 
-
-
-
-
 ### 使用图像框
+
+
 
 插入到 WordPerfect 文档中的每个图像都包含在图像框中。默认情况下，图像框没有边框，因此文本可以围绕框进行环绕排版。但是，如果你想添加边框，你可以使用图像框来移动和调整框内图形的大小，并且可以水平或垂直翻转图像。当选择图像框时，属性栏会自动更改以显示图形命令按钮（图 7），并且八个黑色方块，即控制点，会出现在框的周围。
 
-### 控制点
+## 控制点
 
 当图像被选中时，控制点会以矩形形式出现在图像周围。这些控制点具有各种功能：
 
 - 出现在图像右中部和左中部的控制点会影响图形的 *水平缩放*——它们使图像变窄或变宽（图 8）。
+
 - 出现在图像顶部中央和底部中央的控制点会影响图形的 *垂直缩放*——它们使图像变短或变高（图 9）。
+
 - 出现在角落的控制点会影响图形的 *比例缩放*。这些控制点让你可以等比例地改变对象的水平和垂直尺寸（图 10）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_112_0.png)
@@ -2785,112 +2601,122 @@ Figure 3. The clipart image appears in the document window.
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_112_3.png)
 
 > **我无法访问我的菜单！**
-> 
+>
 > 如果你一直在处理图像和图像框，并且发现菜单上的大多数项目都是灰色的，不用担心！这只是意味着图像仍处于选中状态。在文档上的空白处单击，然后再次检查菜单。菜单项现在将可用。
 
-#### 移动图像：
+### 移动图像
 
 将鼠标指针定位在图像上，按住鼠标左键，并将图形拖动到新位置。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_113_0.png)
 
-图 11. 拖动左侧或右侧控制点可使图像变宽或变窄。
+**图 11.** 拖动左侧或右侧控制点可使图像变宽或变窄。
 
-#### 调整图像宽度：
+### 调整图像宽度
 
-- 1. 选择图像。八个控制点会出现在其周围。
-- 2. 将鼠标指针定位在左侧中央或右侧中央控制点上（图 11）。
-- 3. 按住鼠标左键并水平拖动控制点。控制点会消失，并且在拖动时会出现一个虚线矩形，表示图像框的边缘。此外，鼠标指针会变为旁边带有一条小垂直线的向右或向左箭头。如果你将控制点向图像方向拖动，它会变窄（图 12）。如果你将控制点远离图像拖动，它会变宽（图 13）。
-- 4. 当你对宽度满意时释放鼠标按钮。
+1. 选择图像。八个控制点会出现在其周围。
+
+2. 将鼠标指针定位在左侧中央或右侧中央控制点上（图 11）。
+
+3. 按住鼠标左键并水平拖动控制点。控制点会消失，并且在拖动时会出现一个虚线矩形，表示图像框的边缘。此外，鼠标指针会变为旁边带有一条小垂直线的向右或向左箭头。如果你将控制点向图像方向拖动，它会变窄（图 12）。如果你将控制点远离图像拖动，它会变宽（图 13）。
+
+4. 当你对宽度满意时释放鼠标按钮。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_113_1.png)
 
-图 12. 当你向内拖动时，控制点会消失，屏幕上会出现一个矩形，表示图形边缘随着变窄。
+**图 12.** 当你向内拖动时，控制点会消失，屏幕上会出现一个矩形，表示图形边缘随着变窄。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_113_2.png)
 
-图 13. 当你向外拖动时，控制点会消失，屏幕上会出现一个矩形，表示图形边缘随着变宽。
+**图 13.** 当你向外拖动时，控制点会消失，屏幕上会出现一个矩形，表示图形边缘随着变宽。
 
-#### 调整图像高度：
+### 调整图像高度
 
-- 1. 选择图像。八个控制点会出现在其周围。
-- 2. 将鼠标指针定位在顶部中央或底部中央控制点上（图 14）。
-- 3. 按住鼠标左键并垂直拖动控制点。在拖动时会出现一个表示图像框边缘的虚线矩形。此外，鼠标指针会变为旁边带有一条小水平线的向上或向下箭头。如果你将控制点向图像方向拖动，它会变短（图 15）。如果你将控制点远离图像拖动，它会变高（图 16）。
-- 4. 当图像达到所需高度时释放鼠标按钮。
+1. 选择图像。八个控制点会出现在其周围。
+
+2. 将鼠标指针定位在顶部中央或底部中央控制点上（图 14）。
+
+3. 按住鼠标左键并垂直拖动控制点。在拖动时会出现一个表示图像框边缘的虚线矩形。此外，鼠标指针会变为旁边带有一条小水平线的向上或向下箭头。如果你将控制点向图像方向拖动，它会变短（图 15）。如果你将控制点远离图像拖动，它会变高（图 16）。
+
+4. 当图像达到所需高度时释放鼠标按钮。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_114_0.png)
 
-图 14. 要调整图像高度，请使用顶部中央或底部中央控制点。
+**图 14.** 要调整图像高度，请使用顶部中央或底部中央控制点。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_114_1.png)
 
-图 15. 当你向图形方向拖动时，控制点会消失，屏幕上会出现一个矩形，表示图形边缘随着变短。
+**图 15.** 当你向图形方向拖动时，控制点会消失，屏幕上会出现一个矩形，表示图形边缘随着变短。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_114_2.png)
 
-图 16. 当你远离图像拖动时，控制点会消失，屏幕上会出现一个矩形，表示图形边缘随着变高。
+**图 16.** 当你远离图像拖动时，控制点会消失，屏幕上会出现一个矩形，表示图形边缘随着变高。
 
-### 总有出路！
+## 总有出路！
 
 如果你不小心进入了一个对话框，不要惊慌！只需单击对话框中的取消按钮或按下键盘上的 Esc 键即可关闭对话框并返回到你的文档。
 
+### 按比例更改图像的宽度和高度
 
+1. 选择图像。图像周围会出现八个控制点。
 
+2. 将鼠标指针置于任意一个角落控制点上（图 17）。
 
+3. 按住鼠标左键并沿对角线拖动控制点。拖动时会出现一个虚线矩形，表示图像框的边缘。此外，鼠标指针会变为对角箭头。如果向图像方向拖动，图像会变小（图 18）。如果远离图像拖动，图像会变大（图 19）。
 
-#### 按比例更改图像的宽度和高度：
-
-- 1. 选择图像。图像周围会出现八个控制点。
-- 2. 将鼠标指针置于任意一个角落控制点上（图 17）。
-- 3. 按住鼠标左键并沿对角线拖动控制点。拖动时会出现一个虚线矩形，表示图像框的边缘。此外，鼠标指针会变为对角箭头。如果向图像方向拖动，图像会变小（图 18）。如果远离图像拖动，图像会变大（图 19）。
-- 4. 当对图像的新尺寸满意时松开鼠标按钮。
+4. 当对图像的新尺寸满意时松开鼠标按钮。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_115_0.png)
 
-图 17. 图像角落的控制点用于按比例调整图像的高度和宽度。
+**图 17.** 图像角落的控制点用于按比例调整图像的高度和宽度。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_115_1.png)
 
-图 18. 当你向图像方向拖动时，控制点会消失，屏幕上会出现一个矩形，表示图形边缘随之按比例变小。
+**图 18.** 当你向图像方向拖动时，控制点会消失，屏幕上会出现一个矩形，表示图形边缘随之按比例变小。
 
-### 使在移动和调整图像大小时更容易看到图像
+## 使在移动和调整图像大小时更容易看到图像
 
 在移动和调整图像大小时，如果缩放至全页视图，更容易看到位置。
 
-#### 缩放到全页视图：
+### 缩放到全页视图
 
-- 1. 单击空白处以取消选择图像。
-- 2. 单击 WordPerfect 8 工具栏上的缩放按钮，并在下拉列表中选择 100%。
+1. 单击空白处以取消选择图像。
+
+2. 单击 WordPerfect 8 工具栏上的缩放按钮，并在下拉列表中选择 100%。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_115_2.png)
 
-图 19. 当你远离图像拖动时，控制点会消失，屏幕上会出现一个矩形，表示图像边缘随之按比例变大。
+**图 19.** 当你远离图像拖动时，控制点会消失，屏幕上会出现一个矩形，表示图像边缘随之按比例变大。
 
-#### 为图像添加边框：
+## 为图像添加边框
 
-- 1. 选择要添加边框的图像。
-- 2. 右键单击图像并从快速菜单中选择边框/填充（图 25），或从属性栏上的图形下拉列表中选择边框/填充（图 26）。将打开框边框/填充对话框（图 27）。
-- 3. 单击边框样式右侧的按钮并从列表框中选择一个边框。你选择的边框将显示在边框样式按钮上。
-- 4. 单击确定关闭对话框。所选边框将出现在对象周围（图 28）。
+1. 选择要添加边框的图像。
+
+2. 右键单击图像并从快速菜单中选择边框/填充（图 25），或从属性栏上的图形下拉列表中选择边框/填充（图 26）。将打开框边框/填充对话框（图 27）。
+
+3. 单击边框样式右侧的按钮并从列表框中选择一个边框。你选择的边框将显示在边框样式按钮上。
+
+4. 单击确定关闭对话框。所选边框将出现在对象周围（图 28）。
 
 或
 
-- 1. 选择要添加边框的图像。
-- 2. 从属性栏上的边框下拉框中选择一个边框样式（图 29）。所选边框将出现在对象周围（图 28）。
+1. 选择要添加边框的图像。
 
-### 图 25. 右键单击图形并从快速菜单中选择边框/填充。
+2. 从属性栏上的边框下拉框中选择一个边框样式（图 29）。所选边框将出现在对象周围（图 28）。
+
+**图 25.** 右键单击图形并从快速菜单中选择边框/填充。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_117_0.png)
 
-### 图 26. 从属性栏上的图形下拉列表中选择边框/填充。
+**图 26.** 从属性栏上的图形下拉列表中选择边框/填充。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_117_1.png)
 
-### 图 27. 单击边框样式按钮并从列表框中选择一个边框。
+**图 27.** 单击边框样式按钮并从列表框中选择一个边框。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_117_2.png)
 
-### 图 28. 单击确定后，图像周围会出现边框。
+**图 28.** 单击确定后，图像周围会出现边框。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_117_3.png)
 
@@ -2898,67 +2724,69 @@ Figure 3. The clipart image appears in the document window.
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_117_4.png)
 
-### 图 29. 单击属性栏上的边框按钮，然后从下拉列表中选择一个边框。
+**图 29.** 单击属性栏上的边框按钮，然后从下拉列表中选择一个边框。
 
-### 为图像添加边框
-
-### 设置文本环绕
+## 设置文本环绕
 
 你可以精确设置文本如何在图像周围、之上、之下、之后或之前流动。
 
-#### 设置图像周围的文本环绕：
+### 设置图像周围的文本环绕
 
-- 1. 选择要更改的图像。
-- 2. 右键单击图像并从快速菜单中选择环绕（图 30）。将出现环绕文本对话框（图 31）。
-- 3. 通过在环绕类型区域和环绕文本周围区域中选择单选按钮来选择你希望文本流动的方式。你的选择包括：
-  - 方形——文本在图像框的边界周围流动。
-  - 轮廓——文本跟随对象的形状流动。
-  - 无两侧——文本在图像上方和下方流动，但不在两侧。
-  - 置于文本之后——文本流经图像上方，遮挡它。
-  - 置于文本之前——文本流经图像下方并被图像遮挡。
-- 4. 单击确定。文本将使用你选择的选项环绕图像（图 32）。
+1. 选择要更改的图像。
+
+2. 右键单击图像并从快速菜单中选择环绕（图 30）。将出现环绕文本对话框（图 31）。
+
+3. 通过在环绕类型区域和环绕文本周围区域中选择单选按钮来选择你希望文本流动的方式。你的选择包括：
+
+   - 方形——文本在图像框的边界周围流动。
+
+   - 轮廓——文本跟随对象的形状流动。
+
+   - 无两侧——文本在图像上方和下方流动，但不在两侧。
+
+   - 置于文本之后——文本流经图像上方，遮挡它。
+
+   - 置于文本之前——文本流经图像下方并被图像遮挡。
+
+4. 单击确定。文本将使用你选择的选项环绕图像（图 32）。
 
 或
 
-- 1. 选择要更改的图像。
-- 2. 从属性栏上的环绕下拉列表中选择一个文本流动选项（图 33）。文本将以你选择的方式环绕对象。
+1. 选择要更改的图像。
 
-图 30. 右键单击图像，然后从快速菜单中选择环绕。
+2. 从属性栏上的环绕下拉列表中选择一个文本流动选项（图 33）。文本将以你选择的方式环绕对象。
+
+**图 30.** 右键单击图像，然后从快速菜单中选择环绕。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_118_0.png)
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_118_1.png)
 
-图 31. 在环绕类型和环绕文本周围区域中各选择一个单选按钮，然后单击确定。
+**图 31.** 在环绕类型和环绕文本周围区域中各选择一个单选按钮，然后单击确定。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_118_2.png)
 
-图 32. 根据你选择的文本环绕样式，文本会在对象周围流动。在此图中，使用了图 31 中选择的选项。
+**图 32.** 根据你选择的文本环绕样式，文本会在对象周围流动。在此图中，使用了图 31 中选择的选项。
 
-
-
-
-
-### 绘制线条
+## 绘制线条
 
 为了使文档更有条理，您可以插入水平线和垂直线来定义区域或添加强调。您还可以绘制折线，由一系列直线连接的线段组成。
 
-#### 绘制水平线：
+### 绘制水平线：
 
-- 1. 将插入点定位在您希望水平线出现的位置。如果您在段落末尾，可以按键盘上的 Enter 键向下移动到空白行。
-- 2. 从“插入”菜单的“形状”下拉列表中选择“水平线”（图 34），或按键盘上的 Ctrl+F11。水平线将出现在文档中，从左页边距延伸到右页边距（图 35）。
+
+
+- 1. 将插入点定位在您希望水平线出现的位置。如果您在段落末尾，可以按键盘上的 `Enter` 键向下移动到空白行。
+- 2. 从“`Insert`”菜单的“`Shape`”下拉列表中选择“水平线”（图 34），或按键盘上的 `Ctrl+F11`。水平线将出现在文档中，从左页边距延伸到右页边距（图 35）。
 
 ### 提示
-
 在通讯或报告的标题与正文之间放置一条水平线可以增加结构和条理性。
 
 #### 绘制垂直线：
-
 - 1. 将插入点定位在您希望垂直线出现的位置。（请记住这条线将从页面顶部延伸到底部。）
-- 2. 从“插入”菜单的“形状”下拉列表中选择“垂直线”（图 36）。垂直线将出现在文档中，从上页边距延伸到下页边距（图 37）。
+- 2. 从“`Insert`”菜单的“`Shape`”下拉列表中选择“垂直线”（图 36）。垂直线将出现在文档中，从上页边距延伸到下页边距（图 37）。
 
 ### 提示
-
 垂直线在文本列之间看起来很棒。（有关创建列的详细信息，请参阅第 7 章《与文本的乐趣》。）
 
 Figure 33. Click the Wrap button on the Property Bar, and then select a text wrapping option from the drop-down list.
@@ -2974,12 +2802,11 @@ Figure 34. Choose Horizontal Line from the Shape fly-out on the Insert menu.
 Figure 35. The horizontal line appears in the document.
 
 #### 绘制自定义线条：
-
 Figure 36. Choose Vertical Line from the Shape fly-out on the Insert menu.
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_120_0.png)
 
-- 1. 从“插入”菜单的“形状”下拉列表中选择“绘制线条”（图 38）。鼠标指针将变为十字准线。
+- 1. 从“`Insert`”菜单的“`Shape`”下拉列表中选择“绘制线条”（图 38）。鼠标指针将变为十字准线。
 - 2. 将十字准线定位在您希望线条开始的位置。
 - 3. 按住鼠标左键并拖动到您希望线条结束的位置。当您释放鼠标按钮时，线条将出现在文档中并处于选中状态（图 39）。请注意，当线条被选中时，属性栏上会自动出现特殊的线条命令按钮（图 40）。
 - 4. 要更改线条的粗细，请单击属性栏上的“粗细”按钮并从下拉列表中选择新的粗细（图 41）。
@@ -3003,9 +2830,7 @@ Figure 39. As you drag the mouse, the line appears in the document.
 - 7. 完成自定义线条的编辑后，单击空白处以取消选择线条。
 
 ### 提示
-
 自定义线条包含在图像框中，如本章前面讨论的图形。这意味着您可以对线条做任何对图形可以做的操作，例如移动、调整大小、添加边框和设置文本环绕。
-
 - 就像文本一样，线条可以剪切、复制和粘贴。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_121_0.png)
@@ -3017,12 +2842,11 @@ Figure 39. As you drag the mouse, the line appears in the document.
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_121_3.png)
 
 ### 绘制折线：
-
 Figure 44. Choose Polyline from the Shape fly-out on the Insert menu.
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_122_0.png)
 
-- 1. 从“插入”菜单的“形状”下拉列表中选择“折线”（图 44）。鼠标指针将变为十字准线。
+- 1. 从“`Insert`”菜单的“`Shape`”下拉列表中选择“折线”（图 44）。鼠标指针将变为十字准线。
 - 2. 将十字准线定位在您希望折线开始的位置。
 - 3. 单击。（不要按住并拖动。）
 - 4. 将鼠标移动到您希望第一个线段结束的位置。随着鼠标移动，一条线将从起始位置延伸并连接到鼠标十字准线。
@@ -3043,17 +2867,11 @@ Figure 46. Continue moving the mouse and clicking to insert more line segments.
 
 Figure 47. Double-click to finish drawing the polyline. The line appears selected in the document.
 
-
-
-
-
 ### 绘制形状
-
-WordPerfect 几乎感觉像一个绘图程序！除了插入线条之外，您还可以直接在文档中绘制形状——矩形、圆角矩形、圆形和椭圆形。
+`WordPerfect` 几乎感觉像一个绘图程序！除了插入线条之外，您还可以直接在文档中绘制形状——矩形、圆角矩形、圆形和椭圆形。
 
 #### 插入形状：
-
-- 1. 在“插入”菜单的“形状”下拉列表中选择“矩形”、“圆角矩形”、“圆形”或“椭圆形”（图 48）。鼠标指针将变为十字线。
+- 1. 在“`Insert`”菜单的“`Shape`”下拉列表中选择“矩形”、“圆角矩形”、“圆形”或“椭圆形”（图 48）。鼠标指针将变为十字线。
 - 2. 将十字线定位在要绘制形状的区域的左上角。
 - 3. 按住鼠标左键并沿对角线向右向下拖动以创建形状（图 49）。松开鼠标按钮后，形状将出现在文档中并处于选中状态。
 - 4. 要更改形状的填充颜色，请单击“属性栏”上的“填充颜色”按钮，然后从调色板中选择新颜色（图 50）。
@@ -3061,7 +2879,6 @@ WordPerfect 几乎感觉像一个绘图程序！除了插入线条之外，您�
 - 6. 完成形状创建后，单击空白处以取消选择形状。
 
 ### 提示
-
 - 形状包含在图像框中，因此可以像图形一样移动、调整大小和翻转。您还可以设置文本环绕形状的方式。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_123_0.png)
@@ -3073,25 +2890,37 @@ WordPerfect 几乎感觉像一个绘图程序！除了插入线条之外，您�
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_123_3.png)
 
 ### 创建图表
+与 `WordPerfect 8` 关联的 `WP Draw` 程序可让您快速轻松地创建各种 2D 和 3D 图表，包括饼图、条形图、线图、面积图、散点图和最高最低图。
 
-与 WordPerfect 8 关联的 WP Draw 程序可让您快速轻松地创建各种 2D 和 3D 图表，包括饼图、条形图、线图、面积图、散点图和最高最低图。
-
-创建图表时，WP Draw 以特殊的图表模式运行，将其绘图窗口一分为二（图 52）。窗口的上部是数据表，即可输入要在图表上显示的数据的电子表格。绘图窗口的下部显示正在创建的图表预览。您只能在数据表中输入数据，不能在预览区域输入数据。WP Draw 窗口左侧有一个图表工具箱，可快速访问图表类型。如果将鼠标悬停在图表工具栏上的按钮上，按钮的功能描述将显示在 WP Draw 标题栏中。
+创建图表时，`WP Draw` 以特殊的图表模式运行，将其绘图窗口一分为二（图 52）。窗口的上部是数据表，即可输入要在图表上显示的数据的电子表格。绘图窗口的下部显示正在创建的图表预览。您只能在数据表中输入数据，不能在预览区域输入数据。`WP Draw` 窗口左侧有一个图表工具箱，可快速访问图表类型。如果将鼠标悬停在图表工具栏上的按钮上，按钮的功能描述将显示在 `WP Draw` 标题栏中。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_124_0.png)
 
-图 52. WP Draw 程序以特殊的图表模式工作，帮助您快速创建专业图表。
+图 52. `WP Draw` 程序以特殊的图表模式工作，帮助您快速创建专业图表。
 
 #### 插入图表：
 
-- 1. 在“插入”菜单的“图形”下拉列表中选择“图表”（图 53）。WP Draw 将打开，其绘图窗口一分为二，顶部显示数据表，底部显示图表预览（图 52）。
-- 2. 从“图表”菜单中选择您想要使用的图表类型（图 54）。该图表类型将出现在预览区域（图 55）。
-- 3. 要插入数据，请单击数据表中的单元格以选择它，然后输入数据。
-- 4. 要从单元格中删除数据：
-  - A. 选择单元格，然后按键盘上的 Delete 键。清除对话框将打开，清除区域中选择了“数据”（图 56）。
-  - B. 单击您想要清除内容的单选按钮，即数据、格式或两者。
-  - C. 单击“确定”关闭对话框并返回 WP Draw。
-- 5. 在单元格中输入所有数据。
+
+
+# Clipart, Lines, & Charts
+
+## INSERT A CHART
+
+1. 在“插入”菜单的“图形”下拉列表中选择“图表”（图 53）。WP Draw 将打开，其绘图窗口一分为二，顶部显示数据表，底部显示图表预览（图 52）。
+
+2. 从“图表”菜单中选择您想要使用的图表类型（图 54）。该图表类型将出现在预览区域（图 55）。
+
+3. 要插入数据，请单击数据表中的单元格以选择它，然后输入数据。
+
+4. 要从单元格中删除数据：
+
+    A. 选择单元格，然后按键盘上的 `Delete` 键。清除对话框将打开，清除区域中选择了“数据”（图 56）。
+
+    B. 单击您想要清除内容的单选按钮，即数据、格式或两者。
+
+    C. 单击“确定”关闭对话框并返回 WP Draw。
+
+5. 在单元格中输入所有数据。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_125_0.png)
 
@@ -3103,39 +2932,43 @@ WordPerfect 几乎感觉像一个绘图程序！除了插入线条之外，您�
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_126_0.png)
 
-- 6. 要添加或更改图表标题。
-  - A. 从“选项”菜单中选择“标题”（图 57）。标题对话框将打开（图 58）。
-  - B. 在“标题”文本框中输入图表的标题。
-  - C. 如果您的图表有副标题或 x 轴和 y 轴的标题，请在相应的文本框中输入该信息。
-  - D. 单击“预览”以在预览区域中查看您所做的更改（图 59）。如果您喜欢看到的效果，请单击“确定”关闭对话框。否则，您可以继续在“标题”对话框中工作。
-  - （续）
+6. 要添加或更改图表标题。
+
+    A. 从“选项”菜单中选择“标题”（图 57）。标题对话框将打开（图 58）。
+
+    B. 在“标题”文本框中输入图表的标题。
+
+    C. 如果您的图表有副标题或 x 轴和 y 轴的标题，请在相应的文本框中输入该信息。
+
+    D. 单击“预览”以在预览区域中查看您所做的更改（图 59）。如果您喜欢看到的效果，请单击“确定”关闭对话框。否则，您可以继续在“标题”对话框中工作。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_126_1.png)
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_126_2.png)
 
-### 图 59. 当您单击“预览”时，您输入的标题将出现在预览区域。
+图 59. 当您单击“预览”时，您输入的标题将出现在预览区域。
 
+7. 显示或编辑图例：
 
+    A. 从 `Options` 菜单中选择 `Legend`（图 60）。图例对话框将打开（图 61）。
 
+    B. 要显示图例，请选中 `Display Legend` 旁边的复选框。（要隐藏图例，请取消选中该框。）
 
+    C. 使用 `Placement` 区域和 `Position` 下拉列表设置图例的出现位置（图 62）。
 
-### 7. 显示或编辑图例：
+    D. 使用 `Orientation` 区域设置图例是水平显示还是垂直显示（图 63）。
 
-+   A. 从 Options 菜单中选择 Legend（图 60）。图例对话框将打开（图 61）。
-+   B. 要显示图例，请选中 Display Legend 旁边的复选框。（要隐藏图例，请取消选中该框。）
-+   C. 使用 Placement 区域和 Position 下拉列表设置图例的出现位置（图 62）。
-+   D. 使用 Orientation 区域设置图例是水平显示还是垂直显示（图 63）。
-+   E. 如需为图例输入标题，请在 Title 区域的 Name 文本框中输入（图 64）。您也可以通过单击 Font 按钮为图例标题选择字体。
-+   F. 单击 Preview 以在预览区域查看您所做的更改（图 65）。如果您满意，请单击 OK 关闭对话框。否则，您可以继续在 Legend 对话框中工作。
+    E. 如需为图例输入标题，请在 `Title` 区域的 `Name` 文本框中输入（图 64）。您也可以通过单击 `Font` 按钮为图例标题选择字体。
+
+    F. 单击 `Preview` 以在预览区域查看您所做的更改（图 65）。如果您满意，请单击 `OK` 关闭对话框。否则，您可以继续在图例对话框中工作。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_127_0.png)
 
-图 60. 从 Options 菜单中选择 Legend。
+图 60. 从 `Options` 菜单中选择 `Legend`。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_127_1.png)
 
-图 61. 如果您想在图表中显示图例，请确保选中 Display Legend 旁边的复选框。
+图 61. 如果您想在图表中显示图例，请确保选中 `Display Legend` 旁边的复选框。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_127_2.png)
 
@@ -3145,63 +2978,56 @@ WordPerfect 几乎感觉像一个绘图程序！除了插入线条之外，您�
 
 图 62. 选择您希望图例放置在图表内部还是外部，以及图例相对于图表的位置。
 
-INSERT A CHART
-
-Clipart, Lines, & Charts
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_128_0.png)
 
-图 64. 在 Name 文本框中为图例输入标题。
+图 64. 在 `Name` 文本框中为图例输入标题。
 
-8. 当您完成输入数据并设置标题和图例后，选择 Exit and Return to [your document]。（图 66）将出现一个 Exit WP Draw 对话框，询问您是否要保存更改（图 67）。
-
-(continued)
+8. 当您完成输入数据并设置标题和图例后，选择 `Exit and Return to [your document]`（图 66）。将出现一个 Exit WP Draw 对话框，询问您是否要保存更改（图 67）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_128_1.png)
 
-图 65. 单击 Preview 时，您输入的图例项会出现在预览区域。
+图 65. 单击 `Preview` 时，您输入的图例项会出现在预览区域。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_128_2.png)
 
-图 66. 从 File 菜单中选择 Exit and Return to [your document]。 [your document] 将包含您正在处理的文档的名称。
+图 66. 从 `File` 菜单中选择 `Exit and Return to [your document]`。`[your document]` 将包含您正在处理的文档的名称。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_128_3.png)
 
-图 67. 单击 Yes 以将图表插入到您的文档中并保存更改。
+图 67. 单击 `Yes` 以将图表插入到您的文档中并保存更改。
 
-INSERT A CHART
+9. 单击 `Yes`。WP Draw 将关闭，您的图表将出现在文档中（图 68）。
 
-## Chapter 6
+## Tips
 
-9. 单击 Yes。WP Draw 将关闭，您的图表将出现在文档中（图 68）。
+- 要编辑图表，请右键单击图表，并从 `QuickMenu` 中选择 `Edit Image`（图 69）。
 
-### Tips
+- 图表与任何其他图形一样，都包含在 Image box 中。这意味着您可以像移动、调整大小和设置其他图形的文本环绕一样操作它。
 
-+   - 要编辑图表，请右键单击图表，并从 QuickMenu 中选择 Edit Image（图 69）。
-+   - 图表与任何其他图形一样，都包含在 Image box 中。这意味着您可以像移动、调整大小和设置其他图形的文本环绕一样操作它。
-+   - 要删除图表，请选择它，然后按键盘上的 Delete。
-+   - WP Draw 中还有更多图表选项。环顾绘图窗口并尝试。只要您能想象出一个图表，您很可能就能用 WP Draw 创建它！
+- 要删除图表，请选择它，然后按键盘上的 `Delete`。
+
+- WP Draw 中还有更多图表选项。环顾绘图窗口并尝试。只要您能想象出一个图表，您很可能就能用 WP Draw 创建它！
 
 图 68. 您在 WP Draw 中创建的图表出现在 WordPerfect 文档中，包含在 Image box 中。就像任何其他图像一样，您可以移动它、调整其大小、删除它，并更改其周围的文本流。
 
-图 69. 从 QuickMenu 中选择 Edit Image 以编辑图表。
+图 69. 从 `QuickMenu` 中选择 `Edit Image` 以编辑图表。
 
-### Summary
+## Summary
 
 在本章中您学习了如何：
 
-+   ♦ 插入和移动剪贴画图像
-+   ♦ 更改图像宽度和高度
-+   ♦ 垂直和水平翻转图像
-+   ♦ 设置图像周围的文本流
-+   ♦ 为图像添加边框
-+   ♦ 绘制水平和垂直线
-+   ♦ 创建自定义线条
-+   ♦ 绘制多段线
-+   ♦ 绘制形状
-+   ♦ 创建精彩的图表
+- 插入和移动剪贴画图像
+- 更改图像宽度和高度
+- 垂直和水平翻转图像
+- 设置图像周围的文本流
+- 为图像添加边框
+- 绘制水平和垂直线
+- 创建自定义线条
+- 绘制多段线
+- 绘制形状
+- 创建精彩的图表
 
-## FUN WITH TEXT
+# FUN WITH TEXT
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_130_0.png)
 
@@ -3209,20 +3035,17 @@ INSERT A CHART
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_130_1.png)
 
-### To change text color:
+## To change text color:
 
-+   1. 选择您想要更改的文本。
-+   2. 单击 Property Bar 上的 Font Color 按钮并从调色板中选择一种颜色（图 1）。文本将更改为您选择的颜色。
+1. 选择您想要更改的文本。
 
-or
+2. 单击 `Property Bar` 上的 `Font Color` 按钮并从调色板中选择一种颜色（图 1）。文本将更改为您选择的颜色。
 
-+   1. 选择您想要更改的文本。
-+   2. 从 Format 菜单中选择 Font（图 2）。Font 对话框将打开（图 3）。
+或
 
-![](img/02dde5e0b11c4f9add393f2d6c89d9a5_130_2.png)
+1. 选择您想要更改的文本。
 
-(continued)
-
+2. 从 `Format` 菜单中选择 `Font`（图 2）。Font 对话框将打开（图 3）。
 
 3. 在“颜色选项”区域中，单击“颜色”旁边的按钮，然后从调色板中选择一种新颜色（图 4）。
 
@@ -3230,25 +3053,35 @@ or
 
 5. 单击“确定”关闭对话框。文本将变为你选择的颜色。
 
-### 提示
+![](img/02dde5e0b11c4f9add393f2d6c89d9a5_130_2.png)
+
+## 提示
+
 - 你也可以在输入文本之前更改文本颜色：将插入点定位到希望彩色文本开始的位置，使用上述方法之一选择新颜色，然后输入彩色文本。
 
-### 突出显示
+## 突出显示
 
 就像使用荧光笔一样，WordPerfect 允许你突出显示文档中的文本。
 
-#### 突出显示文本：
-- 1. 在“工具”菜单的“突出显示”飞出项中选择“开”（图 6）。鼠标指针将变为一支细小的荧光笔。
-- 2. 将鼠标定位到希望开始突出显示的位置。
-- 3. 按住鼠标左键并拖动，直到完成文本的突出显示。
-- 4. 松开鼠标按钮。
+### 突出显示文本：
 
-### 提示
+1. 在“工具”菜单的“突出显示”飞出项中选择“开”（图 6）。鼠标指针将变为一支细小的荧光笔。
+
+2. 将鼠标定位到希望开始突出显示的位置。
+
+3. 按住鼠标左键并拖动，直到完成文本的突出显示。
+
+4. 松开鼠标按钮。
+
+## 提示
+
 - 要关闭突出显示，只需再次在“工具”菜单的“突出显示”飞出项中选择“开”。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_131_0.png)
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_131_1.png)
+
+
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_131_2.png)
 
@@ -3257,6 +3090,7 @@ or
 行编号会自动为文档中的每一行添加编号。（这不同于插入编号列表，编号列表是为每个段落插入编号。）你可以设置编号在页面上的显示位置，以及它们是贯穿整个文档还是停止并重新开始。（有关创建编号列表的详细信息，请参阅第 123 页的“项目符号和编号”一节。）
 
 #### 添加行编号：
+
 - 1. 将插入点定位到希望行编号开始的位置。
 - 2. 在“格式”菜单的“行”飞出项中选择“编号”（图 7）。将显示“行编号”对话框（图 8）。
 - 3. 选中“开启行编号”旁边的复选框。
@@ -3291,6 +3125,7 @@ or
 8. 完成选择后，单击“确定”关闭“行编号”对话框。当你输入文档时，行号将出现在每行旁边（图 13）。
 
 ### 提示
+
 - 页眉、页脚、脚注和尾注不包含在行编号中。
 - 行编号常用于法律文档，例如引文。
 - 要关闭行编号，请打开“行编号”对话框，然后取消选中“开启行编号”旁边的复选框。
@@ -3302,10 +3137,6 @@ or
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_133_2.png)
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_133_3.png)
-
-
-
-
 
 ### 创建编号列表：
 
@@ -3365,13 +3196,11 @@ or
 5. 单击属性栏上的“首字下沉位置”按钮并设置首字下沉的出现位置，是在文本旁边、页边距右侧还是在页边距中（图 25）。
 
 6. 要为首字下沉选择字体：
-
 - A. 单击属性栏上的“首字下沉字体”按钮。“首字下沉字体”对话框将打开（图 26）。
 - B. 从“字体”列表框中选择一种字形并设置你想要的其他字体属性。
 - C. 单击“确定”关闭“首字下沉字体”对话框并返回文档。
 
 7. 要在首字下沉周围设置边框并在其后添加填充：
-
 - A. 单击属性栏上的“首字下沉边框/填充”按钮。“首字下沉边框”对话框将打开（图 27）。
 - B. 单击“边框样式”按钮并从下拉列表中选择一种边框。
 - C. 单击“填充样式”按钮并从下拉列表中选择一种填充。
@@ -3382,20 +3211,11 @@ or
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_137_2.png)
 
-
-
-
-
 8. 设置首字下沉中包含的字符数：
-
 A. 在属性栏上单击“首字下沉选项”按钮。首字下沉选项对话框将打开（图 28）。
-
 B. 在“首字下沉字符数”文本框中输入一个数字。
-
 或
-
 选中“将首个完整单词设为首字下沉”旁边的复选框。
-
 C. 单击“确定”关闭对话框并返回文档。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_138_0.png)
@@ -3419,9 +3239,11 @@ C. 单击“确定”关闭对话框并返回文档。
 
 ### 边框和填充
 
+
+
 使用 WordPerfect 8，您可以快速轻松地为页面、列或段落添加边框。有关创建列的详细信息，请参阅第 131 页。
 
-#### 添加页面边框和填充：
+### 添加页面边框和填充：
 
 - 1. 将插入点定位在您希望边框出现的页面上。
 - 2. 从“格式”菜单的“页面”弹出菜单中选择“边框/填充”（图 31）。页面边框对话框将打开（图 32）。
@@ -3431,22 +3253,18 @@ C. 单击“确定”关闭对话框并返回文档。
 - 6. 单击“确定”。边框将出现在页面周围（图 35）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_139_0.png)
-
 图 31. 从“格式”菜单的“页面”弹出菜单中选择“边框/填充”。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_139_1.png)
-
 图 32. 页面边框对话框用于选择页面背景的边框和/或填充。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_139_2.png)
-
 图 34. 单击“填充样式”按钮并从下拉列表中选择一个填充。您选择的填充会显示在“填充样式”按钮上。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_139_3.png)
-
 图 33. 单击“边框样式”按钮并从下拉列表中选择一个边框。您选择的边框会显示在“边框样式”按钮上。
 
-#### 添加段落边框和填充：
+### 添加段落边框和填充：
 
 - 1. 将插入点定位在您希望添加边框的段落内
 - 2. 从“格式”菜单的“段落”弹出菜单中选择“边框/填充”（图 36）。段落边框对话框将打开（图 37）。
@@ -3456,26 +3274,18 @@ C. 单击“确定”关闭对话框并返回文档。
 - 6. 单击“确定”。边框将出现在段落周围（图 38）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_140_0.png)
-
 图 35. 您选择的边框和填充会显示在页面上。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_140_1.png)
-
 图 36. 从“格式”菜单的“段落”弹出菜单中选择“边框/填充”。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_140_2.png)
-
 图 37. 段落边框对话框的工作方式与首字下沉边框对话框（图 27）和页面边框对话框（图 34）完全相同。外观也一样！
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_140_3.png)
-
 图 38. 段落边框出现在文本段落周围。
 
-
-
-
-
-#### 为列添加边框和填充：
+### 为列添加边框和填充：
 
 - 1. 将插入点定位在列的任何位置。您选择的边框将环绕文档中的每一列。
 - 2. 从格式菜单中选择列（图 39）。将打开“定义列”对话框（图 40）。
@@ -3497,7 +3307,7 @@ C. 单击“确定”关闭对话框并返回文档。
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_141_2.png)
 图 42. 您选择的列边框将出现在文档的列周围。
 
-### 列
+## 列
 
 列垂直划分页面上的文本，让您可以创建新闻通讯、列表和清单等文档。您可以在一页上定义多达 24 列。
 
@@ -3520,11 +3330,11 @@ C. 单击“确定”关闭对话框并返回文档。
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_142_3.png)
 图 46. 带块保护的并行列中的文本的工作方式与普通并行列类似，但行保持在同一页上。如果某些文本对于一页来说太长，则整行将被移动到下一页。
 
-#### 删除边框和填充
+### 删除边框和填充
 
 要删除页面、段落或列边框，只需打开相应的边框/填充对话框（它们显示在图 32、37 和 41 中）并单击右上角的“关闭”按钮即可。
 
-#### 打开列：
+### 打开列：
 
 - 1. 将插入点定位在您希望列开始的段落中。
 - 2. 从格式菜单中选择列（图 39）。将打开“定义列”对话框（图 47）。
@@ -3542,10 +3352,6 @@ C. 单击“确定”关闭对话框并返回文档。
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_143_1.png)
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_143_2.png)
 
-
-
-
-
 ### 使用标尺栏编辑列：
 
 - 1. 将插入点定位在要更改的列中。
@@ -3554,7 +3360,6 @@ C. 单击“确定”关闭对话框并返回文档。
 - 4. 拖动边距标记以更改列中左右边距的位置（图 51）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_144_0.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_144_1.png)
 
 ### 提示
@@ -3563,7 +3368,7 @@ C. 单击“确定”关闭对话框并返回文档。
 
 ### 在列中输入文本：
 
-将插入点定位在列中并键入文本。要移动到下一列，请在键盘上按 Ctrl+Enter。
+将插入点定位在列中并键入文本。要移动到下一列，请在键盘上按 `Ctrl+Enter`。
 
 ### 在列之间移动插入点：
 
@@ -3580,28 +3385,26 @@ C. 单击“确定”关闭对话框并返回文档。
 ### 为文本框添加边框和填充：
 
 - 1. 单击要更改的文本框以选中它。当它被选中时，您会看到其周围出现虚线。
+
+
+
 - 2. 单击属性栏上的“边框”按钮并从下拉列表中选择一种边框样式（图 56）。
 - 3. 单击属性栏上的“填充”按钮并从下拉列表中选择一种填充（图 57）。
 
 ### 使用手柄调整文本框大小：
-
 - 1. 单击要更改的文本框以选中它。当它被选中时，您会看到其周围出现虚线。
 - 2. 将鼠标指针定位在八个手柄中的一个上。
 - 3. 按住鼠标左键并拖动手柄以调整框的大小（图 58）。
 - 4. 拖动手柄完成后释放鼠标按钮。
 
 ### 提示
-
 - 有关使用手柄调整文本框大小的更多详细信息，请翻到第 101–104 页并按照调整图像框大小的说明进行操作。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_146_0.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_146_1.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_146_2.png)
 
 ### 将文本框调整为精确尺寸：
-
 - 1. 单击空白处以确保文档中没有选中任何内容。
 - 2. 右键单击要调整大小的文本框并从出现的快速菜单中选择“大小”（图 59）。“框大小”对话框将打开（图 60）。
 - 3. 在“宽度”和“高度”区域中，您有以下选项：
@@ -3611,19 +3414,15 @@ C. 单击“确定”关闭对话框并返回文档。
 - 4. 完成设置文本框的宽度和高度后，单击“确定”。“框大小”对话框将关闭，文本框将更改为新的大小。
 
 ### 移动文本框：
-
 - 1. 单击要更改的文本框以选中它。当它被选中时，您会看到其周围出现虚线。
 - 2. 将鼠标指针定位在文本框的边框上。
 - 3. 按住鼠标左键并将文本框拖动到新位置（图 61）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_147_0.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_147_1.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_147_2.png)
 
 ### 为文本框添加标题：
-
 - 1. 单击空白处以确保文档中没有选中任何内容。
 - 2. 右键单击文本框并从出现的快速菜单中选择“标题”（图 62）。“框标题”对话框将打开（图 63）。
 - 3. 在“标题位置”区域（图 64）中，使用：
@@ -3640,32 +3439,22 @@ C. 单击“确定”关闭对话框并返回文档。
 - 8. 完成后，单击标题外的区域返回到文档。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_148_0.png)
-
 图 63。“框标题”文本框用于设置标题的位置、宽度和文本旋转。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_148_1.png)
-
 图 64。在“标题位置”区域中，设置标题在文本框的哪一侧出现、是位于文本框边框内、外还是之上，以及它是左对齐、居中对齐还是右对齐。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_148_2.png)
-
 图 65。在“标题宽度”区域中，您可以设置标题与文本框一样宽、为精确测量值，或为文本框宽度的百分比。
 
-
-
-
-
 ### 样式
-
 样式可让您通过自动设置文本属性快速创建格式一致的文档。样式还提供了一种灵活性，这是您手动格式化所有文本时所不具备的。更改样式定义，即构成样式的文本格式，会自动更改文档中采用该样式格式的所有文本。例如，与其单独格式化报告中的每个标题，不如为该报告标题创建一个样式并将其应用于所有标题。如果需要更改标题的格式，只需修改样式即可。
 
 样式有两种类型：
-
 - 字符——此类型影响文本格式，例如字体、字号等。
 - 段落——此类型影响段落格式，例如对齐方式、缩进等。
 
 #### 创建样式：
-
 - 1. 格式化您想要基于其创建样式的文本。（例如，按您希望所有报告标题的外观格式化一个报告标题。）
 - 2. 将插入点定位在该格式化的文本内。
 - 3. 从格式菜单中选择样式（图 66）或在键盘上按 Shift+Ctrl+F8。样式列表对话框将出现（图 67）。
@@ -3674,28 +3463,20 @@ C. 单击“确定”关闭对话框并返回文档。
 - 6. 如需，在说明文本框中输入样式的说明。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_149_0.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_149_1.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_149_2.png)
-
 7. 在样式类型区域中，选择您创建的样式是段落样式还是字符样式。
-
 8. 单击确定关闭样式快速创建对话框。
-
 9. 单击关闭关闭样式列表对话框。
 
 #### 使用样式：
-
 - 1. 对于段落样式，将插入点定位在您想要格式化的段落中；对于字符样式，选择您想要格式化的文本。
 - 2. 从属性栏上的样式下拉列表中选择您的样式（图 69）。
 
 ### 使文本适应页面
-
 “使其适应”专家是一个非常棒的、节省时间的 WordPerfect 功能，它会扩展文本以使其适应您指定的页数，或压缩文本以使其适应一页。
 
 #### 使用“使其适应”专家：
-
 - 1. 打开您想要使文本适应的文档。
 - 2. 从格式菜单中选择使其适应（图 70）。“使其适应”对话框将出现（图 71）。
 - 3. 在页面区域中，使用所需填充页数文本框设置您希望用文档文本填满的页数。
@@ -3704,19 +3485,15 @@ C. 单击“确定”关闭对话框并返回文档。
 图 69. 打开属性栏上的样式下拉列表并选择您创建的样式。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_150_0.png)
-
 图 70. 从格式菜单中选择使其适应。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_150_1.png)
-
 图 71. 设置需要填充的页数以及应调整的格式项目。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_150_2.png)
-
 5. 单击确定。对话框将关闭，文本和格式选项将被调整以适应指定的页数（图 72）。在图 72 中，6 行文本已被调整以适应整整一页。正如您所见，结果有时会相当混杂。
 
 ### 提示
-
 如果您在应用后发现不喜欢“使其适应”专家对文档所做的更改，请立即从编辑菜单中选择撤销。您的文档将恢复到原始状态。
 
 图 72. “使其适应”专家有时会产生有趣的结果。本图中的标题已被放大到 30 磅字号，文本已被移至页面的底部，远离页眉。
@@ -3724,33 +3501,24 @@ C. 单击“确定”关闭对话框并返回文档。
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_151_0.png)
 
 ### 总结
-
 在本章中，您学习了如何：
-
 - 更改文本颜色
 - 添加高亮
 - 添加行号
 - 添加项目符号和编号列表
 - 创建首字下沉
-
 - 为页面、段落和列添加边框和填充
 - 打开和关闭列
 - 插入文本框
 - 创建新样式
 - 使文本适应一页
 
-
-
-
-
 ## 页面和文档设置
-
 WordPerfect 不是你爷爷的文字处理器！（等等！你爷爷有文字处理器吗？）除了能够以多种方式处理文本和图像外，WordPerfect 8 还包含桌面出版功能。这意味着除了创建信件和报告之外，你还可以创建许多类型的多页出版物，如小册子、海报和目录。此外，你可以创建世界上任何地方使用的任何纸张尺寸的文档。过去，所有这些都需要单独的桌面出版软件。
 
 在本章中，你将学习如何设置页面尺寸和方向。然后你将设置边距、显示和隐藏边距指南，并设置文本在页面上的垂直对齐方式。从那里你将向文档添加页面和页码，在页面之间移动，并在主文档中插入子文档。
 
 ### 我的页面方向是哪种？
-
 页面方向一词指的是页面放置的方式。如果页面比宽更高，则为纵向方向。如果页面比高更宽，则为横向方向。
 
 这是一个纵向页面。
@@ -3759,8 +3527,12 @@ WordPerfect 不是你爷爷的文字处理器！（等等！你爷爷有文字�
 
 ### 选择页面尺寸和方向：
 
+
+
 1. 在格式菜单的页面飞出菜单上的页面设置飞出菜单中选择页面尺寸（图 1）。纸张尺寸对话框将打开（图 2）。
+
 2. 从可用纸张定义区域的列表框中选择纸张尺寸和方向（图 3）。
+
 3. 单击确定。对话框将关闭，文档窗口中的页面将更改为你选择的尺寸和方向。
 
 ### ✓ 提示
@@ -3768,23 +3540,28 @@ WordPerfect 不是你爷爷的文字处理器！（等等！你爷爷有文字�
 - 如果你在列表框中看不到所需的纸张尺寸和/或方向，你可以创建一个新的纸张定义以满足你的需求。有关如何执行此操作的详细信息，请参阅下一节。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_153_0.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_153_1.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_153_2.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_153_3.png)
 
 ### 创建新的纸张定义：
 
 1. 在格式菜单的页面飞出菜单上的页面设置飞出菜单中选择页面尺寸（图 1）。纸张尺寸对话框将打开（图 2）。
+
 2. 单击创建。创建纸张尺寸对话框将打开（图 4）。
+
 3. 在纸张名称文本框中为你的纸张输入一个描述性名称。
+
 4. 在纸张类型区域，使用类型下拉列表选择你将使用的纸张类型，例如信头、信封或卡片纸（图 5）。
+
 5. 在纸张尺寸区域，使用尺寸下拉列表选择与你所需相匹配的纸张尺寸（图 6）。如果看不到完全想要的，请滚动到列表底部并选择其他。
+
 6. 如果你选择了其他，请使用尺寸下拉列表下方的文本框输入所需的确切测量值（图 7）。左侧文本框设置纸张的宽度，右侧文本框设置纸张的高度。
+
 7. 在纸张位置区域，使用位置下拉列表选择你想要使用的打印机纸张进纸位置（图 8）。
+
 8. 如果你希望 WordPerfect 在打印时提示你装入纸张，请确保在纸张位置区域选中提示装入纸张旁边的框。
+
 9. 要设置在自定义页面上打印文本的位置，请使用文本调整区域中的顶部和侧面下拉列表和文本框设置所需内容。这非常方便，可以确保文本在特定区域内打印，因为所有打印机都有不可打印区域。
 
 （续）
@@ -3805,20 +3582,12 @@ WordPerfect 不是你爷爷的文字处理器！（等等！你爷爷有文字�
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_154_3.png)
 
-
-
-
-
 10. 要设置纸张装入打印机的方式以及文本是否旋转，请使用方向区域（图 9）。根据打印机功能，您可以将纸张的窄边送入打印机，或将纸张旋转 90 度后将宽边送入打印机。此外，WordPerfect 可以将页面打印为按常规阅读方向排列的文本，或将文本旋转 90 度打印。四种可能的文本和纸张方向组合显示在图 10a–d 中
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_155_0.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_155_1.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_155_2.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_155_3.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_155_4.png)
 
 11. 单击确定。创建纸张大小对话框将关闭，您刚刚创建的纸张定义将出现在纸张大小对话框中可用纸张定义区域的列表框中（图 11）。
@@ -3844,17 +3613,27 @@ Margins are the white spaces between the edges of the page and the text. The wid
 设置所有页面边距：
 
 - 1. For side margins, select the paragraphs you want to change.
+
 - or
+
 - Position the insertion point anywhere on the page whose top and/or bottom margins you want to change.
-- 2. Choose Margins from the Format menu (Figure 12) or press Ctrl+F8 on the keyboard or right click on the margin strip on the Ruler Bar and choose Margins from the QuickMenu (Figure 13). The Margins dialog box will appear (Figure 14).
+
+- 2. Choose Margins from the Format menu (Figure 12) or press `Ctrl+F8` on the keyboard or right click on the margin strip on the Ruler Bar and choose Margins from the QuickMenu (Figure 13). The Margins dialog box will appear (Figure 14).
+
 - 3. Type a measurement into the text box(es) next to the margin(s) you want to change. The tiny page in the preview area will display the settings you have entered.
+
 - 4. Click OK. The Margins dialog box will close and the margins in the document will change.
 
 - 1. 对于侧边距，选择要更改的段落。
+
 - 或
+
 - 将插入点置于要更改顶部和/或底部边距的页面上的任意位置。
-- 2. 从格式菜单中选择边距（图 12），或在键盘上按 Ctrl+F8，或在标尺栏上的边距条上右键单击并从快速菜单中选择边距（图 13）。边距对话框将出现（图 14）。
+
+- 2. 从格式菜单中选择边距（图 12），或在键盘上按 `Ctrl+F8`，或在标尺栏上的边距条上右键单击并从快速菜单中选择边距（图 13）。边距对话框将出现（图 14）。
+
 - 3. 在要更改的边距旁边的文本框中输入测量值。预览区域中的小页面将显示您输入的设置。
+
 - 4. 单击确定。边距对话框将关闭，文档中的边距将更改。
 
 ### Tip
@@ -3887,28 +3666,28 @@ Preview area
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_156_2.png)
 
+
+
 Figure 14. Enter a measurement in the appropriate text box in the Margins dialog box. The setting you enter is displayed in the preview area.
 
 图 14. 在边距对话框的相应文本框中输入测量值。您输入的设置将在预览区域中显示。
 
-#### To set the left and right margins using the Ruler Bar:
+### To set the left and right margins using the Ruler Bar:
 
 使用标尺栏设置左右边距：
 
 - 1. Select the paragraphs whose left and/or right margins you want to change.
 - 2. On the margin strip at the top of the Ruler Bar, drag the left or right margin marker to a new position (Figure 15). The left or right margin in the document will move to the new position.
-
 - 1. 选择要更改左右边距的段落。
 - 2. 在标尺栏顶部的边距条上，将左侧或右侧边距标记拖动到新位置（图 15）。文档中的左侧或右侧边距将移动到新位置。
 
-#### To display or hide margin guidelines:
+### To display or hide margin guidelines:
 
 显示或隐藏页边距指南：
 
 - 1. Choose Guidelines from the View menu (Figure 16). The Guidelines dialog box will appear (Figure 17).
 - 2. To display margin guidelines, select the check box next to Margins. To hide margin guidelines, deselect the check box next to Margins.
 - 3. Click OK. The margin guidelines will display or hide depending upon whether you selected the check box or not.
-
 - 1. 从视图菜单中选择指南（图 16）。指南对话框将出现（图 17）。
 - 2. 要显示页边距指南，请选中边距旁边的复选框。要隐藏页边距指南，请取消选中边距旁边的复选框。
 - 3. 单击确定。页边距指南将根据您是否选中了复选框而显示或隐藏。
@@ -3938,10 +3717,6 @@ The Guidelines dialog box (Figure 17) can be used to set whether table, margin, 
 Figure 17. Use the Guidelines dialog box to set whether the margin guidelines are visible or not.
 
 图 17. 使用指南对话框设置页边距指南是否可见。
-
-
-
-
 
 ### 垂直文本对齐
 
@@ -4004,8 +3779,6 @@ WordPerfect 允许您在文档的任何位置使用两个不同的页眉——�
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_160_2.png)
 
-图 26. 使用放置对话框设置页眉或页脚出现的频率——在奇数页、偶数页或每一页上。
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_160_3.png)
 
 7. 单击确定关闭距离对话框。页眉或页脚指南将移动以指示您设置的距离测量值。
@@ -4013,10 +3786,6 @@ WordPerfect 允许您在文档的任何位置使用两个不同的页眉——�
 9. 使用放置于区域中的单选按钮设置页眉或页脚是否出现在奇数页、偶数页或每一页上。
 10. 单击确定关闭放置对话框。
 11. 完成创建页眉或页脚后，单击属性栏上的关闭页眉/页脚按钮或单击文档窗口中页眉或页脚区域外的任意位置。插入点将返回到文档的主体部分。
-
-
-
-
 
 ### 快速在页眉和页脚之间移动：
 
@@ -4027,6 +3796,10 @@ WordPerfect 允许您在文档的任何位置使用两个不同的页眉——�
 属性栏上的“下一个页眉/页脚”按钮。
 
 ### 编辑页眉或页脚：
+
+
+
+### 编辑页眉或页脚
 
 - 1. 在要编辑的页眉或页脚内任意位置单击。
 - 2. 如同编辑普通文本一样编辑页眉或页脚文本（图 27）。
@@ -4046,7 +3819,7 @@ WordPerfect 允许您在文档的任何位置使用两个不同的页眉——�
 
 ### 在页眉或页脚中添加日期：
 
-创建新的页眉或页脚或编辑现有页眉或页脚，将插入点定位在要放置日期的位置，然后按键盘上的 Ctrl+D。
+创建新的页眉或页脚或编辑现有页眉或页脚，将插入点定位在要放置日期的位置，然后按键盘上的 `Ctrl+D`。
 
 ### 添加页码：
 
@@ -4113,33 +3886,29 @@ WordPerfect 允许您在文档的任何位置使用两个不同的页眉——�
 
 图 37. 在程序窗口中选择“首选项”。
 
-
-
-
-
 #### 自定义应用程序栏信息：
 
-- 1. 在程序窗口中，选择 Preferences（图 37）。Preferences 对话框将打开（图 38）。
-- 2. 单击 Application Bar。Application Bar Preferences 对话框将出现（图 39）。
-- 3. 使用 Select items to appear on the bar 列表框来设置将显示哪些项目。
-- 4. 单击 OK。Application Bar Preferences 对话框将关闭，返回到 Preferences 对话框。
-- 5. 单击 Close 以关闭 Preferences 对话框并返回到文档窗口。你选择的将出现在 Application Bar 上的项目将会显示（图 40）。
+- 1. 在程序窗口中，选择 `Preferences`（图 37）。`Preferences` 对话框将打开（图 38）。
+- 2. 单击 `Application Bar`。`Application Bar Preferences` 对话框将出现（图 39）。
+- 3. 使用 `Select items to appear on the bar` 列表框来设置将显示哪些项目。
+- 4. 单击 `OK`。`Application Bar Preferences` 对话框将关闭，返回到 `Preferences` 对话框。
+- 5. 单击 `Close` 以关闭 `Preferences` 对话框并返回到文档窗口。你选择的将出现在 `Application Bar` 上的项目将会显示（图 40）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_165_0.png)
 
-Figure 38. Click the Application Bar button in the Preferences dialog box.
+Figure 38. Click the `Application Bar` button in the `Preferences` dialog box.
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_165_1.png)
 
-Figure 39. From the list box, select the items that you want to appear on the Application Bar.
+Figure 39. From the list box, select the items that you want to appear on the `Application Bar`.
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_165_2.png)
 
-Figure 40. The items you select in the Application Bar Preferences dialog box appear on the Application Bar in the document window.
+Figure 40. The items you select in the `Application Bar Preferences` dialog box appear on the `Application Bar` in the document window.
 
 ### Go Where You Want to Go
 
-你可以使用文档窗口右下角滚动条上的上下箭头或 Go To 命令快速在文档中移动。
+你可以使用文档窗口右下角滚动条上的上下箭头或 `Go To` 命令快速在文档中移动。
 
 #### To move from page to page using the scroll bar arrows:
 
@@ -4147,25 +3916,25 @@ Figure 40. The items you select in the Application Bar Preferences dialog box ap
 
 #### To go to a specific page:
 
-- 1. 从 Edit 菜单中选择 Go To（图 42）或在键盘上按 Ctrl+G。Go To 对话框将出现（图 43）。
-- 2. 确保 Page Number 旁边的复选框已选中，然后在相应的文本框中输入页码。
-- 3. 单击 OK。插入点将被移动到你指定的页面的顶部。
+- 1. 从 `Edit` 菜单中选择 `Go To`（图 42）或在键盘上按 `Ctrl+G`。`Go To` 对话框将出现（图 43）。
+- 2. 确保 `Page Number` 旁边的复选框已选中，然后在相应的文本框中输入页码。
+- 3. 单击 `OK`。插入点将被移动到你指定的页面的顶部。
 
 ### Tip
 
-如果文本被选中或插入点位于列或表格中，Go To 对话框选项将自动更改以让你在这些区域中移动。
+如果文本被选中或插入点位于列或表格中，`Go To` 对话框选项将自动更改以让你在这些区域中移动。
 
 Figure 41. Click the up or down arrows found at the bottom of the scroll bar in the document window to move up or down one page.
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_166_0.png)
 
-Figure 42. Choose Go To from the Edit menu or press Ctrl+G on the keyboard.
+Figure 42. Choose `Go To` from the `Edit` menu or press `Ctrl+G` on the keyboard.
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_166_1.png)
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_166_2.png)
 
-Figure 43. Enter the number of the page you would like to go to in the Page Number text box, then click OK.
+Figure 43. Enter the number of the page you would like to go to in the `Page Number` text box, then click `OK`.
 
 ### Master Documents and Subdocuments
 
@@ -4175,33 +3944,27 @@ Figure 43. Enter the number of the page you would like to go to in the Page Numb
 
 当子文档链接到主文档时，该链接会在主文档中显示。主文档可以展开以便打印或显示整个文档。打印或显示整个文档后，主文档可以再次压缩回其先前的形式。
 
-#### To create a master document and insert a subdocument:
 
-- 1. 打开你想要用作主文档的文档。
-- 2. 将插入点定位在你想要插入子文档的位置。
-- 3. 从 File 菜单上的 Document 弹出菜单中选择 Subdocument（图 45）。Include Subdocument 对话框将打开（图 46）。
-- 4. 单击 Subdocument Name 文本框右侧的列表按钮。Select File 对话框将出现（图 47）。
-- 5. 使用 Directory List 框移动到存储要包含的文档的目录。
-- 6. 在 File List 框中突出显示该文档。
+
+### To create a master document and insert a subdocument:
+
+1. 打开你想要用作主文档的文档。
+2. 将插入点定位在你想要插入子文档的位置。
+3. 从 `File` 菜单上的 `Document` 弹出菜单中选择 `Subdocument`（图 45）。`Include Subdocument` 对话框将打开（图 46）。
+4. 单击 `Subdocument Name` 文本框右侧的列表按钮。`Select File` 对话框将出现（图 47）。
+5. 使用 `Directory List` 框移动到存储要包含的文档的目录。
+6. 在 `File List` 框中突出显示该文档。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_167_0.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_167_1.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_167_2.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_167_3.png)
-
-
-
-
 
 ### 图 48. 你所选文件的完整路径会出现在“子文档名称”文本框中。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_168_0.png)
 
 7. 单击“选择”。“选择文件”对话框将关闭，你所选文件的完整路径名将出现在“包含子文档”对话框中的文本框中（图 48）。
-
 8. 单击“确定”。“包含子文档”对话框将关闭，一个微小的子文档图标将出现在主文档左侧边距中。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_168_1.png)
@@ -4214,10 +3977,10 @@ Figure 43. Enter the number of the page you would like to go to in the Page Numb
 
 ### 如何展开主文档：
 
-- 1. 打开你想要展开的主文档。
-- 2. 在“文件”菜单上的“文档”弹出菜单中选择“展开主文档”（图 50）。“展开主文档”对话框将打开（图 51）。
-- 3. 在“子文档”列表框中，选中你想要展开到主文档中的子文档旁边的复选框。要选择主文档中的所有子文档，请单击“全部标记”。
-- 4. 单击“确定”。“展开主文档”对话框将关闭，你所选的子文档将出现在主文档中。
+1. 打开你想要展开的主文档。
+2. 在“文件”菜单上的“文档”弹出菜单中选择“展开主文档”（图 50）。“展开主文档”对话框将打开（图 51）。
+3. 在“子文档”列表框中，选中你想要展开到主文档中的子文档旁边的复选框。要选择主文档中的所有子文档，请单击“全部标记”。
+4. 单击“确定”。“展开主文档”对话框将关闭，你所选的子文档将出现在主文档中。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_168_2.png)
 
@@ -4229,17 +3992,16 @@ Figure 43. Enter the number of the page you would like to go to in the Page Numb
 
 ### 如何压缩主文档：
 
-- 1. 如果主文档尚未在文档窗口中显示，请打开你想要压缩的主文档。
-- 2. 在“文件”菜单上的“文档”弹出菜单中选择“压缩主文档”（图 52）。“压缩/保存子文档”对话框将出现（图 53）。
-- 3. 在“子文档”列表框中，取消选中你想要压缩的子文档。默认情况下，所有子文档都被选中。
-- 4. 单击“确定”。主文档将恢复到展开前的形式。
+1. 如果主文档尚未在文档窗口中显示，请打开你想要压缩的主文档。
+2. 在“文件”菜单上的“文档”弹出菜单中选择“压缩主文档”（图 52）。“压缩/保存子文档”对话框将出现（图 53）。
+3. 在“子文档”列表框中，取消选中你想要压缩的子文档。默认情况下，所有子文档都被选中。
+4. 单击“确定”。主文档将恢复到展开前的形式。
 
 ### 提示
 
 如果你在子文档在主文档中展开时对其进行了任何更改，可以使用“压缩/保存子文档”对话框保存这些更改。只需选中标记为“保存”的子文档旁边的复选框，然后单击“全部保存”。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_169_0.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_169_1.png)
 
 **摘要**
@@ -4264,67 +4026,57 @@ Figure 43. Enter the number of the page you would like to go to in the Page Numb
 
 在本章中你将学习如何使用以下几种工具：
 
-- **QuickCorrect** 会自动替换常见的拼写错误和打字错误。它还可以用于扩展缩写。例如，在撰写本书时，我需要多次输入“dialog box”。与其每次都输入这两个词，我会输入“db”，QuickCorrect 会自动将其更改为“dialog box”。
-
-- **Spell-As-You-Go** 可立即访问 WordPerfect 的词典。如果它发现可能拼写错误的词，该词下方会出现斜向红色条纹。
-
-- **Spell Check** 用于搜索文档中拼写错误的词、重复的词以及大写错误。
-
-- **Grammar-As-You-Go** 让你在输入时检查语法。如果它发现可能存在语法错误的词或短语，该词或短语下方会出现斜向蓝色条纹。
-
-- **Grammatik** 用于检查文档中的拼写、标点、语法和风格错误。使用 Grammatik，你可以根据所从事的写作类型设置自定义写作风格。预定义的风格包括广告、小说、备忘录和技术等。
-
-
-
-
+- `QuickCorrect` 会自动替换常见的拼写错误和打字错误。它还可以用于扩展缩写。例如，在撰写本书时，我需要多次输入“dialog box”。与其每次都输入这两个词，我会输入“db”，`QuickCorrect` 会自动将其更改为“dialog box”。
+- `Spell-As-You-Go` 可立即访问 WordPerfect 的词典。如果它发现可能拼写错误的词，该词下方会出现斜向红色条纹。
+- `Spell Check` 用于搜索文档中拼写错误的词、重复的词以及大写错误。
+- `Grammar-As-You-Go` 让你在输入时检查语法。如果它发现可能存在语法错误的词或短语，该词或短语下方会出现斜向蓝色条纹。
+- `Grammatik` 用于检查文档中的拼写、标点、语法和风格错误。使用 `Grammatik`，你可以根据所从事的写作类型设置自定义写作风格。预定义的风格包括广告、小说、备忘录和技术等。
 
 ### QuickCorrect
 
-除了自动替换拼写错误、打字错误单词和缩写外，QuickCorrect 还可用于插入 SmartQuotes——即用排版引号替换直线的单引号和双引号，并修正诸如单词之间有两个空格以及句子开头有两个大写字母等问题。
+除了自动替换拼写错误、打字错误单词和缩写外，`QuickCorrect` 还可用于插入 `SmartQuotes`——即用排版引号替换直线的单引号和双引号，并修正诸如单词之间有两个空格以及句子开头有两个大写字母等问题。
 
-另一个 QuickCorrect 选项称为 Format-As-You-Go。Format-As-You-Go 可帮助你在打字时插入格式元素，例如项目符号和编号列表、序数词和换行符。
+另一个 `QuickCorrect` 选项称为 `Format-As-You-Go`。`Format-As-You-Go` 可帮助你在打字时插入格式元素，例如项目符号和编号列表、序数词和换行符。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_171_0.png)
 
 #### To turn QuickCorrect on or off:
 
-- 1. Choose QuickCorrect from the Tools menu (Figure 1). The QuickCorrect dialog box will appear with the QuickCorrect radio button selected at the top (Figure 2).
-- 2. To turn QuickCorrect on, make sure the check boxes next to Replace words as you type and Correct other mis-typed words when possible are selected. To turn QuickCorrect off, deselect the check boxes.
-- 3. Click OK. The QuickCorrect dialog box will close and will be on or off depending upon whether you selected the check boxes or not.
+1. Choose `QuickCorrect` from the `Tools` menu (Figure 1). The `QuickCorrect` dialog box will appear with the `QuickCorrect` radio button selected at the top (Figure 2).
+2. To turn `QuickCorrect` on, make sure the check boxes next to `Replace words as you type` and `Correct other mis-typed words when possible` are selected. To turn `QuickCorrect` off, deselect the check boxes.
+3. Click `OK`. The `QuickCorrect` dialog box will close and will be on or off depending upon whether you selected the check boxes or not.
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_171_1.png)
 
 Tip
 
-- By default, QuickCorrect is turned on when you launch WordPerfect for the first time.
+- By default, `QuickCorrect` is turned on when you launch WordPerfect for the first time.
 
 #### To add a new entry to QuickCorrect:
 
-- 1. Choose QuickCorrect from the Tools menu (Figure 1). The QuickCorrect dialog box will appear with the QuickCorrect radio button selected at the top (Figure 2).
-- 2. In the Replace text box, enter the incorrect spelling of a word you usually misspell, or type an abbreviation for a word or several words that you would like replaced as you type (Figure 3).
-- 3. In the With text box, enter the correct spelling for the word or the word(s) you would like replaced by the abbreviation (Figure 4).
-- 4. Click Add Entry.
+1. Choose `QuickCorrect` from the `Tools` menu (Figure 1). The `QuickCorrect` dialog box will appear with the `QuickCorrect` radio button selected at the top (Figure 2).
+2. In the `Replace` text box, enter the incorrect spelling of a word you usually misspell, or type an abbreviation for a word or several words that you would like replaced as you type (Figure 3).
+3. In the `With` text box, enter the correct spelling for the word or the word(s) you would like replaced by the abbreviation (Figure 4).
+4. Click `Add Entry`.
+
+
+
 - 5. Continue adding as many words or abbreviations as you would like in the Replace and With text boxes, following the steps 2-4 above.
 - 6. When you are finished entering words, click OK. The QuickCorrect dialog box will close. The next time you type one of the misspelled words or abbreviations you entered, QuickCorrect will replace the text after you press the space bar on the keyboard.
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_172_0.png)
-
 Figure 3. Type the misspelled word or abbreviation in the Replace text box.
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_172_1.png)
-
 Figure 4. Type the correctly spelled word or the word(s) that will replace the abbreviation.
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_172_2.png)
-
 Figure 5. Make sure the check box next to Replace words as you type is selected, otherwise, QuickCorrect will be turned off.
 
 ### Tip
-
 - Make sure the check box next to Replace words as you type is selected in the QuickCorrect dialog box (Figure 5). Otherwise, QuickCorrect will be turned off.
 
 #### To turn on SmartQuotes:
-
 - 1. Choose QuickCorrect from the Tools menu (Figure 1). The QuickCorrect dialog box will appear with the QuickCorrect radio button selected at the top (Figure 2).
 - 2. Select the SmartQuotes radio button. The QuickCorrect dialog box will change to display SmartQuote options (Figure 6).
 - 3. In the Select quotation marks area, select the check boxes next to the options you would like to turn on:
@@ -4334,29 +4086,20 @@ Figure 5. Make sure the check box next to Replace words as you type is selected,
 - 4. Click OK. The QuickCorrect dialog box will close. The next time you type a single or double quote, it will automatically be replaced with a typographer’s quote.
 
 ### Tip
-
 - You can set the type of typographer’s quotes that are used by clicking the drop-down list button next to the Open and Close text boxes in the Select quotation marks area (Figure 7).
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_173_0.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_173_1.png)
 
 ### WordPerfect’s Proofreading Tools are Good, but...
-
 ...there’s no substitute for reading a document carefully to manually check for mistakes. While WordPerfect’s Spell Check and Grammar tools are a great way to help you quickly find and fix errors, they aren’t perfect. Computers help us do many things, but they are still tools and no substitute for humans!
 
-
-
-
-
 ### 关闭智能引号：
-
 1. 从工具菜单中选择 QuickCorrect（图 1）。QuickCorrect 对话框将会出现，顶部选中了 QuickCorrect 单选按钮（图 2）。
 2. 选择 SmartQuotes 单选按钮并取消勾选“选择引号”区域中的复选框（图 6）。
 3. 单击 OK 关闭 QuickCorrect 对话框。
 
 ### 打开即时格式化：
-
 1. 从工具菜单中选择 QuickCorrect（图 1）。QuickCorrect 对话框将会出现，顶部选中了 QuickCorrect 单选按钮（图 2）。
 2. 选择 Format-As-You-Go 单选按钮。QuickCorrect 对话框将会更改为显示 Format-As-You-Go 选项（图 8）。
 3. 在 Sentence Corrections 区域（图 9）中，选中复选框以启用在句号后大写下一个字母、在两个大写字母相邻时将第二个大写字母改为小写，或在单词之间将两个空格改为一个空格的选项。
@@ -4374,15 +4117,20 @@ Figure 5. Make sure the check box next to Replace words as you type is selected,
 5. 在 QuickCorrect Format-As-You-Go Options 区域（图 11）中，选中复选框以使用以下选项：
 - QuickBullets—在您输入时自动为列表添加项目符号或编号。要开始项目符号列表，输入小写字母 o，然后按 Tab 键。要开始编号列表，输入数字后跟句点，然后按 Tab 键。要结束列表，在最后一个列表项后按 Enter，然后按 Backspace 键。
 - QuickIndent—如果在段落中除第一行外的任何行开头按下 Tab 键，则为段落添加缩进。
-- QuickLines—通过在行开头输入四个连字符 (-) 或等号 (=)，然后按 Enter，从左到右边距插入单或双水平线。
-- QuickOrdinals—自动将序数词转换为上标。例如 2nd 变为 2nd。
-- QuickSymbols—将 2 个连字符 (--) 替换为 en-dash (–)，将 3 个连字符 (---) 替换为 em-dash (—)。
 
-6. 当您完成选择 Format-As-You-Go 选项后，单击 OK。QuickCorrect 对话框将会关闭。下次输入 Format-As-You-Go 项目，例如序数词时，WordPerfect 将自动为您格式化。
+
+
+- `QuickLines`—通过在行开头输入四个连字符 (`-`) 或等号 (`=`)，然后按 Enter，从左到右边距插入单或双水平线。
+
+- `QuickOrdinals`—自动将序数词转换为上标。例如 `2nd` 变为 `2nd`。
+
+- `QuickSymbols`—将 2 个连字符 (`--`) 替换为 en-dash (`–`)，将 3 个连字符 (`---`) 替换为 em-dash (`—`)。
+
+6. 当您完成选择 `Format-As-You-Go` 选项后，单击 `OK`。`QuickCorrect` 对话框将会关闭。下次输入 `Format-As-You-Go` 项目，例如序数词时，`WordPerfect` 将自动为您格式化。
 
 ### 关闭即时格式化：
 
-打开 QuickCorrect 对话框，选择 Format-As-You-Go 单选按钮，然后取消勾选对话框中的所有复选框。
+打开 `QuickCorrect` 对话框，选择 `Format-As-You-Go` 单选按钮，然后取消勾选对话框中的所有复选框。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_175_0.png)
 
@@ -4390,55 +4138,65 @@ Figure 5. Make sure the check box next to Replace words as you type is selected,
 
 ### 即时拼写检查
 
-在您输入时，Spell-As-You-Go 会自动检查您的单词，查找任何拼写错误。如果 Spell-As-You-Go 发现它认为不正确或未包含在 WordPerfect 词典中的单词，该单词下方会出现斜向红色条纹。
+在您输入时，`Spell-As-You-Go` 会自动检查您的单词，查找任何拼写错误。如果 `Spell-As-You-Go` 发现它认为不正确或未包含在 `WordPerfect` 词典中的单词，该单词下方会出现斜向红色条纹。
 
 #### 打开即时拼写检查：
 
-从工具菜单上的 Proofread 弹出菜单中选择 Spell-As-You-Go（图 12）。当 Spell-As-You-Go 打开时，菜单项左侧会出现一个小菱形。
+从工具菜单上的 Proofread 弹出菜单中选择 `Spell-As-You-Go`（图 12）。当 `Spell-As-You-Go` 打开时，菜单项左侧会出现一个小菱形。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_176_0.png)
 
-**图 13.** 从工具菜单上的 Proofread 弹出菜单中选择 Off 以关闭 Spell-As-You-Go。
+**图 13.** 从工具菜单上的 Proofread 弹出菜单中选择 Off 以关闭 `Spell-As-You-Go`。
 
 ### ✓ 提示
 
-- Spell-As-You-Go 和 Grammar-As-You-Go 不能同时打开。
-- 要关闭 Spell-As-You-Go，请从工具菜单上的 Proofread 弹出菜单中选择 Off（图 13）。
+- `Spell-As-You-Go` 和 `Grammar-As-You-Go` 不能同时打开。
+
+- 要关闭 `Spell-As-You-Go`，请从工具菜单上的 Proofread 弹出菜单中选择 Off（图 13）。
 
 ### 纠正可能的拼写错误：
 
-1. 将鼠标指针定位在带有红色斜向条纹下划线的单词上并单击鼠标右键。Spell-As-You-Go 菜单将会打开，显示可能的替代词列表（图 14）。
-2. 从列表中选择正确的拼写。
-   *或*
-   如果您知道该词拼写正确，这意味着它不在 WordPerfect 词典中。选择 Add 将该词输入词典，或选择 Skip in Document 让拼写检查程序在文档剩余部分忽略该词。
+1. 将鼠标指针定位在带有红色斜向条纹下划线的单词上并单击鼠标右键。`Spell-As-You-Go` 菜单将会打开，显示可能的替代词列表（图 14）。
 
-Spell-As-You-Go 菜单将会消失，单词的拼写将被更正。
+2. 从列表中选择正确的拼写。
+
+   *或*
+
+   如果您知道该词拼写正确，这意味着它不在 `WordPerfect` 词典中。选择 Add 将该词输入词典，或选择 Skip in Document 让拼写检查程序在文档剩余部分忽略该词。
+
+`Spell-As-You-Go` 菜单将会消失，单词的拼写将被更正。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_176_1.png)
 
-**图 14.** 从 Spell-As-You-Go 菜单中选择正确拼写的单词，或者如果您知道该词拼写正确但不在 WordPerfect 词典中，请单击 Add 将该词添加到词典，或单击 Skip in Document 跳过该词今后的出现。
-
-
-
-
+**图 14.** 从 `Spell-As-You-Go` 菜单中选择正确拼写的单词，或者如果您知道该词拼写正确但不在 `WordPerfect` 词典中，请单击 Add 将该词添加到词典，或单击 Skip in Document 跳过该词今后的出现。
 
 ### 拼写检查
 
-您可以使用 WordPerfect 的拼写检查功能一次性检查整个文档的拼写。
+您可以使用 `WordPerfect` 的拼写检查功能一次性检查整个文档的拼写。
 
 #### 如何拼写检查文档：
 
 - 1. 打开您想要拼写检查的文档。
-- 2. 从工具菜单中选择拼写检查（图 15）或在键盘上按 Ctrl+F1。拼写检查对话框将打开（图 16），并且会发生以下几件事：
+
+- 2. 从工具菜单中选择拼写检查（图 15）或在键盘上按 `Ctrl+F1`。拼写检查对话框将打开（图 16），并且会发生以下几件事：
+
 - 拼写检查器找到的第一个错误单词将被下划线标出。
+
 - 拼写错误的单词将出现在拼写检查对话框中“未找到”旁边。
+
 - 拼写检查器的第一个建议替换词将出现在“替换为”文本框中。
+
 - 其他可能的拼写或单词的列表将出现在“建议”列表框中。
+
 - 3. 您可以：
+
 - 单击“替换”将拼写错误的单词替换为“替换为”文本框中的单词。
+
 - 高亮“建议”列表框中的其中一个单词，然后单击“替换”。
+
 - 单击“跳过一次”或“始终跳过”以跳过该单词一次或整个文档。
-- 单击“添加”将“未找到”旁边的单词添加到 WordPerfect 词典中。
+
+- 单击“添加”将“未找到”旁边的单词添加到 `WordPerfect` 词典中。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_177_0.png)
 
@@ -4451,6 +4209,7 @@ Spell-As-You-Go 菜单将会消失，单词的拼写将被更正。
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_178_0.png)
 
 - 单击“建议”以在“建议”列表框中查看其他单词或短语。
+
 - 单击“关闭”以在拼写检查器尚未运行完整个文档之前停止检查拼写。
 
 4. 当拼写检查器检查完整个文档后，会出现一个拼写检查对话框，告知您拼写检查已完成（图 17）。
@@ -4460,7 +4219,9 @@ Spell-As-You-Go 菜单将会消失，单词的拼写将被更正。
 ### 提示
 
 - 要拼写检查文档的一部分，请将插入标记定位在您想要拼写检查的文本中（例如，在单词、句子或段落内部），然后从拼写检查对话框中的“检查”菜单中选择您想要检查的部分（图 18）。
+
 - 您可以关闭对各种选项的拼写检查，例如带数字的单词、重复单词和不规则大写。要这样做，请在拼写检查对话框中选择“选项”菜单并取消选择您不希望拼写检查的项目（图 19）。
+
 - 如果您使用多种语言写作，可以通过从工具菜单上的“语言”弹出菜单中选择“设置”（图 20）来拼写检查这些语言。语言对话框将打开（图 21）。从列表框中选择您想要拼写检查的语言，然后单击“确定”。按照本页的步骤拼写检查您的文档。
 
 图 19. 打开“选项”菜单，然后选择您不希望拼写检查的项目。
@@ -4482,14 +4243,19 @@ Spell-As-You-Go 菜单将会消失，单词的拼写将被更正。
 ### 提示
 
 - 即时语法检查和即时拼写检查不能同时打开。
+
 - 要关闭即时语法检查，请从工具菜单上的“校对”弹出菜单中选择“关闭”（图 13）。
 
 #### 如何更正可能的语法错误：
 
 - 1. 将鼠标指针定位在用蓝色斜线下划线的单词或短语上并单击鼠标右键。即时语法检查菜单将打开，显示可能的替代项列表（图 23）。
+
 - 2. 从列表中选择正确的单词或短语。
+
   或
+
   选择“忽略”以跳过可能的语法错误。
+
   即时语法检查菜单将消失，单词或短语将根据您选择的选项而更改。
 
 图 21. 选择您想要拼写检查的语言，然后单击“确定”。
@@ -4504,32 +4270,35 @@ Spell-As-You-Go 菜单将会消失，单词的拼写将被更正。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_179_2.png)
 
-
-
-
-
 ### Grammatik
 
-您可以使用 WordPerfect 的 Grammatik 功能一次性校对整个文档。
+您可以使用 `WordPerfect` 的 `Grammatik` 功能一次性校对整个文档。
 
 #### 校对文档的方法：
 
 - 1. 打开您想要校对的文档。
-- 2. 从 Tools 菜单中选择 Grammatik（图 24）。Grammatik 对话框将会出现（图 25），Grammatik 找到的第一个错误将在您的文档中被划下底线。
-- 3. 从 Options 菜单中选择 Writing Style（图 26）。Writing Style 对话框将会打开（图 27）。
-- 4. 从 Writing Style 列表框中选择一种风格。
-- 5. 在 Formality Level 区域中，选择最能描述您文档正式程度的单选按钮——standard、formal 或 informal。
-- 6. 单击 OK。Writing Style 对话框将会关闭，返回到 Grammatik 对话框（图 25）。对于 Grammatik 找到的第一个可能的语法或拼写错误，对话框将显示以下几项：
 
-Rule Class，位于对话框顶部，显示被划下底线的错误类型，例如拼写、大写、正确使用口语、被动语态或陈词滥调。
+- 2. 从 `Tools` 菜单中选择 `Grammatik`（图 24）。`Grammatik` 对话框将会出现（图 25），`Grammatik` 找到的第一个错误将在您的文档中被划下底线。
 
-Advice Box 解释可能的写作错误以及如何修正。
+- 3. 从 `Options` 菜单中选择 `Writing Style`（图 26）。`Writing Style` 对话框将会打开（图 27）。
 
-Replacement Box 显示可能的修正列表。
+- 4. 从 `Writing Style` 列表框中选择一种风格。
+
+- 5. 在 `Formality Level` 区域中，选择最能描述您文档正式程度的单选按钮——`standard`、`formal` 或 `informal`。
+
+- 6. 单击 `OK`。`Writing Style` 对话框将会关闭，返回到 `Grammatik` 对话框（图 25）。对于 `Grammatik` 找到的第一个可能的语法或拼写错误，对话框将显示以下几项：
+
+`Rule Class`，位于对话框顶部，显示被划下底线的错误类型，例如拼写、大写、正确使用口语、被动语态或陈词滥调。
+
+`Advice Box` 解释可能的写作错误以及如何修正。
+
+`Replacement Box` 显示可能的修正列表。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_180_0.png)
 
-Figure 24. Choose Grammatik from the Tools menu.
+Figure 24. Choose `Grammatik` from the `Tools` menu.
+
+
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_180_1.png)
 
@@ -4539,24 +4308,24 @@ Figure 25. The Grammatik dialog box offers advice on how to fix possible grammar
 
 Figure 26. Choose Writing Style from the Options menu to open the Writing Style dialog box.
 
-#### 7.
+### 7.
 
 您可以单击：
 
-- Replace 或用 Replacement 框中高亮显示的词或短语替换不正确的词或短语。
-- Skip 跳过可能的错误并移动到下一个错误。
-- Next Sentence 忽略当前句子中的其他错误并移动到下一句。
-- Ignore Word/Phrase 跳过该特定词或短语在整个文档中的出现。
-- Add 将该词或短语输入 Grammatik。
-- Close 在 Grammatik 尚未检查完整个文档之前停止语法检查。
+- `Replace` 或用 `Replacement` 框中高亮显示的词或短语替换不正确的词或短语。
+- `Skip` 跳过可能的错误并移动到下一个错误。
+- `Next Sentence` 忽略当前句子中的其他错误并移动到下一句。
+- `Ignore Word/Phrase` 跳过该特定词或短语在整个文档中的出现。
+- `Add` 将该词或短语输入 `Grammatik`。
+- `Close` 在 `Grammatik` 尚未检查完整个文档之前停止语法检查。
 
-#### 8.
+### 8.
 
-当语法检查完成后，Grammatik 将打开一个对话框询问您是否要关闭 Grammatik（图 28）。
+当语法检查完成后，`Grammatik` 将打开一个对话框询问您是否要关闭 `Grammatik`（图 28）。
 
-#### 9.
+### 9.
 
-单击 Yes 关闭 Grammatik 并返回到您的文档。
+单击 `Yes` 关闭 `Grammatik` 并返回到您的文档。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_181_0.png)
 
@@ -4570,21 +4339,21 @@ Figure 28. When Grammatik has finished checking your document, it will tell you 
 
 在本章中您学习了如何：
 
-- 在输入时使用 QuickCorrect 自动替换拼写错误单词或缩写
-- 用 SmartQuotes 替换直引号
-- 使用 Format-As-You-Go 功能设置自动格式
-- 在输入时使用 Spell-As-You-Go 即时纠正拼写错误单词
+- 在输入时使用 `QuickCorrect` 自动替换拼写错误单词或缩写
+- 用 `SmartQuotes` 替换直引号
+- 使用 `Format-As-You-Go` 功能设置自动格式
+- 在输入时使用 `Spell-As-You-Go` 即时纠正拼写错误单词
 - 校对文档拼写
-- 在输入时使用 Grammar-As-You-Go 检查语法
-- 使用 Grammatik 校对整个文档
+- 在输入时使用 `Grammar-As-You-Go` 检查语法
+- 使用 `Grammatik` 校对整个文档
 
 ## ADDING TABLES
 
-表格用于以有组织的方式呈现信息。它们由行和列的单元格组成，让您可以准确地定位信息（图 1）。单元格可以包含文本和图像。如果您创建了一个表格并发现需要添加或删除单元格或更改单元格大小，WordPerfect 使自定义现有表格变得很容易。
+表格用于以有组织的方式呈现信息。它们由行和列的单元格组成，让您可以准确地定位信息（图 1）。单元格可以包含文本和图像。如果您创建了一个表格并发现需要添加或删除单元格或更改单元格大小，`WordPerfect` 使自定义现有表格变得很容易。
 
-您可以像格式化其他任何文本一样格式化单元格内的文本。使用 Property Bar，您可以设置字体、字号、字体样式以及对齐方式——左对齐、右对齐、居中或全文对齐。事实上，如果您为表格创建了特殊的文本样式，您也可以使用它。
+您可以像格式化其他任何文本一样格式化单元格内的文本。使用 `Property Bar`，您可以设置字体、字号、字体样式以及对齐方式——左对齐、右对齐、居中或全文对齐。事实上，如果您为表格创建了特殊的文本样式，您也可以使用它。
 
-WordPerfect 的表格功能甚至允许您插入通常在电子表格程序中看到的函数，例如自动将所选列的和相加或递增数字模式。
+`WordPerfect` 的表格功能甚至允许您插入通常在电子表格程序中看到的函数，例如自动将所选列的和相加或递增数字模式。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_182_0.png)
 
@@ -4601,24 +4370,20 @@ WordPerfect 的表格功能甚至允许您插入通常在电子表格程序中�
 | Ice Cream | Strawberry | $1.00 |
 |  | Vanilla |  |
 
-
-
-
-
 ### 创建表格：
 
-+   1. 将插入点定位到您希望表格出现的位置。
-+   2. 在 WordPerfect 8 工具栏上，将鼠标指针移到表格按钮上并按下鼠标左键。会出现一个小网格（图 2）。
-+   3. 将鼠标指针向下并向右拖动，以突出显示网格上的行数和列数。
-+   4. 松开鼠标左键。表格将出现在您的文档中，插入点在第一个单元格中闪烁（图 3）。
++ 1. 将插入点定位到您希望表格出现的位置。
++ 2. 在 `WordPerfect 8` 工具栏上，将鼠标指针移到表格按钮上并按下鼠标左键。会出现一个小网格（图 2）。
++ 3. 将鼠标指针向下并向右拖动，以突出显示网格上的行数和列数。
++ 4. 松开鼠标左键。表格将出现在您的文档中，插入点在第一个单元格中闪烁（图 3）。
 
 或
 
-+   1. 将插入点定位到您希望表格出现的位置。
-+   2. 从插入菜单中选择表格（图 4）或在键盘上按 F12。创建表格对话框将打开（图 5）。
-+   3. 在创建区域中，选择表格单选按钮。
-+   4. 在表格大小区域中，使用列和行文本框设置表格将包含的列数和行数。
-+   5. 单击确定。创建表格对话框将关闭，表格将出现在您的文档中，插入点在第一个单元格中闪烁（图 3）。
++ 1. 将插入点定位到您希望表格出现的位置。
++ 2. 从插入菜单中选择表格（图 4）或在键盘上按 `F12`。创建表格对话框将打开（图 5）。
++ 3. 在创建区域中，选择表格单选按钮。
++ 4. 在表格大小区域中，使用列和行文本框设置表格将包含的列数和行数。
++ 5. 单击确定。创建表格对话框将关闭，表格将出现在您的文档中，插入点在第一个单元格中闪烁（图 3）。
 
 图 2. 将鼠标向下并向右拖动以突出显示您需要的行数和列数。
 
@@ -4634,20 +4399,20 @@ WordPerfect 的表格功能甚至允许您插入通常在电子表格程序中�
 
 ### 提示
 
-+   - 您可以通过按 Tab 键或使用键盘上的箭头键快速从一个单元格移动到下一个单元格中的表格。
-+   - 要快速向表格添加另一行，请将插入标记定位在右下角单元格中并按 Tab 键。
-+   - 要在单元格中插入制表符以缩进文本，请按住 Ctrl 键，然后按 Tab 键。
++ 您可以通过按 `Tab` 键或使用键盘上的箭头键快速从一个单元格移动到下一个单元格中的表格。
++ 要快速向表格添加另一行，请将插入标记定位在右下角单元格中并按 `Tab` 键。
++ 要在单元格中插入制表符以缩进文本，请按住 `Ctrl` 键，然后按 `Tab` 键。
 
 ### 向表格中插入图像：
 
-+   1. 将插入点定位在要添加图像的单元格中。
-+   2. 从插入菜单上的图形下拉菜单中选择从文件（图 6）。插入图像对话框将打开（图 7）。
-+   3. 使用目录列表和文件列表框选择图像文件。
-+   4. 单击插入。图像将出现在表格中（图 8）。
++ 1. 将插入点定位在要添加图像的单元格中。
++ 2. 从插入菜单上的图形下拉菜单中选择从文件（图 6）。插入图像对话框将打开（图 7）。
++ 3. 使用目录列表和文件列表框选择图像文件。
++ 4. 单击插入。图像将出现在表格中（图 8）。
 
 ### 提示
 
-+   - 有关在文档中插入图像的更多信息，请参阅第 99–100 页。
++ 有关在文档中插入图像的更多信息，请参阅第 99–100 页。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_184_0.png)
 
@@ -4661,23 +4426,23 @@ WordPerfect 的表格功能甚至允许您插入通常在电子表格程序中�
 
 #### 选择单元格：
 
-+   1. 将鼠标指针移向要选择的单元格顶部。鼠标指针将变为向上箭头（图 9）。
-+   2. 单击。单元格将被选中（图 10）。
++ 1. 将鼠标指针移向要选择的单元格顶部。鼠标指针将变为向上箭头（图 9）。
++ 2. 单击。单元格将被选中（图 10）。
 
 #### 选择列：
 
-+   1. 将鼠标指针移向要选择的顶部单元格顶部。鼠标指针将变为向上箭头（图 9）。
-+   2. 按住鼠标左键并向下拖动以选择列（图 11）。
++ 1. 将鼠标指针移向要选择的顶部单元格顶部。鼠标指针将变为向上箭头（图 9）。
++ 2. 按住鼠标左键并向下拖动以选择列（图 11）。
 
 #### 选择行：
 
-+   1. 将鼠标指针移向要选择的左侧单元格顶部。鼠标指针将变为向上箭头（图 9）。
-+   2. 按住鼠标左键并向右拖动以选择行（图 12）。
++ 1. 将鼠标指针移向要选择的左侧单元格顶部。鼠标指针将变为向上箭头（图 9）。
++ 2. 按住鼠标左键并向右拖动以选择行（图 12）。
 
 #### 选择表格：
 
-+   1. 将鼠标指针移向表格中第一个单元格顶部。鼠标指针将变为向上箭头（图 9）。
-+   2. 按住鼠标按钮并沿对角线向右向下拖动以选择整个表格（图 13）。
++ 1. 将鼠标指针移向表格中第一个单元格顶部。鼠标指针将变为向上箭头（图 9）。
++ 2. 按住鼠标按钮并沿对角线向右向下拖动以选择整个表格（图 13）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_185_0.png)
 
@@ -4689,10 +4454,6 @@ WordPerfect 的表格功能甚至允许您插入通常在电子表格程序中�
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_185_4.png)
 
-
-
-
-
 ### 更改表格形状
 
 许多时候，表格中的信息会在表格创建过程中不断扩展。可能需要新的列或行，或者信息难以放入标准表格设置中，需要拆分或合并单元格。事实上，如果需要的话，你甚至可以拆分整个表格。
@@ -4701,14 +4462,19 @@ WordPerfect 的表格功能甚至允许您插入通常在电子表格程序中�
 
 - 1. 将插入点定位在要添加列或行位置的相邻列或行中。
 - 2. 单击属性栏上的表格菜单并选择插入（图 14）。
+
   或
+
   右键单击表格并从快速菜单中选择插入（图 15）。
+
   插入列/行对话框将打开（图 16）。
 - 3. 在插入区域，选择列或行的单选按钮，然后在相应的文本框中输入要插入的列数或行数。
 - 4. 在放置区域，选择单选按钮以设置行或列将出现在插入点所在行或列之前还是之后。
 - 5. 单击确定。插入列/行对话框将关闭，新的列或行将被添加到表格中（图 17）。
 
 ### 提示
+
+
 
 当你在插入列/行对话框中工作时，表格的当前大小会显示在表格大小区域中。
 
@@ -4791,10 +4557,6 @@ WordPerfect 的表格功能甚至允许您插入通常在电子表格程序中�
 
 图 27. 表格被拆分为两个独立的表格。
 
-
-
-
-
 ### 删除行或列：
 
 - 1. 选择要删除的行或列。
@@ -4858,9 +4620,9 @@ WordPerfect 允许您使用单元格、行和列属性快速设置单元格中�
 #### 设置单元格属性：
 
 - 1. 将插入点定位在要更改属性的单元格中。
-  
+
   或
-  
+
   选择要更改属性的单元格。
 - 2. 在属性栏上单击表格菜单并选择格式（图 34）或按下键盘上的 Ctrl+F12。格式对话框将打开，并选中单元格单选按钮（图 35）。
 - 3. 在对齐区域（图 36）中，使用下拉列表设置单元格中文本的垂直对齐方式——顶部、居中或底部——以及单元格中文本的水平对齐或对齐方式——左对齐、右对齐、居中、对齐、全部或小数对齐对齐方式。
@@ -4873,10 +4635,6 @@ WordPerfect 允许您使用单元格、行和列属性快速设置单元格中�
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_191_1.png)
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_191_2.png)
-
-
-
-
 
 #### 设置行属性：
 
@@ -4892,14 +4650,16 @@ WordPerfect 允许您使用单元格、行和列属性快速设置单元格中�
 
 图 37。在单元格属性区域，设置单元格在执行计算时是否锁定和/或被忽略。
 
+
+
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_192_1.png)
 
 图 38。当在格式对话框中选择行单选按钮时，所有行命令和选项都可供您设置。
 
-#### 设置列属性：
+### 设置列属性：
 
 - 1. 选择要更改属性的列。
-- 2. 在属性栏上单击表格菜单并选择格式（图 34）或按键盘上的 Ctrl+F12。格式对话框将打开，并且列单选按钮被选中（图 39）。
+- 2. 在属性栏上单击表格菜单并选择格式（图 34）或按键盘上的 `Ctrl+F12`。格式对话框将打开，并且列单选按钮被选中（图 39）。
 - 3. 在对齐区域（图 40），使用下拉列表设置单元格中文本的对齐方式——左对齐、右对齐、居中、对齐、全部对齐或小数对齐，以及单元格与页面右边缘的对齐距离。
 - 4. 在列边距区域（图 41），使用文本框设置所选单元格的左右边距。
 - 5. 使用外观和文字大小区域格式化所选列中的文本。
@@ -4914,49 +4674,45 @@ WordPerfect 允许您使用单元格、行和列属性快速设置单元格中�
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_193_3.png)
 
-### 添加表格
+## 添加表格
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_194_0.png)
 
-#### 为单元格、行、列或表格添加边框：
+### 为单元格、行、列或表格添加边框：
 
 - 1. 选择要添加边框的单元格、行、列或表格。
 - 2. 在属性栏上单击边框按钮并从下拉列表中选择一种边框样式（图 43）。下拉列表将关闭，边框将出现在所选表格元素周围（图 44）。
 
-**图 43.** 使用边框下拉列表为单元格、行、列或表格选择边框。
+图 43. 使用边框下拉列表为单元格、行、列或表格选择边框。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_194_1.png)
 
-**图 44.** 所选边框出现在表格元素周围。在这种情况下，整个表格被选中，因此边框出现在表格周围。
+图 44. 所选边框出现在表格元素周围。在这种情况下，整个表格被选中，因此边框出现在表格周围。
 
-#### 为单元格、行、列或表格添加着色：
+### 为单元格、行、列或表格添加着色：
 
 - 1. 选择要添加着色的单元格、行、列或表格。
 - 2. 在属性栏上单击填充样式按钮并从下拉列表中选择一种填充（图 45）。下拉列表将关闭，着色将出现在所选表格元素中（图 46）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_194_2.png)
 
-**图 45.** 使用填充样式下拉列表为单元格、行、列或表格选择填充。
+图 45. 使用填充样式下拉列表为单元格、行、列或表格选择填充。
 
 > **背景可能很繁忙！**
-> 
-> 如您在**图 46**中看到的，中心单元格的背景非常繁忙，遮挡了游泳者。请谨慎使用背景图案。它们可以吸引注意力，但也可能隐藏您的信息。
+>
+> 如您在图 46中看到的，中心单元格的背景非常繁忙，遮挡了游泳者。请谨慎使用背景图案。它们可以吸引注意力，但也可能隐藏您的信息。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_194_3.png)
 
-**图 46.** 填充出现在所选表格元素中。在这种情况下，它是表格中央的大单元格。
+图 46. 填充出现在所选表格元素中。在这种情况下，它是表格中央的大单元格。
 
-
-
-
-
-### 使用 SpeedFormat 格式化整个表格：
+### 使用 `SpeedFormat` 格式化整个表格：
 
 - 1. 将插入点定位在您想要格式化的表格的任意位置（图 47）。
-- 2. 在属性栏上单击表格菜单并选择 SpeedFormat（图 48）。表格 SpeedFormat 对话框将会出现（图 49）。
-- 3. 使用“可用样式”列表框选择一个 SpeedFormat。当您选择一个 SpeedFormat 时，所选样式的示例会出现在预览区域中。
+- 2. 在属性栏上单击表格菜单并选择 `SpeedFormat`（图 48）。表格 `SpeedFormat` 对话框将会出现（图 49）。
+- 3. 使用“可用样式”列表框选择一个 `SpeedFormat`。当您选择一个 `SpeedFormat` 时，所选样式的示例会出现在预览区域中。
 - 4. 如果您添加了之前想要清除的格式，请选中“应用前清除当前表格设置”旁边的框。
-- 5. 单击“应用”。表格 SpeedFormat 对话框将会关闭，表格将采用新的格式（图 50）。
+- 5. 单击“应用”。表格 `SpeedFormat` 对话框将会关闭，表格将采用新的格式（图 50）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_195_0.png)
 
@@ -4964,28 +4720,28 @@ WordPerfect 允许您使用单元格、行和列属性快速设置单元格中�
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_195_1.png)
 
-图 48. 从属性栏上的表格菜单中选择 SpeedFormat。
+图 48. 从属性栏上的表格菜单中选择 `SpeedFormat`。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_195_2.png)
 
-图 50. 您选择的 SpeedFormat 样式会转换任何表格。
+图 50. 您选择的 `SpeedFormat` 样式会转换任何表格。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_195_3.png)
 
-图 49. 在列表框中选择一个 SpeedFormat 样式，然后单击“应用”。所选样式的预览会出现在预览区域中。
+图 49. 在列表框中选择一个 `SpeedFormat` 样式，然后单击“应用”。所选样式的预览会出现在预览区域中。
 
 ### 两种“快速”计算
 
-WordPerfect 包含两个功能，可帮助您快速对一行或一列中的数字进行求和，或创建数字序列。
+`WordPerfect` 包含两个功能，可帮助您快速对一行或一列中的数字进行求和，或创建数字序列。
 
-QuickFill 功能会为您继续向下或向右填充一列或一行中递增值的模式。例如，如果一列中的两个单元格包含数字 1 和 3，QuickFill 将会以 5、7、9 等继续该模式，填充剩余选定的单元格。
+`QuickFill` 功能会为您继续向下或向右填充一列或一行中递增值的模式。例如，如果一列中的两个单元格包含数字 1 和 3，`QuickFill` 将会以 5、7、9 等继续该模式，填充剩余选定的单元格。
 
-QuickSum 功能可让您对表格中的一列数字进行求和。
+`QuickSum` 功能可让您对表格中的一列数字进行求和。
 
-#### 使用 QuickFill：
+#### 使用 `QuickFill`：
 
 - 1. 选择包含您想要按指定增量递增的数字模式的行或列（图 51）。
-- 2. 在属性栏上单击表格菜单并选择 QuickFill（图 52）。该模式将出现在剩余单元格中（图 53）。
+- 2. 在属性栏上单击表格菜单并选择 `QuickFill`（图 52）。该模式将出现在剩余单元格中（图 53）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_196_0.png)
 
@@ -4993,22 +4749,22 @@ QuickSum 功能可让您对表格中的一列数字进行求和。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_196_1.png)
 
-图 52. 从属性栏上的表格菜单中选择 QuickFill。
+图 52. 从属性栏上的表格菜单中选择 `QuickFill`。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_196_2.png)
 
-图 53. WordPerfect 会自动使用递增数字模式完成所选行或列。
+图 53. `WordPerfect` 会自动使用递增数字模式完成所选行或列。
 
-### 表格和公式
+## 表格和公式
 
-WordPerfect 8 for Linux 配备了非常强大的电子表格功能。不幸的是，本书没有足够的篇幅来介绍您可以在表格中使用的众多函数和公式。事实上，可用的功能多到足以成为一本书！
+`WordPerfect 8 for Linux` 配备了非常强大的电子表格功能。不幸的是，本书没有足够的篇幅来介绍您可以在表格中使用的众多函数和公式。事实上，可用的功能多到足以成为一本书！
 
-如果您想了解有关公式及其在表格中如何工作方面的更多信息，请查看随个人版附带的 WordPerfect 8 用户指南。第 555–569 页和第 660–686 页将为您提供一个相当好的了解，并帮助您入门。
+如果您想了解有关公式及其在表格中如何工作方面的更多信息，请查看随个人版附带的 `WordPerfect 8` 用户指南。第 555–569 页和第 660–686 页将为您提供一个相当好的了解，并帮助您入门。
 
-#### 执行 QuickSum：
+### 执行 `QuickSum`：
 
 - 1. 将插入点定位在您希望总和出现的列下方的单元格中（图 54）。
-- 2. 在属性栏上单击表格菜单并选择 QuickSum（图 55）。数字列将被加总，结果将出现在文本框中（图 56）。
+- 2. 在属性栏上单击表格菜单并选择 `QuickSum`（图 55）。数字列将被加总，结果将出现在文本框中（图 56）。
 
 |  |  |  |  |
 |---|---|---|---|
@@ -5030,9 +4786,9 @@ WordPerfect 8 for Linux 配备了非常强大的电子表格功能。不幸的�
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_197_0.png)
 
-图 55. 从属性栏上的表格菜单中选择 QuickSum。
+图 55. 从属性栏上的表格菜单中选择 `QuickSum`。
 
-### 总结
+## 总结
 
 在本章中，您学习了如何：
 
@@ -5046,16 +4802,12 @@ WordPerfect 8 for Linux 配备了非常强大的电子表格功能。不幸的�
 - 删除行、列或表格
 - 将文本转换为表格
 - 设置单元格、列和行属性
-- 使用 SpeedFormat
-- 执行 QuickFill 和 QuickSum
+- 使用 `SpeedFormat`
+- 执行 `QuickFill` 和 `QuickSum`
 
+## 合并与排序
 
-
-
-
-### 合并与排序
-
-你能想象要输入 500 封个性化信件和信封吗？那将是一项极其繁重的任务！幸好，WordPerfect 的合并命令减轻了此类任务的负担。你只需输入一封格式信，然后使用合并命令为名单上的每个人创建个性化信件即可。
+你能想象要输入 500 封个性化信件和信封吗？那将是一项极其繁重的任务！幸好，`WordPerfect` 的合并命令减轻了此类任务的负担。你只需输入一封格式信，然后使用合并命令为名单上的每个人创建个性化信件即可。
 
 要执行合并，需要创建两种类型的文件：
 
@@ -5068,7 +4820,9 @@ WordPerfect 8 for Linux 配备了非常强大的电子表格功能。不幸的�
 
 本章将带你完成合并过程，从创建数据文件到创建表单文件，然后进行实际合并。从那里，你将了解如何创建信封合并（你总得把那些信寄出去！）。然后，你将学习如何在文档上执行简单的字母或数字排序。最后，你将了解如何执行简单排序。如果有一个很大的数据文件，你想按特定方式排序，这会很有用——也许按邮政编码或电话号码。
 
-#### 创建数据文件
+### 创建数据文件
+
+
 
 数据文件包含合并到表单文件中的信息——例如姓名、地址和电话号码。
 
@@ -5078,13 +4832,19 @@ WordPerfect 8 for Linux 配备了非常强大的电子表格功能。不幸的�
 
 记录是一组相关字段，例如关于一个人的信息，包括她的姓名、地址和电话号码。
 
-#### 创建数据文件：
+## 创建数据文件
 
-- 1. 从工具菜单中选择合并（图 1）或在键盘上按 Shift+F9。合并对话框将打开（图 2）。
-- 2. 在数据文件区域：
-  - 单击数据以创建数据文本文件。
-  - 或
-  - 选中“将记录放在表格中”旁边的框，然后单击数据以创建数据表格文件。
+### 创建数据文件：
+
+1. 从工具菜单中选择合并（图 1）或在键盘上按 Shift+F9。合并对话框将打开（图 2）。
+
+2. 在数据文件区域：
+
+   - 单击数据以创建数据文本文件。
+
+   - 或
+
+   - 选中“将记录放在表格中”旁边的框，然后单击数据以创建数据表格文件。
 
 创建合并文件对话框将打开（图 3）。（如果文档窗口中打开的是新文档，则不会出现创建合并文件对话框。如果是这种情况，则会出现创建数据文件对话框（图 4）和合并工具栏（图 5）。跳至步骤 5。）
 
@@ -5114,30 +4874,31 @@ WordPerfect 8 for Linux 配备了非常强大的电子表格功能。不幸的�
 
 3. 选择在活动窗口中使用文件以在当前打开的文档中创建数据文件。
 
-或
+   或
 
-选择新建文档窗口以在新文档中创建数据文件。（建议这样做，因为你正在创建一个新的数据文件，你可能希望反复使用它。）
+   选择新建文档窗口以在新文档中创建数据文件。（建议这样做，因为你正在创建一个新的数据文件，你可能希望反复使用它。）
 
 4. 单击确定。创建合并文件对话框将关闭，并会发生以下几件事：
-  - 创建数据文件对话框将出现，准备帮助你创建字段列表（图 4）。
-  - 合并工具栏将出现在文档窗口顶部属性栏下方（图 5）。
+
+   - 创建数据文件对话框将出现，准备帮助你创建字段列表（图 4）。
+
+   - 合并工具栏将出现在文档窗口顶部属性栏下方（图 5）。
 
 5. 创建字段：
-  - A. 在“命名字段”文本框中输入字段名称（图 6）。
-  - B. 单击添加。字段将出现在字段名称列表框中。（如果不为字段命名，WordPerfect 将自动为其分配一个编号。）
 
-（续）
+   - A. 在“命名字段”文本框中输入字段名称（图 6）。
 
-创建数据文件
+   - B. 单击添加。字段将出现在字段名称列表框中。（如果不为字段命名，WordPerfect 将自动为其分配一个编号。）
 
-
-
+（续）创建数据文件
 
 6. 重复步骤5，直到创建完所有需要的字段，然后点击“确定”。“创建数据文件”对话框将关闭，并会发生两件事：
 
-- “快速数据输入”对话框将出现（图7）。此对话框用于轻松填写字段。
-- 如果使用的是数据文本文件，则使用“创建数据文件”对话框创建的字段将出现在文档顶部紧随合并代码 FIELDNAMES 之后（图8）。
-- 如果使用的是数据表文件，则您创建的字段将出现在文档中表格的顶部（图9）。
+   - “快速数据输入”对话框将出现（图7）。此对话框用于轻松填写字段。
+
+   - 如果使用的是数据文本文件，则使用“创建数据文件”对话框创建的字段将出现在文档顶部紧随合并代码 `FIELDNAMES` 之后（图8）。
+
+   - 如果使用的是数据表文件，则您创建的字段将出现在文档中表格的顶部（图9）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_201_0.png)
 
@@ -5166,8 +4927,11 @@ WordPerfect 8 for Linux 配备了非常强大的电子表格功能。不幸的�
 ### 提示
 
 - 如果不命名字段，WordPerfect 会自动指派一个编号。
+
 - 如果需要在数据文本文件中插入新记录，请将插入点放在文档中希望记录出现的位置，然后在“合并”工具栏上点击“快速输入”。按照上文步骤7–8中所述使用“快速输入”对话框。
+
 - 如果需要在数据表文件中插入新记录，请在表格中要插入记录的位置插入一行，然后在表格的字段中输入信息。（有关如何在表格中插入行的详细信息，请参阅第10章“添加表格”的第175–176页。）
+
 - 数据表文件天生就比数据文本文件更容易查看和使用，因为表格格式将数据按列组织。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_202_1.png)
@@ -5178,29 +4942,31 @@ WordPerfect 8 for Linux 配备了非常强大的电子表格功能。不幸的�
 
 图11b. 数据表文件中的字段整齐地按列组织，便于查看信息。
 
-### 创建表单文件
+## 创建表单文件
 
 执行合并的下一步是创建数据文件将要合并到的文档。您在创建数据文件时创建的字段将被插入到您想要个性化的文档中，例如套用信函、合同或邮寄标签。每个字段都以字段代码的形式插入到表单文件中的适当位置。
 
-#### 创建表单文件：
+### 创建表单文件：
 
-- 1. 新建一个文档。
-- 2. 从“工具”菜单中选择“合并”（图1）。将出现“合并”对话框（图2）。
-- 3. 在“表单文件”区域，点击“表单”（图12）。“创建表单文件”对话框将打开（图13）。
-- 4. 确保选中“关联数据文件”旁边的单选按钮，然后点击文本框旁边的列表按钮。“选择数据文件”对话框将打开（图14）。
-- 5. 使用“目录列表”框转到数据文件存储的位置，然后使用“文件列表”框选择文件。
-- 6. 点击“确定”。“选择数据文件”对话框将关闭，您将返回到“创建表单文件”对话框。数据文件的完整路径将显示在文本框中（图13）。
-- 7. 点击“确定”。“创建表单文件”对话框将关闭，“合并”工具栏将出现在文档窗口的属性栏下方。现在，我们该创建数据文件将要合并到的文档了。
+1. 新建一个文档。
+
+2. 从“工具”菜单中选择“合并”（图1）。将出现“合并”对话框（图2）。
+
+3. 在“表单文件”区域，点击“表单”（图12）。“创建表单文件”对话框将打开（图13）。
+
+4. 确保选中“关联数据文件”旁边的单选按钮，然后点击文本框旁边的列表按钮。“选择数据文件”对话框将打开（图14）。
+
+5. 使用“目录列表”框转到数据文件存储的位置，然后使用“文件列表”框选择文件。
+
+6. 点击“确定”。“选择数据文件”对话框将关闭，您将返回到“创建表单文件”对话框。数据文件的完整路径将显示在文本框中（图13）。
+
+7. 点击“确定”。“创建表单文件”对话框将关闭，“合并”工具栏将出现在文档窗口的属性栏下方。现在，我们该创建数据文件将要合并到的文档了。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_203_0.png)
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_203_1.png)
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_203_2.png)
-
-
-
-
 
 8. 开始输入你的表单文件，例如一封信函或合同。
 
@@ -5234,18 +5000,23 @@ WordPerfect 8 for Linux 配备了非常强大的电子表格功能。不幸的�
 
 图 17. 继续插入域代码并输入文档，直到完成。
 
-### 执行合并
+## 执行合并
+
+
 
 现在你已经创建了数据文件和表单文件，是时候执行合并并创建一个包含表单文件所有个性化副本的第三个文件了。
 
-#### 执行合并：
+## 执行合并
 
-- 1. 从工具菜单中选择合并（图 1）。合并对话框将会打开（图 2）。
-- 2. 在执行合并区域（图 18）中，点击合并。执行合并对话框将会出现（图 19）。
-- 3. 选择表单文件：
-  - A. 点击表单文件文本框旁边的列表按钮并从下拉列表中选择选择文件（图 20）。选择表单文件对话框将会出现（图 21）。
-  - B. 使用目录列表和文件列表框选择你创建的表单文件。
-  - C. 点击确定。选择表单文件对话框将关闭，返回到执行合并对话框。
+1. 从工具菜单中选择合并（图 1）。合并对话框将会打开（图 2）。
+
+2. 在执行合并区域（图 18）中，点击合并。执行合并对话框将会出现（图 19）。
+
+3. 选择表单文件：
+
+   - A. 点击表单文件文本框旁边的列表按钮并从下拉列表中选择选择文件（图 20）。选择表单文件对话框将会出现（图 21）。
+   - B. 使用目录列表和文件列表框选择你创建的表单文件。
+   - C. 点击确定。选择表单文件对话框将关闭，返回到执行合并对话框。
 
 图 18. 在合并对话框的执行合并区域中点击合并。
 
@@ -5257,18 +5028,16 @@ WordPerfect 8 for Linux 配备了非常强大的电子表格功能。不幸的�
 
 图 22. 点击列表按钮，然后从下拉列表中选择选择文件。
 
-#### 4. 选择数据文件：
+4. 选择数据文件：
 
-- A. 点击数据文件文本框旁边的列表按钮并从下拉列表中选择选择文件（图 22）。选择数据文件对话框将会打开（图 23）。
-- B. 使用目录列表和文件列表框选择你创建的数据文件。
-- C. 点击确定。选择数据文件对话框将关闭，返回到执行合并对话框。
+   - A. 点击数据文件文本框旁边的列表按钮并从下拉列表中选择选择文件（图 22）。选择数据文件对话框将会打开（图 23）。
+   - B. 使用目录列表和文件列表框选择你创建的数据文件。
+   - C. 点击确定。选择数据文件对话框将关闭，返回到执行合并对话框。
 
-#### 5. 设置合并文件存放位置：
+5. 设置合并文件存放位置：
 
-- A. 点击输出文件文本框旁边的列表按钮并从下拉列表中选择当前文件、新文档、打印机或选择文件（图 24）。如果你选择选择文件，选择输出文件对话框将会打开（图 25）。
-- B. 如果你正在使用选择输出文件对话框，使用目录列表和文件列表框选择你创建的表单文件，然后点击确定。选择输出文件对话框将关闭，返回到执行合并对话框。
-
-（续）
+   - A. 点击输出文件文本框旁边的列表按钮并从下拉列表中选择当前文件、新文档、打印机或选择文件（图 24）。如果你选择选择文件，选择输出文件对话框将会打开（图 25）。
+   - B. 如果你正在使用选择输出文件对话框，使用目录列表和文件列表框选择你创建的表单文件，然后点击确定。选择输出文件对话框将关闭，返回到执行合并对话框。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_206_0.png)
 
@@ -5276,13 +5045,9 @@ WordPerfect 8 for Linux 配备了非常强大的电子表格功能。不幸的�
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_206_2.png)
 
-
-
-
-
 6. 当你在 Form、Data 和 Output File 文本框中输入每个文件的完整路径后，点击 OK。Perform Merge 对话框将会关闭，WordPerfect 将执行合并（图 26），将合并后的文档放置在你指定的位置——当前文档、新文档或你选择的文档中——或者直接将合并后的文档发送到打印机。
 
-### Tips
+## Tips
 
 - 你可以通过按下键盘上的 Esc 键来取消正在进行的合并。
 - 如果你的表单文件受密码保护，合并后的文档将与表单文件具有相同的密码。
@@ -5300,25 +5065,25 @@ Figure 27. 从 Labels 对话框中的列表框中选择你要使用的标签。�
 
 Figure 28. 从 Format 菜单中选择 Labels。
 
-### Creating an Envelope Merge
-
-创建信封合并
+## Creating an Envelope Merge（创建信封合并）
 
 创建信封合并的工作方式与前面各节中描述的合并相同，只是表单文件是信封而不是表单信函、合同或标签。
 
-#### To create an envelope form file:
+### To create an envelope form file（创建信封表单文件）
 
-创建信封表单文件：
+1. 开始一个新文档。
 
-- 1. 开始一个新文档。
-- 2. 从 Tools 菜单中选择 Merge（图 1）。Merge 对话框将会打开（图 2）。
-- 3. 在 Form File 区域（图 29）中，点击 Form。Create Form File 对话框将会打开（图 30）。
-- 4. 确保选中 Associate a Data File 旁边的单选按钮，然后点击文本框旁边的列表按钮。Select Data File 对话框将会打开（图 31）。
-- 5. 使用 Directory List 框移动到数据文件存储的位置，然后使用 File List 框选择该文件。
-- 6. 点击 OK。Select Data File 对话框将会关闭，你将返回到 Create Form File 对话框。数据文件的完整路径将显示在文本框中（图 30）。
-- 7. 点击 OK。Create Form File 对话框将会关闭，Merge Toolbar 将出现在文档窗口中 Property Bar 下方。
+2. 从 Tools 菜单中选择 Merge（图 1）。Merge 对话框将会打开（图 2）。
 
-(continued)
+3. 在 Form File 区域（图 29）中，点击 Form。Create Form File 对话框将会打开（图 30）。
+
+4. 确保选中 Associate a Data File 旁边的单选按钮，然后点击文本框旁边的列表按钮。Select Data File 对话框将会打开（图 31）。
+
+5. 使用 Directory List 框移动到数据文件存储的位置，然后使用 File List 框选择该文件。
+
+6. 点击 OK。Select Data File 对话框将会关闭，你将返回到 Create Form File 对话框。数据文件的完整路径将显示在文本框中（图 30）。
+
+7. 点击 OK。Create Form File 对话框将会关闭，Merge Toolbar 将出现在文档窗口中 Property Bar 下方。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_208_0.png)
 
@@ -5333,9 +5098,13 @@ Figure 30. 使用 Create Form File 对话框将你创建的数据文件与即将
 Figure 31. 使用 Directory List 和 File List 框选择你创建的数据文件，然后点击 OK。
 
 8. 从 Format 菜单中选择 Envelope（图 32）。Envelope 对话框将会打开（图 33）。
+
 9. 在 Return Address 区域中，如果你愿意，可以在文本框中输入回邮地址。
+
 10. 将插入点定位在 Mailing Addresses 文本框中，然后点击 Envelopes 区域中的 Field（图 34）。Insert Field Name or Number 对话框将会打开（图 15）。
+
 11. 在 Field Names 列表框中选择你想要插入的字段，然后点击 Insert。Insert Field Name or Number 对话框将会关闭，字段代码将出现在 Mailing Addresses 文本框中。
+
 12. 重复步骤 11，直到你输入了所有相关的地址字段代码（图 35）。信封的预览将出现在预览区域中（图 36）。
 
 Figure 32. 从 Format 菜单中选择 Envelope。
@@ -5354,50 +5123,56 @@ Figure 34. 点击 Envelopes 区域中的 Field 开始向 Mailing Addresses 文�
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_209_3.png)
 
-
-
-
-
-### 图 36. 当您输入表单字段时，信封的预览会出现在预览区域。
+图 36. 当您输入表单字段时，信封的预览会出现在预览区域。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_210_0.png)
 
-### 图 37. 在 USPS 条形码选项区域，将条形码设置为显示在地址上方或下方。
+图 37. 在 USPS 条形码选项区域，将条形码设置为显示在地址上方或下方。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_210_1.png)
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_210_2.png)
 
-### 图 38. 信封表单文件已包含其创建个性化信封合并所需的一切。
+图 38. 信封表单文件已包含其创建个性化信封合并所需的一切。
 
-- 13. 要插入 USPS 条形码：
-  - A. 单击信封区域中的选项按钮（图 34）。将出现信封选项对话框（图 37）。
-  - B. 在 USPS 条形码选项区域，将条形码设置为显示在地址上方或下方（通常下方更好）。
-  - C. 单击确定。信封选项对话框将关闭，返回到信封对话框。
-  - D. 将插入点定位在 POSTNET 条形码文本框中（图 34）。
-  - E. 单击字段，然后从插入字段名称或编号对话框中，选择您已创建的邮政编码字段（图 15）。
-  - F. 单击确定以关闭插入字段名称或编号对话框并返回到信封对话框。
+13. 要插入 USPS 条形码：
+
+   - A. 单击信封区域中的选项按钮（图 34）。将出现信封选项对话框（图 37）。
+   - B. 在 USPS 条形码选项区域，将条形码设置为显示在地址上方或下方（通常下方更好）。
+   - C. 单击确定。信封选项对话框将关闭，返回到信封对话框。
+   - D. 将插入点定位在 POSTNET 条形码文本框中（图 34）。
+   - E. 单击字段，然后从插入字段名称或编号对话框中，选择您已创建的邮政编码字段（图 15）。
+
+
+
+
+- F. 单击确定以关闭插入字段名称或编号对话框并返回到信封对话框。
+
 - 14. 单击确定。信封对话框将关闭，带有字段代码的信封将出现在文档窗口中（图 38）。
+
 - 15. 保存信封表单文件。
+
 - 16. 从第 194 页开始按所述执行合并。您的信封将出现在文档窗口中，准备打印，或您可以直接将合并后的文档发送到打印机。
 
-### 整理事物
+## 整理事物
 
 排序命令用于按字母或数字顺序排列文档中的文本。排序可对五种类型的文档元素执行：行、段落、合并数据文件、并列列和表格行。简单的排序示例是对姓名和电话号码列表进行字母排序。
 
-#### 对文档进行排序：
+### 对文档进行排序：
 
 - 1. 打开您要排序的文档（图 39）。（或如果文档已打开，请确保已保存。）
-- 2. 要对整个文档进行排序，请在键盘上按 Ctrl+Home 将插入点定位在文档顶部。
-  
+
+- 2. 要对整个文档进行排序，请在键盘上按`Ctrl+Home`将插入点定位在文档顶部。
+
   或
-  
+
   要对文档的一部分进行排序，请选择该部分。
-  
+
   或
-  
+
   要对表格或并列列进行排序，请将插入点定位在表格或并列列内。
-- 3. 从工具菜单中选择排序（图 40）或在键盘上按 Shift+Ctrl+F9。排序对话框将打开（图 41）。
+
+- 3. 从工具菜单中选择排序（图 40）或在键盘上按`Shift+Ctrl+F9`。排序对话框将打开（图 41）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_211_0.png)
 
@@ -5405,59 +5180,74 @@ Figure 34. 点击 Envelopes 区域中的 Field 开始向 Mailing Addresses 文�
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_211_2.png)
 
-### 图 42. 单击列表按钮，然后从下拉列表中选择“选择文件”或“<当前文档>”。
+**图 42.** 单击列表按钮，然后从下拉列表中选择“选择文件”或“<当前文档>”。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_212_0.png)
 
-### 图 43. 使用插入文件对话框选择将被排序的文件。
+**图 43.** 使用插入文件对话框选择将被排序的文件。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_212_1.png)
 
-### 图 44. 单击列表按钮，然后从下拉列表中选择“选择文件”或“<当前文档>”。
+**图 44.** 单击列表按钮，然后从下拉列表中选择“选择文件”或“<当前文档>”。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_212_2.png)
 
-### 图 45. 使用排序依据区域中的单选按钮设置排序将按行、段落、合并记录、表格行或列执行。
+**图 45.** 使用排序依据区域中的单选按钮设置排序将按行、段落、合并记录、表格行或列执行。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_212_3.png)
 
 - 4. 设置输入文件：
+
   - A. 单击输入文件文本框旁边的列表按钮并从下拉列表中选择“选择文件”或“<当前文档>”（图 42）。如果选择“选择文件”，将出现插入文件对话框（图 43）。
+
   - B. 如果您正在使用插入文件对话框，请使用目录列表和文件列表框选择您创建的表单文件，然后单击确定。插入文件对话框将关闭，返回到排序对话框。
+
 - 5. 设置将放置排序后信息的文件：
+
   - A. 单击输出文件文本框旁边的列表按钮并从下拉列表中选择“选择文件”或“<当前文档>”（图 44）。如果选择“选择文件”，将出现插入文件对话框（图 43）。
+
   - B. 如果您正在使用插入文件对话框，请使用目录列表和文件列表框选择您创建的表单文件，然后单击确定。插入文件对话框将关闭，返回到排序对话框。
+
 - 6. 在排序依据区域中选择一个单选按钮，以设置按行、段落、合并记录、表格行或列进行排序的类型（图 45）。
 
 （续）
 
+- 7. 在“关键定义”区域（图 46）：
 
+  - A. 使用 Type 下拉列表设置排序是字母排序还是数字排序。
 
-### 7. 在“关键定义”区域（图 46）：
-+   A. 使用 Type 下拉列表设置排序是字母排序还是数字排序。
-+   B. 使用 Sort Order 下拉列表设置排序是升序（A 到 Z，1 到 10）还是降序（Z 到 A，或 10 到 1）。
+  - B. 使用 Sort Order 下拉列表设置排序是升序（A 到 Z，1 到 10）还是降序（Z 到 A，或 10 到 1）。
 
-8. 如果你希望在字母排序中将大写字母排在前面（例如，Coffee 会排在 coffee 之前），请选中 Uppercase First 旁边的复选框。
+- 8. 如果你希望在字母排序中将大写字母排在前面（例如，Coffee 会排在 coffee 之前），请选中 Uppercase First 旁边的复选框。
 
-9. 单击 OK。排序将被执行，结果将出现在文档窗口中（图 47）。
+- 9. 单击 OK。排序将被执行，结果将出现在文档窗口中（图 47）。
 
 ### Tips
-+   如果你决定最终并不想对项目进行排序，请单击 WordPerfect 8 工具栏上的 Undo 按钮或从 Edit 菜单中选择 Undo。
-+   WordPerfect 中还有许多其他排序功能，但它们已远远超出了本书的范围（这是一个相当高级的主题）。要了解有关排序的更多信息，请查阅随 Personal Edition 提供的 WordPerfect 8 用户指南的第 464–472 页。
+
+- 如果你决定最终并不想对项目进行排序，请单击 WordPerfect 8 工具栏上的 Undo 按钮或从 Edit 菜单中选择 Undo。
+
+- WordPerfect 中还有许多其他排序功能，但它们已远远超出了本书的范围（这是一个相当高级的主题）。要了解有关排序的更多信息，请查阅随 Personal Edition 提供的 WordPerfect 8 用户指南的第 464–472 页。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_213_0.png)
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_213_1.png)
 
 ### Summary
+
 在本章中你学习了如何：
-+   创建数据文件
-+   创建表单文件
-+   执行合并
-+   创建信封表单文件
-+   对文档进行排序
+
+- 创建数据文件
+
+- 创建表单文件
+
+- 执行合并
+
+- 创建信封表单文件
+
+- 对文档进行排序
 
 ## MACROS
+
 ### MADE EASY
 
 宏是执行击键和命令的微型程序。如果需要反复执行某项任务，它们可以节省大量时间和鼠标点击。例如，假设你希望以结束语“Sincerely,”然后在下方几行处加上你的名字来结束商务信函。你可以创建一个宏，使其将插入点移动到文档底部，自动插入“Sincerely”，然后向下移动指定距离并插入你的名字。
@@ -5465,8 +5255,10 @@ Figure 34. 点击 Envelopes 区域中的 Field 开始向 Mailing Addresses 文�
 WordPerfect 宏不使用专门的宏编辑器。要编辑宏，你只需像打开任何其他文档一样在 WordPerfect 中打开它即可。
 
 记录宏有两种方法。你可以：
-+   通过执行你希望宏执行的动作来创建宏。把它想象成用卡式录音机记录击键和命令而不是声音。WordPerfect 会为你记录命令。
-+   直接输入实际的命令本身。为此，你需要了解 WordPerfect 宏语言及其语法。
+
+- 通过执行你希望宏执行的动作来创建宏。把它想象成用卡式录音机记录击键和命令而不是声音。WordPerfect 会为你记录命令。
+
+- 直接输入实际的命令本身。为此，你需要了解 WordPerfect 宏语言及其语法。
 
 本章涉及的是这两种记录方法中的第一种。第二种方法已远远超出了本书的范围。如果你有兴趣了解宏命令和语法，请查看随 Personal Edition 提供的在线 Macro 手册。要访问它，请从 Help 菜单中选择 Macros。
 
@@ -5479,54 +5271,60 @@ WordPerfect 宏不使用专门的宏编辑器。要编辑宏，你只需像打�
 当你输入命令和击键时，WordPerfect 会自动记录你输入的内容。然而，你应该知道，在宏记录器正在记录时，你将无法使用鼠标在文档中定位插入点。如果你想移动插入点，你必须使用键盘。一些最常用的击键列在第 57 页。
 
 #### To record a macro:
-+   1. 从 Tools 菜单上的 Macro 弹出菜单中选择 Record（图 1）或在键盘上按 Ctrl+F10。Record Macro 对话框将打开（图 2）。
-+   2. 单击 Macro Name 文本框旁边的列表按钮。Select File 对话框将出现（图 3）。
-+   3. 使用 Select File 对话框移动到你想要保存宏的目录。
-+   4. 在 Filename/Current Selection 对话框中输入你的宏名称并加上 .wcm 文件扩展名。确保输入 .wcm 扩展名。这告诉 WordPerfect 该文件是一个宏。（随 WordPerfect 提供的宏存储的目录是 /wp/wp macros。你可能想将宏放在那里或创建自己的宏目录。）
+
+- 1. 从 Tools 菜单上的 Macro 弹出菜单中选择 Record（图 1）或在键盘上按`Ctrl+F10`。Record Macro 对话框将打开（图 2）。
+
+- 2. 单击 Macro Name 文本框旁边的列表按钮。Select File 对话框将出现（图 3）。
+
+- 3. 使用 Select File 对话框移动到你想要保存宏的目录。
+
+- 4. 在 Filename/Current Selection 对话框中输入你的宏名称并加上`.wcm`文件扩展名。确保输入`.wcm`扩展名。这告诉 WordPerfect 该文件是一个宏。（随 WordPerfect 提供的宏存储的目录是`/wp/wp macros`。你可能想将宏放在那里或创建自己的宏目录。）
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_215_0.png)
 
-Figure 1. Choose Record from the Macro fly-out on the Tools menu.
+**Figure 1.** Choose Record from the Macro fly-out on the Tools menu.
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_215_1.png)
 
-Figure 2. Click the list button in the Record Macro dialog box to set the location where the macro will be saved and what it will be named.
-
-
-
-
+**Figure 2.** Click the list button in the Record Macro dialog box to set the location where the macro will be saved and what it will be named.
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_216_0.png)
 
-Figure 3. 使用“选择文件”对话框设置宏的存储位置。在“文件名/当前选择”文本框中输入新宏的名称，然后单击“确定”返回“录制宏”对话框。
+**Figure 3.** 使用“选择文件”对话框设置宏的存储位置。在“文件名/当前选择”文本框中输入新宏的名称，然后单击“确定”返回“录制宏”对话框。
 
-5. 单击“确定”。“选择文件”对话框将关闭，返回“录制宏”对话框。文本框将被填入您即将录制的宏的完整路径（图 4）。
+- 5. 单击“确定”。“选择文件”对话框将关闭，返回“录制宏”对话框。文本框将被填入您即将录制的宏的完整路径（图 4）。
 
-6. 单击“录制”。“录制宏”对话框将关闭，返回到文档窗口，宏录制器将被打开。
+- 6. 单击“录制”。“录制宏”对话框将关闭，返回到文档窗口，宏录制器将被打开。
 
-7. 输入您希望宏执行的击键和命令。
+- 7. 输入您希望宏执行的击键和命令。
 
-8. 完成宏录制后，通过在“工具”菜单上的“宏”下拉菜单中选择“录制”（图 1）关闭宏录制器。
+- 8. 完成宏录制后，通过在“工具”菜单上的“宏”下拉菜单中选择“录制”（图 1）关闭宏录制器。
 
 ### Tips
+
 - 使用“选择文件”对话框来设置尚未录制的宏的名称和位置似乎令人困惑。但不要被对话框标题误导，它仍然按预期工作。
+
+
+
 - 在单击“录制”之前，请确保在“录制宏”对话框的文本框中输入了文件名。否则，WordPerfect 将创建一个临时宏，在您退出 WordPerfect 时会被删除。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_216_1.png)
 
 Figure 4. 当宏录制位置及其名称已设置在“宏名称”文本框中时，单击“录制”。
 
-#### To play a macro:
-- 1. 从“工具”菜单上的“宏”下拉菜单中选择“播放”（图 5）或在键盘上按 Shift+Ctrl+F10。“播放宏”对话框将出现（图 6）。
+### To play a macro:
+
+- 1. 从“工具”菜单上的“宏”下拉菜单中选择“播放”（图 5）或在键盘上按 `Shift+Ctrl+F10`。“播放宏”对话框将出现（图 6）。
 - 2. 单击“宏名称”文本框右侧的列表按钮。“选择文件”对话框将打开，并打开 WordPerfect 默认宏目录（图 7）。
 - 3. 使用“目录列表”框移动到宏存储的目录，然后使用“文件列表”框选择宏。
 - 4. 单击“确定”。“选择文件”对话框将关闭，返回“播放宏”对话框。您选择的宏文件的完整路径将被输入到文本框中。
 - 5. 单击“播放”。“播放宏”对话框将关闭，宏将执行其录制的击键和命令。
 
 ### Tips
+
 - 如果您使用的是会更改所选单词、行或段落的宏，请确保在播放宏之前使用鼠标选择文本。
 - 如果播放宏后未获得预期结果，您可以通过单击 WordPerfect 8 工具栏上的“撤消”按钮或从“编辑”菜单中选择“撤消”来撤消宏的操作。
-- WordPerfect Personal Edition 附带 17 个可供使用的宏。您可以在 /wp/wp macros 目录中找到它们。要了解这些宏各自的作用，请通过选择“帮助”菜单中的“宏”，然后单击打开的帮助页面上的“随附宏”链接，打开在线宏手册。
+- WordPerfect Personal Edition 附带 17 个可供使用的宏。您可以在 `/wp/wp macros` 目录中找到它们。要了解这些宏各自的作用，请通过选择“帮助”菜单中的“宏”，然后单击打开的帮助页面上的“随附宏”链接，打开在线宏手册。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_217_0.png)
 
@@ -5547,6 +5345,7 @@ Figure 7. 使用“目录列表”和“文件列表”框定位并选择要播�
 要将宏添加到工具栏，您首先需要显示要添加宏按钮的工具栏，然后编辑该工具栏。
 
 #### To display a toolbar:
+
 - 1. 从“视图”菜单中选择“工具栏”（图 8）。“工具栏”对话框将打开（图 9）。
 - 2. 从“可用工具栏”列表框中选择要查看的工具栏。
 - 3. 单击“确定”。工具栏将出现在文档窗口顶部。
@@ -5557,19 +5356,15 @@ Figure 7. 使用“目录列表”和“文件列表”框定位并选择要播�
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_218_0.png)
 
-**Figure 8.** 从“视图”菜单中选择“工具栏”。
+Figure 8. 从“视图”菜单中选择“工具栏”。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_218_1.png)
 
-**Figure 9.** 从“可用工具栏”列表框中，选中要查看的工具栏旁边的复选框。
+Figure 9. 从“可用工具栏”列表框中，选中要查看的工具栏旁边的复选框。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_218_2.png)
 
-**Figure 10.** 右键单击工具栏并从“快速菜单”中选择要查看的工具栏。
-
-
-
-
+Figure 10. 右键单击工具栏并从“快速菜单”中选择要查看的工具栏。
 
 ### 向工具栏添加宏按钮：
 
@@ -5603,13 +5398,12 @@ Figure 7. 使用“目录列表”和“文件列表”框定位并选择要播�
 
 ### 提示
 
-- 在第 5 步中，如果您选择的宏保存在 WordPerfect 默认目录（/wp/wp macros）中，则不会出现“工具栏”对话框（图 15）。
-
+- 在第 5 步中，如果您选择的宏保存在 WordPerfect 默认目录（`/wp/wp macros`）中，则不会出现“工具栏”对话框（图 15）。
 - 您还可以使用“工具栏编辑器”为几乎每个 WordPerfect 命令添加按钮到任何您想要自定义的工具栏。如果您多次使用某个特定命令，这会非常有帮助。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_220_1.png)
 
-图 15. 单击“是”以完整路径保存宏。如果宏位于 WordPerfect 默认目录 /wp/wp macros 以外的目录中，则此操作是必需的。
+图 15. 单击“是”以完整路径保存宏。如果宏位于 WordPerfect 默认目录 `/wp/wp macros` 以外的目录中，则此操作是必需的。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_220_2.png)
 
@@ -5622,21 +5416,18 @@ Figure 7. 使用“目录列表”和“文件列表”框定位并选择要播�
 3. 单击“创建”。将出现“创建键盘”对话框（图 20）。
 4. 在“新建键盘名称”对话框中为您自定义的键盘输入名称。例如，您可以使用您的姓名，或描述键盘个性化特征的名称。
 5. 单击“确定”。“创建键盘”对话框将关闭，“键盘编辑器”对话框将打开（图 21）。
-6. 在“选择要分配或取消分配的键”区域中，使用下拉列表选择将播放宏的按键组合。此列表框分为两列（图 22）。左列显示按键，右列显示分配给该按键的内容。如果某按键右侧的列中没有内容，则该按键未分配。务必选择未分配的按键。例如，本例中选择了 F12+Ctrl，因为它是一个未分配的按键。
+6. 在“选择要分配或取消分配的键”区域中，使用下拉列表选择将播放宏的按键组合。此列表框分为两列（图 22）。左列显示按键，右列显示分配给该按键的内容。如果某按键右侧的列中没有内容，则该按键未分配。务必选择未分配的按键。例如，本例中选择了 `F12+Ctrl`，因为它是一个未分配的按键。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_221_0.png)
+
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_221_1.png)
+
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_221_2.png)
+
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_221_3.png)
 
-
-
-
-
 14. 单击确定。键盘编辑器对话框将关闭，返回到键盘首选项对话框。你创建的新键盘名称将出现在键盘列表框中（图 26）。
-
 15. 确保在键盘列表框中选中了新键盘，然后单击选择。键盘首选项对话框将关闭，返回到首选项对话框。
-
 16. 单击关闭以关闭首选项对话框并返回到 WordPerfect 文档窗口。试用你的新宏键盘快捷键。必要时将插入点定位，然后按下键盘组合，观看宏播放！
 
 ### 提示
@@ -5646,7 +5437,9 @@ Figure 7. 使用“目录列表”和“文件列表”框定位并选择要播�
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_223_0.png)
 
-图 25. 宏及其完整路径出现在分配列中。在此示例中，键组合 F2+Ctrl 现在被分配给 my_macro.wcm，按下时会播放该宏。
+图 25. 宏及其完整路径出现在分配列中。在此示例中，键组合 `F2+Ctrl` 现在被分配给 `my_macro.wcm`，按下时会播放该宏。
+
+
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_223_1.png)
 
@@ -5676,19 +5469,14 @@ Internet 发布器将帮助你使用适当的 HTML 代码创建新文档。它�
 Web 编辑器实际上是正常文档窗口的特殊版本，专门用于创建 Web 页面。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_225_0.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_225_1.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_225_2.png)
 
 ### 将现有文档转换为 Web 文档：
 
 1. 打开你要转换的文档（图 4）。
-
 2. 从文件菜单中选择 Internet 发布器（图 1）。Internet 发布器窗口将打开（图 2）。
-
 3. 单击格式化为 Web 文档。Web 视图对话框将打开，提示你部分格式将会丢失（图 5）。
-
 4. 单击是继续转换。文档将被转换为 Web 文档并出现在 Web 编辑器窗口中（图 6）。
 
 ### 提示
@@ -5708,10 +5496,6 @@ Web 编辑器实际上是正常文档窗口的特殊版本，专门用于创建 
 
 图 6. 文档转换后，它会出现在 Web 编辑器窗口中。
 
-
-
-
-
 ## 第13章
 
 ### 添加标题
@@ -5722,14 +5506,12 @@ Web 编辑器实际上是正常文档窗口的特殊版本，专门用于创建 
 
 #### 添加标题：
 
-- 1. 从“格式”菜单中选择“标题”（图7）。将出现“标题”对话框（图8）。
-- 2. 选择“自定义标题”单选按钮，然后在文本框中输入标题。标题不宜过长，只需能描述页面或您的Web站点即可。
-- 3. 单击“确定”。“标题”对话框将关闭。当您使用浏览器查看Web页面时，将看到标题（图9）。
+1. 从“格式”菜单中选择“标题”（图7）。将出现“标题”对话框（图8）。
+2. 选择“自定义标题”单选按钮，然后在文本框中输入标题。标题不宜过长，只需能描述页面或您的Web站点即可。
+3. 单击“确定”。“标题”对话框将关闭。当您使用浏览器查看Web页面时，将看到标题（图9）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_227_0.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_227_1.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_227_2.png)
 
 ### 标题
@@ -5738,12 +5520,12 @@ Web页面使用特殊的标题样式。共有六个级别——标题1最大，�
 
 #### 添加标题：
 
-- 1. 单击属性栏上的“标题和段落样式”按钮（图11）。
-- 2. 从下拉列表中选择您想要使用的标题大小。
-- 3. 输入标题。
-- 4. 按键盘上的Enter键结束标题。标题确实能吸引人们的注意（图12）。
+1. 单击属性栏上的“标题和段落样式”按钮（图11）。
+2. 从下拉列表中选择您想要使用的标题大小。
+3. 输入标题。
+4. 按键盘上的Enter键结束标题。标题确实能吸引人们的注意（图12）。
 
-提示
+### 提示
 
 - 您也可以选择要格式化为标题的文本，然后按照步骤2-3操作。
 
@@ -5781,82 +5563,91 @@ Web页面使用特殊的标题样式。共有六个级别——标题1最大，�
 选择要删除的文本，然后按键盘上的退格键或Delete键。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_229_0.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_229_1.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_229_2.png)
 
 #### 更改字体：
 
-- 1. 选择要更改的文本。
-- 或
-- 将插入点放置在您希望新字体开始的位置。
-- 2. 单击属性栏上的“字体”按钮，然后从下拉列表中选择新字体（图16）。
+1. 选择要更改的文本。
+
+   或
+
+   将插入点放置在您希望新字体开始的位置。
+
+2. 单击属性栏上的“字体”按钮，然后从下拉列表中选择新字体（图16）。
 
 ### 提示
 
 如果您使用特殊字体，浏览您的Web页面的用户必须在其计算机中加载该字体。否则，文本将显示为浏览器的默认字体，很可能是某种Times字体（也称为Roman或Times Roman）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_230_0.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_230_1.png)
-
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_230_2.png)
 
 #### 使文本变大或变小：
 
-- 1. 选择要更改的文本。
-- 2. 单击属性栏上的“字体大小”按钮，然后从下拉列表中选择新的字体磅值大小（图17）。
-- 或
-- 单击属性栏上的“字体属性”按钮，然后从下拉列表中选择相对字体大小（图18）。这些大小包括“极小”、“小”、“大”、“很大”和“特大”。
+1. 选择要更改的文本。
+2. 单击属性栏上的“字体大小”按钮，然后从下拉列表中选择新的字体磅值大小（图17）。
+
+   或
+
+   单击属性栏上的“字体属性”按钮，然后从下拉列表中选择相对字体大小（图18）。这些大小包括“极小”、“小”、“大”、“很大”和“特大”。
 
 ### 提示
 
 关于字体磅值大小的讨论，请参阅第80页。有关相对字体大小的详细信息，请参阅第81页。
 
-
-
-
-
 ### 使文本加粗或斜体：
-- 1. 选择要更改的文本。
-- 2. 在属性栏上单击粗体或斜体按钮。
-- 或
-- 在属性栏上单击字体属性按钮，从下拉列表中选择粗体或斜体（图 19）。
+
+1. 选择要更改的文本。
+2. 在属性栏上单击粗体或斜体按钮。
+
+   或
+
+   在属性栏上单击字体属性按钮，从下拉列表中选择粗体或斜体（图 19）。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_231_0.png)
 
 ### 使文本下划线：
-- 1. 选择要更改的文本。
-- 2. 在属性栏上单击字体属性按钮，从下拉列表中选择下划线（图 20）。
+
+1. 选择要更改的文本。
+2. 在属性栏上单击字体属性按钮，从下拉列表中选择下划线（图 20）。
 
 ### 提示
+
 - 你可以同时激活多个字体属性，例如，粗体和斜体。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_231_1.png)
 
 ### 使文本闪烁：
-- 1. 选择要使其闪烁的文本。
-- 2. 在属性栏上单击字体属性按钮，从下拉列表中选择闪烁（图 21）。
+
+1. 选择要使其闪烁的文本。
+2. 在属性栏上单击字体属性按钮，从下拉列表中选择闪烁（图 21）。
 
 ### 提示
+
 - 适度使用闪烁文本。如果网页上的所有内容都在闪烁，会变得非常烦人！
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_231_2.png)
 
 ### 更改文本颜色：
-- 1. 选择要更改的文本。
-- 2. 在属性栏上单击字体颜色按钮，从出现的调色板中选择新颜色（图 22）。
+
+1. 选择要更改的文本。
+2. 在属性栏上单击字体颜色按钮，从出现的调色板中选择新颜色（图 22）。
 
 ### 段落格式
 
 就像普通的 WordPerfect 文档一样，网页文档中的段落格式会影响整段文本。一些段落格式包括对齐、项目符号和编号列表，以及双重缩进。
 
 #### 对齐段落文本：
-- 1. 选择要对齐的文本。
-- 2. 在属性栏上单击对齐按钮，从下拉列表中选择一种对齐方式（图 23）。
+
+1. 选择要对齐的文本。
+2. 在属性栏上单击对齐按钮，从下拉列表中选择一种对齐方式（图 23）。
 
 #### 创建项目符号或编号列表：
+
+
+
 - 1. 将插入点定位在你希望列表开始的位置。
 - 2. 有两种方法可以选择列表样式：
   - A. 从插入菜单中选择项目符号和编号（图 24）。项目符号和编号对话框将打开（图 25）。
@@ -5889,7 +5680,7 @@ Web页面使用特殊的标题样式。共有六个级别——标题1最大，�
 ### 提示
 - 要在列表项下移动到第二或第三级，请按键盘上的 Tab 键。
 
-#### 双重缩进段落：
+#### 双重缩进段落
 - 1. 选择要在左右两侧缩进的文本。
 - 2. 在属性栏上单击标题和段落样式按钮，从下拉列表中选择缩进引用（图 28）。文本将在两侧缩进。
 
@@ -5913,16 +5704,10 @@ Web页面使用特殊的标题样式。共有六个级别——标题1最大，�
 
 图 30. 使用背景颜色/墙纸区域设置网页的背景。
 
-
-
-
-
 ### 背景颜色和图像
-
 灰色是 Web 编辑器中的默认背景颜色，但它不一定是你想要的选择。设置新的背景颜色或选择在网页上平铺的图像非常容易。平铺图像会在网页上横向和纵向重复，以创建完整的背景。
 
-#### 设置背景颜色或图像：
-
+#### 设置背景颜色或图像
 1. 从格式菜单中选择 文本/背景颜色（图 29）。文本/背景颜色对话框将打开（图 30）。
 2. 设置背景颜色：
    - A. 在背景颜色/壁纸区域中，点击背景颜色右侧的小按钮。颜色调色板将出现（图 31）。
@@ -5946,11 +5731,9 @@ Web页面使用特殊的标题样式。共有六个级别——标题1最大，�
 图 33. 如果你为背景选择了图像，你只能在网页在浏览器中查看时才能看到它。在此示例中，图像已在网页上横向和纵向平铺。
 
 ### 创建链接
-
 超链接是使网络伟大的事物之一。链接的交叉引用功能——能够从一个网页或站点跳转到另一个网页或站点——是巨大的。创建超文本链接很容易。你只需要将所选文本与你想要跳转到的网页或站点关联起来。
 
-#### 创建超文本链接：
-
+#### 创建超文本链接
 1. 选择你希望用户点击以跳转到另一个网页或站点的文本。
 2. 从工具菜单中选择 超链接（图 34）。创建超文本链接对话框将打开（图 35）。
 3. 选择 转到其他文档 下的单选按钮（图 36）。
@@ -5966,15 +5749,12 @@ Web页面使用特殊的标题样式。共有六个级别——标题1最大，�
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_235_2.png)
 
 ### 创建超文本链接
-
-#### 更改超文本链接颜色：
-
+#### 更改超文本链接颜色
 1. 从格式菜单中选择 文本/背景颜色（图 37）。文本/背景颜色对话框将打开（图 38）。
 2. 在超文本颜色区域中，点击超文本链接右侧的小按钮并从出现的调色板中选择新颜色（图 39）。
 3. 点击确定。文本/背景颜色对话框将关闭，你的超链接文本将更改为新颜色。
 
 ### 提示
-
 如果你希望更改已访问超文本链接和活动超文本链接的颜色，请在超文本颜色区域中点击相应的按钮并从出现的调色板中选择新颜色。
 
 图 37. 从格式菜单中选择文本/背景颜色。
@@ -5989,25 +5769,18 @@ Web页面使用特殊的标题样式。共有六个级别——标题1最大，�
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_236_2.png)
 
-
-
-
-
 ## 第13章
 
 #### 插入图像
-
 图片胜千言，Web 图片也不例外！您可以插入 WordPerfect 个人版附带的任何剪贴画图像。Web 编辑器会自动将它们转换为适当的 Web 格式。
 
 与图像一起，有两件事需要设置：
-
 - 替代文本——这是在浏览器中加载图像时出现在 Web 页面上的文本
 - 图形周围的间距，用于设置文本流。
 
 另外，就像第6章“剪贴画、线条和图表”中讨论的图形一样，您可以添加边框、填充和题注。有关如何添加这些项目的详细信息，请参见第101-106页。
 
-#### 插入图像：
-
+#### 插入图像
 - 1. 将插入点定位到您希望图像出现的位置。
 - 2. 从“插入”菜单的“图形”飞出菜单中选择“来自文件”（图40）。将出现“插入图像”对话框（图41）。
 - 3. 使用“目录列表”和“文件列表”框移动到图像存储的位置并选择它。
@@ -6025,18 +5798,20 @@ Web页面使用特殊的标题样式。共有六个级别——标题1最大，�
 
 图42. 图像出现在插入点所在的位置。图像附近的任何文本都会移动以便为图片留出空间。
 
-#### 设置替代文本：
-
+#### 设置替代文本
 - 1. 右键单击要设置替代文本的图像。
 - 2. 从快捷菜单中选择“HTML 属性”（图43）。将打开“HTML 属性”对话框（图44）。
 - 3. 在“替代文本”框中输入您希望在加载图像时显示的文本（图45）。
 - 4. 单击“确定”。“HTML 属性”对话框将关闭，当 Web 页面在浏览器中加载时，替代文本将出现。
 
-#### 设置图像周围间距：
-
+#### 设置图像周围间距
 - 1. 右键单击要设置间距的图像。
 - 2. 从快捷菜单中选择“HTML 属性”（图43）。将打开“HTML 属性”对话框（图44）。
+
+
+
 - 3. 在“显示选项”区域中，使用“水平间距”、“垂直间距”和“边框宽度”文本框设置图形与文本之间的间距。输入的数值以像素为单位。（这是 Web 页面的度量单位。）
+
 - 4. 单击“确定”。图像将调整其间距，文本将出现在与图像相距指定距离的位置（图46）。
 
 图43. 右键单击图像，然后从快捷菜单中选择“HTML 属性”。
@@ -6055,14 +5830,20 @@ Web页面使用特殊的标题样式。共有六个级别——标题1最大，�
 
 图46. 图像周围的间距发生变化，文本会移动以适应新的间距。
 
-#### 创建图像链接：
+### 创建图像链接：
 
 - 1. 右键单击要设置为链接的图像。
+
 - 2. 从快捷菜单中选择“HTML 属性”（图43）。将打开“HTML 属性”对话框（图44）。
+
 - 3. 在“定义鼠标点击操作”区域中，选择“链接”旁边的单选按钮（图47）。
+
 - 4. 单击“链接属性”按钮。将打开“编辑超文本”对话框（图48）。
+
 - 5. 选择“转到其他文档”旁边的单选按钮，然后键入 Web 页面或网站的完整 URL。例如，http://www.bearhome.com。
+
 - 6. 单击“确定”。“编辑超文本”对话框将关闭，返回“HTML 属性”对话框。
+
 - 7. 单击“确定”。“HTML 属性”对话框将关闭，返回 Web 编辑器。当您在浏览器中查看 Web 页面时，单击图像，该链接将跳转到指定的 Web 页面或网站。
 
 图47，在“定义鼠标点击操作”区域中，选择“链接”旁边的单选按钮，然后单击“链接属性”按钮。
@@ -6074,11 +5855,10 @@ Web页面使用特殊的标题样式。共有六个级别——标题1最大，�
 关于 Web 的建议，最佳来源就是 Web 本身。Web 上有许多网站提供有关 Web 页面设计和样式的建议。页面设计不仅仅是漂亮的图片，还包括创建用户友好的网站，使访问者能够轻松找到所需信息。以下是一些提供有关 Web 设计的有趣建议和工具的网站：
 
 - Sun Microsystems 公司的 Web 样式指南：http://www.sun.com/styleguide
+
 - Web 设计师乐园：http://desktoppublishing.webparadise.html
+
 - 可在 Yahoo 上找到的 Web 设计链接：http://www.yahoo.com/Computers_and_Internet/Internet/World_Wide_Web/Page_Creation
-
-
-
 
 ### 保存和查看您的网页
 
@@ -6087,15 +5867,21 @@ Web页面使用特殊的标题样式。共有六个级别——标题1最大，�
 #### 以HTML格式保存您的网页：
 
 1. 从“文件”菜单中选择Internet发布器（图1）。Internet发布器窗口将出现（图2）。
+
 2. 单击“发布到HTML”。发布到HTML对话框将打开（图49）。
+
 3. 在“发布到”文本框中输入要保存Web文档的位置。
 
    或
 
    - A. 单击列表按钮。选择文件对话框将出现（图50）。
+
    - B. 使用目录列表框移动到要存储Web文档的位置。
+
    - C. 在“文件名/当前选择”文本框中输入要保存Web文档的名称。
+
    - D. 单击“确定”。Web文档将保存的完整路径将出现在“发布到”文本框中。
+
 4. 单击“确定”。Web文档将以HTML格式保存。您可以像编辑其他WordPerfect文档一样打开并编辑该文档。
 
 图49. 在“发布到”文本框中输入Web文档的位置和名称，或单击列表按钮并使用“选择文件”对话框设置位置和文件名。
@@ -6117,6 +5903,7 @@ Web页面使用特殊的标题样式。共有六个级别——标题1最大，�
 ### 提示
 
 - 如果WordPerfect找不到您的浏览器，请从“文件”菜单中选择Internet发布器以打开Internet发布器对话框（图2）。单击“浏览器首选项”按钮以打开“浏览器首选项”对话框（图53）。单击“全路径到您的Web浏览器”文本框旁边的“文件”按钮，并使用“选择文件”对话框来定位浏览器。
+
 - 在浏览器中查看网页很方便。您可以检查超文本和图像链接以确保它们有效，并查看Web页面在浏览器中的确切外观。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_241_0.png)
@@ -6132,20 +5919,35 @@ Web页面使用特殊的标题样式。共有六个级别——标题1最大，�
 在本章中，您学会了如何：
 
 - 创建一个新的Web文档
+
 - 将现有文档转换为Web文档
+
 - 向您的Web页面添加标题
+
 - 添加标题
+
 - 添加、编辑和删除文本
+
 - 更改字体和字体大小
+
 - 使文本加粗、斜体或下划线
+
 - 使文本闪烁
+
 - 更改文本颜色
+
 - 创建项目符号和编号列表
+
 - 双倍缩进段落
+
 - 创建超链接
+
 - 设置背景颜色和图像
+
 - 创建图像链接
+
 - 保存您的Web文档
+
 - 在浏览器中查看您的Web文档
 
 ## 打印
@@ -6159,6 +5961,7 @@ Web页面使用特殊的标题样式。共有六个级别——标题1最大，�
 #### 打印文档：
 
 1. 从“文件”菜单中选择“打印”（图1）或单击WordPerfect 8工具栏上的“打印”按钮。打印对话框将打开，打印选择区域中选择了“完整文档”（图2）。
+
 2. 单击“确定”。文档将打印。
 
 **提示：** 始终在打印之前保存您的文档是一个好主意。
@@ -6167,12 +5970,12 @@ Web页面使用特殊的标题样式。共有六个级别——标题1最大，�
 
 图2. 单击“确定”以打印文档。
 
-
-
-
 ### 打印一份文档的多个副本：
+
 - 1. 从文件菜单中选择打印（图 1）或点击 WordPerfect 8 工具栏上的打印按钮。打印对话框将打开（图 2）。
+
 - 2. 在对话框右侧的副本区域中，在副本数文本框中输入一个数字，或点击小上箭头来增加数量（图 3）。
+
 - 3. 点击确定。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_243_0.png)
@@ -6180,9 +5983,13 @@ Web页面使用特殊的标题样式。共有六个级别——标题1最大，�
 图 3. 使用副本数文本框设置要打印的文档份数。
 
 ### 打印当前页：
+
 - 1. 将插入点定位到您想要打印的页面上。
+
 - 2. 从文件菜单中选择打印（图 1）或点击 WordPerfect 8 工具栏上的打印按钮。打印对话框将打开（图 2）。
+
 - 3. 在打印选择区域中，选择当前页旁边的单选按钮（图 4）。
+
 - 4. 点击确定。页面将被打印。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_243_1.png)
@@ -6190,9 +5997,13 @@ Web页面使用特殊的标题样式。共有六个级别——标题1最大，�
 图 4. 在打印选择区域中，选择当前页旁边的单选按钮。
 
 ### 打印特定文本：
+
 - 1. 选择您想要打印的文本。
+
 - 2. 从文件菜单中选择打印（图 1）或点击 WordPerfect 8 工具栏上的打印按钮。打印对话框将打开（图 2）。
+
 - 3. 在打印选择区域中，选择所选文本旁边的单选按钮（图 5）。
+
 - 4. 点击确定。文本将被打印。
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_243_2.png)
@@ -6200,16 +6011,24 @@ Web页面使用特殊的标题样式。共有六个级别——标题1最大，�
 图 5. 在打印选择区域中，选择所选文本旁边的单选按钮。
 
 ### 打印特定页面：
+
 - 1. 从文件菜单中选择打印（图 1）或点击 WordPerfect 8 工具栏上的打印按钮。打印对话框将打开（图 2）。
+
 - 2. 在打印选择区域中选择多页单选按钮（图 6）。
-- 3. 点击确定。多页对话框将打开（图 7）。
+
+
+
+### 点击确定。多页对话框将打开（图 7）。
+
 - 4. 在页码文本框中输入您想要打印的页码。
 - 5. 点击确定。多个页面和打印对话框都将关闭，您指定的页面将被打印。
 
 ### 提示
+
 如果您要打印特定页面，可以指定页码，例如 2、6 或 9，或一个页码范围。例如，如果输入 2-9，则会打印 2 到 9 页。如果输入 -4，则会打印 1 到 4 页。如果输入 6-，则会从第 6 页打印到文档末尾。
 
-### 打印不带图形的文档草稿：
+### 打印不带图形的文档草稿
+
 - 1. 从文件菜单中选择打印（图 1）或点击 WordPerfect 8 工具栏上的打印按钮。打印对话框将打开（图 2）。
 - 2. 在文档设置区域，使用打印质量下拉列表选择草稿（图 8）。
 - 3. 选择不打印图形旁边的框。
@@ -6227,7 +6046,8 @@ Web页面使用特殊的标题样式。共有六个级别——标题1最大，�
 
 ![](img/02dde5e0b11c4f9add393f2d6c89d9a5_244_2.png)
 
-### 从后往前打印文档：
+### 从后往前打印文档
+
 - 1. 从文件菜单中选择打印（图 1）或点击 WordPerfect 8 工具栏上的打印按钮。打印对话框将打开（图 2）。
 - 2. 点击输出选项按钮。输出选项对话框将打开（图 9）。
 - 3. 在格式选项区域中，选择反向打印（从后往前）旁边的复选框（图 10）。
@@ -6239,11 +6059,7 @@ Web页面使用特殊的标题样式。共有六个级别——标题1最大，�
 
 图 9. 使用输出选项对话框设置文档是否从后往前打印、打印奇数页或偶数页（或两者），或打印横幅。
 
-
-
-
-
-### 打印奇数或偶数页：
+### 打印奇数或偶数页
 
 1. 从“文件”菜单中选择“打印”（图1），或单击WordPerfect 8工具栏上的“打印”按钮。将打开“打印”对话框（图2）。
 2. 单击“输出选项”按钮。将打开“输出选项”对话框（图9）。
@@ -6268,7 +6084,7 @@ Web页面使用特殊的标题样式。共有六个级别——标题1最大，�
 
 分隔页用于分隔打印任务。如果您要打印许多文档，或者在一个多人共用一台打印机的办公室工作，打印一个分隔页将不同文档分开会非常方便。一个分隔页由2页组成，一页在文档之前打印，另一页在文档之后打印。在文档之前打印的那页通常包含打印文档者的姓名、文档的文件名，以及发送文档的日期和时间。
 
-#### 打印分隔页：
+#### 打印分隔页
 
 1. 从“文件”菜单中选择“打印”（图1），或单击WordPerfect 8工具栏上的“打印”按钮。将打开“打印”对话框（图2）。
 2. 单击“输出选项”按钮。将打开“输出选项”对话框（图13）。
@@ -6291,7 +6107,7 @@ Web页面使用特殊的标题样式。共有六个级别——标题1最大，�
 
 打印信封很简单。WordPerfect 会自动设置间距，因此您只需输入寄件人地址和收件人信息即可。
 
-#### 打印信封：
+#### 打印信封
 
 1. 从“格式”菜单中选择“信封”（图15）。将显示“信封”对话框（图16）。
 2. 如果要打印寄件人地址：
@@ -6320,20 +6136,16 @@ Web页面使用特殊的标题样式。共有六个级别——标题1最大，�
 
 图18. 使用“创建纸张大小”对话框设置纸张名称、纸张类型及其大小。
 
+### 创建信封定义
 
-
-
-
-### 创建信封定义：
-
-+   1. 从格式菜单中选择信封（图 15）。信封对话框将打开（图 16）。
-+   2. 单击创建新定义。创建纸张尺寸对话框将出现（图 18）。
-+   3. 在纸张名称文本框中为您的新信封输入名称。
-+   4. 在纸张类型区域，使用类型下拉列表选择信封（图 19）。
-+   5. 在纸张尺寸区域，使用尺寸下拉列表选择您正在使用的信封尺寸（图 20）。
-+   6. 在纸张位置区域，使用位置下拉列表选择信封将在打印机上装载的位置。默认情况下为手动进纸。
-+   7. 单击确定。创建新定义对话框将关闭，返回到信封对话框。您创建的信封定义现在将被选中并可在信封定义下拉列表中使用（图 21）。
-+   8. 单击确定以关闭信封对话框而不打印信封，或填写回邮地址和收件地址文本框并单击打印以打印信封。
+1. 从格式菜单中选择信封（图 15）。信封对话框将打开（图 16）。
+2. 单击创建新定义。创建纸张尺寸对话框将出现（图 18）。
+3. 在纸张名称文本框中为您的新信封输入名称。
+4. 在纸张类型区域，使用类型下拉列表选择信封（图 19）。
+5. 在纸张尺寸区域，使用尺寸下拉列表选择您正在使用的信封尺寸（图 20）。
+6. 在纸张位置区域，使用位置下拉列表选择信封将在打印机上装载的位置。默认情况下为手动进纸。
+7. 单击确定。创建新定义对话框将关闭，返回到信封对话框。您创建的信封定义现在将被选中并可在信封定义下拉列表中使用（图 21）。
+8. 单击确定以关闭信封对话框而不打印信封，或填写回邮地址和收件地址文本框并单击打印以打印信封。
 
 图 19. 从类型下拉列表中选择信封。
 
@@ -6359,19 +6171,27 @@ Web页面使用特殊的标题样式。共有六个级别——标题1最大，�
 
 有些人可以使用不止一台打印机。您可以使用选择打印机对话框添加和删除打印机，并设置打印机属性。
 
-### 添加打印机：
+#### 添加打印机
 
-+   1. 从文件菜单中选择打印（图 1）或单击 WordPerfect 8 工具栏上的打印按钮。打印对话框将打开（图 2）。
-+   2. 在当前打印机区域，单击选择。选择打印机对话框将出现（图 22）。
-+   3. 单击打印机创建/编辑按钮。打印机创建/编辑对话框将打开（图 23）。
-+   4. 单击添加。添加打印机驱动程序对话框将出现（图 24）。
-+   5. 使用可用打印机驱动程序列表框选择您想要使用的打印机。
-+   6. 单击确定。创建打印机对话框将打开，文本框中会建议该打印机的名称（图 25）。
-+   7. 单击确定。创建打印机和添加打印机驱动程序对话框将关闭，返回到打印机创建/编辑对话框。您选择的打印机将出现在打印机驱动程序列表框中（图 26）。
-+   8. 如果新打印机的目标列中显示“无”：
-      A. 单击设置。打印机设置对话框将打开（图 27）。
-      B. 单击目标。选择目标对话框将出现（图 28）。
-      C. 单击 Ip 以选择本地打印机。
+1. 从文件菜单中选择打印（图 1）或单击 WordPerfect 8 工具栏上的打印按钮。打印对话框将打开（图 2）。
+2. 在当前打印机区域，单击选择。选择打印机对话框将出现（图 22）。
+
+
+
+3. 单击打印机创建/编辑按钮。打印机创建/编辑对话框将打开（图 23）。
+
+4. 单击添加。添加打印机驱动程序对话框将出现（图 24）。
+
+5. 使用可用打印机驱动程序列表框选择您想要使用的打印机。
+
+6. 单击确定。创建打印机对话框将打开，文本框中会建议该打印机的名称（图 25）。
+
+7. 单击确定。创建打印机和添加打印机驱动程序对话框将关闭，返回到打印机创建/编辑对话框。您选择的打印机将出现在打印机驱动程序列表框中（图 26）。
+
+8. 如果新打印机的目标列中显示“无”：
+   A. 单击设置。打印机设置对话框将打开（图 27）。
+   B. 单击目标。选择目标对话框将出现（图 28）。
+   C. 单击 Ip 以选择本地打印机。
 
 图 24. 使用可用打印机驱动程序列表框选择您想要添加的打印机。
 
@@ -6385,150 +6205,189 @@ Web页面使用特殊的标题样式。共有六个级别——标题1最大，�
 
 ### 索引
 
-+   草稿视图，12
-+   悬挂首字，创建，125–127
-+   下拉列表，如何使用，6
-+   
-+   ## E
-+   省略号。参见形状
-+   信封
-+     定义，创建新，238
-+     合并，创建，197–199
-+     打印，237
-+   退出 WordPerfect，50
-+   导出文档，45
-+   ExpressDocs
-+     创建自己的，41
-+     定义，39
-+     使用以开始新文档，39–40
-+   
-+   ## F
-+   字段代码。另见合并
-+   文件转换，45
-+     支持的类型，44
-+   文件格式，45
-+     与 Microsoft Word for Windows 兼容，2，44
-+     HTML，213，214，229
-+     LTR，45
-+     WCM，204
-+     WPD，45
-+     WPT，45
-+   填充，128–130
-+     添加到列，130
-+     添加到页面，128
-+     添加到段落，129
-+     添加到文本框，135
-+   查找单词或短语，67
-+     设置选项，69–70
-+   字体
-+     更改，80
-+     在 Web 文档中更改，219
-+     设置为所有文档的默认，83
-+     设置为当前文档的默认，82
-+     定义，79
-+     从个人版 CD-ROM 安装，84–87
+草稿视图，12
 
-+   点尺寸，定义，80
-+   相对尺寸，设置，81
-+   尺寸更改，81
-+   尺寸，3
-+   页脚
-+     创建，148–149
-+     添加日期，151
-+     定义，148
-+     编辑，150
-+     在之间移动，150
-+     添加页码，151
-+     抑制，152
-+     关闭，150
-+   表单文件。参见合并
-+   随写格式
-+     定义，160
-+     关闭，164
-+     打开，163–164
-+   格式代码
-+     定义，70
-+     隐藏，72
-+     查看，72
-+   格式符号
-+     定义，70
-+     显示，70
-+     指定将显示的，71
-+   
-+   ## G
-+   Gnome 桌面，19
-+     向主菜单添加快捷方式，34
-+     在其上放置快捷方式，36
-+   转到命令，155
-+   随写语法，159，168
-+     使用纠正错误，168
-+     打开或关闭，168
-+   Grammatik，159
-+     使用校对文档，169–170
-+   图表。参见图表
-+   指南，3
-+     列，显示或隐藏，146
-+     边距，5
-+       显示或隐藏，146
-+     表格，显示或隐藏，146
+悬挂首字，创建，125–127
 
-+   ## H
-+   句柄，101–104
-+   页眉
-+     创建，148–149
-+     添加日期，151
-+     定义，148
-+     编辑，150
-+     在之间移动，150
-+     添加页码，151
-+     抑制，152
-+     关闭，150
-+   标题（Web 文档），217
-+   打开帮助，17
-+   突出显示文本，120
-+   水平线。参见线条
-+   HTML（超文本标记语言文件格式），213，214，229
-+   超文本链接，213。另见
-+     Internet Publisher：Web 文档
-+     更改颜色，225
-+     创建，224
-+   断字，98
-+   
-+   ## I
-+   图像。另见图像框
-+     添加到 Web 文档，226
-+     添加到 Web 文档背景，223
-+     为 Web 文档设置替代文本，227
-+     在 Web 文档中设置周围空间，227
-+   图像框，110。另见图像
-+     添加边框，106
-+     水平翻转，105
-+     垂直翻转，105
-+     更改高度，103
-+     水平缩放，101
-+     在文档中插入，99–100
-+     在表格中插入，173
-+     移动，102
-+     比例缩放，101
-+     按比例调整大小，104
-+     设置文本流，107
-+     垂直缩放，101
-+     更改宽度，102
+下拉列表，如何使用，6
 
+## E
 
+省略号。参见形状
 
+信封
+定义，创建新，238
+合并，创建，197–199
+打印，237
 
+退出 WordPerfect，50
+
+导出文档，45
+
+ExpressDocs
+创建自己的，41
+定义，39
+使用以开始新文档，39–40
+
+## F
+
+字段代码。另见合并
+
+文件转换，45
+支持的类型，44
+
+文件格式，45
+与 Microsoft Word for Windows 兼容，2，44
+HTML，213，214，229
+LTR，45
+WCM，204
+WPD，45
+WPT，45
+
+填充，128–130
+添加到列，130
+添加到页面，128
+添加到段落，129
+添加到文本框，135
+
+查找单词或短语，67
+设置选项，69–70
+
+字体
+更改，80
+在 Web 文档中更改，219
+设置为所有文档的默认，83
+设置为当前文档的默认，82
+定义，79
+从个人版 CD-ROM 安装，84–87
+
+点尺寸，定义，80
+
+相对尺寸，设置，81
+
+尺寸更改，81
+
+尺寸，3
+
+页脚
+创建，148–149
+添加日期，151
+定义，148
+编辑，150
+在之间移动，150
+添加页码，151
+抑制，152
+关闭，150
+
+表单文件。参见合并
+
+随写格式
+定义，160
+关闭，164
+打开，163–164
+
+格式代码
+定义，70
+隐藏，72
+查看，72
+
+格式符号
+定义，70
+显示，70
+指定将显示的，71
+
+## G
+
+Gnome 桌面，19
+向主菜单添加快捷方式，34
+在其上放置快捷方式，36
+
+转到命令，155
+
+随写语法，159，168
+使用纠正错误，168
+打开或关闭，168
+
+Grammatik，159
+使用校对文档，169–170
+
+图表。参见图表
+
+指南，3
+列，显示或隐藏，146
+边距，5
+显示或隐藏，146
+表格，显示或隐藏，146
+
+## H
+
+句柄，101–104
+
+页眉
+创建，148–149
+添加日期，151
+定义，148
+编辑，150
+在之间移动，150
+添加页码，151
+抑制，152
+关闭，150
+
+标题（Web 文档），217
+
+打开帮助，17
+
+突出显示文本，120
+
+水平线。参见线条
+
+HTML（超文本标记语言文件格式），213，214，229
+
+超文本链接，213。另见
+Internet Publisher：Web 文档
+更改颜色，225
+创建，224
+
+断字，98
+
+## I
+
+图像。另见图像框
+添加到 Web 文档，226
+添加到 Web 文档背景，223
+为 Web 文档设置替代文本，227
+在 Web 文档中设置周围空间，227
+
+图像框，110。另见图像
+添加边框，106
+水平翻转，105
+垂直翻转，105
+更改高度，103
+水平缩放，101
+在文档中插入，99–100
+在表格中插入，173
+移动，102
+比例缩放，101
+按比例调整大小，104
+设置文本流，107
+垂直缩放，101
+更改宽度，102
 
 ### 索引
 
-图像链接，213。另见 Internet
-Publisher
+图像链接，213。另见 Internet Publisher
 创建，228
+
 导入文档，44
+
 缩进，3
+
 段落，91
+
 定义，91
+
 每段的第一行，92
+
 插入
 图表，114
 剪贴画，99
@@ -6536,41 +6395,65 @@ Publisher
 制表符，91
 文本，56
 文本框，134
+
 日期，76
+
 插入点，3, 5, 56
+
 安装
 从 Personal Edition CD-ROM 安装字体，84–87
 WordPerfect，21–28
+
 Internet Publisher，213–230。另见 Web document
 浏览器设置，修改，230
 发布网页，229
 Web document，创建，214
+
 J
+
 对齐方式，类型，88。另见 Paragraph formatting
+
 K
+
 KDE Desktop，19
 向主菜单添加快捷方式，35
+
 键盘设置
 更改为之前的 WordPerfect 版本，10
 创建自定义设置，210
+
 键盘快捷键，如何使用，7
+
 按键，57
+
 宏，分配，210–212
+
 L
+
 横向页面方向，141
+
 语言，更改设置，167
+
 行号，121–122
+
 列表按钮，如何使用，6
+
 线条
 自定义，绘制，109–110
 水平，绘制，108
 折线，绘制，111
 垂直，绘制，108
+
 Linux，2, 19
+
 许可，20
+
 Linux X11 Windows server，20
+
 M
+
 宏记录器，3
+
 宏，3, 203–212
 定义，203
 按键，分配自定义，210–212
@@ -6579,21 +6462,28 @@ M
 录制，定义，203, 204
 随 WordPerfect 提供的，203, 206
 工具栏，为其分配按钮，208–209
+
 Make It Fit Expert，139
+
 边距指南，5
 显示或隐藏，146
+
 边距，145
 设置，145
 使用标尺栏设置左右边距，146
+
 主文档，3, 156–158
 压缩，158
 创建，156–157
 定义，156
 展开，157
+
 菜单栏，4
+
 菜单
 其工作原理，7
 处理图像时无法访问，101
+
 合并，3, 187–202
 取消进行中，196
 数据文件
@@ -6616,19 +6506,28 @@ Make It Fit Expert，139
 邮件标签，196
 受密码保护的文档，196
 执行，194–196
+
 Microsoft Word for Windows
 导出文档到，45
 从导入文档，44
 使用拖放移动文本，64
+
 N
+
 编号列表
 添加到文本，124
 添加到 Web document，221–222
+
 O
+
 打开文档，42
+
 选项按钮。另见 Radio buttons
+
 使用 Oversrike 命令创建符号，59
+
 P
+
 页面
 添加边框和填充，128
 格式，141–158
@@ -6641,380 +6540,725 @@ Page (continued)
 移除边框和填充，131
 大小，设置，142
 开始新页，52
+
 页码
 添加，151
 抑制，152
+
+
+
 页面视图，12
+
 纸张定义，创建，143–144
+
 段落。另见 Paragraph formatting
+
 边框，添加到，129
+
 边框，移除，131
+
 填充，添加到，129
+
 填充，移除，131
+
 缩进 91
+
 缩进段落的第一行，92
+
 对齐方式，88
+
 间距，设置段落之间，90
+
 开始新段落，52
+
 段落格式，3, 88。另见 Paragraph
+
 双重缩进，92
+
 在 Web document 中双重缩进，222
+
 对齐，设置，88
+
 在 Web document 中设置对齐，221
+
 行高，设置精确，89
+
 行距，设置，89
+
 密码
+
 合并文档和，196
+
 保存文档时使用，43
+
 粘贴文本
+
 使用按键，63
+
 使用鼠标，64
+
 PerfectExpert，16。另见 Help, using
+
 折线。另见 Lines
+
 弹出菜单。另见 QuickMenu
+
 纵向页面方向，141
+
 预览区域，定义，6
+
 打印机，添加更多，239–240
+
 打印，3, 231–240
+
 横幅，236
+
 当前页，232
+
 文档，231
+
 从后往前打印文档，234
+
 不带图形的草稿，233
+
 信封，237
+
 奇数或偶数页，235
+
 打印机，添加新的，239–240
+
 所选文本，232
+
 文档的若干份，232
+
 特定页，233
+
 程序窗口，3, 5, 33
+
 使用 Grammatik 校对文档，169–170
+
 属性栏，5, 14
+
 推送按钮，如何使用，6
-Q
+
+### Q
+
 QuickCorrect，159, 160–164
+
 条目，添加新的，161
+
 Format-As-You-Go，关闭，164
+
 Format-As-You-Go，打开，163–164
+
 Smart Quotes，关闭，163
+
 Smart Quotes，打开，162
+
 打开或关闭，160
+
 QuickFill，定义，185
+
 使用，185
+
 QuickList
+
 创建，46–47
+
 定义，46
+
 使用，48
+
 QuickMenu
+
 定义，14
+
 使用以选择文本，61
+
 与弹出菜单的区别，14
+
 QuickSum
+
 定义，185
+
 在表格中执行，186
+
 QuickTips
+
 定义，16
+
 查看，17
-R
+
+### R
+
 单选按钮
+
 如何使用，6
+
 矩形。另见 Shapes
+
 Red Hat Linux 6，19
+
 重做，65
+
 多于一个操作，66
+
 保存操作与文档，66
+
 替换
+
 单词或短语，68
+
 所选文本，64
+
 设置选项，69–70
+
 调整大小
+
 图像
+
 高度，103
+
 按比例，104
+
 宽度，102
+
 文本框
+
 精确，136
+
 使用手柄，135
+
 显示代码
+
 定义，70
+
 显示，72
+
 隐藏，72
+
 行。另见 Tables
+
 标尺栏，5
+
 定义，93
+
 查看和隐藏，93
-S
+
+### S
+
 保存
+
 文档的副本，43
+
 文档，43
+
 滚动条，5
+
 选择
+
 单元格，174
+
 表格中的列，174
+
 行，174
+
 表格，174
+
 文本，60
+
 选择文本，60–61
+
 阴影光标，3, 5
+
 更改外观，54–55
+
 更改吸附属性，54
+
 定义，53
+
 查看或隐藏，54
+
 形状，112
+
 插入，112
+
 主菜单上的快捷方式
+
 添加到 Gnome，34
+
 添加到 KDE，35
 
-
 SmartQuotes
+
 关闭，163
+
 打开，162
+
 排序，187，200–202
+
 排序后撤销，202
+
 拼写检查，159，166–167
+
 另见 拼写时检查
+
 文档，166–167
+
 其他语言，167
+
 所选文本，167
+
 拼写时检查，159，165
+
 使用错误进行更正，165
+
 打开，165
+
 正方形。参见 形状
+
 样式，138–139
+
 创建，138–139
+
 定义，138
+
 使用，139
+
 子文档，3，156–158
+
 压缩，158
+
 定义，156
+
 展开，157
+
 插入，156–157
+
 抑制命令，152
+
 符号，58–59
+
 创建自定义，59
+
 插入，58
 
-#### T
+### T
+
 制表符设置，3，93
+
 创建新的，94–95
+
 定义，91，97
+
 删除，96
+
 删除所有设置，96
+
 移动，94
+
 表格，3，171–186
+
 边框，添加，183
+
 单元格
+
 边框，添加，183
+
 定义，171
+
 格式，180
+
 合并，177
+
 选择，174
+
 着色，添加，183
+
 拆分，176
+
 列
+
 添加，175
+
 边框，添加，183
+
 定义，171
+
 删除，178
+
 格式，182
+
 选择，174
+
 着色，添加，183
+
 宽度，使用标尺栏更改，179
+
 将文本转换为，179
+
 创建，172
+
 删除，178
+
 格式，180–184
+
 使用 SpeedFormatting 格式，184
+
 公式，在其中使用，185
+
 图像，插入，173
+
 使用 QuickFill，185
+
 使用 QuickSum，186
+
 行
+
 添加，175
+
 在当前行上方添加，176
+
 边框，添加，183
+
 定义，171
+
 删除，178
+
 格式，181
+
 选择，174
+
 选择，174
+
 着色，添加，183
+
 SpeedFormatting，定义，180
+
 用于格式，使用，184
+
 拆分，177
+
 文本，添加，173
+
 制表符，插入，91。另见 制表符设置
+
 技术支持，16
+
 本书使用的术语，5
+
 文本，51，119–140
+
 粗体，使，74
+
 项目符号列表，123
+
 大小写，更改，79
+
 居中一行，78，73
+
 字符格式，73，74
+
 颜色，更改，119–120
+
 转换为表格，179
+
 复制，62
+
 使用鼠标复制和粘贴，64
+
 剪切，62
+
 删除，57
+
 添加首字下沉，125–127
+
 输入，52
+
 在一页上适配，139
+
 设置图像周围的流动，107
+
 右对齐，移动一行，78
+
 带点 leaders 右对齐，移动一行，78
+
 格式，添加，77
+
 高亮，120
+
 插入，56
+
 斜体，添加，75
+
 行号，121–122
+
 使用拖放移动，64
+
 编号列表，124
+
 段落格式，73
+
 粘贴，63
+
 打印所选，232
+
 替换，64
+
 选择，60–61
+
 字符，60
+
 文档，61
+
 页面，61
+
 段落，61
+
 句子，60
+
 使用 QuickMenu，61
+
 单词，60
+
 排序，200–202
+
 下标，使文本，77
+
 上标，使文本，77
+
 下划线，使文本，76
+
 垂直文本对齐，设置，147
+
 Web 文档
+
 添加，218
+
 闪烁，使文本，220
+
 粗体或斜体，使文本 220
+
 项目符号和数字，221–222
+
 颜色，更改，220
+
 删除，218
+
 编辑，218
+
 更大或更小，使文本，219
+
 下划线，使文本，220
+
 自动换行，53
 
 ### Index
 
 文本框，如何使用，6，134–137
+
 边框，添加，135
+
 标题，添加，137
+
 填充，添加，135
+
 插入，134
+
 移动，136
+
 精确调整大小，136
+
 使用手柄调整大小，135
+
 标题栏，4
+
 工具栏，9
+
 添加自定义按钮，209
+
 添加宏按钮，208–209
+
 查看，9，207
+
 查看以前版本，11
+
 字形。参见 字体
 
-#### U
+### U
+
 撤销，65
+
 多个操作，66
+
 保存操作与文档，66
+
 URL，定义，213
 
-#### V
+### V
+
 垂直线。参见 线条
+
 视图质量，12
 
-#### W
+### W
+
 Web 文档。另见 Internet Publisher
+
 背景颜色，添加，223
+
 项目符号和编号列表，创建，221–222
+
 转换为，215
+
 创建，214
+
 设计帮助，228
+
 双倍缩进，222
+
 字体，更改，219
+
 标题，添加，217
+
 超文本链接，更改颜色，225
+
 超文本链接，创建，224
+
 图像作为背景，添加，223
+
 图像，插入替代文本，227
+
 图像，插入，226
+
 图像链接，创建，228
+
 图像，设置周围空间，227
+
 段落文本， justify，221
+
 发布，3，229
+
 文本
+
 添加，218
+
 闪烁，使，220
+
 粗体或斜体，使，220
+
 更改颜色，220
+
 编辑，218
+
 更大或更小，使，219
+
 下划线，使，220
+
 标题，添加，216
+
 在浏览器中查看，230
+
 Web 编辑器。参见 Internet Publisher
+
 Web 服务器，定义，213
+
 Web 术语，213
+
 空白，53
+
 自动换行，53
+
 WordPerfect 8 for Linux，1，2，3
+
 控件，如何使用，6
+
 退出，50
+
 免费版，8
+
 定义，20
+
 下载，29–30
+
 安装，30–31
+
 获取许可证号，32
+
 获取帮助，16–17
+
 隐藏工具栏，11
+
 安装，21–28
+
 从命令行启动，37
+
 从 Gnome Desktop 启动，37
+
 从 K Desktop 启动，37
+
 许可，20
+
 个人版，8
+
 定义，20
+
 安装，21–28
+
 屏幕，4–5
+
 服务器版，8
+
 定义，20
+
 用户指南，16
+
 WordPerfect 8 for Linux: Visual QuickStart Guide，配套网站，2
+
 WordPerfect 8 工具栏，4
+
 自定义，208–209
+
 查看/隐藏，11
+
 WordPerfect for DOS，1
+
 分配键盘，10
+
 WordPerfect for Windows，1
+
 分配键盘，10
+
 显示工具栏，11
+
 工作区，退出时保存，49
+
 文档窗口中的工作区，定义，33
+
 WPD 文件格式，3，45
 
-#### Z
-缩放
-放大，3，13
-缩小，3，13，104
-到特定放大倍数，13
-使用 WordPerfect 工具栏，13
+### Z
 
-### 您还想看到什么？
+缩放
+
+放大，3，13
+
+缩小，3，13，104
+
+到特定放大倍数，13
+
+
+
+# 使用 WordPerfect 工具栏，13
+
+## 您还想看到什么？
 
 如果我为这本书写续集，您希望我涵盖哪些主题和功能？请发送电子邮件将您的建议发送至：phy11s@bearhome.com
 
-
-
-
-### WordPerfect 8 FOR LINUX
+## WordPerfect 8 FOR LINUX
 
 需要快速学习 Linux 版 WordPerfect 吗？
+
 试试 Visual QuickStart！
 
 - 采用简洁直观的视觉教学方式讲解 WordPerfect，使用图片引导你操作软件并展示该怎么做。
@@ -7023,4 +7267,3 @@ WPD 文件格式，3，45
 - 配套网站 www.peachpit.com/vqs/linuxwp8/ 提供 Linux 链接、读者讨论论坛等更多内容。
 
 Phyllis Davis 是一名作家、图形和网页设计师、教师以及软件开发者。她的写作作品包括 CorelDRAW: Visual QuickStart Guide、FrontPage: Visual QuickStart Guide 和 Peter Norton's Guide to Visual Basic。当她不忙于撰写和设计书籍及美术海报，或创建网站时，Phyllis 正在开发和教授计算机课程、整理她的花园、踢踏舞，以及陪伴她可爱的小儿子 Julian 玩耍。
-

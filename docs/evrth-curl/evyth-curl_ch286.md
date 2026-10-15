@@ -1,6 +1,7 @@
+
 # 获取 FTP 目录列表
 
-此示例仅从给定的 URL 获取 FTP 目录输出并将其发送到 stdout。URL 中的尾部斜杠使得 libcurl 将其视为目录。
+此示例仅从给定的 URL 获取 FTP 目录输出并将其发送到 `stdout`。URL 中的尾部斜杠使得 `libcurl` 将其视为目录。
 
 ```sh
 #include <curl/curl.h>

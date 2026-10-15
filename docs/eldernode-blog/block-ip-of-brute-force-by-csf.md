@@ -1,3 +1,4 @@
+
 # 如何在 DirectAdmin | Eldernode 上用 CSF 屏蔽暴力破解 IP
 
 > 原文：<https://blog.eldernode.com/block-ip-of-brute-force-by-csf/>
@@ -10,51 +11,69 @@
 
 对于 [CFS](https://download.configserver.com/csf/) 的暴力自动 IP 拦截，执行以下步骤:
 
-1。首先转到下面的路径:
+1. 首先转到下面的路径:
 
 ```
-cd /usr/local/directadmin/scripts/custom/ 
+cd /usr/local/directadmin/scripts/custom/
 ```
 
-2。开始之前，按照以下说明备份 block_ip.sh 和 unblock_ip.sh 文件:
+2. 开始之前，按照以下说明备份 `block_ip.sh` 和 `unblock_ip.sh` 文件:
 
 ```
-cp block_ip.sh block_ip.sh.bak  cp unblock_ip.sh unblock_ip.sh.bak 
+cp block_ip.sh block_ip.sh.bak
+cp unblock_ip.sh unblock_ip.sh.bak
 ```
 
-上述文件可能不存在于“usr/local/direct admin/scripts/custom”路径中，在这种情况下，您会遇到以下错误。显示错误不会在过程的继续中引起任何问题。
+上述文件可能不存在于`/usr/local/directadmin/scripts/custom`路径中，在这种情况下，您会遇到以下错误。显示错误不会在过程的继续中引起任何问题。
 
 ```
-cp: cannot stat `block_ip.sh': No such file or directory  cp: cannot stat `unblock_ip.sh': No such file or directory 
+cp: cannot stat `block_ip.sh': No such file or directory
+cp: cannot stat `unblock_ip.sh': No such file or directory
 ```
 
-3。使用以下命令下载适当的版本:
+3. 使用以下命令下载适当的版本:
 
 ```
-cd /usr/local/directadmin/scripts/custom/  wget -O block_ip.sh http://files.plugins-da.net/dl/csf_block_ip.sh.txt  wget -O unblock_ip.sh http://files.plugins-da.net/dl/csf_unblock_ip.sh.txt  wget -O show_blocked_ips.sh http://files.plugins-da.net/dl/csf_show_blocked_ips.sh.txt  chmod 700 block_ip.sh show_blocked_ips.sh unblock_ip.sh 
+cd /usr/local/directadmin/scripts/custom/
+wget -O block_ip.sh http://files.plugins-da.net/dl/csf_block_ip.sh.txt
+wget -O unblock_ip.sh http://files.plugins-da.net/dl/csf_unblock_ip.sh.txt
+wget -O show_blocked_ips.sh http://files.plugins-da.net/dl/csf_show_blocked_ips.sh.txt
+chmod 700 block_ip.sh show_blocked_ips.sh unblock_ip.sh
 ```
 
-4。使用以下命令在根路径中创建名为 blocked_ips 和 exempt_ips 的文件:
+4. 使用以下命令在根路径中创建名为 `blocked_ips` 和 `exempt_ips` 的文件:
 
 ```
-touch /root/blocked_ips.txt  touch /root/exempt_ips.txt
+touch /root/blocked_ips.txt
+touch /root/exempt_ips.txt
 ```
 
-到目前为止，IP 没有被 CSF 自动阻止，只有一个按钮在暴力监视器中为管理员创建，以阻止所需的 IP。为了让 IPs 自动拦截，您需要安装以下脚本，并遵循以下步骤。
+到目前为止，IP 没有被 CSF 自动阻止，只有一个按钮在暴力监视器中为管理员创建，以阻止所需的 IP。为了让 IP 自动拦截，您需要安装以下脚本，并遵循以下步骤。
 
-5。进行自动 IP 拦截并运行以下命令:
-
-```
-cd /usr/local/directadmin/scripts/custom  wget -O brute_force_notice_ip.sh http://files.directadmin.com/services/all/brute_force_notice_ip.sh  chmod 700 brute_force_notice_ip.sh
-```
-
-6。为了不使用 CSF 覆盖 iptables 的角色和作用，在服务器上借助以下命令关闭该服务的执行。
+5. 进行自动 IP 拦截并运行以下命令:
 
 ```
-chkconfig iptables off  chkconfig ip6tables off    mv /etc/init.d/iptables /etc/init.d/iptables~moved  echo -e '#!/bin/bash\nexit 0;' > /etc/init.d/iptables  chmod 755 /etc/init.d/iptables    chkconfig iptables on  chkconfig ip6tables on  service iptables start
+cd /usr/local/directadmin/scripts/custom
+wget -O brute_force_notice_ip.sh http://files.directadmin.com/services/all/brute_force_notice_ip.sh
+chmod 700 brute_force_notice_ip.sh
 ```
 
-7 .。完成后，确保 IP 被正确阻止。尝试以下命令:
+6. 为了不使用 CSF 覆盖 iptables 的角色和作用，在服务器上借助以下命令关闭该服务的执行。
+
+```
+chkconfig iptables off
+chkconfig ip6tables off
+
+mv /etc/init.d/iptables /etc/init.d/iptables~moved
+echo -e '#!/bin/bash\nexit 0;' > /etc/init.d/iptables
+chmod 755 /etc/init.d/iptables
+
+chkconfig iptables on
+chkconfig ip6tables on
+service iptables start
+```
+
+7. 完成后，确保 IP 被正确阻止。尝试以下命令:
 
 ```
 csf –g IP

@@ -1,3 +1,4 @@
+
 # 传输后信息
 
 记住 libcurl 传输与 *easy 处理句柄* 的关联。每个传输都有一个这样的句柄，当传输完成时，在句柄被清理或用于另一个传输之前，它可以用来从之前的操作中提取信息。
@@ -38,11 +39,11 @@ res = curl_easy_getinfo(curl, CURLINFO_LOCAL_PORT, &port_number);
 | `CURLINFO_CONNECT_TIME` | `double` | 从开始到远程主机或代理完成的时间 |
 | `CURLINFO_CONNECT_TIME_T` | `curl_off_t` | 从开始到远程主机或代理完成的时间（以微秒为单位） |
 | `CURLINFO_CONN_ID` | `curl_off_t` | 当前连接的数值 ID（用于回调） |
-| `CURLINFO_CONTENT_LENGTH_DOWNLOAD` | `double` | 从 Content-Length 报头获取的内容长度 |
-| `CURLINFO_CONTENT_LENGTH_DOWNLOAD_T` | `curl_off_t` | 从 Content-Length 报头获取的内容长度 |
+| `CURLINFO_CONTENT_LENGTH_DOWNLOAD` | `double` | 从 `Content-Length` 报头获取的内容长度 |
+| `CURLINFO_CONTENT_LENGTH_DOWNLOAD_T` | `curl_off_t` | 从 `Content-Length` 报头获取的内容长度 |
 | `CURLINFO_CONTENT_LENGTH_UPLOAD` | `double` | 上传大小 |
 | `CURLINFO_CONTENT_LENGTH_UPLOAD_T` | `curl_off_t` | 上传大小 |
-| `CURLINFO_CONTENT_TYPE` | `char *` | 从 Content-Type 报头获取的内容类型 |
+| `CURLINFO_CONTENT_TYPE` | `char *` | 从 `Content-Type` 报头获取的内容类型 |
 | `CURLINFO_COOKIELIST` | `struct curl_slist *` | 所有已知 cookie 的列表 |
 | `CURLINFO_EFFECTIVE_METHOD` | `char *` | 最后使用的 HTTP 请求方法 |
 | `CURLINFO_EFFECTIVE_URL` | `char *` | 最后使用的 URL |
@@ -66,7 +67,7 @@ res = curl_easy_getinfo(curl, CURLINFO_LOCAL_PORT, &port_number);
 | `CURLINFO_PRIMARY_PORT` | `long` | 上次连接的端口 |
 | `CURLINFO_PRIVATE` | `char *` | 用户私有数据指针 |
 | `CURLINFO_PROTOCOL` | `long` | 用于连接的协议 |
-| `CURLINFO_PROXY_ERROR` | `long` | 如果从传输返回`CURLE_PROXY`，则详细的（SOCKS）代理错误 |
+| `CURLINFO_PROXY_ERROR` | `long` | 如果从传输返回 `CURLE_PROXY`，则详细的（SOCKS）代理错误 |
 | `CURLINFO_PROXY_SSL_VERIFYRESULT` | `long` | 代理证书验证结果 |
 | `CURLINFO_PROXYAUTH_AVAIL` | `long` | 可用的 HTTP 代理身份验证方法 |
 | `CURLINFO_QUEUE_TIME_T` | `curl_off_t` | 此传输在队列中等待开始的时间（微秒） |
@@ -74,10 +75,10 @@ res = curl_easy_getinfo(curl, CURLINFO_LOCAL_PORT, &port_number);
 | `CURLINFO_REDIRECT_TIME` | `double` | 在最终传输之前所有重定向步骤所需的时间 |
 | `CURLINFO_REDIRECT_TIME_T` | `curl_off_t` | 在最终传输之前所有重定向步骤所需的时间（微秒） |
 | `CURLINFO_REDIRECT_URL` | `char *` | 重定向会带你去到的 URL，如果你启用了重定向 |
-| `CURLINFO_REFERER` | `char *` | 使用的请求`Referer:`头 |
+| `CURLINFO_REFERER` | `char *` | 使用的请求 `Referer:` 头 |
 | `CURLINFO_REQUEST_SIZE` | `long` | 发出的 HTTP 请求中发送的字节数 |
 | `CURLINFO_RESPONSE_CODE` | `long` | 最后接收到的响应代码 |
-| `CURLINFO_RETRY_AFTER` | `curl_off_t` | 从响应`Retry-After:`头中获取的值 |
+| `CURLINFO_RETRY_AFTER` | `curl_off_t` | 从响应 `Retry-After:` 头中获取的值 |
 | `CURLINFO_RTSP_CLIENT_CSEQ` | `long` | RTSP 下一次期望的客户 CSeq |
 | `CURLINFO_RTSP_CSEQ_RECV` | `long` | RTSP 最后接收 |
 | `CURLINFO_RTSP_SERVER_CSEQ` | `long` | RTSP 下一次期望的服务器 CSeq |

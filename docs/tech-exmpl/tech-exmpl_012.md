@@ -1,136 +1,105 @@
+
 # 蛇与梯子游戏的系统设计
 
 > 原文：[`techbyexample.com/snake-ladder-game-oops-design/`](https://techbyexample.com/snake-ladder-game-oops-design/)
 
-目录
+## 目录
 
-+   概览
+- 概览
+- 蛇与梯子游戏中的所有角色
+- 需求分析
+- UML 图
+- 低级设计
+- 完整工作代码
+- 单文件中的完整工作代码
+- 结论
 
-+   蛇与梯子游戏中的所有角色
-
-+   需求分析
-
-+   UML 图
-
-+   低级设计
-
-+   完整工作代码
-
-+   单文件中的完整工作代码
-
-+   结论
-
-## **概览**
+## 概览
 
 设计蛇与梯子游戏是一个低级设计问题，应该以这种方式解决。在这个问题中，面试官希望测试你的面向对象技能。
 
-你可以在这里了解更多关于蛇与梯子游戏的信息 – [`en.wikipedia.org/wiki/Snakes_and_ladders`](https://en.wikipedia.org/wiki/Snakes_and_ladders)
+你可以在这里了解更多关于蛇与梯子游戏的信息：[`en.wikipedia.org/wiki/Snakes_and_ladders`](https://en.wikipedia.org/wiki/Snakes_and_ladders)。
 
-在本教程中，我们将讨论蛇与梯子游戏的低级设计。同时，我们还将查看蛇与梯子游戏的完整工作代码。以下是本教程的目录
+在本教程中，我们将讨论蛇与梯子游戏的低级设计。同时，我们还将查看蛇与梯子游戏的完整工作代码。以下是本教程的目录：
 
-+   蛇与梯子游戏中的所有角色
+- 蛇与梯子游戏中的所有角色
+- 需求分析
+- UML 图
+- 用 Go 编程语言表示的低级设计
+- Go 语言中的完整工作代码
+- 单文件中的完整工作代码
 
-+   需求分析
+## 蛇与梯子游戏中的所有角色
 
-+   UML 图
+让我们确定设计中存在的所有主要角色：
 
-+   用 Go 编程语言表示的低级设计
+- **棋盘**：棋盘将从 1 到 100 编号，简单地表示游戏中的棋盘。
+- **游戏**：它是控制游戏整体流程的主要类。
+- **玩家**：它是一个表示玩家的接口。将有两个具体类实现这个接口。
+  - 人类玩家
+  - 计算机玩家
+- **蛇**：它表示一条蛇。
+- **梯子**：它表示一把梯子。
 
-+   Go 语言中的完整工作代码
+## 需求分析
 
-+   单文件中的完整工作代码
+除了这里提到的蛇与梯子游戏规则 [`en.wikipedia.org/wiki/Snakes_and_ladders`](https://en.wikipedia.org/wiki/Snakes_and_ladders)，我们还将以可扩展的方式进行设计，其中：
 
-## **蛇与梯子游戏中的所有角色**
+- 游戏可以由任意数量的玩家进行。
+- 系统应支持任意数量的梯子和蛇。
+- 游戏应该支持任意数量的骰子掷投。
 
-让我们确定设计中存在的所有主要角色
-
-+   **棋盘** – 棋盘将从 1 到 100 编号，简单地表示游戏中的棋盘。
-
-+   **游戏** – 它是控制游戏整体流程的主要类。
-
-+   **玩家** – 它是一个表示玩家的接口。将有两个具体类实现这个接口。
-
-    +   人类玩家
-
-    +   计算机玩家
-
-+   **蛇** – 它表示一条蛇
-
-+   **梯子** – 它表示一把梯子
-
-## **需求分析**
-
-除了这里提到的蛇与梯子游戏规则 [`en.wikipedia.org/wiki/Snakes_and_ladders`](https://en.wikipedia.org/wiki/Snakes_and_ladders)，我们还将以可扩展的方式进行设计，其中 –
-
-+   游戏可以由任意数量的玩家进行
-
-+   系统应支持任意数量的梯子和蛇。
-
-+   游戏应该支持任何数量的骰子掷投
-
-## **UML 图**
+## UML 图
 
 以下是蛇与梯子游戏的 UML 图。
 
 ![蛇与梯子游戏的 UML 图](img/00aeb0e9b8aa0e3fecb09308097d0b02.png)
 
-蛇与梯子游戏的 UML 图
+蛇与梯子游戏的 UML 图。
 
-让我们理解这个 UML 图
+让我们理解这个 UML 图。
 
-上述 UML 图中最简单的组件是 iPlayer 接口。它定义了以下功能
+上述 UML 图中最简单的组件是`iPlayer`接口。它定义了以下功能：
 
-+   **掷骰子** – 玩家将掷骰子并返回骰子点数。它将骰子的数量作为参数
+- **掷骰子**：玩家将掷骰子并返回骰子点数。它将骰子的数量作为参数。
+- **设置位置**：通过这种方法设置玩家的位置。玩家的位置将从 1 到 `n*n`，其中 `n` 是棋盘的维度。
+- **获取位置**：一个用于获取位置的工具方法。
+- **获取 ID**：一个简单的函数，用于获取玩家的 ID。
 
-+   **设置位置** – 通过这种方法设置玩家的位置。玩家的位置将从 1 到 n*n，其中 n 是棋盘的维度
+该接口由两个类实现：
 
-+   **获取位置** – 一个用于获取位置的工具方法
-
-+   **获取 ID** – 一个简单的函数，用于获取玩家的 ID
-
-该接口由两个类实现
-
-+   人类玩家
-
-+   计算机玩家
+- 人类玩家
+- 计算机玩家
 
 接下来是**蛇**和**梯子**类。这些类仅用于创建和验证蛇和梯子。通过验证，我们的意思是，对于蛇，我们将验证蛇的起始点是否大于蛇的终点。对于梯子，我们将验证梯子的起始点是否小于梯子的终点。
 
 创建的蛇和梯子将依次传递到棋盘的创建中，棋盘内部实现了蛇和梯子作为一个映射。
 
-接下来是棋盘类本身。它将包含以下字段
+接下来是棋盘类本身。它将包含以下字段：
 
-+   一个 n*n 的**方格**，其中每个方格都是符号类类型。符号类只包含玩家 ID 映射。例如，假设有两个玩家在玩游戏。在游戏过程中，两个玩家可能都在方格 5 中。玩家在位置 5 的位置由符号类中的玩家 ID 映射表示。
-
-+   **维度** – 棋盘的维度
-
-+   **蛇图** – 表示棋盘上的蛇。地图中的**键**是蛇的起始点，**值**是蛇的终点
-
-+   **梯子图** – 表示棋盘上的梯子。地图中的**键**是梯子的起始点，**值**是梯子的终点
+- 一个 `n*n` 的**方格**，其中每个方格都是符号类类型。符号类只包含玩家 ID 映射。例如，假设有两个玩家在玩游戏。在游戏过程中，两个玩家可能都在方格 5 中。玩家在位置 5 的位置由符号类中的玩家 ID 映射表示。
+- **维度**：棋盘的维度。
+- **蛇图**：表示棋盘上的蛇。地图中的**键**是蛇的起始点，**值**是蛇的终点。
+- **梯子图**：表示棋盘上的梯子。地图中的**键**是梯子的起始点，**值**是梯子的终点。
 
 有一个游戏状态枚举类，定义了游戏的不同状态。游戏可以处于**进行中**或**游戏结束**状态。
 
-接下来是游戏类，它是驱动类。它包含以下组件
+接下来是游戏类，它是驱动类。它包含以下组件：
 
-+   **棋盘** – 棋盘本身
+- **棋盘**：棋盘本身。
+- **玩家**：玩游戏的玩家列表。
+- **已移动次数**：到目前为止已经发生的移动次数。
+- **游戏状态**：此时的游戏状态是什么。
+- **获胜玩家**：最终获胜的玩家是谁。
+- **骰子数量**：游戏使用的骰子数量。
 
-+   **玩家** – 玩游戏的玩家列表
+现在让我们看看低级设计，以下是用 Go 编程语言表示的。
 
-+   **已移动次数** – 到目前为止已经发生的移动次数
+## 低级设计
 
-+   **游戏状态** – 此时的游戏状态是什么
+以下是用 Go 编程语言表示的低级设计。
 
-+   **获胜玩家** – 最终获胜的玩家是谁
-
-+   **骰子数量** – 游戏使用的骰子数量
-
-现在让我们看看低级设计，以下是用 Go 编程语言表示的
-
-## **低级设计**
-
-以下是用 Go 编程语言表示的低级设计
-
-**iPlayer 接口**
+### `iPlayer`接口
 
 ```go
 type iPlayer interface {
@@ -141,7 +110,7 @@ type iPlayer interface {
 }
 ```
 
-**人类玩家类**
+### 人类玩家类
 
 ```go
 type humanPlayer struct {
@@ -158,7 +127,7 @@ func (h *humanPlayer) setPosition(newPosition int) {}
 func (h *humanPlayer) getPosition() int {}
 ```
 
-**计算机玩家类**
+### 计算机玩家类
 
 ```go
 type computerPlayer struct {
@@ -175,7 +144,7 @@ func (h *computerPlayer) setPosition(newPosition int) {}
 func (h *computerPlayer) getPosition() int {}
 ```
 
-**游戏状态枚举**
+### 游戏状态枚举
 
 ```go
 type GameStatus uint8
@@ -186,7 +155,7 @@ const (
 )
 ```
 
-**蛇类（仅用于创建和验证蛇）**
+### 蛇类（仅用于创建和验证蛇）
 
 ```go
 type snake struct {
@@ -197,7 +166,7 @@ type snake struct {
 func createSnake(start, end int) (snake, error) {}
 ```
 
-**梯子类（仅用于创建和验证梯子）**
+### 梯子类（仅用于创建和验证梯子）
 
 ```go
 type ladder struct {
@@ -208,7 +177,7 @@ type ladder struct {
 func createLadder(start, end int) (ladder, error) {}
 ```
 
-**符号类**
+### 符号类
 
 ```go
 type Symbol struct {
@@ -218,7 +187,7 @@ type Symbol struct {
 func (s Symbol) getRepresentation(x, y, dimension int) string {}
 ```
 
-**棋盘类**
+### 棋盘类
 
 ```go
 type board struct {
@@ -249,7 +218,7 @@ func (b *board) printBoard() {
 }
 ```
 
-**游戏类**
+### 游戏类
 
 ```go
 type game struct {
@@ -277,11 +246,11 @@ func (g *game) play() error {}
 func (g *game) printResult() {}
 ```
 
-## **完整工作代码**
+## 完整工作代码
 
-这里是完整的工作代码
+这里是完整的工作代码。
 
-**iPlayer.go**
+### `iPlayer.go`
 
 ```go
 package main
@@ -294,7 +263,7 @@ type iPlayer interface {
 }
 ```
 
-**humanPlayer.go**
+### `humanPlayer.go`
 
 ```go
 package main
@@ -332,7 +301,7 @@ func (h *humanPlayer) getPosition() int {
 }
 ```
 
-**computerPlayer.go**
+### `computerPlayer.go`
 
 ```go
 package main
@@ -370,7 +339,7 @@ func (h *computerPlayer) getPosition() int {
 }
 ```
 
-**gameStatus.go**
+### `gameStatus.go`
 
 ```go
 package main
@@ -383,7 +352,7 @@ const (
 )
 ```
 
-**symbol.go**
+### `symbol.go`
 
 ```go
 package main
@@ -421,7 +390,7 @@ func (s Symbol) getRepresentation(x, y, dimension int) string {
 }
 ```
 
-**snake.go**
+### `snake.go`
 
 ```go
 package main
@@ -447,7 +416,7 @@ func createSnake(start, end int) (snake, error) {
 }
 ```
 
-**ladder.go**
+### `ladder.go`
 
 ```go
 package main
@@ -473,7 +442,13 @@ func createLadder(start, end int) (ladder, error) {
 }
 ```
 
-**board.go**
+### `board.go`
+
+
+
+以下是该程序的 Go 语言实现，包含三个文件：`board.go`、`game.go` 和 `main.go`。
+
+### `board.go`
 
 ```go
 package main
@@ -635,7 +610,7 @@ func IntArrayToString(a []int) string {
 }
 ```
 
-**game.go**
+### `game.go`
 
 ```go
 package main
@@ -700,7 +675,7 @@ func (g *game) printResult() {
 }
 ```
 
-**main.go**
+### `main.go`
 
 ```go
 package main
@@ -793,11 +768,13 @@ func createLadders() ([]ladder, error) {
 }
 ```
 
-让我们运行这个程序
+让我们运行这个程序。
 
-请注意，每次运行此程序时，输出都会有所不同
+请注意，每次运行此程序时，输出都会有所不同。
 
 **输出**
+
+
 
 ```go
 Initial Board
@@ -1545,9 +1522,13 @@ Players with ID:b won
 -------------------------------------------------------------
 ```
 
-## **完整工作代码在一个文件中**
 
-这里是完整的工作代码，全部在一个文件中
+
+## 完整工作代码在一个文件中
+
+这里是完整的工作代码，全部在一个文件中。
+
+
 
 ```go
 package main
@@ -1899,7 +1880,6 @@ func (g *game) printResult() {
 }
 
 func main() {
-
 	//Create 4 ladder
 
 	snakes, err := createSnakes()
@@ -1928,7 +1908,6 @@ func main() {
 
 	game.play()
 	game.printResult()
-
 }
 
 func createSnakes() ([]snake, error) {
@@ -1984,11 +1963,15 @@ func createLadders() ([]ladder, error) {
 }
 ```
 
-让我们运行这个程序
 
-请注意，每次运行此程序时，输出都会有所不同
+
+让我们运行这个程序。
+
+请注意，每次运行此程序时，输出都会有所不同。
 
 **输出**
+
+
 
 ```go
 Initial Board
@@ -2540,7 +2523,9 @@ Players with ID:b won
 -------------------------------------------------------------
 ```
 
-## **结论**
+
+
+## 结论
 
 这篇文章主要讲解了“蛇与梯子”程序的低级设计。希望你喜欢这篇文章。请在评论中分享你的反馈。
 

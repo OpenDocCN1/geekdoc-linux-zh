@@ -1,1 +1,2 @@
-从 RedHat 迁移到 SUSE Linux Enterprise Server 10
+
+# 从 RedHat 迁移到 SUSE Linux Enterprise Server 10

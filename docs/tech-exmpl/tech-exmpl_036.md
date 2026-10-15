@@ -1,8 +1,9 @@
+
 # 按频率排序字符
 
 > 原文：[`techbyexample.com/sort-characters-frequency/`](https://techbyexample.com/sort-characters-frequency/)
 
-# **概述**
+## 概述
 
 给定一个输入字符串。目标是根据字符的频率对字符串进行排序。我们需要根据字符频率的降序进行排序。让我们通过一个示例来理解。
 
@@ -20,7 +21,7 @@ Input: "mniff"
 Output: "ffmni"
 ```
 
-# **程序**
+## 程序
 
 以下是相同程序的代码
 

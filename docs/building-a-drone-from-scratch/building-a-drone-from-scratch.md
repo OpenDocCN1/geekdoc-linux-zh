@@ -1,63 +1,53 @@
+
 # 无人机构建指南
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## 引言 - 这是什么？
 
-- 一个“在做中学习”的项目
+- 一个“在做中学习”的项目。
 - 尝试构建一台质量合格的无人机，同时：
     - 保持低成本；
     - 保持低整体复杂度；
     - 使用通过全球主要零售商易于获得的现成组件。
-    - 实现足够的模块化以支持各种配置
+    - 实现足够的模块化以支持各种配置。
 
 ## 引言 - 为什么要从零开始？
 
-- 有许多框架可用，它们试图隐藏复杂性。
-适用于产品化，但较少适用于自由形式的实验。
-- 软件平台倾向于特定的硬件。
-它简化了设计和验证，但是以牺牲选择自由为代价。
-- 它更有趣
-- 挑战：充分利用所选硬件的性能
+- 有许多框架可用，它们试图隐藏复杂性。适用于产品化，但较少适用于自由形式的实验。
+- 软件平台倾向于特定的硬件。它简化了设计和验证，但是以牺牲选择自由为代价。
+- 它更有趣。
+- 挑战：充分利用所选硬件的性能。
 
 ## 设定目标
 
 **四轮驱动无人机：**
+
 不像飞行那样华丽，但更不容易损坏。
 
 **易于升级的路径：**
+
 无私有解决方案，功能模块化。
 
 **低成本：**
+
 使用来自流行套件的标准零件，通过软件提高精度。
 
 **易于调试：**
+
 接入构建块之间的标准接口。
 
 ### 需求
 
 **必须具备**
 
-速度控制、转向、遥控
+速度控制、转向、遥控。
 
 **可选**
 
-障碍检测、避障、摄像头流
+障碍检测、避障、摄像头流。
 
 **长期目标**
 
-远程计算机视觉、机载计算机视觉
+远程计算机视觉、机载计算机视觉。
 
 ## 开发限制
 
@@ -81,8 +71,7 @@
 
 ### 模块化
 
-不同功能的隔离。
-易于单元测试和调试，干扰较少。
+不同功能的隔离。易于单元测试和调试，干扰较少。
 
 ### 实时响应
 
@@ -97,8 +86,9 @@
 ### 低质量
 
 最小化惯性的负面影响：
-- 改变状态（转向、加速/减速）需要更高的功率（峰值电流）
-- 漂移概率更高
+
+- 改变状态（转向、加速/减速）需要更高的功率（峰值电流）。
+- 漂移概率更高。
 
 ### 防止电气损坏
 
@@ -125,19 +115,19 @@
 
 - 它能更好地保护“主板”。
 - 它甚至可以省略“主板”——例如：简单的遥控无人机。
-- 它允许对时间敏感任务使用 RTOS。
+- 它允许对时间敏感任务使用`RTOS`。
 
 ### 整体系统架构
 
-WIFI 或其他无线电
+`WIFI`或其他无线电
 
-Vcc
+`Vcc`
 
 上拉
 
 # 主板
 
-I2C 总线
+`I2C`总线
 
 ## 微控制器 1 板
 
@@ -167,8 +157,6 @@ I2C 总线
 
 解决方案：限制执行器使用的最大电流。
 
-### 电源分配 - 1 块电池
-
 ![](img/7ec5697ddec474d4779eb00cd3a3db77_16_0.png)
 
 ### 电机 - 选项
@@ -176,11 +164,11 @@ I2C 总线
 #### 直流电机
 
 - 优点：快速、连续、健壮。
-- 缺点：需要额外的电路进行速度/位置控制
+- 缺点：需要额外的电路进行速度/位置控制。
 
 #### 舵服电机
 
-- 优点：快速、高扭矩
+- 优点：快速、高扭矩。
 - 缺点：需要修改才能实现连续运行、空闲时可能抖动、更贵。
 
 ## 选择：直流电机
@@ -191,10 +179,11 @@ I2C 总线
 
 ## 光耦合器
 
-3D 打印机限位
-TCST21103 [1]
+`3D`打印机限位
 
-- 廉廉
+`TCST21103` [1]
+
+- 廉宜
 - 足够精确
 - 与光电编码器的尺寸兼容。
 
@@ -213,10 +202,10 @@ TCST21103 [1]
 
 | | | | |
 |---|---|---|---|
-| 0 | 0 | 不忽略 | 自由 |
-| 0 | 1 | PWM | 旋转 |
-| 1 | 0 | PWM | 锁定 |
-| 1 | 1 | 不忽略 | 锁定 |
+| `0` | `0` | 不忽略 | 自由 |
+| `0` | `1` | `PWM` | 旋转 |
+| `1` | `0` | `PWM` | 锁定 |
+| `1` | `1` | 不忽略 | 锁定 |
 
 ## 驱动器 - 选项
 
@@ -224,53 +213,53 @@ TCST21103 [1]
 
 ![](img/7ec5697ddec474d4779eb00cd3a3db77_22_1.png)
 
-### L298N
+### `L298N`
 
 - 廉价
 - 内部损耗大
 - 体积大（散热片）
 
-### TB6612NG
+### `TB6612NG`
 
 - 贵
 - 内部损耗小
 - 体积小（无需散热）
 
-## 低级自动化 - uC
+## 低级自动化 - `uC`
 
-## Arduino Pro (AVR328p) [3]
+## `Arduino` `Pro` (`AVR328p`) [3]
 
 ![](img/7ec5697ddec474d4779eb00cd3a3db77_23_0.png)
 
-- 具有 I2C 接口
+- 具有`I2C`接口
 - 足够强大可以计算
 - 对于每个电机：
   - 驱动状态
-  - 专用 PWM
+  - 专用`PWM`
   - 光电编码器
 
 ## 电机控制与反馈
 
 ## 电机状态控制
 
-- 每个电机独立的 GPIO
+- 每个电机独立的`GPIO`
 
-## PWM
+## `PWM`
 
 - 两个独立的计数器，馈给每个电机
 
 ## 光电编码器
 
-- 每个编码器一个 GPIO，作为中断
+- 每个编码器一个`GPIO`，作为中断
 - 仅计数器在中断上下文中处理，其余
 
 ### 障碍传感器
 
 蝙蝠式：发送脉冲，等待回声 [8]
 
-2cm - 400cm 范围
+`2cm` - `400cm` 范围
 
-15 度孔径
+`15`度孔径
 
 ![](img/7ec5697ddec474d4779eb00cd3a3db77_25_0.png)
 
@@ -286,55 +275,51 @@ TCST21103 [1]
 
 ## 运行微控制器
 
-main() 程序
+`main()`程序
 
 - 带有函数的主循环
 - 中断处理
 
-## 8位 RTOS
+## 8位`RTOS`
 
 - 中断处理
 - 任务调度
 - 信号量
-- 邮箱箱
+- 邮箱
 
 ### RTOS 选择
 
-### FreeRTOS [4]
+### `FreeRTOS` [4]
 
-### ChibiOS [5]
+### `ChibiOS` [5]
 
 ![](img/7ec5697ddec474d4779eb00cd3a3db77_28_0.png)
 
 ![](img/7ec5697ddec474d4779eb00cd3a3db77_28_1.png)
 
-- 非商业 GPLv3
-- 仅适用于 ATMMega323，但不适用于 ATMMega328p
-- 有许多（大多已失效）非官方移植到 Mini Pro
+- 非商业`GPLv3`
+- 仅适用于`ATMMega323`，但不适用于`ATMMega328p`
+- 有许多（大多已失效）非官方移植到`Mini` `Pro`
 - 内存占用并不小。
 
-- 非商业 GPLv3
-- Mini Pro 的核心 BSP
+- 非商业`GPLv3`
+- `Mini` `Pro`的核心`BSP`
 - 内存占用小。
 
-## I2C 开发与调试
+## `I2C`开发与调试
 
 硬件工具总结：
 
-- 硬件调试器/烧录器 - AVR Dragon
-- 总线低级协议分析器/监听器 - Bus Pirate
-- 逻辑分析仪 - SigRok + Pulseview
-- USB 示波器 - Hantek + Openhantek
+- 硬件调试器/烧录器 - `AVR` `Dragon`
+- 总线低级协议分析器/监听器 - `Bus` `Pirate`
+- 逻辑分析仪 - `Sigrok` + `Pulseview`
+- `USB`示波器 - `Hantek` + `Openhantek`
 
-来自 ELC NA 2016 的 I2C 完整论文 [6]。
+来自`ELC` `NA` `2016`的`I2C`完整论文 [6]。
 
+## `I2C`高层协议调试
 
-
-
-
-## I2C 高层协议调试
-
-需要创建自定义工具，用于对协议和 API 实现进行非复杂的测试。
+需要创建自定义工具，用于对协议和`API`实现进行非复杂的测试。
 
 ![](img/7ec5697ddec474d4779eb00cd3a3db77_30_0.png)
 
@@ -342,29 +327,30 @@ main() 程序
 
 ### 需求
 
-- 必须能够运行 Linux
+- 必须能够运行`Linux`
 - 低功耗
-- I2C 接口 - 主设备 (master)
-- WiFi 接口
+- `I2C`接口 - 主设备(`master`)
+- `WiFi`接口
 - 紧凑
-- USB OTG/主模式
+- `USB` `OTG`/主模式
 
 ### 主板选择
 
 ### 选项
 
-- **Intel Edison [9]**
+- **`Intel` `Edison` [9]**
   - 优点：强大、小巧。
-  - 缺点：价格 SS$，模块价格 $$
+  - 缺点：价格`SS$`，模块价格`$$`
 
-- **Next Thing CHIP [10]**
+- **`Next` `Thing` `CHIP` [10]**
   - 优点：便宜
   - 缺点：延迟交付
 
-- **Intel Joule [11]**
+- **`Intel` `Joule` [11]**
   - 优点：强大
-  - 缺点：价格 $$$$,$
-Geppetto PCB 价格 $$$$
+  - 缺点：价格`$$$$,$`
+
+`Geppetto` `PCB`价格`$$$$`
 
 ![](img/7ec5697ddec474d4779eb00cd3a3db77_32_0.png)
 
@@ -373,8 +359,8 @@ Geppetto PCB 价格 $$$$
 - 加速度计
 - 侧光流摄像头
 - 计算机视觉
-- GPS
-- 激光雷达 (LIDAR)
+- `GPS`
+- 激光雷达(`LIDAR`)
 - 移植到四旋翼飞行器
 
 ## 问题？
@@ -385,15 +371,14 @@ Geppetto PCB 价格 $$$$
 
 ## 参考文献
 
-- [1] http://www.aldatasheet.com/datasheet-pdf/pdf/26411/VISHAY/TCST2103.html
-- [2] http://forum.makeblock.cc/t/the-review-of-dc-motor-drivers-I298n-tb6612fng-and-lv8406t/372
-- [3] https://www.sparkfun.com/products/11113
-- [4] http://www.freertos.org/
-- [5] http://www.chibios.org/dokuwiki/doku.php
-- [6] http://events.linuxfoundation.org/sites/events/slides/ELC%202016%20-%20I2C%20hacking%20demystified_0.pdf
-- [7] http://www.ti.com/product/LM2596
-- [8] http://www.micropik.com/PDF/HCSR04.pdf
-- [9] http://www.intel.com/content/www/us/en/do-it-yourself/edison.html
-- [10] https://getchip.com/
+- [1] <http://www.aldatasheet.com/datasheet-pdf/pdf/26411/VISHAY/TCST2103.html>
+- [2] <http://forum.makeblock.cc/t/the-review-of-dc-motor-drivers-I298n-tb6612fng-and-lv8406t/372>
+- [3] <https://www.sparkfun.com/products/11113>
+- [4] <http://www.freertos.org/>
+- [5] <http://www.chibios.org/dokuwiki/doku.php>
+- [6] <http://events.linuxfoundation.org/sites/events/slides/ELC%202016%20-%20I2C%20hacking%20demystified_0.pdf>
+- [7] <http://www.ti.com/product/LM2596>
+- [8] <http://www.micropik.com/PDF/HCSR04.pdf>
+- [9] <http://www.intel.com/content/www/us/en/do-it-yourself/edison.html>
+- [10] <https://getchip.com/>
 - [11].
-

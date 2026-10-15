@@ -1,91 +1,67 @@
+
 # Python：完全手册 - Python 用户必备指南 - 立即精通 Python！第一版
-
-
-
-
-
-
-
 
 ![](img/c72194f2c3aec198936695a665a5167c_0_0.png)
 
-
 # 欢迎来到 Python
 
 Python 是一种多功能语言，它的流行日益并不令人意外。它与日常语言的相似性使其成为树莓派的完美伙伴，而树莓派通常是实际编程的第一步。但不要被它对初者的友好所迷惑——Python 有许多更高级的功能。在本杂志中，你将学习如何使用 Python 编程，发现奇的项目来提高理解，并寻找使用 Python 增强计算体验的方法。你还将创建有趣的项目，包括编写四旋无人机和从树莓派发送短信。让我们开始编码吧！
 
 ![](img/c72194f2c3aec198936695a665a5167c_2_0.png)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ![](img/c72194f2c3aec198936695a665a5167c_4_0.png)
 
-
-
 ![](img/c72194f2c3aec198936695a665a5167c_5_0.png)
+
 ![](img/c72194f2c3aec198936695a665a5167c_5_1.png)
 
-
 ![](img/c72194f2c3aec198936695a665a5167c_5_2.png)
+
 ![](img/c72194f2c3aec198936695a665a5167c_5_3.png)
+
 ![](img/c72194f2c3aec198936695a665a5167c_5_4.png)
+
 ![](img/c72194f2c3aec198936695a665a5167c_5_5.png)
-# 从 Python 开始
 
+## 从 Python 开始
 
-
-
-
-
-- **122 编写机器人** 使用 Twitter-API
-
-
+- **122 编写机器人** 使用 `Twitter-API`
 
 ![](img/c72194f2c3aec198936695a665a5167c_6_0.png)
+
 ![](img/c72194f2c3aec198936695a665a5167c_6_1.png)
+
 ![](img/c72194f2c3aec198936695a665a5167c_6_2.png)
 
-# 欢迎来到 Python
+## 欢迎来到 Python
 
 Python 是一种多功能语言，它的流行日益并不令人意外。它与日常语言的相似性使其成为树莓派的完美伙伴，而树莓派通常是实际编程的第一步。但不要被它对初者的友好所迷惑——Python 有许多更高级的功能。在本杂志中，你将学习如何使用 Python 编程，发现奇的项目来提高理解，并寻找使用 Python 增强计算体验的方法。你还将创建有趣的项目，包括编写四旋无人机和从树莓派发送短信。让我们开始编码吧！
 
 ![](img/c72194f2c3aec198936695a665a5167c_2_0.png)
 
-# Hello World
+## Hello World
 
-第一行以 shebang（符号 #!）开头，随后是 Python 解释器的路径。程序加载器使用此行来确定后续行是否需要解释。如果你在像 IDLE 这样的 IDE 中运行，不需要这样做。
+第一行以 shebang（符号 `#!`）开头，随后是 Python 解释器的路径。程序加载器使用此行来确定后续行是否需要解释。如果你在像 `IDLE` 这样的 IDE 中运行，不需要这样做。
 
-解释器实际读取的代码只有一行。我们通过在调用函数后的括号中将 Hello World 传递给 print 函数。Hello World 没有加引号，以表示它是一个字面量，而不应被解释为源代码。正如我们预期的，Python 中的 print 函数会打印传递它的任何值。
+解释器实际读取的代码只有一行。我们通过在调用函数后的括号中将 Hello World 传递给 `print` 函数。Hello World 没有加引号，以表示它是一个字面量，而不应被解释为源代码。正如我们预期的，Python 中的 `print` 函数会打印传递它的任何值。
 
-你可以使用键组合 Ctrl+O 然后按 Enter 在 nano 中保存文件的更改。使用 Ctrl+X 退出 nano。
+你可以使用键组合 `Ctrl+O` 然后按 Enter 在 `nano` 中保存文件的更改。使用 `Ctrl+X` 退出 `nano`。
 
 ```python
 #!/usr/bin/env python2
 print("Hello World")
 ```
 
-你可以通过在文件名前加 / 来运行 Hello World 程序——在这种情况下你输入：
-hello_world.py
+你可以通过在文件名前加 `/` 来运行 Hello World 程序——在这种情况下你输入：
+
+`hello_world.py`
 
 ```
 [Liam@liam-laptop Python]$ ./hello_world.py
 Hello World
 ```
 
-# 变量和数据类型
+## 变量和数据类型
 
 变量是源代码中的名称，它与内存区域关联，可以使用该区域存储数据，然后在代码中调用它。数据可以是许多类型之一，包括：
 
@@ -100,17 +76,13 @@ Hello World
 
 > "变量与内存区域关联，可以使用该区域存储数据"
 
+### 入门
 
-
-
-
-## 入门
-
-## 从 Python 入门
+### 从 Python 入门
 
 提示
 
-此时，值得解释的是，Python 文件中任何跟在 # 字符后面的文本都会被解释器忽略。这样做是为了让你代码中编写注释。
+此时，值得解释的是，Python 文件中任何跟在 `#` 字符后面的文本都会被解释器忽略。这样做是为了让你代码中编写注释。
 
 除了这些主要数据类型，还有序列类型（从技术上讲，字符串是一种序列类型，但由于它非常常用，我们将其归为主要数据类型）；
 
@@ -123,19 +95,19 @@ Hello World
 
 了解 Python 的字典（dictionary）类型也会很有用。字典是一种映射数据类型。这意味着你使用该值对应的键（key）来访问字典中存储的值，这与你使用列表的方式不同。在列表中，你使用元素的索引（表示该元素在列表中位置的数字）来访问列表的元素。
 
-让我们编写一个程序，用来演示如何使用变量和不同的数据类型。此时值得注意的是，在 Python 中你并不总是需要指定数据类型。请在任何你喜欢的编辑器中创建此文件。只要你记得让文件具有可执行性，一切都能正常工作。我们将该文件命名为 variables.py。
+让我们编写一个程序，用来演示如何使用变量和不同的数据类型。此时值得注意的是，在 Python 中你并不总是需要指定数据类型。请在任何你喜欢的编辑器中创建此文件。只要你记得让文件具有可执行性，一切都能正常工作。我们将该文件命名为 `variables.py`。
 
 ![](img/c72194f2c3aec198936695a665a5167c_11_0.png)
 
-## 解释型与编译型语言
+### 解释型与编译型语言
 
 | 像 Python 这样的解释型语言是指源代码每次程序运行时都会转换为机器码并执行的语言。 | 这与 C 等编译型语言不同，编译型语言源代码只会被转换为一次机器码——生成的机器码会在每次程序运行时执行。 |
 
-## 从 Python 入门
+### 从 Python 入门
 
-## 入门
+### 入门
 
-## 完整代码列表
+### 完整代码列表
 
 ```python
 #!/usr/bin/env python2
@@ -146,7 +118,7 @@ hello_bool = True
 hello_tuple = (21, 32)
 ```
 
-下一行创建了一个整数变量 hello_int，值为 21。注意它不需要被放在引号中。
+下一行创建了一个整数变量 `hello_int`，值为 21。注意它不需要被放在引号中。
 
 同样的原理也适用于元组。我们以如下方式创建元组。
 
@@ -163,13 +135,13 @@ hello_list.append("a")
 hello_list.append("list")
 ```
 
-也可以通过以下方式创建相同的列表：第一行创建一个空列表，接下来的行使用列表类型的 append 函数向列表中添加元素。在处理高级字符串时，这种使用 # 列表的方法并不真的那么有用，但在处理动态数据（如用户 # 输入）时可能很有用。这个列表将在无任何警告的情况下覆盖第一个列表。
+也可以通过以下方式创建相同的列表：第一行创建一个空列表，接下来的行使用列表类型的 `append` 函数向列表中添加元素。在处理高级字符串时，这种使用 `#` 列表的方法并不真的那么有用，但在处理动态数据（如用户 `#` 输入）时可能很有用。这个列表将在无任何警告的情况下覆盖第一个列表。
 
 ![](img/c72194f2c3aec198936695a665a5167c_12_0.png)
 
-## 入门
+### 入门
 
-## 从 Python 入门
+### 从 Python 入门
 
 顺便我们也创建一个字典。注意我们对齐下面的冒号以使代码整洁，因为我们使用了之前列表相同的变量名。
 
@@ -177,9 +149,9 @@ hello_list.append("list")
 hello_dict = { "first_name": "Liam", "last_name": "Fraser", "eye_colour": "Blue" }
 ```
 
-## 访问集合内部的一些元素
+### 访问集合内部的一些元素
 
-获取 hello_list 中的最后一个字符串并在末尾添加一个感叹号。“list”字符串是列表中的第 5 个元素。然而，Python 中的索引是从0 开始的，这意味着第一个元素的索引为 0。
+获取 `hello_list` 中的最后一个字符串并在末尾添加一个感叹号。“list”字符串是列表中的第 5 个元素。然而，Python 中的索引是从0 开始的，这意味着第一个元素的索引为 0。
 
 注意当我们打印该元素时，会有两个感叹号：
 
@@ -193,14 +165,17 @@ print(hello_list[4])
 
 记得元组是不可变的，尽管我们可以像这样访问它们的元素：
 
+
+
 ```python
 print(str(hello_tuple[0]))
 ```
 
 # 我们无法像刚才对列表那样更改这些元素的值
-# 注意在上方使用 str 函数是为了在打印之前显式地将元组内部的整数值转换为字符串。
 
-让我们使用 hello_dict 中的数据创建一个句子：
+# 注意在上方使用 `str` 函数是为了在打印之前显式地将元组内部的整数值转换为字符串。
+
+让我们使用 `hello_dict` 中的数据创建一个句子：
 
 ```python
 print(hello_dict["first_name"] + " " + hello_dict["last_name"] + " " + hello_dict["eye_colour"])
@@ -218,15 +193,15 @@ print("{0} {1} has {2} eyes".format(hello_dict["first_name"],
 
 ## 从 Python Python
 
-## 入门
+### 入门
 
-## 缩进详解
+### 缩进详解
 
 如前所述，缩进决定了语句属于哪个块。在 Python 中缩进是强制的，而在其他语言中则使用大括号来组织代码块。通常使用四个空格表示缩进。你可以使用制表符，但制表符并没有很好的定义，尤其是当你打开多个编辑器时。
 
 ![](img/c72194f2c3aec198936695a665a5167c_14_0)
 
-## 控制结构
+### 控制结构
 
 在程序编程中，控制结构是指任何可以改变代码执行路径的语句。例如，一个在数字小于5时结束程序的控制结构看起来如下：
 
@@ -240,12 +215,13 @@ else:
     print("int_condition was >= 6")
 ```
 
-代码路径将取决于整数 int_condition 的值。if 块中的代码只有在条件为真时执行。import 语句用于加载系统库；后者提供了 exit 函数，允许退出程序。注意缩进（在这种情况下为每层四个空格）用于指示代码块属于语句。if 语句可能是最常用的结构。其他结构包括你在使用 Python 时应该注意的以下项：
+代码路径将取决于整数 `int_condition` 的值。`if` 块中的代码只有在条件为真时执行。`import` 语句用于加载系统库；后者提供了 `exit` 函数，允许退出程序。注意缩进（在这种情况下为每层四个空格）用于指示代码块属于语句。`if` 语句可能是最常用的结构。其他结构包括你在使用 Python 时应该注意的以下项：
 
-- For 语句，允许你遍历集合中的项，或重复执行某些代码
-- While 语句，在条件为真时持续运行的循环
+- `For` 语句，允许你遍历集合中的项，或重复执行某些代码
 
-我们将编写一个接受用户输入的程序，以演示控制结构是如何工作的。将其命名为 construct.py。for 循环使用的是当前值的本地副本，这意味着循环内部的任何更改都不会对列表产生影响。然而，while 循环直接访问列表元素，因此如果你需要，可以在那里更改列表。我们将在文章后面的部分更详细讨论变量作用范围。程序如下：
+- `While` 语句，在条件为真时持续运行的循环
+
+我们将编写一个接受用户输入的程序，以演示控制结构是如何工作的。将其命名为 `construct.py`。`for` 循环使用的是当前值的本地副本，这意味着循环内部的任何更改都不会对列表产生影响。然而，`while` 循环直接访问列表元素，因此如果你需要，可以在那里更改列表。我们将在文章后面的部分更详细讨论变量作用范围。程序如下：
 
 ```bash
 $liam@liam-laptop Python$ ./construct.py
@@ -269,13 +245,9 @@ Using a while loop
 
 ![](img/c72194f2c3aec198936695a665a5167c_15_0.png)
 
-
-
-
-
 ## 开始上手
 
-## 代码列表
+### 代码列表
 
 ```python
 #!/usr/bin/env python2
@@ -306,16 +278,16 @@ count = 0
 ```
 
 - 我们在列表中需要的整数数量
+
 - 用于存储整数的列表
+
 - 这些变量用于跟踪我们当前拥有的整数数量
 
 ![](img/c72194f2c3aec198936695a665a5167c_16_0.png)
 
-## 开始上手
+### 开始学习 Python
 
-## 开始学习 Python
-
-如果上述操作成功，则 isint 将设置为 True：isint = True
+如果上述操作成功，则 `isint` 将设置为 `True`：`isint = True`
 
 ```python
 # 继续询问输入整数，直到我们达到
@@ -333,8 +305,11 @@ except:
 ```
 
 # 只有在我们获得整数时才继续。否则，我们将再次循环
-# 注意在下面我使用了 ==，这与以下不同
+
+# 注意在下面我使用了 `==`，这与以下不同
+
 # 单等号是赋值运算符，而双等
+
 # 号是比较运算符。
 
 ```python
@@ -348,7 +323,7 @@ if isint == True:
 count += 1
 ```
 
-此时，用户已经放弃，或者我们已经有一个满了整数的列表。我们可以通过两种方式遍历这些内容。第一种是使用 for 循环
+此时，用户已经放弃，或者我们已经有一个满了整数的列表。我们可以通过两种方式遍历这些内容。第一种是使用 `for` 循环
 
 ```python
 print("使用 for 循环")
@@ -369,13 +344,13 @@ while count < total:
     count += 1
 ```
 
-## 关于 Python 列表
+### 关于 Python 列表
 
 Python 列表类似于其他语言中的数组。列表（或元组）可以包含数据类型，这在其他语言的数组中通常是不可能的。出于如此，我们建议你只在列表中存储相同类型的数据。由于列表中数据处理方式的性质，这几乎总是应该是这样的。
 
 ![](img/c72194f2c3aec198936695a665a5167c_18_0.png)
 
-## 函数与变量作用域
+### 函数与变量作用域
 
 编程中的函数用于将过程拆分为更小的块。这通常会让代码变得易易读得多。如果设计得当，函数还可以被复用。Python 中的变量始终通过值传递传递，这意味着变量的副本被传递给函数，该副本仅在函数的作用域内有效。在函数内部对原始变量的任何更改都将被丢弃。然而，函数也可以返回值，所以这不是问题。函数用关键字 `def` 定义，后面紧跟函数名。任何可以传递的变量都放在函数名后的括号中。多个变量之间用逗号分隔。括号中赋予变量的名称是它们在函数作用域内拥有的名称，无论传递给函数的变量被称为什么。让我们实际操作一下。对应程序的输出如下：
 
@@ -403,7 +378,7 @@ def modify_string_return(original):
     return original
 ```
 
-我们现在处于 modify_string 函数的作用域之外了，因为我们减少了缩进层级
+我们现在处于 `modify_string` 函数的作用域之外了，因为我们减少了缩进层级
 
 此段代码中测试字符串不会被改变
 
@@ -411,6 +386,8 @@ def modify_string_return(original):
 test_string = "这是一个测试字符串"
 modify_string(test_string)
 ```
+
+
 
 ```python
 test_string = "这是一个测试字符串"
@@ -429,13 +406,6 @@ result = my_function()
 print(result)
 ```
 
-
-
-
-
-
-
-
 奠定基础并构建你的知识
 
 既然你已经迈出了 Python 的第一步，现在是时候利用这些知识来编写代码了。在本节中，你将了解到如何为 Android 操作系统（第32页）和全球网（第26页）开始编写应用程序。这些简单易懂的教程将帮助你巩固所学会的 Python 语言，同时开发一项在当前技术市场上非常有用的技能。最后，我们将为你提供 50 个核心 Python 技巧（第40页），帮助你快速增加知识储备。
@@ -444,23 +414,22 @@ print(result)
 
 ![](img/c72194f2c3aec198936695a665a5167c_24_0.png)
 
-
-使用 Python 开发 Web 应用
+## 使用 Python 开发 Web 应用
 
 ### 你需要准备的……
 
-- Python 2.7: https://www.python.org/download/release-2.7/
-- Django 版本 1.4: https://www.djangoproject.com/
-
+- `Python 2.7`: https://www.python.org/download/release-2.7/
+- `Django` 版本 1.4: https://www.djangoproject.com/
 
 Python 提供了一种快速简单构建应用程序的方法，包括 Web 应用。了解如何使用它来构建一个功能完备的 Web 应用
 
 Python 以简单性和强大的功能而闻名。目前，它已经先进到几乎没有什么是 Python 做不到的，而征服网络只是其中的可能性之一。当你使用 Python 进行 Web 开发时，你可以获得海量的模块库和社区支持——请充分利用它们。
 
-Web 开发可以通过许多不同的方式实现，从使用原始的 CGI 模块到利用成熟的 Web 框架。使用后者是使用 Python 构建 Web 应用最流行的方法，因为它允许你构建应用程序而无需担心所有底层的实现细节。Python 有许多 Web 框架可用，例如 Django、TurboGears 和 Web2Py。在本教程中，我们将使用我们目前的首选方案：Django。
+Web 开发可以通过许多不同的方式实现，从使用原始的 CGI 模块到利用成熟的 Web 框架。使用后者是使用 Python 构建 Web 应用最流行的方法，因为它允许你构建应用程序而无需担心所有底层的实现细节。Python 有许多 Web 框架可用，例如 `Django`、`TurboGears` 和 `Web2Py`。在本教程中，我们将使用我们目前的首选方案：`Django`。
 
+### 01 创建项目
 
-01 `django-admin.py` 文件用于创建新的 Django 项目。让我们为我们的问题跟踪器项目创建一个……
+`django-admin.py` 文件用于创建新的 Django 项目。让我们为我们的问题跟踪器项目创建一个……
 
 在 Django 中，项目（project）代表网站及其设置。而应用程序（application）代表网站的特定功能，如博客或标签。这种方法的好处是，你的应用程序变得可移植，并且可以以很小的代价与其他 Django 网站集成。
 
@@ -470,17 +439,19 @@ $ django-admin.py startproject issueTracker
 
 将创建一个目录。这将作为你包含 Django 的开发 Web 服务器的根。在项目目录下，你将找到以下项：
 
-- **manage.py**: 用于操作项目的 Python 脚本。
-- **issueTracker**: 项目的 Python 包（一个包含 `__init__.py` 文件的项目目录）。
+- `manage.py`: 用于操作项目的 Python 脚本。
+- `issueTracker`: 项目的 Python 包（一个包含 `__init__.py` 文件的项目目录）。
 
 ![](img/c72194f2c3aec198936695a665a5167c_25_0.png)
 
 该包包含了你的项目设置和配置数据。
+
 - `issueTracker/settings.py`: 该文件包含项目的所有配置。
 - `issueTracker/urls.py`: 该文件包含 URL 映射。
 - `wsgi.py`: WSGI 兼容 Web 服务器提供你项目的入口点。只有在你部署项目时才需要它。在本教程中我们不需要它。
 
 现在更新路径选项：
+
 ```python
 TEMPLATE_DIRS = (
     getabspath('templates'),
@@ -491,6 +462,7 @@ MEDIA_URL = '/media/'
 ```
 
 我们还需要在配置文件中启用它：
+
 ```python
 INSTALLED_APPS = (
     'django.contrib.admin',
@@ -500,9 +472,12 @@ INSTALLED_APPS = (
 
 现在我们将为你的站点启用管理界面。这是 Django 的一个功能，允许自动创建网站的管理界面，并用于添加和管理网站的内容。取消以下行的注释：
 
+### 02 配置项目
 
-02 在开始开发应用程序之前，根据我们的需求配置 Django 项目。编辑 `issueTracker/settings.py` 如下（仅显示需要修改的部分）：
+在开始开发应用程序之前，根据我们的需求配置 Django 项目。编辑 `issueTracker/settings.py` 如下（仅显示需要修改的部分）：
+
 数据库设置：我们使用 SQLite3 作为数据库系统。
+
 注意：文本编辑表示新代码或更新后的代码。
 
 ```python
@@ -512,8 +487,9 @@ INSTALLED_APPS = (
 },
 ```
 
+### 03 创建应用
 
-03 在这一步中，我们为网站创建主应用 `issuedis`。为了实现这一点，我们将使用 manage 脚本：
+在这一步中，我们为网站创建主应用 `issuedis`。为了实现这一点，我们将使用 manage 脚本：
 
 ```bash
 $ python manage.py startapp issuedis
@@ -540,8 +516,9 @@ INSTALLED_APPS = (
 )
 ```
 
+### 04 定义数据模型
 
-04 这部分是我们为应用定义数据模型。请查看注释以理解这里发生了什么。
+这部分是我们为应用定义数据模型。请查看注释以理解这里发生了什么。
 
 ```python
 from django.db import models
@@ -583,8 +560,11 @@ class IssueAdmin(models.ModelAdmin):
 admin.register(Issue, IssueAdmin)
 ```
 
+### 05 启用管理站点
 
-05 管理站点已经启用，但我们需要在 `urls.py` 中启用它。如下所示更新 `urls.py` 文件：
+管理站点已经启用，但我们需要在 `urls.py` 中启用它。如下所示更新 `urls.py` 文件：
+
+
 
 ```python
 from django.conf.urls import path
@@ -597,7 +577,6 @@ urlpatterns = [
 ]
 ```
 
-
 06 Django 包含一个内置 Web 服务器，对于测试和调试 Django 应用程序非常方便。让我们看看我们的管理界面……启动 Web 服务器：
 
 ```bash
@@ -606,35 +585,31 @@ $ python manage.py runserver
 
 如果你的代码没有错误，服务器应该在 8000 端口可用。要启动管理界面，请访问 `http://localhost:8000/admin`。系统会要求登录。输入用户名和密码。
 
-
-
-
-
 ## 使用 Python 开发 Web 应用
 
-# 介绍 Python
+### 介绍 Python
 
 ![](img/c72194f2c3aec198936695a665a5167c_28_0.png)
 
 ![](img/c72194f2c3aec198936695a665a5167c_28_1.png)
 
 在建模应用的同时进行开发吗？它们没有出现在这里是因为它们不支持被暴露给用户。
-`created_` 将自动设置为创建日期，`modified_` 将自动设置为该问题创建的日期。
 
+`created_` 将自动设置为创建日期，`modified_` 将自动设置为该问题创建的日期。
 
 ```python
 include(admin.site.urls)
 ```
+
 这确保了所有的请求将首先由 ludussices 处理。
 
-另外一点是，owner（所有者）字段会自动填充站点中的所有用户。
+另外一点是，`owner`（所有者）字段会自动填充站点中的所有用户。
 
 > 此时，管理界面已经可以工作了。我们需要一种方法使用管理界面来显示我们拥的数据。但目前还没有公共界面。让我们现在就创建它。
 
+我们已经在模型中定义了列表来显示 ID、name、status、owner 和 'modified'。你可以通过访问 `http://localhost:8000/admin/ludussices/issue/` 来进入此视图。
 
-我们已经在模型中定义了列表来显示 ID、name、status、owner 和 'modified'。你可以通过访问 http://localhost:8000/admin/ludussices/issue/ 来进入此视图。
-
-在应用目录 (ludussices/urls.py) 中创建一个 py 文件，内容如下：
+在应用目录 (`ludussices/urls.py`) 中创建一个 py 文件，内容如下：
 
 ```python
 # 我们将必须开始编辑主 urls.py (ludussitracker/urls.py)
@@ -644,14 +619,12 @@ urlpatterns = patterns(
 )
 ```
 
-- import patterns, include url
+- `import patterns`, `include url`
 - 使用列表模型
-- 从 models 导入
+- 从 `models` 导入
 - 包含所有内容的字典
 
 ![](img/c72194f2c3aec198936695a665a5167c_28_2.png)
-
-
 
 ```python
 # ludicules 中的对象
@@ -660,8 +633,9 @@ info = {
 }
 ```
 
-# 我们在 Python 代码之外使用列表
-# 我们正在使用列表-详情通用视图 (list-detail generic view)
+### 我们在 Python 代码之外使用列表
+
+### 我们正在使用列表-详情通用视图 (list-detail generic view)
 
 ```python
 # listdetail 是我们正在使用的视图名称
@@ -677,23 +651,24 @@ urlpatterns = patterns(
     })
 ```
 
-为了显示列表和详情，我们使用了 Django 的特色通用视图。在这种情况下，它们允许我们创建列表视图和详情视图。这些视图会在使用 list.html 和 detail.html 模板时应用。在接下来的步骤中，我们将创建模板文件。
-
+为了显示列表和详情，我们使用了 Django 的特色通用视图。在这种情况下，它们允许我们创建列表视图和详情视图。这些视图会在使用 `list.html` 和 `detail.html` 模板时应用。在接下来的步骤中，我们将创建模板文件。
 
 09 在这一步中，我们将创建模板和媒体目录。已经提到模板目录为
+
 `TEMPLATE_DIRS =`
 
 ```python
 path('templates')
 ```
 
-它对应 ludussitracker/ludussitracker/templates/。由于我们是解耦，我们将从应用页面访问模板，完整路径为 ludussitracker/ludussitracker/templates/。在你的项目文件夹中创建这些文件夹。此外，创建 ludussitracker/ludussitracker/media/ 来处理 CSS 文件。你可以从代码文件夹的 resources 目录提供 css。为了从该目录提供文件，请使其可用。打开 settings.py 并在 ludussitracker/ludussitracker/urls.py 中添加这些行：
+它对应 `ludussitracker/ludussitracker/templates/`。由于我们是解耦，我们将从应用页面访问模板，完整路径为 `ludussitracker/ludussitracker/templates/`。在你的项目文件夹中创建这些文件夹。此外，创建 `ludussitracker/ludussitracker/media/` 来处理 CSS 文件。你可以从代码文件夹的 resources 目录提供 css。为了从该目录提供文件，请使其可用。打开 `settings.py` 并在 `ludussitracker/ludussitracker/urls.py` 中添加这些行：
 
 ```python
 # 在 Django 中，我们从 ludussitracker/ludussitracker/templates/base.html 开始。将其视为主模板，可以由从属所有者启用。
 ```
 
 `ludussitracker/ludussitracker/templates/base.html`
+
 ```html
 <!DOCTYPE HTML>
 <html PUBLIC "-//http://www.w3.org/TR/HTML1/Strict//EN" "http://www.w3.org/TR/html11-strict.">">
@@ -732,13 +707,11 @@ urlpatterns = patterns(
 ))
 ```
 
-
 10 在这一步中，我们将创建
-来自 ludussitracker/ludussitracker/templates/ 的
 
-为了显示列表和详情，我们使用了 Django 的特色通用视图。在这种情况下，它们允许我们创建列表视图和详情视图。这些视图会在使用 list.html 和 detail.html 模板时应用。在接下来的步骤中，我们将创建模板文件。
+来自 `ludussitracker/ludussitracker/templates/` 的
 
-
+为了显示列表和详情，我们使用了 Django 的特色通用视图。在这种情况下，它们允许我们创建列表视图和详情视图。这些视图会在使用 `list.html` 和 `detail.html` 模板时应用。在接下来的步骤中，我们将创建模板文件。
 
 ![](img/c72194f2c3aec198936695a665a5167c_30.png)
 
@@ -752,17 +725,13 @@ urlpatterns = patterns(
 
 `{{ status }}` `{{ owner }}` `{{ status }}` `{{ owner }}`
 
-我们现在使用 Django 的特色通用视图。在这种情况下，它们允许我们创建列表视图和详情视图。这些视图会在使用 list.html 和 detail.html 模板时应用。在接下来的步骤中，我们将创建模板文件。
-
-
-
-
+我们现在使用 Django 的特色通用视图。在这种情况下，它们允许我们创建列表视图和详情视图。这些视图会在使用 `list.html` 和 `detail.html` 模板时应用。在接下来的步骤中，我们将创建模板文件。
 
 
 
 整个游戏逻辑。我们专门将其设计为 `FloatLayout` 的子类，因为这种特殊的布局能够根据其自身的位置和大小对其子组件进行定位和缩放——无论我们在哪里运行它或如何调整窗口大小，它都能正确地放置所有的游戏对象。
 
-小组件画布（canvas），我们在这里可以使用它来绘制每个小组件形状：
+小组件画布（`canvas`），我们在这里可以使用它来绘制每个小组件形状：
 
 可以设置的不同属性，例如矩形的 `pos` 和 `size`，你可以在线查看 Kivy 文档以了解所有不同的可能性。最大的优势是，尽管我们仍然声明了简单的 canvas 指令，但 kv 语言足以检测到我们引用了哪些 Kivy 属性，并在它们更新时（小组件移动或调整大小时）自动跟踪它们。移动以跟随这个！
 
@@ -838,8 +807,6 @@ BreakoutApp().run()
 from kivy.properties import ListProperty, NumericProperty, ObjectProperty, StringProperty
 ```
 
-
-
 ```python
 class Game(FloatLayout):
     def __init__(self, **kwargs):
@@ -904,8 +871,6 @@ class Game(FloatLayout):
                 })
 ```
 
-
-
 这些用于与触摸或鼠标输入的函数在检测到输入时会自动调用，你可以根据触摸做出任何喜欢的操作。
 
 ```python
@@ -930,17 +895,15 @@ def update(self, dt):
     self.position.x += (50 * dt * dir[self.direction])
 ```
 
-
-
-
-
 # 介绍 Python
 
-# 使用 Python 构建 Android 应用程序
+## 使用 Python 构建 Android 应用程序
+
+
 
 球击中了玩家屏幕的底部，现在我们来添加一些游戏结束代码来处理这些情况（图 08）。并将图 09 所示的代码添加到 `breakout.py` 中。这应该能完全处理失败或胜利的情况，弹出一个带有适当消息的弹出框，并提供一个重试的按钮。最后，我们必须处理当球击中方块时销毁球（图 10）。
 
-这完全涵盖了所有最后的条件，通过 kivy 的 `build_collide_method` 比较它们的边界框（pos 和 size）来检查碰撞。反弹将取决于球穿透了多远距离，因为我们将告诉它已经击中了方块（Block）。
+这完全涵盖了所有最后的条件，通过 kivy 的 `build_collide_method` 比较它们的边界框（`pos` 和 `size`）来检查碰撞。反弹将取决于球穿透了多远距离，因为我们将告诉它已经击中了方块（`Block`）。
 
 大功告成了，你可以运行代码来玩你简单的打砖块游戏。目前它非常简单，但希望你能看到为不同类型的方块和增强道具添加额外行为的不同方法——你可以添加生命值系统、更复杂的球拍/球交互，或者构建一个带有菜单和设置界面的完整游戏界面。
 
@@ -1025,13 +988,9 @@ g = Game()
 if platform() != 'android':
 ```
 
-
-
-
-
 # 介绍 Python
 
-50 个 Python 技巧
+## 50 个 Python 技巧
 
 ![](img/c72194f2c3aec198936695a665a5167c_39_0.png)
 
@@ -1044,6 +1003,7 @@ Python 是一种让你工作更快速、更有效地整合系统的编程语言�
 ### 运行 Python 脚本
 
 - 01 在大多数的 UNIX 系统上，你可以从命令行运行 Python 脚本。
+
 ```bash
 $ python myprogram.py
 ```
@@ -1053,13 +1013,15 @@ $ python myprogram.py
 - 02 交互式解释器让你能够轻松尝试编程的第一步并使用所有的 Python 命令。你只需要逐一个输入每个命令，结果会立即显示。
 
 可以使用以下命令启动 Python 解释器：
+
 ```bash
 $ python
 Kunal@ubuntu:~$ Python 2.6.2 (release-2$main, Apr 19 2009, 01:56:41) [GCC 4.3] on linux
 Type "help", "copyright", "credits" or "license" 获取更多信息.
 >>> commands here>>
 ```
-在本文中，所有的 >>> 符号都表示在 Python 提示符处输入。
+
+在本文中，所有的 `>>>` 符号都表示在 Python 提示符处输入。
 
 记住，Python 对此非常严谨——如果你接收到任何错误，请修正制表符间进。
 
@@ -1073,11 +1035,12 @@ Type "help", "copyright", "credits" or "license" 获取更多信息.
 
 ## == 和 = 运算符
 
-- 05 Python 使用 '==' 进行比较，使用 '!=' 进行不等于赋值：Python 不支持内联赋值，因此在你实际上想要比较它时，没有意外赋值的可能。
+- 05 Python 使用 `==` 进行比较，使用 `!=` 进行不等于赋值：Python 不支持内联赋值，因此在你实际上想要比较它时，没有意外赋值的可能。
 
 ## 字符串拼接
 
-- 06 你可以使用 ' +' 来拼接字符串。
+- 06 你可以使用 `+` 来拼接字符串。
+
 ```python
 >>> print 'kunal'+'al'
 kunal
@@ -1085,7 +1048,7 @@ kunal
 
 ## __init__ 方法
 
-- 07 当类的实例创建时，会立即运行 __init__ 方法。该方法用于对你的对象进行任何你想要的初始化：__init__ 类似于 C++ 或 Java 中的构造函数。
+- 07 当类的实例创建时，会立即运行 `__init__` 方法。该方法用于对你的对象进行任何你想要的初始化：`__init__` 类似于 C++ 或 Java 中的构造函数。
 
 示例：
 
@@ -1101,14 +1064,16 @@ Class:
 p = Person('Kunal')
 p.hi()
 ```
+
 输出：
+
 ```
 Hello, my name is Kunal
 ```
 
 ## 模块
 
-- 08 为了让你的程序随着规模的扩大而保持可维护性，你可能想将它们分成几个文件。Python 允许你将多个函数定义放在一个文件中，然后将其作为模块导入使用。这些文件必须具有 .py 扩展名。
+- 08 为了让你的程序随着规模的扩大而保持可维护性，你可能想将它们分成几个文件。Python 允许你将多个函数定义放在一个文件中，然后将其作为模块导入使用。这些文件必须具有 `.py` 扩展名。
 
 ```python
 >> print '\n'.join(mylist)
@@ -1119,6 +1084,7 @@ ham
 ### 向 Python 脚本传递参数
 
 示例：
+
 ```python
 # file_function.py
 def min_max(a,b):
@@ -1133,7 +1099,7 @@ import my_function
 
 ### Python 解释器中的 Tab 补全
 
-- 11 Python 允许你在调用脚本时访问传递给脚本的内容。命令行内容存储在 sys.argv 中。
+- 11 Python 允许你在调用脚本时访问传递给脚本的内容。命令行内容存储在 `sys.argv` 中。
 
 ```python
 import sys
@@ -1142,59 +1108,65 @@ print sys.argv
 
 ### 加载模块和启动
 
-- 15 你可以通过解释你的 .python_file（或 Python 启动时读取的文件）的想法来实现自动补全：
+- 15 你可以通过解释你的 `.python_file`（或 Python 启动时读取的文件）的想法来实现自动补全：
+
+
 
 ```python
 >> import readline
 >> readline.parse_and_bind('tab',complete=''))
 ```
+
 这将使 Python 在你按下 Tab 键时补全部分输入的函数、方法和变量名。
 
-- 12 你可以使用环境变量 PYTHONPATH 定义任何 Python 脚本的模块和命令。你可以将环境变量 PYTHONPATH 设置为一个包含必要模块或命令的文件。
+- `12` 你可以使用环境变量 `PYTHONPATH` 定义任何 Python 脚本的模块和命令。你可以将环境变量 `PYTHONPATH` 设置为一个包含必要模块或命令的文件。
 
 ## Python 文档工具
 
 ### 模块定义名称
 
-- 09 内置函数 'dir()' 用于查找模块定义的名称。它返回一个排序后的字符串列表：
+- `09` 内置函数 `dir()` 用于查找模块定义的名称。它返回一个排序后的字符串列表：
 
 ```python
 >> dir(time)
 >> ['__doc__', '__file__', '__name__', '__package__', 'acctime', 'time', 'daylight', 'gettime', 'localtime', 'mtime', 'sleep', 'strptime', 'struct_time', 'timezone', 'tz']
 ```
 
+### 计算最大值、最小值和和
 
+### 50 个 Python 技巧
 
-
-
-# 计算最大值、最小值和和
-
-# 50 个 Python 技巧
-
-# 介绍 Python
+### 介绍 Python
 
 你可以使用内置函数。
 
-- 27 max: 返回列表中的最大元素：
-- min: 返回列表中的最小元素。
-- sum: 此函数返回列表中所有元素的和。它接受一个可选的第二个参数：求和开始的起始值（默认值为 0）：
+- `27` `max`: 返回列表中的最大元素：
+
+- `min`: 返回列表中的最小元素。
+
+- `sum`: 此函数返回列表中所有元素的和。它接受一个可选的第二个参数：求和开始的起始值（默认值为 `0`）：
 
 一旦你创建了一个数组对象，假设为 `myarray`，你就可以对它应用许多方法。这里有几个重要的方法：
 
-- myarray.count(x): 返回 x 在列表中出现的次数
-- myarray.extend(x): 将 x 附加到数组末尾。
-- myarray.reverse(): 反转数组的顺序。
+- `myarray.count(x)`: 返回 `x` 在列表中出现的次数
+
+- `myarray.extend(x)`: 将 `x` 附加到数组末尾。
+
+- `myarray.reverse()`: 反转数组的顺序。
 
 大写字母
+
 匹配成功！
+
 >>> if re.search("\d", s): print("Match") # 数字类
 
-# 使用 bzip2 (.bz2) 压缩工作
+## 使用 bzip2 (.bz2) 压缩工作
 
 你可以使用 `bzip2` 模块通过 `bzip2` 压缩算法进行读写。
 
-- 33 bzip2.compress() : 用于压缩
-bzip2.decompress() : 用于解压缩 示例：
+- `33` `bzip2.compress()`: 用于压缩
+
+`bzip2.decompress()`: 用于解压缩 示例：
 
 ```
 # File: bz-example.py
@@ -1212,37 +1184,39 @@ MESSAGE = "Kunal is a bad boy"
 >>> print(decompressed)
 ```
 
-# 表示分数
+## 表示分数
 
-28 在 Python 中，使用以下构造函数创建 `Fraction`：
+`28` 在 Python 中，使用以下构造函数创建 `Fraction`：
 
-- Fraction(numerator[,denominator])
+- `Fraction(numerator[,denominator])`
 
-# 执行数学运算
+## 执行数学运算
 
-29 `math` 模块提供了大量的数学函数。这些函数作用于整数和浮点数，复数除外。对于复数，使用名为 'cmath' 的模块。
+`29` `math` 模块提供了大量的数学函数。这些函数作用于整数和浮点数，复数除外。对于复数，使用名为 `'cmath'` 的模块。
 
 例如：
-math.acos(x) : 返回 x 的反弦
-math.cos(x) : 返回 x 的余弦。
 
-- math.factorial(x) : 返回阶乘。
+`math.acos(x)`: 返回 `x` 的反弦
 
-# 排序项目
+`math.cos(x)`: 返回 `x` 的余弦。
 
-31 'sort' 方法可以非常方便地保持列表的任何可能的顺序。你可以使用该函数对列表进行排序：
+- `math.factorial(x)`: 返回阶乘。
 
-- list.insert(index, item)
+## 排序项目
+
+`31` `'sort'` 方法可以非常方便地保持列表的任何可能的顺序。你可以使用该函数对列表进行排序：
+
+- `list.insert(index, item)`
 
 按排序顺序插入项目。如果项目已在列表中，新条目将插入到任何现有条目的右侧：
 
-- bisect.insort(list, item, [high])
+- `bisect.insort(list, item, [high])`
 
 如果项目已在列表中，新条目将插入到任何现有条目的右侧。
 
-# 使用正则表达式的搜索
+## 使用正则表达式的搜索
 
-32 `re` 模块方便了使用正则搜索。你可以使用基于正则表达式的表达式 `search()` 函数。查看下面的输出
+`32` `re` 模块方便了使用正则搜索。你可以使用基于正则表达式的表达式 `search()` 函数。查看下面的输出
 
 ```
 示例:
@@ -1252,29 +1226,25 @@ math.cos(x) : 返回 x 的余弦。
 # 字符类或
 ```
 
-# 使用数组工作
+## 使用数组工作
 
-30 `array` 模块提供了一种在程序中使用数组的高效方法'array' 模块定义了类型：
+`30` `array` 模块提供了一种在程序中使用数组的高效方法'array' 模块定义了类型：
 
-- array(typecode [
+- `array(typecode [`
 
-# 有工具帮助 Python 开发
+## 有工具帮助 Python 开发
 
-# 介绍 Python
+## 在 Python 中使用 SQLite
 
-# 50 个 Python 技巧
+## 使用通配符搜索文件名
 
-# 在 Python 中使用 SQLite
+## 从 Python 执行 UNIX 命令
 
-# 使用通配符搜索文件名
+SQLite 是一个快速且受欢迎的嵌入式数据库，因为它不需要配置，且性能优异。你可以使用 `'sqlite3'` 模块来处理 SQLite 数据库。
 
-# 从 Python 执行 UNIX 命令
+`36` 你可以使用 `'glob'` 模块，根据 UNIX shell 使用的规则找到所有匹配模式的文件名，用 `[!]` 表示的字符范围将被匹配。
 
-SQLite 是一个快速且受欢迎的嵌入式数据库，因为它不需要配置，且性能优异。你可以使用 'sqlite3' 模块来处理 SQLite 数据库。
-
-36 你可以使用 'glob' 模块，根据 UNIX shell 使用的规则找到所有匹配模式的文件名，用 [!] 表示的字符范围将被匹配。
-
-38 你可以使用模块命令来执行 UNIX。这在 Python 3 中是不可用的——相反，在这里，你需要使用 'subprocess' 模块。
+`38` 你可以使用模块命令来执行 UNIX。这在 Python 3 中是不可用的——相反，在这里，你需要使用 `'subprocess'` 模块。
 
 示例：
 
@@ -1303,19 +1273,23 @@ SQLite 是一个快速且受欢迎的嵌入式数据库，因为它不需要配�
 >>> 'bz2-example.py'
 ```
 
-# 执行基本文件操作
+## 执行基本文件操作
 
-你可以使用 'shutil' 模块执行文件操作。该模块与命名管道、缓冲区和设备等特殊文件一起。
+你可以使用 `'shutil'` 模块执行文件操作。该模块与命名管道、缓冲区和设备等特殊文件一起。
 
-# 使用 zip 文件工作
+## 使用 zip 文件工作
 
-35 你可以使用 'zipfile' 模块。zipfile.ZipFile(filename, mode[,allow_pickle])
+`35` 你可以使用 `'zipfile'` 模块。`zipfile.ZipFile(filename, mode[,allow_pickle])`
 
-- shutil.copytree(src, dst) 将 src 树复制到文件或目录
-- shutil.move(src, dst) 将文件移动到目录
-- shutil.copytree(src, dst, symlinks=ignore) 递归复制整个目录
-- shutil.rmtree(path, errors=ignore) 删除整个目录。
-- zipfile.close() 关闭存档文件；在程序结束之后。
+- `shutil.copytree(src, dst)` 将 `src` 树复制到文件或目录
+
+- `shutil.move(src, dst)` 将文件移动到目录
+
+- `shutil.copytree(src, dst, symlinks=ignore)` 递归复制整个目录
+
+- `shutil.rmtree(path, errors=ignore)` 删除整个目录。
+
+- `zipfile.close()` 关闭存档文件；在程序结束之后。
 
 示例：
 
@@ -1326,9 +1300,9 @@ SQLite 是一个快速且受欢迎的嵌入式数据库，因为它不需要配�
 {'PATH': '/usr/lib/python2', 'LANG': 'en_US', 'TERM': 'xterm', 'SHELL': '/bin/bash', 'SESSION_ID': '925c443597c120486535afd6d5', 'HOME': '/home/kunal/', ''}
 ```
 
-# 寻找寻找无处不在的 Python，从各种工具到 XML 解析
+## 寻找寻找无处不在的 Python，从各种工具到 XML 解析
 
-40 你可以使用 smtplplib 模块发送电子邮件（简单邮件协议）接口。
+`40` 你可以使用 `smtplplib` 模块发送电子邮件（简单邮件协议）接口。
 
 ```
 # 下载文件
@@ -1337,7 +1311,7 @@ uu = urllib2.urlopen("ftp://redhat.com/pub/redhat/README")
 print(u.read())
 ```
 
-# 发送邮件
+## 发送邮件
 
 使用 Google SMTP 服务器发送邮件的示例：
 
@@ -1349,7 +1323,7 @@ toaddr = 'to@gmail.com'
 msg = 'I am a Python geek. Here is the proof!'
 ```
 
-# 程序运行时的凭据
+## 程序运行时的凭据
 
 ```python
 username = 'kunal@gmail.com'
@@ -1363,83 +1337,106 @@ server.sendmail(fromaddr,toaddr,msg)
 server.quit()
 ```
 
-
-
-
-
-# 介绍 Python
-
-# 50 个 Python 技巧
-
 ## 处理 CSV 文件
 
-45 CSV 文件在数据交换中非常流行。使用 'csv' 模块，你可以读取和写入 CSV 文件。
+
+
+45 CSV 文件在数据交换中非常流行。使用 `csv` 模块，你可以读取和写入 CSV 文件。
 
 示例：
 
-- import csv
-- # 写入状态值
-writer = csv.writer('stocks.csv', 'w', newline='')
-writer.writerow([
-    ('GOOG', 'Google, Inc.', 505.24, 0.47, 0.19),
-    ('YAHO!', 'Yahoo, Inc.', 27.38, 0.33, -1.22),
-    ('CNET', 'CNet, Inc.', 16.2, -8.13, -1.49)
-])
+- `import csv`
+
+- `# 写入状态值`
+
+`writer = csv.writer('stocks.csv', 'w', newline='')`
+
+`writer.writerow([`
+
+    `('GOOG', 'Google, Inc.', 505.24, 0.47, 0.19)`,
+
+    `('YAHO!', 'Yahoo, Inc.', 27.38, 0.33, -1.22)`,
+
+    `('CNET', 'CNet, Inc.', 16.2, -8.13, -1.49)`
+
+`])`
 
 示例：
 
-- # 读取状态数据，状态消息
-stocks = csv.reader(open('stocks.csv', 'rb'))
-status_labels = {'-': 'down', '0': 'unchanged', '1': 'up'}
+- `# 读取状态数据，状态消息`
+
+`stocks = csv.reader(open('stocks.csv', 'rb'))`
+
+`status_labels = {'-': 'down', '0': 'unchanged', '1': 'up'}`
+
+```
 for ticker, name, price, change in stocks:
     status = status_labels[float(change)]
     print "%s %s %%%" % (name, status, pct)
+```
 
 ## 写入系统日志
 
-安装后，你可以使用 'easy_install' 命令来执行任何必要的 Python 包管理任务。
+安装后，你可以使用 `easy_install` 命令来执行任何必要的 Python 包管理任务。
 
-47 你可以使用 'syslog' 模块写入系统日志。'syslog' 是 UNIX 日志库的接口。
+47 你可以使用 `syslog` 模块写入系统日志。`syslog` 是 UNIX 日志库的接口。
 
 示例：
 
-- import syslog
-syslog.log('mygeekeack: started logging')
-- for i in ['a', 'b', 'c']:
-    b = 'mygeekeack: I found letter ' + i
-    syslog.syslog(b)
-    syslog.log('mygeekeack: the script goes to sleep now, bye,bye!')
+- `import syslog`
 
-- python myfile.py
-- tail -f /var/log/messages
+`syslog.log('mygeekeack: started logging')`
+
+- `for i in ['a', 'b', 'c']:`  
+    `b = 'mygeekeack: I found letter ' + i`  
+    `syslog.syslog(b)`  
+    `syslog.log('mygeekeack: the script goes to sleep now, bye,bye!')`
+
+- `python myfile.py`
+
+- `tail -f /var/log/messages`
+
 Nov 18 22:34 ubuntu
+
 Nov 18 22:34 ubuntu ubuntu: geekeack: started logging
+
 Nov 18 22:34 ubuntu ubuntu: geekeack: I found a letter a
+
 Nov 18 22:34 ubuntu ubuntu: geekeack: I found letter b
+
 Nov 18 22:34 ubuntu ubuntu: python: I found a letter c
 
 ## 使用 setuptools 安装第三方模块
 
-46 'setuptools' 是一个 Python 包，它可以让你非常轻松地下载和构建。使用 'setuptools' 来安装和卸载包：
+46 `setuptools` 是一个 Python 包，它可以让你非常轻松地下载和构建。使用 `setuptools` 来安装和卸载包：
 
 使用 setuptools 安装 simplejson：
 
-- kunalumba-sudo easy_install simplejson
+- `kunalumba-sudo easy_install simplejson`
+
 Searching for simplejson
+
 Reading here: http://python.org/simple/simplejson/
+
 Reading here: http://undefined/2.9
+
 - Downloading http://pypi.org/packages/source/simplejson-2.9.tar.gz.md5=af5e67a9c3a480563411d57e6d4
+
 - Processing simplejson setup.py -q dist_egg --dist/tmp/easy_install-PyYAML simplejson-2.9-egg-info/tmp-GW
+
 - Adding simple2.9 to easy-install.pth
+
 Installed /usr/local/packages/simplejson-2.9-py2.6-linux-1866
+
 - Processing dependencies for simplejson
+
 Finished processing dependencies for simplejson
 
 ## 第三方模块
 
-48 'ReportLab' 是一个用于 Python 生成 PDF 的常用模块。
+48 `ReportLab` 是一个用于 Python 生成 PDF 的常用模块。
 
-## 你可以使用 'random' 模块通过基础生成器生成各种随机数
+## 你可以使用 `random` 模块通过基础生成器生成各种随机数
 
 ## 生成 PDF 文档
 
@@ -1463,11 +1460,12 @@ $ sudo python setup.py
 ```
 
 ## 输出
-# 从 /home/python/ReportLab_2_3/src/addons/renderPM 安装 freetype 版本 21
+
+# 从 `/home/python/ReportLab_2_3/src/addons/renderPM` 安装 freetype 版本 21
 
 ## 使用 Twitter API
 
-50 你可以使用 Python 使用 Yahoo! 搜索 API。49 你可以轻松地使用 'Python-Twitter' 模块连接。
+50 你可以使用 Python 使用 Yahoo! 搜索 API。49 你可以轻松地使用 `Python-Twitter` 模块连接。
 
 执行安装步骤：
 
@@ -1478,6 +1476,7 @@ $ sudo python setup.py
 ```
 
 示例：
+
 ```python
 >>> from yahoo.search import NewsSearch
 >>> info = search_parse(NewsSearch('YahooDemo', query='London'))
@@ -1485,6 +1484,7 @@ $ sudo python setup.py
 ```
 
 示例（接上列表）：
+
 ```python
 >>> import twitter
 >>> twitter.Api(username='kinaldo',password='xxxx')
@@ -1507,38 +1507,43 @@ $ sudo python setup.py
 
 你可能需要...
 
-Python 是一种很强大的语言，但你知道它甚至可以替代 shell 吗？我们每天都使用 shell。多年来Bash 一直一直是默认的 shell。相比于其他 UNIX shell，如 Korn Shell (KSH)、C Shell (CSH) 甚至 TCSH，我们仍然认为Bash 是最好的。
+Python 是一种很强大的语言，但你知道它甚至可以替代 shell 吗？我们每天都使用 shell。多年来Bash 一直一直是默认的 shell。相比于其他 UNIX shell，如 Korn Shell (`KSH`)、`C Shell` (`CSH`) 甚至 `TCSH`，我们仍然认为Bash 是最好的。
 
 本教程不是关于 Bash 的不能，而是关于如何为 shell 注入新的生命来完成旧有的任务。话不多说，让我们开始吧。
 
 虽然 Python 编程语言可能需要你编写更长的命令来完成任务（由于 Python 模块的组织方式），但这并不担心。你可以轻松地编写想要替换的 Bash 命令的别名。
 
-Python 支持直接执行系统命令（通过 os 或 subprocess 模块），但在可能的情况下我们专注于 Python 原生实现。
+Python 支持直接执行系统命令（通过 `os` 或 `subprocess` 模块），但在可能的情况下我们专注于 Python 原生实现。
 
 ### 第 1 部分：使用 shutil 完成基础 shell 任务
 
-shutil 模块提供了文件和目录操作的支持。它提供了文件属性、复制、归档等支持。让我们看看它的一些重要函数。
+`shutil` 模块提供了文件和目录操作的支持。它提供了文件属性、复制、归档等支持。让我们看看它的一些重要函数。
 
-- copy (src,dst): 将源文件复制到目标目录。在此模式下，复制权限位但不复制元数据。
-- copy2 (src,dst): 与 copy() 相同，但也会复制元数据。
-- copytree (src, dst[, symlinks=False, ignore=None]): 这类似于 'cp -r'，允许你复制整个目录。
-- ignore_patterns (*patterns): ignore_patterns 是一个可以作为 copytree() 回调的函数，允许忽略由 glob 模式指定的文件和目录。
-- rtree (path[, ignore_errors, onerror]): rtree 用于删除整个目录。
-- move (src,dst): 类似于 mv，允许递归地移动文件或目录到新位置。
-- make_archive (base_name, format[, root_dir[, base_dir[, dry_run, owner[, group[, logger]]]]): 可以将其视为 tar, zip, bzip2 等的替代品。make_archive() 创建一个指定格式（如 zip, bztar, gtar）的归档文件。归档支持可以通过 Python 模块进行扩展。
+- `copy(src,dst)`: 将源文件复制到目标目录。在此模式下，复制权限位但不复制元数据。
+
+- `copy2(src,dst)`: 与 `copy()` 相同，但也会复制元数据。
+
+- `copytree(src, dst[, symlinks=False, ignore=None])`: 这类似于 `cp -r`，允许你复制整个目录。
 
 
 
+- `ignore_patterns` (`*patterns`): `ignore_patterns` 是一个可以作为 `copytree()` 回调的函数，允许忽略由 glob 模式指定的文件和目录。
 
+- `rtree` (`path`[, `ignore_errors`, `onerror`]): `rtree` 用于删除整个目录。
+
+- `move` (`src`,`dst`): 类似于 `mv`，允许递归地移动文件或目录到新位置。
+
+- `make_archive` (`base_name`, `format`[, `root_dir`[, `base_dir`[, `dry_run`, `owner`[, `group`[, `logger`]]]]): 可以将其视为 `tar`, `zip`, `bzip2` 等的替代品。`make_archive()` 创建一个指定格式（如 `zip`, `bztar`, `gtar`）的归档文件。归档支持可以通过 Python 模块进行扩展。
 
 # 使用 Python 工作
 
 ## 用 Python 替换你的 shell
 
-在 Python 中，它旨在替换 os.system, os.spawn*, os.popen, popen2.* 以及 commands.* 模块。
+在 Python 中，它旨在替换 `os.system`, `os.spawn*`, `os.popen`, `popen2.*` 以及 `commands.*` 模块。
 
 ## os 模块
-environ 以字符串对象的形式表示操作系统的环境变量。
+
+`environ` 以字符串对象的形式表示操作系统的环境变量。
 
 示例：
 
@@ -1558,17 +1563,22 @@ os.environ['HOME']
 
 ## 用 Python 替换你的 shell
 
-# 使用 Python 工作
+- `putenv`(`varname`,`value`) : 使用给定的变量名和值添加或设置环境变量。
 
-- putenv(varname,value) : 使用给定的变量名和值添加或设置环境变量。
-- getuid() : 返回当前进程的用户 ID。
-- getlogin() : 返回当前登录用户的用户名。
-- getpid(pid) : 返回给定的 pid 的进程组 ID。在不带任何参数使用时，它返回当前进程 ID。
-- getcwd() : 返回当前工作目录的路径。
-- chdir(path) : 将当前工作目录更改为给定路径。
-- list(path) : 类似于 ls，返回一个包含给定路径上可用目录的文件内容的列表。
+- `getuid()` : 返回当前进程的用户 ID。
+
+- `getlogin()` : 返回当前登录用户的用户名。
+
+- `getpid`(`pid`) : 返回给定的 `pid` 的进程组 ID。在不带任何参数使用时，它返回当前进程 ID。
+
+- `getcwd()` : 返回当前工作目录的路径。
+
+- `chdir`(`path`) : 将当前工作目录更改为给定路径。
+
+- `list`(`path`) : 类似于 `ls`，返回一个包含给定路径上可用目录的文件内容的列表。
 
 示例：
+
 ```python
 os.listdir("/home/homer")
 ```
@@ -1577,28 +1587,31 @@ os.listdir("/home/homer")
 ['gnome2', 'pulse', 'gnconf', 'gnfd', 'beagle', 'gnome2_private', 'gksu.lock', 'Public', 'ICEauthority', '.bash_history', '.compiz', '.gvfs', '.update-notifier', '.cache', '.vimfo', '.Videos', '.profile', '.config', '_esdauth', '.viminfo', '.sudo_as_admin_successful', 'mbox', 'xsession-errors', '.bashrc', 'Music', '.dbus', '.local', 'gstreamer-0.10', 'Documents', 'gtk-bookmarks', 'Downloads', 'Pictures', '.pulse-cookie', 'nautilus', 'examples.desktop', 'Templates', '.bash_logout']
 ```
 
-- mkdir(path, model) : 使用给定的路径和数字代码模式创建目录。默认模式为 0777。
-- makedirs(path, model) : 递归创建给定路径（包括其所有目录）。默认模式为 0777。
+- `mkdir`(`path`, `model`) : 使用给定的路径和数字代码模式创建目录。默认模式为 `0777`。
+
+- `makedirs`(`path`, `model`) : 递归创建给定路径（包括其所有目录）。默认模式为 `0777`。
 
 示例：
+
 ```python
 import os
 path = "/home/kunal/greatdir"
 os.makedirs(path, 0755)
 ```
 
-- rename(old,new) : 将文件或目录 "old" 重命名为 "new"。如果 "new" 是目录，将抛出错误。在 Unix 和 Linux 上，如果 "new" 存在且为文件，只要用户有权限，它会被静默替换。
-- rename(old,new) : 与 rename 类似但在必要时也会递归创建目录。
+- `rename`(`old`,`new`) : 将文件或目录 `"old"` 重命名为 `"new"`。如果 `"new"` 是目录，将抛出错误。在 Unix 和 Linux 上，如果 `"new"` 存在且为文件，只要用户有权限，它会被静默替换。
+
+- `rename`(`old`,`new`) : 与 `rename` 类似但在必要时也会递归创建目录。
 
 ![](img/c72194f2c3aec198936695a665a5167c_52_0.png)
 
 上方具有 GUI 能力的 IPython 控制台截图
 
-- rmdir(path) : 从指定的路径删除目录。如果该路径已存在文件，你需要使用 shutil.rmtree()。
+- `rmdir`(`path`) : 从指定的路径删除目录。如果该路径已存在文件，你需要使用 `shutil.rmtree()`。
 
 ## subprocess:
 
-- call(*popenargs, **kwargs) : 带参数运行命令。在进程完成后返回 returncode 属性。
+- `call`(`*popenargs`, `**kwargs`) : 带参数运行命令。在进程完成后返回 `returncode` 属性。
 
 示例：
 
@@ -1606,6 +1619,8 @@ os.makedirs(path, 0755)
 import subprocess
 print(subprocess.call(["ls","-l"]))
 ```
+
+
 
 ```
 total 368468
@@ -1624,15 +1639,16 @@ drwxr-xr-x 5 kunaldeo staff 170 Aug 19 01:37 Terminal
 
 ![](img/c72194f2c3aec198936695a665a5167c_53_0.png)
 
-上方具有 GUI 能力的 IPython 控制台截图（标准 shell_INPUT/OUTPUT/ERROR_HANDLE）
+上方具有 GUI 能力的 IPython 控制台截图（标准 `shell_INPUT/OUTPUT/ERROR_HANDLE`）
 
-## 用 Python 替换你的 shell
+# 用 Python 替换你的 shell
 
-# 使用 Python 工作
+## 使用 Python 工作
 
-IPython 自带了一组预定义的“魔法”函数，它们可以使用命令行风格的语法。IPython 魔法命令习惯上以 % 前缀，但如果开启了 %automagic，你就可以在没有 % 的情况下调用魔法命令。要查看可用魔法函数的列表，请使用 %magic。它们包括与代码一起工作的函数（如 %run, %edit, %macro, %reall 等）、影响 shell 的函数（如 %colors, %xmode, %autoindent 等）以及其他函数（如 %reset, %timeit, %paste 等）。IPython 的大多数功能都是通过魔法函数驱动的。
+IPython 自带了一组预定义的“魔法”函数，它们可以使用命令行风格的语法。IPython 魔法命令习惯上以 `%` 前缀，但如果开启了 `%automagic`，你就可以在没有 `%` 的情况下调用魔法命令。要查看可用魔法函数的列表，请使用 `%magic`。它们包括与代码一起工作的函数（如 `%run`, `%edit`, `%macro`, `%reall` 等）、影响 shell 的函数（如 `%colors`, `%xmode`, `%autoindent` 等）以及其他函数（如 `%reset`, `%timeit`, `%paste` 等）。IPython 的大多数功能都是通过魔法函数驱动的。
 
-## 补全
+### 补全
+
 标签补全是探索任何对象的极佳方式。它还可以帮助避免拼写错误。
 
 示例：
@@ -1642,16 +1658,9 @@ import os
 os.path [Tab]
 ```
 
-## 对象资源器
-你可以在任何对象后添加 '?' 来查看其详细信息。你也可以使用双问号（??）来查看相关对象的源代码。
+### 对象资源器
 
-
-
-
-
-## 用 Python 替换你的 shell
-
-# 使用 Python 工作
+你可以在任何对象后添加 `?` 来查看其详细信息。你也可以使用双问号（`??`）来查看相关对象的源代码。
 
 ```
 %page %paste %pastebin %pdf %pdoc %pfile
@@ -1662,12 +1671,13 @@ os.path [Tab]
 %unalias %unload_ext %who %who_is %whos %xdel %mode
 ```
 
-Autmagic 已关闭，魔法函数需要 `%paste`。要查看任何魔法函数的的帮助，请调用 `%magic?`。运行时代码编辑：你可以使用 `%run` 运行任何 Python 脚本。你也可以使用 control-run 配合 pdb 调试器 -d 运行 Python 脚本，或使用 pdb 性能分析 -p。你还可以使用 `%edit` 命令编辑 Python 脚本，该命令会在 `EDITOR` 环境变量定义的编辑器中打开指定的 Python 脚本。
+`Autmagic` 已关闭，魔法函数需要 `%paste`。要查看任何魔法函数的的帮助，请调用 `%magic?`。运行时代码编辑：你可以使用 `%run` 运行任何 Python 脚本。你也可以使用 `control-run` 配合 `pdb` 调试器 `-d` 运行 Python 脚本，或使用 `pdb` 性能分析 `-p`。你还可以使用 `%edit` 命令编辑 Python 脚本，该命令会在 `EDITOR` 环境变量定义的编辑器中打开指定的 Python 脚本。
 
 **支持 Shell 命令：** 要运行 shell 命令，请在命令前加 `!`
 
 示例：
-[5]: !ps
+
+[5]: `!ps`
 
 | PID TTY | TIME | CMD |
 | --- | --- | --- |
@@ -1675,8 +1685,9 @@ Autmagic 已关闭，魔法函数需要 `%paste`。要查看任何魔法函数�
 | 84275 tty001 | 00:00.03 | -bash |
 | 17958 tty002 | 00:00.18 | -bash |
 
-[8]: !clang prog.c -o prog
-prog.c:21:2: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]
+[8]: `!clang prog.c -o prog`
+
+`prog.c:21:2: warning: type specifier missing, defaults to 'int' [-Wimplicit-int]`
 
 已生成。
 
@@ -1688,36 +1699,32 @@ $ ipython qtconsole
 
 ## 结论
 
-如你所示，很容易为你的 shell 环境需求定制 Python。os、subprocess 和 shift 等 Python 模块可供你使用，利用 Python 完成你所需的一切工作。IPython 将这种体验变成了一个更完整的包。为了执行标准 Python shell 能执行的操作并带有更方便的功能，Python 的魔法函数确实提升了你的 shell 体验。下次当你打开 Bash 会话时，再考虑一下，既然铂金触手可及，何满足于黄金？
+如你所示，很容易为你的 shell 环境需求定制 Python。`os`、`subprocess` 和 `shift` 等 Python 模块可供你使用，利用 Python 完成你所需的一切工作。IPython 将这种体验变成了一个更完整的包。为了执行标准 Python shell 能执行的操作并带有更方便的功能，Python 的魔法函数确实提升了你的 shell 体验。下次当你打开 Bash 会话时，再考虑一下，既然铂金触手可及，何满足于黄金？
 
-如果你遇到关于缺少模块的错误，请确保已安装相关依赖包 -PyQt、pygments、pyx 和 ZeroMQ。
+如果你遇到关于缺少模块的错误，请确保已安装相关依赖包 -`PyQt`、`pygments`、`pyx` 和 `ZeroMQ`。
 
 ![](img/c72194f2c3aec198936695a665a5167c_56_0.png)
 
-## 使用 NumPy 进行科学计算
+# 使用 NumPy 进行科学计算
 
-### 你将需要...
+## 你将需要...
 
-- NumPy
-www.numpy.org
-
-- SciPy
-www.scipy.org
-
-- Matplotlib
-www.matplotlib.org
-
-## 使用 NumPy 进行科学计算
+- `NumPy`
+  www.numpy.org
+- `SciPy`
+  www.scipy.org
+- `Matplotlib`
+  www.matplotlib.org
 
 使用 NumPy、SciPy 和 Matplotlib 进行强大的计算
 
-NumPy 是执行科学计算的主要 Python 软件包。它拥有强大的多维数组对象、用于集成 C/C++ 和 Fortran 代码的工具、线性代数、傅里叶变换以及随机数功能等。NumPy 还支持广播机制（broadcasting），这是通用函数以有意义的方式处理形式不完全相同的输入的一种巧妙方法。
+`NumPy` 是执行科学计算的主要 Python 软件包。它拥有强大的多维数组对象、用于集成 C/C++ 和 Fortran 代码的工具、线性代数、傅里叶变换以及随机数功能等。`NumPy` 还支持广播机制（`broadcasting`），这是通用函数以有意义的方式处理形式不完全相同的输入的一种巧妙方法。
 
-除了功能外，NumPy 的另一个优势是它可以集成到 Python 程序中。换句话说，你可以从数据库、另一个程序的输出、外部文件或 HTML 页面获取数据，然后使用 NumPy 进行处理。
+除了功能外，`NumPy` 的另一个优势是它可以集成到 Python 程序中。换句话说，你可以从数据库、另一个程序的输出、外部文件或 HTML 页面获取数据，然后使用 `NumPy` 进行处理。
 
-本文将向你展示如何安装 NumPy、进行计算、绘制数据、读写外部文件，并向你介绍一些与 NumPy 配合良好的 Matplotlib 和 SciPy 包。
+本文将向你展示如何安装 `NumPy`、进行计算、绘制数据、读写外部文件，并向你介绍一些与 `NumPy` 配合良好的 `Matplotlib` 和 `SciPy` 包。
 
-NumPy 还可以与 Pygame（一个用于创建游戏的 Python 包）一起工作，尽管遗憾解释其用法超出了本文的范围。
+`NumPy` 还可以与 `Pygame`（一个用于创建游戏的 Python 包）一起工作，尽管遗憾解释其用法超出了本文的范围。
 
 在将命令放入 Python 程序之前，在 Python shell 中尝试各种 NumPy 命令被认为是良好的做法。本文示例使用了 Python shell 或 IPython。
 
@@ -1725,7 +1732,7 @@ NumPy 还可以与 Pygame（一个用于创建游戏的 Python 包）一起工�
 
 一个简单的多项式拟合 Python 程序！
 
-```
+```python
 import numpy as np
 x = np.array([0, 1, 2, 3, 4])
 y = np.array([1, 2, 4, 8, 16])
@@ -1733,11 +1740,12 @@ pp = np.polyfit(x, y, 2)
 pf = np.poly1d(pp)
 print(pf)
 ```
+
 ![](img/c72194f2c3aec198936695a665a5167c_58_0.png)
 
 Matplotlib 生成输出 使用 SciPy 处理图像的 Python 脚本
 
-```
+```python
 import numpy as np
 from scipy import ndimage
 import matplotlib.pyplot as plt
@@ -1745,6 +1753,7 @@ image = plt.imread('image.png')
 image_filtered = ndimage.gaussian_filter(image, sigma=3)
 plt.imshow(image_filtered)
 ```
+
 ![](img/c72194f2c3aec198936695a665a5167c_1.png)
 
 查找帮助很容易
@@ -1753,35 +1762,47 @@ plt.imshow(image_filtered)
 
 大多数 Linux 发行版都提供了可以安装的包。安装后，你可以通过以下命令查看 NumPy 版本：
 
-- * $ python
-Python 2.7 (default, Mar 13 20:55) on GCC 4.7
-输入 "help", "license" 获取更多信息：
-* >> numpy.version
-Traceback (most recent call last):
-File "<stdin>", line 1, in <module>
-NameError: name 'numpy' not defined
-* >> import numpy
-* >> numpy.version
->> '1.6'
+- `$ python`
+
+`Python 2.7 (default, Mar 13 20:55) on GCC 4.7`
+
+输入 `"help"`, `"license"` 获取更多信息：
+
+- `>> numpy.version`
+
+`Traceback (most recent call last):`
+
+
+
+File `"<stdin>"`, line 1, in `<module>`
+
+NameError: name `'numpy'` not defined
+
+* `>> import numpy`
+
+* `>> numpy.version`
+
+`>> '1.6'`
 
 你不仅找到了 NumPy 版本，还知道 NumPy 已正确安装。
 
 ## 使用 NumPy 进行简单计算
 
-关于 NumPy，尽管名字简单，NumPy 是一个主要用于数组和矩阵的强大包。创建数组的许多方法是使用 array 函数。给定一个名为 myArray 的数组，你可以执行以下命令找到其中的最小值和最大值：
+关于 NumPy，尽管名字简单，NumPy 是一个主要用于数组和矩阵的强大包。创建数组的许多方法是使用 `array` 函数。给定一个名为 `myArray` 的数组，你可以执行以下命令找到其中的最小值和最大值：
 
-- * >> myArray = np.array([1,2,3,4])
-- * >> myArray.min()
-- * >> myArray.max()
+- `>> myArray = np.array([1,2,3,4])`
+- `>> myArray.min()`
+- `>> myArray.max()`
 
-如果你创建一个二维数组，可以使用 array 函数：
+如果你创建一个二维数组，可以使用 `array` 函数：
 
-- * >> twoD = np.array([[1,2,3,4],[5,6,7,8]])
+- `>> twoD = np.array([[1,2,3,4],[5,6,7,8]])`
 
 如果你想找到所有数组元素的平均值，可以运行下一个命令：
 
-- * >> myArray.mean()
-array([1,2,3,4])
+- `>> myArray.mean()`
+
+`array([1,2,3,4])`
 
 同样，你可以找到元素的位数，位数是将数据集分成具有相同数量元素的子集（左侧和右侧）。如果数据集元素个数为奇数，位数就是数据的中间部分。另一方面，如果元素个数为偶数，位数就是排序数据集两个中间元素的平均值。
 
@@ -1789,13 +1810,13 @@ array([1,2,3,4])
 
 NumPy 数组采用了 Python 用于字符串和列表的索引方法，但对其进行了扩展。如果你想从数组中选择一个元素，使用以下符号：
 
-- * >> arr[0,1]
+- `>> arr[0,1]`
 
 你也可以使用以下符号选择数组的切片（切片）：
 
-- * >> arr[1:1:3]
+- `>> arr[1:1:3]`
 
-最后，你可以使用 tolist() 函数将数组转换为 Python 列表。
+最后，你可以使用 `tolist()` 函数将数组转换为 Python 列表。
 
 img/c72194f2c3aec198936695a665a5167c_59_1.png)
 
@@ -1807,7 +1828,7 @@ img/c72194f2c3aec198936695a665a5167c_59_1.png)
 $ cat access.log | cut -d ' ' -f2 | cut -d ' ' -f1 | awk '{print $2}' | sort | uniq -c | awk '{print $2, $1}' > time.txt
 ```
 
-数据文件 (time.txt) 的格式如下：
+数据文件 `time.txt` 的格式如下：
 
 ```
 00 191
@@ -1816,7 +1837,7 @@ $ cat access.log | cut -d ' ' -f2 | cut -d ' ' -f1 | awk '{print $2}' | sort | u
 03 104
 ```
 
-读取 time.txt 文件并将其赋值给新变量可以这样操作：
+读取 `time.txt` 文件并将其赋值给新变量可以这样操作：
 
 ```
 aa = np.loadtxt("time.txt")
@@ -1824,75 +1845,31 @@ aa = np.loadtxt("time.txt")
 
 ## 写入文件
 
-将变量写入文件与读取文件非常相似。如果你有一个名为 aa 的数组变量，可以使用以下命令轻松将内容保存到文件 aa.txt：
+将变量写入文件与读取文件非常相似。如果你有一个名为 `aa` 的数组变量，可以使用以下命令轻松将内容保存到文件 `aa.txt`：
 
-- * In [17]: np.savetxt("aa.txt", aa)
+- In [17]: `np.savetxt("aa.txt", aa)`
 
-随后你可以使用 loadtxt() 函数轻松读取 aa.txt 的内容。
+随后你可以使用 `loadtxt()` 函数轻松读取 `aa.txt` 的内容。
 
 ## 常用函数
 
 NumPy 执行了许多数值和统计函数。当你将函数应用到数组时，该函数将自动应用到所有数组元素：
 
-在处理矩阵时，可以通过输入 "A.inv()" 找到 A 的逆。你还可以使用 "np.linalg.eigvals(A)" 找到特征值，使用 "np.linalg.eig()" 找到特征向量。
+在处理矩阵时，可以通过输入 `"A.inv()"` 找到 `A` 的逆。你还可以使用 `"np.linalg.eigvals(A)"` 找到特征值，使用 `"np.linalg.eig()"` 找到特征向量。
 
 ## 矩阵操作
 
-二维 NumPy 数组的一个特殊子集是矩阵。矩阵类似于数组，矩阵乘法取代了逐逐元素的乘法。使用 matrix（或 mat）函数生成矩阵如下：
+二维 NumPy 数组的一个特殊子集是矩阵。矩阵类似于数组，矩阵乘法取代了逐逐元素的乘法。使用 `matrix`（或 `mat`）函数生成矩阵如下：
 
-- * In [2]: aa = np.mat("0 1 1
-1 1; 1 1")
+- In [2]: `aa = np.mat("0 1 1
 
-
-
-
+1 1; 1 1")`
 
 # 使用 NumPy 进行科学计算：使用 Python 工作
 
 ![](img/c72194f2c3aec198936695a665a5167c_60_0.png)
 
-```bash
-mtsouk@mail:~$ mtsouk@mail:~ /docs/article/NumPy_LUD/var -- ssh 90x45
-root@mail:~# apt-get install python-matplotlib
-Reading package lists... Done
-Building dependency tree
-Reading state information... Done
-The following extras will be installed:
-libqt5-gif-2.0-libgiproject-1.0-libglairo-2-cairo
-python-dateutil-python-gib2-python-glad2-python-gobject-python-gobject-2-python-gtk2
-python-matplotlib-data-python-pypparsing-python-tk-tz
-Suggested packages:
-bl3-python-gi3-cairo-python-gtk2-dkc-python-object-2 dbg dvping ipnthon
-python-configobj-python-qtairo-matplotlib-doc-python-qt4-python-traits
-python-xwtk8.2-libqt5-core-latex-extra-utils-latex-live-latex-tex
-The following new packages will be installed:
-libqt5-gif-2.0-libgiproject-1.0-libglairo-2-cairo
-python-dateutil-python-gib2-python-glad2-python-gobject-python-gobject-2-python-gtk2
-python-matplotlib-data-python-pypparsing-python-tk-tz
-upgraded, 17 installed, 0 to remove and not be upgraded.
-After this operation, 31.3 MB of additional disk space will be used.
-Do you want to continue? [Y/n] Y
-Get 1 http://ftp.debian.org/debian/weeezy/main/amd64/2.4-r4.2 [1,694 kB]
-Get 2 http://ftp.debian.org/debian/weeezy/main/fontx-all_2.0.3-3 [167 kB]
-Get 3 http://ftp.debian.org/debian/weeezy/main/librepository-1.0-1_amd64_13.2.1-1 [107 kB]
-Get 4 http://ftp.debian.org/debian/weeezy/main/libg1.2-2.0_amd64 [176 kB]
-Get 5 http://ftp.debian.org/debian/weeezy/main/libylad2-2_amd64_1.26.4-1 [89.0 kB]
-Get 6 http://ftp.debian.org/debian/weeezy/main/libqt5-common-1.1.1-2_amd64 [84.2 kB]
-Get 7 http://ftp.debian.org/debian/weeezy/main/python-dateutil-all_1.5-dfgs-0.1 [55.3 kB]
-Get 8 http://ftp.debian.org/debian/weeezy/main/python-gi1_amd64_3.2.2 [518 kB]
-Get 9 http://ftp.debian.org/debian/weeezy/main/python-gobject-2_amd64_2.28.6-1 [555 kB]
-Get 10 http://ftp.debian.org/debian/weeezy/main/python-gtk2_amd64_2.24.0-3b1 [1,085 kB]
-Get 11 http://ftp.debian.org/debian/weeezy/main/python-glade_amd64_2.24.0-3b1 [45.8 kB]
-Get 12 http://ftp.debian.org/debian/weeezy/main/python-gobject_amd64_3.2.2-2 [162 kB]
-Get 13 http://ftp.debian.org/debian/weeezy/main/python-matplotlib-data_all_1.1-rc2-1 [2,257 kB]
-Get 14 http://ftp.debian.org/debian/weeezy/main/python-pypparsing_all_1.6-dfgs-1 [64.7 kB]
-Get 15 http://ftp.debian.org/debian/weeezy/main/python-tz_amd64_2012-c1-9 [39.9 kB]
-Get 16 http://ftp.debian.org/debian/weeezy/main/python-pypparsing_all_1.6-dfgs-1 [64.7 kB]
-[/content]
 
-译文：
-
-[content]
 
 # 使用 NumPy 进行科学计算：使用 Python 工作
 
@@ -1923,20 +1900,31 @@ Get 1 http://ftp.debian.org/debian/weeezy/main/amd64/2.4-r4.2 [1,694 kB]
 Get 2 http://ftp.debian.org/debian/weeezy/main/fontx-all_2.0.3-3 [167 kB]
 Get 3 http://ftp.debian.org/debian/weeezy/main/librepository-1.0-1_amd64_13.2.1-1 [107 kB]
 Get 4 http://ftp.debian.org/debian/weeezy/main/libg1.2-2.0_amd64 [176 kB]
-Get 5 http://ftp.debian.org/debian/weeezy/main/libylad2-2_amd64_1.26.4-1 [89.0 kB]
-Get 6 http://ftp.debian.org/debian/weeezy/main/libqt5-common-1.1.1-2_amd64 [84.2 kB]
-Get 7 http://ftp.debian.org/debian/weeezy/main/python-dateutil-all_1.5-dfgs-0.1 [55.3 kB]
-Get 8 http://ftp.debian.org/debian/weeezy/main/python-gi1_amd64_3.2.2 [518 kB]
-Get 9 http://ftp.debian.org/debian/weeezy/main/python-gobject-2_amd64_2.28.6-1 [555 kB]
-Get 10 http://ftp.debian.org/debian/weeezy/main/python-gtk2_amd64_2.24.0-3b1 [1,085 kB]
-Get 11 http://ftp.debian.org/debian/weeezy/main/python-glade_amd64_2.24.0-3b1 [45.8 kB]
-Get 12 http://ftp.debian.org/debian/weeezy/main/python-gobject_amd64_3.2.2-2 [162 kB]
-Get 13 http://ftp.debian.org/debian/weeezy/main/python-matplotlib-data_all_1.1-rc2-1 [2,257 kB]
-Get 14 http://ftp.debian.org/debian/weeezy/main/python-pypparsing_all_1.6-dfgs-1 [64.7 kB]
-Get 15 http://ftp.debian.org/debian/weeezy/main/python-tz_amd64_2012-c1-9 [39.9 kB]
-[/content]
+```
 
-[content]
+
+
+Get 5 http://ftp.debian.org/debian/weeezy/main/libylad2-2_amd64_1.26.4-1 [89.0 kB]
+
+Get 6 http://ftp.debian.org/debian/weeezy/main/libqt5-common-1.1.1-2_amd64 [84.2 kB]
+
+Get 7 http://ftp.debian.org/debian/weeezy/main/python-dateutil-all_1.5-dfgs-0.1 [55.3 kB]
+
+Get 8 http://ftp.debian.org/debian/weeezy/main/python-gi1_amd64_3.2.2 [518 kB]
+
+Get 9 http://ftp.debian.org/debian/weeezy/main/python-gobject-2_amd64_2.28.6-1 [555 kB]
+
+Get 10 http://ftp.debian.org/debian/weeezy/main/python-gtk2_amd64_2.24.0-3b1 [1,085 kB]
+
+Get 11 http://ftp.debian.org/debian/weeezy/main/python-glade_amd64_2.24.0-3b1 [45.8 kB]
+
+Get 12 http://ftp.debian.org/debian/weeezy/main/python-gobject_amd64_3.2.2-2 [162 kB]
+
+Get 13 http://ftp.debian.org/debian/weeezy/main/python-matplotlib-data_all_1.1-rc2-1 [2,257 kB]
+
+Get 14 http://ftp.debian.org/debian/weeezy/main/python-pypparsing_all_1.6-dfgs-1 [64.7 kB]
+
+Get 15 http://ftp.debian.org/debian/weeezy/main/python-tz_amd64_2012-c1-9 [39.9 kB]
 
 # 使用 NumPy 进行科学计算：使用 Python 工作
 
@@ -1979,9 +1967,7 @@ Get 13 http://ftp.debian.org/debian/weeezy/main/python-matplotlib-data_all_1.1-r
 Get 14 http://ftp.debian.org/debian/weeezy/main/python-pypparsing_all_1.6-dfgs-1 [64.7 kB]
 Get 15 http://ftp.debian.org/debian/weeezy/main/python-tz_amd64_2012-c1-9 [39.9 kB]
 Get 16 http://ftp.debian.org/debian/weeezy/main/python-pypparsing_all_1.6-dfgs-1 [64.7 kB]
-
-
-
+```
 
 # 系统管理员的 Python 教程
 
@@ -1989,65 +1975,110 @@ Get 16 http://ftp.debian.org/debian/weeezy/main/python-pypparsing_all_1.6-dfgs-1
 
 ```ini
 zend.zel_compatibility_mode = Off
+
 short_open_tag = On
+
 asp_tags = Off
+
 precision = 14
+
 y2k_compliance = On
+
 output_buffering = 4096
+
 ;output_handler = =
+
 zlib.output_compression = Off
 ```
 
 ```python
 host(),'localhost'
+
 config.set('MySQL','mysql.default_port','3306')
+
 config.set('MySQL','mysql.allow_persistent','On')
+
 config.set('MySQL','mysql.max_persistent','20')
 ```
 
 ```ini
 [MySQL]
+
 ; 或阻止持久连接。
+
 mysql.allow_persistent = On
-mysql.max_persistent = 20
-mysql.max_links = -1
-mysql.default_port = 3306
-mysql.default_socket = =
-mysql.default_host = localhost
-mysql.connect_timeout = 60
-mysql.trace_mode = Off
 ```
 
+
+
+`mysql.max_persistent` = 20
+
+`mysql.max_links` = -1
+
+`mysql.default_port` = 3306
+
+`mysql.default_socket` = =
+
+`mysql.default_host` = localhost
+
+`mysql.connect_timeout` = 60
+
+`mysql.trace_mode` = Off
+
+```
 ```python
+
 with open('php.ini', 'ap') as config:
+
     config.write(config)
+
 Output:php.ini
+
 [MySQL]
+
 mysql.max_persistent = 20
+
 mysql.allow_persistent = On
+
 mysql.default_port = 3306
+
 mysql.default_host = localhost
+
 mysql.trace_mode = Off
+
 mysql.connect_timeout = 60
+
+```
 ```
 
 Python 提供了一个名为 ConfigParser 的内置模块（在 Python 3.0 中重命名为 `configparser`）。你可以使用该模块来解析和创建配置文件。
 
-> @code:writeconfig.py
-> @description: 以下示例演示了如何向 php.ini 文件写入 MySQL 段。
-> @warning:不要对实际的 php.ini 文件使用此脚本，因为它并没有设计处理完整 phpini 的所有方面。
+> `@code:writeconfig.py`
+> `@description:` 以下示例演示了如何向 `php.ini` 文件写入 MySQL 段。
+> `@warning:` 不要对实际的 `php.ini` 文件使用此脚本，因为它并没有设计处理完整 phpini 的所有方面。
 
 ```python
+
 @code:parseconfig.py
+
 @description: 解析并更新配置文件
+
 import ConfigParser
+
 config = ConfigParser.ConfigParser()
+
 # 打印配置值
+
 print config.get('MySQL','mysql.default_host')
+
 print config.get('MySQL','mysql.default_port')
+
 config.remove_option('MySQL','mysql.trace_mode')
+
 with open('php.ini', 'wb') as config:
+
     config.write(config)
+
 ```
 
 # 解析 JSON 数据
@@ -2062,40 +2093,63 @@ JSON（也称为 JavaScript 对象表示法）是一种轻量级的现代数据�
 
 要使用本节内容，你需要以下条件：
 
-- 1. Python 模块：simplejson。
+- 1. Python 模块：`simplejson`。
 
 ```python
+
 @code: YahooSearch.py
+
 import simplejson, urllib
+
 APP_ID = 'xxxxxxx' # 更改为你的 APP ID
+
 SEARCH_BASE = 'search.yahooapis.com/WebSearchService/1/webSearch
+
 ```
 
 注意：你可以使用命令 `easy_install <module_name>` 安装 Python 模块。这假设你有一个可用的互联网连接。
 
 ```python
+
 class YahooSearchError(Exception):
+
     pass
+
 ```
 
 - 2. Yahoo App ID:
 Yahoo App ID 可以从 https://developers.yahoo.com/dashboard/createKey.html 创建。Yahoo App ID 将在下一页生成。详情见截图。`simplejson` 非常易使用。在接下来的示例中，我们将利用将 JSON 数据结构映射到 Python 数据类型的功能。这让我们可以直接访问 JSON 数据，而无需编写任何 XML 解析代码。
 
 ```python
+
 def search(query,results=20, start=1, **kwargs):
+
     kwargs.update({
+
         'appid': APP_ID,
+
         'query': query,
+
         'results': results,
+
         'start': start,
+
         'output': 'json'
+
     })
+
     url = SEARCH_BASE + '?' + urllib.parse.urlencode(kwargs)
+
     result = simplejson.load(urllib.request.urlopen(url))
+
     if 'Error' in result:
+
         # 发生错误；抛出异常
+
         raise YahooSearchError(result['Error'])
+
     return result['ResultSet']
+
 ```
 
 # JSON 数据映射
@@ -2113,7 +2167,7 @@ def search(query,results=20, start=1, **kwargs):
 
 在 Python shell 中运行上述列的代码来查看它是如何工作的。切换到保存 `LUDYSearch.py` 的目录并打开 Python shell。
 
-@code: Python Shell Output.
+`@code: Python Shell Output.`
 
 ![](img/c72194f2c3aec198936695a665a5167c_65_0.png)
 
@@ -2147,37 +2201,68 @@ Yahoo APIs 使用 OAuth 协议进行 API 使用验证和端用户身份验证。
 系统管理员的一项工作是收集信息。下一个示例展示了如何这样做。以下代码显示内存和文件系统信息。
 
 ```python
+
 @code: PySysInfo.py
+
 import os
+
 import sigar
+
 s = sigar.open()
+
 mem = mem.system()
+
 swap = sg.swap()
+
 fslist = sg.file_system_list()
+
 print "====Memory ===="
+
 print "Information===="
+
 print "\tTotal\tUsed\tFree"
+
 print "Mem:\t",
+
 ```
 
 ```
+
 @Output
+
 ==================
+
 Information====
+
 Total Used Free
+
 Mem: 8388608 6061884 2326274
+
 Swap: 131072 16048 115024
+
 RAM: 8192 MB
+
 ====File System ====
+
 Information====
+
 Filesystem Size Used Avail
+
 Use% Mounted on Type
+
 ```
 
 ```python
-def format_size(size):
-    return sigar.format_size(size)
 
+def format_size(size):
+
+
+
+```python
+return sigar.format_size(size)
+```
+
+```python
 for fs in fslist:
   dir_name = fs.dir_name()
   usage = sg.file_system_usage(dir_name)
@@ -2189,45 +2274,41 @@ for fs in fslist:
     print fs.dev_name(), format_size(total), format_size(used), format_name(name), '/', fs.type_name()
 ```
 
-
-
-
-
 # 系统管理员的 Python 教程：使用 Python
 
-- /dev/disk02 | 300G | 175G | 124G | 59.0 / hfs / local
+- `/dev/disk02` | 300G | 175G | 124G | 59.0 / hfs / local
 - devvs | 191K | 191K | 0 - /dev/devfs / none
 
-- import base64, getpass, os, socket, sys, socket, traceback
-- import paramiko
-- import interactive
-- # 设置日志
-paramiko.util.log_to_file('demo_simple.log')
-- # 获取主机名
-username = ""
-- if len(sys.argv) > 1:
-    hostname = sys.argv[1]
-    if hostname.find('@') >= 0:
-        username, hostname = hostname.split('@')
-else:
-    hostname = raw_input('Hostname: ')
-    if len(hostname) == 0:
-        print('*** Hostname required.')
-        sys.exit(1)
-    port = 22
-    if hostname.find('::') >= 0:
-        hostname, portstr = hostname.split(':')
-        port = int(portstr)
+- `import base64, getpass, os, socket, sys, socket, traceback`
+- `import paramiko`
+- `import interactive`
+- `# 设置日志`
+`paramiko.util.log_to_file('demo_simple.log')`
+- `# 获取主机名`
+`username = ""`
+- `if len(sys.argv) > 1:`
+    `hostname = sys.argv[1]`
+    `if hostname.find('@') >= 0:`
+        `username, hostname = hostname.split('@')`
+`else:`
+    `hostname = raw_input('Hostname: ')`
+    `if len(hostname) == 0:`
+        `print('*** Hostname required.')`
+        `sys.exit(1)`
+    `port = 22`
+    `if hostname.find('::') >= 0:`
+        `hostname, portstr = hostname.split(':')`
+        `port = int(portstr)`
 
 ## 访问安全外壳 (SSH) 服务
 
-SSH（Secure Shell）是旧版 Telnet 的现代替代品。它允许在两个网络设备之间通过安全通道进行数据交换。管理员经常使用 SSH 来管理网络系统。除了提供远程 shell 外，SSH 还用于安全文件传输（使用 SSH 文件协议，即 SFTP）和 X 服务器转发（允许 SSH 客户端作为 X 服务器）。在本节中，我们将学习如何使用 Python 模块 paramiko 来使用 SSH，该模块为 Python 实现了 SSH2 协议。可以通过以下步骤安装 paramiko：
+SSH（Secure Shell）是旧版 Telnet 的现代替代品。它允许在两个网络设备之间通过安全通道进行数据交换。管理员经常使用 SSH 来管理网络系统。除了提供远程 shell 外，SSH 还用于安全文件传输（使用 SSH 文件协议，即 SFTP）和 X 服务器转发（允许 SSH 客户端作为 X 服务器）。在本节中，我们将学习如何使用 Python 模块 `paramiko` 来使用 SSH，该模块为 Python 实现了 SSH2 协议。可以通过以下步骤安装 `paramiko`：
 
-- $ git clone https://github.com/robey/paramiko.git
-- $ cd paramiko
-- $ sudo setup.py install
+- `$ git clone https://github.com/robey/paramiko.git`
+- `$ cd paramiko`
+- `$ sudo setup.py install`
 
-paramiko 的核心是 `SSHClient` 类。该类封装了 [Transport]、[Channel] 和 [SFTPClient] 用来处理 SSH 的大部分方面。你可以使用 SSHClient：
+`paramiko` 的核心是 `SSHClient` 类。该类封装了 `[Transport]`、`[Channel]` 和 `[SFTPClient]` 用来处理 SSH 的大部分方面。你可以使用 `SSHClient`：
 
 ```python
 client = SSHClient()
@@ -2236,9 +2317,9 @@ client.connect('some.host.com')
 stdin, stdout, stderr = client.exec_command('dir')
 ```
 
-以下示例演示了使用 paramiko 模块编写的完整 SSH 客户端。
+以下示例演示了使用 `paramiko` 模块编写的完整 SSH 客户端。
 
-- @code: PySSHClient
+- `@code: PySSHClient`
 
 ```python
 # 获取用户名
@@ -2252,13 +2333,11 @@ try:
     client = paramiko.SSHClient()
     client.load_system_host_keys()
     client.set_missing_host_key_policy(paramiko.WarningPolicy)
-
     *** Connecting...***
     client.connect(hostname, port, username, password)
     chan = client.invoke_shell()
     print(repr(client.get_transport()))
     print('*** SSH Server Connected!**')
-
     ~ $:
     interactive.interactive_shell(chan)
     chan.close()
@@ -2303,11 +2382,7 @@ Password for luduser@192.168.1.2:
 
 ### 给系统管理员的 Python
 
-如果 SSH 服务器的密钥未添加到你的 $HOME/ssh/known_hosts 文件中，客户端将抛出以下错误：
-
-
-
-
+如果 SSH 服务器的密钥未添加到你的 `$HOME/ssh/known_hosts` 文件中，客户端将抛出以下错误：
 
 ## 使用 Beautiful Soup 爬取 Wikipedia 与 Python 工作
 
@@ -2328,9 +2403,9 @@ maxlevel = 1
 storeFolder = "Wikstore" + str(datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S"))
 ```
 
-```python
-02 undesirables = [<element="table",attr="class="infobox"\"><element="table",attr="class="vertical-orphan"\"><element="span",attr="class="mw-editwindow"\"><element="span",attr="class="reference"\"><element="div",attr="class=""><element="div",attr="class="thumb"\"><element="span",attr="class=""><element="table",attr="class="reflist"\"><element="table",attr="class="nowraplinks"\"><element="table",attr="class="Ambox-refinfo"\"><element="img",attr="None"><element="table",attr="class="script"\"><element="None",attr="None"><element="table",attr="class=""><element="table",attr="class="mbox-Orphan"\"><element="table",attr="class="mainarticle"\"><element="None",attr="None"><element="attr",attr="class="References">
-```
+
+
+02 `undesirables = [<element="table",attr="class="infobox"\"><element="table",attr="class="vertical-orphan"\"><element="span",attr="class="mw-editwindow"\"><element="span",attr="class="reference"\"><element="div",attr="class=""><element="div",attr="class="thumb"\"><element="span",attr="class=""><element="table",attr="class="reflist"\"><element="table",attr="class="nowraplinks"\"><element="table",attr="class="Ambox-refinfo"\"><element="img",attr="None"><element="table",attr="class="script"\"><element="None",attr="None"><element="table",attr="class=""><element="table",attr="class="mbox-Orphan"\"><element="table",attr="class="mainarticle"\"><element="None",attr="None"><element="attr",attr="class="References">`
 
 + 2 设置变量
 这些是一些我们将用来跟踪脚本进度的变量
@@ -2374,7 +2449,7 @@ def isValidLink(link):
 ```python
 04 grabPage(URL, level, name):
     opener = urllib2.build_opener()
-    opener.headers = [{"User-agent", "Mozilla/5.0"
+    opener.headers = [{"User-agent", "Mozilla/5.0"}
     req = opener.open(URL)
 ```
 
@@ -2394,7 +2469,7 @@ Wikipedia 有许多相互互联的不同服务，我们不想抓取那些页面�
 
 # 处理用户输入
 
-03 在此函数的前几行中，我们只是在创建一个辅助语句。之后，我们解析执行时传递给程序的任何参数，并寻找 -URL 标志和 -levels  标志。如果我们已经预设了要跟随链接的深度，则 `-levels` 标志是可选的，但如果缺少 `-URL` 标志，我们需要一个起始链接，我们会提示用户并退出。如果我们有链接，我们会快速检查我们是否有一个存储文件的目录——如果没有，我们就创建一个——然后调用函数来获取该页面。最后，我们注册一个在脚本尝试退出时运行的句程序。
+03 在此函数的前几行中，我们只是在创建一个辅助语句。之后，我们解析执行时传递给程序的任何参数，并寻找 `-URL` 标志和 `-levels` 标志。如果我们已经预设了要跟随链接的深度，则 `-levels` 标志是可选的，但如果缺少 `-URL` 标志，我们需要一个起始链接，我们会提示用户并退出。如果我们有链接，我们会快速检查我们是否有一个存储文件的目录——如果没有，我们就创建一个——然后调用函数来获取该页面。最后，我们注册一个在脚本尝试退出时运行的句程序。
 
 # 从 URL 获取页面
 
@@ -2434,12 +2509,22 @@ for link in content.find_all('a'):
         if level < maxlevel:
             stored = False
             for addr in addresses:
-                if addr == href:
-                    stored = True
-        if stored == False:
-                title = href.replace("/wiki/", "")
-                addresses.append(str(title) + ".html")
-                grabPage("http://wikipedia.org" + href, level, title)
+```
+
+
+
+```
+if addr == href:
+
+    stored = True
+
+if stored == False:
+
+    title = href.replace("/wiki/", "")
+
+    addresses.append(str(title) + ".html")
+
+    grabPage("http://wikipedia.org" + href, level, title)
 ```
 
 ### 4 获取页面
@@ -2453,6 +2538,7 @@ for link in content.find_all('a'):
 
 ```python
 print title
+
 link['href'] = link['href'].replace("/wiki/",
 ```
 
@@ -2464,10 +2550,6 @@ link['href'] = link['href'].replace("/wiki/",
 ## 写入文件
 现在我们创建一个文件以便以后读取新解析的文档。我们将文件名中的任何 `?` 更改为 `.so`，以免脚本尝试写入随机随机文件夹。我们还会快速检查目前为止跟随了多少链接。如果达到了它的最大深度，我们将将其添加到 `deepestAddresses` 列表中。我们稍后会用到这一小部分。
 
-
-
-
-
 ## 使用 Beautiful Soup 爬取维基百科
 
 ## 收尾工作
@@ -2478,9 +2560,13 @@ link['href'] = link['href'].replace("/wiki/",
 
 ```python
 doctype = "!DOCTYPE html"
+
 head = "<head<meta charset='UTF-8'/></title>" + fileName + "</title>"
+
 f = open(storeFolder + "/" + fileName.replace('_', '_') + ".html", 'w')
+
 f.write(doctype + "<html>\n" + head + "<body><h1>" + content + "</h1></body></html>")
+
 f.close()
 ```
 
@@ -2511,6 +2597,7 @@ def cleanup(soup):
 
 ```python
 print("Complete")
+
 if __name__ == "__main__":
     init()
 ```
@@ -2573,7 +2660,9 @@ if __name__ == "__main__":
     TicTacToeApp().run()
 ```
 
-你可以轻松运行它，你的应用将启动并获得一个空白窗口。太兴奋了！我们可以用 Kivy 组件构建自己的 GUI。每个组件都是具有特定行为的简单元素，从标准 GUI 功能（例如 Button, Label）到子组件布局（例如 BoxLayout, GridLayout），再到更复杂的硬件交互任务（例如 FileChooser, VideoPlayer）。重要的是，Kivy 的组件设计为易于组合——包括想象中的每一个组件，组件保持简单，但我们将在教程中看到一些![](img/c72194f2c3aec198936695a665a5167c_80_png)
+
+
+你可以轻松运行它，你的应用将启动并获得一个空白窗口。太兴奋了！我们可以用 Kivy 组件构建自己的 GUI。每个组件都是具有特定行为的简单元素，从标准 GUI 功能（例如 `Button`, `Label`）到子组件布局（例如 `BoxLayout`, `GridLayout`），再到更复杂的硬件交互任务（例如 `FileChooser`, `VideoPlayer`）。重要的是，Kivy 的组件设计为易于组合——包括想象中的每一个组件，组件保持简单，但我们将在教程中看到一些
 
 ```python
 def build(self):
@@ -2582,7 +2671,7 @@ def build(self):
                  color=(r, g, b, a))
 ```
 
-'build' 方法在 'App' 时被调用，返回值就是 App 的根。在我们的情况下它是一个 Label，我们设置了几个属性——'text'、'font_size' 和 'color'。所有组件都有控制外观的不同属性，可以动态更新，在这里我们只看到一次：
+`build` 方法在 `App` 时被调用，返回值就是 App 的根。在我们的情况下它是一个 `Label`，我们设置了几个属性——`text`、`font_size` 和 `color`。所有组件都有控制外观的不同属性，可以动态更新，在这里我们只看到一次：
 
 - 注意，属性不仅仅是 Python 属性，而是 Kivy 内部的属性。这些访问方式像普通属性，但通过挂钩 Kivy 的事件系统提供了额外功能。
 - 我们将看到创建属性的示例，如果你要在 Kivy 的事件和绑定中使用你的变量，也应该这样做。
@@ -2592,7 +2681,7 @@ def build(self):
 from kivy.uix.label import Label
 ```
 
-我们将通过返回 'Label' 作为应用的根组件来显示它。每个应用都有一个根组件，顶层文本，它会自动调整大小以填充窗口。稍后我们将看到如何通过添加更多组件来构建 GUI，但现在通过向 'App' 添加一个新方法来设置根组件就足够：
+我们将通过返回 `Label` 作为应用的根组件来显示它。每个应用都有一个根组件，顶层文本，它会自动调整大小以填充窗口。稍后我们将看到如何通过添加更多组件来构建 GUI，但现在通过向 `App` 添加一个新方法来设置根组件就足够：
 
 # 使用 Python 创建
 
@@ -2600,15 +2689,16 @@ from kivy.uix.label import Label
 
 我们的组件：井井棋
 
-由于 Kivy 没有井井棋，我们必须自己制作！我们将创建一个新的组件类来包含这些子组件。这个示例演示了前者，通过声明每个实例化的 'TicTacGrid' 都应该将其 'cols' 属性设置为 3，为 'TicTacGrid' 组件创建了一个规则。
+由于 Kivy 没有井井棋，我们必须自己制作！我们将创建一个新的组件类来包含这些子组件。这个示例演示了前者，通过声明每个实例化的 `TicTacGrid` 都应该将其 `cols` 属性设置为 3，为 `TicTacGrid` 组件创建了一个规则。
 
 ```python
 from kivy.uix.gridlayout import GridLayout
+
 class TicTacGrid(GridLayout):
     pass
 ```
 
-我们将稍后使用更多布局功能，但现在回到 Python 在你的井井棋网格中创建按钮。现在这显然没有做什么，除了它继承了 Kivy GridLayout 组件的所有行为——我们需要告诉它有多少列，但随后它将安排任何组件以整齐的行形式排列。井井棋需要三列和九个子组件。
+我们将稍后使用更多布局功能，但现在回到 Python 在你的井井棋网格中创建按钮。现在这显然没有做什么，除了它继承了 Kivy `GridLayout` 组件的所有行为——我们需要告诉它有多少列，但随后它将安排任何组件以整齐的行形式排列。井井棋需要三列和九个子组件。
 
 ```python
 from kivy.uix.button import Button
@@ -2620,13 +2710,13 @@ class GridEntry(Button):
     coords = ListProperty([0, 0])
 ```
 
-在这里我们引入 Kivy 语言 (kv)，一种用于创建 Kivy 树的特殊领域特定语言。它简单但消除了许多管理 UI 所需的样板代码——作为类比，你可能会认为它是 HTML/CSS 之于 JavaScript。Python 给了我们做任何事情的动态权力，但如果我们只想声明 UI 的基础结构，可能永远不需要 Kivy 语言，你完全可以在纯 Python 中实现同样的功能。
+在这里我们引入 Kivy 语言 `kv`，一种用于创建 Kivy 树的特殊领域特定语言。它简单但消除了许多管理 UI 所需的样板代码——作为类比，你可能会认为它是 HTML/CSS 之于 JavaScript。Python 给了我们做任何事情的动态权力，但如果我们只想声明 UI 的基础结构，可能永远不需要 Kivy 语言，你完全可以在纯 Python 中实现同样的功能。
 
-这种继承自 Kivy 的组件，与鼠标或触摸交互，在切换时分发事件。我们可以挂钩这些事件，在用户按下按钮时调用自己的函数，并设置按钮的 'text' 属性以显示 'X' 或 'O'。我们为组件创建了一个新的 Kivy 属性，'coords'——稍后我们将展示这有多用。这与在 `GridEntry.__init__` 中通过编写 `self, coords = [0, 0]` Python 属性几乎相同。
+这种继承自 Kivy 的组件，与鼠标或触摸交互，在切换时分发事件。我们可以挂钩这些事件，在用户按下按钮时调用自己的函数，并设置按钮的 `text` 属性以显示 `X` 或 `O`。我们为组件创建了一个新的 Kivy 属性，`coords`——稍后我们将展示这有多用。这与在 `GridEntry.__init__` 中通过编写 `self, coords = [0, 0]` Python 属性几乎相同。
 
-Kivy 提供了使用 kv 所需的所有工具，最简单的方法将其写在一个根据你的 App 类命名的文件中。也就是说，我们应该将以下内容放在名为 'tictacttoe.kv' 的文件中：
+Kivy 提供了使用 kv 所需的所有工具，最简单的方法将其写在一个根据你的 App 类命名的文件中。也就是说，我们应该将以下内容放在名为 `tictacttoe.kv` 的文件中：
 
-对于 'TicTacGrid'我们将使用 kv 语言样式化我们的新类，但这次我们可以看到一些有趣的。
+对于 `TicTacGrid` 我们将使用 kv 语言样式化我们的新类，但这次我们可以看到一些有趣的。
 
 ```kv
 <TicTacGrid:
@@ -2638,20 +2728,17 @@ cols: 3
 font_size: self.height
 ```
 
-
-
-
-
 ## 使用 Kivy 构建井井棋游戏
+
 # 使用 Python 创建
 
-从 Python 中创建这些绑定（除了稍后使用的 'bind' 方法外），通常并不像直接引用我们想要绑定的属性那样方便。
+从 Python 中创建这些绑定（除了稍后使用的 `bind` 方法外），通常并不像直接引用我们想要绑定的属性那样方便。
 
 我们显示了它们，并知道它们会自动排列成我们之前设置的具有数字列的网格。
 
-现在，我们必须将我们的根组件（从 'App.build' 返回）替换为 'TicTacToeGrid'，这样我们就能看到应用的样子了。
+现在，我们必须将我们的根组件（从 `App.build` 返回）替换为 `TicTacToeGrid`，这样我们就能看到应用的样子了。
 
-让我们向 'TicTacToeGrid' 中填充 'GridEntry' 小组件。
+让我们向 `TicTacToeGrid` 中填充 `GridEntry` 小组件。
 
 ```python
 class TicTacToeGrid(GridLayout):
@@ -2670,7 +2757,7 @@ def build(self):
     return TicTacToeGrid()
 ```
 
-通过此，你可以再次运行 Python 文件并享受你的新程序。一切正常，单个 Label 被替换为一个由九个按钮组成的网格，每个按钮都可以点击（它会自动改变），并且你会看到来自你绑定的输出信息。
+通过此，你可以再次运行 Python 文件并享受你的新程序。一切正常，单个 `Label` 被替换为一个由九个按钮组成的网格，每个按钮都可以点击（它会自动改变），并且你会看到来自你绑定的输出信息。
 
 我们可以通过修改 Button 的其他属性来定制外观，但现在我们让它们保持原样。
 
@@ -2682,13 +2769,13 @@ def button_pressed(self, instance):
 有人获胜了吗？
 我们需要跟踪棋盘的状态以检查是否有人获胜，我们可以通过多个 Kivy 属性来实现。
 
-这里引入了一个新概念：当我们实例化 'GridEntry' 小组件时，我们能够简单地通过作为关键字参数（kw）传递来设置它们的 'coords' 属性。这是一个 Kivy 属性自动处理的小功能。
+这里引入了一个新概念：当我们实例化 `GridEntry` 小组件时，我们能够简单地通过作为关键字参数（kw）传递来设置它们的 `coords` 属性。这是一个 Kivy 属性自动处理的小功能。
 
 ```python
 from kivy.properties import (ListProperty, NumericProperty)
 ```
 
-我们使用 'bind' 方法在每当 'GridEntry' 小组件触发 'on_release' 事件时调用 'button_pressed' 方法。每当用户释放 'GridEntry' 按钮时，这种操作会自动发生。我们还可以绑定到 'on_press'（在按钮首次被点击时触发），或者绑定到按钮的任何 Kivy 属性（当属性修改时动态触发）。
+我们使用 `bind` 方法在每当 `GridEntry` 小组件触发 `on_release` 事件时调用 `button_pressed` 方法。每当用户释放 `GridEntry` 按钮时，这种操作会自动发生。我们还可以绑定到 `on_press`（在按钮首次被点击时触发），或者绑定到按钮的任何 Kivy 属性（当属性修改时动态触发）。
 
 ```python
 class TicTacToeGrid(GridLayout):
@@ -2696,39 +2783,46 @@ class TicTacToeGrid(GridLayout):
     current_player = NumericProperty(1)
 ```
 
-我们通过 'add_widget' 方法将每个 'GridEntry' 小组件添加到我们的 'Grid' 中。这意味着每一个都是 'TicTacToeGrid' 的子组件，因此它将...
+我们通过 `add_widget` 方法将每个 `GridEntry` 小组件添加到我们的 `Grid` 中。这意味着每一个都是 `TicTacToeGrid` 的子组件，因此它将...
 
-这添加了一个状态列表来表示谁玩过棋，并给当前玩家分配了一个数字（1 代表 'O'，-1 代表 'X'）。
+这添加了一个状态列表来表示谁玩过棋，并给当前玩家分配了一个数字（1 代表 `O`，-1 代表 `X`）。
 
 通过将这些放入我们的状态列表中，我们就能知道某行、某列或对角线的和是否为 +3，从而有人获胜。现在我们可以在进行移动时更新我们的图形网格。
 
-![](img/c72194f2c3aec198936695a665a5167c_82_0.png)
-
 # 使用 Python 创建
+
 ## 使用 Kivy 构建井井棋游戏
 
 ```python
 def button_pressed(self, button):
     player = {'O': 'O', 'X': 'X'}
-    colours = {1: (1, 0, 0), -1: (0, 1, 0)}
-    # (r, g, b, a)
-
-    row, column = button.coords
-
-    status_index = 3*row + column
-    already_played = self.status[status_index]
-
-    if not already_played:
-        self.status[status_index] = self.current_player
-        button.text = {'O': 'O', 'X': 'X'}[self.current_player]
-        button.background_color = colours[self.current_player]
-        self.current_player *= -1
 ```
+
+
+
+`colours = {1: (1, 0, 0), -1: (0, 1, 0)}`
+
+`# (r, g, b, a)`
+
+`row, column = button.coords`
+
+`status_index = 3*row + column`
+
+`already_played = self.status[status_index]`
+
+`if not already_played:`
+
+`self.status[status_index] = self.current_player`
+
+`button.text = {'O': 'O', 'X': 'X'}[self.current_player]`
+
+`button.background_color = colours[self.current_player]`
+
+`self.current_player *= -1`
 
 ```python
 def on_status(self, instance, new_value):
     status = new_value
-
     sums = [sum(status[0:3]), # 行
                sum(status[3:6]),
                sum(status[6:9]),
@@ -2736,7 +2830,6 @@ def on_status(self, instance, new_value):
                sum(status[1::2]),
                sum(status[::2]), # 对角线
                sum(status[2::::-2])]
-
     if 3 in sums:
         print('Os win!')
     elif -3 in sums:
@@ -2745,7 +2838,7 @@ def on_status(self, instance, new_value):
         print('Draw!')
 ```
 
-你可以运行此应用来确切看到它的效果，你会发现点击每个按钮都会根据轮到谁来放置 'O' 或 'X' 以及一个有颜色的背景。不仅如此，由于我们的状态跟踪了已有的移动，你每个按钮上只能玩一次。
+你可以运行此应用来确切看到它的效果，你会发现点击每个按钮都会根据轮到谁来放置 `'O'` 或 `'X'` 以及一个有颜色的背景。不仅如此，由于我们的状态跟踪了已有的移动，你每个按钮上只能玩一次。
 
 这已经足够玩游戏了，但还缺少一个关键元素：一个告诉你在何时获胜的大弹窗！在我们做此之前，我们需要添加一些代码来检查游戏是否结束。Kivy 属性在这里还有另一个有用功能：每当它们改变时，会自动调用如果存在的 `_property` 方法，并在 Kivy 的事件系统中分发相应的事件。这使得在 Python 和 kv 语言中编写在属性更改时运行的代码变得简单。在我们的案例中，可以用它在每次更新状态列表时检查状态，如果玩家填满了某列、某行或对角线，这将很特别。
 
@@ -2754,15 +2847,13 @@ def on_status(self, instance, new_value):
 ```python
 def reset(self, *args):
     self.status = [0 for _ in range(9)]
-
     for child in self.children:
         child.text = ""
         child.background_color = (1, 1, 1, 1)
-
     self.current_player = 1
 ```
 
-最后，我们需要修改 `_status` 方法以同时重置棋盘并在 'ModalView' 小组件中显示获胜者。
+最后，我们需要修改 `_status` 方法以同时重置棋盘并在 `'ModalView'` 小组件中显示获胜者。
 
 ```python
 from kivy.uix.modalview import ModalView
@@ -2770,8 +2861,9 @@ from kivy.uix.modalview import ModalView
 
 ![](img/c72194f2c3aec198936695a665a5167c_83_0.png)
 
-## 使用 Kivy 构建井井棋游戏
-# 使用 Python 创建
+# 使用 Kivy 构建井井棋游戏
+
+## 使用 Python 创建
 
 这是一个弹窗，它绘制在其他所有内容之上，而不是作为普通组件树的一部分。当用户点击它外部时，它也会自动关闭。
 
@@ -2783,25 +2875,20 @@ elif 3 in sums:
     winner = 'Os win!'
 elif 0 not in sums:
     winner = 'Draw...nobody wins!'
-
 ```
 
+```python
 if winner:
     popup = ModalView(size_hint=(0.75, 0.5))
     victory_label = Label(text=winner, font_size=50)
     popup.add_widget(victory_label)
     popup.bind(on_dismiss=self.reset)
     popup.open()
-
 ```
 
-![](img/c72194f2c3aec198936695a665a5167c_84_0.png)
+![](img/c72194f2c3aec198936695a665a665a5167c_84_0.png)
 
-井井棋网格现在接收输入，交替添加 'O' 或 'X'，每回合
-
-
-
-
+井井棋网格现在接收输入，交替添加 `'O'` 或 `'X'`，每回合
 
 # 使用 Python 创建
 
@@ -2809,9 +2896,9 @@ if winner:
 
 ### 你需要准备...
 
-- 最新版本的树莓派镜像：www.raspberrypi.org/downloads
-- Pillow: https://github.com/python-imaging/Pillow
-- SimpleGUItk: https://github.com/dholm/simpleGUItk/
+- 最新版本的树莓派镜像：`www.raspberrypi.org/downloads`
+- Pillow: `https://github.com/python-imaging/Pillow`
+- SimpleGUItk: `https://github.com/dholm/simpleGUItk/`
 
 ## 使用 Python 制作 Pong 克隆游戏
 
@@ -2823,13 +2910,13 @@ if winner:
 
 ![](img/c72194f2c3aec198936695a665a5167c_85_0.png)
 
-## Python 模块准备
+### Python 模块准备
 
-### SimpleGUI 代码
+#### SimpleGUI 代码
 
 前往“你需要准备”中列出的网站，从 GitHub 页面下载源代码 zip 包。更新你的树莓派包并安装它们。
 
-draw 部分中的重要部分是 `draw`、`line_image` 和 `draw text` 函数。这些函数专门来自 SimpleGUI，允许你根据大小、位置和颜色轻松地在屏幕上放置这些对象。不过，你需要绑定一个对象——在这种情况下是 `canvas`。这告诉软件我们想把这些项目显示在屏幕上查看。
+`draw` 部分中的重要部分是 `draw`、`line_image` 和 `draw text` 函数。这些函数专门来自 SimpleGUI，允许你根据大小、位置和颜色轻松地在屏幕上放置这些对象。不过，你需要绑定一个对象——在这种情况下是 `canvas`。这告诉软件我们想把这些项目显示在屏幕上查看。
 
 ```
 $ sudo apt-get install python-dev setuptools tk8.5-dev
@@ -2846,7 +2933,7 @@ $ sudo python setup.py
 
 启动 IDE 2（而不是 IDE 3），并打开一个新窗口。代码编辑器将跟随我们的游戏“Tux for You”！请仔细跟随代码，以确保你清楚自己在做什么。如果你愿意，也可以修改游戏规则。
 
-## SimpleGUI 设置代码
+### SimpleGUI 设置代码
 
 打开终端并使用 `cd` 移动到解压后的文件夹。然后输入：
 
@@ -2864,7 +2951,9 @@ $ sudo python setup.py
 
 ## 完整代码列表
 
-```
+
+
+```python
 import simpleguikit as simpleguikit
 import random
 
@@ -2913,7 +3002,7 @@ def draw(canvas):
         tux_vel[1] = -tux_vel[1]*1
 ```
 
-```
+```python
 if tux_pos[0] <= pad_w + tux_r/2:
     if (paddle_pos[1] + (pad_h/2)) >= tux_pos[1]:
         if tux_pos[1] >= (paddle_pos[1] - (pad_h/2)):
@@ -2935,7 +3024,7 @@ canvas.draw_text(str(score), [150, 100], 'Green')
 canvas.draw_text(str(score), [450, 100], 'Green')
 ```
 
-```
+```python
 def keydown(key):
     global paddle1_pos, paddle2_vel
     acc = 3
@@ -2949,14 +3038,14 @@ def keydown(key):
         paddle2_vel[1] -= acc
 ```
 
-```
+```python
 frame = simplegui.create('Pong for Two', w, h)
 frame.set_key_handler(keydown)
 frame.set_key_handler(keyup)
 frame.set_image('http://upload.wikipedia.org/wikipedia/commons/a/af/Tux.png')
 ```
 
-```
+```python
 start()
 frame.start(start)
 ```
@@ -2975,7 +3064,7 @@ frame.start(start)
 
 ## 编写 300 行 Python
 
-当你学习新语言或尝试新模块时，通过熟悉的项目来扩展知识是一种很好的练习方法。Space Invaders 是一个完美的例子，它使用了许多 Pygame 的功能，让创建游戏和交互应用程序变得简单。我们花了几十行代码来处理碰撞检测和屏幕更新。享受这个项目并确保让它成为你自己的！太空侵击者是最伟大的游戏之一吗？每个人都知道如何玩！
+当你学习新语言或尝试新模块时，通过熟悉的项目来扩展知识是一种很好的练习方法。`Space Invaders` 是一个完美的例子，它使用了许多 `Pygame` 的功能，让创建游戏和交互应用程序变得简单。我们花了几十行代码来处理碰撞检测和屏幕更新。享受这个项目并确保让它成为你自己的！太空侵击者是最伟大的游戏之一吗？每个人都知道如何玩！
 
 ![](img/c72194f2c3aec198936695a665a5167c_87_0.png)
 
@@ -2984,6 +3073,8 @@ frame.start(start)
 # 使用 Python 创建
 
 ## 完整代码
+
+
 
 ```python
 #!/usr/bin/env python
@@ -3078,49 +3169,45 @@ class Game(object):
         self.barrier_group = pygame.sprite.Group()
 ```
 
+# 使用 Python 创建《星际入侵者》克隆版
 
+## 设置依赖项
 
+## 全局变量与元组
 
+如果你想更更好地了解如何使用 `Pygame` 和 `Python` 编写游戏，我们强烈建议你将本教程中的 `Pivaders` 代码复制到自己的程序中。这是一个非常棒的练习，并让你有机会根据自己的喜好调整游戏元素，无论是更换图像、改变难度还是外星人波次的行为。不过，如果你只想玩玩这个游戏，也可以轻松实现。无论如何，游戏唯一的依赖项是 `Pygame`（如果还没有安装的话），可以通过终端安装：
 
-# 使用 Python 创建
-
-# 编写一个《星际入侵者》克隆版
-
-# 设置依赖项
-
-# 全局变量与元组
-
-如果你想更更好地了解如何使用 Pygame 和 Python 编写游戏，我们强烈建议你将本教程中的 Pivaders 代码复制到自己的程序中。这是一个非常棒的练习，并让你有机会根据自己的喜好调整游戏元素，无论是更换图像、改变难度还是外星人波次的行为。不过，如果你只想玩玩这个游戏，也可以轻松实现。无论如何，游戏唯一的依赖项是 Pygame（如果还没有安装的话），可以通过终端安装：
-
-一旦我们合并了它，对于项目需要的模块来说就是完美的；这里有一份大写字母的快速列表。那些变量是常量（全局变量）。这些是永远不会的重要变量——与代码相关的内容，如颜色、区块大小和分辨率。你还会注意到 `colours` 包含了多个括号内的数字——这些是元组（tuples）。你也可以使用方括号（将它们变成列表），但我们在这里使用元组是因为它们代表常量，意味着你不能为元组内的单个项目赋值。对于常量来说，它们本身就被设计为不可更改。
+一旦我们合并了它，对于项目需要的模块来说就是完美的；这里有一份大写字母的快速列表。那些变量是常量（全局变量）。这些是永远不会的重要变量——与代码相关的内容，如颜色、区块大小和分辨率。你还会注意到 `colours` 包含了多个括号内的数字——这些是元组（`tuples`）。你也可以使用方括号（将它们变成列表），但我们在这里使用元组是因为它们代表常量，意味着你不能为元组内的单个项目赋值。对于常量来说，它们本身就被设计为不可更改。
 
 ```
 sudo apt install python-pygame
 ```
 
-# 安装
+## 安装
 
-对于 Pivaders，我们使用了 Git，一种非常出的版本控制形式，可以安全地存储游戏并保留代码的历史版本。Git 已经安装在你的 Pi 上，你可以通过以下方式访问：
+对于 `Pivaders`，我们使用了 `Git`，一种非常出的版本控制形式，可以安全地存储游戏并保留代码的历史版本。`Git` 已经安装在你的 `Pi` 上，你可以通过以下方式访问：
 
 ```
 sudo apt-get git
 ```
 
-就你的代码而言，Git 允许你克隆其他项目的副本进行开发，或者直接使用它们。克隆 Pivaders，在终端中进入你的主目录 (cd -)，为项目创建一个目录 (mkdir pivaders)，进入该目录 (cd pivaders) 并执行：
+就你的代码而言，`Git` 允许你克隆其他项目的副本进行开发，或者直接使用它们。克隆 `Pivaders`，在终端中进入你的主目录 (`cd -`)，为项目创建一个目录 (`mkdir pivaders`)，进入该目录 (`cd pivaders`) 并执行：
 
 ```bash
 git clone https://github.com/rub78/pivaders
 ```
 
-# 测试 Pivaders
+## 测试 Pivaders
 
-# 类 (Classes) – 第一部分
+## 类（Classes） – 第一部分
 
-有了 Pygame 和克隆到本地机器的项目（你也可以在此问题封面的 DVD 上找到 zip 包——只需将其解压并复制到你的主目录即可），你就可以对其进行快速测试，以确保一切都设置正确。你需要在终端的文件夹内输入 `pivaders.py` 来启动。你可以使用空格键开始游戏（使用相同的按钮），并使用键盘上的左右箭头移动你的飞船左右。
+有了 `Pygame` 和克隆到本地机器的项目（你也可以在此问题封面的 `DVD` 上找到 `zip` 包——只需将其解压并复制到你的主目录即可），你就可以对其进行快速测试，以确保一切都设置正确。你需要在终端的文件夹内输入 `pivaders.py` 来启动。你可以使用空格键开始游戏（使用相同的按钮），并使用键盘上的左右箭头移动你的飞船左右。
 
-类（Class）本质上是你可能想要创建的对象的蓝图。以我们的玩家为例，它包含了所有必要信息，我们可以从这里创建多个副本（我们在项目中通过 `make_player` 方法创建了玩家实例）；Pygame 中类很棒的之处在于，它们继承了 Pygame `sprite` 类的能力和特性，正如类的第一行大括号内找到的 `pygame.sprite.Sprite` 所示。你可以通过 www.pygame.org/docs/ref/sprite.html 读取文档以了解更多关于 `Sprite` 类的信息。
+类（`Class`）本质上是你可能想要创建的对象的蓝图。以我们的玩家为例，它包含了所有必要信息，我们可以从这里创建多个副本（我们在项目中通过 `make_player` 方法创建了玩家实例）；`Pygame` 中类很棒的之处在于，它们继承了 `Pygame` `sprite` 类的能力和特性，正如类的第一行大括号内找到的 `pygame.sprite.Sprite` 所示。你可以通过 `www.pygame.org/docs/ref/sprite.html` 读取文档以了解更多关于 `Sprite` 类的信息。
 
-# 创建你的类
+## 创建你的类
+
+
 
 一旦你获得了一个高分（超过 2000 分就非常富足可观了）并熟悉了我们的简单实现，你通过跟随学习、探索代码以及阅读后续的简要说明将获得更多收获。对于那些想要创建自己的项目的人，创建一个新文件夹，并使用 IDE 或 Leafpad（或者可能是 Geany）保存你自己的 `.py` 文件。
 
@@ -3128,7 +3215,7 @@ git clone https://github.com/rub78/pivaders
 
 我们尝试使用了 Pygame 的许多功能，它的设计是为了让创建游戏和交互式应用程序变得简单
 
-# # 使用 Python 编写一个《星际入侵者》克隆版
+# 使用 Python 编写一个《星际入侵者》克隆版
 
 接第 89 页
 
@@ -3241,14 +3328,9 @@ def make_missile(self):
 
 接第 93 页
 
-
-
-
-
-
 # 编写一个《太空入侵者》克隆版
 
-# 使用 Python 创建
+## 使用 Python 创建
 
 ```
 missile.vector = 1
@@ -3267,6 +3349,8 @@ def make_barrier(self, columns, rows, spacer):
             barrier.rect.x = col * (200 + spacer)
             barrier.rect.y = row * (50 + 10) + 0
 ```
+
+
 
 ```python
 self.refresh_screen()
@@ -3370,19 +3454,27 @@ if __name__ == '__main__':
 
 # 使用 Python 创建《太空入侵者》克隆版
 
-# 太空入侵者第 2 部分：图形与声音
+## 太空入侵者第 2 部分：图形与声音
 
-# 你需要...
+### 你需要...
+
 - Raspian
+
   www.raspberry.org/downloads
+
 - Python
+
   www.python.org/docs
+
 - Pygame
+
   www.pygame.org/docs
+
 - Art assets
+
   opengame.org
 
-# 太空入侵者第 2：图形与声音
+## 太空入侵者第 2：图形与声音
 
 这一次我们将扩展《太空入侵者》克隆版，包含沉浸式动画和声音。
 
@@ -3392,15 +3484,15 @@ if __name__ == '__main__':
 
 ![](img/c72194f2c3aec1989366a5167c93_0.png)
 
-# 设置依赖
+## 设置依赖
 
 01 你可以通过下载代码来获得更多练习。无论你只是只想运行代码，都需要一些基础依赖。这两项要求是 Pygame 和 Git，它们都是默认安装的。这很简单！
 
-# 下载依赖
+## 下载依赖
 
 02 Git 是一个优秀的版本控制系统，帮助程序员保存代码和文件。它不仅可以保留更改历史，意味着你可以从 GitHub 等地方克隆整个项目。要克隆本教程项目的最新版本，从命令行进入文件夹并输入：
 
-# 导航项目
+## 导航项目
 
 03 在 `pivaders` 文件夹中，readme 文件包含主游戏文件 `game.py`。你会找到图形和声音的子文件夹，以及用于标题屏幕的字体。要进行测试，只需进入子目录 (`cd pivaders`)，并使用方向键左右移动，使用空格键射击。你可以按 Escape 键退出。
 
@@ -3412,11 +3504,13 @@ git pull https://github.com/russ/pivadars
 
 ![](img/c72194f2c3aec1989366a5167c93_1.png)
 
-# 太空入侵者第 2 部分：图形与声音
+## 太空入侵者第 2 部分：图形与声音
 
-# 使用 Python 创建
+## 使用 Python 创建
 
-# 代码列表（从...行开始）
+### 代码列表（从...行开始）
+
+
 
 ```python
 class Game(object):
@@ -3459,10 +3553,6 @@ class Game(object):
         self.explosion_fx.set_volume(0.5)
         self.explode_alien = []
 ```
-
-
-
-
 
 # 使用 Python 创建
 
@@ -3531,6 +3621,8 @@ self.bullet_fx.play()
 
 09 我们在玩家代码中使用了标记：`animate_player()`。在这里我们使用嵌套语句来控制动画并物理地设置玩家图像。它规定，如果 `animate_right` 为 `True` 且当前位置不是我们想要的，我们就会增加 `ani_pos` 变量并设置玩家图像。`Else` 语句则将精灵动画回静止状态，相同的逻辑也适用于相反的方向。
 
+
+
 ```python
 def animate_player(self):
     if animate_right:
@@ -3586,7 +3678,7 @@ def alien_explode(self):
             self.alien_pos = 0
 ```
 
-Pygame 可以轻松地为你的喜欢的格式添加合适的音乐，使用 `mixer` 类加载它。由于已经在播放，我们只需要通过 `pygame.music.play()` 请求音乐开始并直到结束。如果设置为 `-1`，音乐将循环。通过 www.pygame.org/docs/mixer.html 了解更多关于 `mixer` 类的信息。
+Pygame 可以轻松地为你的喜欢的格式添加合适的音乐，使用 `mixer` 类加载它。由于已经在播放，我们只需要通过 `pygame.music.play()` 请求音乐开始并直到结束。如果设置为 `-1`，音乐将循环。通过 `www.pygame.org/docs/mixer.html` 了解更多关于 `mixer` 类的信息。
 
 ```python
 def splash_screen(self):
@@ -3605,7 +3697,7 @@ def splash_screen(self):
 self.bullet_fx = pygame.mixer.Sound('location/of/file')
 ```
 
-你可以从 freesound.org 获取不同系统所需的不同声音。
+你可以从 `freesound.org` 获取不同系统所需的不同声音。
 
 ```python
 def make_player(self):
@@ -3637,6 +3729,7 @@ libavformat-dev libcodec-dev
 ![](img/c72194f2c3aec198936695a665a5167c_98.png)
 
 Pygame 构建在 SDL2 上，相比 SDL1 有许多变化（见头部）。它包含了如：
+
 - 迁移到 Branch
 - 移除了 SDL 1.2 支持，Pygame 不支持
 - 用 pygame setup 版本 2.1.2.dev553
@@ -3649,7 +3742,7 @@ python -m pip install pygame
 
 ### 其他安装方式
 
-如果上述方法不起作用（或有点困难），你可以检查网站适用于其他系统和 Linux 的二进制文件。前往 http://pygame.org/download.html 获取你特定系统（Windows 和 OS X）所需的文件。教程的其他部分通用。
+如果上述方法不起作用（或有点困难），你可以检查网站适用于其他系统和 Linux 的二进制文件。前往 `http://pygame.org/download.html` 获取你特定系统（Windows 和 OS X）所需的文件。教程的其他部分通用。
 
 ### 接下来从源码下载 Pygame 代码
 
@@ -3659,7 +3752,7 @@ python -m pip install pygame
 git clone https://github.com/pygame/pygame
 ```
 
-这将将其下载到 'pygame' 文件夹。在终端中移动该文件夹以便继续构建。
+这将将其下载到 `pygame` 文件夹。在终端中移动该文件夹以便继续构建。
 
 ### 理解脚本文件
 
@@ -3685,14 +3778,13 @@ python setup.py install
 
 这不会花费太久。
 
+
+
 ![](img/c72194f2c3aec198936695a665a5167c_98_2.png)
 
 ![](img/c72194f2c3aec198936695a665a5167c_98_3.png)
 
 ![](img/c72194f2c3aec198936695a665a5167c_98_4.png)
-
-
-
 
 ```python
 #!/usr/bin/env python
@@ -3727,32 +3819,30 @@ if __name__ == "__main__":
     print("程序结束。")
 ```
 
-## 在 Raspberry Pi 上使用 Python
+# 在 Raspberry Pi 上使用 Python
 
-- 教程将涵盖以下主题：
-    - 基础运算
-    - 比较运算符
-    - 控制结构
-    - 文件处理
-    - 函数
-    - 库
-    - 模块
-    - 面对象编程
-    - 字符串
-    - 元组
-    - 列表
-    - 变量
-    - 字典
-    - 集合
+教程将涵盖以下主题：
 
-
-
+- 基础运算
+- 比较运算符
+- 控制结构
+- 文件处理
+- 函数
+- 库
+- 模块
+- 面对象编程
+- 字符串
+- 元组
+- 列表
+- 变量
+- 字典
+- 集合
 
 # 在树莓派上使用 Python 进行 Pi 编程
 
-# 保存你的工作
+## 保存你的工作
 
-03 在编程时，随时使用 Ctrl+S 保存工作一直是个好主意，因为丢失你所做的一切将是非常遗憾的。第一次保存文件：按 Ctrl+S 或进入菜单并保存。为文件起一个合理的名称，并将其保存到你之前创建的整洁结构中。编程时保持良好的条理是一个好习惯，因为当你的项目变得更大、更复杂时，这会让事情变得更简单。
+03 在编程时，随时使用 `Ctrl+S` 保存工作一直是个好主意，因为丢失你所做的一切将是非常遗憾的。第一次保存文件：按 `Ctrl+S` 或进入菜单并保存。为文件起一个合理的名称，并将其保存到你之前创建的整洁结构中。编程时保持良好的条理是一个好习惯，因为当你的项目变得更大、更复杂时，这会让事情变得更简单。
 
 | 名称 | 大小 | 修改日期 |
 |---|---|---|
@@ -3761,13 +3851,13 @@ if __name__ == "__main__":
 | Python Hello World v2 | | |
 | Places | | |
 
-# 设置环境
+## 设置环境
 
-05 在代码中包含详细的注释可以让你记录你发现的内容并记录复杂的步骤。如果未来其他程序员在阅读你的代码时遇到困难，他们将非常感激。先从添加一个描述程序将做什么以及为什么要这么做的注释开始。所有注释都以井号 (#) 开头，不会被 Python 解释器解释为代码。我们导入库以便以后可以使用 `exit` 函数关闭程序。我们还从 `decimal` 库导入了所有内容，因为我们要使用 `decimal` 类型。
+05 在代码中包含详细的注释可以让你记录你发现的内容并记录复杂的步骤。如果未来其他程序员在阅读你的代码时遇到困难，他们将非常感激。先从添加一个描述程序将做什么以及为什么要这么做的注释开始。所有注释都以井号 (`#`) 开头，不会被 Python 解释器解释为代码。我们导入库以便以后可以使用 `exit` 函数关闭程序。我们还从 `decimal` 库导入了所有内容，因为我们要使用 `decimal` 类型。
 
 > “编程时保持良好的条理是一个好习惯”
 
-# 变量
+## 变量
 
 05 变量是存储在内存中并可以通过名称访问的数据。我们的程序将询问你的名字，将其存储在变量中，然后打印欢迎消息。我们将添加一条注释来解释这一点，并创建一个名为 `FirstName` 的变量。注意我们如何将单词的首字母大写，以便更容易阅读。我们希望变量持有由名为 `input` 的函数返回的值，该函数要求用户输入。问题被传递到函数括号中，它返回一个带有引号的字符串。这种类型基本上是字符的集合。注意在用户输入这个问题之后输入内容之前，我们在冒号后面添加了空格。
 
@@ -3783,33 +3873,29 @@ import sys
 from decimal import *
 ```
 
-# 打印消息
+## 打印消息
 
 06 现在我们在 `filename` 中已经有一个值了，我们需要在屏幕上输出欢迎消息。在 Python 中，我们使用 `print` 函数向屏幕打印内容。函数后面跟着一对括号，里面包裹着值。当对字符串使用加运算符时，它们会被连接在一起。注意 `filename` 不需要包含在引号中，如果包含在引号中，输出将是文本 "filename"。我们最后通过向输出中添加一个 `\n` 字符（换行）来结束，以便在开始下一个示例之前留出一个空行。
 
 # 在树莓派上进行 Python 编程
 
-# 在树莓派上使用 Python
+## 在树莓派上使用 Python
 
 ![](img/c72194f2c3aec198936695a665a5167c_106_0.png)
 
-# 测试我们的程序
+## 测试我们的程序
 
-08 现在我们已经完成了那部分，为什么不测试一下呢？注意的是，你必须在运行程序之前保存，否则自上次保存以来做的任何操作都不会被 Python 解释。使用 F5 键运行程序。通过输入并按回车键输入名字。完成后，你将看到欢迎消息。如果程序以代码 0 退出，说明一切运行成功。按回车键关闭终端。
+08 现在我们已经完成了那部分，为什么不测试一下呢？注意的是，你必须在运行程序之前保存，否则自上次保存以来做的任何操作都不会被 Python 解释。使用 `F5` 键运行程序。通过输入并按回车键输入名字。完成后，你将看到欢迎消息。如果程序以代码 0 退出，说明一切运行成功。按回车键关闭终端。
 
-# 修复小问题
+## 修复小问题
 
-07 我们目前使用的 Debian 镜像有一个小的配置错误问题。如果你尝试使用 F5 键运行程序或进入 Build 菜单并选择 Execute（执行），你就会发现存在这个问题。如果问题存在，什么都不会发生，你会看到一条消息 'Could not find terminal: xterm'。别担心，很容易修复。进入 Edit 菜单并选择 Preferences（偏好）。进入 Tools 选项卡，并将 Terminal 的值从 xterm 更改为 terminal。
+07 我们目前使用的 Debian 镜像有一个小的配置错误问题。如果你尝试使用 `F5` 键运行程序或进入 Build 菜单并选择 Execute（执行），你就会发现存在这个问题。如果问题存在，什么都不会发生，你会看到一条消息 'Could not find terminal: xterm'。别担心，很容易修复。进入 Edit 菜单并选择 Preferences（偏好）。进入 Tools 选项卡，并将 Terminal 的值从 `xterm` 更改为 `terminal`。
 
-# 处理数字
+## 处理数字
 
 09 我们基本上通过重复之前的前几行代码来向用户索要一个数字。一旦用户给了我们一个数字，我们将将其平方并翻倍。`raw_input` 函数返回用户输入的值是一个字符串。字符串是一种文本值，我们无法对其进行算术运算。Python 中的整数类型（integer）只能存储小数部分为零数字。我们将进行一种被称为“类型转换”（cast）的操作，它基本上是将一种类型的值转换为另一种类型。我们将数字字符串转换为小数值（decimal），因为如果我们要减半数字，可能会涉及到小数。如果数字是整数类型，任何小数都将直接从末尾截掉，而不进行四舍五入。这被称为截断（truncation）。
 
-# 在树莓派上使用 Python
-
-# 在树莓派上进行 Python 编程
-
-# 执行算术运算
+## 执行算术运算
 
 Python 中主要的算术运算符是 `+` `-` `/` `*`，后两个分别是除法和乘法。我们创建了三个新变量 `Number`、`numberDouble` 和 `numberSquared`。注意我们不需要指定它们应该是小数，因为 Python 会根据变量初始值的类型赋予变量相应的类型。`number` 变量是小数类型，因此对该数字进行算术运算返回的所有也将也是小数类型。
 
@@ -3821,9 +3907,9 @@ print("result of doubling: " + str(numberDouble))
 print("result of squaring: " + str(numberSquared))
 ```
 
-# 打印我们的结果
+## 打印我们的结果
 
-- 现在我们已经完成了算术运算，我们需要使用 `print` 函数打印结果。`print` 函数只接受传递给它的值。这意味着我们需要在打印之前将每个小数值转换为字符串。在引号之间什么都不加使用 `print` 语句会打印一个空行。这之所以有效，是因为 `print` 函数也会在其输出末尾添加一个新行，除非另有规定，所以打印空字符串会打印一个新行。
+现在我们已经完成了算术运算，我们需要使用 `print` 函数打印结果。`print` 函数只接受传递给它的值。这意味着我们需要在打印之前将每个小数值转换为字符串。在引号之间什么都不加使用 `print` 语句会打印一个空行。这之所以有效，是因为 `print` 函数也会在其输出末尾添加一个新行，除非另有规定，所以打印空字符串会打印一个新行。
 
 ![](img/c72194f2c3aec198936695a665a5167c_107_0.png)
 
@@ -3831,7 +3917,7 @@ print("result of squaring: " + str(numberSquared))
 
 在树莓派上使用 Python
 
-# 带有循环和 if 语句
+## 带有循环和 if 语句
 
 ```python
 # 处理结果
@@ -3844,7 +3930,7 @@ else:
 
 > `print` 函数也会在其输出末尾添加一个新行，除非另有规定，所以打印空字符串会打印一个新行
 
-# 增加计数
+## 增加计数
 
 ```python
 # 像 while 循环一样给数字加 5 并每次输出
@@ -3856,10 +3942,6 @@ print('number ' + str(count) + ' = ' + str(number))
 count += 1
 ```
 
-
-
-
-
 # 在 Pi 上使用 Python
 
 ## 从你的 Pi 发送短信
@@ -3868,11 +3950,13 @@ count += 1
 
 ### 从你的 Pi 发送短信
 
-- 树莓派 (Raspberry Pi)
+- 树莓派 (`Raspberry Pi`)
 
 创建一个结合了 Twilio 代码的程序，并从你的 Pi 发送短信
 
-短信消息，或称 SMS（短消息服务），已成为日常通信的主流。对于我们许多人来说，几乎没有一天不发短信。这项服务最初是一项 40 便士的短信服务，现在由大多数资费提供商作为无限服务提供。Twilio 是一家云通信公司，它允许你仅需六行代码，就能从你的树莓派向手机免费发送短信。这样，你再也不需要工作时一直被束缚在手机旁，可以专注于一个屏幕而不是两个！
+
+
+短信消息，或称 `SMS`（短消息服务），已成为日常通信的主流。对于我们许多人来说，几乎没有一天不发短信。这项服务最初是一项 40 便士的短信服务，现在由大多数资费提供商作为无限服务提供。`Twilio` 是一家云通信公司，它允许你仅需六行代码，就能从你的树莓派向手机免费发送短信。这样，你再也不需要工作时一直被束缚在手机旁，可以专注于一个屏幕而不是两个！
 
 ![](img/c72194f2c3aec198936695a665a5167c_109_0.png)
 
@@ -3890,7 +3974,7 @@ count += 1
 
 ### API 凭据
 
-要使用 Twilio API，你需要你的 AccountSid 和 Auth Token
+要使用 `Twilio` `API`，你需要你的 `AccountSid` 和 `Auth Token`
 
 ### ACCOUNT SID
 
@@ -3910,28 +3994,28 @@ count += 1
 
 测试你的应用
 
-- 生成用于 Twilio API 代码
+- 生成用于 `Twilio` `API` 代码
 - 调用沙盒号码
 - 拨打电话
-- 输入沙盒 PIN 
+- 输入沙盒 PIN
 - 探索
-- 不需要 PIN 
+- 不需要 PIN
 - 发送消息
 - 应用详情
 
-> 在上方，你可以在 Twilio 仪表板上找到你的 AccountSid 和 Auth Token
+> 在上方，你可以在 `Twilio` 仪表板上找到你的 `AccountSid` 和 `Auth Token`
 
 ## 设置你的 Twilio 账户
 
-- 01 该项目的第一步是注册 Twilio 账户和 Twilio 号码。这是免费的，并将使你能够向已注册并验证的手机发送短信。一旦注册，你将通过短信向注册的手机接收验证码。在提示时，将此代码输入 Twilio 网站以验证你的账户，并访问 twilio.com/try-twilio 创建你的账户。
+- 01 该项目的第一步是注册 `Twilio` 账户和 `Twilio` 号码。这是免费的，并将使你能够向已注册并验证的手机发送短信。一旦注册，你将通过短信向注册的手机接收验证码。在提示时，将此代码输入 `Twilio` 网站以验证你的账户，并访问 `twilio.com/try-twilio` 创建你的账户。
 
 ## 注册并验证手机号
 
-- 02 你的 Twilio 账户是一个试用账户（除非你升级付费），这意味着你只能从经过验证的手机号码发送和接收通信。输入你想验证的手机号码，确保你选择了正确的国家代码。Twilio 将向你发送一条短信验证码。将此代码输入网站表单并按提交。
+- 02 你的 `Twilio` 账户是一个试用账户（除非你升级付费），这意味着你只能从经过验证的手机号码发送和接收通信。输入你想验证的手机号码，确保你选择了正确的国家代码。`Twilio` 将向你发送一条短信验证码。将此代码输入网站表单并按提交。
 
 ## 仪表板
 
-- 03 注册并登录后，访问仪表板页面，那里将显示你的 AccountSid 和 Auth Token。使用 Twilio REST 时这两者都是必须的。请保持它们安全私密，但务必做好记录，因为你稍后在 Python 程序中会需要它们。
+- 03 注册并登录后，访问仪表板页面，那里将显示你的 `AccountSid` 和 `Auth Token`。使用 `Twilio` `REST` 时这两者都是必须的。请保持它们安全私密，但务必做好记录，因为你稍后在 `Python` 程序中会需要它们。
 
 # 在 Pi 上使用 Python
 
@@ -3941,122 +4025,13 @@ count += 1
 
 ### 安装软件
 
-REST 代表表述状态转移（有时拼为 "REST"）。它依赖于一种无状态、客户端-服务器、可缓存的通信协议——在几乎所有情况下都是用于设计网络应用的 HTTP 协议架构风格。
+`REST` 代表表述状态转移（有时拼为 "`REST`"）。它依赖于一种无状态、客户端-服务器、可缓存的通信协议——在几乎所有情况下都是用于设计网络应用的 `HTTP` 协议架构风格。
 
 - 04 启动你的树莓派并连接到互联网。在安装之前，
 
 （注：此处原文似乎有重复，已按逻辑翻译）。
 
-- 01 该项目的第一步是注册 Twilio 账户和 Twilio 号码。这是免费的，将使你能够向已注册并验证的手机发送短信。一旦注册，你将通过短信向注册的手机接收验证码。在提示时，将此代码输入 Twilio 网站以验证你的账户，并访问 twilio.com/try-twilio 创建你的账户。
 
-## 注册并验证手机号
-
-- 02 你的 Twilio 账户是一个试用账户（除非你升级付费），这意味着你只能从经过验证的手机号码发送和接收通信。输入你想验证的手机号码，确保你选择了正确的国家代码。Twilio 将向你发送一条短信验证码。将此代码输入网站表单并按提交。
-
-## 仪表板
-
-- 03 注册并登录后，访问仪表板页面，那里将显示你的 AccountSid 和 Auth Token。使用 Twilio REST 时这两者都是必须的。请保持它们安全私密，但务必做好记录，因为你稍后在 Python 程序中会需要它们。
-
-# 在 Pi 上使用 Python
-
-# 从你的 Pi 发送短信
-
-## REST
-
-### 安装软件
-
-REST 代表表述状态转移（有时拼为 "REST"）。它依赖于一种无状态、客户端-服务器、可缓存的通信协议——在几乎所有情况下都是用于设计网络应用的 HTTP 协议架构风格。
-
-- 04 启动你的树莓派并连接到互联网。在安装之前，
-
-（注：此处原文似乎有重复，已按逻辑翻译）。
-
-- 01 该项目的第一步是注册 Twilio 账户和 Twilio 号码。这是免费的，将使你能够向已注册并验证的手机发送短信。一旦注册，你将通过短信向注册的手机接收验证码。在提示时，将此代码输入 Twilio 网站以验证你的账户，并访问 twilio.com/try-twilio 创建你的账户。
-
-## 注册并验证手机号
-
-- 02 你的 Twilio 账户是一个试用账户（除非你升级付费），这意味着你只能从经过验证的手机号码发送和接收通信。输入你想验证的手机号码，确保你选择了正确的国家代码。Twilio 将向你发送一条短信验证码。将此代码输入网站表单并按提交。
-
-## 仪表板
-
-- 03 注册并登录后，访问仪表板页面，那里将显示你的 AccountSid 和 Auth Token。使用 Twilio REST 时这两者都是必须的。请保持它们安全私密，但务必做好记录，因为你稍后在 Python 程序中会需要它们。
-
-# 在 Pi 上使用 Python
-
-# 从你的 Pi 发送短信
-
-## REST
-
-### 安装软件
-
-REST 代表表述状态转移（有时拼为 "REST"）。它依赖于一种无状态、客户端-服务器、可缓存的通信协议——在几乎所有情况下都是用于设计网络应用的 HTTP 协议架构风格。
-
-- 04 启动你的树莓派并连接到互联网。在安装之前，
-
-（注：此处原文似乎有重复，已按逻辑翻译）。
-
-- 01 该项目的第一步是注册 Twilio 账户和 Twilio 号码。这是免费的，将使你能够向已注册并验证的手机发送短信。一旦注册，你将通过短信向注册的手机接收验证码。在提示时，将此代码输入 Twilio 网站以验证你的账户，并访问 twilio.com/try-twilio 创建你的账户。
-
-## 注册并验证手机号
-
-- 02 你的 Twilio 账户是一个试用账户（除非你升级付费），这意味着你只能从经过验证的手机号码发送和接收通信。输入你想验证的手机号码，确保你选择了正确的国家代码。Twilio 将向你发送一条短信验证码。将此代码输入网站表单并按提交。
-
-## 仪表板
-
-- 03 注册并登录后，访问仪表板页面，那里将显示你的 AccountSid 和 Auth Token。使用 Twilio REST 时这两者都是必须的。请保持它们安全私密，但务必做好记录，因为你稍后在 Python 程序中会需要它们。
-
-*(注：由于提供的文本中存在大量段落重复，根据“一定不要重复输出原文”的原则，上述译文仅对核心逻辑部分进行了翻译。若需完全保留重复结构的翻译，请告知。)*
-
----
-**更正：考虑到原始文本确实存在大量内容完全重复，为了符合文档工程师的规范，我将为您提供一份清理后的翻译：**
-
-[content]
-
-# 在 Pi 上使用 Python
-
-## 从你的 Pi 发送短信
-
-### 你需要准备...
-
-### 从你的 Pi 发送短信
-
-- 树莓派
-
-创建一个结合了 Twilio 代码的程序，并从你的 Pi 发送短信
-
-短信消息，或 SMS（短消息服务），已成为日常通信的主流。对于我们许多人来说，几乎没有一天不发短信。这项服务最初是一项 40 便士的短信服务，现在由大多数资费提供商作为无限服务提供。Twilio 是一家云通信公司，它允许你仅需六行代码，就能从你的树莓派向手机免费发送短信。这样，你再也不需要工作时一直被束缚在手机旁，可以专注于一个屏幕而不是两个！
-
-![](img/c72194f2c3aec198936695a665a5167c_109_0.png)
-
-通过这种方法，你可以让你的 Pi 在运行完脚本后发送一条短信
-
-![](img/c72194f2c3aec198936695a665a5167c_109_1.png)
-
-# 从你的 Pi 发送短信
-
-# 在 Pi 上使用 Python
-
-![](img/c72194f2c3aec198936695a665a5167c_110_0.png)
-
-# 语音、短信与 MMS
-
-### API 凭据
-
-要使用 Twilio API，你需要你的 AccountSid 和 Auth Token
-
-### ACCOUNT SID
-
-### AUTH TOKEN
-
-![](img/c72194f2c3aec198936695a665a5167c_110_1.png)
-
-准备好移除试用限制并享受完整福利了吗？
-
-了解更多关于试用账户的信息 ->
-
-![](img/c72194f2c3aec198936695a665a5167c_110_2.png)
-
-# 沙盒应用
 
 ### 开发者工具
 
@@ -4065,17 +4040,17 @@ REST 代表表述状态转移（有时拼为 "REST"）。它依赖于一种无�
 - 生成用于 Twilio API 代码
 - 调用沙盒号码
 - 拨打电话
-- 输入沙盒 PIN 
+- 输入沙盒 PIN
 - 探索
-- 不需要 PIN 
+- 不需要 PIN
 - 发送消息
 - 应用详情
 
-> 在上方，你可以在 Twilio 仪表板上找到你的 AccountSid 和 Auth Token
+> 在上方，你可以在 Twilio 仪表板上找到你的 `AccountSid` 和 `Auth Token`
 
 ## 设置你的 Twilio 账户
 
-- 01 该项目的第一步是注册 Twilio 账户和 Twilio 号码。这是免费的，将使你能够向已注册并验证的手机发送短信。一旦注册，你将通过短信向注册的手机接收验证码。在提示时，将此代码输入 Twilio 网站以验证你的账户，并访问 twilio.com/try-twilio 创建你的账户。
+- 01 该项目的第一步是注册 Twilio 账户和 Twilio 号码。这是免费的，将使你能够向已注册并验证的手机发送短信。一旦注册，你将通过短信向注册的手机接收验证码。在提示时，将此代码输入 Twilio 网站以验证你的账户，并访问 `twilio.com/try-twilio` 创建你的账户。
 
 ## 注册并验证手机号
 
@@ -4083,7 +4058,7 @@ REST 代表表述状态转移（有时拼为 "REST"）。它依赖于一种无�
 
 ## 仪表板
 
-- 03 注册并登录后，访问仪表板页面，那里将显示你的 AccountSid 和 Auth Token。使用 Twilio REST 时这两者都是必须的。请保持它们安全私密，但务必做好记录，因为你稍后在 Python 程序中会需要它们。
+- 03 注册并登录后，访问仪表板页面，那里将显示你的 `AccountSid` 和 `Auth Token`。使用 Twilio REST 时这两者都是必须的。请保持它们安全私密，但务必做好记录，因为你稍后在 Python 程序中会需要它们。
 
 # 在 Pi 上使用 Python
 
@@ -4098,10 +4073,6 @@ REST 代表表述状态转移（有时拼为 "REST"）。它依赖于一种无�
 - 04 启动你的树莓派并连接到互联网。在安装之前，
 
 *(注：由于原文存在大量重复，此处已按逻辑进行去重处理。)*
-
-
-
-
 
 # 语音合成器
 
@@ -4174,8 +4145,9 @@ time_button.pack()
 root.mainloop()
 ```
 
-- from espeak import espeak
-  espeak.synth("[message]")
+- `from espeak import espeak`
+
+  `espeak.synth("[message]")`
 
 你可以像使用任何其他模块一样将其整合到 Python 中用于自动化。
 
@@ -4197,8 +4169,8 @@ root.mainloop()
 
 # 你需要...
 
-- Raspbian: www.raspberry.org/downloads
-- Python: www.python.org/doc
+- Raspbian: `www.raspberry.org/downloads`
+- Python: `www.python.org/doc`
 
 # 编写四翼飞行器程序
 
@@ -4210,7 +4182,7 @@ root.mainloop()
 
 # 你知道吗
 
-本文作者 Andy Baker 在 blog.peterford.co.uk 经营着博客，提供了关于他项目的极佳见解。
+本文作者 Andy Baker 在 `blog.peterford.co.uk` 经营着博客，提供了关于他项目的极佳见解。
 
 ![](img/c72194f2c3aec198936695a665a5167c_115_0.png)
 
@@ -4234,17 +4206,21 @@ root.mainloop()
 
 ![](img/c72194f2c3aec198936695a665a5167c_116_0.png)
 
-- $a_g$ = 重力加速度
-- $a_q$ = 四翼飞行器加速度
-- $a_{qx} = a_q$（重新对齐到地球轴）
-- $\Theta$ = 从加速度+陀螺仪得出的倾斜角
+- `$a_g$` = 重力加速度
+- `$a_q$` = 四翼飞行器加速度
+- `$a_{qx} = a_q$`（重新对齐到地球轴）
+- `$\Theta$` = 从加速度+陀螺仪得出的倾斜角
 
 这是由角度定义的倾斜角
 
-$a_{qx} = \tan \Theta$
-$a_{qy}$ 用于水平飞行
-$a_{qz} = g$
-水平 $a = g + a$
+`$a_{qx} = \tan \Theta$`
+
+`$a_{qy}$` 用于水平飞行
+
+`$a_{qz} = g$`
+
+水平 `$a = g + a$`
+
 此项表示重力
 
 # 解释器
@@ -4261,77 +4237,63 @@ $a_{qz} = g$
 
 滤波器
 
-05 尽管它们都有缺陷，但可以在数学上将它们合并，使每个补偿对方的缺陷，从而获得无噪声、长期准确的读数。这些数学噪声/漂移滤波器有许多版本。最常用的是卡尔曼滤波（Kalman）：它的准确性稍低，但更容易理解和精炼。有了角度后，可以将传感器数据转换为相对于地球轴的输入，并计算四翼飞行器相对于设定目标向上、向下、向左、向右以及向前向后移动的情况。
+
+
+05 尽管它们都有缺陷，但可以在数学上将它们合并，使每个补偿对方的缺陷，从而获得无噪声、长期准确的读数。这些数学噪声/漂移滤波器有许多版本。最常用的是卡尔曼滤波（`Kalman`）：它的准确性稍低，但更容易理解和精炼。有了角度后，可以将传感器数据转换为相对于地球轴的输入，并计算四翼飞行器相对于设定目标向上、向下、向左、向右以及向前向后移动的情况。
 
 你可以从许多在线零售处购买即插即用（RTF）四翼飞行器套件。价格从150英元起。
 
 # 在树莓派上使用 Python
 
-# 编写四翼飞行器程序
+## 编写四翼飞行器程序
 
-# PID 控制器
+### PID 控制器
 
 所以我们现在有了一个四翼飞行器执行的目标，以及 06 一个它正在执行的输入以缩小两者之间的差距——我们需要一种方法将它们结合起来。直接数学算法几乎是不可能的——四翼飞行器的重量、每个叶片的旋转功率等都需要纳入方程。而且在飞行期间（以及坠机时）这些因素是不稳定的，需要考虑飞行器的重量和湿度。希望这种方法不会失败。
 
-相反，使用来自传感器的反馈的估计方法来调整该估计。由于估计循环每秒运行100次，这种方法确实会产生误差，而且它对正在补偿的这些因素一无所知——这就是PID。它获取目标，减去反馈，产生误差。误差通过比例、积分和微分算法处理以产生输出。
+相反，使用来自传感器的反馈的估计方法来调整该估计。由于估计循环每秒运行100次，这种方法确实会产生误差，而且它对正在补偿的这些因素一无所知——这就是`PID`。它获取目标，减去反馈，产生误差。误差通过比例、积分和微分算法处理以产生输出。
 
-# 理解四翼飞行器...
+### 理解四翼飞行器
 
-# 混合
+#### 混合
 
-07 输出分配给每个ESC：垂直速度应用于俯仰角分50/50，减去前面的叶片并增加后面的叶片，产生俯仰。横滚随机处理。偏航也以简单的方式处理，但应用于相同方向旋转的对角叶片。
+07 输出分配给每个`ESC`：垂直速度应用于俯仰角分50/50，减去前面的叶片并增加后面的叶片，产生俯仰。横滚随机处理。偏航也以简单的方式处理，但应用于相同方向旋转的对角叶片。
 
-这些特定的ESC输出转换为PWM信号，为硬件ESC提供更新的螺旋桨/电机速度
-
-
-
-
-
-# 在树莓派上使用 Python
+这些特定的`ESC`输出转换为`PWM`信号，为硬件`ESC`提供更新的螺旋桨/电机速度
 
 # 编写无人机
 
-# 代码与现实
+## 代码与现实
 
-在这种案例中，总共有九个 PID。对于 X 轴和 Y 轴的水平面，水平速度 PID 将用户定义的速度转换为所需的水平加速度/倾斜角；然后角度 PID 将将旋转速度 PID 转换的旋转转换为前/后和左/右电机的速度变化。
+在这种案例中，总共有九个 `PID`。对于 X 轴和 Y 轴的水平面，水平速度 `PID` 将用户定义的速度转换为所需的水平加速度/倾斜角；然后角度 `PID` 将将旋转速度 `PID` 转换的旋转转换为前/后和左/右电机的速度变化。
 
 逆风会导致无人机向着风力施加作用的方向向后漂移。为了补偿这一点，它必须以一定的角度向下倾斜，以便螺旋桨产生的推力有一部分作用于水平方向以抵消风力。这样做时，原本在固定高度悬停的无人机现在正在与风力斗争；总功率被降低，无人机将开始漂移。
 
-在垂直方向上，单个 PID 将上升/下降速率转换为应用于每个云台的加速度输出。最后，防止偏航（像陀螺一样）使用了两个 PID —— 一个用于设置期望的偏航角，另一个用于设置旋转速度。这些控制输出控制着以相同方向旋转的偏航电机。最关键的是俯仰/横滚稳定性。这确保了无论其他 PID 和外部因素强制执行什么要求，无人机在实现这些目标时都是稳定的；没有这种稳定性，其余 PID 就无法工作。俯仰由前后螺旋桨之间的差异控制；偏航由左右方向控制，并通过与相应 PID 输出的顺时针/逆时针差异控制。三个 PID 的合力然后应用于相应的电机 PWM 通道的适当组合，转换为单个脉冲宽度。
+在垂直方向上，单个 `PID` 将上升/下降速率转换为应用于每个云台的加速度输出。最后，防止偏航（像陀螺一样）使用了两个 `PID` —— 一个用于设置期望的偏航角，另一个用于设置旋转速度。这些控制输出控制着以相同方向旋转的偏航电机。最关键的是俯仰/横滚稳定性。这确保了无论其他 `PID` 和外部因素强制执行什么要求，无人机在实现这些目标时都是稳定的；没有这种稳定性，其余 `PID` 就无法工作。俯仰由前后螺旋桨之间的差异控制；偏航由左右方向控制，并通过与相应 `PID` 输出的顺时针/逆时针差异控制。三个 `PID` 的合力然后应用于相应的电机 `PWM` 通道的适当组合，转换为单个脉冲宽度。
 
 水平移动更为复杂。目标是以每秒 1 米的速度移动。初始要求是逆风补偿 —— 低头头加增加功率将产生导致向前加速度的力。但一旦达到水平速度，电机需要停止，或者空气中的摩擦将减慢运动。因此，有一个动态倾斜/后仰来维持这种稳定的前进速度。
 
-实现稳定性后，使用垂直速度 PID 实现了程度的起飞、悬停和着陆。将无人机放在水平面上，将目标设置为 0 m/s，它就会飞向空中，而速度 PID 确保在整个短飞行和着陆过程中保持水平起飞角。
+实现稳定性后，使用垂直速度 `PID` 实现了程度的起飞、悬停和着陆。将无人机放在水平面上，将目标设置为 0 m/s，它就会飞向空中，而速度 `PID` 确保在整个短飞行和着陆过程中保持水平起飞角。
 
-抗风抑制和水平移动控制都使用了一些嵌套 PID；X 和 Y 轴速度 PID 输入是前进和横滚角度 PID 目标的输出；输出馈给俯仰和横滚角度 PID，以在满足其他目标的同时确保稳定性。传感器反馈确保接近期望的水平速度，水平速度 PID 误差缩小，减少了角度 PID 的目标，从而使无人机重新回到水平位置。
+抗风抑制和水平移动控制都使用了一些嵌套 `PID`；X 和 Y 轴速度 `PID` 输入是前进和横滚角度 `PID` 目标的输出；输出馈给俯仰和横滚角度 `PID`，以在满足其他目标的同时确保稳定性。传感器反馈确保接近期望的水平速度，水平速度 `PID` 误差缩小，减少了角度 `PID` 的目标，从而使无人机重新回到水平位置。
 
-到为止，PID 都是独立的。但是水平移动以及抑制风中的漂移又是呢？
+到为止，`PID` 都是独立的。但是水平移动以及抑制风中的漂移又是呢？
 
-希望这能更清楚地说明为什么精确的角度跟踪很重要：在低头逆风的示例中，垂直速度 PID 确保传感器减少了相对于水平面的测得倾斜角的余弦值。
+希望这能更清楚地说明为什么精确的角度跟踪很重要：在低头逆风的示例中，垂直速度 `PID` 确保传感器减少了相对于水平面的测得倾斜角的余弦值。
 
 这时变得更复杂了。先考虑漂移抑制，逆风中的无人机
 
 > 先考虑漂移抑制，逆风中的无人机将向着风力施加作用的方向向后漂移
 
-同样，X 和 Y 轴速度 PID 输入在比较速度与加速度时，与俯仰和横滚角进行比较。不要忘记检查文章中的图表，它们对我们涵盖的许多主题提供了清晰的图形表示。
+同样，X 和 Y 轴速度 `PID` 输入在比较速度与加速度时，与俯仰和横滚角进行比较。不要忘记检查文章中的图表，它们对我们涵盖的许多主题提供了清晰的图形表示。
 
 ![](img/c72194f2c3aec198936695a665a5167c_119_0.png)
 
-# 编写无人机
+### 实验与调优
 
-# 在树莓派上使用 Python
+09 虽然代码准确地反映了我们在这里描述的所有内容，但有一组关键步骤只能通过现场测试找到：这些就是 `PID` 增益。对于每个 `PID` 调优，都有独立的比例、积分和差分增益，这些只能通过估计/实验找到。每台无人机的结果都会有所不同。幸运的是，有一种相对安全的方法。
 
-![](img/c72194f2c3aec198936695a665a5167c_120_0.png)
-
-# 实验与调优
-
-09 虽然代码准确地反映了我们在这里描述的所有内容，但有一组关键步骤只能通过现场测试找到：这些就是 PID 增益。对于每个 PID 调优，都有独立的比例、积分和差分增益，这些只能通过估计/实验找到。每台无人机的结果都会有所不同。幸运的是，有一种相对安全的方法。
-
-相应地调整 P 增益。一旦 P 良好，加入一点 I 增益 —— 这将确保返回位置并保持稳定性。D 增益是可选的，但可以增加刚性和敏捷的响应。敲击一个 D 增益稳定的无人机就像敲桌子一样 —— 它不会移动。
-
-
-
-
+相应地调整 `P` 增益。一旦 `P` 良好，加入一点 `I` 增益 —— 这将确保返回位置并保持稳定性。`D` 增益是可选的，但可以增加刚性和敏捷的响应。敲击一个 `D` 增益稳定的无人机就像敲桌子一样 —— 它不会移动。
 
 # 使用 Python 和 Pi 编写你自己的 Twitter 机器人
 
@@ -4365,10 +4327,12 @@ def retweet_task(self, screen_name):
 我们将机器人创建为一个类，并在构造函数中与 Twitter 进行身份验证。我们将上一步获取的令牌作为参数，并使用它们创建 Twitter API 实例。我们还有一个变量 `last_run`，它被设置为当前时间。这被用于检查自上次运行以来是否有新推文。
 
 - 获取用户最新推文的列表
-- timeline = self.api.get_user_timeline(screen_name = screen_name)
+
+- `timeline = self.api.get_user_timeline(screen_name = screen_name)`
 
 - 遍历每条推文，并检查它们是否在我们上次调用之后发布
-- for t in timeline:
+
+- `for t in timeline:`
 
 ```python
 tweet_time = timestr_to_datetime(t['created_at'])
@@ -4381,29 +4345,43 @@ if tweet_time > self.last_run:
 
 我们首先需要获取用户的推文列表。我们遍历每个字符串，然后将其创建时间转换为 `datetime` 对象。然后，我们检查推文的时间是否比函数上次调用的时间新——如果是，则转发。
 
-- __name__ == "main__":
+- `__name__ == "main__":`
+
 - consumer keys 可以在你的应用程序详情页找到，地址为：https://dev.twitter.com/apps
-- consumer_key="(OAuth 4 Settings)
-- consumer_secret=""
+
+- `consumer_key="(OAuth 4 Settings)"`
+
+- `consumer_secret=""`
 
 - access tokens 可以在你的应用程序详情页找到，地址为：https://dev.twitter.com/apps
+
 - （位于“Your access token”下方）
-- a_token=""
-- a_secret="="
+
+- `a_token=""`
+
+- `a_secret="="`
 
 ## 主部分
 
 主部分非常直观。我们使用令牌创建机器人实例，然后进入无限循环。在每次循环中，我们针对不同的用户（即我们正在监控的用户）运行转发任务，然后更新所有内容上次运行的时间，并休眠五分钟。
 
 - 创建机器人类的一个实例
-twitter = bot(c_key, c_secret, a_token, a_secret)
+
+![](img/c72194f2c3aec198936695a665a5167c_120_0.png)
+
+
+
+`twitter` = `bot`(`c_key`, `c_secret`, `a_token`, `a_secret`)
 
 - 每隔 5 分钟转发 @LinuxUserMag 的任何新内容
+
+```python
 while True:
     # 在每次 retweet_task 后更新时间，以便我们只转发新内容
     twitter.retweet_task("LinuxUserMag")
     twitter.last_run = datetime.now()
     time.sleep(5 * 60)
+```
 
 ![](img/c72194f2c3aec198936695a665a5167c_122_0.png)
 
@@ -4427,11 +4405,8 @@ while True:
 树莓派具有一个 PWM（脉冲宽度调制）输出引脚，以及一系列 GPIO（通用输入输出）引脚。这些使得可以通过 Pi 控制蜂鸣器、灯和开关等电子硬件。对于习惯于仅“使用”计算机，或只编写对机器本身起作用软件的人来说，控制灯这样一个真实的物理物品可能是一种全新的发现。本教程假设你没有电子或编程方面的先验，将带你完成使用 Raspberry Pi 控制 LED 的步骤，从设置到编写简单的应用程序。
 
 - 图 1：使用 PWM 获取一个 LED 所需的所有物品。线缆应有公头和母头![](img/c72194f2c3aec198936695a665a5167c_123_0.png)
-
 - 图 2：将母头放置在 Pi 上，注意 1 号引脚由微小的 Pi 标志标识：蓝色线是接地的![](img/c72194f2c3aec198936695a665a5167c_123_1.png)
-
 - 图 3：一旦连接好一切，插上你的 USB 电源线![](img/c72194f2c3aec198936695a665a5167c_123_2.png)
-
 - 图 4：开启电源，LED 将亮起。如果光线暗，请使用阻值较低电阻![](img/c72194f2c3aec198936695a665a5167c_123_3.png)
 
 > “我们将带你完成使用 Pi 控制 LED 的步骤，从设置到编写代码”![](img/c72194f2c3aec198936695a665a5167c_123_4.png)
@@ -4446,6 +4421,7 @@ while True:
 ## Pi 的引脚
 
 ### 引脚编号
+
 ### GPIO 引脚
 
 - 01 在我们深入编写代码之前，让我们看看 Pi 上引脚的布局。如果你的 Pi 在壳子里，请把它拿出来，面向右侧的 USB 接口。接下来的几步将查看在使用 GPIO 端口时会遇到的一些问题。
@@ -4456,7 +4432,6 @@ while True:
 
 - 02 取决于你何时购买 Pi。在深入编写代码之前，我们需要看看 Pi 上引脚的布局。如果你的 Pi 在壳子里，请把它拿出来，面向右侧的 USB 接口。
 - 04 电源供应无法为大型设备提供足够的功率范围。
-
 - 22 基础 LED
 - 05 板板上的其他引脚是 GPIO（通用输入输出）。这些用于当你的项目变得复杂和具有挑战性时需要执行的其他任务。
 - 06 基础 LED
@@ -4555,12 +4530,6 @@ while True:
 - 99 基础 LED
 - 100 基础 LED
 
-(注：由于原文文本在某些部分存在大量重复或不完整的占位符，以上翻译根据您提供的逻辑结构进行了处理，并保持了 Markdown 格式。)
-
-
-
-
-
 ## 使用 GPIO 控制 LED
 
 ## 在 Pi 上使用 Python
@@ -4573,7 +4542,7 @@ while True:
 
 20 下一步是告诉引脚输出并设置一种退出程序的方法。在这里我们再次调用 GPIO 类，然后调用 PWM 方法并传入引脚号；第二个值是赫兹频率频率——在此情况下为 50。
 
-```
+```python
 p = GPIO.PWM(12, 5)
 p.start(1)
 input("Press return to stop:")
@@ -4585,14 +4554,17 @@ GPIO.cleanup()
 
 17 现在为了确保脚本已导入，我们需要运行 python 命令，然后输入我们创建的脚本名称。如果一切顺利，你不应该看到任何错误信息。但是，如果你看到了，请返回之前的步骤检查每一步是否都正常。
 
-- python gpio.py
+- `python gpio.py`
+
+
 
 ## 设置 GPIO 模式
 
-18 再次在 nano 中重新加载脚本。我们将把 GPIO 模式设置为 BOARD。这种方法最安全，无论你使用的是哪个版本的 Pi。最好选择一种 GPIO 规范并坚持使用下去，否则这在以后会引起困惑。
+18 再次在 `nano` 中重新加载脚本。我们将把 GPIO 模式设置为 `BOARD`。这种方法最安全，无论你使用的是哪个版本的 Pi。最好选择一种 GPIO 规范并坚持使用下去，否则这在以后会引起困惑。
 
-- nano gpio.py
-GPIO.setmode(GPIO.BOARD)
+- `nano gpio.py`
+
+`GPIO.setmode(GPIO.BOARD)`
 
 ## 调整 PWM
 
@@ -4609,7 +4581,7 @@ p.start(0)
 
 ## 添加渐变
 
-22 然后我们将添加另一个 try-except 块，这次检查 LED 在 - 状态，一旦达到特定水平，就反转过程。要运行此代码，请从 nano 保存并运行 python gpio.py。
+22 然后我们将添加另一个 `try-except` 块，这次检查 LED 在 - 状态，一旦达到特定水平，就反转过程。要运行此代码，请从 `nano` 保存并运行 `python gpio.py`。
 
 ```python
 while 1:
@@ -4625,11 +4597,11 @@ except KeyboardInterrupt:
 
 ## 设置引脚模式
 
-19 引脚必须先定义为输入或输出才能工作。最简单的方法是调用 GPIO.setup 方法。传入引脚号，然后是 GPIO、OUT 或 IN。因为我们想将 LED 作为输出。你将频繁使用这些规范，所以在在它们刻入大脑之前尽可能地学习它们吧！
+19 引脚必须先定义为输入或输出才能工作。最简单的方法是调用 `GPIO.setup` 方法。传入引脚号，然后是 `GPIO`、`OUT` 或 `IN`。因为我们想将 LED 作为输出。你将频繁使用这些规范，所以在在它们刻入大脑之前尽可能地学习它们吧！
 
-- GPIO.setup(12, GPIO.BOARD)
+- `GPIO.setup(12, GPIO.BOARD)`
 
-> "我们将 GPIO 模式设置为 BOARD。无论你使用的是哪个版本的 Pi，这都有效"
+> "我们将 GPIO 模式设置为 `BOARD`。无论你使用的是哪个版本的 Pi，这都有效"
 
 ![](img/c72194f2c3aec198936695a665a5167c_126_0.png)
 
@@ -4645,9 +4617,9 @@ except KeyboardInterrupt:
 
 ![](img/c72194f2c3aec198936695a665a5167c_127_2.png)
 
-- 此优惠允许英国直接借记新订阅者以 5 英镑获得前三期。在这些期之后，订阅者每 15 期需支付 25.15 英镑。订阅者可以随时取消此订阅。新订阅将从下一期可用杂志开始。必须引用代码 ZGGZINE 以获得此特种订阅价格。根据要求提供直接借记担保。此优惠于 2017 年 3 月 31 日过期。
+- 此优惠允许英国直接借记新订阅者以 5 英镑获得前三期。在这些期之后，订阅者每 15 期需支付 25.15 英镑。订阅者可以随时取消此订阅。新订阅将从下一期可用杂志开始。必须引用代码 `ZGGZINE` 以获得此特种订阅价格。根据要求提供直接借记担保。此优惠于 2017 年 3 月 31 日过期。
 
-- **这是一个美国订阅优惠。美国刊物费率基于每年 13 期 65 英镑的订阅费计算的，在写作时相当于 102 美元，而报刊亭 13 期 16.99 美元的价格相比为 220.87 美元。您的订阅将从下一期可用杂志开始。此优惠于 2017 年 3 月 31 日过期。**
+- 这是一个美国订阅优惠。美国刊物费率基于每年 13 期 65 英镑的订阅费计算的，在写作时相当于 102 美元，而报刊亭 13 期 16.99 美元的价格相比为 220.87 美元。您的订阅将从下一期可用杂志开始。此优惠于 2017 年 3 月 31 日过期。
 
 ![](img/c72194f2c3aec198936695a665a5167c_127_3.png)
 
@@ -4655,7 +4627,7 @@ except KeyboardInterrupt:
 
 ## 为你而写
 
-Linux User & Developer 是唯一针对高级用户、开发者和 IT 专业人士的杂志。
+`Linux User & Developer` 是唯一针对高级用户、开发者和 IT 专业人士的杂志。
 
 ## 深度指南与专题介绍
 
@@ -4663,7 +4635,7 @@ Linux User & Developer 是唯一针对高级用户、开发者和 IT 专业人�
 
 ## 每期都有免费资源
 
-每月四种最热门的发行版—— 登录 FileSo，下载并测试所有它们！
+每月四种最热门的发行版—— 登录 `FileSo`，下载并测试所有它们！
 
 ![](img/c72194f2c3aec198936695a665a5167c_128_0.png)
 
@@ -4677,15 +4649,14 @@ Linux User & Developer 是唯一针对高级用户、开发者和 IT 专业人�
 
 ### 制作游戏：游戏简介
 
-### 使用 GTK 制作 GUI：在这段视频中，我将向你展示如何制作图形用户界面 (GUI)
+### 使用 GTK 制作 GUI：在这段视频中，我将向你展示如何制作图形用户界面 `GUI`
 
 ### Pyome Novel：桥接书本与视频的差距
 
 ### 教程需要帮助吗
 
-在任何教程中遇到困难了吗？不知道如何最好利用免费资源？为什么不访问 Linux User & Developer Imagineazines 的 Facebook 页面来你的所有问题和疑虑呢？那里有一个友好的 Linux 爱好者社区等待帮助你，团队还会定期发布帖子和更新。今天关注我们并开始聊天吧！
+在任何教程中遇到困难了吗？不知道如何最好利用免费资源？为什么不访问 `Linux User & Developer Imagineazines` 的 Facebook 页面来你的所有问题和疑虑呢？那里有一个友好的 Linux 爱好者社区等待帮助你，团队还会定期发布帖子和更新。今天关注我们并开始聊天吧！
 
 ![](img/c72194f2c3aec198936695a665a5167c_129_3.png)
 
-facebook.com/ImagineBookazines facebook.com/LinuxUser
-
+`facebook.com/ImagineBookazines` `facebook.com/LinuxUser`

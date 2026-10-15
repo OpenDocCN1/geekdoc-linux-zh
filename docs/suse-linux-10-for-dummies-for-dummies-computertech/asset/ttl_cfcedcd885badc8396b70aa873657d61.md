@@ -1,1 +1,2 @@
-SUSE Linux 10 达人迷
+
+# SUSE Linux 10 达人迷

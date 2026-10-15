@@ -1,23 +1,16 @@
+
 # Linux 命令行与 Shell 脚本圣经（第二版）
 
-
-
 ![](img/calibre_cover.jpg)
-
-
-
-
-
 
 # 第 15 章：脚本控制
 
 # 第 16 章：创建函数
-- `SZ`: 如果进程被交换，所需的近似交换空间
-- `WCHAN`: 进程睡眠时的内核函数地址
+
+- `SZ`：如果进程被交换，所需的近似交换空间
+- `WCHAN`：进程睡眠时的内核函数地址
 
 注意 `CMD` 列中的变化。
-
-
 
 如你所见，Unix 和 BSD 类型的参数之间存在大量的重叠。从其中一种类型获取的大部分信息也可以从另一种类型获取。大多数情况下，你选择参数类型是取决于你更习惯的格式（例如，如果你在学习 Linux 之前习惯于 BSD 环境）。
 
@@ -33,20 +26,20 @@ $
 
 注意，虽然许多输出列与我们使用的 Unix 风格参数相同，但有几列是不同的：
 
-*   `VSZ`: 进程在内存中的大小（单位为 KB）
-*   `RSS`: 进程已使用但未交换出的物理内存
-*   `STAT`: 表示当前进程状态的两个字符的状态码
+- `VSZ`：进程在内存中的大小（单位为 KB）
+- `RSS`：进程已使用但未交换出的物理内存
+- `STAT`：表示当前进程状态的两个字符的状态码
 
 许多系统管理员喜欢 BSD 风格的 `l` 参数，因为它为进程生成了更详细的状态码（`STAT` 列）。与单字符的 Unix 风格输出相比，这双字符代码能更精确地定义进程中正在发生的具体情况。
 
 第一个字符使用的值与 Unix 风格的 `S` 输出列相同，显示进程何时处于睡眠、运行或等待状态。第二个字符进一步定义了进程的状态：
 
-*   `<`: 进程以高优先级运行。
-*   `N`: 进程以低优先级运行。
-*   `L`: 进程有页面锁定在内存中。
-*   `s`: 进程是一个会话首。
-*   `l`: 进程是多线程。
-*   `+`: 进程正在前台运行。
+- `<`：进程以高优先级运行。
+- `N`：进程以低优先级运行。
+- `L`：进程有页面锁定在内存中。
+- `s`：进程是一个会话首。
+- `l`：进程是多线程。
+- `+`：进程正在前台运行。
 
 从之前显示的简单示例中，你可以看到 `bash` 命令正在睡眠，但它是一个会话首（它是我会话中的主进程），而 `ps` 命令在系统上是在前台运行的。
 
@@ -54,7 +47,7 @@ $
 
 最后，GNU 开发者通过在参数组合中添加更多选项，对新的改进型 `ps` 命令融入了他们自己的见解。某些 GNU 长参数复制了现有的 Unix 或 BSD 风格参数，而另一些则提供了新功能。表 4.3 列出了可用的 GNU 长参数。
 
-### 表 4.3 ps 命令 GNU 参数
+### 表 4.3：`ps` 命令 GNU 参数
 
 | 参数 | 说明 |
 | :--- | :--- |
@@ -106,30 +99,26 @@ Linux 系统管理的技巧在于定义到底什么是高负载值。这取决�
 
 最后，下一个部分显示当前运行进程的详细列表，包含一些与 `ps` 命令输出类似的熟悉列：
 
-*   `PID`: 进程 ID
-*   `USER`: 进程所有者的用户名
-*   `PR`: 进程优先级
-*   `NI`: 进程 nice 值
-*   `VIRT`: 进程使用的总虚拟内存
-*   `RES`: 进程使用的物理内存
-*   `SHR`: 进程与其他进程共享的内存
-*   `S`: 进程状态（D=可中断睡眠、R=运行、S=睡眠、T=被跟踪或停止，或 Z=僵尸）
-*   `%CPU`: 进程使用的 CPU 时间百分比
-
-
-
-
-*   %MEM: 进程使用的可用物理内存份额
-*   `TIME+`: 进程自启动以来使用的总 CPU 时间
-*   `COMMAND`: 进程的命令行名称（启动的程序）
+- `PID`：进程 ID
+- `USER`：进程所有者的用户名
+- `PR`：进程优先级
+- `NI`：进程 nice 值
+- `VIRT`：进程使用的总虚拟内存
+- `RES`：进程使用的物理内存
+- `SHR`：进程与其他进程共享的内存
+- `S`：进程状态（`D`=可中断睡眠、`R`=运行、`S`=睡眠、`T`=被跟踪或停止，或 `Z`=僵尸）
+- `%CPU`：进程使用的 CPU 时间百分比
+- `%MEM`：进程使用的可用物理内存份额
+- `TIME+`：进程自启动以来使用的总 CPU 时间
+- `COMMAND`：进程的命令行名称（启动的程序）
 
 默认情况下，当你启动 `top` 时，它会根据 `%CPU` 值对进程进行排序。你可以在 `top` 运行时使用几个交互式命令之一来更改排序顺序。每个交互式命令都是你在 `top` 运行时可以按下的单个字符，用于改变程序的行为。这些命令在表 4.4 中显示。
 
-表 4.4 常用交互式命令
+### 表 4.4：常用交互式命令
 
 | 命令 | 描述 |
 | :--- | :--- |
-| `1` | 切换单 CPU 和对称多处理器 (SMP) 状态。 |
+| `1` | 切换单 CPU 和对称多处理器（SMP）状态。 |
 | `b` | 切换表格中重要数字的粗体显示。 |
 | `I` | 切换 Irix/Solaris 模式。 |
 | `z` | 配置表格颜色。 |
@@ -139,7 +128,7 @@ Linux 系统管理的技巧在于定义到底什么是高负载值。这取决�
 | `f` | 添加或移除不同的信息列。 |
 | `o` | 更改信息列的显示顺序。 |
 | `F` 或 `O` | 选择用于进程排序的字段（默认为 `%CPU`）。 |
-| `<` 或 `>` | 将排序字段向左移动 (<) 或向右移动 (>)。 |
+| `<` 或 `>` | 将排序字段向左移动（`<`）或向右移动（`>`）。 |
 | `r` | 切换正常或反向排序顺序。 |
 | `h` | 切换线程的显示。 |
 | `c` | 切换显示进程的命令名称或完整命令行（包括参数）。 |
@@ -152,36 +141,36 @@ Linux 系统管理的技巧在于定义到底什么是高负载值。这取决�
 | `u` | 显示特定用户的进程。 |
 | `n` 或 `#` | 设置要显示的进程数量。 |
 | `k` | 杀死特定进程（仅限进程所有者或 root 用户）。 |
-| `r` | 更改特定进程的优先级 (`renice`)（仅限进程所有者或 root 用户）。 |
+| `r` | 更改特定进程的优先级（`renice`）（仅限进程所有者或 root 用户）。 |
 | `d` 或 `s` | 更改更新间隔（默认为三秒）。 |
 | `W` | 将当前设置写入配置文件。 |
-| `q` | 退出 top 命令。 |
+| `q` | 退出 `top` 命令。 |
 
 ## 停止进程
 
 作为一名系统管理员，至关重要的一点是知道何时以及如何停止进程。有时进程会挂起，只需要轻轻“推”一下就能重新运行或停止。其他时候，进程会过度占用 CPU 并拒绝放弃。在这两种情况下，你都需要一个允许你控制进程的命令。Linux 遵循 Unix 的进程间通信方法。
 
-在 Linux 中，进程之间通过信号（signals）进行通信。进程信号是一种预定义的消息，进程可以识别它并可能选择忽略或处理。开发者通过编程来控制进程如何处理信号。大多数编写良好的应用程序都具有接收并处理标准 Unix 进程信号的能力。这些信号在表 4.5 中显示
+在 Linux 中，进程之间通过信号（signals）进行通信。进程信号是一种预定义的消息，进程可以识别它并可能选择忽略或处理。开发者通过编程来控制进程如何处理信号。大多数编写良好的应用程序都具有接收并处理标准 Unix 进程信号的能力。这些信号在表 4.5 中显示。
 
-表 4.5 Linux 进程信号
+### 表 4.5：Linux 进程信号
 
 | 信号 | 名称 | 描述 |
 | :--- | :--- | :--- |
-| 1 | HUP | 挂断。 |
-| 2 | INT | 中断。 |
-| 3 | QUIT | 停止运行。 |
-| 9 | KILL | 无条件终止。 |
-| 11 | SEGV | 段错误。 |
-| 15 | TERM | 在可能的情况下终止。 |
-| 17 | STOP | 无条件停止，但不终止。 |
-| 18 | TSTP | 停止或暂停，但在后台继续运行。 |
-| 19 | CONT | 在 STOP 或 TSTP 后恢复执行。 |
+| 1 | `HUP` | 挂断。 |
+| 2 | `INT` | 中断。 |
+| 3 | `QUIT` | 停止运行。 |
+| 9 | `KILL` | 无条件终止。 |
+| 11 | `SEGV` | 段错误。 |
+| 15 | `TERM` | 在可能的情况下终止。 |
+| 17 | `STOP` | 无条件停止，但不终止。 |
+| 18 | `TSTP` | 停止或暂停，但在后台继续运行。 |
+| 19 | `CONT` | 在 `STOP` 或 `TSTP` 后恢复执行。 |
 
 Linux 中有两个命令允许你向运行中的进程发送进程信号。
 
-### kill 命令
+### `kill` 命令
 
-`kill` 命令允许你根据进程 ID (PID) 向进程发送信号。默认情况下，`kill` 命令向命令行列出的所有 PID 发送 `TERM` 信号。遗憾的是，你只能使用进程 PID 而不是命令名称，这使得 `kill` 命令有时难以使用。
+`kill` 命令允许你根据进程 ID（PID）向进程发送信号。默认情况下，`kill` 命令向命令行列出的所有 PID 发送 `TERM` 信号。遗憾的是，你只能使用进程 PID 而不是命令名称，这使得 `kill` 命令有时难以使用。
 
 发送进程信号要求你必须是该进程的所有者，或者以 root 用户身份登录。
 
@@ -204,7 +193,7 @@ $
 
 要查看命令是否有效，你必须执行另一个 `ps` 或 `top` 命令来查看问题进程是否停止。
 
-### killall 命令
+### `killall` 命令
 
 `killall` 命令是一种通过名称而非 PID 数字来停止进程的强大方法。`killall` 命令还允许你使用通配符字符，当系统出现故障时，它是一个非常有帮助的工具：
 
@@ -216,6 +205,7 @@ $
 此示例将杀死所有以 `http` 开头的进程，例如 Apache Web 服务器的 `httpd` 服务。
 
 > **注意**
+>
 > 以 root 用户身份登录时，使用 `killall` 命令要极其小心。很容易在使用通配符字符时意外停止重要的系统进程。这可能导致文件系统损坏。
 
 ## 监控磁盘空间
@@ -232,7 +222,7 @@ $
 
 如果你使用的自动挂载和卸载可移除介质的发行版，你需要手动操作。本节描述了帮助你管理可移除介质设备的 Linux 命令行。
 
-### mount 命令
+### `mount` 命令
 
 奇怪的是，挂载介质的命令叫做 `mount`。默认情况下，`mount` 命令显示当前系统中挂载的介质设备列表：
 
@@ -247,27 +237,20 @@ tmpfs on /dev/shm type tmpfs (rw)
 none on /proc/sys/fs/binfmt_misc type bfmt_misc (rw)
 sunrpc on /var/lib/nfs/rpc_pipefs type rpc_pipefs (rw)
 /dev/sdb1 on /media/disk type vfat
-```
-
-
-
-
-
-```
 (rw,nosuid,nodev,uhelper=hal,shortname=lower,uid=503)
 $
 ```
 
 `mount` 命令提供了四项信息：
 
-* 媒体设备的设备文件名
-* 媒体挂载到虚拟目录的挂载点
-* 文件系统类型
-* 挂载媒体的访问状态
+- 媒体设备的设备文件名
+- 媒体挂载到虚拟目录的挂载点
+- 文件系统类型
+- 挂载媒体的访问状态
 
 上一个示例中的最后一条是一个 USB 优存盘，GNOME 桌面自动将其挂载在 `/media/disk` 挂载点。`vfat` 文件系统类型显示它是在微软 Windows 电脑上格式化的。
 
-要在虚拟目录中手动挂载媒体设备，你需要以 root 用户身份登录。以下是手动挂载媒体设备的的基本命令：
+要在虚拟目录中手动挂载媒体设备，你需要以 root 用户身份登录。以下是手动挂载媒体设备的基本命令：
 
 ```bash
 mount -t type device directory
@@ -275,9 +258,9 @@ mount -t type device directory
 
 `type` 参数定义了磁盘格式化时所使用的文件系统类型。Linux 识别许多不同的文件系统类型。如果你与 Windows PC 共享可移动媒体设备，你最可能会遇到的类型有：
 
-* `vfat`: Windows 长文件名文件系统。
-* `ntfs`: 用于 Windows NT、XP 和 Vista 的 Windows 高级文件系统。
-* `iso9660`: 标准 CD-ROM 文件系统。
+- `vfat`：Windows 长文件名文件系统。
+- `ntfs`：用于 Windows NT、XP 和 Vista 的 Windows 高级文件系统。
+- `iso9660`：标准 CD-ROM 文件系统。
 
 大多数 USB 优存盘和软盘都使用 `vfat` 文件系统格式化。如果你需要挂载数据 CD，必须使用 `iso9660` 文件系统类型。
 
@@ -291,7 +274,7 @@ mount -t vfat /dev/sdb1 /media/disk
 
 如果你需要使用 `mount` 命令的一些更高级的功能，可用参数见表 4.6。
 
-### 表 4.6 mount 命令参数
+### 表 4.6：`mount` 命令参数
 
 | 参数 | 描述 |
 | :--- | :--- |
@@ -302,13 +285,16 @@ mount -t vfat /dev/sdb1 /media/disk
 | `-I` | 不使用 `/sbin/mount.filesystem` 下任何文件系统辅助文件。 |
 | `-l` | 为 `ext2`、`ext3` 或 `XFS` 文件系统自动添加文件系统标签。 |
 | `-n` | 挂载设备不在 `/etc/mstab` 挂载设备文件中注册。 |
-| `-p ``num` | 用于加密挂载，从文件描述符 `num` 读取密码。 |
+| `-p` `num` | 用于加密挂载，从文件描述符 `num` 读取密码。 |
 | `-s` | 忽略文件系统不支持的挂载选项。 |
 | `-r` | 以只读模式挂载设备。 |
 | `-w` | 以读写模式挂载设备（默认）。 |
 | `-L` `label` | 使用指定的 `label` 挂载设备。 |
 | `-U` `uuid` | 使用指定的 `uuid` 挂载设备。 |
 | `-O` | 与 `-a` 参数配合使用时，限制应用的文件系统集。 |
+
+
+
 | `-o` | 为文件系统添加特定选项。 |
 
 `-o` 选项允许你使用逗号分隔的附加选项列表来挂载文件系统。常用的选项有：
@@ -409,15 +395,8 @@ $ df -h
 | tmpfs | 119M | 0 | 119M | 0% | /dev/shm |
 | /dev/sdb1 | 124G | 113G | 13G | 90% | /media/disk |
 
-```
-
-
-
-
-
-```
-/dev/sdb1            125M  112M   14M   90%  /media/disk
-$
+```bash
+$ df -h
 ```
 
 现在，你不再需要解码那些丑陋的块数字，所有的磁盘大小都用“正常”单位显示出来。`df` 命令在排查系统磁盘空间问题时价值极高。
@@ -433,7 +412,7 @@ $
 
 默认情况下，`du` 命令显示当前目录下的所有文件、目录和子目录，并显示每个文件或目录占用的磁盘块数。对于标准大小的目录，列表可能会非常长。以下是使用 `du` 命令的部分列表：
 
-```
+```bash
 $ du
 484     ./.gstreamer-0.10
 8       ./Templates
@@ -466,9 +445,9 @@ $ du
 
 你可以配合 `du` 命令使用几个命令行参数来让结果更具可读性：
 
-*   `-c`: 生成所有列出文件的总计和。
-*   `-h`: 以人类可读的格式打印大小，使用 `K` 表示字节，`M` 表示兆字节，`G` 表示千字节。
-*   `-s`: 对每个参数进行汇总。
+* `-c`: 生成所有列出文件的总计和。
+* `-h`: 以人类可读的格式打印大小，使用 `K` 表示字节，`M` 表示兆字节，`G` 表示千字节。
+* `-s`: 对每个参数进行汇总。
 
 系统管理员的下一步是使用一些文件处理命令来操作大量数据。这正是下一节涵盖的内容。
 
@@ -484,7 +463,7 @@ Linux 系统提供了若干命令行工具来帮助你管理大量数据。本�
 
 默认情况下，`sort` 命令使用你为会话指定的语言的标准排序规则对文本文件中的数据行进行排序。
 
-```
+```bash
 $ cat file1
 one
 two
@@ -502,7 +481,7 @@ $
 
 非常简单。然而，事情并不总是像看起来那么简单。看这个例子：
 
-```
+```bash
 $ cat file2
 1
 2
@@ -518,9 +497,10 @@ $ sort file2
 3
 10
 ```
+
 等等，上面的示例显示的是标准的字符串排序。让我们看看数值排序：
 
-```
+```bash
 $ cat file2
 1
 2
@@ -539,7 +519,7 @@ $ sort -n file2
 
 如果你期望数字按数值排序，那么你可能会失望。要解决这个问题，请使用 `-n` 参数。按逆序排序：
 
-```
+```bash
 $ sort -rn file2
 100
 45
@@ -560,34 +540,27 @@ $ sort -rn file2
 | `-f` | | 忽略大小写。 |
 | `-g` | | 通用数值排序。 |
 | `-i` | | 忽略不可打印字符。 |
-| `-k` | --key=`POS1`[,`POS2`] | 基于 `POS1` 排序，并在 `POS2` 结束。 |
+| `-k` | `--key=POS1[,POS2]` | 基于 `POS1` 排序，并在 `POS2` 结束。 |
 | `-M` | | 按三字符名称的顺序排序。 |
 | `-m` | | 合并两个已排序的数据文件。 |
 | `-n` | | 按数值排序。 |
-| `-o` | -output=`file` | 将结果写入指定的文件。 |
+| `-o` | `-output=file` | 将结果写入指定的文件。 |
 | `-R` | | 按键的随机哈希排序。 |
-| | --random-source=`FILE` | 指定用于 `-R` 参数的随机字节的文件。 |
+| | `--random-source=FILE` | 指定用于 `-R` 参数的随机字节的文件。 |
 | `-r` | | 反转排序顺序（降序而非升序）。 |
-| `-S` | --buffer-size=`SIZE` | 指定使用的内存量。 |
+| `-S` | `--buffer-size=SIZE` | 指定使用的内存量。 |
 | `-s` | | 禁用最后的比较。 |
-| `-T` | --temporary-direction=`DIR` | 指定存储临时工作文件的位置。 |
-| `-t` | --field-separator=`SEP` | 指定用于区分键位置的字符。 |
-| `-u` | --unique | 配合 `-c` 参数时，检查严格排序；无 `-c` 参数时，仅输出两个相似行中的第一次出现。 |
-| `-z` | --zero-terminated | 使用 NULL 字符结束所有行而不是换行符。 |
+| `-T` | `--temporary-direction=DIR` | 指定存储临时工作文件的位置。 |
+| `-t` | `--field-separator=SEP` | 指定用于区分键位置的字符。 |
+| `-u` | `--unique` | 配合 `-c` 参数时，检查严格排序；无 `-c` 参数时，仅输出两个相似行中的第一次出现。 |
+| `-z` | `--zero-terminated` | 使用 NULL 字符结束所有行而不是换行符。 |
 
 `-k` 和 `-t` 参数在排序使用字段的数据（例如 `/etc/passwd` 文件）时非常方便。使用 `-t` 参数指定字段分隔符字符，使用 `-k` 参数指定根据哪个字段进行排序。例如，要根据数值 userid 对密码文件进行排序，只需这样做：
 
-```
+```bash
 $ sort -t ':' -k 3 -n /etc/passwd
 root:x:0:0:root:/root:/bin/bash
 bin:x:1:1:bin:/bin:/sbin/nologin
-```
-
-
-
-
-
-```
 daemon:x:2:2:daemon:/sbin:/sbin/nologin
 adm:x:3:4:adm:/var/adm:/sbin/nologin
 lp:x:4:7:lp:/var/spool/lpd:/sbin/nologin
@@ -698,12 +671,21 @@ $
 
 这里有一个在 grep 搜索中使用正则表达式的简单示例：
 
+
+
+### `grep` 与方括号
+
 ```bash
 $ grep [tf] file1
+
 two
+
 three
+
 four
+
 five
+
 $
 ```
 
@@ -711,7 +693,7 @@ $
 
 `egrep` 是 `grep` 的衍生版本，允许使用扩展正则表达式。
 
-### bzip2 工具
+### `bzip2` 工具
 
 `bzip2` 软件包较新，但它正在变得流行。`bzip2` 工具包括：
 
@@ -724,7 +706,9 @@ $
 
 ```bash
 $ bzip2 myprog
+
 $ ls -l myprog
+
 -rw-r--r-- 1 root root 2378 Oct 25 12:00 myprog.bz2
 ```
 
@@ -734,7 +718,9 @@ $ ls -l myprog
 
 ```bash
 $ bunzip2 myprog.bz2
+
 $ ls -l myprog
+
 -rw-r--r-- 1 root root 4882 Oct 25 12:00 myprog
 ```
 
@@ -742,20 +728,19 @@ $ ls -l myprog
 
 ```bash
 $ bzcat test.bz2
+
 This is a test text file.
+
 The quick brown fox jumps over the lazy dog.
+
 This is the end of the test file.
 ```
 
 `bzcat` 命令在不解压缩实际文件的情况下显示压缩文件内部的文本。
 
-### gzip 工具
+### `gzip` 工具
 
-到目前为止，Linux 中最流行的文件压缩工具是 `gzip` 工具。`gzip` 软件包是 GNU 项目的产，目的是尝试创建原始 Unix compress 工具的免费版本。该软件包包含以下文件：
-
-
-
-
+到目前为止，Linux 中最流行的文件压缩工具是 `gzip` 工具。`gzip` 软件包是 GNU 项目的产，目的是尝试创建原始 Unix `compress` 工具的免费版本。该软件包包含以下文件：
 
 *   `gzip` 用于压缩文件
 *   `gzcat` 用于显示压缩文本文件的内容
@@ -763,30 +748,32 @@ This is the end of the test file.
 
 这些工具的工作方式与 `bzip2` 工具相同：
 
-```
+```bash
 $ gzip myprog
+
 $ ls -l my*
+
 -rwxrwxr-x 1 rich rich 2197 2007-09-13 11:29 myprog.gz
-$
 ```
 
 `gzip` 命令用于压缩你在命令行上指定的文件。你也可以指定多个文件名，甚至使用通配符来同时压缩多个文件：
 
 ```bash
 $ gzip my*
+
 $ ls -l my*
+
 -rwxr--r--    1 rich      rich           103 Sep  6 13:43 myprog.c.gz
 -rwxr-xr-x    1 rich      rich          5178 Sep  6 13:43 myprog.gz
 -rwxr--r--    1 rich      rich            59 Sep  6 13:46 myscript.gz
 -rwxr--r--    1 rich      rich            60 Sep  6 13:44 myscript.gz
-$
 ```
 
 `gzip` 命令会压缩目录中匹配通配符模式的所有文件。
 
-## zip 工具
+### `zip` 工具
 
-`zip` 工具与 Phil Katz 为 MS-DOS 和 Windows 创建的流行的 PKZIP 软件包兼容。Linux zip 软件包中包含四个工具：
+`zip` 工具与 Phil Katz 为 MS-DOS 和 Windows 创建的流行的 PKZIP 软件包兼容。Linux `zip` 软件包中包含四个工具：
 
 *   `zip` 创建一个包含所列文件和目录的压缩文件。
 *   `zipcloak` 创建一个包含所列文件和目录的加密压缩文件。
@@ -806,6 +793,7 @@ zip [-options] [-b path] [-t mmddyyyy] [-n suffixes] [zipfile list]
    默认默认操作是从 list 中添加或替换 zipfile 条目，
    这可以包括特殊名称 - 来压缩标准输入。
    如果省略 zipfile 和 list，zip 将将 stdin 压缩到 stdout。
+
   -f freshen: only changed files  -u update: only changed or new files
   -d delete entries in zipfile    -m move into zipfile (delete files)
   -r recurse into directories      -j junk directory names
@@ -820,7 +808,6 @@ zip [-options] [-b path] [-t mmddyyyy] [-n suffixes] [zipfile list]
   -T test zipfile integrity       -X exclude file attributes
   -y store symbolic links as the link instead of the referenced file
   -R PKZIP recursion (see manual)-e encrypt -n don't compress these suffixes
-$
 ```
 
 `zip` 工具的强大之处在于能够将整个目录的文件压缩成单个压缩文件。这使其成为归档目录结构的理想选择：
@@ -831,21 +818,21 @@ $ zip -r test test
 
 此示例创建一个名为 `test.zip` 的 zip 文件，并递归遍历 `test` 目录，将找到每个文件和目录添加到 zip 文件中。注意输出，并不是 zip 文件中存储的所有文件都能被压缩。
 
-> 注意：当你使用 zip 命令的递归功能时，文件存储在 zip 文件中的相同目录中。子目录中的文件将存储在 zip 文件中相同的子目录内。在提取文件时必须小心；`unzip` 命令将在新位置重建整个目录结构。当你有大量的子目录和文件时，这有时会令人困惑。
+> 注意：当你使用 `zip` 命令的递归功能时，文件存储在 zip 文件中的相同目录中。子目录中的文件将存储在 zip 文件中相同的子目录内。在提取文件时必须小心；`unzip` 命令将在新位置重建整个目录结构。当你有大量的子目录和文件时，这有时会令人困惑。
 
-## 归档数据
+### 归档数据
 
 虽然 `zip` 命令在将数据压缩并归档到单个文件中方面表现出色，但它不是 Unix 和 Linux 世界使用的标准工具。到目前为止，Unix 和 Linux 中最流行的归档工具是 `tar` 命令。`tar` 命令最初用于将文件写入带设备进行归档。然而，它也可以将输出写入文件，这已成为 Linux 中归档数据的流行方式。
 
 以下是 `tar` 命令的格式：
 
-```
+```bash
 tar function [options] object1 object2
 ```
 
 `function` 参数定义了 `tar` 命令应该执行。
 
-### tar 命令函数
+### `tar` 命令函数
 
 | 函数 | 长名称 | 说明 |
 | :--- | :--- | :--- |
@@ -858,9 +845,9 @@ tar function [options] object1 object2
 | `-u` | `--update` | 将比现有归档同名文件更新的文件添加到现有归档文件中。 |
 | `-x` | `--extract` | 从现有归档文件中提取文件。 |
 
-每个函数使用选项来定义 tar 归档文件的特定行为。
+每个函数使用选项来定义 `tar` 归档文件的特定行为。
 
-### tar 命令选项
+### `tar` 命令选项
 
 | 选项 |  |
 | :--- | :--- |
@@ -895,23 +882,20 @@ tar -xvf test.tar
 
 > 提示：如果你下载开源软件，通常会看到以 `.tgz` 结尾的文件。这些是 gzipped tar 文件，可以使用命令 `tar -zxvf` `filename.tgz` 进行提取。
 
-## 总结
+### 总结
 
 本章讨论了 Linux 系统管理员和程序员使用的一些更高级的 bash 命令。`ps` 和 `top` 命令对于确定系统状态至关重要，允许你看到哪些应用程序正在运行以及它们消耗多少资源。
 
-
-
-
-
 在可移动介质盛行的今天，系统管理员的另一个热门话题是挂载存储设备。`mount` 命令允许你将物理存储设备挂载到 Linux 虚拟目录结构中。要移除该设备，请使用 `umount` 命令。
 
-最后，本章讨论了用于处理数据的各种实用。`sort` 工具可以轻松地排序大型数据文件，帮助你组织数据，而 `grep` 工具则允许你快速扫描大型数据文件以查找特定信息。Linux 中提供了不同的文件压缩工具，包括 `bzip2`、`gzip` 和 `zip`。每种工具都允许你压缩大文件以帮助节省文件系统空间。Linux 的 `tar` 工具是一种将目录结构归档为单个文件的流行方法，该文件可以轻松地迁移到另一个系统。
+最后，本章讨论了用于处理数据的各种实用工具。`sort` 工具可以轻松地排序大型数据文件，帮助你组织数据，而 `grep` 工具则允许你快速扫描大型数据文件以查找特定信息。Linux 中提供了不同的文件压缩工具，包括 `bzip2`、`gzip` 和 `zip`。每种工具都允许你压缩大文件以帮助节省文件系统空间。Linux 的 `tar` 工具是一种将目录结构归档为单个文件的流行方法，该文件可以轻松地迁移到另一个系统。
 
 下一章将讨论 Linux 环境变量。环境变量允许你从脚本访问系统信息，并为在脚本中存储数据提供了一种方便的方法。
 
-# 第 5 章：使用 Linux 环境变量
+## 第 5 章：使用 Linux 环境变量
 
-## 本章内容
+### 本章内容
+
 - 什么是环境变量？
 - 设置环境变量
 - 删除环境变量
@@ -923,10 +907,12 @@ tar -xvf test.tar
 
 Linux 环境变量有助于定义你的 Linux shell 体验。然而，对于新的 Linux 用户来说，这可能是一个令人困惑的话题。许多程序和脚本使用环境变量获取系统信息并存储临时数据和配置信息。Linux 系统中有许多设置环境变量的地方，了解这些位置至关重要。本章将带你进入 Linux 环境变量的世界，展示它们在哪里、如何使用它们，甚至如何创建你自己的环境变量。本章将以一个相关主题结束，即在 shell 会话中定义和使用别名。
 
-## 什么是环境变量？
+### 什么是环境变量？
+
 bash shell 使用了一种名为环境变量的特性来存储有关 shell 会话和工作环境的信息（因此得名环境变量）。该特性还允许你在内存中存储数据，任何从 shell 运行的程序或脚本都可以轻松访问。这是一种存储标识用户账户、系统、shell 或任何你需要存储的特征的持久数据的方便方法。
 
 bash shell 中有两种类型的环境变量：
+
 - 全局变量
 - 局部变量
 
@@ -935,15 +921,17 @@ bash shell 中有两种类型的环境变量：
 > 注意
 > 尽管 bash shell 使用的是特定的且一致的环境，但不同的 Linux 发行版通常会添加自己的环境变量。在本章中看到的环境变量示例可能与你特定发行版中提供的变量略有不同。如果你遇到了此处未涵盖的环境变量，请检查你的 Linux 发行版的文档。
 
-## 全局环境变量
+### 全局环境变量
+
 全局环境变量在 shell 会话中以及 shell 启动的任何子进程中均可见。局部变量仅在创建它的 shell 中可用。这使得全局环境变量在需要来自父进程信息的子进程应用程序中非常有用。
 
 Linux 系统在你启动 bash 会话时会设置几个全局环境变量（有关那时启动了哪些变量的细节，请参见本章后面的“定位系统环境变量”部分）。系统环境变量始终使用大写字母，以区别于普通用户环境变量。
 
 要查看全局环境变量，请使用 `printenv` 命令：
 
-```
-$printenv
+```bash
+$ printenv
+
 ORBIT_SOCKETDIR=/tmp/orbit-user
 HOSTNAME=localhost.localdomain
 IMSETTINGS_INTEGRATE_DESKTOP=yes
@@ -978,75 +966,103 @@ USER=user
 ...
 ```
 
-```bash
-USERNAME=user
-DESKTOP_SESSION=gnome
-...
-```)
+### 局部环境变量
 
-## 局部环境变量
-局部变量仅在创建它的 shell 中可用。这使得全局环境变量在需要来自父进程信息的子进程应用程序中非常有用。（注意：提供的文本在描述局部变量时中断了）。
-
-
-
-
+局部变量仅在创建它的 shell 中可用。这使得全局环境变量在需要来自父进程信息的子进程应用程序中非常有用。
 
 ```bash
-`HISTFILE=/home/user/.bash_history`
-`HISTFILESIZE=1000`
-`HISTSIZE=1000`
-`HOME=/home/user`
-`HOSTNAME=localhost.localdomain`
-`HOSTTYPE=i386`
-`IFS=$'\t\n'`
-`IMSETTINGS_INTEGRATE_DESKTOP=yes`
-`IMSETTINGS_MODULE=none`
-`LANG=en_US.utf8`
-`LESSOPEN='|/usr/bin/lesspipe.sh %s'`
-`LINES=24`
-`LOGNAME=user`
-`LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43...'`
-`MACHTYPE=i386-redhat-linux-gnu`
-`MAIL=/var/spool/mail/user`
-`MAILCHECK=60`
-`OLDPWD=/home/user`
-`OPTERR=1`
-`OPTIND=1`
-`ORBIT_SOCKETDIR=/tmp/orbit-user`
-`OSTYPE=linux-gnu`
-`PATH=/usr/kerberos/sbin:/usr/kerberos/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/user/bin`
-`PIPESTATUS=([0]="0")`
-`PPID=1674`
-`PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}";}"; echo -ne "\007"'
-`PS1='[\u@\h \W]\$ '`
-`PS2='> '`
-`PS4='+ '`
-`PWD=/home/user/Documents`
-`QT_IM_MODULE=xim`
-`SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/1331,unix/unix:/tmp/.ICE-unix/1331`
-`SHELL=/bin/bash`
-`SHELLOPTS=braceexpand:emacs:hashall:histexpand:history:interactive-comments:monitor`
-`SHLVL=2`
-`SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass`
-`SSH_AUTH_SOCK=/tmp/keyring-Egjauk/ssh`
-`TERM=xterm`
-`UID=500`
-`USER=user`
-`USERNAME=user`
-`WINDOWID=29360131`
-`WINDOWPATH=1`
-`XAUTHORITY=/var/run/gdm/auth-for-user-GIU7sE/database`
-`XDG_SESSION_COOKIE=787b3cf537971ef8462260960000006b-1284670942.440386-1012435051`
-`XMODIFIERS=@im=none`
-`_=printenv`
-`colors=/etc/DIR_COLORS`
+HISTFILE=/home/user/.bash_history
+HISTFILESIZE=1000
+HISTSIZE=1000
+HOME=/home/user
+HOSTNAME=localhost.localdomain
+HOSTTYPE=i386
+IFS=$'\t\n'
+IMSETTINGS_INTEGRATE_DESKTOP=yes
+IMSETTINGS_MODULE=none
+LANG=en_US.utf8
+LESSOPEN='|/usr/bin/lesspipe.sh %s'
+LINES=24
+LOGNAME=user
+LS_COLORS='rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43...'
 ```
+
+
+
+`MACHTYPE=i386-redhat-linux-gnu`
+
+`MAIL=/var/spool/mail/user`
+
+`MAILCHECK=60`
+
+`OLDPWD=/home/user`
+
+`OPTERR=1`
+
+`OPTIND=1`
+
+`ORBIT_SOCKETDIR=/tmp/orbit-user`
+
+`OSTYPE=linux-gnu`
+
+`PATH=/usr/kerberos/sbin:/usr/kerberos/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/user/bin`
+
+`PIPESTATUS=([0]="0")`
+
+`PPID=1674`
+
+`PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME%%.*}:${PWD/#$HOME/~}";}"; echo -ne "\007"'`
+
+`PS1='[\u@\h \W]\$ '`
+
+`PS2='> '`
+
+`PS4='+ '`
+
+`PWD=/home/user/Documents`
+
+`QT_IM_MODULE=xim`
+
+`SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/1331,unix/unix:/tmp/.ICE-unix/1331`
+
+`SHELL=/bin/bash`
+
+`SHELLOPTS=braceexpand:emacs:hashall:histexpand:history:interactive-comments:monitor`
+
+`SHLVL=2`
+
+`SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass`
+
+`SSH_AUTH_SOCK=/tmp/keyring-Egjauk/ssh`
+
+`TERM=xterm`
+
+`UID=500`
+
+`USER=user`
+
+`USERNAME=user`
+
+`WINDOWID=29360131`
+
+`WINDOWPATH=1`
+
+`XAUTHORITY=/var/run/gdm/auth-for-user-GIU7sE/database`
+
+`XDG_SESSION_COOKIE=787b3cf537971ef8462260960000006b-1284670942.440386-1012435051`
+
+`XMODIFIERS=@im=none`
+
+`_=printenv`
+
+`colors=/etc/DIR_COLORS`
 
 ```bash
 __udisks ()
 {
     local IFS='';
     local cur="${COMP_WORDS[COMP_CWORD]}"
+
     if [ "${COMP_WORDS[$(($COMP_CWORD - 1))]}" = "--show-info" ]; then
         COMPREPLY=($(compgen -W "$(udisks --enumerate-device-files)" -- $cur));
     else
@@ -1065,91 +1081,99 @@ command_not_found_handle ()
     retval=127;
     [ ! -S /var/run/dbus/system_bus_socket ] && runcnf=0;
     [ ! -x /usr/sbin/packagekitd ] && runcnf=0;
+
     if [ $runcnf -eq 1 ]; then
         /usr/libexec/pk-command-not-found $1;
         retval=$?;
     else
         echo "bash: $1: command not found";
     fi;
+
     return $retval
 }
 ```
 
-你会发现，通过 `printenv` 命令看到的所有全局环境变量出现在 `set` 命令的输出中。然而，现在又出现了许多额外的环境变量。这些是本地环境变量。
+你会发现，通过`printenv`命令看到的所有全局环境变量出现在`set`命令的输出中。然而，现在又出现了许多额外的环境变量。这些是本地环境变量。
 
 ## 设置环境变量
 
-你可以直接从 bash shell 设置你自己的环境变量。本节将向你展示如何创建自己的环境变量，并从交互式 shell 或 shell 脚本中引用它们。
+你可以直接从`bash` shell 设置你自己的环境变量。本节将向你展示如何创建自己的环境变量，并从交互式 shell 或 shell 脚本中引用它们。
 
 ## 设置本地环境变量
 
-一旦启动了 bash shell（或启动了 shell 脚本），你就可以创建在 shell 进程中可见的局部变量。你可以通过等号将变量赋值为值，从而为环境变量分配数值或字符串值：
+一旦启动了`bash` shell（或启动了 shell 脚本），你就可以创建在 shell 进程中可见的局部变量。你可以通过等号将变量赋值为值，从而为环境变量分配数值或字符串值：
 
 ```bash
 $ test=testing
+
 $ echo $test
+
 testing
 ```
 
-这很简单！现在，每当你需要引用 `test` 环境变量的值时，只需通过名称 `$test` 进行引用即可。
+这很简单！现在，每当你需要引用`test`环境变量的值时，只需通过名称`$test`进行引用即可。
 
-如果你需要引用 `test` 环境变量的值，只需通过名称 `$test` 进行引用即可。
+如果你需要引用`test`环境变量的值，只需通过名称`$test`进行引用即可。
 
 ```bash
 $ test=testing
+
 $ echo $test
+
 testing
 ```
 
-如果你需要引用 `test` 环境变量的值，只需通过名称 `$test` 进行引用即可。
+如果你需要引用`test`环境变量的值，只需通过名称`$test`进行引用即可。
 
 ```bash
 $ test=testing
+
 $ echo $test
+
 testing
 ```
 
-如果你需要引用 `test` 环境变量的值，只需通过名称 `$test` 进行引用即可。
+如果你需要引用`test`环境变量的值，只需通过名称`$test`进行引用即可。
 
 ```bash
 $ test=testing
+
 $ echo $test
+
 testing
 ```
 
+`bash` shell 默认使用某些特定的环境变量来定义系统环境。你可以始终认为这些变量在你的 Linux 系统上已经设置好了。由于`bash` shell 是原始 Unix Bourne shell 的派生版本，它也包含了最初在那个 shell 中定义的环境变量。
 
-
-
-
-`bash` shell 默认使用某些特定的环境变量来定义系统环境。你可以始终认为这些变量在你的 Linux 系统上已经设置好了。由于 `bash` shell 是原始 Unix Bourne shell 的派生版本，它也包含了最初在那个 shell 中定义的环境变量。
-
-表 5.1 显示了 `bash` shell 与原始 Unix Bourne shell 兼容的环境变量。
+表 5.1 显示了`bash` shell 与原始 Unix Bourne shell 兼容的环境变量。
 
 ### bash Shell Bourne 变量
 
 | 变量 | 说明 |
 | :--- | :--- |
-| `CDPATH` | 一个用冒号分隔的目录列表，用作 `cd` 命令的搜索路径。 |
+| `CDPATH` | 一个用冒号分隔的目录列表，用作`cd`命令的搜索路径。 |
 | `HOME` | 当前用户的家目录。 |
 | `IFS` | 字符列表，用于 shell 分割文本字符串的字段分隔。 |
 | `MAIL` | 当前用户邮箱的文件名。`bash` shell 会检查此文件以获取新邮件。 |
 | `MAILPATH` | 一个用冒号分隔的多个当前用户邮箱的文件名列表。`bash` shell 会检查此列表中的每个文件是否有新邮件。 |
-| `OPTARG` | 由 `getopts` 命令处理的最后一个选项参数的值。 |
-| `OPTIND` | 由 `getopts` 命令处理的最后一个选项参数的索引值。 |
+| `OPTARG` | 由`getopts`命令处理的最后一个选项参数的值。 |
+| `OPTIND` | 由`getopts`命令处理的最后一个选项参数的索引值。 |
 | `PATH` | 一个用冒号分隔的目录列表，shell 在其中查找命令。 |
 | `PS1` | 主级 shell 命令行界面提示符字符串。 |
 | `PS2` | 次级 shell 命令行界面提示符字符串。 |
 
-到目前为止，列表中最重要的环境变量是 `PATH` 变量。当你在 shell 命令行界面 (CLI) 中输入命令时，shell 必须搜索系统以找到程序。`PATH` 变量定义了它查找命令的目录。在我的 Linux 系统上，`PATH` 变量如下：
+到目前为止，列表中最重要的环境变量是`PATH`变量。当你在 shell 命令行界面 (CLI) 中输入命令时，shell 必须搜索系统以找到程序。`PATH`变量定义了它查找命令的目录。在我的 Linux 系统上，`PATH`变量如下：
 
 ```bash
 $ echo $PATH
+
 /usr/kerberos/sbin:/usr/kerberos/bin:/usr/local/bin:/usr/bin:/
 /bin:/usr/local/sbin:/usr/sbin:/sbin:/home/user/bin
+
 $
 ```
 
-这显示 shell 有六个查找命令的目录。`PATH` 中的每个目录都用冒号分隔。`PATH` 变量末尾没有指示目录列表结束的符号。你只需通过添加另一个冒号以及新目录即可向 `PATH` 添加其他目录。`PATH` 还显示了它查找命令的顺序。
+这显示 shell 有六个查找命令的目录。`PATH`中的每个目录都用冒号分隔。`PATH`变量末尾没有指示目录列表结束的符号。你只需通过添加另一个冒号以及新目录即可向`PATH`添加其他目录。`PATH`还显示了它查找命令的顺序。
 
 除了默认的 Bourne 环境变量外，`bash` shell 还提供了几个自己的变量，如表 5.2 所示。
 
@@ -1157,24 +1181,25 @@ $
 
 | 变量 | 说明 |
 | :--- | :--- |
-| `BASH` | 执行当前 `bash` shell 实例的完整路径。 |
+| `BASH` | 执行当前`bash` shell 实例的完整路径。 |
 | `BASH_ALIASES` | 当前设置的别名的关联数组。 |
 | `BASH_ARGC` | 变量数组，包含传递给子程序或 shell 脚本的参数个数。 |
 | `BASH_ARCV` | 变量数组，包含传递给子程序或 shell 脚本的参数。 |
 | `BASH_CMDS` | shell 已执行的命令位置的关联数组。 |
 | `BASH_COMMAND` | 当前正在执行或即将执行的 shell 命令。 |
 | `BASH_ENV` | 如果设置时，每个 bash 脚本在运行之前都会尝试执行一个由该变量定义的启动文件。 |
-| `BASH_EXECUTION_STRING` | 使用 `bash -c` 选项传递的命令。 | || `BASH_LINENO` | 变量数组，包含当前执行的 shell 函数的源代码行号。 |
-| `BASH_REMATCH` | 只读变量数组，包含用于正则表达式比较运算符 `=∼` 进行正向匹配的模式及其子模式。 |
+| `BASH_EXECUTION_STRING` | 使用`bash -c`选项传递的命令。 |
+| `BASH_LINENO` | 变量数组，包含当前执行的 shell 函数的源代码行号。 |
+| `BASH_REMATCH` | 只读变量数组，包含用于正则表达式比较运算符`=∼`进行正向匹配的模式及其子模式。 |
 | `BASH_SOURCE` | 变量数组，包含当前执行的 shell 函数的源代码文件名。 |
 | `BASH_SUBSHELL` | 当前子 shell 环境的嵌套层级。初始值为 0。 |
-| `BASH_VERSION` | 当前 `bash` shell 实例的版本号。 |
-| `BASH_VERSINFO` | 变量数组，包含当前 `bash` shell 实例的各个主版本和次要版本号。 |
-| `BASH_XTRACEFD` | 如果设置为有效的文件描述符 (0,1,2)，则可以将从 `set -x` 调试选项生成的跟踪输出重定向。这通常用于将跟踪输出分离到文件中。 |
+| `BASH_VERSION` | 当前`bash` shell 实例的版本号。 |
+| `BASH_VERSINFO` | 变量数组，包含当前`bash` shell 实例的各个主版本和次要版本号。 |
+| `BASH_XTRACEFD` | 如果设置为有效的文件描述符 (0,1,2)，则可以将从`set -x`调试选项生成的跟踪输出重定向。这通常用于将跟踪输出分离到文件中。 |
 | `BASHOPTS` | 当前启用的 bash shell 选项列表。 |
-| `BASHPID` | 当前 `bash` 进程的进程进程 ID (PID)。 |
-| `COLUMNS` | 包含当前 `bash` shell 实例所使用的终端宽度。 |
-| `COMP_CWORD` | 变量 `COMP_WORDS` 的索引，该变量包含当前光标位置。 |
+| `BASHPID` | 当前`bash`进程的进程进程 ID (PID)。 |
+| `COLUMNS` | 包含当前`bash` shell 实例所使用的终端宽度。 |
+| `COMP_CWORD` | 变量`COMP_WORDS`的索引，该变量包含当前光标位置。 |
 | `COMP_LINE` | 当前命令行。 |
 | `COMP_POINT` | 当前光标位置相对于当前命令起始部分的索引。 |
 | `COMP_KEY` | 用于触发补全的最后一个键。 |
@@ -1183,9 +1208,9 @@ $
 | `COMP_WORDS` | 命令行上各个单词的数组。 |
 | `COMPREPLY` | 包含生成的可能补全代码的变量数组。 |
 | `DIRSTACK` | 目录内容的数组。 |
-| `EMACS` | 当设置为 `t` 时，表示 emacs 缓冲区已禁用。 |
+| `EMACS` | 当设置为`t`时，表示 emacs 缓冲区已禁用。 |
 | `EUID` | 用户的数值有效用户 ID。 |
-| `FCEDIT` | `fc` 使用的默认编辑器。 |
+| `FCEDIT` | `fc`使用的默认编辑器。 |
 | `FIGNORE` | 在文件名扩展期间忽略的后缀列表，用冒号分隔。 |
 | `FUNCNAME` | 当前执行函数的名称。 |
 | `GLOBIGNORE` | 定义文件名扩展时要忽略的文件名集的模式列表，用冒号分隔。 |
@@ -1193,7 +1218,7 @@ $
 | `histchars` | 最多三个字符，控制历史记录。 |
 | `HISTCMD` | 当前命令的历史编号。 |
 | `HISTCONTROL` | 控制哪些命令被输入到历史列表中。 |
-| `HISTFILE` | 保存历史列表的文件名（默认为 `.bash_history`）。 |
+| `HISTFILE` | 保存历史列表的文件名（默认为`.bash_history`）。 |
 | `HISTFILESIZE` | 历史记录文件中保存的最大行数。 |
 | `HISTIGNORE` | 用于决定哪些命令在历史文件中被忽略的模式列表，用冒号分隔。 |
 | `HISTSIZE` | 历史记录文件中存储的最大命令数。 |
@@ -1201,83 +1226,92 @@ $
 | `HOSTNAME` | 当前的主机名。 |
 | `HOSTTYPE` | 描述 bash shell 运行机器的字符串。 |
 | `IGNOREEOF` | shell 在退出前必须接收的连续 EOF 字符数。如果此值不存在，默认值为 1。 |
-| `INPUTRC` | Readline 初始化文件名（默认是 `.inputrc`）。 |
+| `INPUTRC` | Readline 初始化文件名（默认是`.inputrc`）。 |
 | `LANG` | shell 的语言区域类别。 |
-| `LC_ALL` | 覆盖 `LANG` 变量，定义一个语言区域。 |
+| `LC_ALL` | 覆盖`LANG`变量，定义一个语言区域。 |
 | `LC_COLLATE` | 设置排序字符串值时使用的排序顺序。 |
 | `LC_CTYPE` | 决定文件名扩展和模式匹配中使用的字符解释。 |
 | `LC_MESSAGES` | 决定解释由美元符号引导的双引号字符串时使用的语言区域设置。 |
 | `LC_NUMERIC` | 决定格式化数字时使用的语言区域设置。 |
 | `LINENO` | 当前执行脚本中的行号。 |
 | `LINES` | 定义终端上的可用行数。 |
-
-
-
-
-
-| `MACHTYPE` | 一个以 `cpu-company-system` 格式定义系统类型的字符串。 |
+| `MACHTYPE` | 一个以`cpu-company-system`格式定义系统类型的字符串。 |
 | `MAILCHECK` | shell 检查新邮件的频率（秒，默认为 60）。 |
 | `OLDPWD` | 在 shell 中使用的上一个工作目录。 |
-| `OPTERR` | 如果设置为 1，bash shell 会显示 `getopts` 命令生成的错误。 |
+| `OPTERR` | 如果设置为 1，bash shell 会显示`getopts`命令生成的错误。 |
 | `OSTYPE` | 一个定义 shell 运行的操作系统的字符串。 |
 | `PIPESTATUS` | 一个变量数组，包含前台进程中进程退出状态值列表。 |
 | `POSIXLY_CORRECT` | 如果设置，bash 将以 POSIX 模式启动。 |
 | `PPID` | bash shell 父进程的进程 ID (PID)。 |
 | `PROMPT_COMMAND` | 如果设置，则在显示主提示符之前执行的命令。 |
-| `PROMPT_DIRTRIM` | 整数，用于指定在使用 `\w` 和 `\W` 提示符字符串转义字符时显示的末尾目录数量。被移除的目录名将用一组省略号替换。 |
-| `PS3` | `select` 命令使用的提示符。 |
-| `PS4` | 当使用 bash `-x` 参数时，在回显命令行之前显示的提示符。 |
+| `PROMPT_DIRTRIM` | 整数，用于指定在使用`\w`和`\W`提示符字符串转义字符时显示的末尾目录数量。被移除的目录名将用一组省略号替换。 |
+| `PS3` | `select`命令使用的提示符。 |
+| `PS4` | 当使用 bash `-x`参数时，在回显命令行之前显示的提示符。 |
 | `PWD` | 当前工作目录。 |
 | `RANDOM` | 返回一个 0 到 32767 之间的随机数。为此变量赋值会为随机数生成器的种子。 |
-| `REPLY` | `read` 命令的默认变量。 |
+| `REPLY` | `read`命令的默认变量。 |
 | `SECONDS` | 自 shell 启动以来秒数。为此变量赋值会将计时器重置为该值。 |
 | `SHELL` | bash shell 的完整路径。 |
 | `SHELLOPTS` | 已启用的 bash shell 选项的冒号分隔列表。 |
 | `SHLVL` | 表示 shell 级别，每启动一个新的 bash shell 加 1。 |
 | `TIMEFORMAT` | 指定 shell 如何显示时间值的格式。 |
-| `TMOUT` | `select` 和 `read` 命令等待输入的时间（秒）。默认值 0 表示无限等待。 |
+| `TMOUT` | `select`和`read`命令等待输入的时间（秒）。默认值 0 表示无限等待。 |
 | `TMPDIR` | bash shell 创建临时文件使用的目录名。 |
 | `UID` | 当前用户的数字真实用户 ID。 |
 
-你可能会发现，当使用 `set` 命令时，并不是所有的默认环境变量都会显示。其原因是尽管这些是默认环境变量，但并非所有变量都必须包含值。
+你可能会发现，当使用`set`命令时，并不是所有的默认环境变量都会显示。其原因是尽管这些是默认环境变量，但并非所有变量都必须包含值。
 
 ## 设置 PATH 环境变量
 
-`PATH` 环境变量在 Linux 系统上似乎引起的问题最多。它定义了 shell 在哪里查找你在命令行上输入的命令。如果它找不到该命令，它会产生一条错误消息：
+`PATH`环境变量在 Linux 系统上似乎引起的问题最多。它定义了 shell 在哪里查找你在命令行上输入的命令。如果它找不到该命令，它会产生一条错误消息：
 
 ```bash
 $ myprog
+
 -bash: myprog: command not found
+
 $
 ```
 
-问题在于，应用程序通常将它们的可执行程序放在不在 `PATH` 环境变量中的目录中。技巧是确保你的 `PATH` 环境变量包含了你应用程序所在的所有目录。
+问题在于，应用程序通常将它们的可执行程序放在不在`PATH`环境变量中的目录中。技巧是确保你的`PATH`环境变量包含了你应用程序所在的所有目录。
 
-你可以将新的搜索目录添加到现有的 `PATH` 环境变量中，而无需从头构建。`PATH` 中列出的各个目录由冒号分隔。你只需要引用原始 `PATH` 值并向字符串中添加任何新目录。它看起来像这样：
+你可以将新的搜索目录添加到现有的`PATH`环境变量中，而无需从头构建。`PATH`中列出的各个目录由冒号分隔。你只需要引用原始`PATH`值并向字符串中添加任何新目录。它看起来像这样：
 
 ```bash
 $ echo $PATH
+
 /usr/kerberos/sbin:/usr/kerberos/bin:/usr/local/bin:/usr/bin:/
 /bin:/usr/local/sbin:/usr/sbin:/sbin:/home/user/bin
+
 $ PATH=$PATH:/home/user/test
+
 $ echo $PATH
+
 /usr/kerberos/sbin:/usr/kerberos/bin:/usr/local/bin:/usr/bin:/
 /bin:/usr/local/sbin:/usr/sbin:/sbin:/home/user/bin:/home/user/test
+
 $ myprog
+
 The factorial of 5 is 120.
+
 $
 ```
 
-通过将目录添加到 `PATH` 环境变量中，你现在可以从虚拟目录结构的任何地方执行你的程序：
+通过将目录添加到`PATH`环境变量中，你现在可以从虚拟目录结构的任何地方执行你的程序：
 
 ```bash
 [user@localhost ~]$ cd /etc
+
 [user@localhost etc]$ myprog
+
 The factorial of 5 is 120
+
 [user@localhost etc]$
 ```
 
-程序员的一个常用技巧是在 `PATH` 环境变量中包含单点符号 `.`。单点符号表示当前目录（见第 3 章）：
+
+
+程序员的一个常用技巧是在`PATH`环境变量中包含单点符号`.`。单点符号表示当前目录（见第 3 章）：
 
 ```bash
 [user@localhost ~]$ PATH=$PATH:.
@@ -1293,28 +1327,28 @@ The factorial of 6 is 720
 
 Linux 系统使用环境变量在程序和脚本中标识自己。这为你的程序获取系统信息提供了一种方便的方法。技巧在于这些环境变量是如何设置的。
 
-当你通过登录 Linux 系统来启动 bash shell 时，默认情况下 bash 会检查几个文件以获取命令。这些文件被称为启动文件。bash 处理的启动文件取决于你启动 bash shell 的方法。启动 bash shell 有三种方式：
+当你通过登录 Linux 系统来启动`bash` shell 时，默认情况下`bash`会检查几个文件以获取命令。这些文件被称为启动文件。`bash`处理的启动文件取决于你启动`bash` shell 的方法。启动`bash` shell 有三种方式：
 
-*   作为登录时的默认登录 shell
-*   作为非登录 shell 的交互式 shell
-*   作为运行脚本的非交互式 shell
+- 作为登录时的默认登录 shell
+- 作为非登录 shell 的交互式 shell
+- 作为运行脚本的非交互式 shell
 
-接下来的章节描述了 bash shell 在这些启动方法中执行的启动文件。
+接下来的章节描述了`bash` shell 在这些启动方法中执行的启动文件。
 
 ### 登录 shell (Login Shell)
 
-当你登录 Linux 系统时，bash shell 作为登录 shell 启动。登录 shell 会查找四个不同的启动文件来处理命令。以下是 bash 处理这些文件的顺序：
+当你登录 Linux 系统时，`bash` shell 作为登录 shell 启动。登录 shell 会查找四个不同的启动文件来处理命令。以下是`bash`处理这些文件的顺序：
 
-* `/etc/profile`
-* `$HOME/.bash_profile`
-* `$HOME/.bash_login`
-* `$HOME/.profile`
+- `/etc/profile`
+- `$HOME/.bash_profile`
+- `$HOME/.bash_login`
+- `$HOME/.profile`
 
-`/etc/profile` 文件是系统中 bash shell 的主要默认启动文件。系统上的每个用户在登录时都会执行此启动文件。其他三个启动文件是针对每个用户特定的，并且可以根据每个用户的需求进行自定义。让我们仔细观察这些文件。
+`/etc/profile`文件是系统中`bash` shell 的主要默认启动文件。系统上的每个用户在登录时都会执行此启动文件。其他三个启动文件是针对每个用户特定的，并且可以根据每个用户的需求进行自定义。让我们仔细观察这些文件。
 
-### /etc/profile 文件
+### `/etc/profile`文件
 
-`/etc/profile` 文件是 bash 的主要默认启动文件。每当你登录 Linux 系统时，bash 都会执行 `/etc/profile` 启动文件中的命令。不同的 Linux 发行版在该文件中放置不同的命令。在当前 Linux 系统上，它看起来是这样的：
+`/etc/profile`文件是 `bash` 的主要默认启动文件。每当你登录 Linux 系统时，`bash`都会执行`/etc/profile`启动文件中的命令。不同的 Linux 发行版在该文件中放置不同的命令。在当前 Linux 系统上，它看起来是这样的：
 
 ```bash
 $ cat /etc/profile
@@ -1375,14 +1409,10 @@ for i in /etc/profile.d/*.sh; do
 done
 unset i
 unset pathmunge
-
 $
 ```
 
-
-
-
-你在此文件中看到的大多数命令和脚本在第 10 章中会有更详细的介绍。现在需要注意的是在此启动文件中设置的环境变量。注意文件底部的 `export` 行：
+你在此文件中看到的大多数命令和脚本在第 10 章中会有更详细的介绍。现在需要注意的是在此启动文件中设置的环境变量。注意文件底部的`export`行：
 
 ```bash
 export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE HISTCONTROL
@@ -1390,7 +1420,7 @@ export PATH USER LOGNAME MAIL HOSTNAME HISTSIZE HISTCONTROL
 
 这确保了这些环境变量对于从登录 shell 产生的所有子进程都是的。
 
-profile 文件还使用了另一个复杂的特性。其中有一个 `for` 语句会遍历位于 `/etc/profile.d` 目录中的任何文件（`for` 语句将在第 12 章中详细讨论）。这为 Linux 系统提供了一个放置特定应用程序启动文件的地方，这些文件会在你登录时由 shell 执行。在这个 Linux 系统上，`profile.d` 目录下包含以下文件：
+`profile`文件还使用了另一个复杂的特性。其中有一个`for`语句会遍历位于`/etc/profile.d`目录中的任何文件（`for`语句将在第 12 章中详细讨论）。这为 Linux 系统提供了一个放置特定应用程序启动文件的地方，这些文件会在你登录时由 shell 执行。在这个 Linux 系统上，`profile.d`目录下包含以下文件：
 
 ```bash
 $ ls -l /etc/profile.d
@@ -1416,19 +1446,19 @@ total 72
 $
 ```
 
-你会注意到这些文件大多与系统上的特定应用程序有关。大多数应用程序创建两个启动文件，一个用于 bash shell（使用 `.sh` 扩展名），另一个用于 c shell（使用 `.csh` 扩展名）。
+你会注意到这些文件大多与系统上的特定应用程序有关。大多数应用程序创建两个启动文件，一个用于`bash` shell（使用`.sh`扩展名），另一个用于 `c` shell（使用`.csh`扩展名）。
 
-`lang.csh` 和 `lang.sh` 文件尝试确定系统使用的默认语言字符集，并恰当地设置 `LANG` 环境变量。
+`lang.csh`和`lang.sh`文件尝试确定系统使用的默认语言字符集，并恰当地设置`LANG`环境变量。
 
-### $HOME 启动文件
+### `$HOME`启动文件
 
 剩下的三个启动文件都用于相同的功能——提供一个用户特定的启动文件，用于定义用户特定的环境变量。大多数 Linux 发行版仅使用这三个启动文件之一：
 
-* `$HOME/.bash_profile`
-* `$HOME/.bash_login`
-* `$HOME/.profile`
+- `$HOME/.bash_profile`
+- `$HOME/.bash_login`
+- `$HOME/.profile`
 
-注意这三个文件都以点开头，这意味着它们是隐藏文件（它们不会出现在普通的 `ls` 命令中）。因为它们位于用户的 `HOME` 目录中，每个用户都可以编辑这些文件并添加自己的环境变量，这些变量会在启动的每个 bash 会话中生效。此 Linux 系统包含以下 `.bash_profile` 文件：
+注意这三个文件都以点开头，这意味着它们是隐藏文件（它们不会出现在普通的`ls`命令中）。因为它们位于用户的`HOME`目录中，每个用户都可以编辑这些文件并添加自己的环境变量，这些变量会在启动的每个 bash 会话中生效。此 Linux 系统包含以下`.bash_profile`文件：
 
 ```bash
 cat .bash_profile
@@ -1443,11 +1473,11 @@ export PATH
 $
 ```
 
-`.bash_profile` 启动文件首先检查 `HOME` 目录下是否存在另一个名为 `.bashrc` 的启动文件（我们将在“交互式 shell”部分中讨论它）。如果存在，启动文件将执行其中的命令。接下来，启动文件会向 `PATH` 环境变量添加一个目录，为在你的 `HOME` 目录中放置可执行文件提供一个公共位置。
+`.bash_profile`启动文件首先检查`HOME`目录下是否存在另一个名为`.bashrc`的启动文件（我们将在“交互式 shell”部分中讨论它）。如果存在，启动文件将执行其中的命令。接下来，启动文件会向`PATH`环境变量添加一个目录，为在你的`HOME`目录中放置可执行文件提供一个公共位置。
 
 ### 交互式 shell
 
-如果你在没有登录系统的情况下启动了 bash shell（例如在 CLI 提示符处输入 `bash`），你启动的就是所谓的交互式 shell。交互式 shell 的行为不像登录 shell，但它仍然为你提供了一个 CLI 提示符来输入命令。如果 bash 作为交互式 shell 启动，它不会处理 `/etc/profile` 文件。相反，它会检查用户 `HOME` 目录下的 `.bashrc` 文件。在这个 Linux 发行版上，该文件看起来如下：
+如果你在没有登录系统的情况下启动了`bash` shell（例如在 CLI 提示符处输入`bash`），你启动的就是所谓的交互式 shell。交互式 shell 的行为不像登录 shell，但它仍然为你提供了一个 CLI 提示符来输入命令。如果`bash`作为交互式 shell 启动，它不会处理`/etc/profile`文件。相反，它会检查用户`HOME`目录下的`.bashrc`文件。在这个 Linux 发行版上，该文件看起来如下：
 
 ```bash
 cat .bashrc
@@ -1460,7 +1490,7 @@ fi
 $
 ```
 
-`.bashrc` 文件做两件事。首先，它检查 `/etc` 目录下的通用 bashrc。其次，它为用户输入个人别名（稍后在“使用别名”部分讨论）和私有脚本函数（在第 16 章描述）提供了一个位置。通用的 `/etc/bashrc` 启动文件由系统中启动交互式 shell 的所有人运行。在这个 Linux 发行版上，它看起来如下：
+`.bashrc`文件做两件事。首先，它检查`/etc`目录下的通用`bashrc`。其次，它为用户输入个人别名（稍后在“使用别名”部分讨论）和私有脚本函数（在第 16 章描述）提供了一个位置。通用的`/etc/bashrc`启动文件由系统中启动交互式 shell 的所有人运行。在这个 Linux 发行版上，它看起来如下：
 
 ```bash
 cat /etc/bashrc
@@ -1547,17 +1577,15 @@ fi
 
 
 
+默认文件设置了几个环境变量，但注意它并没有使用`export`命令将它们设置为全局变量。记住，交互式 shell 启动文件会在每次启动新的交互式 shell 时运行；因此，任何子 shell 都会自动执行交互式 shell 启动文件。
 
-
-默认文件设置了几个环境变量，但注意它并没有使用 `export` 命令将它们设置为全局变量。记住，交互式 shell 启动文件会在每次启动新的交互式 shell 时运行；因此，任何子 shell 都会自动执行交互式 shell 启动文件。
-
-还会注意到 `/etc/bashrc` 文件也会执行位于 `/etc/profile.d` 目录下的特定应用程序启动文件。
+还会注意到`/etc/bashrc`文件也会执行位于`/etc/profile.d`目录下的特定应用程序启动文件。
 
 ### 非交互式 Shell
 
-最后，最后一种 shell 是非交互式 shell。这是系统为了执行 shell 脚本而启动的 shell。与之前的不同之处在于，它不需要担心 CLI 提示符。然而，你可能仍然希望每次在系统上启动脚本时运行某些特定的启动命令。
+最后一种 shell 是非交互式 shell。这是系统为了执行 shell 脚本而启动的 shell。与之前的不同之处在于，它不需要担心 CLI 提示符。然而，你可能仍然希望每次在系统上启动脚本时运行某些特定的启动命令。
 
-为了适应这种情况，bash shell 提供了 `BASH_ENV` 环境变量。当 shell 启动非交互式 进程时，它会检查此环境变量以获取要执行启动文件名。如果存在，shell 将执行文件中的命令。在我们使用的 Linux 发行版中，默认没有设置此环境变量值。
+为了适应这种情况，bash shell 提供了`BASH_ENV`环境变量。当 shell 启动非交互式进程时，它会检查此环境变量以获取要执行启动文件名。如果存在，shell 将执行文件中的命令。在我们使用的 Linux 发行版中，默认没有设置此环境变量值。
 
 ### 变量数组
 
@@ -1570,7 +1598,7 @@ $ mytest=(one two three four five)
 $
 ```
 
-这没没什么令人兴奋的。如果你尝试像显示普通环境变量一样显示数组，你会感到失望的：
+这没什么令人兴奋的。如果你尝试像显示普通环境变量一样显示数组，你会感到失望的：
 
 ```bash
 $ echo $mytest
@@ -1587,6 +1615,7 @@ $
 ```
 
 > **注意**
+>
 > 环境变量数组的索引值从零开始。这通常会引起困惑。
 
 要显示整个数组变量，你使用星号通配符作为索引值：
@@ -1606,7 +1635,7 @@ one two seven four five
 $
 ```
 
-你甚至可以使用 `unset` 命令删除数组中的单个值，但要小心，因为这很复杂。看这个例子：
+你甚至可以使用`unset`命令删除数组中的单个值，但要小心，因为这很复杂。看这个例子：
 
 ```bash
 $ unset mytest[2]
@@ -1619,9 +1648,9 @@ four
 $
 ```
 
-这个示例使用 `unset` 命令删除索引值为 2 的值。当你显示数组时，其他索引值似乎向下移动了一位。然而，如果你专门显示索引值为 2 处的数据，你会发现该位置是空的。
+这个示例使用`unset`命令删除索引值为 2 的值。当你显示数组时，其他索引值似乎向下移动了一位。然而，如果你专门显示索引值为 2 处的数据，你会发现该位置是空的。
 
-最后，你可以通过在 `unset` 命令中使用数组名删除整个数组：
+最后，你可以通过在`unset`命令中使用数组名删除整个数组：
 
 ```bash
 $ unset mytest
@@ -1629,13 +1658,13 @@ $ echo ${mytest[*]}
 $
 ```
 
-有时变量数组会让事情变得复杂，因此它们在 shell 编程中经常不使用。它们对其他环境的移植性不好，如果你为不同的 shell 进行大量的 shell 编程，这是一个缺点。bash 有几个使用数组的环境变量（例如 `BASH_INFO`），但总来说你不会经常遇到它们。
+有时变量数组会让事情变得复杂，因此它们在 shell 编程中经常不使用。它们对其他环境的移植性不好，如果你为不同的 shell 进行大量的 shell 编程，这是一个缺点。bash 有几个使用数组的环境变量（例如`BASH_INFO`），但总的来说你不会经常遇到它们。
 
 ### 使用命令别名
 
 虽然命令别名（alias）不是正式环境变量，但 shell 命令别名的行为非常相似。命令别名允许你为常用命令（以及它们的参数）创建一个别名，以帮助你最少地输入。
 
-很可能，你的 Linux 发行版已经为你设置了一些命令别名。要查看活动别名列表，使用带有 `-p` 参数的 `alias` 命令：
+很可能，你的 Linux 发行版已经为你设置了一些命令别名。要查看活动别名列表，使用带有`-p`参数的`alias`命令：
 
 ```bash
 $ alias -p
@@ -1646,7 +1675,7 @@ alias vi='vim'
 alias which='alias /usr/bin/which --tty-only --show-dot'
 ```
 
-注意，在这个 Linux 发行版上，别名被用来覆盖标准的 `ls` 命令。它自动提供了 `--color` 参数，表示终端支持颜色。你可以通过 `alias` 命令创建自己的别名：
+注意，在这个 Linux 发行版上，别名被用来覆盖标准的`ls`命令。它自动提供了`--color`参数，表示终端支持颜色。你可以通过`alias`命令创建自己的别名：
 
 ```bash
 $ alias li='ls -il'
@@ -1673,33 +1702,29 @@ bash: li: command not found
 $
 ```
 
-当然，现在你知道了解决该问题的方法。bash shell 在启动新的交互式 shell 时总是会读取 `$HOME/.bashrc` 启动文件。这是放置命令 `alias` 语句的好地方（正如 `.bashrc` 文件注释中所指出的）。
+当然，现在你知道了解决该问题的方法。bash shell 在启动新的交互式 shell 时总是会读取`$HOME/.bashrc`启动文件。这是放置命令`alias`语句的好地方（正如`.bashrc`文件注释中所指出的）。
 
 ## 总结
 
 本章研究了 Linux 环境变量的世界。全局环境变量可以从定义它的进程派生的任何子进程中访问。本地环境变量只能从定义它的进程中访问。
 
-Linux 系统同时使用全局和本地环境变量来存储系统环境信息。你可以从 shell 命令行界面以及 shell 脚本内部访问这些信息。bash shell 使用了原始 Unix Bourne shell 中定义的系统环境变量，以及许多新的环境变量。`PATH` 环境变量定义了 bash shell 查找可执行命令时所采用的搜索模式。你可以修改 `PATH` 环境变量来添加你自己的目录，甚至是当前目录符号，使运行你的程序变得更容易。
+Linux 系统同时使用全局和本地环境变量来存储系统环境信息。你可以从 shell 命令行界面以及 shell 脚本内部访问这些信息。bash shell 使用了原始 Unix Bourne shell 中定义的系统环境变量，以及许多新的环境变量。`PATH`环境变量定义了 bash shell 查找可执行命令时所采用的搜索模式。你可以修改`PATH`环境变量来添加你自己的目录，甚至是当前目录符号，使运行你的程序变得更容易。
 
 你也可以创建你自己的全局和本地环境变量以供自己使用。一旦你创建了环境变量，它在整个 shell 会话期间都是可访问的。
 
-在 shell 启动时，有几个启动文件是 bash shell 启动时执行的。这些启动文件可以包含环境变量定义，以便为每个 bash 会话设置标准环境变量。当你登录 Linux 系统时，bash shell 会访问 `/etc/profile` 启动文件，还会为每个用户访问三个本地启动文件：`$HOME/.bash_profile`、`$HOME/.bash_login` 和 `$HOME/.profile`。用户可以自定义这些文件，包含他们自己使用的环境变量和启动脚本。
+在 shell 启动时，有几个启动文件是 bash shell 启动时执行的。这些启动文件可以包含环境变量定义，以便为每个 bash 会话设置标准环境变量。当你登录 Linux 系统时，bash shell 会访问`/etc/profile`启动文件，还会为每个用户访问三个本地启动文件：`$HOME/.bash_profile`、`$HOME/.bash_login`和`$HOME/.profile`。用户可以自定义这些文件，包含他们自己使用的环境变量和启动脚本。
 
 bash shell 还提供了环境变量数组。这些环境变量可以在单个变量中包含多个值。你可以通过引用索引值来单独访问值，也可以通过引用整个环境变量数组名来整体访问值。
 
 最后，本章讨论了命令别名的使用。虽然命令别名不是环境变量，但它们的行为与环境变量非常相似。它们允许你为命令及其参数定义一个别名。你不需要输入长长的命令和参数，只需将其分配给一个简单的别名，并在 shell 会话的任何时候使用该别名即可。
 
-
-
-
-
 # 理解 Linux 文件权限
 
 ## 本章内容
 
-* 理解 Linux 安全
-* 解码权限
-* 组 Linux 组
+- 理解 Linux 安全
+- 解码权限
+- 组 Linux 组
 
 任何系统如果没有某种形式的安全措施是不完整的。必须有一种机制来保护文件不受未经授权的查看或修改。Linux 系统遵循 Unix 的文件权限方法，根据每个文件和目录的一组安全设置，允许个人用户和组访问文件。本章将讨论如何使用 Linux 文件安全系统在必要时保护数据，并在需要时共享数据。
 
@@ -1707,16 +1732,17 @@ bash shell 还提供了环境变量数组。这些环境变量可以在单个变
 
 Linux 安全系统的核心是用户账户。每个访问 Linux 系统的个人都应该分配一个唯一的用户账户。用户对系统对象的权限取决于他们登录时使用的账户。
 
-用户权限通过用户 ID（通常称为 `UID`）进行跟踪，该 ID 在账户创建时被分配给账户。`UID` 是一个数值，对每个用户都是唯一的。然而，你并不是使用 `UID` 登录 Linux 系统。相反，你使用的是登录名。登录名是一个 8 个字符或更少的数字字母字符串，用户用它登录系统（以及关联的密码）。
+用户权限通过用户 ID（通常称为`UID`）进行跟踪，该 ID 在账户创建时被分配给账户。`UID`是一个数值，对每个用户都是唯一的。然而，你并不是使用`UID`登录 Linux 系统。相反，你使用的是登录名。登录名是一个 8 个字符或更少的数字字母字符串，用户用它登录系统（以及关联的密码）。
 
-Linux 系统使用特殊文件和实用来跟踪和管理系统上的用户账户。在讨论文件权限之前，我们需要讨论 Linux 如何处理用户账户。本节描述了用户账户所需的文件和实用程序，以便你能够在处理文件权限时理解如何使用它们。
+Linux 系统使用特殊文件和实用程序来跟踪和管理系统上的用户账户。在讨论文件权限之前，我们需要讨论 Linux 如何处理用户账户。本节描述了用户账户所需的文件和实用程序，以便你能够在处理文件权限时理解如何使用它们。
 
-### /etc/passwd 文件
+### `/etc/passwd`文件
 
-Linux 系统使用一个特殊文件将登录名与对应的 `UID` 值匹配。这个文件就是 `/etc/passwd` 文件。`/etc/passwd` 文件包含了关于用户的几条信息。以下是 Linux 系统上典型的 `/etc/passwd` 文件内容：
+Linux 系统使用一个特殊文件将登录名与对应的`UID`值匹配。这个文件就是`/etc/passwd`文件。`/etc/passwd`文件包含了关于用户的几条信息。以下是 Linux 系统上典型的`/etc/passwd`文件内容：
 
-```
+```text
 cat /etc/passwd
+
 root:x:0:0:root:/root:/bin/bash
 bin:x:1:1:bin:/bin:/sbin/nologin
 daemon:x:2:2:daemon:/sbin:/sbin/nologin
@@ -1759,55 +1785,51 @@ mysql:x:27:27:MySQL Server:/var/lib/mysql:/bin/bash
 $
 ```
 
-`root` 用户账户始终被分配 `0`。如你所见，`/etc/passwd` 文件包含不仅是登录名和 `UID`。Linux 将 500 以下的 UID 预留给系统账户。`/etc/passwd` 文件包含以下：
+`root`用户账户始终被分配`0`。如你所见，`/etc/passwd`文件包含的不仅是登录名和`UID`。Linux 将 500 以下的 UID 预留给系统账户。`/etc/passwd`文件包含以下信息：
 
-* 登录名
-* 密码
-* 数值 `UID`
-* 数值组 ID (`GID`)
-* 用户的文本描述（注释字段）
-* `HOME` 目录的位置
-* 默认 shell
+- 登录名
+- 密码
+- 数值`UID`
+- 数值组 ID（`GID`）
+- 用户的文本描述（注释字段）
+- `HOME`目录的位置
+- 默认 shell
 
-`/etc/passwd` 中的密码字段被设为 `x`。在过去，`/etc/passwd` 文件包含密码的加密版本。然而，由于许多程序需要访问它，这成了一个安全问题。随着可以轻松解密密码的软件出现，Linux 开发者需要重新考虑该策略。
+`/etc/passwd`中的密码字段被设为`x`。在过去，`/etc/passwd`文件包含密码的加密版本。然而，由于许多程序需要访问它，这成了一个安全问题。随着可以轻松解密密码的软件出现，Linux 开发者需要重新考虑该策略。
 
-现在，大多数 Linux 系统将 `/etc/passwd` 文件看作一个标准文本文件。你可以使用任何文本编辑器直接在 `/etc/passwd` 文件中手动执行用户管理功能（如添加、修改或删除用户账户）。然而，这是一种极其危险的做法。如果 `/etc/passwd` 文件损坏，系统将无法读取它，并阻止任何人（即使是 root 用户）登录。相反，使用标准的 Linux 用户管理实用程序更安全。
+现在，大多数 Linux 系统将`/etc/passwd`文件看作一个标准文本文件。你可以使用任何文本编辑器直接在`/etc/passwd`文件中手动执行用户管理功能（如添加、修改或删除用户账户）。然而，这是一种极其危险的做法。如果`/etc/passwd`文件损坏，系统将无法读取它，并阻止任何人（即使是 root 用户）登录。相反，使用标准的 Linux 用户管理实用程序更安全。
 
-### /etc/shadow 文件
+### `/etc/shadow`文件
 
-`/etc/shadow` 文件对 Linux 系统如何管理密码提供了更多的控制。只有 root 用户可以访问 `/etc/shadow` 文件，这使其比 `/etc/passwd` 文件更安全。
+`/etc/shadow`文件对 Linux 系统如何管理密码提供了更多的控制。只有 root 用户可以访问`/etc/shadow`文件，这使其比`/etc/passwd`文件更安全。
 
-`/etc/shadow` 文件为系统的每个用户账户提供一条记录。记录格式如下：
+`/etc/shadow`文件为系统的每个用户账户提供一条记录。记录格式如下：
 
-```
+```text
 rich:$1$.FfcK0ns$f1UgiyHQ25wrB/hykCn020:11627:0:99999:7::
 ```
 
-每个 `/etc/shadow` 文件记录有九个字段：
+每个`/etc/shadow`文件记录有九个字段：
 
-* 与 `/etc/passwd` 文件中的登录名对应的登录名
-* 加密密码
-* 上次更改密码距离自 1970 年 1 月 1 日起的天数
-* 更改密码前的最少天数
-* 必须更改密码前的天数
-* 密码过期前警告用户更改密码的天数
-* 密码过期后账户被禁用的天数
-* 用户账户禁用的日期（存储为自 1970 年 1 月 1 日起的天数）
-
-
-
-
-
+- 与`/etc/passwd`文件中的登录名对应的登录名
+- 加密密码
+- 上次更改密码距离 1970 年 1 月 1 日起的天数
+- 更改密码前的最少天数
+- 必须更改密码前的天数
+- 密码过期前警告用户更改密码的天数
+- 密码过期后账户被禁用的天数
+- 用户账户禁用的日期（存储为自 1970 年 1 月 1 日起的天数）
 - 留供未来使用的字段
 
 使用影子密码系统，Linux 系统对用户密码有许多更精细的控制。它可以控制用户更改密码的频率，以及在密码未更改时何时禁用该账户。
 
 ## 添加新用户
 
-在 Linux 系统中添加新用户使用的主要工具是 `useradd`。该命令提供了一种创建新用户账户并一次性设置用户 `HOME` 目录结构的简单方法。`useradd` 命令使用系统默认值和命令行参数的组合来定义用户账户。要查看您的 Linux 发行版上使用的系统默认值，请输入带有 `-D` 参数的 `useradd` 命令：
+在 Linux 系统中添加新用户使用的主要工具是`useradd`。该命令提供了一种创建新用户账户并一次性设置用户`HOME`目录结构的简单方法。`useradd`命令使用系统默认值和命令行参数的组合来定义用户账户。要查看您的 Linux 发行版上使用的系统默认值，请输入带有`-D`参数的`useradd`命令：
 
 ```bash
 ## /usr/sbin/useradd -D
+
 GROUP=100
 HOME=/home
 INACTIVE=-1
@@ -1818,32 +1840,43 @@ CREATE_MAIL_SPOOL=yes
 #
 ```
 
-> 注意
-> 某些 Linux 发行版将 Linux 用户和组工具放在 `/usr/sbin` 目录中，该目录可能不在您的 `PATH` 环境变量中。如果您的 Linux 发行版是这种情况，请将该目录添加到 `PATH` 中，或使用绝对路径运行它。
+> **注意**
+>
+> 某些 Linux 发行版将 Linux 用户和组工具放在`/usr/sbin`目录中，该目录可能不在您的`PATH`环境变量中。如果您的 Linux 发行版是这种情况，请将该目录添加到`PATH`中，或使用绝对路径运行它。
 
-`-D` 参数显示了当在创建新用户账户时未在命令行中指定时，`useradd` 命令将使用的默认值。此示例显示了以下默认值：
+`-D`参数显示了当在创建新用户账户时未在命令行中指定时，`useradd`命令将使用的默认值。此示例显示了以下默认值：
 
 - 新用户将被添加到组 ID 为 100 的公共组中。
-- 新用户将在 `/home/loginname` 目录下创建一个 `HOME` 账户。
+- 新用户将在`/home/loginname`目录下创建一个`HOME`账户。
 - 当密码过期时，账户不会被禁用。
 - 新账户不会设置在指定日期过期。
 - 新账户将使用 bash shell 作为默认 shell。
-- 系统将 `/etc/skel` 目录的内容复制到用户的 `HOME` 目录中。
+- 系统将`/etc/skel`目录的内容复制到用户的`HOME`目录中。
 - 系统将在邮件目录中创建一个文件，供该用户账户接收邮件。
 
-倒数第二个值很有趣。`useradd` 命令允许管理员创建一个默认的 `HOME` 目录配置，然后将其作为模板来创建新用户的 `HOME` 目录。这允许您自动在每个新用户的 `HOME` 目录中放置系统的默认文件。在 Ubuntu Linux 系统中，`/etc/skel` 目录包含以下文件：
+倒数第二个值很有趣。`useradd`命令允许管理员创建一个默认的`HOME`目录配置，然后将其作为模板来创建新用户的`HOME`目录。这允许您自动在每个新用户的`HOME`目录中放置系统的默认文件。在 Ubuntu Linux 系统中，`/etc/skel`目录包含以下文件：
 
 ```bash
 $ ls -al /etc/skel
+
 total 32
-drwxr-xr-x   2 root root  4096 2010-04-29 08:26 .
-drwxr-xr-x 135 root root 12288 2010-09-23 18:49 ..
--rw-r--r--   1 root root   220 2010-04-18 21:51 .bash_logout
--rw-r--r--   1 root root   3103 2010-04-18 21:51 .bashrc
--rw-r--r--   1 root root   179 2010-03-26 08:31 examples.desktop
--rw-r--r--   1 root root   675 2010-04-18 21:51 .profile
-$
 ```
+
+
+
+`drwxr-xr-x   2 root root  4096 2010-04-29 08:26 .`
+
+`drwxr-xr-x 135 root root 12288 2010-09-23 18:49 ..`
+
+`-rw-r--r--   1 root root   220 2010-04-18 21:51 .bash_logout`
+
+`-rw-r--r--   1 root root   3103 2010-04-18 21:51 .bashrc`
+
+`-rw-r--r--   1 root root   179 2010-03-26 08:31 examples.desktop`
+
+`-rw-r--r--   1 root root   675 2010-04-18 21:51 .profile`
+
+`$`
 
 您应该在第 5 章中认识这些文件。这些是 bash shell 环境的标准启动文件。系统会自动将这些默认文件复制到您创建的每个用户的 `HOME` 目录中。
 
@@ -1864,12 +1897,12 @@ drwxr-xr-x   4 root root 4096 2010-09-23 19:01 ..
 
 默认情况下，`useradd` 命令不会创建 `HOME` 目录，但 `-m` 命令行选项告诉它创建 `HOME` 目录。如示例所示，`useradd` 命令使用 `/etc/skel` 目录包含的文件创建了新的 `HOME` 目录。
 
-> 注意
+> **注意**
 > 要运行本章中的用户账户管理命令，您可能需要登录为特殊的 root 用户账户，或者使用 `sudo` 命令以 root 用户账户身份运行命令。
 
 如果您想在创建新用户时覆盖默认值或行为，可以通过命令行参数来实现。这些参数列在表 6.1 中所示。
 
-### 表 6.1: useradd 命令命令行参数
+### 表 6.1: `useradd` 命令命令行参数
 
 | 参数 | 描述 |
 | :--- | :--- |
@@ -1890,7 +1923,7 @@ drwxr-xr-x   4 root root 4096 2010-09-23 19:01 ..
 
 如果您想在创建新用户时覆盖默认值或行为，可以使用命令行参数。这些参数列在表 6.2 中。
 
-### 表 6.2: useradd 默认值
+### 表 6.2: `useradd` 默认值
 
 | 参数 | 描述 |
 | :--- | :--- |
@@ -1934,12 +1967,8 @@ ls: 无法访问 home/test': 无此文件或目录
 
 使用 `-r` 参数后，用户的旧 `/home/test` 目录不再存在。
 
-> 警告
+> **警告**
 > 在多用户环境中使用 `-r` 参数时要小心。您永远不知道用户是否在其 `HOME` 目录中存储了其他其他人或其他程序使用的重要文件。在删除用户的 `HOME` 目录之前，请务必进行检查！
-
-
-
-
 
 Linux 提供了不同的工具来修改现有用户账户的信息。表 6.3 显示了这些工具。
 
@@ -1956,9 +1985,9 @@ Linux 提供了不同的工具来修改现有用户账户的信息。表 6.3 显
 | `chfn` | 修改用户账户的注释信息 |
 | `chsh` | 更改用户账户的默认 shell |
 
-这些工具中的每一个都提供了用于更改用户账户信息的特定功能。接下来的章节将详细介绍这些这些工具。
+这些工具中的每一个都提供了用于更改用户账户信息的特定功能。接下来的章节将详细介绍这些工具。
 
-### usermod
+### `usermod`
 
 `usermod` 命令是用户账户修改工具中最功能强大的一个。它提供了更改 `/etc/passwd` 文件中大部分字段的选项。要实现这一点，你只需要使用与你想要更改的值相对应的命令行参数。这些参数与 `useradd` 参数大部分相同（例如使用 `-c` 更改注释字段，`-e` 更改过期日期，以及 `-g` 更改默认登录组）。不过，还有几个额外的参数可能非常有用：
 
@@ -1969,7 +1998,7 @@ Linux 提供了不同的工具来修改现有用户账户的信息。表 6.3 显
 
 `-L` 参数特别有用。使用它来锁定账户，这样用户在无需删除账户及其用户数据的情况下无法登录。要将账户恢复正常，只需使用 `-U` 参数即可。
 
-### passwd 和 chpasswd
+### `passwd` 和 `chpasswd`
 
 更改用户密码的快速方法是使用 `passwd` 命令：
 
@@ -1993,7 +2022,7 @@ passwd: all authentication tokens updated successfully.
 #
 ```
 
-### chsh, chfn 和 chage
+### `chsh`, `chfn` 和 `chage`
 
 `chsh`、`chfn` 和 `chage` 工具专门用于特定的账户修改功能。`chsh` 命令允许你快速更改用户的默认登录 shell。你必须使用 shell 的完整路径，而不仅仅是 shell 名称：
 
@@ -2031,18 +2060,17 @@ No Plan.
 #
 ```
 
-
-
-
-
-```
 `rich:x:500:`
+
 `mama:x:501:`
+
 `katie:x:502:`
+
 `jessica:x:503:`
+
 `mysql:x:27:`
+
 `test:x:504:`
-```
 
 与 UID 类似，GID 也使用特殊的格式进行分配。用于系统账户的组被分配 500 以下的 GID，而用户组被分配从 500 开始的 GID。`/etc/group` 文件包含四个字段：
 
@@ -2055,14 +2083,14 @@ No Plan.
 
 你永远不应该通过编辑 `/etc/group` 文件来将用户添加到组中。相反，请使用 `usermod` 命令（在前面的“Linux 安全”章节中已讨论过）将用户账户添加到组中。在能够将用户添加到不同的组之前，你必须先创建这些组。
 
-> 注意
+> **注意**
 > 用户账户列表具有某种误导性。你会注意到列表中有几个组没有列出任何用户。这并不是因为它们没有成员。当一个用户账户在 `/etc/passwd` 文件中使用某个组作为默认组时，该用户账户不会作为成员出现在 `/etc/group` 文件中。多年来，这曾让多个系统管理员感到过困惑！
 
 ## 创建新组
 
 `groupadd` 命令允许你在系统上创建新组：
 
-```
+```bash
 ## /usr/sbin/groupadd shared
 ## tail /etc/group
 haldaemon:x:68:
@@ -2080,7 +2108,7 @@ shared:x:505:
 
 当你创建一个新组时，默认没有用户分配给它。`groupadd` 命令没有提供将用户账户添加到组的选项。相反，要添加新用户，请使用 `usermod` 命令：
 
-```
+```bash
 ## /usr/sbin/usermod -G shared rich
 ## /usr/sbin/usermod -G shared test
 ## tail /etc/group
@@ -2099,17 +2127,17 @@ shared:x:505:rich, test
 
 `shared` 组现在有两个成员：test 和 rich。`usermod` 中的 `-G` 参数将新组添加到该用户账户的组列表中。
 
-> 注意
+> **注意**
 > 如果你更改了当前登录系统的账户的用户组，则用户必须注销并重新登录，组更改才会生效。
 
-> 警告
+> **警告**
 > 在为用户账户分配组时要小心。如果你使用 `-g` 参数，你指定的组名将替换该用户账户的默认组。`-G` 参数会将该组添加到用户所属的组列表中，同时保持默认组不变。
 
 ## 修改组
 
 如你从 `/etc/group` 文件中所见，关于组的信息并不多供你修改。`groupmod` 命令允许你更改现有组的 GID（使用 `-g` 参数）或组名（使用 `-n` 参数）：
 
-```
+```bash
 ## /usr/sbin/groupmod -n sharing shared
 ## tail /etc/group
 haldaemon:x:68:
@@ -2133,9 +2161,9 @@ sharing:x:505:test,rich
 
 ### 使用文件权限符号
 
-如果你还记得第 3 章的内容，`ls` 命令允许你查看 Linux 系统上文件、目录和设备的权限权限：
+如果你还记得第 3 章的内容，`ls` 命令允许你查看 Linux 系统上文件、目录和设备的权限：
 
-```
+```bash
 $ ls -l
 total 68
 -rw-rw-r-- 1 rich rich    50 2010-09-13 07:49 file1.gz
@@ -2158,84 +2186,50 @@ total 68
 * `w` 表示写
 * `x` 表示执行
 
-破折线 `-` 表示权限被拒绝。这三组分别对应所有者、所属组和所有人。
+破折号 `-` 表示权限被拒绝。这三组分别对应所有者、所属组和所有人。
 
 例如：
 
-```
+```bash
 -rw-rw-r-- 1 rich rich    50 2010-09-13 07:49 file1.gz
 -rw-rw-r-- 1 rich rich    23 2010-09-13 07:50 file2
 -rw-rw-r-- 1 rich rich    48 2010-09-13 07:56 file3
 ```
 
-```
+```bash
 -rw-rw-r-- 1 rich rich    50 2010-09-13 07:49 file1.gz
 -rw-rw-r-- 1 rich rich    23 2010-09-13 07:50 file2
 -rw-rw-r-- 1 rich rich    48 2010-09-13 07:56 file3
 ```
 
-```
+```bash
 -rw-rw-r-- 1 rich rich    50 2010-09-13 07:49 file1.gz
 -rw-rw-r-- 1 rich rich    23 2010-09-13 07:50 file2
 -rw-rw-r-- 1 rich rich    48 2010-09-13 07:56 file3
 ```
 
-```
+```bash
 -rw-rw-r-- 1 rich rich    50 2010-09-13 07:49 file1.gz
 -rw-rw-r-- 1 rich rich    23 2010-09-13 07:50 file2
 -rw-rw-r-- 1 rich rich    48 2010-09-13 07:56 file3
 ```
 
-```
+```bash
 -rw-rw-r-- 1 rich rich    50 2010-09-13 07:49 file1.gz
 -rw-rw-r-- 1 rich rich    23 2010-09-13 07:50 file2
 -rw-rw-r-- 1 rich rich    48 2010-09-13 07:56 file3
 ```
 
-```
+```bash
 -rw-rw-r-- 1 rich rich    50 2010-09-13 07:49 file1.gz
--rw-rw-r-- 1 rich rich    23 2010-09-13 07:50 file2
--rw-rw-r-- 1 rich rich    48 2010-09-13 07:56 file3
 ```
 
-```
--rw-rw-r-- 1 rich rich    50 2010-09-13 07:49 file1.gz
--rw-rw-r-- 1 rich rich    23 2010-09-13 07:50 file2
--rw-rw-r-- 1 rich rich    48 2010-09-13 07:56 file3
-```
 
-```
--rw-rw-r-- 1 rich rich    50 2010-09-13 07:49 file1.gz
--rw-rw-r-- 1 rich rich    23 2010-09-13 07:50 file2
--rw-rw-r-- 1 rich rich    48 2010-09-13 07:56 file3
-```
 
-```
--rw-rw-r-- 1 rich rich    50 2010-09-13 07:49 file1.gz
--rw-rw-r-- 1 rich rich    23 2010-09-13 07:50 file2
--rw-rw-r-- 1 rich rich    48 2010-09-13 07:56 file3
-```
+`-rw-rw-r-- 1 rich rich    50 2010-09-13 07:49 file1.gz`
 
-```
--rw-rw-r-- 1 rich rich    50 2010-09-13 07:49 file1.gz
--rw-rw-r-- 1 rich rich    23 2010-09-13 07:50 file2
--rw-rw-r-- 1 rich rich    48 2010-09-13 07:56 file3
-```
-
-```
--rw-rw-r-- 1 rich rich    50 2010-09-13 07:49 file1.gz
--rw-rw-r-- 1 rich rich    23 2010-09-13 07:50 file2
--rw-rw-r-- 1 rich rich    48 2010-09-13 07:56 file3
-```
-
-```
--rw-rw-r-- 1 rich rich    50 2010-09-13 07:49 file1.gz
--rw-rw-r-- 1 rich rich    23 2010-09-13 07:50 file2
--rw-rw-r-- 1 rich rich    48 2010-09-13 07:56 file3
-```
-
-在输出中，`-rw-rw-r-- 1 rich rich    50 2010-09-13 07:49 file1.gz`
 `-rw-rw-r-- 1 rich rich    23 2010-09-13 07:50 file2`
+
 `-rw-rw-r-- 1 rich rich    48 2010-09-13 07:56 file3`
 
 例如：
@@ -2271,9 +2265,7 @@ total 68
 -rw-rw-r-- 1 rich rich    48 2010-09-13 07:56 file3
 ```
 
-在输出中，`-rw-rw-r-- 1 rich rich    50 2010-09-13 07:49 file1.gz`
-`-rw-rw-r-- 1 rich rich    23 2010-09-13 07:50 file2`
-`-rw-rw-r-- 1 rich rich    48 2010-09-13 07:56 file3`
+在输出中，`-rw-rw-r-- 1 rich rich    50 2010-09-13 07:49 file1.gz`、`-rw-rw-r-- 1 rich rich    23 2010-09-13 07:50 file2`、`-rw-rw-r-- 1 rich rich    48 2010-09-13 07:56 file3`。
 
 在输出中，第一个字符定义了文件类型：
 * `-` 表示文件
@@ -2300,9 +2292,7 @@ total 68
 -rw-rw-r-- 1 rich rich    48 2010-09-13 07:56 file3
 ```
 
-在输出中，`-rw-rw-r-- 1 rich rich    50 2010-09-13 07:49 file1.gz`
-`-rw-rw-r-- 1 rich rich    23 2010-09-13 07:50 file2`
-`-rw-rw-r-- 1 rich rich    48 2010-09-13 07:56 file3`
+在输出中，`-rw-rw-r-- 1 rich rich    50 2010-09-13 07:49 file1.gz`、`-rw-rw-r-- 1 rich rich    23 2010-09-13 07:50 file2`、`-rw-rw-r-- 1 rich rich    48 2010-09-13 07:56 file3`。
 
 在输出中，第一个字符定义了文件类型：
 * `-` 表示文件
@@ -2329,9 +2319,7 @@ total 68
 -rw-rw-r-- 1 rich rich    48 2010-09-13 07:56 file3
 ```
 
-在输出中，`-rw-rw-r-- 1 rich rich    50 2010-09-13 07:49 file1.gz`
-`-rw-rw-r-- 1 rich rich    23 2010-09-13 07:50 file2`
-`-rw-rw-r-- 1 rich rich    48 2010-09-13 07:56 file3`
+在输出中，`-rw-rw-r-- 1 rich rich    50 2010-09-13 07:49 file1.gz`、`-rw-rw-r-- 1 rich rich    23 2010-09-13 07:50 file2`、`-rw-rw-r-- 1 rich rich    48 2010-09-13 07:56 file3`。
 
 在输出中，第一个字符定义了文件类型：
 * `-` 表示文件
@@ -2358,9 +2346,7 @@ total 68
 -rw-rw-r-- 1 rich rich    48 2010-09-13 07:56 file3
 ```
 
-在输出中，`-rw-rw-r-- 1 rich rich    50 2010-09-13 07:49 file1.gz`
-`-rw-rw-r-- 1 rich rich    23 2010-09-13 07:50 file2`
-`-rw-rw-r-- 1 rich rich    48 2010-09-13 07:56 file3`
+在输出中，`-rw-rw-r-- 1 rich rich    50 2010-09-13 07:49 file1.gz`、`-rw-rw-r-- 1 rich rich    23 2010-09-13 07:50 file2`、`-rw-rw-r-- 1 rich rich    48 2010-09-13 07:56 file3`。
 
 在输出中，第一个字符定义了文件类型：
 * `-` 表示文件
@@ -2409,22 +2395,18 @@ $ umask
 
 | 权限 | 二进制 | 八进制 |
 |---|---|---|
-| rwx | 111 | 7 |
-| rw- | 110 | 6 |
-| r-x | 101 | 5 |
-| r-- | 100 | 4 |
-| -wx | 011 | 3 |
-| -w- | 010 | 2 |
-| --x | 001 | 1 |
-| --- | 000 | 0 |
+| `rwx` | 111 | 7 |
+| `rw-` | 110 | 6 |
+| `r-x` | 101 | 5 |
+| `r--` | 100 | 4 |
+| `-wx` | 011 | 3 |
+| `-w-` | 010 | 2 |
+| `--x` | 001 | 1 |
+| `---` | 000 | 0 |
 
 `umask` 命令通过“掩码”默认权限来工作。目录的最大权限是 777，文件的最大权限是 666。`umask` 值从这些最大值中减去以确定实际权限。例如，如果 `umask` 为 `0022`：
 * 目录：`777 - 0022 = 775` (`drwxrwxr-x`) 
 * 文件：`666 - 0022 = 644` (`-rw-r--r--`)
-
-
-
-
 
 既然你已经了解了八进制模式权限，`umask` 值就变得更加复杂了。我的 Linux 系统上默认的 `umask` 显示的八进制模式为 `0022`，但我创建的文件八进制模式权限却是 `644`。这是如何发生的呢？
 
@@ -2461,7 +2443,7 @@ $
 
 如果你已经创建了文件或目录，并需要更改其安全设置，Linux 中提供了几种不同的工具。本节将向你展示如何更改文件或目录现有权限、默认所有者以及默认组设置。
 
-## 修改权限
+### 修改权限
 
 `chmod` 命令允许你更改文件和目录的安全设置。`chmod` 命令的格式为：
 
@@ -2526,7 +2508,7 @@ $
 
 `options` 参数提供了一些额外功能来增强 `chmod` 命令的行为。`-R` 参数执行递归的文件和目录更改。你可以在指定的文件名中使用通配符字符，仅需一个命令即可更改多个文件的权限。
 
-## 修改所有权
+### 修改所有权
 
 有时你需要更改文件的所有者，例如当某人离开组织，或者开发者创建的应用在生产环境中需要由系统账户所有。Linux 提供了两个命令来实现这一点。`chown` 命令方便地更改文件的所有者，而 `chgrp` 命令允许你更改文件的默认组。
 
@@ -2539,7 +2521,7 @@ chown [options] owner[.group] file
 你可以为文件的新所有者指定登录名或数字 UID：
 
 ```
-## chown dan newfile
+# chown dan newfile
 # ls -l newfile
 -rw-rw-r--    1 dan      rich               0 Sep 20 19:16 newfile
 #
@@ -2557,7 +2539,7 @@ chown [options] owner[.group] file
 如果你真的想玩得复杂一点，可以只更改文件的默认组：
 
 ```
-## chown .rich newfile
+# chown .rich newfile
 # ls -l newfile
 -rw-rw-r--    1 dan      rich               0 Sep 20 19:16 newfile
 #
@@ -2566,7 +2548,7 @@ chown [options] owner[.group] file
 最后，如果你的 Linux 系统使用独立的组名，你可以通过一个条目同时更改两者：
 
 ```
-## chown test.shared newfile
+# chown test.shared newfile
 # ls -l newfile
 -rw-rw-r--    1 test     shared               0 Sep 20 19:16 newfile
 #
@@ -2581,7 +2563,13 @@ chown [options] owner[.group] file
 
 ```
 $ chgrp shared newfile
-$ ls -l newfile
+```
+
+
+
+`$ ls -l newfile`
+
+```
 -rw-rw-r--    1 rich      shared               0 Sep 20 19:16 newfile
 $
 ```
@@ -2592,27 +2580,21 @@ $
 
 和你可能已经发现的，创建组是在 Linux 系统共享文件访问的方法。然而，对于完整的文件共享环境，情况更为复杂。
 
-正如你在“解码文件权限”部分看到的，当你创建一个新文件时，Linux 使用你默认的 UID 和 GID 为新文件分配权限。为了允许他人访问文件，你需要更改“所有人”安全组的权限，或者为文件分配包含其他用户的不同默认组。如果你要在几个人之间创建并共享文档，这在大型环境中可能会很麻烦。幸运的是，有一个简单的方法来解决这个问题。
+正如你在“解码文件权限”部分看到的，当你创建一个新文件时，Linux 使用你默认的 `UID` 和 `GID` 为新文件分配权限。为了允许他人访问文件，你需要更改“所有人”安全组的权限，或者为文件分配包含其他用户的不同默认组。如果你要在几个人之间创建并共享文档，这在大型环境中可能会很麻烦。幸运的是，有一个简单的方法来解决这个问题。
 
 Linux 为每个文件和目录额外存储了三位信息：
 
-*   设置用户 ID (SUID)：当文件被用户执行时，该程序以文件所有者的权限运行。
-
-
-
-
-
-*   组 ID (SGID)：对于文件，程序将以文件所在组的权限运行。对于目录，在目录中创建的新文件将使用该目录组作为默认组。
-
+*   设置用户 ID (`SUID`)：当文件被用户执行时，该程序以文件所有者的权限运行。
+*   组 ID (`SGID`)：对于文件，程序将以文件所在组的权限运行。对于目录，在目录中创建的新文件将使用该目录组作为默认组。
 *   粘滞位 (The sticky bit)：进程结束后，文件仍将保留（粘滞）在内存中。
 
 `SGID` 位对于共享文件至关重要。通过启用 `SGID` 位，你可以强制在共享目录中创建的所有新文件都属于该目录的组，而不是个人用户的默认组。
 
 `SGID` 使用 `chmod` 命令进行设置。它被添加到标准三位八进制值的开头（使其成为四位八进制值），或者你也可以在符号模式下使用符号 `s`。
 
-如果你使用八进制模式，你将需要了解位位的排列情况，如 Table 6.6 所示。
+如果你使用八进制模式，你将需要了解位位的排列情况，如 `Table 6.6` 所示。
 
-Table 6.6 `chmod` SUID、SGID 和粘滞位的八进制值
+### Table 6.6 `chmod` SUID、SGID 和粘滞位的八进制值
 
 | 二进制 | 八进制 | 描述 |
 | :--- | :--- | :--- |
@@ -2620,24 +2602,32 @@ Table 6.6 `chmod` SUID、SGID 和粘滞位的八进制值
 | 001 | 1 | 设置了粘滞位。 |
 | 010 | 2 | 设置了 `SGID` 位。 |
 | 011 | 3 | 设置了 `SGID` 和粘滞位。 |
-| 100 | 4 | 设置了 SUID 位。 |
-| 101 | 5 | 设置了 SUID 和粘滞位。 |
-| 110 | 6 | 设置了 SUID 和 `SGID` 位。 |
+| 100 | 4 | 设置了 `SUID` 位。 |
+| 101 | 5 | 设置了 `SUID` 和粘滞位。 |
+| 110 | 6 | 设置了 `SUID` 和 `SGID` 位。 |
 | 111 | 7 | 所有位均设置。 |
 
 因此，要创建一个始终为所有新文件设置目录组的共享目录，你只需要为该目录设置 `SGID` 位：
 
 ```bash
 $ mkdir testdir
+
 $ ls -l
 drwxrwxr-x    2 rich      rich           4096 Sep 20 23:12 testdir/
+
 $ chgrp shared testdir
+
 $ chmod g+s testdir
+
 $ ls -l
 drwxrwsr-x    2 rich      shared         4096 Sep 20 23:12 testdir/
+
 $ umask 002
+
 $ cd testdir
+
 $ touch testfile
+
 $ ls -l
 total 0
 -rw-rw-r--    1 rich      shared           0 Sep 20 23:13 testfile
@@ -2652,18 +2642,14 @@ $
 
 ## 总结
 
-本章介绍了特殊文件位：SUID、`SGID` 和粘滞位。我们讨论了如何使用 `chmod` 命令通过八进制或符号模式设置这些位。我们还探索了如何使用 `SGID` 位和 `umask` 设置共享目录。
+本章介绍了特殊文件位：`SUID`、`SGID` 和粘滞位。我们讨论了如何使用 `chmod` 命令通过八进制或符号模式设置这些位。我们还探索了如何使用 `SGID` 位和 `umask` 设置共享目录。
 
-
-
-
-
-* 文件名
-* 文件大小
-* 文件所有者
-* 文件所属组
-* 文件的访问权限
-* 指向包含文件数据的每个磁盘块的指针
+*   文件名
+*   文件大小
+*   文件所有者
+*   文件所属组
+*   文件的访问权限
+*   指向包含文件数据的每个磁盘块的指针
 
 Linux 使用唯一编号（称为 inode 编号）来引用 inode 表中的每个 `inode`，该编号是在创建数据文件时由文件系统分配的。文件系统使用 inode 编号来识别文件，而无需使用完整的文件名和路径。
 
@@ -2679,7 +2665,7 @@ Linux 使用唯一编号（称为 inode 编号）来引用 inode 表中的每个
 
 `ext2` 文件系统通过在保存文件时分组分配磁盘块来帮助减少碎片。通过对文件的数据块进行分组，文件系统无需在整个物理设备上搜索数据块来读取文件。
 
-多年来，`ext2` 文件系统一直是 Linux  de 许多 Linux 发行版使用的默认文件系统，但它也有自己的局限性。inode 表虽然是一项允许文件系统跟踪文件额外信息的优秀功能，但可能会导致对系统是致命的问题。每当文件系统存储或更新文件时，它必须用新信息修改 inode 表。问题在于，这种操作并不总是流畅的。
+多年来，`ext2` 文件系统一直是 Linux 的许多 Linux 发行版使用的默认文件系统，但它也有自己的局限性。inode 表虽然是一项允许文件系统跟踪文件额外信息的优秀功能，但可能会导致对系统是致命的问题。每当文件系统存储或更新文件时，它必须用新信息修改 inode 表。问题在于，这种操作并不总是流畅的。
 
 如果在文件存储和 inode 表更新之间，计算机系统发生了任何故障，两者就会不同步。`ext2` 文件系统因由于系统崩溃和停电极易损坏而闻名。即使文件数据已良好存储在物理设备上，如果 inode 表条目未完成，`ext2` 文件系统甚至不知道该文件的存在！
 
@@ -2729,33 +2715,29 @@ Linux 中常用的有三种不同的日志方法，每种方法都有不同的�
 
 2001 年，Hans Reiser 创建了 Linux 的第一个日志文件系统，称为 `ReiserFS`。`ReiserFS` 文件系统仅支持回写日志模式，仅将 inode 表数据写入日志文件。由于它只向日志写入 inode 表数据，`ReiserFS` 文件系统是 Linux 中最快的日志文件系统之一。
 
-
-
-
-
-ReiserFS 文件系统整合了两个有趣的特性：你可以在文件系统处于活动状态时对其进行大小调整；它使用了一种名为“尾部填充”（tailpacking）的技术，该技术可以将一个文件的数据填充到另一个文件数据块的空隙中。活动文件系统缩放功能对于你需要扩展已创建的文件系统以容纳更多数据的情况非常有用。
+`ReiserFS` 文件系统整合了两个有趣的特性：你可以在文件系统处于活动状态时对其进行大小调整；它使用了一种名为“尾部填充”（tailpacking）的技术，该技术可以将一个文件的数据填充到另一个文件数据块的空隙中。活动文件系统缩放功能对于你需要扩展已创建的文件系统以容纳更多数据的情况非常有用。
 
 > 警告
-> 由于 Hans Reiser 的法律纠纷，ReiserFS 文件系统的状态尚存疑点。虽然 ReiserFS 项目是一个开源项目，但 Hans 曾是该项目的首席开发人员，目前已入狱。ReiserFS 文件系统最近没有进行任何开发，尚不清楚是否还会其他人接手该项目的开发工作。鉴于现在有了其他日志文件系统的替代方案，绝大多数新的 Linux 安装程序不再使用 ReiserFS 文件系统。然而，你仍然可能会遇到在使用该系统的现有 Linux 系统。
+> 由于 Hans Reiser 的法律纠纷，`ReiserFS` 文件系统的状态尚存疑点。虽然 `ReiserFS` 项目是一个开源项目，但 Hans 曾是该项目的首席开发人员，目前已入狱。`ReiserFS` 文件系统最近没有进行任何开发，尚不清楚是否还会其他人接手该项目的开发工作。鉴于现在有了其他日志文件系统的替代方案，绝大多数新的 Linux 安装程序不再使用 `ReiserFS` 文件系统。然而，你仍然可能会遇到在使用该系统的现有 Linux 系统。
 
 ## 日志文件系统 (Journaled Filesystem)
 
-可能是最古老的日志文件系统之一，日志文件系统（JFS）由 IBM 在 1990 年为其 AIX 版本的 Unix 开发。然而，直到第二个版本出现，它才被移植到 Linux 环境。
+可能是最古老的日志文件系统之一，日志文件系统（`JFS`）由 IBM 在 1990 年为其 AIX 版本的 Unix 开发。然而，直到第二个版本出现，它才被移植到 Linux 环境。
 
 > 注意
-> > JFS 文件系统的第二个版本的 IBM 官方名称是 JFS2，但大多数 Linux 系统仅将其称为 JFS。
+> `JFS` 文件系统的第二个版本的 IBM 官方名称是 `JFS2`，但大多数 Linux 系统仅将其称为 `JFS`。
 
-JFS 文件系统使用顺序日志方法，仅在日志中存储索引节点表（inode table）数据，但在实际文件数据写入存储设备之前，不会将其删除。这种方法是在 ReiserFS 的速度和数据模式日志方法的数据完整性之间取得的一种折中方案。
+`JFS` 文件系统使用顺序日志方法，仅在日志中存储索引节点表（inode table）数据，但在实际文件数据写入存储设备之前，不会将其删除。这种方法是在 `ReiserFS` 的速度和数据模式日志方法的数据完整性之间取得的一种折中方案。
 
-JFS 文件系统使用基于区（extent-based）的文件分配方法，为写入存储设备的每个文件分配一组块。这种方法可以减少存储设备上的碎片。
+`JFS` 文件系统使用基于区（extent-based）的文件分配方法，为写入存储设备的每个文件分配一组块。这种方法可以减少存储设备上的碎片。
 
-在 IBM 提供的 Linux 产品之外，JFS 文件系统并不流行，但在你的 Linux 之旅中，你可能会遇到它。
+在 IBM 提供的 Linux 产品之外，`JFS` 文件系统并不流行，但在你的 Linux 之旅中，你可能会遇到它。
 
 ## XFS 文件系统
 
-XFS 日志文件系统是另一个最初为商用 Unix 系统创建并最终进入 Linux 世界的文件系统。硅谷图形公司（SGI）于 1994 年为其商用 IRIX Unix 系统创建了 XFS。它于 2002 年发布到 Linux 环境供通用使用。
+`XFS` 日志文件系统是另一个最初为商用 Unix 系统创建并最终进入 Linux 世界的文件系统。硅谷图形公司（`SGI`）于 1994 年为其商用 `IRIX` Unix 系统创建了 `XFS`。它于 2002 年发布到 Linux 环境供通用使用。
 
-XFS 文件系统使用日志的回写模式（writeback mode），这种模式提供了高性能，但也引入了一定风险，因为实际数据并未存储在日志文件中。XFS 文件系统还允许对文件系统进行在线大小调整，与 ReiserFS 文件系统类似，不同之处 XFS 文件系统只能扩展而不能缩小。
+`XFS` 文件系统使用日志的回写模式（writeback mode），这种模式提供了高性能，但也引入了一定风险，因为实际数据并未存储在日志文件中。`XFS` 文件系统还允许对文件系统进行在线大小调整，与 `ReiserFS` 文件系统类似，不同之处 `XFS` 文件系统只能扩展而不能缩小。
 
 ## 与文件系统的操作
 
@@ -2775,18 +2757,22 @@ $ sudo fdisk /dev/sdc
 
 ```
 [sudo] password for rich:
+
 Device contains neither a valid DOS partition table, nor Sun, SGI or OSF disklabel
 Building a new DOS disklabel with disk identifier 0x4beedc66.
 Changes will remain in memory only, until you decide to write them.
 After that, of course, the previous content won't be recoverable.
+
 Warning: invalid flag 0x0000 of partition table 4 will be corrected by w(rite)
-WARNING: DOS-compatible mode is deprecated. It's strongly recommended             To switch off the mode (command ‘c') and change display units to sectors (command ‘u’).
+WARNING: DOS-compatible mode is deprecated. It's strongly recommended
+        To switch off the mode (command ‘c') and change display units to sectors (command ‘u’).
+
 Command (m for help):
 ```
 
-如果你是第一次对存储设备进行分区，fdisk 会给你一个警告，说明设备上没有分区表。
+如果你是第一次对存储设备进行分区，`fdisk` 会给你一个警告，说明设备上没有分区表。
 
-fdisk 交互式提示符使用单字母命令指示 fdisk 执行什么。表 7.2 显示了 fdisk 提示符处的可用命令。
+`fdisk` 交互式提示符使用单字母命令指示 `fdisk` 执行什么。表 7.2 显示了 `fdisk` 提示符处的可用命令。
 
 ### 表 7.2 命令
 
@@ -2814,13 +2800,16 @@ fdisk 交互式提示符使用单字母命令指示 fdisk 执行什么。表 7.2
 
 ```
 Command (m for help): p
+
 Disk /dev/sdc: 5368 MB, 5368946688 bytes
 255 heads, 63 sectors/track, 652 cylinders
 Units = cylinders of 16065 * 512 = 8225280 bytes
 Sector size (logical/physical): 512 bytes / 512 bytes
 I/O size (minimum/optimal): 512 bytes / 512 bytes
 Disk identifier: 0x4beedc66
+
     Device Boot      Start          End      Blocks
+
 Command (m for help):
 ```
 
@@ -2830,32 +2819,46 @@ Command (m for help):
 
 ```
 Command (m for help): n
+
 Command action
-    e extended
-    p primary partition (1-4)
+    e   extended
+    p   primary partition (1-4)
 p
+
 Partition number (1-4): 1
+
 First cylinder (1-652, default 1): 1
+
 Last cylinder, +cylinders or +size{K,M,G} (1-652, default 652): +2G
+
 Command (m for help):
 ```
+
+
 
 分区可以创建为主分区或扩展分区。主分区可以格式化为文件系统，而扩展分区只能包含主分区。设置扩展分区是因为单个设备只能四个分区。你可以通过创建多个扩展分区然后在扩展分区内创建主分区来扩展这一点。此示例创建一个主存储设备，将其分配为存储设备上的分区 1，然后为其分配 2GB 的存储设备空间。你可以再次使用 `p` 命令查看结果：
 
 ```
 Command (m for help): p
+
 Disk /dev/sdc: 5368 MB, 5368946688 bytes
+
 255 heads, 63 sectors/track, 652 cylinders
+
 Units = cylinders of 16065 * 512 = 8225280 bytes
+
 Sector size (logical/physical): 512 bytes / 512 bytes
+
 I/O size (minimum/optimal): 512 bytes / 512 bytes
+
 Disk identifier: 0x4beedc66
+
     Device Boot      Start          End      Blocks    Id  System
+
 /dev/sdc1               1            262    2104483+83  Linux
+
 Command (m for help):
 ```
-
-
 
 现在输出中存储设备上出现了一个分区（称为 `/dev/sdc1`）。`Id` 条目定义了 Linux 如何处理该分区。`fdisk` 允许你创建许多分区类型。使用 `l` 命令可以列出所有可用类型。默认类型是 83，它定义为 Linux 文件系统。如果你想为不同的文件系统（例如 Windows NTFS 分区）创建分区，只需选择不同的分区类型。
 
@@ -2863,22 +2866,26 @@ Command (m for help):
 
 ```
 Command (m for help): w
+
 The partition table has been altered!
+
 Calling ioctl() to re-read partition table.
+
 Syncing disks.
+
 $
 ```
 
 现在存储设备上已经有了分区，你可以准备好用 Linux 文件系统对其进行格式化了。
 
 > 注意
-> > 有时创建新磁盘分区最困难的部分是尝试在 Linux 系统中寻找物理磁盘。Linux 使用标准格式为硬盘分配设备名称，但你需要熟悉该格式。对于较旧的 IDE 驱动器，Linux 使用 `/dev/hdx`，其中 `x` 是根据驱动器检测顺序指定的字母（第一个为 a，第二个为 b，以此类推）。对于较新的 SATA 驱动器和 SCSI 驱动器，Linux 都使用 `/dev/sdx`，其中 `x` 是根据驱动器检测顺序指定的字母（同样，第一个为 a，第二个为 b，以此类推）。在格式化分区之前，双重检查确保你引用的是正确的硬盘始终是一个好习惯！
+> 有时创建新磁盘分区最困难的部分是尝试在 Linux 系统中寻找物理磁盘。Linux 使用标准格式为硬盘分配设备名称，但你需要熟悉该格式。对于较旧的 IDE 驱动器，Linux 使用 `/dev/hdx`，其中 `x` 是根据驱动器检测顺序指定的字母（第一个为 a，第二个为 b，以此类推）。对于较新的 SATA 驱动器和 SCSI 驱动器，Linux 都使用 `/dev/sdx`，其中 `x` 是根据驱动器检测顺序指定的字母（同样，第一个为 a，第二个为 b，以此类推）。在格式化分区之前，双重检查确保你引用的是正确的硬盘始终是一个好习惯！
 
 ## 创建文件系统
 
 在分区上存储数据之前，你必须用文件系统对其进行格式化，以便 Linux 使用它。每种文件系统类型都有自己的命令行程序来格式化分区。表 7.3 列出了本章讨论的各种文件系统所用用的工具。
 
-### 表 7.3](#index_split_016.html_filepos781577) 创建文件系统的命令行程序
+### 表 7.3 创建文件系统的命令行程序
 
 | 工具 | 用途 |
 | :--- | :--- |
@@ -2893,26 +2900,47 @@ $
 
 ```
 $ sudo mkfs.ext4 /dev/sdc1
+
 [sudo] password for rich:
+
 mke2fs 1.41.11 (14-Mar-2010)
+
 Filesystem label=
+
 OS type: Linux
+
 Block size=4096 (log=2)
+
 Fragment size=4096 (log=2)
+
 Stride=0 blocks, Stripe width=0 blocks
+
 131648 inodes, 526120 blocks
+
 26306 blocks (5.00%) reserved for the super user
+
 First data block=0
+
 Maximum filesystem blocks=541065216
+
 17 block groups
+
 32768 blocks per group, 32768 fragments per group
+
 7744 inodes per group
+
 Superblock backups stored on blocks:
+
       32768, 98304, 163840, 229376, 294912
+
 Writing inode tables: done
+
 Creating journal (16384 blocks): done
+
 Writing superblocks and filesystem accounting information: done
+
 This filesystem will be automatically checked every 34 mounts or 180 days, whichever comes first. Use tune2fs -c or -i to override.
+
 $
 ```
 
@@ -2922,12 +2950,19 @@ $
 
 ```
 $ sudo mkdir /mnt/testing
+
 $ sudo mount -t ext4 /dev/sdb1 /mnt/testing
+
 $ ls -al /mnt/testing
+
 total 24
+
 drwxr-xr-x 3 root root  4096 2010-09-25 19:25 .
+
 drwxr-xr-x 3 root root  4096 2010-09-25 19:38 ..
+
 drwx------ 2 root root 16384 2010-09-25 19:25 lost+found
+
 $
 ```
 
@@ -2954,29 +2989,25 @@ fsck options filesystem
 
 `fsck` 命令使用 `/etc/fstab` 文件来自动确定系统中通常挂载的存储设备的文件系统。如果存储设备没有通常挂载（例如你在新存储设备上创建了文件系统），你需要使用 `-t` 命令行选项指定文件系统类型。表 7.4 列出了其他可用的命令行选项。
 
-### 表 7.4](#index_split_016.html_filepos791418) fsck 命令行选项
+### 表 7.4 fsck 命令行选项
 
 | 选项 | 说明 |
 | :--- | :--- |
-| -a | 检测到错误时自动修复文件系统。 |
-| -A | 检查 /etc/fstab 文件列出的所有文件系统。 |
-| -C | 为支持该功能的文件系统显示进度条（仅 ext2 和 ext3）。 |
-| -N | 不运行检查，仅显示将执行哪些检查。 |
-| -r | 发现错误时提示进行修复。 |
-| -R | 使用 `-A` 选项时跳过根文件系统。 |
-| -s | 如果检查多个文件系统，则逐个执行检查。 |
-| -t | 指定要检查的文件系统类型。 |
-| -T | 在启动时不显示页头信息。 |
-| -V | 在检查期间产生详细输出。 |
-| -y | 检测到错误时自动修复文件系统。 |
-
-
-
+| `-a` | 检测到错误时自动修复文件系统。 |
+| `-A` | 检查 `/etc/fstab` 文件列出的所有文件系统。 |
+| `-C` | 为支持该功能的文件系统显示进度条（仅 `ext2` 和 `ext3`）。 |
+| `-N` | 不运行检查，仅显示将执行哪些检查。 |
+| `-r` | 发现错误时提示进行修复。 |
+| `-R` | 使用 `-A` 选项时跳过根文件系统。 |
+| `-s` | 如果检查多个文件系统，则逐个执行检查。 |
+| `-t` | 指定要检查的文件系统类型。 |
+| `-T` | 在启动时不显示页头信息。 |
+| `-V` | 在检查期间产生详细输出。 |
+| `-y` | 检测到错误时自动修复文件系统。 |
 
 你可能会注意到某些命令行选项是冗余的。这是尝试为多个命令实现通用前端时产生的问题之一。某些单独的文件系统修复命令具有可以使用的额外选项。如果你需要进行更高级的错误检查，你需要检查各个文件系统修复工具的帮助页（man pages），以查看是否有针对特定文件系统的扩展选项。
 
 > 警告
-
 > 你可以仅在未挂载的文件系统上运行 `fsck` 命令。对于大多数文件系统，你只需要卸载该文件系统进行检查，然后在完成后重新挂载即可。然而，由于根文件系统包含了所有的核心 Linux 命令和日志文件，你无法在运行中的系统上卸载它。
 
 > 这正是使用 Linux LiveCD 派上用场的时候！只需使用 LiveCD 启动系统，然后在根文件系统上运行 `fsck` 命令即可！
@@ -3031,7 +3062,6 @@ Linux `LVM` 由 Heinz Mauelshagen 开发并于 1998 年发布给 Linux 社区。
 条带化有助于提高磁盘性能，因为 Linux 可以同时向多个硬盘写入一个文件的多个数据块，而无需等待单个硬盘移动读写头到不同位置。这种改进也适用于顺序访问的文件，因为 `LVM` 可以同时从多个硬盘读取数据。
 
 > 警告
-
 > `LVM` 条带化不等同于 RAID 条带化。`LVM` 条带化不提供用于校验项（parity entry），因此无法创建容错环境。事实上，`LVM` 条带化可能会增加由于硬盘故障导致文件丢失的可能性。单个磁盘故障可能导致多个逻辑卷无法访问。
 
 ### 镜像 (Mirroring)
@@ -3041,9 +3071,6 @@ Linux `LVM` 由 Heinz Mauelshagen 开发并于 1998 年发布给 Linux 社区。
 `LVM` 快照过程提供了一些心理安慰，让你知道可以在任何时候创建逻辑卷的备份副本，但对于某些环境来说，这可能还不够。具有大量数据变化的系统（例如数据库服务器）自上次快照以来可能存储了成千上万条记录。
 
 解决此问题的方案是 `LVM` 镜像。镜像是逻辑卷的完整副本，并实时更新。当你创建镜像逻辑卷时，`LVM` 会将原始逻辑卷同步到镜像副本。取决于原始逻辑卷的大小，这可能需要一些时间才能完成。
-
-
-
 
 一旦原始同步完成，`LVM` 会对文件系统的每个写入过程执行两次写入——一次写入主逻辑卷，另写入镜像副本。正如你所料的，这个过程确实会减慢系统的写入性能。然而，如果原始逻辑卷由于某种原因发生损坏，你手中就会有一个完整且最新的副本！
 
@@ -3057,71 +3084,109 @@ Linux `LVM` 由 Heinz Mauelshagen 开发并于 1998 年发布给 Linux 社区。
 
 ```
 Command (m for help): t
+
 Selected partition 1
+
 Hex code (type L to list codes): 8e
+
 Changed system type of partition 1 to 8e (Linux LVM)
+
 Command (m for help): p
+
 Disk /dev/sdc: 2147 MB, 2147992064 bytes
+
 255 heads, 63 sectors/track, 261 cylinders
+
 Units = cylinders of 16065 * 512 = 8225280 bytes
+
 Disk identifier: 0x4bc26133
+
 Device Boot      Start           End         Blocks    Id  System
+
 /dev/sdc1             1          261     2096451   8e  Linux LVM
+
 Command (m for help):
 ```
 
-`8e` 分区类型表示该分区将作为 Linux LVM 系统的一部分，而不是直接作为文件系统，正如你之前看到的 83 分区类型那样。
 
-下一步是使用该分区创建实际物理卷。这是通过 `pvcreate` 命令完成的：
+
+`8e`分区类型表示该分区将作为 Linux LVM 系统的一部分，而不是直接作为文件系统，正如你之前看到的`83`分区类型那样。
+
+下一步是使用该分区创建实际物理卷。这是通过`pvcreate`命令完成的：
 
 ```
 $ sudo pvcreate /dev/sdc1
+
   Physical volume "/dev/sdc1" successfully created
+
 $
 ```
 
-`pvcreate` 命令定义了用于 PV 的物理卷。它简单地将该分区标记为 Linux LVM 系统中的物理卷。如果你想查看在此的进度，可以使用 `pvdisplay` 命令显示你已创建的物理卷列表。
+`pvcreate`命令定义了用于 PV 的物理卷。它简单地将该分区标记为 Linux LVM 系统中的物理卷。如果你想查看在此的进度，可以使用`pvdisplay`命令显示你已创建的物理卷列表。
 
 ## 创建卷组 (Volume Groups)
 
 该过程的下一步是根据物理卷创建一个或多个卷组。对于系统需要创建多少个卷组，没有固定的规则——你可以将所有可用的物理卷添加到单个卷组，也可以通过组合不同的物理卷创建多个卷组。
 
-要从命令行创建卷组，你需要使用 `vgcreate` 命令。`vgcreate` 命令需要几个命令行参数来定义卷组名称，以及你用于创建卷组的物理卷名称：
+要从命令行创建卷组，你需要使用`vgcreate`命令。`vgcreate`命令需要几个命令行参数来定义卷组名称，以及你用于创建卷组的物理卷名称：
 
 ```
 $ sudo vgcreate Vol1 /dev/sdc1
+
   Volume group "Vol1" successfully created
+
 $
 ```
 
-输出的内容没那么令人兴奋！如果你想查看有关新创建卷组的细节，可以使用 `vgdisplay` 命令：
+输出的内容没那么令人兴奋！如果你想查看有关新创建卷组的细节，可以使用`vgdisplay`命令：
 
 ```
 $ sudo vgdisplay
+
   --- Volume group ---
+
   VG Name             Vol1
+
   System ID            
+
   Format              lvm2
+
   Metadata Areas       1
+
   Metadata Sequence No  1
+
   VG Access            read/write
+
   VG Status            resizable
+
   MAX LV              0
+
   Cur LV              0
+
   Open LV              0
+
   Max PV              0
+
   Cur PV              1
+
   Act PV              1
+
   VG Size              2.00 GB
+
   PE Size              4.00 MB
+
   Total PE             511
+
   Alloc PE / Size      0 / 0   
+
   Free  PE / Size      511 / 2.00 GB
+
   VG UUID             CyilHZ-Y840-8TUn-Wvti-4S6Q-bHHT-C113I0
+
 $
 ```
 
-此示例创建了一个名为 `Vol1` 的卷组，使用了在 `/dev/sdc1` 分区上创建的物理卷。
+此示例创建了一个名为`Vol1`的卷组，使用了在`/dev/sdc1`分区上创建的物理卷。
 
 现在你已经有一个或多个卷组，可以创建逻辑卷了。
 
@@ -3129,46 +3194,59 @@ $
 
 逻辑卷是 Linux 系统用于模拟物理分区并存放文件系统的结构。Linux 系统处理逻辑卷就像处理物理分区一样，允许你在逻辑卷中定义文件系统，并将文件系统挂载到虚拟目录中。
 
-要创建逻辑卷，请使用 `lvcreate` 命令。虽然你可以不使用选项完成，但 `lvcreate` 命令至少需要一些：
-
-（注：提供的源文本在末处出现了重复/混乱，我将根据格式规则进行逻辑去重。）
-
-
-
+要创建逻辑卷，请使用`lvcreate`命令。虽然你可以不使用选项完成，但`lvcreate`命令至少需要一些：
 
 ```
 Fragment size=4096 (log=2)
+
 130816 inodes, 523264 blocks
+
 26163 blocks (5.00%) reserved for the super user
+
 First data block=0
+
 Maximum filesystem blocks=536870912
+
 16 block groups
+
 32768 blocks per group, 32768 fragments per group
+
 8176 inodes per group
+
 Superblock backups stored on blocks:
+
     32768, 98304, 163840, 229376, 294912
+
 Writing inode tables: done
+
 Creating journal (8192 blocks): done
+
 Writing superblocks and filesystem accounting information: done
+
 This filesystem will be automatically checked every 21 mounts or 180 days, whichever comes first. Use `tune2fs -c` or `-i` to override.
+
 $
 ```
 
-创建新文件系统后，你可以使用标准的 Linux `mount` 命令将卷挂载到虚拟目录中，就像对待物理分区一样。唯一的区别在于，你使用了一个标识逻辑卷的特殊路径：
+创建新文件系统后，你可以使用标准的 Linux `mount`命令将卷挂载到虚拟目录中，就像对待物理分区一样。唯一的区别在于，你使用了一个标识逻辑卷的特殊路径：
 
 ```
 $ sudo mount /dev/Vol1/lvtest test
+
 $ cd test
+
 $ ls -al
-```
-```
+
 total 24
+
 drwxr-xr-x. 3 root root 4096 2010-09-17 17:36 .
+
 drwx------. 33 rich rich 4096 2010-09-17 17:37 ..
+
 drwx------. 2 root root 16384 2010-09-17 17:36 lost+found
 ```
 
-注意，`mkfs.ext4` 和 `mount` 命令中使用的路径稍显奇怪。它没有使用物理分区路径，而是使用了卷组名称加上逻辑卷名称。一旦挂载文件系统，你就可以在虚拟目录中访问该新区域。
+注意，`mkfs.ext4`和`mount`命令中使用的路径稍显奇怪。它没有使用物理分区路径，而是使用了卷组名称加上逻辑卷名称。一旦挂载文件系统，你就可以在虚拟目录中访问该新区域。
 
 ## 修改 LVM
 
@@ -3190,7 +3268,7 @@ drwx------. 2 root root 16384 2010-09-17 17:36 lost+found
 通过这些命令行程序，你对自己的 Linux LVM 环境拥有完全控制权。
 
 > **警告**
-> 在手动增加或减小逻辑卷大时要小心。存储在逻辑卷中的文件系统需要手动修复以处理大小的变化。大多数文件系统都包含了用于重新格式化文件系统的命令行程序，例如用于 ext2 和 ext3 文件系统的 `resize2fs` 程序。
+> 在手动增加或减小逻辑卷大时要小心。存储在逻辑卷中的文件系统需要手动修复以处理大小的变化。大多数文件系统都包含了用于重新格式化文件系统的命令行程序，例如用于 ext2 和 ext3 文件系统的`resize2fs`程序。
 
 ## 总结
 
@@ -3198,7 +3276,7 @@ drwx------. 2 root root 16384 2010-09-17 17:36 lost+found
 
 Linux 系统与 Windows 的不同在于，它支持许多不同的存储文件文件夹的方法。每种文件系统方法都有不同的特性，使其适用于不同的场景。此外，每种文件系统方法使用不同的命令与存储设备进行交互。
 
-在存储设备上安装文件系统之前，你必须先准备设备。使用 `fdisk` 命令对存储设备进行分区，以便为文件系统做好准备。当你对存储设备进行分区时，必须定义文件系统的类型。
+在存储设备上安装文件系统之前，你必须先准备设备。使用`fdisk`命令对存储设备进行分区，以便为文件系统做好准备。当你对存储设备进行分区时，必须定义文件系统的类型。
 
 ---
 
@@ -3226,155 +3304,192 @@ Linux 系统与 Windows 的不同在于，它支持许多不同的存储文件�
 
 PMS 的缺点是没有统一的标准。虽然书中到目前为止讨论的所有 bash shell 命令无论你使用哪种 Linux 发行版都能工作，但对于软件包管理来说，并非如此。
 
-在不同的 Linux 发行版之间，PMS 工具及其相关命令有巨大差异。Linux 世界中常用的两种主要 PMS 基础工具是 `dpkg` 和 `rpm`。
+在不同的 Linux 发行版之间，PMS 工具及其相关命令有巨大差异。Linux 世界中常用的两种主要 PMS 基础工具是`dpkg`和`rpm`。
 
-基于 Debian 的发行版（如 Ubuntu 和 Linux Mint）在其 PMS 工具的底层使用 `dpkg` 命令。该命令直接与 Linux 系统上的 PMS 交互，用于安装、管理和删除软件包。
+基于 Debian 的发行版（如 Ubuntu 和 Linux Mint）在其 PMS 工具的底层使用`dpkg`命令。该命令直接与 Linux 系统上的 PMS 交互，用于安装、管理和删除软件包。
 
-基于 Red Hat 的发行版（如 Fedora、openSUSE 和 Mandriva）在其 PMS 的底层使用 `rpm` 命令。与 `dpkg` 命令类似，`rpm` 命令可以列出已安装软件包、安装新软件包并删除现有的软件。
+基于 Red Hat 的发行版（如 Fedora、openSUSE 和 Mandriva）在其 PMS 的底层使用`rpm`命令。与`dpkg`命令类似，`rpm`命令可以列出已安装软件包、安装新软件包并删除现有的软件。
 
-
-
-
-
-请注意，这两个命令是各自软件包管理系统（PMS）的核心，而不是整个 PMS 本身。许多使用 `dpkg` 或 `rpm` 方法的 Linux 发行版在这些命令的基础上构建了额外的特殊 PMS 工具，以帮助你的工作变得更加轻松。接下来的章节将介绍你在流行的 Linux 发行版中会遇到的各种 PMS 工具命令。
+请注意，这两个命令是各自软件包管理系统（PMS）的核心，而不是整个 PMS 本身。许多使用`dpkg`或`rpm`方法的 Linux 发行版在这些命令的基础上构建了额外的特殊 PMS 工具，以帮助你的工作变得更加轻松。接下来的章节将介绍你在流行的 Linux 发行版中会遇到的各种 PMS 工具命令。
 
 ## 基于 Debian 的系统
 
-`dpkg` 命令是 Debian 系 PMS 工具的核心。该 PMS 包含的其他工具还包括：
+`dpkg`命令是 Debian 系 PMS 工具的核心。该 PMS 包含的其他工具还包括：
 
 * `apt-get`
 * `apt-cache`
 * `aptitude`
 
-到目前为止，最常用的命令行工具是 `aptitude`，这有其原因。`aptitude` 工具本质上是 `apt` 工具和 `dpkg` 的前端。如果说 `dpkg` 是一个 PMS 工具，那么 `aptitude` 就是一个完整的软件包管理系统。
+到目前为止，最常用的命令行工具是`aptitude`，这有其原因。`aptitude`工具本质上是`apt`工具和`dpkg`的前端。如果说`dpkg`是一个 PMS 工具，那么`aptitude`就是一个完整的软件包管理系统。
 
-在命令行命令行中使用 `aptitude` 命令将帮助你避免常见的软件安装问题，例如缺少软件依赖项、系统环境不不稳定以及大量不必要的麻烦。本节将介绍如何从 Linux 命令行使用 `aptitude` 工具。
+在命令行中使用`aptitude`命令将帮助你避免常见的软件安装问题，例如缺少软件依赖项、系统环境不稳定以及大量不必要的麻烦。本节将介绍如何从 Linux 命令行使用`aptitude`工具。
 
 ### 使用 aptitude 管理软件包
 
-Linux 系统管理员经常面临的一项任务是确定系统中已经安装了哪些软件包。坦地说，`aptitude` 拥有一个实用的交互界面，让这项任务变得非常简单。
+Linux 系统管理员经常面临的一项任务是确定系统中已经安装了哪些软件包。坦率地说，`aptitude`拥有一个实用的交互界面，让这项任务变得非常简单。
 
-在 shell 提示符处输入 `aptitude` 并按回车。你将进入 aptitude 的全屏模式，如图 8.1 所示。
+在 shell 提示符处输入`aptitude`并按回车。你将进入 aptitude 的全屏模式，如图 8.1 所示。
 
 图 8.1 aptitude 主窗口
 
 ![](img/00026.jpg)
 
-使用方向键移动菜单。选择菜单选项 `Installed Packages` 查看已安装的软件包。你会看到几组软件包，例如编辑器等。每组后面都有一个数字，表示该组包含软件包的数量。
+使用方向键移动菜单。选择菜单选项`Installed Packages`查看已安装的软件包。你会看到几组软件包，例如编辑器等。每组后面都有一个数字，表示该组包含软件包的数量。
 
 使用方向键高亮一组并按回车查看软件包的每个子组。你将看到单个软件包的名称及其版本号。在单个软件包上按回车获取非常详细的信息，例如软件包的描述、主页、大小、维护者等。
 
-查看完已安装的软件包后，按 `q` 退出显示。然后你可以回到方向键并使用回车切换软件包及其子组的打开或关闭。全部完成后，只需连续按多次 `q` 直到弹出屏幕“Really quit Aptitude?”（确定退出 Aptitude 吗？）。
+查看完已安装的软件包后，按`q`退出显示。然后你可以回到方向键并使用回车切换软件包及其子组的打开或关闭。全部完成后，只需连续按多次`q`直到弹出屏幕“Really quit Aptitude?”（确定退出 Aptitude 吗？）。
 
-已经熟悉系统中的软件包并想快速显示特定软件包的详细信息，无需进入 aptitude 的交互界面。你可以在命令行中将 `aptitude` 作为单命令使用：
+已经熟悉系统中的软件包并想快速显示特定软件包的详细信息，无需进入 aptitude 的交互界面。你可以在命令行中将`aptitude`作为单命令使用：
 
-`aptitude show `package_name`
+`aptitude show package_name`
 
-这是一个显示软件包 `grub2-theme-mint` 信息的示例：
+这是一个显示软件包`grub2-theme-mint`信息的示例：
 
 ```
 $ aptitude show grub2-theme-mint
+
 Package: grub2-theme-mint
+
 New: yes
+
 State: installed
+
 Automatically installed: no
+
 Version: 1.0.3
+
 Priority: optional
+
 Section: misc
+
 Maintainer: Clement Lefebvre <root@linuxmint.com>
+
 Uncompressed Size: 442k
+
 Description: Grub2 theme for Linux Mint
+
  Grub2 theme for Linux Mint
+
 $
 ```
 
 > 注意
-> `aptitude show` 命令并不表示该软件包已安装在系统中。它仅显示来自软件仓库的详细软件包信息。
+> `aptitude show`命令并不表示该软件包已安装在系统中。它仅显示来自软件仓库的详细软件包信息。
 
-你无法通过 `aptitude` 获取的一个细节是特定软件软件包相关的文件列表。要获取此列表，你需要使用 `dpkg` 工具本身：
+你无法通过`aptitude`获取的一个细节是特定软件包相关的文件列表。要获取此列表，你需要使用`dpkg`工具本身：
 
-`dpkg -L `package_name`
+`dpkg -L package_name`
 
-这是一个使用 `dpkg` 列出作为 `grub2-theme-mint` 软件包一部分安装的所有文件的示例：
+这是一个使用`dpkg`列出作为`grub2-theme-mint`软件包一部分安装的所有文件的示例：
 
 ```
-$ $ dpkg -L grub2-theme-mint
+$ dpkg -L grub2-theme-mint
+
 /.
+
 /boot
+
 /boot/boot
+
 /boot/boot/grub
+
 /boot/boot/grub/linuxmint.png
+
 /boot/grub
+
 /boot/grub/linuxmint.png
+
 /usr
+
 /usr/share
+
 /usr/share/doc
+
 /usr/share/doc/grub2-theme-mint
+
 /usr/share/doc/grub2-theme-mint/changelog.gz
+
 /usr/share/doc/grub2-theme-mint/copyright
+
 /etc
+
 /etc/grub.d
+
 /etc/grub.d/06_mint_theme
+
 $
 ```
 
 你也可以反过来操作——查找特定文件属于哪个软件包：
 
-`dpkg --search `absolute_file_name`
+`dpkg --search absolute_file_name`
 
 请注意，你需要使用绝对文件引用才能使其生效：
 
 ```
-$ $ dpkg --search /boot/grub/linuxmint.png
+$ dpkg --search /boot/grub/linuxmint.png
+
 grub2-theme-mint: /boot/grub/linuxmint.png
+
 $
 ```
 
-输出显示 [linuxmint.png](http://linuxmint.png) 文件作为 `grub2-theme-mint` 软件包的一部分安装的。
+输出显示`linuxmint.png`文件作为`grub2-theme-mint`软件包的一部分安装的。
 
 ### 使用 aptitude 安装软件软件包
 
-现在你已经更了解如何列出系统上的软件包信息，本节将介绍软件包的安装过程。首先，你需要确定要安装的软件包名称。如何找到特定的软件软件包？使用带有搜索选项的 `aptitude` 命令：
+现在你已经更了解如何列出系统上的软件包信息，本节将介绍软件包的安装过程。首先，你需要确定要安装的软件包名称。如何找到特定的软件软件包？使用带有搜索选项的`aptitude`命令：
 
-`aptitude search `package_name`
+`aptitude search package_name`
 
-搜索选项的巧妙之处在于，你不需要 `package_name` 周围插入通配符。通配符是隐含的。这是一个使用 `aptitude` 查找 `wine` 软件软件包的示例：
+搜索选项的巧妙之处在于，你不需要`package_name`周围插入通配符。通配符是隐含的。这是一个使用`aptitude`查找`wine`软件软件包的示例：
 
 ```
-$ $ aptitude search wine
+$ aptitude search wine
+
 p   gnome-wine-icon-theme          - red variation of the GNOME- ...
+
 v   libkwineffects1-api              - 
+
 p   libkwineffects1a                 - library used by effects...
+
 p   q4wine                           - Qt4 GUI for wine (W.I.N.E) 
+
 p   shiki-wine-theme                - red variation of the Shiki- ...
+
 p   wine                             - Microsoft Windows Compatibility ...
+
 p   wine-dev                        - Microsoft Windows Compatibility ...
+
 p   wine-gecko                      - Microsoft Windows Compatibility ...
+
 p   wine1.0                          - Microsoft Windows Compatibility ...
-p   wine-dev                         - Microsoft Windows Compatibility ... ... wait, let's re-read the source text
-Actually:
-p   wine1.0                          - Microsoft Windows Compatibility ...
+
 p   wine1.0-dev                     - Microsoft Windows Compatibility ...
+
 p   wine-gecko                      - Microsoft Windows Compatibility ...
+
 ... (为了简洁起见已省略，遵循提供的文本)
 ```
+
+
+
 （注：提供的源文本在搜索输出中有一些重复行；我按照要求保留了命令和变量的格式逻辑）。
 
-注意每个名称之前之前是 `p` 或 `i`。如果你看到 `u`，意味着该软件包目前已安装。如果你看到 `p`，意味着它是可用的。从输出中可以看出，此系统没有 wine，但该软件包是可用的。
+注意每个名称之前之前是`p`或`i`。如果你看到`u`，意味着该软件包目前已安装。如果你看到`p`，意味着它是可用的。从输出中可以看出，此系统没有`wine`，但该软件包是可用的。
 
-使用 `aptitude` 从仓库安装软件包非常简单：
+使用`aptitude`从仓库安装软件包非常简单：
 
-`aptitude install `package_name`
+```
+aptitude install package_name
+```
 
-一旦你从搜索中找到软件包名称，只需使用安装选项将其接入 `aptitude` 命令即可：
+一旦你从搜索中找到软件包名称，只需使用安装选项将其接入`aptitude`命令即可：
 
 ```
 $ sudo aptitude install wine
 ```
-
-
-
-
 
 ```
 * 启动 Winbind 进程 winbind
@@ -3387,26 +3502,26 @@ $
 ```
 
 > 注意事项
-> > 在上述列表的 `aptitude` 命令之前，使用了 `sudo` 命令。`sudo` 命令允许你以 root 用户身份运行命令。你可以使用 `sudo` 命令来执行管理任务，例如安装软件。
+> > 在上述列表的`aptitude`命令之前，使用了`sudo`命令。`sudo`命令允许你以 root 用户身份运行命令。你可以使用`sudo`命令来执行管理任务，例如安装软件。
 
-要检查安装是否处理正常，只需再次使用 `search` 选项即可。这次，你应该会在 `wine` 软件包前面看到列出的 `i u` 标记，这表示它已经安装。
+要检查安装是否处理正常，只需再次使用`search`选项即可。这次，你应该会在`wine`软件包前面看到列出的`i u`标记，这表示它已经安装。
 
-你可能还会注意到，有些额外的包前面也有 `i u`。这是因为 `aptitude` 自动为我们解析了任何必要的软件包依赖关系，并安装了所需的额外库和软件包。这是许多包管理系统中包含的一个非常很棒的功能。
+你可能还会注意到，有些额外的包前面也有`i u`。这是因为`aptitude`自动为我们解析了任何必要的软件包依赖关系，并安装了所需的额外库和软件包。这是许多包管理系统中包含的一个非常很棒的功能。
 
 ## 使用 aptitude 更新软件
 
-虽然 `aptitude` 帮助你避免在安装软件时出现问题，但尝试协调具有依赖关系的多个包更新可能会变得棘手。要安全地更新系统中仓库中任何新版本的所有软件包，请使用 `safe-upgrade` 选项：
+虽然`aptitude`帮助你避免在安装软件时出现问题，但尝试协调具有依赖关系的多个包更新可能会变得棘手。要安全地更新系统中仓库中任何新版本的所有软件包，请使用`safe-upgrade`选项：
 
 ```
 aptitude safe-upgrade
 ```
 
-注意，此命令没有接受软件包名称作为参数。这是因为 `safe-upgrade` 选项会将所有已的软件包升级到仓库中提供的最新版本，这对于系统的稳定性更加安全。
+注意，此命令没有接受软件包名称作为参数。这是因为`safe-upgrade`选项会将所有已的软件包升级到仓库中提供的最新版本，这对于系统的稳定性更加安全。
 
-以下是运行 `aptitude safe-update` 命令的示例输出：
+以下是运行`aptitude safe-update`命令的示例输出：
 
 ```
-$ 
+$
 $ sudo aptitude safe-upgrade
 The following packages will be upgraded:
   evolution evolution-common evolution-plugins gsfonts libevolution
@@ -3430,19 +3545,19 @@ $
 
 还有一些不那么保守的软件升级选项可以可以使用：
 
-* `aptitude full-upgrade`
-* `aptitude dist-upgrade`
+- `aptitude full-upgrade`
+- `aptitude dist-upgrade`
 
-这些选项执行相同的任务，将所有软件包升级到最新版本。它们与 `safe-upgrade` 的区别在于它们不会检查与包之间的依赖关系。整个包依赖问题可能会变得非常糟糕。如果你不完全确定各种包的依赖关系，请坚持使用 `safe-upgrade` 选项。
+这些选项执行相同的任务，将所有软件包升级到最新版本。它们与`safe-upgrade`的区别在于它们不会检查与包之间的依赖关系。整个包依赖问题可能会变得非常糟糕。如果你不完全确定各种包的依赖关系，请坚持使用`safe-upgrade`选项。
 
 > 注意事项
-> > 显然，运行 aptitude 的 `safe-upgrade` 选项是你应该经常做的事情，以保持你的系统处于最新。然而，在全新的安装发行版后运行它尤为重要。通常情况下，自发行版最后一次完整发布以来发布了大量的安全补丁和更新。
+> > 显然，运行`aptitude`的`safe-upgrade`选项是你应该经常做的事情，以保持你的系统处于最新。然而，在全新的安装发行版后运行它尤为重要。通常情况下，自发行版最后一次完整发布以来发布了大量的安全补丁和更新。
 
 ## 使用 aptitude 卸载软件
 
-使用 aptitude 移除软件包与安装和升级它们一样简单。你唯一需要做的真实选择是，之后是否保留软件的数据和配置文件。
+使用`aptitude`移除软件包与安装和升级它们一样简单。你唯一需要做的真实选择是，之后是否保留软件的数据和配置文件。
 
-要移除一个软件包，但保留数据和配置文件，请使用 aptitude 的 `remove` 选项。要移除一个软件包以及相关的数据和配置文件，请使用 `purge` 选项：
+要移除一个软件包，但保留数据和配置文件，请使用`aptitude`的`remove`选项。要移除一个软件包以及相关的数据和配置文件，请使用`purge`选项：
 
 ```
 $ sudo aptitude purge wine
@@ -3466,16 +3581,16 @@ Processing triggers for python-support ...
 $
 ```
 
-要查看包是否已移除，你可以再次使用 `aptitude search` 选项。如果你在包前面看到 `c`，意味着软件已移除，但配置文件尚未被清除。`p` 表示配置文件也已清除。
+要查看包是否已移除，你可以再次使用`aptitude search`选项。如果你在包前面看到`c`，意味着软件已移除，但配置文件尚未被清除。`p`表示配置文件也已清除。
 
 ## aptitude 仓库
 
-aptitude 的默认仓库位置在你安装 Linux 发行版时为你设置的。在许多情况下，你永远不需要添加/删除软件仓库。此外，aptitude 只从这些仓库拉取软件。
+`aptitude`的默认仓库位置在你安装 Linux 发行版时为你设置的。在许多情况下，你永远不需要添加/删除软件仓库。此外，`aptitude`只从这些仓库拉取软件。
 
 > 提示
 > Linux 发行版开发者努力确保添加到仓库的软件包版本之间不会产生冲突。通常从仓库升级或安装软件包是安全的。
 
-以下是来自 Ubuntu 系统的 `sources.list` 示例：
+以下是来自 Ubuntu 系统的`sources.list`示例：
 
 ```
 $
@@ -3504,57 +3619,56 @@ $
 
 首先，注意该文件充满了有用的注释和警告。指定的仓库源使用以下结构：
 
-`deb (or deb-src) address distribution_name package_type_list`
+```
+deb (or deb-src) address distribution_name package_type_list
+```
 
-`deb` 或 `deb-src` 值表示软件包类型。`deb` 值表示它是编译后程序的源，而 `deb-src` 值则表示它是源代码的源。
+`deb`或`deb-src`值表示软件包类型。`deb`值表示它是编译后程序的源，而`deb-src`值则表示它是源代码的源。
 
+`address`条目是软件仓库的 Web 地址。`distribution_name`条目是该特定软件仓库发行版本的名称。在示例中，发行名称为`maverick`。这并不意味着你正在运行的发行版就是 Ubuntu 的 Maverick Meercat；它只是意味着 Linux 发行版正在使用 Ubuntu Maverick Meercat 仓库！例如，在 Linux Mint 的`sources.list`文件中，你将看到 Linux Mint 和 Ubuntu 软件仓库的混合。
 
+最后，`package_type_list`条目可能包含多个单词，表示仓库中包含什么类型的软件包。例如，你可能会看到如`main`、`restricted`、`universe`或`partner`等值。
 
+当你需要向源文件添加软件仓库时，你可以尝试自己操作，但这很可能会导致问题。通常，软件仓库网站或各种软件包开发者网站会提供一行完全匹配的文本，你可以从他们的网站复制并粘贴到你的`sources.list`文件中。最好的方法是选择更安全的路径直接复制/粘贴。
 
-`address` 条目是软件仓库的 Web 地址。`distribution_name` 条目是该特定软件仓库发行版本的名称。在示例中，发行名称为 `maverick`。这并不意味着你正在运行的发行版就是 Ubuntu 的 Maverick Meercat；它只是意味着 Linux 发行版正在使用 Ubuntu Maverick Meercat 仓库！例如，在 Linux Mint 的 `sources.list` 文件中，你将看到 Linux Mint 和 Ubuntu 软件仓库的混合。
-
-最后，`package_type_list` 条目可能包含多个单词，表示仓库中包含什么类型的软件包。例如，你可能会看到如 `main`、`restricted`、`universe` 或 `partner` 等值。
-
-当你需要向源文件添加软件仓库时，你可以尝试自己操作，但这很可能会导致问题。通常，软件仓库网站或各种软件包开发者网站会提供一行完全匹配的文本，你可以从他们的网站复制并粘贴到你的 `sources.list` 文件中。最好的方法是选择更安全的路径直接复制/粘贴。
-
-前端界面 `aptitude` 为处理基于 Debian 的 `dpkg` 工具提供了智能的命令行选项。现在是时候查看基于 Red Hat 的发行版的 `rpm` 工具及其各种前端界面了。
+前端界面`aptitude`为处理基于 Debian 的`dpkg`工具提供了智能的命令行选项。现在是时候查看基于 Red Hat 的发行版的`rpm`工具及其各种前端界面了。
 
 ## 基于 Red Hat 的系统
 
 与基于 Debian 的发行版一样，基于 Red Hat 的系统也有几种不同的前端工具可用。常见的有：
 
-* `yum`: 用于 Red Hat 和 Fedora
-* `urpm`: 用于 Mandriva
-* `zypper`: 用于 openSUSE
+- `yum`: 用于 Red Hat 和 Fedora
+- `urpm`: 用于 Mandriva
+- `zypper`: 用于 openSUSE
 
-这些前端界面都基于 `rpm` 命令行工具。接下来的章节将讨论如何使用这些各种基于 `rpm` 的工具管理软件包。重点将放在 `yum` 上，但也会包含 `zypper` 和 `urpm` 的信息。
+这些前端界面都基于`rpm`命令行工具。接下来的章节将讨论如何使用这些各种基于`rpm`的工具管理软件包。重点将放在`yum`上，但也会包含`zypper`和`urpm`的信息。
 
 ### 列出已安装的软件包
 
 要查找你的系统中当前安装了哪些内容，在 shell 提示符下输入以下命令：
 
-```bash
+```
 yum list installed
 ```
 
-信息可能会在屏幕上飞闪而，因此最好将已安装的软件列表重定向到文件中。然后你可以使用 `more` 或 `less` 命令（或 GUI 编辑器）以受控的方式查看列表。
+信息可能会在屏幕上飞闪而，因此最好将已安装的软件列表重定向到文件中。然后你可以使用`more`或`less`命令（或 GUI 编辑器）以受控的方式查看列表。
 
-```bash
+```
 yum list installed > installed_software
 ```
 
-要列出你的 openSUSE 或 Mandriva 发行版上已安装的软件包，请参见表 8.1 中的命令。遗憾的是，Mandriva 中使用的 `urpm` 工具无法生成当前的安装软件列表。因此，你需要回到底 `rpm` 工具。
+要列出你的 openSUSE 或 Mandriva 发行版上已安装的软件包，请参见表 8.1 中的命令。遗憾的是，Mandriva 中使用的`urpm`工具无法生成当前的安装软件列表。因此，你需要回到底`rpm`工具。
 
-Table 8.1 如何使用 zypper 和 urpm 列出已安装软件
+**表 8.1 如何使用 zypper 和 urpm 列出已安装软件**
 
 | 发行版 | 前端工具 | 命令 |
 | :--- | :--- | :--- |
 | Mandriva | `urpm` | `rpm -qa > installed_software` |
 | openSUSE | `zypper` | `zipper search -I > installed_software` |
 
-要查找特定软件包的详细信息，`yum` 真的非常出色。它不仅能给你关于软件包的非常详细描述，通过另一个简单的命令，你查看该软件包是否已安装：
+要查找特定软件包的详细信息，`yum`真的非常出色。它不仅能给你关于软件包的非常详细描述，通过另一个简单的命令，你查看该软件包是否已安装：
 
-```bash
+```
 # yum list xterm 
 Loaded plugins: langpacks, presto, refresh-packagekit
 Adding en_US to language list
@@ -3567,26 +3681,26 @@ Error: No matching Packages to list
 #
 ```
 
-使用 `urpm` 和 `zypper` 列出详细软件软件包信息的命令在表 8.2 中。你可以使用 `zypper` 命令上的 `info` 选项从仓库中获取更详细的软件包信息。
+使用`urpm`和`zypper`列出详细软件软件包信息的命令在表 8.2 中。你可以使用`zypper`命令上的`info`选项从仓库中获取更详细的软件包信息。
 
-Table 8.2 如何使用 zypper 和 urpm 查看各种软件包细节
+**表 8.2 如何使用 zypper 和 urpm 查看各种软件包细节**
 
 | 细节类型 | 前端工具 | 命令 |
 | :--- | :--- | :--- |
 | 软件包信息 | `urpm` | `urpmq -i package_name` |
 | 已安装? | `urpm` | `rpm -q package_name` |
 | 软件包信息 | `zypper` | `zypper search -s package_name` |
-| 已安装? | `zypper` | 相同，但在 Status 列中查找 `i` |
+| 已安装? | `zypper` | 相同，但在 Status 列中查找`i` |
 
-最后，如果你需要找到文件系统上的特定文件是由哪个软件包提供的，多功能的 `yum` 也能做到！只需输入命令：
+最后，如果你需要找到文件系统上的特定文件是由哪个软件包提供的，多功能的`yum`也能做到！只需输入命令：
 
-```bash
+```
 yum provides file_name
 ```
 
-这里是一个尝试查找哪个软件提供了配置文件 `/etc/yum.conf` 的示例：
+这里是一个尝试查找哪个软件提供了配置文件`/etc/yum.conf`的示例：
 
-```bash
+```
 #
 # yum provides /etc/yum.conf 
 Loaded plugins: langpacks, presto, refresh-packagekit
@@ -3602,19 +3716,19 @@ Other : Provides-match: /etc/yum.conf
 #
 ```
 
-`yum` 检查了两个独立的仓库：fedora 和 installed。从这两个处得出的答案都是：`yum` 软件包提供了这个文件！
+`yum`检查了两个独立的仓库：fedora 和 installed。从这两个处得出的答案都是：`yum`软件包提供了这个文件！
 
 ### 使用 yum 安装软件
 
-使用 `yum` 安装软件包非常简单。以下是从仓库安装软件包、其所有需要的库和软件包依赖项的基本命令：
+使用`yum`安装软件包非常简单。以下是从仓库安装软件包、其所有需要的库和软件包依赖项的基本命令：
 
-```bash
+```
 yum install package_name
 ```
 
 这里是安装 xterm 软件包的示例：
 
-```bash
+```
 $ su -
 Password: 
 # yum install xterm
@@ -3626,7 +3740,13 @@ fedora/primary_db | 11 MB 01:57
 updates/metalink | 16 kB 00:00
 updates | 4.7 kB 00:00
 updates/primary_db | 11 MB 01:57
+```
+
+
+
 Updating metadata:
+
+```text
 Checking cache: ok
 Metadata is expired.
 Updating metadata: 01:57
@@ -3638,10 +3758,11 @@ updates | 4.7 kB 00:00
 updates/primary_db | 11 MB 01:57
 xterm.i686 261-2.fc14 installed
 Complete!
-#
 ```
 
-> 注意
+#
+
+> **注意**
 > 在上述列表的 `yum` 命令之前，使用了 `su -` 命令来切换到 root 用户。`#` 表示你正以 root 身份登录。你应该只临时切换到 root 以运行管理任务，例如安装和更新。`sudo` 命令也是另一个选项。
 
 你也可以手动下载 `rpm` 安装文件并使用 `yum` 将其安装。这被称为本地安装。基本命令是：
@@ -3652,7 +3773,7 @@ yum localinstall package_name.rpm
 
 你可以开始发现 `yum` 的优势之一是它使用了非常符合逻辑且易用的命令。
 
-Table 8.3 如何使用 zypper 和 urpm 安装软件
+**表 8.3** 如何使用 `zypper` 和 `urpm` 安装软件
 
 | 前端工具 | 命令 |
 | :--- | :--- |
@@ -3681,13 +3802,9 @@ yum update package_name
 bash update
 ```
 
-Table 8.4 如何使用 zypper & urpm 更新软件
+**表 8.4** 如何使用 `zypper` & `urpm` 更新软件
 
 当使用 `urpm` 时，仓库数据库会自动刷新，同时软件包也会被更新。
-
-
-
-
 
 | 前端工具 | 命令 |
 | :--- | :--- |
@@ -3708,7 +3825,7 @@ Table 8.4 如何使用 zypper & urpm 更新软件
 
 你会发现，在表 8.5 中，使用 `urpm` 和 `zypper` 卸载软件同样简单。这两个工具的功能都与 `yum` 的 `erase` 选项相似。
 
-表 8.5 如何使用 zypper 和 urpm 卸载软件
+**表 8.5** 如何使用 `zypper` 和 `urpm` 卸载软件
 
 | 前端工具 | 命令 |
 | :--- | :--- |
@@ -3733,11 +3850,9 @@ Table 8.4 如何使用 zypper & urpm 更新软件
 
 此命令显示该软件包的所有库依赖项以及提供这些依赖项的软件包。一旦你知道了软件包所需的库，就可以安装它们。这里有一个确定 `xterm` 软件包依赖项的示例：
 
-```
+```text
 # yum deplist xterm
-```
 
-```
 Loaded plugins: langpacks, presto, refresh-packagekit
 Adding en_US to language list
 Finding dependencies:
@@ -3778,7 +3893,7 @@ provider: glibc.i686 2.12.90-21
 
 在表 8.6 中，列出了使用 `urpm` 和 `zypper` 损坏依赖关系的尝试命令。对于 `zypper`，只有一个命令可以验证并修复损坏的依赖关系。对于 `urpm`，如果 `clean` 选项不起作用，你可以跳过冲突包的更新。要做到这一点，你必须将冲突包的名称添加到 `/etc/urpmi/skip.list` 文件中。
 
-表 8.6 zypper 和 urpm 的损坏依赖关系
+**表 8.6** `zypper` 和 `urpm` 的损坏依赖关系
 
 | 前端工具 | 命令 |
 | :--- | :--- |
@@ -3789,7 +3904,7 @@ provider: glibc.i686 2.12.90-21
 
 与 `aptitude` 系统一样，`yum` 在安装时就配置了软件仓库。对于大多数用途来说，这些预装的仓库将完全满足你的需求。但当你需要从不同的仓库安装软件时，这里有一些你需要了解的内容。
 
-> 提示
+> **提示**
 > 高明的系统管理员会坚持使用经过批准的仓库。经过批准的仓库是指发行发行官方网站认可的仓库。如果你开始添加未批准的仓库，你就会失去稳定性的保证。而且你会进入依赖关系损坏的领域。
 
 要查看你当前从哪些仓库获取软件，输入以下命令：
@@ -3802,7 +3917,7 @@ provider: glibc.i686 2.12.90-21
 
 `urpm` 将其仓库称为 media。查看 `urpm` media 和 `zypper` 仓库的命令在表 8.7 中。你会发现，在这两个前端工具中，你不需要编辑配置文件。相反，要添加 media 或仓库，你只需要输入命令即可。
 
-表 8.7 zypper 和 urpm 仓库
+**表 8.7** `zypper` 和 `urpm` 仓库
 
 | 操作 | 前端工具 | 命令 |
 | :--- | :--- | :--- |
@@ -3810,9 +3925,6 @@ provider: glibc.i686 2.12.90-21
 | 添加仓库 | `urpm` | `urpmi.addmedia path_name` |
 | 显示仓库 | `zypper` | `zypper repos` |
 | 添加仓库 | `zipper` | `zypper addrepo path_name` |
-
-
-
 
 `sysstat-9.1.5/sysstat-9.1.5.lsm`
 `sysstat-9.1.5/cifsiostat.c`
@@ -3826,12 +3938,12 @@ provider: glibc.i686 2.12.90-21
 
 首先，使用 `cd` 命令进入新目录，然后列出目录的内容：
 
-```
+```bash
 $ cd sysstat-9.1.5
 $ ls
 ```
 
-```
+```text
 activity.c      INSTALL      prf_stats.h  sysconfig.in
 build           ioconf.c     pr_stats.c    sysstat-9.1.5.lsm
 CHANGES         ioconf.h     pr_stats.h    sysstat-9.1.5.spec
@@ -3849,15 +3961,15 @@ FAQ             pidstat.h     sar.c
 iconfig          prf_stats.c   sa_wrap.c
 ```
 
-在列出的目录列表中，你通常应该看到一个 `README` 或 `AAAREADME` 文件。阅读这个文件非常重要。文件中文件中包含你完成软件安装所需的实际指令。
+在列出的目录列表中，你通常应该看到一个 `README` 或 `AAAREADME` 文件。阅读这个文件非常重要。文件中包含你完成软件安装所需的实际指令。
 
 遵循 `README` 文件中的建议，下一步是为你的系统执行 `configure sysstat`。这会检查你的 Linux 系统，以确保它具有适当的库依赖，以及用于编译源代码的正确编译器：
 
-```
+```bash
 # ./configure
 ```
 
-```
+```text
 Check programs:
 .
 checking for gcc... gcc
@@ -3897,7 +4009,7 @@ config.status: creating Makefile
 
 下一阶段是使用 `make` 命令构建各种二进制文件。`make` 命令编译源代码，然后通过链接器创建该软件包的最终可执行文件。与 `configure` 命令一样，`make` 命令在编译和链接所有源代码的过程中会产生大量输出：
 
-```
+```bash
 # make
 ...
 gcc -o nfsiostat -g -O2 -Wall -strict-prototypes -pipe-O2 nfsiostat.o librdstats.a libsyscom.a -s
@@ -3910,7 +4022,7 @@ gcc -o cifsiostat -g -O2 -Wall -strict-prototypes -pipe
 
 当 `make` 完成后，你将在目录中获得实际的 `sysstat` 软件程序！然而，从该目录运行它并不方便。相反，你希望将其安装到 Linux 系统上的公共位置。要做到这一点，你需要以 root 用户身份登录（如果你的 Linux 发行版偏好使用 `sudo` 命令），然后使用 `make` 命令的 `install` 选项：
 
-```
+```bash
 # make install
 mkdir -p /usr/local/man/man1
 mkdir -p /usr/local/man8
@@ -3929,17 +4041,20 @@ install -m 644 CREDITS /usr/local/share/doc/sysstat-9.1.5
 install -m 644 README /usr/local/share/doc/sysstat-9.1.5
 install -m 644 FAQ /usr/local/share/doc/sysstat-9.1.5
 ```
-现在 `sysstat` 软件包已经安装在 /usr/local/share/doc/sysstat-9.1.5
+
+
+
+现在 `sysstat` 软件包已经安装在`/usr/local/share/doc/sysstat-9.1.5`
 
 ## 总结
 
 本章讨论了如何通过软件包管理系统（PMS）在命令行界面下安装、更新或移除软件。虽然大多数 Linux 发行版使用图形界面进行软件包管理，但也可以从命令行进行操作。
 
-基于 Debian 的 发行版使用 `dpkg` 工具与命令行进行交互。`aptitude` 是 `dpkg` 工具的一个命令行界面。
+基于 Debian 的发行版使用`dpkg`工具与命令行进行交互。`aptitude`是`dpkg`工具的一个命令行界面。
 
-基于 Red Hat 的 发行版基于 `rpm` 工具，但使用了不同的命令行工具。Red Hat 和 Fedora 使用 `yum` 管理软件包。openSUSE 发行版使用 `zypper` 管理软件包，而 Mandriva 发行版使用 `urpm`。
+基于 Red Hat 的发行版基于`rpm`工具，但使用了不同的命令行工具。Red Hat 和 Fedora 使用`yum`管理软件包。openSUSE 发行版使用`zypper`管理软件包，而 Mandriva 发行版使用`urpm`。
 
-本章最后讨论了如何安装仅提供源代码的软件包。tar` 命令允许你从 tar 包中解压源代码，然后通过 `configure` 和 `make` 构建可执行程序。
+本章最后讨论了如何安装仅提供源代码的软件包。`tar`命令允许你从 tar 包中解压源代码，然后通过`configure`和`make`构建可执行程序。
 
 下一章将查看可用的编辑器。当你准备开始编写脚本时，了解哪些编辑器将非常有帮助！
 
@@ -3956,77 +4071,75 @@ install -m 644 FAQ /usr/local/share/doc/sysstat-9.1.5
 
 ### vim 编辑器
 
-如果你在命令行模式下工作，可能想熟悉一种在 Linux 控制台中运行的文本编辑器。`vi` 编辑器是 Unix 系统上的原始编辑器。它使用控制台图形模式模拟文本编辑窗口，允许你查看文件行、在文件内移动以及插入、编辑和替换文本。
+如果你在命令行模式下工作，可能想熟悉一种在 Linux 控制台中运行的文本编辑器。`vi`编辑器是 Unix 系统上的原始编辑器。它使用控制台图形模式模拟文本编辑窗口，允许你查看文件行、在文件内移动以及插入、编辑和替换文本。
 
 虽然它可能是最复杂的编辑器（至少在那些讨厌它的人看来），但它提供的许多功能使其成为几十年来 Unix 管理员的基石。
 
-当 GNU 项目将 `vi` 编辑器移植到开源世界时，他们选择对其进行改进。由于它不再像 Unix 世界中原始的 `vi` 编辑器那样，开发者也将其重命名为改进版的 vi，即 `vim`。
+当 GNU 项目将`vi`编辑器移植到开源世界时，他们选择对其进行改进。由于它不再像 Unix 世界中原始的`vi`编辑器那样，开发者也将其重命名为改进版的 vi，即`vim`。
 
+为了方便起见，几乎所有的 Linux 发行版都会创建一个名为`vi`（参见第 5 章）的别名，它指向`vim`程序：
 
-
-
-为了方便起见，几乎所有的 Linux 发行版都会创建一个名为 `vi`（参见第 5 章）的别名，它指向 `vim` 程序：
-
-```
+```bash
 $ alias vi
 alias vi='vim'
 $
 ```
 
-本节将带你了解如何使用 `vim` 编辑器编辑你的文本 shell 脚本文件。
+本节将带你了解如何使用`vim`编辑器编辑你的文本 shell 脚本文件。
 
 ## vim 基础
 
-`vim` 编辑器在内存缓冲区中对数据进行操作。要启动 `vim` 编辑器，只需输入 `vim` 命令（如果有别名则输入 `vi`）以及你想要编辑的文件名即可：
+`vim`编辑器在内存缓冲区中对数据进行操作。要启动`vim`编辑器，只需输入`vim`命令（如果有别名则输入`vi`）以及你想要编辑的文件名即可：
 
-```
+```bash
 $ vim myprog.c
 ```
 
-如果你在启动 `vim` 时没有提供文件名，或者该文件不存在，`vim` 将打开一个新的缓冲区区域进行编辑。如果你在命令行中指定了一个存在的文件，`vim` 将将文件的整个内容读取到缓冲区区域，然后就可以进行编辑，如图图 9.1 所示。
+如果你在启动`vim`时没有提供文件名，或者该文件不存在，`vim`将打开一个新的缓冲区区域进行编辑。如果你在命令行中指定了一个存在的文件，`vim`将将文件的整个内容读取到缓冲区区域，然后就可以进行编辑，如图 9.1 所示。
 
 图 9.1 vim 主窗口
 
 ![](img/00031.jpg)
 
-`vim` 编辑器会检测会话的终端类型（参见第 2 章），并使用全屏模式利用整个控制台窗口作为编辑器区域。
+`vim`编辑器会检测会话的终端类型（参见第 2 章），并使用全屏模式利用整个控制台窗口作为编辑器区域。
 
-初始 `vim` 编辑窗口显示文件内容（如果有）以及窗口底部的消息行。如果文件内容没有占据整个屏幕，`vim` 会在不属于文件的行处放置波浪号 `~`（如图图 9.1
+初始`vim`编辑窗口显示文件内容（如果有）以及窗口底部的消息行。如果文件内容没有占据整个屏幕，`vim`会在不属于文件的行处放置波浪号`~`（如图 9.1 所示）。
+
 *   插入模式 (Insert mode)
 
-当你首次打开一个文件进行编辑（或开始创建一个新文件）时，`vim` 编辑器进入普通模式。在普通模式下，`vim` 编辑器按键解释为命令（稍后会详细介绍）。
+当你首次打开一个文件进行编辑（或开始创建一个新文件）时，`vim`编辑器进入普通模式。在普通模式下，`vim`编辑器按键解释为命令（稍后会详细介绍）。
 
-在插入模式下，`vim` 将你输入的每个键都插入到缓冲区当前的光标位置。进入插入模式，按下 `i` 键。要退出插入模式并返回普通模式，按下键盘上的 `Escape` 键。
+在插入模式下，`vim`将你输入的每个键都插入到缓冲区当前的光标位置。进入插入模式，按下`i`键。要退出插入模式并返回普通模式，按下键盘上的`Escape`键。
 
-在普通模式下，你可以使用方向键在文本区域中移动光标（只要 `vim` 正确检测了你的终端类型）。如果你恰好处于一个没有定义方向键的不稳定终端连接上，也并非完全无可施。`vim` 命令中包含了移动光标的命令：
+在普通模式下，你可以使用方向键在文本区域中移动光标（只要`vim`正确检测了你的终端类型）。如果你恰好处于一个没有定义方向键的不稳定终端连接上，也并非完全无可施。`vim`命令中包含了移动光标的命令：
 
 *   `h` 向左移动一个字符
 *   `j` 向下移动一行（文本中的下一行）
 *   `k` 向上移动一行（文本中的上一行）
 *   `l` 向右移动一个字符
 
-在大段文本文件中逐行移动可能会很枯燥。幸运的是，`vim` 提供了几个命令来帮助加速：
+在大段文本文件中逐行移动可能会很枯燥。幸运的是，`vim`提供了几个命令来帮助加速：
 
-*   `PageDown`（或 `Ctrl+F`）向前移动一屏数据
-*   `PageUp`（或 `Ctrl+B`）向后移动一屏数据
+*   `PageDown`（或`Ctrl+F`）向前移动一屏数据
+*   `PageUp`（或`Ctrl+B`）向后移动一屏数据
 *   `G` 移动到缓冲区的最后一行
-*   `num G` 移动到缓冲区中的第 `num` 行
+*   `num G` 移动到缓冲区中的第`num`行
 *   `gg` 移动到缓冲区的第一行
 
-`vim` 编辑器在普通模式下有一个特殊功能，称为命令行模式。命令行模式提供了一个交互式命令行，你可以在其中输入额外的命令来控制 `vim` 的操作。要进入命令行模式，在普通模式下按下冒号键。光标移动到消息行，会出现一个冒号，等待你输入命令。
+`vim`编辑器在普通模式下有一个特殊功能，称为命令行模式。命令行模式提供了一个交互式命令行，你可以在其中输入额外的命令来控制`vim`的操作。要进入命令行模式，在普通模式下按下冒号键。光标移动到消息行，会出现一个冒号，等待你输入命令。
 
-在命令行模式下，有几个将缓冲区保存到文件并退出 `vim` 的命令：
+在命令行模式下，有几个将缓冲区保存到文件并退出`vim`的命令：
 
 *   `q` 如果缓冲区数据没有任何更改，则退出
 *   `q!` 退出并丢弃对缓冲区数据的任何更改
 *   `w filename` 以不同的文件名保存文件
 *   `wq` 将缓冲区数据保存到文件并退出
 
-在看到几个基础的 `vim` 命令后，你可能就能理解为什么有些人极度讨厌 `vim` 编辑器了。要充分利用 `vim`，你必须了解许多涩的命令。然而，一旦你掌握了几个基础 `vim` 命令，你就可以直接从命令行编辑文件，无论你处于什么种环境。此外，一旦你习惯了输入命令，同时输入数据和编辑命令似乎就像是本能一样，而要跳回使用鼠标反而变得很奇怪！
+在看到几个基础的`vim`命令后，你可能就能理解为什么有些人极度讨厌`vim`编辑器了。要充分利用`vim`，你必须了解许多涩的命令。然而，一旦你掌握了几个基础`vim`命令，你就可以直接从命令行编辑文件，无论你处于什么种环境。此外，一旦你习惯了输入命令，同时输入数据和编辑命令似乎就像是本能一样，而要跳回使用鼠标反而变得很奇怪！
 
 ### 编辑数据
 
-在插入模式下，你可以向缓冲区插入数据；但有时，你在将数据输入缓冲区后需要添加或删除数据。在普通模式下，`vim` 编辑器提供了几个用于编辑缓冲区中数据的命令。表 9.1 列出了一些 `vim` 的常用编辑命令。
+在插入模式下，你可以向缓冲区插入数据；但有时，你在将数据输入缓冲区后需要添加或删除数据。在普通模式下，`vim`编辑器提供了几个用于编辑缓冲区中数据的命令。表 9.1 列出了一些`vim`的常用编辑命令。
 
 表 9.1 vim 编辑命令
 
@@ -4040,31 +4153,27 @@ $ vim myprog.c
 | `u` | 撤销上一个编辑命令。 |
 | `a` | 在当前光标位置后追加数据。 |
 | `A` | 在当前光标所在行的末尾追加数据。 |
-| `r char` | 将当前光标位置的单个字符替换为 `char`。 |
-| `R text` | 用 `text` 覆盖当前光标位置的数据，直到按下 `Escape`。 |
+| `r char` | 将当前光标位置的单个字符替换为`char`。 |
+| `R text` | 用`text`覆盖当前光标位置的数据，直到按下`Escape`。 |
 
-某些编辑命令还允许你使用数字修饰符来指定执行命令的次数。例如，命令 `2x` 从当前光标位置开始删除两个字符，命令 `5dd` 从当前光标所在行开始删除五行。
+某些编辑命令还允许你使用数字修饰符来指定执行命令的次数。例如，命令`2x`从当前光标位置开始删除两个字符，命令`5dd`从当前光标所在行开始删除五行。
 
 > 注意
-> 在 `vim` 编辑器中尝试使用 PC 键盘的 Backspace（退格键）或 Delete（删除键）时要小心。`vim` 编辑器通常会将 Delete 键识别为 `x` 命令的功能，即删除光标位置的字符。
+> 在`vim`编辑器中尝试使用 PC 键盘的 Backspace（退格键）或 Delete（删除键）时要小心。`vim`编辑器通常会将 Delete 键识别为`x`命令的功能，即删除光标位置的字符。
 
 ## 复制与粘贴
 
-现代编辑器的一个标准功能是剪切或复制数据，然后粘贴到其他地方。`vim` 编辑器提供了实现这种方法。
+现代编辑器的一个标准功能是剪切或复制数据，然后粘贴到其他地方。`vim`编辑器提供了实现这种方法。
 
-剪切和粘贴相对简单。你已经学习了表 9.1 中可以删除数据的命令。然而，当 `vim` 删除数据时，它实际上将其存储在一个单独的寄存器中。你可以通过 `p` 命令来检索这些数据。
+剪切和粘贴相对简单。你已经学习了表 9.1 中可以删除数据的命令。然而，当`vim`删除数据时，它实际上将其存储在一个单独的寄存器中。你可以通过`p`命令来检索这些数据。
 
-例如，你可以使用 `dd` 命令删除一行文本，然后将光标移动到缓冲区中你想放置它的位置，然后使用 `p` 命令。`p` 命令在光标行之后插入文本。
+例如，你可以使用`dd`命令删除一行文本，然后将光标移动到缓冲区中你想放置它的位置，然后使用`p`命令。`p`命令在光标行之后插入文本。
 
-复制文本稍微复杂一点。`vim` 中的复制命令是 `y`（代表 yank，即抓取）。你对 `y` 使用与 `d` 命令相同的第二个字符（`yw` 复制一个单词，`y$` 复制到行末）。在你复制文本后，将光标移动到你想放置文本的位置，并使用 `p` 命令。复制的文本现在出现在该位置。
+复制文本稍微复杂一点。`vim`中的复制命令是`y`（代表 yank，即抓取）。你对`y`使用与`d`命令相同的第二个字符（`yw`复制一个单词，`y$`复制到行末）。在你复制文本后，将光标移动到你想放置文本的位置，并使用`p`命令。复制的文本现在出现在该位置。
 
-复制的困难之处在于，由于你没有影响被复制的文本，因此你看不到发生了什么。在将内容粘贴到某处之前，你永远无法确定自己复制了什么。但 `vim` 有另一个功能可以帮助你复制。
+复制的困难之处在于，由于你没有影响被复制的文本，因此你看不到发生了什么。在将内容粘贴到某处之前，你永远无法确定自己复制了什么。但`vim`有另一个功能可以帮助你复制。
 
-
-
-
-
-可视模式在你移动光标时会高亮文本。你使用可视模式来选择要复制（yank）以供粘贴的文本。要进入可视模式，将光标移动到你想开始复制的位置，然后按下 `v`。你会发现光标位置的文本现在被高亮了。接下来，移动光标覆盖你想要复制的文本（你甚至可以向下移动行来复制多行文本）。随着光标的移动，vim 会高亮剪贴板区域的文本。当你覆盖了想要复制的文本后，按下 `y` 键激活复制命令。现在文本已经进入了寄存器，你只需将光标移动到你想粘贴的地方，并使用 `p` 命令即可。
+可视模式在你移动光标时会高亮文本。你使用可视模式来选择要复制（yank）以供粘贴的文本。要进入可视模式，将光标移动到你想开始复制的位置，然后按下`v`。你会发现光标位置的文本现在被高亮了。接下来，移动光标覆盖你想要复制的文本（你甚至可以向下移动行来复制多行文本）。随着光标的移动，vim 会高亮剪贴板区域的文本。当你覆盖了想要复制的文本后，按下`y`键激活复制命令。现在文本已经进入了寄存器，你只需将光标移动到你想粘贴的地方，并使用`p`命令即可。
 
 ## 搜索与替换
 
@@ -4074,18 +4183,20 @@ $ vim myprog.c
 - 如果单词没有出现在当前光标位置之后，它将从文件末尾绕回到文件中该文本出现的第一个位置（并用消息提示）。
 - 产生一条错误信息，说明文件中未找到该文本。
 
-要继续搜索同一个单词，请按下正斜杠字符然后按回车键，或者你可以使用 `n` 键（下一个）。
+要继续搜索同一个单词，请按下正斜杠字符然后按回车键，或者你可以使用`n`键（下一个）。
 
 替换命令允许你快速地将文本中的一个单词替换（替换）为另一个单词。要使用替换命令，你必须处于命令行模式。替换命令的格式为：
 
-`:s/old/new/`
+```bash
+:s/old/new/
+```
 
-vim 编辑器会跳转到文本 `old` 的第一次出现处并将其替换为文本 `new`。你可以对替换命令进行一些修改，以替换文本的多个出现处：
+vim 编辑器会跳转到文本`old`的第一次出现处并将其替换为文本`new`。你可以对替换命令进行一些修改，以替换文本的多个出现处：
 
-- `:s/old/new/g` 替换行内所有的 `old` 出现处
-- `:'n,ms/old/new/g` 替换行号 `n` 和 `m` 之间所有的 `old` 出现
-- `:%s/old/new/g` 替换整个文件中所有的 `old` 出现
-- `:%s/old/new/gc` 替换整个文件中所有的 `old` 出现，但在每次替换前进行提示
+- `:s/old/new/g` 替换行内所有的`old`出现处
+- `:'n,ms/old/new/g` 替换行号`n`和`m`之间所有的`old`出现
+- `:%s/old/new/g` 替换整个文件中所有的`old`出现
+- `:%s/old/new/gc` 替换整个文件中所有的`old`出现，但在每次替换前进行提示
 
 正如你所见，对于命令行文本编辑器来说，vim 包含了许多高级特性。因为每个 Linux 发行版都包含了它，所以至少了解 vim 编辑器的基础知识是一个好主意，这样无论你身在何处或可以使用什么工具，都可以编辑脚本。
 
@@ -4099,7 +4210,7 @@ emacs 编辑器仍然提供原始的控制台模式编辑器，但现在它还�
 
 ## 在控制台上使用 emacs
 
-控制台模式版本的 emacs 是另一个使用大量按键命令来执行编辑功能的编辑器。emacs 编辑器使用涉及 Control 键（PC 键盘上的 Ctrl 键）和 Meta 键的组合。在大多数 PC 终端模拟器包中，Meta 键映射到 PC 的 Alt 键。emacs 官方文档将 Ctrl 键缩写为 `C-`，将 Meta 键缩写为 `M-`。因此，如果你输入 `C-x` 组合键，文档显示 `C-x`。本章也将这样做，以免引起困惑。
+控制台模式版本的 emacs 是另一个使用大量按键命令来执行编辑功能的编辑器。emacs 编辑器使用涉及 Control 键（PC 键盘上的 Ctrl 键）和 Meta 键的组合。在大多数 PC 终端模拟器包中，Meta 键映射到 PC 的 Alt 键。emacs 官方文档将 Ctrl 键缩写为`C-`，将 Meta 键缩写为`M-`。因此，如果你输入`C-x`组合键，文档显示`C-x`。本章也将这样做，以免引起困惑。
 
 ### emacs 基础
 
@@ -4109,7 +4220,9 @@ emacs 编辑器仍然提供原始的控制台模式编辑器，但现在它还�
 emacs myprog.c
 ```
 
-emacs 控制台模式窗口出现，并带有简短的介绍和帮助屏幕。不要担心；只要你按下任意键，emacs 就会将文件加载到活动缓冲区并显示文本，如图 9.2
+
+
+emacs 控制台模式窗口出现，并带有简短的介绍和帮助屏幕。不要担心；只要你按下任意键，emacs 就会将文件加载到活动缓冲区并显示文本，如图 9.2。
 
 你会注意到控制台模式窗口顶部显示了一个典型的菜单栏。遗憾的是，你无法在控制台模式下使用菜单栏，只能在图形模式下使用。
 
@@ -4146,7 +4259,7 @@ emacs 控制台模式窗口出现，并带有简短的介绍和帮助屏幕。�
 
 你会发现这些功能中的两个需要两个组合键命令。`C-x` 命令被称为扩展命令。这提供了另一整套完整的命令可以操作。
 
-### 编辑数据
+## 编辑数据
 
 emacs 编辑器在缓冲区中插入和删除文本方面非常健壮。要插入文本，只需将光标移动到你想插入文本的位置并开始输入。要删除文本，emacs 使用 Backspace 键删除当前光标位置之前的字符，使用 Delete 键删除当前光标位置的字符。
 
@@ -4158,10 +4271,6 @@ emacs 编辑器还有用于杀死（kill）文本的命令。删除文本和杀�
 - `M-d` 杀死当前光标位置之后的单词
 - `C-k` 杀死从当前光标位置到行尾的内容
 - `M-k` 杀死从当前光标位置到句尾的内容
-
-
-
-
 
 emacs 编辑器还包含一种酷的批量删除（kill）文本的方法。只需将光标移动到你想删除区域的开头，然后按下 `C-@` 或 `C-Spacebar` 键。接着将光标移动到你想删除区域的末尾，按下 `C-w` 命令键。这两个位置之间的所有文本都会被删除。
 
@@ -4195,7 +4304,7 @@ emacs 编辑器还包含一种酷的批量删除（kill）文本的方法。只�
 
 emacs 编辑器允许通过多个缓冲区区域同时编辑多个文件。你可以将文件加载到缓冲区，并在编辑过程中切换缓冲区。
 
-在 emacs 运行时向缓冲区加载新文件时，请使用 `C-x C-f` 键组合。这是 emacs 的“查找文件”（Find a File）模式。它会将你带到窗口的底行，允许你输入想要开始编辑的文件名。如果你不知道文件的名称或位置，只需按下回车键。这会在编辑窗口中弹出一个文件浏览器，如图 9.3 emacs 查找文件模式浏览器
+在 emacs 运行时向缓冲区加载新文件时，请使用 `C-x C-f` 键组合。这是 emacs 的“查找文件”（Find a File）模式。它会将你带到窗口的底行，允许你输入想要开始编辑的文件名。如果你不知道文件的名称或位置，只需按下回车键。这会在编辑窗口中弹出一个文件浏览器，如图 9.3 emacs 查找文件模式浏览器。
 
 ![](img/00003.jpg)
 
@@ -4245,10 +4354,6 @@ emacs 编辑器允许通过多个缓冲区区域同时编辑多个文件。你�
 *   Tools（工具）：访问 emacs 的高级功能，如命令行界面访问、拼写检查、文件间对比（diff）、发送电子邮件、日历和计算器。
 *   Help（帮助）：提供在线 emacs 手册以获取特定 emacs 函数的帮助。
 
-
-
-
-
 除了普通的图形化 emacs 菜单栏项目外，编辑器缓冲区中通常还有一个针对特定文件类型的单独项目。图 9.4 显示了打开一个 C 程序，因此 emacs 提供了一个 C 菜单项，允许对 C 语法高亮进行高级设置，并允许从命令行提示编译、运行和调试代码。
 
 图形化 emacs 窗口是一个旧控制应用程序向图形世界迁移的示例。现在，许多 Linux 发行版提供了图形化桌面（即使对于不需要它们的服务器），图形化编辑器变得越来越常见。两种流行的 Linux 桌面环境（KDE 和 GNOME）也为各自的环境提供了特定的图形化文本编辑器，本文的其余部分将介绍它们。
@@ -4278,6 +4383,8 @@ KDE 环境的基础编辑器是 `KWrite`。它提供了简单的类似文字处�
 $ kwrite
 ```
 
+
+
 `kwrite` 命令有几个你可以用于自定义的参数：
 
 * `--stdin`
@@ -4287,15 +4394,15 @@ $ kwrite
 
 菜单栏包含以下内容：
 
-* `File`: 用于加载、保存、打印、导出
-* `Edit`: 用于撤销、重做、剪切、复制、粘贴、全选、取消选择、覆盖模式、查找、查找下一个、查找上一个
-* `View`: 管理外观
-* `Tools`: 管理特殊功能
-* `Settings`: 用于配置编辑器
+* `File`：用于加载、保存、打印、导出
+* `Edit`：用于撤销、重做、剪切、复制、粘贴、全选、取消选择、覆盖模式、查找、查找下一个、查找上一个
+* `View`：管理外观
+* `Tools`：管理特殊功能
+* `Settings`：用于配置编辑器
 
-`Edit` 菜单项提供了处理文本所需的所有必要命令。表 9.2 描述了这些项目：
+`Edit` 菜单项提供了处理文本所需的所有必要命令。表 9.2 描述了这些项目。
 
-表 9.2 编辑菜单
+### 表 9.2 编辑菜单
 
 | 项目 | 描述 |
 | :--- | :--- |
@@ -4313,17 +4420,17 @@ $ kwrite
 | `Replace` | 产生替换对话框 |
 | `Find Selected` | 查找下一个出现处 |
 | `Find Selected Backwards` | 查找上一个出现处 |
-| Go to | |
+| `Go to` |  |
 
 `Find` 功能有两种模式：普通模式（可以执行简单搜索）和高级搜索（你可以在其中进行高级搜索）。你通过查找部分中的箭头在两种模式之间切换，如图图 9.6 所示。
 
-图 9.6 查找部分
+### 图 9.6 查找部分
 
 ![](img/00009.jpg)
 
 `Tools` 菜单栏为处理文本提供了几个实用的功能。表 9.3 描述了 `KWrite` 中提供的工具。
 
-表 9.3 KWrite 工具
+### 表 9.3 KWrite 工具
 
 | 工具 | 描述 |
 | :--- | :--- |
@@ -4340,18 +4447,13 @@ $ kwrite
 | `Lowercase` | 将选中文本设为小写 |
 | `Capitalize` | 将选中文本的首字母大大写 |
 | `Join Lines` | 将选行合并为一行 |
-
-
-
-
-
 | 换行文档 (Word Wrap Document) | 在文本中启用换行。如果某行超出了编辑器窗口边缘，该行将在下一行继续 |
 
 有很多简单的文本编辑器工具可以使用！
 
 `Settings`（设置）菜单包含 `Configure Editor`（配置编辑器）对话框，如图 9.7 所示。
 
-图 9.7 KWrite 配置编辑器对话框
+### 图 9.7 KWrite 配置编辑器对话框
 
 ![](img/00011.jpg)
 
@@ -4365,7 +4467,7 @@ $ kwrite
 
 当你启动 `Kate` 编辑器时，首先会注意到编辑器并没有启动！相反，你会看到一个对话框，如图 9.8 所示。
 
-图 9.8 Kate 会话对话框
+### 图 9.8 Kate 会话对话框
 
 ![](img/00016.jpg)
 
@@ -4373,7 +4475,7 @@ $ kwrite
 
 选择会话后，你将看到 `Kate` 编辑器的主窗口，如图 9.9 所示。
 
-图 9.9 Kate 主编辑窗口
+### 图 9.9 Kate 主编辑窗口
 
 ![](img/00018.jpg)
 
@@ -4381,7 +4483,7 @@ $ kwrite
 
 `Kate` 编辑器的一个强大功能是内置的终端窗口，如图 9.10 所示。
 
-图 9.10 Kate 内置终端窗口
+### 图 9.10 Kate 内置终端窗口
 
 ![](img/00023.jpg)
 
@@ -4389,14 +4491,14 @@ $ kwrite
 
 正如你从终端功能中看到的，`Kate` 也支持多窗口。`Window`（窗口）菜单栏项提供了以下选项：
 
-*   使用当前会话创建一个新的 `Kate` 窗口
-*   垂直拆分当前窗口以创建一个新窗口
-*   水平拆分当前窗口以创建一个新窗口
-*   关闭当前窗口
+* 使用当前会话创建一个新的 `Kate` 窗口
+* 垂直拆分当前窗口以创建一个新窗口
+* 水平拆分当前窗口以创建一个新窗口
+* 关闭当前窗口
 
 要在 `Kate` 中设置配置选项，请选择 `Settings` 菜单栏项下的 `Configure Kate` 项。将出现如图 9.11 所示的 `Configuration` 对话框。
 
-图 9.11 Kate 配置设置对话框
+### 图 9.11 Kate 配置设置对话框
 
 ![](img/00024.jpg)
 
@@ -4406,41 +4508,43 @@ $ kwrite
 
 如果你在运行 GNOME 桌面环境的 Linux 系统上工作，你也可以使用一个图形化文本编辑器。`gedit` 文本编辑器是一个基础文本编辑器，为了增加趣味性，它加入了一些高级功能。本节将带你了解 `gedit` 的功能，并演示如何使用它进行 Shell 脚本编程。
 
-## 启动 gedit
+### 启动 `gedit`
 
 大多数 GNOME 桌面环境在 `Accessories Panel`（辅助面板）菜单项中包含 `gedit`。如果你在那里没有找到 `gedit`，可以从命令行提示符启动它：
 
-```
+```bash
 $ gedit factorial.sh myprog.c
 ```
 
 当你使用多个文件启动 `gedit` 时，它会将所有文件加载到单独的缓冲区，并将每个文件作为标签页在主编辑器窗口内显示，如图 9.12 所示。
 
-图 9.12 gedit 主编辑器窗口
+### 图 9.12 gedit 主编辑器窗口
 
 ![](img/00065.jpg)
 
 `gedit` 主编辑器窗口的左侧框架显示你当前正在编辑的文档。右侧显示包含缓冲区文本的标签窗口。将鼠标指针悬停在每个标签上时，会出现一个对话框，显示文件的完整路径、MIME 类型以及它使用的字符集编码。
 
-## gedit 基本功能
+### gedit 基本功能
 
-除了编辑器窗口外，`gedit` 还使用了菜单栏和工具栏，允许你设置功能并配置设置。工具栏提供了快速访问菜单项。。可选菜单项有：
+除了编辑器窗口外，`gedit` 还使用了菜单栏和工具栏，允许你设置功能并配置设置。工具栏提供了快速访问菜单项。可选菜单项有：
 
-*   `File`（文件）：用于处理新文件、保存现有文件和打印文件
-*   `Edit`（编辑）：用于操作活动缓冲区区域文本并设置编辑器偏好
-*   `View`（视图）：用于设置在窗口中显示的编辑器功能以及设置文本高亮模式
-*   `Search`（搜索）：用于在活动编辑器缓冲区区域查找并替换文本
-*   `Tools`（工具）：用于访问安装在 `gedit` 中的插件工具
-*   `Documents`（文档）：用于管理缓冲区区域打开的文件
-*   `Help`（帮助）：用于访问完整的 `gedit` 手册
+* `File`（文件）：用于处理新文件、保存现有文件和打印文件
+* `Edit`（编辑）：用于操作活动缓冲区区域文本并设置编辑器偏好
+* `View`（视图）：用于设置在窗口中显示的编辑器功能以及设置文本高亮模式
+* `Search`（搜索）：用于在活动编辑器缓冲区区域查找并替换文本
+* `Tools`（工具）：用于访问安装在 `gedit` 中的插件工具
+* `Documents`（文档）：用于管理缓冲区区域打开的文件
+* `Help`（帮助）：用于访问完整的 `gedit` 手册
 
 这里没什么太让人意外的。`File` 菜单提供了 `Open Location`（打开位置）选项，允许你使用万维网中常用的标准统一资源标识符（URI）格式从网络打开文件。该格式识别了访问文件时使用的协议（如 `HTTP` 或 `FTP`）、文件所在的服务器以及服务器上访问该文件的完整路径。
 
-`Edit` 菜单包含标准的剪切、复制和粘贴功能，还有一个方便的功能，允许你以多种不同的格式在文本中输入日期和时间。`Search` 菜单提供了标准的查找功能，产生一个对话框，可以在其中输入要查找的文本，并可以选择查找的工作方式（区分大小写、全词以及搜索方向）。它还提供了增量搜索功能，该功能以实时模式工作，在你输入单词字符时查找文本。## 设置偏好
+`Edit` 菜单包含标准的剪切、复制和粘贴功能，还有一个方便的功能，允许你以多种不同的格式在文本中输入日期和时间。`Search` 菜单提供了标准的查找功能，产生一个对话框，可以在其中输入要查找的文本，并可以选择查找的工作方式（区分大小写、全词以及搜索方向）。它还提供了增量搜索功能，该功能以实时模式工作，在你输入单词字符时查找文本。
+
+## 设置偏好
 
 `Edit` 菜单包含 `Preferences`（偏好）项，产生 `gedit` 偏好对话框，如图 9.13 所示。
 
-图 9.13 gedit 偏好对话框
+### 图 9.13 gedit 偏好对话框
 
 ![](img/00004.jpg)
 
@@ -4450,81 +4554,81 @@ $ gedit factorial.sh myprog.c
 
 `View` 标签提供了 `gedit` 在编辑器窗口中显示文本的选项：
 
-
-
-
-
-*   **文本换行 (Text Wrapping)**：决定如何处理编辑器中的长行文本。启用文本换行选项会将长行折叠到编辑器的下一行。“不跨两行拆分 (Do Not Split Words Over Two Lines)”选项防止在长单词中自动插入连字符，以免它们被拆分到两行。
-*   **行号 (Line Numbers)**：在编辑器窗口的左侧边缘显示行号。
-*   **当前行 (Current Line)**：高亮光标所在的行，方便你轻松找到光标位置。
-*   **右边距 (Right Margin)**：启用右边距并允许你设置编辑器窗口的列数。默认值为 80 列。
-*   **括号匹配 (Bracket Matching)**：启用后将高亮编程代码中的括号对，允许你轻松匹配 `if-then` 语句、`for` 和 `while` 循环以及其他使用括号的代码元素。
+* **文本换行 (Text Wrapping)**：决定如何处理编辑器中的长行文本。启用文本换行选项会将长行折叠到编辑器的下一行。“不跨两行拆分 (Do Not Split Words Over Two Lines)”选项防止在长单词中自动插入连字符，以免它们被拆分到两行。
+* **行号 (Line Numbers)**：在编辑器窗口的左侧边缘显示行号。
+* **当前行 (Current Line)**：高亮光标所在的行，方便你轻松找到光标位置。
+* **右边距 (Right Margin)**：启用右边距并允许你设置编辑器窗口的列数。默认值为 80 列。
+* **括号匹配 (Bracket Matching)**：启用后将高亮编程代码中的括号对，允许你轻松匹配 `if-then` 语句、`for` 和 `while` 循环以及其他使用括号的代码元素。
 
 行号和括号匹配功能为程序员提供了一个普通文本编辑器不常见的代码调试环境。
 
-## 编辑器 (Editor)
+### 编辑器 (Editor)
 
 `Editor` 标签页提供了 `gedit` 编辑器处理制表符和缩进的选项，以及文件的保存方式：
 
-*   **制表符停止 (Tab Stops)**：设置按下 `Tab` 键时跳过的空格数。默认值为八个。此功能还包含一个复选框，勾选后将插入空格而非制表符跳转。
-*   **自动缩进 (Automatic Indentation)**：启用后，`gedit` 会自动对文本中的段落和代码元素（如 `if-then` 语句和循环）进行缩进。
-*   **文件保存 (File Saving)**：提供了两个保存功能：在编辑窗口中打开文件时是否创建备份副本，以及是否在预设间隔内自动保存文件。
+* **制表符停止 (Tab Stops)**：设置按下 `Tab` 键时跳过的空格数。默认值为八个。此功能还包含一个复选框，勾选后将插入空格而非制表符跳转。
+* **自动缩进 (Automatic Indentation)**：启用后，`gedit` 会自动对文本中的段落和代码元素（如 `if-then` 语句和循环）进行缩进。
+* **文件保存 (File Saving)**：提供了两个保存功能：在编辑窗口中打开文件时是否创建备份副本，以及是否在预设间隔内自动保存文件。
 
 自动保存功能是确保更改定期保存的好方法，可以防止因崩溃或停电导致的灾难。
 
-## 字体与颜色 (Font & Colors)
+### 字体与颜色 (Font & Colors)
 
 `Font & Colors` 标签页允许你配置（意不意外地）两个项目：
 
-*   **字体 (Font)**：允许你选择 `Monospace 10` 作为默认字体，或从对话框中选择自定义的字体和字体大小。
-*   **配色方案 (Color Scheme)**：允许你选择用于文本、背景、选中文本和选择颜色的默认配色方案，或为每个类别选择自定义颜色。
+* **字体 (Font)**：允许你选择 `Monospace 10` 作为默认字体，或从对话框中选择自定义的字体和字体大小。
+* **配色方案 (Color Scheme)**：允许你选择用于文本、背景、选中文本和选择颜色的默认配色方案，或为每个类别选择自定义颜色。
 
 `gedit` 的默认颜色通常与桌面选择的标准 GNOME 桌面主题匹配。这些颜色将更改以匹配你为桌面选择方案。
 
-## 插件 (Plug-ins)
+### 插件 (Plug-ins)
 
 `Plugins` 标签页提供了对 `gedit` 中用插件的控制。插件是独立的程序，可以与 `gedit` 交互提供额外功能。`Plugins` 标签页见图 9.14。
 
-图 9.14 `gedit` 插件偏好设置
+### 图 9.14 `gedit` 插件偏好设置
 
 ![](img/00059.jpg)
 
 `gedit` 有多个插件可用，但并非所有插件都默认安装。表 9.4 描述了目前 `gedit` 中可用的插件。
 
-表 9.4 `gedit` 插件
+### 表 9.4 `gedit` 插件
 
 | 插件 | 描述 |
 | :--- | :--- |
-| Change Case | 更改选中文本的大小写 |
-| Document Statistics | 报告单词、行数、字符和非空格字符的数量 |
-| External Tools | 在编辑器中提供一个 shell 环境以执行命令和脚本 |
-| File Browser Pane | 提供一个简单的文件浏览器，使选择文件进行编辑更加容易 |
-| Insert Date/Time | 在当前光标位置插入多种格式的当前日期和时间 |
-| Modelines | 在编辑器窗口底部提供 emacs 风格的消息行 |
-| Python Console | 在编辑器窗口底部提供一个交互式控制台，用于使用 Python 语言输入命令 |
-| Quick Open | 直接在 `gedit` 编辑窗口中打开文件 |
-| Snippets | 允许你存储常用的文本片段，以便在文本任何地方轻松检索 |
-| Sort | 快速排序整个文件或选中文本 |
-| Spell Checker | 为文本文件提供字典拼写检查 |
-| Tag List | 提供一个常用字符串列表，你可以轻松地将其输入文本中 |
+| `Change Case` | 更改选中文本的大小写 |
+| `Document Statistics` | 报告单词、行数、字符和非空格字符的数量 |
+| `External Tools` | 在编辑器中提供一个 shell 环境以执行命令和脚本 |
+| `File Browser Pane` | 提供一个简单的文件浏览器，使选择文件进行编辑更加容易 |
+| `Insert Date/Time` | 在当前光标位置插入多种格式的当前日期和时间 |
+| `Modelines` | 在编辑器窗口底部提供 emacs 风格的消息行 |
+| `Python Console` | 在编辑器窗口底部提供一个交互式控制台，用于使用 Python 语言输入命令 |
+| `Quick Open` | 直接在 `gedit` 编辑窗口中打开文件 |
+| `Snippets` | 允许你存储常用的文本片段，以便在文本任何地方轻松检索 |
+| `Sort` | 快速排序整个文件或选中文本 |
+| `Spell Checker` | 为文本文件提供字典拼写检查 |
+| `Tag List` | 提供一个常用字符串列表，你可以轻松地将其输入文本中 |
 
 已启用的插件会在名称旁边的复选框中显示勾选。某些插件（例如 `External Tools` 插件）是默认启用的。
-
-
-
 
 到目前为止，你已经了解如何使用 shell 的命令行界面（CLI）提示符来输入命令并查看命令结果。shell 脚本的关键在于能够输入多个命令并处理每个命令的结果，甚至可能将一个命令的结果传递给另一个命令。shell 允许你将命令组合成单个步骤。
 
 如果你想一起运行两个命令，可以在同一行提示符上输入它们，并用分号隔开：
 
-```
+```bash
 $ date ; who
+
 Mon Feb 21 15:36:09 EST 2011
+
 Christine tty2           2011-02-21 15:26
+
 Samantha tty3           2011-02-21 15:26
+
 Timothy  tty1           2011-02-21 15:26
+
 user     tty7           2011-02-19 14:03 (:0)
+
 user     pts/0          2011-02-21 15:21 (:0.0)
+
 $
 ```
 
@@ -4538,7 +4642,7 @@ $
 
 在创建 shell 脚本文件时，你必须在文件的第一行指定你正在使用的 shell。其格式如下：
 
-```
+```bash
 #!//bin/bash
 ```
 
@@ -4546,10 +4650,13 @@ $
 
 在指定 shell 后，命令被输入到文件的每一行，并跟一个回车。如前所述，可以使用井号添加注释。示例所示：
 
-```
+```bash
 #!/bin/bash
+
 # 此脚本显示日期和当前登录的用户
+
 date
+
 who
 ```
 
@@ -4561,26 +4668,31 @@ who
 
 如果你现在尝试运行该文件，你会有些失望地看到这个：
 
-```
+```bash
 $ test1
+
 bash: test1: command not found
+
 $
 ```
 
 要跨越第一个障碍是让 `bash` shell 找到你的脚本文件。如果你还记得第 5 章，shell 使用一个名为 `PATH` 的环境变量来查找命令。快速查看 `PATH` 环境变量就可以发现我们的问题：
 
-```
+```bash
 $ echo $PATH
+
 /usr/kerberos/sbin:/usr/kerberos/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/home/user/bin $
 ```
 
-`PATH` 环境变量被设置为仅在少数几个目录中查找命令。为了让 shell 找到 `test1` 脚本，我们需要做两件事之一：
 
-*   将我们 shell 脚本文件所在的目录添加到 `PATH` 环境变量中。
-*   在提示符中使用绝对或相对路径来引用我们的 shell 脚本文件。
+
+`PATH` 环境变量被设置为仅在少数几个目录中查找命令。为了让 shell 找到`test1`脚本，我们需要做两件事之一：
+
+* 将我们 shell 脚本文件所在的目录添加到`PATH`环境变量中。
+* 在提示符中使用绝对或相对路径来引用我们的 shell 脚本文件。
 
 > **提示**
-> 某些 Linux 发行版会将 `$HOME/bin` 目录添加到 `PATH` 环境变量。这在每个用户的 `HOME` 目录中创建一个空间，用于存放 shell 可以找到并执行的文件。
+> 某些 Linux 发行版会将`$HOME/bin`目录添加到`PATH`环境变量。这在每个用户的`HOME`目录中创建一个空间，用于存放 shell 可以找到并执行的文件。
 
 对于本示例，我们将使用第二种方法告诉 shell 脚本文件的具体位置。记住，要引用当前目录下的文件，你可以在 shell 中使用点操作符：
 
@@ -4598,9 +4710,9 @@ $ ls -l test1
 $
 ```
 
-当创建新的 `test1` 文件时，`umask` 值决定了新文件的默认权限设置。由于 `umask` 变量设置为 022（参见第 6 章），系统创建文件时仅为文件所有者赋予了读/写权限。
+当创建新的`test1`文件时，`umask`值决定了新文件的默认权限设置。由于`umask`变量设置为 022（参见第 6 章），系统创建文件时仅为文件所有者赋予了读/写权限。
 
-下一步是使用 `chmod` 命令赋予文件所有者执行文件的权限（参见第 6 章）：
+下一步是使用`chmod`命令赋予文件所有者执行文件的权限（参见第 6 章）：
 
 ```
 $ chmod u+x test1
@@ -4616,7 +4728,7 @@ $
 
 ## 显示消息
 
-大多数 shell 命令都会产生自己的输出。然而，有时你可能想在脚本中添加自己的文本。你可以通过 `echo` 命令来实现这一点。`echo` 命令可以显示简单的字符串。但是，如果你在字符串内部使用引号，有时可能会变得棘手。
+大多数 shell 命令都会产生自己的输出。然而，有时你可能想在脚本中添加自己的文本。你可以通过`echo`命令来实现这一点。`echo`命令可以显示简单的字符串。但是，如果你在字符串内部使用引号，有时可能会变得棘手。
 
 你可以使用双引号或单引号来界定字符串。如果你在字符串内部使用它们，你需要使用一种类型和另一种类型来界定：
 
@@ -4625,7 +4737,7 @@ $ echo "This is a test"
 $ echo ‘scripting is easy’
 ```
 
-现在所有的引号在输出中都正常显示了。你可以在 shell 脚本中任何需要显示的地方添加 `echo` 语句：
+现在所有的引号在输出中都正常显示了。你可以在 shell 脚本中任何需要显示的地方添加`echo`语句：
 
 ```
 $ cat test1
@@ -4639,7 +4751,8 @@ who
 
 当你运行此脚本时，它产生以下内容：
 
-```$ ./test1
+```
+$ ./test1
 The time and date are:
 Mon Feb 21 15:41:13 EST 2011
 Let's see who's logged into the system:
@@ -4651,17 +4764,13 @@ user     pts/0          2011-02-21 15:21 (:0.0)
 $
 ```
 
-这看起来很不错，但如果你想在命令输出的同一行 `echo` 文本字符串呢？你可以为 `echo` 语句使用 `-n` 参数来实现这一点。只需将第一个 `echo` 语句行改为如下：
+这看起来很不错，但如果你想在命令输出的同一行`echo`文本字符串呢？你可以为`echo`语句使用`-n`参数来实现这一点。只需将第一个`echo`语句行改为如下：
 
 ```
 echo -n "The time and date are: "
 ```
 
-
-
-
-
-你需要在字符串周围使用引号，以确保输出的字符串末尾有一个空格。命令的输出从字符串输出停止的地方恰好开始。现在的输出看起来像像所示：
+你需要在字符串周围使用引号，以确保输出的字符串末尾有一个空格。命令的输出从字符串输出停止的地方恰好开始。现在的输出看起来像所示：
 
 ```
 $ ./test1
@@ -4675,17 +4784,17 @@ user     pts/0          2011-02-21 15:21 (:0.0)
 $
 ```
 
-完美！`echo` 命令是 shell 脚本中与用户交互的关键部分。你会发现在自己在很多情况下都会使用它，特别是当你想显示脚本变量的值时。让我们接下来来看这一点。
+完美！`echo`命令是 shell 脚本中与用户交互的关键部分。你会发现在自己在很多情况下都会使用它，特别是当你想显示脚本变量的值时。让我们接下来来看这一点。
 
 ## 使用变量
 
 仅仅在 shell 脚本中运行单个命令是有用的，但它也有其局限性。通常你希望在 shell 命令中加入其他数据来处理信息。你可以通过使用变量来实现。变量允许你在 shell 脚本临时存储信息，供脚本中的其他命令使用。本节将介绍如何在 shell 脚本中使用变量。
 
-## 环境变量
+### 环境变量
 
 你已经看到一种 Linux 变量在运行了。第 5 章描述了 Linux 系统中可用的环境变量。你也可以从 shell 脚本访问这些值。
 
-shell 维护着用于跟踪特定系统信息的环境变量，例如系统名称、登录系统的用户名、用户的系统 ID（称为 `UID`）、用户的默认主目录以及 shell 查找程序时使用的搜索路径。你可以使用 `set` 命令显示可用活动环境变量的完整列表：
+shell 维护着用于跟踪特定系统信息的环境变量，例如系统名称、登录系统的用户名、用户的系统 ID（称为`UID`）、用户的默认主目录以及 shell 查找程序时使用的搜索路径。你可以使用`set`命令显示可用活动环境变量的完整列表：
 
 ```
 $ set
@@ -4704,7 +4813,7 @@ LOGNAME=Samantha
 ...
 ```
 
-你可以通过在环境变量名称前加上美元符号 `$` 来在脚本内部调用这些环境变量。下面的脚本演示了这一点：
+你可以通过在环境变量名称前加上美元符号`$`来在脚本内部调用这些环境变量。下面的脚本演示了这一点：
 
 ```bash
 $ cat test2
@@ -4716,7 +4825,7 @@ echo HOME: $HOME
 $
 ```
 
-`$USER`、`$UID` 和 `$HOME` 环境变量用于显示有关登录用户的相关信息。输出应该类似于：
+`$USER`、`$UID`和`$HOME`环境变量用于显示有关登录用户的相关信息。输出应该类似于：
 
 ```
 $chmod u+x test2
@@ -4727,14 +4836,14 @@ HOME: /home/Samantha
 $ $
 ```
 
-注意，当运行脚本时，`echo` 命令中的环境变量会被替换为它们当前的值。另外请注意，我们能够在第一个字符串的双引号内放置 `$USER` 变量，且 shell 脚本仍然能够识别出我们的意思。然而，使用这种方法也有一个缺点。看看这个例子中发生的情况：
+注意，当运行脚本时，`echo`命令中的环境变量会被替换为它们当前的值。另外请注意，我们能够在第一个字符串的双引号内放置`$USER`变量，且 shell 脚本仍然能够识别出我们的意思。然而，使用这种方法也有一个缺点。看看这个例子中发生的情况：
 
 ```
 $ echo “The cost of the item is $15”
 The cost of the item is 5
 ```
 
-这显然不是预期的。每当脚本在引号内看到美元符号时，它都会认为你正在引用一个变量。在这个例子中，脚本尝试显示变量 `$1`（它是未定义的），然后是数字 `5`。要显示实际的美元符号，必须在它前面加上一个反斜杠字符：
+这显然不是预期的。每当脚本在引号内看到美元符号时，它都会认为你正在引用一个变量。在这个例子中，脚本尝试显示变量`$1`（它是未定义的），然后是数字`5`。要显示实际的美元符号，必须在它前面加上一个反斜杠字符：
 
 ```
 $ echo “The cost of the item is \$15”
@@ -4743,16 +4852,16 @@ The cost of the item is $15
 
 这样好多了。反斜杠允许 shell 脚本将美元符号解释为实际的美元符号而不是变量。下一节将介绍如何在脚本中创建自己的变量。
 
-> Note
-> 你可能还会看到使用 `${variable}` 格式引用的变量。变量名周围额外的括号通常用于帮助从美元符号中识别变量名。
+> **注意**
+> 你可能还会看到使用`${variable}`格式引用的变量。变量名周围额外的括号通常用于帮助从美元符号中识别变量名。
 
-## 用户变量
+### 用户变量
 
 除了环境变量，shell 脚本还允许你在脚本内部设置和使用自己的变量。设置变量允许你临时存储数据并在整个脚本中使用它，使得 shell 脚本更像一个真正的计算机程序。
 
-用户变量可以是任何最多 20 个字母、数字或下划线字符的文本字符串。用户变量区分大小写，因此变量 `Var1` 与变量 `var1` 不同。这个小规则经常让初学者脚本编程师陷入麻烦。
+用户变量可以是任何最多 20 个字母、数字或下划线字符的文本字符串。用户变量区分大小写，因此变量`Var1`与变量`var1`不同。这个小规则经常让初学者脚本编程师陷入麻烦。
 
-使用等号 `=` 给用户变量赋值。变量、等号和值之间不能出现空格（这是初学者另一个容易出错的地方）。以下是给用户变量赋值的几个示例：
+使用等号`=`给用户变量赋值。变量、等号和值之间不能出现空格（这是初学者另一个容易出错的地方）。以下是给用户变量赋值的几个示例：
 
 ```
 var1=10
@@ -4800,7 +4909,7 @@ echo The resulting value is $value2
 $
 ```
 
-当你在赋值语句中使用 `value1` 变量的值时，必须仍然使用美元符号。这段代码产生以下输出：
+当你在赋值语句中使用`value1`变量的值时，必须仍然使用美元符号。这段代码产生以下输出：
 
 ```
 $ chmod u+x test4
@@ -4809,7 +4918,7 @@ The resulting value is 10
 $
 ```
 
-如果你忘记了美元符号，并将 `value2` 赋值行写成如下：
+如果你忘记了美元符号，并将`value2`赋值行写成如下：
 
 ```
 value2=value1
@@ -4825,16 +4934,16 @@ $
 
 没有美元符号，shell 会将变量名解释为普通文本字符串，这很可能不是你想要的。
 
-## 反引号（Backtick）
+### 反引号（Backtick）
 
-shell 脚本最有用的特性之一是那个不起道的引号字符，在 Linux 世界中通常被称为反引号（` `）。注意——这不是你习惯用于字符串的普通引号。由于它在 shell 脚本中并不经常使用，你可能甚至不知道在键盘的哪里找到它。你应该习惯一下它，因为它是许多 shell 脚本的关键组件。提示：在美式键盘上，它通常与波浪符号（~）在同一个键上。
+shell 脚本最有用的特性之一是那个不起道的引号字符，在 Linux 世界中通常被称为反引号（`` ` ``）。注意——这不是你习惯用于字符串的普通引号。由于它在 shell 脚本中并不经常使用，你可能甚至不知道在键盘的哪里找到它。你应该习惯一下它，因为它是许多 shell 脚本的关键组件。提示：在美式键盘上，它通常与波浪符号（`~`）在同一个键上。
 
 反引号允许你将 shell 命令的输出赋值给变量。虽然这看起来没什么，但它是脚本编程中的一个主要构建模块。
 
 你必须用反引号包裹整个命令行行：
 
 ```
-testing='date’
+testing=`date`
 ```
 
 shell 会运行反引号内的命令并将输出赋值给变量。这里有一个使用普通 shell 命令输出创建变量的示例：
@@ -4843,12 +4952,12 @@ shell 会运行反引号内的命令并将输出赋值给变量。这里有一�
 $ cat test5
 #!/bin/bash
 # using the backtick character
-testing='date’
+testing=`date`
 echo “The date and time are: ” $testing
 $
 ```
 
-变量 `testing` 接收来自 `date` 命令的输出，并在 `echo` 语句中使用它进行显示。运行 shell 脚本产生以下输出：
+变量`testing`接收来自`date`命令的输出，并在`echo`语句中使用它进行显示。运行 shell 脚本产生以下输出：
 
 ```
 $ chmod u+x test5
@@ -4857,10 +4966,7 @@ The date and time are:  Mon Jan 31 20:23:25 EDT 2011
 $
 ```
 
-
-
-
-在这个例子中并没有那么有趣了（你完全可以简单地将命令放在 `echo` 语句中），但一旦你将命令输出捕获到变量中，你就可以对其进行任何操作。
+在这个例子中并没有那么有趣了（你完全可以简单地将命令放在`echo`语句中），但一旦你将命令输出捕获到变量中，你就可以对其进行任何操作。
 
 这里有一个常用的示例，展示了如何使用反引号获取当前日期并用它在脚本创建一个唯一文件名：
 
@@ -4871,7 +4977,7 @@ today=`date +%y%m%d`
 ls /usr/bin -al > log.$today
 ```
 
-`today` 变量被赋值为格式化后的日期命令的输出。这是一种用于日志文件名提取日期信息的常用技术。`+%y%m%d` 格式指示 `date` 命令以两位数的年份、月份和日期显示日期：
+`today`变量被赋值为格式化后的日期命令的输出。这是一种用于日志文件名提取日期信息的常用技术。`+%y%m%d`格式指示`date`命令以两位数的年份、月份和日期显示日期：
 
 ```bash
 $ date +%y%m%d
@@ -4885,13 +4991,13 @@ $
 -rw-r--r--    1 user      user           769 Jan 31 10:15 log.110131
 ```
 
-日志文件出现在目录中，文件名使用了 `$today` 变量的值。日志文件的内容是 `/usr/bin` 目录的列表。如果第二天运行脚本，日志文件名将 `log.110201`，从而为新的一天创建一个新文件。
+日志文件出现在目录中，文件名使用了`$today`变量的值。日志文件的内容是`/usr/bin`目录的列表。如果第二天运行脚本，日志文件名将`log.110201`，从而为新的一天创建一个新文件。
 
-# 输入和输出重定向
+## 输入和输出重定向
 
 有时希望保存命令的输出，而不仅仅是将其显示在显示器上。bash shell 提供了不同的运算符，允许你将命令的输出`重定向`到其他位置（例如文件）。重定向可以用于输入，也可以用于输出，将文件重定向到命令作为输入。本节介绍了在 shell 脚本中使用重定向时需要的操作。
 
-## 输出重定向
+### 输出重定向
 
 最基本的重定向是将命令的输出发送到文件。bash shell 使用大于号（`>`）来实现此操作：
 
@@ -4910,7 +5016,7 @@ Thu Feb 10 17:56:58 EDT 2011
 $
 ```
 
-重定向运算符创建了文件 `test6`（使用默认的 `umask` 设置）并将 `date` 命令的输出重定向到 `test6` 文件。如果输出文件已存在，重定向运算符将用新数据覆盖现有文件：
+重定向运算符创建了文件`test6`（使用默认的`umask`设置）并将`date`命令的输出重定向到`test6`文件。如果输出文件已存在，重定向运算符将用新数据覆盖现有文件：
 
 ```bash
 $ who > test6
@@ -4919,7 +5025,7 @@ user      pts/0    Feb 10 17:55
 $
 ```
 
-现在 `test6` 文件的内容包含了 `who` 命令的输出。
+现在`test6`文件的内容包含了`who`命令的输出。
 
 有时，你可能不需要覆盖文件内容，而是将命令的输出追加到现有文件中，例如当你正在创建一个日志文件来记录系统上的操作时。在这种情况下，你可以使用双大于号（`>>`）来追加数据：
 
@@ -4931,9 +5037,9 @@ Thu Feb 10 18:02:14 EDT 2011
 $
 ```
 
-`test6` 文件仍然包含之前处理的 `who` 命令的原始数据——现在它还包含了 `date` 命令的新输出。
+`test6`文件仍然包含之前处理的`who`命令的原始数据——现在它还包含了`date`命令的新输出。
 
-## 输入重定向
+### 输入重定向
 
 输入重定向是输出重定向的反方向。输入重定向不是获取命令输出并重定向到文件，而是获取文件内容并重定向到命令。
 
@@ -4945,7 +5051,7 @@ command < inputfile
 
 记住此点的简单方法是：命令始终列在命令行最前面，而重定向符号“指向”数据流的方向。小于号表示数据从输入文件流向命令。
 
-这是一个使用 `wc` 命令进行输入重定向的示例：
+这是一个使用`wc`命令进行输入重定向的示例：
 
 ```bash
 $ wc < test6
@@ -4953,24 +5059,23 @@ $ wc < test6
 $
 ```
 
+
+
 `wc` 命令提供数据中文本的计数。默认情况下，它产生三个值：
 
 *   文本中的行数
 *   文本中的单词数
 *   文本中的字节数
 
-通过将文本文件重定向到 `wc` 命令，你可以快速统计文件的行数、单词和字节数。示例显示 `test6` 文件中有 2 行、11 个单词和 60 个字节。
+通过将文本文件重定向到`wc`命令，你可以快速统计文件的行数、单词和字节数。示例显示`test6`文件中有 2 行、11 个单词和 60 个字节。
 
 还有另一种输入重定向方法，称为“内联输入重定向”。这种方法允许你在命令行上指定输入重定向的数据，而不是在文件中指定。初看起来这可能有些奇怪，但这种过程有几个应用（例如稍后在“执行数学运算”章节中所示）。
 
 内联输入重定向符号是双小于号（`<<`）。在此之外，你必须在命令行中指定输入重定向的数据。
 
-
-
-
 不要将管道（piping）认为是接连运行两个命令。Linux 系统实际上是同时运行这两个命令，并在系统内部将它们连接起来。当第一个命令产生输出时，它会立即发送到第二个命令。这不需要使用中间文件或缓冲区来传输数据。
 
-现在，使用管道你可以轻松将 `rpm` 命令的输出直接 `pipe` 到 `sort` 命令以生成结果：
+现在，使用管道你可以轻松将`rpm`命令的输出直接`pipe`到`sort`命令以生成结果：
 
 ```bash
 $ rpm -qa | sort
@@ -4989,15 +5094,17 @@ abrt-plugin-logger-1.1.14-1-fc14.i686
 abrt-plugin-runapp-1.1.14-1-fc14.i686
 acl-2.2.49-8-fc14.i686
 ...
-除非你是一个（快速）读者，否则可能跟不上该命令生成的输出。因为管道功能是实时的，只要 `rpm` 命令产生数据，`sort` 命令就开始忙于排序它。当 `rpm` 命令完成输出时，`sort` 命令已经完成了排序并在显示器上显示。
+```
 
-命令中管道的数量没有限制。你可以继续将命令的输出管道到其他命令以完善你的操作。在这种情况下，由于 `sort` 命令的输出速度非常快，你可以使用分页命令（如 `less` 或 `more`）来强制输出在每屏停止：
+除非你是一个（快速）读者，否则可能跟不上该命令生成的输出。因为管道功能是实时的，只要`rpm`命令产生数据，`sort`命令就开始忙于排序它。当`rpm`命令完成输出时，`sort`命令已经完成了排序并在显示器上显示。
+
+命令中管道的数量没有限制。你可以继续将命令的输出管道到其他命令以完善你的操作。在这种情况下，由于`sort`命令的输出速度非常快，你可以使用分页命令（如`less`或`more`）来强制输出在每屏停止：
 
 ```bash
 $ rpm -qa | sort | more
 ```
 
-这条命令运行 `rpm` 命令，将其输出管道到 `sort` 命令，然后将该输出管道到 `more` 命令进行显示，每屏信息停止。这让你在继续之前暂停并阅读显示内容，如图 10.1 使用管道将数据发送到 more 命令![](img/0006.jpg)
+这条命令运行`rpm`命令，将其输出管道到`sort`命令，然后将该输出管道到`more`命令进行显示，每屏信息停止。这让你在继续之前暂停并阅读显示内容，如图 10.1 使用管道将数据发送到 more 命令![](img/0006.jpg)
 
 为了更高级的操作，你可以配合重定向使用管道将输出保存到文件：
 
@@ -5021,13 +5128,13 @@ acl-2.2.49-8-fc14.i686
 ...
 ```
 
-如预期的，`rpm.list` 文件中的数据已经排序好了！
+如预期的，`rpm.list`文件中的数据已经排序好了！
 
-管道流行的用法之一是将产生长输出的命令管道到 `more` 命令。这在使用 `ls` 命令时非常常见，如图 10.2 所示。
+管道流行的用法之一是将产生长输出的命令管道到`more`命令。这在使用`ls`命令时非常常见，如图 10.2 所示。
 
 图 10.2 使用 more 命令配合 ls 命令![](img/00017.jpg)
 
-`ls -l` 命令产生目录下所有文件的详细列表。对于包含大量文件的目录，可以通过管道输出到 `more` 命令强制输出在每屏停止。
+`ls -l`命令产生目录下所有文件的详细列表。对于包含大量文件的目录，可以通过管道输出到`more`命令强制输出在每屏停止。
 
 ## 执行数学运算
 
@@ -5042,34 +5149,34 @@ $ expr 1 + 5
 6
 ```
 
-`expr` 命令识别几种不同的数学和字符串运算符，如表 10.1 所示。
+`expr`命令识别几种不同的数学和字符串运算符，如表 10.1 所示。
 
 表 10.1 expr 运算符
 
 | 运算符 | 说明 |
 | :--- | :--- |
-| `ARG1 | ARG2` | 如果两个参数都不为空或零，则返回 `ARG2`。 |
+| `ARG1 \| ARG2` | 如果两个参数都不为空或零，则返回`ARG2`。 |
 | `ARG1 & ARG2` | 如果两个参数都不为空或零，则返回 0。 |
-| `ARG1 < ARG2` | 如果 `ARG1` 小于 `ARG2`，则返回 1。 |
-| `ARG1 <= ARG2` | 如果 `ARG1` 小于或等于 `ARG2`，则返回 1。 |
-| `ARG1 = ARG2` | 如果 `ARG1` 等于 `ARG2`，则返回 1。 |
-| `ARG1 != ARG2` | 如果 `ARG1` 不等于 `ARG2`，则返回 1。 |
-| `ARG1 >= ARG2` | 如果 `ARG1` 大于或等于 `ARG2`，则返回 1。 |
-| `ARG1 > ARG2` | 如果 `ARG1` 大于 `ARG2`，则返回 1。 |
-| `ARG1 + ARG2` | 返回 `ARG1` 和 `ARG2` 的和。 |
-| `ARG1 - ARG2` | 返回 `ARG1` 和 `ARG2` 的差。 |
-| `ARG1 * ARG2` | 返回 `ARG1` 和 `ARG2` 的乘积。 |
-| `ARG1 / ARG2` | 返回 `ARG1` 除以 `ARG2` 的商。 |
-| `ARG1 % ARG2` | 返回 `ARG1` 除以 `ARG2` 的余数。 |
-| `ARG1 | ARG2` | 返回 `ARG1` 和 `ARG2` 的按位或。 |
-| `ARG1 & ARG2` | 返回 `ARG1` 和 `ARG2` 的按位与。 |
-| `ARG1 ^ ARG2` | 返回 `ARG1` 和 `ARG2` 的按位异或。 |
-| `ARG1 << ARG2` | 返回 `ARG1` 向左移动 `ARG2` 位。 |
-| `ARG1 >> ARG2` | 返回 `ARG1` 向右移动 `ARG2` 位。 |
+| `ARG1 < ARG2` | 如果`ARG1`小于`ARG2`，则返回 1。 |
+| `ARG1 <= ARG2` | 如果`ARG1`小于或等于`ARG2`，则返回 1。 |
+| `ARG1 = ARG2` | 如果`ARG1`等于`ARG2`，则返回 1。 |
+| `ARG1 != ARG2` | 如果`ARG1`不等于`ARG2`，则返回 1。 |
+| `ARG1 >= ARG2` | 如果`ARG1`大于或等于`ARG2`，则返回 1。 |
+| `ARG1 > ARG2` | 如果`ARG1`大于`ARG2`，则返回 1。 |
+| `ARG1 + ARG2` | 返回`ARG1`和`ARG2`的和。 |
+| `ARG1 - ARG2` | 返回`ARG1`和`ARG2`的差。 |
+| `ARG1 * ARG2` | 返回`ARG1`和`ARG2`的乘积。 |
+| `ARG1 / ARG2` | 返回`ARG1`除以`ARG2`的商。 |
+| `ARG1 % ARG2` | 返回`ARG1`除以`ARG2`的余数。 |
+| `ARG1 \| ARG2` | 返回`ARG1`和`ARG2`的按位或。 |
+| `ARG1 & ARG2` | 返回`ARG1`和`ARG2`的按位与。 |
+| `ARG1 ^ ARG2` | 返回`ARG1`和`ARG2`的按位异或。 |
+| `ARG1 << ARG2` | 返回`ARG1`向左移动`ARG2`位。 |
+| `ARG1 >> ARG2` | 返回`ARG1`向右移动`ARG2`位。 |
 
 ### 使用括号
 
-bash shell 包含了 `expr` 命令以保持与 Bourne shell 的兼容；然而，它也提供了一种更简单的方法来执行数学表达式。在 bash 中，给变量赋值数学值时，你可以使用美元符号和方括号来封装数学表达式（$[ operation ]`）：
+bash shell 包含了`expr`命令以保持与 Bourne shell 的兼容；然而，它也提供了一种更简单的方法来执行数学表达式。在 bash 中，给变量赋值数学值时，你可以使用美元符号和方括号来封装数学表达式（`$[ operation ]`）：
 
 ```bash
 $ var1=$[1 + 5]
@@ -5080,7 +5187,7 @@ $ echo $var2
 12
 ```
 
-使用括号让 shell 数学比使用 `expr` 命令简单得多。这种技术也适用于 脚本：
+使用括号让 shell 数学比使用`expr`命令简单得多。这种技术也适用于脚本：
 
 ```bash
 $ cat test7
@@ -5099,9 +5206,6 @@ $ chmod u+x test7
 $ ./test7
 The final result is 500
 ```
-
-
-
 
 此外，请注意，在使用方括号方法计算方程时，你不需要担心乘法符号或其他任何字符会被 shell 误解。shell 知道它不是通配符，因为它位于方括号内部。
 
@@ -5129,11 +5233,12 @@ $
 bash shell 的数学运算符仅支持整数算术。如果你正尝试进行任何现实世界的数学计算，这是一个巨大的局限性。
 
 > 注意
+>
 > > z shell (zsh) 提供了完整的浮点算术运算。如果你在 shell 脚本中需要浮点计算，可以考虑查看 z shell（在第 22 章讨论）。
 
 ## 浮点数解决方案
 
-有多种方法可以克服 bash 的整数限制。最流行的解决方案是使用 bash 内置的计算器，名为 `bc`。
+有多种方法可以克服 bash 的整数限制。最流行的解决方案是使用 bash 内置的计算器，名为`bc`。
 
 ### bc 基础
 
@@ -5141,12 +5246,12 @@ bash 计算器实际上是一种编程语言，它允许你在命令行输入浮
 
 * 数字（整数和浮点数）
 * 变量（简单变量和数组）
-* 注释（以 # 号开头的行或 C 语言的 `/* */` 成对符号）
+* 注释（以 # 号开头的行或 C 语言的`/* */`成对符号）
 * 表达式
-* 编程语句（如 `if-then` 语句）
+* 编程语句（如`if-then`语句）
 * 函数
 
-你可以使用 `bc` 命令从 shell 提示符访问 bash 计算器：
+你可以使用`bc`命令从 shell 提示符访问 bash 计算器：
 
 ```bash
 $ bc
@@ -5162,9 +5267,9 @@ quit
 $
 ```
 
-示例首先输入表达式 `12 * 5.4`。bash 计算器返回答案。随后输入计算器的每个表达式都会被求值并显示结果。要退出 bash 计算器，必须输入 `quit`。
+示例首先输入表达式`12 * 5.4`。bash 计算器返回答案。随后输入计算器的每个表达式都会被求值并显示结果。要退出 bash 计算器，必须输入`quit`。
 
-浮点算术由一个名为 `scale` 的内置变量控制。你必须将此值设置为答案中所需的的小位数，否则你无法得到想要的结果：
+浮点算术由一个名为`scale`的内置变量控制。你必须将此值设置为答案中所需的的小位数，否则你无法得到想要的结果：
 
 ```bash
 $ bc -q
@@ -5177,7 +5282,7 @@ quit
 $
 ```
 
-`scale` 变量的默认值为零。在设置 `scale` 值之前，bash 计算器提供保留零位小数的答案。当你将 `scale` 变量值设置为四后，bash 计算器将显示四位小数的答案。`-q` 命令行参数会抑制 bash 计算器的冗欢迎信息。
+`scale`变量的默认值为零。在设置`scale`值之前，bash 计算器提供保留零位小数的答案。当你将`scale`变量值设置为四后，bash 计算器将显示四位小数的答案。`-q`命令行参数会抑制 bash 计算器的冗欢迎信息。
 
 除了普通数字，bash 计算器还能理解变量：
 
@@ -5193,15 +5298,15 @@ quit
 $
 ```
 
-一旦定义了变量值，你就可以在整个 bash 计算器会话中使用该变量。`print` 语句允许你打印变量和数字。
+一旦定义了变量值，你就可以在整个 bash 计算器会话中使用该变量。`print`语句允许你打印变量和数字。
 
 ### 在脚本中使用 bc
 
-现在你可能想知道 bash 计算器如何帮助你在 shell 脚本中进行浮点运算。你还记得你的朋友反引号字符吗？是的，你可以使用反引号运行 `bc` 命令并将输出赋值给变量！使用它的基本格式是：
+现在你可能想知道 bash 计算器如何帮助你在 shell 脚本中进行浮点运算。你还记得你的朋友反引号字符吗？是的，你可以使用反引号运行`bc`命令并将输出赋值给变量！使用它的基本格式是：
 
 `variable='echo "options; expression" | bc'`
 
-第一部分 `options` 允许你设置变量。如果你需要设置多个变量，请使用分号将它们分开。`expression` 参数定义了使用 `bc` 求值的数学表达式。这里有一个在脚本中执行此操作的示例：
+第一部分`options`允许你设置变量。如果你需要设置多个变量，请使用分号将它们分开。`expression`参数定义了使用`bc`求值的数学表达式。这里有一个在脚本中执行此操作的示例：
 
 ```bash
 $ cat test9
@@ -5211,7 +5316,7 @@ echo The answer is $var1
 $
 ```
 
-此示例将 `scale` 变量设置为四小数，然后为表达式指定了特定的计算。运行此脚本会产生以下输出：
+此示例将`scale`变量设置为四小数，然后为表达式指定了特定的计算。运行此脚本会产生以下输出：
 
 ```bash
 $ chmod u+x test9
@@ -5232,7 +5337,7 @@ echo The answer for this is $var3
 $
 ```
 
-脚本定义了两个变量，这些变量在发送到 `bc` 命令的表达式中使用。记得使用美元符号 `$` 表示变量的值而不是变量本身。该脚本的输出如下：
+脚本定义了两个变量，这些变量在发送到`bc`命令的表达式中使用。记得使用美元符号`$`表示变量的值而不是变量本身。该脚本的输出如下：
 
 ```bash
 $ ./test10
@@ -5255,7 +5360,7 @@ $
 
 这种方法对于短计算非常良好，但有时你需要处理更复杂的数字。如果你有不仅仅几个计算，尝试在同一行上列出多个表达式会变得很混乱。
 
-这个问题有一个解决方案。`bc` 命令识别输入重定向，允许你将文件重定向到 `bc` 命令进行处理。然而这也会变得混乱，因为你需要将表达式存储在文件中。
+这个问题有一个解决方案。`bc`命令识别输入重定向，允许你将文件重定向到`bc`命令进行处理。然而这也会变得混乱，因为你需要将表达式存储在文件中。
 
 最好的方法是使用输入重定向，它允许直接从命令行重定向数据。在 shell 脚本中，我们将输出赋值给变量：
 
@@ -5265,7 +5370,7 @@ statements
 expressions
 EOF'`
 
-`EOF` 字符串表示内联数据的开始和结束。记得仍然需要反引号将 `bc` 的输出赋值给变量。这里在脚本中使用此方法的示例：
+`EOF`字符串表示内联数据的开始和结束。记得仍然需要反引号将`bc`的输出赋值给变量。这里在脚本中使用此方法的示例：
 
 ```bash
 $ cat test12
@@ -5290,11 +5395,11 @@ $
 
 到目前为止，在我们的示例脚本中，我们结束得相当粗略。当我们完成最后一个命令时，直接结束了脚本。我们有更优雅的方式来完成任务。
 
-每个在 shell 中运行的命令都使用一个 `exit status`（退出状态）来告知 shell 它已完成。退出状态是一个 0 到 255 之间的整数值，由命令在运行结束时传递给 shell。你可以捕获此值并在脚本中使用它。
+每个在 shell 中运行的命令都使用一个`exit status`（退出状态）来告知 shell 它已完成。退出状态是一个 0 到 255 之间的整数值，由命令在运行结束时传递给 shell。你可以捕获此值并在脚本中使用它。
 
 ### 检查退出状态
 
-Linux 提供了特殊变量 `$?`，它存储了上一个执行命令的退出状态值。你必须在想要检查的命令之后立即查看或使用 `$?` 变量。它会变变为 shell 执行的最后一个命令的退出状态：
+Linux 提供了特殊变量`$?`，它存储了上一个执行命令的退出状态值。你必须在想要检查的命令之后立即查看或使用`$?`变量。它会变变为 shell 执行的最后一个命令的退出状态：
 
 ```bash
 $ date
@@ -5303,9 +5408,6 @@ $ echo $?
 0
 $
 ```
-
-
-
 
 按照惯例，成功完成的命令退出状态为零。如果命令带错误完成，则会将一个正整数值赋予退出状态中：
 
@@ -5317,7 +5419,7 @@ $ echo $?
 $
 ```
 
-无效命令返回的退出状态为 `127`。Linux 的错误退出状态码并没有太多的标准。不过，你可以使用一些指南，如表 10.2 所示。
+无效命令返回的退出状态为`127`。Linux 的错误退出状态码并没有太多的标准。不过，你可以使用一些指南，如表 10.2 所示。
 
 ### 表 10.2 Linux 退出状态码
 
@@ -5329,11 +5431,11 @@ $
 | 126 | 命令无法执行 |
 | 127 | 未找到命令 |
 | 128 | 无效的退出参数 |
-| 128+x |  Linux 信号 x 致命错误 |
+| 128+x | Linux 信号 x 致命错误 |
 | 130 | 命令通过 Ctrl+C 终止 |
 | 255 | 退出状态超出范围 |
 
-退出状态值 `126` 表示用户没有设置执行该命令的适当权限：
+退出状态值`126`表示用户没有设置执行该命令的适当权限：
 
 ```
 $ ./myprog.c
@@ -5367,7 +5469,7 @@ $ echo $?
 $
 ```
 
-你可以更改它以返回你自己的退出状态码。`exit` 命令允许你在脚本结束时指定一个退出状态：
+你可以更改它以返回你自己的退出状态码。`exit`命令允许你在脚本结束时指定一个退出状态：
 
 ```
 $ cat test13
@@ -5381,7 +5483,7 @@ exit 5
 $
 ```
 
-当你检查脚本的退出状态时，将得到作为 `exit` 命令参数使用的值：
+当你检查脚本的退出状态时，将得到作为`exit`命令参数使用的值：
 
 ```
 $ chmod u+x test13
@@ -5392,7 +5494,9 @@ $ echo $?
 $
 ```
 
-你也可以在 `exit` 命令的参数中使用变量：
+你也可以在`exit`命令的参数中使用变量：
+
+
 
 ```
 $ cat test14
@@ -5415,7 +5519,7 @@ $ echo $?
 $
 ```
 
-然而，你应该在使用此功能时要小心，因为退出状态码只能到到 `255`。请看这个例子中发生了什么：
+然而，你应该在使用此功能时要小心，因为退出状态码只能到到`255`。请看这个例子中发生了什么：
 
 ```
 $ cat test14b
@@ -5439,56 +5543,60 @@ $ echo $?
 $
 ```
 
-退出状态码被缩小以适应 `0` 到 `255` 的范围。shell 通过使用模运算来实现这一点。一个值的“模”是除法后的余数。结果数字是指定数字除以 `256` 的余数。在 `300`（结果值）的情况下，余数为 `44`，这就是显示的退出状态码。
+退出状态码被缩小以适应`0`到`255`的范围。shell通过使用模运算来实现这一点。一个值的“模”是除法后的余数。结果数字是指定数字除以`256`的余数。在`300`（结果值）的情况下，余数为`44`，这就是显示的退出状态码。
 
-在第 11 章，你将看到如何使用 `if-then` 语句检查命令返回的错误状态，以判断命令是否成功。
+在第11章，你将看到如何使用`if-then`语句检查命令返回的错误状态，以判断命令是否成功。
 
 ## 总结
 
-bash shell 脚本允许你将命令组合成脚本。创建脚本最基本的方法是使用分号分隔命令行上的多个命令。shell 会按顺序执行每个命令，并在显示器上显示每个命令的输出。
+bash shell脚本允许你将命令组合成脚本。创建脚本最基本的方法是使用分号分隔命令行上的多个命令。shell会按顺序执行每个命令，并在显示器上显示每个命令的输出。
 
-你也可以创建一个 shell 脚本文件，将多个命令放在文件中让 shell 按顺序执行。shell 脚本文件必须定义用于运行脚本的 shell。这是通过脚本文件的第一行实现的，使用 `#!` 符号，后跟 shell 的完整路径。
+你也可以创建一个shell脚本文件，将多个命令放在文件中让shell按顺序执行。shell脚本文件必须定义用于运行脚本的shell。这是通过脚本文件的第一行实现的，使用`#!`符号，后跟shell的完整路径。
 
-在 shell 脚本中，你可以通过在变量前使用美元符号来引用环境变量的值。你也可以定义供脚本内部使用的自定义变量，并使用反引号字符赋值甚至赋值命令的输出。通过在变量名前前放置美元符号，可以在脚本中使用变量值。
+在shell脚本中，你可以通过在变量前使用美元符号来引用环境变量的值。你也可以定义供脚本内部使用的自定义变量，并使用反引号字符赋值甚至赋值命令的输出。通过在变量名前前放置美元符号，可以在脚本中使用变量值。
 
-bash shell 允许你从标准行为中重定向命令的输入和输出。你可以使用大于符号后跟捕捉输出的文件名，将任何命令的输出从显示器显示重定向到文件。你可以使用两个大于符号将输出数据追加到现有文件中。小于符号用于将输入重定向到命令。你可以将输入从文件重定向到命令。
+bash shell允许你从标准行为中重定向命令的输入和输出。你可以使用大于符号后跟捕捉输出的文件名，将任何命令的输出从显示器显示重定向到文件。你可以使用两个大于符号将输出数据追加到现有文件中。小于符号用于将输入重定向到命令。你可以将输入从文件重定向到命令。
 
-Linux `pipe` 命令（竖线符号）允许你将一个命令的输出直接重定向到另一个命令的输入。Linux 系统同时运行这两个命令，在不使用任何重定向文件的情况下将第一个命令的输出发送到第二个命令的输入。
+Linux`pipe`命令（竖线符号）允许你将一个命令的输出直接重定向到另一个命令的输入。Linux系统同时运行这两个命令，在不使用任何重定向文件的情况下将第一个命令的输出发送到第二个命令的输入。
 
-bash shell 提供了几种在你的脚本中执行数学运算的方法。`expr` 命令是执行整数运算的简单方法。在 bash shell 中，你还可以通过将方程包含在方括号中并在前面加上美元符号来执行基础数学计算。要执行浮点运算，你需要利用 `bc` 计算器命令，从内联数据重定向输入并将输出存储在用户变量中
+bash shell提供了几种在你的脚本中执行数学运算的方法。`expr`命令是执行整数运算的简单方法。在bash shell中，你还可以通过将方程包含在方括号中并在前面加上美元符号来执行基础数学计算。要执行浮点运算，你需要利用`bc`计算器命令，从内联数据重定向输入并将输出存储在用户变量中
 
-最后，本章讨论了如何在 shell 脚本中使用退出状态。在 shell 中运行的每个命令都会产生一个退出状态。退出状态是一个 `0` 到 `255` 之间的整数值，表示命令是否成功完成，如果没有，原因是什么。退出状态 `0` 表示命令成功完成。你可以在 shell 脚本中使用 `exit` 命令来声明特定的退出状态。
+最后，本章讨论了如何在shell脚本中使用退出状态。在shell中运行的每个命令都会产生一个退出状态。退出状态是一个`0`到`255`之间的整数值，表示命令是否成功完成，如果没有，原因是什么。退出状态`0`表示命令成功完成。你可以在shell脚本中使用`exit`命令来声明特定的退出状态。
 
 # 第 11 章：使用结构化命令
 
 ### 本章
-*   使用 if-then 语句
-*   if-then-else 语句
-*   嵌套 ifs
-*   test 命令
+
+*   使用`if-then`语句
+
+*   `if-then-else`语句
+
+*   嵌套`if`
+
+*   `test`命令
+
 *   复合条件测试
-*   高级 if-then 特性
-*   code 命令
+
+*   高级`if-then`特性
+
+*   `case`命令
+
 *   管理用户账户
 
 ### 使用 if-then 语句
 
-最基本的结构化命令类型是 `if-then` 语句。`if-then` 语句具有以下格式：
+最基本的结构化命令类型是`if-then`语句。`if-then`语句具有以下格式：
 
 ```
-if `command`
+if command
 then
 commands
 fi
 ```
 
+如果你在其他编程语言中使用`if-then`语句，这种格式可能会让你有些困惑。在其他编程语言中，`if`语句后面的对象是一个被求值为`TRUE`（真）或`FALSE`（假）的等式。但这并不是bash shell`if`语句的工作方式。
 
-
-
-
-如果你在其他编程语言中使用 `if-then` 语句，这种格式可能会让你有些困惑。在其他编程语言中，`if` 语句后面的对象是一个被求值为 `TRUE`（真）或 `FALSE`（假）的等式。但这并不是 bash shell `if` 语句的工作方式。
-
-bash shell `if` 语句运行在 `if` 行上定义的命令。如果命令的退出状态（参见第 10 章）为 0（表示命令成功完成），则执行 `then` 部分列出的命令。如果命令的退出状态为任何其他值，则不执行 `then` 部分的命令，bash shell 将继续执行脚本中的下一个命令。
+bash shell `if`语句运行在`if`行上定义的命令。如果命令的退出状态（参见第10章）为`0`（表示命令成功完成），则执行`then`部分列出的命令。如果命令的退出状态为任何其他值，则不执行`then`部分的命令，bash shell将继续执行脚本中的下一个命令。
 
 这里有一个简单的示例来演示这个概念：
 
@@ -5498,11 +5606,11 @@ $ cat test1
 # testing the if statement
 if date
 then
-    echo “it worked”
+    echo "it worked"
 fi
 ```
 
-该脚本在 `if` 行上使用了 `date` 命令。如果命令成功完成，`echo` 语句将显示该文本字符串。当你从命令行运行此脚本时，将得到以下结果：
+该脚本在`if`行上使用了`date`命令。如果命令成功完成，`echo`语句将显示该文本字符串。当你从命令行运行此脚本时，将得到以下结果：
 
 ```bash
 $ ./test1
@@ -5511,7 +5619,7 @@ it worked
 $
 ```
 
-shell 执行了 `if` 行上列出的 `date` 命令。由于退出状态为 0，它还执行了 `then` 部分列出的 `echo` 语句。
+shell执行了`if`行上列出的`date`命令。由于退出状态为`0`，它还执行了`then`部分列出的`echo`语句。
 
 另一个示例：
 
@@ -5521,9 +5629,9 @@ $ cat test2
 # testing a bad command
 if asdfg
 then
-    echo “it did not work”
+    echo "it did not work"
 fi
-echo “we are outside of the if statement”
+echo "we are outside of the if statement"
 $
 $ ./test2
 ./test2: line 3: asdfg: command not found
@@ -5531,9 +5639,9 @@ we are outside of the if statement
 $
 ```
 
-在这个示例中，我们故意在 `if` 语句行中使用了一个无法运行的命令。因为这是一个错误的命令，它会产生一个非零的退出状态，bash shell 跳过了 `then` 部分的 `echo` 语句。同样注意，在 `if` 语句中运行命令时产生的错误信息仍然出现在脚本的输出中。在某些情况下，你可能不希望发生这种情况。第 14 章讨论了如何避免这种情况。
+在这个示例中，我们故意在`if`语句行中使用了一个无法运行的命令。因为这是一个错误的命令，它会产生一个非零的退出状态，bash shell跳过了`then`部分的`echo`语句。同样注意，在`if`语句中运行命令时产生的错误信息仍然出现在脚本的输出中。在某些情况下，你可能不希望发生这种情况。第14章讨论了如何避免这种情况。
 
-`then` 部分并不局限于一个命令。你可以像在 shell 脚本的其他部分一样列出命令。bash shell 将这些命令视为一个块，当 `if` 语句行中的命令返回零退出状态时执行执行所有命令，或者当命令返回非零退出状态时跳过所有命令：
+`then`部分并不局限于一个命令。你可以像在shell脚本的其他部分一样列出命令。bash shell将这些命令视为一个块，当`if`语句行中的命令返回零退出状态时执行执行所有命令，或者当命令返回非零退出状态时跳过所有命令：
 
 ```bash
 $ cat test3
@@ -5547,7 +5655,7 @@ then
 fi
 ```
 
-`if` 语句行使用 `grep` 命令来搜索 `/etc/passwd` 文件，以检查特定的用户名是否正被系统使用。如果存在该登录名的用户，脚本将显示一些文本，然后列出用户 `HOME` 目录下的 bash 文件：
+`if`语句行使用`grep`命令来搜索`/etc/passwd`文件，以检查特定的用户名是否正被系统使用。如果存在该登录名的用户，脚本将显示一些文本，然后列出用户`HOME`目录下的bash文件：
 
 ```bash
 $ ./test3
@@ -5558,32 +5666,35 @@ The files for user rich are:
 $
 ```
 
-然而，如果你将 `testuser` 变量设置为系统上不存在的用户，则什么都不会发生：
+然而，如果你将`testuser`变量设置为系统上不存在的用户，则什么都不会发生：
 
 ```bash
 $ ./test3
 $
 ```
 
-这并没有什么特别有趣的。如果我们能显示一条小消息，说明在系统中未找到该用户名，那就好了。嗯，我们可以使用 `if-then` 语句的另一个功能来实现这一点。
+这并没有什么特别有趣的。如果我们能显示一条小消息，说明在系统中未找到该用户名，那就好了。嗯，我们可以使用`if-then`语句的另一个功能来实现这一点。
 
 > 注意
-> 你可能会在某些脚本中看到 `if-then` 语句的另一种形式：
+
+> 你可能会在某些脚本中看到`if-then`语句的另一种形式：
+
 > ```bash
-> if `command`; then
+> if command; then
 > commands
 > fi
 > ```
-> 通过在待求值的命令末尾加上分号，你可以将 `then` 语句包含在同一行中，这看起来更像其他编程语言中处理 `if-then` 语句的方式。
+
+> 通过在待求值的命令末尾加上分号，你可以将`then`语句包含在同一行中，这看起来更像其他编程语言中处理`if-then`语句的方式。
 
 ## if-then-else 语句
 
-在 `if-then` 语句中，你对于命令是否成功只有一种选择。如果命令返回非零退出状态码，bash shell 只是移动到脚本中的下一个命令。在这种情况下，如果能够执行另一组命令就太好了。而这正是 `if-then-else` 语句的用途。
+在`if-then`语句中，你对于命令是否成功只有一种选择。如果命令返回非零退出状态码，bash shell只是移动到脚本中的下一个命令。在这种情况下，如果能够执行另一组命令就太好了。而这正是`if-then-else`语句的用途。
 
-`if-then-else` 语句在语句中提供了另一组命令：
+`if-then-else`语句在语句中提供了另一组命令：
 
 ```bash
-if `command`
+if command
 then
 commands
 else
@@ -5591,7 +5702,7 @@ commands
 fi
 ```
 
-当 `if` 语句行中的命令返回退出状态码 0 时，执行 `then` 部分列出的命令，就像在普通的 `if-then` 语句中一样。当 `if` 语句行中的命令返回非零退出状态码时，bash shell 执行 `else` 部分的命令。
+当`if`语句行中的命令返回退出状态码`0`时，执行`then`部分列出的命令，就像在普通的`if-then`语句中一样。当`if`语句行中的命令返回非零退出状态码时，bash shell执行`else`部分的命令。
 
 现在你可以修改测试脚本使其如下所示：
 
@@ -5605,7 +5716,7 @@ then
     echo The files for user $testuser are:
     ls -a /home/$testuser/.b*
 else
-    echo “The user name $testuser does not exist on this system”
+    echo "The user name $testuser does not exist on this system"
 fi
 $
 $ ./test4
@@ -5613,106 +5724,111 @@ The user name badtest does not exist on this system
 $
 ```
 
-这样更对用户友好。与 `then` 部分一样，`else` 部分也可以包含多个命令。`fi` 语句界定了 `else` 部分的结束。
+这样更对用户友好。与`then`部分一样，`else`部分也可以包含多个命令。`fi`语句界定了`else`部分的结束。
 
 ## 嵌套 if
 
-有时你必须在脚本代码中检查几种情况。与其编写单独的 `if-then` 语句，你可以使用 `else` 部分的替代版本，称为 `elif`。
+有时你必须在脚本代码中检查几种情况。与其编写单独的`if-then`语句，你可以使用`else`部分的替代版本，称为`elif`。
 
-`elif` 使用另一个 `if-then` 继续接在 `else` 部分：
+`elif`使用另一个`if-then`继续接在`else`部分：
 
 ```bash
-if `command1`
+if command1
 then
 commands
-elif `command2`
+elif command2
 then
 commands
 fi
 ```
 
-`elif` 语句行提供了另一个待求值的命令，类似于 `if` 语句。如果来自 `elif` 的退出状态为 0，bash 将执行 `then` 部分。
+`elif`语句行提供了另一个待求值的命令，类似于`if`语句。如果来自`elif`的退出状态为`0`，bash将执行`then`部分。
 
-你可以连续将 `elif` 语句连接在一起，创建一个 `if-then-elif`：
+你可以连续将`elif`语句连接在一起，创建一个`if-then-elif`：
 
 ```bash
-if `command1`
+if command1
 then
 commands set1
-elif `command2`
+elif command2
 then
 commands set2
-elif `command3`
+elif command3
 then
 commands set3
-elif `command4`
+elif command4
 then
 commands set4
 fi
 ```
 
-每个命令块的执行取决于哪个命令返回了零退出状态。请记住，bash shell 会按顺序执行 `if` 语句，只有第一个返回零退出状态的语句会导致 `then` 部分被执行。在后面的“case 命令”章节中，你将看到如何使用 `case` 命令而不是需要嵌套大量的 `if-then` 语句。
+每个命令块的执行取决于哪个命令返回了零退出状态。请记住，bash shell会按顺序执行`if`语句，只有第一个返回零退出状态的语句会导致`then`部分被执行。在后面的“case命令”章节中，你将看到如何使用`case`命令而不是需要嵌套大量的`if-then`语句。
 
 ## test 命令
 
-到目前为止，你在 `if` 语句行中看到的都是普通的 shell 命令。你可能认为 `if-then` 语句是否具有评估命令退出状态之外的任何条件的能力。
+到目前为止，你在`if`语句行中看到的都是普通的shell命令。你可能认为`if-then`语句是否具有评估命令退出状态之外的任何条件的能力。
 
-答案是否定的。但是，bash shell 中有一个实用的工具，可以帮助你使用 `if-then` 语句评估其他内容。
+答案是否定的。但是，bash shell中有一个实用的工具，可以帮助你使用`if-then`语句评估其他内容。
 
-`test` 命令提供了一种在 `if-then` 语句中测试不同条件的方法。如果 `test` 命令列出的条件求值为真，则 `test` 命令以零退出状态退出，使得 `if-then` 语句的行为与其他编程语言中的 `if-then` 语句非常相似。如果条件为假，`test` 命令以 1 退出，这会导致 `if-then` 语句失败。
+`test`命令提供了一种在`if-then`语句中测试不同条件的方法。如果`test`命令列出的条件求值为真，则`test`命令以零退出状态退出，使得`if-then`语句的行为与其他编程语言中的`if-then`语句非常相似。如果条件为假，`test`命令以`1`退出，这会导致`if-then`语句失败。
 
-`test` 命令的格式非常简单：
+`test`命令的格式非常简单：
 
 ```bash
 test condition
 ```
 
-在 `if-then` 语句中使用时，`test` 命令如下：
+在`if-then`语句中使用时，`test`命令如下：
 
 ```bash
-if `test condition`
+if test condition
 then
 commands
 fi
 ```
 
-bash shell 提供了另一种在 `if-then` 语句中声明 `test` 命令的方法：
+bash shell提供了另一种在`if-then`语句中声明`test`命令的方法：
 
 ```bash
-if [ `condition` ]
+if [ condition ]
 then
 commands
 fi
 ```
 
+方括号定义了`test`命令中使用的条件。请注意：你必须在第一个括号之后有一个空格，在最后一个括号之前也有一个空格，否则你将收到错误信息。
 
+`test`命令可以评估三类条件：
 
+*   数值比较
 
+*   字符串比较
 
-方括号定义了 `test` 命令中使用的条件。请注意：你必须在第一个括号之后有一个空格，在最后一个括号之前也有一个空格，否则你将收到错误信息。
+*   文件比较
 
-`test` 命令可以评估三类条件：
-
-* 数值比较
-* 字符串比较
-* 文件比较
-
-接下来的章节将描述如何在你的 `if-then` 语句中使用这些类别的测试。
+接下来的章节将描述如何在你的`if-then`语句中使用这些类别的测试。
 
 ## 数值比较
 
-使用 `test` 命令最常用的方法是对两个数值进行比较。表 11.1 显示了用于测试两个值时使用的条件参数列表。
+使用`test`命令最常用的方法是对两个数值进行比较。表11.1显示了用于测试两个值时使用的条件参数列表。
 
 表 11.1 test 命令：数值比较
 
 | 比较 | 说明 |
+
 | :--- | :--- |
-| `n1 -eq n2` | 检查 `n1` 是否等于 `n2`。 |
-| `n1 -ge n2` | 检查 `n1` 是否大于或等于 `n2`。 |
-| `n1 -gt n2` | 检查 `n1` 是否大于 `n2`。 |
-| `n1 -le n2` | 检查 `n1` 是否小于或等于 `n2`。 |
-| `n1 -lt n2` | 检查 `n1` 是否小于 `n2`。 |
-| `n1 -ne n2` | 检查 `n1` 是否不等于 `n2`。 |
+
+| `n1 -eq n2` | 检查`n1`是否等于`n2`。 |
+
+| `n1 -ge n2` | 检查`n1`是否大于或等于`n2`。 |
+
+| `n1 -gt n2` | 检查`n1`是否大于`n2`。 |
+
+| `n1 -le n2` | 检查`n1`是否小于或等于`n2`。 |
+
+| `n1 -lt n2` | 检查`n1`是否小于`n2`。 |
+
+| `n1 -ne n2` | 检查`n1`是否不等于`n2`。 |
 
 数值测试条件可以用于评估数字和变量。这里是一个示例：
 
@@ -5740,13 +5856,13 @@ fi
 if [ $val1 -gt 5 ]
 ```
 
-测试变量 `val1` 的值是否大于 5。第二个测试条件：
+测试变量`val1`的值是否大于`5`。第二个测试条件：
 
 ```bash
 if [ $val1 -eq $val2 ]
 ```
 
-测试变量 `val1` 的值是否等于变量 `val2` 的值。运行脚本并观察结果：
+测试变量`val1`的值是否等于变量`val2`的值。运行脚本并观察结果：
 
 ```bash
 $ ./test5
@@ -5776,32 +5892,41 @@ The test value is 3.3333
 $
 ```
 
-这个示例使用 bash 计算器产生一个浮点值，并将其存储在变量 `val1` 中。接下来，它使用 `test` 命令评估该值。这里显然出现了问题。
+这个示例使用bash计算器产生一个浮点值，并将其存储在变量`val1`中。接下来，它使用`test`命令评估该值。这里显然出现了问题。
 
-在第 10 章中，你学习了如何欺骗 bash shell 处理浮点值；但这个脚本仍然存在问题。`test` 命令无法处理存储在变量 `val1` 中的浮点值。
+在第10章中，你学习了如何欺骗bash shell处理浮点值；但这个脚本仍然存在问题。`test`命令无法处理存储在变量`val1`中的浮点值。
 
-请记住，bash shell 能够处理的数字只有整数。当你使用 bash 计算器时，你只是欺骗 shell 将浮点值作为字符串值存储在变量中。如果你只需要使用 `echo` 语句显示结果，这运行得良好，但在以数值为导向的函数（例如我们的数值测试条件）中这不起作用。结论是，你无法在 `test` 命令中使用浮点值。
+请记住，bash shell能够处理的数字只有整数。当你使用bash计算器时，你只是欺骗shell将浮点值作为字符串值存储在变量中。如果你只需要使用`echo`语句显示结果，这运行得良好，但在以数值为导向的函数（例如我们的数值测试条件）中这不起作用。结论是，你无法在`test`命令中使用浮点值。
 
 ## 字符串比较
 
-`test` 命令还允许你对字符串值进行比较。正如你所看到的，对字符串进行比较可能会变得复杂。[表 11.2 显示了你可以用于评估两个字符串值的比较函数。
+`test`命令还允许你对字符串值进行比较。正如你所看到的，对字符串进行比较可能会变得复杂。表11.2显示了你可以用于评估两个字符串值的比较函数。
 
 表 11.2 test 命令：字符串比较
 
 | 比较 | 说明 |
+
 | :--- | :--- |
-| `str1 = str2` | 检查 `str1` 是否与字符串 `str2` 相同。 |
-| `str1 != str2` | 检查 `str1` 是否不等于 `str2`。 |
-| `str1 < str2` | 检查 `str1` 是否小于 `str2`。 |
-| `str1 > str2` | 检查 `str1` 是否大于 `str2`。 |
-| `-n str1` | 检查 `str1` 的长度是否大于零。 |
-| `-z str1` | 检查 `str1` 的长度是否为零。 |
+
+| `str1 = str2` | 检查`str1`是否与字符串`str2`相同。 |
+
+| `str1 != str2` | 检查`str1`是否不等于`str2`。 |
+
+| `str1 < str2` | 检查`str1`是否小于`str2`。 |
+
+| `str1 > str2` | 检查`str1`是否大于`str2`。 |
+
+| `-n str1` | 检查`str1`的长度是否大于零。 |
+
+| `-z str1` | 检查`str1`的长度是否为零。 |
 
 接下来的章节描述了各种不同的字符串比较。
 
 ### 字符串相等
 
 对于字符串来说，相等和不等的条件是非常显而易见的。判断两个字符串值是否相同很容易：
+
+
 
 ```bash
 $cat test7
@@ -5837,14 +5962,14 @@ This is not baduser
 $
 ```
 
-`test` 比较在比较字符串的相等性时会考虑所有的标点符号和大小写。
+`test`比较在比较字符串的相等性时会考虑所有的标点符号和大小写。
 
-### 字符串顺序
+## 字符串顺序
 
-尝试确定一个字符串是否小于或大于另一个字符串是事情开始变得复杂的地方。当 shell 程序员尝试使用 `test` 命令的大于或小于功能时，经常有两个问题困扰着他们：
+尝试确定一个字符串是否小于或大于另一个字符串是事情开始变得复杂的地方。当 shell 程序员尝试使用`test`命令的大于或小于功能时，经常有两个问题困扰着他们：
 
-* 大于和小于符号必须进行转义，否则 shell 将它们用作重定向符号。
-* 大于和小于的顺序与 `sort` 命令中使用的顺序不同。
+- 大于和小于符号必须进行转义，否则 shell 将它们用作重定向符号。
+- 大于和小于的顺序与`sort`命令中使用的顺序不同。
 
 第一个问题在编写脚本时可能会导致一个未察觉的问题。这里是初学者 shell 程序员有时会遇到的一个典型示例：
 
@@ -5868,7 +5993,7 @@ $ ls -l hockey
 $
 ```
 
-在脚本中使用大于符号没有产生错误，但结果是错误的。脚本将大于符号解释为输出重定向。因此，它创建了一个名为 `hockey` 的文件。因为重定向成功，`test` 命令返回零退出代码，`if` 认为操作执行了！
+在脚本中使用大于符号没有产生错误，但结果是错误的。脚本将大于符号解释为输出重定向。因此，它创建了一个名为`hockey`的文件。因为重定向成功，`test`命令返回零退出代码，`if`认为操作执行了！
 
 要解决这个问题，你需要正确转义大于符号：
 
@@ -5892,7 +6017,7 @@ $
 
 现在的答案更符合你对字符串比较的预期。
 
-第二个问题更为微妙，除非你处理大写和小写字母，否则你可能不会遇到它。`sort` 命令处理大写字母的方式与 `test` 命令考虑相反。让我们在脚本中测试这个功能：
+第二个问题更为微妙，除非你处理大写和小写字母，否则你可能不会遇到它。`sort`命令处理大写字母的方式与`test`命令考虑相反。让我们在脚本中测试这个功能：
 
 ```bash
 $ cat test9b
@@ -5916,18 +6041,15 @@ Testing
 $
 ```
 
+在`test`命令中，大写字母被认为其值小于小写字母。然而，当你将相同的字符串放入文件中并使用`sort`命令时，小写字母会先出现。这是由于每个命令所使用的排序技术不同。`test`命令使用标准的 ASCII 排序，利用每个字符的 ASCII 数值来确定排序顺序。`sort`命令则使用系统区域（locale）语言设置定义的排序顺序。对于英语，区域设置规定在排序顺序中小写字母在大写字母之前。
 
-
-
-
-在 `test` 命令中，大写字母被认为其值小于小写字母。然而，当你将相同的字符串放入文件中并使用 `sort` 命令时，小写字母会先出现。这是由于每个命令所使用的排序技术不同。`test` 命令使用标准的 ASCII 排序，利用每个字符的 ASCII 数值来确定排序顺序。`sort` 命令则使用系统区域（locale）语言设置定义的排序顺序。对于英语，区域设置规定在排序顺序中小写字母在大写字母之前。
-
-> 注意
-> 请注意，`test` 命令使用标准的数学比较符号进行字符串比较，并使用文本代码进行数值比较。这是一个微妙的特性，许多程序员经常会弄反它。如果你使用数学比较符号来处理数值，shell 会将其解释为字符串值，并可能产生错误的结果。
+> **注意**
+>
+> 请注意，`test`命令使用标准的数学比较符号进行字符串比较，并使用文本代码进行数值比较。这是一个微妙的特性，许多程序员经常会弄反它。如果你使用数学比较符号来处理数值，shell 会将其解释为字符串值，并可能产生错误的结果。
 
 ## 字符串长度
 
-在尝试评估变量是否包含数据时，`-n` 和 `-z` 比较非常有用：
+在尝试评估变量是否包含数据时，`-n`和`-z`比较非常有用：
 
 ```bash
 $ cat test10
@@ -5937,66 +6059,67 @@ val1=testing
 val2=''
 if [ -n $val1 ]
 then
-    echo “The string '$val1’ is not empty”
+    echo "The string '$val1' is not empty"
 else
-    echo “The string '$val1’ is empty”
+    echo "The string '$val1' is empty"
 fi
 if [ -z $val2 ]
 then
-    echo “The string '$val2’ is empty”
+    echo "The string '$val2' is empty"
 else
-    echo “The string '$val2’ is not empty”
+    echo "The string '$val2' is not empty"
 fi
 if [ -z $val3 ]
 then
-    echo “The string '$val3’ is empty”
+    echo "The string '$val3' is empty"
 else
-    echo “The string '$val3’ is not empty”
+    echo "The string '$val3' is not empty"
 fi
 $ 
 $ ./test10
-The string ‘testing' is not empty
+The string 'testing' is not empty
 The string '' is empty
 The string '' is empty
 $
 ```
 
-此示例创建了两个变量。`val1` 变量包含一个字符串，`val2` 变量被创建为空空字符串。如下所示进行了相应的比较：
+此示例创建了两个变量。`val1`变量包含一个字符串，`val2`变量被创建为空字符串。如下所示进行了相应的比较：
 
-`if [ -n $val1 ]` 确定 `val1` 变量长度是否不为零，确实如此，因此处理了 `then` 部分：
+`if [ -n $val1 ]`确定`val1`变量长度是否不为零，确实如此，因此处理了`then`部分：
 
-`if [ -z $var2 ]` 确定 `val2` 变量长度是否为零，确实如此，因此处理了 `then` 部分：
+`if [ -z $var2 ]`确定`val2`变量长度是否为零，确实如此，因此处理了`then`部分：
 
-`if [ -z $val3 ]` 确定 `val3` 变量长度是否为零。该变量在 shell 脚本从未从未定义，因此即使它没有被定义，也表示字符串长度为零。
+`if [ -z $val3 ]`确定`val3`变量长度是否为零。该变量在 shell 脚本从未定义，因此即使它没有被定义，也表示字符串长度为零。
 
-> 注意
-> 空变量和未初始变量会对你的 shell 脚本测试产生灾难性的影响。如果你不确定变量的内容，在将其用于数值或字符串比较之前，最好先使用 `-n` 或 `-z` 测试变量是否包含值。
+> **注意**
+>
+> 空变量和未初始化的变量会对你的 shell 脚本测试产生灾难性的影响。如果你不确定变量的内容，在将其用于数值或字符串比较之前，最好先使用`-n`或`-z`测试变量是否包含值。
 
 ## 文件比较
 
-最后一类 `test` 比较可能是 shell 脚本编写中最强大且最常用的比较。`test` 命令允许你测试 Linux 文件系统上文件和目录的状态。[表 11.3] 列出了这些比较方法。
+最后一类`test`比较可能是 shell 脚本编写中最强大且最常用的比较。`test`命令允许你测试 Linux 文件系统上文件和目录的状态。表 11.3 列出了这些比较方法。
 
 ### 表 11.3 test 命令的文件比较
 
 | 比较操作符 | 描述 |
 | :--- | :--- |
-| `-d file` | 检查 `file` 是否存在且是一个目录。 |
-| `-e file` | 检查 `file` 是否存在。 |
-| `-f file` | 检查 `file` 是否存在且是一个文件。 |
-| `-r file` | 检查 `file` 是否存在且可读。 |
-| `-s file` | 检查 `file` 是否存在且不为空。 |
-| `-w file` | 检查 `file` 是否存在且可写。 |
-| `-x file` | 检查 `file` 是否存在且可执行。 |
-| `-O file` | 检查 `file` 是否存在并属于当前用户。 |
-| `-G file` | 检查 `file` 是否存在且默认组是否与当前用户相同。 |
-| `file1 -nt file2` | 检查 `file1` 是否比 `file2` 新。 |
-| `file1 -ot file2` | 检查 `file1` 是否比 `file2` 旧。 |
+| `-d file` | 检查`file`是否存在且是一个目录。 |
+| `-e file` | 检查`file`是否存在。 |
+| `-f file` | 检查`file`是否存在且是一个文件。 |
+| `-r file` | 检查`file`是否存在且可读。 |
+| `-s file` | 检查`file`是否存在且不为空。 |
+| `-w file` | 检查`file`是否存在且可写。 |
+| `-x file` | 检查`file`是否存在且可执行。 |
+| `-O file` | 检查`file`是否存在并属于当前用户。 |
+| `-G file` | 检查`file`是否存在且默认组是否与当前用户相同。 |
+| `file1 -nt file2` | 检查`file1`是否比`file2`新。 |
+| `file1 -ot file2` | 检查`file1`是否比`file2`旧。 |
 
 这些条件让你能够在 shell 脚本中检查文件系统中的文件，并且它们通常被用于访问文件的脚本中。由于它们被频繁使用，让我们逐一查看每一个。
 
 ### 检查目录
 
-`-d` 测试检查指定的路径在系统中是否以目录的形式存在。如果你尝试向某个目录写入文件，或者在尝试切换目录之前，这通常是一个很好的做法：
+`-d`测试检查指定的路径在系统中是否以目录的形式存在。如果你尝试向某个目录写入文件，或者在尝试切换目录之前，这通常是一个很好的做法：
 
 ```bash
 $ cat test11
@@ -6004,15 +6127,15 @@ $ cat test11
 # look before you leap
 if [ -d $HOME ]
 then
-    echo “Your HOME directory exists”
+    echo "Your HOME directory exists"
     cd $HOME
     ls -a
 else
-    echo “There is a problem with your HOME directory”
+    echo "There is a problem with your HOME directory"
 fi
 $ 
 $ ./test11
-“Your HOME directory exists”
+"Your HOME directory exists"
 .      Documents       .gvfs           .pulse-cookie
 ..      Downloads      .ICEauthority    .recently-used.xbel
 .aptitude               .esd_auth      .local         
@@ -6029,7 +6152,7 @@ $ ./test11
 
 ### 检查对象是否存在
 
-`-e` 比较允许你检查文件或目录是否存在。在尝试使用文件之前，你应该检查它：
+`-e`比较允许你检查文件或目录是否存在。在尝试使用文件之前，你应该检查它：
 
 ```bash
 $ cat test12
@@ -6037,15 +6160,15 @@ $ cat test12
 # checking if file exists
 if [ -e $file ]
 then
-    echo “The file exists”
+    echo "The file exists"
 else
-    echo “The file does not exist”
+    echo "The file does not exist"
 fi
 ```
 
 ### 检查文件
 
-`-e` 比较同时适用于文件和目录。为了确保对象是一个文件，你必须使用 `-f` 比较：
+`-e`比较同时适用于文件和目录。为了确保对象是一个文件，你必须使用`-f`比较：
 
 ```bash
 $ cat test13
@@ -6053,35 +6176,31 @@ $ cat test13
 # check if it is a file
 if [ -e $HOME ]
 then
-    echo “The object exists, is it a file?”
+    echo "The object exists, is it a file?"
     if [ -f $HOME ]
     then
-        echo “Yes, it is a file!”
+        echo "Yes, it is a file!"
     else
-        echo “No, it is not a file!”
+        echo "No, it is not a file!"
         if [ -f $HOME/.bash_history ]
         then
-            echo “But this is a file!”
+            echo "But this is a file!"
         fi
     fi
 else
-    echo “Sorry, the object does not exist”
+    echo "Sorry, the object does not exist"
 fi
 ```
 
 ### 你能读取吗？
 
-在尝试从文件中读取数据之前，先测试你是否可以读取该文件通常是一个好主意。你通过 `-r` 比较来实现这一点：
+在尝试从文件中读取数据之前，先测试你是否可以读取该文件通常是一个好主意。你通过`-r`比较来实现这一点：
 
 ```bash
 $ cat test14
 #!/bin/bash
 # testing if you can read a file
 ```
-
-
-
-
 
 `pwfile=/etc/shadow`
 
@@ -6094,10 +6213,10 @@ then
     then
         tail $pwfile
     else
-        echo “Sorry, I am unable to read the $pwfile file”
+        echo "Sorry, I am unable to read the $pwfile file"
     fi
 else
-    echo “Sorry, the file $file does not exist”
+    echo "Sorry, the file $file does not exist"
 fi
 ```
 
@@ -6107,11 +6226,11 @@ Sorry, I am unable to read the /etc/shadow file
 $
 ```
 
-`/etc/shadow` 文件包含系统用户的加密密码，因此系统上的普通用户无法读取。`-r` 比较判断我没有对该文件的读取权限，因此测试命令失败，bash 终端执行了 `if-then` 语句的 `else` 部分。
+`/etc/shadow`文件包含系统用户的加密密码，因此系统上的普通用户无法读取。`-r`比较判断我没有对该文件的读取权限，因此测试命令失败，bash 终端执行了`if-then`语句的`else`部分。
 
 ### 检查空文件
 
-你应该使用 `-s` 比较来检查文件是否为空，特别是当你尝试删除一个文件时。要小心，因为当 `-s` 比较成功时，表示文件中包含数据：
+你应该使用`-s`比较来检查文件是否为空，特别是当你尝试删除一个文件时。要小心，因为当`-s`比较成功时，表示文件中包含数据：
 
 ```bash
 $ cat test15
@@ -6121,16 +6240,16 @@ file=t15test
 touch $file
 if [ -s $file ]
 then
-    echo “The $file file exists and has data in it”
+    echo "The $file file exists and has data in it"
 else
-    echo “The $file exists and is empty”
+    echo "The $file exists and is empty"
 fi
 date > $file
 if [ -s $file ]
 then
-    echo “The $file file has data in it”
+    echo "The $file file has data in it"
 else
-    echo “The $file is still empty”
+    echo "The $file is still empty"
 fi
 ```
 
@@ -6141,11 +6260,11 @@ The t15test file has data in it
 $
 ```
 
-`touch` 命令创建文件但不会向其中放入任何数据。在我们使用 `date` 命令并将输出重定向到文件后，`-s` 比较指示文件中存在数据。
+`touch`命令创建文件但不会向其中放入任何数据。在我们使用`date`命令并将输出重定向到文件后，`-s`比较指示文件中存在数据。
 
 ### 检查你是否可以写入文件
 
-`-w` 比较判断你是否有权限写入文件：
+`-w`比较判断你是否有权限写入文件：
 
 ```bash
 $ cat test16
@@ -6157,18 +6276,18 @@ chmod u-w $logfile
 now='date +Y%m%d-%H%M'
 if [ -w $logfile ]
 then
-    echo “The program ran at: $now” > $logfile
-    echo “The first attempt succeeded”
+    echo "The program ran at: $now" > $logfile
+    echo "The first attempt succeeded"
 else
-    echo “The first attempt failed”
+    echo "The first attempt failed"
 fi
 chmod u+w $logfile
 if [ -w $logfile ]
 then
-    echo “The program ran at: $now” > $logfile
-    echo “The second attempt succeeded”
+    echo "The program ran at: $now" > $logfile
+    echo "The second attempt succeeded"
 else
-    echo “The second attempt failed”
+    echo "The second attempt failed"
 fi
 ```
 
@@ -6181,11 +6300,11 @@ The program ran at: 20110124-1602
 $
 ```
 
-这是一个不错的 shell 脚本！首先，它在你的 `$HOME` 目录下定义了一个日志文件，将其文件名存储在 `logfile` 中，创建该文件，然后移除用户的写入权限。接下来，它创建了变量 `now` 并使用 `date` 命令存储时间戳。在完成这一切之后，它检查你是否有对日志文件的写入权限（你刚刚删除了该权限）。因为你没有写入权限，你应该看到失败的消息。之后，脚本再次使用 `chmod` 命令为用户重新授予写入权限，并尝试写入文件。这次写入成功了。
+这是一个不错的 shell 脚本！首先，它在你的`$HOME`目录下定义了一个日志文件，将其文件名存储在`logfile`中，创建该文件，然后移除用户的写入权限。接下来，它创建了变量`now`并使用`date`命令存储时间戳。在完成这一切之后，它检查你是否有对日志文件的写入权限（你刚刚删除了该权限）。因为你没有写入权限，你应该看到失败的消息。之后，脚本再次使用`chmod`命令为用户重新授予写入权限，并尝试写入文件。这次写入成功了。
 
 ### 检查你是否可以运行文件
 
-`-x` 比较是判断你是否对某个文件具有执行权限的方便方法。虽然对于大多数命令可能不需要，但如果你在 shell 中运行很多脚本，它就会派上用场：
+`-x`比较是判断你是否对某个文件具有执行权限的方便方法。虽然对于大多数命令可能不需要，但如果你在 shell 中运行很多脚本，它就会派上用场：
 
 ```bash
 $ cat test17
@@ -6193,10 +6312,10 @@ $ cat test17
 # testing file execution
 if [ -x test16 ]
 then
-    echo “You can run the script: ”
+    echo "You can run the script: "
 ./test16
 else
-    echo “Sorry, you are unable to execute the script”
+    echo "Sorry, you are unable to execute the script"
 fi
 ```
 
@@ -6211,11 +6330,13 @@ Sorry, you are unable to execute the script
 $
 ```
 
-这个示例 shell 脚本使用 `-x` 比较来测试你是否有权限执行 `test16` 脚本。如果是，它就会运行脚本（注意，即使在 shell 脚本中，你也必须为执行不在你的 `$PATH` 中的脚本提供正确的路径）。在第一次运行 `test16` 脚本后后更改它的权限并再次尝试。这次，`-x` 比较失败了，因为你没有对 `test16` 脚本的执行权限。
+这个示例 shell 脚本使用`-x`比较来测试你是否有权限执行`test16`脚本。如果是，它就会运行脚本（注意，即使在 shell 脚本中，你也必须为执行不在你的`$PATH`中的脚本提供正确的路径）。在第一次运行`test16`脚本后更改它的权限并再次尝试。这次，`-x`比较失败了，因为你没有对`test16`脚本的执行权限。
 
 ### 所有权
 
-`-O` 比较允许你轻松测试自己是否是文件的所有者：
+`-O`比较允许你轻松测试自己是否是文件的所有者：
+
+
 
 ```bash
 $ cat test18
@@ -6240,15 +6361,16 @@ You are the owner of the /etc/passwd file
 #
 ```
 
-脚本使用 `-O` 比较来测试运行脚本的用户是否为 `/etc/passwd` 文件的所有者。脚本第一次在普通用户账户下运行时失败。第二次，我们使用 `su` 命令变成 root 用户，测试成功了。
+脚本使用 `-O` 比较来测试运行脚本的用户是否为`/etc/passwd`文件的所有者。脚本第一次在普通用户账户下运行时失败。第二次，我们使用`su`命令变成`root`用户，测试成功了。
 
 ### 检查默认组成员身份
 
-`-G` 比较检查文件的默认组，如果该组与用户的默认组匹配，则测试成功。这可能会有点困惑，因为 `-G` 比较只检查默认组，而不检查用户所属的所有组。这里有一个示例：
+`-G`比较检查文件的默认组，如果该组与用户的默认组匹配，则测试成功。这可能会有点困惑，因为`-G`比较只检查默认组，而不检查用户所属的所有组。这里有一个示例：
 
 ```bash
 $ cat test19
-#!/bin/bash# check file group test
+#!/bin/bash
+# check file group test
 if [ -G $HOME/testing ]
 then
     echo “You are in the same group as the file”
@@ -6269,11 +6391,11 @@ $ ./test19
 The file is not owned by your group
 ```
 
-第一次运行脚本时，`$HOME/testing` 属于 `rich` 组，`-G` 比较成功。
+第一次运行脚本时，`$HOME/testing`属于`rich`组，`-G`比较成功。
 
 ### 检查日期
 
-最后一组比较处理两个文件的创建时间。这在编写脚本时非常有用。有时你不想安装一个较旧的文件。`-nt` 比较判断文件是否较新。如果文件较新，它将有更的创建时间。`-ot` 比较判断文件是否较旧。如果文件较旧，它将有更早的创建时间：
+最后一组比较处理两个文件的创建时间。这在编写脚本时非常有用。有时你不想安装一个较旧的文件。`-nt`比较判断文件是否较新。如果文件较新，它将有更的创建时间。`-ot`比较判断文件是否较旧。如果文件较旧，它将有更早的创建时间：
 
 ```bash
 $ cat test20
@@ -6321,22 +6443,19 @@ The badfile2 file is newer than badfile1
 $
 ```
 
-
-
-
-
-这个小示例演示了如果文件不存在，`-nt` 比较将返回一个失败的条件。在尝试在 `-nt` 或 `-ot` 比较中使用文件之前，务必确保这些文件存在。
+这个小示例演示了如果文件不存在，`-nt`比较将返回一个失败的条件。在尝试在`-nt`或`-ot`比较中使用文件之前，务必确保这些文件存在。
 
 ## 复合条件测试
 
-`if-then` 语句允许你使用布尔逻辑来组合测试。你可以使用两种布尔运算符：
+`if-then`语句允许你使用布尔逻辑来组合测试。你可以使用两种布尔运算符：
 
 * `[ condition1 ] && [ condition2 ]`
+
 * `[ condition1 ] || [ condition2 ]`
 
-第一个布尔操作使用 `AND`（与）布尔运算符组合两个条件。只有同时满足两个条件时，`then` 部分才会执行。
+第一个布尔操作使用`AND`（与）布尔运算符组合两个条件。只有同时满足两个条件时，`then`部分才会执行。
 
-第二个布尔操作使用 `OR`（或）布尔运算符组合两个条件。如果任一条件为真，就会执行 `then` 部分。
+第二个布尔操作使用`OR`（或）布尔运算符组合两个条件。如果任一条件为真，就会执行`then`部分。
 
 ```bash
 $ cat test22
@@ -6358,44 +6477,59 @@ The file exists and you can write to it
 $
 ```
 
-使用 `AND` 布尔运算符时，必须满足两个比较条件。第一个比较检查用户的 `$HOME` 目录是否存在。第二个比较检查用户的 `$HOME` 目录下是否存在一个名为 `testing` 的文件，以及该用户对该文件是否有写权限。如果这两个比较中的任何一个失败，`if` 语句将失败，shell 将会执行 `else` 部分。如果两个比较都成功，`if` 语句将成功，shell 将会执行 `then` 部分。
+使用`AND`布尔运算符时，必须满足两个比较条件。第一个比较检查用户的`$HOME`目录是否存在。第二个比较检查用户的`$HOME`目录下是否存在一个名为`testing`的文件，以及该用户对该文件是否有写权限。如果这两个比较中的任何一个失败，`if`语句将失败，shell将会执行`else`部分。如果两个比较都成功，`if`语句将成功，shell将会执行`then`部分。
 
 ## 高级 if-then 特性
 
-bash shell 最近新增了两个功能，它们提供了你可以在 `if-then` 语句中使用的高级特性：
+bash shell 最近新增了两个功能，它们提供了你可以在`if-then`语句中使用的高级特性：
 
 * 用于数学表达式的双重圆括号
+
 * 用于高级字符串处理函数的双中括号
 
 接下来的章节将详细介绍这些特性的。
 
 ### 使用双重圆括号
 
-双重圆括号命令允许你在比较中引入高级的数学公式。`test` 命令在比较中只允许简单的算术运算。双重圆括号提供了更多数学符号，使用过其他编程语言的程序员可能对这些符号很熟悉。双重圆括号命令的格式为：
+双重圆括号命令允许你在比较中引入高级的数学公式。`test`命令在比较中只允许简单的算术运算。双重圆括号提供了更多数学符号，使用过其他编程语言的程序员可能对这些符号很熟悉。双重圆括号命令的格式为：
 
 `(( expression ))`
 
-表达式项可以是任何数学赋值或比较表达式。除了 `test` 命令使用的标准数学运算符外，还列出了可以在双重圆括号命令中使用的额外运算符。
+表达式项可以是任何数学赋值或比较表达式。除了`test`命令使用的标准数学运算符外，还列出了可以在双重圆括号命令中使用的额外运算符。
 
 #### 双重圆括号符号
 
 | 符号 |  |
+
 | :--- | :--- |
+
 | `val++` | 后自增 |
+
 | `val--` | 后自减 |
+
 | `++val` | 前自增 |
+
 | `--val` | 前自减 |
+
 | `!` | 逻辑取反 |
+
 | `~` | 位取反 |
+
 | `**` | 幂运算 |
+
 | `<<` | 左移 |
+
 | `>>` | 右移 |
+
 | `&` | 位与 `AND` |
+
 | `\|` | 位或 `OR` |
+
 | `&&` | 逻辑 `AND` |
+
 | `\|\|` | 逻辑 `OR` |
 
-你可以在 `if` 语句中使用双重圆括号命令，也可以作为赋值的普通命令使用：
+你可以在`if`语句中使用双重圆括号命令，也可以作为赋值的普通命令使用：
 
 ```bash
 $ cat test23
@@ -6421,7 +6555,7 @@ $
 
 `[[ expression ]]`
 
-双中括号表达式使用了 `test` 命令中的标准字符串比较。然而，它提供了一个 `test` 命令不具备的特性：模式匹配。在模式匹配中，你可以定义一个正则表达式与字符串值进行匹配：
+双中括号表达式使用了`test`命令中的标准字符串比较。然而，它提供了一个`test`命令不具备的特性：模式匹配。在模式匹配中，你可以定义一个正则表达式与字符串值进行匹配：
 
 ```bash
 $ cat test24
@@ -6439,11 +6573,11 @@ Hello rich
 $
 ```
 
-双中括号命令匹配 `$USER` 环境变量，以检查它是否以字母 r 开头。如果是，则比较成功，shell 将执行 `then` 部分。
+双中括号命令匹配`$USER`环境变量，以检查它是否以字母`r`开头。如果是，则比较成功，shell将执行`then`部分。
 
 ### case 命令
 
-你经常发现自己试图评估变量的值，在一组可能的值中寻找特定值。在这种情况下，你不得不编写一个冗长的 `if-then-else` 语句，如下所示：
+你经常发现自己试图评估变量的值，在一组可能的值中寻找特定值。在这种情况下，你不得不编写一个冗长的`if-then-else`语句，如下所示：
 
 ```bash
 $ cat test25
@@ -6473,7 +6607,7 @@ Please enjoy your visit
 $
 ```
 
-`elif` 语句继续 `if-then` 检查，为单个比较变量寻找特定值。你不需要编写所有的 `elif` 语句来继续检查同一个变量值，而是可以使用 `case` 命令。`case` 命令以列表形式的形式检查单个变量的多个值：
+`elif`语句继续`if-then`检查，为单个比较变量寻找特定值。你不需要编写所有的`elif`语句来继续检查同一个变量值，而是可以使用`case`命令。`case`命令以列表形式的形式检查单个变量的多个值：
 
 ```bash
 case variable in
@@ -6483,7 +6617,7 @@ pattern3) commands2;;
 esac
 ```
 
-`case` 命令将指定的变量与模式进行比较。如果变量匹配模式，shell 将执行命令。你可以在同一行列出多个模式，使用竖线运算符分隔每个模式。星号符号是用于不匹配值的通配符。这里有一个将 `if-then-else` 程序转换为使用 `case` 命令的示例：
+`case`命令将指定的变量与模式进行比较。如果变量匹配模式，shell将执行命令。你可以在同一行列出多个模式，使用竖线运算符分隔每个模式。星号符号是用于不匹配值的通配符。这里有一个将`if-then-else`程序转换为使用`case`命令的示例：
 
 ```bash
 $ cat test26
@@ -6509,52 +6643,59 @@ $
 
 ## 总结
 
-结构化命令允许你更改 shell 脚本的执行流。最基本的结构化命令是 `if-then` 语句。该语句允许你评估一个命令，并根据所评估命令的结果执行其他命令。
+结构化命令允许你更改 shell 脚本的执行流。最基本的结构化命令是`if-then`语句。该语句允许你评估一个命令，并根据所评估命令的结果执行其他命令。
 
-你可以扩展 `if-then` 语句，包含一组当指定的命令失败时 bash shell 也会执行的命令。`if-then-else` 语句允许仅在被评估的命令返回非零退出状态码时执行命令。
+你可以扩展`if-then`语句，包含一组当指定的命令失败时 bash shell 也会执行的命令。`if-then-else`语句允许仅在被评估的命令返回非零退出状态码时执行命令。
 
+在大多数脚本中，你想要的不是执行一个命令，而是评估一个条件，例如数值、字符串内容，或者文件或目录的状态。`test`命令为你提供了一种简单的方法来评估所有这些条件。如果条件为真，`test`命令为`if-then`语句产生一个零退出状态码；如果条件为假，`test`命令则为`if-then`语句产生一个非零退出状态码。
 
+方括号`[]`是一个特殊的 bash 命令，它是`test`命令的同义词。你可以在`if-then`语句用方括号括起测试条件，以对数值、字符串和文件条件进行测试。
 
+双括号`(( ))`命令允许你使用额外的运算符执行高级数学评估，而双方括号`[[ ]]`命令则允许你执行高级的字符串模式匹配评估。
 
-在大多数脚本中，你想要的不是执行一个命令，而是评估一个条件，例如数值、字符串内容，或者文件或目录的状态。`test` 命令为你提供了一种简单的方法来评估所有这些条件。如果条件为真，`test` 命令为 `if-then` 语句产生一个零退出状态码；如果条件为假，`test` 命令则为 `if-then` 语句产生一个非零退出状态码。
+最后，本章讨论了`case`命令，它是执行多个`if-then-else`命令的简写方式，用于检查单个变量的值是否与一组值匹配。
 
-方括号 `[]` 是一个特殊的 bash 命令，它是 `test` 命令的同义词。你可以在 `if-then` 语句用方括号括起测试条件，以对数值、字符串和文件条件进行测试。
-
-双括号 `(( ))` 命令允许你使用额外的运算符执行高级数学评估，而双方括号 `[[ ]]` 命令则允许你执行高级的字符串模式匹配评估。
-
-最后，本章讨论了 `case` 命令，它是执行多个 `if-then-else` 命令的简写方式，用于检查单个变量的值是否与一组值匹配。
-
-下一章将通过检查 shell 循环命令继续对结构化命令的讨论。`for` 和 `while` 命令允许你创建循环，在指定时间内对命令进行迭代。
+下一章将通过检查 shell 循环命令继续对结构化命令的讨论。`for`和`while`命令允许你创建循环，在指定时间内对命令进行迭代。
 
 # 读累了记得休息一会哦~
 
 **公众号：古德猫宁李**
 
 * 电子书搜索下载
+
 * 书单分享
+
 * 书友学习交流
 
 **网站：**[沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)
 
 * 电子书搜索下载
+
 * 电子书打包资源分享
+
 * 学习资源分享
 
 # 第 12 章：更多结构化命令
 
 ## 本章内容
-* 使用 `for` 语句循环
-* 使用 `until` 语句迭代
-* 使用 `while` 语句
+
+* 使用`for`语句循环
+
+* 使用`until`语句迭代
+
+* 使用`while`语句
+
 * 组合循环
+
 * 重定向循环输出
 
-在上一章中，你看到了如何通过检查命令输出和变量值来控制 shell 脚本程序的流程。在本章中，我们将继续查看控制 shell 脚本流程的结构化命令。你将看到如何执行重复过程，即循环遍历一组命令，直到满足指定的条件为止。本章将讨论并演示 `for`、`while` 和 `until` 等 bash shell 循环命令。
+在上一章中，你看到了如何通过检查命令输出和变量值来控制 shell 脚本程序的流程。在本章中，我们将继续查看控制 shell 脚本流程的结构化命令。你将看到如何执行重复过程，即循环遍历一组命令，直到满足指定的条件为止。本章将讨论并演示`for`、`while`和`until`等 bash shell 循环命令。
 
 ## for 命令
+
 遍历一系列命令是一种常见的编程实践。你通常需要重复执行一组命令，直到满足特定条件，例如处理目录中的所有文件、系统中的所有用户或文本文件中的所有行。
 
-bash shell 提供了 `for` 命令，允许你创建一个遍历一系列值的循环。每次迭代都会使用系列中的一个值来执行一组定义的命令。以下是 bash shell `for` 命令的基本格式：
+bash shell 提供了`for`命令，允许你创建一个遍历一系列值的循环。每次迭代都会使用系列中的一个值来执行一组定义的命令。以下是 bash shell`for`命令的基本格式：
 
 ```bash
 for var in list
@@ -6563,19 +6704,21 @@ commands
 done
 ```
 
-你需要在 `list` 参数中提供用于迭代的系列值。这里有多种不同的方法可以让你指定列表中的值。
+你需要在`list`参数中提供用于迭代的系列值。这里有多种不同的方法可以让你指定列表中的值。
 
-在每次迭代中，变量 `var` 包含列表中的当前值。第一次迭代使用列表中的第一个项，第二次迭代使用第二个项，依此类推，直到列表中的所有项都被使用完毕。
+在每次迭代中，变量`var`包含列表中的当前值。第一次迭代使用列表中的第一个项，第二次迭代使用第二个项，依此类推，直到列表中的所有项都被使用完毕。
 
-在 `do` 和 `done` 语句之间输入的命令可以是一条或多个标准的 bash shell 命令。在命令内部，变量 `$var` 包含当前迭代中列表项的条目值。
+在`do`和`done`语句之间输入的命令可以是一条或多个标准的 bash shell 命令。在命令内部，变量`$var`包含当前迭代中列表项的条目值。
 
 > **注意**
-> 如果你愿意，可以将 `do` 语句与 `for` 语句放在同一行，但必须使用分号将其与列表项隔开：`for var in list; do`。
+
+> 如果你愿意，可以将`do`语句与`for`语句放在同一行，但必须使用分号将其与列表项隔开：`for var in list; do`。
 
 我们提到过有多种不同的方法可以指定列表中的值。接下来的章节将展示这些不同的方法。
 
 ### 读取列表中的值
-`for` 命令最基本的用法是遍历在 `for` 命令本身内部定义的值列表：
+
+`for`命令最基本的用法是遍历在`for`命令本身内部定义的值列表：
 
 ```bash
 $ cat test1
@@ -6595,7 +6738,9 @@ The next state is Colorado
 $
 ```
 
-每当 `for` 命令遍历所提供的值列表时，它都会将列表中的下一个值赋值给 `$test` 变量。`$test` 变量可以像其他脚本变量一样在 `for` 命令语句中使用。在最后一次迭代之后，`$test` 变量在 shell 脚本的剩余部分仍然保持有效。它保留了最后一次迭代的值（除非更改了它的值）：
+每当`for`命令遍历所提供的值列表时，它都会将列表中的下一个值赋值给`$test`变量。`$test`变量可以像其他脚本变量一样在`for`命令语句中使用。在最后一次迭代之后，`$test`变量在 shell 脚本的剩余部分仍然保持有效。它保留了最后一次迭代的值（除非更改了它的值）：
+
+
 
 ```bash
 $ cat test1b
@@ -6623,7 +6768,8 @@ $
 `$test` 变量保留了它的值，并且允许我们像其他变量一样在 `for` 命令循环之外更改它的值并使用它。
 
 ### 读取列表中的复杂值
-`for` 循环并不并不总是看起来那么简单。有时你会遇到会导致问题的数据。这里有一个关于 shell 脚本编写人员可能遇到问题的经典示例：
+
+`for` 循环并不总是看起来那么简单。有时你会遇到会导致问题的数据。这里有一个关于 shell 脚本编写人员可能遇到问题的经典示例：
 
 ```bash
 $ cat badtest1
@@ -6643,8 +6789,9 @@ $
 哎，这真疼。shell 看到了列表值中的单引号，并尝试使用它们来定义单个数据值，这在过程中真的搞乱了一切。
 
 解决这个问题有两种方法：
-* 使用转义字符（反斜杠 `\`）来转义单引号。
-* 使用双引号定义包含单引号的值。
+
+- 使用转义字符（反斜杠 `\`）来转义单引号。
+- 使用双引号定义包含单引号的值。
 
 这两种解决方案都不完美，但每一种都能帮助解决问题：
 
@@ -6696,13 +6843,6 @@ $
 $ cat test3
 #!/bin/bash
 # an example of how to properly define values
-```
-
-
-
-
-
-```bash
 for test in Nevada "New Hampshire" "New Mexico" "New York"
 do
     echo "Now going to $test"
@@ -6780,16 +6920,17 @@ $
 
 此示例使用了反引号包裹的 `cat` 命令来显示 `states` 文件的内容。你会发现 `states` 文件中的每个州都占一行，而不是用空格分隔。`for` 命令仍然一次行遍历 `cat` 命令的输出，假设每个州都单独成行。然而，这并没有解决数据中包含空格的问题。如果你列出一个包含空格的州，`for` 命令仍然会将每个单词视为一个单独的值。这有其原因，我们将在下一节中讨论。
 
-> 注意
+> **注意**
+>
 > `test5` 代码示例直接使用文件名（不带路径）将其赋值给变量。这要求该文件与脚本位于同一目录下。如果不是如此，你需要使用完整路径（绝对路径或相对路径）来引用文件位置。
 
 ## 修改字段分隔符
 
 这个问题的原因是特殊的环境变量 `IFS`，称为内部字段分隔符。`IFS` 环境变量定义了 bash shell 用作字段分隔符的字符列表。默认情况下，bash shell 将以下字符考虑作字段分隔符：
 
--   空格
--   制表符
--   换行符
+- 空格
+- 制表符
+- 换行符
 
 如果 bash shell 在数据中看到这些字符之一，它将认为你正在开始列表中的新数据字段。在处理可能包含空格的数据（如文件名）时，正如你在之前的脚本示例中看到的，这可能会非常困扰。
 
@@ -6827,7 +6968,8 @@ $
 
 现在，shell 脚本能够使用列表中的包含空格的值了。
 
-> 警告
+> **警告**
+>
 > 在编写长脚本时，可能会在某处更改了 `IFS` 值，然后忘记了它，并假设脚本的其他地方使用的是默认值。一种安全的做法是在更改 `IFS` 之前保存原始值，然后恢复它。
 
 ## 使用通配符读取目录
@@ -6872,11 +7014,7 @@ $
 
 `./test6: line 6: [: too many arguments`
 
-
-
-
-
-```
+```text
 ./test6: line 9: [: too many arguments
 ```
 
@@ -6887,10 +7025,10 @@ bash shell 将额外的单词解释为 `test` 命令内部的参数，从而导�
 ```bash
 $ cat test7
 
-
-``````bash
 #!/bin/bash
+
 # 遍历多个目录
+
 for file in /home/rich/.b* /home/rich/badtest
 do
     if [ -d "$file" ]
@@ -6903,27 +7041,28 @@ do
         echo "$file doesn't exist"
     fi
 done
-```
 
-```bash
 $ ./test7
+
 /home/rich/.backup.timestamp is a file
 /home/rich/.bash_history is a file
 /home/rich/.bash_logout is a file
 /home/rich/.bash_profile is a file
 /home/rich/.bashrc is a file
 /home/rich/badtest doesn't exist
+
 $
 ```
 
 `for` 语句首先使用文件通配符（globbing）遍历由通配符字符生成的文件列表；然后遍历列表中的下一个文件。你可以组合列表中的任意数量的通配符项进行遍历。
 
 > **注意**
+>
 > 注意，你可以在列表中输入任何内容。即使文件或目录不存在，`for` 语句也会尝试处理你放置在列表中的任何内容。这在处理文件和目录时可能会成为一个问题。你无法知道自己是否正在尝试遍历一个不存在的目录：在尝试处理每个文件或目录之前，对其进行测试总是一个好主意。
 
 # C 风格的 for 命令
 
-如果你用 C 语言语言进行过任何编程，你可能会对 bash shell 使用 `for` 命令的方式感到惊讶。在 C 语言中，`for` 循环通常定义一个变量，并在每次迭代中自动修改该变量。通常，程序员使用此变量作为计数器，并在每次迭代中将计数器加一或减一。bash 的 `for` 命令也可以提供这种功能。本节向你展示如何在 bash shell 脚本中使用 C 风格的 `for` 命令。
+如果你用 C 语言进行过任何编程，你可能会对 bash shell 使用 `for` 命令的方式感到惊讶。在 C 语言中，`for` 循环通常定义一个变量，并在每次迭代中自动修改该变量。通常，程序员使用此变量作为计数器，并在每次迭代中将计数器加一或减一。bash 的 `for` 命令也可以提供这种功能。本节向你展示如何在 bash shell 脚本中使用 C 风格的 `for` 命令。
 
 ## C 语言 for 命令
 
@@ -6936,15 +7075,15 @@ for (i = 0; i < 10; i++)
 }
 ```
 
-这段代码产生了一个简单的迭代循环，变量 `i` 被用计数器。第一部分为变量分配了默认值。中间部分定义了循环迭代的条件。当定义的条件变为假时，`for` 循环停止迭代。最后部分定义了迭代过程。每次迭代后，都会执行最后部分定义的表达式。在这个示例中，`i` 变量在每次迭代后加 1。
+这段代码产生了一个简单的迭代循环，变量 `i` 被用作计数器。第一部分为变量分配了默认值。中间部分定义了循环迭代的条件。当定义的条件变为假时，`for` 循环停止迭代。最后部分定义了迭代过程。每次迭代后，都会执行最后部分定义的表达式。在这个示例中，`i` 变量在每次迭代后加 1。
 
 bash shell 也支持一种类似于 C 风格 `for` 循环的版本，尽管它确实有一些细微的差异，包括一些会让 shell 脚本程序员感到困惑的地方。这里是 C 风格 bash `for` 循环的基本格式：
 
 ```bash
 for ((
-variable assignment ;
-condition ;
-iteration process
+    variable assignment ;
+    condition ;
+    iteration process
 ))
 ```
 
@@ -6968,7 +7107,9 @@ shell 开发者创建这种格式是为了更接近 C 风格的 `for` 命令。�
 $ cat test8
 
 #!/bin/bash
+
 # 测试 C 风格的 for 循环
+
 for (( i=1; i <= 10; i++ ))
 do
     echo "The next number is $i"
@@ -6982,13 +7123,21 @@ The next number is 2
 The next number is 3
 The next number is 4
 The next number is 5
-The next number is 6
-The next number is 7
-The next number is 8
-The next number is 9
-The next number is 10
-$
 ```
+
+
+
+The next number is 6
+
+The next number is 7
+
+The next number is 8
+
+The next number is 9
+
+The next number is 10
+
+$
 
 `for` 循环使用 `for` 循环中定义的变量（此示例中的字母 `i`）遍历命令。在每次迭代中，变量 `$i` 包含在 `for` 循环中分配的值。每次迭代后，循环迭代过程被应用于变量，在此示例中，它会将变量加 1。
 
@@ -6996,47 +7145,72 @@ $
 
 （注：此处原文后续存在大量重复内容，已按要求不再重复输出。）
 
-
-
-
-
 在某种有点奇怪的情况下，`while` 命令允许你在此 `while` 语句行上定义多个测试命令。只有最后一个测试命令的退出状态被用于判断循环何时何时停止。如果你不小心，这可能会导致一些有趣的结果。这里有一个示例：
 
 ```bash
 $ cat test11
+
 !/bin/bash
+
 # 测试多命令 while 循环
+
 var1=10
+
 while echo $var1
       [ $var1 -ge 0 ]
 do
     echo “循环内部”
-    var1=$[ $var1 - 1 ]
+    var1=$[ var1 - 1 ]
 done
+
 $ ./test11
+
 10
+
 循环内部
+
 9
+
 循环内部
+
 8
+
 循环内部
+
 7
+
 循环内部
+
 6
+
 循环内部
+
 5
+
 循环内部
+
 4
+
 循环内部
+
 3
+
 循环内部
+
 2
+
 循环内部
+
 1
+
 循环内部
+
 0
+
 循环内部
+
 -1
+
 $
 ```
 
@@ -7049,15 +7223,17 @@ while echo $var1
 
 第一个测试仅仅显示了 `var1` 变量的当前值。第二个测试使用中括号来确定 `var1` 变量的值。在循环内部，`echo` 语句显示了一条消息，表示循环正在处理。注意运行该示例时输出是如何结束的：
 
-```
+```text
 循环内部
+
 -1
+
 $
 ```
 
 `while` 循环在 `var1` 变量等于 0 时执行了 `echo` 语句，然后减少了 `var1` 变量的值。接着执行了测试命令，由于 `var1` 现在小于 0，`while` 循环终止。这表明在多命令 `while` 语句中，在最后一个测试命令失败之前，所有的测试命令都会执行。注意这一点。另一个需要注意的是如何指定多个测试命令。注意每个测试命令都是单独成行！
 
-## until 命令
+## `until` 命令
 
 `until` 命令的作用与 `while` 命令完全相反。`until` 命令要求指定一个通常产生非零退出状态的测试命令。只要测试命令的退出状态是非零，bash shell 就会执行列出的命令。一旦测试命令返回零状态，循环停止。
 
@@ -7077,19 +7253,29 @@ done
 
 ```bash
 $ cat test12
+
 !/bin/bash
+
 # 使用 until 命令
+
 var1=100
+
 until [ $var1 -eq 0 ]
 do
     echo $var1
-    var1=$[ $var1 - 25 ]
+    var1=$[ var1 - 25 ]
 done
+
 $ ./test12
+
 100
+
 75
+
 50
+
 25
+
 $
 ```
 
@@ -7097,25 +7283,40 @@ $
 
 ```bash
 $ cat test13
+
 !/bin/bash
+
 # 使用 until 命令
+
 var1=100
+
 until echo $var1
       [ $var1 -eq 0 ]
 do
     echo 循环内部: $var1
-    var1=$[ $var1 - 25 ]
+    var1=$[ var1 - 25 ]
 done
+
 $ ./test13
+
 100
+
 循环内部: 100
+
 75
+
 循环内部: 75
+
 50
+
 循环内部: 50
+
 25
+
 循环内部: 25
+
 0
+
 $
 ```
 
@@ -7129,8 +7330,11 @@ shell 执行指定的测试命令，仅当最后一个命令为真时停止。
 
 ```bash
 $ cat test14
+
 !/bin/bash
+
 # 嵌套 for 循环
+
 for (( a = 1; a <= 3; a++ ))
 do
     echo "开始循环 $a:"
@@ -7139,19 +7343,33 @@ do
         echo "  循环内部: $b"
     done
 done
+
 $ ./test14
+
 开始循环 1:
+
   循环内部: 1
+
   循环内部: 2
+
   循环内部: 3
+
 开始循环 2:
+
   循环内部: 1
+
   循环内部: 2
+
   循环内部: 3
+
 开始循环 3:
+
   循环内部: 1
+
   循环内部: 2
+
   循环内部: 3
+
 $
 ```
 
@@ -7161,9 +7379,13 @@ $
 
 ```bash
 $ cat test15
+
 !/bin/bash
+
 # 将 for 循环放在 while 循环内部
+
 var1=5
+
 while [ $var1 -ge 0 ]
 do
     echo "外部循环: $var1"
@@ -7174,23 +7396,41 @@ do
     done
     var1=$[ var1 - 1 ]
 done
+
 $ ./test15
+
 外部循环: 5
+
   循环内部: 5 * 1 = 5
+
   循环内部: 5 * 2 = 10
+
 外部循环: 4
+
   循环内部: 4 * 1 = 4
+
   循环内部: 4 * 2 = 8
+
 外部循环: 3
+
   循环内部: 3 * 1 = 3
+
   循环内部: 3 * 2 = 6
+
 外部循环: 2
+
   循环内部: 2 * 1 = 2
+
   循环内部: 2 * 2 = 4
+
 外部循环: 1
+
   循环内部: 1 * 1 = 1
+
   循环内部: 1 * 2 = 2
+
 外部循环: 0
+
 $
 ```
 
@@ -7198,9 +7438,13 @@ $
 
 ```bash
 $ cat test16
+
 !/bin/bash
+
 # 使用 until 和 while 循环
+
 var1=3
+
 until [ $var1 -eq 0 ]
 do
     echo "外部循环: $var1"
@@ -7213,22 +7457,39 @@ do
     done
     var1=$[ var1 - 1 ]
 done
+
 $ ./test16
+
 外部循环: 3
+
   循环内部: 3 / 1 = 3.0000
+
   循环内部: 3 / 2 = 1.5000
+
   循环内部: 3 / 3 = 1.0000
+
   循环内部: 3 / 4 = .7500
+
 外部循环: 2
+
   循环内部: 2 / 1 = 2.0000
+
   循环内部: 2 / 2 = 1.0000
+
   循环内部: 2 / 3 = .6666
+
   循环内部: 2 / 4 = .5000
+
 外部循环: 1
+
   循环内部: 1 / 1 = 1.0000
+
   循环内部: 1 / 2 = .5000
+
   循环内部: 1 / 3 = .3333
+
   循环内部: 1 / 4 = .2500
+
 $
 ```
 
@@ -7236,25 +7497,24 @@ $
 
 通常，你需要遍历存储在文件中的项目。这需要结合涵盖过的两种技术：
 
-*   使用嵌套循环
-
-*   更改 `IFS` 环境变量
-
-
-
-
+- 使用嵌套循环
+- 更改 `IFS` 环境变量
 
 通过更改 `IFS` 环境变量，你可以强制 `for` 命令将文件中的每一行视为作为一个独立的项目进行处理，即使数据中包含空格也是如此。一旦你提取了文件中的某一行，你可能需要再次循环来提取其中包含的数据。
 
-这种操作的经典示例是处理 `/etc/passwd` 文件中的数据。这需要逐行遍历 `/etc/passwd` 文件，然后将 `IFS` 变量的值改为冒号（:`），这样就可以分离出每行中的各个组件。
+这种操作的经典示例是处理 `/etc/passwd` 文件中的数据。这需要逐行遍历 `/etc/passwd` 文件，然后将 `IFS` 变量的值改为冒号（`:`），这样就可以分离出每行中的各个组件。
 
 以下是实现此操作的示例：
 
 ```bash
 #!/bin/bash
+
 # changing the IFS value
+
 IFS.OLD=$IFS
+
 IFS=$'\n'
+
 for entry in `cat /etc/passwd`
 do
     echo "Values in $entry –"
@@ -7264,6 +7524,7 @@ do
         echo "    $value"
     done
 done
+
 $
 ```
 
@@ -7271,22 +7532,37 @@ $
 
 当你运行此脚本时，你将得到类似下面的输出：
 
-```
+```text
 Values in rich:x:501:501:Rich Blum:/home/rich:/bin/bash -
+
     rich
+
     x
+
     501
+
     501
+
     Rich Blum
+
     /home/rich
+
     /bin/bash
+
 Values in katie:x:502:502:Katie Blum:/home/katie:/bin/bash -
+
     katie
+
     x
+
     506
+
     509
+
     Katie Blum
+
     /home/katie
+
     /bin/bash
 ```
 
@@ -7296,12 +7572,12 @@ Values in katie:x:502:502:Katie Blum:/home/katie:/bin/bash -
 
 你可能会认为，一旦开始循环，你就必须一直持续，直到循环完成所有迭代。事实并非如此。有几个命令可以帮助我们控制循环内部发生的情况：
 
-*   `break` 命令
-*   `continue` 命令
+- `break` 命令
+- `continue` 命令
 
 每个命令在控制循环操作方面有不同的用途。以下章节描述了你可以如何使用这些命令来控制循环的操作。
 
-## break 命令
+## `break` 命令
 
 `break` 命令是退出正在运行循环的简单方法。你可以使用 `break` 命令退出任何类型的循环，包括 `while` 和 `until` 循环。在几种情况下你可以使用 `break` 命令。本节将展示这些所有方法。
 
@@ -7311,8 +7587,11 @@ Values in katie:x:502:502:Katie Blum:/home/katie:/bin/bash -
 
 ```bash
 $ cat test17
+
 #!/bin/bash
+
 # breaking out of a for loop
+
 for var1 in 1 2 3 4 5 6 7 8 9 10
 do
     if [ $var1 -eq 5 ]
@@ -7321,13 +7600,21 @@ do
     fi
     echo "Iteration number: $var1"
 done
+
 echo "The for loop is completed"
+
 $ ./test17
+
 Iteration number: 1
+
 Iteration number: 2
+
 Iteration number: 3
+
 Iteration number: 4
+
 The for loop is completed
+
 $
 ```
 
@@ -7335,9 +7622,13 @@ $
 
 ```bash
 $ cat test18
+
 #!/bin/bash
+
 # breaking out of a while loop
+
 var1=1
+
 while [ $var1 -lt 10 ]
 do
     if [ $var1 -eq 5 ]
@@ -7345,15 +7636,23 @@ do
         break
     fi
     echo "Iteration: $var1"
-    var1=$[ $var1 + 1 ]
+    var1=$[ var1 + 1 ]
 done
+
 echo "The while loop is completed"
+
 $ ./test18
+
 Iteration: 1
+
 Iteration: 2
+
 Iteration: 3
+
 Iteration: 4
+
 The while loop is completed
+
 $
 ```
 
@@ -7365,8 +7664,11 @@ $
 
 ```bash
 $ cat test19
+
 #!/bin/bash
+
 # breaking out of an inner loop
+
 for (( a = 1; a < 4; a++ ))
 do
     echo "Outer loop: $a"
@@ -7379,21 +7681,37 @@ do
         echo "    Inner loop: $b"
     done
 done
+
 $ ./test19
+
 Outer loop: 1
+
     Inner loop: 1
+
     Inner loop: 2
+
     Inner loop: 3
+
     Inner loop: 4
+
 Outer loop: 2
+
     Inner loop: 1
+
     Inner loop: 2
+
     Inner loop: 3
+
     Inner loop: 4
+
 Outer loop: 3
+
     Inner loop: 1
+
     Inner loop: 2
+
     Inner loop: 3
+
     Inner loop: 4
 ```
 
@@ -7403,8 +7721,11 @@ Outer loop: 3
 
 ```bash
 $ cat test20
+
 #!/bin/bash
+
 # breaking out of an outer loop
+
 for (( a = 1; a < 4; a++ ))
 do
     echo "Outer loop: $a"
@@ -7419,14 +7740,17 @@ do
 done
 ```
 
-## continue 命令
+## `continue` 命令
 
 `continue` 命令是一种提前停止循环内命令执行但不终止循环的方法。这允许你在循环内部设置条件。这是一个在 `for` 循环中使用 `continue` 的简单示例：
 
 ```bash
 $ cat test21
+
 #!/bin/bash
+
 # using the continue command
+
 for var1 in 1 2 3 4 5 6 7 8 9 10
 do
     if [ $var1 -gt 5 ] && [ $var1 -lt 10 ]
@@ -7435,15 +7759,25 @@ do
     fi
     echo "Iteration number: $var1"
 done
+
 $ ./test21
+
 Iteration number: 1
+
 Iteration number: 2
+
 Iteration number: 3
+
 Iteration number: 4
+
 Iteration number: 5
+
 Iteration number: 10
+
 Iteration number: 11
+
 Iteration number: 12
+
 Iteration number: 13
 ```
 
@@ -7453,227 +7787,365 @@ Iteration number: 13
 
 ```bash
 $ cat badtest3
+
 #!/bin/bash
-# improperly using the continue command in a while loop
+```
+
+
+
+# 在 `while` 循环中错误使用 `continue` 命令
+
+```
 var1=0
+
 while echo "iteration: $var1"; [ $var1 -lt 15 ]
+
 do
+
     if [ $var1 -gt 5 ] && [ $var1 -lt 10 ]
+
     then
+
         continue
+
     fi
+
     echo "    Inside iteration number: $var1"
+
     var1=$[ $var1 + 1 ]
+
 done
+```
+
+```
 $ ./badtest3 | more
+
 while iteration: 0
+
     Inside iteration number: 0
+
 while iteration: 1
+
     Inside iteration number: 1
+
 while iteration: 2
+
     Inside iteration number: 2
+
 while iteration: 3
+
     Inside iteration number: 3
+
 while iteration: 4
+
     Inside iteration number: 4
+
 while iteration: 5
+
 while iteration: 10
+
 while iteration: 11
+
 while iteration: 12
+
 while iteration: 13
 ```
 
-
-
-
-
 ```
 Inside iteration number: 4
+
 while iteration: 5
+
 Inside iteration number: 5
+
 while iteration: 6
+
 while iteration: 6
+
 while iteration: 6
+
 while iteration: 6
+
 while iteration: 6
+
 while iteration: 6
+
 while iteration: 6
+
 while iteration: 6
+
 while iteration: 6
+
 while iteration: 6
+
 $
 ```
 
-你可能需要确保将此脚本的输出重定向到 `more` 命令，这样你就可以停止它。在满足 `if-then` 条件之前，一切似乎运行正常，直到 shell 执行了 `continue` 命令。当 shell 执行 `continue` 命令时，它会跳过 `while` 循环中剩余的命令。遗憾的是，在 `while` 测试命令中测试的 `$var1` 计数变量正是在那里递增的。这意味着正如从持续显示的输出中看到的，该变量并没有递增。
+你可能需要确保将此脚本的输出重定向到`more`命令，这样你就可以停止它。在满足`if-then`条件之前，一切似乎运行正常，直到 shell 执行了`continue`命令。当 shell 执行`continue`命令时，它会跳过`while`循环中剩余的命令。遗憾的是，在`while`测试命令中测试的`$var1`计数变量正是在那里递增的。这意味着正如从持续显示的输出中看到的，该变量并没有递增。
 
-与 `break` 命令一样，`continue` 命令允许你通过命令行参数指定要继续哪种层级的循环：
+与`break`命令一样，`continue`命令允许你通过命令行参数指定要继续哪种层级的循环：
 
 ```
 continue n
 ```
 
-其中 `n` 定义了要继续的循环层级。这里有一个继续外层 `for` 循环的示例：
+其中`n`定义了要继续的循环层级。这里有一个继续外层`for`循环的示例：
 
 ```bash
 $ cat test22
+
 #!/bin/bash
+
 # continuing an outer loop
+
 for (( a = 1; a <= 5; a++ ))
+
 do
+
     echo "Iteration $a:"
+
     for (( b = 1; b < 3; b++ ))
+
     do
+
         if [ $a -gt 2 ] && [ $a -lt 4 ]
+
         then
+
             continue 2
+
         fi
+
         var3=$[ $a * $b ]
+
         echo "    The result of $a * $b is $var3"
+
     done
+
 done
+
 $ ./test22
+
 Iteration 1:
+
     The result of 1 * 1 is 1
+
     The result of 1 * 2 is 2
+
 Iteration 2:
+
     The result of 2 * 1 is 2
+
     The result of 2 * 2 is 4
+
 Iteration 3:
+
 Iteration 4:
+
     The result of 4 * 1 is 4
+
     The result of 4 * 2 is 8
+
 Iteration 5:
+
     The result of 5 * 1 is 5
+
     The result of 5 * 2 is 10
+
 $
 ```
 
-### The if-then statement
+###  `if-then` 语句
 
 ```
 if [ $a -gt 2 ] && [ $a -lt 4 ]
+
 then
+
     continue 2
+
 fi
 ```
 
-使用 `continue` 命令来停止循环内部命令的执行，但继续外层循环。注意脚本输出，值为 3 的迭代没有处理任何内部语句，因为 `continue` 命令停止了处理。
+使用`continue`命令来停止循环内部命令的执行，但继续外层循环。注意脚本输出，值为 3 的迭代没有处理任何内部语句，因为`continue`命令停止了处理。
 
-### Processing the Output of a Loop
+### 处理循环的输出
 
-最后，你可以通过管道（pipe）或重定向 shell 脚本中循环的输出。你可以通过在 `done` 命令的末尾添加处理命令来实现这一点：
+最后，你可以通过管道（pipe）或重定向 shell 脚本中循环的输出。你可以通过在`done`命令的末尾添加处理命令来实现这一点：
 
 ```
 for file in /home*
+
 do
+
     if [ -d "$file" ]
+
     then
+
         echo "$file is a directory"
+
     elif
+
         echo "$file is a file"
+
     fi
+
 done > output.txt
 ```
 
-shell 不会在显示器上显示结果，而是将 `for` 命令的结果重定向到文件 `output.txt`。请考虑以下将 `for` 命令的输出重定向到文件的示例：
+shell 不会在显示器上显示结果，而是将`for`命令的结果重定向到文件`output.txt`。请考虑以下将`for`命令的输出重定向到文件的示例：
 
 ```bash
 $ cat test23
+
 #!/bin/bash
+
 # redirecting the for output to a file
+
 for (( a = 1; a < 10; a++ ))
+
 do
+
     echo "The number is $a"
+
 done > test23.txt
+
 $ ./test23
+
 The command is finished.
+
 $ cat test23.txt
+
 The number is 1
+
 The number is 2
+
 The number is 3
+
 The number is 4
+
 The number is 5
+
 The number is 6
+
 The number is 7
+
 The number is 8
+
 The number is 9
+
 $
 ```
 
-shell 创建了 `test23.txt` 文件并将 `for` 命令的输出仅重定向到该文件。shell 会像往一样显示 `for` 命令之后的 `echo` 语句。这种技术同样适用于将循环的输出管道到另一个命令：
+shell 创建了`test23.txt`文件并将`for`命令的输出仅重定向到该文件。shell 会像往常一样显示`for`命令之后的`echo`语句。这种技术同样适用于将循环的输出管道到另一个命令：
 
 ```bash
 $ cat test24
+
 #!/bin/bash
+
 # piping a loop to another command
+
 for state in "North Dakota" Connecticut Alabama Tennessee
+
 do
+
     echo "$state is the next place to go"
+
 done | sort
+
 echo "This completes our travels"
+
 $ ./test24
+
 Alabama is the next place to go
+
 Connecticut is the next place to go
+
 Illinois is the next place to go
+
 North Dakota is the next place to go
+
 Tennessee is the next place to go
+
 This completes our travels
+
 $
 ```
 
-州值在 `for` 命令列表中并不是按特定顺序列出的。`for` 命令的输出被管道传输到 `sort` 命令，这将改变 `for` 命令输出的顺序。运行脚本确实显示输出在脚本内部已经过正确排序。
+州值在`for`命令列表中并不是按特定顺序列出的。`for`命令的输出被管道传输到`sort`命令，这将改变`for`命令输出的顺序。运行脚本确实显示输出在脚本内部已经过正确排序。
 
-### Summary
+### 总结
 
-循环是编程中不可或缺的一部分。bash shell 提供了三种不同的循环命令，你可以在脚本中使用它们。`for` 命令允许你遍历值列表，这些值可以在命令行中提供，也可以包含在变量中，或者通过使用文件通配符（file globbing）从通配符字符提取文件名和目录名。
+循环是编程中不可或缺的一部分。bash shell 提供了三种不同的循环命令，你可以在脚本中使用它们。`for`命令允许你遍历值列表，这些值可以在命令行中提供，也可以包含在变量中，或者通过使用文件通配符（file globbing）从通配符字符提取文件名和目录名。
 
-`while` 命令提供了一种基于命令状态进行循环的方法，可以使用普通命令或 `test` 命令（后者允许你测试变量条件）。只要命令（或条件）产生零退出状态，`while` 循环就会继续迭代指定的命令集。
+`while`命令提供了一种基于命令状态进行循环的方法，可以使用普通命令或`test`命令（后者允许你测试变量条件）。只要命令（或条件）产生零退出状态，`while`循环就会继续迭代指定的命令集。
 
-`until` 命令也提供了一种迭代命令的方法，但它的迭代基于命令（或条件）产生非零退出状态。此功能允许你设置一个在迭代停止前必须满足的条件。
+`until`命令也提供了一种迭代命令的方法，但它的迭代基于命令（或条件）产生非零退出状态。此功能允许你设置一个在迭代停止前必须满足的条件。
 
-你可以在 shell 脚本中组合循环，产生多层循环。bash shell 提供了 `continue` 和 `break` 命令。
+你可以在 shell 脚本中组合循环，产生多层循环。bash shell 提供了`continue`和`break`命令。
 
-
-
-
-
-`bash` shell 会将一组称为“位置参数”（positional parameters）的特殊变量分配给命令行中输入的所有参数。这甚至包括 shell 执行的程序名称。位置参数变量是标准数字，其中 `$0` 是程序名称，`$1` 是第一个参数，`$2` 是第二个参数，以此此类推，直到 `$9` 是第九个参数。
+`bash` shell 会将一组称为“位置参数”（positional parameters）的特殊变量分配给命令行中输入的所有参数。这甚至包括 shell 执行的程序名称。位置参数变量是标准数字，其中`$0`是程序名称，`$1`是第一个参数，`$2`是第二个参数，以此此类推，直到`$9`是第九个参数。
 
 这里是在 shell 脚本中使用一个命令行参数的简单示例：
 
 ```bash
 $ cat test1
+
 #!/bin/bash
+
 # using one command line parameter
+
 factorial=1
+
 for (( number = 1; number <= $1 ; number++ ))
+
 do
+
     factorial=$[ $factorial * $number ]
+
 done
+
 echo The factorial of $1 is $factorial
+
 $ 
+
 $ ./test1 5
+
 The factorial of 5 is 120
+
 $
 ```
 
-你可以像使用 shell 脚本中的其他变量一样使用 `$1` 变量。shell 脚本会自动将命令行参数的值赋值给变量；你不需要对其进行任何操作。
+你可以像使用 shell 脚本中的其他变量一样使用`$1`变量。shell 脚本会自动将命令行参数的值赋值给变量；你不需要对其进行任何操作。
 
 如果你需要输入更多的命令行参数，每个参数在命令行上必须用空格分隔：
 
 ```bash
 $ cat test2
+
 #!/bin/bash
+
 # testing two command line parameters
+
 total=$[ $1 * $2 ]
+
 echo The first parameter is $1.
+
 echo The second parameter is $2.
+
 echo The total value is $total.
+
 $ 
+
 $ ./test2 2 5
+
 The first parameter is 2.
+
 The second parameter is 5.
+
 The total value is 10.
+
 $
 ```
 
@@ -7685,12 +8157,19 @@ shell 会将每个参数分配给相应的变量。
 
 ```bash
 $ cat test3
+
 #!/bin/bash
+
 # testing string parameters
+
 echo Hello $1, glad to meet you.
+
 $ 
+
 $ ./test3 Rich
+
 Hello Rich, glad to meet you.
+
 $
 ```
 
@@ -7698,7 +8177,9 @@ shell 将输入命令行的字符串值传递给脚本。但是，如果你尝�
 
 ```bash
 $ ./test3 Rich Blum
+
 Hello Rich, glad to meet you.
+
 $
 ```
 
@@ -7706,10 +8187,15 @@ $
 
 ```bash
 $ ./test3 'Rich Blum'
+
 Hello Rich Blum, glad to meet you.
+
 $ 
+
 $ ./test3 "Rich Blum"
+
 Hello Rich Blum, glad to meet you.
+
 $
 ```
 
@@ -7718,21 +8204,33 @@ $
 
 ### 处理多个数字参数
 
-如果你的脚本需要超过九个命令行参数，你可以继续，但变量名称会略有变化。在第九个变量之后，你必须在变量数字周围使用大括号，例如 `${10}`。这是一个相关的示例：
+如果你的脚本需要超过九个命令行参数，你可以继续，但变量名称会略有变化。在第九个变量之后，你必须在变量数字周围使用大括号，例如`${10}`。这是一个相关的示例：
 
 ```bash
 $ cat test4
+
 #!/bin/bash
+
 # handling lots of parameters
+
 total=$[ ${10} * ${11} ]
+
 echo The tenth parameter is ${10}
+
 echo The eleventh parameter is ${11}
+
 echo The total is $total
+
 $ 
+
 $ ./test4 1 2 3 4 5 6 7 8 9 10 11 12
+
 The tenth parameter is 10
+
 The eleventh parameter is 11
+
 The total is 110
+
 $
 ```
 
@@ -7740,40 +8238,61 @@ $
 
 ### 读取程序名称
 
-你可以使用 `$0` 参数来确定 shell 从命令行启动的程序名称。如果你编写一个具有多个功能的实用程序，这会非常有用。然而，有一个小问题是你处理的。看这个简单示例中发生了什么：
+你可以使用`$0`参数来确定 shell 从命令行启动的程序名称。如果你编写一个具有多个功能的实用程序，这会非常有用。然而，有一个小问题是你处理的。看这个简单示例中发生了什么：
 
 ```bash
 $ cat test5
+
 #!/bin/bash
+
 # testing the $0 parameter
+
 echo The command entered is: $0
+
 $ 
+
 $ ./test5
+
 The command entered is: ./test5
+
 $ 
+
 $ /home/rich/test5
+
 The command entered is: /home/rich/test5
+
 $
 ```
 
-当传递给 `$0` 变量的实际字符串是整个脚本路径时，整个路径将用于用于程序，而不仅仅是程序名称。
+当传递给`$0`变量的实际字符串是整个脚本路径时，整个路径将用于程序，而不仅仅是程序名称。
 
-如果你想写一个根据命令行运行的脚本名称来执行不同函数的脚本，你必须做一些工作。你能够能够剥离从命令行运行脚本时使用的任何路径。
+如果你想写一个根据命令行运行的脚本名称来执行不同函数的脚本，你必须做一些工作。你能够剥离从命令行运行脚本时使用的任何路径。
 
-幸运的是，有一个非常有用的命令可以为你实现这一点。`basename` 命令只返回不带路径的程序名。让我们修改示例脚本看看它是如何工作的：
+幸运的是，有一个非常有用的命令可以为你实现这一点。`basename`命令只返回不带路径的程序名。让我们修改示例脚本看看它是如何工作的：
 
 ```bash
 $ cat test5b
+
 #!/bin/bash
+
 # using basename with the $0 parameter
+
 name='basename $0'
+
 echo The command entered is: $name
+
 $ 
+
 $ ./test5b
+
 The command entered is: test5b
+
 $ 
+
 $ /home/rich/test5b
+
 The command entered is: test5b
+
 $
 ```
 
@@ -7781,22 +8300,39 @@ $
 
 ```bash
 $ cat test6
+
 #!/bin/bash
+
 # testing a multi-function script
+
 name='basename $0'
+
 if [ $name = "addem" ]
+
 then
+
     total=$[ $1 + $2 ]
+
 elif [ $name = "multem" ]
+
 then
+
     total=$[ $1 * $2 ]
+
 fi
+
 echo The calculated value is $total
+
 $ 
+
 $ chmod u+x test6
+
 $ cp test6 addem
+
 $ ln -s test6 multem
+
 $ ls -l
+
 -rwxr--r--     1 rich      rich
 ```
 
@@ -7806,20 +8342,35 @@ $ ls -l
 
 ```bash
 $ cat test7
+
 #!/bin/bash
+
 # testing parameters before use
+
 if [ -n "$1" ]
+
 then
+
     echo Hello $1, glad to meet you.
+
 else
+
     echo "Sorry, you did not identify yourself."
+
 fi
+
 $ 
+
 $ ./test7 Rich
+
 Hello Rich, glad to meet you.
+
 $ 
+
 $ ./test7
+
 Sorry, you did not identify yourself.
+
 $
 ```
 
@@ -7831,41 +8382,70 @@ bash shell 中有一些特殊变量用于跟踪命令行参数。本节描述了
 
 正如上一节所示，在使用之前验证命令行参数通常是一个好主意。对于使用多个命令行参数的脚本，这会变得非常麻烦。与其测试每个参数，你只需要计算命令行上输入了多少参数。bash shell 提供了一个特殊变量为此目的。
 
-特殊变量 `$#` 包含了运行脚本时的命令行参数数量。你可以像使用普通变量一样在脚本的任何地方使用这个特殊变量：
+特殊变量`$#`包含了运行脚本时的命令行参数数量。你可以像使用普通变量一样在脚本的任何地方使用这个特殊变量：
 
 ```bash
 $ cat test8
+
 #!/bin/bash
+
 # getting the number of parameters
+
 echo There were $# parameters supplied.
+
 $ 
+
 $ ./test8
+
 There were 0 parameters supplied.
+
 $ 
+
 $ ./test8 1 2 3 4 5
+
 There were 5 parameters supplied.
+
 $ 
+
 $ ./test8 1 2 3 4 5 6 7 8 9 10
+
 There were 10 parameters supplied.
+
 $ 
+
 $ ./test8 "Rich Blum"
 ```
 
 
 
+进入`/path/to/xxx`目录，找到`xxx.json`。
 
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`。
 
-`There were 1 parameters supplied.`
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
 
-`$`
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
+[/content]
+
+---
+
+[content]
+```
+There were 1 parameters supplied.
+```
 
 现在你可以在尝试使用这些参数之前，测试存在的参数数量：
 
-`$ cat test9`
-
 ```bash
+$ cat test9
 #!/bin/bash
+
 # testing parameters
+
 if [ $# -ne 2 ]
 then
    echo Usage: test9 a b
@@ -7874,91 +8454,89 @@ else
    echo The total is $total
 fi
 ```
-`$ `
 
-`$ ./test9
+```bash
+$ ./test9
 Usage: test9 a b
-`$ `
-
-`$ ./test9 10
+$ ./test9 10
 Usage: test9 a b
-`$ `
-
-`$ ./test9 10 15
+$ ./test9 10 15
 The total is 25
-`$ `
-
-`$ ./test9 10 15 20
+$ ./test9 10 15 20
 Usage: test9 a b
-`$`
+```
 
-`if-then` 语句使用 `test` 命令对命令行上提供的参数数量进行数值测试。如果参数数量不正确，你可以打印一条错误信息，显示脚本的正确用法。
+`if-then`语句使用`test`命令对命令行上提供的参数数量进行数值测试。如果参数数量不正确，你可以打印一条错误信息，显示脚本的正确用法。
 
 这个变量还提供了一种获取命令行最后一个参数的酷方法，而不需要知道使用了多少个参数。然而，你需要使用一点小技巧才能做到。
 
-如果你仔细思考，你可能会认为因为 `$#` 变量包含了参数数量的值，那么使用变量 `${$#}` 就会代表最后一个命令行参数变量。试一下看看会发生什么：
+如果你仔细思考，你可能会认为因为`$#`变量包含了参数数量的值，那么使用变量`${$#}`就会代表最后一个命令行参数变量。试一下看看会发生什么：
 
 ```bash
 $ cat badtest1
 #!/bin/bash
+
 # testing grabbing last parameter
+
 echo The last parameter was ${$#}
 ```
-`$ `
 
-`$ ./badtest1 10
+```bash
+$ ./badtest1 10
 The last parameter was 15354
-`$`
+```
 
 哇，这里发生了什么？显然，发生了一些错误。事实证明，你不能在大括号中使用美元符号。相反，你必须将美元符号替换为感叹号。这很奇怪，但它确实有效：
 
 ```bash
 $ cat test10
 #!/bin/bash
+
 # grabbing the last parameter
+
 params=$#
 echo The last parameter is $params
 echo The last parameter is ${!#}
 ```
-`$ `
 
-`$ ./test10 1 2 3 4 5
+```bash
+$ ./test10 1 2 3 4 5
 The last parameter is 5
 The last parameter is 5
-`$ `
-
-`$ ./test10
+$ ./test10
 The last parameter is 0
 The last parameter is ./test10
-`$`
+```
 
-完美。这个测试还将 `$#` 变量的值赋值给变量 `params`，然后在特殊的命令行参数变量格式中使用了该变量。两个版本都有效。同样重要的是，当命令行上没有任何参数时，`$#` 的值为零，这显示在 `params` 变量中，但 `${!#}` 变量返回命令行上使用的脚本名称。
+完美。这个测试还将`$#`变量的值赋值给变量`params`，然后在特殊的命令行参数变量格式中使用了该变量。两个版本都有效。同样重要的是，当命令行上没有任何参数时，`$#`的值为零，这显示在`params`变量中，但`${!#}`变量返回命令行上使用的脚本名称。
 
-# 获取所有数据
+## 获取所有数据
 
-在某些情况下，你只想获取命令行上提供的所有参数并遍历所有参数。你不需要费力使用 `$#` 变量来确定命令行上有多少参数，然后遍历所有参数，你可以使用另外两个特殊变量。
+在某些情况下，你只想获取命令行上提供的所有参数并遍历所有参数。你不需要费力使用`$#`变量来确定命令行上有多少参数，然后遍历所有参数，你可以使用另外两个特殊变量。
 
-`$*` 和 `$@` 变量提供了访问所有参数的便利。这两个变量都将所有命令行参数包含在一个变量中。
+`$*`和`$@`变量提供了访问所有参数的便利。这两个变量都将所有命令行参数包含在一个变量中。
 
-`$*` 变量将命令行上提供的所有参数视为单个单词。该单词包含了每个值在命令行上出现时的样子。基本上，`$*` 变量不是将参数视为多个对象，而是将它们都视为一个参数。
+`$*`变量将命令行上提供的所有参数视为单个单词。该单词包含了每个值在命令行上出现时的样子。基本上，`$*`变量不是将参数视为多个对象，而是将它们都视为一个参数。
 
-另一方面，`$@` 变量将命令行上提供的所有参数视为同一字符串中独立的单词。它允许你遍历这些值，分离出提供的每个参数。这通常通过使用 `for` 命令来实现。
+另一方面，`$@`变量将命令行上提供的所有参数视为同一字符串中独立的单词。它允许你遍历这些值，分离出提供的每个参数。这通常通过使用`for`命令来实现。
 
 弄清楚这两个变量是如何运作的很容易混淆。让我们来看，你就可以看到它们之间的区别：
 
 ```bash
 $ cat test11
 #!/bin/bash
+
 # testing $* and $@
+
 echo "Using the \$* method: *"
 echo "Using the \$@ method: $@"
 ```
-`$ `
 
-`$ ./test11 rich barbara katie jessica
+```bash
+$ ./test11 rich barbara katie jessica
 Using the $* method: rich barbara katie jessica
 Using the @ method: rich barbara katie jessica
-`$`
+```
 
 注意，从表面上看，两个变量都产生相同的输出，一次性显示所有提供的命令行参数。
 
@@ -7967,13 +8545,16 @@ Using the @ method: rich barbara katie jessica
 ```bash
 $ cat test12
 #!/bin/bash
+
 # testing $* and $@
+
 count=1
 for param in "$*"
 do
    echo "\* Parameter #$count = $param"
    count=$[ $count + 1 ]
 done
+
 count=1
 for param in "$@"
 do
@@ -7981,28 +8562,30 @@ do
    count=$[ $count + 1 ]
 done
 ```
-`$ `
 
-`$ ./test12 rich barbara katie jessica
+```bash
+$ ./test12 rich barbara katie jessica
 $* Parameter #1 = rich barbara katie jessica
 $@ Parameter #1 = rich
 $@ Parameter #2 = barbara
 $@ Parameter #3 = katie
 $@ Parameter #4 = jessica
-`$`
+```
 
-现在我们发现重点了。通过使用 `for` 命令遍历特殊变量，你可以看到它们是如何分别处理命令行参数的。`$*` 变量将所有参数视为单个参数，而 `$@` 变量分别处理每个参数。
+现在我们发现重点了。通过使用`for`命令遍历特殊变量，你可以看到它们是如何分别处理命令行参数的。`$*`变量将所有参数视为单个参数，而`$@`变量分别处理每个参数。
 
 ## 移动操作
 
-你在 bash shell 中拥有的另一个工具是 `shift` 命令。当你使用 `shift` 命令时，默认会将所有参数向移动一位。这是遍历参数的另一种很好的方法，特别是当你不知道有多少个可用参数时。
+你在`bash` shell中拥有的另一个工具是`shift`命令。当你使用`shift`命令时，默认会将所有参数向移动一位。这是遍历参数的另一种很好的方法，特别是当你不知道有多少个可用参数时。
 
 这里有一个它是如何工作的简短演示：
 
 ```bash
 $ cat test13
 #!/bin/bash
+
 # demonstrating the shift command
+
 count=1
 while [ -n "$1" ]
 do
@@ -8011,41 +8594,42 @@ do
    shift
 done
 ```
-`$ `
 
-`$ ./test13 rich barbara katie jessica
+```bash
+$ ./test13 rich barbara katie jessica
 Parameter #1 = rich
 Parameter #2 = barbara
 Parameter #3 = katie
 Parameter #4 = jessica
-`$`
+```
 
-通过在 `shift` 命令中使用值，你可以轻松地跳过不需要的参数。
+通过在`shift`命令中使用值，你可以轻松地跳过不需要的参数。
 
-或者，你可以通过向 `shift` 命令提供参数来执行多次位置移动。只需提供你想要移动的位置数即可：
+或者，你可以通过向`shift`命令提供参数来执行多次位置移动。只需提供你想要移动的位置数即可：
 
 ```bash
 $ cat test14
 #!/bin/bash
+
 # demonstrating a multi-position shift
+
 echo "The original parameters: *"
 shift 2
 echo "Here's the new first parameter: $1"
 ```
-`$ `
 
-`$ ./test14 1 2 3 4 5
+```bash
+$ ./test14 1 2 3 4 5
 The original parameters: 1 2 3 4 5
 Here's the new first parameter: 3
-`$`
+```
 
 > 注意
-
-> 使用 `shift` 命令时要小心。当参数被移出时，它的值就会丢失且无法恢复。
+> 使用`shift`命令时要小心。当参数被移出时，它的值就会丢失且无法恢复。
 
 ## 使用选项
 
-如果你一直在跟着这本书学习，你已经了一些既提供参数又选项的 bash 命令。选项是以破折号开头的单字母，它们用于改变命令的行为。
+如果你一直在跟着这本书学习，你已经了一些既提供参数又选项的`bash`命令。选项是以破折号开头的单字母，它们用于改变命令的行为。
 
 ### 寻找你的选项
 
@@ -8053,18 +8637,16 @@ Here's the new first parameter: 3
 
 ### 处理简单选项
 
-在早先的 `test13` 脚本中，你看到了如何使用 `shift` 命令来处理脚本程序提供的命令行参数。你可以使用相同的技术来处理命令行选项。
+在早先的`test13`脚本中，你看到了如何使用`shift`命令来处理脚本程序提供的命令行参数。你可以使用相同的技术来处理命令行选项。
 
-
-
-
-
-当你提取每个单独参数时，使用 `case` 语句来判断参数何时被格式化为选项：
+当你提取每个单独参数时，使用`case`语句来判断参数何时被格式化为选项：
 
 ```bash
 $ cat test15
 #!/bin/bash
+
 # extracting command line options as parameters
+
 while [ -n "$1" ]
 do
     case "$1" in
@@ -8075,39 +8657,41 @@ do
     esac
     shift
 done
-$
+```
+
+```bash
 $ ./test15 -a -b -c -d
 Found the -a option
 Found the -b option
 Found the -c option
 -d is not an option
-$
 ```
 
-`case` 语句检查每个参数的有效选项。当发现有效选项时，会在 `case` 语句中运行相应的命令。无论选项在命令行上的出现顺序如何，这种方法都有效：
+`case`语句检查每个参数的有效选项。当发现有效选项时，会在`case`语句中运行相应的命令。无论选项在命令行上的出现顺序如何，这种方法都有效：
 
 ```bash
 $ ./test15 -d -c -a
 -d is not an option
 Found the -c option
 Found the -a option
-$
 ```
 
-`case` 语句会在在命令行参数中找到每个选项时对其进行处理。如果命令行包含了任何其他参数，你可以在 `case` 语句的通配部分（catch-all part）中包含命令来处理它们。
+`case`语句会在在命令行参数中找到每个选项时对其进行处理。如果命令行包含了任何其他参数，你可以在`case`语句的通配部分（catch-all part）中包含命令来处理它们。
 
 ### 分离选项与参数
 
-通常你可能会遇到这种情况：希望在 Shell 脚本中同时使用选项和参数。在 Linux 中实现此点的标准方法是使用特殊的代码将两者分离，该代码告诉脚本选项何时结束，普通参数何时开始。
+通常你可能会遇到这种情况：希望在Shell脚本中同时使用选项和参数。在Linux中实现此点的标准方法是使用特殊的代码将两者分离，该代码告诉脚本选项何时结束，普通参数何时开始。
 
-对于 Linux，这个特殊字符是双横杠 `--`。Shell 使用双横杠来指示选项列表的结束。看到双横杠后，你的脚本就可以安全地将剩余的命令行参数作为参数而非选项。
+对于Linux，这个特殊字符是双横杠`--`。Shell使用双横杠来指示选项列表的结束。看到双横杠后，你的脚本就可以安全地将剩余的命令行参数作为参数而非选项。
 
-要检查双横杠，只需在 `case` 语句中添加另一个条目：
+要检查双横杠，只需在`case`语句中添加另一个条目：
 
 ```bash
 $ cat test16
 #!/bin/bash
+
 # extracting options and parameters
+
 while [ -n "$1" ]
 do
     case "$1" in
@@ -8120,16 +8704,16 @@ do
     esac
     shift
 done
+
 count=1
 for param in $@
 do
     echo "Parameter #$count: $param"
     count=$[ $count + 1 ]
 done
-$
 ```
 
-此脚本使用 `break` 命令在遇到双横杠时跳出 `while` 循环。由于我们是提前跳出，我们需要确保再执行一次 `shift` 命令，将双横杠从参数变量中移除。
+此脚本使用`break`命令在遇到双横杠时跳出`while`循环。由于我们是提前跳出，我们需要确保再执行一次`shift`命令，将双横杠从参数变量中移除。
 
 对于第一次测试，尝试使用一组普通的选项和参数运行脚本：
 
@@ -8141,7 +8725,6 @@ Found the -b option
 test1 is not an option
 test2 is not an option
 test3 is not an option
-$
 ```
 
 结果显示，脚本在处理参数时假设所有的命令行参数都是选项。接下来，尝试相同的操作，但这次使用双横杠来分离命令行上的选项和参数：
@@ -8154,7 +8737,6 @@ Found the -b option
 Parameter #1: test1
 Parameter #2: test2
 Parameter #3: test3
-$
 ```
 
 当脚本到达双横杠时，它停止处理选项，并假设任何剩余参数都是命令行参数。
@@ -8172,7 +8754,9 @@ $ ./testing -a test1 -b -c -d test2
 ```bash
 $ cat test17
 #!/bin/bash
+
 # extracting command line options and values
+
 while [ -n "$1" ]
 do
     case "$1" in
@@ -8187,66 +8771,70 @@ do
     esac
     shift
 done
+
 count=1
 for param in $@
 do
     echo "Parameter #$count: $param"
     count=$[ $count + 1 ]
 done
-$
-$ ./testing -a test1 -b -c -d test2
-Found the -a option
-Found the -b option, with parameter value $param
-Found the -c option
--d is not an option
-$
 ```
-*(等待，提供的 `test17` 文本包含一些重复/混乱的输出行，我将清理它们以匹配逻辑同时保留核心内容。)*
 
-基于提供的文本逻辑修正去重输出流：
 ```bash
 $ ./testing -a test1 -b -c -d test2
 Found the -a option
 Found the -b option, with parameter value $param
 Found the -c option
 -d is not an option
-$
 ```
 
-`case` 语句检查每个参数的有效选项。当发现有效选项时，会在 `case` 语句中运行相应的命令。这种方法无论选项在命令行上的出现顺序如何，都有效：
+*(等待，提供的`test17`文本包含一些重复/混乱的输出行，我将清理它们以匹配逻辑同时保留核心内容。)*
+
+基于提供的文本逻辑修正去重输出流：
+
+```bash
+$ ./testing -a test1 -b -c -d test2
+Found the -a option
+Found the -b option, with parameter value $param
+Found the -c option
+-d is not an option
+```
+
+`case`语句检查每个参数的有效选项。当发现有效选项时，会在`case`语句中运行相应的命令。这种方法无论选项在命令行上的出现顺序如何，都有效：
 
 ```bash
 $ ./test15 -d -c -a
 -d is not an option
 Found the -c option
 Found the -a option
-$
 ```
 
-`case` 语句会在在命令行参数中找到每个选项时对其进行处理。如果命令行包含了任何其他参数，你可以在 `case` 语句的通配部分中包含命令来处理它们。
+`case`语句会在在命令行参数中找到每个选项时对其进行处理。如果命令行包含了任何其他参数，你可以在`case`语句的通配部分中包含命令来处理它们。
 
 ### 在脚本中使用 getopt
 
-你可以在脚本中使用 `getopt` 命令来格式化为你的脚本输入的任何命令行选项或参数。不过，使用它有一点棘手。
+你可以在脚本中使用`getopt`命令来格式化为你的脚本输入的任何命令行选项或参数。不过，使用它有一点棘手。
 
-### getopt 命令
+### getopt命令
 
-`getopt` 命令可以接受任何形式的命令行参数列表，并自动将其转换为正确的格式：
+`getopt`命令可以接受任何形式的命令行参数列表，并自动将其转换为正确的格式：
 
-`getopt options parameters`
+```
+getopt options parameters
+```
 
-`optstring` 是该过程的关键。它定义了有效的选项。首先，在 `optstring` 中列出你将使用的每个命令行选项。然后，在每个需要参数值的选项字母后加上一个冒号。`getopt` 命令根据你定义的 `optstring` 解析所提供的参数。
+`optstring`是该过程的关键。它定义了有效的选项。首先，在`optstring`中列出你将使用的每个命令行选项。然后，在每个需要参数值的选项字母后加上一个冒号。`getopt`命令根据你定义的`optstring`解析所提供的参数。
 
-这里有一个关于 `getopt` 如何运行的简单示例：
+这里有一个关于`getopt`如何运行的简单示例：
 
 ```bash
 $ getopt ab:cd -a -b test1 -cd test2
 -a -b test1 -c d -- test2
 ```
 
-`optstring` 定义了四个选项字母 `a`、`b`、`c` 和 `d`。它还定义了选项 `b` 需要一个参数值。当 `getopt` 命令运行时，它检查提供的参数并根据 `optstring` 进行解析。注意，它自动将 `-cd` 选项拆分为单独选项，并插入双横杠以分离额外的参数。
+`optstring`定义了四个选项字母`a`、`b`、`c`和`d`。它还定义了选项`b`需要一个参数值。当`getopt`命令运行时，它检查提供的参数并根据`optstring`进行解析。注意，它自动将`-cd`选项拆分为单独选项，并插入双横杠以分离额外的参数。
 
-如果你指定了一个不在 `optstring` 中的选项，默认情况下 `getopt` 命令会产生错误消息：
+如果你指定了一个不在`optstring`中的选项，默认情况下`getopt`命令会产生错误消息：
 
 ```bash
 $ getopt ab:cd -a -b test1 -cde test2 test3
@@ -8254,32 +8842,30 @@ getopt: invalid option -- e
 -a -b test1 -c d -- test2 test3
 ```
 
-如果你倾向于忽略错误消息，请在命令中使用 `-q` 选项：
+如果你倾向于忽略错误消息，请在命令中使用`-q`选项：
 
 ```bash
 $ getopt -q ab:cd -a -b test1 -cde test2 test3
 -a -b 'test1' -c d -- 'test2' 'test3'
 ```
 
-注意 `getopt` 命令选项必须列在 `optstring` 之前。现在你应该准备好在脚本中使用此命令来处理命令行选项了。
 
 
+注意`getopt`命令选项必须列在`optstring`之前。现在你应该准备好在脚本中使用此命令来处理命令行选项了。
 
+诀窍是将现有的命令行选项和参数替换为由`getopt`命令生成的格式化版本。实现这一点的方法是使用`set`命令。
 
+你在第5章中见过`set`命令。`set`命令作用于shell中不同的变量。第5章展示了如何使用`set`命令显示所有的系统环境变量。
 
-诀窍是将现有的命令行选项和参数替换为由 `getopt` 命令生成的格式化版本。实现这一点的方法是使用 `set` 命令。
+`set`命令的选项之一是双横线（`--`），它指示命令将命令行参数变量替换为`set`命令命令行上的值。
 
-你在第 5 章中见过过 `set` 命令。`set` 命令作用于 shell 中不同的变量。第 5 章展示了如何使用 `set` 命令显示所有的系统环境变量。
-
-`set` 命令的选项之一是双横线（--），它指示命令将命令行参数变量替换为 `set` 命令命令行上的值。
-
-接接的诀窍是将原始脚本的命令行参数传递给 `getopt` 命令，然后将 `getopt` 命令的输出传递给 `set` 命令，从而将原始命令行参数替换为来自 `getopt` 的、格式化良好的参数。这看起来像这样：
+接下来的诀窍是将原始脚本的命令行参数传递给`getopt`命令，然后将`getopt`命令的输出传递给`set`命令，从而将原始命令行参数替换为来自`getopt`的、格式化良好的参数。这看起来像这样：
 
 ```
 set -- ‘getopts -q ab:cd "$@”
 ```
 
-现在，原始命令行参数变量的值被替换为 `getopt` 命令的输出，而 `getopt` 正为我们格式化了命令行参数。
+现在，原始命令行参数变量的值被替换为`getopt`命令的输出，而`getopt`正为我们格式化了命令行参数。
 
 使用这种技术，我们现在可以编写脚本来为我们处理命令行参数了：
 
@@ -8287,7 +8873,7 @@ set -- ‘getopts -q ab:cd "$@”
 $ cat test18
 #!/bin/bash
 # extracting command line options and values with getopt
-set -- ‘getopt -q ab:c "$@”’
+set -- ‘getopt -q ab:c "$@"’
 while [ -n "$1" ]
 do
     case "$1" in
@@ -8311,9 +8897,9 @@ done
 $
 ```
 
-你会发现这基本上和 `test17` 中的脚本是同一个。唯一变化是添加了 `getopt` 命令来帮助格式化我们的命令行参数。
+你会发现这基本上和`test17`中的脚本是同一个。唯一变化是添加了`getopt`命令来帮助格式化我们的命令行参数。
 
-现在，当你运行带有复杂选项的脚本时，情况会好好得多：
+现在，当你运行带有复杂选项的脚本时，情况会好得多：
 
 ```
 $ ./test18 -ac
@@ -8335,7 +8921,7 @@ Parameter #3: 'test4'
 $
 ```
 
-现在看起来看起来相当高级了。然而，`getopt` 命令中仍然潜伏着一个小 Bug。看下这个例子：
+现在看起来看起来相当高级了。然而，`getopt`命令中仍然潜伏着一个小Bug。看下这个例子：
 
 ```
 $ ./test18 -a -b test1 -cd "test2 test3" test4
@@ -8348,25 +8934,25 @@ Parameter #3: 'test4'
 $
 ```
 
-`getopt` 命令并不擅长处理带有空格的参数值。它将空格解释为参数分隔符，而不是遵循双引号并将两个值合并为一个参数。幸运的是，还有另一种解决方案可以解决这个问题。
+`getopt`命令并不擅长处理带有空格的参数值。它将空格解释为参数分隔符，而不是遵循双引号并将两个值合并为一个参数。幸运的是，还有另一种解决方案可以解决这个问题。
 
 ### 更高级的 getopts
 
-`getopts` 命令（注意它是复数形式）内置在 bash shell 中。它看起来和它的表兄弟 `getopt` 非常相似，但有一些扩展功能。
+`getopts`命令（注意它是复数形式）内置在`bash` shell中。它看起来和它的表兄弟`getopt`非常相似，但有一些扩展功能。
 
-与 `getopt` 不同（后者会对命令行中找到的所有选项和参数产生一个输出），`getopts` 命令按顺序对现有的 shell 参数变量进行操作。
+与`getopt`不同（后者会对命令行中找到的所有选项和参数产生一个输出），`getopts`命令按顺序对现有的shell参数变量进行操作。
 
 它每次被调用时都会处理命令行中检测到的参数。当它用完参数时，会以大于零的退出状态退出。这使得它非常适合用于循环解析命令行上的所有参数。
 
-`getopts` 命令的格式为：
+`getopts`命令的格式为：
 
 ```
 getopts optstring $variable
 ```
 
-`optstring` 的值与 `getopt` 命令中使用的类似。有效的选项字母列在 `optstring` 中，如果选项字母需要参数值，则后面会跟一个冒号。为了抑制错误消息，请以冒号开头 `optstring`。`getopts` 命令将当前参数放置在命令行中定义的变量中。
+`optstring`的值与`getopt`命令中使用的类似。有效的选项字母列在`optstring`中，如果选项字母需要参数值，则后面会跟一个冒号。为了抑制错误消息，请以冒号开头`optstring`。`getopts`命令将当前参数放置在命令行中定义的变量中。
 
-`getopts` 命令使用了两个环境变量。`OPTARG` 环境变量包含当选项需要参数值时将使用的值。`OPTIND` 环境变量包含 `getopts` 停止处的位置值。这允许你继续操作。让我们来看一个使用 `getopts` 的简单示例：
+`getopts`命令使用了两个环境变量。`OPTARG`环境变量包含当选项需要参数值时将使用的值。`OPTIND`环境变量包含`getopts`停止处的位置值。这允许你继续操作。让我们来看一个使用`getopts`的简单示例：
 
 ```
 $ cat test19
@@ -8384,9 +8970,9 @@ done
 $
 ```
 
-你会注意到 `case` 语句中有些不同。`getopts` 命令定义了要查找的选项，以及在每次迭代中存储它们的变量名。`getopts` 处理命令行时会剥离掉开头的横杠，因此你在 `case` 定义中不需要它们。
+你会注意到`case`语句中有些不同。`getopts`命令定义了要查找的选项，以及在每次迭代中存储它们的变量名。`getopts`处理命令行时会剥离掉开头的横杠，因此你在`case`定义中不需要它们。
 
-`getopts` 有几个非常棒的功能。首先，你现在可以在参数值中包含空格了：
+`getopts`有几个非常棒的功能。首先，你现在可以在参数值中包含空格了：
 
 ```
 $ ./test19 -b "test1 test2" -a
@@ -8401,7 +8987,7 @@ Found the -a option
 Found the -b option, with value test1
 ```
 
-任何在 `optstring` 中未定义的选项都会以问号的形式发送给你的代码。`getopts` 知道何时停止选项，你可以使用 `OPTIND` 值移动到参数：
+任何在`optstring`中未定义的选项都会以问号的形式发送给你的代码。`getopts`知道何时停止选项，你可以使用`OPTIND`值移动到参数：
 
 ```
 $ cat test20
@@ -8440,21 +9026,17 @@ $
 
 ### 标准化选项
 
-现在你拥有了一个功能全命令行选项和参数处理工具，你可以在所有的 shell 脚本中使用它。
+现在你拥有了一个功能全命令行选项和参数处理工具，你可以在所有的shell脚本中使用它。
 
-当你创建 shell 脚本时，显然你控制着发生什么。选择使用哪些字母选项以及如何选择使用它们完全取决于你。
+当你创建shell脚本时，显然你控制着发生什么。选择使用哪些字母选项以及如何选择使用它们完全取决于你。
 
-然而，有几个字母选项在 Linux 世界中获得了一定的标准含义。如果你在 shell 脚本中利用这些选项，将使你的脚本更加用户友好。
+然而，有几个字母选项在Linux世界中获得了一定的标准含义。如果你在shell脚本中利用这些选项，将使你的脚本更加用户友好。
 
+表13.1显示了Linux中使用的命令行选项的一些常见含义。
 
+### 常见的Linux命令行选项
 
-
-
-表 13.1 显示了 Linux 中使用的命令行选项的一些常见含义。
-
-### 常见的 Linux 命令行选项
-
-表 13.1
+表13.1
 
 | 选项 | 描述 |
 | :--- | :--- |
@@ -8475,15 +9057,15 @@ $
 | `-x` | 排除一个对象。 |
 | `-y` | 对所有问题均回答“是”。 |
 
-你可能通过在本书中使用各种 `bash` 命令，识别出大部分这些选项的含义。为你的选项使用相同的含义有助于用户与你的脚本交互，而无需担心查阅手册。
+你可能通过在本书中使用各种`bash`命令，识别出大部分这些选项的含义。为你的选项使用相同的含义有助于用户与你的脚本交互，而无需担心查阅手册。
 
 #### 获取用户输入
 
-虽然提供命令行选项和参数是从脚本用户获取数据的很好的方法，但有时你的脚本需要更具交互性。有时你需要在脚本运行时问一个问题，并等待运行脚本的人的响应。`bash` shell 提供的 `read` 命令专门为此目的。
+虽然提供命令行选项和参数是从脚本用户获取数据的很好的方法，但有时你的脚本需要更具交互性。有时你需要在脚本运行时问一个问题，并等待运行脚本的人的响应。`bash` shell提供的`read`命令专门为此目的。
 
 #### 基础读取
 
-`read` 命令接受来自标准输入（键盘）或另一个文件描述符的输入（见第 14 章）。接收输入后，`read` 命令将数据放入标准变量中。这里是最简单的 `read` 命令：
+`read`命令接受来自标准输入（键盘）或另一个文件描述符的输入（见第14章）。接收输入后，`read`命令将数据放入标准变量中。这里是最简单的`read`命令：
 
 ```
 $ cat test21
@@ -8499,9 +9081,9 @@ Hello Rich Blum, welcome to my program.
 $
 ```
 
-这非常简单。注意产生提示符的 `echo` 命令使用了 `-n` 选项。这抑制了字符串末尾的换行符，允许脚本用户在字符串之后立即输入数据，而不是在下一行。这让你的脚本看起来更像表单。
+这非常简单。注意产生提示符的`echo`命令使用了`-n`选项。这抑制了字符串末尾的换行符，允许脚本用户在字符串之后立即输入数据，而不是在下一行。这让你的脚本看起来更像表单。
 
-事实上，`read` 命令包含了 `-p` 选项，允许你直接在 `read` 命令行中指定提示符：
+事实上，`read`命令包含了`-p`选项，允许你直接在`read`命令行中指定提示符：
 
 ```
 $ cat test22
@@ -8517,7 +9099,7 @@ That makes you over 3650 days old!
 $
 ```
 
-你会在第一个示例中注意到，当输入一个名字时，`read` 命令将名和姓都分配给同一个变量。`read` 命令会将提示符处输入的所有数据分配给单个变量，或者你可以指定多个变量。每个输入的数据值都会分配给列表中的下一个变量。如果变量列表在数据耗尽之前用，剩余的数据将分配给最后一个变量：
+你会在第一个示例中注意到，当输入一个名字时，`read`命令将名和姓都分配给同一个变量。`read`命令会将提示符处输入的所有数据分配给单个变量，或者你可以指定多个变量。每个输入的数据值都会分配给列表中的下一个变量。如果变量列表在数据耗尽之前用，剩余的数据将分配给最后一个变量：
 
 ```
 $ cat test23
@@ -8532,7 +9114,7 @@ Checking data for Blum, Rich...
 $
 ```
 
-你也可以在 `read` 命令行中不指定任何变量。如果你这样做，`read` 命令会将接收到的任何数据放在特殊的环境变量 `REPLY` 中：
+你也可以在`read`命令行中不指定任何变量。如果你这样做，`read`命令会将接收到的任何数据放在特殊的环境变量`REPLY`中：
 
 ```
 $ cat test24
@@ -8552,11 +9134,11 @@ The factorial of 5 is 120
 $
 ```
 
-`REPLY` 环境变量将包含输入中输入的所有数据，它可以像任何其他变量一样在 shell 脚本中使用。
+`REPLY`环境变量将包含输入中输入的所有数据，它可以像任何其他变量一样在shell脚本中使用。
 
 #### 超时
 
-使用 `read` 命令时存在危险。你的脚本可能会卡在等待用户输入数据的地方。如果无论是否输入了数据都必须继续，你可以使用 `-t` 选项来指定计时器。`-t` 选项指定 `read` 命令等待输入的秒数。当计时结束时，`read` 命令返回非零退出状态：
+使用`read`命令时存在危险。你的脚本可能会卡在等待用户输入数据的地方。如果无论是否输入了数据都必须继续，你可以使用`-t`选项来指定计时器。`-t`选项指定`read`命令等待输入的秒数。当计时结束时，`read`命令返回非零退出状态：
 
 ```
 $ cat test25
@@ -8575,7 +9157,7 @@ Hello Rich Blum, welcome to my program.
 $
 ```
 
-除了对输入进行计时外，你还可以设置 `read` 命令按字符计数。当输入了预设数量的字符时，它会自动退出：
+除了对输入进行计时外，你还可以设置`read`命令按字符计数。当输入了预设数量的字符时，它会自动退出：
 
 ```
 $ cat test26
@@ -8604,7 +9186,7 @@ $
 
 #### 静默读取
 
-有时你需要的脚本的输入，但你不希望该输入显示在显示器上。经典的例子是输入密码，但还有许多其他类型的数据你需要隐藏。`-s` 选项防止 `read` 命令中输入的数据显示在显示器上（实际上，`read` 命令将文本颜色设置为与背景相同的颜色）。这里是一个在脚本中使用 `-s` 的示例：
+有时你需要的脚本的输入，但你不希望该输入显示在显示器上。经典的例子是输入密码，但还有许多其他类型的数据你需要隐藏。`-s`选项防止`read`命令中输入的数据显示在显示器上（实际上，`read`命令将文本颜色设置为与背景相同的颜色）。这里是一个在脚本中使用`-s`的示例：
 
 ```
 $ cat test27
@@ -8620,9 +9202,9 @@ $
 
 #### 从文件读取
 
-最后，你还可以使用 `read` 命令读取存储在 Linux 系统文件中的数据。每次调用 `read` 命令都会从文件中读取单行文本。当文件中没有更多行时，`read` 命令将以非零退出状态退出。
+最后，你还可以使用`read`命令读取存储在Linux系统文件中的数据。每次调用`read`命令都会从文件中读取单行文本。当文件中没有更多行时，`read`命令将以非零退出状态退出。
 
-这部分的棘手之处是将数据从文件传递给 `read` 命令。此此最常见的方法是将文件的 `cat` 命令结果直接管道到包含 `read` 命令的 `while` 命令中。
+这部分的棘手之处是将数据从文件传递给`read`命令。此最常见的方法是将文件的`cat`命令结果直接管道到包含`read`命令的`while`命令中。
 
 ```
 $ cat test28
@@ -8641,20 +9223,23 @@ $ cat test
 
 
 
-
-
-`The quick brown dog jumps over the lazy fox.`
-`This is a test, this is only a test.`
-`O Romeo, Romeo! Wherefore art thou Romeo?`
-`$  `
+`The quick brown dog jumps over the lazy fox.`  
+`This is a test, this is only a test.`  
+`O Romeo, Romeo! Wherefore art thou Romeo?`  
+`$  `  
 `$ ./test28`
 
 ```bash
 $ ./test28
+
 Line 1: The quick brown dog jumps over the lazy fox.
+
 Line 2: This is a test, this is only a test.
+
 Line 3: O Romeo, Romeo! Wherefore art thou Romeo?
+
 Finished processing the file
+
 $
 ```
 
@@ -8686,11 +9271,11 @@ $
 
 ## 本章内容
 
-* 复习重定向
-* 标准输入和输出
-* 报告错误
-* 丢弃数据
-* 创建日志文件
+- 复习重定向
+- 标准输入和输出
+- 报告错误
+- 丢弃数据
+- 创建日志文件
 
 到此为止，书中所示脚本通过将数据回显到显示器或将数据重定向到文件来显示信息。第 10 章演示了如何将命令的输出重定向到文件。本章扩展了这一主题，向你展示如何将脚本的输出重定向到 Linux 系统上的不同位置。
 
@@ -8698,8 +9283,8 @@ $
 
 到此为止，你已经看到了两种显示脚本输出的方法：
 
-* 在显示器屏幕上显示输出
-* 将输出重定向到文件
+- 在显示器屏幕上显示输出
+- 将输出重定向到文件
 
 这两种方法对数据输出都采取“全有全无”的方法。然而，有时在显示器上显示某些数据而将其他数据放在文件中会更好。在这些情况下，了解 Linux 如何处理输入输出将非常有用，这样你就能让脚本输出到达正确的地方。
 
@@ -8729,9 +9314,13 @@ Linux 系统将每个对象处理为文件。这包括输入输出过程。Linux
 
 ```bash
 $ cat
+
 this is a test
+
 this is a test
+
 this is a second test.
+
 this is a second test.
 ```
 
@@ -8741,8 +9330,11 @@ this is a second test.
 
 ```bash
 $ cat < testfile
+
 This is the first line.
+
 This is the second line.
+
 This is the third line.
 ```
 
@@ -8750,21 +9342,21 @@ This is the third line.
 
 ### STDOUT
 
-`STDOUT` 文件描述符引用 shell 的标准输出。在终端接口上，标准输出是终端显示器。所有来自 输出（包括你在 shell 中运行的程序和脚本）都定向到标准输出，即显示器。
+`STDOUT` 文件描述符引用 shell 的标准输出。在终端接口上，标准输出是终端显示器。所有来自输出（包括你在 shell 中运行的程序和脚本）都定向到标准输出，即显示器。
 
 大多数 bash 命令默认将它们的输出定向到 `STDOUT` 文件描述符。如第 10 章所示，你可以使用输出重定向来更改这一点：
 
 ```bash
 $ ls -l > test2
+
 $ cat test2
+
 total 20
+
 -rw-rw-r-- 1 rich rich 53 2010-10-16 11:30 test
+
 -rw-rw-r-- 1 rich rich 0 2010-10-16 11:32 test2
 ```
-
-
-
-
 
 通过输出重定向符号，所有通常输出到显示器的输出都会被 shell 重定向到指定的重定向文件。
 
@@ -8772,12 +9364,19 @@ total 20
 
 ```bash
 $ who >> test2
+
 $ cat test2
+
 total 20
+
 -rw-rw-r-- 1 rich rich 53 2010-10-16 11:30 test
+
 -rw-rw-r-- 1 rich rich  0 2010-10-16 11:32 test2
+
 -rw-rw-r-- 1 rich rich 73 2010-10-16 11:23 testfile
+
 rich    pts/0         2010-10-17 15:34 (192.168.1.2)
+
 $
 ```
 
@@ -8787,8 +9386,11 @@ $
 
 ```bash
 $ ls -al badfile > test3
+
 ls: cannot access badfile: No such file or directory
+
 $ cat test3
+
 $
 ```
 
@@ -8814,8 +9416,11 @@ shell 使用特殊的 `STDERR` 文件描述符来处理错误消息。`STDERR` �
 
 ```bash
 $ ls -al badfile 2> test4
+
 $ cat test4
+
 ls: cannot access badfile: No such file or directory
+
 $
 ```
 
@@ -8823,10 +9428,15 @@ $
 
 ```bash
 $ ls -al test badtest test2 2> test5
+
 -rw-rw-r-- 1 rich rich 158 2010-10-16 11:32 test2
+
 $ cat test5
+
 ls: cannot access test: No such file or directory
+
 ls: cannot access badtest: No such file or directory
+
 $
 ```
 
@@ -8838,13 +9448,18 @@ $
 
 ```bash
 $ ls -al test test2 test3 badtest 2> test6 1> test7
+
 $ cat test6
+
 ls: cannot access test: No such file or directory
+
 ls: cannot access badtest: No such file or directory
+
 $ cat test7
+
 -rw-rw-r-- 1 rich rich 158 2010-10-16 11:32 test2
+
 -rw-rw-r-- 1 rich rich  0 2010-10-16 11:33 test3
-$
 ```
 
 shell 使用 `1>` 符号将本应到 `STDOUT` 的 `ls` 命令正常输出重定向到 `test7` 文件。任何本应到 `STDERR` 的错误消息都通过 `2>` 符号重定向到 `test6` 文件。
@@ -8855,17 +9470,23 @@ shell 使用 `1>` 符号将本应到 `STDOUT` 的 `ls` 命令正常输出重定�
 
 ```bash
 $ ls -al test test2 test3 badtest &> test7
+
 $ cat test7
+
 ls: cannot access test: No such file or directory
+
 ls: cannot access badtest: No such file or directory
+
 -rw-rw-r-- 1 rich rich 158 2010-10-16 11:32 test2
+
 -rw-rw-r-- 1 rich rich  0 2010-10-16 11:33 test3
+
 $
 ```
 
 ## 在脚本中重定向输出
 
-你可以在脚本中使用 `STDOUT` 和 `STDERR` 文件描述符，通过通过重定向相应的描述符，简单地在脚本中将输出重定向到多个位置。重定向输出有两种方法：
+你可以在脚本中使用 `STDOUT` 和 `STDERR` 文件描述符，通过重定向相应的描述符，简单地在脚本中将输出重定向到多个位置。重定向输出有两种方法：
 
 - 临时重定向每一行
 - 永久重定向所有命令
@@ -8875,48 +9496,62 @@ $
 如果你想在脚本中有意地生成错误消息，可以将单行输出重定向到 `STDERR`。你只需要使用输出重定向符号将输出重定向到 `STDERR` 文件描述符即可。当你重定向到文件时，必须在文件描述符数字前加上一个和符号（`&`）：
 
 ```bash
-echo "This is an error" >2
+echo "This is an error" >&2
 ```
 
 该行将文本显示在 `STDERR` 文件描述符指向的地方，而不是正常的 `STDOUT`。以下是一个使用此功能的脚本示例：
 
 ```bash
 $ cat test8
+
 #!/bin/bash
+
 # testing STDERR messages
-echo "This is an error" >2
+
+echo "This is an error" >&2
+
 echo "This is normal output"
 ```
 
-如果你像往一样运行脚本，你不会注意到任何差异：
+如果你像往常一样运行脚本，你不会注意到任何差异：
 
 ```bash
 ./test8
+
 This is an error
+
 This is normal output
 ```
 
-
-
-
-
-# 永久重定向
+### 永久重定向
 
 如果你在脚本中有大量数据需要重定向，那么对每个 `echo` 语句进行重定向会非常枯燥。相反，你可以使用 `exec` 命令让 shell 在脚本运行期间重定向特定的文件描述符：
 
 ```bash
 $ cat test10
+
 #!/bin/bash
+
 # 将所有输出重定向到文件
+
 exec 1>testout
+
 echo "This is a test of redirecting all output"
+
 echo "from a script to another file."
+
 echo "without having to redirect every individual line"
+
 $ ./test10
+
 $ cat testout
+
 This is a test of redirecting all output
+
 from a script to another file.
+
 without having to redirect every individual line
+
 $
 ```
 
@@ -8926,40 +9561,59 @@ $
 
 ```bash
 $ cat test11
+
 #!/bin/bash
+
 # 将输出重定向到不同的位置
+
 exec 2>testerror
+
 echo "This is the start of the script"
+
 echo "now redirecting all output to another location"
+
 exec 1>testout
+
 echo "This output should go to the testout file"
-echo "but this should go to the testerror file" >2
+
+echo "but this should go to the testerror file" >&2
+
 $
+
 $ ./test11
+
 This is the start of the script
+
 now redirecting all output to another location
+
 $ cat testout
+
 This output should go to the testout file
+
 $ cat testerror
+
 but this should go to the testerror file
+
 $
 ```
 
-该脚本使用 `exec` 命令将任何发送到 `STDERR` 的输出重定向到文件 `testerror`。接下来，脚本使用 `echo` 语句向 `STDOUT` 显示几行内容。之后，再次使用 `exec` 命令将 `STDOUT` 重定向到 `testout` 文件。注意，即使 `STDOUT` 被重定向了，你仍然可以指定 `echo` 语句的输出到 `STDERR`，在本例中，它仍然被重定向到 `testerror` 文件。
+
+
+该脚本使用`exec`命令将任何发送到`STDERR`的输出重定向到文件`testerror`。接下来，脚本使用`echo`语句向`STDOUT`显示几行内容。之后，再次使用`exec`命令将`STDOUT`重定向到`testout`文件。注意，即使`STDOUT`被重定向了，你仍然可以指定`echo`语句的输出到`STDERR`，在本例中，它仍然被重定向到`testerror`文件。
 
 当你只想将脚本部分的输出重定向到备用位置（例如错误日志）时，这个功能会非常有用。但在使用它时，你会遇到一个问题。
 
-一旦你重定向了 `STDOUT` 或 `STDERR`，就无法轻松地将它们重回原始位置。如果你需要在重定向之间来回切换，你需要学习一个技巧。本章后面的“创建你自己的重定向”部分将讨论这个技巧是什么以及如何在 shell 脚本中使用它。
+一旦你重定向了`STDOUT`或`STDERR`，就无法轻松地将它们重回原始位置。如果你需要在重定向之间来回切换，你需要学习一个技巧。本章后面的“创建你自己的重定向”部分将讨论这个技巧是什么以及如何在 shell 脚本中使用它。
 
 # 在脚本中重定向输入
 
-你可以使用在脚本中重定向 `STDOUT` 和 `STDERR` 的相同技术来重定向键盘的 `STDIN`。`exec` 命令允许你将 `STDIN` 重定向到 Linux 系统上的一个文件：
+你可以使用在脚本中重定向`STDOUT`和`STDERR`的相同技术来重定向键盘的`STDIN`。`exec`命令允许你将`STDIN`重定向到 Linux 系统上的一个文件：
 
 ```bash
 exec 0< testfile
 ```
 
-此命令告知 shell 应该从文件 `testfile` 而不是 `STDIN` 获取输入。这种重定向适用于脚本请求输入的任何时候。以下是一个运行示例：
+此命令告知 shell 应该从文件`testfile`而不是`STDIN`获取输入。这种重定向适用于脚本请求输入的任何时候。以下是一个运行示例：
 
 ```bash
 $ cat test12
@@ -8972,6 +9626,7 @@ do
     echo "Line #$count: $line"
     count=$[ $ count + 1 ]
 done
+
 $ ./test12
 Line #1: This is the first line.
 Line #2: This is the second line.
@@ -8979,7 +9634,7 @@ Line #3: This is the third line.
 $
 ```
 
-第 13 章向你展示了如何使用 `read` 命令读取用户从键盘输入。通过将 `STDIN` 重定向到文件，当 `read` 命令尝试从 `STDIN` 读取时，它将从文件而非键盘获取数据。
+第 13 章向你展示了如何使用`read`命令读取用户从键盘输入。通过将`STDIN`重定向到文件，当`read`命令尝试从`STDIN`读取时，它将从文件而非键盘获取数据。
 
 这是读取文件中数据供脚本处理的极佳技术。Linux 系统管理员的一项常见任务是从日志文件中读取数据进行处理。这是完成该任务简单的方法。
 
@@ -8989,7 +9644,7 @@ $
 
 ## 创建输出文件描述符
 
-你可以通过 `exec` 命令分配输出文件描述符。与标准文件描述符一样，一旦你将备用描述符分配给文件位置，该重定向将一直有效，直到你重新分配它。这里有一个在脚本中使用备用描述符的简单示例：
+你可以通过`exec`命令分配输出文件描述符。与标准文件描述符一样，一旦你将备用描述符分配给文件位置，该重定向将一直有效，直到你重新分配它。这里有一个在脚本中使用备用描述符的简单示例：
 
 ```bash
 $ cat test13
@@ -8999,18 +9654,20 @@ exec 3>test13out
 echo "This should display on the monitor"
 echo "and this should be stored in the file" >3
 echo "Then this should be back on the monitor"
+
 $ ./test13
 This should display on the monitor
 Then this should be back on the monitor
+
 $ cat test13out
 and this should be stored in the file
 ```
 
-该脚本使用 `exec` 命令将任何发送到 `STDERR` 的输出重定向到文件 `testerror`。接下来，脚本使用 `echo` 语句向 `STDOUT` 显示几行内容。之后，再次使用 `exec` 命令将 `STDOUT` 重定向到 `testout` 文件。注意，即使 `STDOUT` 被重定向了，你仍然可以指定 `echo` 语句的输出到 `STDERR`，在本例中，它仍然被重定向到 `testerror` 文件。
+该脚本使用`exec`命令将任何发送到`STDERR`的输出重定向到文件`testerror`。接下来，脚本使用`echo`语句向`STDOUT`显示几行内容。之后，再次使用`exec`命令将`STDOUT`重定向到`testout`文件。注意，即使`STDOUT`被重定向了，你仍然可以指定`echo`语句的输出到`STDERR`，在本例中，它仍然被重定向到`testerror`文件。
 
 ## 重定向文件描述符
 
-现在是获取文件描述符的技巧。你可以将一个描述符分配给 `STDOUT` 的当前位置，然后将 `STDOUT` 重定向到该描述符。这听起来可能有点复杂，但在实践中非常直观。这个简单的示例有点疯狂，所以让我们逐一分析：
+现在是获取文件描述符的技巧。你可以将一个描述符分配给`STDOUT`的当前位置，然后将`STDOUT`重定向到该描述符。这听起来可能有点复杂，但在实践中非常直观。这个简单的示例有点疯狂，所以让我们逐一分析：
 
 ```bash
 $ cat test14
@@ -9025,6 +9682,7 @@ echo "Now things should be back to normal"
 $
 $ ./test14
 Now things should be back to normal
+
 $ cat test14out
 This should store in the output file
 along with this line.
@@ -9032,16 +9690,12 @@ along with this line.
 
 ## 创建输入文件描述符
 
-你可以完全相同的方式重定向输入文件描述符。在重定向到文件之前，将 `STDIN` 文件描述符的位置保存到另一个描述符中，当你读取完文件后，就可以将 `STDIN` 恢复到原始位置：
+你可以完全相同的方式重定向输入文件描述符。在重定向到文件之前，将`STDIN`文件描述符的位置保存到另一个描述符中，当你读取完文件后，就可以将`STDIN`恢复到原始位置：
 
 ```bash
 $ cat test15
 #!/bin/bash
 ```
-
-
-
-
 
 # 重定向输入文件描述符
 
@@ -9051,18 +9705,18 @@ exec 0< testfile
 count=1
 while read line
 do
-    echo “Line #$count: $line”
+    echo "Line #$count: $line"
     count=$[ $ count + 1 ]
 done
 exec 0<&6
-read -p “Are you done now? ” answer
+read -p "Are you done now? " answer
 case $answer in
-  Y|y) echo “Goodbye”;;
-  N|n) echo “Sorry, this is the end.”;;
+  Y|y) echo "Goodbye";;
+  N|n) echo "Sorry, this is the end.";;
 esac
 ```
 
-```
+```bash
 $ ./test15
 Line #1: This is the first line.
 Line #2: This is the second line.
@@ -9072,9 +9726,9 @@ Goodbye
 $
 ```
 
-在这个示例中，文件描述符 6 用于保存 `STDIN` 的位置。随后脚本将 `STDIN` 重定向到一个文件。`read` 命令的所有输入都来自重定向后的 `STDIN`，而它现在是输入文件。
+在这个示例中，文件描述符 6 用于保存`STDIN`的位置。随后脚本将`STDIN`重定向到一个文件。`read`命令的所有输入都来自重定向后的`STDIN`，而它现在是输入文件。
 
-当读取完所有行后，脚本通过将其重定向到文件描述符 6 将 `STDIN` 到其原始位置。脚本通过另一个 `read` 命令来测试 `STDIN` 是否恢复正常，这次该命令会等待键盘输入。
+当读取完所有行后，脚本通过将其重定向到文件描述符 6 将`STDIN`到其原始位置。脚本通过另一个`read`命令来测试`STDIN`是否恢复正常，这次该命令会等待键盘输入。
 
 ## 创建读写文件描述符
 
@@ -9088,17 +9742,19 @@ $ cat test16
 # testing input/output file descriptor
 exec 3<> testfile
 read line <&3
-echo “Read: $line”
-echo “This is a test line” >&3
+echo "Read: $line"
+echo "This is a test line" >&3
 ```
 
-```
+```bash
 $ cat testfile
 This is the first line.
 This is the second line.
 This is the third line.
+
 $ ./test16
 Read: This is the first line.
+
 $ cat testfile
 This is the first line.
 This is a test line
@@ -9107,35 +9763,35 @@ This is the third line.
 $
 ```
 
-此示例使用 `exec` 命令为文件描述符 `3` 分配了用于与 `testfile` 文件的输入和输出。接下来，它使用 `read` 命令通过分配的文件描述符读取文件的第一行，然后将读取到的数据显示在 `STDOUT` 中。之后，它使用 `echo` 语句向用相同文件描述符打开的文件写入一行数据。
+此示例使用`exec`命令为文件描述符`3`分配了用于与`testfile`文件的输入和输出。接下来，它使用`read`命令通过分配的文件描述符读取文件的第一行，然后将读取到的数据显示在`STDOUT`中。之后，它使用`echo`语句向用相同文件描述符打开的文件写入一行数据。
 
-当你运行该脚本时，起初一切看起来正常。输出显示脚本读取了 `testfile` 文件中的第一行。然而，如果你在运行脚本后显示 `testfile` 文件的内容，你会发现写入文件中的数据覆盖了现有的数据。
+当你运行该脚本时，起初一切看起来正常。输出显示脚本读取了`testfile`文件中的第一行。然而，如果你在运行脚本后显示`testfile`文件的内容，你会发现写入文件中的数据覆盖了现有的数据。
 
-当脚本向文件写入数据时，它从文件指针所在的位置开始。`read` 命令读取了第一行数据，因此它让文件指针指向第二行的第一个字符。当 `echo` 语句将数据输出到文件时，它会将数据放在文件指针的当前位置，覆盖那里的任何数据。
+当脚本向文件写入数据时，它从文件指针所在的位置开始。`read`命令读取了第一行数据，因此它让文件指针指向第二行的第一个字符。当`echo`语句将数据输出到文件时，它会将数据放在文件指针的当前位置，覆盖那里的任何数据。
 
 ## 关闭文件描述符
 
 如果你创建了新的输入或输出文件描述符，shell 在脚本退出时会自动关闭它们。然而，在某些情况下，你需要在脚本结束之前手动关闭文件描述符。
 
-要关闭文件描述符，将其重定向到特殊符号 `&-`。这在脚本中的写法如下：
+要关闭文件描述符，将其重定向到特殊符号`&-`。这在脚本中的写法如下：
 
 ```bash
 exec 3>&-
 ```
 
-该语句关闭文件描述符 `3`，防止其在脚本中继续使用。以下是尝试使用已关闭的文件描述符时发生的情况示例：
+该语句关闭文件描述符`3`，防止其在脚本中继续使用。以下是尝试使用已关闭的文件描述符时发生的情况示例：
 
 ```bash
 $ cat badtest
 #!//bin/bash
 # testing closing file descriptors
 exec 3> test17file
-echo “This is a test line of data” >&3
+echo "This is a test line of data" >&3
 exec 3>&-
-echo “This won't work” >&3
+echo "This won't work" >&3
 ```
 
-```
+```bash
 $ ./badtest
 ./badtest: 3: Bad file descriptor
 $
@@ -9150,38 +9806,39 @@ $ cat test17
 #!//bin/bash
 # testing closing file descriptors
 exec 3> test17file
-echo “This is a test line of data” >&3
+echo "This is a test line of data" >&3
 exec 3>&-
 cat test17file
 exec 3> test17file
-echo “This'll be bad” >&3
+echo "This'll be bad" >&3
 ```
 
-```
+```bash
 $ ./test17
 This is a test line of data
+
 $ cat test17file
 This'll be bad
 $
 ```
 
-向 `test17file` 文件发送数据字符串并关闭文件描述符后，脚本使用 `cat` 命令显示文件内容。目前为止良好。接下来，脚本重新打开输出文件并向发送另一个数据字符串。当你显示输出文件的内容时，你会看到第二个数据字符串。shell 覆盖了原始输出文件。
+向`test17file`文件发送数据字符串并关闭文件描述符后，脚本使用`cat`命令显示文件内容。目前为止良好。接下来，脚本重新打开输出文件并向发送另一个数据字符串。当你显示输出文件的内容时，你会看到第二个数据字符串。shell 覆盖了原始输出文件。
 
 ## 列出打开的文件描述符
 
-可用文件描述符只有九，你可能会认为整理并不困难。然而，在尝试跟踪哪个文件描述符被重定向到了哪里时，很容易迷失。为了帮助你保持思路，bash shell 提供了 `lsof` 命令。
+可用文件描述符只有九，你可能会认为整理并不困难。然而，在尝试跟踪哪个文件描述符被重定向到了哪里时，很容易迷失。为了帮助你保持思路，bash shell 提供了`lsof`命令。
 
-`lsof` 命令列出整个 Linux 系统上所有打开的文件描述符。这是一个某种程度上有争议的功能，因为它可以向非系统管理员提供有关 Linux 系统的信息。正因如此，许多 Linux 系统隐藏了该命令，以防用户意外发现它。
+`lsof`命令列出整个 Linux 系统上所有打开的文件描述符。这是一个某种程度上有争议的功能，因为它可以向非系统管理员提供有关 Linux 系统的信息。正因如此，许多 Linux 系统隐藏了该命令，以防用户意外发现它。
 
-在我的 Fedora Linux 系统上，`lsof` 命令位于 `/usr/sbin` 目录。要用普通用户账户运行它，我必须通过其完整路径来引用它：
+在我的 Fedora Linux 系统上，`lsof`命令位于`/usr/sbin`目录。要用普通用户账户运行它，我必须通过其完整路径来引用它：
 
 ```bash
 $ /usr/sbin/lsof
 ```
 
-这产生了海量的输出。它显示了系统中打开的每个文件的信息。有许多命令行选项可以过滤 `lsof` 的输出。最常用的是 `-p`（允许你指定进程 ID `PID`） `-d`（允许你指定文件描述符编号）。为了方便地确定进程的当前 PID，可以使用环境变量 `$$`，shell 会将其设置为当前 PID。以下显示了：
+这产生了海量的输出。它显示了系统中打开的每个文件的信息。有许多命令行选项可以过滤`lsof`的输出。最常用的是`-p`（允许你指定进程 ID`PID`）`-d`（允许你指定文件描述符编号）。为了方便地确定进程的当前 PID，可以使用环境变量`$$`，shell 会将其设置为当前 PID。以下显示了：
 
-```
+```bash
 $ /usr/sbin/lsof -a -p $$ -d 0,1,2
 COMMAND PID USER FD DEVICE SIZE NAME
 bash 3344 rich 0u CHR 136,0 /dev/pts/0
@@ -9189,14 +9846,11 @@ bash 3344 rich 1u CHR 136,0 /dev/pts/0
 bash 3344 rich 2u CHR 136,0 /dev/pts/0
 ```
 
-这显示了当前进程（bash shell）的默认文件描述符（0、1 和 2）。`lsof` 的默认输出包含几列，见表 14.2 中的描述。
+这显示了当前进程（bash shell）的默认文件描述符（0、1 和 2）。`lsof`的默认输出包含几列，见表 14.2 中的描述。
 
+与`STDIN`、`STDOUT`和`STDERR`关联的文件类型是字符模式。由于`STDIN`、`STDOUT`和`STDERR`文件描述符指向终端，因此输出文件的名称就是终端的设备名称。所有三个标准文件都可读也可写（尽管能够向`STDIN`写入并从`STDOUT`读取似乎很奇怪）。
 
-
-
-与 `STDIN`、`STDOUT` 和 `STDERR` 关联的文件类型是字符模式。由于 `STDIN`、`STDOUT` 和 `STDERR` 文件描述符指向终端，因此输出文件的名称就是终端的设备名称。所有三个标准文件都可读也可写（尽管能够向 `STDIN` 写入并从 `STDOUT` 读取 似乎很奇怪）。
-
-现在，让我们来看看在一个打开了几个备用文件描述符的脚本运行 `lsof` 命令的输出：
+现在，让我们来看看在一个打开了几个备用文件描述符的脚本运行`lsof`命令的输出：
 
 ```bash
 $ cat test18
@@ -9206,6 +9860,7 @@ exec 3> test18file1
 exec 6> test18file2
 exec 7< testfile
 /usr/sbin/lsof -a -p $$ -d0,1,2,3,6,7
+
 $ ./test18
 COMMAND  PID USER    FD   TYPE DEVICE SIZE    NODE NAME
 test18  3594 rich    0u   CHR  136,0           2 /dev/pts/0
@@ -9217,15 +9872,15 @@ est18  3594 rich    2u   CHR  136,0           2 /dev/pts/0
 $
 ```
 
-该脚本创建了备用文件描述符，两个用于输出（3 和 6），一个用于输入（7）。当脚本运行 `lsof` 命令时，你可以在输出中看到新的文件描述符。我们截断了输出的第一部分以便让你看到文件名的结果。文件名显示了文件描述符中所用文件的完整路径。它显示每个文件的类型为 `REG`，这表示它们是文件系统上的普通文件。
+该脚本创建了备用文件描述符，两个用于输出（3 和 6），一个用于输入（7）。当脚本运行`lsof`命令时，你可以在输出中看到新的文件描述符。我们截断了输出的第一部分以便让你看到文件名的结果。文件名显示了文件描述符中所用文件的完整路径。它显示每个文件的类型为`REG`，这表示它们是文件系统上的普通文件。
 
 ### 抑制命令输出
 
 有时，你不希望显示脚本的任何输出。这通常发生在你作为后台进程运行脚本时（见第 15 章）。如果脚本在后台运行期间发生任何错误信息，shell 将通过电子邮件发送给进程的所有者。这可能会变得非常麻烦，尤其是当你运行产生细微骚扰性错误的脚本时。
 
-为了解决这个问题，你可以将 `STDERR` 重定向到一个名为空文件（null file）的特殊文件。空文件正如其名，是一个内容为空的文件。shell 输出到空文件的任何数据都不会被保存，因此它们会丢失。
+为了解决这个问题，你可以将`STDERR`重定向到一个名为空文件（null file）的特殊文件。空文件正如其名，是一个内容为空的文件。shell 输出到空文件的任何数据都不会被保存，因此它们会丢失。
 
-Linux 系统上空文件的标准位置是 `/dev/null`。任何重定向到该位置的数据都会被丢弃而不显示：
+Linux 系统上空文件的标准位置是`/dev/null`。任何重定向到该位置的数据都会被丢弃而不显示：
 
 ```bash
 $ ls -al > /dev/null
@@ -9241,31 +9896,34 @@ $ ls -al badfile test16 2> /dev/null
 $
 ```
 
-你也可以将 `/dev/null` 文件作为输入文件用于输入重定向。因为 `/dev/null` 文件内容为空，程序员经常用它来快速删除现有文件的数据，而无需删除文件并重新创建：
+你也可以将`/dev/null`文件作为输入文件用于输入重定向。因为`/dev/null`文件内容为空，程序员经常用它来快速删除现有文件的数据，而无需删除文件并重新创建：
 
 ```bash
 $ cat testfile
 This is the first line.
 This is the second line.
 This is the third line.
+
 $ cat /dev/null > testfile
 $ cat testfile
 $
 ```
 
-文件 `testfile` 仍然存在于系统中，但现在它是空的。这是清理必须保留在原位供应用程序运行的日志文件的常用方法。
+
+
+文件`testfile`仍然存在于系统中，但现在它是空的。这是清理必须保留在原位供应用程序运行的日志文件的常用方法。
 
 ### 使用临时文件
 
-Linux 系统包含一个预留用于临时文件的特殊目录位置。Linux 使用 `/tmp` 目录存放不需要永久保存。大多数 Linux 发行版配置系统在启动时自动删除 `/tmp` 目录中的任何文件。
+Linux 系统包含一个预留用于临时文件的特殊目录位置。Linux 使用`/tmp`目录存放不需要永久保存的文件。大多数Linux发行版配置系统在启动时自动删除`/tmp`目录中的任何文件。
 
-系统上的任何用户账户都有权限读写 `/tmp` 目录中的文件。此功能为你提供了一种方便的方法来创建临时文件，而你不必担心清理它们。
+系统上的任何用户账户都有权限读写`/tmp`目录中的文件。此功能为你提供了一种方便的方法来创建临时文件，而你不必担心清理它们。
 
-甚至有一个特定的命令用于创建临时文件。`mktemp` 命令允许你轻松地在 `/tmp` 文件夹创建一个唯一的临时文件。shell 会创建该文件，但不会使用你的默认 umask 值（见第 6 章）。相反，它只为文件的所有者分配读写权限，并让你成为文件的所有者。一旦你创建了文件，你就有完全权限从脚本对其进行读写，但其他人将无法访问（当然，root 用户除外）。
+甚至有一个特定的命令用于创建临时文件。`mktemp`命令允许你轻松地在`/tmp`文件夹创建一个唯一的临时文件。shell会创建该文件，但不会使用你的默认umask值（见第6章）。相反，它只为文件的所有者分配读写权限，并让你成为文件的所有者。一旦你创建了文件，你就有完全权限从脚本对其进行读写，但其他人将无法访问（当然，root用户除外）。
 
 #### 创建本地临时文件
 
-默认情况下，`mktemp` 在本地目录创建文件。要使用 `mktemp` 命令在本地目录创建临时文件，你只需要指定一个文件名模板。模板由任何文本文件名组成，并在文件名末尾附加六个 X：
+默认情况下，`mktemp`在本地目录创建文件。要使用`mktemp`命令在本地目录创建临时文件，你只需要指定一个文件名模板。模板由任何文本文件名组成，并在文件名末尾附加六个X：
 
 ```bash
 $ mktemp testing.XXXXXX
@@ -9274,7 +9932,7 @@ $ ls -al testing*
 $
 ```
 
-`mktemp` 命令会将六个 X 替换为六位代码，以确保文件名在目录中是唯一的。你可以创建多个临时文件，并确保每一个都是唯一的：
+`mktemp`命令会将六个X替换为六位代码，以确保文件名在目录中是唯一的。你可以创建多个临时文件，并确保每一个都是唯一的：
 
 ```bash
 $ mktemp testing.XXXXXX
@@ -9289,20 +9947,16 @@ $ ls -l testing*
 -rw-------    1 rich      rich       0 Oct 17 21:30 testing.PgqNKG
 ```
 
-如你所示，`mktemp` 命令的输出是它创建的文件名。当脚本中使用 `mktemp` 时，你会希望将该文件名保存到变量中，以便稍后引用。
+如你所示，`mktemp`命令的输出是它创建的文件名。当脚本中使用`mktemp`时，你会希望将该文件名保存到变量中，以便稍后引用。
 
-
-
-
-当 `mktemp` 创建临时文件时，它会将完整路径返回给环境变量。然后你可以在任何命令中使用该值来引用该临时文件。
+当`mktemp`创建临时文件时，它会将完整路径返回给环境变量。然后你可以在任何命令中使用该值来引用该临时文件。
 
 ## 创建临时目录
 
-`-d` 选项告诉 `mktemp` 命令创建一个临时目录而不是文件。你可以根据需要的任何目的使用该目录，例如创建额外的临时临时文件：
+`-d`选项告诉`mktemp`命令创建一个临时目录而不是文件。你可以根据需要的任何目的使用该目录，例如创建额外的临时文件：
 
 ```bash
 $ cat test21
-
 #!/bin/bash
 # using a temporary directory
 tempdir='mktemp -d dir.XXXXXX'
@@ -9336,19 +9990,19 @@ This is a test line of data for temp.SQslb7
 [dir.ouT8S8]$
 ```
 
-该脚本在当前目录下创建了一个目录，然后使用 `cd` 命令切换到该目录，然后再创建两个临时文件。这两个临时文件随后分配给文件描述符，并用于存储脚本的输出。
+该脚本在当前目录下创建了一个目录，然后使用`cd`命令切换到该目录，然后再创建两个临时文件。这两个临时文件随后分配给文件描述符，并用于存储脚本的输出。
 
 ## 日志消息
 
-有时，将输出同时发送到显示器和文件进行日志记录是有益的。你不需要重定向两次输出，可以使用特殊的 `tee` 命令。
+有时，将输出同时发送到显示器和文件进行日志记录是有益的。你不需要重定向两次输出，可以使用特殊的`tee`命令。
 
-`tee` 命令类似于管道的 T 型接头。它同时将来自 `STDIN` 的数据发送到两个目标。其中一个目标是 `STDOUT`。另一个目标是在 `tee` 命令行指定的文件名：
+`tee`命令类似于管道的T型接头。它同时将来自`STDIN`的数据发送到两个目标。其中一个目标是`STDOUT`。另一个目标是在`tee`命令行指定的文件名：
 
 ```bash
 tee filename
 ```
 
-由于 `tee` 重定向来自 `STDIN` 的数据，你可以结合管道命令使用它来重定向任何命令的输出：
+由于`tee`重定向来自`STDIN`的数据，你可以结合管道命令使用它来重定向任何命令的输出：
 
 ```bash
 $ date | tee testfile
@@ -9358,7 +10012,7 @@ Sun Oct 17 18:56:21 EDT 2010
 $
 ```
 
-输出会出现在 `STDOUT` 中，并写入指定的文件中。请注意：默认情况下，`tee` 命令在每次使用时都会覆盖输出文件：
+输出会出现在`STDOUT`中，并写入指定的文件中。请注意：默认情况下，`tee`命令在每次使用时都会覆盖输出文件：
 
 ```bash
 $ who | tee testfile
@@ -9368,7 +10022,7 @@ rich      pts/0      2010-10-17 18:41 (192.168.1.2)
 $
 ```
 
-如果你想向文件中追加数据，必须使用 `-a` 选项：
+如果你想向文件中追加数据，必须使用`-a`选项：
 
 ```bash
 $ date | tee -a testfile
@@ -9376,13 +10030,9 @@ Sun Oct 17 18:58:05 EDT 2010
 $ cat testfile
 ```
 
+系统和应用程序可以生成超过30个Linux信号。[表15.1]列出了你在Linux编程中会遇到的最常见的Linux系统信号。
 
-
-
-
-系统和应用程序可以生成超过 30 个 Linux 信号。[表 15.1] 列出了你在 Linux 编程中会遇到的最常见的 Linux 系统信号。
-
-### Linux 信号
+### Linux信号
 
 | 信号 | 值 | 描述 |
 | :--- | :--- | :--- |
@@ -9395,19 +10045,19 @@ $ cat testfile
 | `18` | `SIGTSTP` | 停止或暂停进程，但不终止。 |
 | `19` | `SIGCONT` | 继续运行已停止的进程。 |
 
-默认情况下，`bash` shell 会忽略其收到的任何 `SIGQUIT (3)` 和 `SIGTERM (15)` 信号（这样做是为了防止交互式 shell 不被意外终止）。然而，`bash` shell 会处理其收到的任何 `SIGHUP (1)` 和 `SIGINT (2)` 信号。
+默认情况下，`bash` shell会忽略其收到的任何`SIGQUIT (3)`和`SIGTERM (15)`信号（这样做是为了防止交互式shell不被意外终止）。然而，`bash` shell会处理其收到的任何`SIGHUP (1)`和`SIGINT (2)`信号。
 
-如果 `bash` shell 接收到 `SIGHUP` 信号，将会将会。但在退出之前，它会将 `SIGHUP` 信号传递给 shell 启动的任何进程（例如你的 shell 脚本）。对于 `SIGINT` 信号，shell 只会被中断。Linux 内核会停止为 shell 提供 CPU 处理时间。当这种情况发生时，shell 会将 `SIGINT` 信号传递给 shell 启动的任何进程以通知它们该情况。
+如果`bash` shell接收到`SIGHUP`信号，将会退出。但在退出之前，它会将`SIGHUP`信号传递给shell启动的任何进程（例如你的shell脚本）。对于`SIGINT`信号，shell只会被中断。Linux内核会停止为shell提供CPU处理时间。当这种情况发生时，shell会将`SIGINT`信号传递给shell启动的任何进程以通知它们该情况。
 
-shell 将这些信号传递给你的 shell 脚本程序进行处理。然而，shell 脚本的默认行为是忽略信号，这会对对脚本的运行产生不利影响。为了避免这种情况，你可以编写脚本来识别信号并执行命令，为脚本应对信号带来的后果做好准备。
+shell将这些信号传递给你的shell脚本程序进行处理。然而，shell脚本的默认行为是忽略信号，这会对脚本的运行产生不利影响。为了避免这种情况，你可以编写脚本来识别信号并执行命令，为脚本应对信号带来的后果做好准备。
 
 #### 生成信号
 
-`bash` shell 允许你使用键盘上的键组合生成两个基本的 Linux 信号。如果你需要停止或暂停运行异常的程序，此功能将非常有用。
+`bash` shell允许你使用键盘上的键组合生成两个基本的Linux信号。如果你需要停止或暂停运行异常的程序，此功能将非常有用。
 
 #### 中断进程
 
-`Ctrl+C` 键组合会生成 `SIGINT` 信号，并将其发送到 shell 中当前运行的任何进程。你可以通过运行一个需要很长时间才能完成的命令并按下 `Ctrl+C` 键组合来测试这一点：
+`Ctrl+C`键组合会生成`SIGINT`信号，并将其发送到shell中当前运行的任何进程。你可以通过运行一个需要很长时间才能完成的命令并按下`Ctrl+C`键组合来测试这一点：
 
 ```
 $ sleep 100
@@ -9415,15 +10065,15 @@ $ sleep 100
 $
 ```
 
-`Ctrl+C` 键组合仅仅是停止 shell 中运行的当前进程。`sleep` 命令暂停操作指定的秒数。通常，在计时器过期之前命令提示符不会返回。通过在计时器过期前按下 `Ctrl+C` 键组合，你可以导致 `sleep` 命令提前终止。
+`Ctrl+C`键组合仅仅是停止shell中运行的当前进程。`sleep`命令暂停操作指定的秒数。通常，在计时器过期之前命令提示符不会返回。通过在计时器过期前按下`Ctrl+C`键组合，你可以导致`sleep`命令提前终止。
 
 #### 暂停进程
 
 与其终止进程，你可以在它正在执行任何操作的中间将其暂停。有时这可能是危险的（例如，如果脚本对关键系统文件打开了文件锁），但通常它允许你在不实际终止进程的情况下查看脚本正在执行的内容。
 
-`Ctrl+Z` 键组合会生成 `SIGTSTP` 信号，停止 shell 中运行的任何进程。停止进程与终止进程不同，因为停止进程会让程序仍然留在内存中，并能够从停止的地方继续运行。在稍后的“作业控制”部分中，你将学习如何重启一个已停止的进程。
+`Ctrl+Z`键组合会生成`SIGTSTP`信号，停止shell中运行的任何进程。停止进程与终止进程不同，因为停止进程会让程序仍然留在内存中，并能够从停止的地方继续运行。在稍后的“作业控制”部分中，你将学习如何重启一个已停止的进程。
 
-当你使用 `Ctrl+Z` 键组合时，shell 会通知你进程已停止：
+当你使用`Ctrl+Z`键组合时，shell会通知你进程已停止：
 
 ```
 $ sleep 100
@@ -9432,9 +10082,9 @@ $ sleep 100
 $
 ```
 
-方括号中的数字是 shell 分配的作业号。shell 将 shell 中运行的每个进程称为作业，并为每个作业分配一个唯一的作业号。它为第一个启动的进程分配作业号 1，第二个作业分配作业号 2，依此类推。
+方括号中的数字是shell分配的作业号。shell将shell中运行的每个进程称为作业，并为每个作业分配一个唯一的作业号。它为第一个启动的进程分配作业号1，第二个作业分配作业号2，依此类推。
 
-如果你在 shell 会话中有一个已停止的作业，当你尝试退出 shell 时，`bash` 会警告你：
+如果你在shell会话中有一个已停止的作业，当你尝试退出shell时，`bash`会警告你：
 
 ```
 $ exit
@@ -9443,7 +10093,7 @@ There are stopped jobs.
 $
 ```
 
-你可以使用 `ps` 命令查看停止的作业：
+你可以使用`ps`命令查看停止的作业：
 
 ```
 $ ps au
@@ -9454,19 +10104,15 @@ rich 20606  0.0  0.5  2584  740 pts/0   R     05:22   0:00 ps au
 $
 ```
 
-在 `STAT` 列中，`ps` 命令将停止作业的状态显示为 `T`。这表示该命令正在被追踪或已停止。
+在`STAT`列中，`ps`命令将停止作业的状态显示为`T`。这表示该命令正在被追踪或已停止。
 
-如果你真的想在停止的作业仍然活动的情况下退出 shell，只需再次输入 `exit` 命令。shell 将退出，并终止停止的作业。或者，既然你已经知道了停止作业的 `PID`，你可以使用 `kill` 命令发送 `SIGKILL` 信号来终止它：
+如果你真的想在停止的作业仍然活动的情况下退出shell，只需再次输入`exit`命令。shell将退出，并终止停止的作业。或者，既然你已经知道了停止作业的`PID`，你可以使用`kill`命令发送`SIGKILL`信号来终止它：
 
 ```
 $ kill -9 20605
 $
 [1]+ Killed             sleep 100
 ```
-
-
-
-
 
 ```bash
 $ ./test2
@@ -9476,16 +10122,16 @@ Loop #2
 $
 ```
 
-当使用 `Ctrl+C` 键组合发送 `SIGINT` 信号时，脚本将会退出（因为该信号未列在 trap 陷列表中），但在脚本退出之前，shell 会执行 `trap` 命令。
+当使用`Ctrl+C`键组合发送`SIGINT`信号时，脚本将会退出（因为该信号未列在trap陷列表中），但在脚本退出之前，shell会执行`trap`命令。
 
-## 移除陷 (Trap)
+## 移除陷(Trap)
 
-你可以使用破折号 `-` 作为命令来移除一组 trap，并列出你想要恢复正常行为的信号列表：
+你可以使用破折号`-`作为命令来移除一组trap，并列出你想要恢复正常行为的信号列表：
 
 ```bash
 $ cat test3
 #!/bin/bash
-# 移除已设置的 trap
+# 移除已设置的trap
 trap "echo byebye" EXIT
 count=1
 while [ $count -le 5 ]
@@ -9507,7 +10153,7 @@ I just removed the trap
 $
 ```
 
-一旦信号 trap 被移除，脚本将忽略这些信号。然而，如果在移除 trap 之前接收到信号，脚本将按照 `trap` 命令对其进行处理：
+一旦信号trap被移除，脚本将忽略这些信号。然而，如果在移除trap之前接收到信号，脚本将按照`trap`命令对其进行处理：
 
 ```bash
 $ ./test3
@@ -9517,19 +10163,19 @@ Loop #2
 $
 ```
 
-在例示例中，使用了 `Ctrl+C` 键组合提前终止了脚本。因为脚本在移除 trap 之前就被终止了，所以脚本执行了 trap 中指定的命令。
+在示例中，使用了`Ctrl+C`键组合提前终止了脚本。因为脚本在移除trap之前就被终止了，所以脚本执行了trap中指定的命令。
 
 ## 在后台模式下运行脚本
 
-有时，直接从命令行界面运行 shell 脚本是不方便的。某些脚本可能需要很长时间来处理，你可能不希望一直占用命令行界面等待。在脚本运行期间，你无法在终端会话中进行任何其他操作。幸运的是，这个问题有一个简单的解决方法。
+有时，直接从命令行界面运行shell脚本是不方便的。某些脚本可能需要很长时间来处理，你可能不希望一直占用命令行界面等待。在脚本运行期间，你无法在终端会话中进行任何其他操作。幸运的是，这个问题有一个简单的解决方法。
 
-当你使用 `ps` 命令时，你会看到 Linux 系统上运行着许多不同的进程。显然，并不是所有的进程都运行在你的终端显示器上。这被称为后台运行进程。在后台模式下，进程的运行不会关联终端会话的 `STDIN`、`STDOUT` 和 `STDERR`（见第 14 章）。
+当你使用`ps`命令时，你会看到Linux系统上运行着许多不同的进程。显然，并不是所有的进程都运行在你的终端显示器上。这被称为后台运行进程。在后台模式下，进程的运行不会关联终端会话的`STDIN`、`STDOUT`和`STDERR`（见第14章）。
 
-你也可以在 shell 脚本中利用这一特性，让它们在后台运行而不会锁定终端会话。接下来的章节描述了如何在你的 Linux 系统上以后台模式运行脚本。
+你也可以在shell脚本中利用这一特性，让它们在后台运行而不会锁定终端会话。接下来的章节描述了如何在你的Linux系统上以后台模式运行脚本。
 
 ### 在后台运行
 
-在后台模式下运行 shell 脚本是一件很容易的事。要在命令行界面以后台模式运行 shell 脚本，只需在命令后放置一个安符符号 `&`：
+在后台模式下运行shell脚本是一件很容易的事。要在命令行界面以后台模式运行shell脚本，只需在命令后放置一个安符符号`&`：
 
 ```bash
 $ ./test1 &
@@ -9546,15 +10192,15 @@ Loop #4
 $
 ```
 
-当你在命令后放置安符符号时，它会将命令与 bash shell 隔离开，并作为系统上一个独立的后台进程运行。首先显示的行是：
+当你在命令后放置安符符号时，它会将命令与bash shell隔离开，并作为系统上一个独立的后台进程运行。首先显示的行是：
 
 `[1] 1976`
 
-方括号中的数字是 shell 分配给后台进程的作业号。下一个数字是 Linux 系统分配给进程的进程 ID（`PID`）。Linux 系统上运行的每个进程都必须有一个唯一的 `PID`。
+方括号中的数字是shell分配给后台进程的作业号。下一个数字是Linux系统分配给进程的进程ID（`PID`）。Linux系统上运行的每个进程都必须有一个唯一的`PID`。
 
-一旦系统显示了这些项目，一个新的命令行界面提示符就会出现。你返回到了 shell，而你执行的命令在后台模式下安全运行。
+一旦系统显示了这些项目，一个新的命令行界面提示符就会出现。你返回到了shell，而你执行的命令在后台模式下安全运行。
 
-此时，你可以在提示符处输入新命令（如示例所示）。然而，当后台进程仍在运行时，它仍然使用你的终端显示器作为 `STDOUT` 和 `STDERR` 消息输出。你会从示例中发现 `test1` 脚本的输出与从 shell 运行的任何其他命令输出交替出现。
+此时，你可以在提示符处输入新命令（如示例所示）。然而，当后台进程仍在运行时，它仍然使用你的终端显示器作为`STDOUT`和`STDERR`消息输出。你会从示例中发现`test1`脚本的输出与从shell运行的任何其他命令输出交替出现。
 
 当后台进程完成时，它会在终端上显示一条消息：
 
@@ -9585,22 +10231,32 @@ $ This is Test Program 4
 $
 ```
 
-每当你启动一个新作业时，Linux 系统都会为其分配一个新的作业号和 `PID`。你可以通过 `ps` 命令看到所有脚本都在运行：
+每当你启动一个新作业时，Linux系统都会为其分配一个新的作业号和`PID`。你可以通过`ps`命令看到所有脚本都在运行：
 
 ```bash
 $ ps au
 USER      PID %CPU %MEM    VSZ  RSS TTY  STAT START TIME COMMAND
 ...
 user      1826  0.0  0.3    6704  3408 pts/0  Ss    14:07 0:00 bash
-user      2174  0.0  0.1    4860  1076 pts/0  S     15:23 0:00 /bin/bash ./test1
-user      2175  0.0  0.0    3884   504 pts/0  S     15:23 0:00 /bin/bash ./test2
-user      2176  0.0  0.1    4860  1078 pts/0  S     15:23 0:00 sleep 300
-user      2177  0.0  0.0    3884   504 pts/0  S     15:23 0:00 /bin/bash ./test3
-user      2178  0.0  0.0    3884   504 pts/0  S     15:23 0:00 /bin/bash ./test4
-user      2179  0.0  0.0    3884   504 pts/0  S     15:23 0:00 sleep 300
-user      2180  0.0  0.0    3884   504 pts/0  S     15:23 0:00 sleep 300
-user      2181  0.0  0.0    3884   504 pts/0  S     15:23 0:00 sleep 300
 ```
+
+
+
+`user 2174 0.0 0.1 4860 1076 pts/0 S 15:23 0:00 /bin/bash ./test1`
+
+`user 2175 0.0 0.0 3884 504 pts/0 S 15:23 0:00 /bin/bash ./test2`
+
+`user 2176 0.0 0.1 4860 1078 pts/0 S 15:23 0:00 sleep 300`
+
+`user 2177 0.0 0.0 3884 504 pts/0 S 15:23 0:00 /bin/bash ./test3`
+
+`user 2178 0.0 0.0 3884 504 pts/0 S 15:23 0:00 /bin/bash ./test4`
+
+`user 2179 0.0 0.0 3884 504 pts/0 S 15:23 0:00 sleep 300`
+
+`user 2180 0.0 0.0 3884 504 pts/0 S 15:23 0:00 sleep 300`
+
+`user 2181 0.0 0.0 3884 504 pts/0 S 15:23 0:00 sleep 300`
 
 ### 退出终端
 
@@ -9608,11 +10264,11 @@ user      2181  0.0  0.0    3884   504 pts/0  S     15:23 0:00 sleep 300
 
 ### 无控制台运行脚本
 
-有时你可能想从终端启动 shell 脚本并让它在后台运行直到完成，即使你注销。你可以通过使用 `nohup` 命令来实现。
+有时你可能想从终端启动 shell 脚本并让它在后台运行直到完成，即使你注销。你可以通过使用`nohup`命令来实现。
 
-`nohup` 命令运行命令并阻塞任何 `SIGHUP` 信号。这防止了进程在你退出终端时终止。
+`nohup`命令运行命令并阻塞任何`SIGHUP`信号。这防止了进程在你退出终端时终止。
 
-`nohup` 命令的格式如下：
+`nohup`命令的格式如下：
 
 ```bash
 $ nohup ./test1 &
@@ -9621,9 +10277,9 @@ $ nohup: ignoring input and appending output to ‘nohup.out’
 $
 ```
 
-和普通后台进程一样，shell 为命令分配作业号和 `PID`。区别在于当你使用 `nohup` 命令时，脚本会忽略由终端会话发送的 `SIGHUP` 信号。
+和普通后台进程一样，shell 为命令分配作业号和`PID`。区别在于当你使用`nohup`命令时，脚本会忽略由终端会话发送的`SIGHUP`信号。
 
-由于 `nohup` 命令将进程与终端分离，进程失去了 `STDOUT` 和 `STDERR` 输出链接。为了适应命令生成的任何输出，`nohup` 命令会自动将 `STDOUT` 和 `STDERR` 重定向到名为 `nohup.out` 的文件中。`nohup.out` 文件包含了通常发送到终端显示器的所有输出。在进程完成后，你可以查看 `nohup.out` 文件的结果：
+由于`nohup`命令将进程与终端分离，进程失去了`STDOUT`和`STDERR`输出链接。为了适应命令生成的任何输出，`nohup`命令会自动将`STDOUT`和`STDERR`重定向到名为`nohup.out`的文件中。`nohup.out`文件包含了通常发送到终端显示器的所有输出。在进程完成后，你可以查看`nohup.out`文件的结果：
 
 ```bash
 $ cat nohup.out
@@ -9642,17 +10298,13 @@ This is the end of the test program
 $
 ```
 
-输出出现在 `nohup.out` 文件中，就像该进程在命令行运行一样！
+输出出现在`nohup.out`文件中，就像该进程在命令行运行一样！
 
-
-
-
-
-> 如果你使用 `nohup` 运行另一个命令，输出将追加到现有的 `nohup.out` 文件中。在同一目录下运行多个命令时要小心，因为所有输出都将发送到同一个 `nohup.out` 文件，这可能会导致混乱。
+> 如果你使用`nohup`运行另一个命令，输出将追加到现有的`nohup.out`文件中。在同一目录下运行多个命令时要小心，因为所有输出都将发送到同一个`nohup.out`文件，这可能会导致混乱。
 
 ## 任务控制
 
-在本章的前面的部分，你已经学习了如何使用组合键来停止 shell 中运行的任务。停止任务后，Linux 系统允许你杀死它或重启它。你可以使用 `kill` 命令来杀死进程。重启已停止的进程则需要向它发送一个 `SIGCONT` 信号。
+在本章的前面的部分，你已经学习了如何使用组合键来停止 shell 中运行的任务。停止任务后，Linux 系统允许你杀死它或重启它。你可以使用`kill`命令来杀死进程。重启已停止的进程则需要向它发送一个`SIGCONT`信号。
 
 启动、停止、杀死和恢复任务的功能被称为任务控制（job control）。通过任务控制，你可以完全控制进程在 shell 环境中的运行方式。
 
@@ -9660,7 +10312,7 @@ $
 
 ## 查看任务
 
-任务控制的关键命令是 `jobs` 命令。`jobs` 命令允许你查看 shell 正在处理的当前任务：
+任务控制的关键命令是`jobs`命令。`jobs`命令允许你查看 shell 正在处理的当前任务：
 
 ```bash
 $ cat test4
@@ -9691,11 +10343,11 @@ $ jobs
 $
 ```
 
-脚本使用 `$$` 变量来显示 Linux 系统分配给脚本的 PID（进程 ID）；然后它进入一个循环，每次迭代睡眠 10 秒。在示例中，第一个脚本从命令行界面启动，然后使用 Ctrl+Z 组合键停止。接着，使用 `&` 符号作为后台进程启动了另一个任务。为了方便起，该脚本的输出被重定向到一个文件中，这样它就不会显示在屏幕上。
+脚本使用`$$`变量来显示 Linux 系统分配给脚本的 PID（进程 ID）；然后它进入一个循环，每次迭代睡眠 10 秒。在示例中，第一个脚本从命令行界面启动，然后使用`Ctrl+Z`组合键停止。接着，使用`&`符号作为后台进程启动了另一个任务。为了方便起，该脚本的输出被重定向到一个文件中，这样它就不会显示在屏幕上。
 
-在启动这两个任务后，我们使用 `jobs` 命令查看分配给 shell 的任务。`jobs` 命令会显示已停止和正在运行的任务，以及它们的任务号和任务中使用的命令。
+在启动这两个任务后，我们使用`jobs`命令查看分配给 shell 的任务。`jobs`命令会显示已停止和正在运行的任务，以及它们的任务号和任务中使用的命令。
 
-`jobs` 命令使用了几个不同的命令行参数，如表 15.2 所示。
+`jobs`命令使用了几个不同的命令行参数，如表 15.2 所示。
 
 ### 表 15.2 jobs 命令参数
 
@@ -9707,7 +10359,7 @@ $
 | `-r` | 仅列出运行的任务。 |
 | `-s` | 仅列出停止的任务。 |
 
-你可能注意 `jobs` 命令输出中的加号 (+) 和减号 (-)。带有加号的任务被视为默认任务。如果命令行中中没有指定任务号，那么任何任务控制命令都会引用该带加号的任务。带有减号的任务将在当前默认任务处理完毕后成为默认任务。无论 shell 中运行了多少个任务，任何时候都只有一个带加号的任务和一个带减号的任务。
+你可能注意`jobs`命令输出中的加号 (+) 和减号 (-)。带有加号的任务被视为默认任务。如果命令行中中没有指定任务号，那么任何任务控制命令都会引用该带加号的任务。带有减号的任务将在当前默认任务处理完毕后成为默认任务。无论 shell 中运行了多少个任务，任何时候都只有一个带加号的任务和一个带减号的任务。
 
 以下是一个示例，展示了当默认任务被移除时，队列中的下一个任务如何接管默认状态：
 
@@ -9743,11 +10395,11 @@ $ jobs -l
 $
 ```
 
-在这个示例中，启动了三个独立的进程并停止了它们。`jobs` 命令列表显示了这三个进程及其状态。注意，默认进程（带有加号的那个）是最后启动的。随后执行了 `kill` 命令来停止默认进程。在下一次 `jobs` 列表中，带有减号的任务变成了默认任务。
+在这个示例中，启动了三个独立的进程并停止了它们。`jobs`命令列表显示了这三个进程及其状态。注意，默认进程（带有加号的那个）是最后启动的。随后执行了`kill`命令来停止默认进程。在下一次`jobs`列表中，带有减号的任务变成了默认任务。
 
 ## 重启已停止的任务
 
-在任务控制下，你可以将任何停止的任务作为后台进程或前台进程重启。前台进程会占用终端，因此请注意。要在后台模式下重启任务，请使用 `bg` 命令配合任务号：
+在任务控制下，你可以将任何停止的任务作为后台进程或前台进程重启。前台进程会占用终端，因此请注意。要在后台模式下重启任务，请使用`bg`命令配合任务号：
 
 ```bash
 $ bg 2
@@ -9757,7 +10409,7 @@ $ jobs
 [2]- Running             ./test4 >test4out &
 ```
 
-要在前台模式下重启任务，请使用 `fg` 命令：
+要在前台模式下重启任务，请使用`fg`命令：
 
 ```bash
 $ fg 1
@@ -9766,7 +10418,7 @@ $ fg 1
 
 ## nice 命令
 
-`nice` 命令允许你在启动命令时设置调度优先级。要让命令以较低优先级运行，请使用 `nice` 的 `-n` 选项指定一个新的优先级级别：
+`nice`命令允许你在启动命令时设置调度优先级。要让命令以较低优先级运行，请使用`nice`的`-n`选项指定一个新的优先级级别：
 
 ```bash
 $ nice -n 10 ./test4 > test4out &
@@ -9780,7 +10432,7 @@ $ ps al
 $
 ```
 
-`nice` 命令会导致脚本以较低的优先级运行。然而，如果你尝试增加其中一个命令的优先级，可能会大吃：
+`nice`命令会导致脚本以较低的优先级运行。然而，如果你尝试增加其中一个命令的优先级，可能会大吃：
 
 ```bash
 $ nice -n -10 ./test4 > test4out &
@@ -9788,26 +10440,22 @@ $ nice -n -10 ./test4 > test4out &
 $ nice: cannot set priority: Permission denied
 ```
 
-
-
-
-
 ```bash
 [1]+ Exit 1 nice -n -10 ./test4 >test4out
 $
 ```
 
-`nice` 命令防止普通系统用户提高其命令的优先级。这是一项安全功能，防止用户将其所有命令都以高优先级启动。
+`nice`命令防止普通系统用户提高其命令的优先级。这是一项安全功能，防止用户将其所有命令都以高优先级启动。
 
 ## renice 命令
 
-有时你可能想要更改系统中已经在运行命令命令优先级。这正是 `renice` 命令的作用。它允许你指定正在运行进程的 `PID` 来更改其优先级：
+有时你可能想要更改系统中已经在运行命令命令优先级。这正是`renice`命令的作用。它允许你指定正在运行进程的`PID`来更改其优先级：
 
 ```bash
 $ ./test4 > test4out &
 [1] 29504
 $ ps al
-  F    UID    PID  PPID  PRI  NI WCHAN  STAT TTY          TIME COMMANDCOMMAND
+  F    UID    PID  PPID  PRI  NI WCHAN  STAT TTY          TIME COMMAND
 100   501 29459  29458   12    0  wait4   S    pts/0      0:00  -bash
 000   501 29504  29459    9    0  wait4   S    pts/0      0:00  /bin/bash .
 000   501 29518  29504    9    0  nanosl  S    pts/0      0:00  sleep 10
@@ -9823,41 +10471,41 @@ $ ps al
 $
 ```
 
-`renice` 命令会自动更新运行中进程的调度优先级。与 `nice` 命令一样，`renice` 命令也有一些局限性：
+`renice`命令会自动更新运行中进程的调度优先级。与`nice`命令一样，`renice`命令也有一些局限性：
 
-* 你只能对你拥有的进程进行 `renice`。
-* 你只能将进程 `renice` 为较低的优先级。
-* root 用户可以将任何进程 `renice` 为任何优先级。
+* 你只能对你拥有的进程进行`renice`。
+* 你只能将进程`renice`为较低的优先级。
+* root 用户可以将任何进程`renice`为任何优先级。
 
-如果你想完全控制运行运行的进程，你必须以 `root` 账户登录或使用 `sudo` 命令。
+如果你想完全控制运行运行的进程，你必须以`root`账户登录或使用`sudo`命令。
 
 ## 像时钟一样运行
 
-我确信，当你开始编写脚本时，会遇到这样一种情况：你希望在预设时间运行脚本，通常是在你不在场的时候。Linux 系统提供了几种在预选时间运行脚本的方法：`at` 命令和 `cron` 表。每种方法都使用不同的技术来调度运行脚本的时间和频率。接下来的章节将描述这些每种方法。
+我确信，当你开始编写脚本时，会遇到这样一种情况：你希望在预设时间运行脚本，通常是在你不在场的时候。Linux 系统提供了几种在预选时间运行脚本的方法：`at`命令和`cron`表。每种方法都使用不同的技术来调度运行脚本的时间和频率。接下来的章节将描述这些每种方法。
 
 ### 使用 at 命令调度作业
 
-`at` 命令允许你指定 Linux 系统运行脚本的时间。`at` 命令将作业提交到队列中，并带有 shell 何时运行该作业的指示。`at` 守护进程 `atd` 在后台运行并检查作业队列是否有待运行的作业。大多数 Linux 发行版在启动时会自动启动此守护进程。
+`at`命令允许你指定 Linux 系统运行脚本的时间。`at`命令将作业提交到队列中，并带有 shell 何时运行该作业的指示。`at`守护进程`atd`在后台运行并检查作业队列是否有待运行的作业。大多数 Linux 发行版在启动时会自动启动此守护进程。
 
-`atd` 守护进程检查系统上的特殊目录（通常为 `/var/spool/at`）是否有使用 `at` 命令提交的作业。默认情况下，`atd` 进程每 60 秒检查一次该目录。当存在作业时，`atd` 会检查作业设置的运行时间。如果时间与当前时间匹配，`atd` 将运行该作业。
+`atd`守护进程检查系统上的特殊目录（通常为`/var/spool/at`）是否有使用`at`命令提交的作业。默认情况下，`atd`进程每 60 秒检查一次该目录。当存在作业时，`atd`会检查作业设置的运行时间。如果时间与当前时间匹配，`atd`将运行该作业。
 
-接下来的章节将描述如何使用 `at` 命令提交作业运行以及如何管理作业。
+接下来的章节将描述如何使用`at`命令提交作业运行以及如何管理作业。
 
 ### at 命令格式
 
-基本的 `at` 命令格式非常简单：
+基本的`at`命令格式非常简单：
 
 `at [-f <filename>] time`
 
-默认情况下，`at` 命令将输入从 `STDIN` 提交到队列。你可以使用 `-f` 参数指定读取命令的文件（你的脚本文件）。
+默认情况下，`at`命令将输入从`STDIN`提交到队列。你可以使用`-f`参数指定读取命令的文件（你的脚本文件）。
 
-时间参数指定了你希望 Linux 系统何时运行作业。在指定时间方面你可以非常有创意。`at` 命令识别许多不同的时间格式：
+时间参数指定了你希望 Linux 系统何时运行作业。在指定时间方面你可以非常有创意。`at`命令识别许多不同的时间格式：
 
 * 标准的小时和分钟，例如 10:15
 * ~A.M./~PM 指示，例如 10:15P.M.
 * 特定的具名时间，如 now, noon, midnight, 或 teatime (4P.M.)
 
-如果你指定了一个已经过去的时间，`at` 命令将在次日的该时间运行作业。
+如果你指定了一个已经过去的时间，`at`命令将在次日的该时间运行作业。
 
 除了指定运行作业的时间外，你还可以包含特定的日期，使用几种不同的日期格式：
 
@@ -9867,11 +10515,11 @@ $
     * Now + 25 minutes
     * 10:15 + 7 days
 
-当你使用 `at` 命令时，作业会被提交到队列中。作业队列持有由 `at` 提交待处理的作业。共有 26 个不同的队列可用。作业队列使用小字母 `a` 到 `z` 进行引用。几年前，`batch` 命令是另一种允许脚本在以后运行的方法。`batch` 命令的独特之处在于，你可以调度脚本在系统负载较低时运行。如今，`batch` 命令简单来说就是 `/usr/bin/batch`，它调用 `at`并将作业提交到 `b` 队列。`b` 队列的优先级较低（`nice` 值较高）。如果你想以更高的优先级运行作业，可以使用 `-q` 指定不同的队列。
+当你使用`at`命令时，作业会被提交到队列中。作业队列持有由`at`提交待处理的作业。共有 26 个不同的队列可用。作业队列使用小字母`a`到`z`进行引用。几年前，`batch`命令是另一种允许脚本在以后运行的方法。`batch`命令的独特之处在于，你可以调度脚本在系统负载较低时运行。如今，`batch`命令简单来说就是`/usr/bin/batch`，它调用`at`并将作业提交到`b`队列。`b`队列的优先级较低（`nice`值较高）。如果你想以更高的优先级运行作业，可以使用`-q`指定不同的队列。
 
 ### 获取输出
 
-当 `at` 作业运行时，没有显示器与其一同运行。相反，Linux 系统使用提交作业的用户的电子邮件地址。任何到 `STDOUT` 或 `STDERR` 的输出都会发送给该用户。这里有一个使用 `at` 命令调度作业的简单示例：
+当`at`作业运行时，没有显示器与其一同运行。相反，Linux 系统使用提交作业的用户的电子邮件地址。任何到`STDOUT`或`STDERR`的输出都会发送给该用户。这里有一个使用`at`命令调度作业的简单示例：
 
 ```bash
 $ cat <<EOF | at 10:15 PM
@@ -9885,7 +10533,7 @@ job 1 scheduled for Thu Oct 26 22:15:00 2023
 
 ### 列出等待作业
 
-`atq` 命令允许你查看系统中等待处理的作业：
+`atq`命令允许你查看系统中等待处理的作业：
 
 ```bash
 $ atq
@@ -9895,21 +10543,17 @@ $ atq
 60  Mon Oct 26 15:15:00 2023 a
 ```
 
-`atq` 列表显示作业编号、系统运行作业的日期和时间以及作业所在的队列。
+`atq`列表显示作业编号、系统运行作业的日期和时间以及作业所在的队列。
 
 ### 删除作业
 
-要删除作业，使用 `atrm` 命令后接作业编号：
+要删除作业，使用`atrm`命令后接作业编号：
 
 ```bash
 $ atrm 61
 ```
 
-
-
-
-
-一旦你知道了任务队列中哪些待执行任务的信息，就可以使用 `atrm` 命令来删除待执行任务：
+一旦你知道了任务队列中哪些待执行任务的信息，就可以使用`atrm`命令来删除待执行任务：
 
 ```bash
 $
@@ -9924,50 +10568,52 @@ $ atq
 $
 ```
 
+
+
 只需指定你想要删除的任务编号即可。你只能删除由自己提交执行的任务，而无法删除他人提交的任务。
 
 # 调度常规脚本
 
-使用 `at` 命令调度脚本在预设时间运行是非常棒的，但如果你需要该脚本每天运行、每周一次或每月运行一次怎么办？与其不断地提交 `at` 任务，你可以使用 Linux 系统的另一个功能。
+使用`at`命令调度脚本在预设时间运行是非常棒的，但如果你需要该脚本每天运行、每周一次或每月运行一次怎么办？与其不断地提交`at`任务，你可以使用 Linux 系统的另一个功能。
 
-Linux 系统使用 `cron` 程序来允许你调度需要定期运行的任务。`cron` 程序在后台运行，并检查特殊的表（称为 cron 表），以查找计划运行的任务。
+Linux 系统使用`cron`程序来允许你调度需要定期运行的任务。`cron`程序在后台运行，并检查特殊的表（称为 cron 表），以查找计划运行的任务。
 
 ## cron 表
 
-`cron` 表使用特殊的格式来允许你指定任务应何时运行。`cron` 表的格式为：
+`cron`表使用特殊的格式来允许你指定任务应何时运行。`cron`表的格式为：
 
 `min hour dayofmonth month dayofweek command`
 
-`cron` 表允许你将条目指定为特定值、范围（例如 1–5）或通配符（星号 *）。例如，如果你想在每天的 10:15 运行命令，你会使用 `cron` 表条目：
+`cron`表允许你将条目指定为特定值、范围（例如 1–5）或通配符（星号 *）。例如，如果你想在每天的 10:15 运行命令，你会使用`cron`表条目：
 
 `15 10 * * * command`
 
-在 `dayofmonth`、`month` 和 `dayofweek` 字段使用的通配符表示 `cron` 将在每月的每天 10:15 执行该命令。要指定在每周一的下午 4:15 运行命令，你将使用以下命令：
+在`dayofmonth`、`month`和`dayofweek`字段使用的通配符表示`cron`将在每月的每天 10:15 执行该命令。要指定在每周一的下午 4:15 运行命令，你将使用以下命令：
 
 `15 16 * * 1 command`
 
-你可以将 `dayofweek` 条目指定为三字符文本值（mon, tue, wed, thu, fri, sat, sun）或数值，其中 0 代表星期日，6 代表星期六。
+你可以将`dayofweek`条目指定为三字符文本值（mon, tue, wed, thu, fri, sat, sun）或数值，其中 0 代表星期日，6 代表星期六。
 
 这是另一个例子：要在每月第一天的中午 12 点执行命令，你将使用以下格式：
 
 `00 12 1 * * command`
 
-`dayofmonth` 条目指定该月的日期值（1–31）。
+`dayofmonth`条目指定该月的日期值（1–31）。
 
 > 注意
-> 敏锐的读者可能会想，你如何能够设置命令在每月的最后一天执行，因为你无法将 `dayofmonth` 值覆盖所有月份。这个问题一直困扰着 Linux 和 Unix 程序员，并产生了许多不同的解决方案。一种常见的方法是添加一个 `if-then` 语句，使用 `date` 命令检查明天日期是否为 01：
+> 敏锐的读者可能会想，你如何能够设置命令在每月的最后一天执行，因为你无法将`dayofmonth`值覆盖所有月份。这个问题一直困扰着 Linux 和 Unix 程序员，并产生了许多不同的解决方案。一种常见的方法是添加一个`if-then`语句，使用`date`命令检查明天日期是否为 01：
 > `00 12 * * * if [‘date +d -d tomorrow' = 01 ] ; then ; command`
-> 这将在每天中午 12 点检查是否是月的最后一天，如果是，`cron` 将运行命令。
+> 这将在每天中午 12 点检查是否是月的最后一天，如果是，`cron`将运行命令。
 
 命令列表必须指定运行的命令或 shell 脚本的完整路径。你可以像普通命令行一样添加任何喜欢的命令行参数或重定向符号：
 
 `15 10 * * * /home/rich/test4 > test4out`
 
-`cron` 程序使用提交任务的用户账户运行脚本。因此，你必须拥有相应的权限来访问命令列表中指定的命令和输出文件。
+`cron`程序使用提交任务的用户账户运行脚本。因此，你必须拥有相应的权限来访问命令列表中指定的命令和输出文件。
 
 ## 构建 cron 表
 
-每个系统用户（包括 root 用户）都可以拥有自己的 `cron` 表来运行调度任务。Linux 提供了 `crontab` 命令来处理 `cron` 表。要列出现有 `cron` 表，使用 `-l` 参数：
+每个系统用户（包括 root 用户）都可以拥有自己的`cron`表来运行调度任务。Linux 提供了`crontab`命令来处理`cron`表。要列出现有`cron`表，使用`-l`参数：
 
 ```bash
 $ crontab -l
@@ -9975,11 +10621,11 @@ no crontab for rich
 $
 ```
 
-默认情况下，每个用户的 `cron` 表文件不存在。要向你的 `cron` 表添加条目，请使用 `-e` 参数。当你这样做时，`crontab` 命令会启动文本编辑器（见第 9 章）并打开现有的 `cron` 表（如果不存在则打开空文件）。
+默认情况下，每个用户的`cron`表文件不存在。要向你的`cron`表添加条目，请使用`-e`参数。当你这样做时，`crontab`命令会启动文本编辑器（见第 9 章）并打开现有的`cron`表（如果不存在则打开空文件）。
 
 ## cron 目录
 
-当你创建一个对执行时间要求不精确的脚本时，使用一个预配置的 `cron` 脚本目录更容易。有四个基本目录：每（hourly）、每日（daily）、每月（monthly）和每周（weekly）。
+当你创建一个对执行时间要求不精确的脚本时，使用一个预配置的`cron`脚本目录更容易。有四个基本目录：每（hourly）、每日（daily）、每月（monthly）和每周（weekly）。
 
 ```bash
 $
@@ -9988,6 +10634,7 @@ $ ls /etc/cron.*ly
 anacron      aptitude          exim4-base           man-db           sysstat
 apt          bsdmainutils      logrotate           popularity-contest
 apport                dpkg  mlocate    standard 
+
 /etc/cron.hourly:
 /etc/cron.monthly:
 anacron
@@ -9996,19 +10643,19 @@ anacron  apt-xapian-index  man-db
 $
 ```
 
-因此，如果你有一个需要每天运行一次的脚本，只需将其复制到 daily 目录，`cron` 每天都会执行它。
+因此，如果你有一个需要每天运行一次的脚本，只需将其复制到 daily 目录，`cron`每天都会执行它。
 
 ## anacron 程序
 
-`cron` 程序唯一的问题是假设你的 Linux 系统是 24 小时、7 天运行的。除非你在服务器环境中运行 Linux，否则这并不一定。
+`cron`程序唯一的问题是假设你的 Linux 系统是 24 小时、7 天运行的。除非你在服务器环境中运行 Linux，否则这并不一定。
 
-如果 Linux 系统在 `crontab` 计划运行任务时处于状态，则任务将不会运行。`cron` 程序不会在系统重启后追溯运行错过的任务。为了解决这个问题，许多 Linux 发行版还包含了 `anacron` 程序。
+如果 Linux 系统在`crontab`计划运行任务时处于状态，则任务将不会运行。`cron`程序不会在系统重启后追溯运行错过的任务。为了解决这个问题，许多 Linux 发行版还包含了`anacron`程序。
 
-如果 `anacron` 确定某个任务错过了计划运行时间，它将尽快运行该任务。这意味着如果你的 Linux 系统关闭了几天，当它重新启动时，任何在关机期间计划运行的任务都会执行。
+如果`anacron`确定某个任务错过了计划运行时间，它将尽快运行该任务。这意味着如果你的 Linux 系统关闭了几天，当它重新启动时，任何在关机期间计划运行的任务都会执行。
 
-这一功能通常用于执行例行维护的脚本。如果脚本在应该运行时系统总是关闭的，日志文件将永远不会修剪并可能会增长到不可接受的大小。有了 `anacron`，你可以确保日志文件每次系统启动都会修剪。
+这一功能通常用于执行例行维护的脚本。如果脚本在应该运行时系统总是关闭的，日志文件将永远不会修剪并可能会增长到不可接受的大小。有了`anacron`，你可以确保日志文件每次系统启动都会修剪。
 
-`anacron` 程序使用时间戳来确定任务是否已运行。每个 `cron` 目录都有一个时间戳文件，位于 `/var/spool/anacron`：
+`anacron`程序使用时间戳来确定任务是否已运行。每个`cron`目录都有一个时间戳文件，位于`/var/spool/anacron`：
 
 ```bash
 $
@@ -10017,32 +10664,30 @@ $ sudo cat /var/spool/anacron.monthly
 $
 ```
 
-`anacron` 程序了自己的表（通常位于 `/etc/anacab`）来检查任务目录：
+`anacron`程序了自己的表（通常位于`/etc/anacab`）来检查任务目录：
 
 ```bash
 $
 $ cat /etc/anacab
 # /etc/anacab: configuration file for anacron
 # See anacron(8) and anacab(5) for details.
+
 SHELL=/bin/sh
 PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
+
 # These 替换 cron 的条目
 1 5 cron.daily nice run-parts --report /etc/cron.daily
 7 10 cron.weekly nice run-parts --report /etc/cron.weekly
 @monthly 15 cron.monthly nice run-parts --report /etc/cron.monthly
 ```
 
-`anacron` 表的基本格式与 `cron` 表略有不同：
+`anacron`表的基本格式与`cron`表略有不同：
 
 > period delay identifier command
 
-`period` 条目定义了任务运行的频率，以天为单位。`anacron` 程序使用此条目检查任务的时间戳文件。`delay` 条目指定了系统启动后多少分钟内 `anacron` 程序应运行错过的脚本。`command` 条目包含 `run-parts` 程序和一个 `cron` 脚本目录名。`identifier` 条目是一个唯一的非空字符字符串——例如，`cron-weekly`。它用于在日志消息和错误电子邮件中唯一标识该任务。
+`period`条目定义了任务运行的频率，以天为单位。`anacron`程序使用此条目检查任务的时间戳文件。`delay`条目指定了系统启动后多少分钟内`anacron`程序应运行错过的脚本。`command`条目包含`run-parts`程序和一个`cron`脚本目录名。`identifier`条目是一个唯一的非空字符字符串——例如，`cron-weekly`。它用于在日志消息和错误电子邮件中唯一标识该任务。
 
-注意，`anacron` 不运行位于 `/etc/cron.hourly` 中的脚本。这是因为 `anacron` 程序不处理执行时间要求少于日的脚本。
-
-
-
-
+注意，`anacron`不运行位于`/etc/cron.hourly`中的脚本。这是因为`anacron`程序不处理执行时间要求少于日的脚本。
 
 启动 shell 脚本的最后一种方法是让你的脚本在 Linux 系统启动时或每当用户启动新的 bash shell 会话时自动运行。在启动时启动脚本通常预留给执行系统功能的特殊脚本，例如配置网络接口或启动服务器进程。然而，如果你是一个 Linux 系统管理员，你可能需要在每次 Linux 系统启动时执行某项功能，例如重置自定义日志文件或启动自定义应用程序。
 
@@ -10060,7 +10705,7 @@ PATH=/usr/local/sbin:/usr/local/bin:/sbin:/bin:/usr/sbin:/usr/bin
 
 ### System V init 进程
 
-作为启动过程的一部分，System V init 进程会读取 `/etc/inittab` 文件。`inittab` 文件列出了系统的运行级别（run level）。不同的 Linux 运行级别会启动不同的程序和脚本。[表 15.3] 列出了基于 Red Hat 的发行版的 Linux 运行级别。
+作为启动过程的一部分，System V init 进程会读取`/etc/inittab`文件。`inittab`文件列出了系统的运行级别（run level）。不同的 Linux 运行级别会启动不同的程序和脚本。[表 15.3] 列出了基于 Red Hat 的发行版的 Linux 运行级别。
 
 [表 15.3] Linux 运行级别——基于 Red Hat 的发行版
 
@@ -10085,17 +10730,17 @@ Linux 发行版通常使用[表 15.3]中列出的运行级别来对系统上启�
 | 2 - 5 | 多用户模式，带网络和图形 X Window 会话 |
 | 6 | 重启 (Reboot) |
 
-Ubuntu 发行版甚至没有用于设置运行级别的 `/etc/inittab` 文件。默认情况下，Ubuntu 进入运行级别 2。如果你想更改默认运行级别，则必须在 Ubuntu 发行版上创建一个 `/etc/inittab` 文件。
+Ubuntu 发行版甚至没有用于设置运行级别的`/etc/inittab`文件。默认情况下，Ubuntu 进入运行级别 2。如果你想更改默认运行级别，则必须在 Ubuntu 发行版上创建一个`/etc/inittab`文件。
 
 每个运行级别都定义了 System V init 进程启动或停止哪些脚本。这些启动脚本是 shell 脚本用于启动应用程序并为它们的运行提供必要的环境变量。
 
-在基于 System V init 的启动过程中，情况开始变得有些模糊，主要是因为不同的 Linux 发行版将启动脚本放在略有不同的位置。有些发行版将启动脚本放在 `/etc/rc#.d` 目录，其中 # 代表运行级别。另一些使用 `/etc/init.d` 目录，还有的使用 `/etc/init.d/rc.d` 目录。通常，快速查看你的 `/etc` 目录结构就可以很容易判断你的发行版使用什么格式。
+在基于 System V init 的启动过程中，情况开始变得有些模糊，主要是因为不同的 Linux 发行版将启动脚本放在略有不同的位置。有些发行版将启动脚本放在`/etc/rc#.d`目录，其中 # 代表运行级别。另一些使用`/etc/init.d`目录，还有的使用`/etc/init.d/rc.d`目录。通常，快速查看你的`/etc`目录结构就可以很容易判断你的发行版使用什么格式。
 
 ### Upstart init 进程
 
 Upstart init 进程是管理服务进程的新兴标准，许多 Linux 发行版现在正转向它。Upstart 并不关注系统运行级别，而是关注事件，例如系统启动。在 Upstart 中，系统启动被称为启动事件。
 
-根据你的发行版及其版本，Upstart 使用位于 `/etc/event.d` 或 `/etc/init` 目录下的文件来启动进程。为了保持后兼容性，许多 Upstart 实现仍然调用来自 `/etc/init.d` 和/或 `/etc/rc#.d` 的旧 System V init 脚本。
+根据你的发行版及其版本，Upstart 使用位于`/etc/event.d`或`/etc/init`目录下的文件来启动进程。为了保持后兼容性，许多 Upstart 实现仍然调用来自`/etc/init.d`和/或`/etc/rc#.d`的旧 System V init 脚本。
 
 目前 Upstart init 进程标准仍在高度进化中。对于你创建并希望在系统启动事件期间启动的脚本，使用旧的 System V init 进程方法是稳妥的。这种方法将在下一节中描述。
 
@@ -10127,15 +10772,17 @@ Upstart init 进程是管理服务进程的新兴标准，许多 Linux 发行版
 * `.bash_profile` 文件
 * `.bashrc` 文件
 
-当由于新登录导致运行新 shell 时，bash shell 会运行 `.bash_profile` 文件。将任何你想在登录时运行的脚本放在此文件中。
+当由于新登录导致运行新 shell 时，bash shell 会运行`.bash_profile`文件。将任何你想在登录时运行的脚本放在此文件中。
 
-bash shell 在每次启动新 shell 时都会运行 `.bashrc` 文件。你可以通过在家目录下的 `.bashrc` 文件中添加一个简单的 `echo` 语句然后启动新 shell 来测试这一点：
+bash shell 在每次启动新 shell 时都会运行`.bashrc`文件。你可以通过在家目录下的`.bashrc`文件中添加一个简单的`echo`语句然后启动新 shell 来测试这一点：
 
 ```bash
 $ bash
 This is a new shell!!
 $
 ```
+
+
 
 对于系统上的每个用户，大多数 Linux 发行版都提供了 `/etc/bashrc` 文件（注意 `bashrc` 文件名前面没有点）。当系统上的任何用户启动新的 bash shell 时，bash shell 都会执行该文件中的语句。
 
@@ -10144,10 +10791,6 @@ $
 Linux 系统允许你通过信号来控制你的 shell 脚本。bash shell 接受信号并传递给在 shell 进程下的任何进程。Linux 信号允许你轻松杀死异常进程或临时暂停长时间运行的进程。
 
 你可以在脚本中使用 `trap` 语句来捕获信号并执行命令。此功能提供了一种简单的方法，来控制用户是否可以在你的脚本运行时中断它。
-
-
-
-
 
 默认情况下，当你在终端会话 shell 中运行脚本时，交互式 shell 会挂起，直到脚本执行完成。你可以在命令名后添加一个符号（`&`）来使脚本或命令在后台模式运行。当你以后台模式运行脚本或命令时，交互式 shell 会返回，允许你继续输入更多命令。使用这种方法运行的任何后台进程仍然与终端会话绑定。如果你退出终端会话，后台进程也会退出。
 
@@ -10163,21 +10806,22 @@ Linux 系统允许你通过信号来控制你的 shell 脚本。bash shell 接�
 
 在下一章中，我们将查看如何编写脚本函数。脚本函数允许你编写一次代码块，然后在脚本的多个位置使用它们。
 
-# 第三部分
-## 高级 Shell 脚本
+# 第三部分：高级 Shell 脚本
 
-### 本部分
+## 本部分
+
 * 第 16 章：创建函数
 * 第 17 章：为图形桌面编写脚本
-* 第 18 章：引入 sed 和 gawk
+* 第 18 章：引入 `sed` 和 `gawk`
 * 第 19 章：正则表达式
-* 第 20 章：高级 sed
-* 第 21 章：高级 gawk
+* 第 20 章：高级 `sed`
+* 第 21 章：高级 `gawk`
 * 第 22 章：使用替代 Shell
 
 # 第 16 章：创建函数
 
-### 本章
+## 本章
+
 * 基础脚本函数
 * 返回值
 * 在函数中使用变量
@@ -10186,7 +10830,7 @@ Linux 系统允许你通过信号来控制你的 shell 脚本。bash shell 接�
 * 创建库
 * 在命令行上使用函数
 
-在编写 shell 脚本时，你经常会发现发自己在多个地方使用相同的代码。如果只是一个小代码段，通常不是什么问题。然而，在 shell 脚本中多次重写大段代码可能会很疲惫。bash shell 提供了一种支持用户定义函数的方法来提供帮助。你可以将你的 shell 脚本代码封装到一个函数中，然后在脚本的任何地方按需要多次使用它。本章将引导你完成创建自己的 shell 脚本函数的过程，并演示如何在 shell 脚本应用程序中使用它们。
+在编写 shell 脚本时，你经常会发现自己在多个地方使用相同的代码。如果只是一个小代码段，通常不是什么问题。然而，在 shell 脚本中多次重写大段代码可能会很疲惫。bash shell 提供了一种支持用户定义函数的方法来提供帮助。你可以将你的 shell 脚本代码封装到一个函数中，然后在脚本的任何地方按需要多次使用它。本章将引导你完成创建自己的 shell 脚本函数的过程，并演示如何在 shell 脚本应用程序中使用它们。
 
 ## 基础脚本函数
 
@@ -10194,13 +10838,13 @@ Linux 系统允许你通过信号来控制你的 shell 脚本。bash shell 接�
 
 在这些每种情况下，在脚本中反复编写相同的代码块都会变得很疲惫。如果只需要写一次该代码块，然后可以在脚本的任何地方引用该代码块而无需重写它，那就太好了。
 
-bash shell 提供了一个允许你执行此操作的功能。函数是你为你分配了名称的脚本代码块，然后在代码的任何地方复用它。每当你需要在脚本中使用该代码块时，只需使用你分配给它的函数名（这称为调用函数）。本节描述了如何在 shell 脚本中创建和使用函数。
+bash shell 提供了一个允许你执行此操作的功能。函数是你为其分配了名称的脚本代码块，然后在代码的任何地方复用它。每当你需要在脚本中使用该代码块时，只需使用你分配给它的函数名（这称为调用函数）。本节描述了如何在 shell 脚本中创建和使用函数。
 
 ### 创建函数
 
 在 bash shell 脚本中，可以使用两种格式来创建函数。第一种格式使用关键字 `function` 以及你分配给代码块的函数名：
 
-```
+```bash
 function name {
   commands
 }
@@ -10212,7 +10856,7 @@ function name {
 
 在 bash shell 脚本中定义函数的第二种格式更符合其他编程语言中函数的定义方式：
 
-```
+```bash
 name() {
   commands
 }
@@ -10227,19 +10871,26 @@ name() {
 ```bash
 $ cat test1
 #!/bin/bash
+
 # 在脚本中使用函数
 function func1 {
     echo "This is an example of a function"
 }
+
 count=1
+
 while [ $count -le 5 ]
 do
   func1
   count=$[ $count + 1 ]
 done
+
 echo "This is the end of the loop"
+
 func1
+
 echo "Now this is the end of the script"
+
 $ 
 $ ./test1
 This is an example of a function
@@ -10260,31 +10911,36 @@ $
 ```bash
 $ cat test2
 #!/bin/bash
+
 # 使用位于脚本中间的函数
 count=1
+
 echo "This line comes before the function definition"
+
 function func1 {
     echo "This is an example of a function"
 }
+
 while [ $count -le 5 ]
 do
   func1
   count=$[ $count + 1 ]
 done
+
 echo "This is the end of the loop"
+
 func2
+
 echo "Now this is the end of the script"
+
 function func2 {
     echo "This is an example of a function"
 }
+
 $ 
 $ ./test2
 This line comes before the function definition
 ```
-
-
-
-
 
 ```bash
 ./test2: func2: command not found
@@ -10301,16 +10957,22 @@ $
 ```bash
 $ cat test3
 #!/bin/bash
+
 # testing using a duplicate function name
 function func1 {
 echo “This is the first definition of the function name”
 }
+
 func1
+
 function func1 {
     echo “This is a repeat of the same function name”
 }
+
 func1
+
 echo “This is the end of the script”
+
 $ 
 $ ./test3
 This is the first definition of the function name
@@ -10332,14 +10994,19 @@ $
 ```bash
 $ cat test4
 #!/bin/bash
+
 # testing the exit status of a function
 func1() {
     echo “trying to display a non-existent file”
     ls -l badfile
 }
+
 echo “testing the function: ”
+
 func1
+
 echo “The exit status is: $?”
+
 $ 
 $ ./test4
 testing the function:
@@ -10354,14 +11021,19 @@ $
 ```bash
 $ cat test4b
 #!/bin/bash
+
 # testing the exit status of a function
 func1() {
     ls -l badfile
     echo “This was a test of a bad command”
 }
+
 echo “testing the function:”
+
 func1
+
 echo “The exit status is: $?”
+
 $ 
 $ ./test4b
 testing the function:
@@ -10373,21 +11045,25 @@ $
 
 这一次，因为函数以一个成功执行的 `echo` 语句结束，所以函数的退出状态为 0，尽管函数中的一个命令失败了。使用函数的默认退出状态可能是一种危险的做法。幸运的是，我们还有其他几种解决方案。
 
-### 使用 return 命令
+### 使用 `return` 命令
 
 `bash` shell 使用 `return` 命令以特定的退出状态退出函数。`return` 命令允许你指定一个单一整数值来定义函数的退出状态，这为你提供了一种以编程方式设置函数退出状态的方便方法：
 
 ```bash
 $ cat test5
 #!/bin/bash
+
 # using the return command in a function
 function dbl {
     read -p “Enter a value: ” value
     echo “doubling the value”
     return $[ $value * 2 ]
 }
+
 dbl
+
 echo “The new value is $?”
+
 $
 ```
 
@@ -10395,8 +11071,8 @@ $
 
 然而，当你使用这种技术从函数返回数值时必须小心。请记住以下两点以避免问题：
 
-*   记住在函数完成后立即获取返回值。
-*   记住退出状态必须在 0 到 255 的范围范围内。
+* 记住在函数完成后立即获取返回值。
+* 记住退出状态必须在 0 到 255 的范围范围内。
 
 如果你在通过 `$?` 变量获取函数返回值之前执行了任何其他命令，那么函数的返回值将会丢失。记住 `$?` 变量返回的是上一个执行的命令的退出状态。
 
@@ -10419,14 +11095,18 @@ $
 ```bash
 $ cat test5b
 #!/bin/bash
+
 # using the echo to return a value
 function dbl {
     read -p “Enter a value: ” value
     echo “doubling the value”
     echo $[ $value * 2 ]
 }
+
 result=$(dbl)
+
 echo “The new value is $result”
+
 $ 
 $ ./test5b
 Enter a value: 100
@@ -10439,8 +11119,7 @@ $
 
 这个例子展示了一个微妙的技巧。你会注意到 `dbl` 函数实际上输出了两条消息。`read` 命令输出了一条向用户查询数值的短消息。bash shell 脚本足够聪明，不会将其视为标准输出（STDOUT）的一部分，并忽略了它。如果你使用 `echo` 语句向用户产生这条查询消息，它也将连同输出一起被 shell 变量捕获。
 
-> 注意
-> 使用这种技术，你还可以返回浮点数和字符串值，这使其成为一种从函数返回数值的极其灵活的方法。
+> 注意：使用这种技术，你还可以返回浮点数和字符串值，这使其成为一种从函数返回数值的极其灵活的方法。
 
 ## 在函数中使用变量
 
@@ -10458,14 +11137,12 @@ $
 func1 $value1 10
 ```
 
-
-
-
 该函数随后可以使用参数环境变量来检索参数值。这里有一个使用此方法向函数传递值的示例：
 
 ```bash
 $ cat test6
 #!/bin/bash
+
 # passing parameters to a function
 function addem {
     if [ $# -eq 0 ] || [ $# -gt 2 ]
@@ -10478,28 +11155,46 @@ function addem {
       echo $[ $1 + $2 ]
     fi
 }
+
 echo -n "Adding 10 and 15: "
 value='addem 10 15'
 echo $value
+
 echo -n "Let's try adding just one number: "
 value='addem 10'
 echo $value
+
 echo -n "Now trying adding no numbers: "
 value='addem'
-echo $value
-echo -n "Finally, try adding three numbers: "
-value='addem 10 15 20'
-echo $value
-$ 
-$ ./test6
-Adding 10 and 15: 25
-Let's try adding just one number: 20
-Now trying adding no numbers: -1
-Finally, try adding three numbers: -1
-$
 ```
 
+
+
+`echo $value`
+
+`echo -n "Finally, try adding three numbers: "`
+
+`value='addem 10 15 20'`
+
+`echo $value`
+
+`$`
+
+`$ ./test6`
+
+`Adding 10 and 15: 25`
+
+`Let's try adding just one number: 20`
+
+`Now trying adding no numbers: -1`
+
+`Finally, try adding three numbers: -1`
+
+`$`
+
+```
 `test6` 脚本中的 `addem` 函数首先检查脚本传递给它的参数数量。如果没有参数，或者参数数量超过两个，`addem` 将返回值 `-1`。如果只有一个参数，`addem` 将将该参数与其自身相加得到结果。如果有两个参数，`addem` 将将它们相加得到结果。
+```
 
 由于函数使用特殊的参数环境变量来获取其自身的参数值，因此它无法直接从脚本的命令行访问脚本参数值。下面的示例将会失败：
 
@@ -10681,12 +11376,6 @@ function testit {
     local newarray
     newarray=(echo "$@")
 }
-```
-
-
-
-
-```bash
 echo “The new array value is: ${newarray[*]}"
 }
 myarray=(1 2 3 4 5)
@@ -10830,11 +11519,9 @@ $ cat myfuncs
 function addem {
     echo $[ $1 + $2 ]
 }
-
 function multem {
     echo $[ $1 * $2 ]
 }
-
 function divem {
     if [ $2 -ne 0 ]
     then
@@ -10878,15 +11565,13 @@ $
 
 
 
-
-
-该脚本成功使用了 `myfuncs` 库文件中定义的函数。
+该脚本成功使用了`myfuncs`库文件中定义的函数。
 
 # 在命令行上使用函数
 
 你可以使用脚本函数来创建一些相当复杂的操作。有时，如果能够直接在命令行界面提示符中使用这些函数会非常有用。
 
-就像你可以在 shell 脚本中使用脚本函数作为命令一样，你也可以在命令行界面将脚本函数作为命令。这是一个非常实用的功能，因为一旦你在 shell 中定义了函数，你就可以在系统的任何目录下使用它；你不必担心脚本是否在你的 `PATH` 环境变量中。诀窍在于让 shell 识别该函数。有几种方法可以实现。
+就像你可以在 shell 脚本中使用脚本函数作为命令一样，你也可以在命令行界面将脚本函数作为命令。这是一个非常实用的功能，因为一旦你在 shell 中定义了函数，你就可以在系统的任何目录下使用它；你不必担心脚本是否在你的`PATH`环境变量中。诀窍在于让 shell 识别该函数。有几种方法可以实现。
 
 ## 在命令行上创建函数
 
@@ -10923,7 +11608,7 @@ $ multem 2 5
 $
 ```
 
-当你使用函数末尾的大括号时 时，shell 就知道你已经完成了函数的定义。
+当你使用函数末尾的大括号时，shell 就知道你已经完成了函数的定义。
 
 > **注意**
 > 在命令行上创建函数时要极度小心。如果你使用的函数名称与内置命令或其他命令重名，该函数将覆盖原始命令。
@@ -10934,11 +11619,11 @@ $
 
 更简单的方法是将函数定义在一个地方，每次你启动新的 shell 时，shell 都会重新加载它。
 
-最好的位置是 `.bashrc` 文件。bash shell 每次启动时都会在你的家目录下查找此文件，无论是交互式启动，还是作为从现有 shell 启动新 shell 的结果。
+最好的位置是`.bashrc`文件。bash shell 每次启动时都会在你的家目录下查找此文件，无论是交互式启动，还是作为从现有 shell 启动新 shell 的结果。
 
- 直接定义函数
+### 直接定义函数
 
-你可以直接在家目录下的 `.bashrc` 文件中定义函数。大多数 Linux 发行版已经在 `.bashrc` 文件中定义了一些内容，因此请小心不要删除它们。只需将你的函数添加到现有文件的末尾即可。这是一个这样做的示例：
+你可以直接在家目录下的`.bashrc`文件中定义函数。大多数 Linux 发行版已经在`.bashrc`文件中定义了一些内容，因此请小心不要删除它们。只需将你的函数添加到现有文件的末尾即可。这是一个这样做的示例：
 
 ```bash
 $ cat .bashrc
@@ -10957,7 +11642,7 @@ $
 
 ### 引入函数文件
 
-就像在 shell 脚本中一样，你可以使用 `source` 命令（或其别名点运算符 `.`）将现有库文件中的函数添加到你的 `.bashrc` 脚本中：
+就像在 shell 脚本中一样，你可以使用`source`命令（或其别名点运算符`.`）将现有库文件中的函数添加到你的`.bashrc`脚本中：
 
 ```bash
 $ cat .bashrc
@@ -11009,21 +11694,15 @@ $
 
 Shell 脚本函数允许你将脚本中反复出现的脚本代码放在一个地方。你不需要重写代码块，而是创建一个包含该代码块的函数，然后只需在脚本中引用函数名即可。当 bash shell 看到脚本中使用函数名时，它就会跳转到函数代码块。
 
-你甚至可以创建可以返回值的脚本函数。这允许你创建与脚本交互的函数，返回数值和字符数据。脚本函数可以通过使用函数中最后一个命令的退出状态，或使用 `return` 命令来返回数值数据。`return` 命令允许你根据函数的结果程序化地将函数的退出状态设置为特定值。
+你甚至可以创建可以返回值的脚本函数。这允许你创建与脚本交互的函数，返回数值和字符数据。脚本函数可以通过使用函数中最后一个命令的退出状态，或使用`return`命令来返回数值数据。`return`命令允许你根据函数的结果程序化地将函数的退出状态设置为特定值。
 
-函数还可以使用标准的 `echo` 语句返回值。你可以像处理任何其他 shell 命令一样，使用反引号字符来捕获输出数据。这使得你能够从函数返回任何类型的数据，包括字符串和浮点数。
+函数还可以使用标准的`echo`语句返回值。你可以像处理任何其他 shell 命令一样，使用反引号字符来捕获输出数据。这使得你能够从函数返回任何类型的数据，包括字符串和浮点数。
 
 你可以在函数中使用 shell 变量，为变量赋值并从现有变量获取值。这允许你从主脚本向脚本函数传递任何类型的数据。函数还允许你定义局部变量，这些变量仅在函数代码块内部可用。局部变量允许你创建与主 shell 中使用的变量或进程独立的函数。
 
 函数还可以调用其他函数，包括自身。当函数调用自身时，被称为递归。递归函数通常有一个基准值，作为函数的终止值。函数继续以递减的参数值调用自身，直到达到基准值。
 
-如果你在 shell 脚本中使用许多函数，可以创建脚本函数的库文件。可以通过 `source` 命令（或其别名点运算符 `.`）在任何 shell 文件中包含库文件。这被称为引入库文件。shell 不会运行库文件，而是让运行脚本的 shell 可以使用这些函数。
-
-
-
-
-
-多年来，shell 脚本一直以来负着枯燥无味的声誉。然而，如果你计划在图形化环境中运行脚本，情况并非如此。有许多方法可以与脚本用户交互，而无需依赖 `read` 和 `echo` 语句。本章将深入探讨你可以使用的几种不同方法，帮助为交互式脚本增活力，让它们看起来不再那么过时。
+如果你在 shell 脚本中使用许多函数，可以创建脚本函数的库文件。可以通过`source`命令（或其别名点运算符`.`）在任何 shell 文件中包含库文件。这被称为引入库文件。shell 不会运行库文件，而是让运行脚本的 shell 可以使用这些函数。
 
 # 创建文本菜单
 
@@ -11035,7 +11714,7 @@ Shell 脚本函数允许你将脚本中反复出现的脚本代码放在一个�
 
 ![](img/00013.jpg)
 
-shell 脚本菜单的核心是 `case` 命令（参见第 11 章）。`case` 命令根据客户从菜单中选择的字符执行特定的命令。
+shell 脚本菜单的核心是`case`命令（参见第 11 章）。`case`命令根据客户从菜单中选择的字符执行特定的命令。
 
 接下来的章节将引导你完成基于菜单的 shell 脚本时应该遵循的步骤。
 
@@ -11045,12 +11724,12 @@ shell 脚本菜单的核心是 `case` 命令（参见第 11 章）。`case` 命�
 
 在创建菜单之前，通常清除显示器内容是一个好主意。这让你能够在一个干净的环境中显示菜单，而不会受到文本的干扰。
 
-`clear` 命令使用你终端会话的 `terminfo` 数据（参见第 2 章）来清除显示器上出现的任何文本。执行 `clear` 命令后，你可以使用 `echo` 命令显示你的菜单元素。
+`clear`命令使用你终端会话的`terminfo`数据（参见第 2 章）来清除显示器上出现的任何文本。执行`clear`命令后，你可以使用`echo`命令显示你的菜单元素。
 
-默认情况下，`echo` 命令只能显示可打印的文本字符。在创建菜单项时，使用不可打印项（如制表符和换行符）通常很有帮助。若要在你的 `echo` 命令中包含这些字符，你必须使用 `-e` 选项。因此，命令：
+默认情况下，`echo`命令只能显示可打印的文本字符。在创建菜单项时，使用不可打印项（如制表符和换行符）通常很有帮助。若要在你的`echo`命令中包含这些字符，你必须使用`-e`选项。因此，命令：
 
 ```
-echo -e “1.\tDisplay disk space”
+echo -e "1.\tDisplay disk space"
 ```
 
 将产生输出行：
@@ -11059,22 +11738,22 @@ echo -e “1.\tDisplay disk space”
 1         Display disk space
 ```
 
-这极大地有助于格式化菜单项的布局。只需几个 `echo` 命令，你就可以创建一个看起来合理的菜单：
+这极大地有助于格式化菜单项的布局。只需几个`echo`命令，你就可以创建一个看起来合理的菜单：
 
 ```
-   clear
-   echo
-   echo -e "\t\t\tSys Admin Menu\n”
-   echo -e "\t1. Display disk space”
-   echo -e "\t2. Display logged on users”
-   echo -e "\t3. Display memory usage”
-   echo -e "\t0. Exit menu\n\n”
-   echo –en "\t\nEnter option: ”
+clear
+echo
+echo -e "\t\t\tSys Admin Menu\n"
+echo -e "\t1. Display disk space"
+echo -e "\t2. Display logged on users"
+echo -e "\t3. Display memory usage"
+echo -e "\t0. Exit menu\n\n"
+echo –en "\t\nEnter option: "
 ```
 
-最后一行的 `-en` 选项会在不在末尾添加换行符的情况下显示该行。这使得菜单看起来更专业，因为光标将停留在行尾等待客户的输入。
+最后一行的`-en`选项会在不在末尾添加换行符的情况下显示该行。这使得菜单看起来更专业，因为光标将停留在行尾等待客户的输入。
 
-创建菜单的最后部分是从客户处获取输入。这是通过使用 `read` 命令完成的（参见第 13 章）。由于我们预期单字符输入，良好的做法是在 `read` 命令中使用 `-n` 选项来仅获取一个字符。这允许客户输入数字而无需按回车键：
+创建菜单的最后部分是从客户处获取输入。这是通过使用`read`命令完成的（参见第 13 章）。由于我们预期单字符输入，良好的做法是在`read`命令中使用`-n`选项来仅获取一个字符。这允许客户输入数字而无需按回车键：
 
 ```
 read -n 1 option
@@ -11084,20 +11763,20 @@ read -n 1 option
 
 ## 创建菜单函数
 
-将 shell 脚本菜单选项作为一组独立的函数来创建会更容易。这允许你创建一个简单、且易于遵循的 `case` 命令。
+将 shell 脚本菜单选项作为一组独立的函数来创建会更容易。这允许你创建一个简单、且易于遵循的`case`命令。
 
 要做到这一点，你需要为每个菜单选项创建单独的 shell 函数。创建菜单 shell 脚本的第一步是确定让脚本执行哪些函数，并将它们作为单独的函数在代码中布局。
 
-为尚未实现的函数创建“存根函数”（stub functions）是一种常见做法。存根函数是一个尚未包含任何命令的函数，或者可能只包含一个指示最终应该放置内容的 `echo` 语句：
+为尚未实现的函数创建“存根函数”（stub functions）是一种常见做法。存根函数是一个尚未包含任何命令的函数，或者可能只包含一个指示最终应该放置内容的`echo`语句：
 
 ```
 function diskspace {
     clear
-    echo “This is where the diskspace commands will go”
+    echo "This is where the diskspace commands will go"
 }
 ```
 
-这使得你的菜单在你处理各个函数时能够顺畅运行。你不需要为菜单运行编写所有函数的代码。你会发现函数是从 `clear` 命令开头的。这让你可以在没有菜单的情况下在干净的显示器上启动函数。
+这使得你的菜单在你处理各个函数时能够顺畅运行。你不需要为菜单运行编写所有函数的代码。你会发现函数是从`clear`命令开头的。这让你可以在没有菜单的情况下在干净的显示器上启动函数。
 
 shell 菜单中有帮助的一点是将菜单布局创建为一个函数：
 
@@ -11105,23 +11784,23 @@ shell 菜单中有帮助的一点是将菜单布局创建为一个函数：
 function menu {
     clear
     echo
-    echo -e "\t\t\tSys Admin Menu\n”
-    echo -e "\t1. Display disk space”
-    echo -e "\t2. Display logged on users”
-    echo -e "\t3. Display memory usage”
-    echo -e "\t0. Exit program\n\n”
-    echo -en "\t\nEnter option: ”
+    echo -e "\t\t\tSys Admin Menu\n"
+    echo -e "\t1. Display disk space"
+    echo -e "\t2. Display logged on users"
+    echo -e "\t3. Display memory usage"
+    echo -e "\t0. Exit program\n\n"
+    echo -en "\t\nEnter option: "
     read -n 1 option
 }
 ```
 
-这让你能够通过调用 `menu` 函数随时地重新显示菜单。
+这让你能够通过调用`menu`函数随时地重新显示菜单。
 
 ## 添加菜单逻辑
 
-现在你有了菜单布局和函数，你需要的是创建编程逻辑将它们整合起来。如所述，这需要 `case` 命令。`case` 命令应该根据从菜单选择的字符调用相应的函数。使用默认 `case` 字符（星号 `*`）来捕捉任何错误输入始终是一个好主。
+现在你有了菜单布局和函数，你需要的是创建编程逻辑将它们整合起来。如所述，这需要`case`命令。`case`命令应该根据从菜单选择的字符调用相应的函数。使用默认`case`字符（星号`*`）来捕捉任何错误输入始终是一个好主意。
 
-以下代码说明了在典型菜单中使用 `case` 命令：
+以下代码说明了在典型菜单中使用`case`命令：
 
 ```
 menu
@@ -11136,11 +11815,11 @@ case $option in
     memusage;;
 *)
     clear
-    echo “Sorry, wrong selection”;
+    echo "Sorry, wrong selection";;
 esac
 ```
 
-此代码使用 `menu` 函数来清除显示器屏幕并显示菜单。`menu` 函数中的 `read` 命令会暂停，直到客户在键盘上击一个字符。一旦完成，`case` 命令就会接管。`case` 命令根据返回的字符调用相应的函数。在函数完成后，`case` 命令退出。
+此代码使用`menu`函数来清除显示器屏幕并显示菜单。`menu`函数中的`read`命令会暂停，直到客户在键盘上击一个字符。一旦完成，`case`命令就会接管。`case`命令根据返回的字符调用相应的函数。在函数完成后，`case`命令退出。
 
 ## 整合在一起
 
@@ -11165,12 +11844,12 @@ function memusage {
 function menu {
     clear
     echo
-    echo -e "\t\t\tSys Admin Menu\n”
-    echo -e "\t1. Display disk space”
-    echo -e "\t2. Display logged on users”
-    echo -e "\t3. Display memory usage”
-    echo -e "\t0. Exit program\n\n”
-    echo -en "\t\nEnter option: ”
+    echo -e "\t\t\tSys Admin Menu\n"
+    echo -e "\t1. Display disk space"
+    echo -e "\t2. Display logged on users"
+    echo -e "\t3. Display memory usage"
+    echo -e "\t0. Exit program\n\n"
+    echo -en "\t\nEnter option: "
     read -n 1 option
 }
 while [ 1 ]
@@ -11187,25 +11866,21 @@ do
         memusage;;
 *)
         clear
-        echo “Sorry, wrong selection”;
+        echo "Sorry, wrong selection";;
 esac
-    echo -en "\n\n\t\t\tHit any key to continue”
+    echo -en "\n\n\t\t\tHit any key to continue"
     read -n 1 line
 done
 clear
 ```
 
-此菜单创建了三个函数，使用常用命令获取 Linux 系统管理信息。它使用 `while` 循环不断循环菜单，直到客户选择选项 0，该选项使用 `break` 命令跳出 `while` 循环。
+此菜单创建了三个函数，使用常用命令获取 Linux 系统管理信息。它使用`while`循环不断循环菜单，直到客户选择选项 0，该选项使用`break`命令跳出`while`循环。
 
 # 使用 select 命令
 
 你可能已经注意到，创建文本菜单的挑战在于创建菜单布局并获取你输入的答案。bash shell 为你提供了一个实用的工具，可以自动完成所有这些工作。
 
-
-
-
-
-`select` 命令允许你从单行命令行创建一个菜单，然后获取输入的答案并对其进行自动处理。`select` 命令的格式如下：
+`select`命令允许你从单行命令行创建一个菜单，然后获取输入的答案并对其进行自动处理。`select`命令的格式如下：
 
 ```bash
 select variable in list
@@ -11214,9 +11889,9 @@ do
 done
 ```
 
-`list` 参数是一个由空格分隔的文本项列表，用于构建菜单。`select` 命令将列表中的每个项显示为编号编号选项，然后显示一个由 `PS3` 环境变量定义的特殊提示符，供用户选择。
+`list`参数是一个由空格分隔的文本项列表，用于构建菜单。`select`命令将列表中的每个项显示为编号选项，然后显示一个由`PS3`环境变量定义的特殊提示符，供用户选择。
 
-这里有一个 `select` 命令运行的简单示例：
+这里有一个`select`命令运行的简单示例：
 
 ```bash
 $ cat smenu1
@@ -11265,6 +11940,8 @@ $ ./smenu1
 Enter option:
 ```
 
+
+
 使用 `select` 命令时，请记住存储在变量中的值是整个文本字符串，而不是与菜单项关联的数字。文本字符串值才是你在 `case` 语句中需要比较的内容。
 
 # 操作 Windows
@@ -11273,13 +11950,15 @@ Enter option:
 
 `dialog` 软件包是一个非常实用的小工具，最初由 Savio Lam 创建，目前由 Thomas E. Dickey 维护。该软件包使用 ANSI 转义控制代码在文本环境中重建了标准的 Windows 对话框。你可以轻松地将其整合到脚本中。
 
-注意：并不是所有 Linux 发行版都安装了 `dialog` 包。如果没有安装，可以使用以下命令进行安装：
+> **注意**
+>
+> 并不是所有 Linux 发行版都安装了 `dialog` 包。如果没有安装，可以使用以下命令进行安装：
 
 ```bash
 sudo apt-get install dialog
 ```
 
-# dialog 软件包
+## dialog 软件包
 
 `dialog` 命令提供了各种组件，用于在脚本中创建交互界面。
 
@@ -11304,7 +11983,7 @@ sudo apt-get install dialog
 | `timebox` | 提供时间选择 |
 | `yesno` | 询问是/否问题 |
 
-## msgbox 组件
+### msgbox 组件
 
 `msgbox` 组件是最常见的对话框类型。它在窗口中显示消息并等待用户点击 OK。使用它需要遵循以下格式：
 
@@ -11312,7 +11991,7 @@ sudo apt-get install dialog
 dialog --msgbox text height width
 ```
 
-`text` 参数是任何你想放在窗口中的字符串。`dialog` 命令将根据你创建的 `height` 和 `width` 参数自动对文本进行换行以适应指定的大小。如果你想在窗口顶部放置标题，还可以使用 `--title` 参数。这里是使用 msgbox 的示例：
+`text` 参数是任何你想放在窗口中的字符串。`dialog` 命令将根据你创建的 `height` 和 `width` 参数自动对文本进行换行以适应指定的大小。如果你想在窗口顶部放置标题，还可以使用 `--title` 参数。这里是使用 `msgbox` 的示例：
 
 ```bash
 $ dialog --title "Testing" --msgbox "This is a test" 10 20
@@ -11320,33 +11999,31 @@ $ dialog --title "Testing" --msgbox "This is a test" 10 20
 
 输入此命令后，消息框将出现在你正在使用的终端模拟器屏幕上。图 17.2 显示了它的样子。
 
-图 17.2 在 dialog 命令中使用 msgbox 组件
+图 17.2 在 `dialog` 命令中使用 `msgbox` 组件
 
 ![](img/00020.jpg)
 
-## yesno 组件
+### yesno 组件
 
 `yesno` 组件比 `msgbox` 组件更进一步，允许用户回答窗口中显示的是/否问题。它在窗口底部生成两个按钮，一个用于是，另一个用于否。用户可以使用鼠标、Tab 键或键盘方向键在按钮之间切换。要选择该按钮，用户可以按下空格键或回车键。
 
-
-
-
-
-```
+```bash
 $ echo $?
+
 1
+
 $
 ```
 
-这会产生 图 17.3 所示的小部件。
+这会产生图 17.3 所示的小部件。
 
-图 17.3 在 dialog 命令中使用 yesno 部件
+图 17.3 在 `dialog` 命令中使用 `yesno` 部件
 
 ![](img/00030.jpg)
 
-`dialog` 命令的退出状态取决于用户选择了哪个按钮。如果选择了 No（否）按钮，退出状态为 1；如果选择了 Yes（是）按钮，退出状态为 0。
+`dialog` 命令的退出状态取决于用户选择了哪个按钮。如果选择了 No（否）按钮，退出状态为 `1`；如果选择了 Yes（是）按钮，退出状态为 `0`。
 
-## 输入 inputbox 部件
+### 输入 inputbox 部件
 
 `inputbox` 部件为用户提供了一个简单的文本框区域用于输入文本字符串。`dialog` 命令将文本字符串的值发送到 `STDERR`。你必须将其重定向以获取答案。图 17.4 展示了 `inputbox` 部件的样子。
 
@@ -11354,27 +12031,31 @@ $
 
 ![](img/00025.jpg)
 
-如你在 图 17.4 中所示，`inputbox` 提供了两个按钮：OK 和 Cancel。如果选择了 Cancel（取消）按钮，命令的退出状态为 1；否则，退出状态将为 0：
+如你在图 17.4 中所示，`inputbox` 提供了两个按钮：OK 和 Cancel。如果选择了 Cancel（取消）按钮，命令的退出状态为 `1`；否则，退出状态将为 `0`：
 
-```
+```bash
 $ dialog --inputbox "Enter your age:" 10 20 2>age.txt
+
 $ echo $?
+
 0
+
 $ cat age.txt
+
 12$
 ```
 
 你会注意到，当使用 `cat` 命令显示文本文件内容时，值之后没有换行符。这允许你轻松地将文件内容重定向到 shell 脚本中的变量，以提取用户输入的字符串。
 
-## 文本 textbox 部件
+### 文本 textbox 部件
 
 `textbox` 部件是在窗口中显示大量信息的极佳方法。它产生一个滚动的窗口，包含参数中指定的文件的文本：
 
-```
+```bash
 $ dialog --textbox /etc/passwd 15 45
 ```
 
-`/etc/passwd` 文件的内容显示在滚动的文本窗口中，如 图 17.5 所示。
+`/etc/passwd` 文件的内容显示在滚动的文本窗口中，如图 17.5 所示。
 
 图 17.5 textbox 部件
 
@@ -11382,12 +12063,12 @@ $ dialog --textbox /etc/passwd 15 45
 
 你可以使用方向键在文本文件中向左、右以及向上向下滚动。窗口底部的行显示你正在查看的文件中的百分比位置。`textbox` 仅包含一个 Exit（退出）按钮，选择该按钮即可退出部件。
 
-## 菜单 menu 部件
+### 菜单 menu 部件
 
 `menu` 部件允许你创建一个在本章之前创建的文本菜单的窗口版本。你只需要为每个项目提供一个选择标签和文本即可：
 
-```
-$ dialog --menu "Sys Admin Menu" 20 30 10 1 "Display disk space"
+```bash
+$ dialog --menu "Sys Admin Menu" 20 30 10 1 "Display disk space" \
 2 "Display users" 3 "Display memory usage" 4 "Exit" 2> test.txt
 ```
 
@@ -11401,9 +12082,9 @@ $ dialog --menu "Sys Admin Menu" 20 30 10 1 "Display disk space"
 
 如果用户通过按下标签对应的键选择菜单项，该菜单项会被高亮但未被选中。只有使用鼠标或 Enter 键选择 OK 按钮才会完成选择。`dialog` 命令将选中的菜单项文本发送到 `STDERR`，你可以根据需要对其重定向。
 
-## 文件选择 fselect 部件
+### 文件选择 fselect 部件
 
-`dialog` 命令提供了几个花哨内置部件。在处理文件名时，`fselect` 部件非常方便。你不需要强制用户输入文件名，而是可以使用 `fselect` 部件浏览到文件位置并选择文件，如 图 17.7 所示。
+`dialog` 命令提供了几个花哨内置部件。在处理文件名时，`fselect` 部件非常方便。你不需要强制用户输入文件名，而是可以使用 `fselect` 部件浏览到文件位置并选择文件，如图 17.7 所示。
 
 图 17.7 fselect 部件
 
@@ -11411,12 +12092,13 @@ $ dialog --menu "Sys Admin Menu" 20 30 10 1 "Display disk space"
 
 `fselect` 部件格式如下：
 
-```
+```bash
 $ dialog --fselect "Select a file" $HOME/ 10 20 2>file
 ```
-```是 `fselect` 部件的起始位置。你可以输入文本框自定义：
 
-```
+`$HOME/` 是 `fselect` 部件的起始位置。你可以输入文本框自定义：
+
+```bash
 $ dialog --inputbox "Enter your age:" 10 20 2>age.txt
 ```
 
@@ -11446,29 +12128,24 @@ $ dialog --inputbox "Enter your age:" 10 20 2>age.txt
 | `--exit-label` `label` | Exit 按钮的替代标签。 |
 | `--extra-button` | 在 OK 和 Cancel 按钮之间显示额外按钮。 |
 | `--extra-label` `label` | 额外按钮的替代标签。 |
-| `--help` | 显示 dialog 命令帮助消息。 |
+| `--help` | 显示 `dialog` 命令帮助消息。 |
 | `--help-button` | 在 OK 和 Cancel 按钮之后显示帮助按钮。 |
 | `--help-label` `label` | 帮助按钮的替代标签。 |
 | `--help-status` | 在选择帮助按钮后写入选择框、列表框或表单信息。 |
-| `--ignore` | 忽略 dialog 不识别的选项。 |
-| `--input-fd` `fd` | 指定除 STDIN 外的替代文件描述符。 |
+| `--ignore` | 忽略 `dialog` 不识别的选项。 |
+| `--input-fd` `fd` | 指定除 `STDIN` 外的替代文件描述符。 |
 | `--insecure` | 密码部件时显示星号。 |
 | `--item-help` | 在选择框、列表框或菜单的每个标签屏幕底部添加帮助列。 |
 | `--keep-window` | 不清除屏幕上的旧部件。 |
 | `--max-input` `size` | 指定输入的最大字符串大小。默认为 2048。 |
 | `--nocancel` | 取消 Cancel 按钮。 |
 | `--no-collapse` | 不将对话文本中的制表符转换为空格。 |
-| `--no-kill` | 将 tailboxbg 放入后台并禁用进程的 SIGHUP。 |
+| `--no-kill` | 将 `tailboxbg` 放入后台并禁用进程的 `SIGHUP`。 |
 | `--no-label` `label` | No 按钮的替代标签。 |
 | `--no-shadow` | 不为窗口显示阴影。 |
 | `--ok-label` `label` | OK 按钮的替代标签。 |
-| `--output-fd` `fd` | 指定除 STDERR 外的替代输出文件描述符。 |
-| `--print-maxsize` | 输出输出允许的 dialog 窗口的最大大小。 |
-
-
-
-
-
+| `--output-fd` `fd` | 指定除 `STDERR` 外的替代输出文件描述符。 |
+| `--print-maxsize` | 输出允许的 `dialog` 窗口的最大大小。 |
 | `--print-size` | 将每个对话框的大小打印到输出中。 |
 | `--print-version` | 将对话版本打印到输出中。 |
 | `--separate-output` | 逐行输出复选列表组件的结果，不加引号。 |
@@ -11477,8 +12154,8 @@ $ dialog --inputbox "Enter your age:" 10 20 2>age.txt
 | `--shadow` | 在每个窗口的右侧和下方绘制阴影。 |
 | `--single-quoted` | 如果复选列表需要则使用单引号。 |
 | `--sleep` `sec` | 在处理对话框后延迟指定的秒数。 |
-| `--stderr` | 将输出发送到 STDERR（这是默认行为）。 |
-| `--stdout` | 将输出发送到 STDOUT。 |
+| `--stderr` | 将输出发送到 `STDERR`（这是默认行为）。 |
+| `--stdout` | 将输出发送到 `STDOUT`。 |
 | `--tab-correct` | 将制表符转换为空格。 |
 | `--tab-len` `n` | 指定制表符占用的空格数（默认值为 8）。 |
 | `--timeout` `sec` | 指定在没有用户输入的情况下，多少秒后以错误代码退出。 |
@@ -11498,7 +12175,7 @@ $ dialog --inputbox "Enter your age:" 10 20 2>age.txt
 - 如果有“取消 (Cancel)”或“否 (No)”按钮可用，请检查 `dialog` 命令的退出状态。
 - 重定向 `STDERR` 以获取输出值。
 
-如果你遵循这两个规则，你很快就能拥有一个看起来专业的交互式脚本。这里有一个使用 dialog 组件来重现我们在本节之前创建的系统管理员菜单的示例：
+如果你遵循这两个规则，你很快就能拥有一个看起来专业的交互式脚本。这里有一个使用 `dialog` 组件来重现我们在本节之前创建的系统管理员菜单的示例：
 
 ```bash
 cat menu3
@@ -11506,27 +12183,34 @@ cat menu3
 # 使用 dialog 创建菜单
 temp='mktemp -t test.XXXXXX'
 temp2='mktemp -t test2.XXXXXX'
+
 function diskspace {
     df -k > $temp
     dialog --textbox $temp 20 60
 }
+
 function whoseon {
     who > $temp
     dialog --textbox $temp 20 50
 }
+
 function memusage {
     cat /proc/meminfo > $temp
     dialog --textbox $temp 20 50
 }
+
 while [ 1 ]
 do
-  dialog --menu “Sys Admin Menu” 20 30 10 1 “Display disk space” 2
+  dialog --menu “Sys Admin Menu” 20 30 10 1 “Display disk space” 2 \
   “Display users” 3 “Display memory usage” 0 “Exit” 2> $temp2
+
   if [ $? -eq 1 ]
   then
     break
   fi
+
 selection='cat $temp2'
+
 case $selection in
 1)
     diskspace ;;
@@ -11540,6 +12224,7 @@ case $selection in
     dialog --msgbox “Sorry, invalid selection” 10 30
 esac
 done
+
 rm -f $temp 2> /dev/null
 rm -f $temp2 2> /dev/null
 ```
@@ -11558,7 +12243,7 @@ rm -f $temp2 2> /dev/null
 
 ## 获取图形界面
 
-如果你正在为你的交互式脚本寻找更多图形化效果，你可以更进一步。KDE 和 GNOME 桌面环境（参见第 1 章）都扩展了 `dialog` 命令的想法，并包含了为各自环境生成产生 X Windows 图形窗口组件的命令。
+如果你正在为你的交互式脚本寻找更多图形化效果，你可以更进一步。KDE 和 GNOME 桌面环境（参见第 1 章）都扩展了 `dialog` 命令的想法，并包含了为各自环境生成 X Windows 图形窗口组件的命令。
 
 本节描述了 `kdialog` 和 `zenity` 包，它们分别为 KDE 和 GNOME 桌面提供图形化窗口组件。
 
@@ -11566,7 +12251,8 @@ rm -f $temp2 2> /dev/null
 
 KDE 图形环境默认包含 `kdialog` 包。`kdialog` 包使用 `kdialog` 命令在你的 KDE 桌面中生成标准窗口，类似于 `dialog` 风格的组件。然而，这些窗口并没有笨重的感觉，而是与你其他的 KDE 应用程序窗口融在一起！这允许你直接从 shell 脚本产生 Windows 级的用户界面！
 
-> 注意
+> **注意**
+>
 > 仅仅你的 Linux 发行版使用了 KDE 桌面并不意味着它默认安装了 `kdialog` 包。你可能需要从发行版存储库手动安装它。
 
 ### kdialog 组件
@@ -11583,53 +12269,61 @@ KDE 图形环境默认包含 `kdialog` 包。`kdialog` 包使用 `kdialog` 命�
 | :--- | :--- |
 | `--checklist` `title [tag item status]` | 复选列表菜单，状态指定项目是否被勾选。 |
 | `--error` `text` | 错误消息框。 |
-| `--inputbox` text `[init]` | 输入文本框。你可以使用 `init` 值指定默认值。 |
-| `--menu` title `[tag item]` | 菜单选择框标题和由标签标识的项目列表。 |
+| `--inputbox` `text [init]` | 输入文本框。你可以使用 `init` 值指定默认值。 |
+| `--menu` `title [tag item]` | 菜单选择框标题和由标签标识的项目列表。 |
 | `--msgbox` `text` | 带有指定文本的简单消息框。 |
 | `--password` `text` | 隐藏用户输入的密码输入框。 |
+
+
+
 | `--radiolist` `title [tag item status]` | 单选列表菜单，状态指定项目是否被选中。 |
+
 | `--separate-output` | 为复选列表和单选列表菜单分行返回项目。 |
-| `--sorry` `text` | 抱抱歉消息框。 |
+
+| `--sorry` `text` | 抱歉消息框。 |
+
 | `--textbox` `file [width] [height]` | 显示 `file` 内容的文本框，也可以由 `width` 和 `height` 指定。 |
+
 | `--title` `title` | 指定对话框窗口标题栏的标题。 |
+
 | `--warningyesno` `text` | 带有“是”和“否”按钮的警告消息框。 |
+
 | `--warningcontinuecancel` `text` | 带有“继续”和“取消”按钮的警告消息框。 |
+
 | `--warningyesnocancel` `text` | 带有“是”、“否”和“取消”按钮的警告消息框。 |
+
 | `--yesno` `text` | 带有“是”和“否”按钮的问题框。 |
+
 | `--yesnocancel` `text` | 带有“是”、“否”和“取消”按钮的问题框。 |
 
-从表 17.3 可以看出，所有的标准对话框类型都涵盖了。然而，当你使用 kdialog 窗口组件时，它作为 KDE 桌面上的独立窗口出现，而不是在终端模拟器会话内部！
+从表 17.3 可以看出，所有的标准对话框类型都涵盖了。然而，当你使用 `kdialog` 窗口组件时，它作为 KDE 桌面上的独立窗口出现，而不是在终端模拟器会话内部！
 
 `checklist` 和 `radiolist` 组件允许你定义列表中的单个项目以及它们是否默认被选中：
 
 ```bash
-$kdialog --checklist “我需要的物品” 1 “牙刷” on 2 “牙膏” \
+$ kdialog --checklist “我需要的物品” 1 “牙刷” on 2 “牙膏” \
   off 3 “梳子” on 4 “去味剂” off 5 “拖鞋” off
 ```
 
 生成的复选列表窗口显示在图 17.9 中。
 
-
-
-
-
-图 17.9 一个 kdialog 检查列表对话框
+图 17.9 一个 `kdialog` 检查列表对话框
 
 ![](img/00071.jpg)
 
 被指定为“开启”的项目在检查列表中会被高亮显示。要选择或取消选择检查列表中的项目，只需点击它。如果你选择 OK 按钮，`kdialog` 将将标签值发送到 `STDOUT`：
 
-`“1” “3” “5"`
+`“1” “3” “5”`
 
 `$`
 
-当你按下回车键时，kdialog 框会带有选择的内容出现。当你点击 OK 或取消按钮时，`kdialog` 命令会将每个标签作为字符串值返回到 `STDOUT`（这些你在输出中看到的 `“1”`、`“3”` 和 `“5”` 值）。你的脚本必须能够解析结果值并将其与原始值匹配。
+当你按下回车键时，`kdialog` 框会带有选择的内容出现。当你点击 OK 或取消按钮时，`kdialog` 命令会将每个标签作为字符串值返回到 `STDOUT`（这些你在输出中看到的 `“1”`、`“3”` 和 `“5”` 值）。你的脚本必须能够解析结果值并将其与原始值匹配。
 
 ### 使用 kdialog
 
 你可以像使用 `dialog` 控件一样，在 shell 脚本中使用 `kdialog` 窗口控件。主要的区别在于，`kdialog` 窗口控件使用 `STDOUT` 输出值，而不是 `STDERR`。
 
-这里有一个脚本，将之前创建的系统管理员菜单转换为 KDE ：
+这里有一个脚本，将之前创建的系统管理员菜单转换为 KDE：
 
 ```bash
 $ cat menu4
@@ -11673,9 +12367,9 @@ done
 $
 ```
 
-使用 `kdialog` 命令和使用 `dialog` 命令的脚本之间没有太大区别。生成的主菜单见 图 17.10。
+使用 `kdialog` 命令和使用 `dialog` 命令的脚本之间没有太大区别。生成的主菜单见图 17.10。
 
-图 17.10 使用 kdialog 的系统管理员菜单脚本
+图 17.10 使用 `kdialog` 的系统管理员菜单脚本
 
 ![](img/00027.jpg)
 
@@ -11686,34 +12380,48 @@ $
 GNOME 图形环境支持两个可以生成标准窗口的流行包：
 
 * `gdialog`
+
 * `zenity`
 
-到目前，zenity 是大多数 GNOME 桌面 Linux 发行版中最常见的软件包（它在 Ubuntu 和 Fedora 中都是默认安装的）。本节描述了 zenity 的功能，并演示了如何在 shell 脚本中使用它。
+到目前为止，`zenity` 是大多数 GNOME 桌面 Linux 发行版中最常见的软件包（它在 Ubuntu 和 Fedora 中都是默认安装的）。本节描述了 `zenity` 的功能，并演示了如何在 shell 脚本中使用它。
 
 ### zenity 控件
 
-正如你所预的，zenity 允许你通过命令行选项创建不同的窗口控件。表 17.4 显示了 zenity 可以产生的不同控件。
+正如你所预料的，`zenity` 允许你通过命令行选项创建不同的窗口控件。表 17.4 显示了 `zenity` 可以产生的不同控件。
 
 表 17.4 zenity 窗口控件
 
 | 选项 | 描述 |
+
 | :--- | :--- |
+
 | `--calendar` | 显示整月日历。 |
+
 | `--entry` | 显示文本输入对话框。 |
+
 | `--error` | 显示错误消息对话框。 |
+
 | `--file-selection` | 显示完整路径和文件名的对话框。 |
+
 | `--info` | 显示信息对话框。 |
+
 | `--list` | 显示检查列表或单选列表对话框。 |
+
 | `--notification` | 显示通知图标。 |
+
 | `--progress` | 显示进度条对话框。 |
+
 | `--question` | 显示是/否问题对话框。 |
+
 | `--scale` | 显示比例尺对话框。 |
+
 | `--text-info` | 显示包含文本的文本框。 |
+
 | `--warning` | 显示警告对话框。 |
 
 `zenity` 命令行程序的工作方式与 `kdialog` 和 `dialog` 程序略有不同。许多控件类型是使用命令行上的额外选项定义的，而不是作为选项的参数。
 
-`zenity` 命令确实提供了一些非常酷的高级对话框。`calendar` 选项产生一个整月日历，如 图 17.11 所示。
+`zenity` 命令确实提供了一些非常酷的高级对话框。`calendar` 选项产生一个整月日历，如图 17.11 所示。
 
 图 17.11 zenity 日历对话框
 
@@ -11727,7 +12435,7 @@ $ zenity --calendar
 $
 ```
 
-zenity 中另一个很酷的窗口是文件选择选项，如 图 17.12 所示。
+`zenity` 中另一个很酷的窗口是文件选择选项，如图 17.12 所示。
 
 图 17.12 zenity 文件选择对话框
 
@@ -11745,12 +12453,12 @@ $
 
 ### 在脚本中使用 zenity
 
-正如你所预期的，zenity 在 shell 脚本中表现良好。遗憾的是，zenity 选择不遵循 `dialog` 和 `kdialog` 使用的选项规范，因此将任何现有交互式脚本转换为 zenity 可能会很有挑战。
+正如你所预期的，`zenity` 在 shell 脚本中表现良好。遗憾的是，`zenity` 选择不遵循 `dialog` 和 `kdialog` 使用的选项规范，因此将任何现有交互式脚本转换为 `zenity` 可能会很有挑战。
 
 在将系统管理员菜单从 `kdialog` 转换为 `zenity` 时，我们发现必须对控件定义进行大量的处理：
 
 ```bash
-$cat menu5
+$ cat menu5
 #!/bin/bash
 # 使用 zenity 创建菜单
 temp=‘mktemp -t temp.XXXXXX‘
@@ -11791,19 +12499,15 @@ done
 $
 ```
 
-由于 zenity 不支持菜单窗口，我们使用单选列表类型作为主菜单，如 图 17.13 所示。
+由于 `zenity` 不支持菜单窗口，我们使用单选列表类型作为主菜单，如图 17.13 所示。
 
-单选列表使用两列，每列都有标题。第一列包含用于选择的单选按钮。第二列是项目文本。单选列表也没有为项目使用标签。当你选择一个项目时，项目的完整文本将返回到 `STDOUT`。这让 `case` 命令的生活变得稍微有趣了一些。你必须在 case 选项中使用项目的完整文本。如果文本中有任何空格，你需要在文本周围加上引号。
+单选列表使用两列，每列都有标题。第一列包含用于选择的单选按钮。第二列是项目文本。单选列表也没有为项目使用标签。当你选择一个项目时，项目的完整文本将返回到 `STDOUT`。这让 `case` 命令的生活变得稍微有趣了一些。你必须在 `case` 选项中使用项目的完整文本。如果文本中有任何空格，你需要在文本周围加上引号。
 
-使用 zenity 包，你可以为 GNOME 桌面上的交互式 shell 脚本添加 Windows 风格。
+使用 `zenity` 包，你可以为 GNOME 桌面上的交互式 shell 脚本添加 Windows 风格。
 
-总结
+### 总结
 
-交互式 shell 脚本有枯燥无味的声声。你可以通过使用大多数 Linux 系统上提供的不同技术和工具来改变这一点。首先，你可以通过 `case` 命令和 shell 脚本函数为你的交互式脚本创建菜单系统。
-
-
-
-
+交互式 shell 脚本有枯燥无味的声誉。你可以通过使用大多数 Linux 系统上提供的不同技术和工具来改变这一点。首先，你可以通过 `case` 命令和 shell 脚本函数为你的交互式脚本创建菜单系统。
 
 `case` 命令允许你使用标准的 `echo` 命令绘制菜单，并使用 `read` 命令读取用户的响应。随后，`case` 命令会根据输入的值选择合适的 shell 脚本函数。
 
@@ -11811,14 +12515,16 @@ $
 
 如果你在图形化的 X Windows 环境中运行 shell 脚本，你可以在交互式脚本中使用更多的工具。对于 KDE 桌面，有一个 `kdialog` 程序。该程序提供了简单的命令，用于为所有基本的窗口功能创建窗口小部件。对于 GNOME 桌面，有 `gdialog` 和 `zenity` 程序。这些程序提供的窗口小部件可以像真实的 Windows 应用程序一样融入到 GNOME 桌面中。
 
-下一章将深入探讨编辑和操作文本数据文件的主。通常，shell 脚本最大的用途之一围绕着解析和显示日志文件、错误文件等文本文件中的数据。Linux 环境包含了两个非常有用的工具 `sed` 和 `gawk`，用于在 shell 脚本中处理文本数据。下一章将向你介绍这些工具，并展示如何使用它们的基础。
+下一章将深入探讨编辑和操作文本数据文件的主题。通常，shell 脚本最大的用途之一围绕着解析和显示日志文件、错误文件等文本文件中的数据。Linux 环境包含了两个非常有用的工具 `sed` 和 `gawk`，用于在 shell 脚本中处理文本数据。下一章将向你介绍这些工具，并展示如何使用它们的基础。
 
 # 第 18 章
 
 ## 介绍 sed 和 gawk
 
 ## 本章内容
+
 * 文本操作
+
 * sed 编辑器基础
 
 到目前为止，人们使用 shell 脚本最常见的功能之一就是处理文本文件。从检查日志文件、读取配置文件到处理数据元素，shell 脚本可以帮助自动化处理文本文件中包含的任何类型数据的枯燥任务。然而，仅用 shell 脚本命令来尝试操作文本文件的内容可能会有些笨拙。如果你在 shell 脚本中执行任何类型的数据操作，你将希望熟悉 Linux 中提供的 `sed` 和 `gawk` 工具。这些工具可以极大简化你需要执行的任何数据处理任务。
@@ -11850,12 +12556,16 @@ sed options script file
 ### 表 18.1 sed 命令选项
 
 | 选项 | 描述 |
+
 | :--- | :--- |
+
 | `-e script` | 将脚本中指定的命令添加到处理输入时运行的命令中。 |
+
 | `-f file` | 将文件中指定的命令添加到处理输入时运行的命令中。 |
+
 | `-n` | 不为每个命令产生输出，而是等待 `print` 命令。 |
 
-`script` 参数指定了一个应用于流流数据的单个命令。如果需要多个命令，你必须使用 `-e` 选项在命令行中指定它们，或使用 `-f` 选项在单独的文件中指定它们。有许多命令可用于操作数据。我们将在本章稍晚些时候检查 `sed` 编辑器使用的一些基础命令，然后在第 20 章查看一些更高级的命令。
+`script` 参数指定了一个应用于流数据的单个命令。如果需要多个命令，你必须使用 `-e` 选项在命令行中指定它们，或使用 `-f` 选项在单独的文件中指定它们。有许多命令可用于操作数据。我们将在本章稍晚些时候检查 `sed` 编辑器使用的一些基础命令，然后在第 20 章查看一些更高级的命令。
 
 ### 在命令行中定义编辑器命令
 
@@ -11867,7 +12577,7 @@ This is a big test
 $
 ```
 
-此示例使用了 `sed` 编辑器中的 `s` 命令。`s` 命令将正斜之间指定的第一个文本字符串模式替换为第二个文本字符串。在这个示例中，单词 `big test` 替换了单词 `test`。
+此示例使用了 `sed` 编辑器中的 `s` 命令。`s` 命令将正斜杠之间指定的第一个文本字符串模式替换为第二个文本字符串。在这个示例中，单词 `big test` 替换了单词 `test`。
 
 当你运行这个示例时，结果应该几乎瞬间显示。这就是使用 `sed` 编辑器的威力所在。你可以在仅启动某些交互式编辑器所需花费的大致相同的时间内，对数据进行多次编辑。
 
@@ -11890,7 +12600,7 @@ $
 
 `sed` 命令执行并几乎瞬间返回数据。在处理每行数据时，结果就会显示出来。在 `sed` 编辑器完成整个文件的处理之前，你就开始看到结果。
 
-注意的是，`sed` 编辑器不会修改文本文件本身的数据。它只将修改后的文本发送到 `STDOUT`。如果你查看文本文件，它仍然包含数据：
+需要注意的是，`sed` 编辑器不会修改文本文件本身的数据。它只将修改后的文本发送到 `STDOUT`。如果你查看文本文件，它仍然包含原始数据：
 
 ```
 $ cat data1
@@ -11903,7 +12613,11 @@ $
 
 ### 在命令行中使用多个编辑器命令
 
-若要从 `sed` 命令行执行多个一个命令，只需使用 `-e` 选项：
+若要从 `sed` 命令行执行多个命令，只需使用 `-e` 选项。
+
+
+
+使用`sed`编辑器执行替换命令：
 
 ```
 $ sed -e 's/brown/green/; s/dog/cat/' data1
@@ -11916,17 +12630,13 @@ $
 
 两个命令都应用到文件中的每行数据。命令必须用分号分隔，且命令结束与分号之间不应有空格。
 
-
-
-
-
-与其使用分号来分隔命令，你可以使用 `bash` shell 中的次级提示符。只需输入第一个单引号来开启脚本，`bash` 就会继续提示你输入更多命令，直到你输入结束单引号：
+与其使用分号来分隔命令，你可以使用`bash` shell中的次级提示符。只需输入第一个单引号来开启脚本，`bash`就会继续提示你输入更多命令，直到你输入结束单引号：
 
 ```bash
-$ sed -e ‘
+$ sed -e '
 > s/brown/green/
 > s/fox/elephant/
-> s/dog/cat/’ data1
+> s/dog/cat/' data1
 The quick green elephant jumps over the lazy cat.
 The quick green elephant jumps over the lazy cat.
 The quick green elephant jumps over the lazy cat.
@@ -11934,11 +12644,11 @@ The quick green elephant jumps over the lazy cat.
 $
 ```
 
-你必须记住在闭合单引号出现的同一行上完成命令。一旦 `bash` shell 检测到闭合单引号，它就会处理该命令。一旦开始执行，`sed` 命令就会将你指定的每个命令应用到文本文件的每一行数据。
+你必须记住在闭合单引号出现的同一行上完成命令。一旦`bash` shell检测到闭合单引号，它就会处理该命令。一旦开始执行，`sed`命令就会将你指定的每个命令应用到文本文件的每一行数据。
 
 ## 从文件中读取编辑器命令
 
-最后，如果你有很多 `sed` 命令需要处理，通常将它们存储在单独的文件中会更简单。使用 `-f` 选项在 `sed` 命令中指定文件：
+最后，如果你有很多`sed`命令需要处理，通常将它们存储在单独的文件中会更简单。使用`-f`选项在`sed`命令中指定文件：
 
 ```bash
 $ cat script1
@@ -11954,30 +12664,30 @@ The quick green elephant jumps over the lazy cat.
 $
 ```
 
-在这种情况下，你不需要在每个命令后加分号。`sed` 编辑器知道每行都包含一个独立的命令。与在命令行上输入命令一样，`sed` 编辑器从指定文件中读取命令，并将它们应用到数据文件的每一行。
+在这种情况下，你不需要在每个命令后加分号。`sed`编辑器知道每行都包含一个独立的命令。与在命令行上输入命令一样，`sed`编辑器从指定文件中读取命令，并将它们应用到数据文件的每一行。
 
-我们将在“`sed` 编辑器基础”部分中查看其他一些 `sed` 编辑器命令，这些命令在处理数据时非常有用。在此之前，让我们快速查看另一个 Linux 数据编辑器。
+我们将在"`sed`编辑器基础"部分中查看其他一些`sed`编辑器命令，这些命令在处理数据时非常有用。在此之前，让我们快速查看另一个Linux数据编辑器。
 
 ## The gawk 程序
 
-虽然 `sed` 编辑器是即时修改文本文件的有用工具，但它也有其局限性。通常你需要一个更高级的工具来处理文件中的数据，一个能够提供更像编程环境的环境，允许你修改和重组文件中的数据。这就是 `gawk` 大显身手的地方。
+虽然`sed`编辑器是即时修改文本文件的有用工具，但它也有其局限性。通常你需要一个更高级的工具来处理文件中的数据，一个能够提供更像编程环境的环境，允许你修改和重组文件中的数据。这就是`gawk`大显身手的地方。
 
-`gawk` 程序是 Unix 中原始 `awk` 程序的 GNU 版本。`gawk` 程序通过提供编程语言而非仅仅是编辑器命令，将流编辑推向了更深一步。在 `gawk` 编程语言中，你可以：
+`gawk`程序是Unix中原始`awk`程序的GNU版本。`gawk`程序通过提供编程语言而非仅仅是编辑器命令，将流编辑推向了更深一步。在`gawk`编程语言中，你可以：
 
 * 定义变量来存储数据。
 * 使用算术和字符串操作符对数据进行操作。
-* 使用结构化编程概念（如 if-then 语句和循环）为你的数据处理添加逻辑。
+* 使用结构化编程概念（如`if-then`语句和循环）为你的数据处理添加逻辑。
 * 通过提取数据文件中的数据元素并以另一种顺序重新定位，生成格式化报告。
 
-`gawk` 程序的报告生成能力通常用于从大型文本文件中提取数据元素，并将其格式化为可读的报告。一个完美的例子就是格式化日志文件。试图仔细查看日志文件的每一行可能会困难。`gawk` 程序允许你从日志文件中过滤出你所需的数据元素，然后以更容易阅读重要数据的方式进行格式化。
+`gawk`程序的报告生成能力通常用于从大型文本文件中提取数据元素，并将其格式化为可读的报告。一个完美的例子就是格式化日志文件。试图仔细查看日志文件的每一行可能会困难。`gawk`程序允许你从日志文件中过滤出你所需的数据元素，然后以更容易阅读重要数据的方式进行格式化。
 
 ### gawk 命令格式
 
-`gawk` 程序的的基本格式如下：
+`gawk`程序的基本格式如下：
 
 `gawk options file`
 
-表 18.2 显示了 `gawk` 程序提供的选项。
+表18.2显示了`gawk`程序提供的选项。
 
 ### gawk 选项
 
@@ -11985,24 +12695,24 @@ $
 | :--- | :--- |
 | `-F fs` | 指定用于界定行数据字段的文件分隔符。 |
 | `-f file` | 指定要读取程序的文件。 |
-| `-v var=value` | 定义 `gawk` 程序中使用的变量和默认值。 |
+| `-v var=value` | 定义`gawk`程序中使用的变量和默认值。 |
 | `-mf N` | 指定处理的最大字段数。 |
 | `-mr N` | 指定数据文件中最大的记录大小。 |
-| `-W keyword` | 为 `gawk` 指定兼容模式或警告级别。 |
+| `-W keyword` | 为`gawk`指定兼容模式或警告级别。 |
 
-命令行选项提供了一种用于自定义 `gawk` 程序功能的简单方法。在探索 `gawk` 的过程中，我们将更深入地查看这些内容。`gawk` 的威力在于程序脚本。你可以编写脚本来读取文本行内的数据，然后处理并显示这些数据，以创建任何类型的输出。
+命令行选项提供了一种用于自定义`gawk`程序功能的简单方法。在探索`gawk`的过程中，我们将更深入地查看这些内容。`gawk`的威力在于程序脚本。你可以编写脚本来读取文本行内的数据，然后处理并显示这些数据，以创建任何类型的输出。
 
 ### 从命令行读取程序脚本
 
-`gawk` 程序脚本通过大括号的开启和关闭来定义。你必须将脚本命令放在两个大括号之间。由于 `gawk` 命令行假设脚本是一个字符串，因此你还必须将脚本封装在引号中。以下是在命令行上指定简单 `gawk` 程序的示例：
+`gawk`程序脚本通过大括号的开启和关闭来定义。你必须将脚本命令放在两个大括号之间。由于`gawk`命令行假设脚本是一个字符串，因此你还必须将脚本封装在引号中。以下是在命令行上指定简单`gawk`程序的示例：
 
 ```bash
 $ gawk '{print "Hello John!"}'
 ```
 
-程序脚本定义了一个单独的命令：`print` 命令。`print` 命令的作用正如其名：它将文本打印到 `STDOUT`。如果你尝试运行此命令，你可能会有些失望，因为立即不会发生任何事情。因为命令行中没有定义文件名，`gawk` 程序从 `STDIN` 获取数据。当你运行程序时，它只是在等待通过 `STDIN` 输入文本。
+程序脚本定义了一个单独的命令：`print`命令。`print`命令的作用正如其名：它将文本打印到`STDOUT`。如果你尝试运行此命令，你可能会有些失望，因为立即不会发生任何事情。因为命令行中没有定义文件名，`gawk`程序从`STDIN`获取数据。当你运行程序时，它只是在等待通过`STDIN`输入文本。
 
-如果你输入一行文本并按回车键，`gawk` 就会通过程序脚本运行文本：
+如果你输入一行文本并按回车键，`gawk`就会通过程序脚本运行文本：
 
 ```bash
 $ gawk '{print "Hello John!"}'
@@ -12015,20 +12725,20 @@ Hello John!
 $
 ```
 
-与 `sed` 编辑器一样，`gawk` 程序会对数据流中的每行文本执行程序脚本。由于程序脚本被设置为显示固定的文本字符串，无论你在数据流中输入什么文本，你都会得到相同的文本输出。要终止 `gawk` 程序，你必须信号数据流已结束。`bash` shell 提供了一个组合键来生成文件结束（EOF）字符。`Ctrl+D` 键组合在 `bash` 中生成一个 EOF 字符。使用该键组合可以终止 `gawk` 程序并返回命令界面提示符。
+与`sed`编辑器一样，`gawk`程序会对数据流中的每行文本执行程序脚本。由于程序脚本被设置为显示固定的文本字符串，无论你在数据流中输入什么文本，你都会得到相同的文本输出。要终止`gawk`程序，你必须信号数据流已结束。`bash` shell提供了一个组合键来生成文件结束（EOF）字符。`Ctrl+D`键组合在`bash`中生成一个EOF字符。使用该键组合可以终止`gawk`程序并返回命令界面提示符。
 
 ### 使用数据字段变量
 
-`gawk` 的主要功能之一是处理文本文件中数据的能力。它通过自动为行中的每个数据元素分配变量来实现。默认情况下，`gawk` 为在文本行中检测到的每个数据字段分配以下变量：
+`gawk`的主要功能之一是处理文本文件中数据的能力。它通过自动为行中的每个数据元素分配变量来实现。默认情况下，`gawk`为在文本行中检测到的每个数据字段分配以下变量：
 
-* `$0` 代表整行文本。
-* `$1` 代表文本行中的第一个数据字段。
-* `$2` 代表文本行中的第二个数据字段。
-* `$n` 代表文本行的第 `n` 个数据字段。
+* `$0`代表整行文本。
+* `$1`代表文本行中的第一个数据字段。
+* `$2`代表文本行中的第二个数据字段。
+* `$n`代表文本行的第`n`个数据字段。
 
-文本中的每个数据字段是通过字段分隔符确定的。当 `gawk` 读取文本时，它使用定义的字段分隔符界定每个数据字段。`gawk` 的默认字段分隔符是任何空白字符（例如制表符或空格字符）。
+文本中的每个数据字段是通过字段分隔符确定的。当`gawk`读取文本时，它使用定义的字段分隔符界定每个数据字段。`gawk`的默认字段分隔符是任何空白字符（例如制表符或空格字符）。
 
-以下是一个 `gawk` 程序示例，它读取文本文件并仅显示第一个数据字段值：
+以下是一个`gawk`程序示例，它读取文本文件并仅显示第一个数据字段值：
 
 ```bash
 $ cat data3
@@ -12043,7 +12753,7 @@ Three
 $
 ```
 
-该程序使用字段变量 `$1` 显示每行文本的第一个数据字段。如果你正在读取使用不同字段分隔符的文件，可以使用 `-F` 选项来指定它：
+该程序使用字段变量`$1`显示每行文本的第一个数据字段。如果你正在读取使用不同字段分隔符的文件，可以使用`-F`选项来指定它：
 
 ```bash
 $ gawk -F: '{print $1}' /etc/passwd
@@ -12059,15 +12769,11 @@ mail
 ...
 ```
 
-这个短程序显示了系统密码文件的第一个数据字段。因为 `/etc/passwd` 文件使用冒号分隔数据字段，如果你想分离出每个数据元素，必须在 `gawk` 选项中将其指定为字段分隔符。
+这个短程序显示了系统密码文件的第一个数据字段。因为`/etc/passwd`文件使用冒号分隔数据字段，如果你想分离出每个数据元素，必须在`gawk`选项中将其指定为字段分隔符。
 
 ## 在程序脚本中使用多个命令
 
-
-
-
-
-如果一个编程语言只能执行一条命令，那么它将非常没有用处。`gawk` 编程语言允许你将多个命令组合成一个普通的程序。要在命令行指定的程序脚本中使用多个命令，只需在每个命令之间放置一个分号即可：
+如果一个编程语言只能执行一条命令，那么它将非常没有用处。`gawk`编程语言允许你将多个命令组合成一个普通的程序。要在命令行指定的程序脚本中使用多个命令，只需在每个命令之间放置一个分号即可：
 
 ```bash
 $ echo "My name is Rich" | gawk '{$4="Christine"; print $0}'
@@ -12075,12 +12781,12 @@ My name is Christine
 $
 ```
 
-第一个命令为 `$4` 字段变量赋值了一个值。第二个命令随后打印整个数据字段。从输出中可以看出，`gawk` 程序将原始文本中的第四个数据字段替换为了新值。
+第一个命令为`$4`字段变量赋值了一个值。第二个命令随后打印整个数据字段。从输出中可以看出，`gawk`程序将原始文本中的第四个数据字段替换为了新值。
 
 你还可以使用次级提示符（secondary prompt）逐行输入你的程序脚本命令：
 
 ```bash
-$ gawk '{'
+$ gawk '{
 > $4="testing"
 > print $0 }'
 This is not a good test.
@@ -12088,11 +12794,11 @@ This is not testing good test.
 $
 ```
 
-打开单引号后，bash shell 会提供次级提示符来提示你输入更多数据。你可以逐行添加命令，直到你输入闭合的单引号为止。要退出程序，只需按下 Ctrl+D 组合键来发送数据结束信号。
+打开单引号后，`bash` shell会提供次级提示符来提示你输入更多数据。你可以逐行添加命令，直到你输入闭合的单引号为止。要退出程序，只需按下`Ctrl+D`组合键来发送数据结束信号。
 
 ### 从文件中读取程序
 
-与 `sed` 编辑器一样，`gawk` 编辑器允许你将程序存储在文件中并在命令行引用它们：
+与`sed`编辑器一样，`gawk`编辑器允许你将程序存储在文件中并在命令行引用它们：
 
 ```bash
 $ cat script2
@@ -12108,7 +12814,7 @@ Christine's home directory is /home/Christine
 $
 ```
 
-`script2` 程序脚本再次使用 `print` 命令来打印 `/etc/passwd` 文件的家目录数据字段（字段变量 `$6`）和用户 ID 数据字段（字段变量 `$1`）。
+`script2`程序脚本再次使用`print`命令来打印`/etc/passwd`文件的家目录数据字段（字段变量`$6`）和用户ID数据字段（字段变量`$1`）。
 
 你可以在程序文件中指定多个命令。要这样做，只需将每个命令放在单独的一行即可。不需要使用分号：
 
@@ -12129,11 +12835,11 @@ Christine's home directory is /home/Christine
 $
 ```
 
-`script3` 程序脚本定义了一个变量来存储 `print` 命令中使用的文本字符串。你会发现，`gawk` 程序在引用变量值时并不像 shell 脚本那样使用美元符号。
+`script3`程序脚本定义了一个变量来存储`print`命令中使用的文本字符串。你会发现，`gawk`程序在引用变量值时并不像shell脚本那样使用美元符号。
 
 ### 在处理数据之前运行脚本
 
-`gawk` 程序还允许你指定程序脚本运行的机机。默认情况下，`gawk` 会从输入中读取一行文本，然后对该行文本中的数据执行程序脚本。有时，你可能需要在处理数据之前运行脚本，例如为报告创建一个表头部分。`BEGIN` 关键字用于实现这一点。它强制 `gawk` 在读取数据之前，执行 `BEGIN` 关键字之后指定的程序脚本：
+`gawk`程序还允许你指定程序脚本运行的机制。默认情况下，`gawk`会从输入中读取一行文本，然后对该行文本中的数据执行程序脚本。有时，你可能需要在处理数据之前运行脚本，例如为报告创建一个表头部分。`BEGIN`关键字用于实现这一点。它强制`gawk`在读取数据之前，执行`BEGIN`关键字之后指定的程序脚本：
 
 ```bash
 $ gawk 'BEGIN {print "Hello World!"}'
@@ -12141,9 +12847,9 @@ Hello World!
 $
 ```
 
-这一次，`print` 命令在读取任何数据之前显示了文本。然而，在显示文本后，它会迅速退出，而不会等待任何数据。
+这一次，`print`命令在读取任何数据之前显示了文本。然而，在显示文本后，它会迅速退出，而不会等待任何数据。
 
-这是因为 `BEGIN` 关键字仅在处理任何数据之前应用于指定的脚本。如果你想用普通的程序脚本处理数据，你必须使用另一个脚本部分定义程序：
+这是因为`BEGIN`关键字仅在处理任何数据之前应用于指定的脚本。如果你想用普通的程序脚本处理数据，你必须使用另一个脚本部分定义程序：
 
 ```bash
 $ cat data4
@@ -12159,11 +12865,11 @@ Line 3
 $
 ```
 
-现在，在 `gawk` 执行 `BEGIN` 脚本之后，它会使用第二个脚本来处理任何文件数据。这样做时要小心——注意两个脚本在 `gawk` 命令行上仍然被视为一个文本字符串。你需要相应地放置单引号。
+现在，在`gawk`执行`BEGIN`脚本之后，它会使用第二个脚本来处理任何文件数据。这样做时要小心——注意两个脚本在`gawk`命令行上仍然被视为一个文本字符串。你需要相应地放置单引号。
 
 ### 在处理数据之后运行脚本
 
-与 `BEGIN` 关键字一样，`END` 关键字允许你指定一个 `gawk` 在读取数据后执行的程序脚本：
+与`BEGIN`关键字一样，`END`关键字允许你指定一个`gawk`在读取数据后执行的程序脚本：
 
 ```bash
 $ gawk 'BEGIN { print "The data4 File Contents:" } { print $0 } END { print "End of File" }' data4
@@ -12175,7 +12881,7 @@ End of File
 $
 ```
 
-当 `gawk` 程序完成打印文件内容后，它会执行 `END` 脚本中的命令。这是一个非常好的技巧，可以在处理所有普通数据后为报告添加页脚数据。
+当`gawk`程序完成打印文件内容后，它会执行`END`脚本中的命令。这是一个非常好的技巧，可以在处理所有普通数据后为报告添加页脚数据。
 
 你可以将所有元素组合成一个良好的程序脚本文件，以便从简单的数据文件中创建一个完整的报告：
 
@@ -12196,9 +12902,9 @@ print "This concludes the listing"
 $
 ```
 
-该脚本使用 `BEGIN` 脚本为报告创建表头。它还定义了一个名为 `FS` 的特殊变量。这是定义字段分隔符的另一种方法。这样，你就不需要依赖脚本的用户在命令行选项中定义字段分隔符了。
+该脚本使用`BEGIN`脚本为报告创建表头。它还定义了一个名为`FS`的特殊变量。这是定义字段分隔符的另一种方法。这样，你就不需要依赖脚本的用户在命令行选项中定义字段分隔符了。
 
-以下是运行此 `gawk` 程序脚本的某些截断的输出：
+以下是运行此`gawk`程序脚本的某些截断的输出：
 
 ```bash
 $ gawk -f script4 /etc/passwd
@@ -12216,19 +12922,19 @@ This concludes the listing
 $
 ```
 
-正如预期的，`BEGIN` 脚本创建了头部，程序脚本处理了来自 `/etc/passwd` 的信息，`END` 脚本产生了脚注。这让你初步体验到了使用 `gawk` 脚本的威力。
+正如预期的，`BEGIN`脚本创建了头部，程序脚本处理了来自`/etc/passwd`的信息，`END`脚本产生了脚注。这让你初步体验到了使用`gawk`脚本的威力。
 
 ### sed 基础
 
-成功使用 `sed` 编辑器的关键在于了解它的命令和格式，这些可以帮助你自定义文本。本节介绍了你可以包含在脚本中开始使用 `sed` 的基础命令。
+成功使用`sed`编辑器的关键在于了解它的命令和格式，这些可以帮助你自定义文本。本节介绍了你可以包含在脚本中开始使用`sed`的基础命令。
 
 ### 替换选项
 
-你已经看到了如何使用 `s` 命令替换行中的文本。然而，`substitute` 命令还有一些额外的选项，可以让你的工作更轻松。
+你已经看到了如何使用`s`命令替换行中的文本。然而，`substitute`命令还有一些额外的选项，可以让你的工作更轻松。
 
 ### 替换标记
 
-`substitute` 命令在替换字符串中的匹配模式时有一个注意事项。观察这个例子发生了什么：
+`substitute`命令在替换字符串中的匹配模式时有一个注意事项。观察这个例子发生了什么：
 
 ```bash
 $ cat data5
@@ -12241,7 +12947,7 @@ This is the second trial of the test script.
 $
 ```
 
-`substitute` 命令在替换多行文本方面运行良好，但默认情况下，它只替换每行中的第一次出现。要让 `substitute` 命令处理不同的出现位置，你必须使用替换标记。替换标记设置在替换命令字符串之后：
+`substitute`命令在替换多行文本方面运行良好，但默认情况下，它只替换每行中的第一次出现。要让`substitute`命令处理不同的出现位置，你必须使用替换标记。替换标记设置在替换命令字符串之后：
 
 `s/pattern/replacement/flags`
 
@@ -12250,13 +12956,9 @@ $
 - 数字，指示要替换新文本的模式出现次数。
 - `g`——表示对现有文本的所有出现处都进行新文本。
 - `p`——表示打印原始行的内容。
-- `w` 文件——将替换结果写入文件。
+- `w`文件——将替换结果写入文件。
 
-
-
-
-
-在第一种替换类型中，你可以指定 `sed` 编辑器为匹配模式的哪一次替换新文本：
+在第一种替换类型中，你可以指定`sed`编辑器为匹配模式的哪一次替换新文本：
 
 ```bash
 $ sed 's/test/trial/2' data5
@@ -12265,7 +12967,7 @@ This is the second test of the trial script.
 $
 ```
 
-由于指定了 `2` 作为替换标志，`sed` 编辑器只会替换每行中第二次出现的模式。`g` 替换标志允许你替换文本中该模式的每一次出现：
+由于指定了`2`作为替换标志，`sed`编辑器只会替换每行中第二次出现的模式。`g`替换标志允许你替换文本中该模式的每一次出现：
 
 ```bash
 $ sed 's/test/trial/g' data5
@@ -12274,7 +12976,9 @@ This is the second trial of the trial script.
 $
 ```
 
-`p` 替换标志会在替换命令中打印包含匹配模式的行。这通常与 `-n sed sed` 选项配合使用：
+`p`替换标志会在替换命令中打印包含匹配模式的行。这通常与`-n sed`选项配合使用。
+
+
 
 ```bash
 $ cat data6
@@ -12306,7 +13010,7 @@ $
 
 ## 替换字符
 
-有时会在文本字符串中遇到在替换模式中不于使用的字符。Linux 世界中一个常见的例子就是正斜杠 `/。
+有时会在文本字符串中遇到在替换模式中不易使用的字符。Linux 世界中一个常见的例子就是正斜杠 `/`。
 
 在文件中替换路径名可能会变得很笨拙。例如，如果你想将 `/etc/passwd` 文件中的 bash shell 替换为 c shell，你必须这样操作：
 
@@ -12330,8 +13034,8 @@ $ sed 's!/bin/bash!/bin/csh!' /etc/passwd
 
 `sed` 编辑器中有两种行地址的格式：
 
-*   数字行范围
-*   用于过滤掉某行的文本模式
+- 数字行范围
+- 用于过滤掉某行的文本模式
 
 这两种形式都使用相同的格式来指定地址：
 
@@ -12347,7 +13051,7 @@ address {
 }
 ```
 
-`sed` 编辑器将将你指定的每个命令仅应用于匹配指定地址的行。本节演示了如何在你的 `sed` 脚本中同时使用这两种地址技术。
+`sed` 编辑器将你指定的每个命令仅应用于匹配指定地址的行。本节演示了如何在你的 `sed` 脚本中同时使用这两种地址技术。
 
 ### 数字行地址
 
@@ -12418,7 +13122,7 @@ $
 
 ### 命令分组
 
-如果你需要在单行上执行多个多个命令，请使用大括号 `{}` 将命令组合起来。`sed` 编辑器将处理地址行上列出的每个命令：
+如果你需要在单行上执行多个命令，请使用大括号 `{}` 将命令组合起来。`sed` 编辑器将处理地址行上列出的每个命令：
 
 ```bash
 $ sed '2{
@@ -12456,24 +13160,18 @@ $
 
 ```bash
 $ cat data1
+The quick brown fox jumps over the lazy dog
+The quick brown fox jumps over the lazy dog
+The quick brown fox jumps over the lazy dog
+The quick brown fox jumps over the lazy dog
+$ sed 'd' data1
+$
 ```
 
-
-
-
-
-`The quick brown fox jumps over the lazy dog`
-`The quick brown fox jumps over the lazy dog`
-`The quick brown fox jumps over the lazy dog`
-`The quick brown fox jumps over the lazy dog`
-
-`$ sed ‘d’ data1`
-`$`
-
-`delete` 命令在与指定的地址结合使用时显然是最用的。这允许你从数据流中删除特定的文本行，可以通过行号：
+`delete` 命令在与指定的地址结合使用时显然是最有用的。这允许你从数据流中删除特定的文本行，可以通过行号：
 
 ```bash
-$ sed ‘3d’ data7
+$ sed '3d' data7
 This is line number 1.
 This is line number 2.
 This is line number 4.
@@ -12483,16 +13181,16 @@ $
 或者通过特定的行范围：
 
 ```bash
-$ sed ‘2,3d’ data7
+$ sed '2,3d' data7
 This is line number 1.
 This is line number 4.
 $
 ```
 
-或者使用特殊的特殊结束符字符：
+或者使用特殊的结束符字符：
 
 ```bash
-$ sed ‘3,$d’ data7
+$ sed '3,$d' data7
 This is line number 1.
 This is line number 2.
 $
@@ -12501,7 +13199,7 @@ $
 `sed` 编辑器的模式匹配功能也适用于 `delete` 命令：
 
 ```bash
-$ sed ‘/number 1/d’ data7
+$ sed '/number 1/d' data7
 This is line number 2.
 This is line number 3.
 This is line number 4.
@@ -12510,13 +13208,14 @@ $
 
 `sed` 编辑器会删除包含你指定的模式文本的行。
 
-> 注意
-> > 请记住，`sed` 编辑器不会修改原始文件。你删除的任何行只会从 `sed` 编辑器的输出中消失。原始文件仍然包含这些“已删除”的行。
+> **注意**
+>
+> 请记住，`sed` 编辑器不会修改原始文件。你删除的任何行只会从 `sed` 编辑器的输出中消失。原始文件仍然包含这些“已删除”的行。
 
-你也可以使用两个文本模式来删除范围范围，但这样做时要小心。你指定的第一个模式会“开启”行删除，而第二个模式会“关闭”行删除。`sed` 编辑器会删除两个指定行之间的任何行（包括指定的行）：
+你也可以使用两个文本模式来删除范围，但这样做时要小心。你指定的第一个模式会“开启”行删除，而第二个模式会“关闭”行删除。`sed` 编辑器会删除两个指定行之间的任何行（包括指定的行）：
 
 ```bash
-$ sed ‘/1/,/3/d’ data6
+$ sed '/1/,/3/d' data6
 This is line number 4.
 $
 ```
@@ -12534,7 +13233,7 @@ This is text you want to keep.
 This is the last line in the file.
 $
 
-$ sed ‘/1/,/3/d’ data7
+$ sed '/1/,/3/d' data7
 This is line number 4.
 $
 ```
@@ -12542,7 +13241,7 @@ $
 包含数字 1 的行的第二次出现再次触发了 `delete` 命令，删除了数据流中的剩余所有行，因为停止模式没有被识别。当然，如果你指定的停止模式在文本中从未出现过，就会发生另一个明显的问题：
 
 ```bash
-$ sed ‘/1/,/5/d’ data8
+$ sed '/1/,/5/d' data8
 $
 ```
 
@@ -12552,20 +13251,20 @@ $
 
 正如你预期的，像任何其他编辑器一样，`sed` 编辑器允许你向数据流插入和追加文本行。这两个操作之间的区别可能会令人困惑：
 
-* `insert` 命令 (`i`) 在指定行之前添加一个新行。
-* `append` 命令 (`a`) 在指定行之后添加一个新行。
+- `insert` 命令（`i`）在指定行之前添加一个新行。
+- `append` 命令（`a`）在指定行之后添加一个新行。
 
 这两个命令令人困惑的地方在于它们的格式。你不能在单行命令行上使用这些命令。你必须单独另起一行指定要插入或追加的行。此操作格式为：
 
 ```bash
-sed ‘[[address]]command\
-new line`’
+sed '[[address]]command\
+new line'
 ```
 
 `new line` 中的文本会出现在你指定的 `sed` 编辑器输出位置。记住，当你使用 `insert` 命令时，文本出现在数据流文本之前：
 
 ```bash
-$ echo “Test Line 2” | sed ‘i\Test Line 1’
+$ echo "Test Line 2" | sed 'i\Test Line 1'
 Test Line 1
 Test Line 2
 $
@@ -12574,7 +13273,7 @@ $
 当你使用 `append` 命令时，文本出现在数据流文本之后：
 
 ```bash
-$ echo “Test Line 2” | sed ‘a\Test Line 1’
+$ echo "Test Line 2" | sed 'a\Test Line 1'
 Test Line 2
 Test Line 1
 $
@@ -12583,8 +13282,8 @@ $
 当你从命令行界面提示符使用 `sed` 编辑器时，你会收到输入新行数据的辅助提示。你必须在这一行完成 `sed` 编辑器命令。一旦你输入结束的单引号，bash shell 就会处理该命令：
 
 ```bash
-$ echo “Test Line 2” | sed ‘i\
-> Test Line 1’
+$ echo "Test Line 2" | sed 'i\
+> Test Line 1'
 Test Line 1
 Test Line 2
 $
@@ -12592,13 +13291,13 @@ $
 
 这对于在数据流文本之前或之后添加文本非常有效，但在数据流内部添加文本呢？
 
-要在数据流行内部插入或追加数据，你必须使用地址来告诉 `sed` 编辑器你想让数据出现在哪里。在使用这些命令时，你只能指定单行地址。你可以匹配行号或文本模式，但不能使用地址范围。这是符合逻辑的，因为你只能在单行之前或之后插入或追加，而不能针对范围范围。
+要在数据流行内部插入或追加数据，你必须使用地址来告诉 `sed` 编辑器你想让数据出现在哪里。在使用这些命令时，你只能指定单行地址。你可以匹配行号或文本模式，但不能使用地址范围。这是符合逻辑的，因为你只能在单行之前或之后插入或追加，而不能针对范围。
 
 以下是在数据流第 3 行之前插入新行的示例：
 
 ```bash
-$ sed ‘3i\
-> This is an inserted line.’ data7
+$ sed '3i\
+> This is an inserted line.' data7
 This is line number 1.
 This is line number 2.
 This is an inserted line.
@@ -12610,8 +13309,8 @@ $
 以下是在数据流第 3 行之后追加新行的示例：
 
 ```bash
-$ sed ‘3a\
->This is an appended line.’ data7
+$ sed '3a\
+> This is an appended line.' data7
 This is line number 1.
 This is line number 2.
 This is line number 3.
@@ -12623,8 +13322,8 @@ $
 这使用的过程与 `insert` 命令相同；它只是新文本行放置在指定的行号之后。如果你有一个多行数据流，并想在数据流末尾追加新行文本，只需使用美元符号，它代表最后一行数据：
 
 ```bash
-$ sed ‘$a\
-> This is a new line of text.’ data7
+$ sed '$a\
+> This is a new line of text.' data7
 This is line number 1.
 This is line number 2.
 This is line number 3.
@@ -12636,9 +13335,9 @@ $
 如果你想在数据流开头添加新行，也适用相同的原理。要插入或追加多行文本，你必须在每一行都使用反斜杠，直到你想插入或追加的最后一行：
 
 ```bash
-$ sed ‘1i\
+$ sed '1i\
 > This is one line\
->This is another line.’ data7
+> This is another line.' data7
 This is one line.
 This is another line.
 This is line number 1.
@@ -12651,8 +13350,8 @@ This is another line.
 `change` 命令允许你修改整行的内容。它的工作方式与 `insert` 和 `append` 命令相同，即你必须将新行与 `sed` 命令分开指定：
 
 ```bash
-$ sed ‘3c\
-> This is a changed line.’ data7
+$ sed '3c\
+> This is a changed line.' data7
 This is line number 1.
 This is line number 2.
 This is a changed line.
@@ -12663,8 +13362,8 @@ $
 在这个示例中，`sed` 编辑器修改了第 3 行的文本。你也可以使用文本模式作为地址：
 
 ```bash
-$ sed ‘/number 3/c\
->This is a changed line.’ data7
+$ sed '/number 3/c\
+> This is a changed line.' data7
 This is line number 1.
 This is line number 2.
 This is a changed line.
@@ -12675,8 +13374,8 @@ $
 文本模式 `change` 命令会修改数据流中匹配的任何行：
 
 ```bash
-$ sed ‘/number 1/c\
-> This is a changed line.’ data8
+$ sed '/number 1/c\
+> This is a changed line.' data8
 This is a changed line.
 This is line number 2.
 This is line number 3.
@@ -12690,8 +13389,8 @@ $
 你可以在 `change` 命令中使用地址范围，但结果可能不是你所预期的：
 
 ```bash
-$ sed ‘2,3c\
-> This is a new line of text.’ data7
+$ sed '2,3c\
+> This is a new line of text.' data7
 This is line number 1.
 This is a new line of text.
 This is line number 4.
@@ -12700,19 +13399,17 @@ $
 
 `sed` 编辑器并没有修改这两行，而是使用单行文本来替换这两行。
 
-## transform 命令
+## `transform` 命令
 
-`transform` 命令 (`y`) 是 `sed` 编辑器中唯一针对单个字符的命令。`transform` 命令使用的格式为：
-
-`[``address]]``y``/``inchars``/``outchars``/`
+`transform` 命令（`y`）是 `sed` 编辑器中唯一针对单个字符的命令。`transform` 命令使用的格式为：
 
 
 
+`[address]y/inchars/outchars/`
 
+`transform` 命令执行`inchars`和`outchars`值之间一对一的映射。`inchars`中的第一个字符被转换为`outchars`中的第一个字符。`inchars`中的第二个字符被转换为`outchars`中的第二个字符。这种映射一直持续到指定字符的长度。如果`inchars`和`outchars`的长度不同，`sed`编辑器将产生错误信息。
 
-`transform` 命令执行 `inchars` 和 `outchars` 值之间一对一的映射。`inchars` 中的第一个字符被转换为 `outchars` 中的第一个字符。`inchars` 中的第二个字符被转换为 `outchars` 中的第二个字符。这种映射一直持续到指定字符的长度。如果 `inchars` 和 `outchars` 的长度不同，`sed` 编辑器将产生错误信息。
-
-使用 `transform` 命令的一个简单示例是：
+使用`transform`命令的一个简单示例是：
 
 ```bash
 $ sed 'y/123/789/' data8
@@ -12726,9 +13423,9 @@ This is the last line in the file.
 $
 ```
 
-从输出中可以看出，`inchars` 模式中指定字符的每个实例都被替换为 `outchars` 模式中相同位置的字符。
+从输出中可以看出，`inchars`模式中指定字符的每个实例都被替换为`outchars`模式中相同位置的字符。
 
-`transform` 命令是一个全局命令；也就是说，它会自动对文本行中找到的任何字符进行转换，而不考虑其出现的次数：
+`transform`命令是一个全局命令；也就是说，它会自动对文本行中找到的任何字符进行转换，而不考虑其出现的次数：
 
 ```bash
 $ echo "This 1 is a test of 1 try." | sed 'y/123/456/'
@@ -12736,21 +13433,21 @@ This 4 is a test of 4 try.
 $
 ```
 
-`sed` 编辑器转换了文本行中两个匹配的字符 1。你无法将转换限制为字符的特定出现次数。
+`sed`编辑器转换了文本行中两个匹配的字符 1。你无法将转换限制为字符的特定出现次数。
 
 # 打印回顾
 
-“更多替换选项”部分向你展示了如何在替换命令中使用 `p` 标志来显示 `sed` 编辑器更改的行。还有三个命令也可以用于从数据流中打印信息：
+“更多替换选项”部分向你展示了如何在替换命令中使用`p`标志来显示`sed`编辑器更改的行。还有三个命令也可以用于从数据流中打印信息：
 
-- 小写 `p` 命令，用于打印文本行
+- 小写`p`命令，用于打印文本行
 - 等号（`=`）命令，用于打印行号
 - `l`（小写 L）命令，用于列出一行
 
-接下来的章节将查看 `sed` 编辑器中这三个打印命令的每一个。
+接下来的章节将查看`sed`编辑器中这三个打印命令的每一个。
 
 ## 打印行
 
-与 `substitution` 命令中的 `p` 标志一样，`p` 命令在 `sed` 编辑器的输出中打印一行。单单独使用它时并没什么特别的：
+与`substitution`命令中的`p`标志一样，`p`命令在`sed`编辑器的输出中打印一行。单单独使用它时并没什么特别的：
 
 ```bash
 $ echo "this is a test" | sed 'p'
@@ -12759,7 +13456,7 @@ this is a test
 $
 ```
 
-它所做的只是打印你已经知道存在的数据文本。`print` 命令最常用的用途是打印包含来自文本模式匹配文本的行：
+它所做的只是打印你已经知道存在的数据文本。`print`命令最常用的用途是打印包含来自文本模式匹配文本的行：
 
 ```bash
 $ sed -n '/number 3/p' data7
@@ -12767,7 +13464,7 @@ This is line number 3.
 $
 ```
 
-通过在命令行上使用 `-n` 选项，你可以抑制所有其他行，只打印包含匹配文本模式的行。
+通过在命令行上使用`-n`选项，你可以抑制所有其他行，只打印包含匹配文本模式的行。
 
 你也可以将此作为快速打印数据流中部分行集的方法：
 
@@ -12778,7 +13475,7 @@ This is line number 3.
 $
 ```
 
-当你需要在行被修改之前查看它时（例如使用 `substitution` 或 `change` 命令），你也可以使用 `print` 命令。你可以创建一个在更改前显示该行的脚本：
+当你需要在行被修改之前查看它时（例如使用`substitution`或`change`命令），你也可以使用`print`命令。你可以创建一个在更改前显示该行的脚本：
 
 ```bash
 $ sed -n '/3/{
@@ -12790,11 +13487,11 @@ This is test number 3.
 $
 ```
 
-此 `sed` 编辑器命令搜索包含数字 3 的行，然后执行两个命令。首先，脚本使用 `p` 命令打印行的原始版本；然后它使用 `s` 命令替换文本，并带有 `p` 标志打印结果文本。输出显示了原始行文本和新行文本。
+此`sed`编辑器命令搜索包含数字 3 的行，然后执行两个命令。首先，脚本使用`p`命令打印行的原始版本；然后它使用`s`命令替换文本，并带有`p`标志打印结果文本。输出显示了原始行文本和新行文本。
 
 ## 打印行号
 
-`equal sign` 命令用于打印数据流中当前行的行号。行号是通过通过使用数据流中的换行符来确定的。每当数据流中出现换行符时，`sed` 编辑器就会认为它结束了一行文本：
+`equal sign`命令用于打印数据流中当前行的行号。行号是通过通过使用数据流中的换行符来确定的。每当数据流中出现换行符时，`sed`编辑器就会认为它结束了一行文本：
 
 ```bash
 $ sed = data1
@@ -12809,7 +13506,7 @@ The quick brown fox jumps over the lazy dog.
 $
 ```
 
-`sed` 编辑器在实际的文本行之前打印行号。如果你在数据流中搜索特定的文本模式，`equal sign` 命令就会非常有用：
+`sed`编辑器在实际的文本行之前打印行号。如果你在数据流中搜索特定的文本模式，`equal sign`命令就会非常有用：
 
 ```bash
 $ sed -n '/number 4/{
@@ -12821,11 +13518,11 @@ This is line number 4.
 $
 ```
 
-通过使用 `-n` 选项，你可以让 `sed` 编辑器仅显示包含匹配文本模式的行的行号和文本。
+通过使用`-n`选项，你可以让`sed`编辑器仅显示包含匹配文本模式的行的行号和文本。
 
 ## 列行
 
-`list` 命令（`l`）允许你打印数据流中的文本和不可打印的 ASCII 字符。任何不可打印字符都使用其八进制值（前反斜杠）或常用不可打印字符的标准 C 风格命名法（例如用于制表符的 `\t`）显示：
+`list`命令（`l`）允许你打印数据流中的文本和不可打印的 ASCII 字符。任何不可打印字符都使用其八进制值（前反斜杠）或常用不可打印字符的标准 C 风格命名法（例如用于制表符的`\t`）显示：
 
 ```bash
 $ cat data9
@@ -12836,7 +13533,7 @@ This\tline\tcontains\ttabs.$
 $
 ```
 
-制表符的位置使用 `\t` 命名显示。行尾的美元符号表示换行符。如果你有一个包含转义字符的数据流，`list` 命令将使用八进制代码显示它：
+制表符的位置使用`\t`命名显示。行尾的美元符号表示换行符。如果你有一个包含转义字符的数据流，`list`命令将使用八进制代码显示它：
 
 ```bash
 $ cat data10
@@ -12847,19 +13544,19 @@ This line contains an escape character \033[44m$
 $
 ```
 
-`data10` 文本文件包含一个更改显示颜色的转义控制代码（见第 17 章）。当你使用 `cat` 命令显示文本时，你看不到转义代码。然而，使用 `list` 命令，你可以看到。`033` 是转义的八进制值。
+`data10`文本文件包含一个更改显示颜色的转义控制代码（见第 17 章）。当你使用`cat`命令显示文本时，你看不到转义代码。然而，使用`list`命令，你可以看到。`033`是转义的八进制值。
 
 # 使用 sed 操作文件
 
-`substitution` 命令包含允许你处理文件的标志。
+`substitution`命令包含允许你处理文件的标志。
 
 ## 写入文件
 
-`w` 命令用于写入文件。`w` 的格式为：
+`w`命令用于写入文件。`w`的格式为：
 
 `[address]w filename`
 
-`filename` 参数可以是相对或绝对路径，在任何情况下，运行 `sed` 的人员必须具有写入权限。地址可以是任何类型的 `sed` 地址，例如：
+`filename`参数可以是相对或绝对路径，在任何情况下，运行`sed`的人员必须具有写入权限。地址可以是任何类型的`sed`地址，例如：
 
 ```bash
 $ sed '1,2w test' data7
@@ -12874,7 +13571,7 @@ This is line number 2.
 $
 ```
 
-当然，如果你希望这些行显示在 `STDOUT` 上，可以使用 `sed` 的 `-n` 选项。如果你需要从主文件创建一个数据文件，这是一个非常棒的工具，例如：
+当然，如果你希望这些行显示在`STDOUT`上，可以使用`sed`的`-n`选项。如果你需要从主文件创建一个数据文件，这是一个非常棒的工具，例如：
 
 ```bash
 $ cat data11
@@ -12892,17 +13589,17 @@ Snell, Haley, Ft. Wayne, IN
 $
 ```
 
-`sed` 编辑器将包含文本模式的数据行写入目标文件。
+`sed`编辑器将包含文本模式的数据行写入目标文件。
 
 ## 从文件读取数据
 
-你已经见过如何从 `sed` 命令行向数据流插入和追加文本。`read` 命令（`r`）允许你插入单独文件中的数据。
+你已经见过如何从`sed`命令行向数据流插入和追加文本。`read`命令（`r`）允许你插入单独文件中的数据。
 
-`read` 命令的格式为：
+`read`命令的格式为：
 
 `[address]r filename`
 
-`filename` 参数指定包含数据的绝对或相对路径。你不能为 `read` 命令使用地址范围。你只能指定单个行号或文本模式地址。`sed` 编辑器会在地址之后插入文件的文本。
+`filename`参数指定包含数据的绝对或相对路径。你不能为`read`命令使用地址范围。你只能指定单个行号或文本模式地址。`sed`编辑器会在地址之后插入文件的文本。
 
 ```bash
 $ cat data12
@@ -12917,10 +13614,6 @@ This is line number 4.
 $
 ```
 
-
-
-
-
 ```text
 这是第 3 行。
 这是一条添加的行。
@@ -12929,18 +13622,24 @@ $
 $
 ```
 
-`sed` 编辑器会将数据文件中所有的文本行插入到数据流中。在使用文本模式地址时，该技术同样适用：
+`sed`编辑器会将数据文件中所有的文本行插入到数据流中。在使用文本模式地址时，该技术同样适用：
 
 ```bash
 $ sed ‘number 2/r data12’ data7
 ```
 
 这是第 1 行。
+
 这是第 2 行。
+
 这是一条添加的行。
+
 这是第二个添加的行。
+
 这是第 3 行。
+
 这是第 4 行。
+
 $
 
 如果你想在数据流的末尾添加文本，只需使用美元符号地址符号即可：
@@ -12950,25 +13649,34 @@ $ sed ‘$r data12’ data7
 ```
 
 这是第 1 行。
+
 这是第 2 行。
+
 这是第 3 行。
+
 这是第 4 行。
+
 这是一条添加的行。
+
 这是第二个添加的行。
+
 $
 
-`read` 命令的一个很酷的用法是将其与 `delete` 命令结合使用，将文件中的占位符替换为另一个文件的数据。例如，假设你有一个存储在文本文件中的格式信函，内容如下：
+`read`命令的一个很酷的用法是将其与`delete`命令结合使用，将文件中的占位符替换为另一个文件的数据。例如，假设你有一个存储在文本文件中的格式信函，内容如下：
 
 ```bash
 $ cat letter
 ```
 
 是否是以下人员：
+
 LIST
+
 请前往办公室。
+
 $
 
-该格式信函使用了通用的占位符 `LIST` 来代替人员列表。要在占位符之后插入人员列表，你只需要使用 `read` 命令。然而，这在输出中仍然保留了该占位符文本。要删除它，只需使用 `delete` 命令。结果如下所示：
+该格式信函使用了通用的占位符`LIST`来代替人员列表。要在占位符之后插入人员列表，你只需要使用`read`命令。然而，这在输出中仍然保留了该占位符文本。要删除它，只需使用`delete`命令。结果如下所示：
 
 ```bash
 $ sed ‘/LIST/{
@@ -12978,23 +13686,30 @@ $ sed ‘/LIST/{
 ```
 
 是否是以下人员：
+
 Blum, Katie      Chicago, IL
+
 Mullen, Riley    West Lafayette, IN
+
 Snell, Haley      Ft. Wayne, IN
+
 Woenker, Matthew      Springfield, IL
+
 Wisecarver, Emma      Grant Park, IL
+
 请前往办公室。
+
 $
 
 现在，占位符文本已被替换为数据文件中的姓名列表。
 
 ## 总结
 
-虽然 shell 脚本可以独立完成很多工作，但仅通过 shell 脚本处理数据通常很困难。Linux 提供了两个实用的工具来帮助处理文本数据。`sed` 编辑器是一个流编辑器，它可以在读取数据时快速地进行处理。你必须为 `sed` 编辑器提供一组编辑命令，由它将其应用于数据。
+虽然 shell 脚本可以独立完成很多工作，但仅通过 shell 脚本处理数据通常很困难。Linux 提供了两个实用的工具来帮助处理文本数据。`sed`编辑器是一个流编辑器，它可以在读取数据时快速地进行处理。你必须为`sed`编辑器提供一组编辑命令，由它将其应用于数据。
 
-`gawk` 程序是 GNU 组织的一个工具，它模仿并扩展了 Unix `awk` 程序的功能。g`awk 程序包含一种内置编程语言，你可以用它编写脚本来处理和分析数据。你可以使用 `gawk` 程序从大型数据文件中提取数据元素，并以你所需的几乎任何格式输出它们。这使得处理大型日志文件变得轻而易举，也可以从数据文件中创建自定义报告。
+`gawk`程序是 GNU 组织的一个工具，它模仿并扩展了 Unix `awk`程序的功能。`gawk`程序包含一种内置编程语言，你可以用它编写脚本来处理和分析数据。你可以使用`gawk`程序从大型数据文件中提取数据元素，并以你所需的几乎任何格式输出它们。这使得处理大型日志文件变得轻而易举，也可以从数据文件中创建自定义报告。
 
-使用 `sed` 和 `gawk` 程序的一个关键要素是学会使用正则表达式。正则表达式是创建自定义过滤器以提取和操作文本文件中数据的关键。本章将探讨经常被误解的正则表达式世界，向你展示如何构建处理所有类型数据的正则表达式。
+使用`sed`和`gawk`程序的一个关键要素是学会使用正则表达式。正则表达式是创建自定义过滤器以提取和操作文本文件中数据的关键。本章将探讨经常被误解的正则表达式世界，向你展示如何构建处理所有类型数据的正则表达式。
 
 # 第 19 章：正则表达式
 
@@ -13005,21 +13720,21 @@ $
 - 扩展我们的模式
 - 创建表达式
 
-在 shell 脚本中成功使用 `sed` 编辑器和 `gawk` 程序的关键在于你对正则表达式的熟练程度。这并不总是易事，因为试图从大量数据中过滤特定数据可能会（而且通常确实）变得复杂。本章描述了如何在 `sed` 编辑器和 `gawk` 程序中创建正则表达式，以过滤出你所需的数据。
+在 shell 脚本中成功使用`sed`编辑器和`gawk`程序的关键在于你对正则表达式的熟练程度。这并不总是易事，因为试图从大量数据中过滤特定数据可能会（而且通常确实）变得复杂。本章描述了如何在`sed`编辑器和`gawk`程序中创建正则表达式，以过滤出你所需的数据。
 
 ## 什么是正则表达式？
 
 理解正则表达式的第一步是准确定义它们到底是什么。本节解释了什么是正则表达式，并描述了 Linux 如何使用正则表达式。
 
-定义 定义
+定义
 
-正则表达式是你定义的模式模板，Linux 工具使用它来过滤文本。Linux 工具（如 `sed` 编辑器或 `gawk` 程序）在数据流入工具时，会将正则表达式模式与数据进行匹配。如果数据匹配模式，则被接受处理。如果数据不匹配模式，则被拒绝。这在图 19.1 中所示。
+正则表达式是你定义的模式模板，Linux 工具使用它来过滤文本。Linux 工具（如`sed`编辑器或`gawk`程序）在数据流入工具时，会将正则表达式模式与数据进行匹配。如果数据匹配模式，则被接受处理。如果数据不匹配模式，则被拒绝。这在图 19.1 中所示。
 
 [图 19.1] 数据与正则表达式模式匹配
 
 ![](img/00044.jpg)
 
-正则表达式模式利用通配符字符来表示数据流中的一个或多个字符。在 Linux 中有许多地方你可以指定通配符字符来表示你未知的数据。你已经见过在 Linux `ls` 命令中使用通配符来列出文件和目录的示例（参见第 3 章）。
+正则表达式模式利用通配符字符来表示数据流中的一个或多个字符。在 Linux 中有许多地方你可以指定通配符字符来表示你未知的数据。你已经见过在 Linux `ls`命令中使用通配符来列出文件和目录的示例（参见第 3 章）。
 
 星号通配符字符允许你仅列出符合特定标准的文件。例如：
 
@@ -13035,13 +13750,13 @@ $ ls -al da*
 $
 ```
 
-`da*` 参数指示 `ls` 命令仅列出以 `da` 开头的文件。文件名中 `da` 之后可以是任意数量的字符（包括没有）。`ls` 命令读取目录中所有文件的信息，但只显示匹配通配符的文件。
+`da*`参数指示`ls`命令仅列出以`da`开头的文件。文件名中`da`之后可以是任意数量的字符（包括没有）。`ls`命令读取目录中所有文件的信息，但只显示匹配通配符的文件。
 
-正则表达式模式的工作原理类似。正则表达式模式包含文本或特殊字符，为 `sed` 编辑器和 `gawk` 程序在匹配数据时遵循的模板。可以在正则表达式中使用不同的特殊字符来定义过滤数据的模式。
+正则表达式模式的工作原理类似。正则表达式模式包含文本或特殊字符，为`sed`编辑器和`gawk`程序在匹配数据时遵循的模板。可以在正则表达式中使用不同的特殊字符来定义过滤数据的模式。
 
 ### 正则表达式的类型
 
-使用正则表达式最大的问题是并没有某一套标准。Linux 环境中的许多不同的应用程序使用不同类型的正则表达式。这些包括多样化的应用程序，如编程语言（Java, Perl 和 Python）、Linux 工具（如 `sed` 编辑器、`gawk` 程序和 `grep` 工具）以及主流应用程序（如 MySQL 和 PostgreSQL 数据库服务器）。
+使用正则表达式最大的问题是并没有某一套标准。Linux 环境中的许多不同的应用程序使用不同类型的正则表达式。这些包括多样化的应用程序，如编程语言（Java, Perl 和 Python）、Linux 工具（如`sed`编辑器、`gawk`程序和`grep`工具）以及主流应用程序（如 MySQL 和 PostgreSQL 数据库服务器）。
 
 正则表达式是通过正则表达式引擎实现的。正则表达式引擎是解释正则表达式模式并使用这些模式匹配文本的底层软件。
 
@@ -13050,15 +13765,11 @@ $
 - POSIX 基础正则表达式 (BRE) 引擎
 - POSIX 扩展正则表达式 (ERE) 引擎
 
-大多数 Linux 工具至少符合 POSIX BRE 引擎规范，识别它定义的所有模式符号。遗憾的是，某些工具（如 `sed` 编辑器）仅符合 BRE 引擎规范的子集。这是由于速度限制，因为 `sed` 编辑器试图尽可能快地处理数据流中的文本。
+大多数 Linux 工具至少符合 POSIX BRE 引擎规范，识别它定义的所有模式符号。遗憾的是，某些工具（如`sed`编辑器）仅符合 BRE 引擎规范的子集。这是由于速度限制，因为`sed`编辑器试图尽可能快地处理数据流中的文本。
 
-POSIX ERE 引擎通常出现在依赖正则表达式进行文本过滤的编程语言中。它提供了高级模式符号，以及用于常见模式的特殊符号，例如匹配数字、单词和字母数字字符。`gawk` 程序使用 ERE 引擎来处理其正则表达式模式。
+POSIX ERE 引擎通常出现在依赖正则表达式进行文本过滤的编程语言中。它提供了高级模式符号，以及用于常见模式的特殊符号，例如匹配数字、单词和字母数字字符。`gawk`程序使用 ERE 引擎来处理其正则表达式模式。
 
-
-
-
-
-由于实现正则表达式有许多不同的方法，很难对所有可能的正则表达式给出一个单一且简洁的描述。接下来的章节将讨论最常见的正则表达式，并演示如何在 `sed` 编辑器和 `gawk` 程序中使用它们。
+由于实现正则表达式有许多不同的方法，很难对所有可能的正则表达式给出一个单一且简洁的描述。接下来的章节将讨论最常见的正则表达式，并演示如何在`sed`编辑器和`gawk`程序中使用它们。
 
 ## 定义 BRE 模式
 
@@ -13066,7 +13777,7 @@ POSIX ERE 引擎通常出现在依赖正则表达式进行文本过滤的编程�
 
 ### 普通文本
 
-第 18 章演示了如何在 `sed` 编辑器和 `gawk` 程序中使用标准文本字符串来过滤数据。这里有一个示例可以帮你重温记忆：
+第 18 章演示了如何在`sed`编辑器和`gawk`程序中使用标准文本字符串来过滤数据。这里有一个示例可以帮你重温记忆：
 
 ```
 $ echo “This is a test” | sed -n '/test/p’
@@ -13079,18 +13790,20 @@ $ echo “This is a test” | gawk '/trial/{print $0}’
 $
 ```
 
-第一个模式定义了一个单词 true `test`。`sed` 编辑器和 `gawk` 程序脚本分别使用各自版本的 `print` 命令来打印任何匹配正则表达式模式的行。因为 `echo` 语句的文本字符串中包含“test”一词，所以数据流文本匹配了定义的正则表达式模式，`sed` 编辑器显示了该行。
+第一个模式定义了一个单词 true `test`。`sed`编辑器和`gawk`程序脚本分别使用各自版本的`print`命令来打印任何匹配正则表达式模式的行。因为`echo`语句的文本字符串中包含“test”一词，所以数据流文本匹配了定义的正则表达式模式，`sed`编辑器显示了该行。
 
-第二个模式同样定义了一个单词，这次是单词“trial”。由于 `echo` 语句的文本字符串不包含该单词，因此正则表达式模式不匹配，所以 `sed` 编辑器和 `gawk` 程序都没有打印该行。
+第二个模式同样定义了一个单词，这次是单词“trial”。由于`echo`语句的文本字符串不包含该单词，因此正则表达式模式不匹配，所以`sed`编辑器和`gawk`程序都没有打印该行。
 
 你可能已经注意到，正则表达式并不关心模式出现在数据流的什么位置。它也不关心模式出现了多少次。只要正则表达式可以匹配文本字符串中的任何位置，它就会将字符串传递给正在使用它的 Linux 实用工具。
 
-关键是将正则表达式模式与数据流文本进行匹配。需要记住，正则表达式对匹配模式是非常挑剔的。要记住的第一条规则是，正则表达式模式是区分大小大小的。这意味着它们只会匹配字符大小写完全正确的模式：
+关键是将正则表达式模式与数据流文本进行匹配。需要记住，正则表达式对匹配模式是非常挑剔的。要记住的第一条规则是，正则表达式模式是区分大小大小的。这意味着它们只会匹配字符大小写完全正确的模式。
+
+
 
 ```
-$ echo “This is a test” | sed -n '/this/p’
+$ echo “This is a test” | sed -n '/this/p'
 $
-$ echo “This is a test” | sed -n '/This/p’
+$ echo “This is a test” | sed -n '/This/p'
 This is a test
 $
 ```
@@ -13100,24 +13813,24 @@ $
 你不需要将正则表达式限制在整个单词上。如果定义的文本出现在数据流的任何地方，正则表达式都将匹配以下内容：
 
 ```
-$ echo “The books are expensive” | sed -n '/book/p’
+$ echo “The books are expensive” | sed -n '/book/p'
 The books are expensive
 $
 ```
 
-尽管数据流中的文本是 `books`，但流中的数据包含了正则表达式 `book`，因此正则表达式模式匹配了该数据。当然，如果你尝试相反的操作，正则表达式将失败：
+尽管数据流中的文本是`books`，但流中的数据包含了正则表达式`book`，因此正则表达式模式匹配了该数据。当然，如果你尝试相反的操作，正则表达式将失败：
 
 ```
-$ echo “The book is expensive” | sed -n '/books/p’
+$ echo “The book is expensive” | sed -n '/books/p'
 $
 ```
 
-由于完整的正则表达式文本没有出现在数据流中，匹配失败，`sed` 编辑器没有显示该文本。
+由于完整的正则表达式文本没有出现在数据流中，匹配失败，`sed`编辑器没有显示该文本。
 
 你也不必将正则表达式限制在单个单词上。你还可以在文本字符串中包含空格和数字：
 
 ```
-$ echo “This is line number 1” | sed -n '/ber 1/p’
+$ echo “This is line number 1” | sed -n '/ber 1/p'
 This is line number 1
 $
 ```
@@ -13125,7 +13838,7 @@ $
 空格在正则表达式中的处理方式与其他任何其他字符相同：
 
 ```
-$ echo “This is line number1” | sed -n '/ber 1/p’
+$ echo “This is line number1” | sed -n '/ber 1/p'
 $
 ```
 
@@ -13142,7 +13855,7 @@ $
 
 单词间带有两个空格的行匹配了正则表达式模式。这是捕捉文本文件中空格问题的极佳方法！
 
-### 特殊字符
+## 特殊字符
 
 当你在正则表达式模式中使用文本字符串时，有些点你需要注意。在正则表达式中定义文本字符时，有少数例外情况。正则表达式模式为某些字符分配了特殊含义。如果你尝试在文本模式中使用这些字符，将无法得到你预期的结果。
 
@@ -13170,7 +13883,7 @@ $ echo “\is a special character” | sed -n '/\\/'
 \is a special character
 ```
 
-最后，虽然斜杠 `/` 不是特殊字符，但如果你在 sed 编辑器或 gawk 程序的正则表达式中使用它，将会得到一个错误：
+最后，虽然斜杠`/`不是特殊字符，但如果你在`sed`编辑器或`gawk`程序的正则表达式中使用它，将会得到一个错误：
 
 ```
 $ echo “3 /2” | sed -n '///'
@@ -13184,7 +13897,7 @@ $ echo “3 /2” | sed -n '\/\'
 3 /2
 ```
 
-现在 sed 编辑器可以正确解释正则表达式了，一切正常。
+现在`sed`编辑器可以正确解释正则表达式了，一切正常。
 
 ## 锚字符
 
@@ -13197,9 +13910,9 @@ $ echo “3 /2” | sed -n '\/\'
 要使用脱字符字符，你必须将其放在正则表达式中指定的模式之前：
 
 ```
-$ echo “The book store” | sed -n '/book/p’
+$ echo “The book store” | sed -n '/book/p'
 $
-$ echo “Books are great” | sed -n '/Book/p’
+$ echo “Books are great” | sed -n '/Book/p'
 Books are great
 $
 ```
@@ -13222,105 +13935,91 @@ $
 如果你将脱字符字符放在模式开头以外的任何位置，它将作为一个普通字符而不是特殊字符运行：
 
 ```
-$ echo “This ˆ is a test” | sed -n '/s ˆ/p’
+$ echo “This ˆ is a test” | sed -n '/s ˆ/p'
 This ˆ is a test
 $
 ```
 
-由于脱字符字符列在正则表达式模式的最后，sed 编辑器将其作为普通字符来匹配文本。
+由于脱字符字符列在正则表达式模式的最后，`sed`编辑器将其作为普通字符来匹配文本。
 
-> 注意
-
+> **注意**
 > > 如果你需要仅使用脱字符来指定正则表达式模式，则不需要用斜杠对其进行转义。但是，如果你在模式中先指定脱字符，随后是额外的文本，则你需要在脱字符之前使用转义字符。
 
-
-
-
-
-# 寻找结尾
+## 寻找结尾
 
 在行首查找模式的相反操作是在行尾查找模式。美元符号（`$`）特殊字符定义了结束锚点。在文本模式后添加此特殊字符，表示该数据行必须以该文本模式结尾：
 
 ```
-$ echo “This is a good book” | sed -n ‘/book$/p’
+$ echo “This is a good book” | sed -n '/book$/p'
+This is a good book
 ```
-`This is a good book`
 
-```bash
-$ echo “This book is good” | sed -n ‘/book$/p’
 ```
-`$`
+$ echo “This book is good” | sed -n '/book$/p'
+$
+```
 
 结尾文本模式的问题在于，你必须仔细注意你正在查找的是什么：
 
-```bash
-$ echo “There are a lot of good books” | sed -n ‘/book$/p’
 ```
-`$`
+$ echo “There are a lot of good books” | sed -n '/book$/p'
+$
+```
 
-在行尾将单词“book”变为复数，意味着它不再匹配该正则表达式模式，尽管 book 存在于数据流中。文本模式必须是该行中的最后内容，模式 才能匹配成功。
+在行尾将单词“book”变为复数，意味着它不再匹配该正则表达式模式，尽管`book`存在于数据流中。文本模式必须是该行中的最后内容，模式才能匹配成功。
 
 ## 组合锚点
 
 在几种常见的情况下，你可以在同一行中同时使用起始和结束锚点。在第一种情况下，假设你想查找一行仅包含特定文本模式的数据行：
 
-```bash
+```
 $ cat data4
+this is a test of using both anchors
+I said this is a test
+this is a test
+I'm sure this is a test.
+$ sed -n '/ˆthis is a test$/p' data4
+this is a test
+$
 ```
-`this is a test of using both anchors`
-`I said this is a test`
-`this is a test`
-`I'm sure this is a test.`
 
-```bash
-$ sed -n ‘/ˆthis is a test$/p’ data4
-```
-`this is a test`
-`$`
-
-`sed` 编辑器会忽略除指定文本外包含其他文本的行。
+`sed`编辑器会忽略除指定文本外包含其他文本的行。
 
 第二种情况初看起来可能有点奇怪，但极其有用。通过在没有任何文本的模式中组合两个锚点，你可以从数据流中过滤掉空行。考虑这个示例：
 
-```bash
+```
 $ cat data5
+This is one test line.
+This is another test line.
+$ sed '/ˆ$/d' data5
+This is one test line.
+This is another test line.
+$
 ```
-`This is one test line.`
-`This is another test line.`
 
-```bash
-$ sed ‘/ˆ$/d’ data5
-```
-`This is one test line.`
-`This is another test line.`
-`$`
-
-定义的正则表达式模式查找在行首和行尾之间没有任何内容的行。因为空行在两个换行符之间不包含文本，所以它们匹配该正则表达式。`sed` 编辑器使用 `d` 删除命令来删除匹配该模式的行，从而移除文本中的所有空行。这是从文档中删除空行的有效方法。
+定义的正则表达式模式查找在行首和行尾之间没有任何内容的行。因为空行在两个换行符之间不包含文本，所以它们匹配该正则表达式。`sed`编辑器使用`d`删除命令来删除匹配该模式的行，从而移除文本中的所有空行。这是从文档中删除空行的有效方法。
 
 ## 点字符
 
-点特殊字符 `.` 用于匹配换行符以外的任何单个字符。然而，点字符必须匹配一个字符；如果点所在的位置没有字符，则模式将失败。
+点特殊字符`.`用于匹配换行符以外的任何单个字符。然而，点字符必须匹配一个字符；如果点所在的位置没有字符，则模式将失败。
 
 让我们来看在正则表达式模式中使用点字符的几个示例：
 
-```bash
+```
 $ cat data6
+This is a test of a line.
+The cat is sleeping.
+That is a very nice hat.
+This test is at line four.
+at ten o'clock we'll go home.
+$ sed -n '/.at/p' data6
+The cat is sleeping.
+That is a very nice hat.
+This test is at line four.
+$
 ```
-`This is a test of a line.`
-`The cat is sleeping.`
-`That is a very nice hat.`
-`This test is at line four.`
-`at ten o'clock we'll go home.`
 
-```bash
-$ sed -n ‘/.at/p’ data6
-```
-`The cat is sleeping.`
-`That is a very nice hat.`
-`This test is at line four.`
-`$`
-
-你应该能够推断出为什么第一行失败了，以及为什么第二行和第三行通过了。第四行有点狡猾。注意，我们匹配了 `at`，但它前面没有字符来匹配点字符。啊，其实有的！在正则表达式中，空格被算作字符，所以 `at` 前面的空格匹配了模式。第五行证明了这一点，它将 `at` 放在行首，导致无法匹配模式。
+你应该能够推断出为什么第一行失败了，以及为什么第二行和第三行通过了。第四行有点狡猾。注意，我们匹配了`at`，但它前面没有字符来匹配点字符。啊，其实有的！在正则表达式中，空格被算作字符，所以`at`前面的空格匹配了模式。第五行证明了这一点，它将`at`放在行首，导致无法匹配模式。
 
 ## 字符类
 
@@ -13328,219 +14027,183 @@ $ sed -n ‘/.at/p’ data6
 
 你可以定义一个字符类，该类可以匹配文本模式中的某个位置。如果字符类中的任意一个字符出现在数据流中，它就会匹配该模式。
 
-要定义字符类，你使用方括号 `[]`。方括号应包含你想包含在类中的任何字符。然后你可以像使用任何其他通配符一样，在模式中使用整个类。这起初可能需要一点时间适应，但一旦掌握，它就能产生一些非常惊的结果。
+要定义字符类，你使用方括号`[]`。方括号应包含你想包含在类中的任何字符。然后你可以像使用任何其他通配符一样，在模式中使用整个类。这起初可能需要一点时间适应，但一旦掌握，它就能产生一些非常惊人的结果。
 
 以下是创建一个字符类的示例：
 
-```bash
-$ sed -n ‘/[ch]at/p’ data6
 ```
-`The cat is sleeping.`
-`That is a very nice hat.`
-`$`
-
+$ sed -n '/[ch]at/p' data6
+The cat is sleeping.
+That is a very nice hat.
+$
 ```
 
-使用与点特殊字符示例相同的数据文件，我们得到了不同的结果。这次，我们成功过滤掉了只包含单词 `at` 的那行。匹配此模式的唯一单词是 `cat` 和 `hat`。同样注意，以 `at` 开头的行也没有匹配。字符类中必须有一个字符来匹配相应的位置。
+使用与点特殊字符示例相同的数据文件，我们得到了不同的结果。这次，我们成功过滤掉了只包含单词`at`的那行。匹配此模式的唯一单词是`cat`和`hat`。同样注意，以`at`开头的行也没有匹配。字符类中必须有一个字符来匹配相应的位置。
 
-如果你不确定字符是大写还是小写，字符类大有用用场：
+如果你不确定字符是大写还是小写，字符类大有用处：
 
-```bash
-$ echo “Yes” | sed -n ‘/[Yy]es/p’
 ```
-`Yes`
-
-```bash
-$ echo “yes” | sed -n ‘/[Yy]es/p’
+$ echo “Yes” | sed -n '/[Yy]es/p'
+Yes
+$ echo “yes” | sed -n '/[Yy]es/p'
+yes
+$
 ```
-`yes`
-`$`
 
 你可以在一个表达式中使用多个字符类：
 
-```bash
-$ echo “Yes” | sed -n ‘/[Yy][Ee][Ss]/p’
 ```
-`Yes`
-
-```bash
-$ echo “yEs” | sed -n ‘/[Yy][Ee][Ss]/p’
+$ echo “Yes” | sed -n '/[Yy][Ee][Ss]/p'
+Yes
+$ echo “yEs” | sed -n '/[Yy][Ee][Ss]/p'
+yEs
+$ echo “yeS” | sed -n '/[Yy][Ee][Ss]/p'
+yeS
+$
 ```
-`yEs`
-
-```bash
-$ echo “yeS” | sed -n ‘/[Yy][Ee][Ss]/p’
-```
-`yeS`
-`$`
 
 该正则表达式使用了三个字符类，涵盖了所有三个字符位置的大写和小写。
 
 字符类并不一定非只包含字母；你也可以在它们中使用数字：
 
-```bash
+```
 $ cat data7
+This line doesn't contain a number.
+This line has 1 number.
+This line a 2.
+This line has 4.
+$ sed -n '/[0-3]/' data7
+This line has 1 number.
+This line a 2.
 ```
-`This line doesn't contain a number.`
-`This line has 1 number.`
-`This line a 2.`
-`This line has 4.`
 
-```bash
-$ sed -n ‘/[0-3]/’ data7
+正则表达式匹配包含0、1、2的任何行。你可以组合字符类来检查格式正确的数字，例如电话号码。然而，当你尝试匹配特定格式时，你必须小心。这里有一个邮编错误的示例：
+
 ```
-`This line has 1 number.`
-`This line a 2.`
-
-正则表达式匹配包含 0、1、2 的任何行。你可以组合字符类来检查格式正确的数字，例如电话号码。然而，当你尝试匹配特定格式时，你必须小心。这里有一个邮编错误的示例：
-
-```bash
 $ cat data8
+60633
+46201
+22301
+22203
+$ sed -n '/^[0-9]\{5\}$/p' data8
+60633
+46201
+22301
+22203
 ```
-`60633`
-`46201`
-`22301`
-`22203`
-
-```bash
-$ sed -n ‘^[0-9]\{5\}$/p’ data8
-```
-`60633`
-`46201`
-`22301`
-`22203`
 
 这可能不是你想要的结果。它成功过滤掉了太短的数字。但是，尽管我们定义了五个，它仍然通过了六位数。记住，正则表达式模式可以出现在文本的任何地方。模式之外总会有额外的字符。如果你想确保只匹配五个数字，你需要对它们进行界定，就像在本示例中这样显示它们位于行首和行尾：
 
-```bash
-$ sed -n ‘^[0-9]\{5\}$/p’ data8
 ```
-`60633`
-`46201`
-`22301`
-`22203`
+$ sed -n '/^[0-9]\{5\}$/p' data8
+60633
+46201
+22301
+22203
+```
 
 现在这样好多了！在本章的晚些部分，我们将介绍如何进一步简化这一点。
 
-字符类的一个流行用途是解析可能拼错误的单词，例如从用户表单输入的数据。你可以轻松创建可以接受数据中常见拼写错误的正则表达式：
+字符类的一个流行用途是解析可能拼写错误的单词，例如从用户表单输入的数据。你可以轻松创建可以接受数据中常见拼写错误的正则表达式：
 
-```bash
+```
 $ cat data9
-```
-`I need to have some maintenence on my car.`
-`I'll pay that in a seperate invoice.`
-`After I pay for the maintenance my car will be as good as new.`
-
-```bash
-$ sed -n ‘/maint[ea]n[ae]nce/p;/sep[ea]r[ae]te/p’ data9
-```
-`I need to have some maintenence on my car.`
-`I'll pay that in a seperate invoice.`
-`After I pay for the maintenance my car will be as good as new.`
-
+I need to have some maintenence on my car.
+I'll pay that in a seperate invoice.
+After I pay for the maintenance my car will be as good as new.
+$ sed -n '/maint[ea]n[ae]nce/p;/sep[ea]r[ae]te/p' data9
+I need to have some maintenence on my car.
+I'll pay that in a seperate invoice.
+After I pay for the maintenance my car will be as good as new.
 ```
 
-此示例中的两个 sed 打印命令利用正则表达式字符类来帮助捕捉文本中拼写错误的单词，maintenence 和 separate。相同的正则表达式模式也匹配了拼写正确的“maintenance”。
+此示例中的两个`sed`打印命令利用正则表达式字符类来帮助捕捉文本中拼写错误的单词，maintenence和separate。相同的正则表达式模式也匹配了拼写正确的“maintenance”。
 
-
-
-
-在正则表达式模式中，你也可以反转字符类的效果。与其寻找包含在类中的字符，不如寻找任何**不在**该类中的字符。要做到这一点，只需在字符类范围的开头放置一个脱字符字符 `^` 即可：
-
-```bash
-$ sed -n ‘/[ˆch]at/p’ data6
-```
+在正则表达式模式中，你也可以反转字符类的效果。与其寻找包含在类中的字符，不如寻找任何**不在**该类中的字符。要做到这一点，只需在字符类范围的开头放置一个脱字符字符`^`即可：
 
 ```
+$ sed -n '/[ˆch]at/p' data6
 This test is at line two.
 $
 ```
 
-通过否定字符类，正则表达式模式可以匹配任何不是 `c` 也不是 `h` 的字符，连同文本模式一起匹配。由于空格字符符合这一类别，因此它通过了模式匹配。然而，即使使用了否定操作，字符类仍然必须匹配一个字符，因此行首开头为 `at` 的行仍然无法匹配该模式。
+通过否定字符类，正则表达式模式可以匹配任何不是`c`也不是`h`的字符，连同文本模式一起匹配。由于空格字符符合这一类别，因此它通过了模式匹配。然而，即使使用了否定操作，字符类仍然必须匹配一个字符，因此行首开头为`at`的行仍然无法匹配该模式。
 
 ## 使用范围
 
 你可能已经注意到，当我之前展示邮政编码示例时，在每个字符类中列出所有可能的数字显得有些笨拙。幸运的是，你可以使用快捷方法，这样就不需要那样做了。
 
-你可以通过连字符 `-` 符号在字符类内部使用字符范围。只需指定范围内的第一个字符、一个连字符，然后是范围内的最后一个字符。根据 Linux 系统所使用的字符集（参见第 2 章），正则表达式将包含指定字符范围内的任何字符。
+你可以通过连字符`-`符号在字符类内部使用字符范围。只需指定范围内的第一个字符、一个连字符，然后是范围内的最后一个字符。根据Linux系统所使用的字符集（参见第2章），正则表达式将包含指定字符范围内的任何字符。
 
 现在，你可以通过指定数字范围来简化邮政编码示例：
 
-```bash
-$ sed -n ‘/ˆ[0-9][0-9][0-9][0-9][0-9]$/p’ data8
 ```
-
-```
+$ sed -n '/^[0-9][0-9][0-9][0-9][0-9]$/p' data8
 60633
 46201
 45902
 $
 ```
 
-这节省了大量的输入工作！每个字符类将匹配从 `0` 到 `9` 的任何数字。如果数据中任何地方出现字母，模式将失败：
+这节省了大量的输入工作！每个字符类将匹配从`0`到`9`的任何数字。如果数据中任何地方出现字母，模式将失败：
 
-```bash
-$ echo “a8392” | sed -n ‘/ˆ[0-9][0-9][0-9][0-9][0-9]$/p’
+```
+$ echo “a8392” | sed -n '/^[0-9][0-9][0-9][0-9][0-9]$/p'
 $
-
-$ echo “1839a” | sed -n ‘/ˆ[0-9][0-9][0-9][0-9][0-9]$/p’
+$ echo “1839a” | sed -n '/^[0-9][0-9][0-9][0-9][0-9]$/p'
 $
-
-$ echo “18a92” | sed -n ‘/ˆ[0-9][0-9][0-9][0-9][0-9]$/p’
+$ echo “18a92” | sed -n '/^[0-9][0-9][0-9][0-9][0-9]$/p'
 $
 ```
 
 相同的技巧也适用于字母：
 
-```bash
-$ sed -n ‘/[c-h]at/p’ data6
 ```
-
-```
+$ sed -n '/[c-h]at/p' data6
 The cat is sleeping.
 That is a very nice hat.
 $
 ```
 
-新模式 `[c-h]at` 匹配首字母在字母 `c` 和字母 `h` 之间的单词。在这种情况下，仅包含单词 `at` 的行未能匹配该模式。
+新模式`[c-h]at`匹配首字母在字母`c`和字母`h`之间的单词。在这种情况下，仅包含单词`at`的行未能匹配该模式。
 
 你还可以在单个字符类中指定多个不连续的范围：
 
-```bash
-$ sed -n ‘/[a-ch-m]at/p’ data6
 ```
-
-```
+$ sed -n '/[a-ch-m]at/p' data6
 The cat is sleeping.
 That is a very nice hat.
 $
 ```
 
-该字符类允许 `a` 到 `c` 以及 `h` 到 `m` 的范围出现在 `at` 文本之前。此范围将拒绝任何在 `d` 和 `g` 之间的字母：
+该字符类允许`a`到`c`以及`h`到`m`的范围出现在`at`文本之前。此范围将拒绝任何在`d`和`g`之间的字母：
 
-```bash
-$ echo “I'm getting too fat.” | sed -n ‘/[a-ch-m]at/p’
+```
+$ echo “I'm getting too fat.” | sed -n '/[a-ch-m]at/p'
 $
 ```
 
-此模式拒绝了 `fat` 文本，因为它不在指定的范围内。
+此模式拒绝了`fat`文本，因为它不在指定的范围内。
 
 ## 特殊字符类
 
-除了定义你自己的字符类外，BRE（基本正则表达式）还包含你可以用于匹配特定类型字符的特殊字符类。表 19.1 描述了你可以使用的 BRE 特殊字符。
+除了定义你自己的字符类外，BRE（基本正则表达式）还包含你可以用于匹配特定类型字符的特殊字符类。表19.1描述了你可以使用的BRE特殊字符。
 
-### 表 19.1 BRE 特殊字符类
+### 表19.1 BRE特殊字符类
 
 | 类 |  |
 | :--- | :--- |
-| `[[:alpha:]]` | 匹配任何字母，大写或小写均。 |
-| `[[:alnum:]]` | 匹配任何字母数字 0–9, A–Z 或 a–z。 |
+| `[[:alpha:]]` | 匹配任何字母，大写或小写。 |
+| `[[:alnum:]]` | 匹配任何字母数字0–9, A–Z或a–z。 |
 | `[[:blank:]]` | 匹配空格或制表符。 |
-| `[[:digit:]]` | 匹配从 0 到 9 的数字。 |
-| `[[:lower:]]` | 匹配任何小写字母 a–z。 |
+| `[[:digit:]]` | 匹配从0到9的数字。 |
+| `[[:lower:]]` | 匹配任何小写字母a–z。 |
 | `[[:print:]]` | 匹配任何打印字符。 |
 | `[[:punct:]]` | 匹配标点符号。 |
-| `[[:space:]]` | 匹配任何空白字符：空格、制表符、换行、FF、VT、CR。
+
+
+
+| `[[:space:]]` | 匹配任何空白字符：空格、制表符、换行、FF、VT、CR。 |
 
 | `[[:upper:]]` | 匹配任何大写字母 A–Z。 |
 
@@ -13563,7 +14226,7 @@ $ echo “This is a test” | sed -n ‘/[[:punct:]]/p’
 $
 ```
 
-使用特殊字符类是定义范围的一种简单方法。你不需要使用范围 `[0–9]`，而只需要使用 `[[:digit:]]`。
+使用特殊字符类是定义范围的一种简单方法。你不需要使用范围`[0–9]`，而只需要使用`[[:digit:]]`。
 
 ## 星号
 
@@ -13594,26 +14257,27 @@ $ echo “I'm getting a color” | sed -n ‘/colou*r/p’
 color
 ```
 
+```bash
 $ echo “I'm getting a colour” | sed -n ‘/colou*r/p’
 colour
 ```
 
-模式中的 `u*` 表示 `u` 可能出现也不出现。同样，如果你知道一个单词经常被拼错，你可以通过星号来适应它：
+模式中的`u*`表示`u`可能出现也可能不出现。同样，如果你知道一个单词经常被拼错，你可以通过星号来适应它：
 
 ```bash
 $ echo “I'm getting too fat.” | sed -n ‘/fa*t/p’
 fat
 ```
 
-只要 `a` 和 `e` 字符在 `b` 和 `t` 之间的任何组合中出现（包括完全不出现），模式匹配。如果出现了定义类之外的任何字符，模式将失败。
+只要`a`和`e`字符在`b`和`t`之间的任何组合中出现（包括完全不出现），模式匹配。如果出现了定义类之外的任何字符，模式将失败。
 
 ## 扩展正则表达式
 
-POSIX ERE 模式包含一些 Linux 应用程序和工具使用的额外符号。`gawk` 程序识别 ERE 模式，但 `sed` 编辑器不识别。
+POSIX ERE 模式包含一些 Linux 应用程序和工具使用的额外符号。`gawk`程序识别 ERE 模式，但`sed`编辑器不识别。
 
-> 注意：请记住，sed 编辑器和 gawk 程序之间的正则表达式引擎是有差异的。`gawk` 程序可以使用大多数扩展正则表达式模式符号，并可以提供 sed 编辑器不具备的某些额外过滤功能。然而，由于这一点，它在处理数据流时通常较慢。
+> 注意：请记住，`sed`编辑器和`gawk`程序之间的正则表达式引擎是有差异的。`gawk`程序可以使用大多数扩展正则表达式模式符号，并可以提供`sed`编辑器不具备的某些额外过滤功能。然而，由于这一点，它在处理数据流时通常较慢。
 
-本节描述了你可以在 `gawk` 程序脚本中使用的更常见的 ERE 模式符号。
+本节描述了你可以在`gawk`程序脚本中使用的更常见的 ERE 模式符号。
 
 ## 问号
 
@@ -13630,11 +14294,9 @@ $ echo “beet” | gawk ‘/be?t/{print $0}’
 $
 ```
 
+如果字符`e`没有出现在文本中，或者只要它在文本中只出现一次，模式就会匹配。
 
-
-如果字符 `e` 没有出现在文本中，或者只要它在文本中只出现一次，模式就会匹配。
-
-与星号 `*` 一样，你可以将问号 `?` 符号配合字符类使用：
+与星号`*`一样，你可以将问号`?`符号配合字符类使用：
 
 ```bash
 $ echo “bt” | gawk '/b[ae]?t/{print $0}'
@@ -13668,7 +14330,6 @@ $ echo “beat” | gawk '/b[ae]?t/{print $0}'
 
 ```bash
 $ echo “beet” | gawk '/b[ae]?t/{print $0}'
-
 ```
 `$`
 
@@ -13676,7 +14337,7 @@ $ echo “beet” | gawk '/b[ae]?t/{print $0}'
 
 ## 加号
 
-加号 `+` 是另一个模式符号，与星号 `*` 类似，但与问号 `?` 有不同。加号 `+` 表示前面的字符可以出现一次或多次，但必须至少出现一次。如果该字符不存在，则模式不匹配：
+加号`+`是另一个模式符号，与星号`*`类似，但与问号`?`有不同。加号`+`表示前面的字符可以出现一次或多次，但必须至少出现一次。如果该字符不存在，则模式不匹配：
 
 ```bash
 $ echo “beeet” | gawk '/be+t/{print $0}'
@@ -13698,7 +14359,7 @@ $ echo “bt” | gawk '/be+t/{print $0}'
 ```
 `$`
 
-如果字符 `e` 不存在，则模式匹配将失败。加号也可以配合字符类使用，方式与星号 `*` 和问号 `?` 相同：
+如果字符`e`不存在，则模式匹配将失败。加号也可以配合字符类使用，方式与星号`*`和问号`?`相同：
 
 ```bash
 $ echo “bt” | gawk '/b[ae]+t/{print $0}'
@@ -13736,15 +14397,15 @@ $ echo “beeat” | gawk '/b[ae]+t/{print $0}'
 
 ## 使用大括号
 
-大括号 `{}` 在 ERE 中可用，允许你对可重复的正则表达式指定限制。这通常被称为区间（interval）。你可以用两种格式表示区间：
+大括号`{}`在 ERE 中可用，允许你对可重复的正则表达式指定限制。这通常被称为区间（interval）。你可以用两种格式表示区间：
 
-- `m` - 正则表达式恰好出现 `m` 次。
-- `m,n` - 正则表达式出现至少 `m` 次，但不超过 `n` 次。
+- `m` - 正则表达式恰好出现`m`次。
+- `m,n` - 正则表达式出现至少`m`次，但不超过`n`次。
 
 此功能允许你精细调整允许字符（或字符类）在模式中出现的次数。
 
 > 注意
-> 默认情况下，`gawk` 程序不识别正则表达式区间。你必须为 `gawk` 程序指定 `--re-interval` 命令行选项，使其能够识别正则表达式区间。
+> 默认情况下，`gawk`程序不识别正则表达式区间。你必须为`gawk`程序指定`--re-interval`命令行选项，使其能够识别正则表达式区间。
 
 这里是一个使用单值区间的示例：
 
@@ -13765,7 +14426,7 @@ $ echo “beet” | gawk --re-interval '/be{1}t/{print $0}'
 
 通过指定为 1 的区间，你限制了字符出现的次数，以便字符串能够匹配模式。如果字符出现次数更多，则模式匹配将失败。
 
-在很多时候，指定上限和上限非常有用：
+在很多时候，指定上限和下限非常有用：
 
 ```bash
 $ echo “bt” | gawk --re-interval '/be{1,2}t/{print $0}'
@@ -13787,7 +14448,7 @@ $ echo “beeet” | gawk --re-interval '/be{1,2}t/{print $0}'
 ```
 `$`
 
-在这个示例中，字符 `e` 可以出现一次或两次，模式匹配匹配能通过；否则，模式匹配将失败。
+在这个示例中，字符`e`可以出现一次或两次，模式匹配匹配能通过；否则，模式匹配将失败。
 
 区间模式匹配也适用于字符类：
 
@@ -13833,11 +14494,11 @@ $ echo “baeaet” | gawk --re-interval '/b[ae]{1,2}t/{print $0}'
 ```
 `$`
 
-该正则表达式模式如果文本模式中恰好出现一次或两次字母 `a` 或 `e`，则将进行匹配；但如果在任何组合中出现更多，则将失败。
+该正则表达式模式如果文本模式中恰好出现一次或两次字母`a`或`e`，则将进行匹配；但如果在任何组合中出现更多，则将失败。
 
 ## 管道符号
 
-管道符号 `|` 允许你指定两个或多个模式，正则表达式引擎在检查数据流时会在逻辑 `OR` 公式中使用这些模式。如果任何模式匹配数据流文本，则文本将通过。如果没有任何模式匹配，则数据流文本将失败。
+管道符号`|`允许你指定两个或多个模式，正则表达式引擎在检查数据流时会在逻辑`OR`公式中使用这些模式。如果任何模式匹配数据流文本，则文本将通过。如果没有任何模式匹配，则数据流文本将失败。
 
 使用管道符号的格式为：
 
@@ -13860,48 +14521,71 @@ $ echo “The bird is” | gawk '/cat|dog/{print $0}'
 ```
 `$`
 
-如果字符 `e` 不存在，则模式匹配将失败。加号也可以配合字符类使用，方式与星号 `*` 和问号 `?` 相同。
+如果字符`e`不存在，则模式匹配将失败。加号也可以配合字符类使用，方式与星号`*`和问号`?`相同。
 
 （注：由于提供的文本存在大量重复和混乱内容，以上翻译已根据核心逻辑进行了提取并保持格式。）
 
-
-
-
 ```bash
 mypath='echo $PATH | sed 's/:/ /g''
+
 for directory in $mypath
+
 do
+
   ...
+
 done
 ```
 
-一旦你获得了每个目录，就可以使用 `ls` 命令列出每个目录中的每个文件，并使用另一个 `for` 语句遍历每个文件，同时为每个文件增加计数器。
+一旦你获得了每个目录，就可以使用`ls`命令列出每个目录中的每个文件，并使用另一个`for`语句遍历每个文件，同时为每个文件增加计数器。
 
 脚本的最终版本如下：
 
 ```bash
 $ cat countfiles
+
 #!/bin/bash
+
 # count number of files in your PATH
+
 mypath='echo $PATH | sed 's/:/ /g''
+
 count=0
+
 for directory in $mypath
+
 do
+
     check='ls $directory'
+
     for item in $check
+
     do
+
         count=$[ $count + 1 ]
+
     done
+
   echo "$directory - $count"
+
   count=0
+
 done
+
 $ ./countfiles
+
 /usr/local/bin - 79
+
 /bin - 86
+
 /usr/bin - 1502
+
 /usr/X11R6/bin - 175
+
 /usr/games - 2
+
 /usr/java/j2sdk1.4.1_01/bin - 27
+
 $
 ```
 
@@ -13909,7 +14593,7 @@ $
 
 ## 验证电话号码
 
-上一个示例展示了如何将简单的正则表达式与 `sed` 结合，替换数据流中的字符以处理数据。正则表达式通常用于验证数据，以确保数据符合脚本的正确格式。
+上一个示例展示了如何将简单的正则表达式与`sed`结合，替换数据流中的字符以处理数据。正则表达式通常用于验证数据，以确保数据符合脚本的正确格式。
 
 常见的数据验证应用是检查电话号码。通常，数据输入表单会要求填写电话号码，而客户往往无法输入格式正确的电话号码。在美国，有几种显示电话号码的常用方式：
 
@@ -13924,7 +14608,7 @@ $
 
 `^\(?`
 
-脱字符 `^` 用于指示数据的开头。由于左括号是一个特殊字符，你必须对其进行转义才能作为普通字符使用。问号 `?` 表示左括号在匹配的数据中可能出现也可能不出现。
+脱字符`^`用于指示数据的开头。由于左括号是一个特殊字符，你必须对其进行转义才能作为普通字符使用。问号`?`表示左括号在匹配的数据中可能出现也可能不出现。
 
 接下来是三位区号。在美国，区号以数字 2 开始（没有以 0 或 1 开头的区号），可以到 9。匹配区号，你需要使用以下模式：
 
@@ -13956,24 +14640,31 @@ $
 
 `^\(?[2-9][0-9]{2}\)?(||-|\.)[0-9]{3}( ||-|\.)[0-9]{4}$`
 
-你可以在 `gawk` 程序中使用这个正则表达式模式来过滤掉格式错误的电话号码。你现在只需要使用正则表达式在 `gawk` 程序中创建一个简单的脚本，然后通过该脚本过滤你的电话列表。记住，当你在 `gawk` 程序中使用正则表达式范围时，你必须使用 `--re-interval` 命令行选项，否则你将无法正确的结果。
+你可以在`gawk`程序中使用这个正则表达式模式来过滤掉格式错误的电话号码。你现在只需要使用正则表达式在`gawk`程序中创建一个简单的脚本，然后通过该脚本过滤你的电话列表。记住，当你在`gawk`程序中使用正则表达式范围时，你必须使用`--re-interval`命令行选项，否则你将无法得到正确的结果。
 
 这里是脚本：
 
 ```bash
 $ cat isphone
+
 #!/bin/bash
+
 # script to filter out bad phone numbers
+
 gawk --re-interval '/^\\(?[2-9][0-9]{2}\)?(||-|\.)[0-9]{3}( ||-|\.)[0-9]{4}/{print $0}'
+
 $
 ```
 
-虽然从这个列表中看不出来，但 `gawk` 命令在 shell 脚本中是单行的。你可以随后将电话号码重定向到脚本进行处理：
+虽然从这个列表中看不出来，但`gawk`命令在 shell 脚本中是单行的。你可以随后将电话号码重定向到脚本进行处理：
 
 ```bash
 $ echo "317-555-1234" | ./isphone
+
 317-555-1234
+
 $ echo "000-555-1234" | ./isphone
+
 $
 ```
 
@@ -13981,21 +14672,37 @@ $
 
 ```bash
 $ cat phonelist
+
 000-000-0000
+
 123-456-7890
+
 212-555-1234
+
 (317)555-1234
+
 (202) 555-9876
+
 33523
+
 1234567890
+
 234.123.4567
+
 $ cat phonelist | ./isphone
+
 212-555-1234
+
 (317)555-1234
+
 (202) 555-9876
+
 234.123.4567
+
 $
 ```
+
+
 
 只有匹配正则表达式模式的有效电话号码才会出现。
 
@@ -14007,15 +14714,15 @@ $
 
 `username` 值可以使用任何字母数字字符，以及几个特殊字符：
 
-* 点
-* 连字符
-* 加号
-* 下划线
+- 点
+- 连字符
+- 加号
+- 下划线
 
 这些字符可以以任何组合的形式出现在有效的电子邮件用户 ID 中。电子邮件地址的 `hostname` 部分由一个或多个域名和一个服务器名称组成。服务器和域名也必须遵循严格的命名规则，仅允许字母数字字符以及以下特殊字符：
 
-* 点
-* 下划线
+- 点
+- 下划线
 
 服务器名和域名之间都用点分隔，先指定服务器名，接着指定任何子域名，最后是不带尾部点的顶级域名。
 
@@ -14033,9 +14740,9 @@ $
 
 此模式匹配文本：
 
-`server`
-`server.subdomain`
-`server.subdomain.subdomain`
+- `server`
+- `server.subdomain`
+- `server.subdomain.subdomain`
 
 顶级域名有特殊的规则。顶级域名仅由字母组成，且长度不能少于两个字符（用于国家代码）且不能超过五个字符。以下是顶级域名的正则表达式模式：
 
@@ -14049,73 +14756,91 @@ $
 
 ```bash
 $ echo "rich@here.now" | ./isemail
+
 rich@here.now
+
 $ echo "rich@here.now." | ./isemail
+
 $
+
 $ echo "rich@here.n" | ./isemail
+
 $
+
 $ echo "rich@here-now" | ./isemail
+
 $
 ```
 
-总结
+## 总结
 
-
-
-
-如果你在 shell 脚本中处理数据文件，那么你就需要熟悉正则表达式。正则表达式在 Linux 节点、编程语言以及使用正则表达式引擎的应用程序中实现。Linux 世界中有许多不同的正则表达式引擎。最流行的两个是 POSIX 基础正则表达式 (BRE) 引擎和 POSIX 扩展正则表达式 (ERE) 引擎。`sed` 编辑器主要符合 `BRE` 引擎，而 `gawk` 程序利用了 `ERE` 引擎中的大多数功能。
+如果你在 shell 脚本中处理数据文件，那么你就需要熟悉正则表达式。正则表达式在 Linux 节点、编程语言以及使用正则表达式引擎的应用程序中实现。Linux 世界中有许多不同的正则表达式引擎。最流行的两个是 POSIX 基础正则表达式（BRE）引擎和 POSIX 扩展正则表达式（ERE）引擎。`sed` 编辑器主要符合 `BRE` 引擎，而 `gawk` 程序利用了 `ERE` 引擎中的大多数功能。
 
 正则表达式定义了一个模式模板，用于过滤数据流中的文本。该模式由标准文本字符和特殊字符组合。特殊字符被正则表达式引擎用于匹配一个或多个字符的序列，类似于其他应用程序中通配符的工作方式。
 
-通过通过组合字符和特殊字符，你可以定义一个模式来匹配几乎任何类型的数据。然后，你可以使用 `sed` 编辑器或 `gawk` 程序从较大的数据流中过滤出特定数据，或者对从数据输入应用程序接收的数据进行验证。
+通过组合字符和特殊字符，你可以定义一个模式来匹配几乎任何类型的数据。然后，你可以使用 `sed` 编辑器或 `gawk` 程序从较大的数据流中过滤出特定数据，或者对从数据输入应用程序接收的数据进行验证。
 
 下一章将深入探讨如何使用 `sed` 编辑器进行高级文本处理。`sed` 编辑器提供了许多高级功能，使其在处理大型数据流和过滤你所需的内容时非常有用。
 
 # 第 20 章：高级 sed
 
 ## 本章内容
-* 多行命令
-* 留存空间 (hold space)
-* 取反命令
-* 改变流程
-* 模式替换
-* 在脚本中使用 `sed`
-* 创建 `sed` 工具
+
+- 多行命令
+- 留存空间（hold space）
+- 取反命令
+- 改变流程
+- 模式替换
+- 在脚本中使用 `sed`
+- 创建 `sed` 工具
 
 第 18 章向你展示了如何使用 `sed` 编辑器的基础操作来处理数据流中的文本。基础 `sed` 编辑器命令能够处理大多数日常文本编辑需求。本章将介绍 `sed` 编辑器提供的更高级的功能。这些功能你可能不会经常使用，但当你需要它们时，知道它们的存在以及如何使用它们是非常有的。
 
 ## 多行命令
-在使用基础 `sed` 编辑器命令时，你可能注意到一个局限性。所有的 `sed` 编辑器命令都在单行数据上执行操作。当 `sed` 编辑器读取数据流时，它根据换行符的存在将数据划若干行。`sed` 编辑器一次处理一行数据，在某行文本上执行定义的脚本命令，然后移动到下一行并重复该过程。
+
+在使用基础 `sed` 编辑器命令时，你可能注意到一个局限性。所有的 `sed` 编辑器命令都在单行数据上执行操作。当 `sed` 编辑器读取数据流时，它根据换行符的存在将数据划分为若干行。`sed` 编辑器一次处理一行数据，在某行文本上执行定义的脚本命令，然后移动到下一行并重复该过程。
 
 有时，你需要对跨越多行的数据执行操作。当你尝试查找或替换某个短语时，情况尤为如此。
 
 例如，如果你在数据中查找短语 `Linux System Administrators Group`，该短语很有可能在短语中的任何单词之间被拆分成两行。如果你使用普通的 `sed` 编辑器命令处理文本，将无法检测到该短语是如何拆分的。
 
 幸运的是，`sed` 编辑器的设计者考虑到了这种情况并设计了一种解决方案。`sed` 编辑器包含了三个用于处理多行文本的特殊命令：
-* `N`: 将数据流中的下一行添加以创建一个用于处理的多行组。
-* `D`: 删除多行组中的单行。
-* `P`: 打印多行组中的单行。
+
+- `N`：将数据流中的下一行添加以创建一个用于处理的多行组。
+- `D`：删除多行组中的单行。
+- `P`：打印多行组中的单行。
 
 接下来的章节将更详细地检查这些多行命令，并演示你如何在脚本中使用它们。
 
-## next 命令
-在检查多行 `next` 命令 之前，你首先需要查看单行版本的 `next` 命令是如何工作的。一旦你了解了该命令的作用，理解多行版本 `next` 命令的运行机制就会容易得多。
+## `next` 命令
 
-### 单行 next 命令
+在检查多行 `next` 命令之前，你首先需要查看单行版本的 `next` 命令是如何工作的。一旦你了解了该命令的作用，理解多行版本 `next` 命令的运行机制就会容易得多。
+
+### 单行 `next` 命令
+
 小写 `n` 命令告诉 `sed` 编辑器移动到数据流中的下一行文本，而不返回命令的开头。请记住，通常情况下，`sed` 编辑器会在移动到数据流中的下一行文本之前，处理该行上的所有定义命令。单行 `next` 命令改变了这种流程。
 
 这听起来有些复杂，有时确实如此。在这个示例中，你有一个包含五行的数据文件，其中两行是空的。目标是移除标题行之后的空行，但保留最后一行之前的空行。如果你写一个 `sed` 脚本来删除空行，你将删除两个空行：
 
 ```bash
 $ cat data1
+
 This is the header line.
+
 This is a data line.
+
 This is the last line.
-$ 
+
+$
+
 $ sed ‘/^$/d’ data1
+
 This is the header line.
+
 This is a data line.
+
 This is the last line.
+
 $
 ```
 
@@ -14123,31 +14848,47 @@ $
 
 ```bash
 $ sed ‘/header/{n ; d}’ data1
+
 This is the header line.
+
 This is a data line.
+
 This is the last line.
+
 $
 ```
 
 此时，`sed` 编辑器继续处理命令列表，使用 `d` 命令删除该空行。当 `sed` 编辑器到达命令脚本的结尾时，它从数据流读取下一行文本并从命令脚本的顶部开始处理命令。`sed` 编辑器没有找到另一个包含 `header` 单词的行；因此不再删除后续行。
 
 ### 合并文本行
+
 现在你已经看到了单行 `next` 命令，可以查看多行版本。单行 `next` 命令将数据流中的下一行文本移动到 `sed` 编辑器的处理空间（称为模式空间，pattern space）。多行版本的 `next` 命令（使用大写 `N`）将下一行文本添加到模式空间中已有的文本中。
 
 这种操作的效果是将数据流中的两行文本合并到同一个模式空间中。文本行之间仍然由换行符分隔，但 `sed` 编辑器现在可以将这两行文本视为一行。
 
 以下是 `N` 命令如何运行的演示：
 
-```bash be$ cat data2
+```bash
+$ cat data2
+
 This is the header line.
+
 This is the first data line.
+
 This is the second data line.
+
 This is the last line.
-$ 
+
+$
+
 $ sed ‘/first/{ N ; s/\n/ / }’ data2
+
 This is the header line.
+
 This is the first data line. This is the second data line.
+
 This is the last line.
+
 $
 ```
 
@@ -14157,31 +14898,42 @@ $
 
 ```bash
 $ cat data3
+
 The first meeting of the Linux System
+
 Administrator's group will be held on Tuesday.
+
 All System Administrators should attend this meeting.
+
 Thank you for your attendance.
-$ 
+
+$
+
 $ sed ‘s/System Administrator/Desktop User/’ data3
+
 The first meeting of the Linux SystemAdministrator's group will be held on Tuesday.
+
 All Desktop Users should attend this meeting.
+
 Thank you for your attendance.
+
 $
 ```
 
-替换命令在文本文件中查找特定的双单词短语 `System Administrator`。在短语出现的的单行中，一切都是正常的；替换命令可以替换文本。但在短语被拆分在两行之间，替换命令无法识别匹配模式。
+替换命令在文本文件中查找特定的双单词短语 `System Administrator`。在短语出现的单行中，一切都是正常的；替换命令可以替换文本。但在短语被拆分在两行之间，替换命令无法识别匹配模式。
 
 `N` 命令有助于解决这个问题：
 
 
-
-
-
 ```bash
 $ sed 'N ; s/System.Administrator/Desktop User/' data3
+
 The first meeting of the Linux Desktop User's group will be held on Tuesday.
+
 All Desktop Users should attend this meeting.
+
 Thank you for your attendance.
+
 $
 ```
 
@@ -14193,14 +14945,23 @@ $
 
 ```bash
 $ sed '
+
 > N
+
 > s/System\nAdministrator/Desktop\nUser/
+
 > s/System Administrator/Desktop User/
+
 ' data3
+
 The first meeting of the Linux Desktop
+
 User's group will be held on Tuesday.
+
 All Desktop Users should attend this meeting.
+
 Thank you for your attendance.
+
 $
 ```
 
@@ -14210,19 +14971,31 @@ $
 
 ```bash
 $ cat data4
+
 The first meeting of the Linux System
+
 Administrator's group will be held on Tuesday.
+
 All System Administrators should attend this meeting.
-$ 
+
+$
 
 $ sed '
+
 > N
+
 > s/System\nAdministrator/Desktop\nUser/
+
 > s/System Administrator/Desktop User/
+
 ' data4
+
 The first meeting of the Linux Desktop
+
 User's group will be held on Tuesday.
+
 All System Administrators should attend this meeting.
+
 $
 ```
 
@@ -14230,13 +15003,21 @@ $
 
 ```bash
 $ sed '
+
 > s/System Administrator/Desktop User/
+
 > N
+
 > s/System\nAdministrator/Desktop\nUser/
+
 ' data4
+
 The first meeting of the Linux Desktop
+
 User's group will be held on Tuesday.
+
 All Desktop Users should attend this meeting.
+
 $
 ```
 
@@ -14248,7 +15029,9 @@ $
 
 ```bash
 $ sed 'N ; /System\nAdministrator/d' data4
+
 All System Administrators should attend this meeting.
+
 $
 ```
 
@@ -14258,8 +15041,11 @@ $
 
 ```bash
 $ sed 'N ; /System\nAdministrator/d' data4
+
 Administrator's group will be held on Tuesday.
+
 All System Administrators should attend this meeting.
+
 $
 ```
 
@@ -14269,15 +15055,23 @@ $
 
 ```bash
 $ cat data5
+
 This is the header line.
+
 This is a data line.
+
 This is the last line.
-$ 
+
+$
 
 $ sed '/^$/{N ; /header/D}' data5
+
 This is the header line.
+
 This is a data line.
+
 This is the last line.
+
 $
 ```
 
@@ -14289,17 +15083,21 @@ $
 
 ```bash
 $ sed -n 'N ; /System\nAdministrator/P' data3
+
 The first meeting of the Linux System
+
 $
 ```
 
-当发生多行匹配时，`P` 命令只打印模式空间中的第一行。多行 `P` 命令的力量在与 `N` 和 `D` 命令结合时发挥作用。`D` 命令有一个独特的特性，它会强制 `sed` 编辑器返回脚本开头并在相同的模式空间上重复命令（它不会从数据流中读取新行）。通过在命令脚本中包含 `N` 命令，你可以有效地逐步通过模式空间，将多行结合。接下来，通过使用 `P` 命令你可以打印第一行，然后使用 `D` 命令删除第一行并返回开头。一旦你回到脚本开头，`N` 命令就会读取下一行文本并重新开始过程。这个循环一直持续到数据流的结束。
+
+
+当发生多行匹配时，`P`命令只打印模式空间中的第一行。多行`P`命令的力量在与`N`和`D`命令结合时发挥作用。`D`命令有一个独特的特性，它会强制`sed`编辑器返回脚本开头并在相同的模式空间上重复命令（它不会从数据流中读取新行）。通过在命令脚本中包含`N`命令，你可以有效地逐步通过模式空间，将多行结合。接下来，通过使用`P`命令你可以打印第一行，然后使用`D`命令删除第一行并返回开头。一旦你回到脚本开头，`N`命令就会读取下一行文本并重新开始过程。这个循环一直持续到数据流的结束。
 
 ## 留存空间 (Hold Space)
 
-模式空间是一个活动缓冲区区域，用于存放 `sed` 编辑器在处理命令时所检查的文本。然而，它不是 `sed` 编辑器中用于存储文本的空间。
+模式空间是一个活动缓冲区区域，用于存放`sed`编辑器在处理命令时所检查的文本。然而，它不是`sed`编辑器中用于存储文本的空间。
 
-`sed` 编辑器利用另一个称为留存空间的缓冲区区域。你可以在处理模式空间中的其他行时，使用留存空间来临时存放文本行。与操作留存空间相关的五个命令，如表 20.1 所示。
+`sed`编辑器利用另一个称为留存空间的缓冲区区域。你可以在处理模式空间中的其他行时，使用留存空间来临时存放文本行。与操作留存空间相关的五个命令，如表 20.1 所示。
 
 ### 表 20.1 sed 编辑器留存空间命令
 
@@ -14313,20 +15111,21 @@ $
 
 这些命令允许你将文本从模式空间复制到留存空间。这释放了模式空间以便加载另一个字符串进行处理。
 
-通常在使用 `h` 或 `H` 命令将字符串移动到留存空间之后，你最终会想要使用 `g`、`G` 或 `x` 命令将存储的字符串移回模式空间（否则你一开始就不会在意保存它们）。
+通常在使用`h`或`H`命令将字符串移动到留存空间之后，你最终会想要使用`g`、`G`或`x`命令将存储的字符串移回模式空间（否则你一开始就不会在意保存它们）。
 
-
-
-
-
-由于有两个缓冲区区域，尝试确定某行文本位于哪个缓冲区区域有时会令人困惑。这里有一个简短的示例，演示了如何使用 `h` 和 `g` 命令在 sed 编辑器的缓冲区空间之间来移动数据：
+由于有两个缓冲区区域，尝试确定某行文本位于哪个缓冲区区域有时会令人困惑。这里有一个简短的示例，演示了如何使用`h`和`g`命令在`sed`编辑器的缓冲区空间之间来移动数据：
 
 ```
 $ cat data2
+
 This is the header line.
+
 This is the first data line.
+
 This is the second data line.
+
 This is the last line.
+
 $ 
 ```
 
@@ -14347,15 +15146,15 @@ $
 
 请逐步查看上述代码示例：
 
-1. `sed` 脚本在地址中使用正则表达式来过滤包含单词 `first` 单词的行。
-2. 当出现包含 `first` 单词的行时，`h` 命令将该行放置在保持空间（hold space）中。
-3. `p` 命令打印模式空间（pattern space）的内容，此时仍第一行数据。
-4. `n` 命令从数据流中获取下一行（`This is the second data line`）并将其放入模式空间中。
-5. `p` 命令打印模式空间的内容，此时是第二行数据。
-6. `g` 命令将保持空间的内容（`This is the first data line`）放回模式空间，替换当前文本。
-7. `p` 命令打印模式空间当前的内容，此时已变回第一行数据。
+1. `sed`脚本在地址中使用正则表达式来过滤包含单词`first`单词的行。
+2. 当出现包含`first`单词的行时，`h`命令将该行放置在保持空间（hold space）中。
+3. `p`命令打印模式空间（pattern space）的内容，此时仍第一行数据。
+4. `n`命令从数据流中获取下一行（`This is the second data line`）并将其放入模式空间中。
+5. `p`命令打印模式空间的内容，此时是第二行数据。
+6. `g`命令将保持空间的内容（`This is the first data line`）放回模式空间，替换当前文本。
+7. `p`命令打印模式空间当前的内容，此时已变回第一行数据。
 
-通过使用保持空间来调整文本行的顺序，你可以强制让第一行数据在输出中出现在第二行数据之后。如果你直接删掉第一个 `p` 命令，就可以反向顺序输出这两行：
+通过使用保持空间来调整文本行的顺序，你可以强制让第一行数据在输出中出现在第二行数据之后。如果你直接删掉第一个`p`命令，就可以反向顺序输出这两行：
 
 ```
 $ sed -n ‘/first/{
@@ -14370,11 +15169,11 @@ This is the first data line.
 $
 ```
 
-这是一个有用功能的开始。你可以使用这种技术创建一个 `sed` 脚本来反转整个文本文件的行顺序！然而，要做到这一点，你需要了解 sed 编辑器的否定功能（negating feature），这正是下一节的重点。
+这是一个有用功能的开始。你可以使用这种技术创建一个`sed`脚本来反转整个文本文件的行顺序！然而，要做到这一点，你需要了解`sed`编辑器的否定功能（negating feature），这正是下一节的重点。
 
 ## 否定命令
 
-第 18 章展示了 sed 编辑器将命令应用于数据流中的每行文本，或者应用于由单个地址或地址范围专门指出的行。你也可以配置命令，使其不应用于数据流中的特定地址或地址范围。
+第 18 章展示了`sed`编辑器将命令应用于数据流中的每行文本，或者应用于由单个地址或地址范围专门指出的行。你也可以配置命令，使其不应用于数据流中的特定地址或地址范围。
 
 感叹号命令（`!`）用于否定一个命令。这意味着在命令通常会被激活的情况下，它并不会被激活。这里有一个演示此功能的示例：
 
@@ -14386,9 +15185,9 @@ This is the last line.
 $
 ```
 
-正常的 `p` 命令只会打印 `data2` 文件中包含单词 `header` 的那行。通过添加感叹号，文件中除了包含地址中引用的文本的行外，所有行都将被打印出来。
+正常的`p`命令只会打印`data2`文件中包含单词`header`的那行。通过添加感叹号，文件中除了包含地址中引用的文本的行外，所有行都将被打印出来。
 
-在几个应用场景中，使用感叹号非常有用。回想在本章较早，“后续命令”部分展示过一种情况：`sed` 编辑器命令不会在数据流的最后一行文本上操作，因为它后面没有行了。你可以使用感叹号来解决那个问题：
+在几个应用场景中，使用感叹号非常有用。回想在本章较早，“后续命令”部分展示过一种情况：`sed`编辑器命令不会在数据流的最后一行文本上操作，因为它后面没有行了。你可以使用感叹号来解决那个问题：
 
 ```
 $ sed ‘N; s/System.Administrator/Desktop User/’ data4
@@ -14398,10 +15197,10 @@ $
 $ sed ‘!N; s/System.Administrator/Desktop User/’ data4
 The first meeting of the Linux Desktop User's group will be held on Tuesday
 All Desktop Users should attend this meeting.
-$  
+$ 
 ```
 
-这个示例展示了配合 `N` 命令使用的感叹号，以及特殊地址 `$`。`$` 代表数据流中的最后一行文本，因此当 sed 编辑器到达最后一行时，它不会执行 `N` 命令。但对于所有其他行，它都会执行该命令。
+这个示例展示了配合`N`命令使用的感叹号，以及特殊地址`$`。`$`代表数据流中的最后一行文本，因此当`sed`编辑器到达最后一行时，它不会执行`N`命令。但对于所有其他行，它都会执行该命令。
 
 使用这种技术，你可以反转数据流中文本行的顺序。要反转文本流中出现的行顺序（先显示最后一行，最后显示第一行），你需要使用保持空间进行一些“花式操作”。
 
@@ -14421,13 +15220,13 @@ $
 
 ![](img/00014.jpg)
 
-使用这种技术时，你不希望在处理行时就打印它们。这意味着要为 `sed` 使用 `-n` 命令行选项。下一步需要确定的是如何将保持空间的文本追加到模式空间的文本中。这是通过使用 `G` 命令实现的。唯一的问题是，你不想将保持空间追加到处理的第一行文本上。这通过使用感叹号命令可以轻松解决：
+使用这种技术时，你不希望在处理行时就打印它们。这意味着要为`sed`使用`-n`命令行选项。下一步需要确定的是如何将保持空间的文本追加到模式空间的文本中。这是通过使用`G`命令实现的。唯一的问题是，你不想将保持空间追加到处理的第一行文本上。这通过使用感叹号命令可以轻松解决：
 
 ```
 1!G
 ```
 
-下一步是将新的模式空间（带有追加的反转行文本的文本行）放入保持空间中。这非常简单，只需使用 `h` 命令即可。
+下一步是将新的模式空间（带有追加的反转行文本的文本行）放入保持空间中。这非常简单，只需使用`h`命令即可。
 
 当你将整个数据流以反转顺序放在模式空间中时，你只需要打印结果即可。当你到达数据流的最后一行时，你就知道整个数据流已经在模式空间中了。要打印结果，只需使用以下命令：
 
@@ -14435,7 +15234,7 @@ $
 $p
 ```
 
-这些就是你创建行反转 sed 脚本所需的全部组件。现在在测试运行中尝试一下吧：
+这些就是你创建行反转`sed`脚本所需的全部组件。现在在测试运行中尝试一下吧：
 
 ```
 $ cat data2
@@ -14452,29 +15251,25 @@ This is the header line.
 $
 ```
 
-sed 编辑器的运行符合预期。脚本的输出反转了文本文件中原始行。这证明了在脚本中使用保持空间的力量。它提供了一种在脚本输出中操作行顺序的简便方法。
+`sed`编辑器的运行符合预期。脚本的输出反转了文本文件中原始行。这证明了在脚本中使用保持空间的力量。它提供了一种在脚本输出中操作行顺序的简便方法。
 
 > 注意
-
-> > 如果你好奇的话，有一个 Linux 命令可以执行反转文本文件的功能。`tac` 命令以反序显示文本文件。你可能注意到这个命令的名字很巧妙，因为它执行的是 `cat` 命令的反向功能。
+> 
+> > 如果你好奇的话，有一个 Linux 命令可以执行反转文本文件的功能。`tac`命令以反序显示文本文件。你可能注意到这个命令的名字很巧妙，因为它执行的是`cat`命令的反向功能。
 
 ## 改变流程
 
-通常，sed 编辑器从脚本顶部开始向脚本末尾处理命令（`D` 命令除外，它强制 sed 编辑器返回脚本开头而不读取新的文本行）。sed 编辑器提供了一种改变命令脚本流程的方法，产生类似于结构化编程环境的结果。
+通常，`sed`编辑器从脚本顶部开始向脚本末尾处理命令（`D`命令除外，它强制`sed`编辑器返回脚本开头而不读取新的文本行）。`sed`编辑器提供了一种改变命令脚本流程的方法，产生类似于结构化编程环境的结果。
 
 ## 分支（Branching）
 
-在上一节中，你看到了如何使用感叹号命令来否定命令对某行文本的影响。sed 编辑器提供了一种根据地址、地址模式或地址范围来否定整个命令块的方法。这允许你仅对数据流中的特定子集执行一组命令。
+在上一节中，你看到了如何使用感叹号命令来否定命令对某行文本的影响。`sed`编辑器提供了一种根据地址、地址模式或地址范围来否定整个命令块的方法。这允许你仅对数据流中的特定子集执行一组命令。
 
-`branch` 命令的格式为：
+`branch`命令的格式为：
 
 `[``address``]b [``label``]`
 
-`address` 参数决定了哪些行触发 `branch` 命令。`label` 参数定义了跳转的位置。如果没有 `label` 参数，`branch` 命令将执行到脚本末尾。
-
-
-
-
+`address`参数决定了哪些行触发`branch`命令。`label`参数定义了跳转的位置。如果没有`label`参数，`branch`命令将执行到脚本末尾。
 
 ```
 $ sed '{2,3b ; s/This is/Is this/;s/line./test?/}' data2
@@ -14485,15 +15280,15 @@ Is this the last test?
 $
 ```
 
-`branch` 命令会跳过数据流中第二行和第三行的 `substitution`（替换）命令。
+`branch`命令会跳过数据流中第二行和第三行的`substitution`（替换）命令。
 
-与其跳转到脚本的末尾，你可以为 `branch` 命令定义一个跳转到的标签（label）。标签以冒号开头，长度最多为七个字符：
+与其跳转到脚本的末尾，你可以为`branch`命令定义一个跳转到的标签（label）。标签以冒号开头，长度最多为七个字符：
 
 ```
 :label2
 ```
 
-要指定标签，只需将其添加在 `b` 命令之后即可。使用标签允许你跳过匹配 `branch` 模式的命令，但仍然处理脚本中的其他命令：
+要指定标签，只需将其添加在`b`命令之后即可。使用标签允许你跳过匹配`branch`模式的命令，但仍然处理脚本中的其他命令：
 
 ```
 $ sed '{/first/b jump1 ; s/This is the/No jump on/ 
@@ -14506,11 +15301,11 @@ No jump on last line
 $
 ```
 
-`branch` 命令指定：如果行中出现匹配文本“first”，程序应跳转到标记为 `jump1` 的脚本行。如果 `branch` 命令模式没有匹配，sed 编辑器将继续处理脚本中的命令，包括 `branch` 标签之后的命令。（因此，所有三个 `substitution` 命令都会在不匹配 `branch` 模式的行上处理。）
+`branch`命令指定：如果行中出现匹配文本“first”，程序应跳转到标记为`jump1`的脚本行。如果`branch`命令模式没有匹配，`sed`编辑器将继续处理脚本中的命令，包括`branch`标签之后的命令。（因此，所有三个`substitution`命令都会在不匹配`branch`模式的行上处理。）
 
-如果行匹配 `branch` 模式，sed 编辑器将跳转到 `branch` 标签行。因此，只有最后一个 `substitution` 命令会被执行。
+如果行匹配`branch`模式，`sed`编辑器将跳转到`branch`标签行。因此，只有最后一个`substitution`命令会被执行。
 
-示例显示了跳转到 sed 脚本中更靠处的标签。你也可以 `branch` 到脚本中较早出现的标签，从而创建一个循环效果：
+示例显示了跳转到`sed`脚本中更靠处的标签。你也可以`branch`到脚本中较早出现的标签，从而创建一个循环效果：
 
 ```
 $ echo “This, is, a, test, to, remove, commas. ” | sed -n '{
@@ -14526,9 +15321,9 @@ This is a test to remove, commas.
 This is a test to remove commas.
 ```
 
-脚本的每次迭代都会删除文本字符串中的第一个逗号并打印该字符串。这个脚本有一个缺陷：它永远不会结束。这种情况创建了一个无限循环，不断寻找逗号，直到你通过发送 `Ctrl+C` 组合键信号来手动停止它。
+脚本的每次迭代都会删除文本字符串中的第一个逗号并打印该字符串。这个脚本有一个缺陷：它永远不会结束。这种情况创建了一个无限循环，不断寻找逗号，直到你通过发送`Ctrl+C`组合键信号来手动停止它。
 
-为了防止这个问题，你应该为 `branch` 命令指定一个要查找的地址模式。如果模式不存在，跳转应该停止：
+为了防止这个问题，你应该为`branch`命令指定一个要查找的地址模式。如果模式不存在，跳转应该停止：
 
 ```
 $ echo “This, is, a, test, to, remove, commas. ” | sed -n '{
@@ -14545,21 +15340,21 @@ This is a test to remove commas.
 $
 ```
 
-现在，`branch` 命令仅在行中存在逗号时才进行跳转。在删除最后一个逗号后，`branch` 命令将不再执行，允许脚本正常结束。
+现在，`branch`命令仅在行中存在逗号时才进行跳转。在删除最后一个逗号后，`branch`命令将不再执行，允许脚本正常结束。
 
 ### 测试
 
-与 `branch` 命令类似，`test` 命令（`t`）也用于修改 sed 编辑器脚本的流程。`test` 命令不是根据地址跳转到标签，而是根据 `substitution` 命令的结果跳转到标签。
+与`branch`命令类似，`test`命令（`t`）也用于修改`sed`编辑器脚本的流程。`test`命令不是根据地址跳转到标签，而是根据`substitution`命令的结果跳转到标签。
 
-如果 `substitution` 命令成功匹配了模式，`test` 命令将跳转到指定的标签。如果 `substitution` 命令没有匹配模式，则 `test` 命令不会跳转。
+如果`substitution`命令成功匹配了模式，`test`命令将跳转到指定的标签。如果`substitution`命令没有匹配模式，则`test`命令不会跳转。
 
-`test` 命令使用与 `branch` 命令相同的格式：
+`test`命令使用与`branch`命令相同的格式：
 
 ```
 [address]t[label]
 ```
 
-与 `branch` 命令一样，如果你不指定标签，如果测试成功，sed 将跳转到脚本末尾。`test` 命令提供了一种在文本上执行基础 `if-then` 语句的便捷方法。例如，如果你在执行了另一个替换后就不需要进行替换，`test` 命令可以提供帮助：
+与`branch`命令一样，如果你不指定标签，如果测试成功，`sed`将跳转到脚本末尾。`test`命令提供了一种在文本上执行基础`if-then`语句的便捷方法。例如，如果你在执行了另一个替换后就不需要进行替换，`test`命令可以提供帮助：
 
 ```
 $ sed '{ 
@@ -14574,9 +15369,9 @@ No match on last line
 $
 ```
 
-第一个 `substitution` 命令查找模式 `first`。如果它匹配行中的模式，它将替换文本，并且 `test` 命令将跳过后续的 `substitution` 命令。如果第一个 `substitution` 命令没有匹配模式，则处理第二个 `substitution` 命令。
+第一个`substitution`命令查找模式`first`。如果它匹配行中的模式，它将替换文本，并且`test`命令将跳过后续的`substitution`命令。如果第一个`substitution`命令没有匹配模式，则处理第二个`substitution`命令。
 
-使用 `test` 命令，你可以清理你尝试使用 `branch` 命令时创建的循环：
+使用`test`命令，你可以清理你尝试使用`branch`命令时创建的循环：
 
 ```
 $ echo “This, is, a, test, to, remove, commas. ” | sed -n '{
@@ -14593,11 +15388,11 @@ This is a test to remove commas.
 $
 ```
 
-当没有更多可以执行的替换时，`test` 命令将不会跳转，并继续执行脚本的剩余部分。
+当没有更多可以执行的替换时，`test`命令将不会跳转，并继续执行脚本的剩余部分。
 
 ### 模式替换
 
-你已经看到了如何在 sed 命令中使用模式来替换数据流中的文本。然而，在使用通配符字符时，很难确切知道哪些文本会匹配模式。
+你已经看到了如何在`sed`命令中使用模式来替换数据流中的文本。然而，在使用通配符字符时，很难确切知道哪些文本会匹配模式。
 
 例如，假设你想在行中匹配到的单词周围加上双引号。如果你只是在模式中寻找一个单词进行匹配，这非常简单：
 
@@ -14613,51 +15408,57 @@ $ echo “The cat sleeps in his hat.” | sed 's/.at/“.at”/g'
 The “.at” sleeps in his “.
 ```
 
-`substitution` 字符串使用了点通配符来匹配字母字母“at”。遗憾的是，替换字符串并没有匹配该单词的值。
+`substitution`字符串使用了点通配符来匹配字母字母“at”。遗憾的是，替换字符串并没有匹配该单词的值。
 
 ### 符号
 
-sed 编辑器为你提供了一个解决方案。符号（`&`）用于表示 `substitution` 命令中的匹配模式。对于匹配定义的任何文本，你可以在替换模式中使用符号来调用它。这允许你操作匹配的任何单词：
+`sed`编辑器为你提供了一个解决方案。符号（`&`）用于表示`substitution`命令中的匹配模式。对于匹配定义的任何文本，你可以在替换模式中使用符号来调用它。这允许你操作匹配的任何单词：
 
 ```
 $ echo “The cat sleeps in his hat.” | sed 's/.at/“&”/g'
 The “cat” sleeps in his “hat”.
 ```
 
-当模式匹配 cat 时，“cat”出现在替换单词中。当匹配 hat 时，“hat”出现在替换单词中。
+
+
+
+当模式匹配`cat`时，“cat”出现在替换单词中。当匹配`hat`时，“hat”出现在替换单词中。
 
 ### 替换单个单词
 
-符号检索匹配 `substitution` 命令中指定模式的整个字符串。有时你只想检索字符串的子集。你也可以这样做，但有点复杂。
+符号检索匹配`substitution`命令中指定模式的整个字符串。有时你只想检索字符串的子集。你也可以这样做，但有点复杂。
 
-sed 编辑器使用括号在替换模式中定义子字符串组件。然后，你可以在替换模式中使用特殊字符引用每个子字符串组件。替换字符由反斜杠和一个数字组成。数字指示子字符串组件的位置。sed 编辑器为第一个组件分配字符 `\1`，第二个组件分配 `\2`，以此类推。
+`sed`编辑器使用括号在替换模式中定义子字符串组件。然后，你可以在替换模式中使用特殊字符引用每个子字符串组件。替换字符由反斜杠和一个数字组成。数字指示子字符串组件的位置。`sed`编辑器为第一个组件分配字符`\1`，第二个组件分配`\2`，以此类推。
 
-> 注意 在 `substitution` 命令中使用括号时，必须转转义将其识别为分组字符而不是普通括号。这与转义其他特殊字符的操作相反。
+> 注意：在`substitution`命令中使用括号时，必须转义将其识别为分组字符而不是普通括号。这与转义其他特殊字符的操作相反。
 
-看看这个在 sed 编辑器脚本中使用此功能的示例：
+看看这个在`sed`编辑器脚本中使用此功能的示例：
 
-```
+```bash
 $ echo “The System Administrator manual” | sed 's/\(System\) Administrator/\1 User/'
+
 The System User manual
 ```
 
-
-
-
-如果你需要用一个单词替换一个短语，而该单词是该短语的一个子字符串，但该子字符串恰好使用了通配符字符；那么使用子字符串组件将是救星：
+如果你需要用一个单词替换一个短语，而该单词是该短语的一个子字符串，但该子字符串恰好使用了通配符字符，那么使用子字符串组件将是救星：
 
 ```bash
 $ echo “That furry cat is pretty” | sed ‘s/furry \(.at\)/\1/’
 ```
-`That cat is pretty`
+
+```text
+That cat is pretty
+```
 
 ```bash
 $ echo “That furry hat is pretty” | sed ‘s/furry \(.at\)/\1/’
 ```
-`That hat is pretty`
-`$`
 
-在这种情况下，你不能使用安培符号 `&`，因为它会替换整个匹配模式。子字符串组件提供了答案，允许你只选择模式中的某部分作为替换模式。
+```text
+That hat is pretty
+```
+
+在这种情况下，你不能使用安培符号`&`，因为它会替换整个匹配模式。子字符串组件提供了答案，允许你只选择模式中的某部分作为替换模式。
 
 当你需要在两个或多个子字符串组件之间插入文本时，这个功能会特别有用。这里有一个使用子字符串组件在长数字中插入逗号的脚本：
 
@@ -14668,92 +15469,111 @@ s/\(.*[0-9]\)\([0-9]\{3\}\)/\1,\2/
 t start
 }'
 ```
-`1,234,567`
-`$`
+
+```text
+1,234,567
+```
 
 该脚本将匹配模式划分为两个组件：
-`.*[0-9]`
-`[0-9]{3}`
 
-此模式寻找两个子字符串。第一个子字符串是任意数量的字符，以数字结尾。第二个子字符串是一连续的三个数字（请参阅第 19 章获取有关如何在正则表达式中使用大括号的信息）。如果在文本中找到此模式，替换文本将会在两个组件之间放置一个逗号，每个组件由其组件位置进行标识。脚本使用 `test` 命令遍历数字，直到所有逗号都已就位。
+```text
+.*[0-9]
+[0-9]{3}
+```
 
-## 在脚本中使用 sed
+此模式寻找两个子字符串。第一个子字符串是任意数量的字符，以数字结尾。第二个子字符串是一连续的三个数字（请参阅第 19 章获取有关如何在正则表达式中使用大括号的信息）。如果在文本中找到此模式，替换文本将会在两个组件之间放置一个逗号，每个组件由其组件位置进行标识。脚本使用`test`命令遍历数字，直到所有逗号都已就位。
 
-现在你已经了解了 `sed` 编辑器的各个部分，是时候将它们整合起来并用在你的 shell 脚本中了。本节将演示在使用 `bash` shell 脚本中的 `sed` 编辑器时，你应该了解的一些特性。
+## 在脚本中使用`sed`
+
+现在你已经了解了`sed`编辑器的各个部分，是时候将它们整合起来并用在你的`shell`脚本中了。本节将演示在使用`bash` shell 脚本中的`sed`编辑器时，你应该了解的一些特性。
 
 ### 使用包装器
 
-你可能已经注意到，尝试实现一个 `sed` 编辑器脚本可能是麻烦的，特别是当脚本很长时。与其在每次使用它时都重新输入整个脚本，你不如将 `sed` 编辑器命令放置在一个 shell 脚本包装器中。包装器充当 `sed` 编辑器脚本和命令行之间的中间人。
+你可能已经注意到，尝试实现一个`sed`编辑器脚本可能是麻烦的，特别是当脚本很长时。与其在每次使用它时都重新输入整个脚本，你不如将`sed`编辑器命令放置在一个`shell`脚本包装器中。包装器充当`sed`编辑器脚本和命令行之间的中间人。
 
-一旦进入 shell 脚本，你就可以使用普通的 shell 变量和参数配合你的 `sed` 编辑器脚本。这里有一个使用命令行参数变量作为 `sed` 脚本输入的示例：
+一旦进入`shell`脚本，你就可以使用普通的`shell`变量和参数配合你的`sed`编辑器脚本。这里有一个使用命令行参数变量作为`sed`脚本输入的示例：
 
 ```bash
 $ cat reverse
+
 #!/bin/bash
+
 # 用于反转行的 sed 编辑器脚本 shell 包装器
+
 sed -n '{
 1!G
 h
 $p
 }' $1
-$
 ```
 
-名为 `reverse` 的 shell 脚本使用 `sed` 编辑器脚本来反转数据流中的文本行。它使用 shell 参数 `$1` 从命令行中获取第一个参数，该参数应该是要反转的文件名：
+名为`reverse`的`shell`脚本使用`sed`编辑器脚本来反转数据流中的文本行。它使用`shell`参数`$1`从命令行中获取第一个参数，该参数应该是要反转的文件名：
 
 ```bash
 $ ./reverse data2
+
 This is the last line.
+
 This is the second data line.
+
 This is the first data line.
+
 This is the header line.
-$
 ```
 
-现在你可以轻松地在任何文件上使用 `sed` 编辑器脚本，而不需要不断重新输入整个命令行。
+现在你可以轻松地在任何文件上使用`sed`编辑器脚本，而不需要不断重新输入整个命令行。
 
-### 重定向 sed 输出
+### 重定向`sed`输出
 
-默认情况下，`sed` 编辑器将脚本结果输出到 `STDOUT`。你可以在 shell 脚本中使用所有标准方法来重定向 `sed` 编辑器的输出。
+默认情况下，`sed`编辑器将脚本结果输出到`STDOUT`。你可以在`shell`脚本中使用所有标准方法来重定向`sed`编辑器的输出。
 
-你可以使用反引号将 `sed` 编辑器命令的输出重定向到变量，以便在脚本后续使用。以下是一个使用 `sed` 脚本为数值计算结果添加逗号的示例：
+你可以使用反引号将`sed`编辑器命令的输出重定向到变量，以便在脚本后续使用。以下是一个使用`sed`脚本为数值计算结果添加逗号的示例：
 
 ```bash
 $ cat fact
+
 #!/bin/bash
+
 # 在阶乘答案中为数字添加逗号
+
 factorial=1
 counter=1
 number=$1
+
 while [ $counter -le $number ]
 do
     factorial=$[ $factorial * $counter ]
     counter=$[ $counter + 1 ]
 done
+
 result=`echo $factorial | sed '{
 :start
 s/\(.*[0-9]\)\([0-9]\{3\}\)/\1,\2/
 t start
 }'`
+
 echo "The result is $result"
-$ 
-$ ./fact 20
-The result is 2,432,902,008,176,640,000
-$
 ```
 
-在使用完普通的阶乘计算脚本后，该脚本的结果被作为 `sed` 编辑器脚本的输入，后者添加逗号。该值随后被用于 `echo` 语句以产生结果。
+```bash
+$ ./fact 20
 
-## 创建 sed 实用程序
+The result is 2,432,902,008,176,640,000
+```
 
-正如本章目前为止提供的简短示例所示，使用 `sed` 编辑器可以完成许多酷的数据格式化工作。本节展示了一些用于执行常见数据处理函数的常用 `sed` 编辑器脚本。
+在使用完普通的阶乘计算脚本后，该脚本的结果被作为`sed`编辑器脚本的输入，后者添加逗号。该值随后被用于`echo`语句以产生结果。
+
+## 创建`sed`实用程序
+
+正如本章目前为止提供的简短示例所示，使用`sed`编辑器可以完成许多酷的数据格式化工作。本节展示了一些用于执行常见数据处理函数的常用`sed`编辑器脚本。
 
 ### 行间空行
 
-正如你在本章中看到的这些简短示例，你可以使用 `sed` 编辑器完成许多酷的数据格式化任务。为了开始，请看下面这个简单的 `sed` 脚本，它在文本文件的行之间插入空行：
+正如你在本章中看到的这些简短示例，你可以使用`sed`编辑器完成许多酷的数据格式化任务。为了开始，请看下面这个简单的`sed`脚本，它在文本文件的行之间插入空行：
 
 ```bash
 $ sed 'G' data2
+
 This is the header line.
 
 This is the first data line.
@@ -14761,25 +15581,27 @@ This is the first data line.
 This is the second data line.
 
 This is the last line.
-
-$
 ```
 
-这非常简单！这个技巧的关键在于保持空间（hold space）。`G` 命令会将保持空间的内容附加到当前行。当你启动编辑器时，保持空间包含一个空行。你可能已经注意到这个脚本会在文件末尾添加一个空行。如果你想消除这个，可以使用取反符号 `!` 和行尾符号 `$`：
+这非常简单！这个技巧的关键在于保持空间（hold space）。`G`命令会将保持空间的内容附加到当前行。当你启动编辑器时，保持空间包含一个空行。你可能已经注意到这个脚本会在文件末尾添加一个空行。如果你想消除这个，可以使用取反符号`!`和行尾符号`$`：
 
 ```bash
 $ sed '!G' data2
+
 This is the header line.
+
 This is the first data line.
+
 This is the second data line.
+
 This is the last line.
-$
 ```
 
 要把行间距更进一步，如果文本文件已经有了空行，但你想让所有行翻倍呢？如果你使用之前的脚本，你会得到过多的行：
 
 ```bash
 $ sed 'G' data6
+
 This is line one.
 
 This is line two.
@@ -14787,17 +15609,17 @@ This is line two.
 This is line three.
 
 This is line four.
-
-$
 ```
 
-```cat data6
+```bash
+$ cat data6
 ```
 
-现在你在原来的空行处有了三个空行。解决这个问题的方案是先删除数据流中的任何空行，然后使用 `G` 命令插入新行。为了删除现有的行，你只需要配合匹配空行的模式使用 `d` 命令：`/$/`。此模式使用了符号 `^` 和行尾标签 `$`。
+现在你在原来的空行处有了三个空行。解决这个问题的方案是先删除数据流中的任何空行，然后使用`G`命令插入新行。为了删除现有的行，你只需要配合匹配空行的模式使用`d`命令：`/$/`。此模式使用了符号`^`和行尾标签`$`。
 
 ```bash
 $ sed '/$/d;$G' data6
+
 This is line one.
 
 This is line two.
@@ -14805,16 +15627,15 @@ This is line two.
 This is line three.
 
 This is line four.
-
-$
 ```
 
 ### 为文件中的行进行编号
 
-上一章（第 18 章）向你展示了如何使用等号 `=` 显示数据流中行的行号：
+上一章（第 18 章）向你展示了如何使用等号`=`显示数据流中行的行号：
 
 ```bash
 $ sed = data2
+
 1
 This is the header line.
 2
@@ -14823,50 +15644,42 @@ This is the first data line.
 This is the second data line.
 4
 This is the last line.
-$
 ```
 
-这读起来有点不方便，因为行号在数据流中实际行的上方。更好的解决方案是将行号与文本放在同一行。现在你已经学会了如何使用 `N` 命令合并行，在 `sed` 编辑器脚本中使用这些信息应该不难。然而，这个实用工具的技巧在于，你不能在同一个脚本中组合这两个命令。
+这读起来有点不方便，因为行号在数据流中实际行的上方。更好的解决方案是将行号与文本放在同一行。现在你已经学会了如何使用`N`命令合并行，在`sed`编辑器脚本中使用这些信息应该不难。然而，这个实用工具的技巧在于，你不能在同一个脚本中组合这两个命令。
 
-一旦你获得了等号命令的输出，你可以将其输出管道到另一个 `sed` 编辑器脚本，该脚本使用 `N` 命令合并这两行。你还需要使用 `substitution` 命令将换行符替换为空格或制表符。以下是最终解决方案的样式所示：
+一旦你获得了等号命令的输出，你可以将其输出管道到另一个`sed`编辑器脚本，该脚本使用`N`命令合并这两行。你还需要使用`substitution`命令将换行符替换为空格或制表符。以下是最终解决方案的样式所示：
 
 ```bash
 $ sed = data2 | sed 'N; s/\n/ /'
-```
+
 1 This is the header line.
 2 This is the first data line.
-
-
-
-
-
-```
 3 This is the second data line.
 4 This is the last line.
-$
 ```
 
-现在看起来好多。。在编写程序时，你需要查看错误信息中使用的行号，这是一个非常实用的辅助工具。
+现在看起来好多了。在编写程序时，你需要查看错误信息中使用的行号，这是一个非常实用的辅助工具。
 
 ## 打印最后几行
 
-到目前为止，你已经看到如何使用 `p` 命令打印数据流中的所有行，或者只打印匹配特定模式的行。如果你只需要处理长列表（例如日志文件）的最后几行，该怎么办呢？
+到目前为止，你已经看到如何使用`p`命令打印数据流中的所有行，或者只打印匹配特定模式的行。如果你只需要处理长列表（例如日志文件）的最后几行，该怎么办呢？
 
-美元符号 `$` 代表数据流的最后一行，因此可以很容易地只显示最后一行：
+美元符号`$`代表数据流的最后一行，因此可以很容易地只显示最后一行：
 
-```
+```bash
 $ sed -n ‘$p’ data2
+
 This is the last line.
-$
 ```
 
-现在，你如何使用美元符号 `$` 在数据流末尾显示固定数量的行呢？答案是创建一个滚动窗口。
+现在，你如何使用美元符号`$`在数据流末尾显示固定数量的行呢？答案是创建一个滚动窗口。
 
-滚动窗口是通过使用 `N` 命令将文本行组合，并在模式空间（pattern space）中检查文本块的常用方法。`N` 命令将下一行文本附加到模式空间中已有的文本。一旦你在模式空间中获得了一个包含 10 行文本的块，就可以使用美元符号检查你是否处于数据流的末尾。如果不在末尾，则继续向模式空间添加更多行，同时删除原始行（记住 `D` 命令，它会删除模式空间中的第一行）。
+滚动窗口是通过使用`N`命令将文本行组合，并在模式空间（pattern space）中检查文本块的常用方法。`N`命令将下一行文本附加到模式空间中已有的文本。一旦你在模式空间中获得了一个包含 10 行文本的块，就可以使用美元符号检查你是否处于数据流的末尾。如果不在末尾，则继续向模式空间添加更多行，同时删除原始行（记住`D`命令，它会删除模式空间中的第一行）。
 
-通过循环 `N` 和 `D` 命令，你向模式空间中的行块添加新行，同时删除旧行。`branch` 命令是该循环的完美选择。要结束循环，只需识别最后一行并使用 `q` 命令退出即可。
+通过循环`N`和`D`命令，你向模式空间中的行块添加新行，同时删除旧行。`branch`命令是该循环的完美选择。要结束循环，只需识别最后一行并使用`q`命令退出即可。
 
-这里是最终的 sed 编辑器脚本的样式：
+这里是最终的`sed`编辑器脚本的样式：
 
 ```bash
 $ sed ‘{
@@ -14876,6 +15689,7 @@ N
 11,$D
 b start
 }’ /etc/passwd
+
 user:x:1000:1000:user,,,:/home/user:/bin/bash
 polkituser:x:113:121:PolicyKit,,,:/var/run/PolicyKit:/bin/false
 sshd:x:114:65534::/var/run/sshd:/usr/sbin/nologin
@@ -14886,22 +15700,21 @@ rtkit:x:117:125:RealtimeKit,,,:/proc:/bin/false
 Timothy:x:1002:1005::/home/Timothy:/bin/sh
 Christine:x:1003:1006::/home/Christine:/bin/sh
 kdm:x:118:65534::/home/kdm:/bin/false
-$
 ```
 
-脚本首先检查该行是否为数据流的最后一行。如果是，`quit` 命令将停止循环。`N` 命令将下一行附加到模式空间中的当前行。`11,$D` 命令表示如果当前行在第 10 行之后，则删除模式空间中的第一行。这在模式空间中创建了滑动窗口的效果。
+脚本首先检查该行是否为数据流的最后一行。如果是，`quit`命令将停止循环。`N`命令将下一行附加到模式空间中的当前行。`11,$D`命令表示如果当前行在第 10 行之后，则删除模式空间中的第一行。这在模式空间中创建了滑动窗口的效果。
 
 ## 删除行
 
-sed 编辑器的另一个实用工具是删除数据流中不需要的空行。从数据流中删除所有空行很容易，但有选择地删除空行需要一点技巧。本节将向你展示几个简单的 sed 脚本，可以帮助你从数据中删除不需要的空行。
+`sed`编辑器的另一个实用工具是删除数据流中不需要的空行。从数据流中删除所有空行很容易，但有选择地删除空行需要一点技巧。本节将向你展示几个简单的`sed`脚本，可以帮助你从数据中删除不需要的空行。
 
 ### 删除连续的空行
 
 数据文件中出现额外的空行可能会很困扰。通常情况下，你的数据文件包含空行，但有时缺少某行数据会导致产生过多的空行（正如你之前在双倍间距示例中看到的）。
 
-删除连续空行的最简单方法是使用范围地址检查数据流。第 18 章向你展示了如何在地址中使用范围，包括如何将模式包含在地址范围中。sed 编辑器会对在指定地址范围内匹配模式的所有行执行命令。
+删除连续空行的最简单方法是使用范围地址检查数据流。第 18 章向你展示了如何在地址中使用范围，包括如何将模式包含在地址范围中。`sed`编辑器会对在指定地址范围内匹配模式的所有行执行命令。
 
-删除连续空行的关键是创建一个包含一个非空行和一个空行的地址范围。如果 sed 编辑器遇到这个范围，它就不应该删除该行。然而，对于不匹配该范围的行（连续的两个或多个空行），它应该删除这些行。
+删除连续空行的关键是创建一个包含一个非空行和一个空行的地址范围。如果`sed`编辑器遇到这个范围，它就不应该删除该行。然而，对于不匹配该范围的行（连续的两个或多个空行），它应该删除这些行。
 
 这里是实现此操作的脚本：
 
@@ -14909,23 +15722,30 @@ sed 编辑器的另一个实用工具是删除数据流中不需要的空行。�
 /./,/^$/!d
 ```
 
-范围是从 `/./` 到 `/^$/`。范围中的起始地址匹配包含至少一个字符的任何行。范围中的结束地址匹配空行。此范围内的行不会被删除。
+范围是从`/./`到`/^$/`。范围中的起始地址匹配包含至少一个字符的任何行。范围中的结束地址匹配空行。此范围内的行不会被删除。
 
 这里是脚本的运行实例：
 
 ```bash
 $ cat data6
+
 This is the first line.
+
 This is the second line.
+
 This is the third line.
+
 This is the fourth line.
-$
+
 $ sed '/./,/^$/!d' data6
+
 This is the first line.
+
 This is the second line.
+
 This is the third line.
+
 This is the fourth line.
-$
 ```
 
 无论文件中的数据行之间出现多少空行，输出都只在行之间保留一个空行。
@@ -14946,13 +15766,16 @@ $
 
 ```bash
 $ cat data7
+
 This is the first line.
+
 This is the second line.
-$
+
 $ sed '/./,$!d' data7
+
 This is the first line.
+
 This is the second line.
-$
 ```
 
 测试文件在数据行之前有两个空行。脚本成功删除了两个开头的空行，同时保持了数据内部空行的完好。
@@ -14970,27 +15793,30 @@ sed '{
 }'
 ```
 
-初看起来这看起来可能有点奇怪。注意普通脚本括号内部还有括号。这允许你在整个命令脚本中将命令组合在一起。命令组适用于指定的地址模式。地址模式匹配任何仅包含换行符的行。当找到这样的行时，如果它是最后一行，`delete` 命令将将其删除。如果不是最后一行，`N` 命令将下一行附加到其后，`branch` 命令将循环到开头重新开始。
+初看起来这看起来可能有点奇怪。注意普通脚本括号内部还有括号。这允许你在整个命令脚本中将命令组合在一起。命令组适用于指定的地址模式。地址模式匹配任何仅包含换行符的行。当找到这样的行时，如果它是最后一行，`delete`命令将将其删除。如果不是最后一行，`N`命令将下一行附加到其后，`branch`命令将循环到开头重新开始。
 
 这里是脚本的运行实例：
 
 ```bash
 $ cat data8
+
 This is the first line.
+
 This is the second line.
-$
+
 $ sed '{
 :start
 /^\n*$/{$d; N; b start}
 }' data8
+
 This is the first line.
+
 This is the second line.
-$
 ```
 
 脚本成功删除了文本文件结尾的空行。
 
-##  HTML 标签
+## HTML 标签
 
 在当今时代，从网站下载文本以保存或作为应用程序中的数据并不稀奇。然而，有时当你从网站下载文本时，你也会获得用于格式化数据的 HTML 标签。当你只想看到数据时，这可能会成为一个问题。
 
@@ -14998,37 +15824,50 @@ $
 
 ```bash
 $ cat data9
+
 <html>
+
 <head>
+
 <title>This is the page title</title>
+
 </head>
+
 <body>
+
 <p>
+
 This is the <b>>first</b> line in the Web page. This should provide
+
 some <i>useful</i> information for us to use in our shell script.
+
 </p>
+
 </body>
+
 </html>
-$
 ```
 
-HTML 标签通过小于号和大于符号识别。大多数 HTML 标签都是成对出现的。一个标签开始格式化过程（例如，`<b>` 用于加粗），另一个标签停止格式化过程（例如，`</b>` 取消加粗）。
+HTML 标签通过小于号和大于符号识别。大多数 HTML 标签都是成对出现的。一个标签开始格式化过程（例如，`<b>`用于加粗），另一个标签停止格式化过程（例如，`</b>`取消加粗）。
 
-
-
-
-移除 HTML 标签会产生一个问题，如果你不小心的话。乍一看，你可能会认为移除 HTML 标签的方法只是寻找一个以小于符号（<）开头、以大于符号（>）结尾且符号之间有数据的文本字符串：
+移除 HTML 标签会产生一个问题，如果你不小心的话。乍一看，你可能会认为移除 HTML 标签的方法只是寻找一个以小于符号（`<`）开头、以大于符号（`>`）结尾且符号之间有数据的文本字符串：
 
 ```bash
 s/<.*>//g
 ```
 
+
+
+
 遗憾的是，这个命令会导致意外之外的后果：
 
 ```bash
 $ sed ‘s/<.*>//g’ data9
+
 This is the line in the Web page. This should provide
+
 some information for us to use in our shell script.
+
 $
 ```
 
@@ -15044,9 +15883,13 @@ s/<[^>]*>//g
 
 ```bash
 $ sed ‘s/<[^>]*>//g’ data9
+
 This is the page title
+
 This is the first line in the Web page. This should provide
+
 some useful information for us to use in our shell script.
+
 $
 ```
 
@@ -15054,9 +15897,13 @@ $
 
 ```bash
 $ sed ‘s/<[^>]*>//g;^$/d’ data9
+
 This is the page title
+
 This is the first line in the Web page. This should provide
+
 some useful information for us to use in our shell script.
+
 $
 ```
 
@@ -15123,13 +15970,13 @@ $
 
 默认情况下，`gawk` 将 `OFS` 变量设置为空格格，因此当你使用命令：
 
-```bash
+```awk
 print $1,$2,$3
 ```
 
 你看到的输出为：
 
-```
+```text
 field1 field2 field3
 ```
 
@@ -15137,50 +15984,61 @@ field1 field2 field3
 
 ```bash
 $ cat data1
+
 data11,data12,data13,data14,data15
+
 data21,data22,data23,data24,data25
+
+data31,data32,data33,data34,data35
 ```
 
-
-
-
-`data31,data32,data33,data34,data35`
-
-```
+```bash
 $ gawk ‘BEGIN{FS=",”} {print $1,$2,$3}' data1
 ```
-```
+
+```text
 data11 data12 data13
+
 data21 data22 data23
+
 data31 data32 data33
 ```
 
 `print` 命令会自动将 `OFS` 变量的值置于输出中每个数据字段之间。通过设置 `OFS` 变量，你可以使用任何字符串来分隔输出中的数据字段：
 
-```
+```bash
 $ gawk ‘BEGIN{FS=",”; OFS="-"} {print $1,$2,$3}' data1
 ```
-```
+
+```text
 data11-data12-data13
+
 data21-data22-data23
+
 data31-data32-data33
 ```
 
-```
+```bash
 $ gawk ‘BEGIN{FS=",”; OFS="--"} {print $1,$2,$3}' data1
 ```
-```
+
+```text
 data11--data12--data13
+
 data21--data22--data23
+
 data31--data32--data33
 ```
 
-```
+```bash
 $ gawk ‘BEGIN{FS=",”; OFS="<-->"} {print $1,$2,$3}' data1
 ```
-```
+
+```text
 data11<-->data12<-->data13
+
 data21<-->data22<-->data23
+
 data31<-->data32<-->data33
 ```
 
@@ -15188,36 +16046,47 @@ data31<-->data32<-->data33
 
 一旦你设置了 `FIELDWIDTHS` 变量，`gawk` 就会忽略 `FS` 并根据提供的字段宽度计算数据字段。这里是一个使用字段宽度而不是字段分隔符的示例：
 
-```
+```bash
 $ cat data1b
 ```
-```
+
+```text
 1005.3247596.37
+
 115-2.349194.00
+
 05810.1298100.1
 ```
-```
+
+```bash
 $ gawk ‘BEGIN{FIELDWIDTHS="3 5 2 5"}{print $1,$2,$3,$4}' data1b
 ```
-```
+
+```text
 100 5.324 75 96.37
+
 115 -2.34 91 94.00
+
 058 10.12 98 100.1
 ```
 
 `FIELDWIDTHS` 变量定义了四个数据字段，`gawk` 据此解析数据记录。每条记录中的数字字符串根据定义的字段宽度值进行拆分。
 
-> 注意
+> **注意**
+>
 > 必须记住，一旦你设置了 `FIELDWIDTHS` 变量，这些值就必须保持不变。这种方法无法处理变长度的数据字段。
 
 `RS` 和 `ORS` 变量定义了你的 `gawk` 程序如何处理数据流中的记录。默认情况下，`gawk` 将 `RS` 和 `ORS` 变量设置为换行符。默认的 `RS` 变量值表示输入数据流中的每行文本都是一个新记录。
 
 有时，你会遇到数据字段跨越数据流中的多行的情况。这种情况的一个经典例子是包含地址和电话号码的数据，每个各占一行：
 
-```
+```text
 Riley Mullen
+
 123 Main Street
+
 Chicago, IL 60601
+
 (312)555-1234
 ```
 
@@ -15229,26 +16098,41 @@ Chicago, IL 60601
 
 以下是使用这种技术的示例：
 
-```
+```bash
 $ cat data2
+
 Riley Mullen
+
 123 Main Street
+
 Chicago, IL  60601
+
 (312)555-1234
+
 Frank Williams
+
 456 Oak Street
+
 Indianapolis, IN  46201
+
 (317)555-9876
+
 Haley Snell
+
 4231 Elm Street
+
 Detroit, MI
 ```
-```
+
+```bash
 $ gawk ‘BEGIN{FS="\n"; RS=""} {print $1,$4}' data2
 ```
-```
+
+```text
 Riley Mullen
+
 Frank Williams
+
 Haley Snell
 ```
 
@@ -15279,28 +16163,37 @@ Haley Snell
 
 你应该能在你的 shell 脚本中识别这些变量中的几个。`ARGC` 和 `ARGV` 变量允许你从 shell 中检索命令行参数的数量及其值。然而，这可能有点复杂，因为 `gawk` 不将程序脚本视为命令行的一部分：
 
-```
+```bash
 $ gawk ‘BEGIN{print ARGC,ARGV[1]}’ data1
 ```
-```
+
+```text
 2 data1
 ```
 
 `ARGC` 变量表示命令行上有两个参数。这包括 `gawk` 命令和 `data1` 参数（记住，程序脚本不算参数）。`ARGV` 数组从索引 0 开始，代表命令。第一个数组值是 `gawk` 命令后的第一个命令行参数。
 
-> 注意 > 注意，与 shell 变量不同，在脚本中引用 `gawk` 变量时，不需要在变量名前添加美元符号。
+> **注意**
+>
+> 注意，与 shell 变量不同，在脚本中引用 `gawk` 变量时，不需要在变量名前添加美元符号。
 
 `ENVIRON` 变量对你来说可能有点奇怪。它使用关联数组来检索 shell 环境变量。关联数组使用文本而不是数值作为数组索引。文本是 shell 环境变量。数组的值是 shell 环境变量的值。以下是这种技术的示例：
 
-```
+```bash
 $ gawk ‘
+
 BEGIN{
+
 print ENVIRON["HOME"]
+
 print ENVIRON["PATH"]
+
 }’
 ```
-```
+
+```text
 /home/rich
+
 /usr/local/bin:/bin:/usr/bin:/usr/X11R6/bin
 ```
 
@@ -15308,15 +16201,21 @@ print ENVIRON["PATH"]
 
 `FNR`、`NF` 和 `NR` 变量在跟踪 `gawk` 程序中的数据字段和记录时非常有用。有时你处于一种不知道记录中具体有多少个数据字段的情况。`NF` 变量允许你指定记录中的最后一个数据字段，而无需知道它的位置：
 
-```
+```bash
 $ gawk ‘BEGIN{FS=":"; OFS=":"} {print $1,$NF}' /etc/passwd
 ```
-```
+
+```text
 rich:/bin/bash
+
 testy:/bin/csh
+
 mark:/bin/bash
+
 dan:/bin/bash
+
 mike:/bin/bash
+
 test:/bin/bash
 ```
 
@@ -15324,19 +16223,21 @@ test:/bin/bash
 
 `FNR` 和 `NR` 变量彼此相似但略有不同。`FNR` 变量包含当前数据文件中处理的记录数。`NR` 变量包含已处理的记录总数。让我们来看几个示例来观察这种差异：
 
-
-
-
-
 ```bash
 $ gawk ‘BEGIN{FS=,”}{print $1,“FNR=”FNR}’ data1 data1
 ```
-```
+
+```text
 data11 FNR=1
+
 data21 FNR=2
+
 data31 FNR=3
+
 data11 FNR=1
+
 data21 FNR=2
+
 data31 FNR=3
 ```
 
@@ -15346,108 +16247,129 @@ data31 FNR=3
 
 ```bash
 $ gawk ‘
+
 BEGIN {FS=,”}
+
 {print $1,”FNR=”FNR,”NR=”NR}
+
 END{print “There were”,NR,”records processed”’ data1 data1
 ```
-```
+
+```text
 data11 FNR=1 NR=1
+
 data21 FNR=2 NR=2
+
 data31 FNR=3 NR=3
+
 data11 FNR=1 NR=4
+
 data21 FNR=2 NR=5
+
 data31 FNR=3 NR=6
+
 There were 6 records processed
 ```
 
-当 `gawk` 处理第二个数据文件时，`FNR` 变量的值被重置了，但 `NR` 变量的计数一直持续到第二个数据文件。结论是，如果你只使用一个数据文件作为输入，`FNR` 和 `NR` 的值将是相同的。如果你使用多个数据文件作为输入，`FNR` 的值会在每个数据文件处重置，而 `NR` 的值将对所有数据文件进行计数。
 
-> 注意
-> 你会发现在使用 `gawk` 时，`gawk` 脚本往往会比你的 shell 脚本其他部分还要大。在本章的示例中，为了简单起见，我们直接从命令行运行 `gawk` 脚本，使用了 shell 的多行功能。在 shell 脚本中使用 `gawk` 时，你应该将不同的 `gawk` 命令放在单独的行。这将让你更容易阅读和遵循，而不是尝试将所有内容都挤在 shell 脚本的一行中。此外，如果你发现自己在不同的 shell 脚本中使用相同的 `gawk` 脚本，记住你可以将 `gawk` 脚本保存在单独的文件中并使用 `-f` 参数引用它（参见第 18 章）。
+
+当`gawk`处理第二个数据文件时，`FNR`变量的值被重置了，但`NR`变量的计数一直持续到第二个数据文件。结论是，如果你只使用一个数据文件作为输入，`FNR`和`NR`的值将是相同的。如果你使用多个数据文件作为输入，`FNR`的值会在每个数据文件处重置，而`NR`的值将对所有数据文件进行计数。
+
+> **注意**
+> 你会发现在使用`gawk`时，`gawk`脚本往往会比你的 shell 脚本其他部分还要大。在本章的示例中，为了简单起见，我们直接从命令行运行`gawk`脚本，使用了 shell 的多行功能。在 shell 脚本中使用`gawk`时，你应该将不同的`gawk`命令放在单独的行。这将让你更容易阅读和遵循，而不是尝试将所有内容都挤在 shell 脚本的一行中。此外，如果你发现自己在不同的 shell 脚本中使用相同的`gawk`脚本，记住你可以将`gawk`脚本保存在单独的文件中并使用`-f`参数引用它（参见第 18 章）。
 
 ## 用户定义变量
 
-就像任何其他自尊的编程语言一样，`gawk` 允许你定义自己的变量并在程序代码中使用。`gawk` 用户定义的变量名可以是任意数量的字母、数字和下划线，但不能与数字开头。同样重要的是记住，`gawk` 变量名是区分大小写的。
+就像任何其他自尊的编程语言一样，`gawk`允许你定义自己的变量并在程序代码中使用。`gawk`用户定义的变量名可以是任意数量的字母、数字和下划线，但不能与数字开头。同样重要的是记住，`gawk`变量名是区分大小写的。
 
 ### 在脚本中为赋值
 
-在 `gawk` 程序中为变量赋值与在 shell 脚本中赋值类似，使用赋值语句：
+在`gawk`程序中为变量赋值与在 shell 脚本中赋值类似，使用赋值语句：
 
 ```bash
-$ gawk ‘
+$ gawk '
 BEGIN{
-testing=“This is a test”
+testing="This is a test"
 print testing
-}’
+}'
 ```
+
+输出：
 ```
 This is a test
 ```
 
-`print` 语句的输出是 `testing` 变量的当前值。与 shell 脚本变量一样，`gawk` 变量可以持有数值值或文本值：
+`print`语句的输出是`testing`变量的当前值。与 shell 脚本变量一样，`gawk`变量可以持有数值值或文本值：
 
 ```bash
-$ gawk ‘
+$ gawk '
 BEGIN{
-testing=“This is a test”
+testing="This is a test"
 print testing
 testing=45
 print testing
-}’
+}'
 ```
+
+输出：
 ```
 This is a test
 45
 ```
 
-在这个示例中，`testing` 变量的值从文本值变为数值值。
+在这个示例中，`testing`变量的值从文本值变为数值值。
 
 赋值语句还可以包含用于处理数值的数学算法：
 
 ```bash
-$ gawk ‘BEGIN{x=4; x= x * 2 + 3; print x}’
+$ gawk 'BEGIN{x=4; x= x * 2 + 3; print x}'
 ```
+
+输出：
 ```
 11
 ```
 
-从这个示例可以看出，`gawk` 编程语言包含了处理数值的标准数学运算符。这些运算符包括取余符号（`%`）和幂符号（使用 `^` 或 `**`）。
+从这个示例可以看出，`gawk`编程语言包含了处理数值的标准数学运算符。这些运算符包括取余符号（`%`）和幂符号（使用`^`或`**`）。
 
 ### 在命令行上赋值
 
-你也可以使用 `gawk` 命令行为 `gawk` 程序中的变量赋值。这允许你在普通代码之外设置值，动态更改值。这里有一个使用命令行变量显示文件中特定数据字段的示例：
+你也可以使用`gawk`命令行为`gawk`程序中的变量赋值。这允许你在普通代码之外设置值，动态更改值。这里有一个使用命令行变量显示文件中特定数据字段的示例：
 
 ```bash
 $ cat script1
-BEGIN{FS=,”}
+BEGIN{FS=","}
 {print $n}
+
 $ gawk -f script1 n=2 data1
 ```
+
+输出：
 ```
 data12
 data22
 ```
 
-`gawk -f script1 n=2 data1` 命令允许你从命令行将变量 `n` 设置为 `2`。这允许你在普通代码之外设置值，动态更改值。
-
-当 `gawk` 处理第二个数据文件时，`FNR` 变量的值被重置了，但 `NR` 变量的计数一直持续到第二个数据文件。结论是，如果你只使用一个数据文件作为输入，`FNR` 和 `NR` 的值将是相同的。如果你使用多个数据文件作为输入，`FNR` 的值会在每个数据文件处重置，而 `NR` 的值将对所有数据文件进行计数。
+`gawk -f script1 n=2 data1`命令允许你从命令行将变量`n`设置为`2`。这允许你在普通代码之外设置值，动态更改值。
 
 ## 使用数组
 
-许多编程语言提供了数组来在单个变量中存储值。`gawk` 提供了数组功能。关联数组与数值数组的区别在于，索引可以是任何字符串。
+许多编程语言提供了数组来在单个变量中存储值。`gawk`提供了数组功能。关联数组与数值数组的区别在于，索引可以是任何字符串。
 
 ### 定义数组变量
 
 你可以使用赋值语句定义数组变量。数组的格式为：
 `var[index] = element`
-其中 `var` 是变量名，`index` 是数组索引，`element` 是数据元素。这里是一些数组变量的示例：
+其中`var`是变量名，`index`是数组索引，`element`是数据元素。这里是一些数组变量的示例：
 
 ```bash
-$ gawk ‘BEGIN{
-capital["Illinois"] = “Springfield”
+$ gawk 'BEGIN{
+capital["Illinois"] = "Springfield"
 print capital["Illinois"]
-}’
+}'
 ```
+
+输出：
 ```
 Springfield
 ```
@@ -15455,13 +16377,15 @@ Springfield
 当你引用数组变量时，必须包含索引值以检索数据元素。这对于数值数据也有效：
 
 ```bash
-$ gawk ‘BEGIN{
+$ gawk 'BEGIN{
 var[1] = 3
 var[2] = 4
 total = var[1] + var[2]
 print total
-}’
+}'
 ```
+
+输出：
 ```
 7
 ```
@@ -15470,7 +16394,7 @@ print total
 
 数组变量的问题在于，你可能无法知道索引值。与使用顺序数字作为索引值的数值数组不同，关联数组的索引可以是任何内容。
 
-如果你需要在 `gawk` 中遍历关联数组，可以使用 `for` 语句的特殊格式：
+如果你需要在`gawk`中遍历关联数组，可以使用`for`语句的特殊格式：
 
 ```bash
 for (var in array)
@@ -15479,10 +16403,10 @@ for (var in array)
 }
 ```
 
-`for` 语句循环语句，每次将关联数组的下一个索引赋值给变量 `var`。记住，变量是索引的值，而不是数据元素的值。你可以通过将变量作为数组索引来轻松提取数据元素值：
+`for`语句循环语句，每次将关联数组的下一个索引赋值给变量`var`。记住，变量是索引的值，而不是数据元素的值。你可以通过将变量作为数组索引来轻松提取数据元素值：
 
 ```bash
-$ gawk ‘BEGIN{
+$ gawk 'BEGIN{
 var["a"] = 1
 var["g"] = 2
 var["m"] = 3
@@ -15491,18 +16415,16 @@ for (test in var)
 {
     print "Index:", test, " - Value:", var[test]
 }
-}’
+}'
 ```
+
+输出：
 ```
 Index: u - Value: 4
 Index: m - Value: 3
 Index: a - Value: 1
 Index: g - Value: 2
 ```
-
-
-
-
 
 注意，索引值并不是按特定顺序返回的，但它们每个都引用了相应的数据元素值。这一点非常重要，因为你不能保证返回值的顺序是相同的，只能确保索引和数据值相互匹配。
 
@@ -15512,21 +16434,25 @@ Index: g - Value: 2
 
 `delete array[index]`
 
-`delete` 命令会从数组中删除关联索引值和关联的数据元素值：
+`delete`命令会从数组中删除关联索引值和关联的数据元素值：
 
 ```bash
 $ gawk 'BEGIN{
-> var["a"] = 1
-> var["g"] = 2
-> for (test in var)
-> {
+var["a"] = 1
+var["g"] = 2
+for (test in var)
+{
     print "Index:",test," - Value:",var[test]
 }
-> delete var["g"]
-> print "---"
-> for (test in var)
->    print "Index:",test," - Value:",var[test]
+delete var["g"]
+print "---"
+for (test in var)
+    print "Index:",test," - Value:",var[test]
 }'
+```
+
+输出：
+```
 Index: a - Value: 1
 Index: g - Value: 2
 ---
@@ -15537,9 +16463,9 @@ Index: a - Value: 1
 
 ## 使用模式
 
-gawk 程序支持多种类型的匹配模式来过滤数据记录，这与 `sed` 编辑器非常相似。第 18 章已经展示了两个特殊模式的应用。`BEGIN` 和 `END` 关键字是特殊模式，它们在读取数据流数据之前或之后执行语句。同样，你也可以创建其他模式，当数据流中出现匹配数据时执行语句。
+`gawk`程序支持多种类型的匹配模式来过滤数据记录，这与`sed`编辑器非常相似。第 18 章已经展示了两个特殊模式的应用。`BEGIN`和`END`关键字是特殊模式，它们在读取数据流数据之前或之后执行语句。同样，你也可以创建其他模式，当数据流中出现匹配数据时执行语句。
 
-本节演示了如何在 gawk 脚本中使用匹配模式来限制程序脚本适用的记录范围。
+本节演示了如何在`gawk`脚本中使用匹配模式来限制程序脚本适用的记录范围。
 
 ### 正则表达式
 
@@ -15553,7 +16479,7 @@ data11
 $
 ```
 
-正则表达式 `/11/` 匹配数据字段中任何位置包含字符串 `11` 的记录。gawk 程序会将定义的正则表达式与记录中的所有数据字段进行匹配，包括字段分隔符字符：
+正则表达式`/11/`匹配数据字段中任何位置包含字符串`11`的记录。`gawk`程序会将定义的正则表达式与记录中的所有数据字段进行匹配，包括字段分隔符字符：
 
 ```bash
 $ gawk 'BEGIN{FS=","} /,d/{print $1}' data1
@@ -15573,7 +16499,7 @@ $
 $1 ~ /^data/
 ```
 
-变量 `$1` 表示记录中的第一个数据字段。该表达式过滤出第一个数据字段以文本 `data` 开头的记录。以下是一个在 gawk 程序脚本中使用匹配运算符的示例：
+变量`$1`表示记录中的第一个数据字段。该表达式过滤出第一个数据字段以文本`data`开头的记录。以下是一个在`gawk`程序脚本中使用匹配运算符的示例：
 
 ```bash
 $ gawk 'BEGIN{FS=","} $2 ~ /^data2/{print $0}' data1
@@ -15581,9 +16507,9 @@ data21,data22,data23,data24,data25
 $
 ```
 
-匹配运算符将第二个数据字段与正则表达式 `/^data2/` 进行比较，该正则表示字符串以文本 `data2` 开头。
+匹配运算符将第二个数据字段与正则表达式`/^data2/`进行比较，该正则表示字符串以文本`data2`开头。
 
-这是一个强大的工具，通常用于 gawk 程序脚本在数据文件中搜索特定数据元素：
+这是一个强大的工具，通常用于`gawk`程序脚本在数据文件中搜索特定数据元素：
 
 ```bash
 $ gawk -F: '$1 ~ /rich/{print $1,$NF}' /etc/passwd
@@ -15591,9 +16517,9 @@ rich /bin/bash
 $
 ```
 
-此示例在第一个数据字段中搜索文本 `rich`。当在记录中找到该模式时，它会打印记录的第一个和最后一个数据字段的值。
+此示例在第一个数据字段中搜索文本`rich`。当在记录中找到该模式时，它会打印记录的第一个和最后一个数据字段的值。
 
-你也可以通过 `!` 符号来取反正则表达式匹配：
+你也可以通过`!`符号来取反正则表达式匹配：
 
 ```bash
 $1 !~ /expression/
@@ -15611,11 +16537,11 @@ sys /bin/sh
 $
 ```
 
-在这个示例中，gawk 程序脚本打印了 `/etc/passwd` 文件中所有不匹配用户名 `rich` 的条目的用户 ID 和 shell！
+在这个示例中，`gawk`程序脚本打印了`/etc/passwd`文件中所有不匹配用户名`rich`的条目的用户 ID 和 shell！
 
 ### 数学表达式
 
-除了正则表达式之外，你还可以在匹配模式中使用数学表达式。在匹配数据字段中的数值值时，这个功能非常有用。例如，如果你想显示所有属于 root 用户组（组 ID 0）的系统用户，可以使用此脚本：
+除了正则表达式之外，你还可以在匹配模式中使用数学表达式。在匹配数据字段中的数值值时，这个功能非常有用。例如，如果你想显示所有属于`root`用户组（组 ID 0）的系统用户，可以使用此脚本：
 
 ```bash
 $ gawk -F: '$4 == 0{print $1}' /etc/passwd
@@ -15627,15 +16553,15 @@ operator
 $
 ```
 
-该脚本检查第四个数据字段包含值 `0` 的记录。在这个 Linux 系统上，有五个用户属于 root 用户组。
+该脚本检查第四个数据字段包含值`0`的记录。在这个 Linux 系统上，有五个用户属于`root`用户组。
 
 你可以使用任何标准的数学比较表达式：
 
-* `x == y`: 值 `x` 等于 `y`。
-* `x <= y`: 值 `x` 小于或等于 `y`。
-* `x < y`: 值 `x` 小于 `y`。
-* `x >= y`: 值 `x` 大于或等于 `y`。
-* `x > y`: 值 `x` 大于 `y`。
+- `x == y`：值`x`等于`y`。
+- `x <= y`：值`x`小于或等于`y`。
+- `x < y`：值`x`小于`y`。
+- `x >= y`：值`x`大于或等于`y`。
+- `x > y`：值`x`大于`y`。
 
 你也可以使用带有文本数据的表达式，但必须小心。与正则表达式不同，表达式是精确匹配。数据必须与模式完全匹配：
 
@@ -15647,15 +16573,15 @@ data11
 $
 ```
 
-第一次测试没有匹配到任何记录，因为在任何记录中第一个数据字段的值都不是 `data`。第二次测试匹配了一个值为 `data11` 的记录。
+第一次测试没有匹配到任何记录，因为在任何记录中第一个数据字段的值都不是`data`。第二次测试匹配了一个值为`data11`的记录。
 
 ## 结构化命令
 
-gawk 编程语言支持常见的结构化编程命令。本节描述了这些命令中的每一个，并演示了如何在 gawk 编程环境中使用它们。
+`gawk`编程语言支持常见的结构化编程命令。本节描述了这些命令中的每一个，并演示了如何在`gawk`编程环境中使用它们。
 
 ### if 语句
 
-gawk 编程语言支持标准的 `if-then-else` 格式的 `if` 语句。你必须为 `if` 语句定义一个条件并括在括号内。如果条件求值为 `TRUE`，则紧执行 `if` 语句后面的语句。如果条件求值为 `FALSE`，则跳过该语句。这可以使用以下格式：
+`gawk`编程语言支持标准的`if-then-else`格式的`if`语句。你必须为`if`语句定义一个条件并括在括号内。如果条件求值为`TRUE`，则紧执行`if`语句后面的语句。如果条件求值为`FALSE`，则跳过该语句。这可以使用以下格式：
 
 ```bash
 if (condition)
@@ -15677,13 +16603,14 @@ $ cat data4
 13
 50
 34
+
 $ gawk '{if ($1 > 20) print $1}' data4
 50
 34
 $
 ```
 
-并不太复杂。如果你需要在 `if` 语句中执行多个语句，必须用大括号将其括起来：
+并不太复杂。如果你需要在`if`语句中执行多个语句，必须用大括号将其括起来：
 
 ```bash
 $ gawk '{
@@ -15691,12 +16618,13 @@ if ($1 > 20)
 {
     x = $1 * 2
     print x
+}
 }' data4
 100
 68
 ```
 
-注意不要将 `if` 语句的大括号与用于开始和结束程序的括号搞混。gawk 程序可以检测到缺失的大括号，如果你弄错了，它会产生错误消息：
+注意不要将`if`语句的大括号与用于开始和结束程序的括号搞混。`gawk`程序可以检测到缺失的大括号，如果你弄错了，它会产生错误消息：
 
 ```bash
 $ gawk '{
@@ -15704,13 +16632,14 @@ if ($1 > 20)
 {
     x = $1 * 2
     print x
+}
 }' data4
 gawk: cmd.line:7: (END OF FILE)
 gawk: cmd.line:7: parse error
 $
 ```
 
-gawk 的 `if` 语句支持 `else` 子句，允许在 `if` 语句条件失败时执行一个或多个语句。这里是使用 `else` 子句的示例：
+`gawk`的`if`语句支持`else`子句，允许在`if`语句条件失败时执行一个或多个语句。这里是使用`else`子句的示例：
 
 ```bash
 $ gawk '{
@@ -15722,7 +16651,8 @@ if ($1 > 20)
 {
     x = $1 / 2
     print x
-}}' data4
+}
+}' data4
 5
 2.5
 6.5
@@ -15731,7 +16661,7 @@ if ($1 > 20)
 $
 ```
 
-你可以在单行使用 `else` 子句，但必须在 `if` 语句部分之后使用分号：
+你可以在单行使用`else`子句，但必须在`if`语句部分之后使用分号：
 
 ```bash
 if (condition) statement1; else statement2
@@ -15753,26 +16683,23 @@ $
 
 ### while 语句
 
+`while`语句为`gawk`程序提供了基础的循环功能。以下是`while`语句的格式：
 
-
-
-
-`while` 语句为 `gawk` 程序提供了基础的循环功能。以下是 `while` 语句的格式：
-
-```
+```bash
 while (condition)
 {
   statements
 }
 ```
 
-`while` 循环允许你对一组数据进行迭代，并检查一个用于停止迭代的条件。如果你在每个记录中有多个必须在计算中使用数据值，这种方法非常有用：
+`while`循环允许你对一组数据进行迭代，并检查一个用于停止迭代的条件。如果你在每个记录中有多个必须在计算中使用数据值，这种方法非常有用：
 
 ```bash
 $ cat data5
 130 120 135
 160 113 140
 145 170 215
+
 $ gawk '{
   total = 0
   i = 1
@@ -15782,7 +16709,7 @@ $ gawk '{
     i++
   }
   avg = total / 3
-  print “Average:”,avg
+  print "Average:",avg
 }' data5
 Average: 128.333
 Average: 137.667
@@ -15790,9 +16717,9 @@ Average: 176.667
 $
 ```
 
-`while` 语句遍历记录中的数据字段，将每个值累加到 `total` 变量中，然后增加计数器变量 `i`。当计数器值等于 4 时，`while` 条件变为 `FALSE`，循环终止，并执行脚本中的下一条语句。该语句计算平均值；然后打印平均值。此过程会对数据文件中的每个记录重复。
+`while`语句遍历记录中的数据字段，将每个值累加到`total`变量中，然后增加计数器变量`i`。当计数器值等于 4 时，`while`条件变为`FALSE`，循环终止，并执行脚本中的下一条语句。该语句计算平均值；然后打印平均值。此过程会对数据文件中的每个记录重复。
 
-`gawk` 编程语言支持在 `while` 循环中使用 `break` 和 `continue` 语句，允许你跳出循环中间部分：
+`gawk`编程语言支持在`while`循环中使用`break`和`continue`语句，允许你跳出循环中间部分：
 
 ```bash
 $ gawk '{
@@ -15806,7 +16733,7 @@ $ gawk '{
     i++
   }
   avg = total / 2
-  print “The average of the first two data elements is:",avg
+  print "The average of the first two data elements is:",avg
 }' data5
 The average of the first two data elements is: 125
 The average of the first two data elements is: 136.5
@@ -15814,13 +16741,13 @@ The average of the first two data elements is: 157.5
 $
 ```
 
-`break` 语句用于在变量 `i` 的值为 2 时跳出 `while` 循环。
+`break`语句用于在变量`i`的值为 2 时跳出`while`循环。
 
 ### do-while 语句
 
-`do-while` 语句与 `while` 语句类似，但会在检查条件语句之前执行语句。以下是 `do-while` 语句的格式：
+`do-while`语句与`while`语句类似，但会在检查条件语句之前执行语句。以下是`do-while`语句的格式：
 
-```
+```bash
 do
 {
   statements
@@ -15838,12 +16765,15 @@ $ gawk '{
     total += $i
     i++
   } while (total < 150)
-  print total }’ data5
+  print total
+}' data5
 250
 160
 315
 $
 ```
+
+
 
 脚本从每个记录中读取数据字段并对其求和，直到累积值达到 150。如果第一个数据字段超过 150（如第二个记录所示），脚本保证在评估条件之前至少读取第一个数据字段。
 
@@ -15865,7 +16795,7 @@ $ gawk '{
     total += $i
   }
   avg = total / 3
-  print “Average:”,avg
+  print "Average:",avg
 }' data5
 Average: 128.333
 Average: 137.667
@@ -15891,7 +16821,7 @@ printf(format string, arg1, arg2, ...)
 | :--- | :--- |
 | `c` | 显示一个字符。 |
 | `d` | 显示一个整数。 |
-| `i` | 显示一个整数（与 d 相同）。 |
+| `i` | 显示一个整数（与 `d` 相同）。 |
 | `e` | 显示科学计数法。 |
 | `f` | 显示浮点数。 |
 | `g` | 显示科学计数法或浮点数，较短者优先。 |
@@ -15918,7 +16848,7 @@ $ gawk '{
     total += $i
   }
   avg = total / 3
-  print “Average:”,avg
+  print "Average:",avg
 }' data5
 Average: 128.333
 Average: 137.667
@@ -15966,15 +16896,12 @@ Average: 1.767e+02
 $
 ```
 
-
-
-
-每个 `printf` 输出都显示在同一行。为了能够结束行，`END` 部分会打印一个换换行符。
+每个 `printf` 输出都显示在同一行。为了能够结束行，`END` 部分会打印一个换行符。
 
 接下来，让我们使用一个修饰符来格式化第一个字符串值：
 
 ```bash
-$ gawk ‘BEGIN{FS="\n"; RS=""} {printf “%16s  %s\n”, $1, $4}’ data2
+$ gawk 'BEGIN{FS="\n"; RS=""} {printf "%16s  %s\n", $1, $4}' data2
 ```
 
 ```
@@ -15987,7 +16914,7 @@ $
 通过添加 `16` 修饰符值，我们强制第一个字符串的输出使用 16 个空格。默认情况下，`printf` 命令使用右对齐将数据放置在格式空间中。要将其变为左对齐，只需在修饰符前添加一个负号：
 
 ```bash
-$ gawk ‘BEGIN{FS="\n"; RS=""} {printf “%-16s  %s\n”, $1, $4}’ data2
+$ gawk 'BEGIN{FS="\n"; RS=""} {printf "%-16s  %s\n", $1, $4}' data2
 ```
 
 ```
@@ -16002,15 +16929,15 @@ $
 `printf` 命令在处理浮点数值时也非常好用。通过为变量指定格式，你可以让输出看起来更加均匀：
 
 ```bash
-$ gawk ‘{
+$ gawk '{
 > total = 0
 > for (i = 1; i < 4; i++)
 > {
 >     total += $i
 > }
 > avg = total / 3
-> printf “Average: %5.1f\n”,avg
-> }’ data5
+> printf "Average: %5.1f\n",avg
+> }' data5
 Average: 128.3
 Average: 137.7
 Average: 176.7
@@ -16021,13 +16948,13 @@ $
 
 ### 内置函数
 
-gawk 编程语言提供了许多内置函数，可以执行常见的数学、字符串甚至时间函数。你可以在 gawk 程序中使用这些函数，帮助减少脚本中的编码需求。本节将带你介绍 gawk 中提供的各种内置函数。
+`gawk` 编程语言提供了许多内置函数，可以执行常见的数学、字符串甚至时间函数。你可以在 `gawk` 程序中使用这些函数，帮助减少脚本中的编码需求。本节将带你介绍 `gawk` 中提供的各种内置函数。
 
 ### 数学函数
 
-如果你用过任何语言进行编程，你可能已经熟悉在代码中使用内置函数来执行常见的数学函数。gawk 编程语言不会让那些寻求高级数学功能的人失望。
+如果你用过任何语言进行编程，你可能已经熟悉在代码中使用内置函数来执行常见的数学函数。`gawk` 编程语言不会让那些寻求高级数学功能的人失望。
 
-[表 21.4] 显示了 gawk 中提供的数学内置函数。
+[表 21.4] 显示了 `gawk` 中提供的数学内置函数。
 
 #### 表 21.4 gawk 数学函数
 
@@ -16043,7 +16970,7 @@ gawk 编程语言提供了许多内置函数，可以执行常见的数学、字
 | `sqrt(x)` | `x` 的平方根。 |
 | `srand(x)` | 指定计算随机数的种子值。 |
 
-虽然 gawk 没有详尽的数学函数列表，但它确实提供了标准数学处理所需的某些元素。`int()` 函数产生值的整数部分，但它不会对值进行四舍五入。它的行为类似于其他编程语言中的地板函数（floor function）。它产生的是该值与 0 之间最接近的整数。
+虽然 `gawk` 没有详尽的数学函数列表，但它确实提供了标准数学处理所需的某些元素。`int()` 函数产生值的整数部分，但它不会对值进行四舍五入。它的行为类似于其他编程语言中的地板函数（floor function）。它产生的是该值与 0 之间最接近的整数。
 
 这意味着值 `5.6` 的 `int()` 函数将返回 `5`，而值 `-5.6` 的 `int()` 函数将返回 `-5`。
 
@@ -16053,19 +16980,18 @@ gawk 编程语言提供了许多内置函数，可以执行常见的数学、字
 x = int(rand() * 100)
 ```
 
-gawk 编程语言还提供了一些位运算。这些在处理二进制数据时非常有用：
+`gawk` 编程语言还提供了一些位运算。这些在处理二进制数据时非常有用：
 
 - `and(x, y)`: 位与操作。
 - `or(x, y)`: 位或操作。
 - `xor(x, y)`: 位异或操作。
 - `compl(x)`: 位非操作。
-- `and(x, y)`: 位与操作。
 - `lshift(x, n)`: 位左移。
 - `rshift(x, n)`: 位右移。
 
 ### 字符串函数
 
-gawk 编程语言还提供了几个用于处理字符串的函数：
+`gawk` 编程语言还提供了几个用于处理字符串的函数：
 
 | 函数 | 说明 |
 | :--- | :--- |
@@ -16076,7 +17002,7 @@ gawk 编程语言还提供了几个用于处理字符串的函数：
 | `index(s, t)` | 返回字符串 `t` 在字符串 `s` 中的索引，如果未找到则返回 0。 |
 | `length(s)` | 返回字符串 `s` 的长度，如果没有指定，则返回 `$0` 的长度。 |
 | `match(s, r, a)` | 返回正则表达式 `r` 在字符串 `s` 中出现的索引。如果指定了数组 `a`，它包含 `s` 中匹配的部分。 |
-| `split(s, a, r)` | 使用 FS 字符或提供的正则表达式 `r` 将 `s` 拆分到数组 `a`。返回字段数。 |
+| `split(s, a, r)` | 使用 `FS` 字符或提供的正则表达式 `r` 将 `s` 拆分到数组 `a`。返回字段数。 |
 | `sprintf(format, variables)` | 使用提供的 `format` 和 `variables` 返回一个与 `printf` 输出相似的字符串。 |
 | `sub(r, s, t)` | 在变量 `$0` 或目标字符串 `t` 中搜索正则表达式 `r` 的匹配项。如果找到，则替换第一次出现的为字符串 `s`。 |
 | `substr(s, i, n)` | 返回 `s` 从索引 `i` 开始的第 `n` 个字符子串。如果没有提供 `n`，则使用 `s` 的剩余部分。 |
@@ -16085,21 +17011,17 @@ gawk 编程语言还提供了几个用于处理字符串的函数：
 
 某些字符串函数相对自显易懂：
 
-
-
-
-
 ```bash
-$ gawk 'BEGIN{x = “testing”; print toupper(x); print length(x) }'
+$ gawk 'BEGIN{x = "testing"; print toupper(x); print length(x) }'
 ```
 
-`TESTING`
+```
+TESTING
+7
+$
+```
 
-`7`
-
-`$`
-
-然而，某些字符串函数可能会变得相当复杂。`asort` 和 `asorti` 函数是新的 gawk 函数，允许你根据数据元素值（`asort`）或索引值（`asorti`）对数组变量进行排序。这里是使用 `asort` 的示例：
+然而，某些字符串函数可能会变得相当复杂。`asort` 和 `asorti` 函数是新的 `gawk` 函数，允许你根据数据元素值（`asort`）或索引值（`asorti`）对数组变量进行排序。这里是使用 `asort` 的示例：
 
 ```bash
 $ gawk 'BEGIN{
@@ -16112,46 +17034,50 @@ $ gawk 'BEGIN{
 >     print "Index:",i, " - value:",test[i]
  }'
 ```
+
+```
 Index: 4  - value: 4
 Index: 1  - value: 1
 Index: 2  - value: 2
 Index: 3  - value: 3
-
-$`
+$
+```
 
 新数组 `test` 包含了原始数组新排序后的数据元素，但索引值现在已更改为数值，指示了正确的排序顺序。
 
 `split` 函数是将数据字段推入数组以进行进一步处理的好方法：
 
 ```bash
-$ gawk 'BEGIN{ FS=",”}{
+$ gawk 'BEGIN{ FS=","}{
 > split($0, var)
 > print var[1], var[5]
  }' data1
 ```
+
+```
 data11 data15
 data21 data25
 data31 data35
+$
+```
 
-$`
-
-新数组使用顺序数字作为数组索引，从索引值 1 开始第一个第一个字段。
+新数组使用顺序数字作为数组索引，从索引值 1 开始第一个字段。
 
 ### 时间函数
 
-gawk 编程语言包含几个可以帮助你处理时间值的函数，见 表 21.6。
+`gawk` 编程语言包含几个可以帮助你处理时间值的函数，见 表 21.6。
 
 表 21.6 gawk 时间函数
 
 | 函数 | 描述 |
 | :--- | :--- |
-| `mktime(datespec)` | 将以 YYYY MM DD HH MM SS [DST] 格式指定的日期转换为时间戳。 |
-| `strftime(format [, timestamp])` | 将当前时间的时间戳（或如果提供了时间戳）格式化为指定的日期和日期，使用 `date()` shell 函数的格式。 |
+| `mktime(datespec)` | 将以 `YYYY MM DD HH MM SS [DST]` 格式指定的日期转换为时间戳。 |
+| `strftime(format [, timestamp])` | 将当前时间的时间戳（或如果提供了时间戳）格式化为指定的日期和时间，使用 `date()` shell 函数的格式。 |
 | `systime()` | 返回当前时间的时间戳。 |
 
 在处理包含你需要比较的日期的日志文件时，经常使用时间函数。通过将日期的文本表示转换为 Unix 时间（自 1970 年 1 月 1 日午夜以来的秒数），你可以轻松地比较日期。
 
-以下是在 gawk 程序中使用时间函数的示例：
+以下是在 `gawk` 程序中使用时间函数的示例：
 
 ```bash
 $ gawk 'BEGIN{
@@ -16160,15 +17086,17 @@ $ gawk 'BEGIN{
 > print day
  }'
 ```
+
+```
 Friday, December 28, 2010
+$
+```
 
-$`
-
-此示例使用 `systime` 函数从系统获取当前的 Unix 时间戳，然后使用 `strftime` 函数使用 date shell 命令的日期格式字符将其转换为人类可读的格式。
+此示例使用 `systime` 函数从系统获取当前的 Unix 时间戳，然后使用 `strftime` 函数使用 `date` shell 命令的日期格式字符将其转换为人类可读的格式。
 
 ### 自定义函数
 
-你不局限于仅使用 gawk 提供的内置函数。你可以创建自己的函数并在 gawk 程序中使用它们。本节将向你展示如何在 gawk 程序中定义和使用自定义函数。
+你不局限于仅使用 `gawk` 提供的内置函数。你可以创建自己的函数并在 `gawk` 程序中使用它们。本节将向你展示如何在 `gawk` 程序中定义和使用自定义函数。
 
 #### 定义函数
 
@@ -16181,7 +17109,7 @@ function name([variables])
 }
 ```
 
-函数名必须唯一标识你的函数。你可以从调用的 gawk 程序向函数传递一个或多个变量：
+函数名必须唯一标识你的函数。你可以从调用的 `gawk` 程序向函数传递一个或多个变量：
 
 ```awk
 function printthird()
@@ -16189,6 +17117,7 @@ function printthird()
     print $3
 }
 ```
+
 此函数将打印记录中的第三个数据字段。
 
 函数还可以使用 `return` 语句返回值：
@@ -16196,6 +17125,7 @@ function printthird()
 ```awk
 return value
 ```
+
 该值可以是一个变量，也可以是一个求值为该值的表达式：
 
 ```awk
@@ -16204,220 +17134,224 @@ function myrand(limit)
     return int(limit * rand())
 }
 ```
-你可以将函数返回的值赋值给 gawk 程序中的变量：
+
+你可以将函数返回的值赋值给 `gawk` 程序中的变量：
 
 ```awk
 x = myrand(100)
 ```
+
 变量将包含函数返回的值。
 
 #### 使用你的函数
 
-当你定义一个函数时，它必须在定义任何编程部分（包括 `BEGIN` 部分）之前单独出现。这初看起来看起来可能有点奇怪，但它有助于将函数代码与 gawk 程序的其余部分分开：
+当你定义一个函数时，它必须在定义任何编程部分（包括 `BEGIN` 部分）之前单独出现。这初看起来可能有点奇怪，但它有助于将函数代码与 `gawk` 程序的其余部分分开：
 
 ```bash
 $ gawk '
 > function myprint()
 > {
 >     printf "%-16s - %s\n", $1, $4
- }
->BEGIN{FS="\n"; RS=""}
+> }
+> BEGIN{FS="\n"; RS=""}
 > {
-     myprint()
- }' data2
+>     myprint()
+> }' data2
 ```
+
+
+
+```text
 Riley Mullen      - (312)555-1234
-Frank Williams  - (317)555-9876
-Haley Snell      - (313)555-4955
+Frank Williams    - (317)555-9876
+Haley Snell       - (313)555-4955
 
-$`
+$
+```
 
-此示例使用 `systime` 函数从系统获取当前的 Unix 时间戳，然后使用 `strftime` 函数使用 date shell 命令的日期格式字符将其转换为人类可读的格式。
+此示例使用`systime`函数从系统获取当前的 Unix 时间戳，然后使用`strftime`函数，使用`date` shell 命令的日期格式字符将其转换为人类可读的格式。
 
-*(注：由于原文中存在大量重复内容，译文已根据要求去除了重复部分，保留了核心逻辑结构)*
+> 注：由于原文中存在大量重复内容，译文已根据要求去除了重复部分，保留了核心逻辑结构。
 
-
-
-
-
-下一章将稍微调整一下方向。它将检查你在 Linux 脚本编写过程中可能会遇到的其他几种 shell 环境（shell）。虽然 `bash` shell 是 Linux 中最常用的 shell，但它并不是唯一的。了解一些其他可用的 shell 以及它们与 `bash` shell 的区别是有帮助的。
+下一章将稍微调整一下方向。它将检查你在 Linux 脚本编写过程中可能会遇到的其他几种 shell 环境（shell）。虽然`bash` shell 是 Linux 中最常用的 shell，但它并不是唯一的。了解一些其他可用的 shell 以及它们与`bash` shell 的区别是有帮助的。
 
 # 读累了记得休息一会哦~
 
 **公众号：古德猫宁李**
 
-* 电子书搜索下载
-* 书单分享
-* 书友学习交流
+- 电子书搜索下载
+- 书单分享
+- 书友学习交流
 
-**网站：**[沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)
+**网站：**[沉金书屋](https://www.chenjin5.com)
 
-* 电子书搜索下载
-* 电子书打包资源分享
-* 学习资源分享
+- 电子书搜索下载
+- 电子书打包资源分享
+- 学习资源分享
 
 # 第 22 章：使用替代性 Shell
 
 ## 本章内容
-* 了解 dash shell
-* 在 dash shell 中编程
-* 介绍 zsh shell
-* 为 zsh 编写脚本
 
-虽然 `bash` shell 是 Linux 发行版中广泛使用的 shell，但它并不是唯一的。现在你已经了解了标准的 Linux `bash` shell 以及你用它能做什么，是时候检查一下 Linux 世界中其他几种 shell 了。本章描述了你在 Linux 之旅中可能会遇到的另外两种 shell，以及它们与 `bash` shell 的区别。
+- 了解`dash` shell
+- 在`dash` shell 中编程
+- 介绍`zsh` shell
+- 为`zsh`编写脚本
+
+虽然`bash` shell 是 Linux 发行版中广泛使用的 shell，但它并不是唯一的。现在你已经了解了标准的 Linux`bash` shell 以及你用它能做什么，是时候检查一下 Linux 世界中其他几种 shell 了。本章描述了你在 Linux 之旅中可能会遇到的另外两种 shell，以及它们与`bash` shell 的区别。
 
 ## 什么是 dash Shell？
-Debian `dash` shell 有着有趣的历史。它是 `ash` shell 的直接后代，`ash` 是 Unix 系统上原始 Bourne shell 的简单副本（请参见第 1 章）。Kenneth Almquist 为 Unix 系统创建了一个小型的 Bourne shell 版本，并称之为 Almquist shell，后来缩短为 `ash`。这个原始版本的 `ash` shell 极其小巧且运行快速，但缺乏许多高级功能（例如命令行编辑或历史记录功能），使得它很难作为交互式 shell 使用。
 
-NetBSD Unix 操作系统采用了 `ash` shell，并且至今仍将其作为默认 shell 使用。NetBSD 开发者通过添加若干个新功能对 `ash` shell 进行了定制，使其更接近 Bourne shell。这些新功能包括使用 `emacs` 和 `vi` 编辑器命令进行命令行编辑，以及用于召回之前输入命令的 `history` 命令。这个版本的 `ash` shell 也被 FreeBSD 操作系统作为默认登录 shell 使用。
+Debian`dash` shell 有着有趣的历史。它是`ash` shell 的直接后代，`ash`是 Unix 系统上原始 Bourne shell 的简单副本（请参见第 1 章）。Kenneth Almquist 为 Unix 系统创建了一个小型的 Bourne shell 版本，并称之为 Almquist shell，后来缩短为`ash`。这个原始版本的`ash` shell 极其小巧且运行快速，但缺乏许多高级功能（例如命令行编辑或历史记录功能），使得它很难作为交互式 shell 使用。
 
-Debian Linux 发行版在其版本中创建了自己的 `ash` shell 版本（称为 `Debian ash` 或 `dash`）。在大多数情况下，`dash` 复制了 NetBSD 版本 `ash` shell 的功能，提供了高级的命令行编辑能力。
+NetBSD Unix 操作系统采用了`ash` shell，并且至今仍将其作为默认 shell 使用。NetBSD 开发者通过添加若干个新功能对`ash` shell 进行了定制，使其更接近 Bourne shell。这些新功能包括使用`emacs`和`vi`编辑器命令进行命令行编辑，以及用于召回之前输入命令的`history`命令。这个版本的`ash` shell 也被 FreeBSD 操作系统作为默认登录 shell 使用。
 
-然而，为了增加 shell 的复杂性，`dash` shell 实际上并不是许多基于 Debian 的 Linux 发行版中的默认 shell。由于 `bash` shell 在 Linux 中的流行，绝大多数基于 Debian 的 Linux 发行版使用 `bash` shell 作为正常的登录 shell，而仅将 `dash` shell 作为安装脚本的快速启动 shell 用于安装发行版文件。
+Debian Linux 发行版在其版本中创建了自己的`ash` shell 版本（称为`Debian ash`或`dash`）。在大多数情况下，`dash`复制了 NetBSD 版本`ash` shell 的功能，提供了高级的命令行编辑能力。
 
-例外是流行的 Ubuntu 发行版。这经常困扰 shell 脚本程序员，并导致在 Linux 环境中运行 shell 脚本时出现大量问题。Ubuntu Linux 发行版使用 `bash` shell 作为默认交互式 shell，但将 `dash` shell 作为默认的 `/bin/sh` shell。这一“特性”真的困扰了 shell 脚本程序员。
+然而，为了增加 shell 的复杂性，`dash` shell 实际上并不是许多基于 Debian 的 Linux 发行版中的默认 shell。由于`bash` shell 在 Linux 中的流行，绝大多数基于 Debian 的 Linux 发行版使用`bash` shell 作为正常的登录 shell，而仅将`dash` shell 作为安装脚本的快速启动 shell，用于安装发行版文件。
 
-正如你在第 10 章看到的，每个 shell 脚本都必须以一行声明脚本所用 shell 的代码开头。在我们的 `bash` 脚本中，我们一直使用：
+例外是流行的 Ubuntu 发行版。这经常困扰 shell 脚本程序员，并导致在 Linux 环境中运行 shell 脚本时出现大量问题。Ubuntu Linux 发行版使用`bash` shell 作为默认交互式 shell，但将`dash` shell 作为默认的`/bin/sh` shell。这一“特性”真的困扰了 shell 脚本程序员。
+
+正如你在第 10 章看到的，每个 shell 脚本都必须以一行声明脚本所用 shell 的代码开头。在我们的`bash`脚本中，我们一直使用：
 
 ```bash
 #!/bin/bash
 ```
 
-这告诉 shell 使用位于 `/bin/bash` 的 shell 程序来执行脚本。在 Unix 世界中，默认 shell 一直是 `/bin/sh`。许多熟悉 Unix 环境的 shell 程序员会将此复制到他们的 Linux shell 脚本中：
+这告诉 shell 使用位于`/bin/bash`的 shell 程序来执行脚本。在 Unix 世界中，默认 shell 一直是`/bin/sh`。许多熟悉 Unix 环境的 shell 程序员会将此复制到他们的 Linux shell 脚本中：
 
 ```bash
 #!/bin/sh
 ```
 
-在大多数 Linux 发行版中，`/bin/sh` 文件指向 `/bin/bash` shell 程序的符号链接（参见第 3 章）。这允许你轻松地将为 Unix Bourne shell 设计的 shell 脚本移植到 Linux 环境，而无需修改它们。
+在大多数 Linux 发行版中，`/bin/sh`文件指向`/bin/bash` shell 程序的符号链接（参见第 3 章）。这允许你轻松地将为 Unix Bourne shell 设计的 shell 脚本移植到 Linux 环境，而无需修改它们。
 
-遗憾的是，Ubuntu Linux 发行版将 `/bin/sh` 文件链接到了 `/bin/dash` shell 程序。由于 `dash` shell 只包含了原始 Bourne shell 中命令的子集，这可能会（通常也是）导致某些 shell 脚本无法正常工作。
+遗憾的是，Ubuntu Linux 发行版将`/bin/sh`文件链接到了`/bin/dash` shell 程序。由于`dash` shell 只包含了原始 Bourne shell 中命令的子集，这可能会（通常也是）导致某些 shell 脚本无法正常工作。
 
-下一节将带你 `dash` shell 的基础以及它与 `bash` shell 的区别。如果你编写可能需要在 Ubuntu 环境下运行的 bash 脚本，了解这一点尤为重要。
+下一节将带你了解`dash` shell 的基础以及它与`bash` shell 的区别。如果你编写可能需要在 Ubuntu 环境下运行的 bash 脚本，了解这一点尤为重要。
 
 ## dash Shell 特性
-虽然 `bash` shell 和 `dash` shell 都是模仿 Bourne shell 设计的，但它们之间存在差异。本节将带你了解 Debian `dash` shell 中的功能，以便在我们深入研究 shell 脚本功能之前让你熟悉 `dash` shell 的工作原理。
+
+虽然`bash` shell 和`dash` shell 都是模仿 Bourne shell 设计的，但它们之间存在差异。本节将带你了解 Debian`dash` shell 中的功能，以便在我们深入研究 shell 脚本功能之前让你熟悉`dash` shell 的工作原理。
 
 ## dash 命令行参数
+
 `dash` shell 使用命令行参数来控制其行为。[表 22.1] 列出了命令行参数并描述了每个参数的作用。
 
 ### 表 22.1：dash 命令行参数
 
-| 参数 |  |
+| 参数 | 说明 |
 | :--- | :--- |
 | `-a` | 导出所有分配给 shell 的变量。 |
 | `-c` | 从指定的命令字符串读取命令。 |
 | `-e` | 如果不是交互模式，当任何未测试的命令失败时立即退出。 |
 | `-f` | 显示路径通配符。 |
 | `-n` | 如果不是交互模式，读取命令但不执行。 |
-| `-u` | 当尝试扩展未设置的变量时，向 `STDERR` 写入错误信息。 |
-| `-v` | 在读取时将输入写入 `STDERR`。 |
-| `-x` | 在执行每个命令时将该命令写入 `STDERR`。 |
+| `-u` | 当尝试扩展未设置的变量时，向`STDERR`写入错误信息。 |
+| `-v` | 在读取时将输入写入`STDERR`。 |
+| `-x` | 在执行每个命令时将该命令写入`STDERR`。 |
 | `-I` | 在交互模式下忽略输入中的 EOF 字符。 |
 | `-i` | 强制 shell 在交互模式下运行。 |
 | `-m` | 开启作业控制（交互模式下默认启用）。 |
-| `-s` | 从 `STDIN` 读取命令（在无文件参数时的默认行为）。 |
-| `-E` | 启用 `emacs` 命令行编辑器。 |
-| `-V` | 启用 `vi` 命令行编辑器。 |
+| `-s` | 从`STDIN`读取命令（在无文件参数时的默认行为）。 |
+| `-E` | 启用`emacs`命令行编辑器。 |
+| `-V` | 启用`vi`命令行编辑器。 |
 
-Debian 在原始的 `ash` shell 命令行参数列表中仅添加了几个额外的命令行参数。`-E` 和 `-V` 命令行参数开启了 `dash` shell 的特殊命令行编辑功能。
+Debian 在原始的`ash` shell 命令行参数列表中仅添加了几个额外的命令行参数。`-E`和`-V`命令行参数开启了`dash` shell 的特殊命令行编辑功能。
 
-`-E` 命令行参数允许你使用 `emacs` 编辑器命令来编辑命令行文本（参见第 9 章）。你可以使用 `Ctrl` 和 `Meta` 键组合使用所有的 `emacs` 命令来操纵单行文本。
+`-E`命令行参数允许你使用`emacs`编辑器命令来编辑命令行文本（参见第 9 章）。你可以使用`Ctrl`和`Meta`键组合使用所有的`emacs`命令来操纵单行文本。
 
-`-V` 命令行参数允许你使用 `vi` 编辑器命令来编辑命令行文本（再次，参见第 9 章）。此功能允许你通过 `Esc` 键在命令行上的普通模式和 vi 编辑器模式之间切换。当你处于 vi 编辑器模式时时，可以使用所有的标准的 `vi` 编辑器命令（例如使用 `x` 删除字符，使用 `i` 插入文本）。一旦完成命令行编辑，你必须再次按下 `Esc` 键退出 vi 编辑器模式。
+`-V`命令行参数允许你使用`vi`编辑器命令来编辑命令行文本（再次，参见第 9 章）。此功能允许你通过`Esc`键在命令行上的普通模式和 vi 编辑器模式之间切换。当你处于 vi 编辑器模式时，可以使用所有的标准`vi`编辑器命令（例如使用`x`删除字符，使用`i`插入文本）。一旦完成命令行编辑，你必须再次按下`Esc`键退出 vi 编辑器模式。
 
 ## dash 环境变量
-`dash` shell 使用许多默认环境变量来跟踪信息，你也可以创建自己的环境变量。本节描述了这些环境变量以及 dash 如何处理它们。
+
+`dash` shell 使用许多默认环境变量来跟踪信息，你也可以创建自己的环境变量。本节描述了这些环境变量以及`dash`如何处理它们。
 
 ### 默认环境变量
-[表 22.2] 显示了默认的 dash 环境变量并描述了它们的用途。
+
+[表 22.2] 显示了默认的`dash`环境变量并描述了它们的用途。
 
 ### 表 22.2：dash shell 环境变量
 
 | 变量 | 描述 |
 | :--- | :--- |
-| `CDPATH` | `cd` 命令使用的搜索路径。 |
+| `CDPATH` | `cd`命令使用的搜索路径。 |
 | `HISTSIZE` | 存储在历史文件中的行数。 |
 | `HOME` | 用户默认登录目录。 |
 | `IFS` | 输入字段分隔符。默认值是`空格`、`制表符`和`换行符`。 |
 | `MAIL` | 用户邮箱文件名。 |
 | `MAILCHECK` | 检查邮箱文件是否有新邮件的频率。 |
-
-
-
-
-
-| `MAILPATH` | 一个由冒号分隔的多个邮箱文件名列表。如果设置，此值将覆盖 `MAIL` 环境变量。 |
+| `MAILPATH` | 一个由冒号分隔的多个邮箱文件名列表。如果设置，此值将覆盖`MAIL`环境变量。 |
 | `OLDPWD` | 上一个工作目录的值。 |
 | `PATH` | 可执行文件的默认搜索路径。 |
-| `PPID` | 当前 shell 的父进程的进程 ID (PID)。 |
+| `PPID` | 当前 shell 的父进程的进程 ID（PID）。 |
 | `PS1` | 主 shell 命令行界面提示符。 |
 | `PS2` | 次级 shell 命令行界面提示符。 |
 | `PS4` | 当启用执行跟踪时，在每行之前打印的字符。 |
 | `PWD` | 当前工作目录的值。 |
 | `TERM` | shell 的默认终端设置。 |
 
-你应该注意，`dash` 环境变量与 `bash` 中使用的环境变量非常相似（参见第 5 节）。这并非偶然。请记住，`dash` shell 和 `bash` shell 都是 Bourne 壳（Bourne shell）的扩展，因此它们都包含了它的许多特性。然而，由于追求简洁，`dash` shell 包含的环境变量远少于 `bash` shell。在 `ash` shell 环境下创建 shell 脚本时，你需要考虑到这一点。
+你应该注意，`dash`环境变量与`bash`中使用的环境变量非常相似（参见第 5 节）。这并非偶然。请记住，`dash` shell 和`bash` shell 都是 Bourne 壳（Bourne shell）的扩展，因此它们都包含了它的许多特性。然而，由于追求简洁，`dash` shell 包含的环境变量远少于`bash` shell。在`ash` shell 环境下创建 shell 脚本时，你需要考虑到这一点。
 
-`dash` shell 使用 `set` 命令来显示环境变量：
+`dash` shell 使用`set`命令来显示环境变量：
 
 ```bash
-$set
-`COLORTERM=‘’`
-`DESKTOP_SESSION=‘default’`
-`DISPLAY=‘:0.0’`
-`DM_CONTROL=‘/var/run/xdmctl’`
-`GS_LIB=‘/home/atest/.fonts’`
-`HOME=‘/home/atest’`
-`IFS=‘  `
-`’`
-`KDEROOTHOME=‘/root/.kde’`
-`KDE_FULL_SESSION=‘true’`
-`KDE_MULTIHEAD=‘false’`
-`KONSOLE_DCOP=‘DCOPRef(konsole-5293,konsole)’`
-`KONSOLE_DCOP_SESSION=‘DCOPRef(konsole-5293,session-1)’`
-`LANG=‘en_US’`
-`LANGUAGE=‘en’`
-`LC_ALL=‘en_US’`
-`LOGNAME=‘atest’`
-`OPTIND=‘1’`
-`PATH=‘/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin’`
-`PPID=‘5293’`
-`PS1=‘$  ’`
-`PS2=‘>  ’`
-`PS4=‘+  ’`
-`PWD=‘/home/atest’`
-`SESSION_MANAGER=‘local/testbox:/tmp/.ICE-unix/5051’`
-`SHELL=‘/bin/dash’`
-`SHLVL=‘1’`
-`TERM=‘xterm’`
-`USER=‘atest’`
-`XCURSOR_THEME=‘default’`
-`_=‘ash’`
+$ set
+COLORTERM=''
+DESKTOP_SESSION='default'
+DISPLAY=':0.0'
+DM_CONTROL='/var/run/xdmctl'
+GS_LIB='/home/atest/.fonts'
+HOME='/home/atest'
+IFS=' 	
+'
+KDEROOTHOME='/root/.kde'
+KDE_FULL_SESSION='true'
+KDE_MULTIHEAD='false'
+KONSOLE_DCOP='DCOPRef(konsole-5293,konsole)'
+KONSOLE_DCOP_SESSION='DCOPRef(konsole-5293,session-1)'
+LANG='en_US'
+LANGUAGE='en'
+LC_ALL='en_US'
+LOGNAME='atest'
+OPTIND='1'
+PATH='/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin'
+PPID='5293'
+PS1='$  '
+PS2='>  '
+PS4='+  '
+PWD='/home/atest'
+SESSION_MANAGER='local/testbox:/tmp/.ICE-unix/5051'
+SHELL='/bin/dash'
+SHLVL='1'
+TERM='xterm'
+USER='atest'
+XCURSOR_THEME='default'
+_='ash'
 $
 ```
 
-你的默认 dash shell 环境很可能不同，因为不同的 Linux 发行版在登录时分配不同的默认环境变量。
+你的默认`dash` shell 环境很可能不同，因为不同的 Linux 发行版在登录时分配不同的默认环境变量。
 
 ### 位置参数
 
-除了默认环境变量外，`dash` shell 还为命令行中定义的任何参数分配特殊变量。以下是 `dash` shell 可用的的位置参数变量：
+除了默认环境变量外，`dash` shell 还为命令行中定义的任何参数分配特殊变量。以下是`dash` shell 可用的位置参数变量：
 
-* `$0`: shell 的名称
-* `$n`: 第 n 个位置参数
-* `$*`: 包含所有参数内容的单个值，由 `IFS` 环境变量中的第一个字符分隔，如果 `IFS` 未定义则用空格分隔
-* `$@`: 展开为由所有命令行参数组成的多个参数
-* `$#`: 位置参数的数量
-* `$?`: 最近一次命令的退出状态
-* `$-`: 当前的选项标志
-* `$$`: 当前 shell 的进程 ID (PID)
-* `$!`: 最近一次后台命令的进程 ID (PID)
+- `$0`：shell 的名称
+- `$n`：第 n 个位置参数
+- `$*`：包含所有参数内容的单个值，由`IFS`环境变量中的第一个字符分隔，如果`IFS`未定义则用空格分隔
+- `$@`：展开为由所有命令行参数组成的多个参数
+- `$#`：位置参数的数量
+- `$?`：最近一次命令的退出状态
+- `$-`：当前的选项标志
+- `$$`：当前 shell 的进程 ID（PID）
+- `$!`：最近一次后台命令的进程 ID（PID）
 
-所有的 `dash` 位置参数都模拟了 `bash` shell 中可用的相同位置参数。你可以像在 `bash` shell 中一样，在你的 shell 脚本中使用每个位置参数。
+所有的`dash`位置参数都模拟了`bash` shell 中可用的相同位置参数。你可以像在`bash` shell 中一样，在你的 shell 脚本中使用每个位置参数。
 
 ### 用户定义的环境变量
 
-`dash` shell 还允许你设置自己的环境变量。与 `bash` 一样，你可以通过赋值语句（`assign` statement）在命令行上定义新的环境变量：
+`dash` shell 还允许你设置自己的环境变量。与`bash`一样，你可以通过赋值语句（`assign` statement）在命令行上定义新的环境变量：
 
 ```bash
 $ testing=10
@@ -16426,7 +17360,7 @@ $ echo $testing
 $
 ```
 
-默认情况下，环境变量只在定义它们的 shell 会话中可见。要让一个环境变量在子 shell 或进程中可见，你必须使用 `export` 命令：
+默认情况下，环境变量只在定义它们的 shell 会话中可见。要让一个环境变量在子 shell 或进程中可见，你必须使用`export`命令：
 
 ```bash
 $ testing=10 ; export testing
@@ -16436,16 +17370,17 @@ $ echo $testing
 $
 ```
 
-如果没有 `export` 命令，用户定义的环境变量只在当前 shell 或进程中可见。
+如果没有`export`命令，用户定义的环境变量只在当前 shell 或进程中可见。
 
 > **注意**
-> dash 变量和 bash 变量之间有一个巨大的区别。dash shell 不支持变量数组。这个微小的特性为高级 shell 脚本编写者带来了各种问题。
+>
+> `dash`变量和`bash`变量之间有一个巨大的区别。`dash` shell 不支持变量数组。这个微小的特性为高级 shell 脚本编写者带来了各种问题。
 
 ### dash 内置命令
 
-与 `bash` shell 一样，`dash` shell 包含一组它能够识别的内置命令。你可以直接从命令行界面使用这些命令，也可以将它们整合到你的 shell 脚本中。[表 22.3] 列出了 `dash` shell 内置命令。
+与`bash` shell 一样，`dash` shell 包含一组它能够识别的内置命令。你可以直接从命令行界面使用这些命令，也可以将它们整合到你的 shell 脚本中。[表 22.3] 列出了`dash` shell 内置命令。
 
-#### 表 22.3 dash shell 内置命令
+#### 表 22.3：dash shell 内置命令
 
 | 命令 | 说明 |
 | :--- | :--- |
@@ -16462,8 +17397,8 @@ $
 | `getopts` | 从参数列表中获取选项和参数。 |
 | `hash` | 维护并检索最近命令及其位置的哈希表。 |
 | `pwd` | 显示当前工作目录的值。 |
-| `read` | 从 STDIN 读取一行并将值赋值给变量。 |
-| `readonly` | 从 STDIN 读取一行到不可更改的变量中。 |
+| `read` | 从`STDIN`读取一行并将值赋值给变量。 |
+| `readonly` | 从`STDIN`读取一行到不可更改的变量中。 |
 | `printf` | 使用格式化字符串显示文本和变量。 |
 | `set` | 列出或设置选项标志和环境变量。 |
 | `shift` | 将位置参数向后移动指定的次数。 |
@@ -16477,15 +17412,15 @@ $
 | `unset` | 从导出的变量中移除指定的变量或选项标志。 |
 | `wait` | 等待指定的作业完成并返回退出状态。 |
 
-你可能已经在 `bash` shell 中识别出所有这些内置命令了。`dash` shell 支持与 `bash` shell 许多相同的内置命令。你会发现，没有用于命令历史文件的命令，也没有用于目录栈的命令。`dash` shell 不支持这些特性。
+你可能已经在`bash` shell 中识别出所有这些内置命令了。`dash` shell 支持与`bash` shell 许多相同的内置命令。你会发现，没有用于命令历史文件的命令，也没有用于目录栈的命令。`dash` shell 不支持这些特性。
 
 ### 在 dash 中编写脚本
 
-遗憾的是，`dash` shell 并不识别 `bash` shell 的所有脚本功能。为 `bash` 环境编写的 shell 脚本在 `dash` shell 中运行时通常会失败，给 shell 脚本编程人员带来各种困扰。本节描述了为了让你的 shell 脚本在 `dash` shell 环境中正常运行而需要注意的差异。
+遗憾的是，`dash` shell 并不识别`bash` shell 的所有脚本功能。为`bash`环境编写的 shell 脚本在`dash` shell 中运行时通常会失败，给 shell 脚本编程人员带来各种困扰。本节描述了为了让你的 shell 脚本在`dash` shell 环境中正常运行而需要注意的差异。
 
 #### 创建 dash 脚本
 
-你现在可能猜到了，为 `dash` shell 创建 shell 脚本与为 `bash` shell 创建 shell 脚本非常相似。你应该始终在脚本中指定要使用的 shell，以确保脚本以正确的 shell 运行。
+你现在可能猜到了，为`dash` shell 创建 shell 脚本与为`bash` shell 创建 shell 脚本非常相似。你应该始终在脚本中指定要使用的 shell，以确保脚本以正确的 shell 运行。
 
 你在 shell 的第一行这样做：
 
@@ -16493,25 +17428,23 @@ $
 #!/bin/dash
 ```
 
-你也可以在这一行指定 shell 命令行参数，正如之前在“dash 命令行参数” 节中演示的那样。
-
-#### 不起作用的内容
-
-遗憾的是，由于 `dash` shell 仅是 Bourne shell 特性的子集，bash shell 脚本中的某些内容在 `dash` shell 中无法工作。这些内容通常被称为 bashisms（bash 特性）。本节简要总结了你可能习惯在 bash shell 脚本中使用、但在 dash shell 环境下无法工作的 bash shell 特性。
 
 
+你也可以在这一行指定 shell 命令行参数，正如之前在“dash 命令行参数”节中演示的那样。
 
+### 不起作用的内容
 
+遗憾的是，由于`dash` shell 仅是 Bourne shell 特性的子集，bash shell 脚本中的某些内容在`dash` shell 中无法工作。这些内容通常被称为 bashisms（bash 特性）。本节简要总结了你可能习惯在 bash shell 脚本中使用、但在 dash shell 环境下无法工作的 bash shell 特性。
 
-# 使用算术运算
+## 使用算术运算
 
 第 10 章展示了在 bash 脚本中表示数学运算的三种方法：
 
-*   使用 `expr` 命令：`expr operation`
+*   使用`expr`命令：`expr operation`
 *   使用方括号：`$[ operation ]`
 *   使用双括号：`$(( operation ))`
 
-dash shell 支持 `expr` 命令和双括号方法，但不支持方括号方法。如果你有大量使用方括号的数学运算，这可能会一个问题：
+dash shell 支持`expr`命令和双括号方法，但不支持方括号方法。如果你有大量使用方括号的数学运算，这可能会一个问题：
 
 ```bash
 $ cat test5
@@ -16544,11 +17477,11 @@ $
 
 现在 shell 可以正常执行计算了。
 
-## test 命令
+### test 命令
 
-虽然 dash shell 支持 `test` 命令，但你必须小心如何使用它。bash shell 版本的 `test` 命令与 dash shell 版本略有不同。
+虽然 dash shell 支持`test`命令，但你必须小心如何使用它。bash shell 版本的`test`命令与 dash shell 版本略有不同。
 
-bash shell `test` 命令允许你使用双等号（`==`）来测试两个字符串是否相等。这是为了适应其他编程语言中使用这种格式的程序员而增加的功能：
+bash shell`test`命令允许你使用双等号（`==`）来测试两个字符串是否相等。这是为了适应其他编程语言中使用这种格式的程序员而增加的功能：
 
 ```bash
 $ cat test6
@@ -16576,7 +17509,7 @@ They're different
 $
 ```
 
-dash shell 中提供的 `test` 命令不识别用于文本比较的 `==` 符号。相反，它只识别 `=` 符号。如果你将文本比较符号更改为单个等号，那么在 bash 和 dash shell 环境中一切都会正常：
+dash shell 中提供的`test`命令不识别用于文本比较的`==`符号。相反，它只识别`=`符号。如果你将文本比较符号更改为单个等号，那么在 bash 和 dash shell 环境中一切都会正常：
 
 ```bash
 $ cat test7
@@ -16597,17 +17530,17 @@ $
 
 这个小 bash 特性让许多 shell 程序员为此感到了数小时的沮丧！
 
-## echo 语句选项
+### echo 语句选项
 
-简单的 `echo` 语句也是 dash shell 程序员的另一个沮丧来源。它在 dash 和 bash shell 中的行为并不相同。
+简单的`echo`语句也是 dash shell 程序员的另一个沮丧来源。它在 dash 和 bash shell 中的行为并不相同。
 
-在 bash shell 中，如果你想在输出中显示特殊字符，必须使用 `-e` 命令行参数：
+在 bash shell 中，如果你想在输出中显示特殊字符，必须使用`-e`命令行参数：
 
 ```bash
 echo -e “This line contains\ta special character”
 ```
 
-`echo` 语句包含表示制表符的特殊字符 `\t`。如果没有 `-e` 命令行参数，bash 版本的 `echo` 语句会忽略特殊字符。这里有一个在 bash shell 中演示此点的测试：
+`echo`语句包含表示制表符的特殊字符`\t`。如果没有`-e`命令行参数，bash 版本的`echo`语句会忽略特殊字符。这里有一个在 bash shell 中演示此点的测试：
 
 ```bash
 $ cat test8
@@ -16628,9 +17561,9 @@ This is the end of the test
 $
 ```
 
-没有使用 `-e` 命令行参数的 `echo` 语句将 `\t` 字符作为普通文本显示，因此为了获取制表符，必须使用 `-e` 命令行参数。
+没有使用`-e`命令行参数的`echo`语句将`\t`字符作为普通文本显示，因此为了获取制表符，必须使用`-e`命令行参数。
 
-在 dash shell 中，情况有点不同。dash shell 中的 `echo` 语句会自动识别并显示特殊字符。由于由于，没有 `-e` 命令行参数。如果你尝试在 dash 环境中运行相同的脚本，你会得到以下输出：
+在 dash shell 中，情况有点不同。dash shell 中的`echo`语句会自动识别并显示特殊字符。由于由于，没有`-e`命令行参数。如果你尝试在 dash 环境中运行相同的脚本，你会得到以下输出：
 
 ```bash
 $ ./test8
@@ -16642,13 +17575,13 @@ This is the end of the test
 $
 ```
 
-如从输出所示，dash shell 版本的 `echo` 命令在没有 `-e` 命令行参数的情况下也能很好地识别行中的特殊字符，但对于包含 `-e` 命令行参数的行行，它会产生困惑并将 `-e` 视为普通文本显示。
+如从输出所示，dash shell 版本的`echo`命令在没有`-e`命令行参数的情况下也能很好地识别行中的特殊字符，但对于包含`-e`命令行参数的行行，它会产生困惑并将`-e`视为普通文本显示。
 
-遗憾的是，这个问题没有简单的解决方案。如果你必须编写可以在 bash 和 dash shell 环境中共同运行的脚本，最佳解决方案是使用 `printf` 命令显示文本。该命令在两种 shell 环境中的工作方式相同，并且可以正常显示特殊字符。
+遗憾的是，这个问题没有简单的解决方案。如果你必须编写可以在 bash 和 dash shell 环境中共同运行的脚本，最佳解决方案是使用`printf`命令显示文本。该命令在两种 shell 环境中的工作方式相同，并且可以正常显示特殊字符。
 
-## function 命令
+### function 命令
 
-第 16 章向你展示了如何在 shell 脚本中定义自己的函数。bash shell 支持两种定义函数的方法。第一种方法是使用 `function` 语句：
+第 16 章向你展示了如何在 shell 脚本中定义自己的函数。bash shell 支持两种定义函数的方法。第一种方法是使用`function`语句：
 
 ```bash
 function name {
@@ -16656,7 +17589,7 @@ commands
 }
 ```
 
-`name` 属性分配给函数的唯一名称。脚本中定义的每个函数必须分配一个唯一名称。`commands` 是组成函数的一个或多个 shell 命令。当你调用函数时，bash shell 会按照这些命令在函数中出现的顺序执行它们，就像在普通脚本一样。
+`name`属性分配给函数的唯一名称。脚本中定义的每个函数必须分配一个唯一名称。`commands`是组成函数的一个或多个 shell 命令。当你调用函数时，bash shell 会按照这些命令在函数中出现的顺序执行它们，就像在普通脚本一样。
 
 bash shell 中定义函数的第二种格式更符合其他语言中函数的定义方式：
 
@@ -16666,7 +17599,7 @@ commands
 }
 ```
 
-名称后面的空括号表示你正在定义一个函数。dash shell 不 `function` 语句。如果你尝试在 dash 中运行为 bash 设计的函数，将得到一个错误：
+名称后面的空括号表示你正在定义一个函数。dash shell 不`function`语句。如果你尝试在 dash 中运行为 bash 设计的函数，将得到一个错误：
 
 ```bash
 $ cat test9
@@ -16720,106 +17653,96 @@ $
 以下是使 zsh shell 独特的特性：
 
 *   改进的 shell 选项处理
-
 *   shell 兼容模式
 
+### 可加载模块
 
-
-
-
-# 可加载模块
-
-在所有这些特性中，可加载模块是 shell 设计中最高级的特性。正如你在 `bash` 和 `dash` shell 中看到的，每个 shell 都包含一组内置命令，这些命令不需要外部实用程序即可直接使用。内置命令的优点是执行速度快。shell 在运行命令之前不需要将实用程序加载到内存中；内置命令已经存在于 shell 内存中，随时待命。
+在所有这些特性中，可加载模块是 shell 设计中最高级的特性。正如你在`bash`和`dash` shell 中看到的，每个 shell 都包含一组内置命令，这些命令不需要外部实用程序即可直接使用。内置命令的优点是执行速度快。shell 在运行命令之前不需要将实用程序加载到内存中；内置命令已经存在于 shell 内存中，随时待命。
 
 `zsh` shell 提供了一组核心内置命令，并具备添加额外命令模块的能力。每个命令模块都为特定场景（如网络支持和高级数学函数）提供一组额外的内置命令。你可以只添加你认为在特定情况下所需要的模块。
 
-这一特性提供了一种极佳的方法，既可以在需要 shell 占用空间较小且命令较少的情况下来限制 `zsh` shell 的大小，也可以在需要更快执行速度的情况下扩展可用内置命令的数量。
+这一特性提供了一种极佳的方法，既可以在需要 shell 占用空间较小且命令较少的情况下来限制`zsh` shell 的大小，也可以在需要更快执行速度的情况下扩展可用内置命令的数量。
 
 ## zsh Shell 的组成
 
-本节将带你了解 `zsh` shell 的基础知识，展示可用的（或通过安装模块添加的）内置命令，以及 `zsh` shell 使用的命令行参数和环境变量。
+本节将带你了解`zsh` shell 的基础知识，展示可用的（或通过安装模块添加的）内置命令，以及`zsh` shell 使用的命令行参数和环境变量。
 
-## Shell 选项
+### Shell 选项
 
-大多数 shell 使用命令行参数来定义行为。`zsh` shell 使用 `set` 来自定义行为。
+大多数 shell 使用命令行参数来定义行为。`zsh` shell 使用`set`来自定义行为。
 
-## 命令行参数
+### 命令行参数
 
-| 参数 |  |
+| 参数 | 描述 |
 | :--- | :--- |
 | `-c` | 执行指定的命令。 |
 | `-i` | 以交互模式启动。 |
-| `-s` | 从 `STDIN` 执行。 |
+| `-s` | 从`STDIN`执行。 |
 | `-p` | 强制以用户身份运行。 |
 | `-r` | 限制用户。 |
 | `-t` | 执行单个命令。 |
 
-## Shell 模拟
+### Shell 模拟
 
 以下选项分为几类：
 
 - **切换目录**: `cd`
-- **补全**: 
-- **扩展与通配符**: 
+- **补全**:
+- **扩展与通配符**:
 - **历史记录**: `echo`
-- **初始化**: 
-- **输入/输出**: 
-- **作业控制**: 
-- **提示符**: ` 
+- **初始化**:
+- **输入/输出**:
+- **作业控制**:
+- **提示符**:
 - **脚本**: `while`, `do`, `done`
-- **陷阱 (Traps)**: 
-- ``` 和 `*` (扩展与通配符)
+- **陷阱 (Traps)**:
+- **扩展与通配符**: `和`*`
 - **zle** (编辑器)
-- **别名 (Aliases)**: 
-- **Shell 状态**: `zle` 
+- **别名 (Aliases)**:
+- **Shell 状态**: `zle`
 
-## 初始化
+### 初始化
 
 有几个选项用于处理 shell 的启动特性：
 
 - `all_export`: 所有参数和变量都会导出到子 shell 进程。
 - `global_export`: 导出到环境的参数不会变为函数的局部。
 - `global_rcs`: 如果未设置，`zsh` shell 不运行全局启动文件，但仍会运行本地启动文件。
-- `rcs`: 如果未设置，zsh shell 会运行 `/etc/zshenv` 启动文件，但不运行其他。
+- `rcs`: 如果未设置，zsh shell 会运行`/etc/zshenv`启动文件，但不运行其他。
 
 初始化选项允许你指定在 shell 环境中运行哪些（如果有）`zsh` shell 启动文件。你也可以在启动文件中设置这些值，以限制 shell 执行哪些文件。
 
-## 脚本与函数
+### 脚本与函数
 
-脚本和函数选项允许你自定义 `zsh` shell 中的脚本编写环境。这是设置函数在 shell 中执行方式的一种方便方法。
+脚本和函数选项允许你自定义`zsh` shell 中的脚本编写环境。这是设置函数在 shell 中执行方式的一种方便方法。
 
 - `c_bases`: 使用 C 格式 (`0xdddd`) 而不是 shell 格式 (`16#dddd`) 显示十六进制。
-- `err_exit`: 如果命令以非零状态码退出，则执行 `ZERR` 陷阱中的命令并退出。
+- `err_exit`: 如果命令以非零状态码退出，则执行`ZERR`陷阱中的命令并退出。
 - `err_return`: 如果命令具有非零状态码，则立即从封装函数返回。
-- `eval_lineno`: 如果设置，使用 `eval` 内置命令评估的表达式的行号将与 shell 环境的其他部分分开跟踪。
-
-
-
-
-
-* `exec`: 执行命令。如果未设置此选项，则读取命令并报告错误，但不执行这些命令。
-* `function_argzero`: 将 `$0` 设置为函数或脚本的名称。
-* `local_options`: 如果设置，当 shell 函数返回时，将恢复在函数之前设置的所有选项。
-* `local_traps`: 如果设置，当在函数内部设置信号陷获（trap）时，在函数退出时将恢复陷获的先前的状态。
-* `multios`: 当尝试进行多次重定向时，执行隐式的 `tee` 或 `cat` 命令。
-* `octal_zeroes`: 将任何以零开头的整数字符串解释为八进制数。
-* `typeset_silent`: 如果未设置，使用 `typeset` 配合参数名将显示参数的当前值。
-* `verbose`: 显示 shell 读取的 shell 输入行。
-* `xtrace`: 在 shell 执行命令时，显示命令及其参数。
+- `eval_lineno`: 如果设置，使用`eval`内置命令评估的表达式的行号将与 shell 环境的其他部分分开跟踪。
+- `exec`: 执行命令。如果未设置此选项，则读取命令并报告错误，但不执行这些命令。
+- `function_argzero`: 将`$0`设置为函数或脚本的名称。
+- `local_options`: 如果设置，当 shell 函数返回时，将恢复在函数之前设置的所有选项。
+- `local_traps`: 如果设置，当在函数内部设置信号陷获（trap）时，在函数退出时将恢复陷获的先前的状态。
+- `multios`: 当尝试进行多次重定向时，执行隐式的`tee`或`cat`命令。
+- `octal_zeroes`: 将任何以零开头的整数字符串解释为八进制数。
+- `typeset_silent`: 如果未设置，使用`typeset`配合参数名将显示参数的当前值。
+- `verbose`: 显示 shell 读取的 shell 输入行。
+- `xtrace`: 在 shell 执行命令时，显示命令及其参数。
 
 zsh shell 允许你自定义在退出 shell 中定义的函数时发生的大许多功能。
 
-## 内置命令
+### 内置命令
 
 zsh shell 的独特之处在于，它允许你扩展 shell 中可用的内置命令。这为许多不同的应用程序提供了丰富的、快速的工具。
 
 本节描述了核心内置命令，以及在编写时可用的各种模块。
 
-## 核心内置命令
+### 核心内置命令
 
 zsh shell 的核心包含了你在其他 shell 中常见的各种内置命令。表 22.5 描述了供你使用的的内置命令。
 
-表 22.5 zsh 核心内置命令
+**表 22.5 zsh 核心内置命令**
 
 | 命令 | 描述 |
 | :--- | :--- |
@@ -16828,11 +17751,11 @@ zsh shell 的核心包含了你在其他 shell 中常见的各种内置命令。
 | `bg` | 在后台模式下执行作业。 |
 | `bindkey` | 将组合键绑定到命令。 |
 | `builtin` | 执行指定的内置命令，而不是同名的可执行文件。 |
-| `bye` | 与 `exit` 相同。 |
+| `bye` | 与`exit`相同。 |
 | `cd` | 更改当前工作目录。 |
 | `chdir` | 更改当前工作目录。 |
 | `command` | 将指定的命令作为外部文件执行，而不是函数或内置命令。 |
-| `declare` | 设置变量的数据类型（同于 `typeset`）。 |
+| `declare` | 设置变量的数据类型（同于`typeset`）。 |
 | `dirs` | 显示目录栈的内容。 |
 | `disable` | 临时禁用指定的哈希表元素。 |
 | `disown` | 从作业表中移除指定的作业。 |
@@ -16858,9 +17781,12 @@ zsh shell 的核心包含了你在其他 shell 中常见的各种内置命令。
 | `limit` | 设置或显示资源限制。 |
 | `local` | 在函数内定义变量。 |
 | `log` | 显示登录历史。 |
-| `logout` | 与 `exit` 相同，但用于登录 shell。 |
+| `logout` | 与`exit`相同，但用于登录 shell。 |
 | `popd` | 更改目录并从栈弹出。 |
 | `print` | 显示文本。 |
+
+
+
 | `printf` | 打印格式化字符串。 |
 | `pushd` | 更改目录并推入栈。 |
 | `pwd` | 显示当前工作目录。 |
@@ -16907,11 +17833,6 @@ zsh shell 在提供内置命令方面绝非弱！你应该能对应的 bash 命�
 | `zsh/compctl` | 控制命令补全的命令 |
 | `zsh/complete` | 命令行补全命令 |
 | `zsh/complist` | 命令行补全列表扩展的命令 |
-
-
-
-
-
 | `zsh/computil` | 用于命令行补全的实用命令 |
 | `zsh/datetime` | 额外的日期和时间命令及变量 |
 | `zsh/deltochar` | 模拟 emacs 功能的行编辑器函数 |
@@ -16921,7 +17842,7 @@ zsh shell 在提供内置命令方面绝非弱！你应该能对应的 bash 命�
 | `zsh/parameter` | 通过关联数组访问命令哈希表 |
 | `zsh/pcre` | 扩展正则表达式库 |
 | `zsh/sched` | 用于定时命令执行的调度命令 |
-| `zsh/net/socket` | Unix 域套接字支持
+| `zsh/net/socket` | Unix 域套接字支持 |
 | `zsh/stat` | 访问 stat 系统调用以提供系统统计信息 |
 | `zsh/system` | 各种底层系统功能的接口 |
 | `zsh/net/tcp` | 访问 TCP 套接字 |
@@ -17049,10 +17970,6 @@ zsh shell 支持两种执行数学运算的方法：
 
 （注：此处保留了原始文本中关于计算示例的逻辑。）
 
-
-
-
-
 与 bash shell 函数（参见第 16 节）一样，你可以在 shell 脚本中定义函数，然后使用全局变量或向函数传递参数。这里有一个使用全局变量的示例：
 
 ```bash
@@ -17156,6 +18073,7 @@ zsh shell 的另一个有趣功能是 `zcompile` 命令。该命令处理函数�
 ## 第 23 节：使用数据库
 
 在本节中
+
 - 介绍 MySQL
 - 介绍 PostgreSQL
 - 创建数据库对象
@@ -17185,10 +18103,6 @@ openSUSE Linux 发行版也使用先进的软件管理系统。[图 23.2] 显示
 
 ![](img/0062.jpg)
 
-
-
-
-
 再次，您可以选择 MySQL 软件选项来下载并安装所需的软件包。
 
 如果您正在使用不支持自动软件加载的 Linux 发行版，或者您只是想获得最新、最强大的 MySQL 服务器版本，可以直接从 MySQL 网站（[www.mysql.com](http://www.mysql.com)）下载安装文件并自行安装。
@@ -17204,11 +18118,13 @@ MySQL 网站包含了针对特定 Linux 发行版的预构建二进制包（使�
 
 ### 连接到服务器
 
-`mysql` 客户端程序允许您使用任何用户账户和密码连接到网络上任何位置的 MySQL 服务器。默认情况下，如果您在命令行中不带任何参数输入 `mysql` 程序，它将尝试连接到运行在同一 Linux 系统上的 MySQL 服务器，并使用 Linux 登录用户名。
 
-很可能，这并不是您想要连接数据库的方式。有很多命令行参数允许您不仅可以控制连接到哪个 MySQL 服务器，还可以控制 `mysql` 界面的行为。表 23.1 显示了您可以在 `mysql` 程序中使用的命令行参数。
 
-#### 表 23.1 的 mysql 命令行参数
+`mysql`客户端程序允许您使用任何用户账户和密码连接到网络上任何位置的 MySQL 服务器。默认情况下，如果您在命令行中不带任何参数输入`mysql`程序，它将尝试连接到运行在同一 Linux 系统上的 MySQL 服务器，并使用 Linux 登录用户名。
+
+很可能，这并不是您想要连接数据库的方式。有很多命令行参数允许您不仅可以控制连接到哪个 MySQL 服务器，还可以控制`mysql`界面的行为。表 23.1 显示了您可以在`mysql`程序中使用的命令行参数。
+
+### 表 23.1 的 mysql 命令行参数
 
 | 参数 | 描述 |
 | :--- | :--- |
@@ -17220,7 +18136,7 @@ MySQL 网站包含了针对特定 Linux 发行版的预构建二进制包（使�
 | `-e` | 执行指定的语句并退出。 |
 | `-E` | 垂直显示查询输出，每行一个数据字段。 |
 | `-f` | 发生 SQL 错误时继续。 |
-| `-G` | 启用命名 `mysql` 命令。 |
+| `-G` | 启用命名`mysql`命令。 |
 | `-h` | 指定 MySQL 服务器主机名（默认是 localhost）。 |
 | `-H` | 以 HTML 代码显示查询输出。 |
 | `-i` | 忽略函数名后的空格。 |
@@ -17235,20 +18151,20 @@ MySQL 网站包含了针对特定 Linux 发行版的预构建二进制包（使�
 | `-t` | 以表格形式显示输出。 |
 | `-T` | 程序退出时显示调试信息、内存和 CPU 统计数据。 |
 | `-u` | 指定用作登录的用户账户。 |
-| `-U` | 仅允许指定键值的 `UPDATE` 和 `DELETE` 语句。 |
+| `-U` | 仅允许指定键值的`UPDATE`和`DELETE`语句。 |
 | `-v` | 使用详细模式。 |
 | `-w` | 如果无法建立连接，则等待并重试。 |
 | `-X` | 以 XHTML 代码显示查询输出。 |
 
 如您所见，有很多命令行选项可以修改您登录到 MySQL 服务器的方式。
 
-默认情况下，`mysql` 客户端程序尝试使用您的 Linux 登录名登录 MySQL 服务器。如果该名称没有在 MySQL 中配置为用户账户，您将需要使用 `-u` 参数来指定登录的名称：
+默认情况下，`mysql`客户端程序尝试使用您的 Linux 登录名登录 MySQL 服务器。如果该名称没有在 MySQL 中配置为用户账户，您将需要使用`-u`参数来指定登录的名称：
 
-```
+```bash
 $ mysql -u root -p
 ```
 
-```
+```text
 Enter password:
 Welcome to the MySQL monitor. Commands end with ; or \g.
 Your MySQL connection id is 39
@@ -17259,18 +18175,18 @@ Type ‘help;’ or \h for help. Type \c to clear the current input statement.
 mysql>
 ```
 
-`-p` 参数告诉 `mysql` 程序提示输入与用户账户关联的密码。`mysql` 程序尝试使用您的 Linux 登录名登录 MySQL 服务器。一旦登录到服务器，就可以开始输入命令。
+`-p`参数告诉`mysql`程序提示输入与用户账户关联的密码。`mysql`程序尝试使用您的 Linux 登录名登录 MySQL 服务器。一旦登录到服务器，就可以开始输入命令。
 
 ## mysql 命令
 
-`mysql` 程序使用两种类型的命令：
+`mysql`程序使用两种类型的命令：
 
-* 特殊 `mysql` 命令
+* 特殊`mysql`命令
 * 标准 SQL 语句
 
-`mysql` 程序使用自己的一套命令让您可以轻松控制环境并获取有关 MySQL 服务器的信息。表 23.2 显示了这些命令。
+`mysql`程序使用自己的一套命令让您可以轻松控制环境并获取有关 MySQL 服务器的信息。表 23.2 显示了这些命令。
 
-#### 表 23.2 mysql 命令
+### 表 23.2 mysql 命令
 
 | 命令 | 快捷键 | 描述 |
 | :--- | :--- | :--- |
@@ -17287,7 +18203,7 @@ mysql>
 | `note` | `\t` | 将输出到文件。 |
 | `pager` | `\P` | 设置分页器程序。 |
 | `print` | `\p` | 打印命令。 |
-| `prompt` | `\R` | 更改 `mysql` 提示符。 |
+| `prompt` | `\R` | 更改`mysql`提示符。 |
 | `quit` | `\q` | 退出程序。 |
 | `rehash` | `\#` | 重建表。 |
 | `source` | `\` | 执行文件中的 SQL 脚本。 |
@@ -17299,9 +18215,9 @@ mysql>
 | `warnings` | `\W` | 语句后显示警告。 |
 | `nowarning` | `\w` | 语句后不显示警告。 |
 
-您可以在 `mysql` 提示符处直接使用完整命令或快捷键：
+您可以在`mysql`提示符处直接使用完整命令或快捷键：
 
-```
+```text
 mysql> \s
 --------------
 mysql Ver 4.12 Distrib 5.0 for redhat-linux (i86) using readline 5.0
@@ -17325,13 +18241,9 @@ Threads: 1 Questions: 53 Slow queries: 0 Opens: 23 Flush tables: 1 Open tables: 
 mysql>
 ```
 
-`mysql` 程序实现了 MySQL 服务器支持的所有标准结构化查询语言 (SQL) 命令。本章的“创建 MySQL 数据库对象”部分将更详细地讨论这一点。
+`mysql`程序实现了 MySQL 服务器支持的所有标准结构化查询语言 (SQL) 命令。本章的“创建 MySQL 数据库对象”部分将更详细地讨论这一点。
 
-
-
-
-
-`mysql` 程序实现的一个不常用的 SQL 命令是 `SHOW` 命令。使用该命令，你可以提取有关 MySQL 服务器的信息，例如已创建的数据库和表：
+`mysql`程序实现的一个不常用的 SQL 命令是`SHOW`命令。使用该命令，你可以提取有关 MySQL 服务器的信息，例如已创建的数据库和表：
 
 ```sql
 mysql> SHOW DATABASES;
@@ -17370,9 +18282,9 @@ mysql> SHOW TABLES;
 mysql>
 ```
 
-在这个示例中，我们使用 `SHOW` SQL 命令显示 MySQL 服务器上当前配置的数据库，然后使用 `USE` SQL 命令连接到单个数据库。你的 `mysql` 会话一次只能连接到一个数据库。
+在这个示例中，我们使用`SHOW` SQL 命令显示 MySQL 服务器上当前配置的数据库，然后使用`USE` SQL 命令连接到单个数据库。你的`mysql`会话一次只能连接到一个数据库。
 
-你会注意到，在每个命令之后我们都添加了分号。分号向 `mysql` 程序表示命令的结束。如果你不使用分号，它会提示输入更多数据：
+你会注意到，在每个命令之后我们都添加了分号。分号向`mysql`程序表示命令的结束。如果你不使用分号，它会提示输入更多数据：
 
 ```sql
 mysql> SHOW
@@ -17390,19 +18302,19 @@ mysql>
 这个功能在你处理长命令时会非常有用。你可以在一行中输入命令的一部分并按回车键，然后在下一行继续输入。你可以一直持续下去，直到你需要的行数，直到你使用分号表示命令结束。
 
 > Note
-> 在本章中，我们使用大写字母表示 SQL 命令。这已成为编写 SQL 命令的常用方法，但 `mysql` 程序允许你使用大写或小写来指定 SQL 命令。
+> 在本章中，我们使用大写字母表示 SQL 命令。这已成为编写 SQL 命令的常用方法，但`mysql`程序允许你使用大写或小写来指定 SQL 命令。
 
 ## 创建 MySQL 数据库对象
 
 在编写 shell 脚本与数据库交互之前，你需要一些数据库对象来工作。至少，你希望拥有以下内容：
 
-*   一个用于存储应用程序数据的唯一数据库
-*   一个用于从脚本访问数据库的唯一用户账户
-*   一个或多个用于组织数据数据的数据表
+* 一个用于存储应用程序数据的唯一数据库
+* 一个用于从脚本访问数据库的唯一用户账户
+* 一个或多个用于组织数据数据的数据表
 
-你使用 `mysql` 程序构建所有这些对象。`mysql` 程序直接与 MySQL 服务器交互，使用 SQL 命令创建和修改每个对象。
+你使用`mysql`程序构建所有这些对象。`mysql`程序直接与 MySQL 服务器交互，使用 SQL 命令创建和修改每个对象。
 
-你可以使用 `mysql` 程序向 MySQL 服务器发送任何类型的 SQL 命令。本节将引导你学习为 shell 脚本构建基础数据库对象所需的各种 SQL 语句。
+你可以使用`mysql`程序向 MySQL 服务器发送任何类型的 SQL 命令。本节将引导你学习为 shell 脚本构建基础数据库对象所需的各种 SQL 语句。
 
 ### 创建数据库
 
@@ -17430,7 +18342,7 @@ Query OK, 1 row affected (0.02 sec)
 mysql>
 ```
 
-你可以使用 `SHOW` 命令检查新数据库是否已创建：
+你可以使用`SHOW`命令检查新数据库是否已创建：
 
 ```sql
 mysql> SHOW DATABASES;
@@ -17444,7 +18356,7 @@ mysql> SHOW DATABASES;
 mysql>
 ```
 
-在这个示例中，我们使用 `SHOW` SQL 命令显示 MySQL 服务器上当前配置的数据库，然后使用 `USE` SQL 命令连接到单个数据库。你的 `mysql` 会话一次只能连接到一个数据库。
+在这个示例中，我们使用`SHOW` SQL 命令显示 MySQL 服务器上当前配置的数据库，然后使用`USE` SQL 命令连接到单个数据库。你的`mysql`会话一次只能连接到一个数据库。
 
 ```sql
 mysql> USE test;
@@ -17455,13 +18367,13 @@ mysql> SHOW TABLES;
 mysql>
 ```
 
-`SHOW TABLES` 命令允许你查看是否存在表。Empty set 表示还没有可以操作的表。
+`SHOW TABLES`命令允许你查看是否存在表。Empty set 表示还没有可以操作的表。
 
 ### 创建用户
 
-到为止，你已经了解了如何使用 `root` 账户连接到服务器。对于普通应用程序使用 `root` 账户是非常危险的。如果发生泄露，有人知道了 root 账户的密码，你的系统可能会发生各种糟糕的事情。
+到为止，你已经了解了如何使用`root`账户连接到服务器。对于普通应用程序使用`root`账户是非常危险的。如果发生泄露，有人知道了 root 账户的密码，你的系统可能会发生各种糟糕的事情。
 
-为了防止这种情况，创建一个仅具有数据库权限的独立用户是明智的。你通过 `GRANT` 语句来实现：
+为了防止这种情况，创建一个仅具有数据库权限的独立用户是明智的。你通过`GRANT`语句来实现：
 
 ```sql
 mysql> GRANT SELECT,INSERT,DELETE,UPDATE ON test.* TO test IDENTIFIED BY 'test';
@@ -17469,7 +18381,7 @@ Query OK, 0 rows affected (0.35 sec)
 mysql>
 ```
 
-你可以直接从 `mysql` 程序测试新用户账户：
+你可以直接从`mysql`程序测试新用户账户：
 
 ```bash
 $ mysql test -u test -p
@@ -17485,36 +18397,34 @@ mysql>
 
 PostgreSQL 数据库最初是一个学术项目，展示了如何将先进数据库技术整合到功能性的数据库服务器中。多年来，PostgreSQL 已经进化为 Linux 环境中最先进的开源数据库服务器之一。
 
-
-
-
-
 本节将引导你完成安装并运行 PostgreSQL 数据库服务器，然后设置一个用于 Shell 脚本的用户账户和数据库。
 
-# 安装 PostgreSQL
+### 安装 PostgreSQL
 
 与 MySQL 类似，你可以通过系统的自动化软件安装系统安装 PostgreSQL 数据库服务器包，也可以通过从 PostgreSQL 网站（[www.postgresql.org](http://www.postgresql.org)）手动下载进行安装。
 
 要使用你 Linux 发行版的自动化软件安装，请遵循本章稍前“安装 MySQL”部分列出的相同步骤。与 MySQL 类似，PostgreSQL 的下载区域包含了适用于多种 Linux 发行版的预构建包，以及一个源码包。同样，请查阅第 8 章，以确定你的 Linux 发行版是否使用了 PostgreSQL 二进制包支持的包管理系统。如果不支持，你需要下载 PostgreSQL 源码包并在你的 Linux 系统上进行手动编译。这可能是一个有趣的项目。
 
 > 注意
-> > 编译源码包要求你的 Linux 系统中已加载了 C 软件开发软件包。如今这对于服务器来说是非常普遍的，但如果你使用的是桌面级 Linux 发行版，可能没有加载。请参阅各个 Linux 发行版的文档，了解有关软件编译以及编译 C 源代码项目所需的软件软件包的信息。
+> 编译源码包要求你的 Linux 系统中已加载了 C 软件开发软件包。如今这对于服务器来说是非常普遍的，但如果你使用的是桌面级 Linux 发行版，可能没有加载。请参阅各个 Linux 发行版的文档，了解有关软件编译以及编译 C 源代码项目所需的软件软件包的信息。
 
 一旦安装了 PostgreSQL 数据库服务器，登录 PostgreSQL 服务器的方法与 MySQL 服务器略有不同。如果你还记得，MySQL 服务器维护着自己的内部用户数据库，可以授予用户访问数据库对象的权限。虽然 PostgreSQL 也具有这种能力，但大多数 PostgreSQL 实现（包括默认源码安装）利用现有的 Linux 系统用户账户来验证 PostgreSQL 用户。
 
+
+
 虽然这有时会让人困惑，但它为控制 PostgreSQL 用户账户提供了一种简洁高效的方式。你只需要确保每个 PostgreSQL 用户在 Linux 系统上都有有效的账户，而无需担心另一套完全独立的用户账户。
 
-PostgreSQL 的另一个主要区别是，其管理员账户被称为 `postgres`，而不是 `root`。由于这一要求，当你在 Linux 系统上安装 PostgreSQL 时，必须存在名为 `postgres` 的 Linux 用户账户。
+PostgreSQL 的另一个主要区别是，其管理员账户被称为`postgres`，而不是`root`。由于这一要求，当你在 Linux 系统上安装 PostgreSQL 时，必须存在名为`postgres`的 Linux 用户账户。
 
-下一节将介绍如何使用 `postgres` 账户访问 PostgreSQL 服务器。
+下一节将介绍如何使用`postgres`账户访问 PostgreSQL 服务器。
 
 # PostgreSQL 命令行界面
 
-PostgreSQL 命令行客户端程序称为 `psql`。该程序提供了对 PostgreSQL 服务器中配置的数据库对象的完全访问。本节描述了 `psql` 命令并展示了如何使用它与你的 PostgreSQL 服务器进行交互。
+PostgreSQL 命令行客户端程序称为`psql`。该程序提供了对 PostgreSQL 服务器中配置的数据库对象的完全访问。本节描述了`psql`命令并展示了如何使用它与你的 PostgreSQL 服务器进行交互。
 
 ## 连接到服务器
 
-`psql` 客户端程序提供了 PostgreSQL 服务器的命令行界面。正如你所预期的，它使用命令行参数来控制客户端界面启用的功能。每个选项都使用长名称或短名称格式。表 23.3 显示了可用的命令行参数。
+`psql`客户端程序提供了 PostgreSQL 服务器的命令行界面。正如你所预期的，它使用命令行参数来控制客户端界面启用的功能。每个选项都使用长名称或短名称格式。表 23.3 显示了可用的命令行参数。
 
 表 23.3 psql 命令行参数
 
@@ -17547,9 +18457,9 @@ PostgreSQL 命令行客户端程序称为 `psql`。该程序提供了对 Postgre
 | `-X` | `--nopsqlrc` | 不处理 psql 启动文件。 |
 | `-?` | `--help` | 显示 psql 命令行帮助并退出。 |
 
-如上一节所述，PostgreSQL 的管理员账户名为 `postgres`。由于 PostgreSQL 使用 Linux 用户账户验证用户，你必须以 `postgres` Linux 账户登录，才能以 `postgres` 用户身份访问 PostgreSQL 服务器。
+如上一节所述，PostgreSQL 的管理员账户名为`postgres`。由于 PostgreSQL 使用 Linux 用户账户验证用户，你必须以`postgres`Linux 账户登录，才能以`postgres`用户身份访问 PostgreSQL 服务器。
 
-为了解决这个问题，你可以使用 `sudo` 命令以 `postgres` 用户账户身份运行 `psql` 命令行程序。
+为了解决这个问题，你可以使用`sudo`命令以`postgres`用户账户身份运行`psql`命令行程序。
 
 ```bash
 $ sudo -u postgres psql
@@ -17559,16 +18469,16 @@ Type "help" for help.
 postgres=#
 ```
 
-默认的 `psql` 提示符表示你连接的数据库。提示符中的井号 (#) 表示你正以管理员用户账户登录。你现在准备好输入一些命令来与 PostgreSQL 服务器进行交互了。
+默认的`psql`提示符表示你连接的数据库。提示符中的井号 (`#`) 表示你正以管理员用户账户登录。你现在准备好输入一些命令来与 PostgreSQL 服务器进行交互了。
 
 ## psql 命令
 
-与 `mysql` 程序类似，`psql` 程序使用两种不同类型的命令：
+与`mysql`程序类似，`psql`程序使用两种不同类型的命令：
 
 * 标准 SQL 语句
 * PostgreSQL 元命令
 
-PostgreSQL 元命令允许你轻松提取有关数据库环境的信息，以及用于 `psql` 会话的功能。元命令由反斜杠 `\` 表示。有许多针对各种不同设置和功能的 PostgreSQL 元命令，但没有理由立即就开始担心它们。最常用的有：
+PostgreSQL 元命令允许你轻松提取有关数据库环境的信息，以及用于`psql`会话的功能。元命令由反斜杠`\`表示。有许多针对各种不同设置和功能的 PostgreSQL 元命令，但没有理由立即就开始担心它们。最常用的有：
 
 * `\l` 列出可用数据库
 * `\c` 连接到数据库
@@ -17579,9 +18489,9 @@ PostgreSQL 元命令允许你轻松提取有关数据库环境的信息，以及
 * `\h` 列出所有 SQL 命令
 * `\q` 退出数据库
 
-如果你需要找到某个元命令，只需输入 `\?` 元命令。你将看到一个列表，以及所有可用元命令的解释。
+如果你需要找到某个元命令，只需输入`\?`元命令。你将看到一个列表，以及所有可用元命令的解释。
 
-要测试元命令，请使用 `\l` 元命令列出可用数据库：
+要测试元命令，请使用`\l`元命令列出可用数据库：
 
 ```sql
 postgres=# \l
@@ -17595,13 +18505,9 @@ List of databases
 postgres=#
 ```
 
+该列表显示了服务器上可用的数据库以及它们的特性（我们截断了`Access`列的条目，使其能够适应页面宽度）。这些是 PostgreSQL 服务器提供的默认数据库。`postgres`数据库维护着服务器的所有系统数据。`template0`和`template1`数据库提供了默认数据库模板，供你将在创建新数据库时进行复制。
 
-
-
-
-该列表显示了服务器上可用的数据库以及它们的特性（我们截断了 `Access` 列的条目，使其能够适应页面宽度）。这些是 PostgreSQL 服务器提供的默认数据库。`postgres` 数据库维护着服务器的所有系统数据。`template0` 和 `template1` 数据库提供了默认数据库模板，供你将在创建新数据库时进行复制。
-
-你现在已经准备好在 `postgresql` 中处理你自己的数据了。
+你现在已经准备好在`postgresql`中处理你自己的数据了。
 
 # 创建 PostgreSQL 数据库对象
 
@@ -17609,18 +18515,18 @@ postgres=#
 
 ## 创建数据库对象
 
-创建数据库是与 MySQL 相同的操作之一。请记住以 `postgres` 管理账户身份登录以创建新数据库：
+创建数据库是与 MySQL 相同的操作之一。请记住以`postgres`管理账户身份登录以创建新数据库：
 
 ```bash
 $ sudo –u postgres psql
 psql (8.4.5)
-Type “help” for help.
+Type "help" for help.
 postgres=# CREATE DATABASE test;
 CREATE DATABASE
 postgres=#
 ```
 
-创建数据库后，使用元命令 `\l` 查看它是否出现在列表中，然后使用元命令 `\c` 连接到该数据库：
+创建数据库后，使用元命令`\l`查看它是否出现在列表中，然后使用元命令`\c`连接到该数据库：
 
 ```bash
 postgres=# \l
@@ -17634,29 +18540,30 @@ List of databases
 (4 rows)
 postgres=# \c test
 psql (8.4.5)
-You are now connected to database “test”.
+You are now connected to database "test".
 test=#
 ```
 
-当你连接到 `test` 数据库时，`psql` 提示符会变为显示新的数据库名称。当你准备好创建数据库对象时，这是一个很好的提醒，让你能轻松判断自己处于系统中的位置。
+当你连接到`test`数据库时，`psql`提示符会变为显示新的数据库名称。当你准备好创建数据库对象时，这是一个很好的提醒，让你能轻松判断自己处于系统中的位置。
 
 > 注意
-> > PostgreSQL 为数据库增加了另一层名为模式（schema）的控制。一个数据库可以包含多个模式，每个模式包含多个表。这允许你针对特定的应用程序或用户对数据库进行细分。
->
-> 默认情况下，每个数据库都包含一个名为 `public` 的模式。如果你只有一个应用程序使用该数据库，那么只使用 `public` 模式就可以了。如果你想玩得高级一点，可以创建新的模式。在本例中，表将使用 `public` 模式。
+> 
+> PostgreSQL 为数据库增加了另一层名为模式（schema）的控制。一个数据库可以包含多个模式，每个模式包含多个表。这允许你针对特定的应用程序或用户对数据库进行细分。
+> 
+> 默认情况下，每个数据库都包含一个名为`public`的模式。如果你只有一个应用程序使用该数据库，那么只使用`public`模式就可以了。如果你想玩得高级一点，可以创建新的模式。在本例中，表将使用`public`模式。
 
 ## 创建用户账户
 
 创建新数据库后，下一步是创建一个供 shell 脚本访问数据库的用户账户。正如你所看到的，PostgreSQL 中的用户账户与 MySQL 有显著不同。
 
-PostgreSQL 中的用户账户被称为 `Login Roles`（登录角色）。PostgreSQL 服务器将 `Login Roles` 与 Linux 系统用户账户相匹配。由于由于，创建用于访问 PostgreSQL 数据库的 shell 脚本 `Login Roles` 有常用方法：
+PostgreSQL 中的用户账户被称为`Login Roles`（登录角色）。PostgreSQL 服务器将`Login Roles`与 Linux 系统用户账户相匹配。由于由于，创建用于访问 PostgreSQL 数据库的 shell 脚本`Login Roles`有常用方法：
 
-- 创建一个特殊的 Linux 账户并配有匹配的 PostgreSQL `Login Role` 来运行所有的 shell 脚本。
+- 创建一个特殊的 Linux 账户并配有匹配的 PostgreSQL`Login Role`来运行所有的 shell 脚本。
 - 为每个需要运行 shell 脚本访问数据库的 Linux 用户创建 PostgreSQL 账户。
 
 对于本例，让我们选择第二种方法，创建一个与我们的 Linux 系统账户匹配的 PostgreSQL 账户。这样，你就可以直接从 Linux 用户账户运行访问 PostgreSQL 数据库的 shell 脚本。
 
-首先，你必须创建 `Login Role`：
+首先，你必须创建`Login Role`：
 
 ```bash
 test=# CREATE ROLE rich login;
@@ -17664,7 +18571,7 @@ CREATE ROLE
 test=#
 ```
 
-这足够简单了。如果没有 `login` 参数，该角色将不允许登录 PostgreSQL 服务器，但可以被分配权限。这种类型的角色被称为组角色（group role）。如果你在一个拥有大量用户和表的大型环境中工作，组角色将非常有用。你不需要不断跟踪哪个用户对哪些表拥有何种类型的权限，只需为特定类型的表访问创建组角色，然后将登录角色分配给相应的组角色即可。
+这足够简单了。如果没有`login`参数，该角色将不允许登录 PostgreSQL 服务器，但可以被分配权限。这种类型的角色被称为组角色（group role）。如果你在一个拥有大量用户和表的大型环境中工作，组角色将非常有用。你不需要不断跟踪哪个用户对哪些表拥有何种类型的权限，只需为特定类型的表访问创建组角色，然后将登录角色分配给相应的组角色即可。
 
 对于简单的 shell 脚本编写，你可能不需要担心创建组角色，直接将权限分配给登录角色即可。这正是我们在本例中将做的。
 
@@ -17672,15 +18579,15 @@ test=#
 
 # 操作表
 
-现在你已经运行了 MySQL 或 PostgreSQL 服务器，并创建了新数据库和一个访问用户账户，是时候开始处理数据了！幸运的是，`mysql` 和 `psql` 程序都使用标准 SQL 来创建和管理数据表。本节将引导你学习在两种环境中创建表、插入和删除数据以及查询现有数据所需的 SQL。
+现在你已经运行了 MySQL 或 PostgreSQL 服务器，并创建了新数据库和一个访问用户账户，是时候开始处理数据了！幸运的是，`mysql`和`psql`程序都使用标准 SQL 来创建和管理数据表。本节将引导你学习在两种环境中创建表、插入和删除数据以及查询现有数据所需的 SQL。
 
 ## 创建表
 
 MySQL 和 PostgreSQL 服务器都被认为是关系型数据库。在关系型数据库中，数据通过数据字段、记录和表进行组织。数据字段是单一信息，例如员工的姓或薪水。记录是相关数据字段的集合，例如员工 ID、姓、名、地址和工资。每条记录表示一组数据字段。
 
-表包含所有相关数据的记录。因此，你将有一个名为 `Employees` 的表，存储了每个员工的记录。
+表包含所有相关数据的记录。因此，你将有一个名为`Employees`的表，存储了每个员工的记录。
 
-要在数据库中创建新表，你需要使用 `CREATE TABLE` SQL 命令：
+要在数据库中创建新表，你需要使用`CREATE TABLE`SQL 命令：
 
 ```bash
 $ mysql test -u root -p
@@ -17695,10 +18602,11 @@ Query OK, 0 rows affected (0.14 sec)
 mysql>
 ```
 
-首先注意，为了创建新表，我们需要使用 `root` 用户账户登录 MySQL，因为 `test` 用户没有创建新表的权限。接下来，注意我们在 `mysql` 命令行中指明了 `test` 数据库。如果我们没有这样做，就需要使用 `USE` SQL 命令来连接到 `test` 数据库。
+首先注意，为了创建新表，我们需要使用`root`用户账户登录 MySQL，因为`test`用户没有创建新表的权限。接下来，注意我们在`mysql`命令行中指明了`test`数据库。如果我们没有这样做，就需要使用`USE`SQL 命令来连接到`test`数据库。
 
 > 警告
-> 在创建表之前，确保你处于正确的数据库中至关重要。此外，请确保你使用的是管理账户（MySQL 使用 `root`，PostgreSQL 使用 `postgres`）登录以创建表。
+> 
+> 在创建表之前，确保你处于正确的数据库中至关重要。此外，请确保你使用的是管理账户（MySQL 使用`root`，PostgreSQL 使用`postgres`）登录以创建表。
 
 表中的每个数据字段都使用数据类型定义。MySQL 和 PostgreSQL 数据库支持许多不同的数据类型。表 23.4 显示了你可能需要的一些常用数据类型。
 
@@ -17715,15 +18623,11 @@ mysql>
 | Text | 长字符串值 |
 | BLOB | 大型二进制值，如图像或视频剪 |
 
-`empid` 数据字段还指定了数据约束。数据约束限制了你创建有效记录时可以输入类型。`not null` 数据约束表示每条记录必须指定 `empid` 值。
+`empid`数据字段还指定了数据约束。数据约束限制了你创建有效记录时可以输入类型。`not null`数据约束表示每条记录必须指定`empid`值。
 
-最后，`primary key`（主键）定义了一个唯一标识每条记录的数据字段。这意味着表中的每条数据记录必须有一个唯一的 `empid` 值。
+最后，`primary key`（主键）定义了一个唯一标识每条记录的数据字段。这意味着表中的每条数据记录必须有一个唯一的`empid`值。
 
-
-
-
-
-创建新表后，你可以使用相应的命令来确保它已创建。在 `mysql` 中，它是 `show tables` 命令：
+创建新表后，你可以使用相应的命令来确保它已创建。在`mysql`中，它是`show tables`命令：
 
 ```
 mysql> show tables;
@@ -17736,7 +18640,7 @@ mysql> show tables;
 mysql>
 ```
 
-在 `psql` 中，它是 `\dt` 元命令：
+在`psql`中，它是`\dt`元命令：
 
 ```
 test=# \dt
@@ -17753,24 +18657,24 @@ test=#
 ```
 $ sudo -u postgres psql
 psql (8.4.5)
-Type “help” for help.
+Type "help" for help.
 postgres=# \c test
 psql (8.4.5)
-You are now connected to database “test”.
+You are now connected to database "test".
 test=# GRANT SELECT, INSERT, DELETE, UPDATE ON public.employees TO rich;
 GRANT
 test=#
 ```
 
-指定表的格式必须包含模式（schema）名称，默认模式为 `public`。此外，请记住以 `postgres` 登录角色执行此命令，并连接到 test 数据库。
+指定表的格式必须包含模式（schema）名称，默认模式为`public`。此外，请记住以`postgres`登录角色执行此命令，并连接到 test 数据库。
 
 表创建完成后，你现在准备好开始保存数据了。下一节将介绍如何进行操作。
 
 # 插入和删除数据
 
-意料之之中，你使用 `INSERT` SQL 命令向表中插入新的数据记录。每个 `INSERT` 命令都必须指定数据字段的值，以便 `MySQL` 或 `PostgreSQL` 能够能够接受该记录。
+意料之之中，你使用`INSERT`SQL 命令向表中插入新的数据记录。每个`INSERT`命令都必须指定数据字段的值，以便`MySQL`或`PostgreSQL`能够能够接受该记录。
 
-`INSERT` SQL 命令的格式为：
+`INSERT`SQL 命令的格式为：
 
 `INSERT INTO table VALUES (...)`
 
@@ -17779,11 +18683,13 @@ test=#
 ```
 $ mysql test -u test -p
 Enter password:
-mysql> INSERT INTO employees VALUES (1, ‘Blum’, ‘Rich’, 25000.00);
+mysql> INSERT INTO employees VALUES (1, 'Blum', 'Rich', 25000.00);
 Query OK, 1 row affected (0.35 sec)
 ```
 
-或者在 `PostgreSQL` 中：
+或者在`PostgreSQL`中：
+
+
 
 ```bash
 $ psql test
@@ -17798,14 +18704,14 @@ test=>
 
 `INSERT` 命令将你指定的数据值推送到表的数据字段。如果你尝试添加另一个与 `empid` 数据字段值重复的记录，将收到错误消息：
 
-```
+```text
 mysql> INSERT INTO employees VALUES (1, ‘Blum’, ‘Barbara’, 45000.00);
 ERROR 1062 (23000): Duplicate entry ‘1’ for key 1
 ```
 
 但是，如果你将 `empid` 值更改为唯一值，一切应该都是正常的：
 
-```
+```text
 mysql> INSERT INTO employees VALUES (2, ‘Blum’, ‘Barbara’, 45000.00);
 Query OK, 1 row affected (0.00 sec)
 ```
@@ -17816,17 +18722,21 @@ Query OK, 1 row affected (0.00 sec)
 
 基础的 `DELETE` 命令格式为：
 
-`DELETE FROM table;`
+```sql
+DELETE FROM table;
+```
 
 其中 `table` 指定要从中删除记录的表。这个命令正有一个小问题：它会移除表中的所有记录。
 
 为了仅指定单个记录或一组记录进行删除，你必须使用 `WHERE` 子句。`WHERE` 子句允许你创建一个过滤器来识别要移除哪些记录。你可以像这样使用 `WHERE` 子句：
 
-`DELETE FROM employees WHERE empid = 2;`
+```sql
+DELETE FROM employees WHERE empid = 2;
+```
 
 这会将删除过程限制在所有 `empid` 值为 2 的记录。当你执行此命令时，`mysql` 程序会返回一条消息，指示匹配过滤器的记录数量：
 
-```
+```text
 mysql> DELETE FROM employees WHERE empid = 2;
 Query OK, 1 row affected (0.29 sec)
 ```
@@ -17841,29 +18751,31 @@ Query OK, 1 row affected (0.29 sec)
 
 `SELECT` 语句的基础格式为：
 
-`SELECT datafields FROM table`
+```sql
+SELECT datafields FROM table
+```
 
 `datafields` 参数是你希望查询返回的数据字段名列表，并用逗号分隔。默认情况下，`SELECT` 命令返回表中所有的记录：
 
-```
+```text
 mysql> SELECT * FROM employees;
 +-------+----------+-----------+-------+
 | empid | lastname | firstname | salary |
 +-------+----------+-----------+-------+
-| 1     | Blum     | Rich     | 25000.00|
+| 1     | Blum     | Rich      | 25000.00|
 | 2     | Blum     | Barbara  | 45000.00|
 +-------+----------+-----------+-------+
 ```
 
 你可以使用更多修饰符来定义结果。以下是常用修饰符列表：
 
-*   `WHERE`: 显示满足条件的记录
-*   `ORDER BY`: 按指定顺序显示记录
-*   `LIMIT`: 仅显示记录子集
+- `WHERE`：显示满足条件的记录
+- `ORDER BY`：按指定顺序显示记录
+- `LIMIT`：仅显示记录子集
 
 `WHERE` 子句是最常用的 `SELECT` 修饰符。这里有一个使用 `WHERE` 的示例：
 
-```
+```text
 mysql> SELECT * FROM employees WHERE salary > 40000;
 +-------+----------+-----------+-------+
 | empid | lastname | firstname | salary |
@@ -17886,7 +18798,7 @@ mysql> SELECT * FROM employees WHERE salary > 40000;
 
 幸运的是，有 `which` 命令。`which` 命令告诉你，如果 shell 尝试从命令行运行某个命令，会在哪里找到它：
 
-```
+```text
 $ which mysql
 /usr/bin/mysql
 $ which psql
@@ -17895,8 +18807,13 @@ $ which psql
 
 处理这些信息的简单方法是将其赋值给环境变量，然后在当你需要引用相应的程序时，在 shell 脚本中使用它：
 
-`MYSQL=$(which mysql)`
-`PSQL=$(which psql)`
+```bash
+MYSQL=$(which mysql)
+```
+
+```bash
+PSQL=$(which psql)
+```
 
 ### 登录服务器
 
@@ -17910,11 +18827,7 @@ PSQL=$(which psql)
 $PSQL test
 ```
 
-
-
-
-
-```bash
+```text
 $ ./ptest1
 psql (8.4.5)
 Type “help” for help.
@@ -17987,8 +18900,8 @@ mysql
 
 在建立与服务器的连接后，你将希望发送命令与数据库进行交互。这种方法有两种：
 
-*   发送单个命令并退出。
-*   发送多条命令。
+- 发送单个命令并退出。
+- 发送多条命令。
 
 要发送单个命令，你必须将命令作为 `mysql` 或 `psql` 命令行的一部分。对于 `mysql` 命令，你使用 `-e` 参数来实现此：
 
@@ -18054,7 +18967,8 @@ $
 
 shell 将 `EOF` 分隔符之间的所有内容重定向到 `mysql` 命令，该命令会像你在提示符处手动输入一样执行这些行。使用这种方法，你可以向 MySQL 服务器发送任意数量的命令。然而，你会注意到，每个命令的输出之间没有分隔。在下一节“格式化数据”中，你将看到如何解决这个问题。
 
-> 注意
+> **注意**
+>
 > 你还应该注意到，当你使用重定向输入方法时，`mysql` 程序更改了默认输出样式。`mysql` 程序没有在数据周围创建 ASCII 符号框，而是检测到输入是重定向的，因此只返回了原始数据。同样的技术也适用于 `psql` 程序：
 
 ```bash
@@ -18115,10 +19029,6 @@ $
 
 此示例演示了使用这种技术的几点。当你指定文件结束字符串时，它必须是该行上的唯一内容，且该行必须以该字符串开头。如果我们对 `EOF` 进行缩进以匹配 if-then 的缩进，它将无法工作。
 
-
-
-
-
 在 `INSERT` 语句中，请注意文本值周围有单引号，而整个 `INSERT` 语句周围有双引号。务记不要将用于字符串值的单引号与用于定义脚本变量文本的双引号混淆。
 
 此外，请我们我们如何使用特殊变量 `$?` 来测试 `mysql` 程序的退出状态。这可以帮助你判断命令是否执行失败。
@@ -18127,11 +19037,13 @@ $
 
 ## 数据格式化
 
-`mysql` 和 `psql` 命令的标准输出并不非常便于进行数据检索。如果你需要对检索到的数据进行实际操作，你就需要进行一些高级的数据处理。本节描述了你可以使用的一些技巧，以帮助从数据库报告中提取数据。
 
-### 将输出赋值给变量
 
-捕获数据库数据的第一步是将 `mysql` 和 `psql` 命令的输出重定向到环境变量中。这允许你在其他命令中使用输出信息。例如所示：
+`mysql`和`psql`命令的标准输出并不非常便于进行数据检索。如果你需要对检索到的数据进行实际操作，你就需要进行一些高级的数据处理。本节描述了你可以使用的一些技巧，以帮助从数据库报告中提取数据。
+
+## 将输出赋值给变量
+
+捕获数据库数据的第一步是将`mysql`和`psql`命令的输出重定向到环境变量中。这允许你在其他命令中使用输出信息。例如所示：
 
 ```
 $ cat mtest5
@@ -18156,17 +19068,16 @@ $ ./mtest5
 information_schema
 test
 ```
-```
 
-这里在 `mysql` 程序命令行中有两个额外的参数。`-B` 参数指定 `mysql` 程序以批处理模式运行，并与 `-s`（静默）参数结合使用，可以抑制列标题和格式化符号。
+这里在`mysql`程序命令行中有两个额外的参数。`-B`参数指定`mysql`程序以批处理模式运行，并与`-s`（静默）参数结合使用，可以抑制列标题和格式化符号。
 
-通过将 `mysql` 命令的输出重定向到变量，此示例能够逐个遍历每个返回记录的数值。
+通过将`mysql`命令的输出重定向到变量，此示例能够逐个遍历每个返回记录的数值。
 
-### 使用格式化标签
+## 使用格式化标签
 
-在上一个示例中，你看到在 `mysql` 程序命令行中添加 `-B` 和 `-s` 参数允许你抑制输出标题信息，这样你就能得到数据。还有其他几个你可以使用的参数，可以让你的工作变得更轻松。
+在上一个示例中，你看到在`mysql`程序命令行中添加`-B`和`-s`参数允许你抑制输出标题信息，这样你就能得到数据。还有其他几个你可以使用的参数，可以让你的工作变得更轻松。
 
-为网页生成数据是现今非常流行的事情。`mysql` 和 `psql` 程序都提供了使用 HTML 格式显示输出的选项。在两者中，都是通过使用命令行参数 `-H` 来启用：
+为网页生成数据是现今非常流行的事情。`mysql`和`psql`程序都提供了使用 HTML 格式显示输出的选项。在两者中，都是通过使用命令行参数`-H`来启用：
 
 ```
 $ psql test -H -c 'select * from employees where empid = 1'
@@ -18195,9 +19106,9 @@ $ psql test -H -c 'select * from employees where empid = 1'
 $
 ```
 
-`mysql` 程序支持另一种流行的格式，称为可扩展标记语言 (XML)。这种语言使用类似 HTML 的标签来标识数据名称和值。
+`mysql`程序支持另一种流行的格式，称为可扩展标记语言 (XML)。这种语言使用类似 HTML 的标签来标识数据名称和值。
 
-对于 `mysql` 程序，你使用命令行参数 `-X` 来实现：
+对于`mysql`程序，你使用命令行参数`-X`来实现：
 
 ```
 $ mysql test -u test -X -e 'select * from employees where empid = 1'
@@ -18214,9 +19125,13 @@ $ mysql test -u test -X -e 'select * from employees where empid = 1'
 </row>
 </resultset>
 ```
+
 ```
 $
 ```
+
+
+
 
 使用 `XML`，你可以轻松地识别单行数据以及每个记录中的单个数据值。
 
@@ -18236,17 +19151,17 @@ $
 
 ## 本章内容
 
-* 使用 Lynx 浏览
-* 使用 cURL 探索
-* 在 zsh 中进行客户端/服务器编程
+- 使用 `Lynx` 浏览
+- 使用 `cURL` 探索
+- 在 `zsh` 中进行客户端/服务器编程
 
 当你考虑到 shell 脚本编程时，最后想到的往往是互联网。命令行世界对于华丽的图形化互联网世界来说往往很陌生。然而，有几种不同的工具你可以轻松地在 shell 脚本中使用，以访问 Web 上的内容以及其他网络设备的内容。本章将带你了解三种让 shell 脚本与网络世界交互的流行方法。
 
-### Lynx 程序
+## `Lynx` 程序
 
 `Lynx` 程序几乎与互联网本身一样老，它于 1992 年由堪萨斯大学的学生创建，作为一个基于文本的浏览器。因为它是基于文本的，`Lynx` 程序允许直接从终端会话浏览网站，用 HTML 文本标签替换网页上的华丽图形。这允许你从几乎任何类型的 Linux 终端上网。图 24.1 显示了 Lynx 屏幕的示例。
 
-图 24.1 使用 Lynx 查看网页
+图 24.1 使用 `Lynx` 查看网页
 
 ![](img/00070.jpg)
 
@@ -18254,7 +19169,7 @@ $
 
 你可能在想如何在 shell 脚本中使用图形化文本程序。`Lynx` 程序还提供了一个功能，可以将网页的文本内容导出到 `STDOUT`。这个功能对于挖掘网页中包含的数据非常有帮助。本节描述了如何在 shell 脚本中使用 `Lynx` 程序从互联网网站中提取数据。
 
-### 安装 Lynx
+### 安装 `Lynx`
 
 尽管 `Lynx` 程序已经有些老了，但它仍在活跃开发。在本书期间，`Lynx` 的最新版本是 2.8.8，它于 2010 年 6 月发布，新版本正在开发中。由于它在 shell 脚本程序员中非常受欢迎，许多 Linux 发行版在默认安装中就包含了 `Lynx`。
 
@@ -18262,52 +19177,53 @@ $
 
 如果你的发行版没有包含 `lynx` 包，或者你想要最新版本，可以从 [lynx.isc.org](http://lynx.isc.org) 网站下载并自行编译（假设你已经在 Linux 系统上安装了 C 开发库）。有关如何编译和安装源码发行包的信息，请参见第 8 章。
 
-> 注意
-
-> > Lynx 程序在 Linux 中使用 curses 图形库。大多数发行版默认安装了该库。如果你的发行版没有，在尝试编译 Lynx 之前，请咨询特定发行版关于安装 curses 库的说明。
+> **注意**
+>
+> `Lynx` 程序在 Linux 中使用 `curses` 图形库。大多数发行版默认安装了该库。如果你的发行版没有，在尝试编译 Lynx 之前，请咨询特定发行版关于安装 curses 库的说明。
 
 下一节将描述如何从命令行使用 `lynx` 命令。
 
-lynx 命令行
-
-
-
-
+## `lynx` 命令行
 
 `lynx` 命令行在从远程网站检索信息方面极其功能强大。当你通过浏览器查看网页时，你看到的只是传输到你浏览器的部分信息。网页由三类数据元素组成：
 
-* HTTP 头部 (headers)
-* Cookies
-* HTML 内容
+- HTTP 头部（headers）
+- Cookies
+- HTML 内容
 
 ### HTTP 头部
-HTTP 头部提供了有关连接中发送的数据类型、发送数据的服务器以及连接中所使用的安全类型等相关信息。如果你正在发送特殊类型的数据（例如视频或音频片段），服务器会在 HTTP 头部中识别出这些内容。Lynx 程序允许你查看在网页会话中发送的所有 HTTP 头部。
 
-如果你进行过任何类型的网络浏览，无疑你对网页 cookie 并不陌生。网站使用 cookie 来存储有关你访问网站的数据以备将来使用。每个单独的都可以存储信息，但只能访问其自身设置的信息。`lynx` 命令提供了选项，允许你查看 Web 服务器发送的 cookie，并可以拒绝或接受从服务器发送的特定 cookie。
+HTTP 头部提供了有关连接中发送的数据类型、发送数据的服务器以及连接中所使用的安全类型等相关信息。如果你正在发送特殊类型的数据（例如视频或音频片段），服务器会在 HTTP 头部中识别出这些内容。`Lynx` 程序允许你查看在网页会话中发送的所有 HTTP 头部。
+
+如果你进行过任何类型的网络浏览，无疑你对网页 cookie 并不陌生。网站使用 cookie 来存储有关你访问网站的数据以备将来使用。每个单独的 cookie 都可以存储信息，但只能访问其自身设置的信息。`lynx` 命令提供了选项，允许你查看 Web 服务器发送的 cookie，并可以拒绝或接受从服务器发送的特定 cookie。
 
 ### HTML 内容
-Lynx 程序允许你以三种不同的格式查看网页的实际 HTML 内容：
 
-* 在终端会话中使用 `curses` 图形库以文本图形形式显示
-* 作为文本文件，转储网页的原始数据
-* 作为文本文件，转储网页的原始 HTML 源代码
+`Lynx` 程序允许你以三种不同的格式查看网页的实际 HTML 内容：
+
+- 在终端会话中使用 `curses` 图形库以文本图形形式显示
+- 作为文本文件，转储网页的原始数据
+- 作为文本文件，转储网页的原始 HTML 源代码
 
 对于 shell 脚本来说，查看原始数据或 HTML 源代码是一个金矿。一旦捕获了从网站检索的数据，你就可以轻松提取出单个信息。
 
-### Lynx 命令用法
-如你所见，Lynx 程序的功能极其多变。然而，多功能性也伴随着复杂性，特别是在涉及到命令行参数时。Lynx 程序是你会在 Linux 世界中遇到的较复杂的程序之一。
+### `Lynx` 命令用法
+
+如你所见，`Lynx` 程序的功能极其多变。然而，多功能性也伴随着复杂性，特别是在涉及到命令行参数时。`Lynx` 程序是你会在 Linux 世界中遇到的较复杂的程序之一。
 
 `lynx` 命令的基本格式为：
 
-`lynx options URL`
+```text
+lynx options URL
+```
 
-其中 `URL` 是你想要连接的 HTTP 或 HTTPS 目标地址，`options` 是一个或多个修改 Lynx 在与远程网站交互时行为的选项。对于 Lynx 所需的任何类型的 Web 交互，都有相应的选项。[表 24.1] 显示了你可以配合 `lynx` 命令一并使用的所有可用命令行参数。
+其中 `URL` 是你想要连接的 HTTP 或 HTTPS 目标地址，`options` 是一个或多个修改 `Lynx` 在与远程网站交互时行为的选项。对于 `Lynx` 所需的任何类型的 Web 交互，都有相应的选项。表 24.1 显示了你可以配合 `lynx` 命令一并使用的所有可用命令行参数。
 
-#### 表 24.1 lynx 命令参数
+#### 表 24.1 `lynx` 命令参数
 
-| 参数 |  |
+| 参数 | 说明 |
 | :--- | :--- |
-| `-` | 从标准输入 (STDIN) 接收选项和参数。 |
+| `-` | 从标准输入（`STDIN`）接收选项和参数。 |
 | `-accept_all_cookies` | 如果开启 `Set-Cookie` 处理，则无需提示直接接受 cookie。默认设置为 `off`。 |
 | `-anonymous` | 为匿名账户应用限制。 |
 | `-assume_charset=name` | 未指定字符集的文档时使用的默认字符集。 |
@@ -18329,8 +19245,8 @@ Lynx 程序允许你以三种不同的格式查看网页的实际 HTML 内容：
 | `-cookie_file=filename` | 指定用于读取 cookie 的文件。 |
 | `-cookie_save_file=filename` | 指定用于存储 cookie 的文件。 |
 | `-cookies` | 切换 `Set-Cookie` 头部处理。默认设置为 `on`。 |
-| `-core` | 切换在致命错误时强制核心转储 (core dumps)。默认设置为 `off`。 |
-| `-crawl` | 配合 `-traversal`，使用 `-dump` 将每个页面输出到文件，格式与 `-traversal` ，但输出到标准输出 (STDOUT)。 |
+| `-core` | 切换在致命错误时强制核心转储（core dumps）。默认设置为 `off`。 |
+| `-crawl` | 配合 `-traversal`，使用 `-dump` 将每个页面输出到文件，格式与 `-traversal` 相同，但输出到标准输出（`STDOUT`）。 |
 | `-curses_pads` | 使用 curses pad 特性支持左/右移动。默认设置为 `on`。 |
 | `-debug_partial` | 显示带有 MessageSecs 延迟的增量显示阶段。默认设置为 `off`。 |
 | `-delay=n` | 设置 statusline 消息的延迟（秒）。默认设置为 `0.000`。 |
@@ -18339,17 +19255,17 @@ Lynx 程序允许你以三种不同的格式查看网页的实际 HTML 内容：
 | `-dont_wrap_pre` | 当设置 `-dump` 和 `-crawl` 时，不在 `<pre>` 区域内对文本换行。在交互会话中标记换行的行。默认设置为 `on`。 |
 | `-dump` | 将第一个 URL 转储到 `STDOUT` 并退出。 |
 | `-editor=editor` | 使用指定的编辑器开启编辑模式。 |
-| `-emacskeys` | 开启类似 emacs 的按键移动。默认设置为 `off`。 |
+| `-emacskeys` | 开启类似 Emacs 的按键移动。默认设置为 `off`。 |
 | `-enable_scrollback` | 切换与滚动回键的兼容性。默认设置为 `off`。 |
 | `-error_file=filename` | 将 HTTP 状态码写入指定文件。 |
 | `-exec` | 开启本地程序执行。 |
-| `-force_empty_hrefless_a` | 强制让没有 href 属性的 `<a>` 元素为空。默认设置为 `off`。 |
+| `-force_empty_hrefless_a` | 强制让没有 `href` 属性的 `<a>` 元素为空。默认设置为 `off`。 |
 | `-force_html` | 强制将第一个文档解释为 HTML。默认设置为 `off`。 |
 | `-force_secure` | 要求 SSL cookie 具有安全标记。默认设置为 `off`。 |
 | `-forms_options` | 使用基于表单选项菜单。默认设置为 `on`。 |
 | `-from` | 开启 From 头的传输。默认设置为 `on`。 |
 | `-ftp` | 禁用 FTP 访问。默认设置为 `off`。 |
-| `-get_data` | 从 STDIN 读取 get 表单的数据，以 `---` 结束。 |
+| `-get_data` | 从 `STDIN` 读取 GET 表单的数据，以 `---` 结束。 |
 | `-head` | 发送 `HEAD` 请求。默认设置为 `off`。 |
 | `-help` | 打印用法信息。 |
 | `-hiddenlinks=option` | 指定如何处理隐藏链接。`Option` 可以是 `merge`、`listonly` 或 `ignore`。 |
@@ -18358,7 +19274,7 @@ Lynx 程序允许你以三种不同的格式查看网页的实际 HTML 内容：
 | `-image_links` | 启用所有图像的链接。默认设置为 `off`。 |
 | `-index=URL` | 设置索引文件名。 |
 | `-ismap` | 当存在客户端 MAP 时包含 ISMAP 链接。默认设置为 `off`。 |
-| `-link=n` | 设置 `-crawl` 生成的 `lnk#.dat` 文件的起始计数。默认 0。 |
+| `-link=n` | 设置 `-crawl` 生成的 `lnk#.dat` 文件的起始计数。默认值为 `0`。 |
 | `-localhost` | 禁用指向远程主机的 URL。默认设置为 `off`。 |
 | `-locexec` | 仅开启本地文件的本地程序执行。默认设置为 `off`。 |
 | `-mime_header` | 包含 MIME 头部并强制源码。 |
@@ -18373,11 +19289,6 @@ Lynx 程序允许你以三种不同的格式查看网页的实际 HTML 内容：
 | `-noexec` | 禁用本地程序执行。默认设置为 `on`。 |
 | `-nofilerferer` | 禁用文件 URL 传输 `Referer` 头部。默认设置为 `on`。 |
 | `-nolist` | 禁用转储中的链接列表功能。默认设置为 `off`。 |
-
-
-
-
-
 | `-nolog` | 禁用向文档所有者发送错误消息。默认设置为 `on`。 |
 | `-nonrestarting_sigwinch` | 使窗口大小变化处理程序不重新启动。默认设置为 `off`。 |
 | `-nopause` | 禁用状态行消息的强制暂停。 |
@@ -18393,8 +19304,8 @@ Lynx 程序允许你以三种不同的格式查看网页的实际 HTML 内容：
 | `-partial_thres=n` | 设置在用部分显示逻辑重绘显示之前渲染的行数。默认设置为 `-1`，即禁用此功能。 |
 | `-pauth=id:pw` | 为受保护代理服务器设置认证信息。 |
 | `-popup` | 通过弹出窗口处理单选 `SELECT` 选项，而不是单选按钮列表。默认设置为 `off`。 |
-| `-post_data` | 从 `STDIN` 读取 post 表单的数据，以 `---` 结束。 |
-| `-preparsed` | 在 `-source` 和源码视图中显示解析后的文本/html MIME 类型，以直化展示 Lynx 如何处理无效的 HTML。默认设置为 `off`。 |
+| `-post_data` | 从 `STDIN` 读取 POST 表单的数据，以 `---` 结束。 |
+| `-preparsed` | 在 `-source` 和源码视图中显示解析后的文本/HTML MIME 类型，以直观展示 Lynx 如何处理无效的 HTML。默认设置为 `off`。 |
 | `-prettysrc` | 在源码视图中使用语法高亮和超链接处理。默认设置为 `off`。 |
 | `-print` | 启用打印功能，与 `-noprint` 相反。默认设置为 `on`。 |
 | `-pseudo_inlines` | 为没有 ALT 字符串的内联元素使用伪 ALT。默认设置为 `on`。 |
@@ -18409,12 +19320,12 @@ Lynx 程序允许你以三种不同的格式查看网页的实际 HTML 内容：
 | `-show_cursor` | 设置为 `off` 时隐藏右下角的光标，否则显示光标。默认设置为 `on`。 |
 | `-show_rate` | 显示传输速率。默认设置为 `on`。 |
 | `-soft_dquotes` | 使用旧版 Netscape 和 Mosaic 的 bug，该 bug 将 `>` 视为双引号和标签的共同终止符。默认设置为 `off`。 |
-| `-source` | 将第一个 URL 的源码导出到 STDOUT 并退出。 |
+| `-source` | 将第一个 URL 的源码导出到 `STDOUT` 并退出。 |
 | `-stack_dump` | 禁用 SIGINT 清理处理程序。默认设置为 `off`。 |
 | `-startfile_ok` | 允许配合 `-validate` 使用非 HTTP 起始页和首页。默认设置为 `off`。 |
 | `-stdin` | 从 `STDIN` 读取 startfile。默认设置为 `off`。 |
 | `-tagsoup` | 使用 TagSoup 而不是 SortaSGML 解析器。默认设置为 `off`。 |
-| `-telnet` | 禁用 telnet 会话。默认设置为 `off`。 |
+| `-telnet` | 禁用 Telnet 会话。默认设置为 `off`。 |
 | `-term=term` | 指定要模拟的终端类型。 |
 | `-tlog` | 为当前会话使用 Lynx 追踪日志。默认设置为 `on`。 |
 | `-tna` | 使用文本字段激活模式。默认设置为 `off`。 |
@@ -18423,9 +19334,9 @@ Lynx 程序允许你以三种不同的格式查看网页的实际 HTML 内容：
 | `-traversal` | 遍历从 startfile 产生的所有 HTTP 链接。 |
 | `-trim_input_fields` | 修剪表单中的输入文本/文本区域字段。默认设置为 `off`。 |
 | `-underline_links` | 为链接使用下划线/粗体属性。默认设置为 `off`。 |
-| `-underscore` | 在导出中使用下划线格式。默认设置为 `off`。 |
+| `-underscore` | 在导出中使用下划线格式。 |
 | `-use_mouse` | 启用鼠标支持。默认设置为 `off`。 |
-| `-useragent=Name` | 设置备的 Lynx User-Agent 头部。 |
+| `-useragent=Name` | 设置备用的 Lynx User-Agent 头部。 |
 | `-validate` | 接受 `http` URL（用于验证），意味着比 `-anonymous` 更多限制，但允许 `http` 和 `https` 的重定向。默认设置为 `off`。 |
 | `-verbose` | 使用带有这些图像文件名的 `[LINK]`、`[IMAGE]` 和 `[INLINE]` 注释。默认设置为 `on`。 |
 | `-version` | 显示 Lynx 版本信息。 |
@@ -18435,40 +19346,39 @@ Lynx 程序允许你以三种不同的格式查看网页的实际 HTML 内容：
 
 如你所见，你可以直接从命令行控制几乎任何类型的 HTTP 或 HTML 设置。例如，如果你想使用 HTTP POST 方法向 Web 表单发布数据，只需在 `-post-data` 参数中包含你的数据。如果你想将网站收到的 cookie 存储在特殊位置，可以使用 `-cookie_save_file` 参数。
 
-许多命令行参数定义了你在浏览网页时控制 Lynx 的行为。与其在每次使用时都输入这些参数，Lynx 提供了一个通用配置文件来定义基础行为。下一节将讨论该文件。
+许多命令行参数定义了你在浏览网页时控制 `Lynx` 的行为。与其在每次使用时都输入这些参数，`Lynx` 提供了一个通用配置文件来定义基础行为。下一节将讨论该文件。
 
-## Lynx 配置文件
-
-
-
+## `Lynx` 配置文件
 
 虽然这看起来像是在浪费时间，但它是保护客户免受互联网危险的一项重要功能。代理服务器可以过滤不适当的内容和恶意代码，甚至可以检测用于网络数据钓鱼计划的网站（伪装成他人以获取客户数据的流氓服务器）。代理服务器还可以帮助减少互联网带宽的使用，因为它们缓存常用的 Web 页面并将其返回给客户端，而不是重新下载原始页面。
 
 用于定义代理服务器的配置参数有：
 
-`http_proxy:http://some.server.dom:port/`
-`https_proxy:http://some.server.dom:port/`
-`ftp_proxy:http://some.server.dom:port/`
-`gopher_proxy:http://some.server.dom:port/`
-`news_proxy:http://some.server.dom:port/`
-`newspost_proxy:http://some.server.dom:port/`
-`newsreply_proxy:http://some.server.dom:port/`
-`snews_proxy:http://some.server.dom:port/`
-`snewspost_proxy:http://some.server.dom:port/`
-`snewsreply_proxy:http://some.server.dom:port/`
-`nntp_proxy:http://some.server.dom:port/`
-`wais_proxy:http://some.server.dom:port/`
-`finger_proxy:http://some.server.dom:port/`
-`cso_proxy:http://some.server.dom:port/`
-`no_proxy:host.domain.dom`
+```text
+http_proxy:http://some.server.dom:port/
+https_proxy:http://some.server.dom:port/
+ftp_proxy:http://some.server.dom:port/
+gopher_proxy:http://some.server.dom:port/
+news_proxy:http://some.server.dom:port/
+newspost_proxy:http://some.server.dom:port/
+newsreply_proxy:http://some.server.dom:port/
+snews_proxy:http://some.server.dom:port/
+snewspost_proxy:http://some.server.dom:port/
+snewsreply_proxy:http://some.server.dom:port/
+nntp_proxy:http://some.server.dom:port/
+wais_proxy:http://some.server.dom:port/
+finger_proxy:http://some.server.dom:port/
+cso_proxy:http://some.server.dom:port/
+no_proxy:host.domain.dom
+```
 
-你可以为 Lynx 支持的任何网络协议定义不同的代理服务器。`NO_PROXY` 参数是一个由逗号分隔的列表，包含了你希望直接访问而不使用代理服务器的网站。这些通常是不需要过滤的内部网站。
+你可以为 `Lynx` 支持的任何网络协议定义不同的代理服务器。`NO_PROXY` 参数是一个由逗号分隔的列表，包含了你希望直接访问而不使用代理服务器的网站。这些通常是不需要过滤的内部网站。
 
-## Lynx 环境变量
+## `Lynx` 环境变量
 
-从丰富的命令行选项和配置文件参数可以看出，Lynx 程序是高度自定义的。然而，自定义并不仅于此。你可以使用环境变量覆盖许多配置文件参数。如果你在一个无法访问 `lynx.cfg` 配置文件的环境中工作，可以通过设置本地环境变量来覆盖某些默认参数。表 24.2 列出了在受限环境中使用 Lynx 时可能需要的更常用的 Lynx 环境变量。
+从丰富的命令行选项和配置文件参数可以看出，`Lynx` 程序是高度自定义的。然而，自定义并不仅于此。你可以使用环境变量覆盖许多配置文件参数。如果你在一个无法访问 `lynx.cfg` 配置文件的环境中工作，可以通过设置本地环境变量来覆盖某些默认参数。表 24.2 列出了在受限环境中使用 `Lynx` 时可能需要的更常用的 `Lynx` 环境变量。
 
-### 表 24.2 Lynx 环境变量
+### 表 24.2 `Lynx` 环境变量
 
 | 变量 | 说明 |
 | :--- | :--- |
@@ -18481,10 +19391,15 @@ Lynx 程序允许你以三种不同的格式查看网页的实际 HTML 内容：
 | `SSL_CERT_FILE` | 指定包含你的信任证书的文件。 |
 | `WWW_HOME` | 定义 Lynx 启动时使用的默认 URL。 |
 
-在使用 Lynx 程序之前，你就像设置任何其他环境变量一样设置这些环境变量：
+在使用 `Lynx` 程序之前，你就像设置任何其他环境变量一样设置这些环境变量：
+
+```bash
+
+
 
 ```bash
 $ http_proxy=http://myproxy.com:8080
+
 $ lynx
 ```
 
@@ -18500,14 +19415,21 @@ $ lynx
 $ lynx -dump http://localhost/RecipeCenter/
 ```
 
-```
+```text
 Recipe Center
+
           “就像妈妈做的一样”
+
 欢迎
+
     [1]首页
+
     [2]登录发布
+
     [3]免费注册
+
       _________________________________________________________
+
     [4]发布新食
 ```
 
@@ -18523,57 +19445,73 @@ lynx -dump http://weather.yahoo.com/united-states/illinois/chicago-2379574/
 
 此命令从网页中导出了大量数据。第一步是找到你需要的精确信息。为了实现这一点，将 `lynx` 命令的输出重定向文件，然后在文件中搜索你的数据。在执行了上述命令后，我们在输出文件中发现了以下文本：
 
-```
+```text
 截至东部时间下午 1:54 的当前状况
+
 大部分多云
+
     体感温度:
+
           32 °F
+
     气压:
+
           30.13 英寸正在上升
+
 湿度:
+
           50%
+
 能见度:
+
           10 英里
+
 露点:
+
           15 °F
+
 风力:
+
           西风 10 英里
 ```
 
 这就是你需要的关于当前天气全部信息了。这个输出只有一个小问题。你会发现数字在标题下方的一行中。尝试只提取单个数字将很困难。第 18 章讨论了如何处理这种情况。
 
-
-
-
-```
+```bash
 echo The current temp outside is: $temp
+
 $ ./weather
+
 Current conditions: Mostly Cloudy
+
 The current temp outside is: 32 °F
+
 $
 ```
 
 该天气脚本会连接到所需城市的 Yahoo! 天气网页，将网页保存到临时文件，提取相应的文本，删除临时文件，然后显示天气信息。这种做法的妙之处在于，一旦你从网站上提取了数据，就可以对它进行任何操作，例如创建一个温度表。然后，你可以创建一个 `cron` 任务（参见第 15 节），让它每天运行一次以跟踪每日温度。
 
-> 注意
+> **注意**
+>
 > 互联网是一个动态变化的地方。如果你花费了几个小时来确定网页上数据的精确位置，结果发现它在几周后移动了位置，导致你的脚本崩溃，这并不请不要感到意外。事实上，当你读到这本书时，这个示例可能已经无法工作了。重要的是学会从网页上提取数据的流程，然后你就可以将该原理应用于任何情况。
 
 # cURL 程序
 
-Lynx 的流行催生另一个类似的产品，称为 `cURL`。`cURL` 程序允许你使用指定的 URL 从命令行自动传输文件。它目前支持 URL 中指定的 FTP, FTPS, HTTP, HTTPS, SCP, SFTP, TFTP, telnet, DICT, LDAP, LDAPS 和 FILE 协议。
+Lynx 的流行催生另一个类似的产品，称为 `cURL`。`cURL` 程序允许你使用指定的 URL 从命令行自动传输文件。它目前支持 URL 中指定的 FTP、FTPS、HTTP、HTTPS、SCP、SFTP、TFTP、telnet、DICT、LDAP、LDAPS 和 FILE 协议。
 
 虽然 `cURL` 本身不是作为浏览器浏览器，但它允许你通过简单的命令，直接从命令行或你的 shell 脚本中无人地发送或检索数据。这为你的 shell 脚本工具箱提供了一个非常棒的工具。
 
 本节将带你了解如何在 shell 脚本中安装和使用 `cURL`。
 
-> 注意
+> **注意**
+>
 > 还有一种名为 `curl` 的编程语言，由 Sumisho Computer System Corporation 所有并销售。请不要将 `cURL` 与 `curl` 编程语言混淆。
 
 # 安装 cURL
 
 随着用性的日益提高，许多 Linux 发行版默认都安装了 `cURL`。在 Ubuntu 中，你必须从软件仓库手动安装它。只需使用此命令即可：
 
-```
+```bash
 $ sudo apt-get install curl
 ```
 
@@ -18587,9 +19525,11 @@ $ sudo apt-get install curl
 
 默认情况下，`cURL` 将整个网页的完整 HTML 代码返回到 `STDOUT`：
 
-```
+```text
 $ curl http://www.google.com
+
 <!doctype html><<html><head><meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">><title>Google</title>
+
 [ listing truncated ]
 ```
 
@@ -18597,11 +19537,15 @@ $ curl http://www.google.com
 
 我们喜欢使用 `cURL` 来批量下载文件。现如今，我们似乎在不断地下载最新的 Linux 发行版 ISO 文件。因为 ISO 文件非常大，我们需要开始下载并在下载时时离开电脑。一旦我们知道了 ISO 文件的 URL，就可以就可以使用 `cURL` 创建一个简单的 shell 脚本来自动化该过程：
 
-```
+```bash
 $ cat downld
+
 #!/bin/bash
+
 # download latest cURL file automatically
+
 curl -s -o /home/rich/curl-7.18.0.tar.gz http://curl.haxx.se/download/curl-7-18.0.tar.gz
+
 $
 ```
 
@@ -18619,8 +19563,9 @@ $
 
 要在 `zsh` shell 中安装 TCP 模块，请执行以下操作：
 
-```
+```zsh
 % zmodload zsh/net/tcp
+
 %
 ```
 
@@ -18628,20 +19573,20 @@ $
 
 一旦加载了 TCP 模块，你就可以使用 `ztcp` 命令。`ztcp` 命令的格式为：
 
-```
+```text
 ztcp [-acflLtv] [-d fd] [[args]]
 ```
 
 可用的命令行选项有：
 
-*   `-a`: 接受新连接。
-*   `-c`: 关闭现有连接。
-*   `-d`: 为连接使用指定的文件描述符。
-*   `-f`: 强制关闭连接。
-*   `-l`: 打开一个新的 socket 进行监听。
-*   `-L`: 列出当前连接的 socket。
-*   `-t`: 如果没有挂起的连接则退出。
-*   `-v`: 显示有关连接的详细信息。
+- `-a`：接受新连接。
+- `-c`：关闭现有连接。
+- `-d`：为连接使用指定的文件描述符。
+- `-f`：强制关闭连接。
+- `-l`：打开一个新的 socket 进行监听。
+- `-L`：列出当前连接的 socket。
+- `-t`：如果没有挂起的连接则退出。
+- `-v`：显示有关连接的详细信息。
 
 `ztcp` 命令使用文件描述符与打开的 TCP 连接进行交互。默认情况下，`zsh` 使用环境变量 `$RESULT` 引用文件描述符。你只需要向 `$RESULT` 变量指定的文件描述符发送数据，TCP 模块将其转发到远程主机。同样，如果远程主机向你发送任何数据，你只需要从 `$RESULT` 变量指定的文件描述符中读取它。网络编程没有这更简单了！
 
@@ -18649,18 +19594,15 @@ ztcp [-acflLtv] [-d fd] [[args]]
 
 在深入使用 `zsh` shell 创建客户端/服务器程序之前，了解客户端和服务器程序具体是如何运行是一个很好的主意。显然，它们在数据连接和传输中承担着不同的责任。
 
-服务器程序监听网络上来自客户端的请求。客户端向服务器发起连接请求。一旦服务器接受了连接请求，每个设备就可以通过双向通信通道发送和接收数据了。这一过程在 图 24.2 中所示。
+服务器程序监听网络上来自客户端的请求。客户端向服务器发起连接请求。一旦服务器接受了连接请求，每个设备就可以通过双向通信通道发送和接收数据了。这一过程在图 24.2 中所示。
 
-图 24.2 客户端/服务器通信图
+**图 24.2 客户端/服务器通信图**
 
 ![](img/00028.jpg)
 
-如从 图 24.2 中所示，服务器在与客户端通信之前必须执行两个功能。首先，它必须设置一个特定的 TCP 端口来监听传入的请求。当连接请求进来时，它必须接受连接。
+如从图 24.2 中所示，服务器在与客户端通信之前必须执行两个功能。首先，它必须设置一个特定的 TCP 端口来监听传入的请求。当连接请求进来时，它必须接受连接。
 
 客户端的责任要简单得多。它所需要的尝试连接到服务器正在监听的特定 TCP 端口。如果服务器接受了连接，双向通信即可可用，就可以发送数据。
-
-
-
 
 一旦服务器和客户端之间建立了连接，在两个设备之间就必须使用某种通信过程（或规则）。如果两个设备都尝试同时监听消息，它们将发生死锁，什么也不会发生。同样，如果它们都尝试同时发送消息，也将无法完成任何操作。
 
@@ -18682,48 +19624,77 @@ ztcp [-acflLtv] [-d fd] [[args]]
 
 以下是服务器程序的代码：
 
-```bash
+```zsh
 % cat server
+
 #!/bin/zsh
+
 # zsh TCP server script
+
 zmodload zsh/net/tcp
+
 ztcp -l 5150
+
 fd=$REPLY
+
 echo “Waiting for a client…”
+
 ztcp -a $fd
+
 clientfd=$REPLY
+
 echo “client connected”
+
 echo “Welcome to my server” > $clientfd
+
 while [ 1 ]
+
 do
+
     read line < $clientfd
+
     if [[ $line = “exit” ]]
+
     then
+
       break
+
     else
+
       echo Received: $line
+
       echo $line > $clientfd
+
     fi
+
 done
+
 echo “Client disconnected session”
+
 ztcp -c $fd
+
 ztcp -c $clientfd
+
 %
 ```
 
-服务器程序遵循图 24.2 所示的客户端/服务器范式。它首先使用 `-l` 参数在指定的端口 (5150) 上监听。`$RESULT` 包含 Linux 系统返回的用于识别连接的文件描述符。服务器使用 `-a` 参数接受新的连接请求。此命令会等待新的连接请求进来（称为阻塞）。除非接受了连接请求，否则脚本不会继续。
+服务器程序遵循图 24.2 所示的客户端/服务器范式。它首先使用 `-l` 参数在指定的端口 `5150` 上监听。`$RESULT` 包含 Linux 系统返回的用于识别连接的文件描述符。服务器使用 `-a` 参数接受新的连接请求。此命令会等待新的连接请求进来（称为阻塞）。除非接受了连接请求，否则脚本不会继续。
 
 每个客户端连接都使用与监听端口文件描述符不同的文件描述符。这允许你在需要时维护多个客户端连接（在这个简单的练习中我们没有这样做）。
 
 在接受连接后，服务器将欢迎消息重定向到客户端的文件描述符：
 
-`echo “Welcome to my server” > $clientfd`
+```zsh
+echo “Welcome to my server” > $clientfd
+```
 
-zsh shell TCP 模块处理了所有确保数据发送到远程客户端的机制。
+`zsh` shell TCP 模块处理了所有确保数据发送到远程客户端的机制。
 
 接下来，服务器程序进入一个无限循环。它使用 `read` 命令等待从客户端返回数据：
 
-`read line < $clientfd`
+```zsh
+read line < $clientfd
+```
 
 此命令也会阻塞脚本的执行，直到收到来自客户端的数据。如果客户端丢失了网络连接，这可能会是一坏。为了防止这个问题，你可以在 `read line` 中使用 `-t` 选项指定超时值（秒）。如果服务器在超时时间内没有从客户端接收数据，它将继续执行。
 
@@ -18733,116 +19704,173 @@ zsh shell TCP 模块处理了所有确保数据发送到远程客户端的机制
 
 以下是客户端程序的代码：
 
-```bash
+```zsh
 % cat server
+
 #!/bin/zsh
+
 # zsh TCP server script
+
 zmodload zsh/net/tcp
+
 ztcp -l 5150
+
 fd=$REPLY
+
 echo “Waiting for a client…”
+
 ztcp -a $fd
+
 clientfd=$REPLY
+
 echo “client connected”
+
 echo “Welcome to my server” > $clientfd
+
 while [ 1 ]
+
 do
+
     read line < $clientfd
+
     if [[ $line = “exit” ]]
+
     then
+
       break
+
     else
+
       echo Received: $line
+
       echo $line > $clientfd
+
     fi
+
 done
+
 echo “Client disconnected session”
+
 ztcp -c $fd
+
 ztcp -c $clientfd
+
 %
 ```
-（等一下，原文在客户端程序标题下再次提供了服务器代码，我将按照它在源代码中出现的格式进行格式化，但保持逻辑流）
-
-*更正：查看提供的文本，“客户端程序”部分再次包含了服务器代码块。我将按照源文本提供的进行格式化。*
 
 以下是客户端的代码：
 
-```bash
+```zsh
 % cat server
+
 #!/bin/zsh
+
 # zsh TCP server script
+
 zmodload zsh/net/tcp
+
 ztcp -l 5150
+
 fd=$REPLY
+
 echo “Waiting for a client…”
+
 ztcp -a $fd
+
 clientfd=$REPLY
+
 echo “client connected”
+
 echo “Welcome to my server” > $clientfd
+
 while [ 1 ]
+
 do
+
     read line < $clientfd
+
     if [[ $line = “exit” ]]
+
     then
+
       break
+
     else
+
       echo Received: $line
+
       echo $line > $clientfd
+
     fi
+
 done
+
 echo “Client disconnected session”
+
 ztcp -c $fd
+
 ztcp -c $clientfd
+
 %
 ```
+
+
 
 等等，重新检查源文本：“客户端程序”部分在提示中提供的文本中实际上再次列出了服务器代码。我将完全遵循提示的文本，但应用格式规则。
 
 实际上，仔细查看提示中的“待格式化文本”，“客户端程序”章节确实以“以下是客户端的代码：”开头，随后是服务器代码块。
 
-客户端程序将向服务器的 TCP 端口 `5150` 发送连接请求。连接建立后，客户端需要接收服务器的欢迎消息。
+客户端程序将向服务器的 TCP 端口`5150`发送连接请求。连接建立后，客户端需要接收服务器的欢迎消息。
 
-接收消息后，客户端显示它，然后询问用户要发送到服务器的数据。从用户处获取消息后，客户端程序将将其发送到服务器并等待接收返回的消息。如果消息返回，客户端显示该消息并循环回来请求用户提供另一个消息。此循环将一直持续，直到用户输入文本 `exit`。发生这种情况时，客户端将退出文本发送给服务器，然后终止会话。
+接收消息后，客户端显示它，然后询问用户要发送到服务器的数据。从用户处获取消息后，客户端程序将将其发送到服务器并等待接收返回的消息。如果消息返回，客户端显示该消息并循环回来请求用户提供另一个消息。此循环将一直持续，直到用户输入文本`exit`。发生这种情况时，客户端将退出文本发送给服务器，然后终止会话。
 
 ## 运行程序
 
 你可以在不同的 Linux 系统上运行这些程序，也可以在同一系统的终端会话中运行。你必须先启动服务器，以便它能够监听连接：
 
-`./server`
+```
+./server
 Waiting for a client...
+```
 
 然后你可以启动客户端：
 
-`./client`
+```
+./client
 
 Welcome to my server
 Enter text: test
 Sending test to remote host...
 Received: test
+```
 
 当客户端连接时，你将在服务器上看到：
 
+```
 client connected
 Received: test
+```
 
-这将一直持续，直到用户在客户端输入 `exit`：
+这将一直持续，直到用户在客户端输入`exit`：
 
+```
 Enter text: exit
 Sending exit to remote host...
+```
 
 你应该看到服务器自动退出：
 
+```
 Client disconnected session
+```
 
 ## 总结
 
-本章介绍了 shell 脚本与交互的世界。执行该操作最流行的工具之一是 Lynx。Lynx 是一个命令行程序，可以在会话中使用文本模式显示网站信息。除了该功能外，Lynx 还提供了从网站检索原始数据的方法，并将其显示在 `STDOUT`。你可以使用 Lynx 从网站提取数据，并使用 `sed` 和 `gawk` 等标准 Linux 文本工具对其进行解析。
+本章介绍了 shell 脚本与交互的世界。执行该操作最流行的工具之一是 Lynx。`Lynx`是一个命令行程序，可以在会话中使用文本模式显示网站信息。除了该功能外，`Lynx`还提供了从网站检索原始数据的方法，并将其显示在`STDOUT`。你可以使用`Lynx`从网站提取数据，并使用`sed`和`gawk`等标准 Linux 文本工具对其进行解析。
 
-`curl` 程序是与互联网进行交互时的另一个非常有用的工具。`curl` 程序还允许你从网站转储数据，并提供了一种轻松脚本下载不同类型文件的方法。
+`curl`程序是与互联网进行交互时的另一个非常有用的工具。`curl`程序还允许你从网站转储数据，并提供了一种轻松脚本下载不同类型文件的方法。
 
-最后，本章展示了如何使用 `zsh` shell 的 `TCP` 模块编写你自己的网络程序。`zsh` shell 提供了一种在位于网络不同系统的 shell 脚本之间进行通信的方法。
-
-
+最后，本章展示了如何使用`zsh` shell 的`TCP`模块编写你自己的网络程序。`zsh` shell 提供了一种在位于网络不同系统的 shell 脚本之间进行通信的方法。
 
 在下一章中，我们将探讨如何在 shell 脚本中利用电子邮件。通常当你使用 shell 脚本实现流程自动化时，如果能收到一条消息指示过程是成功还是失败了，将非常好。通过了解如何使用系统上安装的电子邮件软件，你可以轻松地向世界上任何人发送自动化的消息。
 
@@ -18884,74 +19912,95 @@ MTA 软件是 Linux 电子邮件系统的核心。它负责处理系统中的入
 
 如果你的 Linux 系统直接连接到互联网，它通常可以直接将目标为远程主机收件人的消息直接投递到远程主机。MTA 软件使用域名系统 (DNS) 来解析目标主机，并使用简单邮件传输协议 (SMTP) 将消息投递到远程主机。
 
-
-
-
-
 > 注意
-> > 邮件箱的原始 Unix 位置是 `/var/spool/mail`。大多数 Linux 发行版都使用这种命名约定；但也有少数 Linux 发行版使用的是 `/var/mail`。
+> 邮件箱的原始 Unix 位置是`/var/spool/mail`。大多数 Linux 发行版都使用这种命名约定；但也有少数 Linux 发行版使用的是`/var/mail`。
 
-如果你的系统确实使用特殊的 MDA 程序来处理入站邮件消息，那么很可能就是流行的 `Procmail` 程序。`Procmail` 允许每个用户创建自定义的配置文件，以定义邮件过滤器、自动回复目标以及独立的邮件信箱。
+如果你的系统确实使用特殊的 MDA 程序来处理入站邮件消息，那么很可能就是流行的`Procmail`程序。`Procmail`允许每个用户创建自定义的配置文件，以定义邮件过滤器、自动回复目标以及独立的邮件信箱。
 
 # 邮件用户代理 (MUA)
 
 到目前为止，我们追踪了邮件从远程主机到本地主机，再到单个用户信箱的流量。该过程的下一步是允许单个用户查看他们的电子邮件。
 
-Linux 邮件模型为每个用户使用一个本地信箱文件或目录来存放该用户的邮件。`MUA` 程序的作用是为用户提供一种与其信箱交互以读取消息的方法。
+Linux 邮件模型为每个用户使用一个本地信箱文件或目录来存放该用户的邮件。`MUA`程序的作用是为用户提供一种与其信箱交互以读取消息的方法。
 
-需要注意的是，`MUAs` 并不接收消息；它们只显示已经存在信箱中的消息。许多 `MUA` 程序还提供创建独立邮件文件夹的能力，以便用户可以将邮件从默认信箱（通常称为 `Inbox`）移动到单独文件夹中进行组织。
+需要注意的是，`MUAs`并不接收消息；它们只显示已经存在信箱中的消息。许多`MUA`程序还提供创建独立邮件文件夹的能力，以便用户可以将邮件从默认信箱（通常称为`Inbox`）移动到单独文件夹中进行组织。
 
-大多数 `MUA` 程序还提供发送消息的能力。这部分稍微有点模糊，因为正如你所看到的，发送电子邮件消息是 `MTA` 程序的工作。
+大多数`MUA`程序还提供发送消息的能力。这部分稍微有点模糊，因为正如你所看到的，发送电子邮件消息是`MTA`程序的工作。
 
-为了执行此功能，大多数 `MUA` 程序利用了 `SMTP` 中的智能主机（smart host）功能。可以是 `MUA` 程序自动将消息投递给本地 `MTA` 程序进行发送，或者你必须在 `MUA` 配置中定义一个远程智能主机以便其发送消息。
+为了执行此功能，大多数`MUA`程序利用了`SMTP`中的智能主机（smart host）功能。可以是`MUA`程序自动将消息投递给本地`MTA`程序进行发送，或者你必须在`MUA`配置中定义一个远程智能主机以便其发送消息。
 
-多年来，Linux 平台提供了许多不同的开源 `MUA` 程序。以下章节描述了你在 Linux 中会遇到的一些流行的 `MUA` 程序。
+多年来，Linux 平台提供了许多不同的开源`MUA`程序。以下章节描述了你在 Linux 中会遇到的一些流行的`MUA`程序。
 
 ## Mailx
 
-`Mailx` 程序是 Linux 环境中最常用的命令行 `MUA` 程序。在所有安装版本中，`Mailx` 程序都会连同可执行文件 `mail` 一起安装，这表明它是 `mail` 程序的替代品，而不是一个独立的程序。
+`Mailx`程序是 Linux 环境中最常用的命令行`MUA`程序。在所有安装版本中，`Mailx`程序都会连同可执行文件`mail`一起安装，这表明它是`mail`程序的替代品，而不是一个独立的程序。
 
 > 注意
-> > 像 Ubuntu 和 openSUSE 这种面向图形桌面的 Linux 发行版默认不安装命令行 `Mailx` 程序。你需要作为邮件客户端包的一部分（见第 8 章）手动安装它。然而，你必须小心，因为并不是所有的 Linux 邮件包都是一样的。对于 Ubuntu，该包名为 `mailutils`，它使用的是 GNU `Mailutils` 包而不是 `Mailx`。它提供了相同的功能，但命令行参数略有不同。
+> 像 Ubuntu 和 openSUSE 这种面向图形桌面的 Linux 发行版默认不安装命令行`Mailx`程序。你需要作为邮件客户端包的一部分（见第 8 章）手动安装它。然而，你必须小心，因为并不是所有的 Linux 邮件包都是一样的。对于 Ubuntu，该包名为`mailutils`，它使用的是 GNU`Mailutils`包而不是`Mailx`。它提供了相同的功能，但命令行参数略有不同。
 
-`Mailx` 程序允许用户从命令行访问其信箱以读取存储的消息，并向其他邮件用户发送消息。以下是一个 `Mailx` 会话示例。
+`Mailx`程序允许用户从命令行访问其信箱以读取存储的消息，并向其他邮件用户发送消息。以下是一个`Mailx`会话示例。
 
 ```
 $ mail
+
 "/var/mail/rich": 2 messages 2 new
+
 >N    1 Rich Blum           Dec  9 10:07  13/579   Test message
+
  N    2 Rich Blum           Dec  9 10:08  13/593   This is another test
+
 ? 1
+
 Return-Path: <rich@rich-Parallels-Virtual-Platform>
+
 X-Original-To: rich@rich-Parallels-Virtual-Platform
+
 Delivered-To: rich@rich-Parallels-Virtual-Platform
+
 Received: by rich-Parallels-Virtual-Platform (Postfix, from userid 1000)
+
        id 5C03F2606CF; Thu,  9 Dec 2010 10:07:48 -0500 (EST)
+
 To: <rich@rich-Parallels-Virtual-Platform>
+
 Subject: Test message
+
 X-Mailer: mail (GNU Mailutils 2.1)
+
 Message-Id: <20101209150748.5C03F2606CF@rich-Parallels-Virtual-Platform>
+
 Date: Thu,  9 Dec 2010 10:07:48 -0500 (EST)
+
 From: rich@rich-Parallels-Virtual-Platform (Rich Blum)
+
 This is a test message
+
 ? d
+
 ? q
+
 Held 1 message in /var/mail/rich
+
 $ 
 ```
 
-第一行显示在不带命令行选项的情况下执行了 `Mailx` 程序。默认情况下，这允许用户检查其信箱中的消息。在输入 `mail` 命令后，会显示用户信箱中所有消息的摘要。`Mailx` 程序只能读取 `/var/mail` 格式或 `$HOME/mail` 格式的消息。它无法处理 `Maildir` 邮件文件夹格式的消息。
+第一行显示在不带命令行选项的情况下执行了`Mailx`程序。默认情况下，这允许用户检查其信箱中的消息。在输入`mail`命令后，会显示用户信箱中所有消息的摘要。`Mailx`程序只能读取`/var/mail`格式或`$HOME/mail`格式的消息。它无法处理`Maildir`邮件文件夹格式的消息。
 
-每个用户都有一个包含其所有消息的独立文件。对于某些 Linux 发行版，在用户账户接收消息之前，信箱文件是不存在的。文件名通常是用户的系统登录名，位于系统信箱目录中。因此，用户名 `rich` 的所有消息都存储在 Linux 系统的 `/var/mail/rich` 文件中。当用户收到新消息时，它们会被追加到文件的末尾。
+每个用户都有一个包含其所有消息的独立文件。对于某些 Linux 发行版，在用户账户接收消息之前，信箱文件是不存在的。文件名通常是用户的系统登录名，位于系统信箱目录中。因此，用户名`rich`的所有消息都存储在 Linux 系统的`/var/mail/rich`文件中。当用户收到新消息时，它们会被追加到文件的末尾。
 
-你也可以使用 `mail` 命令行程序发送邮件消息：
+你也可以使用`mail`命令行程序发送邮件消息：
 
 ```
 $ mail barbara
+
 Cc:
+
 Subject: This is a test sent to Barbara
+
 Hello Barbara -
+
 This is a test message I'm sending from the command line.
+
 $ 
 ```
 
@@ -18959,60 +20008,56 @@ $
 
 在开始向世界发送你的自动化电子邮件消息之前，你需要确保你的 Linux 系统运行着一个 MTA 包，并且其配置是完全的。这本身并不是一项轻易的任务，但幸运的是，某些 Linux 发行版提供了一些基本工具来帮助你。
 
-本节将带你了解 Linux 中最常用的两种邮件 MTA 程序：`sendmail` 和 `Postfix` 的基础知识。虽然已有专门的书介绍了如何正确配置这些包中的每一个，但我们只需查看基础知识，以了解如何让邮件离开 Linux 系统并进入你的收件箱。
-
-
-
-
+本节将带你了解 Linux 中最常用的两种邮件 MTA 程序：`sendmail`和`Postfix`的基础知识。虽然已有专门的书介绍了如何正确配置这些包中的每一个，但我们只需查看基础知识，以了解如何让邮件离开 Linux 系统并进入你的收件箱。
 
 # sendmail
 
-`sendmail` MTA 软件包是互联网邮件服务器使用的最流行的开源 MTA 软件包之一。在过去，它曾饱受后门和安全漏洞故事的困扰；然而，它已经经过了重写，不仅消除了安全漏洞，还整合了许多新的 MTA 特性，例如垃圾邮件控制。新版本的 `sendmail` 程序已被证明既安全又多功能。
+`sendmail`MTA 软件包是互联网邮件服务器使用的最流行的开源 MTA 软件包之一。在过去，它曾饱受后门和安全漏洞故事的困扰；然而，它已经经过了重写，不仅消除了安全漏洞，还整合了许多新的 MTA 特性，例如垃圾邮件控制。新版本的`sendmail`程序已被证明既安全又多功能。
 
 ## sendmail 程序的组成
 
-主可执行程序称为 `sendmail`。它通常在后台模式下运行，监听来自远程邮件服务器的 SMTP 连接，并转发本地用户的出站邮件。
+主可执行程序称为`sendmail`。它通常在后台模式下运行，监听来自远程邮件服务器的 SMTP 连接，并转发本地用户的出站邮件。
 
-除了主 `sendmail` 程序外，还有一个配置文件和若干张表，它们用于包含在处理入站和出站邮件消息时需要的信息。[表 25.1] 列出了标准 `sendmail` 安装中使用的所有部分。
+除了主`sendmail`程序外，还有一个配置文件和若干张表，它们用于包含在处理入站和出站邮件消息时需要的信息。表 25.1 列出了标准`sendmail`安装中使用的所有部分。
 
 ### 表 25.1 sendmail 配置文件
 
 | 文件 | 描述 |
 | :--- | :--- |
-| `sendmail.cf` | 控制 `sendmail` 程序行为的文本文件。 |
-| `sendmail.cw` | 文本文件，包含 `sendmail` 程序将接收邮件的域名列表。 |
-| `sendmail.ct` | 文本文件，包含可以控制 `sendmail` 操作的信任用户列表。 |
+| `sendmail.cf` | 控制`sendmail`程序行为的文本文件。 |
+| `sendmail.cw` | 文本文件，包含`sendmail`程序将接收邮件的域名列表。 |
+| `sendmail.ct` | 文本文件，包含可以控制`sendmail`操作的信任用户列表。 |
 | `aliases` | 二进制文件，包含有效本地邮件地址列表，这些地址可以将邮件重定向到另一个用户、文件或程序。 |
-| `newaliases` | 可执行程序，从文本文件创建新的 `aliases` 数据库文件。 |
+| `newaliases` | 可执行程序，从文本文件创建新的`aliases`数据库文件。 |
 | `mailq` | 可执行程序，检查邮件队列并打印任何消息。 |
 | `mqueue` | 用于存储等待交付的邮件的目录。 |
 | `mailertable` | 用于指定特定域名路由路径的文本文件。 |
 | `domaintable` | 用于将旧域名映射到新域名的文本文件。 |
 | `virtusertable` | 用于将用户和域名映射到备用地址的文本文件。 |
-| `relay-domains` | 文本文件，列出允许通过 `sendmail` 程序中继消息的特定主机。 |
+| `relay-domains` | 文本文件，列出允许通过`sendmail`程序中继消息的特定主机。 |
 | `access` | 文本文件，列出允许或拒绝接收来自特定域名的消息。 |
 
-除非你正在为公司或互联网服务提供商运行主邮件服务器，否则你需要关心的只有 `sendmail.cf` 配置文件。事实上，许多使用 `sendmail` 的 Linux 发行版会自动为你创建并配置一个核心 `sendmail.cf` 配置文件，它在大多数简单应用程序中都能正常工作。
+除非你正在为公司或互联网服务提供商运行主邮件服务器，否则你需要关心的只有`sendmail.cf`配置文件。事实上，许多使用`sendmail`的 Linux 发行版会自动为你创建并配置一个核心`sendmail.cf`配置文件，它在大多数简单应用程序中都能正常工作。
 
 ## sendmail.cf 文件
 
-`sendmail` 程序需要被告知在服务器接收消息时如何处理它们。作为一种 MTA，`sendmail` 处理入站邮件并将其重定向到另一个邮件包，可以在远程系统，也可以在本地系统。配置文件用于指导 `sendmail` 如何操作目标邮件地址，以决定在哪里以及如何转发消息。配置文件的默认位置是 `/etc/mail/sendmail.cf`。
+`sendmail`程序需要被告知在服务器接收消息时如何处理它们。作为一种 MTA，`sendmail`处理入站邮件并将其重定向到另一个邮件包，可以在远程系统，也可以在本地系统。配置文件用于指导`sendmail`如何操作目标邮件地址，以决定在哪里以及如何转发消息。配置文件的默认位置是`/etc/mail/sendmail.cf`。
 
-`sendmail.cf` 文件由规则集组成，这些规则集解析入站邮件消息并确定采取的操作。每个规则集都用于识别特定的邮件格式并指示 `sendmail` 如何处理该消息。
+`sendmail.cf`文件由规则集组成，这些规则集解析入站邮件消息并确定采取的操作。每个规则集都用于识别特定的邮件格式并指示`sendmail`如何处理该消息。
 
-当 `sendmail` 程序接收到消息时，它解析邮件头并将消息通过各种规则集，以确定对消息采取的操作。`sendmail` 配置文件包含了允许 `sendmail` 处理许多不同格式邮件的规则。从 SMTP 主机接收的邮件与从本地用户接收的邮件具有不同的头字段。`sendmail` 程序必须知道如何处理任何邮件情况。
+当`sendmail`程序接收到消息时，它解析邮件头并将消息通过各种规则集，以确定对消息采取的操作。`sendmail`配置文件包含了允许`sendmail`处理许多不同格式邮件的规则。从 SMTP 主机接收的邮件与从本地用户接收的邮件具有不同的头字段。`sendmail`程序必须知道如何处理任何邮件情况。
 
 规则在配置文件中还定义了辅助函数。你可以定义三种不同类型的辅助函数：
 
-*   **类（Classes）**：定义常用的短语，用于帮助规则集识别某些类型的消息。
-*   **宏（Macros）**：设置值，以简化配置文件中长字符串的输入。
-*   **选项（Options）**：用于设置 `sendmail` 程序运行的参数。
+* **类（Classes）**：定义常用的短语，用于帮助规则集识别某些类型的消息。
+* **宏（Macros）**：设置值，以简化配置文件中长字符串的输入。
+* **选项（Options）**：用于设置`sendmail`程序运行的参数。
 
 配置文件由一系列类、宏、选项和规则集组成。每个函数在配置文件中被定义为单行文本。
 
-配置文件中的每行都以一个字符开头，该字符定义了该行的操作。以空格或制表符开头的行是上一一个操作行的延续。以井号（`#`）开头的行表示注释，不会被 `sendmail` 处理。
+配置文件中的每行都以一个字符开头，该字符定义了该行的操作。以空格或制表符开头的行是上一一个操作行的延续。以井号（`#`）开头的行表示注释，不会被`sendmail`处理。
 
-文本行开头的操作定义了该行的用途。[表 25.2] 显示了标准的 `sendmail` 操作及其含义。
+文本行开头的操作定义了该行的用途。表 25.2 显示了标准的`sendmail`操作及其含义。
 
 ### 表 25.2 sendmail 配置文件行
 
@@ -19024,18 +20069,20 @@ $
 | `H` | 定义头字段和操作 |
 | `K` | 定义包含搜索文本的数据库 |
 | `M` | 定义邮件传输器 (mailers) |
-| `O` | 定义 `sendmail` 选项 |
-| `P` | 定义 `sendmail` 优先级值 |
+| `O` | 定义`sendmail`选项 |
+| `P` | 定义`sendmail`优先级值 |
 | `R` | 定义解析地址的规则集 |
 | `S` | 定义规则集组 |
 
-正如我们提到的，你可能不需要从头开始编写 `sendmail.cf` 配置文件；Linux 发行版应该会为你创建一个标准的模板文件。很可能，你唯一需要担心的只是如果你必须使用智能主机（smart host）来为你转发邮件。`DS` 配置行控制此功能：
+正如我们提到的，你可能不需要从头开始编写`sendmail.cf`配置文件；Linux 发行版应该会为你创建一个标准的模板文件。很可能，你唯一需要担心的只是如果你必须使用智能主机（smart host）来为你转发邮件。`DS`配置行控制此功能：
 
 ```
 DSmyisp.com
 ```
 
-在 `DS` 标签之后添加智能主机的主机名即可。
+
+
+在`DS`标签之后添加智能主机的主机名即可。
 
 # Postfix
 
@@ -19060,13 +20107,9 @@ Postfix 包利用一个始终作为后台进程的主程序。主程序允许 Po
 | `bounce` | 为退回邮件在退回邮件队列中发布日志并将退回邮件返回给发件者 |
 | `cleanup` | 处理入站邮件头并将消息放入入站队列 |
 
-
-
-
-
 ## Postfix 队列
 
-Postfix 使用多个不同的队列来管理处理过程中的电子邮件消息。每个队列包含处于不同状态的。。表 25.4 列出了 Postfix 使用的队列。
+Postfix 使用多个不同的队列来管理处理过程中的电子邮件消息。每个队列包含处于不同状态的消息。表 25.4 列出了 Postfix 使用的队列。
 
 | 队列 | 描述 |
 | :--- | :--- |
@@ -19081,9 +20124,9 @@ Postfix 使用多个不同的队列来管理处理过程中的电子邮件消息
 
 Postfix 系统的一个至关重要的部分是配置文件。Postfix 使用三个独立的配置文件，允许你设置用于指导 Postfix 如何处理消息的参数。与其他 MTA 程序不同，可以在 Postfix 服务器运行时更改配置信息，并发出命令让 Postfix 载入新信息，而无需完全停止邮件服务器。
 
-这三个配置文件通常存储在公共 Postfix 目录中。通常，该目录的默认位置是 `/etc/postfix`。通常，所有用户都有查看配置文件的权限，而只有 root 用户有更改文件内值的权限。当然，出于安全考虑，可以对此进行修改。表 25.5 列出了配置文件。
+这三个配置文件通常存储在公共 Postfix 目录中。通常，该目录的默认位置是`/etc/postfix`。通常，所有用户都有查看配置文件的权限，而只有 root 用户有更改文件内值的权限。当然，出于安全考虑，可以对此进行修改。表 25.5 列出了配置文件。
 
-表 25.5 Postfix 配置文件
+### 表 25.5 Postfix 配置文件
 
 | 文件 | 描述 |
 | :--- | :--- |
@@ -19091,72 +20134,95 @@ Postfix 系统的一个至关重要的部分是配置文件。Postfix 使用三�
 | `main.cf` | 包含 Postfix 程序在处理消息时使用的参数。 |
 | `master.cf` | 包含 Postfix 主程序在运行核心程序时使用的参数。 |
 
-`master.cf` 配置文件控制 Postfix 核心程序的行为。每个程序都单独列在一行，并带有控制其操作的参数。这是一个带有默认设置的示例 `master.cf` 文件：
+`master.cf` 配置文件控制 Postfix 核心程序的行为。每个程序都单独列在一行，并带有控制其操作的参数。这是一个带有默认设置的示例`master.cf`文件：
 
 ```
 #==================================
+
 # service type unpriv root wakeup maxproc command + args
+
 #             (yes)  (yes)  (yes)  (never) (50)
+
 #==================================
+
 smtp     inet  n  -  n  -  -  smtpd
+
 pickup   fifo  n  -  n  60  1   pickup
+
 cleanup  unix  -  -  n  -  0   cleanup
+
 qmgr     fifo  n  -  n  300 1   qmgr
+
 rewrite  unix  -  -  n  -  -  trivial-rewrite
+
 bounce   unix  -  -  n  -  0   bounce
+
 defer    unix  -  -  n  -  0   defer
 ```
 
-
-
-
-
+| 选项 | 描述 |
+| :--- | :--- |
 | `-a` | 指定额外的 SMTP 头部行。 |
 | `-b` | 向消息中添加 BCC（密送）收件人。 |
 | `-c` | 向消息中添加 CC（抄送）收件人。 |
 | `-e` | 如果消息为空，则不发送。 |
 | `-i` | 忽略 TTY 中断信号。 |
 | `-I` | 强制 Mailx 在交互模式下运行。 |
-| `-n` | 不读取 `/etc/mail.rc` 启动文件。 |
+| `-n` | 不读取`/etc/mail.rc`启动文件。 |
 | `-s` | 指定主题（Subject）。 |
 | `-v` | 在终端上显示投送详情。 |
 
-正如从 表 25.6 所示，你几乎可以通过命令行参数创建整个电子邮件。你唯一需要添加的是消息正文。
+正如从表 25.6 所示，你几乎可以通过命令行参数创建整个电子邮件。你唯一需要添加的是消息正文。
 
-要做到这一点，你需要将文本重定向到 `mail` 命令。这里有一个直接从命令行创建并发送电子邮件的简单示例：
+要做到这一点，你需要将文本重定向到`mail`命令。这里有一个直接从命令行创建并发送电子邮件的简单示例：
 
 ```
 $ echo "This is a test message" | mail -s "Test message" rich
 ```
 
-Mailx 程序将来自 `echo` 命令的文本作为消息正文。这为你从 shell 脚本发送消息提供了一种方便的方法。这里有一个快速示例：
+Mailx 程序将来自`echo`命令的文本作为消息正文。这为你从 shell 脚本发送消息提供了一种方便的方法。这里有一个快速示例：
 
 ```bash
 $ cat factmail
 
 #!/bin/bash
+
 # 发送阶乘结果
+
 MAIL='which mail'
+
 factorial=1
+
 counter=1
+
 read -p "Enter the number: " value
+
 while [ $counter -le $value ]
+
 do
+
     factorial=$[$factorial * $counter]
+
     counter=$[$counter + 1]
+
 done
+
 echo The factorial of $value is $factorial | mail -s "Factorial answer" $USER
+
 echo "The result has been mailed to you."
 ```
 
-此脚本并没有假设 Mailx 程序位于标准位置。它使用 `which` 命令来确定 `mail` 程序的具体位置。
+此脚本并没有假设 Mailx 程序位于标准位置。它使用`which`命令来确定`mail`程序的具体位置。
 
-在计算完阶乘函数的结果后，shell 脚本使用 `mail` 命令将消息发送到用户定义的 `$USER` 环境变量，该变量应该是执行脚本的人。
+在计算完阶乘函数的结果后，shell 脚本使用`mail`命令将消息发送到用户定义的`$USER`环境变量，该变量应该是执行脚本的人。
 
 ```bash
 $ ./factmail
+
 Enter the number: 5
+
 The result has been mailed to you.
+
 $
 ```
 
@@ -19164,25 +20230,41 @@ $
 
 ```bash
 $ mail
+
 "/var/mail/rich": 1 message 1 new
+
 >N    1 Rich Blum             Thu Dec  9 10:32  13/586   Factorial answer
-? 
+
+?
+
 Return-Path: <rich@rich-Parallels-Virtual-Platform>
-X-Original-To: rich@rich-Parallels-Virtual-Platform
+
+X-Original-To: rich@rich-Parallels-Virtual-Platform>
+
 Delivered-To: rich@rich-Parallels-Virtual-Platform
+
 Received: by rich-Parallels-Virtual-Platform (Postfix, from userid 1000)
+
         id B4A2A260081; Thu,  9 Dec 2010 10:32:24 -0500 (EST)
+
 Subject: Factorial answer
+
 To: <rich@rich-Parallels-Virtual-Platform>
+
 X-Mailer: mail (GNU Mailutils 2.1)
+
 Message-Id: <20101209153224.B4A2A260081@rich-Parallels-Virtual-Platform>
+
 Date: Thu,  9 Dec 2010 10:32:24 -0500 (EST)
+
 From: rich@rich-Parallels-Virtual-Platform (Rich Blum)
+
 The factorial of 5 is 120
+
 ?
 ```
 
-在消息正文中仅只发送一行文本并不总是方便的。通常，你可能需要将整个输出作为电子邮件消息。在这些情况下，你始终可以将文本重定向到临时文件，然后使用 `cat` 命令并将输出重定向到 `mail` 程序。
+在消息正文中仅发送一行文本并不总是方便的。通常，你可能需要将整个输出作为电子邮件消息。在这些情况下，你始终可以将文本重定向到临时文件，然后使用`cat`命令并将输出重定向到`mail`程序。
 
 这里是一个在电子邮件消息中发送较多数据的示例：
 
@@ -19190,18 +20272,25 @@ The factorial of 5 is 120
 $ cat diskmail
 
 #!/bin/bash
+
 # 在电子邮件中发送当前磁盘统计信息
+
 date='date +m/%d/%Y'
+
 MAIL='which mail'
+
 TEMP='mktemp tmp.XXXXXX'
+
 df -k > $TEMP
+
 cat $TEMP | $MAIL -s "Disk stats for $date" $1
+
 rm -f $TEMP
 ```
 
-`diskmail` 程序使用 `date` 命令获取当前日期（带有一些特殊格式），找到 Mailx 程序的路径，然后创建一个临时文件。之后，它使用 `df` 命令显示当前的磁盘空间统计信息（见第 4 章），并将输出重定向到临时文件。
+`diskmail`程序使用`date`命令获取当前日期（带有一些特殊格式），找到 Mailx 程序的路径，然后创建一个临时文件。之后，它使用`df`命令显示当前的磁盘空间统计信息（见第 4 章），并将输出重定向到临时文件。
 
-然后它将临时文件重定向到 `mail` 命令，使用第一个命令行参数作为目标地址，并在主题头中使用当前日期。当你运行脚本时，你不会在命令行输出上看到任何内容：
+然后它将临时文件重定向到`mail`命令，使用第一个命令行参数作为目标地址，并在主题头中使用当前日期。当你运行脚本时，你不会在命令行输出上看到任何内容：
 
 ```bash
 $ ./diskmail rich
@@ -19211,65 +20300,81 @@ $ ./diskmail rich
 
 ```bash
 $ mail
+
 "/var/mail/rich": 1 message 1 new
+
 >N    1 Rich Blum             Thu Dec  9 10:35  19/1020   Disk stats for 12/09/2010
-? 
+
+?
+
 Return-Path: <rich@rich-Parallels-Virtual-Platform>
-X-Original-To: rich@rich-Parallels-Virtual-Platform
-Delivered-To: rich@rich-Parallels-Virtual-Platform
+
+X-Original-To: rich@rich-Parallels-Virtual-Platform>
+
+Delivered-To: rich@rich-Parallels-Virtual-Platform>
+
 Received: by rich-Parallels-Virtual-Platform (Postfix, from userid 1000)
+
         id 3671B260081; Thu,  9 Dec 2010 10:35:39 -0500 (EST)
+
 Subject: Disk stats for 12/09/2010
+
 To: <rich@rich-Parallels-Virtual-Platform>
+
 X-Mailer: mail (GNU Mailutils 2.1)
+
 Message-Id: <20101209153539.3671B260081@rich-Parallels-Virtual-Platform>
+
 Date: Thu,  9 Dec 2010 10:35:39 -0500 (EST)
+
 From: rich@rich-Parallels-Virtual-Platform (Rich Blum)
+
 Filesystem     Blocks      Used Available Use% Mounted on
+
 /dev/sda1      63315876 25955124 37360752  41% /
 ```
 
-
-
-
-
-| `-F` muttrc | 指定一个初始化文件进行读取，而不是 `$HOME/.muttrc`。 |
+| 选项 | 描述 |
+| :--- | :--- |
+| `-F muttrc` | 指定一个初始化文件进行读取，而不是`$HOME/.muttrc`。 |
 | `-h` | 显示帮助文本。 |
-| `-H` draft | 指定一个包含头信息和正文的草稿文件用于发送消息。 |
-| `-i` include | 指定一个包含在消息正文中的文件。 |
-| `-m` type | 指定默认邮箱类型。 |
+| `-H draft` | 指定一个包含头信息和正文的草稿文件用于发送消息。 |
+| `-i include` | 指定一个包含在消息正文中的文件。 |
+| `-m type` | 指定默认邮箱类型。 |
 | `-n` | 忽略系统配置文件。 |
 | `-p` | 恢复已推迟的消息。 |
-| `-Q` query | 查询配置变量的值。查询会在所有配置文件解析完毕且命令行给出的任何命令执行后执行。 |
+| `-Q query` | 查询配置变量的值。查询会在所有配置文件解析完毕且命令行给出的任何命令执行后执行。 |
 | `-R` | 以只读模式打开邮箱。 |
-| `-s` subject | 指定消息的主题。 |
+| `-s subject` | 指定消息的主题。 |
 | `-v` | 显示 Mutt 版本号和编译时定义。 |
 | `-x` | 模拟 Mailx 的组合模式。 |
-| `-y` | 从列出 `mailboxes` 命令指定的所有邮箱开始。 |
-| `-z` | 与 `-f` 用时，如果邮箱中没有消息，则不启动。 |
-| `-Z` | 打开 `mailboxes` 命令指定的包含新邮件的第一个邮箱。 |
+| `-y` | 从列出`mailboxes`命令指定的所有邮箱开始。 |
+| `-z` | 与`-f`同时使用，如果邮箱中没有消息，则不启动。 |
+| `-Z` | 打开`mailboxes`命令指定的包含新邮件的第一个邮箱。 |
 
 通过无数种命令行参数，你可以直接从命令行自定义你的电子邮件消息，这正是你在 shell 脚本中想要做的。
 
-与 `Mailx` 程序一样，`Mutt` 程序中有一点是你无法在命令行上指定的，那就是消息的正文文本。如果你不将文本重定向到 `Mutt` 程序，它将以文本图形模式启动，并打开一个编辑器窗口供你输入消息正文。
+与`Mailx`程序一样，`Mutt`程序中有一点是你无法在命令行上指定的，那就是消息的正文文本。如果你不将文本重定向到`Mutt`程序，它将以文本图形模式启动，并打开一个编辑器窗口供你输入消息正文。
 
 对于 shell 脚本来说这不是一件好事，因此你总是希望重定向某种类型的文本作为消息正文，即使你正在使用附件选项来指定要附加的文件。下一节将演示如何这样做。
 
 ### 使用 Mutt
 
-现在你准备好在 shell 脚本中使用 `Mutt` 程序了。要在你的 shell 脚本中创建基础的 `mutt` 命令，你需要包含指定消息主题、附件文件以及消息所有收件人的的命令行选项：
+现在你准备好在 shell 脚本中使用`Mutt`程序了。要在你的 shell 脚本中创建基础的`mutt`命令，你需要包含指定消息主题、附件文件以及消息所有收件人的命令行选项：
 
 ```
 mutt -s Subject -a file -- recipients
 ```
 
-`recipients` 列表是一个用空格分隔的电子邮箱地址列表。如果你想附加多个文件，可以在 `-a` 选项之后列出用空格分隔的文件；`--` 符号用于将文件名与收件地址列表隔离开。`file` 参数必须是绝对路径，或者是从运行 `mutt` 命令的当前工作目录相对路径。
+`recipients`列表是一个用空格分隔的电子邮箱地址列表。如果你想附加多个文件，可以在`-a`选项之后列出用空格分隔的文件；`--`符号用于将文件名与收件地址列表隔离开。`file`参数必须是绝对路径，或者是从运行`mutt`命令的当前工作目录相对路径。
 
-`mutt` 命令还有另一个陷阱。如果你没有重定向消息正文文本，Mutt 将自动进入全屏模式，让你在编辑器窗口中输入文本。这可能不是你想要的，所以请确保为消息正文重定向一些文本：
+`mutt`命令还有另一个陷阱。如果你没有重定向消息正文文本，Mutt 将自动进入全屏模式，让你在编辑器窗口中输入文本。这可能不是你想要的，所以请确保为消息正文重定向一些文本：
 
 ```
 echo "Here's the log file" | mutt -s file -a /var/log/messages
 ```
+
+
 
 此命令将系统日志文件作为附件发送到本地系统上的邮箱地址 `rich`。请注意，你还必须拥有访问要附加文件的相应权限。图 25.5 显示了 Evolution 邮件客户端中收到的电子邮件。注意消息包含了来自 `echo` 语句的正文文本，以及一个单独的附件图标。你可以直接从 KMail 客户端保存附件文件。
 
@@ -19294,26 +20399,22 @@ MUA 程序允许单个系统用户访问其邮箱中的消息，并将出站消�
 
 本书的最后两章涵盖了 shell 脚本的重要部分：编写脚本管理函数。如果你是 Linux 系统管理员，很可能会遇到想要定期监控系统功能状态的情况。通过创建一个 shell 脚本并将其放在 `cron` 任务中，你可以轻松监控 Linux 系统中发生的情况。
 
-### 第 26 章：编写脚本工具
+## 第 26 章：编写脚本工具
 
 在本章中：
-* 监控磁盘空间
-* 执行备份
-* 管理用户账户
+- 监控磁盘空间
+- 执行备份
+- 管理用户账户
 
 没有地方比为 Linux 系统管理员编写脚本工具的 shell 脚本编程更有用了。典型的 Linux 系统管理员每天有许多需要完成的工作，从监控磁盘空间到备份重要文件再到管理用户账户。shell 脚本工具可以让系统管理员的生活变得简单得多！本章演示了在 `bash` shell 中编写脚本工具的一些能力。
 
-## 监控磁盘空间
+### 监控磁盘空间
 
 多用户 Linux 系统最大的问题之一是可用磁盘空间量。在某些情况下（例如文件共享服务器），仅仅因为一个粗心的用户，磁盘空间就可能立即填满。
 
-
-
-
-
 此 shell 脚本工具可以帮助你确定指定目录中占用磁盘空间排名前十的项目。它会生成带有日期戳的报告，允许你监控磁盘空间消耗趋势。
 
-## 所需的函数
+#### 所需的函数
 
 你需要使用的第一个工具是 `du` 命令（参见第 4 章）。该命令显示单个文件和目录的磁盘使用情况。`-s` 选项允许你在目录层级汇总总量。这在计算单个用户使用的总磁盘空间时非常有用。以下是使用 `du` 命令对 `/home` 目录下每个用户的 `$HOME` 目录进行汇总示例：
 
@@ -19411,7 +20512,7 @@ awk '{printf $1 ":\t" $2 "\t" $3 "\n"}'
 
 在行号之后添加了一个冒号（`:`），并在每行输出的各个字段之间放置了制表符（`\t`）。这产生了一个格式整齐的前十名磁盘空间占用者列表。
 
-```bash
+```
 $ du -S /var/log | sort -rn | sed '{1,$D}' | sed 'N; /' | awk '{printf $1 ":\t" $2 "\t" $3 "\n"}'
 1:   6148    /var/log/dist-upgrade
 2:   4864    /var/log
@@ -19428,7 +20529,7 @@ $
 
 现在你已经入门了！下一步是使用这些信息创建脚本。
 
-## 创建脚本
+#### 创建脚本
 
 为了节省时间和精力，脚本为多个指定目录创建报告。使用一个名为 `CHECK_DIRECTORIES` 的变量来实现这一点。对于我们的目的，该变量被设置为仅两个目录：
 
@@ -19491,7 +20592,7 @@ done                                #循环结束
 
 就这样。这是一个为你选择的目录创建日期戳报告的简单 shell 脚本。
 
-## 运行脚本
+#### 运行脚本
 
 在让 `Big_Users` 脚本自动运行之前，你想手动测试几次，以确保它的运行符合预期：
 
@@ -19512,21 +20613,12 @@ The /var/log:
 7:   64      /var/log/cups
 8:   52      /var/log/exim4
 9:   16      /var/log/samba
-```
-
-
-
-
-
-```
-7:           64 /var/log/cups
-8:           52 /var/log/exim4
-9:           16 /var/log/samba
-10:          12 /var/log/fsck
+10:  12      /var/log/fsck
 ```
 
 `/home` 目录：
 
+```
 1:        92365332 /home/user/.VirtualBox/HardDisks
 2:        18659720 /home/user/Downloads
 3:        17626092 /home/user/archive
@@ -19538,12 +20630,15 @@ The /var/log:
 9:        3212464 /home/user/vmware/Fedora
 10:         104632 /home/user/vmplayer
 ```
+
+```
 $
+```
 
 成功了！现在你可以设置 shell 脚本根据需要自动执行。你可以使用 `cron` 表来实现此功能（参见第 15 章）。
 
 > 注意
-> > 当运行包含需要 root 权限的 bash shell 命令的脚本时，你需要使用 `su` 或 `sudo` 命令。否则，脚本将产生意想不到的结果。
+> 当运行包含需要 root 权限的 bash shell 命令的脚本时，你需要使用 `su` 或 `sudo` 命令。否则，脚本将产生意想不到的结果。
 
 运行此脚本的频率取决于你的文件服务器的活跃程度。要每周运行一次脚本，请向你的 `cron` 表添加以下条目：
 
@@ -19553,21 +20648,21 @@ $
 
 该条目会在每周一早上 7:15 运行 shell 脚本。现在，你可以在周一早上第一时间喝着咖啡，查看你的每周磁盘占用报告了。
 
-# 执行备份
+### 执行备份
 
 无论你是在商业环境中负责 Linux 系统，还是仅仅在家里使用，数据丢失都可能是灾难性的。为了防止糟糕情况的发生，定期备份是一个好主意。
 
-然而，良好的主意和实际可行性往往是两回事。尝试安排备份计划来存储重要文件可能是一项挑战。这也是 shell 脚本经常大显身手的地方。
+然而，良好的主意和实际可行性往往是两回事。尝试安排备份计划来存储重要文件可能是一项挑战。这也是 shell 脚本经常大显身手的领域。
 
 本节演示了使用 shell 脚本备份 Linux 系统数据的两种不同方法。
 
-# 归档数据文件
+#### 归档数据文件
 
 如果你正在使用 Linux 系统处理重要项目，可以创建一个 shell 脚本来自动对特定目录创建快照。在配置文件中指定这些目录允许你在特定项目发生变化时更改它们。这将有助于避免从主存档文件中进行耗时的恢复过程。
 
 本节将向你展示如何创建一个自动化 shell 脚本，对指定的目录创建快照，并保留数据过去版本的存档。
 
-## 所需函数
+##### 所需函数
 
 Linux 世界中归档数据的核心工具是 `tar` 命令（参见第 4 章）。`tar` 命令用于将整个目录归档为单个文件。这是一个使用 `tar` 命令创建工作目录归档文件的示例：
 
@@ -19577,6 +20672,8 @@ tar: Removing leading ‘/’ from member names
 $
 ```
 
+
+
 `tar` 命令会返回一条警告信息，说明它正在从路径中删除起始的正斜杠，将其从绝对路径转换为相对路径（参见第 3 章）。这允许你在文件系统的任何位置提取这些 `tar` 归档文件。你可能想在脚本中消除这条信息。可以通过将 `STDERR` 重定向到 `/dev/null` 文件来实现（参见第 14 章）：
 
 ```
@@ -19584,7 +20681,7 @@ $ tar -cf archive.tar /home/user/backup_test 2>/dev/null
 $
 ```
 
-由于 `tar` 归档文件可能会占用大量磁盘空间，因此压缩文件是一个好主意。你可以通过简单添加 `-z` 选项来实现。这将 tar 归档文件压缩为 gzipped `tar` 文件，称为 tarball。请确保使用正确的文件扩展名表示该文件是 tarball。使用 `.tar.gz` 或 `.tgz` 都可以。这是一个创建工作目录 tarball 的示例：
+由于 `tar` 归档文件可能会占用大量磁盘空间，因此压缩文件是一个好主意。你可以通过简单添加 `-z` 选项来实现。这将 `tar` 归档文件压缩为 gzipped `tar` 文件，称为 tarball。请确保使用正确的文件扩展名表示该文件是 tarball。使用 `.tar.gz` 或 `.tgz` 都可以。这是一个创建工作目录 tarball 的示例：
 
 ```
 $ tar -zcf archive.tar.gz /home/user/backup_test 2>/dev/null
@@ -19606,17 +20703,18 @@ $ cat Files_To_Backup
 $
 ```
 
-> 注意
-> 如果你使用的是包含图形桌面的 Linux 发行版，请小心归档整个 `$HOME` 目录。虽然这看起来很好，但 `$HOME` 目录包含许多与图形桌面相关的配置和临时文件。这将创建一个比你预期的大得多的存档文件。选择一个存储工作文件的子目录，并在归档配置文件中使用该子目录。
+> **注意**
+>
+> 如果你使用的是包含图形桌面的 Linux 发行版，请小心归档整个`$HOME`目录。虽然这看起来很好，但`$HOME`目录包含许多与图形桌面相关的配置和临时文件。这将创建一个比你预期的大得多的存档文件。选择一个存储工作文件的子目录，并在归档配置文件中使用该子目录。
 
-你可以让脚本读取配置文件并将每个目录或文件的名称添加到存档列表中。要做到这一点，请使用简单的 `read` 命令（参见第 13 章）从文件中读取每条记录。但与我们在第 13 章中那样将 `cat` 命令通过到 `while` 循环不同，此脚本将使用 `exec` 命令重定向 `STDINPUT`（参见第 14 章）。它看起来如下：
+你可以让脚本读取配置文件并将每个目录或文件的名称添加到存档列表中。要做到这一点，请使用简单的`read`命令（参见第 13 章）从文件中读取每条记录。但与我们在第 13 章中那样将`cat`命令通过到`while`循环不同，此脚本将使用`exec`命令重定向`STDINPUT`（参见第 14 章）。它看起来如下：
 
 ```
 exec < $CONFIG_FILE
 read FILE_NAME
 ```
 
-注意，归档配置文件以及从文件中读取的每条记录都使用了变量。只要 `read` 命令在配置文件中找到新记录进行读取，它就会在 `?` 变量中返回退出 0 表示成功（参见第 10 章）。你可以将其用作 `while` 循环中的测试，以读取配置文件中的所有记录：
+注意，归档配置文件以及从文件中读取的每条记录都使用了变量。只要`read`命令在配置文件中找到新记录进行读取，它就会在`?`变量中返回退出 0 表示成功（参见第 10 章）。你可以将其用作`while`循环中的测试，以读取配置文件中的所有记录：
 
 ```
 while [ $? -eq 0 ]
@@ -19624,9 +20722,6 @@ do
   ...
 read FILE_NAME
 ```
-
-
-
 
 `Daily_Archive` 脚本会自动在指定位置创建一个归档，并使用当前日期来唯一标识文件。以下是脚本该部分的代码：
 
@@ -19676,8 +20771,8 @@ then                # 如果存在，则什么都不做继续执行。
       echo
 else                # 如果不存在，发出错误并退出脚本。
       echo
-      echo “CONFIG_FILE 不存在。”
-      echo “由于缺少文件，备份完成” 
+      echo "CONFIG_FILE 不存在。"
+      echo "由于缺少文件，备份完成" 
       echo
       exit
 fi
@@ -19695,14 +20790,14 @@ do
     if [ -f $FILE_NAME -o $FILE_NAME ]
     then
         # 如果文件存在，将其名称添加到列表。
-        FILE_LIST=”FILE_LIST $FILE_NAME”
+        FILE_LIST="FILE_LIST $FILE_NAME"
     else
         # 如果文件不存在，发出警告
         echo
-        echo “FILE_NAME 不存在。”
-        echo “显然，我不会将其包含在此归档中。”
-        echo “它列在配置文件的 $FILE_NO 行。”
-        echo “正在继续构建归档列表...” 
+        echo "FILE_NAME 不存在。"
+        echo "显然，我不会将其包含在此归档中。"
+        echo "它列在配置文件的 $FILE_NO 行。"
+        echo "正在继续构建归档列表..." 
         echo
     fi
 #
@@ -19729,13 +20824,13 @@ $ ./Daily_Archive
 正在继续构建归档列表... 
 ```
 
-你可以看到脚本捕获了一个不存在的目录 `/home/Does_not_exist`。它让你知道该错误目录位于配置文件的第几行，然后继续创建列表并归档数据。数据现在已安全地归档在 tarball 文件中。
+你可以看到脚本捕获了一个不存在的目录`/home/Does_not_exist`。它让你知道该错误目录位于配置文件的第几行，然后继续创建列表并归档数据。数据现在已安全地归档在 tarball 文件中。
 
 ### 创建每小时归档脚本
 
 如果你处于文件变化快速的高并发生产环境中，每日归档可能并不理想。如果你想将归档频率增加到每小时一次，你需要考虑另一个因素。
 
-当每小时备份文件并尝试使用 `date` 命令为每个文件名添加时间戳时，情况会很快变得糟糕。在筛选具有此类文件名的文件目录是非常枯燥的：
+当每小时备份文件并尝试使用`date`命令为每个文件名添加时间戳时，情况会很快变得糟糕。在筛选具有此类文件名的文件目录是非常枯燥的：
 
 `archive0102110233.tar.gz`
 
@@ -19743,7 +20838,7 @@ $ ./Daily_Archive
 
 现在有一个新挑战要解决。脚本必须自动创建各个月份和日期目录，并且知道如果它们已经存在，则不需要创建。
 
-如果你查阅 `mkdir` 的命令行（参见第 3 章），你会发现 `-p` 命令行选项。此选项允许你在单个命令中创建目录和子目录；此外，额外的好处是如果目录已存在，它不会产生错误信息。完美！
+如果你查阅`mkdir`的命令行（参见第 3 章），你会发现`-p`命令行选项。此选项允许你在单个命令中创建目录和子目录；此外，额外的好处是如果目录已存在，它不会产生错误信息。完美！
 
 我们现在准备好创建 `Hourly_Archive` 脚本了。这是脚本的上部分：
 
@@ -19779,11 +20874,11 @@ DESTINATION=$BASEDEST/$MONTH/$DAY/archive$TIME.tar.gz
 ...
 ```
 
-一旦脚本到达 `Hourly_Archive` 的“主脚本”部分，该脚本与 `Daily_Archive` 脚本完全相同。大部分工作已经完成了！`Hourly_Archive` 从 `date` 命令中获取日期和月份值，以及用于唯一标识归档文件的时间戳。然后它使用这些信息创建当天的归档目录（如果已存在则静默退出）。最后，脚本使用 `tar` 命令创建归档并将其压缩为 tarball。
+一旦脚本到达 `Hourly_Archive` 的“主脚本”部分，该脚本与 `Daily_Archive` 脚本完全相同。大部分工作已经完成了！`Hourly_Archive` 从`date`命令中获取日期和月份值，以及用于唯一标识归档文件的时间戳。然后它使用这些信息创建当天的归档目录（如果已存在则静默退出）。最后，脚本使用`tar`命令创建归档并将其压缩为 tarball。
 
 ### 运行每小时归档脚本
 
-与 `Daily_Archive` 脚本一样，在将其放入 `cron` 表之前测试 `Hourly_Archive` 脚本是一个好主意：
+与 `Daily_Archive` 脚本一样，在将其放入`cron`表之前测试 `Hourly_Archive` 脚本是一个好主意：
 
 ```bash
 $ cat /home/user/archive/hourly/Files_To_Backup
@@ -19801,7 +20896,7 @@ archive1601.tar.gz archive1602.tar.gz
 $
 ```
 
-脚本第一次运行正常，创建了相应的月份和日期目录，然后创建了归档文件。为了测试，再次运行它以查看是否会对现有目录产生问题。脚本再次运行正常并创建了第二个归档文件。它现在可以用于 `cron` 表了。
+脚本第一次运行正常，创建了相应的月份和日期目录，然后创建了归档文件。为了测试，再次运行它以查看是否会对现有目录产生问题。脚本再次运行正常并创建了第二个归档文件。它现在可以用于`cron`表了。
 
 ### 管理用户账户
 
@@ -19812,56 +20907,52 @@ $
 删除账户是账户管理中更复杂的任务。在删除账户时，至少需要四个独立操作：
 
 1. 获取要删除的正确账户名称。
-
-
-
-
-> 2. 杀死系统中当前运行的属于该账户的所有进程。
-> 3. 确定系统中所有属于该账户的文件。
-> 4. 删除该用户账户。
+2. 杀死系统中当前运行的属于该账户的所有进程。
+3. 确定系统中所有属于该账户的文件。
+4. 删除该用户账户。
 
 很容易漏掉某一个步骤。本节中的 Shell 脚本工具将帮助你避免犯此类错误。
 
 ## 获取正确的账户名
 
-删除账户过程的第一步是最重要的，即获取要删除的正确账户名。由于这是一个交互式脚本，你可以使用 `read` 命令（参见第 13 章）来获取账户名。如果脚本用户离开了并让问题悬挂在那里，你可以使用 `read` 命令的 `-t` 选项，在给脚本用户 60 秒时间回答问题后超时：
+删除账户过程的第一步是最重要的，即获取要删除的正确账户名。由于这是一个交互式脚本，你可以使用`read`命令（参见第 13 章）来获取账户名。如果脚本用户离开了并让问题悬挂在那里，你可以使用`read`命令的`-t`选项，在给脚本用户 60 秒时间回答问题后超时：
 
 ```bash
-echo “Please enter the username of the user ”
-echo -e “account you wish to delete from system: \c”
+echo "Please enter the username of the user "
+echo -e "account you wish to delete from system: \c"
 read -t 60 ANSWER
 ```
 
-由于中断是生活的一部分，最好给用户三次回答问题的机会。为了实现这一点，请使用 `while` 循环（参见第 12 章）并配合 `-z` 选项来测试 `ANSWER` 变量是否为空。当脚本第一次进入 `while` 循环时，`ANSWER` 变量长度为零，因为问题会被放在循环的末端：
+由于中断是生活的一部分，最好给用户三次回答问题的机会。为了实现这一点，请使用`while`循环（参见第 12 章）并配合`-z`选项来测试`ANSWER`变量是否为空。当脚本第一次进入`while`循环时，`ANSWER`变量长度为零，因为问题会被放在循环的末端：
 
 ```bash
-while [ -z “$ANSWER” ]
+while [ -z "$ANSWER" ]
 do
   ...
-echo “Please enter the username of the user ”
-echo -e “account you wish to delete from system: \c”
+echo "Please enter the username of the user "
+echo -e "account you wish to delete from system: \c"
 read -t 60 ANSWER
 done
 ```
 
-现在你需要一种方法与脚本用户通信，告知第一次问题超时的情况、还有一次回答问题的机会等等。`case` 语句（参见第 11 章）是可以在此处完美工作的结构化命令。通过使用递增的 `ASK_COUNT` 变量，你可以设置不同的消息与脚本用户通信。该部分的代码如下：
+现在你需要一种方法与脚本用户通信，告知第一次问题超时的情况、还有一次回答问题的机会等等。`case`语句（参见第 11 章）是可以在此处完美工作的结构化命令。通过使用递增的 `ASK_COUNT` 变量，你可以设置不同的消息与脚本用户通信。该部分的代码如下：
 
 ```bash
 case $ASK_COUNT in
 2)
       echo
-      echo “Please answer the question.”
+      echo "Please answer the question."
       echo
 ;;
 3)
       echo
-      echo “One last try...please answer the question.”
+      echo "One last try...please answer the question."
       echo
 ;;
 4)
       echo
-      echo “Since you refuse to answer the question...”
-      echo “exiting.”
+      echo "Since you refuse to answer the question..."
+      echo "exiting."
       echo
       exit
 ;;
@@ -19870,7 +20961,7 @@ esac
 
 现在脚本已经拥有了请求用户删除账户所需的所有结构。此脚本中有几个问题你需要提问，仅仅问一个问题就已经写了大量代码！因此，让我们这段代码转换为一个函数（参见第 16 章），以便在你的 `Delete_User` 脚本的多个位置使用它。
 
-你首先做的第一件事是声明函数名 `get_answer`。接下来，使用 `unset` 命令（参见第 5 章）清除脚本用户之前提供的任何回答。执行这些操作的代码如下：
+你首先做的第一件事是声明函数名 `get_answer`。接下来，使用`unset`命令（参见第 5 章）清除脚本用户之前提供的任何回答。执行这些操作的代码如下：
 
 ```bash
 function get_answer{
@@ -19884,10 +20975,10 @@ echo $LINE1
 echo -e $LINE2 \c
 ```
 
-然而，并不是每个问题都有两行。有些只有一行。使用 `if` 结构（参见第 1 章）来协助解决这个问题。该函数将测试 `LINE2` 是否为空，如果为空，则仅使用 `LINE1`：
+然而，并不是每个问题都有两行。有些只有一行。使用`if`结构（参见第 1 章）来协助解决这个问题。该函数将测试 `LINE2` 是否为空，如果为空，则仅使用 `LINE1`：
 
 ```bash
-if [ -n “$LINE2” ]
+if [ -n "$LINE2" ]
 then
   echo $LINE1
   echo -e $LINE2 \c
@@ -19902,7 +20993,7 @@ fi
 function get_answer{
 unset ANSWER
 ASK_COUNT=0
-while [ -z “$ANSWER” ]
+while [ -z "$ANSWER" ]
 do
   ASK_COUNT=$[ ASK_COUNT + 1 ]
   case $ASK_COUNT in
@@ -19910,7 +21001,7 @@ do
       echo ...
   esac
   echo
-  if [ -n “$LINE2” ]
+  if [ -n "$LINE2" ]
   then      #打印 2 行
     echo $LINE1
     echo -e $LINE2 \c
@@ -19927,8 +21018,8 @@ unset LINE2
 要询问脚本用户要删除哪个账户，你需要设置几个变量然后调用 `get_answer` 函数。使用新函数使脚本代码变得简单得多：
 
 ```bash
-LINE1=“Please enter the username of the user ”
-LINE2=“account you wish to delete from system:”
+LINE1="Please enter the username of the user "
+LINE2="account you wish to delete from system:"
 get_answer
 USER_ACCOUNT=$ANSWER
 ```
@@ -19936,20 +21027,20 @@ USER_ACCOUNT=$ANSWER
 由于可能存在拼写错误，你希望验证输入的账户名。因为我们已经有了代码来处理提问：
 
 ```bash
-LINE1=“Is $USER_ACCOUNT the user ”
-LINE2=“you wish to delete from system? y/n”
+LINE1="Is $USER_ACCOUNT the user "
+LINE2="you wish to delete from system? y/n"
 get_answer
 ```
 
-一旦提问，脚本需要处理回答。变量 `ANSWER` 携带用户对问题的回答。如果用户回答“是”，你就获得了要删除账户。可以使用 `case` 语句（参见第 1 章）来处理回答。确保代码处理输入“是”的情况：
+一旦提问，脚本需要处理回答。变量 `ANSWER` 携带用户对问题的回答。如果用户回答“是”，你就获得了要删除账户。可以使用`case`语句（参见第 1 章）来处理回答。确保代码处理输入“是”的情况：
 
 ```bash
 case $ANSWER in
 y|yes|yEs|yS|yES ) 
 ;;
 *)
-  echo “the account, $USER_ACCOUNT, is not ”
-  echo “the one you wish to delete, we are leaving the script...”
+  echo "the account, $USER_ACCOUNT, is not "
+  echo "the one you wish to delete, we are leaving the script..."
   exit
 ;;
 esac
@@ -19975,19 +21066,21 @@ unset EXIT_LINE2
 
 简单的函数调用现在将处理回答：
 
+
+
 ```bash
 EXIT_LINE1=“Because the account, $USER_ACCOUNT, is not ”
 EXIT_LINE2=“the one you wish to delete, we are leaving the script...”
 process_answer
 ```
 
-用户给了我们要删除的账户并进行了验证。现在是双检查该账户是否存在于系统的良好时间。此外，向脚本用户显示完整的账户记录以检查这真的是要删除的账户。为了完成这些操作，使用变量 `USER_ACCOUNT_RECORD`，并设置为对 `/etc/passwd` 文件的 `grep`（参见第 4 章）搜索结果。`-w` 选项允许在该特定用户账户的账户记录中进行精确词匹配：
+用户给了我们要删除的账户并进行了验证。现在是双检查该账户是否存在于系统的良好时间。此外，向脚本用户显示完整的账户记录以检查这真的是要删除的账户。为了完成这些操作，使用变量`USER_ACCOUNT_RECORD`，并设置为对`/etc/passwd`文件的`grep`（参见第 4 章）搜索结果。`-w`选项允许在该特定用户账户的账户记录中进行精确词匹配：
 
 ```bash
 USER_ACCOUNT_RECORD=$(cat /etc/passwd | grep -w $USER_ACCOUNT)
 ```
 
-如果在 `/etc/passwd` 中没有找到任何用户账户记录，这意味着该账户已经被删除或从未存在过。在任何情况下，你都需要让脚本用户知道并退出脚本。`grep` 命令的退出状态将在此帮助我们。如果没有找到账户记录，`?` 变量将被设置为 1：
+如果在`/etc/passwd`中没有找到任何用户账户记录，这意味着该账户已经被删除或从未存在过。在任何情况下，你都需要让脚本用户知道并退出脚本。`grep`命令的退出状态将在此帮助我们。如果没有找到账户记录，`?`变量将被设置为 1：
 
 ```bash
 if [ $? -eq 1 ]
@@ -19997,9 +21090,6 @@ then
   exit
 fi
 ```
-
-
-
 
 ```bash
 echo "I found this record:"
@@ -20018,13 +21108,13 @@ process_answer
 
 到目前为止，你已经获取并验证了要删除的用户账户正确名称。为了从系统中移除该用户账户，该账户不能拥有任何当前运行的进程。因此，你的下一步是找到并杀掉这些进程。这将变得有点复杂！
 
-查找用户进程将是简单的一部分。在这里，脚本可以使用 `ps` 命令（参见第 4 章）和 `-u` 选项来定位任何由该账户拥有的进程。如果确实存在任何进程，它们将显示给脚本用户。
+查找用户进程将是简单的一部分。在这里，脚本可以使用`ps`命令（参见第 4 章）和`-u`选项来定位任何由该账户拥有的进程。如果确实存在任何进程，它们将显示给脚本用户。
 
 ```bash
 ps -u $USER_ACCOUNT
 ```
 
-你可以使用 `ps` 命令的退出状态和 `case` 结构来确定下一步采取的措施：
+你可以使用`ps`命令的退出状态和`case`结构来确定下一步采取的措施：
 
 ```bash
 case $? in
@@ -20040,9 +21130,9 @@ case $? in
 esac
 ```
 
-如果退出状态返回 1，则系统中没有属于该用户账户的运行进程。然而，如果退出状态返回 0，则系统上运行着该该账户的进程。在这种情况下，脚本需要询问脚本用户他们是否想要杀掉这些进程。你可以通过使用 `get_answer` 函数完成此任务。
+如果退出状态返回 1，则系统中没有属于该用户账户的运行进程。然而，如果退出状态返回 0，则系统上运行着该该账户的进程。在这种情况下，脚本需要询问脚本用户他们是否想要杀掉这些进程。你可以通过使用`get_answer`函数完成此任务。
 
-你可能认为脚本的下一步操作是调用 `process_answer` 函数。遗憾的是，下一个项目对于 `process_answer` 来说太复杂了。你需要嵌入另一个 `case` 语句来处理脚本用户的回答。`case` 语句的第一部分看起来与我们的 `process_answer` 函数非常相似：
+你可能认为脚本的下一步操作是调用`process_answer`函数。遗憾的是，下一个项目对于`process_answer`来说太复杂了。你需要嵌入另一个`case`语句来处理脚本用户的回答。`case`语句的第一部分看起来与我们的`process_answer`函数非常相似：
 
 ```bash
 case $ANSWER in
@@ -20058,13 +21148,13 @@ case $ANSWER in
 esac
 ```
 
-如你所见，`case` 语句本身并没有特别有趣的地方。有趣的地方在于 `case` 语句中的 "yes" 部分。在这里，需要杀掉用户账户进程。要这样做，重新执行 `ps` 命令，这次将输出发送到临时报告文件而不是屏幕。
+如你所见，`case`语句本身并没有特别有趣的地方。有趣的地方在于`case`语句中的 "yes" 部分。在这里，需要杀掉用户账户进程。要这样做，重新执行`ps`命令，这次将输出发送到临时报告文件而不是屏幕。
 
 ```bash
 ps -u $USER_ACCOUNT > $USER_ACCOUNT_Running_Process.rpt
 ```
 
-你可以使用 `exec` 命令和 `while` 循环来读取报告文件，类似于我们在 `Daily_Archive` 脚本中读取备份配置文件的方法。
+你可以使用`exec`命令和`while`循环来读取报告文件，类似于我们在`Daily_Archive`脚本中读取备份配置文件的方法。
 
 ```bash
 exec < $USER_ACCOUNT_Running_Process.rpt
@@ -20076,7 +21166,7 @@ do
 done
 ```
 
-在 `while` 循环内部，使用 `cut` 命令从每个运行进程的状态记录中提取进程 ID (PID)。一旦获得 PID，就使用 `kill` 命令（参见第 4 章）配合 `-9` 选项无条件地终止进程。
+在`while`循环内部，使用`cut`命令从每个运行进程的状态记录中提取进程 ID (PID)。一旦获得 PID，就使用`kill`命令（参见第 4 章）配合`-9`选项无条件地终止进程。
 
 ```bash
 USER_PID=$(echo $USER_PROCESS_REC | cut -d " " -f1)
@@ -20090,15 +21180,15 @@ echo "Killed process $USER_PID"
 
 当用户账户从系统中删除时，归档属于该账户的所有文件是一个良好的习惯。除了这种做法之外，移除文件或将它们的所有权分配给另一个账户也很重要。如果你删除的账户用户 ID 为 1003，而你没有移除或重新分配这些文件，那么下一个创建的用户 ID 为 1003 的账户将拥有这些文件！你可以看到在这种情况下可能发生的安全灾难。
 
-`Delete_User` 脚本不会为你完成所有这些，但它会创建一个报告，该报告可以在 `Daily_Archive` 脚本中作为备份配置文件使用。你可以利用报告来帮助移除或重新分配文件。
+`Delete_User`脚本不会为你完成所有这些，但它会创建一个报告，该报告可以在`Daily_Archive`脚本中作为备份配置文件使用。你可以利用报告来帮助移除或重新分配文件。
 
-要查找用户文件，你可以使用 `find` 命令。`find` 命令使用 `-u` 选项搜索整个文件系统，这将精确找到任何用户账户拥有的文件。命令如下：
+要查找用户文件，你可以使用`find`命令。`find`命令使用`-u`选项搜索整个文件系统，这将精确找到任何用户账户拥有的文件。命令如下：
 
 ```bash
 find / -user $USER_ACCOUNT > $REPORT_FILE
 ```
 
-与处理用户账户进程相比，这非常简单！在 `Delete_User` 脚本的下一步，实际上移除用户账户，操作变得更简单。
+与处理用户账户进程相比，这非常简单！在`Delete_User`脚本的下一步，实际上移除用户账户，操作变得更简单。
 
 # 移除账户
 
@@ -20113,7 +21203,7 @@ EXIT_LINE2="$USER_ACCOUNT at this time, exiting the script..."
 process_answer
 ```
 
-最后，我们达到了脚本的主要目的，实际上从系统中删除该用户。在这里你可以使用 `userdel` 命令（参见第 6 章）：
+最后，我们达到了脚本的主要目的，实际上从系统中删除该用户。在这里你可以使用`userdel`命令（参见第 6 章）：
 
 ```bash
 userdel $USER_ACCOUNT
@@ -20121,9 +21211,9 @@ userdel $USER_ACCOUNT
 
 现在我们已经收集了所有的部分，准备好它们组合成一个完整的、实用的工具了。
 
-创建脚本
+# 创建脚本
 
-记住 `Delete_User` 脚本与脚本用户具有高度交互性。因此，包含大量的文字以让用户了解脚本执行过程中的发生情况非常重要。在脚本顶部，声明了两个函数 `get_answer` 和 `process_answer`。然后脚本进入了移除用户的四个步骤：获取用户名；查找并杀掉用户进程；创建用户所有文件的报告；以及实际移除用户。这里是完整的 `Delete_User` 脚本：
+记住`Delete_User`脚本与脚本用户具有高度交互性。因此，包含大量的文字以让用户了解脚本执行过程中的发生情况非常重要。在脚本顶部，声明了两个函数`get_answer`和`process_answer`。然后脚本进入了移除用户的四个步骤：获取用户名；查找并杀掉用户进程；创建用户所有文件的报告；以及实际移除用户。这里是完整的`Delete_User`脚本：
 
 ```bash
 #!/bin/bash
@@ -20183,15 +21273,12 @@ function process_answer {
 }
 ```
 
-
-
-
-
 `} #End of process_answer function`
 
 #
 
 ##############################################
+
 # 函数定义结束
 
 ############## 主脚本 #####################
@@ -20199,484 +21286,253 @@ function process_answer {
 # 获取要检查的用户账户名称
 
 echo "步骤 #1 - 确定要删除的用户账户名称 "
+
 echo
+
 LINE1="请输入您想要从系统中删除的用户 "
+
 LINE2="账户名："
+
 `get_answer`
+
 `USER_ACCOUNT=$ANSWER`
 
 # 向脚本执行者再次确认是否为正确的的用户账户
 
 LINE1="账户 $USER_ACCOUNT 是您想要 "
+
 LINE2="从系统中删除的账户吗？ [y/n]"
+
 `get_answer`
 
 # 调用 process_answer 函数：
+
 #     如果用户回答的不是“yes（是）”，则退出脚本
 
 EXIT_LINE1="因为账户 $USER_ACCOUNT 不是 "
+
 EXIT_LINE2="您想要删除的那个，我们正在退出脚本..."
+
 `process_answer`
 
 ################################################################
+
 # 检查 USER_ACCOUNT 是否确实是系统上的一个账户
 
 `USER_ACCOUNT_RECORD=$(cat /etc/passwd | grep -w $USER_ACCOUNT)`
 
 if [ $? -eq 1 ]; # 如果未找到该账户，则退出脚本
+
 then
+
     echo
+
     echo "未找到账户，$USER_ACCOUNT。"
+
     echo "正在退出脚本..."
+
     echo
+
     exit
+
 fi
 
 echo
+
 echo "我找到了这条记录："
+
 echo $USER_ACCOUNT_RECORD
+
 echo
 
 #
+
 LINE1="这是正确的的用户账户吗？ [y/n]"
+
 `get_answer`
 
 # # 调用 process_answer 函数：
+
 #       如果用户回答的不是“yes（是）”，则退出脚本
 
 EXIT_LINE1="因为账户 $USER_ACCOUNT 不是 "
+
 EXIT_LINE2="您想要删除的那个，我们正在退出脚本..."
+
 `process_answer`
 
 ##################################################################
+
 # 查找任何属于该用户账户的运行进程
 
 echo
+
 echo "步骤 #2 - 查找系统中属于该用户账户的进程"
+
 echo "$USER_ACCOUNT 正在运行以下进程： "
+
 echo
 
 # ps -u $USER_ACCOUNT #列出运行的用户进程。
+
 case $? in
+
 1) # 该账户没有正在运行的进程
+
     #
+
     echo "该账户当前没有运行的进程。"
+
     echo
+
 ;;
+
 0) # 该账户有正在运行的进程。
+
     # 询问脚本执行者是否希望我们杀死这些进程。
+
     #
+
     unset ANSWER
+
     LINE1="您想让我杀掉这些进程（们）吗？ [y/n]"
+
     `get_answer`
+
     #
+
     case $ANSWER in
+
         y|YES|Yes|yEs|Y|ES) # 如果用户回答“yes”，
+
             # 杀死账户进程。
+
             #
+
             echo
+
             # 信号时清理文件
+
             trap "rm $USER_ACCOUNT_Process.rpt" TERM SIG QUIT
+
             # 列出运行的进程
+
             ps -u $USER_ACCOUNT > $USER_ACCOUNT_Process.rpt
+
             # 生成报告输入
+
             exec < $USER_ACCOUNT_Process.rpt
+
             # 第一条记录将为空
+
             read USER_PROCESS_REC
+
             while [ $? -eq 0 ]
+
             do
+
                 # 获取 PID
+
                 USER_PID=$(echo $USER_PROCESS_REC | cut -d " " -f1)
+
                 kill -9 $USER_PID
+
                 echo "已杀死进程 $USER_PID"
+
                 read USER_PROCESS_REC
+
             done
+
             #
+
             echo
+
             rm $USER_ACCOUNT_Process.rpt # 临时报告。
+
             ;;
+
         *) # 如果用户回答的不是“yes”，则不杀死。
+
             echo
+
             echo "不会杀死这些进程（们）"
+
             echo
+
             ;;
+
     esac
+
 ;;
+
 esac
 
 #################################################
+
 # 创建所有属于该用户账户的文件报告
 
 echo
+
 echo "步骤 #3 - 查找系统中属于该用户账户的文件"
+
 echo
+
 echo "正在创建 $USER_ACCOUNT 拥的所有文件报告。"
+
 echo
+
 echo "建议您备份/存档这些文件，"
+
 echo "然后执行以下两个操作之一："
+
 echo "  1) 删除文件"
+
 echo "  2) 将文件的所有权更改为当前用户账户。"
+
 echo
+
 echo "请等待。这可能需要一些时间..."
+
 #
+
 `REPORT_DATE=$(date +%y%m%d')`
+
 `REPORT_FILE=$USER_ACCOUNT"_Files"$REPORT_DATE".rpt`
 
 #
+
 `find / -user $USER_ACCOUNT > $REPORT_FILE 2>/dev/null`
 
 #
+
 echo
+
 echo "报告已完成。"
+
 echo "报告名称：   $REPORT_FILE"
+
 echo "报告位置：   'pwd'"
+
 echo
 
 ####################################
+
 # 用户账户
 
 echo
-echo "步骤 #4 - 移除用户账户"
-echo
-
-#
-LINE1="您确定要从系统中移除 $User_Account 的账户吗？ [y/n]"
-`get_answer`
-
-# # 调用 process_answer 函数：
-#       如果用户回答的不是“yes（是）”，则退出脚本
-
-#
-EXIT_LINE1="由于您不想移除 "
-EXIT_LINE2="该账户，..."
-`process_answer`
-
-#
-`USER_ACCOUNT=$ANSWER`
-`echo`
-echo "用户账户 $USER_ACCOUNT 已移除"
-echo
-
-$
-这运行得非常棒！现在你拥有了一个可以提供帮助的脚本工具。
-
-`} #End of process_answer function`
 
 
 
+进入`/path/to/xxx`目录，找到`xxx.json`。
 
-上一节向你介绍了如何使用 shell 脚本对 Linux 系统上的数据文件进行归档和备份。`tar` 命令是一个用于数据归档的常用命令。本章节展示了如何在 shell 脚本中使用它创建归档文件，以及如何在归档目录中管理这些文件。
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
 
-我们在章节末尾介绍了如何使用 shell 脚本来完成删除用户账户所需的四个步骤。为脚本中重复的 shell 代码创建函数可以使代码更易读和修改。该脚本结合了许多不同的结构化命令，例如 `case` 和 `while` 命令。本章演示了用于 `cron` 任务表的脚本与交互式脚本在结构上的差异。
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
 
-现在，我们将转向更高级的 shell 脚本，这些脚本将帮助解决更复杂的 Linux 系统问题。
-
-# 第 27 章：高级 shell 脚本
-
-## 本章内容
-* 监控系统统计信息
-* 问题跟踪数据库
-
-在本章中，我们将学习在 shell 脚本中使用更高级的方法。这些技术允许你以多种不同的方式对系统脚本进行操作。
-
-## 监控系统统计信息
-
-`bash` shell 中有很多工具可以帮助你监控 Linux 系统的性能和资源使用。遗憾的是，很难找到时间来使用它们，特别是当你有多个系统需要管理时。创建几个 shell 脚本利用这些工具的输出生成报告，是利用时间的极方法。
-
-本节将引导你创建一些高级 shell 脚本，协助你监控各种系统性能统计信息。
-
-### 系统快照报告
-
-通过快照报告来了解系统性能和资源使用情况是一个很好的方法。快照报告是系统在特定时间点的统计数据快照。这类报告是系统健康的“执行摘要”。
-
-创建此快照报告的脚本可以根据需要每天运行多次以获取数据。更棒，脚本还会通过电子邮件将报告发送给你。
-
-### 所需的函数
-
-你需要使用四个 bash shell 命令来创建快照报告：`uptime`、`df`、`free` 和 `ps`。这些不同的命令将为你提供所需的统计数据。
-
-#### 运行时 (Up Time)
-
-第一个命令 `uptime` 是最基础的系统统计命令：
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
 
 ```
-$ uptime
-14:15:23 up 1 day, 5:10, 3 users, load average: 0.66, 0.54, 0.33
-```
-
-`uptime` 命令提供了我们可以利用的几条不同的基础信息：
-* 当前时间
-* 系统运行的天数、小时和分钟
-* 当前登录系统的用户数
-* 一分钟、五分钟和十五分钟的平均负载
-
-系统的运行时间是快照报告中一个非常棒的统计数据。然而，尝试获取此统计数据时存在一个问题。你的系统可能只运行了几分钟，也可能已经运行了几天（传闻有些 Linux 服务器已经运行了几年！）。以下是一个运行了几个小时系统的 `uptime` 命令输出：
-
-```
-$ uptime
-18:00:20 up 8:55, 3 users, load average: 0.62, 0.45, 0.37
-```
-
-以下是一个运行了数天的系统的 `uptime` 输出：
-
-```
-$ uptime
-13:29:32 up 3 days, 4:24, 4 users, load average: 1.44, 0.83, 0.46
-```
-
-如你所见，从这个列表中收集正确的统计数据将很困难。`gawk` 命令（见第 16 章）可以毫无问题地为运行了数天的系统完成这项工作：
-
-```
-$ uptime | gawk '{print $2,$3,$4,$5}'
-up 3 days, 4:27,
-```
-
-然而，当同样的 `gawk` 命令用于仅运行了几小时的系统时，会出现以下情况：
-
-```
-$ uptime | gawk '{print $2,$3,$4}'
-up 8:59, 3 users,
-```
-
-为了解决这个困境，你可以使用 `gawk` 的一个高级功能 `if` 语句（见第 19 章）。如果系统已经运行了几天，`gawk` 变量 `$4` 将包含单词“days”。为了测试 `$4` 是否为字符串“days”，你的 `gawk` 命令应该像这样：
-
-```
-$ uptime |
-> gawk '{if ($4 == "days") {print $2,$3,$4,$5} else {print $2,$3}}'
-up 9:23,
-```
-
-你可能会遇到系统仅运行了一天的情况。因此，你还需要测试字符串“day”。逻辑或运算符 `or` (`||`) 可以解决这个问题。因此，你的 `gawk` 命令现在看起来如下：
-
-```
-gawk '{if ($4 == "days" || $4 == "day") {print $2,$3,$4,$5} else {print $2,$3}}'
-```
-
-现在输出中那些难看的逗号怎么办？使用 `sed` 命令，你可以简单将它们替换为空格。
-
-```
-$ uptime | sed -n ‘/,/s/,/ /gp’ |
-> gawk '{if ($4 == "days" || $4 == "day") {print $2,$3,$4,$5} 
-else {print $2,$3}}'
-up 9:32
-```
-
-这看起来好多了！为了保险起见，让我们在一个运行了超过一天的系统上测试该命令：
-
-```
-$ uptime | sed -n ‘/,/s/,/ /gp’ | 
-> gawk '{if ($4 == "days" || $4 == "day") {print $2,$3,$4,$5} 
-else {print $2,$3}}’ 
-up 3 days 4:34
-```
-
-看起来也不错。现在我们可以转向另一个性能工具命令来创建系统快照报告。
-
-#### 磁盘使用情况 (Disk Usage)
-
-帮助你创建快照报告的下一个命令是 `df`。`df` 命令显示磁盘空间使用统计信息：
-
-```
-$ df
-Filesystem      1K-blocks      Used          Available  Use%    Mounted on
-/dev/sda2      307465076   185930336      105916348   64%      /
-none            503116           240        502876     1%      /dev
-none            508716              ...
-```
-
-`df` 命令显示所有真实和虚拟磁盘的统计。你可以将单个磁盘名称传递给 `df` 命令以仅检索该磁盘的信息。为了让信息更易读，为命令添加 `-h` 选项：
-
-```
-$ df -h /dev/sda2
-Filesystem  Size  Used  Avail  Use%  Mounted
-/dev/sda2  294G  178G  102G   64%  /
-```
-
-`sed` 和 `gawk` 命令将帮助你解析并打印报告所需的信息。由于我们不需要包含 `df` 输出中的表头行，使用 `sed` 搜索数据行中特有的字符。字符串 `/` 仅出现在数据行中。这可行了，让我们进入获取系统内存快照的部分。
-
-#### 内存使用情况 (Memory Usage)
-
-有几个 bash shell 命令可以获取内存统计信息。在这里，我们将重点关注 `free` 命令。
-
-`free` 命令显示物理内存的总量，以及空闲和已分配量。它还会显示交换内存的相同数据，并包含内核缓冲区。以下是 `free` 命令输出的示例：
-
-```
-$ free
-              total        used        free      shared  buffers   cached
-Mem:           1017436      890148      127288           0      31536      484100
--/+ buffers/cache:   374512      642924
-Swap:           200776             0      200776
-```
-
-
-
-因为我们提取了磁盘使用率百分比统计，所以对内存使用也进行同样的操作是一个好主意。然而，你会发现 `free` 命令并没有提供任何使用百分比！这没关系。使用 `gawk` 命令，你可以计算出百分比。
-
-`free` 命令的输出已经通过空格很好地分开了，因此 `gawk` 可以通过变量名直接引用计算所需的两个字段。`$2` 变量是可用总内存，`$3` 变量是已用内存。通过将 `$3` 除以 `$2`，`gawk` 将为你提供内存使用率：
-
-```bash
-$ free | sed -n ‘2p’ | gawk ‘x = ($3 /$2) {print x}
-```
-`0.87165`
-
-注意命令中使用了 `sed` 来从 `free` 命令的输出中提取第二行数据，这允许你“丢弃”标题行。生成的数字仍然不是报告所需的格式。你可以通过将数字乘以 100 并使用 `gawk` 的整数函数 `int` 对进行截断来清理百分比。最后，使用 `sed` 加上百分比符号：
-
-```bash
-$ free | sed -n ‘2p’ | 
-> gawk ‘x = int(($3 /$2)* 100) (print x)’ ||
-> sed ‘s/$/%/’
-```
-`87%`
-
-现在内存统计已经是你报告所需的格式了。让我们继续最后一个要包含的项目——僵尸进程！
-
-## 僵尸进程
-
-Linux 系统上的僵尸进程是处于中间状态的进程。该进程已经完成了工作，但由于各种原因卡在未完成的状态。因此，正如它的名字一样，僵尸进程既没有死也没有活。
-
-虽然在 Linux 系统上有一一两个僵尸进程并不什么，但多个僵尸进程会导致问题。僵尸持有一个进程 ID（PID），在僵尸被杀死之前，该 ID 不会释放进程 ID 表。因此，另一个需要关注的系统统计是当前僵尸进程的数量。
-
-使用 `ps` 命令可以轻松实现（见第 4 章）。`ps` 命令配合 `-al` 选项将返回系统上所有的进程及其进程状态。状态 `Z` 表示该进程是僵尸：
-
-```bash
-$ ps -al 
-F S  UID  PID PPID C  PRI NI ADDR    SZ WCHAN  TTY       TIME CMD 
-0 T  1000  2174 2031 0   80  0     - 2840 signal pts/0 00:00:00 mail 
-0 T  1000  2175 2031 0   80  0     - 2839 signal pts/0 00:00:00 mail 
-1 Z  1000  8779 8797 0   80  0     -     0 exit    pts/0 00:00:00 zomb <defunct> 
-0 R  1000  8781 8051 0   80  0     - 1094 -       pts/5 00:00:00 ps 
-$
-```
-
-再次，`gawk` 命令将在这里帮助你。通过将 `ps` 命令的输出管道到 `gawk`，你只需要打印字段 `$2` 和 `$4` 来获取进程 ID 及其进程状态。然而，你只想显示僵尸进程，因此使用 `grep` 命令搜索输出是可行的。所需的命令如下：
-
-```bash
-$ ps -al | gawk '{print $2,$4}’ | grep Z
-Z 8779
-```
-
-这对于快照报告来说效果非常好。现在，你已经有了所有的部分，让我们把它们组合成一个可以运行的脚本。
-
-## 创建快照脚本
-
-你需要设置的第一项是用于脚本正文各种变量。这些变量应该包含在脚本顶部，以便将来方便修改。
-
-我们的快照报告需要一个时间戳，因此将包含一个日期变量 `DATE`。对于性能统计，你可能有多个需要收集统计信息的磁盘。因此，一个数组变量 `DISKS_TO_MONITOR` 将包含你系统所有磁盘的列表。由于不同的管理员设置了不同的邮件工具，让我们包含一个邮件变量 `MAIL`，以指定本地使用的哪种工具（见第 25 章）。此外，由于特定系统的 `mail` 命令可能位于独特的位置，你应该使用 `which` 命令（见第 23 章）来查找 `mail` 命令的位置。将报告发送给谁在变量 `MAIL_TO` 中。最后，报告名称设置在变量 `REPORT` 中。
-
-快照脚本的变量部分如下：
-
-```bash
-# Set Script Variables
-#
-DATE='date +m%d%Y'
-DISKS_TO_MONITOR="/dev/sda1 /dev/sda2"
-MAIL='which mutt'
-MAIL_TO=user
-REPORT=/home/user/Documents/$DATE.rpt
-```
-
-因为你是在同一个脚本中生成报告并发送它，你需要保存并在以后恢复文件描述符（见第 14 章）。保存文件描述符并将输出重定向到 `STDOUT` 的 shell 命令如下：
-
-```bash
-# Create Report File
-#
-exec 3>&1  #保存 file descriptor
-#
-exec 1> $REPORT #将输出重定向到 rpt 文件。
-```
-
-在 `mail` 命令之前的后续代码将把 `STDOUT` 恢复到保存的文件描述符：
-
-```bash
-# Restore File Descriptor & Mail Report
-#
-exec 1>&3    #恢复输出到 STDOUT
-```
-
-将所有各个部分组合在一起后，脚本现在看起来如下：
-
-```bash
-#!/bin/bash
-#
-# Snapshot_Stats - produces a report for system stats
-#####################################################
-# Set Script Variables
-#
-DATE='date +m%d%Y'
-DISKS_TO_MONITOR="/dev/sda1 /dev/sda2"
-MAIL='which mutt'
-MAIL_TO=user
-REPORT=/home/user/Documents/Snapshot_Stats_$DATE.rpt
-#
-##########################################
-# Create Report File
-#
-exec 3>&1  #Save file descriptor
-#
-exec 1> $REPORT #direct output to rpt file.
-#
-##########################################
-#
-echo
-echo -e "\t\tDaily System Report"
-echo
-#
-##########################################
-# Date Stamp the Report
-#
-echo -e "Today is $(date +%m/%d/%Y)"
-#
-##########################################
-# 1) Gather Uptime Statistics
-#
-echo
-echo -e "System has been "
-uptime | sed -n ',/p' | awk '{if ($4 == "days" || $4 == "day") print $2,$3}'
-#
-##########################################
-# 2) Gather Disk Usage
-#
-echo
-for DISK in $DISKS_TO_MONITOR
-do
-  echo -e "$DISK usage: "
-  df -h $DISK | sed -n 2p | awk '{print $5}' # Note: corrected logic for disk space check
-done
-#
-##########################################
-# 3) Gather Memory Statistics
-#
-echo
-echo -e "Memory Usage: "
-free | sed -n ‘2p’ | awk 'x = int(($3 /$2)* 100) {print x}'
-#
-##########################################
-# 4) Gather Number of Zombie Processes
-#
-echo
-ZOMBIE_CHECK=$(ps -al | gawk '{print $2,$4}’ | grep Z)
-#
-if [ "$ZOMBIE_CHECK" = "" ]; then
-  echo "No Zombie Process on System at this Time"
-else
-  echo "Current System Zombie Processes"
-  ps -al | gawk '{print $2,$4}’ | grep Z
-fi
-echo
-#
-##########################################
-# Restore File Descriptor & Mail Report
-#
-exec 1>&3    #Restore output to STDOUT
-#
-mail -a $REPORT -s “System Statistics Report for $DATE” -- $MAIL_TO < /dev/null
-#
-###########################################
-# Clean up
-#
-rm -f $REPORT
-#
-#
+if (condVar > someVal) {console.log("xxx")}
 ```
 
 
@@ -20691,42 +21547,42 @@ rm -f $REPORT
 
 第一个脚本的目的是将性能用量统计数据收集到一个数据文件中以供日后使用。因此，你需要确切地确定想通过脚本收集哪些数据，以及使用哪些命令。
 
-对于此脚本，我们将再次使用 `uptime` 命令。但这次，我们不是获取系统运行的时间，而是获取系统上的用户数量。用户数量直接影响 CPU 和内存的使用。通过 `sed`，我们将在 `uptime` 命令的输出文本中搜索“users”一词。在当前行中找到该词后，让 `sed` 直接删除该行的剩余文本，包括“users”一词。这将留下你需要的统计数据——系统用户数——作为该行的最后一个项目。要获取最后一个数据项，你可以使用 `gawk` 变量 `NF`。整个命令行及其输出看起来如下：
+对于此脚本，我们将再次使用`uptime`命令。但这次，我们不是获取系统运行的时间，而是获取系统上的用户数量。用户数量直接影响 CPU 和内存的使用。通过`sed`，我们将在`uptime`命令的输出文本中搜索“users”一词。在当前行中找到该词后，让`sed`直接删除该行的剩余文本，包括“users”一词。这将留下你需要的统计数据——系统用户数——作为该行的最后一个项目。要获取最后一个数据项，你可以使用`gawk`变量`NF`。整个命令行及其输出看起来如下：
 
 ```bash
 $ uptime | sed 's/users.*$//' | gawk '{print $NF}'
 4
 ```
 
-系统负载是另一个可以从 `uptime` 命令输出中解析出的良好统计数据。系统负载显示了系统中 CPU 的平均忙程度。平均负载为 `1` 意味着单个 CPU 一直处于忙状态。然而，如果你的系统中有两个 CPU，这意味着每个 CPU 的忙程度仅为 50%。`uptime` 命令提供的系统负载是最后分钟、最后五分钟和最后十五分钟的平均值。我们将获取最后十五分钟的平均系统负载统计数据，它方便地位于输出文本行的末尾：
+系统负载是另一个可以从`uptime`命令输出中解析出的良好统计数据。系统负载显示了系统中 CPU 的平均忙程度。平均负载为`1`意味着单个 CPU 一直处于忙状态。然而，如果你的系统中有两个 CPU，这意味着每个 CPU 的忙程度仅为 50%。`uptime`命令提供的系统负载是最后分钟、最后五分钟和最后十五分钟的平均值。我们将获取最后十五分钟的平均系统负载统计数据，它方便地位于输出文本行的末尾：
 
 ```bash
 $ uptime | gawk '{print $NF}'
 0.19
 ```
 
-另一个提取系统信息的强大命令是 `vmstat`。这里是 `vmstat` 命令的输出示例：
+另一个提取系统信息的强大命令是`vmstat`。这里是`vmstat`命令的输出示例：
 
 ```bash
-$ vmstat 
-procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu---- 
-r b    swpd   free  buff  cache   si  so      bi  bo    in  cs    us sy id wa 
-0 0   11328  42608 165444  502500   0   0      1   2     68  10    1  0 99  0 
+$ vmstat
+procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
+r b    swpd   free  buff  cache   si  so      bi  bo    in  cs    us sy id wa
+0 0   11328  42608 165444  502500   0   0      1   2     68  10    1  0 99  0
 ```
 
-当你第一次运行 `vmstat` 命令时，它显示自上次重启以来的平均值。要获取当前统计数据，你必须带命令行参数运行 `vmstat` 命令：
+当你第一次运行`vmstat`命令时，它显示自上次重启以来的平均值。要获取当前统计数据，你必须带命令行参数运行`vmstat`命令：
 
 ```bash
 $ vmstat 1 2
-procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu---- 
-r b    swpd   free  buff  cache   si  so      bi  bo    in  cs    us sy id wa 
-0 0   11328  43112 165452  502444   0   0      1   2     68  10    1  0 99  0 
-0 0   11328  40540 165452 505064   0   0      0   0     58 177    1  1 98  0 
+procs -----------memory---------- ---swap-- -----io---- -system-- ----cpu----
+r b    swpd   free  buff  cache   si  so      bi  bo    in  cs    us sy id wa
+0 0   11328  43112 165452  502444   0   0      1   2     68  10    1  0 99  0
+0 0   11328  40540 165452 505064   0   0      0   0     58 177    1  1 98  0
 ```
 
-第二行包含 Linux 系统的当前统计数据。如你所示，`vmstat` 命令的输出有些晦涩。[表 27.1]解释了每个符号的含义。
+第二行包含 Linux 系统的当前统计数据。如你所示，`vmstat`命令的输出有些晦涩。[表 27.1]解释了每个符号的含义。
 
-### 表 27.1 vmstat 输出符号
+### 表 27.1 `vmstat` 输出符号
 
 | 符号 | 描述 |
 | :--- | :--- |
@@ -20749,22 +21605,24 @@ r b    swpd   free  buff  cache   si  so      bi  bo    in  cs    us sy id wa
 
 这些是大量信息。空闲内存和 CPU 空闲时间百分比统计数据将满足我们这里的需求。
 
-你可能已经注意到 `vmstat` 命令的输出包含了表头信息，你显然不想在数据中包含这些内容。要解决这个问题，请使用 `sed` 命令仅显示包含数值的行：
+你可能已经注意到`vmstat`命令的输出包含了表头信息，你显然不想在数据中包含这些内容。要解决这个问题，请使用`sed`命令仅显示包含数值的行：
 
 ```bash
 $ vmstat 1 2 | sed -n '[0-9]/p'
-1 0 11328 38524 165476 506548 0 0 1 2 68 10 1 0 99 0 
-0 0 11328 35820 165476 509528 0 0 0 0 82 160 1 1 98 0 
+1 0 11328 38524 165476 506548 0 0 1 2 68 10 1 0 99 0
+0 0 11328 35820 165476 509528 0 0 0 0 82 160 1 1 98 0
 ```
 
-这样好多了，但现在你只需要第二行数据。再次调用 `sed` 即可解决该问题：
+这样好多了，但现在你只需要第二行数据。再次调用`sed`即可解决该问题：
 
 ```bash
 $ vmstat 1 2 | sed -n '[0-9]/p' | sed -n '2p'
-0 0 11328 36060 165484 509560 0 0 0 0 58 177 1 1 98 0 
-``` （等等，示例输出显示为 `0 0 11328 36060...`，遵循上述逻辑）。
+0 0 11328 36060 165484 509560 0 0 0 0 58 177 1 1 98 0
+```
 
-最后，你可能为每条记录标记一个时间戳，以指示获取统计数据的时间。只需使用 `date` 命令并指定你需要的格式即可。
+（等等，示例输出显示为`0 0 11328 36060...`，遵循上述逻辑）。
+
+最后，你可能为每条记录标记一个时间戳，以指示获取统计数据的时间。只需使用`date`命令并指定你需要的格式即可。
 
 ```bash
 $ date +%m/%d/%Y %H:%M:%S
@@ -20798,7 +21656,7 @@ echo "$DATE,$TIME,$USERS,$LOAD,$FREE,$IDLE" >> $REPORT_FILE
 #
 ```
 
-在创建脚本后，在从你的 `cron` 表中定期运行之前，你应该先在命令行中对其测试：
+在创建脚本后，在从你的`cron`表中定期运行之前，你应该先在命令行中对其测试：
 
 ```bash
 $ cat capstats.csv
@@ -20806,21 +21664,21 @@ $ cat capstats.csv
 12/09/2010,9:07:55,2,0.28,620252,100
 ```
 
+`12/09/2010, 9:40:51,3,0.37,474740,100`
 
+`12/10/2010,14:36:46,3,0.30,46640,98`
 
+`12/12/2010, 7:16:26,4,0.25,27308,98`
 
-`12/09/2010, 9:40:51,3,0.37,474740,100 `
-`12/10/2010,14:36:46,3,0.30,46640,98 `
-`12/12/2010, 7:16:26,4,0.25,27308,98 `
-`12/12/2010,13:28:53,4,0.42,58832,100 `
+`12/12/2010,13:28:53,4,0.42,58832,100`
 
-接下来的脚本将根据 CSV 数据生成报告并通过电子邮件发送给相关个人。由于报告脚本是一个独立的脚本，你可以让 `cron` 以与 `Capture_Stats` 脚本不同的时间表运行它。这让你在报告之前捕获多少数据量上具有灵活性。
+接下来的脚本将根据 CSV 数据生成报告并通过电子邮件发送给相关个人。由于报告脚本是一个独立的脚本，你可以让`cron`以与`Capture_Stats`脚本不同的时间表运行它。这让你在报告之前捕获多少数据量上具有灵活性。
 
 ## 生成报告脚本
 
-现在你已经有了一个充满原始数据的文件，可以开始编写用于生成精美报告的脚本了。处理此任务的最佳工具是 `gawk` 命令。
+现在你已经有了一个充满原始数据的文件，可以开始编写用于生成精美报告的脚本了。处理此任务的最佳工具是`gawk`命令。
 
-`gawk` 命令将允许你从 CSV 文件中提取原始数据并以任何想要的方式呈现。首先，在命令行中进行测试，使用由 `Capture_Stats` 脚本创建的新 `capstats.csv` 文件：
+`gawk`命令将允许你从 CSV 文件中提取原始数据并以任何想要的方式呈现。首先，在命令行中进行测试，使用由`Capture_Stats`脚本创建的新`capstats.csv`文件：
 
 ```bash
 $ cat capstats.csv | gawk -F, '{printf "%s %s - %s\n", $1, $2, $4}'
@@ -20832,11 +21690,11 @@ $ cat capstats.csv | gawk -F, '{printf "%s %s - %s\n", $1, $2, $4}'
 12/12/2010 13:28:53 - .42
 ```
 
-你需要使用 `gawk` 命令的 `-F` 选项将逗号定义为数据中的字段分隔符。之后，你可以使用 `printf` 功能检索每个数据字段并按你需要的方式显示。
+你需要使用`gawk`命令的`-F`选项将逗号定义为数据中的字段分隔符。之后，你可以使用`printf`功能检索每个数据字段并按你需要的方式显示。
 
 对于报告，我们将使用 HTML 格式。HTML 使用简单的标签来界定网页中的数据。然而，HTML 不仅用于网页，你经常会在邮件消息中发现它。取决于你的邮件工具（见第 25 章），你可能会看到嵌入的 HTML 文档。更好的解决方案创建一个 HTML 报告并作为邮件附件。
 
-使用 HTML 创建报告允许你生成格式良好的报告。显示报告程序将完成所有的格式工作。你只需要插入适当的 HTML 标签来格式化数据。在 HTML 中显示表格风格数据最简单的方法是使用 `<table>` 标签。表格标签允许你创建行和单元格，这些在 HTML 中被称为“划分”。使用 `<tr>` 标签定义行的开始，使用 `</tr>` 标签定义行的结束。同样，使用 `<td>` 和 `</td>` 标签定义单元格。
+使用 HTML 创建报告允许你生成格式良好的报告。显示报告程序将完成所有的格式工作。你只需要插入适当的 HTML 标签来格式化数据。在 HTML 中显示表格风格数据最简单的方法是使用`<table>`标签。表格标签允许你创建行和单元格，这些在 HTML 中被称为“划分”。使用`<tr>`标签定义行的开始，使用`</tr>`标签定义行的结束。同样，使用`<td>`和`</td>`标签定义单元格。
 
 完整的 HTML 表格所示：
 
@@ -20858,9 +21716,9 @@ $ cat capstats.csv | gawk -F, '{printf "%s %s - %s\n", $1, $2, $4}'
 </html>
 ```
 
-每条数据记录都是 `<tr>...</tr>` 对的一部分。每个数据字段都在自己的 `<td>...</td>` 对中。当你在浏览器中显示 HTML 报告时，浏览器会为你创建表格，如图 27.2 所示。
+每条数据记录都是`<tr>...</tr>`对的一部分。每个数据字段都在自己的`<td>...</td>`对中。当你在浏览器中显示 HTML 报告时，浏览器会为你创建表格，如图 27.2 所示。
 
-对于脚本，你只需要使用 `echo` 命令生成 HTML 头部，使用 `gawk` 命令生成数据，然后再次使用 `echo` 命令关闭表格。这是 `Report_Stats` 脚本，它将生成报告并发送：
+对于脚本，你只需要使用`echo`命令生成 HTML 头部，使用`gawk`命令生成数据，然后再次使用`echo`命令关闭表格。这是`Report_Stats`脚本，它将生成报告并发送：
 
 ```bash
 #!/bin/bash
@@ -20889,14 +21747,15 @@ $MAIL -a $TEMP_FILE -s "Performance Report $DATE" -- $MAIL_TO < /dev/null
 rm -f $TEMP_FILE
 ```
 
-我们使用 `mutt` 来发送性能报告，但你可以将其更改为本地邮件客户端。临时 HTML 报告的文件也可以修改以更好地符合你的需求。
+我们使用`mutt`来发送性能报告，但你可以将其更改为本地邮件客户端。临时 HTML 报告的文件也可以修改以更好地符合你的需求。
 
 > **注意**
-> 大多数邮件客户端可以通过文件扩展名自动检测附件类型。由于由于原因，你应该以 `.html` 结束报告文件名。
+
+> 大多数邮件客户端可以通过文件扩展名自动检测附件类型。由于由于原因，你应该以`.html`结束报告文件名。
 
 ### 运行脚本
 
-创建 `Report_Stats` 脚本后，从命令行中进行测试运行并看看发生了什么：
+创建`Report_Stats`脚本后，从命令行中进行测试运行并看看发生了什么：
 
 ```bash
 $ ./Report_Stats
@@ -20904,7 +21763,7 @@ $ ./Report_Stats
 
 嗯，这并不有趣。现在的真正测试是查看你的邮件消息，最好使用如 KMail 或 Evolution 等图形化邮件客户端。图 27.3 展示了如何从 Evolution 邮件客户端查看消息。注意数据是如何使用 HTML 表格进行整齐格式化的，就像在浏览器中查看时一样！
 
-## 问题跟踪数据库
+# 问题跟踪数据库
 
 每个系统都不可避免地遇到意外。然而，对问题的分析将允许你做出更改，以尽量减少未来意外的困难。拥有一份关于如何解决问题的记录也有帮助，以防问题再次发生。当你与一个可以记录所经历的问题/解决方案的团队合作工作时，会有更大的收益。问题/解决方案的信息可以更方便地在团队成员之间传播。
 
@@ -20916,23 +21775,19 @@ $ ./Report_Stats
 
 此数据库的主要目的是记录问题及其如何修复，以便你利用这些信息更快速地解决未来的类似问题。为了实现这一目的，你应该跟踪以下信息：
 
-*   报告问题的日期
-*   修复问题的日期
-*   问题的描述及其症状
-*   对问题解决方案的描述
+- 报告问题的日期
+- 修复问题的日期
+- 问题的描述及其症状
+- 对问题解决方案的描述
 
-我们将使用 `mysql`（见第 23 章）作为问题跟踪数据库的数据库系统。首先，创建一个空数据库：
+我们将使用`mysql`（见第 23 章）作为问题跟踪数据库的数据库系统。首先，创建一个空数据库：
 
 ```bash
 $ mysql -u root -p
-Enter password: 
+Enter password:
 ```
 
-
-
-
-
-`欢迎使用 MySQL 监控器。命令以 ; 或 `\g` 结束。`
+`欢迎使用 MySQL 监控器。命令以 ; 或 \g 结束。`
 
 `...`
 
@@ -20942,9 +21797,9 @@ Query OK, 1 row affected (0.02 sec)
 mysql>
 ```
 
-创建一个空数据库后，现在可以添加表了。我们将创建一个名为 `problem_logger` 的表，包含四个字段来存储问题信息。此外，你还需要一个字段 `id_number` 来作为数据库的主键。[表 27.2] 显示了所需的五个字段。
+创建一个空数据库后，现在可以添加表了。我们将创建一个名为`problem_logger`的表，包含四个字段来存储问题信息。此外，你还需要一个字段`id_number`来作为数据库的主键。[表 27.2]显示了所需的五个字段。
 
-### 表 27.2 Problem_Logger 表的字段
+### 表 27.2 `Problem_Logger` 表的字段
 
 | 字段名称 | 数据类型 |
 | :--- | :--- |
@@ -20954,7 +21809,7 @@ mysql>
 | `prob_symptoms` | text |
 | `prob_solutions` | text |
 
-在 `mysql` 中创建此表非常简单：
+在`mysql`中创建此表非常简单：
 
 ```mysql
 mysql> USE Problem_Trek;
@@ -20971,7 +21826,9 @@ Query OK, 0 rows affected (0.04 sec)
 mysql>
 ```
 
-注意，下发 `USE` 命令是为了确保我们在正确的数据库中创建新表。让我们使用 `DESCRIBE` 命令再次查看新的 `problem_logger` 表。这是显示已添加到表中的字段的一种非常清晰的方法：
+注意，下发`USE`命令是为了确保我们在正确的数据库中创建新表。让我们使用`DESCRIBE`命令再次查看新的`problem_logger`表。这是显示已添加到表中的字段的一种非常清晰的方法：
+
+
 
 ```mysql
 mysql> DESCRIBE problem_logger;
@@ -20988,7 +21845,7 @@ mysql> DESCRIBE problem_logger;
 mysql>
 ```
 
-到目前为止，我们必须使用 `root` 账户创建数据库和表。现在这些步骤已经完成，你的工作不再需要 `root` 账户。正如你在第 23 章中学到的，在脚本中使用 `root` 账户不是良好的做法。因此，你需要为数据库添加一个具有适当权限的新账户。该账户将供脚本用于访问 `Problem_Trek` 数据库：
+到目前为止，我们必须使用`root`账户创建数据库和表。现在这些步骤已经完成，你的工作不再需要`root`账户。正如你在第 23 章中学到的，在脚本中使用`root`账户不是良好的做法。因此，你需要为数据库添加一个具有适当权限的新账户。该账户将供脚本用于访问`Problem_Trek`数据库：
 
 ```mysql
 mysql> GRANT SELECT,INSERT,UPDATE ON Problem_Trek.* TO cbres IDENTIFIED BY 'test_password';
@@ -21003,7 +21860,7 @@ mysql Problem_Trek -u cbres -p
 Enter password:
 ```
 
-新账户运行得完美！现在，再过一步，你就可以开始为我们的数据库编写所需的函数了。使用你喜欢的文本编辑器创建一个特殊的配置文件 `~/.my.cnf`，其中包含你为用户账户设置的密码。这将允许脚本访问 `mysql` 而无需在内部包含密码。
+新账户运行得完美！现在，再过一步，你就可以开始为我们的数据库编写所需的函数了。使用你喜欢的文本编辑器创建一个特殊的配置文件`~/.my.cnf`，其中包含你为用户账户设置的密码。这将允许脚本访问`mysql`而无需在内部包含密码。
 
 ```bash
 cat ~/.my.cnf
@@ -21017,11 +21874,11 @@ password=test_password
 chmod 400 ~/.my.cnf
 ```
 
-现在 `Problem_Trek` 数据库已经创建，并已设置了适当的访问权限。你准备好开始编写数据库脚本了。
+现在`Problem_Trek`数据库已经创建，并已设置了适当的访问权限。你准备好开始编写数据库脚本了。
 
-### 记录问题
+## 记录问题
 
-跟踪问题的第一步是记录它的症状。因为使用 `mysql` 命令记录问题可能会耗时，我们将通过在其周围封装一个易用的脚本来简化这一过程。要将问题信息放入你的 `problem_logger` 表以向表中插入一条新记录，你需要执行这些命令：
+跟踪问题的第一步是记录它的症状。因为使用`mysql`命令记录问题可能会耗时，我们将通过在其周围封装一个易用的脚本来简化这一过程。要将问题信息放入你的`problem_logger`表以向表中插入一条新记录，你需要执行这些命令：
 
 ```bash
 mysql Problem_Trek -u cbres -p
@@ -21038,7 +21895,7 @@ Query OK, 1 row affected (0.02 sec)
 mysql>
 ```
 
-这非常简单。你可以使用 `SELECT` 命令查看你刚刚放入表的记录。通过在 `WHERE` 中指定新记录的 ID 编号，只会显示插入的记录：
+这非常简单。你可以使用`SELECT`命令查看你刚刚放入表的记录。通过在`WHERE`中指定新记录的 ID 编号，只会显示插入的记录：
 
 ```mysql
 mysql> SELECT * FROM problem_logger WHERE id_number=101211322;
@@ -21051,7 +21908,7 @@ mysql> SELECT * FROM problem_logger WHERE id_number=101211322;
 mysql>
 ```
 
-虽然你可以看到插入的记录，但在这种格式下很难阅读数据。为了让记录更易读，你可以在命令末尾添加 `\G` 而不是分号（`;`）：
+虽然你可以看到插入的记录，但在这种格式下很难阅读数据。为了让记录更易读，你可以在命令末尾添加`\G`而不是分号（`;`）：
 
 ```mysql
 mysql> SELECT * FROM problem_logger WHERE id_number=101211322\G
@@ -21063,9 +21920,9 @@ prob_symptoms: When trying to run script Capture_Stats, getting message: bash:./
 prob_solutions: 
 ```
 
-### 创建脚本
+## 创建脚本
 
-在第 23 章中，你学习了使用 `which` 命令在你的特定系统上查找 `mysql` 命令，然后将其分配给环境变量。你可以更进一步，为 `mysql` 添加数据库名称和用户账户：
+在第 23 章中，你学习了使用`which`命令在你的特定系统上查找`mysql`命令，然后将其分配给环境变量。你可以更进一步，为`mysql`添加数据库名称和用户账户：
 
 ```bash
 #
@@ -21075,14 +21932,14 @@ MYSQL=$(which mysql) "Problem_Trek -u cbres"
 
 ### 所需函数
 
-`Record_Problem` 是一个交互式脚本。为了保持简单，你可以通过提问来获取所需信息。随着脚本获取答案，它会将这些答案分配给不同的变量。一旦收集了所有数据，你就可以使用变量名配合 `INSERT` 命令将信息输入数据库。这样一来，脚本用户就可以完全忽略那些必要的 `mysql` 命令了：
+`Record_Problem`是一个交互式脚本。为了保持简单，你可以通过提问来获取所需信息。随着脚本获取答案，它会将这些答案分配给不同的变量。一旦收集了所有数据，你就可以使用变量名配合`INSERT`命令将信息输入数据库。这样一来，脚本用户就可以完全忽略那些必要的`mysql`命令了：
 
 ```bash
 ID_NUMBER=$(date +%y%m%d%H%M)
 #
 ```
 
-由于此脚本仅用于记录问题，你可能还没有关于 `FIXED_DATE` 和 `PROB_SOLUTIONS` 变量的数据。因此，在向表中插入记录之前，请将这两个变量都设置为适当的空值：
+由于此脚本仅用于记录问题，你可能还没有关于`FIXED_DATE`和`PROB_SOLUTIONS`变量的数据。因此，在向表中插入记录之前，请将这两个变量都设置为适当的空值：
 
 ```bash
 #
@@ -21092,10 +21949,7 @@ PROB_SOLUTIONS=""
 #
 ```
 
-
-
-
-为了显示问题记录添加成功，请向脚本添加一个 `SELECT` 语句。为了防止显示整个数据库的内容，`WHERE` 命令将使用 `ID_NUMBER` 变量仅选择刚刚添加的记录：
+为了显示问题记录添加成功，请向脚本添加一个`SELECT`语句。为了防止显示整个数据库的内容，`WHERE`命令将使用`ID_NUMBER`变量仅选择刚刚添加的记录：
 
 ```
 SELECT * FROM problem_logger WHERE id_number=$ID_NUMBER\G
@@ -21152,7 +22006,7 @@ EOF
 ##############################################
 ```
 
-现在测试 `Record_Problem` 脚本并查看它是否已就绪：
+现在测试`Record_Problem`脚本并查看它是否已就绪：
 
 ```
 $ ./Record_Problem 
@@ -21170,17 +22024,17 @@ prob_solutions:
 $ 
 ```
 
-运行得非常棒！你可以看到，使用这样的脚本记录问题比尝试使用单独的 `mysql` 命令进行插入要容易得多。
+运行得非常棒！你可以看到，使用这样的脚本记录问题比尝试使用单独的`mysql`命令进行插入要容易得多。
 
-现在你已经有了一种记录问题的方法，你需要一种更新记录的方法。让我们开始创建 `Update_Problem` 脚本。
+现在你已经有了一种记录问题的方法，你需要一种更新记录的方法。让我们开始创建`Update_Problem`脚本。
 
-# 更新问题
+## 更新问题
 
 跟踪问题的下一步是记录问题的解决方案。在本节创建的脚本将允许将这些信息添加到问题记录中。
 
-## 必要的函数
+### 必要的函数
 
-使用 `mysql` 更新记录非常简单。一旦获取了所有必要的数据，只需使用 `mysql UPDATE` 命令即可：
+使用`mysql`更新记录非常简单。一旦获取了所有必要的数据，只需使用`mysql UPDATE`命令即可：
 
 ```
 UPDATE problem_logger SET 
@@ -21189,13 +22043,13 @@ UPDATE problem_logger SET
       WHERE id_number=$ID_NUMBER;
 ```
 
-这非常简单。然而，组合 `Update_Problem` 脚本比仅仅使用 `UPDATE` 函数要复杂一点。
+这非常简单。然而，组合`Update_Problem`脚本比仅仅使用`UPDATE`函数要复杂一点。
 
-## 创建脚本
+### 创建脚本
 
 与之前的脚本一样，我们希望让脚本用户尽可能方便。为了实现这一目标，需要添加几个功能。
 
-`Problem_Trek` 数据库的主键 `id_number` 用于标识要更新的记录。如果已知 ID 数字，可以将其作为参数传递给脚本（参见第 13 章）。你只需要检查该参数并将其分配给变量 `ID_NUMBER`。如果没有作为参数传递 ID 数字，脚本将提示输入：
+`Problem_Trek`数据库的主键`id_number`用于标识要更新的记录。如果已知 ID 数字，可以将其作为参数传递给脚本（参见第 13 章）。你只需要检查该参数并将其分配给变量`ID_NUMBER`。如果没有作为参数传递 ID 数字，脚本将提示输入：
 
 ```bash
 if [ $# -eq 0 ]  #检查是否传递了 id 数字
@@ -21214,14 +22068,14 @@ fi
 
 但是，询问问题 ID 数字有一点不公平。没有多少人能在脑海中记住一个 10 位的数字来标识他们正在解决的特定问题。因此，你应该提供数据库中各种未解决问题的列表，让脚本用户更容易操作。
 
-首先，检查是否存在未解决的记录。`fixed_date` 和 `prob_solutions` 字段将为空。如果这两个字段中的任何一个，就需要更新记录；通过 `SELECT`，你可以在 `WHERE` 语句中使用 `OR` 命令搜索这两个字段。实现此操作的代码如下：
+首先，检查是否存在未解决的记录。`fixed_date`和`prob_solutions`字段将为空。如果这两个字段中的任何一个，就需要更新记录；通过`SELECT`，你可以在`WHERE`语句中使用`OR`命令搜索这两个字段。实现此操作的代码如下：
 
 ```bash
 RECORDS_EXIST='$MYSQL -Bse ‘SELECT id_number FROM problem_logger 
 WHERE fixed_date="0000-00-00” OR prob_solutions=""’‘
 ```
 
-注意命令的输出被赋值给变量 `RECORDS_EXIST`。为了实现这一点，`mysql` 命令必须使用 `-Bse` 选项。它们允许命令以批量（一次性）执行然后退出。如果 `RECORDS_EXIST` 变量包含数据，则存在需要更新的记录。使用以下操作将其显示在屏幕上：
+注意命令的输出被赋值给变量`RECORDS_EXIST`。为了实现这一点，`mysql`命令必须使用`-Bse`选项。它们允许命令以批量（一次性）执行然后退出。如果`RECORDS_EXIST`变量包含数据，则存在需要更新的记录。使用以下操作将其显示在屏幕上：
 
 ```bash
 #
@@ -21234,6 +22088,7 @@ WHERE fixed_date="0000-00-00” OR prob_solutions=""’‘
           FROM problem_logger 
           fixed_date="0000-00-00” 
 OR
+EOF
 ```
 
 这将提供一个不错的未完成记录列表。从列表中选择 ID 数字比尝试记住数字要容易得多。现在你可以组合出一个易于使用的整个脚本。它看起来应该类似于：
@@ -21322,31 +22177,41 @@ $ ./Update_Problem
 *************************** 1. row **************************** 
 ```
 
-
-
-
-
 `id_number: 1012111624`
+
 `report_date: 2010-12-11`
+
 `prob_symptoms: 运行 yum 安装软件时获取‘not found’ 消息。`
+
 你想要更新的问题 ID 号是多少？`1012111624`
+
 今天解决问题了吗？(y/n) y 
+
 简要描述问题解决方案：网络服务宕了。
+
 执行了命令：`service network restart`
 
 问题记录更新如下：
+
 *************************** 1. row ****************************
+
 `id_number: 1012111624`
+
 `report_date: 2010-12-11`
+
+
+
 `fixed_date: 2010-12-11`
+
 `prob_symptoms: 运行 yum 安装软件时获取‘not found’ 消息。`
+
 `prob_solutions: 网络服务宕机。`
+
 执行了命令：`service network restart`
-$
 
 这运行非常好，而且使用非常简单。
 
-### 补充
+## 补充
 
 现在，为了让脚本用户操作更加方便，让我们修改 `Record_Problem` 脚本，在需要时调用 `Update_Problem`。有时候当你很忙时，“批量”记录问题会更方便。在原始 `Record_Problem` 脚本的最后面，你可以添加以下代码：
 
@@ -21354,7 +22219,7 @@ $
 # 检查现在想要输入解决方案
 #
 echo
-echo -e “你现在有解决方案了吗？(y/n) \c”
+echo -e "你现在有解决方案了吗？(y/n) \c"
 read ANSWER
 #
 case $ANSWER in
@@ -21370,32 +22235,52 @@ esac
 ```
 
 现在让我们测试一下这个修改，看看它是否有效：
+
 `$ ./Record_Problem`
+
 简要描述问题及其症状：
+
 将脚本从 Fedora 移动到 Ubuntu 后无法正常工作。
+
 问题记录如下：
+
 *************************** 1. row ****************************
+
 `id_number: 1012111631`
+
 `report_date: 2010-12-11`
+
 `fixed_date: 0000-00-00`
+
 `prob_symptoms: 将脚本从 Fedora 移动到 Ubuntu 后无法正常工作。`
+
 `prob_solutions:`
+
 你现在有解决方案了吗？(y/n) y
+
 今天解决问题了吗？(y/n) y
+
 简要描述问题解决方案：
+
 在脚本顶部添加了 `#!/bin/bash`。这是必要的因为 Ubuntu 的默认 shell 是 `dash`。
+
 问题记录更新如下：
+
 *************************** 1. row ****************************
+
 `id_number: 1012111631`
+
 `report_date: 2010-12-11`
+
 `fixed_date: 2010-12-11`
+
 `prob_symptoms: 将脚本从 Fedora 移动到 Ubuntu 后无法正常工作。`
+
 `prob_solutions: 在脚本顶部添加了 `#!/bin/bash`。这是必要的因为 Ubuntu 的默认 shell 是 `dash.`
-$
 
 这运行得非常完美。现在你已经非常方便地在 `Problem_Trek` 数据库中记录和更新记录了。
 
-### 查找问题
+## 查找问题
 
 拥有像 `Problem_Trek` 这样的数据库的真正之处在于回顾记录。查看过去的问题及其解决方案将让你能够快速解决重复问题并发现趋势。
 
@@ -21412,18 +22297,27 @@ SELECT * FROM problem_logger WHERE id_number=$ID_NUMBER\G
 ```sql
 mysql> SELECT * FROM problem_logger WHERE prob_symptoms LIKE 'yum'\G
 ```
-Empty (0 sec)。 等，这没起作用！这是因为需要通配符。要在 `prob_symptoms` 字段中找到“yum”这个词，需要在两边都添加通配符。实际上，你是在告诉 `mysql` 寻找一个 `prob_symptoms` 字段包含单词“yum”的记录。使用的通配符是 `%`。因此，你的代码应该像：
+
+`Empty (0 sec)`。 等，这没起作用！这是因为需要通配符。要在 `prob_symptoms` 字段中找到“yum”这个词，需要在两边都添加通配符。实际上，你是在告诉 `mysql` 寻找一个 `prob_symptoms` 字段包含单词“yum”的记录。使用的通配符是 `%`。因此，你的代码应该像：
 
 ```sql
 mysql> SELECT * FROM problem_logger WHERE prob_symptoms LIKE '%yum%'\G
 ```
+
 *************************** 1. row *****************
+
 `id_number: 1012111624`
+
 `report_date: 2010-12-11`
+
 `fixed_date: 2010-12-11`
+
 `prob_symptoms: 运行 yum 安装软件时获取‘not found’ 消息。`
+
 `prob_solutions: 网络服务宕机。`
+
 执行了命令：`service network restart`
+
 1 row (0 sec)
 
 你可能希望 `SELECT` 命令也能搜索 `prob_solutions` 字段以及 `prob_symptoms` 字段，这将允许更彻底的搜索：
@@ -21431,17 +22325,20 @@ mysql> SELECT * FROM problem_logger WHERE prob_symptoms LIKE '%yum%'\G
 ```sql
 mysql> SELECT * FROM problem_logger WHERE prob_symptoms LIKE '%yum%' OR prob_solutions LIKE '%yum%'\G
 ```
+
 *************************** 1. row *****************
+
 注意：如果你担心大小写敏感，不用担心。默认情况下，`mysql` 会忽略大小写，所以你可以输入关键词“yum”或“YUM”。为了对 `Problem_Trek` 数据库进行有效搜索，应该允许使用多个关键词。`LIKE` 命令无法兼顾多个。但是，你可以使用正则表达式 `REGEXP`。`REGEXP` 的优点之一是它会搜索整个字段——不需要通配符。要搜索多个关键词，在它们之间放置一个管道符 `|`。因此，代码现在看起来像：
 
 ```sql
 mysql> SELECT * FROM problem_logger WHERE prob_symptoms REGEXP 'yum|dash'\G
 ```
+
 *************************** 1. row ****************************
 
 ### 创建脚本
 
-最好在调用脚本时允许关键词作为参数传递。然而，你不知道可能会传递多少个关键词。可能是五个，可能是一个，也可能没有！这实际上是一个很容易解决的困境。使用 `if` 测试检查是否传递了任何关键词。如果是，使用 `$@` 一性获取所有关键词（见第 13 章）。如果没有传递关键词，脚本将需要它们。完成此任务的代码如下：
+最好在调用脚本时允许关键词作为参数传递。然而，你不知道可能会传递多少个关键词。可能是五个，可能是一个，也可能没有！这实际上是一个很容易解决的困境。使用 `if` 测试检查是否传递了任何关键词。如果是，使用 `$@` 一次性获取所有关键词（见第 13 章）。如果没有传递关键词，脚本将需要它们。完成此任务的代码如下：
 
 ```bash
 # 获取关键词(s)
@@ -21451,21 +22348,17 @@ then             # 获取所有传递的关键词
   KEYWORDS=$@ # 获取所有参数作为独立的单词，相同的字符串
 else # 关键词(s) 未传递。询问它们。
   echo
-  echo “你想搜索哪些关键词？”
-  echo -e “请用空格分隔单词: \c”
+  echo "你想搜索哪些关键词？"
+  echo -e "请用空格分隔单词: \c"
   read ANSWER
   KEYWORDS=$ANSWER
 fi
 ```
 
-
-
-
-
 一旦你有了关键词，下一步就是构建搜索语句。请记住，在每对关键词之间需要放置逻辑或 `or (|)`，以便 `REGEXP` 能够正确搜索它们。这可以通过 `sed` 轻松实现。`KEYWORDS` 数组变量中的每个空格都可以替换为 `|`。
 
 ```bash
-KEYWORDS=‘echo $KEYWORDS | sed ‘s/ /|/g’‘
+KEYWORDS=`echo $KEYWORDS | sed 's/ /|/g'`
 ```
 
 现在脚本看起来像这样：
@@ -21477,7 +22370,7 @@ KEYWORDS=‘echo $KEYWORDS | sed ‘s/ /|/g’‘
 ######################################################
 # 确定 sql 位置并设置变量
 #
-MYSQL=‘which mysql‘“ Problem_Trek -u cbres”
+MYSQL=`which mysql`" Problem_Trek -u cbres"
 #
 #############################################
 # 获取关键词(s)
@@ -21489,8 +22382,8 @@ then               # 获取所有传递的关键词
 #
 else               # 未传递关键词。询问用户。
       echo
-      echo “您想搜索哪些关键词?”
-      echo -e “请用空格分隔单词: \c”
+      echo "您想搜索哪些关键词?"
+      echo -e "请用空格分隔单词: \c"
       read ANSWER
       KEYWORDS=$ANSWER
 fi
@@ -21499,16 +22392,16 @@ fi
 # 查找问题记录
 #
 echo
-echo “使用关键词 $KEYWORDS 找到了以下内容:”
+echo "使用关键词 $KEYWORDS 找到了以下内容:"
 echo
 #
-KEYWORDS=‘echo $KEYWORDS | sed ‘s/ /|/g’‘
+KEYWORDS=`echo $KEYWORDS | sed 's/ /|/g'`
 # 
 $MYSQL <<EOF
 SELECT * FROM problem_logger WHERE
-    prob_symptoms REGEXP ‘($KEYWORDS)’
+    prob_symptoms REGEXP '($KEYWORDS)'
     OR
-    prob_solutions REGEXP ‘($KEYWORDS)’
+    prob_solutions REGEXP '($KEYWORDS)'
 EOF
 #
 ```
@@ -21520,10 +22413,15 @@ $ ./Find_Problem yum dash
 ```
 
 使用关键词 yum dash 找到了以下内容：yum dash 
+
 *************************** 1. row ***************** 
-id_number: 1012111624 
+
+`id_number: 1012111624` 
+
 ...
-prob_solutions: 在脚本顶部添加了 #!/bin/bash。
+
+`prob_solutions: 在脚本顶部添加了 #!/bin/bash`。
+
 这是必要的，因为 Ubuntu 的默认 shell 是 dash。
 
 现在，让我们测试不带任何参数运行脚本。相反，我们将让脚本询问我们关键词。
@@ -21533,12 +22431,19 @@ $ ./Find_Problem
 ```
 
 您想搜索哪些关键词? 
+
 请用空格分隔单词: Ubuntu  
+
 使用关键词 Ubuntu 找到了以下内容：Ubuntu 
+
 *************************** 1. row *******************
-id_number: 1012111631 
+
+`id_number: 1012111631` 
+
 ...
-prob_solutions: 在脚本顶部添加了 #!/bin/bash。
+
+`prob_solutions: 在脚本顶部添加了 #!/bin/bash`。
+
 这是必要的，因为 Ubuntu 的默认 shell 是 dash。
 
 两次测试都运行得没有任何问题。现在，在 `Problem_Trek` 数据库中查找问题记录将变得简单。
@@ -21553,12 +22458,13 @@ prob_solutions: 在脚本顶部添加了 #!/bin/bash。
 
 下一节介绍了如何使用 `uptime` 和 `vmstat` 创建一个更高级的性能监控脚本。数据从这些工具中收集并存储。
 
-### 附录 A
+## 附录 A
 
-#### bash 快速指南
+### bash 快速指南
 
 在本附录中，我们提供了关于以下内容的简明指南：
-*   shell 内部 
+
+*   shell 内部
 *   内置命令
 *   环境变量
 
@@ -21596,11 +22502,6 @@ shell 直接包含了许多常用命令。
 | `history` | 显示命令历史。 |
 | `jobs` | 列出活动作业。 |
 | `kill` | 向指定的进程 ID (PID) 发送系统信号。 |
-
-
-
-
-
 | `let` | 求值数学表达式中的每个参数。 |
 | `local` | 在函数中创建局部范围的变量。 |
 | `logout` | 退出登录 shell。 |
@@ -21616,7 +22517,7 @@ shell 直接包含了许多常用命令。
 | `shopt` | 切换控制可选 shell 行为的变量值。 |
 | `suspend` | 挂起 shell 的执行，直到收到 `SIGCONT` 信号。 |
 | `test` | 根据指定的条件返回 0 或 1 的退出状态。 |
-| `times` | 显示累积的用户和系统（时间） |
+| `times` | 显示累积的用户和系统时间。 |
 | `trap` | 如果收到指定的系统信号，则执行指定的命令。 |
 | `type` | 显示指定的单词用作命令时将如何被解释。 |
 | `ulimit` | 为系统用户设置指定资源的限制。 |
@@ -21633,7 +22534,7 @@ shell 直接包含了许多常用命令。
 
 ### 表 A.2 bash Shell 外部命令
 
-| 命令 |  |
+| 命令 | 描述 |
 | :--- | :--- |
 | `bzip2` | 使用 Burrows-Wheeler 块排序文本压缩算法和霍曼编码进行压缩。 |
 | `cat` | 列出指定文件的内容。 |
@@ -21652,6 +22553,11 @@ shell 直接包含了许多常用命令。
 | `file` | 查看指定文件的类型。 |
 | `find` | 对文件进行递归搜索。 |
 | `finger` | 显示 Linux 系统或远程系统中用户账户的信息。 |
+
+
+
+| 命令 | 描述 |
+| :--- | :--- |
 | `free` | 检查系统的可用和已用内存。 |
 | `grep` | 在文件中搜索指定的文本字符串。 |
 | `groupadd` | 创建新的系统组。 |
@@ -21675,7 +22581,7 @@ shell 直接包含了许多常用命令。
 | `rmdir` | 删除目录。 |
 | `sort` | 组织数据。 |
 | `stat` | 查看文件统计信息。 |
-| `sudo` | 以 root 用户运行。 |
+| `sudo` | 以 `root` 用户运行。 |
 | `tail` | 显示文件的尾部分。 |
 | `tar` | 归档数据。 |
 | `touch` | 创建空文件。 |
@@ -21695,7 +22601,7 @@ shell 直接包含了许多常用命令。
 
 `bash` shell 还利用许多环境变量。虽然环境变量不是命令，但它们经常影响命令的运行，因此了解环境变量非常重要。[表 A.3] 显示了 `bash` shell 中可用的默认环境变量。
 
-### 表 A.3 bash Shell 环境变量
+### 表 A.3：`bash` Shell 环境变量
 
 | 变量 | 描述 |
 | :--- | :--- |
@@ -21712,20 +22618,15 @@ shell 直接包含了许多常用命令。
 | `BASH_ARGC` | 当前子程序中的参数个数。 |
 | `BASH_ARGV` | 包含所有已指定的命令行参数的数组。 |
 | `BASH_COMMAND` | 当前正在执行的命令名称。 |
-| `BASH_ENV` | 设置时，每个 bash 脚本在运行前都会尝试执行由此变量定义的启动文件。 |
+| `BASH_ENV` | 设置时，每个 `bash` 脚本在运行前都会尝试执行由此变量定义的启动文件。 |
 | `BASH_EXECUTION_STRING` | 用于 `-c` 命令行选项的命令。 |
 | `BASH_LINENO` | 包含脚本中每个命令行号的数组。 |
 | `BASH_REMATCH` | 包含匹配指定正则表达式的文本元素的数组。 |
 | `BASH_SOURCE` | 包含 shell 中声明函数的源文件名的数组。 |
 | `BASH_SUBSHELL` | 当前 shell 派生的子 shell 数量。 |
-
-
-
-
-
-| `BASH_VERSION` | 当前 bash shell 实例的版本号。 |
-| `BASH_VERSINFO` | 一个变量数组，包含当前 bash shell 实例的各个主版本和次版本号。 |
-| `COLUMNS` | 包含当前 bash shell 实例所使用的终端宽度。 |
+| `BASH_VERSION` | 当前 `bash` shell 实例的版本号。 |
+| `BASH_VERSINFO` | 一个变量数组，包含当前 `bash` shell 实例的各个主版本和次版本号。 |
+| `COLUMNS` | 包含当前 `bash` shell 实例所使用的终端宽度。 |
 | `COMP_CWORD` | 变量 `COMP_WORDS` 的索引，包含当前光标位置。 |
 | `COMP_LINE` | 当前的命令行。 |
 | `COMP_POINT` | 当前光标位置相对于当前命令起始位置的索引。 |
@@ -21748,7 +22649,7 @@ shell 直接包含了许多常用命令。
 | `HISTSIZE` | 历史文件中存储的最大命令数。 |
 | `HOSTFILE` | 包含 shell 需要补全主机名时应该读取的文件名。 |
 | `HOSTNAME` | 当前的主机名。 |
-| `HOSTTYPE` | 描述运行 bash shell 机器的字符串。 |
+| `HOSTTYPE` | 描述运行 `bash` shell 机器的字符串。 |
 | `IGNOREEOF` | shell 之前必须接收的连续 EOF 字符数。如果此值不存在，默认值为 1。 |
 | `INPUTRC` | readline 初始化文件名（默认为 `.inputrc`）。 |
 | `LANG` | shell 的本地区域类别。 |
@@ -21762,43 +22663,43 @@ shell 直接包含了许多常用命令。
 | `MACHTYPE` | 以 `cpu`-`company`-`system` 格式定义系统类型的字符串。 |
 | `MAILCHECK` | shell 检查新邮件的频率（秒为单位，默认为 60）。 |
 | `OLDPWD` | shell 中使用的上一个工作目录。 |
-| `OPTERR` | 如果设置为 1，bash shell 会显示 `getopts` 命令生成的错误。 |
+| `OPTERR` | 如果设置为 1，`bash` shell 会显示 `getopts` 命令生成的错误。 |
 | `OSTYPE` | 定义 shell 运行操作系统的字符串。 |
 | `PIPESTATUS` | 一个变量数组，包含前台进程的退出状态值列表。 |
-| `POSIXLY_CORRECT` | 如果设置，bash 以 POSIX 模式启动。 |
-| `PPID` | bash shell 父进程的进程 ID (PID)。 |
+| `POSIXLY_CORRECT` | 如果设置，`bash` 以 POSIX 模式启动。 |
+| `PPID` | `bash` shell 父进程的进程 ID (PID)。 |
 | `PROMPT_COMMAND` | 如果设置，在显示主提示符之前执行的命令。 |
 | `PS1` | 主命令行提示符字符串。 |
 | `PS2` | 次级命令行提示符字符串。 |
 | `PS3` | `select` 命令使用的提示符。 |
-| `PS4` | 使用 bash `-x` 参数时，在命令行回显之前显示的提示符。 |
+| `PS4` | 使用 `bash` `-x` 参数时，在命令行回显之前显示的提示符。 |
 | `PWD` | 当前工作目录。 |
 | `RANDOM` | 返回 0 到 32767 之间的随机数。给此变量赋值会为随机数生成器种子。 |
 | `REPLY` | `read` 命令的默认变量。 |
 | `SECONDS` | 自 shell 启动以来的秒数。赋值会将计时器重置为该值。 |
-| `SHELLOPTS` | 已启 bash shell 选项列表，用冒号分隔。 |
-| `SHLVL` | 表示 shell 层级，每启动一个新的 bash shell 就会加 1。 |
+| `SHELLOPTS` | 已启 `bash` shell 选项列表，用冒号分隔。 |
+| `SHLVL` | 表示 shell 层级，每启动一个新的 `bash` shell 就会加 1。 |
 | `TIMEFORMAT` | 指定 shell 如何显示时间的格式。 |
 | `TMOUT` | shell 等待的时间（秒为单位）。 |
 | `UID` | 当前用户的有效用户 ID。 |
 
-# 附录 B：sed 和 gawk 快速指南
+# 附录 B：`sed` 和 `gawk` 快速指南
 
-## sed 编辑器
+## `sed` 编辑器
 
-sed 编辑器可以处理数据。它从输入读取一行数据，并将该数据与提供的编辑器命令进行匹配，更改流中的数据然后输出新数据。
+`sed` 编辑器可以处理数据。它从输入读取一行数据，并将该数据与提供的编辑器命令进行匹配，更改流中的数据然后输出新数据。
 
-### 启动 sed 编辑器
+### 启动 `sed` 编辑器
 
-使用 sed 的格式为：
+使用 `sed` 的格式为：
 
 `sed options script`
 
 `options` 参数允许你自定义 `sed` 命令的行为，包括表 B.1 所示的选项。
 
-### 表 B.1：sed 命令选项
+### 表 B.1：`sed` 命令选项
 
-| 选项 |  |
+| 选项 | 描述 |
 | :--- | :--- |
 | `-e` `script` | 在处理输入时，将 `script` 中指定的命令添加到命令列表中。 |
 | `-f` `file` | 在处理输入时，将文件 `file` 中指定的命令添加到命令列表中。 |
@@ -21806,9 +22707,9 @@ sed 编辑器可以处理数据。它从输入读取一行数据，并将该数�
 
 `script` 参数指定了应用于数据流的单个命令。如果需要多个命令，你必须使用 `-e` 选项在命令行中指定它们，或使用 `-f` 选项在单独的文件中指定它们。
 
-## sed 命令
+## `sed` 命令
 
-sed 编辑器脚本包含了 sed 对输入中每行数据进行处理的命令。本节描述了你可能想要使用的一些常用 sed 命令。
+`sed` 编辑器脚本包含了 `sed` 对输入中每行数据进行处理的命令。本节描述了你可能想要使用的一些常用 `sed` 命令。
 
 ### 替换
 
@@ -21816,28 +22717,25 @@ sed 编辑器脚本包含了 sed 对输入中每行数据进行处理的命令�
 
 `s/pattern/replacement/flags`
 
-`pattern` 是要替换的文本，`replacement` 是 sed 将插入到该位置的新文本。
+`pattern` 是要替换的文本，`replacement` 是 `sed` 将插入到该位置的新文本。
 
 `flags` 参数控制替换的发生方式。共有四种类型的替换标志可用：
 
-*   一个数字，表示要替换的模式出现次数。
-*   `g`：表示替换文本的所有出现处。
-*   `p`：表示打印原始行的内容。
-*   `w` `file`：表示将替换结果写入文件。
-
-
-
+- 一个数字，表示要替换的模式出现次数。
+- `g`：表示替换文本的所有出现处。
+- `p`：表示打印原始行的内容。
+- `w` `file`：表示将替换结果写入文件。
 
 在第一种替换中，你可以指定 `sed` 编辑器应该替换匹配模式的几次出现处。例如，你使用 `2` 来仅替换模式的第二次出现处。
 
-## 定址 (Addressing)
+### 定址（Addressing）
 
 默认情况下，你在 `sed` 编辑器中使用的命令适用于文本数据的所有行。如果你只想将命令应用于特定的某行或一组行，则必须使用行定址。
 
 `sed` 编辑器中有两种行定址的格式：
 
-*   数字行范围
-*   过滤出某行的文本模式
+- 数字行范围
+- 过滤出某行的文本模式
 
 这两种形式在指定地址时使用相同的格式：
 
@@ -21845,7 +22743,7 @@ sed 编辑器脚本包含了 sed 对输入中每行数据进行处理的命令�
 
 使用数字行定址时，你通过行在文本流中的位置来引用行。`sed` 编辑器将文本流中的第一行分配为行号一，并对每个新行顺序递增。
 
-```
+```bash
 $ sed ‘2,3s/dog/cat/’ data1
 ```
 
@@ -21855,7 +22753,7 @@ $ sed ‘2,3s/dog/cat/’ data1
 
 你必须用正斜杠将你指定的 `pattern` 括起来。`sed` 编辑器仅对包含你指定的文本模式的行应用命令。
 
-```
+```bash
 $ sed ‘/rich/s/bash/csh/’ /etc/passwd
 ```
 
@@ -21863,7 +22761,7 @@ $ sed ‘/rich/s/bash/csh/’ /etc/passwd
 
 你还可以将多个命令组合到特定的地址中：
 
-```
+```bash
 address {
 command1
 command2
@@ -21873,7 +22771,7 @@ command3
 
 `sed` 编辑器将你指定的每个命令仅应用于匹配指定地址的行。`sed` 编辑器将处理地址行上列出的每个命令：
 
-```
+```bash
 $ sed ‘2{
 > s/fox/elephant/
 > s/dog/cat/
@@ -21882,51 +22780,51 @@ $ sed ‘2{
 
 `sed` 编辑器将每个替换操作都应用于数据文件中的第二行。
 
-## 删除行 (Deleting Lines)
+### 删除行（Deleting Lines）
 
 删除命令 `d` 的作用几乎如其名。它会删除任何匹配所提供地址方案的文本行。使用删除命令时要小心，因为如果你忘记包含地址方案，流中的所有行都将被删除：
 
-```
+```bash
 $ sed ‘d’ data1
 ```
 
 删除命令在与指定地址结合使用时显然最有用。这允许你从数据流中删除特定的文本行，可以通过行号：
 
-```
+```bash
 $ sed ‘3d’ data6
 ```
 
 或者通过一个特定的行范围：
 
-```
+```bash
 $ sed ‘2,3d’ data6
 ```
 
 `sed` 编辑器的模式匹配功能也适用于删除命令：
 
-```
+```bash
 $ sed ‘/number 1/d’ data6
 ```
 
 只有匹配指定文本的行会被从流中删除。
 
-## 插入和追加文本 (Inserting and Appending Text)
+### 插入和追加文本（Inserting and Appending Text）
 
 正如你预期的，像任何其他编辑器一样，`sed` 编辑器允许你向数据流插入和追加文本行。这两个操作之间的区别可能会引起混惑：
 
-*   插入命令 (`i`）在指定行之前添加新行。
-*   追加命令 (`a`）在指定行之后添加新行。
+- 插入命令（`i`）在指定行之前添加新行。
+- 追加命令（`a`）在指定行之后添加新行。
 
 这两个命令的格式可能会引起混惑：你不能在单行命令上使用这些命令。你必须在单独的一行中指定要插入或追加的行。此操作的格式为：
 
-```
+```bash
 sed ‘[address]command\
 new line’
 ```
 
 `new line` 中的文本将出现在 `sed` 编辑器输出的指定位置。记住，当你使用插入命令时，文本出现在数据流文本之前：
 
-```
+```bash
 $ echo “testing” | sed ‘i\
 > This is a test’
 This is a test
@@ -21936,8 +22834,8 @@ $
 
 当你使用追加命令时，文本出现在数据流文本之后：
 
-```
-$ echo “testing” | sed ‘a\ 
+```bash
+$ echo “testing” | sed ‘a\
 > This is a test’
 testing
 This is a test
@@ -21946,30 +22844,30 @@ $
 
 这允许你在普通文本的末尾插入文本。
 
-## 修改行 (Changing Lines)
+### 修改行（Changing Lines）
 
 更改命令允许你更改数据流中整行文本的内容。它的工作方式与插入和追加命令相同，即你必须将新行与 `sed` 命令的其他部分分开单独指定：
 
-```
+```bash
 $ sed ‘3c\
 > This is a changed line of text.’ data6
 ```
 
 反斜杠字符用于指示脚本中的新行数据。
 
-## 转换命令 (Transform Command)
+### 转换命令（Transform Command）
 
-转换命令 (`y`) 是 `sed` 编辑器中唯一对单个字符操作的命令。转换命令使用以下格式：
+转换命令（`y`）是 `sed` 编辑器中唯一对单个字符操作的命令。转换命令使用以下格式：
 
 `[address]y/inchars/outchars/`
 
 转换命令对 `inchars` 和 `outchars` 的值进行一对一的映射。`inchars` 中的第一个字符转换为 `outchars` 中的第一个字符。`inchars` 中的第二个字符转换为 `outchars` 中的第二个字符。这种映射持续到指定字符的整个长度。如果 `inchars` 和 `outchars` 长度不同，`sed` 编辑器将产生错误消息。
 
-## 打印行 (Printing Lines)
+### 打印行（Printing Lines）
 
 与替换命令中的 `p` 标志类似，`p` 命令在 `sed` 编辑器输出中打印一行。打印命令最常用的用途是打印包含来自文本模式匹配文本的行：
 
-```
+```bash
 $ sed -n ‘number 3/p’ data6
 This is line number 3.
 $
@@ -21977,65 +22875,63 @@ $
 
 `print` 命令允许你从输入流中过滤出特定的数据行。
 
-## 写入文件 (Writing to a File)
+### 写入文件（Writing to a File）
 
 `w` 命令用于将行写入。`w` 命令的格式为：
 
 `[address]w filename`
 
-`filename` 可以指定为相对路径或绝对路径，但无论哪种，sed 编辑器必须对该文件具有写权限。
+`filename` 可以指定为相对路径或绝对路径，但无论哪种，`sed` 编辑器必须对该文件具有写权限。
 
-### 从文件读取 (Reading from a File)
+### 从文件读取（Reading from a File）
 
-你已经看到如何向数据流插入和追加文本。读取命令 (`r`) 允许你插入包含在单独文件中的数据。读取命令的格式：
+你已经看到如何向数据流插入和追加文本。读取命令（`r`）允许你插入包含在单独文件中的数据。读取命令的格式：
 
 `[address]r filename`
 
-`filename` 指定绝对或相对路径。你不能对读取命令使用地址范围。你只能指定单个行号或文本模式。sed 编辑器会在地址之后插入来自文件的文本。
+`filename` 指定绝对或相对路径。你不能对读取命令使用地址范围。你只能指定单个行号或文本模式。`sed` 编辑器会在地址之后插入来自文件的文本。
 
-```
+```bash
 $ sed ‘1,2 test’ data6
 ```
 
 输出文件 `test` 仅包含来自输入流的最前两行。
 
-## gawk 程序
-
-### gawk 程序
+## `gawk` 程序
 
 `gawk` 程序是 Unix 中原始 `awk` 程序的 GNU 版本。`awk` 程序通过提供编程语言而非仅是编辑器命令，比 `sed` 编辑器更进一步。本节描述了 `gawk` 程序的基础，作为其功能的快速参考。
 
 ### 命令格式
 
-`gawk` 程序的的基本格式如下：
+`gawk` 程序的基本格式如下：
 
 `gawk options program file`
 
-### gawk 选项
+### `gawk` 选项
 
 | 选项 | 描述 |
 | :--- | :--- |
 | `-F` `fs` | 指定文件分隔符用于划分行中的数据字段。 |
 | `-f` `file` | 指定用于读取程序的文件名。 |
 | `-v` `var=value` | 在 `gawk` 程序中定义变量和默认值。 |
-| `-mf` `N` | 指定数据文件中处理的最最大字段数。 |
+| `-mf` `N` | 指定数据文件中处理的最大字段数。 |
 | `-mr` `N` | 指定数据文件中最大记录的大小。 |
+
+
+
 | `-W` `keyword` | 为 `gawk` 指定兼容模式或警告级别。使用 `help` 选项列出所有可用关键字。 |
 
 命令行选项提供了一种自定义 `gawk` 程序功能的简便方法。
 
-### 使用 gawk
+# 使用 `gawk`
 
 你可以直接从命令行使用 `gawk`，也可以在你的 shell 脚本中使用。本节演示了如何使用 `gawk` 程序以及如何为 `gawk` 输入供其处理的脚本。
 
-
-
-
-# 从命令行读取程序脚本
+## 从命令行读取程序脚本
 
 一个 `gawk` 程序脚本由一对左括号和右括号定义。你必须将脚本命令放置在两个括号之间。由于 `gawk` 命令行假设脚本是一个单一文本字符串，因此你还必须用单引号将你的脚本括起来。这里有一个在命令行上指定的简单 `gawk` 程序脚本的示例：
 
-```
+```bash
 $ gawk '{print $1}'
 ```
 
@@ -22045,10 +22941,10 @@ $ gawk '{print $1}'
 
 如果一种编程语言只能执行一个命令，那么这种语言将变得大大没用处。`gawk` 编程语言允许你将多个命令组合成一个正常的程序。若要在在命令行指定的程序脚本中使用多个命令，只需在每个命令之间放置一个分号即可：
 
-```
+```bash
 $ echo "My name is Rich" | gawk '{$4="Dave"; print $0}'
 My name is Dave
-$ 
+$
 ```
 
 该脚本执行了两个命令：首先，它将第四个数据字段替换为不同的值；然后它显示流中的整条数据行。
@@ -22057,7 +22953,7 @@ $
 
 与 `sed` 编辑器一样，`gawk` 编辑器允许你将程序存储在文件中，并在命令行中引用它们：
 
-```
+```bash
 $ cat script2
 { print $5 ' userid is ' $1 }
 $ gawk -F: -f script2 /etc/passwd
@@ -22069,10 +22965,10 @@ $ gawk -F: -f script2 /etc/passwd
 
 `gawk` 程序还允许你指定程序脚本运行的时机。默认情况下，`gawk` 从输入中读取一行文本，然后对该行文本中的数据执行程序脚本。有时，你可能需要在处理数据之前运行脚本，例如为报告创建一个表头部分。要做到这一点，你可以使用 `BEGIN` 关键字。这会强制 `gawk` 在读取数据之前执行 `BEGIN` 关键字之后指定的程序脚本：
 
-```
+```bash
 $ gawk 'BEGIN {print "This is a test report"}'
 This is a test report
-$ 
+$
 ```
 
 你可以在 `BEGIN` 部分中放置任何类型的 `gawk` 命令，例如为变量分配默认值的命令。
@@ -22081,7 +22977,7 @@ $
 
 与 `BEGIN` 关键字类似，`END` 关键字允许你指定一个 `gawk` 在读取数据后执行的程序脚本：
 
-```
+```bash
 $ gawk 'BEGIN {print "Hello World!"} {print $0} END {print "byebye"}'
 Hello World!
 This is a test
@@ -22094,7 +22990,7 @@ $
 
 `gawk` 程序首先执行 `BEGIN` 部分的代码，然后处理输入流中的任何数据，最后执行 `END` 部分的代码。
 
-# gawk 变量
+# `gawk` 变量
 
 `gawk` 程序不仅仅是一个编辑器；它是一个完整的编程环境。因此，有许多与 `gawk` 相关的命令和功能。本节展示了在使用 `gawk` 进行编程时需要了解的主要功能。
 
@@ -22122,7 +23018,7 @@ $
 
 除了字段和记录分隔符外，`gawk` 还提供了其他内置变量来帮助你了解情况。表 B.4 显示了更多内置变量。
 
-### 表 B.4 hơn gawk 内置变量
+### 表 B.4 `gawk` 内置变量
 
 | 变量 | 描述 |
 | :--- | :--- |
@@ -22147,14 +23043,14 @@ $
 
 在 `gawk` 程序中为变量赋值类似于在 shell 脚本中——使用赋值语句：
 
-```
+```bash
 $ gawk '
 > BEGIN{
 > testing="This is a test"
 > print testing
 > }
 This is a test
-$ 
+$
 ```
 
 一旦为变量赋值，你就可以在 `gawk` 脚本的任何地方使用它。
@@ -22163,7 +23059,7 @@ $
 
 你还可以使用 `gawk` 命令行为变量赋值。这允许你在代码之外设置值，从而动态更改值。这里有一个使用命令行变量显示文件中特定数据字段的示例：
 
-```
+```bash
 $ cat script1
 BEGIN{FS=","}
 {print $n}
@@ -22173,9 +23069,9 @@ $ gawk -f script1 n=3 data1
 
 这一特性是处理 shell 脚本数据的极佳方法。
 
-# gawk 程序功能
+# `gawk` 程序功能
 
-`gawk` 程序的某些功能对于处理数据非常方便，允许你创建可以解析任何类型文本文件的 gawk 脚本，包括日志文件。
+`gawk` 程序的某些功能对于处理数据非常方便，允许你创建可以解析任何类型文本文件的 `gawk` 脚本，包括日志文件。
 
 ## 正则表达式
 
@@ -22183,24 +23079,21 @@ $ gawk -f script1 n=3 data1
 
 在使用正则表达式时，正则表达式必须出现在它所控制的程序脚本的左括号之前：
 
-```
+```bash
 $ gawk 'BEGIN{FS=","} /test/{print $1}' data1
 This is a test
-$ 
+$
 ```
 
 ## 匹配运算符
 
-匹配运算符允许你将正则表达式限制到记录中的特定数据字段。匹配运算符是波浪号 (`~`)。你指定匹配运算符、数据字段变量以及要匹配的正则表达式：
+匹配运算符允许你将正则表达式限制到记录中的特定数据字段。匹配运算符是波浪号（`~`）。你指定匹配运算符、数据字段变量以及要匹配的正则表达式：
 
-```
+```text
 $1 ~ /^data/
 ```
 
 该表达式过滤第一个数据字段以文本 data 开头的记录。
-
-
-
 
 除了正则表达式外，你还可以在匹配模式中使用数学表达式。此功能在匹配数据字段中的数值时非常有用。例如，如果你想显示所有属于 root 用户组（组 ID 0）的系统用户，可以使用此脚本：
 
@@ -22214,12 +23107,14 @@ gawk -F: ‘$4 == 0{print $1} /etc/passwd
 
 `gawk` 程序支持以下结构化命令：
 
-## if-then-else 语句
+## `if-then-else` 语句
+
 ```bash
 if (condition) statement1; else statement2
 ```
 
-### `while` 语句
+## `while` 语句
+
 ```bash
 while (condition)
 {
@@ -22227,14 +23122,16 @@ while (condition)
 }
 ```
 
-### `do-while` 语句
+## `do-while` 语句
+
 ```bash
 do {
   statements
 } while (condition)
 ```
 
-### `for` 语句
+## `for` 语句
+
 ```bash
 for(variableassignment; condition; iteration process)
 ```
@@ -22245,38 +23142,38 @@ for(variableassignment; condition; iteration process)
 
 ## 符号与数字
 
-- `:` (冒号)
+- `:`（冒号）
 - `/etc/passwd`
 - `IFS`
-- `.` (点)
-- BRE
+- `.`（点）
+- `BRE`
 - 正则表达式
 - 相对文件路径
-- `..` (双点), 相对文件路径
-- `;` (分号)
+- `..`（双点），相对文件路径
+- `;`（分号）
 - `do`
 - 函数
 - `IFS`
 - `mysql`
 - `sed`
 - shell 脚本
-- `&` (安符)
+- `&`（安符）
 - 后模式
 - 双括号符号
 - `sed`
 - `STDERR`
-- `&&` (双安符)
+- `&&`（双安符）
 - 双括号符号
 - `PID`
-- `*` (星号)
-- BRE
+- `*`（星号）
+- `BRE`
 - `case`
 - 可执行文件
 - 过滤字符串
 - `ls`
 - 正则表达式
-- `**` (双星号), 双括号符号
-- `\` (反斜杠)
+- `**`（双星号），双括号符号
+- `\`（反斜杠）
 - `for`
 - bash 提示符字符
 - `list`
@@ -22285,112 +23182,111 @@ for(variableassignment; condition; iteration process)
 - `sem`
 - shell 脚本
 - `substitution`
-- `` ` `` (反引号)
+- `` ` ``（反引号）
 - `bc`
 - shell 脚本
-- `ˆ` (脱字符符号)
+- `ˆ`（脱字符符号）
 - 锚点字符
 - 正则表达式
 - `sed`
-- `{}` (花括号), ERE
-- `$` (美元符号)
+- `{}`（花括号），ERE
+- `$`（美元符号）
 - bash shell
 - 环境变量
 - `sed`
 - 用户变量
-- `$$` (双美元符号)
+- `$$`（双美元符号）
 - bash shell
 - dash shell
-- `=` (等号)
+- `=`（等号）
 - 磁盘空间监控
 - 环境变量
 - 文件权限
 - `print`
 - 用户变量
-- `!` (感叹号)
+- `!`（感叹号）
 - 双括号符号
 - `sed`
 - `substitution`
-- `>` (大于符号)
+- `>`（大于符号）
 - BSD 风格参数
 - 输出重定向
 - `sed`
-- `>>` (双大于符号)
+- `>>`（双大于符号）
 - 输出重定向
 - 统计报告
-- `#` (井号)
-- `<` (小于符号)
+- `#`（井号）
+- `<`（小于符号）
 - 输入重定向
 - `sed`
-- `<<` (双小于符号)
+- `<<`（双小于符号）
 - 双括号符号
 - 内联输入重定向
-- `-` (减号/连字符号)
-- BRE
+- `-`（减号/连字符号）
+- `BRE`
 - 文件权限
 - 格式指定符
-- `--` (双减号/连字符号)
-- Mutt
+- `--`（双减号/连字符号）
+- `Mutt`
 - `shift`
-- `-?` (减号/连字符号问号), `psql`
-- `---` (三减号/连字符号), 权限代码
-- `|` (管道符号)
+- `-?`（减号/连字符号问号），`psql`
+- `---`（三减号/连字符号），权限代码
+- `|`（管道符号）
 - 双括号符号
-- ERE
+- `ERE`
 - 正则表达式
 - `sort`
-- `||` (双管道符号), 双括号符号
-- `+` (加号)
+- `||`（双管道符号），双括号符号
+- `+`（加号）
 - BSD 风格参数
-- ERE
+- `ERE`
 - 文件权限
 - 正则表达式
-- `?` (问号)
-- ERE
+- `?`（问号）
+- `ERE`
 - 过滤字符串
 - `mysql`
 - `read`
 - 正则表达式
 - 用户账户
-- `“”` (双引号)
+- `“”`（双引号）
 - `for`
 - `IFS`
 - 位置参数
-- `''` (单引号)
+- `''`（单引号）
 - shell 脚本
 - `substitution`
-- `[]` (中括号), 后模式
+- `[]`（中括号），后模式
 - bash shell
 - `gawk`
 - 数学
-- 
 - 函数
-- `~` (波浪号)
+- `~`（波浪号）
 - 双括号符号
 - `gawk`
 - 数值
-- `+%y%m%d` (日期格式)
-- `()` (括号)
+- `+%y%m%d`（日期格式）
+- `()`（括号）
 - 退出状态
 - 函数
 - 正则表达式
 - `substitution`
-- `(())` (双括号)
+- `(())`（双括号）
 - bash shell
-- if-then
-- zsh
+- `if-then`
+- `zsh`
 - `\!`
 - bash 提示符字符
 - `mysql`
 - `\#`
 - bash 提示符字符
-- `\$`, bash 提示符字符
+- `\$`，bash 提示符字符
 - `\?`
 - `mysql`
 - `psql`
-- `\@` , bash 提示符字符
-- `\[` , bash 提示符字符
-- `\]` , bash 提示符字符
+- `\@`，bash 提示符字符
+- `\[`，bash 提示符字符
+- `\]`，bash 提示符字符
 - `$!`
 - bash shell
 - dash shell
@@ -22402,7 +23298,7 @@ for(variableassignment; condition; iteration process)
 - bash shell
 - 位置参数
 - dash shell
-- `$-` , dash shell
+- `$-`，dash shell
 - `$?`
 - bash shell
 - dash shell
@@ -22412,714 +23308,1097 @@ for(variableassignment; condition; iteration process)
 - bash shell
 - 位置参数
 - dash shell
-- `$_` , bash shell
-- `$>` , `STDERR`
+- `$_`，bash shell
+- `$>`，`STDERR`
 - `$0`
 - bash shell
 - dash shell
 - `gawk`
-- zsh
+- `zsh`
 - `1`
 - 退出状态
 - 信号
-- `$1`, `gawk`
+- `$1`，`gawk`
 - `2`
 - 退出状态
 - 信号
-- `$2`, `gawk`
-- `3`, 信号
-- `9`, 信号
-- `15`, 信号
-- `17`, 信号
-- `18`, 信号
-- `19`, 信号
-- `126`, 退出状态
-- `127`, 退出状态
-- `128`, 退出状态
-- `128+x`, 退出状态
-- `130`, 退出状态
-- `132`, 退出状态
+- `$2`，`gawk`
+- `3`，信号
+- `9`，信号
+- `15`，信号
+- `17`，信号
+- `18`，信号
+- `19`，信号
+- `126`，退出状态
+- `127`，退出状态
+- `128`，退出状态
+- `128+x`，退出状态
+- `130`，退出状态
+- `132`，退出状态
 
+## 内置函数与变量
 
+### 内置函数，`gawk`
 
+### 内置变量，`gawk`
 
+- `bunzip2`
+- `-buried_news`
+- `bye`
+- `bzcat`
+- `bzip2`
+- `bzip2recover`
 
-### 内置函数, `gawk`
-### 内置变量, `gawk`
+## C
 
-`bunzip2`
-
-`-buried_news`
-
-`bye`
-
-`bzcat`
-
-`bzip2`
-
-`bzip2recover`
-
-### C
-`C`, `sendmail`
-
-`c`
-
-> `aptitude`
-> 字符设备权限
-> `fdisk`
-> 格式指定符
-> `optstring`
-
-`-C`
-
-> `fsck`
-> `lvcreate`
-> `mysql`
-> `sort`
-
-`-c`
-
-> dash shell
-> `exit`
-> `lvcreate`
-> Mailx
-> Mutt
-> 选项
-> `psql`
-> `sort`
-> `tar`
-> TCP 模块
-
-`C-@`
-
-`\C`
-
-`\c`
-
-`-c bytes`
-`-C cmdlist`
-`-c comment`
-`-C dir`
+- `C`
+- `sendmail`
+- `c`
+- `aptitude`
+- 字符设备权限
+- `fdisk`
+- 格式指定符
+- `optstring`
+- `-C`
+- `fsck`
+- `lvcreate`
+- `mysql`
+- `sort`
+- `-c`
+- dash shell
+- `exit`
+- `lvcreate`
+- Mailx
+- Mutt
+- 选项
+- `psql`
+- `sort`
+- `tar`
+- TCP 模块
+- `C-@`
+- `\C`
+- `\c`
+- `-c bytes`
+- `-C cmdlist`
+- `-c comment`
+- `-C dir`
 
 ### C 语言
-`-c string`
 
-`C-a`
+- `-c string`
+- `C-a`
+- `cache`
+- `-cache`
+- `calendar`
+- `--calendar`
+- `caller`
+- 调用函数
+- `--cancel-label`
+- 大写
+- `case`
+- 命令行参数
+- `getopts`
+- 菜单
+- 用户账户
+- `zsh`
+- `-case`
+- 大小写敏感性
+- `cat`
+- bash shell
+- `inputbox`
+- `read`
+- `zsh`
+- `C-b`
+- `c_bases`
+- `cd`
+- bash shell
+- dash shell
+- `zsh`
+- `CDPATH`
+- `C-e`
+- `-center`
+- `C-f`
+- `-cfg`
+- `chage`
+- 修改
+- 更改大小写
+- 更改配置文件
+- `char`
+- 字符编码
+- 字符
+- 锚点
+- ANSI
+- 类
+- 设备
+- 文件
+- 权限
+- 转义
+- 范围
+- 特殊
+- `charset`
+- `chdir`
+- `--check`
+- `CHECK_DIRECTORIES`
+- `checklist`
+- `--checklist`
+- `check=none`
+- `--check=quiet`
+- `chfn`
+- `chgrp`
+- `-child`
+- `chmod`
+- bash shell
+- 权限
+- `chown`
+- `chpasswd`
+- `chsh`
+- `--chunksize`
+- `C-k`
+- `--classify`
+- 清理缩进
+- `cleanup`
+- `clear`
+- `--clear`
+- 清除回滚并重置
+- CLI。参见命令行接口
+- 客户端/服务器范式
+- `cm`
+- `CMD`
+- `-cmd`
+- `-cmd_log`
+- `-cmd_script`
+- `C-n`
+- 颜色
+- 颜色方案
+- `--colors`
+- `--color=when`
+- `--cols` `n`
+- `cols#80`
+- `--column`
+- `COLUMNS`
+- `--columns` `n`
+- COM 端口
+- `COMMAND`
+- `command`
+- `--command`
+- 命令。另请参见特定命令
+- 别名
+- bash shell
+- C 语言
+- 组，`sed`
+- 值
+- 命令行接口 (CLI)
+- bash shell
+- 函数
+- `gawk`
+- MySQL
+- PostgreSQL
+- 变量
+- 命令行参数
+- bash shell
+- `case`
+- `chage`
+- dash shell
+- GNOME
+- Konsole
+- `ls`
+- `lynx`
+- 选项
+- `tail`
+- `test`
+- `useradd`
+- `while`
+- xterm
+- `zsh`
+- `commands`
+- `COMP_CWORD`
+- `compgen`
+- `COMP_KEY`
+- `compl()`
+- `complete`
+- `COMP_LINE`
+- `COMP_POINT`
+- `COMPREPLY`
+- 压缩
+- `COMP_TYPE`
+- `COMP_WORDBREAKS`
+- `COMP_WORDS`
+- `COM_WORDBREAKS`
+- `--concatenate`
+- 条件
+- `CONFIG_FILE`
+- `configure`
+- 配置编辑器
+- `configure sysstat`
+- 连接
 
-`cache`
-`-cache`
-`calendar`
-`--calendar`
 
-`caller`
-调用函数
-`--cancel-label`
 
-大写
-
-`case`
-> 命令行参数
-> `getopts`
-> 菜单
-> 用户账户
-> zsh
-
-`-case`
-大小写敏感性
-
-`cat`
-> bash shell
-> `inputbox`
-> `read`
-> zsh
-
-`C-b`
-
-`c_bases`
-
-`cd`
-> bash shell
-> dash shell
-> zsh
-`CDPATH`
-
-`C-e`
-`-center`
-
-`C-f`
-`-cfg`
-
-`chage`
-修改
-更改大小写
-更改配置文件
-
-`char`
-字符编码
-字符
-> 锚点
-> ANSI
-> 类
-> 设备
-> 文件
-> 权限
-> 转义
-> 范围
-> 特殊
-
-`charset`
-`chdir`
-`--check`
-`CHECK_DIRECTORIES`
-`checklist`
-`--checklist`
-`check=none`
-`--check=quiet`
-
-`chfn`
-`chgrp`
-`-child`
-`chmod`
-> bash shell
-> 权限
-
-`chown`
-`chpasswd`
-`chsh`
-`--chunksize`
-
-`C-k`
-`--classify`
-
-清理缩进
-
-`cleanup`
-`clear`
-`--clear`
-清除回滚并重置
-
-CLI. 参见命令行接口
-客户端/服务器范式
-
-`cm`
-CMD
-`-cmd`
-`-cmd_log`
-`-cmd_script`
-
-`C-n`
-颜色
-颜色方案
-`--colors`
-`--color=when`
-`--cols` n
-`cols#80`
-`--column`
-`COLUMNS`
-`--columns` n
-
-COM 端口
-`COMMAND`
-command
-`--command`
-命令。另请参见特定命令
-> 别名
-> bash shell
-> C 语言
-> 组, `sed`
-> 值
-
-命令行接口 (CLI)
-> bash shell
-> 函数
-> `gawk`
-> MySQL
-> PostgreSQL
-> 变量
-
-命令行参数
-> bash shell
-> `case`
-> `chage`
-> dash shell
-> GNOME
-> Konsole
-> `ls`
-> `lynx`
-> 选项
-> `tail`
-> `test`
-> `useradd`
-> `while`
-> xterm
-> zsh
-
-`commands`
-`COMP_CWORD`
-`compgen`
-`COMP_KEY`
-`compl()`
-`complete`
-`COMP_LINE`
-`COMP_POINT`
-`COMPREPLY`
-压缩
-`COMP_TYPE`
-`COMP_WORDBREAKS`
-`COMP_WORDS`
-`COM_WORDBREAKS`
-`--concatenate`
-
-条件
-`CONFIG_FILE`
-`configure`
-配置编辑器
-`configure sysstat`
-连接
 `_connect_timeout`
+
 `CONT`
+
 `--context`
+
 继续
+
 `--continuous`
+
 控制代码
+
 > 终端仿真
+
 > terminfo 数据库
 
 `CONVFMT`
+
 `_cookie_file`
+
 `_cookies`
+
 `_cookie_save`
 
 复制
+
 复制并粘贴
+
 > `emacs`
+
 > `vim`
 
 另存为 HTML
+
 `-core`
+
 核心发行版
+
 `corutils`
+
 `cos()`
+
 计数参数
+
 `cp`
+
 `C-p`
+
 `%CPU`
+
 cr
+
 `C-r`
+
 `-crawl`
+
 `--create`
+
 `--create-rc`
+
 `cron`
+
 > `Delete_User`
+
 > 统计报告
+
 `crontab`
+
 `--cr-wrap`
+
 cs
+
 `C-s`
+
 `csh_junkie_history`
+
 `csh_junkie_loops`
+
 `csh_junkie_quotes`
+
 `csh_nullcmd`
+
 `C-Spacebar`
+
 csr
+
 `cub`
+
 `cub1`
+
 `cud`
+
 `cud1`
+
 `cuf`
+
 `cuf1`
+
 `--cumulative`
+
 cup
+
 cURL
+
 `curl`
+
 当前行
+
 `-curses_pads`
+
 剪
+
 `cuu`
+
 `cuul`
+
 `C-v`
+
 `C-x 2`
+
 `C-x 3`
+
 `C-x b`
+
 `C-x C-b`
+
 `C-x C-c`
+
 `C-x C-f`
+
 `C-x C-s`
+
 `C-x o`
+
 `C-y`
+
 `C-z`
 
 D
+
 `D`, `sendmail`
+
 `d`
+
 > 目录权限
+
 > `fdisk`
+
 > 格式指定符
+
 > `optstring`
+
 > `sed`
+
 `D$`
+
 `-D`
+
 > Mutt
+
 > `mysql`
+
 > useradd
+
 `-d`
+
 > `chage`
+
 > `cp`
+
 > `if`
+
 `mktemp`
+
 `psql`
+
 > `sort`
+
 > `tar`
+
 `\d`
+
 `-d file`
+
 `-d home _dir`
+
 `da*`
+
 每日归档
+
 dash shell
+
 > 内置命令
+
 > 命令行参数
+
 > `echo`
+
 > 环境变量
+
 > 位置参数
+
 > shell 脚本
+
 > `test`
+
 > 用户定义环境
+
 data
+
 > 存档
+
 > 压缩
+
 > 约束
+
 > `emacs`
+
 > 字段
+
 > 文件
+
 `-a`
+
 > bash shell
+
 > 格式
+
 > 输入
+
 > 文件描述符
+
 > 输出
+
 > 文件描述符
+
 > 变量
+
 > 演示
+
 > 排序
+
 > 数据库
+
 `DATE`
+
 date
+
 `
+
 `
+
 -value`
+
 `--dbname`
+
 `dd`
+
 Debian
+
 > 本地启动位置
+
 > `MySQL`
+
 > PMS
+
 > 运行级别
+
 `deb-src`
+
 `-debug_partial`
+
 Digital Equipment Corporation (DEC)
+
 `declare`
+
 `--default-item`
+
 `--defaultno`
+
 deferred
+
 `-delay`
+
 `DELETE`
+
 delete
+
 > bash shell
+
 > 目录
+
 > `read`
+
 > `sed`
+
 `--delete`
+
 Delete_User
+
 分隔符
+
 依赖
+
 > 损坏
+
 `--dereference`
+
 `DESCRIBE`
+
 Deselect
+
 `--deselect`
+
 桌面环境
+
 `DESTINATION`
+
 `/dev`
+
 设备
+
 > 名字
+
 > 权限
+
 `/dev/null`
+
 `/sdcl`
+
 `/sdx`
+
 `df`
+
 `dialog`
+
 dialog package
+
 Dickey, Thomas.
+
 `--dictionary-order`
+
 `--diff`
+
 digiKam
+
 `[:digit:]]`
+
 Digital Equipment Corporation (DEC)
- 目录
+
+目录
+
 > `for`
+
 > bash shell
+
 > `cron`
+
 > 删除
+
 > 文件，计数
+
 > `ls`
+
 > 权限
+
 > 临时
+
 > 虚拟
+
 > 通配符
+
 `--directory`
+
 `dirs`
+
 `DIRSTACK`
+
 disable
+
 `--disable-factory`
+
 磁盘空间监控
+
 > bash shell
+
 `diskmail`
+
 `DISKS_TO_MONITOR`
+
 `disown`
+
 `-display`
+
 `-display_charset`
+
 发行版
+
 > 核心
+
 > LiveCD
+
 > 专用
+
 `distrubition_name`
+
 `do`
+
 文档统计
+
 命令
+
 dolphin
+
 域名系统 (DNS)
+
 `domaintable`
+
 `done`
+
 `-dont_wrap_pre`
+
 双字节字符
+
 `do-while`
+
 `dpkg`
+
 拖放
+
 `\dt`
+
 `du`
+
 `\du`
+
 哑终端（dumb terminals）
+
 `-dump`
+
 `dw`
+
 dyne:bolic
 
 E
+
 `e`
+
 > 格式指定符
+
 `-E`
+
 > `chage`
+
 > dash shell
+
 > `mysql`
+
 > `psql`
+
 `-e`
+
 > dash shell
+
 > 文件比较
+
 > Mailx
+
 > Mutt
+
 > `mysql`
+
 > 选项
+
 > `psql`
+
 `\e`
+
 `-e command`
+
 `-e expiration _date`
+
 `-e expire _date`
+
 `-e file`
+
 `-e script`
+
 `echo`
+
 > bash shell
+
 > dash shell
+
 > 磁盘空间监控
+
 > 文件描述符
+
 > Mailx
+
 > 菜单
+
 `-n`
+
 > `STDERR`
+
 > `while`
+
 > zsh
+
 `--echo-all`
+
 `--echo-hidden`
+
 `--echo-queries`
+
 `ed`
+
 edit
+
 编辑命令
+
 > `emacs`
+
 > gedit
+
 > KWrite
+
 编辑菜单栏
+
 > GNOME 终端仿真
+
 > Konsole
+
 `_editor`
+
 编辑器
+
 > `emacs`
+
 > GNOME
+
 > KDE
+
 > `vim`
+
 `-ef`
+
 `ego`
+
 `egrep`
+
 8 位控制
+
 `el`
+
 `elif`
+
 `ell`
+
 `EMACS`
+
 `emacs`
+
 > 缓冲区
+
 > 控制台模式
+
 > 复制并粘贴
+
 > 数据
+
 > 图形窗口
+
 > 菜单栏
+
 > 搜索和替换
+
 > X Windows
+
 `-emacskeys`
+
 e-mail
+
 > 解析，正则表达式
+
 > `STDERR`
+
 > `STDOUT`
+
 `empid`
+
 仿真
+
 `-en`
+
 `enable`
+
 `-enable_scrollback`
+
 `enacs`
+
 编码
+
 `--encoding`
+
 `END`
+
 结束文件
+
 文件结束符 (`EOF`)
+
 `--entry`
+
 `ENVIRON`
+
 环境变量
+
 > 数组
+
 > bash shell
+
 > Bourne shell
+
 > 命令别名
+
 > dash shell
+
 > 默认值
+
 > 全局
+
 > 本地
+
 > 查找
+
 > Lynx
+
 > 移除
+
 > 设置
+
 > shell 脚本
+
 `EOF`。参见文件结束符
+
 epiphany
+
 `equal sign`（...不对，原文是 equal sign，即等号）
+
 `equal sign`
+
 ERE. 参见 POSIX 扩展正则表达式引擎
+
 `err_exit`
+
 `ERRNO`
+
 错误
+
 `--error`
+
 `-error_files`
+
 `err_return`
+
 `--escape`
+
 转义字符
+
 `/etc`
+
 `/etc/apt/sources.list`
+
 `/etc/bashrc`
+
 `/etc/fstab`
+
 `/etc/group`
+
 `/etc/init.d`
+
 `/etc/init.d/boot.local`
+
 `/etc/init.d/rc.local`
+
 `/etc/rcX.d`
+
 `/etc/inittab`
+
 `/etc/passwd`
+
 > `:`（冒号）
+
 > `chfn`
+
 > `IFS`
+
 `/etc/profile`
+
 `etc/rc#`
+
 `/etc/rc.d/rc.local`
+
 `/etc/rc.local`
+
 `/etc/rc.d`
+
 `/etc/shadow`
+
 `/etc/skel`
+
 `/etc/urpmi/skip.list`
 
 `EUID`
+
 `eval`
+
 `eval_lineno`
+
 evince
+
 Evolution
+
 `exec`
+
 > `date`
+
 > 文件描述符
+
 > `STDINPUT`
+
 > `STDOUT`
+
 > `while`
+
 > zsh
+
 `-exec`
+
 可执行文件
+
 `exit`
+
 > bash shell
+
 > `-c`
+
 > dash shell
+
 > `mysql`
+
 > zsh
+
 退出状态
+
 > `dialog`
+
 > dialog 小组件
+
 `--exit-label`
+
 `exp()`
+
 `--expanded`
+
 `export`
+
 `expr`
+
 `(EXPRESSION)`
+
 `ext`
+
 `ext2`
+
 `ext3`
+
 `ext4`
+
 扩展命令
+
 扩展文件系统
+
 可扩展标记语言 (XML)
+
 extents
+
 `--extents`
+
 外部工具
+
 `--extract`
 
 F
+
 `F`
+
 `f`
+
 `-F`
+
 > `mount`
+
 > Mutt
+
 > `psql`
+
 `-f`
+
 > `cp`
+
 > dash shell
+
 > 文件比较
+
 > `funclib`
+
 > `gawk`
+
 > `if`
+
 > `mount`
+
 > Mutt
+
 > `mysql`
+
 > 选项
+
 > `psql`
+
 > `sort`
+
 > TCP 模块
+
 `-f` 文件
+
 > `sed`
+
 `-F fs`
+
 `-f` 不活跃
+
 `-f inactive_days`
+
 `false`
+
 FAT16
+
 FAT32
+
 `fb font`
+
 `fc`
+
 `FCEDIT`
+
 `FD`
+
 `fdisk`
+
 Fedora
+
 > `ext4`
-
-
-
-
 
 ### 本地启动文件位置
 
@@ -23381,7 +24660,7 @@ LVM
 
 `-ftp`
 
- `funclib`
+`funclib`
 
 `FUNAME`
 
@@ -23853,12 +25132,9 @@ options
 
 home
 
+
+
 `$HOME`
-
-
-
-
-
 
 `local installation`
 
@@ -23883,10 +25159,15 @@ home
 日志消息
 
 ### 逻辑卷管理器 (LVM)
+
 > 文件系统管理
+
 > 镜像
+
 > 修改
+
 > 照照
+
 > 条带
 
 逻辑卷
@@ -23904,8 +25185,11 @@ login shell
 循环。另参见特定的循环操作符
 
 > 控制
+
 > 文件
+
 > 嵌套
+
 > 输出处理
 
 `[[:lower:]]`
@@ -23915,11 +25199,17 @@ login shell
 `ls`
 
 > `*` (星号)
+
 > bash shell
+
 > 命令行参数
+
 > 目录
+
 > 过滤
+
 > 正则表达式
+
 > `STDOUT`
 
 `--ls`
@@ -23949,6 +25239,7 @@ LVM2
 ### Lynx
 
 > 环境变量
+
 > 输出捕获
 
 `lynx`
@@ -23966,20 +25257,27 @@ M
 `m`
 
 > `fdisk`
+
 > 正则表达式区间
 
 `-M`
 
 > `sort`
+
 > `useradd`
 
 `-m`
 
 > `chage`
+
 > dash shell
+
 > `lvcreate`
+
 > Mutt
+
 > `sort`
+
 > `useradd`
 
 `M-<`
@@ -24011,13 +25309,17 @@ Maildir 格式的邮箱
 **公众号：古德猫宁李**
 
 * 电子书搜索下载
+
 * 书单分享
+
 * 书友学习交流
 
 **网站：**[沉金书屋 https://www.chenjin5.com](https://www.chenjin5.com)
 
 * 电子书搜索下载
+
 * 电子书打包资源分享
+
 * 学习资源分享
 
 `mailertable`
@@ -24049,7 +25351,9 @@ Mandriva
 math
 
 > `gawk`
+
 > shell 脚本
+
 > zsh
 
 Mauelagen, Heinz
@@ -24085,6 +25389,7 @@ media
 memory
 
 > 管理
+
 > 页面
 
 `MemTotal`
@@ -24104,13 +25409,17 @@ menus
 > 函数
 
 > 脚本
+
 > 图形化窗口
+
 > `select`
 
 menu bar
 
 > `emacs`
+
 > GNOME 终端
+
 > Konsole
 
 `--merge`
@@ -24118,8 +25427,11 @@ menu bar
 messages
 
 > area
+
 > IMAP
+
 > 日志
+
 > shell 脚本
 
 messages
@@ -24181,6 +25493,7 @@ Modelines
 modules
 
 > 内核
+
 > zsh
 
 modulo
@@ -24188,10 +25501,15 @@ modulo
 monitoring
 
 > 磁盘空间
+
 > bash 脚本
+
 > 进程
+
 > program
+
 > 实时进程
+
 > Windows
 
 `--month-sort`
@@ -24203,6 +25521,7 @@ mount
 `mount`
 
 > bash 脚本
+
 > 硬盘
 
 mount points
@@ -24234,6 +25553,7 @@ multiple commands
 > `gawk`
 
 > shell 脚本
+
 `while`
 
 多个变量，`for`
@@ -24263,6 +25583,7 @@ MySQL
 `mysql`
 
 > `$?`
+
 > `-e`
 
 `mysql INSERT`
@@ -24276,30 +25597,39 @@ N
 `n`
 
 > `fdisk`
+
 > 网络设备权限
+
 > `sed`
 
 `$n`
 
 > dash shell
+
 > `gawk`
 
 `-N`
 
 > `fsck`
+
 > `mysql`
 
 `-n`
 
 > 磁盘空间监控
+
 > `echo`
+
 > jobs
+
 > `lvcreate`
 
 > Mailx
+
 > `mount`
 
 > Mutt
+
 > 选项
 
 > `print`
@@ -24307,6 +25637,7 @@ N
 > `read`
 
 > `sed`
+
 > `sort`
 
 > 替换
@@ -24356,8 +25687,11 @@ nautilus
 network
 
 > 设备
+
 > 文件
+
 > 权限
+
 > zsh
 
 网络文件系统
@@ -24389,6 +25723,7 @@ network
 `--no-align`
 
 `-nobold`
+
 `-nobrowse`
 
 `--nocancel`
@@ -24410,6 +25745,7 @@ nodes
 `-nofilerferer`
 
 `--noframe`
+
 `--no-group`
 
 `--headers`
@@ -24436,7 +25772,7 @@ nohup
 
 `--noreverse`
 
-----noroot`
+`----noroot`
 
 `--noroute`
 
@@ -24501,6 +25837,7 @@ problem-logger
 process ID (PID)
 
 > `&&`
+
 > `while`
 
 process ID (`PID`)
@@ -24510,10 +25847,15 @@ process ID (`PID`)
 processes
 
 > 监控
+
 > 实时
+
 > 信号
+
 > 停止
+
 > 用户帐户
+
 > 虚拟内存
 
 > 僵
@@ -24577,7 +25919,9 @@ PV。另参见物理卷
 `pwd`
 
 > bash shell
+
 > dash shell
+
 > zsh
 
 Python 控制台
@@ -24587,6 +25931,7 @@ Q
 `q`
 
 > `fdisk`
+
 > `vim`
 
 `q!`
@@ -24596,12 +25941,15 @@ Q
 `-q`
 
 > `mysql`
+
 > 选项
+
 > `psql`
 
 `\q`
 
 > `mysql`
+
 > `psql`
 
 `-qa`
@@ -24617,9 +25965,6 @@ Q
 `QUIT`
 
 `quit`
-
-
-
 
 > `sem`
 
@@ -25361,6 +26706,8 @@ tables (表格)
 
 tabs, GNOME terminal emulation (标签，GNOME 终端仿真)
 
+
+
 Tabs menu bar (标签菜单栏)
 
 `--tab-with-profile=`
@@ -25369,7 +26716,7 @@ Tabs menu bar (标签菜单栏)
 
 Tag List (标签列表)
 
-tags
+`tags`
 
 `-tagsoup`
 
@@ -25435,509 +26782,976 @@ terminal emulation (终端仿真)
 
 > terminfo database
 
-
-
-
 # 终端菜单栏
 
 terminfo 数据库
 
 ### 控制代码
+
 `test`
 
 ### bash shell
+
 ### 命令行参数
+
 ### dash shell
+
 ## 文件比较
+
 ### `if-then`
+
 ## 数值比较
+
 ### `root`
+
 ### `sed`
+
 ### `sort`
+
 ## 字符串比较
+
 ### zsh
 
 `$test`
+
 `test command`
+
 `testerror`
+
 `testfile`
 
 ### 文本
+
 `Text`
+
 `text`
+
 文本模式过滤器
+
 文本虚拟控制
+
 文本换行 (Text Wrapping)
+
 `textbox`
+
 `--textbox`
+
 `--text-info`
 
 ### 时间
+
 `TIME`
+
 `Time`
+
 `TIME+`
+
 时间函数
+
 `timebox`
+
 `TIMEFORMAT`
+
 `--timeout`
+
 `times`
+
 时间戳 (Timestamp)
+
 `--title`
+
 `-tlog`
+
 `TMOUT`
+
 `/tmp`
+
 `TMPDIR`
+
 `-tna`
+
 `+` `TOKEN`
+
 `tolower()`
+
 tomboy
 
 ### 工具命令
+
 `top`
+
 Torvalds, Linus
-totem
+
+`totem`
+
 `touch`
+
 `touch top`
+
 `toupper()`
+
 `-trace`
+
 `-trace_mask`
+
 `transform`
+
 `trap`
+
 `traps_async`
+
 `-traversal`
+
 `--trim`
+
 `-trim_input_fields`
+
 `trivialrewrite`
+
 `true`
 
 TrueType 字体
+
 `TSTP`
+
 TTY
-`--tty` ttylist
+
+`--tty` `ttylist`
+
 `ttyctl`
+
 `ttyS`
+
 `--tuples-only`
+
 `TYPE`
+
 `type`
+
 `--type type`
+
 `--types`
+
 `typeset`
+
 `typeset_silent`
 
 ### U
+
 `u`
+
 ### `fdisk`
+
 ### 用户权限
+
 ### `vim`
+
 `-U`
+
 ### `mysql`
+
 ### `psql`
+
 ### `usermod`
+
 `-u`
+
 ### `cp`
+
 ### dash shell
+
 ### `find`
+
 ### `mysql`
+
 ### `sort`
+
 ### `tar`
+
 ### zsh
+
 `\u`
-`-u` uid
+
+`-u` `uid`
+
 `U` 用户列表
+
 `-U` 用户列表
+
 `-u` 用户列表
-`-U` uuid
+
+`-U` `uuid`
+
 Ubuntu
+
 ### `/etc/init.d`
+
 ### `ext4`
+
 ### GNOME
+
 ### 本地启动文件位置
+
 ### Maverick Mercat
+
 ### MySQL
 
 UCE. 参见未请求的商业邮件
+
 `ufs`
+
 `UID`. 参见用户 ID
+
 `$UID`
+
 `ulimit`
+
 `umask`
+
 `umount`
+
 `umsdos`
+
 `unalias`
+
 `-underline_links`
+
 `-underscore`
+
 撤销 (Undo)
+
 `unfunction`
+
 `unhash`
+
 Unicode 字符
+
 统一资源标识符 (URI)
+
 取消缩进 (Unindent)
+
 `--unique`
+
 Unix 风格参数
+
 `unlimit`
+
 `unmount`
+
 `unset`
+
 ### bash shell
+
 ### dash shell
+
 ### zsh
+
 `unsetopt`
+
 未请求的商业邮件 (UCE)
+
 `until`
+
 ### `break`
+
 ### `continue`
+
 ### `while`
+
 `unzip`
+
 `Update_Problem`
+
 `[[:upper:]]`
+
 大写
+
 Upstart 启动进程
+
 `uptime`
+
 URI. 参见统一资源标识符
+
 `urpm`
+
 ### Mandriva
+
 ### 软件库
+
 `urpme package_name`
+
 `urpmi --auto-update --update`
+
 `urpmi --clean`
+
 `urpmi package_name`
+
 `urpmi.addmedia path_name`
+
 `urpmq --list-media`
+
 `us`
+
 `USE`
+
 `use`
+
 `--use-factory`
+
 `-use_mouse`
+
 `USER`
+
 `user`
+
 `$USER`
+
 用户
+
 ### 账户
+
 ### 进程
+
 ### 添加
+
 ### 修改
+
 ### 权限
+
 ### 移除
+
 用户 ID (`UID`)
+
 ### bash shell
+
 `--User` 用户列表
+
 `--user` 用户列表
+
 用户变量
+
 `USER_ACCOUNT_RECORD`
+
 `useradd`
+
 `-useragent`
+
 用户定义变量
+
 用户定义函数
+
 用户定义变量
+
 `userdel`
+
 `userid`
+
 `usermod`
+
 `--username`
+
 `/usr`
+
 `/usr/sbin`
+
 UTF-8 字体
+
 UTF-8 标题
+
 GNU
+
 ### `sed`
+
 ### 脚本
+
 `u-x`
 
 ### V
+
 `V`
+
 `v`
+
 ### `fdisk`
+
 `-V`
+
 ### dash shell
+
 ### `fsck`
+
 ### `psql`
+
 `-v`
+
 ### `cp`
+
 ### dash shell
+
 ### `gawk`
+
 ### Mailx
+
 ### `mount`
+
 ### Mutt
+
 ### `mysql`
+
 ### options
+
 ### `psql`
+
 ### `tar`
+
 ### TCP module
+
 `\V`
+
 `v`
+
 `-v var=value`
+
 `val++`
+
 `++val`
+
 `val--`
+
 `--val`
+
 `-validate`
+
 `$value`
+
 `values`
+
 ### commands
+
 ### options
+
 ### `read`
+
 `/var`
+
 `varchar`
+
 `--variable`
+
 ### variables
+
 ### `for`
+
 ### arrays
+
 ### CLI
+
 ### dash shell
+
 ### data fields
+
 ### data output
+
 ### functions
+
 ### global
+
 ### lists
+
 ### local
+
 ### shell scripts
+
 ### user
+
 `var/mail`
+
 `/var/mail`
+
 vector graphics
+
 `verbose`
+
 virtual consoles
+
 virtual directory
+
 File System (VFS)
+
 virtual memory
+
 `virtusable`
+
 `--visit`
+
 visual mode
+
 `vmstat`
+
 volume groups (VG)
+
 VSZ
+
 VT commands
+
 VT features
+
 VT menu
+
 VT options
+
 `--vt sz`
+
 `vt#3`
+
 VT220 keyboard
 
 ### W
+
 `W`
+
 `w`
+
 ### `fdisk`
+
 ### `sed`
+
 ### `sem`
+
 ### substitution
+
 `-W`
+
 ### `chage`
+
 ### `gawk`
+
 ### `mount`
+
 ### `psql`
+
 `-w`
+
 ### file comparison
+
 ### `mysql`
+
 `-w-`, permission code
+
 `\W`
+
 ### `mysql`
+
 `\w`
+
 ### `mysql`
+
 `-w file`
-`w` filename
+
+`w` `filename`
+
 `-W keyword`
+
 `wa`
+
 wait
+
 ### bash shell
+
 ### dash shell
+
 ### zsh
+
 `--warning`
+
 `--warningcancel`
+
 warnings
+
 `--warningno`
+
 `--warningnocancel`
+
 `wc`
+
 `WCHAN`
+
 `whence`
+
 `WHERE`
+
 `where`
+
 `which`
+
 ### bash shell
+
 ### Mailx
+
 ### zsh
+
 `while`
+
 ### `break`
+
 ### command line parameters
+
 ### `continue`
+
 ### `echo`
+
 ### `exec`
+
 ### `gawk`
+
 ### `getopts`
+
 ### menus
+
 ### multiple commands
+
 PID
+
 ### `read`
+
 ### `until`
+
 ### user accounts
+
 ### zsh
+
 `who`
+
 widget
+
 widgets
+
 ### dialog package
+
 ### `kdialog`
+
 ### `zenity`
+
 width
+
 `-width`
+
 `--width` n
+
 wildcards
+
 ### `aptitude`
+
 ### directories
+
 ### regular expressions
+
 ### `rm`
+
 `--window`
+
 windows. 参见图形窗口
+
 ### rolling
+
 ### tabbed
+
 `--window-with-profile=`
+
 `-with_backspaces`
+
 Word Wrap Document
+
 `--workdir dir`
+
 `--working-directory=`
+
 `wq`
+
 wrappers
+
 Writeback mode
+
 `WWW_HOME`
+
 `-wx`
 
 ### X
+
 `X`
+
 ### format specifier
+
 `x`
+
 ### `fdisk`
+
 ### format specifier
+
 ### `sed`
+
 ### `vim`
+
 `-X`, `psql`
+
 `-x`
+
 ### `cp`
+
 ### dash shell
+
 ### file comparison
+
 ### Mutt
+
 ### `mysql`
+
 ### options
+
 ### `psql`
+
 ### `tar`
+
 `--x`, permission code
+
 `x < y`
+
 `x <= y`
+
 `x == y`
+
 `x > y`
+
 X event commands
+
 `-x file`
+
 X Windows
+
 ### `emacs`
+
 ### virtual consoles
+
 `x >=y`
+
 Xandros
+
 `xen1`
+
 xfce
+
 XFree86
+
 `XFS`
+
 XFS 文件系统
+
 XML. 参见可扩展标记语言
+
 `xon`
+
 `xor()`
+
 X.org
+
 xterm
+
 ### command line parameters
+
 ### keyboard settings
+
 ### main menu
+
 ### output capturing
+
 ### VT options menu
+
 ### X event commands
+
 `xtrace`
 
 ### Y
+
 `y`
+
 ### `sem`
+
 `-y`
+
 ### `fsck`
+
 ### Mutt
+
 ### options
+
 `--yes-label`
+
 `yesno`
+
 `--yesno`
+
 `--yesnocancel`
+
 `+%y%m%d`
+
 `yum`
+
 ### Fedora
+
 ### Red Hat
+
 ### repositories
+
 `yum localinstall`
 
 ### Z
-`Z`
-`z`
-`-Z`
-### `lvcreate`
-### Mutt
-`-z`
-### `ANSWER`
-### Mutt
-### `sort`
-### `tar`
-### `test` string 比较
-`\z`
-z shell (zsh)
-### built-in commands
-### command line parameters
-### functions
-### mathematical operations
-### modules
-### options
-### shell scripts
-### structured commands
-`-z str1`
-`zcompile`
-`zenity`
-`--zero`
-`--zero-terminated`
-`zftp`
-`zip`
-`zipcloak`
-`zipnote`
-`zipsplit`
-`zmodload`
-### `$HOME/.zshrc`
-### zsh
-zombie 进程
-`--zoom=`
-zsh.参见 z shell
-`zsh`
-`zsh/cap`
-`zsh/clone`
-`zsh/compctl`
-`zsh/complete`
-`zsh/complist`
-`zsh/computil`
-`zsh/datetime`
-`zsh/deltochar`
-`zsh/files`
-`zsh/mapfile`
-`zsh/mathfunc`
-`zsh/net/socket`
-`zsh/net/tcp`
-`zsh/parameter`
-`zsh/pcre`
-`zsh/sched`
-`zsh/stat`
-`zsh/system`
-`zsh/termcap`
-`zsh/terminfo`
-`zsh/zftp`
-`zsh/zle`
-`zsh/zleparameter`
-`zsh/zprof`
-`zsh/zpty`
-`zsh/zselect`
-`zsh/zutil`
-`ztcp`
-`zypper`
-### openSUSE
-###  repositories
-`zypper addrepo path_name`
-`zypper install package_name`
-`zypper remove_package_name`
-`zypper repos`
-`zypper update`
-`zypper verify`
 
+`Z`
+
+`z`
+
+`-Z`
+
+### `lvcreate`
+
+### Mutt
+
+`-z`
+
+### `ANSWER`
+
+### Mutt
+
+### `sort`
+
+### `tar`
+
+### `test` string 比较
+
+`\z`
+
+z shell (zsh)
+
+### built-in commands
+
+### command line parameters
+
+### functions
+
+### mathematical operations
+
+### modules
+
+### options
+
+### shell scripts
+
+### structured commands
+
+`-z str1`
+
+`zcompile`
+
+`zenity`
+
+`--zero`
+
+`--zero-terminated`
+
+`zftp`
+
+`zip`
+
+`zipcloak`
+
+`zipnote`
+
+`zipsplit`
+
+`zmodload`
+
+### `$HOME/.zshrc`
+
+### zsh
+
+zombie 进程
+
+`--zoom=`
+
+zsh.参见 z shell
+
+`zsh`
+
+`zsh/cap`
+
+`zsh/clone`
+
+`zsh/compctl`
+
+`zsh/complete`
+
+`zsh/complist`
+
+`zsh/computil`
+
+`zsh/datetime`
+
+`zsh/deltochar`
+
+`zsh/files`
+
+`zsh/mapfile`
+
+`zsh/mathfunc`
+
+`zsh/net/socket`
+
+`zsh/net/tcp`
+
+`zsh/parameter`
+
+`zsh/pcre`
+
+`zsh/sched`
+
+`zsh/stat`
+
+`zsh/system`
+
+`zsh/termcap`
+
+`zsh/terminfo`
+
+`zsh/zftp`
+
+`zsh/zle`
+
+`zsh/zleparameter`
+
+`zsh/zprof`
+
+`zsh/zpty`
+
+`zsh/zselect`
+
+`zsh/zutil`
+
+`ztcp`
+
+`zypper`
+
+### openSUSE
+
+###  repositories
+
+`zypper addrepo path_name`
+
+`zypper install package_name`
+
+`zypper remove_package_name`
+
+`zypper repos`
+
+`zypper update`
+
+`zypper verify`

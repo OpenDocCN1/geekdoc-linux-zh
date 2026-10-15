@@ -1,8 +1,5 @@
+
 # Linux 与 OpenVMS 互操作性：针对老手、新兵及开放系统的技巧 (HP 技术)
-
-
-
-
 
 # 前言
 
@@ -17,7 +14,9 @@
 我发现这本书是一份实用的、手手操作的手手册，它解释了 OpenVMS 系统管理员如何将他们的系统与 Linux 集成，让两个平台协作工作并扩展计算环境的处理能力。John 清晰地描述了这两种操作系统的功能和优势，以便你可以评估哪一个对于任何特定任务都是。你在这里看到的提示、技巧和技术将帮助你创建一个异构的 OpenVMS 和 Linux 计算环境，以满足你现在和未来的需求。
 
 Martin R. Fink
+
 副总裁兼首席技术官
+
 惠普 (Hewlett-Packard)
 
 # 序言
@@ -28,21 +27,23 @@ Martin R. Fink
 
 本书识别了互操作领域，更重要的是为这些领域提供了一个分步实施的流程。产品、配置、脚本都在书中，其目标只有一个：就是让 Linux 和 OpenVMS 之间发生某些事情。无论你是 VMS 管理员还是 Linux 管理员，这本书都允许你开启 Linux 和 OpenVMS 之间的互操作性。
 
-我还可以补充一点，你将学习使用本地编辑器，这些在书中并未被涵盖。学习终端或命令行界面（CLI）编辑器，例如 Linux 的“vi”和 VMS 的“edit”；它们对于任何系统管理员的工具箱都是至关重要的。也有基于 X Windows 的编辑器，但如果你学习了 CLI 编辑器，你将能够在没有窗口系统（或启动程序）的情况下在这些系统上工作。在你学会了 Linux 和 OpenVMS 的编辑器后，书中的其余步骤应该很容易完成。
+我还可以补充一点，你将学习使用本地编辑器，这些在书中并未被涵盖。学习终端或命令行界面（CLI）编辑器，例如 Linux 的 `vi` 和 VMS 的 `edit`；它们对于任何系统管理员的工具箱都是至关重要的。也有基于 X Windows 的编辑器，但如果你学习了 CLI 编辑器，你将能够在没有窗口系统（或启动程序）的情况下在这些系统上工作。在你学会了 Linux 和 OpenVMS 的编辑器后，书中的其余步骤应该很容易完成。
 
-你可能想在尝试配置书中的工具之前，先加载每个操作系统的干净版本。我在书中描述的所有过程中都使用了 OpenVMS 7.3-1 版本和 RedHat 7.3 版本。如果你是继承了现有的系统，并且需要重用现有的安装，你可能想先访问第 2 章，学习如何进入 Linux 和 OpenVMS！
+你可能想在尝试配置书中的工具之前，先加载每个操作系统的干净版本。我在书中描述的所有过程中都使用了 OpenVMS `7.3-1` 版本和 RedHat `7.3` 版本。如果你是继承了现有的系统，并且需要重用现有的安装，你可能想先访问第 2 章，学习如何进入 Linux 和 OpenVMS！
 
 本书是一场关于开源、TCP/IP、X Windows、安全等领域的冒险。我希望它能拓宽你对 OpenVMS 和 Linux 的理解，并帮助你理解这两个伟大的开源软件（OSS）可以共同做什么。
 
 最好的祝愿，
+
 John Robert Wisniewski
+
 2003年3月
 
 出版者注：“Open Source（开源）”一词的使用存在很大差异；大多数观点似乎是这两个单词都要大写。然而，另一些人始终使用小写。我们选择遵循最常用的用法，在书正文中对这两个单词均大写。
 
 ## 第 1 章 — 评估 OpenVMS 和 Linux：工欲善其器
 
-**好、优、卓越**
+### 好、优、卓越
 
 欢迎阅读这本书，它解答了：为什么是 OpenVMS？为什么是 Linux？以及你如何让这两个计算机操作系统（OS）协同工作？
 
@@ -56,72 +57,56 @@ OpenVMS 提供了某些功能，由于它在 25 年中经过了测试。Linux �
 
 无论你是 VMS 管理员还是 Linux 管理员，这本书都允许你开启 Linux 和 OpenVMS 之间的互操作性。
 
-我还可以补充一点，你将学习使用本地编辑器，这些在书中并未被涵盖。学习终端或命令行界面（CLI）编辑器，例如 Linux 的“vi”和 VMS 的“edit”；它们对于任何系统管理员的工具箱都是至关重要的。也有基于 X Windows 的编辑器，但如果你学习了 CLI 编辑器，你将能够在没有窗口系统（或启动程序）的情况下在这些系统上工作。在你学会了 Linux 和 OpenVMS 的编辑器后，书中的其余步骤应该很容易完成。
+
+
+我还可以补充一点，你将学习使用本地编辑器，这些在书中并未被涵盖。学习终端或命令行界面（CLI）编辑器，例如 Linux 的 `vi` 和 VMS 的 `edit`；它们对于任何系统管理员的工具箱都是至关重要的。也有基于 X Windows 的编辑器，但如果你学习了 CLI 编辑器，你将能够在没有窗口系统（或启动程序）的情况下在这些系统上工作。在你学会了 Linux 和 OpenVMS 的编辑器后，书中的其余步骤应该很容易完成。
 
 你可能想在尝试配置书中的工具之前，先加载每个操作系统的干净版本。我在书中描述的所有过程中都使用了 OpenVMS 7.3-1 版本和 RedHat 7.3 版本。如果你是继承了现有的系统，并且需要重用现有的安装，你可能想先访问第 2 章，学习如何进入 Linux 和 OpenVMS！
 
 本书是一场关于开源、TCP/IP、X Windows、安全等领域的冒险。我希望它能拓宽你对 OpenVMS 和 Linux 的理解，并帮助你理解这两个伟大的开源软件（OSS）可以共同做什么。
 
 最好的祝愿，
+
 John Robert Wisniewski
+
 2003年3月
 
-出版者注：“Open Source（开源）”一词的使用存在很大差异；大多数观点似乎是这两个单词都要大写。然而，另一些人始终使用小写。我们选择遵循最常用的用法，在书正文中对这两个单词均大写。
+## 出版者注
 
-## 第 1 章 — 评估 OpenVMS 和 Linux：工欲善其器
+“Open Source（开源）”一词的使用存在很大差异；大多数观点似乎是这两个单词都要大写。然而，另一些人始终使用小写。我们选择遵循最常用的用法，在书正文中对这两个单词均大写。
 
-**好、优、卓越**
+## 集成到 OpenVMS 和 OpenVMS 集群中
 
-欢迎阅读这本书，它解答了：为什么是 OpenVMS？为什么是 Linux？以及你如何让这两个计算机操作系统（OS）协同工作？
+每年都有新客户。
 
-在这个世界上，你为什么想让它们协同工作呢？让我尝试简短地回答：有些客户非常迷 OpenVMS——它的集群技术和全方位支持。而 Linux则热衷开源，有成千上万的编码者在精进此项技能。多么疯狂的合奏！但尽管如此，它们仍然是亲戚——开源系统的亲戚。
+### 分时共享（Timeshare）
+随着互联网的持续增长和服务器整合的持续，系统的衡量标准将是能够在可预测的时间段内处理大量微小任务并均匀共享资源的能力。自20 世纪 70 年代以来，OpenVMS 及其调度器一直在提供并完善可预测的甚至实时的性能。针对当今 Web 服务器、事务服务器和应用程序服务器的需求，对每个任务进行容量规划和可预测响应已成为部署原型应用的先决条件。
 
-现在，在不继续唱剩下的 Patty Duke 主题曲之前；这些操作系统有许多共同点：开放系统的亲戚；行业标准；X Windows；以及用于加密通信的安全性工具。既然 Linux 和 OpenVMS 已经可以协同工作，你为什么还要继续使用不同的操作系统呢？仅仅因为 OpenVMS 拥有其他操作系统都难以实现的特性。
-
-OpenVMS 提供了某些功能，由于它在 25 年中经过了测试。Linux 为这个领域带来了什么？今天，Linux 是开源的，有成千上万的程序员在其中工作，并带来全球范围内的解决方案。与此同时，OpenVMS 和 Linux 提供了许多应用程序的商业工具，以及实际的部署选择：客户端/服务器、多路数据库。
-
-在计算的高端和低端之间，各种部署策略在现在是需要的，未来也是需要的。OpenVMS 和 Linux 之间的界限在需要的地方划定。系统架构师和系统分析师需要理解 OpenVMS 和 Linux 的所有特性，包括实际工作站的部署。你可以描述这两种操作系统的特性，以便你可以评估哪一个对于任何特定任务都是最好的。
-
-无论你是 VMS 管理员还是 Linux 管理员，这本书都允许你开启 Linux 和 OpenVMS 之间的互操作性。
-
-我还可以补充一点，你将学习使用本地编辑器，这些在书中并未被涵盖。学习终端或命令行界面（CLI）编辑器，例如 Linux 的“vi”和 VMS 的“edit”；它们对于任何系统管理员的工具箱都是至关重要的。也有基于 X Windows 的编辑器，但如果你学习了 CLI 编辑器，你将能够在没有窗口系统（或启动程序）的情况下在这些系统上工作。在你学会了 Linux 和 OpenVMS 的编辑器后，书中的其余步骤应该很容易完成。
-
-你可能想在尝试配置书中的工具之前，先加载每个操作系统的干净版本。我在书中描述的所有过程中都使用了 OpenVMS 7.3-1 版本和 RedHat 7.3 版本。如果你是继承了现有的系统，并且需要重用现有的安装，你可能想先访问第 2 章，学习如何进入 Linux 和 OpenVMS！
-
-本书是一场关于开源、TCP/IP、X Windows、安全等领域的冒险。我希望它能拓宽你对 OpenVMS 和 Linux 的理解，并帮助你理解这两个伟大的开源软件（OSS）可以共同做什么。
-
-最好的祝愿，
-John Robert Wisniewski
-2003年3月
-
-出版者注：“Open Source（开源）”一词的使用存在很大差异；大多数观点似乎是这两个单词都要大写。然而，另一些人始终使用小写。我们选择遵循最常用的用法，在书正文中对这两个单词均大写。
-
-
-
-
-集成到 OpenVMS 和 OpenVMS 集群中，每年都有新客户。
-
-- **分时共享（Timeshare）**：随着互联网的持续增长和服务器整合的持续，系统的衡量标准将是能够在可预测的时间段内处理大量微小任务并均匀共享资源的能力。自20 世纪 70 年代以来，OpenVMS 及其调度器一直在提供并完善可预测的甚至实时的性能。针对当今 Web 服务器、事务服务器和应用程序服务器的需求，对每个任务进行容量规划和可预测响应已成为部署原型应用的先决条件。
-
-- **安全（Security）**：在过去的13 年里，OpenVMS/VMS 的 CERT 安全公告少于 45 条。（截至 2002 年 6 月：Windows 2000 为 484 条，Linux 为 546 条，Solaris 为 490 条，AIX 为 377 条：http://www.cert.org/）。
+### 安全（Security）
+在过去的13 年里，OpenVMS/VMS 的 CERT 安全公告少于 45 条。（截至 2002 年 6 月：Windows 2000 为 484 条，Linux 为 546 条，Solaris 为 490 条，AIX 为 377 条：`http://www.cert.org/`）。
 
 在生产环境中部署其他服务器，为了确保安全以及修补所有 CERT 公告，花费的系统管理费用将远高于直接开箱即用部署 OpenVMS 的费用！如果你检查了所有的 CERT 公告，可能需要花费数百小时来审查其他操作系统中的各种安全漏洞。
 
-开箱即用的 OpenVMS 几乎是不可破解的（2001年7月 DEFCON 9 黑客大会的神灵/法官是这么说的：http://www.dfwcug.org/dfwcug_newsletters/201007.PDF）。
+开箱即用的 OpenVMS 几乎是不可破解的（2001年7月 DEFCON 9 黑客大会的神灵/法官是这么说的：`http://www.dfwcug.org/dfwcug_newsletters/201007.PDF`）。
 
-著名黑客 Kevin Mitnick 最近向国会作证，当他最近尝试侵入英国一个 OpenVMS 系统时，遭遇了人生中的第一次击败（http://www.zdnet.com/zdnn/stories/news/0,4586,2454737,00.html）。
+著名黑客 Kevin Mitnick 最近向国会作证，当他最近尝试侵入英国一个 OpenVMS 系统时，遭遇了人生中的第一次击败（`http://www.zdnet.com/zdnn/stories/news/0,4586,2454737,00.html`）。
 
-- **Diico**：国防信息基础设施通用操作环境（DIICCOE）认证意味着 Compaq/HP 已于 2001 年与美国政府签署协议，在未来 20 年内支持 OpenVMS。这允许 HP 继续向美国政府销售 OpenVMS（OpenVMS 最大的用户群之一），并且必须在未来 20 年内对向美国政府的产品维持支持。
+### Diico
+国防信息基础设施通用操作环境（DIICCOE）认证意味着 Compaq/HP 已于 2001 年与美国政府签署协议，在未来 20 年内支持 OpenVMS。这允许 HP 继续向美国政府销售 OpenVMS（OpenVMS 最大的用户群之一），并且必须在未来 20 年内对向美国政府的产品维持支持。
 
-- **共享文件系统（Shared File Systems）**：OpenVMS 通过 Advanced Server（微软的代码）提供与 Windows 2000 和 NT 4.0 SMB 文件系统的集成。从开放系统（UNIX）侧来看，OpenVMS 与 NFS (V3.0) 集成。OpenVMS 还可以提供单一目录，供 Windows 系统和 UNIX 系统同时查看、协调和访问！
+### 共享文件系统（Shared File Systems）
+OpenVMS 通过 Advanced Server（微软的代码）提供与 Windows 2000 和 NT 4.0 SMB 文件系统的集成。从开放系统（UNIX）侧来看，OpenVMS 与 `NFS` (V3.0) 集成。OpenVMS 还可以提供单一目录，供 Windows 系统和 UNIX 系统同时查看、协调和访问！
 
-- **电子商务基础设施（E-business Infrastructure）**：Atturity 的 XML 和数据库网关包含在 OpenVMS 许可中。Apache、SSH、Java、微软的 COM（对象类标准）、CORBA（开放系统对象类标准）、DCE 和 X Windows 均包含在 OpenVMS 的基础许可中。
+### 电子商务基础设施（E-business Infrastructure）
+Atturity 的 XML 和数据库网关包含在 OpenVMS 许可中。`Apache`、`SSH`、`Java`、微软的 `COM`（对象类标准）、`CORBA`（开放系统对象类标准）、`DCE` 和 `X Windows` 均包含在 OpenVMS 的基础许可中。
 
-- **服务与支持（Service and Support）**：对于一个运行操作系统长达数年的企业来说，对过去产品和操作系统以前版本的支持至关重要。HP 和 OpenVMS 继续支持 VAX 系统（尽管他们已经近 2 年没有交付过新的 VAX 了！），并且他们为客户支持追溯到 10 年之前的 OpenVMS 操作系统稳定版本。很难想象我们最新的 PC 能够部署 10 年。企业不喜欢更换正在运行的应用，一旦运行，往往倾向于不离线，这是 OpenVMS 最著名的标志之一。
+### 服务与支持（Service and Support）
+对于一个运行操作系统长达数年的企业来说，对过去产品和操作系统以前版本的支持至关重要。HP 和 OpenVMS 继续支持 VAX 系统（尽管他们已经近 2 年没有交付过新的 VAX 了！），并且他们为客户支持追溯到 10 年之前的 OpenVMS 操作系统稳定版本。很难想象我们最新的 PC 能够部署 10 年。企业不喜欢更换正在运行的应用，一旦运行，往往倾向于不离线，这是 OpenVMS 最著名的标志之一。
 
-- **高可用性（High Availability）**： 许多公司选择 OpenVMS 是因为它是少数能够实现其 99.9999%（每年停机时间约 3 分钟）承诺的操作系统之一。如果 OpenVMS 才开始声称实现这一壮举，它可能会引起怀疑；但客户自 20 世纪 90 年代初以来，一直从他们的机器上获得如此水平的服务（在配置配置和维护良好的 OpenVMS 集群中）。软件和操作系统的滚动升级，以及长达数年的持续处理，是 OpenVMS 开创的其他里程碑。
+### 高可用性（High Availability）
+许多公司选择 OpenVMS 是因为它是少数能够实现其 99.9999%（每年停机时间约 3 分钟）承诺的操作系统之一。如果 OpenVMS 才开始声称实现这一壮举，它可能会引起怀疑；但客户自 20 世纪 90 年代初以来，一直从他们的机器上获得如此水平的服务（在配置配置和维护良好的 OpenVMS 集群中）。软件和操作系统的滚动升级，以及长达数年的持续处理，是 OpenVMS 开创的其他里程碑。
 
-在作为计算机、应用程序和数据库服务器运行了 25 年后，很少有其他操作系统在部署平台方面能与 OpenVMS 相提并论，甚至开始比拟。虽然 OpenVMS 永远不会是最好的桌面系统，但它已经证明自己是当今行业中最优秀、最健壮、最安全且最易集群化的操作系统。等一下：别走，还有精彩的！如果 OpenVMS 只是我们行业中功能最多的另一个操作系统，你愿意为这样一个天才工具付多少钱？平均 UNIX 服务器成本的两倍或四倍吗？如果 OpenVMS 给你所有这些能力，并且与所有其他 UNIX 系统和大型机相比，具有业内最低的拥有成本又如何？嗯，不要听我的——看看 Techwise Research 在 2001 年对 OpenVMS 进行的调研，他们发现在五年内，OpenVMS 是任何服务器部署中成本最低的（http://www.openvms.compaq.com/openvms/whitepapers/techwise.html）。
+在作为计算机、应用程序和数据库服务器运行了 25 年后，很少有其他操作系统在部署平台方面能与 OpenVMS 相提并论，甚至开始比拟。虽然 OpenVMS 永远不会是最好的桌面系统，但它已经证明自己是当今行业中最优秀、最健壮、最安全且最易集群化的操作系统。等一下：别走，还有精彩的！如果 OpenVMS 只是我们行业中功能最多的另一个操作系统，你愿意为这样一个天才工具付多少钱？平均 UNIX 服务器成本的两倍或四倍吗？如果 OpenVMS 给你所有这些能力，并且与所有其他 UNIX 系统和大型机相比，具有业内最低的拥有成本又如何？嗯，不要听我的——看看 Techwise Research 在 2001 年对 OpenVMS 进行的调研，他们发现在五年内，OpenVMS 是任何服务器部署中成本最低的（`http://www.openvms.compaq.com/openvms/whitepapers/techwise.html`）。
 
 经过测试和支持的功能、行业最低的拥有成本和部署成本、最高的可用性和可扩展性，以及与所有最新互联网和电子商务软件工具的互操作性方面的 25 年战绩——这就是为什么你在未来 10 年将继续使用 OpenVMS 的原因。
 
@@ -129,24 +114,25 @@ John Robert Wisniewski
 
 当 Linus Torvald 启动他的项目时，他梦想着一种不受版权限制的操作系统。几年后，Linux 成为 Windows 和 OpenVMS 的强力替代方案。Linux 处于何种位置？
 
-- **Linux 服务器（Linux Server）**：作为底层服务器（在标准的客户端/服务器模型中），Linux 与任何单机 NT、UNIX 或 OpenVMS 服务器相当甚至更好。Linux 服务器支持通过 SAMBA 与 Windows 服务器和客户端共享磁盘，通过 NFS 与 UNIX 和 OpenVMS 共享，支持 Java、Apache 以及所有主流编程语言和脚本工具。问题在于，无论 Linux 服务器功能多么强大，都受限于硬件的故障间隔。早晚某个部署的单服务器会出现会导致关键数据或程序的故障，届时系统必须恢复或重建。Linux 服务器的商业集群处于婴儿阶段，随着 Linux 故障转移环境、集群技术和共享存储（SAN、网络存储）的成熟，Linux 用于数据中心的应用也将成熟。
+### Linux 服务器（Linux Server）
+作为底层服务器（在标准的客户端/服务器模型中），Linux 与任何单机 NT、UNIX 或 OpenVMS 服务器相当甚至更好。Linux 服务器支持通过 `SAMBA` 与 Windows 服务器和客户端共享磁盘，通过 `NFS` 与 UNIX 和 OpenVMS 共享，支持 `Java`、`Apache` 以及所有主流编程语言和脚本工具。问题在于，无论 Linux 服务器功能多么强大，都受限于硬件的故障间隔。早晚某个部署的单服务器会出现会导致关键数据或程序的故障，届时系统必须恢复或重建。Linux 服务器的商业集群处于婴儿阶段，随着 Linux 故障转移环境、集群技术和共享存储（SAN、网络存储）的成熟，Linux 用于数据中心的应用也将成熟。
 
-- **Linux 终端（Linux Terminal）**：Linux 工作站和笔记本电脑是极好的终端。Linux、UNIX 和 OpenVMS 都使用 X Windows 和各种管理器输出输出到远程机器。今天，微软拥有此类功能的程序，但 Linux 作为其大兄弟内置了 Windows 功能。因此，将所有的 OpenVMS 应用带到具有优秀图形和音的低成本高质量桌面，是购买昂贵工作站的绝佳替代方案。（尽管就像驾驶法拉利，一旦你用过真正的 UNIX 或 OpenVMS 工作站，就很难再用别的——无论那辆雪佛看起来有多“运动”。）
+### Linux 终端（Linux Terminal）
+Linux 工作站和笔记本电脑是极好的终端。Linux、UNIX 和 OpenVMS 都使用 `X Windows` 和各种管理器输出输出到远程机器。今天，微软拥有此类功能的程序，但 Linux 作为其大兄弟内置了 Windows 功能。因此，将所有的 OpenVMS 应用带到具有优秀图形和音的低成本高质量桌面，是购买昂贵工作站的绝佳替代方案。（尽管就像驾驶法拉利，一旦你用过真正的 UNIX 或 OpenVMS 工作站，就很难再用别的——无论那辆雪佛看起来有多“运动”。）
 
 # 总结（The Bottom Line）
 
 OpenVMS 和 Linux 系统与 UNIX 和 Windows 服务器有许多共同点，且各有独特优势。考虑到我们如今的异构计算环境并展望未来，OpenVMS 和 Linux 在未来多年里将在我们的数据中心和专业信息服务（IS）部署中有一席之地——OpenVMS 凭借其高可用性和可扩展性，而 Linux 则凭借其低廉的单位成本结构和庞大的开源软件库。
 
-
-
-
 随着我们迈入这个千纪年，我们的口号应该是：为每种计算风格找到成本最低、合适的工具。在 OpenVMS 和 Linux 操作系统之间，计算光谱的很大一部分已经得到了实现，而且是以极具成本效益的方式。现在，让我们探索 Linux 和 OpenVMS 今日能做的各种事情吧！
+
+
 
 本书的其余章节是一系列“操作指南”过程，旨在以不同的方式利用你的 OpenVMS 和 Linux 设备（TCP/IP、电子邮件、X Windows 等）。这些步骤简单且直击要点。它们也应该是成为你探索这些功能以进行更高级的使用和部署的良好起点！你不需要从头到尾读完这本书；每个章节应该是相互独立的，而且我希望，它们能为你解决特定的 Linux 和 OpenVMS 互操作性问题提供良好的参考。
 
 本书的其余部分假设你已经有一个正在运行并配置了 TCP/IP 的 OpenVMS 和 Linux 系统，并且作为用户和操作员对这两个操作系统都有了了解。（你还需要两个系统上拥有系统权限；别担心，第 2 章将向你如何在你的设备上获取 System 和 root 权限。但不要在你的生产机器上进行实验；在学习将 OpenVMS 和 Linux 连接在一起时，同一网络中的两台小型工作站将是一个很好的测试平台。
 
-## 第 2 章 — 破解 OpenVMS 和 Linux
+# 第 2 章 — 破解 OpenVMS 和 Linux
 
 ### 为没有任何设备的人准备的设备
 
@@ -158,7 +144,7 @@ OpenVMS 和 Linux 系统与 UNIX 和 Windows 服务器有许多共同点，且�
 
 ### 现实在回家的路上
 
-当然，当你开车回家时，你意识到这是一台 OpenVMS 机器，你需要产品授权密钥（PAKs）才能让软件运行。机器上可能已经有了许可证（如果系统管理员没有擦除磁盘），但拥有你自己的许可证才能让你感觉真的拥有了这台机器。等一下，不要给 HP 购买新许可证。如果你的机器注定用于家庭使用和个人教育，你可以免费获得一个 OpenVMS 爱好者许可证，包含基础 VMS、集群（clustering）以及超过 105 个分层产品 PAKs！只需访问 OpenVMS 爱好者网页：http://www.montagar/~hobbyist 即可。
+当然，当你开车回家时，你意识到这是一台 OpenVMS 机器，你需要产品授权密钥（PAKs）才能让软件运行。机器上可能已经有了许可证（如果系统管理员没有擦除磁盘），但拥有你自己的许可证才能让你感觉真的拥有了这台机器。等一下，不要给 HP 购买新许可证。如果你的机器注定用于家庭使用和个人教育，你可以免费获得一个 OpenVMS 爱好者许可证，包含基础 VMS、集群（clustering）以及超过 105 个分层产品 PAKs！只需访问 OpenVMS 爱好者网页：`http://www.montagar/~hobbyist` 即可。
 
 在网页上注册，你将会在几分钟内通过电子邮件收到你所需要的所有 PAKs。你应该注意，这些许可证是供个人或爱好者使用的；如果你打算将其用于你或他人的业务，就必须致电 HP 为你的新系统获取商业许可证！
 
@@ -180,7 +166,6 @@ X Windows 登录横幅隐藏着秘密！这台系统是管理核电站、医院�
 
 - * 系统管理员离开了公司，没有向新的系统管理员交接。
 - * 系统已被攻破，你必须接管控制并重建安全性。已经没有人知道系统上还有什么了。
-
 
 ```bash
 $ define/system/executable sysuaf sys$system:sysuaf.dat
@@ -212,6 +197,7 @@ sysman> exit
 ```
 
 - 10. 重启并登录你的 OpenVMS 系统。
+
 用户 System 的密码现在将变为 Welcome。
 
 恭喜，你刚刚接管了一个 OpenVMS 系统！
@@ -228,7 +214,7 @@ sysman> exit
 
 当然，你永远不会在不知道系统里有什么内容的情况下就把系统送人，而且你总是会删除所有被废弃磁盘上的所有数据，在微波炉中擦除 CD-ROM，处理大批量磁带，粉碎个人数据和程序，并销毁你在剩余捐赠箱中找到的所有身份卡。我们只是在讨论一种假设性情况，而不是我曾在见过的系统内部、上方或随附发现的任何情况。
 
-入侵系统有许多原因；你的 OpenVMS 和 Alpha 工具包中应该始终包含一个你能找到的最新版本的 OpenVMS 启动盘（加载 OpenVMS 的 CD-ROM），版本为 (7, 7.3-1)，以及一个 RedHat Linux 7.2 或 7.3 启动盘。当你需要打开系统时，这些工具将为你提供帮助。
+入侵系统有许多原因；你的 OpenVMS 和 Alpha 工具包中应该始终包含一个你能找到的最新版本的 OpenVMS 启动盘（加载 OpenVMS 的 CD-ROM），版本为 `(7, 7.3-1)`，以及一个 RedHat Linux 7.2 或 7.3 启动盘。当你需要打开系统时，这些工具将为你提供帮助。
 
 从寻宝到打捞，从企业救援到恢复系统，入侵系统是所有管理人员应该学会做的一切。
 
@@ -242,6 +228,8 @@ sysman> exit
 
 归根结底，所有的争议都偏离了重点。我们一直在争论点对点网络的技术优势，可以支持的终端数量，或者在 50 欧姆电缆末端的连接。这完全不是关注点，许多人错过了短时间内网络技术变化的真正原因。
 
+
+
 IBM 的 SNA 可以在单个网络中托管数万个终端，并实现亚秒级响应。DECnet 提供了点对点网络，拥有超过 10 万个节点（当时互联网只有 15,000 个节点）。Novell 在 PC 磁盘共享方面最快，而过时的 OSI 协议将把所有网络统一到基于标准的世界，纠正过去协议的所有缺点。但这些及其他协议的技术卓越性在 TCP/IP 面前都显得黯失色。
 
 到 1993 年，TCP/IP 扫清了网络协议领域所有新应用或网络的竞争。TCP/IP 击败了 OSI 作为所有新网络获取协议的政府指令。如果 DEC 拥有最好的 OSI 协议栈，它就可以跳过 TCP/IP 革命，因为当时 TCP/IP 在技术上还在等待，市场不得不使用 OSI 来解决其网络问题。
@@ -249,10 +237,6 @@ IBM 的 SNA 可以在单个网络中托管数万个终端，并实现亚秒级�
 相反，TCP/IP 催生像 Cisco 这样的网络公司，并建立了像 TGV（两个家伙和一个 VAX）这样的十亿软件公司，仅仅是为了为 OpenVMS 编写和支持 TCP/IP 栈。其他公司也为 TCP/IP 到 SNA 网关、TCP/IP 终端服务器以及整个 TCP/IP 生态系统出现。
 
 为什么这种转变会发生？更好的应用？更好的网络？TCP/IP 有什么特性让它成为赢者？并不是因为它一定更好，而是因为它是免费的。在商业世界中，免费是非常强大的动力。
-
-
-
-
 
 ## 今日的网络标准
 
@@ -262,20 +246,20 @@ OpenVMS 和 Linux 的联网（任何两台或更多台计算机器）必须基�
 
 请注意，所有 IEEE 802.X 标准均指向 OSI 模型中的底部两层（所有硬件）（[http://standards.ieee.org/](）（见表 3-1）。
 
-## 表 3-1：带有 TCP/IP 位置的标准 OSI 模型
+### 表 3-1：带有 TCP/IP 位置的标准 OSI 模型
 
 | OSI 网络模型 | TCP/IP Internet 模型 | IEEE 标准 | |
-|---|---|---|
+|---|---|---|---|
 | 第 7 层—应用层 | Netscape、Xterm、电子邮件阅读器、基于 FTP 的工具以及其他用于显示数据的应用程序 | | |
 | 第 6 层—表示层 | Telnet、FTP、SMTP、其他 TCP/IP 协议 | | |
 | 第 5 层—会话层 | Telnet、FTP、SMTP、其他 TCP/IP 协议 | | |
 | 第 4 层—传输层 | 传输控制协议 (TCP)、用户数据报协议 (UDP) | | |
 | 第 3 层—网络层 | IP Internet 协议 | | |
 
-## 表 3-1：带有 TCP/IP 位置的标准 OSI 模型（续）
+### 表 3-1：带有 TCP/IP 位置的标准 OSI 模型（续）
 
 | OSI 网络模型 | TCP/IP Internet 模型 | IEEE 标准 | |
-|---|---|---|
+|---|---|---|---|
 | 第 2 层—数据链路层 | 网络接口卡：以太网双绞线、同轴、大橙色缆 (AUI)、令牌环网、FDDI、ATM、ODI（开放链路接口）、NDIS（网络无关规范） | 802.1<br>802.2<br>802.3<br>802.4<br>802.5<br>802.6 | Interworking LLC Log C 以太网 CSMA/CD 令牌环网局域网 | | |
 | 第 1 层—物理层 | 网络传输介：双绞线、同轴、光纤、无线 | 802.7<br>802.8<br>802.9<br>802.10<br>802.11<br>802.12 | 带宽咨询 光纤技术 集成语音/数据网络 安全无线网络 优先级 |
 
@@ -283,39 +267,39 @@ OpenVMS 和 Linux 的联网（任何两台或更多台计算机器）必须基�
 
 ## 网络管理员重要性
 
-始终记住，网络管理员是你网络中最好的朋友，他们可以为你提供 TCP/IP 地址、线缆以及以太网卡和软件！网络管理员知道路由器在哪里，以及应该获取哪些数字***(域名) 数字域名服务 (DNS)**，以及通往其他网络的网关数字。你应该记住并标记好，你的新好朋友将一只咆哮的猛兽，如果你胆于质疑网络状况，它会侮辱你的血统、操作系统选择或计算机知识。
+始终记住，网络管理员是你网络中最好的朋友，他们可以为你提供 TCP/IP 地址、线缆以及以太网卡和软件！网络管理员知道路由器在哪里，以及应该获取哪些数字`域名`数字域名服务 (`DNS`)，以及通往其他网络的网关数字。你应该记住并标记好，你的新好朋友将一只咆哮的猛兽，如果你胆于质疑网络状况，它会侮辱你的血统、操作系统选择或计算机知识。
 
+如果我知道一个人的名字（主机、域名），通过电话簿，我可以定位到他或她的电话号码（IP 地址）。`DNS` 也采取了相同的过程：如果你想寻找 `VMSONE.com`，但不知道 IP 地址，底层的 TCP/IP 系统将解决这个问题。
 
-
-
-
-如果我知道一个人的名字（主机、域名），通过电话簿，我可以定位到他或她的电话号码（IP 地址）。DNS 也采取了相同的过程：如果你想寻找 VMSONE.com，但不知道 IP 地址，底层的 TCP/IP 系统将解决这个问题。
-
-所以，如果我将我的 Web 浏览器指向 VMSONE.com（一个我认识并记得的名字），底层的 TCP/IP 系统将查询本地 DNS 服务器，将该名称解析为适当的 IP 地址，并使用该地址连接到 VMSONE.com。
+所以，如果我将我的 Web 浏览器指向 `VMSONE.com`（一个我认识并记得的名字），底层的 TCP/IP 系统将查询本地 DNS 服务器，将该名称解析为适当的 IP 地址，并使用该地址连接到 `VMSONE.com`。
 
 好了，好了，我所说的一切都是对整个过程的极大简化。我明白这一点，但你不需要拥有 TCP/IP 博士学位就可以配置你的节点并将它们连接到互联网或你的本地局域网！
 
-# Q5：我的默认网关/地址是什么？
+### Q5：我的默认网关/地址是什么？
 
-默认网关数字是从你的本地网络连接到其他网络的地址。它可以是你的 NAT（又又是这个）防火墙、代理服务器，或连接你的局域网（LAN）与互联网其他部分的路由器。
+默认网关数字是从你的本地网络连接到其他网络的地址。它可以是你的 `NAT`（又又是这个）防火墙、代理服务器，或连接你的局域网（LAN）与互联网其他部分的路由器。
 
 理解这一点简单的方法是注意：除非定义了这个数字，否则你无法与任何其他局域网或网络进行通信。对于初始设置，你不希望从你的机器上启用路由（这意味着你的系统启用了多个 TCP/IP 路径），而且除非你当前的系统连接了两个独立的 TCP/IP 网络（而不是路由器），否则你不会将路由信息导出到整个网络。
 
-- 你的主机 TCP/IP 地址？例如：10.0.0.25
-- 子网掩码地址？例如：255.255.255.255
-- 你的主机名和域名？例如：Inxone.vmsone.com
-- 你的远程 DNS 服务器地址？例如：10.0.0.8
-- 你的局域网网关地址？例如：10.0.0.1
+- 你的主机 TCP/IP 地址？例如：`10.0.0.25`
+
+- 子网掩码地址？例如：`255.255.255.255`
+
+- 你的主机名和域名？例如：`Inxone.vmsone.com`
+
+- 你的远程 DNS 服务器地址？例如：`10.0.0.8`
+
+- 你的局域网网关地址？例如：`10.0.0.1`
 
 有了这五个问题的答案（从你的网络管理员或 ISP 处获得），你应该能够在单个网络上配置 TCP/IP，并将你的 OpenVMS 和 Linux 系统都连接到该网络。让我们来看配置 TCP/IP 系统的过程。
 
 ## 配置系统
 
-OpenVMS 和 Linux 都使用工具来帮助配置 TCP/IP 网络。在 Linux 上（通过 root 账户），它被称为 network configuration（来自 RedHat 菜单），在 OpenVMS 上（通过 System 账户），它被称为 tcpip$configure.com（在较旧版本的 OpenVMS TCP/IP 服务上为 ucxconfigure.com）。
+OpenVMS 和 Linux 都使用工具来帮助配置 TCP/IP 网络。在 Linux 上（通过 `root` 账户），它被称为 `network configuration`（来自 RedHat 菜单），在 OpenVMS 上（通过 System 账户），它被称为 `tcpip$configure.com`（在较旧版本的 OpenVMS TCP/IP 服务上为 `ucxconfigure.com`）。
 
 ### 在 Linux 上配置 TCP/IP
 
-在你的 Linux 机器通过 root 账户，你可以通过在终端窗口输入 Linuxconf 来调用 Linuxconf，或者使用系统菜单从 GNOME 桌面调用配置。图 3-1 到 3-5 展示了如何在 Linux 上配置 TCP/IP。
+在你的 Linux 机器通过 `root` 账户，你可以通过在终端窗口输入 `Linuxconf` 来调用 `Linuxconf`，或者使用系统菜单从 GNOME 桌面调用配置。图 3-1 到 3-5 展示了如何在 Linux 上配置 TCP/IP。
 
 ![](img/a26aae01e7657faca13785a7eb03624a_22_0.png)
 
@@ -339,7 +323,7 @@ OpenVMS 和 Linux 都使用工具来帮助配置 TCP/IP 网络。在 Linux 上�
 
 ### 在 OpenVMS 上配置 TCP/IP
 
-登录系统账户，并在 $ 提示符下执行
+登录系统账户，并在 `$` 提示符下执行
 
 ```
 $ sys$manager:tcpipconfig.com
@@ -353,16 +337,18 @@ $ sys$manager:tcpipconfig.com
 
 ![](img/a26aae01e7657faca13785a7eb03624a_25_0.png)
 
+
+
 ![](img/a26aae01e7657faca13785a7eb03624a_25_1.png)
 
-第 3 章 – 用于 OpenVMS 和 Linux 的 TCP/IP 25
+# 第 3 章 – 用于 OpenVMS 和 Linux 的 TCP/IP 25
 
-用于 OpenVMS 的 DIGITAL TCP/IP 服务
+## 用于 OpenVMS 的 DIGITAL TCP/IP 服务
 
-服务器组件配置菜单
+### 服务器组件配置菜单
 
 | 配置选项: | | | |
-|---|---|---|
+|---|---|---|---|
 | 1 | BIND | 禁用 |
 | 2 | BOOTP | 禁用 |
 | 3 | TFTP | 禁用 |
@@ -388,7 +374,7 @@ $ sys$manager:tcpipconfig.com
 
 OpenVMS 和 Linux 网络通过使用跨越 TCP/IP 的相似应用程序共同协同工作。表 3-2 是协议以及一些常用应用程序的列表，并对它们执行的功能进行了简要描述。
 
-表 3-2：OpenVMS 和 Linux 之间的 TCP/IP 应用
+### 表 3-2：OpenVMS 和 Linux 之间的 TCP/IP 应用
 
 | 应用 | 描述 | 配置时 |
 |---|---|---|
@@ -397,7 +383,7 @@ OpenVMS 和 Linux 网络通过使用跨越 TCP/IP 的相似应用程序共同协
 | LPD | 打印机守护进程—用于打印到打印机 | |
 | SMB | 系统块—磁盘共享 | 当你添加网络 |
 
-表 3-2：OpenVMS 和 Linux 之间的 TCP/IP 应用（继续）
+### 表 3-2：OpenVMS 和 Linux 之间的 TCP/IP 应用（继续）
 
 | 应用 | 描述 | 配置时 |
 |---|---|---|
@@ -416,7 +402,7 @@ TCP/IP 工具构建在 Linux 和 OpenVMS 操作系统的内部。你可以复制
 
 在进入下一章安全之前，最后一个 TCP/IP 技巧：我的一个好朋友，来自 DFWLUG 的 Steve Smiley 向我展示了这个小技巧，并据此为 DFWLUG 季刊撰写了一篇文章。
 
-如果你在 Linux 或 OpenVMS 系统上执行“NSLOOKUP”并输入有效的 DNS 名称，你会得到类似 209.39.152.33 的地址。如果你将 TCP/IP 字节转换为二进制表示（借助科学计算器的帮助），你会得到
+如果你在 Linux 或 OpenVMS 系统上执行 `NSLOOKUP` 并输入有效的 DNS 名称，你会得到类似 209.39.152.33 的地址。如果你将 TCP/IP 字节转换为二进制表示（借助科学计算器的帮助），你会得到
 
 ```
 209 = 11010101
@@ -435,9 +421,6 @@ TCP/IP 工具构建在 Linux 和 OpenVMS 操作系统的内部。你可以复制
 ```
 209.39.152.33 = 1101000100111110011100000100001 (base2)
 ```
-
-
-
 
 我惊呆了。我并没有对“环太平洋地区”的 C 类网段（Pacific Rim Class Cs）进行端口扫描吧？接着我看到了他发给我的日志。不是我，不可能是我！记住所有这些阶段——否定、愤怒、讨价、抑郁、接受。在被黑后的第一个 24 小时里，我经历了所有的阶段。
 
@@ -487,6 +470,10 @@ Steven Smiley 和我在一个著名的安全会议上休息，观看那天晚的
 
 ## TCP/IP 已知端口
 
+
+
+# TCP/IP 已知端口与端口扫描
+
 由于它们是标准应用程序，TCP/IP 为服务器定义了“已知端口”，它们随时准备与尝试通信的客户端连接进行通信。
 
 也许最为人知的端口是 80 端口，或者说是万维网（WWW）协议通信的端口。从带有 Web浏览器的客户端连接，WWW 协议通过此链路使用 TCP/IP 连接到 Web 服务器上的 80 端口——所有所有的超文本、图片、图形、电影、Java 和其他 Web 信息。
@@ -497,7 +484,7 @@ Steven Smiley 和我在一个著名的安全会议上休息，观看那天晚的
 
 网络服务器观察者的首选工具是一种名为端口扫描器的软件。互联网上可以找到端口扫描器；费用从免费到数千美元不等。这些工具中的许多会检查服务器从 1 到 80,000+ 的每一个端口。许多已知的软件端口带有横幅（banners），可以告诉你许多关于端口应用程序、服务器操作系统、甚至是谁拥有该系统的大量信息！一个优秀甚至平庸的端口扫描器都会保存这些信息以供搜索或稍后查看。
 
-使用端口扫描器最简单最直接的方法当然是 TCP/IP 应用程序。你可以使用 Telnet 检查甚至与服务器上的任何已知端口或应用程序端口进行交互！通常你使用 Telnet 客户端连接到服务器端口（默认数字 23），大多数 Telnet 应用程序会更改你的端口以连接到你想要的任何端口。从 VMS 或 Linux 提示符简单输入：
+使用端口扫描器最简单最直接的方法当然是 TCP/IP 应用程序。你可以使用 `Telnet` 检查甚至与服务器上的任何已知端口或应用程序端口进行交互！通常你使用 `Telnet` 客户端连接到服务器端口（默认数字 23），大多数 `Telnet` 应用程序会更改你的端口以连接到你想要的任何端口。从 VMS 或 Linux 提示符简单输入：
 
 ```
 telnet/port=25 yourhost.domain.com
@@ -509,7 +496,7 @@ telnet/port=25 yourhost.domain.com
 helo\help
 ```
 
-你就进入了一个交互式电子邮件系统，它允许你在这样一项被称为“电子邮件欺骗”（e-mail spoofing）的古老运动中发送 SMTP 邮件。你可以 Telnet 到已知端口，并直接与控制这些端口的应用程序对话。
+你就进入了一个交互式电子邮件系统，它允许你在这样一项被称为“电子邮件欺骗”（e-mail spoofing）的古老运动中发送 SMTP 邮件。你可以 `Telnet` 到已知端口，并直接与控制这些端口的应用程序对话。
 
 许多应用程序有安全性。但很多没有。这并不是你用来攻击他人系统的方法，而是确认服务器的 TCP/IP 应用程序已配置、安装并运行的极佳方法。
 
@@ -520,97 +507,160 @@ helo\help
 Linux 和 OpenVMS 系统的 TCP/IP 已知端口（并非全部）包括以下内容：
 
 | 端口 | 服务 |
+
 | :--- | :--- |
+
 | 7 | echo |
+
 | 11 | systat.Active Users |
+
 | 21 | ftp |
+
 | 22 | ash |
+
 | 23 | telnet |
 
-
-
-
-
 | 端口 | 服务 | 描述 |
+
 | :--- | :--- | :--- |
+
 | 25 | smtp | 简单邮件传输协议 |
+
 | 42 | nameserver | WINS 主机名 |
+
 | 43 | nicname | Who Is (用户信息查询) |
+
 | 53 | domain | 域名服务器 |
+
 | 66 | sql* | Oracle SQL*NET |
+
 | 79 | finger | Finger (指纹查询) |
+
 | 80 | http | 世界维网 HTTP |
+
 | 88 | kerberos | Kerberos (密钥分发认证协议) |
+
 | 109 | pop2 | 邮件协议版本 2 |
+
 | 110 | pop3 | 邮件协议版本 3 |
+
 | 111 | sunprc | Sun 远程过程调用 |
+
 | 118 | sqlserv | SQL 服务 |
+
 | 119 | ntmpr | 网络传输协议 |
+
 | 135 | ntmpr | DCE 端点解析 |
+
 | 139 | netbios-snm | NETBIOS 会话服务 |
+
 | 135 | nttpr | DCE 端点解析 |
+
 | 143 | imap | 互联网邮件访问协议 |
+
 | 389 | ldap | 轻量级目录访问协议 |
+
 | 396 | network-ip | Novell Netware over IP |
+
 | 443 | https | 安全版 HTTP |
+
 | 513 | login | 远程登录 |
+
 | 514 | rhell | cmd |
+
 | 515 | printer | 打印机进程程序 |
+
 | 800 | socks | Socks 服务 |
+
 | 1313 | bmc_patrold | BMC_PATROLDB |
+
 | 1352 | lotusnote | Lotus Notes |
+
 | 1433 | ms-sql-s | Microsoft SQL Server |
+
 | 1494 | citrix | Citrix |
+
 | 1524 | ingress | 入口 |
+
 | 1525 | orasrv | Oracle 服务器 |
+
 | 1527 | tlisv | Oracle 服务器 |
+
 | 1723 | pptp | PPTP |
+
 | 1745 | winsock-proxy | Winsock 代理 |
+
 | 2000 | remotely-anywhere | 远程访问 |
+
 | 2001 | cisco-mgmt | Cisco 路由器管理 |
+
 | 2049 | nfs | NFS |
+
 | 2301 | CIM | Compaq Insight Manager |
+
 | 2447 | openview | OpenView |
+
 | 2998 | realsecure | RealSecure |
+
 | 3000 | hbcbi | HBCI |
+
 | 3300 | bmc-agent | BMC Patrol 代理 |
+
 | 3306 | mysql | mysql |
+
 | 4001 | cisco-mgmt | Cisco 路由器管理 |
+
 | 4045 | nfs-locked | NFS 锁 |
+
 | 5222 | jabcat | ... |
+
 | 5631 | pcanyherata | ANYWHEREData |
+
 | 5800 | VNC | 虚拟网络计算服务器， |
+
 | 6000 | xwindows | Windows 系统 |
+
 | 6001 | cisco-mgmt | Cisco 路由器管理 |
+
 | 6667 | irc | 互联网聊天服务器 |
+
 | 8000 | web-shoutcast | Web/Shoutcast 服务器 |
+
 | 8001 | web | Web |
+
 | 8002 | web | Web |
+
 | 8080 | WWW-Proxy | 标准 HTTP 代理 |
+
 | 9001 | cisco-xremote | Cisco 远程 |
+
 | 26000 | quake | quake |
+
 | 32771 | rpc-solaris | Solaris RPC |
+
 | 65301 | pcanywhere-def | pcAnywhere |
 
 ## 加密——不仅仅是为了早餐
 
 当你通信敏感（或非敏感）信息时，你需要加密工具/命令，否则你会面临密码、文件以及任何在网络中移动、复制和重新分发的风险。让我们谈谈 OpenVMS 和 Linux 系统上常用的加密协议。
 
-## SSH (V1 和 V2)
+### SSH (V1 和 V2)
 
-SSH（或安全外壳）的功能是众为人知的，多年来在 TCP/IP 世界的许多主机之间可用。
+`SSH`（或安全外壳）的功能是众为人知的，多年来在 TCP/IP 世界的许多主机之间可用。
 
-SSH 能够在主机之间创建加密的 SSH 会话。你可以打开加密的 SSH 终端连接到 SSH 服务器。Linux 和 OpenVMS 都可以作为客户端和服务器，允许两个系统进行安全的终端会话。MultiNet 使用此协议和文件传输应用 SCP 用于 OpenVMS（VMS TCP/IP 一直以来请求 SSH，但它们的注意力被其他 TCP/IP 方向所分散了）。
+`SSH` 能够在主机之间创建加密的 `SSH` 会话。你可以打开加密的 `SSH` 终端连接到 `SSH` 服务器。Linux 和 OpenVMS 都可以作为客户端和服务器，允许两个系统进行安全的终端会话。`MultiNet` 使用此协议和文件传输应用 `SCP` 用于 OpenVMS（VMS TCP/IP 一直以来请求 `SSH`，但它们的注意力被其他 TCP/IP 方向所分散了）。
 
-在开源和 Linux 世界的其他部分，SSH 通常是操作系统自带的终端或 shell 命令，但它本身并不执行文件传输 (FTP)。额外的应用程序已编写为使用 SSH 协议进行文件传输，例如用于 OpenVMS 的 MultiNet SCP 以及用于 Linux 和 UNIX 用户的 SFTP。
+在开源和 Linux 世界的其他部分，`SSH` 通常是操作系统自带的终端或 shell 命令，但它本身并不执行文件传输 (`FTP`)。额外的应用程序已编写为使用 `SSH` 协议进行文件传输，例如用于 OpenVMS 的 `MultiNet SCP` 以及用于 Linux 和 UNIX 用户的 `SFTP`。
+
+
 
 HP 的 OpenVMS TCP/IP 服务没有 SSH 能力，但通过添加 MultiNet SSH 产品，SSH 协议与 TCP/IP 服务（HP 的 5.3 TCP/IP）工作，使得 Linux 和 OpenVMS 之间可以使用 SSH。如果你需要在公有或私有的 Linux 或 OpenVMS 系统之间进行安全的终端访问，且该网络支持交互式终端或 shell 命令登录，而不是明文交换密码和数据，你就会使用 SSH。
 
 可以在以下位置找到此类加密应用的软件：
 
-- 对于 Linux：Linux 标准发行版中的开源软件，或访问 http://www.openssh.org/
-- 对于 OpenVMS：http://www.process.com/ 的 Process 软件 (MultiNet)
-- 对于 HP：OpenVMS V5.3 TCP/IP 服务 http://www.openvms.compaq.com/
+- 对于 Linux：Linux 标准发行版中的开源软件，或访问 `http://www.openssh.org/`
+- 对于 OpenVMS：`http://www.process.com/` 的 Process 软件 (`MultiNet`)
+- 对于 HP：OpenVMS V5.3 TCP/IP 服务 `http://www.openvms.compaq.com/`
 
 ## SSL
 
@@ -620,83 +670,85 @@ SSL 作为加密协议的作用正在不断扩大，新的更复杂的工具和�
 
 OpenSSL 仅包含一个带有程序和编程接口的工具包。你要么必须修改程序以使用 SSL（如你常用的 Web 浏览器），或者你需要另一个位于标准 TCP/IP 应用程序和 SSL 之间的工具。
 
-SSL 作为加密协议的作用正在不断扩大，新的更复杂的工具和应用程序与其身份机制和通信方式相关。今天，SSL 可以用于 Web、终端会话、文件传输、POP 和 IMAP，几乎任何使用已知主机端口地址的 TCP/IP 应用也需要对其通信进行加密。当然，SSL 需要一些帮助来完成这些任务，而它现在适用于 OpenVMS 和 Linux！
-
-（注：由于原文中存在大量重复段落，根据“不要重复输出原文”的要求，此处译文已涵盖核心逻辑内容。）
-
-
-
-
-
-foot|in:one~
-
-文件编辑设置
+### 文件编辑设置
 
 已选择以下产品：
-CPQ ARXPMS SSL V1.0-A    分层产品 [已安装]
+
+`CPQ ARXPMS SSL V1.0-A` 分层产品 [已安装]
 
 你是否要继续？[是] 是
+
 正在配置...
+
 你将被要求为每个选定的产品以及可能为了满足软件依赖关系而安装的产选择选项。
-CPQ ARXPMS SSL V1.0-A: 用于 OpenVMS Alpha V1.0-A 的 SSL（基于 OpenSSL 0.9.68）。
+
+`CPQ ARXPMS SSL V1.0-A`: 用于 OpenVMS Alpha V1.0-A 的 SSL（基于 OpenSSL 0.9.68）。
 
 - Compaq 计算机公司 2002. 保留所有权利。
 
 你是否使用默认选项？[是] 是
+
 你是否要检查选项？[否]
+
 开始执行...
 
 以下产品将安装到目标位置：
-CPQ ARXPMS SSL V1.0-A    DISK$VMS0731:[vMS$COMMON]。
+
+`CPQ ARXPMS SSL V1.0-A` `DISK$VMS0731:[vMS$COMMON]`。
 
 完成进度：0%...10%...20%...30%...
 
 图 4-3 安装将继续计算完成的百分比。
-
-tool|icone:-
 
 文件编辑设置帮助
 
 完成进度：0%...10%...20%...30%...40%...50%...60%...70%...80%...90%...100%
 
 已安装以下产品：
-CPQ ARXPMS SSL V1.0-A    分层产品
+
+`CPQ ARXPMS SSL V1.0-A` 分层产品
 
 ```
 PCXI-I-EXECUTE, 执行 CPQ ARXPMS SSL V1.0-A 的测试程序
 PCXI-I-IUPSUCCESS, 测试程序成功完成
 ```
 
-CPQ ARXPMS SSL V1.0-A: 用于 OpenVMS Alpha V1.0-A 的 SSL（基于 OpenSSL 0.9.68）。
+`CPQ ARXPMS SSL V1.0-A`: 用于 OpenVMS Alpha V1.0-A 的 SSL（基于 OpenSSL 0.9.68）。
 
-请将以下文件插入 SYSMANAGER:STARTUP_VMS.COM：
-@sys@startup$startup.com
-请将以下文件插入 SYSMANAGER:SHUTDOWN.COM：
-@sys@shutdown$shutdown.com
+请将以下文件插入 `SYSMANAGER:STARTUP_VMS.COM`：
+
+`@sys@startup$startup.com`
+
+请将以下文件插入 `SYSMANAGER:SHUTDOWN.COM`：
+
+`@sys@shutdown$shutdown.com`
+
 有一些需要执行的安装后活动。
-这包括定义逻辑名称、运行 SQLUTILS.COM 来定义某些外源符号，以及如果在安装过程中没有执行 IVP，则运行它。请参阅发行说明（Release Notes）以获取有关安装完成后应执行的活动的更多信息。
+
+这包括定义逻辑名称、运行 `SQLUTILS.COM` 来定义某些外源符号，以及如果在安装过程中没有执行 IVP，则运行它。请参阅发行说明（Release Notes）以获取有关安装完成后应执行的活动的更多信息。
 
 SSL 已在 VMS 安装中创建了以下目录结构。
 
 图 4-4 重要的后处理信息从 VMS 安装交付。
 
-第 4 章 – OpenVMS 和 Linux 安全工具    39
+第 4 章 – OpenVMS 和 Linux 安全工具 39
 
-SSL 已在 PCSDESTINATION 中创建了以下目录结构，默认值为 SYSSYSDEVICE:[VMSCOMMON]：
+SSL 已在 `PCSDESTINATION` 中创建了以下目录结构，默认值为 `SYSSYSDEVICE:[VMSCOMMON]`：
 
-- [SSL] 顶级目录
-- [SSL.ALPHA.EXE] 包含 Alpha 平台的映像。
-- [SSL.COM] 各种命令程序的目录。
-- [SSL.DEMOCA] 演示 SSL 功能目录。
-- [SSL.DEMOCA.CERTS] 用于存储证书和密钥的目录。
-- [SSL.DEMOCA.CONF] 包含配置文件。
-- [SSL.CRL] 包含撤销的证书和证书吊销列表 (CRL)。
-- [SSL.DEMOCA.PRIVATE] 私钥和随机数据的目录。
-- [SSL.INCLUDE] 包含 C 头文件 (.H)。
-- [SSL.TEST] 包含 IVP 期间使用的文件。
+- `[SSL]` 顶级目录
+- `[SSL.ALPHA.EXE]` 包含 Alpha 平台的映像。
+- `[SSL.COM]` 各种命令程序的目录。
+- `[SSL.DEMOCA]` 演示 SSL 功能目录。
+- `[SSL.DEMOCA.CERTS]` 用于存储证书和密钥的目录。
+- `[SSL.DEMOCA.CONF]` 包含配置文件。
+- `[SSL.CRL]` 包含撤销的证书和证书吊销列表 (`CRL`)。
+- `[SSL.DEMOCA.PRIVATE]` 私钥和随机数据的目录。
+- `[SSL.INCLUDE]` 包含 C 头文件 (`.H`)。
+- `[SSL.TEST]` 包含 IVP 期间使用的文件。
 
-请参考 SYSHELP:SSL010A.RELEASE_NOTES 获取更多信息。
-系统启动时应运行 $SYSSTART:$SYSSTART.com。
+请参考 `SYSHELP:SSL010A.RELEASE_NOTES` 获取更多信息。
+
+系统启动时应运行 `$SYSSTART:$SYSSTART.com`。
 
 ![](img/a26aae01e7657faca13785a7eb03624a_40_0.png)
 
@@ -704,24 +756,35 @@ SSL 已在 PCSDESTINATION 中创建了以下目录结构，默认值为 SYSSYSDE
 $ show logical/system ssl:
 ```
 
-$SSL$CERTS = "$SSL$ROOT:[DEMOCA.CERTS]"
-$SSL$COM = "$SSL$ROOT:[COM]"
-$SSL$CONF = "$SSL$ROOT:[DEMOCA.CONF]"
-$SSL$CRL = "$SSL$ROOT:[DEMOCA.CRL]"
-$SSL$KEY = "$SSL$ROOT:[ALPHA.KEY]"
-$SSL$INCLUDE = "$SSL$ROOT:[INCLUDE]"
-$SSL$IKEY = "$SSL$ROOT:[DEMOCA.CERTS]"
-$SSL$PRIVATE = "$SSL$ROOT:[DEMOCA.PRIVATE]"
-$SSL$ROOT = "VMSINDEX:IDK600:[SYS9.SYSCOMMON.SSL]"
-```
+`$SSL$CERTS = "$SSL$ROOT:[DEMOCA.CERTS]"`
+
+`$SSL$COM = "$SSL$ROOT:[COM]"`
+
+`$SSL$CONF = "$SSL$ROOT:[DEMOCA.CONF]"`
+
+`$SSL$CRL = "$SSL$ROOT:[DEMOCA.CRL]"`
+
+`$SSL$KEY = "$SSL$ROOT:[ALPHA.KEY]"`
+
+`$SSL$INCLUDE = "$SSL$ROOT:[INCLUDE]"`
+
+`$SSL$IKEY = "$SSL$ROOT:[DEMOCA.CERTS]"`
+
+`$SSL$PRIVATE = "$SSL$ROOT:[DEMOCA.PRIVATE]"`
+
+`$SSL$ROOT = "VMSINDEX:IDK600:[SYS9.SYSCOMMON.SSL]"`
 
 ![](img/a26aae01e7657faca13785a7eb03624a_40_1.png)
 
-Linux & OpenVMS 互操作性
+## Linux & OpenVMS 互操作性
 
 ```
 root@imone:~ 
+```
+
 文件编辑设置帮助
+
+```
 $ set cont
 $ set noon
 $ SYS$MANAGER:STARTUP_VMS.COM
@@ -744,7 +807,11 @@ $ 缓冲区：STARTUP_VMS.COM                               -写入 Forward
 
 ```
 @imone:~ 
+```
+
 文件编辑设置帮助
+
+```
 $ 
 $ 移除以下行的注释符号 ($) 以
 $ 在 TCP/IP 中运行 SSL。
@@ -759,10 +826,13 @@ $ @sys$startup:ssl3-com
 $ EXIT
 [文件结束]
 $ 缓冲区：STARTUP_VMS.COM                               -写入 Forward
+```
 
 图 4-8 将行添加到文件末尾（TCP/IP 之后）。
 
-第 4 章 – OpenVMS 安全工具 
+第 4 章 – OpenVMS 安全工具
+
+
 
 ![](img/a26aae01e7657faca13785a7eb03624a)
 
@@ -807,20 +877,17 @@ root[PCSDESTINATION]
 输入选项: 6
 ```
 
-
-
-
 ## SSL证书工具
 
 ### 签名证书请求
 
-- CA证书文件 ? [SSL$ROOT:[DEMOCA,CERTS]SERVER_CA,CRT]
-- CA 证书密钥文件 ? [SSL$ROOT:[DEMOCA,CERTS]SERVER_CA,KEY]
-- 证书请求文件 ? [SSL$CSR:SERVER,CSR]
-- 签名后的证书文件 ? [SSL$CRT:SIGNED,CRT]
-- 默认数据 ? [ ]
-- PEM 密码短 ? [ ]
-- 显示证书 ? [N]
+- CA证书文件 ? `[SSL$ROOT:[DEMOCA,CERTS]SERVER_CA,CRT]`
+- CA 证书密钥文件 ? `[SSL$ROOT:[DEMOCA,CERTS]SERVER_CA,KEY]`
+- 证书请求文件 ? `[SSL$CSR:SERVER,CSR]`
+- 签名后的证书文件 ? `[SSL$CRT:SIGNED,CRT]`
+- 默认数据 ? `[ ]`
+- PEM 密码短 ? `[ ]`
+- 显示证书 ? `[N]`
 
 图 4-17 再次使用默认值。保存 PEM 密码短并记住你使用的大小——你稍后会需要它。
 
@@ -853,7 +920,7 @@ Total of 2 files.
 $
 ```
 
-图 4-19 进入 Stunnel 所在的目录，你将找到一个 STUNNEL.PEM 文件。
+图 4-19 进入 Stunnel 所在的目录，你将找到一个 `STUNNEL.PEM` 文件。
 
 ![](img/a26aae01e7657faca13785a7eb03624a_47_1.png)
 
@@ -932,7 +999,11 @@ $ else
     if encrypted .EQ, "Y" then
 ```
 
-图 4-23 编辑 stunnel_startup.server.file，找到 "stunnel=" 行并用 "#" 注释掉。
+图 4-23 编辑 `stunnel_startup.server.file`，找到 `"stunnel="` 行并用 `"#"` 注释掉。
+
+
+
+# OpenVMS Stunnel 配置示例
 
 ```
 root@linuxone:~# File Edit Settings Help
@@ -956,7 +1027,7 @@ $ else
     if encrypted .EQ, "Y" then
 ```
 
-图 4-24 将高亮处显示的 stunnel_command 添加到 -p 之后的单行中（删除额外的 "-"）。保存为新版本的脚本。
+图 4-24 将高亮处显示的 `stunnel_command` 添加到 `-p` 之后的单行中（删除额外的 `"-"`）。保存为新版本的脚本。
 
 第 4 章 – OpenVMS 和 Linux 安全工具 49
 
@@ -970,7 +1041,7 @@ Total of 5 files.
 $
 ```
 
-图 4-25 验证现在有了 stunnel_server.com 文件。
+图 4-25 验证现在有了 `stunnel_server.com` 文件。
 
 ```
 root@linuxone:~# File Edit Settings Help
@@ -989,7 +1060,7 @@ Stunnel successfully started up!
 $
 ```
 
-图 4-26 运行 stunnel_startup.com 脚本。使用加密 PEM 证书时相同的大小写密码（记住给密码加上双引号）。
+图 4-26 运行 `stunnel_startup.com` 脚本。使用加密 PEM 证书时相同的大小写密码（记住给密码加上双引号）。
 
 Linux & OpenVMS 互操作性 51
 
@@ -1010,7 +1081,9 @@ Pid Name State I/O CPU Pages
 
 图 4-27 执行一个过程以确保 Stunnel 进程正在运行。
 
-Linux 上的 Stunnel 客户端图 27 至 34 展示了 Stunnel 的安装。
+## Linux 上的 Stunnel 客户端
+
+图 27 至 34 展示了 Stunnel 的安装。
 
 ```
 root@linuxone:~# File Edit Settings Help
@@ -1022,11 +1095,9 @@ dr-xr-x 1 root 44413 Aug 27 07:04 stunnel-3.2
 $ gzip -cd stunnel-3.2.tar.gz | tar -xvf
 ```
 
-图 28 在 /root 目录中通过 tar 命令开始解压。
+图 28 在 `/root` 目录中通过 `tar` 命令开始解压。
 
-图 29 这里的管道命令解压 stunnel-3.2.tar.gz。
-
-
+图 29 这里的管道命令解压 `stunnel-3.2.tar.gz`。
 
 ```bash
 root@innoxone://stunnel/stunnel-3.22
@@ -1053,7 +1124,9 @@ config.status: 正在创建 Makefile
 [root]@stunnel-3.22]#
 ```
 
-图 4-31 等待 make 命令被调用且 /components 完成。
+图 4-31 等待 `make` 命令被调用且 `/components` 完成。
+
+
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -1075,13 +1148,16 @@ gcc -O2 -D_PATH=/usr/include -DHAVE_VERSION="3.22" -DHAVE_OPENSSL=-1 -Dssldir="*
 - c client created。
 ```
 
-图 4-32 执行 make 以构建你已经在 OpenSSL 和 Linux 系统中创建的 stunnel 程序。
+图 4-32 执行 `make` 以构建你已经在 OpenSSL 和 Linux 系统中创建的 `stunnel` 程序。
 
 第 4 章 – 用于 OpenVPN 和 Linux 的安全工具 53
 
 你将被要求输入信息，这些信息将整合到你的证书请求中。
-你正要输入的内容被称为区分名称（Distinguished Name）或 CN。
+
+你正要输入的内容被称为区分名称（Distinguished Name）或 `CN`。
+
 有许多字段你可以留空。
+
 对于某些字段将有一个默认值，如果你输入 '..'，则该字段将留空。
 
 ```bash
@@ -1103,7 +1179,7 @@ M256 fingerprint:F1:B9:17:6B:C5:7E:A0:32:12:60:F5:42:E46
 [root@stunnel-3.22]# 
 ```
 
-图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 stunnel 文件。
+图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 `stunnel` 文件。
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -1128,7 +1204,7 @@ cd ~; /usr/local/var/stunnel/
 [root@stunnel-3.22]#
 ```
 
-图 4-4 执行 make 以构建你在 OpenSSL 和 Linux 系统中创建的 stunnel。
+图 4-4 执行 `make` 以构建你在 OpenSSL 和 Linux 系统中创建的 `stunnel`。
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -1144,7 +1220,7 @@ config.status: 正在创建 Makefile
 [root]@stunnel-3.22]#
 ```
 
-图 4-31 等待 make 命令被调用且 /components 完成。
+图 4-31 等待 `make` 命令被调用且 `/components` 完成。
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -1155,13 +1231,16 @@ configure: 正在创建 /config.status
 config.status: 正在创建 Makefile
 ```
 
-图 4-32 执行 make 以构建你已经在 OpenSSL 和 Linux 系统中创建的 stunnel 程序。
+图 4-32 执行 `make` 以构建你已经在 OpenSSL 和 Linux 系统中创建的 `stunnel` 程序。
 
 第 4 章 – 用于 OpenVPN 和 Linux 的安全工具 53
 
 你将被要求输入信息，这些信息将整合到你的证书请求中。
-你正要输入的内容被称为区分名称（Distinguished Name）或 CN。
+
+你正要输入的内容被称为区分名称（Distinguished Name）或 `CN`。
+
 有许多字段你可以留空。
+
 对于某些字段将有一个默认值，如果你输入 '..'，则该字段将留空。
 
 ```bash
@@ -1183,7 +1262,9 @@ M256 fingerprint:F1:B9:17:6B:C5:7E:A0:32:12:60:F5:42:E46
 [root@stunnel-3.22]# 
 ```
 
-图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 stunnel 文件。
+
+
+## 图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 stunnel 文件。
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -1208,7 +1289,7 @@ cd ~; /usr/local/var/stunnel/
 [root@stunnel-3.22]#
 ```
 
-图 4-4 执行 make 以构建你在 OpenSSL 和 Linux 系统中创建的 stunnel。
+## 图 4-4 执行 make 以构建你在 OpenSSL 和 Linux 系统中创建的 stunnel。
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -1235,7 +1316,7 @@ config.status: 正在创建 Makefile
 [root]@stunnel-3.22]#
 ```
 
-图 4-31 等待 make 命令被调用且 /components 完成。
+## 图 4-31 等待 make 命令被调用且 /components 完成。
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -1257,14 +1338,17 @@ gcc -O2 -D_PATH=/usr/include -DHAVE_VERSION="3.22" -DHAVE_OPENSSL=-1 -Dssldir="*
 - c client created。
 ```
 
-图 4-32 执行 make 以构建你已经在 OpenSSL 和 Linux 系统中创建的 stunnel 程序。
+## 图 4-32 执行 make 以构建你已经在 OpenSSL 和 Linux 系统中创建的 stunnel 程序。
 
 第 4 章 – 用于 OpenVPN 和 Linux 的安全工具 53
 
 你将被要求输入信息，这些信息将整合到你的证书请求中。
-你正要输入的内容被称为区分名称（Distinguished Name）或 CN。
+
+你正要输入的内容被称为区分名称（Distinguished Name）或 `CN`。
+
 有许多字段你可以留空。
-对于某些字段将有一个默认值，如果你输入 '..'，则该字段将留空。
+
+对于某些字段将有一个默认值，如果你输入 `..`，则该字段将留空。
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -1285,7 +1369,9 @@ M256 fingerprint:F1:B9:17:6B:C5:7E:A0:32:12:60:F5:42:E46
 [root@stunnel-3.22]# 
 ```
 
-图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 stunnel 文件。
+## 图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 stunnel 文件。
+
+
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -1310,7 +1396,7 @@ cd ~; /usr/local/var/stunnel/
 [root@stunnel-3.22]#
 ```
 
-图 4-4 执行 make 以构建你在 OpenSSL 和 Linux 系统中创建的 stunnel。
+### 图 4-4 执行 `make` 以构建你在 OpenSSL 和 Linux 系统中创建的 `stunnel`。
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -1337,7 +1423,7 @@ config.status: 正在创建 Makefile
 [root]@stunnel-3.22]#
 ```
 
-图 4-31 等待 make 命令被调用且 /components 完成。
+### 图 4-31 等待 `make` 命令被调用且 `/components` 完成。
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -1359,14 +1445,17 @@ gcc -O2 -D_PATH=/usr/include -DHAVE_VERSION="3.22" -DHAVE_OPENSSL=-1 -Dssldir="*
 - c client created。
 ```
 
-图 4-32 执行 make 以构建你已经在 OpenSSL 和 Linux 系统中创建的 stunnel 程序。
+### 图 4-32 执行 `make` 以构建你已经在 OpenSSL 和 Linux 系统中创建的 `stunnel` 程序。
 
 第 4 章 – 用于 OpenVPN 和 Linux 的安全工具 53
 
 你将被要求输入信息，这些信息将整合到你的证书请求中。
-你正要输入的内容被称为区分名称（Distinguished Name）或 CN。
+
+你正要输入的内容被称为区分名称（Distinguished Name）或 `CN`。
+
 有许多字段你可以留空。
-对于某些字段将有一个默认值，如果你输入 '..'，则该字段将留空。
+
+对于某些字段将有一个默认值，如果你输入 `..`，则该字段将留空。
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -1387,7 +1476,9 @@ M256 fingerprint:F1:B9:17:6B:C5:7E:A0:32:12:60:F5:42:E46
 [root@stunnel-3.22]# 
 ```
 
-图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 stunnel 文件。
+### 图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 `stunnel` 文件。
+
+
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -1412,7 +1503,7 @@ cd ~; /usr/local/var/stunnel/
 [root@stunnel-3.22]#
 ```
 
-图 4-4 执行 make 以构建你在 OpenSSL 和 Linux 系统中创建的 stunnel。
+### 图 4-4 执行 `make` 以构建你在 OpenSSL 和 Linux 系统中创建的 `stunnel`。
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -1439,7 +1530,7 @@ config.status: 正在创建 Makefile
 [root]@stunnel-3.22]#
 ```
 
-图 4-31 等待 make 命令被调用且 /components 完成。
+### 图 4-31 等待 `make` 命令被调用且 `/components` 完成。
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -1461,14 +1552,17 @@ gcc -O2 -D_PATH=/usr/include -DHAVE_VERSION="3.22" -DHAVE_OPENSSL=-1 -Dssldir="*
 - c client created。
 ```
 
-图 4-32 执行 make 以构建你已经在 OpenSSL 和 Linux 系统中创建的 stunnel 程序。
+### 图 4-32 执行 `make` 以构建你已经在 OpenSSL 和 Linux 系统中创建的 `stunnel` 程序。
 
 第 4 章 – 用于 OpenVPN 和 Linux 的安全工具 53
 
 你将被要求输入信息，这些信息将整合到你的证书请求中。
-你正要输入的内容被称为区分名称（Distinguished Name）或 CN。
+
+你正要输入的内容被称为区分名称（Distinguished Name）或 `CN`。
+
 有许多字段你可以留空。
-对于某些字段将有一个默认值，如果你输入 '..'，则该字段将留空。
+
+对于某些字段将有一个默认值，如果你输入 `..`，则该字段将留空。
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -1489,7 +1583,9 @@ M256 fingerprint:F1:B9:17:6B:C5:7E:A0:32:12:60:F5:42:E46
 [root@stunnel-3.22]# 
 ```
 
-图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 stunnel 文件。
+### 图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 `stunnel` 文件。
+
+
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -1514,7 +1610,7 @@ cd ~; /usr/local/var/stunnel/
 [root@stunnel-3.22]#
 ```
 
-图 4-4 执行 make 以构建你在 OpenSSL 和 Linux 系统中创建的 stunnel。
+### 图 4-4 执行 `make` 以构建你在 OpenSSL 和 Linux 系统中创建的 `stunnel`。
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -1541,7 +1637,7 @@ config.status: 正在创建 Makefile
 [root]@stunnel-3.22]#
 ```
 
-图 4-31 等待 make 命令被调用且 /components 完成。
+### 图 4-31 等待 `make` 命令被调用且 `/components` 完成。
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -1563,14 +1659,17 @@ gcc -O2 -D_PATH=/usr/include -DHAVE_VERSION="3.22" -DHAVE_OPENSSL=-1 -Dssldir="*
 - c client created。
 ```
 
-图 4-32 执行 make 以构建你已经在 OpenSSL 和 Linux 系统中创建的 stunnel 程序。
+### 图 4-32 执行 `make` 以构建你已经在 OpenSSL 和 Linux 系统中创建的 `stunnel` 程序。
 
 第 4 章 – 用于 OpenVPN 和 Linux 的安全工具 53
 
 你将被要求输入信息，这些信息将整合到你的证书请求中。
-你正要输入的内容被称为区分名称（Distinguished Name）或 CN。
+
+你正要输入的内容被称为区分名称（Distinguished Name）或 `CN`。
+
 有许多字段你可以留空。
-对于某些字段将有一个默认值，如果你输入 '..'，则该字段将留空。
+
+对于某些字段将有一个默认值，如果你输入 `..`，则该字段将留空。
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -1591,7 +1690,9 @@ M256 fingerprint:F1:B9:17:6B:C5:7E:A0:32:12:60:F5:42:E46
 [root@stunnel-3.22]# 
 ```
 
-图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 stunnel 文件。
+### 图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 `stunnel` 文件。
+
+
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -1616,7 +1717,7 @@ cd ~; /usr/local/var/stunnel/
 [root@stunnel-3.22]#
 ```
 
-图 4-4 执行 make 以构建你在 OpenSSL 和 Linux 系统中创建的 stunnel。
+### 图 4-4 执行 `make` 以构建你在 OpenSSL 和 Linux 系统中创建的 `stunnel`。
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -1643,7 +1744,7 @@ config.status: 正在创建 Makefile
 [root]@stunnel-3.22]#
 ```
 
-图 4-31 等待 make 命令被调用且 /components 完成。
+### 图 4-31 等待 `make` 命令被调用且 `/components` 完成。
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -1665,14 +1766,17 @@ gcc -O2 -D_PATH=/usr/include -DHAVE_VERSION="3.22" -DHAVE_OPENSSL=-1 -Dssldir="*
 - c client created。
 ```
 
-图 4-32 执行 make 以构建你已经在 OpenSSL 和 Linux 系统中创建的 stunnel 程序。
+### 图 4-32 执行 `make` 以构建你已经在 OpenSSL 和 Linux 系统中创建的 `stunnel` 程序。
 
 第 4 章 – 用于 OpenVPN 和 Linux 的安全工具 53
 
 你将被要求输入信息，这些信息将整合到你的证书请求中。
-你正要输入的内容被称为区分名称（Distinguished Name）或 CN。
+
+你正要输入的内容被称为区分名称（Distinguished Name）或 `CN`。
+
 有许多字段你可以留空。
-对于某些字段将有一个默认值，如果你输入 '..'，则该字段将留空。
+
+对于某些字段将有一个默认值，如果你输入 `..`，则该字段将留空。
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -1693,7 +1797,9 @@ M256 fingerprint:F1:B9:17:6B:C5:7E:A0:32:12:60:F5:42:E46
 [root@stunnel-3.22]# 
 ```
 
-图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 stunnel 文件。
+### 图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 `stunnel` 文件。
+
+
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -1718,7 +1824,7 @@ cd ~; /usr/local/var/stunnel/
 [root@stunnel-3.22]#
 ```
 
-图 4-4 执行 make 以构建你在 OpenSSL 和 Linux 系统中创建的 stunnel。
+### 图 4-4 执行 `make` 以构建你在 OpenSSL 和 Linux 系统中创建的 `stunnel`。
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -1745,7 +1851,7 @@ config.status: 正在创建 Makefile
 [root]@stunnel-3.22]#
 ```
 
-图 4-31 等待 make 命令被调用且 /components 完成。
+### 图 4-31 等待 `make` 命令被调用且 `/components` 完成。
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -1767,14 +1873,17 @@ gcc -O2 -D_PATH=/usr/include -DHAVE_VERSION="3.22" -DHAVE_OPENSSL=-1 -Dssldir="*
 - c client created。
 ```
 
-图 4-32 执行 make 以构建你已经在 OpenSSL 和 Linux 系统中创建的 stunnel 程序。
+### 图 4-32 执行 `make` 以构建你已经在 OpenSSL 和 Linux 系统中创建的 `stunnel` 程序。
 
 第 4 章 – 用于 OpenVPN 和 Linux 的安全工具 53
 
 你将被要求输入信息，这些信息将整合到你的证书请求中。
-你正要输入的内容被称为区分名称（Distinguished Name）或 CN。
+
+你正要输入的内容被称为区分名称（Distinguished Name）或 `CN`。
+
 有许多字段你可以留空。
-对于某些字段将有一个默认值，如果你输入 '..'，则该字段将留空。
+
+对于某些字段将有一个默认值，如果你输入 `..`，则该字段将留空。
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -1795,7 +1904,9 @@ M256 fingerprint:F1:B9:17:6B:C5:7E:A0:32:12:60:F5:42:E46
 [root@stunnel-3.22]# 
 ```
 
-图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 stunnel 文件。
+### 图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 `stunnel` 文件。
+
+
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -1820,7 +1931,7 @@ cd ~; /usr/local/var/stunnel/
 [root@stunnel-3.22]#
 ```
 
-图 4-4 执行 make 以构建你在 OpenSSL 和 Linux 系统中创建的 stunnel。
+### 图 4-4 执行 `make` 以构建你在 OpenSSL 和 Linux 系统中创建的 `stunnel`。
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -1847,7 +1958,7 @@ config.status: 正在创建 Makefile
 [root]@stunnel-3.22]#
 ```
 
-图 4-31 等待 make 命令被调用且 /components 完成。
+### 图 4-31 等待 `make` 命令被调用且 `/components` 完成。
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -1869,14 +1980,17 @@ gcc -O2 -D_PATH=/usr/include -DHAVE_VERSION="3.22" -DHAVE_OPENSSL=-1 -Dssldir="*
 - c client created。
 ```
 
-图 4-32 执行 make 以构建你已经在 OpenSSL 和 Linux 系统中创建的 stunnel 程序。
+### 图 4-32 执行 `make` 以构建你已经在 OpenSSL 和 Linux 系统中创建的 `stunnel` 程序。
 
 第 4 章 – 用于 OpenVPN 和 Linux 的安全工具 53
 
 你将被要求输入信息，这些信息将整合到你的证书请求中。
-你正要输入的内容被称为区分名称（Distinguished Name）或 CN。
+
+你正要输入的内容被称为区分名称（Distinguished Name）或 `CN`。
+
 有许多字段你可以留空。
-对于某些字段将有一个默认值，如果你输入 '..'，则该字段将留空。
+
+对于某些字段将有一个默认值，如果你输入 `..`，则该字段将留空。
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -1897,7 +2011,9 @@ M256 fingerprint:F1:B9:17:6B:C5:7E:A0:32:12:60:F5:42:E46
 [root@stunnel-3.22]# 
 ```
 
-图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 stunnel 文件。
+### 图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 `stunnel` 文件。
+
+
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -1922,7 +2038,7 @@ cd ~; /usr/local/var/stunnel/
 [root@stunnel-3.22]#
 ```
 
-图 4-4 执行 make 以构建你在 OpenSSL 和 Linux 系统中创建的 stunnel。
+### 图 4-4 执行 `make` 以构建你在 OpenSSL 和 Linux 系统中创建的 `stunnel`。
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -1949,7 +2065,7 @@ config.status: 正在创建 Makefile
 [root]@stunnel-3.22]#
 ```
 
-图 4-31 等待 make 命令被调用且 /components 完成。
+### 图 4-31 等待 `make` 命令被调用且 `/components` 完成。
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -1971,14 +2087,17 @@ gcc -O2 -D_PATH=/usr/include -DHAVE_VERSION="3.22" -DHAVE_OPENSSL=-1 -Dssldir="*
 - c client created。
 ```
 
-图 4-32 执行 make 以构建你已经在 OpenSSL 和 Linux 系统中创建的 stunnel 程序。
+### 图 4-32 执行 `make` 以构建你已经在 OpenSSL 和 Linux 系统中创建的 `stunnel` 程序。
 
 第 4 章 – 用于 OpenVPN 和 Linux 的安全工具 53
 
 你将被要求输入信息，这些信息将整合到你的证书请求中。
-你正要输入的内容被称为区分名称（Distinguished Name）或 CN。
+
+你正要输入的内容被称为区分名称（Distinguished Name）或 `CN`。
+
 有许多字段你可以留空。
-对于某些字段将有一个默认值，如果你输入 '..'，则该字段将留空。
+
+对于某些字段将有一个默认值，如果你输入 `..`，则该字段将留空。
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -1999,7 +2118,9 @@ M256 fingerprint:F1:B9:17:6B:C5:7E:A0:32:12:60:F5:42:E46
 [root@stunnel-3.22]# 
 ```
 
-图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 stunnel 文件。
+### 图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 `stunnel` 文件。
+
+
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -2024,7 +2145,7 @@ cd ~; /usr/local/var/stunnel/
 [root@stunnel-3.22]#
 ```
 
-图 4-4 执行 make 以构建你在 OpenSSL 和 Linux 系统中创建的 stunnel。
+### 图 4-4 执行 `make` 以构建你在 OpenSSL 和 Linux 系统中创建的 `stunnel`。
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -2051,7 +2172,7 @@ config.status: 正在创建 Makefile
 [root]@stunnel-3.22]#
 ```
 
-图 4-31 等待 make 命令被调用且 /components 完成。
+### 图 4-31 等待 `make` 命令被调用且 `/components` 完成。
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -2073,14 +2194,17 @@ gcc -O2 -D_PATH=/usr/include -DHAVE_VERSION="3.22" -DHAVE_OPENSSL=-1 -Dssldir="*
 - c client created。
 ```
 
-图 4-32 执行 make 以构建你已经在 OpenSSL 和 Linux 系统中创建的 stunnel 程序。
+### 图 4-32 执行 `make` 以构建你已经在 OpenSSL 和 Linux 系统中创建的 `stunnel` 程序。
 
 第 4 章 – 用于 OpenVPN 和 Linux 的安全工具 53
 
 你将被要求输入信息，这些信息将整合到你的证书请求中。
-你正要输入的内容被称为区分名称（Distinguished Name）或 CN。
+
+你正要输入的内容被称为区分名称（Distinguished Name）或 `CN`。
+
 有许多字段你可以留空。
-对于某些字段将有一个默认值，如果你输入 '..'，则该字段将留空。
+
+对于某些字段将有一个默认值，如果你输入 `..`，则该字段将留空。
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -2101,7 +2225,9 @@ M256 fingerprint:F1:B9:17:6B:C5:7E:A0:32:12:60:F5:42:E46
 [root@stunnel-3.22]# 
 ```
 
-图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 stunnel 文件。
+### 图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 `stunnel` 文件。
+
+
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -2126,7 +2252,7 @@ cd ~; /usr/local/var/stunnel/
 [root@stunnel-3.22]#
 ```
 
-图 4-4 执行 make 以构建你在 OpenSSL 和 Linux 系统中创建的 stunnel。
+### 图 4-4 执行 `make` 以构建你在 OpenSSL 和 Linux 系统中创建的 `stunnel`。
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -2153,7 +2279,7 @@ config.status: 正在创建 Makefile
 [root]@stunnel-3.22]#
 ```
 
-图 4-31 等待 make 命令被调用且 /components 完成。
+### 图 4-31 等待 `make` 命令被调用且 `/components` 完成。
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -2175,14 +2301,17 @@ gcc -O2 -D_PATH=/usr/include -DHAVE_VERSION="3.22" -DHAVE_OPENSSL=-1 -Dssldir="*
 - c client created。
 ```
 
-图 4-32 执行 make 以构建你已经在 OpenSSL 和 Linux 系统中创建的 stunnel 程序。
+### 图 4-32 执行 `make` 以构建你已经在 OpenSSL 和 Linux 系统中创建的 `stunnel` 程序。
 
 第 4 章 – 用于 OpenVPN 和 Linux 的安全工具 53
 
 你将被要求输入信息，这些信息将整合到你的证书请求中。
-你正要输入的内容被称为区分名称（Distinguished Name）或 CN。
+
+你正要输入的内容被称为区分名称（Distinguished Name）或 `CN`。
+
 有许多字段你可以留空。
-对于某些字段将有一个默认值，如果你输入 '..'，则该字段将留空。
+
+对于某些字段将有一个默认值，如果你输入 `..`，则该字段将留空。
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -2203,7 +2332,9 @@ M256 fingerprint:F1:B9:17:6B:C5:7E:A0:32:12:60:F5:42:E46
 [root@stunnel-3.22]# 
 ```
 
-图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 stunnel 文件。
+### 图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 `stunnel` 文件。
+
+
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -2228,7 +2359,7 @@ cd ~; /usr/local/var/stunnel/
 [root@stunnel-3.22]#
 ```
 
-图 4-4 执行 make 以构建你在 OpenSSL 和 Linux 系统中创建的 stunnel。
+### 图 4-4 执行 `make` 以构建你在 OpenSSL 和 Linux 系统中创建的 `stunnel`。
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -2255,7 +2386,7 @@ config.status: 正在创建 Makefile
 [root]@stunnel-3.22]#
 ```
 
-图 4-31 等待 make 命令被调用且 /components 完成。
+### 图 4-31 等待 `make` 命令被调用且 `/components` 完成。
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -2277,14 +2408,17 @@ gcc -O2 -D_PATH=/usr/include -DHAVE_VERSION="3.22" -DHAVE_OPENSSL=-1 -Dssldir="*
 - c client created。
 ```
 
-图 4-32 执行 make 以构建你已经在 OpenSSL 和 Linux 系统中创建的 stunnel 程序。
+### 图 4-32 执行 `make` 以构建你已经在 OpenSSL 和 Linux 系统中创建的 `stunnel` 程序。
 
 第 4 章 – 用于 OpenVPN 和 Linux 的安全工具 53
 
 你将被要求输入信息，这些信息将整合到你的证书请求中。
-你正要输入的内容被称为区分名称（Distinguished Name）或 CN。
+
+你正要输入的内容被称为区分名称（Distinguished Name）或 `CN`。
+
 有许多字段你可以留空。
-对于某些字段将有一个默认值，如果你输入 '..'，则该字段将留空。
+
+对于某些字段将有一个默认值，如果你输入 `..`，则该字段将留空。
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -2305,7 +2439,9 @@ M256 fingerprint:F1:B9:17:6B:C5:7E:A0:32:12:60:F5:42:E46
 [root@stunnel-3.22]# 
 ```
 
-图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 stunnel 文件。
+### 图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 `stunnel` 文件。
+
+
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -2330,7 +2466,7 @@ cd ~; /usr/local/var/stunnel/
 [root@stunnel-3.22]#
 ```
 
-图 4-4 执行 make 以构建你在 OpenSSL 和 Linux 系统中创建的 stunnel。
+## 图 4-4 执行 make 以构建你在 OpenSSL 和 Linux 系统中创建的 stunnel。
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -2413,14 +2549,17 @@ HAVE_SELECT=1 -DHAVE_EPOLL=1 -DHAVE_HAVE_SYS-1 -DHAVE_TYPES_H=1 -DHAVE_STAT_H=1 
 - c client created。
 ```
 
-图 4-32 执行 make 以构建你已经在 OpenSSL 和 Linux 系统中创建的 stunnel 程序。
+## 图 4-32 执行 make 以构建你已经在 OpenSSL 和 Linux 系统中创建的 stunnel 程序。
 
 第 4 章 – 用于 OpenVPN 和 Linux 的安全工具 53
 
 你将被要求输入信息，这些信息将整合到你的证书请求中。
-你正要输入的内容被称为区分名称（Distinguished Name）或 CN。
+
+你正要输入的内容被称为区分名称（Distinguished Name）或 `CN`。
+
 有许多字段你可以留空。
-对于某些字段将有一个默认值，如果你输入 '..'，则该字段将留空。
+
+对于某些字段将有一个默认值，如果你输入 `..`，则该字段将留空。
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -2441,7 +2580,7 @@ M256 fingerprint:F1:B9:17:6B:C5:7E:A0:32:12:60:F5:42:E46
 [root@stunnel-3.22]# 
 ```
 
-图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 stunnel 文件。
+## 图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 stunnel 文件。
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -2466,7 +2605,9 @@ cd ~; /usr/local/var/stunnel/
 [root@stunnel-3.22]#
 ```
 
-图 4-4 执行 make 以构建你在 OpenSSL 和 Linux 系统中创建的 stunnel。
+
+
+## 图 4-4 执行 `make` 以构建你在 OpenSSL 和 Linux 系统中创建的 `stunnel`
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -2495,12 +2636,12 @@ config.status: 正在创建 Makefile
 
 抱歉，由于之前的输出中出现了严重的重复和格式错误，我将重新为您提供翻译后的图 4-31。
 
-图 4-31 翻译：
-图 4-31 等待 make 命令被调用且 /components 完成。
+## 图 4-31 翻译
+
+图 4-31 等待 `make` 命令被调用且 `/components` 完成。
 
 以下是完整的翻译结果：
 
-[content]
 ```bash
 root@innoxone://stunnel/stunnel-3.22
 文件 编辑 设置 帮助
@@ -2527,7 +2668,7 @@ config.status: 正在创建 Makefile
 [root]@stunnel-3.22]#
 ```
 
-图 4-31 等待 make 命令被调用且 /components 完成。
+图 4-31 等待 `make` 命令被调用且 `/components` 完成。
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -2549,14 +2690,17 @@ gcc -O2 -D_PATH=/usr/include -DHAVE_VERSION="3.22" -DHAVE_OPENSSL=-1 -Dssldir="*
 - c client created。
 ```
 
-图 4-32 执行 make 以构建你已经在 OpenSSL 和 Linux 系统中创建的 stunnel 程序。
+## 图 4-32 执行 `make` 以构建你已经在 OpenSSL 和 Linux 系统中创建的 `stunnel` 程序
 
 第 4 章 – 用于 OpenVPN 和 Linux 的安全工具 53
 
 你将被要求输入信息，这些信息将整合到你的证书请求中。
-你正要输入的内容被称为区分名称（Distinguished Name）或 CN。
+
+你正要输入的内容被称为区分名称（Distinguished Name）或 `CN`。
+
 有许多字段你可以留空。
-对于某些字段将有一个默认值，如果你输入 '..'，则该字段将留空。
+
+对于某些字段将有一个默认值，如果你输入 `..`，则该字段将留空。
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -2577,7 +2721,9 @@ M256 fingerprint:F1:B9:17:6B:C5:7E:A0:32:12:60:F5:42:E46
 [root@stunnel-3.22]# 
 ```
 
-图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 stunnel 文件。
+## 图 4-3 回答来自市场的问题，以便你为 Linux 系统创建一个 `stunnel` 文件
+
+
 
 ```bash
 $ stunnel/stunnel-3.22
@@ -2602,7 +2748,7 @@ cd ~; /usr/local/var/stunnel/
 [root@stunnel-3.22]#
 ```
 
-图 4-4 执行 make 以构建你在 OpenSSL 和 Linux 系统中创建的 stunnel。
+图 4-4 执行 `make` 以构建你在 OpenSSL 和 Linux 系统中创建的 `stunnel`。
 
 ```bash
 root@innoxone:/stunnel/stunnel-3.22
@@ -2628,9 +2774,6 @@ configure: 正在创建 config.status
 config.status: 正在创建 Makefile
 [root]@stunnel-3.22]#
 ```
-
-
-
 
 ![](img/a26aae01e7657faca13785a7eb03624a_58_0.png)
 
@@ -2659,6 +2802,7 @@ Escape character is '^]'.
 欢迎使用 OpenVMS (TM) Alpha 操作系统。版本 V7.2-1
 
 Username: wisniewski
+
 Password:
 
 ```
@@ -2673,6 +2817,7 @@ Password:
 ```
 
 Last interactive login on Monday, 21-MAY-2001 23:37:10
+
 Last non-interactive login on Monday, 21-MAY-2001 23:39:22,40
 
 ```bash
@@ -2680,7 +2825,7 @@ Last non-interactive login on Monday, 21-MAY-2001 23:39:22,40
 # create/term/
 ```
 
-图 你应该将你的 OpenVMS create/terminal 命令重定向，以便结果显示在 Linux 工作站屏幕上！为了执行此功能，你必须有两个账户，一个在 Linux 工作站上，另一个在 OpenVMS 服务器上。
+图 你应该将你的 OpenVMS `create/terminal` 命令重定向，以便结果显示在 Linux 工作站屏幕上！为了执行此功能，你必须有两个账户，一个在 Linux 工作站上，另一个在 OpenVMS 服务器上。
 
 让我们来看命令过程：在你的 Linux 子上登录 X Windows 会话。打开一个交互式窗口并输入（参见图 5-2 和 5-3）。
 
@@ -2690,25 +2835,27 @@ Last non-interactive login on Monday, 21-MAY-2001 23:39:22,40
 
 ## X Windows 会话的命令控制
 
-### Linux 命令：xhost
+### Linux 命令：`xhost`
 
-你 Linux 上的 xhost 命令控制谁可以向你的 X Windows 服务器显示写入内容，如下：
+你 Linux 上的 `xhost` 命令控制谁可以向你的 X Windows 服务器显示写入内容，如下：
 
-- xhost + 允许你网络中的每个主机向你的屏幕发送 X Windows 显示。
-- xhost - 不允许网络中的任何人向你的屏幕发送 X Windows 显示。
-- xhost+nodename.com 仅允许 "nodename.com" 向你的屏幕发送 X Windows 显示。
-- 不带参数的 xhost 会告诉你谁有权向你的屏幕发送 X Windows 显示。
+- `xhost +` 允许你网络中的每个主机向你的屏幕发送 X Windows 显示。
+- `xhost -` 不允许网络中的任何人向你的屏幕发送 X Windows 显示。
+- `xhost+nodename.com` 仅允许 "`nodename.com`" 向你的屏幕发送 X Windows 显示。
+- 不带参数的 `xhost` 会告诉你谁有权向你的屏幕发送 X Windows 显示。
 
-### OpenVMS 命令：SHOW-SET/DISPLAY 和 CREATE/TERMINAL
+### OpenVMS 命令：`SHOW-SET/DISPLAY` 和 `CREATE/TERMINAL`
 
 在你的 Linux 机器上的新 DECterm 中，输入图 5-4 所示的信息。
 
-- Device: WSA4: [super] 意味着这个 OpenVMS 终端（进程）将将其 X Windows 输出重定向到图形显示设备以接收。
-- [super] 意味着从此进程运行的所有 X Windows 应用程序将显示在 WSA4 上。
-- [user] 意味着只有从此进程运行的下一个 X Windows 应用程序将显示在 WSA4 上。
+- Device: `WSA4:` [`super`] 意味着这个 OpenVMS 终端（进程）将将其 X Windows 输出重定向到图形显示设备以接收。
+- [`super`] 意味着从此进程运行的所有 X Windows 应用程序将显示在 `WSA4` 上。
+- [`user`] 意味着只有从此进程运行的下一个 X Windows 应用程序将显示在 `WSA4` 上。
 - Node: 这是 X Windows 服务器显示所在的系统。
 - Transport: 这是正在使用的网络协议。
-- Server: 某些系统可以运行多个实例的 X Windows 服务器。0 是默认值。
+- Server: 某些系统可以运行多个实例的 X Windows 服务器。`0` 是默认值。
+
+
 
 ```
 show display
@@ -2720,15 +2867,13 @@ Server: 0
 Screen: 0
 ```
 
-图 5-4 SHOW DISPLAY 命令告诉从此窗口（在 OpenVMS 服务器上）运行的 X Windows 应用程序将尝试显示在哪里。
+### 图 5-4 `SHOW DISPLAY` 命令告诉从此窗口（在 OpenVMS 服务器上）运行的 X Windows 应用程序将尝试显示在哪里。
 
-- Screen: X Windows 服务器显示可以在软件上具有多个显示屏幕，或者连接到另外两个带有两个更多显示器的显卡。屏幕编号从 0 到服务器包含的任意显卡数量。所有这些参数都可以通过执行以下命令进行更改/重定向：
+- `Screen`: X Windows 服务器显示可以在软件上具有多个显示屏幕，或者连接到另外两个带有两个更多显示器的显卡。屏幕编号从 0 到服务器包含的任意显卡数量。所有这些参数都可以通过执行以下命令进行更改/重定向：
 
 ```
 SET DISPLAY/CREATE/NODE=node.com/transport=tcpip/screen=0 /TRANSPORT=(TCP/IP 如果你已经在内核中安装了 LAT 或 DECnet). /EXECUTIVE_MODE (可选) 为你系统上的所有进程创建一个执行模式 WSA: 设备（必须具有相应权限）。/SUPERVISOR_MODE（可选，默认）为你的当前进程（及子进程）创建一个监视模式 WSA: 设备。/USER_MODE（可选）限制下一个命令。此命令将更改正在运行的 X Windows。
-
-
-
+```
 
 ![](img/a26aae01e7657faca13785a7eb03624a_64_0.png)
 
@@ -2742,7 +2887,7 @@ SET DISPLAY/CREATE/NODE=node.com/transport=tcpip/screen=0 /TRANSPORT=(TCP/IP 如
 
 图 5-9
 
-Linux 与 OpenVMS 的互操作性
+### Linux 与 OpenVMS 的互操作性
 
 5-10 但如果你想从这个菜单中启动自己的命令或 X Windows 应用程序怎么办？使用 Menu Control 窗口 Options（选项）下拉菜单上的 Menus（菜单）按钮。
 
@@ -2770,7 +2915,7 @@ Linux 与 OpenVMS 的互操作性
 
 但假设你足够幸运，在桌子上有一台运行 VMS 的最新先进 Alpha 工作站（而不是机房里的 GS320 集群），而你 Linux 机器的显卡有些老化了。你可以简单地将 Linux 应用程序重定向到新的 OpenVMS 显示器上。
 
-此过程与 VMS 到 Linux 的重定向完全相同，不同之处在于必须发出 Linux 命令来将输出重定向到 VMS 工作站，而不是使用 xhost 命令；OpenVMS 在会话管理器下使用 Security（安全）菜单。
+此过程与 VMS 到 Linux 的重定向完全相同，不同之处在于必须发出 Linux 命令来将输出重定向到 VMS 工作站，而不是使用 `xhost` 命令；OpenVMS 在会话管理器下使用 Security（安全）菜单。
 
 首先，你必须授权 VMS 使用 TCP/IP 作为 X Windows 的传输媒介（进入 VMS），因为它默认没有开启。
 
@@ -2784,18 +2929,31 @@ SYS$$MANAGER:DEC$$TSERVER.COM
 
 ```
 #define server_logical False
+
 # 在 private_server_setup 中设置符号的默认值（其他默认值设置在 DEVICE.COM 中）。
+
 # 任何这些都可以在 PRIVATE_SERVER_SETUP 中修改。
+
 # 为了支持 manual_install.tcp
+
 # if tchip=""
+
 # then tchip = "tcp"
+
 # server_transports = local.*
+
 # server_correct_log = - client disconnect log mode
+
 # server_bug_compatibility = - bug compatibility mode
+
 # server_error_log_to_keep = 2 # 保留错误日志文件
+
 # 检查用户指定的 server setup 程序
+
 # server_device_setup =
+
 # $server_device_setup = EXTRACT(0,2) + ".com"
+
 # if exists(server_device_setup) then @
 ```
 
@@ -2811,7 +2969,7 @@ SYS$$MANAGER:DEC$$TSERVER.COM
 
 图 5-16 点击 Add（添加），就可以填写你的 Linux/Unix 信息。
 
-对于 TCP/IP 传输，用户名始终使用 "*"，否则无法工作（参见图 5-17 至 5-19）！
+对于 TCP/IP 传输，用户名始终使用 `"*"`, 否则无法工作（参见图 5-17 至 5-19）！
 
 ![](img/a26aae01e7657faca13785a7eb03624a_69_0.png)
 
@@ -2825,43 +2983,51 @@ SYS$$MANAGER:DEC$$TSERVER.COM
 
 ```
 File Edit Commands Print Help
+
 $ telnet inx.vmsone.com 23
+
 -TELNET-TRYING, Connecting to Session 0 on host inx.vmsone.com. 
+
 -TELNET-ESCAPE: Escape character is '^'
+
 Red Hat Linux release 7.0 (Guinness)
+
 Kernel 2.4.22 on i386
+
 login: john
+
 password:
+
 Last login: Wed on Jun 20 09:29:04 from vmsone.com
+
 john@vmsone.com $ DISPLAY= export DISPLAY
 ```
 
-图 5-19 恭喜，你的 VMS 显示器上将有一个 X 时钟！你可能还想从你的 Linux 机器使用 xterm 或 xterm（背景）或其他任何应用程序！
+
+
+图 5-19 恭喜，你的 VMS 显示器上将有一个 X 时钟！你可能还想从你的 Linux 机器使用 `xterm` 或 `xterm`（背景）或其他任何应用程序！
 
 第 5 章 - Windows 应用程序：VMS 与 Linux 的 X Windows 互操作性 69
 
 关于哪种更好以及应该采用什么样的计算风格的争论会在讨论组和任何计算机爱好者交流的地方引发。但有一点是明确的：所有的计算风格都将长期存在，操作系统之间的互操作性将是未来所有工作站和服务器的标志。
 
-## 第 6 章 —— 在 OpenVMS 和 Linux 使用电子邮件
+# 第 6 章 —— 在 OpenVMS 和 Linux 使用电子邮件
 
 ## 回过去
 
 在早在 20 世纪 80 年代初，计算机用户可以通过带有 ASCII 图形和未编码二进制对象的电子 BBS，通过 1200 波调制解调器相互发送电子邮件。而且（向 SNL 的老头道歉）我们喜欢那种方式——无论它是多么痛苦或花费多长时间，我们对这项技术表示感谢！
 
-当我终于从年轻时使用的 ASCII 通信切换到 PC 和工作站的电子邮件客户端/服务器图形革命时，我已通过电子邮件使用嵌入式图形、附件以及二进制传输音乐和视频。我还发现（在将 ASCII 电子邮件传输到 TK50 磁带时），我花了 10 年的邮件往来和每天使用才创建了区区 1MB 的数据（使用英语作为通信协议）。
+当我终于从年轻时使用的 ASCII 通信切换到 PC 和工作站的电子邮件客户端/服务器图形革命时，我已通过电子邮件使用嵌入式图形、附件以及二进制传输音乐和视频。我还发现（在将 ASCII 电子邮件传输到 `TK50` 磁带时），我花了 10 年的邮件往来和每天使用才创建了区区 1MB 的数据（使用英语作为通信协议）。
 
-当我把 10 年的邮件历史填满那张只有三分之二的软磁盘（在改变对 95MB TK50 的主意后），我收到了 DEC 的某人通过新的客户端/服务器图形界面向我那亮新的 DEC 320p 笔记本电脑发送的第一个真实附件。
+当我把 10 年的邮件历史填满那张只有三分之二的软磁盘（在改变对 95MB `TK50` 的主意后），我收到了 DEC 的某人通过新的客户端/服务器图形界面向我那亮新的 `DEC 320p` 笔记本电脑发送的第一个真实附件。
 
 我惊讶地发现，消息中的 12 张 PowerPoint 幻灯片（正是用 MS Word 写的）有 1.5MB 的数据——它们甚至无法放入我刚刚填满的那张 10 美元的 1.44MB 软盘中。
 
+如今，随着免费电子邮件账户的普及，以及对于拥有电脑的人来说，拨号上网的每月费用低于 10 美元，大多数人认为这种类型的电子邮件已经古老且过时了。`UUCP` 邮件的实用性已经减退；有趣的是，该协议在业余无线电（数据包）/系统间邮件，以及世界上其他由于互联网拨号接入（POTS——普通电话服务）仍难以获取的地方仍在使用。
 
+## 从网络时代的黎明到今天
 
-
-如今，随着免费电子邮件账户的普及，以及对于拥有电脑的人来说，拨号上网的每月费用低于 10 美元，大多数人认为这种类型的电子邮件已经古老且过时了。UUCP 邮件的实用性已经减退；有趣的是，该协议在业余无线电（数据包）/系统间邮件，以及世界上其他由于互联网拨号接入（POTS——普通电话服务）仍难以获取的地方仍在使用。
-
-# 从网络时代的黎明到今天
-
-在《维多利亚时代的互联网》（*The Victorian Internet*）中，汤姆·阶段（Tom Stage）描述了19世纪的世界是如何通过技术通信奇迹——电报来缩小并交付的。汤姆在书中引用了塞缪尔·莫尔斯（Samuel Morse）1872年的诗作《胜利》：
+在《维多利亚时代的互联网》*The Victorian Internet* 中，汤姆·阶段（Tom Stage）描述了19世纪的世界是如何通过技术通信奇迹——电报来缩小并交付的。汤姆在书中引用了塞缞尔·莫尔斯（Samuel Morse）1872年的诗作《胜利》：
 
 “科学已从这一岸，向另一岸宣告，
 时间与空间不再受其支配。”
@@ -2874,32 +3040,32 @@ john@vmsone.com $ DISPLAY= export DISPLAY
 
 当然，如果你仍然想在网上聊天，你现在可以使用各种即时通讯程序消磨时间，就像发现 19 世纪的电报员将空闲时间的 50% 用于跨越 19 世纪的以太与其他电报员说话、聊天和八卦一样（但对于今天生活在线的人来说，50% 听起来是一个很低的百分比）。尽管技术发生了巨大的变化，但人类在过去的 150 年里并没有多少。许多人仍然有着非常人性的欲望，只想放下工作，靠在后院围栏上或聚集在办公室的茶水旁，和其他人聊聊当天发生的事情。
 
-# 电子邮件程序的兴起与衰落
+## 电子邮件程序的兴起与衰落
 
-1987 年，当我加入 Digital 公司时，它的邮件系统 ALL-IN-1 全球有 800 万用户。ALL-IN-1 具有全文本文字处理和共享日历（用于会议室、演示室等资源），这让人们的时间更容易安排和跟踪。它还包含了那个时代所有文字处理文档的文件交换、附件、邮件列表以及指向各种其他邮件系统（IBM 和当时的标准）的网关。
+1987 年，当我加入 Digital 公司时，它的邮件系统 `ALL-IN-1` 全球有 800 万用户。`ALL-IN-1` 具有全文本文字处理和共享日历（用于会议室、演示室等资源），这让人们的时间更容易安排和跟踪。它还包含了那个时代所有文字处理文档的文件交换、附件、邮件列表以及指向各种其他邮件系统（IBM 和当时的标准）的网关。
 
-此外，ALL-IN-1 运行在 OpenVMS 集群上（谁会想要冗余系统呢），它的客户端/服务器前端链接仍然存在。然而，尽管拥有卓越的技术实力和 PC 集成，Digital 公司在 1996 年选择了一个新系统。DEC 放弃了 ALL-IN-1 的根源，选择了一个强有力的邮件系统——一个可以在邮件中发送文字处理文档、图片、视频和二进制文件的邮件系统，就像其他其他有 20 年历史的邮件系统一样。
+此外，`ALL-IN-1` 运行在 `OpenVMS` 集群上（谁会想要冗余系统呢），它的客户端/服务器前端链接仍然存在。然而，尽管拥有卓越的技术实力和 PC 集成，Digital 公司在 1996 年选择了一个新系统。DEC 放弃了 `ALL-IN-1` 的根源，选择了一个强有力的邮件系统——一个可以在邮件中发送文字处理文档、图片、视频和二进制文件的邮件系统，就像其他其他有 20 年历史的邮件系统一样。
 
-新的电子邮件系统额外优势是可以在 Windows NT 操作系统上运行，在 1996 年，大家都知道这是在千年虫（Y2K）之后唯一能生存的系统平台。
+新的电子邮件系统额外优势是可以在 `Windows NT` 操作系统上运行，在 1996 年，大家都知道这是在千年虫（Y2K）之后唯一能生存的系统平台。
 
-Microsoft Exchange 比开源、基于标准的电子邮件贵得多，但话又回来，微软的营销做得好得多。剩下的就是历史了，直到人们意识到 Exchange 的安装和维护耗费大量资金——而开源产品是免费的！
+`Microsoft Exchange` 比开源、基于标准的电子邮件贵得多，但话又回来，微软的营销做得好得多。剩下的就是历史了，直到人们意识到 `Exchange` 的安装和维护耗费大量资金——而开源产品是免费的！
 
-# 开源开放标准的互联网邮件
+## 开源开放标准的互联网邮件
 
-开放标准完全围绕着 TCP/IP 标准和控制它们的 RFC（意见请求）过程展开。需要注意的是，当前的电子邮件协议正在演进，并随着它们的改进不断添加新功能。终端用户不会担心这些标准，但为 VMS 或 Linux 等操作系统进行实现工作的人会担心。用户需要知道的是，他们可以从各种客户端平台使用哪些基于标准的电子邮件客户端，以及可以设置哪些邮件服务器来从网络上的 OpenVMS 和 Linux 服务器检索他们的邮件。
+开放标准完全围绕着 `TCP/IP` 标准和控制它们的 RFC（意见请求）过程展开。需要注意的是，当前的电子邮件协议正在演进，并随着它们的改进不断添加新功能。终端用户不会担心这些标准，但为 `VMS` 或 `Linux` 等操作系统进行实现工作的人会担心。用户需要知道的是，他们可以从各种客户端平台使用哪些基于标准的电子邮件客户端，以及可以设置哪些邮件服务器来从网络上的 `OpenVMS` 和 `Linux` 服务器检索他们的邮件。
 
-互联网电子邮件应用程序基本上都在做相同的事情，但某些程序具有比其他程序更多的功能。在电子邮件系统中，你应该在客户端中寻找哪些功能？字符单元或图形电子邮件应用程序应该是首要考虑。像 PINE 这样的程序是基于字符单元的，但可以发送附件并在 OpenVMS 和 Linux 上作为客户端运行。其他程序，如 Mozilla（现在源自 Netscape 的开源项目），也运行在 OpenVMS 和 Linux 上，但需要 Windows 图形显示才能显示。图形显示为你提供了一个“所见即所得”（WYSIWYG）的邮件窗口，而字符客户端允许你从网络任何地方通过 telnet 读取你的邮件——至少是邮件的内容部分！
+互联网电子邮件应用程序基本上都在做相同的事情，但某些程序具有比其他程序更多的功能。在电子邮件系统中，你应该在客户端中寻找哪些功能？字符单元或图形电子邮件应用程序应该是首要考虑。像 `PINE` 这样的程序是基于字符单元的，但可以发送附件并在 `OpenVMS` 和 `Linux` 上作为客户端运行。其他程序，如 `Mozilla`（现在源自 Netscape 的开源项目），也运行在 `OpenVMS` 和 `Linux` 上，但需要 Windows 图形显示才能显示。图形显示为你提供了一个“所见即所得”（WYSIWYG）的邮件窗口，而字符客户端允许你从网络任何地方通过 `telnet` 读取你的邮件——至少是邮件的内容部分！
 
 今天在配置电子邮件服务器时，需要检查的重要标准包括：
 
-- POP3–邮局局协议：如果你的服务器支持此项，你的客户端就可以从服务器下载消息。
-- IMAP–互联网消息访问协议：如果你的服务器支持此项，你的客户端可以访问消息并决定是否删除。
+- `POP3`–邮局局协议：如果你的服务器支持此项，你的客户端就可以从服务器下载消息。
+- `IMAP`–互联网消息访问协议：如果你的服务器支持此项，你的客户端可以访问消息并决定是否删除。
 
-好消息是，OpenVMS 和 Linux 都能让电子邮件客户端使用 POP3 或 IMAP 访问邮件。你只需要在系统上启用电子邮件，账户就会集成到邮件中。远程电子邮件客户端就可以从不同位置通过 POP3 或 IMAP 访问这些标准账户。
+好消息是，`OpenVMS` 和 `Linux` 都能让电子邮件客户端使用 `POP3` 或 `IMAP` 访问邮件。你只需要在系统上启用电子邮件，账户就会集成到邮件中。远程电子邮件客户端就可以从不同位置通过 `POP3` 或 `IMAP` 访问这些标准账户。
 
-# OpenVMS 邮件服务器配置
+## OpenVMS 邮件服务器配置
 
-让我们将 OpenVMS 设置为电子邮件服务器（参见图 6-1 至 6-36）。我们假设 TCP/IP 已经设置好，如第 3 节所述。
+让我们将 `OpenVMS` 设置为电子邮件服务器（参见图 6-1 至 6-36）。我们假设 `TCP/IP` 已经设置好，如第 3 节所述。
 
 [img/a26aae01e657faca13785a7eb03624a_75_0.png]
 
@@ -2907,7 +3073,7 @@ Microsoft Exchange 比开源、基于标准的电子邮件贵得多，但话又�
 
 第 6 章 - 在 OpenVMS 和 Linux 上使用电子邮件 75
 
-# Compaq TCP/IP 服务配置菜单
+### Compaq TCP/IP 服务配置菜单
 
 配置选项：
 
@@ -2925,18 +3091,18 @@ Microsoft Exchange 比开源、基于标准的电子邮件贵得多，但话又�
 
 图 6-3 选择菜单选项 2 进行 TCP/IP 客户端更改。
 
-# Compaq TCP/IP 服务客户端组件配置菜单
+### Compaq TCP/IP 服务客户端组件配置菜单
 
 配置选项：
 
-+   1 - FTP 已启用
-2 - NFS 客户端已停止
-3 - REXEC 和 RSH 已停止
-4 - RLOGIN 已启用
-5 - SMTP 已停止
-6 - TELNET 已启用
-7 - DHCP 已停止
-8 - Telnetsym 已停止
++   1 - `FTP` 已启用
+2 - `NFS` 客户端已停止
+3 - `REXEC` 和 `RSH` 已停止
+4 - `RLOGIN` 已启用
+5 - `SMTP` 已停止
+6 - `TELNET` 已启用
+7 - `DHCP` 已停止
+8 - `Telnetsym` 已停止
 8 - 配置选项 1-8
 [E] - 退出菜单
 
@@ -2944,14 +3110,11 @@ Microsoft Exchange 比开源、基于标准的电子邮件贵得多，但话又�
 
 图 6-4 从子菜单选择选项 5 以激活 TCP/IP SMTP 邮件服务。
 
+### SMTP 配置
 
-
-
-# SMTP 配置
-
-服务定义在 SYSUAF 数据库中。
-服务定义在 TCIPSSERVICE 数据库中。
-配置定义在 TCIP$CONFIGURATION 数据库中。
+服务定义在 `SYSUAF` 数据库中。
+服务定义在 `TCIPSSERVICE` 数据库中。
+配置定义在 `TCIP$CONFIGURATION` 数据库中。
 服务未启用。
 服务已停止。
 
@@ -2962,30 +3125,30 @@ SMTP 配置选项：
 -  SMTP 配置
 
 输入配置选项：
-正在创建模板 SYSCONFIG:TCPIP$SMTP|SMT7_CONFIG.TEMPLATE
-TCPIP-I-INFO, 安装镜像 SYSPIP$SYSTEM:TCPIP$SMTP_RECEIVER.EXE
-TCPIP-I-INFO, 已创建逻辑名称
-TCPIP-I-INFO, 服务队列已启动
-TCPIP-I-INFO, 服务状态已启用
-TCPIP-S-TOARTONE, TCPIP$SMTP 启动完成
+正在创建模板 `SYSCONFIG:TCPIP$SMTP|SMT7_CONFIG.TEMPLATE`
+`TCPIP-I-INFO`, 安装镜像 `SYSPIP$SYSTEM:TCPIP$SMTP_RECEIVER.EXE`
+`TCPIP-I-INFO`, 已创建逻辑名称
+`TCPIP-I-INFO`, 服务队列已启动
+`TCPIP-I-INFO`, 服务状态已启用
+`TCPIP-S-TOARTONE`, `TCPIP$SMTP` 启动完成
 按回车继续...
 
 ![](img/a26aae01e7657faca13785a7eb03624a_77_0.png)
 
-# OpenVMS 客户端组件的 Compaq TCP/IP 服务配置菜单
+### OpenVMS 客户端组件的 Compaq TCP/IP 服务配置菜单
 
 配置选项：
 
 | | | |
 |---|---|---|
-| 1 | FTP | 已启用 启动 |
-| 2 | NFS Client | 已禁用 停止 |
-| 3 | REXEC 和 SSH | 已禁用 停止 |
-| 4 | HTTP | 已启用 启动 |
-| 5 | SMTP | 已启用 启动 |
-| 6 | TELNET | 已启用 启动 |
-| 7 | DHCP | 已禁用 停止 |
-| 8 | Telnet | 已禁用 停止 |
+| 1 | `FTP` | 已启用 启动 |
+| 2 | `NFS Client` | 已禁用 停止 |
+| 3 | `REXEC` 和 `SSH` | 已禁用 停止 |
+| 4 | `HTTP` | 已启用 启动 |
+| 5 | `SMTP` | 已启用 启动 |
+| 6 | `TELNET` | 已启用 启动 |
+| 7 | `DHCP` | 已禁用 停止 |
+| 8 | `Telnet` | 已禁用 停止 |
 
 A - 配置选项 1 - #
 (E) 退出菜单
@@ -2996,7 +3159,7 @@ A - 配置选项 1 - #
 
 第 6 章 – 在 OpenVMS 和 Linux 上使用电子邮件
 
-## OpenVMS 的 Compaq TCP/IP 服务配置菜单
+### OpenVMS 的 Compaq TCP/IP 服务配置菜单
 
 配置选项：
 
@@ -3015,23 +3178,23 @@ A - 配置选项 1 - #
 
 图 6-7 选择服务端组件菜单选项。
 
-# OpenVMS Compaq TCP/IP 服务服务端组件配置菜单
+### OpenVMS Compaq TCP/IP 服务服务端组件配置菜单
 
 配置选项：
 
 | I | | | 12 | | |
 |---|---|---|---|---|---|
-| 1 BIND | 已禁用 停止 | 12 | FTP | 已禁用 停止 |
-| 2 BOOTP | 已禁用 停止 | 13 | PC-HFS | 已禁用 停止 |
-| 3 DHCP | 已禁用 停止 | 14 | POP | 已禁用 停止 |
-| 4 FINGER | 已禁用 停止 | 15 | RMAPPER | 已禁用 停止 |
-| 5 FTP | 已启用 | 16 | CLOGIN | 已启用 停止 |
-| 6 IMAP | 已禁用 停止 | 17 | RMT | 已禁用 停止 |
-| 7 LOCKER | 已禁用 停止 | 18 | SNMP | 已禁用 停止 |
-| 8 LPR/LPD | 已启用 停止 | 19 | TELNET | 已启用 停止 |
-| 9 METRIC | 已禁用 停止 | 20 | TFTP | 已启用 停止 |
-| 10 NFS | 已禁用 停止 | 21 | XDM | 已禁用 停止 |
-| 11 LOCKD/STATD | 已禁用 停止 | | | |
+| 1 `BIND` | 已禁用 停止 | 12 | `FTP` | 已禁用 停止 |
+| 2 `BOOTP` | 已禁用 停止 | 13 | `PC-HFS` | 已禁用 停止 |
+| 3 `DHCP` | 已禁用 停止 | 14 | `POP` | 已禁用 停止 |
+| 4 `FINGER` | 已禁用 停止 | 15 | `RMAPPER` | 已禁用 停止 |
+| 5 `FTP` | 已启用 | 16 | `CLOGIN` | 已启用 停止 |
+| 6 `IMAP` | 已禁用 停止 | 17 | `RMT` | 已禁用 停止 |
+| 7 `LOCKER` | 已禁用 停止 | 18 | `SNMP` | 已禁用 停止 |
+| 8 `LPR/LPD` | 已启用 停止 | 19 | `TELNET` | 已启用 停止 |
+| 9 `METRIC` | 已禁用 停止 | 20 | `TFTP` | 已启用 停止 |
+| 10 `NFS` | 已禁用 停止 | 21 | `XDM` | 已禁用 停止 |
+| 11 `LOCKD/STATD` | 已禁用 停止 | | | |
 
 - - A - 配置选项 1 - 21
 [E] - 退出菜单
@@ -3042,10 +3205,10 @@ A - 配置选项 1 - #
 
 Linux 与 OpenVMS 互性
 
-# IMAP 配置
+### IMAP 配置
 
-服务定义在 SYSUAF 中。
-服务定义在 TCPIP$SERVICE 数据库中。
+服务定义在 `SYSUAF` 中。
+服务定义在 `TCPIP$SERVICE` 数据库中。
 服务未启用。
 服务已停止。
 
@@ -3061,10 +3224,10 @@ IMAP 配置选项：
 
 图 6-9 选择 3 以激活并启动此 OpenVMS 系统的 IMAP 服务。
 
-# IMAP 配置
+### IMAP 配置
 
-服务定义在 SYSUAF 中。
-服务定义在 TCPIP$SERVICE 数据库中。
+服务定义在 `SYSUAF` 中。
+服务定义在 `TCPIP$SERVICE` 数据库中。
 服务未启用。
 服务已停止。
 
@@ -3077,28 +3240,28 @@ IMAP 配置选项：
 [E] 退出 IMAP 配置
 
 输入配置选项： 3
-TCPIP-I-INFO, 安装镜像 SYSTEM:TCPIP$IMAP_SERVER.EXE
-TCPIP-I-INFO, 服务已启用
-TCPIP-S-STARTUP, TCPIP$IMAP 启动完成
+`TCPIP-I-INFO`, 安装镜像 `SYSTEM:TCPIP$IMAP_SERVER.EXE`
+`TCPIP-I-INFO`, 服务已启用
+`TCPIP-S-STARTUP`, `TCPIP$IMAP` 启动完成
 按回车继续 ...
 
 图 6-10 退出并返回 TCP/IP 主菜单。
 
-# OpenVMS Compaq TCP/IP 服务服务端组件配置菜单
+### OpenVMS Compaq TCP/IP 服务服务端组件配置菜单
 
 配置选项：
 
-| 1 - BIND | 已禁用 停止 | 12 - NTP | 已禁用 停止 |
-| 2 - BOOTP | 已禁用 停止 | 13 - PC-NFS | 已禁用 停止 |
-| 3 - DHCP | 已禁用 停止 | 14 - POP | 已禁用 停止 |
-| 4 - FINGER | 已禁用 停止 | 15 - PORTMAPPER | 已禁用 停止 |
-| 5 - FTP | 已启用 启动 | 16 - RLOGIN | 已启用 启动 |
-| 6 - IMAP | 已禁用 停止 | 17 - SMTP | 已禁用 停止 |
-| 7 - LOCKER | 已禁用 停止 | 18 - SNMP | 已禁用 停止 |
-| 8 - LPR/LPD | 已禁用 停止 | 19 - TELNET | 已启用 启动 |
-| 9 - METRIC | 已禁用 停止 | 20 - TFTP | 已启用 停止 |
-| 10 - NFS | 已禁用 停止 | 21 - XDM | 已禁用 停止 |
-| 11 - LOCKD/STATD | 已禁用 停止 | | |
+| 1 - `BIND` | 已禁用 停止 | 12 - `NTP` | 已禁用 停止 |
+| 2 - `BOOTP` | 已禁用 停止 | 13 - `PC-NFS` | 已禁用 停止 |
+| 3 - `DHCP` | 已禁用 停止 | 14 - `POP` | 已禁用 停止 |
+| 4 - `FINGER` | 已禁用 停止 | 15 - `PORTMAPPER` | 已禁用 停止 |
+| 5 - `FTP` | 已启用 启动 | 16 - `RLOGIN` | 已启用 启动 |
+| 6 - `IMAP` | 已禁用 停止 | 17 - `SMTP` | 已禁用 停止 |
+| 7 - `LOCKER` | 已禁用 停止 | 18 - `SNMP` | 已禁用 停止 |
+| 8 - `LPR/LPD` | 已禁用 停止 | 19 - `TELNET` | 已启用 启动 |
+| 9 - `METRIC` | 已禁用 停止 | 20 - `TFTP` | 已启用 停止 |
+| 10 - `NFS` | 已禁用 停止 | 21 - `XDM` | 已禁用 停止 |
+| 11 - `LOCKD/STATD` | 已禁用 停止 | | |
 
 - - A - 配置选项 1 - 21
 [E] - 退出菜单
@@ -3107,21 +3270,21 @@ TCPIP-S-STARTUP, TCPIP$IMAP 启动完成
 
 图 6-11 现在 IMAP 服务已在此系统上启用并启动。
 
-# OpenVMS Compaq TCP/IP 服务服务端组件菜单
+### OpenVMS Compaq TCP/IP 服务服务端组件菜单
 
 配置选项：
 
-| 1 - BIND | 已禁用 停止 | 12 - NTP | 已禁用 停止 |
-| 2 - BOOTP | 已禁用 停止 | 13 - PC-NFS | 已禁用 停止 |
-| 3 - DHCP | 已禁用 停止 | 14 - POP | 已禁用 停止 |
-| 4 - FINGER | 已禁用 停止 | 15 - PORTMAPPER | 已禁用 停止 |
-| 5 - FTP | 已启用 启动 | 16 - RLOGIN | 已启用 启动 |
-| 6 - IMAP | 已禁用 停止 | 17 - SMTP | 已禁用 停止 |
-| 7 - LOCKER | 已禁用 停止 | 18 - SNMP | 已禁用 停止 |
-| 8 - LPR/LPD | 已禁用 停止 | 19 - TELNET | 已启用 启动 |
-| 9 - METRIC | 已禁用 停止 | 20 - TFTP | 已禁用 停止 |
-| 10 - NFS | 已禁用 停止 | 21 - XDM | 已禁用 停止 |
-| 11 - LOCKD/STATD | 已禁用 停止 | |
+| 1 - `BIND` | 已禁用 停止 | 12 - `NTP` | 已禁用 停止 |
+| 2 - `BOOTP` | 已禁用 停止 | 13 - `PC-NFS` | 已禁用 停止 |
+| 3 - `DHCP` | 已禁用 停止 | 14 - `POP` | 已禁用 停止 |
+| 4 - `FINGER` | 已禁用 停止 | 15 - `PORTMAPPER` | 已禁用 停止 |
+| 5 - `FTP` | 已启用 启动 | 16 - `RLOGIN` | 已启用 启动 |
+| 6 - `IMAP` | 已禁用 停止 | 17 - `SMTP` | 已禁用 停止 |
+| 7 - `LOCKER` | 已禁用 停止 | 18 - `SNMP` | 已禁用 停止 |
+| 8 - `LPR/LPD` | 已禁用 停止 | 19 - `TELNET` | 已启用 启动 |
+| 9 - `METRIC` | 已禁用 停止 | 20 - `TFTP` | 已禁用 停止 |
+| 10 - `NFS` | 已禁用 停止 | 21 - `XDM` | 已禁用 停止 |
+| 11 - `LOCKD/STATD` | 已禁用 停止 | |
 
 - - A - 配置选项 1 - 21
 [E] - 退出菜单
@@ -3132,10 +3295,10 @@ TCPIP-S-STARTUP, TCPIP$IMAP 启动完成
 
 Linux 与 OpenVMS 互性
 
-# POP 配置
+### POP 配置
 
-服务定义在 SYSUAF 中。
-服务定义在 TCPIP$SERVICE 数据库中。
+服务定义在 `SYSUAF` 中。
+服务定义在 `TCPIP$SERVICE` 数据库中。
 服务未启用。
 服务已停止。
 
@@ -3150,10 +3313,10 @@ POP 配置选项：
 输入配置选项： 3
 图 6-13 在此 OpenVMS 系统上启用并启动 POP3 服务。
 
-# POP 配置
+### POP 配置
 
-服务定义在 SYSUAF 中。
-服务定义在 TCPIP$SERVICE 数据库中。
+服务定义在 `SYSUAF` 中。
+服务定义在 `TCPIP$SERVICE` 数据库中。
 服务未启用。
 服务已停止。
 
@@ -3166,51 +3329,51 @@ POP 配置选项：
 [E] - 退出配置
 
 输入配置选项： 3
-TCPIP-I-INFO, 安装镜像 SYSTEM:TCPIP$POP_SERVER.EXE
-TCPIP-I-INFO, 服务已启用
-TCPIP-S-DONE, TCPIP$POP 完成
+`TCPIP-I-INFO`, 安装镜像 `SYSTEM:TCPIP$POP_SERVER.EXE`
+`TCPIP-I-INFO`, 服务已启用
+`TCPIP-S-DONE`, `TCPIP$POP` 完成
 按回车继续 ..
 
 图 6-14 返回 OpenVMS TCP/IP 服务菜单。
 
 第 6 章 - 在 OpenVMS 和 Linux 上使用电子邮件
 
-# OpenVMS Compaq TCP/IP 服务服务端组件配置菜单
+### OpenVMS Compaq TCP/IP 服务服务端组件配置菜单
 
 配置选项：
 
-| 1 - BIND | 已禁用 停止 | 12 - NTP | 已禁用 停止 |
-| 2 - BOOTP | 已禁用 停止 | 13 - PC-IFS | 已禁用 停止 |
-| 3 - DHCP | 已禁用 停止 | 14 - POP | 已启用 启动 |
-| 4 - FINGER | 已禁用 停止 | 15 - POPTMAP | 已禁用 停止 |
-| 5 - FTP | 已启用 启动 | 16 - RLOGIN | 已启用 启动 |
-| 6 - IMAP | 已启用 启动 | 17 - RPC | 已禁用 停止 |
-| 7 - LOCKER | 已禁用 停止 | 18 - SNMP | 已禁用 停止 |
-| 8 - LPR/LPD | 已禁用 停止 | 19 - TELNET | 已启用 启动 |
-| 9 - METRIC | 已禁用 停止 | 20 - TFTP | 已禁用 停止 |
-| 10 - NFS | 已禁用 停止 | 21 - XDM | 已禁用 停止 |
-| 11 - LOCKD/STATD | 已禁用 停止 | |
+| 1 - `BIND` | 已禁用 停止 | 12 - `NTP` | 已禁用 停止 |
+| 2 - `BOOTP` | 已禁用 停止 | 13 - `PC-IFS` | 已禁用 停止 |
+| 3 - `DHCP` | 已禁用 停止 | 14 - `POP` | 已启用 启动 |
+| 4 - `FINGER` | 已禁用 停止 | 15 - `POPTMAP` | 已禁用 停止 |
+| 5 - `FTP` | 已启用 启动 | 16 - `RLOGIN` | 已启用 启动 |
+| 6 - `IMAP` | 已启用 启动 | 17 - `RPC` | 已禁用 停止 |
+| 7 - `LOCKER` | 已禁用 停止 | 18 - `SNMP` | 已禁用 停止 |
+| 8 - `LPR/LPD` | 已禁用 停止 | 19 - `TELNET` | 已启用 启动 |
+| 9 - `METRIC` | 已禁用 停止 | 20 - `TFTP` | 已禁用 停止 |
+| 10 - `NFS` | 已禁用 停止 | 21 - `XDM` | 已禁用 停止 |
+| 11 - `LOCKD/STATD` | 已禁用 停止 | |
 
 - - A - 配置选项 1 - 21
 [E] - 退出菜单
 
 图 6-15 验证 POP3 协议在此系统上已启用并运行。
 
-# OpenVMS Compaq TCP/IP 服务服务端组件配置菜单
+### OpenVMS Compaq TCP/IP 服务服务端组件配置菜单
 
 配置选项：
 
-| 1 - BIND | 已禁用 停止 | 12 - NTP | 已禁用 停止 |
-| 2 - BOOTP | 已禁用 停止 | 13 - PC-IFS | 已禁用 停止 |
-| 3 - DHCP | 已禁用 停止 | 14 - POP | 已启用 启动 |
-| 4 - FINGER | 已禁用 停止 | 15 - POPTMAP | 已禁用 停止 |
-| 5 - FTP | 已启用 启动 | 16 - RLOGIN | 已启用 启动 |
-| 6 - IMAP | 已启用 启动 | 17 - RPC | 已禁用 停止 |
-| 7 - LOCKER | 已禁用 停止 | 18 - SNMP | 已禁用 停止 |
-| 8 - LPR/LPD | 已禁用 停止 | 19 - TELNET | 已启用 启动 |
-| 9 - METRIC | 已禁用 停止 | 20 - TFTP | 已禁用 停止 |
-| 10 - NFS | 已禁用 停止 | 21 - XDM | 已禁用 停止 |
-| 11 - LOCKD/STATD | 已禁用 停止 | |
+| 1 - `BIND` | 已禁用 停止 | 12 - `NTP` | 已禁用 停止 |
+| 2 - `BOOTP` | 已禁用 停止 | 13 - `PC-IFS` | 已禁用 停止 |
+| 3 - `DHCP` | 已禁用 停止 | 14 - `POP` | 已启用 启动 |
+| 4 - `FINGER` | 已禁用 停止 | 15 - `POPTMAP` | 已禁用 停止 |
+| 5 - `FTP` | 已启用 启动 | 16 - `RLOGIN` | 已启用 启动 |
+| 6 - `IMAP` | 已启用 启动 | 17 - `RPC` | 已禁用 停止 |
+| 7 - `LOCKER` | 已禁用 停止 | 18 - `SNMP` | 已禁用 停止 |
+| 8 - `LPR/LPD` | 已禁用 停止 | 19 - `TELNET` | 已启用 启动 |
+| 9 - `METRIC` | 已禁用 停止 | 20 - `TFTP` | 已禁用 停止 |
+| 10 - `NFS` | 已禁用 停止 | 21 - `XDM` | 已禁用 停止 |
+| 11 - `LOCKD/STATD` | 已禁用 停止 | |
 
 - - A - 配置选项 1 - 21
 [E] - 退出菜单
@@ -3221,11 +3384,7 @@ TCPIP-S-DONE, TCPIP$POP 完成
 
 Linux 与 OpenVMS 互性
 
-
-
-
-
-# Compaq TCP/IP 服务 for OpenVMS 配置菜单
+### Compaq TCP/IP 服务 for OpenVMS 配置菜单
 
 配置选项：
 
@@ -3245,7 +3404,7 @@ Linux 与 OpenVMS 互性
 
 图 6-17 退出 TCP/IP 配置菜单并返回 $ DCL 提示符。
 
-# Compaq TCP/IP 服务 for OpenVMS 配置菜单
+### Compaq TCP/IP 服务 for OpenVMS 配置菜单
 
 配置选项：
 
@@ -3260,14 +3419,19 @@ Linux 与 OpenVMS 互性
 
 + A - 配置选项 1 - 4
 [E] - 退出配置程序
-
 ```
+
+
+
 $ 输入配置选项：e
-$ tcpip
-TCP/IP> show config smtp
-```
 
+$ tcpip
+
+TCP/IP> show config smtp
+
+```
 图 6-18 调用 TCP/IP 管理实用程序并显示 SMTP 配置。
+```
 
 # SMTP 配置
 
@@ -3331,7 +3495,7 @@ TCPIP>
 
 # Linux & OpenVMS 互操作性
 
-# SMTP 配置
+## SMTP 配置
 
 初始间隔：00:00:30.00
 重试间隔：01:00:00.00
@@ -3380,12 +3544,13 @@ Ptm.ini：VMSWISNI
 
 ```
 TCIPSMP_VMSONE.00 1 VMSONE
+
 TCPIP>
 ```
 
 > 图 6-21 邮件管理员（Postmaster）是本地 OpenVMS 账户 wisniewski，但也可以同样容易地设置为互联网电子邮件地址（例如，wisniewski@VMSONE.com）。通过此字段可以将此邮件管理员信息发送到远程系统。
 
-# SMTP 配置
+## SMTP 配置
 
 初始间隔：00:00:30.00
 重试间隔：01:00:00.00
@@ -3434,6 +3599,7 @@ Postmaster.ini：VMSWISNI
 
 ```
 TCIPSMP_VMSONE.00 1 VMSONE
+
 TCPIP> help set config
 ```
 
@@ -3441,28 +3607,37 @@ TCPIP> help set config
 
 ```
 TCPIP> help net config /
+
 SET
+
 CONFIGURATION
 
 SMTP
 
 抱歉，没有关于 SET CONFIG / 的文档。
+
 可用信息：
 
 限制：限定符
-/ADDRESS      GATEWAY     HOP_COUNT_MAX /INTERVAL /LOG
-/OPTIONS              QUEUES     RECEIVE_TIMEOUT /SEND_TIMEOUT
-/SUBSTITUTE_DOMAIN    /ZONE
-示例
-TCPIP>
-TCPIP>
-TCPIP>
 
+/ADDRESS      GATEWAY     HOP_COUNT_MAX /INTERVAL /LOG
+
+/OPTIONS              QUEUES     RECEIVE_TIMEOUT /SEND_TIMEOUT
+
+/SUBSTITUTE_DOMAIN    /ZONE
+
+示例
+
+TCPIP>
+TCPIP>
+TCPIP>
 ```
 
 图 6-23 注意该命令使用了经典 OpenVMS 风格的 /U 参数。
 
-![](img/a26aae01e7657faca13785a7eb03624a_86.png)# SMTP 配置
+![](img/a26aae01e7657faca13785a7eb03624a_86.png)
+
+## SMTP 配置
 
 | 初始间隔： | 地址最大： | 选项 |
 |---|---|---||
@@ -3489,12 +3664,13 @@ TCPIP>
 
 ```
 TCPIP$SMTP_VMSONE.00 I VMSONE
+
 TCPIP>
 ```
 
 图 6-24 当 SMTP 选项设置为 RELAY（中继）时，OpenVMS 需要开启其 ANTI-SPAM 功能。垃圾邮件可以通过其发送到其他系统。
 
-Linux & OpenVMS 互操作性
+### Linux & OpenVMS 互操作性
 
 | 超时 | 邮件 | 接收 | 数据 | 终止 |
 |---|---|---|---|--|
@@ -3515,25 +3691,35 @@ Linux & OpenVMS 互操作性
 
 ```
 TCPIP$SMTP_VMSONE.00 1 VMSONE
-TCPIP> exit
-$
 
+TCPIP> exit
+
+$
 ```
 
 图 6-25 为了激活 OpenVMS 的 ANTI-SPAM 功能，您必须首先将目录设置为 SMTP。
 
 ```
 $ set def sysayroot:[TCIP$SMTP]
+
 $
+
 Directory sysayroot:[TCIP$SMTP]
+
 LOGIN.COM:1
+
 CONFIG:6CONFIG:
 
 ..TEMPLATE:4
+
 TCIP$SMTP_LOGFILE:12
+
 TCIP$SMTP_RECV.RUN:2072
+
 TCIP$SMTP_RECV.RUN:2070
+
 TCIP$SMTP_RECV.RUN:2068
+
 $ 
 ```
 
@@ -3543,22 +3729,35 @@ $
 
 ```
 $ dir
+
 Directory SYS$SYSROOT:[TCIP$SMTP]
 
 LOGIN.COM:1
+
 MAIL5A2F21F5BE000500A1.MAI;1
+
 MAIL54A6FRA8ED000500A1.MAI;1
+
 MAIL54A7A5A19200500A1.MAI;1
+
 MAIL:1
+
 DR:2
+
 SMTP.CONFIG:6
+
 SMTP.TEMPLATE:4
+
 TCIP$SMTP_LOGFILE:12
+
 TCIP$SMTP_RECV.RUN:2075
+
 TCIP$SMTP_RECV.RUN:2070
+
 TCIP$SMTP_RECV.RUN:2069
-$ 
 ```
+
+
 
 共 10 个文件。
 
@@ -3566,27 +3765,37 @@ $
 
 第 6 章 – 在 OpenVMS 和 Linux 上使用电子邮件 89
 
-
-
-
 ```
 !!Reject-Mail-From: *.xyz.com, known.spammer@, *the-internet.*
+
 !!!Accept-Mail-From: @notabhadguy.xyz.com, the_internet_news@somewhere.com
+
 !!SPAM-Action: OPCCOM, ACCOUNTING
+
 SPAM-Action: OPCCOM, ACCOUNTING
 
 !!Security: secure
+
 Security: secure
 
 !!Unbacktranslatable-IP-Text: Your IP address is unbacktranslatable. SPAMMER!
+
 Clients-Text: You dirty SPAMMER.
+
 !!Client-Mail-Text: I saw you in an RBL. SPAMBREATH!
+
 !!Reject-Mail-From: Haven't you been spammed before?
+
 !!MAIL FROM? You've got to be kidding.
+
 !!Unqualified-Sender-Text: MAIL FROM who?
+
 !!Unresolvable-Domain-Text: MAIL FROM where? Yeah right.
+
 !!
+
 SPAM-Relay-Text: Trying to launch your SPAM from your site will get you nowhere.
+
 [R0bl]
 ```
 
@@ -3617,7 +3826,9 @@ $ $ $ set def sys$manager:
 $ dir startup_vms.com
 
 Directory SYS$COMMON:[SYSMGR]
+
 SYSTARTUP_VMS:COM;16
+
 Total of 1 file.
 $ edit startup_vms.com
 ```
@@ -3691,12 +3902,13 @@ $ !'FILE'
 
 OpenVMS 和 Linux 现在都运行 Mozilla。这意味着通过下载你不仅获得了一个世界级的浏览器，还获得了一个适用于你的 OpenVMS 或 Linux 工作站的完整图形化邮件客户端。
 
-## Linux 安装
+### Linux 安装
 
 通常在安装 RedHat 时，Mozilla 会自动安装。但当你想要安装更新或尚未作为基础安装过 Mozilla 时该怎么办？从 www.org 下载 Mozilla（参见图 6-37 到 img/a26aae01e7657faca13785a7eb03624a_93_0.png）。使用 root 账户将 Linux 的 Mozilla 保存在子目录中，这样它就不会填满你的默认目录。
 
 ```
 [root@rvlwone ~kits_linux] ls
+
 apache-1.3.2b.gz mozilla-i686-pc-linux-1.0.1-sea.gz
 ```
 
@@ -3704,82 +3916,133 @@ apache-1.3.2b.gz mozilla-i686-pc-linux-1.0.1-sea.gz
 
 ```
 [root@rvlwone ~kits_linux/mozilla-installer]
+
 File Edit Settings Help
+
 ./mozilla-installer/config.ini
+
 ./mozilla-installer/MPL-1.txt
+
 ./mozilla-installer/xpi/
+
 /mozilla-installer/xpi/xpcom.xpi
+
 /mozilla-installer/xpi/browser.xpi
+
 /mozilla-installer/xpi/mail.xpi
+
 /mozilla-installer/xpi/chatilla.xpi
+
 /mozilla-installer/xpi/tablock.xpi
+
 /mozilla-installer/xpi/deflenus.xpi
+
 /mozilla-installer/xpi/langens.xpi
+
 /mozilla-installer/xpi/regus.xpi
+
 /mozilla-installer/xpi/verman.xpi
+
 ./mozilla-installer/inspector.xpi
 [root@rvlwone ~kits_linux] ls
+
 apache-1.3.2b.tar.gz.tar mozilla-i686-pc-linux-gnu-1.0.1-sea.gz
 [root@rvlwone ~kits_linux] # gunzip -dc mozilla-i686-pc-linux-gnu-1.0.1-sea.gz
 tar -xvf -
 /mozilla-installer/
 /mozilla-installer/mozilla-installer-bin
 /mozilla-installer/mozilla-installer.ini
-/mozilla-installer/README
-/mozilla-installer/config.ini
-/mozilla-installer/MPL-1.txt
-/mozilla-installer/xpi/
-/mozilla-installer/xpi/xpcom.xpi
-/mozilla-installer/xpi/browser.xpi
-/mozilla-installer/xpi/mail.xpi
-/mozilla-installer/xpi/chatilla.xpi
-/mozilla-installer/xpi/tablock.xpi
-/mozilla-installer/xpi/deflenus.xpi
-/mozilla-installer/xpi/langens.xpi
-/mozilla-installer/xpi/regus.xpi
-/mozilla-installer/xpi/verman.xpi
 ```
 
+
+
+`/mozilla-installer/README`
+
+`/mozilla-installer/config.ini`
+
+`/mozilla-installer/MPL-1.txt`
+
+`/mozilla-installer/xpi/`
+
+`/mozilla-installer/xpi/xpcom.xpi`
+
+`/mozilla-installer/xpi/browser.xpi`
+
+`/mozilla-installer/xpi/mail.xpi`
+
+`/mozilla-installer/xpi/chatilla.xpi`
+
+`/mozilla-installer/xpi/tablock.xpi`
+
+`/mozilla-installer/xpi/deflenus.xpi`
+
+`/mozilla-installer/xpi/langens.xpi`
+
+`/mozilla-installer/xpi/regus.xpi`
+
+`/mozilla-installer/xpi/verman.xpi`
+
+```
 图 6-39 切换目录到 Mozilla 目录。
 
 94 Linux & OpenVMS 互操作性
+```
 
 ```
 root@inxone:~/linux# cd mozilla-installer
+
 File  Edit  Settings  Help
+
 ./mozilla-installer/config.ini
+
 ./mozilla-installer/MPL-1.txt
+
 ./mozilla-installer/xpi/
+
 ./mozilla-installer/xpi/xcom.xpi
+
 ./mozilla-installer/xpi/browser.xpi
+
 ./mozilla-installer/xpi/mail.xpi
+
 ./mozilla-installer/xpi/chatilla.xpi
+
 ./mozilla-installer/xpi/taskback.xpi
+
 ./mozilla-installer/xpi/dbus.xpi
+
 ./mozilla-installer/xpi/langens.xpi
+
 ./mozilla-installer/xpi/setup.xpi
+
 ./mozilla-installer/xpi/version.xpi
+
 ./mozilla-installer/xpi/inspector.xpi
+
 [root@inxone:~/linux]$ ls mozilla-installer
+
 apache-1.3.23.x86_64-linux-gnu-1.0.1-server.tar.gz
+
 [root@inxone:~/linux]$ cd mozilla-installer
+
 [root@inxone:~/mozilla-installer]$
+
 root@inxone:~/mozilla-installer]$ ls
+
 config.ini  MPL-1.txt xpi
+
 mozilla-installer-bin mozilla-installer
+
 installer.ini             README
+
 [root@inxone:~/mozilla-installer]$ ./mozilla-installer
 ```
 
-图 6-40 运行 /mozilla-installer 脚本。
+图 6-40 运行 `/mozilla-installer` 脚本。
 
 ![](img/a26aae01e7657faca13785a7eb03624a_95_0.png)
 
 图 6-41 一个新窗口将弹出并开始你的安装对话框。
-
-
-
-
 
 ![](img/a26aae01e7657faca13785a7eb03624a_97_0.png)
 
@@ -3807,33 +4070,50 @@ installer.ini             README
 
 ![](img/a26aae01e7657faca13785a7eb03624a_99_1.png)
 
-目录 DKB0: [KITS.TEMP]
+目录 DKB0: `[KITS.TEMP]`
 
 ```
 2CR92FOX.EXE; AUTOGEN.RUN.COM;1
+
 CPQ-APVMS-CSWM-V0100-1.1--PCSI;1
+
 CPQ-APVMS-CSWM-T0103-1.1--PCSI-DCX-APEXE;1
+
 CPQ-APVMS-CSWM-V0101-1.1--PCSI;1
+
 CPQ-APVMS-CSWM-V0100-1.1--DCX-APEXE;1
+
 CPQ-APVMS-CSWM-FINL-V0100-1.1--PCSI-DCX-APEXE;1
+
 CPQ-APVMS-PRL-T0910-1.1--PCSI-DCX-APEXE;1
+
 CPQ-APVMS-SSL-V0100-A-1.1--PCSI-DCX-APEXE;1
+
 CPQ-APVMS-ALPHA-V0100.SFX.APEXE;1 CSWM_MODPERL.RELHOTS.HTML;1
+
 CSWM_BHP_JETUMP.TXT DEZNO.EXE; DECOW.COM;1
+
 DHUGO1_0.4.VIM;1 KNA2A6B.EXE;1
+
 LIBSPRA-11.ALPHA.SO; LIBSPRA-11.LIB-10.SO;
+
 LIBSPRA-11.LIB-18.SO; LIBSPRA-11.MOZILLA_100.SO;1
+
 LOGIN.COM;2 L24Q4B.EXE;1 MAJORDBON0010--SRC.ZIP;1
+
 SOUPG01_SET.TXT;1 PERL6START.COM;1 PERL6RELHOTS.TXT;1 SMBLIENT.ZIP;1
+
 SSL_ISSUE.TXT;1 TCUMP_GMT.COM;1 TCUMP_PELT.COM;1
+
 UN2IJ.ALPHA.EXE;1 VIM.DIR;
+
 WHQ100.PDF;1
 ```
 
 共 35 个文件。
 5 个产品安装 cswm
 
-图 6-49 以 SYSTEM 身份登录并将组件包放在与系统文件分开的目录中。你可以在 http://www.openvms.compaq.com 找到 OpenVMS Mozilla 帮助（而不是在 http://www.mozilla.org/）。
+图 6-49 以 SYSTEM 身份登录并将组件包放在与系统文件分开的目录中。你可以在 `http://www.openvms.compaq.com` 找到 OpenVMS Mozilla 帮助（而不是在 `http://www.mozilla.org/`）。
 
 你想继续吗？[YES] yes
 
@@ -3856,55 +4136,87 @@ CPQ AXPMS CSWB V1.0                DISK$VMS073I:[VMS$COMMON]
 以下产品已安装：分层产品
 CPQ AXPMS CSWB V1.0
 
-图 6-50 使用标准的 OpenVMS 安装包 (CSWB) 并使用 $PRODUCT INSTALL 命令。
+图 6-50 使用标准的 OpenVMS 安装包 (CSWB) 并使用 `$PRODUCT INSTALL` 命令。
 
 ![](img/a26aae01e7657faca13785a7eb03624a_100_0.png)
 
 ```
 $
+
 $
+
 $
+
 $
+
 $
+
 $
+
 $
+
 $
+
 $
+
 $
+
 $
+
 $
+
 $
+
 $
+
 $
+
 $
+
 $
+
 $
+
 $
+
 $
+
 $
+
 $
+
 $
+
 $
-$
+
  set def sysmanager:
+
 $ edit syslogin.com
 ```
 
-图 6-51 切换目录到 SYS$MANAGER: 并编辑 OpenVMS LOGIN 文件。此文件将为每个创建进程的用户定义命令和符号。
+图 6-51 切换目录到 `SYS$MANAGER:` 并编辑 OpenVMS LOGIN 文件。此文件将为每个创建进程的用户定义命令和符号。
 
-Linux & OpenVMS 兼容性
+## Linux & OpenVMS 兼容性
 
 设置
 
 ```
 $ VERIFY($FSTR("SYS$LOGIN"))
+
 $ FMODE()
+
 $++
+
 $ SYLOGIN 等同于基于网络的 LOGIN.COM 程序；每当任何人登录 OpenVMS 系统、任何网络登录、或者任何分离进程（运行 DCL）启动、或者任何作业启动时，都会执行这些命令。
+
 $ 结构:
+
 $ 此 SYLOGIN 程序分为“交互式”、“作业”、“网络”和“其他”部分。每个部分都是累积的。
+```
 
 图 6-52 当编辑文件时，你需要知道交互式、网络和其他模式的快捷方式；我们将 Mozilla 定义放在交互式中，以便用户登录时可以启动程序。
+
+
 
 ```
 $ MODE_INTERACTIVE:
@@ -3922,7 +4234,7 @@ $ TRUE
 $ 确定什么样的终端，避免重置用户的显示设置...
 ```
 
-图 6-53 定位 Mode_interactive；这是交互式部分的标签。
+图 6-53 定位 `Mode_interactive`；这是交互式部分的标签。
 
 第 6 章 – 在 OpenVMS 和 Linux 上使用电子邮件 101
 
@@ -3948,7 +4260,7 @@ $! 移除以下注释以执行 Process Software 的命令定义程序。
 $ @TCPWARE:TCPWARE_COMMANDS.COM
 ```
 
-图 6-54 检查的 endif 为我们的 Mozilla 设置新命令。注意 "moz" 允许我们从美元符号使用简写 "moz"，并使其被识别为我们输入了整个字符串 "mozilla"。
+图 6-54 检查的 `endif` 为我们的 Mozilla 设置新命令。注意 "`moz`" 允许我们从美元符号使用简写 "`moz`"，并使其被识别为我们输入了整个字符串 "`mozilla`"。
 
 ```
 $! 确定什么样的终端，避免重置用户的显示设置...
@@ -3974,11 +4286,11 @@ SYSCOMMAND:[SYSMGR]SYLOGIN.COM; 4 165 行
 
 图 6-55 保存并编辑过的文件。
 
-Linux & OpenVMS 兼容性
+### Linux & OpenVMS 兼容性
 
 # MCR AUTHORIZE
 
-图 6-56 使用 uaf-modify 命令将这些配额授予任何需要在 OpenVMS 上运行 Mozilla 的用户账户。注意此账户仅具有 tembx 和 netmbx 权限来运行 Mozilla，而显示的 SYSTEM 账户拥有所有权限！
+图 6-56 使用 `uaf-modify` 命令将这些配额授予任何需要在 OpenVMS 上运行 Mozilla 的用户账户。注意此账户仅具有 `tembx` 和 `netmbx` 权限来运行 Mozilla，而显示的 `SYSTEM` 账户拥有所有权限！
 
 | Username: SYSTEM | Owner: SYSTEM |
 | :--- | :--- |
@@ -3997,7 +4309,8 @@ Linux & OpenVMS 兼容性
 | Prio: 250 | 8192 |
 | Queuing: 160 | 32768 |
 | CPU: 250 | 150000 |
-```
+
+
 
 104
 
@@ -4014,10 +4327,6 @@ OpenVMS 和 Linux 开源应用程序的棒之处在于，无论什么平台，�
 ![](img/a26aae01e7657faca13785a7eb03624a_104_1.png)
 
 图 6-59 Mozilla 浏览器窗口已打开，并准备连接到远程电子邮件服务器或通过局域网连接到其运行的服务器。
-
-
-
-
 
 # Compaq 安全浏览器 - CBWB (V1.0)
 
@@ -4125,10 +4434,6 @@ Windows、Linux 和 OpenVMS 系统在过去的 10 年里一直在入侵对方的
 
 还有其他磁盘共享协议，例如 UNIX 世界中的 NFS 或 VMS 世界中的 DFS，但 Windows 的优势在于……
 
-
-
-
-
 ## 服务配置
 
 ![](img/a26aae01e7657faca13785a7eb03624a_116_0.png)
@@ -4142,7 +4447,7 @@ Windows、Linux 和 OpenVMS 系统在过去的 10 年里一直在入侵对方的
 - sql,lbm
 - snmpd
 
-在启动时启动并停止提供 SMB 网络服务的 Samba smbd 和 nmbd 守护进程。
+在启动时启动并停止提供 SMB 网络服务的 Samba `smbd` 和 `nmbd` 守护进程。
 
 在 GNOME 桌面下服务器管理器菜单的图 7-1 中，你只需要勾选复选框并保存选择即可。
 
@@ -4150,82 +4455,118 @@ Windows、Linux 和 OpenVMS 系统在过去的 10 年里一直在入侵对方的
 
 ```
 [root@lnone:samba]# pad
+
 /etc/samba
+
 [root@lnone:samba]# ls
+
 hosts MACHINE.SID secrets.tdb smb.conf sabusers
+
 [root@lnone:samba]# cat hosts
+
 127.0.0.1 localhost
+
 65.64.220.210 vasone
+
 65.64.220.221 wizards
+
 65.64.220.213 wintermate
+
 [root@lnone:samba]#
 ```
 
-图 7-2 激活 SAMBA 的下一步是配置 /etc/samba 目录下的 hosts 文件，使用你喜欢的 Linux 编辑器，并添加你的工作组或域中其他主机的“LAN 管理”（LAN Manager）名称。
+图 7-2 激活 SAMBA 的下一步是配置 `/etc/samba` 目录下的 hosts 文件，使用你喜欢的 Linux 编辑器，并添加你的工作组或域中其他主机的“LAN 管理”（LAN Manager）名称。
 
 第 7 章 – Linux 和 OpenVMS 的 SMB 117 页
 
 ```
 [root@lrvone ~samba]# pad
+
 /etc/samba
+
 [root@lrvone ~samba]# ls
+
 hosts  HOME_SID  secrets.smb.conf sabusers
+```
+
+
+
+```bash
 [root@lrvone ~samba]# cat hosts
+
 127.0.0.1    localhost
+
 65.64.220.210 wizmle
+
 65.64.220.213 winermute
+
 [root@lrvone ~samba]#
+```
+
 # account starts with a cat sabusers
-username = <name> SID=<name2>
+
+`username = <name> SID=<name2>`
+
 # root = administrator admin
-nobody = guest pcquest sbquest
-johnw = john
-stves = steves
-jerrow arrow
-smb_pub = smb_pub
+
+`nobody = guest pcquest sbquest`
+
+`johnw = john`
+
+`stves = steves`
+
+`jerrow arrow`
+
+`smb_pub = smb_pub`
+
+```bash
 [root@lrvone ~samba]# #
 ```
 
-7-3 然后编辑 sabusers 以及 Linux 账户名称以及你想要映射到它们的 Windows 工作组/域名称。注意，你可以将 Windows 用户映射到单个 Linux 账户！
+7-3 然后编辑 `sabusers` 以及 Linux 账户名称以及你想要映射到它们的 Windows 工作组/域名称。注意，你可以将 Windows 用户映射到单个 Linux 账户！
 
 ![](img/a26aae01e7657faca13785a7eb03624a_117_0.png)
 
 文件 编辑 查找 插件 设置 文档 帮助 撤销 切复制 退出
 
-这是主要的 samba.conf 文件。你应该读取 samba conf (global) 部分以理解此处列出的选项。Samba 有许多可配置选项（可能太多了！），本示例中未显示。
+这是主要的 `samba.conf` 文件。你应该读取 `samba conf (global)` 部分以理解此处列出的选项。Samba 有许多可配置选项（可能太多了！），本示例中未显示。
 
-任何以连字符（-）或分号（;）开头的行都是注释并会被忽略。在本示例中，我们将使用 # 作为注释，并使用 ; 表示你想要启用的配置部分。
+任何以连字符（`-`）或分号（`;`）开头的行都是注释并会被忽略。在本示例中，我们将使用 `#` 作为注释，并使用 `;` 表示你想要启用的配置部分。
 
-注意：每当你修改此文件时，都应该运行命令 "testpar" 来检查你是否没有任何基本的语法错误。
+注意：每当你修改此文件时，都应该运行命令 `"testpar"` 来检查你是否没有任何基本的语法错误。
 
 ```
 [global]
+
    Global Settings ------------------------------------------------------
+
 ```
 
 ```
 workgroup = NT-Domain-Name or Workgroup-Name
+
 server string = description
+
 ```
 
-7-4 编辑 samba.conf 文件并更改域/工作组名称，使其与你的 PC（以及其他 Linux 客户端）使用的域/工作组相同。
+7-4 编辑 `samba.conf` 文件并更改域/工作组名称，使其与你的 PC（以及其他 Linux 客户端）使用的域/工作组相同。
 
-Linux 与 OpenVMS 交互性
+# Linux 与 OpenVMS 交互性
 
-# 编辑 /etc/samba/smb.conf
+# 编辑 `/etc/samba/smb.conf`
 
 ![](img/a26aae01e7657faca13785a7eb03624a_118_0.png)
 
-# 用于注释使用 # ，用于你可能
+# 用于注释使用 `#` ，用于你可能
 # 想要启用的配置部分
 
-# 注意：每当你修改此文件时，都应该运行 'testparam'
+# 注意：每当你修改此文件时，都应该运行 `'testparam'`
 # 来检查你是否没有任何基本的语法错误。
 
 ===========================================
 # 全局设置
 ===========================================
-  # 注意：每当你修改此文件时，都应该运行 'testparam'
+  # 注意：每当你修改此文件时，都应该运行 `'testparam'`
 # 来检查你是否没有任何基本的语法错误。
 [global]
   # workgroup = NT-Domain-Name or Workgroup-Name
@@ -4233,9 +4574,9 @@ Linux 与 OpenVMS 交互性
   server string = I can't say if it's LINUX!
 此选项对于安全非常重要。它允许你将连接限制在本地网络上的机器。以下示例限制了对两个 O 类网络和“回环”（loopback）接口的访问。更多语法示例请参见
 
-图 7-5 将 server string 改为更合适的内容。当客户端浏览你的 SMB 服务器时将显示此内容。
+图 7-5 将 `server string` 改为更合适的内容。当客户端浏览你的 SMB 服务器时将显示此内容。
 
-# 编辑 /etc/samba/smb.conf
+# 编辑 `/etc/samba/smb.conf`
 
 ![](img/a26aae01e7657faca13785a7eb03624a_118_1.png)
 
@@ -4281,27 +4622,45 @@ printers = yes
 
 第 7 章 – Linux 和 OpenVMS 的 SMB 119 页
 
-```
+```bash
 [root@iphone:samba]# pwd
-/etc/samba
-[root@iphone:samba]# ls
-hosts MACHINE.SID secrets.tdb smb.conf sabusers
-[root@iphone:samba]# cat hosts
-127.0.0.1 localhost
-65.64.220.210 version
-65.64.220.211 wirale
-65.64.220.213 wintermate
-[root@iphone:samba]# cat sabusers
-unique_name = SMB_name...
-root = administrator admin
-robody = guest pcquest
-john = john
-steves = steves
-jennaw = jennaw
-smb_pub = smb_pub
-[root@iphone:samba]# 7-2 第一次以 root 用户运行 smbpasswd 并创建一个 SMB 密码文件（第一次运行时）。为所有连接到你 SMB 服务器的 Linux 用户名添加密码。
 
+/etc/samba
+
+[root@iphone:samba]# ls
+
+hosts MACHINE.SID secrets.tdb smb.conf sabusers
+
+[root@iphone:samba]# cat hosts
+
+127.0.0.1 localhost
+
+65.64.220.210 version
+
+65.64.220.211 wirale
+
+65.64.220.213 wintermate
+
+[root@iphone:samba]# cat sabusers
+
+unique_name = SMB_name...
+
+root = administrator admin
+
+robody = guest pcquest
+
+john = john
+
+steves = steves
+
+jennaw = jennaw
+
+smb_pub = smb_pub
+
+[root@iphone:samba]# 7-2 第一次以 root 用户运行 smbpasswd 并创建一个 SMB 密码文件（第一次运行时）。为所有连接到你 SMB 服务器的 Linux 用户名添加密码。
 ```
+
+```bash
 [root@iphone:samba]# pwd
 /etc/samba
 [root@iphone:samba]# ls
@@ -4323,9 +4682,13 @@ smb_pub = smb_pub
 new SMB password:
 ```
 
-图 7-8 为 Linux johnny 账户设置 SMB 密码。
+图 7-8 为 Linux `johnny` 账户设置 SMB 密码。
 
 120 Linux 与 OpenVMS 交互性
+
+
+
+### 图 7-9 验证 johnn 的密码。
 
 ```
 [root@lv0one:/etc/samba]$
@@ -4351,7 +4714,7 @@ New password:
 Retype new password:
 ```
 
-图 7-9 验证 johnn 的密码。
+### 图 7-10 成功消息意味着你已将 johnn 添加到密码文件中。
 
 ```
 [root@lv0one:/etc/samba]$
@@ -4378,8 +4741,6 @@ Added user johnn.
 [root@lv0one~$
 ```
 
-图 7-10 成功消息意味着你已将 johnn 添加到密码文件中。
-
 第 7 章 – Linux 和 OpenVMS 的 SMB 121 页
 
 ```
@@ -4390,29 +4751,40 @@ Added user johnn.
 图 7-12 启动 NetBIOS 进程（smbd 和 nmbd 进程都应在启动时启动）。
 ```
 
+`show def`
 
+`SYS$SYSROOT:[SYSMGR]`
 
-show def
-SYS$SYSROOT:[SYSMGR]
-= SYS$SYSROOT:[SYSMGR]
-= SYS$COMMON:[SYSMGR]
-$ dir @reg*
+`= SYS$SYSROOT:[SYSMGR]`
 
-目录 SYS$COMMON:[SYSMGR]
-ICC$ADD_REGISTRY_TABLE.COM;1 REG$CONFIG.COM;1
+`= SYS$COMMON:[SYSMGR]`
+
+`$ dir @reg*`
+
+目录 `SYS$COMMON:[SYSMGR]`
+
+`ICC$ADD_REGISTRY_TABLE.COM;1` `REG$CONFIG.COM;1`
 
 共 2 个文件。
-S 
-S @regconfig.com
 
-图 7-14 要开始配置 OpenVMS 注册表，请执行脚本 @SYS$MANAGER:REG$CONFIG.COM。
+S 
+
+S `@regconfig.com`
+
+图 7-14 要开始配置 OpenVMS 注册表，请执行脚本 `@SYS$MANAGER:REG$CONFIG.COM`。
 
 OpenVMS 注册表配置工具
+
 1 配置 OpenVMS 注册逻辑名称和目录路径
+
 2 显示 OpenVMS 注册逻辑名称和目录路径
+
 3 检查 OpenVMS 注册服务器的状态
+
 4 在此节点上启动 OpenVMS 注册服务器
+
 5 转换为最新的数据库版本和/或回收数据库
+
 H - 关于此工具的帮助
 
 [E] - 退出
@@ -4426,40 +4798,47 @@ H - 关于此工具的帮助
 [E] - 退出
 
 请输入你的选择：1
+
 1 系统现在是集群中的一个节点，还是该系统将成为集群的一部分？(V/N/Q) : Y
 
-REGSTO_BE_STARTED _
+`REGSTO_BE_STARTED _`
 
-+ - 逻辑值 REGSTO_BE_STARTED 没有有效的翻译
++ - 逻辑值 `REGSTO_BE_STARTED` 没有有效的翻译
 
 注意：如果你希望某个节点在系统启动时启动服务器，或运行备用的 OpenVMS 注册服务器，请将此逻辑值设置为 TRUE。
+
 你不希望在此节点上启动 OpenVMS 注册服务器，该进程可以处于状态并写入数据库。但是，你可以运行多个 OpenVMS 注册服务器，每个节点最多一个。
 
 你想要更改此值吗？(V/N/Q) : Y
 
 输入新值 (TRUE/FALSE/NOVAL/Q) : TRUE
+
 你希望将该逻辑定义在哪个逻辑名称中？
+
 (SYSTEM/SYSCLUSTER/Q) : SYSTEM
 
-图 7-16 将 REGSTO_BE_STARTED 逻辑定义为 TRUE。
+图 7-16 将 `REGSTO_BE_STARTED` 逻辑定义为 TRUE。
 
 ![](img/a26aae01e7657faca13785a7eb03624a_124_0.png)
 
-+ - 逻辑值 REGSTO_BE_STARTED 没有有效的翻译
++ - 逻辑值 `REGSTO_BE_STARTED` 没有有效的翻译
 
 注意：如果你希望某个节点在系统启动时启动服务器，或运行备用的 OpenVMS 注册服务器，请将此逻辑值设置为 TRUE。
+
 你不希望在此节点上启动 OpenVMS 注册服务器，该进程可以处于状态并写入数据库。但是，你可以运行多个 OpenVMS 注册服务器，每个节点最多一个。
 
 你想要更改此值吗？(V/N/Q) : Y
 
 输入新值 (TRUE/FALSE/NOVAL/Q) : TRUE
+
 你希望将该逻辑定义在哪个逻辑名称中？
+
 (SYSTEM/SYSCLUSTER/Q) : SYSTEM
 
-```
-逻辑值 REGSTO_BE_STARTED 已临时定义。
-在重启系统之前，请编辑你的 SYLOGICALS.COM 文件
+逻辑值 `REGSTO_BE_STARTED` 已临时定义。
+在重启系统之前，请编辑你的 `SYLOGICALS.COM` 文件
 以包含以下行：
+
 ```
 DEFINE/TABLE=LMSYSTEMREGSTO_BE_STARTED TRUE
 ```
@@ -4470,8 +4849,8 @@ DEFINE/TABLE=LMSYSTEMREGSTO_BE_STARTED TRUE
 
 第 7 章 – 适用于 Linux 和 OpenVMS 的 SMB 125
 
-逻辑值 REGISTRO_BE_STARTED 已临时定义。
-在重启系统之前，你必须编辑你的 SYLOGICALS.COM 文件
+逻辑值 `REGISTRO_BE_STARTED` 已临时定义。
+在重启系统之前，你必须编辑你的 `SYLOGICALS.COM` 文件
 以包含以下行：
 
 ```
@@ -4480,11 +4859,11 @@ DEFINE/LH$SYSTEM REGISTRO_BE_STARTED TRUE
 
 按 [Enter] 继续 -
 
-SYS$REGISTRY 逻辑 -
+`SYS$REGISTRY` 逻辑 -
 
-+ - SYS$REGISTRY 服务器没有有效的翻译
++ - `SYS$REGISTRY` 服务器没有有效的翻译
 注意：在集群中，你可以出于各种目的运行多个 OpenVMS 注册服务器
-（最多跨两个节点）。然而，只有一个 VMS 注册表数据库位于中央磁盘上，并供集群中的所有节点直接访问。请检查你的目录规范对整个集群可见的，或者它与现有的 SYS$REGISTRY 目录的目录规范匹配。
+（最多跨两个节点）。然而，只有一个 VMS 注册表数据库位于中央磁盘上，并供集群中的所有节点直接访问。请检查你的目录规范对整个集群可见的，或者它与现有的 `SYS$REGISTRY` 目录的目录规范匹配。
 
 你想要更改此值吗？(Y/N/Q) [Y]: Y
 
@@ -4492,38 +4871,33 @@ SYS$REGISTRY 逻辑 -
 
 按 [Enter] 继续 -
 
-SYS$REGISTRY 逻辑 -
+`SYS$REGISTRY` 逻辑 -
 
-+ - 逻辑值 SYS$REGISTRY 没有有效的翻译
++ - 逻辑值 `SYS$REGISTRY` 没有有效的翻译
 注意：在集群中，你可以出于各种目的运行多个 OpenVMS 注册服务器
-（最多跨两个节点）。然而，只有一个 VMS 注册表数据库位于中央磁盘上，并供集群中的所有节点直接访问。请检查你的目录规范对整个集群可见的，或者它与现有的 SYS$REGISTRY 目录的目录规范匹配。
+（最多跨两个节点）。然而，只有一个 VMS 注册表数据库位于中央磁盘上，并供集群中的所有节点直接访问。请检查你的目录规范对整个集群可见的，或者它与现有的 `SYS$REGISTRY` 目录的目录规范匹配。
 
 你想要更改此值吗？(Y/N/Q) [Y]: Y
 
-```
-为 SYS$REGISTRY("value/NOVAL/Q") 输入新值："SYS$SYSDEVICE:[VMS_REGISTRY]"
-```
+为 `SYS$REGISTRY("value/NOVAL/Q")` 输入新值："`SYS$SYSDEVICE:[VMS_REGISTRY]`"
 
-```
-你输入了：sys$device:[vms_registry]
-```
+你输入了：`sys$device:[vms_registry]`
 
-```
 这正确吗？(Y/N/Q) [Y]: Y
-```
 
 图 7-19 我再次在逻辑表中定义了这个逻辑（主要因为我只配置了单台系统）。
 
 供集群中的所有节点直接访问。请检查你的目录规范对整个集群可见的，或者它与现有的
-SYS$REGISTRY 的目录规范匹配。
+`SYS$REGISTRY` 的目录规范匹配。
 
 你想要更改此值吗？(Y/N/Q) [Y]: Y
 
-为 SYS$REGISTRY("value/NOVAL/Q") 输入新值："SYS$SYSDEVICE:[VMS_REGISTRY]"
+为 `SYS$REGISTRY("value/NOVAL/Q")` 输入新值："`SYS$SYSDEVICE:[VMS_REGISTRY]`"
 
-```
-逻辑值 REGSTO_BE_STARTED 已临时定义。
-在重启系统之前，请编辑你的 SYLOGICALS.COM 文件
+逻辑值 `REGSTO_BE_STARTED` 已临时定义。
+
+在重启系统之前，请编辑你的 `SYLOGICALS.COM` 文件
+
 以包含以下行：
 
 ```
@@ -4536,34 +4910,43 @@ DEFINE/TABLE=LMSYSTEMREGSTO_BE_STARTED TRUE
 
 第 7 章 – 适用于 Linux 和 OpenVMS 的 SMB 125
 
-逻辑值 REGISTRO_BE_STARTED 已临时定义。
-在重启系统之前，你必须编辑你的 SYLOGICALS.COM 文件
+逻辑值 `REGISTRO_BE_STARTED` 已临时定义。
+
+在重启系统之前，你必须编辑你的 `SYLOGICALS.COM` 文件
+
 以包含以下行：
 
 ```
 DEFINE/LH$SYSTEM REGISTRO_BE_STARTED TRUE
 ```
 
-按 [Enter] 继续 -
 
-SYS$REGISTRY 逻辑 -
 
-+ - SYS$REGISTRY 服务器没有有效的翻译
+按 `[Enter]` 继续 -
+
+`SYS$REGISTRY` 逻辑 -
+
++ - `SYS$REGISTRY` 服务器没有有效的翻译
+
 注意：在集群中，你可以出于各种目的运行多个 OpenVMS 注册服务器
+
 （最多跨两个节点）。然而，只有一个 VMS 注册表数据库位于中央磁盘上，并供集群中的所有节点直接访问。请检查你的目录规范对整个集群可见的，或者它与现有的
-SYS$REGISTRY 目录的目录规范匹配。
+
+`SYS$REGISTRY` 目录的目录规范匹配。
 
 你想要更改此值吗？(Y/N/Q) [Y]: Y
 
 ![](img/a26aae01e7657faca13785a7eb03624a_125_0.png)
 
-按 [Enter] 继续 -
+按 `[Enter]` 继续 -
 
-SYS$REGISTRY 逻辑 -
+`SYS$REGISTRY` 逻辑 -
 
-+ - 逻辑值 SYS$REGISTRY 没有有效的翻译
++ - 逻辑值 `SYS$REGISTRY` 没有有效的翻译
+
 注意：在集群中，你可以出于各种目的运行多个 OpenVMS 注册服务器
-（最多跨两个节点）。然而，只有一个 VMS 注册表数据库位于中央磁盘上，并供集群中的所有节点直接访问。请检查你的目录规范对整个集群可见的，或者它与现有的 SYS$REGISTRY 目录的目录规范匹配。
+
+（最多跨两个节点）。然而，只有一个 VMS 注册表数据库位于中央磁盘上，并供集群中的所有节点直接访问。请检查你的目录规范对整个集群可见的，或者它与现有的 `SYS$REGISTRY` 目录的目录规范匹配。
 
 你想要更改此值吗？(Y/N/Q) [Y]: Y
 
@@ -4578,10 +4961,6 @@ SYS$REGISTRY 逻辑 -
 ```
 这正确吗？(Y/N/Q) [Y]: Y
 ```
-
-
-
-
 
 ## 第1章
 
@@ -4621,9 +5000,9 @@ A 配置选项 1 - 4
 输入配置选项：4
 ```
 
-图 2-27 使用 $@sys$startup:$tcpip$config.com 启动 TCP/IP 配置菜单。选择菜单 4。
+图 2-27 使用 `$@sys$startup:$tcpip$config.com` 启动 TCP/IP 配置菜单。选择菜单 4。
 
-Linux 与 OpenVMS 互操作性
+### Linux 与 OpenVMS 互操作性
 
 ![](img/a26aae01e7657faca13785a7eb03624a_130_0.png)
 
@@ -4641,7 +5020,7 @@ Linux 与 OpenVMS 互操作性
 
 图 7-31 退出 TCP/IP 配置菜单。
 
-Linux 与 OpenVMS 互操作性
+### Linux 与 OpenVMS 互操作性
 
 ## OpenVMS 的 Compaq TCP/IP 服务配置菜单
 
@@ -4651,11 +5030,9 @@ Linux 与 OpenVMS 互操作性
 - 客户端组件
 - 服务器组件
 - 可选组件
-
 - - 关闭 OpenVMS 的 Compaq TCP/IP 服务
 - 启动 OpenVMS 的 Compaq TCP/IP 服务
 - 运行测试
-
 - - 配置选项 1 - 4
 - 退出配置程序
 
@@ -4697,32 +5074,49 @@ Linux 与 OpenVMS 互操作性
 | 20200412 SECURITY_SERVER | HIB | 10 | 58 | 00:00:00.06 | 323 | 397 |
 | 20200415 ACME_SERVER | HIB | 10 | 102 | 00:00:00.23 | 453 | 476 |
 | 20200414 MS_SERVER | HIB | 9 | 42 | 00:00:00.04 | 141 | 172 |
+
+
+
 | 20200415 TP_SERVER | HIB | 10 | 24 | 00:00:00.01 | 71 | 92 |
+
 | 2020041A TCPIP$HTTPP | HIB | 10 | 192 | 00:00:00.22 | 243 | 168 |
+
 | 2020041B TCPIP$ROUTER | LEF | 6 | 85 | 00:00:00.01 | 614 | 695 |
+
 | 2020041C TCPIP$WIP | LEF | 10 | 167 | 00:00:00.05 | 539 | 297 |
+
 | 2020041D TCPIP$MAIL | HIB | 10 | 148 | 00:00:00.18 | 497 | 441 |
+
 | 2020041E TCPIP$POP | HIB | 10 | 250 | 00:00:00.02 | 415 | 384 |
+
 | 2011010 TCPIP$WIP_ACP | HIB | 4 | 86 | 00:00:00.10 | 315 | 81 |
+
 | 2020042A VPL_SERVER | HIB | 15 | 11 | 00:00:00.01 | 203 | 223 |
+
 | 2020042B REGISTRY_SERVER | HIB | 10 | 469 | 00:00:00.00 | 313 |
+
 | 2020042C DEQYS_O | HIB | 6 | 692 | 00:00:00.45 | 476 | 625 |
+
 | 20200422 LIN_ | LEF | 5 | 152 | 00:00:00.03 | 456 | 421 |
+
 | 20200423 UTTER | LEF | 4 | 289 | 00:00:00.36 | 439 | 524 |
+
 | 20200424 DEQ | LEF | 4 | 888 | 00:00:00.15 | 888 | 709 |
+
 | 2020042D DWSTE_025 | COM | 4 | 247 | 00:00:00.65 | 719 | 719 |
+
 | 2020042E SYSTEM_95 | CUR | 7 | 612 | 00:00:01.11 | 720 | 126 |
+
 | 2020042F SYSTEM_54 | LEF | 4 | 14 | 00:00:00.01 | 67 | 585 |
 
-
-
-
-
 此过程将检查是否满足条件。
+
 如果满足条件，过程将继续。
+
 如果不满足，进程将停止。
 
 您要继续吗？(YES|no)
+
 请选择以下选项之一：
 
 - 1. 安装高级服务器 [默认]
@@ -4732,8 +5126,11 @@ Linux 与 OpenVMS 互操作性
 - 5. 外部认证镜像
 
 选项: i
+
 此模式在启动此产品之前无需重启。
+
 有关可能需要重启的原因以及如何避免不必要的重启的信息，请参阅《安装与配置指南》。
+
 选择一个选项：
 
 - 1. 在所有节点上尽可能的地延迟重启。[默认]
@@ -4743,24 +5140,28 @@ Linux 与 OpenVMS 互操作性
 - 5. 重启之前防止在所有节点启动。
 
 选项: i
+
 选择选项 1 为 OpenVMS 安装完整的 Advanced Server 软件。
 
 重启后。
+
 重启之前防止在所有节点启动。
 
 选项: i | 用户帐户和用户识别码 (UIC)
 
-适用于 OpenVMS 的 Advanced Server V7.3 安装会创建两个账户：默认账户 PWRK$DEFAULT 和宾客账户 PWRK$QUEST。这两个帐户的默认 UIC 组号取决于以下因素：
+适用于 OpenVMS 的 Advanced Server V7.3 安装会创建两个账户：默认账户 `PWRK$DEFAULT` 和宾客账户 `PWRK$QUEST`。这两个帐户的默认 UIC 组号取决于以下因素：
 
 - 如果您首次安装服务器，默认值是从 360 开始的第一个未使用的 UIC 组号
-- 如果已存在 PWRK$CONFIG，则使用 PWRK$CONFIG 关联的 UIC 组号
-- 如果已存在 PWRK$DEFAULT 或 PWRK$QUEST 账户，则使用 PWRK$DEFAULT 或 UIC 组号，优先级高于 PWRK$CONFIG。
+- 如果已存在 `PWRK$CONFIG`，则使用 `PWRK$CONFIG` 关联的 UIC 组号
+- 如果已存在 `PWRK$DEFAULT` 或 `PWRK$QUEST` 账户，则使用 `PWRK$DEFAULT` 或 UIC 组号，优先级高于 `PWRK$CONFIG`。
 
 然而，默认的 UIC 组号不会用于更改现有帐户的 UIC。
+
 有关 UIC 组号的更多信息，请参阅《OpenVMS 系统管理员手册》。
 
 输入 UIC 组号用于
-组：PWRK$DEFAULT 和 PWRK$QUEST
+
+组：`PWRK$DEFAULT` 和 `PWRK$QUEST`
 
 图 7-41 现在选择一个 OpenVMS 组号用于 PWRK/Advanced Server 账户！（您可能想使用默认值）。
 
@@ -4768,20 +5169,24 @@ Linux 与 OpenVMS 互操作性
 
 默认值是第一个未拥有的 UIC 组号，从 360 开始
 
-- 如果已存在 PCFSACCOUNT，默认值是与 PCFSACCOUNT 关联的 UIC 组号。
-- 如果已存在 PWRDEFAULT 或 PWRKSGUEST 帐户，默认值是与 PWRDEFAULT 或 PWRKSGUEST 关联的 UIC 组号，其优先级不会更改任何帐户的 UIC。
+- 如果已存在 `PCFSACCOUNT`，默认值是与 `PCFSACCOUNT` 关联的 UIC 组号。
+- 如果已存在 `PWRDEFAULT` 或 `PWRKSGUEST` 帐户，默认值是与 `PWRDEFAULT` 或 `PWRKSGUEST` 关联的 UIC 组号，其优先级不会更改任何帐户的 UIC。
+
 有关 UIC 组号的更多信息，请参阅《OpenVMS 系统管理员手册》。
 
 输入 UIC 组号用于
-PWRDEFAULT 和 PWRKSGUEST
-为 PWRDEFAULT 和 PWRKSGUEST 创建 OpenVMS 帐户
+
+`PWRDEFAULT` 和 `PWRKSGUEST`
+
+为 `PWRDEFAULT` 和 `PWRKSGUEST` 创建 OpenVMS 帐户
 
 - 精简版产品没有任何配置选项。
 
 执行阶段开始 ...
 
 以下产品将安装到目标位置：
-CPQ AXPMS ADVANCEDSERVER V7.3 DISKVSMS0731:[VMSCOMMON]。
+
+`CPQ AXPMS ADVANCEDSERVER V7.3 DISKVSMS0731:[VMSCOMMON]`。
 
 密度：0%
 
@@ -4789,46 +5194,54 @@ CPQ AXPMS ADVANCEDSERVER V7.3 DISKVSMS0731:[VMSCOMMON]。
 
 默认值是第一个未拥有的 UIC 组号，从 360 开始
 
-- 如果已存在 PCFSACCOUNT，默认值是与 PCFSACCOUNT 关联的 UIC 组号。
-- 如果已存在 PWRDEFAULT 或 PWRKSGUEST 帐户，默认值是与 PWRDEFAULT 或 PWRKSGUEST 关联的 UIC 组号。然而，优先于 PCFSACCOUNT 的默认 UIC 不用于更改任何帐户的 UIC。
+- 如果已存在 `PCFSACCOUNT`，默认值是与 `PCFSACCOUNT` 关联的 UIC 组号。
+- 如果已存在 `PWRDEFAULT` 或 `PWRKSGUEST` 帐户，默认值是与 `PWRDEFAULT` 或 `PWRKSGUEST` 关联的 UIC 组号。然而，优先于 `PCFSACCOUNT` 的默认 UIC 不用于更改任何帐户的 UIC。
+
 有关 UIC 组号的更多信息，请参阅《OpenVMS 系统管理员手册》。
 
 输入 UIC 组号用于
-PWRDEFAULT 和 PWRKSGUEST
+
+`PWRDEFAULT` 和 `PWRKSGUEST`
+
 组：1!
-为 PWRDEFAULT 和 PWRKSGUEST 创建 OpenVMS 帐户
+
+为 `PWRDEFAULT` 和 `PWRKSGUEST` 创建 OpenVMS 帐户
 
 - 精简版产品没有任何配置选项。
 
 执行阶段开始 ...
 
 以下产品将安装到目标位置：
-CPQ AXPMS ADVANCEDSERVER V7.3 DISKVSMS0731:[VMSCOMMON]。
+
+`CPQ AXPMS ADVANCEDSERVER V7.3 DISKVSMS0731:[VMSCOMMON]`。
 
 密度：0%...10%...20%...30%...40%
 
 图 7-43 Advanced Server 安装将继续，直到从安装程序复制 100% 的文件。
 
-Linux & OpenVMS 互操作性
+### Linux & OpenVMS 互操作性
 
-# $SYS$STARTUP:PWRK$STARTUP
+`$SYS$STARTUP:PWRK$STARTUP`
 
 注意：在启动所有网络传输（如 DecNet）的行之后添加此行。
 
-在此节点上启动适用于 OpenVMS 的 Advanced Server V7.3 之前，请确保在集群中运行该产品的每个节点上配置产品 ($SYS$UPDATE:PWRK$CONFIG)。
+在此节点上启动适用于 OpenVMS 的 Advanced Server V7.3 之前，请确保在集群中运行该产品的每个节点上配置产品 (`$SYS$UPDATE:PWRK$CONFIG`)。
 
 已安装以下产品：
-CPQ AVPMS ADVANCEDSERVER V7.3
 
-PCS1-IVPEXECUTE，正在执行 CPQ AVPMS ADVANCEDSERVER V7.3 的测试程序
+`CPQ AVPMS ADVANCEDSERVER V7.3`
+
+`PCS1-IVPEXECUTE`，正在执行 `CPQ AVPMS ADVANCEDSERVER V7.3` 的测试程序
 
 Copyright Compaq Computer Corporation 1998, 2000.
 
 正在启动安装验证程序
+
 适用于 OpenVMS 的 Advanced Server V7.3
 
-$PWRK-I-NORMAL, IVP 执行成功
-PCS1-IVPSSUCCESS, 测试程序执行成功
+`$PWRK-I-NORMAL, IVP 执行成功`
+
+`PCS1-IVPSSUCCESS, 测试程序执行成功`
 
 ```
 $
@@ -4836,7 +5249,7 @@ $
 
 图 74- 随后运行安装验证程序，以测试刚刚完成的安装。您已经安装了 Advanced Server
 
-![](img/a26aae01) 
+![](img/a26aae01)
 
 图 74- 随后运行安装验证程序，以测试刚刚完成的安装。您已经安装了 Advanced Server
 
@@ -4865,33 +5278,36 @@ $
 图 74- 随后运行安装验证程序，以测试刚刚完成的安装。您已经安装了 Advanced Server
 
 ![](img/a26aae01)
-
-
-
 
 已创建所需的 OpenVMS 注册表键和值。
+
 正在创建高级服务器目录树...
-正在将客户端文件复制到高级服务器授权文件 PWWRKSCOMMON:PWMNHUAF.DAT ...
+
+正在将客户端文件复制到高级服务器授权文件 `PWWRKSCOMMON:PWMNHUAF.DAT` ...
 
 更改服务器配置参数将允许你修改
+
 此服务器的客户端容量并选择要使用的传输协议。
 
-+ VMSONE 目前配置为：
++ `VMSONE` 目前配置为：
+
 * 支持 20 个客户端
+
 * 使用以下传输协议(): DCNet
 
 如果你想让此服务器成为主域控制器，你应当
-配置它使用来自域内备份域控制器和
-成员服务器的所有传输协议。
 
-如果你想让此服务器成为备份域控制器或成员服务器，
-你应当配置它与域的主域控制器至少有一个共同的传输协议，否则此配置将失败。
+
+
+配置它使用来自域内备份域控制器和成员服务器的所有传输协议。
+
+如果你想让此服务器成为备份域控制器或成员服务器，你应当配置它与域的主域控制器至少有一个共同的传输协议，否则此配置将失败。
 
 如果你现在不更改配置参数，你稍后可以通过输入 `ADMIN/CONFIG` 来更改。
 
-现在要更改服务器配置参数吗？(YES):
+现在要更改服务器配置参数吗？(`YES`):
 
-图 7-50 现在程序询问我们是否要配置 SERVER 进程及其性能特性。回答 yes 并配置高级服务器进程。
+图 7-50 现在程序询问我们是否要配置 `SERVER` 进程及其性能特性。回答 `yes` 并配置高级服务器进程。
 
 ![](img/a26aae01e7657faca13785a7eb03624a_141_0.png)
 
@@ -4913,19 +5329,21 @@ $
 
 服务器客户端容量
 
-( ) 使用 AUTOGEN/Reboot 确认最大客户端容量
+( ) 使用 `AUTOGEN/Reboot` 确认最大客户端容量
 
 指定的客户端数量 (20) *可以* 被支持。
-你不需要运行 `AUTOGEN` 来使用此配置，
-但你必须重启服务器。
+
+你不需要运行 `AUTOGEN` 来使用此配置，但你必须重启服务器。
 
 你接受此配置吗？
 
-YES
-NO
+`YES`
 
-Verify
-quit
+`NO`
+
+`Verify`
+
+`quit`
 
 高级...
 
@@ -4969,8 +5387,7 @@ OpenVMS 注册表服务器已在该节点上启动。
 
 ********************************************************************
 
-你从菜单中选择了项目编号 5。更改域名将导致现有的 SAM 数据库被**重新初始化**，导致这些数据库中当前的任何数据丢失（例如），
-用户账户（名称）。
+你从菜单中选择了项目编号 5。更改域名将导致现有的 `SAM` 数据库被重新初始化，导致这些数据库中当前的任何数据丢失（例如），用户账户（名称）。
 
 ********************************************************************
 
@@ -4979,14 +5396,19 @@ OpenVMS 注册表服务器已在该节点上启动。
 高级服务器域是共享公共数据库和策略的计算机集合。每个域都有唯一的名称。一个网络可以有多个域。
 
 高级服务器域名长度可达 15 个字符。
+
 域名必须与计算机名不同。
+
 输入此集群的高级服务器域名 [LANGGROUP]: WKSI
 
 图 7-58 将 LANGGROUP 改为你的域或工作组名称！
 
 高级服务器注释长度可达 48 个字符。
+
 输入服务器注释 [no comment]: "I can say it is VMS!"
+
 非法字符 "，请重新输入。
+
 输入服务器注释: I can say it is VMS!
 
 你的 OpenVMS 高级服务器目前配置如下：
@@ -5005,63 +5427,7 @@ OpenVMS 注册表服务器已在该节点上启动。
 
 输入项目编号，或按 RETURN 使用这些值 [DONE]: 5
 
-7. 高级服务器计算机名: VMSONE
-7a. 高级服务器 OpenVMS 集群别名: VMSONE_ALIAS
-8. 服务器公告注释: Advanced server V7.3 for OpenVMS
-9. 服务器服务器语言: English (USA)
-10. 启用 NT 类型: NO
-
-输入项目编号，或按 RETURN 使用这些值 [DONE]: 5
-
-********************************************************************
-
-你从菜单中选择了项目编号 5。更改域名将导致现有的 SAM 数据库被**重新初始化**，导致这些数据库中当前的任何数据丢失（例如），
-用户账户（名称）。
-
-********************************************************************
-
-你要继续执行项目编号 5 吗 (Y/N): y
-
-高级服务器域是共享公共数据库和策略的计算机集合。每个域都有唯一的名称。一个网络可以有多个域。
-
-高级服务器域名长度可达 15 个字符。
-域名必须与计算机名不同。
-输入此集群的高级服务器域名 [LANGGROUP]: WKSI
-
-图 7-58 将 LANGGROUP 改为你的域或工作组名称！
-
-高级服务器注释长度可达 48 个字符。
-输入服务器注释 [no comment]: "I can say it is VMS!"
-非法字符 "，请重新输入。
-输入服务器注释: I can say it is VMS!
-
-你的 OpenVMS 高级服务器目前配置如下：
-
-+ 1. 运行许可服务器: NO
-2. 启用时间服务: NO
-3. 警报服务: YES
-4. 启用 netlog 服务: YES
-5. 高级服务器域: LANDGROUP
-6. 高级服务器角色: PRIMARY
-7. 高级服务器集群名称: VMSOWNE
-8. 高级服务器 OpenVMS 集群别名: VMSOWNE_ALIAS
-9. 高级服务器注释: Advanced Server V7.3 for OpenVMS
-10. 高级服务器语言: English (USA)
-11. 启用 HT 样式打印: NO
-
-输入项目编号，或按 RETURN 使用这些值 [DONE]: 5
-
-********************************************************************
-
-你从菜单中选择了项目编号 5。更改域名将导致现有的 SAM 数据库被**重新初始化**，导致这些数据库中当前的任何数据丢失（例如），
-用户账户（名称）。
-
-********************************************************************
-
-（注：由于原文中存在大量重复内容，此处已根据“不要重复输出原文”的原则进行了整合，翻译了核心逻辑部分）
-
-Your Advanced Server for OpenVMS is presently configured to
-run as follows:
+Your Advanced Server for OpenVMS is presently configured to run as follows:
 
 + 1. Run the license server: NO
 2. Enable Timeservice service: NO
@@ -5069,68 +5435,86 @@ run as follows:
 4. Enable netlog service: YES
 5. Advanced Server domain: LANDGROUP
 6. Advanced Server role name: PRIMARY
-7. Advanced Server cluster name: VMSOWNE
-8. Advanced Server OpenVMS cluster alias: VMSOWNE_ALIAS
+
+
+
+## Advanced Server 配置菜单
+
+7. Advanced Server cluster name: `VMSOWNE`
+
+8. Advanced Server OpenVMS cluster alias: `VMSOWNE_ALIAS`
+
 9. Advanced Server comment: Advanced Server V7.3 for OpenVMS
+
 10. Advanced Server language: English (USA)
+
 11. Enable HT style printing: NO
 
 Enter item number, or RETURN to use these values [DONE]:
 
-Figure 7-57 This menu shows your definitions for your server and domain. You may need to change
-some of these for your domain and/or recognized.
+Figure 7-57 This menu shows your definitions for your server and domain. You may need to change some of these for your domain and/or recognized.
 
-7. Advanced Server computer name: VMSONE
-7a. Advanced Server OpenVMS cluster alias: VMSONE_ALIAS
+7. Advanced Server computer name: `VMSONE`
+
+7a. Advanced Server OpenVMS cluster alias: `VMSONE_ALIAS`
+
 8. Server announce comment: Advanced server V7.3 for OpenVMS
+
 9. Advanced server language: English (USA)
+
 10. Enable NT type: NO
 
 Enter item number, or RETURN to use these values [DONE]: 5
 
 ********************************************************************
 
-You choose item number 5 from the menu. Changing the domain
-name will cause the existing SAM databases to be RE-INITIALIZED
-resulting in the loss of any data currently in these databases (for)
-example, user accounts (name).
+You choose item number 5 from the menu. Changing the domain name will cause the existing SAM databases to be RE-INITIALIZED resulting in the loss of any data currently in these databases (for) example, user accounts (name).
 
 ********************************************************************
 
 Do you want to continue with item number 5 (Y/N): y
 
-The Advanced Server domain is a collection of computers that share
-a common database and policy. Each domain has a unique
-name. A network can have many domains.
+The Advanced Server domain is a collection of computers that share a common database and policy. Each domain has a unique name. A network can have many domains.
 
 The Advanced Server domain name can be up to 15 characters.
+
 The domain name must be different than the computer name.
+
 Enter Advanced Server domain name for this cluster [LANGGROUP]: WKSI
 
 Figure 7-58 Change LANGGROUP to your domain or workgroup name!
 
 The Advanced Server comment can be up to 48 characters long.
+
 Enter server comment [no comment]: "I can say it is VMS!"
+
 Illegal character "，请重新输入。
+
 Enter server comment: I can say it is VMS!
 
 Your Advanced Server for OpenVMS is presently configured to:
 
 + 1. Run the license server: NO
+
 2. Enable Timeservice service: NO
+
 3. Alert alert service: YES
+
 4. Enable netlog service: YES
+
 5. Advanced Server domain: LANDGROUP
+
 6. Advanced Server role: PRIMARY
+
 7. Advanced Server computer name: VMSONE
+
 7a. Advanced Server OpenVMS cluster alias: VMSONE_ALIAS
+
 8. Server announce comment: I can say it is VMS!
+
 9. Advanced server language: English (USA)
+
 10. Enable NT type: NO
-
-
-
-
 
 ## 第 5 ：将 OpenVMS 高级服务器配置为域控制器
 
@@ -5167,8 +5551,6 @@ Your Advanced Server for OpenVMS is presently configured to:
 
 
 
-
-
 # Web 管理者的 Apache 迈进
 
 我永远不会忘记第一台 Web 服务器，而今天我们已经将 Web 服务器工具视为理所当然（而且是免费的），例如来自开源的 Apache。有人很快就说 Linux 的第一个杀手级/突破性应用是 Apache，它让 Linux 在许多人心中成为了 Web 服务器的代名词。在某一段时间内，几乎所有被引入的 Linux 机器其主要目的都是为了共享万维网页面。
@@ -5188,17 +5570,17 @@ http://www.openvms.compaq.com
 
 你该从哪里开始？只需从在你的系统上设置服务器并加入万维网（WWW）开始！
 
-# Linux Apache Web 服务器安装
+## Linux Apache Web 服务器安装
 
 图 8-1 到 8-24 展示了 Linux Apache Web 服务器的安装。
 
-# Apache HTTP 项目
+## Apache HTTP 项目
 
-# Apache 服务器项目
+## Apache 服务器项目
 
-# 核心要素
+## 核心要素
 
-# 互联网第一大 HTTP 服务器
+## 互联网第一大 HTTP 服务器
 
 Apache HTTP Server 是开发和维护包括 Unix 和 Windows NT 在内的开源操作系统的。该项目的目标是提供一个安全、高效且可扩展的服务器，根据当前的 HTTP 标准提供 HTTP 服务。
 
@@ -5212,12 +5594,12 @@ Apache HTTP Server 是开发和维护包括 Unix 和 Windows NT 在内的开源�
 
 Apache HTTP Server 是 Apache 软件基金的项目。
 
-# 下载
+### 下载
 
 - 从镜像站点
 - 从这里
 
-# 文档
+### 文档
 
 有疑问？阅读友好的文档吧！
 
@@ -5232,11 +5614,11 @@ Apache HTTP Server 是 Apache 软件基金的项目。
 
 # Index of/dist/httpd
 
-# Apache HTTP 源码发行
+## Apache HTTP 源码发行
 
-此页面仅包含供你使用适当工具编译和构建 Apache 的源码。请从 binaries/ 下载适用于你平台的预编译发行版。
+此页面仅包含供你使用适当工具编译和构建 Apache 的源码。请从 `binaries/` 下载适用于你平台的预编译发行版。
 
-# 重要通知
+### 重要通知
 
 - 从你最近的镜像站点下载
 - 二进制密钥
@@ -5248,32 +5630,32 @@ Apache HTTP Server 是 Apache 软件基金的项目。
 
 | 名称 | 最后修改 | 描述 |
 |---|---|---|
-| binary/ | 15-Aug-2002 11:42 | 二进制发行版 |
-| contrib/ | 20-Jan-2002 18:22 | 贡献软件 |
-| flood/ | 27-Sep-2002 13:55 | |
-| libraries/ | 22-Kyr-2002 13:04 | |
+| `binary/` | 15-Aug-2002 11:42 | 二进制发行版 |
+| `contrib/` | 20-Jan-2002 18:22 | 贡献软件 |
+| `flood/` | 27-Sep-2002 13:55 | |
+| `libraries/` | 22-Kyr-2002 13:04 | |
 
 图 8-2 二进制文件位于此处，适用于许多系统的二进制文件——确保你下载的是 Linux 版本。
 
 第 8 章 – Apache VMS 和 Linux 风格 157
 
-# 二进制发布
+## 二进制发布
 
-位于 binaries/ 中；每个二进制发行版都包含一个安装脚本。详情见 README。
+位于 `binaries/` 中；每个二进制发行版都包含一个安装脚本。详情见 README。
 
-## Apache 2.0.43 是最佳版本。
+### Apache 2.0.43 是最佳版本。
 
-此版本修复了 cve.mitre.org 上的 CVE-2002-0640 中识别的安全问题；它还修复了 2.0.42（及之前的版本）的错误，并增加了额外的功能。敦促 Apache 2.0.42 及之前的用户尽快升级。
+此版本修复了 `cve.mitre.org` 上的 `CVE-2002-0640` 中识别的安全问题；它还修复了 2.0.42（及之前的版本）的错误，并增加了额外的功能。敦促 Apache 2.0.42 及之前的用户尽快升级。
 
 详情请参阅官方公告。点击此处查看添加模块或在你的平台上运行 Apache 2.0.43 是否需要任何补丁或特殊说明。
 
 Apache 插件与为 Apache 1.3 编译的模块不兼容。如果你正在运行第三方模块，在尝试从 Apache 1.3 升级之前，你需要从该第三方处为 Apache 2.0 重新编译它们。
 
--2.0.43 zip 二进制文件与之前的版本相同；但它们提供了 DOS/unix 的源文件和 Windows 构建文件。2.0.43 zip 文件不包含二进制文件。查看 binaries/ 获取目录发行版。
+-2.0.43 zip 二进制文件与之前的版本相同；但它们提供了 DOS/unix 的源文件和 Windows 构建文件。2.0.43 zip 文件不包含二进制文件。查看 `binaries/` 获取目录发行版。
 
-## Apache 1.3.27 也可用。
+### Apache 1.3.27 也可用。
 
-Apache 1.3.27 是 1.3 系列的最佳版本，建议用于所有之前的 1.3 版本。此版本修复了 cve.mitre.org 上识别的 CVE-2002-019、CVE-2002-0640 和 CVE-2002-0643 安全问题；它还修复了 1.3（及之前）的错误并增加了额外的功能。敦促所有 Apache 1.3.26 及之前的用户尽快升级。
+Apache 1.3.27 是 1.3 系列的最佳版本，建议用于所有之前的 1.3 版本。此版本修复了 `cve.mitre.org` 上识别的 `CVE-2002-019`、`CVE-2002-0640` 和 `CVE-2002-0643` 安全问题；它还修复了 1.3（及之前）的错误并增加了额外的功能。敦促所有 Apache 1.3.26 及之前的用户尽快升级。
 
 ![](img/a26aae01e7657faca13785a7eb03624a_156_0.png)
 
@@ -5281,9 +5663,46 @@ Apache 1.3.27 是 1.3 系列的最佳版本，建议用于所有之前的 1.3 �
 
 | 名称 | 最后修改 | 描述 |
 |---|---|---|
-| binary/ | 15-Aug-2002 11:42 | 二进制发行版 |
-| contrib/ | 20-Jan-2002 18:22 | 贡献软件 |
+| `binary/` | 15-Aug-2002 11:42 | 二进制发行版 |
+| `contrib/` | 20-Jan-2002 18:22 | 贡献软件 |
+| `flood/` | 27-Sep-2002 13:55 | |
+| `libraries/` | 22-Kyr-2002 13:04 | |
+
+图 8-2 二进制文件位于此处，适用于许多系统的二进制文件——确保你下载的是 Linux 版本。
+
+第 8 章 – Apache VMS 和 Linux 风格 157
+
+## Apache HTTP 源码发行
+
+此页面仅供你使用适当工具编译和构建 Apache 的源码。请从 `binaries/` 下载适用于你平台的预编译发行版。
+
+### Apache 2.0.43 是最佳版本。
+
+此版本修复了 `cve.mitre.org` 上识别的 `CVE-2002-0640` 安全问题；它还修复了 2.0.42（及之前的）的错误，并增加了额外的功能。敦促 Apache 2.0.42 及之前的用户尽快升级。
+
+详情请参阅官方公告。点击此处查看添加模块或在你的平台上运行 Apache 2.0.43 是否需要任何补丁或特殊说明。
+
+Apache 插件与为 Apache 1.3 编译的模块不兼容。如果你正在运行第三方模块，在尝试从 Apache 1.3 升级之前，你需要从该第三方处为 Apache 2.0 重新编译它们。
+
+-2.0.43 zip 二进制文件与之前的版本相同；但它们提供了 DOS/unix 的源文件和 Windows 构建文件。2.0.43 zip 文件不包含二进制文件。查看 `binaries/` 获取目录发行版。
+
+### Apache 1.3.27 也可用。
+
+Apache 1.3.27 是 1.3 系列的最佳版本，建议用于所有之前的 1.3 版本。此版本修复了 `cve.mitre.org` 上识别的 `CVE-2002-019`、`CVE-2002-0640` 和 `CVE-2002-0643` 安全问题；它还修复了 1.3（及之前）的错误并增加了额外的功能。敦促所有 Apache 1.3.26 及之前的用户尽快升级。
+
+![](img/a26aae01e7657faca13785a7eb03624a_156_0.png)
+
+# Index of/dist/httpd/binaries/
+
+| 名称 | 最后修改 | 描述 |
+|---|---|---|
+| `binary/` | 15-Aug-2002 11:42 | 二进制发行版 |
+| `contrib/` | 20-Jan-2002 18:22 | 贡献软件 |
+
+
+
 | flood/ | 27-Sep-2002 13:55 | |
+
 | libraries/ | 22-Kyr-2002 13:04 | |
 
 图 8-2 二进制文件位于此处，适用于许多系统的二进制文件——确保你下载的是 Linux 版本。
@@ -5292,57 +5711,19 @@ Apache 1.3.27 是 1.3 系列的最佳版本，建议用于所有之前的 1.3 �
 
 # Apache HTTP 源码发行
 
-此页面仅供你使用适当工具编译和构建 Apache 的源码。请从 binaries/ 下载适用于你平台的预编译发行版。
+此页面仅供你使用适当工具编译和构建 Apache 的源码。请从 `binaries/` 下载适用于你平台的预编译发行版。
 
 ## Apache 2.0.43 是最佳版本。
 
-此版本修复了 cve.mitre.org 上识别的 CVE-2002-0640 安全问题；它还修复了 2.0.42（及之前的）的错误，并增加了额外的功能。敦促 Apache 2.0.42 及之前的用户尽快升级。
+此版本修复了 `cve.mitre.org` 上识别的 `CVE-2002-0640` 安全问题；它还修复了 `2.0.42`（及之前的）的错误，并增加了额外的功能。敦促 Apache `2.0.42` 及之前的用户尽快升级。
 
-详情请参阅官方公告。点击此处查看添加模块或在你的平台上运行 Apache 2.0.43 是否需要任何补丁或特殊说明。
-
-Apache 插件与为 Apache 1.3 编译的模块不兼容。如果你正在运行第三方模块，在尝试从 Apache 1.3 升级之前，你需要从该第三方处为 Apache 2.0 重新编译它们。
-
--2.0.43 zip 二进制文件与之前的版本相同；但它们提供了 DOS/unix 的源文件和 Windows 构建文件。2.0.43 zip 文件不包含二进制文件。查看 binaries/ 获取目录发行版。
+- `2.0.43` zip 二进制文件与之前的版本相同；但它们提供了 DOS/unix 的源文件和 Windows 构建文件。`2.0.43` zip 文件不包含二进制文件。查看 `binaries/` 获取目录发行版
 
 ## Apache 1.3.27 也可用。
 
-Apache 1.3.27 是 1.3 系列的最佳版本，建议用于所有之前的 1.3 版本。此版本修复了 cve.mitre.org 上识别的 CVE-2002-019、CVE-2002-0640 和 CVE-2002-0643 安全问题；它还修复了 1.3（及之前）的错误并增加了额外的功能。敦促所有 Apache 1.3.26 及之前的用户尽快升级。
+Apache `1.3.27` 是 `1.3` 系列的最佳版本，建议用于所有之前的 `1.3` 版本。
 
-
-
-![](img/a26aae01e7657faca13785a7eb03624a_156_0.png)
-
-# Index of/dist/httpd/binaries/
-
-| 名称 | 最后修改 | 描述 |
-|---|---|---|
-| binary/ | 15-Aug-2002 11:42 | 二进制发行版 |
-| contrib/ | 20-Jan-2002 18:22 | 贡献软件 |
-| flood/ | 27-Sep-2002 13:55 | |
-| libraries/ | 22-Kyr-2002 13:04 | |
-
-图 8-2 二进制文件位于此处，适用于许多系统的二进制文件——确保你下载的是 Linux 版本。
-
-第 8 章 – Apache VMS 和 Linux 风格 157
-
-# Apache HTTP 源码发行 
-
-此页面仅供你使用适当工具编译和构建 Apache 的源码。请从 binaries/ 下载适用于你平台的预编译发行版。
-
-## Apache 2.0.43 是最佳版本。
-
-此版本修复了 cve.mitre.org 上识别的 CVE-2002-0640 安全问题；它还修复了 2.0.42（及之前的）的错误，并增加了额外的功能。敦促 Apache 2.0.42 及之前的用户尽快升级。
-
--2.0.43 zip 二进制文件与之前的版本相同；但它们提供了 DOS/unix 的源文件和 Windows 构建文件。2.0.43 zip 文件不包含二进制文件。查看 binaries/ 获取目录发行版
-
-## Apache 1.3.27 也可用。
-
-Apache 1.3.27 是 1.3 系列的最佳版本，建议用于所有之前的 1.3 版本。
-此版本修复了 cve.mitre.org 上识别的 CVE-2002-019、CVE-2002-0640 和 CVE-2002-0643 安全问题；它还修复了 1.3（及之前）的错误并增加了额外的功能。敦促所有 Apache 1.3.26 及之前的用户尽快升级。
-
-
-
-
+此版本修复了 `cve.mitre.org` 上识别的 `CVE-2002-019`、`CVE-2002-0640` 和 `CVE-2002-0643` 安全问题；它还修复了 `1.3`（及之前）的错误并增加了额外的功能。敦促所有 Apache `1.3.26` 及之前的用户尽快升级。
 
 ```bash
 root@inexone~# ls
@@ -5352,7 +5733,7 @@ chip_7_adv_server httpd-2.0.43 install.log kits
 [root@inexone root]# cd httpd-2.0.43
 ```
 
-图 8-12 验证 httpd-2.0.43 目录结构已创建，然后进入该目录树。
+图 8-12 验证 `httpd-2.0.43` 目录结构已创建，然后进入该目录树。
 
 ```bash
 [root@inexone root]# ls
@@ -5362,7 +5743,7 @@ chip_7_adv_server httpd-2.0.43 install.log kits
 [root@inexone httpd-2.0.43]# ./configure
 ```
 
-图 8-13 执行 /configure 脚本以为 make 命令做准备。
+图 8-13 执行 `/configure` 脚本以为 `make` 命令做准备。
 
 ```bash
 checking for gcc... gcc
@@ -5390,7 +5771,7 @@ checking for for... no
 checking for library containing strerror...
 ```
 
-图 8-14 /configure 将持续运行，直到为 make 命令准备好 /files 目录。
+图 8-14 `/configure` 将持续运行，直到为 `make` 命令准备好 `/files` 目录。
 
 ```text
 creating srcclib/Makefile
@@ -5418,9 +5799,9 @@ config.status: executing default commands
 [root@inexone httpd-2.0.43]# make
 ```
 
-图 8-15 在 /configure 脚本完成后，执行 make 命令。
+图 8-15 在 `/configure` 脚本完成后，执行 `make` 命令。
 
-第 8 章 – Apache VMS 和 Linux 
+第 8 章 – Apache VMS 和 Linux
 
 ```bash
 root@inexone~/httpd-2.0.43
@@ -5428,7 +5809,9 @@ File Edit Settings Help
 [root@inexone ~/httpd-2.0.43]# make install
 ```
 
-图 8-16 在 make 命令之后，使用 make install 命令继续。
+图 8-16 在 `make` 命令之后，使用 `make install` 命令继续。
+
+
 
 ```text
 root@inexone~/httpd-2.0.43
@@ -5458,9 +5841,9 @@ mkdir /root/httpd-2.0.43'
 make[1]: Leaving directory /usr/local/apache/conf/httpd.conf
 ```
 
-图 8-17 当 make install 完成时，编辑（此处显示使用 vi）httpd.conf。
+图 8-17 当 `make install` 完成时，编辑（此处显示使用 `vi`）`httpd.conf`。
 
-Linux 与 OpenVMS 互操作性
+# Linux 与 OpenVMS 互操作性
 
 ```bash
 root@inexone:~#httpd-2.0.43
@@ -5492,9 +5875,9 @@ UseCanonical Off
 root@inexone:~#httpd-2.0.43]# /usr/local/apache2/bin/apachectl
 ```
 
-图 8-19手动启动 Apache 以检查安装和配置是否正确。注意使用 apachectl "stop" 会停止 Apache 服务器！
+图 8-19 手动启动 Apache 以检查安装和配置是否正确。注意使用 `apachectl "stop"` 会停止 Apache 服务器！
 
-第 8 章 – Apache VMS 和 Linux 
+# 第 8 章 – Apache VMS 和 Linux
 
 ```bash
 root@inexone~/httpd-2.0.43
@@ -5517,9 +5900,9 @@ root      8863 1 00:00 /usr/local/apache2/bin/httpd
 root      8864 1 00:00 /usr/local/apache2/bin/httpd
 ```
 
-图 8-21 执行 status 命令来查找名为 Apache 的进程。
+图 8-21 执行 `status` 命令来查找名为 Apache 的进程。
 
-Linux 与 OpenVMS 互操作性
+# Linux 与 OpenVMS 互操作性
 
 # 看到这个而不是预期的网站？
 
@@ -5528,6 +5911,7 @@ Linux 与 OpenVMS 互操作性
 此页面是因为站点更改了此 Web 服务器的配置。如有疑问，请联系维护此服务器的人员。编写 Apache 服务器的 Apache 基金会与维护此站点无关，无法解决问题。
 
 Apache 文包含在此发行中。
+
 您可以在任何运行 Apache 的 Web 服务器上使用下图。感谢 Apache！
 
 ![](img/a26aae01e765faca13785a7eb03624a_165_0.png)
@@ -5580,7 +5964,7 @@ touch /var/lock/subsys/local
 [root@lnxone etc]#
 ```
 
-图 8-24 如果您希望 Apache 在启动时启动/重启，请务必编辑 rc.local 文件。
+图 8-24 如果您希望 Apache 在启动时启动/重启，请务必编辑 `rc.local` 文件。
 
 # 基于 Apache 的 OpenVMS 安全 Web 服务器
 
@@ -5591,10 +5975,6 @@ touch /var/lock/subsys/local
 图 8-25 使用 Mozilla 拉取基于 Apache 的服务器。
 
 168 Linux 与 OpenVMS 互操作性
-
-
-
-
 
 ## OpenVMS 系统 (v.1)
 
@@ -5622,12 +6002,13 @@ http://www.openvms.compaq/
 
 ## OpenVMS 自由版
 
-- OpenVMS 常见问题
+
+
+# OpenVMS 常见问题
 - [已更新] 2002年6月
 - 教育许可计划
 
 ## OpenVMS 培训
-
 - OpenVMS 术表
 - OpenVMS 白皮书
 - 系统管理员 OpenVMS 入门指南
@@ -5638,8 +6019,7 @@ http://www.openvms.compaq/
 图 28 然后它位于 OpenVMS 主页的 freedom 下方。
 
 ## OpenVMS freedom CSW8 (v1.6)
-
-http://www.openvms.compaq.com/openvms/freedom/
+`http://www.openvms.compaq.com/openvms/freedom/`
 
 - OpenVMS
 - OpenVMS 软件
@@ -5652,22 +6032,18 @@ http://www.openvms.compaq.com/openvms/freedom/
 - 安全策略
 - 应用开发与工具
 - 软件许可
-
 - OpenVMS CD 目录及相关的 EIS DIAGRAM 示例
 - OpenVMS Alpha 的 CD 目录目录
 - FTP
 - Deque 在线文档
 - 在 Alpha 上阻塞 OpenVMS
-
 - 软件许可
 - 白皮书
 - 咨询最新
 - 培训
 - OpenVMS 书籍
-
 - OpenVMS 基于 Web 的解决方案 Apache Alpha MSI
 - OpenVMS 爱好者计划
-
 - 如何购买
 - 配置协助
 - 购买协助
@@ -5730,38 +6106,58 @@ HOZILLA.DIR;1TEMP.DIR;1
 ```
 
 共 4 个文件。
+
+```
 $ RUN CPQ-AXVMS-CSW-V1013--1.PCSI-DC-AXPEEX;1
+```
 
 图 8-33 使用 DEC 并切换目录到刚刚下载的 CSW 固件所在目录。您在使用之前必须运行程序来解压此固件（它是自解压的）。
 
 Linux 与 OpenVMS 的互操作性
 
+```
 $ DIR
+
 Directory DKR:[KITS]
+
 $ CPQ-AXVMS-CSW-V1013--1.PCSI-DC-AXPEEX;1
+
 $ CPQ-AXVMS-CSW-V1013--1.PCSI-DC-AXPEEX;1
+
 $ TEMP.DIR
 
 共 4 个文件。
+
 $ RUN CPQ-AXVMS-CSW-V1013--1.PCSI-DC-AXPEEX;1
 
 CPQ-AXVMS-CSW-V1013--1.PCSI-DC-AXPEEX 用于 OpenVMS (AXP) 压缩文件 V3.0 - V3_DCX_EXTRACT
+
 Copyright (C) Digital Equipment Corp. 1993
 
 解压需要文件名作为解压后文件。如果您不指定任何名称，它将使用压缩前的原始文件名；如果您指定了名称，将在该目录创建该文件。
 
 打开并检查压缩文件...
+
 解压（按 Ctrl-T 查看进度)...
+
 创建解压后文件。
+
 原始文件规格: ROOT:[APACHE.KIT]CPQ-AXVMS-CSW-V0103--1.PCS1:
+
 解压后文件规格: DKR:[KITS]CPQ-AXVMS-CSW-V0103--1.PCS
 
 成功解压报告：
+
 文件大小: 17634.34 bytes, 8862.17 Kbytes, 880954 bytes
+
 压缩率: 1.9444 (54.29 % )
+
 已用 CPU 时间: 00:00:02.20
+
 已用时间: 00:00:03.17
+
 速度: 53884.60 Blocks/min, 26924.00 Kbytes/min, 45981.50 bytes/sec
+```
 
 图 8-34 成功扩展获取文件信息。（如果您要安装 LA120，请保存绿色。）
 
@@ -5770,51 +6166,77 @@ Copyright (C) Digital Equipment Corp. 1993
 # 打开并检查压缩文件...
 
 解压缩（按 Ctrl-T 查看进度)...
+
 创建文件。
+
 原始文件规格: ROOT:[APACHE.KIT]CPQ-AXVMS-CSW-V0103--1.PCS1:
+
 解压后文件规格: [KIT]CPQ-AXVMS-CSW-V0103--PCS
 
 成功解压报告：
+
 文件大小: 17364.33 Blocks, 8812.17 Kbytes, 880954 bytes
+
 压缩率: 1.444 (64.29 % )
+
 已用 CPU 时间: 00:00:02.20
+
 已用时间: 00:00:03.17
+
 速度: 53848.00 Blocks/min, 26742.00 Kbytes/min, 59816.50 bytes/sec
 
+```
 DIR
+
 Directory [KITS]
+
 CPQ-AXVMS-V0103--1:PCS1;
+
 CPQ-AXVMS-CSW-V0103--1:PCS1-DCX-AXPEEXE1;
+
 CPQ-AXVMS-PHP-V0101--1:PCS1-DCE-AXPEEXE1;
+
 MOZILLA.DIR;1
+
 DIR;1
 
 共 5 个文件。
-$
 
-图 8-36 您已下载并扩展了密钥。您必须找到 \PCS1 文件并运行 \product install csws。
+$
+```
+
+图 8-36 您已下载并扩展了密钥。您必须找到 `\PCS1` 文件并运行 `\product install csws`。
 
 已选择以下产品：
 
 CPQ AXVMS CSWS VI1.3
+
 分层产品
 
 您要继续吗？[YES] YES
+
 开始配置...
 
 您将被要求为每个选定产品以及为了满足软件依赖而可能安装的产品选择选项（如果有）。
 
 CPQ AXVMS CSWS VI1.3
+
 Compaq 公司与 Apache 软件基金会
 
 * 此产品没有任何配置选项。
 
 开始执行阶段
+
 以下产品将安装到目标位置：
+
 CPQ AXVMS CSWS VI1.3
+
 DISKVMMS0731:[VMMSCOMMON].
+
 以下产品将从目标位置移除：
+
 CPQ AXVMS CSWS VI1.1
+
 DISKVMMS0731:[VMMSCOMMON].
 
 图 8-37 安装程序将运行并提供几个指令来完成安装。
@@ -5826,7 +6248,7 @@ $ file = SYSSTARTUP:APACHESDOWN.COM
 $ if fsearch("$file").nes then "$file"
 ```
 
-通过向 SYSMANAGER:SHUTDOWN.COM 添加以下行，在系统关机时关闭 Apache 服务器：
+通过向 `SYSMANAGER:SHUTDOWN.COM` 添加以下行，在系统关机时关闭 Apache 服务器：
 
 ```
 $ file = SYSSTARTUP:APACHESDOWN.COM
@@ -5834,15 +6256,14 @@ $ if fsearch("$file").nes then "$file"
 ```
 
 使用您喜欢的浏览器测试安装。
+
 将 URL（统一资源定位符）中的 host domain 替换为刚刚安装、配置并启动的 Compaq 安全服务器信息。
+
+
 
 http://host.domain/ 应显示来自 Apache 软件基金会的介绍页。该页面顶部有粗体“it worked! The Apache server is installed on this site”，底部 Apache 服务器已禁用。如果您没有看到此页面，请检查 Compaq 安全服务器的发布说明，特别是常见问题部分。
 
 图 8-38 读取并记录指令，或跟随操作进行自定义安装。
-
-
-
-
 
 # 图 8-2
 
@@ -5890,7 +6311,7 @@ Buffer: SYSHUTDOWN.COM  Write Insert Forward
 15 lines written to file SYSCOMMON:[SYSMOR]SYSHUTDOWN.COM;2
 ```
 
-图 8-41 在系统执行控制关机时，在 shutdown.com 中添加一行以关闭 Apache。
+图 8-41 在系统执行控制关机时，在 `shutdown.com` 中添加一行以关闭 Apache。
 
 176 Linux 与 OpenVMS 互操作性
 
@@ -5929,11 +6350,11 @@ $1 and the "SHDBATCH": symbol.
 22 lines written to file SYSCOMMAND:[SYSMGR]LOGIN.COM;5
 ```
 
-图 8-43 为 APACHEON 和 APACHEOFF 添加这些行，这样系统管理员登录时就可以轻松开启和关闭 Apache！
+图 8-43 为 `APACHEON` 和 `APACHEOFF` 添加这些行，这样系统管理员登录时就可以轻松开启和关闭 Apache！
 
 ![](img/a26aae01e7657faca13785a7eb03624a_176_0.png)
 
-图 8-44 编辑 SYLOGICALS.COM 文件，该文件在系统引导/启动时定义系统逻辑名称。
+图 8-44 编辑 `SYLOGICALS.COM` 文件，该文件在系统引导/启动时定义系统逻辑名称。
 
 ![](img/a26aae01e7657faca13785a7eb03624a_176_1.png)
 
@@ -5964,8 +6385,11 @@ $1 also contains space for user-defined logical names.
 ![](img/a26aae01e7657faca13785a7eb03624a_177_0.png)
 
 $ DIR USER1$HOME:[OPCOM]*.DIR
+
 DIRECTORY USER1$HOME:[OPCOM]
+
 PUBLIC.HTML.DIR
+
 Total of 2 files.
 
 图 8-46 用户可以为其个人主页或任何想要通过家目录提供的页面创建子目录，家目录已为 Apache 定义。您可以通过浏览器访问 http://vmsname/~opcom 来访问这些或其他用户的文件。
@@ -5974,13 +6398,15 @@ Total of 2 files.
 
 DIRECTORY USER1$HOME:[OPCOM].PUBLIC_HTML
 
-图 8-44 确保每个用户的网页子目录包含一个 INDEX HTML 文件。如果没有 INDEX，可以通过浏览器查看子目录中的文件。
+
+
+图 8-44 确保每个用户的网页子目录包含一个 `INDEX HTML` 文件。如果没有 `INDEX`，可以通过浏览器查看子目录中的文件。
 
 第 8 章 - Apache VMS 与 Linux 179
 
 ![](img/a26aae01e7657faca13785a7eb03624a_178_0.png)
 
-图 18-48 在启动服务器之前，必须运行 ApacheConfig.com。
+图 18-48 在启动服务器之前，必须运行 `ApacheConfig.com`。
 
 ![](img/a26aae01e7657faca13785a7eb03624a_178_1.png)
 
@@ -5990,72 +6416,73 @@ DIRECTORY USER1$HOME:[OPCOM].PUBLIC_HTML
 
 # 请提供安装包的设备和目录。
 
-安装包的设备和目录？[SYS$COMMON:[APACHE]
+安装包的设备和目录？`[SYS$COMMON:[APACHE]`
 
-请提供此特定系统的设备和目录。集群中的每个系统都有自己的用于写入系统特定文件的根逻辑名称（例如 SYS$COMMON）。此处指定的设备和目录将由该系统专用。此命令过程将创建系统特定目录以及必要的子目录。您无需创建这些目录。
+请提供此特定系统的设备和目录。集群中的每个系统都有自己的用于写入系统特定文件的根逻辑名称（例如 `SYS$COMMON`）。此处指定的设备和目录将由该系统专用。此命令过程将创建系统特定目录以及必要的子目录。您无需创建这些目录。
 
-此系统的设备和目录？[SYS$COMMON:[APACHE.SPECIFIC.VMSONE]
+此系统的设备和目录？`[SYS$COMMON:[APACHE.SPECIFIC.VMSONE]`
 
 您可以指定一个在服务器映像之前执行的可选服务器启动程序。
 
-如果您未指定启动程序，将执行默认启动程序 APACHESROOT:[000000]APACHESERVER.STARTUP.COM（如果存在）。
+如果您未指定启动程序，将执行默认启动程序 `APACHESROOT:[000000]APACHESERVER.STARTUP.COM`（如果存在）。
 
 此服务器未定义服务器启动。
 
-更改服务器启动？[NO] 是
+更改服务器启动？`[NO]` 是
 
-此服务器的启动程序（可选）？[NONE]
+此服务器的启动程序（可选）？`[NONE]`
 
 图 8-50 回复以启动服务器/服务。
 
 图 8-51 为此服务器添加服务器关闭定义。
 
-
-
-
-
 # 未为此服务器定义关闭程序。
 
-更改服务器关闭？[NO] 是
-此服务器的服务器关闭程序（可选）？[HONE]
+更改服务器关闭？`[NO]` 是
+
+此服务器的服务器关闭程序（可选）？`[HONE]`
 
 服务器标签是可以与此服务器关联的可选名称。该标签是一个 0 到 4 个字符的字符串，会出现在在此环境中创建的服务器进程的进程名称中。
 
 此服务器未定义服务器。
 
-更改服务器标签？[NO]
+更改服务器标签？`[NO]`
 
-你是否想为此配置定义逻辑名称 APACHE$SPECIFIC、APACHE$COMMON 和 APACHE$SYSTEMWIDE？
+你是否想为此配置定义逻辑名称 `APACHE$SPECIFIC`、`APACHE$COMMON` 和 `APACHE$SYSTEMWIDE`？
 
 如果你计划在该系统上运行一个简单的 Web 服务器，这些这些逻辑名称应被设置为系统范围（默认值）。
 
-如果你计划在该系统上运行多个 Web 服务器，则应使用 APACHE$CONFIG 数据文件之一来定义系统范围逻辑名称。
+如果你计划在该系统上运行多个 Web 服务器，则应使用 `APACHE$CONFIG` 数据文件之一来定义系统范围逻辑名称。
 
-定义系统范围逻辑名称？[YES]
+定义系统范围逻辑名称？`[YES]`
 
 图 8-52 选择 yes 以定义系统范围逻辑名称，或选择 No 退出程序。
 
 ![](img/a26aae01e7657faca13785a7eb03624a_180_0.png)
 
-应使用其中一个 APACHE$CONFIG 数据文件来定义系统范围逻辑名称。
+应使用其中一个 `APACHE$CONFIG` 数据文件来定义系统范围逻辑名称。
 
-定义系统范围逻辑名称？[YES]
+定义系统范围逻辑名称？`[YES]`
 
-你是否要启用 MOD_SSL 提供的安全功能？
-如果是，服务器将支持 HTTPS（基于安全套接层协议的 HTTP）。
+你是否要启用 `MOD_SSL` 提供的安全功能？
 
-启用 MOD_SSL？[YES]
-如果是，服务器将支持通过 SuEXEC 使用指定用户提供的位置功能。
+如果是，服务器将支持 `HTTPS`（基于安全套接层协议的 HTTP）。
 
-启用 SuEXEC？[NO]
+启用 `MOD_SSL`？`[YES]`
+
+如果是，服务器将支持通过 `SuEXEC` 使用指定用户提供的位置功能。
+
+启用 `SuEXEC`？`[NO]`
 
 你可以为下面的服务器指定可选的命令行参数。
-（例如，指定 "-name> 来为 <IfDefine> 指令定义名称，或指定 "-path> 来指定 Serverroot 目录）。
+
+（例如，指定 "`-name>` 来为 `<IfDefine>` 指令定义名称，或指定 "`-path>` 来指定 `Serverroot` 目录）。
+
 请注意可选参数是区分大小敏感的。
 
 目前没有可选的命令行参数。
 
-更改此值？[NO]
+更改此值？`[NO]`
 
 图 8-53 如果已安装 SSL，选择 yes；如果没有安装，选择 no。
 
@@ -6065,30 +6492,31 @@ Linux & OpenVMS 互操作性
 
 # 为下面的服务器启用 suEXEC 命令行参数。
 
-你可以指定可选的 "-D<name>" 来为 <IfDefine> 指令定义名称，或指定 "-d<path>" 来指定 ServerRoot 目录。
+你可以指定可选的 "`-D<name>`" 来为 `<IfDefine>` 指令定义名称，或指定 "`-d<path>`" 来指定 `ServerRoot` 目录。
+
 请注意可选参数是区分大小敏感的。
 
 目前没有命令行参数。
 
-更改此值？[NO]
+更改此值？`[NO]`
 
-为了成功运行，服务器进程必须对已安装的文件具有读取权限，并对某些其他文件和目录具有读写权限。Compaq 建议你使用此程序设置 CSWS 文件和目录的所有者 UIC 以与服务器匹配。你应该在每次安装产品时执行此操作，但对于集群上的每个安装，只需执行一次。
+为了成功运行，服务器进程必须对已安装的文件具有读取权限，并对某些其他文件和目录具有读写权限。Compaq 建议你使用此程序设置 `CSWS` 文件和目录的所有者 `UIC` 以与服务器匹配。你应该在每次安装产品时执行此操作，但对于集群上的每个安装，只需执行一次。
 
-警告：APACHECOMMON:[000000...] 中某些文件的所有者 UIC 不是服务器 UIC (APACHECOMMON)。这可能导致 Web 服务器进程因保护违规而失败。
+警告：`APACHECOMMON:[000000...]` 中某些文件的所有者 `UIC` 不是服务器 `UIC` (`APACHECOMMON`)。这可能导致 Web 服务器进程因保护违规而失败。
 
-为 CSWS 文件设置所有者 UIC？[YES]
+为 `CSWS` 文件设置所有者 `UIC`？`[YES]`
 
-图 8-54 设置 CSWS 文件的所有权（仅为了确保性），并确保 HTDOCS 保护设置正确。
+图 8-54 设置 `CSWS` 文件的所有权（仅为了确保性），并确保 `HTDOCS` 保护设置正确。
 
 # 目前没有可选的命令行参数。
 
-更改此值？[NO]
+更改此值？`[NO]`
 
-为了成功运行，服务器进程必须对已安装的文件具有读取权限，并对某些其他文件和目录具有读写权限。Compaq 建议你使用此程序设置 CSWS 文件和目录的所有者 UIC 以与服务器匹配。你应该在每次安装产品时执行此操作，但对于集群上的每个安装，只需执行一次。
+为了成功运行，服务器进程必须对已安装的文件具有读取权限，并对某些其他文件和目录具有读写权限。Compaq 建议你使用此程序设置 `CSWS` 文件和目录的所有者 `UIC` 以与服务器匹配。你应该在每次安装产品时执行此操作，但对于集群上的每个安装，只需执行一次。
 
-警告：APACHECOMMON:[000000...] 中某些文件的所有者 UIC 不是服务器 UIC (APACHECOMMON)。这可能导致 Web 服务器进程因保护违规而失败。
+警告：`APACHECOMMON:[000000...]` 中某些文件的所有者 `UIC` 不是服务器 `UIC` (`APACHECOMMON`)。这可能导致 Web 服务器进程因保护违规而失败。
 
-为 CSWS 文件设置所有者 UIC？[YES]
+为 `CSWS` 文件设置所有者 `UIC`？`[YES]`
 
 正在设置文件所有权。这可能需要一或两分钟。
 
@@ -6098,15 +6526,15 @@ Linux & OpenVMS 互操作性
 $ SYSSTARTUP.APACHESTARTUP.COM
 ```
 
-图 8-55 在 Apache$config.com 完成后，在首次将 HTML 文件加载到 APACHEROOT[HTDOCS...] 之前，请准备好启动 Apache。
+图 8-55 在 `Apache$config.com` 完成后，在首次将 HTML 文件加载到 `APACHEROOT[HTDOCS...]` 之前，请准备好启动 Apache。
 
-# 更改此值？[NO]
+# 更改此值？`[NO]`
 
-为了成功运行，服务器进程必须对可安装的文件具有读取权限，并对某些其他文件和目录具有读写权限。Compaq 建议你使用此程序设置 CSWS 文件和目录的所有者 UIC 以与服务器匹配。你应该在每次安装产品时执行此操作，但对于集群上的每个实例，只需执行一次。
+为了成功运行，服务器进程必须对可安装的文件具有读取权限，并对某些其他文件和目录具有读写权限。Compaq 建议你使用此程序设置 `CSWS` 文件和目录的所有者 `UIC` 以与服务器匹配。你应该在每次安装产品时执行此操作，但对于集群上的每个实例，只需执行一次。
 
-警告：APACHE:[000000...] 中某些文件的所有者 UIC 不是 Web 所有者 UIC (APACHESWAM)。这可能导致 Web 服务器进程因保护违规而失败。
+警告：`APACHE:[000000...]` 中某些文件的所有者 `UIC` 不是 Web 所有者 `UIC` (`APACHESWAM`)。这可能导致 Web 服务器进程因保护违规而失败。
 
-设置 CSWS文件的所有权？[YES]
+设置 `CSWS`文件的所有权？`[YES]`
 
 这可能需要一或两分钟。
 
@@ -6120,14 +6548,11 @@ APACHE-S-PROC-ID, identification of created process is 20200655$
 
 图 8-56 运行 Apache 启动并查找 Apache 启动消息。![](img/a26aae01e7657faca13785a7eb03624a_182_0.png)
 
+`http://www.gnu.org/directory/GNU/emacs.html`
 
+`http://vms.gnu.org/software/released1/`
 
-
-
-http://www.gnu.org/directory/GNU/emacs.html
-http://vms.gnu.org/software/released1/
-
-FreeCiv 是一款免费的回合多人策略游戏，每位玩家都成为一个文明的领袖，为了获得最终目标而战斗。
+`FreeCiv` 是一款免费的回合多人策略游戏，每位玩家都成为一个文明的领袖，为了获得最终目标而战斗。
 
 ```
 http://www.freeciv.org/
@@ -6135,25 +6560,27 @@ http://www.overservers.net/openvms_ports/index.html
 http://www.overservers.net/openvms_ports/freeciv/freeciv_contents.html
 ```
 
-GIMP（GNU 图像处理程序）是一个免费分发的软件，适用于照片修饰、图像合成和图像编辑等任务。本网站包含有关下载、安装、使用和增强 GIMP 的信息。该网站还作为最新发布、补丁、插件和脚本的发行渠道。我们还尽可能提供更多关于 GIMP 社区及相关项目的信息。
+`GIMP`（GNU 图像处理程序）是一个免费分发的软件，适用于照片修饰、图像合成和图像编辑等任务。本网站包含有关下载、安装、使用和增强 `GIMP` 的信息。该网站还作为最新发布、补丁、插件和脚本的发行渠道。我们还尽可能提供更多关于 `GIMP` 社区及相关项目的信息。
 
 ```
 http://www.gimp.org
 ```
 
-GNU GCC 开发是 GNU 项目的一部分，旨在改进 GNU 系统（包括 GNU/Linux 变体）所使用的编译器。GCC 开发工作使用开放开发环境，并支持许多其他平台，以培养世界级的优化编译器，吸引更大的开发者团队，确保 GCC 和 GNU 系统能够在多种架构和多样化环境中运行，并彻底测试和扩展 GCC 的功能。
+`GNU GCC` 开发是 `GNU` 项目的一部分，旨在改进 `GNU` 系统（包括 `GNU/Linux` 变体）所使用的编译器。`GCC` 开发工作使用开放开发环境，并支持许多其他平台，以培养世界级的优化编译器，吸引更大的开发者团队，确保 `GCC` 和 `GNU` 系统能够在多种架构和多样化环境中运行，并彻底测试和扩展 `GCC` 的功能。
 
 ```
 http://www.gcc.gnu.org/
 ```
 
-GNUPG 代表 GNU 隐私卫，是 GNU 用于安全通信和数据存储的工具。它可以加密数据并创建数字签名。它包含一个先进的密钥管理设施，并符合 RFC 2440 中描述的 OpenPGP 网络标准。因此，它旨在与 NAI, Inc. 的 PGP 兼容。
+`GNUPG` 代表 `GNU` 隐私卫，是 `GNU` 用于安全通信和数据存储的工具。它可以加密数据并创建数字签名。它包含一个先进的密钥管理设施，并符合 `RFC 2440` 中描述的 `OpenPGP` 网络标准。因此，它旨在与 `NAI, Inc.` 的 `PGP` 兼容。
 
 ```
 http://www.gnupg.org/
 ```
 
-GTK+ 是用于创建图形用户界面（GUI）的多平台工具包。GTK+ 提供了一整套组件，适用于从小型一次性项目到应用程序套的各种项目。
+`GTK+` 是用于创建图形用户界面（GUI）的多平台工具包。`GTK+` 提供了一整套组件，适用于从小型一次性项目到应用程序套的各种项目。
+
+
 
 ```
 http://www.gtk.org
@@ -6241,10 +6668,6 @@ OpenVMS 源码
 http://www.gnu.org/software/wget/
 ```
 
-
-
-
-
 - IMAP 协议配置, 78
 - IMAP 服务启用, 80
 - IMAP 服务激活, 79
@@ -6299,30 +6722,30 @@ http://www.gnu.org/software/wget/
 - IBM 的 SNA 协议, 15, 16
 - IEEE 802.X 标准, 17
 - 互联网邮件访问协议 (IMAP)
-- 配置, 78
-- 定义, 74
-- 启用, 86
-- 选择, 106
-- 服务，激活/启动, 79
-- 另见 邮件
+  - 配置, 78
+  - 定义, 74
+  - 启用, 86
+  - 选择, 106
+  - 服务，激活/启动, 79
+  - 另见 邮件
 - IP 地址, 19–20
-- 类, 19
-- 定义, 20
-- 获取, 20
-- 作为稀缺资源, 20
+  - 类, 19
+  - 定义, 20
+  - 获取, 20
+  - 作为稀缺资源, 20
 
 # K
 
 - Kerberos, 57–58
 - 已知端口, 32–35
-- 标幅, 32–33
-- 定义, 32
-- 信息, 32
-- 适用于 Linux 和 OpenVMS, 33–35
-- 端口 80, 32
-- 与 Telnet, 33
-- 遍历, 33
-- 另见 TCP/IP
+  - 标幅, 32–33
+  - 定义, 32
+  - 信息, 32
+  - 适用于 Linux 和 OpenVMS, 33–35
+  - 端口 80, 32
+  - 与 Telnet, 33
+  - 遍历, 33
+  - 另见 TCP/IP
 
 # F
 
@@ -6333,79 +6756,80 @@ http://www.gnu.org/software/wget/
 
 - 行打印机守护进程 (LPD), 26
 - Linux
-- 优势, 6
-- Apache Web 服务器安装, 156–168
-
+  - 优势, 6
+  - Apache Web 服务器安装, 156–168
 索引 — 193
+  - 利益, 1
+  - 在...配置 TCP/IP, 22–24
+  - 特性, 5–6
+  - 未来, 185
+  - 历史, 5
+  - 已知端口, 33–35
+  - 笔记本电脑, 5
+  - Mozilla 安装, 93–99
+  - 网络, 17
+  - OpenSSL, 针对 36, 189
+  - 平台, 2
+  - 使用原因, 5–6
+  - RedHat Disk CD-ROM, 11, 12
+  - SAMBA 安装, 116–123
+  - 安全信息, 56
+  - 安全故事, 29–31
+  - 服务器, 6
+    - 账户密码, 108–109
+    - 已完成, 109
+    - 编辑菜单, 105
+    - 邮件账户选择, 105
+    - POP/IMAP 选择, 106
+    - 用户名/账户, 107
+    - 用户名和电子邮件地址, 106
+    - 窗口, 104
+    - 另见 邮件客户端设置
+  - Mozilla 安装 (Linux), 93–99
+    - 自动, 93
+    - 完成, 99
+    - 文件扩展, 94
+    - 安装对话框, 95
+    - 安装类型, 96
+    - 工具包目录, 94
+    - 工具包下载, 93
+    - 所在目录, 97
+    - `/.mozilla-installer` 脚本, 95
+    - 继续, 98
+    - 公共许可证, 96
+    - 状态栏, 98
+  - SSH, 35
+  - Stunnel 客户端安装, 51–55
+  - 工作站, 5–6
+  - `xhost` 命令, 60
+  - X Windows , 67–70
+  - X Windows 显示终端, 62
+  - 另见 OpenVMS
+  - 另见 邮件客户端设置
+  - Mozilla 安装 (OpenVMS), 99–104
+    - 进程检查的 endif 部分, 102
+    - 退出, 104
+    - 安装工具包, 100
+    - 工具包目录, 99
+    - 登录, 99
+  - Linux 系统
 
-- 利益, 1
-- 在...配置 TCP/IP, 22–24
-- 特性, 5–6
-- 未来, 185
-- 历史, 5
-- 已知端口, 33–35
-- 笔记本电脑, 5
-- Mozilla 安装, 93–99
-- 网络, 17
-- OpenSSL, 针对 36, 189
-- 平台, 2
-- 使用原因, 5–6
-- RedHat Disk CD-ROM, 11, 12
-- SAMBA 安装, 116–123
-- 安全信息, 56
-- 安全故事, 29–31
-- 服务器, 6
-- 账户密码, 108–109
-- 已完成, 109
-- 编辑菜单, 105
-- 邮件账户选择, 105
-- POP/IMAP 选择, 106
-- 用户名/账户, 107
-- 用户名和电子邮件地址, 106
-- 窗口, 104
-- 另见 邮件客户端设置
-- Mozilla 安装 (Linux), 93–99
-- 自动, 93
-- 完成, 99
-- 文件扩展, 94
-- 安装对话框, 95
-- 安装类型, 96
-- 工具包目录, 94
-- 工具包下载, 93
-- 所在目录, 97
-- /.mozilla-installer 脚本, 95
-- 继续, 98
-- 公共许可证, 96
-- 状态栏, 98
-- SSH, 35
-- Stunnel 客户端安装, 51–55
-- 工作站, 5–6
-- xhost 命令, 60
-- X Windows , 67–70
-- X Windows 显示终端, 62
-- 另见 OpenVMS
-- 另见 邮件客户端设置
-- Mozilla 安装 (OpenVMS), 99–104
-- 进程检查的 endif 部分, 102
-- 退出, 104
-- 安装工具包, 100
-- 工具包目录, 99
-- 登录, 99
-- Linux 系统
-- 破解的合法理由, 10–11
-- 物理访问, 11
-- root 密码，更改, 11–12
-- TCP/IP 工具, 27
-- Mode_interactive, 101
-- $PRODUCT INSTALL.1 命令, 100
-- 授权, 103
-- 快捷方式区域, 101
-- SYSLOG.COM 编辑, 100
-- uaf-modify 命令, 103
-- 另见 邮件客户端设置
-- MultiNet 产品, 35
+
 
 # M
+
+- 破解的合法理由, 10–11
+- 物理访问, 11
+- `root` 密码，更改, 11–12
+- TCP/IP 工具, 27
+- `Mode_interactive`, 101
+- `$PRODUCT INSTALL.1` 命令, 100
+- 授权, 103
+- 快捷方式区域, 101
+- `SYSLOG.COM` 编辑, 100
+- `uaf-modify` 命令, 103
+- 另见 邮件客户端设置
+- MultiNet 产品, 35
 
 - 邮件客户端配置. 另见 Mozilla 配置
 - Microsoft Exchange 程序, 73
@@ -6437,85 +6861,84 @@ http://www.gnu.org/software/wget/
 - 开源工具, 187–190
 - OpenSSL, 36, 189
 - OpenVMS
-- 能力, 2–4
-- 归档配置, 2
-- ANTI-SPAM 特性, 86, 87
-- 基于 Apache 的服务器, 168–184
-- 在 Linux 上设计
-- 利益, 1–5
-- 启动磁盘, 14
-- 客户端菜单, 25
-- 核心环境, 24
-- 拥有成本, 4–5
-- 作为部署平台, 4
-- 容错集群, 2
-- 电子商务基础架构, 4
-- 邮件服务器配置, 75–92
-- 未来, 185
-- 高可用性, 4
-- 历史, 2
-- 爱好者主页, 9
-- 已知端口, 33–35
-- Mozilla 安装, 99–104
-- 网络, 17
-- 针对 OpenSSL, 36, 189
-- 平台, 2
-- 使用原因, 2–5
--  SAMBA, 116
-- 安全, 3
-- 安全信息, 55–56
-- 服务器菜单, 26
-- 服务与支持, 4
-- 共享文件系统, 3–4
-- SHOW-SET/DISPLAY 命令, 60–61
-- SMB 选项, 115–16
-- SSH, 35
-- stunnel 服务器安装, 37–50
-- TCP/IP 服务配置菜单, 81, 82
-- 分享, 3
-- X Windows , 62–67
-- 另见 Linux
+  - 能力, 2–4
+  - 归档配置, 2
+  - ANTI-SPAM 特性, 86, 87
+  - 基于 Apache 的服务器, 168–184
+  - 在 Linux 上设计
+  - 利益, 1–5
+  - 启动磁盘, 14
+  - 客户端菜单, 25
+  - 核心环境, 24
+  - 拥有成本, 4–5
+  - 作为部署平台, 4
+  - 容错集群, 2
+  - 电子商务基础架构, 4
+  - 邮件服务器配置, 75–92
+  - 未来, 185
+  - 高可用性, 4
+  - 历史, 2
+  - 爱好者主页, 9
+  - 已知端口, 33–35
+  - Mozilla 安装, 99–104
+  - 网络, 17
+  - 针对 OpenSSL, 36, 189
+  - 平台, 2
+  - 使用原因, 2–5
+  - SAMBA, 116
+  - 安全, 3
+  - 安全信息, 55–56
+  - 服务器菜单, 26
+  - 服务与支持, 4
+  - 共享文件系统, 3–4
+  - `SHOW-SET/DISPLAY` 命令, 60–61
+  - SMB 选项, 115–16
+  - SSH, 35
+  - stunnel 服务器安装, 37–50
+  - TCP/IP 服务配置菜单, 81, 82
+  - 分享, 3
+  - X Windows , 62–67
+  - 另见 Linux
 - OpenVMS Advanced Server 安装/配置, 123–53
-- Advanced Server 控制器, 149–53
-- Advanced Server 进程配置, 140–149
-- 安装, 134–135
-- Advanced Server IP 配置, 130–134
-- 注册表配置, 123–30
+  - Advanced Server 控制器, 149–53
+  - Advanced Server 进程配置, 140–149
+  - 安装, 134–135
+  - Advanced Server IP 配置, 130–134
+  - 注册表配置, 123–30
 - Open VMS 系统, 12–13
 - 明文，扫描, 31
 - SMB, 120–21
 - 另见 Advanced Server
 - OpenVMS Advanced Server IP 配置, 130–134
-- 启用/启动选择, 131
-- PWIP 驱动选择, 131
-- $SHOW SYSTEM 命令, 133
-- 成功安装消息, 132
-- TCP/IP 配置菜单, 130
-- TCP/IP 配置菜单退出, 132
-- TCPIP$PWIP_ACP 进程验证, 134
+  - 启用/启动选择, 131
+  - PWIP 驱动选择, 131
+  - `$SHOW SYSTEM` 命令, 133
+  - 成功安装消息, 132
+  - TCP/IP 配置菜单, 130
+  - TCP/IP 配置菜单退出, 132
+  - TCPIP$PWIP_ACP 进程验证, 134
 - PERL, 189
 - PHP, 189
 - 端口扫描器, 32–33
 - 邮局协议 V (POP3)
-- 定义, 74
-- 启用/启动,81
-- 选择, 106
-- 验证, 82
-- 另见 邮件
+  - 定义, 74
+  - 启用/启动,81
+  - 选择, 106
+  - 验证, 82
+  - 另见 邮件
 - OpenVMS 注册表, 123–30
-- 集群或系统逻辑表, 125
-- 目录/注册表数据库创建, 127
-- 磁盘选择, 126
-- 注册表配置菜单退出, 126
-- 注册表启动，运行, 130
-- REG$TO_BE_STARTED 定义定义, 125
+  - 集群或系统逻辑表, 125
+  - 目录/注册表数据库创建, 127
+  - 磁盘选择, 126
+  - 注册表配置菜单退出, 126
+  - 注册表启动，运行, 130
+  - REG$TO_BE_STARTED 定义定义, 125
 - POVray, 189
 - 隐私, 13–14
 - 产品授权密钥 (PAKs), 9
 - ”雅典项目,” 57
 - PYTHON, 189
-- 脚本 @@@$SYSMANAGER:REG$CONFIG.
-- COM 执行, 124
+- 脚本 `@@@$SYSMANAGER:REG$CONFIG.COM` 执行, 124
 
 # R
 
@@ -6526,269 +6949,328 @@ http://www.gnu.org/software/wget/
 - 成功消息, 128
 - VMS 启动文件编辑, 129–130
 - OpenVMS 系统
-- 破解, 11
-- HP 的 TCP/IP 服务, 35
-- 破解的合法理由, 10–11
-- 物理访问, 11
-- root 密码，更改, 11–12
-- TCP/IP 工具, 27
+  - 破解, 11
+  - HP 的 TCP/IP 服务, 35
+  - 破解的合法理由, 10–11
+  - 物理访问, 11
+  - `root` 密码，更改, 11–12
+  - TCP/IP 工具, 27
 
 # S
 
 - 简单邮件传输协议 (SMTP), 27
-- 激活, 77
-- 配置, 83
-- 配置语法, 85
-- 邮件中继/本地处理, 87
-- 目录, 87
-- 激活激活, 76
-- 进程，停止/重启, 92
-- RELAY 选项, 86
-- 另见 邮件
+  - 激活, 77
+  - 配置, 83
+  - 配置语法, 85
+  - 邮件中继/本地处理, 87
+  - 目录, 87
+  - 激活激活, 76
+  - 进程，停止/重启, 92
+  - RELAY 选项, 86
+  - 另见 邮件
 - SSH, 35–36
-- 定义, 35
-- Linux, 35
-- MultiNet, 35
-- OpenVMS, 35
+  - 定义, 35
+  - Linux, 35
+  - MultiNet, 35
+  - OpenVMS, 35
 - Stunnel, 27–55
-- 定义, 37
-- 分发, 39
-- 加密, 37
-- 分发, 35
-- 安全, 56
-- 安全, 59
-- 安全, 60
-- 安全, 61
-- 安全, 62
-- 安全, 63
-- 安全, 64
-- 安全, 65
-- 安全, 66
-- 安全, 67
-- 安全, 68
-- 安全, 69
-- 安全, 70
-- 安全, 71
-- 安全, 72
-- 安全, 73
-- 安全, 74
-- 安全, 75
-- 安全, 76
-- 安全, 77
-- 安全, 78
-- 安全, 79
-- 安全, 80
-- 安全, 81
-- 安全, 82
-- 安全, 83
-- 安全, 84
-- 安全, 85
-- 安全, 86
-- 安全, 87
-- 安全, 88
-- 安全, 89
-- 安全, 90
-- 安全, 91
-- 安全, 92
-- 安全, 93
-- 安全, 94
-- 安全, 95
-- 安全, 96
-- 安全, 97
-- 安全, 98
-- 安全, 99
-- 安全, 100
-- 安全, 101
-- 安全, 102
-- 安全, 103
-- 安全, 104
-- 安全, 105
-- 安全, 106
-- 安全, 107
-- 安全, 108
-- 安全, 109
-- 安全, 110
-- 安全, 111
-- 安全, 112
-- 安全, 113
-- 安全, 114
-- 安全, 115
-- 安全, 116
-- 安全, 117
-- 安全, 118
-- 安全, 119
-- 安全, 120
-- 安全, 121
-- 安全, 122
-- 安全, 123
-- 安全, 124
-- 安全, 125
-- 安全, 126
-- 安全, 127
-- 安全, 128
-- 安全, 129
-- 安全, 130
-- 安全, 131
-- 安全, 132
-- 安全, 133
-- 安全, 134
-- 安全, 135
-- 安全, 136
-- 安全, 137
-- 安全, 138
-- 安全, 139
-- 安全, 140
-- 安全, 141
-- 安全, 142
-- 安全, 143
-- 安全, 144
-- 安全, 145
-- 安全, 146
-- 安全, 147
-- 安全, 148
-- 安全, 149
-- 安全, 150
-- 安全, 151
-- 安全, 152
-- 安全, 153
-- 安全, 154
-- 安全, 155
-- 安全, 156
-- 安全, 157
-- 安全, 158
-- 安全, 159
-- 安全, 160
-- 安全, 161
-- 安全, 162
-- 安全, 163
-- 安全, 164
-- 安全, 165
-- 安全, 166
-- 安全, 167
-- 安全, 168
-- 安全, 169
-- 安全, 170
-- 安全, 171
-- 安全, 172
-- 安全, 173
-- 安全, 174
-- 安全, 175
-- 安全, 176
-- 安全, 177
-- 安全, 178
-- 安全, 179
-- 安全, 180
-- 安全, 181
-- 安全, 182
-- 安全, 183
-- 安全, 184
-- 安全, 185
-- 安全, 186
-- 安全, 187
-- 安全, 188
-- 安全, 189
-- 安全, 190
-- 安全, 191
-- 安全, 192
-- 安全, 193
-- 安全, 194
-- 安全, 195
-- 安全, 196
-- 安全, 197
-- 安全, 198
-- 安全, 199
+  - 定义, 37
+  - 分发, 39
+  - 加密, 37
+  - 分发, 35
+  - 安全, 56
+  - 安全, 59
+  - 安全, 60
+  - 安全, 61
+  - 安全, 62
+  - 安全, 63
+  - 安全, 64
+  - 安全, 65
+  - 安全, 66
+  - 安全, 67
+  - 安全, 68
+  - 安全, 69
+  - 安全, 70
+  - 安全, 71
+  - 安全, 72
+  - 安全, 73
+  - 安全, 74
+  - 安全, 75
+  - 安全, 76
+  - 安全, 77
+  - 安全, 78
+  - 安全, 79
+  - 安全, 80
+  - 安全, 81
+  - 安全, 82
+  - 安全, 83
+  - 安全, 84
+  - 安全, 85
+  - 安全, 86
+  - 安全, 87
+  - 安全, 88
+  - 安全, 89
+  - 安全, 90
+  - 安全, 91
+  - 安全, 92
+  - 安全, 93
+  - 安全, 94
+  - 安全, 95
+  - 安全, 96
+  - 安全, 97
+  - 安全, 98
+  - 安全, 99
+  - 安全, 100
+  - 安全, 101
+  - 安全, 102
+  - 安全, 103
+  - 安全, 104
+  - 安全, 105
+  - 安全, 106
+  - 安全, 107
+  - 安全, 108
+  - 安全, 109
+  - 安全, 110
+  - 安全, 111
+  - 安全, 112
+  - 安全, 113
+  - 安全, 114
+  - 安全, 115
+  - 安全, 116
+  - 安全, 117
+  - 安全, 118
+  - 安全, 119
+  - 安全, 120
+  - 安全, 121
+  - 安全, 122
+  - 安全, 123
+  - 安全, 124
+  - 安全, 125
+  - 安全, 126
+  - 安全, 127
+  - 安全, 128
+  - 安全, 129
+  - 安全, 130
+  - 安全, 131
+  - 安全, 132
+  - 安全, 133
+  - 安全, 134
+  - 安全, 135
+  - 安全, 136
+  - 安全, 137
+  - 安全, 138
+  - 安全, 139
+  - 安全, 140
+  - 安全, 141
+  - 安全, 142
+  - 安全, 143
+  - 安全, 144
+  - 安全, 145
+  - 安全, 146
+  - 安全, 147
+  - 安全, 148
+  - 安全, 149
+  - 安全, 150
+  - 安全, 151
+  - 安全, 152
+  - 安全, 153
+  - 安全, 154
+  - 安全, 155
+  - 安全, 156
+  - 安全, 157
+  - 安全, 158
+  - 安全, 159
+  - 安全, 160
+  - 安全, 161
+  - 安全, 162
+  - 安全, 163
+  - 安全, 164
+  - 安全, 165
+  - 安全, 166
+  - 安全, 167
+  - 安全, 168
+  - 安全, 169
+  - 安全, 170
+  - 安全, 171
+  - 安全, 172
+  - 安全, 173
+  - 安全, 174
+  - 安全, 175
+  - 安全, 176
+  - 安全, 177
+  - 安全, 178
+  - 安全, 179
+  - 安全, 180
+  - 安全, 181
+  - 安全, 182
+  - 安全, 183
+  - 安全, 184
+  - 安全, 185
+  - 安全, 186
+  - 安全, 187
+  - 安全, 188
+  - 安全, 189
+  - 安全, 190
+  - 安全, 191
+  - 安全, 192
+  - 安全, 193
+  - 安全, 194
+  - 安全, 195
+  - 安全, 196
+  - 安全, 197
+  - 安全, 198
+  - 安全, 199
+
+
+
 - 安全, 200
 
-
-
-
-
 子网，掩码，20
+
 系统消息块 (SMB)，26, 115–153
+
 客户端/服务器规范，119
+
 守护进程，启动，122
+
 用于磁盘共享，115
+
 选项，115–116
+
 密码，设置，120
 
-# # U
+## U
 
-UNIX，4, 5, 6
-BSD，16
-CDE，57
-UUCP，71–72
+`UNIX`，4, 5, 6
 
-# V
+`BSD`，16
+
+`CDE`，57
+
+`UUCP`，71–72
+
+## V
 
 维多利亚时代的互联网，72
-Vim，190
-VNC，190
 
-# W
+`Vim`，190
 
-WGET，190
+`VNC`，190
 
-# X
+## W
 
-# T
+`WGET`，190
 
-TCP/IP，15–28
+## X
+
+## T
+
+`TCP/IP`，15–28
+
 地址，19–20
+
 客户端应用程序，启用/禁用，25
+
 客户端更改，76
+
 在 Linux 上配置，22–24
+
 在 OpenVMS 上配置，24–26
+
 当前状态的，17
 
-FTP，26, 32
+`FTP`，26, 32
+
 黄金时代，15–16
+
 历史，15–16
-IMAP，27, 74, 78, 79, 106 已知端口，32–35
-LPD，26
+
+`IMAP`，27, 74, 78, 79, 106 已知端口，32–35
+
+`LPD`，26
+
 管理实用程序，83
-POP3，27, 74, 81–82, 106
+
+`POP3`，27, 74, 81–82, 106
+
 服务器应用程序，启用/禁用，26
-SMB，26, 115–153
-SMTP，27, 77, 83, 85, 87, 92
+
+`SMB`，26, 115–153
+
+`SMTP`，27, 77, 83, 85, 87, 92
+
 软件协议，17
-SSL，27, 36–42
-Stunnel，37–55
+
+`SSL`，27, 36–42
+
+`Stunnel`，37–55
+
 技术转型，15–16
-Telnet，27, 32, 33
-X Windows，27, 57–70
 
-Xhost 命令，60
-X Windows，27, 57–70
+`Telnet`，27, 32, 33
+
+`X Windows`，27, 57–70
+
+`Xhost` 命令，60
+
+`X Windows`，27, 57–70
+
 命令自动化，63
-命令控制，60–62
-显示路径，58
-演变，57
-增长/扩展，70
-作业，检查状态，64
-历史，57–58
-登录，10
-OpenVMS 应用程序，在 Linux 上
-工作站，58–59
-安全性，更改，64
-软件发布，58
-启动选项，更改，64
-TCP/IP 作为传输，67, 68
 
-TCP/IP 应用程序，26–28
-BIND/DNS，26
+命令控制，60–62
+
+显示路径，58
+
+演变，57
+
+增长/扩展，70
+
+作业，检查状态，64
+
+历史，57–58
+
+登录，10
+
+OpenVMS 应用程序，在 Linux 上
+
+工作站，58–59
+
+安全性，更改，64
+
+软件发布，58
+
+启动选项，更改，64
+
+`TCP/IP` 作为传输，67, 68
+
+`TCP/IP` 应用程序，26–28
+
+`BIND/DNS`，26
+
 客户端，25
+
 服务器，26
+
 电报，72
-Telnet，27, 32
+
+`Telnet`，27, 32
+
 定义，27
+
 已知端口及，33
 
-X Windows 应用程序 (Linux)
-在 OpenVMS 上显示，67–70
-返回，69
-X clock，69
-X Windows 应用程序 (OpenVMS)，62–67
-访问，63
-添加，65–66
-目录，62
+`X Windows` 应用程序 (`Linux`)
 
+在 OpenVMS 上显示，67–70
+
+返回，69
+
+`X clock`，69
+
+`X Windows` 应用程序 (`OpenVMS`)，62–67
+
+访问，63
+
+添加，65–66
+
+目录，62

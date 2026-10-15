@@ -1,3 +1,4 @@
+
 # 排序内容
 
 > 原文：[`learnbyexample.github.io/cli-computing/sorting-stuff.html`](https://learnbyexample.github.io/cli-computing/sorting-stuff.html)
@@ -6,7 +7,7 @@
 
 > ![信息](img/147d5d96e6e103c258c8b5f99e9505a9.png) [example_files](https://github.com/learnbyexample/cli-computing/tree/master/example_files) 目录包含本章中使用的示例输入文件。
 
-## sort
+## `sort`
 
 如其名所示，此命令用于对输入文件的内容进行排序。字母排序和数字排序？可能。按特定列排序？可能。优先排序多个排序顺序？可能。随机化？唯一？此强大命令支持许多功能。
 
@@ -14,25 +15,16 @@
 
 下面显示了常用选项。示例将在后面的章节中讨论。
 
-+   `-n` 数字排序
-
-+   `-g` 通用数字排序
-
-+   `-V` 版本排序（了解文本中的数字）
-
-+   `-h` 排序人类可读的数字（例如：4K、3M、12G 等）
-
-+   `-k` 通过键（列排序）
-
-+   `-t` 单字节字符作为字段分隔符（默认是非空白到空白的转换）
-
-+   `-u` 唯一排序
-
-+   `-R` 随机排序
-
-+   `-r` 反转排序输出
-
-+   `-o` 将排序结果重定向到指定的文件名（例如：用于原地排序）
+- `-n` 数字排序
+- `-g` 通用数字排序
+- `-V` 版本排序（了解文本中的数字）
+- `-h` 排序人类可读的数字（例如：4K、3M、12G 等）
+- `-k` 通过键（列排序）
+- `-t` 单字节字符作为字段分隔符（默认是非空白到空白的转换）
+- `-u` 唯一排序
+- `-R` 随机排序
+- `-r` 反转排序输出
+- `-o` 将排序结果重定向到指定的文件名（例如：用于原地排序）
 
 ### 默认排序
 
@@ -49,10 +41,10 @@ cherry
 $ printf 'peace\nrest\nquiet' | sort -r
 rest
 quiet
-peace 
+peace
 ```
 
-> ![信息](img/147d5d96e6e103c258c8b5f99e9505a9.png) 如果你想忽略大小写，请使用 `-f` 选项。另请参阅[coreutils FAQ：排序不按正常顺序排序！](https://www.gnu.org/software/coreutils/faq/#Sort-does-not-sort-in-normal-order_0021)。
+> ![信息](img/147d5d96e6e103c258c8b5f99e9505a9.png) 如果你想忽略大小写，请使用 `-f` 选项。另请参阅 [coreutils FAQ：排序不按正常顺序排序！](https://www.gnu.org/software/coreutils/faq/#Sort-does-not-sort-in-normal-order_0021)。
 
 ### 数字排序
 
@@ -80,7 +72,7 @@ $ sort -V timings.txt
 3m42.833s
 4m3.083s
 4m11.130s
-5m35.363s 
+5m35.363s
 ```
 
 ### 唯一排序
@@ -92,7 +84,7 @@ $ sort -V timings.txt
 $ printf 'CAT\nbat\ncat\ncar\nbat\n' | sort -fu
 bat
 car
-CAT 
+CAT
 ```
 
 ### 列排序
@@ -113,14 +105,14 @@ Pizza   2
 toys    5
 Banana  10
 mango   25
-apple   50 
+apple   50
 ```
 
 > ![信息](img/147d5d96e6e103c258c8b5f99e9505a9.png) 你可以使用 `-t` 选项指定单个字节字符作为字段分隔符。使用 `\0` 指定 ASCII NUL 作为分隔符。
-> 
+
 > ![信息](img/147d5d96e6e103c258c8b5f99e9505a9.png) 使用 `-s` 选项在认为两行或多行相等时保留输入行的原始顺序。您仍然可以使用多个键来指定自己的解决冲突的方法，`-s` 只能防止最后的比较手段。
 
-## uniq
+## `uniq`
 
 此命令帮助您识别和删除重复项。通常与排序输入一起使用，因为比较仅限于相邻行。
 
@@ -128,21 +120,14 @@ apple   50
 
 常用选项如下。示例将在后面的章节中讨论。
 
-+   `-u` 仅显示唯一条目
-
-+   `-d` 仅显示重复条目
-
-+   `-D` 显示所有重复条目的副本
-
-+   `-c` 前缀计数
-
-+   `-i` 在确定重复项时忽略大小写
-
-+   `-f` 跳过前`N`个字段（分隔符是空格/制表符字符）
-
-+   `-s` 跳过前`N`个字符
-
-+   `-w` 限制比较到前`N`个字符
+- `-u` 仅显示唯一条目
+- `-d` 仅显示重复条目
+- `-D` 显示所有重复条目的副本
+- `-c` 前缀计数
+- `-i` 在确定重复项时忽略大小写
+- `-f` 跳过前 `N` 个字段（分隔符是空格/制表符字符）
+- `-s` 跳过前 `N` 个字符
+- `-w` 限制比较到前 `N` 个字符
 
 ### 默认唯一值
 
@@ -159,7 +144,7 @@ green
 $ printf '2 balls\n13 pens\n2 pins\n13 pens\n' | sort -n | uniq
 2 balls
 2 pins
-13 pens 
+13 pens
 ```
 
 ### 唯一和重复条目
@@ -180,7 +165,7 @@ tea
 $ sort purchases.txt | uniq -u
 soap
 toothpaste
-washing powder 
+washing powder
 ```
 
 `-d` 选项将仅显示重复条目。也就是说，只有当一行被看到多次时。要显示所有重复条目的副本，请使用 `-D` 选项。
@@ -195,7 +180,7 @@ coffee
 coffee
 tea
 tea
-tea 
+tea
 ```
 
 ### 前缀计数
@@ -220,7 +205,7 @@ $ sort purchases.txt | uniq -c | sort -nr
       2 coffee
       1 washing powder
       1 toothpaste
-      1 soap 
+      1 soap
 ```
 
 ### 部分匹配
@@ -239,18 +224,16 @@ $ printf '1) apple\n1) almond\n2) banana\n3) cherry\n3) cup' | uniq -w2
 # -w2 uses the next two characters for comparison ('bl' and 'ch' in this example)
 $ printf '2 @blue\n10 :black\n5 :cherry\n3 @chalk' | uniq -f1 -s2 -w2
 2 @blue
-5 :cherry 
+5 :cherry
 ```
 
-## comm
+## `comm`
 
 `comm` 命令在两个排序文件之间查找公共和唯一的行。默认情况下，您将得到一个包含三列的表格输出：
 
-+   第一列包含第一个文件中唯一的行
-
-+   第二列包含第二个文件中唯一的行
-
-+   第三列包含两个文件都有的行
+- 第一列包含第一个文件中唯一的行
+- 第二列包含第二个文件中唯一的行
+- 第三列包含两个文件都有的行
 
 ```sh
 # side by side view of already sorted sample files
@@ -274,16 +257,14 @@ Brown
 Purple
                 Red
 Teal
-                White 
+                White
 ```
 
 您可以使用以下选项之一来抑制列：
 
-+   `-1` 抑制第一个文件中唯一的行
-
-+   `-2` 抑制第二个文件中唯一的行
-
-+   `-3` 抑制两个文件都有的行
+- `-1` 抑制第一个文件中唯一的行
+- `-2` 抑制第二个文件中唯一的行
+- `-3` 抑制两个文件都有的行
 
 ```sh
 # only the common lines
@@ -297,10 +278,10 @@ White
 $ comm -13 c1.txt c2.txt
 Black
 Green
-Pink 
+Pink
 ```
 
-## join
+## `join`
 
 默认情况下，`join` 命令根据第一个字段的内容（也称为**键**）组合两个文件。只有具有公共键的行才会成为输出的一部分。
 
@@ -322,7 +303,7 @@ soap    1
 # combine common lines based on the first field
 $ join shopping_jan.txt shopping_feb.txt
 banana 20 15
-soap 3 1 
+soap 3 1
 ```
 
 > ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 注意，用于 `join` 的排序顺序应与用于 `sort` 输入文件的顺序相同。使用 `join -i` 忽略大小写，类似于 `sort -f` 的用法。
@@ -334,7 +315,7 @@ $ join <(printf 'a f1_x\na f1_y') <(printf 'a f2_x\na f2_y')
 a f1_x f2_x
 a f1_x f2_y
 a f1_y f2_x
-a f1_y f2_y 
+a f1_y f2_y
 ```
 
 > ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 还有许多其他功能，例如指定字段分隔符、从每个输入文件中选择特定顺序的字段、为不匹配的行填充字段等。请参阅 [join 章节](https://learnbyexample.github.io/cli_text_processing_coreutils/join.html) 以及我的 [使用 GNU Coreutils 的 CLI 文本处理](https://github.com/learnbyexample/cli_text_processing_coreutils) 电子书中的解释和示例。
@@ -360,7 +341,7 @@ $ printf '100\n10\n20\n3000\n2.45\n' | sort # ???
 10
 20
 100
-3000 
+3000
 ```
 
 **2)** 哪个 `sort` 选项可以帮助你忽略大小写？
@@ -370,7 +351,7 @@ $ printf 'Super\nover\nRUNE\ntea\n' | LC_ALL=C sort # ???
 over
 RUNE
 Super
-tea 
+tea
 ```
 
 **3)** 阅读排序手册，并使用适当的选项以获得以下所示输出。
@@ -388,17 +369,17 @@ $ printf '+120\n-1.53\n3.14e+4\n42.1e-2' | sort # ???
 -1.53
 42.1e-2
 +120
-3.14e+4 
+3.14e+4
 ```
 
-**4)** 使用第二字段的内容按数值升序排序 `scores.csv` 文件。应保留标题行作为第一行，如下所示。*提示*：参见 Shell 特性 章节。
+**4)** 使用第二字段的内容按数值升序排序 `scores.csv` 文件。应保留标题行作为第一行，如下所示。*提示*：参见 Shell 特性章节。
 
 ```sh
 # ???
 Name,Maths,Physics,Chemistry
 Lin,78,83,80
 Cy,97,98,95
-Ith,100,100,100 
+Ith,100,100,100
 ```
 
 **5)** 按第四列数字降序排序 `duplicates.txt` 的内容。仅保留具有相同数字的第一行副本。
@@ -408,14 +389,14 @@ Ith,100,100,100
 dark red,sky,rose,555
 blue,ruby,water,333
 dark red,ruby,rose,111
-brown,toy,bread,42 
+brown,toy,bread,42
 ```
 
 **6)** 如果输入未排序，`uniq` 会抛出错误吗？你认为以下输入的输出会是什么？
 
 ```sh
 $ printf 'red\nred\nred\ngreen\nred\nblue\nblue' | uniq
-# ??? 
+# ???
 ```
 
 **7)** 仅保留基于输入行前两个字符的唯一条目。如有必要，对输入进行排序。
@@ -429,7 +410,7 @@ $ printf '3) cherry\n1) apple\n2) banana\n1) almond\n'
 
 $ printf '3) cherry\n1) apple\n2) banana\n1) almond\n' | # ???
 2) banana
-3) cherry 
+3) cherry
 ```
 
 **8)** 计算输入行重复的次数，并按以下格式显示结果。
@@ -438,7 +419,7 @@ $ printf '3) cherry\n1) apple\n2) banana\n1) almond\n' | # ???
 $ printf 'brown\nbrown\nbrown\ngreen\nbrown\nblue\nblue' | # ???
       1 green
       2 blue
-      4 brown 
+      4 brown
 ```
 
 **9)** 使用 `comm` 命令显示 `c1.txt` 中存在但不在 `c2.txt` 中的行。假设输入文件已经排序。
@@ -447,7 +428,7 @@ $ printf 'brown\nbrown\nbrown\ngreen\nbrown\nblue\nblue' | # ???
 # ???
 Brown
 Purple
-Teal 
+Teal
 ```
 
 **10)** 使用适当的选项以获得以下所示预期输出。
@@ -458,7 +439,7 @@ $ join <(printf 'apple 2\nfig 5') <(printf 'Fig 10\nmango 4')
 
 # expected output
 # ???
-fig 5 10 
+fig 5 10
 ```
 
 **11)** 如果有的话，`sort -u` 和 `uniq -u` 选项之间有什么区别？

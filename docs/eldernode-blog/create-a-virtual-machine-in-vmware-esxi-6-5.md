@@ -1,20 +1,21 @@
-# 如何在 VMware ESXi 6.5 - Eldernode 博客中创建虚拟机
+
+# 如何在 VMware ESXi 6.5 中创建虚拟机
 
 > 原文：<https://blog.eldernode.com/create-a-virtual-machine-in-vmware-esxi-6-5/>
 
 ![How to Create a Virtual Machine in VMware ESXi 6.5](img/e8a71b2fe3b7bb466a13b0561c9c0274.png)
 
-如果要对虚拟机有一个大概的定义，那就必须说它是一个软件，它为我们模拟并创造了一台物理计算机。一个 VM，就像一个[专用服务器](https://blog.eldernode.com/tag/dedicated-server/)，有 Cpu，Ram，硬盘，但是虚拟的。创建虚拟机后，您可以安装和使用任何类型的操作系统或应用程序。在本文中，我们试图教你**如何在 VMware ESXi 6.5** 中创建虚拟机。你也可以访问 [Eldernode](https://eldernode.com/) 提供的包来购买[专用服务器](https://eldernode.com/dedicated-server/)。
+如果要对虚拟机有一个大概的定义，那就必须说它是一个软件，它为我们模拟并创造了一台物理计算机。一个 VM，就像一个[专用服务器](https://blog.eldernode.com/tag/dedicated-server/)，有 CPU、RAM、硬盘，但是虚拟的。创建虚拟机后，您可以安装和使用任何类型的操作系统或应用程序。在本文中，我们试图教你如何在 VMware ESXi 6.5 中创建虚拟机。你也可以访问 [Eldernode](https://eldernode.com/) 提供的包来购买[专用服务器](https://eldernode.com/dedicated-server/)。
 
-## **教程在 VMware ESXi 6.5 中创建虚拟机**
+## 教程：在 VMware ESXi 6.5 中创建虚拟机
 
-在本文的其余部分，我们将分三步教您如何在 VMware ESXi 6.5 中创建虚拟机。需要注意的是，本培训的先决条件是**一个 ISO 映像**。请和我们在一起。
+在本文的其余部分，我们将分三步教您如何在 VMware ESXi 6.5 中创建虚拟机。需要注意的是，本培训的先决条件是一个 ISO 映像。请和我们在一起。
 
-### **在 VMware ESXi 6.5 中创建虚拟机**
+## 在 VMware ESXi 6.5 中创建虚拟机
 
 如前所述，ESXi 是安装在一组企业服务器上的操作系统。ESXi 由 VMKernel 提供支持，并管理虚拟机进行通信。为了在 ESXi 上安装虚拟机，按顺序执行以下步骤就足够了。
 
-### 如何在 VMware ESXi 6.5 中上传 ISO
+### 在 VMware ESXi 6.5 中上传 ISO
 
 开始工作之前，您应该确保可以在虚拟机上安装操作系统。应该注意的是，ESXi 使用户可以轻松实现直接 ISO 加载。
 
@@ -30,7 +31,7 @@
 
 ![how to upload iso in esxi 6.5](img/c22678f0de648dab9651608fae223c34.png)
 
-### 如何在 VMware ESXi 6.5 中创建虚拟机
+### 在 VMware ESXi 6.5 中创建虚拟机
 
 成功完成 ISO 加载后，您需要继续在 ESXi 中创建虚拟机。因此，要在 VMware ESXi 6.5 中创建虚拟机，第一步必须从导航面板中单击**虚拟机**，如下图所示。
 
@@ -48,15 +49,15 @@
 
 ![custom settings in esxi 6.5](img/3b5fb77513c85e6e688d54b7d99e3e63.png)
 
-请注意，您必须选择硬件设置，以满足虚拟机和操作系统运行的应用程序的需求。在下一步中，您必须点击 **CD/DVD 驱动器 1** ，然后选择**数据存储 ISO** 文件。这将允许您下载您的 ISO 文件。
+请注意，您必须选择硬件设置，以满足虚拟机和操作系统运行的应用程序的需求。在下一步中，您必须点击**CD/DVD 驱动器 1**，然后选择**数据存储 ISO**文件。这将允许您下载您的 ISO 文件。
 
 ![datastore browser in esxi 6.5](img/232e2cc990ac94ae504a5383089be52c.png)
 
 在本节的最后一步，您必须选择上传的 ISO 文件。然后点击**选择**。现在，您需要返回到自定义设置页面来浏览和验证您的虚拟机信息。最后，点击**完成**创建一个虚拟机，在上面安装操作系统。
 
-### **如何在 VMware ESXi 6.5 中安装 OS**
+## 如何在 VMware ESXi 6.5 中安装 OS
 
-***注意:*** 在开始安装之前，我们必须提醒您，操作系统的安装因您选择的操作系统而异。
+> **注意：** 在开始安装之前，我们必须提醒您，操作系统的安装因您选择的操作系统而异。
 
 成功完成前两步后，就可以在 ESXi 上安装了。为此，您需要从**导航器面板**中点击**虚拟机**。
 

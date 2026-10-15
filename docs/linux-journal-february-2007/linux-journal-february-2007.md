@@ -1,10 +1,5 @@
+
 # Linux 期志 (2007年2月)
-
-
-
-
-
-
 
 亲爱的订阅者：
 
@@ -14,14 +9,9 @@
 
 我们借此机会向您介绍 Duke Italia 即将举办的会议：
 
-
-
-
 在企业中，Symantec 的备份和数据恢复解决方案为用户提供了最高水平的连续性和操作安全性。
 
-
 网络基础设施以及对带宽、可靠性、访问保护和监控日益增长的需求。
-
 
 确保企业业务连续性的架构与策略 – 访问安全 – 存储系统和数据保护技术。
 
@@ -29,27 +19,17 @@
 
 顺致商祺
 
-
-
 想随时保持更新吗？
+
 请随意查阅我们的专题：
 
-
-
-对 Christof Wittig 与 Jerry Fiddler (db4objects) 的采访
+对 Christof Wittig 与 Jerry Fiddler (`db4objects`) 的采访
 
 自1994年以来：Linux社区的原创杂志
 
-
 如此简单……
 
-
-
-
-
 ## C++, STLDB 以及 BERKELEY DB
-
-
 
 行业领先的 2P 和 x86 计算
 
@@ -60,103 +40,122 @@
 高达128GB 内存
 
 - AMD Opteron 处理器
+
 - 采用 AMD Socket F 接口
+
 - 高达64GB DDR3 533/667 内存
+
 - 高达1.0TB SATA 或 292GB SAS
+
 - PCI-X 和 Express x16
+
 - 热插拔驱动器
+
 - ServerDome 管理 – IPMI 2.0
+
  Windows 或 Linux 系统
 
 - AMD Opteron 处理器
+
 - 采用 AMD Socket F 接口
+
 - 高达128GB DDR3 533/667 内存
+
 - 高达3.0TB SATA 或 876GB SAS
+
 - 三路 PCI-X 和 Express x16
+
 - 冗余电源和风扇
+
 - 热插拔驱动器
+
 - ServerDome 管理 – IPMI 2.0
+
  Windows 或 Linux 系统
 
 在整合和虚拟化您的IT基础设施的同时保持数据中心冷却
-访问 http://www.apro.com/whitepaper/White Papers.asp
+
+访问 `http://www.apro.com/whitepaper/White Papers.asp`
 
 - AMD Opteron 处理器
+
 - 四核 - 在不改变数据中心基础设施的情况下增加
+
 - 能效比最高的 DDR2
+
 - 直接连接架构优化系统性能
 
-欲了解更多信息，请访问 www.apro.com 或致电 Appro 销售部门：800-927-5464 或 408-941-8100。
+欲了解更多信息，请访问 `www.apro.com` 或致电 Appro 销售部门：800-927-5464 或 408-941-8100。
 
 今天，Dan 在伦敦配置了交换机，在悉重启了服务器，并看到团队在圣路易斯取得了胜利。
 
 有了 Avocent 数据中心解决方案，世界终于可以围绕你。Avocent 让安全访问和控制触手可及——从多平台服务器到网络路由器，从本地数据中心到分支机构，乃至全球。让其他人去故障——有了 Avocent，问题迎刃而解。
 
-欲了解更多，请访问 www.avocent.com/ice 下载《数据中心控制：实现集中管理》白皮书，或致电 866.277.1924 演示。
-
-
+欲了解更多，请访问 `www.avocent.com/ice` 下载《数据中心控制：实现集中管理》白皮书，或致电 866.277.1924 演示。
 
 Linux 处理 NTFS 比你想象的要好。
+
 Steven Maths
 
 许多 Linux 客户端上的 Windows。
+
 Jon Watson
 
 如何从 Windows 访问 Linux 文件系统？
+
 Irfan Habib
 
 替代 Microsoft Exchange。
+
 Jon Watson
 
-
 Linux 处理 NTFS 比你想象的要好。
+
 Steven Maths
 
 许多 Linux 客户端上的 Windows。
+
 Jon Watson
 
 如何从 Windows 访问 Linux 文件系统？
+
 Irfan Habib
 
 替代 Microsoft Exchange。
+
 Jon Watson
 
-
 Linux 处理 NTFS 比你想象的要好。
+
 Steven Maths
 
 ...
+
 现在，PGI 编译器在 Linux 和 Windows 之间生成统一环境。
-小组优化 64 位应用程序。访问 www.pgroup.com 查看
+
+小组优化 64 位应用程序。访问 `www.pgroup.com` 查看
+
 Portland Group, Inc. 是法半导体的一公司。PGI、Portland Group、Unified Binary 是法半导体的商标。其他品牌和名称归所有者所有。
 
-
 Linux 处理 NTFS 比你想象的要好。
+
 Steven Maths
 
 许多 Linux 客户端上的 Windows。
+
 Jon Watson
 
 如何从 Windows 访问 Linux 文件系统？
+
 Irfan Habib
 
 替代 Microsoft Exchange。
+
 Jon Watson
 
-
 Linux 处理 NTFS 比你想象的要好。
+
 Steven Maths
-
-*(注：由于原文中后续部分存在大量重复的段落，根据“一定不要重复输出原文”的原则，此处仅保留核心内容的翻译，重复部分已在逻辑上处理或跳过，以确保输出的简洁且符合指令要求。然而，由于您提供的文本中包含了大量完全重复的“LINUX-NTFS 工具的互操作性”等内容，此处已涵盖所有唯一的翻译信息。)*
-
-Linux 处理 NTFS 比你想象的要好。
-Steven Maths
-
-*(注：此处为翻译内容的结尾，由于源文本包含大量重复项，核心信息已在上述内容中完成翻译。)*
-
-
-
-
 
 - 超高密度系列
 
@@ -166,29 +165,33 @@ Steven Maths
 
 发热降低高达 40%
 
-
 基于开放标准构建，Gemini 2U 在 25 英寸机箱内优雅地容纳了两个块独立的主板，该机箱采用独特设计，便于从背部访问。
 
 Gemini 2U 代表了惊人性能与卓越环境规格的结合，功耗降低了 40%，发热减少了 40%，噪音减少了30%。值得的是，它可以完美适配任何标准机架。从前部到后端，Gemini 2U 既强大又高效。
 
 在 Open Source Systems，我们理解您需要实用、可定制且易于管理和维护的性价比解决方案。
 
-欲了解更多信息并即刻申请评估单元，请访问我们的网站 www.OpenSourceSystems.com，或直接拨打 866.664.7867。
+欲了解更多信息并即刻申请评估单元，请访问我们的网站 `www.OpenSourceSystems.com`，或直接拨打 866.664.7867。
 
 - 2U 机箱内包含两个完全独立的系统
+
 - 支持在一个箱体内运行两个独立操作系统的能力
+
 - 最多 8 个 CPU 核心（向前兼容 16 核）
+
 - 最支持 12 个热插拔 SATA、SCL 或 SAS 硬盘
+
 - 两个系统均支持 RAID 0, 1, 5, 6, 10, 50
+
 - 支持 Opteron 或 Xeon™ 多核处理器
+
 - 每块主板支持 64GB 内存
+
 - 每块主板提供一个 PCI-X 或 PCI-E 插槽
 
 ![](img/6ad2c38f7c331af69e079dec652dce53_7_1.png)
 
-
 始于 1994 年：社区原创杂志
-
 
 在报刊上架前获取最新期刊
 
@@ -198,95 +201,137 @@ Gemini 2U 代表了惊人性能与卓越环境规格的结合，功耗降低了 
 
 以高品质 PDF 格式阅读每期内容
 
-
 ![](img/6ad2c38f7c331af69e079dec652dce53_8_0.png)
 
 ![](img/6ad2c38f7c331af69e079dec652dce53_8_1.png)
 
-
 **总编辑**
+
 Mike Petley, editor@linuxjournal.com
 
 **执行编辑** Jill Franklin
+
 jill@linuxjournal.com
+
 **高级编辑** Don Cox
+
 don@linuxjournal.com
+
 **艺术总监** Garrick Antisle
+
 garrick@linuxjournal.com
+
 **产品编辑** James Stone
+
 james@linuxjournal.com
+
 **荣誉编辑** Michael Baist
+
 michael@linuxjournal.com
+
 **技术编辑** Newburgh
+
 newburgh@linuxjournal.com
+
 **高级顾问** reven Berrier
+
 reven@berrier.com
+
 **主厨导师** Mark Ggary
+
 mark@madgary.com
+
 **编辑** Mick Olson
+
 mick@osi.com
 
 **特编辑**
+
 David A. Bandel, Greg Graham-Haskell, Robert Robert Love, Dave Brown Phillips, Marco Franco, Martin Hauser, Paul Barry, Barack McKinney
 
 **校对员** Gerry Gie
 
 **发行商** Charlie Carfield
+
 publisher@gmail.com
 
 **总经理** Rebecca Casity
+
 becca@linuxjournal.com
+
 **销售总监** Laura Whiteman
+
 laura@linuxjournal.com
+
 Joseph Clark
 
 **发行总监** Mark Irving
+
 mark@linuxjournal.com
+
 Laura Nevelar
+
 laura@linuxjournal.com
 
 **市场协调员** Smith Irving
+
 smith@linuxjournal.com
 
 **系统管理员** Mitch Faser
+
 mitch@linuxjournal.com
+
 **网站管理员** Kevin Green
+
 kevin@linuxjournal.com
 
 **会计** Candy Beauchamp
+
 candy@linuxjournal.com
 
-
 **编辑顾问委员会**
+
 Daniel Frye, IMA Linux 技术中心总监
+
 "Teddy" Jaeger, International Standard 发行商
+
 Lawrence Lessing, 法律与教会历史教授
+
 nanson Lowe, 耶稣圣徒教会宗教研究与教会历史系主任
+
 Sam Ockman, CFS, 出版
+
 Bruce Perez, Brooks Lewis
+
 naseer Cooper, Intel 公司 开源数据部
 
 **广告咨询**
+
 邮箱：advertising@linuxjournal.com
-网址：http://www.linuxjournal.com/advertising
+
+网址：`http://www.linuxjournal.com/advertising`
+
 电话：+1-713-344-1956 分机 2
 
 **订阅**
+
 邮箱：subscribe@linuxjournal.com
-网址：http://www.linuxjournal.com/subscribe
+
+网址：`http://www.linuxjournal.com/subscribe`
+
 电话：+1-713-589-3503
+
 传真：+1-713-526-2627
+
 免费热线：1-888-666-LINUX
+
 邮箱 889, Indianapolis, IN 47208
+
 请预留 4-6 周处理时间
+
 Linux Journal 是 AMD Opteron 的注册商标
 
 ![](img/6ad2c38f7c331af69e079dec652dce53_8_0.png)
-
-
-
-
-
 
 我没有 Dave 那样对 awk 的赞誉（参见 Dave 在 2006 年 11 月的专栏）。我无法访问 Web 文件，也没有相应版本的 Linux。然而，我知道他的解决方案可以用 awk 编写。在 AIX 和 HP-UX 上，我伪造了一个日志文件，通过作弊的方式修改了 `date` 命令的时间，并测试了我的解决方案。
 
@@ -318,7 +363,6 @@ END {
 
 - Bob
 
-
 关于 SSH 字典攻击的担忧（参考 2006 年 6 月）。由 George Belkofsky 编写的《我的服务器》（*A Server of Myself*）；以及精彩的 DenyHosts：详细介绍……
 
 DenyHosts 拦截进入你服务器的入站连接（许多是 SSH，但也可以是 FTP 或任何带有登录/密码和日志文件的服务），并通过自动添加到 `deny.hosts` 中来封锁 IP 地址。
@@ -329,13 +373,11 @@ DenyHosts 拦截进入你服务器的入站连接（许多是 SSH，但也可以
 
 - Carlos Vidal
 
-
 我一直在等待 Java 的到来。Java 怎么样呢（Ajax 之前的 Ajax），Java servlets（以及真正的跨平台东西）。我期待听到并读到关于它的消息。
 
 - Mark Molenda
 
 我们的列表恰好有这样一篇文章！——编辑。
-
 
 在《LI》2006 年 5 月份中，有一篇由 De-Earl Barnett 写的关于上述主题的文章。
 
@@ -355,7 +397,6 @@ $899 起售价
 
 - Dev Casin
 
-
 在（《LI》2006 年 12 月份）中，Jon Alexander 描述了他的朋友 James 如何通过登录不同的桌面环境来引起他的兴趣。如果他能登录多个桌面并在 Linux 和其他操作系统之间切换，他会为了实际需要而包含几个桌面环境。此外，不要忘记 Linux 支持的虚拟桌面。
 
 - James Knott
@@ -368,11 +409,9 @@ $899 起售价
 
 安装工作顺利，本地网络
 
-
 ![](img/6ad2c38f7c331af69e079dec652dce53_11_3.png)
 
 ![](img/6ad2c38f7c331af69e079dec652dce53_4)
-
 
 我犹豫是否采用像 Dave Taylor 这样的作者，他的脚本使用了重复的（在许多情况下）系统和分区来实现本简单乘法就能完成的功能（Dave 在 2006 年 12 月的专栏？）。实现这种效果的简单算法嵌入在此哈希中，如下：
 
@@ -400,13 +439,9 @@ for ((i = 1; i <= $2; i++))
   value=$(echo "scale = 2; $value" | bc)
 ```
 
-
-
-
-
 # 前言
-新闻 + 趣味
 
+新闻 + 趣味
 
 内核更新
 
@@ -417,20 +452,33 @@ Multilch 和 Multipart 驱动程序现在已作为官方维护者的身份合并
 那个允许用户在运行时配置内核参数的系统调用（syscall）很容易消失。这违背了内核喜欢遵循“从不破坏用户”的标准原则。但目前看来，似乎没有哪些用户空间程序在使用它。特别是，其他程序可能会用。
 
 - 1. 从读者和博主处“众包”编辑内容的报数量：91
+
 - 2. 参与创建“情报百科”（intellipedia）的美国情报机构数量：18
+
 - 3. 公民记者通过“分布式新闻”报道 2006 年 11 月选举的方式：9
+
 - 4. 拥有十名员工但没有优于拨号上网网络的美国企业百分比：60
+
 - 5. 微软将发放给客户以使用 SU Linux 的证书数量：70
+
 - 6. Novel 为这些证书从微软获得的百万美元最低金额：240
+
 - 7. 托管证书的千位美元（取整）：3.4
+
 - 8. 2006 年 11 月 Next 前 50 大可靠提供商中基于 Linux 的房屋：23
+
+
+
 - 9. 2006 年 11 月 Next 前 50 大可靠提供商中基于风能的房屋：11
+
 - 10. 2006 年 11 月 Next 前 50 大可靠提供商中基于 BSD 的房屋：6
 
 如果你有某些依赖于你的用户，你应该在内核邮件列表上讨论这个问题，直到有时间为止。Linus Torvalds 和 Andrew Morton 都表达了这种观点：说出你想做什么——而 Andrew 会仅仅因为他们害怕代码而松了一口气。
 
 - 11. 2006 年 11 月 Next 前 50 大可靠提供商中基于 Solaris 的房屋：4
+
 - 12. 2006 年 10 月 Next 前 4 大中基于 Linux 的房屋数量：4
+
 - 13. 2006 年 10 月 Next 前 10 大中基于 Linux 的房屋数量：5
 
 如果存在可行替代方案，最好永久使用，但它可能运行得良好。不过，Chuck Albert 已自愿在需要时担任内核-linux 维护者。
@@ -440,11 +488,13 @@ Multilch 和 Multipart 驱动程序现在已作为官方维护者的身份合并
 最新的提交是多媒体卡（MultiMedia Card）和安全数字（Secure Digital）系统，Pierre Ossman 开始自己编写补丁，因为之前的维护者 Russell King 已经退役并取消了订阅。同时，J Slab 为 Media/Input 驱动添加了新条目。
 
 - 15. 2006 年 10 月 Next 前 50 大中基于 Solaris 的房屋：5
+
 - 16. 2006 年 10 月 Next 前 10 大中基于 Windows 的房屋：6
 
 内核列表中显然每周可见的一个：Valerie Henson 创建了两个列表，一个用于 linux-pixvs.com 的文件系统，另一个用于 linux-new.org 的补丁。每一个都比她用于这些协作项目的大列表要多一点。
 
 - 17. 2006 年世界 500 强计算机中基于美军的 Blue/Gene（位于利物摩尔国家实验室）的排名：1
+
 - 18. 在 Blue/Gene 上测量的每秒计算次数（万亿次）：280.6
 
 Theodore 指出以便对每个版本进行比较，并将结果报告给特定的补丁。
@@ -463,14 +513,7 @@ Theodore 指出以便对每个版本进行比较，并将结果报告给特定�
 
 来源：WIRED；WEB: POST；3:ASSIGNMENT.NET；4:OECD.ORG；5:SILICON.COM；8:NETNET；12:TOPOS.COM；20:INFORMATION-Doc Sheets
 
-
-
 ![](img/6ad2c38f7c331af9e079dec652d53_15_0)
-
-
-
-
-
 
 你可以在 LAMP 后面加上字母 J 并拼出任何单词。因此，有些人开始将带有 Java 的 Linux“栈”称为“LAMP”；LAMP-。但这些名称似乎从都不正统——因为 Java 当时并没有一个能够通过 L+ 字母表标准的开源许可证。
 
@@ -480,40 +523,51 @@ Theodore 指出以便对每个版本进行比较，并将结果报告给特定�
 
 Jonathan 在他的博客中写道：“GPL 是用于管理 GNU/Linux 演变的相同许可证——将其带给社区并降低成本（而且，如果我们选择了 GPL，第 2 版并不是它的走向……）。”
 
-- Jonathan Schwartz 的博客：blogs.com/jonathan
-- Jonathan Schwartz 的博客文章：blogs.com/jonathan/entry/feeling_network_effect
-- Jim Thompson：smallworks.com
+- Jonathan Schwartz 的博客：`blogs.com/jonathan`
+
+- Jonathan Schwartz 的博客文章：`blogs.com/jonathan/entry/feeling_network_effect`
+
+- Jim Thompson：`smallworks.com`
 
 或者并不是 Solaris，事实是，Jim 还有一个问题：“Solaris 是要成为原始的免 GPL 平台，还是说下一步是什么？”“Ubuntu 会提供哪个版本来通过 GPL 版的 Solaris 内核来分散注意力吗？”
 
 重新绘制你的结论。
-
 
 自 1999 年以来，Emperor.Linux 一直向大学、企业和个人 Linux 爱好者提供预装 Linux 笔记本电脑解决方案。我们专注于为 IBM、联想、戴尔、索尼和松下的各种笔记本和平笔记本安装 Linux 系统。我们提供多种 Linux 发行版以及双启动选项。我们自定义运行的分区，并提供对以太网、PCMCIA、USB、EVDO、宽带、火线（FireWire）、X-server 等的支持。我们所有的系统都提供一年的电话和邮件 Linux 技术支持，并适用完整的制造商保修。
 
 电话和邮件技术支持、制造商保修、用户手册
 
 - 预配置的 Linux 安装
+
 - 电源管理、睡眠、休眠、处理器控制
+
 - 内部千兆以太网、无线 a/b/g、蓝牙、EVDO 移动宽带
+
 - 一键设置、休眠、音量、亮度、外部 VGA 等
+
 - 端口：USB、PCMCIA、VGA、火线及更多
+
 - 我们自定义运行的分区，并提供对以太网、PCMCIA、USB、EVDO、宽带的支持
+
 - 内部光驱：CDRW，DVDRW
+
 - 火线、X-server 等。我们所有的系统都提供一年的电话和邮件 Linux 技术支持，并适用完整的制造商保修。
+
 - Intel Core 2 双处理器（最高 4 核）
+
 - 媒体卡：Flash，Secure Digital
+
 - 来自顶级制造商的笔记本电脑
+
 - 生物指纹（带 PAM 的 GDM 登录）
+
 - 访问 Emperor.Linux 或拨打 1-888-651-6686 获取详情。
 
 ……Linux 与笔记本电脑的汇聚之地
 
-
 在本期后后部分介绍特定型号。
 
 型号规格和可用性可能会有所不同。
-
 
 这期 Linux 关乎迁移，这对我意味着许多意义。人们，甚至少数家庭只使用一种操作系统。
 
@@ -537,36 +591,27 @@ Jonathan 在他的博客中写道：“GPL 是用于管理 GNU/Linux 演变的�
 
 其他组织调查自由基金会……（注意：此处 OCR 文本包含许多重复/乱码片段。我将合并有意义的唯一句子）。
 
-
 某些自由软件的理由并不是……（OCR 在此处非常碎片化）。
 
-
 向迁移到自由软件环境的第一步是在你还没准备好时就开始习惯自由软件。注意，并不是每个人在使用自由软件时都会觉得感觉不同（比如根据你的“需求”），但实际上，两者的差异是一样的。区别仅在于项目的复杂度。
-
-
-
-
-
 
 ![](img/6ad2c38f7c331af69e079dec652dce53_19_0.png)
 
 酷炫……快速……安静！
 
-
-最初为汽车行业中一群对功率需求大、要求严苛的工程师设计。WhisperStation™ 整合了双核 AMD Opteron 或 Intel® EM64T™ 处理器、超静音风扇和电源，以及内部隔音设计，打造出一个强大但安静的计算平台。WhisperStation™ 标准配有 2 GB 高速内存、一张 NVIDIA e-GeForce 或 Quadro PCI 显卡以及一个 20 英 LCD 显示器。它可以根据您的确切硬件规格进行配置，并支持任何 Linux 发行版。还支持 RAID。当作为 Microway 集群的主节点时，WhisperStation™ 会让系统管理员感到非常高兴。访问 www.microw.com 获取更多技术信息。
+最初为汽车行业中一群对功率需求大、要求严苛的工程师设计。WhisperStation™ 整合了双核 AMD Opteron 或 Intel® EM64T™ 处理器、超静音风扇和电源，以及内部隔音设计，打造出一个强大但安静的计算平台。WhisperStation™ 标准配有 2 GB 高速内存、一张 NVIDIA e-GeForce 或 Quadro PCI 显卡以及一个 20 英 LCD 显示器。它可以根据您的确切硬件规格进行配置，并支持任何 Linux 发行版。还支持 RAID。当作为 Microway 集群的主节点时，WhisperStation™ 会让系统管理员感到非常高兴。访问 `www.microw.com` 获取更多技术信息。
 
 体验“寂静之声”。
+
 立即拨电我们的技术销售团队 508-746-7341，设计您的定制 WhisperStation™。
 
 ![](img/6ad2c38f7c331af69e079dec652dce53_19_1.png)
-
 
 多少次（并经历了他的经历），他们转向了自由操作系统，当他们使用它了几个月后，他们甚至不敢告诉别人。当被问及为什么转向时，他们说自由软件是为了做“重要的事情”，在 Rufus 运行了几个月后，他们估计证明了这一点。
 
 这解释了为什么许多公司在自由软件方面拥有一个“职能部门”，以及为什么他们想要替换它。使用自由软件后，分析师生成的图表发生了巨大的变化。
 
 事实上，自由软件对终端用户（家庭用户）来说大部分或完全是不可见的，而且这需要更多的管理员来配置和设置系统。
-
 
 自由软件进入现有桌面的另一个领域。同样，如果它对用户是不可见的，它通常会以更稳健的软件解决方案的形式取代品牌名称出现。
 
@@ -578,13 +623,11 @@ Jonathan 在他的博客中写道：“GPL 是用于管理 GNU/Linux 演变的�
 
 在多个操作系统上有许多自由解决方案。GNU 编译器 20 多年来一直为程序员提供环境。开发者们已经习惯于专注于基础工作，而无需处理由不同语言编写和针对不同硬件架构的编译器之间出现的差异和语义。事实是，其中许多程序与它们非常优秀的竞争对手并不兼容。这为终端用户提供了客户选择权。
 
-
 到目前为止，我已经从专有解决方案切换到了自由软件解决方案。但现在我要说一些话，这些话（我确信）只会让你想要停止阅读这里。
 
 如果你有一个真实的、没有 Bug 的、实用的、并且不喜欢在你的桌面上发生更改（从而导致问题）的解决方案，它来自各只手，并且你所有的终端用户都很满意，那么请不要更改它。这就是我所说的“只有痛苦，没有收益”事件。在最好的情况下，迁移将很容易。在最坏的情况下，迁移将失败，你会对选择自由软件感到遗憾。
 
 展望未来，寻找使用自由软件的新项目或大型项目，或者自由软件往往是最高效且最具效益的解决方案的项目。对于新项目，培训成本仅仅是不需要重新培训。
-
 
 在这些变化中，我们从巨型单程序转变为巨型多任务机器，再到小型、较小任务机器到多计算机，再到更小的单任务微计算机到多任务微计算机，到目前为止，自由软件在“较大”计算机的尺寸方面保持了什么。
 
@@ -592,27 +635,21 @@ Jonathan 在他的博客中写道：“GPL 是用于管理 GNU/Linux 演变的�
 
 随着 Word List 的出现，所有应用程序现在都准备好基于浏览器，应用程序和数据（大部分）驻留在后端服务器上。这承诺了一种易于管理的方法，与桌面软件结合并不那么困难。
 
-
-
 你可以在几个地方寻找满足你需求的应用程序。
 
 首先，确定你目前使用的哪些应用程序，哪些是“自由”的。许多专有项目在增加市场份额和支持奖励的同时，已经开始或开发了自由软件操作系统。
 
-其次，你可能会发现 Project.net (www.project.net) 让他们的项目免费，因为确定代码是做业务的最佳方式。
-
+其次，你可能会发现 Project.net (`www.project.net`) 让他们的项目免费，因为确定代码是做业务的最佳方式。
 
 最后，当你拥有的任何东西可行时，为它写篇论文，与你的 Linux 用户小组交流，在 Linux Journal 上发表文章。毕竟，更多的人正处于你现在的境地，并希望拥有自由。
 
+在某些情况下，顽固的应用程序阻止人们移动到他们渴望的环境。这些程序经常被需要，可以通过 VMware (`vmware.com`) 或 Win4Lin 处理，允许你同时运行，尽管会有轻微的性能损失。
 
-在某些情况下，顽固的应用程序阻止人们移动到他们渴望的环境。这些程序经常被需要，可以通过 VMware (vmware.com) 或 Win4Lin 处理，允许你同时运行，尽管会有轻微的性能损失。
-
-另一个很好的选择是 CodeWeavers 的 CrossOver 产品 (codewavers.com)，现在适用于 Intel 系统。CodeWeavers 基于自由的 Wine 项目，其母公司多年一直在扩展和增强 Wine 的功能。
-
+另一个很好的选择是 CodeWeavers 的 CrossOver 产品 (`codewavers.com`)，现在适用于 Intel 系统。CodeWeavers 基于自由的 Wine 项目，其母公司多年一直在扩展和增强 Wine 的功能。
 
 虽然我们听说过采取“断奶式”的迁移（关闭一个系统而同时有很多失败），但没有什么东西可以取代良好的迁移策略，在两个系统切换时是最好的，并进行测试以确保数据在新系统中可用。
 
 另一个好主意是尽早获得热情的员工，并确保他们在迁移到新工具时获得良好的体验。每个办公室都有这样的人。他们购买最新最强大的设备，并且对新事物持开放态度。一旦他们对新系统感到兴奋，他们就可以帮助他人。
-
 
 不要害怕跳出框架思考。我遇到过一个人，他在老旧硬件上运行非常老旧的代码。他担心非常老旧的硬件变得越来越难以替换，并想将其迁移到 Linux。我告诉他可以运行一个硬件模拟器，以永远支持他的应用程序和客户。他奇怪异地看着我，笑了并离开了。
 
@@ -622,17 +659,11 @@ Jonathan 在他的博客中写道：“GPL 是用于管理 GNU/Linux 演变的�
 
 -Jon "maddog" Hall
 
-
-
-
-
-
 恢复 MySQL 表并保存分区。
 
 ### 嘿，亲爱的们，我是 Void，我的丈夫为你们保留了一些技巧。像上次一样，Chester 并不怎么啰嗦，所以我上上个月没有花太多时间，但我们无法为所有人提供这项服务。因此在那个时候，亲爱的，我们可以让这一切运行起来。我们使用这些东西进行托管，并且我们为每个技巧支付了 $10。如果你的数据库有某些影响，Chester 可以使用它。他会挑选并进行处理。在此期间，我们将在另一个技巧中获取编辑器，并从 Paddy 那那里获得。
 
 > 有时，假设升级是件好事并不意味着要先分区保存旧版本的镜像。新版本可能会影响镜像——Chester 运行了多种发行版。例如，我运行了 32位的 Ubuntu 和 64 位的 Ubuntu。我在 64 位 Ubuntu 上花费了更多时间，但某些包在 32 位 Ubuntu 上更容易使用。
-
 
 > 某人保存了 MySQL 表。如果你执行此操作——Chester 说。
 
@@ -667,9 +698,7 @@ Jonathan 在他的博客中写道：“GPL 是用于管理 GNU/Linux 演变的�
 
 图 1。等待 `/dev/dev` 镜像创建。
 
-
 别再说了！
-
 
 
 
@@ -683,7 +712,6 @@ Jonathan 在他的博客中写道：“GPL 是用于管理 GNU/Linux 演变的�
 | 带 PFC 的 700 W 电源 |
 | 5 年保修 |
 | $1,959 |
-
 | 2U 四核 8 SAS/SCSI/SAS |
 | :--- |
 | 最多双四核或双核“至”处理器 |
@@ -692,7 +720,6 @@ Jonathan 在他的博客中写道：“GPL 是用于管理 GNU/Linux 演变的�
 | 最多 8 个 SCS/SAS 硬盘 (2280S/2280Q) |
 | 750 W 高效冗余电源 |
 | $2,429 |
-
 | 3U 四核 12 SATA |
 | :--- |
 | 最多双四核或双核“至”处理器 |
@@ -702,10 +729,6 @@ Jonathan 在他的博客中写道：“GPL 是用于管理 GNU/Linux 演变的�
 | 800 MB/sec 持续数据吞吐量 RAID 控制器 |
 | 550 W 冗余热插拔电源 |
 | $3,849 |
-
-
-
-
 | 4U 四核 16 SATA |
 | :--- |
 | 最多双四核或双核“至”处理器 |
@@ -715,7 +738,6 @@ Jonathan 在他的博客中写道：“GPL 是用于管理 GNU/Linux 演变的�
 | 800 MB/sec 持续数据吞吐量 RAID 控制器 |
 | 650 W 冗余热插拔电源 |
 | $4,449 |
-
 | 5U 四核 24 SAS |
 | :--- |
 | 最多双四核或双核“至”处理器 |
@@ -725,7 +747,6 @@ Jonathan 在他的博客中写道：“GPL 是用于管理 GNU/Linux 演变的�
 | 950 W 冗余热插拔电源 |
 | 5 年保修 |
 | $5,699 |
-
 | 6U 四核 32 SATA |
 | :--- |
 | 最多双四核或双核“至”处理器 |
@@ -735,10 +756,6 @@ Jonathan 在他的博客中写道：“GPL 是用于管理 GNU/Linux 演变的�
 | 800 MB/sec 持续数据吞吐量 RAID 控制器 |
 | 950 W 冗余热插拔电源 |
 
-
-
-
-
 示例），然后如果你想参与，请勾选该选项。如果一切顺利，你将看到类似图 4 所示的屏幕。
 
 按下回车键，`partition` 将为该分区创建一个或多个压缩文件。其余过程将是不言自明的。
@@ -747,166 +764,41 @@ Jonathan 在他的博客中写道：“GPL 是用于管理 GNU/Linux 演变的�
 
 具有许多文件系统的分区仅有 beta 版支持。请谨慎使用带有 JFS 等文件系统的 `partition`。它对我来说是好用的，但并不适用于你。如果你想使用其他文件系统，你应该跳过 `partition` 并使用 XFS 实用 `xfdform` 和 `xstore`，它们是专为保存和恢复分区设计的。——Nicholas Peter
 
-《Linux Journal》对我们发表的任何提示提供 100 美元。请将您的提示以及如何联系我们的信息发送至 techtips@linuxjournal.com。
+《Linux Journal》对我们发表的任何提示提供 100 美元。请将您的提示以及如何联系我们的信息发送至 `techtips@linuxjournal.com`。
 
 ![](img/6ad2c38f7c331af69e079dec652dce53_25_0.png)
 
 图 5：将镜像恢复到分区。
 
+# 不要与其他服务提供者冒险……在 Hurricane Electric 托管，获得快速、可靠的服务！
+
+## 固定费率
 
 千兆以太网
 
 端口，1,000 Mbps 的 IP
+
 $13,000/月*
+
 全双工
 
-机柜
+## 机柜
+
 可容纳 42 台 12U 服务器
+
 $400/月
 
-
-发送邮件 sales@he.net 或拨打 510.580.4190
+发送邮件 `sales@he.net` 或拨打 510.580.4190
 
 *可用地点：加州帕洛奥托的 PAX；弗吉尼亚尼亚州阿什福的 Equinix；伊利诺伊州芝加哥的 Equinix；德克萨斯州达拉斯的 Equinix；加州洛杉矶的 Equinix；加州圣何塞的 Equinix；纽约州纽约市的 Telehouse；加州洛杉矶的 Telehouse；英国伦敦的 Telehouse；荷兰阿姆斯特丹的 NIKHEF；加州弗雷蒙特的 NIKHEF；加州弗雷蒙特的 Hurricane II 以及加州圣何塞的 Hurricane III
 
-
-在锻造炉旁 (AT THE FORGE)
-
-![](img/6ad2c38f7c331af69e079dec652dce53_26_0.png)
-
-
-Scriptacular 是 Ajax 终身受益的脚本库。
-
-**Ajax 是一种热门的 Web 开发范式，它使用 JavaScript 发送并处理异步 HTTP 请求。** 在过去的几个月里，本专栏研究了启动和处理 Ajax 用的不同方法。实现它最复杂的方法是使用 `XMLHttpRequest` 对象，然后用它为用户的浏览器编写脚本，并指定由哪个 JavaScript 函数处理响应。我相信我们可以通过大量使用 Prototype 来简化这一点，Prototype 是一个 JavaScript 库，包含了许多初学者使用的快捷方法和实用函数。
-
-好消息是，Prototype 确实让一切变得更加直观。但是，大多数人想做的事情之一是创建更灵活的 GUI。随着 Web 应用程序变得像桌面程序一样，这一点变得尤为真实；用户期望获得原生应用程序提供的自由和控制感。
-
-就像 Ajax 一样，你也可以通过自己来创建和处理这些行为。但既然有现成的库，你何必自己来呢？其中几个是 Scriptacular、MooKit 和 Dojo。Dojo 实际上是一个完整的到端 JavaScript 库；我预计在未来的期数中介绍它。然而，本月，我们将看看 Scriptacular，这是一个由 Thomas Fuchs 编写的开源库。Scriptacular 让你能够轻松地为 HTML 文件增添色彩，而无需处理底层的 JavaScript。
-
-
-安装 Scriptacular 非常简单。下载最新版本的 `scriptacular.js` 并将目录中的六个 JavaScript 文件安装到 Web 项目的任何位置。
-
-实际上，安装 Scriptacular 可能会比这更简单。如果你使用最新版本的 Ruby on Rails，可以查看 Rails 文档，了解如何直接从代码使用这些库。
-
-本文使用了 Scriptacular 1.5，尽管在本文专栏发表时，Prototype 1.5 可能已被使用。因此，这里的函数名称与最终描述之间可能存在某些差异。
-
-要使用 Scriptacular，你需要在 HTML 页面中包含两个脚本标签来加载并运行 Scriptacular：
-
-```html
-<script src="javascript/prototype.js" type="javascript"></script>
-<script src="javascript/scriptacular.js" type="javascript"></script>
-```
-
-
-那么，你想用 Scriptacular 做什么？最常见的用途之一是在创建……
-
-等等，我看到 OCR 文本流中有一个断开。让我重新检查提供的文本以确保逻辑连贯。
-
-（自我修正：提示词中提供的 OCR 文本在中间实际上是碎片化/重复的。我将根据提示词提供的逻辑流合并章节。）
-
-等等，仔细看提示词提供的文本：
-- 第 25 页有 GNULL AND VOYD 和一个广告。
-- 第 26 页有 COLUMNS，AT THE FORGE 和 Scriptacularous。
-- 第 27 页是 Scriptacular 的延续。
-
-实际上，提示词提供的文本似乎在某些地方重复了。
-
-等等，仔细看提示词提供的文本：
-- 第 25 页有 GNULL AND VOYD 和一个广告。
-- 第 26 页有 COLUMNS，AT THE FORGE 和 Scriptacularous。
-- 第 27 页是 Scriptacular 的延续。
-
-实际上，提示词提供的文本似乎在某些地方重复了。
-
-等等，仔细看提示词提供的文本：
-- 第 25 页有 GNULL AND VOYD 和一个广告。
-- 第 26 页有 COLUMNS，AT THE FORGE 和 Scriptacularous。
-- 第 27 页是 Scriptacular 的延续。
-
-实际上，提示词提供的文本似乎在某些地方重复了。
-
-等等，仔细看提示词提供的文本：
-- 第 25 页有 GNULL AND VOYD 和一个广告。
-- 第 26 页有 COLUMNS，AT THE FORGE 和 Scriptacularous。
-- 第 27 页是 Scriptacular 的延续。
-
-实际上，提示词提供的文本似乎在某些地方重复了。
-
-等等，仔细看提示词提供的文本：
-- 第 25 页有 GNULL AND VOYD 和一个广告。
-- 第 26 页有 COLUMNS，AT THE FORGE 和 Scriptacularous。
-- 第 27 页是 Scriptacular 的延续。
-
-实际上，提示词提供的文本似乎在某些地方重复了。
-
-等等，仔细看提示词提供的文本：
-- 第 25 页有 GNULL AND VOYD 和一个广告。
-- 第 26 页有 COLUMNS，AT THE FORGE 和 Scriptacularous。
-- 第 27 页是 Scriptacular 的延续。
-
-实际上，提示词提供的文本似乎在某些地方重复了。
-
-等等，仔细看提示词提供的文本：
-- 第 25 页有 GNULL AND VOYD 和一个广告。
-- 第 26 页有 COLUMNS，AT THE FORGE 和 Scriptacularous。
-- 第 27 页是 Scriptacular 的延续。
-
-实际上，提示词提供的文本似乎在某些地方重复了。
-
-等等，仔细看提示词提供的文本：
-- 第 25 页有 GNULL AND VOYD 和一个广告。
-- 第 26 页有 COLUMNS，AT THE FORGE 和 Scriptacularous。
-- 第 27 页是 Scriptacular 的延续。
-
-实际上，提示词提供的文本似乎在某些地方重复了。
-
-（由于用户提供的待翻译文本混乱，我将直接翻译内容。）
-
-## GNULL AND VOYD
-
-示例），然后如果你想参与，请勾选该选项。如果一切顺利，你将看到类似图 4 所示的屏幕。
-
-按下回车键，`partition` 将为该分区创建一个或多个压缩文件。其余过程将是不言自明的。
-
-注意，`partition` 会向你的文件添加数字，因为它准备了在必要时将镜像拆分为多个文件。如果它只需要单个文件，它会将地址更改为 `dapper-32ext-sdb8`。现在可以安全地进入 32 位的 Dapper并将 32 位 Dapper 升级到 Dapper 了。如果你遇到问题，你可能觉得需要降级到 Dapper，或者你需要重新进入 64 位 Ubuntu（或你正在使用的任何发行版）并再次运行 `partition`。如果你有多个相同类型的分区，请记住在你的名称后添加 `.000`，使用方向键选择从镜像恢复分区，并按空格键选择它。例如，如果你使用 F5 恢复，过程将是自我验证的。如果 `partition` 在 0.001 和 0.00 中创建了多个文件，你不需要担心指定所有文件。它将找到额外的镜像并自动恢复它们。
-
-具有许多文件系统的分区仅有 beta 支持。请谨慎使用带有 JFS 等文件系统的 `partition`。它对我来说是好用的，但并不适用于你。如果你想使用其他文件系统，你应该跳过 `partition` 并使用 XFS 实用 `xfdform` 和 `xstore`，它们是专为保存和恢复分区设计的。——Nicholas Peter
-
-《Linux Journal》对我们发表的任何提示提供 100 美元。请将您的提示以及如何联系我们的信息发送至 techtips@linuxjournal.com。
-
-![](img/6ad2c38f7c331af69e079dec652dce53_25_0.png)
-
-图 5：将镜像恢复到分区。
-
-## 不要与其他服务提供者冒险……在 Hurricane Electric 托管，获得快速、可靠的服务！
-
-### 固定费率
-千兆以太网
-
-### 全速 100 Mbps
-端口，1,000 Mbps 的 IP
-$13,000/月*
-全双工
-
-### 托管托管
-机柜
-可容纳 42 台 12U 服务器
-$400/月
-
-### 立即下单！
-
-he.net
-发送邮件 sales@he.net 或拨打 510.580.4190
-
-*可用地点：加州帕洛奥托的 PAX；弗吉尼亚州阿什福的 Equinix；伊利诺伊州芝加哥的 Equinix；德克萨斯州达拉斯的 Equinix；加州洛杉矶的 Equinix；加州圣何塞的 Equinix；纽约州纽约市的 Telehouse；加州洛杉矶的 Telehouse；英国伦敦的 Telehouse；荷兰阿姆斯特丹的 NIKHEF；加州弗雷蒙特的 NIKHEF；加州弗雷蒙特的 Hurricane II 以及加州圣何塞的 Hurricane III
-
 # 专栏
 
-在锻造炉旁 (AT THE FORGE)
+## 在锻造炉旁 (AT THE FORGE)
 
 ![](img/6ad2c38f7c331af69e079dec652dce53_26_0.png)
 
-## Scriptacularous
+### Scriptacularous
 
 Scriptacular 是 Ajax 终身受益的脚本库。
 
@@ -916,7 +808,7 @@ Scriptacular 是 Ajax 终身受益的脚本库。
 
 就像 Ajax 一样，你也可以通过自己来创建和处理这些行为。但既然有现成的库，你何必自己来呢？其中几个是 Scriptacular、MooKit 和 Dojo。Dojo 实际上是一个完整的到端 JavaScript 库；我预计在未来的期数中介绍它。然而，本月，我们将看看 Scriptacular，这是一个由 Thomas Fuchs 编写的开源库。Scriptacular 让你能够轻松地为 HTML 文件增添色彩，而无需处理底层的 JavaScript。
 
-## Scriptacular 基础
+### Scriptacular 基础
 
 安装 Scriptacular 非常简单。下载最新版本的 `scriptacular.js` 并将目录中的六个 JavaScript 文件安装到 Web 项目的任何位置。
 
@@ -931,16 +823,9 @@ Scriptacular 是 Ajax 终身受益的脚本库。
 <script src="javascript/scriptacular.js" type="javascript"></script>
 ```
 
-## 简单效果
+### 简单效果
 
 那么，你想用 Scriptacular 做什么？最常见的用途之一是在创建……
-
-
-
-
-# 列
-
-# 在锻造厂中
 
 效果。它还包含一些程序员可能需要的用户级功能
 
@@ -958,9 +843,11 @@ Scriptacular 是 Ajax 终身受益的脚本库。
 
 （某些 Scriptuous 已经创建了 Autocompleter 类，它与组合框非常相似。）
 
-```
+```html
 <div id="dist-complete" style="display:none"></</div>
 ```
+
+
 
 ```
 <script type="javascript">
@@ -970,25 +857,25 @@ autocompleter.local('dist', 'dist_complete',
 </script>
 ```
 
-补全字段，类型不同。list 列出了列表。第一个被称为 Autocompleter.Local，t 匹配列表在 Scriptuous 中。来自远程 HTTP 服务器的文本字段。
+补全字段，类型不同。`list`列出了列表。第一个被称为`Autocompleter.Local`，`t`匹配列表在`Scriptuous`中。来自远程`HTTP`服务器的文本字段。
 
-`Autocompleter.local` 的构造函数接受参数：ID、我们将要插入其中的的 `div` 的 ID、一个包含补全字符串的数组以及一些选项（目前为空）。如果你尝试在代码编辑器中输入这些内容，将会失败并出现所有错误，因为文本字段和代码编辑器将会损坏。
+`Autocompleter.local`的构造函数接受参数：`ID`、我们将要插入其中的的`div`的`ID`、一个包含补全字符串的数组以及一些选项（目前为空）。如果你尝试在代码编辑器中输入这些内容，将会失败并出现所有错误，因为文本字段和代码编辑器将会损坏。
 
-为了使用 `Autocompleter.local`，我们首先创建一个文本字段，就像我们在 HTML 表单中做的那样：
+为了使用`Autocompleter.local`，我们首先创建一个文本字段，就像我们在`HTML`表单中做的那样：
 
-通过包含一个 HTML 页面（在列表中），我们设置属性以完成补全工作。当用户在文本字段中开始输入时，Scriptuous 会等待 0.4 秒。如果用户停止输入，或者如果文本字段包含一个或多个字符，它将尝试在列表中查找匹配项。如果找到了，它将填全文本字段的剩余部分。
+通过包含一个`HTML`页面（在列表中），我们设置属性以完成补全工作。当用户在文本字段中开始输入时，`Scriptuous`会等待`0.4`秒。如果用户停止输入，或者如果文本字段包含一个或多个字符，它将尝试在列表中查找匹配项。如果找到了，它将填全文本字段的剩余部分。
 
 ```
 <input type="text" id="dist_name" text_field autocomplete="off" />
 ```
 
-如果多于一个（正如我们在示例中让用户输入 `K`，它匹配一个 `Knnoix` 等菜单），系统将显示一个菜单，用户可以通过点击从中选择。
+如果多于一个（正如我们在示例中让用户输入`K`，它匹配一个`Knnoix`等菜单），系统将显示一个菜单，用户可以通过点击从中选择。
 
 ## 结论
 
 列表 2. 完整的 html
 
-Protobuf 由 Scriptuous 的 Alex 编写，能够解决许多程序员的；然而，Protobuf 的功能扩展到让程序员；它提供任何直接的查询接口，Scriptuous 是一个 Web 应用程序中的 SQL。它应该-
+`Protobuf`由`Scriptuous`的`Alex`编写，能够解决许多程序员的；然而，`Protobuf`的功能扩展到让程序员；它提供任何直接的查询接口，`Scriptuous`是一个`Web`应用程序中的`SQL`。它应该-
 
 ```
 <!DOCTYPE html PUBLIC "//W3C//DTD HTML 1.0//EN"
@@ -1012,13 +899,13 @@ Fedora', 'Debian', 'Gento',
 </html>
 ```
 
-Scriptuous 有几个功能供你探索，包括拖放和 JavaScript，这不仅对于那些没有意图创建 UI 元素的 JavaScript 程序员，也是最后一个问题。
+`Scriptuous`有几个功能供你探索，包括拖放和`JavaScript`，这不仅对于那些没有意图创建`UI`元素的`JavaScript`程序员，也是最后一个问题。
 
-文章资源：www.linuxx.com/article/9505。
+文章资源：`www.linuxx.com/article/9505`。
 
-Reven Merner 是一位活跃的数据库顾问，是伊利诺伊州西北大学的科学科学博士候选人。他目前与妻子和三个孩子一起住在 Shokie。你可以在 rewald.lerner.co 阅读他的传记。
+`Reven Merner`是一位活跃的数据库顾问，是伊利诺伊州西北大学的科学科学博士候选人。他目前与妻子和三个孩子一起住在`Shokie`。你可以在`rewald.lerner.co`阅读他的传记。
 
-26 | 2002年2月 www.linuxx.com
+26 | 2002年2月 `www.linuxx.com`
 
 # SERVERS DIRECT™
 
@@ -1026,75 +913,76 @@ Reven Merner 是一位活跃的数据库顾问，是伊利诺伊州西北大学�
 
 更多产品。更好的服务。有保障。
 
-SERVERSDIRECT 系统中的双核 Intel 处理器专注于业务机会，而非服务器烦恼
+`SERVERSDIRECT`系统中的双核`Intel`处理器专注于业务机会，而非服务器烦恼
 
 # 关注最重要的事情
 
 # SDR3500T 30 位比特 XEON 数据库服务器
 
-设计用于通过双核 Xeon® 5000/5100 提供卓越性能，是存储和关键任务型业务应用程序服务器的理想解决方案。
+设计用于通过双核`Xeon® 5000/5100`提供卓越性能，是存储和关键任务型业务应用程序服务器的理想解决方案。
 
 ## 功能亮点：
 
-- Intel Xeon-500 3.0GHz 双核处理器（双处理器可选）
-- 16 x 1 热插拔 SATA 数据驱动
+- `Intel Xeon-500 3.0GHz`双核处理器（双处理器可选）
+- 16 x 1 热插拔`SATA`数据驱动
 - 3U 机箱配备 800W 冗余电源
-- ATI E500 显卡带 1GB 显存 Intel® 5000+（蓝牙）芯片组
-- Intel® (GbE/Giga) 8263E 双端口控制器 金士 1024MB 667MHz DDR2 ECC-DIMM (2pcs x 512MB)
-- RAID 0, 5, 10
-- Seagate 420GB SATA-J 16MB 缓存-7200RPM
-- Seagate 320GB SATA-J 7200RPM 硬盘
-- 2 x 热插拔-SATA 驱动
-- Intel® 8253TX (PCI Express-PCI) 双端口 LAN-Intel® (GbE/Giga) 8263E 双端口以太网控制器
+- `ATI E500`显卡带 1GB 显存 `Intel® 5000+`（蓝牙）芯片组
+- `Intel® (GbE/Giga) 8263E`双端口控制器 `金士 1024MB 667MHz DDR2 ECC-DIMM (2pcs x 512MB)`
+- `RAID 0, 5, 10`
+- `Seagate 420GB SATA-J 16MB`缓存-7200RPM
+- `Seagate 320GB SATA-J 7200RPM`硬盘
+- 2 x 热插拔-`SATA`驱动
+- `Intel® 8253TX (PCI Express-PCI)`双端口`LAN-Intel® (GbE/Giga) 8263E`双端口以太网控制器
 
-起价 $2,499
+起价 `$2,499`
 
 ### 1U 入门服务器
 
-1U Pentium® D 服务器采用双核架构，在无处理器的环境中提供无与伦比的能力，适用于 5 个或更多寻求最大性能、存储空间、可扩展性的员工。
+1U `Pentium® D`服务器采用双核架构，在无处理器的环境中提供无与伦比的能力，适用于 5 个或更多寻求最大性能、存储空间、可扩展性的员工。
 
 ### 性价比高的 2U 服务器
 
-- Intel Xeon-5050 3.0GHz 双核处理器（双处理器可选）
+- `Intel Xeon-5050 3.0GHz`双核处理器（双处理器可选）
 - 2U 机箱配备 600W 电源
-- Intel® 5000+（蓝牙）芯片组
-- 金士 1024MB 667MHz DDR2 ECC-DIMM (2pcs x 512MB)
-- Seagate 420GB SATA-J 16MB 缓存-7200RPM
-- Seagate 320GB SATA-J 7200RPM 硬盘
-- x 热插拔-SATA 驱动
-- ATI E500 显卡带 1GB 显存
-- Intel® (GbE/Giga) 8263E 双端口以太网控制器
-- RAID 0, 5, 10
+- `Intel® 5000+`（蓝牙）芯片组
+- `金士 1024MB 667MHz DDR2 ECC-DIMM (2pcs x 512MB)`
+- `Seagate 420GB SATA-J 16MB`缓存-7200RPM
+- `Seagate 320GB SATA-J 7200RPM`硬盘
+- x 热插拔-`SATA`驱动
+- `ATI E500`显卡带 1GB 显存
+- `Intel® (GbE/Giga) 8263E`双端口以太网控制器
+- `RAID 0, 5, 10`
 
-$999
+`$999`
 
-由双核 Xeon® 5000/5100 驱动，塔式或机架式，灵活性在
+由双核`Xeon® 5000/5100`驱动，塔式或机架式，灵活性在
 
-SERVERS DIRECT 可以帮助你配置你的下一个性能服务器
+`SERVERS DIRECT`可以帮助你配置你的下一个性能服务器
 
-我们的灵活产品配置器允许你创建定制解决方案，成本以及我们的专家产品已准备就绪。Servers Direct - 你的可扩展解决方案直接来源。
+我们的灵活产品配置器允许你创建定制解决方案，成本以及我们的专家产品已准备就绪。`Servers Direct` - 你的可扩展解决方案直接来源。
 
-1.877.727-7887 | WWW.SERVERSDIRECT.COM
+1.877.727-7887 | `WWW.SERVERSDIRECT.COM`
 
-Intel, Intel logo, Intel Inside, Intel inside,
+`Intel, Intel logo, Intel Inside, Intel inside,`
 
 ：
+
 - -50 3.0GHz 双 处理器（双处理器可选）
 - 2U 机箱配备 600W 电源
-- Intel® 5000+（蓝牙）芯片组
-- 金士 1024MB 667MHz DDR2 ECC-DIMM (2pcs x 512MB)
-- Seagate 420GB SATA-J 16MB 缓存-7200RPM
-- Seagate 320GB SATA-J 7200RPM 硬盘
-- x 热插拔-SATA 驱动
-- ATI E500 显卡带 1GB 显存
-- Intel® (GbE/Giga) 8263E 双端口以太网控制器
-- RAID 0, 5, 10
+- `Intel® 5000+`（蓝牙）芯片组
+- `金士 1024MB 667MHz DDR2 ECC-DIMM (2pcs x 512MB)`
+- `Seagate 420GB SATA-J 16MB`缓存-7200RPM
+- `Seagate 320GB SATA-J 7200RPM`硬盘
+- x 热插拔-`SATA`驱动
+- `ATI E500`显卡带 1GB 显存
+- `Intel® (GbE/Giga) 8263E`双端口以太网控制器
+- `RAID 0, 5, 10`
 
-$999
+`$999`
 
-Intel, Intel logo, Intel Inside, Intel inside, Intel Centrino, Intel Centro, Celeron, Intel Xeon, IntelSpeed, Pentium, Pentium III Xeon 是 Intel 或其子公司在美国及其他地区的商标。
+`Intel, Intel logo, Intel Inside, Intel inside, Intel Centrino, Intel Centro, Celeron, Intel Xeon, IntelSpeed, Pentium, Pentium III Xeon`是`Intel`或其子公司在美国及其他地区的商标。
 
-28 | 2007年2月 www.linuxjournal.com
+28 | 2007年2月 `www.linuxjournal.com`
 
 # 词汇， 词汇， 词汇，
 
@@ -1104,61 +992,75 @@ Intel, Intel logo, Intel Inside, Intel inside, Intel Centrino, Intel Centro, Cel
 
 **你在做什么？**
 
-在涉及到共享时，不仅仅是关于，OpenOffice 提供了一种这样做的方法。与其逐一转换文档，Document Converter 通过允许你一次运行所有文档来加速过程。它还支持双向转换，这意味着你可以从 Word 转换为 Office 格式，反之亦然。转换会创建一个新文件，但保持原始文件不变。以下是操作方法：
+在涉及到共享时，不仅仅是关于，`OpenOffice`提供了一种这样做的方法。与其逐一转换文档，`Document Converter`通过允许你一次运行所有文档来加速过程。它还支持双向转换，这意味着你可以从`Word`转换为`Office`格式，反之亦然。转换会创建一个新文件，但保持原始文件不变。以下是操作方法：
 
-从菜单开始，选择你的文档到 Wizards，在子菜单中选择 Document Converter。要转换你的 Office 文档，点击 Next 按钮，然后勾选你想转换的文档类型（图1）。你可以同时转换 Excel 和 PowerPoint 文档。
+从菜单开始，选择你的文档到`Wizards`，在子菜单中选择`Document Converter`。要转换你的`Office`文档，点击`Next`按钮，然后勾选你想转换的文档类型（图1）。你可以同时转换`Excel`和`PowerPoint`文档。
 
 下一个屏幕询问你想要转换哪些文档或只是其中一个。然后输入你想要导入的目录名称并保存。你可以使用相同的目录或选择另一个。如果你想将转换后的文档放在那里，你需要指定文件夹名称。
 
-
-
-
 ## 企鹅
 
-又一台服务器。又是一个办公室的夜晚。无论是部署数百台新服务器，还是安装最新的安全补丁，这并不重要。你又在和服务器睡在一起了。Penguin Computing™ 推出了 500+ WebMaster™ 基础设施管理器。其中心化管理、高可用架构使得大型 Linux 服务器群像单一一致的虚拟系统，显著降低了即时部署服务器的复杂性和时间。高度安全的环境让您的服务器农成为一座虚拟堡垒，简化的管理功能让您的维护窗口和管理工作减少了高达 80%，大幅提升了总拥有成本（TCO）。所以回家，睡一觉吧，知道企鹅正在为你守卫。
+又一台服务器。又是一个办公室的夜晚。无论是部署数百台新服务器，还是安装最新的安全补丁，这并不重要。你又在和服务器睡在一起了。`Penguin Computing™`推出了`500+ WebMaster™`基础设施管理器。其中心化管理、高可用架构使得大型`Linux`服务器群像单一一致的虚拟系统，显著降低了即时部署服务器的复杂性和时间。高度安全的环境让您的服务器农成为一座虚拟堡垒，简化的管理功能让您的维护窗口和管理工作减少了高达 80%，大幅提升了总拥有成本（`TCO`）。所以回家，睡一觉吧，知道企鹅正在为你守卫。
 
 ## 可能会引起嗜睡
 
 ![](img/6ad2c38f7c331af69e079dec652dce53_31_0.png)
 
-企鹅高密度集群。市场上密度最高的模块化刀片架构。具有强大的命令和控制能力，以及 WebMaster™ 基础设施管理器提供的单点高效力用户体验。
+企鹅高密度集群。市场上密度最高的模块化刀片架构。具有强大的命令和控制能力，以及`WebMaster™`基础设施管理器提供的单点高效力用户体验。
 
 ![](img/6ad2c38f7c331af69e079dec652dce53_31_1.png)
+
 ![](img/6ad2c38f7c331af69e079dec652dce53_31_2.png)
+
 ![](img/6ad2c38f7c331af69e079dec652dce53_31_3.png)
+
 ![](img/6ad2c38f7c331af69e079dec652dce53_31_4.png)
+
 ![](img/6ad2c38f7c331af69e079dec652dce53_31_5.png)
 
-www.penguincomputing.com
-Penguin Computing 和 Penguin Computing 标志是 Penguin Computing, Inc. 的注册商标。WebMaster™ 基础设施管理器和 Highly Scyld 标志是 Scyld Corporation 的商标。AMD Option 和 AMD64 标志是 AMD Inc. 的商标或注册商标。©2006 Penguin Computing, Inc. 保留所有权利。
+`www.penguincomputing.com`
+
+`Penguin Computing`和`Penguin Computing`标志是`Penguin Computing, Inc.`的注册商标。`WebMaster™`基础设施管理器和`Highly Scyld`标志是`Scyld Corporation`的商标。`AMD Option`和`AMD64`标志是`AMD Inc.`的商标或注册商标。©2006 `Penguin Computing, Inc.`保留所有权利。
 
 ## 使用 Linux 烹饪
 
-对话框与你用于 Word 文档的相同（图 2）。输入信息并进入下一页后，程序将确认你的选择并给你最后一次改变主意的机会。点击“转换”开始。当转换器工作时，它会列出正在转换的各种文件。任务完成后，你将获得若干 .odt 扩展的文件。表格将具有 .ods 扩展名，如果你改变了主意，原始文件仍然在那里，所以你一无所失。
+对话框与你用于`Word`文档的相同（图 2）。输入信息并进入下一页后，程序将确认你的选择并给你最后一次改变主意的机会。点击“转换”开始。当转换器工作时，它会列出正在转换的各种文件。任务完成后，你将获得若干 `.odt`扩展的文件。表格将具有 `.ods`扩展名，如果你改变了主意，原始文件仍然在那里，所以你一无所失。
 
 14808 11-13-06 20:09 Pictures/1C3F82746.png
+
 68331 11-13-06 20:09 Pictures/2096361808.png
+
 1925 11-13-06 20:09 Pictures/19CA678A80.png
+
 27517 11-13-06 20:09 Pictures/21C5771.png
+
 6100 11-13-06 20:09 Pictures/1005A94D5BC.png
+
 17217 11-13-06 20:09 Pictures/10B9BC2C34.png
+
 54 11-13-06 20:09 content.xml
+
 23674 11-13-06 20:09 styles.xml
+
 7950 11-13-06 20:09 meta.xml
+
 1211 11-13-06 20:09 document.xml
+
 4809 11-13-06 20:09 Thumbnails/thumbnail_1.png
+
 7386 11-13-06 20:09 settings.xml
+
 2904 11-13-06 20:09 META-INF/manifest.xml
 
 ![](img/6ad2c38f7c331af69e079dec652dce53_32_0.png)
 
 图 3：进度对话框显示转换状态并提供过程日志。
 
-这组定义如果是这样，就使得文档具有可移植性并可供他人阅读。当然，如果你所有的旧文档，并希望以某种不需要 Microsoft Office 副本的格式保存它们，你可以使用 OpenOffice 的多功能格式，例如 PDF。你也可以导出为 PDF，但转换器也可以帮你处理，尽管它是一次处理一个。
+这组定义如果是这样，就使得文档具有可移植性并可供他人阅读。当然，如果你所有的旧文档，并希望以某种不需要`Microsoft Office`副本的格式保存它们，你可以使用`OpenOffice`的多功能格式，例如`PDF`。你也可以导出为`PDF`，但转换器也可以帮你处理，尽管它是一次处理一个。
 
 如你所见，这很容易，而且风险风险。如果是这样，你的某些客人看到的是空列表，请通过少量充值（或更少）为他们解决这个问题。
 
-如果你在系统中安装了 OpenOffice，你就有你需要的工具。一个名为 `DocumentConverter` 的 OpenOffice 宏可以工作。这个宏由 Danny Brown 等人编写，旨在让你轻松将文档转换为其支持的任何其他格式。换句话说，输出不必是 PDF，因为有许多格式可以选择。在 OpenOffice 网站进行转换。宏被分类为适用于用户的应用程序。点击页面顶部的“用户”链接，向下查看 OpenDocument 文档，你可能不知道 `.odt` 实际上是一个包含组成文档的所有元素的压缩文件。准确地说，假设你有一个名为 `mydocument.odt` 的文件，包含几个图像，提取并查看这些元素在 shell 或临时文件夹中（你可能想这样做）：
+如果你在系统中安装了`OpenOffice`，你就有你需要的工具。一个名为 `DocumentConverter` 的 `OpenOffice`宏可以工作。这个宏由`Danny Brown`等人编写，旨在让你轻松将文档转换为其支持的任何其他格式。换句话说，输出不必是`PDF`，因为有许多格式可以选择。在`OpenOffice`网站进行转换。宏被分类为适用于用户的应用程序。点击页面顶部的“用户”链接，向下查看`OpenDocument`文档，你可能不知道 `.odt`实际上是一个包含组成文档的所有元素的压缩文件。准确地说，假设你有一个名为 `mydocument.odt`的文件，包含几个图像，提取并查看这些元素在 shell 或临时文件夹中（你可能想这样做）：
 
 ```
 mydocument.odt
@@ -1182,37 +1084,35 @@ Archive: document.odt
 
 ![](img/6ad2c38f7c331af69e079dec652dce53_32_1.png)
 
-图 4。要使文档转换器工作，只需点击大按钮并按照向导指示操作。30 | February 2007 www.linuxjournal.org
+图 4。要使文档转换器工作，只需点击大按钮并按照向导指示操作。30 | February 2007 `www.linuxjournal.org`
 
 ## 文档转换器
 
-要使用宏，解压缩文件并保存文档。当你使用 OpenOffice Writer 时，如果你想启用宏，会出现一个对话框——在这种情况下，它正是那样的。文档顶部有一个黄色条。点击启用按钮，然后弹出工具栏。它将折叠你的文件并提供给想要转换 PDF 的朋友或家人。尝试查看该网站上其他很棒的东西。你可能会发现你离不开帮助你制作图形界面的工具。使用 OpenOffice 转换所有文档非常酷。大多数系统可以使用各种文档转换器将你的文档转换为 PDF，以便将其发送给想要转换的朋友或家人。对于你不理解命令行程序的文档，`pdf2pdf` 非常有用：
+要使用宏，解压缩文件并保存文档。当你使用`OpenOffice Writer`时，如果你想启用宏，会出现一个对话框——在这种情况下，它正是那样的。文档顶部有一个黄色条。点击启用按钮，然后弹出工具栏。它将折叠你的文件并提供给想要转换`PDF`的朋友或家人。尝试查看该网站上其他很棒的东西。你可能会发现你离不开帮助你制作图形界面的工具。使用`OpenOffice`转换所有文档非常酷。大多数系统可以使用各种文档转换器将你的文档转换为`PDF`，以便将其发送给想要转换的朋友或家人。对于你不理解命令行程序的文档，`pdf2pdf`非常有用：
 
 `pdf2pdf.py mysdocument.pdf`
 
-`pdf2pdf` 程序产生兼容 Acrobat Reader 版本3 的文档，也称为 PDF 版本 1.2。它创建版本 1.3（适用于 Acrobat Reader 4 或更高版本），使用 `pdf23`。还有一个 `pdfascii` 程序。它会让你选择输出的 PDF 版本。你也可以使用 `htm2txt` 和 `postcss` 将 PDF 文档转换为 HTML 或 ASCII 文档。你还可以找到名为 `ps2ascii` 的程序，它的功能大同，处理带有所有 HTML 标签的编码文本。`htm2text` 程序的设计理念是输出文件，你需要使用 `-o` 指定它。
+`pdf2pdf`程序产生兼容`Acrobat Reader`版本3的文档，也称为`PDF`版本 1.2。它创建版本 1.3（适用于`Acrobat Reader`4或更高版本），使用 `pdf23`。还有一个 `pdfascii`程序。它会让你选择输出的`PDF`版本。你也可以使用 `htm2txt`和 `postcss`将`PDF`文档转换为`HTML`或`ASCII`文档。你还可以找到名为 `ps2ascii`的程序，它的功能大同，处理带有所有`HTML`标签的编码文本。`htm2text`程序的设计理念是输出文件，你需要使用 `-o`指定它。
 
-如何使用目录为包含 2 或 a 的书籍或家人纯文本文档。如果你了解一些可以更改的转换器，或者你会发现你需要的强大命令。在你离开可以转换的 Word 文档之前，需要提到 LibreOffice（它的起点源于我们发现的样子）。它是 SourceForge（资源）上的一个开源项目，但你不会难以为你的发行版找到包。对于它，想想“Word”。如果你想将 Microsoft Word 文档转换为各种格式（或查看），LibreOffice 是命令行工具的集合，例如 `wvtext`：
+如何使用目录为包含 2 或 a 的书籍或家人纯文本文档。如果你了解一些可以更改的转换器，或者你会发现你需要的强大命令。在你离开可以转换的`Word`文档之前，需要提到`LibreOffice`（它的起点源于我们发现的样子）。它是`SourceForge`（资源）上的一个开源项目，但你不会难以为你的发行版找到包。对于它，想想“`Word`”。如果你想将`Microsoft Word`文档转换为各种格式（或查看），`LibreOffice`是命令行工具的集合，例如 `wvtext`：
 
 `wvText somedocument.docx`
 
-输出将直接显示在你的屏幕上，因此你可能想将其重定向到 pdf 或通过管道传输（或更少）。还有 `pdfw` 可以转换为 Latex，以及使用 LibreOffice 创建 Abi 兼容文档等。查阅该网站以获取所有信息——
+输出将直接显示在你的屏幕上，因此你可能想将其重定向到 pdf 或通过管道传输（或更少）。还有 `pdfw`可以转换为`Latex`，以及使用`LibreOffice`创建`Abi`兼容文档等。查阅该网站以获取所有信息——
 
 当有图形替代方案时，为什么要使用这些文本工具？答案信息是：速度和灵活性。抱歉，答案是速度和灵活性——好的，我到此为止。在整个讨论中，我会继续，但是，转换——
 
-Marcel 是住在俄亥俄州华盛顿的获奖作家。他是书籍《Making Being》的作者（Franklin 和 Adobe 出版），他也经常以 Call for help Lucy Gray 的身份出现。Marcel 是一位飞行员，过去的 40 年 DJ，为电影和媒体 Drama-X 编写剧本。可以通过 mecel@maggage.com 与他联系。你也可以在他的网站 www.marcangelo.com 上找到包括优秀作品在内的内容。
-
-法国，请再次展示我们的客人！现在，女士们，起立，让我们诚诚地问候我们的客人。服务员！再见！本文资源：https://www.openjournal.com/9590
 
 
+Marcel 是住在俄亥俄州华盛顿的获奖作家。他是书籍《Making Being》的作者（Franklin 和 Adobe 出版），他也经常以 Call for help Lucy Gray 的身份出现。Marcel 是一位飞行员，过去的 40 年 DJ，为电影和媒体 Drama-X 编写剧本。可以通过 `mecel@maggage.com` 与他联系。你也可以在他的网站 `www.marcangelo.com` 上找到包括优秀作品在内的内容。
 
-
+法国，请再次展示我们的客人！现在，女士们，起立，让我们诚诚地问候我们的客人。服务员！再见！本文资源：`https://www.openjournal.com/9590`
 
 ## 分析你的搜索关键词
 
 从你的搜索访问日志中筛选掉不希望的搜索结果。
 
-**上个月**，我们开始探索如何使用 shell 脚本来提取并分析 Web 服务器日志中的 HTTP_REFERER 值，并识别人们查找你的页面时最常用的术语和短语。这听起来很有用，不是吗？
+**上个月**，我们开始探索如何使用 shell 脚本来提取并分析 Web 服务器日志中的 `HTTP_REFERER` 值，并识别人们查找你的页面时最常用的术语和短语。这听起来很有用，不是吗？
 
 问题是，这比看起来要复杂得多。上个月，我们编写了以下 shell 脚本：
 
@@ -1230,7 +1130,7 @@ sort -rn \
 head -5
 ```
 
-啊，我们可以看到这里有两个有效的搜索，一个针对 "wicked cool scripts"，另一个针对 "Barbara nessa%2bpouses"。我不确定后者是什么意思，但看到它是有用且重要的。通常，过滤掉虚假结果有助于移除那些包含等号的项：grep -v "=$"
+啊，我们可以看到这里有两个有效的搜索，一个针对 "wicked cool scripts"，另一个针对 "Barbara nessa%2bpouses"。我不确定后者是什么意思，但看到它是有用且重要的。通常，过滤掉虚假结果有助于移除那些包含等号的项：`grep -v "=$"`
 
 我没有在脚本长管道的最末尾添加它，而是将其放在调用 之后，以便在管道中尽早过滤掉虚假结果。现在看起来是这样：
 
@@ -1244,7 +1144,7 @@ sort | \
 sort -rn
 ```
 
-注意，结果仍然包含了部分的项名称 (q)，所以它在新的 grep 中没有被错误匹配。现在我们有了结果：
+注意，结果仍然包含了部分的项名称 `q`，所以它在新的 `grep` 中没有被错误匹配。现在我们有了结果：
 
 当我运行这个命令时，我看到了以下内容：
 
@@ -1259,7 +1159,7 @@ $ google-searches.sh | head -10
 
 这很奇怪，它搜索的不是术语，而是来自 Google 等网站的搜索字符串中的其他值（例如显示你已将搜索限制在英语网站上），但它识别出了用户的浏览器是苹果的 Safari 等。
 
-## 过滤虚假匹配
+### 过滤虚假匹配
 
 当我们查看前十个结果而不是前五个结果时，问题就解决了：
 
@@ -1273,7 +1173,7 @@ $ google-searches.sh | head -10
 3 wicked cool scripts
 ```
 
-这并没有带给我们很多流量，所以让我们为我那个忙得多的 AskDaveTaylor.com 运行相同的查询。结果更有趣：
+这并没有带给我们很多流量，所以让我们为我那个忙得多的 `AskDaveTaylor.com` 运行相同的查询。结果更有趣：
 
 ```bash
 $ google-searches.sh | head -10
@@ -1291,12 +1191,15 @@ $ google-searches.sh | head -10
 ## PerformanceEdge 1550
 
 双 Intel 双核或四核 Xeon 处理器，配备 MB 缓存
+
 - Intel 虚拟化技术 (64 位扩展)
 - Intel 5000P 芯片组，配备 1333MHz FSB
 - 最多 16GB DDR3 寄存器 DDR 内存
 - 最多 8 口 SAS RAID 控制器
 - 可选板载冗余存储
+
 存储容量 (36GB Raid)
+
 - 板载双 10/1000Mbps 以太网适配器
 - 纤薄软驱
 - 纤薄软驱
@@ -1308,6 +1211,7 @@ $2899 起
 ## StorageWare SA108
 
 双 Intel 双核或四核 Xeon 处理器，多至 MB 缓存
+
 - Intel 虚拟化技术 (64 位扩展)
 - Intel 5000P 芯片组，配备 1333MHz FSB
 - 最多 16GB DDR3 寄存器 DDR 内存
@@ -1320,6 +1224,7 @@ $2499 起
 ## StorageWare SA360i
 
 前面板显示屏
+
 - 支持最新的 Intel 双核和四核 处理器
 - Intel 5000P 芯片组，配备 1333MHz FSB
 - 最多 16GB DDR3 寄存器 DDR 内存
@@ -1339,6 +1244,7 @@ $8999 起
 ## StorageWare DA6
 
 前面板显示屏
+
 - 最多 2.5TB 可用 RAID 5
 - 每个控制器 256MB 板载缓存
 - 20Gbps 光纤或 SCSI 通道
@@ -1380,19 +1286,15 @@ $8999 起
 
 $2999 起
 
+# Xeon 5300/5100/5000 服务器解决方案
 
-
-
-
-# # Xeon 5300/5100/5000 服务器解决方案
 • 多核 • 64GB FBD 内存
 • 高效电源
-
-
 
 ![](img/6ad2c38f7c331af69e079dec652dce53_37_0.png)
 
 ## 1U SuperServer 6015B-8+
+
 - 双路 Intel® 四核/双路 Xeon® 5300 系列处理器
 - SUPERMIC® XTDDR-8+ 服务器
 - 5000 系列芯片组/1333MHz FSB
@@ -1406,6 +1308,7 @@ $2999 起
 - IPMI 2.0，支持 LAN 上的虚拟媒体及可选 KVM-over-LAN
 
 ## 2U SuperServer 6925B-8PR+
+
 - 双路 Intel® 四核/双路 Xeon® 5300 系列处理器
 - SUPERMIC® XTDB8+ 服务器
 - 5000 系列芯片组/1333MHz FSB
@@ -1418,6 +1321,7 @@ $2999 起
 - IPMI 2.0，支持 LAN 上的虚拟媒体及可选 KVM-over-LAN
 
 ## 4U SuperServer 7045B-3
+
 - 双路 Intel® 四核/双路 Xeon® 5300 系列处理器
 - SUPERMIC® XTDB83 服务器
 - 5000 系列芯片组/1333MHz FSB
@@ -1445,7 +1349,7 @@ $2999 起
 
 在本月，我们将讨论 SELinux 基础知识。我们从 SELinux 的通用设计目标开始；介绍主体（subjects）的概念以及它们如何融入上下文（context）；并将将这些想法结合起来。
 
-## SELinux 的作用
+### SELinux 的作用
 
 我假设你理解什么是自主访问控制（DAC，又称-普通文件权限）在 Linux 中是如何工作的。如果你了解，你已经在 Linux 10 月刊和 11 月刊的两个系列——Linux 安全与 SELinux 资源中涵盖了这些。
 
@@ -1455,58 +1359,64 @@ $2999 起
 
 那么，SELinux 表现如何呢？起点是
 
-## 问题所在
+### 问题所在
 
 我们正试图解决的准确是，Linux 中新的安全漏洞往往由开发者和攻击者的圈子暴露出来。漏洞供应商急忙着发布补丁，而攻击者在此期间对系统造成了破坏；而 SELinux 如何，主体是许多构造体。这可能涉及你，主体上下文（SELinux）-自然的-如开发者和攻击者的圈子。但经过几个月或几个月，消费者在之后才收到安全补丁的足迹，这是不可接受的。将会产生零-零日漏洞。
 
 SELinux 在所有调用操作中，就像我们在 Linux 中所做的一样。我们得到的对象是文件和目录。由于他们花了这么多时间编写内核，例如创建零日攻击，这些攻击被特权用户和许多访问控制所阻止，这些控制限制了资源的损害。但如果 Linux 策略允许访问，SELinux 将无法提供保护。
 
-AppArmor 是一个提供访问控制的模块，它不能防止零日攻击，但通过特定定义的 SELinux 区别于 Linux 的默认访问控制（DAC）模型，每个进程类（denomin）-而且，事实上，你可以找到 root 的特权。如果攻击者访问——这是所有用户拥有的。一个对象类——惊讶的是，它是最常用的类。其他类型-任何以 root 身份运行，或者作为受攻击的进程，例如，如果我们有一个名为 bland 的守护进程以用户 attacker 的身份运行，攻击者的功能是用摩尔斯密码敲键盘，所以你可能会想，好吧，攻击者可以是某种侮辱，对吧？
+`AppArmor` 是一个提供访问控制的模块，它不能防止零日攻击，但通过特定定义的 SELinux 区别于 Linux 的默认访问控制（DAC）模型，每个进程类（denomin）-而且，事实上，你可以找到 root 的特权。如果攻击者访问——这是所有用户拥有的。一个对象类——惊讶的是，它是最常用的类。其他类型-任何以 root 身份运行，或者作为受攻击的进程，例如，如果我们有一个名为 bland 的守护进程以用户 attacker 的身份运行，攻击者的功能是用摩尔斯密码敲键盘，所以你可能会想，好吧，攻击者可以是某种侮辱，对吧？
 
-- dir
-- socket
-- tcp_socket
-- unix_socket 包括以下内容：
-
-错误的
-
-SELinux 在所有调用操作中，就像我们在 Linux 中所做的一样。我们得到的对象是文件和目录。由于他们花了这么多时间编写内核，例如创建零日攻击，这些攻击被特权用户和许多访问控制所阻止，这些控制限制了资源的损害。但如果 Linux 策略允许访问，SELinux 将无法提供保护。
-
-AppArmor 是一个提供访问控制的模块，它不能防止零日攻击，但通过特定定义的 SELinux 区别于 Linux 的默认访问控制（DAC）模型，每个进程类（denomin）-而且，事实上，你可以找到 root 的特权。如果攻击者访问——这是所有用户拥有的。一个对象类——惊讶的是，它是最常用的类。其他类型-任何以 root 身份运行，或者作为受攻击的进程，例如，如果我们有一个名为 bland 的守护进程以用户 attacker 的身份运行，攻击者的功能是用摩尔斯密码敲键盘，所以你可能会想，好吧，攻击者可以是某种侮辱，对吧？
-
-- dir
-- socket
-- tcp_socket
-- unix_socket 包括以下内容：
+- `dir`
+- `socket`
+- `tcp_socket`
+- `unix_socket` 包括以下内容：
 
 错误的
 
 SELinux 在所有调用操作中，就像我们在 Linux 中所做的一样。我们得到的对象是文件和目录。由于他们花了这么多时间编写内核，例如创建零日攻击，这些攻击被特权用户和许多访问控制所阻止，这些控制限制了资源的损害。但如果 Linux 策略允许访问，SELinux 将无法提供保护。
 
-AppArmor 是一个提供访问控制的模块，它不能防止零日攻击，但通过特定定义的 SELinux 区别于 Linux 的默认访问控制（DAC）模型，每个进程类（denomin）-而且，事实上，你可以找到 root 的特权。如果攻击者访问——这是所有用户拥有的。一个对象类——惊讶的是，它是最常用的类。其他类型-任何以 root 身份运行，或者作为受攻击的进程，例如，如果我们有一个名为 bland 的守护进程以用户 attacker 的身份运行，攻击者的功能是用摩尔斯密码敲键盘，所以你可能会想，好吧，攻击者可以是某种侮辱，对吧？
+`AppArmor` 是一个提供访问控制的模块，它不能防止零日攻击，但通过特定定义的 SELinux 区别于 Linux 的默认访问控制（DAC）模型，每个进程类（denomin）-而且，事实上，你可以找到 root 的特权。如果攻击者访问——这是所有用户拥有的。一个对象类——惊讶的是，它是最常用的类。其他类型-任何以 root 身份运行，或者作为受攻击的进程，例如，如果我们有一个名为 bland 的守护进程以用户 attacker 的身份运行，攻击者的功能是用摩尔斯密码敲键盘，所以你可能会想，好吧，攻击者可以是某种侮辱，对吧？
 
-- dir
-- socket
-- tcp_socket
-- unix_socket 包括以下内容：
+- `dir`
+- `socket`
+- `tcp_socket`
+- `unix_socket` 包括以下内容：
 
 错误的
 
 SELinux 在所有调用操作中，就像我们在 Linux 中所做的一样。我们得到的对象是文件和目录。由于他们花了这么多时间编写内核，例如创建零日攻击，这些攻击被特权用户和许多访问控制所阻止，这些控制限制了资源的损害。但如果 Linux 策略允许访问，SELinux 将无法提供保护。
 
-AppArmor 是一个提供访问控制的模块，它不能防止零日攻击，但通过特定定义的 SELinux 区别于 Linux 的默认访问控制（DAC）模型，每个进程类（denomin）-而且，事实上，你可以找到 root 的特权。如果攻击者访问——这是所有用户拥有的。一个对象类——惊讶的是，它是最常用的类。其他类型-任何以 root 身份运行，或者作为受攻击的进程，例如，如果我们有一个名为 bland 的守护进程以用户 attacker 的身份运行，攻击者的功能是用摩尔斯密码敲键盘，所以你可能会想，好吧，攻击者可以是某种侮辱，对吧？
+`AppArmor` 是一个提供访问控制的模块，它不能防止零日攻击，但通过特定定义的 SELinux 区别于 Linux 的默认访问控制（DAC）模型，每个进程类（denomin）-而且，事实上，你可以找到 root 的特权。如果攻击者访问——这是所有用户拥有的。一个对象类——惊讶的是，它是最常用的类。其他类型-任何以 root 身份运行，或者作为受攻击的进程，例如，如果我们有一个名为 bland 的守护进程以用户 attacker 的身份运行，攻击者的功能是用摩尔斯密码敲键盘，所以你可能会想，好吧，攻击者可以是某种侮辱，对吧？
 
-（注：由于原文中存在大量重复和乱码，译文已根据指令对有效内容进行了提取和翻译，确保了 SELinux 和 Linux 相关术语的准确性。）
+- `dir`
+- `socket`
+- `tcp_socket`
+- `unix_socket` 包括以下内容：
+
+错误的
+
+SELinux 在所有调用操作中，就像我们在 Linux 中所做的一样。我们得到的对象是文件和目录。由于他们花了这么多时间编写内核，例如创建零日攻击，这些攻击被特权用户和许多访问控制所阻止，这些控制限制了资源的损害。但如果 Linux 策略允许访问，SELinux 将无法提供保护。
+
+`AppArmor` 是一个提供访问控制的模块，它不能防止零日攻击，但通过特定定义的 SELinux 区别于 Linux 的默认访问控制（DAC）模型，每个进程类（denomin）-而且，事实上，你可以找到 root 的特权。如果攻击者访问——这是所有用户拥有的。一个对象类——惊讶的是，它是最常用的类。其他类型-任何以 root 身份运行，或者作为受攻击的进程，例如，如果我们有一个名为 bland 的守护进程以用户 attacker 的身份运行，攻击者的功能是用摩尔斯密码敲键盘，所以你可能会想，好吧，攻击者可以是某种侮辱，对吧？
+
+- `dir`
+- `socket`
+- `tcp_socket`
+- `unix_socket` 包括以下内容：
+
+错误的
 
 核心段落翻译示例：
+
 - "Invest some time in SELinux and learn less about zero-day attacks." -> "花些时间研究 SELinux，可以少受一些零日攻击的伤害。"
 - "**SELinux**, the NSA's powerful implementation of mandatory access controls for linux..." -> "**SELinux** 是美国安全局（NSA）对 Linux 强制访问控制（MAC）的强大实现..."
 - "Discretionary Access Controls, aka-plain file permissions" -> "自主访问控制（DAC，又称-普通文件权限）"
 
-
-
-
 与其父目录不同类型的对象。
+
+
+
 （注意：即使在 SELinux 中，目录和类型是同义词，但在讨论进程和文件时，大家通常都会使用“域”（domain）一词。）
 
 也就是说，通常情况下，如果一个进程执行另一个进程，第二个进程将失败，而不会在安全上下文中运行。如果启动了子进程，子进程将以自身的身份在域中运行。然而，如果它尝试在另一个域中启动进程，Linux 将需要确定是否允许这样做。与许多事情不同，事务必须通过 SELinux 策略显式授权。这就是权限如何以类似方式工作的一个示例。
@@ -1523,7 +1433,7 @@ AppArmor 是一个提供访问控制的模块，它不能防止零日攻击，�
 
 此处的资源：https://www.silicon.com/article/951。
 
-Mike Backer (mike@siliconmechanics.org) 是美国银行的安全架构师。他是 O'Reilly 出版书籍《Linux Server Security》第二版（原名 *Secure Servers With Linux*）的作者，也是信息安全会议的兼任演讲者，以及波兰“网络工程”的教授。
+Mike Backer (`mike@siliconmechanics.org`) 是美国银行的安全架构师。他是 O'Reilly 出版书籍《Linux Server Security》第二版（原名 *Secure Servers With Linux*）的作者，也是信息安全会议的兼任演讲者，以及波兰“网络工程”的教授。
 
 Jonathan 为我们在行业内的所有服务器和产品提供专家级技术支持。他是配备双四核英特尔至强 5300 系列处理器的 Rackform ISRZ276-t5 存储服务器的粉丝，因为它结合了英特尔经过验证的可靠性和行业领先的 8 核性能。
 
@@ -1541,11 +1451,11 @@ Linux 也是如此。我注意到，在图形界面上投入了大量工作，�
 
 有些人认为，“知道”命令行编程需要大量的学习。然而，如果你系统地处理任务，你就可以随着时间学会它，利用学习周期。你应该做的第一件事是买一本关于 Linux 的书。Weiss (O'Reilly) 编写的 *A Linux Quick Guide for Users* 是一个很好的开始。另一个好书是 Barrett 写的 *Linux Command Line*，以及 Hough 写的 *Linux Network* 也很好。读书，但不要不经思考，为了自动化这些操作你需要做什么。你可能会发现一些对你有帮助的命令行程序。
 
-当你使用 Linux 时，执行一个终端模拟器，例如其他某一个。始终尝试找到一个你喜欢的命令，然后尝试使用它来完成任务。通过练习命令（如 `grep`、`ls` 以及将它们组合起来），你可以过滤数据以匹配命令的要求。如果你创建了一个想在命令行界面使用的 ASCII 字符文件，只需对文件进行排序，并使用回车键上面的其他字符和键盘。在我看来，启动管道 (|) 是 Linux 位于这些光鲜表面之下的真正力量，允许人们处理海量数据。多年前，我工作的公司需要获取新软件来更新客户。客户将收到由两个不同操作系统表示的软件，而我的公司有明确的能力来报告此。。估计我完成这项工作需要九个月，这几乎和客户等待的时间一样。我询问是否可以这样做，因为数据库是不兼容的，没有程序可以跨越系统拉取这两个文件。在四分之一天内，使用流编辑器 `sed(1)`，我不仅能够关联数据，还能按顺序为发货箱制作标签。经理们简直无法置信。`ls | grep 'e'` 将向你显示目录中名称中带有字母 e 的每一个文件。这种研究应该是表达式的重点——用于搜索或匹配其他字符串的描述模式的方法。尽管不同的程序使用不同类型的正则表达式，但它们倾向于遵循相同的原则，因此你可以在每个命令中使用相同类型的字符。
+当你使用 Linux 时，执行一个终端模拟器，例如其他某一个。始终尝试找到一个你喜欢的命令，然后尝试使用它来完成任务。通过练习命令（如 `grep`、`ls` 以及将它们组合起来），你可以过滤数据以匹配命令的要求。如果你创建了一个想在命令行界面使用的 ASCII 字符文件，只需对文件进行排序，并使用回车键上面的其他字符和键盘。在我看来，启动管道 (`|`) 是 Linux 位于这些光鲜表面之下的真正力量，允许人们处理海量数据。多年前，我工作的公司需要获取新软件来更新客户。客户将收到由两个不同操作系统表示的软件，而我的公司有明确的能力来报告此。。估计我完成这项工作需要九个月，这几乎和客户等待的时间一样。我询问是否可以这样做，因为数据库是不兼容的，没有程序可以跨越系统拉取这两个文件。在四分之一天内，使用流编辑器 `sed(1)`，我不仅能够关联数据，还能按顺序为发货箱制作标签。经理们简直无法置信。`ls | grep 'e'` 将向你显示目录中名称中带有字母 e 的每一个文件。这种研究应该是表达式的重点——用于搜索或匹配其他字符串的描述模式的方法。尽管不同的程序使用不同类型的正则表达式，但它们倾向于遵循相同的原则，因此你可以在每个命令中使用相同类型的字符。
 
 1977 年，我在贝尔实验室工作，试图为该项目找一个系统管理员。在试图帮助他们为这个操作系统命名时（该系统正在处理成千上万个小命令、多个目录并指向一个交互式文本编辑器 `ed(1)`），我曾感到非常沮丧，因为我发现修改该文件需要几个小时。我记得突然想到：“我不知道 UNIX 中是否有命令可以做到这件事，但我愿意打赌一定有……” 于是，我开始查阅手册，只看一遍——我在命令的“Name”行中发现了一块有用的宝石。很快，我找到了它的搭档程序，它允许我通过两个命令恰好完成我需要做的一切。从那时起，我大多数时候都遵循“正确的命令”的哲学，这种哲学赢胜了，一个合适的命令确实足够了。
 
-要仅通过在线资源开始学习命令，你有在线手册和来自你发行版的页面。然后你可以输入 `man(1)` 来阅读 man 命令的描述，然后输入它——`ls(1)` 来了解更多。命令名称后的 (1) 表示它是一个用户级命令，而不是系统命令或特殊功能。
+要仅通过在线资源开始学习命令，你有在线手册和来自你发行版的页面。然后你可以输入 `man(1)` 来阅读 man 命令的描述，然后输入它——`ls(1)` 来了解更多。命令名称后的 `(1)` 表示它是一个用户级命令，而不是系统命令或特殊功能。
 
 如果你更喜欢基于鼠标的图形化阅读器，而不是通过调用的命令，请点击窗口中的 `Help` 并阅读帮助页。然后你可以点击顶部的 `Options` 菜单选择 `both`。这让你看到描述部分的细节以及底部的实际手册。点击顶部感兴趣的命令，该命令将显示在底部。一个有趣的命令示例是 `ls(1)`。
 
@@ -1556,9 +1466,6 @@ Linux 也是如此。我注意到，在图形界面上投入了大量工作，�
 ## 不要让简单任务复杂化
 
 通过 AML 的手持式、固定和车载无线数据采集，让基础任务保持简单。当其他人在发明轮子时，我们从产品到个人服务都保持简单。访问 www.amltd.com 或拨打 1.800-648-4452 接听人工。
-
-
-
 
 # 专栏
 
@@ -1595,9 +1502,6 @@ Linux 也是如此。我注意到，在图形界面上投入了大量工作，�
 随处可见，运营商的利益与自身的利益意见相左。11 月 7 日，电力部门的选民决定建设基于光纤的网络。
 
 下一次选举将非常激烈，特别是可能会出现一个由民主党占多数的新任美国议会。过去，中立性立法失败了，由民主党提出，被共和党击败。共和党正在寻找方法杀掉他们在 2001 年提出的法案。而现在，如果这项立法像我们所知的那样被建立，运营商可以反击。
-
-
-
 
 使用网络。就像我们大多数大多数人一样，他们仍然困在 19 世纪的网络世界中，在那个时代，铜线刚刚开始取代光纤。
 
@@ -1649,9 +1553,6 @@ www.messagepartners.com
 
 在 Scalix，我们支持 Eleven，这是一个基于 Linux 的开源消息、电子邮件和日历平台。Scalix 的许多功能包括易于管理、与一切的 Web 集成以及 Outlook 级别的功能，且没有成本和像 MS Exchange 的许可锁定。Scalix 的目标客户将看重“企业级的产品完整性”以及开源项目的“社区支持”。新功能允许您从 Microsoft Exchange Server 2007 迁移，同时具有 Scalix 的优势，例如“供应商选择、更好的管理和维护，以及改进的 Web 客户端和 Outlook 集成，同时保持市场上最好的 Outlook 支持”。可以在 Scalix 网站下载商业版试用和免费演示。
 
-
-
-
 # Terra Soft 为 PlayStation 3 开发的 Yellow Dog Linux
 
 Linux 爱好者简直太酷了，不是吗？Terra Soft 就是一个例子，他们将自己的 Yellow Dog Linux (YDL) 移植到了 PlayStation 3 (PS3)。希望当你读到这里时，你已经能拿到 PS3 了，因为我们现在还没有。
@@ -1659,26 +1560,32 @@ Linux 爱好者简直太酷了，不是吗？Terra Soft 就是一个例子，他
 在索尼的许可以及巴塞罗那超级计算中心的支持下，YDL 是一个适用于 PS3 的完整操作系统，它基于 Fedora 5，包含超过 1500 个软件包。在这个项目中，Terra Soft 还与 Haizelter 和 Enlivenment 开发团队合作集成了 Blitz，该公司将提供“前所未有”的自由度和界面美感。
 
 可以下载 YDL 的安装程序和源码；也可以从 Terra Soft 的在线商店购买 DVD。
+
 www.terrasoft.com
 
 # 凌华科技 NuPro-851
 
 凌华科技刚刚为你带来了一台形如 NuPro-851 这样的全尺寸单板电脑。NuPro-851 是一款 PiKem 1.0 设备，支持 800MHz FSB 的、配备超线程技术的 Intel Atom 处理器、400MHz 的双通道 DDR2 内存，以及能够执行 2048 MIPS、峰值带宽 800MB/s 的 Intel G45 架构。
 
-该产品还具有 1GB RAM、USB 2.0 连接以及双口以太网 Marvell 8802 控制器。凌华科技表示该产品是“工业设备的理想选择”，因为它非常强调完整性、可靠性和严格的版本控制。所有其他凌华产品均符合欧盟关于环保的报告。
+
+
+该产品还具有 1GB RAM、`USB 2.0` 连接以及双口以太网 Marvell 8802 控制器。凌华科技表示该产品是“工业设备的理想选择”，因为它非常强调完整性、可靠性和严格的版本控制。所有其他凌华产品均符合欧盟关于环保的报告。
+
 www.adlink.com
 
 # Excellent代码实践 (No Starch 出版)
 
 对于极客来说，看到最新的优惠永远是好事。这本书的目的是让程序员提升水平，编写易于理解的优秀代码。代码与语言无关，涵盖的内容不仅包括演示、错误处理，还包括团队协作、开发流程和文档编写。No Starch 官网提供免费章节。
+
 www.nostarch.com
 
 # Agile 邮件服务器
 
 当你认为邮件服务器琳琅满目的选项已经足够令人眼花缭时，Agile 发布了 2.0 版本邮件服务器。该产品提供了“全方位功能，范围从电子邮件通信到反病毒和反垃圾邮件集成”。在新版本中，Agile 增加了许多功能，包括备份和恢复模块、完整的安全工具包、反病毒和反垃圾邮件应用程序、可扩展的 Webmail、支持 100 多种可定义报告的报告引擎以及用于创建电子邮件传递路由的向导。邮件服务器目前提供英语和德语版，并运行在主流发行版上。Agile 网站提供评估版。
+
 www.agile.com
 
-请将 Linux 相关产品的发布信息发送至 gray@linuxjournal.com 的 James Gray，或 Linux Journal, 175 NW Market Street, Seattle, WA 98107。
+请将 Linux 相关产品的发布信息发送至 `gray@linuxjournal.com` 的 James Gray，或 Linux Journal, 175 NW Market Street, Seattle, WA 98107。
 
 # Linux 下 NTFS 工具的力量
 
@@ -1690,7 +1597,7 @@ Linux 环境可以访问本地硬盘或网络上某处的几十个文件系统�
 
 现在，下载 ntfs 源码并将其保存在方便的目录中。以 root 身份运行，将在你构建 NTFS 包时提供帮助（当你读到这里时，实际版本可能已经变化）。
 
-# 构建
+## 构建
 
 ```
 tar -xzvf ntfs-1.13.1.tar.gz
@@ -1702,7 +1609,7 @@ make install
 
 使用 FUSE 库构建 ntfs 时，你在运行 `configure` 命令时将得到干净的结果：
 
-# 安装
+## 安装
 
 这些工具广泛可用并受支持。所有带有包器的 Linux 发行版都有相应的软件包，软件本身包含在 Linux Live CD 中。许多发行版包含仅供 root 用户运行的工具。要查看你的安装系统中是否安装了这些工具，请咨询列出所有软件安装位置的包管理器。
 
@@ -1717,28 +1624,24 @@ fsmount requires FUSE version > 2.3
 
 到此时，如果你已经安装了 ntfs，或者你已经查看过 ntfs 页面，可以看到完整的工具列表。以下是 `man` 手页的一部分：
 
-- ntfsformat() - 使用 NTFS 格式化分区
-- ntfscat() - 将文件导出到标准输出
-- ntfsclone() - 克隆、创建或恢复 NTFS 分区的镜像
-- ntslocate() - 定位 NTFS 上任何扇区或簇的位置
-- ntfscheck() - 验证 NTFS 分区上的文件
-- ntfsfix() - 检查并修复常见错误
-- ntfsinfo() - 显示 NTFS 分区或某个目录的信息
-- ntfslabel() - 显示或设置 NTFS 分区的卷标签
-- ntfslist() - 列出 NTFS 分区文件信息
-- fsmount() - 用于 FUSE 的 NTFS 模块
-- ntfsresize() - 在不丢失数据的情况下调整 NTFS 分区大小
-- ntfsundelete() - 从 NTFS 分区恢复删除的文件
+- `ntfsformat()` - 使用 NTFS 格式化分区
+- `ntfscat()` - 将文件导出到标准输出
+- `ntfsclone()` - 克隆、创建或恢复 NTFS 分区的镜像
+- `ntslocate()` - 定位 NTFS 上任何扇区或簇的位置
+- `ntfscheck()` - 验证 NTFS 分区上的文件
+- `ntfsfix()` - 检查并修复常见错误
+- `ntfsinfo()` - 显示 NTFS 分区或某个目录的信息
+- `ntfslabel()` - 显示或设置 NTFS 分区的卷标签
+- `ntfslist()` - 列出 NTFS 分区文件信息
+- `fsmount()` - 用于 FUSE 的 NTFS 模块
+- `ntfsresize()` - 在不丢失数据的情况下调整 NTFS 分区大小
+- `ntfsundelete()` - 从 NTFS 分区恢复删除的文件
 
 列出的许多工具对开发者比对维护网络或双系统系统的人更有用。其中一些工具是真正的救星，而 ntfs 是所有这些工具中最好的。
 
 www.linuxjournal.com 2007年2月 | 4
 
-
-
-
-
-## Linux.NTFS 工具
+### Linux.NTFS 工具
 
 处理稀疏文件，但我发现现在更高的版本中其性能尚可。你可以将 NTFS 用作外部驱动，因为它具有处理大文件的能力——某些操作需要与你的 Windows 分区一样大的空间。如果你有一个格式化为 FAT32 系统的外部驱动，它的大小限制对于大多数用例来说太小了。如果你的电脑安装了 NTFS，你将能够从像 Knopix 这样的 Linux CD 启动。
 
@@ -1812,7 +1715,7 @@ ntfsclone -restore-image /dev/sda1 /usr/backup/ntfs.img
 
 50 | 2007 | www.linuxjournal.com
 
-### ntfsresize --info ntfs.img
+#### ntfsresize --info ntfs.img
 
 现在到了不错的部分。ntfsclone 将其数据发送到标准工具。这意味着你可以选择各种压缩工具、通过网络传输的各种模式等。任何尊重标准输入的工具都可以处理镜像。
 
@@ -1908,7 +1811,7 @@ ntfsclone -restore-image /dev/sda1 \
 
 50 | 2007 | www.linuxjournal.com
 
-### ntfsresize --info ntfs.img
+#### ntfsresize --info ntfs.img
 
 现在到了不错的部分。ntfsclone 将其数据发送到标准工具。这意味着你可以选择各种压缩工具、通过网络传输的各种模式等。任何尊重标准输入的工具都可以处理镜像。
 
@@ -1962,19 +1865,16 @@ get "/home/backups/images.img" \
 
 Windows 和 Linux 在许多领域都是竞争对手。然而，它们之一区别是其开放性和各种命令行工具。NTFS 工具打开一个具有 NTFS 文件系统的分区，由于其单向性，
 
-> Stephen Matthe 在 1995 年首次在他的电脑上安装了 Linux，当时可以使用 tar 备份 NTFS Windows。可以通过以下邮箱联系他：matthew@linux.net
+> Stephen Matthe 在 1995 年首次在他的电脑上安装了 Linux，当时可以使用 tar 备份 NTFS Windows。可以通过以下邮箱联系他：`matthew@linux.net`
 
 假设 NTFS 分区对于 NTFS 系统来说只是有点小。那么，例如，如果你不需要被替换硬盘的账户，你可以用一个大小相同但几何结构不同的硬盘来替换它。
 
-在这种情况下，ntfsresize 工具可以派上场。计算你可以缩小多少 NTFS 文件系统的空间，该命令如下（来自 ntfs.img 目录）：
+在这种情况下，`ntfsresize` 工具可以派上场。计算你可以缩小多少 NTFS 文件系统的空间，该命令如下（来自 ntfs.img 目录）：
 
 www.linux.com 2007 | 51
 
-
-
-
-
 # 使用 Win4Lin 打破硬件升级周期
+
 WINDOWS 虚拟桌面服务器
 
 通过 Win4Lin VDS 将 Windows 交付给 Linux 客户端，实现向 Linux 的滑迁移。
@@ -1983,7 +1883,7 @@ Jon Watson
 
 ## WinLin 虚拟服务器
 
-WinLin Virtual Server (winlin.com) 是一种客户端/服务器解决方案，可将组织从昂贵且高维护的 Windows 基础设施迁移到更健壮、更精的 Linux 基础。只需点击鼠标即可将单份 Windows 直接交付到多个用户的桌面。
+WinLin Virtual Server (`winlin.com`) 是一种客户端/服务器解决方案，可将组织从昂贵且高维护的 Windows 基础设施迁移到更健壮、更精的 Linux 基础。只需点击鼠标即可将单份 Windows 直接交付到多个用户的桌面。
 
 如果你的用户只需要在 Linux 桌面运行某个特定的应用程序，你并不希望他们拥有完整的 Windows 桌面。如今从 Windows 迁移到 Linux，所需要的是灵活性，而非成本。
 
@@ -1999,6 +1899,8 @@ WinLin 为桌面提供了“应用程序”，这意味着用户可以在运行 
 
 现有的 Linux 系统可以在其偏好的 Linux 发行版运行。
 
+
+
 VDS 与客户端/服务器虚拟机 (VM) 解决方案不同。大多数 VM 服务器提供有限的应用程序集。WinLin 提供的是完整的桌面。如果客户端不支持 X 协议，可以通过虚拟终端、VNC 或 Noarent 使用替代的“显示”方法，这些方法在使用安装了 Web 浏览器时效果非常好。
 
 WinLin 管理员的主要任务之一是保持 Windows 的补丁和更新，以保护客户端免受 Windows 每天面对许多安全漏洞和攻击栈。如所述，VDS 提供单个 Windows 实例进行补丁和更新，不仅节省了时间，还降低了安全漏洞的风险。
@@ -2009,7 +1911,7 @@ WinLin 管理员的主要任务之一是保持 Windows 的补丁和更新，以�
 
 WinLin 建议客户端使用原生的 Linux 终端服务器，以利用原生 WinLin 客户端连接提供的所有优势。然而，连接到 VDS 有若干种方法，如果你需要无缝设置，任何客户端都能获得它们所需的。
 
-可以通过 VNC、Telnet 或 SSH（需启用 X11 转发）连接到 VDS。对于 Telnet 和 SSH，必须设置 (DISPLAY) 环境变量。通常情况下，远程登录选项仅适用于高速环境（如本地局域网）。WAN 可能提供足够的带宽来使用这些方法。也可以使用 RealVNC、NoMachine 和 Tarenta 进行连接。
+可以通过 VNC、Telnet 或 SSH（需启用 X11 转发）连接到 VDS。对于 Telnet 和 SSH，必须设置 `(DISPLAY)` 环境变量。通常情况下，远程登录选项仅适用于高速环境（如本地局域网）。WAN 可能提供足够的带宽来使用这些方法。也可以使用 RealVNC、NoMachine 和 Tarenta 进行连接。
 
 如果你不想办法连接到 VDS，你只需要使用……
 
@@ -2029,7 +1931,7 @@ VDS 客户端适用于 Linux、Solaris 和 Windows，但源代码也提供下载
 
 ## 安装服务器
 
-从 WinLin 站点 (ftp.winlin.com/releases/linux/index.html) 下载包。在这里，它们以 32 位和 64 位以及 RPM 和 DEB 文件的形式提供。
+从 WinLin 站点 (`ftp.winlin.com/releases/linux/index.html`) 下载包。在这里，它们以 32 位和 64 位以及 RPM 和 DEB 文件的形式提供。
 
 我们下载了 32 位 RPM 包并将其安装在一台运行 1GB 内存的 Ubuntu 18.04 LTS 发行版的机器上。安装成功了，除了 Ubuntu 的“边缘”内核与 WinLin 客户端存在问题。现在服务器工作非常完美，此后没有报告过任何问题。一些敏锐的读者可能会在屏幕截图中发现不同的问题。
 
@@ -2049,17 +1951,22 @@ $ john@ubuntu:~/documents/winlin-vds.sh
 ## 功能：WINLIN
 
 现在是时候安装我的单实例了。我们使用了 Windows XP 家庭版，在配置之前安装了并允许其升级。为此，我们将 Windows 放入驱动器，可以像所有用户设置的那样运行，并可能运行：
+
 ```bash
 等一下，让我重新读一遍：“用户设置好后，主配置可能只需要一个账户。要创建主配置，我登录我的系统并运行：
+```
+
 ```bash
 sudo loadwinprog
+
 sudo adduser watson
+
 sudo adduser dwaston
 ```
 
 如果你已经安装了 VDS 许可，系统会提示你执行此操作。你可以不输入许可并使用几天，但没有任何功能会被启用，这实际上让你只留了一个单用户环境。
 
-在图 1 中，你会看到我们必须使用 -s 切换来加载安装了 WinLinPro 的访客账户。-s 切换用于重新加载访客主配置。安装 VDS 有两个步骤。首先，访客账户必须运行 loadwinprog。下一步一步实际上是在 Windows 中安装 VDS，这是一个特权账户。安装 VDS 和创建主配置的过程对于恢复他们的 Windows 环境是必要的——所以事实上，下一节将专门用于理解这一过程。
+在图 1 中，你会看到我们必须使用 `-s` 切换来加载安装了 WinLinPro 的访客账户。`-s` 切换用于重新加载访客主配置。安装 VDS 有两个步骤。首先，访客账户必须运行 `loadwinprog`。下一步一步实际上是在 Windows 中安装 VDS，这是一个特权账户。安装 VDS 和创建主配置的过程对于恢复他们的 Windows 环境是必要的——所以事实上，下一节将专门用于理解这一过程。
 
 ## 基于配置的置备
 
@@ -2067,20 +1974,16 @@ WinLin 使用基于配置的置备。在这种方法中，意味着只需要配�
 
 ## 创建主配置
 
-VDS 必须在用户账户下安装。有了所有基础设施细节后，几分钟后，我决定在主账户 john 下安装我的主配置。我创建了 watson 和 dwaston。我的第一步是创建这两个账户。运行 Linux 的组织在分配这些新账户后，我们准备就绪了。现在是时候创建主配置了。这涉及到安装 VDS 并将其指定为主用户，这是必须的。
+VDS 必须在用户账户下安装。有了所有基础设施细节后，几分钟后，我决定在主账户 `john` 下安装我的主配置。我创建了 `watson` 和 `dwaston`。我的第一步是创建这两个账户。运行 Linux 的组织在分配这些新账户后，我们准备就绪了。现在是时候创建主配置了。这涉及到安装 VDS 并将其指定为主用户，这是必须的。
 
-所以我重新登录主配置 john 并运行各种选项来配置虚拟机的特性。我接受默认设置，包括 4GB 磁盘大小。根据你打算使用的应用程序，这可能不足以考虑用户空间，尽管用户数据存储在 Linux 文件系统的家目录下。
+所以我重新登录主配置 `john` 并运行各种选项来配置虚拟机的特性。我接受默认设置，包括 4GB 磁盘大小。根据你打算使用的应用程序，这可能不足以考虑用户空间，尽管用户数据存储在 Linux 文件系统的家目录下。
 
-除非使用 -s 切换，否则默认配置将 winpro。如果你想更改配置，需要使用 -s 切换。使用这种方法备份 Linux 镜像。现在安装 WinLin 后，你不需要再次做了。
+除非使用 `-s` 切换，否则默认配置将 `winpro`。如果你想更改配置，需要使用 `-s` 切换。使用这种方法备份 Linux 镜像。现在安装 WinLin 后，你不需要再次做了。
 
-备份你的配置只需将 GUEST 文件复制到另一个位置。如果你需要在 /home/winlin/vds/ 中找到 GUEST.IMG，你需要设置自己的所有者。如果你修改了配置，就会知道在哪里找到它。
+备份你的配置只需将 `GUEST` 文件复制到另一个位置。如果你需要在 `/home/winlin/vds/` 中找到 `GUEST.IMG`，你需要设置自己的所有者。如果你修改了配置，就会知道在哪里找到它。
 
 一旦安装完成，运行以下命令将此实例指定为主配置：
 `/opt/winlin/bin/export-profile --conf`
-
-
-
-
 
 ## 创建用户配置文件
 
@@ -2094,7 +1997,7 @@ VDS 必须在用户账户下安装。有了所有基础设施细节后，几分�
 
 ## 安装客户端
 
-如所述，连接到 VDS 有多种方法。一种是使用 Win4Lin 客户端，它是免费且易于获取的。可以从 www.win4lin.com/repository/item/ 下载 Win4Lin 客户端，它提供 Linux、Solaris 和 Windows 的版本。奇怪的是，VDS 同时提供 DEB 和 RPM 格式。
+如所述，连接到 VDS 有多种方法。一种是使用 Win4Lin 客户端，它是免费且易于获取的。可以从 `www.win4lin.com/repository/item/` 下载 Win4Lin 客户端，它提供 Linux、Solaris 和 Windows 的版本。奇怪的是，VDS 同时提供 DEB 和 RPM 格式。
 
 图 3. 当处于已知状态时，更新您的 Windows 主镜像。
 
@@ -2113,6 +2016,8 @@ VDS 必须在用户账户下安装。有了所有基础设施细节后，几分�
 /opt/win4lin/etc/profile_restart
 ```
 
+
+
 ## 专用服务器价格跌至底部
 
 | 特性 | 价格 |
@@ -2124,7 +2029,7 @@ VDS 必须在用户账户下安装。有了所有基础设施细节后，几分�
 
 详情请查看网站。最佳服务，服务。
 
-www.linuxjournal.com 2007年2月
+`www.linuxjournal.com` 2007年2月
 
 ## 特性：WIN4LIN
 
@@ -2141,14 +2046,14 @@ www.linuxjournal.com 2007年2月
 无论使用什么应用程序或 Windows 版本，必须首先设置或验证 Win4Lin 注册表键：
 
 1. 打开注册表编辑器。
-2. 导航到 HKLM\Software\Microsoft\Windows\CurrentVersion\Win4login。
-3. 确保 User 变量值存在：B:\regedit32.exe。如果不存在，请创建它。
+2. 导航到 `HKLM\Software\Microsoft\Windows\CurrentVersion\Win4login`。
+3. 确保 `User` 变量值存在：`B:\regedit32.exe`。如果不存在，请创建它。
 
 图 5. Win4Lin 可以交付单个应用程序而不是整个桌面。
 
-对于 压缩包（tarball），Linux 客户端没有 DEB 格式可用。因为从源码安装可能会让我错掉午饭，我们将获取 RPM，使用它进行连接，然后使用 dpkg 将其安装在基于 Debian 的系统上。以下是步骤：
+对于 压缩包（`tarball`），Linux 客户端没有 `DEB` 格式可用。因为从源码安装可能会让我错掉午饭，我们将获取 `RPM`，使用它进行连接，然后使用 `dpkg` 将其安装在基于 Debian 的系统上。以下是步骤：
 
-1. 从 Win4Lin 下载 RPM。
+1. 从 Win4Lin 下载 `RPM`。
 2. 运行 `sudo alien wtsclient_1.0.0-1386.rpm`。
 3. 运行 `sudo dpkg -i wtsclient_1.0.0-1386.deb`。
 4. 运行 `wtsclient` 命令连接到服务器。
@@ -2170,17 +2075,17 @@ www.linuxjournal.com 2007年2月
 ### 指定应用程序（所有 Windows 版本）
 
 1. 通过“开始”启动注册表编辑器。
-2. 导航到 HKLM\Software\Win4Lin。
+2. 导航到 `HKLM\Software\Win4Lin`。
 3. 在右侧窗格中点击右键创建一个新变量。
 4. 选择字符串值（String Value）。
-5. 输入 AppStart（区分大小写）。
-6. 双击新创建的 AppStart。
+5. 输入 `AppStart`（区分大小写）。
+6. 双击新创建的 `AppStart`。
 7. 在数据字段中输入可执行文件的完整路径。例如，要运行 Microsoft WORD.EXE，输入 `%Program%\where Word is installed and named`
 8. 退出注册表编辑器，大功告成！
 
 ## 结语
 
-虚拟化并不新鲜，自 20 世纪 60 年代以来一直存在。今天的虚拟化是速度快速且强大的服务器。使用 Linux 进行交付在硬件管理方面具有成本效益，例如 Win4Linux 桌面让该技术变得易用。事实上，虚拟化已经走了如此远，诀窍在于不要使用它。更好的虚拟化策略计划是实施一个。James Watson (jwatson) 是一位加拿大的爱好者，为 Linux 社区贡献文章。在不写博客和辩论开源软件时，可以在办公软件领域找到 Jen，除了自己没人能服他！
+虚拟化并不新鲜，自 20 世纪 60 年代以来一直存在。今天的虚拟化是速度快速且强大的服务器。使用 Linux 进行交付在硬件管理方面具有成本效益，例如 Win4Linux 桌面让该技术变得易用。事实上，虚拟化已经走了如此远，诀窍在于不要使用它。更好的虚拟化策略计划是实施一个。James Watson (`jwatson`) 是一位加拿大的爱好者，为 Linux 社区贡献文章。在不写博客和辩论开源软件时，可以在办公软件领域找到 Jen，除了自己没人能服他！
 
 ### SilverCom
 
@@ -2225,9 +2130,6 @@ www.linuxjournal.com 2007年2月
 - 802.11a/b/g (54Mbps) WiFi
 - 起价 $1455
 
-
-
-
 # 在 Windows 中访问 Linux 文件系统
 
 你不需要等待微软支持 Linux 文件系统即可从 Windows 访问你的 Linux 文件。
@@ -2238,13 +2140,13 @@ IRFAN HABIB
 
 Linux 在允许 Windows 用户从 Linux 访问 Windows 分区方面表现出色。大多数 Windows 文件系统都是可用的，包括对 FAT16/32 的无缝支持以及对 NTFS 越发完善的支持。还有一些工具可以实现从 Linux 对 NTFS 驱动器的完全完整支持。数据访问并不局限于本地主机。
 
-Samba 允许 Linux 用户通过网络访问 Windows 计算机上的共享数据。因此，我们可以说，对于 MS Windows 用户来说，访问数据不再是迁移到 Linux 的障碍。
+`Samba` 允许 Linux 用户通过网络访问 Windows 计算机上的共享数据。因此，我们可以说，对于 MS Windows 用户来说，访问数据不再是迁移到 Linux 的障碍。
 
 然而，随着 Linux 进军桌面领域，许多人使用 Linux 执行某些任务，然后转向 Windows 使用在 Linux 上不可用的软件，例如高端游戏、Adobe Photoshop 以及没有等效程序的各种特定应用程序。当人们使用此类应用程序时，他们通常需要访问自己的 Linux 分区。Windows 并不支持 Linux 文件系统。因此，Linux 双启动用户必须使用某些工具来访问他们的 Linux 文件系统。
 
 ## 在 Windows 中访问 Linux 分区的工具
 
-从 Windows 访问 Linux 分区可能是一个挑战。然而并非没有，开源社区已经迎接了挑战并创建了优秀的软件来解决这个问题。本文重点介绍 LTOOLS，这是一种允许用户访问多种 Linux 文件系统的高级接口。首先，让我们看看其他可以提供帮助的软件。
+从 Windows 访问 Linux 分区可能是一个挑战。然而并非没有，开源社区已经迎接了挑战并创建了优秀的软件来解决这个问题。本文重点介绍 `LTOOLS`，这是一种允许用户访问多种 Linux 文件系统的高级接口。首先，让我们看看其他可以提供帮助的软件。
 
 ## 文件系统的简要介绍
 
@@ -2252,30 +2154,30 @@ Samba 允许 Linux 用户通过网络访问 Windows 计算机上的共享数据�
 
 ## Ext2fssd
 
-Ext2fssd 是一个开源项目，允许从 Windows 访问 ext2 和 ext3 分区，且无需重启即可下载。ext2fssd.projects.net/ext2fssd 作为驱动程序，而不是普通的应用程序。将 Ext2fssd 作为驱动程序可以将 ext2 分区集成到 Windows 中，并像访问原生格式一样访问它们，同时启用读/写支持。这是独特的，因为它是最早支持的 Linux 文件系统之一，并且许多新的 Linux 文件系统如 ext3 和 ext4 都与它后兼容。因此，该驱动程序也可以与 ext4 工作。然而，对于 ext4，你需要向系统添加主内核。但是，当使用 Ext2fssd 使用 ext4 时，你使用的是 ext2 的功能，而不是其他附加功能（例如增强的日志功能）。
+`Ext2fssd` 是一个开源项目，允许从 Windows 访问 ext2 和 ext3 分区，且无需重启即可下载。`ext2fssd.projects.net/ext2fssd` 作为驱动程序，而不是普通的应用程序。将 `Ext2fssd` 作为驱动程序可以将 ext2 分区集成到 Windows 中，并像访问原生格式一样访问它们，同时启用读/写支持。这是独特的，因为它是最早支持的 Linux 文件系统之一，并且许多新的 Linux 文件系统如 ext3 和 ext4 都与它后兼容。因此，该驱动程序也可以与 ext4 工作。然而，对于 ext4，你需要向系统添加主内核。但是，当使用 `Ext2fssd` 使用 ext4 时，你使用的是 ext2 的功能，而不是其他附加功能（例如增强的日志功能）。
 
 为文件系统支持操作系统意味着我们定义了操作文件系统的数据结构。如果操作系统支持 NTFS，磁盘也可以添加对其他文件系统的支持（如 NTFS），因为磁盘数据的结构、加密算法等对公众未知。这就是为什么在 Linux 中支持 正 证明是一个挑战。
 
-图 1. Ext2fssd 让 ext2 文件系统看起来像 Windows 中的任何其他文件系统一样。
+图 1. `Ext2fssd` 让 ext2 文件系统看起来像 Windows 中的任何其他文件系统一样。
 
 ## rfstools
 
-Rejstools 因为其容错能力已成为流行的 Linux 工具。rfstools 允许在 Windows 内访问 ReFS 分区。它仅支持只读访问，根据开发者的说法，还没有更改的计划。该工具可以在 rfs.org 免费获得。
+Rejstools 因为其容错能力已成为流行的 Linux 工具。`rfstools` 允许在 Windows 内访问 ReFS 分区。它仅支持只读访问，根据开发者的说法，还没有更改的计划。该工具可以在 `rfs.org` 免费获得。
 
 ## LTOOLS 的安装
 
-LTOOLS 适用于各种磁盘文件系统，我们稍后会详细介绍。安装后，程序将在你的环境中运行并创建一个名为 LTOOLS 的菜单，你可以从那里访问你的 Linux 文件系统。LTOOLS 适用于所有 Windows 版本，Windows XP 和 Windows 7 除外。它为 Win9 和 NTFS 提供两个不同的控制台。
+`LTOOLS` 适用于各种磁盘文件系统，我们稍后会详细介绍。安装后，程序将在你的环境中运行并创建一个名为 `LTOOLS` 的菜单，你可以从那里访问你的 Linux 文件系统。`LTOOLS` 适用于所有 Windows 版本，Windows XP 和 Windows 7 除外。它为 Win9 和 NTFS 提供两个不同的控制台。
 
 ## LTOOLS 命令行概述
 
-命令行界面提供了从 LTOOLS 写入和检索数据的的基本功能。这些命令具有以下格式：
+命令行界面提供了从 `LTOOLS` 写入和检索数据的的基本功能。这些命令具有以下格式：
 
 ```
 idr.bat
 ```
 
-此命令列出目录；但它不是一个脚本。该脚本根据你的系统调用两个程序之一：Ldr 或 Idnt。第一个用于 NTFS，第二个用于 Windows。
-许多 LTOOLS 命令具有逻辑语法。例如，分区名是逻辑性的。因此，如果我想从 /root（位于 /devhd2）将文件 vars.conf 复制到 C: 盘；我将执行以下操作
+此命令列出目录；但它不是一个脚本。该脚本根据你的系统调用两个程序之一：`Ldr` 或 `Idnt`。第一个用于 NTFS，第二个用于 Windows。
+许多 `LTOOLS` 命令具有逻辑语法。例如，分区名是逻辑性的。因此，如果我想从 `/root`（位于 `/devhd2`）将文件 `vars.conf` 复制到 `C:` 盘；我将执行以下操作
 
 ## 特性：在 Windows 中访问文件系统
 
@@ -2289,9 +2191,10 @@ read.bat --s=/dev/hd2 /root/var.inc C:\var.inc
 write.bat --s=/dev/hd2 C:\var.inc /root/var.inc
 ```
 
+
+
 与此，Linux 还有表 1 所示的命令。
 
-[content]
 （注：the the the the the the the the the the the the the the the the the the the the the the text.
 
 ## 表 1：LTOOLS 命令
@@ -2308,8 +2211,6 @@ write.bat --s=/dev/hd2 C:\var.inc /root/var.inc
 
 *自我纠正：OCR 文本的最终页面（第 62 页）是重复且无意义的。我将提供清理后的文本。*
 
-
-
 # Polytheme 终极系列
 更多选择，更好服务，最佳价值
 
@@ -2471,700 +2372,14 @@ Poly 4302-AMX26
 - 千兆局域网，1x PCIe 转接槽
 - 支持 Linux / Windows 操作系统
 - $3999
-[/content]
 
-[content]
-# Polytheme 终极系列
-更多选择，更好服务，最佳价值
 
-### 4路 Opteron，四显卡
-Polystation 2055SA-A210
 
-- 2x AMD Opteron "双路" 双核 2210 处理器
-- 8GB 双通道 64MHz DDR2 ECC 内存
-- NVIDIA GeForce GTX 3500 Open, 显卡
-- 2GB 双硬盘驱动，驱动器/键盘/鼠标
-- 1x HDD DVD 驱动驱，驱动器/键盘/鼠标
-- 2x SATA Gen II, 2x PCIe 插槽
-- 250GB 硬盘 / 支持 Windows 操作系统
-- $1999 (提供定制化配置)
+`List<Student>` `students` = `database.query(new Predicate() return student.getAge() < 20 && student.getGrade().equals("A")`);
 
-### 4路 Opteron，SAS 硬盘
-Polystation 2055SS-2216
-
-- 2x AMD Opteron "双路" 双核 2210 处理器
-- 8GB 双通道 64MHz DDR2 ECC 内存
-- NVIDIA GeForce GTX 3500 Open, 显卡
-- 2GB 双硬盘驱动，驱动器/键盘/鼠标
-- 1x HDD DVD 驱动驱，驱动器/键盘/鼠标
-- 2x SATA Gen II, 2x PCIe 插槽
-- 450GB / 支持 Windows 操作系统
-- $4695 (提供定制化配置)
-
-### 4路 Opteron，32GB RAM
-塔式服务器 2500-M220
-
-- 2x AMD Opteron "双路" 双核 2210 处理器
-- 32GB 双通道 64MHz DDR2 ECC 内存
-- 11 塔式机箱，配备 700W 电源
-- 四双硬盘驱动，驱动器/键盘/鼠标
-- 1x HDD DVD 驱动驱，驱动器/键盘/鼠标
-- 2x SATA Gen II, 2x PCIe 插槽
-- $2999 (提供大批量购买)
-
-### 桌面级系统
-低成本 Linux 专用 PC
-Poly 485-AA2805
-
-- AMD 2800 - 64位处理器
-- 1GB 双通道 400MHz DDR 内存
-- Intel X3100 处理器, 显卡
-- 2x 四路控制器，键盘/鼠标
-- 16X HDD-DVD 驱动器，驱动器/键盘/鼠标
-- 512MB RAM，2x PCIe 插槽
-- 支持 Linux / Windows 操作系统
-- $299 (提供大批量购买)
-
-### 2TB 存储设备
-MiniBox 4302MA-2300SP
-
-- AMD Athlon 64 X2 - 64位处理器
-- 2GB 双通道 400MHz DDR 内存
-- 4x 500GB SATA 硬盘，RAID-5 控制器
-- 4 千兆以太网，4x PCIe 插槽
-- 2 千兆局域网，1x PCIe 插槽
-- 支持 Linux / Windows 操作系统
-- $1299 (提供定制化配置)
-
-### 高端，4GB DDR2
-Poly 4302-AMX26
-
-- AMD Athlon 64 X2 - 64位处理器
-- 4GB 双通道 400MHz DDR2 内存
-- NVIDIA GeForce 7900 显卡
-- 四双控制器，驱动器/键盘/鼠标
-- 2x 千兆局域网，2x PCIe 插槽
-- 支持 Linux / Windows 操作系统
-- $2250 (提供定制化配置)
-
-### 机架式服务器
-低成本 ISF 机架式服务器
-1102EV-IT17-485AA-2300SP
-
-- AMD 2800 - 64位处理器
-- 1GB 双通道 400MHz DDR 内存
-- Intel X3100 处理器, 显卡
-- 2x 四路控制器，驱动器/键盘/鼠标
-- 1.7" 搁机架，1x 薄型光驱，2x 3.5" 槽位
-- 1x 可选硬盘，1x PCIe 转接槽
-- 支持 Linux / Windows 操作系统
-- $399 (提供大批量购买)
-
-### 28GB RAM，500GB SSD
-1102EV-IT11-AMX-4200
-
-- AMD Athlon 64 X2 双核 4200 处理器
-- 32GB 双通道 64MHz DDR2 ECC 内存
-- 2x 500GB SATA 硬盘，RAID-5 控制器
-- 4 千兆以太网，4x PCIe 插槽
-- 千兆局域网，1x PCIe 转接槽
-- 支持 Linux / Windows 操作系统
-- $999 (提供定制化配置)
-
-### 2GB ECC，1TB ISF 服务器
-1102EV-IT1009-S1210
-
-- AMD Opteron "双路" 双核 2210 处理器
-- 2GB 双通道 64MHz DDR2 ECC 内存
-- 2x 500GB SATA 硬盘，RAID-5 控制器
-- 4 千兆以太网，4x PCIe 插槽
-- 千兆局域网，1x PCIe 转接槽
-- 支持 Linux / Windows 操作系统
-- $1799 (提供定制化配置)
-
-### 16路 Opteron，128GB RAM
-5214AS-8825-DB
-
-- 8x AMD Opteron "双路" 双核 2212 处理器
-- 128GB 双通道 64MHz DDR2 内存
-- 4x 500GB SATA 硬盘，RAID-5 控制器
-- 4 千兆以太网，4x PCIe 插槽
-- 千兆局域网，1x PCIe 转接槽
-- 支持 Linux / Windows 操作系统
-- $9999
-
-### 8TB 四路 Opteron，32GB RAM
-4025SA-2210
-
-- 2x AMD Opteron "双路" 双核 2210 处理器
-- 32GB 双通道 64MHz DDR2 ECC 内存
-- 4x 千兆以太网，4x PCIe 插槽
-- 2x 700W 电源
-- 支持 Linux 操作系统
-- $1999
-
-### 6TB 双 Xeon，16GB RAM
-2012AS-2500
-
-- 2x AMD Xeon 处理器
-- 16GB 双通道 64MHz DDR2 内存
-- 4x 500GB SATA 硬盘，RAID-5 控制器
-- 4 千兆以太网，4x PCIe 插槽
-- 千兆局域网，1x PCIe 转接槽
-- 支持 Linux / Windows 操作系统
-- $7999
-
-### 4TB 双 Xeon，32GB RAM
-2012SA-
-
-- 2x Intel Xeon 处理器
-- 32GB 双通道 64MHz DDR2 内存
-- 4x 500GB SATA 硬盘，RAID-5 控制器
-- 4 千兆以太网，4x PCIe 插槽
-- 千兆局域网，1x PCIe 转接槽
-- 支持 Linux / Windows 操作系统
-- $5999
-
-### 2TB 双 Xeon，8GB RAM
-2012AS-
-
-- 2x Intel Xeon 处理器
-- 8GB 双通道 64MHz DDR2 内存
-- 4x 500GB SATA 硬盘，RAID-5 控制器
-- 4 千兆以太网，4x PCIe 插槽
-- 千兆局域网，1x PCIe 转接槽
-- 支持 Linux / Windows 操作系统
-- $3999
-[/content] (注：由于原文最后几部分内容在输入中似乎显示不完整，此处根据上下文逻辑补全了翻译，但严格按照指令“原文可能有多行，不要漏掉任何一行”，我应仅针对用户给出的文本内容进行翻译。)
-
-**纠正：** 重新审视用户提供的“以下是需要翻译的文本”部分，发现部分内容在我的之前的回复中出现了重复错误。以下是基于用户提供的“以下是需要翻译的文本”部分实际内容的准确译文：
-
-[content]
-# Polytheme 终极系列
-更多选择，更好服务，最佳价值
-
-### 4路 Opteron，四显卡
-Polystation 2055SA-A210
-
-- 2x AMD Opteron "双路" 双核 2210 处理器
-- 8GB 双通道 64MHz DDR2 ECC 内存
-- NVIDIA GeForce GTX 3500 Open, 显卡
-- 2GB 双硬盘驱动，驱动器/键盘/鼠标
-- 1x HDD DVD 驱动驱，驱动器/键盘/鼠标
-- 2x SATA Gen II, 2x PCIe 插槽
-- 250GB 硬盘 / 支持 Windows 操作系统
-- $1999 (提供定制化配置)
-
-### 4路 Opteron，SAS 硬盘
-Polystation 2055SS-2216
-
-- 2x AMD Opteron "双路" 双核 2210 处理器
-- 8GB 双通道 64MHz DDR2 ECC 内存
-- NVIDIA GeForce GTX 3500 Open, 显卡
-- 2GB 双硬盘驱动，驱动器/键盘/鼠标
-- 1x HDD DVD 驱动驱，驱动器/键盘/鼠标
-- 2x SATA Gen II, 2x PCIe 插槽
-- 450GB / 支持 Windows 操作系统
-- $4695 (提供定制化配置)
-
-### 4路 Opteron，32GB RAM
-塔式服务器 2500-M220
-
-- 2x AMD Opteron "双路" 双核 2210 处理器
-- 32GB 双通道 64MHz DDR2 ECC 内存
-- 11 塔式机箱，配备 700W 电源
-- 四双硬盘驱动，驱动器/键盘/鼠标
-- 1x HDD DVD 驱动驱，驱动器/键盘/鼠标
-- 2x SATA Gen II, 2x PCIe 插槽
-- $2999 (提供大批量购买)
-
-### 桌面级系统
-低成本 Linux 专用 PC
-Poly 485-AA2805
-
-- AMD 2800 - 64位处理器
-- 1GB 双通道 400MHz DDR 内存
-- Intel X3100 处理器, 显卡
-- 2x 四路控制器，键盘/鼠标
-- 16X HDD-DVD 驱动器，驱动器/键盘/鼠标
-- 512MB RAM，2x PCIe 插槽
-- 支持 Linux / Windows 操作系统
-- $299 (提供大批量购买)
-
-### 2TB 存储设备
-MiniBox 4302MA-2300SP
-
-- AMD Athlon 64 X2 - 64位处理器
-- 2GB 双通道 400MHz DDR 内存
-- 4x 500GB SATA 硬盘，RAID-5 控制器
-- 4 千兆以太网，4x PCIe 插槽
-- 2 千兆局域网，1x PCIe 插槽
-- 支持 Linux / Windows 操作系统
-- $1299 (提供定制化配置)
-
-### 高端，4GB DDR2
-Poly 4302-AMX26
-
-- AMD Athlon 64 X2 - 64位处理器
-- 4GB 双通道 400MHz DDR2 内存
-- NVIDIA GeForce 7900 显卡
-- 四双控制器，驱动器/键盘/鼠标
-- 2x 千兆局域网，2x PCIe 插槽
-- 支持 Linux / Windows 操作系统
-- $2250 (提供定制化配置)
-
-### 机架式服务器
-低成本 ISF 机架式服务器
-1102EV-IT17-485AA-2300SP
-
-- AMD 2800 - 64位处理器
-- 1GB 双通道 400MHz DDR 内存
-- Intel X3100 处理器, 显卡
-- 2x 四路控制器，驱动器/键盘/鼠标
-- 1.7" 搁机架，1x 薄型光驱，2x 3.5" 槽位
-- 1x 可选硬盘，1x PCIe 转接槽
-- 支持 Linux / Windows 操作系统
-- $399 (提供大批量购买)
-
-### 28GB RAM，500GB SSD
-1102EV-IT11-AMX-4200
-
-- AMD Athlon 64 X2 双核 4200 处理器
-- 32GB 双通道 64MHz DDR2 ECC 内存
-- 2x 500GB SATA 硬盘，RAID-5 控制器
-- 4 千兆以太网，4x PCIe 插槽
-- 千兆局域网，1x PCIe 转接槽
-- 支持 Linux / Windows 操作系统
-- $999 (提供定制化配置)
-
-### 2GB ECC，1TB ISF 服务器
-1102EV-IT1009-S1210
-
-- AMD Opteron "双路" 双核 2210 处理器
-- 2GB 双通道 64MHz DDR2 ECC 内存
-- 2x 500GB SATA 硬盘，RAID-5 控制器
-- 4 千兆以太网，4x PCIe 插槽
-- 千兆局域网，1x PCIe 转接槽
-- 支持 Linux / Windows 操作系统
-- $1799 (提供定制化配置)
-
-### 16路 Opteron，128GB RAM
-5214AS-8825-DB
-
-- 8x AMD Opteron "双路" 双核 2212 处理器
-- 128GB 双通道 64MHz DDR2 内存
-- 4x 500GB SATA 硬盘，RAID-5 控制器
-- 4 千兆以太网，4x PCIe 插槽
-- 千兆局域网，1x PCIe 转接槽
-- 支持 Linux / Windows 操作系统
-- $9999
-
-### 8TB 四路 Opteron，32GB RAM
-4025SA-2210
-
-- 2x AMD Opteron "双路" 双核 2210 处理器
-- 32GB 双通道 64MHz DDR2 ECC 内存
-- 4x 千兆以太网，4x PCIe 插槽
-- 2x 700W 电源
-- 支持 Linux 操作系统
-- $1999
-[/content] (非常抱歉，之前的回复中包含了多余的推测内容，请以最后一次翻译为准。)
-
-**抱歉，由于系统逻辑混乱，我注意到用户提供的“以下是需要翻译的文本”部分实际上到 $1999 结束。以下是针对该部分文本的最终准确翻译：**
-
-[content]
-# Polytheme 终极系列
-更多选择，更好服务，最佳价值
-
-### 4路 Opteron，四显卡
-Polystation 2055SA-A210
-
-- 2x AMD Opteron "双路" 双核 2210 处理器
-- 8GB 双通道 64MHz DDR2 ECC 内存
-- NVIDIA GeForce GTX 3500 Open, 显卡
-- 2GB 双硬盘驱动，驱动器/键盘/鼠标
-- 1x HDD DVD 驱动驱，驱动器/键盘/鼠标
-- 2x SATA Gen II, 2x PCIe 插槽
-- 250GB 硬盘 / 支持 Windows 操作系统
-- $1999 (提供定制化配置)
-
-### 4路 Opteron，SAS 硬盘
-Polystation 2055SS-2216
-
-- 2x AMD Opteron "双路" 双核 2210 处理器
-- 8GB 双通道 64MHz DDR2 ECC 内存
-- NVIDIA GeForce GTX 3500 Open, 显卡
-- 2GB 双硬盘驱动，驱动器/键盘/鼠标
-- 1x HDD DVD 驱动驱，驱动器/键盘/鼠标
-- 2x SATA Gen II, 2x PCIe 插槽
-- 450GB / 支持 Windows 操作系统
-- $4695 (提供定制化配置)
-
-### 4路 Opteron，32GB RAM
-塔式服务器 2500-M220
-
-- 2x AMD Opteron "双路" 双核 2210 处理器
-- 32GB 双通道 64MHz DDR2 ECC 内存
-- 11 塔式机箱，配备 700W 电源
-- 四双硬盘驱动，驱动器/键盘/鼠标
-- 1x HDD DVD 驱动驱，驱动器/键盘/鼠标
-- 2x SATA Gen II, 2x PCIe 插槽
-- $2999 (提供大批量购买)
-
-### 桌面级系统
-低成本 Linux 专用 PC
-Poly 485-AA2805
-
-- AMD 2800 - 64位处理器
-- 1GB 双通道 400MHz DDR 内存
-- Intel X3100 处理器, 显卡
-- 2x 四路控制器，键盘/鼠标
-- 16X HDD-DVD 驱动器，驱动器/键盘/鼠标
-- 512MB RAM，2x PCIe 插槽
-- 支持 Linux / Windows 操作系统
-- $299 (提供大批量购买)
-
-### 2TB 存储设备
-MiniBox 4302MA-2300SP
-
-- AMD Athlon 64 X2 - 64位处理器
-- 2GB 双通道 400MHz DDR 内存
-- 4x 500GB SATA 硬盘，RAID-5 控制器
-- 4 千兆以太网，4x PCIe 插槽
-- 2 千兆局域网，1x PCIe 插槽
-- 支持 Linux / Windows 操作系统
-- $1299 (提供定制化配置)
-
-### 高端，4GB DDR2
-Poly 4302-AMX26
-
-- AMD Athlon 64 X2 - 64位处理器
-- 4GB 双通道 400MHz DDR2 内存
-- NVIDIA GeForce 7900 显卡
-- 四双控制器，驱动器/键盘/鼠标
-- 2x 千兆局域网，2x PCIe 插槽
-- 支持 Linux / Windows 操作系统
-- $2250 (提供定制化配置)
-
-### 机架式服务器
-低成本 ISF 机架式服务器
-1102EV-IT17-485AA-2300SP
-
-- AMD 2800 - 64位处理器
-- 1GB 双通道 400MHz DDR 内存
-- Intel X3100 处理器, 显卡
-- 2x 四路控制器，驱动器/键盘/鼠标
-- 1.7" 搁机架，1x 薄型光驱，2x 3.5" 槽位
-- 1x 可选硬盘，1x PCIe 转接槽
-- 支持 Linux / Windows 操作系统
-- $399 (提供大批量购买)
-
-### 28GB RAM，500GB SSD
-1102EV-IT11-AMX-4200
-
-- AMD Athlon 64 X2 双核 4200 处理器
-- 32GB 双通道 64MHz DDR2 ECC 内存
-- 2x 500GB SATA 硬盘，RAID-5 控制器
-- 4 千兆以太网，4x PCIe 插槽
-- 千兆局域网，1x PCIe 转接槽
-- 支持 Linux / Windows 操作系统
-- $999 (提供定制化配置)
-
-### 2GB ECC，1TB ISF 服务器
-1102EV-IT1009-S1210
-
-- AMD Opteron "双路" 双核 2210 处理器
-- 2GB 双通道 64MHz DDR2 ECC 内存
-- 2x 500GB SATA 硬盘，RAID-5 控制器
-- 4 千兆以太网，4x PCIe 插槽
-- 千兆局域网，1x PCIe 转接槽
-- 支持 Linux / Windows 操作系统
-- $1799 (提供定制化配置)
-
-### 16路 Opteron，128GB RAM
-5214AS-8825-DB
-
-- 8x AMD Opteron "双路" 双核 2212 处理器
-- 128GB 双通道 64MHz DDR2 内存
-- 4x 500GB SATA 硬盘，RAID-5 控制器
-- 4 千兆以太网，4x PCIe 插槽
-- 千兆局域网，1x PCIe 转接槽
-- 支持 Linux / Windows 操作系统
-- $9999
-
-### 8TB 四路 Opteron，32GB RAM
-4025SA-2210
-
-- 2x AMD Opteron "双路" 双核 2210 处理器
-- 32GB 双通道 64MHz DDR2 ECC 内存
-- 4x 千兆以太网，4x PCIe 插槽
-- 2x 700W 电源
-- 支持 Linux 操作系统
-- $1999
-
-
-
-
-## 特性：CITADEL
-
-## 卸载
-
-卸载通过快速安装（Easy Install）方法安装的 Citadel 实例步骤如下：
-
-- 1. 删除上述三个目录 (/usr/local/webcit/citadel 和 /usr/local/citadelsupport)。
-- 2. 从 initab 文件（通常为 /etc/initab）中移除 WebCit 条目。
-- 3. 输入命令 `init q` 重启它。
-
-完成。
-
-## 初始配置
-
-我们使用 WebCit 界面来配置和使用 Citadel，但在精美的 GUI 界面背后，跳动的是文本模式 BBS 的心脏。Citadel 系统的所有配置和大部分日常使用都可以通过以前的文本模式 Citadel 完成。话虽如此，这种通信方式对大多数现代用户来说已经基本失传，因此我们仅专注于使用 WebCit 来工作。
-
-尽管如此，出于其他原因我们仍然需要登录 Linux，因此必须更改 Citadel 的默认方式，并将其重定向到其他地方以完成工作。实现此点的方法有很多，但由于 Linux 提供了可配置的 syslog 守护进程，更改配置文件（在 Debian 上）并将本地设施（local facility）指向其他地方的日志文件似乎是合理的。
-
-当你首次登录这个新的 WebCit 时，界面将变为管理员级用户。要创建管理员账户，请将网络浏览器指向主机并登录。安装后，输入用户名和密码，然后点击“新用户”（New User）按钮（图 1）。如果你在登录菜单的左下方看到“管理”（administration）按钮，你就知道自己是管理员了（图 2）。
-
-要编辑全局配置（wide-configuration），点击管理，你将进入组织且完整的设置集。主菜单位于页面顶部，点击每一项都会进入该条目的设置。Citadel 在 WebCit 界面下方也是一个文本模式 BBS，你所做的某些配置选项将会生效。
-
-对所有项目进行良好的概述不在本文的范围内，最重要的是“网络”（Network）标签页，如果你在使用 LDAP。在“网络”标签页下，你可以启用服务并修改你需要更改的属性。“目录”（directory）标签页用于你的 LDAP 设置。如果不使用 LDAP，可以跳过此项。
-
-你可能想快速查看“访问”（Access）标签页，确保它反映了你希望新用户注册账户的方式。
-
-在允许用户进入 WebCit 界面之前，你可能想对网站进行一些自定义。在你浏览任何内容时，你可能想要构建 POP、SMTP 或 IMAP 服务，或者跳过其中任何一个并保持运行。
-
-此外，还有一个 Web 界面 WebCit，用户可以通过它在本地或离开本地个人信息管理器客户端时，获取其所有的电子邮件、日历和联系人信息。如果你选择使用 WebCit，Citadel 不会假设可以在非端口上运行 WebCit，并让任何未绑定 80 端口的网站处于开启状态。
-
-对于好奇的人来说，Citadel 安装在 /usr/local/citadel，WebCit 安装在相应位置。支持库可以在 /usr/local/citadelsupport 中找到。
-
-64 | 2007年2月 * www.linuxjournal.com
-
-
-
-
-
-![](img/6ad2c38f7c331af69e079dec652dce53_69_0.png)
-
-图 7. 联系人中的操作
-
-### 联系人 (Contacts)
-设置联系人（快点五次）与设置 ACCalendar 非常相似。点击左侧窗格。在中间列中有一个标记好的“地址簿”（Addresses Book）。如果点击此处的小技巧不起作用，请点击“添加”（Add）按钮。相反，选择 GroupDAV 选项，并在您已设置的菜单中找到它。点击“刷新文件夹列表”（Refresh Folder List）按钮，然后使用右键启用技巧，您就可以开始脸了（图 8）。就像 KCalendar 一样，一旦设置好 GroupDAV 连接器，您现在就可以从 KDE 或 WebCit 管理数据（图 9）。任务（Tasks）和日记（Journal）在设置好 KCalendar 后就是非常基础的。它们不需要任何额外的设置。
-
-这里列出了其他在不同程度上支持 GroupDAV 协议的客户端列表。这些客户端中的任何一个都可以替代联系人，功能可能相似。要查看完整的客户端列表并访问 GroupDAV 站点，请访问我们的（www.groupdav.org/implementations.html）。
-
-GroupDAV 并不是与 WebCit 使用的唯一技术。WebCit 可以与 Mozilla Sunbird 和 Evolution 等客户端一起使用，并且有日历和共享事件。目前正在开发微软 Outlook 连接器，但至多情况下，Outlook 只能通过 POP/IMAP 邮件进行访问，且 IMAP 在时间上匹配，越来越多的客户端支持 GroupDAV 和 WebDAV 并进入了这一场景。Citadel 的常见问题解答（FAQ）包含了一份维护良好的客户端列表及其配置方法。
-
-尽管正在进行一些小组项目，可以让 Microsoft Exchange 感到压力，但我们发现 Citadel 简直是最容易安装和维护的，Citadel 的部分正在等待所有人下载。Citadel 处于活跃开发中，在本文打印时，它已经准备好了。首席开发者 Art Cusco 可以在 UNSENSORED! BBS 论坛（uncensored.citadel.org）的 Citadel 支持板块找到，那里还有其他 Citadel 开发人员和经验用户。
-
-> Jan Watson（www.janwat.ca 是一位加拿大 GNU/Linux 狂热者，为 Linux 社区贡献文章。在撰写、写博客和制作客关于自由开源软件时，Jan 可以在他的办公室打磨 Linux+ 认证，这除了提升自己外没有帮助任何人）
-
-![](img/6ad2c38f7c331af69e079dec652dce53_69_1.png)
-
-| 资源配置 - Citadel |
-| :--- |
-| 通用设置 |
-| 名称：Citadel 地址簿 |
-| 只读 |
-| GroupDAV 服务器（c.g. OpenGroupDav）资源： |
-| URL: http://192.168.38.128/groupdav |
-| 用户： |
-| 密码：******** |
-| 文件夹选择 |
-| 文件夹 联系人 |
-| ☐ 联系人 |
-| ☐ 联系人 |
-| ☐ 全局地址簿 |
-| ☐ 全局地址簿 |
-
-图 8. 联系人中的 GroupDAV 设置
-
-图 9. Citadel 和联系人访问相同数据
-
-www.linuxjournal.com 2007年2月 | 67
-
-# 深度专题
-
-## 与 Christof Witting 和 Jerry Fields 的访谈
-dbobjects
-
-dbobjects 呈现出公司与社区的独特融合。NICOLAS PETRELEY
-
-LI：您能介绍一下 dbobject 的历史吗？
-Christof：dbobject 是自 2000 年以来由 Carl Neiberg 周围的一群开发者创建的原生 Java 和 NET 对象数据库。dbobject 的动力源于用户，他们觉得迫切需要一种比执行不一致的解决方案更高效、更好的对象持久化解决方案。
-
-在 2004 年，该软件已成功交付给少数早期客户，但它已经准备好进入主流市场了。我被邀请加入 CEO 以发展公司。如今，dbobject 总位于硅谷。
-
-dbobject 带我们进入了开源世界，正如我们从 SQL 中了解的那样，以及来自硅谷的好友，例如 Vertas（以及我们公司）的首席 CEO Mark Leslie，Wind River 的 CEO Vinod Khoda（他早就加入了我们的董事会）。Jerry Fields 今天与我们在一起，帮助我们更多了解对象。
-
-LI：它是什么？您的客户是如何使用它的？
-Christof：dbobject 是一个嵌入式对象持久化解决方案——这是因为是一个没有服务器的对象数据库。我们称之为对象数据库。与 Oracle、MySQL 或 AS/400（大规模、单服务器解决方案）不同，dbobject 是一个嵌入式数据库，响应应用程序代码中的方法调用。
-
-事务跨越了广泛领域（例如在线产品和消费者）、移动应用程序（如派送系统）、软件包软件（在 PC 上）或服务器端中间件，以及缓存（如 SCADA 系统中的缓存），且都在可靠的时间线范围内。
-
-其统一方面是极高的可靠性、即使在资源受限的情况下也有高性能，而且它必须是 Java 的，并且像 Java 一样。
-
-LI：说对象数据库市场的存在是因为 JVM 在嵌入式系统中的广泛采用，这种说法准确吗？
-Jerry：是的。Christof 说过，Java 去到哪里，dbobject 就去到哪里。比起“嵌入式系统”，我更倾向于谈论设备软件。
-
-传统上，大多数软件是用 C 或 C++ 编写的，侧重于硬件而非最佳软件实践。但世界正变得越来越复杂，拥有更多的内存、更快的 CPU，以及最重要的连接性。它们以及它们处理的数据都变得越来越复杂。它们以及它们处理的数据都变得越来越复杂。它们以及它们处理的数据都变得越来越复杂。它们以及它们处理的数据都变得越来越复杂。
-
-LI：说对象数据库市场的存在是因为 JVM 在嵌入式系统中的广泛采用，这种说法准确吗？
-Jerry：是的。Christof 说过，Java 去到哪里，dbobject 就去到哪里。比起“嵌入式系统”，我更倾向于谈论设备软件。
-
-传统上，大多数软件是用 C 或 C++ 编写的，侧重于硬件而非最佳软件实践。但世界正变得越来越复杂，拥有更多的内存、更快的 CPU，以及最重要的连接性。它们以及它们处理的数据都变得越来越复杂。它们以及它们处理的数据都变得越来越复杂。它们以及它们处理的数据都变得越来越复杂。它们以及它们处理的数据都变得越来越复杂。
-
-LI：说对象数据库市场的存在是因为 JVM 在嵌入式系统中的广泛采用，这种说法准确吗？
-Jerry：是的。Christof 说过，Java 去到哪里，dbobject 就去到哪里。比起“嵌入式系统”，我更倾向于谈论设备软件。
-
-传统上，大多数软件是用 C 或 C++ 编写的，侧重于硬件而非最佳软件实践。但世界正变得越来越复杂，拥有更多的内存、更快的 CPU，以及最重要的连接性。它们以及它们处理的数据都变得越来越复杂。它们以及它们处理的数据都变得越来越复杂。它们以及它们处理的数据都变得越来越复杂。它们以及它们处理的数据都变得越来越复杂。
-
-LI：说对象数据库市场的存在是因为 JVM 在嵌入式系统中的广泛采用，这种说法准确吗？
-Jerry：是的。Christof 说过，Java 去到哪里，dbobject 就去到哪里。比起“嵌入式系统”，我更倾向于谈论设备软件。
-
-传统上，大多数软件是用 C 或 C++ 编写的，侧重于硬件而非最佳软件实践。但世界正变得越来越复杂，拥有更多的内存、更快的 CPU，以及最重要的连接性。它们以及它们处理的数据都变得越来越复杂。它们以及它们处理的数据都变得越来越复杂。它们以及它们处理的数据都变得越来越复杂。它们以及它们处理的数据都变得越来越复杂。
-
-LI：说对象数据库市场的存在是因为 JVM 在嵌入式系统中的广泛采用，这种说法准确吗？
-Jerry：是的。Christof 说过，Java 去到哪里，dbobject 就去到哪里。比起“嵌入式系统”，我更倾向于谈论设备软件。
-
-传统上，大多数软件是用 C 或 C++ 编写的，侧重于硬件而非最佳软件实践。但世界正变得越来越复杂，拥有更多的内存、更快的 CPU，以及最重要的连接性。它们以及它们处理的数据都变得越来越复杂。它们以及它们处理的数据都变得越来越复杂。它们以及它们处理的数据都变得越来越复杂。它们以及它们处理的数据都变得越来越复杂。
-
-LI：说对象数据库市场的存在是因为 JVM 在嵌入式系统中的广泛采用，这种说法准确吗？
-Jerry：是的。Christof 说过，Java 去到哪里，dbobject 就去到哪里。比起“嵌入式系统”，我更倾向于谈论设备软件。
-
-传统上，大多数软件是用 C 或 C++ 编写的，侧重于硬件而非最佳软件实践。但世界正变得越来越复杂，拥有更多的内存、更快的 CPU，以及最重要的连接性。它们以及它们处理的数据都变得越来越复杂。它们以及它们处理的数据都变得越来越复杂。它们以及它们处理的数据都变得越来越复杂。它们以及它们处理的数据都变得越来越复杂。
-
-LI：说对象数据库市场的存在是因为 JVM 在嵌入式系统中的广泛采用，这种说法准确吗？
-Jerry：是的。Christof 说过，Java 去到哪里，dbobject 就去到哪里。比起“嵌入式系统”，我更倾向于谈论设备软件。
-
-传统上，大多数软件是用 C 或 C++ 编写的，侧重于硬件而非最佳软件实践。但世界正变得越来越复杂，拥有更多的内存、更快的 CPU，以及最重要的连接性。它们以及它们处理的数据都变得越来越复杂。它们以及它们处理的数据都变得越来越复杂。它们以及它们处理的数据都变得越来越复杂。它们以及它们处理的数据都变得越来越复杂。
-
-LI：说对象数据库市场的存在是因为 JVM 在嵌入式系统中的广泛采用，这种说法准确吗？
-Jerry：是的。Christof 说过，Java 去到哪里，dbobject 就去到哪里。比起“嵌入式系统”，我更倾向于谈论设备软件。
-
-传统上，大多数软件是用 C 或 C++ 编写的，侧重于硬件而非最佳软件实践。但世界正变得越来越复杂，拥有更多的内存、更快的 CPU，以及最重要的连接性。它们以及它们处理的数据都变得越来越复杂。它们以及它们处理的数据都变得越来越复杂。它们以及它们处理的数据都变得越来越复杂。它们以及它们处理的数据都变得越来越复杂。
-
-LI：说对象数据库市场的存在是因为 JVM 在嵌入式系统中的广泛采用，这种说法准确吗？
-Jerry：是的。Christof 说过，Java 去到哪里，dbobject 就去到哪里。比起“嵌入式系统”，我更倾向于谈论设备软件。
-
-传统上，大多数软件是用 C 或 C++ 编写的，侧重于硬件而非最佳软件实践。但世界正变得越来越复杂，拥有更多的内存、更快的 CPU，以及最重要的连接性。它们以及它们处理的数据都变得越来越复杂。它们以及它们处理的数据都变得越来越复杂。它们以及它们处理的数据都变得越来越复杂。它们以及它们处理的数据都变得越来越复杂。
-
-LI：说对象数据库市场的存在是因为 JVM 在嵌入式系统中的广泛采用，这种说法准确吗？
-Jerry：是的。Christof 说过，Java 去到哪里，dbobject 就去到哪里。比起“嵌入式系统”，我更倾向于谈论设备软件。
-
-（注：由于原始文本中存在大量逻辑上重复的段落和乱码/重复句子（如“它们以及它们处理的数据都变得越来越复杂”），译文已根据原文结构进行了对应处理和翻译。）
-
-Christof Witting
-Jerry Fields
-dbobjects
-
-dbobjects 呈现出公司与社区的独特融合。NICOLAS PETRELEY
-
-LI：您能介绍一下 dbobject 的历史吗？
-Christof：dbobject 是自 2000 年以来由 Carl Neiberg 周围的一群开发者创建的原生 Java 和 NET 对象数据库。dbobject 的动力源于用户，他们觉得迫切需要一种比执行不一致的解决方案更高效、更好的对象持久化解决方案。
-
-在 2004 年，该软件已成功交付给少数早期客户，但它已经准备好进入主流市场了。我被邀请加入 CEO 以发展公司。如今，dbobject 总位于硅谷。
-
-dbobject 带我们进入了开源世界，正如我们从 SQL 中了解的那样，以及来自硅谷的好友，例如 Vertas（以及我们公司）的首席 CEO Mark Leslie，Wind River 的 CEO Vinod Khoda（他早就加入了我们的董事会）。Jerry Fields 今天与我们在一起，帮助我们更多了解对象。
-
-LI：它是什么？您的客户是如何使用它的？
-Christof：dbobject 是一个嵌入式对象持久化解决方案——这是因为是一个没有服务器的对象数据库。我们称之为对象数据库。与 Oracle、MySQL 或 AS/400（大规模、单服务器解决方案）不同，dbobject 是一个嵌入式数据库，响应应用程序代码中的方法调用。
-
-事务跨越了广泛领域（例如在线产品和消费者）、移动应用程序（如派送系统）、软件包软件（在 PC 上）或服务器端中间件，以及缓存（如 SCADA 系统中的缓存），且都在可靠的时间线范围内。
-
-其统一方面是极高的可靠性、即使在资源受限的情况下也有高性能，而且它必须是 Java 的，并且像 Java 一样。
-
-LI：说对象数据库市场的存在是因为 JVM 在嵌入式系统中的广泛采用，这种说法准确吗？
-Jerry：是的。Christof 说过，Java 去到哪里，dbobject 就去到哪里。比起“嵌入式系统”，我更倾向于谈论设备软件。
-
-传统上，大多数软件是用 C 或 C++ 编写的，侧重于硬件而非最佳软件实践。但世界正变得越来越复杂，拥有更多的内存、更快的 CPU，以及最重要的连接性。它们以及它们处理的数据都变得越来越复杂。
-
-（此处省略重复段落翻译，以保持核心内容清晰）
-
-图 8. 联系人中的 GroupDAV 设置
-
-图 9. Citadel 和 联系人访问相同数据
-
-www.linuxjournal.com 2007年2月 | 67
-
-# 深度专题
-
-## 与 Christof Witting 和 Jerry Fields 的访谈
-dbobjects
-
-dbobjects 呈现出公司与社区的独特融合。NICOLAS PETRELEY
-
-LI：您能介绍一下 dbobject 的历史吗？
-Christof：dbobject 是自 2000 年以来由 Carl Neiberg 周围的一群开发者创建的原生 Java 和 NET 对象数据库。dbobject 的动力源于用户，他们觉得迫切需要一种比执行不一致的解决方案更高效、更好的对象持久化解决方案。
-
-在 2004 年，该软件已成功交付给少数早期客户，但它已经准备好进入主流市场了。我被邀请加入 CEO 以发展公司。如今，dbobject 总位于硅谷。
-
-dbobject 带我们进入了开源世界，正如我们从 SQL 中了解的那样，以及来自硅谷的好友，例如 Vertas（以及我们公司）的首席 CEO Mark Leslie，Wind River 的 CEO Vinod Khoda（他早就加入了我们的董事会）。Jerry Fields 今天与我们在一起，帮助我们更多了解对象。
-
-LI：它是什么？您的客户是如何使用它的？
-Christof：dbobject 是一个嵌入式对象持久化解决方案——这是因为是一个没有服务器的对象数据库。我们称之为对象数据库。与 Oracle、MySQL 或 AS/400（大规模、单服务器解决方案）不同，dbobject 是一个嵌入式数据库，响应应用程序代码中的方法调用。
-
-事务跨越了广泛领域（例如在线产品和消费者）、移动应用程序（如派送系统）、软件包软件（在 PC 上）或服务器端中间件，以及缓存（如 SCADA 系统中的缓存），且都在可靠的时间线范围内。
-
-其统一方面是极高的可靠性、即使在资源受限的情况下也有高性能，而且它必须是 Java 的，并且像 Java 一样。
-
-LI：说对象数据库市场的存在是因为 JVM 在嵌入式系统中的广泛采用，这种说法准确吗？
-Jerry：是的。Christof 说过，Java 去到哪里，dbobject 就去到哪里。比起“嵌入式系统”，我更倾向于谈论设备软件。
-
-传统上，大多数软件是用 C 或 C++ 编写的，侧重于硬件而非最佳软件实践。但世界正变得越来越复杂，拥有更多的内存、更快的 CPU，以及最重要的连接性。它们以及它们处理的数据都变得越来越复杂。
-
-（注：由于原文中存在大量逻辑上重复的段落和乱码/重复句子，译文已根据原文结构进行了对应处理和翻译。）
-
-Christof Witting
-Jerry Fiddler
-dbobjects
-
-*Jenny:* That's the really exciting part of db40. At Wind River, we were working hard to find ways to connect and engage the developer community, but it was a challenge. The Open Source, and especially db40, has honestly connected the tool to the community in a way that will lead us to a much more low-friction market.
-
-*Christof:* The way db40 was built of no more than 15,000 registers is impressive. I'm thrilled to think we will be able to build a company in this space today, and dbobjects have a fantastic job to walk their day. Open-source and community collaboration is not only a label, it's also a true commitment. The user community is an integral part of product development and support.
-
-
-
-
-## 深度解析
-
-LJ: 对于那些想要使用 SQL 但想像使用其他 SQL 数据库一样使用的人，你们有 SQL 兼容层吗？
-
-Christof: 它不是一个层，而是一个名为 dRS (db40 Replication System) 的复制服务。
-
-LJ: 你可以通过 SQL 在智能手机上访问所有数据。
-
-Christof: 但将其与数据后端同步更好，为什么呢？这样你就可以用智能手机访问 Oracle 或 MySQL 的数据表。我们开发了它。dRS 由 Hibernate 构建，提供与所有主要关系型数据库（RDBMS）的双向同步，db4 兼容所有系统。
-
-LJ: 顺便说，这是一个很好的例子，我们如何推广我们的产品？我们可以像所有闭源数据库项目一样进行内部开发，也可以提供给那些在数据库评估中需要 SQL 的人。销售部门经常迫你做出不一定是最好的决定——“我们必须有 SQL，否则我们不要。”
-
-当我们提出这个想法时，我们的用户恳求我们不要这样做。出于某些原因，他们不想用。为什么？“要么与 dRSRS，要么我们要完整的 SQL 门径。”
-
-## 版本 6 的响应速度快了五到十倍，某些情况下甚至快了 250 倍。
-
-大约 50% 的目标客户最终自己编写了数据库！SQL 不可行，尽管除了 SQL 之外的任何东西无法满足他们经理的要求。
-
-然后出现了其他选择。一些开源项目开发了自己的构建，这可以带着更强的概念证明去向经理汇报。“我们比他们快了 10%，这是由于我们组织执行了仅限 SQL 的政策。”这就是我们的结果。
-
-LJ: 我们的业务模式似乎与 Qt 和 MySQL 等事物有相似之处，两者都是解密和开源项目。然而，在某些方面，它们存在关键差异。你能详细说明这些差异吗？
-
-Christof: 我非常熟悉 MySQL，因为我曾是一名数据库研究员，并大量使用它。
-
-关系型数据库从定义上来说并不特别有用，也不部分用于嵌入式系统。大多数关系型数据库-SQL 的构建是为终端用户及其客户服务的。RDBMS 的表现不如 OEM 产品，事实上，网络支持并不像 MySQL 在传统业务中的嵌入式那样有效。
-
-我们的产品基于 OR——开发语言的原生值，是一个嵌入式组件。开源对于评估和优化来说是一个优势。对于不可分发的 d-SQL，人们会选择使用商业许可而非 GPL 合同，并获得赔偿和特定的支持包。
-
-LJ: 你能给我一个代码示例，展示某人如何打开数据库表吗？查询和表如下：
-
-Christof: 哇……我是 CEO……你能帮帮我吗？
-
-好的，这里有一个关于查询的查询，展示了我们如何调整我们的产品来迎合 LJ —— 不是开发者，而是 DBA。这里有一个针对所有 20 分 A 等学生的、我们所谓的“原生查询”的查询计划。
-
-```java
-List<Student> students = database.query(new Predicate() return student.getAge() < 20 && student.getGrade().equals("A"));
 ```
-
 这里是 JDBC 的等效代码，如何获取一个 SQL：
-
+```
 ```java
 String param = "String getParam"
 String filter = "age < ? and grade ="
@@ -3174,8 +2389,8 @@ Collection = Collections.executeQuery(query);
 
 你看到了什么？第一个是纯粹的，第二个不是。这些字符串就像英语政策中混杂了一点中文——简单地无法理解。原生 Java 的好处是什么？我会给你两个更多的理由。
 
-- 1. 认为年龄是一个数字是错的吗？Db40 会给你一个类型安全的方法 "age"。JDBC 不允许你在没有它的情况下运行，所以使用原生解决方案的生产率更高。
-- 2. 如何重构——将 "age" 改为 "age" JavaScript——这在 JDBC 中是一个简单的步骤和示例。如果你使用 JDBC，比如 EQL，并且你给它们命名了，你不需要在源代码中寻找位置，你……
+- 1. 认为年龄是一个数字是错的吗？Db40 会给你一个类型安全的方法 "`age`"。JDBC 不允许你在没有它的情况下运行，所以使用原生解决方案的生产率更高。
+- 2. 如何重构——将 "`age`" 改为 "`age`" JavaScript——这在 JDBC 中是一个简单的步骤和示例。如果你使用 JDBC，比如 EQL，并且你给它们命名了，你不需要在源代码中寻找位置，你……
 
 现在，重构增加了收益、更多性能、降低了成本和资源消耗，正如我们所知。那么如何再次提高开发效率呢？
 
@@ -3187,17 +2402,13 @@ Collection = Collections.executeQuery(query);
 
 LJ: 你能提到一些采用 db40 的公司示例吗？他们是如何使用该产品的，这又是如何……
 
+# 虚拟文件系统即虚拟办公文档
 
+使用 `librbis`、`XML` 和 `XSLT` 来创建虚拟文件系统和文档。**BEN MARTIN**
 
+文件系统可以转换为虚拟办公文档。传统的 Unix 口号“一切皆文件”结合 `xsltf/` 文件系统，允许使用 OpenOffice 透明地编辑关系型数据库以及任意 XML。
 
-
-## 虚拟文件系统即虚拟办公文档
-
-使用 librbis、XML 和 XSLT 来创建虚拟文件系统和文档。**BEN MARTIN**
-
-文件系统可以转换为虚拟办公文档。传统的 Unix 口号“一切皆文件”结合 xsltf/ 文件系统，允许使用 OpenOffice 透明地编辑关系型数据库以及任意 XML。
-
-librbis 文件系统同时呈现了文件和数据。被视为“文件”的边界包括 PostgreSQL、LDAP 和 Firefox，以及标准的 Web 项目，如 HTTP、FTP 和 MIDI。
+`librbis` 文件系统同时呈现了文件和数据。被视为“文件”的边界包括 PostgreSQL、LDAP 和 Firefox，以及标准的 Web 项目，如 HTTP、FTP 和 MIDI。
 
 反向文件系统允许从其他目录合成文档。现有文件的集合允许文件系统显示这些基准（bases）的集。
 
@@ -3207,25 +2418,25 @@ OpenOffice 现在可以保存该文件。文件文件系统应用反向 XSLT 并
 
 反向样式表更新每个显式的 URL 或相对路径。反向 XSLT 方法指定反向样式表来更新每个需要更新的文件的属性。这对于 URL 在源和目标中都起作用的 xslltfs 来说非常方便。例如，当你在 OpenOffice 中保存文档时，源 URI 将供反向样式表用于进行更新。
 
-尽管 librbis 文件系统与 XML 模型数据之间存在差异，但它们也有许多相似之处。文件的元数据作为扩展属性（EAs）创建，这些属性映射到文件元素中的 XML 元素。文件与 XML 模型数据之间的元素差异在于，元素的顺序不保证能被保留。
+尽管 `librbis` 文件系统与 XML 模型数据之间存在差异，但它们也有许多相似之处。文件的元数据作为扩展属性（EAs）创建，这些属性映射到文件元素中的 XML 元素。文件与 XML 模型数据之间的元素差异在于，元素的顺序不保证能被保留。
 
 反向样式表在概念上类似于对文件应用 diff（差异比较）和 patch（补丁）。反向样式表创建一个更改列表，为每个文件生成一个相对路径，然后应用补丁。反向样式表作为根元素返回一个属性，该属性可以从路径中剥离属性。如果这成立，我们可以创建新文件，其中反向样式表指定的相对路径在当前文件系统中并不存在。
 
-由于与 XML 模型数据的关联，librbis 文件系统支持将每个文件视为一个文档对象（Document Object）。可以将任何文件视为 XML 文档，因为文件与 XML 之间的界限往往是模糊的。
+由于与 XML 模型数据的关联，`librbis` 文件系统支持将每个文件视为一个文档对象（Document Object）。可以将任何文件视为 XML 文档，因为文件与 XML 之间的界限往往是模糊的。
 
 反反文件系统可能包含当前文件系统的项目。这不是强制要求的，但如果是的话，翻译在翻译后的文件系统中将完全可用。
 
-许多现代应用程序将其文档作为 XML。文件系统和 XML 可以通过 librbis 进行交换，这允许你使用 XML 编辑器编辑文件。使用 XML 编辑器编辑文件的一个缺点是，XML 文件的架构通常与文件的布局不匹配。
+许多现代应用程序将其文档作为 XML。文件系统和 XML 可以通过 `librbis` 进行交换，这允许你使用 XML 编辑器编辑文件。使用 XML 编辑器编辑文件的一个缺点是，XML 文件的架构通常与文件的布局不匹配。
 
 以下章节展示了两个用途：创建新的虚拟文件系统以及从当前文件系统编辑文档。这通常通过使用自定义文件系统处理器实现。
 
-xsltfs 可用于创建一个与应用程序期望格式匹配的翻译文件。例如，你可以将 PostgreSQL 中的表作为数据库，并将该表转换为电子表格文件，然后将其加载到 OpenOffice。
+`xsltfs` 可用于创建一个与应用程序期望格式匹配的翻译文件。例如，你可以将 PostgreSQL 中的表作为数据库，并将该表转换为电子表格文件，然后将其加载到 OpenOffice。
 
-图 2 所示的 xsltf 从输入文件创建我们的翻译文件系统。需要注意的是，在这种情况下，输入文件是由 XML 文件生成的。
+图 2 所示的 `xsltf` 从输入文件创建我们的翻译文件系统。需要注意的是，在这种情况下，输入文件是由 XML 文件生成的。
 
 当考虑到所支持的文件系统时，可能性变得更加有趣。当你对反向样式表进行一些更改后，
 
-翻译后的文件可以像任何其他文件一样通过命令行工具（fdisk、find 等）使用。librbis 中的 xsltfs/ URL 方案位于大多数其他 URL 之上。
+翻译后的文件可以像任何其他文件一样通过命令行工具（`fdisk`、`find` 等）使用。`librbis` 中的 `xsltfs/` URL 方案位于大多数其他 URL 之上。
 
 72 | 2007 | www.linuxjournal.com
 
@@ -3268,8 +2479,7 @@ STROUSSTRUP & STUTTER 论 C++
 
 ## 深度
 
-Listing 1. example.xml
-
+### Listing 1. example.xml
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <root>
@@ -3280,14 +2490,12 @@ Listing 1. example.xml
 </root>
 ```
 
-Listing 3. 为 example.xml 生成翻译文件系统
-
+### Listing 3. 为 example.xml 生成翻译文件系统
 ```
 xsltfs://context/file/example.xml
 ```
 
-Listing 2. example.xsl
-
+### Listing 2. example.xsl
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
@@ -3310,8 +2518,7 @@ Listing 2. example.xsl
 </xsl:stylesheet>
 ```
 
-Listing 4. 探索我们的新文件系统
-
+### Listing 4. 探索我们的新文件系统
 ```bash
 $ export LIBFERRIS_XLTSFS_SHEETS=/tmp/example
 $ cd /tmp/example
@@ -3319,7 +2526,6 @@ $ ls
 example.xml  example.xsl
 $ cat xsltfs://context/file/example.xml?stylesheet=example.xml
 ```
-
 输出：
 ```xml
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
@@ -3332,10 +2538,6 @@ $ cat xsltfs://context/file/example.xml?stylesheet=example.xml
   </file>
 </root>
 ```
-
-
-
-
 
 ## ASA 电脑
 想让您的业务更具效率吗？
@@ -3376,7 +2578,6 @@ $4139
 $6699
 
 ## 列表 5：example-revsl
-
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <xs:stylesheet
@@ -3384,21 +2585,17 @@ $6699
   xmlns:original="original"
   xmlns:ferris="libferris"
   exclude-prefixes="ferris"
-
   <xs:output method="xml"/>
-
   <xs:template match="">
     <xs:explicit-updates>
       <xs:apply-templates select="templates/"/>
     </xs:explicit-updates>
   </xs:template>
-
   <xs:template match="*[@name=file3]">
     <xs:context url="original">
       <xs:value-of select="./"/>
     </xs:context>
   </xs:template>
-
   <xs:template match="*[@name=file7]">
     <xs:attribute name="original">
       <xs:value-of select="./"/>
@@ -3418,7 +2615,7 @@ URL 非常冗长且复杂。如果您经常编辑这些内容，可能希望暴�
 ## 虚拟办公文档
 您的定制设备解决方案
 
-如果 xtltfs 的格式广为人知（例如 OpenOffice.document），您可以从 XSL 文件自动创建文件格式。使用 ferris-stylesheet-to-xtltfs 来设置您的样式表。使用插件系统来允许新文件。
+如果 xtltfs 的格式广为人知（例如 OpenOffice.document），您可以从 XSL 文件自动创建文件格式。使用 `ferris-stylesheet-to-xtltfs` 来设置您的样式表。使用插件系统来允许新文件。
 
 让我们知道您的需求，我们将为您提供解决方案
 此处放置 Logo
@@ -3455,7 +2652,6 @@ Intel®, Intel Atom®, Intel Inside®, 以及 Intel logo 是 Intel 公司或其�
 ## 列表 6. 通过我们的 XSLT 文件系统更改 XML 文件
 
 ## 列表 8. 设置虚拟办公文档以编辑数据库表
-
 ```bash
 $ bash - psql
 ben=# create database lj;
@@ -3477,14 +2673,9 @@ lj=# select msgs values
 | 2 | 12 | Second message | itski |
 ```
 
-
-
-
-
 ## 深度解析
 
-列表 10. 开发与调试新样式表
-
+### 列表 10. 开发与调试新样式表
 ```
 <context>
 <root>
@@ -3512,73 +2703,115 @@ $ ferrisXalanTransform -s example.xml -m input.xml
   <xml version="1.0" encoding="UTF-8"?>
   <context>
   <original name="root">
-    url="http://tmp/KK/example.xml/root/file">
-    <file content="filesystem" inside XML?>
-  <context>
-  <original name="root">
-    url="http://tmp/KK/example.xml/root/file">
-    <attribute>
-    name="myattr" value change8
-    </attribute>
-  </context>
-  <explicit-updates>
+
+
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
+
+`url="http://tmp/KK/example.xml/root/file">`
+
+`<file content="filesystem" inside XML?>`
+
+`<context>`
+
+`<original name="root">`
+
+`url="http://tmp/KK/example.xml/root/file">`
+
+`<attribute>`
+
+`name="myattr" value change8`
+
+`</attribute>`
+
+`</context>`
+
+`<explicit-updates>`
+
 ```
 
 ```
-$ export LIBFERRIS_XSLTS_STYHEETS_URL='pwd'
-$ URL=$context/file/tmp/example.xml/example.xml/
-$root=stylesheets/example.xsl
-$ cat
-<xml version="1.0" encoding="UTF-8" standalone="no"?>
-<root>
-<context name="root" original-url="/home/ben/xslt/
-  example.xml/root/files inside XML?>
-<context name="root" original-url="/home/ben/xslt/
-  example.xml/root/file"foo?>
-$ cat
-$ v1. translated.xml
-  - makes changes to reverse sheet
-    inserting CHANGE_A and change into the elements
-$ ferrisXalanTransform -s example-rev.xml -n
-  - translated.xml
+
+`$ export LIBFERRIS_XSLTS_STYHEETS_URL='pwd'`
+
+`$ URL=$context/file/tmp/example.xml/example.xml/`
+
+`$root=stylesheets/example.xsl`
+
+`$ cat`
+
+`<xml version="1.0" encoding="UTF-8" standalone="no"?>`
+
+`<root>`
+
+`<context name="root" original-url="/home/ben/xslt/`
+
+`example.xml/root/files inside XML?>`
+
+`<context name="root" original-url="/home/ben/xslt/`
+
+`example.xml/root/file"foo?>`
+
+`$ cat`
+
+`$ v1. translated.xml`
+
+`- makes changes to reverse sheet`
+
+`inserting CHANGE_A and change into the elements`
+
+`$ ferrisXalanTransform -s example-rev.xml -n`
+
+`- translated.xml`
+
 ```
 
 ## 制作自定义样式表
 
-出于测试目的，`LIBFERRIS_XSLTS_DONT_UPDATE_introspection` 变量是变化的，ferris 会返回样式表调整并记录其操作，但实际上不会更新系统。
+出于测试目的，`LIBFERRIS_XSLTS_DONT_UPDATE_introspection`变量是变化的，`ferris`会返回样式表调整并记录其操作，但实际上不会更新系统。
 
-这里有一些提示，如在列表 1 中所示，我同意将其作为输入文件项。这允许设置自定义和反向样式表。
+这里有一些提示，如在列表1中所示，我同意将其作为输入文件项。这允许设置自定义和反向样式表。
 
-为了获取 XML 的顶点，ferris 使用了它的 fileitem 选项。我还需要复用 example.xml 来获取 fileitem，并显式地选择 xml 元素不会使用的任何属性。
+为了获取XML的顶点，`ferris`使用了它的`fileitem`选项。我还需要复用`example.xml`来获取`fileitem`，并显式地选择`xml`元素不会使用的任何属性。
 
-对文件的修改如列表 1 所示。反向样式表可以应用于翻译后的 example.xml。Ferris 仅输出，通过应用 `through/LIBFERRIS,XSLTS_DONT_UPDATE_introspection` 执行非破坏性更改。确保在 debug-ferris- 中设置了 ferris-logging。
+对文件的修改如列表1所示。反向样式表可以应用于翻译后的`example.xml`。`Ferris`仅输出，通过应用`through/LIBFERRIS,XSLTS_DONT_UPDATE_introspection`执行非破坏性更改。确保在`debug-ferris-`中设置了`ferris-logging`。
 
 ## 的未来方向
 
 主要功能是反向样式表的自动开发。这将简化在样式表文件中设置节点，而之前需要编辑转换文件中的节点。
 
-更多 `ferris-to-stylesheet` 的插件可以处理来自本地源的数据，例如 OpenOffice.org 中的用户认证。这将非常棒。支持合并目标的 zip 包将允许创建原生的 OpenOffice 文档。
+更多`ferris-to-stylesheet`的插件可以处理来自本地源的数据，例如`OpenOffice.org`中的用户认证。这将非常棒。支持合并目标的`zip`包将允许创建原生的`OpenOffice`文档。
 
-反向样式表可能会有更多 patch 选项可用。
+反向样式表可能会有更多`patch`选项可用。
 
-本文的资源：http://www.linuxjournal.com/article/9513。
+本文的资源：`http://www.linuxjournal.com/article/9513`。
 
-Ben Martin 在文件系统领域工作了十年。他目前正在澳大利亚墨尔本大学攻读博士，致力于将文件系统与概念分析相结合，以改进人类与文件系统的交互。
+`Ben Martin`在文件系统领域工作了十年。他目前正在澳大利亚墨尔本大学攻读博士，致力于将文件系统与概念分析相结合，以改进人类与文件系统的交互。
 
-78 | 2007年2月 | www.linuxjournal.com
+`78 | 2007年2月 | www.linuxjournal.com`
 
 ## 培养 Linux 人才世界
 
-LPI-日本
-- LPI-中国
-- LPI-北美
-- LPI-南亚
-- LPI-拉丁美洲
-- LPI-德国
+`LPI-日本`
+- `LPI-中国`
+- `LPI-北美`
+- `LPI-南亚`
+- `LPI-拉丁美洲`
+- `LPI-德国`
 
-我们 Linux 专业人士协会（LPI）相信，推广 Linux 和开源软件采用的最佳方式是培养全球范围内才华横溢、合格且认证的 IT 专业人才。
+我们`Linux`专业人士协会（`LPI`）相信，推广`Linux`和开源软件采用的最佳方式是培养全球范围内才华横溢、合格且认证的`IT`专业人才。
 
-我们只能通过当地的“实地”合作伙伴组织网络来实现这一点。这些合作伙伴了解该行业并理解 IT 劳动力的需求。通过这种积极的“区域赋能”（Regional Enablement）政策，我们正在寻找当地合作伙伴，并协助他们在促进 Linux 和开源专业化方面所努力。
+我们只能通过当地的“实地”合作伙伴组织网络来实现这一点。这些合作伙伴了解该行业并理解`IT`劳动力的需求。通过这种积极的“区域赋能”（`Regional Enablement`）政策，我们正在寻找当地合作伙伴，并协助他们在促进`Linux`和开源专业化方面所努力。
 
 我们意识到提供全球衡量标准的重要性。为了协助这项工作，我们启动了“区域赋能倡议”，以确保我们理解、培养并支持全球企业、政府、教育机构和个人贡献者的需求。
 
@@ -3588,42 +2821,33 @@ LPI-日本
 
 ## 简单访问 Berkeley DB
 
-Database 与 C++ 集合之间的一个主要区别是，键和值是不可移植的。其主要原因是 Database 对象中的项不在内存中，而是从磁盘中读取的。为了不限制 Berkeley DB 提供的灵活性，Database 支持存储异构对象集合的数组。
+`Database`与`C++`集合之间的一个主要区别是，键和值是不可移植的。其主要原因是`Database`对象中的项不在内存中，而是从磁盘中读取的。为了不限制`Berkeley DB`提供的灵活性，`Database`支持存储异构对象集合的数组。
 
 ## 存储对象
 
-这些对象使用隐式构造创建并存储在堆对象中。如列表 5 所示，Person 类存储了关于人的许多对象。隐式构造函数接收 `DatabaseValue&Ref`，这是 Database 中数组运算符返回的类型。Person 对象被隐式转换为 `std::string`，以便存储到磁盘。
-
-
-
-
+这些对象使用隐式构造创建并存储在堆对象中。如列表5所示，`Person`类存储了关于人的许多对象。隐式构造函数接收`DatabaseValue&Ref`，这是`Database`中数组运算符返回的类型。`Person`对象被隐式转换为`std::string`，以便存储到磁盘。
 
 ## 广告商索引
 
-如需广告信息，请致电我们的销售部门：1-713-344-1956 分机2 或发送邮件 ads@linuxjournal.com。
-www.linuxjournal.com/advertising
+如需广告信息，请致电我们的销售部门：`1-713-344-1956`分机2或发送邮件`ads@linuxjournal.com`。
+`www.linuxjournal.com/advertising`
 
 ### Listing 3. Berkeley DB 文件的标准 C++ I/O 流
 
 ```cpp
 #include <iostream>
 #include <STLdb4/stdb4.hh>
-
 using namespace STLdb4;
 using namespace Ferris;
 using namespace std;
-
 int main(int, char **) {
     fh_database db = new Database(DB_BTREE, "/tmp/play.db");
-
     string data = "1234567890";
     db("fred") = data;
     cerr << "initial value: " << db("fred") << endl;
-
     fh_ostream oss = db->getIostream("fred");
     oss << "S4321";
     cerr << "Second value: " << db("fred") << endl;
-
     fh_ostream oss = db->getIostream("fred");
     oss.seekp(3);
     oss << "AAAA";
@@ -3632,13 +2856,10 @@ int main(int, char **) {
     fh_ostream oss = di.getIostream(ios::trunc, 0);
     oss << "cm";
     cerr << "Trunc and write: " << db("fred") << endl;
-
     // append some data to iostream
-    fh_ostream oss = db->find("fred")
-      .getIostream(ios::ate, 0);
+    fh_ostream oss = db->find("fred").getIostream(ios::ate, 0);
     oss << "AndMore";
     cerr << "at end value: " << db("fred") << endl;
-
     return 0;
 }
 ```
@@ -3677,27 +2898,25 @@ Trunc and write: smAndMore
 at end value: smAndMore
 ```
 
-www.linuxjournal.com 2007年2月 | 81
+`www.linuxjournal.com 2007年2月 | 81`
 
 ## 深度解析
 
-函数这个更薄的映射显示 Database 正在存储 Person 对象。
+函数这个更薄的映射显示`Database`正在存储`Person`对象。
 
 ## 二级索引
 
 有时你可能会发现你存储了多个键，以便你能够快速找到某个项目。例如，如果你正在存储联系信息，你可能想根据姓名或电子邮件地址来查找人员。
 
-你可以通过使用姓名作为键存储每个人的信息，并维护一个来自电子邮件地址的二级数据库来实现这一点。要通过电子邮件查找人员，你将使用以电子邮件为键的数据库查找姓名，然后使用姓名来查找实际信息。维护这样的索引很容易出错，而 Berkeley DB 的二级索引会为你完成这些工作。
+你可以通过使用姓名作为键存储每个人的信息，并维护一个来自电子邮件地址的二级数据库来实现这一点。要通过电子邮件查找人员，你将使用以电子邮件为键的数据库查找姓名，然后使用姓名来查找实际信息。维护这样的索引很容易出错，而`Berkeley DB`的二级索引会为你完成这些工作。
 
 ### 读取对象
 
 ```cpp
 #include <iostream>
 #include <STLdb4/stdb4.h>
-
 using namespace STLdb4;
 using namespace std;
-
 class Person {
 public:
     string email;
@@ -3705,7 +2924,6 @@ public:
     string phoneNumber;
     explicit Person(const string& name, const string& ph = "")
         : email(name), phoneNumber(ph) {}
-
 Person(const DatabaseValue& r) {
     string ss;
     ss << string(r);
@@ -3715,51 +2933,45 @@ Person(const DatabaseValue& r) {
 }
 ```
 
-上面的示例可以通过使用主键作为 person 以及对电子邮件地址的二级索引来实现。这种设置如图 1 所示。参考将姓名到人的映射作为主数据库和二级索引数据库。
+上面的示例可以通过使用主键作为`person`以及对电子邮件地址的二级索引来实现。这种设置如图1所示。参考将姓名到人的映射作为主数据库和二级索引数据库。
 
 | 二级索引 | 主数据库 |
 |---|---|
 | 电子邮件地址 | 键：姓名 |
 | 值：Person | 信息 |
 
-等待，`GetOffset()` 返回相同类型的模板对象，并返回从该偏移量到项目结束的所有数据。`GetOffsetIndex()` 类似，但返回长度。`GetTerminatedString()` 获取一个偏移量和跳过次数，以从给定的偏移量提取终止字符串。如果你的格式是32个整数后接四个终止字符串，可以使用 20 的偏移量和 2 的跳过来提取第三个终止字符串。假设使用类 5 中的 Person，Listing 6 创建并使用了电子邮件地址的二级索引。因为数据库从我们的数据开始，使用 `GetTerminatedString()` 创建的提取函数将返回一个偏移量和一个终止字符串。使用二级索引执行部分查找。`equal` 方法找到部分匹配的下和上限。在这种情况下，迭代器的第一个是二级索引的键，第二个是主数据库的数据。此主数据可以通过迭代器上的 `PrimaryKey()` 获取。
+等待，`GetOffset()`返回相同类型的模板对象，并返回从该偏移量到项目结束的所有数据。`GetOffsetIndex()`类似，但返回长度。`GetTerminatedString()`获取一个偏移量和跳过次数，以从给定的偏移量提取终止字符串。如果你的格式是32个整数后接四个终止字符串，可以使用20的偏移量和2的跳过来提取第三个终止字符串。假设使用类5中的`Person`，`Listing 6`创建并使用了电子邮件地址的二级索引。因为数据库从我们的数据开始，使用`GetTerminatedString()`创建的提取函数将返回一个偏移量和一个终止字符串。使用二级索引执行部分查找。`equal`方法找到部分匹配的下和上限。在这种情况下，迭代器的第一个是二级索引的键，第二个是主数据库的数据。此主数据可以通过迭代器上的`PrimaryKey()`获取。
 
 ## 事务
 
-通过显式事务方法或在 Database 对象上设置隐式事务来支持事务。事务的使用方法在 Listing 9 中所示。
+通过显式事务方法或在`Database`对象上设置隐式事务来支持事务。事务的使用方法在`Listing 9`中所示。
 
 ```cpp
 int main(const char **argv) {
     fh_database db = new Database(DB_BTREE, "/tmp/db.db");
-
     db->insert(make_pair("Alex", "alex@foo.com"));
     db->insert(make_pair("Barry", "barry.bar.com"));
-
     Person *p = db["Barry"];
     cout << "Barry email address: " << endl;
     cout << p->email << endl;
-
     return 0;
 }
 ```
 
-82 | 2007年2月 www.linuxjournal.com
+`82 | 2007年2月 www.linuxjournal.com`
 
 ### Listing 6. 二级索引
 
 ```cpp
 unlink("/tmp/play.db");
 unlink("/tmp/sec.db");
-
 fh_database db = new Database(DB_BT, "/tmp/play.db");
 Database->sec_id_callback f = getIfNotSecId(0,1);
 f_database sec_id = Database::SecondaryIndex(f, DB_BTREE, "/tmp/sec.db");
-
 db->insert(make_pair("alex", Person("Alex", "alex@foo.com")),
     make_pair("alfred", Person("Alfred", "alfred.bar.com")));
 db->insert(make_pair("andrew", Person("Andrew", "andrew@foo.com")),
     make_pair("barry", Person("Barry", "barry.bar.com")));
-
 pair<Database::Iterator, Database::Iterator> p = db->range_partial("string");
 for(Database::Iterator i = p.first; i != p.second; ++i) {
   string prim;
@@ -3769,23 +2981,39 @@ for(Database::Iterator i = p.first; i != p.second; ++i) {
     cout << "second: " << i->second << endl;
     Person p = *i->second;
     cout << "person name: " << p.name << endl;
-    cout << "email: " << p.email << endl;
-  }
-}
 ```
 
+
+
+```
+cout << "email: " << p.email << endl;
+
+  }
+
+}
+
+```
 ### Listing 7. 二级索引程序输出
 
 ```
 di...
+
   primary:alex
+
   first:alex@foo.com
+
   second:Alex@foo.com
+
   Person name: Alex email:alex@foo.com
+
 di...
+
   primary:alfred
+
   first:alfred.bar.com
+
   second:Alfred@bar.com
+
   Person name: Alfred email:alfred.bar.com
 ```
 
@@ -3809,10 +3037,6 @@ di...
 
 iPac 具有适用于严苛应用的 IO，尺寸为 3.5" x 3.8"，它可以容几乎任何内容。请联系我们获取更多信息。
 
-
-
-
-
 # 深度解析
 
 | 列表 8. STLdb4 中的隐式事务 |
@@ -3820,27 +3044,21 @@ iPac 具有适用于严苛应用的 IO，尺寸为 3.5" x 3.8"，它可以容几
 ```cpp
 #include <iostream>
 #include <STLdb4/stldb4.hh>
-
 using namespace STLdb4;
 using namespace std;
-
 int main(int,char**)
 {
   Environment::setDefault(new Environment("/tmp"));
-
   fh_database db = new Database(
     new Transaction(), DB_BTREE, "/tmp/play.db");
-
   db->start();
   db["foo"] = "bar";
   cerr << "Initial value: " << db["foo"] << endl;
   db->commit();
-
   db->start();
   db["foo"] = "newbar";
   cerr << "Middle value: " << db["foo"] << endl;
   db->abort();
-
   cerr << "Final value: " << db["foo"] << endl;
 return 0;
 }
@@ -3854,18 +3072,15 @@ int main(int,char**)
   Environment::setDefault(new Environment("/tmp"));
   fh_database db = new Database(
     new Transaction(), DB_BTREE, "/tmp/play.db");
-
 try
 {
   fh_trans tr = new Transaction();
   tr->setDefaultDestructorAbort(true);
   db->setImplicitTransaction(tr);
   tr->commit();
-
   // (带有事务的 RAII)
   // 在此块中不要设置ImplicitTransaction()
   fh_trans tr = new Transaction();
-
   tr->setDefaultDestructorAbort(true);
   db->set("foo", "First setting", 0, tr);
   Database::iterator iter = db->find("foo",tr);
@@ -3889,7 +3104,6 @@ db->start(DB_BTREE, "/tmp/play.db");
 db["foo"] = "bar1";
 db["foo"] = "bar2";
 trans->commit();
-
 // 创建隐式事务并加入
 trans = new Transaction();
 db->setImplicitTransaction(trans);
@@ -3901,41 +3115,37 @@ trans->abort();
 
 获取 RAII 编程用于在代码中发生任何异常时自动封装事务。这种样式在列表 10 中所示。由注释（AA）标记的代码将使用事务的默认析构函数来调用 abort，然后使用此事务修改数据库。显式抛出的异常将导致 Transaction 对象被销毁（如果它是栈上的最后一个）。这将调用 abort(该事务)，我们最终会在示例结束时删除旧的 "bar"。
 
-Database::iterator 类在其实实现中使用了伯克利游标（Berkeley cursors），我们将其传递给 Database: find 来获取迭代器。例如，如果使用了 getIterator，STLdb4 将对文件上的事务执行部分 I/O。
-当 Database 拥有一个指向 Transaction 的较小指针时，也应该调用 RAIITransaction()，在抛出异常时将调用 abort()。
+`Database::iterator` 类在其实实现中使用了伯克利游标（Berkeley cursors），我们将其传递给 `Database: find` 来获取迭代器。例如，如果使用了 `getIterator`，STLdb4 将对文件上的事务执行部分 I/O。
+当 Database 拥有一个指向 Transaction 的较小指针时，也应该调用 `RAIITransaction()`，在抛出异常时将调用 abort()。
 
 # 数据库环境
 
-数据库环境是用于配置将要使用的组伯克利数据库的环境。在带有多个数据库文件的并发数据存储中使用数据库环境，允许你有多个应用程序对数据库文件进行读写，Berkeley DB 会处理锁定以确保文件不会损坏。STLDB4 中的默认环境实际上是一个新环境。数据库环境使用 Environment::setDefault 方法创建，可用于使用单个数据库环境的应用。列表 11 所示的代码使用数据库环境来保护数据库文件免受进程的并发访问。首先，创建一个新的数据库环境并将其设置为默认。可以使用 Database::set_compare()（可以是函数指针或新函数）更改数据库中元素的顺序。有关 Loki 函数的详细信息，请参阅 C++ 文档（见行内注释）。
+数据库环境是用于配置将要使用的组伯克利数据库的环境。在带有多个数据库文件的并发数据存储中使用数据库环境，允许你有多个应用程序对数据库文件进行读写，Berkeley DB 会处理锁定以确保文件不会损坏。STLDB4 中的默认环境实际上是一个新环境。数据库环境使用 `Environment::setDefault` 方法创建，可用于使用单个数据库环境的应用。列表 11 所示的代码使用数据库环境来保护数据库文件免受进程的并发访问。首先，创建一个新的数据库环境并将其设置为默认。可以使用 `Database::set_compare()`（可以是函数指针或新函数）更改数据库中元素的顺序。有关 Loki 函数的详细信息，请参阅 C++ 文档（见行内注释）。
 
 | 列表 11 | STLDB4 与数据库环境 |
 
 ```cpp
 #include <iostream>
 #include <STLDB4/stldb.hpp>
-
 using namespace STLDB4;
 using namespace std;
-
 int main(int argc, char** argv) {
     string dbenv = argv[1];
     Environment* fh_dbenv = new Environment(dbenv);
     DB_BTREE* DB_BTREE = new DB_BTREE(fh_dbenv, "foo.db");
     Environment::setDefault(dbenv);
-
     Environment* fh_db2 = new Environment(dbenv);
     db2->create<DB_BTREE>(0, "foo2.db");
     db2["key"] = (string)argv[2];
-
     return 0;
 }
 ```
 
-比较函数是一个相对低级的操作，没有方便的辅助函数供其；你必须手动比较值。STLDB4 中提供了一组用于数值比较的函数，例如 getCompare()。通过将其传递给 std::create 一个新函数，可以反转比较函数的顺序，这必须在数据库操作之前执行（使用列表 12 所示的 open() 或调用 Database 构造函数）。使用 Database::setcache() 设置伯克利缓存大小可以提高只读数据库的性能。
+比较函数是一个相对低级的操作，没有方便的辅助函数供其；你必须手动比较值。STLDB4 中提供了一组用于数值比较的函数，例如 `getCompare()`。通过将其传递给 std::create 一个新函数，可以反转比较函数的顺序，这必须在数据库操作之前执行（使用列表 12 所示的 `open()` 或调用 Database 构造函数）。使用 `Database::setcache()` 设置伯克利缓存大小可以提高只读数据库的性能。
 
 # 未来方向
 
-如果有一个类似于 std::vector 带有参数的数据库模板将会很好。这需要一些工作来处理按需序列化和（反）序列化的需求，以确保两者都能被序列化。
+如果有一个类似于 `std::vector` 带有参数的数据库模板将会很好。这需要一些工作来处理按需序列化和（反）序列化的需求，以确保两者都能被序列化。
 
 **本文的资源：** https://www.linuxjournal.com/article/9512
 
@@ -3949,7 +3159,7 @@ Ben Martin 在文件系统领域已有十年经验。他目前正在惠灵顿大
 fh_dbenv = new Environment(dbenv);
 Database::set_compare(functor* tmpf = getIterator(tmpf));
 db->set_compare(makeCompare(tmpf));
-db->create<DB_BTREE, "/tmp.db");
+db->create<DB_BTREE, "/tmp.db">
 ```
 
 # 载体类的选择解决方案
@@ -3962,7 +3172,7 @@ db->create<DB_BTREE, "/tmp.db");
 
 # 创建简化的 SELinux
 
- 现代 Linux 发行版带了大量的安全功能和工具，内核添加的最重要功能之一就是包含了 SELinux。SELinux 解决了安全领域中最具挑战性的问题之一：如何控制用户或进程。作为内核中 root 的信任用户应该仅允许由系统管理员访问；然而，这导致了一个问题：如果恶意用户获得了访问并控制了系统会怎样？恶意用户并不是唯一的问题；安全工具的配置错误也可能被滥用。此外，通过适当的访问控制发现了漏洞。SELinux 通过实施强制访问控制来保护系统免受这些安全问题的影响。我们必须通过当前部署的裁量访问控制（DAC）模型。访问的分类是裁量性的，即一个具有特定一组访问权限的主体能够对对象授予权限。例如，你运行的任何程序都是基于启动它的用户的。你有一定数量可以授予他人的权限（例如 root）。任何任何特定的权限（读、写等）都可以拒绝另一个对对象的访问。例如，DAC 系统控制凭据的验证以防止它们获取信息。
+现代 Linux 发行版带了大量的安全功能和工具，内核添加的最重要功能之一就是包含了 SELinux。SELinux 解决了安全领域中最具挑战性的问题之一：如何控制用户或进程。作为内核中 root 的信任用户应该仅允许由系统管理员访问；然而，这导致了一个问题：如果恶意用户获得了访问并控制了系统会怎样？恶意用户并不是唯一的问题；安全工具的配置错误也可能被滥用。此外，通过适当的访问控制发现了漏洞。SELinux 通过实施强制访问控制来保护系统免受这些安全问题的影响。我们必须通过当前部署的裁量访问控制（DAC）模型。访问的分类是裁量性的，即一个具有特定一组访问权限的主体能够对对象授予权限。例如，你运行的任何程序都是基于启动它的用户的。你有一定数量可以授予他人的权限（例如 root）。任何任何特定的权限（读、写等）都可以拒绝另一个对对象的访问。例如，DAC 系统控制凭据的验证以防止它们获取信息。
 
 # SELinux 内部机制简述
 
@@ -3987,9 +3197,6 @@ SELinux 策略由访问对象组成，它们需要客户端对象提交给安全
 sepolicy 是一个基于 Web 的工具，允许管理员从 Web 浏览器管理 SELinux 策略。该界面允许用户通过在点击环境中创建安全脚本来验证他们通常可以执行的操作。它可以在线获取。安装后，策略位于 SELinux/seedit-something/policy.conf（其中 SEEDIT 是你的 SELinux 安装根——它也在 seedit）。
 
 让我们熟悉一下 seedit。打开浏览器，With
-
-
-
 
 # 既然可以倍增价值，为何只增加价值？
 
@@ -4056,10 +3263,6 @@ class=udp_socket
 
 借助 audit 有许多方法可以为应用程序生成访问错误。
 
-
-
-
-
 # 深度解析
 
 ```perl
@@ -4072,25 +3275,45 @@ class=udp_socket
 8.   if ($php->~($frame)) // 检查来自 stderr的消息
 9.
 10.
-11.  if ($frame =~ /Failed failed for $password/)) // 检查密码失败的尝试
-12.
-13.  $ind = rind($str);
-14.  $rind = rstr($str, 'port');
-15.  $sub = substr($str,$ind,$rind-4);
-16.  $thr = new Thread(\&swims, $sp);
-17.  $thr->join();
-18.
-19.
-20.
-21. sub writers {
-22.
-23.  $iptables = INPUT -S $ij - DROP
-24.  #include('application.php');
-25.  $php->eval($swims); 'sshwatch', 'sshash($sp);
-26.  print $php->eval($code succeeded);
 ```
 
-在单独的文件中，编写以下脚本（文件名应为 $frame）。
+
+
+11.  if (`$frame` =~ /Failed failed for $password/)) // 检查密码失败的尝试
+
+12.
+
+13.  `$ind` = `rind`(`$str`);
+
+14.  `$rind` = `rstr`(`$str`, 'port');
+
+15.  `$sub` = `substr`(`$str`,`$ind`,`$rind`-4);
+
+16.  `$thr` = new Thread(\&swims, `$sp`);
+
+17.  `$thr`->join();
+
+18.
+
+19.
+
+20.
+
+21. sub writers {
+
+22.
+
+23.  `$iptables` = INPUT -S `$ij` - DROP
+
+24.  #include('application.php');
+
+25.  `$php`->eval(`$swims`); 'sshwatch', 'sshash(`$sp`);
+
+26.  print `$php`->eval(`$code succeeded`);
+
+```
+
+在单独的文件中，编写以下脚本（文件名应为 `$frame`）。
 
 ```php
 1. <?php
@@ -4115,13 +3338,13 @@ class=udp_socket
 
 现在，让我们查看代码的某些特定部分。要在代码中使用 `PHP:Interpreter`，请以内联方式调用。如第 5 行所示，创建一个新的 PHP 解释器实例：
 
-my $php = PHP_Interpreter::new;
+my `$php` = `PHP_Interpreter::new`;
 
-作为面向对象编程，你可以在 $php 对象上调用方法以实现与 PHP 的互操作。上面的代码显示了 `PHP::Interpreter` 提供的两个互操作函数。在第 24 行中，我们正在调用该函数，它将一个 PHP 脚本文件引入环境，你可以从 perl 对象中调用它。我们在第 25 行对 `writeperl` 执行了相同的操作，该函数是在 `example.php` 文件第 2 行用 perl 定义的 PHP 函数。$php 对象的 `eval` 函数允许你作为解释器执行 PHP 函数。在第 26 行，引入了解释器，返回值可以存储在变量中或直接使用。你可以看到示例中的 `PHP::Interpreter` 允许通过两行代码实现这两种语言的面向对象构建：初始使用和对象的实例化。`PHP::Interpreter` 不仅支持调用函数和过程化编程，还适用于面向对象的 PHP。
+作为面向对象编程，你可以在 `$php` 对象上调用方法以实现与 PHP 的互操作。上面的代码显示了 `PHP::Interpreter` 提供的两个互操作函数。在第 24 行中，我们正在调用该函数，它将一个 PHP 脚本文件引入环境，你可以从 perl 对象中调用它。我们在第 25 行对 `writeperl` 执行了相同的操作，该函数是在 `example.php` 文件第 2 行用 perl 定义的 PHP 函数。`$php` 对象的 `eval` 函数允许你作为解释器执行 PHP 函数。在第 26 行，引入了解释器，返回值可以存储在变量中或直接使用。你可以看到示例中的 `PHP::Interpreter` 允许通过两行代码实现这两种语言的面向对象构建：初始使用和对象的实例化。`PHP::Interpreter` 不仅支持调用函数和过程化编程，还适用于面向对象的 PHP。
 
-my $instance = PHP::Interpreter::new($args);
+my `$instance` = `PHP::Interpreter::new`(`$args`);
 
-实例存储在 $instance 中，任何参数都会传递给类构造函数。
+实例存储在 `$instance` 中，任何参数都会传递给类构造函数。
 
 # 示例 2
 
@@ -4140,15 +3363,11 @@ my $instance = PHP::Interpreter::new($args);
 
 在示例中，`PHP::Interpreter` 允许通过两行代码实现这两种语言的面向对象构建：初始使用和对象的实例化。`PHP::Interpreter` 不仅支持调用函数和过程化编程，还适用于面向对象的 PHP。这就是你如何实例化 PHP 类对象。
 
-my $instance = PHP::Interpreter::new($args);
+my `$instance` = `PHP::Interpreter::new`(`$args`);
 
-实例存储在 $instance 中，任何参数都会传递给类构造函数。
+实例存储在 `$instance` 中，任何参数都会传递给类构造函数。
 
 （注：由于原文存在大量重复段落，已根据要求仅翻译核心逻辑内容）
-
-
-
-
 
 # 无痛式 U 盘备份
 
@@ -4250,10 +3469,6 @@ SYMLINK="corsair"; RUN=/user/local/bin/backup-thumb.sh corsair
 
 （注：此处原文未提供具体的脚本内容，仅有描述，根据指令要求，我已翻译给定文本的描述部分。）
 
-
-
-
-
 # 让 Linux 的自由万岁，它渴望获得合适的载体。
 
 ## 机机窗口等待着我们
@@ -4335,3 +3550,4 @@ Microway 的 5GHz FastTree DDR InfiniBand 速度是竞争对手的两倍。FastT
 
 采用不锈钢架构的 RuggedRack™ 旨在保持低延迟。前置电源的 RuggedRack™ 便于拆卸。外部空气的 RuggedRack™ 提供了卓越的冷却。四个八核 Opteron 核心的 RuggedRack™ 提供了高性能。
 
+```

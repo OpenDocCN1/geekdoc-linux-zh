@@ -1,66 +1,55 @@
+
 # Xilinx 开发环境，Ultrascale+ Linux 开发入门指南
 
-
-
-
-
-
 ![](img/6f792577a28af84c82be0eef5006ef77_0_0.png)
-
-
-
-
-
-
-
 
 # 第1部分：使用 Petalinux 定制 Linux
 
 特别提醒：本教程中使用的环境搭建教程位于《Xilinx 开发环境安装教程》中的 Linux 部分，请先按照该教程搭建开发环境。
 
-本教程参考了 Xilinx 官方教程 ug1144-petelinux-tools-reference-guide，并使用 Petalinux 构建了一个基础 Linux 系统。
+本教程参考了 Xilinx 官方教程 `ug1144-petelinux-tools-reference-guide`，并使用 Petalinux 构建了一个基础 Linux 系统。
 
-# 第1.1 节：使用 Petalinux 创建项目
+## 第1.1 节：使用 Petalinux 创建项目
 
-1) 在用户目录下，创建一个工作目录。路径中的 "~" 代表用户的家目录，等同于 /home/alinx2020
+1) 在用户目录下，创建一个工作目录。路径中的 `"~"` 代表用户的家目录，等同于 `/home/alinx2020`
 
 ```
 mkdir -p ~/peta_prj/linxBase
 ```
 
-2) 将 Vivado 出的 xsa 文件拷贝到硬件文件夹。这里使用由 ps_base 编译的 xsa（本文中的程序仅作示例，其他型号请使用对应的 vivado 项目)(img/6f792577a28af84c82be0eef5006ef77_4_0.png)
+2) 将 Vivado 出的 `xsa` 文件拷贝到硬件文件夹。这里使用由 `ps_base` 编译的 `xsa`（本文中的程序仅作示例，其他型号请使用对应的 vivado 项目）(img/6f792577a28af84c82be0eef5006ef77_4_0.png)
 
-3) 进入项目目录，路径中的 "~" 代表用户的家目录，等同于 /home/alinx2020
+3) 进入项目目录，路径中的 `"~"` 代表用户的家目录，等同于 `/home/alinx2020`
 
 ```
 cd ~/peta_prj/linxBase
 ```
 
-4) 设置 petalinux 环境变量，运行以下命令。环境变量仅在当前终端有效，因此后续与 petalinux 相关的命令必须在当前终端中输入
+4) 设置 `petalinux` 环境变量，运行以下命令。环境变量仅在当前终端有效，因此后续与 `petalinux` 相关的命令必须在当前终端中输入
 
 ```
 source /opt/pkg/petalinux/settings.sh
 ```
 
-5) 创建一个名为 "petalinux" 类型为 "project" 的 petalinux 项目，使用 zynqMP 模板
+5) 创建一个名为 `"petalinux"` 类型为 `"project"` 的 `petalinux` 项目，使用 `zynqMP` 模板
 
 ```
 petalinux-create -t project -n petalinux --template zynqMP
 ```
 
-6) 使用以下命令进入 petalinux 目录，路径中的 "~" 代表用户的家目录，等同于 /home/alinx2020
+6) 使用以下命令进入 `petalinux` 目录，路径中的 `"~"` 代表用户的家目录，等同于 `/home/alinx2020`
 
 ```
 cd ~/peta_prj/linxBase/petalinux
 ```
 
-7) 配置 Petalinux 项目的硬件信息，硬件目录下只能有一个 xsa 文件
+7) 配置 Petalinux 项目的硬件信息，硬件目录下只能有一个 `xsa` 文件
 
 ```
 petalinux-config --get-hw-description ../hardware/
 ```
 
-8) 弹出项目配置界面，如下所示。在 "Auto Config Settings" 选项中，开启 "Device tree autocfig"、kernel autocfig" 和 "u-boot autocfig"，然后点击 "Save"，最后点击 "Exit"
+8) 弹出项目配置界面，如下所示。在 `"Auto Config Settings"` 选项中，开启 `"Device tree autocfig"`、`kernel autocfig` 和 `u-boot autocfig`，然后点击 `"Save"`，最后点击 `"Exit"`
 
 ```
 /home/alinx2020/peta_prj/linxBase/petalinux/project-spec/configs/config - misc/config
@@ -74,17 +63,13 @@ Auto Config Settings
 [*] boot autocfig
 ```
 
-9) 如果弹出是否保存配置界面，选择 <Yes>，
+9) 如果弹出是否保存配置界面，选择 `<Yes>`，
+
 按回车
 
 ![](img/6f792577a28af84c82be0eef5006ef77_6_0.png)
 
 10) 等待配置完成
-
-
-
-
-
 
 ```bash
 alinx2020@ubuntu:~/peta_prj/linxsBase/petalinux petalinux-config --get-hw-description /hardware/
@@ -112,7 +97,7 @@ alinx2020@ubuntu:~/peta_prj/linxsBase/petalinux$
 
 ![](img/6f792577a28af84c82be0eef5006ef77_7_0.png)
 
-- 1) 如下修改图中 "project-spec/meta-user/recipes-bsp/device-tree/files/system-user.dtsi" 文件的内容：
+- 1) 如下修改图中 `project-spec/meta-user/recipes-bsp/device-tree/files/system-user.dtsi` 文件的内容：
 
 ```dtsi
 /include/"system-conf.dtsi"
@@ -138,7 +123,7 @@ dr_mode = "host";
 petalinux-build
 ```
 
-注意：此步骤必须确保 ubuntu 系统可以连接网络，petalinux 需要从 github 下载一些源码。
+注意：此步骤必须确保 ubuntu 系统可以连接网络，`petalinux` 需要从 `github` 下载一些源码。
 
 ### 3 编译完成
 
@@ -172,13 +157,15 @@ alinxx@ubuntu:~/meta_prj/linuxPsBase/petalinux$
 cd ~/meta_prj/linuxPsBase/petalinux/images/linux
 ```
 
-### 2 软件包，"--u-boot" 参数是需要打包和合成的内容，所有的 u-boot 依赖项将被合成，“--fpga" 指位位文件，"--force" 是强制合成并覆盖之前的合成 BOOT.BIN，请注意命令中有两个横杠。
+### 2 软件包，`"--u-boot"` 参数是需要打包和合成的内容，所有的 `u-boot` 依赖项将被合成，`"--fpga"` 指位位文件，`"--force"` 是强制合成并覆盖之前的合成 `BOOT.BIN`，请注意命令中有两个横杠。
 
 ```bash
 petalinux-package --u-boot --fpga --force
 ```
 
 # ALINX Ultrascale+ Linux 开发教程
+
+
 
 ```text
 INFO: sourcing build tools
@@ -198,15 +185,20 @@ WARNING: Failed to access BOOT folder
 WARNING: Skip file copy to BOOT folder!!
 ```
 
-- 3) 在当前目录下，你可以看到新生成的 BOOT.bin 文件 (img/6f792577a28af84c82be0eef5006ef77_9_0.png)。
+- 3) 在当前目录下，你可以看到新生成的 `BOOT.bin` 文件 (`img/6f792577a28af84c82be0eef5006ef77_9_0.png`)。
 
 ## 1.4 部分：运行 Linux
 
 - 1) 将 SD 卡格式化为 FAT32。
-- 2) 将 BOOT.bin、boot.scr 和 image.ub 文件拷贝到 SD 卡 (img/6f792577a28af84c82be0eef5006ef77_10_0.png)。
+
+- 2) 将 `BOOT.bin`、`boot.scr` 和 `image.ub` 文件拷贝到 SD 卡 (`img/6f792577a28af84c82be0eef5006ef77_10_0.png`)。
+
 - 3) 将 SD 卡插入板卡。
+
 - 4) 将板卡设置为 SD 启动模式。
+
 - 5) 打开串口终端并开启板卡电源。
+
 - 6) 使用用户 root 和密码 root 登录系统。因为根文件系统是默认的 RAM 类型，根文件系统无法保存文件和配置。
 
 ```text
@@ -222,57 +214,72 @@ root@petalinux:~#
 ## 1.5 部分：Petalinux 流程
 
 - 1) Petalinux 环境
+
   - 安装 Petalinux
+
   - 默认 root 文件系统，根文件系统无法保存文件和配置
+
   - 设置 petalinux 环境
+
   - 共享文件夹
 
 - 2) 创建 Petalinux 项目
-  - petalinux-create --type <CPU_TYPE> --name <PROJECT_NAME>
-  - <CPU_TYPE> 可以是 zynq、microblaze；<PROJECT_NAME> 是项目名称
+
+  - `petalinux-create --type <CPU_TYPE> --name <PROJECT_NAME>`
+
+  - `<CPU_TYPE>` 可以是 `zynq`、`microblaze`；`<PROJECT_NAME>` 是项目名称
 
 - 3) 硬件信息
-  - 使用 cd 命令进入 petalinux 项目目录
-  - 使用 petalinux-config --get-hw-description 指定包含 *.xsa 的目录
+
+  - 使用 `cd` 命令进入 petalinux 项目目录
+
+  - 使用 `petalinux-config --get-hw-description` 指定包含 `*.xsa` 的目录
 
 - 4) 配置 petalinux
+
   - 配置整个 petalinux 项目。如果需要配置以下：
-    - petalinux-config -c uboot
-    - petalinux-config -c kernel
-    - petalinux-config -c rootfs
+
+    - `petalinux-config -c uboot`
+
+    - `petalinux-config -c kernel`
+
+    - `petalinux-config -c rootfs`
 
 - 5) 编译创建系统镜像
-  - petalinux-build
+
+  - `petalinux-build`
 
 - 6) 手动修改 petux 配置，这些配置文件可以直接拷贝到其他项目。手动配置的文件存储在：
-  <plnx-proj-root>/project-spec/meta-user 目录
-  - recipes-bsp/u-boot/files/platform-top.h 修改 uboot 配置
-  - recipes-bsp/device-tree/files/system-user.dtsi, recipes-bsp/device-tree/files/pl-custom.dtsi 可以修改和添加设备树
-  - recipes-kernel/linux-xlnx 保存内核配置
-  - project-spec/meta-user/recipes-apps 应用
+
+  `<plnx-proj-root>/project-spec/meta-user` 目录
+
+  - `recipes-bsp/u-boot/files/platform-top.h` 修改 uboot 配置
+
+  - `recipes-bsp/device-tree/files/system-user.dtsi`, `recipes-bsp/device-tree/files/pl-custom.dtsi` 可以修改和添加设备树
+
+  - `recipes-kernel/linux-xlnx` 保存内核配置
+
+  - `project-spec/meta-user/recipes-apps` 应用
 
 - 7) 清理 petalinux
-如果 petalinux 编译出现各种问题，特别是修改某些配置后无法正常编译或一直卡住，我们需要使用命令 petalinux-build -x clean 来清理之前的编译结果。
+
+  如果 petalinux 编译出现各种问题，特别是修改某些配置后无法正常编译或一直卡住，我们需要使用命令 `petalinux-build -x clean` 来清理之前的编译结果。
 
 ## 1.6 部分：将项目保存为模板项目
 
-运行 "petalinux-build -x clean" 命令清理现有项目。根据下表清理文件夹：
+运行 `petalinux-build -x clean` 命令清理现有项目。根据下表清理文件夹：
 
 | 文件夹或文件 | 可以删除 | 其他 |
 |---|---|---|
-| <基础目录> | *.xsa .gitignore | 保留 config.project |
-| .petalinux/ | 删除除 metadata 以外的所有内容 | |
-| .xil/ | 删除所有 | |
-| components/ | 应该是空文件夹 | 空文件夹 |
-| project-spec/ | yocto-layer.log | 保留 attributes |
-| project-spec/configs/ | config.old, rootfs_config.old | 保留 config 和 rootfs_config |
-| project-spec/hw-description/ | 删除除 metadata 以外的所有内容 | 必须保留 |
+| `<基础目录>` | `*.xsa` `.gitignore` | 保留 `config.project` |
+| `.petalinux/` | 删除除 `metadata` 以外的所有内容 | |
+| `.xil/` | 删除所有 | |
+| `components/` | 应该是空文件夹 | 空文件夹 |
+| `project-spec/` | `yocto-layer.log` | 保留 `attributes` |
+| `project-spec/configs/` | `config.old`, `rootfs_config.old` | 保留 `config` 和 `rootfs_config` |
+| `project-spec/hw-description/` | 删除除 `metadata` 以外的所有内容 | 必须保留 |
 
-
-
-
-
-保存模板后，将新项目的 xsa 文件放入项目目录，然后使用命令 `petalinux-config --get-hw-description`。但如果需要手动修改 ddr 大小，请在 `project-spec/configs/config` 文件中修改定义。
+保存模板后，将新项目的 `xsa` 文件放入项目目录，然后使用命令 `petalinux-config --get-hw-description`。但如果需要手动修改 ddr 大小，请在 `project-spec/configs/config` 文件中修改定义。
 
 ```
 # Memory Settings
@@ -290,7 +297,6 @@ root@petalinux:~#
 为了通过禁用网络状态源来短编译时间，请取消选择
 
 petalinux-config → Yocto Settings → Enable Network state feeds
-
 
 # 第 2 部分：程序 hello world
 
@@ -331,6 +337,7 @@ gcc -o helloworld main.c
 ```
 
 
+
 - 6) 你可以看到打印出的信息 "hello world"，表明程序已在计算机上正确执行
 
 ## 第 2.3 部分：交叉编译 Arm 程序
@@ -354,8 +361,11 @@ aarch64-linux-gnu-gcc -o helloworld main.c
 - 4) 使用上一节中通过 petalinux 定制的 linux 系统，将可执行程序 `helloworld` 拷贝到 SD 卡中
 
 | 电脑 > BOOT (l:) | SD卡目录 |
+
 | :--- | :--- |
+
 | BOOT.BIN | |
+
 | image.ub | |
 
 - 5) 设置板卡从 SD 卡启动并上电
@@ -376,7 +386,6 @@ cd /media/sd-mmcblk1p1
 
 - 9) 你可以看到打印的消息 "hello world"，表明程序已板卡上正确执行
 
-
 # 第 3 部分：控制 LED
 
 在 linux 下编写一些简单的应用会非常容易，例如打开一个文件、写入一段数据并关闭。这完成了整个写入过程。至于这个位置是在 flash 还是硬盘，我们并不关心，这让一切变得更简单：
@@ -388,12 +397,19 @@ cd /media/sd-mmcblk1p1
 ![](img/6f792577a28af84c82be0eef5006ef77_17_0.png)
 
 | | |
+
 | :--- | :--- |
+
 | design_wrapper.bit | device-tree.mss |
+
 | hardware_description.hdf | .dt |
+
 | psu_init.c | dtree |
+
 | psu_init.tcl | psu_init.h |
+
 | system-config.dtsi | psu_init_gpl.c |
+
 | system-top.ps | zynqmp-cc.dtsi |
 
 打开 `zynq.dtsi` 文件，ps 端的 gpio 设备树描述如下：
@@ -501,11 +517,11 @@ int main()
 }
 ```
 
-
 ## 第 3.4 部分：运行程序
 
 - 1) 启动并进入 FPGA 板卡的 linux 系统
-2) 查看与 gpio 相关的节点如下
+
+- 2) 查看与 gpio 相关的节点如下
 
 ```bash
 ls /sys/class/gpio/
@@ -517,7 +533,7 @@ export gpichip338 unexport
 root@petalinux:~# _
 ```
 
-- 3) 在这里，gpioxxxx 指的是一个 gpio 组，其中的引脚数量以及特定的引脚，如果用户不做其他更改，则由 vivado 项目决定。
+- 3) 在这里，`gpioxxxx` 指的是一个 gpio 组，其中的引脚数量以及特定的引脚，如果用户不做其他更改，则由 vivado 项目决定。
 
 - 4) 检查引脚标签信息以确定引脚所在的组
 
@@ -529,8 +545,7 @@ zynqmp_gpio
 root@petalinux:~# _
 ```
 
-
-这组 40 个引脚中 PS_led 引脚的偏移值，这正是我们实际上想要操作的引脚，代码中的宏定义如下：
+这组 40 个引脚中 `PS_led` 引脚的偏移值，这正是我们实际上想要操作的引脚，代码中的宏定义如下：
 
 ```
 #define PS_LED_BASE 338
@@ -538,7 +553,7 @@ root@petalinux:~# _
 #define PS_LED_ADDR (PS_LED_BASE+PS_LED_INDEX)
 ```
 
-7) 使用 nfs 挂载方法并运行程序，led 灯每秒闪烁一次
+- 7) 使用 nfs 挂载方法并运行程序，led 灯每秒闪烁一次
 
 ```
 root@petalinux:# /mnt/gpio_test
@@ -550,31 +565,33 @@ off
 non
 ```
 
---- 
+
+
 # 爱芯芯 Ultrascale+ Linux 开发基础教程
-# 第 4 部分：添加启动脚本和用户文件
 
-在之前的教程中，我们使用 petelinux 创建了 Linux。默认的根文件系统是 ramdisk 类型，且文件系统是只读的。对该目录的任何修改都会系统重启后丢失。本章描述了如何添加用户的应用程序和数据文件，并在启动后自动启动用户应用程序。
+## 第 4 部分：添加启动脚本和用户文件
 
-## 第 4.1 节：准备工作
+在之前的教程中，我们使用 `petelinux` 创建了 Linux。默认的根文件系统是 ramdisk 类型，且文件系统是只读的。对该目录的任何修改都会系统重启后丢失。本章描述了如何添加用户的应用程序和数据文件，并在启动后自动启动用户应用程序。
 
-选择之前创建的 petelinux 项目，并在控制终端中进入 petelinux 目录
+### 第 4.1 节：准备工作
 
-## 第 4.2 节：自启动脚本
+选择之前创建的 `petelinux` 项目，并在控制终端中进入 `petelinux` 目录
 
-- 1. 输入以下命令创建一个应用模板，并创建一个名为 "autostart" 的应用
+### 第 4.2 节：自启动脚本
+
+1. 输入以下命令创建一个应用模板，并创建一个名为 "autostart" 的应用
 
 ```
 petalinux-create -t apps --template install --name autostart --enable
 ```
 
-- 2. 进入模板目录
+2. 进入模板目录
 
 | meta_prj | linux_app_start | petelinux | project-spec | meta-user | recipes-apps | autostart |
 | --- | --- | --- | --- | --- | --- | --- |
 | | files | | autostart.bb | README | | |
 
-- 3. 打开 files 文件夹中的 autostart 文件，这是一个脚本文件，用于打印字符串 "Hello Petelinux World"，我们将其更改为 "Hello ALINX World"，然后添加一段代码判断 SD 卡第一个分区是否存在 autostart.sh 脚本。如果存在，则运行它，用户可以根据实际需要对其进行修改，例如启动应用程序或其他初始化操作。
+3. 打开 `files` 文件夹中的 `autostart` 文件，这是一个脚本文件，用于打印字符串 "Hello Petelinux World"，我们将其更改为 "Hello ALINX World"，然后添加一段代码判断 SD 卡第一个分区是否存在 `autostart.sh` 脚本。如果存在，则运行它，用户可以根据实际需要对其进行修改，例如启动应用程序或其他初始化操作。
 
 ```
 echo "Hello ALINX World"
@@ -590,7 +607,7 @@ if [ -f $USERHOOK_SD1 ]; then
 fi
 ```
 
-- 4) 编辑后的文件 autostart.bb 内容如下，其主功能是将 autostart 复制到根文件系统的 init.d 目录，并添加 0755 权限。RDEPENDS_$(PN)_append += "bash" 意味着依赖 bash
+4) 编辑后的文件 `autostart.bb` 内容如下，其主功能是将 `autostart` 复制到根文件系统的 `init.d` 目录，并添加 `0755` 权限。`RDEPENDS_$(PN)_append += "bash"` 意味着依赖 `bash`
 
 ```bash
 #
@@ -623,13 +640,13 @@ do_install() {
 RDEPENDS_$(_PN)_append += "bash"
 ```
 
-## 5) 重新编译程序
+### 5) 重新编译程序
 
 ```bash
 petalinux-build
 ```
 
-- 6) 打包并启动应用程序。在这里可以看到添加的脚本已经启动。你也可以在 SD 卡的第一个分区中放置 autostart 脚本。你可以享受你的 Amazon 了：
+6) 打包并启动应用程序。在这里可以看到添加的脚本已经启动。你也可以在 SD 卡的第一个分区中放置 `autostart` 脚本。你可以享受你的 Amazon 了：
 
 ```bash
 ssh -rsa AAAAB3NzaCly2EAAAAAAAQABAAABCTuWRkGrJkppopt/fQOE0hsa5JFJcf6Ee69GCVib
@@ -642,26 +659,29 @@ run/media/mmcblkp1/autostart.sh line 4: media-ctl: command not found
 run/media/mmcblkp1/autostart.sh line 5: media-ctl: command not found
 run/media/mmcblkp1/autostart.sh line 6: media-ctl: command not found
 run/media/mmcblkp1/autostart.sh line 9: xrand: command not found
+```
 
-
-
-
-
+```
 /home/alinx2020/meta_prj/linux_sdk/petalinux/project-spec/configs/rootfs_config/FP-System-Packages-Misc.gdb
 
 使用方向键导航菜单。<Enter> 选择子菜单 ---> (或空子菜单 ...)。高亮的字母为热键。按 <Y> 包含，按 <X> 排除，按 <M> 模块化。按 <Esc><Esc> 退出，按 <?> 帮助，按 </> 搜索。图例：[*] 内置 []
 
 ```
  gdb
+
 [ ] gdb-dev
+
 [*] gdbserver
+
 [ ] gdb-dbg
+
 ```
 
 ![](img/6f792577a28af84c82be0eef5006ef77_34_0.png)
 
-3) 检查 Petalinux 包组 (Package Groups) → packageroup-petalinux-matchbox，package-petalinux-matchbox，配置 matchbox 桌面，matchbox 是一个简单的 Linux 设备管理系统。
+3) 检查 Petalinux 包组 (Package Groups) → `packageroup-petalinux-matchbox`，`package-petalinux-matchbox`，配置 `matchbox` 桌面，`matchbox` 是一个简单的 Linux 设备管理系统。
 
+```
 /home/alinx2020/meta_prj/linux_sdk/petalinux/project-spec/configs/rootfs_config/Petalinux Package Groups packageroup-petalinux-matchbox
 package-petalinux-matchbox
 
@@ -669,20 +689,24 @@ package-petalinux-matchbox
 
 ```
 [ ] packageroup-petalinux-matchbox
+
 [ ] packageroup-petalinux-matchbox-dbg
+
 [ ] packageroup-petalinux-matchbox-dev
+
 ```
 
 ![](img/6f792577a28af84c82be0eef5006ef77_34_1.png)
 
-4) 检查 Petalinux 包组 (Package Groups) → packageroup-petalinux-opencv 以配置 opencv 库。这里没有勾选调试 (dbg) 和开发 (dev) 版本，这不会影响操作。勾选后，文件系统将非常大。
+4) 检查 Petalinux 包组 (Package Groups) → `packageroup-petalinux-opencv` 以配置 `opencv` 库。这里没有勾选调试 (`dbg`) 和开发 (`dev`) 版本，这不会影响操作。勾选后，文件系统将非常大。
 
 35 / 91 Amazon Store: https://www.amazon.com/alinx
 
-
 ```
 /home/alinx2020/peta_prj/LinxPsBase/petalinux-sdk/project-spec/configs/rootfs_conf
+
 - Petalinux_Package_Groups +packagegroup-petalinux-opencv
+
 packagegroup-petalinux-opencv
 ```
 
@@ -690,17 +714,19 @@ packagegroup-petalinux-opencv
 
 ```
 [[*] packagegroup-petalinux-opencv
+
 [ ] packagegroup-petalinux-opencv-dev
+
 [ ] packagegroup-petalinux-opencv-dbg
 ```
 
-```
+
+
 <Select>  < Exit  < Help  < Save  < Load >
-```
 
 ![](img/6f792577a28af84c82be0eef5006ef77_35_0.png)
 
-5) 检查 Petalinux 包组 (Package Groups) -> packagegroup-petalinux-qt，配置 qt 库
+## 5) 检查 Petalinux 包组 (Package Groups) -> `packagegroup-petalinux-qt`，配置 qt 库
 
 ```
 /home/alinx2020/peta_prj/LinxPsBase/petalinux-sdk/project-spec/configs/rootfs_c
@@ -717,75 +743,78 @@ packagegroup-petalinux-qt
 [+] populate_sdk_qt5
 ```
 
-```
-<Select>  < Exit  < Help  < Save  < Load >
-```
+<Select>  < Exit  < Help  < Save >< Load >
 
 ![](img/6f792577a28af84c82be0eef5006ef77_35_1.png)
 
-6) 检查 Petalinux 包组 (Package Groups) -> packagegroup-petalinux-v4lutils 以配置 v4l 工具。这主要是一个 Linux 上的视频配置工具，可用于视频开发。
+## 6) 检查 Petalinux 包组 (Package Groups) -> `packagegroup-petalinux-v4lutils` 以配置 v4l 工具。这主要是一个 Linux 上的视频配置工具，可用于视频开发。
 
 36 / 91 Amazon Store: https://www.amazon.com/alinx
-
 
 ```
 /home/alinx2020/peta_prj/linux.edb/petalinux/project-spec/configs/rootfs_conf-
 petalux Package Groups -> packagegroup-petalinux-v4utils
 packagegroup-petalinux-v4utils
-使用方向键导航菜单。<Enter> 选择子菜单 --> (或空
-子菜单 .... 高亮的字母为热键。按 <Y> 包含，
-排除更多功能。按 <Esc> 
-退出，按 <?> 帮助，/ 搜索。图例：[*] 内置 []
+```
 
+使用方向键导航菜单。<Enter> 选择子菜单 --> (或空子菜单 .... 高亮的字母为热键。按 <Y> 包含，排除更多功能。按 <Esc> 退出，按 <?> 帮助，/ 搜索。图例：[*] 内置 []
+
+```
 [*] packagegroup-petalinux-v4utils
 [] packagegroup-petalinux-v4utils-dbg
 [] packagegroup-petalinux-v4utils-dev
-
-<Select>          < Exit >< Help >< Save >< Load >
 ```
 
-7) 检查 Petalinux 包组 (Package Groups) -> packagegroup-petalinux-x11 以配置 x11 库
+<Select>          < Exit >< Help >< Save >< Load >
+
+## 7) 检查 Petalinux 包组 (Package Groups) -> `packagegroup-petalinux-x11` 以配置 x11 库
 
 ```
 /home/alinx2020/eta_prj/linux/petalinux_sdk/project-spec/configs/rootfs_config-
 petalux Package Groups -> packagegroup-petalinux-x11
 packagegroup-petalinux-x11
-使用方向键导航菜单。<Enter> 选择子菜单 --> (或空
-子菜单 ....)。高亮的字母为热键。按 <Y> 包含，
-<N> 排除，<M> 模块化。按 <Esc> 退出，按 <?> 帮助，
-/ 搜索。图例：[*] 内置 [ ]
+```
+
+使用方向键导航菜单。<Enter> 选择子菜单 --> (或空子菜单 ....)。高亮的字母为热键。按 <Y> 包含，<N> 排除，<M> 模块化。按 <Esc> 退出，按 <?> 帮助，/ 搜索。图例：[*] 内置 [ ]
+
+```
 module
 [*] packagegroup-petalinux-x11
 [] packagegroup-petalinux-x11-dev
 [] packagegroup-petalinux-x11-dbg
-<Select>          < Exit >< Help >< Save >< Load >
 ```
 
-8) 检查文件系统包 (Filesystem Packages) -> libs-alinx 以配置
-GPU 库
+<Select>          < Exit >< Help >< Save >< Load >
+
+## 8) 检查文件系统包 (Filesystem Packages) -> `libs-alinx` 以配置 GPU 库
 
 37 / 91 Amazon Store: https://www.amazon.com/alinx
 
-
+```
 /home/alinx2020/petalinux_prj/linux_Base/petalinux_sdk/project-spec/configs/rootfs_config/
 Filesystem Packages -> libs-alinx
-使用方向键导航菜单。<Enter> 选择子菜单 ---> (或空
-子菜单 ...) 高亮的字母为热键。按 <Y> 包含，
-<X> 排除，<M> 模块化。按 <Esc><Esc> 退出，<?> 
-帮助， </> 搜索。图例：[*] 内置 [ ] 排除 <M>
-module
+```
+
+使用方向键导航菜单。<Enter> 选择子菜单 ---> (或空子菜单 ...) 高亮的字母为热键。按 <Y> 包含，<X> 排除，<M> 模块化。按 <Esc><Esc> 退出，<?> 帮助， </> 搜索。图例：[*] 内置 [ ] 排除 <M> module
+
+```
 [*] alinx-linux
 [*] alinx-linux-dbg
 [*] alinx-linux-dev
 [*]-defaults (x11)
+```
+
 <Select>          < Exit >< Help >< Save >< Load >
 
-9) 编译 petalinux 项目
+## 9) 编译 petalinux 项目
+
+```bash
 petalinux-build --sdk
+```
 
-# 第 6 部分：安装 SDK
+### 第 6 部分：安装 SDK
 
-你可以在 images/linux 目录下找到生成的 sdk.sh 文件。该文件较大且不是文本文件。它包含一个交叉编译器、各种库和头文件。它非常有用。如果你只需要做 Linux 应用，需要一个 sdk.sh 文件（注：原文为“如果你只需要做 Linux 应用，需要一个 sdk.sh 文件，这可以从 Petalinux 和 Vitis 分离”）。
+你可以在 `images/linux` 目录下找到生成的 `sdk.sh` 文件。该文件较大且不是文本文件。它包含一个交叉编译器、各种库和头文件。它非常有用。如果你只需要做 Linux 应用，需要一个 `sdk.sh` 文件（注：原文为“如果你只需要做 Linux 应用，需要一个 sdk.sh 文件，这可以从 Petalinux 和 Vitis 分离”）。
 
 ![](img/6f792577a28af84c82be0eef5006ef77_38_0.png)
 ![](img/6f792577a28af84c82be0eef5006ef77_38_1.png)
@@ -804,6 +833,7 @@ petalinux-build --sdk
 ![](img/6f792577a28af84c82be0eef5006ef77_38_14.png)
 ![](img/6f792577a28af84c82be0eef5006ef77_38_15.png)
 
+```
 petalinux.cfg
 bl31.bin
 bl31.elf
@@ -818,9 +848,10 @@ system.dtb
 System.map.linux
 zynqmp_fsblelf
 zynqmp-qemu-arm-dt
+```
 
-2) 安装 sdk，它提示默认安装在 /opt/petalinux/2020.1。按回车并输入 Y 安装到默认目录。安装完成后，它提示
-source /opt/petalinux/2020.1/environment-setup-arch64-xinx-linux
+2) 安装 sdk，它提示默认安装在 `/opt/petalinux/2020.1`。按回车并输入 Y 安装到默认目录。安装完成后，它提示
+`source /opt/petalinux/2020.1/environment-setup-arch64-xinx-linux`
 你可以使用 SDK
 
 ```
@@ -829,51 +860,58 @@ Petalinux SDK installer version 2020.1
 =====================
 Enter SDK 的目标目录 (默认: /opt/petalinux/2020.1):
 你想将 SDK 安装到 "/opt/petalinux/2020.1"吗？继续 [Y/n]? y
-[sudo] password for alinx2020:
-Extracting SDK...
-.. done
-Setting up .. done
-SDK 已设置好并可以使用。
-每次在新的会话中使用 SDK 时，你都需要运行环境设置脚本 env.sh
-$ /opt/petalinux/2020.1/environment-setup-arch64-xinx-linux
-alinx2020@ubuntu:peta_prj/linux_sdk/images/linux $
 ```
 
+
+
+[sudo] password for alinx2020:
+
+Extracting SDK...
+
+.. done
+
+Setting up .. done
+
+SDK 已设置好并可以使用。
+
+每次在新的会话中使用 SDK 时，你都需要运行环境设置脚本 `env.sh`
+
+`$ /opt/petalinux/2020.1/environment-setup-arch64-xinx-linux`
+
+`alinx2020@ubuntu:peta_prj/linux_sdk/images/linux $`
+
+```
 3) 如果是 SD 卡根文件系统，请参考“制作 SD 卡根文件系统”来制作 SD 卡
-
-
-
-
-
+```
 
 ## 第 6.3 部分：Qt Creator 交叉编译环境设置
 
-1)  Qt Creator，如果找不到应用程序快捷方式，可以进行搜索。
+1) Qt Creator，如果找不到应用程序快捷方式，可以进行搜索。
 
 ![](img/6f792577a28af84c82be0eef5006ef77_39_0.png)
 
-2) 点击 Tools（工具） -> Options（选项)。
+2) 点击 `Tools`（工具） -> `Options`（选项)。
 
 ![](img/6f792577a28af84c82be0eef5006ef77_39_1.png)
 
-3) 在 Build & Run 选项的 Qt Versions 页面点击 "Add.."（添加..）。
+3) 在 `Build & Run` 选项的 `Qt Versions` 页面点击 "Add.."（添加..）。
 
-4) 选择之前 SDK 编译生成的 qmake 文件，路径为：
-/opt/petalinux/2020.1/sysroots/x86_64-petalinux-linux/usr/bin/qmake
+4) 选择之前 SDK 编译生成的 `qmake` 文件，路径为：
+`/opt/petalinux/2020.1/sysroots/x86_64-petalinux-linux/usr/bin/qmake`
 
-5) 添加 qmake 后，保持默认名称，不要修改。
+5) 添加 `qmake` 后，保持默认名称，不要修改。
 
 ![](img/6f792577a28af84c82be0eef5006ef77_40_1.png)
 
-6) 在 Compilers（编译器）页面点击 "Add..",选择 GCC -> C。
+6) 在 `Compilers`（编译器）页面点击 "Add..",选择 `GCC -> C`。
 
 ![](img/6f792577a28af84c82be0eef5006ef77_41_0.png)
 
-7) 将 Name 修改为 zynqMP_GCC，Compiler path 路径为 /opt/petalinux/2020.1/sysroots/x86_64-petalinux-linux/usr/bin/aarch64-xilinx-linux-aarch64-linux-gcc
+7) 将 `Name` 修改为 `zynqMP_GCC`，`Compiler path` 路径为 `/opt/petalinux/2020.1/sysroots/x86_64-petalinux-linux/usr/bin/aarch64-xilinx-linux-aarch64-linux-gcc`
 
 ![](img/6f792577a28af84c82be0eef5006ef77_41_1.png)
 
-8) 在 Compilers 页面点击 "Add..",选择 GCC -> C++，将 Name 修改为 zynqMP_C++，路径选择为 /opt/petalinux/2020.1/sysroots/x86_64-petalinux-linux/usr/bin/aarch64-xilinx-linux-aarch64-linux-g++
+8) 在 `Compilers` 页面点击 "Add..",选择 `GCC -> C++`，将 `Name` 修改为 `zynqMP_C++`，路径选择为 `/opt/petalinux/2020.1/sysroots/x86_64-petalinux-linux/usr/bin/aarch64-xilinx-linux-aarch64-linux-g++`
 
 ![](img/6f792577a28af84c82be0eef5006ef77_42_0.png)
 
@@ -881,17 +919,17 @@ alinx2020@ubuntu:peta_prj/linux_sdk/images/linux $
 
 ![](img/6f792577a28af84c82be0eef5006ef77_42_1.png)
 
-10) 选择 Debuggers（调试器），添加一个，点击 Add 添加调试器，将名称更改为 zynqMP_gdb，路径选择 /opt/petalinux/2020.1/sysroots/x86_64-petalinux-linux/usr/bin/aarch64-xilinx-linux/aarch64-xilinx-linux-gdb，点击 Apply。
+10) 选择 `Debuggers`（调试器），添加一个，点击 `Add` 添加调试器，将名称更改为 `zynqMP_gdb`，路径选择 `/opt/petalinux/2020.1/sysroots/x86_64-petalinux-linux/usr/bin/aarch64-xilinx-linux/aarch64-xilinx-linux-gdb`，点击 `Apply`。
 
-11) 在 Kits（构建套）页面，点击 Add 添加新的 Kit，将 Name 修改为 zynqMP，Device type 选择 Generic Linux Device，Compiler C 选择 zynqMP_GCC，Compiler C++ 选择 zynqMP_C++，Debugger 选择 zynqMP_gdb，Qt version 选择 Qt 5.13.2 (System)。
+11) 在 `Kits`（构建套）页面，点击 `Add` 添加新的 `Kit`，将 `Name` 修改为 `zynqMP`，`Device type` 选择 `Generic Linux Device`，`Compiler C` 选择 `zynqMP_GCC`，`Compiler C++` 选择 `zynqMP_C++`，`Debugger` 选择 `zynqMP_gdb`，`Qt version` 选择 `Qt 5.13.2 (System)`。
 
 ![](img/6f792577a28af84c82be0eef5006ef77_43_1.png)
 
-12) 点击 OK 完成 Kits 的配置。
+12) 点击 `OK` 完成 `Kits` 的配置。
 
 ### 6.3：创建 Qt 测试项目
 
-1) 点击 File（文件） -> New File or Project（新建文件或项目）。
+1) 点击 `File`（文件） -> `New File or Project`（新建文件或项目）。
 
 ![](img/6f792577a28af84c82be0eef5006ef77_44_0.png)
 
@@ -899,39 +937,39 @@ alinx2020@ubuntu:peta_prj/linux_sdk/images/linux $
 
 ![](img/6f792577a28af84c82be0eef5006ef77_44_1.png)
 
-3) 将 Name更改为 qt_test，实验路径选择 /home/alinx/work。
+3) 将 `Name` 更改为 `qt_test`，实验路径选择 `/home/alinx/work`。
 
 ![](img/6f792577a28af84c82be0eef5006ef77_45_0.png)
 
-4) Kit 选择在此处的 ZYNQMP 版本。
+4) `Kit` 选择在此处的 `ZYNQMP` 版本。
 
 ![](img/6f792577a28af84c82be0eef5006ef77_45_1.png)
 
-5) 点击 Next（下一步）继续。
+5) 点击 `Next`（下一步）继续。
 
-6) 选择 Finish（完成）结束项目创建。
+6) 选择 `Finish`（完成）结束项目创建。
 
 ![](img/6f792577a28af84c82be0eef5006ef77_46_1.png)
 
-7) 双击 mainwindow.ui。
+7) 双击 `mainwindow.ui`。
 
 ![](img/6f792577a28af84c82be0eef5006ef77_47_0.png)
 
-8) 将 Push 按钮拖入主界面。
+8) 将 `Push` 按钮拖入主界面。
 
 ![](img/6f792577a28af84c82be0eef5006ef77_47_1.png)
 
 9) 双击文本部分进行修改。
 
-10) 选择 ZYNQ Kit 并点击锤子图标进行编译。
+10) 选择 `ZYNQ Kit` 并点击锤子图标进行编译。
 
-11) 在 build-zynqMP 目录下可以看到生成的 qt_test 文件，该文件需要在 FPGA 板上运行。
+11) 在 `build-zynqMP` 目录下可以看到生成的 `qt_test` 文件，该文件需要在 FPGA 板上运行。
 
 ![](img/6f792577a28af84c82be0eef5006ef77_48_1.png)
 
 ### 6.5：运行交叉编译的 Qt
 
-1) 将之前生成的 BOOT.BIN 和 image.ub 拷贝到 sd 卡。
+1) 将之前生成的 `BOOT.BIN` 和 `image.ub` 拷贝到 sd 卡。
 
 2) 启动 FPGA 板进入系统。
 
@@ -941,23 +979,23 @@ alinx2020@ubuntu:peta_prj/linux_sdk/images/linux $
 export DISPLAY=:0
 ```
 
-4) 运行 qt_test
+4) 运行 `qt_test`
 
 ```bash
 /media/sdblk1/qt_test
 ```
 
-5) 按 Ctrl + C 结束程序。
+5) 按 `Ctrl + C` 结束程序。
 
-### 第7 部分：使用 Vitis 开发 Linux
+## 第7 部分：使用 Vitis 开发 Linux
 
-在之前的教程中，我们使用 petalinux 构建了 Linux 系统。在本实验中，我们将创建一个 Linux 应用并在 FPGA 板上运行。此实验需要使用上述准备的 Linux 环境。
+在之前的教程中，我们使用 `petalinux` 构建了 Linux 系统。在本实验中，我们将创建一个 Linux 应用并在 FPGA 板上运行。此实验需要使用上述准备的 Linux 环境。
 
-## 7.1：使用 Vitis 构建 Linux 应用
+### 7.1：使用 Vitis 构建 Linux 应用
 
-1) 在 /home/alinx/work 中创建 "linux_app" 目录作为工作空间。
+1) 在 `/home/alinx/work` 中创建 "`linux_app`" 目录作为工作空间。
 
-2) 设置 Vivado 环境并运行 vitis。
+2) 设置 Vivado 环境并运行 `vitis`。
 
 ```bash
 source /tools/Xilinx/Vivado/2020.1/settings.sh
@@ -972,31 +1010,29 @@ vitis
 Launching Vitis with command '/tools/Xilinx/Vivado/2019.2/eclipse -Xmx64 -Xms64 -Xmx4G -Dorg.eclipse.core.runtime.logging.logfile=-Dosgi/configuration.area=@user.home/alinx/Vitis2019.2 -add-modules-all-UNNAMED --add-modules-dk=org.eclipse.plugins --add-opens=java.base/java.lang=ALL-NAMED --add-opens=java.base/java.util=ALL-NAMED --add-opens=java.desktop/java.util=ALL-NAMED --add-opens=java.desktop/java.awt=ALL-NAMED --add-opens=java.desktop/java.swing=ALL-NAMED --add-opens=java.desktop/java.awt=ALL-NAMED --add-opens=java.desktop/java.swing.tree=ALL-NAMED --add-opens=java.desktop/java.swing.platform=ALL-NAMED --add-opens=com.sun.sun=ALL-NAMED --add-opens=java.desktop/sun.awt.X11=ALL-NAMED
 ```
 
-3) Workspace 选择 "/home/alinx/work/linux_app"。
+
+
+3) Workspace 选择 `/home/alinx/work/linux_app`。
 
 ![](img/6f792577a28af84c82be0eef5006ef77_51_0.png)
 
-4) 点击 "Welcome" 上的 X 关闭欢迎界面。
+4) 点击 `Welcome` 上的 `X` 关闭欢迎界面。
 
-5) 在 Explorer 的空白处右键点击 "New -> Project..."。
+5) 在 Explorer 的空白处右键点击 `New -> Project...`。
 
 ![](img/6f792577a28af84c82be0eef5006ef77_52_0.png)
 
-7) 填写项目名称 "hello"，在 Others 文件夹下选择项目类型 "Xilinx ARM v8 Linux Executable"，然后点击 "Finish"。
+7) 填写项目名称 `hello`，在 Others 文件夹下选择项目类型 `Xilinx ARM v8 Linux Executable`，然后点击 `Finish`。
 
 ![](img/6f792577a28af84c82be0eef5006ef77_53_1.png)
 
-8) 如果弹出以下消息，点击 "No"。
+8) 如果弹出以下消息，点击 `No`。
 
 ![](img/6f792577a28af84c82be0eef5006ef77_54_0.png)
 
-
-
-
-
 # ALINX Ultrascale+ Linux 开发基础教程
 
-9) 编辑 main.c 文件并编写一个简单的打印
+9) 编辑 `main.c` 文件并编写一个简单的打印
 
 ```c
 #include<stdio.h>
@@ -1014,7 +1050,7 @@ int main()
 
 ## 第 7.2 部分：通过 NFS 服务器运行（开发板已连接网线）
 
-- 1) (PS, ETH1，路由器需要支持自动获取 IP，开启电源并挂载 Linux 宿机的 NFS。192.168.1.115 是主机地址，/home/alinx2020/work 是 NFS 目录，/mnt 是 FPGA 开发板的挂载点。此处，主机和 FPGA 开发板需要处于同一网段内（红色部分必须与你的实际情况一致）。
+- 1) (PS, ETH1，路由器需要支持自动获取 IP，开启电源并挂载 Linux 宿机的 NFS。`192.168.1.115` 是主机地址，`/home/alinx2020/work` 是 NFS 目录，`/mnt` 是 FPGA 开发板的挂载点。此处，主机和 FPGA 开发板需要处于同一网段内（红色部分必须与你的实际情况一致）。
 
 ```bash
 mount -t nfs -o nolock 192.168.1.115:/home/alinx2020/work /mnt
@@ -1027,7 +1063,7 @@ root@ax_peta:~# mount -t nfs -o nolock 192.168.1.115:/home/alinx2020/work /mnt
 root@ax_peta:~# 
 ```
 
-- 2) 进入 /mnt/linux_app/hello/Debug 目录，运行 hello.elf，我们可以看到 Hello Hello World。
+- 2) 进入 `/mnt/linux_app/hello/Debug` 目录，运行 `hello.elf`，我们可以看到 Hello Hello World。
 
 ```bash
 cd /mnt/linux_app/hello/Debug
@@ -1060,16 +1096,16 @@ root@ax_peta:~# /mnt/linux_app/hello/Debug#
 
 ![](img/6f792577a28af84c82be0eef5006ef77_58_0.png)
 
-- 3) 修改开发板名称以便更容易理解 Vitis 平台。选择 Platform，将以下 Board 修改为 axu3eg
+- 3) 修改开发板名称以便更容易理解 Vitis 平台。选择 Platform，将以下 Board 修改为 `axu3eg`
 
 ![](img/6f792577a28af84c82be0eef5006ef77_58_1.png)
 ![](img/6f792577a28af84c82be0eef5006ef77_58_2.png)
 
-- 4) 定义可用的接口和端口。右键点击每个端口弹出菜单。你也可以双击在 Enable 和 Disable 之间切换。在 sysc_ultra_ps_0 中，将下一个接口和端口设置为 Enable（Disable 之外）AXI HPM0 FPD, AXI HPM1 FPD, AXI LPD, SXI HPC0 FPD, SXI HPC1 FPD, SXI HP0 FPD, SXI HP1 FPD, SXI HP2 FPD, SXI HP3 FPD；clk 全部使用 Enable。
+- 4) 定义可用的接口和端口。右键点击每个端口弹出菜单。你也可以双击在 Enable 和 Disable 之间切换。在 `sysc_ultra_ps_0` 中，将下一个接口和端口设置为 Enable（Disable 之外）`AXI HPM0 FPD`, `AXI HPM1 FPD`, `AXI LPD`, `SXI HPC0 FPD`, `SXI HPC1 FPD`, `SXI HP0 FPD`, `SXI HP1 FPD`, `SXI HP2 FPD`, `SXI HP3 FPD`；`clk` 全部使用 Enable。
 
 ![](img/6f792577a28af84c82be0eef5006ef77_59_0.png)
 
-- 5) 时钟默认值。某个时钟必须设置为默认值。选择 clk 后，点击 Platform Properties 中的 Options 选项卡并选择 "default"。此外，Vitis 使用的默认时钟 ID 必须设置为 0。其他时钟从 1 开始排序，输入序列号后按 Enter 键确认。
+- 5) 时钟默认值。某个时钟必须设置为默认值。选择 `clk` 后，点击 Platform Properties 中的 Options 选项卡并选择 `default`。此外，Vitis 使用的默认时钟 ID 必须设置为 0。其他时钟从 1 开始排序，输入序列号后按 Enter 键确认。
 
 ![](img/6f792577a28af84c82be0eef5006ef77_60_0.png)
 
@@ -1088,23 +1124,19 @@ set_property platform.design_intent.managed [current_project]
 
 ![](img/6f792577a28af84c82be0eef5006ef77_59_0.png)
 
-
-
-
 # ALINX Ultrascale+ Linux 开发基础教程
 
-11) 创建一个新的 pfm 文件夹用于构建 Vitis 平台层。
+11) 创建一个新的 `pfm` 文件夹用于构建 Vitis 平台层。
 
 ```bash
 mkdir pfm
 ```
 
-12) 将 petalinux 的 sdk 安装到 pfm 目录。sdk 的安装非常简单。
-之前的教程已介绍过。
+12) 将 petalinux 的 sdk 安装到 `pfm` 目录。sdk 的安装非常简单。之前的教程已介绍过。
 
-13) 创建一个 boot 文件夹，然后将 petalinux 生成的 `image.ub`、`zynqmp-fsbl.elf`、`pmufw.elf`、`bl31.elf` 和 `u-boot.elf` 拷贝到 boot 文件夹。
+13) 创建一个 `boot` 文件夹，然后将 petalinux 生成的 `image.ub`、`zynqmp-fsbl.elf`、`pmufw.elf`、`bl31.elf` 和 `u-boot.elf` 拷贝到 `boot` 文件夹。
 
-14) 在 boot 文件夹中创建一个 linux.bif 文件，内容如下：
+14) 在 `boot` 文件夹中创建一个 `linux.bif` 文件，内容如下：
 
 ```c
 /* linux */
@@ -1121,12 +1153,14 @@ the_ROM_image:
 
 ## 第 8.3.2 部分：创建 vitis 平台
 
-15) 进入 pfm 文件夹并启动 vitis 软件。
+15) 进入 `pfm` 文件夹并启动 vitis 软件。
 
 ```bash
 cd /pfm
 vitis -workspace wksp1
 ```
+
+
 
 ![](img/6f792577a28af84c82be0eef5006ef77_68_0.png)
 
@@ -1138,23 +1172,23 @@ vitis -workspace wksp1
 
 ![](img/6f792577a28af84c82be0eef5006ef77_69_0.png)
 
-18) 指定使用 Vivado 创建的 xsa 文件，操作系统选择 Linux，处理器选择 psu_cortex53。如果其中一个符号显示为红色，没关系。设置完成后，点击 Finish（完成）。
+18) 指定使用 Vivado 创建的 xsa 文件，操作系统选择 Linux，处理器选择 `psu_cortex53`。如果其中一个符号显示为红色，没关系。设置完成后，点击 Finish（完成）。
 
 ### 新平台项目
 
-### 平台项目规格
+#### 平台项目规格
 
 为新平台项目提供硬件和软件规格。
 
-### 硬件规格
+##### 硬件规格
 
-XSA 文件：/home/alinx2020/Downloads/petalinx/axu3eg_base.xsa
+XSA 文件：`/home/alinx2020/Downloads/petalinx/axu3eg_base.xsa`
 
-### 软件规格
+##### 软件规格
 
-操作系统：linux
+操作系统：`linux`
 
-处理器：psu_cortex53
+处理器：`psu_cortex53`
 
 > 注意：在平台项目中添加的 Linux 域需要更多细节才能生成平台。在生成平台之前，请在平台项目编辑器中指定缺失的细节。
 
@@ -1162,11 +1196,11 @@ XSA 文件：/home/alinx2020/Downloads/petalinx/axu3eg_base.xsa
 
 ![](img/6f792577a28af84c82be0eef5006ef77_70_0.png)
 
-19) 窗口中有 linux、zynqmp fsbl 和 zynqmp pmuwf。对于 linux，稍后需要设置。
+19) 窗口中有 `linux`、`zynqmp fsbl` 和 `zynqmp pmuwf`。对于 `linux`，稍后需要设置。
 
 ![](img/6f792577a28af84c82be0eef5006ef77_70_1.png)
 
-20) 在 psu_cortex53 的 linux 项的 Boot Component 中指定 bif 文件。
+20) 在 `psu_cortex53` 的 `linux` 项的 Boot Component 中指定 `bif` 文件。
 
 Directory 和 Linux image Directory 被指定为上面创建的 boot 目录。Sysroot 可以暂时不指定，如果你想指定，可以选择安装后的的 petalinux sdk root/aarch64-xilinx-linux 文件夹。点击右上角的锤子图标开始编译，并等待完成。
 
@@ -1192,13 +1226,13 @@ Directory 和 Linux image Directory 被指定为上面创建的 boot 目录。Sy
 
 24) 在锤子图标下拉菜单中选择 Hardware（硬件），以生成在板上运行的文件，然后点击锤子进行编译。这需要很长时间并且需要超过 16G 的虚拟内存，否则会报错。
 
-![](img/6f792577a28af84c82be0eef5006ef77_75_0.png) 25) 编译完成后，在上述创建的 boot 目录中将 `image.ub` 等文件拷贝到板上。
+![](img/6f792577a28af84c82be0eef5006ef77_75_0.png)
 
-![](img/6f792577a28af84c82be0eef5006ef77_76_0.png) 26) 在 boot 目录中将 petalinux 生成的镜像拷贝到 boot 目录。如果你想指定 Sysroot，可以选择安装后的 petalinux sdk root/aarch64-xilinx-linux 文件夹。
+25) 编译完成后，在上述创建的 boot 目录中将 `image.ub` 等文件拷贝到板上。
 
+![](img/6f792577a28af84c82be0eef5006ef77_76_0.png)
 
-
-
+26) 在 boot 目录中将 petalinux 生成的镜像拷贝到 boot 目录。如果你想指定 Sysroot，可以选择安装后的 petalinux sdk root/aarch64-xilinx-linux 文件夹。
 
 # ALINX Ultrascale+ Linux 开发基础教程
 
@@ -1208,7 +1242,7 @@ Directory 和 Linux image Directory 被指定为上面创建的 boot 目录。Sy
 
 ![](img/6f792577a28af84c82be0eef5006ef77_80_0.png)
 
-2) 在 "Subsystem AUTO Hardware Settings --->Advanced bootable images storage Settings --->boot image storage media"选项中选择 "primary flash"
+2) 在 "Subsystem AUTO Hardware Settings --->Advanced bootable images storage Settings --->boot image storage media" 选项中选择 "primary flash"
 
 ![](img/6f792577a28af84c82be0eef5006ef77_80_1.png)
 
@@ -1216,11 +1250,13 @@ Directory 和 Linux image Directory 被指定为上面创建的 boot 目录。Sy
 
 ```
 /home/alinx/work/pet/a705_qpi/project-spec/configs/config - misc/config Sys
+
 # ... advanced bootable images storage settings - kernel image settings
+
 kernel image settings
 ```
 
-使用方向键导航菜单，<enter> 选择子菜单 ---> (或空子菜单 ...)。高亮字母为热键。按 <Y> 包含，按 <X> 模块化功能。按 <Esc><Esc> 退出，</?> 帮助，</> 搜索。图例：[*] 内置 [
+使用方向键导航菜单，`<enter>` 选择子菜单 ---> (或空子菜单 ...)。高亮字母为热键。按 `<Y>` 包含，按 `<X>` 模块化功能。按 `<Esc><Esc>` 退出，`</?>` 帮助，`</>` 搜索。图例：`[*]` 内置 [
 
 ![](img/6f792577a28af84c82be0eef5006ef77_81_0.png)
 
@@ -1228,37 +1264,61 @@ kernel image settings
 
 ```
 /home/alinx/downloads/linuxuboot_uaf/partition/project-spec/configs/config - misc/config System Configuration
+
 # Subsystem Auto Hardware Settings - Flash Settings
+
 Settings
+
 使用方向键导航菜单，<enter> 选择子菜单 ---> (或空子菜单 ...)。高亮字母为热键。按 <X> 模块化功能。按 <Esc><Esc> 退出，</?> 帮助，</ 搜索。图例：[*] 排除 [ ] module
+
 <
+
 [*] Primary Flash (qspi_q0) ---
+
 [*] advanced Boot Flash Configuration
+
 *** partition 0 ***
+
 (boot) name
+
 (000000) size
+
 *** partition 1 ***
+
 (bootenv) name
+
 ( ) size
+
 *** partition 2 ***
+
 (kernel) name
+
 (000000) size
+
 *** partition 3 ***
+
 (bootscr) name
+
 (000000) size
+
 *** partition 4 ***
+
 () name
 
 <Select> < Exit > < Help > < Save > < Load >
 ```
 
-启动分区包含描述 FPGA 的 .bit 文件、u-boot、fsbl、设备树 .dtb 以及其他文件。启动分区的大小只需要大于这些文件大小之和，并且需要根据实际情况进行修改。
 
-bootenv 分区存储 u-boot 环境变量，根据实际情况进行修改。
 
-kernel 分区存储 image.ub。该分区比 image.ub 大，需要根据实际情况进行修改。
+# ALINX Ultrascale+ Linux 开发基础教程
 
-boot.scr 存储在 bootscr 分区中。该分区大于 boot.scr，需要根据实际情况进行修改。
+启动分区包含描述 FPGA 的 `.bit` 文件、`u-boot`、`fsbl`、设备树 `.dtb` 以及其他文件。启动分区的大小只需要大于这些文件大小之和，并且需要根据实际情况进行修改。
+
+`bootenv` 分区存储 `u-boot` 环境变量，根据实际情况进行修改。
+
+`kernel` 分区存储 `image.ub`。该分区比 `image.ub` 大，需要根据实际情况进行修改。
+
+`boot.scr` 存储在 `bootscr` 分区中。该分区大于 `boot.scr`，需要根据实际情况进行修改。
 
 另外注意，所有打包文件的总大小不能超过 flash 的大小。
 
@@ -1268,22 +1328,21 @@ boot.scr 存储在 bootscr 分区中。该分区大于 boot.scr，需要根据�
 
 - 6) 你可以在 "Firmware Version Configuration--->" 修改 "Host name"
 
-```
-/home/alinx/work/pet/a7015_qspi/project-spec/config/config misc/config Sys - Firmware Version Configuration
-```
+`/home/alinx/work/pet/a7015_qspi/project-spec/config/config misc/config Sys - Firmware Version Configuration`
 
-使用方向键导航菜单，<enter> 选择子菜单 ---> (或空子菜单 ...)。高亮字母为热键。按 <Y> 包含，按 <N> 排除，按 <M> 模块化功能。按 <Esc><Esc> 退出，</?> 帮助，</> 搜索。图例：[*] 内置 [
+使用方向键导航菜单，`<enter>` 选择子菜单 ---> (或空子菜单 ...)。高亮字母为热键。按 `<Y>` 包含，按 `<N>` 排除，按 `<M>` 模块化功能。按 `<Esc><Esc>` 退出，`</?>` 帮助，`</>` 搜索。图例：`[*]` 内置 [
 
 ![](img/6f792577a28af84c82be0eef5006ef77_83_0.png)
 
-- 7) 保存配置并退出。然后使用 petalinux-config -c u-boot 来配置 u-boot
+- 7) 保存配置并退出。然后使用 `petalinux-config -c u-boot` 来配置 `u-boot`
 
 ```
 .config - U-Boot 2020.01 Configuration
 ```
 
-使用方向键导航菜单，<enter> 选择子菜单 ---> (空子菜单 ...)。高亮字母为热键。按 <Y> 包含，按 <N> 排除，按 <M> 模块化功能。按 <Esc><Esc> 退出，</?> 帮助，</> 搜索。图例：[*] 内置 [
+使用方向键导航菜单，`<enter>` 选择子菜单 ---> (空子菜单 ...)。高亮字母为热键。按 `<Y>` 包含，按 `<N>` 排除，按 `<M>` 模块化功能。按 `<Esc><Esc>` 退出，`</?>` 帮助，`</>` 搜索。图例：`[*]` 内置 [
 
+```
 | Architecture select (ARM architecture) ---> |
 | ARM architecture ---> |
 | General setup ---> |
@@ -1291,47 +1350,47 @@ boot.scr 存储在 bootscr 分区中。该分区大于 boot.scr，需要根据�
 | Boot media ---> |
 | Boot timing ---> |
 | Enable boot before |
-| 8) ARM architecture ---> 设置 boot partition 的偏移量。
+```
 
-- 9) 打开 project-spec/meta-user/bsp/boot.bbappend。
+- 8) `ARM architecture` ---> 设置 `boot partition` 的偏移量。
 
-- 10) 保存后，使用 petalinux 编译。
+- 9) 打开 `project-spec/meta-user/bsp/boot.bbappend`。
 
-- 11) 编译完成后，根据 --kernel 选项修改 kernel。
+- 10) 保存后，使用 `petalinux` 编译。
 
-- 12) 参考 vitis 教程中的方法将 BOOT.bin 烧录到 FPGA 开发板。
+- 11) 编译完成后，根据 `--kernel` 选项修改 `kernel`。
+
+- 12) 参考 vitis 教程中的方法将 `BOOT.bin` 烧录到 FPGA 开发板。
 
 - 13) 将 FPGA 开发板上的拨码开关设置为 QSPI 启动，然后打开 FPGA 开发板。
 
-# 第 11 部分：从 EMMC 启动 Linux
+## 第 11 部分：从 EMMC 启动 Linux
 
-EMMC 和 SD 卡类似
+EMMC 和 SD 卡类似。
 
-使用 SD 卡制作系统参考第 1 或第 5 部分。
-使用 Qflash 启动系统参考第 10 部分。
+使用 SD 卡制作系统参考第 1 或第 5 部分。使用 Qflash 启动系统参考第 10 部分。
 
-## 第 11.1 部分：格式化 EMMC 并挂载
+### 第 11.1 部分：格式化 EMMC 并挂载
 
-格式化 EMMC 参考第 9 部分中的 SSD 操作，mmc 设备通常为 "/dev/mmcblk"，与 SD 卡的设备名称格式相同。至于哪一个是 SD 卡，你需要自行识别。
+格式化 EMMC 参考第 9 部分中的 SSD 操作，mmc 设备通常为 `/dev/mmcblk`，与 SD 卡的设备名称格式相同。至于哪一个是 SD 卡，你需要自行识别。
 
-与 SSD 的区别在于，分区完成后，SSD 使用 mkfs 命令将分区格式化为 EXT4 格式，但这里我们需要将 EMMC 格式化为 FAT32。分区完成后，执行以下操作
-
-
-
-
-
-# ALINX Ultrascale+ Linux 开发基础教程
+与 SSD 的区别在于，分区完成后，SSD 使用 `mkfs` 命令将分区格式化为 `EXT4` 格式，但这里我们需要将 EMMC 格式化为 `FAT32`。分区完成后，执行以下操作：
 
 ```
 root@petalinux:~# fdisk /dev/mmblk0
 
 Welcome to fdisk (util-linux 2.34).
+
 Changes will remain in memory only, until you decide to write them.
+
 Be careful before using the command.
 
 Command (m for help): t
+
 Selected partition 1
+
 Hex code (t to list all codes):
+
 0 Empty 24 NE-DOS 81 Linux / Old bnf Solaris
 1 FAT16 25 Hidden NTFS 82 Linux swap / So c1 DRDOS/sec (FAT-
 2 FAT32 26 Hidden NTFS 83 Linux c4 DRDOS/sec (FAT-
@@ -1355,75 +1414,106 @@ Hex code (t to list all codes):
 20 Novell Netware 44 Linux Linux raid boot
 21 WFS FAT32 45 Android FAT32 l3 Scalable
 22 WFS FAT32 46 Solaris m BBT
+
 Hex code (type to list all codes) b
+
 Change type of partition 'W95 FAT32' to 'W95 FAT32'.
 
 Command (m for help): w
+
 The partition table has been altered.
+
 Syncing disks.
+
 root@petalinux:~# _
 ```
 
-如果你在首次尝试使用 `mkfs` 命令将分区格式化为 EXT4 并执行操作时遇到错误，请检查。
+如果你在首次尝试使用 `mkfs` 命令将分区格式化为 `EXT4` 并执行操作时遇到错误，请检查。
 
 格式化完成后，确保使用 `mount` 命令查看 eMMC 的状态。如果分区未挂载，请按照路径在 NFS 上进行挂载。
 
-## 第 11.2 节：使用 NFS 的虚拟机文件夹
+### 第 11.2 节：使用 NFS 的虚拟机文件夹
 
 我们需要在虚拟机上启动由 eMMC 引导的系统。为了方便拷贝 FPGA 开发板系统所需的系统文件。
 
 NFS 操作参考第 7.2 节。
 
-## 第 11.3 节：制作 EMMC 启动系统
+### 第 11.3 节：制作 EMMC 启动系统
 
-EMMC 启动和 SD 卡启动几乎相同。只需根据 SD 启动系统修改 petalinux 中的一个设置即可。
+EMMC 启动和 SD 卡启动几乎相同。只需根据 SD 启动系统修改 `petalinux` 中的一个设置即可。
 
-- 1) 进入 petalinux-config
-- 2) 选择 Subsystem AUTO Hardware Settings
+- 1) 进入 `petalinux-config`
+- 2) 选择 `Subsystem AUTO Hardware Settings`
 
 ```
 misc/config System Configuration
+
 Arrow keys navigate the menu. <enter> selects submenu (or empty
+
 ubmenu...). Highlighted letters are hotkeys. Press <Y>
+
 Includes, <n> excludes, <*> modular features. Press <Esc><Esc> to
+
 exit, <?> for Help, < /> for Search
 
 - ZYNQ Configuration
-Linux Components ---
-
- Settings ---
-Auto Settings ---
-DTG Settings ---
-MPMC Configuration ---
-SBL Configuration ---
-IBN Trusted Firmware Configuration ---
-FPGA Manager ---
-U-boot Configuration ---
-Image Packaging Configuration ---
-Firmware Version Configuration ---
-(*)
-<Select> < Exit > < Help > < Save >
 ```
 
+
+
+# Linux Components
+
+## Settings
+
+### Auto Settings
+
+### DTG Settings
+
+### MPMC Configuration
+
+### SBL Configuration
+
+### IBN Trusted Firmware Configuration
+
+### FPGA Manager
+
+### U-boot Configuration
+
+### Image Packaging Configuration
+
+### Firmware Version Configuration
+
+`(*)`
+
+`<Select>` `< Exit >` `< Help >` `< Save >`
+
+```
 - 3) 选择 SD/DIO Settings
-
 ```
-system Settings Settings
-Arrow keys navigate the menu. <enter> selects submenu (or empty
-ubmenu...). Highlighted letters are hotkeys. Press <Y>
-Includes, <n> excludes, <*> modular features. Press <Esc><Esc> to
-exit, <?> for Help, < /> for Search
+
+`system Settings Settings`
+
+`Arrow keys navigate the menu. <enter> selects submenu (or empty ubmenu...). Highlighted letters are hotkeys. Press <Y>`
+
+`Includes, <n> excludes, <*> modular features. Press <Esc><Esc> to exit, <?> for Help, < /> for Search`
 
 - Subsystem AUTO Hardware Settings
-System Processor (psu_cortex53_0) ---
-Memory Settings ---
-Serial Settings --nEthernet Settings ---
-Flash Settings ---
-SD/DIO Settings ---
-RTC Settings ---
-[*] Advanced boot images storage settings ---
-<Select> < Exit > < Help > < Save >
-```
+
+`System Processor (psu_cortex53_0) ---`
+
+`Memory Settings ---`
+
+`Serial Settings --nEthernet Settings ---`
+
+`Flash Settings ---`
+
+`SD/DIO Settings ---`
+
+`RTC Settings ---`
+
+`[*] Advanced boot images storage settings ---`
+
+`<Select>` `< Exit >` `< Help >` `< Save >`
 
 ![](img/6f792577a28af84c82be0eef5006ef77_89_0.png) 4) 选择对应 eMMC 的 SDIO（如果不确定，请尝试）
 
@@ -1436,4 +1526,3 @@ RTC Settings ---
 - 8) 拷贝完成后，使用 `umount` 命令卸载 eMMC。
 
 - 9) 断开开发板电源，将拨开关拨到 eMMC 启动状态，然后重新上电。
-

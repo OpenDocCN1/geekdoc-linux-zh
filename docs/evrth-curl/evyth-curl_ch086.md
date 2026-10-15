@@ -1,6 +1,7 @@
+
 # 将下载保存到由 URL 命名的文件中
 
-然而，许多 URL 的右端已经包含了文件名部分。curl 允许你使用这个快捷方式，这样你就不必用`-o`重复它。而不是：
+然而，许多 URL 的右端已经包含了文件名部分。`curl`允许你使用这个快捷方式，这样你就不必用`-o`重复它。而不是：
 
 ```sh
 curl -o file.html http://example.com/file.html
@@ -12,7 +13,7 @@ curl -o file.html http://example.com/file.html
 curl -O http://example.com/file.html
 ```
 
-这是`-O`（大写字母 O）选项，或者长名称版本的`--remote-name`。`-O`选项通过选择你提供的 URL 的文件名部分来选择要使用的本地文件名。这很重要。你指定 URL，curl 会从这个数据中选取名称。如果网站重定向 curl 到其他地方（如果你告诉 curl 跟随重定向），它不会改变 curl 用于存储此内容的文件名。
+这是`-O`（大写字母 O）选项，或者长名称版本的`--remote-name`。`-O`选项通过选择你提供的 URL 的文件名部分来选择要使用的本地文件名。这很重要。你指定 URL，`curl`会从这个数据中选取名称。如果网站重定向`curl`到其他地方（如果你告诉`curl`跟随重定向），它不会改变`curl`用于存储此内容的文件名。
 
 ## 为所有 URL 使用 URL 的文件名部分
 

@@ -1,22 +1,17 @@
+
 # GETTING THE MOST OUT OF THE DESKTOP
 
 ![](bbox=[0.248, 0.098, 0.751, 0.122])
-
 Figure 4-15 Window List applets
 
 you or out the system. You can start any utility or program on the system using a panel object. This section describes the various types of panel objects.
 
-+   Applets An object is a small program that displays its user interface on or adjacent to the panel. You interact with the panel using its Applet object. The Clock (date and time) and Workspace Switcher (both shown in Figure 4-2 on page 101) applets.
-
-+   Window List Although not a distinct type of object, the Window List applet is a unique and important tool. One Window List applet (Figure 4-15) appears for each open or iconified window on the displayed workspace. Left-clicking this object minimizes its window or restores it if it is minimized. Right-clicking this object to display the Windows Operations menu (page 124). If a window is buried under other windows, click the Window List applet to make it visible.
-
-+   Launchers When you open a launcher, it can execute a command, start an application, display the contents of a folder or file, open a URL in a web browser, and so on. In addition to appearing on panels, launchers can appear on the desktop. The Firefox object is a launcher: It starts the Firefox application. Under Main menu: Applications, you can find launchers that start other applications. Under Main menu: Places, the Home Folder, Documents, Desktop, and Computer objects are launchers that open File Browser to display folders.
-
-+   Buttons A button performs a simple, single action. The Sound button (Figure 4-2, page 101) displays a volume control. The Show Desktop button, which may appear at the last end of the Bottom panel, minimizes all windows on the workspace.
-
-+   Menus A menu displays a list of selections you can choose from. Some of the selections can be submenus with more selections. All other selections are launchers. The next section discusses the Main menu.
-
-+   Drawers A drawer is an extension of a panel. You can put the objects in a drawer that you can put on a panel, including another drawer. When you click a drawer object, the drawer opens; you can then click an object in the drawer the way you click an object on a panel.
+- **Applets**: An object is a small program that displays its user interface on or adjacent to the panel. You interact with the panel using its Applet object. The Clock (date and time) and Workspace Switcher (both shown in Figure 4-2 on page 101) applets.
+- **Window List**: Although not a distinct type of object, the Window List applet is a unique and important tool. One Window List applet (Figure 4-15) appears for each open or iconified window on the displayed workspace. Left-clicking this object minimizes its window or restores it if it is minimized. Right-clicking this object to display the Windows Operations menu (page 124). If a window is buried under other windows, click the Window List applet to make it visible.
+- **Launchers**: When you open a launcher, it can execute a command, start an application, display the contents of a folder or file, open a URL in a web browser, and so on. In addition to appearing on panels, launchers can appear on the desktop. The Firefox object is a launcher: It starts the Firefox application. Under Main menu: Applications, you can find launchers that start other applications. Under Main menu: Places, the Home Folder, Documents, Desktop, and Computer objects are launchers that open File Browser to display folders.
+- **Buttons**: A button performs a simple, single action. The Sound button (Figure 4-2, page 101) displays a volume control. The Show Desktop button, which may appear at the last end of the Bottom panel, minimizes all windows on the workspace.
+- **Menus**: A menu displays a list of selections you can choose from. Some of the selections can be submenus with more selections. All other selections are launchers. The next section discusses the Main menu.
+- **Drawers**: A drawer is an extension of a panel. You can put the objects in a drawer that you can put on a panel, including another drawer. When you click a drawer object, the drawer opens; you can then click an object in the drawer the way you click an object on a panel.
 
 # THE PANEL OBJECT CONTEXT MENU
 

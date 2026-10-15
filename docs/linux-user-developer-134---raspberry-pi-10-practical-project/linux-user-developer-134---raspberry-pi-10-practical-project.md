@@ -1,33 +1,13 @@
+
 # Linux 用户与开发者 134 - 树莓派：10 个实用项目
 
-
-
-
-
-
-
-
-
-
-
-
 > “开源将一直存在”
-
-
-
-
-
-
-
-
-
-
 
 | 型 B - 512MB 带有 8GB NOOBS SD 卡 | 树莓派 NoIR 摄像头板 | 树莓派摄像头板 |
 | --- | --- | --- |
 | £32.99 £27.49 不含税代码 SC1313058 | £19.24 £16.03 不含税代码 SC13223558 | £19.24 £16.03 不含税代码 SC13023588 |
 
-访问 cpc.co.uk 了解更多信息
+访问 `cpc.co.uk` 了解更多信息
 
 - 完整的项目配件系列
 - 套件与外壳
@@ -43,8 +23,6 @@
 
 Bob Zwetloed 在大学学习航空航天工程，并使用 Python 对复杂情况课程进行建模。本期我们的驻驻员工本月从编写几个树莓派项目开始，此外包括测试和功能解决方案等内容。
 
-
-
 Tam Hanna 多年来一直在 IT 行业担任记者、导师、演讲者和作家。他见证了移动市场的方方面面。本月，Tam 继续了他的工作，重点关注了事件驱动编程（第 46-55 页）。
 
 Mihalis Tokoulos 是一位自 1996 年以来就有丰富经验的 UNIX 系统管理员。他一直为《Linux User & Developer》撰稿。Mihalis 展示的四页图表位于第 52-55 页。
@@ -59,51 +37,47 @@ Gareth Halcliffe 是我们的驻记者，测试来自整个开源社区的最新
 
 欢迎阅读 Linux User 最新版，这是英国和美国喜爱的开源和 Linux 杂志。当我们与朋友或读者谈论树莓派时，我们总是惊讶地发现有这么多人在问圣诞节什么时候买一个。他们对用它做一些趣事的前景非常热情，但正因如此，他们经常承认甚至还没拿出来。这就是为什么我们又提供了一个任何人都可以上手的树莓派项目：让你能够迅速上手运行。我们包含了所有你可以黑客化并根据需求更改的项目。此外，还包括帮助写作者使用 Qt 编写事件驱动代码、优秀的示例，以及使用 Mercurial 管理项目——这是我们在转向 Git 之前使用过一个优秀控制包。祝阅读得愉快！
 
-
-
-# 
-
-托管服务 云端托管 专用服务器
-
-
+# 托管服务 云端托管 专用服务器
 
 06 新闻 | 16 观点 | 92 读者来信
 
 # OGGCAMP 2013
+
 # 自由软件、自由文化与大规模监控
+
 在 OggCamp 英国最大的自由软件和开源硬件聚会上，450 名极客在斯诺登泄密事件的阴影下聚集
 
 自上世纪末创办《Linux User》以来，开源社区发生了变化并演变——引入了开放数据、自由文化，其活动性质也发生了变化。Linux Expo 和 Linux User Expo 是过去由大公司支持 ORG Village 运行的活动，为 FOSS 项目和组织提供了空间。当 IBM 切断对 Linux Expo 的资金支持时，这种年度聚会留下了空白，尽管社交网络和社交普及的增长本应可以让人们聚在一起学习新事物并交流，软件人士们错过了一个年度聚会。第一个真正填补这一空白的是 LugRadio Live，它利用了 Lug Radio 的人气将国际演讲者带到沃尔德汉的一个社区场所，并让 ORG（开放权利组织）等组织有机会告知社区最重要的信息。当 LugRadio 结束运行后，社区主导的活动接子由 OggCamp 接管，汇聚了自由文化和开放内容轨道。今年秋，OggCamp 将 450 人带到了利物浦约翰·摩尔大学的科学园区，围绕着“学习、教学、游戏”的主题。
 
-
-
-
-
 开源
 
+请在此关注 Twitter 上的 `@OggCamp` 的 2014-OggCamp 活动：
 
-请在此关注 Twitter 上的 @OggCamp 的 2014-OggCamp 活动：
-oggcamp.org
+`oggcamp.org`
 
 来自 35 场 OggCamp 演讲的幻灯片和反馈链接：
-jord.in/event/view/1612/talks
+
+`jord.in/event/view/1612/talks`
 
 开放权利（Open Rights）—— 促进并维护您的数字权利：
-www.openrights.org
+
+`www.openrights.org`
 
 Less Wrong 是一个致力于完善人类功能艺术的社区：
-lesswrong.com
+
+`lesswrong.com`
 
 汽车 Linux - 汽车制造商的免费软件：
-www.linuxfoundation.org/colaborate/workgroups/automotive-drive-linux
+
+`www.linuxfoundation.org/colaborate/workgroups/automotive-drive-linux`
 
 使用 Daviwicks 为 Brother KV9501 针织机将图像转换为数据层：
-punchpunchdecode.com.co.uk/2013/oggcamp/
+
+`punchpunchdecode.com.co.uk/2013/oggcamp/`
 
 ![](img/45a70445846e93838a23812ca8a9d98d_6_0.png)
 
 更担心的是，如果这不是你自己的政府，而是另一个你在法律下没有任何权利或保护的国家。
-
 
 DL：举办会议的好处之一是活动是由参会者设定的，我们可以看到他们感兴趣的内容。我们一直试图让 OggCamp 不仅仅关于技术。我们鼓励艺术、政治等更多内容。所以，看到对他们重要的事情是很好的，比如参会者必须掌握控制权。在我们这边，有一个出色的计划并且恰好是参会者现在想要的，是非常重要且有价值的。
 
@@ -120,6 +94,7 @@ Dan Lynch - “我们努力让我们的活动尽可能包容”
 我们努力让我们的活动尽可能包容。对我来说最满意的事情之一是人们告诉我他们在这里，但之前不确定是否来。当我们听到人们明年明年和朋友一起回来时！
 
 来自社区
+
 今年的 OggCamp 还汇集了来自优秀开源和项目的演讲；从关于 Linux 的一切到国际；现场会议；以及对 OggCamp 的记忆可能，但我们只想和 Dan Lynch 谈谈——在活动后询问我们是什么让 OggCamp 运作的。我们都对政府入侵的程度感到震惊。
 
 今年的活动似乎有很多关于安全和隐私的演讲……
@@ -128,8 +103,7 @@ DL：我没在那儿，但那里有很多相关的演讲，只是在主轨道中
 
 尽管如此，作为组织者，你总可以做一些基础事情来培养良好的氛围。我一直以来带着开源和在艺术、政治、工艺等领域分享知识的想法而闻名，而不仅仅是技术。
 
-
-www.linuxuser.co.uk
+`www.linuxuser.co.uk`
 
 # 让它如此
 
@@ -152,17 +126,11 @@ www.linuxuser.co.uk
 - 适当的监督——来自法官，以及提供给委员会的选资源列表。
 - 跨国，人口级监控不是关于“个人隐私与安全”，而是对民主的根本性威胁。
 
-
-
-
-
 Linux 社区动态
-
 
 正如 Dave Potts 所演示的那样，这作为 Python 的教学方法。“手机端的 Ubuntu 或 Firefox OS 分别在移动项目的友好竞争中击败了 Dave Alan 和 Sabine Hughenden，并让与会者有机会在真实的平台硬件上体验这些操作系统。Aiken Chiken 的“开发汽车级 Linux”展示了 Linux 在不同和移动语境下的应用。”
 
 由 OggCamp 和 Mark John（他还做了一场关于“如何获取 OggCamp”的演讲）致力于鼓励人们参与其中。从 Weerswolf（一个在马戏团巡演中极具人气的游戏）到课后代码俱乐部（Code Club），再到构建 FT Crowd 群的“Internet Box”的核心，一切都是非常鼓舞人心的。“你很有大脑，”他告诉我们，“你的潜力在于将创造出伟大的东西。”他在结束演讲时，强调了要培养帮助克服基本挑战的意识。通过寻找快与慢、学习成功的方法以及现实的方法 (hmor.com)。
-
 
 除了硬件，其他机构还包括自由软件基金，你可以在那里找到关于开源维基的讨论，其首席营销官 Anne McQuire 表示：“OggCamp 是一个伟大活动的绝佳案例。Dan 做得很好，希望‘让利物浦对开发者更有吸引力并演进技术社区’。”
 
@@ -174,7 +142,6 @@ Linux 社区动态
 
 一项任务被请求或要求，并且人们被要求执行此类任务。“Git Base”由 John Spriggs 提供（他为 OggCamp 调度编写了剑桥软件），Lora Mitchell（她加入了 Joindin 项目——开源服务器活动——反馈——
 
-
 - 入门示例完全不需要焊接
 - 插入电线和面包板，使构建变得简单快速
 - 预安装并配置好的树莓派 OS 在您的基础上运行
@@ -184,7 +151,6 @@ Linux 社区动态
 
 (Gareth Halfacre, CustomPC, 第121 期, 2013年10月)
 
-
 Facebook 扩大开放学院
 
 将学习与现实世界项目联系起来
@@ -192,6 +158,7 @@ Facebook 扩大开放学院
 社交网络巨头 Facebook 宣布扩大其开放学院计划，该计划旨在弥合现实编码项目与学术计算机科学之间的差距。
 
 该计划于 2012 年春季作为社交网络公司与 Jay Berenstein 之间的试点合作伙伴关系启动，近期已随着学术成员加入扩大了规模：
+
 - 斯坦福大学
 - 麻省理工学院 (MIT)
 - 德克萨斯大学奥斯汀分校
@@ -207,14 +174,14 @@ Facebook 扩大开放学院
 - 加州大学伯克利分校
 - 华沙大学
 - 加州大学洛杉矶分校 (UCLA)
+
 “贡献开源项目是学生为行业工作准备的最佳方式之一，”Facebook 发言人在发布会上说。项目往往比参与的人大；项目管理和人际技巧至关重要，并且通常由来自不同背景的用户评估。
 
 Facebook 通过帮助学生寻找代码贡献来支持他们的团队。该计划还定期与学生团队见面，叠加系列讲座提供进一步的学习机会。该计划与顶尖大学的关键成员紧密合作，推出一项课程，将学生与开源导师匹配，并让他们回到家。
 
-除了为开源项目提供平台外，该公司还将其许多内部工具置于宽松许可下，包括 MapReduce 调度器、Presto 和 Hive 开发。2012 年的将于 2 月初开始，感兴趣的学生被要求通过 facebook.com/OpenAcademy 页面申请该计划。教职员工也受邀讨论改进计算机科学课程的新方法。
+除了为开源项目提供平台外，该公司还将其许多内部工具置于宽松许可下，包括 MapReduce 调度器、Presto 和 Hive 开发。2012 年的将于 2 月初开始，感兴趣的学生被要求通过 `facebook.com/OpenAcademy` 页面申请该计划。教职员工也受邀讨论改进计算机科学课程的新方法。
 
 Linux 社区动态
-
 
 ## Web 开发
 
@@ -222,21 +189,21 @@ Linux 社区动态
 
 自我们首次宣布 Dart 以来的两年来，我们一直与早期采用者合作，使项目成熟并扩大社区，正如公司在发布会上描述的那样，被称为‘首席 Dart’。“Dart 的使命是为 Web 开发者提供一个生产就绪的选项。”
 
-尽管 Dart 尚未在主流浏览器中获得广泛支持，但 Chrome 分支被用于 Dart 开发，该项目包含了用于兼容的 dart2js 翻译器。“生成的 JavaScript 性能已经有了大幅提高，因为我们正看到更多地道的 Dart 案例。”
+尽管 Dart 尚未在主流浏览器中获得广泛支持，但 Chrome 分支被用于 Dart 开发，该项目包含了用于兼容的 `dart2js` 翻译器。“生成的 JavaScript 性能已经有了大幅提高，因为我们正看到更多地道的 Dart 案例。”
 
-“今天标志着 Dart 正式达到生产就绪状态，我们正看到更多地道的 Dart 案例。”“已添加。”此外，像 Adobe、drone 和 JetBrains 等包也开始支持现在的 Dart 1.0 软件开发包——这包括 Dart 编辑器、Dart 浏览器、一个虚拟机、包管理器和 dart2js 翻译器——可以从 dartlang.org 移除。
-
+“今天标志着 Dart 正式达到生产就绪状态，我们正看到更多地道的 Dart 案例。”“已添加。”此外，像 Adobe、drone 和 JetBrains 等包也开始支持现在的 Dart 1.0 软件开发包——这包括 Dart 编辑器、Dart 浏览器、一个虚拟机、包管理器和 `dart2js` 翻译器——可以从 `dartlang.org` 移除。
 
 - 西澳大学，珀斯
 - 澳大利亚
-- linux.com.au
+- `linux.com.au`
 - 2014 年社区年度会议涵盖从 Linux 内核和 OpenStack 到天文学和树莓派的所有演讲。
-
 - 内华达州，拉斯维加斯
+
 无疑是电子产品日历中最大的活动，CES 展示了由最新开源技术驱动的大量硬件。
 
 - 伦敦 OI 会议中心
 - 英国
+
 涵盖政策和技术，已确认的演讲者包括 ICT Futures 的 Mark Thompson 博士、CES 技术总监 Ian Levy 以及 John Jackson
 
 ### IBM Watson 发布开发平台
@@ -247,17 +214,8 @@ IBM 宣布开放基于云的开发平台，提供访问基于 Linux 的 Watson �
 
 IBM Watson 的‘认知计算机’可以运行在单台基于 Linux 的 Power 750 服务器上，通过我们的合作伙伴关系，我们将帮助扩展那些从经验中学习、随着每次互动和结果不断改进、并协助解决行业和社会面临的最复杂问题的应用程序。
 
-
 - 新闻
 - 全球
-
-
-
-
-[content]
-
-
-
 
 隐私担忧引发众筹活动
 
@@ -271,8 +229,6 @@ IBM Watson 的‘认知计算机’可以运行在单台基于 Linux 的 Power 7
 
 该审计当时已收到来自 FundIt 和 Indiegible 提供的超过 60,000 美元的资金，并将认证并消除二进制文件中的后门和损坏。该项目预计于 2014 年初完成。
 
-
-
 由于 SourceForge 决定允许开发者在其下载包中构建广告程序，并声称进行创意性广告（这是在该平台被 Dice 收购后引入的特性），GIMP 不得离开免费托管。
 
 - “我们不希望支持这种行为，”该项目发言人说，“我们已决定放弃 SourceForge”
@@ -282,27 +238,30 @@ IBM Watson 的‘认知计算机’可以运行在单台基于 Linux 的 Power 7
 ## 杂志
 
 ### 欢迎来到动物世界
+
 由《如何运作》、《全空间》和《一切历史》的创作者们带来了全新的《动物世界》（World of Animals）杂志
+
 开源世界拥有企鹅、壁蜥、变色龙以及构成 Ubuntu 版本的各种奇怪动物。我们这些毛茸茸、长着羽毛和鳞片的朋友都有代号，而且它们都有极佳的故事要讲述。
 
 走进《动物世界》，这是我们关于与星球共享的所有非人类生命的新杂志。第一期主题为“自然优先”（Nature First），讲述了大猩猩、狐猴以及 50 种最濒危物种的故事，并让我们窥了帝鹅的一年。
 
-如需在官方网站订阅杂志，请访问 Animals.co.uk，您今天就可以通过 Image Shop 购买来确保获得订阅。
+如需在官方网站订阅杂志，请访问 `Animals.co.uk`，您今天就可以通过 Image Shop 购买来确保获得订阅。
+
+
+
 世界充满了动物；关于它们还能学到什么呢？
 
 ![](img/45a70445846e93838a23812ca8a9d98d_11_1.png)
 
-在 Twitter 上关注 @worldanimals 并直接获取动物群类知识，并在 Facebook 上点赞 World of Animals。你还有机会
+在 Twitter 上关注 `@worldanimals` 并直接获取动物群类知识，并在 Facebook 上点赞 World of Animals。你还有机会
 
 ![](img/45a70445846e93838a23812ca8a9d98d_11_2.png)
 
 - 真正的企鹅在不支持 Linux 时在做什么？
 
-Linux 社区最新动态
+### Linux 社区最新动态
 
-
-
-Ubuntu 商标已失效
+#### Ubuntu 商标已失效
 
 停止终止函并非共识协议
 
@@ -310,393 +269,257 @@ Ubuntu Linux 公司 Canonical 的创始人马克·舒特沃克（Mark Shuttlewor
 
 - Canonical 创始人 Shuttlework 为停止终止函道歉
 
-Mark Lee 收到一封来自 Canonical 法务部关于 Ubuntu.com 的措辞严厉的信件，该信件对如何移除引起争议的亚马逊广告提供了建议，并要求移除 Ubuntu 标志和名称——这实际上关闭了该网站目前的运行。
+Mark Lee 收到一封来自 Canonical 法务部关于 `Ubuntu.com` 的措辞严厉的信件，该信件对如何移除引起争议的亚马逊广告提供了建议，并要求移除 Ubuntu 标志和名称——这实际上关闭了该网站目前的运行。
 
-[content]
 ### Shuttlework 为此道歉
+
 Ubuntu 商标已失效
 
 停止终止函并非共识协议
 
 -- Canonical 创始人 Shuttlework 为停止终止函道歉
-[content]
+
 - Canonical 创始人 Shuttlework 为停止终止函道歉
 
-Mark Lee 收到一封来自 Canonical 法务部关于 Ubuntu.com 的措辞严厉的信件，该信件对如何移除引起争议的亚马逊广告提供了建议，并要求移除 Ubuntu 标志和名称——这实际上关闭了该网站目前的运行。
+Mark Lee 收到一封来自 Canonical 法务部关于 `Ubuntu.com` 的措辞严厉的信件，该信件对如何移除引起争议的亚马逊广告提供了建议，并要求移除 Ubuntu 标志和名称——这实际上关闭了该网站目前的运行。
 
-[content]
-- Mark Lee 收到一封来自 Canonical 法务部关于 Ubuntu.com 的措辞严厉的信件，该信件对如何移除引起争议的亚马逊广告提供了建议，并要求移除 Ubuntu 标志和名称——这实际上关闭了该网站目前的运行。
+- Mark Lee 收到一封来自 Canonical 法务部关于 `Ubuntu.com` 的措辞严厉的信件，该信件对如何移除引起争议的亚马逊广告提供了建议，并要求移除 Ubuntu 标志和名称——这实际上关闭了该网站目前的运行。
 
 - 热门开源加密包 TrueCrypt 将接受全面审计
 
 该审计当时已收到来自 FundIt 和 Indiegible 提供的超过 60,000 美元的资金，并将认证并消除二进制文件中的后门和损坏。该项目预计于 2014 年初完成。
 
-[content]
 - 热门开源加密包 TrueCrypt 将接受全面审计
 
 该审计当时已收到来自 FundIt 和 Indiegible 提供的超过 60,000 美元的资金，并将认证并消除二进制文件中的后门和损坏。该项目预计于 2014 年初完成。
 
-[/content]
 - "We do not want to support this kind of behavior," says a spokesperson for the project. "We have decided to abandon SourceForge"
 
-[content]
 - “我们不希望支持这种行为，”该项目发言人说，“我们已决定放弃 SourceForge”
 
-[/content]
 - "We do not want to support this kind of behaviour," says a spokesperson for the project. "We have decided to abandon SourceForge"
 
-[content]
 - Packages will now be updated by maintainer Jeremy Simonc directly to the official FTP site and distributed automatically to various sites.
 
-[content]
 - 软件包现在将由维护者 Jeremy Simonc 直接更新到官方 FTP 站点，并自动分发到各个站点。
 
-[/content]
 - Packages will now be updated by maintainer Jeremy Simonc directly to the official FTP site and distributed automatically to various sites.
 
-[content]
 From the creators of How it Works, All Space and All About History brings the new World of Animals
 
-[content]
 由《如何运作》、《全空间》和《一切历史》的创作者们带来了全新的《动物世界》（World of Animals）杂志
 
-[/content]
 - Open source has the penguin, gecko, chameleon and the whole host of weird and bizarre animals that make the Ubuntu releases.
 
-[content]
 - 开源世界拥有企鹅、壁蜥、变色龙以及构成 Ubuntu 版本的各种奇怪动物。
 
-[/content]
 - Our furry, feathered and scaled friends have code-names, and they all have fantastic stories to tell.
 
-[content]
 - 我们这些毛茸茸、长着羽毛和鳞片的朋友都有代号，而且它们都有极佳的故事要讲述。
 
-[/content]
 - Enter Animals, our new magazine about all the non-human life we share with a planet. The first issue, titled Nature First, tells the story of the gorillas, koatis, and 50 most endangered species and gives us a glimpse into a year in the life of an Emperor penguin.
-[content]
+
 - 走进《动物世界》，这是我们与星球共享的所有非人类生命的新杂志。第一期主题为“自然优先”（Nature First），讲述了大猩猩、狐猴以及 50 种最濒危物种的故事，并让我们窥了帝鹅的一年。
 
-[/content]
 - To subscribe to the magazine on official website, visit Animals.co.uk where you can guarantee yourself a subscription by getting one from the Image Shop today.
 
-[content]
 - 如需在官方网站订阅杂志，请访问 Animals.co.uk，您今天就可以通过 Image Shop 购买来确保获得订阅。
 
-[/content]
 - The world is full of animals; what more learn about them?
 
-[content]
 - 世界充满了动物；关于它们还能学到什么？
 
-Get straight on to the fauna facts by following @worldanimals on Twitter and liking World of Animals on Facebook.
+Get straight on to the fauna facts by following `@worldanimals` on Twitter and liking World of Animals on Facebook.
 
-[content]
-- 在 Twitter 上关注 @worldanimals 并在 Facebook 上点赞 World of Animals 以直接获取动物群类知识。
+- 在 Twitter 上关注 `@worldanimals` 并在 Facebook 上点赞 World of Animals 以直接获取动物群类知识。
 
-[/content]
 - What do real penguins do when they're not supporting Linux?
-[content]
+
 - 真正的企鹅在不支持 Linux 时在做什么？
 
-[/content]
-
-### TrueCrypt to undergo code audit
-Privacy fears drive crowdfunding campaign
-
-[content]
-
 ### TrueCrypt 将进行代码审计
+
 隐私担忧引发众筹活动
 
-[/content]
-- Popular open source encryption application TrueCrypt, which creates 'containers' of encrypted files or can be used for whole-disk encryption, is to undergo a crowdfunded volunteer-driven code audit in the wake of recent security vulnerabilities.
-
-[content]
 - 广受欢迎的开源加密应用 TrueCrypt 它可以创建加密文件的“容器”，或可用于全盘加密。在近期出现安全漏洞后，它将进行一项由志愿者驱动的众筹代码审计。
 
-[/content]
-- Reports that the US National Security Agency (NSA) has inserted back-doors into the majority of popular encryption applications has caused a loss of confidence, that TrueCrypt needs to be rebuilt with a full and frank code audit.
-
-[content]
 - 有报道称美国国家安全局（NSA）在大多数流行的加密应用中植入了后门，这导致了信任危机，TrueCrypt 需要通过全面且坦诚的代码审计来重新构建。
 
-"TrueCrypt works," says Matthew Green. People use it for very sensitive information. TrueCrypt secures personal information (cryptography)." Bruce Schneider is even using it to store information on his personal air-gapped super-laptop, after he leaked NSA documents.
-
-[content]
 “TrueCrypt 可以用，”马修·格林（Matthew Green）说道，“人们用它处理非常敏感的信息。TrueCrypt 安全了个人信息（加密）。”布鲁斯·施奈德（Bruce Schneider）在泄露 NSA 文件后，甚至使用它来存储其个人离网超级电脑上的信息。
-
-[/content]
-
-### The GIMP abandons SourceForge
-
-[content]
 
 ### GIMP 放弃 SourceForge
 
-[/content]
 The latest in the Linux community
 
-
-[content]
 Linux 社区最新动态
 
 开源
 
-[/content]
-]
-
 ### Shuttlework apologises for
+
 Ubuntu trademark gone
 
 Cease and desist not a consensus agreement
 
 Mark Shuttlework, founder of Ubuntu Linux Canonical, has apologised for a heavily-handed cease and desist letter sent to a critic of his company's decisions, denying it was an attempt at censorship.
 
-[content]
-
 ### Shuttlework 为此道歉
+
 Ubuntu 商标已失效
 
 停止终止函并非共识协议
 
 Mark Shuttlework, founder of Ubuntu Linux Canonical, has apologised for a heavily-handed cease and desist letter sent to a critic of his company's decisions, denying it was an attempt at censorship.
 
-[/content]
 - Canonical founder Shuttlework apologised for a cease and desist letter
 
-[content]
 - Canonical 创始人 Shuttlework 为停止终止函道歉
 
-[/content]
 - Mark Lee received a strongly worded letter from Canonical's legal dept regarding Ubuntu.com, which offered advice on how to remove contentious Amazon-based advertising and demanding the Ubuntu logo and name – effectively closing the site at its current running.
 
-[content]
 - Mark Lee 收到一封来自 Canonical 法务部关于 Ubuntu.com 的措辞严厉的信件，该信件对如何移除引起争议的亚马逊广告提供了建议，并要求移除 Ubuntu 标志和名称——这实际上关闭了该网站目前的运行。
 
-[/content]
 - Packages will now be updated by maintainer Jeremy Simonc directly to the official FTP site and distributed automatically to various sites.
-[content]
-- 软件包现在将由维护者 Jeremy Simonc 直接更新到官方 FTP 站点，并自动分发到各个站点。
 
-[/content]
+- 软件包现在将由维护者 Jeremy Simonc 直接更新到官方 FTP 站点，并自动分发到各个站点。
 
 From the creators of How it Works, All Space and All About History brings the new World of Animals
 
-[content]
 ## MAGAZINES
 
 ### 欢迎来到动物世界
+
 由《如何运作》、《全空间》和《一切历史》的创作者们带来了全新的《动物世界》（World of Animals）杂志
 
-[/content]
 - Open source has the penguin, gecko, chameleon and the whole host of weird and bizarre animals that make the Ubuntu releases.
 
-[content]
 - 开源世界拥有企鹅、壁蜥、变色龙以及构成 Ubuntu 版本的各种奇怪动物。
 
-[/content]
 - Our furry, feathered and scaled friends have code-names, and they all have fantastic stories to tell.
 
-[content]
 - 我们这些毛茸茸、长着羽毛和鳞片的朋友都有代号，而且它们都有极佳的故事要讲述。
 
-[/content]
 - Enter Animals, our new magazine about all the non-human life we share with a planet. The first issue, titled Nature First, tells the story of the gorillas, koatis, and 50 most endangered species and gives us a glimpse into a year in the life of an Emperor penguin.
-[content]
+
 - 走进《动物世界》，这是我们与星球共享的所有非人类生命的新杂志。第一期主题为“自然优先”（Nature First），讲述了大大猩猩、狐猴以及 50 种最濒危物种的故事，并让我们窥了帝鹅的一年。
 
-[/content]
 - To subscribe to the magazine on official website, visit Animals.co.uk where you can guarantee yourself a subscription by getting one from the Image Shop today.
 
 - 如需在官方网站订阅杂志，请访问 Animals.co.uk，您今天就可以通过 Image Shop 购买来确保获得订阅。
 
-[/content]
 - The world is full of animals; what more learn about them?
 
-[content]
 - 世界充满了动物；关于它们还能学到什么？
 
-[/content]
-- Get straight on to the fauna facts by following @worldanimals on Twitter and liking World of Animals on Facebook.
+- Get straight on to the fauna facts by following `@worldanimals` on Twitter and liking World of Animals on Facebook.
 
-[content]
-- 在 Twitter 上关注 @worldanimals 并在 Facebook 上点赞 World of Animals 以直接获取动物群类知识。
+- 在 Twitter 上关注 `@worldanimals` 并在 Facebook 上点赞 World of Animals 以直接获取动物群类知识。
 
-[/content]
 - What do real penguins do when they're not supporting Linux?
 
-[content]
 - 真正的企鹅在不支持 Linux 时在做什么？
 
-[/content]
-
 ### Shuttlework apologises for
+
 Ubuntu trademark gone
 
 Cease and desist not a consensus agreement
 
-[content]
-- Canonical founder Shuttlework apologised for a cease and desist letter
 
--Cease and desist not a consensus agreement
 
--停止终止函并非共识协议
+# 开源
 
-[content]
+您的 Linux 新闻与观点来源
+
+www.linuxuser.co.uk 直接向我们发送电子邮件...
+
+获取最新新闻与观点请发送邮件至 linuxuser@imagine-publishing.co.uk
+
+## 安全
+
+### TrueCrypt 将进行代码审计
+
+隐私担忧引发众筹活动
+
+广受欢迎的开源加密应用 TrueCrypt 它可以创建加密文件的“容器”，或可用于全盘加密。在近期出现安全漏洞后，它将进行一项由志愿者驱动的众筹代码审计。
+
+有报道称美国国家安全局（NSA）在大多数流行的加密应用中植入了后门，这导致了信任危机，TrueCrypt 需要通过全面且坦诚的代码审计来重新构建。“TrueCrypt 可以用，”马修·格林（Matthew Green）说道，“人们用它处理非常敏感的信息。TrueCrypt 安全了个人信息（加密）。”布鲁斯·施奈德（Bruce Schneider）在泄露 NSA 文件后，甚至使用它来存储其个人离网超级电脑上的信息。
+
+![](img/45a70445846e93838a23812ca8a9d98d_11_0.png)
+
+- 热门开源加密包 TrueCrypt 将接受全面审计
+
+该审计当时已收到来自 FundIt 和 Indiegible 提供的超过 60,000 美元的资金，并将认证并消除二进制文件中的后门和损坏。该项目预计于 2014 年初完成。
+
+### GIMP 放弃 SourceForge
+
+由于 SourceForge 决定允许开发者在其下载包中构建广告程序，并声称进行创意性广告（这是在该平台被 Dice 收购后引入的特性），GIMP 不得离开免费托管。
+
+- “我们不希望支持这种行为，”该项目发言人说，“我们已决定放弃 SourceForge”
+
+软件包现在将由维护者 Jeremy Simonc 直接更新到官方 FTP 站点，并自动分发到各个站点。
+
+## 杂志
+
+### 欢迎来到动物世界
+
+由《如何运作》、《全空间》和《一切历史》的创作者们带来了全新的《动物世界》（World of Animals）杂志
+
+开源世界拥有企鹅、壁蜥、变色龙以及构成 Ubuntu 版本的各种奇怪动物。我们这些毛茸茸、长着羽毛和鳞片的朋友都有代号，而且它们都有极佳的故事要讲述。
+
+走进《动物世界》，这是我们与星球共享的所有非人类生命的新杂志。第一期主题为“自然优先”（Nature First），讲述了大猩猩、狐猴以及 50 种最濒危物种的故事，并让我们窥了帝鹅的一年。
+
+如需在官方网站订阅杂志，请访问 Animals.co.uk，您今天就可以通过 Image Shop 购买来确保获得订阅。
+
+世界充满了动物；关于它们还能学到什么？
+
+![](img/45a70445846e93838a23812ca8a9d98d_11_1.png)
+
+在 Twitter 上关注 @worldanimals 并在 Facebook 上点赞 World of Animals 以直接获取动物群类知识。你还有机会
+
+![](img/45a70445846e93838a23812ca8a9d98d_11_2.png)
+
+- 真正的企鹅在不支持 Linux 时在做什么？
+
+## 新闻
+
+Linux 社区最新动态
+
+### LINUX
+
+Ubuntu 商标已失效
+
+停止终止函并非共识协议
+
+Mark Shuttlework, Ubuntu Linux Canonical 的创始人，对向其公司决策的一位批评者发送的一封措辞严厉的停止终止函表示道歉，并否认这是一种审查意图。
+
 - Canonical 创始人 Shuttlework 为停止终止函道歉
 
-[/content]
-- Cease and desist not a consensus agreement
+Mark Lee 收到一封来自 Canonical 法务部关于 Ubuntu.com 的措辞严厉的信件，该信件对如何移除引起争议的亚马逊广告提供了建议，并要求移除 Ubuntu 标志和名称——这实际上关闭了该网站目前的运行。
 
-[content]
+### Shuttlework 为此道歉
+
+- Canonical founder Shuttlework apologised for a cease and desist letter
+- Cease and desist not a consensus agreement
 - 停止终止函并非共识协议
 
-[/content]
-[/content]
-[/content]
-Wait, the previous output is messy due to internal repetitions. Let me re-format to the final clean translation of the provided text.
-[content]
-- Reports that the US National Security Agency (NSA) has inserted back-doors into the majority of popular encryption applications has caused a loss of confidence, that TrueCrypt needs to be rebuilt with a full and frank code audit. "TrueCrypt works," says Matthew Green. People use it for very sensitive information (cryptography)." Bruce Schneider is even using it to store information on his personal air-gapped super-laptop, after he leaked NSA documents.
-
-[content]
--
-www.linuxuser.co.uk Email us directly...
-For the latest news and views linuxuser@imagine-publishing.co.uk
-
-[/content]
-[/content]
-Wait, I see I made some errors in the final output process. Let me provide the clean, final translation of the provided text as requested.
-
-[content]
 
 
-
-
-隐私担忧引发众筹活动
-
-广受欢迎的开源加密应用 TrueCrypt 它可以创建加密文件的“容器”，或可用于全盘加密。在近期出现安全漏洞后，它将进行一项由志愿者驱动的众筹代码审计。
-
-有报道称美国国家安全局（NSA）在大多数流行的加密应用中植入了后门，这导致了信任危机，TrueCrypt 需要通过全面且坦诚的代码审计来重新构建。“TrueCrypt 可以用，”马修·格林（Matthew Green）说道，“人们用它处理非常敏感的信息。TrueCrypt 安全了个人信息（加密）。”布鲁斯·施奈德（Bruce Schneider）在泄露 NSA 文件后，甚至使用它来存储其个人离网超级电脑上的信息。
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_0.png)
-
-- 热门开源加密包 TrueCrypt 将接受全面审计
-
-该审计当时已收到来自 FundIt 和 Indiegible 提供的超过 60,000 美元的资金，并将认证并消除二进制文件中的后门和损坏。该项目预计于 2014 年初完成。
-
-
-### GIMP 放弃 SourceForge
-
-由于 SourceForge 决定允许开发者在其下载包中构建广告程序，并声称进行创意性广告（这是在该平台被 Dice 收购后引入的特性），GIMP 不得离开免费托管。
-
-- “我们不希望支持这种行为，”该项目发言人说，“我们已决定放弃 SourceForge”
-
-软件包现在将由维护者 Jeremy Simonc 直接更新到官方 FTP 站点，并自动分发到各个站点。
-
-## 杂志
-
-### 欢迎来到动物世界
-由《如何运作》、《全空间》和《一切历史》的创作者们带来了全新的《动物世界》（World of Animals）杂志
-
-开源世界拥有企鹅、壁蜥、变色龙以及构成 Ubuntu 版本的各种奇怪动物。我们这些毛茸茸、长着羽毛和鳞片的朋友都有代号，而且它们都有极佳的故事要讲述。
-
-走进《动物世界》，这是我们与星球共享的所有非人类生命的新杂志。第一期主题为“自然优先”（Nature First），讲述了大猩猩、狐猴以及 50 种最濒危物种的故事，并让我们窥了帝鹅的一年。
-
-如需在官方网站订阅杂志，请访问 Animals.co.uk，您今天就可以通过 Image Shop 购买来确保获得订阅。
-世界充满了动物；关于它们还能学到什么？
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_1.png)
-
-在 Twitter 上关注 @worldanimals 并在 Facebook 上点赞 World of Animals 以直接获取动物群类知识。你还有机会
+在 Twitter 上关注 `@worldanimals` 并在 Facebook 上点赞 World of Animals 以直接获取动物群类知识。你还有机会
 
 ![](img/45a70445846e93838a23812ca8a9d98d_11_2.png)
 
 - 真正的企鹅在不支持 Linux 时在做什么？
 
 ## 新闻
+
 Linux 社区最新动态
 
 开源
 
-
-Ubuntu 商标已失效
-
-停止终止函并非共识协议
-
-Mark Shuttlework,  Ubuntu Linux Canonical 的创始人，对向其公司决策的一位批评者发送的一封措辞严厉的停止终止函表示道歉，并否认这是一种审查意图。
-
-- Canonical 创始人 Shuttlework 为停止终止函道歉
-
-Mark Lee 收到一封来自 Canonical 法务部关于 Ubuntu.com 的措辞严厉的信件，该信件对如何移除引起争议的亚马逊广告提供了建议，并要求移除 Ubuntu 标志和名称——这实际上关闭了该网站目前的运行。
-
-
-### Shuttlework 为此道歉
-Ubuntu 商标已失效 (Wait, the source text has repeats, I will follow the source text's structure strictly)
-
-### Shuttlework 为此道歉
-Ubuntu 商标已失效
-
-停止终止函并非共识协议
-
-- Canonical 创始人 Shuttlework 为停止终止函道歉
-
-Mark Lee 收到一封来自 Canonical 法务部关于 Ubuntu.com 的措辞严厉的信件，该信件对如何移除引起争议的亚马逊广告提供了建议，并要求移除 Ubuntu 标志和名称——这实际上关闭了该网站目前的运行。
-
-[/content]
-[/content]
-]
-Wait, the provided text in the prompt has some repeated sections. I will provide a clean translation of the provided text exactly as it appears.
-
-[content]
-
-
-
-
-隐私担忧引发众筹活动
-
-广受欢迎的开源加密应用 TrueCrypt 它可以创建加密文件的“容器”，或可用于全盘加密。在近期出现安全漏洞后，它将进行一项由志愿者驱动的众筹代码审计。
-
-有报道称美国国家安全局（NSA）在大多数流行的加密应用中植入了后门，这导致了信任危机，TrueCrypt 需要通过全面且坦诚的代码审计来重新构建。“TrueCrypt 可以用，”马修·格林（Matthew Green）说道，“人们用它处理非常敏感的信息。TrueCrypt 安全了个人信息（加密）。”布鲁斯·施奈德（Bruce Schneider）在泄露 NSA 文件后，甚至使用它来存储其个人离网超级电脑上的信息。
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_0.png)
-
-- 热门开源加密包 TrueCrypt 将接受全面审计
-
-该审计当时已收到来自 FundIt 和 Indiegible 提供的超过 60,000 美元的资金，并将认证并消除二进制文件中的后门和损坏。该项目预计于 2014 年初完成。
-
-
-
-由于 SourceForge 决定允许开发者在其下载包中构建广告程序，并声称进行创意性广告（这是在该平台被 Dice 收购后引入的特性），GIMP 不得离开免费托管。
-
-- “我们不希望支持这种行为，”该项目发言人说，“我们已决定放弃 SourceForge”
-
-软件包现在将由维护者 Jeremy Simonc 直接更新到官方 FTP 站点，并自动分发到各个站点。
-
-
-### 欢迎来到动物世界
-由《如何运作》、《全空间》和《一切历史》的创作者们带来了全新的《动物世界》（World of Animals）杂志
-
-开源世界拥有企鹅、壁蜥、变色龙以及构成 Ubuntu 版本的各种奇怪动物。我们这些毛茸茸、长着羽毛和鳞片的朋友都有代号，而且它们都有极佳的故事要讲述。
-
-走进《动物世界》，这是我们与星球共享的所有非人类生命的新杂志。第一期主题为“自然优先”（Nature First），讲述了大猩猩、狐猴以及 50 种最濒危物种的故事，并让我们窥了帝鹅的一年。
-
-如需在官方网站订阅杂志，请访问 Animals.co.uk，您今天就可以通过 Image Shop 购买来确保获得订阅。
-世界充满了动物；关于它们还能学到什么？
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_1.png)
-
-在 Twitter 上关注 @worldanimals 并在 Facebook 上点赞 World of Animals 以直接获取动物群类知识。你还有机会
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_2.png)
-
-- 真正的企鹅在不支持 Linux 时在做什么？
-
-## 新闻
-Linux 社区最新动态
-
-开源
 ## LINUX
+
+### Shuttlework 为此道歉
 
 Ubuntu 商标已失效
 
@@ -709,2006 +532,19 @@ Mark Shuttlework, 创始人 Ubuntu Linux Canonical 的创始人，对向其公�
 Mark Lee 收到一封来自 Canonical 法务部关于 Ubuntu.com 的措辞严厉的信件，该信件对如何移除引起争议的亚马逊广告提供了建议，并要求移除 Ubuntu 标志和名称——这实际上关闭了该网站目前的运行。
 
 
-### Shuttlework 为此道歉
-Ubuntu 商标已失效 (Wait, the source text has repeats, I will follow the source text's structure strictly)
 
-### Shuttlework 为此道歉
-Ubuntu 商标已失效
-Cease and desist not a consensus agreement
-
-
-Wait, I will just provide the clean translation of the text provided.
-
-[content]
 # 开源
 
 您的 Linux 新闻与观点来源
 
-www.linuxuser.co.uk 直接向我们发送电子邮件...
-获取最新新闻与观点请发送邮件至 linuxuser@imagine-publishing.co.uk
+`www.linuxuser.co.uk` 直接向我们发送电子邮件...
+
+获取最新新闻与观点请发送邮件至 `linuxuser@imagine-publishing.co.uk`
 
 ## 安全
 
 ### TrueCrypt 将进行代码审计
-隐私担忧引发众筹活动
 
-广受欢迎的开源加密应用 TrueCrypt 它可以创建加密文件的“容器”，或可用于全盘加密。在近期出现安全漏洞后，它将进行一项由志愿者驱动的众筹代码审计。
-
-有报道称美国国家安全局（NSA）在大多数流行的加密应用中植入了后门，这导致了信任危机，TrueCrypt 需要通过全面且坦诚的代码审计来重新构建。“TrueCrypt 可以用，”马修·格林（Matthew Green）说道，“人们用它处理非常敏感的信息。TrueCrypt 安全了个人信息（加密）。”布鲁斯·施奈德（Bruce Schneider）在泄露 NSA 文件后，甚至使用它来存储其个人离网超级电脑上的信息。
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_0.png)
-
-- 热门开源加密包 TrueCrypt 将接受全面审计
-
-该审计当时已收到来自 FundIt 和 Indiegible 提供的超过 60,000 美元的资金，并将认证并消除二进制文件中的后门和损坏。该项目预计于 2014 年初完成。
-
-
-
-由于 SourceForge 决定允许开发者在其下载包中构建广告程序，并声称进行创意性广告（这是在该平台被 Dice 收购后引入的特性），GIMP 不得离开免费托管。
-
-- “我们不希望支持这种行为，”该项目发言人说，“我们已决定放弃 SourceForge”
-
-软件包现在将由维护者 Jeremy Simonc 直接更新到官方 FTP 站点，并自动分发到各个站点。
-
-
-### 欢迎来到动物世界
-由《如何运作》、《全空间》和《一切历史》的创作者们带来了全新的《动物世界》（World of Animals）杂志
-
-开源世界拥有企鹅、壁蜥、变色龙以及构成 Ubuntu 版本的各种奇怪动物。我们这些毛茸茸、长着羽毛和鳞片的朋友都有代号，而且它们都有极佳的故事要讲述。
-
-走进《动物世界》，这是我们与星球共享的所有非人类生命的新杂志。第一期主题为“自然优先”（Nature First），讲述了大猩猩、狐猴以及 50 种最濒危物种的故事，并让我们窥了帝鹅的一年。
-
-如需在官方网站订阅杂志，请访问 Animals.co.uk，您今天就可以通过 Image Shop 购买来确保获得订阅。
-世界充满了动物；关于它们还能学到什么？
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_1.png)
-
-在 Twitter 上关注 @worldanimals 并在 Facebook 上点赞 World of Animals 以直接获取动物群类知识。你还有机会
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_2.png)
-
-- 真正的企鹅在不支持 Linux 时在做什么？
-## 新闻
-Linux 社区最新动态
-
-开源
-
-## LINUX
-
-### Shuttlework 为此道歉
-Ubuntu 商标已失效
-
-停止终止函并非共识协议
-
-Mark Shuttlework, 创始人 Ubuntu Linux Canonical 的创始人，对向其公司决策的一位批评者发送的一封措辞严厉的停止终止函表示道歉，并否认这是一种审查意图。
-
-- Canonical 创始人 Shuttlework 为停止终止函道歉
-
-Mark Lee 收到一封来自 Canonical 法务部关于 Ubuntu.com 的措辞严厉的信件，该信件对如何移除引起争议的亚马逊广告提供了建议，并要求移除 Ubuntu 标志和名称——这实际上关闭了该网站目前的运行。
-
-[/content]
-]
-Wait, the input text provided by the user actually contains repeated sections and is deconstructed in a way that triggered a loop. I will provide the clean translation of the text provided.
-
-[content]
-
-
-
-
-隐私担忧引发众筹活动
-
-广受欢迎的开源加密应用 TrueCrypt 它可以创建加密文件的“容器”，或可用于全盘加密。在近期出现安全漏洞后，它将进行一项由志愿者驱动的众筹代码审计。
-
-有报道称美国国家安全局（NSA）在大多数流行的加密应用中植入了后门，这导致了信任危机，TrueCrypt 需要通过全面且坦诚的代码审计来重新构建。“TrueCrypt 可以用，”马修·格林（Matthew Green）说道，“人们用它处理非常敏感的信息。TrueCrypt 安全了个人信息（加密）。”布鲁斯·施奈德（Bruce Schneider）在泄露 NSA 文件后，甚至使用它来存储其个人离网超级电脑上的信息。
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_0.png)
-
-- 热门开源加密包 TrueCrypt 将接受全面审计
-
-该审计当时已收到来自 FundIt 和 Indiegible 提供的超过 60,000 美元的资金，并将认证并消除二进制文件中的后门和损坏。该项目预计于 2014 年初完成。
-
-
-
-由于 SourceForge 决定允许开发者在其下载包中构建广告程序，并声称进行创意性广告（这是在该平台被 Dice 收购后引入的特性），GIMP 不得离开免费托管。
-
-- “我们不希望支持这种行为，”该项目发言人说，“我们已决定放弃 SourceForge”
-
-软件包现在将由维护者 Jeremy Simonc 直接更新到官方 FTP 站点，并自动分发到各个站点。
-
-
-由《如何运作》、《全空间》和《一切历史》的创作者们带来了全新的《动物世界》（World of Animals）杂志
-
-开源世界拥有企鹅、壁蜥、变色龙以及构成 Ubuntu 版本的各种奇怪动物。我们这些毛茸茸、长着羽毛和鳞片的朋友都有代号，而且它们都有极佳的故事要讲述。
-
-走进《动物世界》，这是我们与星球共享的所有非人类生命的新杂志。第一期主题为“自然优先”（Nature First），讲述了大猩猩、狐猴以及 50 种最濒危物种的故事，并让我们窥了帝鹅的一年。
-
-如需在官方网站订阅杂志，请访问 Animals.co.uk，您今天就可以通过 Image Shop 购买来确保获得订阅。
-世界充满了动物；关于它们还能学到什么？
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_1.png)
-
-在 Twitter 上关注 @worldanimals 并在 Facebook 上点赞 World of Animals 以直接获取动物群类知识。你还有机会
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_2.png)
-
-- 真正的企鹅在不支持 Linux 时在做什么？
-
-## 新闻
-Linux 社区最新动态
-
-开源
-
-## LINUX
-
-### Shuttlework 为此道歉
-Ubuntu 商标已失效
-
-停止终止函并非共识协议
-
-Mark Shuttlework, 创始人 Ubuntu Linux Canonical 的创始人，对向其公司决策的一位批评者发送的一封措辞严厉的停止终止函表示道歉，并否认这是一种审查意图。
-
-- Canonical 创始人 Shuttlework 为停止终止函道歉
-
-Mark Lee 收到一封来自 Canonical 法务部关于 Ubuntu.com 的措辞严厉的信件，该信件对如何移除引起争议的亚马逊广告提供了建议，并要求移除 Ubuntu 标志和名称——这实际上关闭了该网站目前的运行。
-
-[/content]
-]
-Wait, I see the user's input text is actually broken with multiple `[content]` tags. I will just translate the text within the tags provided.
-
-[content]
-Wait, the user provided the text in blocks. I will translate it.
-[/content]
-Wait, I will just provide the translation of the text provided.
-[/content]
-[/content]
-[/content]
-I will provide the clean translation of the text provided.
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-
-content]
-[/content]
-[/content]
-
-content]
-
-content]
-
-content]
-
-content]
-
-content]
-
-content]
-
-content]
-
-content]
-
-content
-
-
-content
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-
-content]
-
-
-]
-
-
-]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-
-
-]
-
-
-]
-
-
-]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-
-content]
-
-content]
-
-
-]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-
-content]
-
-
-]
-
-
-]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-
-content]
-
-content]
-[/content]
-[/
-]
-
-
-]
-
-
-]
-
-
-]
-
-
-]
-
-
-]
-
-
-]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-
-content]
-
-
-]
-
-
-]
-
-
-]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/
-]
-
-
-]
-
-
-]
-
-
-]
-
-
-
-
-
-
-]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-
-
-]
-
-
-]
-
-
-]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/
-]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[/content]
-[/content]
-Wait, the system is malfunctioning. I will simply provide the clean translation in the requested Markdown format.
-
-[content]
-# 开源
-
-您的 Linux 新闻与观点来源
-
-www.linuxuser.co.uk 直接向我们发送电子邮件...
-获取最新新闻与观点请发送邮件至 linuxuser@imagine-publishing.co.uk
-
-## 安全
-
-### TrueCrypt 将进行代码审计
 隐私担忧引发众筹活动
 
 广受欢迎的开源加密应用 TrueCrypt 它可以创建加密文件的“容器”，或可用于全盘加密。在近期出现安全漏洞后，它将进行一项由志愿者驱动的众筹代码审计。
@@ -2734,24 +570,27 @@ www.linuxuser.co.uk 直接向我们发送电子邮件...
 ## 杂志
 
 ### 欢迎来到动物世界
+
 由《如何运作》、《全空间》和《一切历史》的创作者们带来了全新的《动物世界》（World of Animals）杂志
 
 开源世界拥有企鹅、壁蜥、变色龙以及构成 Ubuntu 版本的各种奇怪动物。我们这些毛茸茸、长着羽毛和鳞片的朋友都有代号，而且它们都有极佳的故事要讲述。
 
 走进《动物世界》，这是我们与星球共享的所有非人类生命的新杂志。第一期主题为“自然优先”（Nature First），讲述了大猩猩、狐猴以及 50 种最濒危物种的故事，并让我们窥了帝鹅的一年。
 
-如需在官方网站订阅杂志，请访问 Animals.co.uk，您今天就可以通过 Image Shop 购买来确保获得订阅。
+如需在官方网站订阅杂志，请访问 `Animals.co.uk`，您今天就可以通过 Image Shop 购买来确保获得订阅。
+
 世界充满了动物；关于它们还能学到什么？
 
 ![](img/45a70445846e93838a23812ca8a9d98d_11_1.png)
 
-在 Twitter 上关注 @worldanimals 并在 Facebook 上点赞 World of Animals 以直接获取动物群类知识。你还有机会
+在 Twitter 上关注 `@worldanimals` 并在 Facebook 上点赞 World of Animals 以直接获取动物群类知识。你还有机会
 
 ![](img/45a70445846e93838a23812ca8a9d98d_11_2.png)
 
 - 真正的企鹅在不支持 Linux 时在做什么？
 
 ## 新闻
+
 Linux 社区最新动态
 
 开源
@@ -2759,6 +598,7 @@ Linux 社区最新动态
 ## LINUX
 
 ### Shuttlework 为此道歉
+
 Ubuntu 商标已失效
 
 停止终止函并非共识协议
@@ -2769,63 +609,7 @@ Mark Shuttlework, 创始人 Ubuntu Linux Canonical 的创始人，对向其公�
 
 Mark Lee 收到一封来自 Canonical 法务部关于 Ubuntu.com 的措辞严厉的信件，该信件对如何移除引起争议的亚马逊广告提供了建议，并要求移除 Ubuntu 标志和名称——这实际上关闭了该网站目前的运行。
 
-## HARDWARE
 
-### Shuttlework 为此道歉
-Ubuntu 商标已失效 (Wait, the source text has repeats, I will follow the source text's structure strictly)
-
-### Shuttlework 为此道歉
-Ubuntu 商标已失效
-
-Cease and desist not a consensus agreement
-
-- Canonical founder Shuttlework apologised for a cease and desist letter
-
-Wait, I will just provide the clean translation of the text provided.
-[/content]
-]
-Actually, I will just provide the final response without the internal loop-breaking thoughts. (Wait, the prompt asks for the output in [content]...[/content]).
-
-Final attempt:
-[content]
-... (the code)
-[content]
-广受欢迎的开源加密应用 TrueCrypt 它可以创建加密文件的“容器”，或可用于全盘加密。在近期出现安全漏洞后，它将进行一项由志愿者驱动的众筹代码审计。
-
-有报道称美国国家国家局（NSA）在大多数流行的加密应用中植入了后门，这导致了信任危机，TrueCrypt 需要通过全面且坦诚的代码审计来重新构建。“TrueCrypt 可以用，”马修·格林（Matthew Green）说道，“人们用它处理非常敏感的信息。TrueCrypt 安全了个人信息（加密）。”布鲁斯·施奈德（Bruce Schneider）在泄露 NSA 文件后，甚至使用它来存储其个人离网超级电脑上的信息。
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_0.png)
-
-- 热门开源加密包 TrueCrypt 将接受全面审计
-[/content]
-Wait, the user's text is very long. I will translate the full text once.
-
-[content]
-# 开源
-
-您的 Linux 新闻与观点来源
-
-www.linuxuser.co.uk 直接向我们发送电子邮件...
-获取最新新闻与观点请发送邮件至 linuxuser@imagine-publishing.co.uk
-
-## 安全
-
-### TrueCrypt 将进行代码审计
-隐私担忧引发众筹活动
-
-广受欢迎的开源加密应用 TrueCrypt 它可以创建加密文件的“容器”，或可用于全盘加密。在近期出现安全漏洞后，它将进行一项由志愿者驱动的众筹代码审计。
-
-有报道称美国国家安全局（NSA）在大多数流行的加密应用中植入了后门，这导致了信任危机，TrueCrypt 需要通过全面且坦诚的代码审计来重新构建。“TrueCrypt 可以用，”马修·格林（Matthew Green）说道，“人们用它处理非常敏感的信息。TrueCrypt 安全了个人信息（加密）。”布鲁斯·施奈德（Bruce Schneider）在泄露 NSA 文件后，甚至使用它来存储其个人离网超级电脑上的信息。
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_0.png)
-
-- 热门开源加密包 TrueCrypt 将接受全面审计
-
-该审计当时已收到来自 FundIt 和 Indiegible 提供的超过 60,000 美元的资金，并将认证并消除二进制文件中的后门和损坏。该项目预计于 2014 年初完成。
-
-## 在线
-
-### GIMP 放弃 SourceForge
 
 由于 SourceForge 决定允许开发者在其下载包中构建广告程序，并声称进行创意性广告（这是在该平台被 Dice 收购后引入的特性），GIMP 不得离开免费托管。
 
@@ -2836,6 +620,7 @@ www.linuxuser.co.uk 直接向我们发送电子邮件...
 ## 杂志
 
 ### 欢迎来到动物世界
+
 由《如何运作》、《全空间》和《一切历史》的创作者们带来了全新的《动物世界》（World of Animals）杂志
 
 开源世界拥有企鹅、壁蜥、变色龙以及构成 Ubuntu 版本的各种奇怪动物。我们这些毛茸茸、长着羽毛和鳞片的朋友都有代号，而且它们都有极佳的故事要讲述。
@@ -2843,6 +628,7 @@ www.linuxuser.co.uk 直接向我们发送电子邮件...
 走进《动物世界》，这是我们与星球共享的所有非人类生命的新杂志。第一期主题为“自然优先”（Nature First），讲述了大猩猩、狐猴以及 50 种最濒危物种的故事，并让我们窥了帝鹅的一年。
 
 如需在官方网站订阅杂志，请访问 Animals.co.uk，您今天就可以通过 Image Shop 购买来确保获得订阅。
+
 世界充满了动物；关于它们还能学到什么？
 
 ![](img/45a70445846e93838a23812ca8a9d98d_11_1.png)
@@ -2854,6 +640,7 @@ www.linuxuser.co.uk 直接向我们发送电子邮件...
 - 真正的企鹅在不支持 Linux 时在做什么？
 
 ## 新闻
+
 Linux 社区最新动态
 
 开源
@@ -2861,6 +648,7 @@ Linux 社区最新动态
 ## LINUX
 
 ### Shuttlework 为此道歉
+
 Ubuntu 商标已失效
 
 停止终止函并非共识协议
@@ -2870,454 +658,16 @@ Mark Shuttlework, 创始人 Ubuntu Linux Canonical 的创始人，对向其公�
 - Canonical 创始人 Shuttlework 为停止终止函道歉
 
 Mark Lee 收到一封来自 Canonical 法务部关于 Ubuntu.com 的措辞严厉的信件，该信件对如何移除引起争议的亚马逊广告提供了建议，并要求移除 Ubuntu 标志和名称——这实际上关闭了该网站目前的运行。
-[/content]
-Wait, the input text provided by the user is actually broken with multiple `[content]` tags. I will just translate the text within the tags provided.
 
-[content]
-Wait, the user's text is broken. I will provide the clean translation of the text provided.
 
-[content]
-# 开源
 
-您的 Linux 新闻与观点来源
+# 安全
 
-www.linuxuser.co.uk 直接向我们发送电子邮件...
-获取最新新闻与观点请发送邮件至 linuxuser@imagine-publishing.co.uk
+Reports that the US National Security Agency (NSA) has inserted back-doors into the majority of popular encryption applications has caused a loss of confidence, that TrueCrypt needs to be rebuilt with a full and frank code audit. "TrueCrypt works," says Matthew Green. People use it for very sensitive information (cryptography)." Bruce Schneider is even using it to store information on his personal air-gapped super-laptop, after he leaked NSA documents.
 
-## 安全
+- Popular open source cryptography package TrueCrypt to be given a full audit
 
-### TrueCrypt 将进行代码审计
-隐私担忧引发众筹活动
-
-广受欢迎的开源加密应用 TrueCrypt 它可以创建加密文件的“容器”，或可用于全盘加密。在近期出现安全漏洞后，它将进行一项由志愿者驱动的众筹代码审计。
-
-有报道称美国国家安全局（NSA）在大多数流行的加密应用中植入了后门，这导致了信任危机，TrueCrypt 需要通过全面且坦诚的代码审计来重新构建。“TrueCrypt 可以用，”马修·格林（Matthew Green）说道，“人们用它处理非常敏感的信息。TrueCrypt 安全了个人信息（加密）。”布鲁斯·施奈德（Bruce Schneider）在泄露 NSA 文件后，甚至使用它来存储其个人离网超级电脑上的信息。
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_0.png)
-
-- 热门开源加密包 TrueCrypt 将接受全面审计
-
-该审计当时已收到来自 FundIt 和 Indiegible 提供的超过 60,000 美元的资金，并将认证并消除二进制文件中的后门和损坏。该项目预计于 2014 年初完成。
-
-## 在线
-
-### GIMP 放弃 SourceForge
-
-由于 SourceForge 决定允许开发者在其下载包中构建广告程序，并声称进行创意性广告（这是在该平台被 Dice 收购后引入的特性），GIMP 不得离开免费托管。
-
-- “我们不希望支持这种行为，”该项目发言人说，“我们已决定放弃 SourceForge”
-
-软件包现在将由维护者 Jeremy Simonc 直接更新到官方 FTP 站点，并自动分发到各个站点。
-
-## 杂志
-
-### 欢迎来到动物世界
-由《如何运作》、《全空间》和《一切历史》的创作者们带来了全新的《动物世界》（World of Animals）杂志
-
-开源世界拥有企鹅、壁蜥、变色龙以及构成 Ubuntu 版本的各种奇怪动物。我们这些毛茸茸、长着羽毛和鳞片的朋友都有代号，而且它们都有极佳的故事要讲述。
-
-走进《动物世界》，这是我们与星球共享的所有非人类生命的新杂志。第一期主题为“自然优先”（Nature First），讲述了大猩猩、狐猴以及 50 种最濒危物种的故事，并让我们窥了帝鹅的一年。
-
-如需在官方网站订阅杂志，请访问 Animals.co.uk，您今天就可以通过 Image Shop 购买来确保获得订阅。
-世界充满了动物；关于它们还能学到什么？
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_1.png)
-
-在 Twitter 上关注 @worldanimals 并在 Facebook 上点赞 World of Animals 以直接获取动物群类知识。你还有机会
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_2.png)
-
-- 真正的企鹅在不支持 Linux 时在做什么？
-
-## 新闻
-Linux 社区最新动态
-
-开源
-
-## LINUX
-
-### Shuttlework 为此道歉
-Ubuntu 商标已失效
-
-停止终止函并非共识协议
-
-Mark Shuttlework, 创始人 Ubuntu Linux Canonical 的创始人，对向其公司决策的一位批评者发送的一封措辞严厉的停止终止函表示道歉，并否认这是一种审查意图。
-
-- Canonical 创始人 Shuttlework 为停止终止函道歉
-
-Mark Lee 收到一封来自 Canonical 法务部关于 Ubuntu.com 的措辞严厉的信件，该信件对如何移除引起争议的亚马逊广告提供了建议，并要求移除 Ubuntu 标志和名称——这实际上关闭了该网站目前的运行。
-[/content]
-Wait, the input text provided by the user is actually broken with multiple `[content]` tags. I will just translate the text.
-
-[content]
-# 开源
-
-您的 Linux 新闻与观点来源
-
-www.linuxuser.co.uk 直接向我们发送电子邮件...
-获取最新新闻与观点请发送邮件至 linuxuser@imagine-publishing.co.uk
-
-## 安全
-
-### TrueCrypt 将进行代码审计
-隐私担忧引发众筹活动
-
-广受欢迎的开源加密应用 TrueCrypt 它可以创建加密文件的“容器”，或可用于全盘加密。在近期出现安全漏洞后，它将进行一项由志愿者驱动的众筹代码审计。
-
-有报道称美国国家安全局（NSA）在大多数流行的加密应用中植入了后门，这导致了信任危机，TrueCrypt 需要通过全面且坦诚的代码审计来重新构建。“TrueCrypt 可以用，”马修·格林（Matthew Green）说道，“人们用它处理非常敏感的信息。TrueCrypt 安全了个人信息（加密）。”布鲁斯·施奈德（Bruce Schneider）在泄露 NSA 文件后，甚至使用它来存储其个人离网超级电脑上的信息。
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_0.png)
-
-- 热门开源加密包 TrueCrypt 将接受全面审计
-
-该审计当时已收到来自 FundIt 和 Indiegible 提供的超过 60,000 美元的资金，并将认证并消除二进制文件中的后门和损坏。该项目预计于 2014 年初完成。
-
-## 在线
-
-### GIMP 放弃 SourceForge
-
-由于 SourceForge 决定允许开发者在其下载包中构建广告程序，并声称进行创意性广告（这是在该平台被 Dice 收购后引入的特性），GIMP 不得离开免费托管。
-
-- “我们不希望支持这种行为，”该项目发言人说，“我们已决定放弃 SourceForge”
-
-软件包现在将由维护者 Jeremy Simonc 直接更新到官方 FTP 站点，并自动分发到各个站点。
-
-## 杂志
-
-### 欢迎来到动物世界
-由《如何运作》、《全空间》和《一切历史》的创作者们带来了全新的《动物世界》（World of Animals）杂志
-
-开源世界拥有企鹅、壁蜥、变色龙以及构成 Ubuntu 版本的各种奇怪动物。我们这些毛茸茸、长着羽毛和鳞片的朋友都有代号，而且它们都有极佳的故事要讲述。
-
-走进《动物世界》，这是我们与星球共享的所有非人类生命的新杂志。第一期主题为“自然优先”（Nature First），讲述了大猩猩、狐猴以及 50 种最濒危物种的故事，并让我们窥了帝鹅的一年。
-
-如需在官方网站订阅杂志，请访问 Animals.co.uk，您今天就可以通过 Image Shop 购买来确保获得订阅。
-世界充满了动物；关于它们还能学到什么？
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_1.png)
-
-在 Twitter 上关注 @worldanimals 并在 Facebook 上点赞 World of Animals 以直接获取动物群类知识。你还有机会
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_2.png)
-
-- 真正的企鹅在不支持 Linux 时在做什么？
-
-## 新闻
-Linux 社区最新动态
-
-开源
-
-## LINUX
-
-### Shuttlework 为此道歉
-Ubuntu 商标已失效
-
-停止终止函并非共识协议
-
-Mark Shuttlework, 创始人 Ubuntu Linux Canonical 的创始人，对向其公司决策的一位批评者发送的一封措辞严厉的停止终止函表示道歉，并否认这是一种审查意图。
-
-- Canonical 创始人 Shuttlework 为停止终止函道歉
-
-Mark Lee 收到一封来自 Canonical 法务部关于 Ubuntu.com 的措辞严厉的信件，该信件对如何移除引起争议的亚马逊广告提供了建议，并要求移除 Ubuntu 标志和名称——这实际上关闭了该网站目前的运行。
-[/content]
-Wait, the input text provided by the user is actually broken with multiple `[content]` tags. I will just translate the text.
-
-[/content]
-Wait, I will provide the clean translation of the text provided.
-
-[content]
-# 开源
-
-您的 Linux 新闻与观点来源
-
-www.linuxuser.co.uk 直接向我们发送电子邮件...
-获取最新新闻与观点请发送邮件至 linuxuser@imagine-publishing.co.uk
-
-## 安全
-
-### TrueCrypt 将进行代码审计
-隐私担忧引发众筹活动
-
-广受欢迎的开源加密应用 TrueCrypt 它可以创建加密文件的“容器”，或可用于全盘加密。在近期出现安全漏洞后，它将进行一项由志愿者驱动的众筹代码审计。
-
-有报道称美国国家安全局（NSA）在大多数流行的加密应用中植入了后门，这导致了信任危机，TrueCrypt 需要通过全面且坦诚的代码审计来重新构建。“TrueCrypt 可以用，”马修·格林（Matthew Green）说道，“人们用它处理非常敏感的信息。TrueCrypt 安全了个人信息（加密）。”布鲁斯·施奈德（Bruce Schneider）在泄露 NSA 文件后，甚至使用它来存储其个人离网超级电脑上的信息。
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_0.png)
-
-- 热门开源加密包 TrueCrypt 将接受全面审计
-
-该审计当时已收到来自 FundIt 和 Indiegible 提供的超过 60,000 美元的资金，并将认证并消除二进制文件中的后门和损坏。该项目预计于 2014 年初完成。
-
-## 在线
-
-### GIMP 放弃 SourceForge
-
-由于 SourceForge 决定允许开发者在其下载包中构建广告程序，并声称进行创意性广告（这是在该平台被 Dice 收购后引入的特性），GIMP 不得离开免费托管。
-
-- “我们不希望支持这种行为，”该项目发言人说，“我们已决定放弃 SourceForge”
-
-软件包现在将由维护者 Jeremy Simonc 直接更新到官方 FTP 站点，并自动分发到各个站点。
-
-## 杂志
-
-### 欢迎来到动物世界
-由《如何运作》、《全空间》和《一切历史》的创作者们带来了全新的《动物世界》（World of Animals）杂志
-
-开源世界拥有企鹅、壁蜥、变色龙以及构成 Ubuntu 版本的各种奇怪动物。我们这些毛茸茸、长着羽毛和鳞片的朋友都有代号，而且它们都有极佳的故事要讲述。
-
-走进《动物世界》，这是我们与星球共享的所有非人类生命的新杂志。第一期主题为“自然优先”（Nature First），讲述了大猩猩、狐猴以及 50 种最濒危物种的故事，并让我们窥了帝鹅的一年。
-
-如需在官方网站订阅杂志，请访问 Animals.co.uk，您今天就可以通过 Image Shop 购买来确保获得订阅。
-世界充满了动物；关于它们还能学到什么？
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_1.png)
-
-在 Twitter 上关注 @worldanimals 并在 Facebook 上点赞 World of Animals 以直接获取动物群类知识。你还有机会
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_2.png)
-
-- 真正的企鹅在不支持 Linux 时在做什么？
-
-## 新闻
-Linux 社区最新动态
-
-开源
-
-## LINUX
-
-### Shuttlework 为此道歉
-Ubuntu 商标已失效
-
-停止终止函并非共识协议
-
-Mark Shuttlework, 创始人 Ubuntu Linux Canonical 的创始人，对向其公司决策的一位批评者发送的一封措辞严厉的停止终止函表示道歉，并否认这是一种审查意图。
-
-- Canonical 创始人 Shuttlework 为停止终止函道歉
-
-Mark Lee 收到一封来自 Canonical 法务部关于 Ubuntu.com 的措辞严厉的信件，该信件对如何移除引起争议的亚马逊广告提供了建议，并要求移除 Ubuntu 标志和名称——这实际上关闭了该网站目前的运行。
-[/content]
-Wait, the input text provided by the user is actually broken with multiple `[content]` tags. I will just translate the text.
-
-[/content]
-Wait, I will provide the clean translation of the text provided.
-
-[content]
-... (the code)
-[/content]
-Wait, the user's text is broken. I will provide the clean translation of the text provided.
-
-[/content]
- the, the
- the the the the
- the
- the
- the
-.
-[/content]
-[/content]
-[/content]
-[/content]
-[/
-]
-[/
-]
-[/
-]
-
-
-]
-]
-]
-
-
-]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- the
-.
-[/
-]
-[/content]
-Wait, the system is malfunctioning. I will simply provide the clean translation in the requested Markdown format.
-
-[content]
-# 开源
-
-您的 Linux 新闻与观点来源
-
-www.linuxuser.co.uk 直接向我们发送电子邮件...
-获取最新新闻与观点请发送邮件至 linuxuser@imagine-publishing.co.uk
-
-## 安全
-
-### TrueCrypt 将进行代码审计
-隐私担忧引发众筹活动
-
-广受欢迎的开源加密应用 TrueCrypt 它可以创建加密文件的“容器”，或可用于全盘加密。在近期出现安全漏洞后，它将进行一项由志愿者驱动的众筹代码审计。
-
-有报道称美国国家安全局（NSA）在大多数流行的加密应用中植入了后门，这导致了信任危机，TrueCrypt 需要通过全面且坦诚的代码审计来重新构建。“TrueCrypt 可以用，”马修·格林（Matthew Green）说道，“人们用它处理非常敏感的信息。TrueCrypt 安全了个人信息（加密）。”布鲁斯·施奈德（Bruce Schneider）在泄露 NSA 文件后
-甚至使用它来存储其个人离网超级电脑上的信息。
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_0.png)
-
-- 热门开源加密包 TrueCrypt 将接受全面审计
-
-该审计当时已收到来自 FundIt 和 Indiegible 提供的超过 60,000 美元的资金，并将认证并消除二进制文件中的后门和损坏。该项目预计于 2014 年初完成。
-
-## 在线
-
-### GIMP 放弃 SourceForge
-
-由于 SourceForge 决定允许开发者在其下载包中构建广告程序，并声称进行创意性广告（这是在该平台被 Dice 收购后引入的特性），GIMP 不得离开免费托管。
-
-- “我们不希望支持这种行为，”该项目发言人说，“我们已决定放弃 SourceForge”
-
-软件包现在将由维护者 Jeremy Simonc 直接更新到官方 FTP 站点，并自动分发到各个站点。
-
-## 杂志
-
-### 欢迎来到动物世界
-由《如何运作》、《全空间》和《一切历史》的创作者们带来了全新的《动物世界》（World of Animals）杂志
-
-开源世界拥有企鹅、壁蜥、变色龙以及构成 Ubuntu 版本的各种奇怪动物。我们这些毛茸茸、长着羽毛和鳞片的朋友都有代号，而且它们都有极佳的故事要讲述。
-
-走进《动物世界》，这是我们与星球共享的所有非人类生命的新杂志。第一期主题为“自然优先”（Nature First），讲述了大猩猩、狐猴以及 50 种最濒危物种的故事，并让我们窥了帝鹅的一年。
-
-如需在官方网站订阅杂志，请访问 Animals.co.uk，您今天就可以通过 Image Shop 购买来确保获得订阅。
-世界充满了动物；关于它们还能学到什么？
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_1.png)
-
-在 Twitter 上关注 @worldanimals 并在 Facebook 上点赞 World of Animals 以直接获取动物群类知识。你还有机会
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_2.png)
-
-- 真正的企鹅在不支持 Linux 时在做什么？
-
-## 新闻
-Linux 社区最新动态
-
-开源
-
-## LINUX
-
-### Shuttlework 为此道歉
-Ubuntu 商标已失效
-
-停止终止函并非共识协议
-
-Mark Shuttlework, 创始人 Ubuntu Linux Canonical 的创始人，对向其公司决策的一位批评者发送的一封措辞严厉的停止终止函表示道歉，并否认这是一种审查意图。
-
-- Canonical 创始人 Shuttlework 为停止终止函道歉
-
-Mark Lee 收到一封来自 Canonical 法务部关于 Ubuntu.com 的措辞严厉的信件，该信件对如何移除引起争议的亚马逊广告提供了建议，并要求移除 Ubuntu 标志和名称——这实际上关闭了该网站目前的运行。
-[/content]
-Wait, the input text provided by the user is actually broken with multiple `[content]` tags. I will just translate the text.
-
-[/content]
-Wait, I will provide the clean translation of the text provided.
-
-[/content]
-- Cease and desist not a consensus agreement
-
-[content]
-- Cease and desist not a consensus agreement
-
-[/content]
--- Canonical founder Shuttlework apologised for a cease and desist letter
-
-- Canonical founder Shuttlework apologised for a cease and desist letter
-
-[content]
-- Canonical founder Shuttlework apologised for a cease and desist letter
-
-[/content]
-- Cease and desist not a consensus agreement
-
-[content]
-- Cease and desist not a consensus agreement
-
-[/content]
-- Mark Lee received a strongly worded letter from Canonical's legal dept regarding Ubuntu.com, which offered advice on how to remove contentious Amazon-based advertising and demanding the Ubuntu logo and name – effectively closing the site at its current running.
-
-[content]
-- Mark Lee received a strongly worded letter from Canonical's legal dept regarding Ubuntu.com, which offered advice on how to remove contentious Amazon-based advertising and demanding the Ubuntu logo and name – effectively closing the site at its current running.
-
-[/content]
-Wait, the user's text is broken. I will provide the clean translation of the text provided.
-
-[content]
-Reports that the US National Security Agency (NSA) has inserted back-doors into the majority of popular encryption applications has caused a loss of confidence, that TrueCrypt needs to be rebuilt with a full and frank code audit. "TrueCrypt works," says Matthew Green. People use it for very sensitive information. TrueCrypt secures personal information (cryptography)." Bruce Schneider is even using it to store information on his personal air-gapped super-laptop, after he leaked NSA documents.
+# Ubuntu
 
 - the penguin, gecko, chameleon and the whole host of weird and bizarre animals that make the Ubuntu releases. Our furry, feathered and scaled friends have code-names, and they all have fantastic stories to tell.
 
@@ -3325,7 +675,7 @@ Reports that the US National Security Agency (NSA) has inserted back-doors into 
 
 - What do real penguins do when they're not supporting Linux?
 
-- Ubuntu trademark gone
+## Ubuntu trademark gone
 
 Cease and desist not a consensus agreement
 
@@ -3333,7 +683,7 @@ Cease and desist not a consensus agreement
 
 - Mark Lee received a strongly worded letter from Canonical's legal dept regarding Ubuntu.com, which offered advice on how to remove contentious Amazon-based advertising and demanding the Ubuntu logo and name – effectively closing the site at its current running.
 
-- Popular open source cryptography package TrueCrypt to be given a full audit
+# Linux 社区
 
 - The latest in the Linux community
 
@@ -3341,1689 +691,62 @@ Cease and desist not a consensus agreement
 
 - The GIMP abandons SourceForge
 
-- From the creators of How it Works, All Space and All About History brings the new World of Animals
-
-[/content]
--- Popular open source cryptography package TrueCrypt to be given a full audit
-
--
-- Popular open source cryptography package TrueCrypt to be given a full audit
-
--
-- Canonical founder Shuttlework apologised for a cease and desist letter
-
-- 
-- From the creators of How it Works, All Space and All About History brings the new World of Animals
-
--
-- From the creators of How it Works, All Space and All About History brings the new World of Animals
-
--
-- The latest in the Linux community
-
--
-- The latest in the Linux community
-
--
-- OPEN SOURCE
-
--
-- OPEN SOURCE
-
--
-- The GIMP abandons SourceForge
-
--
-- The GIMP abandons SourceForge
-
-[/content]
-Wait, the system is malfunctioning. I will simply provide the clean translation in the requested Markdown format.
-
-[content]
-... (the code)
-[/content]
-Wait, the user's text is broken. I will provide the clean translation of the text provided.
-
-[/content]
-- the
-- the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the
-[/content]
-
-Wait, the user's text is broken. I will provide the clean translation of the text provided.
-
-[content]
-- Reports that the US National Security Agency (NSA) has inserted back-doors into the majority of popular encryption applications has caused a loss of confidence, that TrueCrypt needs to be rebuilt with a full and frank code audit. "TrueCrypt works," says Matthew Green. People use it for very sensitive information (cryptography)." Bruce Schneider is even using it to store information on his personal air-gapped super-laptop, after he leaked NSA documents.
-
-- the penguin, gecko, chameleon and the whole host of weird and bizarre animals that make the Ubuntu releases. Our furry, feathered and scaled friends have code-names, and they all have fantastic stories to tell.
-
-- The first issue, titled Nature First, tells the story of the gorillas, koatis, and 50 most endangered species and gives us a glimpse into a year in the life of an Emperor penguin.
-
-- What do real penguins do when they're not supporting Linux?
-
-- Ubuntu trademark gone
-
-Cease and desist not a consensus agreement
-
-- Canonical founder Shuttlework apologised for a cease and desist letter
-
-- Mark Lee received a strongly worded letter from Canonical's legal dept regarding Ubuntu.com, which offered advice on how to remove contentious Amazon-based advertising and demanding the Ubuntu logo and name – effectively closing the site at its current running.
-
-- Popular open source cryptography package TrueCrypt to be given a full audit
-
-- The latest in the Linux community
-
-- OPEN SOURCE
-
-- The GIMP abandons SourceForge
+# 杂志
 
 - From the creators of How it Works, All Space and All About History brings the new World of Animals
 
-[/content]
-Wait, the user's text is broken. I will provide the clean translation of the text provided.
 
-[/content]
-- the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the
-[/content]
-Wait, the user's text is broken. I will provide the clean translation of the text provided.
 
-[content]
--- Reports that the US National Security Agency (NSA) has inserted back-doors into the majority of popular encryption applications has caused a loss of confidence, that TrueCrypt needs to be rebuilt with a full and frank code audit. "TrueCrypt works," says Matthew Green. People use it for very sensitive information (cryptography)." Bruce Schneider is even using it to store information on his personal air-gapped super-laptop, after he leaked NSA documents.
+## News
 
-- the penguin, gecko, chameleon and the whole host of weird and bizarre animals that make the Ubuntu releases. Our furry, feathered and scaled friends have code-names, and they all have fantastic stories to tell.
+### The latest in the Linux community
 
-- The first issue, titled Nature First, tells the story of the gorillas, koatis, and 50 most endangered species and gives us a glimpse into a year in the life of an Emperor penguin.
+#### OPEN SOURCE
 
-- What do real penguins do when they're not supporting Linux?
+- Popular open source cryptography package `TrueCrypt` to be given a full audit
 
-- Ubuntu trademark gone
-
-Cease and desist not a consensus agreement
-
-- Canonical founder Shuttlework apologised for a cease and desist letter
-
-- Mark Lee received a strongly worded letter from Canonical's legal dept regarding Ubuntu.com, which offered advice on how to remove contentious Amazon-based advertising and demanding the Ubuntu logo and name – effectively closing the site at its current running.
-
-- Popular open source cryptography package TrueCrypt to be given a full audit
-
-- The latest in the Linux community
-
-- OPEN SOURCE
-
-- The GIMP abandons SourceForge
-
-- From the creators of How it Works, All Space and All About History brings the new World of Animals
-
-[/content]
-Wait, the input text provided by the user is actually broken with multiple `[content]` tags. I will just translate the text.
-
-[/content]
-I will provide the clean translation of the text provided.
-
-[content]
-- Reports that the US National Security Agency (NSA) has inserted back-doors into the majority of popular encryption applications has caused a loss of confidence, that TrueCrypt needs to be rebuilt with a full and frank code audit. "TrueCrypt works," says Matthew Green. People use it for very sensitive information (cryptography)." Bruce Schneider is even using it to store information on his personal air-gapped super-laptop, after he leaked NSA documents.
-
-- the penguin, gecko, chameleon and the whole host of weird and bizarre animals that make the Ubuntu releases. Our furry, feathered and scaled friends have code-names, and they all have fantastic stories to tell.
-
-- The first issue, titled Nature First, tells the story of the gorillas, koatis, and 50 most endangered species and gives us a glimpse into a year in the life of an Emperor penguin.
-
-- What do real penguins do when they're not supporting Linux?
-
-- Ubuntu trademark gone
-
-Cease and desist not a consensus agreement
-
-- Canonical founder Shuttlework apologised for a cease and desist letter
-
-- Mark Lee received a strongly worded letter from Canonical's legal dept regarding Ubuntu.com, which offered advice on how to remove contentious Amazon-based advertising and demanding the Ubuntu logo and name – effectively closing the site at its current running.
-
-- Popular open source cryptography package TrueCrypt to be given a full audit
-
-- The latest in the Linux community
-
-- OPEN SOURCE
-
-- The GIMP abandons SourceForge
-
-- From the creators of How it Works, All Space and All About History brings the new World of Animals
-
-[/content]
-Wait, the system is malfunctioning. I will simply provide the clean translation in the requested Markdown format.
-
-[content]
-... (the code)
-[/content]
-Wait, the user's text is broken. I will provide the clean translation of the text provided.
-
-[/content]
-- the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the
-[/content]
--- Cease and desist not a consensus agreement
-
-[content]
-- Cease and desist not a consensus agreement
-
-[/content]
--- Canonical founder Shuttlework apologised for a cease and desist letter
-
-[content]
-- Canonical founder Shuttlework apologised for a cease and desist letter
-
-[/content]
-- Cease and desist not a consensus agreement
-
-[content]
-- Cease and desist not a consensus agreement
-
-[/content]
--- Mark Lee received a strongly worded letter from Canonical's legal dept regarding Ubuntu.com, which offered advice on how to remove contentious Amazon-based advertising and demanding the Ubuntu logo and name – effectively closing the site at its current running.
-
-[content]
-- Mark Lee received a strongly worded letter from Canonical's legal dept regarding Ubuntu.com, which offered advice on how to remove contentious Amazon-based advertising and demanding the Ubuntu logo and name – effectively closing the site at its current running.
-
-[/content]
-Wait, the user's text is broken. I will provide the clean translation of the text provided.
-
-[/content]
-- the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the.
-Final Answer:
-[content]
-# 开源
-
-您的 Linux 新闻与观点来源
-
-www.linuxuser.co.uk 直接向我们发送电子邮件...
-获取最新新闻与观点请发送邮件至 linuxuser@imagine-publishing.co.uk
-
-## 安全
-
-### TrueCrypt 将进行代码审计
-隐私担忧引发众筹活动
-
-广受欢迎的开源加密应用 TrueCrypt 它可以创建加密文件的“容器”，或可用于全盘加密。在近期出现安全漏洞后，它将进行一项由志愿者驱动的众筹代码审计。
-
-有报道称美国国家安全局（NSA）在大多数流行的加密应用中植入了后门，这导致了信任危机，TrueCrypt 需要通过全面且坦诚的代码审计来重新构建。“TrueCrypt 可以用，”马修·格林（Matthew Green）说道，“人们用它处理非常敏感的信息。TrueCrypt 安全了个人信息（加密）。”布鲁斯·施奈德（Bruce Schneider）在泄露 NSA 文件后，甚至使用它来存储其个人离网超级电脑上的信息。
+Reports that the US National Security Agency (`NSA`) has inserted back-doors into the majority of popular encryption applications has caused a loss of confidence, that `TrueCrypt` needs to be rebuilt with a full and frank code audit. "TrueCrypt works," says Matthew Green. People use it for very sensitive information. TrueCrypt secures personal information (cryptography)." Bruce Schneider is even using it to store information on his personal air-gapped super-laptop, after he leaked `NSA` documents.
 
 ![](img/45a70445846e93838a23812ca8a9d98d_11_0.png)
 
-- 热门开源加密包 TrueCrypt 将接受全面审计
+The audit, which at the time has already received over $60,000 in funding from `FundIt` and `Indiegible`, will certify and eliminate binaries from back-doors and corruption. The project is expected to be completed by early 2014.
 
-该审计当时已收到来自 FundIt 和 Indiegible 提供的超过 60,000 美元的资金，并将认证并消除二进制文件中的后门和损坏。该项目预计于 2014 年初完成。
+### ONLINE
 
-## 在线
+#### The GIMP abandons SourceForge
 
-### GIMP 放弃 SourceForge
+Following `SourceForge`'s decision to allow developers to build advertising programs with their downloads and claims of creative advertising, which was introduced when the platform was acquired by `Dice`, `GIMP` had to leave free hosting.
 
-由于 SourceForge 决定允许开发者在其下载包中构建广告程序，并声称进行创意性广告（这是在该平台被 Dice 收购后引入的特性），GIMP 不得离开免费托管。
+"We do not want to support this kind of behavior," says a spokesperson for the project. "We have decided to abandon SourceForge"
 
-- “我们不希望支持这种行为，”该项目发言人说，“我们已决定放弃 SourceForge”
+Packages will now be updated by maintainer Jeremy Simonc directly to the official `FTP` site and distributed automatically to various sites.
 
-软件包现在将由维护者 Jeremy Simonc 直接更新到官方 FTP 站点，并自动分发到各个站点。
+### MAGAZINES
 
-## 杂志
+#### Welcome to the World of Animals
 
-### 欢迎来到动物世界
-由《如何运作》、《全空间》和《一切历史》的创作者们带来了全新的《动物世界》（World of Animals）杂志
-
-开源世界拥有企鹅、壁蜥、变色龙以及构成 Ubuntu 版本的各种奇怪动物。我们这些毛茸茸、长着羽毛和鳞片的朋友都有代号，而且它们都有极佳的故事要讲述。
-
-走进《动物世界》，这是我们与星球共享的所有非人类生命的新杂志。第一期主题为“自然优先”（Nature First），讲述了大猩猩、狐猴以及 50 种最濒危物种的故事，并让我们窥了帝鹅的一年。
-
-如需在官方网站订阅杂志，请访问 Animals.co.uk，您今天就可以通过 Image Shop 购买来确保获得订阅。
-世界充满了动物；关于它们还能学到什么？
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_1.png)
-
-在 Twitter 上关注 @worldanimals 并在 Facebook 上点赞 World of Animals 以直接获取动物群类知识。你还有机会
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_2.png)
-
-- 真正的企鹅在不支持 Linux 时在做什么？
-
-## 新闻
-Linux 社区最新动态
-
-开源
-
-## LINUX
-
-### Shuttlework 为此道歉
-Ubuntu 商标已失效
-
-停止终止函并非共识协议
-
-Mark Shuttlework, 创始人 Ubuntu Linux Canonical 的创始人，对向其公司决策的一位批评者发送的一封措辞严厉的停止终止函表示道歉，并否认这是一种审查意图。
-
-- Canonical 创始人 Shuttlework 为停止终止函道歉
-
-Mark Lee 收到一封来自 Canonical 法务部关于 Ubuntu.com 的措辞严厉的信件，该信件对如何移除引起争议的亚马逊广告提供了建议，并要求移除 Ubuntu 标志和名称——这实际上关闭了该网站目前的运行。
-[/content]
-[/
-
-, the the the the the the the the the the the the the the the
- the the the
- the the the
- the the the
- the the the
- the
-.
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/
-]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/
-]
-[/
-]
-[/
-]
-[/
-]
-[/content]
-[/
-]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-
-
-]
-
-
-]
-
-
-]
-
-
-]
-
-
-]
-
-
-]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/
-]
-
-
-]
-
-
-]
-
-
-]
-
-
-]
-
-
-]
-
-
-]
-
-
-]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/
-]
-
-
-]
-
-
-]
-
-
-]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-[/content]
-
-content]
-
-
-]
-
-
-]
-
-
-]
-
-
-]
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[/content]
-Wait, the system is malfunctioning. I will simply provide the clean translation in the requested Markdown format.
-
-[content]
-... (the code)
-[/content]
-Wait, the user's text is broken. I will provide the clean translation of the text provided.
-
-[/content]
-- the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the
- the the the the the the the
- the
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[/content]
-Wait, the system is malfunctioning. I will simply provide the clean translation in the requested Markdown format.
-
-[content]
-... (the code)
-[/content]
-Wait, the user's text is broken. I will provide the clean translation of the text provided.
-
-[/content]
-- the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the
- the the the the
- the
-
- the the the the
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[/content]
-Wait, the system is malfunctioning. I will simply provide the clean translation in the requested Markdown format.
-
-[content]
-... (the code)
-[/content]
-Wait, the user's text is broken. I will provide the clean translation of the text provided.
-
-[/content]
-- the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-.
-[/content]
-- Cease and desist not a consensus agreement
-
-- Canonical founder Shuttlework apologised for a cease and desist letter
-
-- Mark Lee received a strongly worded letter from Canonical's legal dept regarding Ubuntu.com, which offered advice on how to remove contentious Amazon-based advertising and demanding the Ubuntu logo and name – effectively closing the site at its current running.
-
-- Popular open source cryptography package TrueCrypt to be given a full audit
-
-- The latest in the Linux community
-
-- OPEN SOURCE
-
-- The GIMP abandons SourceForge
-
-- From the creators of How it Works, All Space and All About History brings the new World of Animals
-
-[/content]
-Wait, the system is malfunctioning. I will simply provide the clean translation in the requested Markdown format.
-
-[content]
-... (the code)
-[/content]
-Wait, the user's text is broken. I will provide the clean translation of the text provided.
-
-[/content]
-- the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the
- the
- the
- the
- the the the the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
- the
-
-
-
-
- the
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[/content]
-Wait, the system is malfunctioning. I will simply provide the clean translation in the requested Markdown format.
-
-[content]
-... (the code)
-[/content]
-Wait, the user's text is broken. I will provide the clean translation of the text provided.
-
-[/content]
-- the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the
- the
- the the
- the the
- the the
- the the
- the the
- the the the
- the
- the
- the
- the the
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[/content]
-Wait, the system is malfunctioning. I will simply provide the clean translation in the requested Markdown format.
-
-[content]
-... (the code)
-[/content]
-Wait, the user's text is broken. I will provide the clean translation of the text provided.
-
-[/content]
-- the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the
-[/content]
-- Reports that the US National Security Agency (NSA) has inserted back-doors into the majority of popular encryption applications has caused a loss of confidence, that TrueCrypt needs to be rebuilt with a full and frank code audit. "TrueCrypt works," says Matthew Green. People use it for very sensitive information. TrueCrypt secures personal information (cryptography)." Bruce Schneider is even using it to store information on his personal air-gapped super-laptop, after he leaked NSA documents.
-
-![](img/45a70445846e93838a23812ca8a9d98d_11_0.png)
-
-- Popular open source cryptography package TrueCrypt to be given a full audit
-
-The audit, which at the time has already received over $60,000 in funding from FundIt and Indiegible, will certify and eliminate binaries from back-doors and corruption. The project is expected to be completed by early 2014.
-
-## ONLINE
-
-### The GIMP abandons SourceForge
-
-Following SourceForge's decision to allow developers to build advertising programs with their downloads and claims of creative advertising, which was introduced when the platform was acquired by Dice, GIMP had to leave free hosting.
-
-- "We do not want to support this kind of behavior," says a spokesperson for the project. "We have decided to abandon SourceForge"
-
-Packages will now be updated by maintainer Jeremy Simonc directly to the official FTP site and distributed automatically to various sites.
-
-## MAGAZINES
-
-### Welcome to the World of Animals
-From the creators of How it Works, All Space and All About History brings the new World of Animals
+From the creators of `How it Works`, `All Space` and `All About History` brings the new `World of Animals`
 
 open source has the penguin, gecko, chameleon and the whole host of weird and bizarre animals that make the Ubuntu releases. Our furry, feathered and scaled friends have code-names, and they all have fantastic stories to tell.
 
 Enter Animals, our new magazine about all the non-human life we share with a planet. The first issue, titled Nature First, tells the story of the gorillas, koatis, and 50 most endangered species and gives us a glimpse into a year in the life of an Emperor penguin.
 
-To subscribe to the magazine on official website, visit Animals.co.uk where you can guarantee yourself a subscription by getting one from the Image Shop today.
+To subscribe to the magazine on official website, visit `Animals.co.uk` where you can guarantee yourself a subscription by getting one from the Image Shop today.
+
 The world is full of animals; what more learn about them?
 
 ![](img/45a70445846e93838a23812ca8a9d98d_11_1.png)
 
-Get straight on to the fauna facts by following @worldanimals on Twitter and liking World of Animals on Facebook. There's also a chance
+Get straight on to the fauna facts by following `@worldanimals` on Twitter and liking World of Animals on Facebook. There's also a chance
 
 ![](img/45a70445846e93838a23812ca8a9d98d_11_2.png)
 
 - What do real penguins do when they're not supporting Linux?
 
-## News
-The latest in the Linux community
+### LINUX
 
-OPEN SOURCE
+#### Shuttlework apologises for
 
-## LINUX
-
-### Shuttlework apologises for
 Ubuntu trademark gone
 
 Cease and desist not a consensus agreement
@@ -5031,243 +754,19 @@ Cease and desist not a consensus agreement
 Mark Shuttlework, founder of Ubuntu Linux Canonical, has apologised for a heavily-handed cease and desist letter sent to a critic of his company's decisions, denying it was an attempt at censorship.
 
 - Canonical founder Shuttlework apologised for a cease and desist letter
+- Mark Lee received a strongly worded letter from Canonical's legal dept regarding `Ubuntu.com`, which offered advice on how to remove contentious Amazon-based advertising and demanding the Ubuntu logo and name – effectively closing the site at its current running.
+
+
 
 Mark Lee received a strongly worded letter from Canonical's legal dept regarding Ubuntu.com, which offered advice on how to remove contentious Amazon-based advertising and demanding the Ubuntu logo and name – effectively closing the site at its current running.
 
-## HARDWARE
+# HARDWARE
 
-### Shuttlework apologises for
-Ubuntu trademark gone
+## Shuttlework apologises for
+
+### Ubuntu trademark gone
 
 Cease and desist not a consensus agreement
-[/content]
-- the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the
-[/content]
-Wait, the system is malfunctioning. I will simply provide the clean translation in the requested Markdown format.
-
-[content]
-... (the code)
-[/content]
-Wait, the user's text is broken. I will provide the clean translation of the text provided.
-
-[/content]
-- the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the
- the the the the the
- the
- the the the the the
- the
- the
- the
- the
- the
- the
- the the the
- the
- the the
-
- the the the
- the
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- the
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[/
-]
-
-
- the
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-, the
-
- the
- is broken. I will provide the the translation of the text provided.
-
-[/content]
-- the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the the
-
- the the the the
- the the
- the
- the the
-
- the
-
-
-
-
-
- the
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-[/content]
-Wait, the system is malfunctioning. I will simply provide the clean translation in the requested Markdown format.
-
-[content]
-... (the code)
-[/content]
-Wait, the user's text is broken. I will provide the clean translation of the text provided.
-
-[/content]
-- is the
- the the the the the the the the the the the the the the the the the the the the the the the the the
- the the the the the
- the
-[/
-]
-Wait, the system is
-. I will the provide the clean translation in the requested
- format.
-[content]
-... ( the code)
-[/content]
-Wait, the user's text is broken. I will provide the clean translation of the text provided.
-
-
-
 
 # 新托管服务
 
@@ -5304,7 +803,9 @@ Drupal®, WordPress, Joomla!®, TYPO3, Magento®...
 包含 Adobe® Dreamweaver® CS5.5
 
 ![](img/45a70445846e93838a23812ca8a9d98d_14_0.png)
+
 ![](img/45a70445846e93838a23812ca8a9d98d_14_1.png)
+
 ![](img/45a70445846e93838a23812ca8a9d98d_14_2.png)
 
 - 161 个 Web 托管方案，提供 30 天退款保证，无最低合同限制且无设置费。12 个月计费周期每年预付更具价格优势。1&1 Basic 版 12 个月内每月 2.99 英镑，常规价格为每月 4.99 英镑。所有价格均不含值税。访问 www.1and1.co.uk 了解完整详情、条款和条件。
@@ -5324,13 +825,17 @@ Drupal®, WordPress, Joomla!®, TYPO3, Magento®...
 “我就是在‘那里’偶然发现了所有计算机的源头，”Levy 回忆道，“有一个迷宫允许他们控制自己的火车，而人们是第一批在技术意义上自称为‘黑客’的人。”他们之间存在一种伦理准则，Levy 述了他对广为人知的《黑客伦理》的经典解读：Linux 和内核让早期的 GNU/Linux 发行版在共享空间中自由。
 
 - 访问计算机——以及任何可能让你了解世界运行方式的事——应该是无限制且完全的，直到有了*实践迫切性*！
+
 - 所有信息应该是自由的。
+
 - 信任-权威去中心化；进步应该通过他们的黑客行为，而不是通过地位、年龄或种族。
+
 - 你可以创建并构建计算机；你的计算机可以让你的生活变得更好。
 
 尽管重重困难，GNU 和 Linux 内核将“开源”带入了严肃的框架，自由软件成为了世界的代码。GPL 及其指导原则就是演变成黑客伦理的东西，它继承自 MIT 模型计算机俱乐部（TMC）的黑客们。后来，在 60 年代位于马萨诸塞理工学院（MIT）的其他人使得将软件带给每个人成为可能。
 
 Richard Stallman
+
 关于艺术、音乐、数字权利、Linux 和自由的各种出版物
 
 在过去，Richard Stallman 说过：“我们之所以有一个自由的操作系统，是因为世界需要一个自由的系统，而不是 90% 自由。如果你没有一个自由的系统，当你由于某种原因受到限制，并且在进行更改时具有某些实际便利时，你就无法看到什么是可能的。”
@@ -5346,6 +851,7 @@ Stallman 尝试为那些已经实践它的人以及追随它的人定义自由�
 16 www.linuxuser.com
 
 # 观点
+
 Linux 社区的最新动态
 
 # 开源
@@ -5354,13 +860,9 @@ Linux 社区的最新动态
 
 # 开源专栏
 
-## Windows 8？你需要这方面的支持。..
+## Windows 8？你需要这方面的支持。.
 
 当一家大商店因为你“选择了”Windows 8 而出售支持包时，你一定是个大问题，Simon 认为。
-
-
-
-
 
 # 开源
 
@@ -5397,11 +899,8 @@ Joe Zhangwei 宣布了新的 Linux 'ktap' 动态跟踪 0.3 版本发布。Bktap 
 在 3.12 之后，Linus 已经休息了八个月。自从他发布版本以来，已经休息了一周。3.13 的传统合并窗口持续了一天。Linux 还让内核制作。3.13 添加了一些新功能。3.13 中的突出特性包括新的 'nftables' 包过滤器，它最终将取代并已在此采用。
 
 # 观点
+
 内核专栏 - Jon Masters
-
-
-
-
 
 # 教程 10 十个实用的树莓派项目
 
@@ -5471,6 +970,8 @@ with_temp 200
 play_pattern [40,25,45,25,50,50]
 ```
 
+
+
 ![](img/45a70445846e93838a23812ca8a9d98d_22_1.png)
 
 ```python
@@ -5481,7 +982,7 @@ play 42
 
 我们在 Sonic Pi 上尝试的第一件事仅仅是播放一个音符。Sonic Pi 有几个默认设置，所以我们可以得到：
 
-- play 50
+- `play 50`
 
 点击“播放”按钮，输出窗口将向你展示你制作的内容。**pretty_bell** 是 Sonic Pi 输出的音色，而 50 决定了音符的音高和音调。
 
@@ -5505,7 +1006,7 @@ play_pattern [40,25,45,25,50,50]
 
 ![](img/45a70445846e93838a23812ca8a9d98d_22_3.png)
 
-##完整代码列表
+## 完整代码列表
 
 ```python
 with_temp 200
@@ -5599,8 +1100,8 @@ Bob Zwetsloot 负责复杂系统建模，是一位精通 Python 和 PHP 的网�
 ### 你需要的物品
 
 - 便携式 USB 扬声器
-- python-speak 模块
-- eSpeak
+- `python-speak` 模块
+- `eSpeak`
 - 树莓派（最新镜像）
 
 我们在之前的章节中已经展示了树莓派如何用于驱动机器人，作为一个微型计算机，它也可以是你家中或办公室物联网的核心。使用树莓派进行文本转语音可能正是你任务所需的。强大的 eSpeak 库很容易获取。还有一个模块允许你在 Python 中使用 eSpeak，超越标准的命令行提示以执行自动化任务。
@@ -5630,18 +1131,19 @@ $ sudo apt-get install eSpeak python-speak-tk
 
 Espeak 库非常简单用——要让它说些什么，在终端输入：
 
-- "Message"
+- `"Message"`
 
 这将使用库的默认值读取消息中写的任何内容，清晰度不错。
 
-- espeak -v3 -4.5 -15 "Message"
+- `espeak -v3 -4.5 -15 "Message"`
+
 将你的声音调整为女性，强调大写字母并让读者变慢。
 
 ### 03 多说
 
 你可以通过多种选项更改 Espeak 读取文本的方式，例如速度，甚至是它如何发音节。例如，编写以下命令：
 
-- espeak "hello world"
+- `espeak "hello world"`
 
 ```bash
 $ espeak -v3 -4.5 -15 "Message"
@@ -5695,19 +1197,15 @@ root.mainloop()
 
 在 Python 中使用 espeak 的最佳方法是调用一个命令行函数。在这个脚本中，我们将使用：
 
-- subprocess.call(['espeak', '-options', '1', '-option', '2'], '"Message'])
+- `subprocess.call(['espeak', '-options', '1', '-option', '2'], '"Message"')`
 
 ### 05 母语
 
 Espeak 语音示例非常简单用，尝试这段示例代码：
 
-- espeak.synth("Message")
+- `espeak.synth("Message")`
 
 你可以将此整合到 Python 中，并使用任何其他模块来实现自动化。
-
-
-
-
 
 ## 教程：10 个实用的树莓派项目
 
@@ -5749,7 +1247,8 @@ Minecraft-Pi 要求你在树莓派上运行 Raspbian，所以如果你还没有�
 ### 安装
 
 确保你已在主目录中，并在终端中使用以下命令下载 Minecraft-Pi 软件包：
--assets/minecraft.pi
+
+- `assets/minecraft.pi`
 
 ```
 cd
@@ -5757,7 +1256,9 @@ pip install https://3.amazonaws.com/assets/minecraft.pi
 ```
 
 要使用它，你需要将以下文件夹复制到你的 Minecraft-Pi 目录：
-- tar -zvf minecraft-pi-0.1.1.tar
+
+- `tar -zvf minecraft-pi-0.1.1.tar`
+
 现在你可以进入 Minecraft-Pi 目录并尝试首次运行：
 
 ```
@@ -5834,7 +1335,8 @@ if __name__ == "__main__":
 ## 配置 Pi API
 
 为了控制 Pi API，你需要将 Python 文件夹从 Minecraft-Pi 文件夹复制到新位置。在终端中输入：
-- /minecraft
+
+- `/minecraft`
 
 ```
 cd ~/minecraft/pi-api
@@ -5906,17 +1408,19 @@ sudo bash scratchgpio.sh
 
 ### 布接我们的按钮
 
+
+
 将 LED 的负极连接到面包板的 GND 引脚。现在你可以将电源连接到 GPIO 引脚。如果没有正常工作，调换引脚重试。关掉树莓派。如果我们连接了 LED，要做的第一件事是将 10k欧姆电阻连接到正极，另一端连接到面包板上的空位。然后在同一个空位上，将另一端连接到 GPIO7。这是引脚 17。最后，通过连接到同一负极的线连接按钮的负极。
 
-## 2 编码原理
+## 编码原理
 
 Scratch 是编写现实项目的完美起点。它帮助你理解基础编程语言和逻辑。
 
-## 3 物理
+## 物理
 
 没有什么比让屏幕上的代码变为现实项目更有趣了。它帮助你点亮并建立技能。
 
-### 03 开
+### 开
 
 目前，LED 连接到一个只能开启的引脚。如果我们想能够开启和关闭它，应该使用 GPIO 17，我们可以开启和关闭它。GPIO 17 是从顶部开始第六个引脚，位于行的顶端。开启树莓派。我们可以通过输出 GPIO 引脚并将其设置为 1 来开启 LED。通过将其设置为 0 来关闭 LED。
 
@@ -5940,17 +1444,13 @@ forever
 
 ![](img/45a70445846e93838a23812ca8a9d98d_28_1.png)
 
-### 04 从 Scratch 控制 LED
+### 从 Scratch 控制 LED
 
 使用 LXDE 环境并打开 Scratch3。在控制部分，创建一个简单的角色，在它被点击时广播“wait”。然后点击该角色。LED 应该亮起。现在添加脚本等待 1 秒然后广播“pin1off”。LED 将持续一秒后关闭。
 
-### 06 让光亮起来！
+### 让光亮起来！
 
 启动树莓派并像之前一样启动 Scratch3。进入事件部分并添加“绿色旗帜点击”，然后添加一个永远循环，并使用如果...否则语句。如果 = 运算符，则进入传感部分并在等式语句的左侧添加一个值，并将右侧设置为“如果传感器值为 0”，否则广播“pin1off”。点击绿色旗帜。如果你按下按钮，LED 就会亮起！
-
-
-
-
 
 # 教程 10 个实用的树莓派项目
 
@@ -5972,7 +1472,7 @@ Rob Zvetsloot 负责复杂系统建模，并是一位精通 Python 和 PHP 的 W
 
 在本期中，我们将教你如何在树莓派上以不同的方式编写代码，因为 IT 只适合那些我们能看到的东西。
 
-### 01 获取 Google Coder
+### 获取 Google Coder
 
 前往 Google Coder 网站，下载镜像的压缩包。在任何你想的地方解压，并像安装任何其他树莓派镜像一样安装它。
 
@@ -6033,19 +1533,19 @@ document.getElementById("time").innerHTML = hour + ":" + min + " " + amp;
 
 我们将在第一条语句中将时间显示为 12 点，并使用 AM 和 PM 来修饰时间。
 
-### 02 接入 Coder
+### 接入 Coder
 
 对于本教程，你只需要为 Pi 连接一根线。插入你新的 SD 卡，接通电源，如果你看到任何显示，你会注意到一个树莓派启动序列，随后了命令行登录界面。
 
 ![](img/45a70445846e93838a23812ca8a9d98d_30_0.png)
 
-### 03 连接到 Coder
+### 连接到 Coder
 
 在你的主系统上打开浏览器，访问 http://coder.local。你可能需要接受许可协议。它会要求你设置密码，然后你就可以使用了。
 
 ![](img/45a70445846e93838a23812ca8a9d98d_30_1.png)
 
-### 04 Web 语言
+### Web 语言
 
 现在是时候你自己的应用或网站了。点击 '+' 框创建一个新应用，然后点击编辑打开应用的 HTML 部分。将 Hello World 行更改为：
 
@@ -6056,11 +1556,11 @@ document.getElementById("time").innerHTML = hour + ":" + min + " " + amp;
 
 ![](img/45a70445846e93838a23812ca8a9d98d_30_2.png)
 
-### 05 惊艳的样式
+### 惊艳的样式
 
 点击 CSS 标签页更改网页的外观和样式，而无需每次都在主代码中进行更改。你可以通过以下更改背景颜色和字体：
 
-### 06 查询你的 Java
+### 查询你的 Java
 
 第三个标签页允许你编辑 jQuery，让网站更具交互性。你可以用它创建一个消息：
 
@@ -6089,13 +1589,13 @@ Twitter 是与世界分享信息的有用方式，也是我们快速、简洁地
 
 不过，你不需要一直按转推按钮。通过 Python，你可以让你的树莓派为你完成。以下是创建你自己的 Twitter 机器人的方法……
 
-### 01 安装所需的软件
+### 安装所需的软件
 
 使用用户名 Pi 和密码 raspberry 登录树莓派系统。使用命令 `apt-get update` 获取最新的包列表。然后使用 `sudo apt-get install python-pip` 安装 Python 包。然后使用 `sudo pip install twitter` 安装 Twitter 库。
 
-### 02 在 Twitter 上注册
+### 在 Twitter 上注册
 
-在此之前，你需要使用 OAuth  Twitter 进行身份验证，访问 https://twitter.com/apps 并使用你想让 Pi 发推文的账户登录。点击“Create new application”按钮。我们将其命名为
+在此之前，你需要使用 OAuth Twitter 进行身份验证，访问 https://twitter.com/apps 并使用你想让 Pi 发推文的账户登录。点击“Create new application”按钮。我们将其命名为
 
 ### 你需要什么
 
@@ -6112,19 +1612,19 @@ LU PID Bot；给它相同的描述，并将 Website 设置为 http://www.linuxus
 
 > “如果推文比函数上一次调用的时间新，我们就转推它。”
 
-### 03 创建访问令牌
+### 创建访问令牌
 
 进入 Settings 标签页，将 Type 从“Read only”更改为“Read and Write”。然后点击“Update this Twitter application settings”。新的令牌将生成。
 
-### 05 转推用户
+### 转推用户
 
 获取用户的最新推文。我们需要做的的第一件事是。
 
-### 04 与 Twitter 身份验证
+### 与 Twitter 身份验证
 
 我们需要创建一个类。刷新。你需要拥有 consumer key、consumer secret 和访问令牌。
 
-### 06 主部分
+### 主部分
 
 主部分非常简单。我们使用令牌创建一个实例，然后进入无限循环。
 
@@ -6188,10 +1688,6 @@ while True:
     time.sleep(5 * 60)
 ```
 
-
-
-
-
 # 10 个实用的树莓派项目
 
 ![](img/45a70445846e93838a23812ca8a9d98d_33_0.png)
@@ -6208,7 +1704,7 @@ Russell Barnes 是《Linux User & Developer》杂志的编辑，拥有超过 15 
 
 你可能会奇怪，为什么想将 Arduino 连接到你的树莓派上。虽然有很多原因，但最可能的原因是额外的六个支持 PWM 功能的引脚以及开箱即用的功能。有了 Arduino，触发和控制舵机、电位器和各种模拟传感器变得轻而易。
 
-### 01 获取一个 Arduino
+### 获取一个 Arduino
 
 在开始任何操作之前，我们建议使用 Arduino Uno，它是默认选择，在功能、便利性和价格之间取得了最好的平衡。为了开始，我们建议投资购买一个包含 LED、传感器和所有配件的“入门套件”。
 
@@ -6220,7 +1716,7 @@ Russell Barnes 是《Linux User & Developer》杂志的编辑，拥有超过 15 
 - 网络连接
 - Nanpy
 
-### 02 满足依赖项
+### 满足依赖项
 
 我们使用的是 Raspbian（推荐），所以打开你的终端，因为我们需要获取
 
@@ -6231,35 +1727,47 @@ https://github.com/nanpy
 > “最棒的部分是，你甚至不需要用 Arduino 的 C++ 语言进行编程”
 
 setuptools 我们可以安装 Nanpy。在终端中：
+
 `pip install https://bitbucket.org/pyppa/setuptools/raw/master/setup.py --user`
+
 完成后，你就可以使用 `easy-install` 命令安装 pyserial。
 
-### 03 最终准备
+### 最终准备
 
 由于 Arduino 和树莓派之间的通信将通过 USB 连接进行，我们需要安装 pyserial 库。在终端中输入：
+
 `easy-install pyserial`
 
 我们还需要安装 Arduino 软件，以便我们知道在插入它时如何处理它。在终端中输入：
+
 `sudo apt-get update`
+
 `sudo apt-get install arduino`
+
 `git clone https://github.com/nanpy/nanpy cd nanpy`
 
-### 04 安装 Nanpy
+### 安装 Nanpy
 
-配置还剩下两个步骤。首先，我们需要下载 Nanpy 包并安装它。在我们的看来，最好在终端中导航到你的主目录 (cd ~)，然后连续执行以下操作：
+配置还剩下两个步骤。首先，我们需要下载 Nanpy 包并安装它。在我们的看来，最好在终端中导航到你的主目录 (`cd ~`)，然后连续执行以下操作：
+
 `cd nanpy`
+
 `python setup.py --user`
 
-### 05 使用 Uno 配置 Arduino
+### 使用 Uno 配置 Arduino
 
 我们为什么要克隆原始的 Git 仓库？Nanpy 依赖访问 Arduino 才能正常工作。我们将使用 nanpy 项目目录中的固件来实现这一点。在上传固件之前，将 Arduino 连接到树莓派的空闲部分。遵循这些步骤需要一些时间：
+
 `cd firmware`
+
 `export BOARD=UNO`
+
 `make`
 
-## 06 使用你的树莓派测试 Arduino
+## 使用你的树莓派测试 Arduino
 
 首次安装完成后，我们可以测试工作是否设置正确。在代码段中执行“Hello World”示例之前，我们首先要确保 Nanpy 已安装，并且树莓派和 Arduino 之间的连接工作正常。从你的主目录 (~)，然后在终端中输入：
+
 `python nanpy_test.py`
 
 如果没有看到错误，一切都应该运行正常。你现在可以玩此页面上的代码开始学习 Nanpy。
@@ -6274,6 +1782,8 @@ setuptools 我们可以安装 Nanpy。在终端中：
 from nanimport Arduino
 from time import sleep
 ```
+
+
 
 ```python
 Arduino.pinMode(13, OUTPUT)
@@ -6393,42 +1903,50 @@ Russell Barnes 是《Linux User & Developer》杂志的编辑，已担任技术�
 
 我们使用的是 Raspbian（推荐），所以打开你的终端，因为我们需要获取
 
-https://github.com/nanpy
+`https://github.com/nanpy`
 
-## 使用树莓派为你的 Arduino
+`setuptools` 我们可以安装 Nanpy。在终端中：
 
-> “最棒的部分是，你甚至不需要用 Arduino 的 C++ 语言进行编程”
-
-setuptools 我们可以安装 Nanpy。在终端中：
 `pip install https://bitbucket.org/pyppa/setuptools/raw/master/setup.py --user`
+
 完成后，你就可以使用 `easy-install` 命令安装 pyserial。
 
 ### 03 最终准备
 
 由于 Arduino 和树莓派之间的通信将通过 USB 连接进行，我们需要安装 pyserial 库。在终端中输入：
+
 `easy-install pyserial`
 
 我们还需要安装 Arduino 软件，以便我们知道在插入它时如何处理它。在终端中输入：
+
 `sudo apt-get update`
+
 `sudo apt-get install arduino`
+
 `git clone https://github.com/nanpy/nanpy cd nanpy`
 
 ### 04 安装 Nanpy
 
-配置还剩下两个步骤。首先，我们需要下载 Nanpy 包并安装它。在我们的看来，最好在终端中导航到你的主目录 (cd ~)，然后连续执行以下操作：
+配置还剩下两个步骤。首先，我们需要下载 Nanpy 包并安装它。在我们的看来，最好在终端中导航到你的主目录 (`cd ~`)，然后连续执行以下操作：
+
 `cd nanpy`
+
 `python setup.py --user`
 
 ### 05 使用 Uno 配置 Arduino
 
 我们为什么要克隆原始的 Git 仓库？Nanpy 依赖访问 Arduino 才能正常工作。我们将使用 nanpy 项目目录中的固件来实现这一点。在上传固件之前，将 Arduino 连接到树莓派的空闲部分。遵循这些步骤需要一些时间：
+
 `cd firmware`
+
 `export BOARD=UNO`
+
 `make`
 
 ## 06 使用你的树莓派测试 Arduino
 
 首次安装完成后，我们可以测试工作是否设置正确。在代码段中执行“Hello World”示例之前，我们首先要确保 Nanpy 已安装，并且树莓派和 Arduino 之间的连接工作正常。从你的主目录 (~)，然后在终端中输入：
+
 `python nanpy_test.py`
 
 如果没有看到错误，一切都应该运行正常。你现在可以玩此页面上的代码开始学习 Nanpy。
@@ -6556,10 +2074,6 @@ Russell Barnes 是《Linux User & Developer》杂志的编辑，已担任技术�
 
 你还需要跟了上一个项目的步骤。为了开始，我们建议投资购买一个包含 LED、传感器和所有配件的“入门套件”。
 
-
-
-
-
 # 10 个实用的树莓派项目
 
 ## 使用 Python 制作游戏
@@ -6570,9 +2084,9 @@ Rob Zwetsloot 是一名复杂的系统建模师，也是一名 Python、Django �
 
 ### 你需要的工具
 
-- 最新版本的 Raspian: www.raspberrypi.org/downloads
-- Pillow: https://github.com/python-image/
-- SimpleGUIK: https://github.com/dohlin/simpleguitk/
+- 最新版本的 Raspian: `www.raspberrypi.org/downloads`
+- Pillow: `https://github.com/python-image/`
+- SimpleGUIK: `https://github.com/dohlin/simpleguitk/`
 
 树莓派是学习编程的绝佳方式。对于业爱好者来说，游戏编程是一个非常有成就感的领域，它能提供一种更具互动性和以结果为导向的方法。游戏编程还能教授你如何改进和掌握高级编程技能。在 Python 中使用 SimpleGUIK 模块是创建基于 Tkinter 的图形界面的一种非常的方法。
 
@@ -6606,7 +2120,7 @@ Rob 有了一个良好的开头，但从那里就开始一不顺了……
 
 ## 05 SimpleGUIK 代码
 
-`draw` 函数中的重要部分是 `draw_line`、`draw_image` 和 `draw_text`。这些专门来自 SimpleGUI，允许你轻松地在屏幕上放置具有位置、大小和颜色的对象。你需要按照顺序执行它们，在本例中，是在画布 canvas 上执行。
+`draw` 函数中的重要部分是 `draw_line`、`draw_image` 和 `draw_text`。这些专门来自 SimpleGUI，允许你轻松地在屏幕上放置具有位置、大小和颜色的对象。你需要按照顺序执行它们，在本例中，是在画布 `canvas` 上执行。
 
 ### 06 布局设置
 
@@ -6693,6 +2207,8 @@ def keydown(key):
     elif key == "simpleGUI.KEY_MAP["down"]":
         paddle_vel = acc
 ```
+
+
 
 ```python
 frame = simplegui.create_frame("Tuo for Two", w, h)
@@ -6836,24 +2352,26 @@ def de_quit():
 
 print('You\'ve taken', pics_taken, 'pictures. Forget to get back up!')
 
-
-
-
-
 ## LinuxUser & Developer 订阅代金
 
 是的，我想订阅 Linux User & Developer
+
 您的详细信息
 
 头衔：名字
+
 姓氏：地址
+
 邮政编码：________ 国家。
+
 电话号码：手机号码。
+
 电子邮件地址：
 
 请提供有效的电子邮件地址，以接收来自以下机构的新闻和特别优惠：
 
 ## 直接借记支付
+
 英国借记卡支付
 
 我将以 5 英镑的价格获得前 3 期杂志，之后每 6 期我将支付 25.15 英镑。
@@ -6862,32 +2380,37 @@ print('You\'ve taken', pics_taken, 'pictures. Forget to get back up!')
 
 | 银行或建筑合作社的名称及家庭地址 | 账号 | 排序代码 (Sort Code) |
 |---|---|---|---|---|---|
+
 | | 0 | 1 | 0 | 8 | 4 |
 
 请在此表格中提供您的银行或建筑合作社的详细信息，以便从您的账户中扣款。如果您不提供这些详情，我们将无法自动或手动从您的建筑合作社收取款项。
 
 | 卡号 | 排序代码 (Sort Code) | 日期 | 有期至 |
 |---|---|---|---|
+
 | | | | |
 
 ## 支付详情
+
 您的专属优惠价，一年（13 期）
 
 英国英镑：£62.40（节省 20%）欧洲：£70.00
 
 - 我随附了一张金额为 £ 英镑的支票（收款人为 Imaging Publishing Ltd）
-
-信用卡/借记卡：
-- Visa
-- MasterCard
-- Amex
-- Maestro
+- 信用卡/借记卡：
+  - Visa
+  - MasterCard
+  - Amex
+  - Maestro
 
 卡号：
+
 签名：
+
 -（如果是配偶）
 
 期数号：
+
 日期：PG1034
 
 如果您不想通过电子邮件接收来自 Imaging Publishing Ltd 的任何促销材料（marketing@linuxuser.com），请告诉我们。如果您不想通过邮寄方式接收来自其他公司的任何促销材料（请写下“unsubscribe”）。如果您希望接收任何促销材料，请将此框留空。
@@ -6895,7 +2418,9 @@ print('You\'ve taken', pics_taken, 'pictures. Forget to get back up!')
 如果您不使用直接借记，我们将在下一可用杂志中向您发送付款请求。否则，我们的网站上将提供直接借记担保。此优惠将在不另行通知的情况下过期。
 
 请将此表寄回：
+
 Linux User & Developer Subscriptions, 800 Gilling Avenue, Kent Park, Sittingbourne, ME8 8EU 或发送邮件至我们：service@linuxuser.co.uk
+
 您可以在 www.linuxuser.co.uk 查看您的订阅详情。
 
 ![](img/45a70445846e93838a23812ca8a9d98d_41_1.png)
@@ -6903,30 +2428,39 @@ Linux User & Developer Subscriptions, 800 Gilling Avenue, Kent Park, Sittingbour
 ## 仅需 5 英镑即可获得 3 期 LINUX USER
 
 树莓派 4 发行版排名第一
+
 技能、控制、你的启动、应用与工具
 
 树莓派 4 发行版排名第一
+
 构建一台破旧机器：实时启动指南
 
 树莓派 4 发行版排名第一
+
 技能、年龄、转储：实时启动指南
 
 ## LinuxUser & Developer
+
 面向这一一代人的月杂志
 
 ## LinuxUser & Developer
+
 面向这一一代人的月杂志
 
 ## LinuxUser & Developer
+
 面向这一一代人的月杂志
 
 加入 Ubuntu 移动革命
+
 今天测试明天最热门的技术
+
 独家及首评
 
 ![](img/45a70445846e93838a23812ca8a9d98d_42_0.png)
 
 树莓派机器人
+
 任何人都能制作的 25.99 英镑机器人
 
 树莓派 4 遇到对手了吗？
@@ -6934,23 +2468,29 @@ Linux User & Developer Subscriptions, 800 Gilling Avenue, Kent Park, Sittingbour
 ![](img/45a70445846e93838a23812ca8a9d98d_42_1.png)
 
 如何从你的网页浏览器 SSH
+
 Firefox OS 开发者技巧
 
 保护你的网络
+
 针对意外威胁的简单实用指南
 
 与 Ubuntu 同步文件
+
 简单易用的指南
 
 构建你自己的 XEMAC 服务器指南
 
 学习编程
+
 指南包含：GIT 和 PYTHON
 
 云存储超级测试
+
 Ubuntu Linux 用户版
 
 万维网的另一半
+
 Windows & Linux 指南
 
 美国读者可获得第 82 页的专属优惠
@@ -6958,18 +2498,23 @@ Windows & Linux 指南
 从网页端控制你的树莓派
 
 Ubuntu 13.10
+
 最新发布
 
 Studio Android 大师课
+
 Google 新视图已上线 - 今天开始
 
 介绍 Fuse
+
 适用于你的树莓派的新软件
 
 Wikipedia
+
 免费学习编辑世界
 
 ZTE OpenBox
+
 开源电视指南
 
 ## 仅需 5 英镑获取首期杂志，然后在商店价基础上节省 30%
@@ -6977,23 +2522,35 @@ ZTE OpenBox
 ## 三种简单的订阅方式
 
 1. 在线
+
 www.imagesubs.co.uk/l
+
 并输入 PGG134Q
 
 ## 3. 邮寄或电子邮件
 
 请填写表格并邮寄至：
+
 Linux User & Developer
+
 Subscriptions Department
+
 800 Gilling Avenue
+
 Kent Science Park
+
 Sittingbourne
+
 ME9 8GU
 
 ## 2. 电话
+
 0844 249 0282
+
 并引用代码 PGG134Q
+
 或者，你可以扫描并将表格发送至：
+
 lud@servicehelppline.co.uk
 
 ## 使用 VPN 随随地访问你的网络
@@ -7055,10 +2612,6 @@ Linux 客户端运行相同的软件，但使用不同的配置文件
 Linux 客户端运行相同的软件，但使用不同的配置文件
 
 手机和平板电脑等 Android 设备也可以连接
-
-
-
-
 
 ## 教程：使用 VPN 随时随地访问你的网络
 
@@ -7146,6 +2699,8 @@ proto udp
 
 ## 14 启用数据包转发
 
+
+
 目前，我们可以连接到服务器，但还无法访问互联网。首先通过编辑 `/etc/sysctl.conf` 并取消注释 `net.ipv4.ip_forward=1` 来启用数据包转发。现在重启服务器。
 
 ## 17 使用 iptables 转发流量
@@ -7188,19 +2743,21 @@ proto udp
 
 可能，你可以使用它们来访问你的服务器。U 盘（稍后删除它们）或如你的局域网（LAN）等受信任的网络。
 
-
-
-
-
 # 使用 Mercurial 管理代码教程
 
 回滚得还不够远，可以进一步回滚。这通过使用 `hg revert` 命令实现。
 
 > `clone` 命令允许对数据叶节点进行无限次实验，同时留下原始副本。
 
+```
 hg revert <change number>
+```
+
 更改号是在创建时分配的提交版本号。例如：
+
+```
 hg -r 0
+```
 
 这样做将回滚到我们创建的该文件的最早期实例。别忘记提交（commit）以保存回滚后的！
 
@@ -7220,7 +2777,7 @@ Mercurial 一个非常有趣且实用的功能是它可以运行一个内置 Web
 hg serve
 ```
 
-这会在端口 8000 上启动一个 Web 服务器。使用 Ctrl+C 杀死 Web 服务器。此过程是查看存储库任何更改的极佳方法。你可以使用以下命令下载存储库副本：
+这会在端口 `8000` 上启动一个 Web 服务器。使用 `Ctrl+C` 杀死 Web 服务器。此过程是查看存储库任何更改的极佳方法。你可以使用以下命令下载存储库副本：
 
 # 09 介绍 TortoiseHg
 
@@ -7288,18 +2845,13 @@ Code Club 是一个全国性的网络，为 9-11 岁的儿童提供志愿者领�
 
 # 使用 gnuplot 画图
 
-Gnuplot 可以找到
-两个抛物线的
-交点
+Gnuplot 可以找到两个抛物线的交点
 
-Gnuplot 可以绘制
-复杂的图表
+Gnuplot 可以绘制复杂的图表
 
-Gnuplot 可以在同一输出上
-绘制多条线
+Gnuplot 可以在同一输出上绘制多条线
 
-Gnuplot 还可以做
-3D
+Gnuplot 还可以做 3D
 
 ![](img/45a70445846e93838a23812ca8a9d98d_51_0.png)
 
@@ -7328,25 +2880,6 @@ Gnuplot 可以找到两个抛物线的交点。Gnuplot 可以绘制复杂的图�
 当你理解时，范围（range）定义了 y 轴的边界。对于像 sin(x) cos(x) 这样的三角函数，相对于数字 p 定义边界更有意义。
 
 Gnuplot 是一个最初开发用于帮助学生绘制数学函数和数据的命令。它适用于编写脚本，并可以将输出捕获到文件中。
-
-上一个例子非常简单。在这个部分，命令将帮助你美化输出。
-
-在这个部分，命令将帮助你美化输出并看起来更专业。
-
-在这个部分，命令将帮助你美化输出。
-
-在这个部分，命令将帮助你美化输出。
-
-在这个部分，命令将帮助你美化输出。
-
-在这个部分，命令将帮助你美化输出。
-
-在这个部分，命令将帮助你美化输出。
-
-在这个部分，命令将帮助你美化输出。
-
-
-
 
 # 教程
 
@@ -7404,11 +2937,14 @@ filledcurves fs
 ```python
 import Gnuplot
 ```
+
 如果一切正常，你将立即看到 shell 提示符。如果没有安装该模块，错误信息将如下：
+
 Traceback (most recent call last):
+
   File "line", line 1, in <module>
+
 ImportError: No module named Gnuplot
-```
 
 ## 08 简单的 Gnuplot 脚本
 
@@ -7416,12 +2952,19 @@ ImportError: No module named Gnuplot
 
 ```
 #!/usr/bin/python
+
 import Gnuplot
+
 gplot = Gnuplot.Gplot(debug=1)
+
 gplot(set term size 2048, 2048)
+
 gplot(set output "LU.png")
+
 g5 = Gnuplot.Func(cos(x));
+
 plot a function with y-gplot)
+
 gplot(g5)
 ```
 
@@ -7488,11 +3031,6 @@ graphplot> plot cos(x)
 
 正如你可能记得的，'filledcurves fs' 会为你完成这项工作——它会用绿色填充函数，绿色是当前曲线的默认颜色。正如你可能注意到的，你必须对坐标轴进行比例缩放！如果你想让图表看起来更好，可以使用以下命令：
 
-（注：由于原文中存在大量重复和错乱，此部分已根据指令进行了逻辑清理和翻译）
-
-
-
-
 # 使用 gprof 对你的代码进行性能分析
 
 教程
@@ -7524,7 +3062,6 @@ gmon.out: GNU profile performance data - version 1
 ```
 // 本文全程使用的示例代码 (Sample.c):
 #include <stdio.h>
-
 int count;
 void func_c(void)
 {
@@ -7557,26 +3094,27 @@ void func_a(void)
 Count = [100000000]
 ```
 
-因此你可以看到 "Sample-code" 执行并结束了。
+
+
+因此你可以看到 `"Sample-code"` 执行并结束了。
 
 > 注意 4：执行 `gprof`。一旦性能分析数据文件可用，该工具即可用于分析并产生有意义的数据。这里是 `gprof` 命令的语法：
 
-## 03 执行二进制文件 - 部分 2
+### 03 执行二进制文件 - 部分 2
 
 程序执行后，它会生成一个名为 `gmon.out` 的文件。
 
-```
-ismon.out
-gmon.out
-```
+`ismon.out`
+
+`gmon.out`
 
 ```
 gprof [command-options] [executable-name] [profiling-data-file] [output-file]
 ```
 
-gprof 接受可执行文件名和命令行选项以生成性能分析信息，这些可以重定向到输出文件。
+`gprof` 接受可执行文件名和命令行选项以生成性能分析信息，这些可以重定向到输出文件。
 
-但注意，命令行工具本身不需要任何参数[它们不是强制性的]。当未提供参数时，gprof 会在当前目录中查找 `a` 作为可执行文件名，并将 `gmon.out` 作为性能分析数据文件，输出将产生在标准输出 - stdout。
+但注意，命令行工具本身不需要任何参数[它们不是强制性的]。当未提供参数时，`gprof` 会在当前目录中查找 `a` 作为可执行文件名，并将 `gmon.out` 作为性能分析数据文件，输出将产生在标准输出 - stdout。
 
 让我们运行命令：
 
@@ -7599,7 +3137,7 @@ return 0;
 
 ![](img/45a70445846e93838a23812ca8a9d98d_57_0.png)
 
-索引位于括号中，它显示了如果打印，它出现在 gprof 列表中的位置。
+索引位于括号中，它显示了如果打印，它出现在 `gprof` 列表中的位置。
 
 ## 调用图
 
@@ -7615,7 +3153,7 @@ return 0;
 - cumulative - 该函数及上述列出的函数的秒数累计和。
 - self - 仅该函数消耗的秒数。
 - calls - 该函数被调用的次数（如果它本身被分析了）。
-- name - 函数名。这显示了函数在 gprof 列表中的位置，如果
+- name - 函数名。这显示了函数在 `gprof` 列表中的位置，如果
 
 | index | %Time | self | children | calls | name |
 |---|---|---|---|---|---|
@@ -7686,15 +3224,12 @@ gprof sample -o flat
 
 ## 10 抑制冗余信息
 
-默认情况下，gprof 的输出包含平铺分析和图表中每一列的详细解释。这对于初学者很有帮助，但你可能想抑制已的细节。命令行选项 `-b`（或 `-brief`）可用于此目的。
-
-
-
-
+默认情况下，`gprof` 的输出包含平铺分析和图表中每一列的详细解释。这对于初学者很有帮助，但你可能想抑制已的细节。命令行选项 `-b`（或 `-brief`）可用于此目的。
 
 # 教程
 
 ## 使用 Qt 进行事件驱动编程
+
 LinuxDeveloper
 
 ![](img/45a70445846e93838a23812ca8a9d98d_59_0.png)
@@ -7765,21 +3300,17 @@ QML 简介：
 
 Qt 在注册过程中反映了这一点：它检查是否有任何槽在其中注册。通知被分发到这些对象。
 
-我们基于 Qt 的框架将自己限制在处理四个色带上。这为我们提供了总共四个和一个向出的事件。QObject 派生类会自动集成到信号槽框架中——ResistorCalc类的头文件如下：
+我们基于 Qt 的框架将自己限制在处理四个色带上。这为我们提供了总共四个和一个向出的事件。`QObject` 派生类会自动集成到信号槽框架中——`ResistorCalc`类的头文件如下：
 
 ```cpp
 class ResistorCalc: QObject {
     Q_OBJECT
-
 public:
     ResistorCalc();
-
 public slots:
     void valueChanged(int to_max);
-
 signals:
     void newValue(int new_value);
-
 private:
     void recalculateValue();
     int my1;
@@ -7798,21 +3329,17 @@ private:
 
 Qt 在注册过程中反映了这一点：它检查是否有任何槽在其中注册。通知被分发到这些对象。
 
-我们基于 Qt 的框架将自己限制在处理四个色带上。这为我们提供了总共四个和一个向出的事件。QObject 派生类会自动集成到信号槽框架中——ResistorCalc类的头文件如下：
+我们基于 Qt 的框架将自己限制在处理四个色带上。这为我们提供了总共四个和一个向出的事件。`QObject` 派生类会自动集成到信号槽框架中——`ResistorCalc`类的头文件如下：
 
 ```cpp
 class ResistorCalc: QObject {
     Q_OBJECT
-
 public:
     ResistorCalc();
-
 public slots:
     void valueChanged(int to_max);
-
 signals:
     void newValue(int new_value);
-
 private:
     void recalculateValue();
     int my1;
@@ -7821,113 +3348,23 @@ private:
 };
 ```
 
-### 实现信号和槽
 
-在处理 Qt 时，事件是类决定与外部世界共享的任何内容。大多数 Qt 控件都会发射各种事件。可以按照顺序处理这些事件，以创建一个小型应用程序，类可以根据你的需要以尽可能少的事件来处理这些事件。
-
-### 声明信号和槽
-
-在处理 Qt 时，事件是类决定与外部世界共享的任何内容。大多数 Qt 控件都会发射各种事件。可以按照顺序处理这些事件，以创建一个小型应用程序，类可以根据你的需要以尽可能少的事件来处理这些事件。
-
-### 实现信号和槽
-
-在处理 Qt 时，事件是类决定与外部世界共享的任何内容。大多数 Qt 控件都会发射各种事件。可以按照顺序处理这些事件，以创建一个小型应用程序，类可以根据你的需要以尽可能少的事件来处理这些事件。
-
-### 使用 Qt 进行事件驱动编程
-
-在处理 Qt 时，事件是类决定与外部世界共享的任何内容。大多数 Qt 控件都会发射各种事件。可以按照顺序处理这些事件，以创建一个小型应用程序，类可以根据你的需要以尽可能少的事件来处理这些事件。
-
-### 使用 Qt 进行事件驱动编程
-
-在处理 Qt 时，事件是类决定与外部世界共享的任何内容。大多数 Qt 控件都会发射各种事件。可以按照顺序处理这些事件，以创建一个小型应用程序，类可以根据你的需要以尽可能少的事件来处理这些事件。
-
-### 使用 Qt 进行事件驱动编程
-
-在处理 Qt 时，事件是类决定与外部世界共享的任何内容。大多数 Qt 控件都会发射各种事件。可以按照顺序处理这些事件，以创建一个小型应用程序，类可以根据你的需要以尽可能少的事件来处理这些事件。
-
-### 使用 Qt 进行事件驱动编程
-
-在处理 Qt 时，事件是类决定与外部世界共享的任何内容。大多数 Qt 控件都会发射各种事件。可以按照顺序处理这些事件，以创建一个小型应用程序，类可以根据你的需要以尽可能少的事件来处理这些事件。
-
-### 使用 Qt 进行事件驱动编程
-
-在处理 Qt 时，事件是类决定与外部世界共享的任何内容。大多数 Qt 控件都会发射各种事件。可以按照顺序处理这些事件，以创建一个小型应用程序，类可以根据你的需要以尽可能少的事件来处理这些事件。
-
-### 使用 Qt 进行事件驱动编程
-
-在处理 Qt 时，事件是类决定与外部世界共享的任何内容。大多数 Qt 控件都会发射各种事件。可以按照顺序处理这些事件，以创建一个小型应用程序，类可以根据你的需要以尽可能少的事件来处理这些事件。
-
-### 使用 Qt 进行事件驱动编程
-
-在处理 Qt 时，事件是类决定与外部世界共享的任何内容。大多数 Qt 控件都会发射各种事件。可以按照顺序处理这些事件，以创建一个小型应用程序，类可以根据你的需要以尽可能少的事件来处理这些事件。
-
-### 使用 Qt 进行事件驱动编程
-
-在处理 Qt 时，事件是类决定与外部世界共享的任何内容。大多数 Qt 控件都会发射各种事件。可以按照顺序处理这些事件，以创建一个小型应用程序，类可以根据你的需要以尽可能少的事件来处理这些事件。
-
-### 使用 Qt 进行事件驱动编程
-
-在处理 Qt 时，事件是类决定与外部世界共享的任何内容。大多数 Qt 控件都会发射各种事件。可以按照顺序处理这些事件，以创建一个小型应用程序，类可以根据你的需要以尽可能少的事件来处理这些事件。
-
-### 使用 Qt 进行事件驱动编程
-
-在处理 Qt 时，事件是类决定与外部世界共享的任何内容。大多数 Qt 控件都会发射各种事件。可以按照顺序处理这些事件，以创建一个小型应用程序，类可以根据你的需要以尽可能少的事件来处理这些事件。
-
-### 使用 Qt 进行事件驱动编程
-
-在处理 Qt 时，事件是类决定与外部世界共享的任何内容。大多数 Qt 控件都会发射各种事件。可以按照顺序处理这些事件，以创建一个小型应用程序，类可以根据你的需要以尽可能少的事件来处理这些事件。
-
-### 使用 Qt 进行事件驱动编程
-
-在处理 Qt 时，事件是类决定与外部世界共享的任何内容。大多数 Qt 控件都会发射各种事件。可以按照顺序处理这些事件，以创建一个小型应用程序，类可以根据你的需要以尽可能少的事件来处理这些事件。
-
-### 使用 Qt 进行事件驱动编程
-
-在处理 Qt 时，事件是类决定与外部世界共享的任何内容。大多数 Qt 控件都会发射各种事件。可以按照顺序处理这些事件，以创建一个小型应用程序，类可以根据你的需要以尽可能少的事件来处理这些事件。
-
-### 使用 Qt 进行事件驱动编程
-
-在处理 Qt 时，事件是类决定与外部世界共享的任何内容。大多数 Qt 控件都会发射各种事件。可以按照顺序处理这些事件，以创建一个小型应用程序，类可以根据你的需要以尽可能少的事件来处理这些事件。
-
-### 使用 Qt 进行事件驱动编程
-
-在处理 Qt 时，事件是类决定与外部世界共享的任何内容。大多数 Qt 控件都会发射各种事件。可以按照顺序处理这些事件，以创建一个小型应用程序，类可以根据你的需要以尽可能少的事件来处理这些事件。
-
-### 使用 Qt 进行事件驱动编程
-
-在处理 Qt 时，事件是类决定与外部世界共享的任何内容。大多数 Qt 控件都会发射各种事件。可以按照顺序处理这些事件，以创建一个小型应用程序，类可以根据你的需要以尽可能少的事件来处理这些事件。
-
-### 使用 Qt 进行事件驱动编程
-
-在处理 Qt 时，事件是类决定与外部世界共享的任何内容。大多数 Qt 控件都会发射各种事件。可以按照顺序处理这些事件，以创建一个小型应用程序，类可以根据你的需要以尽可能少的事件来处理这些事件。
-
-### 使用 Qt 进行事件驱动编程
-
-在处理 Qt 时，事件是类决定与外部世界共享的任何内容。大多数 Qt 控件都会发射各种事件。可以按照顺序处理这些事件，以创建一个小型应用程序，类可以根据你的需要以尽可能少的事件来处理这些事件。
-
-
-
-
-
-## 使用 Qt 进行事件驱动编程
-
-使用信号与槽创建一个电阻器校准器
 
 # 教程
 
 ## 使用 Qt 创建美观的用户界面
 
-QtGui 和 JSON：解决常见问题的方案
+`QtGui` 和 `JSON`：解决常见问题的方案
 
-当 Qt 首次被构想时，JavaScript 和 HTML 还处于起步阶段——使用它们来创建复杂的用户界面是不可行的。此外，大多数系统无法处理图形化界面带来的计算需求。然而，随着桌面工作站屏幕尺寸的不断增大，
+当 `Qt` 首次被构想时，`JavaScript` 和 `HTML` 还处于起步阶段——使用它们来创建复杂的用户界面是不可行的。此外，大多数系统无法处理图形化界面带来的计算需求。然而，随着桌面工作站屏幕尺寸的不断增大，
 
-Qt 框架（我们将使用它来创建）解决了这些问题。它允许你使用控件和各种处理渲染的辅助工具，但并不适用于动画。
+`Qt` 框架（我们将使用它来创建）解决了这些问题。它允许你使用控件和各种处理渲染的辅助工具，但并不适用于动画。
 
-在 4.6 版本中，引入了一个新的 Qt 框架。这个基于 JavaScript-JSON 的系统提供了令人深刻的动画功能，最初为移动设备设计的，但它可以处理各种使用 QML 渲染的矩形、位图和纹理。
+在 4.6 版本中，引入了一个新的 `Qt` 框架。这个基于 `JavaScript-JSON` 的系统提供了令人深刻的动画功能，最初为移动设备设计的，但它可以处理各种使用 `QML` 渲染的矩形、位图和纹理。
 
-QML 为各种系统的网络提供了框架。通过使用数据，Qt 可以管理所有平台上可用资源。一组设计模式简化了现代界面的创建。
+`QML` 为各种系统的网络提供了框架。通过使用数据，`Qt` 可以管理所有平台上可用资源。一组设计模式简化了现代界面的创建。
 
-使用 QML 通常会导致更整洁的代码，并且更容易手动组装。然而，原生集成使得结果看起来像其他的桌面应用程序。
+使用 `QML` 通常会导致更整洁的代码，并且更容易手动组装。然而，原生集成使得结果看起来像其他的桌面应用程序。
 
 ![](img/45a70445846e93838a23812ca8a9d98d_62_0.png)
 
@@ -7946,11 +3383,25 @@ QML 为各种系统的网络提供了框架。通过使用数据，Qt 可以管�
 void MainWindow::valueChangedChanged(int newValue)
 ```
 
-在这里，我们使用一个槽来连接——这个特殊情况在文档中有描述。必须定义信号。然后，使用以下代码创建此槽。同时，在头文件中包含 MainWindow::valueChanged：
+在这里，我们使用一个槽来连接——这个特殊情况在文档中有描述。必须定义信号。然后，使用以下代码创建此槽。同时，在头文件中包含 `MainWindow::valueChanged`：
 
 ```
 void MainWindow::valueChanged(int value)
 ```
+
+## 使用 Qt 进行事件驱动编程
+
+使用信号与槽创建一个电阻器校准器
+
+### 实现信号和槽
+
+在处理 `Qt` 时，事件是类决定与外部世界共享的任何内容。大多数 `Qt` 控件都会发射各种事件。可以按照顺序处理这些事件，以创建一个小型应用程序，类可以根据你的需要以尽可能少的事件来处理这些事件。
+
+### 声明信号和槽
+
+在处理 `Qt` 时，事件是类决定与外部世界共享的任何内容。大多数 `Qt` 控件都会发射各种事件。可以按照顺序处理这些事件，以创建一个小型应用程序，类可以根据你的需要以尽可能少的事件来处理这些事件。
+
+
 
 最后，是时候连接信号到槽。这在表单类的构造函数中完成，如下所示。
 
@@ -8042,10 +3493,6 @@ Michael Miller, SUSE VIP
 
 65 www.linseuker.com
 
-
-
-
-
 # SUSE 2013 大会报告
 
 ![](img/45a70445846e93838a23812ca8a9d98d_65_0.png)
@@ -8100,9 +3547,6 @@ SUSE 与微软有着合作关系，客户在包含 Linux 和 Windows 的异构�
 Bruckmann 补充道：“OpenStack 非常强大，”否则，它并不直观易于理解。但我们相信这是我们可以利用的价值之一。
 
 > 我们深信 OpenStack 是功能支持和性能支持方面最强大的项目。因此，我们知道 SUSE Cloud 的正确选择。
-
-
-
 
 # 测评索引
 
@@ -8213,9 +3657,6 @@ Stage 包含了幻灯切换；不支持幻灯片上不同对象的动画，即�
 
 当我们第一次看到 EWIPE 时，我们被吸引了。EWIPE 基于 Python 开发，它将被定位为一个轻量级程序，虽然大多数软件都不是开源的，但我们在本次测评中包含了一个。我们还排除了一些 PDF 和 LaTeX 演示库，不过，我们在之前的期数（4131）中详细介绍了关于如何使用 LaTeX 创建专业演示文稿的教程。
 
-
-
-
 # 演示文软件组测试
 
 领先的四种最佳演示文应用
@@ -8262,10 +3703,6 @@ www.linuxuser.co.uk
 它不是开源的，即使你正在使用它。Google Docs 是一个非常强大的演示文工具，它可能有点基础，但足以让演示文看起来像任何东西一样专业。Slidifier 在某些方面是共享电子表格的开源等品，无需互联网。事实上，Slidifier 版本在这方面更好，你不需要账户，而且分享链接比 Google 简单一点。
 
 它的关键在于它为 Google Slides 做的唯一事情。Slidifier 是一个极其简单的工具，帮助你通过一些基础格式来标记标题或切换到下一页幻灯片，从而构建你的演示文。
-
-
-
-
 
 # 评测
 
@@ -8376,7 +3813,7 @@ Cinnamon 革命已经来临，随着 Mint 16 成为其第一个真正独立的�
 | 本地文件系统(C:)\Backup\of 0001 | |
 | 总计 (MB): 20 警告: 00:00 | |
 | 正在手动执行...错误: 00/00 | |
-| 事件日志 | |
+| 事件日志 |
 
 - 备份按计划进行，也可以手动触发
 
@@ -8438,10 +3875,6 @@ Cinnamon 革命已经来临，随着 Mint 16 成为其第一个真正独立的�
 新功能：Cinnamon 2.0 • MATE 1.4 • Linux 内核 3.11 • 更好的软件管理器
 
 （列表内容翻译已在上方）
-
-
-
-
 
 # 释放安卓的巨大能量
 www.littlegreenrobot.co.uk
@@ -8633,10 +4066,6 @@ www.dawnrobotics.co.uk
 
 0800 808 5450 sales@netcetera.co.uk www.netcetera.co.uk
 
-
-
-
-
 ## 树莓派®入门套装
 
 除了屏幕外一切都有
@@ -8715,10 +4144,14 @@ A：你有两种方法可以使用，最基础的是下载开箱即用软件（N
 或者，如果你有一个想要安装的镜像，打开终端并使用 `cd` 命令进入解压后镜像的位置。例如，输入：
 
 ```
-$ dd if=$(image img of "/dev/SD-card location")
-```
 
+
+
+$ dd if=$(image img of "/dev/SD-card location")`
+
+```
 这将镜像写入 SD 卡，完成后你就会知道。
+```
 
 Q：我如何更新固件？
 A：在树莓派系统上，你可以通过安装 `rpi-update` 包来更新它。
@@ -8740,7 +4173,7 @@ A：打开终端并
 $ raspi-config
 ```
 
-在菜单中找到 Camera 选项并点击它。选择 Enable（启用），按回车，然后选择 Finish（完成）并重启。
+在菜单中找到 `Camera` 选项并点击它。选择 `Enable`（启用），按回车，然后选择 `Finish`（完成）并重启。
 
 ![](img/45a70445846e93838a23812ca8a9d98d_85_0.png)
 
@@ -8786,10 +4219,6 @@ $ sudo nano -/fluxbox/keys
 
 我们在补丁更新时遇到了这个麻烦，但那里没有直接的解决方案。我们基本上需要对格式化空间的操作使用 LVM 然后扩展 LVM 分区。如果创建的空间不够，你可以像硬盘上的逻辑卷一样创建一个任何大小的分区。
 
-
-
-
-
 ## 问题与问答 
 解决你的所有问题
 
@@ -8811,9 +4240,9 @@ dpkg --get-selections < selections.txt
 
 ## 好运
 
-我觉得在我的终端里玩得很有趣，所以我一直在运行 `fortune` —— 这是一个显示艺术字或启发性格言的包。我该如何获取那个格言或提示呢？这让我想把它添加到 .bashrc 中，这样当我进入 CLI 时它就会显示出来？
+我觉得在我的终端里玩得很有趣，所以我一直在运行 `fortune` —— 这是一个显示艺术字或启发性格言的包。我该如何获取那个格言或提示呢？这让我想把它添加到 `.bashrc` 中，这样当我进入 CLI 时它就会显示出来？
 
-这就是我需要帮助的地方。在我的 .bashrc 末尾我写了 `fortune` 来显示文本，但我把它放在这里：
+这就是我需要帮助的地方。在我的 `.bashrc` 末尾我写了 `fortune` 来显示文本，但我把它放在这里：
 
 ```bash
 fortune
@@ -8833,7 +4262,7 @@ fortune
 Fortune 实际上是一个旧的 UNIX 包
 
 Q/A
-关于示例图片 (ubuntu-20.04-focal64.jpg)，你可用的包管理器有几种类型，包括 (apt update)，它喜欢从网络表面拉取数据；(apt get)，它是命令行界面；(apt-get)，旧版本；(当 apt-get 不再等待时，它的行为与 apt 一样)；(apt cache)，它是下载软件包的本地存储；(apt clean)，用于清除缓存；(apt remove)，用于删除软件包；(apt autoremove)，移除不再需要的依赖项；(apt purge)，删除软件包及其配置文件；(apt search)，用于搜索软件包；(apt show)，显示有关软件包的信息；(apt list)，列出所有可用软件包；(apt list --upgrade)，列出可以升级的软件包；(apt-upgrade)，升级所有已安装的软件包；(apt-cache dist-upgrade)，处理新的依赖；(apt-cache depends)，显示哪些依赖于该包；(apt-cache policy)，显示软件包的策略；(apt-cache search)，显示结果；(apt-cache show)，显示有关软件包的信息；(apt-cache list)，显示可用软件包列表。(apt-cache show) 等同于 (apt-cache show)，它显示可用版本列表和软件包信息。Tesseract 也可以支持 YAG，这是一个文件的图形化前端（GIF 和 TIFF）。没有关于错误含义的描述。该功能没有给我任何线索，而且 tesseract 并不是我，因为我不熟悉这些术语。我不知道该怎么办 - 你知道可以帮助我的解决方案或答案吗？
+关于示例图片 `ubuntu-20.04-focal64.jpg`，你可用的包管理器有几种类型，包括 `apt update`，它喜欢从网络表面拉取数据；`apt get`，它是命令行界面；`apt-get`，旧版本；`当 apt-get 不再等待时，它的行为与 apt 一样`；`apt cache`，它是下载软件包的本地存储；`apt clean`，用于清除缓存；`apt remove`，用于删除软件包；`apt autoremove`，移除不再需要的依赖项；`apt purge`，删除软件包及其配置文件；`apt search`，用于搜索软件包；`apt show`，显示有关软件包的信息；`apt list`，列出所有可用软件包；`apt list --upgrade`，列出可以升级的软件包；`apt-upgrade`，升级所有已安装的软件包；`apt-cache dist-upgrade`，处理新的依赖；`apt-cache depends`，显示哪些依赖于该包；`apt-cache policy`，显示软件包的策略；`apt-cache search`，显示结果；`apt-cache show`，显示有关软件包的信息；`apt-cache list`，显示可用软件包列表。`apt-cache show` 等同于 `apt-cache show`，它显示可用版本列表和软件包信息。Tesseract 也可以支持 YAG，这是一个文件的图形化前端（GIF 和 TIFF）。没有关于错误含义的描述。该功能没有给我任何线索，而且 tesseract 并不是我，因为我不熟悉这些术语。我不知道该怎么办 - 你知道可以帮助我的解决方案或答案吗？
 
 嗯，你应该检查几几点。从目前来看，似乎你运行的是最新版本。有些更新可能对你有所益。其次，检查文件是否存在以及权限是否正确，这些随时间的推移发生了变化。最好的办法是再次尝试。确保在运行所有必要库时运行 tesseract，例如：
 
@@ -8859,7 +4288,9 @@ fortune -ascii
 tesseract-ltr-996-p1.png
 ```
 
-无法打开输入文件：ltr-996-p1.png。我正在使用该程序进行扫描，如果你遇到任何其他问题，有一个论坛和一些常见问题解答：https://google.com/project/tesseract-ocr/ www.linuxuser.co.uk
+
+
+无法打开输入文件：`ltr-996-p1.png`。我正在使用该程序进行扫描，如果你遇到任何其他问题，有一个论坛和一些常见问题解答：https://google.com/project/tesseract-ocr/ www.linuxuser.co.uk
 
 ## 赞助机会
 
@@ -8893,10 +4324,6 @@ www.netcera.co.uk/linux
 | Reseller | 080008450 | £24.89 | 1 个月 | N/A | Unlimited | N/A | ✓ | | ✓ | ✓ | ✓ | | | |
 
 ## Infinity
-
-
-
-
 
 ## 让您的列表脱颖而出！联系 RHIAN
 
@@ -8951,11 +4378,6 @@ rhian.carter@imagine-publishing.com
 | Skymarket(skymarket.co.uk) | | | | | | | | | | | | | | | |
 | Skymarket(skymarket.co.uk) | | | | | | | | | | | | | | | |
 | Skymarket(skymarket.co.uk) | | | | | | | | | | | | | | | |
-
-... (此处之后似乎是待翻译文本，但根据指令结束在“以下是需要翻译的文本”))
-
-
-
 
 ## 参加 1 英镑 1 月挑战
 
@@ -9066,10 +4488,6 @@ Linux Mint 16：它这次发布了。
 ## 免责声明
 除未经授权的使用或复制本杂志外，保留所有权利。本杂志内的所有文本和图像均为 Imagine Publishing Ltd 或其所有者的财产。所有版权均保留，并专门用于非商业用途。
 
-
-
-
-
 # 无论您的业务需求如何
 
 ## 我们有满足您要求的服务器！
@@ -9149,4 +4567,3 @@ Clever Computer Consultants
 | 独立数据 | 云服务器 | 域名 | 电子邮件 | SiteMaker | 电子商务 | 服务器 | SSL | 网站推广 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | 统计数据和数字： | 490,000 客户数 | | 8,000 台独立服务器 | | 6,000 台虚拟服务器 (VPS) | | | 1,800,000 个域名 |
-

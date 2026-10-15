@@ -1,1 +1,2 @@
-Fedora 圣经：2010 年 版：以 Fedora Linux 12 为特色
+
+# Fedora 圣经：2010 年 版：以 Fedora Linux 12 为特色

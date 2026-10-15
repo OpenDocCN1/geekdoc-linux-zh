@@ -1,19 +1,14 @@
+
 # 宝贝，是时候打鼓了：鼓手手音乐趣味乐器礼物 ~ 小号横线笔记本
-
-
 
 ![](img/cover.jpg)
 
-
 - B. 短期补习课程
-    - B.1. Shell 和基础命令
-    - B.2. 文件系统的组织
-    - B.3. 计算机的运行机制：不同层次
-    - B.4. 由内核处理的一些任务
-    - B.5. 用户空间
-
-
-
+  - B.1. Shell 和基础命令
+  - B.2. 文件系统的组织
+  - B.3. 计算机的运行机制：不同层次
+  - B.4. 由内核处理的一些任务
+  - B.5. 用户空间
 
 知识共享许可声明：本图书根据知识共享署名-相同共享 3.0 移植版（Unported）许可协议许可。
 
@@ -69,7 +64,7 @@ Debian GNU/Linux 是一个适合大多数用户的“通用”Linux 发行版。
 
 ## 文化 商业发行版
 
-大多数 Linux 发行版都由一家营利公司支持，由该公司开发并按照某种商业方案进行销售。示例包括主要由 `Canonical Ltd. ` 开发的 `Ubuntu` ；由 `Red Hat` 开发的 `Red Hat Enterprise Linux`，以及由 `Novell` 维护并商业化提供的 `SUSE Linux`。
+大多数 Linux 发行版都由一家营利公司支持，由该公司开发并按照某种商业方案进行销售。示例包括主要由 `Canonical Ltd.` 开发的 `Ubuntu`；由 `Red Hat` 开发的 `Red Hat Enterprise Linux`，以及由 `Novell` 维护并商业化提供的 `SUSE Linux`。
 
 在光谱的另一端是像 Debian 和 Apache 软件基金（它托管 Apache Web 服务器的开发）这样的项目。Debian 归是自由软件世界的一个项目，由通过互联网共同工作的志愿者实现。虽然其中一些人由于他们在各种公司兼薪工作的一部分而在从事 Debian，但整个项目并不归属于任何特定公司，任何一家公司对项目事务的话语权也不超过纯志愿者贡献者。
 
@@ -84,9 +79,6 @@ Debian GNU/Linux 是一个适合大多数用户的“通用”Linux 发行版。
 # 2. 这本书是给谁看的？
 
 我们试图让这本书对许多类读者都有用。首先，系统管理员（无论是初学者还是专家）将找到关于 Debian 在多台计算机上安装和部署的解释。他们还将了解 Debian 提供的许多服务，以及相应的配置说明和对发行版特定性的描述。理解 Debian 开发涉及的机制使他们能够应对不可预见的问题，因为他们总可以在社区内找到帮助。
-
-
-
 
 其他 Linux 发行版或另一个 Unix 变体的用户将发现 Debian 的特性，并应该非常快速地上手，同时充分受益于该发行版的独特优势。
 
@@ -106,7 +98,7 @@ Debian GNU/Linux 是一个适合大多数用户的“通用”Linux 发行版。
 
 注：网站、作者邮箱
 
-本书有自己的网站，托管了任何可以增加其实用性的元素。特别是，它包含了一个带有可点击链接的在线版书籍，以及可能的错误列表。欢迎随时浏览并向我们提供反馈。我们将乐意阅读您的评论或支持信息。请通过电子邮件发送至 `hertzog@debian.org`` (Raphaël) 和 `<`lolando@debian.org`` (Roland)。
+本书有自己的网站，托管了任何可以增加其实用性的元素。特别是，它包含了一个带有可点击链接的在线版书籍，以及可能的错误列表。欢迎随时浏览并向我们提供反馈。我们将乐意阅读您的评论或支持信息。请通过电子邮件发送至 `hertzog@debian.org` (Raphaël) 和 `lolando@debian.org` (Roland)。
 
 → [`debian-handbook.info/`](https://debian-handbook.info/)
 
@@ -136,13 +128,13 @@ Debian 软件包是一个包含安装某个软件所需的所有文件的存档�
 
 我们在侧边栏中添加了一些注释和备注。它们有多种作用：它们可以引起对困难点位的注意，完善案例研究的概念，定义某些术语或作为提醒。以下是这些侧边栏中最常见的列表：
 
-*   回归基础 (BACK TO BASICS)：对某些本应已知的信息的提醒；
-*   术语 (VOCABULARY)：定义技术术语，有时是 Debian 特有的；
-*   社区 (COMMUNITY)：突出项目内部的重点人物或角色；
-*   策略 (POLICY)：来自 Debian 策略的规则或建议。该文档在项目内部至关重要，描述了如何打包软件。书中强调的策略部分为用户带来了直接利益（例如，知道策略规范了文档和示例的位置，使得即使在新的包中也容易找到它们）；
-*   工具 (TOOL)：介绍相关的工具或服务；
-*   在实践 (IN PRACTICE)：理论与实践并不总是匹配的；这些侧边栏包含了来自我们经验的建议。它们也可以提供详细且具体的例子；
-*   其他频率不一的侧边栏则非常明确：文化 (CULTURE)、提示 (TIP)、警告 (CAUTION)、深入学习 (GOING FURTHER)、安全 (SECURITY) 等。
+* 回归基础 (BACK TO BASICS)：对某些本应已知的信息的提醒；
+* 术语 (VOCABULARY)：定义技术术语，有时是 Debian 特有的；
+* 社区 (COMMUNITY)：突出项目内部的重点人物或角色；
+* 策略 (POLICY)：来自 Debian 策略的规则或建议。该文档在项目内部至关重要，描述了如何打包软件。书中强调的策略部分为用户带来了直接利益（例如，知道策略规范了文档和示例的位置，使得即使在新的包中也容易找到它们）；
+* 工具 (TOOL)：介绍相关的工具或服务；
+* 在实践 (IN PRACTICE)：理论与实践并不总是匹配的；这些侧边栏包含了来自我们经验的建议。它们也可以提供详细且具体的例子；
+* 其他频率不一的侧边栏则非常明确：文化 (CULTURE)、提示 (TIP)、警告 (CAUTION)、深入学习 (GOING FURTHER)、安全 (SECURITY) 等。
 
 # 5. 贡献
 
@@ -156,15 +148,13 @@ Debian 软件包是一个包含安装某个软件所需的所有文件的存档�
 
 ## 6.1. 一段历史
 
-2003 年，Nat Makarévitch 联系了 Raphaël，因为他想为 Eyrolles 管理的 *Cahier de l'Admin*管理员手册）系列出版一本关于 Debian 的书。Raphaël 立即接受了编写。第一版于 2004 年 10 月 14 日出版并取得了巨大成功——在几个月后就售罄了。
+2003 年，Nat Makarévitch 联系了 Raphaël，因为他想为 Eyrolles 管理的 *Cahier de l'Admin*（管理员手册）系列出版一本关于 Debian 的书。Raphaël 立即接受了编写。第一版于 2004 年 10 月 14 日出版并取得了巨大成功——在几个月后就售罄了。
 
 从那时起，我们发布了其他七个版，对应每个后续的 Debian 版本（Debian 9 除外）。从校对工作的 Roland 逐渐变成了共同作者。
 
 虽然我们对书籍的成功感到满意，但一直希望 Eyrolles 能说服一家国际出版社将其翻译成英文。我们收到许多评论，解释这本书如何帮助人们入门 Debian，我们渴望让这本书让更多的人受益。
 
 遗憾的是，我们联系的所有英语出版商都不愿意承担翻译和出版这本书的风险。没有被这个小挫折击倒，我们与法国出版社 Eyrolles 进行了谈判，获得了将书籍翻译成英文自行出版的权利。感谢[成功的众筹活动](https://www.ulule.com/debian-handbook/)，我们在 2011 年 12 月到 2012 年 5 月之间进行了翻译工作。《Debian 管理员手册》诞生了，并以自由软件许可证出版！
-
-
 
 虽然这是一个重要的里程碑，但我们已经知道，在我们能够将法语书籍作为英文书籍的正式译文贡献之前，我们的故事还没有结束。在当时这是不可能的，因为法语版书籍仍由 Eyrolles 公司以非免费许可进行商业分发。
 
@@ -198,6 +188,8 @@ Debian 软件包是一个包含安装某个软件所需的所有文件的存档�
 
 我们要感谢所有的翻译者和翻译评审员。你们的工作备受重视，因为它让 Debian 进入了数百万无法阅读英语的人手中。
 
+
+
 ## 6.4. Raphaël 的个人致谢
 
 首先，我想感谢 Nat Makarévitch，他给了我写这本书的机会，并在完成这本书的一年里提供了强有力的指导。还要感谢 Eyrolles 的优秀团队，特别是 Muriel Shan Sei Fan。她对我非常有耐心，我从她那里学到了很多。
@@ -214,11 +206,9 @@ Ulule 募筹活动期间对我来说要求很高，但我想感谢所有帮助�
 
 我非常感谢 Raphaël 承担了这个英文版的行政工作。从组织筹款活动到书籍布局的最后一个细节，制作一本翻译书籍远不仅仅是翻译和校对，Raphaël 完成（或委托并监督）了这一切。所以，谢谢。
 
-还要感谢更多或少直接对这本书做出贡献的人，提供了澄清或解释或建议。他们多到无法一一，但大多数人通常可以在各种 #debian-* IRC 频道中找到。
+还要感谢更多或少直接对这本书做出贡献的人，提供了澄清或解释或建议。他们多到无法一一，但大多数人通常可以在各种 `#debian-*` IRC 频道中找到。
 
 与前一组人有一些重叠，但仍然需要对真正从事 Debian 的人们表示特别感谢。没有他们，这本书将毫无意义，我仍然对 Debian 项目整体所产生并提供给所有人的一切感到惊叹。
-
-
 
 最后，我确定他们被在这里提到会感到惊讶，但我想向 Terry Pratchett、Jasper Fforde、Tom Holt、William Gibson、Neal Stephenson，当然还有已故的 Douglas Adams 表示谢意。我花费无数小时享受他们的书籍，这正是我能够参与翻译第一部分内容，并在稍后编写新章节的直接原因。
 
@@ -271,10 +261,6 @@ Debian 部分视图组织在一个定义良好的框架内，从而确保了各�
 ### 1.1.2. 自由软件的质量
 
 Debian 遵循自由软件的所有原则，其新版本在准备就绪之前不会发布。开发人员不按照固定的时间表工作，也不会为了满足任意的截止日期而匆忙。人们经常抱怨 Debian 稳定版之间的时间间隔过长，但这种谨慎确保了 Debian 传奇般的可靠性：为了让整个发行版获得“稳定版”标签，确实需要数月的测试。
-
-
-
-
 
 Debian 不会在质量上妥协：关键软件包中所有已知的严重漏洞将在任何新版本中得到解决，即使这需要推迟最初预计的发布日期。那些未修复严重漏洞、因此不符合质量要求的可选软件包，将直接从稳定版中剔除。
 
@@ -366,39 +352,45 @@ Debian 不以自己的名义拥有任何服务器，因为它只是“公共利�
 
 ### 1.2.2. Debian 自由软件指南
 
-
-
-
-
 此参考文档定义了哪些软件“足够自由”，可以包含在 Debian 中。如果一个程序的许可证符合这些原则，它就可以被包含在主部分（main section）；反之，在允许自由分发的前提下，它可以在非自由部分（non-free section）找到。非自由部分并不是 Debian 的一部分；它是为用户提供的一项额外服务。
 
 本文不仅是 Debian 的一种筛选标准，已成为自由软件领域的权威著作，并作为了《开源定义》的基础。从历史角度看，它是“自由软件”概念最早的正式定义之一。
 
-→ [Debian 社会契约指南](https://www.debian.org/social_contract#guidelines)](https://www.debian.org/social_contract#guidelines)
+→ [Debian 社会契约指南](https://www.debian.org/social_contract#guidelines)
 
 1. **自由分发**。Debian 组件的许可证不得限制任何一方作为包含来自多个不同源程序的聚合软件分发包的一部分来出售或赠送该软件。许可证不得就此类销售收取特许费或其他费用。
+
 2. **源代码**。程序必须包含源代码，并且允许以源代码形式以及编译后的形式进行分发。
+
 3. **衍生作品**。许可证必须允许修改和衍生作品，并且允许按照与原始软件许可证相同的条款对其进行分发。
+
 4. **作者源代码的完整性**。许可证*可以*限制以修改的形式分发源代码，前提是许可证允许分发源代码的“补丁文件”，以便在构建时修改程序。许可证必须明确允许分发由修改后的源代码构建的软件。许可证可以要求衍生作品使用与原始软件不同的名称或版本号（*这是一个折中。Debian 组鼓励所有作者不要限制任何文件（无论是源码还是二进制）被修改*）。
+
 5. **不对个人或群体的歧视**。许可证不得对任何个人或群体产生歧视。
+
 6. **不对从事领域的歧视**。许可证不得限制任何人在特定从事领域使用该程序。例如，它不能限制程序用于商业活动，或限制其用于基因研究。
+
 7. **许可证的分发**。程序附带的必须适用于所有分发该程序的人，而无需这些人员执行额外的许可证。
+
 8. **许可证不能特定于 Debian**。程序附带的不能依赖于该程序是 Debian 系统的一部分。如果程序从 Debian 中提取，并在没有 Debian 的情况下使用或分发，但在符合程序许可证条款的情况下，所有分发该程序的方都应拥有与结合 Debian 系统时授予相同的权利。
+
 9. **许可证不能污染其他软件**。许可证不得对随许可软件一同分发的其他软件设置限制。例如，许可证不能坚持在同一介质上分发的所有其他程序必须是自由软件。
 
 * * *
 
 ### 回归基础：左份（Copyleft）
 
+
+
 左份（Copyleft）是一种原则，其在于利用版权来保证作品及其衍生作品的自由度，而不是像专有软件那样限制使用权利。同时，它也是对“copyright”（版权）一词的双关语游戏。理查德·斯尔曼（Richard Stallman）发现这个主意是因为他一个喜于双关语的朋友在给他的信封上写道：“copyleft：权利反转（all rights reversed）”。左份要求在分发原始或修改后的作品（通常是程序）版本时，保留所有的初始自由。因此，如果一个程序衍生自左份发布程序的代码，就不可能将其作为专有软件分发。
 
 最为人知的左份许可证家族当然是 GNU 通用公共许可证（`GPL`）及其衍生版本、GNU 较小通用公共许可证（`LGPL`）以及 GNU 自由文档许可证（`GFDL`）。遗憾的是，左份许可证之间通常是不互兼容的。因此，最好只使用其中一种。
 
-* * *
+---
 
 10. **示例许可证**。“GPL”、“BSD”和“Artistic”许可证是认为认为的“自由”的许可证的示例。
 
-* * *
+---
 
 ### 回归基础：自由许可证
 
@@ -406,32 +398,29 @@ GNU GPL、BSD 许可证和 Artistic 许可证尽管非常不同，但它们都�
 
 GNU GPL 由 FSF（自由软件基金）使用和推广，是最常见的。它的主要特点是，它也适用于任何被重新分发的衍生作品：一个包含或使用 GPL 代码的程序只能根据其条款进行分发。因此，它禁止在任何专有应用程序中重用。这为在与此许可证兼容的自由软件中重用 GPL 代码带来了严重问题。因此，有时无法将根据其他自由软件许可证发布的程序与根据 GPL 分发的库链接起来。另一方面，该许可证在美国法中非常稳固：FSF 的律师参与了其起草，并经常迫使违规者与 FSF 达成友好协议而无需诉诸法院。
 
-→ [GNU GPL 许可证](https://www.gnu.org/copyleft/gpl.html)](https://www.gnu.org/copyleft/gpl.html)
+→ [GNU GPL 许可证](https://www.gnu.org/copyleft/gpl.html)
 
 BSD 许可证限制最少：一切都是允许的，包括在专有应用程序中使用修改过的 BSD 代码。
 
-→ [BSD 许可证](https://www.opensource.org/licenses/bsd-license.php)](https://www.opensource.org/licenses/bsd-license.php)
+→ [BSD 许可证](https://www.opensource.org/licenses/bsd-license.php)
 
 最后，Artistic 许可证在其他两者之间达到了折中：允许在专有应用程序中集成代码，但任何修改必须发布。
 
-→ [Artistic 许可证 2.0](https://www.opensource.org/licenses/artistic-license-2.0.php)](https://www.opensource.org/licenses/artistic-license-2.0.php)
+→ [Artistic 许可证 2.0](https://www.opensource.org/licenses/artistic-license-2.0.php)
 
-这些许可证的全文位于任何 Debian 系统的 `/usr/share/common-licenses/`（BSD 为新的三条款许可证）。
+这些许可证的全文位于任何 Debian 系统的`/usr/share/common-licenses/`（BSD 为新的三条款许可证）。
 
-* * *
+---
 
-* * *
+---
 
 ### 社区：布鲁斯·佩伦斯，充满争议的领导者
 
 布鲁斯·佩伦斯（Bruce Perens）是 Debian 项目的第二任领导，紧随伊恩·莫多奇（Ian Murdock）。他那动态且威权的方法非常有争议。尽管如此，他仍然是 Debian 的重要贡献者，Debian 特别感激他编写了著名的《Debian 自由软件准则》（这是伊恩·席林（Ean Schilling）的原创构想）。随后，布鲁斯从此衍生出了著名的《开源定义》，并删除了其中所有关于 Debian 的引用。
 
-→ [开源定义](https://opensource.org/)](https://opensource.org/)
+→ [开源定义](https://opensource.org/)
 
 他离开项目是非常感性的，但布鲁斯对 Debian 保持着忠诚，因为他仍在政治和经济领域推广该分发版。他仍偶尔出现在邮件列表中提供建议并介绍他支持 Debian 的最新倡议。
-
-
-
 
 最后的一则轶事，是 Bruce 激发了 Debian 版本不同“代号”的灵感（1.1 — Rex，1.2 — Buzz，1.3 — Bo，2.0 — Hamm，2.1 — Slink，2.2 — Potato，3.0 — Woody，3.1 — Sarge，4.0 — Etch，5.0 — Lenny，6.0 — Squeeze，7 — Wheezy，8 — Jessie，9 — Stretch，10 — Buster，11（尚未发布）— Bullseye，12（尚未发布）— Bookworm，Unstable（不稳定）— Sid）。这些名字都取自动画电影《玩具总动员》中的角色。这部完全由计算机图形制作的动画电影由皮克斯工作室（Pixar Studios）制作，而 Bruce 在领导 Debian 项目时正是在那里工作。“Sid”这个名字具有特殊地位，因为它永远与 Unstable（不稳定版）分支联系在一起。在电影中，这个角色是那个弄坏玩具的邻居孩子——所以小心不要太靠近 Unstable。否则，`Sid` 也是“Still In Development”（开发中）的缩写。
 
@@ -443,7 +432,7 @@ Debian 项目产生的丰富成果同时源于经验丰富的 Debian 开发者�
 
 Debian 开发者承担着各种职责，作为项目的官方成员，他们对项目的方向具有巨大影响。一个 Debian 开发者通常负责至少一个软件包，但根据他们的可用时间和意愿，可以自由参与许多团队，从而在项目中承担更多责任。
 
-→ [`www.debian.org/devel/people`](https://www.debian.org/devel/people)→ [`www.debian.org/intro/organization`](https://www.debian.org/intro/organization)→ [`wiki.debian.org/Teams`](https://wiki.debian.org/Teams)
+→ [`www.debian.org/devel/people`](https://www.debian.org/devel/people) → [`www.debian.org/intro/organization`](https://www.debian.org/intro/organization) → [`wiki.debian.org/Teams`](https://wiki.debian.org/Teams)
 
 ### TOOL 开发者数据库
 
@@ -457,34 +446,31 @@ Debian 拥有一个数据库，包含了所有在项目中注册的开发者及�
 
 ### 软件包维护
 
-软件包维护是一相对规范化的活动，有详尽的文档甚至受到监管。它实际上必须遵守 `Debian Policy`（Debian 策略）建立的所有标准。幸运的是，有许多工具可以辅助维护者的工作。因此，开发者可以专注于其软件包的细节以及更复杂的任务，例如修复 Bug。
+软件包维护是一相对规范化的活动，有详尽的文档甚至受到监管。它实际上必须遵守`Debian Policy`（Debian 策略）建立的所有标准。幸运的是，有许多工具可以辅助维护者的工作。因此，开发者可以专注于其软件包的细节以及更复杂的任务，例如修复 Bug。
 
 → [`www.debian.org/doc/debian-policy/`](https://www.debian.org/doc/debian-policy/)
 
 ### 回归本质：软件包维护，开发者的工作
 
-维护一个软件包首先要对程序进行“打包”。具体而言，这意味着要定义安装手段，以便该程序在安装后能够运行并遵守 Debian 项目为自己设定的规则。该操作的结果保存在 `.deb` 文件中。随后，对程序的有效安装仅需解压此压缩包并执行其中包含的一些安装前或安装后脚本。
+维护一个软件包首先要对程序进行“打包”。具体而言，这意味着要定义安装手段，以便该程序在安装后能够运行并遵守 Debian 项目为自己设定的规则。该操作的结果保存在`.deb`文件中。随后，对程序的有效安装仅需解压此压缩包并执行其中包含的一些安装前或安装后脚本。
 
-在初始阶段之后，维护周期才真正开始：根据最新的 `Debian Policy` 准备更新，修复用户报告的 Bug，并包含仍在持续开发的新的“上游”（upstream）程序版本。例如，在初始打包时，程序版本为 `1.2.3`。经过几个月的开发后，原作者发布了编号为 `1.4.0` 的新稳定版本。此时，Debian 维护者应该更新软件包，以便用户能够从最新的稳定版本中受益。
+在初始阶段之后，维护周期才真正开始：根据最新的`Debian Policy`准备更新，修复用户报告的 Bug，并包含仍在持续开发的新的“上游”（upstream）程序版本。例如，在初始打包时，程序版本为`1.2.3`。经过几个月的开发后，原作者发布了编号为`1.4.0`的新稳定版本。此时，Debian 维护者应该更新软件包，以便用户能够从最新的稳定版本中受益。
 
-`Policy`（策略）是 Debian 项目的核心元素，它制定了确保软件包质量和发行版完美互操作性的规范。得益于该策略，Debian 尽管规模巨大但仍保持着一致性。该策略并非一成不变，得益于在 `<`debian-policy@lists.debian.org``>`邮件列表上提出的提案而不断演进。所有利益方同意的修订将由一小组没有编辑责任的维护者接受并应用到文本中（他们仅包含上述列表成员 Debian 开发者所同意的修改）。你可以在错误跟踪系统中读取当前的修订提议：
+`Policy`（策略）是 Debian 项目的核心元素，它制定了确保软件包质量和发行版完美互操作性的规范。得益于该策略，Debian 尽管规模巨大但仍保持着一致性。该策略并非一成不变，得益于在`<debian-policy@lists.debian.org>`邮件列表上提出的提案而不断演进。所有利益方同意的修订将由一小组没有编辑责任的维护者接受并应用到文本中（他们仅包含上述列表成员 Debian 开发者所同意的修改）。你可以在错误跟踪系统中读取当前的修订提议：
 
 → [`bugs.debian.org/debian-policy`](https://bugs.debian.org/debian-policy)
 
 ### 社区 Policy 策略编辑流程
 
-任何人都可以通过针对 `debian-policy` 软件包提交一个严重程度为“wishlist”（愿望列表）的 Bug 报告，对 Debian 策略提出修订建议。随后启动的流程记录在 [`www.debian.org/doc/debian-policy/ap-process.html`](https://www.debian.org/doc/debian-policy/ap-process.html)中：如果确认所揭示的问题必须通过在 Debian 策略中创建新规则来解决，则开始在 `<`debian-policy@lists.debian.org``>`邮件列表上进行讨论，直到达成共识并发布提案。随后有人起草所需的修订并提交审核（以补丁的形式）。一旦另外两个开发者认可该修订反映了之前的讨论共识（他们“赞成”它），提案就可以由 `debian-policy` 软件包的维护者之一纳入官方文档。如果流程在这些步骤中失败，维护者将关闭该 Bug，并将提案标记为拒绝。
+任何人都可以通过针对`debian-policy`软件包提交一个严重程度为“wishlist”（愿望列表）的 Bug 报告，对 Debian 策略提出修订建议。随后启动的流程记录在 [`www.debian.org/doc/debian-policy/ap-process.html`](https://www.debian.org/doc/debian-policy/ap-process.html)中：如果确认所揭示的问题必须通过在 Debian 策略中创建新规则来解决，则开始在`<debian-policy@lists.debian.org>`邮件列表上进行讨论，直到达成共识并发布提案。随后有人起草所需的修订并提交审核（以补丁的形式）。一旦另外两个开发者认可该修订反映了之前的讨论共识（他们“赞成”它），提案就可以由`debian-policy`软件包的维护者之一纳入官方文档。如果流程在这些步骤中失败，维护者将关闭该 Bug，并将提案标记为拒绝。
 
 ### DEBIAN POLICY 文档
 
-每个软件包的文档存储在 `/usr/share/doc/package/` 中。该目录通常包含一个 `README.Debian` 文件，说明维护者所做的 Debian 特定的调整。因此，在任何配置之前阅读该文件是明智的，以便借鉴他们的经验。我们还会找到一个 `changelog.Debian.gz` 文件，描述了维护者从一个版本到下一个版本的更改。这与描述上游开发者更改的 `changelog.gz` 文件（或类似文件）不要混。`copyright` 文件包含了作者信息和涵盖软件的许可。最后，我们可能还会找到一个名为 `NEWS.Debian.gz` 的文件，允许 Debian 开发者传递有关更新的重要信息；如果安装了 `apt-listchanges`，这些消息将自动显示。所有其他文件都取决于特定的软件。我们特别想指出 `examples` 子目录，它经常包含配置文件的示例。
+每个软件包的文档存储在`/usr/share/doc/package/`中。该目录通常包含一个`README.Debian`文件，说明维护者所做的 Debian 特定的调整。因此，在任何配置之前阅读该文件是明智的，以便借鉴他们的经验。我们还会找到一个`changelog.Debian.gz`文件，描述了维护者从一个版本到下一个版本的更改。这与描述上游开发者更改的`changelog.gz`文件（或类似文件）不要混。`copyright`文件包含了作者信息和涵盖软件的许可。最后，我们可能还会找到一个名为`NEWS.Debian.gz`的文件，允许 Debian 开发者传递有关更新的重要信息；如果安装了`apt-listchanges`，这些消息将自动显示。所有其他文件都取决于特定的软件。我们特别想指出`examples`子目录，它经常包含配置文件的示例。
 
-`Policy` 为软件包方面提供了大量的覆盖。项目的规模也引发了组织架构问题；这些问题通过《Debian 宪法》（Debian Constitution）来处理，宪法建立了决策的结构和手段。换句话说，这是一套正式的治理体系。
+`Policy`为软件包方面提供了大量的覆盖。项目的规模也引发了组织架构问题；这些问题通过《Debian 宪法》（Debian Constitution）来处理，宪法建立了决策的结构和手段。换句话说，这是一套正式的治理体系。
 
-
-
-
-本本宪法定义了特定数量的角色和职位，以及每个角色的职责和权限。特别值得注意的是，Debian 开发者通过普通决议投票拥有最终决定权，其中重大变更（如对《基金会文件》产生影响的）需要四分之三（75%）的多数赞票。然而，开发者每年会选出一个“领导者”在会议上代表他们，并确保不同团队之间的内部协调。这次选举始终是一个激烈讨论的时期。领导者的角色没有由任何文件正式定义：该职位的候选人通常会对该职位提出自己的定义。在实践中，领导者的角色包括担任媒体代表、协调“内部”团队之间的关系，并为项目提供整体指导，其中开发者可以认为：`DPL` 的观点得到了大多数项目成员的含蓄批准。
+本本宪法定义了特定数量的角色和职位，以及每个角色的职责和权限。特别值得注意的是，Debian 开发者通过普通决议投票拥有最终决定权，其中重大变更（如对《基金会文件》产生影响的）需要四分之三（75%）的多数赞票。然而，开发者每年会选出一个“领导者”在会议上代表他们，并确保不同团队之间的内部协调。这次选举始终是一个激烈讨论的时期。领导者的角色没有由任何文件正式定义：该职位的候选人通常会对该职位提出自己的定义。在实践中，领导者的角色包括担任媒体代表、协调“内部”团队之间的关系，并为项目提供整体指导，其中开发者可以认为：`DPL`的观点得到了大多数项目成员的含蓄批准。
 
 具体而言，领导者拥有实权；他们的投票可以解决平局票；他们可以做出任何不属于他人权限范围的决定，并可以委派部分职责。
 
@@ -498,31 +484,31 @@ Debian 拥有一个数据库，包含了所有在项目中注册的开发者及�
 
 → [`www.debian.org/devel/constitution`](https://www.debian.org/devel/constitution)
 
-* * *
+---
 
 ## 文化：口战（Flamewar），点燃火花的讨论
 
-“口战”是一种极激烈的辩论，当双方所有理性的论证都耗尽后，往往以互相攻击告终。某些主题比其他主题更容易引发争论（文本编辑器的选择，“你更偏于 `vi` 还是 `emacs`？”是一个老话题了）。由于对该问题意见意见的人（所有人）以及此类问题极具个人色彩，这些事情往往会引发非常频繁的邮件交换。
+“口战”是一种极激烈的辩论，当双方所有理性的论证都耗尽后，往往以互相攻击告终。某些主题比其他主题更容易引发争论（文本编辑器的选择，“你更偏于`vi`还是`emacs`？”是一个老话题了）。由于对该问题意见意见的人（所有人）以及此类问题极具个人色彩，这些事情往往会引发非常频繁的邮件交换。
 
 此类讨论通常产生不了实用的结果；通常建议不要参与此类辩论，也许可以快速浏览其内容，因为通读它们太浪费时间了。
 
-* * *
+---
 
 即使本宪法建立了一种民主的表象，但日常现实却完全不同：Debian 自然地遵循自由软件的“能者治”（do-ocracy）规则：做事的人决定如何做事。大量时间可能会浪费在争论解决问题的各种方法的优劣上；而被选定的方案将是第一个既功能完又令人满意的方案……这将源于胜任者所投入的时间。
 
 这是获得功勋的唯一途径：做一些有用的事情并证明自己工作良好。许多 Debian “管理”团队通过吸纳的方式运作，倾向于选择已经有效做出贡献并证明了能力的志愿者。这些团队工作的公开性使得新贡献者能够观察并开始帮助，而无需任何特权。这就是为什么 Debian 经常被描述为“精英治”。
 
-* * *
+---
 
 ## 文化：精英治，知识的统治
 
 精英治是一种政府形式，权力由最有功勋的人行使。对于 Debian 来说，功勋是能力的衡量标准，而能力本身是通过项目内一个或多个他人对过去行为的观察得评估（前项目领导 Stefano Zacchiroli 提到“能者治”，意味着“权力属于那些办事的人”）。他们的存在本身证明了某种能力；他们的成就通常是自由软件，并提供源代码，供同行轻松评审以评估其质量。
 
-* * *
+---
 
 这种有效的运作方法保证了“关键” Debian 团队贡献者的质量。这种方法并非完美，偶尔会有不接受这种运作方式的人。被团队接受的开发者选择可能看起来有些随意，甚至不公平。此外，并不是所有人对这些团队预期的服务都有相同的定义。对于某些人来说，等待八天才才能包含一个新的 Debian 包是不可接受的，而另一些人则耐心等待三周而没有任何意见。因此，不满的人经常对某些团队的“服务质量”表示抱怨。
 
-* * *
+---
 
 ## 社区：新维护者的整合
 
@@ -530,21 +516,17 @@ Debian 拥有一个数据库，包含了所有在项目中注册的开发者及�
 
 此外，接纳程序由一个小团队——Debian 账户经理（Account Managers）对候选人进行审查来完成。这些经理因此特别容易受到批评，因为他们对志愿者是否加入 Debian 开发者社区拥有最终决定权。在实践中，他们有时必须在了解更多项目运营情况之前延迟接纳某一个人。当然，你可以在成为官方开发者之前，通过现有开发者的担保为 Debian 做出贡献。
 
-* * *
+---
 
 ## 1.3.2 用户的积极作用
 
-人们可能会问在 Debian 项目内部工作的人提到用户是否有意义，但答案是肯定的：他们在项目中起着关键作用。用户远不是“被动的”，一些用户运行 Debian 的开发版本并定期提交错误报告以指出问题。另一些用户更进一步，通过提交严重程度为 `wishlist` 的错误报告来提交改进建议，甚至提交源代码的修正，称为 `patches`（见章节 1.3.2.3，“发送修复程序”）。
+人们可能会问在 Debian 项目内部工作的人提到用户是否有意义，但答案是肯定的：他们在项目中起着关键作用。用户远不是“被动的”，一些用户运行 Debian 的开发版本并定期提交错误报告以指出问题。另一些用户更进一步，通过提交严重程度为`wishlist`的错误报告来提交改进建议，甚至提交源代码的修正，称为`patches`（见章节 1.3.2.3，“发送修复程序”）。
 
 ### 1.3.2.1 报告错误
 
-
-
-
-
 Debian 提交 bug 的根本工具是 Debian 错误跟踪系统（Debian BTS），它被该项目的大部分使用。公共部分（Web 界面）允许用户查看所有报告的 bug，并可以选择根据各种标准显示排序后的 bug 列表，例如：受影响的包、严重程度、状态、报告者地址、负责该包的维护者地址、标签等。用户还可以浏览关于每个 bug 讨论的完整历史列表。
 
-在表象之下，Debian BTS 是基于电子邮件的：它存储的所有信息都来自各个相关人员发送的消息。因此，任何发送到 `12345@bugs.debian.org` 的电子邮件都将被分配给编号为 `12345` 的 bug 历史记录。获得授权的人员可以通过向 `12345-done@bugs.debian.org` 发送一条描述关闭决策原因的消息来“关闭”一个 bug（当指示的问题得到解决或不再相关时，该 bug 即被关闭）。通过向 `submit@bugs.debian.org` 发送符合特定格式的电子邮件来报告新 bug，该格式会标识涉及的包。`control@bugs.debian.org` 地址允许编辑与 bug 相关的的所有“元信息”。
+在表象之下，Debian BTS 是基于电子邮件的：它存储的所有信息都来自各个相关人员发送的消息。因此，任何发送到`12345@bugs.debian.org`的电子邮件都将被分配给编号为`12345`的 bug 历史记录。获得授权的人员可以通过向`12345-done@bugs.debian.org`发送一条描述关闭决策原因的消息来“关闭”一个 bug（当指示的问题得到解决或不再相关时，该 bug 即被关闭）。通过向`submit@bugs.debian.org`发送符合特定格式的电子邮件来报告新 bug，该格式会标识涉及的包。`control@bugs.debian.org`地址允许编辑与 bug 相关的的所有“元信息”。
 
 Debian BTS 还有其他功能特性，例如使用标签对 bug 进行标记。更多信息，请参阅：
 
@@ -552,21 +534,23 @@ Debian BTS 还有其他功能特性，例如使用标签对 bug 进行标记。�
 
 ## 词汇：bug 的严重程度 (Severity)
 
-bug 的严重程度正式地为报告的问题分配一个严重等级。实际上，并非所有 bug 的性都相同；例如，手册页中的拼写错误与服务器软件中的安全漏洞是不可同拟的。
+
+
+bug 的严重程度正式地为报告的问题分配一个严重等级。实际上，并非所有 bug 的性质都相同；例如，手册页中的拼写错误与服务器软件中的安全漏洞是不可同拟的。
 
 Debian 使用扩展标准来描述 bug 的严重程度。每个级别都有精确的定义，以便进行选择。
 
-→ [https://www.debian.org/Bugs/Developer#severities]
+→ [https://www.debian.org/Bugs/Developer#severities](https://www.debian.org/Bugs/Developer#severities)
 
-用户还可以使用 `reportbug` 工具通过命令行对 Debian 包发送 bug 报告。它有助于确保所讨论的 bug 尚未提交，从而防止系统中的冗余。它会提醒用户严重程度分级的定义，以确保报告尽可能准确（如果需要，开发者以后可以随时微调这些参数）。它通过编写并允许用户编辑，帮助用户在无需了解精确语法的情况下编写一份完整的 bug 报告。该报告将通过电子邮件服务器发送（默认情况下是由 Debian 运行的远程服务器，但 `reportbug` 也可以使用本地服务器）。
+用户还可以使用`reportbug`工具通过命令行对 Debian 包发送 bug 报告。它有助于确保所讨论的 bug 尚未提交，从而防止系统中的冗余。它会提醒用户严重程度分级的定义，以确保报告尽可能准确（如果需要，开发者以后可以随时微调这些参数）。它通过编写并允许用户编辑，帮助用户在无需了解精确语法的情况下编写一份完整的 bug 报告。该报告将通过电子邮件服务器发送（默认情况下是由 Debian 运行的远程服务器，但`reportbug`也可以使用本地服务器）。
 
 该工具首先针对开发版本，即 bug 将被修复的地方。实际上，Debian 的稳定版本是不欢迎更改的，只有安全更新或其他重要更新有极少数例外（例如，某个包完全无法工作）。因此，对 Debian 包中微 bug 的修复必须等待下一个稳定版本。
 
-### 1.3.2.2. 翻译与文档
+## 1.3.2.2. 翻译与文档
 
 此外，许多对 Debian 提供的服务的满意用户希望为项目做出自己的贡献。由于并非每个人在编程方面都具有相应的专业知识，他们可能会选择协助文档的翻译和审查。有特定语言的邮件列表来协调这项工作。
 
-→ [https://lists.debian.org/i18n.html] → [https://www.debian.org/international/]
+→ [https://lists.debian.org/i18n.html](https://lists.debian.org/i18n.html) → [https://www.debian.org/international/](https://www.debian.org/international/)
 
 ## 基础：什么是 i18n 和 l10n？
 
@@ -576,51 +560,47 @@ Debian 使用扩展标准来描述 bug 的严重程度。每个级别都有精�
 
 “本地化”一个程序意味着修改它使其能够适应特定语言。这涉及到将原始（通常是英语）程序翻译成另一种语言。总之，国际化为软件准备翻译，而本地化则是执行过程。
 
-### 1.3.2.3. 发送修复 (Fixes)
+## 1.3.2.3. 发送修复 (Fixes)
 
 高级用户可能会通过发送补丁来提供修复。补丁（patch）是描述对一个或多个文件进行修改的文件。补丁包含了需要删除或添加的行，同时也包含了用于定位修改位置的上下文行。
 
 ## 文化：Git
 
-Git 是一个对多个文件进行协作工作的工具，同时维护修改历史。涉及的文件通常是文本文件，例如程序的源代码。如果多人协作同一个文件，`git` 只能合并修改，前提是这些修改位于不同的部分。否则，这些“冲突”必须手动解决。
+Git 是一个对多个文件进行协作工作的工具，同时维护修改历史。涉及的文件通常是文本文件，例如程序的源代码。如果多人协作同一个文件，`git`只能合并修改，前提是这些修改位于不同的部分。否则，这些“冲突”必须手动解决。
 
-Git 是一个分布式系统，每个用户都有一个包含完整历史的仓库。中央仓库用于下载项目（`git clone`）以及与他人共享已完成（`git push`）。仓库可以包含文件的多个版本，但在任何时刻只能操作一个版本：它被称为工作区（可以通过 `git checkout` 切换到另一个版本）。Git 可以显示工作区的修改（`git diff`），可以暂存更改以待提交（`git add`），并可以在版本历史中创建一个新条目（`git commit`）。它还可以更新工作区以包含其他用户并行做的修改（`git pull`），并在历史中记录特定的配置以便以后轻松提取（`git tag`）。
+Git 是一个分布式系统，每个用户都有一个包含完整历史的仓库。中央仓库用于下载项目（`git clone`）以及与他人共享已完成（`git push`）。仓库可以包含文件的多个版本，但在任何时刻只能操作一个版本：它被称为工作区（可以通过`git checkout`切换到另一个版本）。Git 可以显示工作区的修改（`git diff`），可以暂存更改以待提交（`git add`），并可以在版本历史中创建一个新条目（`git commit`）。它还可以更新工作区以包含其他用户并行做的修改（`git pull`），并在历史中记录特定的配置以便以后轻松提取（`git tag`）。
 
 Git 能够轻松处理开发中的多个并发版本，而它们不会相互干扰。这些版本被称为分支（branches）。这种树的隐喻非常准确，因为程序最初在公共主干上开发。当达到里程碑（例如版本 1.0）时，开发在两个分支上继续：开发分支准备下一个重大版本，维护分支管理版本 1.0 的更新和修复。
 
-
-
-
-
-→ [`www.nongnu.org/cvs/`](https://www.nongnu.org/cvs/)→ [`subversion.apache.org/`](https://subversion.apache.org/)→ [`git-scm.com/`](https://git-scm.com/)→ [`bazaar.canonical.com/`](https://bazaar.canonical.com/)→ [`mercurial.selenic.com/`](http://mercurial.selenic.com/)
+→ [www.nongnu.org/cvs/](https://www.nongnu.org/cvs/) → [subversion.apache.org/](https://subversion.apache.org/) → [git-scm.com/](https://git-scm.com/) → [bazaar.canonical.com/](https://bazaar.canonical.com/) → [mercurial.selenic.com/](http://mercurial.selenic.com/)
 
 本书的范围并不包括对 Git 的详细解释，关于这部分内容，你可以参考 *Pro Git* 一书。
 
-→ [`git-scm.com/book/`](https://git-scm.com/book/)
+→ [git-scm.com/book/](https://git-scm.com/book/)
 
-虽然 `git diff` 的输出是一个可以与其他开发者共享的文件，但通常有更好的方法来提交更改。如果开发者倾向于通过电子邮件接收补丁（patches），他们通常希望使用 `git format-patch` 生成补丁，以便通过 `git am` 将其直接集成到仓库中。这保留了提交的元信息，并允许一次性共享多个提交。
+虽然`git diff`的输出是一个可以与其他开发者共享的文件，但通常有更好的方法来提交更改。如果开发者倾向于通过电子邮件接收补丁（patches），他们通常希望使用`git format-patch`生成补丁，以便通过`git am`将其直接集成到仓库中。这保留了提交的元信息，并允许一次性共享多个提交。
 
-这种基于电子邮件的工作流仍然流行，但每当软件托管在 Github 或 GitLab 等平台时，它往往会被*合并请求*（merge requests，或*拉取请求* pull requests）所取代—— Debian 在其 `salsa.debian.org` 服务器上使用的是 GitLab。在这些系统中，一旦你创建了账户，就可以*分叉*（fork）仓库，实际上在你自己的账户中创建一个仓库的副本，然后克隆该仓库并推送自己的更改。从那里，网页界面会建议你提交合并请求，通知开发者你的更改，方便他们只需点击一下即可审查并接受你的更改。
+这种基于电子邮件的工作流仍然流行，但每当软件托管在 Github 或 GitLab 等平台时，它往往会被*合并请求*（merge requests，或*拉取请求* pull requests）所取代—— Debian 在其`salsa.debian.org`服务器上使用的是 GitLab。在这些系统中，一旦你创建了账户，就可以*分叉*（fork）仓库，实际上在你自己的账户中创建一个仓库的副本，然后克隆该仓库并推送自己的更改。从那里，网页界面会建议你提交合并请求，通知开发者你的更改，方便他们只需点击一下即可审查并接受你的更改。
 
-### 其他贡献方式
+## 其他贡献方式
 
-所有这些贡献机制都通过用户的行为变得更加高效。用户并非孤立个体的集合，而是一个真正的社区，其中进行着大量的交流。我们特别注意到用户讨论邮件列表上活跃的活动，`<debian-user@lists.debian.org`](mailto:debian-user@lists.debian.org)（第 7 章，*解决问题和查找相关信息*](#ch07.html "第 7 章 解决问题和查找相关信息") 对此进行了了更详细的讨论）。
+所有这些贡献机制都通过用户的行为变得更加高效。用户并非孤立个体的集合，而是一个真正的社区，其中进行着大量的交流。我们特别注意到用户讨论邮件列表上活跃的活动，`<debian-user@lists.debian.org>`（第 7 章，*解决问题和查找相关信息*对此进行了了更详细的讨论）。
 
-→ [`lists.debian.org/users.html`](https://lists.debian.org/users.html)
+→ [lists.debian.org/users.html](https://lists.debian.org/users.html)
 
 用户不仅在直接影响他们的技术问题上帮助自己（以及他人），还讨论了向 Debian 项目贡献以及帮助其向前发展的最佳方式——这些讨论经常产生改进的建议。
 
-#### 工具 how-can-i-help
+### 工具 how-can-i-help
 
-`how-can-i-help` 程序列出了为本地安装的 Debian 软件包提供贡献的机会。在每次调用 `APT` 后，它都会显示提供帮助的方法，通过高亮标记为“新手”（newcomer）的漏洞（这些是新贡献者的易切入点）或需要新维护者的孤儿包（orphaned packages）。该程序也可以直接执行。
+`how-can-i-help`程序列出了为本地安装的 Debian 软件包提供贡献的机会。在每次调用`APT`后，它都会显示提供帮助的方法，通过高亮标记为“新手”（newcomer）的漏洞（这些是新贡献者的易切入点）或需要新维护者的孤儿包（orphaned packages）。该程序也可以直接执行。
 
 由于 Debian 不在任何自我推销的营销活动上投入资金，其用户在它的传播中起着至关重要的作用，通过口碑确保其声誉。
 
-这种方法非常有效，因为 Debian 粉丝遍布自由软件社区的各个层面：从本地 <acronym class="acronym">LUG</acronym>（或“Linux 用户小组”）组织的安装派对（由经验丰富的用户帮助新手安装系统的研讨会），到处理 Linux 的大型技术大会上的协会展位等。
+这种方法非常有效，因为 Debian 粉丝遍布自由软件社区的各个层面：从本地 LUG（或“Linux 用户小组”）组织的安装派对（由经验丰富的用户帮助新手安装系统的研讨会），到处理 Linux 的大型技术大会上的协会展位等。
 
 志愿者为项目制作海报、手册、贴纸和其他实用的宣传材料，他们将其提供给所有人，Debian 在其网站和 wiki 上免费提供这些材料：
 
-→ [`www.debian.org/events/material`](https://www.debian.org/events/material)
+→ [www.debian.org/events/material](https://www.debian.org/events/material)
 
 ## 团队与子项目
 
@@ -657,32 +637,29 @@ Debian 从一开始就是围绕源包的概念组织的，每个包都有其相�
 
 *ftpmasters* 负责 Debian 软件包官方存档。他们维护接收开发者发送的软件包的程序，并在检查后将其存储在参考服务器（`ftp-master.debian.org`）上。
 
-他们还必须验证所有新软件包的许可，确保 Debian 可以发行它们，然后将其纳入软件包库。当开发者想要删除一个软件包时，他们通过错误跟踪系统和 `ftp.debian.org` “伪包”与该团队联系。
+他们还必须验证所有新软件包的许可，确保 Debian 可以发行它们，然后将其纳入软件包库。当开发者想要删除一个软件包时，他们通过错误跟踪系统和`ftp.debian.org`“伪包”与该团队联系。
 
-
-
-
-错误跟踪系统最初设计用于将错误报告与 Debian 软件包关联，事实证明它在管理其他事务非常实用：例如待解决问题的列表或需要管理的任务，而无需与任何特定的 Debian 软件包关联。因此，“伪软件包”允许某些团队在不与其团队关联真实软件包的情况下使用错误跟踪系统。因此，每个人都可以报告需要处理的问题。例如，BTS 有一个 `ftp.debian.org` 条目，用于报告和跟踪官方软件包存档中的问题，或简单地请求删除软件包。同样，`www.debian.org` 伪软件包指代 Debian 网站上的错误，而 `lists.debian.org` 则收集了所有与邮件列表相关的问题。
+错误跟踪系统最初设计用于将错误报告与 Debian 软件包关联，事实证明它在管理其他事务非常实用：例如待解决问题的列表或需要管理的任务，而无需与任何特定的 Debian 软件包关联。因此，“伪软件包”允许某些团队在不与其团队关联真实软件包的情况下使用错误跟踪系统。因此，每个人都可以报告需要处理的问题。例如，BTS 有一个`ftp.debian.org`条目，用于报告和跟踪官方软件包存档中的问题，或简单地请求删除软件包。同样，`www.debian.org`伪软件包指代 Debian 网站上的错误，而`lists.debian.org`则收集了所有与邮件列表相关的问题。
 
 # 工具 GitLab，Git 仓库托管及更多功能
 
-Debian 使用一个名为 `salsa.debian.org` 的 GitLab 实例来托管 Git 软件包仓库，但该软件提供的功能远不止于托管，Debian 贡献者已经迅速利用了持续集成功能（在每次 push 时运行测试，甚至构建软件包）。得益于易为人理解的合并请求（merge request）流程（类似于 GitHub 的 pull requests），Debian 贡献者还受益于更清晰的贡献工作流。
+Debian 使用一个名为`salsa.debian.org`的 GitLab 实例来托管 Git 软件包仓库，但该软件提供的功能远不止于托管，Debian 贡献者已经迅速利用了持续集成功能（在每次 push 时运行测试，甚至构建软件包）。得益于易为人理解的合并请求（merge request）流程（类似于 GitHub 的 pull requests），Debian 贡献者还受益于更清晰的贡献工作流。
 
-GitLab 取替了 FusionForge（运行在名为 `alioth.debian.org` 的服务上）用于协作软件包维护。该服务由 Alexander Wirt、Bastian Blank 和 Jörg Jaspert 管理。
+GitLab 取替了 FusionForge（运行在名为`alioth.debian.org`的服务上）用于协作软件包维护。该服务由 Alexander Wirt、Bastian Blank 和 Jörg Jaspert 管理。
 
-→ [`salsa.debian.org/`](https://salsa.debian.org/)→ [`wiki.debian.org/Salsa/Doc`](https://wiki.debian.org/Salsa/Doc)
+→ [salsa.debian.org/](https://salsa.debian.org/) → [wiki.debian.org/Salsa/Doc](https://wiki.debian.org/Salsa/Doc)
 
 # Debian 系统管理员
 
-Debian 系统管理员（<acronym class="acronym">DSA</acronym>）团队（`debian-admin@lists.debian.org``）正如预期的那样，负责该项目使用的许多服务器的系统管理。他们确保所有基础服务（DNS、Web、电子邮件、shell 等）的最优运行，安装 Debian 开发人员请求的软件，并在安全方面采取一切预防。
+Debian 系统管理员（DSA）团队（`debian-admin@lists.debian.org`）正如预期的那样，负责该项目使用的许多服务器的系统管理。他们确保所有基础服务（DNS、Web、电子邮件、shell 等）的最优运行，安装 Debian 开发人员请求的软件，并在安全方面采取一切预防。
 
-→ [`dsa.debian.org`](https://dsa.debian.org)
+→ [dsa.debian.org](https://dsa.debian.org)
 
 # 工具 Debian 软件包跟踪器
 
 这是 Raphaël 的作品之一。基本思想是对于给定的软件包，在页面页面集中尽可能多的信息。因此，人们可以快速检查程序的状态，识别待完成的任务，并提供帮助。这就是为什么该页面收集了所有的错误统计、每个发行版中的可用版本、软件包在 Testing 发行版进度、描述和 debconf 模板的翻译状态、新上游版本的可能可用、不符合最新 Debian 策略的、维护者信息以及该维护者希望包含的任何其他信息。
 
-→ [`tracker.debian.org/`](https://tracker.debian.org/)
+→ [tracker.debian.org/](https://tracker.debian.org/)
 
 一个电子邮件订阅服务完善了这个 Web 界面。它会自动向列表发送以下可选信息：错误及相关讨论、Debian 服务器上新版本的可用性、可供校对的新翻译等。
 
@@ -690,7 +667,7 @@ Debian 系统管理员（<acronym class="acronym">DSA</acronym>）团队（`debi
 
 另一个名为 Debian 开发者软件包概览（DDPO）的 Web 界面为每位开发者提供了其负责的所有 Debian 软件包状态的摘要。
 
-→ [`qa.debian.org/developer.php`](https://qa.debian.org/developer.php)
+→ [qa.debian.org/developer.php](https://qa.debian.org/developer.php)
 
 这两个网站是由 Debian 内部负责质量保证的小组（被称为 Debian QA）开发和管理的工具。
 
@@ -702,36 +679,35 @@ Debian 系统管理员（<acronym class="acronym">DSA</acronym>）团队（`debi
 
 邮件列表无疑是项目活动性的最好证明，因为它们跟踪了发生的一切。关于我们邮件列表的数据（来自 2019 年 5 月）自证其明：Debian 托管了约 315 个列表，总计超过 303,000 次个人订阅。每天递送 227,000 电子邮件。
 
-每个特定服务都有自己的管理团队，通常由安装它的志愿者组成（他们也经常自己编写相应的工具）。错误跟踪系统（BTS）、软件包跟踪器、`salsa.debian.org`（GitLab 服务器，参见侧边栏 *工具 GitLab，Git 仓库托管及更多功能]`）、位于 `qa.debian.org`、`lintian.debian.org`、`buildd.debian.org`、`cdimage.debian.org` 等提供的服务都是如此。
+每个特定服务都有自己的管理团队，通常由安装它的志愿者组成（他们也经常自己编写相应的工具）。错误跟踪系统（BTS）、软件包跟踪器、`salsa.debian.org`（GitLab 服务器，参见侧边栏 *工具 GitLab，Git 仓库托管及更多功能*）、位于`qa.debian.org`、`lintian.debian.org`、`buildd.debian.org`、`cdimage.debian.org`等提供的服务都是如此。
 
 ## 开发团队，横向团队
 
 与管理团队不同，开发团队相当开放，甚至对外部贡献者开放。即使 Debian 并没有创建软件的天职，但项目需要某些特定程序来实现其目标。当然，这些工具在自由软件许可证下开发，并利用了在自由软件世界其他地方被证明的方法。
 
-Debian 开发的自己的软件很少，但某些程序承担了主角角，，它们的声誉已传出项目的范围。良好的例子是 `dpkg`，Debian 软件包管理程序（实际上它是 Debian PacGe 的缩写，通常读作“dee-package”），以及 `apt`，一个自动安装任何 Debian 软件包及其依赖项的工具，确保了升级后系统的一致性（其名称是 Advanced Package Tool 的缩写）。然而，它们的团队要小得多，因为需要较高水平的编程技能才能全面理解这类程序的运行机制。
+Debian 开发的自己的软件很少，但某些程序承担了主角角，，它们的声誉已传出项目的范围。良好的例子是`dpkg`，Debian 软件包管理程序（实际上它是 Debian PacGe 的缩写，通常读作“dee-package”），以及`apt`，一个自动安装任何 Debian 软件包及其依赖项的工具，确保了升级后系统的一致性（其名称是 Advanced Package Tool 的缩写）。然而，它们的团队要小得多，因为需要较高水平的编程技能才能全面理解这类程序的运行机制。
 
-最重要的团队可能是 Debian 安装程序 `debian-installer` 团队，自 2001 年构想以来完成了一项意义重大的工作。需要大量的贡献者，因为编写一个能够在数十种架构上安装 Debian 的程序非常困难。每种架构都有自己的启动机制和引导加载程序。所有这些工作都在 `debian-boot@lists.debian.org`(mailto:debian-boot@lists.debian.org)邮件列表上协调，并在 Cyril Brulebois 的指导下进行。
+最重要的团队可能是 Debian 安装程序`debian-installer`团队，自 2001 年构想以来完成了一项意义重大的工作。需要大量的贡献者，因为编写一个能够在数十种架构上安装 Debian 的程序非常困难。每种架构都有自己的启动机制和引导加载程序。所有这些工作都在`debian-boot@lists.debian.org`邮件列表上协调，并在 Cyril Brulebois 的指导下进行。
 
-→ [`www.debian.org/devel/debian-installer/`](https://www.debian.org/devel/debian-installer/)→ [`joeyh.name/blog/entry/d-i_retrospective/`](https://joeyh.name/blog/entry/d-i_retrospective/)
+→ [www.debian.org/devel/debian-installer/](https://www.debian.org/devel/debian-installer/) → [joeyh.name/blog/entry/d-i_retrospective/](https://joeyh.name/blog/entry/d-i_retrospective/)
 
-（非常小的）`debian-cd` 程序团队的目标更为明确。许多“小型”贡献者负责他们的架构，因为主开发者无法了解所有的细节以及从 CD-ROM 启动安装程序的准确方法。
+（非常小的）`debian-cd`程序团队的目标更为明确。许多“小型”贡献者负责他们的架构，因为主开发者无法了解所有的细节以及从 CD-ROM 启动安装程序的准确方法。
 
-许多团队在打包活动中必须与其他协作：例如，`debian-qa@lists.debian.org`(mailto:debian-qa@lists.debian.org)试图确保 Debian 项目所有层面的质量。`debian-policy@lists.debian.org`(mailto:debian-policy@lists.debian.org) 列表根据来自各地的建议制定 Debian 策略。负责每个架构的团队（`debian-*architecture*@lists.debian.org`(mailto:debian-architecture@lists.debian.org)`）编译所有软件包，根据需要对其特定的特定架构进行调整。
-
-
+许多团队在打包活动中必须与其他协作：例如，`debian-qa@lists.debian.org`试图确保 Debian 项目所有层面的质量。`debian-policy@lists.debian.org`列表根据来自各地的建议制定 Debian 策略。负责每个架构的团队（`debian-*architecture*@lists.debian.org`）编译所有软件包，根据需要对其特定的特定架构进行调整。
 
 
-其他团队负责管理最重要的软件包，以确保在维护的同时不会给某人的肩膀带来过重的负担；例如 C 库以及位于`<debian-glibc@lists.debian.org`](mailto:debian-glibc@lists.debian.org) 列表的`<debian-gcc@lists.debian.org`](mailto:debian-gcc@lists.debian.org) 列表上的 C 编译器，以及 `<debian-x@lists.debian.org`](mailto:debian-x@lists.debian.org) 上的 Xorg（该小组也被称为 X Strike Force）。
+
+其他团队负责管理最重要的软件包，以确保在维护的同时不会给某人的肩膀带来过重的负担；例如 C 库以及位于`<debian-glibc@lists.debian.org>`(mailto:debian-glibc@lists.debian.org) 列表的`<debian-gcc@lists.debian.org>`(mailto:debian-gcc@lists.debian.org) 列表上的 C 编译器，以及 `<debian-x@lists.debian.org>`(mailto:debian-x@lists.debian.org) 上的 Xorg（该小组也被称为 X Strike Force）。
 
 # 1.4. 关注 Debian 新闻
 
 如前所述，Debian 项目以一种非常分布式、非常有机的方式演进。因此，有时很难在不被无完没了的通知淹没的情况下，与项目内部发生的情况保持联系。
 
-如果你只想获取关于 Debian 最重要的新闻，可能应该订阅 `<debian-announce@lists.debian.org`](mailto:debian-announce@lists.debian.org) 列表。这是一个流量非常低的列表（每年大约十条消息），只提供最重要的公告，例如新稳定版本的发布、新项目负责人的选举或每年的 Debian 大会。
+如果你只想获取关于 Debian 最重要的新闻，可能应该订阅 `<debian-announce@lists.debian.org>`(mailto:debian-announce@lists.debian.org) 列表。这是一个流量非常低的列表（每年大约十条消息），只提供最重要的公告，例如新稳定版本的发布、新项目负责人的选举或每年的 Debian 大会。
 
 → [`lists.debian.org/debian-announce/`](https://lists.debian.org/debian-announce/)
 
-关于 Debian 更通用（且定期）的新闻发送到 `<debian-news@lists.debian.org`](mailto:debian-news@lists.debian.org) 列表。该列表的流量也非常合理（通常每月只有几条消息），它包含了半定期的“Debian 项目新闻”，这是关于项目发生各种各种零碎信息的汇编。
+关于 Debian 更通用（且定期）的新闻发送到 `<debian-news@lists.debian.org>`(mailto:debian-news@lists.debian.org) 列表。该列表的流量也非常合理（通常每月只有几条消息），它包含了半定期的“Debian 项目新闻”，这是关于项目发生各种各种零碎信息的汇编。
 
 → [`lists.debian.org/debian-news/`](https://lists.debian.org/debian-news/)
 
@@ -739,17 +715,17 @@ Debian 开发的自己的软件很少，但某些程序承担了主角角，，�
 
 ### 社区：宣传团队
 
-Debian 的官方通信渠道由 Debian 宣传团队的志愿者管理。他们是 Debian 项目负责人的代表，并对发布在上面的新闻和公告进行审核。许多其他志愿者也为团队做出了贡献，例如为“Debian 项目新闻”撰写内容，为 Debian 官方博客（[bits.debian.org`](https://bits.debian.org））或微博客服务（[micronews.debian.org`](https://micronews.debian.org/））提供内容，后者为社交网站提供微博客内容。
+Debian 的官方通信渠道由 Debian 宣传团队的志愿者管理。他们是 Debian 项目负责人的代表，并对发布在上面的新闻和公告进行审核。许多其他志愿者也为团队做出了贡献，例如为“Debian 项目新闻”撰写内容，为 Debian 官方博客（[bits.debian.org](https://bits.debian.org)）或微博客服务（[micronews.debian.org](https://micronews.debian.org/)）提供内容，后者为社交网站提供微博客内容。
 
 → [`wiki.debian.org/Teams/Publicity`](https://wiki.debian.org/Teams/Publicity)
 
 * * *
 
-关于 Debian 的演进以及各个团队在某一时间进展的更多信息，还有一个 `<debian-devel-announce@lists.debian.org`](mailto:debian-devel-announce@lists.debian.org)` 列表。正如其名称所示，它携带的公告对开发者可能更有趣，但它也允许感兴趣的人以更具体的方式关注发生的情况，而不仅仅是稳定版本的发布时间。`<debian-announce@lists.debian.org`](mailto:debian-announce@lists.debian.org)` 提供关于用户可见结果的新闻，而 `<debian-devel-announce@lists.debian.org`](mailto:debian-devel-announce@lists.debian.org)` 提供关于这些结果如何产生的新。顺便提一下，“d-d-a”（有时这样被称为）是 Debian 开发者必须订阅的唯一列表。
+关于 Debian 的演进以及各个团队在某一时间进展的更多信息，还有一个 `<debian-devel-announce@lists.debian.org>`(mailto:debian-devel-announce@lists.debian.org) 列表。正如其名称所示，它携带的公告对开发者可能更有趣，但它也允许感兴趣的人以更具体的方式关注发生的情况，而不仅仅是稳定版本的发布时间。`<debian-announce@lists.debian.org>`(mailto:debian-announce@lists.debian.org) 提供关于用户可见结果的新闻，而 `<debian-devel-announce@lists.debian.org>`(mailto:debian-devel-announce@lists.debian.org) 提供关于这些结果如何产生的新。顺便提一下，“d-d-a”（有时这样被称为）是 Debian 开发者必须订阅的唯一列表。
 
 → [`lists.debian.org/debian-devel-announce/`](https://lists.debian.org/debian-devel-announce/)
 
-Debian 官方博客（[bits.debian.org`](https://bits.debian.org））也是一个很好的信息来源。它传达了我们已经过的各种邮件列表上发布的大部分有趣新闻，以及社区成员提供的其他新闻。由于所有 Debian 开发者在认为他们有值得公开的事物时都可以贡献这些新闻，Debian 博客在保持对项目整体高度关注的同时，提供了极具价值的洞察。
+Debian 官方博客（[bits.debian.org](https://bits.debian.org)）也是一个很好的信息来源。它传达了我们已经过的各种邮件列表上发布的大部分有趣新闻，以及社区成员提供的其他新闻。由于所有 Debian 开发者在认为他们有值得公开的事物时都可以贡献这些新闻，Debian 博客在保持对项目整体高度关注的同时，提供了极具价值的洞察。
 
 一个更具非正式的信息源也可以在 Planet Debian 上找到，它汇集了 Debian 贡献者在各自博客上发布的文章。虽然内容并不专门涉及 Debian 开发，但它们提供了一个了解社区正在发生什么以及其成员在做什么的视角。
 
@@ -778,10 +754,6 @@ Debian 官方博客（[bits.debian.org`](https://bits.debian.org））也是一�
 # 1.6. 版本的生命周期
 
 项目将同时拥有三个到六个不同版本的程序，命名为 Experimental、Unstable、Testing、Stable、Oldstable 甚至 Oldoldstable。每一个版本都对应开发中的一个阶段。为了良好理解，让我们来看看一个程序的旅程，从初始打包到包含在 Debian 稳定版本的过程。
-
-
-
-
 
 在 Debian 项目中，“release”（发布）一词表示发行版的特定版本（例如，“unstable release”意味着“不稳定版”）。它也表示任何新版本（稳定版）发布的公共公告。
 
@@ -814,9 +786,13 @@ Debian 官方博客（[bits.debian.org`](https://bits.debian.org））也是一�
 稍后，软件包将成熟；在所有架构上编译完成后，它将不再经过最近的修改。此时，它将成为 Testing 发行版的候选者——这是一组根据某些可量化标准选择的 Unstable 软件包。每天，程序都会根据保证某些质量水平的元素自动选择包含在 Testing 中的软件包：
 
 1. 缺乏严重漏洞，或者至少漏洞数量少于当前在 Testing 中包含的版本；
+
 2. 在 Unstable 中停留了至少 5 天，这通常足以发现并报告任何严重问题（如果软件包了自己的测试套件，成功通过该套件将缩短该时间）；
+
 3. 在所有官方支持的架构上成功编译；
+
 4. 依赖关系可以在 Testing 中满足，或者至少可以与相关软件包一起移动到那里；
+
 5. 软件包的自动质量测试（`autopkgtest`）——如果已定义——没有显示任何回归。
 
 这个系统显然并非无懈可击；在 Testing 中的软件包中经常发现严重漏洞。尽管如此，它通常是有效的，而且 Testing 产生的问题比 Unstable 少得多，对许多人来说，它是稳定性和新颖之间的良好折中方案。
@@ -836,9 +812,6 @@ Release Manager 是一个重要的头衔，关联着巨大的责任。该头衔�
 ## 1.6.4 从测试版到稳定版的晋升 (Promotion)
 
 让我们假设我们的软件包现在包含在 Testing 中。只要它还有改进空间，维护者就必须继续改进它并从 Unstable 重启过程（但如果没有发生重大变化，进入 Testing 的速度通常会更快）。当它达到完美时，维护者就完成了工作。下一步是包含在 Stable 发行版中，这实际上是发布经理选择的时刻对 Testing 的简单复制。理想情况下，这个决策是在安装程序准备好、且 Testing 中没有任何程序存在已知严重漏洞时做出的。
-
-
-
 
 由于这一时刻永远不会到来，在实践中，Debian 必须做出妥协：移除维护者未能及时修复漏洞的软件包，或者接受发布一个带有数千个程序存在漏洞的发行版。`Release Manager`（发布经理）会在此之前宣布冻结期，在此期间，对 `Testing` 的任何更新都必须经过批准。这里的目标是防止任何新版本（及其新漏洞）出现，并仅批准修复漏洞的更新。
 
@@ -876,11 +849,13 @@ Release Manager 是一个重要的头衔，关联着巨大的责任。该头衔�
 
 `Debian` 版本的`长期支持 (LTS)` 是一项近期的倡议：个人贡献者和公司联手创建了 `Debian LTS` 团队。不再受 `Debian security team`（Debian 安全团队）支持的旧版本由这个新团队负责。
 
+
+
 `Debian security team` 处理当前 `Stable` 版本的安全支持，同时也处理 `Oldstable` 版本的安全支持（但仅限于确保与当前稳定版有一年重叠所需的时间）。这大约相当于每个版本提供三年的支持。`Debian LTS team` 处理最后（两年）的安全支持，以确保每个版本都能获得至少 5 年的支持，并让用户能够从版本 `N` 升级到 `N+2`，例如从 `Debian 8 "Jessie"` 升级到 `Debian 10 "Buster"`。
 
 → [`wiki.debian.org/LTS`](https://wiki.debian.org/LTS)
 
-***
+---
 
 ### 社区：赞助 LTS 工作的公司
 
@@ -892,8 +867,6 @@ Release Manager 是一个重要的头衔，关联着巨大的责任。该头衔�
 
 → [`www.freexian.com/services/debian-lts.html`](https://www.freexian.com/services/debian-lts.html)
 
-***
-
 # 第 2 章 介绍案例研究
 
 在本书的上下文中，你是一家不断成长的小型企业的系统管理员。现在是你与你的董事会合作，重新定义明年的信息系统主计划了。出于实际和经济考虑，你选择逐步迁移到 `Debian`。让我们详细看看等待着你的是什么……
@@ -904,20 +877,16 @@ Release Manager 是一个重要的头衔，关联着巨大的责任。该头衔�
 
 `Falcot Corp` 是一家高品质音频设备制造商。公司正在强劲增长，有两个设施，一个在圣蒂埃（Saint-Étienne），另一个在蒙彼耶（Montpellier）。前者有约 150 名员工；它有一个扬声器制造工厂、一个设计实验室以及所有的行政办公室。`Montpellier` 站点较小，只有约 50 名工人，生产放大器。
 
-***
-
 ### 注意：为案例研究创建的虚拟公司
 
 此处作为示例的 `Falcot Corp` 公司完全是虚构的。与现有公司的任何相似之处纯属巧合。同样，书中的某些示例数据可能是虚构的。
 
-
-
 信息系统已经难以跟上公司的增长，因此他们现在决定完全重新定义它，以满足层建立的各项目标：
 
-*   现代、易扩展的基础设施；
-*   得益于使用开源软件，降低软件许可成本；
-*   安装电子商务网站，可能是 B2B（企业对企业，即不同公司之间信息系统的连接，例如供应商与其客户之间的连接）；
-*   大幅提升安全安全性，以更好地保护与新产品相关的商业机密。
+- 现代、易扩展的基础设施；
+- 得益于使用开源软件，降低软件许可成本；
+- 安装电子商务网站，可能是 B2B（企业对企业，即不同公司之间信息系统的连接，例如供应商与其客户之间的连接）；
+- 大幅提升安全安全性，以更好地保护与新产品相关的商业机密。
 
 整个信息系统将以这些目标为指导，进行全面重构。
 
@@ -927,21 +896,23 @@ Release Manager 是一个重要的头衔，关联着巨大的责任。该头衔�
 
 识别出的一个重大限制条件是，会计部门使用特定的软件，这些软件仅运行在 `Microsoft Windows™` 上。而实验室方面使用的是运行在 `OS X™` 上的计算机辅助设计软件。
 
-图 2.1. Falcot Corp 网络概览![Falcot Corp 网络概览](img/case-study.png)
+**图 2.1. Falcot Corp 网络概览**
+
+![Falcot Corp 网络概览](img/case-study.png)
 
 向 `Debian` 的切换将是渐进的；一家资源有限的小型企业无法合理地在夜之间改变一切。首先，IT 员工必须接受 `Debian` 管理的培训。然后将开始转换服务器，从网络基础设施（路由器、防火墙等）开始，然后是用户服务（文件共享、Web、SMTP 等）。接着，办公电脑将逐步迁移到 `Debian`，在部署新系统期间，对每个部门进行（内部）培训。
 
 ## 2.3. 为什么选择 GNU/Linux 发行版？
 
-回归本质：是 Linux 还是 GNU/Linux？
+### 回归本质：是 Linux 还是 GNU/Linux？
 
 如你所知，`Linux` 仅仅是一个内核。因此，“Linux 发行版”和“Linux 系统”这两个表述实际上是不准确的：实际上，它们是基于 Linux 的发行版或系统。这些术语未能提到始终完整了该内核的软件，其中包括由 `GNU 项目` 开发的程序。该项目的创始人理查德·斯托曼（Richard Stallman）博士坚持系统地使用“GNU/Linux”这一术语，以便更好地承认 `GNU 项目` 所出的重要贡献以及其基础的自由原则。
 
-`Debian` 选择遵循这一建议，并据此命名其发行版（因此，最新的稳定版本是 `Debian GNU/Linux 10`）。 
+`Debian` 选择遵循这一建议，并据此命名其发行版（因此，最新的稳定版本是 `Debian GNU/Linux 10`）。
 
 几个因素决定了这一选择。熟悉该发行版的系统管理员确保它被列入计算机系统重构的候选名单。尽管这项工作对公司的未来至关重要，但困难的经济条件和激烈的竞争限制了这项操作的预算。这就是为什么迅速选择了开源解决方案：最近的几项研究表明，只要有合格的人员运行它们，它们比专有解决方案更便宜，同时提供同等或更好的服务质量。
 
-实践中：总拥有成本 (TCO)
+### 实践中：总拥有成本（TCO）
 
 总拥有成本是指拥有或获取某物品（在本例中指操作系统）所花费的所有金钱总和。此价格包含了任何可能的许可费用、培训人员使用新软件的成本、更换过慢机器的费用、额外的维修等。直接源于初始选择的一切都被考虑在内。
 
@@ -949,7 +920,7 @@ Release Manager 是一个重要的头衔，关联着巨大的责任。该头衔�
 
 在免费操作系统中，IT 部门考虑了免费的 `BSD` 系统（`OpenBSD`、`FreeBSD` 和 `NetBSD`）、`GNU Hurd` 以及 `Linux` 发行版。尚未发布稳定版本的 `GNU Hurd` 立即被拒绝了。在 `BSD` 和 `Linux` 之间的选择更为简单。前者有很多优点，特别是在服务器方面。然而，务实主义导致了选择了 `Linux` 系统，因为它的安装基础和流行程度都非常显著，并具有许多积极影响。其中一个影响是，找到合格的人员来管理 `Linux` 机器比找到具有 `BSD` 经验的技人员更容易。此外，`Linux` 比 `BSD` 更快地适应新硬件（尽管它们在这场竞赛中往往不鼓相当）。最后，`Linux` 发行版通常更适应用户友好的图形用户界面，这在所有办公机器迁移到新系统的期间对初学者来说是不可少的。
 
-替代方案：Debian GNU/kFreeBSD
+### 替代方案：Debian GNU/kFreeBSD
 
 自 `Debian 6 Squeeze` 起，在 32 位和 64 位计算机上可以使用带有 `FreeBSD` 内核的 `Debian`；这就是 `kfreebsd-i386` 和 `kfreebsd-amd64` 架构的意思。虽然这些架构不是“官方”的（它们托管在独立的镜像上——`ports.debian.org`），但它们提供了 `Debian` 软件包的 70% 以上。
 
@@ -973,10 +944,6 @@ Linux 发行版主要分为类：商业型和社区驱动。前者由公司开�
 
 对各种 Linux 发行版的对比导致由于多种原因选择了 `Debian`：
 
-
-
-
-
 - 这是一个社区发行版，其开发不受任何商业限制的独立；因此，其目标本质上是技术性的，这似乎有利于产品的整体质量。
 - 在所有社区发行版中，从许多角度来看，它是最的：考虑到贡献者数量、可用软件包数量以及持续存在的年限。其社区规模是其持续性不可否认的证明。
 - 从统计数据来看，每 18 到 24 个月发布新版本，并支持 5 年，这个时间表对于管理员来说是容易接受的。
@@ -985,13 +952,14 @@ Linux 发行版主要分为类：商业型和社区驱动。前者由公司开�
 
 ## 实践中的 Debian 长期支持
 
-Debian 长期支持 (`LTS`) 项目始于 2014 年，旨在为所有稳定版 `Debian` 提供 5 年的安全支持。由于 `LTS` 对具有大型部署的组织至关重要，项目尝试整合使用 `Debian` 的公司的资源。
+Debian 长期支持（`LTS`）项目始于 2014 年，旨在为所有稳定版 `Debian` 提供 5 年的安全支持。由于 `LTS` 对具有大型部署的组织至关重要，项目尝试整合使用 `Debian` 的公司的资源。
 
 → [`wiki.debian.org/LTS`](https://wiki.debian.org/LTS)
 
 Falcot Corp 的规模还不足以让其 IT 员工的成员为 `LTS` 项目做出贡献，因此公司选择订阅 Freexian 的 `Debian LTS` 合同并提供资金支持。感谢于此，Falcot 管理员知道他们使用的软件包将得到优先处理，并且在出现问题时可以与 `LTS` 团队直接联系。
 
-→ [`wiki.debian.org/LTS/Funding`](https://wiki.debian.org/LTS/Funding) → [`www.freexian.com/services/debian-lts.html`](https://www.freexian.com/services/debian-lts.html)
+→ [`wiki.debian.org/LTS/Funding`](https://wiki.debian.org/LTS/Funding)  
+→ [`www.freexian.com/services/debian-lts.html`](https://www.freexian.com/services/debian-lts.html)
 
 一旦选定了 `Debian`，就必须决定使用哪个版本。让我们看看管理员为什么选择了 `Debian Buster`。
 
@@ -1001,7 +969,7 @@ Falcot Corp 的规模还不足以让其 IT 员工的成员为 `LTS` 项目做出
 
 选择 `Debian Buster` 有充分的理由，事实上，任何关心服务器质量的管理员自然会倾向于 `Debian` 的稳定版本。即使上一个稳定版本可能仍会被支持一段时间，但 Falcot 管理员没有考虑它，因为它的支持期不会持续足够长，而且最新版本带来了他们所关心的新颖的、有趣的功能。
 
-# 第 3 章。分析现有设置与迁移
+# 第 3 章：分析现有设置与迁移
 
 任何计算机系统的彻底翻新都应该考虑现有系统。这允许尽多地重用可用资源，并保证组成系统的各种元素之间的互操作性。本研究将引入一个通用框架，以便在任何计算基础设施向 Linux 的迁移过程中遵循。
 
@@ -1013,7 +981,7 @@ Falcot Corp 的规模还不足以让其 IT 员工的成员为 `LTS` 项目做出
 
 `Samba` 的 `SMB/CIFS` 支持确保了在 Windows 上文中卓越的通信。它向 Windows 客户端共享文件和打印队列，并包含了允许 Linux 机器使用 Windows 服务器上可用资源的软件。
 
-## 工具 工具 Samba
+### 工具：Samba
 
 最新版本的 `Samba` 可以替换大多数 Windows 功能：从简单的 Windows NT 服务器功能（身份验证、文件、打印队列、下载打印机驱动程序、DFS 等）到最先进的功能（与 Active Directory 兼容的域控制器）。
 
@@ -1021,7 +989,7 @@ Falcot Corp 的规模还不足以让其 IT 员工的成员为 `LTS` 项目做出
 
 OS X 机器提供并能够使用网络服务，如文件服务器和打印机共享。这些服务在局域网上发布，允许其他机器发现并利用它们，而无需任何手动配置，这是通过使用 `Zeroconf` 协议套件的 `Bonjour` 实现。`Debian` 包含了另一个名为 `Avahi` 的实现，它提供了相同的功能。
 
-在相反方向，可以使用 `Netatalk` 守护进程为网络上的 OS X 机器提供文件服务器。它实现了 `AFP` (AppleShare) 协议以及所需的通知，以便服务器可以被 OS X 客户端自动发现。
+在相反方向，可以使用 `Netatalk` 守护进程为网络上的 OS X 机器提供文件服务器。它实现了 `AFP`（AppleShare）协议以及所需的通知，以便服务器可以被 OS X 客户端自动发现。
 
 旧的 Mac OS 网络（OS X 之前）使用一种名为 `AppleTalk` 的不同协议。对于涉及使用该协议的机器的环境，`Netatalk` 也提供了 `AppleTalk` 协议（事实上，它是作为该协议的重新实现开始的）。它确保文件服务器、打印队列以及时间服务器（时钟同步）运行。它的路由功能允许与 AppleTalk 网络相互连接。
 
@@ -1029,23 +997,25 @@ OS X 机器提供并能够使用网络服务，如文件服务器和打印机共
 
 最后，包含在内的 `NFS` 和 `NIS` 保证了与 Unix 系统的交互。`NFS` 确保了文件服务器功能，而 `NIS` 创建用户目录。大多数 Unix 系统使用的 BSD 打印层也允许共享打印队列。
 
-图 3.1 `Debian` 与 OS X、Windows 和 Unix 系统的共存![Debian 与 OS X、Windows 和 Unix 系统的共存](img/existing-setup.png)
+**图 3.1. `Debian` 与 OS X、Windows 和 Unix 系统的共存**
 
-# 3.2. 如何迁移
+![Debian 与 OS X、Windows 和 Unix 系统的共存](img/existing-setup.png)
+
+## 3.2. 如何迁移
 
 为了保证连续，每个计算机迁移必须经过计划并执行。这一原则适用于任何操作系统。
 
-## 3.2.1. 调查与识别服务
+### 3.2.1. 调查与识别服务
 
 尽管看起来简单，这一步是关重要的。严肃的管理员确实了解每个服务器的角色，但这些角色可能会变化，有时经验丰富的用户可能安装了“野生”服务。了解它们的存在至少允许你决定如何处理它们，而不是随意删除。
 
 为了这个目的，在迁移服务器之前告知用户该项目是明智的。为了让他们参与项目，在迁移之前在桌面上安装常用的程序，他们在迁移到 `Debian` 后可以使用这些程序；`LibreOffice` 和 Mozilla 套件是最好的例子。
 
-### 3.2.1.1. 网络与进程
+#### 3.2.1.1. 网络与进程
 
 `nmap` 工具（在同名软件包中）可以快速识别网络连接机器的服务，而无需登录它。只需在连接到相同网络的另一台机器上调用以下命令：
 
-```
+```text
 $ nmap mirwiz
 Starting Nmap 7.40 ( https://nmap.org ) at 2017-06-06 14:41 CEST
 Nmap scan report for mirwiz (192.168.1.104)
@@ -1063,15 +1033,11 @@ PORT STATE SERVICE
 Nmap done: 1 IP address (1 host up) scanned in 0.06 seconds
 ```
 
-### 替代 使用 netstat 查找可用服务列表
+### 替代：使用 netstat 查找可用服务列表
 
 在 Linux 机器上，`netstat -tupan` 命令将显示活动或等待的 TCP 会话列表，以及运行程序正在监听的 UDP 端口。这有助于识别网络提供的服务。
 
-## 进阶 IPv6
-
-
-
-
+### 进阶：IPv6
 
 某些网络命令可能可以在 IPv4（通常是默认）或 IPv6 上运行。这些包括 `nmap` 和 `netstat` 命令，但也包括其他，例如 `route` 或 `ip`。惯例是，这种行为通过 `-6` 命令行选项启用。
 
@@ -1079,11 +1045,13 @@ Nmap done: 1 IP address (1 host up) scanned in 0.06 seconds
 
 无论在任何情况下，备份服务器至关重要：这允许在迁移后恢复信息，因为那时用户可能会因迁移报告特定问题。
 
-## 3.2.2 备份配置
+### 3.2.2. 备份配置
 
 保留每个已识别服务的配置是明智的，以便在更新后的服务器上安装等效程序。最起码是制作配置文件的备份副本。
 
-对于 Unix 机器，配置文件通常位于 `/etc/`，但它们也可能位于 `/usr/local/` 的子目录下。如果程序是从源代码而非通过包安装的，情况如此。在某些情况下，可能也可以在 `/opt/` 下找到它们。
+
+
+对于 Unix 机器，配置文件通常位于`/etc/`，但它们也可能位于`/usr/local/`的子目录下。如果程序是从源代码而非通过包安装的，情况如此。在某些情况下，可能也可以在`/opt/`下找到它们。
 
 对于数据管理服务（如数据库），强烈建议将数据导出为标准格式，以便新软件可以于导入。这种格式通常是文本模式并有文档说明；例如，数据库的 SQL 储，或者 LDAP 服务器的 LDIF 文件。
 
@@ -1095,31 +1063,31 @@ Nmap done: 1 IP address (1 host up) scanned in 0.06 seconds
 
 为了有效地接管维护工作，可以分析一台已经在运行 Debian 的机器。
 
-第一个要检查的文件是 `/etc/debian_version`，它通常包含已安装 Debian 系统的版本号（它是 `base-files` 包的一部分）。如果它指示为 `codename`/sid`，则意味着系统使用了来自某个开发发行版（测试版或不稳定版）的包进行更新。
+第一个要检查的文件是`/etc/debian_version`，它通常包含已安装 Debian 系统的版本号（它是`base-files`包的一部分）。如果它指示为`codename`/sid`，则意味着系统使用了来自某个开发发行版（测试版或不稳定版）的包进行更新。
 
-`apt-show-versions` 程序（来自同名的 Debian 软件包）检查已安装包列表并识别可用版本。`aptitude` 也可以用于这些任务，尽管方式不那么系统化。
+`apt-show-versions`程序（来自同名的 Debian 软件包）检查已安装包列表并识别可用版本。`aptitude`也可以用于这些任务，尽管方式不那么系统化。
 
-看一眼 `/etc/apt/sources.list` 文件（以及 `/etc/apt/sources.list.d/` 目录）将显示已安装的 Debian 包可能来自哪里。如果出现许多未知源，管理员可能会选择完全重新安装计算机系统，以确保与 Debian 提供的软件具有最佳的兼容性。
+看一眼`/etc/apt/sources.list`文件（以及`/etc/apt/sources.list.d/`目录）将显示已安装的 Debian 包可能来自哪里。如果出现许多未知源，管理员可能会选择完全重新安装计算机系统，以确保与 Debian 提供的软件具有最佳的兼容性。
 
-`sources.list` 文件通常是一个很好的指标：大多数管理员至少在注释中保留了以前使用过的 APT 源列表。但你不你不应该忘记，过去使用的某些源可能已经被删除，而且从互联网上抓取的某些随机包可能是手动安装的（借助 `dpkg` 命令的帮助）。在这种情况下，这台机器的外观看起来是一个“标准” Debian 系统是具有误导性的。这就是为什么你应该注意任何会暴露外部包存在的迹象（在不寻目录中出现 `deb` 文件，带有特殊后缀的包版本号，指示其源自 Debian 项目之外，例如 `ubuntu` 或 `lmde` 等）。
+`sources.list`文件通常是一个很好的指标：大多数管理员至少在注释中保留了以前使用过的 APT 源列表。但你不你不应该忘记，过去使用的某些源可能已经被删除，而且从互联网上抓取的某些随机包可能是手动安装的（借助`dpkg`命令的帮助）。在这种情况下，这台机器的外观看起来是一个“标准” Debian 系统是具有误导性的。这就是为什么你应该注意任何会暴露外部包存在的迹象（在不寻目录中出现`deb`文件，带有特殊后缀的包版本号，指示其源自 Debian 项目之外，例如`ubuntu`或`lmde`等）。
 
-同样，分析 `/usr/local/` 目录的内容也很有趣，其目的是包含手动编译并安装的程序。列出以这种方式安装的软件是有启发意义的，因为这引发了关于为什么不使用相应的 Debian 包（如果存在此类包的话）的问题。
+同样，分析`/usr/local/`目录的内容也很有趣，其目的是包含手动编译并安装的程序。列出以这种方式安装的软件是有启发意义的，因为这引发了关于为什么不使用相应的 Debian 包（如果存在此类包的话）的问题。
 
 ### 快速查看 cruft/cruft-ng, debsums 和 apt-show-versions
 
-`cruft` 和 `cruft-ng` 软件包建议列出不属于任何包的可用文件。它们具有一些过滤器（效果或不相同，更新程度也不相同），以避免报告某些合法文件（由 Debian 包生成的文件，或非 `dpkg` 管理的生成的配置文件等）。
+`cruft`和`cruft-ng`软件包建议列出不属于任何包的可用文件。它们具有一些过滤器（效果或不相同，更新程度也不相同），以避免报告某些合法文件（由 Debian 包生成的文件，或非`dpkg`管理的生成的配置文件等）。
 
-**不要盲目删除 `cruft` 和 `cruft-ng` 可能列出的所有内容！**
+**不要盲目删除`cruft`和`cruft-ng`可能列出的所有内容！**
 
-`debsums` 软件包允许将包安装的每个文件的 MD5 散列值与参考散列值进行对比，并有助于确定哪些文件可能被修改过（参见*提示查找更改的文件）。请注意，创建的文件（由 Debian 包生成的文件，或非 `dpkg` 管理的生成的配置文件等）不受此检查。
+`debsums`软件包允许将包安装的每个文件的 MD5 散列值与参考散列值进行对比，并有助于确定哪些文件可能被修改过（参见*提示查找更改的文件）。请注意，创建的文件（由 Debian 包生成的文件，或非`dpkg`管理的生成的配置文件等）不受此检查。
 
-`apt-show-versions` 软件包提供了一个检查没有源的已安装包的工具，并有助于确定第三方包（参见第 6.7.3.1 节，“从 Debian 存档删除的包）。
+`apt-show-versions`软件包提供了一个检查没有源的已安装包的工具，并有助于确定第三方包（参见第 6.7.3.1 节，“从 Debian 存档删除的包）。
 
 ## 3.2.4 安装 Debian
 
 一旦已知当前服务器的所有信息，就可以关闭并在上面安装 Debian。
 
-为了选择合适的版本，我们必须知道计算机的架构。如果是一台较新的 PC，它最可能是 `amd64`（旧的 PC 通常是 `i386`）。在其他情况下，我们可以根据之前使用的系统来缩小范围。
+为了选择合适的版本，我们必须知道计算机的架构。如果是一台较新的 PC，它最可能是`amd64`（旧的 PC 通常是`i386`）。在其他情况下，我们可以根据之前使用的系统来缩小范围。
 
 表 3.1 并不是详尽的，但可能会有所帮助。注意，它列出了当前稳定发行版不再支持的 Debian 架构。在任何情况下，计算机的原始文档是寻找此类信息的最可靠来源。
 
@@ -1144,11 +1112,7 @@ Nmap done: 1 IP address (1 host up) scanned in 0.06 seconds
 
 ### 硬件 64 位 PC 与 32 位 PC
 
-大多数现代计算机拥有 64 位 Intel 或 AMD 处理器，兼容旧的 32 位处理器；因此，为 `i386` 架构编译的软件可以运行。然而，这种兼容模式无法充分利用这些新处理器的能力。这就是为什么 Debian 提供了 `amd64` 架构，它不仅适用于的 AMD 芯片，也适用于 Intel `em64t` 处理器（包括大多数 Core 系列），这些与 AMD64 非常相似。
-
-
-
-
+大多数现代计算机拥有 64 位 Intel 或 AMD 处理器，兼容旧的 32 位处理器；因此，为`i386`架构编译的软件可以运行。然而，这种兼容模式无法充分利用这些新处理器的能力。这就是为什么 Debian 提供了`amd64`架构，它不仅适用于的 AMD 芯片，也适用于 Intel`em64t`处理器（包括大多数 Core 系列），这些与 AMD64 非常相似。
 
 一旦安装了 Debian，我们需要逐一安装并配置这台计算机必须托管的内核。新配置必须考虑之前的配置，以确保平稳过渡。在前两个步骤中收集的所有信息都将有助于成功完成这部分。
 
@@ -1158,7 +1122,7 @@ Nmap done: 1 IP address (1 host up) scanned in 0.06 seconds
 
 # 第 4 章. 安装
 
-要使用 Debian，你需要在计算机上安装它；此任务由 `debian-installer` 程序负责。一个适当的安装涉及许多操作。本章将按照时间顺序回顾这些操作。
+要使用 Debian，你需要在计算机上安装它；此任务由`debian-installer`程序负责。一个适当的安装涉及许多操作。本章将按照时间顺序回顾这些操作。
 
 ***
 
@@ -1168,7 +1132,7 @@ Nmap done: 1 IP address (1 host up) scanned in 0.06 seconds
 
 ***
 
-B 的安装程序基于 `debian-installer`。它的模块化设计能够在各种场景下工作，并允许它随变化演进和适应。尽管支持大量架构带来了局限性，但此安装程序对初学者来说非常容易上手，因为它在过程的每个阶段都会协助用户。自动硬件检测、引导式分区和图形用户界面已经解决了新手在 Debian 早期经常面临的大多数问题。
+B 的安装程序基于`debian-installer`。它的模块化设计能够在各种场景下工作，并允许它随变化演进和适应。尽管支持大量架构带来了局限性，但此安装程序对初学者来说非常容易上手，因为它在过程的每个阶段都会协助用户。自动硬件检测、引导式分区和图形用户界面已经解决了新手在 Debian 早期经常面临的大多数问题。
 
 安装需要 128 MB 的 RAM（随机访问存储器）和至少 2 GB 的硬盘空间。所有 Falcot 计算机都符合这些标准。请注意，这些数字适用于安装没有图形桌面的非常有限的系统。对于基本的办公桌面工作站，真正建议至少配备 1 GB RAM 和 10 GB 硬盘空间。
 
@@ -1200,7 +1164,7 @@ BIOS（全称 Basic Input/Output System，基本输入输出系统）是包含�
 
 不同的 CD-ROM 系列有不同的用途：`netinst`（网络安装）包含安装程序和 Debian 基本系统；所有其他程序随后下载。它的“镜像”，即包含磁盘确内容的 ISO-9660 文件系统，仅占用约 150 到 280 MB（取决于架构）。另一方面，完整版提供了所有软件包，并允许在没有 Internet 连接的计算机上安装；它大约需要 16 张 DVD-ROM（或 4 张蓝光磁盘）。不再有官方 CD-ROM 套件了，因为它们非常巨大、很少使用，而且现在大多数计算机也使用 DVD-ROM 和 CD-ROM。但程序根据其流行程度重要性分布在磁盘上；第一个磁盘对于大多数安装来说，因为它包含了最常用的软件。
 
-最后一种镜像被称为 `mini.iso`，它仅作为安装程序的副产品可用。镜像仅包含配置网络所需的最小内容，其他所有内容都下载（包括安装程序的一部分，这就是为什么当发布新版本的安装程序时，这些镜像往往会损坏）。可以在 Debian 镜像的 `dists/release/main/installer-arch/current/images/netboot/` 目录下找到这些镜像。
+最后一种镜像被称为`mini.iso`，它仅作为安装程序的副产品可用。镜像仅包含配置网络所需的最小内容，其他所有内容都下载（包括安装程序的一部分，这就是为什么当发布新版本的安装程序时，这些镜像往往会损坏）。可以在 Debian 镜像的`dists/release/main/installer-arch/current/images/netboot/`目录下找到这些镜像。
 
 ***
 
@@ -1208,7 +1172,7 @@ BIOS（全称 Basic Input/Output System，基本输入输出系统）是包含�
 
 大多数安装 CD- 和 DVD-ROM 仅适用于特定的硬件架构。如果你想下载完整镜像，必须注意选择与你想要安装的计算机硬件相匹配的镜像。
 
-某些 CD/DVD-ROM 镜像可以在多个架构上运行。因此，我们有一个结合了 `i386` 和 `amd64` 架构 `netinst` 镜像的 CD-ROM 镜像。
+某些 CD/DVD-ROM 镜像可以在多个架构上运行。因此，我们有一个结合了`i386`和`amd64`架构`netinst`镜像的 CD-ROM 镜像。
 
 获取 Debian CD-ROM 镜像，你可以下载它们并刻录到磁盘。你也可以购买它们，从而为项目提供一些资金支持。查看网站查看 DVD-ROM 供应商和下载站列表。
 
@@ -1218,9 +1182,9 @@ BIOS（全称 Basic Input/Output System，基本输入输出系统）是包含�
 
 由于大多数计算机都能从 USB 设备启动，你也可以从 USB 闪存盘安装 Debian（这只是一个闪盘）。
 
-安装手册介绍了如何创建一个包含 `debian-installer` 的 USB 闪存盘。该过程非常简单，因为 i386 和 amd64 的 ISO 镜像是混合镜像，可以从 CD-ROM 也可以从 USB 闪存盘启动。
+安装手册介绍了如何创建一个包含`debian-installer`的 USB 闪存盘。该过程非常简单，因为 i386 和 amd64 的 ISO 镜像是混合镜像，可以从 CD-ROM 也可以从 USB 闪存盘启动。
 
-你必须识别 USB 闪存盘的设备名称（例如 `/dev/sdb`）；最简单的方法是使用 `dmesg` 命令检查内核的消息。然后你必须使用命令 `cat debian-10.0.0-amd64-netinst.iso >/dev/sdb; sync` 复制之前下载的 ISO 镜像。此命令需要管理员权限，因为它直接访问 USB 闪存盘并盲目擦除其内容。
+你必须识别 USB 闪存盘的设备名称（例如`/dev/sdb`）；最简单的方法是使用`dmesg`命令检查内核的消息。然后你必须使用命令`cat debian-10.0.0-amd64-netinst.iso >/dev/sdb; sync`复制之前下载的 ISO 镜像。此命令需要管理员权限，因为它直接访问 USB 闪存盘并盲目擦除其内容。
 
 更详细的解释可以在安装手册中找到。它还描述了另一种更复杂的准备 USB 闪存盘的方法，允许自定义安装程序的默认选项（内核命令行中设置的选项）。
 
@@ -1230,11 +1194,7 @@ BIOS（全称 Basic Input/Output System，基本输入输出系统）是包含�
 
 许多 BIOS 允许通过下载内核和最小文件系统镜像直接从网络启动。这种方法（许多名称，如 <acronym class="acronym">PXE</acronym> 或 <acronym class="acronym">TFTP</acronym> 启动）在计算机没有 CD-ROM 器或 BIOS 无法从此类介质启动时可以成为救命稻草。
 
-
-
-
-
-这种安装方法分为两个步骤。首先，在计算机启动时，BIOS（或网卡）会发出 `BOOTP/DHCP` 请求以自动获取 IP 地址。当 `BOOTP` 或 `DHCP` 服务器返回响应时，响应中包含一个文件名以及网络设置。在配置好网络后，客户端计算机将针对之前指定的文件发出 `TFTP` 请求。一旦获取了该文件，它将像引导加载程序一样被执行。随后它会启动 Debian 安装程序，该程序的运行方式就像是从是从硬盘、CD-ROM 或 `USB` 优盘中运行一样。
+这种安装方法分为两个步骤。首先，在计算机启动时，BIOS（或网卡）会发出`BOOTP/DHCP`请求以自动获取 IP 地址。当`BOOTP`或`DHCP`服务器返回响应时，响应中包含一个文件名以及网络设置。在配置好网络后，客户端计算机将针对之前指定的文件发出`TFTP`请求。一旦获取了该文件，它将像引导加载程序一样被执行。随后它会启动 Debian 安装程序，该程序的运行方式就像是从是从硬盘、CD-ROM 或`USB`优盘中运行一样。
 
 关于该方法的详细细节，请参阅安装指南（“为 TFTP 网络启动准备文件”章节）。
 
@@ -1242,21 +1202,21 @@ BIOS（全称 Basic Input/Output System，基本输入输出系统）是包含�
 
 ## 4.1.4. 其他安装方法
 
-当我们必须为大量计算机部署定制化安装时，通常会选择自动化而非手动安装方法。根据情况和要安装内容的复杂程度，我们可以使用 `FAI`（全自动安装程序，详见第 12.3.1 节，“全自动安装程序 (FAI)”](#ch12s03.html_sect.fai "12.3.1. Fully Automatic Installer (FAI)")），或者甚至使用带有预设文件（preseeding）的自定义安装 DVD（参见第 12.3.2 节，“预设 Debian 安装程序”](#ch12s03.html_sect.d-i-preseeding "12.3.2. Preseeding Debian-Installer")）。
+当我们必须为大量计算机部署定制化安装时，通常会选择自动化而非手动安装方法。根据情况和要安装内容的复杂程度，我们可以使用`FAI`（全自动安装程序，详见第 12.3.1 节，“全自动安装程序 (FAI)”](#ch12s03.html_sect.fai "12.3.1. Fully Automatic Installer (FAI)")），或者甚至使用带有预设文件（preseeding）的自定义安装 DVD（参见第 12.3.2 节，“预设 Debian 安装程序”](#ch12s03.html_sect.d-i-preseeding "12.3.2. Preseeding Debian-Installer")）。
 
 ## 4.2. 逐步安装
 
 ### 4.2.1. 启动并启动安装程序
 
-一旦 BIOS 开始从 CD- 或 DVD-ROM 启动，`Isolinux` 引导加载菜单就会出现。在此阶段，Linux 内核尚未加载；此菜单允许你选择要启动的内核，并输入可以在过程中传递给它的可能参数。
+一旦 BIOS 开始从 CD- 或 DVD-ROM 启动，`Isolinux`引导加载菜单就会出现。在此阶段，Linux 内核尚未加载；此菜单允许你选择要启动的内核，并输入可以在过程中传递给它的可能参数。
 
-对于标准安装，你只需要选择“Install”或“Graphical install”（使用方向键），然后按 `Enter` 键启动剩余的安装过程。如果 DVD-ROM 是“多架构（Multi-arch）”磁盘，且机器配备了 Intel 或 AMD 64 位处理器，则这些菜单选项将启用安装 64 位变体 `amd64`，而安装 32 位变体的选项仍保留在专用子菜单（“32-bit install options”）中。如果你使用的是 32 位处理器，你将没有可可选，菜单项将安装 32 位变体 `i386`。
+对于标准安装，你只需要选择“Install”或“Graphical install”（使用方向键），然后按`Enter`键启动剩余的安装过程。如果 DVD-ROM 是“多架构（Multi-arch）”磁盘，且机器配备了 Intel 或 AMD 64 位处理器，则这些菜单选项将启用安装 64 位变体`amd64`，而安装 32 位变体的选项仍保留在专用子菜单（“32-bit install options”）中。如果你使用的是 32 位处理器，你将没有可可选，菜单项将安装 32 位变体`i386`。
 
 **进阶一步** 32 位还是 64 位？
 
-32 位和 64 位系统之间的根本区别在于内存地址的大小。理论上，32 位系统无法处理超过 4 GB 的内存（`2³²` 字节）。在实践中，可以通过使用 `686-pae` 内核变体来规避这一限制，只要处理器支持 `PAE`（物理地址扩展）功能。然而，使用它对系统性能会有显著影响。这就是为什么在拥有大量内存的服务器上使用 64 位模式非常有用的原因。
+32 位和 64 位系统之间的根本区别在于内存地址的大小。理论上，32 位系统无法处理超过 4 GB 的内存（`2³²`字节）。在实践中，可以通过使用`686-pae`内核变体来规避这一限制，只要处理器支持`PAE`（物理地址扩展）功能。然而，使用它对系统性能会有显著影响。这就是为什么在拥有大量内存的服务器上使用 64 位模式非常有用的原因。
 
-对于办公电脑（性能上的百分之几差异可以忽略不计），你必须记住某些专用程序没有 64 位版本。技术上让它们在 64 位系统上运行是可能的，但你必须安装所有必要库的 32 位版本（参见第 5.4.5 节，“多架构支持”](#ch05s04.html_sect.multi-arch "5.4.5. Multi-Arch Support")），有时还需要使用 `setarch` 或 `linux32`（在 `util-linux` 包中）来欺骗应用程序系统属性。
+对于办公电脑（性能上的百分之几差异可以忽略不计），你必须记住某些专用程序没有 64 位版本。技术上让它们在 64 位系统上运行是可能的，但你必须安装所有必要库的 32 位版本（参见第 5.4.5 节，“多架构支持”](#ch05s04.html_sect.multi-arch "5.4.5. Multi-Arch Support")），有时还需要使用`setarch`或`linux32`（在`util-linux`包中）来欺骗应用程序系统属性。
 
 **实践中** 与现有 Windows 系统并行安装
 
@@ -1268,18 +1228,21 @@ BIOS（全称 Basic Input/Output System，基本输入输出系统）是包含�
 
 **基础知识** 引导加载程序
 
-引导加载程序是一个底层程序，负责在 BIOS 移交控制权后立即引导 Linux 内核。为了完成这项任务，它必须能够找到要启动的 Linux 内核。在 i386 和 amd64 架构上，最常用的两个程序是 `LILO`（两者中较老的）和 `GRUB`（它的现代替代品）。`Isolinux` 和 `Syslinux` 是经常用于从可移动介质启动的替代方案。
+引导加载程序是一个底层程序，负责在 BIOS 移交控制权后立即引导 Linux 内核。为了完成这项任务，它必须能够找到要启动的 Linux 内核。在 i386 和 amd64 架构上，最常用的两个程序是`LILO`（两者中较老的）和`GRUB`（它的现代替代品）。`Isolinux`和`Syslinux`是经常用于从可移动介质启动的替代方案。
 
-每个菜单项都隐藏了一个特定的命令行，可以在验证条目并启动之前按 `TAB` 键根据需要进行配置。“Help”菜单项会显示不同的帮助屏幕，详细说明提示符处提供的选项。除非极少数情况下，否则你很少需要使用此选项。
+每个菜单项都隐藏了一个特定的命令行，可以在验证条目并启动之前按`TAB`键根据需要进行配置。“Help”菜单项会显示不同的帮助屏幕，详细说明提示符处提供的选项。除非极少数情况下，否则你很少需要使用此选项。
 
-“专家（expert）”模式（可通过“Advanced options”菜单访问）详细列了过程中的所有可能选项，并允许在各个步骤之间导航而不让它们自动发生。小心，这种非常冗的模式可能会由于提供的众多配置选择而令人困惑。
+
+
+“专家（expert）”模式（可通过“Advanced options”菜单访问）详细列出了过程中的所有可能选项，并允许在各个步骤之间导航，而不让它们自动发生。小心，这种非常冗长的模式可能会由于提供的众多配置选择而令人困惑。
 
 图 4.1. 启动屏幕
+
 ![](img/inst-boot.png)
 
-一旦启动，安装程序将引导你逐步完成整个过程。本节详细介绍了这些步骤中的每一个。在这里，我们遵循从 amd64 DVD-ROM（更具体地说是安装程序的 rc1 版本）的安装过程；*netinst* 安装以及安装程序的最终版本可能会略有不同。我们还将介绍图形模式下的安装，但它与“经典”（文本模式）安装的唯一区别在于视觉外观。
+一旦启动，安装程序将引导你逐步完成整个过程。本节详细介绍了这些步骤中的每一个。在这里，我们遵循从 amd64 DVD-ROM（更具体地说是安装程序的 rc1 版本）的安装过程；`netinst` 安装以及安装程序的最终版本可能会略有不同。我们还将介绍图形模式下的安装，但它与“经典”（文本模式）安装的唯一区别在于视觉外观。
 
-### 4.2.2. 选择语言
+## 4.2.2. 选择语言
 
 安装程序以英语开始，但第一步允许用户选择在剩余过程中将使用的语言。例如，选择法语将提供一个完全翻译为法语的安装过程（并结果是得到一个配置为法语的系统）。此选择还被用于定义后续阶段中更相关的默认选项（特别是键盘布局）。
 
@@ -1289,23 +1252,31 @@ BIOS（全称 Basic Input/Output System，基本输入输出系统）是包含�
 
 在图形模式下，你可以像在已安装的图形桌面上一样正常使用鼠标。
 
+图 4.2. 选择语言
 
+![选择语言](img/inst-lang.png)
 
-
-
-# 图 4.2. 选择语言![选择语言](img/inst-lang.png)![选择语言](img/inst-lang-txt.png)
+![选择语言](img/inst-lang-txt.png)
 
 ## 4.2.3. 选择国家
 
 第二步是选择您所在的国家。结合语言，此信息将使程序提供最合适的键盘布局。这将影响时区的配置。在美国，建议使用标准的 QWERTY 键盘，并提供合适的时区选择。
 
-图 4.3. 选择国家![选择国家](img/inst-country.png)![选择国家](img/inst-country-txt.png)
+图 4.3. 选择国家
+
+![选择国家](img/inst-country.png)
+
+![选择国家](img/inst-country-txt.png)
 
 ## 4.2.4. 选择键盘布局
 
 建议的“美式英语”键盘对应于常规的 QWERTY 布局。
 
-图 4.4. 键盘的选择![键盘的选择](img/inst-keyboard.png)![键盘的选择](img/inst-keyboard-txt.png)
+图 4.4. 键盘的选择
+
+![键盘的选择](img/inst-keyboard.png)
+
+![键盘的选择](img/inst-keyboard-txt.png)
 
 ## 4.2.5. 检测硬件
 
@@ -1331,7 +1302,7 @@ BIOS（全称 Basic Input/Output System，基本输入输出系统）是包含�
 
 **提示** 不使用 DHCP 的配置
 
-如果本地网络配备了 DHCP 服务器，但您不想使用它（因为您更倾向于在安装期间为机器定义静态 IP 地址），您可以在从 CD-ROM 启动时添加 `netcfg/use_dhcp=false` 选项。您只需按 `TAB` 键进入所需的菜单项，并在按 `Enter` 键之前添加所需的选项即可。
+如果本地网络配备了 DHCP 服务器，但您不想使用它（因为您更倾向于在安装期间为机器定义静态 IP 地址），您可以在从 CD-ROM 启动时添加 `netcfg/use_dhcp=false` 选项。你只需按 `TAB` 键进入所需的菜单项，并在按 `Enter` 键之前添加所需的选项即可。
 
 **注意** 不要盲目操作
 
@@ -1339,13 +1310,15 @@ BIOS（全称 Basic Input/Output System，基本输入输出系统）是包含�
 
 ## 4.2.9. 管理员密码
 
-为机器管理员保留的超级用户 root 账户在安装期间自动创建；这就是为什么要求密码。安装程序还会要求确认密码，以防止发生以后难以修改的输入错误。注意，如果您想禁用 root 账户，可以让两个字段留空。在这种情况下，安装程序在下一步创建的第一个普通用户将通过 `sudo` 获得管理权限（请参见 第 8.9.4 节，“共享管理员权限”）。
+为机器管理员保留的超级用户 `root` 账户在安装期间自动创建；这就是为什么要求密码。安装程序还会要求确认密码，以防止发生以后难以修改的输入错误。注意，如果您想禁用 `root` 账户，可以让两个字段留空。在这种情况下，安装程序在下一步创建的第一个普通用户将通过 `sudo` 获得管理权限（请参见第 8.9.4 节，“共享管理员权限”）。
 
-图 4.5. 管理员密码![管理员密码](img/inst-rootpw.png)
+图 4.5. 管理员密码
+
+![管理员密码](img/inst-rootpw.png)
 
 **安全** 管理员密码
 
-root 用户的密码应该是长密码（12 个字符或更多）且无法被猜到的。事实上，任何连接到互联网的计算机（尤其是任何服务器）都会经常成为使用最显而密码的自动化连接尝试的目标。有时它甚至可能受到字典攻击，即测试许多单词和数字的组合作为密码。避免使用孩子或父母的名字、出生日期等：您的许多同事可能知道这些信息，而您很少希望让他们免费访问相关计算机。
+`root` 用户的密码应该是长密码（12 个字符或更多）且无法被猜到的。事实上，任何连接到互联网的计算机（尤其是任何服务器）都会经常成为使用最显而易见密码的自动化连接尝试的目标。有时它甚至可能受到字典攻击，即测试许多单词和数字的组合作为密码。避免使用孩子或父母的名字、出生日期等：您的许多同事可能知道这些信息，而您很少希望让他们免费访问相关计算机。
 
 这些说明同样适用于其他用户密码，但对于没有管理权限的用户来说，账户被破解的后果没那么严重。
 
@@ -1353,13 +1326,15 @@ root 用户的密码应该是长密码（12 个字符或更多）且无法被猜
 
 ## 4.2.10. 创建第一个用户
 
-Debian 还强制要求创建一个用户账户，以防管理员养成以 root 身份工作的坏习惯。预防原则意味着每个任务都以所需的最小权限执行，以限制人为错误造成的破坏。这就是为什么安装程序将要求此第一个用户的全名、用户名和密码（要求两次，以防止输入错误）。
+Debian 还强制要求创建一个用户账户，以防管理员养成以 `root` 身份工作的坏习惯。预防原则意味着每个任务都以所需的最小权限执行，以限制人为错误造成的破坏。这就是为什么安装程序将要求此第一个用户的全名、用户名和密码（要求两次，以防止输入错误）。
 
-图 4.6. 第一个用户的名称![第一个用户的名称](img/inst-username.png)
+图 4.6. 第一个用户的名称
 
-## 4.2.11. 配置时
+![第一个用户的名称](img/inst-username.png)
 
-如果网络可用，系统时钟将通过 NTP 服务器一次性更新。这样从第一次启动开始日志的时间戳就是正确的。为了让时间保持一致，需要在初始安装后设置 NTP 守护进程（参见 第 8.9.2 节，“时间同步”）。
+## 4.2.11. 配置时钟
+
+如果网络可用，系统时钟将通过 NTP 服务器一次性更新。这样从第一次启动开始日志的时间戳就是正确的。为了让时间保持一致，需要在初始安装后设置 NTP 守护进程（参见第 8.9.2 节，“时间同步”）。
 
 ## 4.2.12. 检测磁盘和其他设备
 
@@ -1375,25 +1350,27 @@ Debian 还强制要求创建一个用户账户，以防管理员养成以 root �
 
 幸运的是，分区软件有一个“引导”模式，可以为用户推荐分区——在大多数情况下，您只需验证软件的建议即可。
 
+图 4.7. 分区模式的选择
 
-
-
-
-# 图 4.7. 分区模式的选择![分区模式的选择](img/inst-partman.png)
+![分区模式的选择](img/inst-partman.png)
 
 分区工具的第一个界面提供了使用整个硬盘来创建各种分区的选项。对于一台将仅运行 Linux 的（新）计算机，此选项显然是最简单的，你可以选择“引导式 - 使用整个磁盘”（Guided - use entire disk）选项。如果电脑有两个硬盘分别用于两个操作系统，那么为每个硬盘设置一个驱动器也是一种便于分区的解决方案。在这两种情况下，下一个屏幕都允许你通过选择相应的条目来选择安装 Linux 的磁盘（例如，“SCSI1 (0,0,0) (sda) - 21.5 GB ATA QEMU HARDDISK”）。然后你开始引导式分区。
 
-# 图 4.8. 用于引导式分区的磁盘![用于引导式分区的磁盘](img/inst-partman-disk.png)
+图 4.8. 用于引导式分区的磁盘
+
+![用于引导式分区的磁盘](img/inst-partman-disk.png)
 
 引导式分区也可以设置 LVM 逻辑卷而不是分区（见下文）。由于后续操作相同，我们不再介绍“引导式 - 使用整个磁盘并设置 LVM”（Guided - use entire disk and set up LVM）选项（无论是否加密）。
 
 在其他情况下，当 Linux 必须与其他已存在的分区共同工作时，你需要选择手动分区。
 
-## 4.2.13.1. 引导式分区
+### 4.2.13.1. 引导式分区
 
 引导式分区工具提供了三种分区方法，对应不同的用途。
 
-# 图 4.9. 引导式分区![引导式分区](img/inst-autopartman-mode.png)
+图 4.9. 引导式分区
+
+![引导式分区](img/inst-autopartman-mode.png)
 
 第一种称为“所有文件在一个分区中”（All files in one partition）。整个 Linux 系统树存储在单个文件系统中，对应于根目录 `/`。这种简单且稳健的分区方式非常适合个人或单用户系统。事实上，将创建两个分区：第一个包含整个系统，第二个是虚拟内存（交换）。
 
@@ -1407,15 +1384,17 @@ Debian 还强制要求创建一个用户账户，以防管理员养成以 root �
 
 文件系统定义了数据在硬盘上的组织方式。每个现有的文件系统都有其优点和局限性。有些更稳健，另一些更有效：如果你非常了解需求，可以选择最合适的文件系统。已经经过了多种比较；似乎 `ReiserFS` 在读取许多小文件时特别高效；而 `XFS` 则在处理大文件时运行速度更快。`Ext4` 是 Debian 的默认文件系统，是一个很好的折中方案，它基于 Linux 历史上使用的前三个版本文件系统（`ext`、`ext2` 和 `ext3`）。`Ext4` 克服了 `ext3` 的某些局限性，特别适用于大容量硬盘。另一个选项是尝试极具前景的 `btrfs`，它包含了许多到今天仍需要使用 LVM 和/或 RAID 的功能。
 
-日志文件系统（如 `ext3`、`ext4`、`btrfs`、`reiserfs` 或 `xfs`）采取了特殊措施，以便在意外中断后能够返回之前的一致状态，而无需完全分析整个磁盘（如 `ext2` 系统）。这种功能通过填充日志来实现，日志描述了在实际执行之前要进行的操作。如果某个操作被中断，将从日志中“重放”它。相反，如果在更新日志期间发生中断，最后请求的更改将被简单忽略；正在写入的数据可能会丢失，但由于硬盘上的数据没有变化，它们保持了一致性。这无非是是应用于文件系统的事务处理机制。
+日志文件系统（如 `ext3`、`ext4`、`btrfs`、`reiserfs` 或 `xfs`）采取了特殊措施，以便在意外中断后能够返回之前的一致状态，而无需完全分析整个磁盘（如 `ext2` 系统）。这种功能通过填充日志来实现，日志描述了在实际执行之前要进行的操作。如果某个操作被中断，将从日志中“重放”它。相反，如果在更新日志期间发生中断，最后请求的更改将被简单忽略；正在写入的数据可能会丢失，但由于硬盘上的数据没有变化，它们保持了一致性。这无非是应用于文件系统的事务处理机制。
 
 ***
 
 在选择完分区类型后，软件会计算出一个建议并在屏幕上描述；用户随后可以根据需要对其修改。特别是，如果标准选择（`ext4`）不合适，你可以选择另一个文件系统。但在大多数情况下，建议的分区是合理的，可以通过选择“完成分区并将更改写入磁盘”（Finish partitioning and write changes to disk）条目来接受。
 
-# 图 4.10. 验证分区![验证分区](img/inst-partman-validation.png)
+图 4.10. 验证分区
 
-## 4.2.13.2. 手动分区
+![验证分区](img/inst-partman-validation.png)
+
+### 4.2.13.2. 手动分区
 
 手动分区提供了更大的灵活性，允许用户选择每个分区的用途和大小。此外，如果你想使用软件 RAID，这种模式是不可避免的。
 
@@ -1435,7 +1414,7 @@ Debian 安装程序在用手动模式进行分区时允许执行此操作。你�
 
 你可以通过选择磁盘来删除其上的所有分区。
 
-在选择磁盘上的空闲空间时，你可以手动创建一个新分区。你也可以通过引导式分区执行此操作，这对于包含其他操作系统的磁盘是一个有趣的解决方案，你可能希望以标准方式对其分区。更多信息请参见第 4.2.13.1 节 引导式分区。
+在选择磁盘上的空闲空间时，你可以手动创建一个新分区。你也可以通过引导式分区执行此操作，这对于包含其他操作系统的磁盘是一个有趣的解决方案，你可能希望以标准方式对其分区。更多信息请参见第 4.2.13.1 节“引导式分区”。
 
 ***
 
@@ -1444,8 +1423,6 @@ Debian 安装程序在用手动模式进行分区时允许执行此操作。你�
 挂载点是托管分区内容的目录树。因此，挂载在 `/home/` 的分区传统上包含用户数据。
 
 当此目录命名为 `/` 时，它被称为文件树的*根*（root），因此是托管 Debian 系统的分区根。
-
-***
 
 ***
 
@@ -1459,15 +1436,10 @@ Debian 安装程序在用手动模式进行分区时允许执行此操作。你�
 
 在选择分区时，你可以指示将使用它的方式：
 
--   格式化它并通过选择挂载点将其包含在文件树中；
--   将其作为交换分区；
--   使其成为“加密物理卷”（以保护某些分区数据的机密性，见下文）；
--   使其成为 LVM 物理卷（该概念在本章稍后部分详细讨论）；
-
-
-
-
-
+- 格式化它并通过选择挂载点将其包含在文件树中；
+- 将其作为交换分区；
+- 使其成为“加密物理卷”（以保护某些分区数据的机密性，见下文）；
+- 使其成为 LVM 物理卷（该概念在本章稍后部分详细讨论）；
 - 将其作为 RAID 设备（参见本章后文部分）；
 - 你也可以选择不使用它，从而保持其原状。
 
@@ -1475,27 +1447,27 @@ Debian 安装程序在用手动模式进行分区时允许执行此操作。你�
 
 某些类型的 RAID 允许将存储在硬盘上的信息复制，以防止在发生影响其中一个硬盘的硬件问题时导致数据丢失。Level 1 RAID 在另一个驱动器上保留硬盘的一个简单且相同的副本（镜像），而 Level 5 RAID 则将冗余数据分布在多个磁盘上，从而允许对故障磁盘进行完全重构。
 
-我们将仅描述实现最简单的 Level 1 RAID。第一步是在两个不同的硬盘上创建两个相同大小的分，并将它们标记为“RAID 物理卷”（physical volume for RAID）。
+我们将仅描述实现最简单的 Level 1 RAID。第一步是在两个不同的硬盘上创建两个相同大小的分区，并将它们标记为“RAID 物理卷”（physical volume for RAID）。
 
 然后你必须在分区工具中选择“配置软件 RAID”（Configure software RAID），将这两个分区合并为一个新的虚拟磁盘，并在配置屏幕中选择“创建 MD 设备”（Create MD device）。随后，你需要回答关于此新设备的一系列问题。第一个问题询问要使用的 RAID 级别，在我们的情况下将是“RAID1”。第二个问题询问活动设备的数量——在我们的情况下为两个，即需要包含在此 MD 设备中的分区数量。第三个问题是关于备用设备的数量——0；我们没有计划任何额外的磁盘来接替可能损坏的磁盘。最后一个问题要求你为 RAID 设备选择分区——这些就是我们为此目的预留的两个分区（确保你只选择了显式提到“raid”的分区）。
 
 回到主菜单，会出现一个全新的虚拟“RAID”磁盘。该磁盘以单个分区的形式呈现，该分区无法删除，但我们可以选择其使用方式（就像任何其他分区一样）。
 
-有关 RAID 功能的更多详细信息，请参阅 第 12.1.1 节，“软件 RAID”。
+有关 RAID 功能的更多详细信息，请参阅第 12.1.1 节，“软件 RAID”。
 
-### 4.2.13.4. 配置逻辑卷管理器 (LVM)
+### 4.2.13.4. 配置逻辑卷管理器（LVM）
 
 LVM 允许你创建跨越多个磁盘的“虚拟”分区。其优点有两点：分区的大小不再受限于单个磁盘，而是受限于累积卷；而且你可以随时调整现有分区的大小，可能在需要时添加额外磁盘后进行。
 
 LVM 使用了特定的术语：虚拟分区是“逻辑卷”（logical volume），它是“卷组”（volume group）的一部分，或者是多个“物理卷”（physical volumes）的关联。这些术语中的每一个实际上对应于“真实”分区（或软件 RAID 设备）。
 
-这种技术的工作方式非常简单：每个卷（无论是物理的逻辑的）都被分成相同大小的块，并由 LVM 使它们相互对应。添加新磁盘将创建一个新的物理卷，这些新块可以与任何卷组关联。因此被扩展的卷组中的所有分区都将拥有额外的空间供其扩展。
+这种技术的工作方式非常简单：每个卷（无论是物理的还是逻辑的）都被分成相同大小的块，并由 LVM 使它们相互对应。添加新磁盘将创建一个新的物理卷，这些新块可以与任何卷组关联。因此被扩展的卷组中的所有分区都将拥有额外的空间供其扩展。
 
-分区工具通过几个步骤配置 LVM。首先，你必须在现有磁盘上创建作为“LVM 物理卷”（physical volumes for LVM）的分区。要激活 LVM，你需要选择“配置逻辑卷管理器 (LVM)”（Configure the Logical Volume Manager），然后在同一个配置屏幕上选择“创建卷组”（Create a volume group），并在其中关联现有物理卷。最后，你可以在此卷组内创建逻辑卷。注意，自动分区系统可以自动执行所有步骤。
+分区工具通过几个步骤配置 LVM。首先，你必须在现有磁盘上创建作为“LVM 物理卷”（physical volumes for LVM）的分区。要激活 LVM，你需要选择“配置逻辑卷管理器（LVM）”（Configure the Logical Volume Manager），然后在同一个配置屏幕上选择“创建卷组”（Create a volume group），并在其中关联现有物理卷。最后，你可以在此卷组内创建逻辑卷。注意，自动分区系统可以自动执行所有步骤。
 
 在分区菜单中，每个物理卷将显示为带有单个分区的磁盘，该分区无法删除，但你可以根据需要使用它。
 
-LVM 的用法详细说明在 第 12.1.2 节，“LVM” 中。
+LVM 的用法详细说明在第 12.1.2 节，“LVM”中。
 
 ### 4.2.13.5. 设置加密分区
 
@@ -1504,6 +1476,8 @@ LVM 的用法详细说明在 第 12.1.2 节，“LVM” 中。
 ***
 
 **安全** 加密交换分区
+
+
 
 使用加密分区时，加密密钥存储在内存（RAM）中。由于获取此密钥可以解密数据，因此，避免留下可能被计算机或硬盘的潜在窃贼或维护技术人员访问的密钥副本至关重要。然而，这在笔记本电脑上很容易发生，因为在休眠时 RAM 的内容会存储在交换分区中。如果该分区没有加密，窃贼可能会访问密钥并使用它来解密加密分区中的数据。这就是为什么，当你使用加密分区时，必须也加密交换分区！
 
@@ -1515,7 +1489,7 @@ LVM 的用法详细说明在 第 12.1.2 节，“LVM” 中。
 
 ## 4.2.14. 安装基础系统
 
-此步骤不需要用户交互，将安装 Debian“基础系统”软件包。这包括管理 Debian 包的 `dpkg` 和 `apt` 工具，以及启动和使用系统所需的实用程序。
+此步骤不需要用户交互，将安装 Debian“基础系统”软件包。这包括管理 Debian 包的`dpkg`和`apt`工具，以及启动和使用系统所需的实用程序。
 
 图 4.11. 基础系统的安装![基础系统的安装](img/inst-basesystem.png)
 
@@ -1533,15 +1507,11 @@ LVM 的用法详细说明在 第 12.1.2 节，“LVM” 中。
 
 如果请求从网络获取软件包，接下来的两个问题允许你选择从哪里下载这些软件包，首先选择一个国家，然后选择该国家可用的镜像（镜像是托管 Debian 主归档所有文件副本的公共服务器）。
 
-
-
-
-
 ## 图 4.12. 选择 Debian 镜像![选择 Debian 镜像](img/inst-mirror.png)
 
-最后，程序建议使用 HTTP 代理。如果没有代理，将直接访问互联网。如果你输入 `http://proxy.falcot.com:3128`，`APT` 将使用 Falcot 的 `proxy/cache`，这是一种名为“Squid”的程序。你可以通过检查连接到同一网络的另一台机器上 Web 浏览器的配置来找到这些设置。
+最后，程序建议使用 HTTP 代理。如果没有代理，将直接访问互联网。如果你输入`http://proxy.falcot.com:3128`，`APT`将使用 Falcot 的`proxy/cache`，这是一种名为“Squid”的程序。你可以通过检查连接到同一网络的另一台机器上 Web 浏览器的配置来找到这些设置。
 
-随后，`Packages.xz` 和 `Sources.xz` 文件将自动下载，以更新 `APT` 识别的软件包列表。
+随后，`Packages.xz`和`Sources.xz`文件将自动下载，以更新`APT`识别的软件包列表。
 
 ***
 
@@ -1549,13 +1519,13 @@ LVM 的用法详细说明在 第 12.1.2 节，“LVM” 中。
 
 HTTP 代理是一个为网络用户转发 HTTP 请求的服务器。它有时通过保留传输过的文件的副本来加速下载（我们称之为代理/缓存，proxy/cache）。在某些情况下，它是访问外部 Web 服务器的唯一手段；在这种情况下，在安装过程中回答相应的问题至关重要，以便程序能够通过它下载 Debian 软件包。
 
-`Squid` 是 Falcot 公司提供此服务所服务器软件名称。
+`Squid`是 Falcot 公司提供此服务所服务器软件名称。
 
 ***
 
 ## 4.2.16. Debian 软件包流行度调查 (Popularity Contest)
 
-Debian 系统包含一个名为 `popularity-contest` 的软件包，其目的是编译软件包的使用统计数据。每周，该程序会收集已安装软件包和最近使用的软件包的信息，并匿名将这些信息发送到 Debian 项目服务器。然后，项目可以使用这些信息来确定每个软件包的相对重要性，这将影响分配给它们的优先级。特别是最“流行”的软件包将包含在安装 CD-ROM 中，这将方便那些不想下载或购买整套软件包的用户获取。
+Debian 系统包含一个名为`popularity-contest`的软件包，其目的是编译软件包的使用统计数据。每周，该程序会收集已安装软件包和最近使用的软件包的信息，并匿名将这些信息发送到 Debian 项目服务器。然后，项目可以使用这些信息来确定每个软件包的相对重要性，这将影响分配给它们的优先级。特别是最“流行”的软件包将包含在安装 CD-ROM 中，这将方便那些不想下载或购买整套软件包的用户获取。
 
 该软件包仅在需要时被激活，以尊重用户使用的机密性。
 
@@ -1563,7 +1533,7 @@ Debian 系统包含一个名为 `popularity-contest` 的软件包，其目的是
 
 以下步骤允许你以非常宽泛的范围选择机器的用途；十个建议的任务对应于要安装的软件包列表。实际将安装的软件包将在稍后进行精调和完成，但它以一种简单的方式提供了一个良好的起点。
 
-某些软件包还会根据检测到的硬件自动安装（得益于 `discover` 软件包中的 `discover-pkginstall` 程序）。
+某些软件包还会根据检测到的硬件自动安装（得益于`discover`软件包中的`discover-pkginstall`程序）。
 
 图 4.13. 任务选择![任务选择](img/inst-tasksel.png)
 
@@ -1577,25 +1547,25 @@ Debian 系统包含一个名为 `popularity-contest` 的软件包，其目的是
 
 Debian 安装过程中的此阶段会检测已安装在计算机上的操作系统，并自动在启动菜单添加相应的条目，但并不是所有的安装程序都会这样做。
 
-特别是，如果你之后安装（或重新安装）Windows，引导加载程序将被擦除。Debian 仍然留在硬盘上，但将无法从启动菜单访问（Windows 10 除外，它仍然可以通过 Windows 恢复控制台访问）。此时你将必须以 `rescue` 模式启动 Debian 安装系统，以设置一个不那么排他的引导加载程序。此操作在安装手册中有详细描述。
+特别是，如果你之后安装（或重新安装）Windows，引导加载程序将被擦除。Debian 仍然留在硬盘上，但将无法从启动菜单访问（Windows 10 除外，它仍然可以通过 Windows 恢复控制台访问）。此时你将必须以`rescue`模式启动 Debian 安装系统，以设置一个不那么排他的引导加载程序。此操作在安装手册中有详细描述。
 
 → [`www.debian.org/releases/stable/amd64/ch08s06`](https://www.debian.org/releases/stable/amd64/ch08s06)
 
 ***
 
-默认情况下，`GRUB` 提供的菜单包含所有已安装的 Linux 内核以及检测到的任何其他操作系统。这就是为什么你应该接受将其安装在主引导记录（MBR）中的建议。由于保留旧版本的内核可以在可以在最近安装的内核存在缺陷或不适应硬件时保留启动相同系统的能力，因此保留安装几个旧版本的内核通常是有意义的。
+默认情况下，`GRUB`提供的菜单包含所有已安装的 Linux 内核以及检测到的任何其他操作系统。这就是为什么你应该接受将其安装在主引导记录（MBR）中的建议。由于保留旧版本的内核可以在可以在最近安装的内核存在缺陷或不适应硬件时保留启动相同系统的能力，因此保留安装几个旧版本的内核通常是有意义的。
 
-`GRUB` 是 Debian 安装的默认引导加载程序，得益于它的技术优越性：它与大多数文件系统兼容，因此在每次安装新内核后不需要更新，因为它在启动期间读取配置并找到新内核的确切位置。`GRUB` 版本 1（现在被称为“Grub Legacy”）无法处理 LVM 和软件 RAID 的所有组合；默认安装的版本 2 则更加完整。在某些情况下，可能仍然建议安装 `LILO`（另一个引导加载程序）；安装程序会自动建议它。
+`GRUB`是 Debian 安装的默认引导加载程序，得益于它的技术优越性：它与大多数文件系统兼容，因此在每次安装新内核后不需要更新，因为它在启动期间读取配置并找到新内核的确切位置。`GRUB`版本 1（现在被称为“Grub Legacy”）无法处理 LVM 和软件 RAID 的所有组合；默认安装的版本 2 则更加完整。在某些情况下，可能仍然建议安装`LILO`（另一个引导加载程序）；安装程序会自动建议它。
 
-值得注意的是，`GRUB` 并不是单一的引导加载程序，它更是一个适用于不同情况的引导加载程序集合。由 `GRUB` 源码包构建的众多二进制包反映了这一点：`grub-efi-amd64` 用于 UEFI 模式下的 64 位 PC 启动，`grub-efi-ia32` 用于 UEFI 模式下的 32 位 PC 启动，`grub-pc` 用于 BIOS 模式下的 PC 启动，`grub-uboot` 用于 ARM 计算机等。
+值得注意的是，`GRUB`并不是单一的引导加载程序，它更是一个适用于不同情况的引导加载程序集合。由`GRUB`源码包构建的众多二进制包反映了这一点：`grub-efi-amd64`用于 UEFI 模式下的 64 位 PC 启动，`grub-efi-ia32`用于 UEFI 模式下的 32 位 PC 启动，`grub-pc`用于 BIOS 模式下的 PC 启动，`grub-uboot`用于 ARM 计算机等。
 
-有关配置 `GRUB` 的更多信息，请参阅第 8.8.3 节，“GRUB 2 配置”](#ch08s08.html_sect.config-grub "8.8.3. GRUB 2 Configuration")。
+有关配置`GRUB`的更多信息，请参阅第 8.8.3 节，“GRUB 2 配置”](#ch08s08.html_sect.config-grub "8.8.3. GRUB 2 Configuration")。
 
 ***
 
 ### 文化：安全启动与 shim 引导加载程序
 
-安全启动（Secure Boot）是一种确保你只运行由操作系统供应商验证软件的技术。为了完成工作，启动序列中的每个元素都会验证它将执行的下一个软件组件。在最深层次，UEFI 固件嵌入了微软提供的加密密钥以检查引导加载程序的签名，确保执行安全。由于由微软签名是一个漫长的过程，Debian 决定不直接签名 `GRUB`，而是使用一个名为 `shim` 的中间加载程序，它几乎不需要更改，唯一作用是检查 Debian 提供的签名并执行 `GRUB`。在栈下游，`GRUB` 会对内核进行类似的检查，内核可能会阻止某些更改系统完整性的操作。
+安全启动（Secure Boot）是一种确保你只运行由操作系统供应商验证软件的技术。为了完成工作，启动序列中的每个元素都会验证它将执行的下一个软件组件。在最深层次，UEFI 固件嵌入了微软提供的加密密钥以检查引导加载程序的签名，确保执行安全。由于由微软签名是一个漫长的过程，Debian 决定不直接签名`GRUB`，而是使用一个名为`shim`的中间加载程序，它几乎不需要更改，唯一作用是检查 Debian 提供的签名并执行`GRUB`。在栈下游，`GRUB`会对内核进行类似的检查，内核可能会阻止某些更改系统完整性的操作。
 
 Debian 10 是第一个支持安全启动的发行版本。在此，需要在 BIOS 或 UEFI 提供的系统设置界面禁用该功能。
 
@@ -1607,7 +1577,7 @@ Debian 10 是第一个支持安全启动的发行版本。在此，需要在 BIO
 
 # 4.3 首次启动后
 
-如果你激活了“Debian 桌面环境”任务但没有选择任何桌面（或选择了“GNOME”），计算机将显示 `gdm3` 登录管理器。
+如果你激活了“Debian 桌面环境”任务但没有选择任何桌面（或选择了“GNOME”），计算机将显示`gdm3`登录管理器。
 
 图 4.14. 首次启动![首次启动](img/inst-gdm.png)
 
@@ -1615,15 +1585,11 @@ Debian 10 是第一个支持安全启动的发行版本。在此，需要在 BIO
 
 ## 4.3.1. 安装额外软件
 
-安装的软件包对应于安装时选择的配置，但不一定实际用途。因此，你可能希望使用软件包管理工具来精调已安装软件包的选择。两个常用的工具（如果选择了“Debian 桌面环境”配置则会安装）是 `apt`（从命令行访问）和 `synaptic`（菜单中的“Synaptic 软件包管理器”）。
+安装的软件包对应于安装时选择的配置，但不一定实际用途。因此，你可能希望使用软件包管理工具来精调已安装软件包的选择。两个常用的工具（如果选择了“Debian 桌面环境”配置则会安装）是`apt`（从命令行访问）和`synaptic`（菜单中的“Synaptic 软件包管理器”）。
 
-为了方便安装协调的程序组，Debian 创建了特定用途的“任务”（邮件服务器、文件服务器等）。你已经在安装期间有机会机会选择它们，并且由于软件包管理工具可以再次访问它们，例如 `aptitude`（任务列在独立章节中）和 `synaptic`（通过菜单 编辑 → 按任务标记软件包…）。
+为了方便安装协调的程序组，Debian 创建了特定用途的“任务”（邮件服务器、文件服务器等）。你已经在安装期间有机会机会选择它们，并且由于软件包管理工具可以再次访问它们，例如`aptitude`（任务列在独立章节中）和`synaptic`（通过菜单 编辑 → 按任务标记软件包…）。
 
-
-
-
-
-Aptitude 是 APT 在全屏文本模式下的一个界面。它允许用户根据各种类别（已安装或未安装的包、按任务、按章节等）浏览可用软件包列表，并查看每个包的所有可用信息（依赖关系、冲突、描述等）。每个软件包都可以被标记为“安装”（待安装，使用 `+` 键）或“移除”（待移除，使用 `-` 键）。一旦你通过 `g` 键（“g”代表“go!”）确认了这些操作，所有操作都将同时执行。如果你忘记了某些程序，不用担心；在初始安装完成后，你可以再次运行 `aptitude`。
+Aptitude 是 APT 在全屏文本模式下的一个界面。它允许用户根据各种类别（已安装或未安装的包、按任务、按章节等）浏览可用软件包列表，并查看每个包的所有可用信息（依赖关系、冲突、描述等）。每个软件包都可以被标记为“安装”（待安装，使用`+`键）或“移除”（待移除，使用`-`键）。一旦你通过`g`键（“g”代表“go!”）确认了这些操作，所有操作都将同时执行。如果你忘记了某些程序，不用担心；在初始安装完成后，你可以再次运行`aptitude`。
 
 ***
 
@@ -1633,7 +1599,7 @@ Aptitude 是 APT 在全屏文本模式下的一个界面。它允许用户根据
 
 ***
 
-当然，也可以不选择任何要安装的任务。在这种情况下，你可以使用 `apt` 或 `aptitude` 命令（两者都可以从命令行访问）手动安装所需的软件。
+当然，也可以不选择任何要安装的任务。在这种情况下，你可以使用`apt`或`aptitude`命令（两者都可以从命令行访问）手动安装所需的软件。
 
 ***
 
@@ -1647,31 +1613,31 @@ Aptitude 是 APT 在全屏文本模式下的一个界面。它允许用户根据
 
 ## 4.3.2. 升级系统
 
-通常需要首次执行 `apt upgrade`（一个用于自动更新已安装程序的命令），特别是对于自最新 Debian 稳定版发布以来可能发布的安全更新。这些更新可能会通过 `debconf`（Debian 标准配置工具）涉及一些额外的问题。有关由 `apt` 执行的这些更新的更多信息，请参阅第 6.2.3 节，“系统升级”。
+通常需要首次执行`apt upgrade`（一个用于自动更新已安装程序的命令），特别是对于自最新 Debian 稳定版发布以来可能发布的安全更新。这些更新可能会通过`debconf`（Debian 标准配置工具）涉及一些额外的问题。有关由`apt`执行的这些更新的更多信息，请参阅第 6.2.3 节，“系统升级”。
 
 # 第 5 章：软件包系统：工具和基本原理
 
-作为一名 Debian 系统管理员，你将经常处理 `.deb` 软件包，因为它们包含了一致的功能单元（应用程序、文档等），这些单元便于单元的安装和维护。因此，了解它们是什么以及如何使用它们是一个好主意。
+作为一名 Debian 系统管理员，你将经常处理`.deb`软件包，因为它们包含了一致的功能单元（应用程序、文档等），这些单元便于单元的安装和维护。因此，了解它们是什么以及如何使用它们是一个好主意。
 
-本章描述了“二进制”包和“源”包的结构和内容。前者是 `dpkg` 直接使用的文件，而后者包含源代码以及构建二进制包的指令。
+本章描述了“二进制”包和“源”包的结构和内容。前者是`dpkg`直接使用的文件，而后者包含源代码以及构建二进制包的指令。
 
 ## 5.1. 二进制包的结构
 
-Debian 软件包格式的设计使得其内容可以在任何具有经典命令 `ar`、`tar` 和 `xz`（有时是 `gzip` 或 `bzip2`）的 Unix 系统上提取。这个看似微不足道的属性对于可移植性和灾难恢复至关重要。
+Debian 软件包格式的设计使得其内容可以在任何具有经典命令`ar`、`tar`和`xz`（有时是`gzip`或`bzip2`）的 Unix 系统上提取。这个看似微不足道的属性对于可移植性和灾难恢复至关重要。
 
-例如，假设你不小心删除了 `dpkg` 程序，导致你无法再安装 Debian 软件包。由于 `dpkg` 本身就是一个 Debian 软件包，你的系统似乎完蛋了……幸运的是，你知道软件包的格式，因此可以[下载](https://www.debian.org/distrib/packages#search_packages) dpkg 软件包的 `.deb` 文件并手动安装（参见侧边栏 *TOOLS dpkg, APT and ar*）。如果由于某种不幸，一个或多个程序 `ar`、`tar` 或 `gzip`/`xz`/`bzip2` 消失，你只需要从另一个系统拷贝缺失的程序（由于这些程序都是完全独立运行的，没有依赖关系，简单的拷贝即可）。如果你的系统遭遇了更糟糕的运气，甚至这些也不起作用（可能缺少了深层系统库？），你应该尝试 `busybox` 的静态版本（由 `busybox-static` 软件包提供），它更加自成一体，并提供了 `busybox ar`、`busybox tar` 和 `busybox xz` 等子命令。
+例如，假设你不小心删除了`dpkg`程序，导致你无法再安装 Debian 软件包。由于`dpkg`本身就是一个 Debian 软件包，你的系统似乎完蛋了……幸运的是，你知道软件包的格式，因此可以[下载](https://www.debian.org/distrib/packages#search_packages) dpkg 软件包的`.deb`文件并手动安装（参见侧边栏 *TOOLS dpkg, APT and ar*）。如果由于某种不幸，一个或多个程序`ar`、`tar`或`gzip`/`xz`/`bzip2`消失，你只需要从另一个系统拷贝缺失的程序（由于这些程序都是完全独立运行的，没有依赖关系，简单的拷贝即可）。如果你的系统遭遇了更糟糕的运气，甚至这些也不起作用（可能缺少了深层系统库？），你应该尝试`busybox`的静态版本（由`busybox-static`软件包提供），它更加自成一体，并提供了`busybox ar`、`busybox tar`和`busybox xz`等子命令。
 
 *万一发生不幸，你最好也有系统的备份（参见第 9.10 节，“备份”）。*
 
 ***
 
-**工具** `dpkg`、`APT` 和 `ar`
+**工具** `dpkg`、`APT`和`ar`
 
-`dpkg` 是处理 `.deb` 文件（二进制包）的程序，特别是提取、分析和解包它们。
+`dpkg`是处理`.deb`文件（二进制包）的程序，特别是提取、分析和解包它们。
 
 `APT`（“Advanced Packaging Tool”的缩写）是一组程序，允许对系统执行更高级别的修改：安装或删除软件包（同时保持依赖关系满足）、更新和升级系统、列出可用软件包等。
 
-至于 `ar` 程序，它允许处理同名文件：`ar t *archive*` 显示归档中包含的文件列表，`ar x *archive*` 将文件从归档提取到当前工作目录，`ar d *archive* *file* 从归档中删除文件等。它的 man 页面（`ar(1)`）记录了它所有其他功能。`ar` 是一个非常原始的工具，Unix 管理员只会在偶尔使用，但管理员经常使用 `tar`，这是一种更进化的归档和文件管理工具。这就是为什么在删除后很容易恢复 `dpkg`。你只需要下载 Debian 软件包并从系统中提取 `data.xz`：
+至于`ar`程序，它允许处理同名文件：`ar t *archive*`显示归档中包含的文件列表，`ar x *archive*`将文件从归档提取到当前工作目录，`ar d *archive* *file*`从归档中删除文件等。它的 man 页面（`ar(1)`）记录了它所有其他功能。`ar`是一个非常原始的工具，Unix 管理员只会在偶尔使用，但管理员经常使用`tar`，这是一种更进化的归档和文件管理工具。这就是为什么在删除后很容易恢复`dpkg`。你只需要下载 Debian 软件包并从系统中提取`data.xz`：
 
 ```bash
 # 在系统根目录（/）下
@@ -1686,13 +1652,13 @@ Debian 软件包格式的设计使得其内容可以在任何具有经典命令 
 
 **回归基础**  帮助页符号
 
-对于初学者来说，在文献中找到“ar(1)”的引用可能会令人困惑。这种符号也用于区分由 `printf(1)` 指代的 `printf` 命令和 C 语言中的 `printf` 函数，后者可以称为 `printf(3)`。
+对于初学者来说，在文献中找到“ar(1)”的引用可能会令人困惑。这种符号也用于区分由`printf(1)`指代的`printf`命令和 C 语言中的`printf`函数，后者可以称为`printf(3)`。
 
 Debian 第 7 章，*解决问题和相关信息* 详细讨论了帮助页（参见第 7.1.1 节，“帮助页”](#ch07.html_sect.manual-pages "7.1.1. 帮助页")）。
 
 ***
 
-查看 `.deb` 文件的内容：
+查看`.deb`文件的内容：
 
 ```bash
 $ ar t dpkg_19.7.amd4.deb
@@ -1708,35 +1674,33 @@ $ cat debian-binary
 2.0
 ```
 
-如所示，Debian 软件包的 `ar` 归档由三个文件组成：
+如所示，Debian 软件包的`ar`归档由三个文件组成：
 
 `debian-binary`
 
-这是一个文本文件，仅指示 `.deb` 文件软件包格式的版本。在 Debian Buster 中版本为 2.0。
+这是一个文本文件，仅指示`.deb`文件软件包格式的版本。在 Debian Buster 中版本为 2.0。
 
 `control.tar.xz`
 
 该存档文件包含所有可用元数据，如软件包的名称和版本，以及一些运行的脚本。某些元数据允许包管理工具判断是否可以安装或卸载，例如根据已安装的软件包列表，以及发布的文件是否被本地修改过。
 
-
-
-
-
 `data.tar.xz`, `data.tar.bz2`, `data.tar.gz`
 
-该归包包含从包中提取的所有文件；可执行文件、库、文档等都存储在此处。软件包可能会使用不同的压缩格式，在这种情况下，文件名将根据 `xz`、`bzip2` 或 `gzip` 进行命名。
+该归包包含从包中提取的所有文件；可执行文件、库、文档等都存储在此处。软件包可能会使用不同的压缩格式，在这种情况下，文件名将根据`xz`、`bzip2`或`gzip`进行命名。
 
 # 5.2. 软件包元信息 (Package Meta-Information)
 
 Debian 软件包不仅是一个用于安装的文件归包。它还是更大整体的一部分，并描述了它与其他 Debian 软件包的关系（要求、依赖、冲突、建议）。它还提供了脚本，允许在软件包生命期的不同阶段（安装、升级、卸载）执行命令。这些数据由软件包管理工具使用，但不是软件包本身的一部分；在软件包内部，这些数据被称为“元信息”（关于其他信息的信息）。
 
-## 5.2.1. 描述：`control` 文件
+## 5.2.1. 描述：`control`文件
 
-该文件使用了类似于邮件头部的结构（如 RFC 2822 所定义），并在 Debian 策略以及 `deb-control(5)` 和 `deb822(5)` 手页中进行了详细描述。
+该文件使用了类似于邮件头部的结构（如 RFC 2822 所定义），并在 Debian 策略以及`deb-control(5)`和`deb822(5)`手页中进行了详细描述。
 
 → [`www.debian.org/doc/debian-policy/ch-controlfields.html`](https://www.debian.org/doc/debian-policy/ch-controlfields.html)
 
-例如，对于 `apt`，`control` 文件所示：
+例如，对于`apt`，`control`文件所示：
+
+
 
 ```
 apt-cache show apt
@@ -1755,13 +1719,11 @@ Package: apt Version: 1.8.2 Installed-Size: 4064 Maintainer: APT Development Tea
 
 该文件使用了类似于邮件头部的结构（如 RFC 2822 所定义），并在 Debian 策略以及 `deb-control(5)` 和 `deb822(5)` 手页中进行了详细描述。
 
-
-
 你应该始终安装“推荐的”（recommended）包，除非你确切知道不需要它们。这现在已是 `APT` 的默认行为，除非另有配置。相反，除非你知道为什么需要它们，否则没有必要安装“建议的”（suggested）包。`apt` 的行为可以通过使用 `APT::Install-Recommends` 和 `APT::Install-Suggests` 配置选项，或相应的命令行选项 `--[no-]install-recommends` 和 `--[no-]install-suggests` 来控制。
 
 `Enhances` 字段也描述了一种建议，但语境有所不同。它确实位于“被建议的包”中，而不是位于从该建议中获益的包中。它的意义在于，可以在不修改相关包的情况下添加建议。因此，一个程序的所有附加组件、插件和其他扩展都可能出现在与该软件相关的建议列表中。尽管这个最后一个字段已经存在多年，但像 `apt` 或 `synaptic` 等程序在很大程度上仍然忽略了它。它的目的是让 `Enhances` 字段提供的建议除了传统的建议（在 `Suggests` 字段中找到）之外，也能显示给用户。
 
-***
+---
 
 ### 5.2.1.2. 冲突：`Conflicts` 字段
 
@@ -1781,7 +1743,7 @@ Package: apt Version: 1.8.2 Installed-Size: 4064 Maintainer: APT Development Tea
 
 该字段引入了非常有趣的“虚拟包”（virtual package）概念。它有许多作用，但其中两个尤为重要。第一个作用是使用虚拟包将通用服务与其关联（该包“提供”了该服务）。第二个作用表示一个包完全替换了另一个包，并且为了这个目的，它还可以满足另一个包本可以满足的依赖。因此，可以在不使用相同包名的情况下创建一个替换包。
 
-***
+---
 
 *词汇表* 元包（Meta-package）与虚拟包（virtual package）
 
@@ -1789,13 +1751,13 @@ Package: apt Version: 1.8.2 Installed-Size: 4064 Maintainer: APT Development Tea
 
 然而，虚拟包在物理上并不存在；它们只是根据共同的、逻辑标准（提供的服务、与标准程序或预存包的兼容性等）识别真实包的手段。
 
-***
+---
 
 ## 5.2.1.4.1. 提供“服务”
 
 让我们通过示例更详细地讨论第一种情况：所有的邮件服务器，如 `postfix` 或 `sendmail`都被认为“提供” `mail-transport-agent` 虚拟包。因此，任何需要此服务才能运行的包（例如，邮件列表管理器，如 `smartlist` 或 `sympa`）只需在其依赖中声明它需要 `mail-transport-agent`，而不是指定一个庞大但不完整的可能解决方案列表（例如 `postfix | sendmail | exim4 | …`）。此外，在同一台机器上安装两个邮件服务器是没用的，这就是为什么这些包中的每个包都声明与 `mail-transport-agent` 虚拟包冲突。系统会忽略包与其自身之间的冲突，但这种技术将禁止并排安装两个邮件服务器。
 
-***
+---
 
 *Debian 策略* 虚拟包列表
 
@@ -1805,7 +1767,7 @@ Package: apt Version: 1.8.2 Installed-Size: 4064 Maintainer: APT Development Tea
 
 → [`www.debian.org/doc/packaging-manuals/virtual-package-names-list.txt`](http://www.debian.org/doc/packaging-manuals/virtual-package-names-list.txt)
 
-***
+---
 
 #### 5.2.1.4.2. 与另一个包的可交换性
 
@@ -1813,18 +1775,19 @@ Package: apt Version: 1.8.2 Installed-Size: 4064 Maintainer: APT Development Tea
 
 图 5.1 此功能非常有用，因为永远无法预测开发的变迁，并且需要对过时的软件进行重命名或其他替换。
 
-***
+---
 
 *回归基础* Perl，一种编程语言
 
 Perl（Practical Extraction and Report Language）是一种非常非常流行的编程语言。它有许多现成的模块，涵盖了广泛的应用，并由 `CPAN`（Comprehensive Perl Archive Network）服务器发布，这是一个详尽的 Perl 包网络。
 
 → [`www.perl.org/`](https://www.perl.org/)
+
 → [`www.cpan.org/`](https://www.cpan.org/)
 
 由于它是解释型语言，用 Perl 编写的程序在执行之前不需要编译。这就是为什么它们被称为“Perl ”。
 
-***
+---
 
 ## 5.2.1.4.3. 过去的局限性
 
@@ -1834,17 +1797,13 @@ Perl（Practical Extraction and Report Language）是一种非常非常流行的
 
 ### 5.2.1.5. 替换文件：`Replaces` 字段
 
-
-
-
-
 `Replaces` 字段表示该包包含了另一个包中也存在的文件，但该包有权合法替换这些文件。如果没有此指定，`dpkg` 将失败，并提示它无法覆盖另一个包的文件（从技术上讲，可以使用 `--force-overwrite` 选项强制执行，但这不被认为是标准操作）。这有助于识别潜在问题，并要求维护者在决定是否添加此类字段之前对相关问题进行研究。
 
 当包名更改或一个包被包含在另一个包中时，使用此字段是合理的。当维护者决定在从同一个源包生成的多个二进制包之间以不同的方式分发文件时也会发生这种情况：被替换的文件不再属于旧包，而只属于新包。
 
 如果一个已安装包中的所有文件都已被替换，则该包被认为已从移除。最后，该字段还会促使 `dpkg` 在发生冲突时移除被替换的包。
 
-* * *
+---
 
 ### 进阶 `Tag` 字段
 
@@ -1852,13 +1811,13 @@ Perl（Practical Extraction and Report Language）是一种非常非常流行的
 
 → [`wiki.debian.org/Debtags`](https://wiki.debian.org/Debtags)
 
-* * *
+---
 
 ## 5.2.2. 配置脚本
 
 除了 `control` 文件外，每个 Debian 包的 `control.tar.gz` 存档可能包含许多脚本，这些脚本由 `dpkg` 在处理包的不同阶段调用。Debian 策略（Debian Policy）详细描述了[可能的情况](https://www.debian.org/doc/debian-policy/ch-maintainerscripts.html)，规定了所调用的脚本以及它们接收的参数。这些序列可能是复杂的，因为如果其中一个脚本失败，`dpkg` 将尝试通过取消正在进行的安装或移除（在可能的情况下）来返回满意的状态。
 
-* * *
+---
 
 ### 进阶 `dpkg` 数据库
 
@@ -1866,38 +1825,44 @@ Perl（Practical Extraction and Report Language）是一种非常非常流行的
 
 `/var/lib/dpkg/status` 文件包含了一系列数据块（格式类似于著名的邮件头，RFC 2822），描述了每个包的状态。已安装包的 `control` 文件的信息也被复制到那里。
 
-* * *
+---
 
 通常情况下，`preinst` 脚本在包安装之前执行，而 `postinst` 紧随其后执行。同样，`prerm` 在移除包之前被调用，`postrm` 在之后被调用。包的更新等同于移除旧版本并安装新版本。这里无法详细描述所有可能的情况，但我们将讨论最常见的两种情况：安装/更新和移除。
 
-* * *
+---
 
 ### 注意 脚本的符号名称
 
 本节描述的序列通过特定的特定名称调用配置脚本，例如 `old-prerm` 或 `new-postinst`。它们分别是包含在包的旧版本中（更新前安装）的 `prerm` 脚本，以及包含在新版本中（通过更新安装）的 `postinst` 脚本。
 
-* * *
-
-* * *
+---
 
 ### 提示 状态图
 
 Manoj Srivastava 和 Margarita Manterola 制作了以下图，解释 `dpkg` 如何调用配置脚本。
 
-→ [`people.debian.org/~srivasta/MaintainerScripts.html`](https://people.debian.org/~srivasta/MaintainerScripts.html)→ [`www.debian.org/doc/debian-policy/ap-flowcharts.html`](https://www.debian.org/doc/debian-policy/ap-flowcharts.html)
+→ [`people.debian.org/~srivasta/MaintainerScripts.html`](https://people.debian.org/~srivasta/MaintainerScripts.html)
 
-* * *
+→ [`www.debian.org/doc/debian-policy/ap-flowcharts.html`](https://www.debian.org/doc/debian-policy/ap-flowcharts.html)
+
+---
 
 ## 5.2.2.1. 安装与升级
 
 安装（或更新）期间发生如下：
 
 1.  对于更新，`dpkg` 调用 `old-prerm upgrade `new-version``。
+
 2.  同样对于更新，`dpkg` 随后执行 `new-preinst upgrade `old-version``；对于首次安装，它执行 `new-preinst install`。如果该包在此之前已安装并移除（但未彻底清除，因为保留了配置文件），则它可能会在最后一个参数中添加旧版本。
+
 3.  然后解压新包文件。如果文件已存在，则会被替换，但会临时创建一个备份副本。
+
 4.  对于更新，`dpkg` 执行 `old-postrm upgrade `new-version``。
+
 5.  `dpkg` 更新所有内部数据（文件列表、配置脚本等）并移除被替换文件的备份。这是不可回头的点：`dpkg` 不再能够访问所有这些文件。
+
 6.  `dpkg` 更新配置文件，在无法自动管理此任务时会询问用户做决定。关于此过程的细节请见第 5.2.3 节“校验和”。
+
 7.  最后，`dpkg` 通过执行 `new-postinst configure `last-version 来配置包。
 
 ## 5.2.2.2. 包移除
@@ -1905,79 +1870,70 @@ Manoj Srivastava 和 Margarita Manterola 制作了以下图，解释 `dpkg` 如�
 移除期间发生如下：
 
 1.  `dpkg` 调用 `prerm remove`。
-2.  `dpkg` 移除包的所有文件，配置文件和配置脚本除外。
-3.  `dpkg` 执行 `postrm remove`。除了 `postrm` 之外的所有配置脚本均被移除。如果用户没有使用“清除”选项，进程在此停止。
-4.  对于包的完全清除（使用命令 `dpkg --purge` 或 `dpkg -P`），配置文件也被删除，以及若干副本（*.dpkg-tmp`, `*.dpkg-old`, `*.dpkg-new`）和临时文件；`dpkg` 随后执行 `postrm purge`。
 
-* * *
+2.  `dpkg` 移除包的所有文件，配置文件和配置脚本除外。
+
+3.  `dpkg` 执行 `postrm remove`。除了 `postrm` 之外的所有配置脚本均被移除。如果用户没有使用“清除”选项，进程在此停止。
+
+
+
+4. 对于包的完全清除（使用命令`dpkg --purge`或`dpkg -P`），配置文件也被删除，以及若干副本（`*.dpkg-tmp`、`*.dpkg-old`、`*.dpkg-new`）和临时文件；`dpkg`随后执行`postrm purge`。
 
 ### 词汇 清除
 
 移除 Debian 包时，会保留配置文件以便重新安装。同样，守护产生的数据（例如 LDAP 服务器目录的内容或 SQL 数据库的内容）通常会被保留。
 
-要移除与包相关的所有数据，需要“清除”该包，命令为 `dpkg -P `package``、`apt-get remove --purge `package`` 或 `aptitude purge `package``。
+要移除与包相关的所有数据，需要“清除”该包，命令为`dpkg -P package`、`apt-get remove --purge package`或`aptitude purge package`。
 
 考虑到此类数据删除决定性，不应轻率。
 
-* * *
+上述四个脚本由`config`脚本补充，使用`debconf`的包通过它获取用户的配置信息。在安装期间，该脚本详细定义了`debconf`提问的问题。响应被记录在`debconf`数据库中供以后参考。`apt`通常在逐个安装包之前执行该脚本，以便将所有问题分组并在过程开始时向用户询问。安装前和安装后脚本就可以根据这些信息按照用户的意愿进行操作。
 
-上述四个脚本由 `config` 脚本补充，使用 `debconf` 的包通过它获取用户的配置信息。在安装期间，该脚本详细定义了 `debconf` 提问的问题。响应被记录在 `debconf` 数据库中供以后参考。`apt` 通常在逐个安装包之前执行该脚本，以便将所有问题分组并在过程开始时向用户询问。安装前和安装后脚本就可以根据这些信息按照用户的意愿进行操作。
+### 工具 debconf
 
-* * *
+`debconf`的创建是为了解决 Debian 中一个反复出现的问题。以前，所有没有基本配置无法运行的 Debian 软件包通常会在`postinst` shell 脚本（以及类似的脚本）中通过调用`echo`和`read`命令来提问。但这意味着在进行大型安装或更新期间，用户必须守在电脑旁，以回答随时可能出现的各种问题。得益于`debconf`工具，这些手动交互现在几乎被完全消除了。
 
-### 工具 **debconf**
-
-
-
-
-
-`debconf` 的创建是为了解决 Debian 中一个反复出现的问题。以前，所有没有基本配置无法运行的 Debian 软件包通常会在 `postinst` shell 脚本（以及类似的脚本）中通过调用 `echo` 和 `read` 命令来提问。但这意味着在进行大型安装或更新期间，用户必须守在电脑旁，以回答随时可能出现的各种问题。得益于 `debconf` 工具，这些手动交互现在几乎被完全消除了。
-
-`debconf` 有许多许多的特性：它要求开发者指定用户交互；它允许对显示给用户的所有字符串进行本地化（所有翻译都存储在描述交互的 `templates` 文件中）；它具有不同的前端向用户显示问题（文本模式、图形模式、非交互模式）；而且它允许创建一个响应中心数据库，以便与多台计算机共享相同的配置……但最重要的一点是，现在可以在开始漫长的安装或更新过程之前，一次性向用户展示所有问题。用户可以去忙事情，而系统会自动处理安装，而无需守在屏幕前等待问题。
+`debconf`有许多许多的特性：它要求开发者指定用户交互；它允许对显示给用户的所有字符串进行本地化（所有翻译都存储在描述交互的`templates`文件中）；它具有不同的前端向用户显示问题（文本模式、图形模式、非交互模式）；而且它允许创建一个响应中心数据库，以便与多台计算机共享相同的配置……但最重要的一点是，现在可以在开始漫长的安装或更新过程之前，一次性向用户展示所有问题。用户可以去忙事情，而系统会自动处理安装，而无需守在屏幕前等待问题。
 
 ## 5.2.3. 校验和和配置文件列表
 
-除了前面的章节中已经提到的维护者脚本和控制数据外，Debian 软件包的 `control.tar.gz` 存档可能包含其他有趣的文件。第一个文件 `md5sums` 包含了软件包所有文件的 MD5 校验和。它的主要优势是允许 `dpkg --verify`（我们将在第 14.3.4.1 节，“使用 `dpkg --verify` 审计软件包”）和 `debsums`（来自同名软件包；参见第 14.3.4.2 节，“审计软件包：`debsums` 及其局限性”）检查这些文件自安装以来是否被修改过。注意，当此文件不存在时，`dpkg` 将在安装时动态生成它（并像其他控制文件一样存储在 dpkg 数据库中）。
+除了前面的章节中已经提到的维护者脚本和控制数据外，Debian 软件包的`control.tar.gz`存档可能包含其他有趣的文件。第一个文件`md5sums`包含了软件包所有文件的 MD5 校验和。它的主要优势是允许`dpkg --verify`（我们将在第 14.3.4.1 节，“使用`dpkg --verify`审计软件包”）和`debsums`（来自同名软件包；参见第 14.3.4.2 节，“审计软件包：`debsums`及其局限性”）检查这些文件自安装以来是否被修改过。注意，当此文件不存在时，`dpkg`将在安装时动态生成它（并像其他控制文件一样存储在 dpkg 数据库中）。
 
-`conffiles` 列出了必须作为配置文件处理的软件包文件（另见 `deb-conffiles(5)`）。配置文件可以由管理员修改，`dpkg` 将尝试在软件包更新期间保留这些更改。
+`conffiles`列出了必须作为配置文件处理的软件包文件（另见`deb-conffiles(5)`）。配置文件可以由管理员修改，`dpkg`将尝试在软件包更新期间保留这些更改。
 
-实际上，在这种情况下，`dpkg` 的行为表现得尽可能智能：如果标准配置文件在两个版本之间没有变化，它将什么都不做。然而，如果文件发生了变化，它将尝试更新该文件。可能有两种情况：要么管理员没有动过此配置文件，在这种情况下 `dpkg` 会自动安装新版本；要么文件被修改过，在这种情况下 `dpkg` 会询问管理员想要使用哪个版本（带有修改的旧版本，还是软件包提供的新版本）。为了帮助做出决策，`dpkg` 提议显示一个两个版本之间差异的 `diff`。如果用户选择保留旧版本，新版本将存储在相同位置、并带有 `.dpkg-dist` 后缀的文件中。如果用户选择新版本，旧版本将保留在带有 `.dpkg-old` 后缀的文件中。另一个可用操作是暂时中断 `dpkg` 以编辑文件并尝试重新恢复相关的修改（之前通过 `diff` 识别出的）。
+实际上，在这种情况下，`dpkg`的行为表现得尽可能智能：如果标准配置文件在两个版本之间没有变化，它将什么都不做。然而，如果文件发生了变化，它将尝试更新该文件。可能有两种情况：要么管理员没有动过此配置文件，在这种情况下`dpkg`会自动安装新版本；要么文件被修改过，在这种情况下`dpkg`会询问管理员想要使用哪个版本（带有修改的旧版本，还是软件包提供的新版本）。为了帮助做出决策，`dpkg`提议显示一个两个版本之间差异的`diff`。如果用户选择保留旧版本，新版本将存储在相同位置、并带有`.dpkg-dist`后缀的文件中。如果用户选择新版本，旧版本将保留在带有`.dpkg-old`后缀的文件中。另一个可用操作是暂时中断`dpkg`以编辑文件并尝试重新恢复相关的修改（之前通过`diff`识别出的）。
 
 ### 进阶：避免配置文件提问
 
-`dpkg` 处理配置文件的更新，但在这样做时，它会定期中断工作以向管理员请求输入。这对于那些希望以非交互方式运行更新的人来说并不那么愉快。这就是为什么该程序提供了允许系统根据相同逻辑自动响应的选项：`--force-confold` 保留文件的旧版本；`--force-confnew` 将使用文件的新版本（即使文件没有被管理员修改，这些选择也会被遵守，尽管这很少达到预期效果）。添加 `--force-confdef` 选项告诉 `dpkg` 在可能的情况下自行决定（换句话，当原始配置文件未被动过时），仅在其他情况下使用 `--force-confnew` 或 `--force-confold`。
+`dpkg`处理配置文件的更新，但在这样做时，它会定期中断工作以向管理员请求输入。这对于那些希望以非交互方式运行更新的人来说并不那么愉快。这就是为什么该程序提供了允许系统根据相同逻辑自动响应的选项：`--force-confold`保留文件的旧版本；`--force-confnew`将使用文件的新版本（即使文件没有被管理员修改，这些选择也会被遵守，尽管这很少达到预期效果）。添加`--force-confdef`选项告诉`dpkg`在可能的情况下自行决定（换句话，当原始配置文件未被动过时），仅在其他情况下使用`--force-confnew`或`--force-confold`。
 
-这些选项适用于 `dpkg`，并在 `dpkg(1)` 或 `dpkg --force-help` 中有详细解释，但大多数情况下管理员会直接使用 `aptitude` 或 `apt` 程序工作。因此，有必要知道指示传递给 `dpkg` 命令的选项的语法（它们的命令行接口非常相似）。
+这些选项适用于`dpkg`，并在`dpkg(1)`或`dpkg --force-help`中有详细解释，但大多数情况下管理员会直接使用`aptitude`或`apt`程序工作。因此，有必要知道指示传递给`dpkg`命令的选项的语法（它们的命令行接口非常相似）。
 
 ```
 apt -o DPkg::options::="--force-confdef" -o DPkg::options::="--force-confold" full-upgrade
 ```
 
-这些选项可以直接存储在 `apt` 的配置中。要此操作，只需在 `/etc/apt/apt.conf.d/local` 文件中写入以下行即可：
+这些选项可以直接存储在`apt`的配置中。要此操作，只需在`/etc/apt/apt.conf.d/local`文件中写入以下行即可：
 
 ```
 DPkg::options { "--force-confdef"; "--force-confold"; }
 ```
 
-在配置文件中包含此选项意味着它也将用于如 `aptitude` 这样的图形界面。
+在配置文件中包含此选项意味着它也将用于如`aptitude`这样的图形界面。
 
 ### 进阶：强制 dpkg 询问配置问题
 
-`--force-confask` 选项要求 `dpkg` 显示关于配置文件的问题，即使在这些不需要的情况下也是如此。因此，使用此选项重新安装软件包时，`dpkg` 将对被管理员修改或删除的所有配置文件再次提问。这非常方便，特别是当原始配置文件被删除且没有其他可用副本时：正常的重新安装将无法作用，因为 `dpkg` 将删除视为一种合法的修改，因此不会安装所需的配置文件。
+`--force-confask`选项要求`dpkg`显示关于配置文件的问题，即使在这些不需要的情况下也是如此。因此，使用此选项重新安装软件包时，`dpkg`将对被管理员修改或删除的所有配置文件再次提问。这非常方便，特别是当原始配置文件被删除且没有其他可用副本时：正常的重新安装将无法作用，因为`dpkg`将删除视为一种合法的修改，因此不会安装所需的配置文件。
 
 # 5.3 源软件包的结构
 
 ## 5.3.1. 格式
 
-源软件包通常由三个文件组成：`.dsc`、`.orig.tar.gz` 和 `.debian.tar.xz`。它们允许从编程语言编写的程序源码文件创建二进制软件包（上述的 `.deb` 文件）。
+源软件包通常由三个文件组成：`.dsc`、`.orig.tar.gz`和`.debian.tar.xz`。它们允许从编程语言编写的程序源码文件创建二进制软件包（上述的`.deb`文件）。
 
-`.dsc`（Debian 源控制）文件是一个短文本文件，包含一个 RFC 2822 头部（类似于第 5.2.1 节，“描述：`control` 文件”），用于描述源软件包并指示哪些文件是其的一部分。它由维护者签名，从而保证了真实性。有关此主题的更多信息，请参阅第 6.6 节，“检查软件包的真实性”。
+`.dsc`（Debian 源控制）文件是一个短文本文件，包含一个 RFC 2822 头部（类似于第 5.2.1 节，“描述：`control`文件”），用于描述源软件包并指示哪些文件是其的一部分。它由维护者签名，从而保证了真实性。有关此主题的更多信息，请参阅第 6.6 节，“检查软件包的真实性”。
 
-
-
-
-
-# 示例 5.1 一个 `.dsc` 文件
+# 示例 5.1 一个`.dsc`文件
 
 ```text
 -----BEGIN PGP SIGNED MESSAGE-----
@@ -2009,27 +1965,27 @@ iQEzBAEBCgAdFiEE1823g1EQnhJ1LsbSA4gdq+vCmrkFAlqyOxkACgkQA4gdq+vC mrnCqAf/Ww9wg97
 
 ## 警告：不同的命名空间
 
-这里需要注意的是，源码包的名称与它生成的二进制包名称之间没有强制性的对应关系。如果你知道每个源码包可以生成多个二进制包，这一点就很很好理解了。这就是为什么 `.dsc` 文件具有 `Source` 和 `Binary` 字段，用于显式命名源码包并存储其生成的二进制包列表。
+这里需要注意的是，源码包的名称与它生成的二进制包名称之间没有强制性的对应关系。如果你知道每个源码包可以生成多个二进制包，这一点就很很好理解了。这就是为什么`.dsc`文件具有`Source`和`Binary`字段，用于显式命名源码包并存储其生成的二进制包列表。
 
 ## 文化：为何拆分为多个包
 
-经常情况下，一个源码包（针对特定软件）可以生成多个二进制包。这种划分的理由可以在不同的场景下使用（软件的）部分。考虑一个共享库，它可能被安装以使应用程序运行（例如 `libc6`），也可以被安装以开发新程序（此时 `libc6-dev` 将是正确的包）。在客户端/服务器服务中我们也发现了同样的逻辑，我们希望在某台机器上安装服务器部分，而在其他机器上安装客户端部分（例如 `openssh-server` 和 `openssh-client`）。
+经常情况下，一个源码包（针对特定软件）可以生成多个二进制包。这种划分的理由可以在不同的场景下使用（软件的）部分。考虑一个共享库，它可能被安装以使应用程序运行（例如`libc6`），也可以被安装以开发新程序（此时`libc6-dev`将是正确的包）。在客户端/服务器服务中我们也发现了同样的逻辑，我们希望在某台机器上安装服务器部分，而在其他机器上安装客户端部分（例如`openssh-server`和`openssh-client`）。
 
 同样，文档通常提供在一个专门的包中：用户可以独立于软件安装文档，并可以在随时选择删除它以节省磁盘空间。此外，这也节省了 Debian 镜像的磁盘空间，因为文档包也是。
 
 ## 视角：不同的源码格式
 
-最初只有一种格式。从 Debian Squeeze 开始，Debian 开发者可以选择新格式。`3.0 (quilt)` 是一种关联多个补丁的格式。如果归档是用 `xz` 压缩的，这种格式非常有用。源码包由开发者维护。`.tar.gz` 是一个归集。
+最初只有一种格式。从 Debian Squeeze 开始，Debian 开发者可以选择新格式。`3.0 (quilt)`是一种关联多个补丁的格式。如果归档是用`xz`压缩的，这种格式非常有用。源码包由开发者维护。`.tar.gz`是一个归集。
 
 ## 工具：解压源码包
 
-如果你有一个源码包，可以使用 `dpkg-source` 来解压它：
+如果你有一个源码包，可以使用`dpkg-source`来解压它：
 
 ```bash
 dpkg-source -x zim_0.68.dsc
 ```
 
-这需要在 `/etc/apt/sources.list` 中存在相应的 `deb-src` 行，详情请参见“填充源列表”。
+这需要在`/etc/apt/sources.list`中存在相应的`deb-src`行，详情请参见“填充源列表”。
 
 ## 5.3.2 在 Debian 内部的使用
 
@@ -2041,39 +1997,31 @@ dpkg-source -x zim_0.68.dsc
 git clone https://salsa.debian.org/debian/zim
 ```
 
+在 Debian 10 Buster 发布后，发布团队宣布，不再接受针对`main`组件的维护者二进制包上传，该组件中的所有二进制软件包将通过通过强制性的仅源码上传进行自动构建。
 
+# 5.4. 使用`dpkg`操作软件包
 
+`dpkg`是系统中处理 Debian 软件包的基础命令。如果你有`.deb`软件包，正是`dpkg`允许你对它们进行安装或分析其内容。但该程序对 Debian 宇宙的了解只是局部：它知道系统上安装了什么，以及你在命令行中传递给它的任何内容，但它对其他可用的软件包一无所知。因此，如果未满足依赖关系，它将执行失败。相反，`apt`和`aptitude`等工具会创建一个依赖列表，以尽可能自动地安装所有内容。
 
+注意 使用`dpkg`还是`apt`？
 
-在 Debian 10 Buster 发布后，发布团队` 宣布，不再接受针对 `main` 组件的维护者二进制包上传，该组件中的所有二进制软件包将通过通过强制性的仅源码上传进行自动构建。
-
-***
-
-# 5.4. 使用 `dpkg` 操作软件包
-
-`dpkg` 是系统中处理 Debian 软件包的基础命令。如果你有 `.deb` 软件包，正是 `dpkg` 允许你对它们进行安装或分析其内容。但该程序对 Debian 宇宙的了解只是局部：它知道系统上安装了什么，以及你在命令行中传递给它的任何内容，但它对其他可用的软件包一无所知。因此，如果未满足依赖关系，它将执行失败。相反，`apt` 和 `aptitude` 等工具会创建一个依赖列表，以尽可能自动地安装所有内容。
-
-***
-
-注意 使用 `dpkg` 还是 `apt`？
-
-`dpkg`应该被视为一个系统工具（后端），而 `apt` 则是一个更接近用户的工具，它克服了前者的局限性。这些工具共同工作，每个都有其特殊之处，适用于特定的任务。
-
-***
+`dpkg`应该被视为一个系统工具（后端），而`apt`则是一个更接近用户的工具，它克服了前者的局限性。这些工具共同工作，每个都有其特殊之处，适用于特定的任务。
 
 ## 5.4.1. 安装软件包
 
-`dpkg` 主要是用于安装已有的 Debian 软件包的工具（因为它不下载任何内容）。要实现这一点，我们使用它的 `-i` 或 `--install` 选项。
+`dpkg`主要是用于安装已有的 Debian 软件包的工具（因为它不下载任何内容）。要实现这一点，我们使用它的`-i`或`--install`选项。
 
 示例 5.2. 使用 dpkg 安装软件包
+
 ```
 # dpkg -i man-db_2.8.5-2_amd64.deb
 (读取数据库 ... 当前已安装 14913 个文件和目录。)准备解压 .../man-db_2.8.5-2_amd64.deb ... 正在解压 man-db (2.8.5-2) 到 (2.8.5-2) ... 正在设置 man-db (2.8.5-2) ... 更新手册数据库 ... 处理 mime-support (3.62) 的触发器 ...
 ```
 
-我们可以看到 `dpkg` 执行的各个步骤；因此，我们知道任何错误可能发生在哪个点。安装也可以分两个阶段进行：首先解压，然后是配置。`apt` 利用了这一点，限制了对 `dpkg` 的调用次数（因为每次调用都是昂贵的，由于需要在内存中加载数据库，特别是已安装文件的列表）。
+我们可以看到`dpkg`执行的各个步骤；因此，我们知道任何错误可能发生在哪个点。安装也可以分两个阶段进行：首先解压，然后是配置。`apt`利用了这一点，限制了对`dpkg`的调用次数（因为每次调用都是昂贵的，由于需要在内存中加载数据库，特别是已安装文件的列表）。
 
 示例 5.3. 分离解压和配置
+
 ```
 # dpkg --unpack man-db_2.8.5-2_amd64.deb
 (读取数据库 ... 当前已安装 14937 个文件和目录。)准备解压 man-db_2.8.5-2_amd64.deb ... 正在解压 man-db (2.8.5-2) 到 (2.8.5-2) ... 处理 mime-support (3.62) 的触发器 ... 
@@ -2081,38 +2029,37 @@ git clone https://salsa.debian.org/debian/zim
 正在设置 man-db (2.8.5-2) ... 更新手册数据库 ...
 ```
 
-有时 `dpkg` 将无法安装某个软件包并返回错误；如果用户命令它忽略此错误，它只会发出警告；这就是为什么我们有不同的 `--force-*` 选项的原因。`dpkg --force-help` 命令或该命令的文档将提供这些选项的完整列表。你迟早会遇到的最常见错误是文件冲突。当一个软件包包含一个已被另一个软件包安装的文件时，`dpkg` 将拒绝安装它。随后会出现以下消息：
+有时`dpkg`将无法安装某个软件包并返回错误；如果用户命令它忽略此错误，它只会发出警告；这就是为什么我们有不同的`--force-*`选项的原因。`dpkg --force-help`命令或该命令的文档将提供这些选项的完整列表。你迟早会遇到的最常见错误是文件冲突。当一个软件包包含一个已被另一个软件包安装的文件时，`dpkg`将拒绝安装它。随后会出现以下消息：
 
 ```
 Unpacking libgdm (from .../libgdm_3.8.3-2_amd64.deb) ... dpkg: error processing /var/cache/apt/archives/libgdm_3.8.3-2_amd64.deb (--unpack): trying to overwrite '/usr/bin/gdmflexiserver', which is also in package gdm3 3.4.1-9
 ```
 
-在这种情况下，如果你认为替换此文件对你系统的稳定性没有重大风险（通常情况下如此），你可以使用 `--force-overwrite` 选项，它会告诉 `dpkg` 忽略此错误并覆盖文件。
+在这种情况下，如果你认为替换此文件对你系统的稳定性没有重大风险（通常情况下如此），你可以使用`--force-overwrite`选项，它会告诉`dpkg`忽略此错误并覆盖文件。
 
-虽然有很多可用的 `--force-*` 选项，但只有 `--force-overwrite` 可能会被经常使用。这些选项仅存在于特殊情况，最好尽可能离开它们，以遵守打包机制实施的规则。不要忘记，这些规则确保了你系统的一致性和稳定性。
+虽然有很多可用的`--force-*`选项，但只有`--force-overwrite`可能会被经常使用。这些选项仅存在于特殊情况，最好尽可能离开它们，以遵守打包机制实施的规则。不要忘记，这些规则确保了你系统的一致性和稳定性。
 
-***
+警告 有效使用`--force-*`
 
-警告 有效使用 `--force-*`
-
-如果你不小心，使用 `--force-*` 选项可能会导致 APT 家族命令拒绝工作。实际上，这些选项中的某些允许在未满足依赖关系或存在冲突时安装软件包。结果是从依赖关系角度来看系统是不一致的，且 APT 命令将拒绝执行任何除将系统恢复到一致状态以外的操作（这通常包括安装缺失的依赖项或删除有问题的软件包）。这通常会导致像下面这样的消息，该消息是在忽略其对较新版本 libc6 的依赖的情况下，安装新版本的 rdesktop 后获得的：
+如果你不小心，使用`--force-*`选项可能会导致 APT 家族命令拒绝工作。实际上，这些选项中的某些允许在未满足依赖关系或存在冲突时安装软件包。结果是从依赖关系角度来看系统是不一致的，且 APT 命令将拒绝执行任何除将系统恢复到一致状态以外的操作（这通常包括安装缺失的依赖项或删除有问题的软件包）。这通常会导致像下面这样的消息，该消息是在忽略其对较新版本 libc6 的依赖的情况下，安装新版本的 rdesktop 后获得的：
 
 ```
 # apt full-upgrade
 [...] 你可能想要运行 'apt-get -f install' 来修复这些问题。以下软件包具有未满足的依赖关系：rdesktop: Depends: libc6 (>= 2.5) 但 2.3.6.ds1-17 已安装。
 ```
 
-一个确信自己分析正确的勇敢管理员可能会选择忽略依赖或冲突并使用相应的 `--force-*` 选项。在这种情况下，如果他们想继续使用 `apt` 或 `aptitude`，他们必须编辑 `/var/lib/dpkg/status` 来删除/修改他们选择覆盖的依赖或冲突。
+
+
+一个确信自己分析正确的勇敢管理员可能会选择忽略依赖或冲突并使用相应的`--force-*`选项。在这种情况下，如果他们想继续使用`apt`或`aptitude`，他们必须编辑`/var/lib/dpkg/status`来删除/修改他们选择覆盖的依赖或冲突。
 
 这种操作是一种拙劣的权宜，除非在极端需要的情况下，否则不应使用。通常，更合适的解决方案是重新编译引起问题的软件包（参见第 15 节 从源码重新构建软件包）或从仓库使用可能修复的新版本（参见第 6.1.2.4 节 稳定回源）。
 
-***
-
 ## 5.4.2. 移除软件包
 
-带有 `-r` 或 `--remove` 选项的软件包名移除该软件包。然而，这种移除并不完全：所有的配置文件、维护脚本、日志文件（系统日志）以及由软件包处理的其他用户数据都会保留。这样，卸载程序就很简单，并且仍然可以重新安装具有相同的配置。要完全删除与软件包相关的所有内容，使用 `-P` 或 `--purge` 选项，后接软件包名。
+带有`-r`或`--remove`选项的软件包名移除该软件包。然而，这种移除并不完全：所有的配置文件、维护脚本、日志文件（系统日志）以及由软件包处理的其他用户数据都会保留。这样，卸载程序就很简单，并且仍然可以重新安装具有相同的配置。要完全删除与软件包相关的所有内容，使用`-P`或`--purge`选项，后接软件包名。
 
 示例 5.4. 移除并清理 debian-cd 软件包
+
 ```
 # dpkg -r debian-cd
 (读取数据库 ... 当前已安装 15915 个文件和目录。)正在移除 debian-cd (3.1.25) ...
@@ -2122,25 +2069,17 @@ Unpacking libgdm (from .../libgdm_3.8.3-2_amd64.deb) ... dpkg: error processing 
 
 ## 5.4.3. 查询 dpkg 数据库和检查 .deb 文件
 
-***
-
 *回到基础* 选项语法
 
 大多数选项都有“长”版本（一个或多个相关的单词，前面带有双连字符）和“短”版本（单个字母，通常是长版本中某个单词的首字母，前面带有单连字符）。这种惯例如此常见，以至于成为 POSIX 标准。
 
+在结束本节之前，我们将学习通过查询内部数据库来获取`dpkg`选项。我们先列出长选项，然后是对应的短选项（它们显然接受相同的参数），我们介绍了：`--listfiles` `package`（或`-L`），列出由该软件包安装的文件；`--search` `file`（或`-S`），查找包含该文件的软件包；`--status` `package`（或`-s`），显示已安装软件包的头部信息；`--list`（或`-l`），显示系统已知的软件包列表及其安装状态；`--contents` `file.deb`（或`-c`），列出指定的 Debian 软件包中的文件；`--info` `file.deb`（或`-I`），显示该 Debian 软件包的头部信息。
 
+### **注意** `dpkg --search` 与合并后的 `/usr`
 
+由于[各种原因](https://www.freedesktop.org/wiki/Software/systemd/TheCaseForTheUsrMerge/)，Debian 现在默认将一些顶级目录安装为指向`/usr`下对应目录的符号链接。例如，`/bin`、`/sbin`和`/lib`现在分别是指向`/usr/bin`、`/usr/sbin`和`/usr/lib`的符号链接。
 
-
-在结束本节之前，我们将学习通过查询内部数据库来获取 `dpkg` 选项。我们先列出长选项，然后是对应的短选项（它们显然接受相同的参数），我们介绍了：`--listfiles` `package`（或 `-L`），列出由该软件包安装的文件；`--search` `file`（或 `-S`），查找包含该文件的软件包；`--status` `package`（或 `-s`），显示已安装软件包的头部信息；`--list`（或 `-l`），显示系统已知的软件包列表及其安装状态；`--contents` `file.deb`（或 `-c`），列出指定的 Debian 软件包中的文件；`--info` `file.deb`（或 `-I`），显示该 Debian 软件包的头部信息。
-
-* * *
-
-### **注意** `dpkg --search` 与合并后的 `/usr` 
-
-由于[各种原因](https://www.freedesktop.org/wiki/Software/systemd/TheCaseForTheUsrMerge/)，Debian 现在默认将一些顶级目录安装为指向 `/usr` 下对应目录的符号链接。例如，`/bin`、`/sbin` 和 `/lib` 现在分别是指向 `/usr/bin`、`/usr/sbin` 和 `/usr/lib` 的符号链接。
-
-虽然这带来了便利，但也可能成为困惑的来源。例如，当你查询 `dpkg` 哪个软件包拥有某个文件时，只有在你请求其原始路径时，它才能回答：
+虽然这带来了便利，但也可能成为困惑的来源。例如，当你查询`dpkg`哪个软件包拥有某个文件时，只有在你请求其原始路径时，它才能回答：
 
 ```bash
 `dpkg --search /bin/mount` mount: /bin/mount
@@ -2148,8 +2087,6 @@ Unpacking libgdm (from .../libgdm_3.8.3-2_amd64.deb) ... dpkg: error processing 
 `dpkg --search /bin/apt` dpkg-query: no path found matching pattern /bin/apt
 `dpkg --search /usr/bin/apt` apt: /usr/bin/apt
 ```
-
-* * *
 
 ### 示例 5.5 使用 dpkg 的各种查询
 
@@ -2242,15 +2179,9 @@ Description: GNU privacy guard - 工具程序 GnuPG 是 GNU 用于安全通信�
 * `symcryptrun` -- 在 GnuPG 框架中使用简单的对称加密工具
 * `watchgnupg` -- 监控基于套接字的日志 [..]
 
-* * *
-
 ### **进阶：** 版本对比
 
-
-
-
-
-由于 `dpkg` 是处理 Debian 软件包的程序，它提供了提供了版本号逻辑的参考实现。这就是为什么它有一个 `--compare-versions` 选项，该选项可供外部程序（特别是由 `dpkg` 自身执行的配置脚本）。此选项需要三个参数：一个版本号、一个比较运算符和第二个版本号。不同的可能运算符有 `lt`（严格小于）、`le`（小于或等于）、`eq`（等于）、`ne`（不等于）、`ge`（大于或等于）和 `gt`（严格大于）。如果比较结果正确，`dpkg` 返回 0（成功）；否则，它返回一个非零值（表示失败）。
+由于`dpkg`是处理 Debian 软件包的程序，它提供了提供了版本号逻辑的参考实现。这就是为什么它有一个`--compare-versions`选项，该选项可供外部程序（特别是由`dpkg`自身执行的配置脚本）。此选项需要三个参数：一个版本号、一个比较运算符和第二个版本号。不同的可能运算符有`lt`（严格小于）、`le`（小于或等于）、`eq`（等于）、`ne`（不等于）、`ge`（大于或等于）和`gt`（严格大于）。如果比较结果正确，`dpkg`返回 0（成功）；否则，它返回一个非零值（表示失败）。
 
 ```
 $ dpkg --compare-versions 1.2-3 gt 1.1-4 $
@@ -2264,13 +2195,15 @@ $ echo $?
 1
 ```
 
-注意最后一次比较出现了意外失败：对于 `dpkg` 来说，`pre`（通常表示预发布）没有特殊含义，该程序比较字母字符的方式与比较数字相同（a < b < c ...），按照字母顺序进行比较。这就是为什么它认为“0pre3”大于“0”。当我们希望软件包的版本号标明它是一个预发布版本时，我们使用波浪线字符“~”：
+注意最后一次比较出现了意外失败：对于`dpkg`来说，`pre`（通常表示预发布）没有特殊含义，该程序比较字母字符的方式与比较数字相同（a < b < c ...），按照字母顺序进行比较。这就是为什么它认为“0pre3”大于“0”。当我们希望软件包的版本号标明它是一个预发布版本时，我们使用波浪线字符“~”：
 
 ```
 $ dpkg --compare-versions 2.6.0~pre3-1 lt 2.6.0-1 $
 $ echo $?
 0
 ```
+
+
 
 ## 5.4.4. `dpkg` 的日志文件
 
@@ -2311,7 +2244,7 @@ APT 会自动检测 `dpkg` 是否已配置支持外国架构，并开始下载�
 
 多架构有多个用例，但最流行的是在 64 位系统 (amd64) 上执行（有时）32 位二进制文件，以及为不同于主机的平台交叉编译软件的可能性。
 
-## 5.4.5.2. 多架构相关的更改
+### 5.4.5.2. 多架构相关的更改
 
 为了让多架构真正有用，库必须重新打包并移动到特定架构的目录，以便多个架构可以共存。自从 Debian 7 Whezy 引入多架构以来，最重要的库已经过转换，但仍有许多库除非有人专门提出请求（通过错误报告），否则可能不会被转换。
 
@@ -2323,7 +2256,7 @@ $ dpkg -L libgcc1:amd64 |grep .so /lib/x86_64-linux-gnu/libgcc_s.1
 $ dpkg -S /usr/share/doc/gcc-8-base/copyright gcc-8-base:amd64, gcc-8-base:armhf
 ```
 
-值得注意的是，相同架构的软件包必须通过架构限定其名称，以便进行唯一标识。它们还有与相同软件包的其他实例共享文件的可能性；**dpkg** 确保在共享时所有软件包的文件是位一致的。最后，同一个软件包的所有实例必须具有相同的版本。因此它们必须一起升级。
+值得注意的是，相同架构的软件包必须通过架构限定其名称，以便进行唯一标识。它们还有与相同软件包的其他实例共享文件的可能性；`dpkg` 确保在共享时所有软件包的文件是位一致的。最后，同一个软件包的所有实例必须具有相同的版本。因此它们必须一起升级。
 
 多架构支持在处理依赖关系也带来了一些有趣的挑战。满足依赖需要一个标记为“Multi-Arch: foreign”的软件包，或者架构与声明依赖的软件包匹配的软件包（在这一依赖解析过程中，架构无关的软件包被假设与主机架构相同）。依赖关系也可以被弱化以允许任何架构满足它，使用 `package:any` 语法，但外国软件包只有在被标记为“Multi-Arch: allowed”时才能满足此类依赖。
 
@@ -2331,23 +2264,17 @@ $ dpkg -S /usr/share/doc/gcc-8-base/copyright gcc-8-base:amd64, gcc-8-base:armhf
 
 Debian 软件包并不是自由软件世界中唯一的软件包。主要的竞争者是 Red Hat Linux 发行版及其许多衍生版的 RPM 格式。Red Hat 是一个非常流行的商业发行版。因此，第三方提供的软件通常以 RPM 软件包而非 Debian 软件包的形式提供。
 
-
-
-
 在这种情况下，你应该知道处理 RPM 软件包的 `rpm` 程序以 Debian 软件包的形式提供，因此在 Debian 上使用这种软件包格式是可能的。然而，应该将这些操作限制在从软件包中提取信息或验证其完整性上。事实上，在 Debian 系统上使用 `rpm` 安装 RPM 软件包是不合理的；RPM 使用它自己的数据库，该数据库与原生软件（如 `dpkg`）的数据库是分开的。这就是为什么无法确保两种软件包系统能够稳定共存的原因。
 
 另一方面，`alien` 工具可以将 RPM 软件包转换为 Debian 软件包，反之亦然。
-
-***
 
 ### 社区鼓励采用 .deb 格式
 
 如果你经常使用 `alien` 程序安装来自某个提供商的 RPM 软件包，不要犹豫地向他们写信，友好地表达你对 `.deb` 格式的强烈偏好。请注意，软件包的格式并不是一切：使用 `alien` 构建或为你所使用的 Debian 版本不同的 Debian 版本（甚至是为如 Ubuntu 等派生发行版）准备的 `.deb` 软件包，其质量和集成程度可能无法达到专门为 Debian Buster 开发的软件包的相同水平。
 
-***
-
-```
-$ fakeroot alien --to-deb phpMyAdmin-4.7.5-2.fc28.noarch.rpm phpmyadmin_4.7.5-3_all.deb generated $ ls -s phpmyadmin_4.7.5-3_all.deb 4356 phpmyadmin_4.7.5-3_all.deb
+```bash
+$ fakeroot alien --to-deb phpMyAdmin-4.7.5-2.fc28.noarch.rpm phpmyadmin_4.7.5-3_all.deb generated
+$ ls -s phpmyadmin_4.7.5-3_all.deb 4356 phpmyadmin_4.7.5-3_all.deb
 ```
 
 你会发现这个过程非常简单。然而，你必须知道，生成的软件包不包含任何依赖信息，因为两种软件包格式中的依赖关系没有系统性的对应关系。因此，管理员必须手动确保转换后的软件包能够正常运行，这就是为什么应该避免避免这样生成的 Debian 软件包。幸运的是，Debian 拥有所有发行版中最大的软件包集合，你所寻找的内容可能已经在那里了。
@@ -2362,23 +2289,15 @@ $ fakeroot alien --to-deb phpMyAdmin-4.7.5-2.fc28.noarch.rpm phpmyadmin_4.7.5-3_
 
 `APT` 是高级软件包工具（Advanced Package Tool）的缩写。让这个程序“先进”的地方在于它处理软件包的方法。它不是简单地单独评估它们，而是将它们视为整体，并根据可用性以及根据依赖兼容性产生最好的软件包组合。
 
-***
-
 ### 词汇 软件包源 (package source) 与源码包 (source package)
 
 *source*（源）一词可能会产生歧义。“源码包”（source package）——一个包含程序源代码的软件包——不应与“软件包源”（package source）——一个包含软件包的仓库（网站、FTP 服务器、CD-ROM、本地目录等）——相混淆。
 
-***
-
 APT 需要提供一个“软件包源列表（仓库）”：`/etc/apt/sources.list` 文件将列出发布 Debian 软件包的不同仓库。APT 然后将导入这些源每个发布的软件包列表。此操作通过下载 `Packages.xz` 文件或变体（对于二进制软件包源，使用 `Packages.gz` 或 `.bz2`，即使用不同的压缩方法）并分析其内容来实现。对于源码包源，APT 下载 `Sources.xz` 文件或使用不同压缩方法的变体。当已存在这些文件的旧副本时，APT 可以通过只下载差异来更新它（参见侧边栏 *TIP* 增量更新）。
-
-***
 
 ### 回归基础 gzip, bzip2, LZMA 和 XZ 压缩
 
 `.gz` 扩展名指的是使用 `gzip` 工具压缩的文件。`gzip` 是快速且高效的传统 Unix 文件压缩工具。新的工具可以实现更高的压缩率，但需要更多资源（计算时间和内存）来压缩和解压文件。在这些工具中，按出现顺序依次有 `bzip2`（生成 `.bz2` 扩展的文件）、`lzma`（生成 `.lzma` 文件）和 `xz`（生成 `.xz` 文件）。
-
-***
 
 # 6.1. 填充 sources.list 文件
 
@@ -2387,8 +2306,10 @@ APT 需要提供一个“软件包源列表（仓库）”：`/etc/apt/sources.l
 `/etc/apt/sources.list` 文件中的每个活动行都代表一个软件包源（仓库），并由至少三个由分隔分隔组成。关于文件格式和接受的条目内容的完整描述，请参阅 `sources.list(5)`。
 
 示例 6.1 `/etc/apt/sources.list` 中的条目格式
-```
-deb url distribution component1 component2 component3 [..] componentX deb-src url distribution component1 component2 component3 [..] componentX
+
+```text
+deb url distribution component1 component2 component3 [..] componentX
+deb-src url distribution component1 component2 component3 [..] componentX
 ```
 
 第一个字段指示源类型：
@@ -2403,26 +2324,17 @@ deb url distribution component1 component2 component3 [..] componentX deb-src ur
 
 最后一个字段的语法取决于仓库的结构。在最简单的情况下，你只需要指定所需源的子目录（必须以斜杠结尾）。这通常是简单的 `./`，表示没有子目录。软件包将直接位于指定的 URL 下。但在最常见的情况下，仓库的结构将类似于 Debian 镜像，有多个发行版，每个发行版都有多个组件。在这些情况下，通过其“代号”命名所选发行版（参见侧边栏 *COMMUNITY* 一个争议的领袖 中的列表）或其相应的“套件”（`oldstable`、`stable`、`testing`、`unstable`），然后是启用的 `main`、`contrib` 和 `non-free` 组件。
 
-***
-
 ### 词汇 `main`, `contrib` 和 `non-free` 存档
 
 Debian 使用三个组件根据作者选择的许可协议来区分软件包。`Main` 收集所有完全符合 [Debian 自由软件指南](https://www.debian.org/social_contract.html#guidelines) 的软件包。
-
-
-
 
 `non-free`（非自由）组件与其他不同，因为它包含了不（完全）符合这些原则的软件，但仍然可以不受限制地分发。该存档不是 Debian 的官方部分，它是为那些可能需要某些程序、且现在也需要硬件固件的用户提供的服务。然而，Debian 总是建议优先使用自由软件。该组件的存在对理查德·斯塔尔曼（Richard M. Stallman）来说是一个严重的问题，并导致自由软件基金不会向用户推荐 Debian。
 
 `Contrib`（贡献）是一组开源软件，这些软件在没有某些非自由元素的情况下无法运行——这些元素可以是来自 `non-free` 部分的软件，也可以是非自由文件（如游戏 ROM、游戏机 BIOS 等），抑或者是某些在 Debian `main` 存档中完全无法获取的元素。`contrib` 组件还包括编译时需要专有元素的自由软件。这最初在 OpenOffice.org 办公套件中就是如此，它曾需要一个专有的 Java 环境。
 
-***
-
 ### TIP `/etc/apt/sources.list.d/*.list` 文件
 
 如果引用了许多软件包源，将它们拆分为多个文件可能会很有用。每个部分随后存储在 `/etc/apt/sources.list.d/``filename`.list 中（参见侧栏 *返回基础：以 .d 结尾的目录）。
-
-***
 
 `cdrom` 条目描述了您拥 CD/DVD-ROM。与其他条目不同，CD-ROM 并不总是可用的，因为必须将其插入驱动器，且一次只能读取一张光盘。由于这些原因，这些源的管理方式略有不同，需要使用 `apt-cdrom` 程序进行添加，通常带有 `add` 参数执行。后者会请求将光盘插入驱动器，并浏览其内容以寻找 `Packages` 文件。它将使用这些文件来更新可用软件包的数据库（此操作通常由 `apt update` 命令完成）。从那时起，如果 APT 需要其中的某一个软件包，它就会要求插入光盘。
 
@@ -2436,17 +2348,22 @@ Debian 使用三个组件根据作者选择的许可协议来区分软件包。`
 ## 安全更新
 deb http://security.debian.org/ buster/updates main contrib non-free
 deb-src http://security.debian.org/ buster/updates main contrib non-free
+
 ## Debian 镜像
 ## 基础仓库
 deb https://deb.debian.org/debian buster main contrib non-free
 deb-src https://deb.debian.org/debian buster main contrib non-free
+
 ## 稳定版更新
 deb https://deb.debian.org/debian buster-updates main contrib non-free
 deb-src https://deb.debian.org/debian buster-updates main contrib non-free
+
 ## 稳定版后向移植 (backports)
 deb https://deb.debian.org/debian buster-backports main contrib non-free
 deb-src https://deb.debian.org/debian buster-backports main contrib non-free
 ```
+
+
 
 此文件列出了所有与 Debian Buster 版本（本文编写时当前的 Stable 变件）相关的软件包源。在上面的示例中，我们选择显式地命名“buster”，而不是使用相应的“stable”别名（`stable`、`stable-updates`、`stable-backports`），因为我们不想在下一个稳定版本发布时，底层发行版在我们的控制之外发生变化。
 
@@ -2458,11 +2375,11 @@ deb-src https://deb.debian.org/debian buster-backports main contrib non-free
 
 ### 6.1.2.1. 安全更新
 
-Debian 认真对待安全问题。Debian 中已软件漏洞在 [安全漏洞跟踪器](https://security-tracker.debian.org) 中被跟踪，并通常在合理的时间范围内修复。安全更新未托管在普通的 Debian 镜像网络上，而是托管在 `security.debian.org` 上，这是由 Debian 系统管理员 维护的一小组机器。该存档包含了由 Debian 安全团队和/或软件包维护者为 Stable 和 Oldstable 准备的安全更新。
+Debian 认真对待安全问题。Debian 中已软件漏洞在 [安全漏洞跟踪器](https://security-tracker.debian.org) 中被跟踪，并通常在合理的时间范围内修复。安全更新未托管在普通的 Debian 镜像网络上，而是托管在 `security.debian.org` 上，这是由 Debian 系统管理员维护的一小组机器。该存档包含了由 Debian 安全团队和/或软件包维护者为 Stable 和 Oldstable 准备的安全更新。
 
 服务器也可以托管 Testing（测试版）的安全更新，但并不经常发生，因为这些更新倾向于通过来自 Unstable（不稳定版）的常规更新流到达 Testing 套件。
 
-对于严重问题，安全团队会发布`Debian Security Advisory》(DSA)，并在 `debian-security-announce@lists.debian.org` 邮件列表上同安全更新一起发布([存档](https://lists.debian.org/debian-security-announce/))。
+对于严重问题，安全团队会发布`Debian Security Advisory》(DSA)，并在 `debian-security-announce@lists.debian.org` 邮件列表上同安全更新一起发布（[存档](https://lists.debian.org/debian-security-announce/)）。
 
 ### 6.1.2.2. 稳定版更新
 
@@ -2470,7 +2387,7 @@ Debian 认真对待安全问题。Debian 中已软件漏洞在 [安全漏洞跟�
 
 该仓库通常包含关键和严重漏洞的修复，这些漏洞在发布前无法修复，或是后续更新引入的。根据紧急程度，它还可能包含随时间演变的软件包的更新，例如 spamassassin 的垃圾邮件检测规则、clamav 的病毒数据库、所有时区的夏令时规则 (tzdata)。
 
-在实践中，该仓库是由 稳定版发布经理 精心选择的子集。所有更新都会在 `debian-stable-announce@lists.debian.org` 邮件列表上公布([存档](https://lists.debian.org/debian-stable-announce/))，并且会被包含在下一个稳定点版本中。
+在实践中，该仓库是由稳定版发布经理精心选择的子集。所有更新都会在 `debian-stable-announce@lists.debian.org` 邮件列表上公布（[存档](https://lists.debian.org/debian-stable-announce/)），并且会被包含在下一个稳定点版本中。
 
 ```text
 deb https://deb.debian.org/debian buster-updates main contrib non-free
@@ -2491,9 +2408,6 @@ deb https://deb.debian.org/debian buster-proposed-updates main contrib non-free
 ### 6.1.2.4. 稳定版后向移植 (Stable Backports)
 
 `stable-backports` 仓库托管“软件包后向移植 (backports)”。该术指的是为较旧发行版（通常是 Stable）重新编译的某些近期软件软件包。
-
-
-
 
 当发行版变得有些旧时，许多软件项目发布了新版本，但这些版本尚未集成到当前的 Stable（稳定）系列中，该系列仅被用于解决最关键的问题，例如安全问题。由于 Testing（测试）和 Unstable（不稳定）系列的风险更高，软件包维护者有时会自愿为 Stable 重新编译最近的应用程序，这为用户和系统管理员提供了将潜在的不稳定性限制在少数选定软件包中的优势。[`backports.debian.org`](https://backports.debian.org) 页面提供了更多信息。
 
@@ -2516,15 +2430,19 @@ sudo apt-get install -t buster-backports package
 ## Unstable
 deb https://deb.debian.org/debian unstable main contrib non-free
 deb-src https://deb.debian.org/debian unstable main contrib non-free
+
 ## Testing
 deb https://deb.debian.org/debian testing main contrib non-free
 deb-src https://deb.debian.org/debian testing main contrib non-free
+
 # Testing security updates
 deb http://security.debian.org/ testing-security main contrib non-free
 deb-src http://security.debian.org/ testing-security main contrib non-free
+
 # Stable
 deb https://deb.debian.org/debian stable main contrib non-free
 deb-src https://deb.debian.org/debian stable main contrib non-free
+
 # Stable security updates
 deb http://security.debian.org/ stable/updates main contrib non-free
 deb-src http://security.debian.org/ stable/updates main contrib non-free
@@ -2560,7 +2478,7 @@ deb https://deb.debian.org/debian experimental main contrib non-free
 
 但当你不知道哪个镜像最适合你时，这个列表并没有太大用。幸运的是，Debian 维护了格式为 `ftp.国家代码.debian.org` 的 DNS 条目（例如美国的 `ftp.us.debian.org`，法国的 `ftp.fr.debian.org` 等），这些条目覆盖了许多国家，并指向该国内一个（或多个）最佳镜像。
 
-作为 `deb.debian.org` 的替代方案，曾经有一个 `httpredir.debian.org`。该服务会识别距离你最近的镜像（主要使用 GeoIP ），并将 APT 的请求重定向到该镜像。该服务由于可靠性问题已被弃用，现在 `httpredir.debian.org` 提供与 `deb.debian.org` 相同的 CDN 服务。
+作为 `deb.debian.org` 的替代方案，曾经有一个 `httpredir.debian.org`。该服务会识别距离你最近的镜像（主要使用 GeoIP），并将 APT 的请求重定向到该镜像。该服务由于可靠性问题已被弃用，现在 `httpredir.debian.org` 提供与 `deb.debian.org` 相同的 CDN 服务。
 
 ## 6.1.5. 非官方资源：`mentors.debian.net`
 
@@ -2570,51 +2488,45 @@ deb https://deb.debian.org/debian experimental main contrib non-free
 
 **社区** `debian.net` 站点
 
-
-
-
-
 `debian.net` 域名并非 Debian 项目的官方资源。每个 Debian 开发者都可以将该域名供个人使用。这些网站可能包含非官方的服务（有时是个人站点），这些服务托管在不属于该项目的机器上，并由 Debian 开发者设置，甚至可能是正准备移动到 `debian.org` 的原型。有两个原因可以解释为什么其中一些原型仍然留在了 `debian.net` 上：要么没有人付出必要的努力将其转换为官方服务（托管在 `debian.org` 域名下，并有一定程度的维护保障），要么该服务太具争议而无法被官方化。
-
-* *
 
 安装软件包意味着赋予其创建者 root 权限，因为他们决定了以在该身份下运行的初始化脚本的内容。官方 Debian 软件包由志愿者创建，这些志愿者经过了吸纳和审核，并且可以对他们的软件包进行签名，以便检查其来源和完整性。
 
 通常情况下，对于来源未知且未托管在 Debian 官方服务器上的软件包要保持警惕：评估你对创建者的信任程度，并检查软件包的完整性。
 
-* *
-
 ### 进阶阅读：旧版本软件包：`snapshot.debian.org`
 
-### [`snapshot.debian.org`](https://snapshot.debian.org) 服务于 2010 年 4 月引入，可用于“回溯时光”，查找不再包含在 Debian 存档中的旧软件包版本。例如，它可以用于识别软件包的哪个版本引入了回归问题，更具体地说，可以在等待回归修复时返回到之前的版本。
-
-* *
+[`snapshot.debian.org`](https://snapshot.debian.org) 服务于 2010 年 4 月引入，可用于“回溯时光”，查找不再包含在 Debian 存档中的旧软件包版本。例如，它可以用于识别软件包的哪个版本引入了回归问题，更具体地说，可以在等待回归修复时返回到之前的版本。
 
 ## 6.1.6 用于 Debian 软件包的缓存代理
 
-当整个机器网络被配置为使用同一个远程服务器下载相同的更新软件包时，任何管理员都知道，拥有一个中间代理作为网络本地缓存是有益的（请参阅侧边栏 `VOCABULARY` 缓存]）。
+当整个机器网络被配置为使用同一个远程服务器下载相同的更新软件包时，任何管理员都知道，拥有一个中间代理作为网络本地缓存是有益的（请参阅侧边栏 `VOCABULARY` 缓存）。
 
-你可以配置 APT 使用“标准”代理（APT 端请参阅 第 6.2.4 节，“配置选项，代理端请参阅 [第 11.6 节，“HTTP/FTP 代理”#ch11s06.html "11.6. HTTP/FTP Proxy")]），但 Debian 生态系统提供了更好的解决此问题的方案。本节介绍的专用软件比普通的代理缓存更智能，因为它们可以依赖 APT 仓库的特定结构（例如，它们知道单个文件何时已过期，从而调整其保留的时间）。
+你可以配置 APT 使用“标准”代理（APT 端请参阅第 6.2.4 节，“配置选项”，代理端请参阅[第 11.6 节，“HTTP/FTP 代理”](https://www.debian.org/doc/manuals/debian-reference/ch11s06.html "11.6. HTTP/FTP Proxy")），但 Debian 生态系统提供了更好的解决此问题的方案。本节介绍的专用软件比普通的代理缓存更智能，因为它们可以依赖 APT 仓库的特定结构（例如，它们知道单个文件何时已过期，从而调整其保留的时间）。
 
 `apt-cacher` 和 `apt-cacher-ng` 的工作方式类似于代理缓存服务器。APT 的 `sources.list` 保持不变，但 APT 被配置为将它们作为传出请求的代理。
 
 相反，`approx` 像一个 HTTP 服务器，在它的顶层 URL 中“镜像”任意数量的远程仓库。这些顶层目录与仓库远程 URL 之间的映射存储在 `/etc/approx/approx.conf` 中：
 
-```
-# <name> <repository-base-url> debian https://deb.debian.org/debian http http://security.debian.org
+```text
+# <name> <repository-base-url>
+debian https://deb.debian.org/debian
+http http://security.debian.org
 ```
 
 `approx` 默认通过 systemd socket 运行在端口 9999 上，并要求用户调整其 `sources.list` 文件以指向 approx 服务器：
 
-```
+```text
 # 指向本地 approx 服务器的示例 sources.list
 deb http://localhost:9999/security buster/updates main contrib non-free
 deb http://localhost:9999/debian buster main contrib non-free
 ```
 
-## 6.2 aptitude, apt-get 和 apt 命令
 
-`APT` 是一个庞大的项目，其原始计划包括一个图形界面。它基于一个包含核心应用程序的库，而 `apt-get` 是在该项目内部开发的第一个前端——基于命令行）。`apt` 是 APT 提供的第二个基于命令行的前端，它克服了 `apt-get` 的某些设计缺陷。
+
+## 6.2 `aptitude`、`apt-get` 和 `apt` 命令
+
+`APT` 是一个庞大的项目，其原始计划包括一个图形界面。它基于一个包含核心应用程序的库，而 `apt-get` 是在该项目内部开发的第一个前端——基于命令行。`apt` 是 APT 提供的第二个基于命令行的前端，它克服了 `apt-get` 的某些设计缺陷。
 
 这两个工具都构建在同一个库之上，因此非常相似，但 `apt` 的默认行为已经针对交互式使用进行了改进，并能够真正实现大多数用户预期的功能。APT 开发者保留了更改此工具公共接口的权利，以进一步改进它。相反，`apt-get` 的公共接口定义良好，且不会发生任何向后兼容的更改。因此，当你需要脚本化处理软件包安装请求时，它是你想要使用的工具。
 
@@ -2624,89 +2536,79 @@ deb http://localhost:9999/debian buster main contrib non-free
 
 对于任何 APT 的操作，都需要更新可用软件包列表；这可以通过 `apt update` 轻松完成。取决于你的连接速度和配置，该操作可能会花费一段时间，因为它涉及到下载一定数量（通常是压缩的）文件（`Packages`、`Sources`、`Translation-language-code`），随着 Debian 的发展，这些文件已变得越来越大（`main` 部分至少有 10 MB）。当然，从 CD-ROM/DVD 组进行安装不需要任何下载——在这种情况下，操作将非常快。
 
-* *
+> **提示：增量更新**
+>
+> `apt update` 命令的目标是为每个源下载对应的 `Packages`（或 `Sources`）文件。然而，即使经过 `xz` 压缩，这些文件仍然很大（`main` 的 `Packages.xz` 超过 7 MB）。如果你经常更新，这些下载可能会占用大量时间。
+>
+> 为了加快这一过程，APT 可以下载自上次更新以来的“差异”文件，而不是整个文件。为了实现这一点，官方 Debian 镜像分发列出一个版本 `Packages` 文件与下一个版本之间差异的文件。它们在每次更新存档时生成，并保留一周的历史。这些“差异”文件对于 Unstable 仅需几 KB，因此每周 `apt update` 下载的数据量通常减少了 10 倍。对于变化较少的 Stable 和 Testing，这种收益尤为明显。
+>
+> 然而，有时强制下载整个 `Packages` 文件是有兴趣，特别是当上次升级非常久，且增量差异机制贡献不大的时。当网络访问非常快但要升级的机器处理器较慢时，这可能很有趣，因为下载节省的时间比计算这些文件新版本（从旧版本开始应用下载的差异）所花费的时间更多。要这样做，你可以使用 APT 配置参数 `Acquire::PDiffs` 并设置为 `false`。
 
-### 提示：增量更新
-
-`apt update` 命令的目标是为每个源下载对应的 `Packages`（或 `Sources`）文件。然而，即使经过 `xz` 压缩，这些文件仍然很大（`main` 的 `Packages.xz` 超过 7 MB）。如果你经常更新，这些下载可能会占用大量时间。
-
-为了加快这一过程，APT 可以下载自上次更新以来的“差异”文件，而不是整个文件。为了实现这一点，官方 Debian 镜像分发列出一个版本 `Packages` 文件与下一个版本之间差异的文件。它们在每次更新存档时生成，并保留一周的历史。这些“差异”文件对于 Unstable 仅需几 KB，因此每周 `apt update` 下载的数据量通常减少了 10 倍。对于变化较少的 Stable 和 Testing，这种收益尤为明显。
-
-然而，有时强制下载整个 `Packages` 文件是有兴趣，特别是当上次升级非常久，且增量差异机制贡献不大的时。当网络访问非常快但要升级的机器处理器较慢时，这可能很有趣，因为下载节省的时间比计算这些文件新版本（从旧版本开始应用下载的差异）所花费的时间更多。要这样做，你可以使用 APT 配置参数 `Acquire::PDiffs` 并设置为 `false`。
-
-```
+```bash
 $ sudo apt -o "Acquire::PDiffs=false" update
 ```
 
 `Acquire::*` 选项还控制下载的其他方面，甚至是下载方法。`Acquire::Languages` 可以限制或禁用 `Translation-language-code` 文件的下载，并节省更多时间。完整的参考信息请参阅 `apt.conf(5)`。
 
-* *
-
 ## 6.2.2 安装与移除
-
-
-
 
 使用 APT，可以分别通过 `apt install package` 和 `apt remove package` 从系统中添加或删除软件包。在这两种情况下，APT 都会自动安装必要的依赖项，或者删除依赖于正在移除的包的软件包。`apt purge package` 命令则包含通过删除配置文件来实现完全卸载。
 
-* * *
-
-提示：多次安装相同选择的软件包
-
-在在几台计算机上系统化地安装同一份软件包列表可能是很有用的。这可以很容易地实现。
-
-首先，获取将作为“模型”进行复制的计算机上已安装的软件包列表。
+> **提示：多次安装相同选择的软件包**
+>
+> 在几台计算机上系统化地安装同一份软件包列表可能是很有用的。这可以很容易地实现。
+>
+> 首先，获取将作为“模型”进行复制的计算机上已安装的软件包列表。
 
 ```bash
 $ dpkg --get-selections >pkg-list
 ```
 
-此时 `pkg-list` 文件包含了已安装软件包列表。接下来，将 `pkg-list` 文件传输到你想要更新的计算机上，并使用以下命令：
+此时 `pkg-list` 文件包含了已安装软件包列表。接下来，将 `pkg-list` 文件传输到你想要更新的计算机上，并使用以下命令。
 
-### 更新 dpkg 的已知软件包数据库
+### 更新 `dpkg` 的已知软件包数据库
+
 ```bash
 avail=`mktemp`
+
 apt-cache dumpavail > "$avail"
+
 dpkg --merge-avail "$avail"
+
 rm -f "$avail"
 ```
 
-### 更新 dpkg 的选择
+### 更新 `dpkg` 的选择
+
 ```bash
 dpkg --set-selections < pkg-list
 ```
 
-### 让 apt-get 安装选定的软件包
+### 让 `apt-get` 安装选定的软件包
+
 ```bash
 apt-get dselect-upgrade
 ```
 
-第一个命令在 dpkg 数据库中记录可用软件包列表。然后 `dpkg --set-selections` 恢复你想要安装的软件包选择，而 `apt-get` 调用执行了所需的操作！`aptitude` 没有这个命令。
+第一个命令在 `dpkg` 数据库中记录可用软件包列表。然后 `dpkg --set-selections` 恢复你想要安装的软件包选择，而 `apt-get` 调用执行了所需的操作！`aptitude` 没有这个命令。
 
-* * *
-
-* * *
-
-提示：同时移除和安装
-
-可以通过添加后缀，让 `apt`（或 `apt-get`、`aptitude`）在同一命令行中安装某些软件包并移除其他软件包。在使用 `apt install` 命令时，在你想要移除的软件包名称后添加 `-`。在使用 `apt remove` 命令时，在你想要安装的软件包名称后添加 `+`。
-
-下面的示例显示了安装 `package1` 并移除 `package2` 的两种不同方法。
+> **提示：同时移除和安装**
+>
+> 可以通过添加后缀，让 `apt`（或 `apt-get`、`aptitude`）在同一命令行中安装某些软件包并移除其他软件包。在使用 `apt install` 命令时，在你想要移除的软件包名称后添加 `-`。在使用 `apt remove` 命令时，在你想要安装的软件包名称后添加 `+`。
+>
+> 下面的示例显示了安装 `package1` 并移除 `package2` 的两种不同方法。
 
 ```bash
 apt install package1-package2
+
 apt remove package1+package2
 ```
 
 这也可以用于排除原本会被安装的软件包，例如由于自动安装了 `Recommends`。通常情况下，依赖关系求解器将使用该信息作为提示来寻找替代方案。
 
-* * *
-
-* * *
-
-提示：apt --reinstall 和 aptitude reinstall
-
-在移除或修改软件包中的文件后，系统有时可能会损坏。检索这些文件的简单方法是重新安装受影响的软件包。遗憾的是，软件包系统发现后者已安装，并礼貌地拒绝重新安装；为了避免这种情况，请使用 `apt` 和 `apt-get` 命令的 `--reinstall` 选项。以下命令即使在 postfix 已经存在的情况下重新安装它：
+> **提示：`apt --reinstall` 和 `aptitude reinstall`**
+>
+> 在移除或修改软件包中的文件后，系统有时可能会损坏。检索这些文件的简单方法是重新安装受影响的软件包。遗憾的是，软件包系统发现后者已安装，并礼貌地拒绝重新安装；为了避免这种情况，请使用 `apt` 和 `apt-get` 命令的 `--reinstall` 选项。以下命令即使在 `postfix` 已经存在的情况下重新安装它：
 
 ```bash
 # apt --reinstall install postfix
@@ -2718,31 +2620,27 @@ apt remove package1+package2
 
 小心！使用 `apt --reinstall` 来恢复在攻击期间修改的软件包，绝不会将系统恢复到原始状态。[第 14.7 节，“处理受攻击的机器”详细说明了对受攻击的系统需要采取的必要步骤。
 
-这些命令不会恢复配置文件。但正如你在[第 5.2.3 节，“校验和和配置文件列表”（另参见侧边栏 [*进阶 强制 dpkg 询问配置文件问题]）中所学到的那样，你可以使用以下命令来被询问安装未修改的版本，甚至恢复任何已删除的配置文件。
+这些命令不会恢复配置文件。但正如你在[第 5.2.3 节，“校验和和配置文件列表”（另参见侧边栏 [*进阶 强制 `dpkg` 询问配置文件问题]）中所学到的那样，你可以使用以下命令来被询问安装未修改的版本，甚至恢复任何已删除的配置文件。
 
 ```bash
 # apt --reinstall -o Dpkg::Options::="--force-confask,confmiss" install package
 ```
 
-某些软件包在发布时并不包含位于 `/etc` 中的配置文件。相反，它们在安装期间期间通过拷贝骨架或通过脚本写入来创建。例如，`/etc/inputrc` 文件是 `/usr/share/readline/inputrc` 的副本。在这种情况下，上述命令将不起作用。
+某些软件包在发布时并不包含位于 `/etc` 中的配置文件。相反，它们在安装期间通过拷贝骨架或通过脚本写入来创建。例如，`/etc/inputrc` 文件是 `/usr/share/readline/inputrc` 的副本。在这种情况下，上述命令将不起作用。
 
-* * *
+如果 `sources.list` 文件提到了多个发行版，可以指定要安装的软件包版本。可以通过 `apt install package=version` 请求特定的版本号，但指明其源自发行版（Stable、Testing 或 Unstable）——使用 `apt install package/*distribution`——通常是首选。通过此命令，可以回到软件包的旧版本（例如，如果你知道它运行良好），只要该版本在 `sources.list` 文件引用的某个源中仍然可用即可。否则，`snapshot.debian.org` 存档可以派上用场（参见侧边栏 [*进阶 旧软件包版本：`snapshot.debian.org`]*）。
 
-如果 `sources.list` 文件提到了多个发行版，可以指定要安装的软件包版本。可以通过 `apt install package=version` 请求特定的版本号，但指明其源自发行版（Stable、Testing 或 Unstable）——使用 `apt install package/*distribution`——通常是首选。通过此命令，可以回到软件包的旧版本（例如，如果你知道它运行良好），只要该版本在 `sources.list` 文件引用的某个源中仍然可用即可。否则，`snapshot.debian.org` 存档可以派上用场（参见侧边栏 [*进阶 旧软件包版本：`snapshot.debian.org`]）。
+### 示例 6.4：安装 Unstable 版本的 `spamassin`
 
-示例 6.4. 安装 Unstable 版本的 spamassin
 ```bash
 apt install spamassin/unstable
 ```
+
 如果要安装的软件包已以简单 `.deb` 的形式提供给你，仍然可以同它的依赖项一起安装：`apt install ./path-to-package.deb`。
 
-* * *
-
-进阶 .deb 文件的缓存
-
-APT 在 `/var/cache/apt/archives/` 目录下保留每个下载的 `.deb` 文件的副本。在频繁更新的情况下，该目录可能会因为每个软件包的多个版本而迅速占用大量空间；你应该定期清理它们。可以使用两个命令：`apt-get clean` 完全清空目录；`apt-get autoclean` 仅移除无法下载（因为它们已从 Debian 镜像中消失）因此无用的软件包（配置参数 `APT::Clean-Installed` 可以防止删除 `.deb` 文件）。
-
-* * *
+> **进阶：`.deb` 文件的缓存**
+>
+> APT 在 `/var/cache/apt/archives/` 目录下保留每个下载的 `.deb` 文件的副本。在频繁更新的情况下，该目录可能会因为每个软件包的多个版本而迅速占用大量空间；你应该定期清理它们。可以使用两个命令：`apt-get clean` 完全清空目录；`apt-get autoclean` 仅移除无法下载（因为它们已从 Debian 镜像中消失）因此无用的软件包（配置参数 `APT::Clean-Installed` 可以防止删除 `.deb` 文件）。
 
 ## 6.2.3 系统升级
 
@@ -2752,21 +2650,19 @@ APT 在 `/var/cache/apt/archives/` 目录下保留每个下载的 `.deb` 文件�
 
 要让 `apt` 在搜索升级软件包时使用特定的发行版，你需要使用 `-t` 或 `--target-release` 选项，跟随所需的发行版名称（例如 `apt -t stable upgrade`）。为了避免每次使用 `apt` 时指定此选项，你可以在 `/etc/apt/apt.conf.d/local` 文件中添加 `APT::Default-Release "stable";`。
 
-
-
 对于更重要的升级，例如从一个 Debian 主版本升级到下一个主版本，你需要使用 `apt full-upgrade`。使用此指令，`apt` 即使需要移除某些过时的软件包或安装新的依赖项也能完成升级。这也是每天处理 Debian Unstable（不稳定版）发布并追踪其演进的用户所使用的命令。它是如此简单，以至于不需要解释：APT 的声誉正是基于这一强大功能。
 
 与 `apt` 和 `aptitude` 不同，`apt-get` 不支持 `full-upgrade` 命令。相反，你应该使用 `apt-get dist-upgrade`（“发行版升级”），这是 `apt` 和 `aptitude` 也接受的、且方便用户的命令。
 
 这些操作的结果记录在 `/var/log/apt/history.log` 和 `/var/log/apt/term.log` 中，而 `dpkg` 将日志保存在 `/var/log/dpkg.log` 文件中。
 
-### 6.2.4. 配置选项
+### 6.2.4 配置选项
 
 除了上述配置元素外，还可以通过在 `/etc/apt/apt.conf.d/` 目录下的文件或 `/etc/apt/apt.conf` 文件中添加指令来配置 APT 的某些方面。记住，例如，APT 可以告诉 `dpkg` 忽略文件冲突，指定 `DPkg::options { "--force-overwrite"; }`。
 
 如果只能通过代理访问 Web，添加一行 `Acquire::http::proxy "http://yourproxy"`。对于 FTP 代理，写入 `Acquire::ftp::proxy "ftp://yourproxy"`。要发现更多配置选项，请阅读 `apt.conf(5)` 手册（详情请参阅 7.1.1. 手册）。
 
-### 以 .d 结尾的目录
+#### 以 `.d` 结尾的目录
 
 以 `.d` 结尾的目录使用得频繁。每个目录代表一个拆分成多个文件的配置文件。从这个意义上说，`/etc/apt/apt.conf.d/` 中的所有文件 APT 会按字母顺序包含它们，以便后面的文件可以修改前面文件中定义的配置元素。
 
@@ -2774,7 +2670,7 @@ APT 在 `/var/cache/apt/archives/` 目录下保留每个下载的 `.deb` 文件�
 
 取决于应用程序，`.d` 目录是直接使用的，还是由外部脚本连接所有文件来创建配置文件本身。在该目录发生任何更改后执行脚本很重要，以便考虑到最新的修改。同样，不要直接在自动创建的文件中工作，因为下次执行脚本时所有内容都会丢失。选择的方法（直接使用 `.d` 目录或从该目录生成文件）通常由实现限制决定，但在两种情况下，灵活性的收益都大于其带来的微小复杂。Exim 4 邮件服务器生成文件方法的示例：它可以通过多个文件（`/etc/exim4/conf.d/*`）进行配置，并通过 `update-exim4.conf` 命令合并到 `/var/lib/exim4/config.autogenerated`。
 
-## 6.2.5. 管理软件包优先级
+## 6.2.5 管理软件包优先级
 
 APT 配置中最重要的方面之一是与每个软件包源相关的优先级管理。例如，你可能希望通过 Testing（测试版）、Unstable（不稳定版）或 Experimental（实验版）的一个或两个新软件包来扩展一个发行。可以为每个可用软件包分配优先级（同一个软件包可以根据其版本或提供它的发行具有多个优先级）。这些优先级将影响 APT 的行为：对于每个软件包，它总是选择优先级最高的版本（除非该版本较旧且优先级较低）。
 
@@ -2782,65 +2678,73 @@ APT 定义了多个默认优先级。每个已安装的软件包版本优先级�
 
 你可以通过在 `/etc/apt/preferences.d/` 中的文件或 `/etc/apt/preferences` 文件中添加条目来修改优先级，包含受影响软件包的名称、版本、来源和新优先级。
 
-APT 绝不会安装旧版本的软件包（即版本号低于当前安装版本的软件包），除非其优先级高于 1000（或由用户显式指定，参见 [6.2.2. 安装与卸载](#apt-install0602]）。APT 将始终安装遵循此约束的最高优先级。如果两个软件包具有相同的优先级，APT 安装最新的那一个（版本号最高的）。如果两个相同版本的软件包优先级相同但内容不同，APT 安装未安装的那个版本（此规则的创建是为了涵盖软件包在不增加修订版本号的情况下进行更新的情况）。
+APT 绝不会安装旧版本的软件包（即版本号低于当前安装版本的软件包），除非其优先级高于 1000（或由用户显式指定，参见 [6.2.2. 安装与卸载](#apt-install0602)）。APT 将始终安装遵循此约束的最高优先级。如果两个软件包具有相同的优先级，APT 安装最新的那一个（版本号最高的）。如果两个相同版本的软件包优先级相同但内容不同，APT 安装未安装的那个版本（此规则的创建是为了涵盖软件包在不增加修订版本号的情况下进行更新的情况）。
 
 更具体地说，优先级为以下值的软件包：
 
-- < 0：绝不安装；
-- 1..99：只有在没有安装其他版本的软件包时才安装；
-- 100..499：只有在其他发行版中没有更新版本时才安装；
-- 500....989：只有在目标发行版中没有更新版本时才安装；
-- 990..1000：除非安装的版本较新，否则将安装；
-- > 1000：始终安装，即使这强制 APT 降级到旧版本。
+- `< 0`：绝不安装；
+- `1..99`：只有在没有安装其他版本的软件包时才安装；
+- `100..499`：只有在其他发行版中没有更新版本时才安装；
+- `500..989`：只有在目标发行版中没有更新版本时才安装；
+- `990..1000`：除非安装的版本较新，否则将安装；
+- `> 1000`：始终安装，即使这强制 APT 降级到旧版本。
 
 当 APT 检查 `/etc/apt/preferences` 和 `/etc/apt/preferences.d/` 时，它首先考虑具体的条目（通常是指定相关软件包的条目），然后是更通用的条目（例如，某个发行版的所有软件包）。如果存在多个通用条目，则使用第一个匹配。可用的选择标准包括软件包名称和提供它的来源。
 
 让我们通过该机制的几个现实案例研究一下其语法。
 
+### 特殊案例：实验性版本的优先级
 
-
-
-# 特殊案例 实验性版本的优先级
-
-如果你在 `sources.list` 文件中列出了 Experimental（实验性），相应的软件包几乎不会被安装，因为它们的默认 APT 优先级为 `1`。这当然是一个特殊情况，旨在防止用户误装实验性软件包。只有通过输入 `aptitude install `package*/experimental` 才能安装它们——输入此命令的用户只能意识到他们正在承担的风险。尽管（*不建议*），但你仍然可以通过赋予实验性包优先级 `500` 来像对待其他发行版的包一样对待它们。这通过 `/etc/apt/preferences` 中的一个特定条目来实现：
+如果你在 `sources.list` 文件中列出了 Experimental（实验性），相应的软件包几乎不会被安装，因为它们的默认 APT 优先级为 `1`。这当然是一个特殊情况，旨在防止用户误装实验性软件包。只有通过输入 `aptitude install package*/experimental` 才能安装它们——输入此命令的用户只能意识到他们正在承担的风险。尽管不建议，但你仍然可以通过赋予实验性包优先级 `500` 来像对待其他发行版的包一样对待它们。这通过 `/etc/apt/preferences` 中的一个特定条目来实现：
 
 ```text
-Package: * Pin: release a=experimental Pin-Priority: 500
+Package: *
+Pin: release a=experimental
+Pin-Priority: 500
 ```
-
-* * *
 
 假设只想使用 Debian 稳定版（stable）的软件包。除非显式请求，否则不应安装其他版本提供的包。你可以在 `/etc/apt/preferences` 文件中写入以下内容：
 
 ```text
-Package: * Pin: release a=stable Pin-Priority: 900
-Package: * Pin: release o=Debian Pin-Priority: -10
+Package: *
+Pin: release a=stable
+Pin-Priority: 900
+
+Package: *
+Pin: release o=Debian
+Pin-Priority: -10
 ```
+
+
 
 `a=stable` 定义了所选发行版的名称。`o=Debian` 将范围限制为源自“Debian”的软件包。
 
 现在假设你有一台服务器，上面的多个本地程序依赖 Perl `5.24` 版本，你希望确保升级不会安装它的另一个版本。你可以使用此条目：
 
 ```text
-Package: perl Pin: version 5.24* Pin-Priority: 1001
+Package: perl
+Pin: version 5.24*
+Pin-Priority: 1001
 ```
 
-为了更好地理解优先级机制、发行版属性或要锁定的仓库属性，请随时执行 `apt-cache policy` 来显示与每个软件包源关联的默认优先级，或者执行 `apt-cache policy `package` ` 来显示软件包每个可用版本和源的默认优先级，这在 *TIP* **apt-cache policy** 中有所解释。
+为了更好地理解优先级机制、发行版属性或要锁定的仓库属性，请随时执行`apt-cache policy`来显示与每个软件包源关联的默认优先级，或者执行`apt-cache policy package`来显示软件包每个可用版本和源的默认优先级，这在 *TIP* `apt-cache policy` 中有所解释。
 
-`/etc/apt/preferences` 和 `/etc/apt/preferences.d/` 文件的参考文档可以在手册页 `apt_preferences(5)` 中找到，你可以通过 `man apt_preferences` 显示它。
+`/etc/apt/preferences` 和 `/etc/apt/preferences.d/` 文件的参考文档可以在手册页`apt_preferences(5)`中找到，你可以通过`man apt_preferences`显示它。
 
-* * *
+---
 
 ### *TIP* `/etc/apt/preferences` 中的注释
 
 在 `/etc/apt/preferences` 文件中没有官方的注释语法，但可以通过在每个条目的开头放置一个或多个“`Explanation`”字段来提供文本描述：
 
 ```text
-Explanation: the package xserver-xorg-video-intel provided Explanation: in experimental can be used safely
-Package: xserver-xorg-video-intel Pin: release a=experimental Pin-Priority: 500
-```
+Explanation: the package xserver-xorg-video-intel provided
+Explanation: in experimental can be used safely
 
-* * *
+Package: xserver-xorg-video-intel
+Pin: release a=experimental
+Pin-Priority: 500
+```
 
 ## 6.2.6 与多个发行版一起工作
 
@@ -2848,18 +2752,20 @@ Package: xserver-xorg-video-intel Pin: release a=experimental Pin-Priority: 500
 
 即使在混合使用不同发行版的软件包时偶尔会遇到问题，`apt` 也能很好地管理这种共存并非常有效地限制风险。最好的做法是在 `/etc/apt/sources.list` 中列出所有使用的发行版（有些人总是放这三个发行版，但请记住 Unstable 是留给经验丰富的用户的），并使用 `APT::Default-Release` 参数定义你的参考发行版（参见 Section 6.2.3, “System Upgrade”）。
 
-假设 Stable 是你的参考发行版，但 Testing 和 Unstable 也列在你的 `sources.list` 文件中。在这种情况下，你可以使用 `apt install `package*/testing` 来安装 Testing 中的软件包。如果安装由于某些无法满足的依赖而失败，通过添加 `-t testing` 参数让它在 Testing 内部解决这些依赖关系。这显然也适用于 Unstable。
+假设 Stable 是你的参考发行版，但 Testing 和 Unstable 也列在你的 `sources.list` 文件中。在这种情况下，你可以使用`apt install package/testing`来安装 Testing 中的软件包。如果安装由于某些无法满足的依赖而失败，通过添加`-t testing`参数让它在 Testing 内部解决这些依赖关系。这显然也适用于 Unstable。
 
-在这种情况下，升级（`upgrade` 和 `full-upgrade`）将在 Stable 内进行，但已经升级到另一个发行版的软件包除外：这些包将遵循其他发行版中可用的更新。我们将在下通过 APT 设置的默认优先级来解释这种行为。请随时使用 `apt-cache policy`（参见侧边栏 *TIP* **apt-cache policy**）来验证给定的优先级。
+在这种情况下，升级（`upgrade` 和 `full-upgrade`）将在 Stable 内进行，但已经升级到另一个发行版的软件包除外：这些包将遵循其他发行版中可用的更新。我们将在下通过 APT 设置的默认优先级来解释这种行为。请随时使用`apt-cache policy`（参见侧边栏 *TIP* `apt-cache policy`）来验证给定的优先级。
 
 一切都围绕着一点：APT 只考虑比已安装软件包版本更高或相同的软件包（假设没有使用 `/etc/apt/preferences` 强制某些软件包的优先级高于 `1000`）。
 
 假设你已经从 Stable 安装了第一个软件包的版本 `1`，而版本 `2` 和 `3` 分别在 Testing 和 Unstable 中可用。已安装版本的优先级为 `100`，但 Stable 中可用的版本（即同一个版本）优先级为 `990`（因为它是目标发布的一部分）。Testing 和 Unstable 中的软件包优先级为 `500`（未安装版本的默认优先级）。因此，获胜者是优先级为 `990` 的版本 `1`。该软件包“留在 Stable 中”。
 
-让我们以另一个软件包为例，该包已从 Testing 安装了版本 `2`。版本 `1` 在 Stable 中可用，版本 `3` 在 Unstable 中可用。版本 `1`（优先级为 `990` —— 因此低于 `100`）被丢弃，因为它低于已安装版本。这剩下 `2` 和 `3`，它们的优先级均为 `500`。面对这种替代方案，APT 选择最新的版本，即来自 Unstable 的版本。你不希望来自 Testing 的包迁移到 Unstable，则必须为 Unstable 的包分配低于 `500` 的优先级（例如 490）。你可以这样修改 `/etc/apt/preferences`：
+让我们以另一个软件包为例，该包已从 Testing 安装了版本 `2`。版本 `1` 在 Stable 中可用，版本 `3` 在 Unstable 中可用。版本 `1`（优先级为 `990` —— 因此低于 `100`）被丢弃，因为它低于已安装版本。这剩下 `2` 和 `3`，它们的优先级均为 `500`。面对这种替代方案，APT 选择最新的版本，即来自 Unstable 的版本。你不希望来自 Testing 的包迁移到 Unstable，则必须为 Unstable 的包分配低于 `500` 的优先级（例如 `490`）。你可以这样修改 `/etc/apt/preferences`：
 
 ```text
-Package: * Pin: release a=unstable Pin-Priority: 490
+Package: *
+Pin: release a=unstable
+Pin-Priority: 490
 ```
 
 ## 6.2.7 跟踪已安装软件包
@@ -2868,145 +2774,215 @@ Package: * Pin: release a=unstable Pin-Priority: 490
 
 有了这些信息，在移除软件包时，包管理器可以计算不再需要的自动软件包（因为没有“手动安装”的软件包依赖它们）。`apt-get autoremove` 或 `apt autoremove` 将删除这些软件包。`aptitude` 没有这个命令，因为它会自动删除它们。在所有情况下，工具都会显示受影响的软件包列表。
 
-将你不直接需要的软件包标记为自动是一个好习惯，这样它们在不再需要时就会自动删除。`apt-mark auto `package` ` 将指定的软件包标记为自动，而 `apt-mark manual `package` ` 则相反。`aptitude markauto` 和 `aptitude unmarkauto` 的原理相同，尽管它们为一次性标记多个包提供了更多功能（参见 Section 6.5.1, “**aptitude**”）。`aptitude` 基于控制的交互界面也方便查看许多软件包的“自动标记”。人们可能想知道为什么系统中存在自动安装的软件包。要从命令行获取此类信息，可以使用 `aptitude why `package` `（**apt** 和 **apt-get** 没有类似的功能）：
+将你不直接需要的软件包标记为自动是一个好习惯，这样它们在不再需要时就会自动删除。`apt-mark auto package` 将指定的软件包标记为自动，而`apt-mark manual package`则相反。`aptitude markauto` 和 `aptitude unmarkauto` 的原理相同，尽管它们为一次性标记多个包提供了更多功能（参见 Section 6.5.1, “**aptitude**”）。`aptitude` 基于控制的交互界面也方便查看许多软件包的“自动标记”。人们可能想知道为什么系统中存在自动安装的软件包。要从命令行获取此类信息，可以使用`aptitude why package`（`apt` 和 `apt-get` 没有类似的功能）：
 
-```
+```text
 $ aptitude why python-debian
-i aptitude Suggests apt-xapian-index p apt-xapian-index Depends python-debian (>= 0.1.14)
+
+i aptitude Suggests apt-xapian-index
+p apt-xapian-index Depends python-debian (>= 0.1.14)
 ```
 
-* * *
+---
 
-### *ALTERNATIVE* **deborphan** 和 **debfoster**
+### *ALTERNATIVE* `deborphan` 和 `debfoster`
 
-在 **apt**、**apt-get** 和 **aptitude** 无法跟踪自动软件包的日子，有两个产生不必要软件包列表的工具：**deborphan** 和 **debfoster**。两者仍然很有用。
-
-
-
+在 `apt`、`apt-get` 和 `aptitude` 无法跟踪自动软件包的日子，有两个产生不必要软件包列表的工具：`deborphan` 和 `debfoster`。两者仍然很有用。
 
 `deborphan` 默认会扫描 `libs` 和 `oldlibs` 部分（在没有补充说明的情况下），寻找当前已安装且没有其他包依赖于它的包。生成的列表可以作为删除不需要的包的依据。
 
 `debfoster` 采用了一种更复杂的方法，与 APT 的方法非常相似：它维护一个显式安装的软件包列表，并记住每次调用之间真正需要的软件包。如果系统上出现了新软件包，且 `debfoster` 不认为它们识别为所需的包，则它们将与它们的依赖项列表一起显示在屏幕上。然后，程序会提供一个选择：删除该包（可能连同依赖于它的包一起删除）、将其标记为显式需要，或者临时忽略它。
 
-* *
-
 # 6.3. `apt-cache` 命令
 
 `apt-cache` 命令可以显示存储在 APT 内部数据库中的许多信息。这些信息是某种缓存，因为它们是从 `sources.list` 文件中列出的不同来源收集的。这发生在 `apt update` 操作期间。
 
-* *
-
-### 词汇 缓存 (Cache)
+### 词汇：缓存（Cache）
 
 缓存是一种临时存储系统，当通常的访问方法开销较大（从性能角度考虑）时用于加速频繁的数据访问。这一概念可以应用于许多情况和不同的规模，从微处理器的核心到高端存储系统。
 
 在 APT 的情况下，引用的 `Packages` 文件是位于 Debian 镜像上的文件。话虽如此，如果对可用软件包数据库中可能想要进行的每一次搜索都通过网络，那将是非常低效的。这就是为什么 APT 存储了这些文件的副本（在 `/var/lib/apt/lists/` 中），并且在这些本地文件中进行搜索。同样，`/var/cache/apt/archives/` 包含了已下载软件包的缓存，以避免在删除删除后需要重新安装它们时再次下载。
 
-另一方面，必须定期运行 `apt update` 来更新缓存。否则，你的软件包搜索结果将始终会错过 Debian 镜像分发的最新更新。
+另一方面，必须定期运行`apt update`来更新缓存。否则，你的软件包搜索结果将始终会错过 Debian 镜像分发的最新更新。
 
-`apt-cache` 命令可以通过 `apt-cache search `keyword`` 进行基于关键词的包包搜索。它还可以通过 `apt-cache show `package`` 显示包的可用版本的头信息..。此命令提供了包的描述、其依赖项、维护者名称等。请注意 `apt search`、`apt show`、`aptitude search` 和 `aptitude show` 的工作方式相同。
+`apt-cache` 命令可以通过`apt-cache search keyword`进行基于关键词的包包搜索。它还可以通过`apt-cache show package`显示包的可用版本的头信息..。此命令提供了包的描述、其依赖项、维护者名称等。请注意`apt search`、`apt show`、`aptitude search`和`aptitude show`的工作方式相同。
 
-* *
-
-### 替代方案 `axi-cache`
+### 替代方案：`axi-cache`
 
 `apt-cache search` 是一个非常原始的工具，基本上是在包的描述上实现 `grep`。当你包含太多关键词时，它通常会返回太多结果，或者完全没有结果。
 
-另一方面，`axi-cache search `term`` 提供了更好的结果，并按相关性排序。它使用 `Xapian` 搜索引擎，是 `apt-xapian-index` 包的一部分，该包索引了所有包信息（以及更多，如所有 Debian 包的 `.desktop` 文件）。它知道标签（参见侧边栏 *深入探索 `Tag` 字段`）并并在几毫秒内返回结果。
+另一方面，`axi-cache search term`提供了更好的结果，并按相关性排序。它使用 `Xapian` 搜索引擎，是 `apt-xapian-index` 包的一部分，该包索引了所有包信息（以及更多，如所有 Debian 包的 `.desktop` 文件）。它知道标签（参见侧边栏 *深入探索 `Tag` 字段`）并并在几毫秒内返回结果。
 
+```text
+$ axi-cache search package use::searching
+
+100 results found. Results 1-20:
+
+100% packagesearch - 用于搜索包和查看包信息的 GUI
+99% apt-utils - 与软件包管理相关的实用程序
+98% whohas - 查询多个发行版的包存档
+98% dpkg-awk - 用于解析 /var/lib/dpkg/{status,available} 和 Packages 的 Gawk 脚本
+97% apt-file - 在 Debian 包内搜索文件（命令行界面）
+[..]
+90% wajig - Debian 的统一包管理前端
+
+More terms: debtags debian paket dpkg search pakete tools
+More tags: role::program interface::commandline works-with::software:package
+suite::debian admin::package-management scope::utility network::client
+
+`axi-cache more' will give more results
 ```
-$ axi-cache search package use::searching 100 results found. Results 1-20: 100% packagesearch - 用于搜索包和查看包信息的 GUI 99% apt-utils - 与软件包管理相关的实用程序 98% whohas - 查询多个发行版的包存档 98% dpkg-awk - 用于解析 /var/lib/dpkg/{status,available} 和 Packages 的 Gawk 脚本 97% apt-file - 在 Debian 包内搜索文件（命令行界面） [..] 90% wajig - Debian 的统一包管理前端 More terms: debtags debian paket dpkg search pakete tools More tags: role::program interface::commandline works-with::software:package suite::debian admin::package-management scope::utility network::client `axi-cache more' will give more results
-```
 
-* *
+某些功能较少被使用。例如，`apt-cache policy` 显示包源的优先级以及单个包的优先级。另一个例子是`apt-cache dumpavail`，它显示所有包的所有可用版本的头信息。`apt-cache pkgnames` 显示缓存中至少出现一次的所有包的列表。
 
-某些功能较少被使用。例如，`apt-cache policy` 显示包源的优先级以及单个包的优先级。另一个例子是 `apt-cache dumpavail`，它显示所有包的所有可用版本的头信息。`apt-cache pkgnames` 显示缓存中至少出现一次的所有包的列表。
+### 提示：`apt-cache policy`
 
-* *
+`apt-cache policy` 命令显示每个包源的固定优先级和发行属性，正如第 6.2.5 节，“管理软件包优先级”（`ch06s02.html_sect.apt.priorities`，`6.2.5. Managing Package Priorities`）中解释的那样。它还可以显示包的所有可用版本和来源的固定优先级。对于示例 6.2，适用于 Debian Stable 用户的 `/etc/apt/sources.list` 文件中使用的 `sources.list` 示例，并将 `APT::Default-Release` 设置为 `"buster"`，输出如下：
 
-### 提示 `apt-cache policy`
-
-`apt-cache policy` 命令显示每个包源的固定优先级和发行属性，正如第 6.2.5 节，“管理软件包优先级`](ch06s02.html_sect.apt.priorities "6.2.5. Managing Package Priorities")”中解释的那样。它还可以显示包的所有可用版本和来源的固定优先级。对于 示例 6.2，适用于 Debian Stable 用户的 `/etc/apt/sources.list` 文件` 中使用的 `sources.list` 示例，并将 `APT::Default-Release` 设置为 `"buster"`，输出如下：
-
-```
+```text
 $ apt-cache policy
-Package files: 100 /var/lib/dpkg/status release a=now 100 https://deb.debian.org/debian buster-backports
+
+Package files:
+ 100 /var/lib/dpkg/status
+     release a=now
+ 100 https://deb.debian.org/debian buster-backports
 ```
 
 
 
-`$ apt-file search bin/axi-cache` apt-xapian-index: `/usr/bin/axi-cache`
+```bash
+$ apt-file search bin/axi-cache
+apt-xapian-index: /usr/bin/axi-cache
+```
 
-命令 `apt-file list `package`` 将列出该包包含的所有文件。
+命令`apt-file list package`将列出该包包含的所有文件。
 
-***
+---
 
-*提示* 列出包内容和查找文件所属包
+**提示：列出包内容和查找文件所属包**
 
-类似于 `apt-file list`，命令 `dpkg -L `package`` 会列出所有文件，但仅针对已安装的包。要查找本地文件所属的包，请使用 `dpkg -S `file``（参见第 5.4.3 节，“查询 `dpkg` 数据库和检查 .deb 文件” )）。要列出所有不属于任何已安装包的本地文件，你可能想查看 `cruft` 或 `cruft-ng` 包。
+类似于`apt-file list`，命令`dpkg -L package`会列出所有文件，但仅针对已安装的包。要查找本地文件所属的包，请使用`dpkg -S file`（参见第 5.4.3 节，“查询`dpkg`数据库和检查`.deb`文件”）。要列出所有不属于任何已安装包的本地文件，你可能想查看`cruft`或`cruft-ng`包。
 
-***
+---
 
-# 6.5. 前端：`aptitude`, `synaptic`
+# 6.5. 前端：`aptitude`、`synaptic`
 
-APT 是一个 C++ 程序，其代码主要位于 `libapt-pkg` 共享库中。使用共享库有助于创建用户界面（前端），因为库中的代码可以很容易地重用。从历史上看，`apt-get` 只设计为 `libapt-pkg` 的测试前端，但它的成功掩盖了这一事实。
+APT 是一个 C++ 程序，其代码主要位于`libapt-pkg`共享库中。使用共享库有助于创建用户界面（前端），因为库中的代码可以很容易地重用。从历史上看，`apt-get`只设计为`libapt-pkg`的测试前端，但它的成功掩盖了这一事实。
 
 ## 6.5.1. `aptitude`
 
-`aptitude` 是一个交互式程序，可以在控制台中以半图形模式运行。你可以浏览已安装和可用包列表，查询所有可用信息，并选择要安装或删除的包。该程序专门为管理员设计，因此其默认行为比 `apt-get` 智能得多，界面也更容易理解。
+`aptitude`是一个交互式程序，可以在控制台中以半图形模式运行。你可以浏览已安装和可用包列表，查询所有可用信息，并选择要安装或删除的包。该程序专门为管理员设计，因此其默认行为比`apt-get`智能得多，界面也更容易理解。
 
-图 6.1. aptitude 包管理器![aptitude 包管理器](img/aptitude.png) 
+图 6.1. `aptitude`包管理器
 
-当 `aptitude` 启动时，它会显示按状态（已安装、未安装、或已安装但在镜像服务器上不可用）排序的包列表（其他部分显示任务、虚拟包以及最近在镜像服务器上出现的新包）。为了方便按主题浏览，提供了其他视图。在任何情况下，`aptitude` 都会在屏幕上显示一个结合类别和包的列表。类别通过树结构组织，其分支可以分别展开或关闭。
+![aptitude 包管理器](img/aptitude.png)
 
+当`aptitude`启动时，它会显示按状态（已安装、未安装、或已安装但在镜像服务器上不可用）排序的包列表（其他部分显示任务、虚拟包以及最近在镜像服务器上出现的新包）。为了方便按主题浏览，提供了其他视图。在任何情况下，`aptitude`都会在屏幕上显示一个结合类别和包的列表。类别通过树结构组织，其分支可以分别展开或关闭。
 
+总结本节内容，请注意在处理复杂情况时，`aptitude`相比`apt-get`拥有更复杂的算法。当请求一组操作，且这些组合操作会导致系统状态不一致时，`aptitude`会评估几种可能的场景，并按相关性从高到低的顺序呈现它们。然而，这些算法并非万无一失。幸运的是，始终可以手动选择要执行的操作。当当前选择的操作导致冲突时，屏幕上方会显示若干个“损坏”软件包（你可以通过按`b`直接导航到这些软件包）。此时，可以为发现的问题手动构建解决方案。特别是，你只需通过`Enter`键选择软件包来访问不同的可用版本。如果选择其中一个版本解决了问题，你不应该犹豫地使用该功能。当损坏软件包的数量减少到零时，你就可以安全地进入待处理操作摘要屏幕，在应用它们之前进行最后检查。
 
-总结本节内容，请注意在处理复杂情况时，`aptitude` 相比 `apt-get` 拥有更复杂的算法。当请求一组操作，且这些组合操作会导致系统状态不一致时，`aptitude` 会评估几种可能的场景，并按相关性从高到低的顺序呈现它们。然而，这些算法并非万无一失。幸运的是，始终可以手动选择要执行的操作。当当前选择的操作导致冲突时，屏幕上方会显示若干个“损坏”软件包（你可以通过按 `b` 直接导航到这些软件包）。此时，可以为发现的问题手动构建解决方案。特别是，你只需通过 `Enter` 键选择软件包来访问不同的可用版本。如果选择其中一个版本解决了问题，你不应该犹豫地使用该功能。当损坏软件包的数量减少到零时，你就可以安全地进入待处理操作摘要屏幕，在应用它们之前进行最后检查。
+---
 
-***
+**注意：`aptitude`的日志**
 
-注意 `aptitude` 的日志
+与`dpkg`一样，`aptitude`会在其日志文件（`/var/log/aptitude`）中记录已执行的操作。然而，由于这两个命令的工作层次完全不同，你无法在各自的日志文件中找到相同的信息。`dpkg`会逐步记录在单个软件包上执行的所有操作，而`aptitude`则提供了系统级升级等高层操作的更广泛视图。
 
-与 `dpkg` 一样，`aptitude` 会在其日志文件（`/var/log/aptitude`）中记录已执行的操作。然而，由于这两个命令的工作层次完全不同，你无法在各自的日志文件中找到相同的信息。`dpkg` 会逐步记录在单个软件包上执行的所有操作，而 `aptitude` 则提供了系统级升级等高层操作的更广泛视图。
+请注意，此日志文件仅包含`aptitude`执行的操作摘要。如果偶尔使用其他前端（甚至`dpkg`本身），那么`aptitude`的日志将只包含操作的部分视图，因此你不能依赖它来构建可靠的系统历史。
 
-请注意，此日志文件仅包含 `aptitude` 执行的操作摘要。如果偶尔使用其他前端（甚至 `dpkg` 本身），那么 `aptitude` 的日志将只包含操作的部分视图，因此你不能依赖它来构建可靠的系统历史。
+---
 
-***
+## 6.5.2. `synaptic`
 
-## 6.5.2 synaptic
+`synaptic`是一个用于 Debian 的图形化包管理器，其特点是基于 GTK+/GNOME 拥有整洁且高效的图形界面。它的许多即用过滤器可以快速访问新可用软件包、已安装软件包、可升级软件包、过时软件包等。如果你浏览这些列表，可以选择对软件包要执行的操作（安装、升级、删除、彻底清除）；这些操作不会立即执行，而是被放入任务列表中。只需点击一个按钮即可验证这些操作，并一次性执行。
 
-`synaptic` 是一个用于 Debian 的图形化包管理器，其特点是基于 GTK+/GNOME 拥有整洁且高效的图形界面。它的许多即用过滤器可以快速访问新可用软件包、已安装软件包、可升级软件包、过时软件包等。如果你浏览这些列表，可以选择对软件包要执行的操作（安装、升级、删除、彻底清除）；这些操作不会立即执行，而是被放入任务列表中。只需点击一个按钮即可验证这些操作，并一次性执行。
+图 6.2. `synaptic`软件包管理器
 
-图 6.2. synaptic 软件包管理器![synaptic 软件包管理器](img/synaptic.png)
+![synaptic 软件包管理器](img/synaptic.png)
 
-## 6.6 检查软件包的真实性
+# 6.6. 检查软件包的真实性
 
-安全对于 Falcot Corp 的管理员来说非常重要。因此，他们需要确保只安装那些保证来自 Debian 且在传输过程中未被篡改的软件包。计算机黑客可能会尝试向原本合法的软件包中添加恶意代码。如果安装了此类软件包，它可以执行黑客设计的的任何操作，例如泄露密码或机密信息。为了规避这种风险，Debian 了一个了一个防篡改密封，以确保——在安装时——软件包确实来自其官方维护者，且未被第三方修改过。
+安全对于 Falcot Corp 的管理员来说非常重要。因此，他们需要确保只安装那些保证来自 Debian 且在传输过程中未被篡改的软件包。计算机黑客可能会尝试向原本合法的软件包中添加恶意代码。如果安装了此类软件包，它可以执行黑客设计的任何操作，例如泄露密码或机密信息。为了规避这种风险，Debian 了一个了一个防篡改密封，以确保在安装时软件包确实来自其官方维护者，且未被第三方修改过。
 
-该密封通过一系列加密哈希链和签名来工作，并在 apt-secure(8) 中进行了详细解释。从 Debian 10 buster 开始，签名文件是 Setup Debian 镜像提供的 `InRelease` 文件。还有一个名为 `Release` 的旧版文件。两者都包含 `Packages` 文件的列表（包括它们的压缩格式 `Packages.gz` 和 `Packages.xz` 以及增量版本），以及它们的 SHA256 哈希值，这确保了文件没有被篡改。这些 `Packages` 文件包含了镜像上可用的 Debian 软件包列表及其哈希值，这反过来确保了软件包本身的内容也没有被更改过。`InRelease` 和 `Release` 之间的区别在于，前者是内联加密签名的，而后者以 `Release.gpg` 文件的形式提供离线签名。
+该密封通过一系列加密哈希链和签名来工作，并在`apt-secure(8)`中进行了详细解释。从 Debian 10 Buster 开始，签名文件是 Setup Debian 镜像提供的`InRelease`文件。还有一个名为`Release`的旧版文件。两者都包含`Packages`文件的列表（包括它们的压缩格式`Packages.gz`和`Packages.xz`以及增量版本），以及它们的 SHA256 哈希值，这确保了文件没有被篡改。这些`Packages`文件包含了镜像上可用的 Debian 软件包列表及其哈希值，这反过来确保了软件包本身的内容也没有被更改过。`InRelease`和`Release`之间的区别在于，前者是内联加密签名的，而后者以`Release.gpg`文件的形式提供离线签名。
 
-***
+---
 
-注意 `Release` 和 `Release.gpg` 的未来
+**注意：`Release`和`Release.gpg`的未来**
 
-可能随着 Debian 11 Bullseye 的发布，APT 将移除对自 APT 0.6 以来用于存档认证的旧文件 `Release` 和 `Release.gpg` 的支持。
+可能随着 Debian 11 Bullseye 的发布，APT 将移除对自 APT 0.6 以来用于存档认证的旧文件`Release`和`Release.gpg`的支持。
 
-***
+---
 
-APT 需要一组信任的 GnuPG 公钥来验证镜像上 `InRelease` 和 `Release.gpg` 文件中的签名。它从 `/etc/apt/trusted.gpg.d/` 中的文件以及 `/etc/apt/trusted.gpg` 密钥环（由 `apt-key` 命令管理）获取密钥。官方 Debian 密钥由 debian-archive-keyring 软件包提供并保持更新，该软件包将其放在 `/etc/apt/trusted.gpg.d/` 中。但注意，首次安装此特定软件包需要谨慎：即使该软件包与其他软件包一样经过签名，也无法从外部验证签名。因此，谨慎的管理员在信任导入的密钥安装新软件包之前，应该检查这些密钥的指纹：
+APT 需要一组信任的 GnuPG 公钥来验证镜像上`InRelease`和`Release.gpg`文件中的签名。它从`/etc/apt/trusted.gpg.d/`中的文件以及`/etc/apt/trusted.gpg`密钥环（由`apt-key`命令管理）获取密钥。官方 Debian 密钥由`debian-archive-keyring`软件包提供并保持更新，该软件包将其放在`/etc/apt/trusted.gpg.d/`中。但注意，首次安装此特定软件包需要谨慎：即使该软件包与其他软件包一样经过签名，也无法从外部验证签名。因此，谨慎的管理员在信任导入的密钥安装新软件包之前，应该检查这些密钥的指纹：
 
-
-
-
-# `apt-key fingerprint`
-
-```
-/etc/apt/trusted.gpg.d/debian-archive-buster-automatic.gpg ---------------------------------------------------------- pub rsa4096 2019-04-14 [SC] [expires: 2027-04-12] 80D1 5823 B7FD 1561 F9F7 BCDD DC30 D7C2 3CBB ABEE uid [ unknown] Debian Archive Automatic Signing Key (10/buster) <ftpmaster@debian.org> sub rsa4096 2019-04-14 [S] [expires: 2027-04-12] /etc/apt/trusted.gpg.d/debian-archive-buster-security-automatic.gpg ------------------------------------------------------------------- pub rsa4096 2019-04-14 [SC] [expires: 2027-04-12] 5E61 B217 265D A980 7A23 C5FF 4DFA B270 CAA9 6DFA uid [ unknown] Debian Security Archive Automatic Signing Key (10/buster) <ftpmaster@debian.org> sub rsa4096 2019-04-14 [S] [expires: 2027-04-12] /etc/apt/trusted.gpg.d/debian-archive-buster-stable.gpg ------------------------------------------------------- pub rsa4096 2019-02-05 [SC] [expires: 2027-02-03] 6D33 866E DD8F FA41 C014 3AED DCC9 EFBF 77E1 1517 uid [ unknown] Debian Stable Release Key (10/buster) <debian-release@lists.debian.org> /etc/apt/trusted.gpg.d/debian-archive-jessie-automatic.gpg ---------------------------------------------------------- pub rsa4096 2014-11-21 [SC] [expires: 2022-11-19] 126C 0D24 BD8A 2942 CC7D F8AC 7638 D044 2B90 D010 uid [ unknown] Debian Archive Automatic Signing Key (8/jessie) <ftpmaster@debian.org> /etc/apt/trusted.gpg.d/debian-archive-jessie-security-automatic.gpg ------------------------------------------------------------------- pub rsa4096 2014-11-21 [SC] [expires: 2022-11-19] D211 6914 1CEC D440 F2EB 8DDA 9D6D 8F6B C857 C906 uid [ unknown] Debian Security Archive Automatic Signing Key (8/jessie) <ftpmaster@debian.org> /etc/apt/trusted.gpg.d/debian-archive-jessie-stable.gpg ------------------------------------------------------- pub rsa4096 2013-08-17 [SC] [expires: 2021-08-15] 75DD C3C4 A499 F1A1 8CB5 F3C8 CBF8 D6FD 518E 17E1 uid [ unknown] Jessie Stable Release Key <debian-release@lists.debian.org> /etc/apt/trusted.gpg.d/debian-archive-stretch-automatic.gpg ----------------------------------------------------------- pub rsa4096 2017-05-22 [SC] [expires: 2025-05-20] E1CF 20DD FFE4 B89E 8026 58F1 E0B1 1894 F66A EC98 uid [ unknown] Debian Archive Automatic Signing Key (9/stretch) <ftpmaster@debian.org> sub rsa4096 2017-05-22 [S] [expires: 2025-05-20] /etc/apt/trusted.gpg.d/debian-archive-stretch-security-automatic.gpg -------------------------------------------------------------------- pub rsa4096 2017-05-22 [SC] [expires: 2025-05-20] 6ED6 F5CB 5FA6 FB2F 460A E88E EDA0 D238 8AE2 2BA9 uid [ unknown] Debian Security Archive Automatic Signing Key (9/stretch) <ftpmaster@debian.org> sub rsa4096 2017-05-22 [S] [expires: 2025-05-20] /etc/apt/trusted.gpg.d/debian-archive-stretch-stable.gpg -------------------------------------------------------- pub rsa4096 2017-05-20 [SC] [expires: 2025-05-18] 067E 3C45 6BAE 240A CEE8 8F6F EF0F 
+```bash
+apt-key fingerprint
 ```
 
-## 从稳定版升级到下一个版本
+```text
+/etc/apt/trusted.gpg.d/debian-archive-buster-automatic.gpg
+----------------------------------------------------------
+pub   rsa4096 2019-04-14 [SC] [expires: 2027-04-12]
+      80D1 5823 B7FD 1561 F9F7 BCDD DC30 D7C2 3CBB ABEE
+uid           [ unknown] Debian Archive Automatic Signing Key (10/buster) <ftpmaster@debian.org>
+sub   rsa4096 2019-04-14 [S] [expires: 2027-04-12]
 
-在本节中，我们将关注如何将 Stretch 升级到 Buster。在此过程中，由于这是一个重大操作，因此在开始之前必须对所有重要数据进行备份。另一个良好的习惯是清理已安装的软件包，这会让升级变得更容易。相关的工具包括 `aptitude`（参见节 2.7，跟踪软件包）。例如，你可以使用以下命令：
+/etc/apt/trusted.gpg.d/debian-archive-buster-security-automatic.gpg
+-------------------------------------------------------------------
+pub   rsa4096 2019-04-14 [SC] [expires: 2027-04-12]
+      5E61 B217 265D A980 7A23 C5FF 4DFA B270 CAA9 6DFA
+uid           [ unknown] Debian Security Archive Automatic Signing Key (10/buster) <ftpmaster@debian.org>
+sub   rsa4096 2019-04-14 [S] [expires: 2027-04-12]
+
+/etc/apt/trusted.gpg.d/debian-archive-buster-stable.gpg
+-------------------------------------------------------
+pub   rsa4096 2019-02-05 [SC] [expires: 2027-02-03]
+      6D33 866E DD8F FA41 C014 3AED DCC9 EFBF 77E1 1517
+uid           [ unknown] Debian Stable Release Key (10/buster) <debian-release@lists.debian.org>
+
+/etc/apt/trusted.gpg.d/debian-archive-jessie-automatic.gpg
+----------------------------------------------------------
+pub   rsa4096 2014-11-21 [SC] [expires: 2022-11-19]
+      126C 0D24 BD8A 2942 CC7D F8AC 7638 D044 2B90 D010
+uid           [ unknown] Debian Archive Automatic Signing Key (8/jessie) <ftpmaster@debian.org>
+sub   rsa4096 2014-11-21 [S] [expires: 2022-11-19]
+
+/etc/apt/trusted.gpg.d/debian-archive-jessie-security-automatic.gpg
+-------------------------------------------------------------------
+pub   rsa4096 2014-11-21 [SC] [expires: 2022-11-19]
+      D211 6914 1CEC D440 F2EB 8DDA 9D6D 8F6B C857 C906
+uid           [ unknown] Debian Security Archive Automatic Signing Key (8/jessie) <ftpmaster@debian.org>
+sub   rsa4096 2014-11-21 [S] [expires: 2022-11-19]
+
+/etc/apt/trusted.gpg.d/debian-archive-jessie-stable.gpg
+-------------------------------------------------------
+pub   rsa4096 2013-08-17 [SC] [expires: 2021-08-15]
+      75DD C3C4 A499 F1A1 8CB5 F3C8 CBF8 D6FD 518E 17E1
+uid           [ unknown] Jessie Stable Release Key <debian-release@lists.debian.org>
+
+/etc/apt/trusted.gpg.d/debian-archive-stretch-automatic.gpg
+-----------------------------------------------------------
+pub   rsa4096 2017-05-22 [SC] [expires: 2025-05-20]
+      E1CF 20DD FFE4 B89E 8026 58F1 E0B1 1894 F66A EC98
+uid           [ unknown] Debian Archive Automatic Signing Key (9/stretch) <ftpmaster@debian.org>
+sub   rsa4096 2017-05-22 [S] [expires: 2025-05-20]
+
+/etc/apt/trusted.gpg.d/debian-archive-stretch-security-automatic.gpg
+--------------------------------------------------------------------
+pub   rsa4096 2017-05-22 [SC] [expires: 2025-05-20]
+      6ED6 F5CB 5FA6 FB2F 460A E88E EDA0 D238 8AE2 2BA9
+uid           [ unknown] Debian Security Archive Automatic Signing Key (9/stretch) <ftpmaster@debian.org>
+sub   rsa4096 2017-05-22 [S] [expires: 2025-05-20]
+
+/etc/apt/trusted.gpg.d/debian-archive-stretch-stable.gpg
+--------------------------------------------------------
+pub   rsa4096 2017-05-20 [SC] [expires: 2025-05-18]
+      067E 3C45 6BAE 240A CEE8 8F6F EF0F
+```
+
+# 从稳定版升级到下一个版本
+
+在本节中，我们将关注如何将 Stretch 升级到 Buster。在此过程中，由于这是一个重大操作，因此在开始之前必须对所有重要数据进行备份。另一个良好的习惯是清理已安装的软件包，这会让升级变得更容易。相关的工具包括`aptitude`（参见节 2.7，跟踪软件包）。例如，你可以使用以下命令：
 
 ```bash
 deborphan | xargs aptitude --schedule-only
@@ -3014,13 +2990,16 @@ deborphan | xargs aptitude --schedule-only
 
 ## 添加密钥
 
-当添加第三方源时，APT 需要验证其真实性。第一步是获取公钥。通常情况下，将其放置在 `/etc/apt/trusted.gpg.d/` 中。
+当添加第三方源时，APT 需要验证其真实性。第一步是获取公钥。通常情况下，将其放置在`/etc/apt/trusted.gpg.d/`中。
 
-使用 `apt-key` 命令将密钥添加到密钥：
+使用`apt-key`命令将密钥添加到密钥：
 
-```
+```bash
 apt-key fingerprint /etc/apt/trusted.gpg.d/debian-archive-buster-automatic.gpg
 ```
+
+
+
 
 ## 推荐流程
 
@@ -3043,41 +3022,35 @@ apt-key fingerprint /etc/apt/trusted.gpg.d/debian-archive-buster-automatic.gpg
 
 ## 仓库信息变化
 
-当发布新的 Debian 稳定 版本时，仓库的 `Release` 和 `InRelease` 文件中的某些字段会发生，例如 `Suite` 字段。当发生这种情况时，在确认更改之前，APT 将拒绝下载该数据，以确保用户已做好准备。要确认更改，请为 `apt-get` 使用 `--allow-releaseinfo-change` 或 `--allow-releaseinfo-change-[field]` 选项，或者使用 `Acquire::AllowReleaseInfoChange` 配置选项。
-
-
-
-
+当发布新的 Debian 稳定版本时，仓库的 `Release` 和 `InRelease` 文件中的某些字段会发生，例如 `Suite` 字段。当发生这种情况时，在确认更改之前，APT 将拒绝下载该数据，以确保用户已做好准备。要确认更改，请为 `apt-get` 使用 `--allow-releaseinfo-change` 或 `--allow-releaseinfo-change-[field]` 选项，或者使用 `Acquire::AllowReleaseInfoChange` 配置选项。
 
 一旦注册了这些新的软件包源，您应该先通过 `apt upgrade` 进行一次最小化升级。通过分步进行升级，我们可以减轻软件包管理工具的负担，并通常可以确保我们拥有最新版本，这些版本可能已经包含了完成整个发行版升级升级所需的各种 bug 修复和改进。
 
 完成这次首次升级后，就是时候处理升级本身了，可以使用 `apt full-upgrade`、`aptitude` 或 `synaptic`。在应用这些操作之前，您应该仔细检查建议的动作：您可能想要添加建议的软件包，或者取消选择那些仅被推荐且已知没用的软件包。在任何情况下，前端界面都应该给出一个指向连贯且最新的 Buster 系统的方案。然后，您只需要等待所需软件包的下载，回答 debconf 问题（可能还有关于本地修改的配置文件的问题），然后静静等待 APT 施展魔术即可。
 
-## 6.7.2. 处理升级后的问题
+### 处理升级后的问题
 
 尽管 Debian 维护者付出了巨大努力，但主要的系统升级并不总是如您所愿的那样顺畅。新软件版本可能与旧版本不兼容（例如，它们的默认行为或数据格式可能发生了变化）。此外，尽管在 Debian 发布之前总会有测试阶段，但仍可能遗漏一些漏洞。
 
 为了预判其中一些问题，您可以安装 `apt-listchanges` 软件包，它会在软件包升级开始时显示有关可能问题的信息。这些信息由软件包维护者编译并放在 `/usr/share/doc/package/NEWS.Debian` 文件中，供用户参考。阅读这些文件（可能通过 `apt-listchanges`）应该帮助您避免糟糕的意外。
 
-您有时可能会发现软件的新版本完全无法工作。这通常发生在应用程序并不流行且没有经过充分测试的情况下；最后时刻的更新也可能引入在稳定版发布后才发现的回归问题。在这两种情况下，要的第一件事是查看 [`https://bugs.debian.org/package`](https://bugs.debian.org) 中的 bug 跟踪系统，并检查该问题是否已经被报告。如果是这种情况，且您安装了 `apt-listbugs`，那么在升级开始之前它也会被列出来。如果没有安装，您应该使用 `reportbug` 自行报告。如果该问题已经已知，bug 报告和相关消息通常是与该问题的极佳信息来源：
+您有时可能会发现软件的新版本完全无法工作。这通常发生在应用程序并不流行且没有经过充分测试的情况下；最后时刻的更新也可能引入在稳定版发布后才发现的回归问题。在这两种情况下，要做的第一件事是查看 [`https://bugs.debian.org/package`](https://bugs.debian.org) 中的 bug 跟踪系统，并检查该问题是否已经被报告。如果是这种情况，且您安装了 `apt-listbugs`，那么在升级开始之前它也会被列出来。如果没有安装，您应该使用 `reportbug` 自行报告。如果该问题已经已知，bug 报告和相关消息通常是与该问题的极佳信息来源：
 
-*   有时已经存在补丁，并且可以在 bug 报告中找到；然后您可以在本地重新编译损坏软件包的修复版本（参见 第 15.1 节，“从源码重构软件包”）；
+- 有时已经存在补丁，并且可以在 bug 报告中找到；然后您可以在本地重新编译损坏软件包的修复版本（参见第 15.1 节，“从源码重构软件包”）。
+- 在其他情况下，用户可能已经找到了该问题的变通方法并在对报告的回复中分享了他们的见解。
+- 在另一些情况下，维护者可能已经准备并公开了修复的软件包。
 
-*   在其他情况下，用户可能已经找到了该问题的变通方法并在对报告的回复中分享了他们的见解；
-
-*   在另一些情况下，维护者可能已经准备并公开了修复的软件包。
-
-根据 bug 的严重程度，可能会专门为稳定版的新修订版本准备软件包的新新版本。当发生这种情况时，修复的软件包将在 Debian 镜像的 `proposed-updates` 部分可用（参见 第 6.1.2.3 节，“建议的更新”）。随后，可以将相应的条目临时添加到 `sources.list` 文件中，并使用 `apt` 或 `aptitude` 安装更新后的软件包。
+根据 bug 的严重程度，可能会专门为稳定版的新修订版本准备软件包的新新版本。当发生这种情况时，修复的软件包将在 Debian 镜像的 `proposed-updates` 部分可用（参见第 6.1.2.3 节，“建议的更新”）。随后，可以将相应的条目临时添加到 `sources.list` 文件中，并使用 `apt` 或 `aptitude` 安装更新后的软件包。
 
 有时，修复的软件包尚未在该部分可用，因为它们正在等待稳定版管理者的验证。您可以在他们的网页上验证是否是这种情况。那里列出的软件包尚未可用，但您至少知道发布过程正在进行。
 
 → [`release.debian.org/proposed-updates/stable.html`](https://release.debian.org/proposed-updates/stable.html)
 
-## 6.7.3. 升级后的清理
+### 升级后的清理
 
-APT 通常确保升级是干净的，引入新的和更新的依赖项，或移除冲突的软件包。但即使是这样一个强大的工具，无法涵盖用户和管理员在升级后面临的所有任务，因为这些任务需要人类决策。
+APT 通常确保升级是干净的，引入新的和更新的依赖项，或移除冲突的软件包。但即使是这样一个强大的工具，也无法涵盖用户和管理员在升级后面临的所有任务，因为这些任务需要人类决策。
 
-### 6.7.3.1. 从 Debian 存档删除的软件包
+#### 从 Debian 存档删除的软件包
 
 有时，Debian FTP Masters 会从 Debian 存档中移除软件包，因为它们包含发布关键漏洞、被上游作者或软件包维护者遗弃，或者仅仅达到了生命周期。在这种情况下，较新的 Debian 版本不再提供该软件包。要找到所有没有源的软件包，请使用 `apt-show-versions` 命令：
 
@@ -3087,7 +3060,7 @@ apt-show-versions | grep "No available version"
 
 通过 `aptitude search ~o` 也可以获得类似的结果。如果发现的软件包不再需要，应该从系统中彻底清除（purge），因为它们将不再面临关键或安全相关漏洞的任何更新。
 
-### 6.7.3.2. 虚拟和过渡软件包
+#### 虚拟和过渡软件包
 
 有时，软件包可能需要获得一个新名称。在这种情况下，旧软件包通常被保留作为一个（几乎）空的软件包，取决于新软件包，并且仅在 `/usr/share/doc/package/` 中安装强制文件。此类软件包被称为“虚拟”（dummy）或“过渡”软件包。如果负责的软件包维护者还将该软件包的节改为 `oldlibs`，那么像 `aptitude`、`deborphan` 或 `debfoster`（参见侧边栏 `deorphan` 和 `debfoster`）这样的工具就可以提取这些软件包并建议删除。
 
@@ -3097,21 +3070,17 @@ apt-show-versions | grep "No available version"
 dpkg -l | grep ii | grep -i -E "(transition|dummy)"
 ```
 
-因为新软件包作为过渡软件包的依赖项被引入的，它通常被标记为自动安装，如果您尝试从系统中清除过渡软件包，它可能会被调度为删除。在这种情况下，您可以使用侧边栏中 `同时删除和安装` 和 第 6.2.7 节，“跟踪自动安装的软件包” 中的任何一种方法来选择性地移除过渡软件包。
+因为新软件包作为过渡软件包的依赖项被引入的，它通常被标记为自动安装，如果您尝试从系统中清除过渡软件包，它可能会被调度为删除。在这种情况下，您可以使用侧边栏中 `同时删除和安装` 和第 6.2.7 节，“跟踪自动安装的软件包”中的任何一种方法来选择性地移除过渡软件包。
 
-### 6.7.3.3. 旧或未使用的配置文件
+#### 旧或未使用的配置文件
 
-如果升级成功，可能会有一些配置文件的残留，可能来自 dpkg（参见 第 5.2.3 节，“校验和和配置文件列表”）、ucf 或已删除的软件包。后者可以使用 `apt autoremove --purge` 进行彻底清除。在升级过程中由 dpkg 或 ucf 处理的配置文件留下了带有特定后缀的副本（例如 `.dpkg-dist`、`.dpkg-old`、`.ucf-old`）。使用 `find` 或 `locate` 命令有助于跟踪它们。如果它们不再有任何用处，就可以删除。
+如果升级成功，可能会有一些配置文件的残留，可能来自 `dpkg`（参见第 5.2.3 节，“校验和和配置文件列表”）、`ucf` 或已删除的软件包。后者可以使用 `apt autoremove --purge` 进行彻底清除。在升级过程中由 `dpkg` 或 `ucf` 处理的配置文件留下了带有特定后缀的副本（例如 `.dpkg-dist`、`.dpkg-old`、`.ucf-old`）。使用 `find` 或 `locate` 命令有助于跟踪它们。如果它们不再有任何用处，就可以删除。
 
-### 6.7.3.4. 不由任何软件包拥有的文件
-
-
-
-
+#### 不由任何软件包拥有的文件
 
 Debian 策略强制软件包在清除（purge）时不会遗留任何文件。违反这一原则是一个严重的错误，你很少会遇到它。如果你遇到了，请报告它；不过，如果你好奇，可以使用 `cruft` 或 `cruft-ng` 软件包来检查系统中不属于任何软件包的文件。
 
-# 6.8. 保持系统处于最新状态
+## 6.8. 保持系统处于最新状态
 
 Debian 发行版是动态的，并且不断变化。大部分变化发生在 `Testing` 和 `Unstable` 版本中，但即使是 `Stable` 版本也会定期更新，主要是为了修复安全相关的错误。无论系统运行的是哪个版本的 Debian，保持其最新状态通常都是一个好主意，这样你就能从最新的演进和错误修复中获益。
 
@@ -3119,7 +3088,7 @@ Debian 发行版是动态的，并且不断变化。大部分变化发生在 `Te
 
 这些工具中的第一个是同名的软件包 `apticron`。它的主要作用是每天（通过 `cron`）运行一个脚本。该脚本更新可用软件包列表，如果某些已安装软件包不是最新可用版本，它会发送一封电子邮件，包含这些软件包的列表以及新版本中的更改。显然，这个软件包主要针对 `Debian Stable` 的用户，因为对于节奏较快的 Debian 版本来说，每天的邮件会长。当有可用更新时，`apticron` 会自动下载它们。它不会安装它们——管理员仍需手动安装——但让软件包预先下载并在本地可用（在 `APT` 缓存中）可以使工作变得更快。
 
-负责几台计算机的管理员无疑会感谢能收到待处理升级的通知，但升级本身仍然像以前一样枯燥。可以启用定期升级：它使用 `systemd` 定时器单元或 `cron`。如果没有安装 systemd，`/etc/cron.daily/apt-compat` 脚本（在 `apt` 软件包中）就会派上用场。该脚本由 `cron` 每天（非交互地）运行。要控制其行为，请使用 `APT` 配置变量（因此存储在文件 `/etc/apt/apt.conf.d/10periodic` 中）。主要变量有：
+负责几台计算机的管理员无疑会感谢能收到待处理升级的通知，但升级本身仍然像以前一样枯燥。可以启用定期升级：它使用 `systemd` 定时器单元或 `cron`。如果没有安装 `systemd`，`/etc/cron.daily/apt-compat` 脚本（在 `apt` 软件包中）就会派上用场。该脚本由 `cron` 每天（非交互地）运行。要控制其行为，请使用 APT 配置变量（因此存储在文件 `/etc/apt/apt.conf.d/10periodic` 中）。主要变量有：
 
 `APT::Periodic::Update-Package-Lists`
 
@@ -3131,7 +3100,7 @@ Debian 发行版是动态的，并且不断变化。大部分变化发生在 `Te
 
 `APT::Periodic::AutocleanInterval`
 
-此选项涵盖 `apticron` 不具备的功能。它控制从 `APT` 缓存中移除过软件包（不再被任何发行版引用的软件包）的频率。这保持了 `APT` 缓存的范围内，意味着你不需要担心这项。
+此选项涵盖 `apticron` 不具备的功能。它控制从 `APT` 缓存中移除过时软件包（不再被任何发行版引用的软件包）的频率。这保持了 `APT` 缓存的范围内，意味着你不需要担心这项。
 
 `APT::Periodic::Unattended-Upgrade`
 
@@ -3141,23 +3110,25 @@ Debian 发行版是动态的，并且不断变化。大部分变化发生在 `Te
 
 这些工具对于服务器来说非常好，但桌面用户通常更倾向于更具交互性的系统。`gnome-software` 软件包在可用更新时的桌面环境通知区域提供一个图标；点击此图标将运行一个执行更新的界面。你可以浏览可用更新，阅读相关软件包的简短描述以及相应的 `changelog` 条目，并根据情况决定是否应用更新。
 
-图 6.3. 使用 gpk-update-viewer 升级![使用 gpk-update-viewer 升级](img/gnome-packagekit.png)
+图 6.3. 使用 `gpk-update-viewer` 升级
+
+![使用 gpk-update-viewer 升级](img/gnome-packagekit.png)
 
 该工具不再默认安装在 GNOME 桌面。新的哲学是安全更新应该自动安装，要么在后台，要么最好在你关闭计算机时，以免干扰任何运行中的应用程序。
 
-# 6.9. 自动升级
+## 6.9. 自动升级
 
 由于 Falcot Corp 有许多计算机但人力有限，其管理员尝试尽可能让升级自动化。因此，负责这些过程的程序必须在无人干预的情况下运行。
 
-## 6.9.1. 配置 `dpkg`
+### 配置 `dpkg`
 
-正如我们已经提到的（参见侧栏 *GOING FURTHER* 避免配置文件问题），`dpkg` 可以被被指示在替换配置文件时不请求确认（使用 `--force-confdef --force-confold` 选项）。然而，交互可能来自其他三个来源：一些来自 `APT` 本身，一些由 `debconf` 处理，另一些由于软件包配置脚本在命令行发生（有时由 `ucf` 处理）。
+正如我们已经提到的（参见侧栏 *GOING FURTHER* 避免配置文件问题），`dpkg` 可以被指示在替换配置文件时不请求确认（使用 `--force-confdef --force-confold` 选项）。然而，交互可能来自其他三个来源：一些来自 `APT` 本身，一些由 `debconf` 处理，另一些由于软件包配置脚本在命令行发生（有时由 `ucf` 处理）。
 
-## 6.9.2. 配置 `APT`
+### 配置 `APT`
 
 `APT` 的情况很简单：`-y` 选项（或 `--assume-yes`）告诉 `APT` 将所有问题的答案都视为“是”。
 
-## 6.9.3. 配置 `debconf`
+### 配置 `debconf`
 
 `debconf` 的情况需要更多细节。该程序从创立之初就被旨在控制显示给用户的问题的相关性和数量，以及显示方式。这就是为什么它的配置要求问题具有一个最小优先级；只有高于最小优先级的问题才会显示。`debconf` 假设它跳过的问题具有默认答案（由软件包维护者定义）。
 
@@ -3165,27 +3136,27 @@ Debian 发行版是动态的，并且不断变化。大部分变化发生在 `Te
 
 要重新配置 `debconf`，请使用 `debconf` 软件包中的 `dpkg-reconfigure` 工具；相关命令是 `dpkg-reconfigure debconf`。注意，需要时可以使用环境变量临时覆盖已配置的值（例如，`DEBIAN_FRONTEND` 控制界面，如 `debconf(7)` 手册页中记录所示）。
 
-## 6.9.4. 处理命令行交互
+### 处理命令行交互
 
 交互的最后一个来源，也是最难消除的，是由 `dpkg` 运行的配置脚本。遗憾的是没有标准的解决方案，也没有哪个答案比另一个明显优得多。
 
 通常方法是通过将 `/dev/null` 的空内容重定向到标准输入来抑制标准输入，或者向其提供无尽的换行符流。这些方法没有一个是 100% 可靠的，但通常会导致使用默认答案，因为大多数脚本认为缺乏回复即为对默认值的接受。
 
-## 6.9.5. 奇迹组合
+### 奇迹组合
 
 通过结合前面的元素，可以设计一个小型但相当可靠的脚本来处理自动升级。
 
 示例 6.5. 非交互式升级脚本：
+
+```bash
+export DEBIAN_FRONTEND=noninteractive
+yes '' | apt-get -y -o DPkg::options::="--force-confdef" -o DPkg::options::="--force-confold" dist-upgrade
 ```
-export DEBIAN_FRONTEND=noninteractive yes '' | apt-get -y -o DPkg::options::="--force-confdef" -o DPkg::options::="--force-confold" dist-upgrade
-```
-
-* * *
-
-*IN PRACTICE* Falcot Corp 案例
 
 
 
+
+## *IN PRACTICE*：Falcot Corp 案例
 
 Falcot 计算机是一个异构系统，不同的机器具有各种功能。因此，管理员将为每台计算机选择最相关的解决方案。
 
@@ -3195,33 +3166,35 @@ Falcot 计算机是一个异构系统，不同的机器具有各种功能。因�
 
 在实验室中，少数使用 Testing 的计算机（为了利用最新版本的软件）也不会自动升级。管理员仅配置 `APT` 准备升级但不执行升级；当他们决定升级（手动操作）时，就可以避免刷新软件包列表和下载软件包等繁琐步骤，管理员可以将精力集中在真正有用的部分。
 
-***
-
 # 6.10. 搜索软件包
 
 随着 Debian 软件数量巨大且不断增长，出现了一个悖论：Debian 通常为大多数任务提供了工具，但这些工具在数以千计的其它软件包中非常难找到。缺乏适当的方法来搜索（并找到）正确的工具长期以来一直是一个问题。幸运的是，这个问题几乎被完全解决了。
 
 最简单的搜索是查找精确的软件包名。如果 `apt show package` 返回了结果，则该软件包存在。遗憾的是，这需要知道甚至猜测软件包的名称，而这并不总是可能的。
 
-***
-
-### TIP 软件包命名规范
+### TIP：软件包命名规范
 
 某些类的软件包按照传统的命名方案命名；了解该方案有时可以让你猜出精确的软件包名。例如，对于 Perl 模块，规定上游名为 `XML::Handler::Composer` 的模块应该被封装为 `libxml-handler-composer-perl`。允许 Python 使用 `gconf` 系统的库被封装为 `python-gconf`。遗憾的是，无法为所有软件包定义一个完全通用的命名方案，尽管软件包维护者通常会尝试遵循上游开发者的选择。
-
-***
 
 一种稍微成功一点搜索模式是在软件包名中进行纯文本搜索，但这种方法仍然非常局限。你通常可以通过搜索软件包描述找到结果：由于每个软件包除了名称外，还有一个多或少详细的描述，因此在这些描述中进行关键词搜索通常很有用。`apt-cache` 和 `axi-cache` 是此类搜索的首选工具（参见 *ALTERNATIVE axi-cache]）；例如，`apt-cache search video` 将返回所有名称或描述包含关键词“video”的软件包列表。
 
 对于更复杂的搜索，需要更强大的工具，如 `aptitude`。`aptitude` 允许你根据软件包元数据字段的逻辑表达式进行搜索。例如，以下命令搜索名称包含 `kino`、描述包含 `video` 且维护者名称包含 `paul` 的软件包：
 
 ```bash
-aptitude search kino~dvideo~mpaul p kino - Non-linear editor for Digital Video data
-aptitude show kino Package: kino Version: 1.3.4+dfsg0-1 State: not installed Priority: optional Section: video Maintainer: Paul Brossier <piem@debian.org> Architecture: amd64 Uncompressed Size: 8,304 k Depends: libasound2 (>= 1.0.16), libatk1.0-0 (>= 1.12.4), libavc1394-0 (>= 0.5.3), libavcodec58 (>= 7:4.0) | libavcodec-extra58 (>= 7:4.0), libavformat58 (>= 7:4.0), libavutil56 (>= 7.4.0), libc6 (>= 2.14), libcairo2 (>= 1.2.4), libdv4 (>= 1.0.0), libfontconfig1 (>= 2.12.6), libfreetype6 (>= 2.2.1), libgcc1 (>= 1:3.0), libgdk-pixbuf2.0-0 (>= 2.22.0), libglade2-0 (>= 1:2.6.4-2~), libglib2.0-0 (>= 2.16.0), libgtk2.0-0 (>= 2.24.32), libice6 (>= 1:1.0.0), libiec61883-0 (>= 1.2.0), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libpangoft2-1.0-0 (>= 1.14.0), libquicktime2 (>= 2:1.2.2), libraw1394-11, libsamplerate0 (>= 0.1.7), libsm6, libstdc++6 (>= 5.2), libswscale5 (>= 7:4.0), libx11-6, libxext6, libxml2 (>= 2.7.4), libxv1
+aptitude search kino~dvideo~mpaul
+p kino - Non-linear editor for Digital Video data
+
+aptitude show kino
+Package: kino
+Version: 1.3.4+dfsg0-1
+State: not installed
+Priority: optional
+Section: video
+Maintainer: Paul Brossier <piem@debian.org>
+Architecture: amd64
+Uncompressed Size: 8,304 k
+Depends: libasound2 (>= 1.0.16), libatk1.0-0 (>= 1.12.4), libavc1394-0 (>= 0.5.3), libavcodec58 (>= 7:4.0) | libavcodec-extra58 (>= 7:4.0), libavformat58 (>= 7:4.0), libavutil56 (>= 7.4.0), libc6 (>= 2.14), libcairo2 (>= 1.2.4), libdv4 (>= 1.0.0), libfontconfig1 (>= 2.12.6), libfreetype6 (>= 2.2.1), libgcc1 (>= 3.0), libgdk-pixbuf2.0-0 (>= 2.22.0), libglade2-0 (>= 1:2.6.4-2~), libglib2.0-0 (>= 2.16.0), libgtk2.0-0 (>= 2.24.32), libice6 (>= 1:1.0.0), libiec61883-0 (>= 1.2.0), libpango-1.0-0 (>= 1.14.0), libpangocairo-1.0-0 (>= 1.14.0), libpangoft2-1.0-0 (>= 1.14.0), libquicktime2 (>= 2:1.2.2), libraw1394-11, libsamplerate0 (>= 0.1.7), libsm6, libstdc++6 (>= 5.2), libswscale5 (>= 7:4.0), libx11-6, libxext6, libxml2 (>= 2.7.4), libxv1
 ```
-
-
-
 
 对于管理员来说，最重要的技能是能够应对任何情况，无论是已知的还是未知的。本章提供了许多方法——希望——能够让你隔离出你将遇到的任何问题的原因，以便你能够解决这些问题。
 
@@ -3229,11 +3202,9 @@ aptitude show kino Package: kino Version: 1.3.4+dfsg0-1 State: not installed Pri
 
 在理解问题发生时到底发生了什么之前，你需要了解参与该过程的每个程序所扮演的理论作用。要做到这一点，最好的反应是查阅它们的文档；但由于这些文档非常多且分散在世界各地，你应该知道它们可以在哪些地方找到。
 
-## 7.1.1. 手册页 (Manual Pages)
+## 7.1.1. 手册页（Manual Pages）
 
-* * *
-
-*极场文化* <acronym class="acronym">RTFM</acronym>
+### 极场文化：RTFM
 
 这个缩写代表“Read the F***ing Manual”（去读那该死的手册），但也可以被扩展为一种更友好的变体，“Read the Fine Manual”（仔细阅读精细的手册）。这个短语有时用于对新手提问题的（简短的）回答。它显得相当生硬，并流露出对那些甚至不懒于阅读文档的人提问的某种恼骚。有人认为，这种经典的回答比完全不回答要好（因为它表明文档中包含了所寻找的信息），或者比一个冗长且愤怒的回答要好。
 
@@ -3241,21 +3212,15 @@ aptitude show kino Package: kino Version: 1.3.4+dfsg0-1 State: not installed Pri
 
 → [`catb.org/~esr/faqs/smart-questions.html`](http://catb.org/~esr/faqs/smart-questions.html)
 
-* * *
+手册页虽然风格相对简练，但包含了大量的本质信息。我们将快速回顾由 `man-db` 软件包提供的查看它们的命令。只需输入 `man manual-page`——手册页名称通常与你所查询文档的命令名称相同。例如，要学习 `cp` 命令的可能选项，你可以在 shell 提示符处输入 `man cp` 命令（参见侧边栏 *返回基础知识* The shell，一个命令行解释器）。
 
-手册页虽然风格相对简练，但包含了大量的本质信息。我们将快速回顾由 `man-db` 软件包提供的查看它们的命令。只需输入 `man manual-page` —— 手册页名称通常与你所查询文档的命令名称相同。例如，要学习 `cp` 命令的可能选项，你可以在 shell 提示符处输入 `man cp` 命令（参见侧边栏 *返回基础知识* The shell，一个命令行解释器）。
-
-* * *
-
-*返回基础知识* The shell，一个命令行解释器
+### 返回基础知识：The shell，一个命令行解释器
 
 命令行解释器，也称为“shell”，是一个执行用户输入或存储在脚本中的命令的程序。在交互模式下，它显示一个提示符（通常对于普通用户以 `$` 结尾，管理员则以 `#` 结尾），表示它已准备好读取新命令。附录 B，*简短补习课程*
 
- 默认且最常用的 shell 是 `bash` (Bourne Again SHell)，但还有其他的，包括 `dash`、`csh`、`tcsh` 和 `zsh`。
+默认且最常用的 shell 是 `bash`（Bourne Again SHell），但还有其他的，包括 `dash`、`csh`、`tcsh` 和 `zsh`。
 
 除外，大多数 shell 在提示符处输入时提供帮助（输入 `help`）和辅助，例如命令或文件名的补全（你通常可以通过按下 `tab` 键激活），或回溯之前的命令（历史管理；即检查 `/etc/inputrc` 中“上页”和“下一页”的映射）。
-
-* * *
 
 手册页不仅记录了从命令行访问的命令和程序，还包括配置文件、系统调用、库函数等。有时名称会冲突。例如，shell 的 `read` 命令与 `read` 系统调用同名。这就是为什么手册页按数字章节组织：
 
@@ -3271,39 +3236,43 @@ aptitude show kino Package: kino Version: 1.3.4+dfsg0-1 State: not installed Pri
 
 你可以指定要查找的手册页章节：要查看 `read` 系统调用的文档，你需要输入 `man 2 read`。当没有显式指定章节时，将显示具有请求名称的手册的第一章节。因此，`man shadow` 返回 `shadow(5)`，因为在第 1 到 4 节没有 *shadow* 的手册页。
 
-* * *
-
-*提示* `whatis`
+### 提示：`whatis`
 
 如果你不想看完整的手册页，只想通过简短描述确认它是否是你正在寻找的，只需输入 `whatis command`。
 
-```
+```text
 $ whatis scp
 scp (1) - secure copy (远程文件拷贝程序)
 ```
 
 这个简短描述包含在所有手册页开头的 *NAME* 章节。
 
-* * *
-
 当然，如果你不知道命令名称，手册对你来说将没有太大帮助。这就是 `apropos` 命令的作用，它可以帮助你在手册页中进行搜索，更具体地说是在它们的简短描述中搜索。每个手册页本质上都以一行摘要开始。`apropos` 返回摘要中提到关键词的手册页列表。
 
-```
+```text
 $ apropos "copy file"
+
 cp (1) - copy files
+
 cpio (1) - copy files to and from archives
+
 copy (1) - copy files from HFS+
+
 install (1) - copy files and set attributes
+
 ntfscp (8) - copy file to NTFS volume
 ```
 
-* * *
 
-*提示* 通过链接浏览
+
+
+---
+
+*提示*：通过链接浏览
 
 许多手册页都有一个“SEE ALSO”（另请）部分，通常位于末尾。它引用了与其他相似命令相关的手册页或外部文档。通过这种方式，即使首选不是最优的，也可以找到相关的文档。
 
-* * *
+---
 
 `man` 命令不是查看手册页的唯一方法，因为 `helpcenter` 和 `konqueror`（来自 KDE）以及 `yelp`（来自 GNOME）程序也提供了可能。还有一个由 `man2html` 软件包提供的 Web 界面，允许你在浏览器中查看。在安装了该软件包的计算机上，按照 `/usr/share/doc/man2html/README.Debian` 中的指令使用此 URL：
 
@@ -3315,19 +3284,15 @@ ntfscp (8) - copy file to NTFS volume
 
 → [`manpages.debian.org`](https://manpages.debian.org)
 
-* * *
+---
 
 *DEBIAN POLICY* 强制手册页
 
 Debian 要求每个程序都有手册页。如果上游作者没有提供，Debian 软件包维护者通常会编写一个简单的页面，至少引导读者找到原始文档的位置。
 
-* * *
+---
 
-## 7.1.2. *info* 文档
-
-
-
-
+## 7.1.2. `info` 文档
 
 GNU 项目已为其大部分程序编写了 `info` 格式的手册；这就是为什么许多手册页会引用相应的 `info` 文档的原因。这种格式具有某些优势，但查看这些文档的默认程序（称为 `info`）也稍微复杂一些。建议你使用 `pinfo`（来自 `pinfo` 软件包）。
 
@@ -3341,9 +3306,9 @@ GNU 项目已为其大部分程序编写了 `info` 格式的手册；这就是�
 
 ### 7.1.3. 特定文档
 
-每个软件包都包含自己的文档。即使是文档最少的程序，通常也包含一个 `README` 文件，其中包含一些有趣的和或重要的信息。这些文档安装在 `/usr/share/doc/packagepackage` 目录下（其中 `package` 代表软件包的名称）。如果文档特别大，它可能不会包含在程序的主包中，而是被卸载到一个专门的软件包，该包通常命名为 `package`-doc`。主包通常会推荐该文档包以便你轻松找到它。
+每个软件包都包含自己的文档。即使是文档最少的程序，通常也包含一个 `README` 文件，其中包含一些有趣的和或重要的信息。这些文档安装在 `/usr/share/doc/packagepackage` 目录下（其中 `package` 代表软件包的名称）。如果文档特别大，它可能不会包含在程序的主包中，而是被卸载到一个专门的软件包，该包通常命名为 `package-doc`。主包通常会推荐该文档包以便你轻松找到它。
 
-`/usr/share/doc/packagepackage` 目录还包含一些由 Debian 提供的文件，这些文件通过指定软件包与传统软件安装相比的特殊之处或改进来完善文档。`README.Debian` 文件还列出了为了符合 Debian 策略而进行的所有适配。`changelog.Debian.gz` 文件允许用户跟踪随时间推移对软件包进行的修改：对于理解两个行为不相同的安装版本之间发生了什么，这非常有用。最后，有时还有一个 `NEWS.Debian.gz` 文件，它记录了程序中的重大变化，这些变化可能直接影响管理员（参见第 6.7.2 节，“处理升级后的问题）。
+`/usr/share/doc/packagepackage` 目录还包含一些由 Debian 提供的文件，这些文件通过指定软件包与传统软件安装相比的特殊之处或改进来完善文档。`README.Debian` 文件还列出了为了符合 Debian 策略而进行的所有适配。`changelog.Debian.gz` 文件允许用户跟踪随时间推移对软件包进行的修改：对于理解两个行为不相同的安装版本之间发生了什么，这非常有用。最后，有时还有一个 `NEWS.Debian.gz` 文件，它记录了程序中的重大变化，这些变化可能直接影响管理员（参见第 6.7.2 节，“处理升级后的问题”）。
 
 ### 7.1.4. 网站
 
@@ -3363,11 +3328,11 @@ GNU 项目已为其大部分程序编写了 `info` 格式的手册；这就是�
 
 → [`wiki.debian.org/`](https://wiki.debian.org/)
 
-### 7.1.5. 教程 (HOWTO)
+### 7.1.5. 教程（HOWTO）
 
-`HOWTO` 是一种具体具体并分步骤地描述“如何”实现预定义目标的文档。所涵盖的目标相当多样，但通常是技术性的：例如，设置 IP 伪装（Masquerading）、配置软件 RAID、安装 Samba 服务器等。这些文档通常尝试涵盖在实现特定技术期间可能发生的所有问题。
+`HOWTO` 是一种具体并分步骤地描述“如何”实现预定义目标的文档。所涵盖的目标相当多样，但通常是技术性的：例如，设置 IP 伪装（Masquerading）、配置软件 RAID、安装 Samba 服务器等。这些文档通常尝试涵盖在实现特定技术期间可能发生的所有问题。
 
-许多此类教程由 Linux 文档项目 (LDP) 管理，其网站托管所有这些文档：
+许多此类教程由 Linux 文档项目（LDP）管理，其网站托管所有这些文档：
 
 → [`www.tldp.org/`](https://www.tldp.org/)
 
@@ -3379,73 +3344,69 @@ Debian 也为其用户提供教程：
 
 # 7.2. 常用操作
 
-
-
-
-
-当你想要配置一个未知软件包时，必须分阶段进行。首先，你应该阅读软件包维护者编写的文档。阅读 `/usr/share/doc/package/README.Debian` 确实可以让你了解为了简化软件使用而所做的特定规定。为了理解该程序与通用文档（如教程/howtos）中描述的原始行为之间的差异，这有时是非常关重要的。有时，该文件还会详细列出常见的错误，以便你避免在常见问题上浪费时间。
+当你想要配置一个未知软件包时，必须分阶段进行。首先，你应该阅读软件包维护者编写的文档。阅读 `/usr/share/doc/package/README.Debian` 确实可以让你了解为了简化软件使用而所做的特定规定。为了理解该程序与通用文档（如教程/howtos）中描述的原始行为之间的差异，这有时是非常重要的。有时，该文件还会详细列出常见的错误，以便你避免在常见问题上浪费时间。
 
 然后，你应该查看软件的官方文档——参阅第 7.1 节，“文档来源”来识别各种现有的文档来源。`dpkg -L package` 命令会列出软件包中包含的文件列表；因此，你可以快速识别出可用文档（以及位于 `/etc/` 的配置文件）。`dpkg -s package` 显示软件包的元数据，并显示任何可能的推荐或建议包；在其中，你可以找到文档或可以简化软件配置的实用程序。
 
 最后，配置文件通常通过许多解释性注释进行自文档，详细说明了每个配置设置的各种可能值。其程度之高，有时只需从可用选项中选择一行进行激活即可了。在某些情况下，`/usr/share/doc/package/examples/` 目录下提供了配置文件的示例。它们可以作为你自己的配置文件的基础。
 
-* *
+---
 
-### DEBIAN 策略示例的位置
+### Debian 策略示例的位置
 
-所有示例必须安装在 `/usr/share/doc/package/examples/` 目录下。这可能是一个配置文件、程序源代码（库使用的示例）或管理员在某些情况下可以使用的数据转换脚本（例如初始化数据库）。如果示例针对特定架构，则应应安装在 `/usr/lib/package/examples/` 中，并在 `/usr/share/doc/package/examples/` 目录下应有一个指向该文件的链接。
+所有示例必须安装在 `/usr/share/doc/package/examples/` 目录下。这可能是一个配置文件、程序源代码（库使用的示例）或管理员在某些情况下可以使用的数据转换脚本（例如初始化数据库）。如果示例针对特定架构，则应安装在 `/usr/lib/package/examples/` 中，并在 `/usr/share/doc/package/examples/` 目录下应有一个指向该文件的链接。
 
-* *
+---
 
 ### 7.2.2. 监控守护进程的操作
 
 理解守护进程的作用要复杂一些，因为它不与管理员直接交互。要检查守护进程是否实际在运行，你需要对其进行测试。例如，要检查 Apache（Web 服务器）守护进程，可以使用 HTTP 请求对其进行测试。
 
-* *
+---
 
-### 基础知识 守护进程 (Daemon)
+### 基础知识：守护进程（Daemon）
 
 守护进程不是由用户显式调用的程序，它在后台运行，等待某些条件满足后执行任务。许多服务器程序都是守护进程，这个术语解释了为什么名称末经常带有字母“d”（`sshd`、`smtpd`、`httpd` 等）。
 
-* *
+---
 
-为了允许此类测试，每个守护进程通常会将它所做的一切以及它遇到的任何错误记录在所谓的“日志文件”或“系统日志”中。日志存储在 `/var/log/` 或其任一子目录中。要知每个守护进程日志文件的精确名称，请参阅其文档。注意：如果测试没有涵盖所有可能的使用场景，单一测试并不总是够的；某些问题只会在特定情况下发生。
+为了允许此类测试，每个守护进程通常会将它所做的一切以及它遇到的任何错误记录在所谓的“日志文件”或“系统日志”中。日志存储在 `/var/log/` 或其任一子目录中。要知道每个守护进程日志文件的精确名称，请参阅其文档。注意：如果测试没有涵盖所有可能的使用场景，单一测试并不总是够的；某些问题只会在特定情况下发生。
 
-* *
+---
 
-### 工具 rsyslogd 守护进程
+### 工具：`rsyslogd` 守护进程
 
-`rsyslogd` 是特殊的：它收集其他程序发送给它的日志（内部系统消息）。每个日志条目都与一个子系统（电子邮件、内核、身份验证等）和一个优先级相关；`rsyslogd` 通过处理这两条信息来决定做什么。日志消息可能记录在各种日志文件中，并/或发送到管理控制台。细节定义在 `/etc/rsyslog.conf` 配置文件中（在 rsyslog-doc 软件包提供的同名手册页中有记录）。
+`rsyslogd` 是特殊的：它收集其他程序发送给它的日志（内部系统消息）。每个日志条目都与一个子系统（电子邮件、内核、身份验证等）和一个优先级相关；`rsyslogd` 通过处理这两条信息来决定做什么。日志消息可能记录在各种日志文件中，并/或发送到管理控制台。细节定义在 `/etc/rsyslog.conf` 配置文件中（在 `rsyslog-doc` 软件包提供的同名手册页中有记录）。
 
 某些专门用于发送日志的 C 函数简化了 `rsyslogd` 守护进程的使用。然而，某些守护进程会管理自己的日志文件（例如 `samba` 就是此类情况，它在 Linux 上实现 Windows 共享）。
 
 注意，在使用 `systemd` 时，日志在转发到 `rsyslogd` 之前实际上由 `systemd` 收集。因此，它们也可以通过 `systemd` 的 journal 获取，并可以使用 `journalctl` 查询（详情请参见第 9.1.1 节，“systemd 初始化系统”）。
 
-* *
+---
 
-作为预防性操作，管理员应该定期阅读最相关的服务器日志。这样他们就可以在不满的用户报告之前就诊断出问题。事实上，用户有时可能会等问题连续出现几天后才报告。在许多情况下，有特定的工具可以分析分析较大日志文件的内容。特别是，此类工具存在于 Web 服务器（如用于 Apache 的 `analog`、`awstats`、`webalizer`）、FTP 服务器、代理/缓存服务器、防火墙、电子邮件服务器、DNS 服务器，甚至打印服务器中。其他工具，如 `logcheck`（在第 14 章，*安全* 中讨论的软件），会扫描这些文件以寻找需要处理的警报。
+作为预防性操作，管理员应该定期阅读最相关的服务器日志。这样他们就可以在不满的用户报告之前就诊断出问题。事实上，用户有时可能会等问题连续出现几天后才报告。在许多情况下，有特定的工具可以分析较大日志文件的内容。特别是，此类工具存在于 Web 服务器（如用于 Apache 的 `analog`、`awstats`、`webalizer`）、FTP 服务器、代理/缓存服务器、防火墙、电子邮件服务器、DNS 服务器，甚至打印服务器中。其他工具，如 `logcheck`（在第 14 章，*安全* 中讨论的软件），会扫描这些文件以寻找需要处理的警报。
 
 ### 7.2.3. 在邮件列表中寻求帮助
 
 如果你的搜索没有帮你找到问题的根源，可以从其他可能有经验的人那里获得帮助。这正是 `debian-user@debian.org` 邮件列表的目的。正如任何社区一样，它有需要遵守的规则。在提任何问题之前，你应该检查你的问题是否已经由列表最近的讨论或任何官方文档覆盖。
 
-[`wiki.debian.org/DebianMailingLists`](https://wiki.debian.org/DebianMailingLists)
-[`lists.debian.org/debian-user/`](https://lists.debian.org/debian-user/)
-[`lists.debian.org/users.html`](https://lists.debian.org/users.html)
+- [`wiki.debian.org/DebianMailingLists`](https://wiki.debian.org/DebianMailingLists)
+- [`lists.debian.org/debian-user/`](https://lists.debian.org/debian-user/)
+- [`lists.debian.org/users.html`](https://lists.debian.org/users.html)
 
-* *
+---
 
-### 基础知识 网络礼仪 (Netiquette) 适用
+### 基础知识：网络礼仪（Netiquette）适用
 
 通常情况下，对于邮件列表上的所有通信，都应该遵守网络礼仪规则。该术语指的是一组常识规则，从普通礼节到应该避免的错误不等。
 
-RFC1855
+`RFC1855`
 
-此外，对于由 Debian 项目管理的任何通信通道，你都受 Debian 行为准的约束：
+此外，对于由 Debian 项目管理的任何通信通道，你都受 Debian 行为准则的约束：
 
 [`www.debian.org/code_of_conduct`](https://www.debian.org/code_of_conduct)
 
-* *
+---
 
 一旦满足这两个条件，你就可以考虑向邮件列表描述你的问题了。包含尽可能多的相关信息：进行的各种测试、查阅的文档、你如何尝试诊断问题、涉及的包或可能涉及的包等。检查 Debian 缺陷跟踪系统（BTS，在侧边栏第 1.3.2.1 节，“报告缺陷”）中是否有类似问题，并提及搜索结果，提供发现的缺陷的链接。BTS 地址为：
 
@@ -3455,17 +3416,13 @@ RFC1855
 
 ## 7.2.4. 当问题太困难时报告缺陷
 
-
-
-
-
-如果你解决问题的所有尝试都失败了，那么可能解决该问题并不是你的责任，该问题是由于程序中的一个 bug 导致的。在这种情况下，正确的做法是向 Debian 或直接向上游开发者报告该 bug。为了做到，请尽可能地隔离问题，并创建一个可以重现该问题的最小测试场景。如果你知道哪个程序是问题的明显原因，可以使用命令 `dpkg -S `file_in_question`` 找到对应的软件包。检查 Bug 跟踪系统（`https://bugs.debian.org/`package）以确保该 bug 尚未被报告。然后你可以使用 `reportbug` 命令发送你自己的 bug 报告，尽可能包含尽可能信息，特别是对那些最小测试用例的完整描述，以便任何人都能重现该 bug。
+如果你解决问题的所有尝试都失败了，那么可能解决该问题并不是你的责任，该问题是由于程序中的一个 bug 导致的。在这种情况下，正确的做法是向 Debian 或直接向上游开发者报告该 bug。为了做到，请尽可能地隔离问题，并创建一个可以重现该问题的最小测试场景。如果你知道哪个程序是问题的明显原因，可以使用命令 `dpkg -S file_in_question` 找到对应的软件包。检查 Bug 跟踪系统（`https://bugs.debian.org/`）以确保该 bug 尚未被报告。然后你可以使用 `reportbug` 命令发送你自己的 bug 报告，尽可能包含尽可能多的信息，特别是对那些最小测试用例的完整描述，以便任何人都能重现该 bug。
 
 本章介绍的元素是有效解决后续章节可能带来的问题的手段。请根据需要频繁使用它们！
 
 # 第 8 章 基础配置：网络、账户、打印……
 
-使用 `debian-installer` 创建的全新安装的计算机旨在提供尽可能多的功能，但仍有许多服务需要配置。此外，了解如何更改在初始安装过程中定义的某些配置元素总是是有好的。
+使用 `debian-installer` 创建的全新安装的计算机旨在提供尽可能多的功能，但仍有许多服务需要配置。此外，了解如何更改在初始安装过程中定义的某些配置元素总是有好的。
 
 本章回顾了我们所谓的“基础配置”中包含的所有内容：网络、语言和区域、用户和组、打印、挂载点等。
 
@@ -3473,27 +3430,27 @@ RFC1855
 
 如果系统是使用法语安装的，机器可能已经将法语设置为默认语言。但了解安装程序是如何设置语言的是有好的，这样在以后有需要时，你可以更改它。
 
-***
+---
 
-*工具* 使用 `locale` 命令显示当前配置
+*工具*：使用 `locale` 命令显示当前配置
 
 `locale` 命令列出各种区域参数（日期格式、数字格式等）的当前配置摘要，这些参数以一组专门用于动态修改这些设置的标准环境变量的形式呈现出来。
 
-***
+---
 
 ## 8.1.1. 设置默认语言
 
-区域（locale）是一组区域设置。这不仅包括文本语言，还包括数字、日期、时间、货币金额的显示格式，以及字母比较规则（为了正确处理带重音的字符）。尽管这些参数中的每一个都可以独立于其他进行指定，但我们通常使用一个区域，它是这些参数的一组一致的值，对应于广义上的“区域”。这些区域通常以 `language-code`_`COUNTRY-CODE` 的形式指示，有时带有后缀以指定要使用的字符集和编码。这使得能够考虑具有共同语言的不同地区之间的习惯用语或排版差异。
+区域（locale）是一组区域设置。这不仅包括文本语言，还包括数字、日期、时间、货币金额的显示格式，以及字母比较规则（为了正确处理带重音的字符）。尽管这些参数中的每一个都可以独立于其他进行指定，但我们通常使用一个区域，它是这些参数的一组一致的值，对应于广义上的“区域”。这些区域通常以 `language-code_COUNTRY-CODE` 的形式指示，有时带有后缀以指定要使用的字符集和编码。这使得能够考虑具有共同语言的不同地区之间的习惯用语或排版差异。
 
-***
+---
 
-*文化* 字符集
+*文化*：字符集
 
 从历史上看，每个区域都有关联的“字符集”（一组已知字符）和一个首选的“编码”（计算机内部对字符的表示）。
 
 对于基于拉丁的语言，最流行的编码限于 256 个字符，因为它们选择为每个字符使用单个字节。由于 256 个字符不足以覆盖所有欧洲语言，因此需要多种编码，这就是我们得到从 `ISO-8859-1`（也称为“Latin 1”）到 `ISO-8859-15`（也称为“Latin 9”）等。
 
-处理外国语言通常意味着要在各种编码和字符集之间经常切换。此外，编写多语言文档导致了进一步的几乎无法解决的问题。Unicode（一个包含世界上所有语言几乎所有书系统的超级目录）的创建是为了解决这个问题。Unicode 的编码之一 `UTF-8` 保留了所有 128 个 ASCII 符号（7 位代码），但以不同的方式处理其他字符。这些字符的前面跟有一个几个比特的特定转义序列，该序列隐式地定义了字符的长度。这允许在单或多个字节的序列上编码所有 Unicode 字符。它的使用由于它是 XML 文档的默认编码而变得流行。
+处理外国语言通常意味着要在各种编码和字符集之间经常切换。此外，编写多语言文档导致了进一步的几乎无法解决的问题。Unicode（一个包含世界上所有语言几乎所有书写系统的超级目录）的创建是为了解决这个问题。Unicode 的编码之一 `UTF-8` 保留了所有 128 个 ASCII 符号（7 位代码），但以不同的方式处理其他字符。这些字符的前面跟有一个几个比特的特定转义序列，该序列隐式地定义了字符的长度。这允许在单或多个字节的序列上编码所有 Unicode 字符。它的使用由于它是 XML 文档的默认编码而变得流行。
 
 这通常是应该使用的编码，因此它是 Debian 系统上的默认编码。
 
@@ -3501,35 +3458,31 @@ RFC1855
 
 第一个问题邀请你选择要支持的“locales”。选择所有英语区域（即以 `en_` 开头的那些）是一个合理的选择。如果机器将托管外国用户，请不要犹豫也启用其他区域。系统上启用的区域列表存储在 `/etc/locale.gen` 文件中。可以手动编辑此文件，但在任何修改之后，你应该运行 `locale-gen`。它将为添加的区域生成工作所需的文件，并删除任何过时的文件。
 
-第二个问题为“系统环境的默认区域”，请求一个默认区域。在美国推荐的选择是 `en_US.UTF-8`。英国英语使用者将更倾向于 `en_GB.UTF-8`，而加拿大人人更倾向于 `en_CA.UTF-8` 或用于法语的 `fr_CA.UTF-8`。`/etc/default/locale` 文件将被修改以存储此选择。从那里，所有用户会话都会获取它，因为 PAM 将其内容注入 `LANG` 环境变量中。
+第二个问题为“系统环境的默认区域”，请求一个默认区域。在美国推荐的选择是 `en_US.UTF-8`。英国英语使用者将更倾向于 `en_GB.UTF-8`，而加拿大人更倾向于 `en_CA.UTF-8` 或用于法语的 `fr_CA.UTF-8`。`/etc/default/locale` 文件将被修改以存储此选择。从那里，所有用户会话都会获取它，因为 PAM 将其内容注入 `LANG` 环境变量中。
 
 `locales-all` 软件包包含所有区域的预编译区域数据。
 
-***
+---
 
-*幕后* `/etc/environment` 和 `/etc/default/locale`
+*幕后*：`/etc/environment` 和 `/etc/default/locale`
 
 `/etc/environment` 文件为 `login`、`gdm` 甚至 `ssh` 程序提供创建所需的环境变量。
 
-这些应用程序并不直接创建变量，而是通过 PAM (`pam_env.so`) 模块。PAM（可插认证模块）是一个集中认证、会话初始化和密码管理机制的模块化库。参见第 11.7.3.2 节“配置 PAM”获取配置示例。
+这些应用程序并不直接创建变量，而是通过 PAM（`pam_env.so`）模块。PAM（可插认证模块）是一个集中认证、会话初始化和密码管理机制的模块化库。参见第 11.7.3.2 节“配置 PAM”获取配置示例。
 
 `/etc/default/locale` 文件的工作方式类似，但只包含 `LANG` 环境变量。由于这种分离，某些 PAM 用户可以继承一个没有本地化的完整环境。事实上，不建议在启用本地化的情况下运行服务器程序；另一方面，对于打开用户会话的程序，建议使用本地化和区域设置。
 
-***
+---
 
 ## 8.1.2. 配置键盘
 
 即使键盘布局在控制台图形模式下的管理方式不同，Debian 也提供了一个适用于两者的配置界面：它基于 debconf 并实现在 `keyboard-configuration` 软件包中。因此，可以使用 `dpkg-reconfigure keyboard-configuration` 命令随时重置键盘布局。
 
-问题与物理键盘布局有关（标准的美国 PC 键盘是“Generic 104 key”），然后要选择的布局（通常是“US”），然后 AltGr 键的位置（右 Alt）。最后是关于使用哪个键作为“组合键”的问题，它允许通过组合按键输入特殊字符。连续输入 **Compose** **'** **e** 产生带重音的 e (“é”）。所有这些组合都描述在 `/usr/share/X11/locale/en_US.UTF-8/Compose` 文件中（或根据 `/usr/share/X11/locale/compose.dir` 指示的另一个文件）。
-
-
-
-
+问题与物理键盘布局有关（标准的美国 PC 键盘是“Generic 104 key”），然后要选择的布局（通常是“US”），然后 AltGr 键的位置（右 Alt）。最后是关于使用哪个键作为“组合键”的问题，它允许通过组合按键输入特殊字符。连续输入 `Compose`、`'`、`e` 产生带重音的 e（“é”）。所有这些组合都描述在 `/usr/share/X11/locale/en_US.UTF-8/Compose` 文件中（或根据 `/usr/share/X11/locale/compose.dir` 指示的另一个文件）。
 
 请注意，此处描述的图形模式键盘配置仅影响默认布局；`GNOME` 和 `KDE Plasma` 等环境在它们的偏好设置提供了键盘控制面板，允许每个用户拥有自己的配置。在这些控制面板中还提供了关于某些特定按键行为的额外选项。
 
-## 8.1.3 迁移到 UTF-8
+## 8.1.3. 迁移到 UTF-8
 
 `UTF-8` 编码的通用化一直是解决许多互操作性困难长期期待的方案，因为它促进了国际交流，并消除了对文档可用字符的任意限制。唯一的缺点是它必须经历一个相当困难的阶段。由于它无法完全透明（也就是说，无法在全球范围内同时发生），因此需要两次转换操作：一个针对文件内容，另一个针对文件名。幸运的是，大部分迁移工作已经完成，我们讨论这些内容主要是为了供参考。
 
@@ -3537,22 +3490,33 @@ RFC1855
 
 当发送（或存储）文本时不带有编码信息时，接收方并不总是能够确定使用何种约定来确定一组字节的含义。你通常可以通过对文本中出现的数值分布进行统计来获得思路，但这并不总是能给出确定的答案。当用于读取的编码系统与写入时使用的系统不同时，字节就会被误读，你最好的结果是某些字符出现错误，最坏的结果是完全无法阅读的内容。
 
-因此，如果法语文本显示正常，除了带音角的字母和某些符号（这些符号似乎被替换为如“©”或""之类的序列），这可能是一个编码为 `UTF-8` 的文件，但被解释为 `ISO8859-1` 或 `ISO8859-15`。相反，如果你看到问号而不是带音角的字母——即使这些问号似乎也替换了本该后的某个字符——很可能是你的安装已经配置为 `UTF-8`，而你发送了一个用 `ISO` 编码的文档。
+因此，如果法语文本显示正常，除了带音角的字母和某些符号（这些符号似乎被替换为如“©”或“”之类的序列），这可能是一个编码为 `UTF-8` 的文件，但被解释为 `ISO8859-1` 或 `ISO8859-15`。相反，如果你看到问号而不是带音角的字母——即使这些问号似乎也替换了本该后的某个字符——很可能是你的安装已经配置为 `UTF-8`，而你发送了一个用 `ISO` 编码的文档。
 
 许多简单的情况只出现在西方文化中，因为 `Unicode`（以及 `UTF-8`）的设计初衷是最大化地与基于拉丁字母的历史编码保持共同点，这使得即使在某些字符缺失时也能识别文本的部分。在更复杂的配置中（例如涉及两种不使用相同字母的不同语言环境），你经常得到完全无法阅读的结果——一系列彼此无关的符号。这在亚洲语言中尤为常见，因为它们拥有大量的语言和书写系统。`mojibake`（乱码）一词被用来描述这种现象。当它出现时，诊断更加复杂，最简单的解决方案通常是让双方都迁移到 `UTF-8`。
 
 对于文件名，迁移可以相对简单。`convmv` 工具（位于同名软件包中）是专门为此目的创建的；它允许将文件从一种编码重命名为另一种。该工具的使用相对简单，但我们建议分两步进行以避免意外。以下示例说明了一个包含以 `ISO8859-1` 编码的目录名的 `UTF-8` 环境，以及使用 `convmv` 对它们重命名。
 
 ```
+
+
+
+
+
+```bash
 ls travail/
+
 convmv -r -f iso-8859-15 -t utf-8 travail/
-Starting a dry run without changes... mv "travail/graphiques" "travail/graphiques" "travail/iconnes" "travail/iconnes"
 ```
 
-```
+Starting a dry run without changes... `mv "travail/graphiques" "travail/graphiques" "travail/iconnes" "travail/iconnes"`
+
+```bash
 convmv -r --dry-run -f iso-8859-15 -t utf-8 travail/
+
 mv "travail/graphiques" "travail/graphiques" "travail/iconnes" "travail/iconnes"
+
 Ready!
+
 ls travail/
 ```
 
@@ -3568,19 +3532,15 @@ ls travail/
 
 `IP 地址` 是用于识别局域网或网上计算机网络接口的数字。在目前最常用的 `IP` 版本（`IPv4`）中，该数字被编码为 32 位，通常表示为 4 个用点分隔的数字（例如 `192.168.0.1`）。协议的下一个版本 `IPv6` 将此地址空间扩展到 128 位，地址通常表示为一系列用冒号分隔的十六进制数（例如 `2001:0db8:13bb:0002:0000:0000:0000:0020`，简写为 `2001:db8:13bb:2::20`）。
 
-`子网掩码` (`netmask`）在其二进制代码中定义 IP 地址的哪部分对应网络，其余部分指定机器。在给出的静态 `IPv4` 地址配置示例中，子网掩码 `255.255.255.0`（二进制表示为 24 个“1”后跟 8 个“0”）表示 IP 地址的前 24 位对应于网络，其他 8 位属于特定机器。在 `IPv6` 中，为了可读性，只表示“1”的数量；因此，一个 `IPv6` 网络的子网掩码可以是 `64`。
+`子网掩码`（`netmask`）在其二进制代码中定义 IP 地址的哪部分对应网络，其余部分指定机器。在给出的静态 `IPv4` 地址配置示例中，子网掩码 `255.255.255.0`（二进制表示为 24 个“1”后跟 8 个“0”）表示 IP 地址的前 24 位对应于网络，其他 8 位属于特定机器。在 `IPv6` 中，为了可读性，只表示“1”的数量；因此，一个 `IPv6` 网络的子网掩码可以是 `64`。
 
 网络地址是其中描述机器部分为 0 的 IP 地址。完整网络中的 `IPv4` 地址范围通常用语法 `a.b.c.d/e` 表示，其中 `a.b.c.d` 是网络地址，`e` 是 IP 地址中影响网络部分的比特数。因此，示例网络将写为：`192.168.0.0/24`。`IPv6` 的语法类似：`2001:db8:13bb:2::/64`。
 
 `router`（路由器）是一种将多个网络连接在一起的机器。通过路由器的所有流量都会引导至正确的网络。为了做到这一点，路由器分析传入的数据包，并根据其目的 IP 地址对其进行重定向。路由器通常被称为网关；在这种配置中，它作为一台帮助访问局域网之外（指向扩展网络，如互联网）的机器。
 
-
-
-
-
 特殊的广播地址连接了网络中的所有工作站。它几乎不会被“路由”，仅在相关的网络中起作用。具体而言，这意味着指向广播地址的数据包永远不会通过路由器。
 
-本章重点关注 IPv4 地址，因为它们是目前最常用的地址。有关 IPv6 协议的细节，将在 第 10.6 节，“IPv6” 中介绍，但其概念是保持的。
+本章重点关注 IPv4 地址，因为它们是目前最常用的地址。有关 IPv6 协议的细节，将在第 10.6 节，“IPv6”中介绍，但其概念是保持的。
 
 ***
 
@@ -3594,19 +3554,23 @@ ls travail/
 
 ### 替代 NetworkManager
 
-虽然 `Network Manager` 在漫游设置中被特别推荐（参见 第 8.2.5 节，“漫游用户的自动网络配置”），但它完全可以作为默认网络管理工具。你可以手动在 `/etc/NetworkManager/system-connections/` 中创建一个类似 `.ini` 的文件，或者通过图形化工具 `nm-connection-editor` 来创建计算机启动时立即使用的“系统连接”。只需记住禁用 `/etc/network/interfaces` 中你希望 `Network Manager` 处理的条目即可。
+虽然 `Network Manager` 在漫游设置中被特别推荐（参见第 8.2.5 节，“漫游用户的自动网络配置”），但它完全可以作为默认网络管理工具。你可以手动在 `/etc/NetworkManager/system-connections/` 中创建一个类似 `.ini` 的文件，或者通过图形化工具 `nm-connection-editor` 来创建计算机启动时立即使用的“系统连接”。只需记住禁用 `/etc/network/interfaces` 中你希望 `Network Manager` 处理的条目即可。
 
-→ [`wiki.gnome.org/Projects/NetworkManager/SystemSettings`](https://wiki.gnome.org/Projects/NetworkManager/SystemSettings)→ [`developer.gnome.org/NetworkManager/1.14/ref-settings.html`](https://developer.gnome.org/NetworkManager/1.14/ref-settings.html)
+→ [`wiki.gnome.org/Projects/NetworkManager/SystemSettings`](https://wiki.gnome.org/Projects/NetworkManager/SystemSettings)  
+→ [`developer.gnome.org/NetworkManager/1.14/ref-settings.html`](https://developer.gnome.org/NetworkManager/1.14/ref-settings.html)
 
 ***
 
-## 8.2.1. 以太网接口
+## 8.2.1 以太网接口
 
 如果计算机带有以太网卡，与其关联的 IP 网络必须通过选择两种方法之一进行配置。最简单的方法是使用 `DHCP` 进行动态配置，这需要在本地网络有一个 `DHCP` 服务器。它可能会指定所需的主机名，对应下面示例中的 `hostname` 设置。然后 `DHCP` 服务器将发送适当网络的配置设置。
 
 示例 8.1. DHCP 配置
-```
-auto enp0s31f6 iface enp0s31f6 inet dhcp hostname arrakis
+
+```text
+auto enp0s31f6
+iface enp0s31f6 inet dhcp
+hostname arrakis
 ```
 
 ***
@@ -3615,7 +3579,7 @@ auto enp0s31f6 iface enp0s31f6 inet dhcp hostname arrakis
 
 默认情况下，内核为网络接口分配通用名称，例如 `eth0`（用于有线以太网）或 `wlan0`（用于 WiFi）。这些名称中的数字是一个简单的递增计数器，代表它们被检测到的顺序。对于现代硬件，该顺序在每次重启时可能会发生，因此默认名称是不可的。
 
-幸运的是，`systemd` 和 `udev` 能够在接口出现时立即对其重命名。默认命名策略由 `/lib/systemd/network/99-default.link` 定义（参见 `systemd.link(5)` 以获取该文件中的 `NamePolicy` 条目的解释）。在实践中，名称通常基于设备的物理位置（通过其连接位置推断），你将看到以 `en` 开头的有线以太网名称和以 `wl` 开头的 WiFi 名称。在上面的示例中，名称的其余部分以简称形式表示 PCI (`p`) 总线号 (`0`)、槽位号 (`s31`) 和功能号 (`f6`)。
+幸运的是，`systemd` 和 `udev` 能够在接口出现时立即对其重命名。默认命名策略由 `/lib/systemd/network/99-default.link` 定义（参见 `systemd.link(5)` 以获取该文件中的 `NamePolicy` 条目的解释）。在实践中，名称通常基于设备的物理位置（通过其连接位置推断），你将看到以 `en` 开头的有线以太网名称和以 `wl` 开头的 WiFi 名称。在上面的示例中，名称的其余部分以简称形式表示 PCI（`p`）总线号（`0`）、槽位号（`s31`）和功能号（`f6`）。
 
 显然，你可以自由地覆盖此策略并/或补充它以自定义某些特定接口的名称。你可以在 `ip addr` 的输出中（或 `/sys/class/net/` 中的文件名）找到网络接口的名称。
 
@@ -3626,8 +3590,14 @@ auto enp0s31f6 iface enp0s31f6 inet dhcp hostname arrakis
 “静态”配置必须以固定方式指示网络设置。这至少包括 IP 地址和子网掩码；有时还会列出网络和广播地址。连接到外部的路由器将被指定为网关。
 
 示例 8.2. 静态配置
-```
-auto enp0s31f6 iface enp0s31f6 inet static address 192.168.0.3/24 broadcast 192.168.0.255 network 192.168.0.0 gateway 192.168.0.1
+
+```text
+auto enp0s31f6
+iface enp0s31f6 inet static
+address 192.168.0.3/24
+broadcast 192.168.0.255
+network 192.168.0.0
+gateway 192.168.0.1
 ```
 
 ***
@@ -3640,28 +3610,28 @@ auto enp0s31f6 iface enp0s31f6 inet static address 192.168.0.3/24 broadcast 192.
 
 ***
 
-## 8.2.2. 无线接口
+## 8.2.2 无线接口
 
 让无线网卡工作可能更具挑战性。首先，它们通常需要安装专有固件，而 Debian 默认并不安装这些固件。然后，无线网络依赖加密来限制授权用户的访问，这意味着要在网络配置中存储某些密钥。让我们逐一个地处理这些主题。
 
-### 8.2.2.1. 安装所需的固件
+### 8.2.2.1 安装所需的固件
 
-首先，你必须在 APT 的 `sources.list` 文件中启用 non-free 存储：有关此文件的详细信息请参见 第 6.1 节，“填充 sources.list 文件`。许多固件是专有的，因此位于该存储中。你可以尝试跳过此步，但如果下一步没有找到所需的固件，请在启用 non-free 部分后重试。
+首先，你必须在 APT 的 `sources.list` 文件中启用 `non-free` 存储：有关此文件的详细信息请参见第 6.1 节，“填充 `sources.list` 文件”。许多固件是专有的，因此位于该存储中。你可以尝试跳过此步，但如果下一步没有找到所需的固件，请在启用 `non-free` 部分后重试。
 
 然后，你必须安装适当的 `firmware-*` 软件包。如果你不知道需要哪个包，可以安装 `isenram` 软件包并运行其 `isenram-autoinstall-firmware` 命令。这些包通常以硬件制造商或相应的内核模块命名：用于 Intel 无线卡的 `firmware-iwlwifi`、用于 Qualcomm Atheros 的 `firmware-atheros`、用于 Ralink 的 `firmware-ralink` 等。随后建议重启，因为内核驱动程序通常在首次加载时寻找固件文件，之后不再寻找。
 
-### 8.2.2.2. /etc/network/interfaces 中的无线特定条目
+### 8.2.2.2 `/etc/network/interfaces` 中的无线特定条目
 
-`ifupdown` 能够管理无线接口，但它需要 `wpasupplicant` 软件包的帮助，该包提供了 `ifupdown` 与用于配置无线接口的 `wpa_supplicant` 命令（使用 WPA/WPA2 加密时）所需的集成。`/etc/network/interfaces` 中的常规条目需要扩展两个补充参数以指定无线网络名称（即 SSID）和预共享密钥 (PSK)。
+`ifupdown` 能够管理无线接口，但它需要 `wpasupplicant` 软件包的帮助，该包提供了 `ifupdown` 与用于配置无线接口的 `wpa_supplicant` 命令（使用 WPA/WPA2 加密时）所需的集成。`/etc/network/interfaces` 中的常规条目需要扩展两个补充参数以指定无线网络名称（即 SSID）和预共享密钥（PSK）。
 
 示例 8.3. 无线接口的 DHCP 配置
+
+```text
+auto wlp4s0
+iface wlp4s0 inet dhcp
+wpa-ssid Falcot
+wpa-psk ccb290fd4fe6b22935cbae31449e050edd02ad44627b116ce0151668f5f53c01b
 ```
-auto wlp4s0 iface wlp4s0 inet dhcp wpa-ssid Falcot wpa-psk ccb290fd4fe6b22935cbae31449e050edd02ad44627b116ce0151668f5f53c01b
-```
-
-
-
-
 
 `wpa-psk` 参数可以包含明文密码，也可以包含通过 `wpa_passphrase "SSID" "passphrase"` 生成的哈希版本密码。如果你使用未加密的无线连接，则应该放置 `wpa-key-mgmt NONE` 且不设置 `wpa-psk` 项。关于可能的配置选项的更多信息，请参阅 `/usr/share/doc/wpasupplicant/README.Debian.gz`。
 
@@ -3673,7 +3643,7 @@ auto wlp4s0 iface wlp4s0 inet dhcp wpa-ssid Falcot wpa-psk ccb290fd4fe6b22935cba
 
 通过 `wireless-tools` 包可以使用已弃用的 WEP 加密协议。请参见 `/usr/share/doc/wireless-tools/README.Debian` 获取说明。
 
-## 8.2.3. 通过 PSTN 调制解调器连接 PPP
+## 8.2.3 通过 PSTN 调制解调器连接 PPP
 
 点点（PPP）连接建立的是间歇性连接；这是使用调制解调器（“PSTN 调制解调器”，因为连接通过公共交换电话网）进行连接的最常见解决方案。
 
@@ -3681,11 +3651,11 @@ auto wlp4s0 iface wlp4s0 inet dhcp wpa-ssid Falcot wpa-psk ccb290fd4fe6b22935cba
 
 配置完成后，可以使用 `pon` 命令进行连接（将连接名称作为参数，当默认值 `provider` 不适用时）。使用 `poff` 命令断开链路。这两个命令可以由 root 用户执行，也可以由任何处于 `dip` 组的其他用户执行。
 
-## 8.2.4. 通过 ADSL 调制解调器连接
+## 8.2.4 通过 ADSL 调制解调器连接
 
 “ADSL 调制解调器”这一通义术语涵盖了许多功能非常不同的设备。在 Linux 下最易使用的调制解调器是那些具有以太网接口（而不仅仅是 USB 接口）的设备。这些设备很受欢迎；大多数 ADSL 互联网服务提供商都会提供或租赁一个带有以太网接口的“盒子”。根据调制解调器的类型，所需的配置可能差异很大。
 
-### 8.2.4.1. 支持 PPPOE 的调制解调器
+### 8.2.4.1 支持 PPPOE 的调制解调器
 
 某些以太网调制解调器支持 PPPOE 协议（以太网上的点点协议）。使用 `pppoeconf` 工具（来自同名包）将配置连接。为此，它会根据提供的设置修改 `/etc/ppp/peers/dsl-provider` 文件，并将登录信息记录在 `/etc/ppp/pap-secrets` 和 `/etc/ppp/chap-secrets` 文件中。建议接受它提出的所有修改。
 
@@ -3693,27 +3663,39 @@ auto wlp4s0 iface wlp4s0 inet dhcp wpa-ssid Falcot wpa-psk ccb290fd4fe6b22935cba
 
 ***
 
-### 提示 启动时启动 `ppp`
+### 提示：启动时启动 `ppp`
 
 根据定义，ADSL 上的 PPP 连接是间歇性的。由于它们通常不按时间计费，因此保持它们一直开启并没有坏处。实现此点的标准方法是使用 init 系统。
 
-使用 `systemd`，为 ADSL 连接添加一个自动重启的任务只需只需创建一个“单元文件”，例如 `/etc/systemd/system/adsl-connection.service`，内容如下：
+使用 `systemd`，为 ADSL 连接添加一个自动重启的任务只需创建一个“单元文件”，例如 `/etc/systemd/system/adsl-connection.service`，内容如下：
 
-```
-[Unit] Description=ADSL connection [Service] Type=forking ExecStart=/usr/sbin/pppd call dsl-provider Restart=always [Install] WantedBy=multi-user.target
+```ini
+[Unit]
+Description=ADSL connection
+
+[Service]
+Type=forking
+ExecStart=/usr/sbin/pppd call dsl-provider
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
 ```
 
 一旦定义了该单元文件，就需要通过 `systemctl enable adsl-connection` 将其启用。然后可以手动启动循环 `systemctl start adsl-connection`；它也会在启动时自动启动。
 
 在不使用 `systemd` 的系统上（包括 Debian Wheezy 及之前的版本），标准的 SystemV init 工作方式不同。在这些系统上，只需要在 `/etc/inittab` 末尾添加如下行；这样每当连接断开时，`init` 都会重新连接它。
 
-```
+```text
 adsl:2345:respawn:/usr/sbin/pppd call dsl-provider
 ```
 
-对于每天自动断开的 ADSL 连接，这种方法缩短了中断持续。
 
-***
+
+
+对于每天自动断开的 ADSL 连接，这种方法缩短了中断持续时间。
+
+---
 
 ### 8.2.4.2. 支持 PPTP 的调制解调器
 
@@ -3721,33 +3703,29 @@ PPTP（点点隧道协议）是由微软创建的。它在 ADSL 早期部署，�
 
 ### 8.2.4.3. 支持 DHCP 的调制解调器
 
-当调制解调器通过以太网线（交叉线）连接到计算机时，你通常通过 DHCP 配置网络连接；调制解调器默认自动充网关并处理路由（这意味着它管理计算机与互联网之间的网络流量）。
+当调制解调器通过以太网线（交叉线）连接到计算机时，你通常通过 DHCP 配置网络连接；调制解调器默认自动充当网关并处理路由（这意味着它管理计算机与互联网之间的网络流量）。
 
-***
+---
 
-### 回归基础 用于直接以太网连接的交叉线
+### 回归基础：用于直接以太网连接的交叉线
 
 计算机网卡期望在电缆的特定线芯上接收数据，并在其他线芯上发送数据。当你将计算机连接到本地网络时，通常会在网卡和中继器或交换机之间连接一根线（直通或交叉）。然而，如果你想直接连接两台计算机（没有中间交换机或中继器），你必须将一个卡的发送信号路由到另一个卡的接收端，反之亦然。这就是交叉线的用途及其使用原因。
 
 请注意，随着时间的推移，这种区别几乎变得无关，因为现代网卡能够检测电缆类型并相应进行调整，因此在特定位置两种电缆都能工作并不稀奇。
 
-***
+---
 
 市场上的大多数“ADSL 路由器”都可以这样使用，大多数互联网服务提供商提供的 ADSL 调制解调器也是如此。
 
 ## 8.2.5. 漫游用户的自动网络配置
 
-许多 Falcot 工程师拥有一笔记本电脑，由于工作需要他们也在家里使用。网络配置随位置而异。在家里，可能是 wifi 网络（受 WPA 密钥保护），而工作场所使用有线网络以获得更高的安全性和更大的带宽。
+许多 Falcot 工程师拥有一台笔记本电脑，由于工作需要，他们也在家里使用。网络配置随位置而异。在家里，可能是 wifi 网络（受 WPA 密钥保护），而工作场所使用有线网络以获得更高的安全性和更大的带宽。
 
-为了避免手动连接或断开相应的网络接口，管理员在这些漫游机器上安装了 `network-manager` 包。该软件使用户可以使用图形桌面通知区域显示的小图标轻松在不同网络之间切换。点击此图标会显示可用网络列表（有线和无线），他们只需选择想要使用的网络。程序会保存用户已连接连接的配置，并在当前连接掉时自动切换到最佳的可用网络。
+为了避免手动连接或断开相应的网络接口，管理员在这些漫游机器上安装了 `network-manager` 包。该软件使用户可以使用图形桌面通知区域显示的小图标轻松在不同网络之间切换。点击此图标会显示可用网络列表（有线和无线），他们只需选择想要使用的网络。程序会保存用户已连接的配置，并在当前连接断开时自动切换到最佳的可用网络。
 
 为了实现这一点，程序分为两个部分：一个作为 root 运行的守护进程处理网络接口的激活和配置，一个用户界面控制该守护进程。`PolicyKit` 处理控制此程序所需的授权，Debian 这样配置了 `PolicyKit`：允许 `netdev` 组的成员添加或更改 Network Manager 连接。
 
 Network Manager 知道如何处理各种类型的连接（DHCP、手动配置、本地网络），但只有当使用程序本身设置配置时如此。这就是为什么它会系统地忽略 `/etc/network/interfaces` 和 `/etc/network/interfaces.d/` 中不适合它的网络接口。由于在没有显示网络连接时 Network Manager 不提供详细信息，简单的方法是从 `/etc/network/interfaces` 中删除所有必须由 Network Manager 管理的接口配置。
-
-
-
-
 
 请注意，在初始安装选择“桌面环境”任务时，默认会安装此程序。
 
@@ -3755,47 +3733,53 @@ Network Manager 知道如何处理各种类型的连接（DHCP、手动配置、
 
 为 IP 数字分配名称的目的是让人们更容易记忆。现实中，IP 地址标识与网卡等设备关联的网络接口。由于每台机器可以有多张网卡，且每张网卡上有多个接口，因此一台计算机在域名系统中可能有多个名称。
 
-然而，每台机器通过一个主名称（或“规范”名称来标识，该名称存储在 `/etc/hostname` 文件中，并通过初始化脚本通过 `hostname` 命令传递给 Linux 内核。当前值可以在虚拟文件系统中，你可以通过 `cat /proc/sys/kernel/hostname` 命令获取。
+然而，每台机器通过一个主名称（或“规范”名称）来标识，该名称存储在 `/etc/hostname` 文件中，并通过初始化脚本使用 `hostname` 命令传递给 Linux 内核。当前值可以在虚拟文件系统中获取，你可以通过 `cat /proc/sys/kernel/hostname` 命令获取。
 
-* * *
+---
 
-返回基础 `/proc/` 和 `/sys/`，虚拟文件系统
+### 返回基础：`/proc/` 和 `/sys/`，虚拟文件系统
 
-`/proc/` 和 `/sys/` 目录树是由“虚拟”文件系统生成的。这是一种从内核恢复信息（通过列出虚拟文件）并向内核通信信息（通过写入虚拟文件）的实用手段。
+`/proc/` 和 `/sys/` 目录树是由“虚拟”文件系统生成的。这是一种从内核恢复信息（通过列出虚拟文件）并向内核传递信息（通过写入虚拟文件）的实用手段。
 
-`/sys/` 特别设计用于提供对内核对象的访问，特别是代表系统中各种设备的对象。因此，内核可以共享各种信息：每个设备的状态（例如，它是否处于节能模式）、它是否为可热拔设备等。注意 `/sys/` 仅从内核 2.6 版本开始存在。`/proc/` 描述内核的当前状态：此目录下的文件包含有关运行在系统上的进程及其硬件的信息。
+`/sys/` 特别设计用于提供对内核对象的访问，特别是代表系统中各种设备的对象。因此，内核可以共享各种信息：每个设备的状态（例如，它是否处于节能模式）、它是否为可热拔设备等。注意，`/sys/` 仅从内核 2.6 版本开始存在。`/proc/` 描述内核的当前状态：此目录下的文件包含有关运行在系统上的进程及其硬件的信息。
 
-* * *
+---
 
 惊讶的是，域名并不是以相同的方式管理的，而是通过名称解析获取的机器完整名称。你可以在 `/etc/hosts` 文件中更改它；只需在与机器地址关联的名称列表开头为该机器写入一个完整名称即可，如下例：
 
-```
-127.0.0.1 localhost 192.168.0.1 arrakis.falcot.com arrakis
+```text
+127.0.0.1 localhost
+192.168.0.1 arrakis.falcot.com arrakis
 ```
 
 ## 8.3.1. 域名解析
 
-Linux 中的名称解析机制是模块化的，可以使用 `/etc/nsswitch.conf` 文件中声明的各种信息源。涉及主机解析的条目是 `hosts`。默认情况下，它包含 `files dns`，这意味着系统首先查询 `/etc/hosts` 文件，然后是 DNS 服务器。NIS/NIS+ 或 LDAP 服务器是其他可能的来源。
+Linux 中的名称解析机制是模块化的，可以使用 `/etc/nsswitch.conf` 文件中声明的各种信息源。涉及主机解析的条目是 `hosts`。默认情况下，它包含 `files dns`，这意味着系统首先查询 `/etc/hosts` 文件，然后查询 DNS 服务器。NIS/NIS+ 或 LDAP 服务器是其他可能的来源。
 
-* * *
+---
 
-注意 NSS 和 DNS
+### 注意：NSS 和 DNS
 
 请注意，专门用于查询 DNS 的命令（尤其是 `host`）并不使用标准的名称解析机制（NSS）。因此，它们不会考虑 `/etc/nsswitch.conf`，也不会考虑 `/etc/hosts`。
 
-* * *
+---
 
 ### 8.3.1.1. 配置 DNS 服务器
 
-DNS（域名服务）是一种分布式且层次化的服务，用于将名称映射到 IP 地址，反之亦然。具体来说，它可以将如 `www.eyrolles.com` 这样人类友好的名称转换为实际 IP 地址 `213.244.11.247`。
+DNS（域名服务）是一种分布式且层次化的服务，用于将名称映射到 IP 地址，反之亦然。具体来说，它可以将如 `www.eyrolles.com` 这样的人类友好名称转换为实际 IP 地址 `213.244.11.247`。
 
 要访问 DNS 信息，必须有一个可用的 DNS 服务器转发请求。Falcot Corp 有自己的服务器，但个人用户更有可能使用其 ISP 提供的 DNS 服务器。
 
 使用的 DNS 服务器在 `/etc/resolv.conf` 中指定，每行一个，在 IP 地址之前有 `nameserver` 关键字，如下例：
 
+```text
+nameserver 212.27.32.176
+nameserver 212.27.32.177
+nameserver 8.8.8.8
 ```
-nameserver 212.27.32.176 nameserver 212.27.32.177 nameserver 8.8.8.8
-```
+
+
+
 
 注意，当网络由 NetworkManager 管理或通过 DHCP 配置时，`/etc/resolv.conf` 文件可能会被自动处理（覆盖）。
 
@@ -3807,9 +3791,9 @@ nameserver 212.27.32.176 nameserver 212.27.32.177 nameserver 8.8.8.8
 
 此文件对于未连接互联网的小型网络足够，但如果有 5 台或更多机器，建议安装适当的 DNS 服务器。
 
-* * *
+---
 
-提示 绕过 DNS
+#### 提示：绕过 DNS
 
 由于应用程序在查询 DNS 之前会检查 `/etc/hosts` 文件，因此可以在其中包含与 DNS 返回内容不同的信息，从而绕过基于 DNS 的正常名称解析。
 
@@ -3817,29 +3801,27 @@ nameserver 212.27.32.176 nameserver 212.27.32.177 nameserver 8.8.8.8
 
 另一个可能的用途是将指向特定主机的流量重定向到本地主机（localhost），从而防止与给定主机进行任何通信。例如，可以重定向专门投放广告的服务器主机，从而绕过这些广告，获得更流畅、少分心的导航。
 
-* * *
+---
 
 # 8.4. 用户和组数据库
 
 用户列表通常存储在 `/etc/passwd` 文件中，而 `/etc/shadow` 文件存储哈希密码。两者都是文本文件，格式相对简单，可以使用文本编辑器读取和修改。每个用户列在其中，每行有多个用冒号（`:`）分隔的字段。
 
-* * *
+---
 
-注意 编辑系统文件
+#### 注意：编辑系统文件
 
 本章提到的系统文件均为纯文本文件，可以使用文本编辑器编辑。考虑到它们对核心系统功能的重要性，在编辑系统文件时，采取额外措施始终是一个好主意。首先，在打开或更改系统文件之前，始终对系统文件进行复制或备份。其次，在可能有多人访问同一文件的服务器或机器上，采取额外步骤以防止文件损坏。
 
 出于此目的，只需使用 `vipw` 命令编辑 `/etc/passwd` 文件，或使用 `vigr` 编辑 `/etc/group`。这些命令会在运行文本编辑器之前锁定相关文件（默认使用 `vi`，除非修改了 `EDITOR` 环境变量）。`-s` 选项允许编辑影子文件。
 
-* * *
+---
 
-* *
-
-返回基础 Crypt，单向函数
+#### 返回基础：`crypt`，单向函数
 
 `crypt` 是一种单向函数，将字符串（`A`）转换为另一个字符串（`B`），且无法从 `B` 推导出 `A`。识别 `A` 的唯一方法是测试所有可能的值，检查每个值以确定转换是否会产生 `B`。它使用最多 8 个字符作为输入（字符串 `A`），并生成 13 个可打印 ASCII 字符（字符串 `B`）。
 
-* * *
+---
 
 ## 8.4.1. 用户列表：`/etc/passwd`
 
@@ -3851,18 +3833,13 @@ nameserver 212.27.32.176 nameserver 212.27.32.177 nameserver 8.8.8.8
 - `gid`：用户主组的唯一数字（Debian 默认为每个用户创建一个特定组）；
 - `GECOS`：通常包含用户全名的数据字段；
 - 登录目录，分配给用户用于存储个人文件（环境变量 `$HOME` 通常指向此处）；
-
-
-
-
-
 - 登录时执行的程序。这通常是一个命令解释器（shell），赋予用户自由的操作权限。如果你指定 `/bin/false`（该程序不执行任何操作并立即返回控制权），用户将无法登录。
 
-## 返回基础：Unix 组 (group)
+## 返回基础：Unix 组（group）
 
 Unix 组是一个包含多个用户的实体，以便他们可以使用集成权限系统轻松地共享文件（通过从相同的权限中受益）。你也可以限制特定程序仅供特定组使用。
 
-## 8.4.2. 的加密密码文件：`/etc/shadow`
+## 8.4.2. 加密密码文件：`/etc/shadow`
 
 `/etc/shadow` 文件包含以下字段：
 
@@ -3870,7 +3847,7 @@ Unix 组是一个包含多个用户的实体，以便他们可以使用集成权
 - `encrypted password;`
 - 几个管理密码过期的字段。
 
-### 文档说明：`/etc/passwd`, `/etc/shadow` 和 `/etc/group` 文件格式
+### 文档说明：`/etc/passwd`、`/etc/shadow` 和 `/etc/group` 文件格式
 
 这些格式记录在以下 man 页（帮助文档）中：`passwd(5)`、`shadow(5)` 和 `group(5)`。
 
@@ -3882,7 +3859,7 @@ Unix 组是一个包含多个用户的实体，以便他们可以使用集成权
 
 以下命令允许修改用户数据库中特定字段所存储的信息：`passwd` 允许普通用户更改自己的密码，这会更新 `/etc/shadow` 文件；`chfn`（CHange Full Name，更改全名）为超级用户（root）保留，用于修改 `GECOS` 字段。`chsh`（CHange SHell，更改 shell）允许用户更改其登录 shell；然而，可选范围将限于 `/etc/shells` 中列出的内容；另一方面，管理员不受此限制，可以将 shell 设置为他们选择的任何程序。
 
-最后，`chage`（CHange AGE，更改有效期）命令允许管理员更改密码过期设置（`-l` `user` 选项将列出当前设置）。你还可以使用 `passwd -e user` 命令强制密码过期，这将要求用户在下次登录时更改密码。
+最后，`chage`（CHange AGE，更改有效期）命令允许管理员更改密码过期设置（`-l user` 选项将列出当前设置）。你还可以使用 `passwd -e user` 命令强制密码过期，这将要求用户在下次登录时更改密码。
 
 ## 8.4.4. 禁用账户
 
@@ -3894,10 +3871,10 @@ Unix 组是一个包含多个用户的实体，以便他们可以使用集成权
 
 ## 8.4.5. 组列表：`/etc/group`
 
-组列在 `/etc/group`文件中，这是一个简单的文本数据库，格式与 `/etc/passwd` 文件类似，包含以下字段：
+组列在 `/etc/group` 文件中，这是一个简单的文本数据库，格式与 `/etc/passwd` 文件类似，包含以下字段：
 
 - `group name;`
-- `password`（可选）：仅当用户不是该组的普通成员时用于加入组（使用 `newgrp` 或 `sg` 命令，请参见侧边栏 返回基础：处理多个组）；
+- `password`（可选）：仅当用户不是该组的普通成员时用于加入组（使用 `newgrp` 或 `sg` 命令，请参见侧边栏“返回基础：处理多个组”）；
 - `gid`：唯一组标识符；
 - 成员列表：该组成员的用户名称列表，用逗号分隔。
 
@@ -3905,13 +3882,13 @@ Unix 组是一个包含多个用户的实体，以便他们可以使用集成权
 
 每个用户可以是许多组的成员；其中一个是他们的“主组”（main group）。用户的主组默认在初始用户配置期间创建。默认情况下，用户创建的每个文件都属于他们，同时也属于他们的主组。这并不总是如所意的；例如，当用户需要在一个由主组之外的组共享的目录下工作时。在这种情况下，用户需要使用以下命令之一更改其主组：`newgrp`（启动一个新 shell）或 `sg`（仅用于使用提供的备用组执行命令）。这些命令还允许用户加入他们不所属的组。如果该组受密码保护，他们需要在执行命令前提供适当的密码。
 
-或者，用户可以在目录上设置 `setgid` 位，这会导致在该目录中创建的文件自动属于正确的组。更多详细信息，请参见侧边栏 安全 `setgid` 目录和粘位。
+或者，用户可以在目录上设置 `setgid` 位，这会导致在该目录中创建的文件自动属于正确的组。更多详细信息，请参见侧边栏“安全：`setgid` 目录和粘位”。
 
 `id` 命令显示用户的当前状态，包括他们的个人标识符（`uid` 变量）、当前主组（`gid` 变量）以及他们所属的组列表（`groups` 变量）。
 
 `addgroup` 和 `delgroup` 命令分别添加或删除组。`groupmod` 命令修改组的信息（其 `gid` 或标识符）。`gpasswd group` 命令更改组密码，而 `gpasswd -r group` 命令则删除密码。
 
-### 提示：getent
+### 提示：`getent`
 
 `getent`（get entries）命令通过标准方式检查系统数据库，使用相应的库函数，这些函数转而 `/etc/nsswitch.conf` 配置的 NSS 模块。该命令接受或两个参数：要检查的数据库以及可能的搜索键。因此，命令 `getent passwd rhertzog` 将从用户数据库获取关于 `rhertzog` 的信息。
 
@@ -3921,7 +3898,7 @@ Unix 组是一个包含多个用户的实体，以便他们可以使用集成权
 
 `adduser` 命令在创建账户前会询问几个问题，但其用法非常直观。它的配置文件 `/etc/adduser.conf` 包含了所有有趣的设置：它可以通过创建用户模板自动为每个新用户设置配额，或者更改用户账户的位置；后者很少用，但当你有大量用户并希望将账户划分到多个磁盘上时非常有用。你还可以选择不同的默认 shell。
 
-### 返回基础：配额 (Quota)
+### 返回基础：配额（Quota）
 
 “配额”一词指的是允许用户使用的机器资源限制。这通常指的是磁盘空间。
 
@@ -3929,10 +3906,7 @@ Unix 组是一个包含多个用户的实体，以便他们可以使用集成权
 
 创建账户会使用 `/etc/skel/` 模板填充用户的主目录。这为用户提供了一组标准的目录和配置文件。
 
-在某些情况下，将用户添加到组（除其默认“主”组之外）是有用的，以便授予额外的权限。例如，属于音频组的用户可以访问音频设备（参见侧边栏 返回基础 设备访问权限）。可以通过可以通过 `adduser user group` 命令实现。
-
-
-
+在某些情况下，将用户添加到组（除其默认“主”组之外）是有用的，以便授予额外的权限。例如，属于音频组的用户可以访问音频设备（参见侧边栏“返回基础：设备访问权限”）。可以通过 `adduser user group` 命令实现。
 
 在 Unix 中，每个硬件外设备都用一个特殊文件表示，这些文件通常存储在文件树的 `/dev/`（DEVices）目录下。根据设备的性质，存在两种特殊文件：“字符模式”文件和“块模式”文件，每种模式仅允许有限数量的操作。字符模式将交互限制在读/写操作上，而块模式还允许在可用数据内进行寻道（seeking）。最后，每个特殊文件都关联有两个数字（“主设备号”和“次设备号”），以独特的方式向内核标识设备。这种通过 `mknod` 命令创建的文件仅包含一个符号性的（且更符合人类习惯的）名称。
 
@@ -3948,25 +3922,17 @@ Unix 组是一个包含多个用户的实体，以便他们可以使用集成权
 
 `bash` 是标准 shell，对于“交互式” shell 使用 `/etc/bash.bashrc` 初始化脚本，对于“登录式” shell 使用 `/etc/profile`。
 
-***
-
-### 回到基础 登录 shell 和（非）交互式 shell
+### 回到基础：登录 shell 和（非）交互式 shell
 
 简单来说，当你通过本地或通过 `ssh` 远程登录到控制台，或者运行显式的 `bash --login` 命令时，就会调用登录 shell。无论是否为登录 shell，shell 都可以是交互式的（例如在 `xterm` 类型的终端中）；或者也可以是非交互式的（当在执行脚本时）。
 
-***
-
-### 探索 其它 shell，其他脚本
+### 探索其他 shell，其他脚本
 
 每个命令解释器都有特定的语法和它自己的配置文件。因此，`zsh` 使用 `/etc/zshrc` 和 `/etc/zshenv`；`tcsh` 使用 `/etc/csh.cshrc`、`/etc/csh.login` 和 `/etc/csh.logout`。这些程序的帮助页（man pages）记录了它们使用的哪些文件。
 
-***
-
 对于 `bash`，在 `/etc/bash.bashrc` 文件中激活“自动补全”（只需取消几行的注释）是非常有用的。
 
-***
-
-### 回到基础 自动补全
+### 回到基础：自动补全
 
 许多命令解释器提供补全功能，允许 shell 在用户按下 `Tab` 键时自动补全部分输入的命令名或参数。这让用户工作得更高效且更不容易出错。
 
@@ -3974,57 +3940,41 @@ Unix 组是一个包含多个用户的实体，以便他们可以使用集成权
 
 `bash-completion` 软件包包含了大多数常用程序的补全。
 
-***
-
-### 回到基础 波浪号，通往 HOME 的快捷方式
+### 回到基础：波浪号，通往 HOME 的快捷方式
 
 波浪号 `~` 通常指示环境变量 `HOME` 所指向的目录（即用户的家目录，例如 `/home/rhertzog/`）。命令解释器会自动进行替换：`~/hello.txt` 变为 `/home/rhertzog/hello.txt`。
 
 波浪号还允许访问另一个用户的家目录。因此，`~rmas/bonjour.txt` 等同于 `/home/rmas/bonjour.txt`。
 
-***
-
 除了这些常用脚本外，每个用户都可以创建自己的 `~/.bashrc` 和 `~/.bash_profile` 来配置他们的 shell。常见的更改是添加别名（aliases）；这些单词会被自动替换为命令的执行，使得调用该命令变得更快。例如，你可以为命令 `ls -la | less` 创建一个 `la` 别名；然后你只需要输入 `la` 就可以详细检查目录的内容。
 
-***
-
-### 回到基础 环境变量
+### 回到基础：环境变量
 
 环境变量允许存储 shell 或调用的各种其他程序的全局设置。它们是上下文相关的（每个进程都有自己的环境变量），但是是可继承的。后者的这一特性使得登录 shell 有可能声明变量，这些变量将传递给它执行的所有程序。
 
-设置默认环境变量是 shell 配置的一个重要元素。撇开 shell 特有的变量，，最好将它们放在 `/etc/environment` 文件中，因为该文件会被可能启动 shell 会话的各种程序使用。通常在那里定义的变量包括 `ORGANIZATION`（通常包含公司或组织的名称）和 `HTTP_PROXY`（指示 HTTP 代理的存在和位置）。
+设置默认环境变量是 shell 配置的一个重要元素。撇开 shell 特有的变量，最好将它们放在 `/etc/environment` 文件中，因为该文件会被可能启动 shell 会话的各种程序使用。通常在那里定义的变量包括 `ORGANIZATION`（通常包含公司或组织的名称）和 `HTTP_PROXY`（指示 HTTP 代理的存在和位置）。
 
-***
+### 提示：所有 shell 配置完全相同
 
-### 提示 所有 shell 配置完全相同
+用户通常希望以相同的方式配置他们的登录和交互式 shell。为了实现这一点，他们选择在 `~/.bash_profile` 文件中解释（或“引入”）`~/.bashrc` 的内容。对于所有用户共同的文件也可以这样做（通过从 `/etc/profile` 调用 `/etc/bash.bashrc`）。
 
-用户通常希望以相同的方式配置他们的登录和交互式 shell。为了实现这一点，他们选择 `~/.bash_profile` 文件中解释（或“引入”）`~/.bashrc` 的内容。对于所有用户共同的文件也可以这样做（通过从 `/etc/profile` 调用 `/etc/bash.bashrc`）。
-
-***
-
-# 8.7 打印机配置
+# 8.7. 打印机配置
 
 打印机配置曾给管理员和用户带来许多头疼。多亏了 CUPS（使用 IPP 互联网打印协议的免费打印服务器），这些头疼的问题现在大多成为过去。
 
 Debian 将 CUPS 分发在几个软件包中。系统的核心是调度器 `cupsd`，它位于 `cups-daemon` 软件包中。`cups-client` 包含了与服务器 `cupsd` 交互的实用程序。`lpadmin` 可能是最重要的工具，因为它对于设置打印机关重要，但也有禁用或启用打印队列、查看或删除打印作业以及显示打印机选项的功能。CUPS 框架基于 System V 打印系统，但有一个兼容包 `cups-bsd`，允许使用传统 BSD 打印系统的 `lpr`、`lpq` 和 `lprm` 等命令。
 
-***
-
-### 社区 CUPS
+### 社区：CUPS
 
 CUPS 是由 Apple, Inc. 拥有并管理的项目和商标。在被 Apple 收之前，它被称为 Common Unix Printing System（通用 Unix 打印系统）。
 
 [`www.cups.org/`](https://www.cups.org/)
 
-***
+调度器管理打印作业，这些作业通过过滤系统产生打印机能够理解并打印的文件。过滤系统由 `cups-filters`（[`salsa.debian.org/printing-team/cups-filters`](https://salsa.debian.org/printing-team/cups-filters)）软件包结合 `printer-driver-*` 软件包提供。CUPS 结合 `cups-filters` 和 `printer-driver-*` 是 Debian 打印系统的基础。
 
-调度器管理打印作业，这些作业通过过滤系统产生打印机能够理解并打印的文件。过滤系统由 `cups-filters` ([`salsa.debian.org/printing-team/cups-filters`](https://salsa.debian.org/printing-team/cups-filters)) 软件包结合 `printer-driver-*` 软件包提供。CUPS 结合 `cups-filters` 和 `printer-driver-*` 是 Debian 打印系统的基础。
-
-过去十年制造销售的现代打印机几乎都支持 AirPrint，Deb Debian 上的 CUPS 和 `cups-filters` 包含了在网络上利用此功能所需的一切。本质上，这些打印机是 IPP 打印机，非常适合无驱动打印系统，将系统简化为 CUPS 加上 `cups-filters`。`printer-driver` 软件包可以省去，不再需要来自 Canon 和 Brother 等供应商的非自由打印软件。连接 USB 的打印机可以通过 `ippusbxd` 软件包利用现代打印机功能。
+过去十年制造销售的现代打印机几乎都支持 AirPrint，Debian 上的 CUPS 和 `cups-filters` 包含了在网络上利用此功能所需的一切。本质上，这些打印机是 IPP 打印机，非常适合无驱动打印系统，将系统简化为 CUPS 加上 `cups-filters`。`printer-driver` 软件包可以省去，不再需要来自 Canon 和 Brother 等供应商的非自由打印软件。连接 USB 的打印机可以通过 `ippusbxd` 软件包利用现代打印机功能。
 
 命令 `apt install cups` 将安装 CUPS 和 `cups-filters`。它还会安装推荐的 `printer-driver-gutenprint` 为各种打印机提供驱动程序，但除非打印机是以无驱动方式运行，否则对于特定设备可能需要另一种 `printer-driver`。
-
-
 
 作为 `cups-daemon` 推荐的包，`cups-browsed` 将存在于系统中和网络打印队列中，现代打印机可以通过它们的 DNS-SD 广播（Bonjour）被自动发现并设置。USB 打印机则需要按照下一节所述进行手动设置。
 
@@ -4034,17 +3984,17 @@ CUPS 是由 Apple, Inc. 拥有并管理的项目和商标。在被 Apple 收之�
 
 引导程序可能已经可以工作，但了解如何配置和安装引导加载程序总是好的，以防它从主引导记录（Master Boot Record）中消失。这在安装了另一个操作系统（如 Windows）之后可能会发生。以下信息也可以帮助你在需要时修改引导程序的配置。
 
-### 基础知识 主引导记录
+### 基础知识：主引导记录
 
 主引导记录（`MBR`）占据第一块硬盘的前 512 字节，是 BIOS 加载的第一个内容，用于将控制权交给能够引导目标操作系统的程序。通常情况下，引导加载程序安装在 MBR 中，并移除其原有内容。
 
 ## 8.8.1. 识别磁盘
 
-### 文化 `udev` 与 `/dev/`
+### 文化：`udev` 与 `/dev/`
 
-`/dev/` 目录传统上存放所谓的“特殊”文件，用于表示系统外设（参见侧边栏 *基础知识 设备访问权限]）。曾经，它包含所有可能被使用的特殊文件。这种方法有许多缺点，其中包括限制了用户可以使用设备数量（由于硬编码的名称列表），并且无法知道哪些特殊文件是有用的。
+`/dev/` 目录传统上存放所谓的“特殊”文件，用于表示系统外设（参见侧边栏“基础知识：设备访问权限”）。曾经，它包含所有可能被使用的特殊文件。这种方法有许多缺点，其中包括限制了用户可以使用设备数量（由于硬编码的名称列表），并且无法知道哪些特殊文件是有用的。
 
-如今，特殊文件的管理完全是动态的，并且更符合热插拔计算机设备的特性。内核与 `udev` (第 9.11.3 节，“udev 如何工作”) 协作，在相应的设备出现和消失时根据需要创建和删除它们。因此，`/dev/` 不需要是持久的，它是一个基于 RAM 的文件系统，启动时为空，仅包含相关的条目。
+如今，特殊文件的管理完全是动态的，并且更符合热插拔计算机设备的特性。内核与 `udev`（第 9.11.3 节，“udev 如何工作”）协作，在相应的设备出现和消失时根据需要创建和删除它们。因此，`/dev/` 不需要是持久的，它是一个基于 RAM 的文件系统，启动时为空，仅包含相关的条目。
 
 内核会通信有关任何新添加设备的量信息，并分配一对主设备/次设备号来标识它。通过 `udevd` 可以在所需的名称和权限下创建特殊文件。它还可以创建别名并执行附加操作（如初始化或注册任务）。`udevd` 的行为由一组大量的（可自定义的）规则驱动。
 
@@ -4062,48 +4012,67 @@ MS-DOS 分区表格式的另一个限制是它仅允许磁盘大小达到 2 TiB�
 
 一种名为 GPT 的新分区表格式放宽了分区数量的限制（使用标准设置时允许最多 128 个分区）以及磁盘大小的限制（高达 8 ZiB，超过 80 亿个字节）。如果你打算在同一块磁盘上创建许多物理分区，那么你应该确保你正在创建 GPT 格式的分区表。
 
-
-
-
 请注意，某些磁盘列出了多次（因为它们同时作为 ATA 磁盘和 SCSI 磁盘运行），但相关信息主要在磁盘的型号和序列号中，你可以从中找到外设文件。
 
 后续章节给出的示例配置文件基于相同的设置：单个 SATA 磁盘，其中第一个分区是旧的 Windows 安装，第二个分区包含 Debian GNU/Linux。
 
 ## 8.8.2. 配置 LILO
 
-`LILO` (LInux LOader) 是最老的引导加载程序——坚固但古老。它将用于引导的内核物理地址写入 MBR（主引导记录），这就是为什么每次更新 LILO（或其配置文件）后，都必须执行 `lilo` 命令。如果忘记执行此命令，且旧内核已被删除或替换，系统将无法启动，因为新内核将位于磁盘上的相同位置。
+`LILO`（LInux LOader）是最老的引导加载程序——坚固但古老。它将用于引导的内核物理地址写入 MBR（主引导记录），这就是为什么每次更新 LILO（或其配置文件）后，都必须执行 `lilo` 命令。如果忘记执行此命令，且旧内核已被删除或替换，系统将无法启动，因为新内核将位于磁盘上的相同位置。
 
 LILO 的配置文件是 `/etc/lilo.conf`；下面的示例显示了一个用于标准配置简单文件。
 
-示例 8.4. LILO 配置文件
-```
-# 应该安装 LILO 的磁盘。
-# 指明的是磁盘而不是分区。
-# 你命令 LILO 安装在 MBR 上。
+### 示例 8.4：LILO 配置文件
+``` 񟿿
+
+
+
+# LILO 配置
+
+应该安装 LILO 的磁盘。指明的是磁盘而不是分区。你命令 LILO 安装在 MBR 上。
+
+```text
 boot=/dev/sda
+
 # 包含 Debian 的分区
 root=/dev/sda2
+
 # 默认加载的项
 default=Linux
+
 # 最新的内核镜像
 image=/vmlinuz label=Linux initrd=/initrd.img read-only
+
 # 旧内核（如果新安装的内核无法启动）
 image=/vmlinuz.old label=LinuxOLD initrd=/initrd.img.old read-only optional
+
 # 仅用于 Linux/Windows 双系统
 other=/dev/sda1 label=Windows
 ```
 
 ## 8.8.3. GRUB 2 配置
 
-`GRUB` (GRand Unified Bootloader) 较新。在每次更新内核后不需要调用它；`GRUB` 知道如何读取文件系统并找到内核在磁盘上的位置。要将其安装在第一块磁盘的 MBR 上，只需输入 `grub-install /dev/sda`。
+`GRUB`（GRand Unified Bootloader）较新。在每次更新内核后不需要调用它；`GRUB` 知道如何读取文件系统并找到内核在磁盘上的位置。要将其安装在第一块磁盘的 MBR 上，只需输入 `grub-install /dev/sda`。
 
 ### 注意 GRUB 的磁盘名称
 
-GRUB 只能根据 BIOS 提供的信息来识别硬盘。`(hd0)` 对应检测到的第一块磁盘，`(hd1)` 是第二个，以此此类推。在大多数情况下，这个顺序与 Linux 下磁盘的通常顺序完全对应，但在关联 SCSI 和 IDE 磁盘时可能会出现问题。GRUB 过去将其检测到的对应关系存储在 `/boot/grub/device.map` 文件中，现在 GRUB 通过在生成 `grub.cfg` 时使用 UUID 或文件系统标签来避免这个问题。然而，设备映射文件尚未过时，因为当当前环境与启动时的环境不同时，可以使用它进行覆盖。如果你发现那里有错误（因为你知道 BIOS 检测驱动器的顺序不同），请手动修正它们并重新运行 `grub-install`。`grub-mkdevicemap` 可以帮助创建一个起始的 `device.map` 文件。
+GRUB 只能根据 BIOS 提供的信息来识别硬盘。`(hd0)` 对应检测到的第一块磁盘，`(hd1)` 是第二个，以此类推。在大多数情况下，这个顺序与 Linux 下磁盘的通常顺序完全对应，但在关联 SCSI 和 IDE 磁盘时可能会出现问题。
 
-分区在 GRUB 中也有特定的名称。当你使用 MS-DOS 格式的“经典”分区时，第一块磁盘上的第一个分区被标记为 `(hd0,msdos1)`，第二个为 `(hd0,msdos2)`，以此此类推。
+GRUB 过去将其检测到的对应关系存储在 `/boot/grub/device.map` 文件中，现在 GRUB 通过在生成 `grub.cfg` 时使用 UUID 或文件系统标签来避免这个问题。然而，设备映射文件尚未过时，因为当当前环境与启动时的环境不同时，可以使用它进行覆盖。
 
-GRUB 2 配置存储在 `/boot/grub/grub.cfg` 中，但该文件（在 Debian 中）是从其他文件生成的。不要手动修改它，因为这些本地修改在下次运行 `update-grub` 时（可能会在更新各种软件包时发生）将会丢失。对 `/boot/grub/grub.cfg` 文件最常见的修改（例如为内核添加命令行参数或更改菜单显示时长）是通过 `/etc/default/grub` 中的变量完成的。要向菜单添加条目，你可以创建一个 `/boot/grub/custom.cfg` 文件，或者修改 `/etc/grub.d/40_custom` 文件。对于更复杂的配置，你可以修改 `/etc/grub.d` 中的其他文件或向它们添加；这些脚本应该返回配置片段，可能通过使用外部程序来实现。这些脚本将更新引导内核列表：`10_linux` 考虑已安装的 Linux 内核；`20_linux_xen` 考虑 Xen 虚拟系统，而 `30_os-prober` 列出了其他操作系统（Windows, OS X, Hurd）。
+如果你发现那里有错误（因为你知道 BIOS 检测驱动器的顺序不同），请手动修正它们并重新运行 `grub-install`。`grub-mkdevicemap` 可以帮助创建一个起始的 `device.map` 文件。
+
+分区在 GRUB 中也有特定的名称。当你使用 MS-DOS 格式的“经典”分区时，第一块磁盘上的第一个分区被标记为 `(hd0,msdos1)`，第二个为 `(hd0,msdos2)`，以此类推。
+
+GRUB 2 配置存储在 `/boot/grub/grub.cfg` 中，但该文件（在 Debian 中）是从其他文件生成的。不要手动修改它，因为这些本地修改在下次运行 `update-grub` 时（可能会在更新各种软件包时发生）将会丢失。
+
+对 `/boot/grub/grub.cfg` 文件最常见的修改（例如为内核添加命令行参数或更改菜单显示时长）是通过 `/etc/default/grub` 中的变量完成的。要向菜单添加条目，你可以创建一个 `/boot/grub/custom.cfg` 文件，或者修改 `/etc/grub.d/40_custom` 文件。
+
+对于更复杂的配置，你可以修改 `/etc/grub.d` 中的其他文件或向它们添加；这些脚本应该返回配置片段，可能通过使用外部程序来实现。这些脚本将更新引导内核列表：
+
+- `10_linux` 考虑已安装的 Linux 内核；
+- `20_linux_xen` 考虑 Xen 虚拟系统；
+- `30_os-prober` 列出其他操作系统（Windows、OS X、Hurd）。
 
 ## 8.9. 其他配置：时间同步、日志、共享访问……
 
@@ -4117,268 +4086,336 @@ GRUB 2 配置存储在 `/boot/grub/grub.cfg` 中，但该文件（在 Debian 中
 
 `ln -s target link-name` 命令创建一个名为 `link-name` 的符号链接，指向 `target`。
 
-如果目标不存在，则链接是“断开”的，访问它将导致指示目标文件不存在的错误。如果链接指向另一个链接，你将拥有一个链接“链”，如果其中一个目标指向它的前驱，这个链就会变成一个“循环”。在这种情况下，访问循环中的一个链接将导致特定的错误（“符号链接层过多”）；这意味着内核在经过几轮循环后放弃了。
+如果目标不存在，则链接是“断开”的，访问它将导致指示目标文件不存在的错误。如果链接指向另一个链接，你将拥有一个链接“链”；如果其中一个目标指向它的前驱，这个链就会变成一个“循环”。
 
-在初始安装期间配置的时区是 `tzdata` 包的一个配置项。要修改它，请使用 `dpkg-reconfigure tzdata` 命令，它允许你以交互方式选择要使用的时区。它的配置存储在 `/etc/timezone` 文件中。此外，`/usr/share/zoneinfo` 目录中的对应文件会被复制到 `/etc/localtime`；此文件包含了对于使用夏令时的国家管理夏令时日期的规则。
+在这种情况下，访问循环中的一个链接将导致特定的错误（“符号链接层过多”）；这意味着内核在经过几轮循环后放弃了。
+
+在初始安装期间配置的时区是 `tzdata` 包的一个配置项。要修改它，请使用 `dpkg-reconfigure tzdata` 命令，它允许你以交互方式选择要使用的时区。
+
+它的配置存储在 `/etc/timezone` 文件中。此外，`/usr/share/zoneinfo` 目录中的对应文件会被复制到 `/etc/localtime`；此文件包含了对于使用夏令时的国家管理夏令时日期的规则。
 
 当你需要临时更改时区时，使用 `TZ` 环境变量，它的优先级高于配置的系统默认值：
 
-```
-$ date Thu Feb 19 11:25:18 CET 2015
-$ TZ="Pacific/Honolulu" date Thu Feb 19 00:25:21 HST 2015
+```console
+$ date
+Thu Feb 19 11:25:18 CET 2015
+
+$ TZ="Pacific/Honolulu" date
+Thu Feb 19 00:25:21 HST 2015
 ```
 
 ### 注意 系统钟、硬件钟
 
-计算机中有两个时间源。计算机主板上有一个硬件钟，被称为“CMOS 钟”。这个时钟并不精确，且访问速度较慢。操作系统内核有自己的，即系统钟，它通过自己的方式保持更新（可能借助时间服务器，请参见第 8.9.2 节，“时间同步”](#ch08s09.html_sect.time-synchronization "8.9.2. Time Synchronization"))）。这个系统钟通常更准确，因为它不需要访问硬件变量。然而，由于它只存在于实时内存中，因此每次启动机器时都会被清零，这与带有电池、因此能“存活”重启或关机的 CMOS 钟相反。因此，系统钟在启动时从 CMOS 钟设置，并在关机时更新 CMOS 钟（以考虑到在调整不当时可能发生的更改或修正）。
+计算机中有两个时间源。计算机主板上有一个硬件钟，被称为“CMOS 钟”。这个时钟并不精确，且访问速度较慢。
 
+操作系统内核有自己的系统钟，它通过自己的方式保持更新（可能借助时间服务器，请参见第 8.9.2 节“时间同步”）。这个系统钟通常更准确，因为它不需要访问硬件变量。然而，由于它只存在于实时内存中，因此每次启动机器时都会被清零，这与带有电池、因此能“存活”重启或关机的 CMOS 钟相反。
 
+因此，系统钟在启动时从 CMOS 钟设置，并在关机时更新 CMOS 钟（以考虑到在调整不当时可能发生的更改或修正）。
 
+在实践中，存在一个问题，因为 CMOS 时钟仅仅是一个计数器，并不包含任何关于时区的信息。对于它的解释，有一个选择：系统要么认为它在通用世界时间（UTC，以前称为 GMT）运行，要么认为在本地时间运行。
 
-在实践中，存在一个问题，因为 CMOS 时钟仅仅是一个计数器，并不包含任何关于时区的信息。对于它的解释，有一个选择：系统要么认为它在通用世界时间（UTC，以前称为 GMT）运行，要么认为在本地时间运行。这种选择可能是一个简单的偏移，但实际上情况要复杂得多：由于夏令时的影响，这种偏移并不是固定的。结果是系统无法判断偏移是否正确，特别是在时间切换期间。由于始终可以从通用世界时间和时区信息中重构本地时间，因此我们强烈建议使用通用世界时间下的 CMOS 时钟。
+这种选择可能是一个简单的偏移，但实际上情况要复杂得多：由于夏令时的影响，这种偏移并不是固定的。结果是系统无法判断偏移是否正确，特别是在时间切换期间。
 
-遗憾的是，Windows 系统的默认配置忽略了这一建议；它们将 CMOS 时钟保持为本地时间，并在计算机启动时通过尝试在时间切换期间猜测更改是否已经应用来应用时间更改。只要系统上只运行 Windows，这种方法就运行得尚算良好。但当一台计算机上有多个系统时（无论是采用“双启动”配置还是通过虚拟机运行其他系统），就会陷入混乱，没有手段可以判断时间是否正确。如果你必须在计算机上保留 Windows，你应该配置其使其将 CMOS 时钟保持为 UTC（将注册表键 `HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation\RealTimeIsUniversal` 设置为 DWORD“1”），或者在 Debian 系统上使用 `hwclock --localtime --set` 设置硬件时钟并标记其跟踪本地时间（并确保在春、秋季手动检查时钟）。
+由于始终可以从通用世界时间和时区信息中重构本地时间，因此我们强烈建议使用通用世界时间下的 CMOS 时钟。
+
+遗憾的是，Windows 系统的默认配置忽略了这一建议；它们将 CMOS 时钟保持为本地时间，并在计算机启动时通过尝试在时间切换期间猜测更改是否已经应用来应用时间更改。
+
+只要系统上只运行 Windows，这种方法就运行得尚算良好。但当一台计算机上有多个系统时（无论是采用“双启动”配置还是通过虚拟机运行其他系统），就会陷入混乱，没有手段可以判断时间是否正确。
+
+如果你必须在计算机上保留 Windows，你应该配置其使其将 CMOS 时钟保持为 UTC（将注册表键 `HKLM\SYSTEM\CurrentControlSet\Control\TimeZoneInformation\RealTimeIsUniversal` 设置为 DWORD“1”），或者在 Debian 系统上使用 `hwclock --localtime --set` 设置硬件时钟并标记其跟踪本地时间（并确保在春、秋季手动检查时钟）。
 
 ## 8.9.2. 时间同步
 
-时间同步在计算机上似乎是多余的，但在网络上非常重要。由于用户没有修改日期和时间的权限，这些信息的准确性对于防止混淆至关重要。此外，让网络上的所有计算机保持同步，可以对不同机器日志中的信息进行更好的交叉引用。因此，在发生攻击时，更容易重建受攻击的各个机器上操作的时间顺序。如果为了统计目的在几台机器上收集的数据没有同步，那么它们将没有太大意义。
+时间同步在计算机上似乎是多余的，但在网络上非常重要。由于用户没有修改日期和时间的权限，这些信息的准确性对于防止混淆至关重要。
 
-### 回归基础 NTP
+此外，让网络上的所有计算机保持同步，可以对不同机器日志中的信息进行更好的交叉引用。因此，在发生攻击时，更容易重建受攻击的各个机器上操作的时间顺序。
+
+如果为了统计目的在几台机器上收集的数据没有同步，那么它们将没有太大意义。
+
+### 回归基础：NTP
 
 NTP（网络时间协议）允许机器与其他机器进行相当准确的同步，并考虑了由信息在网络上传输引起的延迟和其他可能的偏移。
 
-虽然互联网上有许多 NTP 服务器，但较受欢迎的服务器可能会过载。这就是为什么我们推荐使用 `pool.ntp.org` NTP 服务器，它实际上是一组同意作为公共 NTP 服务器的机器。你甚至可以将使用限制在特定国家的子组，例如用于美国的 `us.pool.ntp.org` 或用于加拿大的 `ca.pool.ntp.org` 等。
+虽然互联网上有许多 NTP 服务器，但较受欢迎的服务器可能会过载。这就是为什么我们推荐使用 `pool.ntp.org` NTP 服务器，它实际上是一组同意作为公共 NTP 服务器的机器。
 
-然而，如果你管理着大型网络，建议安装你自己的 NTP 服务器，它将与公共服务器同步。在这种情况下，你网络上的所有其他机器都可以你的内部 NTP 服务器，而不是增加公共服务器的负载。你还将增加时钟的一致性，因为所有机器都将与同一个源同步，而该源在网络传输时间上非常接近。
+你甚至可以将使用限制在特定国家的子组，例如用于美国的 `us.pool.ntp.org` 或用于加拿大的 `ca.pool.ntp.org` 等。
+
+然而，如果你管理着大型网络，建议安装你自己的 NTP 服务器，它将与公共服务器同步。在这种情况下，你网络上的所有其他机器都可以使用你的内部 NTP 服务器，而不是增加公共服务器的负载。
+
+你还将增加时钟的一致性，因为所有机器都将与同一个源同步，而该源在网络传输时间上非常接近。
 
 ### 8.9.2.1. 针对工作站
 
-由于工作站经常重启（即使是为了节能），在启动时通过 NTP 对它们进行同步就足够了。要做到这一点，只需安装 `ntpdate` 软件包即可。如果需要，你可以通过修改 `/etc/default/ntpdate` 文件来更改使用的 NTP 服务器。
+由于工作站经常重启（即使是为了节能），在启动时通过 NTP 对它们进行同步就足够了。要做到这一点，只需安装 `ntpdate` 软件包即可。
+
+如果需要，你可以通过修改 `/etc/default/ntpdate` 文件来更改使用的 NTP 服务器。
 
 ### 8.9.2.2. 针对服务器
 
-服务器很少重启，它们的系统时间准确性非常重要。为了永久保持正确的时间，你应该安装本地 NTP 服务器，这是 `ntp` 软件包提供的一服务。在默认配置下，该服务器将与 `pool.ntp.org` 同步，并响应来自本地网络的请求提供时间。你可以通过编辑 `/etc/ntp.conf` 文件对其进行配置，最显著的更改是它所引用的 NTP 服务器。如果网络有很多服务器，拥有一个本地时间服务器可能会很有趣，它与公共服务器同步，并作为网络中其他服务器的时间源。
+服务器很少重启，它们的系统时间准确性非常重要。为了永久保持正确的时间，你应该安装本地 NTP 服务器，这是 `ntp` 软件包提供的一项服务。
+
+在默认配置下，该服务器将与 `pool.ntp.org` 同步，并响应来自本地网络的请求提供时间。你可以通过编辑 `/etc/ntp.conf` 文件对其进行配置，最显著的更改是它所引用的 NTP 服务器。
+
+如果网络有很多服务器，拥有一个本地时间服务器可能会很有趣，它与公共服务器同步，并作为网络中其他服务器的时间源。
 
 ### 进阶使用：GPS 模块和其他时间源
 
-如果时间同步对你的网络特别关键，可以为服务器配备 GPS 模块（它将使用来自 GPS 卫星的时间）或 DCF-77 模块（这将与德国法兰克福附近的原子钟同步时间）。在这种情况下，NTP 服务器的配置会复杂一些，预先查阅文档是绝对必要的。
+如果时间同步对你的网络特别关键，可以为服务器配备 GPS 模块（它将使用来自 GPS 卫星的时间）或 DCF-77 模块（这将与德国法兰克福附近的原子钟同步时间）。
+
+在这种情况下，NTP 服务器的配置会复杂一些，预先查阅文档是绝对必要的。
 
 ## 8.9.3. 日志文件轮转
 
-日志文件增长很快，有必要对它们进行存档。最常见的方案是轮转存档：定期对日志文件进行存档，仅保留最新的 `X` 个存档。负责这些轮转的程序 `logrotate` 遵循 `/etc/logrotate.conf` 文件以及 `/etc/logrotate.d/` 目录下所有文件中给出的指令。如果如果愿意，可以修改这些文件，以适应 Debian 定义的日志轮转策略。`logrotate(1)` 手页描述了这些配置文件中所有可用选项。你可能希望增加日志轮转中保留的文件数量，或者将日志文件移动到专门存档的特定目录而不是删除它们。你也可以通过电子邮件发送它们存档到其他地方。
+日志文件增长很快，有必要对它们进行存档。最常见的方案是轮转存档：定期对日志文件进行存档，仅保留最新的 `X` 个存档。
 
-`logrotate` 程序由 `cron` 调度程序每天执行（在第 9.7 节，“使用 `cron` 和 `atd` 调度任务`）。
+负责这些轮转的程序 `logrotate` 遵循 `/etc/logrotate.conf` 文件以及 `/etc/logrotate.d/` 目录下所有文件中给出的指令。如果愿意，可以修改这些文件，以适应 Debian 定义的日志轮转策略。
+
+`logrotate(1)` 手页描述了这些配置文件中所有可用选项。你可能希望增加日志轮转中保留的文件数量，或者将日志文件移动到专门存档的特定目录而不是删除它们。你也可以通过电子邮件发送它们存档到其他地方。
+
+`logrotate` 程序由 `cron` 调度程序每天执行（在第 9.7 节“使用 `cron` 和 `atd` 调度任务”）。
 
 ## 8.9.4. 共享管理员权限
 
-通常会有多个管理员在同一个网络上工作。共享 root 密码并不优雅，并且由于这种共享带来的匿名性会引发滥用。这个问题的解决方案是 `sudo` 程序，它允许某些用户以特殊权限执行某些命令。在最常用的用例中，`sudo` 允许信任的用户以 root 身份执行任何命令。为此，用户只需执行 `sudo command` 并使用个人密码进行身份验证。
+通常会有多个管理员在同一个网络上工作。共享 root 密码并不优雅，并且由于这种共享带来的匿名性会引发滥用。
 
-安装后，`sudo` 软件包赋予 `sudo` Unix 组成员完全 root 权限。要委托其他权限，管理员必须使用 `visudo` 命令，它允许他们修改 `/etc/sudoers` 配置文件（这里再次将调用 `vi` 编辑器或 `EDITOR` 环境变量中指定的任何其他编辑器）。添加一行 `username ALL=(ALL) ALL` 允许相关用户以 root 身份执行任何命令。
+这个问题的解决方案是 `sudo` 程序，它允许某些用户以特殊权限执行某些命令。在最常用的用例中，`sudo` 允许信任的用户以 root 身份执行任何命令。为此，用户只需执行 `sudo command` 并使用个人密码进行身份验证。
+
+安装后，`sudo` 软件包赋予 `sudo` Unix 组成员完全 root 权限。要委托其他权限，管理员必须使用 `visudo` 命令，它允许他们修改 `/etc/sudoers` 配置文件（这里再次将调用 `vi` 编辑器或 `EDITOR` 环境变量中指定的任何其他编辑器）。
+
+添加一行 `username ALL=(ALL) ALL` 允许相关用户以 root 身份执行任何命令。
 
 更复杂的配置允许向特定用户授权特定命令。所有各种可能性的细节均见 `sudoers(5)` 手页。
 
 ## 8.9.5. 挂载点列表
 
-### 回归基础 挂载与卸载
+### 回归基础：挂载与卸载
 
-在类 Debian 的类 Unix 系统中，文件组织在单一的树形目录层次中。`/` 目录被称为“根目录”；所有额外的目录都是根目录的子目录。“挂载”是将外围设备（通常是硬盘）的内容包含在系统通用文件树中的动作。因此，如果你使用单独硬盘存储用户的个人数据，则这块磁盘必须“挂载”到 `/home/` 目录下。根文件始终在启动时由内核挂载；其他设备通常在启动序列的后期或通过 `mount` 命令手动挂载。
+在类 Debian 的类 Unix 系统中，文件组织在单一的树形目录层次中。`/` 目录被称为“根目录”；所有额外的目录都是根目录的子目录。
 
+“挂载”是将外围设备（通常是硬盘）的内容包含在系统通用文件树中的动作。因此，如果你使用单独硬盘存储用户的个人数据，则这块磁盘必须“挂载”到 `/home/` 目录下。
 
+根文件始终在启动时由内核挂载；其他设备通常在启动序列的后期或通过 `mount` 命令手动挂载。
 
+某些可卸载设备在连接时会自动挂载，尤其是在使用 GNOME、Plasma 或其他图形桌面环境时。其他设备则必须由用户手动挂载。同样，它们必须被卸载（从文件树中移除）。
 
-某些可卸载设备在连接时会自动挂载，尤其是在使用 GNOME、Plasma 或其他图形桌面环境时。其他设备则必须由用户手动挂载。同样，它们必须被卸载（从文件树中移除）。普通用户通常没有权限执行 `mount` 和 `umount` 命令。但管理员可以通过在 `/etc/fstab` 文件中包含 `user` 来授权这些操作（每个挂载点独立生效）。
+普通用户通常没有权限执行 `mount` 和 `umount` 命令。但管理员可以通过在 `/etc/fstab` 文件中包含 `user` 来授权这些操作（每个挂载点独立生效）。
 
-`mount` 命令可以在不带参数的情况下，列出所有挂载的文件系统；你可以执行 `findmnt --fstab` 来仅显示来自 `/etc/fstab` 的文件系统。挂载或卸载设备需要以下参数。完整列表请参考相应的 man 页面，`mount(8)` 和 `umount(8)`。对于简单的情况，语法也很简单：例如，将具有 ext3 文件系统的 `/dev/sdc1` 分区挂载到 `/mnt/tmp/` 目录，只需运行 `mount -t ext3 /dev/sdc1 /mnt/tmp/` 即可。
+`mount` 命令可以在不带参数的情况下列出所有挂载的文件系统；你可以执行 `findmnt --fstab` 来仅显示来自 `/etc/fstab` 的文件系统。
 
-***
+挂载或卸载设备需要以下参数。完整列表请参考相应的 man 页面，`mount(8)` 和 `umount(8)`。对于简单的情况，语法也很简单：例如，将具有 ext3 文件系统的 `/dev/sdc1` 分区挂载到 `/mnt/tmp/` 目录，只需运行 `mount -t ext3 /dev/sdc1 /mnt/tmp/` 即可。
 
 `/etc/fstab` 文件列出了所有可能的挂载项，包括在启动时自动挂载或手动挂载的可卸载存储设备。每个挂载点由包含多个空格分隔字段的行描述：
 
-*   **file system**（文件系统）：这指示要挂载的文件系统所在，可以是本地设备（硬盘分区、CD-ROM）或远程文件系统（如 NFS）。
+- **file system**（文件系统）：这指示要挂载的文件系统所在，可以是本地设备（硬盘分区、CD-ROM）或远程文件系统（如 NFS）。
 
-    此字段经常被替换为文件系统的唯一 ID（你可以通过 `blkid device` 确定），并加上 `UUID=`。这可以防止在磁盘添加、删除或检测顺序发生变化时设备名称改变的影响。
+  此字段经常被替换为文件系统的唯一 ID（你可以通过 `blkid device` 确定），并加上 `UUID=`。这可以防止在磁盘添加、删除或检测顺序发生变化时设备名称改变的影响。
 
-*   **mount point**（挂载点）：这是本地文件系统上设备、远程系统或分区挂载的位置。
+- **mount point**（挂载点）：这是本地文件系统上设备、远程系统或分区挂载的位置。
 
-*   **type**（类型）：此字段定义了挂载设备上使用的文件系统。`ext4`、`ext3`、`vfat`、`ntfs`、`btrfs`、`xfs` 是一些示例。
+- **type**（类型）：此字段定义了挂载设备上使用的文件系统。`ext4`、`ext3`、`vfat`、`ntfs`、`btrfs`、`xfs` 是一些示例。
 
-***
-
-### *基础知识* NFS
+### 基础知识：NFS
 
 NFS 是一种网络文件系统；在 Linux 下，它通过将远程文件包含在本地文件系统中来实现对远程文件的透明访问。
 
-***
+已知文件系统的完整列表可以在 `mount(8)` man 页面中找到。`swap` 特殊值用于交换分区；`auto` 特殊值告诉 `mount` 程序自动检测文件系统（这对磁盘驱动器和 USB 密钥特别有用，因为每个设备可能具有不同的文件系统）。
 
-已知文件系统的完整列表可以在 `mount(8)` man 页面中找到。`swap` 特殊值用于交换分区；`auto` 特殊值告诉 `mount` 程序自动检测文件系统（这对磁盘驱动器和 USB 密钥特别有用，因为每个设备可能具有不同的文件系统）；
+- **options**（选项）：有很多选项，取决于文件系统，并记录在 `mount` man 页面中。常见的有：
 
-*   **options**（选项）：有很多选项，取决于文件系统，并记录在 `mount` man 页面中。常见的有：
+  - `rw` 或 `ro`，分别意味着设备将以读/写或只读权限挂载。
+  - `noauto` 禁用启动时的自动挂载。
+  - `nofail` 允许在设备不存在时继续启动。对于启动时可能拔掉的外部驱动器，务必加上此选项，因为 `systemd` 确实确保所有必须自动挂载的挂载点在允许启动过程持续结束之前已挂载。注意，你可以将其与 `x-systemd.device-timeout=5s` 结合，告诉 `systemd` 等待设备出现不要超过 5 秒（参见 `systemd.mount(5)`）。
+  - `user` 授权所有用户挂载此文件系统（此操作否则将仅限于 root 用户）。
+  - `defaults` 表示默认选项组：`rw`、`suid`、`dev`、`exec`、`auto`、`nouser` 和 `async`。在 `defaults` 之后可以通过添加 `nosuid`、`nodev` 等来单独禁用 `suid`、`dev` 等。添加 `user` 选项会重新激活它，因为 `defaults` 包含了 `nouser`。
 
-    *   `rw` 或 `ro`，分别意味着设备将以读/写或只读权限挂载。
+- **dump**：此字段几乎总是被设置为 `0`。当它为 `1` 时，它告诉 `dump` 工具分区包含需要备份的数据。
 
-    *   `noauto` 禁用启动时的自动挂载。
+- **pass**：最后一个字段指示启动时是否应该检查文件系统的完整性，以及按什么顺序执行检查。如果是 `0`，则不进行检查。根文件系统应值为 `1`，而其他永久文件系统取值为 `2`。
 
-    *   `nofail` 允许在设备不存在时继续启动。对于启动时可能拔掉的外部驱动器，务必加上此选项，因为 `systemd` 确实确保所有必须自动挂载的挂载点在允许启动过程持续结束之前已挂载。注意，你可以将其与 `x-systemd.device-timeout=5s` 结合，告诉 `systemd` 等待设备出现不要超过 5 秒（参见 `systemd.mount(5)`）。
+**示例 8.5. `/etc/fstab` 文件**
 
-    *   `user` 授权所有用户挂载此文件系统（此操作否则将仅限于 root 用户）。
-
-    *   `defaults` 表示默认选项组：`rw`、`suid`、`dev`、`exec`、`auto`、`nouser` 和 `async`，在 `defaults` 之后可以通过添加 `nosuid`、`nodev` 等来单独禁用 `suid`、`dev` 等。添加 `user` 选项会重新激活它，因为 `defaults` 包含了 `nouser`。
-
-*   **dump**：此字段几乎总是被设置为 `0`。当它为 `1` 时，它告诉 `dump` 工具分区包含需要备份的数据。
-
-*   **pass**：最后一个字段指示启动时是否应该检查文件系统的完整性，以及按什么顺序执行检查。如果是 `0`，则不进行检查。根文件系统应值为 `1`，而其他永久文件系统取值为 `2`。
-
-示例 8.5. `/etc/fstab` 文件
-```
+```fstab
 # /etc/fstab: 静态文件系统信息。
+
 # # <file system> <mount point> <type> <options> <dump> <pass>
+
 proc /proc proc defaults 0 0
+
 # / 在安装期间位于 /dev/sda1
+
 UUID=c964222e-6af1-4985-be04-19d7c764d0a7 / ext ext3 errors=remount-ro 0 1
+
 # swap 在安装期间位于 /dev/sda5
+
 UUID=ee880013-0f63-4251-b5c6-b771f53bd90e none swap sw 0 0
+
 /dev/scd0 /media/cdrom0 udf,iso9660 user,noauto 0 0
+
 /dev/fd0 /media/floppy auto rw,user,noauto 0 0
+
 arrakis:/shared /shared nfs defaults 0 0
 ```
 
-此示例中的最后一条对应于网络文件系统 (NFS)：`arrakis` 服务器上的 `/shared/` 目录挂载在本地机器的 `/shared/` 上。`/etc/fstab` 文件的格式在 `fstab(5)` man 页面中有文档。
-
-***
-
-### *进阶内容* 自动挂载
-
-`systemd` 能够管理自动挂载点：这些是在用户尝试访问其目标挂载点时按需挂载的文件系统。它也可以在没有进程访问这些文件系统时卸载它们。
-
-与 `systemd` 中的大多数概念一样，自动挂载点由专用的单元（使用 `.automount` 后缀）管理。请参见 `systemd.automount(5)` 获取其精确语法。
-
-还存在其他自动挂载工具，例如 `autofs` 包中的 `automount` 或 `am-utils` 中的 `amd`。
-
-另请注意，GNOME、Plasma 以及其他图形桌面环境与 `udisks` 协同工作，并在连接时自动挂载可卸载介质。
-
-***
-
-## 8.9.6. **locate** 和 **updatedb**
-
-`locate` 命令可以在你只知道文件名部分时找到文件位置。它几乎可以瞬间发送结果，因为它查询一个存储系统上所有文件位置的数据库；该数据库由 `updatedb` 命令每天更新。`locate` 命令有多种实现，Debian 选择了 `mlocate` 作为其标准系统。
-
-`mlocate` 足够智能，只返回运行命令的用户可以访问的文件，尽管它使用一个知道系统上所有文件的数据库（因为它的 `updatedb` 实现以 root 权限运行）。为了额外的安全，管理员可以使用 `/etc/updatedb.conf` 中的 `PRUNEDPATHS` 排除某些目录的索引。
 
 
 
+此示例中的最后一条对应于网络文件系统（NFS）：`arrakis` 服务器上的`/shared/`目录挂载在本地机器的`/shared/`上。`/etc/fstab`文件的格式在`fstab(5)` man 页面中有文档。
 
+---
 
-Debian 内核团队维护着《Debian 内核手册》（同样在 `debian-kernel-handbook` 软件包中提供），该手册包含了关于大多数内核相关任务以及官方 Debian 内核包处理方式的详尽文档。如果你需要比本节提供的更多信息，这里是你应该首先查阅的地方。
+### 进阶内容：自动挂载
+
+`systemd`能够管理自动挂载点：这些是在用户尝试访问其目标挂载点时按需挂载的文件系统。它也可以在没有进程访问这些文件系统时卸载它们。
+
+与`systemd`中的大多数概念一样，自动挂载点由专用的单元（使用`.automount`后缀）管理。请参见`systemd.automount(5)`获取其精确语法。
+
+还存在其他自动挂载工具，例如`autofs`包中的`automount`或`am-utils`中的`amd`。
+
+另请注意，GNOME、Plasma以及其他图形桌面环境与`udisks`协同工作，并在连接时自动挂载可卸载介质。
+
+---
+
+## 8.9.6. `locate`和`updatedb`
+
+`locate`命令可以在你只知道文件名部分时找到文件位置。它几乎可以瞬间发送结果，因为它查询一个存储系统上所有文件位置的数据库；该数据库由`updatedb`命令每天更新。`locate`命令有多种实现，Debian选择了`mlocate`作为其标准系统。
+
+`mlocate`足够智能，只返回运行命令的用户可以访问的文件，尽管它使用一个知道系统上所有文件的数据库（因为它的`updatedb`实现以 root 权限运行）。为了额外的安全，管理员可以使用`/etc/updatedb.conf`中的`PRUNEDPATHS`排除某些目录的索引。
+
+Debian 内核团队维护着《Debian 内核手册》（同样在`debian-kernel-handbook`软件包中提供），该手册包含了关于大多数内核相关任务以及官方 Debian 内核包处理方式的详尽文档。如果你需要比本节提供的更多信息，这里是你应该首先查阅的地方。
 
 → [`kernel-team.pages.debian.net/kernel-handbook/`](https://kernel-team.pages.debian.net/kernel-handbook/)
 
 ## 8.10.1. 简介与准备工作
 
-意乎意料，Debian 以软件包的形式管理内核，这与传统上编译和安装内核的方式不同。由于内核处于软件包系统的控制之下，因此它可以被干净地删除，或者部署在多台机器上。此外，与这些包相关的脚本自动化了与引导加载程序和 initrd 生成器的交互过程。
+意乎意料，Debian以软件包的形式管理内核，这与传统上编译和安装内核的方式不同。由于内核处于软件包系统的控制之下，因此它可以被干净地删除，或者部署在多台机器上。此外，与这些包相关的脚本自动化了与引导加载程序和 initrd 生成器的交互过程。
 
-上游 Linux 源码包含了构建 Debian 内核 Debian 包所需的所有内容。但你仍然需要安装 `build-essential` 以确保你拥有构建 Debian 软件包所需的工具。此外，内核的配置步骤需要 `libncurses5-dev` 软件包。最后，`fakeroot` 软件包将能够在不使用管理员权限的情况下创建 Debian 软件包。
+上游 Linux 源码包含了构建 Debian 内核 Debian 包所需的所有内容。但你仍然需要安装`build-essential`以确保你拥有构建 Debian 软件包所需的工具。此外，内核的配置步骤需要`libncurses5-dev`软件包。最后，`fakeroot`软件包将能够在不使用管理员权限的情况下创建 Debian 软件包。
 
-### 文化 内核包的旧时光
+### 文化：内核包的旧时光
 
-在 Linux 构建系统获得构建正规 Debian 包的能力之前，构建此类包的推荐方法是使用 `kernel-package` 软件包中的 `make-kpkg`。
+在 Linux 构建系统获得构建正规 Debian 包的能力之前，构建此类包的推荐方法是使用`kernel-package`软件包中的`make-kpkg`。
 
 ## 8.10.2. 获取源码
 
-就像 Debian 系统上任何有用东西一样，Linux 内核源码以软件包的形式提供。要获取它们，只需安装 `linux-source-version` 软件包。`apt search linux-source` 命令列出了 Debian 封装的各种内核版本。最新版本可以在 Unstable（不稳定）发行版中获得：你可以在没有风险的情况下获取它们（特别是如果你的 APT 是按照第 6.2 节“使用发行版”的指令配置的）。请注意，这些软件包包含的源码与 Linus Torvalds 及内核开发者发布的版本并不完全对应；与所有发行版一样，Debian 应用了许多补丁，这些补丁可能会（也可能）进入 Linux 的上游版本。这些修改包括来自较新内核版本的修复/驱动程序的反向移植（backports）、尚未（完全）合并到上游树的新功能，有时甚至包括 Debian 特定的更改。
+就像 Debian 系统上任何有用东西一样，Linux 内核源码以软件包的形式提供。要获取它们，只需安装`linux-source-version`软件包。`apt search linux-source`命令列出了 Debian 封装的各种内核版本。最新版本可以在 Unstable（不稳定）发行版中获得：你可以在没有风险的情况下获取它们（特别是如果你的 APT 是按照第 6.2 节“使用发行版”的指令配置的）。
 
-本节的其余部分关注 Linux 内核 4.19 版本，但当然，这些示例可以适用于你想要的特定内核版本。我们假设 `linux-source-419` 软件包已经安装。它包含了 `/usr/src/linux-source-419.tar.xz`，这是一个内核源码的压缩存档。你必须在一个新的目录中提取这些文件（不要直接放在 `/usr/src/` 下，因为编译 Linux 不需要特殊权限）：使用 `~/kernel/` 是合适的。
+请注意，这些软件包包含的源码与 Linus Torvalds 及内核开发者发布的版本并不完全对应；与所有发行版一样，Debian 应用了许多补丁，这些补丁可能会（也可能）进入 Linux 的上游版本。这些修改包括来自较新内核版本的修复/驱动程序的反向移植（backports）、尚未（完全）合并到上游树的新功能，有时甚至包括 Debian 特定的更改。
 
-```bash
-mkdir ~/kernel; cd ~/kernel
-tar -xaf /usr/src/linux-source-419.tar.xz
-```
-
-### 文化 内核源码的位置
-
-传统上，Linux 内核源码被放置在 `/usr/src/linux/`，因此编译时需要 root 权限。然而，在不需要时应该避免使用管理员权限。有一个 `src` 组，允许成员在该目录中工作，但尽管如此，仍应避免在 `/usr/src/` 中工作。通过将内核源码放在个人目录中，你可以在各个方面获得安全性：`/usr/` 中没有软件包系统未知的的文件，也不会有误导在尝试收集使用内核信息时读取 `/usr/src/linux` 的程序的风险。
-
-## 8.10.3. 配置内核
-
-下一步是根据你的需求配置内核。具体步骤取决于目标。
-
-在重新编译较新版本的内核（可能带有额外的补丁）时，配置将很可能与 Debian 提议的保持尽可能一致。在重新编译较新版本的内核（可能带有额外的补丁，配置将尽可能接近 Debian 建议的配置（注：原文此句逻辑略显重复，已按意译）。由于原文可能存在部分表述重复，此处已根据上下文进行了通顺逻辑翻译。
-
-我们假设 `linux-source-419` 软件包已经安装。它包含了 `/usr/src/linux-source-419.tar.xz`，这是一个内核源码的压缩存档。你必须在一个新的目录中提取这些文件（不要直接放在 `/usr/src/` 下，因为编译 Linux 不需要特殊权限）：使用 `~/kernel/` 是合适的。
+本节的其余部分关注 Linux 内核 4.19 版本，但当然，这些示例可以适用于你想要的特定内核版本。我们假设`linux-source-419`软件包已经安装。它包含了`/usr/src/linux-source-419.tar.xz`，这是一个内核源码的压缩存档。你必须在一个新的目录中提取这些文件（不要直接放在`/usr/src/`下，因为编译 Linux 不需要特殊权限）：使用`~/kernel/`是合适的。
 
 ```bash
 mkdir ~/kernel; cd ~/kernel
 tar -xaf /usr/src/linux-source-419.tar.xz
 ```
 
-（注：由于原文在 8.10.3 之后的部分存在多处逻辑重复和断句，如“When recompiling...” 之后的段落逻辑混乱，翻译时已根据高级文档工程师的标准对逻辑进行了重组，以确保中文表达的通顺。）
+### 文化：内核源码的位置
 
-**重新整理后的 8.10.3 及后续部分逻辑译文：**
+传统上，Linux 内核源码被放置在`/usr/src/linux/`，因此编译时需要 root 权限。然而，在不需要时应该避免使用管理员权限。有一个`src`组，允许成员在该目录中工作，但尽管如此，仍应避免在`/usr/src/`中工作。
+
+通过将内核源码放在个人目录中，你可以在各个方面获得安全性：`/usr/`中没有软件包系统未知的的文件，也不会有误导在尝试收集使用内核信息时读取`/usr/src/linux`的程序的风险。
 
 ## 8.10.3. 配置内核
 
 下一步是根据你的需求配置内核。具体步骤取决于目标。
 
-在重新编译较新版本的内核（可能带有额外的补丁）时，配置将很可能尽可能接近 Debian 建议的配置。除非你需要更改配置，否则只需将 `/boot/config-version`（版本可以通过 `uname -r` 找到）复制到内核目录中的 `.config` 文件。
+在重新编译较新版本的内核（可能带有额外的补丁）时，配置将很可能尽可能接近 Debian 建议的配置。除非你需要更改配置，否则只需将`/boot/config-version`（版本可以通过`uname -r`找到）复制到内核目录中的`.config`文件。
 
 ```bash
 cp /boot/config-419 ~/kernel/.config
 ```
 
-如果不不需要配置，可以停止并跳转到第 8.10.4 节“编译并构建软件包”。如果你需要更改配置，或者决定从头开始配置，必须花时间进行配置。内核源码中有多种专用界面可以使用，例如 `make menuconfig`（这需要 `ncurses5-dev` 软件包），它允许在分级结构中导航。按 `Space` 键更改选项值，`Enter` 确认选中；`Select` 返回子菜单；`Exit` 关闭当前屏幕并返回上一级；`Help` 将显示有关所选选项的详细信息。箭头键允许在列表中移动。要退出配置程序，从主菜单选择 `Exit`。程序随后会询问是否保存更改，如果你满意，请接受。
+如果不需要配置，可以停止并跳转到第 8.10.4 节“编译并构建软件包”。如果你需要更改配置，或者决定从头开始配置，必须花时间进行配置。
 
-其他界面具有类似的功能，但它们在更现代的界面中运行；例如使用 Qt 图形界面的 `make xconfig` 以及使用 GTK+ 的 `make gconfig`。前者需要 `libqt4-dev`，后者依赖 `libglade2-dev` 和 `libgtk2.0-dev`。
+内核源码中有多种专用界面可以使用，例如`make menuconfig`（这需要`ncurses5-dev`软件包），它允许在分级结构中导航。按`Space`键更改选项值，`Enter`确认选中；`Select`返回子菜单；`Exit`关闭当前屏幕并返回上一级；`Help`将显示有关所选选项的详细信息。箭头键允许在列表中移动。
 
-在使用这些配置界面时，从一个合理的配置开始总是明智的。内核在 `arch/configs/*defconfig` 中提供了此类配置，你可以通过类似 `make x86_64_defconfig`（64 位 PC）或 `make i386_defconfig`（32 位 PC）的命令将所选配置置到位。
+要退出配置程序，从主菜单选择`Exit`。程序随后会询问是否保存更改，如果你满意，请接受。
 
-### 提示 处理过时的 .config 文件
+其他界面具有类似的功能，但它们在更现代的界面中运行；例如使用 Qt 图形界面的`make xconfig`以及使用 GTK+ 的`make gconfig`。前者需要`libqt4-dev`，后者依赖`libglade2-dev`和`libgtk2.0-dev`。
 
-当你提供一个由其他（通常是旧）内核版本生成的 `.config` 文件时，你需要更新它。可以使用 `make oldconfig`，它将交互地向你提出对应新配置选项的问题。如果你想对所有问题使用默认答案，可以使用 `make olddefconfig`。使用 `make oldnoconfig`，它将对所有问题假设否定回答。
+在使用这些配置界面时，从一个合理的配置开始总是明智的。内核在`arch/configs/*defconfig`中提供了此类配置，你可以通过类似`make x86_64_defconfig`（64 位 PC）或`make i386_defconfig`（32 位 PC）的命令将所选配置置到位。
+
+### 提示：处理过时的`.config`文件
+
+当你提供一个由其他（通常是旧）内核版本生成的`.config`文件时，你需要更新它。可以使用`make oldconfig`，它将交互地向你提出对应新配置选项的问题。
+
+如果你想对所有问题使用默认答案，可以使用`make olddefconfig`。使用`make oldnoconfig`，它将对所有问题假设否定回答。
 
 ## 8.10.4. 编译并构建软件包
 
-### 注意 重建前的清理
+### 注意：重建前的清理
 
-如果你已经在该目录中编译过一次，并想从头开始重建（例如，因为你大幅更改了内核配置），你必须运行 `make clean` 来删除编译文件。`make distclean` 会删除更多生成的文件，甚至包括你的 `.config` 文件，因此请务必先备份它。
+如果你已经在该目录中编译过一次，并想从头开始重建（例如，因为你大幅更改了内核配置），你必须运行`make clean`来删除编译文件。`make distclean`会删除更多生成的文件，甚至包括你的`.config`文件，因此请务必先备份它。
 
+一旦内核配置就绪，运行简单的`make deb-pkg`即可生成多达 5 个 Debian 包：
 
+- `linux-image-*version*`包包含内核镜像和相关模块。
+- `linux-headers-*version*`包包含构建外部模块所需的头文件。
+- `linux-firmware-image-*version*`包包含某些驱动程序所需的固件文件（当你从 Debian 提供的内核源码构建时，此包可能会缺失）。
+- `linux-image-*version*-dbg`包包含内核镜像及其模块的调试符号。
+- `linux-libc-dev`包含与 GNU glibc 等某些用户空间库相关的头文件。
 
+`version`是通过上游版本（由`Makefile`中的变量`VERSION`、`PATCHLEVEL`、`SUBLEVEL`和`EXTRAVERSION`定义）、`LOCALVERSION`配置参数以及`LOCALVERSION`环境变量拼接而成的。软件包版本重用相同的版本字符串，并在末尾附加一个定期递增的修订版本（存储在`.version`中），除非你使用环境变量`KDEB_PKGVERSION`覆盖了它。
 
-一旦内核配置就绪，运行简单的 `make deb-pkg` 即可生成多达 5 个 Debian 包：`linux-image-*`version`*` 包含内核镜像和相关模块；`linux-headers-*`version`*` 包含构建外部模块所需的头文件；`linux-firmware-image-*`version`*` 包含某些驱动程序所需的固件文件（当你从 Debian 提供的内核源码构建时，此包可能会缺失）；`linux-image-*`version`*`-dbg` 包含内核内核镜像及其模块的调试符号；以及 `linux-libc-dev`，它包含与 GNU glibc 等某些用户空间库相关的头文件。
-
-`version` 是通过上游版本（由 `Makefile` 中的变量 `VERSION`、`PATCHLEVEL`、`SUBLEVEL` 和 `EXTRAVERSION` 定义）、`LOCALVERSION` 配置参数以及 `LOCALVERSION` 环境变量拼接而成的。软件包版本重用相同的版本字符串，并在末尾附加一个定期递增的修订版本（存储在 `.version` 中），除非你使用环境变量 `KDEB_PKGVERSION` 覆盖了它。
-
-```
-$ make deb-pkg LOCALVERSION=-falcot KDEB_PKGVERSION=$(make kernelversion)-1 [...] $
-$ ls ../*.deb ../linux-headers-4.19.37-falcot_4.19.37-1_amd64.deb ../linux-image-4.19.37-falcot_4.19.37-1_amd64.deb ../linux-libc-dev_4.19.37-1_amd64.deb
+```bash
+$ make deb-pkg LOCALVERSION=-falcot KDEB_PKGVERSION=$(make kernelversion)-1 [...]
+$ ls ../*.deb
+../linux-headers-4.19.37-falcot_4.19.37-1_amd64.deb
+../linux-image-4.19.37-falcot_4.19.37-1_amd64.deb
+../linux-libc-dev_4.19.37-1_amd64.deb
 ```
 
 ## 8.10.5. 编译外部模块
 
-某些模块是在官方 Linux 内核之外维护的。要使用它们，必须与匹配的内核一起编译。Debian 在专用包中提供了一些常见的第三方模块，例如 `vpb-driver-source`（用于 Voicetronix 电话硬件的额外模块）或 `leds-alix-source`（PCEngines ALIX 2/3 板板的驱动程序）。
+某些模块是在官方 Linux 内核之外维护的。要使用它们，必须与匹配的内核一起编译。Debian 在专用包中提供了一些常见的第三方模块，例如`vpb-driver-source`（用于 Voicetronix 电话硬件的额外模块）或`leds-alix-source`（PCEngines ALIX 2/3 板板的驱动程序）。
 
-这些包非常多且各异，运行 `apt-cache rdepends module-assistant` 可以显示 Debian 提供的列表。然而，一个完整的列表并没有特别有用，因为除非你确定需要，否则没有特殊理由去编译外部模块。在这种情况下，设备文档通常会详细说明其在 Linux 下运行所需的特定模块。
+这些包非常多且各异，运行`apt-cache rdepends module-assistant`可以显示 Debian 提供的列表。然而，一个完整的列表并没有特别有用，因为除非你确定需要，否则没有特殊理由去编译外部模块。在这种情况下，设备文档通常会详细说明其在 Linux 下运行所需的特定模块。
 
-例如，让我们看看 `dahdi-source` 包：安装后，模块源码的 `.tar.bz2` 文件被存储在 `/usr/src/` 中。虽然我们可以手动解压 tar 包并构建模块，但在实践中，我们倾向于使用 DKMS 自动完成所有操作。大多数模块都通过以 `-dkms` 结尾的包提供所需的 DKMS 集成。在我们的情况下，只要我们有与已安装内核匹配的 `linux-headers-*` 包，安装 `dahdi-dkms` 即可为当前内核编译内核模块。例如，如果你使用 `linux-image-amd64`，你也需要安装 `linux-headers-amd64`。
+例如，让我们看看`dahdi-source`包：安装后，模块源码的`.tar.bz2`文件被存储在`/usr/src/`中。虽然我们可以手动解压 tar 包并构建模块，但在实践中，我们倾向于使用 DKMS 自动完成所有操作。大多数模块都通过以`-dkms`结尾的包提供所需的 DKMS 集成。
 
+在我们的情况下，只要我们有与已安装内核匹配的`linux-headers-*`包，安装`dahdi-dkms`即可为当前内核编译内核模块。例如，如果你使用`linux-image-amd64`，你也需要安装`linux-headers-amd64`。
+
+```bash
+$ sudo apt install dahdi-dkms
+[...]
+Setting up xtables-addons-dkms (2.12-0.1) ...
+Loading new xtables-addons-2.12 DKMS files...
+Building for 4.19.0-5-amd64
+Building initial module for 4.19.0-5-amd64
+Done.
+
+dahdi_dummy.ko:
+Running module version sanity check.
+- Original module
+- No original module exists within this kernel
+- Installation
+- Installing to /lib/modules/4.19.0-5-amd64/updates/dkms/
+[...]
+DKMS: install completed.
+
+$ sudo dkms status
+dahdi, DEB_VERSION, 4.19.0-5-amd64, x86_64: installed
+
+$ sudo modinfo dahdi_dummy
+filename: /lib/modules/4.19.0-5-amd64/updates/dkms/dahdi_dummy.ko
+license: GPL v2
+author: Robert Pleh <robert.pleh@hermes.si>
+description: Timing-Only Driver
+[...]
 ```
-$ sudo apt install dahdi-dkms [...] Setting up xtables-addons-dkms (2.12-0.1) ... Loading new xtables-addons-2.12 DKMS files... Building for 4.19.0-5-amd64 Building initial module for 4.19.0-5-amd64 Done. dahdi_dummy.ko: Running module version sanity check. - Original module - No original module exists within this kernel - Installation - Installing to /lib/modules/4.19.0-5-amd64/updates/dkms/ [...] DKMS: install completed.
-$ sudo dkms status dahdi, DEB_VERSION, 4.19.0-5-amd64, x86_64: installed
-$ sudo modinfo dahdi_dummy filename: /lib/modules/4.19.0-5-amd64/updates/dkms/dahdi_dummy.ko license: GPL v2 author: Robert Pleh <robert.pleh@hermes.si> description: Timing-Only Driver [...]
-```
 
-### 备选方案 module-assistant
+### 备选方案：`module-assistant`
 
-在 DKMS 之前，module-assistant 是构建和部署内核模块的最简单的解决方案。它现在仍然可以使用，特别是对于那些缺少 DKMS 集成的包：通过简单的命令如 `module-assistant auto-install dadhi`（或简写为 `m-a a-i dahdi`），模块会为当前内核编译，放入一个新的 Debian 包中，并实时安装该包。
+在 DKMS 之前，`module-assistant`是构建和部署内核模块的最简单的解决方案。它现在仍然可以使用，特别是对于那些缺少 DKMS 集成的包：通过简单的命令如`module-assistant auto-install dadhi`（或简写为`m-a a-i dahdi`），模块会为当前内核编译，放入一个新的 Debian 包中，并实时安装该包。
 
 ## 8.10.6. 应用内核补丁
 
 某些功能由于缺乏成熟或与内核维护者存在分歧未包含在标准内核中。此类功能可能以补丁的形式发布，任何人都可以自由将其应用到内核源码。
 
-Debian 有时会在 `linux-patch-*` 包中提供这些补丁，但它们通常不会进入稳定发布版（有时是因为它们没有合并到官方上游内核的原因相同）。这些包会在 `/usr/src/kernel-patches/` 目录下安装文件。
+Debian 有时会在`linux-patch-*`包中提供这些补丁，但它们通常不会进入稳定发布版（有时是因为它们没有合并到官方上游内核的原因相同）。这些包会在`/usr/src/kernel-patches/`目录下安装文件。
 
-要应用这些已安装的一个或多个补丁，请在源码目录中使用 `patch` 命令，然后按照上述方法开始编译内核。
+要应用这些已安装的一个或多个补丁，请在源码目录中使用`patch`命令，然后按照上述方法开始编译内核。
 
-```
+```bash
 $ cd ~/kernel/linux-source-4.9
 $ make clean
 $ zcat /usr/src/kernel-patches/diffs | patch -p1
@@ -4386,63 +4423,75 @@ $ zcat /usr/src/kernel-patches/diffs | patch -p1
 
 ## 8.11. 安装内核
 
-一旦内核配置就绪，运行简单的 `make deb-pkg` 即可生成多达 5 个 Debian 包：`linux-image-*`version`*` 包含内核镜像和相关模块；`linux-headers-*`version`*` 包含构建外部模块所需的头文件；`linux-firmware-image-*`version`*` 包含某些驱动程序所需的固件文件（当你从 Debian 提供的内核源码构建时，此包可能会缺失）；`linux-image-*`version`*`-dbg` 包含内核镜像及其模块的调试符号；以及 `linux-libc-dev`，它包含与 GNU glibc 等某些用户空间库相关的头文件。
+一旦内核配置就绪，运行简单的`make deb-pkg`即可生成多达 5 个 Debian 包：
 
-`version` 是上游版本（由 `Makefile` 中的变量 `VERSION`、`PATCHLEVEL`、`SUBLEVEL` 和 `EXTRAVERSION` 定义）、`LOCALVERSION` 配置参数以及 `LOCALVERSION` 环境变量拼接而成的。软件包版本重用相同的版本字符串，并在末尾附加一个定期递增的修订版本（存储在 `.version` 中），除非你使用环境变量 `KDEB_PKGVERSION` 覆盖了它。
+- `linux-image-*version*`包包含内核镜像和相关模块。
+- `linux-headers-*version*`包包含构建外部模块所需的头文件。
+- `linux-firmware-image-*version*`包包含某些驱动程序所需的固件文件（当你从 Debian 提供的内核源码构建时，此包可能会缺失）。
+- `linux-image-*version*-dbg`包包含内核镜像及其模块的调试符号。
+- `linux-libc-dev`包含与 GNU glibc 等某些用户空间库相关的头文件。
 
-```
+`version`是上游版本（由`Makefile`中的变量`VERSION`、`PATCHLEVEL`、`SUBLEVEL`和`EXTRAVERSION`定义）、`LOCALVERSION`配置参数以及`LOCALVERSION`环境变量拼接而成的。软件包版本重用相同的版本字符串，并在末尾附加一个定期递增的修订版本（存储在`.version`中），除非你使用环境变量`KDEB_PKGVERSION`覆盖了它。
+
+```bash
 $ make deb-pkg LOCALVERSION=-falcot KDEB_PKGVERSION=$(make kernelversion)-1 [...]
-$ ls ../*.deb ../linux-headers-4.19.37-falcot_4.19.37-1_amd64.deb ../linux-image-4.19.37-falcot_4.19.37-1_amd64.deb ../linux-libc-dev_4.19.37-1_amd64.deb
+$ ls ../*.deb
+../linux-headers-4.19.37-falcot_4.19.37-1_amd64.deb
+../linux-image-4.19.37-falcot_4.19.37-1_amd64.deb
+../linux-libc-dev_4.19.37-1_amd64.deb
 ```
+
+
+
+
 
 ### 8.11.1. Debian 内核的特性
 
-Debian 包将内核镜像（`vmlinuz-`version``）、其配置（`config-`version`*）和符号表（`System.map-`version`*）安装在 `/boot/` 下。模块安装在 `/lib/modules/`version``
+Debian 包将内核镜像（`vmlinuz-version`）、其配置（`config-version`）和符号表（`System.map-version`）安装在`/boot/`下。模块安装在`/lib/modules/version`。
 
 #### 符号表
 
 符号表帮助开发者理解内核错误信息；如果没有它，内核“oops”（用户空间程序的段错误）只会包含内存地址，没有映射这些地址到符号的表是无用的。
 
-包的配置脚本会自动生成 initrd 镜像，这是一个由引导加载程序加载到内存中的微系统（因此得名，意为“初始化内存磁盘”），Linux 内核仅用于加载访问完整系统设备所需的模块（例如 SATA 磁盘）。最后，安装后脚本会更新符号链接 `/vmlinuz`、`/vmlinuz.old`、`/initrd.img` 和 `/initrd.img.old`，使它们分别指向安装的最两个内核以及相应的 initrd 镜像。
+包的配置脚本会自动生成 initrd 镜像，这是一个由引导加载程序加载到内存中的微系统（因此得名，意为“初始化内存磁盘”），Linux 内核仅用于加载访问完整系统设备所需的模块（例如 SATA 磁盘）。最后，安装后脚本会更新符号链接`/vmlinuz`、`/vmlinuz.old`、`/initrd.img`和`/initrd.img.old`，使它们分别指向安装的最两个内核以及相应的 initrd 镜像。
 
-这些任务大部分都交给了 `/etc/kernel/*.d/` 目录下的钩子脚本。例如，与 **grub** 的集成依赖于 `/etc/kernel/postinst.d/zz-update-grub` 和 `/etc/kernel/postrm.d/zz-update-grub` 在安装或删除内核时调用 **update-grub**。
+这些任务大部分都交给了`/etc/kernel/*.d/`目录下的钩子脚本。例如，与`grub`的集成依赖于`/etc/kernel/postinst.d/zz-update-grub`和`/etc/kernel/postrm.d/zz-update-grub`在安装或删除内核时调用`update-grub`。
 
 ### 8.11.2. 使用 dpkg 安装
 
-使用 **apt** 非常方便，让人们很容易忘记低级工具，但安装编译好的内核的最简单方法是使用如 `dpkg -i `package`.deb` 命令，其中 `package`.deb` 是 linux-image 包的名字，例如 `linux-image-4.19.37-falcot_1_amd64.deb`。
-
-
-
+使用`apt`非常方便，让人们很容易忘记低级工具，但安装编译好的内核的最简单方法是使用如`dpkg -i package.deb`命令，其中`package.deb`是 linux-image 包的名字，例如`linux-image-4.19.37-falcot_1_amd64.deb`。
 
 当你启动计算机时，控制台显示器上滚过的许多信息表示正在执行许多自动初始化和配置。有时，你可能希望稍微改变这一阶段的工作方式，这意味着你需要对其有良好的理解。这就是本节的目的。
 
-首先，BIOS 接管计算机，检测磁盘，加载 `Master Boot Record`（主引导记录）并执行引导加载程序（bootloader）。引导加载程序接管后，在磁盘上找到内核，加载并执行它。随后内核被初始化，并开始搜索并挂载包含根文件系统的分区，最后执行第一个程序 —— `init`。通常，这个“根分区”和这个 `init` 实际上位于一个仅存在于 RAM 中的虚拟文件系统中（因此得名为“initramfs”，以前称为“initrd”，即“初始化 RAM 磁盘 RAM disk”）。该文件系统由引导加载程序加载到内存中，通常来自硬盘上的某个文件或网络。它包含了内核加载“真实”根文件系统所需的最少内容：这可能是硬盘的驱动模块，或其他没有它们系统就无法启动的设备，或者更常见的，用于组装 RAID 数组、打开加密分区、激活 LVM 卷等的初始化脚本和模块。一旦挂载了根分区，initramfs 就会将控制权交给真正的 init，机器回到标准的启动过程。
+首先，BIOS 接管计算机，检测磁盘，加载`Master Boot Record`（主引导记录）并执行引导加载程序（bootloader）。引导加载程序接管后，在磁盘上找到内核，加载并执行它。随后内核被初始化，并开始搜索并挂载包含根文件系统的分区，最后执行第一个程序 ——`init`。通常，这个“根分区”和这个`init`实际上位于一个仅存在于 RAM 中的虚拟文件系统中（因此得名为“initramfs”，以前称为“initrd”，即“初始化 RAM 磁盘 RAM disk”）。该文件系统由引导加载程序加载到内存中，通常来自硬盘上的某个文件或网络。它包含了内核加载“真实”根文件系统所需的最少内容：这可能是硬盘的驱动模块，或其他没有它们系统就无法启动的设备，或者更常见的，用于组装 RAID 数组、打开加密分区、激活 LVM 卷等的初始化脚本和模块。一旦挂载了根分区，initramfs 就会将控制权交给真正的 init，机器回到标准的启动过程。
 
-图 9.1. 运行 systemd 的 Linux 计算机启动序列![运行 systemd 的 Linux 计算机启动序列](img/startup-systemd.png)
+图 9.1. 运行 systemd 的 Linux 计算机启动序列
+
+![运行 systemd 的 Linux 计算机启动序列](img/startup-systemd.png)
 
 ## 9.1.1. systemd init 系统
 
-“真正的 init”目前由 `systemd` 提供，本节将介绍该 init 系统进行。
+“真正的 init”目前由`systemd`提供，本节将介绍该 init 系统进行。
 
 ### systemd 之前的文化
 
-`systemd` 是一个相对较新的“init 系统”，尽管它在 Wheezy 中已经从某种程度上可用，但它直到 Debian Jessie 中才成为默认值。此前的版本默认依赖于“System V init”（在 `sysv-rc` 软件包中），这是一种更传统的系统。我们将在稍后描述 System V init。
+`systemd`是一个相对较新的“init 系统”，尽管它在 Wheezy 中已经从某种程度上可用，但它直到 Debian Jessie 中才成为默认值。此前的版本默认依赖于“System V init”（在`sysv-rc`软件包中），这是一种更传统的系统。我们将在稍后描述 System V init。
 
 #### 其他备用启动系统
 
-本书描述了 Debian Buster 中默认使用的启动系统（通过 `systemd` 软件包实现），以及之前的默认系统 `sysvinit`，后者派生并继承自 System V Unix 系统；此外还有其他系统。
+本书描述了 Debian Buster 中默认使用的启动系统（通过`systemd`软件包实现），以及之前的默认系统`sysvinit`，后者派生并继承自 System V Unix 系统；此外还有其他系统。
 
-`file-rc` 是一个具有非常简单过程的启动系统。它保留了运行级别（runlevels）的原则，但用配置文件替换了目录和符号链接，该文件指示 `init` 必须启动的进程及其启动顺序。
+`file-rc`是一个具有非常简单过程的启动系统。它保留了运行级别（runlevels）的原则，但用配置文件替换了目录和符号链接，该文件指示`init`必须启动的进程及其启动顺序。
 
-`upstart` 系统在 Debian 上尚未经过完美测试。它是基于事件的：init 脚本不再按顺序执行，而是响应事件（例如它们所依赖的另一个脚本的完成）。该系统由 Ubuntu 发，曾出现在 Debian Jessie 中，但并非默认值；事实上，它是作为 `sysvinit` 的替代品出现的，`upstart` 启动的任务之一就是启动为传统系统编写的脚本，特别是 `sysv-rc` 软件包中的脚本。
+`upstart`系统在 Debian 上尚未经过完美测试。它是基于事件的：init 脚本不再按顺序执行，而是响应事件（例如它们所依赖的另一个脚本的完成）。该系统由 Ubuntu 发，曾出现在 Debian Jessie 中，但并非默认值；事实上，它是作为`sysvinit`的替代品出现的，`upstart`启动的任务之一就是启动为传统系统编写的脚本，特别是`sysv-rc`软件包中的脚本。
 
-还有其他系统和其他运行模式，例如 `runit` 或 `minit`，但它们相对专业化且并不普及。
+还有其他系统和其他运行模式，例如`runit`或`minit`，但它们相对专业化且并不普及。
 
 ### 从网络启动的特殊情况
 
 在某些配置中，BIOS 可能配置为不执行 MBR，而在网络上寻找其等价，从而能够构建没有硬盘的计算机，或者每次启动时完全重新安装的计算机。此选项并非所有硬件上都可用，并且通常需要 BIOS 和网卡的适当组合。
 
-从网络启动可用于启动 `debian-installer` 或 FAI（参见 第 4.1 节，“安装方法”）。
+从网络启动可用于启动`debian-installer`或 FAI（参见 第 4.1 节，“安装方法”）。
 
 ### 回归基础：进程，程序实例
 
@@ -4450,74 +4499,122 @@ Debian 包将内核镜像（`vmlinuz-`version``）、其配置（`config-`versio
 
 ### 安全：使用 shell 作为 init 以获取 root 权限
 
-按照惯例，启动的第一个进程是 `init` 程序（默认是 `/lib/systemd/systemd` 的符号链接）。但是，可以向内核传递 `init` 选项以指定不同的程序。
+按照惯例，启动的第一个进程是`init`程序（默认是`/lib/systemd/systemd`的符号链接）。但是，可以向内核传递`init`选项以指定不同的程序。
 
-任何能够访问计算机的人都可以按下 **Reset**（重置）按钮从而重启它。然后，在引导加载程序的提示符处，可以向内核传递 `init=/bin/sh` 选项以在无需知道管理员密码的情况下获得 root 访问。
+任何能够访问计算机的人都可以按下 **Reset**（重置）按钮从而重启它。然后，在引导加载程序的提示符处，可以向内核传递`init=/bin/sh`选项以在无需知道管理员密码的情况下获得 root 访问。
 
 为了防止这一点，你可以用密码保护引导加载程序本身。你可能还会考虑保护 BIOS 的访问（几乎总是提供密码保护机制），如果没有它，恶意入侵者仍然可以使用包含其自身 Linux 系统的可移动介质启动机器，然后他们可以使用该系统访问计算机硬盘上的数据。
 
 最后，请注意大多数 BIOS 都提供一个通用密码。这些密码最初是为了给忘记密码的人提供故障排除，现在这些密码是公开的并可以在互联网上找到（你可以在搜索引擎中搜索“generic BIOS passwords”自行查看）。因此，所有这些保护都会阻碍未经授权的访问访问，但无法完全阻止。如果攻击者可以物理接触计算机，就没有可靠的方法来保护它；他们可以拆卸硬盘将其连接到他们控制的计算机上，或者擦除 BIOS 内存以重置密码……
 
-Systemd 执行几个进程，负责设置系统：键盘、驱动程序、文件系统、网络、服务。它在执行的同时保持对系统整体的全局视图以及各个组件的需求。每个组件由一个“单元文件”（有时是多个）描述；其通用语法源自广泛使用的“*.ini 文件”语法，使用 `key` = `value` 对并组在 `[section]` 头部之间。单元文件存储在 `/lib/systemd/system/` 和 `/etc/systemd/system/` 下；它们有几种格式，但我们在这里关注“服务”（services）和“目标”（targets）。
+Systemd 执行几个进程，负责设置系统：键盘、驱动程序、文件系统、网络、服务。它在执行的同时保持对系统整体的全局视图以及各个组件的需求。每个组件由一个“单元文件”（有时是多个）描述；其通用语法源自广泛使用的“*.ini 文件”语法，使用`key`=`value`对并组在`[section]`头部之间。单元文件存储在`/lib/systemd/system/`和`/etc/systemd/system/`下；它们有几种格式，但我们在这里关注“服务”（services）和“目标”（targets）。
 
 systemd “服务文件”描述了一个由 systemd 管理的进程。它包含了与旧式 init 脚本相同的信息，但以声明式（且简洁得多）的方式表示。Systemd 处理了大部分重复性任务（启动和停止进程、检查其状态、日志、丢弃权限等），服务文件只需要填充进程的细节。例如，这里是 SSH 的服务文件：
 
 ```ini
 [Unit]
-Description=OpenBSD Secure Shell server After=network.target auditd.service ConditionPathExists=!/etc/ssh/sshd_not_to_be_run
+Description=OpenBSD Secure Shell server
+After=network.target auditd.service
+ConditionPathExists=!/etc/ssh/sshd_not_to_be_run
+
 [Service]
 EnvironmentFile=-/etc/default/ssh
 ExecStart=/usr/sbin/sshd -D $SSHD_OPTS
-ExecReload=/bin/kill -HUP $MAINPID KillMode=process Restart=on-failure
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+Restart=on-failure
+
 [Install]
-WantedBy=multi-user.target Alias=sshd.service
+WantedBy=multi-user.target
+Alias=sshd.service
 ```
 
 如你所见，里面的代码很少，只有声明。Systemd 负责显示进度报告、跟踪进程，并在需要时重启它们。
 
-
-
-
-systemd “目标文件”描述了系统的状态，在该状态下，一组服务已知正在运行。它可以被看作旧式运行级别（runlevel）的等效物。目标之一是 `local-fs.target`；当到达时，系统的其余部分就可以假设所有本地文件系统已挂载并可访问。其他目标包括 `network-online.target` 和 `sound.target`。目标的依赖关系可以列在目标文件内部（在 `Requires=` 行中），也可以通过指向 `/lib/systemd/system/targetname.target.wants/` 目录下服务文件的符号链接来实现。例如，`/etc/systemd/system/printer.target.wants/` 包含一个指向 `/lib/systemd/system/cups.service` 的链接；因此，systemd 将确保 CUPS 运行以便达到 `printer.target`。
+systemd “目标文件”描述了系统的状态，在该状态下，一组服务已知正在运行。它可以被看作旧式运行级别（runlevel）的等效物。目标之一是`local-fs.target`；当到达时，系统的其余部分就可以假设所有本地文件系统已挂载并可访问。其他目标包括`network-online.target`和`sound.target`。目标的依赖关系可以列在目标文件内部（在`Requires=`行中），也可以通过指向`/lib/systemd/system/targetname.target.wants/`目录下服务文件的符号链接来实现。例如，`/etc/systemd/system/printer.target.wants/`包含一个指向`/lib/systemd/system/cups.service`的链接；因此，systemd 将确保 CUPS 运行以便达到`printer.target`。
 
 由于单元文件是声明性的而非脚本或程序，它们不能直接运行，只能由 systemd 解释；因此，有几个实用工具允许管理员与 systemd 交互并控制系统以及每个组件的状态。
 
 ## systemctl
 
-第一个此类工具是 `systemctl`。当不带任何参数运行时，它会列出 systemd 已知的所有单元文件（已禁用的除外）以及它们的状态。`systemctl status` 提供了服务以及相关进程更好的视图。如果给出服务的名称（如 `systemctl status ntp.service`），它会返回更多详细信息，以及与服务相关的最后几行日志（稍后将进行详细介绍）。
+第一个此类工具是`systemctl`。当不带任何参数运行时，它会列出 systemd 已知的所有单元文件（已禁用的除外）以及它们的状态。`systemctl status`提供了服务以及相关进程更好的视图。如果给出服务的名称（如`systemctl status ntp.service`），它会返回更多详细信息，以及与服务相关的最后几行日志（稍后将进行详细介绍）。
 
-手动启动服务是运行 `systemctl start servicename.service` 的简单问题。正如可以猜的那样，停止服务通过 `systemctl stop servicename.service` 完成；其他子命令包括 `reload`（重载）和 `restart`（重启）。
+手动启动服务是运行`systemctl start servicename.service`的简单问题。正如可以猜的那样，停止服务通过`systemctl stop servicename.service`完成；其他子命令包括`reload`（重载）和`restart`（重启）。
 
-要控制服务是否激活（即它是否会在启动时自动启动），请使用 `systemctl enable servicename.service`（或 `disable`）。`is-enabled` 允许检查服务的状态。
+要控制服务是否激活（即它是否会在启动时自动启动），请使用`systemctl enable servicename.service`（或`disable`）。`is-enabled`允许检查服务的状态。
 
 ## journald
 
-systemd 的一个有趣特性是它包含一个名为 `journald` 的日志组件。它作为 `syslogd` 等更传统日志系统的补充，但它添加了有趣的功能，例如服务与其生成的消息之间的正式链接，以及捕获其初始化序列生成的错误消息的能力。之后可以通过 `journalctl` 命令的帮助显示这些消息。不带任何参数运行，它简单地输出自系统启动以来发生的所有日志消息；很少会这样使用。大多数时候，它会配合服务标识符使用：
+systemd 的一个有趣特性是它包含一个名为`journald`的日志组件。它作为`syslogd`等更传统日志系统的补充，但它添加了有趣的功能，例如服务与其生成的消息之间的正式链接，以及捕获其初始化序列生成的错误消息的能力。之后可以通过`journalctl`命令的帮助显示这些消息。不带任何参数运行，它简单地输出自系统启动以来发生的所有日志消息；很少会这样使用。大多数时候，它会配合服务标识符使用：
 
-```
+```text
 # journalctl -u ssh.service
--- Logs begin at Tue 2015-03-31 10:08:49 CEST, end at Tue 2015-03-31 17:06:02 CEST. -- Mar 31 10:08:55 mirtuel sshd[430]: Server listening on 0.0.0.0 port 22\. Mar 31 10:08:55 mirtuel sshd[430]: Server listening on :: port 22\. Mar 31 10:09:00 mirtuel sshd[430]: Received SIGHUP; restarting. Mar 31 10:09:00 mirtuel sshd[430]: Server listening on 0.0.0.0 port 22\. Mar 31 10:09:00 mirtuel sshd[430]: Server listening on :: port 22\. Mar 31 10:09:32 mirtuel sshd[1151]: Accepted password for roland from 192.168.1.129 port 53394 ssh2 Mar 31 10:09:32 mirtuel sshd[1151]: pam_unix(sshd:session): session opened for user roland by (uid=0)
+
+-- Logs begin at Tue 2015-03-31 10:08:49 CEST, end at Tue 2015-03-31 17:06:02 CEST. --
+Mar 31 10:08:55 mirtuel sshd[430]: Server listening on 0.0.0.0 port 22\.
+Mar 31 10:08:55 mirtuel sshd[430]: Server listening on :: port 22\.
+Mar 31 10:09:00 mirtuel sshd[430]: Received SIGHUP; restarting.
+Mar 31 10:09:00 mirtuel sshd[430]: Server listening on 0.0.0.0 port 22\.
+Mar 31 10:09:00 mirtuel sshd[430]: Server listening on :: port 22\.
+Mar 31 10:09:32 mirtuel sshd[1151]: Accepted password for roland from 192.168.1.129 port 53394 ssh2
+Mar 31 10:09:32 mirtuel sshd[1151]: pam_unix(sshd:session): session opened for user roland by (uid=0)
 ```
 
-另一个实用的命令行标记是 `-f`，它指示 `journalctl` 在新消息产生时持续显示（非常类似于 `tail -f file` 的方式）。
+另一个实用的命令行标记是`-f`，它指示`journalctl`在新消息产生时持续显示（非常类似于`tail -f file`的方式）。
 
-如果一个服务看起来没有按预期工作，解决该问题的第一步是使用 `systemctl status` 检查服务是否真的在运行；如果没有运行，且第一个命令提供的消息不足以诊断问题，请检查 `journald` 收集的关于该服务的日志。例如，假设 SSH 服务器无法工作：
+如果一个服务看起来没有按预期工作，解决该问题的第一步是使用`systemctl status`检查服务是否真的在运行；如果没有运行，且第一个命令提供的消息不足以诊断问题，请检查`journald`收集的关于该服务的日志。例如，假设 SSH 服务器无法工作：
 
-```
+```text
 systemctl status ssh.service
-● ssh.service - OpenBSD Secure Shell Loaded: loaded (/lib/systemd/system/ssh.service; enabled) Active: failed (Result: start-limit) since Tue 2015-03-31 17:30:36 CEST; 1s ago Process: 1023 ExecReload=/bin/kill -HUP $MAINPID (code=exited, status=0/SUCCESS) Process: 1188 ExecStart=/usr/sbin/sshd -D $SSHD_OPTS (code=exited, status=255) Main PID: 1188 (code=exited, status=255) Mar 31 17:30:36 mirtuel systemd[1]: ssh.service: main process exited, code=exited, status=255/n/a Mar 31 17:30:36 mirtuel systemd[1]: ssh.service entered failed state. Mar 31 17:30:36 mirtuel systemd[1]: ssh.service start request repeated too quickly, refusing to start. Mar 31 17:30:36 mirtuel systemd[1]: Failed to start OpenBSD Secure Shell server. Mar 31 17:30:36 mirtuel systemd[1]: Unit ssh.service entered failed state.
+
+● ssh.service - OpenBSD Secure Shell
+Loaded: loaded (/lib/systemd/system/ssh.service; enabled)
+Active: failed (Result: start-limit) since Tue 2015-03-31 17:30:36 CEST; 1s ago
+Process: 1023 ExecReload=/bin/kill -HUP $MAINPID (code=exited, status=0/SUCCESS)
+Process: 1188 ExecStart=/usr/sbin/sshd -D $SSHD_OPTS (code=exited, status=255)
+Main PID: 1188 (code=exited, status=255)
+Mar 31 17:30:36 mirtuel systemd[1]: ssh.service: main process exited, code=exited, status=255/n/a
+Mar 31 17:30:36 mirtuel systemd[1]: ssh.service entered failed state.
+Mar 31 17:30:36 mirtuel systemd[1]: ssh.service start request repeated too quickly, refusing to start.
+Mar 31 17:30:36 mirtuel systemd[1]: Failed to start OpenBSD Secure Shell server.
+Mar 31 17:30:36 mirtuel systemd[1]: Unit ssh.service entered failed state.
 
 journalctl -u ssh.service
--- Logs begin at Tue 2015-03-31 17:29:27, end at Tue 2015-03-31 17:30:36 CEST. -- Mar 31 17:29:27 mirtuel sshd[424]: Server listening on 0.0.0.0 port 22\. Mar 31 17:29:27 mirtuel sshd[424]: Server listening on :: port 22\. Mar 31 17:29:29 mirtuel sshd[424]: Received SIGHUP; restarting. Mar 31 17:29:29 mirtuel sshd[424]: Server listening on 0.0.0.0 port 22\. Mar 31 17:29:29 mirtuel sshd[424]: Server listening on :: port 22\. Mar 31 17:30:10 mirtuel sshd[1147]: Accepted password for roland from 192.168.1.129 port 38742 ssh2 Mar 31 17:30:10 mirtuel sshd[1147]: pam_unix(sshd:session): session opened for user roland by (uid=0) Mar 31 17:30:35 mirtuel sshd[1180]: /etc/ssh/sshd_config line 28: unsupported option "yess". Mar 31 17:30:35 mirtuel systemd[1]: ssh.service: main process exited, code=exited, status=255/n/a Mar 31 17:30:35 mirtuel systemd[1]: ssh.service entered failed state. Mar 31 17:30:35 mirtuel sshd[1182]: /etc/ssh/sshd_config line 28: unsupported option "yess". Mar 31 17:30:35 mirtuel systemd[1]: ssh.service: main process exited, code=exited, status=255/n/a Mar 31 17:30:35 mirtuel systemd[1]: ssh.service entered failed state. Mar 31 17:30:35 mirtuel sshd[1184]: /etc/ssh/sshd_config line 28: unsupported option "yess". Mar 31 17:30:35 mirtuel systemd[1]: ssh.service: main process exited, code=exited, status=255/n/a Mar 31 17:30:35 mirtuel systemd[1]: ssh.service entered failed state. Mar 31 17:30:35 mirtuel sshd[1186]: /etc/ssh/sshd_config line 28: unsupported option "yess". Mar 31 17:30:36 mirtuel systemd[1]: ssh.service: main process exited, code=exited, status=255/n/a Mar 31 17:30:36 mirtuel systemd[1]: Unit ssh.service entered failed state. Mar 31 17:30:36 mirtuel systemd[1]: ssh.service start request repeated too quickly, refusing to start. Mar 31 17:30:36 mirtuel systemd[1]: Failed to start OpenBSD Secure Shell server. Mar 31 17:30:36 mirtuel systemd[1]: Unit ssh.service entered failed state.
+```
+
+
+
+
+```text
+-- Logs begin at Tue 2015-03-31 17:29:27, end at Tue 2015-03-31 17:30:36 CEST. --
+Mar 31 17:29:27 mirtuel sshd[424]: Server listening on 0.0.0.0 port 22\.
+Mar 31 17:29:27 mirtuel sshd[424]: Server listening on :: port 22\.
+Mar 31 17:29:29 mirtuel sshd[424]: Received SIGHUP; restarting.
+Mar 31 17:29:29 mirtuel sshd[424]: Server listening on 0.0.0.0 port 22\.
+Mar 31 17:29:29 mirtuel sshd[424]: Server listening on :: port 22\.
+Mar 31 17:30:10 mirtuel sshd[1147]: Accepted password for roland from 192.168.1.129 port 38742 ssh2
+Mar 31 17:30:10 mirtuel sshd[1147]: pam_unix(sshd:session): session opened for user roland by (uid=0)
+Mar 31 17:30:35 mirtuel sshd[1180]: /etc/ssh/sshd_config line 28: unsupported option "yess".
+Mar 31 17:30:35 mirtuel systemd[1]: ssh.service: main process exited, code=exited, status=255/n/a
+Mar 31 17:30:35 mirtuel systemd[1]: ssh.service entered failed state.
+Mar 31 17:30:35 mirtuel sshd[1182]: /etc/ssh/sshd_config line 28: unsupported option "yess".
+Mar 31 17:30:35 mirtuel systemd[1]: ssh.service: main process exited, code=exited, status=255/n/a
+Mar 31 17:30:35 mirtuel systemd[1]: ssh.service entered failed state.
+Mar 31 17:30:35 mirtuel sshd[1184]: /etc/ssh/sshd_config line 28: unsupported option "yess".
+Mar 31 17:30:35 mirtuel systemd[1]: ssh.service: main process exited, code=exited, status=255/n/a
+Mar 31 17:30:35 mirtuel systemd[1]: ssh.service: main process exited, code=exited, status=255/n/a
+Mar 31 17:30:35 mirtuel systemd[1]: ssh.service entered failed state.
+Mar 31 17:30:35 mirtuel sshd[1186]: /etc/ssh/sshd_config line 28: unsupported option "yess".
+Mar 31 17:30:36 mirtuel systemd[1]: ssh.service: main process exited, code=exited, status=255/n/a
+Mar 31 17:30:36 mirtuel systemd[1]: Unit ssh.service entered failed state.
+Mar 31 17:30:36 mirtuel systemd[1]: ssh.service start request repeated too quickly, refusing to start.
+Mar 31 17:30:36 mirtuel systemd[1]: Failed to start OpenBSD Secure Shell server.
+Mar 31 17:30:36 mirtuel systemd[1]: Unit ssh.service entered failed state.
 ```
 
 ## 深入了解其他类型的单元文件
 
 我们在本节中仅描述了 systemd 能力中最基础的部分。它提供了许多其他有趣的功能；我们在这里仅列出几个：
-
-
-
-
 
 - **socket activation**：“socket”单元文件可用于描述由 systemd 管理的网络或 Unix socket；这意味着 socket 将由 systemd 创建，而当有实际的连接尝试发生时，可能会根据需要启动实际的服务。这大致复制了 `inetd` 的功能集。请参见 `systemd.socket(5)`。
 - **timers**：“timer”单元文件描述以固定频率发生或在特定时间发生的事件；当一个服务链接到这样的定时器上时，每当定时器触发时，就会执行相应的任务。这允许实现部分 `cron` 的功能。请参见 `systemd.timer(5)`。
@@ -4528,6 +4625,7 @@ journalctl -u ssh.service
 System V init 系统（我们简称为 `init`）根据 `/etc/inittab` 文件的指令执行多个进程。第一个执行的程序（对应于 `sysinit` 步骤）是 `/etc/init.d/rcS`，该脚本会执行 `/etc/rcS.d/` 目录中的所有程序。
 
 在这些程序中，你将依次找到以下内容的程序：
+
 - 配置控制台键盘；
 - 加载驱动程序：大多数内核模块由内核在检测硬件时加载；当相应的模块列在 `/etc/modules` 中时，会自动加载额外的驱动程序；
 - 检查文件系统的完整性；
@@ -4537,40 +4635,40 @@ System V init 系统（我们简称为 `init`）根据 `/etc/inittab` 文件的�
 
 ### 回归基础内核模块与选项
 
-内核模块也有可以通过在 `/etc/modprobe.d/` 中放置文件配置配置的。这些选项使用如下指令定义：`options` `module-name` `option-name=`option-value`。如有必要，一个指令指定指定选项。
+内核模块也有可以通过在 `/etc/modprobe.d/` 中放置文件配置配置的。这些选项使用如下指令定义：`options module-name option-name=option-value`。如有必要，一个指令指定指定选项。
 
 这些配置文件用于 `modprobe` —— 这是一个加载内核模块及其依赖（模块）的程序（模块确实可以调用其他模块）。该程序由 kmod 包提供。
 
-在此阶段之后，`init` 接管并启动默认运行级别（通常是运行级别 2）中启用的程序。它执行 `/etc/init.d/rc2`，该脚本启动 `/etc/rc2.d/` 中列出的所有以“S”字母开头的服务。随其后的两位数字历史上曾用于定义服务必须启动的顺序，但现在默认启动系统使用 `insserv`，它根据脚本的依赖关系自动调度一切。因此，每个启动脚本都声明了启动或停止服务必须满足的条件（例如，它必须在另一个服务之前或之后启动）；`init` 然后按照满足这些条件的顺序启动它们。因此，脚本的静态编号不再被在范围内（但它们的名称必须始终以“S”开头，后跟两个数字和用于依赖的脚本实际名称）。通常，基础服务（如使用 `rsyslog` 进行日志记录或使用 `portmap` 进行端口分配）首先启动，然后是标准服务和图形界面 (`gdm3`)。
+在此阶段之后，`init` 接管并启动默认运行级别（通常是运行级别 2）中启用的程序。它执行 `/etc/init.d/rc2`，该脚本启动 `/etc/rc2.d/` 中列出的所有以 “S” 字母开头的服务。随其后的两位数字历史上曾用于定义服务必须启动的顺序，但现在默认启动系统使用 `insserv`，它根据脚本的依赖关系自动调度一切。因此，每个启动脚本都声明了启动或停止服务必须满足的条件（例如，它必须在另一个服务之前或之后启动）；`init` 然后按照满足这些条件的顺序启动它们。因此，脚本的静态编号不再被在范围内（但它们的名称必须始终以 “S” 开头，后跟两个数字和用于依赖的脚本实际名称）。通常，基础服务（如使用 `rsyslog` 进行日志记录或使用 `portmap` 进行端口分配）首先启动，然后是标准服务和图形界面 (`gdm3`)。
 
 这种基于依赖的启动系统使得自动重新编号成为可能（如果手动完成那将非常繁琐），并限制了人为错误的风险，因为调度是根据指示的参数进行的。另一个益处是，当服务相互独立时，可以并行启动，这可以加速启动过程。
 
-`init` 区分多个运行级别，因此可以使用 `telinit new-level` 命令从一个级别切换到另一个级别。随后，`init` 会再次使用新的运行级别执行 `/etc/init.d/rc`。该脚本将启动缺失的服务并停止不再需要的内核。为了做到这一点，它引用了 `/etc/rcX.d`（其中 `X` 代表新的运行级别）的内容。以“S”（代表“Start”）开头的脚本是需要启动的服务；以“K”（代表“Kill”）开头的脚本是需要停止的服务。脚本不会启动任何在上一个运行级别中已经激活的服务。
+`init` 区分多个运行级别，因此可以使用 `telinit new-level` 命令从一个级别切换到另一个级别。随后，`init` 会再次使用新的运行级别执行 `/etc/init.d/rc`。该脚本将启动缺失的服务并停止不再需要的内核。为了做到这一点，它引用了 `/etc/rcX.d`（其中 `X` 代表新的运行级别）的内容。以 “S”（代表 “Start”）开头的脚本是需要启动的服务；以 “K”（代表 “Kill”）开头的脚本是需要停止的服务。脚本不会启动任何在上一个运行级别中已经激活的服务。
 
 默认情况下，Debian 中的 System V init 使用四种不同的运行级别：
-- 级别 0 仅在计算机关机时临时使用。因此，它只包含许多“K”（停止）脚本。
+
+- 级别 0 仅在计算机关机时临时使用。因此，它只包含许多 “K”（停止）脚本。
 - 级别 1 也称为单用户模式，对应于降级模式下的系统；它仅包含基本服务，用于不需要与普通用户交互的维护操作。
 - 级别 2 是正常运行级别，包括网络服务、图形界面、用户登录等。
 - 级别 6 与级别 0 类似，不同在于它用于重启之前的关闭阶段。
 
 还存在其他级别，特别是 3 到 5 级。默认情况下，它们被配置为与级别 2 相同的方式运行，但管理员可以修改它们（通过在相应的 `/etc/rcX.d` 目录中添加或删除脚本）以适应特定需求。
 
-图 9.2. 运行 System V init 的 Linux 计算机启动序列![运行 System V init 的 Linux 计算机启动序列](img/startup-sysvinit.png)
+图 9.2. 运行 System V init 的 Linux 计算机启动序列
+
+![运行 System V init 的 Linux 计算机启动序列](img/startup-sysvinit.png)
 
 位于各种 `/etc/rcX.d` 目录中的所有脚本实际上只是符号链接 —— 在包安装时由 `update-rc.d` 创建 —— 指向存储在 `/etc/init.d/` 中的实际脚本。管理员可以通过调整参数并重新运行 `update-rc.d` 来精调每个运行级别中可的服务。`update-rc.d(1)` 手册页详细描述了该语法。请注意，删除所有符号链接（使用 `remove` 参数）不是禁用服务的好方法。相反，你应该只需配置其在在所需的运行级别下启动（同时保留在服务运行时停止它的相应调用）。由于 `update-rc.d` 的界面有点复杂，你可能更倾向于使用 `rcconf`（来自 rcconf 包），它提供了一个更用户友好的界面。
 
-### DEBIAN 策略重启服务
+### Debian 策略重启服务
 
 Debian 包的维护脚本有时会重启某些服务，以确保它们的可用性或让它们考虑某些选项。控制服务的命令 —— `service operation` 不考虑运行级别，它（错误地）假设该服务当前正在被使用，因此可能会引发错误的操作（启动一个被刻意停止的服务，或停止一个已经停止的服务等）。因此，Debian 引入了 `invoke-rc.d` 程序：维护脚本必须使用此程序来运行服务初始化脚本，它将只执行必要的命令。注意，与常见用法不同，`.d` 后缀在这里用于程序名，而不是目录名。
 
 最后，`init` 启动用于各种虚拟控制台（`getty`）的控制程序。它显示一个提示符，等待用户名，然后执行 `login user` 以启动会话。
 
-### 词汇 控制台与终端
+### 词汇：控制台与终端
 
 早期的计算机通常被分成几个非常大的部分：存储机和中央处理器与操作员用于控制它们的外围设备分开。这些属于一个独立家具的一部分，即“控制台”（console）。这个术语被保留了下来，但它的含义已经发生了。它已在很大程度上与“终端”（terminal）同义，指的是一个键盘和一个屏幕。
-
-
-
 
 随着计算机的发展，操作系统提供了多个虚拟控制台，允许同时进行多个独立的会话，即使只有一个键盘和屏幕。大多数 GNU/Linux 系统提供六个虚拟控制台（文本模式），通过输入组合键 `Control`+`Alt`+`F1` 到 `Control`+`Alt`+`F6` 进行访问。
 
@@ -4600,15 +4698,17 @@ Debian 包的维护脚本有时会重启某些服务，以确保它们的可用�
 
 SSH 还提供两种文件传输服务。`scp` 是一个命令行工具，用法类似于 `cp`，不同的是指向另一机器的任何路径都以机器名前缀，后跟一个冒号。
 
-```
+```text
 $ scp file machine:/tmp/
 ```
+
+
 
 `sftp` 是一个交互式命令，类似于 `ftp`。在单个会话中，`sftp` 可以传输多个文件，并且可以使用它操作远程文件（删除、重命名、更改权限等）。
 
 Debian 使用 OpenSSH，这是由 `OpenBSD` 项目（一个基于 BSD 内核的、关注安全的免费操作系统）维护的 SSH 免费版本，它是由芬兰的 SSH Communications Security 公司开发的原始 SSH 软件的分支（fork）。这家公司最初将 SSH 开发为免费软件，但最终决定在专有许可下继续开发。OpenBSD 项目随后创建了 OpenSSH 来维护 SSH 的免费版本。
 
-### 基础知识：分支 (Fork)
+### 基础知识：分支（Fork）
 
 在软件领域，“分支”（fork）意味着一个新项目从现有项目的克隆开始，并将会与该项目产生竞争。从那时起，两者的软件在后续开发方面通常会迅速分化。分支通常是开发团队内部产生分歧的结果。
 
@@ -4632,45 +4732,43 @@ Debian Etch 最初提供的 OpenSSL 库在其随机数生成器（RNG）中存�
 
 具体来说，每当使用 OpenSSL 生成密钥时，它总是产生已知数十万密钥集中的密钥（32,000 乘以少量的密钥长度）。这影响了 SSH 密钥、SSL 密钥以及许多应用程序（如 OpenVPN）使用的 X.509 证书。破解者只需尝试所有密钥即可获得未经授权的访问。为了减少该问题的影响，SSH 守护进程经过了修改，拒绝列在 `openssh-blacklist` 和 `openssh-blacklist-extra` 包中的有问题密钥。此外，`ssh-vulnkey` 命令允许识别系统中可能受损的密钥。
 
-
-
-对这一事件的更彻底分析表明，它是多个（微小）问题的，，问题存在于 OpenSSL 项目内部以及 Debian 软件包维护者。像 OpenSSL 这样广泛使用的库，在不进行修改的情况下，通过 `valgrind` 测试时不应产生警告。此外，代码（尤其是像 RNG 这样敏感的部分）应该有更好的注释以防止此类错误。在 Debian 方面，维护者希望与 OpenSSL 开发人员验证修改，但仅解释了修改内容而没有提供相应的补丁供审查，并且没有提到他在 Debian 中的角色。最后，维护选择并非最优：对原始代码所做的更改没有清晰的文档记录；所有修改实际上都存储在 Subversion 仓库中，但在创建源包时，它们最终都被合并到了一个补丁中。
+对这一事件的更彻底分析表明，它是多个（微小）问题的结果，问题存在于 OpenSSL 项目内部以及 Debian 软件包维护者。像 OpenSSL 这样广泛使用的库，在不进行修改的情况下，通过 `valgrind` 测试时不应产生警告。此外，代码（尤其是像 RNG 这样敏感的部分）应该有更好的注释以防止此类错误。在 Debian 方面，维护者希望与 OpenSSL 开发人员验证修改，但仅解释了修改内容而没有提供相应的补丁供审查，并且没有提到他在 Debian 中的角色。最后，维护选择并非最优：对原始代码所做的更改没有清晰的文档记录；所有修改实际上都存储在 Subversion 仓库中，但在创建源包时，它们最终都被合并到了一个补丁中。
 
 在这样的情况下，很难找到防止此类事件再次发生的纠正措施。这里的教训是，Debian 对上游软件引入的任何差异都必须是合理的、记录过的、尽可能提交给上游项目，并广泛公布。正是从这一角度，开发了新的源包格式（“3.0 (quilt)”）和 Debian 源 Web 服务。
 
 → [`sources.debian.org`](https://sources.debian.org)
 
-***
-
-### 9.2.1.2. 使用远程 X11 
+### 9.2.1.2. 使用远程 X11
 
 SSH 协议允许转发图形数据（“X11”会话，源自 Unix 中最常用的图形系统）；服务器随后为这些数据保留一个专用通道。具体来说，在远程执行的图形程序显示在本地屏幕的 X.org 服务器上，且整个会话（输入和显示）将是安全的。由于此功能允许远程应用程序干扰本地系统，因此默认是禁用的。你可以通过在服务器配置文件（`/etc/ssh/sshd_config`）中指定 `X11Forwarding yes` 来启用它。最后，用户必须通过在 `ssh` 命令行中添加 `-X` 选项来请求。
 
 ### 9.2.1.3. 使用端口转发创建加密隧道
 
-它的 `-R` 和 `-L` 选项允许 `ssh` 在两台机器之间创建“加密隧道”，安全地将本地 TCP 端口（参见侧边 *返回基础知识* TCP/UDP））转发到远程机器或反之亦。
+它的 `-R` 和 `-L` 选项允许 `ssh` 在两台机器之间创建“加密隧道”，安全地将本地 TCP 端口（参见侧边“返回基础知识”TCP/UDP）转发到远程机器或反之亦然。
 
-***
+#### 词汇：隧道（Tunnel）
 
-*词汇* 隧道 (Tunnel)
-
-互联网以及大多数连接到它的局域网以数据包模式而非连接模式运行，这意味着从一台计算机发往另一台计算机的的数据包将在几个中间路由器处停止，以寻找它的目的地。你仍然模拟一种连接操作，将数据流封装在普通的 IP 数据包中。这些数据包遵循其通常路线，但数据流在目的地被原封不动地重构。我们称之为“隧道”，类似于道路隧道，车辆直接从入口（输入）驶到出口（输出），而不会遇到任何交叉路口，这与地表上涉及交叉和改变方向的路径相反。
+互联网以及大多数连接到它的局域网以数据包模式而非连接模式运行，这意味着从一台计算机发往另一台计算机的数据包将在几个中间路由器处停止，以寻找它的目的地。你仍然模拟一种连接操作，将数据流封装在普通的 IP 数据包中。这些数据包遵循其通常路线，但数据流在目的地被原封不动地重构。我们称之为“隧道”，类似于道路隧道，车辆直接从入口（输入）驶到出口（输出），而不会遇到任何交叉路口，这与地表上涉及交叉和改变方向的路径相反。
 
 你可以利用此机会为隧道添加加密：通过它的流从外部看是无法识别的，但它会在隧道出口处以解密的形式返回。
 
-***
+`ssh -L 8000:server:25 intermediary` 与 `intermediary` 主机建立 SSH 会话，并监听本地端口 8000（参见图 9.3，“使用 SSH 转发本地端口”）。对于在该端口上建立的任何连接，`ssh` 将启动从 `intermediary` 计算机到 `server` 端口 25 的连接，并将两个连接绑定。
 
-`ssh -L 8000:server:25 intermediary` 与 `intermediary` 主机建立 SSH 会话，并监听本地端口 8000（参见 图 9.3, “使用 SSH 转发本地端口”）。对于在该端口上建立的任何连接，`ssh` 将启动从 `intermediary` 计算机到 `server` 端口 25 的连接，并将两个连接绑定。
+`ssh -R 8000:server:25 intermediary` 也向 `intermediary` 计算机建立 SSH 会话，但在该机器上是 `ssh` 监听端口 8000（参见图 9.4，“使用 SSH 转发远程端口”）。在该端口上建立的任何连接将导致 `ssh` 从本地机器打开到 `server` 端口 25 的连接，并将两个连接绑定。
 
-`ssh -R 8000:server:25 intermediary` 也向 `intermediary` 计算机建立 SSH 会话，但在该机器上是 `ssh` 监听端口 8000（参见 图 9.4, “使用 SSH 转发远程端口”）。在该端口上建立的任何连接将导致 `ssh` 从本地机器打开到 `server` 端口 25 的连接，并将两个连接绑定。
+在两种情况下，连接都是建立在 `server` 主机的端口 25 上的，这些连接通过在本地机器与 `intermediary` 机器之间建立的 SSH 隧道。在第一种情况下，隧道的入口是本地端口 8000，数据向 `intermediary` 机器移动，然后被定向到“公共”网络上的 `server`。在第二种情况下，隧道中的输入和输出反转了；入口是 `intermediary` 机器上的端口 8000，输出在本地主机上，然后数据指向 `server`。在实践中，服务器通常是本地机器或中间机器。这样 SSH 确保了从一端到另一端的连接。
 
-在两种情况下，连接都是建立在 `server` 主机的端口 25 上的，这些连接通过在本地机器与 `intermediary` 机器之间建立的 SSH 隧道。在第一情况下，隧道的入口是本地端口 8000，数据向 `intermediary` 机器移动，然后被定向到“公共”网络上的 `server`。在第二情况下，隧道中的输入和输出反转了；入口是 `intermediary` 机器上的端口 8000，输出在本地主机上，然后数据指向 `server`。在实践中，服务器通常是本地机器或中间机器。这样 SSH 确保了从一端到另一端的连接。
+图 9.3. 使用 SSH 转发本地端口
 
-图 9.3. 使用 SSH 转发本地端口![使用 SSH 转发本地端口](img/ssh-L.png)图 9.4. 使用 SSH 转发远程端口![使用 SSH 转发远程端口](img/ssh-R.png)
+![使用 SSH 转发本地端口](img/ssh-L.png)
+
+图 9.4. 使用 SSH 转发远程端口
+
+![使用 SSH 转发远程端口](img/ssh-R.png)
 
 ### 9.2.2. 使用远程图形桌面
 
-VNC (虚拟网络计算) 允许远程访问图形桌面。
+VNC（虚拟网络计算）允许远程访问图形桌面。
 
 该工具主要用于技术支持；管理员可以看到用户面临的错误，并向他们展示正确的操作方案，而无需站在他们身边。
 
@@ -4678,34 +4776,27 @@ VNC (虚拟网络计算) 允许远程访问图形桌面。
 
 当通过 VNC 提供图形会话时，管理员必须使用 VNC 客户端连接到它。GNOME 有 `vinagre` 和 `remmina` 用于此目的，而 KDE 项目提供了 `krdc`（在 K → Internet → Remote Desktop Client 菜单中）。还有其他使用命令行的 VNC 客户端，例如同名 Debian 软件包中的 `xvnc4viewer`。一旦连接，管理员就可以看到正在发生什么，在远程机器上进行工作，并向用户演示如何继续。
 
-***
+#### 安全：越过 SSH 的 VNC
 
-*安全* 越 SSH 的 VNC
+如果你想通过 VNC 连接，且不希望你的数据在网络上以明文发送，则可以将数据封装在 SSH 隧道中（参见第 9.2.1.3 节，“使用端口转发创建加密隧道”）。你只需要知道 VNC 默认使用端口 5900 用于第一个屏幕（称为“localhost:0”），5901 用于第二个（称为“localhost:1”），依此类推。
 
-如果你想通过 VNC 连接，且不希望你的数据在网络上以明文发送，则可以将数据封装在 SSH 隧道中（参见第 9.2.1.3 节，“使用端口转发创建加密隧道`）。你只需要知道 VNC 默认使用端口 5900 用于第一个屏幕（称为“localhost:0”），5901 用于第二个（称为“localhost:1”），依此类推。
-
-`ssh -L localhost:5901:localhost:5900 -N -T machine` 在 localhost 接口的本地端口 5901 与 `machine` 主机的端口 5900 之间创建一个隧道。第一个 “localhost”限制 SSH 仅监听本地机器上的该接口。第二个 “localhost” 指明远程机器上接收进入“localhost:5901”流量的接口。因此，`vncviewer localhost:1` 将 VNC 客户端连接到远程屏幕，尽管你指明的是本地机器的名字。
+`ssh -L localhost:5901:localhost:5900 -N -T machine` 在 `localhost` 接口的本地端口 5901 与 `machine` 主机的端口 5900 之间创建一个隧道。第一个 `localhost` 限制 SSH 仅监听本地机器上的该接口。第二个 `localhost` 指明远程机器上接收进入“localhost:5901”流量的接口。因此，`vncviewer localhost:1` 将 VNC 客户端连接到远程屏幕，尽管你指明的是本地机器的名字。
 
 当 VNC 会话关闭时，记得通过也关闭相应的 SSH 会话来关闭隧道。
 
-***
+#### 返回基础知识：显示管理器
 
-***
-
-*返回基础知识* 显示管理器
-
-
-
-
-`gdm3`, `kdm`, `lightdm` 和 `xdm` 是显示管理器。它们在启动后不久就会接管图形界面控制权，为用户提供登录屏幕。一旦用户登录，它们就会执行启动图形工作会话所需的程序。
+`gdm3`、`kdm`、`lightdm` 和 `xdm` 是显示管理器。它们在启动后不久就会接管图形界面控制权，为用户提供登录屏幕。一旦用户登录，它们就会执行启动图形工作会话所需的程序。
 
 VNC 也适用于移动用户或公司高管，他们有时需要从家里登录以访问与工作时使用类似的远程桌面。此类服务的配置更为复杂：你首先需要安装 `vnc4server` 包，更改显示管理器的配置以接受 `XDMCP Query` 请求（对于 `gdm3`，这可以通过在 `/etc/gdm3/daemon.conf` 的“xdmcp”部分添加 `Enable=true` 来实现），最后使用 `inetd` 启动 VNC 服务器，这样当用户尝试登录时就会自动启动会话。例如，你可以将此行添加到 `/etc/inetd.conf` 中：
 
-```
+```text
 5950 stream tcp nowait nobody.tty /usr/bin/Xvnc Xvnc -inetd -query localhost -once -geometry 1024x768 -depth 16 securitytypes=none
 ```
 
-将传入的连接重定向到显示管理器解决了身份验证问题，因为只有本地账户的用户才能通过 `gdm3` 登录屏幕（或相应的 `kdm`、`xdm` 等）。由于此操作允许多个用户同时登录而不产生任何问题（只要服务器足够强大），它甚至可以为移动用户提供完整的桌面（或为配置为瘦客户端的性能较弱桌面系统）。用户只需通过 `vncviewer server:50` 登录服务器屏幕，因为使用的端口是 5950。
+
+
+将传入的连接重定向到显示管理器解决了身份验证问题，因为只有本地账户的用户才能通过`gdm3`登录屏幕（或相应的`kdm`、`xdm`等）。由于此操作允许多个用户同时登录而不产生任何问题（只要服务器足够强大），它甚至可以为移动用户提供完整的桌面（或为配置为瘦客户端的性能较弱桌面系统）。用户只需通过`vncviewer server:50`登录服务器屏幕，因为使用的端口是`5950`。
 
 # 9.3. 管理权限
 
@@ -4713,66 +4804,63 @@ Linux 显然是一个多用户系统，因此必须提供一套权限系统来�
 
 每个文件或目录对三类用户都有特定的权限：
 
-- 其所有者（用 `u` 表示，如“user”）；
-- 其所有组（用 `g` 表示，如“group”），代表组中的所有成员；
-- 其他人（用 `o` 表示，如“other”）。
+- 其所有者（用`u`表示，如“user”）；
+- 其所有组（用`g`表示，如“group”），代表组中的所有成员；
+- 其他人（用`o`表示，如“other”）。
 
 三种类型的权限可以组合：
 
-- 读取（用 `r` 表示，如“read”）；
-- 写入（或修改，用 `w` 表示，如“write”）；
-- 执行（用 `x` 表示，如“eXecute”）。
+- 读取（用`r`表示，如“read”）；
+- 写入（或修改，用`w`表示，如“write”）；
+- 执行（用`x`表示，如“eXecute”）。
 
 对于文件来说，这些权限很容易理解：读取权限允许读取内容（包括复制），写入权限允许更改内容，执行权限允许你运行它（这仅在它是一个程序时才有效）。
 
-## 安全：`setuid` 和 `setgid` 可执行文件
+## 安全：`setuid`和`setgid`可执行文件
 
-有两种特殊权限与可执行文件相关：`setuid` 和 `setgid`（用字母“s”表示）。注意，我们经常谈论“位”（bit），因为这些布尔值中的每一个都可以用 0 或 1 表示。这两种权限允许任何用户分别以所有者或组的权限执行程序。这种机制授予了访问比你通常拥有的更高权限的功能。
+有两种特殊权限与可执行文件相关：`setuid`和`setgid`（用字母“s”表示）。注意，我们经常谈论“位”（bit），因为这些布尔值中的每一个都可以用 0 或 1 表示。这两种权限允许任何用户分别以所有者或组的权限执行程序。这种机制授予了访问比你通常拥有的更高权限的功能。
 
-由于 `setuid` root 程序系统地以超级用户（root）身份运行，因此确保其安全可靠至关重要。事实上，如果一个用户设法破坏了它来调用他们选择的命令，就可以冒充 root 用户并拥有系统上的所有权限。
+由于`setuid` root 程序系统地以超级用户（root）身份运行，因此确保其安全可靠至关重要。事实上，如果一个用户设法破坏了它来调用他们选择的命令，就可以冒充 root 用户并拥有系统上的所有权限。
 
-目录的处理方式不同。读取权限允许查看其条目列表（文件和目录），写入权限允许创建或删除文件，执行权限允许穿过该目录（特别是通过使用 `cd` 命令进入那里）。在无法读取目录的情况下穿过目录，允许访问其中已知名称的条目，但如果你不知道这些目的的存在或确切名称，则无法找到它们。
+目录的处理方式不同。读取权限允许查看其条目列表（文件和目录），写入权限允许创建或删除文件，执行权限允许穿过该目录（特别是通过使用`cd`命令进入那里）。在无法读取目录的情况下穿过目录，允许访问其中已知名称的条目，但如果你不知道这些目的的存在或确切名称，则无法找到它们。
 
-## 安全：`setgid` 目录和粘滞位（sticky bit）
+## 安全：`setgid`目录和粘滞位（sticky bit）
 
-`setgid` 位也适用于目录。此类目录中新创建的项将自动分配父目录的所有组，而不是像通常那样继承创建者的主组。这种设置避免了用户在多个属于同一专用组的用户共享的文件树中工作时，需要更改其主组（使用 `newgrp` 命令）。
+`setgid`位也适用于目录。此类目录中新创建的项将自动分配父目录的所有组，而不是像通常那样继承创建者的主组。这种设置避免了用户在多个属于同一专用组的用户共享的文件树中工作时，需要更改其主组（使用`newgrp`命令）。
 
-“粘滞”位（用字母“t”表示）是一种仅在目录中有作用的权限。它专门用于每个人都有写入权限的临时目录（如 `/tmp/`）：它限制了文件的删除操作，使得只有文件所有者（或父目录的所有者）才能删除。缺少这个位，每个人都可以删除 `/tmp/` 下其他用户的文件。
+“粘滞”位（用字母“t”表示）是一种仅在目录中有作用的权限。它专门用于每个人都有写入权限的临时目录（如`/tmp/`）：它限制了文件的删除操作，使得只有文件所有者（或父目录的所有者）才能删除。缺少这个位，每个人都可以删除`/tmp/`下其他用户的文件。
 
 有三个命令控制与文件相关的权限：
 
-- `chown user file` 更改文件的所有者；
-- `chgrp group file` 更改所有组；
-- `chmod rights file` 更改文件的权限。
+- `chown user file`更改文件的所有者；
+- `chgrp group file`更改所有组；
+- `chmod rights file`更改文件的权限。
 
-权限权限有两种方式。其中，符号表示法可能是最容易理解和记忆的。它涉及上述字母符号。你可以为每类用户（`u`/`g`/`o`）定义权限，通过显式设置（使用 `=`）、添加（使用 `+`）或减去（使用 `-`）来设置。因此，`u=rwx,g+rw,o-r` 公式赋予所有者读取、写入和执行权限，为所有组添加读取和写入权限，并移除其他用户的读取权限。此类命令中未通过加或减法更改的权限将保持不变。字母 `a` 代表“所有”（all），涵盖了所有三类用户，因此 `a=rx` 赋予所有三类用户相同的权限（读取和执行，但不写入）。
+权限权限有两种方式。其中，符号表示法可能是最容易理解和记忆的。它涉及上述字母符号。你可以为每类用户（`u`/`g`/`o`）定义权限，通过显式设置（使用`=`）、添加（使用`+`）或减去（使用`-`）来设置。因此，`u=rwx,g+rw,o-r`公式赋予所有者读取、写入和执行权限，为所有组添加读取和写入权限，并移除其他用户的读取权限。此类命令中未通过加或减法更改的权限将保持不变。字母`a`代表“所有”（all），涵盖了所有三类用户，因此`a=rx`赋予所有三类用户相同的权限（读取和执行，但不写入）。
 
 （八进制）数字表示法将每个权限与一个值关联：4 代表读取，2 代表写入，1 代表执行。我们将每种权限组合与数字之和关联。然后，通过按照通常顺序（所有者、组、其他人）连续排列这些值分配给不同类别的用户。
 
-例如，`chmod 754 file` 命令将设置以下权限：所有者具有读取、写入和执行权限（因为 7 = 4 + 2 + 1）；组具有读取和执行权限（因为 5 = 4 + 1）；其他人只有只读权限。`0` 表示无权限；因此 `chmod 600 file` 允许所有者拥有读取/写入权限，而其他人没有任何权限。最常见的权限组合是用于可执行文件和目录的 `755` 以及用于数据文件的 `644`。
+例如，`chmod 754 file`命令将设置以下权限：所有者具有读取、写入和执行权限（因为 7 = 4 + 2 + 1）；组具有读取和执行权限（因为 5 = 4 + 1）；其他人只有只读权限。`0`表示无权限；因此`chmod 600 file`允许所有者拥有读取/写入权限，而其他人没有任何权限。最常见的权限组合是用于可执行文件和目录的`755`以及用于数据文件的`644`。
 
-要表示特殊权限，你可以根据相同原理在该数字前加上第四位数字，其中 `setuid`、`setgid` 和粘滞位位为 4、2 和 1。`chmod 4754` 将 `setuid` 位与上述权限关联。
+要表示特殊权限，你可以根据相同原理在该数字前加上第四位数字，其中`setuid`、`setgid`和粘滞位位为 4、2 和 1。`chmod 4754`将`setuid`位与上述权限关联。
 
 请注意，使用八进制法仅允许一次性设置文件上的所有权限；你不能用它简单地添加新权限（例如为组所有者添加读取权限），因为你必须考虑现有的权限并计算出新的对应数值。
 
 ## 递归操作
 
-有时我们必须更改整个文件树的权限。上述所有命令都有 `-R` 选项，用于对子目录进行递归操作。
+有时我们必须更改整个文件树的权限。上述所有命令都有`-R`选项，用于对子目录进行递归操作。
 
-目录和文件的区别有时会导致递归操作出现问题。这就是为什么在权限的符号表示法中引入了字母“X”。它代表执行权限，该权限仅适用于目录（而不适用于缺少此权限的文件）。因此，`chmod -R a+X directory` 将为所有三类用户（`a`）的所有子目录和文件添加执行权限，前提是至少有一类用户（即使是唯一的所有者）已经拥有执行权限。
+目录和文件的区别有时会导致递归操作出现问题。这就是为什么在权限的符号表示法中引入了字母“X”。它代表执行权限，该权限仅适用于目录（而不适用于缺少此权限的文件）。因此，`chmod -R a+X directory`将为所有三类用户（`a`）的所有子目录和文件添加执行权限，前提是至少有一类用户（即使是唯一的所有者）已经拥有执行权限。
 
 ## TIP* 修改用户和组
 
-
-
-
-你经常希望在更改文件所有者的同时更改其所属组。`chown` 命令有一个特殊的语法可以实现这一点：`chown user:group file`。
+你经常希望在更改文件所有者的同时更改其所属组。`chown`命令有一个特殊的语法可以实现这一点：`chown user:group file`。
 
 ### 进阶：`umask`
 
-当应用程序创建一个文件时，它会分配指示性权限，因为它知道系统会自动根据命令 `umask` 移除某些权限。在 shell 中输入 `umask`；你将看到一个如 `0022` 的掩码。这仅仅是待系统性移除的权限的八进制表示（在这种情况下，是用户组和其他用户的写权限）。
+当应用程序创建一个文件时，它会分配指示性权限，因为它知道系统会自动根据命令`umask`移除某些权限。在 shell 中输入`umask`；你将看到一个如`0022`的掩码。这仅仅是待系统性移除的权限的八进制表示（在这种情况下，是用户组和其他用户的写权限）。
 
-如果你给它一个新的八进制值，`umask` 命令会修改该掩码。将其用于 shell 初始化文件（例如 `~/.bash_profile`）中，它将有效更改你工作会话的默认掩码。
+如果你给它一个新的八进制值，`umask`命令会修改该掩码。将其用于 shell 初始化文件（例如`~/.bash_profile`）中，它将有效更改你工作会话的默认掩码。
 
 # 9.4. 管理界面
 
@@ -4786,39 +4874,39 @@ Linux 显然是一个多用户系统，因此必须提供一套权限系统来�
 
 这无疑是最成功的管理界面之一。它是一个通过浏览器管理的模块化系统，涵盖了广泛的领域和工具。此外，它是国际化的，并提供多种语言。
 
-遗憾的是，`webmin` 不再是 Debian 的一部分。它的 Debian 维护者 —— Jaldhar H. Vyas —— 删除了创建的软件包，因为他已经没有时间以可接受的质量水平维护它们了。目前还没有官方接手者，因此 Buster 不包含 `webmin` 软件包。
+遗憾的是，`webmin`不再是 Debian 的一部分。它的 Debian 维护者 —— Jaldhar H. Vyas —— 删除了创建的软件包，因为他已经没有时间以可接受的质量水平维护它们了。目前还没有官方接手者，因此 Buster 不包含`webmin`软件包。
 
-然而，在 `webmin.com` 网站上有一个非官方软件包。与原始的 Debian 包不同，该软件包是单体式的；所有的配置模块都会默认安装并激活，即使相应的服务没有安装在机器上。
+然而，在`webmin.com`网站上有一个非官方软件包。与原始的 Debian 包不同，该软件包是单体式的；所有的配置模块都会默认安装并激活，即使相应的服务没有安装在机器上。
 
 ### 安全：更改 root 密码
 
-在首次登录时，使用 root 用户名及其通常密码进行身份验证。建议尽快更改 `webmin` 使用的密码，这样即使它被攻破，服务器的 root 密码也不会受到影响，即使它赋予了机器重要的管理权限。
+在首次登录时，使用 root 用户名及其通常密码进行身份验证。建议尽快更改`webmin`使用的密码，这样即使它被攻破，服务器的 root 密码也不会受到影响，即使它赋予了机器重要的管理权限。
 
-注意！由于 `webmin` 拥有许多功能，恶意用户访问它可能会危及整个系统的安全。通常，不建议在具有强安全限制（防火墙、敏感服务器等）的重要系统上使用此类界面。
+注意！由于`webmin`拥有许多功能，恶意用户访问它可能会危及整个系统的安全。通常，不建议在具有强安全限制（防火墙、敏感服务器等）的重要系统上使用此类界面。
 
 Webmin 通过 Web 界面使用，但它不需要安装 Apache。本质上，该软件拥有自己集成的微型 Web 服务器。该服务器默认在端口 10000 上进行监听，并接受安全的 HTTP 连接。
 
 包含的模块涵盖了各种服务，其中：
 
-*   所有基础服务：创建用户和组、管理 `crontab` 文件、init 脚本、查看日志等。
-*   bind：DNS 服务器配置（名称服务）；
-*   postfix：SMTP 服务器配置（电子邮件）；
-*   inetd：`inetd` 超级服务器配置；
-*   quota：用户配额管理；
-*   dhcpd：DHCP 服务器配置；
-*   proftpd：FTP 服务器配置；
-*   samba：Samba 文件服务器配置；
-*   software：从 Debian 软件包和系统更新中安装或移除软件。
+* 所有基础服务：创建用户和组、管理`crontab`文件、init 脚本、查看日志等。
+* bind：DNS 服务器配置（名称服务）；
+* postfix：SMTP 服务器配置（电子邮件）；
+* inetd：`inetd`超级服务器配置；
+* quota：用户配额管理；
+* dhcpd：DHCP 服务器配置；
+* proftpd：FTP 服务器配置；
+* samba：Samba 文件服务器配置；
+* software：从 Debian 软件包和系统更新中安装或移除软件。
 
-管理界面可以通过浏览器访问地址 `https://localhost:10000` 使用。注意！并非所有模块都可以直接使用。有时必须通过指定相应配置文件的位置和一些可执行文件（程序）来配置它们。当系统无法激活请求的模块时，通常会礼貌地提示你。
+管理界面可以通过浏览器访问地址`https://localhost:10000`使用。注意！并非所有模块都可以直接使用。有时必须通过指定相应配置文件的位置和一些可执行文件（程序）来配置它们。当系统无法激活请求的模块时，通常会礼貌地提示你。
 
 ### 替代方案：GNOME 控制中心
 
-GNOME 项目还提供了多个管理界面，通常可以通过右上角用户菜单中的“设置”选项访问。`gnome-control-center` 是它们所有整合在一起的主程序，但许多系统级配置工具实际上由其他软件包提供（accountsservice、system-config-printer 等）。尽管这些应用程序易于使用，但它们只涵盖了有限的基础服务：用户管理、时间配置、网络配置、打印机配置等。
+GNOME 项目还提供了多个管理界面，通常可以通过右上角用户菜单中的“设置”选项访问。`gnome-control-center`是它们所有整合在一起的主程序，但许多系统级配置工具实际上由其他软件包提供（accountsservice、system-config-printer 等）。尽管这些应用程序易于使用，但它们只涵盖了有限的基础服务：用户管理、时间配置、网络配置、打印机配置等。
 
 ## 9.4.2. 配置软件包：`debconf`
 
-许多软件包在安装过程中，通过 Debconf 工具回答几个问题后，会自动完成配置。可以通过运行 `dpkg-reconfigure package` 来重新配置这些软件包。
+许多软件包在安装过程中，通过 Debconf 工具回答几个问题后，会自动完成配置。可以通过运行`dpkg-reconfigure package`来重新配置这些软件包。
 
 在大多数情况下，这些设置非常简单；仅更改配置文件中的几个重要变量。这些变量通常组在两条“分界”线之间，以便软件包的重新配置只影响包围的区域。在其他情况下，如果脚本检测到配置文件被手动修改过，重新配置将不会更改任何内容，以保留这些人工干预（因为脚本无法确保其修改不会破坏现有设置）。
 
@@ -4826,106 +4914,89 @@ GNOME 项目还提供了多个管理界面，通常可以通过右上角用户�
 
 Debian 策略明确规定，应尽一切保留对配置文件所做的手动更改，因此越来越多的脚本在编辑配置文件时采取了预防措施。通用的原则非常简单：只有当脚本知道配置状态时，它才会进行更改，该状态通过比较文件的校验和值与上一次自动生成的文件的校验和值来验证。如果它们相同，则脚本被授权更改配置文件。否则，它会判定文件已被更改，并询问应该采取什么操作（安装新文件、保存旧文件，或尝试将新更改集成到现有文件中）。
 
-可以使用 `ucf` 程序（来自同名的 Debian 软件包）来实现这种行为。
+可以使用`ucf`程序（来自同名的 Debian 软件包）来实现这种行为。
 
-# 9.5. `syslog` 系统事件
+# 9.5. `syslog`系统事件
 
 ## 9.5.1. 原理与机制
 
-`rsyslogd` 守护进程负责从应用程序和内核收集消息，然后将其分发到日志文件中（通常存储在 `/var/log/` 目录下）。它遵循 `/etc/rsyslog.conf` 配置文件。
+`rsyslogd`守护进程负责从应用程序和内核收集消息，然后将其分发到日志文件中（通常存储在`/var/log/`目录下）。它遵循`/etc/rsyslog.conf`配置文件。
 
 每个日志消息与一个应用程序子系统（文档中称为“facility”）关联：
 
-*   `auth` 和 `authpriv`：用于认证；
-*   `cron`：来自任务调度服务 `cron` 和 `atd`；
-*   `daemon`：影响没有特殊分类的守护进程（DNS, NTP 等）；
-*   `ftp`：涉及 FTP 服务器；
-*   `kern`：来自内核的消息；
-*   `lpr`：来自打印子系统；
-*   `mail`：来自电子邮件子系统；
-*   `news`：Usenet 子系统消息（来自管理新闻组的 NNTP —— 网络新闻传输协议服务器）；
-*   `syslog`：来自 `syslogd` 服务器本身的消息；
-*   `user`：用户消息（通用）。
-
-
-
-
-
-* `uucp`: 来自 UUCP 服务器的消息（Unix to Unix Copy Program，一种显式用于分发电子邮件的旧协议）；
-* `local0` 到 `local7`: 留供本地使用。
+* `auth`和`authpriv`：用于认证；
+* `cron`：来自任务调度服务`cron`和`atd`；
+* `daemon`：影响没有特殊分类的守护进程（DNS, NTP 等）；
+* `ftp`：涉及 FTP 服务器；
+* `kern`：来自内核的消息；
+* `lpr`：来自打印子系统；
+* `mail`：来自电子邮件子系统；
+* `news`：Usenet 子系统消息（来自管理新闻组的 NNTP —— 网络新闻传输协议服务器）；
+* `syslog`：来自`syslogd`服务器本身的消息；
+* `user`：用户消息（通用）；
+* `uucp`：来自 UUCP 服务器的消息（Unix to Unix Copy Program，一种显式用于分发电子邮件的旧协议）；
+* `local0`到`local7`：留供本地使用。
 
 每条消息还与优先级相关。以下是按从高到低排序的列表：
 
-* `emerg`: “帮助！”发生紧急情况，系统可能无法使用。
-* `alert`: 快，任何延迟都可能导致危险，必须立即采取行动；
-* `crit`: 状况严重；
-* `err`: 错误；
-* `warn`: 警告（潜在错误）；
-* `notice`: 状况正常，但消息很重要；
-* `info`: 提示性消息；
-* `debug`: 调试消息。
+* `emerg`：“帮助！”发生紧急情况，系统可能无法使用。
+* `alert`：快，任何延迟都可能导致危险，必须立即采取行动；
+* `crit`：状况严重；
+* `err`：错误；
+* `warn`：警告（潜在错误）；
+* `notice`：状况正常，但消息很重要；
+* `info`：提示性消息；
+* `debug`：调试消息。
 
 ## 9.5.2 配置文件
 
-`/etc/rsyslog.conf` 文件的语法在 `rsyslog.conf(5)` 手册页中有详细说明，但在 `rsyslog-doc` 软件包中也提供了 HTML 文档（`/usr/share/doc/rsyslog-doc/html/index.html`）。其总体原理是编写“选择器（selector）”和“动作（action）”对。选择器定义了所有相关消息，动作描述了如何处理这些消息。
+`/etc/rsyslog.conf`文件的语法在`rsyslog.conf(5)`手册页中有详细说明，但在`rsyslog-doc`软件包中也提供了 HTML 文档（`/usr/share/doc/rsyslog-doc/html/index.html`）。其总体原理是编写“选择器（selector）”和“动作（action）”对。选择器定义了所有相关消息，动作描述了如何处理这些消息。
 
 ### 9.5.2.1 选择器的语法
 
-选择器是由分号隔开的 `subsystem`.`priority` 对列表（例如：`auth.notice;mail.info`）。星号 `*` 可以代表所有子系统或所有优先级（例如：`*.alert` 或 `mail.*`）。可以通过逗号分隔多个子系统进行分组（例如：`auth,mail.info`）。指定的优先级也涵盖了相等或更高优先级的消息；因此 `auth.alert` 表示 `auth` 子系统中 `alert` 或 `emerg` 优先级的消息。以感叹号（!`）为前缀表示相反，换句话说就是严格更低的优先级；因此，`auth.!notice` 表示来自 `auth` 且优先级为 `info` 或 `debug` 的消息。以等号（=`）为前缀，则精确且仅对应指定的优先级（`auth.=notice` 仅关注来自 `auth` 的 `notice` 优先级的消息）。
+选择器是由分号隔开的`subsystem`.`priority`对列表（例如：`auth.notice;mail.info`）。星号`*`可以代表所有子系统或所有优先级（例如：`*.alert`或`mail.*`）。可以通过逗号分隔多个子系统进行分组（例如：`auth,mail.info`）。指定的优先级也涵盖了相等或更高优先级的消息；因此`auth.alert`表示`auth`子系统中`alert`或`emerg`优先级的消息。以感叹号（`!`）为前缀表示相反，换句话说就是严格更低的优先级；因此，`auth.!notice`表示来自`auth`且优先级为`info`或`debug`的消息。以等号（`=`）为前缀，则精确且仅对应指定的优先级（`auth.=notice`仅关注来自`auth`的`notice`优先级的消息）。
 
-选择器列表中的每个元素都会覆盖之前的元素。因此，可以限制一个集合或从中排除某些元素。例如，`kern.info;kern.!err` 意味着来自内核的优先级在 `info` 到 `warn` 之间的消息。`none` 优先级表示空集（无优先级），可以用于从消息集中排除某个子系统。因此，`*.crit;kern.none` 表示所有优先级等于或高于 `crit` 且不是来自内核的消息。
+选择器列表中的每个元素都会覆盖之前的元素。因此，可以限制一个集合或从中排除某些元素。例如，`kern.info;kern.!err`意味着来自内核的优先级在`info`到`warn`之间的消息。`none`优先级表示空集（无优先级），可以用于从消息集中排除某个子系统。因此，`*.crit;kern.none`表示所有优先级等于或高于`crit`且不是来自内核的消息。
 
 ### 9.5.2.2 动作的语法
 
-* * *
-
 *回归基础* 命名管道，持久管道
 
-命名管道是一种特殊类型的文件，其工作方式类似于传统的管道（你在命令行上使用 `|` 符号创建的管道），但通过文件实现。这种机制的优势在于能够关联两个不相关的进程。写入命名管道的任何内容都会阻塞写入进程，直到另一个进程尝试读取所写的数据。这个第二个进程读取了第一个进程写入的数据后，第一个进程就可以恢复执行。
+命名管道是一种特殊类型的文件，其工作方式类似于传统的管道（你在命令行上使用`|`符号创建的管道），但通过文件实现。这种机制的优势在于能够关联两个不相关的进程。写入命名管道的任何内容都会阻塞写入进程，直到另一个进程尝试读取所写的数据。这个第二个进程读取了第一个进程写入的数据后，第一个进程就可以恢复执行。
 
-可以使用 `mkfifo` 命令创建此类文件。
+可以使用`mkfifo`命令创建此类文件。
 
-* * *
-
- 各种可能的动作包括：
+各种可能的动作包括：
 
 * 将消息添加到文件（例如：`/var/log/messages`）；
-* 将消息发送到远程 `syslog` 服务器（例如：`@log.falcot.com`）；
+* 将消息发送到远程`syslog`服务器（例如：`@log.falcot.com`）；
 * 将消息发送到现有的命名管道（例如：`|/dev/xconsole`）；
 * 将消息发送给一个或多个用户，如果他们已登录（例如：`root,rhertzog`）；
 * 将消息发送给所有登录用户（例如：`*`）；
 * 在文本控制台中写入消息（例如：`/dev/tty8`）。
 
-* * *
-
 *安全* 转发日志
 
 将最重要的日志记录在单独的机器上（可能专门为此目的设置）是一个好主意，因为这可以防止任何可能的入侵者删除其入侵痕迹（除非他们也攻破了另一台服务器）。此外，在发生严重问题（如内核崩溃）时，你在另一台机器上可以使用日志，这增加了你确定导致崩溃事件序列的机会。
 
-要接受来自其他机器的日志消息，你必须重新配置 `rsyslog`：在实践中，激活 `/etc/rsyslog.conf` 中的现用条目（`$ModLoad imudp` 和 `$UDPServerRun 514`）即可。
-
-* * *
+要接受来自其他机器的日志消息，你必须重新配置`rsyslog`：在实践中，激活`/etc/rsyslog.conf`中的现用条目（`$ModLoad imudp`和`$UDPServerRun 514`）即可。
 
 ## 9.6 inetd 超服务器
 
 Inetd（通常被称为“Internet 超服务器”）是“服务器的服务器”。它按需执行不常用的服务器，这样它们就不需要持续运行。
 
-`/etc/inetd.conf` 文件列出了这些服务器及其常用端口。`inetd` 命令监听所有这些端口；当它检测到任何此类端口的连接时，就会执行相应的服务器程序。
+`/etc/inetd.conf`文件列出了这些服务器及其常用端口。`inetd`命令监听所有这些端口；当它检测到任何此类端口的连接时，就会执行相应的服务器程序。
 
-* * *
+*Debian 策略* 在`inetd.conf`中注册服务器
 
-*Debian 策略* 在 `inetd.conf` 中注册服务器
+软件包经常想要在`/etc/inetd.conf`文件中注册新服务器，但 Debian 策略禁止任何软件包修改其不拥有的配置文件。这就是创建`update-inetd`脚本（在同名软件包中）的原因：它管理配置文件，其他软件包因此可以使用它将新服务器注册到超服务器的配置中。
 
-软件包经常想要在 `/etc/inetd.conf` 文件中注册新服务器，但 Debian 策略禁止任何软件包修改其不拥有的配置文件。这就是创建 `update-inetd` 脚本（在同名软件包中）的原因：它管理配置文件，其他软件包因此可以使用它将新服务器注册到超服务器的配置中。
+`/etc/inetd.conf`文件的每一行重要内容通过七个字段（用空格分隔）描述一个服务器：
 
-* * *
-
-`/etc/inetd.conf` 文件的每一行重要内容通过七个字段（用空格分隔）描述一个服务器：
-
-* TCP 或 UDP 端口号，或服务名称（映射 `/etc/services` 中的标准端口）。
-* Socket 类型：`stream` 用于 TCP 连接，`dgram` 用于 UDP 数据报。
-* 协议：`tcp` 或 `udp`。
-* 选项：两个可能的值 `wait` 或 `nowait`，告诉 `inetd` 是否应该等待启动进程结束再接受另一个连接。对于多路复用的 TCP 连接，通常可以使用 `nowait`。对于响应 UDP 的程序，只有当服务器能够管理并行连接时才使用 `nowait`。你可以在此字段后加点，随后是分钟允许的最大连接数（默认限制为 256）。
+* TCP 或 UDP 端口号，或服务名称（映射`/etc/services`中的标准端口）。
+* Socket 类型：`stream`用于 TCP 连接，`dgram`用于 UDP 数据报。
+* 协议：`tcp`或`udp`。
+* 选项：两个可能的值`wait`或`nowait`，告诉`inetd`是否应该等待启动进程结束再接受另一个连接。对于多路复用的 TCP 连接，通常可以使用`nowait`。对于响应 UDP 的程序，只有当服务器能够管理并行连接时才使用`nowait`。你可以在此字段后加点，随后是分钟允许的最大连接数（默认限制为 256）。
 * 以身份运行服务器的用户名。
 * 要执行的服务器程序的完整路径。
 * 参数：这是程序的完整参数列表，包括自身的名称（`argv[0]`）。
@@ -4934,35 +5005,35 @@ Inetd（通常被称为“Internet 超服务器”）是“服务器的服务器
 
 ```
 示例 9.1 /etc/inetd.conf 节
-talk dgram udp wait nobody.tty /usr/sbin/in.talkd in.talkd
-finger stream tcp nowait nobody /usr/sbin/tcpd in.fingerd
-ident stream tcp nowait nobody /usr/sbin/identd -i
 ```
+
+
+
+`talk dgram udp wait nobody.tty /usr/sbin/in.talkd in.talkd`
+
+`finger stream tcp nowait nobody /usr/sbin/tcpd in.fingerd`
+
+`ident stream tcp nowait nobody /usr/sbin/identd -i`
 
 `tcpd` 程序经常用于 `/etc/inetd.conf` 文件。它通过应用访问控制规则来限制传入连接，规则在 `hosts_access(5)` 手册页中有并在 `/etc/hosts.allow` 和 `/etc/hosts.deny` 中配置。一旦确定连接已授权，`tcpd` 将执行真正的服务器（例如示例中的 `in.fingerd`）。需要注意的是，`tcpd` 依赖于调用它的名称（即第一个参数 `argv[0]`）来识别要运行的实际程序。因此，你不应该以 `tcpd` 开始参数列表，而应该从被封装的程序开始。
 
-* * *
+---
 
-*社区* Wietse Venema
+**社区** Wietse Venema
 
 Wietse Venema 因其安全专业知识而成为著名的程序员，他是 `tcpd` 程序的作者。他也是模块邮件服务器（SMTP，简单邮件传输协议）的主要创建者，Postfix 设计比具有长期安全漏洞的 `sendmail` 更安全、更可靠。
 
-* * *
+---
 
-* * *
-
-*替代方案* 其他 **inetd** 命令
+**替代方案** 其他 `inetd` 命令
 
 虽然 Debian 默认安装 `openbsd-inetd`，但并不替代方案：我们可以提到 `inetutils-inetd`、`micro-inetd`、`rlinetd` 和 `xinetd`。
-
-
-
 
 这种超级服务器的最后一种形式提供了非常有趣的可能性。最值得注意的是，它的配置可以拆分为几个文件（当然存储在 `/etc/xinetd.d/` 目录下），这可以使管理员的工作变得轻松。
 
 最后但同样重要的是，甚至可以使用 `systemd` 的套接激活机制来模拟 `inetd` 的行为（参见第 9.1.1 节，“systemd 初始化系统”）。
 
-* * *
+---
 
 # 9.7. 使用 `cron` 和 `atd` 调度任务
 
@@ -4970,65 +5041,65 @@ Wietse Venema 因其安全专业知识而成为著名的程序员，他是 `tcpd
 
 在 Unix 系统中，许多任务被安排为定期执行：
 
-*   轮转日志；
-*   更新 `locate` 程序的数据库；
-*   备份；
-*   维护脚本（例如清理临时文件）。
+- 轮转日志；
+- 更新 `locate` 程序的数据库；
+- 备份；
+- 维护脚本（例如清理临时文件）。
 
 默认情况下，所有用户都可以调度任务执行。因此，每个用户都有自己的 `crontab`，可以在其中记录计划的命令。可以通过运行 `crontab -e` 进行编辑（其内容存储在 `/var/spool/cron/crontabs/user` 文件中）。
 
-* * *
+---
 
-### 安全 限制 `cron` 或 `atd`
+**安全** 限制 `cron` 或 `atd`
 
 你可以通过在 `/etc/cron.allow` 中创建一个显式的授权文件（白名单）来限制对 `cron` 的访问，在其中指定唯一授权调度命令的用户。所有其他用户将自动失去此功能。相反，如果只想阻止一或两个捣乱分子，可以在显式禁止文件（黑名单）`/etc/cron.deny` 中写入他们的用户名。此功能也适用于 `atd`，对应于 `/etc/at.allow` 和 `/etc/at.deny` 文件。
 
-* * *
+---
 
 root 用户有他们自己的 `crontab`，也可以使用 `/etc/crontab` 文件，或者在 `/etc/cron.d` 目录下编写额外的 `crontab` 文件。后两种解决方案的优势在于可以指定执行命令时所使用的用户身份。
 
 `cron` 软件包默认包含了一些会执行的计划命令：
 
-*   每小时执行一次 `/etc/cron.hourly/` 目录下的程序；
-*   每天执行一次 `/etc/cron.daily/` 目录下的程序；
-*   每周执行一次 `/etc/cron.weekly/` 目录下的程序；
-*   每月执行一次 `/etc/cron.monthly/` 目录下的程序。
+- 每小时执行一次 `/etc/cron.hourly/` 目录下的程序；
+- 每天执行一次 `/etc/cron.daily/` 目录下的程序；
+- 每周执行一次 `/etc/cron.weekly/` 目录下的程序；
+- 每月执行一次 `/etc/cron.monthly/` 目录下的程序。
 
 许多 Debian 软件包依赖此服务：通过将维护脚本放在这些目录中，它们确保了服务的最佳运行。
 
 ## 9.7.1. `crontab` 文件的格式
 
-* * *
+---
 
-### 提示 `cron` 文本快捷键
+**提示** `cron` 文本快捷键
 
 `cron` 识别某些替换 `crontab` 条目中前五个字段的缩写。它们对应于最经典的调度选项：
 
-*   `@yearly`: 每年一次（1 月 1 日，00:00）；
-*   `@monthly`: 每月一次（每月 1 号，00:000）；
-*   `@weekly`: 每周一次（周日 00:00）；
-*   `@daily`: 每天一次（00:00）；
-*   `@hourly`: 每小时一次（每小时开始时）。
+- `@yearly`: 每年一次（1 月 1 日，00:00）；
+- `@monthly`: 每月一次（每月 1 号，00:00）；
+- `@weekly`: 每周一次（周日 00:00）；
+- `@daily`: 每天一次（00:00）；
+- `@hourly`: 每小时一次（每小时开始时）。
 
-* * *
+---
 
-### 特殊情况 `cron` 与夏令时
+**特殊情况** `cron` 与夏令时
 
 在 Debian 中，`cron` 会尽可能地考虑时间变化（针对夏令时，或者实际上针对任何本地时间的重大变化）。因此，本应在从未存在的小时内执行的命令（例如，在法国春季夏令切换期间于凌晨 2:30 调定的任务，因为时钟在凌晨 2:00 直接跳到 3:00）将在时间变化后不久执行（即在夏令时间时间的凌晨 3:00 左右）。另一方面，在秋季，本应执行多次的命令（夏令时间凌晨 2:30，然后是一小时后的标准时间凌晨 2:30，因为时钟在夏令时间凌晨 3:00 拨回凌晨 2:00）仅将执行一次。
 
 然而，如果不同计划任务的执行顺序以及它们各自执行之间的延迟很重要，你应该检查这些限制条件与 `cron` 行为的兼容性；如有必要，你可以为每年的两个问题夜晚准备一个特殊的调度。
 
-* * *
+---
 
 `crontab` 的每行有效内容都通过以下六（或七）字段描述一个计划命令：
 
-*   分钟的值（0 到 59 的数字）；
-*   小时的值（0 到 23）；
-*   日期的值（1 到 31）；
-*   月份的值（1 到 12）；
-*   星期的值（0 到 7，其中 1 对应周一，周日由 0 和 7 都表示；也可以使用周几英文名称的前三个字母，例如 `Sun`、`Mon` 等）；
-*   *（可选）* 必须以该用户身份执行命令的用户名（仅在 `/etc/crontab` 中有效）；
-*   要执行的命令。
+- 分钟的值（0 到 59 的数字）；
+- 小时的值（0 到 23）；
+- 日期的值（1 到 31）；
+- 月份的值（1 到 12）；
+- 星期的值（0 到 7，其中 1 对应周一，周日由 0 和 7 都表示；也可以使用周几英文名称的前三个字母，例如 `Sun`、`Mon` 等）；
+- *（可选）* 必须以该用户身份执行命令的用户名（仅在 `/etc/crontab` 中有效）；
+- 要执行的命令。
 
 ## 9.7.2. 使用 `at` 命令
 
@@ -5040,11 +5111,10 @@ echo "Don't forget to wish a Happy Birthday to Raphaël!"
 | mail lolando@debian.org
 END
 ```
-警告：命令将使用 /bin/sh job 31 于 Mon Jul 27 09:00:00 2015 执行
+
+警告：命令将使用 `/bin/sh` job 31 于 Mon Jul 27 09:00:00 2015 执行
 
 另一种语法根据给定的时长推后执行：`at now + *number* *period*`。`period` 可以是 `minutes`、`hours`、`days` 或 `weeks`。`number` 直接表示在执行命令前必须经过的相应单位数量。
-
-
 
 要取消由 `cron` 调度的任务，只需运行 `crontab -e` 并删除 `crontab` 文件中相应的行即可。对于 `at` 任务，操作同样简单：运行 `atrm *task-number*`。任务号在你调度任务时由 `at` 命令标出，但你也可以通过 `atq` 命令再次找到它，该命令会列出当前调度的任务列表。
 
@@ -5052,13 +5122,13 @@ END
 
 `anacron` 是一个守护进程，用于为并非始终运行的计算机完善 `cron` 功能。由于常规任务通常调度在半夜执行，如果计算机在那个时间处于关机状态，它们将永远不会执行。`anacron` 的目的就是执行这些任务，并考虑到计算机未运行的时间段。
 
-请注意，`anacron` 经常会在机器启动后后的几分钟内执行此类活动，这可能会导致计算机响应速度降低。这就是为什么 `/etc/anacrontab` 文件中的任务是通过 `nice` 命令启动的，这降低了它们的执行优先级，从而限制了它们对系统其他部分的影响。注意，该文件的格式与 `/etc/crontab` 不同；如果你对 `anacron` 有特殊需求，请参见 anacrontab(5) 手页。
+请注意，`anacron` 经常会在机器启动后后的几分钟内执行此类活动，这可能会导致计算机响应速度降低。这就是为什么 `/etc/anacrontab` 文件中的任务是通过 `nice` 命令启动的，这降低了它们的执行优先级，从而限制了它们对系统其他部分的影响。注意，该文件的格式与 `/etc/crontab` 不同；如果你对 `anacron` 有特殊需求，请参见 `anacrontab(5)` 手页。
 
 ## 回归基础：优先级与 nice
 
 Unix 系统（以及 Linux）是多任务和多用户系统。事实上，多个进程可以并行运行，并属于不同的用户：内核调解不同进程之间的资源访问。作为这项任务的一部分，它具有优先级概念，允许它根据需要让某些进程优于其他进程。当你知道一个进程可以以低优先级运行时，可以通过通过运行 `nice *program*` 来指示这一点。该程序将获得较少的 CPU 分配，并且对其他运行进程的影响也会更小。当然，如果没有其他进程需要运行，该程序不会被人为限制。
 
-`nice` 通过“友好程度”（niceness）级别工作：正数级（1 到 19）会逐渐降低优先级，而负数级（-1 到 -20）则会增加优先级——但只有 root 用户可以使用这些负级。除非另有说明（参见 nice(1) 手页），否则 `nice` 会将当前级别增加 10。
+`nice` 通过“友好程度”（niceness）级别工作：正数级（1 到 19）会逐渐降低优先级，而负数级（-1 到 -20）则会增加优先级——但只有 root 用户可以使用这些负级。除非另有说明（参见 `nice(1)` 手页），否则 `nice` 会将当前级别增加 10。
 
 如果你发现一个已经在运行的任务本应该用 `nice` 启动，现在修复还不太晚；`renice` 命令可以更改已运行进程的优先级，方向上均可（但降低进程的“友好程度”保留给 root 用户）。
 
@@ -5095,23 +5165,22 @@ Unix 系统（以及 Linux）是多任务和多用户系统。事实上，多个
 
 要自动为新用户设置配额，你需要配置一个模板用户（使用 `edquota` 或 `setquota`），并将用户名指定在 `/etc/adduser.conf` 文件的 `QUOTAUSER` 变量中。此配额配置将自动应用于通过 `adduser` 命令创建的每个新用户。
 
-
-
 由于磁带备份被认为速度太慢且成本高昂，数据将备份在专用服务器的硬盘上。在该服务器上，使用软件 RAID（参见第 12.1.1 节，“软件 RAID”）将保护数据免受硬盘故障的影响。桌面电脑不进行单独备份，但建议用户其在部门文件服务器上的个人账户将被备份。每天都会使用 `rsync` 命令（来自同名软件包）来备份这些不同的服务器。
 
 ## 回到基础：硬链接，文件的第二个名称
 
 硬链接与符号链接不同，它无法与链接的文件区分来。创建硬链接本质上等同于给一个现有文件起第二个名称。这就是为什么删除硬链接只会删除与该文件关联的一个名称。只要该文件仍分配有另一个名称，其中的数据就会一直存在于文件系统中。值得注意的是，与拷贝文件不同，硬链接不会在硬盘上占用额外空间。
 
-使用 `ln `target` `link` 命令创建硬链接。此时 `link` 文件就是 `target` 文件的新名称。硬链接只能在同一个文件系统上创建，而符号链接则不受此限制。
+使用 `ln` `target` `link` 命令创建硬链接。此时 `link` 文件就是 `target` 文件的新名称。硬链接只能在同一个文件系统上创建，而符号链接则不受此限制。
 
 可用的硬盘空间限制了完整的每日备份。因此，在执行 `rsync` 命令之前，会先用硬链接对上次备份的内容进行复制，以防止占用过多的硬盘空间。随后 `rsync` 过程只会替换自上次备份以来修改过的文件。通过这种机制，可以在较空间内保留大量的备份。由于所有备份都是立即可用且可访问的（例如，在网络共享的不同目录中），你可以快速地在两个指定日期之间进行比较。
 
-这种备份机制可以通过 `dirvish` 程序轻松实现。它使用一个备份存储空间（在它的术语中称为“bank”），在其中存放带有时间戳的备份集副本（这些集在 dirvish 文档中被称为“vaults”）。
+这种备份机制可以通过 `dirvish` 程序轻松实现。它使用一个备份存储空间（在它的术语中称为“bank”），在其中存放带有时间戳的备份集副本（这些集在 `dirvish` 文档中被称为“vaults”）。
 
 主配置位于 `/etc/dirvish/master.conf` 文件中。它定义了备份存储空间的位置、要管理的“vaults”列表以及备份过期的默认值。配置的其他部分位于 `bank`/vault`/dirvish/default.conf` 文件中，包含了对应文件集的特定配置。
 
 示例 9.3. `/etc/dirvish/master.conf` 文件：
+
 ```
 bank: /backup exclude: lost+found/ core *~ Runall: root 22:00 expire-default: +15 days expire-rule: # MIN HR DOM MON DOW STRFTIME_FMT * * * * * 1+3 months * * 1-7 * 1 +1 year * * 1-7 1,4,7,10 1
 ```
@@ -5123,133 +5192,125 @@ bank: /backup exclude: lost+found/ core *~ Runall: root 22:00 expire-default: +1
 `dirvish-expire` 并不使用过期规则来执行工作。实际上，过期规则是在创建新的备份副本时应用的，用于定义与该副本关联的过期日期。`dirvish-expire` 仅遍历存储的副本并删除过期日期已过的副本。
 
 示例 9.4. `/backup/root/dirvish/default.conf` 文件：
+
 ```
 client: rivendell.falcot.com tree: / xdev: 1 index: gzip image-default: %Y%m%d exclude: /var/cache/apt/archives/*.deb /var/cache/man/** /tmp/** /var/tmp/** *.bak
 ```
 
-上面的示例指定了要备份的文件集：这些是机器 `rivendell.falcot.com` 上的文件（对于本地数据备份，只需按 `hostname` 指定指定本地机器名称），特别是根树（`tree: /`）中的文件，但 `exclude` 中列出的文件除外。备份将局限于一个文件系统的内容（`xdev: 1`）。它将生成保存文件的索引（`index: gzip`），并根据当前日期命名镜像（`image-default: %Y%m%d`）。
 
-有许多可用选项，均在 `dirvish.conf(5)` 手册页中有记录。一旦设置了这些配置文件，你就必须使用 `dirvish --vault `vault` --init` 命令初始化每个文件集。从那时起，每天调用 `dirvish-runall` 将在删除过期副本后自动创建一个新的备份副本。
+
+上面的示例指定了要备份的文件集：这些是机器`rivendell.falcot.com`上的文件（对于本地数据备份，只需按`hostname`指定指定本地机器名称），特别是根树（`tree: /`）中的文件，但`exclude`中列出的文件除外。备份将局限于一个文件系统的内容（`xdev: 1`）。它将生成保存文件的索引（`index: gzip`），并根据当前日期命名镜像（`image-default: %Y%m%d`）。
+
+有许多可用选项，均在`dirvish.conf(5)`手册页中有记录。一旦设置了这些配置文件，你就必须使用`dirvish --vault `vault` --init`命令初始化每个文件集。从那时起，每天调用`dirvish-runall`将在删除过期副本后自动创建一个新的备份副本。
 
 ## 实践中：通过 SSH 进行远程备份
 
-当 dirvish 需要向远程机器保存数据时，它将使用 `ssh` 连接到该机器并启动 `rsync` 作为服务器。这要求 root 用户能够自动连接。使用 SSH 身份验证密钥可以实现这一点（参见第 9.2.1.1 节，“基于密钥的认证”）。
+当`dirvish`需要向远程机器保存数据时，它将使用`ssh`连接到该机器并启动`rsync`作为服务器。这要求`root`用户能够自动连接。使用 SSH 身份验证密钥可以实现这一点（参见第 9.2.1.1 节，“基于密钥的认证”）。
 
 ## 9.10.2. 恢复没有备份的机器
 
-未备份的桌面电脑很容易从用 `Simple-CDD` 准备的自定义 DVD-ROM 重新安装（参见第 12.3.3 节，“Simple-CDD: 一体解决方案”）。由于这是从头开始的安装，它会丢失初始安装后可能进行的任何自定义。这没关系，因为所有系统都连接到中央 LDAP 目录用于账户，且大多数桌面应用程序已通过 dconf 进行了预配置（更多信息请参见第 13.3.1 节，“GNOME”）。
+未备份的桌面电脑很容易从用`Simple-CDD`准备的自定义 DVD-ROM 重新安装（参见第 12.3.3 节，“Simple-CDD: 一体解决方案”）。由于这是从头开始的安装，它会丢失初始安装后可能进行的任何自定义。这没关系，因为所有系统都连接到中央 LDAP 目录用于账户，且大多数桌面应用程序已通过`dconf`进行了预配置（更多信息请参见第 13.3.1 节，“GNOME”）。
 
 Falcot Corp 的管理员意识到其备份策略的局限性。由于他们无法像放在防火箱的磁带那样保护备份服务器，他们将其安装在一个独立的房间里，这样服务器机房火灾等灾难就不会将备份和其他一切一起摧毁。此外，他们每周在 DVD-ROM 上进行一次增量备份——仅包含自上次备份以来修改的文件。
 
 ## 进阶：备份 SQL 和 LDAP 服务
 
-许多服务（如 SQL 或 LDAP 数据库）无法通过简单的复制文件来备份（除非在创建备份期间正确地中断了它们，这通常很有问题，因为它们旨在始终可用）。因此，有必要使用“导出”机制创建一个可以安全备份的“数据转储”。这些文件通常很大，但压缩率很高。为了减少所需的存储空间，你每周只存储一个完整的文本文件，每天生成一个 **差异**，该差异通过类似 `diff `file_from_yesterday` `file_from_today`` 的命令创建。`xdelta` 程序从二进制转储生成增量差异。
+许多服务（如 SQL 或 LDAP 数据库）无法通过简单的复制文件来备份（除非在创建备份期间正确地中断了它们，这通常很有问题，因为它们旨在始终可用）。因此，有必要使用“导出”机制创建一个可以安全备份的“数据转储”。这些文件通常很大，但压缩率很高。为了减少所需的存储空间，你每周只存储一个完整的文本文件，每天生成一个**差异**，该差异通过类似`diff `file_from_yesterday` `file_from_today``的命令创建。`xdelta`程序从二进制转储生成增量差异。
 
 ## 文化：TAR，磁带备份的标准
 
-在历史上，Unix 上制作备份最简单的方法是在磁带上存储 *TAR* 归档。`tar` 命令的名字就源于“Tape ARchive”（磁带归档）。
-
-
-
+在历史上，Unix 上制作备份最简单的方法是在磁带上存储*TAR*归档。`tar`命令的名字就源于“Tape ARchive”（磁带归档）。
 
 # 9.11.1. 引言
 
-`hotplug` 内内核子系统通过加载相应的驱动程序并创建相应的设备文件（借助 `udevd` 的帮助）来动态处理设备的添加和删除。在现代硬件和虚拟化技术下，几乎所有设备都可以热插拔：从常见的 USB/PCMCIA/IEEE 1394 外围设备到 SATA 硬盘，还包括 CPU 和内存。
+`hotplug`内内核子系统通过加载相应的驱动程序并创建相应的设备文件（借助`udevd`的帮助）来动态处理设备的添加和删除。在现代硬件和虚拟化技术下，几乎所有设备都可以热插拔：从常见的 USB/PCMCIA/IEEE 1394 外围设备到 SATA 硬盘，还包括 CPU 和内存。
 
-内核拥有一个数据库，将每个设备 ID 与所需的驱动程序相关。该数据库在启动期间被用于加载在不同不同总线上检测到的所有外围设备的驱动程序，同时当连接额外的热插拔设备时也会使用它。一旦设备准备就绪，就会向 `udevd` 发送消息，以便在 `/dev/` 中创建相应的条目。
+内核拥有一个数据库，将每个设备 ID 与所需的驱动程序相关。该数据库在启动期间被用于加载在不同不同总线上检测到的所有外围设备的驱动程序，同时当连接额外的热插拔设备时也会使用它。一旦设备准备就绪，就会向`udevd`发送消息，以便在`/dev/`中创建相应的条目。
 
 # 9.11.2. 命名问题
 
-在热插拔连接出现之前，为设备分配固定名称是很容易的。这仅基于设备在各自总线上的位置。但当此类设备在总线上可以来来去去时，这就不可能的。典型案例是使用数码相机和 USB 闪盘，两者在计算机看来都显示为磁盘驱动器。第一个连接的可能是 `/dev/sdb`，第二个可能是 `/dev/sdc`（而 `/dev/sda` 代表电脑自身的硬盘）。设备名称不是固定的；它取决于设备连接的顺序。
+在热插拔连接出现之前，为设备分配固定名称是很容易的。这仅基于设备在各自总线上的位置。但当此类设备在总线上可以来来去去时，这就不可能的。典型案例是使用数码相机和 USB 闪盘，两者在计算机看来都显示为磁盘驱动器。第一个连接的可能是`/dev/sdb`，第二个可能是`/dev/sdc`（而`/dev/sda`代表电脑自身的硬盘）。设备名称不是固定的；它取决于设备连接的顺序。
 
 此外，越来越多的驱动程序对设备的主号/次号（major/minor numbers）使用动态值，这使得为给设备建立静态条目是不可能的，因为这些基本特征在重启后可能会变化。
 
-`udev` 的创建正是为了解决这个问题。
+`udev`的创建正是为了解决这个问题。
 
 # 9.11.3. udev 的工作原理
 
-当 `udev` 收到内核通知新设备出现时，它会通过查询 `/sys/` 中的对应条目来收集给定设备的各种信息，特别是那些能够唯一标识它的信息（如网卡的 MAC 地址、某些 USB 设备的序列号等）。
+当`udev`收到内核通知新设备出现时，它会通过查询`/sys/`中的对应条目来收集给定设备的各种信息，特别是那些能够唯一标识它的信息（如网卡的 MAC 地址、某些 USB 设备的序列号等）。
 
-在拥有所有信息后，`udev` 随后会查询 `/etc/udev/rules.d/` 和 `/lib/udev/rules.d/` 中包含的所有规则。在此过程中，它将决定如何命名设备、创建哪些符号链接（以提供备用名称）以及执行哪些命令。所有这些文件都会被查询，且规则将按顺序评估（除非文件使用了“GOTO” 指令）。因此，一个特定的事件可能对应多个规则。
+在拥有所有信息后，`udev`随后会查询`/etc/udev/rules.d/`和`/lib/udev/rules.d/`中包含的所有规则。在此过程中，它将决定如何命名设备、创建哪些符号链接（以提供备用名称）以及执行哪些命令。所有这些文件都会被查询，且规则将按顺序评估（除非文件使用了“GOTO”指令）。因此，一个特定的事件可能对应多个规则。
 
-规则文件的语法非常简单：每行包含选择准则和变量赋值。前者用于选择需要响应的事件，后者定义了要采取的操作。它们之间仅简单地用逗号分隔，操作符隐式地区分选择准则（使用比较运算符，如 `==` 或 `!=`）或赋值指令（使用如 `=`、`+=` 或 `:=` 等运算符）。
+规则文件的语法非常简单：每行包含选择准则和变量赋值。前者用于选择需要响应的事件，后者定义了要采取的操作。它们之间仅简单地用逗号分隔，操作符隐式地区分选择准则（使用比较运算符，如`==`或`!=`）或赋值指令（使用如`=`、`+=`或`:=`等运算符）。
 
 比较运算符用于以下变量：
 
 - `KERNEL`：内核分配给设备的名称；
 - `ACTION`：对应于事件的操作（设备被添加时为“add”，当设备被移除时为“remove”）；
-- `DEVPATH`：设备在 `/sys/` 中条目的路径；
+- `DEVPATH`：设备在`/sys/`中条目的路径；
 - `SUBSYSTEM`：生成请求的内核子系统（有很多，但几个例子包括“usb”、““ide”、““net”、““firmware”等）；
-- `ATTR{attribute}`：设备 `/sys/$devpath/` 目录下 `attribute` 文件的内容。你可以在这里找到 MAC 地址和其他与总线相关的标识符；
-- `KERNELS`、`SUBSYSTEMS` 和 `ATTRS{attributes}` 是变体，它们将尝试匹配当前设备的一个父设备上的不同选项；
-- `PROGRAM`：将测试委托给指定的程序（如果程序返回 0 则为真，否则为假）。程序的标准输出内容被存储起来，以便供 `RESULT` 测试复用；
-- `RESULT`：对上一次调用 `PROGRAM` 时存储的标准输出上执行测试。
+- `ATTR{attribute}`：设备`/sys/$devpath/`目录下`attribute`文件的内容。你可以在这里找到 MAC 地址和其他与总线相关的标识符；
+- `KERNELS`、`SUBSYSTEMS`和`ATTRS{attributes}`是变体，它们将尝试匹配当前设备的一个父设备上的不同选项；
+- `PROGRAM`：将测试委托给指定的程序（如果程序返回 0 则为真，否则为假）。程序的标准输出内容被存储起来，以便供`RESULT`测试复用；
+- `RESULT`：对上一次调用`PROGRAM`时存储的标准输出上执行测试。
 
-右侧的操作数可以使用模式表达式来同时匹配多个值。例如，`*` 匹配任何字符串（即使是空字符串）；`?` 匹配任何字符，而 `[]` 匹配方括号内列出的字符集（如果第一个字符是感叹号，则匹配相反字符，并且指示了连续的字符范围，如 `a-z`）。
+右侧的操作数可以使用模式表达式来同时匹配多个值。例如，`*`匹配任何字符串（即使是空字符串）；`?`匹配任何字符，而`[]`匹配方括号内列出的字符集（如果第一个字符是感叹号，则匹配相反字符，并且指示了连续的字符范围，如`a-z`）。
 
-关于赋值运算符，=` 分配一个值（并替换当前值）；对于列表，它会被清空并仅包含所分配的值。`:=` 执行相同的操作，但会防止后续对同一变量的更改。至于 `+=`，它会向列表添加一个项。以下变量可以被更改：
+关于赋值运算符，`=`分配一个值（并替换当前值）；对于列表，它会被清空并仅包含所分配的值。`:=`执行相同的操作，但会防止后续对同一变量的更改。至于`+=`，它会向列表添加一个项。以下变量可以被更改：
 
-- `NAME`：要在 `/dev/` 中创建的设备文件名。只有第一次赋值有效；其他的会被忽略；
+- `NAME`：要在`/dev/`中创建的设备文件名。只有第一次赋值有效；其他的会被忽略；
 - `SYMLINK`：指向同一台设备的符号链接列表；
-- `OWNER`、`GROUP` 和 `MODE` 定义了拥有设备的用户和组，以及相关的权限；
+- `OWNER`、`GROUP`和`MODE`定义了拥有设备的用户和组，以及相关的权限；
 - `RUN`：响应此事件要执行的程序列表。
 
 赋值给这些变量的值可以使用许多替换符：
 
-- `$kernel` 或 `%k`：等同于 `KERNEL`；
-- `$number` 或 `%n`：设备的顺序号，例如对于 `sda3`，它将是“3”；
-- `$devpath` 或 `%p`：等同于 `DEVPATH`；
-- `$attr{attribute}` 或 `%s{attribute}`：等同于 `ATTRS{attribute}`；
-- `$major` 或 `%M`：内核的主号；
-- `$minor` 或 `%m`：设备的次号；
-- `$result` 或 `%c`：由 `PROGRAM` 调用的标准输出字符串；
-- 最后，`%%` 和 `$$` 分别代表百分号和美元符号。
+- `$kernel`或`%k`：等同于`KERNEL`；
+- `$number`或`%n`：设备的顺序号，例如对于`sda3`，它将是“3”；
+- `$devpath`或`%p`：等同于`DEVPATH`；
+- `$attr{attribute}`或`%s{attribute}`：等同于`ATTRS{attribute}`；
+- `$major`或`%M`：内核的主号；
+- `$minor`或`%m`：设备的次号；
+- `$result`或`%c`：由`PROGRAM`调用的标准输出字符串；
+- 最后，`%%`和`$$`分别代表百分号和美元符号。
 
-上述列表是不完整的（仅包含了最重要的参数），但 `udev(7)` 手册应该是详尽的。
+上述列表是不完整的（仅包含了最重要的参数），但`udev(7)`手册应该是详尽的。
 
 # 9.11.4. 具体示例
 
-让我们考虑一个 USB 闪盘的情况，并尝试为其分配一个固定名称。首先，你必须找到能够唯一标识它的元素。为此，插入它并运行 `udevadm -a /dev/sdc`（将 `/dev/sdc` 替换为实际名称）。
+让我们考虑一个 USB 闪盘的情况，并尝试为其分配一个固定名称。首先，你必须找到能够唯一标识它的元素。为此，插入它并运行`udevadm -a /dev/sdc`（将`/dev/sdc`替换为实际名称）。
 
 ```
 udevadm -a /dev/sdc
 ```
-查看 `/devices/pci0000:00/0000:00:10.0/usb2/2-1/2-1:1.0/host4/target4:0/4:0/block/sdc`: `KERNEL="sdc" SUBSYSTEM="block" DRIVER="" ATTR{hidden}="0" ATTR{events}="media_change" ATTR{ro}="0" ATTR{removable}="1" ATTR{events_async}=="" ATTR{alignment_offset}="0" ATTR{capability}="51" ATTR{poll_msecs}=="-1" ATTR{stat}=" 130 0 6328 435 0 0 252 252 0 0" ATTR{size}="151024" ATTR{range}="16" ATTR{ext_range}="256" ATTR{inflight}==" 0 0"`
 
-查看 `/devices/pci0000:00/0000:00:10.0/usb2/2-1`: `KERNELS="2-1" SUBSYSTEMS="usb" DRIVERS="usb" ATTRS{bDeviceProtocol}="00" ATTRS{bNumInterfaces}==" 1" ATTRS{busnum}="2" ATTRS{quirks}="0x0" ATTRS{authorized}="1" ATTRS{ltm_capable}="no" ATTRS{speed}="480" ATTRS{product}=="TF10" ATTRS{manufacturer}=="TDK LoR" [...] ATTRS{serial}=="07032998B6AB77"`
+查看`/devices/pci0000:00/0000:00:10.0/usb2/2-1/2-1:1.0/host4/target4:0/4:0/block/sdc`: `KERNEL="sdc" SUBSYSTEM="block" DRIVER="" ATTR{hidden}="0" ATTR{events}="media_change" ATTR{ro}="0" ATTR{removable}="1" ATTR{events_async}=="" ATTR{alignment_offset}="0" ATTR{capability}="51" ATTR{poll_msecs}=="-1" ATTR{stat}=" 130 0 6328 435 0 0 252 252 0 0" ATTR{size}="151024" ATTR{range}="16" ATTR{ext_range}="256" ATTR{inflight}==" 0 0"`
+
+查看`/devices/pci0000:00/0000:00:10.0/usb2/2-1`: `KERNELS="2-1" SUBSYSTEMS="usb" DRIVERS="usb" ATTRS{bDeviceProtocol}="00" ATTRS{bNumInterfaces}==" 1" ATTRS{busnum}="2" ATTRS{quirks}="0x0" ATTRS{authorized}="1" ATTRS{ltm_capable}="no" ATTRS{speed}="480" ATTRS{product}=="TF10" ATTRS{manufacturer}=="TDK LoR" [...] ATTRS{serial}=="07032998B6AB77"`
 
 要创建新规则，你可以对设备变量进行测试，也可以对其中一个父设备的变量进行测试。上面的情况允许我们创建如下所示的两条规则：
 
 ```
 KERNEL=="sd?", SUBSYSTEM="block", ATTRS{serial}=="07032998B6AB77", SYMLINK+="usb_key/disk"
+
 KERNEL=="sd?[0-9]", SUBSYSTEM="block", ATTRS{serial}=="07032998B6AB77", SYMLINK+="usb_key/part%n"
 ```
 
-一旦这些规则设置在文件中（例如名为 `/etc/udev/rules.d/010_local.rules`），你只需要拔掉并重新连接 USB 闪盘。你可以看到 `/dev/usb_key/disk` 代表与 USB 闪盘相关的磁盘，而 `/dev/usb_key/part1` 是它的第一个分区。
+一旦这些规则设置在文件中（例如名为`/etc/udev/rules.d/010_local.rules`），你只需要拔掉并重新连接 USB 闪盘。你可以看到`/dev/usb_key/disk`代表与 USB 闪盘相关的磁盘，而`/dev/usb_key/part1`是它的第一个分区。
 
+# 进阶：调试`udev`的配置
 
-
-
-
-# 进阶：调试 `udev` 的配置
-
-与许多守护进程一样，`udevd` 将日志存储在 `/var/log/daemon.log` 中。但默认情况下，它的日志并不详细，通常不足以理解发生了什么。使用 `udevadm control --log-priority=info` 命令可以增加日志详细程度并解决这个问题。`udevadm control --log-priority=err` 则返回默认的日志详细级别。
-
----
+与许多守护进程一样，`udevd`将日志存储在`/var/log/daemon.log`中。但默认情况下，它的日志并不详细，通常不足以理解发生了什么。使用`udevadm control --log-priority=info`命令可以增加日志详细程度并解决这个问题。`udevadm control --log-priority=err`则返回默认的日志详细级别。
 
 # 9.12. 电源管理：高级配置与电源接口 (ACPI)
 
 电源管理主题往往充满问题。事实上，要正确挂起计算机需要所有计算机设备驱动程序都了解如何进入待机状态，并在唤醒时正确重新配置设备。遗憾的是，仍然有一些设备在 Linux 下无法良好休眠，因为它们的制造商没有提供所需的规范。
 
-Linux 支持 `ACPI`（高级配置和电源接口）——这是电源管理领域的最新标准。`acpid` 包提供了一个守护进程，用于寻找与电源管理相关的事件（如笔记本电脑在交流电源和电池电源之间切换），并根据响应执行各种命令。
-
----
+Linux 支持`ACPI`（高级配置和电源接口）——这是电源管理领域的最新标准。`acpid`包提供了一个守护进程，用于寻找与电源管理相关的事件（如笔记本电脑在交流电源和电池电源之间切换），并根据响应执行各种命令。
 
 ## 注意：显卡与待机
 
 当待机功能无法正常工作时，显卡驱动程序通常是罪魁祸首。在这种情况下，测试最新版本的 X.org 图服务器是一个好主意。
-
----
 
 在对许多 Unix 系统的通用服务进行概述后，我们将关注被管理机器的环境：网络。网络的正常工作需要许多服务。它们将在下一章中讨论。
 
@@ -5261,68 +5322,55 @@ Linux 继承了整个 Unix 网络遗产，Debian 提供了一套完整的工具�
 
 网关是连接多个网络的系统。该术语通常指本地网络通往所有外部 IP 地址的强制路径上的“出口”。网关连接在一起的每一个网络，并作为路由器在各个接口之间传递 IP 包。
 
----
-
 ## 回顾：IP 包
 
-现在的大多数网络使用 `IP` 协议（网协议）。该协议将传输的数据分割成有限大小的数据包。每个包除了负载数据外，还包含其正确路由所需的若干详细信息。
-
----
+现在的大多数网络使用`IP`协议（网协议）。该协议将传输的数据分割成有限大小的数据包。每个包除了负载数据外，还包含其正确路由所需的若干详细信息。
 
 ## 回顾：TCP/UDP
 
-许多程序并不处理单个数据包，尽管它们传输的数据确实通过 `IP` 传输；它们通常使用 `TCP`（传输控制协议）。`TCP` 是 `IP` 之上的层，允许在两点之间建立专门用于数据流的连接。程序随后只看到一个入口，可以向其中输入数据，并保证相同的数据会在连接另一端的出口处无损地（且以相同的顺序）退出。尽管在底层可能会发生许多类型的错误，但它们会被 `TCP` 补偿：丢失的包会被重传，乱序到达的包（例如，如果它们使用了不同的路径）将经过适当的重新排序。
+许多程序并不处理单个数据包，尽管它们传输的数据确实通过`IP`传输；它们通常使用`TCP`（传输控制协议）。`TCP`是`IP`之上的层，允许在两点之间建立专门用于数据流的连接。程序随后只看到一个入口，可以向其中输入数据，并保证相同的数据会在连接另一端的出口处无损地（且以相同的顺序）退出。尽管在底层可能会发生许多类型的错误，但它们会被`TCP`补偿：丢失的包会被重传，乱序到达的包（例如，如果它们使用了不同的路径）将经过适当的重新排序。
 
-另一个依赖 `IP` 的协议是 `UDP`（用户数据报协议）。与 `TCP` 不同，它是面向数据包的。它的目标不同：`UDP` 的目的仅是将一个包从一个应用程序传输到另一个应用程序。该协议不会尝试补偿路径上可能的数据包丢失，也不保证接收到的数据包顺序与发送时的顺序一致。该协议的主要优势是极大地提高了延迟，因为单个数据包的丢失不会在等待重传丢失包的期间推迟所有后续数据包的接收。
+另一个依赖`IP`的协议是`UDP`（用户数据报协议）。与`TCP`不同，它是面向数据包的。它的目标不同：`UDP`的目的仅是将一个包从一个应用程序传输到另一个应用程序。该协议不会尝试补偿路径上可能的数据包丢失，也不保证接收到的数据包顺序与发送时的顺序一致。该协议的主要优势是极大地提高了延迟，因为单个数据包的丢失不会在等待重传丢失包的期间推迟所有后续数据包的接收。
 
-`TCP` 和 `UDP` 都涉及端口，端口是与机器上特定应用程序建立通信的“扩展号码”。这一概念允许与同一通信者并行保持几个不同的通信，因为这些通信可以通过端口号来区分。
+`TCP`和`UDP`都涉及端口，端口是与机器上特定应用程序建立通信的“扩展号码”。这一概念允许与同一通信者并行保持几个不同的通信，因为这些通信可以通过端口号来区分。
 
-这些端口号中的某些由 `IANA`（互联网分配编号机构）标准化——因关联网络服务而“众周知”。例如，`TCP` 端口 `25` 通常用于电子邮件服务器。
+这些端口号中的某些由`IANA`（互联网分配编号机构）标准化——因关联网络服务而“众周知”。例如，`TCP`端口`25`通常用于电子邮件服务器。
 
 → [`www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml`](https://www.iana.org/assignments/service-names-port-numbers/service-names-port-numbers.xhtml)
 
----
-
-当本地网络使用私有地址范围（在网上不可路由）时，网关需要实现`地址伪装`（address masquerading），以便网络上的机器能与外界通信。伪装操作是网络层上运行的一种代理：从内部机器发出的每个传连接都被替换为网关自身的连接（因为网关确实有一个外部的可路由地址），通过伪装连接的数据被发送到新连接，而返回的回应数据则通过伪装连接发送回内部机器。网关为此使用了一范围专用的 `TCP` 端口，这些通常是非常大的数字（超过 60000）。随后来自内部机器的每个连接在外界看来都是来自这些预留端口之一的连接。
-
----
+当本地网络使用私有地址范围（在网上不可路由）时，网关需要实现`地址伪装`（address masquerading），以便网络上的机器能与外界通信。伪装操作是网络层上运行的一种代理：从内部机器发出的每个传连接都被替换为网关自身的连接（因为网关确实有一个外部的可路由地址），通过伪装连接的数据被发送到新连接，而返回的回应数据则通过伪装连接发送回内部机器。网关为此使用了一范围专用的`TCP`端口，这些通常是非常大的数字（超过 60000）。随后来自内部机器的每个连接在外界看来都是来自这些预留端口之一的连接。
 
 ## 知识：私有地址范围
 
-`RFC 1918` 定义了三类 `IPv4` 地址范围，这些范围并非在互联网上路由，仅用于本地网络。第一个是 `10.0.0.0/8`（参见侧边栏 回顾：基础网络概念（以太网、IP 地址、子网、广播）），它是一个 A 类范围（带有 2²⁴ 个地址）。第二个是 `172.16.0.0/12`，汇总了 16 个 B 类范围（`172.16.0.0/16` 到 `172.31.0.0/16`），每个包含 2¹⁶ 个地址。最后，`192.168.0.0/16` 是 B 类范围（256 个 C 类范围，`192.168.0.0/24` 到 `192.168.255.0/24`），带有 2⁸ 个地址。
+`RFC 1918`定义了三类`IPv4`地址范围，这些范围并非在互联网上路由，仅用于本地网络。第一个是`10.0.0.0/8`（参见侧边栏 回顾：基础网络概念（以太网、IP 地址、子网、广播）），它是一个 A 类范围（带有 2²⁴ 个地址）。第二个是`172.16.0.0/12`，汇总了 16 个 B 类范围（`172.16.0.0/16`到`172.31.0.0/16`），每个包含 2¹⁶ 个地址。最后，`192.168.0.0/16`是 B 类范围（256 个 C 类范围，`192.168.0.0/24`到`192.168.255.0/24`），带有 2⁸ 个地址。
 
 → [`www.faqs.org/rfcs/rfc918.html`](http://www.faqs.org/rfcs/rfc918.html)
 
----
-
-网关还可以执行两种类型的*网络地址转换*（或简称为 NAT）。第一种*目标地址 NAT*（DNAT）是一种用于修改（（通常是）入站连接的目的 IP 地址（和/或 `TCP` 或 `UDP` 端口）的技术。连接跟踪机制还会修改同一连接中的后续包，以确保通信的连续性。第二种 NAT 是*源地址 NAT*（SNAT），其中*伪装*是其特殊情况；SNAT 修改（通常是）出站连接的源 IP 地址（和/或 `TCP` 或 `UDP` 端口）。对于 DNAT，连接中的所有包都由连接跟踪机制进行妥善处理。请注意，NAT 仅与 `IPv4` 及其有限的地址空间相关；在 `IPv6` 中，地址的广泛可用性通过允许所有“内部”地址在互联网上直接路由，极大地减少了 NAT 的用处（这并不意味着内部机器是可访问的，因为中间防火墙可以过滤流量）。
-
----
+网关还可以执行两种类型的*网络地址转换*（或简称为 NAT）。第一种*目标地址 NAT*（DNAT）是一种用于修改（（通常是）入站连接的目的 IP 地址（和/或`TCP`或`UDP`端口）的技术。连接跟踪机制还会修改同一连接中的后续包，以确保通信的连续性。第二种 NAT 是*源地址 NAT*（SNAT），其中*伪装*是其特殊情况；SNAT 修改（通常是）出站连接的源 IP 地址（和/或`TCP`或`UDP`端口）。对于 DNAT，连接中的所有包都由连接跟踪机制进行妥善处理。请注意，NAT 仅与`IPv4`及其有限的地址空间相关；在`IPv6`中，地址的广泛可用性通过允许所有“内部”地址在互联网上直接路由，极大地减少了 NAT 的用处（这并不意味着内部机器是可访问的，因为中间防火墙可以过滤流量）。
 
 ## 回顾：端口转发
 
-DNAT 的具体应用是*端口转发*。指向机器上给定端口的入站连接被转发到另一台机器上的端口。不过，可能存在其他方案来实现类似的效果，特别是在应用层使用 `ssh`（参见 第 9.2.1.3 节，“使用端口转发创建加密隧道”）或 `redir`。
+DNAT 的具体应用是*端口转发*。指向机器上给定端口的入站连接被转发到另一台机器上的端口。不过，可能存在其他方案来实现类似的效果，特别是在应用层使用`ssh`（参见 第 9.2.1.3 节，“使用端口转发创建加密隧道”）或`redir`。
 
----
+理论足够了，让我们进入实践。将一个 Debian 系统变成网关只需通过`/proc/`虚拟文件系统在 Linux 内核中启用相应的选项：
 
-理论足够了，让我们进入实践。将一个 Debian 系统变成网关只需通过 `/proc/` 虚拟文件系统在 Linux 内核中启用相应的选项：
-
-
-
-
-
-# `echo 1 > /proc/sys/net/ipv4/conf/default/forwarding`
-
-如果 `/etc/sysctl.conf` 将 `net.ipv4.conf.default.forwarding` 选项设置为 `1`，则该选项可以在启动时自动启用。
-
-示例 10.1. `/etc/sysctl.conf` 文件：
 ```
-net.ipv4.conf.default.forwarding = 1
-net.ipv4.conf.default.rp_filter = 1
-net.ipv4.tcp_syncookies = 1
+echo 1 > /proc/sys/net/ipv4/conf/default/forwarding
 ```
 
-通过简单将手动命令中的 `ipv4` 替换为 `ipv6` 并使用 `/etc/sysctl.conf` 中的 `net.ipv6.conf.all.forwarding` 行，可以为 IPv6 相同的效果。
+如果`/etc/sysctl.conf`将`net.ipv4.conf.default.forwarding`选项设置为`1`，则该选项可以在启动时自动启用。
+
+示例 10.1. `/etc/sysctl.conf`文件：
+
+
+
+`net.ipv4.conf.default.forwarding = 1`
+
+`net.ipv4.conf.default.rp_filter = 1`
+
+`net.ipv4.tcp_syncookies = 1`
+
+通过简单将手动命令中的 `ipv4` 替换为 `ipv6` 并使用 `/etc/sysctl.conf` 中的 `net.ipv6.conf.all.forwarding` 行，可以为 IPv6 实现相同的效果。
 
 启用 IPv4 伪装是一个稍微复杂的操作，涉及配置 `netfilter` 防火墙。
 
@@ -5332,7 +5380,7 @@ net.ipv4.tcp_syncookies = 1
 
 当许多基于加密协议构建的网络服务需要某种中央认证时，证书是重要的构建模块。
 
-其中`SSL`（安全套接层）由 Netscape 发明，用于加密到网络服务器的连接。它后来由 IETF 以 `TLS`（传输层安全）的名称进行了标准化。从那时起 `TLS` 继续演进，如今由于发现了多个设计缺陷，`SSL` 已被废弃。
+其中 `SSL`（安全套接层）由 Netscape 发明，用于加密到网络服务器的连接。它后来由 IETF 以 `TLS`（传输层安全）的名称进行了标准化。从那时起 `TLS` 继续演进，如今由于发现了多个设计缺陷，`SSL` 已被废弃。
 
 `TLS` 协议的主要目标是为两个或多个通信的计算机应用程序提供隐私性和数据完整性。互联网上最常见的情况是客户端（例如网络浏览器）与服务器之间的通信。
 
@@ -5350,19 +5398,17 @@ Falcot 管理员只想为他们运行 Apache 网站创建一个证书。有一�
 apt install python-certbot-apache
 certbot --apache
 ```
-保存调试日志到 /var/log/letsencrypt/letsencrypt.log 已选插件：验证器 apache, 安装程序 apache 输入电子邮件地址（用于紧急更新和安全通知）（输入 'c' 取消）: admin@falcot.com
+
+保存调试日志到 `/var/log/letsencrypt/letsencrypt.log` 已选插件：验证器 apache, 安装程序 apache 输入电子邮件地址（用于紧急更新和安全通知）（输入 'c' 取消）: admin@falcot.com
+
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 请阅读 https://letsencrypt.org/documents/LE-SA-v1.2-November-15-2017.pdf 上的服务条款。您必须同意才能 https://acme-v02.api.letsencrypt.org/directory 注册 ACME 服务器
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - (A)同意/(C)取消: A
-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 你愿意与电子边疆基金（EFF）共享您的电子邮件地址吗？它是 Let's Encrypt 项目的创始合作伙伴，也是开发 `Certbot` 的非营利组织。我们想向您发送有关我们加密网页的工作、活动以及支持数字自由方式的电子邮件。- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - (Y)是/(N)否: N
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 你愿意与电子边疆基金（EFF）共享您的电子邮件地址吗？它是 Let's Encrypt 项目的创始合作伙伴，也是开发 `Certbot` 的非营利组织。我们想向您发送有关我们加密网页的工作、活动以及支持数字自由方式的电子邮件。- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - (Y)是/(N)否: N
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 在您的配置中未找到名称。请输入您的域名（用逗号分隔）（输入 'c' 取消）: falcot.com
 正在为 falcot.com 获取新证书 执行以下挑战：http-01 已启用 Apache 模块 等待验证... 清理 创建位于 /etc/letsencrypt/default-ssl.conf 的 SSL 主机 部署证书到 /etc/letsencrypt/sites-available/000-default.conf 已启用 Apache 模块 选择是否将 HTTP 重定向到 HTTPS。- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 1: 不重定向 - 不更改 Web 服务器配置。2: 重定向 - 将所有请求重定向到安全的 HTTPS。对于新站点或您确定网站可以在 HTTPS 上运行时请选择此。可以通过编辑您的 Web 服务器配置撤销此更改。- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 选择相应的数字 [1-2] 然后[回车]（按 'c' 取消）: 2
 已启用 Apache 模块 将 /etc/apache2/sites-enabled/000-default.conf 重定向到 /etc/apache2/sites-available/000-default-ssl.conf
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 恭喜！您成功启用了 https://falcot.com 您应该在此处测试您的配置：https://www.ssllabs.com/ssltest/analyze?d=falcot.com
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - 注意事项： 恭喜！您的证书和链已保存至：/etc/letsencrypt/live/falcot.com/fullchain.pem 您的密钥文件已保存至：/etc/letsencrypt/live/falcot.com/privkey.pem 您的证书将于 2020-06-04 过期。以后要获取新的或调整过的证书，只需再次运行 `certbot` 并使用 "certonly" 选项。要非交互式地更新*所有*证书，请运行 `certbot renew` - 您的帐户凭据已保存在 Certbot 配置目录 /etc/letsencrypt 中。您现在应该对此文件夹进行安全备份。此配置目录也将包含通过 `certbot` 获取的证书和私钥，因此定期备份此文件夹是理想的。 如果您喜欢 `certbot`，请考虑通过方式支持我们的工作： 捐赠给 ISRG / Let's Encrypt：https://letsencrypt.org/donate 捐赠给 EFF：https://eff.org/donate-le
-
-
-
-
 
 [Let's Encrypt](https://letsencrypt.org/) 计划是一项旨在创建免费、自动化且开放证书颁发机构（CA）的共同努力，为了公众利益运行。它得到了 `EFF` 和 Linux 基金的支持。该计划提供了一个用于获取和更新证书的自动化工具。这减少了手动操作的工作量，特别是当需要管理多个站点和域名时。这些证书还可以用于 SIP、XMPP、WebSockets 和 TURN 服务器。使用该服务需要对相关域名的 DNS 信息控制控制（域名验证）。
 
@@ -5376,7 +5422,7 @@ certbot certonly --webroot -w /var/www/html -d www.DOMAIN.com -d DOMAIN.com
 
 你需要重启所有使用你所创建的证书的服务。
 
-创建的证书是所谓的短命证书，有效期为 90 天，因此必须每三个月使用 `certbot renew` 命令更新一次。然而，我们不应该手动更新每张证书，而应该自动更新。certbot 在 `/etc/cron.d/certbot` 中包含了一个基本的 cron 任务。为了确保证书可以自动更新，你可以执行 `certbot renew --dry-run`。
+创建的证书是所谓的短命证书，有效期为 90 天，因此必须每三个月使用 `certbot renew` 命令更新一次。然而，我们不应该手动更新每张证书，而应该自动更新。`certbot` 在 `/etc/cron.d/certbot` 中包含了一个基本的 cron 任务。为了确保证书可以自动更新，你可以执行 `certbot renew --dry-run`。
 
 ## 10.2.2. 公钥基础设施：`easy-rsa`
 
@@ -5440,55 +5486,114 @@ if [ -z "$EASYRSA_CALLER" ]; then
 ```bash
 ./easyrsa init-pki
 ```
-注意：使用来自 `./vars` 的 Easy-RSA 配置：./vars init-pki complete; 现在可以创建 CA 或请求。你新创建的 PKI 目录是：`/home/roland/pki-falcot/pki`
+
+注意：使用来自 `./vars` 的 Easy-RSA 配置：`./vars` init-pki complete; 现在可以创建 CA 或请求。你新创建的 PKI 目录是：`/home/roland/pki-falcot/pki`
 
 下一步是创建 CA 密钥对本身（密钥对的两个部分将存储在 `pki/ca.crt` 和 `pki/private/ca.key` 下）。在这一步我们可以添加 `nopass` 选项以避免每次使用私钥时输入密码：
 
 ```bash
 ./easyrsa build-ca nopass
 ```
+
 注意：使用来自 `./vars` 的 Easy-RSA 配置：使用 SSL: openssl OpenSSL 1.1.b 2019 年 2 月 26 日 生成 RSA 私钥，2048 位模数（2 个质数） ......................................................+++++ ......+++++ e 为 65537 (0x010001) 你将被要求输入将包含在证书请求中的信息。你要输入的内容被称为区分名称或 DN。有许多字段，但你可以留空一些字段。对于某些字段将有一个默认值，如果你输入 '.'，则该字段将留空。----- 通用名称（例如：你的用户、主机或服务器名称）[Easy-RSA CA]: CA 创建完成，现在可以导入并签名证书请求。你的新 CA 证书文件位于：`/home/roland/pki-falcot/pki/ca.crt`
 
 现在可以创建证书，以及 SSL/TLS 连接服务端所需的 Diffie-Hellman 参数。他们想将其用于 VPN 服务器（参见第 10.3 节 虚拟私有网络），该服务器通过 DNS 标识 `vpn.falcot.com` 标识；此名称将重用于生成的密钥文件（`keys/vpn.falcot.com.crt` 用于公证书，`keys/vpn.falcot.com.key` 用于私钥）。
 
-
-
-
-
 ```bash
 $ ./easyrsa gen-req vpn.falcot.com nopass
-Note: using Easy-RSA configuration from: ./vars Using SSL: openssl OpenSSL 1.1.1b 26 Feb 2019 Generating a RSA private key .................................................................................+++++ ........+++++ writing new private key to '/home/roland/pki-falcot/pki/private/vpn.falcot.com.key.E5c3RGJBUd' ----- You are about to be asked to enter information that will be incorporated into your certificate request. What you are about to enter is what is called a Distinguished Name or a DN. There are quite a few fields but you can leave some blank 某些字段会有默认值，如果你输入 '.'，该字段将留空。 ----- Common Name (eg: your user, host, or server name) [vpn.falcot.com]: Keypair and certificate request completed. Your files are: req: /home/roland/pki-falcot/pki/reqs/vpn.falcot.com.req key: /home/roland/pki-falcot/pki/private/vpn.falcot.com.key
 ```
+
+
+
+`Note: using Easy-RSA configuration from: ./vars`  
+`Using SSL: openssl OpenSSL 1.1.1b 26 Feb 2019`  
+`Generating a RSA private key`  
+`.................................................................................+++++`  
+`........+++++`  
+`writing new private key to '/home/roland/pki-falcot/pki/private/vpn.falcot.com.key.E5c3RGJBUd'`  
+`-----`  
+`You are about to be asked to enter information that will be incorporated into your certificate request.`  
+`What you are about to enter is what is called a Distinguished Name or a DN.`  
+`There are quite a few fields but you can leave some blank`  
+某些字段会有默认值，如果你输入 `.`，该字段将留空。  
+`-----`  
+`Common Name (eg: your user, host, or server name) [vpn.falcot.com]:`  
+`Keypair and certificate request completed.`  
+`Your files are:`  
+`req: /home/roland/pki-falcot/pki/reqs/vpn.falcot.com.req`  
+`key: /home/roland/pki-falcot/pki/private/vpn.falcot.com.key`
 
 ```bash
 $ ./easyrsa sign-req server vpn.falcot.com
-Note: using Easy-RSA configuration from: ./vars Using SSL: openssl OpenSSL 1.1.1b 26 Feb 2019 You are about to sign the following certificate. Please check over the details shown below for accuracy. Note that this request has not been cryptographically verified. Please be sure it came from a trusted source or that you have verified the request checksum with the sender. Request subject, to be signed as a server certificate for 1080 days: subject= commonName = vpn.falcot.com Type the word 'yes' to continue, or any other input to abort. Confirm request details: yes
-Using configuration from /home/roland/pki-falcot/pki/safessl-easyrsa.cnf Check that the request matches the signature Signature ok The Subject's Distinguished Name is as follows commonName :ASN.1 12:'vpn.falcot.com' Certificate is to be certified until Jun 14 10:44:44 2022 GMT (1080 days) Write out database with 1 new entries Data Base Updated Certificate created at: /home/roland/pki-falcot/pki/issued/vpn.falcot.com.crt
 ```
+
+`Note: using Easy-RSA configuration from: ./vars`  
+`Using SSL: openssl OpenSSL 1.1.1b 26 Feb 2019`  
+`You are about to sign the following certificate.`  
+`Please check over the details shown below for accuracy.`  
+`Note that this request has not been cryptographically verified.`  
+`Please be sure it came from a trusted source or that you have verified the request checksum with the sender.`  
+`Request subject, to be signed as a server certificate for 1080 days:`  
+`subject=`  
+`commonName = vpn.falcot.com`  
+`Type the word 'yes' to continue, or any other input to abort.`  
+`Confirm request details: yes`
+
+`Using configuration from /home/roland/pki-falcot/pki/safessl-easyrsa.cnf`  
+`Check that the request matches the signature`  
+`Signature ok`  
+`The Subject's Distinguished Name is as follows`  
+`commonName :ASN.1 12:'vpn.falcot.com'`  
+`Certificate is to be certified until Jun 14 10:44:44 2022 GMT (1080 days)`  
+`Write out database with 1 new entries`  
+`Data Base Updated`  
+`Certificate created at: /home/roland/pki-falcot/pki/issued/vpn.falcot.com.crt`
 
 ```bash
 $ ./easyrsa gen-dh
-Note: using Easy-RSA configuration from: ./vars Using SSL: openssl OpenSSL 1.1.1b 26 Feb 2019 Generating DH parameters, 2048 bit long safe prime, generator 2 This is going to take a long time […] DH parameters of size 2048 created at /home/roland/pki-falcot/pki/dh.pem
 ```
+
+`Note: using Easy-RSA configuration from: ./vars`  
+`Using SSL: openssl OpenSSL 1.1.1b 26 Feb 2019`  
+`Generating DH parameters, 2048 bit long safe prime, generator 2`  
+`This is going to take a long time […]`  
+`DH parameters of size 2048 created at /home/roland/pki-falcot/pki/dh.pem`
 
 下一步是为 VPN 客户端创建证书；每个允许使用 VPN 的计算机或人员都需要一个证书：
 
 ```bash
 $ ./easyrsa build-client-full JoeSmith nopass
-Note: using Easy-RSA configuration from: ./vars Using SSL: openssl OpenSSL 1.1.1d 10 Sep 2019 Generating a RSA private key .......................................................+++++ ...........................+++++ writing new private key to '/root/pki-falcot/pki/private/JoeSmith.key.Tgr8kk0a6a' ----- Using configuration from /root/pki-falcot/pki/safessl-easyrsa.cnf Check that the request matches the signature Signature ok The Subject's Distinguished Name is as follows commonName :ASN.1 12:'JoeSmith' Certificate is to be certified until Feb 20 04:52:43 2023 GMT (1080 days) Write out database with 1 new entries Data Base Updated
 ```
+
+`Note: using Easy-RSA configuration from: ./vars`  
+`Using SSL: openssl OpenSSL 1.1.1d 10 Sep 2019`  
+`Generating a RSA private key`  
+`.......................................................+++++`  
+`...........................+++++`  
+`writing new private key to '/root/pki-falcot/pki/private/JoeSmith.key.Tgr8kk0a6a'`  
+`-----`  
+`Using configuration from /root/pki-falcot/pki/safessl-easyrsa.cnf`  
+`Check that the request matches the signature`  
+`Signature ok`  
+`The Subject's Distinguished Name is as follows`  
+`commonName :ASN.1 12:'JoeSmith'`  
+`Certificate is to be certified until Feb 20 04:52:43 2023 GMT (1080 days)`  
+`Write out database with 1 new entries`  
+`Data Base Updated`
+
+
 
 # 10.3. 虚拟专用网络
 
 `虚拟专用网络`（简称 VPN）是一种通过隧道在互联网上连接两个不同局域网的方法；隧道通常会进行加密以确保机密性。VPN 常用于将远程机器集成到公司的本地网络中。
 
-有多种工具提供这种功能。OpenVPN 是一种基于 SSL/TLS 的高效解决方案，易于部署和维护。另一种可能性是使用 `IPsec` 来加密两台机器之间的 IP 流量；这种加密是透明的，这意味着运行在这些主机上的应用程序不需要修改即可考虑 VPN。除了其传统功能外，`SSH` 也可以用于提供 VPN。最后，可以使用微软的 `PPTP` 协议建立 VPN。虽然存在其他解决方案，但它们超本书的关注范围。
+有多种工具提供这种功能。`OpenVPN` 是一种基于 SSL/TLS 的高效解决方案，易于部署和维护。另一种可能性是使用 `IPsec` 来加密两台机器之间的 IP 流量；这种加密是透明的，这意味着运行在这些主机上的应用程序不需要修改即可考虑 VPN。除了其传统功能外，`SSH` 也可以用于提供 VPN。最后，可以使用微软的 `PPTP` 协议建立 VPN。虽然存在其他解决方案，但它们超本书的关注范围。
 
 ## 10.3.1. OpenVPN
 
-OpenVPN 是一种用于创建虚拟专用网络的软件。它的设置涉及在 VPN 服务器和客户端上创建虚拟网络接口；均支持 `tun`（用于 IP 级隧道）和 `tap`（用于以太网级隧道）接口。在实践中，通常使用 `tun` 接口，除非 VPN 客户端旨在通过以太网桥集成到服务器的本地网络。
+`OpenVPN` 是一种用于创建虚拟专用网络的软件。它的设置涉及在 VPN 服务器和客户端上创建虚拟网络接口；均支持 `tun`（用于 IP 级隧道）和 `tap`（用于以太网级隧道）接口。在实践中，通常使用 `tun` 接口，除非 VPN 客户端旨在通过以太网桥集成到服务器的本地网络。
 
-OpenVPN 依赖 `OpenSSL` 来所有的 SSL/TLS 加密和相关功能（机密性、认证、完整性、不可否认性）。它可以使用共享私钥或基于公钥基础设施的 `X.509` 证书进行配置。后者配置在面对不断增长的用户群时提供了更大的灵活性。
+`OpenVPN` 依赖 `OpenSSL` 来所有的 SSL/TLS 加密和相关功能（机密性、认证、完整性、不可否认性）。它可以使用共享私钥或基于公钥基础设施的 `X.509` 证书进行配置。后者配置在面对不断增长的用户群时提供了更大的灵活性。
 
 ### 10.3.1.1. 配置 OpenVPN 服务器
 
@@ -5496,31 +5601,27 @@ OpenVPN 依赖 `OpenSSL` 来所有的 SSL/TLS 加密和相关功能（机密性�
 
 ### 10.3.1.2. 配置 OpenVPN 服务器
 
-默认情况下，OpenVPN 初始化脚本尝试启动在 `/etc/openvpn/*.conf` 中定义的所有虚拟网络。因此，设置 VPN 服务器只需在该目录中存储一个配置文件即可。一个良好的起点是 `/usr/share/doc/openvpn/examples/sample-config/server.conf`，它通向一个相当标准的服务器。当然，某些参数需要适配：`ca`、`cert`、`key` 和 `dh` 需要描述所选的位置（分别为 `/etc/ssl/certs/ca.crt`、`/etc/ssl/certs/vpn.falcot.com.crt`、`/etc/ssl/private/vpn.falcot.com.key` 和 `/etc/openvpn/dh.pem`）。`server 10.8.0.0 255.255.255.0` 指令定义了 VPN 使用的子网；服务器使用该范围内的第一个 IP 地址（`10.8.0.1`），其余地址分配给客户端。
+默认情况下，`OpenVPN` 初始化脚本尝试启动在 `/etc/openvpn/*.conf` 中定义的所有虚拟网络。因此，设置 VPN 服务器只需在该目录中存储一个配置文件即可。一个良好的起点是 `/usr/share/doc/openvpn/examples/sample-config/server.conf`，它通向一个相当标准的服务器。当然，某些参数需要适配：`ca`、`cert`、`key` 和 `dh` 需要描述所选的位置（分别为 `/etc/ssl/certs/ca.crt`、`/etc/ssl/certs/vpn.falcot.com.crt`、`/etc/ssl/private/vpn.falcot.com.key` 和 `/etc/openvpn/dh.pem`）。`server 10.8.0.0 255.255.255.0` 指令定义了 VPN 使用的子网；服务器使用该范围内的第一个 IP 地址（`10.8.0.1`），其余地址分配给客户端。
 
-使用此配置，启动 OpenVPN 会创建虚拟网络接口，通常命名为 `tun0`。然而，防火墙通常在配置真实网络接口的同时进行配置，而这发生在 OpenVPN 启动之前。因此，最佳实践建议创建一个持久的虚拟网络接口，并配置 OpenVPN 使用此预先的接口。这进一步允许为该接口选择名称。为此，`openvpn --mktun --dev vpn --dev-type tun` 创建一个名为 `vpn` 类型为 `tun` 的虚拟网络接口；此命令可以轻松地集成到防火墙配置脚本中，或 `/etc/network/interfaces` 文件的 `up` 指令中，或者为此添加一个 udev 规则。
+使用此配置，启动 `OpenVPN` 会创建虚拟网络接口，通常命名为 `tun0`。然而，防火墙通常在配置真实网络接口的同时进行配置，而这发生在 `OpenVPN` 启动之前。因此，最佳实践建议创建一个持久的虚拟网络接口，并配置 `OpenVPN` 使用此预先的接口。这进一步允许为该接口选择名称。为此，`openvpn --mktun --dev vpn --dev-type tun` 创建一个名为 `vpn` 类型为 `tun` 的虚拟网络接口；此命令可以轻松地集成到防火墙配置脚本中，或 `/etc/network/interfaces` 文件的 `up` 指令中，或者为此添加一个 udev 规则。
 
-
-
-
-
-在没有进一步操作的情况下，VPN 客户端只能通过 `10.8.0.1` 地址访问 VPN 服务器本身。若要允许客户端访问本地网络（192.168.0.0/24），需要在 OpenVPN 配置中添加 `push route 192.168.0.0 255.255.255.0` 指令，以便 VPN 客户端能够自动获取一条网络路由，告诉它们该网络可以通过 VPN 访问。此外，本地网络上的机器也需要被告知通往 VPN 的路由需要通过 VPN 服务器（当 VPN 服务器安装在网关上时，这会自动工作）。或者，可以配置 VPN 服务器执行 IP 伪装（IP Masquerading），使得来自 VPN 客户端的连接看起来像是是来自 VPN 服务器的（参见 第 10.1 节，“网关”）。
+在没有进一步操作的情况下，VPN 客户端只能通过 `10.8.0.1` 地址访问 VPN 服务器本身。若要允许客户端访问本地网络（`192.168.0.0/24`），需要在 `OpenVPN` 配置中添加 `push route 192.168.0.0 255.255.255.0` 指令，以便 VPN 客户端能够自动获取一条网络路由，告诉它们该网络可以通过 VPN 访问。此外，本地网络上的机器也需要被告知通往 VPN 的路由需要通过 VPN 服务器（当 VPN 服务器安装在网关上时，这会自动工作）。或者，可以配置 VPN 服务器执行 IP 伪装（IP Masquerading），使得来自 VPN 客户端的连接看起来像是是来自 VPN 服务器的（参见第 10.1 节，“网关”）。
 
 ### 10.3.1.3. 配置 OpenVPN 客户端
 
-设置 OpenVPN 客户端还需要在 `/etc/openvpn/` 中创建一个配置文件。可以使用 `/usr/share/doc/openvpn/examples/sample-config-files/client.conf` 作为起点获取标准配置。`remote vpn.falcot.com 1194` 指令描述了 OpenVPN 服务器的地址和端口；`ca`、`cert` 和 `key` 也需要调整以描述密钥文件的位置。
+设置 `OpenVPN` 客户端还需要在 `/etc/openvpn/` 中创建一个配置文件。可以使用 `/usr/share/doc/openvpn/examples/sample-config-files/client.conf` 作为起点获取标准配置。`remote vpn.falcot.com 1194` 指令描述了 `OpenVPN` 服务器的地址和端口；`ca`、`cert` 和 `key` 也需要调整以描述密钥文件的位置。
 
 如果 VPN 不在启动时不自动启动，请在 `/etc/default/openvpn` 文件中将 `AUTOSTART` 指令设置为 `none`。始终可以使用 `systemctl start openvpn@*name*` 和 `systemctl stop openvpn@*name*` 命令启动或停止给定的 VPN 连接（其中连接 `name` 需要与 `/etc/openvpn/name.conf` 中定义的名称匹配）。
 
-`network-manager-openvpn-gnome` 包包含一个 Network Manager 扩展（参见 第 8.2.5 节，“漫游用户的自动网络配置”），允许管理 OpenVPN 虚拟专用网络。这允许每个用户通过图形化界面配置 OpenVPN 连接，并从网络管理图标处控制它们。
+`network-manager-openvpn-gnome` 包包含一个 Network Manager 扩展（参见第 8.2.5 节，“漫游用户的自动网络配置”），允许管理 `OpenVPN` 虚拟专用网络。这允许每个用户通过图形化界面配置 `OpenVPN` 连接，并从网络管理图标处控制它们。
 
 ### 10.3.2. 使用 SSH 的虚拟专用网络
 
-实际上有两种方法可以使用 SSH 创建虚拟专用网络。一种传统方法涉及在 SSH 链路之上建立 PPP 层。该方法在一个 HOWTO 文档中有描述：
+实际上有两种方法可以使用 `SSH` 创建虚拟专用网络。一种传统方法涉及在 SSH 链路之上建立 PPP 层。该方法在一个 HOWTO 文档中有描述：
 
 → [`www.tldp.org/HOWTO/ppp-ssh/`](https://www.tldp.org/HOWTO/ppp-ssh/)
 
-第二种方法较新，是 OpenSSH 4.3 引入的；现在 OpenSSH 可以在 SSH 连接的双方创建虚拟网络接口（`tun*`），并且这些虚拟接口可以像物理接口一样进行配置。必须先通过在 SSH 服务器配置文件（`/etc/ssh/sshd_config`）中将 `PermitTunnel` 设置为“yes”来启用隧道系统。在建立 SSH 连接时，必须使用 `-w any:any` 选项显式请求创建隧道（`any` 可以替换为所需的 `tun` 设备号）。这要求用户在双方都拥有管理员权限，以便创建网络设备（换句话说，必须以 root 身份建立连接）。
+第二种方法较新，是 OpenSSH 4.3 引入的；现在 `OpenSSH` 可以在 SSH 连接的双方创建虚拟网络接口（`tun*`），并且这些虚拟接口可以像物理接口一样进行配置。必须先通过在 SSH 服务器配置文件（`/etc/ssh/sshd_config`）中将 `PermitTunnel` 设置为“yes”来启用隧道系统。在建立 SSH 连接时，必须使用 `-w any:any` 选项显式请求创建隧道（`any` 可以替换为所需的 `tun` 设备号）。这要求用户在双方都拥有管理员权限，以便创建网络设备（换句话说，必须以 root 身份建立连接）。
 
 通过 SSH 创建虚拟专用网络的这两种方法都非常简单。然而，它们提供的 VPN 并不是最高的；特别是它们无法很好地处理高流量。
 
@@ -5532,35 +5633,27 @@ OpenVPN 依赖 `OpenSSL` 来所有的 SSL/TLS 加密和相关功能（机密性�
 
 ### 10.3.3. IPsec
 
-IPsec 尽管是 IP VPN 的标准，但其实现要复杂得多。IPsec 引擎本身集成在 Linux 内核中；所需的用户空间部分（控制和配置工具）由 `libreswan` 包或 `strongswan` 包提供。这里我们简介绍 libreswan 选项。
+`IPsec` 尽管是 IP VPN 的标准，但其实现要复杂得多。`IPsec` 引擎本身集成在 Linux 内核中；所需的用户空间部分（控制和配置工具）由 `libreswan` 包或 `strongswan` 包提供。这里我们简介绍 `libreswan` 选项。
 
-首先，我们安装 `libreswan` 包。具体来说，每个主机的 `/etc/ipsec.conf` 包含了该主机关注的 `IPsec tunnels`（或 IPsec 术语中的 `Security Associations`）参数。`/usr/share/doc/libreswan/` 中有很多配置示例，但 Libreswan 的在线文档有更多带有解释的示例：
+首先，我们安装 `libreswan` 包。具体来说，每个主机的 `/etc/ipsec.conf` 包含了该主机关注的 `IPsec tunnels`（或 IPsec 术语中的 `Security Associations`）参数。`/usr/share/doc/libreswan/` 中有很多配置示例，但 `Libreswan` 的在线文档有更多带有解释的示例：
 
 → [`libreswan.org/wiki/`](https://libreswan.org/wiki/)
 
 可以使用 `systemctl` 控制 IPsec 服务；例如，`systemctl start ipsec` 将启动 IPsec 服务。
 
-尽管 IPsec 是参考标准，但设置 IPsec 的复杂性限制了它在实践中的用法。当需要的隧道既不多也不动态时，通常会优先选择基于 OpenVPN 的解决方案。
-
-* *
+尽管 `IPsec` 是参考标准，但设置 `IPsec` 的复杂性限制了它在实践中的用法。当需要的隧道既不多也不动态时，通常会优先选择基于 `OpenVPN` 的解决方案。
 
 **注意** IPsec 和 NAT
 
 防火墙的 NAT 和 IPsec 配合并不良好：由于 IPsec 对数据包进行签名，防火墙对这些数据包进行的任何更改都会导致签名失效，数据包将在目的地被拒绝。各种 IPsec 实现现在都包含了 `NAT-T` 技术（用于 `NAT Traversal`），它基本上是将 IPsec 数据包封装在一个标准的 UDP 包中。
 
-* *
-
-* *
-
 **安全** IPsec 和防火墙
 
 IPsec 的标准操作模式涉及在 UDP 500 上进行密钥交换（如果使用 NAT-T，则在 UDP 4500 上）。此外，IPsec 数据包使用两个专用 IP 协议，防火墙必须允许通过；这些数据包的接收基于它们的协议号 50 (ESP) 和 51 (AH)。
 
-* * *
-
 ### 10.3.4. PPTP
 
-PPTP（用于 `Point-to-Point Tunneling Protocol`）使用两个通信通道，一个用于控制数据，一个用于负载数据；后者使用 GRE 协议（*Generic Encapsulation*）。随后在数据通道上建立标准的 PPP 链路。
+`PPTP`（用于 `Point-to-Point Tunneling Protocol`）使用两个通信通道，一个用于控制数据，一个用于负载数据；后者使用 GRE 协议（*Generic Encapsulation*）。随后在数据通道上建立标准的 PPP 链路。
 
 #### 10.3.4.1. 配置客户端
 
@@ -5570,54 +5663,71 @@ PPTP（用于 `Point-to-Point Tunneling Protocol`）使用两个通信通道，�
 
 Falcot 管理员了几个文件：`/etc/ppp/options.pptp`、`/etc/ppp/peers/falcot`、`/etc/ppp/ip-up.d/falcot` 和 `/etc/ppp/ip-down.d/falcot`。
 
-示例 10.2. `/etc/ppp/options.pptp` 文件：用于 PPTP 连接的 PPP 选项 lock noauth nobscomp
+示例 10.2. `/etc/ppp/options.pptp` 文件：用于 PPTP 连接的 PPP 选项
 
-示例 10.3. `/etc/ppp/peers/falcot`：vpn.falcot.com 是 PPTP 服务器 `pptp vpn.falcot.com --nolaunchpppd` # 连接将识别为用户 vpn remotename pptp # 需要加密 require-mppe-128 file `/etc/ppp/options.pptp` ipparam falcot
+```
+lock
+noauth
+nobscomp
+```
+
+示例 10.3. `/etc/ppp/peers/falcot`：
+
+```
+# vpn.falcot.com 是 PPTP 服务器
+pptp vpn.falcot.com --nolaunchpppd
+# 连接将识别为用户 vpn
+remotename pptp
+# 需要加密
+require-mppe-128
+file /etc/ppp/options.pptp
+ipparam falcot
+```
 
 示例 10.4. `/etc/ppp/ip-up.d/falcot`：
+
 ```
-如果如果是 falcot，则创建通往 Falcot 网络的路由 # 192.168.0.0/24 是（远程）Falcot 网络 ip route add 192.168.0.0/24 dev $1
+# 如果如果是 falcot，则创建通往 Falcot 网络的路由
+# 192.168.0.0/24 是（远程）Falcot 网络
+ip route add 192.168.0.0/24 dev $1
 ```
 
 示例 10.5. `/etc/ppp/ip-down.d/falcot`：
-```
-如果如果是 falcot，则删除通往 Falcot 网络的路由 # 192.168.0.0/24 是（远程）Falcot 网络 ip route del 192.168.0.0/24 dev $1
-```
 
-* * *
+```
+# 如果如果是 falcot，则删除通往 Falcot 网络的路由
+# 192.168.0.0/24 是（远程）Falcot 网络
+ip route del 192.168.0.0/24 dev $1
+```
 
 **安全** MPPE
 
 保护 PPTP 涉及使用 MPPE 功能（*Microsoft Point-to-Point Encryption*），该功能作为模块在官方 Debian 内核可用。
 
-* * *
-
-### 10.3.4.2. 配置服务器
-
-* * *
+#### 10.3.4.2. 配置服务器
 
 **注意** PPTP 和防火墙
 
 中间防火墙需要配置允许通过协议 47 (GRE) 的 IP 数据包。此外，PPTP 服务器的端口 1723 需要开放，以便建立通信通道。
 
-
-
-
-
 `pptpd` 是 Linux 下的 PPTP 服务器。其主配置文件 `/etc/pptpd.conf` 需修改非常少：`localip`（本地 IP 地址）和 `remoteip`（远程 IP 地址）。在下面的示例中，PPTP 服务器始终使用 `192.168.0.199` 地址，而 PPTP 客户端接收从 `192.168.0.200` 到 `192.168.0.250` 的 IP 地址。
 
 示例 10.6. `/etc/pptpd.conf` 文件
+
 ```conf
 # TAG: speed
 # 指定 PPP 守护进程通信的速率。
 # speed 115200
+
 # TAG: option
 # 指定 PPP 选项文件的位置。
 # 默认情况下，PPP 在 '/etc/ppp/options' 中查找
 # option /etc/ppp/pptpd-options
+
 # TAG: debug
 # 向 syslog 开启（更多）调试信息。
 # debug
+
 # TAG: localip
 # TAG: remoteip
 # 指定本地和远程 IP 地址范围。
@@ -5625,19 +5735,21 @@ Falcot 管理员了几个文件：`/etc/ppp/options.pptp`、`/etc/ppp/peers/falc
 # 指定范围，或者两者都指定。例如：
 # 192.168.0.234,192.168.0.245-249,192.168.0.254
 # 重要限制：
-# 1\. 逗号之间或地址内部不允许有空格。
-# 2\. 如果你提供的 IP 地址多于 MAX_CONNECTIONS，它将
+# 1. 逗号之间或地址内部不允许有空格。
+# 2. 如果你提供的 IP 地址多于 MAX_CONNECTIONS，它将
 # 从列表开始计数，直到获取
 # MAX_CONNECTIONS 个 IP。其余的将被忽略。
-# 3\. 范围内不允许使用简写！例如，234-8 并不意味着 234 到 238，
+# 3. 范围内不允许使用简写！例如，234-8 并不意味着 234 到 238，
 # 如果是这个意思，必须输入 234-238。
-# 4\. 如果你提供单个 localIP，这是可以的——所有本地 IP
+# 4. 如果你提供单个 localIP，这是可以的——所有本地 IP
 # 将设置为给定的那个。但你仍然必须为每个并发客户端
 # 提供至少一个远程 IP。
+
 #localip 192.168.0.234-238,192.168.0.245
 #remoteip 192.168.1.234-238,192.168.1.245
 #localip 10.0.1.1
 #remoteip 10.0.1.2-100
+
 localip 192.168.0.199
 remoteip 192.168.0.200-250
 ```
@@ -5645,30 +5757,44 @@ remoteip 192.168.0.200-250
 PPTP 服务器使用的 PPP 配置也要求在 `/etc/ppp/pptpd-options` 中进行一些更改。重要的参数是服务器名称 (`pptp`)、域名 (`falcot.com`)，以及 DNS 服务器和 WINS 服务器的 IP 地址。
 
 示例 10.7. `/etc/ppp/pptpd-options` 文件
+
 ```conf
 # 开启 pppd syslog 调试
 #debug
+
 # 将 'servername' 更改为 chap-secrets 中指定的服务器名称
 name pptp
+
 # 将域名 更改为你的本地域名
 domain falcot.com
+
 # 这些是 WinXXXX 客户端的合理默认值
 # 针对安全相关设置
 # Debian pppd 包现在同时支持 MSCHAP 和 MPPE，因此在此
 # 启用它们。请注意，内核也必须支持 MPPE！
-auth require-chap require-mschap require-mschap-v2 require-mppe-128
+auth
+require-chap
+require-mschap
+require-mschap-v2
+require-mppe-128
+
 # 填写你的地址
 ms-dns 192.168.0.1
 ms-wins 192.168.0.1
+
 # 填写你的子掩码
 netmask 255.255.255.0
+
 # 一些默认
-nodefaultroute proxyarp lock
+nodefaultroute
+proxyarp
+lock
 ```
 
 最后一步是在 `/etc/ppp/chap-secrets` 文件中注册 `vpn` 用户（以及关联密码）。与其他使用星号 (`*`) 即可生效的情况不同，这里必须显式地填写服务器名称。此外，Windows PPTP 客户端以 `DOMAIN\USER` 的形式标识自己，而不是仅提供用户名。这解释了为什么该文件也提到了 `FALCOT\vpn` 用户。也可以为用户指定单个 IP 地址；在此字段中使用星号表示应使用动态地址分配。
 
 示例 10.8. `/etc/ppp/chap-secrets` 文件
+
 ```conf
 # 使用 CHAP 进行认证的密钥
 # 客户端 服务器密钥 IP 地址
@@ -5676,80 +5802,75 @@ vpn pptp f@Lc3au *
 FALCOT\vpn pptp f@Lc3au *
 ```
 
-* * *
+
 
 # 安全 PPTP 漏洞
 
-微软的第一个 PPTP 实现遭了严厉批评，因为它存在许多安全漏洞；从那以后，大多数漏洞在较新版本中已修复。本节记录的配置使用了最新版本的协议。但请注意，移除某些选项（如 `require-mppe-128` 和 `require-mschap-v2`）会使服务再次变得脆弱。
-
-* * *
+微软的第一个 PPTP 实现遭到了严厉批评，因为它存在许多安全漏洞；从那以后，大多数漏洞在较新版本中已修复。本节记录的配置使用了最新版本的协议。但请注意，移除某些选项（如`require-mppe-128`和`require-mschap-v2`）会使服务再次变得脆弱。
 
 # 10.4. 服务质量
 
 ## 10.4.1. 原理与机制
 
-服务质量（或简称 `QoS`）是指一组保证或提高提供给应用程序的服务质量的技术。最流行的此类技术涉及将网络流量分为不同的类别，并根据流量所属的类别对其进行差异化处理。这种差异化服务的主要应用是`流量整形` (traffic shaping)。
+服务质量（或简称`QoS`）是指一组保证或提高提供给应用程序的服务质量的技术。最流行的此类技术涉及将网络流量分为不同的类别，并根据流量所属的类别对其进行差异化处理。这种差异化服务的主要应用是`流量整形`（traffic shaping）。
 
 ## 10.4.2. 配置与实现
 
-QoS 参数通过 `tc` 命令（由 iproute 包提供）进行设置。由于其接口相当复杂，建议使用高级别的工具。
+`QoS`参数通过`tc`命令（由`iproute`包提供）进行设置。由于其接口相当复杂，建议使用高级别的工具。
 
-### 10.4.2.1. 降低延迟：wondersaper
+### 10.4.2.1. 降低延迟：`wondersaper`
 
 `wondersaper`（同名包中）的主要目的是在不受网络负载的情况下最小化延迟。这是通过将总流量限制在略低于链路饱和的值实现的。
 
-一旦配置了网络接口，通过运行 `wondersaper interface download_rate upload_rate` 即可设置流量限制。接口可以是 `eth0` 或 `ppp0` 等，两个速率都以千比特每秒表示。`wondersaper remove interface` 命令禁用指定接口上的流量控制。
+一旦配置了网络接口，通过运行`wondersaper interface download_rate upload_rate`即可设置流量限制。接口可以是`eth0`或`ppp0`等，两个速率都以千比特每秒表示。`wondersaper remove interface`命令禁用指定接口上的流量控制。
 
-对于以太网连接，此脚本最好在接口配置后调用。这通过在 `/etc/network/interfaces` 文件中添加 `up` 和 `down` 指令来实现，分别在接口配置后和取消前运行声明的命令。例如：
+对于以太网连接，此脚本最好在接口配置后调用。这通过在`/etc/network/interfaces`文件中添加`up`和`down`指令来实现，分别在接口配置后和取消前运行声明的命令。例如：
 
-示例 10.9. `/etc/network/interfaces` 的更改
+示例 10.9. `/etc/network/interfaces`的更改
+
 ```text
 iface eth0 inet dhcp
     up /sbin/wondersaper eth0 500 100
     down /sbin/wondersaper remove eth0
 ```
 
-在 PPP 情况下，在 `/etc/ppp/ip-up.d/` 中创建一个调用 **wondersaper** 的脚本，可以在连接建立后立即启用流量控制。
-
-* * *
+在 PPP 情况下，在`/etc/ppp/ip-up.d/`中创建一个调用`wondersaper`的脚本，可以在连接建立后立即启用流量控制。
 
 # 进阶：最佳配置
 
-`/usr/share/doc/wondersaper/README.Debian.gz` 文件详细描述了包维护者推荐的配置方法。特别是，它建议测量下载和上传速度，以便更好地评估真实限制。
+`/usr/share/doc/wondersaper/README.Debian.gz`文件详细描述了包维护者推荐的配置方法。特别是，它建议测量下载和上传速度，以便更好地评估真实限制。
 
+除非有特定的`QoS`配置，否则 Linux 内核使用`pfifo_fast`队列调度器，它本身提供了一些有趣的功能。每个处理的 IP 数据包的优先级基于该数据包的 DSCP 字段（区分服务代码点，区分服务差异）；修改此 6 位字段即可利用这些调度特性。更多信息请参阅[`en.wikipedia.org/wiki/Differentiated_services#Class_Selector`](https://en.wikipedia.org/wiki/Differentiated_services#Class_Selector)。
 
+DSCP 字段可以由生成 IP 数据包的应用程序设置，也可以由`netfilter`直接修改。以下规则足以提高服务器 SSH 服务的响应速度，注意 DSCP 字段必须以十六进制格式设置：
 
-
-
-除非有特定的 QoS 配置，否则 Linux 内核使用 `pfifo_fast` 队列调度器，它本身提供了一些有趣的功能。每个处理的 IP 数据包的优先级基于该数据包的 DSCP 字段（区分服务代码点，区分服务差异）；修改此 6 位字段即可利用这些调度特性。更多信息请参阅 [`en.wikipedia.org/wiki/Differentiated_services#Class_Selector`](https://en.wikipedia.org/wiki/Differentiated_services#Class_Selector)。
-
-DSCP 字段可以由生成 IP 数据包的应用程序设置，也可以由 `netfilter` 直接修改。以下规则足以提高服务器 SSH 服务的响应速度，注意 DSCP 字段必须以十六进制格式设置：
-
-```
-nft add table ip mangle nft add rule ip mangle PREROUTING tcp sport 22 counter ip dscp set 0x04 nft add rule ip mangle PREROUTING tcp dport 22 counter ip dscp set 0x04
+```text
+nft add table ip mangle
+nft add rule ip mangle PREROUTING tcp sport 22 counter ip dscp set 0x04
+nft add rule ip mangle PREROUTING tcp dport 22 counter ip dscp set 0x04
 ```
 
 ## 10.5. 动态路由
 
-动态路由的参考工具目前是来自同名包的 `quagga`；在后者开发停止之前，它是 `zebra`。然而，出于兼容性考虑，`quagga` 保了程序的名称，这解释了下文中 `zebra` 命令的存在。
+动态路由的参考工具目前是来自同名包的`quagga`；在后者开发停止之前，它是`zebra`。然而，出于兼容性考虑，`quagga`保留了程序的名称，这解释了下文中`zebra`命令的存在。
 
-**基础知识**动态路由
+**基础知识：动态路由**
 
 动态路由允许路由器实时调整传输 IP 数据包的路径。每个协议都涉及自己的路由定义方法（最短路径、使用邻居宣告的路由等）。
 
-在 Linux 内核中，路由将网络设备连接到一组可以通过该设备访问的机器。当 `ip` 命令的第一个参数使用 `route` 时，它被用来定义新路由并显示现有路由。`route` 命令曾用于此目的，但现在已废弃，转而使用 `ip`。
+在 Linux 内核中，路由将网络设备连接到一组可以通过该设备访问的机器。当`ip`命令的第一个参数使用`route`时，它被用来定义新路由并显示现有路由。`route`命令曾用于此目的，但现在已废弃，转而使用`ip`。
 
-Quagga 是一组协作的守护进程，用于定义 Linux 内核所使用的路由表；每个路由协议（最著名的 BGP、OSPF 和 RIP）都提供自己的守护进程。`zebra` 守护进程从其他守护进程收集信息并相应处理静态路由表。其他守护进程被称为 `bgpd`、`ospfd`、`ospf6d`、`ripd`、`ripngd` 和 `isisd`。
+`Quagga`是一组协作的守护进程，用于定义 Linux 内核所使用的路由表；每个路由协议（最著名的 BGP、OSPF 和 RIP）都提供自己的守护进程。`zebra`守护进程从其他守护进程收集信息并相应处理静态路由表。其他守护进程被称为`bgpd`、`ospfd`、`ospf6d`、`ripd`、`ripngd`和`isisd`。
 
-通过创建 `/etc/quagga/daemon.conf` 文件来启用守护进程，其中 daemon 是要使用的守护进程名称；该文件必须属于 `quagga` 用户和组，以便 `/etc/init.d/zebra` 脚本才能调用该守护进程。`quagga-core` 包在 `/usr/share/doc/quagga-core/examples/` 下提供了配置示例。
+通过创建`/etc/quagga/daemon.conf`文件来启用守护进程，其中`daemon`是要使用的守护进程名称；该文件必须属于`quagga`用户和组，以便`/etc/init.d/zebra`脚本才能调用该守护进程。`quagga-core`包在`/usr/share/doc/quagga-core/examples/`下提供了配置示例。
 
-这些守护进程中的每一个配置都需要相关路由协议的知识。这里无法详细描述这些协议，但 `quagga-doc` 以 `info` 文件的形式提供了丰富的解释。相同的内容在 Quagga 网站上以 HTML 格式浏览可能会更方便：
+这些守护进程中的每一个配置都需要相关路由协议的知识。这里无法详细描述这些协议，但`quagga-doc`以`info`文件的形式提供了丰富的解释。相同的内容在 Quagga 网站上以 HTML 格式浏览可能会更方便：
 
 → [`www.nongnu.org/quagga/docs/docs-info.html`](http://www.nongnu.org/quagga/docs/docs-info.html)
 
-此外，其语法与标准路由器的配置接口非常相似，网络管理员将迅速适应 `quagga`。
+此外，其语法与标准路由器的配置接口非常相似，网络管理员将迅速适应`quagga`。
 
-**实践中** OSPF、BGP 还是 RIP？
+**实践中：OSPF、BGP 还是 RIP？**
 
 OSPF（开放最短路径优先）通常是私有网络动态路由的最佳协议，但 BGP（边界网关协议）在全网路由中更为常见。RIP（路由信息协议）相当古老，几乎不再被使用。
 
@@ -5757,35 +5878,45 @@ OSPF（开放最短路径优先）通常是私有网络动态路由的最佳协�
 
 IPv6 是 IPv4 的继任者，是 IP 协议的新版本，旨在修复其缺陷，特别是可用 IP 地址的稀缺。该协议处理网络层；其目的是提供一种标识机器的方法，向目标传输数据，并在必要时处理数据分片（换句话说，将数据包拆取决于路径上网络链接的碎片，并在到达时按正确顺序重组碎片）。
 
-Debian 内核在内核中包含了 IPv6 处理（某些架构将其编译为名为 `ipv6` 的模块）。基本工具如 `ping` 和 `traceroute` 有对应的 IPv6 版本 `ping6` 和 `traceroute6`，分别位于 `iputils-ping` 和 `iputils-tracepath` 包中。
+Debian 内核在内核中包含了 IPv6 处理（某些架构将其编译为名为`ipv6`的模块）。基本工具如`ping`和`traceroute`有对应的 IPv6 版本`ping6`和`traceroute6`，分别位于`iputils-ping`和`iputils-tracepath`包中。
 
-IPv6 网络的配置与 IPv4 类似，位于 `/etc/network/interfaces` 中。但如果你希望该网络在全局可用，你必须确保有一个具备 IPv6 能力的路由器将流量转发到全局 IPv6 网络。
+IPv6 网络的配置与 IPv4 类似，位于`/etc/network/interfaces`中。但如果你希望该网络在全局可用，你必须确保有一个具备 IPv6 能力的路由器将流量转发到全局 IPv6 网络。
 
 示例 10.10. IPv6 配置示例
-```
-iface eth0 inet6 static address 2001:db8:1234:5::1/64 # 禁用自动配置 # autoconf 0 # 路由器是自动配置且没有固定地址 # (accept_ra 1). 如果有： # gateway 2001:db8:1234:5::1
+
+```text
+iface eth0 inet6 static
+address 2001:db8:1234:5::1/64
+# 禁用自动配置
+# autoconf 0
+# 路由器是自动配置且没有固定地址
+# (accept_ra 1). 如果有：
+# gateway 2001:db8:1234:5::1
 ```
 
-IPv6 子网通常具有 64 位的子网掩码。这意味着子网内存在 2⁶⁴ 个不同的地址。这允许无状态地址自动配置 (SLAAC) 根据网络接口的 MAC 地址选择地址。默认情况下，如果你的网络中激活了 SLAAC 且你的电脑开启了 IPv6，内核将自动发现 IPv6 路由器并配置网络接口。
+IPv6 子网通常具有 64 位的子网掩码。这意味着子网内存在 2⁶⁴ 个不同的地址。这允许无状态地址自动配置（SLAAC）根据网络接口的 MAC 地址选择地址。默认情况下，如果你的网络中激活了 SLAAC 且你的电脑开启了 IPv6，内核将自动发现 IPv6 路由器并配置网络接口。
 
-这种 这种行为可能产生隐私影响。如果你频繁切换网络（例如使用笔记本电脑），你可能不希望你的 `MAC` 地址成为公共 IPv6 地址的一部分。这使得跨网络识别同一台设备变得容易。解决方案是 IPv6 隐私扩展（Debian 在初始安装期间检测到 IPv6 连接时默认启用它），它会为接口分配一个额外的随机生成地址，定期更改它们，并在出站连接中优先使用。入站连接仍可以使用 SLAAC 生成的地址。以下示例用于 `/etc/network/interfaces`，用于激活这些隐私扩展。
+这种行为可能产生隐私影响。如果你频繁切换网络（例如使用笔记本电脑），你可能不希望你的`MAC`地址成为公共 IPv6 地址的一部分。这使得跨网络识别同一台设备变得容易。解决方案是 IPv6 隐私扩展（Debian 在初始安装期间检测到 IPv6 连接时默认启用它），它会为接口分配一个额外的随机生成地址，定期更改它们，并在出站连接中优先使用。入站连接仍可以使用 SLAAC 生成的地址。以下示例用于`/etc/network/interfaces`，用于激活这些隐私扩展。
 
 示例 10.11. IPv6 隐私扩展
-```
-iface eth0 inet6 auto # 出站连接优先使用随机分配的地址。privext 2
+
+```text
+iface eth0 inet6 auto
+# 出站连接优先使用随机分配的地址。
+privext 2
 ```
 
-**提示** 使用 IPv6 构建的程序
+**提示：使用 IPv6 构建的程序**
 
-许多软件需要适配以处理 IPv6。Debian 中的大多数软件包已经经过适配，但并非全部都是。如果你喜欢的包无法在 IPv6 下工作，你可以在 *debian-ipv6* 邮件列表上寻求帮助。他们可能知道某些感知 IPv6 的替代方案，并可以提交 bug 以妥善地跟踪该问题。
+许多软件需要适配以处理 IPv6。Debian 中的大多数软件包已经经过适配，但并非全部都是。如果你喜欢的包无法在 IPv6 下工作，你可以在`debian-ipv6`邮件列表上寻求帮助。他们可能知道某些感知 IPv6 的替代方案，并可以提交 bug 以妥善地跟踪该问题。
 
 → [`lists.debian.org/debian-ipv6/`](https://lists.debian.org/debian-ipv6/)
 
-IPv6 连接可以像 IPv4 一样被限制。`nft` 可用于创建 IPv4 和 IPv6 的防火墙规则（见第 14.2.3 节，“`nft` 语法”）。
+IPv6 连接可以像 IPv4 一样被限制。`nft`可用于创建 IPv4 和 IPv6 的防火墙规则（见第 14.2.3 节，"`nft`语法"）。
 
 ### 10.6.1. 隧道技术
 
-**注意** IPv6 隧道与防火墙
+**注意：IPv6 隧道与防火墙**
 
 在 IPv4 之上的 IPv6 隧道（与原生 IPv6 相比）要求防火墙接受使用 IPv4 协议号 41 的流量。
 
@@ -5793,98 +5924,87 @@ IPv6 连接可以像 IPv4 一样被限制。`nft` 可用于创建 IPv4 和 IPv6 
 
 → [`tunnelbroker.net`](https://tunnelbroker.net)
 
-要使用 Hurricane Electric 隧道，你需要注册账户、登录、选择一个免费隧道，并使用生成的代码编辑 `/etc/network/interfaces` 文件。
+要使用 Hurricane Electric 隧道，你需要注册账户、登录、选择一个免费隧道，并使用生成的代码编辑`/etc/network/interfaces`文件。
 
-如果你想将配置好的电脑作为本地网络的路由器使用，可以安装并配置 `radvd` 守护进程（来自同名包）。这个 IPv6 配置守护进程的作用类似于 IPv4 世界中的 `dhcpd`。
+如果你想将配置好的电脑作为本地网络的路由器使用，可以安装并配置`radvd`守护进程（来自同名包）。这个 IPv6 配置守护进程的作用类似于 IPv4 世界中的`dhcpd`。
 
+随后必须创建`/etc/radvd.conf`配置文件（以`/usr/share/doc/radvd/examples/simple-radvd.conf`作为起点）。在我们的情况下，唯一需要的更改是前缀，它需要替换为 Hurricane Electric 提供的前缀；可以在`ip a`命令的输出中找到，位于关于`he-ipv6`的部分。
 
+然后运行`systemctl start radvd`。现在 IPv6 网络应该可以工作了。
 
+# 10.7. 域名服务器（DNS）
 
-随后必须创建 `/etc/radvd.conf` 配置文件（以 `/usr/share/doc/radvd/examples/simple-radvd.conf` 作为起点）。在我们的情况下，唯一需要的更改是前缀，它需要替换为 Hurricane Electric 提供的前缀；可以在 `ip a` 命令的输出中找到，位于关于 `he-ipv6` 的部分。
-
-然后运行 `systemctl start radvd`。现在 IPv6 网络应该可以工作了。
-
-# 10.7. 域名服务器 (DNS)
-
-*域名服务* (DNS) 是互联网的基础组件：它将主机名映射到 IP 地址（反之亦然），从而可以使用 `www.debian.org` 代替 `149.20.4.15` 或 `2001:4f8:1:c::15`。
+*域名服务*（DNS）是互联网的基础组件：它将主机名映射到 IP 地址（反之亦然），从而可以使用`www.debian.org`代替`149.20.4.15`或`2001:4f8:1:c::15`。
 
 DNS 记录组织在区域（zones）中；每个区域匹配一个域名（或子域名）或 IP 地址范围（因为 IP 地址通常按连续范围分配）。主服务器对区域内容具有权威性；从服务器（通常托管在独立的机器上）提供主区域的定期更新副本。
 
 每个区域可以包含各种类型的记录（*资源记录*），以下是一些最常见的记录：
 
-* `A`: IPv4 地址。
-* `CNAME`: 别名（*规范名称*）。
-* `MX`: *邮件交换*，一个电子邮件服务器。其他邮件服务器使用此信息来查找发送给给定地址的邮件。每个 MX 记录都有优先级。首先尝试优先级最高的服务器（数字最低的）（参见侧边栏 *返回基础知识* SMTP）；如果第一个服务器没有响应，则按优先级递减的顺序联系其他服务器。
-* `PTR`: IP 地址到名称的映射。此类记录存储在 IP 地址范围命名的“反向 DNS”区域中。例如，`1.168.192.in-addr.arpa` 是包含 `192.168.1.0/24` 范围内所有地址反向映射的区域。
-* `AAAA`: IPv6 地址。
-* `NS`: 将名称映射到域名服务器。每个域名必须至少有一个 NS 记录。这些记录指向可以回答有关该域名查询的 DNS 服务器；它们通常指向该域的主服务器和从服务器。这些记录还允许 DNS 委托；例如，`falcot.com` 区域可以包含一个 `internal.falcot.com` 的 NS 记录，这意味着 `internal.falcot.com` 区域由另一个服务器处理。当然，该服务器必须声明 `internal.falcot.com` 区域。
+* `A`：IPv4 地址。
+* `CNAME`：别名（*规范名称*）。
+* `MX`：*邮件交换*，一个电子邮件服务器。其他邮件服务器使用此信息来查找发送给给定地址的邮件。每个 MX 记录都有优先级。首先尝试优先级最高的服务器（数字最低的）（参见侧边栏 *返回基础知识* SMTP）；如果第一个服务器没有响应，则按优先级递减的顺序联系其他服务器。
+* `PTR`：IP 地址到名称的映射。此类记录存储在 IP 地址范围命名的"反向 DNS"区域中。例如，`1.168.192.in-addr.arpa`是包含`192.168.1.0/24`范围内所有地址反向映射的区域。
+* `AAAA`：IPv6 地址。
+* `NS`：将名称映射到域名服务器。每个域名必须至少有一个 NS 记录。这些记录指向可以回答有关该域名查询的 DNS 服务器；它们通常指向该域的主服务器和从服务器。这些记录还允许 DNS 委托；例如，`falcot.com`区域可以包含一个`internal.falcot.com`的 NS 记录，这意味着`internal.falcot.com`区域由另一个服务器处理。当然，该服务器必须声明`internal.falcot.com`区域。
 
 ## 10.7.1. DNS 软件
 
-参考名称服务器 Bind 由 ISC (*互联网软件联盟*) 开发并维护。它在 Debian 中中通过 `bind9` 包提供。第 9 版本与之前的版本相比有两个主要变化。首先，DNS 服务器现在可以在非特权用户下运行，因此服务器的安全漏洞不会赋予攻击者 root 权限（这在 8.x 版本中反复出现过）。
+参考名称服务器 Bind 由 ISC（*互联网软件联盟*）开发并维护。它在 Debian 中通过`bind9`包提供。第 9 版本与之前的版本相比有两个主要变化。首先，DNS 服务器现在可以在非特权用户下运行，因此服务器的安全漏洞不会赋予攻击者 root 权限（这在 8.x 版本中反复出现过）。
 
 此外，Bind 支持用于签名（从而验证）DNS 记录的 DNSSEC 标准，这允许在中间人攻击期间阻止任何此类数据的伪造。
 
-***
-
-文化 DNSSEC
+**文化：DNSSEC**
 
 DNSSEC 规范相当复杂；这部分解释了为什么它尚未被广泛使用（即使它可以与不感知 DNSSEC 的 DNS 服务器完美共存）。要了解所有的细节，你应该查看以下文章。
 
 → [`en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions`](https://en.wikipedia.org/wiki/Domain_Name_System_Security_Extensions)
 
-***
-
 ## 10.7.2. 配置 bind
 
-无论版本如何，`bind` 的配置文件的结构都是相同的。
+无论版本如何，`bind`的配置文件的结构都是相同的。
 
-Falcot 管理员创建了一个主 `falcot.com` 区域来存储与该域相关的信息，以及一个 `168.192.in-addr.arpa` 区域用于本地网络 IP 地址的反向映射。
+Falcot 管理员创建了一个主`falcot.com`区域来存储与该域相关的信息，以及一个`168.192.in-addr.arpa`区域用于本地网络 IP 地址的反向映射。
 
-***
+**注意：反向区域的名称**
 
-注意 反向区域的名称
+反向区域有特殊的名称。覆盖`192.168.0.0/16`网络的区域需要命名为`168.192.in-addr.arpa`：IP 地址组件被反转，并加上`in-addr.arpa`后缀。
 
-反向区域有特殊的名称。覆盖 `192.168.0.0/16` 网络的区域需要命名为 `168.192.in-addr.arpa`：IP 地址组件被反转，并加上 `in-addr.arpa` 后缀。
+对于 IPv6 网络，后缀是`ip6.arpa`，反转的 IP 地址组件是 IP 地址完整十六进制表示中的每个字符。因此，`2001:0bc8:31a0::/48`网络将使用名为`0.a.1.3.8.c.b.0.1.0.0.2.ip6.arpa`的区域。
 
-对于 IPv6 网络，后缀是 `ip6.arpa`，反转的 IP 地址组件是 IP 地址完整十六进制表示中的每个字符。因此，`2001:0bc8:31a0::/48` 网络将使用名为 `0.a.1.3.8.c.b.0.1.0.0.2.ip6.arpa` 的区域。
+**提示：测试 DNS 服务器**
 
-***
-
-提示 测试 DNS 服务器
-
-`host` 命令（在 `bind9-host` 包中）查询 DNS 服务器，并用于测试服务器配置。例如，`host machine.falcot.com localhost` 检查本地服务器对 `machine.falcot.com` 查询的响应。`host *ipaddress* localhost` 测试反向解析。
-
-***
+`host`命令（在`bind9-host`包中）查询 DNS 服务器，并用于测试服务器配置。例如，`host machine.falcot.com localhost`检查本地服务器对`machine.falcot.com`查询的响应。`host *ipaddress* localhost`测试反向解析。
 
 以下摘自 Falcot 的配置片段可以作为配置 DNS 服务器的起点：
 
+DHCP 服务器配置文件（`/etc/dhcp/dhcpd.conf`，以及用于 IPv6 的`/etc/dhcp/dhcpd6.conf`）中需要编辑的首要元素是域名和 DNS 服务器。如果该服务器在局域网中是唯一的（根据广播传播范围定义），则必须启用（或取消注释）`authoritative`指令。此外，还需要创建一个`subnet`部分，用以描述本地网络和要提供的配置信息。以下示例适用于`192.168.0.0/24`本地网络，其中路由器`192.168.0.1`充当网关。可用的 IP 地址范围为`192.168.0.128`到`192.168.0.254`。
 
-
-
-
-DHCP 服务器配置文件（`/etc/dhcp/dhcpd.conf`，以及用于 IPv6 的 `/etc/dhcp/dhcpd6.conf`）中需要编辑的首要元素是域名和 DNS 服务器。如果该服务器在局域网中是唯一的（根据广播传播范围定义），则必须启用（或取消注释）`authoritative` 指令。此外，还需要创建一个 `subnet` 部分，用以描述本地网络和要提供的配置信息。以下示例适用于 `192.168.0.0/24` 本地网络，其中路由器 `192.168.0.1` 充当网关。可用的 IP 地址范围为 `192.168.0.128` 到 `192.168.0.254`。
-
-示例 10.15. `/etc/dhcp/dhcpd.conf` 节选
+示例 10.15. `/etc/dhcp/dhcpd.conf`节选
 
 ```bash
 # 适用于 Debian 系统的 ISC dhcpd 示例配置文件
+
 # ddns-updates-style 参数控制服务器在租约确认时
 # 是否尝试进行 DNS 更新。我们默认采用
 # 版本 2 包的行为（'none'，因为 DHCP v2
 # 不支持 DDNS。）
 ddns-update-style interim;
+
 # 为所有支持网络的通用选项定义...
 option domain-name "internal.falcot.com";
 option domain-name-servers ns.internal.falcot.com;
+
 default-lease-time 600;
 max-lease-time 7200;
+
 # 如果此 DHCP 服务器是本地网络的官方 DHCP
 # 服务器，则应该取消注释 authoritative 指令。
 authoritative;
+
 # 使用此项将 dhcp 日志消息发送到不同的日志文件（你
 # 还需要修改 syslog.conf 来完成重定向）。
 log-facility local7;
+
 # 我的子网
 subnet 192.168.0.0 netmask 255.255.255.0 {
     option routers 192.168.0.1;
@@ -5894,11 +6014,13 @@ subnet 192.168.0.0 netmask 255.255.255.0 {
 }
 ```
 
+
+
 ## 10.8.2. DHCP 和 DNS
 
 一个非常实用的特性是在 DNS 区域中自动注册 DHCP 客户端，这样每台机器都能获得一个有意义的名字（而不是像 `machine-192-168-0-131.internal.falcot.com` 这样毫无感情的名字）。使用此功能需要配置 DNS 服务器以接受来自 DHCP 服务器的 `internal.falcot.com` DNS 区域的更新，并配置后者为每次注册提交更新。
 
-在 `bind` 情况下（请参见 第 10.7.1 节，“DNS 软件” ），需要在 DHCP 服务器要编辑的每个区域中添加 `allow-update` 指令（针对 `internal.falcot.com` 域名的区域以及反向区域）。该指令列出了允许执行这些更新的 IP 地址；因此，它应该包含 DHCP 服务器可能的所有地址（如果适用，包括本地地址和公共地址）。
+在 `bind` 情况下（请参见第 10.7.1 节，“DNS 软件”），需要在 DHCP 服务器要编辑的每个区域中添加 `allow-update` 指令（针对 `internal.falcot.com` 域名的区域以及反向区域）。该指令列出了允许执行这些更新的 IP 地址；因此，它应该包含 DHCP 服务器可能的所有地址（如果适用，包括本地地址和公共地址）。
 
 ```
 allow-update { 127.0.0.1 192.168.0.1 212.94.201.10 !any };
@@ -5908,146 +6030,61 @@ allow-update { 127.0.0.1 192.168.0.1 212.94.201.10 !any };
 
 上面的 DHCP 服务器配置节选已经包含了 DNS 区域更新所需的指令：它们是 `ddns-update-style interim;` 和 `ddns-domain-name "internal.falcot.com";` 这两行。
 
-# 10.9. 网络诊断工具
+## 10.9. 网络诊断工具
 
 当网络应用程序运行不符合预期时，能够查看其内部机制至关重要。即使一切看起来运行良好，运行网络诊断也有助于确保一切按预期工作。为了此目的有多种诊断工具；每种工具运行在不同的层级。
 
-## 10.9.1. 本地诊断：netstat
+### 10.9.1. 本地诊断：`netstat`
 
-让我们先提到 `netstat` 命令（在 net-tools 包中）；它显示机器网络活动的即时摘要。当不带任何参数调用时，该命令会列出所有打开的连接；此列表可能非常冗，因为包含了许多 Unix 域套接字（守护进程广泛使用），这些套接字完全不涉及网络（例如 `dbus` 通信、`X11` 流量以及虚拟文件与桌面之间的通信）。
+让我们先提到 `netstat` 命令（在 `net-tools` 包中）；它显示机器网络活动的即时摘要。当不带任何参数调用时，该命令会列出所有打开的连接；此列表可能非常冗长，因为包含了许多 Unix 域套接字（守护进程广泛使用），这些套接字完全不涉及网络（例如 `dbus` 通信、`X11` 流量以及虚拟文件与桌面之间的通信）。
 
 因此，常见的调用使用更改 `netstat` 行为的选项。最常用的选项包括：
 
-*   `-t`，过滤结果仅包含 TCP 连接；
-*   `-u`，对 UDP 连接起类似作用；这些选项不是互斥的，其中任何一个都可以停止显示 Unix 域套接字；
-*   `-a`，也列出监听状态的套接字（等待传入连接）；
-*   `-n`，以数字形式显示；
-*   `-p`，显示使用套接字的 PID 和 程序；
-*   `-c`，持续显示输出；
-*   `-r`，显示路由表；
-*   `-s`，显示统计信息；
-*   `-i`，显示网络接口；
-*   `-A`，显示 ARP 缓存；
-*   `-l`，仅显示监听的套接字；
-*   `-t`，仅显示 TCP 连接；
-*   `-u`，仅显示 UDP 连接；
-*   `-a`，显示所有套接字；
-*   `-n`，以数字形式显示；
-*   `-p`，显示使用套接字的 PID 和 程序；
-*   `-c`，持续显示输出；
-*   `-r`，显示路由表；
-*   `-s`，显示统计信息；
-*   `-i`，显示网络接口；
-*   `-A`，显示 ARP 缓存；
-*   `-l`，仅显示监听的套接字；
-*   `-t`，仅显示 TCP 连接；
-*   `-u`，仅显示 UDP 连接；
-*   `-a`，显示所有套接字；
-*   `-n`，以数字形式显示；
-*   `-p`，显示使用套接字的 PID 和 程序；
-*   `-c`，持续显示输出；
-*   `-r`，显示路由表；
-*   `-s`，显示统计信息；
-*   `-i`，显示网络接口；
-*   `-A`，显示 ARP 缓存；
-*   `-l`，仅显示监听的套接字；
-*   `-t`，仅显示 TCP 连接；
-*   `-u`，仅显示 UDP 连接；
-*   `-a`，显示所有套接字；
-*   `-n`，以数字形式显示；
-*   `-p`，显示使用套接字的 PID 和 程序；
-*   `-c`，持续显示输出；
-*   `-r`，显示路由表；
-*   `-s`，显示统计信息；
-*   `-i`，显示网络接口；
-*   `-A`，显示 ARP 缓存；
-*   `-l`，仅显示监听的套接字；
-*   `-t`，仅显示 TCP 连接；
-*   `-u`，仅显示 UDP 连接；
-*   `-a`，显示所有套接字；
-*   `-n`，以数字形式显示；
-*   `-p`，显示使用套接字的 PID 和 程序；
-*   `-c`，持续显示输出；
-*   `-r`，显示路由表；
-*   `-s`，显示统计信息；
-*   `-i`，显示网络接口；
-*   `-A`，显示 ARP 缓存；
-*   `-l`，仅显示监听的套接字；
-*   `-t`，仅显示 TCP 连接；
-*   `-u`，仅显示 UDP 连接；
-*   `-a`，显示所有套接字；
-*   `-n`，以数字形式显示；
-*   `-p`，显示使用套接字的 PID 和 程序；
-*   `-c`，持续显示输出；
-*   `-r`，显示路由表；
-*   `-s`，显示统计信息；
-*   `-i`，显示网络接口；
-*   `-A`，显示 ARP 缓存；
-*   `-l`，仅显示监听的套接字；
-*   `-t`，仅显示 TCP 连接；
-*   `-u`，仅显示 UDP 连接；
-*   `-a`，显示所有套接字；
-*   `-n`，以数字形式显示；
-*   `-p`，显示使用套接字的 PID 和 程序；
-*   `-c`，持续显示输出；
-*   `-r`，显示路由表；
-*   `-s`，显示统计信息；
-*   `-i`，显示网络接口；
-*   `-A`，显示 ARP 缓存；
-*   `-l`，仅显示监听的套接字；
-*   `-t`，仅显示 TCP 连接；
-*   `-u`，仅显示 UDP 连接；
-*   `-a`，显示所有套接字；
-*   `-n`，以数字形式显示；
-*   `-p`，显示使用套接字的 PID 和 程序；
-*   `-c`，持续显示输出；
-*   `-r`，显示路由表；
-*   `-s`，显示统计信息；
-*   `-i`，显示网络接口；
-*   `-A`，显示 ARP 缓存；
-*   `-l`，仅显示监听的套接字；
-*   `-t`，仅显示 TCP 连接；
-*   `-u`，仅显示 UDP 连接；
-*   `-a`，显示所有套接字；
-*   `-n`，以数字形式显示；
-*   `-p`，显示使用套接字的 PID 和 程序；
-*   `-c`，持续显示输出；
-*   `-r`，显示路由表；
-*   `-s`，显示统计信息；
-*   `-i`，显示网络接口；
-*   `-A`，显示 ARP 缓存；
-*   `-l`，仅显示监听的套接字；
-（注：此处原文中存在大量重复选项描述，根据指令要求，翻译时仅保留核心逻辑并确保确保输出的连贯性）
+- `-t`，过滤结果仅包含 TCP 连接；
+- `-u`，对 UDP 连接起类似作用；这些选项不是互斥的，其中任何一个都可以停止显示 Unix 域套接字；
+- `-a`，也列出监听状态的套接字（等待传入连接）；
+- `-n`，以数字形式显示；
+- `-p`，显示使用套接字的 PID 和程序；
+- `-c`，持续显示输出；
+- `-r`，显示路由表；
+- `-s`，显示统计信息；
+- `-i`，显示网络接口；
+- `-A`，显示 ARP 缓存；
+- `-l`，仅显示监听的套接字。
 
 典型的 `netstat -anp` 输出如下：
 
 ```
 Recv-Q Send-Q Local Address           Foreign Address         State PID/Program
+
 tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN   -
+
 tcp        0      0 0.0.0.0:443             0.0.0.0:*               LISTEN   -
+
 tcp        0      0 127.0.0.1:80            0.0.0.0:*               LISTEN   sshd
+
 tcp       10      0 192.168.0.128:54321   203.0.113.5:443        ESTABLISHED 1234
 ```
 
-## 10.9.2. 远程诊断：nmap
+### 10.9.2. 远程诊断：`nmap`
 
 `nmap`（在同名包中）在某种意义上是 `netstat` 的远程对应物。它可以扫描一个或多个远程服务器的一组“常用端口”，并列出发现响应传入连接的端口。该工具的对应点是，由于它是远程运行的，因此无法提供进程或用户信息；然而，它可以同时操作多个目标。
 
 典型的 `nmap` 调用仅使用 `-A` 选项（以便 `nmap` 尝试识别发现的服务器软件版本），后跟一个或多个 IP 地址或 DNS 主机。同样，还有更多选项可以精细控制 `nmap` 的行为；请参阅 `nmap(1)` 手页中的文档。
 
-
-
-
-
 ```
 nmap mirtuel
-Starting Nmap 7.70 ( https://nmap.org ) at 2019-06-30 21:05 CET Nmap scan report for mirtuel (192.168.1.242) Host is up (0.000013s latency). rDNS record for 192.168.1.242: mirtuel.internal.placard.fr.eu.org Not shown: 998 closed ports PORT STATE SERVICE 22/tcp open ssh 111/tcp open rpcbind Nmap done: 1 IP address (1 host up) scanned in 2.41 seconds 
+
+Starting Nmap 7.70 ( https://nmap.org ) at 2019-06-30 21:05 CET Nmap scan report for mirtuel (192.168.1.242) Host is up (0.000013s latency). rDNS record for 192.168.1.242: mirtuel.internal.placard.fr.eu.org Not shown: 998 closed ports PORT STATE SERVICE 22/tcp open ssh 111/tcp open rpcbind Nmap done: 1 IP address (1 host up) scanned in 2.41 seconds
 ```
 
 ```
 nmap -A localhost
+
 Starting Nmap 7.70 ( https://nmap.org ) at 2019-06-30 21:17 CEST Nmap scan report for localhost (127.0.0.1) Host is up (0.000039s latency). Other addresses for localhost (not scanned): ::1 Not shown: 997 closed ports PORT STATE SERVICE VERSION 22/tcp open ssh OpenSSH 7.9p1 Debian 10 (protocol 2.0) | ssh-hostkey: | 2048 33:a1:d8:b1:e5:5b:b2:0d:15:1b:8e:76:7f:e4:d7:3d (RSA) | 256 8f:83:cf:fa:b3:58:54:9a:1d:1b:4c:db:b1:e2:58:76 (ECDSA) |_ 256 fa:3d:58:62:49:92:93:90:52:fe:f4:26:ca:dc:4c:40 (ED25519) 25/tcp open smtp Exim smtpd 4.92 | smtp-commands: mirtuel Hello localhost [127.0.0.1], SIZE 52428800, 8BITMIME, PIPELINING, CHUNKING, PRDR, HELP, |_ Commands supported: AUTH HELO EHLO MAIL RCPT DATA BDAT NOOP QUIT RSET HELP 631/tcp open ipp CUPS 2.2 | http-methods: |_ Potentially risky methods: PUT | http-robots.txt: 1 disallowed entry |_/ |_http-server-header: CUPS/2.2 IPP/2.1 |_http-title: Home - CUPS 2.2.10 Device type: general purpose Running: Linux 3.X OS CPE: cpe:/o:linux:linux_kernel:3 OS details: Linux 3.7 - 3.10 Network Distance: 0 hops Service Info: Host: debian; OS: Linux; CPE: cpe:/o:linux:linux_kernel OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ . Nmap done: 1 IP address (1 host up) scanned in 12.33 seconds
 ```
+
+
 
 如预期的那样，SSH 和 Exim4 应用被列出了。注意，并非所有应用都监听在所有 IP 地址上；由于 Exim4 仅在 `lo` 回环接口上可用，因此它只在分析 `localhost` 时才会出现，而在扫描 `mirtuel`（它映射到同一机器上的 `eth0` 接口）时不会出现。
 
@@ -6055,7 +6092,7 @@ Starting Nmap 7.70 ( https://nmap.org ) at 2019-06-30 21:17 CEST Nmap scan repor
 
 有时，人们需要查看线缆上实际发生了什么，逐个数据包地。这些情况需要“帧分析器”，即广为人知的*嗅探器*（sniffer）。这类工具会观察到达给定网络接口的所有数据包，并以用户易操作的方式显示它们。
 
-该领域历史悠久的工具是 `tcpdump`，它作为许多平台的标准工具可用。它允许捕获各种网络流量，但这些流量的表示方式相当晦涩。因此，我们不再对其进行详细详细描述。
+该领域历史悠久的工具是 `tcpdump`，它作为许多平台的标准工具可用。它允许捕获各种网络流量，但这些流量的表示方式相当晦涩。因此，我们不再对其进行详细描述。
 
 一个较新（且更现代）的工具 `wireshark`（在 `wireshark` 包中）已成为网络流量分析的新基准，因为它拥有许多解码模块，允许对捕获的数据包进行简化分析。数据包以图形化的方式显示，并基于协议层进行组织。这允许用户可视化数据包中涉及的所有协议。例如，给定一个包含 HTTP 请求的数据包，`wireshark` 会分别显示有关物理层、以太网层、IP 数据包信息、TCP 连接参数以及最后是 HTTP 请求本身的信息。
 
@@ -6095,10 +6132,6 @@ SMTP（简单邮件传输协议，RFC 5321）是邮件服务器用于交换和�
 
 在安装软件包时，会询问几个 Debconf 问题。答案允许生成第一个版本的 `/etc/postfix/main.cf` 配置文件。
 
-
-
-
-
 第一个问题涉及设置类型。对于连接互联网的服务器，建议的答案中只有两个是相关的：“互联网站点”（Internet site）和“带智能主机的互联网”（Internet with smarthost）。前者适用于接收入站邮件并直接向收件者发送发送邮件的服务器，因此非常适合 Falcot Corp 的情况。后者适用于正常接收入站邮件但通过中间 SMTP 服务器（即“智能主机”）而不是直接向收件者服务器发送发送邮件的服务器。这对于具有动态 IP 地址的个人特别有用，因为许多邮件服务器会拒绝直接来自此类 IP 地址的邮件。在这种情况下，智能主机通常是 ISP 的 SMTP 服务器，它始终被配置为接受来自该 ISP 客户的邮件并进行适当转发。这种设置（带有智能主机）也适用于未永久连接到互联网的服务器，因为它可以避免管理一个需要稍后重试的无法投递邮件队列。
 
 ### 词汇 ISP
@@ -6122,33 +6155,60 @@ SMTP（简单邮件传输协议，RFC 5321）是邮件服务器用于交换和�
 完成第一步后，管理员获得了以下配置文件；它将作为在后续章节中添加额外功能的起点。
 
 示例 11.1. 初始 `/etc/postfix/main.cf` 文件
+
 ```bash
 # 查看 /usr/share/postfix/main.cf.dist 获取带注释的更完整的版本 # Debian 特有：指定文件名将导致该文件的第一个 # 行被用作名称。Debian 默认是 /etc/mailname。
+
 #myorigin = /etc/mailname
+
 smtpd_banner = $myhostname ESMTP $mail_name (Debian/GNU)
+
 biff = no # 附加 .domain 是 MUA 的工作。
+
 append_dot_mydomain = no # 取消下一行的注释生成“延迟邮件”警告
+
 #delay_warning_time = 4h
+
 readme_directory = no # 查看 http://www.postfix.org/COMPATIBILITY_README.html -- 在新安装时默认为 2。
+
 compatibility_level = 2 # TLS 参数
+
 smtpd_tls_cert_file=/etc/ssl/certs/ssl-cert-snakeoil.pem
+
 smtpd_tls_key_file=/etc/ssl/private/ssl-cert-snakeoil.key
+
 smtpd_use_tls=yes
+
 smtpd_tls_session_cache_database = btree:${data_directory}/smtpd_scache
+
 smtp_tls_session_cache_database = btree:${data_directory}/smtp_scache
+
 # 查看 postfix-doc 包中的 /usr/share/doc/postfix/TLS_README.gz 以获取
+
 # 在 smtp 客户端中启用 SSL 的信息。
+
 smtpd_relay_restrictions = permit_mynetworks permit_sasl_authenticated defer_unauth_destination
+
 myhostname = mail.falcot.com
+
 alias_maps = hash:/etc/aliases
+
 alias_database = hash:/etc/aliases
+
 myorigin = /etc/mailname
+
 mydestination = mail.falcot.com, falcot.com, localhost.localdomain, localhost
+
 relayhost =
+
 mynworks = 127.0.0.0/8 [::ffff:127.0.0.0]/104 [::1]/128 192.168.0.0/16
+
 mailbox_size_limit = 0
+
 recipient_delimiter = +
+
 inet_interfaces = all
+
 inet_protocols = all
 ```
 
@@ -6160,9 +6220,13 @@ inet_protocols = all
 
 ```
 smtpd_tls_cert_file = /etc/letsencrypt/live/*`DOMAIN`*/fullchain.pem
+
 smtpd_tls_key_file = /etc/letsencrypt/live/*`DOMAIN`*/privkey.pem
+
 smtpd_tls_CAfile = /etc/ssl/certs/ca-certificates.crt
+
 smtpd_tls_CApath = /etc/ssl/certs
+
 smtp_tls_CApath = /etc/ssl/certs
 ```
 
@@ -6180,22 +6244,21 @@ smtp_tls_CApath = /etc/ssl/certs
 
 虚拟别名域名只包含别名，即仅将邮件转发到其他地址的地址。
 
-通过在 `virtual_alias_domains` 变量中添加其名称，并并在 `virtual_alias_maps` 变量中引用地址映射文件，可以启用此类域名。
+通过在 `virtual_alias_domains` 变量中添加其名称，并在 `virtual_alias_maps` 变量中引用地址映射文件，可以启用此类域名。
 
 ```
 virtual_alias_domains = falcotsbrand.com
+
 virtual_alias_maps = hash:/etc/postfix/virtual
 ```
 
 `/etc/postfix/virtual` 文件以相当直观的语法描述映射：每行包含两个由空格分隔的字段；第一个字段是别名名称，第二个字段是重定向到的邮件地址列表。特殊的 `@domain.com` 语法涵盖了域名下的所有剩余别名。
 
-
-
-
-
+```
 webmaster@falcotsbrand.com jean@falcot.com contact@falcotsbrand.com laure@falcot.com, sophie@falcot.com
 
 # 下方的别名是通用的，涵盖了 falcotsbrand.com 域名内所有未被此文件涵盖的地址。这些地址会将邮件转发到 falcot.com 域名中相同的用户名。@falcotsbrand.com @falcot.com
+```
 
 修改 `/etc/postfix/virtual` 后，需要使用 `sudo postmap /etc/postfix/virtual` 更新 postfix 映射 `/etc/postfix/virtual.db`。
 
@@ -6204,15 +6267,15 @@ webmaster@falcotsbrand.com jean@falcot.com contact@falcotsbrand.com laure@falcot
 **注意 组合虚拟域**
 Postfix 不允许在 `virtual_alias_domains` 和 `virtual_mailbox_domains` 中同时使用同一个域名。然而，`virtual_mailbox_domains` 中的每一个域名都隐式地包含在 `virtual_alias_domains` 中，这使得在虚拟域内混合使用别名和邮箱成为可能。
 
-* *
-
 收发至虚拟邮箱的邮件存储在未分配给本地系统用户的邮箱中。
 
 启用虚拟邮箱需要在此 `virtual_mailbox_domains` 变量中命名该域，并在 `virtual_mailbox_maps` 中引用邮箱映射。`virtual_mailbox_base` 参数包含存储邮箱的目录。
 
 ```
 virtual_mailbox_domains = falcot.org
+
 virtual_mailbox_maps = hash:/etc/postfix/virtual
+
 virtual_mailbox_base = /var/mail
 ```
 
@@ -6220,18 +6283,14 @@ virtual_mailbox_base = /var/mail
 
 再次，`virtual` 文件的语法非常直观：两个由空格分隔的字段。第一个字段是虚拟域之一内的电子邮件地址，第二个字段是关联邮箱的位置（相对于 `virtual_mailbox_base` 中指定的目录）。
 
-如果邮箱名称以斜杠（`/`）结尾，邮件将以 `maildir` 格式存储；否则将使用传统的 `mbox` 格式。`maildir` 格式使用整个目录来存储邮箱，每条单独的消息存储在单独的文件中。而在 `mbox` 格式中，整个邮箱存储在一个文件中，每个以 `From`（后跟一个空格）开头的行表示一条新消息的开始。Jean 的邮件以 `maildir` 格式存储，在专用目录内存储一个文件：jean@falcot.org falcot.org/jean/。Sophie 的邮件存储在传统的 "mbox" 文件中，所有邮件合并到一个文件中：sophie@cot.org falcot.org/sophie
+如果邮箱名称以斜杠（`/`）结尾，邮件将以 `maildir` 格式存储；否则将使用传统的 `mbox` 格式。`maildir` 格式使用整个目录来存储邮箱，每条单独的消息存储在单独的文件中。而在 `mbox` 格式中，整个邮箱存储在一个文件中，每个以 `From`（后跟一个空格）开头的行表示一条新消息的开始。Jean 的邮件以 `maildir` 格式存储，在专用目录内存储一个文件：`jean@falcot.org falcot.org/jean/`。Sophie 的邮件存储在传统的 "mbox" 文件中，所有邮件合并到一个文件中：`sophie@cot.org falcot.org/sophie`
 
 ## 11.1.3 接收和发送的限制
 
 日益增多的未经请求的批量邮件（垃圾邮件）要求在决定服务器应该接受哪些邮件时必须变得越发严格。本节介绍了 Postfix 中包含的一些策略。如果拒绝规则（reject-rules）过于严格，可能会导致即使是合法的流量也会被拦截。因此，良好的习惯是在测试限制条件时，使用 `soft_bounce = yes` 指令来防止在此期间永久性拒绝请求。通过在拒绝类型指令之前添加 `warn_if_reject`，只会记录日志消息，而不会拒绝请求。
 
-* *
-
 文化 垃圾邮件问题
 “垃圾邮件”是一个通用术语，用于指代所有充斥我们邮箱箱的未经请求的商业邮件（也称为 UCE）；发送这些邮件的无良之被称为垃圾邮件发送者。他们很少关心自己所造成的骚扰，因为发送电子邮件的成本很低，而且只需要极小比例的接收者被垃圾邮件操作所吸引，其收益就能超过成本。该过程大部分是自动化的，任何公开的电子邮件地址（例如，在网络论坛、邮件列表存档或博客等上）都可能被垃圾邮件发送者的机器人发现，并遭受无完没了的未经请求邮件流。所有系统管理员都试图用垃圾邮件过滤器来应对这种骚扰，但垃圾邮件发送者会不断调整以绕过这些过滤器。有些人甚至租用被各种犯罪集团入侵的机器网络。最近的统计估计，互联网上流通的所有邮件中，高达 95% 是垃圾邮件！
-
-* *
 
 ### 11.1.3.1 基于 IP 的访问限制
 
@@ -6239,61 +6298,54 @@ virtual_mailbox_base = /var/mail
 
 示例：
 ```
-smtpd_client_restrictions = permit_mynetworks, warn_if_reject reject_unknown_client_hostname, check_client_access hash:/etc/postfix/access_clientip, reject_rhsbl_reverse_client dbl.spamhaus.org, reject_rhsbl_reverse_client rhsbl.sorbs.net, reject_rbl_client zen.spamhaus.org, reject_rbl_client dnsbl.sorbs.net
-```
-
-作为第一条规则使用的 `permit_mynetworks` 指令接受所有来自本地网络（由 `mynetworks` 配置变量定义）的机器的邮件。
-
-第二个指令通常会拒绝来自没有完全有效 DNS 配置的机器的邮件。这种有效配置意味着 IP 地址可以解析为名称，且该名称反过来解析为该 IP 地址。这种限制通常过于严格，因为许多邮件服务器没有 IP 地址的反向 DNS。这解释了为什么 Falcot 的管理员在 `reject_unknown_client` 指令之前添加了 `warn_if_reject` 修饰：该修饰将拒绝变为记录在日志中的简单警告。管理员随后可以监控如果实际执行该规则将被拒绝的消息数量，并在希望启用此类执行时做出明智的决策。
-
-* *
-
-提示 访问表
-限制标准包括管理员可修改的表，列出了发送者、IP 地址以及允许或禁止的主机名。这些表可以使用 postfix-doc 软件包提供的 `/usr/share/doc/postfix/examples/access.gz` 文件的解压副本来创建。这种模型在其注释中自成文档，这意味着每个表都有自己的语法。
-
-`/etc/postfix/access_clientip` 表列出 IP 地址和网络；`/etc/postfix/access_helo` 列出域名；`/etc/postfix/access_sender` 包含发送者电子邮件地址。每次更改后，所有这些文件都需要转换为哈希表（一种针对快速访问优化的格式），使用 `sudo postmap /etc/postfix/file` 命令。
-
-* *
-
-第三条指令允许管理员为邮件服务器设置黑白白名单，存储在 `/etc/postfix/access_clientip` 文件中。白名单中的服务器被认为是可信的，因此来自那里的邮件不会经过后续的过滤规则。
 
 
 
+`smtpd_client_restrictions = permit_mynetworks, warn_if_reject reject_unknown_client_hostname, check_client_access hash:/etc/postfix/access_clientip, reject_rhsbl_reverse_client dbl.spamhaus.org, reject_rhsbl_reverse_client rhsbl.sorbs.net, reject_rbl_client zen.spamhaus.org, reject_rbl_client dnsbl.sorbs.net`
 
-最后四条规则拒绝任何来自指定黑名单列表服务器的消息。`<acronym class="acronym">RBL</acronym>` 是 `Remote Black List`（远程黑列表）的缩写，`<acronym class="acronym">RHSBL</acronym>` 代表 `Right-Hand Side Black List`（右黑列表）。区别在于，前者列出 IP 地址，而后者列出域名。此类服务有很多。它们列出了声誉不良的域名和 IP 地址、垃圾邮件发送者用于转发邮件的配置错误的服务器，以及意外的邮件中继（例如感染蠕虫或病毒的机器）。
+作为第一条规则使用的`permit_mynetworks`指令接受所有来自本地网络（由`mynetworks`配置变量定义）的机器的邮件。
 
-***
+第二个指令通常会拒绝来自没有完全有效 DNS 配置的机器的邮件。这种有效配置意味着 IP 地址可以解析为名称，且该名称反过来解析为该 IP 地址。这种限制通常过于严格，因为许多邮件服务器没有 IP 地址的反向 DNS。这解释了为什么 Falcot 的管理员在`reject_unknown_client`指令之前添加了`warn_if_reject`修饰：该修饰将拒绝变为记录在日志中的简单警告。管理员随后可以监控如果实际执行该规则将被拒绝的消息数量，并在希望启用此类执行时做出明智的决策。
 
-**提示** 白名单与 RBL
+**提示：访问表**
 
-黑名单有时会包含发生过事故的合法服务器。在这种情况下，来自这些服务器之一的所有邮件都会被拒绝，除非该服务器列在由 `/etc/postfix/access_clientip` 定义的白列表中。因此，谨慎起见的做法是在白列表中包含所有通常接收大量邮件的信任服务器。
+限制标准包括管理员可修改的表，列出了发送者、IP 地址以及允许或禁止的主机名。这些表可以使用`postfix-doc`软件包提供的`/usr/share/doc/postfix/examples/access.gz`文件的解压副本来创建。这种模型在其注释中自成文档，这意味着每个表都有自己的语法。
 
-***
+`/etc/postfix/access_clientip`表列出 IP 地址和网络；`/etc/postfix/access_helo`列出域名；`/etc/postfix/access_sender`包含发送者电子邮件地址。每次更改后，所有这些文件都需要转换为哈希表（一种针对快速访问优化的格式），使用`sudo postmap /etc/postfix/file`命令。
 
-### 11.1.3.2. 检查 `EHLO` 或 `HELO` 命令的有效性
+第三条指令允许管理员为邮件服务器设置黑白名单，存储在`/etc/postfix/access_clientip`文件中。白名单中的服务器被认为是可信的，因此来自那里的邮件不会经过后续的过滤规则。
 
-每个 SMTP 交换都从一个 `HELO`（或 `EHLO`）命令开始，随后是发送邮件服务器的名称。检查此名称的有效性很有意义。为了完全执行 `smtpd_helo_restrictions` 中列出的限制，需要启用 `smtpd_helo_required` 选项。否则，客户端可以通过不发送任何 `HELO`/`EHLO` 命令来跳过限制。
+最后四条规则拒绝任何来自指定黑名单列表服务器的消息。`RBL`是`Remote Black List`（远程黑列表）的缩写，`RHSBL`代表`Right-Hand Side Black List`（右黑列表）。区别在于，前者列出 IP 地址，而后者列出域名。此类服务有很多。它们列出了声誉不良的域名和 IP 地址、垃圾邮件发送者用于转发邮件的配置错误的服务器，以及意外的邮件中继（例如感染蠕虫或病毒的机器）。
 
-示例 11.3 `EHLO` 中声明名称的限制
+**提示：白名单与 RBL**
+
+黑名单有时会包含发生过事故的合法服务器。在这种情况下，来自这些服务器之一的所有邮件都会被拒绝，除非该服务器列在由`/etc/postfix/access_clientip`定义的白名单中。因此，谨慎起见的做法是在白名单中包含所有通常接收大量邮件的信任服务器。
+
+### 11.1.3.2. 检查`EHLO`或`HELO`命令的有效性
+
+每个 SMTP 交换都从一个`HELO`（或`EHLO`）命令开始，随后是发送邮件服务器的名称。检查此名称的有效性很有意义。为了完全执行`smtpd_helo_restrictions`中列出的限制，需要启用`smtpd_helo_required`选项。否则，客户端可以通过不发送任何`HELO`/`EHLO`命令来跳过限制。
+
+**示例 11.3 `EHLO`中声明名称的限制**
 
 ```
 smtpd_helo_required = yes
+
 smtpd_helo_restrictions = permit_mynetworks, reject_invalid_helo_hostname, reject_non_fqdn_helo_hostname, warn_if_reject reject_unknown_helo_hostname, check_helo_access hash:/etc/postfix/access_helo, reject_rhsbl_helo multi.surbl.org
 ```
 
-第一个 `permit_mynetworks` 指令允许本地网络上的所有机器自由地介绍自己。这非常重要，因为某些邮件程序没有充分遵守 SMTP 协议的这部分，它们可能会使用毫无意义的名字介绍自己。
+第一个`permit_mynetworks`指令允许本地网络上的所有机器自由地介绍自己。这非常重要，因为某些邮件程序没有充分遵守 SMTP 协议的这部分，它们可能会使用毫无意义的名字介绍自己。
 
-`reject_invalid_helo_hostname` 规则在 `EHLO` 声明列出语法上不正确的主机时拒绝邮件。`reject_non_fqdn_helo_hostname` 规则在声明的主机不是完全限定域名名（包括域名和主机名）时拒绝消息。`reject_unknown_helo_hostname` 规则在声明的在 DNS 中不存在时拒绝消息。由于最后这条规则不幸导致了过多的拒绝，管理员们通过 `warn_if_reject` 修饰符将其效果变为简单的警告，作为第一步；他们可能会在审计此规则的结果后，在后续阶段决定移除此修饰符。
+`reject_invalid_helo_hostname`规则在`EHLO`声明列出语法上不正确的主机时拒绝邮件。`reject_non_fqdn_helo_hostname`规则在声明的主机不是完全限定域名（包括域名和主机名）时拒绝消息。`reject_unknown_helo_hostname`规则在声明的名称在 DNS 中不存在时拒绝消息。由于最后这条规则不幸导致了过多的拒绝，管理员们通过`warn_if_reject`修饰符将其效果变为简单的警告，作为第一步；他们可能会在审计此规则的结果后，在后续阶段决定移除此修饰符。
 
-`reject_rhsbl_helo` 允许指定一个黑列表，以相对于 RHSBL 对主机进行检查。
+`reject_rhsbl_helo`允许指定一个黑名单，以相对于 RHSBL 对主机进行检查。
 
-将 `permit_mynetworks` 作为第一条规则有一个有趣的副作用：后续规则仅适用于本地网络之外的主机。这允许对所有声明为 `falcot.com` 网络的主机进行黑名单，例如通过将 `falcot.com` 网络添加到 `/etc/postfix/access_helo` 中。
+将`permit_mynetworks`作为第一条规则有一个有趣的副作用：后续规则仅适用于本地网络之外的主机。这允许对所有声明为`falcot.com`网络的主机进行黑名单，例如通过将`falcot.com`网络添加到`/etc/postfix/access_helo`中。
 
 ### 11.1.3.3. 根据发送者接受或拒绝
 
-将 `permit_mynetworks` 作为第一条规则有一个有趣的副作用：后续规则仅适用于本地网络之外的主机。这允许对所有声明为 `falcot.com` 网络的主机进行黑名单，例如通过将 `falcot.com` 网络添加到 `/etc/postfix/access_helo` 中。
+将`permit_mynetworks`作为第一条规则有一个有趣的副作用：后续规则仅适用于本地网络之外的主机。这允许对所有声明为`falcot.com`网络的主机进行黑名单，例如通过将`falcot.com`网络添加到`/etc/postfix/access_helo`中。
 
-示例 11.4 发送者的限制
+**示例 11.4 发送者的限制**
 
 ```
 smtpd_sender_restrictions = permit_mynetworks, reject_unlisted_sender, reject_non_fqdn_sender, reject_rhsbl_sender hash:/etc/postfix/access_helo
@@ -6301,19 +6353,19 @@ smtpd_sender_restrictions = permit_mynetworks, reject_unlisted_sender, reject_no
 
 ### 11.1.3.4. 根据收件者接受或拒绝
 
-将 `permit_mynetworks` 作为第一条规则有一个有趣的副作用：后续规则仅适用于本地网络之外的主机。这允许对所有声明为 `falcot.com` 网络的主机进行黑名单，例如通过将 `falcot.com` 网络添加到 `/etc/postfix/access_helo` 中。
+将`permit_mynetworks`作为第一条规则有一个有趣的副作用：后续规则仅适用于本地网络之外的主机。这允许对所有声明为`falcot.com`网络的主机进行黑名单，例如通过将`falcot.com`网络添加到`/etc/postfix/access_helo`中。
 
-示例 11.5 收件者的限制
+**示例 11.5 收件者的限制**
 
 ```
 smtpd_recipient_restrictions = permit_mynetworks, reject_unlisted_recipient, reject_non_fqdn_recipient, reject_rhsbl_recipient hash:/etc/postfix/access_helo
 ```
 
-### 11.1.3.5. 与 `DATA` 命令相关的限制
+### 11.1.3.5. 与`DATA`命令相关的限制
 
-SMTP 的 `DATA` 命令在消息内容之前发出。它本身并不提供任何信息，只是宣布接下来将出现的内容。它仍然可以接受检查。
+SMTP 的`DATA`命令在消息内容之前发出。它本身并不提供任何信息，只是宣布接下来将出现的内容。它仍然可以接受检查。
 
-示例 11.6 `DATA` 限制
+**示例 11.6 `DATA`限制**
 
 ```
 smtpd_data_restrictions = reject_unauth_pipining
@@ -6321,50 +6373,39 @@ smtpd_data_restrictions = reject_unauth_pipining
 
 ### 11.1.3.6. 应用限制
 
-尽管上述命令在 SMTP 交换的各个阶段验证了信息，但 Postfix 默认作为 `RCPT TO` 命令的回复发送实际的拒绝。
+尽管上述命令在 SMTP 交换的各个阶段验证了信息，但 Postfix 默认作为`RCPT TO`命令的回复发送实际的拒绝。
 
 ### 11.1.3.7. 基于内容的过滤
 
 如果没有对消息内容应用检查的方法，验证和限制系统将是不完整的。Postfix 区分了适用于邮件头的检查和适用于邮件正文的检查。
 
-
-
-
-# 示例 11.7. 启用基于内容的过滤器
+**示例 11.7. 启用基于内容的过滤器**
 
 ```
 header_checks = regexp:/etc/postfix/header_checks body_checks = regexp:/etc/postfix/body_checks
 ```
 
-这两个文件都包含一个正则表达式列表（通常称为 `regexps` 或 `regexes`）以及当邮件头部（或正文）匹配这些表达式时触发的关联操作。
+这两个文件都包含一个正则表达式列表（通常称为`regexps`或`regexes`）以及当邮件头部（或正文）匹配这些表达式时触发的关联操作。
 
-* * *
+**快速查看：表达式表**
 
-### 快速查看 表达式表
+文件`/usr/share/doc/postfix/examples/header_checks.gz`（来自`postfix-doc`包）和`header_checks(5)`包含许多解释性注释，可以作为创建`/etc/postfix/header_checks`和`/etc/postfix/body_checks`文件的起点。
 
-文件 `/usr/share/doc/postfix/examples/header_checks.gz`（来自 `postfix-doc` 包）和 `header_checks(5)` 包含许多解释性注释，可以作为创建 `/etc/postfix/header_checks` 和 `/etc/postfix/body_checks` 文件的起点。
-
-* * *
-
-# 示例 11.8. `/etc/postfix/header_checks` 文件示例
+**示例 11.8. `/etc/postfix/header_checks`文件示例**
 
 ```
 /^X-Mailer: GOTO Sarbacane/ RE I fight spam (GOTO Sarbacane) /^Subject: *Your email contains VIRUSES/ DISCARD virus notification
 ```
 
-* * *
+**回归基础：正则表达式**
 
-### 回归基础 正则表达式
-
-`regular expression`（术语缩写为 `regexp` 或 `regex`）指的是一种通用表示法，用于描述字符字符串的内容和/或结构。某些特殊字符允许定义备选项（例如，`foo|bar` 匹配“foo”或“bar”）、允许字符集（例如，`[0-9]` 意味着“任何数字”，而 `.` — 点 — 意味着“任何字符”）、量化（`s?` 匹配 `s` 或空字符串，换之出现出现 0 次或 1 次 `s`；`s+` 匹配一个或多个连续的 `s` 字符；此类推）。括号允许对搜索结果进行分组。
+`regular expression`（术语缩写为`regexp`或`regex`）指的是一种通用表示法，用于描述字符字符串的内容和/或结构。某些特殊字符允许定义备选项（例如，`foo|bar`匹配“foo”或“bar”）、允许字符集（例如，`[0-9]`意味着“任何数字”，而`.` — 点 — 意味着“任何字符”）、量化（`s?`匹配`s`或空字符串，换言之出现 0 次或 1 次`s`；`s+`匹配一个或多个连续的`s`字符；此类推）。括号允许对搜索结果进行分组。
 
 这些表达式的精确语法随使用它们的工具而异，但基本特征是相似的。
 
 → [`en.wikipedia.org/wiki/Regular_expression`](https://en.wikipedia.org/wiki/Regular_expression)
 
-* * *
-
-第一个表达式检查提到邮件软件的头部；如果发现 `GOTO Sarbacane`（一种批量邮件软件），则拒绝该邮件。第二个表达式控制邮件主题；如果提到病毒通知，我们可以决定不拒绝邮件，而是直接将其丢弃。
+第一个表达式检查提到邮件软件的头部；如果发现`GOTO Sarbacane`（一种批量邮件软件），则拒绝该邮件。第二个表达式控制邮件主题；如果提到病毒通知，我们可以决定不拒绝邮件，而是直接将其丢弃。
 
 使用这些过滤器是一把双刃剑，因为很容易使规则变得过于通用，从而导致丢失合法邮件。在这些情况下，不仅邮件会丢失，发送者还会收到不必要的（且令人讨厌的）错误信息。
 
@@ -6372,61 +6413,55 @@ header_checks = regexp:/etc/postfix/header_checks body_checks = regexp:/etc/post
 
 “灰白列表”是一种过滤技术，根据该技术，邮件最初会被一个临时错误代码拒绝，仅在延迟后的再次尝试时被接受。这种过滤对于受蠕虫和病毒感染的机器发送的垃圾邮件特别有效，因为这些软件很少作为完整的 SMTP 代理（通过检查错误代码并在稍后重试失败的邮件），特别是许多采集到的地址实际上是无效的，重试只会浪费时间。
 
-Postfix 原生不提供灰白列表，但有一项功能可以将接受或拒绝给定邮件的决定委托给外部程序。`postgrey` 包包含了这样一个程序，设计用于与这种访问策略委托服务接口。
+Postfix 原生不提供灰白列表，但有一项功能可以将接受或拒绝给定邮件的决定委托给外部程序。`postgrey`包包含了这样一个程序，设计用于与这种访问策略委托服务接口。
 
-一旦安装了 `postgrey`，它将作为守护进程运行并监听端口 `10023`。随后可以通过通过添加 `check_policy_service` 参数作为额外限制来配置 Postfix 使用它：
+一旦安装了`postgrey`，它将作为守护进程运行并监听端口`10023`。随后可以通过添加`check_policy_service`参数作为额外限制来配置 Postfix 使用它：
 
 ```
 smtpd_recipient_restrictions = permit_mynetworks, [...] check_policy_service inet:127.0.0.1:10023
 ```
 
-每当 Postfix 执行规则集中的此规则时，它都会连接到 `postgrey` 守护进程并向其发送有关相关邮件的信息。`postgrey` 端会考虑 IP 地址/发送者/接收者三元组，并在数据库中检查最近是否见过相同的三元组。如果是，`postgrey` 回复应该接受邮件；如果不是，回复指示临时拒绝邮件，并将三元组记录在数据库中。
+每当 Postfix 执行规则集中的此规则时，它都会连接到`postgrey`守护进程并向其发送有关相关邮件的信息。`postgrey`端会考虑 IP 地址/发送者/接收者三元组，并在数据库中检查最近是否见过相同的三元组。如果是，`postgrey`回复应该接受邮件；如果不是，回复指示临时拒绝邮件，并将三元组记录在数据库中。
 
 灰白列表的主要缺点是合法邮件会被延迟，这并不总是可以接受的。它还增加了发送大量合法邮件服务器的负担。
 
-* * *
-
-### 实践 灰白列表的缺点
+**实践：灰白列表的缺点**
 
 理论上，灰白列表应该只延迟特定发送者向特定接收者发送的第一封邮件，典型的延迟在分钟级。然而，现实情况可能略有不同。某些大型 ISP 使用 SMTP 服务器集群，当邮件最初被拒绝时，重试传输的服务器可能不是初始的同一个。当这种情况发生时，第二个服务器也会因为灰白列表收到临时错误消息，依此类推；可能需要几个小时后，已经参与过的服务器才会尝试传输，因为 SMTP 服务器通常会在每次失败后增加重试之间的延迟。
 
-结果是即使对于同一个发送者，入站 IP 地址也可能随时间变化。不仅如此，甚至发送者地址也会变化。例如，许多邮件列表服务器在发送者地址中编码额外信息，以便处理错误邮件（称为 `bounces`）。发送到邮件列表的每条新邮件可能都需要经过灰白列表，这意味着它必须被（临时）存储在发送者的服务器上。对于非常大的邮件列表（拥有数万订阅者），这很快就会变成问题。
+结果是即使对于同一个发送者，入站 IP 地址也可能随时间变化。不仅如此，甚至发送者地址也会变化。例如，许多邮件列表服务器在发送者地址中编码额外信息，以便处理错误邮件（称为`bounces`）。发送到邮件列表的每条新邮件可能都需要经过灰白列表，这意味着它必须被（临时）存储在发送者的服务器上。对于非常大的邮件列表（拥有数万订阅者），这很快就会变成问题。
 
-为了缓解这些缺点，`postgrey` 管理了此类站点的白名单，来自这些站点的邮件将立即接受，无需经过灰白列表。此列表可以很容易适应本地需求，因为它存储在 `/etc/postgrey/whitelist_clients` 文件中。
+为了缓解这些缺点，`postgrey`管理了此类站点的白名单，来自这些站点的邮件将立即接受，无需经过灰白列表。此列表可以很容易适应本地需求，因为它存储在`/etc/postgrey/whitelist_clients`文件中。
 
-* * *
+**进阶：使用 milter-greylist 进行选择性灰白列表**
 
-### 进阶 使用 milter-greylist 进行选择性灰白列表
+通过仅对那些被认为是可能的垃圾邮件源的子客户端使用灰白列表（因为它们被列在 DNS 黑名单中），可以缓解灰白列表的缺点。这在`postgrey`中无法实现，但可以这样使用`milter-greylist`。
 
-通过仅对那些被认为是可能的垃圾邮件源的子客户端使用灰白列表（因为它们被列在 DNS 黑名单中），可以缓解灰白列表的缺点。这在 `postgrey` 中无法实现，但可以这样使用 `milter-greylist`。
+在这种情况下，由于 DNS 黑名单从不触发确定性的拒绝，使用激进的黑名单是合理的，包括列出 ISP 客户端所有动态 IP 地址的列表（如`pbl.spamhaus.org`或`dul.dnsbl.sorbs.net`）。
 
-在这种情况下，由于 DNS 黑名单从不触发确定性的拒绝，使用激进的黑名单是合理的，包括列出 ISP 客户端所有动态 IP 地址的列表（如 `pbl.spamhaus.org` 或 `dul.dnsbl.sorbs.net`）。
-
-由于 `milter-greylist` 使用 Sendmail 的 milter 接口，其 postfix 端的配置限于“`smtpd_milters = unix:/var/run/milter-greylist/milter-greylist.sock`”。`greylist.conf(5)` 手页文档了 `/etc/milter-greylist/greylist.conf` 以及配置 `milter-greylist` 的许多方法。你还需要编辑 `/etc/default/milter-greylist` 来实际启用该服务。
-
-* * *
+由于`milter-greylist`使用 Sendmail 的 milter 接口，其 postfix 端的配置限于“`smtpd_milters = unix:/var/run/milter-greylist/milter-greylist.sock`”。`greylist.conf(5)`手册页文档了`/etc/milter-greylist/greylist.conf`以及配置`milter-greylist`的许多方法。你还需要编辑`/etc/default/milter-greylist`来实际启用该服务。
 
 ## 11.1.5. 根据接收者自定义过滤器
 
- 11.1.3 节，“接收和发送的限制` 和 第 11.1.4 节，“设置灰白列表”` 回顾了许多可能的限制。它们在限制接收垃圾邮件的数量方面都有其用处，但它们都有自己的缺点。因此，根据接收者自定义过滤器集已变得越来越常见。在 Falcot Corp，灰白列表对大多数用户来说很有趣，但它阻碍了一些需要邮件低延迟的用户的工作（例如技术支持服务）。同样，商业服务在接收来自某些亚洲提供商的邮件时有时会出现问题，这些提供商可能被列入黑名单；该服务要求一个未经过滤的地址以便通信。
+第 11.1.3 节“接收和发送的限制”和第 11.1.4 节“设置灰白列表”回顾了许多可能的限制。它们在限制接收垃圾邮件的数量方面都有其用处，但它们都有自己的缺点。因此，根据接收者自定义过滤器集已变得越来越常见。在 Falcot Corp，灰白列表对大多数用户来说很有趣，但它阻碍了一些需要邮件低延迟的用户的工作（例如技术支持服务）。同样，商业服务在接收来自某些亚洲提供商的邮件时有时会出现问题，这些提供商可能被列入黑名单；该服务要求一个未经过滤的地址以便通信。
 
-Postfix 通过“限制类”概念提供了这种过滤器自定义。这些类在 `smtpd_restriction_classes` 参数中声明，定义方式与 `smtpd_recipient_restrictions` 相同。`check_recipient_access` 指令则定义了一个将给定接收者映射到相应限制集的表。
+Postfix 通过“限制类”概念提供了这种过滤器自定义。这些类在`smtpd_restriction_classes`参数中声明，定义方式与`smtpd_recipient_restrictions`相同。`check_recipient_access`指令则定义了一个将给定接收者映射到相应限制集的表。
 
-
-
-
-
-## 示例 11.9. 在 `main.cf` 中定义限制类
+**示例 11.9. 在`main.cf`中定义限制类**
 
 ```
 smtpd_restriction_classes = greylisting, aggressive, permissive
+
 greylisting = check_policy_service inet:127.0.0.1:10023
+
 aggressive = reject_rbl_client sbl-xbl.spamhaus.org, check_policy_service inet:127.0.0.1:10023
+
 permissive = permit
+
 smtpd_recipient_restrictions = permit_mynetworks, reject_unauth_destination, check_recipient_access hash:/etc/postfix/recipient_access
 ```
 
-## 示例 11.10. `/etc/postfix/recipient_access` 文件
+**示例 11.10. `/etc/postfix/recipient_access`文件**
 
 ```text
 # 未过滤的地址
@@ -6444,6 +6479,8 @@ sympa@falcot.com reject_unverified_sender
 falcot.com greylisting
 ```
 
+
+
 ## 11.1.6. 集成反病毒软件
 
 作为邮件附件流传的许多病毒使得在公司网络入口处设置反病毒软件变得至关重要，因为尽管进行了意识宣传，某些用户仍然会打开来自明显可疑邮件的附件。
@@ -6452,35 +6489,17 @@ falcot.com greylisting
 
 病毒扫描器（或所谓的反病毒软件）的使用具有争议。在某些恶意软件发布与向反病毒数据库添加检测规则之间，通常存在一个间隔。在这个间隔期内，没有基于软件的保护。此外，使用通常需要运行额外的软件，例如解压缩压缩包并扫描各种可执行文件，这极大地增加了反病毒软件本身的被利用风险。因此，使用此类解决方案永远无法取代意识宣传和简单的行为规则（如永远不要打开未请求的发送邮件附件等）。
 
-Falcot 的管理员选择了 `clamav` 作为他们的免费反病毒软件。主包是 `clamav`，但他们还安装了一些额外的包，如 `arj`、`unzoo`、`unrar` 和 `lha`，因为反病毒软件需要这些包来分析以这些格式之一存档的附件。
+Falcot 的管理员选择了`clamav`作为他们的免费反病毒软件。主包是`clamav`，但他们还安装了一些额外的包，如`arj`、`unzoo`、`unrar`和`lha`，因为反病毒软件需要这些包来分析以这些格式之一存档的附件。
 
-反病毒软件与邮件服务器之间的接口任务由 `clamav-milter` 完成。`milter`（mail filter 的缩写）是一种专门设计用于与邮件服务器建立接口的过滤程序。milter 使用标准的应用程序编程接口（API），提供了比邮件服务器外部过滤器更好的性能。Milters 最初由 `Sendmail` 引入，但 `Postfix` 很快也效仿了。
+反病毒软件与邮件服务器之间的接口任务由`clamav-milter`完成。`milter`（mail filter 的缩写）是一种专门设计用于与邮件服务器建立接口的过滤程序。milter 使用标准的应用程序编程接口（API），提供了比邮件服务器外部过滤器更好的性能。Milters 最初由`Sendmail`引入，但`Postfix`很快也效仿了。
 
 **快速查看用于 Spamassassin 的 milter**
 
-`spamassassin-milter` 包提供了一个基于 `SpamAssassin` 的垃圾邮件过滤器 milter。它可以根据 `SpamAssassin` 将邮件标记为可能的垃圾邮件（通过添加头部），或者在超过阈值时完全拒绝。一旦安装了 `clamav` 软件包，milter 应该在 TCP 端口而不是命名套接上运行。这可以通过 `127.0.0.1` 实现。
+`spamassassin-milter`包提供了一个基于`SpamAssassin`的垃圾邮件过滤器 milter。它可以根据`SpamAssassin`将邮件标记为可能的垃圾邮件（通过添加头部），或者在超过阈值时完全拒绝。一旦安装了`clamav`软件包，milter 应该在 TCP 端口而不是命名套接上运行。这可以通过`127.0.0.1`实现。
 
 **注意 TCP TCP 命名套接**
 
 使用真实的 TCP 端口而不是命名套接的原因是，守护进程通常需要以 root 权限访问命名套接。
-
-Falcot 的管理员选择了 `clamav` 作为他们的免费反病毒软件。主包是 `clamav`，但他们还安装了一些额外的包，如 `arj`、`unzoo`、`unrar` 和 `lha`，因为反病毒软件需要这些包来分析以这些格式之一存档的附件。
-
-反病毒软件与邮件服务器之间的接口任务由 `clamav-milter` 完成。`milter`（mail filter 的缩写）是一种专门设计用于与邮件服务器建立接口的过滤程序。milter 使用标准的应用程序编程接口（API），提供了比邮件服务器外部过滤器更好的性能。Milters 最初由 `Sendmail` 引入，但 `Postfix` 很快也效仿了。
-
-**快速查看用于 Spamassassin 的 milter**
-
-`spamassassin-milter` 包提供了一个基于 `SpamAssassin` 的垃圾邮件过滤器 milter。它可以根据 `SpamAssassin` 将邮件标记为可能的垃圾邮件（通过添加头部），或者在超过阈值时完全拒绝。一旦安装了 `clamav` 软件包，milter 应该在 TCP 端口而不是命名套接上运行。这可以通过 `127.0.0.1` 实现。
-
-**注意 TCP TCP 命名套接**
-
-使用真实的 TCP 端口而不是命名套接接的原因是，守护进程通常需要以 root 权限访问命名套接。
-
-Falcot 的管理员选择了 `clamav` 作为他们的免费反病毒软件。主包是 `clamav`，但他们还安装了一些额外的包，如 `arj`、`unzoo`、`unrar` 和 `lha`，因为反病毒软件需要这些包来分析以这些格式之一存档的附件。
-
-反病毒软件与邮件服务器之间的接口任务由 `clamav-milter` 完成。`milter`（mail filter 的缩写）是一种专门设计用于与邮件服务器建立接口的过滤程序。milter 使用标准的应用程序编程接口（API），提供了比邮件服务器外部过滤器更好的性能。Milters 最初由 `Sendmail` 引入，但 `Postfix` 很快也效仿了。
-
-### 
 
 ### 11.1.7. 使用 SPF、DKIM 和 DMARC 对抗垃圾邮件
 
@@ -6492,20 +6511,21 @@ Falcot 的管理员选择了 `clamav` 作为他们的免费反病毒软件。主
 
 #### 11.1.7.1 集成发送者策略框架 (SPF)
 
-发送者策略框架 (`SPF`) 用于验证特定的邮件服务器是否允许为给定域名发送邮件。它主要通过 DNS 配置。条目的语法在以下详细说明：
+发送者策略框架（`SPF`）用于验证特定的邮件服务器是否允许为给定域名发送邮件。它主要通过 DNS 配置。条目的语法在以下详细说明：
 
 → [http://www.opensspf.org/SPF_Syntax]
 → [https://tools.ietf.org/html/rfc7208]
 → [https://en.wikipedia.org/wiki/Sender_Policy_Framework]
 
-以下是一个示例 DNS 条目，表示该域名的所有邮件交换记录（MX-RR）都允许发送当前邮件，其他所有都被禁止。DNS 条目不需要命名。但要使用 `include` 指令，它必须有一个。
+以下是一个示例 DNS 条目，表示该域名的所有邮件交换记录（MX-RR）都允许发送当前邮件，其他所有都被禁止。DNS 条目不需要命名。但要使用`include`指令，它必须有一个。
 
 名称：`example.org` 类型：`TXT` TTL：`3600` 数据：`v=spf1 a mx -all`
 
-让我们快速查看 `falcot.org` 条目。
+让我们快速查看`falcot.org`条目。
 
 ```bash
 # host -t TXT falcot.org
+
 falcot.org descriptive text "v=spf1 ip4:199.127.61.96 +a +mx +ip4:206.221.184.234 +ip4:209.222.96.251 ~all"
 ```
 
@@ -6517,48 +6537,42 @@ falcot.org descriptive text "v=spf1 ip4:199.127.61.96 +a +mx +ip4:206.221.184.23
 
 这并不是真正的病毒，而是通过 Postfix 处理的。
 
+配置是在`/etc/postfix-policyd-spf-python/policyd-spf.conf`文件完成的，该文件在`policyd-spf.conf(5)`和`/usr/share/doc/postfix-policyd-spf-python/policyd-spf.conf.commented.gz`中有完整文档。主要的配置参数是`HELO_reject`和`Mail_From_reject`，它们用于配置检查失败时是拒绝邮件（`Fail`）还是在添加头后接受邮件（`False`）。当消息由垃圾过滤器进一步处理时，后者通常有用。
 
-
-
-配置是在 `/etc/postfix-policyd-spf-python/policyd-spf.conf` 文件完成的，该文件在 `policyd-spf.conf(5)` 和 `/usr/share/doc/postfix-policyd-spf-python/policyd-spf.conf.commented.gz`中有完整文档。主要的配置参数是 `HELO_reject` 和 `Mail_From_reject`，它们用于配置检查失败时是拒绝邮件（`Fail`）还是在添加头后接受邮件（`False`）。当消息由垃圾过滤器进一步处理时，后者通常有用。
-
-如果结果打算供 opendmarc 使用，则 `Header_Type` 必须设置为 `AR`。
+如果结果打算供 opendmarc 使用，则`Header_Type`必须设置为`AR`。
 
 注意，spamassassin 包含一个检查 SPF 记录的插件。
 
 ### 集成域名密钥 (DKIM) 签名与验证
 
-域名密钥识别邮件 (DKIM) 标准是一种发送者身份验证系统。邮件传输代理（在此处为 `postfix`）在向外邮件的头中添加一个与域名相关的数字签名。接收方可以通过从发送者的 DNS 记录中获取公钥并校验签名，来验证邮件正文和头部字段。
+域名密钥识别邮件 (DKIM) 标准是一种发送者身份验证系统。邮件传输代理（在此处为`postfix`）在向外邮件的头中添加一个与域名相关的数字签名。接收方可以通过从发送者的 DNS 记录中获取公钥并校验签名，来验证邮件正文和头部字段。
 
 → [`dkim.org/`](http://dkim.org/)
 
-必要的工具随 `opendkim` 和 `opendkim-tools` 软件包发布。
-
-***
+必要的工具随`opendkim`和`opendkim-tools`软件包发布。
 
 **注意** 邮件列表软件与 DKIM
 
-邮件列表管理器通常会重写某些邮件头，导致 DKIM 签名无效。即使使用 `relaxed` 规范化也不总是能防止这种情况发生。因此，管理员必须密切关注邮件服务器日志文件以识别此类问题。否则，这些邮件可能会被标记为垃圾邮件并被拒绝。
+邮件列表管理器通常会重写某些邮件头，导致 DKIM 签名无效。即使使用`relaxed`规范化也不总是能防止这种情况发生。因此，管理员必须密切关注邮件服务器日志文件以识别此类问题。否则，这些邮件可能会被标记为垃圾邮件并被拒绝。
 
-***
-
-首先必须使用命令 `opendkim-genkey -s SELECTOR -d DOMAIN` 创建私钥。`SELECTOR` 必须是密钥的唯一名称。如果你计划轮密钥，它可以简单的 "mail" 或创建日期。
+首先必须使用命令`opendkim-genkey -s SELECTOR -d DOMAIN`创建私钥。`SELECTOR`必须是密钥的唯一名称。如果你计划轮密钥，它可以简单的 "mail" 或创建日期。
 
 示例 11.11，为 falcot.com 的签名邮件创建一个私钥：
 ```bash
 opendkim-genkey -s mail -d falcot.com -D /etc/dkimkeys
+
 chown opendkim.opendkim /etc/dkimkeys/mail.*
 ```
 
-这将创建文件 `/etc/dkimkeys/mail.private` 和 `/etc/dkimkeys/mail.txt` 并设置相应的所有权。第一个文件包含私钥，后者包含需要添加到 DNS 的公钥：
+这将创建文件`/etc/dkimkeys/mail.private`和`/etc/dkimkeys/mail.txt`并设置相应的所有权。第一个文件包含私钥，后者包含需要添加到 DNS 的公钥：
 
 Name: mail._domainkey Type: TXT TTL: 3600 Data: "v=DKIM1; h=sha256; k=rsa; s=email; p=[...]"
 
-Debian 中的 `opendkim` 包默认密钥大小为 2048 位。遗憾的是，某些 DNS 服务器只能处理最大长度为 255 个字符的文本记录，而所选的默认密钥大小超过了这个限制。在这种情况下，使用选项 `-b 1024` 选择较小的密钥大小。如果 `opendkim-testkey` 成功，则条目已成功设置。该条目的语法在此处解释：
+Debian 中的`opendkim`包默认密钥大小为 2048 位。遗憾的是，某些 DNS 服务器只能处理最大长度为 255 个字符的文本记录，而所选的默认密钥大小超过了这个限制。在这种情况下，使用选项`-b 1024`选择较小的密钥大小。如果`opendkim-testkey`成功，则条目已成功设置。该条目的语法在此处解释：
 
 → [`tools.ietf.org/html/rfc6376`](https://tools.ietf.org/html/rfc6376) → [`en.wikipedia.org/wiki/DKIM`](https://en.wikipedia.org/wiki/DKIM)
 
-要配置 opendkim，必须在 `/etc/default/opendkim` 中选择 `SOCKET` 和 `RUNDIR`。请注意，`SOCKET` 必须在 `postfix` 的 chroot 环境可访问。进一步配置在 `/etc/opendkim.conf` 中完成。以下是一个配置片段，它确保 `Domain` "falcot.com" 和所有子域名 (`SubDomain`）都由 `Selector` "mail" 和单个私钥 (`KeyFile`) `/etc/dkimkeys/mail.private` 签名。头部和正文的 "relaxed" `Canonicalization` 允许轻微修改（例如通过邮件列表软件）。过滤器在签名 ("s") 和验证 ("v") `Mode` 下均运行。如果签名验证失败（`On-BadSignature`），则邮件应被隔离 ("q")）。
+要配置 opendkim，必须在`/etc/default/opendkim`中选择`SOCKET`和`RUNDIR`。请注意，`SOCKET`必须在`postfix`的 chroot 环境可访问。进一步配置在`/etc/opendkim.conf`中完成。以下是一个配置片段，它确保`Domain` "falcot.com" 和所有子域名 (`SubDomain`）都由`Selector` "mail" 和单个私钥 (`KeyFile`) `/etc/dkimkeys/mail.private`签名。头部和正文的 "relaxed" `Canonicalization`允许轻微修改（例如通过邮件列表软件）。过滤器在签名 ("s") 和验证 ("v") `Mode`下均运行。如果签名验证失败（`On-BadSignature`），则邮件应被隔离 ("q")）。
 
 ```
 [...] Domain falcot.com KeyFile /etc/dkimkeys/mail.private Selector mail [...] Canonicalization relaxed/relaxed Mode sv On-BadSignature q SubDomains yes [...] Socket inet:12345@localhost [...] UserID opendkim
@@ -6566,150 +6580,139 @@ Debian 中的 `opendkim` 包默认密钥大小为 2048 位。遗憾的是，某�
 
 还可以使用多个选择器/密钥（`KeyTable`）、域名（`SigningTable`）并指定内部或信任主机（`InternalHosts`、`ExternalIgnoreList`），它们可以在没有凭据的情况下通过服务器作为签名域名之一发送邮件。
 
-`/etc/postfix/main.cf` 中的以下指令使 `postfix` 使用过滤器：
+`/etc/postfix/main.cf`中的以下指令使`postfix`使用过滤器：
 
 ```conf
 milter_default_action = accept
+
 non_smtpd_milters = inet:localhost:12345
+
 smtpd_milters = inet:localhost:12345
 ```
 
-
-
-
 发送电子邮件需要能够访问 SMTP 服务器；它也要求该 SMTP 服务器通过它来发送电子邮件。对于漫游用户，这可能需要经常更改 SMTP 客户端的配置，因为 Falcot 的 SMTP 服务器会拒绝来自显然不属于公司 IP 地址的邮件。有两种解决方案：要么漫游用户在自己的计算机上安装 SMTP 服务器，要么通过某种员工身份验证手段继续使用公司服务器。不推荐前一种方案，因为计算机不会保持永久连接，而且在出现问题时无法重试发送消息；我们将关注后一种。
 
-Postfix 中的 SMTP 身份验证依赖于 SASL（*身份验证与安全层*）。它要求安装 `libsasl2-modules` 和 `sasl2-bin` 包，然后为每个需要在 SMTP 服务器上进行验证的用户在 SASL 数据库中注册密码。这是通过 `saslpasswd2` 命令完成的，该命令接受多个参数。`-u` 选项定义身份域，必须与 Postfix 配置中的 `smtpd_sasl_local_domain` 参数匹配。`-c` 允许创建用户，而 `-f` 允许在 SASL 数据库需要存储在默认位置（`/etc/sasldb2`）之外时指定指定的文件。
+Postfix 中的 SMTP 身份验证依赖于 SASL（*身份验证与安全层*）。它要求安装`libsasl2-modules`和`sasl2-bin`包，然后为每个需要在 SMTP 服务器上进行验证的用户在 SASL 数据库中注册密码。这是通过`saslpasswd2`命令完成的，该命令接受多个参数。`-u`选项定义身份域，必须与 Postfix 配置中的`smtpd_sasl_local_domain`参数匹配。`-c`允许创建用户，而`-f`允许在 SASL 数据库需要存储在默认位置（`/etc/sasldb2`）之外时指定指定的文件。
 
 ```
 saslpasswd2 -u `postconf -h myhostname` -f /var/spool/postfix/etc/sasldb2 -c jean
+
 # [... 输入两次 jean 的密码 ... ]
 ```
 
-注意，SASL 数据库创建在 Postfix 的目录中。为了确保一致性，我们还通过 `ln -sf /var/spool/postfix/etc/sasldb2 /etc/sasldb2` 命令将 `/etc/sasldb2` 变成指向 Postfix 使用数据库的符号链接。
+注意，SASL 数据库创建在 Postfix 的目录中。为了确保一致性，我们还通过`ln -sf /var/spool/postfix/etc/sasldb2 /etc/sasldb2`命令将`/etc/sasldb2`变成指向 Postfix 使用数据库的符号链接。
 
-现在我们需要配置 Postfix 使用 SASL。首先需要将 `postfix` 用户添加到 `sasl` 组，以便它可以访问 SASL 账户数据库。还需要几个新参数来启用 SASL，并且需要配置 `smtpd_recipient_restrictions` 参数以允许通过 SASL 验证的客户端自由发送电子邮件。
+现在我们需要配置 Postfix 使用 SASL。首先需要将`postfix`用户添加到`sasl`组，以便它可以访问 SASL 账户数据库。还需要几个新参数来启用 SASL，并且需要配置`smtpd_recipient_restrictions`参数以允许通过 SASL 验证的客户端自由发送电子邮件。
 
-示例 11.12 在 `/etc/postfix/main.cf` 中启用 SASL
+示例 11.12 在`/etc/postfix/main.cf`中启用 SASL
 ```conf
 # 启用 SASL 验证
+
 smtpd_sasl_auth_enable = yes
+
 # 定义使用的 SASL 身份验证域
+
 smtpd_sasl_local_domain = $myhostname
+
 [...] # 在 reject_unauth_destination 之前添加 permit_sasl_authenticated
+
 # 允许通过 SASL 验证的用户中继邮件
+
 smtpd_recipient_restrictions = permit_sasl_authenticated, permit_mynetworks, reject_unauth_destination, [...]
 ```
 
-通常情况下，通过未加密连接发送密码不是好主意。*Postfix* 允许对其运行的每个端口（服务）使用不同的配置。所有这些可以通过 `/etc/postfix/master.cf` 文件中的不同规则和指令进行配置。要关闭端口 25（`smtpd` 服务）的身份验证，添加以下指令：
+通常情况下，通过未加密连接发送密码不是好主意。*Postfix*允许对其运行的每个端口（服务）使用不同的配置。所有这些可以通过`/etc/postfix/master.cf`文件中的不同规则和指令进行配置。要关闭端口 25（`smtpd`服务）的身份验证，添加以下指令：
 
 ```
 smtp inet n - y - - smtpd [..] -o smtpd_sasl_auth_enable=no [..]
 ```
 
-如果由于某些原因客户端使用了过时的 `AUTH` 命令（某些非常旧的邮件客户端确实如此），可以使用 `broken_sasl_auth_clients` 指令开启它们的兼容性。
+如果由于某些原因客户端使用了过时的`AUTH`命令（某些非常旧的邮件客户端确实如此），可以使用`broken_sasl_auth_clients`指令开启它们的兼容性。
 
-* * *
-
-*额外* 经过验证的 SMTP 客户端
+**额外** 经过验证的 SMTP 客户端
 
 大多数邮件客户端都可以在发送输出邮件之前对 SMTP 服务器进行身份验证，使用该功能只需配置适当的参数。如果使用的客户端未提供该功能，变通方法是使用本地 Postfix 服务器并配置其通过远程 SMTP 服务器中继电子邮件。在这种情况下，本地 Postfix 本身将作为使用 SASL 验证的客户端。以下是所需的参数：
 
 ```
 smtp_sasl_auth_enable = yes
+
 smtp_sasl_password_maps = hash:/etc/postfix/sasl_passwd
+
 relay_host = [mail.falcot.com]
 ```
 
-`/etc/postfix/sasl_passwd` 文件需要包含在 `mail.falcot.com` 服务器上进行验证所需的用户名和密码。这是一个示例：
+`/etc/postfix/sasl_passwd`文件需要包含在`mail.falcot.com`服务器上进行验证所需的用户名和密码。这是一个示例：
 
 ```
 [mail.falcot.com] joe:LyinIsji
 ```
 
-对于所有 Postfix 映射文件，必须使用 `postmap` 命令将此文件转换为 `/etc/postfix/sasl_passwd.db`。
 
-* * *
 
-* * *
+对于所有 Postfix 映射文件，必须使用`postmap`命令将此文件转换为`/etc/postfix/sasl_passwd.db`。
 
-[^([1]) `openspf.org` 网站于 2019 年 2 月无原因消失了。内容仍可以通过 [`web.archive.org/web/20190224184030/http://www.openspf.org/SPF_Record_Syntax`](https://web.archive.org/web/20190224184030/http://www.openspf.org/SPF_Record_Syntax) 获取。
+[^([1]) `openspf.org`网站于 2019 年 2 月无原因消失了。内容仍可以通过[`web.archive.org/web/20190224184030/http://www.openspf.org/SPF_Record_Syntax`](https://web.archive.org/web/20190224184030/http://www.openspf.org/SPF_Record_Syntax)获取。
 
 # 11.2. Web 服务器 (HTTP)
 
 Falcot 公司的管理员决定使用 Apache HTTP 服务器，Debian Buster 包含的版本为 2.4.38。
 
-* * *
+**替代方案** 其他 Web 服务器
 
-*替代方案* 其他 Web 服务器
-
-Apache 仅仅是最广为人知（以及广泛使用）的 Web 服务器，但还有其他的；它们在某些工作负载下可以提供更好的性能，但代价是可用功能和模块较少。然而，当备选的 Web 服务器用于提供静态文件或作为代理时，像 `nginx` 和 `lighttpd` 等替代方案值得研究。
-
-* * *
+Apache 仅仅是最广为人知（以及广泛使用）的 Web 服务器，但还有其他的；它们在某些工作负载下可以提供更好的性能，但代价是可用功能和模块较少。然而，当备选的 Web 服务器用于提供静态文件或作为代理时，像`nginx`和`lighttpd`等替代方案值得研究。
 
 ## 11.2.1. 安装 Apache
 
-只需要安装 `apache2` 包即可。它包含了所有的模块，包括影响 Apache 如何处理并行处理的*多处理模块* (MPMs)。它还拉取了实用程序和命令行工具。
+只需要安装`apache2`包即可。它包含了所有的模块，包括影响 Apache 如何处理并行处理的*多处理模块* (MPMs)。它还拉取了实用程序和命令行工具。
 
-所所使用的 MPM 会显著影响 Apache 处理并发请求的方式。使用 `worker` MPM 时，它使用线程（轻量级进程），而使用 `prefork` MPM 时它使用进程。使用 `event` MPM 时它也使用线程，但空闲连接（特别是由 keep-alive 功能保持打开的连接）会被交给一个专门的管理线程。
+所所使用的 MPM 会显著影响 Apache 处理并发请求的方式。使用`worker` MPM 时，它使用线程（轻量级进程），而使用`prefork` MPM 时它使用进程。使用`event` MPM 时它也使用线程，但空闲连接（特别是由 keep-alive 功能保持打开的连接）会被交给一个专门的管理线程。
 
-Falcot 管理员还安装了 `libapache2-mod-php7.3` 以在 Apache 中包含 PHP 支持。这会导致默认的 `event` MPM 被禁用，转而使用 `prefork`。要使用 `event` MPM，可以使用 `php7.3-fpm`。
+Falcot 管理员还安装了`libapache2-mod-php7.3`以在 Apache 中包含 PHP 支持。这会导致默认的`event` MPM 被禁用，转而使用`prefork`。要使用`event` MPM，可以使用`php7.3-fpm`。
 
-* * *
+**安全** 在`www-data`用户身份下执行
 
-*安全* 在 `www-data` 用户身份下执行
+默认情况下，Apache 以`www-data`用户的身份处理传入请求。这意味着 Apache 执行的 CGI 脚本（动态页面）的安全漏洞不会损害整个系统，只会影响该特定用户的文件。
 
-默认情况下，Apache 以 `www-data` 用户的身份处理传入请求。这意味着 Apache 执行的 CGI 脚本（动态页面）的安全漏洞不会损害整个系统，只会影响该特定用户的文件。
+使用`sueec`模块（由`apache2-sueec-*`包提供）允许绕过此规则，以便某些 CGI 脚本以另一个用户的身份执行。这通过 Apache 配置中的`SuexecUserGroup` `user group`指令进行配置。
 
-使用 `sueec` 模块（由 `apache2-sueec-*` 包提供）允许绕过此规则，以便某些 CGI 脚本以另一个用户的身份执行。这通过 Apache 配置中的 `SuexecUserGroup` `user group` 指令进行配置。
+另一种可能性是使用专门的 MPM，例如由`libapache2-mpm-itk`提供的。这种特定的行为略有不同：它允许“隔离”虚拟主机（实际上是页面集），以便它们以不同的用户身份运行。因此，一个网站的漏洞无法损害属于另一个网站所有的文件。
 
-另一种可能性是使用专门的 MPM，例如由 `libapache2-mpm-itk` 提供的。这种特定的行为略有不同：它允许“隔离”虚拟主机（实际上是页面集），以便它们以不同的用户身份运行。因此，一个网站的漏洞无法损害属于另一个网站所有的文件。
-
-* * *
-
-* * *
-
-*查看* 模块列表
+**查看** 模块列表
 
 Apache 标准模块的完整列表可以在网上找到。
 
 → [`httpd.apache.org/docs/2.4/mod/index.html`](https://httpd.apache.org/docs/2.4/mod/index.html)
 
-* * *
+Apache 是模块化服务器，许多功能由主程序在初始化期间加载的外部模块实现。默认配置仅启用常用的模块，但启用新模块只需运行`a2enmod module`；要禁用模块，命令是`a2dismod module`。这些程序实际上只在`/etc/apache2/mods-enabled/`中创建（或删除）符号链接，指向实际文件（存储在`/etc/apache2/mods-available/`中）。
 
-Apache 是模块化服务器，许多功能由主程序在初始化期间加载的外部模块实现。默认配置仅启用常用的模块，但启用新模块只需运行 `a2enmod `module``；要禁用模块，命令是 `a2dismod `module``。这些程序实际上只在 `/etc/apache2/mods-enabled/` 中创建（或删除）符号链接，指向实际文件（存储在 `/etc/apache2/mods-available/` 中）。
+**实践中** 检查配置
 
-* * *
-
-*实践中* 检查配置
-
-
-
-
-
-`mod_info` 模块（`a2enmod info`）允许通过浏览器访问 `http://localhost/server-info` 来获取全面的 Apache 服务器配置和信息。由于其中可能包含敏感信息，默认情况下仅允许本地主机访问。
+`mod_info`模块（`a2enmod info`）允许通过浏览器访问`http://localhost/server-info`来获取全面的 Apache 服务器配置和信息。由于其中可能包含敏感信息，默认情况下仅允许本地主机访问。
 
 → [`httpd.apache.org/docs/2.4/mod/mod_info.html`](https://httpd.apache.org/docs/2.4/mod/mod_info.html)
 
-在默认配置下，Web 服务器监听在 80 端口（如 `/etc/apache2/ports.conf` 中配置），并从 `/var/www/html/` 目录提供页面（如 `/etc/apache2/sites-enabled/000-default.conf` 中配置）。
+在默认配置下，Web 服务器监听在 80 端口（如`/etc/apache2/ports.conf`中配置），并从`/var/www/html/`目录提供页面（如`/etc/apache2/sites-enabled/000-default.conf`中配置）。
 
 ## 11.2.2. 添加 SSL 支持
 
-Apache 2.4 内置了安全 HTTP (HTTPS) 必需的 SSL 模块 `mod_ssl`。只需要通过 `a2enmod ssl` 将其启用，然后在配置文件中添加所需的指令即可。`/etc/apache2/sites-available/default-ssl.conf` 提供了一个配置示例。
+Apache 2.4 内置了安全 HTTP (HTTPS) 必需的 SSL 模块`mod_ssl`。只需要通过`a2enmod ssl`将其启用，然后在配置文件中添加所需的指令即可。`/etc/apache2/sites-available/default-ssl.conf`提供了一个配置示例。
 
 → [`httpd.apache.org/docs/2.4/mod/mod_ssl.html`](https://httpd.apache.org/docs/2.4/mod/mod_ssl.html)
 
 如果你想生成受信任的证书，可以参考 第 10.2.1 节，“创建免费受信任证书” 并调整以下变量：
 
 ```
-SSLCertificateFile /etc/letsencrypt/live/*`DOMAIN`*/fullchain.pem SSLCertificateKeyFile /etc/letsencrypt/live/*`DOMAIN`*/privkey.pem SSLCertificateChainFile /etc/letsencrypt/live/*`DOMAIN`*/chain.pem SSLCACertificateFile /etc/ssl/certs/ca-certificates.crt
+SSLCertificateFile /etc/letsencrypt/live/*`DOMAIN`*/fullchain.pem
+SSLCertificateKeyFile /etc/letsencrypt/live/*`DOMAIN`*/privkey.pem
+SSLCertificateChainFile /etc/letsencrypt/live/*`DOMAIN`*/chain.pem
+SSLCACertificateFile /etc/ssl/certs/ca-certificates.crt
 ```
 
 如果你希望倾向于使用具有完全正向密钥（Perfect Forward Secrecy）属性的 SSL 连接，需要格外小心（这些连接使用临时会话密钥，确保服务器私钥泄露不会导致之前在网络嗅探时存储的旧加密流量被泄露）。请特别查看 Mozilla 的建议：
 
 → [`wiki.mozilla.org/Security/Server_Side_TLS#Apache`](https://wiki.mozilla.org/Security/Server_Side_TLS#Apache)
 
-作为标准 SSL 模块的替代方案，还有一个名为 `mod_gnutls` 的扩展模块随 `libapache2-mod-gnutls` 软件包分发，并通过 `a2enmod gnutls` 启用。
+作为标准 SSL 模块的替代方案，还有一个名为`mod_gnutls`的扩展模块随`libapache2-mod-gnutls`软件包分发，并通过`a2enmod gnutls`启用。
 
 → [`mod.gnutls.org/`](https://mod.gnutls.org/)
 
@@ -6721,11 +6724,11 @@ Apache 考虑两种类型的虚拟主机：基于 IP 地址（或端口）的主
 
 IPv4 地址的日益稀缺通常有利于第二种方法；但如果虚拟主机还需要提供 HTTPS，情况就会变得更加复杂，因为 SSL 协议并不总是支持基于名称的虚拟主机；允许这种组合的 SNI（服务器名称指示）扩展并未被所有浏览器器支持。当多个 HTTPS 站点需要运行在同一台服务器上时，它们通常通过运行在不同的端口或不同的 IP 地址上来区分（IPv6 在此很有帮助）。
 
-Apache 2 的默认配置启用了基于名称的虚拟主机。此外，在 `/etc/apache2/sites-enabled/000-default.conf` 文件定义了一个默认虚拟主机；如果未找到与客户端发送请求匹配的主机，将使用该虚拟主机。
+Apache 2 的默认配置启用了基于名称的虚拟主机。此外，在`/etc/apache2/sites-enabled/000-default.conf`文件定义了一个默认虚拟主机；如果未找到与客户端发送请求匹配的主机，将使用该虚拟主机。
 
 ### 注意 第一个虚拟主机
 
-针对未知虚拟主机的请求始终由定义的第一个虚拟主机处理，这就是为什么我们在这里先定义 `www.falcot.com`。
+针对未知虚拟主机的请求始终由定义的第一个虚拟主机处理，这就是为什么我们在这里先定义`www.falcot.com`。
 
 ### 快速查看 Apache 支持 SNI
 
@@ -6735,7 +6738,7 @@ Apache 服务器支持一种名为服务器名称指示（SNI）的 SSL 协议�
 
 Debian 提供的 Apache 软件包在构建时已支持 SNI；因此不需要特殊配置。
 
-还应确保虚拟主机（默认使用的那个）启用了 TLS1。每个额外的虚拟主机由存储在 `/etc/apache2/sites-available/` 中的文件描述。因此，为 `falcot.org` 域名设置网站只需创建以下文件，然后通过 `a2ensite falcot.org` 启用虚拟主机。
+还应确保虚拟主机（默认使用的那个）启用了 TLS1。每个额外的虚拟主机由存储在`/etc/apache2/sites-available/`中的文件描述。因此，为`falcot.org`域名设置网站只需创建以下文件，然后通过`a2ensite falcot.org`启用虚拟主机。
 
 ```
 <VirtualHost *:80>
@@ -6745,7 +6748,7 @@ Debian 提供的 Apache 软件包在构建时已支持 SNI；因此不需要特�
 </VirtualHost>
 ```
 
-到目前为止配置的 Apache 服务器对所有虚拟主机使用相同的日志文件（尽管可以通过在虚拟主机定义中添加 `CustomLog` 指令来更改）。因此，自定义此日志文件的格式以包含虚拟主机名称是有意义的。这可以通过创建 `/etc/apache2/conf-available/customlog.conf` 文件并通过 `a2enconf customlog` 启用来实现。还必须从 `/etc/apache2/sites-enabled/000-default.conf` 文件中删除（或注释掉）`CustomLog` 行。
+到目前为止配置的 Apache 服务器对所有虚拟主机使用相同的日志文件（尽管可以通过在虚拟主机定义中添加`CustomLog`指令来更改）。因此，自定义此日志文件的格式以包含虚拟主机名称是有意义的。这可以通过创建`/etc/apache2/conf-available/customlog.conf`文件并通过`a2enconf customlog`启用来实现。还必须从`/etc/apache2/sites-enabled/000-default.conf`文件中删除（或注释掉）`CustomLog`行。
 
 ```
 # 新日志格式，包含（虚拟）主机名
@@ -6758,7 +6761,7 @@ CustomLog /var/log/apache2/access.log vhost
 
 本节简要回顾了一些常用的 Apache 配置指令。
 
-主配置文件通常包含几个 `Directory` 块；它们允许根据所提供服务的文件的位置为服务器指定不同的行为。此类块通常包含 `Options` 和 `AllowOverride` 指令。
+主配置文件通常包含几个`Directory`块；它们允许根据所提供服务的文件的位置为服务器指定不同的行为。此类块通常包含`Options`和`AllowOverride`指令。
 
 ```
 <Directory /var/www>
@@ -6768,108 +6771,101 @@ CustomLog /var/log/apache2/access.log vhost
 </Directory>
 ```
 
-`DirectoryIndex` 指令包含一个当客户端请求匹配目录时尝试的文件列表。列表中第一个存在的文件将被使用并作为响应发送。
+`DirectoryIndex`指令包含一个当客户端请求匹配目录时尝试的文件列表。列表中第一个存在的文件将被使用并作为响应发送。
 
-`Options` 指令后紧跟着一个要启用的选项列表。`None` 值禁用所有选项；相应地，`All` 启用 `MultiViews` 之外的所有选项。可用选项包括：
+`Options`指令后紧跟着一个要启用的选项列表。`None`值禁用所有选项；相应地，`All`启用`MultiViews`之外的所有选项。可用选项包括：
 
-*   `ExecCGI` 表示可以执行 CGI 脚本。
-*   `FollowSymlinks` 告诉服务器可以跟随符号链接，响应应包含此类链接目标的内容。
-
-
-
-
-
-*   `SymlinksIfOwnerMatch` 也告诉服务器跟随符号链接，但仅当链接及其目标具有相同所有者时才生效。
-*   `Includes` 启用服务器端包含（简写 `SSI`）。这些是嵌入在 HTML 页面中的指令，并在每次请求时即时执行。
-*   `IncludesNOEXEC` 允许服务器端包含（`SSI`），但禁用了 `exec` 命令并将 `include` 指令限制为文本/标记文件。
-*   `Indexes` 告诉服务器，如果客户端发送的 HTTP 请求指向一个没有索引文件的目录，则列出该目录的内容（即当目录中不存在 `DirectoryIndex` 指令中提到的任何文件时）。
-*   `MultiViews` 启用多视图（多内容协商），用于内容协商；服务器可以使用此功能返回与浏览器配置的偏好语言匹配的网页。
-
----
+*   `ExecCGI`表示可以执行 CGI 脚本。
+*   `FollowSymlinks`告诉服务器可以跟随符号链接，响应应包含此类链接目标的内容。
+*   `SymlinksIfOwnerMatch`也告诉服务器跟随符号链接，但仅当链接及其目标具有相同所有者时才生效。
+*   `Includes`启用服务器端包含（简写`SSI`）。这些是嵌入在 HTML 页面中的指令，并在每次请求时即时执行。
+*   `IncludesNOEXEC`允许服务器端包含（`SSI`），但禁用了`exec`命令并将`include`指令限制为文本/标记文件。
+*   `Indexes`告诉服务器，如果客户端发送的 HTTP 请求指向一个没有索引文件的目录，则列出该目录的内容（即当目录中不存在`DirectoryIndex`指令中提到的任何文件时）。
+*   `MultiViews`启用多视图（多内容协商），用于内容协商；服务器可以使用此功能返回与浏览器配置的偏好语言匹配的网页。
 
 ## 回到基础 `.htaccess` 文件
 
-`.htaccess` 文件包含了 Apache 配置指令，每当请求涉及其存储目录的元素时，这些指令就会被执行。这些指令的作用范围也会递归到所有的子目录。
+`.htaccess`文件包含了 Apache 配置指令，每当请求涉及其存储目录的元素时，这些指令就会被执行。这些指令的作用范围也会递归到所有的子目录。
 
-在 `Directory` 块中出现的大多数指令在 `.htaccess` 文件中也是合法的。
+在`Directory`块中出现的大多数指令在`.htaccess`文件中也是合法的。
 
----
-
-`AllowOverride` 指令列出了所有可以通过 `.htaccess` 文件启用或禁用的选项。该选项的一个常见用途是限制 `ExecCGI`，以便管理员选择哪些用户允许在 Web 服务器身份（`www-data` 用户）下运行程序。
+`AllowOverride`指令列出了所有可以通过`.htaccess`文件启用或禁用的选项。该选项的一个常见用途是限制`ExecCGI`，以便管理员选择哪些用户允许在 Web 服务器身份（`www-data`用户）下运行程序。
 
 ### 11.2.4.1. 需要身份验证
 
 在某些情况下，需要对网站的部分访问进行限制，因此只有提供用户名和密码的合法用户才能访问内容。
 
-示例 11.16. 需要身份验证的 `.htaccess` 文件
+示例 11.16. 需要身份验证的`.htaccess`文件
+
 ```bash
-Require valid-user AuthName "Private directory" AuthType Basic AuthUserFile /etc/apache2/authfiles/htpasswd-private
+Require valid-user
+AuthName "Private directory"
+AuthType Basic
+AuthUserFile /etc/apache2/authfiles/htpasswd-private
 ```
 
----
+**安全** 无安全
 
-### 安全 无安全
+上述示例使用的身份验证系统（`Basic`）安全性最低，因为密码是以明文发送的（它仅被编码为`base64`，这是一种简单的编码方式，而不是加密方法）。还需要注意的是，受此机制“保护”的文档在网络传输时也是明文的。如果安全性很重要，则应该对整个 HTTP 连接使用 SSL 加密。
 
-上述示例使用的身份验证系统（`Basic`）安全性最低，因为密码是以明文发送的（它仅被编码为 `base64`，这是一种简单的编码方式，而不是加密方法）。还需要注意的是，受此机制“保护”的文档在网络传输时也是明文的。如果安全性很重要，则应该对整个 HTTP 连接使用 SSL 加密。
-
----
-
-`/etc/apache2/authfiles/htpasswd-private` 文件包含用户和密码列表；通常使用 `htpasswd` 命令进行处理。例如，以下命令用于添加用户或更改其密码：
+`/etc/apache2/authfiles/htpasswd-private`文件包含用户和密码列表；通常使用`htpasswd`命令进行处理。例如，以下命令用于添加用户或更改其密码：
 
 ```bash
 # htpasswd /etc/apache2/authfiles/htpasswd-private user
-New password: Re-type new password: Adding password for user user
+New password:
+Re-type new password:
+Adding password for user user
 ```
 
 ### 11.2.4.2. 限制访问
 
-`Require` 指令控制目录（及其递归子目录）的访问限制。
+`Require`指令控制目录（及其递归子目录）的访问限制。
 
 → [`httpd.apache.org/docs/2.4/howto/access.html`](https://httpd.apache.org/docs/2.4/howto/access.html)
 
-它可以根据许多标准来限制访问；我们将在此停止于描述基于客户端 IP 地址的访问限制，但它的功能可以变得比这要强大得多，特别是当在 `RequireAll` 块中组合多个 `Require` 指令时。
+它可以根据许多标准来限制访问；我们将在此停止于描述基于客户端 IP 地址的访问限制，但它的功能可以变得比这要强大得多，特别是当在`RequireAll`块中组合多个`Require`指令时。
 
 示例 11.17. 仅允许来自本地网络的访问
+
 ```bash
 Require ip 192.168.0.0/16
 ```
 
----
+**替代方案** 旧语法
 
-### 替代方案 旧语法
+`Require`语法仅在 Apache 2.4（自 Jessie 版本起发布的版本）中可用。对于 Wheezy 用户，Apache 2.2 的语法有所不同，我们在这里描述它主要供参考，尽管通过`mod_access_compat`模块在 Apache 2.4 中也可以。
 
-`Require` 语法仅在 Apache 2.4（自 Jessie 版本起发布的版本）中可用。对于 Wheezy 用户，Apache 2.2 的语法有所不同，我们在这里描述它主要供参考，尽管通过 `mod_access_compat` 模块在 Apache 2.4 中也可以。
+`Allow from`和`Deny from`指令控制目录（及其递归子目录）的访问限制。
 
-`Allow from` 和 `Deny from` 指令控制目录（及其递归子目录）的访问限制。
+`Order`指令告诉服务器`Allow from`和`Deny from`指令的执行顺序；最后一个匹配的项具有优先级。具体而言，`Order deny,allow`在没有`Deny from`生效或有`Allow from`指令生效时允许访问。相反，`Order allow,deny`在没有匹配的`Allow from`指令（或有`Deny from`指令生效）时拒绝访问。
 
-`Order` 指令告诉服务器 `Allow from` 和 `Deny from` 指令的执行顺序；最后一个匹配的项具有优先级。具体而言，`Order deny,allow` 在没有 `Deny from` 生效或有 `Allow from` 指令生效时允许访问。相反，`Order allow,deny` 在没有匹配的 `Allow from` 指令（或有 `Deny from` 指令生效）时拒绝访问。
-
-`Allow from` 和 `Deny from` 指令后面可以跟随 IP 地址、网络（例如 `192.168.0.0/255.255.255.0`、`192.168.0.0/24` 甚至 `192.168.0`）、主机名或域名，或者指定所有人的 `all` 关键字。
+`Allow from`和`Deny from`指令后面可以跟随 IP 地址、网络（例如`192.168.0.0/255.255.255.0`、`192.168.0.0/24`甚至`192.168.0`）、主机名或域名，或者指定所有人的`all`关键字。
 
 例如，要默认拒绝连接但允许来自本地网络的连接，你可以使用以下配置：
+
 ```text
 Order deny,allow
 Allow from 192.168.0.0/16
 Deny from all
 ```
 
----
-
 ## 11.2.5. 日志分析器
 
 日志分析器经常安装在 Web 服务器上；因为前者为管理员提供了关于后者使用模式的精确信息。
 
-Falcot Corp 的管理员选择了 `AWStats`（高级网络统计）来分析他们的 Apache 日志文件。
+Falcot Corp 的管理员选择了`AWStats`（高级网络统计）来分析他们的 Apache 日志文件。
 
-第一个配置步骤是自定义 `/etc/awstats/awstats.conf` 文件。Falcot 的管理员除了以下参数外，保持该文件不变：
+第一个配置步骤是自定义`/etc/awstats/awstats.conf`文件。Falcot 的管理员除了以下参数外，保持该文件不变：
 
 ```ini
 LogFile="/var/log/apache2/access.log"
-LogFormat="%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\""
-LogType=combined
 ```
 
-（注：原文示例代码中 `LogFormat` 部分似乎不完整，此处已根据上下文补全并翻译）
+
+
+`LogFormat="%h %l %u %t \"%r\" %>s %b \"%{Referer}i\" \"%{User-Agent}i\""`
+
+`LogType=combined`
 
 ---
 
@@ -6881,6 +6877,7 @@ AWStats 默认在 `/var/www/awstats` 目录下生成统计数据。你可以通�
 
 ```apache
 Alias /awstats/ /var/www/awstats/
+
 <Directory /var/www/awstats>
     Options +Indexes
     Require all granted
@@ -6903,17 +6900,13 @@ awstats.pl -f /etc/awstats/awstats.conf -output www
 0 * * * * /usr/bin/awstats.pl -f /etc/awstats/awstats.conf -output www > /dev/null 2>&1
 ```
 
-
-
-
-
 请注意，由 `logrotate` 创建的日志文件需要所有人可读，特别是 AWStats。在上面的示例中，这是通过 `create 644 root adm` 这一行实现的（而不是默认的 `640` 权限）。
 
-# 11.3. FTP 文件服务器
+## 11.3. FTP 文件服务器
 
 FTP（*文件传输协议*）是互联网最早的协议之一（RFC 959 于 1985 年发布）。它在 Web 诞生之前就被用于分发文件（HTTP 协议创建于 1990 年，并在 1996 年发布的 RFC 1945 1.0 版本中正式定义）。
 
-该协议允许文件上传和下载；由于由于原因，它仍然被广泛用于部署托管在互联网提供商（或任何托管网站的实体）上的网站更新。在这些情况下，通过用户标识符和密码强制安全访问；身份验证后，FTP 服务器将授予该用户主目录的读写权限。
+该协议允许文件上传和下载；由于种种原因，它仍然被广泛用于部署托管在互联网提供商（或任何托管网站的实体）上的网站更新。在这些情况下，通过用户标识符和密码强制安全访问；身份验证后，FTP 服务器将授予该用户主目录的读写权限。
 
 其他 FTP 服务器主要用于分发供公共下载的文件；Debian 软件包就是一个很好的例子。这些服务器的内容是从其他地理位置较远的服务器获取的，然后提供给距离较近的用户。这意味着不需要客户端身份验证；结果，这种工作模式被称为“匿名 FTP”。严格来说，客户端确实会使用 `anonymous` 用户名进行身份验证；按照惯例，密码通常是用户的电子邮件地址，但服务器会忽略它。
 
@@ -6923,13 +6916,13 @@ Debian 中提供了许多 FTP 服务器（如 `ftpd`、`proftpd-basic`、`pyftpd
 
 `ftpd` 软件包未包含在 Debian Buster 中，由于一个发布前无法解决的错误。
 
-# 11.4. NFS 文件服务器
+## 11.4. NFS 文件服务器
 
 NFS（*网络文件系统*）是一种允许通过网络远程访问文件系统的协议。所有 Unix 系统都可以使用此协议。
 
 ### 特殊情况：Microsoft Windows 和 NFS 共享
 
-当涉及旧版本或（所谓的）“家庭版”变体 Windows 时，通常必须使用 `Samba`（见第 11.5 节，“使用 Samba 设置 Windows 共享”）而不是 NFS。然而，现代 Windows Server 以及“专业版”或“企业版”桌面解决方案内置了对 NFS 的支持。安装“N 服务”组件后，可以像任何其他网络共享一样访问并临时或永久挂载 NFS 共享。请文件名可能存在编码问题。
+当涉及旧版本或（所谓的）“家庭版”变体 Windows 时，通常必须使用 `Samba`（见第 11.5 节，“使用 Samba 设置 Windows 共享”）而不是 NFS。然而，现代 Windows Server 以及“专业版”或“企业版”桌面解决方案内置了对 NFS 的支持。安装“NFS 服务”组件后，可以像任何其他网络共享一样访问并临时或永久挂载 NFS 共享。请注意文件名可能存在编码问题。
 
 作为替代方案，可以将 Debian 安装在 Windows 10 Pro 及更高版本上。这需要安装适用于 Linux 的 Windows 子系统组件以及从 Windows 商店下载 Debian 应用。
 
@@ -6943,9 +6936,9 @@ NFS 是一个非常有用的工具，但从历史上看，它一直受到许多�
 
 → [https://help.ubuntu.com/community/NFSv4Howto] → [https://wiki.linux-nfs.org/wiki/index.php/Nfsv4_configuration]
 
-## 11.4.1. NFS 安全性
+### 11.4.1. NFS 安全性
 
-如果不使用基于 Kerberos 的安全功能，确保只有允许使用 NFS 的机器才能连接到各种所需的 RPC 服务器是至关重要的，因为基础协议信任从网络接收的数据。防火墙还必须阻止 *IP 欺骗*，以防止外部机器伪成内部内部，并且对相应端口的访问必须限制在访问 NFS 共享的机器。
+如果不使用基于 Kerberos 的安全功能，确保只有允许使用 NFS 的机器才能连接到各种所需的 RPC 服务器是至关重要的，因为基础协议信任从网络接收的数据。防火墙还必须阻止 *IP 欺骗*，以防止外部机器伪装成内部机器，并且对相应端口的访问必须限制在访问 NFS 共享的机器。
 
 ### 回归基础：RPC
 
@@ -6955,7 +6948,7 @@ RPC 服务注册在一个名为 `portmapper` 的目录中。想要执行 NFS 查
 
 该协议的旧版本需要使用动态分配端口的其他 RPC 服务。幸运的是，在 NFS 第 4 版本中，只需要端口 `2049`（用于 NFS）和 `111`（用于 `portmapper`），因此它们很容易在防火墙中进行配置。
 
-## 11.4.2. NFS 服务器
+### 11.4.2. NFS 服务器
 
 NFS 服务器是 Linux 内核的一部分；在 Debian 提供的内核中，它被构建为内核模块。如果要在启动时自动运行 NFS 服务器，则应该安装 `nfs-kernel-server` 软件包；它包含相关的启动脚本。
 
@@ -6971,11 +6964,7 @@ NFS 服务器配置文件 `/etc/exports` 列出了通过网络提供的（*导�
 
 目录默认以只读方式提供（或使用 `ro` 选项）。`rw` 选项允许读写访问。NFS 客户端通常从受 root 限制的端口（即 1024 以下）连接；此限制可以通过 `insecure` 选项取消（`secure` 选项是隐式的，但如果为了清晰起见，也可以显式指定）。
 
-默认情况下，服务器仅在当前磁盘操作完成后才回答 NFS 查询（`sync` 选项）；可以通过 `async` 选项禁用此设置。异步写入可以提高提高性能，但会降低可靠性，因为如果服务器在确认写入和实际写入磁盘之间崩溃，存在数据丢失的风险。由于默认值最近发生了变化（与 NFS 的历史值相比），建议进行显式设置。
-
-
-
-
+默认情况下，服务器仅在当前磁盘操作完成后才回答 NFS 查询（`sync` 选项）；可以通过 `async` 选项禁用此设置。异步写入可以提高性能，但会降低可靠性，因为如果服务器在确认写入和实际写入磁盘之间崩溃，存在数据丢失的风险。由于默认值最近发生了变化（与 NFS 的历史值相比），建议进行显式设置。
 
 为了防止向任何 NFS 客户端提供文件系统的 root 权限，所有似乎来自 root 用户的查询都将被服务器认为来自 `nobody` 用户。这种行为对应于 `root_squash` 选项，并且默认已启用。`no_root_squash` 选项会禁用此行为，它具有风险性，应仅在受控环境中使用。如果应将所有用户都映射到用户 `nobody`，请使用 `all_squash`。`anonuid=`uid`` 和 `anongid=`gid`` 选项允许指定另一个伪造用户来代替 UID/GID 65534（对应于用户 `nobody` 和组 `nogroup`）。
 
@@ -6985,21 +6974,24 @@ NFS 服务器配置文件 `/etc/exports` 列出了通过网络提供的（*导�
 
 ### 注意：首次安装
 
-`/etc/init.d/nfs-kernel-server` 启动脚本只有在 `/etc/exports` 列出一个或多个有效 NFS 共享时才会启动服务器。因此，在初始配置期间，一旦该文件被编辑包含包含有效条目，必须使用以下命令启动 NFS 服务器：
+`/etc/init.d/nfs-kernel-server` 启动脚本只有在 `/etc/exports` 列出一个或多个有效 NFS 共享时才会启动服务器。因此，在初始配置期间，一旦该文件被编辑包含有效条目，必须使用以下命令启动 NFS 服务器：
 
 ```
 # systemctl start nfs-kernel-server
 ```
 
-## 11.4.3. NFS 客户端
+### 11.4.3. NFS 客户端
 
 与其他文件系统一样，将 NFS 共享集成到系统层次结构中需要挂载（以及 `nfs-common` 包）。由于该文件系统具有特殊性，对 `mount` 命令的语法和 `/etc/fstab` 文件需要进行一些调整。
 
 示例 11.19. 使用 mount 命令手动挂载
+
 ```bash
 # mount -t nfs4 -o rw,nosuid arrakis.internal.falcot.com:/shared /srv/shared
 ```
+
 示例 11.20. /etc/fstab 文件中的 NFS 条目
+
 ```
 arrakis.internal.falcot.com:/shared /srv/shared nfs4 rw,nosuid 0 0
 ```
@@ -7040,39 +7032,65 @@ Winbind 为系统管理员提供了使用 Windows 服务器作为身份验证服
 
 在包更新（来自旧的稳定 Debian 版本）的情况下，或者如果 SMB 服务器已经配置为使用 WINS 服务器（`wins server`），该包还会建议从 DHCP 守护进程提供的信息中识别 WINS 服务器。Falcot Corp 的管理员拒绝了此选项，因为他们打算将 Samba 服务器本身作为 WINS 服务器。
 
-### 11.5.1.2. 手动配置
+#### 11.5.1.2. 手动配置
 
-#### 11.5.1.2.1. 对 smb.conf 的更改
+##### 11.5.1.2.1. 对 smb.conf 的更改
 
 Falcot 的要求需要在 `/etc/samba/smb.conf` 配置文件中修改其他选项。以下摘要总结了在 `[global]` 部分实施的更改。
 
 ```ini
 [...]
+
 [global]
+
 ## Browsing/Identification
+
 # 将此更改为你的 Samba 服务器将所属的工作组/NT 域名称
+
 workgroup = FALCOTNET
+
 # Windows Internet Name Serving Support Section:
+
 # WINS Support - 告诉 Samba 的 NMBD 组件启用其 WINS 服务器
+
 wins support = yes
+
 [...]
+
 ####### Authentication #######
+
 # 服务器角色。定义了 Samba 以何种模式运行。可能的
+
 # 值有 "standalone server", "member server", "classic primary
+
 # domain controller", "classic backup domain controller", "active
+
 # directory domain controller"。
+
 # # 大多数人将想要 "standalone server" 或 "member server"。
+
 # 运行 "active directory domain controller" 需要首先
+
 # 运行 "samba-tool domain provision" 来清除数据库并创建一个
+
 # 新域。
+
 server role = standalone server
+
 obey pam restrictions = yes
+
 [...]
+
 # "security = user" 是一个好主意。这将为每个访问服务器的
+
 # 用户需要一个 Unix 账户。
+
 security = user
+
 [...]
 ```
+
+
 
 | 图标 | 描述 |
 | :--- | :--- |
@@ -7093,10 +7111,6 @@ Samba 的客户端功能允许 Linux 机器访问 Windows 共享和共享打印�
 
 ### 11.5.2.1. smbclient 程序
 
-
-
-
-
 `smbclient` 程序用于查询 SMB 服务器。它接受 `-U` `user` 选项，用于以特定身份连接到服务器。`smbclient //server/*share` 以交互式方式访问共享内容，类似于命令行 FTP 客户端。`smbclient -L server` 则列出服务器上所有可用（且可见）的共享。
 
 ### 11.5.2.2. 挂载 Windows 共享
@@ -7104,6 +7118,7 @@ Samba 的客户端功能允许 Linux 机器访问 Windows 共享和共享打印�
 `mount` 命令允许将 Windows 共享挂载到 Linux 文件系统层级结构中（借助 `cifs-utils` 提供的 `mount.cifs`）。
 
 示例 11.21. 挂载 Windows 共享
+
 ```bash
 mount -t cifs //arrakis/shared /shared -o credentials=/etc/smb-credentials
 ```
@@ -7131,15 +7146,15 @@ CUPS 是从 Linux 工作站向 Windows 共享的打印机打印的优雅解决�
 
 以下是所需的步骤：
 
-*   进入 CUPS 配置界面：`http://localhost:631/admin`
-*   点击“Add Printer”。
-*   选择打印机设备，选取“Windows Printer via SAMBA”。
-*   输入网络打印机的连接 URI。它看起来应该如下：
-    ```text
-    smb://user:password@server/printer
-    ```
-*   输入唯一标识此打印机的名称。然后输入打印机的描述和位置。这些字符串将显示给终端用户，帮助他们识别打印机。
-*   指定打印机的制造商/型号，或直接提供可用的打印机描述文件 (PPD)。
+* 进入 CUPS 配置界面：`http://localhost:631/admin`
+* 点击“Add Printer”。
+* 选择打印机设备，选取“Windows Printer via SAMBA”。
+* 输入网络打印机的连接 URI。它看起来应该如下：
+  ```text
+  smb://user:password@server/printer
+  ```
+* 输入唯一标识此打印机的名称。然后输入打印机的描述和位置。这些字符串将显示给终端用户，帮助他们识别打印机。
+* 指定打印机的制造商/型号，或直接提供可用的打印机描述文件 (PPD)。
 
 大喜，打印机可以工作了！
 
@@ -7147,8 +7162,8 @@ CUPS 是从 Linux 工作站向 Windows 共享的打印机打印的优雅解决�
 
 HTTP/FTP 代理作为 HTTP 和/或 FTP 连接的中间节点。它的作用有两个：
 
-*   缓存：最近下载的文档会被复制到本地，从而避免重复下载。
-*   过滤服务器：如果强制使用代理（除非通过代理，否则传站连接将被阻塞），则代理可以决定是否允许请求。
+* 缓存：最近下载的文档会被复制到本地，从而避免重复下载。
+* 过滤服务器：如果强制使用代理（除非通过代理，否则传站连接将被阻塞），则代理可以决定是否允许请求。
 
 Falcot 公司选择 Squid 作为他们的的代理服务器。
 
@@ -7163,6 +7178,7 @@ Falcot 公司选择 Squid 作为他们的的代理服务器。
 启用缓存服务器功能只需编辑 `/etc/squid/squid.conf` 配置文件，并允许本地网络中的机器通过代理运行查询。以下示例显示了 Falcot 公司管理员所做的修改：
 
 示例 11.22. `/etc/squid/squid.conf` 文件（节选）
+
 ```text
 # 在此处插入您自己的规则以允许来自客户端访问
 # include /etc/squid/conf.d/*
@@ -7183,23 +7199,19 @@ url_rewrite_program /usr/bin/squidguard -c /etc/squid/squidguard.conf
 
 → [`www.squid.org/Doc/configure.html`](http://www.squid.org/Doc/configure.html)
 
+* 组织名称：“Falcot Corp”。
+* 需要输入管理员密码。
+* 要使用的数据库后端：“MDB”。
+* 是否在清除 `slapd` 时删除数据库？不（No）。没有必要冒着因操作失误导致数据库丢失的风险。
+* 移动旧数据库？只有在在已存在数据库的情况下尝试配置时才会询问此问题。只有当你确实想从一个干净数据库重新开始时，才回答“是”（yes），例如在初始安装后立即运行 `dpkg-reconfigure slapd`。
 
-
-
-
-*   组织名称：“Falcot Corp”。
-*   需要输入管理员密码。
-*   要使用的数据库后端：“MDB”。
-*   是否在清除 `slapd` 时删除数据库？不（No）。没有必要冒着因操作失误导致数据库丢失的风险。
-*   移动旧数据库？只有在在已存在数据库的情况下尝试配置时才会询问此问题。只有当你确实想从一个干净数据库重新开始时，才回答“是”（yes），例如在初始安装后立即运行 `dpkg-reconfigure slapd`。
-
-* * *
+---
 
 # *回归基础* LDIF 格式
 
 LDIF 文件（*LDAP 数据交换格式*）是一种可移植的文本文件，用于描述 LDAP 数据库的内容（或其部分内容）；随后，可以用它将数据注入到任何其他 LDAP 服务器中。
 
-* * *
+---
 
 现在已配置了一个最小化数据库，如下方的查询所示：
 
@@ -7238,13 +7250,13 @@ $ ldapsearch -x -b dc=falcot,dc=com # extended LDIF # # LDAPv3 # base <dc=falcot
 
 我们刻意忽略了 `/etc/aliases` 文件的迁移，因为 Debian 提供的标准架构包含该脚本用于描述邮件别名的结构。如果我们想将这些数据集成到目录中，应将 `/etc/ldap/schema/misc.schema` 文件添加到标准架构中。
 
-* * *
+---
 
 # *工具* 浏览 LDAP 目录
 
 `jxplorer` 命令（同名包中的）是一个允许浏览和编辑 LDAP 数据库的图形化工具。这是一个非常有趣的工具，可以为管理员提供 LDAP 数据分级结构的良好概述。
 
-* * *
+---
 
 还要注意在 `ldapadd` 命令中使用了 `-c` 选项；该选项请求在发生错误时不停止处理。需要使用此选项是因为转换 `/etc/services` 经常会产生一些可以忽略的错误。
 
@@ -7280,19 +7292,15 @@ group:  files ldap
 
 本节描述了一种 PAM 配置（参见侧边栏 *幕后原理* `/etc/environment` 和 `/etc/default/locale`），它将允许应用程序针对 LDAP 数据库执行必要的身份验证。
 
-* * *
-
-
-
-
+---
 
 # 警告：身份验证损坏
 
 更改各种程序使用的标准 PAM 配置是一项敏感操作。错误可能会导致身份验证失效，从而导致登录。因此，保持一个 root shell 开启是一个良好的预防措施。如果发生配置错误，可以以很小的工作精力进行修复并重启服务。
 
-***
+---
 
-PAM 的 LDAP 模块由 `libpam-ldap` 软件包提供。安装此软件包会抛出几个与 `libnss-ldap` 非常相似的问题；某些配置参数（例如 LDAP 服务器的 URI）实际上与 `libnss-ldap` 软件包共享。答案汇总请见 表 11.3]。
+PAM 的 LDAP 模块由 `libpam-ldap` 软件包提供。安装此软件包会抛出几个与 `libnss-ldap` 非常相似的问题；某些配置参数（例如 LDAP 服务器的 URI）实际上与 `libnss-ldap` 软件包共享。答案汇总请见 表 11.3。
 
 ## 表 11.3. libpam-ldap 的配置
 
@@ -7329,9 +7337,12 @@ PAM 的 LDAP 模块由 `libpam-ldap` 软件包提供。安装此软件包会抛�
 # mv pki/dh.pem /etc/ssl/certs/ldap.falcot.com.pem
 ```
 
+
+
 `slapd` 守护进程也需要被告知使用这些密钥进行加密。LDAP 服务器的配置是动态管理的：可以通过对 `cn=config` 对象执行常规 LDAP 操作来更新配置，服务器会实时更新 `/etc/ldap/slapd.d` 以使配置持久化。因此，`ldapmodify` 是更新配置的正确工具：
 
-示例 11.24. 为加密配置 slapd
+**示例 11.24. 为加密配置 `slapd`**
+
 ```bash
 # cat >ssl.ldif <<END
 dn: cn=config
@@ -7342,12 +7353,15 @@ add: olcTLSCertificateKeyFile
 olcTLSCertificateKeyFile: /etc/ssl/private/ldap.falcot.com.key
 END
 # ldapmodify -Y EXTERNAL -H ldapi:/// -f ssl.ldif
-SASL/EXTERNAL 认证启动 SASL 用户: gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth SASL SSF: 0 正在修改项目 "cn=config"
+SASL/EXTERNAL 认证启动
+SASL 用户: gidNumber=0+uidNumber=0,cn=peercred,cn=external,cn=auth
+SASL SSF: 0
+正在修改项目 "cn=config"
 ```
 
-***
+---
 
-### 工具：使用 ldapvi 编辑 LDAP 目录
+### 工具：使用 `ldapvi` 编辑 LDAP 目录
 
 通过 `ldapvi`，你可以显示 LDAP 目录任何部分的 LDIF 输出，在文本编辑器中进行一些更改，并让工具为你执行相应的 LDAP 操作。
 
@@ -7357,25 +7371,30 @@ SASL/EXTERNAL 认证启动 SASL 用户: gidNumber=0+uidNumber=0,cn=peercred,cn=e
 # ldapvi -Y EXTERNAL -h ldapi:/// -b cn=config
 ```
 
-***
+---
 
 启用加密的最后一步涉及更改 `/etc/default/slapd` 文件中的 `SLAPD_SERVICES` 变量。我们将采取安全措施，完全禁用不安全的 LDAP。
 
-示例 11.25. `/etc/default/slapd` 文件
+**示例 11.25. `/etc/default/slapd` 文件**
+
 ```bash
-# slapd.conf 文件或 slapd.d cn=config 目录的默认位置。 
+# slapd.conf 文件或 slapd.d cn=config 目录的默认位置。
 # 如果为空，则使用编译的默认值 (/etc/ldap/slapd.d 回退到
-# /etc/ldap/slapd.conf)。 
+# /etc/ldap/slapd.conf)。
 SLAPD_CONF=
-# 运行 slapd 服务器的系统账户。如果为空，服务器 
-# 将以 root 运行。 
+
+# 运行 slapd 服务器的系统账户。如果为空，服务器
+# 将以 root 运行。
 SLAPD_USER="openldap"
+
 # 运行 slapd 服务器的系统组。如果为空，则以用户的
-# 主组运行。 
+# 主组运行。
 SLAPD_GROUP="openldap"
-# slapd 的 pid 文件路径。如果没有设置，init 脚本 
+
+# slapd 的 pid 文件路径。如果没有设置，init 脚本
 # 将尝试从 $SLAPD_CONF 获取（默认是 /etc/ldap/slapd.conf）
 SLAPD_PIDFILE=
+
 # slapd 通常在所有 TCP 端口 389 上提供 LDAP 服务。slapd 还可以
 # 服务 TCP 端口 636 (ldaps) 以及通过 unix 套接字的请求。
 # 示例：
@@ -7384,32 +7403,33 @@ SLAPD_PIDFILE=
 # slapd（但停止仍然可用）。如果你通过其他方式
 # 启动 slapd，或者你不希望启动时正常启动 slapd，请取消此行。
 #SLAPD_NO_START=1
+
 # 如果 SLAPD_SENTINEL_FILE 设置为文件路径且该文件存在，
 # init 脚本不会启动或重启 slapd（但停止仍然可用）。使用此
 # 方法临时禁用启动启动（例如在维护期间，或通过配置
 # 管理系统），当您不想编辑配置文件时。
 SLAPD_SENTINEL_FILE=/etc/ldap/noslapd
+
 # 对于 Kerberos 认证（通过 SASL），slapd 默认使用系统
 # 密钥文件 (/etc/krb5.keytab)。要使用不同的密钥文件，
 # 请取消此行并更改路径。
 #export KRB5_KTNAME=/etc/krb5.keytab
+
 # 传递给 slapd 的额外选项
 SLAPD_OPTIONS=""
 ```
-
-
-
-
 
 ```bash
 cp pki/ca.crt /usr/local/share/ca-certificates/falcot.crt
 update-ca-certificates
 ```
-正在更新 /etc/ssl/certs 中的证书... 1 added, 0 removed; done. Running hooks in /etc/ca-certificates/update.d.... Adding debian:falcot.pem done. done.
+
+正在更新 `/etc/ssl/certs` 中的证书... 1 added, 0 removed; done. Running hooks in `/etc/ca-certificates/update.d`.... Adding debian:falcot.pem done. done.
 
 但同样重要的是，各种命令行工具使用的默认 LDAP URI 和默认 base DN 可以在 `/etc/ldap/ldap.conf` 中修改。这可以节省大量的输入工作。
 
-示例 11.26. `/etc/ldap/ldap.conf` 文件
+**示例 11.26. `/etc/ldap/ldap.conf` 文件**
+
 ```conf
 # LDAP 默认值
 # 详情请见 ldap.conf(5)
@@ -7431,9 +7451,9 @@ TLS_CACERT /etc/ssl/certs/ca-certificates.crt
 
 SIP 和 XMPP 都可以提供相同的功能。SIP 在语音和视频方面更为知名，而 XMPP 传统上被认为是一种 IM 协议。事实上，它们都可以用于上述任何一种目的。为了最大化连接选项，建议并行运行两者。
 
-这些服务在认证和机密性方面都依赖 X.509 证书。更多信息请参阅 第 10.2 节，“X.509 证书”。
+这些服务在认证和机密性方面都依赖 X.509 证书。更多信息请参阅第 10.2 节，“X.509 证书”。
 
-## 11.8.1. RTC  DNS 设置
+## 11.8.1. RTC DNS 设置
 
 RTC 服务需要 DNS SRV 和 NAPTR 记录。以下可以放入 `falcot.com` 区域文件的示例配置：
 
@@ -7469,7 +7489,7 @@ TURN 和相关的 ICE 协议是开放标准。为了从这些协议中获益、�
 
 为了让 ICE 算法有效工作，服务器必须有两个公共 IPv4 地址。
 
-安装 `coturn` 包并编辑 `/etc/turnserver.conf` 配置文件。默认情况下， `/var/db/turndb` 配置了一个 SQLite 数据库用于用户账户设置，但如果需要，也可以设置 PostgreSQL、MySQL 或 Redis。最重要的是插入服务器的 IP 地址。
+安装 `coturn` 包并编辑 `/etc/turnserver.conf` 配置文件。默认情况下，`/var/db/turndb` 配置了一个 SQLite 数据库用于用户账户设置，但如果需要，也可以设置 PostgreSQL、MySQL 或 Redis。最重要的是插入服务器的 IP 地址。
 
 可以通过运行 `/usr/bin/turnserver` 启动服务器。我们希望服务器是一个自动启动的系统服务，因此我们这样编辑 `/etc/default/coturn` 文件：
 
@@ -7536,11 +7556,11 @@ kamctl add roland secret_password
 
 XMPP 服务器管理本地 XMPP 用户与公共网上其他域 XMPP 用户之间的连接。
 
-*   **词汇**区别？
+* **词汇**区别？
 
 XMPP 有时被称为 Jabber。事实上，Jabber 是一个商标，而 XMPP 是该标准的正式名称。
 
-*   Prosody 是一种在 Debian 服务器上运行良好的 XMPP 服务器。
+* Prosody 是一种在 Debian 服务器上运行良好的 XMPP 服务器。
 
 ### 11.8.4.1. 安装 XMPP 服务器
 
@@ -7564,10 +7584,6 @@ VirtualHost "falcot.com"
 
 要启用该域名，在 `/etc/prosody/conf.d/` 中有一个软链接。以这种方式创建它：
 
-
-
-
-
 ```bash
 ln -s /etc/prosody/conf.avail/falcot.com.cfg.lua /etc/prosody/conf.d/
 ```
@@ -7581,6 +7597,8 @@ ln -s /etc/prosody/conf.avail/falcot.com.cfg.lua /etc/prosody/conf.d/
 ```bash
 prosodyctl adduser joe@falcot.com
 ```
+
+
 
 更多关于如何自定义配置的细节，请参考 [Prosody 在线文档](https://prosody.im/doc/configure)。
 
@@ -7600,7 +7618,7 @@ Falcot 希望让客户直接从网站拨打电话。Falcot 管理员还希望将
 
 → [`www.sip5060.net/test-calls`](https://www.sip5060.net/test-calls)
 
-WebRTC 是一项快速演进的技术，使用测试 发行版中的包至关重要。另一个选项是编译软件。
+WebRTC 是一项快速演进的技术，使用测试发行版中的包至关重要。另一个选项是编译软件。
 
 WebRTC 使用简单的 API 为浏览器和移动应用提供 RTC，它是免费软件，并由 Google 开发。
 
@@ -7646,13 +7664,9 @@ RAID 中的 I 最初代表 *廉价*（inexpensive），因为 RAID 允许在不�
 
 当 RAID 通过硬件实现时，其配置通常在 BIOS 设置工具中进行，内核会将 RAID 阵列视为单个磁盘，它将作为一个标准物理磁盘工作，尽管设备名称可能不同（取决于驱动程序）。
 
-
-
-
-
 本书我们只关注软件 RAID。
 
-### 12.1.1.1.不同的 RAID 级别
+### 12.1.1.1. 不同的 RAID 级别
 
 RAID 实际上并不是单一系统，而是一系列通过其级别标识的系统；这些级别之间的区别在于它们的布局以及它们提供的冗余量。冗余越多，防错能力就越强，因为系统能够在出现更多磁盘故障的情况下继续工作。与之对应的代价是，对于给定的磁盘组，可用空间会收缩；从另一个角度来看，存储相同数量的数据需要更多的磁盘。
 
@@ -7712,22 +7726,15 @@ RAID-1+0 可以忍受多次磁盘故障：在上述 2×N 阵列中，只要每�
 
 **进阶** RAID-10
 
-RAID-10 通常被认为是 RAID-10 的同义词，但 Linux 的一个特性使其实际上变成了一种泛化。。这种设置允许每个块都存储在两个不同的磁盘上，即使磁盘数量为奇数也是，副本是根据配置模型分布的。
+RAID-10 通常被认为是 RAID-10 的同义词，但 Linux 的一个特性使其实际上变成了一种泛化。这种设置允许每个块都存储在两个不同的磁盘上，即使磁盘数量为奇数也是，副本是根据配置模型分布的。
 
-
-
-
-*   `sdc` 磁盘，4 GB，完全可用；
-*   在 `sdd` 磁盘上，只有分区 `sdd2`（约 4 GB）可用；
-*   最后，一个 `sde` 磁盘，同样为 4 GB，完全可用。
-
-***
+- `sdc` 磁盘，4 GB，完全可用；
+- 在 `sdd` 磁盘上，只有分区 `sdd2`（约 4 GB）可用；
+- 最后，一个 `sde` 磁盘，同样为 4 GB，完全可用。
 
 ### 注意：识别现有 RAID 卷
 
 `/proc/mdstat` 文件列出了现有卷及其状态。在创建新的 RAID 卷时，应注意不要与现有的卷重名。
-
-***
 
 ### 构建 RAID-0 卷
 
@@ -7735,46 +7742,87 @@ RAID-10 通常被认为是 RAID-10 的同义词，但 Linux 的一个特性使�
 
 ```bash
 mdadm --create /dev/md0 --level=0 --raid-devices=2 /dev/sdb /dev/sdc
+
 mdadm: Defaulting to version 1.2 metadata
+
 mdadm: array /dev/md0 started.
+
 mdadm --query /dev/md0
+
 /dev/md0: 8.00GiB raid0 2 devices, 0 spares. Use mdadm --detail for more detail.
+
 mdadm --detail /dev/md0
+
 /dev/md0: Version : 1.2
+
 Creation Time : Tue Jun 25 08:47:49 2019
+
 Raid Level : raid0
+
 Array Size : 8378368 (7.99 GiB 8.58 GB)
+
 Raid Devices : 2
+
 Total Devices : 2
+
 Persistence : Superblock is persistent
+
 Update Time : Tue Jun 25 08:47:49 2019
+
 State : clean
+
 Active Devices : 2
+
 Working Devices : 2
+
 Failed Devices : 0
+
 Spare Devices : 0
+
 Chunk Size : 512K
+
 Consistency Policy : none
+
 Name : mirwiz:0 (local to host debian)
+
 UUID : 146e104f:66ccc06d:71c262d7:9af1fbc7
+
 Events : 0
+
 Number Major Minor RaidDevice State
+
 0 8 32 0 active sync /dev/sdb
+
 1 8 48 1 active sync /dev/sdc
+
 mkfs.ext4 /dev/md0
+
 mke2fs 1.44.5 (15-Dec-2018)
+
 Discarding device blocks: done
+
 Creating filesystem with 2094592 4k blocks and 524288 inodes
+
 Filesystem UUID: 413c3dff-ab5e-44e7-ad34-cf1a029cfe98
+
 Superblock backups stored on blocks: 32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632
+
 Allocating group tables: done
+
 Writing inode tables: done
+
 Creating journal (16384 blocks): done
+
 Writing superblocks and filesystem accounting information: done
+
 mkdir /srv/raid-0
+
 mount /dev/md0 /srv/raid-0
+
 df -h /srv/raid-0
+
 Filesystem Size Used Avail Use% Mounted on
+
 /dev/md0 7.9G 36M 7.4G 1% /srv/raid-0
 ```
 
@@ -7786,48 +7834,85 @@ Filesystem Size Used Avail Use% Mounted on
 
 ```bash
 mdadm --create /dev/md1 --level=1 --raid-devices=2 /dev/sdd2 /dev/sde
+
 mdadm: Note: this array has metadata at the start and may not be suitable as a boot device. If you plan to store '/boot' on this device please ensure that your boot-loader understands md/v1.x metadata, or use --metadata=0.90
+
 mdadm: largest drive (/dev/sdd2) exceeds size (4192192K) by more than 1%
+
 Continue creating array?
+
 y
+
 mdadm: Defaulting to version 1.2 metadata
+
 mdadm: array /dev/md1 started.
+
 mdadm --query /dev/md1
+
 /dev/md1: 4.00GiB raid1 2 devices, 0 spares. Use mdadm --detail for more detail.
+
 mdadm --detail /dev/md1
+
 /dev/md1: Version : 1.2
+```
+
+
+
 Creation Time : Tue Jun 25 10:21:22 2019
+
 Raid Level : raid1
+
 Array Size : 4189184 (4.00 GiB 4.29 GB)
+
 Used Dev Size : 4189184 (4.00 GiB 4.29 GB)
+
 Raid Devices : 2
+
 Total Devices : 2
+
 Persistence : Superblock is persistent
+
 Update Time : Tue Jun 25 10:22:03 2019
+
 State : clean, resyncing
+
 Active Devices : 2
+
 Working Devices : 2
+
 Failed Devices : 0
+
 Spare Devices : 0
+
 Consistency Policy : resync
+
 Resync Status : 93% complete
+
 Name : mirwiz:1 (local to host debian)
+
 UUID : 7d123734:9677b7d6:72194f7d:9050771c
+
 Events : 16
+
 Number Major Minor RaidDevice State
+
 0 8 64 0 active sync /dev/sdd2
+
 1 8 80 1 active sync /dev/sde
+
+```bash
 mdadm --detail /dev/md1
+
 /dev/md1: [...]
 ```
 
 ***
 
 ### 提示：现有 RAID 卷
-`mdadm --detail /dev/md1`
-`/dev/md1: [...]`
 
-***
+`mdadm --detail /dev/md1`
+
+`/dev/md1: [...]`
 
 ### 提示：磁盘不足
 
@@ -7837,51 +7922,69 @@ mdadm --detail /dev/md1
 
 幸运的是，通过向 `mdadm` 传递 `--assume-clean` 选项可以避免这个同步阶段。然而，在初始数据将被读取的情况下（例如，如果物理磁盘上已经存在文件系统），此选项可能会导致意外，这就是为什么它默认没有启用。
 
-***
-
 ### 提示：以降级模式启动镜像
+
 有时，当人们想要启动 RAID-1 时，两块磁盘无法立即可用，例如因为计划包含的一个磁盘已用于存储数据。在这种情况下，通过在 `mdadm` 的参数中传递 `missing` 而不是设备文件，可以故意创建一个降级的 RAID-1 数组。一旦数据被复制到“镜像”，就可以添加旧磁盘。
 
 ### 提示：不带同步设置镜像
-RAID-1 卷通常作为新磁盘创建，通常是空白的。因此，磁盘的初始内容并不重要，因为人们只需要知道创建后写入的数据是可以访问的即可。
 
-***
+RAID-1 卷通常作为新磁盘创建，通常是空白的。因此，磁盘的初始内容并不重要，因为人们只需要知道创建后写入的数据是可以访问的即可。
 
 现在让我们看看 RAID-1 数组中的一个元素发生故障会发生什么。`mdadm` 特别是 `--fail` 选项允许模拟这种磁盘故障：
 
 ```bash
 mdadm /dev/md1 --fail /dev/sde
+
 mdadm: set /dev/sde faulty in /dev/md1
+
 mdadm --detail /dev/md1
+
 /dev/md1: [...]
+
 Update Time : Tue Jun 25 11:03:44 2019
+
 State : clean, degraded
+
 Active Devices : 1
+
 Working Devices : 1
+
 Failed Devices : 1
+
 Spare Devices : 0
+
 Consistency Policy : resync
+
 Name : mirwiz:1 (local to host debian)
+
 UUID : 7d123734:9677b7d6:72194f7d:9050771c
+
 Events : 20
+
 Number Major Minor RaidDevice State
+
 0 0 0 removed
+
 1 8 80 1 active sync /dev/sdd2
+
 0 8 64 - faulty /dev/sde
 ```
-
-
-
 
 卷的内容仍然可以访问（如果它已挂载，应用程序不会察觉到异常），但数据安全不再有保证：如果 `sdd` 磁盘也发生故障，数据将会丢失。我们希望避免这种风险，因此将用新磁盘 `sdf` 替换故障磁盘：
 
 ```bash
 # mdadm /dev/md1 --add /dev/sdf
+
 mdadm: added /dev/sdf #
+
 # mdadm --detail /dev/md1
+
 /dev/md1: [...] Raid Devices : 2 Total Devices : 3 Persistence : Superblock is persistent Update Time : Tue Jun 25 11:09:42 2019 State : clean, degraded, recovering Active Devices : 1 Working Devices : 2 Failed Devices : 1 Spare Devices : 1 Consistency Policy : resync Rebuild Status : 27% complete Name : mirwiz:1 (local to host debian) UUID : 7d123734:9677b7d6:72194f7d:9050771c Events : 26 Number Major Minor RaidDevice State 2 8 96 0 spare rebuilding /dev/sdf 1 8 80 1 active sync /dev/sdd2 0 8 64 - faulty /dev/sde #
+
 [...] [...] #
+
 # mdadm --detail /dev/md1
+
 /dev/md1: [...] Update Time : Tue Jun 25 11:10:47 2019 State : clean Active Devices : 2 Working Devices : 2 Failed Devices : 1 Spare Devices : 0 Consistency Policy : resync Name : mirwiz:1 (local to host debian) UUID : 7d123734:9677b7d6:72194f7d:9050771c Events : 39 Number Major Minor RaidDevice State 2 8 96 0 active sync /dev/sdd2 1 8 80 1 active sync /dev/sdf 0 8 64 - faulty /dev/sde
 ```
 
@@ -7889,8 +7992,11 @@ mdadm: added /dev/sdf #
 
 ```bash
 # mdadm /dev/md1 --remove /dev/sde
+
 mdadm: hot removed /dev/sde from /dev/md1 #
+
 # mdadm --detail /dev/md1
+
 /dev/md1: [...] Number Major Minor RaidDevice State 2 8 96 0 active sync /dev/sdd2 1 8 80 1 active sync /dev/sdf
 ```
 
@@ -7902,9 +8008,6 @@ mdadm: hot removed /dev/sde from /dev/md1 #
 
 因此，备份配置至少是重要的。标准做法是编辑 `/etc/mdadm.conf` 文件，此处列出了一个示例：
 
-
-
-
 然而，让 VG（卷组）的物理组件之间具有某种同质性，并将 VG 划分为具有相似使用模式的逻辑卷是有意义的。例如，如果可用硬件包含快速磁盘和较慢的磁盘，可以将快速磁盘聚组成 VG，而将较慢的磁盘组成另一个 VG；然后可以将第一个 VG 的块分配给需要快速数据访问的应用程序，而第二个则留给需求较低的任务。
 
 无论如何，请记住 LV（逻辑卷）并不特别绑定到任何一个 PV（物理卷）。可以影响 LV 数据的物理存储位置，但日常使用并不需要这种功能。相反：当 VG 的物理组件集发生变化时，特定 LV 的物理存储位置可以在磁盘之间进行迁移（当然，仍在分配给 VG 的 PV 范围内）。
@@ -7913,10 +8016,10 @@ mdadm: hot removed /dev/sde from /dev/md1 #
 
 现在让我们逐步按照一个典型用例来设置 LVM 的过程：我们想要简化复杂的存储状况。这种情况通常发生在经历了一段长期且复杂的临时措施积累之后。为了说明起，我们考虑一台服务器，其存储需求随时间而变化，最终变成了一个在几块部分使用的磁盘上的可用分区迷宫。具体来说，可用分区如下：
 
-* 在 `sdb` 磁盘上，有一个 `sdb2` 分区，4 GB；
-* 在 `sdc` 磁盘上，有一个 `sdc3` 分区，3 GB；
-* `sdd` 磁盘（4 GB）完全可用；
-* 在 `sdf` 磁盘上，有一个 `sdf1` 分区（4 GB）以及一个 `sdf2` 分区（5 GB）。
+- 在 `sdb` 磁盘上，有一个 `sdb2` 分区，4 GB；
+- 在 `sdc` 磁盘上，有一个 `sdc3` 分区，3 GB；
+- `sdd` 磁盘（4 GB）完全可用；
+- 在 `sdf` 磁盘上，有一个 `sdf1` 分区（4 GB）以及一个 `sdf2` 分区（5 GB）。
 
 此外，假设磁盘 `sdb` 和 `sdf` 比另外两个磁盘快。
 
@@ -7928,13 +8031,21 @@ mdadm: hot removed /dev/sde from /dev/md1 #
 
 ```bash
 # pvdisplay
+
 # pvcreate /dev/sdb2
+
 Physical volume "/dev/sdb2" successfully created. #
+
 # pvdisplay
+
 "/dev/sdb2" is a new physical volume of "4.00 GiB" --- NEW Physical volume --- PV Name /dev/sdb2 VG Name PV Size 4.00 GiB Allocatable NO PE Size 0 Total PE 0 Free PE 0 Allocated PE 0 PV UUID z4Clgk-T5a4-C27o-1P0E-lIAF-OeUM-e7EMwq #
+
 # for i in sdc3 sdd sdf1 sdf2 ; do pvcreate /dev/$i ; done
+
 Physical volume "/dev/sdc3" successfully created. Physical volume "/dev/sdd" successfully created. Physical volume "/dev/sdf1" successfully created. Physical volume "/dev/sdf2" successfully created. #
+
 # pvdisplay -C
+
 PV VG Fmt Attr PSize PFree /dev/sdb2 lvm2 --- 4.00g 4.00g /dev/sdc3 lvm2 --- 3.00g 3.00g /dev/sdd lvm2 --- 4.00g 4.00g /dev/sdf1 lvm2 --- 4.00g 4.00g /dev/sdf2 lvm2 --- <5.00g <5.00g
 ```
 
@@ -7944,13 +8055,21 @@ PV VG Fmt Attr PSize PFree /dev/sdb2 lvm2 --- 4.00g 4.00g /dev/sdc3 lvm2 --- 3.0
 
 ```bash
 # vgdisplay
+
 # vgcreate vg_critical /dev/sdb2 /dev/sdf1
+
 Volume group "vg_critical" successfully created #
+
 # vgdisplay
+
 --- Volume group --- VG Name vg_critical System ID Format lvm2 Metadata Areas 2 Metadata Sequence No 1 VG Access read/write VG Status resizable MAX LV 0 Cur LV 0 Open LV 0 Max PV 0 Cur PV 2 Act PV 2 VG Size 7.99 GiB PE Size 4.00 MiB Total PE 2046 Alloc PE / Size 0 / 0 Free PE / Size 2046 / 7.99 GiB VG UUID wAbBjx-d82B-q7St-0KFf-z40h-w5Mh-uAXkNZ #
+
 # vgcreate vg_normal /dev/sdc3 /dev/sdd /dev/sdf2
+
 Volume group "vg_normal" successfully created #
+
 # vgdisplay -C
+
 VG #PV #LV #SN Attr VSize VFree vg_critical 2 0 0 wz--n- 7.99g 7.99g vg_normal 3 0 0 wz--n- <11.99g <11.99g
 ```
 
@@ -7960,129 +8079,181 @@ VG #PV #LV #SN Attr VSize VFree vg_critical 2 0 0 wz--n- 7.99g 7.99g vg_normal 3
 
 ```bash
 # lvdisplay
+
 # lvcreate -n lv_files -L 5G vg_critical
+
 Logical volume "lv_files" created. #
+
 # lvdisplay
+
 --- Logical volume --- LV Path /dev/vg_critical/lv_files LV Name lv_files VG Name vg_critical LV UUID W6XT08-iBBx-Nrw2-f8F2-r2y4-Ltds-UrKogV LV Write Access read/write LV Creation host, time debian, 2019-11-30 22:45:46 -0500 LV Status available # open 0 LV Size 5.00 GiB Current LE 1280 Segments 2 Allocation inherit Read ahead sectors auto - currently set to 256 Block device 254:0 #
+
 # lvcreate -n lv_base -L 1G vg_critical
+
 Logical volume "lv_base" created. #
+
 # lvcreate -n lv_backups -L 11.98G vg_normal
+
 Rounding up size to full physical extent 11.98 GiB Logical volume "lv_backups" created. #
+
 # lvdisplay -C
+
 LV VG Attr LSize Pool Origin% Meta% Log Cpy%Sync lv_base vg_critical -wi-a--- 1.00g lv_files vg_critical -wi-a--- 5.00g lv_backups vg_normal -wi-a--- 11.98g
 ```
 
-创建逻辑卷时需要两个参数；它们必须作为选项传递给 `lvcreate`。要创建的 LV 名称通过 `-n` 选项指定，大小通常使用 `-L` 选项给出。当然，我们还需要告诉命令在哪个 VG 上进行操作，因此命令行最后一个参数是 VG。
-
-### 进阶 lvcreate 选项
-
-`lvcreate` 命令有几个选项可以调整 LV 的创建方式。
-
-让我们先描述 `-l` 选项，通过该选项可以以块的数量给出 LV 的大小（而不是我们上面使用的“人类”单位）。这些块（在 LVM 术语中称为 PE，即*物理区*，physical extents）是 PV 中连续的存储空间单元，它们不能跨越 LV 划分。当人们想要精确地定义 LV 的存储空间时（例如使用所有可用空间），`-l` 选项可能比 `-L` 更好用。
-
-还可以提示 LV 的物理位置，以便其区区被存储在特定的 PV 上（当然，仍在分配给 VG 的 PV 范围内）。由于我们知道 `sdb` 比 `sdf` 快，如果我们想让数据库服务器相对于文件服务器获得优势，我们可能想将 `lv_base` 存储在那里。命令行变为：`lvcreate -n lv_base -L 1G vg_critical /dev/sdb2`。注意，如果 PV 没有足够的空区，此命令可能会失败。在我们的示例中，我们可能需要在创建 `lv_files` 之前创建 `lv_base` 以避免这种情况——或者使用 `pvmove` 命令在 `sdb2` 上释放一些空间。
-
-逻辑卷一旦创建，将以块设备文件的形式出现在 `/dev/mapper/` 中：
 
 
+创建逻辑卷时需要两个参数；它们必须作为选项传递给`lvcreate`。要创建的 LV 名称通过`-n`选项指定，大小通常使用`-L`选项给出。当然，我们还需要告诉命令在哪个 VG 上进行操作，因此命令行最后一个参数是 VG。
 
+## 进阶 lvcreate 选项
 
+`lvcreate`命令有几个选项可以调整 LV 的创建方式。
+
+让我们先描述`-l`选项，通过该选项可以以块的数量给出 LV 的大小（而不是我们上面使用的“人类”单位）。这些块（在 LVM 术语中称为 PE，即*物理区*，physical extents）是 PV 中连续的存储空间单元，它们不能跨越 LV 划分。当人们想要精确地定义 LV 的存储空间时（例如使用所有可用空间），`-l`选项可能比`-L`更好用。
+
+还可以提示 LV 的物理位置，以便其区区被存储在特定的 PV 上（当然，仍在分配给 VG 的 PV 范围内）。由于我们知道`sdb`比`sdf`快，如果我们想让数据库服务器相对于文件服务器获得优势，我们可能想将`lv_base`存储在那里。命令行变为：`lvcreate -n lv_base -L 1G vg_critical /dev/sdb2`。注意，如果 PV 没有足够的空区，此命令可能会失败。在我们的示例中，我们可能需要在创建`lv_files`之前创建`lv_base`以避免这种情况——或者使用`pvmove`命令在`sdb2`上释放一些空间。
+
+逻辑卷一旦创建，将以块设备文件的形式出现在`/dev/mapper/`中：
 
 ```
 # ls -l /dev/mapper
-total 0 crw------- 1 root root 10, 236 Jun 10 16:52 control lrwxrwxrwx 1 root root 7 Jun 10 17:05 vg_critical-lv_base -> ../dm-1 lrwxrwxrwx 1 root root 7 Jun 10 17:05 vg_critical-lv_files -> ../dm-0 lrwxrwxrwx 1 root root 7 Jun 10 17:05 vg_normal-lv_backups -> ../dm-2
+total 0
+crw------- 1 root root 10, 236 Jun 10 16:52 control
+lrwxrwxrwx 1 root root 7 Jun 10 17:05 vg_critical-lv_base -> ../dm-1
+lrwxrwxrwx 1 root root 7 Jun 10 17:05 vg_critical-lv_files -> ../dm-0
+lrwxrwxrwx 1 root root 7 Jun 10 17:05 vg_normal-lv_backups -> ../dm-2
+
 # ls -l /dev/dm-*
-brw-rw---T 1 root disk 253, 0 Jun 10 17:05 /dev/dm-0 brw-rw---- 1 root disk 253, 1 Jun 10 17:05 /dev/dm-1 brw-rw---- 1 root disk 253, 2 Jun 10 17:05 /dev/dm-2
+brw-rw---T 1 root disk 253, 0 Jun 10 17:05 /dev/dm-0
+brw-rw---- 1 root disk 253, 1 Jun 10 17:05 /dev/dm-1
+brw-rw---- 1 root disk 253, 2 Jun 10 17:05 /dev/dm-2
 ```
 
 *注：LVM 卷自动检测*
 
-当计算机启动时，`lvm2-activation` systemd 服务单元会执行 `vgchange -aay` 来“激活”卷组：它会扫描可用设备；已初始化为 LVM 物理卷（PV）的设备将被注册到 LVM 子系统中；属于卷组的设备将被组装；相关的逻辑卷（LV）将被启动并变为可用。因此，在创建或修改 LVM 卷时，不需要编辑配置文件。
+当计算机启动时，`lvm2-activation` systemd 服务单元会执行`vgchange -aay`来“激活”卷组：它会扫描可用设备；已初始化为 LVM 物理卷（PV）的设备将被注册到 LVM 子系统中；属于卷组的设备将被组装；相关的逻辑卷（LV）将被启动并变为可用。因此，在创建或修改 LVM 卷时，不需要编辑配置文件。
 
-但注意，LVM 元素（物理卷、逻辑卷和卷组）的布局备份在 `/etc/lvm/backup` 中，这在出现问题时（或只是为了窥一眼内部结构）可能非常有用。
+但注意，LVM 元素（物理卷、逻辑卷和卷组）的布局备份在`/etc/lvm/backup`中，这在出现问题时（或只是为了窥一眼内部结构）可能非常有用。
 
 为了方便操作，在与 VG 匹配的目录中还会创建便利符号链接：
 
 ```
 # ls -l /dev/vg_critical
-total 0 lrwxrwxrwx 1 root root 7 Jun 10 17:05 lv_base -> ../dm-1 lrwxrwxrwx 1 root root 7 Jun 10 17:05 lv_files -> ../dm-0
+total 0
+lrwxrwxrwx 1 root root 7 Jun 10 17:05 lv_base -> ../dm-1
+lrwxrwxrwx 1 root root 7 Jun 10 17:05 lv_files -> ../dm-0
+
 # ls -l /dev/vg_normal
-total 0 lrwxrwxrwx 1 root root 7 Jun 10 17:05 lv_backups -> ../dm-2
+total 0
+lrwxrwxrwx 1 root root 7 Jun 10 17:05 lv_backups -> ../dm-2
 ```
 
 随后就可以像使用标准分区一样使用 LV：
 
 ```
 # mkfs.ext4 /dev/vg_normal/lv_backups
-mke2fs 1.44.5 (15-Dec-2018) Discarding device blocks: done Creating filesystem with 3140608 4k blocks and 786432 inodes Filesystem UUID: b9e6ed2f-cb37-43e9-87d8-e77568446225 Superblock backups stored on blocks: 32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208 Allocating group tables: done Writing inode tables: done Creating journal (16384 blocks): done Writing superblocks and filesystem accounting information: done
+mke2fs 1.44.5 (15-Dec-2018)
+Discarding device blocks: done
+Creating filesystem with 3140608 4k blocks and 786432 inodes
+Filesystem UUID: b9e6ed2f-cb37-43e9-87d8-e77568446225
+Superblock backups stored on blocks:
+32768, 98304, 163840, 229376, 294912, 819200, 884736, 1605632, 2654208
+Allocating group tables: done
+Writing inode tables: done
+Creating journal (16384 blocks): done
+Writing superblocks and filesystem accounting information: done
+
 # mkdir /srv/backups
 # mount /dev/vg_normal/lv_backups /srv/backups
 # df -h /srv/backups
-Filesystem Size Used Avail Use% Mounted on /dev/mapper/vg_normal-lv_backups 12G 41M 12G 1% /srv/backups
+Filesystem Size Used Avail Use% Mounted on
+/dev/mapper/vg_normal-lv_backups 12G 41M 12G 1% /srv/backups
+
 # [...]
 [...]
 # cat /etc/fstab
-[...] /dev/vg_critical/lv_base /srv/base ext4 defaults 0 2 /dev/vg_critical/lv_files /srv/files ext4 defaults 0 2 /dev/vg_normal/lv_backups /srv/backups ext4 defaults 0 2
+[...]
+/dev/vg_critical/lv_base /srv/base ext4 defaults 0 2
+/dev/vg_critical/lv_files /srv/files ext4 defaults 0 2
+/dev/vg_normal/lv_backups /srv/backups ext4 defaults 0 2
 ```
 
 从应用程序的角度来看，许多小分区现在被抽象成了一个大容量 12 GB 卷，并且有了一个更友好的名称。
 
-### 12.1.2.3. 随时间演变的 LVM
+## 12.1.2.3. 随时间演变的 LVM
 
-尽管聚合分区或物理磁盘的能力非常方便，但这并不是 LVM 带来的主要优势。随着时间的推移和需求的演变，它所带来的灵活性变得尤为明显。在我们的示例中，假设必须存储新的大文件，而专门用于文件服务器的 LV 太小无法容纳它们。由于我们没有使用 `vg_critical` 中的所有可用空间，我们可以扩展 `lv_files`。为此，我们将使用 `lvresize` 命令，然后使用 `resize2fs` 相应调整文件系统：
+尽管聚合分区或物理磁盘的能力非常方便，但这并不是 LVM 带来的主要优势。随着时间的推移和需求的演变，它所带来的灵活性变得尤为明显。在我们的示例中，假设必须存储新的大文件，而专门用于文件服务器的 LV 太小无法容纳它们。由于我们没有使用`vg_critical`中的所有可用空间，我们可以扩展`lv_files`。为此，我们将使用`lvresize`命令，然后使用`resize2fs`相应调整文件系统：
 
 ```
 # df -h /srv/files/
-Filesystem Size Used Avail Use% Mounted on /dev/mapper/vg_critical-lv_files 4.9G 4.2G 485M 90% /srv/files
+Filesystem Size Used Avail Use% Mounted on
+/dev/mapper/vg_critical-lv_files 4.9G 4.2G 485M 90% /srv/files
+
 # lvdisplay -C vg_critical/lv_files
-LV VG Attr LSize Pool Origin Data% Meta% Move Log Cpy%Sync Convert lv_files vg_critical -wi-ao-- 5.00g
+LV VG Attr LSize Pool Origin Data% Meta% Move Log Cpy%Sync Convert
+lv_files vg_critical -wi-ao-- 5.00g
+
 # vgdisplay -C vg_critical
-VG #PV #LV #SN Attr VSize VFree vg_critical 2 2 0 wz--n- 7.99g 1.99g
+VG #PV #LV #SN Attr VSize VFree
+vg_critical 2 2 0 wz--n- 7.99g 1.99g
+
 # lvresize -L 6G vg_critical/lv_files
-Size of logical volume vg_critical/lv_files changed from 5.00 GiB (1280 extents) to 6.00 GiB (1536 extents). Logical volume vg_critical/lv_files successfully resized.
+Size of logical volume vg_critical/lv_files changed from 5.00 GiB (1280 extents) to 6.00 GiB (1536 extents).
+Logical volume vg_critical/lv_files successfully resized.
+
 # lvdisplay -C vg_critical/lv_files
-LV VG Attr LSize Pool Origin Data% Meta% Move Log Cpy%Sync Convert lv_files vg_critical -wi-ao---- 6.00g
+LV VG Attr LSize Pool Origin Data% Meta% Move Log Cpy%Sync Convert
+lv_files vg_critical -wi-ao---- 6.00g
+
 # resize2fs /dev/vg_critical/lv_files
-resize2fs 1.44.5 (15-Dec-2018) Filesystem at /dev/vg_critical/lv_files is mounted on /srv/files; on-line resizing required old_desc_blocks = 1, new_desc_blocks = 1 The filesystem on /dev/vg_critical/lv_files is now 1572864 (4k) blocks long.
+resize2fs 1.44.5 (15-Dec-2018)
+Filesystem at /dev/vg_critical/lv_files is mounted on /srv/files; on-line resizing required
+old_desc_blocks = 1, new_desc_blocks = 1
+The filesystem on /dev/vg_critical/lv_files is now 1572864 (4k) blocks long.
+
 # df -h /srv/files/
-Filesystem Size Used Avail Use% Mounted on /dev/mapper/vg_critical-lv_files 5.9G 4.2G 1.5G 75% /srv/files
+Filesystem Size Used Avail Use% Mounted on
+/dev/mapper/vg_critical-lv_files 5.9G 4.2G 1.5G 75% /srv/files
 ```
 
-#### 注意：调整文件系统大小
+### 注意：调整文件系统大小
 
 并不是所有文件系统都支持在线调整大小，因此调整卷时可能需要先卸载，然后再挂载。当然，如果想缩小分配给 LV 的空间，必须先缩小文件系统；当调整方向相反时，顺序则相反：必须先扩展逻辑卷，再扩展文件系统。这非常直观，因为在任何时候文件系统的大小都不会超过所在的块设备（无论该设备是物理分区还是逻辑卷）。
 
-`ext3`、`ext4` 和 `xfs` 文件系统可以在线扩展而无需卸载；缩小则需要卸载。`reiserfs` 则两个都不支持。
+`ext3`、`ext4`和`xfs`文件系统可以在线扩展而无需卸载；缩小则需要卸载。`reiserfs`则两个都不支持。
 
-#### 进阶：高级 LVM
+### 进阶：高级 LVM
 
-LVM 也适用于更高级的用法，可以手动指定许多细节。例如，管理员可以调整组成物理卷和逻辑卷的块的大小以及它们的物理布局。还可以在不同 PV 之间移动块，例如为了微调性能，或者在更常见的场景下，为了从 VG 中释放相应的物理磁盘。描述各个命令的帮助页通常清晰且详细。一个很好的入口点是 `lvm(8)` 帮助页。
+LVM 也适用于更高级的用法，可以手动指定许多细节。例如，管理员可以调整组成物理卷和逻辑卷的块的大小以及它们的物理布局。还可以在不同 PV 之间移动块，例如为了微调性能，或者在更常见的场景下，为了从 VG 中释放相应的物理磁盘。描述各个命令的帮助页通常清晰且详细。一个很好的入口点是`lvm(8)`帮助页。
 
-### 12.1.3. RAID 还是 LVM？
+## 12.1.3. RAID 还是 LVM？
 
 一旦离开了单硬盘且使用模式不变化的简单桌面电脑场景，RAID 和 LVM 都带来了不可否认的优势。然而，RAID 和 LVM 走向两个不同的方向，目标也不同，疑问应该采用哪一个是合理的。最答案显然取决于当前和未来的需求。
 
-
-
-
-
-在某些简单的情况下，这个问题并不真正存在。如果要求是保护数据免受硬件故障的影响，那么显然会在冗余磁盘阵列上设置 `RAID`，因为 `LVM` 并没有真正解决这个问题。另一方面，如果需要一种灵活的存储方案，使卷的创建能够独立于磁盘的物理布局，那么 `RAID` 的帮助并不大，而 `LVM` 将是自然选择。
+在某些简单的情况下，这个问题并不真正存在。如果要求是保护数据免受硬件故障的影响，那么显然会在冗余磁盘阵列上设置`RAID`，因为`LVM`并没有真正解决这个问题。另一方面，如果需要一种灵活的存储方案，使卷的创建能够独立于磁盘的物理布局，那么`RAID`的帮助并不大，而`LVM`将是自然选择。
 
 ### 注意：如果性能很重要……
 
-如果输入/输出速度至关重要，特别是在访问时间方面，在许多组合中使用 `LVM` 和/或 `RAID` 可能会对性能产生某些影响，这可能会影响对选择哪一个的决策。然而，这些性能差异实际上非常微小，并且仅在少数用例中可以被测量出来。如果性能很重要，可以获得的最大收益是使用非旋转存储介质（`固态硬盘`或 `SSDs`）；它们的每兆字节成本高于标准硬盘，且容量通常也较小，但它们为随机访问提供了卓越的性能。如果使用模式包含许多分散在文件系统各处的输入输出操作，例如对于经常运行复杂查询的数据库，那么在 `SSD` 上运行它们的优势将远超通过在 `RAID` 上选择 `LVM` 或反之所能获得的任何收益。在这种情况下，选择应该由纯速度以外的考虑因素决定，因为性能问题最容易通过使用 `SSDs` 来解决。
+如果输入/输出速度至关重要，特别是在访问时间方面，在许多组合中使用`LVM`和/或`RAID`可能会对性能产生某些影响，这可能会影响对选择哪一个的决策。然而，这些性能差异实际上非常微小，并且仅在少数用例中可以被测量出来。如果性能很重要，可以获得的最大收益是使用非旋转存储介质（`固态硬盘`或`SSDs`）；它们的每兆字节成本高于标准硬盘，且容量通常也较小，但它们为随机访问提供了卓越的性能。如果使用模式包含许多分散在文件系统各处的输入输出操作，例如对于经常运行复杂查询的数据库，那么在`SSD`上运行它们的优势将远超通过在`RAID`上选择`LVM`或反之所能获得的任何收益。在这种情况下，选择应该由纯速度以外的考虑因素决定，因为性能问题最容易通过使用`SSDs`来解决。
 
-第三个显著的用例是人们只想将两个磁盘聚合为一个卷，可能是出于性能考虑，也是为了拥有比任何可用磁盘都大的单个文件系统。这种情况可以通过 `RAID-0`（甚至是 `linear-RAID`）和 `LVM` 卷来解决。在这种情况下，在没有额外限制的情况下（例如，为了与其余计算机保持一致，如果它们只使用 `RAID`），通常的配置选择是 `LVM`。其初始设置几乎没有更复杂，而这种复杂性的微增完全弥补了当需求变化或需要添加新磁盘时 `LVM` 带来的额外灵活性。
+第三个显著的用例是人们只想将两个磁盘聚合为一个卷，可能是出于性能考虑，也是为了拥有比任何可用磁盘都大的单个文件系统。这种情况可以通过`RAID-0`（甚至是`linear-RAID`）和`LVM`卷来解决。在这种情况下，在没有额外限制的情况下（例如，为了与其余计算机保持一致，如果它们只使用`RAID`），通常的配置选择是`LVM`。其初始设置几乎没有更复杂，而这种复杂性的微增完全弥补了当需求变化或需要添加新磁盘时`LVM`带来的额外灵活性。
 
-那么，当然还有一个非常有意思的用例，即存储系统既需要抵抗硬件故障，又在卷分配方面具有灵活性。`RAID` 和 `LVM` 均无法独立满足这两个需求；没关系，这正是我们同时使用两者的地方——或者说，在另一个之上使用另一个。自从 `RAID` 和 `LVM` 成熟以来，一种几乎成为标准的方案是首先通过将磁盘分组为少数大型 `RAID` 阵列来确保数据冗余，并将这些 `RAID` 阵列作为 `LVM` 物理卷；然后从这些 `LVs` 中划分出逻辑分区用于文件系统。这种设置的卖点在于，当磁盘故障时，只需要重建少数 `RAID` 阵列，从而限制了管理员花费的恢复时间。
+那么，当然还有一个非常有意思的用例，即存储系统既需要抵抗硬件故障，又在卷分配方面具有灵活性。`RAID`和`LVM`均无法独立满足这两个需求；没关系，这正是我们同时使用两者的地方——或者说，在另一个之上使用另一个。自从`RAID`和`LVM`成熟以来，一种几乎成为标准的方案是首先通过将磁盘分组为少数大型`RAID`阵列来确保数据冗余，并将这些`RAID`阵列作为`LVM`物理卷；然后从这些`LVs`中划分出逻辑分区用于文件系统。这种设置的卖点在于，当磁盘故障时，只需要重建少数`RAID`阵列，从而限制了管理员花费的恢复时间。
 
-让我们来看一个具体的例子：`Falcot Corp` 的公关部门需要一个视频剪辑工作站，但部门的预算不允许从底层开始投资高端硬件。决定倾向于针对工作图形特性的特定硬件（显示器和显卡），而在存储方面保留通用硬件。然而，众众所周知，数字视频对其存储确实有一些特殊要求：要存储的数据量很大，读写这些数据的吞吐率对整个系统性能非常重要（例如，比典型的访问时间更为重要）。这些限制需要用通用硬件满足，在这种情况下是两个 `300 GB` `SATA` 硬盘；系统数据以及部分用户数据也必须具备抵抗硬件故障的能力。剪辑过的视频剪辑必须是安全的，但等待剪辑的视频素材则不那么关键，因为它们仍在录像带上。
+让我们来看一个具体的例子：`Falcot Corp`的公关部门需要一个视频剪辑工作站，但部门的预算不允许从底层开始投资高端硬件。决定倾向于针对工作图形特性的特定硬件（显示器和显卡），而在存储方面保留通用硬件。然而，众众所周知，数字视频对其存储确实有一些特殊要求：要存储的数据量很大，读写这些数据的吞吐率对整个系统性能非常重要（例如，比典型的访问时间更为重要）。这些限制需要用通用硬件满足，在这种情况下是两个`300 GB` `SATA`硬盘；系统数据以及部分用户数据也必须具备抵抗硬件故障的能力。剪辑过的视频剪辑必须是安全的，但等待剪辑的视频素材则不那么关键，因为它们仍在录像带上。
 
-`RAID-1` 和 `LVM` 结合起来满足这些限制。磁盘连接到两个不同的 `SATA` 控制器上以优化并行访问并减少同时故障的风险，因此它们显示为 `sda` 和 `sdc`。它们按照以下方案进行完全相同的分区：
+`RAID-1`和`LVM`结合起来满足这些限制。磁盘连接到两个不同的`SATA`控制器上以优化并行访问并减少同时故障的风险，因此它们显示为`sda`和`sdc`。它们按照以下方案进行完全相同的分区：
 
 ```
 # fdisk -l /dev/sda
-Disk /dev/sda: 300 GB, 300090728448 bytes, 586114704 sectors Units: sectors of 1 * 512 = 512 bytes Sector size (logical/physical): 512 bytes / 512 bytes I/O size (minimum/optimal): 512 bytes / 512 bytes Disklabel type: dos Disk identifier: 0x00039a9f Device Boot Start End Sectors Size Id Type
+Disk /dev/sda: 300 GB, 300090728448 bytes, 586114704 sectors
+Units: sectors of 1 * 512 = 512 bytes
+Sector size (logical/physical): 512 bytes / 512 bytes
+I/O size (minimum/optimal): 512 bytes / 512 bytes
+Disklabel type: dos
+Disk identifier: 0x00039a9f
+
+Device Boot Start End Sectors Size Id Type
 /dev/sda1 * 2048 1992060 1990012 1.0G fd Linux raid autodetect
 /dev/sda2 1992061 3984120 1992059 1.0G 82 Linux swap / Solaris
 /dev/sda3 4000185 586099395 582099210 298G 5 Extended
@@ -8091,10 +8262,15 @@ Disk /dev/sda: 300 GB, 300090728448 bytes, 586114704 sectors Units: sectors of 1
 /dev/sda7 403970491 586099395 182128904 93G 8e Linux LVM
 ```
 
-*   两个磁盘的第一个分区（约 `1 GB`）被组装进 `RAID-1` 卷 `md0`。该镜像直接用于存储根文件系统。
-*   `sda2` 和 `sdc2` 分区被用作交换分区，提供共 `2 GB` 的交换空间。配合 `1 GB` 的 `RAM`，工作站拥有充足的可用内存。
-*   `sda5` 和 `sdc5` 分区，以及 `sda6` 和 `sdc6` 被组装成两个约为 `100 GB` 的新 `RAID-1` 卷 `md1` 和 `md2`。这两个镜像都被初始化为 `LVM` 的物理卷，并分配给卷组 `vg_raid`。因此，这个 `VG` 包含了大约 `200 GB` 的安全空间。
-*   剩余分区 `sda7` 和 `sdc7` 直接用物理卷，并分配给另一个名为 `vg_bulk` 的 VG。
+
+
+两个磁盘的第一个分区（约 `1 GB`）被组装进 `RAID-1` 卷 `md0`。该镜像直接用于存储根文件系统。
+
+`sda2` 和 `sdc2` 分区被用作交换分区，提供共 `2 GB` 的交换空间。配合 `1 GB` 的 `RAM`，工作站拥有充足的可用内存。
+
+`sda5` 和 `sdc5` 分区，以及 `sda6` 和 `sdc6` 被组装成两个约为 `100 GB` 的新 `RAID-1` 卷 `md1` 和 `md2`。这两个镜像都被初始化为 `LVM` 的物理卷，并分配给卷组 `vg_raid`。因此，这个 `VG` 包含了大约 `200 GB` 的安全空间。
+
+剩余分区 `sda7` 和 `sdc7` 直接用物理卷，并分配给另一个名为 `vg_bulk` 的 VG。
 
 一旦创建了 VGs，就可以以非常灵活的方式对其分区。必须记住，在 `vg_raid` 中创建的 LVs 即使其中一个磁盘故障也会保留，而在 `vg_bulk` 中创建的 LVs 则不会；另一方面，后者将在两个磁盘上并行分配，这允许大文件具有更高的读取或写入速度。
 
@@ -8102,14 +8278,11 @@ Disk /dev/sda: 300 GB, 300090728448 bytes, 586114704 sectors Units: sectors of 1
 
 我们现在既对重要数据拥有某些冗余，又在可用空间如何划分应用程序方面具有很大的灵活性。
 
-### 注意：为什么要创建三个 RAID-1 卷？
+## 注意：为什么要创建三个 RAID-1 卷？
 
 我们可以只设置一个 RAID-1 卷作为 `vg_raid` 的物理卷。那么，为什么要创建三个呢？
 
 第一个划分（`md0` 与其他）的理由是为了数据安全：写入 `RAID-1` 镜像两个元素的数据是完全相同的，因此可以绕过 RAID 层直接挂载其中一个磁盘。例如在发生内核错误，或者 `LVM` 元数据损坏，仍然可以启动最小化系统来访问关键数据，例如 `RAID` 和 `LVM` 卷的磁盘布局；然后可以重建元数据并再次访问文件，从而使系统恢复到正常状态。
-
-
-
 
 第二次划分（`md1` 与 `md2`）的理由并不那么明确，更多是由于承认未来是不确定的。当工作站首次组装时，具体的存储需求并不一定能精确确定；它们可能会随着时间的推移而演变。在我们的情况下，无法预知视频素材（video rushes）和完整视频片段的实际存储空间需求。如果某个特定片段需要大量的素材，而用于冗余数据的 `VG` 填充率未到一半，我们可以重用它某些不需要的空间。我们可以从 `vg_raid` 中移除一个物理卷（例如 `md2`），并将其直接分配给 `vg_bulk`（如果操作预期的持续时间短到我们可以忍受性能的临时下降），或者撤销 `md2` 上的 RAID 设置，将其组件 `sda6` 和 `sdc6` 集成到大容量 VG 中（这样容量会增加 200 GB 而不是 100 GB）；然后可以根据需要扩展 `lv_rushes` 逻辑卷。
 
@@ -8119,13 +8292,10 @@ Disk /dev/sda: 300 GB, 300090728448 bytes, 586114704 sectors Units: sectors of 1
 
 有多种虚拟化解决方案，每种都有自己的优缺点。本书将重点关注 `Xen`、`LXC` 和 `KVM`，但其他值得关注的实现包括：
 
-*   `QEMU` 是一个完整计算机的软件仿真器；其性能远不如原生运行的速度，但它允许在模拟硬件上运行未修改的或实验性的操作系统。它还允许模拟不同的硬件架构：例如，`amd64` 系统可以模拟 `arm` 计算机。`QEMU` 是自由软件。→ [`www.qemu.org/`](https://www.qemu.org/)
-
-*   `Bochs` 是另一个免费虚拟机，但它只模拟 x86 架构（`i386` 和 `amd64`）。
-
-*   `VMWare` 是一种专有虚拟机；作为最老的软件之一，它也是最为人知的软件之一。它的工作原理与 `QEMU` 类似。`VMWare` 提供了如对运行中的虚拟机进行快照等高级功能。→ [`www.vmware.com/`](https://www.vmware.com/)
-
-*   `VirtualBox` 是一个大部分为免费的虚拟机（某些额外组件采用专有许可）。遗憾的是，它位于 Debian 的“contrib”部分，因为它包含一些预编译文件，这些文件在没有专有编译器的情况下无法重新构建，目前仅存在于 Debian Unstable 中，因为 Oracle 的策略使其无法在 Debian 稳定版中保持安全（参见 [#794466](https://bugs.debian.org/794466)）。虽然它比 `VMWare` 年轻且仅限于 `i386` 和 `amd64` 架构，但它仍然包含一些快照和其他有趣的功能。→ [`www.virtualbox.org/`](https://www.virtualbox.org/)
+- `QEMU` 是一个完整计算机的软件仿真器；其性能远不如原生运行的速度，但它允许在模拟硬件上运行未修改的或实验性的操作系统。它还允许模拟不同的硬件架构：例如，`amd64` 系统可以模拟 `arm` 计算机。`QEMU` 是自由软件。→ [`www.qemu.org/`](https://www.qemu.org/)
+- `Bochs` 是另一个免费虚拟机，但它只模拟 x86 架构（`i386` 和 `amd64`）。
+- `VMWare` 是一种专有虚拟机；作为最老的软件之一，它也是最为人知的软件之一。它的工作原理与 `QEMU` 类似。`VMWare` 提供了如对运行中的虚拟机进行快照等高级功能。→ [`www.vmware.com/`](https://www.vmware.com/)
+- `VirtualBox` 是一个大部分为免费的虚拟机（某些额外组件采用专有许可）。遗憾的是，它位于 Debian 的“contrib”部分，因为它包含一些预编译文件，这些文件在没有专有编译器的情况下无法重新构建，目前仅存在于 Debian Unstable 中，因为 Oracle 的策略使其无法在 Debian 稳定版中保持安全（参见 [#794466](https://bugs.debian.org/794466)）。虽然它比 `VMWare` 年轻且仅限于 `i386` 和 `amd64` 架构，但它仍然包含一些快照和其他有趣的功能。→ [`www.virtualbox.org/`](https://www.virtualbox.org/)
 
 ## 硬件虚拟化支持
 
@@ -8133,8 +8303,8 @@ Disk /dev/sda: 300 GB, 300090728448 bytes, 586114704 sectors Units: sectors of 1
 
 要检查你是否启用了虚拟化支持，可以使用 `grep` 检查相关标志是否启用。如果针对你的处理器的命令返回了文本，说明你已经启用了虚拟化支持：
 
-*   对于 Intel 处理器，可以执行 `grep vmx /proc/cpuinfo`
-*   对于 AMD 处理器，可以执行 `grep svm /proc/cpuinfo`
+- 对于 Intel 处理器，可以执行 `grep vmx /proc/cpuinfo`
+- 对于 AMD 处理器，可以执行 `grep svm /proc/cpuinfo`
 
 ### 12.2.1. Xen
 
@@ -8168,11 +8338,9 @@ Disk /dev/sda: 300 GB, 300090728448 bytes, 586114704 sectors Units: sectors of 1
 
 在 Debian 下使用 `Xen` 需要三个组件：
 
-*   内核本身。根据可用硬件，相应的包将是 `xen-hypervisor-4.11-amd64`、`xen-hypervisor-4.11-armhf` 或 `xen-hypervisor-4.11-arm64`。
-*   在该内核程序上的内核。任何比 3.0 新的内核都可以，包括 `Buster` 中存在的 4.19 版本。
-*   `i386` 架构还需要一个带有利用 `Xen` 的适当补丁的标准库；这位于 `libc6-xen` 包中。
-
-
+- 内核本身。根据可用硬件，相应的包将是 `xen-hypervisor-4.11-amd64`、`xen-hypervisor-4.11-armhf` 或 `xen-hypervisor-4.11-arm64`。
+- 在该内核程序上的内核。任何比 3.0 新的内核都可以，包括 `Buster` 中存在的 4.19 版本。
+- `i386` 架构还需要一个带有利用 `Xen` 的适当补丁的标准库；这位于 `libc6-xen` 包中。
 
 虚拟机监控程序还带来了 `xen-utils-4.11`，它包含了从 `dom0` 控制虚拟机监控程序的工具。这反过来带来了相应的标准库。在安装所有内容的过程中，配置脚本会在 GRUB 引导加载菜单中创建一个新条目，以便在 Xen `dom0` 中启动选定的内核。但注意，此条目通常不会被设置为列表中的第一个，但它将被默认选中。
 
@@ -8180,16 +8348,16 @@ Disk /dev/sda: 300 GB, 300090728448 bytes, 586114704 sectors Units: sectors of 1
 
 现在是使用 `xen-tools` 中的工具在 domU 系统上实际安装实用的系统了。该包提供了 `xen-create-image` 命令，它在很大程度上自动化了该任务。唯一的强制性参数是 `--hostname`，用于为 domU 命名；其他选项很重要，但它们可以存储在 `/etc/xen-tools/xen-tools.conf` 配置文件中，且在命令行中缺少它们不会触发错误。因此，在创建镜像之前检查该文件的内容，或者在调用 `xen-create-image` 时使用额外参数是非常关重要的。值得注意的重要参数包括：
 
-* `--memory`，指定为新创建的系统分配的内存容量；
-* `--size` 和 `--swap`，定义供 domU 使用的“虚拟磁盘”的大小；
-* `--debootstrap-cmd`，指定使用哪种 debootstrap 命令。如果安装了 `debootstrap` 和 `cdebootstrap`，默认值为 `debootstrap`。在这种情况下，`--dist` 选项通常也会被使用（带有如 `buster` 这样的发行版名称）。
+- `--memory`，指定为新创建的系统分配的内存容量；
+- `--size` 和 `--swap`，定义供 domU 使用的“虚拟磁盘”的大小；
+- `--debootstrap-cmd`，指定使用哪种 debootstrap 命令。如果安装了 `debootstrap` 和 `cdebootstrap`，默认值为 `debootstrap`。在这种情况下，`--dist` 选项通常也会被使用（带有如 `buster` 这样的发行版名称）。
 
 #### 进阶：在 domU 中安装非 Debian 系统
 
 对于非 Linux 系统，应使用 `--kernel` 选项小心地定义 domU 必须使用的内核。
 
-* `--dhcp` 表示 domU 的网络配置应通过 DHCP 获取，而 `--ip` 允许定义静态 IP 地址。
-* 最后，必须为要创建的镜像选择一种存储方法（这些镜像在 domU 中将被视为硬盘驱动器）。最简单的方法对应 `--dir` 选项，是在 `dom0` 上为 domU 需要提供的每个设备创建一个文件。对于使用 LVM 的系统，替代方案是使用 `--lvm` 选项，后跟卷组名称；`xen-create-image` 将在该组内创建一个新的逻辑卷，该逻辑卷将作为硬盘驱动器提供给 domU。
+- `--dhcp` 表示 domU 的网络配置应通过 DHCP 获取，而 `--ip` 允许定义静态 IP 地址。
+- 最后，必须为要创建的镜像选择一种存储方法（这些镜像在 domU 中将被视为硬盘驱动器）。最简单的方法对应 `--dir` 选项，是在 `dom0` 上为 domU 需要提供的每个设备创建一个文件。对于使用 LVM 的系统，替代方案是使用 `--lvm` 选项，后跟卷组名称；`xen-create-image` 将在该组内创建一个新的逻辑卷，该逻辑卷将作为硬盘驱动器提供给 domU。
 
 #### 注意：domU 中的存储
 
@@ -8198,142 +8366,210 @@ Disk /dev/sda: 300 GB, 300090728448 bytes, 586114704 sectors Units: sectors of 1
 一旦做了这些选择，我们就可以为未来的 Xen domU 创建镜像了：
 
 ```bash
-# xen-create-image --hostname testxen --dhcp --dir /srv/testxen --size=2G --dist=buster --role=udev [...] eneral Information -------------------- Hostname : testxen Distribution : buster Mirror : http://deb.debian.org/debian Partitions : swap 512M (swap) / 2G (ext4) Image type : sparse Memory size : 256M Kernel path : /boot/vmlinuz-4.19.0-5-amd64 Initrd path : /boot/initrd.img-4.19.0-5-amd64 [...] Logfile produced at: /var/log/xen-tools/testxen.log Installation Summary --------------------- Hostname : testxen Distribution : buster MAC Address : 00:16:3E:0C:74:2F IP Address(es) : dynamic SSH Fingerprint : SHA256:PuAGX4/4S07Xzh1u0Cl2tL04EL5udf9ajvvbufBrfvU (DSA) SSH Fingerprint : SHA256:ajFTX54eakzolyzmZku/ihq/BK6KYsz5MewJ98BM5co (ECDSA) SSH Fingerprint : SHA256:/sFov86b+rD/bRSJoHKbiMqzGFiwgZulEwpzsiw6aSc (ED25519) SSH Fingerprint : SHA256:/NJg/CcoVj+OLE/cL3yyJINStnla7YkHKe3/xEdVGqc (RSA) Root Password : EwmQMHtywY9zsRBpqQuxZTb
+# xen-create-image --hostname testxen --dhcp --dir /srv/testxen --size=2G --dist=buster --role=udev [...]
+eneral Information
+--------------------
+Hostname : testxen
+Distribution : buster
+Mirror : http://deb.debian.org/debian
+Partitions : swap 512M (swap) / 2G (ext4)
+Image type : sparse
+Memory size : 256M
+Kernel path : /boot/vmlinuz-4.19.0-5-amd64
+Initrd path : /boot/initrd.img-4.19.0-5-amd64
+[...]
+Logfile produced at: /var/log/xen-tools/testxen.log
+Installation Summary
+---------------------
+Hostname : testxen
+Distribution : buster
+MAC Address : 00:16:3E:0C:74:2F
+IP Address(es) : dynamic
+SSH Fingerprint : SHA256:PuAGX4/4S07Xzh1u0Cl2tL04EL5udf9ajvvbufBrfvU (DSA)
+SSH Fingerprint : SHA256:ajFTX54eakzolyzmZku/ihq/BK6KYsz5MewJ98BM5co (ECDSA)
+SSH Fingerprint : SHA256:/sFov86b+rD/bRSJoHKbiMqzGFiwgZulEwpzsiw6aSc (ED25519)
+SSH Fingerprint : SHA256:/NJg/CcoVj+OLE/cL3yyJINStnla7YkHKe3/xEdVGqc (RSA)
+Root Password : EwmQMHtywY9zsRBpqQuxZTb
 ```
 
 我们现在有了一个虚拟机，但它目前没有运行（因此只占用了 `dom0` 硬盘上的空间）。当然，我们可以创建更多镜像，可能带有不同的参数。
 
 在启动这些虚拟机之前，我们需要定义如何访问它们。它们当然可以被视为隔离的机器，仅通过其系统控制台访问，但这很少符合使用模式。大多数时候，domU 会被视为一台远程服务器，并仅通过网络访问。然而，为每个 domU 添加网卡将非常不方便；这就是为什么 Xen 允许创建虚拟接口，每个域都可以以标准方式看到并使用这些接口。请注意，这些网卡即使是虚拟的，只有在连接到网络（即使是虚拟网络）后才有用。Xen 为此提供了几种网络模型：
 
-* 最简单的模型是 `bridge`（桥接）模型；所有的 `eth0` 网卡（ `dom0` 和 domU 系统中的）行为都像直接插在以太网交换机上一样。
-* 接着是 `routing`（路由）模型，`dom0` 表现为位于 domU 系统和（物理）外部网络之间的路由器。
-* 最后，在 `NAT` 模型中，`dom0` 再次位于 domU 系统和其余网络之间，但从外部无法直接访问 domU 系统，流量通过 `dom0` 上的某些网络地址转换进行。
+- 最简单的模型是 `bridge`（桥接）模型；所有的 `eth0` 网卡（ `dom0` 和 domU 系统中的）行为都像直接插在以太网交换机上一样。
+- 接着是 `routing`（路由）模型，`dom0` 表现为位于 domU 系统和（物理）外部网络之间的路由器。
+- 最后，在 `NAT` 模型中，`dom0` 再次位于 domU 系统和其余网络之间，但从外部无法直接访问 domU 系统，流量通过 `dom0` 上的某些网络地址转换进行。
 
 这三个网络节点涉及许多具有异常名称的接口，例如 `vif*`、`veth*`、`peth*` 和 `xenbr0`。Xen 虚拟机监控程序在用户空间工具的控制下，按照定义的布局安排它们。由于 NAT 和路由模型仅适用于特定情况，我们将只讨论桥接模型。
 
 Xen 包的标准配置不会更改系统范围的网络配置。然而，`xend` 进程被配置为将虚拟接口集成到任何预定义的桥中（`xenbr0` 优先）。因此，我们必须在 `/etc/network/interfaces` 中设置桥（这需要安装 `bridge-utils` 包，这就是为什么 `xen-utils-4.11` 包推荐它）来替换现有的 eth0 条目：
 
 ```
-auto xenbr0 iface xenbr0 inet dhcp bridge_ports eth0 bridge_maxwait 0
+auto xenbr0
+iface xenbr0 inet dhcp
+bridge_ports eth0
+bridge_maxwait 0
 ```
 
 重启以确保桥接自动创建后，我们现在可以使用 Xen 控制工具启动 domU，特别是 `xl` 命令。该命令允许对域进行不同的操作，包括列出它们以及启动/停止它们。你可能需要通过编辑配置文件中的变量来增加默认内存（在本例中为 `/etc/xen/testxen.cfg`）。在这里，我们将其设置为 1024（兆字节）。
 
 ```bash
 # xl list
-Name ID Mem VCPUs State Time(s)
-Domain-0 0 1894 2 r----- 63.5
+Name                                        ID   Mem VCPUs	State	Time(s)
+Domain-0                                     0  1894     2     r-----      63.5
+
 # xl create /etc/xen/testxen.cfg
 Parsing config from /etc/xen/testxen.cfg
+
 # xl list
-Name ID Mem VCPUs State Time(s)
-Domain-0 0 1505 2 r----- 100.0
-testxen 13 1024 0 --p--- 0.0
 ```
 
-#### 工具：管理 Xen 虚拟机的工具栈
+
+
+| Name | ID | Mem | VCPUs | State | Time(s) |
+|---|---:|---:|---:|---|---:|
+| Domain-0 | 0 | 1505 | 2 | r----- | 100.0 |
+| testxen | 13 | 1024 | 0 | --p--- | 0.0 |
+
+## 工具：管理 Xen 虚拟机的工具栈
 
 在 Debian 7 及更早版本中，`xm` 是管理 Xen 虚拟机的参考命令行工具。它现在已被 `xl` 取代，后者具有很好的向后兼容性。但这些并不是唯一的可用工具：libvirt 的 `virsh` 和 XenServer XAPI 的 `xe`（Xen 的商业产品）也是替代工具。
 
-#### 警告：每个镜像只有一个 domU！
+## 警告：每个镜像只有一个 domU！
 
-
-
-
-虽然可以并行运行多个 domU 系统，但它们都必须使用自己的镜像，因为每个 domU 都被认为自己运行在独立的硬件上（除了与超管理程序通信的一一小部分内核外）。特别是，两个同时运行的 domU 系统无法共享存储空间。然而，如果 domU 系统不是在同一时间运行，那么复用同一个交换分区或托管 `/home` 文件系统的分区是完全可能的。
+虽然可以并行运行多个 domU 系统，但它们都必须使用自己的镜像，因为每个 domU 都被认为自己运行在独立的硬件上（除了与超管理程序通信的一小部分内核外）。特别是，两个同时运行的 domU 系统无法共享存储空间。然而，如果 domU 系统不是在同一时间运行，那么复用同一个交换分区或托管 `/home` 文件系统的分区是完全可能的。
 
 注意，`testxen` domU 使用的是从 RAM 中提取的真实供 dom0 可用的内存，而不是模拟内存。因此，在构建用于托管 Xen 实例的服务器时，应相应配置物理内存。
 
-大功告！虚拟机正在启动。我们可以通过两种模式之一访问它。通常的方法是通过网络“远程”连接到它，就像我们连接到真实的机器一样；这通常需要设置 DHCP 服务器或 DNS 配置。另一种方法（如果网络配置错误，这可能是唯一的方法）是使用 `xl console` 命令使用 `hvc0` 控制台：
+大功告成！虚拟机正在启动。我们可以通过两种模式之一访问它。通常的方法是通过网络“远程”连接到它，就像我们连接到真实的机器一样；这通常需要设置 DHCP 服务器或 DNS 配置。另一种方法（如果网络配置错误，这可能是唯一的方法）是使用 `xl console` 命令使用 `hvc0` 控制台：
 
-```
-# xl console testxen [...] Debian GNU/Linux 10 testxen hvc0 testxen login:
+```text
+# xl console testxen [...]
+Debian GNU/Linux 10 testxen hvc0
+testxen login:
 ```
 
 然后你可以打开一个会话，就像坐在虚拟机的键盘前一样。通过 `Control`+`]` 组合键释放此控制台。
 
-**提示** 立即获取控制台
+### 提示：立即获取控制台
 
 有时人们希望启动 domU 系统并立即进入其控制台；这就是为什么 `xl create` 命令有一个 `-c` 选项。使用此选项启动 domU 将显示系统启动时的所有消息。
 
-**工具** OpenXenManager
+### 工具：OpenXenManager
 
 OpenXenManager（位于 `openxenmanager` 包中）是一个图形化界面，允许通过 Xen 的 API 远程管理 Xen 域。因此，它可以远程控制 Xen 域。它提供了 `xl` 命令的大部分功能。
 
-一旦 domU 启动，就可以像任何其他服务器一样使用它（因为它毕竟是一个 GNU/Linux 系统）。然而，它的虚拟机状态允许一些额外功能。例如，可以使用 `xl pause` 和 `xl unpause` 命令临时暂停然后恢复 domU。注意，尽管暂停的 domU 不消耗任何处理器电源，但分配的内存仍然在使用中。考虑 `xl save` 和 `xl restore` 命令可能会很有趣：保存 domU 会释放之前该 domU 使用的资源，包括 RAM。当恢复时（或者取消暂停），domU 甚至察觉不到时间流之外的任何异常。如果在 dom0 关闭时 domU 正在运行，封装脚本会自动保存 domU 并在下次启动时恢复它。这自然会涉及休眠笔记本电脑时的标准不便；特别是如果 domU 挂起过久，网络连接可能会过期。还要注意，Xen 目前与大部分 ACPI 电源管理不兼容，这阻止了挂起主机（dom0）系统。
+一旦 domU 启动，就可以像任何其他服务器一样使用它（因为它毕竟是一个 GNU/Linux 系统）。然而，它的虚拟机状态允许一些额外功能。例如，可以使用 `xl pause` 和 `xl unpause` 命令临时暂停然后恢复 domU。注意，尽管暂停的 domU 不消耗任何处理器电源，但分配的内存仍然在使用中。
 
-**文档** `xl` 选项
+考虑 `xl save` 和 `xl restore` 命令可能会很有趣：保存 domU 会释放之前该 domU 使用的资源，包括 RAM。当恢复时（或者取消暂停），domU 甚至察觉不到时间流之外的任何异常。如果在 dom0 关闭时 domU 正在运行，封装脚本会自动保存 domU 并在下次启动时恢复它。
+
+这自然会涉及休眠笔记本电脑时的标准不便；特别是如果 domU 挂起过久，网络连接可能会过期。还要注意，Xen 目前与大部分 ACPI 电源管理不兼容，这阻止了挂起主机（dom0）系统。
+
+### 文档：`xl` 选项
 
 大多数 `xl` 子命令期望一个或多个参数，通常是 domU 名称。这些参数在 `xl(1)` 手册页中有详细描述。
 
 停止或重启 domU 可以在 domU 内部完成（使用 `shutdown` 命令），也可以从 dom0 完成（使用 `xl shutdown` 或 `xl reboot`）。
 
-**进阶** 高级 Xen
+### 进阶：高级 Xen
 
-Xen 的功能比我们这几段话所能描述的要得多。特别是，该系统非常动态，一个域的许多参数（例如分配的内存量、可见的硬盘、任务调度器的行为等）即使在域域运行时也可以进行调整。domU 甚至可以在不关机的情况下跨服务器迁移，且不会丢失网络连接！对于所有这些高级特性，主要的信息来源是 Xen 官方文档。
+Xen 的功能比我们这几段话所能描述的要得多。特别是，该系统非常动态，一个域的许多参数（例如分配的内存量、可见的硬盘、任务调度器的行为等）即使在域运行时也可以进行调整。domU 甚至可以在不关机的情况下跨服务器迁移，且不会丢失网络连接！对于所有这些高级特性，主要的信息来源是 Xen 官方文档。
 
 → [`xenproject.org/help/documentation/`](https://xenproject.org/help/documentation/)
 
-## 12.2.2. LXC
+## 12.2.2 LXC
 
-尽管 LXC 被用于构建“虚拟机”，但严格来说，它并不是一个虚拟化系统，而是一个将进程组相互隔离的系统，尽管它们运行在同一个主机上。它利用了 Linux 内核的一系列最新演进，统称为*控制组*control groups），通过它，被称为“组”的不同进程集对整个系统的某些方面有不同的视图。这些方面中最著名的是进程标识符、网络配置和挂载点。这样一组孤立的进程将无法访问系统中的其他进程，其对文件系统的访问可以限制在特定的子集中。它还可以拥有自己的网络接口和路由表，并可以配置为只看到系统上可用设备的子集。
+尽管 LXC 被用于构建“虚拟机”，但严格来说，它并不是一个虚拟化系统，而是一个将进程组相互隔离的系统，尽管它们运行在同一个主机上。它利用了 Linux 内核的一系列最新演进，统称为控制组（control groups），通过它，被称为“组”的不同进程集对整个系统的某些方面有不同的视图。
 
-这些功能可以结合起来，隔离从 `init` 进程开始的整个进程族，生成的集合看起来非常像虚拟机。这种设置的正式名称是“容器”（因此有了 LXC 别号：*LinuX Containers*），但与 Xen 或 KVM 提供的“真实”虚拟机相比，有一个非常重要的区别：没有第二个内核；容器使用与主机系统完全相同的内核。这既有优缺点：优点包括由于完全没有开销而带来的卓越性能，以及内核对系统上运行的所有进程具有全局视野，因此调度比两个独立的内核调度不同任务集要高效得多。主要的不便之处是无法在容器中运行不同的内核（无论是不同的 Linux 版本还是完全不同的操作系统）。
+这些方面中最著名的是进程标识符、网络配置和挂载点。这样一组孤立的进程将无法访问系统中的其他进程，其对文件系统的访问可以限制在特定的子集中。它还可以拥有自己的网络接口和路由表，并可以配置为只看到系统上可用设备的子集。
 
-**注意** LXC 隔离限制
+这些功能可以结合起来，隔离从 `init` 进程开始的整个进程族，生成的集合看起来非常像虚拟机。这种设置的正式名称是“容器”（因此有了 LXC 别号：LinuX Containers），但与 Xen 或 KVM 提供的“真实”虚拟机相比，有一个非常重要的区别：没有第二个内核；容器使用与主机系统完全相同的内核。
+
+这既有优缺点：优点包括由于完全没有开销而带来的卓越性能，以及内核对系统上运行的所有进程具有全局视野，因此调度比两个独立的内核调度不同任务集要高效得多。主要的不便之处是无法在容器中运行不同的内核（无论是不同的 Linux 版本还是完全不同的操作系统）。
+
+### 注意：LXC 隔离限制
 
 LXC 容器不提供由更重量的模拟器或虚拟化程序所能达到的隔离水平。特别是：
 
-*   由于内核在主机系统和容器之间共享，受限制在容器中的进程仍然可以访问内核消息，如果容器发出了消息，可能会导致信息泄露；
-*   出于类似原因，如果容器被攻破并利用了内核漏洞，其他容器也可能受到影响；
-*   在文件系统中，内核根据用户和组的数字标识符检查权限；这些标识符可能会根据容器指定不同的用户和组，如果文件系统的可写部分在容器之间共享，则应该记住这一点。
+- 由于内核在主机系统和容器之间共享，受限制在容器中的进程仍然可以访问内核消息，如果容器发出了消息，可能会导致信息泄露；
+- 出于类似原因，如果容器被攻破并利用了内核漏洞，其他容器也可能受到影响；
+- 在文件系统中，内核根据用户和组的数字标识符检查权限；这些标识符可能会根据容器指定不同的用户和组，如果文件系统的可写部分在容器之间共享，则应该记住这一点。
 
 由于我们处理的是隔离而非纯粹的虚拟化，因此设置 LXC 容器比仅仅在虚拟机上运行 `debian-installer` 要复杂。我们将描述一些前提条件，然后进行网络配置；随后我们就可以实际创建要在容器中运行的系统了。
 
-### 12.2.2.1. 准备步骤
+### 12.2.2.1 准备步骤
 
 `lxc` 包包含了运行 LXC 需要的工具，因此必须安装。
 
-LXC 还需要*控制组*配置系统，这是一个挂载在 `/sys/fs/cgroup` 的虚拟文件系统。自从 Debian 8 切换到 systemd（systemd 也依赖控制组），这现在在启动时自动完成，无需进一步配置。
+LXC 还需要控制组配置系统，这是一个挂载在 `/sys/fs/cgroup` 的虚拟文件系统。自从 Debian 8 切换到 systemd（systemd 也依赖控制组），这现在在启动时自动完成，无需进一步配置。
 
-### 12.2.2.2. 网络配置
+### 12.2.2.2 网络配置
 
+安装 `LXC` 的目标是设置虚拟机；当然，我们也可以将它们与网络隔离，仅通过文件系统与它们通信，但大多数用例都为容器提供至少基本的网络访问。
 
-
-
-安装 `LXC` 的目标是设置虚拟机；当然，我们也可以将它们与网络隔离，仅通过文件系统与它们通信，但大多数用例都为容器提供至少基本的网络访问。在典型情况下，每个容器将获得一个虚拟网络接口，通过网桥（bridge）连接到真实网络。该虚拟接口可以直接插在主机的物理网络接口上（在这种情况下容器直接位于网络上），也可以插在主机上定义的另一个虚拟接口上（主机随后可以对流量进行过滤或路由在这两种情况下，都需要 `bridge-utils` 软件包。
+在典型情况下，每个容器将获得一个虚拟网络接口，通过网桥（bridge）连接到真实网络。该虚拟接口可以直接插在主机的物理网络接口上（在这种情况下容器直接位于网络上），也可以插在主机上定义的另一个虚拟接口上（主机随后可以对流量进行过滤或路由）。在这两种情况下，都需要 `bridge-utils` 软件包。
 
 简单的情况只需编辑 `/etc/network/interfaces`，将物理接口（例如 `eth0`）的配置移动到网桥接口（通常为 `br0`），并配置它们之间的链路。例如，如果网络接口配置文件最初包含如下条目：
 
-```
-auto eth0 iface eth0 inet dhcp
+```text
+auto eth0
+iface eth0 inet dhcp
 ```
 
 应该将它们禁用并替换为以下内容：
 
-```
-#auto eth0 #iface eth0 inet dhcp auto br0 iface br0 inet dhcp bridge-ports eth0
+```text
+#auto eth0
+#iface eth0 inet dhcp
+auto br0
+iface br0 inet dhcp
+bridge-ports eth0
 ```
 
 此配置的效果将类似于容器是插入到与主机相同物理网络上的机器所获得的结果。“桥”配置管理所有桥接接口之间以太网帧的传输，其中包括物理 `eth0` 以及为容器定义的接口。
 
-在无法使用此配置的情况下（例如，无法为容器分配公共 IP 地址），将创建一个虚拟的 `tap` 接口并连接到网桥。等相应的网络拓扑将变为主机插了第二个网卡到独立的交换机，而容器也插在该交换机上。如果容器需要与外部通信，则主机必须作为容器的网关。
+在无法使用此配置的情况下（例如，无法为容器分配公共 IP 地址），将创建一个虚拟的 `tap` 接口并连接到网桥。相应的网络拓扑将变为主机插了第二个网卡到独立的交换机，而容器也插在该交换机上。如果容器需要与外部通信，则主机必须作为容器的网关。
 
 除了 `bridge-utils` 外，这种“丰富”配置还需要 `vde2` 软件包；此时 `/etc/network/interfaces` 文件变为：
 
-```
-# Interface eth0 is unchanged auto eth0 iface eth0 inet dhcp # Virtual interface auto tap0 iface tap0 inet manual vde2-switch -t tap0 # Bridge for containers auto br0 iface br0 inet static bridge-ports tap0 address 10.0.0.1 netmask 255.255.255.0
+```text
+# Interface eth0 is unchanged
+auto eth0
+iface eth0 inet dhcp
+
+# Virtual interface
+auto tap0
+iface tap0 inet manual
+vde2-switch -t tap0
+
+# Bridge for containers
+auto br0
+iface br0 inet static
+bridge-ports tap0
+address 10.0.0.1
+netmask 255.255.255.0
 ```
 
 然后可以在容器中静态设置网络，也可以通过运行在主机上的 DHCP 服务器动态设置。此类 DHCP 服务器需要配置为响应 `br0` 接口上的查询。
 
-## 12.2.2.3 设置系统
+### 12.2.2.3 设置系统
 
-现在让我们设置供容器使用的文件系统。由于这个“虚拟机”不会直接运行在硬件上，因此与标准文件系统相比需要进行一些调整，特别是在内核、设备和控制台方面。幸运的是，`lxc` 包含了大部分自动完成此配置的脚本。例如，以下命令（需要 `debootstrap` 和 `rsync` 软件包）将安装一个 Debian 容器：
+现在让我们设置供容器使用的文件系统。由于这个“虚拟机”不会直接运行在硬件上，因此与标准文件系统相比需要进行一些调整，特别是在内核、设备和控制台方面。幸运的是，`lxc` 包包含了大部分自动完成此配置的脚本。
 
-```
+例如，以下命令（需要 `debootstrap` 和 `rsync` 软件包）将安装一个 Debian 容器：
+
+```text
 root@mirwiz:~# lxc-create -n testlxc -t debian
-debootstrap is /usr/sbin/debootstrap Checking cache download in /var/cache/lxc/debian/rootfs-stable-amd64 ... Downloading debian minimal ... I: Retrieving Release I: Retrieving Release.gpg [...] Download complete. Copying rootfs to /var/lib/lxc/testlxc/rootfs... [...] root@mirwiz:~#
+debootstrap is /usr/sbin/debootstrap
+Checking cache download in /var/cache/lxc/debian/rootfs-stable-amd64 ...
+Downloading debian minimal ...
+I: Retrieving Release
+I: Retrieving Release.gpg
+[...]
+Download complete.
+Copying rootfs to /var/lib/lxc/testlxc/rootfs...
+[...]
+root@mirwiz:~#
 ```
 
 注意，文件系统最初创建在 `/var/cache/lxc` 中，然后移动到目标目录。这允许更快地创建相同的容器，因为此时只需要复制即可。
@@ -8342,7 +8578,7 @@ debootstrap is /usr/sbin/debootstrap Checking cache download in /var/cache/lxc/d
 
 新创建的文件系统现在包含一个极简的 Debian 系统，默认情况下，容器没有网络接口（回环接口除外）。由于这通常不是我们想要的，我们将编辑容器的配置文件（`/var/lib/lxc/testlxc/config`）并添加几个 `lxc.network.*` 条目：
 
-```
+```text
 lxc.net.0.type = veth
 lxc.net.0.flags = up
 lxc.net.0.link = br0
@@ -8353,20 +8589,26 @@ lxc.net.0.hwaddr = 4a:49:43:49:79:20
 
 该文件中另一个有用的条目是设置主机名：
 
-```
+```text
 lxc.uts.name = testlxc
 ```
 
-## 12.2.2.4 启动容器
+### 12.2.2.4 启动容器
 
 现在虚拟机镜像已就绪，让我们用 `lxc-start --daemon --name=testlxc` 启动容器。
 
 在 2.0.8 之后的 LXC 版本中，默认不设置根密码。我们可以运行 `lxc-attach -n testlxc passwd` 来设置一个。现在可以登录了：
 
-```
+```text
 root@mirwiz:~# lxc-console -n testlxc
+
 Debian GNU/Linux 9 testlxc console testllc login: root
-Password: Linux testlxc 4.19.0-5-amd64 #1 SMP Debian 4.19.37-5 (2019-06-19) x86_64 The programs included with the Debian GNU/Linux system are free software; 每个程序的的具体分发条款在 /usr/share/doc/*/copyright 中的各个单独文件中说明。Debian GNU/Linux 在适用法律允许范围内不提供任何保证。root@testlxc:~# ps auxwf
+
+Password: Linux testlxc 4.19.0-5-amd64 #1 SMP Debian 4.19.37-5 (2019-06-19) x86_64
+The programs included with the Debian GNU/Linux system are free software; 每个程序的的具体分发条款在 `/usr/share/doc/*/copyright` 中的各个单独文件中说明。
+Debian GNU/Linux 在适用法律允许范围内不提供任何保证。
+root@testlxc:~# ps auxwf
+
 USER PID %CPU %MEM VSZ RSS TTY STAT START TIME COMMAND
 root 1 0.0 0.2 56736 6608 ? Ss 09:28 0:00 /sbin/init
 root 32 0.0 0.1 46096 4680 ? Ss 09:28 0:00 /lib/systemd/systemd-journald
@@ -8374,112 +8616,113 @@ root 75 0.0 0.1 67068 3328 console Ss 09:28 0:00 /bin/login --
 root 82 0.0 0.1 19812 3664 console S 09:30 0:00 \_ -bash
 root 88 0.0 0.1 38308 3176 console R+ 09:31 0:00 \_ ps auxwf
 root 76 0.0 0.1 69956 5636 ? Ss 09:28 0:00 /usr/sbin/sshd -D
+
 root@testlxc:~#
 ```
 
-我们现在进入容器内部；我们对进程的访问仅限于那些从容器本身启动的进程，我们对文件系统的访问同样限制在完整文件系统的专用子集（`/var/lib/lxc/testlxc/rootfs`）。我们可以通过 `Control+a+q` 退出控制台。
 
-注意，由于 `lxc-start` 的 `--daemon` 选项，我们以后后台进程运行了容器。可以使用 `lxc-stop --name=testlxc` 等命令中断容器。
 
-`lxc` 软件包包含一个初始化脚本，可以在主机启动时自动启动一个或多个容器（它依赖于 `lxc-autostart`，后者会启动 `lxc.start.auto` 选项设置为 1 的容器）。通过 `lxc.start.order` 和 `lxc.group` 可以对启动顺序进行更细粒度的控制：默认情况下，初始化脚本首先启动 `onboot` 组中的容器，然后是不属于任何组的容器。两种情况下，组内的顺序由 `lxc.start.order` 选项定义。
+
+我们现在进入容器内部；我们对进程的访问仅限于那些从容器本身启动的进程，我们对文件系统的访问同样限制在完整文件系统的专用子集（`/var/lib/lxc/testlxc/rootfs`）。我们可以通过`Control+a+q`退出控制台。
+
+注意，由于`lxc-start`的`--daemon`选项，我们以后在后台运行容器。可以使用`lxc-stop --name=testlxc`等命令中断容器。
+
+`lxc`软件包包含一个初始化脚本，可以在主机启动时自动启动一个或多个容器（它依赖于`lxc-autostart`，后者会启动`lxc.start.auto`选项设置为 1 的容器）。通过`lxc.start.order`和`lxc.group`可以对启动顺序进行更细粒度的控制：默认情况下，初始化脚本首先启动`onboot`组中的容器，然后是不属于任何组的容器。两种情况下，组内的顺序由`lxc.start.order`选项定义。
 
 ## 进阶：大规模虚拟化
 
-由于 `LXC` 是一个非常轻量级的隔离系统，它特别适用于大规模虚拟服务器托管。网络配置可能会比我们上面描述的复杂一些，但在许多情况下，使用 `tap` 和 `veth` 接口的“丰富”配置应该足够了。
+由于`LXC`是一个非常轻量级的隔离系统，它特别适用于大规模虚拟服务器托管。网络配置可能会比我们上面描述的复杂一些，但在许多情况下，使用`tap`和`veth`接口的“丰富”配置应该足够了。
 
+共享文件系统的部分（例如`/usr`和`/lib`子树）也是有意义的，以避免重复多个容器可能需要的共用软件。这通常通过容器配置文件中的`lxc.mount.entry`条目来实现。有趣的副作用是，进程将使用更少的物理内存，因为内核能够检测到程序是共享的。这样，增加一个容器的边际成本可以降低到仅需其特定数据的磁盘空间，以及内核必须调度和管理的少量额外进程。
 
-
-
-
-共享文件系统的部分（例如 `/usr` 和 `/lib` 子树）也是有意义的，以避免重复多个容器可能需要的共用软件。这通常通过容器配置文件中的 `lxc.mount.entry` 条目来实现。有趣的副作用是，进程将使用更少的物理内存，因为内核能够检测到程序是共享的。这样，增加一个容器的边际成本可以降低到仅需其特定数据的磁盘空间，以及内核必须调度和管理的少量额外进程。
-
-当然，我们还没有描述所有可用选项；更全面的信息可以从 `lxc(7)` 和 `lxc.container.conf(5)` 手页及其引用的页面中获得。
+当然，我们还没有描述所有可用选项；更全面的信息可以从`lxc(7)`和`lxc.container.conf(5)`手页及其引用的页面中获得。
 
 ## 12.2.3 使用 KVM 进行虚拟化
 
-KVM 全称为 `Kernel-based Virtual Machine`（基于内核的虚拟机），首先是一个内核模块，为虚拟化程序提供绝大部分基础设施，但它本身并不是一个虚拟化程序。虚拟化的实际控制由基于 QEMU 的应用程序处理。如果本节提到了 `qemu-` 命令，请不要担心：它仍然关于 KVM 的。
+KVM 全称为`Kernel-based Virtual Machine`（基于内核的虚拟机），首先是一个内核模块，为虚拟化程序提供绝大部分基础设施，但它本身并不是一个虚拟化程序。虚拟化的实际控制由基于 QEMU 的应用程序处理。如果本节提到了`qemu-`命令，请不要担心：它仍然关于 KVM 的。
 
-与其他虚拟化系统不同，KVM 从一开始就合并到了 Linux 内核中。它的开发者选择利用专门用于虚拟化的处理器指令集（Intel-VT 和 AMD-V），这使得 KVM 保持轻量级、优雅且不消耗资源。对应的是，KVM 不能在任何计算机上运行，而只能在具有相应处理器的计算机上运行。对于基于 x86 的计算机，你可以通过查看 `/proc/cpuinfo` 列出的 CPU 标志中的“vmx”或“svm”来验证你是否有此类处理器。
+与其他虚拟化系统不同，KVM 从一开始就合并到了 Linux 内核中。它的开发者选择利用专门用于虚拟化的处理器指令集（Intel-VT 和 AMD-V），这使得 KVM 保持轻量级、优雅且不消耗资源。对应的是，KVM 不能在任何计算机上运行，而只能在具有相应处理器的计算机上运行。对于基于 x86 的计算机，你可以通过查看`/proc/cpuinfo`列出的 CPU 标志中的“vmx”或“svm”来验证你是否有此类处理器。
 
-在红帽对其开发的积极支持下，KVM 或或少地已成为 Linux 虚拟化的基准。
+在红帽对其开发的积极支持下，KVM 或多或少地已成为 Linux 虚拟化的基准。
 
 ### 12.2.3.1 准备步骤
 
-与 VirtualBox 等工具不同，KVM 本身不包含任何创建和管理虚拟机的用户界面。`qemu-kvm` 包仅提供一个可以启动虚拟机的可执行文件，以及加载适当内核模块的初始化脚本。
+与 VirtualBox 等工具不同，KVM 本身不包含任何创建和管理虚拟机的用户界面。`qemu-kvm`包仅提供一个可以启动虚拟机的可执行文件，以及加载适当内核模块的初始化脚本。
 
-幸运的是，红帽还提供了另一组工具来解决这个问题，即开发了 `libvirt` 库和相关的 `virtual machine manager`（虚拟机管理器）工具。`libvirt` 允许以统一的方式管理虚拟机，而取决于后台涉及的虚拟化系统（它目前支持 QEMU、KVM、Xen、LXC、OpenVZ、VirtualBox、VMWare 和 UML）。`virtual-manager` 是一个使用 `libvirt` 创建和管理虚拟机的图形化界面。
+幸运的是，红帽还提供了另一组工具来解决这个问题，即开发了`libvirt`库和相关的`virtual machine manager`（虚拟机管理器）工具。`libvirt`允许以统一的方式管理虚拟机，而取决于后台涉及的虚拟化系统（它目前支持 QEMU、KVM、Xen、LXC、OpenVZ、VirtualBox、VMWare 和 UML）。`virtual-manager`是一个使用`libvirt`创建和管理虚拟机的图形化界面。
 
-我们首先安装所需的软件包：`apt-get install libvirt-clients libvirt-daemon-system qemu-kvm virtinst virt-manager virt-viewer`。`libvirt-daemon-system` 提供 `libvirtd` 守护进程，允许对运行在主机上的虚拟机进行（可能的远程）管理，并在主机启动时启动所需的虚拟机。`libvirt-clients` 提供 `virsh` 命令行工具，允许控制由 `libvirtd` 管理的机器。
+我们首先安装所需的软件包：`apt-get install libvirt-clients libvirt-daemon-system qemu-kvm virtinst virt-manager virt-viewer`。`libvirt-daemon-system`提供`libvirtd`守护进程，允许对运行在主机上的虚拟机进行（可能的远程）管理，并在主机启动时启动所需的虚拟机。`libvirt-clients`提供`virsh`命令行工具，允许控制由`libvirtd`管理的机器。
 
-`virtinst` 包提供了 `virt-install`，允许从命令行创建虚拟机。最后，`virt-viewer` 允许访问虚拟机的图形控制台。
+`virtinst`包提供了`virt-install`，允许从命令行创建虚拟机。最后，`virt-viewer`允许访问虚拟机的图形控制台。
 
 ### 12.2.3.2 网络配置
 
-就像在 Xen 和 LXC 中一样，最频繁的网络配置涉及一个将虚拟机网络接口的网桥（参见 第 12.2.2.2 节，“网络配置”）。
+就像在 Xen 和 LXC 中一样，最频繁的网络配置涉及一个将虚拟机网络接口的网桥（参见第 12.2.2.2 节，“网络配置”）。
 
-或者，在 KVM 提供的默认配置中，虚拟机被分配一个私地址（在 192.168.122.0/24 范围内），并设置了 NAT 以便虚拟机访问外部网络。
+或者，在 KVM 提供的默认配置中，虚拟机被分配一个私有地址（在`192.168.122.0/24`范围内），并设置了 NAT 以便虚拟机访问外部网络。
 
-本节其余部分假设主机有一个 `eth0` 物理接口和一个 `br0` 网桥，且前者连接到后者。
+本节其余部分假设主机有一个`eth0`物理接口和一个`br0`网桥，且前者连接到后者。
 
-### 12.2.3.3 使用 virt-install 安装
+### 12.2.3.3 使用 `virt-install` 安装
 
 创建虚拟机与安装普通系统非常相似，区别在于虚拟机的特性被描述在一个看似无尽的命令行中。
 
-从实践来说，这意味着我们将使用 Debian 安装程序，通过在映射到主机系统存储 Debian DVD 镜像的虚拟 DVD-ROM 驱动器上启动虚拟机。虚拟机将通过 VNC 协议导出其图形控制台（参见第 9.2.2 节，“使用远程图形桌面”](#ch09s02.html_sect.remote-desktops "9.2.2. 使用远程图形桌面") 获取详情），这将允许我们控制安装过程。
+从实践来说，这意味着我们将使用 Debian 安装程序，通过在映射到主机系统存储 Debian DVD 镜像的虚拟 DVD-ROM 驱动器上启动虚拟机。虚拟机将通过 VNC 协议导出其图形控制台（参见第 9.2.2 节，“使用远程图形桌面”获取详情），这将允许我们控制安装过程。
 
-我们首先需要告诉 `libvirtd` 将磁盘镜像存储在哪里，除非默认位置（`/var/lib/libvirt/images/`）可以。
+我们首先需要告诉`libvirtd`将磁盘镜像存储在哪里，除非默认位置（`/var/lib/libvirt/images/`）可以。
 
 ```bash
 root@mirwiz:~# mkdir /srv/kvm
 root@mirwiz:~# virsh pool-create-as srv-kvm dir --target /srv/kvm
-Pool srv-kvm created root@mirwiz:~#
+Pool srv-kvm created
+root@mirwiz:~#
 ```
 
-提示：将你的用户加入 libvirt 组
+#### 提示：将你的用户加入 `libvirt` 组
 
-本节中的所有示例均假设你以 root 身份运行命令。实际上，如果你想控制本地 libvirt 守护进程，你要么是 root，要么是 `libvirt` 组的成员（默认情况下不是的）。因此，如果你想避免频繁使用 root 权限，可以将自己加入 `libvirt` 组，并在你的用户身份下运行各种命令。
+本节中的所有示例均假设你以 root 身份运行命令。实际上，如果你想控制本地 libvirt 守护进程，你要么是 root，要么是`libvirt`组的成员（默认情况下不是的）。因此，如果你想避免频繁使用 root 权限，可以将自己加入`libvirt`组，并在你的用户身份下运行各种命令。
 
-现在让我们开始虚拟机的安装过程，并近距离观察 `virt-install` 最重要的选项。该命令在 `libvirtd` 中注册虚拟机及其参数，然后启动它以便进行安装。
+现在让我们开始虚拟机的安装过程，并近距离观察`virt-install`最重要的选项。该命令在`libvirtd`中注册虚拟机及其参数，然后启动它以便进行安装。
 
 ```bash
 # virt-install --connect qemu:///system --virt-type kvm --name testkvm --memory 1024 --disk /srv/kvm/testkvm.qcow,format=qcow2,size=10 --cdrom /srv/isos/debian-10.2.0-amd64-netinst.iso --network bridge=virbr0 --graphics vnc --os-type linux --os-variant debian10
 ```
+
+```text
 Starting install... Allocating 'testkvm.qcow' | 10 GB 00:00
+```
 
 | 选项 | 描述 |
 | :--- | :--- |
-| `--connect` | `--connect` 选项指定要使用的“管理程序”。其格式是一个 URL，包含虚拟化系统（`xen://`、`qemu://`、`lxc://`、`openvz://`、`vbox://` 等）和托管虚拟机的机器（本地主机的情况下可以留空）。此外，在 QEMU/KVM 情况下，每个用户都可以受限权限管理虚拟机，URL 路径允许区分“系统”机器（`/system`）和其他（`/session`）。 |
-| `--virt-type kvm` | 由于 KVM 的管理方式与 QEMU 相同，`--virt-type kvm` 允许在 URL 看起来像 QEMU 时指定使用 KVM。 |
-| `--name` | `--name` 选项为虚拟机定义一个（唯一的）名称。 |
-| `--memory` | `--memory` 选项允许指定为虚拟机分配的内存（以 MB 为单位）。 |
-| `--disk` | `--disk` 指定代表虚拟机硬盘的镜像文件位置；除非文件已存在，否则将根据 `size` 参数指定的大小（以 GB 为单位）创建。`format` 参数允许在几种存储镜像文件的方式中进行选择。默认格式（`qcow2`）允许从一个小的文件开始，仅当虚拟机实际使用空间时它才会增长。 |
+| `--connect` | `--connect`选项指定要使用的“管理程序”。其格式是一个 URL，包含虚拟化系统（`xen://`、`qemu://`、`lxc://`、`openvz://`、`vbox://`等）和托管虚拟机的机器（本地主机的情况下可以留空）。此外，在 QEMU/KVM 情况下，每个用户都可以受限权限管理虚拟机，URL 路径允许区分“系统”机器（`/system`）和其他（`/session`）。 |
+| `--virt-type kvm` | 由于 KVM 的管理方式与 QEMU 相同，`--virt-type kvm`允许在 URL 看起来像 QEMU 时指定使用 KVM。 |
+| `--name` | `--name`选项为虚拟机定义一个（唯一的）名称。 |
+| `--memory` | `--memory`选项允许指定为虚拟机分配的内存（以 MB 为单位）。 |
+| `--disk` | `--disk`指定代表虚拟机硬盘的镜像文件位置；除非文件已存在，否则将根据`size`参数指定的大小（以 GB 为单位）创建。`format`参数允许在几种存储镜像文件的方式中进行选择。默认格式（`qcow2`）允许从一个小的文件开始，仅当虚拟机实际使用空间时它才会增长。 |
+| `--cdrom` | `--cdrom`选项用于指定安装时使用的光盘位置。该路径可以是 ISO 文件的本地路径、可以获取该文件的 URL，或者是物理 CD-ROM 驱动器的设备文件（例如`/dev/cdrom`）。 |
+| `--network` | `--network`指定虚拟网卡如何集成到宿主机的网络配置中。默认行为（我们在示例中显式强制执行）是将其集成到任何预存在的网络桥接。如果不存在此类桥接，虚拟机将仅通过 NAT 访问物理网络，因此它将获得私有子网范围（`192.168.122.0/24`）内的地址。 |
+| `--graphics vnc` | `--graphics vnc`表示应使用 VNC 提供图形控制台。关联的 VNC 服务器的默认行为是仅在本地接口监听；如果 VNC 客户端要在不同的主机上运行，则建立连接需要设置 SSH 隧道（参见第 9.2.1.3 节，“使用端口转发创建加密隧道”）。或者，可以使用`--graphics vnc,listen=0.0.0.0`使得 VNC 服务器从所有接口访问；请注意，如果你这样做，真的应该据此设计你的防火墙。 |
+| `--os-type` 和 `--os-variant` | `--os-type`和`--os-variant`选项允许根据其中提到的操作系统的某些已知特性，来优化虚拟机的几个参数。 |
 
+此时，虚拟机正在运行，我们需要连接到图形控制台以继续安装过程。如果之前的操作是从图形桌面环境运行的，则此连接将自动启动。如果没有，或者我们正在进行远程操作，可以在任何图形环境中运行`virt-viewer`来打开图形控制台（注意，远程主机的密码会被询问两次，因为该操作需要 2 个 SSH 连接）：
 
-
-
-
-| ![6](img/#ch12s02.html_virtinst.cdrom) | `--cdrom` 选项用于指定安装时使用的光盘位置。该路径可以是 ISO 文件的本地路径、可以获取该文件的 URL，或者是物理 CD-ROM 驱动器的设备文件（例如 `/dev/cdrom`）。 | |
-
-| ![7](img/#ch12s02.html_virtinst.network) | `--network` 指定虚拟网卡如何集成到宿主机的网络配置中。默认行为（我们在示例中显式强制执行）是将其集成到任何预存在的网络桥接。如果不存在此类桥接，虚拟机将仅通过 NAT 访问物理网络，因此它将获得私有子网范围（192.168.122.0/24）内的地址。 | |
-
-| ![8](img/#ch12s02.html_virtinst.vnc) | `--graphics vnc` 表示应使用 VNC 提供图形控制台。关联的 VNC 服务器的默认行为是仅在本地接口监听；如果 VNC 客户端要在不同的主机上运行，则建立连接需要设置 SSH 隧道（参见 第 9.2.1.3 节，“使用端口转发创建加密隧道”）。或者或者，可以使用 `--graphics vnc,listen=0.0.0.0` 使得 VNC 服务器从所有接口访问；请注意，如果你这样做，真的应该据此设计你的防火墙。 | |
-
-| ![9](img/#ch12s02.html_virtinst.os) | `--os-type` 和 `--os-variant` 选项允许根据其中提到的操作系统的某些已知特性，来优化虚拟机的几个参数。 | |
-
-此时，虚拟机正在运行，我们需要连接到图形控制台以继续安装过程。如果之前的操作是从图形桌面环境运行的，则此连接将自动启动。如果没有，或者我们正在进行远程操作，可以在任何图形环境中运行 `virt-viewer` 来打开图形控制台（注意，远程主机的密码会被询问两次，因为该操作需要 2 个 SSH 连接）：
-
-```
-$ virt-viewer --connect qemu+ssh://root@server/system testkvm root@server's password: root@server's password:
+```text
+$ virt-viewer --connect qemu+ssh://root@server/system testkvm
+root@server's password:
+root@server's password:
 ```
 
 当安装过程结束，虚拟机将重启，现在准备好使用了。
 
-### 12.2.3.4. 使用 virsh 管理虚拟机
+### 12.2.3.4 使用 `virsh` 管理虚拟机
 
-现在安装已经完成，让我们看看如何处理可用的虚拟机。首先要尝试的是向 `libvirtd` 请求它管理的虚拟机列表：
+现在安装已经完成，让我们看看如何处理可用的虚拟机。首先要尝试的是向`libvirtd`请求它管理的虚拟机列表：
 
 ```bash
-# virsh -c qemu:///system list --all Id Name State ---------------------------------- 8 testkvm shut off
+# virsh -c qemu:///system list --all
+ Id   Name      State
+----------------------------------
+ 8    testkvm   shut off
 ```
 
 启动我们的测试虚拟机：
@@ -8489,30 +8732,30 @@ $ virt-viewer --connect qemu+ssh://root@server/system testkvm root@server's pass
 Domain testkvm started
 ```
 
-我们现在可以获取图形控制台的连接指令（返回的 VNC 显示器可以作为参数传递给 `vncviewer`）：
+我们现在可以获取图形控制台的连接指令（返回的 VNC 显示器可以作为参数传递给`vncviewer`）：
 
 ```bash
 # virsh -c qemu:///system vncdisplay testkvm
 127.0.0.1:0
 ```
 
-其他可用的 `virsh` 子命令包括：
+其他可用的`virsh`子命令包括：
 
-*   `reboot`：重启虚拟机；
-*   `shutdown`：触发正常关机；
-*   `destroy`：强制停止；
-*   `suspend`：暂停运行；
-*   `resume`：恢复运行；
-*   `autostart`：启用（或使用 `--disable` 选项禁用）在宿主机启动时自动启动虚拟机；
-*   `undefine`：从 `libvirtd` 中移除虚拟机的所有痕迹。
+- `reboot`：重启虚拟机；
+- `shutdown`：触发正常关机；
+- `destroy`：强制停止；
+- `suspend`：暂停运行；
+- `resume`：恢复运行；
+- `autostart`：启用（或使用`--disable`选项禁用）在宿主机启动时自动启动虚拟机；
+- `undefine`：从`libvirtd`中移除虚拟机的所有痕迹。
 
 所有这些子命令都接受虚拟机标识符作为参数。
 
-### 12.2.3.5. 在 Debian 中用 yum 安装基于 RPM 的系统
+### 12.2.3.5 在 Debian 中用 `yum` 安装基于 RPM 的系统
 
-如果虚拟机旨在运行 Debian（或其变变体），可以如上所述使用 `debootstrap` 初始化系统。但如果虚拟机要安装基于 RPM 的系统（如 Fedora、CentOS 或 Scientific Linux），则需要使用 `yum` 工具（在同名的软件包中可用）来完成设置。
+如果虚拟机旨在运行 Debian（或其变体），可以如上所述使用`debootstrap`初始化系统。但如果虚拟机要安装基于 RPM 的系统（如 Fedora、CentOS 或 Scientific Linux），则需要使用`yum`工具（在同名的软件包中可用）来完成设置。
 
-该过程需要使用 `rpm` 提取一组初始文件，特别是 `yum` 配置文件，然后调用 `yum` 提取剩余的包。但由于我们在 chroot 外部调用 `yum`，因此我们需要进行一些临时更改。在下面的示例中，目标 chroot 为 `/srv/centos`。
+该过程需要使用`rpm`提取一组初始文件，特别是`yum`配置文件，然后调用`yum`提取剩余的包。但由于我们在 chroot 外部调用`yum`，因此我们需要进行一些临时更改。在下面的示例中，目标 chroot 为`/srv/centos`。
 
 ```bash
 # rootdir="/srv/centos"
@@ -8522,18 +8765,17 @@ Domain testkvm started
 # rpm --nodeps --root "$rootdir" -i centos-release-7-6.18
 # yum --assumeyes --installroot $rootdir groupinstall
 ```
-*(注：原文末尾部分存在大量乱码/格式错误文本，已根据逻辑提取核心命令与路径并进行排版)*
+
+
+
 
 # 12.3. 自动化安装
 
 Falcot Corp 的管理员像许多大型 IT 服务管理员一样，需要工具来快速安装（或重新安装）新机器，并且尽可能自动完成。
 
-这些需求可以通过广泛的解决方案来实现。一方面，SystemImager 等通用工具通过基于模板机器创建镜像，然后将该镜像部署到目标系统来处理；在光谱的另一端，标准的 Debian 安装程序可以预设配置文件，该文件提供了安装过程中所提问题的答案。作为一种折中方案，像 FAI (*Fully Automatic Installer*) 这样的混合工具使用软件包系统安装机器，但它也使用自己的基础设施来处理更特定于大规模部署的任务（如启动、分区、配置等）。
+这些需求可以通过广泛的解决方案来实现。一方面，`SystemImager` 等通用工具通过基于模板机器创建镜像，然后将该镜像部署到目标系统来处理；在光谱的另一端，标准的 Debian 安装程序可以预设配置文件，该文件提供了安装过程中所提问题的答案。作为一种折中方案，像 `FAI`（*Fully Automatic Installer*）这样的混合工具使用软件包系统安装机器，但它也使用自己的基础设施来处理更特定于大规模部署的任务（如启动、分区、配置等）。
 
-这些解决方案各都有其优缺点：SystemImager 独立于任何特定的软件包系统，这允许它使用几种不同的 Linux 发行版来管理大量机器。它还包含一个不需要重新安装的更新系统，但只有当机器没有被独立修改时，该更新系统才是可靠的；换句话说，用户不能自行更新任何软件，或安装任何其他软件。同样，安全更新不能自动化，因为它们必须通过由 SystemImager 维护的中央参考镜像。该解决方案还要求目标机器是同质的，否则必须保留和管理许多不同的镜像（i386 镜像无法在 powerpc 机器上运行，以此此类推）。
-
-
-
+这些解决方案各都有其优缺点：`SystemImager` 独立于任何特定的软件包系统，这允许它使用几种不同的 Linux 发行版来管理大量机器。它还包含一个不需要重新安装的更新系统，但只有当机器没有被独立修改时，该更新系统才是可靠的；换句话说，用户不能自行更新任何软件，或安装任何其他软件。同样，安全更新不能自动化，因为它们必须通过由 `SystemImager` 维护的中央参考镜像。该解决方案还要求目标机器是同质的，否则必须保留和管理许多不同的镜像（i386 镜像无法在 powerpc 机器上运行，以此类推）。
 
 另一方面，使用 `debian-installer` 进行自动化安装可以适应每台机器的特性：安装程序将从相关仓库获取适当的内核和软件包，检测可用硬件，对整个硬盘进行分区以利用所有可用空间，安装相应的 Debian 系统，并设置合适的启动程序。然而，标准安装程序只会安装标准的 Debian 版本，包含基础系统和一组预选的“任务”；这阻止了安装带有非软件包应用程序的特定系统。满足这一特殊需求需要对安装程序进行定制……幸运的是，安装程序是非常模块化的，并且有工具可以实现这种定制所需的大部分工作，最重要的是 `simple-CDD`（`CDD` 是 *Custom Debian Derivative* 的缩写）。尽管如此，即使是 `simple-CDD` 方案也只处理初始安装；这通常不是问题，因为 `APT` 工具允许后期高效地部署更新。
 
@@ -8558,7 +8800,6 @@ Falcot Corp 的管理员像许多大型 IT 服务管理员一样，需要工具�
 * 运行 `fai-class`。依次执行 `/fai/class/[0-9][0-9]*` 脚本并返回适用于安装机器的“类”名称；这些信息将作为后续步骤的基础。这允许在定义要安装和配置的服务时具有一定的灵活性。
 * 根据相关的类获取多个配置变量；
 * 根据 `/fai/disk_config/class` 中提供的信息对磁盘进行分区并格式化分区；
-** 上述分区；
 * 安装基础系统；
 * 使用 `fai-debconf` 对 `Debconf` 数据库进行预设填充；
 * 为 `APT` 获取可用软件包列表；
@@ -8568,11 +8809,11 @@ Falcot Corp 的管理员像许多大型 IT 服务管理员一样，需要工具�
 
 ## 12.3.2 预设 Debian-Installer
 
-归根结底，安装 Debian 系统的最佳工具逻辑上应该是官方的 Debian 安装程序。这就是为什么，从诞生之初，`debian-installer` 被设计为自动化使用，利用了 `debconf` 提供的基础设施。后者一方面允许减少提问的数量（隐藏的问题将将使用提供的默认答案），另一方面可以单独提供默认答案，以便安装可以是非交互的。这最后一个功能被称为 *preseeding*（预设）。
+归根结底，安装 Debian 系统的最佳工具逻辑上应该是官方的 Debian 安装程序。这就是为什么，从诞生之初，`debian-installer` 被设计为自动化使用，利用了 `debconf` 提供的基础设施。后者一方面允许减少提问的数量（隐藏的问题将使用提供的默认答案），另一方面可以单独提供默认答案，以便安装可以是非交互的。这最后一个功能被称为 *preseeding*（预设）。
 
 ### 进阶：带有中心化数据库的 Debconf
 
-预设允许在安装时为 `Debconf` 问题提供一组答案，但这些答案是静态的，不会随着时间的推移而演。由于已安装的机器可能需要升级，并且可能需要新的答案，可以设置 `/etc/debconf.conf` 配置文件使 `Debconf` 使用外部数据源（如 LDAP 目录或通过 `NFS` 或 `Samba` 访问的远程文件）。可以同时定义多个外部数据源，它们互为补充。本地数据库仍旧在使用（用于读写访问），但远程数据库通常限制为读取。`debconf.conf(5)` 手页详细描述了所有可能性（您需要 `debconf-doc` 软件包）。
+预设允许在安装时为 `Debconf` 问题提供一组答案，但这些答案是静态的，不会随着时间的推移而演变。由于已安装的机器可能需要升级，并且可能需要新的答案，可以设置 `/etc/debconf.conf` 配置文件使 `Debconf` 使用外部数据源（如 LDAP 目录或通过 `NFS` 或 `Samba` 访问的远程文件）。可以同时定义多个外部数据源，它们互为补充。本地数据库仍旧在使用（用于读写访问），但远程数据库通常限制为读取。`debconf.conf(5)` 手册页详细描述了所有可能性（您需要 `debconf-doc` 软件包）。
 
 ### 12.3.2.1 使用预设文件
 
@@ -8593,20 +8834,17 @@ Falcot Corp 的管理员像许多大型 IT 服务管理员一样，需要工具�
 * 第三个是问题的类型；
 * 第四个也是最后一个字段包含答案的值。注意，它必须与第三个字段用单个空格隔开；如果有多个空格，后续的空格字符将被视为值的一部分。
 
-
-
-
-编写 preseed 文件（种子文件）简单的方法是手动安装系统。然后，`debconf-get-selections --installer` 将提供有关安装程序的答案。关于其他软件包的答案可以通过 `debconf-get-selections` 获取。然而，更整洁的解决方案是从示例和参考文档开始手动编写 preseed 文件：通过这种方法，只有在需要覆盖默认答案的情况下才能进行预设；使用 `priority=critical` 启动参数将指示 Debconf 仅询问关键问题，并对其他问题使用默认答案。
+编写 preseed 文件（种子文件）简单的方法是手动安装系统。然后，`debconf-get-selections --installer` 将提供有关安装程序的答案。关于其他软件包的答案可以通过 `debconf-get-selections` 获取。然而，更整洁的解决方案是从示例和参考文档开始手动编写 preseed 文件：通过这种方法，只有在需要覆盖默认答案的情况下才能进行预设；使用 `priority=critical` 启动参数将指示 `Debconf` 仅询问关键问题，并对其他问题使用默认答案。
 
 # 文档 安装指南附录
 
-在线可用的安装指南在附录中包含了关于如何使用 preseed 文件的详尽文档。它还包含了一个详细且带注释的示例文件，该文件可以作为本地定制的蓝。
+在线可用的安装指南在附录中包含了关于如何使用 preseed 文件的详尽文档。它还包含了一个详细且带注释的示例文件，该文件可以作为本地定制的蓝本。
 
-→ [`www.debian.org/releases/stable/amd64/apb`](https://www.debian.org/releases/stable/amd64/apb)→ [`www.debian.org/releases/stable/example-preseed.txt`](https://www.debian.org/releases/stable/example-preseed.txt)
+→ [`www.debian.org/releases/stable/amd64/apb`](https://www.debian.org/releases/stable/amd64/apb) → [`www.debian.org/releases/stable/example-preseed.txt`](https://www.debian.org/releases/stable/example-preseed.txt)
 
-## 12.3.2.3. 创建自定义启动介
+## 12.3.2.3. 创建自定义启动介质
 
-知道存储 preseed 文件的位置固然很好，但位置并不是一切：必须以某种方式修改安装启动介以更改启动参数并添加 preseed 文件。
+知道存储 preseed 文件的位置固然很好，但位置并不是一切：必须以某种方式修改安装启动介质以更改启动参数并添加 preseed 文件。
 
 ### 12.3.2.3.1. 从网络启动
 
@@ -8618,43 +8856,45 @@ Falcot Corp 的管理员像许多大型 IT 服务管理员一样，需要工具�
 
 一旦准备好可启动的 U 盘（参见 第 4.1.2 节，“从 USB 盘启动”），还需要一些额外的操作。假设 U 盘内容位于 `/media/usbdisk/` 下：
 
-*   将 preseed 文件拷贝到 `/media/usbdisk/preseed.cfg`
-*   编辑 `/media/usbdisk/syslinux.cfg` 并添加所需的启动参数（见下例）。
+* 将 preseed 文件拷贝到 `/media/usbdisk/preseed.cfg`
+* 编辑 `/media/usbdisk/syslinux.cfg` 并添加所需的启动参数（见下例）。
 
-示例 12.2 syslinux.cfg 文件和预设参数：
+示例 12.2 `syslinux.cfg` 文件和预设参数：
 
 ```
 default vmlinuz append preseed/file=/hd-media/preseed.cfg locale=en_US.UTF-8 keymap=us language=us country=US vga=788 initrd=initrd.gz --
 ```
 
+
+
 ## 12.3.2.3.3. 创建 CD-ROM 镜像
 
-USB 盘是读写介质，因此我们很容易在上面添加文件并更改几个参数。对于 CD-ROM，操作更为复杂，因为我们需要重新生成完整的 ISO 镜像。此任务由 `debian-cd` 处理，但该工具用起来相当笨拙：它需要本地镜像，并且要求理解 `/usr/share/debian-cd/CONF.sh` 提供的所有选项；即使如此，也必须多次调用 `make`。因此，非常推荐阅读 `/usr/share/debian-cd/README`。
+USB 盘是读写介质，因此我们很容易在上面添加文件并更改几个参数。对于 CD-ROM，操作更为复杂，因为我们需要重新生成完整的 ISO 镜像。此任务由`debian-cd`处理，但该工具用起来相当笨拙：它需要本地镜像，并且要求理解`/usr/share/debian-cd/CONF.sh`提供的所有选项；即使如此，也必须多次调用`make`。因此，非常推荐阅读`/usr/share/debian-cd/README`。
 
-尽管如此，`debian-cd` 始终以类似的方式运行：生成一个包含 CD-ROM 准确内容的“image”目录，然后使用 `genisoimage`、`mkisofs` 或 `xorriso` 等工具转换为 ISO 文件。镜像目录在 `debian-cd` 的 `make image-trees` 步骤后确定。此时，我们将 preseed 文件插入适当的目录（通常为 `$TDIR/$CODENAME/CD1/`，其中 `$TDIR` 和 `$CODENAME` 是由 `CONF.sh` 配置定义的参数）。CD-ROM 使用 `isolinux` 作为其引导加载程序，其配置文件必须根据 `debian-cd` 生成的内容进行调整，以便插入所需的启动参数（特定文件为 `$TDIR/$CODENAME/boot1/isolinux/isolinux.cfg`）。然后就可以恢复“正常”流程，并继续使用 `make image CD=1` 生成 ISO 镜像（如果生成多张 CD-ROM，则使用 `make images`）。
+尽管如此，`debian-cd`始终以类似的方式运行：生成一个包含 CD-ROM 准确内容的“image”目录，然后使用`genisoimage`、`mkisofs`或`xorriso`等工具转换为 ISO 文件。镜像目录在`debian-cd`的`make image-trees`步骤后确定。此时，我们将 preseed 文件插入适当的目录（通常为`$TDIR/$CODENAME/CD1/`，其中`$TDIR`和`$CODENAME`是由`CONF.sh`配置定义的参数）。CD-ROM 使用`isolinux`作为其引导加载程序，其配置文件必须根据`debian-cd`生成的内容进行调整，以便插入所需的启动参数（特定文件为`$TDIR/$CODENAME/boot1/isolinux/isolinux.cfg`）。然后就可以恢复“正常”流程，并继续使用`make image CD=1`生成 ISO 镜像（如果生成多张 CD-ROM，则使用`make images`）。
 
 ## 12.3.3. Simple-CDD：一站式解决方案
 
 仅仅使用 preseed 文件不足以满足大规模部署中可能出现的所有要求。尽管可以在正常安装过程结束时执行几个脚本，但要安装的软件包集合的选择仍然不够灵活（基本上，只能选择“任务”(tasks)）；更重要的是，这只允许安装官方 Debian 软件包，而排除了本地生成的软件包。
 
-另一方面，`debian-cd` 能够整合外部软件包，而 `debian-installer` 可以通过在安装过程中插入新步骤来扩展。通过结合这些能力，应该能够创建一个满足我们需求的定制安装程序；它甚至应该能够在解压所需软件包后配置某些服务。幸运的是，这并不仅仅是一个假设，因为这正是 Simple-CDD（在 `simple-cdd` 软件包中）所做的。
+另一方面，`debian-cd`能够整合外部软件包，而`debian-installer`可以通过在安装过程中插入新步骤来扩展。通过结合这些能力，应该能够创建一个满足我们需求的定制安装程序；它甚至应该能够在解压所需软件包后配置某些服务。幸运的是，这并不仅仅是一个假设，因为这正是 Simple-CDD（在`simple-cdd`软件包中）所做的。
 
 Simple-CDD 的目的是让任何人都能轻松地创建一个基于 Debian 的派发行版，方法是选择可用软件包的子集、使用 Debconf 对其进行预配置、添加特定软件并在安装过程结束时执行自定义脚本。这符合“通用操作系统”的哲学，因为任何人都可以根据自己的需求对其调整。
 
 ### 12.3.3.1. 创建配置 (Profiles)
 
-Simple-CDD 定义了与 FAI “类”(classes) 概念匹配的“配置”(profiles)，机器可以有多个配置（在安装时确定）。一个配置由一组 `profiles/`*profile``.*` 文件定义：
+Simple-CDD 定义了与 FAI “类”(classes) 概念匹配的“配置”(profiles)，机器可以有多个配置（在安装时确定）。一个配置由一组`profiles/`*profile``.*`文件定义：
 
-*   `.description` 文件包含该配置的单行描述；
-*   `.packages` 文件列出了如果选择了该配置将自动安装的软件包；
-*   `.downloads` 文件列出了将存储在安装介质上但并不一定安装的软件包；
-*   `.preseed` 文件包含用于 Debconf 问题的预设信息；
-*   `.postinst` 文件包含一个在安装过程结束时运行的脚本；
-*   最后，`.conf` 文件允许根据要包含在镜像中的配置更改某些 Simple-CDD 参数。
+- `.description`文件包含该配置的单行描述；
+- `.packages`文件列出了如果选择了该配置将自动安装的软件包；
+- `.downloads`文件列出了将存储在安装介质上但并不一定安装的软件包；
+- `.preseed`文件包含用于 Debconf 问题的预设信息；
+- `.postinst`文件包含一个在安装过程结束时运行的脚本；
+- 最后，`.conf`文件允许根据要包含在镜像中的配置更改某些 Simple-CDD 参数。
 
-`default` 配置具有特殊作用，因为它总是被选中；它包含了 Simple-CDD 运行所需的最少内容。该配置中通常被定制的只有 `simple-cdd/profiles` 预设 参数：这允许避免由 Simple-CDD 引入的关于要安装哪些配置的问题。
+`default`配置具有特殊作用，因为它总是被选中；它包含了 Simple-CDD 运行所需的最少内容。该配置中通常被定制的只有`simple-cdd/profiles`预设参数：这允许避免由 Simple-CDD 引入的关于要安装哪些配置的问题。
 
-另请注意，命令需要在 `profiles` 目录的父目录中调用。
+另请注意，命令需要在`profiles`目录的父目录中调用。
 
 ## 12.3.3.2. 配置和使用 build-simple-cdd
 
@@ -8662,38 +8902,34 @@ Simple-CDD 定义了与 FAI “类”(classes) 概念匹配的“配置”(profi
 
 软件包中包含一个所有可能的参数的 Simple-CDD 配置文件示例（`/usr/share/doc/simple-cdd/examples/simple-cdd.conf.detailed.gz`）。在创建自定义配置文件时可以作为起点。
 
-Simple-CDD 需要许多参数才能完全运行。这些参数通常收集在一个文件中，`build-simple-cdd` 可以通过 `--conf` 参数指向它，但也可以通过提供给 `build-simple-cdd` 的专用参数指定。以下是该命令行为及其参数使用方法的概述：
+Simple-CDD 需要许多参数才能完全运行。这些参数通常收集在一个文件中，`build-simple-cdd`可以通过`--conf`参数指向它，但也可以通过提供给`build-simple-cdd`的专用参数指定。以下是该命令行为及其参数使用方法的概述：
 
-*   `profiles` 参数列出了将包含在生成的 CD-ROM 镜像中的配置；
-*   根据所需软件包列表，Simple-CDD 从 `server` 中指定的服务器下载适当的文件，并将它们收集到部分镜像（稍后将交给 `debian-cd`）；
-*   `local_packages` 中提到的自定义软件包也会整合到此本地镜像中；
-*   随后执行 `debian-cd`（在 `debian_cd_dir` 变量配置的默认位置内），并带有要整合的软件包列表；
+- `profiles`参数列出了将包含在生成的 CD-ROM 镜像中的配置；
+- 根据所需软件包列表，Simple-CDD 从`server`中指定的服务器下载适当的文件，并将它们收集到部分镜像（稍后将交给`debian-cd`）；
+- `local_packages`中提到的自定义软件包也会整合到此本地镜像中；
+- 随后执行`debian-cd`（在`debian_cd_dir`变量配置的默认位置内），并带有要整合的软件包列表；
 
-
-
-
-
-- 一旦 `debian-cd` 准备好目录，`Simple-CDD` 就会对该目录应用某些更改：
-    - 包含配置文件的会被添加到 `simple-cdd` 子目录中（该目录将出现在 CD-ROM 上）；
-    - `all_extras` 参数中列出的其他文件也会被添加；
-    - 调整启动参数以启用预设（preseeding）。如果将所需信息存储在 `language` 和 `country` 变量中，就可以避免有关语言和国家的问题。
-- `debian-cd` 随后生成最终的 ISO 镜像。
+- 一旦`debian-cd`准备好目录，`Simple-CDD`就会对该目录应用某些更改：
+  - 包含配置文件的会被添加到`simple-cdd`子目录中（该目录将出现在 CD-ROM 上）；
+  - `all_extras`参数中列出的其他文件也会被添加；
+  - 调整启动参数以启用预设（preseeding）。如果将所需信息存储在`language`和`country`变量中，就可以避免有关语言和国家的问题。
+- `debian-cd`随后生成最终的 ISO 镜像。
 
 ### 12.3.3.3. 生成 ISO 镜像
 
-一旦写好了配置文件并定义了配置，剩下的步骤是调用 `build-simple-cdd --conf simple-cdd.conf`。几分钟后，我们就能在 `images/debian-10-amd64-CD-1.iso` 得到所需的镜像。
+一旦写好了配置文件并定义了配置，剩下的步骤是调用`build-simple-cdd --conf simple-cdd.conf`。几分钟后，我们就能在`images/debian-10-amd64-CD-1.iso`得到所需的镜像。
 
 # 12.4. 监控
 
 监控是一个通用术语，涉及的各种活动有几个目标：一方面通过通过机器提供的资源的使用情况，可以预判饱和以及随后的后续升级；另一方面，一旦服务不可用或运行异常就立即通知管理员，意味着发生的问题可以更快地修复。
 
-`Munin` 涵盖了第一个领域，通过显示许多参数的历史值图表（已用内存、占用磁盘空间、处理器负载、网络流量、Apache/MySQL 负载等）。`Nagios` 涵盖了第二个领域，通过定期检查服务是否正常且可用，并通过适当的通道（电子邮件、短信等）发送警报。两者都采用模块化设计，这易于创建新的插件来监控特定的参数或服务。
+`Munin`涵盖了第一个领域，通过显示许多参数的历史值图表（已用内存、占用磁盘空间、处理器负载、网络流量、Apache/MySQL 负载等）。`Nagios`涵盖了第二个领域，通过定期检查服务是否正常且可用，并通过适当的通道（电子邮件、短信等）发送警报。两者都采用模块化设计，这易于创建新的插件来监控特定的参数或服务。
 
 ***
 
 ### 替代方案 Zabbix，一种集成监控工具
 
-尽管 Munin 和 Nagios 非常常用，但它们并不是监控领域唯一的参与者，而且每种工具只处理一半的任务（一边是图表，另一边是告报）。相比之下，Zabbix 整合了监控的所有部分；它还有一个 Web 界面用于配置最常见的方面。它在过去几年中飞速发展，现在可以被认为是一个有力的竞争者。在监控服务器上，你需要安装 `zabbix-server-pgsql`（或 `zabbix-server-mysql`），可能还会一起安装 `zabbix-frontend-php` 以获得 Web 界面。在要监控的主机上，你需要安装 `zabbix-agent` 将数据回传给服务器。
+尽管 Munin 和 Nagios 非常常用，但它们并不是监控领域唯一的参与者，而且每种工具只处理一半的任务（一边是图表，另一边是告报）。相比之下，Zabbix 整合了监控的所有部分；它还有一个 Web 界面用于配置最常见的方面。它在过去几年中飞速发展，现在可以被认为是一个有力的竞争者。在监控服务器上，你需要安装`zabbix-server-pgsql`（或`zabbix-server-mysql`），可能还会一起安装`zabbix-frontend-php`以获得 Web 界面。在要监控的主机上，你需要安装`zabbix-agent`将数据回传给服务器。
 
 → [`www.zabbix.com/`](https://www.zabbix.com/)
 
@@ -8703,7 +8939,7 @@ Simple-CDD 需要许多参数才能完全运行。这些参数通常收集在一
 
 ### 替代方案 Icinga，Nagios 的分支
 
-由于对 Nagios 开发模型（由一家公司控制）的意见分歧，许多开发者分叉了 Nagios 并使用 Icinga 作为新名称。到目前，`Icinga` 仍然与 Nagios 的配置和插件兼容，但它添加了额外的功能。
+由于对 Nagios 开发模型（由一家公司控制）的意见分歧，许多开发者分叉了 Nagios 并使用 Icinga 作为新名称。到目前，`Icinga`仍然与 Nagios 的配置和插件兼容，但它添加了额外的功能。
 
 → [`www.icinga.org/`](https://www.icinga.org/)
 
@@ -8717,11 +8953,11 @@ Munin 的目的是监控许多机器；因此，它非常自然地使用了客�
 
 ### 12.4.1.1. 配置要监控的主机
 
-第一步是安装 `munin-node` 包。该包安装的守护进程监听 `4949` 端口，并传回所有活动插件收集的数据。每个插件都是一个简单的程序，返回所收集数据的描述以及最新的测量值。插件存储在 `/usr/share/munin/plugins/` 中，但只有那些在 `/etc/munin/plugins/` 中有符号链接的插件才会被真正使用。
+第一步是安装`munin-node`包。该包安装的守护进程监听`4949`端口，并传回所有活动插件收集的数据。每个插件都是一个简单的程序，返回所收集数据的描述以及最新的测量值。插件存储在`/usr/share/munin/plugins/`中，但只有那些在`/etc/munin/plugins/`中有符号链接的插件才会被真正使用。
 
-当安装包时，会根据可用软件和主机的当前配置确定一组活动插件。然而，这种自动配置取决于每个插件必须提供的一个特性，因此手动检查并微调结果通常是一个好主意。浏览插件库[^([5])](#ch12s04.html_ftn.idm15823) 可能会很有趣，尽管并非所有插件都有完整的文档。不过，所有插件都是脚本，而且大多数都相当简单并有良好的注释。因此，浏览 `/etc/munin/plugins/` 是了解每个插件作用并确定应该删除哪些插件的好方法。同样，启用在 `/usr/share/munin/plugins/` 中发现的有趣插件是一件简单的事，只需使用 `ln -sf /usr/share/munin/plugins/*plugin /etc/munin/plugins/` 设置符号链接即可。注意，当插件名称以下划线“_"结尾时，该插件需要一个参数。该参数必须存储在符号链接的名称中；例如，“if_”插件必须通过 `if_eth0` 符号链接启用，它将监控 eth0 接口上的网络流量。
+当安装包时，会根据可用软件和主机的当前配置确定一组活动插件。然而，这种自动配置取决于每个插件必须提供的一个特性，因此手动检查并微调结果通常是一个好主意。浏览插件库[^([5])](#ch12s04.html_ftn.idm15823)可能会很有趣，尽管并非所有插件都有完整的文档。不过，所有插件都是脚本，而且大多数都相当简单并有良好的注释。因此，浏览`/etc/munin/plugins/`是了解每个插件作用并确定应该删除哪些插件的好方法。同样，启用在`/usr/share/munin/plugins/`中发现的有趣插件是一件简单的事，只需使用`ln -sf /usr/share/munin/plugins/*plugin /etc/munin/plugins/`设置符号链接即可。注意，当插件名称以下划线“_"结尾时，该插件需要一个参数。该参数必须存储在符号链接的名称中；例如，“if_”插件必须通过`if_eth0`符号链接启用，它将监控 eth0 接口上的网络流量。
 
-一旦所有插件都设置正确，必须更新守护进程配置以描述对收集到的数据的访问控制。这涉及 `/etc/munin/munin-node.conf` 文件中的 `allow` 指令。默认配置是 `allow ¹²⁷\.0\.0\.1$`，只允许访问本地主机。管理员通常会添加一条包含绘图服务器主机 IP 地址的类似行，然后重启 `munin-node`。
+一旦所有插件都设置正确，必须更新守护进程配置以描述对收集到的数据的访问控制。这涉及`/etc/munin/munin-node.conf`文件中的`allow`指令。默认配置是`allow ¹²⁷\.0\.0\.1$`，只允许访问本地主机。管理员通常会添加一条包含绘图服务器主机 IP 地址的类似行，然后重启`munin-node`。
 
 ***
 
@@ -8731,9 +8967,9 @@ Munin 确实包含了关于插件应该如何行为以及如何开发新插件�
 
 → [`guide.munin-monitoring.org/en/latest/plugin/writing.html`](http://guide.munin-monitoring.org/en/latest/plugin/writing.html)
 
-插件在与 `munin-node` 触发时相同的条件下运行测试效果最好；这可以通过以 root 身份运行 `munin-run plugin` 来模拟。传递给此命令的潜在第二个参数（如 `config`）会传递给插件。
+插件在与`munin-node`触发时相同的条件下运行测试效果最好；这可以通过以 root 身份运行`munin-run plugin`来模拟。传递给此命令的潜在第二个参数（如`config`）会传递给插件。
 
-当带有 `config` 参数调用插件时，它必须通过返回一组字段来描述其自己：
+当带有`config`参数调用插件时，它必须通过返回一组字段来描述其自己：
 
 ```
 sudo munin-run load config graph_title Load average graph_args --base 1000 -l 0 graph_scale no graph_category system load.info 机器的平均负载描述了有多少进程在运行队列中（被调度“立即”运行）。load.info 5 minute load
@@ -8743,28 +8979,27 @@ sudo munin-run load config graph_title Load average graph_args --base 1000 -l 0 
 
 → [`munin.readthedocs.org/en/latest/reference/plugin.html`](https://munin.readthedocs.org/en/latest/reference/plugin.html)
 
-当不带参数调用时，插件简单地返回上次的测量值；例如，执行 `sudo munin-run load` 可能会返回 `load.value 0.12`。
+当不带参数调用时，插件简单地返回上次的测量值；例如，执行`sudo munin-run load`可能会返回`load.value 0.12`。
 
-最后，当带有 `autoconf` 参数调用插件时，它应该根据该插件是否在该主机上启用来返回“yes”（退出状态为 0）或“no”（退出状态为 1）。
+最后，当带有`autoconf`参数调用插件时，它应该根据该插件是否在该主机上启用来返回“yes”（退出状态为 0）或“no”（退出状态为 1）。
 
 ***
 
 ### 12.4.1.2. 配置绘图服务器
 
-“grapher”（绘图服务器）仅仅是汇总数据并生成相应图表的计算机。所需的软件位于 `munin` 包中。标准配置运行 `munin-cron`（每 5 分钟一次），它从 `/etc/munin/munin.conf` 中列出的所有主机（默认仅列出本地主机）收集数据，存储在 `/var/lib/munin/` 下的 RRD 文件（*Round Robin Database*，用于存储随时间变化的数据的文件格式），并在 `/var/cache/munin/www/` 生成带有图表的 HTML 页面。
+“grapher”（绘图服务器）仅仅是汇总数据并生成相应图表的计算机。所需的软件位于`munin`包中。标准配置运行`munin-cron`（每 5 分钟一次），它从`/etc/munin/munin.conf`中列出的所有主机（默认仅列出本地主机）收集数据，存储在`/var/lib/munin/`下的 RRD 文件（*Round Robin Database*，用于存储随时间变化的数据的文件格式），并在`/var/cache/munin/www/`生成带有图表的 HTML 页面。
 
-因此，所有监控的机器必须列在 `/etc/munin/munin.conf` 文件中。每台机器作为一个完整的章节列出，名称与机器匹配，并至少有一条给出相应 IP 地址的 `address` 条目。
+因此，所有监控的机器必须列在`/etc/munin/munin.conf`文件中。每台机器作为一个完整的章节列出，名称与机器匹配，并至少有一条给出相应 IP 地址的`address`条目。
 
 ```
-[ftp.falcot.com] address 192.168.0.12 use_node_name yes
+[ftp.falcot.com]
+address 192.168.0.12
+use_node_name yes
 ```
-
-
-
 
 章节（Sections）可以更加复杂，描述通过组合来自多台机器的数据可以创建的额外图表。配置文件提供的示例是自定义的良好起点。
 
-最后一步是发布生成的页面；这涉及配置 Web 服务器，以便 `/var/cache/munin/www/` 中的内容可以通过网站访问。该网站的访问通常会受到限制，使用身份验证机制或基于 IP 的访问控制。相关细节请参见 第 11.2 节，“Web 服务器 (HTTP)”")。
+最后一步是发布生成的页面；这涉及配置 Web 服务器，以便`/var/cache/munin/www/`中的内容可以通过网站访问。该网站的访问通常会受到限制，使用身份验证机制或基于 IP 的访问控制。相关细节请参见第 11.2 节，“Web 服务器 (HTTP)”")。
 
 ## 12.4.2. 设置 Nagios
 
@@ -8772,7 +9007,7 @@ sudo munin-run load config graph_title Load average graph_args --base 1000 -l 0 
 
 ### 12.4.2.1. 安装
 
-设置 Nagios 的第一步是安装 `nagios4` 和 `monitoring-plugins` 包。安装这些包会配置 Web 和 Apache 服务器。必须启用 Apache 的 `authz_groupfile` 和 `auth_digest` 模块，执行以下命令：
+设置 Nagios 的第一步是安装`nagios4`和`monitoring-plugins`包。安装这些包会配置 Web 和 Apache 服务器。必须启用 Apache 的`authz_groupfile`和`auth_digest`模块，执行以下命令：
 
 ```bash
 # a2enmod authz_groupfile
@@ -8782,11 +9017,11 @@ sudo munin-run load config graph_title Load average graph_args --base 1000 -l 0 
 # systemctl restart apache2
 ```
 
-添加其他用户只需将他们插入 `/etc/nagios4/hdigest.users` 文件中。
+添加其他用户只需将他们插入`/etc/nagios4/hdigest.users`文件中。
 
-将浏览器指向 `http://server/nagios4/` 即可显示 Web 界面；特别需要注意的是，Nagios 已经在监控其运行机器的某些参数。然而，某些交互式功能（如为主机添加注释）无法正常工作。这些功能在 Nagios 的默认配置中是禁用的，出于安全考虑，这种限制非常严格。
+将浏览器指向`http://server/nagios4/`即可显示 Web 界面；特别需要注意的是，Nagios 已经在监控其运行机器的某些参数。然而，某些交互式功能（如为主机添加注释）无法正常工作。这些功能在 Nagios 的默认配置中是禁用的，出于安全考虑，这种限制非常严格。
 
-启用某些功能涉及编辑 `/etc/nagios4/nagios.cfg`。我们还需要为 Nagios 使用的目录设置写权限，命令如下：
+启用某些功能涉及编辑`/etc/nagios4/nagios.cfg`。我们还需要为 Nagios 使用的目录设置写权限，命令如下：
 
 ```bash
 # systemctl stop nagios4
@@ -8795,68 +9030,84 @@ sudo munin-run load config graph_title Load average graph_args --base 1000 -l 0 
 # systemctl start nagios4
 ```
 
+
+
 ### 12.4.2.2. 配置
 
-Nagios 的 Web 界面相当漂亮，但它不允许配置，也无法用于添加监控的主机和服务。整个配置通过中心配置文件 `/etc/nagios4/nagios.cfg` 中引的文件进行管理。
+Nagios 的 Web 界面相当漂亮，但它不允许配置，也无法用于添加监控的主机和服务。整个配置通过中心配置文件`/etc/nagios4/nagios.cfg`中引的文件进行管理。
 
 在不了解 Nagios 概念的情况下，不应深入研究这些文件。配置列出了以下类型的对象：
 
-* `host` 是被监控的机器；
-* `hostgroup` 是一组主机，应组合在一起显示，或为了提取某些公共配置元素；
-* `service` 是与主机或主机组相关的可测试元素。它通常是对网络服务的检查，但也可以涉及检查某些参数是否在接受范围内（例如，可用磁盘空间或处理器负载）；
-* `servicegroup` 是一组服务，应组合在一起显示；
-* `contact` 是可以接收告警的人；
-* `contactgroup` 是此类联系人的集合；
-* `timeperiod` 是必须对某些服务进行检查的时间段范围；
-* `command` 是用于检查给定服务时调用的命令行。
+- `host` 是被监控的机器；
+- `hostgroup` 是一组主机，应组合在一起显示，或为了提取某些公共配置元素；
+- `service` 是与主机或主机组相关的可测试元素。它通常是对网络服务的检查，但也可以涉及检查某些参数是否在接受范围内（例如，可用磁盘空间或处理器负载）；
+- `servicegroup` 是一组服务，应组合在一起显示；
+- `contact` 是可以接收告警的人；
+- `contactgroup` 是此类联系人的集合；
+- `timeperiod` 是必须对某些服务进行检查的时间段范围；
+- `command` 是用于检查给定服务时调用的命令行。
 
 根据其类型，每个对象都有许多可以自定义的属性。完整的列表太长了无法包含，但最重要的属性是对象之间的关系。
 
-一个 `service` 使用 `command` 在检查 `timeperiod` 范围内 `host`（或 `hostgroup`）上某个功能的状态。发生问题时，Nagios 会向与该服务关联 `contactgroup` 的所有成员发送告警。每个成员将根据匹配的 `contact` 对象中描述的通道接收告警。
+一个`service`使用`command`在检查`timeperiod`范围内`host`（或`hostgroup`）上某个功能的状态。发生问题时，Nagios 会向与该服务关联`contactgroup`的所有成员发送告警。每个成员将根据匹配的`contact`对象中描述的通道接收告警。
 
-继承系统允许在许多对象之间轻松地共享一组属性，而无需重复信息。此外，初始配置包含许多标准对象；在许多情况下，定义新的主机、服务和联系人只需从提供的通用对象进行派生即可。`/etc/nagios4/conf.d/` 中的文件是关于它们工作原理的良好信息来源。
+继承系统允许在许多对象之间轻松地共享一组属性，而无需重复信息。此外，初始配置包含许多标准对象；在许多情况下，定义新的主机、服务和联系人只需从提供的通用对象进行派生即可。`/etc/nagios4/conf.d/`中的文件是关于它们工作原理的良好信息来源。
 
 Falcot Corp 的管理员使用以下配置：
 
 示例 12.3 `/etc/nagios4/conf.d/falcot.cfg` 文件
+
 ```cfg
 define contact{ name generic-contact service_notification_period 24x7 host_notification_period 24x7 service_notification_options w,u,c,r host_notification_options d,u,r service_notification_commands notify-service-by-email host_notification_commands notify-host-by-email register 0 ; Template only }
+
 define contact{ use generic-contact contact_name rhertzog alias Raphael Hertzog email hertzog@debian.org }
- define contact{ use generic-contact contact_name rmas alias Roland Mas email lolando@debian.org }
+
+define contact{ use generic-contact contact_name rmas alias Roland Mas email lolando@debian.org }
+
 define contactgroup{ contactgroup_name falcot-admins alias Falcot Administrators members rhertzog,rmas }
+
 define host{ use generic-host ; Name of host template to use host_name www-host alias www.falcot.com address 192.168.0.5 contact_groups falcot-admins hostgroups debian-servers,ssh-servers }
+
 define host{ use generic-host ; Name of host template to use host_name ftp-host alias ftp.falcot.com address 192.168.0.6 contact_groups falcot-admins hostgroups debian-servers,ssh-servers }
+
 # 'check_ftp' command with custom parameters
+
 define command{ command_name check_ftp2 command_line /usr/lib/nagios/plugins/check_ftp -H $HOSTADDRESS$ -w 20 -c 30 -t 35 }
+
 # Generic Falcot service
+
 define service{ name falcot-service use generic-service contact_groups falcot-admins register 0 }
+
 # Services to check on www-host
+
 define service{ use falcot-service host_name www-host service_description HTTP check_command check_http }
+
 define service{ use falcot-service host_name www-host service_description HTTPS check_command check_https }
+
 define service{ use falcot-service host_name www-host service_description SMTP check_command check_smtp }
+
 # Services to check on ftp-host
+
 define service{ use falcot-service host_name ftp-host service_description FTP check_command check_ftp2 }
 ```
 
-此配置文件描述了两个被监控的主机。第一个是 Web 服务器，对 HTTP (80) 和安全 HTTP (443) 端口进行检查。Nagios 还会检查 SMTP 服务器是否运行在端口 25 上。第二个主机是 FTP 服务器，检查包括确保回复在 20 秒内返回。超过此延迟，将发出 `warning`（警告）；超过 30 秒，告警将被视为 `critical`（严重）。Nagios Web 界面还显示 SSH 服务正在被监控：这来自属于 `ssh-servers` 主机组的主机。匹配的标准服务定义在 `/etc/nagios4/conf.d/services_nagios2.cfg` 中。
+此配置文件描述了两个被监控的主机。第一个是 Web 服务器，对 HTTP (80) 和安全 HTTP (443) 端口进行检查。Nagios 还会检查 SMTP 服务器是否运行在端口 25 上。第二个主机是 FTP 服务器，检查包括确保回复在 20 秒内返回。超过此延迟，将发出`warning`（警告）；超过 30 秒，告警将被视为`critical`（严重）。Nagios Web 界面还显示 SSH 服务正在被监控：这来自属于`ssh-servers`主机组的主机。匹配的标准服务定义在`/etc/nagios4/conf.d/services_nagios2.cfg`中。
 
 注意继承的使用：通过“use `parent-name`”使对象继承另一个对象。父对象必须是可识别的，这需要赋予它“name `identifier`”属性。如果父对象不是一个真实的对象，而仅作为父对象使用，赋予它“register 0”属性将告诉 Nagios 不要考虑它，从而忽略某些本应需要的参数缺失。
 
-* * *
+---
 
-*文档* 对象属性列表
+**文档** 对象属性列表
 
+要更深入地了解 Nagios 的各种配置方法，可以参考托管 [https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/index.html](https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/index.html) 上的文档。该文档列出了所有对象类型以及它们可能拥的所有属性。它还解释了如何创建新插件。
 
-
-要更深入地了解 Nagios 的各种配置方法，可以参考托管 [https://assets.nagios.com/downloads/nagioscore/docs/nagioscore/4/en/index.html] 上的文档。该文档列出了所有对象类型以及它们可能拥的所有属性。它还解释了如何创建新插件。
-
-***
+---
 
 ## 进阶：使用 NRPE 进行远程测试
 
-许多 Nagios 插件允许检查主机的本地某些参数；如果许多机器都需要进行这些检查，而由中心安装进行收集，则需要部署 `NRPE`（Nagios 远程插件执行器）插件。在 Nagios 服务器上需要安装 `nagios-nrpe-plugin` 包，在需要运行本地测试的主机上安装 `nagios-nrpe-server`。后者的配置从 `/etc/nagios/nrpe.cfg` 获取。该文件应该列出可以远程启动的测试，以及允许触发这些测试的机器 IP 地址。在 Nagios 侧，启用这些远程测试只需使用新的 `check_nrpe` 命令添加匹配的服务即可。
+许多 Nagios 插件允许检查主机的本地某些参数；如果许多机器都需要进行这些检查，而由中心安装进行收集，则需要部署`NRPE`（Nagios 远程插件执行器）插件。在 Nagios 服务器上需要安装`nagios-nrpe-plugin`包，在需要运行本地测试的主机上安装`nagios-nrpe-server`。后者的配置从`/etc/nagios/nrpe.cfg`获取。该文件应该列出可以远程启动的测试，以及允许触发这些测试的机器 IP 地址。在 Nagios 侧，启用这些远程测试只需使用新的`check_nrpe`命令添加匹配的服务即可。
 
-***
+---
 
 [^([5])](#ch12s04.html_idm15823)
 
@@ -8868,9 +9119,9 @@ define service{ use falcot-service host_name ftp-host service_description FTP ch
 
 ## 13.1. 配置 X11 服务器
 
-简要回顾：X.org 是允许图形化应用程序在屏幕上显示窗口的软件组件。它包含一个能够有效利用显卡的驱动程序。为图形应用程序提供的功能通过标准接口 `X11` 导出（Buster 包含 `X11R7.7` 版本）。
+简要回顾：X.org 是允许图形化应用程序在屏幕上显示窗口的软件组件。它包含一个能够有效利用显卡的驱动程序。为图形应用程序提供的功能通过标准接口`X11`导出（Buster 包含`X11R7.7`版本）。
 
-***
+---
 
 ### 视角：X11、XFree86 和 X.org
 
@@ -8878,29 +9129,28 @@ X11 是类 Unix 系统中使用得广泛的图形系统（也适用于 Windows �
 
 X11 的起步并不顺利，但在 20 世纪 90 年代，XFree86 成为参考实现，因为它是免费软件、可移植的并由协作社区维护。然而，在末期，演进速度变慢了，软件只获得了新的驱动程序。这种情况，加上一个极具争议的许可变更，导致了 2004 年 X.org 的分叉。这现在是参考实现，Debian Buster 使用的是 X.org 7.7 版本。
 
-***
+---
 
-当前 X.org 版本能够自动检测可用的硬件：这适用于显卡和显示器，以及键盘和鼠标；事实上，它是如此方便，以至于该包再也不创建 `/etc/X11/xorg.conf` 配置文件。
+当前 X.org 版本能够自动检测可用的硬件：这适用于显卡和显示器，以及键盘和鼠标；事实上，它是如此方便，以至于该包再也不创建`/etc/X11/xorg.conf`配置文件。
 
-键盘配置目前设置在 `/etc/default/keyboard` 中。该文件用于配置文本控制台和图形界面，并由 `keyboard-configuration` 包处理。有关配置键盘布局的详细信息可以在 第 8.1.2 节，“配置键盘” 中找到。
+键盘配置目前设置在`/etc/default/keyboard`中。该文件用于配置文本控制台和图形界面，并由`keyboard-configuration`包处理。有关配置键盘布局的详细信息可以在 第 8.1.2 节，“配置键盘” 中找到。
 
-`xserver-xorg-core` 包提供了一个通用的 X 服务器，如 X.org 7.x 版本所使用的。该服务器是模块化的，使用一组独立的驱动程序来处理许多不同类型的显卡。安装 `xserver-xorg` 可确保服务器和至少一个显卡驱动都已安装。
+`xserver-xorg-core`包提供了一个通用的 X 服务器，如 X.org 7.x 版本所使用的。该服务器是模块化的，使用一组独立的驱动程序来处理许多不同类型的显卡。安装`xserver-xorg`可确保服务器和至少一个显卡驱动都已安装。
 
-注意，如果检测到的显卡没有被任何可用驱动程序处理，X.org 会尝试使用 `vesa` 和 `fbdev` 驱动程序。VESA 是一个通用驱动程序，在任何地方都能工作，但功能有限（可用分辨率较少、没有用于游戏和桌面视觉效果的硬件加速等），而 `fbdev` 则在内核帧缓冲设备之上工作。如今，X 服务器可以在没有任何管理员权限的情况下运行（以前需要权限才能配置屏幕），其日志文件存储在用户目录的 `~/.local/share/xorg/Xorg.0.log` 中，而对于 root 权限启动的 X 服务器以及 Debian 9 Stretch 之前的版本，则是 `/var/log/Xorg.0.log`。该日志文件是查看当前正在使用什么驱动程序的地方。例如，以下片段匹配 `intel` 驱动程序加载时的输出：
+注意，如果检测到的显卡没有被任何可用驱动程序处理，X.org 会尝试使用`vesa`和`fbdev`驱动程序。VESA 是一个通用驱动程序，在任何地方都能工作，但功能有限（可用分辨率较少、没有用于游戏和桌面视觉效果的硬件加速等），而`fbdev`则在内核帧缓冲设备之上工作。如今，X 服务器可以在没有任何管理员权限的情况下运行（以前需要权限才能配置屏幕），其日志文件存储在用户目录的`~/.local/share/xorg/Xorg.0.log`中，而对于 root 权限启动的 X 服务器以及 Debian 9 Stretch 之前的版本，则是`/var/log/Xorg.0.log`。该日志文件是查看当前正在使用什么驱动程序的地方。例如，以下片段匹配`intel`驱动程序加载时的输出：
 
 ```
 (==) Matched intel as autoconfigured driver 0 (==) Matched modesetting as autoconfigured driver 1 (==) Matched vesa as autoconfigured driver 2 (==) Matched fbdev as autoconfigured driver 3 (==) Assigned the driver to the xf86ConfigLayout (II) LoadModule: "intel" (II) Loading /usr/lib/xorg/modules/drivers/intel_drv.so
 ```
 
-***
+
+
 
 ### 额外：专有驱动程序
 
 某些显卡制造商（最著名的是 NVIDIA）拒绝发布实现良好的免费驱动所需的硬件规范。然而，他们提供了允许使用其硬件的专有驱动。这种政策是阴险的，因为即使提供了驱动程序，它通常也不如应该的那么完善；更重要的是，我们建议你避免这些制造商。如果你最终还是拥有这样的卡，你可以在非自由（non-free）部分找到所需的包：`nvidia-driver`。通过安装 `nvidia-kernel-dkms` 可以自动化构建模块。
 
 “nouveau”项目旨在为 NVIDIA 卡开发免费软件驱动程序，它是 Debian 中为这些显卡的默认驱动程序。通常情况下，ATI 显卡的免费驱动（称为 `radeon` 和 `amdgpu`）要好得多，尽管它通常需要来自 `firmware-amd-graphics` 包的非自由固件。
-
-***
 
 ## 13.2. 自定义图形界面
 
@@ -8912,12 +9162,7 @@ X11 的起步并不顺利，但在 20 世纪 90 年代，XFree86 成为参考实
 
 由于每个图形桌面都提供自己的窗口管理器，你选择哪种窗口管理器通常取决于你选择了哪个桌面。GNOME 使用 `mutter` 窗口管理器，Plasma 使用 `kwin`，而 Xfce（我们稍后介绍）拥有 `xfwm`。Unix 哲学始终允许使用选择的窗口管理器，但遵循建议可以让管理员最好地利用每个项目主导的集成工作。
 
-***
-
 ### 回到基础：窗口管理器
-
-
-
 
 窗口管理器在当前运行应用程序的窗口周围显示“装饰”，包括边框和标题栏。它允许最小化、还原、最大化和隐藏窗口。大多数窗口管理器还提供了一个菜单，当以特定方式点击桌面时就会弹出。该菜单提供了关闭窗口管理器会话、启动新应用程序，以及在某些情况下切换到另一个窗口管理器（如果已安装）的方法。
 
@@ -8947,7 +9192,7 @@ Debian 策略列出了许多能够执行特定操作的标准化命令。例如�
 
 在历史上——在 FreeDesktop.org 标准出现很久以前——Debian 发明了自己的菜单系统，每个包在 `/usr/share/menu/` 中提供所需菜单条目的通用描述。该工具在 Debian 中仍然可用（在 `menu` 包中），但它的用处有限，因为包维护者被鼓励更多依赖 `.desktop` 文件。
 
-# 13.3 图形化桌面
+## 13.3 图形化桌面
 
 自由图形桌面领域由两个大型软件集合主导：GNOME 和 KDE 的 Plasma。它们都非常受欢迎。这在自由软件世界中是一个相当罕见的实例；例如，Apache Web 服务器几乎没有同类对手。
 
@@ -8957,7 +9202,7 @@ GNOME 和 KDE 社区仍然一起工作：在 FreeDesktop.org 的伞下，这些�
 
 选择“最佳”的图形桌面是一个敏感的话题，我们更倾向于避开它。我们仅仅描述许多可能性，并为进一步思考提供一些提示。最好的选择将是你进行一些实验后的决定。
 
-## 13.3.1 GNOME
+### 13.3.1 GNOME
 
 Debian Buster 包含了 GNOME 3.30 版本，可以通过简单的 `apt install gnome` 安装（也可以通过选择“Debian 桌面环境”任务来安装）。
 
@@ -8969,9 +9214,9 @@ GNOME 在易用性和可访问性方面的努力值得关注。设计专业人�
 
 → [`help.gnome.org/admin/`](https://help.gnome.org/admin/)
 
-## 13.3.2 KDE 和 Plasma
+### 13.3.2 KDE 和 Plasma
 
-Debian Buster 包含了 5.14  KDE Plasma，可以通过 `apt install kde-standard` 安装。
+Debian Buster 包含了 5.14 KDE Plasma，可以通过 `apt install kde-standard` 安装。
 
 Plasma 基于一种非常实用的方法经历了快速演进。它的作者很快获得了非常好的结果，这使他们培养了大量的用户群。这些因素有助于项目的整体质量。Plasma 是一个成熟的桌面环境，拥有广泛的应用程序。
 
@@ -8979,18 +9224,15 @@ Plasma 基于一种非常实用的方法经历了快速演进。它的作者很�
 
 自 Qt 4.0 发布以来，KDE 软件最后的许可证问题已经解决。该版本根据 GPL 协议在 Linux 和 Windows 发布（Windows 版本之前是以非免费许可证发布的）。KDE 应用程序主要使用 C++ 语言开发。
 
-## 13.3.3 Xfce 及其他
+### 13.3.3 Xfce 及其他
 
 Xfce 是一个简单且轻量级的图形桌面，是资源有限计算机的完美匹配。可以通过 `apt install xfce4` 安装。与 GNOME 类似，Xfce 基于 GTK+ 工具包，并且在两个桌面中有多个组件是通用的。
-
-
-
 
 与 GNOME 和 Plasma 不同，Xfce 并不旨在成为一个庞大的项目。除了现代桌面的基础组件（文件管理器、窗口管理器、会话管理器、用于应用程序启动器的面板等）之外，它只提供几个特定的应用程序：终端、日历（`orage`）、图像查看器、CD/DVD 刻录工具、媒体播放器（`parole`）、音量控制和文本编辑器（`mousepad`）。
 
 → [`xfce.org/`](https://xfce.org/)图 13.3. Xfce 桌面![Xfce 桌面](img/xfce.png)
 
-## 13.3.4. 其它桌面环境
+### 13.3.4. 其它桌面环境
 
 `LXDE` 和 `LXQt` 是两个专注于“轻量化”特性的桌面环境。前者基于 GTK+，而后者基于 Qt。它们可以通过 `lxde` 和 `lxqt` 元软件包进行安装。
 
@@ -9000,11 +9242,9 @@ Xfce 是一个简单且轻量级的图形桌面，是资源有限计算机的完
 
 → [`developer.linuxmint.com/projects/cinnamon-projects.html`](https://developer.linuxmint.com/projects/cinnamon-projects.html) → [`mate-desktop.org/`](https://mate-desktop.org/)
 
-# 13.4. 邮件
+## 13.4. 邮件
 
 ### 13.4.1. 演变
-
-* * *
 
 社区 热门软件包
 
@@ -9028,19 +9268,17 @@ Evolution 的一个扩展允许与 Microsoft Exchange 邮件系统集成；所�
 
 KDE 邮件软件可以通过 `apt install kmail` 安装。KMail 仅处理邮件，但它属于一个名为 `KDE-PIM`（个人信息管理器）的软件套件，该套件包含了地址录、日历组件等功能。KMail 拥有人们对一个优秀的邮件客户端所期待的所有功能。
 
-图 13.5. Thunderbird 
+图 13.5. Thunderbird
 
 ### 13.4.3. Thunderbird
 
-`thunderbird` 软件包提供了 Mozilla 软件套件中的邮件客户端。各种本地化包可以在 `thunderbird-l10n-*` 软件包中找到；enigmail 扩展处理消息的加密和签名，但它在所有语言中并不可用。
+`thunderbird` 软件包提供了 Mozilla 软件套件中的邮件客户端。各种本地化包可以在 `thunderbird-l10n-*` 软件包中找到；`enigmail` 扩展处理消息的加密和签名，但它在所有语言中并不可用。
 
 图 13.6. Thunderbird 邮件软件![Thunderbird 邮件软件](img/thunderbird.png)
 
-* * *
-
 [⁶] `evolution-ews` 软件包不是 Debian Buster 的。它在发布过程中由于安全问题被移除。但在写作时，最新版本已作为回传（backport）可用（参见 第 6.1.2.4 节，“稳定回传”）。
 
-# 13.5. 网页浏览器
+## 13.5. 网页浏览器
 
 Epiphany 是 GNOME 套件中的网页浏览器，使用苹果为其 Safari 浏览器开发的 WebKit 显示引擎。相关软件包是 `epiphany-browser`。
 
@@ -9050,21 +9288,15 @@ Konqueror 位于 `konqueror` 软件包中，是 KDE 的网页浏览器（也可�
 
 图 13.7. Firefox 网页浏览器![Firefox 网页浏览器](img/firefox.png)
 
-* * *
-
 词汇 Firefox ESR
 
 Mozilla 对 Firefox 的发布周期非常快。新版本每六到八周发布一次，并且仅对最新版本提供安全支持。这并不适用于所有类型的用户，因此每 10 个周期，他们会将其一个发布版本推广为扩展支持版本（ESR），该版本将在后续 10 个周期（涵盖略多一年）内获得安全更新（且没有功能变化）。
 
 Debian 对这两个版本都进行了打包。由于支持周期长，ESR 版本（位于 `firefox-esr` 软件包中）是默认使用的，它是唯一适用于 Debian Stable 的版本，其支持周期很长（即使在那里，Debian 也不得多次从一个 ESR 版本升级到下一个）。普通的 Firefox 在 `firefox` 软件包中可用，但它仅供 Debian Unstable 用户使用。
 
-* * *
-
-* * *
-
 文化 Iceweasel, Firefox 以及其他
 
-在 Debian Stretch 之前，Firefox 和 Thunderbird 是缺失的。iceweasel` 软件包包含了 Iceweasel，它本质上是换了名字的 Firefox。
+在 Debian Stretch 之前，Firefox 和 Thunderbird 是缺失的。`iceweasel` 软件包包含了 Iceweasel，它本质上是换了名字的 Firefox。
 
 这种重命的原理是 Mozilla Foundation 对 Firefox 注册商标施加的使用规则：任何命名为 Firefox 的软件必须使用官方的 Firefox 图标和图标。然而，由于这些元素不是在自由许可下发布的，Debian 无法在 *main*（主）部分分发它们。与其将整个浏览器移动到 *non-free*（非自由），软件包维护者选择了不同的名称。
 
@@ -9072,31 +9304,27 @@ Debian 对这两个版本都进行了打包。由于支持周期长，ESR 版本
 
 现在，图标和图形是在自由软件许可下发布的，Mozilla 承认 Debian 项目所做的更改尊重了他们的商标许可，因此 Debian 能够再次以官方名称分发 Mozilla 的应用程序。
 
-
-
-
-
 Netscape Navigator 在互联网开始进入大众时代一直是标准浏览器，但当微软在 Windows 中捆绑 Internet Explorer，并与计算机制造商签署了禁止其预装 Netscape Navigator 的合后，它失去了阵地。面对这一失败，Netscape（公司）决定通过在免费许可下发布源代码来“释放”它，赋予它第二次生命。这就是 Mozilla 项目的开始。经过多年的开发，其结果令人非常满意：Mozilla 项目产生了一个 HTML 渲染引擎（称为 `Gecko`），它是最符合标准的渲染引擎之一。该渲染引擎特别地被 Mozilla Firefox 浏览器使用，它是主流浏览器之一。
 
 最后但同样重要的是，Debian 还包含 `Chromium` Web 浏览器（可在 `chromium` 包中可用）。该浏览器由 Google 开发，并在短短几年内已成为最受欢迎的浏览器。它的明确目标是通过优化浏览器性能和提高用户安全性，使 Web 服务更具吸引力。驱动 Chromium 的免费代码也被其专有版本 Google Chrome™ 使用。
 
-# 13.6 开发
+## 13.6 开发
 
-## 13.6.1 用于 GNOME 的 GTK+ 工具
+### 13.6.1 用于 GNOME 的 GTK+ 工具
 
 Anjuta（位于 `anjuta` 软件包中）和 GNOME Builder（位于 `gnome-builder` 软件包中）是针对为 GNOME 创建 GTK+ 应用而优化的集成开发环境 (IDE)。Glade（位于 `glade` 软件包中）是一个旨在为 GNOME 创建 GTK+ 图形界面并将其保存为 XML 文件的应用程序。这些 XML 文件可以通过 GTK+ 共享库通过其 `GtkBuilder` 组件加载以重建保存的界面；这种功能可能趣，例如对于需要对话框的插件。
 
 → [`wiki.gnome.org/Apps/Builder`](https://wiki.gnome.org/Apps/Builder)→ [`anjuta.org/`](http://anjuta.org/)→ [`glade.gnome.org/`](https://glade.gnome.org/)
 
-## 13.6.2 Qt 工具
+### 13.6.2 Qt 工具
 
 Qt 应用的等效程序是 KDE 提供的 KDevelop（位于 `kdevelop` 软件包中）用于开发环境，以及 Qt Designer（位于 `qttools5-dev-tools` 软件包中）用于 Qt 应用的图形界面设计。
 
 KDevelop 也是一个通用 IDE，并为 Python 和 PHP 等语言以及不同的构建系统提供插件。
 
-# 13.7 协作工作
+## 13.7 协作工作
 
-## 13.7.1 组工作：群件软件
+### 13.7.1 组工作：群件软件
 
 群件工具的维护相对复杂，因为它们聚合了多个工具，并且其需求在集成发行版的范围内并不总是容易协调。因此，Debian 中曾有一个很长的群件软件包列表，但由于缺乏维护者或与 Debian 中的其他（更新）软件不兼容而被弃用。PHPGroupware、eGroupware 和 Kolab 就是这种情况。
 
@@ -9104,7 +9332,7 @@ KDevelop 也是一个通用 IDE，并为 Python 和 PHP 等语言以及不同的
 
 尽管如此并非如此。传统上由“群件”软件提供的许多功能越来越多地集成到“标准”软件中。这减少了对特定、专门群件软件的需求。另一方面，这通常需要特定的服务器。Citadel（位于 `citadel-suite` 软件包中）、Sogo（位于 `sogo` 软件包中）和 Kopano（位于 `kopano-core` 软件包中）是 Debian Buster 中可用的替代方案。
 
-## 13.7.2 使用 FusionForge 进行协作工作
+### 13.7.2 使用 FusionForge 进行协作工作
 
 FusionForge 是一个协作开发工具，其起源源自 SourceForge（一个自由软件项目的托管服务）。它采取了基于自由软件标准开发模型的相同方法。在 SourceForge 代码变为专有后，软件本身继续演进。其初始作者 VA Software 决定不再发布任何免费版本。当第一个分支 (GForge) 遵循相同路径时，同样的事情再次发生。由于不同的个人和组织参与了开发，目前的 FusionForge 还包含了针对更传统开发方法的功能，以及不纯粹关注软件开发的项目。
 
@@ -9124,39 +9352,29 @@ FusionForge 不是 Debian Stable 的一部分。它是一个大型软件栈，�
 
 FusionForge 已在近十年中支持了 Debian 项目及其开发者使用的 `alioth.debian.org` 平台，用于协作式包管理。由于某些局限性，它在 2018 年被一个由 GitLab 驱动的新服务取代并关闭。参见侧边栏工具 GitLab、Git 仓库以及更多内容。
 
-# 13.8 办公套件
+## 13.8 办公套件
 
 在自由软件世界，办公软件一直被视为匮乏。用户需要 Microsoft 工具的替代品（如 Word 和 Excel），但这些工具如此复杂，以至于替代品很难开发。当 Sun 在免费许可下发布 StarOffice 代码作为 OpenOffice 时，情况发生了变化，该项目后来诞生了 LibreOffice，它在 Debian 中已可用。KDE 项目也有自己的办公套件，称为 Calligra Suite（之前的 KOffice），而 GNOME 虽然从未提供全面的办公套件，但提供了 AbiWord 作为文字处理器，并将 Gnumeric 作为电子表格。不同的项目各有优劣。例如，Gnumeric 电子表格在某些领域优于 OpenOffice.org/LibreOffice，特别是其计算的精确度。在文字处理方面，LibreOffice 套件仍然领先。
 
 对用户的另一个重要功能是导入 Microsoft Office 文档的能力。尽管所有办公套件都有此功能，但只有 OpenOffice.org 和 LibreOffice 中的版本功能足够日常使用。
 
-
-
-
-
 在 OpenOffice.org 经历了相对停滞后，Oracle 将代码及相关权利捐给了 Apache 软件基金，OpenOffice 现在是一个 Apache 项目。该项目目前在 Debian 中不可用，而且与 LibreOffice 相比，它已经处于边缘状态。
-
-* *
 
 LibreOffice 和 Calligra Suite 分别可以通过 `libreoffice` 和 `calligra` Debian 软件包可用。尽管之前使用 `gnome-office` 软件包来安装 `AbiWord` 和 `Gnumeric` 等一系列办公工具，但该软件包已不再是 Debian 的一部分，现在这些软件包均独立存在。
 
 LibreOffice 的特定语言包在单独软件包中分发，最著名的是 `libreoffice-l10n-*` 和 `libreoffice-help-*`。某些功能如拼写检查字典、连字符模式和同义词表位于单独软件包中，例如 `myspell-*`、`hunspell-*`、`hyphen-*` 和 `mythes-*`。
 
-# 13.9. 模拟 Windows：Wine
+## 13.9. 模拟 Windows：Wine
 
 尽管有了上述提到的所有努力，仍有许多工具没有 Linux 对应版本，或者必须使用原始版本。这就是 Windows 模拟系统大显身手的地方。其中最著名的是 Wine。
 
 → [`www.winehq.org/`](https://www.winehq.org/)
-
-* *
 
 ### 补充 CrossOver Linux
 
 `CrossOver` 由 CodeWeavers 制作，是一组 Wine 的增强方案，它扩展了可用的模拟功能，使得 Microsoft Office 变得完全可用。某些增强功能定期合并到 Wine 中。
 
 → [`www.codeweavers.com/products/`](https://www.codeweavers.com/products/)
-
-* *
 
 然而，应该记住，这只是众多解决方案之一，问题也可以通过虚拟机或 VNC 来解决；这两个解决方案都在侧边栏中详细介绍*替代方案* 虚拟机 和 *替代方案* Windows 终端服务器或 VNC 中。
 
@@ -9165,14 +9383,14 @@ LibreOffice 的特定语言包在单独软件包中分发，最著名的是 `lib
 现在让我们安装所需的软件包（`ttf-mscorefonts-installer` 位于 `contrib` 部分）：
 
 ```bash
-apt install wine ttf-mscorefonts-installer
-```
 
-在 64 位 (amd64) 系统上，如果你的 Windows 应用程序是 32 位应用程序，你将必须启用多架构（multi-arch）以便从 `i386` 架构安装 `wine32`（参见第 5.4.5 节，“多架构支持）。
 
-用户随后需要运行 `winecfg` 并配置哪些 (Debian) 位置映射到哪些 (Windows) 驱动器。`winecfg` 有一些合理的默认值，并可以自动检测更多驱动器；请注意，即使你有双启动系统，也不应该将 `C:` 驱动器指向 Debian 中挂载 Windows 分区的位置，因为 Wine 可能会覆盖该分区上的某些数据，导致 Windows 无法使用。其他设置可以保持默认值。要运行 Windows 程序，你首先需要通过在 Wine 下运行其（Windows）安装程序来安装它们，命令类似于 `wine .../setup.exe`；一旦程序安装完成，你就可以 `wine .../program.exe` 运行它。`program.exe` 文件的确位置取决于 `C:` 驱动器的映射位置；但在许多情况下，只需运行 `wine program` 即可生效，因为程序通常安装在 Wine 会自动查找的位置。
 
-* *
+`apt install wine ttf-mscorefonts-installer`
+
+在 64 位（`amd64`）系统上，如果你的 Windows 应用程序是 32 位应用程序，你将必须启用多架构（`multi-arch`）以便从 `i386` 架构安装 `wine32`（参见第 5.4.5 节，“多架构支持”）。
+
+用户随后需要运行 `winecfg` 并配置哪些（Debian）位置映射到哪些（Windows）驱动器。`winecfg` 有一些合理的默认值，并可以自动检测更多驱动器；请注意，即使你有双启动系统，也不应该将 `C:` 驱动器指向 Debian 中挂载 Windows 分区的位置，因为 Wine 可能会覆盖该分区上的某些数据，导致 Windows 无法使用。其他设置可以保持默认值。要运行 Windows 程序，你首先需要通过在 Wine 下运行其（Windows）安装程序来安装它们，命令类似于 `wine .../setup.exe`；一旦程序安装完成，你就可以 `wine .../program.exe` 运行它。`program.exe` 文件的确位置取决于 `C:` 驱动器的映射位置；但在许多情况下，只需运行 `wine program` 即可生效，因为程序通常安装在 Wine 会自动查找的位置。
 
 ### 提示 解决 winecfg 失败的方法
 
@@ -9183,35 +9401,27 @@ wine64 /usr/lib/x86_64-linux-gnu/wine/wine/winecfg.exe.so
 wine32 /usr/lib/i386-linux-gnu/wine/wine/winecfg.exe.so
 ```
 
-* *
-
 注意，你不可以在没有实际测试特定软件的情况下依赖 Wine（或类似的解决方案）：只有通过实际测试才能确定性地判断模拟是否完全正常。
-
-* *
 
 ### 替代方案 虚拟机
 
 模拟微软系统的另一种方案是实际上在一个模拟完整硬件机器的虚拟机中运行它。这允许运行任何操作系统。第 12 章，高级管理 描述了多种虚拟化系统，最著名的是 Xen 和 KVM（还有 QEMU、VMWare 和 Bochs）。
 
-* *
-
 ### 替代方案 Windows 终端服务器或 VNC
 
 另一种可能性是在带有 Windows 终端服务器的中央服务器上远程运行旧 Windows 程序，并使用 `rdesktop` 从 Linux 机器访问应用程序。这是 RDP 协议（远程桌面协议）的 Linux 客户端，Windows NT/2000 终端服务器使用它在远程机器上显示桌面。
 
-VNC 软件提供了类似的功能，并且优点是还可以适用于许多操作系统。Linux VNC 客户端和服务器在第 9.2 节，“远程登录` 中描述。
-
-* *
+VNC 软件提供了类似的功能，并且优点是还可以适用于许多操作系统。Linux VNC 客户端和服务器在第 9.2 节，“远程登录”中描述。
 
 # 13.10. 实时通信软件
 
-Debian 提供了丰富的实时通信 (RTC) 客户端软件。RTC 服务器的设置在第 11.8 节，“实时通信服务` 中讨论。在 `SIP`（会话建立协议）术语中，客户端应用程序或设备也被称为用户代理（user agent）。
+Debian 提供了丰富的实时通信（RTC）客户端软件。RTC 服务器的设置在第 11.8 节，“实时通信服务”中讨论。在 `SIP`（会话建立协议）术语中，客户端应用程序或设备也被称为用户代理（user agent）。
 
 每个客户端应用程序的功能各异。某些应用程序对于频繁聊天的用户来说更方便，而其他应用程序对于摄像头用户来说则更稳定。可能需要测试多个应用程序以识别最令人满意的那些。用户最终可能决定需要多个应用程序，例如用于与客户消息的 XMPP 应用程序和用于与某些在线社区协作的 IRC 应用程序。
 
 为了最大限地提高用户与外部世界通信的能力，建议同时配置 SIP 和 XMPP 客户端，或配置支持这两种协议的单一客户端。
 
-默认的 GNOME 桌面建议 Empathy 通信客户端。Empathy 同时支持 SIP 和 XMPP。它支持即时消息 (IM)、语音和视频。KDE 项目提供了 KDE Telepathy，这是一个基于 GNOME Empathy 客户端相同的 Telepathy API 的通信客户端。
+默认的 GNOME 桌面建议 Empathy 通信客户端。Empathy 同时支持 SIP 和 XMPP。它支持即时消息（IM）、语音和视频。KDE 项目提供了 KDE Telepathy，这是一个基于 GNOME Empathy 客户端相同的 Telepathy API 的通信客户端。
 
 Empathy/Telepathy 的流行替代方案包括 `Ekiga`、`Linphone`、`Psi` 和 `Jami`（以前名为 `Ring`）。
 
@@ -9223,19 +9433,13 @@ Empathy/Telepathy 的流行替代方案包括 `Ekiga`、`Linphone`、`Psi` 和 `
 
 → [`rtcquickstart.org/guide/multi/useragents.html`](http://rtcquickstart.org/guide/multi/useragents.html)
 
-* *
-
 ### 提示 寻找支持 ICE 和 TURN 的客户端
 
- 某些 RTC 客户端在通过防火墙和 NAT 网络发送语音和视频时存在严重问题。用户可能会收到幻听电话（手机响了但听不到对方的声音），或者可能根本无法通话。
+某些 RTC 客户端在通过防火墙和 NAT 网络发送语音和视频时存在严重问题。用户可能会收到幻听电话（手机响了但听不到对方的声音），或者可能根本无法通话。
 
 ICE 和 TURN 协议是为了解决这些问题而开发的。在每个站点运行带有公网 IP 的 TURN 服务器，并使用同时支持 ICE 和 TURN 的客户端软件，可以获得最佳的用户体验。
 
 如果客户端软件仅用于即时消息，则不需要 ICE 或 TURN 支持。
-
-
-
-
 
 Debian 人员在 [rtc.debian.org](https://rtc.debian.org) 运行着社区 SIP 服务。该社区维护着一个 wiki，提供了关于设置 Debian 中封装的许多客户端应用程序的文档。该 wiki 的文章和截图对于任何想要在自己的域名上建立类似服务的人来说，都是非常有用的资源。
 
@@ -9292,12 +9496,6 @@ IRC 客户端稍微复杂一些，它们通常提供许多在公司环境中用�
 ## 14.2. 防火墙或数据包过滤
 
 ### 回到基础：防火墙
-
-
-
-
-
-# 防火墙
 
 `firewall` 是一种带有硬件和/或软件的计算机设备，对进入或离开的网络数据包（来自或离开本地网络）进行排序，并仅允许符合某些预定义条件的数据包通过。
 
@@ -9366,23 +9564,129 @@ ICMP（互联网控制消息协议）是用于传输通信补充信息的协议�
 
 `iptables-translate` 和 `ip6tables-translate` 命令可以将旧的 `iptables` 命令翻译为新的 `nftables` 语法。整个规则集也可以翻译，在这种情况下，我们迁移安装了 Docker 的计算机上配置的规则：
 
-
-
-
-
-```
+```bash
 iptables-save > iptables-ruleset.txt
 iptables-restore-translate -f iptables-ruleset.txt
-Translated by iptables-restore-translate v1.8.2 on Thu Jul 18 10:39:33 2019 add table ip filter add chain ip filter INPUT { type filter hook input priority 0; policy accept; } add chain ip filter FORWARD { type filter hook forward priority 0; policy drop; } add chain ip filter OUTPUT { type filter hook output priority 0; policy accept; } add chain ip filter DOCKER add chain ip filter DOCKER-ISOLATION-STAGE-1 add chain ip filter DOCKER-ISOLATION-STAGE-2 add chain ip filter DOCKER-USER add rule ip filter FORWARD counter jump DOCKER-USER add rule ip filter FORWARD counter jump DOCKER-ISOLATION-STAGE-1 add rule ip filter FORWARD oifname "docker0" ct state related,established counter accept add rule ip filter FORWARD oifname "docker0" counter jump DOCKER add rule ip filter FORWARD iifname "docker0" oifname != "docker0" counter accept add rule ip filter FORWARD iifname "docker0" oifname "docker0" counter accept add rule ip filter DOCKER-ISOLATION-STAGE-1 iifname "docker0" oifname != "docker0" counter jump DOCKER-ISOLATION-STAGE-2 add rule ip filter DOCKER-ISOLATION-STAGE-1 counter return add rule ip filter DOCKER-ISOLATION-STAGE-2 oifname "docker0" counter drop add rule ip filter DOCKER-ISOLATION-STAGE-2 counter return add rule ip filter DOCKER-USER counter return add table ip nat add chain ip nat PREROUTING { type nat hook prerouting priority -100; policy accept; } add chain ip nat INPUT { type nat hook input priority 100; policy accept; } add chain ip nat POSTROUTING { type nat hook postrouting priority 100; policy accept; } add chain ip nat OUTPUT { type nat hook output priority -100; policy accept; } add chain ip nat DOCKER add rule ip nat PREROUTING fib daddr type local counter jump DOCKER add rule ip nat POSTROUTING oifname != "docker0" ip saddr 172.17.0.0/16 counter masquerade add rule ip nat OUTPUT ip daddr != 127.0.0.0/8 fib daddr type local counter jump DOCKER add rule ip nat DOCKER iifname "docker0" counter return # Completed on Thu Jul 18 10:39:33 2019
+```
+
+
+
+Translated by `iptables-restore-translate` v1.8.2 on Thu Jul 18 10:39:33 2019
+
+```
+add table ip filter
+add chain ip filter INPUT { type filter hook input priority 0; policy accept; }
+add chain ip filter FORWARD { type filter hook forward priority 0; policy drop; }
+add chain ip filter OUTPUT { type filter hook output priority 0; policy accept; }
+add chain ip filter DOCKER
+add chain ip filter DOCKER-ISOLATION-STAGE-1
+add chain ip filter DOCKER-ISOLATION-STAGE-2
+add chain ip filter DOCKER-USER
+add rule ip filter FORWARD counter jump DOCKER-USER
+add rule ip filter FORWARD counter jump DOCKER-ISOLATION-STAGE-1
+add rule ip filter FORWARD oifname "docker0" ct state related,established counter accept
+add rule ip filter FORWARD oifname "docker0" counter jump DOCKER
+add rule ip filter FORWARD iifname "docker0" oifname != "docker0" counter accept
+add rule ip filter FORWARD iifname "docker0" oifname "docker0" counter accept
+add rule ip filter DOCKER-ISOLATION-STAGE-1 iifname "docker0" oifname != "docker0" counter jump DOCKER-ISOLATION-STAGE-2
+add rule ip filter DOCKER-ISOLATION-STAGE-1 counter return
+add rule ip filter DOCKER-ISOLATION-STAGE-2 oifname "docker0" counter drop
+add rule ip filter DOCKER-ISOLATION-STAGE-2 counter return
+add rule ip filter DOCKER-USER counter return
+add table ip nat
+add chain ip nat PREROUTING { type nat hook prerouting priority -100; policy accept; }
+add chain ip nat INPUT { type nat hook input priority 100; policy accept; }
+add chain ip nat POSTROUTING { type nat hook postrouting priority 100; policy accept; }
+add chain ip nat OUTPUT { type nat hook output priority -100; policy accept; }
+add chain ip nat DOCKER
+add rule ip nat PREROUTING fib daddr type local counter jump DOCKER
+add rule ip nat POSTROUTING oifname != "docker0" ip saddr 172.17.0.0/16 counter masquerade
+add rule ip nat OUTPUT ip daddr != 127.0.0.0/8 fib daddr type local counter jump DOCKER
+add rule ip nat DOCKER iifname "docker0" counter return
+# Completed on Thu Jul 18 10:39:33 2019
+```
+
+执行以下命令进行转换和加载：
+
+```
 iptables-restore-translate -f iptables-ruleset.txt > ruleset.nft
 nft -f ruleset.nft
 nft list ruleset
 ```
 
-table ip filter { chain INPUT { type filter hook input priority 0; policy accept; } chain FORWARD { type filter hook forward priority 0; policy drop; counter packets 0 bytes 0 jump DOCKER-USER counter packets 0 bytes 0 jump DOCKER-ISOLATION-STAGE-1 oifname "docker0" ct state related,established counter packets 0 bytes 0 accept oifname "docker0" counter packets 0 bytes 0 jump DOCKER iifname "docker0" oifname != "docker0" counter packets 0 bytes 0 accept iifname "docker0" oifname "docker0" counter packets 0 bytes 0 accept } chain OUTPUT { type filter hook output priority 0; policy accept; } chain DOCKER { } chain DOCKER-ISOLATION-STAGE-1 { iifname "docker0" oifname != "docker0" counter packets 0 bytes 0 jump DOCKER-ISOLATION-STAGE-2 counter packets 0 bytes 0 return } chain DOCKER-ISOLATION-STAGE-2 { oifname "docker0" counter packets 0 bytes 0 drop counter packets 0 bytes 0 return } chain DOCKER-USER { counter packets 0 bytes 0 return } } table ip nat { chain PREROUTING { type nat hook prerouting priority -100; policy accept; fib daddr type local counter packets 0 bytes 0 jump DOCKER } chain INPUT { type nat hook input priority 100; policy accept; } chain POSTROUTING { type nat hook postrouting priority 100; policy accept; oifname != "docker0" ip saddr 172.17.0.0/16 counter packets 0 bytes 0 masquerade } chain OUTPUT { type nat hook output priority -100; policy accept; ip daddr != 127.0.0.0/8 fib daddr type local counter packets 0 bytes 0 jump DOCKER } chain DOCKER { iifname "docker0" counter packets 0 bytes 0 return } } table ip mangle { chain PREROUTING { type filter hook prerouting priority -150; policy accept; } chain INPUT { type filter hook input priority -150; policy accept; } chain FORWARD { type filter hook forward priority -150; policy accept; } chain OUTPUT { type route hook output priority -150; policy accept; } chain POSTROUTING { type filter hook postrouting priority -150; policy accept; } }
+生成的 `nftables` 规则集如下：
+
+```
+table ip filter {
+	chain INPUT {
+		type filter hook input priority 0; policy accept;
+	}
+	chain FORWARD {
+		type filter hook forward priority 0; policy drop;
+		counter packets 0 bytes 0 jump DOCKER-USER
+		counter packets 0 bytes 0 jump DOCKER-ISOLATION-STAGE-1
+		oifname "docker0" ct state related,established counter packets 0 bytes 0 accept
+		oifname "docker0" counter packets 0 bytes 0 jump DOCKER
+		iifname "docker0" oifname != "docker0" counter packets 0 bytes 0 accept
+		iifname "docker0" oifname "docker0" counter packets 0 bytes 0 accept
+	}
+	chain OUTPUT {
+		type filter hook output priority 0; policy accept;
+	}
+	chain DOCKER {
+	}
+	chain DOCKER-ISOLATION-STAGE-1 {
+		iifname "docker0" oifname != "docker0" counter packets 0 bytes 0 jump DOCKER-ISOLATION-STAGE-2
+		counter packets 0 bytes 0 return
+	}
+	chain DOCKER-ISOLATION-STAGE-2 {
+		oifname "docker0" counter packets 0 bytes 0 drop
+		counter packets 0 bytes 0 return
+	}
+	chain DOCKER-USER {
+		counter packets 0 bytes 0 return
+	}
+}
+table ip nat {
+	chain PREROUTING {
+		type nat hook prerouting priority -100; policy accept;
+		fib daddr type local counter packets 0 bytes 0 jump DOCKER
+	}
+	chain INPUT {
+		type nat hook input priority 100; policy accept;
+	}
+	chain POSTROUTING {
+		type nat hook postrouting priority 100; policy accept;
+		oifname != "docker0" ip saddr 172.17.0.0/16 counter packets 0 bytes 0 masquerade
+	}
+	chain OUTPUT {
+		type nat hook output priority -100; policy accept;
+		ip daddr != 127.0.0.0/8 fib daddr type local counter packets 0 bytes 0 jump DOCKER
+	}
+	chain DOCKER {
+		iifname "docker0" counter packets 0 bytes 0 return
+	}
+}
+table ip mangle {
+	chain PREROUTING {
+		type filter hook prerouting priority -150; policy accept;
+	}
+	chain INPUT {
+		type filter hook input priority -150; policy accept;
+	}
+	chain FORWARD {
+		type filter hook forward priority -150; policy accept;
+	}
+	chain OUTPUT {
+		type route hook output priority -150; policy accept;
+	}
+	chain POSTROUTING {
+		type filter hook postrouting priority -150; policy accept;
+	}
+}
 ```
 
-工具 `iptables-nft`、`ip6tables-nft`、`arptables-nft` 和 `ebtables-nft` 是使用 nftables API 的 iptables 版本，因此用户可以继续使用旧的 iptables 语法，但不推荐；这些工具应仅用于向后兼容。
+工具 `iptables-nft`、`ip6tables-nft`、`arptables-nft` 和 `ebtables-nft` 是使用 `nftables` API 的 `iptables` 版本，因此用户可以继续使用旧的 `iptables` 语法，但不推荐；这些工具应仅用于向后兼容。
 
 ## 14.2.3. `nft` 语法
 
@@ -9396,7 +9700,7 @@ nft add chain filter input { type filter hook input priority 0 \; }
 
 规则通常使用以下语法添加：`nft add rule [*family*] *table* *chain* handle *handle* statement`。
 
-`insert` 与 `add` 命令类似，但给定的规则会被插入到链的开头，或者插入到具有特定句 的规则之前，而不是在末尾或该规则之后。例如，以下命令会在句柄号 8 的规则之前插入一条规则：
+`insert` 与 `add` 命令类似，但给定的规则会被插入到链的开头，或者插入到具有特定句柄的规则之前，而不是在末尾或该规则之后。例如，以下命令会在句柄号 8 的规则之前插入一条规则：
 
 ```
 nft insert rule filter output position 8 ip daddr 127.0.0.8 drop
@@ -9413,15 +9717,13 @@ nft insert rule filter output position 8 ip daddr 127.0.0.8 drop
 在其他情况下，推荐的方法是在 `/etc/network/interfaces` 文件的 `up` 指令中注册配置脚本。在以下示例中，脚本存储在 `/usr/local/etc/arrakis.fw` 下。
 
 示例 14.1. `interfaces` 文件调用防火墙脚本
+
 ```
 auto eth0
 iface eth0 inet static address 192.168.0.1 network 192.168.0.0 netmask 255.255.255.0 broadcast 192.168.0.255 up /usr/local/etc/arrakis.fw
 ```
-这显然假设你使用 ifupdown 配置接口。如果你使用的是其他工具（如 *NetworkManager* 或 *systemd-networkd*），请参考各自的文档查找在接口启动后执行脚本的方法。
 
-
-
-
+这显然假设你使用 `ifupdown` 配置接口。如果你使用的是其他工具（如 *NetworkManager* 或 *systemd-networkd*），请参考各自的文档查找在接口启动后执行脚本的方法。
 
 `logcheck` 可以以三种详细程度不同的模式之一工作：`paranoid`、`server` 和 `workstation`。第一种模式 `very` 详细，可能应该只限制用于防火墙等特定服务器。第二种（默认）模式推荐用于大多数服务器。最后一种是为工作站设计的，甚至更加精简（它会过滤掉更多消息）。
 
@@ -9432,7 +9734,7 @@ iface eth0 inet static address 192.168.0.1 network 192.168.0.0 netmask 255.255.2
 *   将消息标记为破解尝试的规则（存储在 `/etc/logcheck/cracking.d/` 目录下的文件中）；
 *   取消此类标记的规则（`/etc/logcheck/cracking.ignore.d/`）；
 *   将消息分类为安全告警的规则（`/etc/logcheck/violations.d/`）；
-*   **取消此类分类的规则（`/etc/logcheck/violations.ignore.d/`）；**
+*   取消此类分类的规则（`/etc/logcheck/violations.ignore.d/`）；
 *   最后，适用于剩余消息的规则（被视为*系统事件*）。
 
 ***
@@ -9485,191 +9787,227 @@ Fail2Ban 是一个入侵防御软件套，可以配置为监控任何将登录�
 
 Fail2Ban 通过 `fail2ban-client` 使用一个简单的协议进行配置，该客户端还读取配置文件并向服务器 `fail2ban-server` 发布相应的配置命令。它有四种配置文件类型，都存储在 `/etc/fail2ban` 中：
 
-*   fail2ban.conf：全局配置（如日志记录）。
-*   filter.d/*.conf：指定如何检测身份失败的过滤器。Debian 软件包已包含许多常用程序的过滤器。
-*   action.d/*.conf：定义禁止和取消禁止 IP 地址命令的动作。
-*   jail.conf：这是定义*监狱*（jails，过滤器和动作的组合）的地方。
+*   `fail2ban.conf`：全局配置（如日志记录）。
+*   `filter.d/*.conf`：指定如何检测身份失败的过滤器。Debian 软件包已包含许多常用程序的过滤器。
+*   `action.d/*.conf`：定义禁止和取消禁止 IP 地址命令的动作。
+*   `jail.conf`：这是定义*监狱*（jails，过滤器和动作的组合）的地方。
 
 让我们查看 `/etc/fail2ban/jail.conf` 中的 `sshd` 配置，以更好地理解 Fail2Ban 如何工作……
 
-[...] [DEFAULT] [...] bantime = 10m [...] maxretry = 5 [...] [sshd] port = ssh logpath = %(sshd_log)s backend = %(sshd_backend)s
 
-Fail2Ban 将使用 `/etc/fail2ban/filters.d/sshd.conf` 中定义的 Python 正则表达式，针对 `sshd` 的日志文件检查 `sshd` 的失败登录尝试，该文件定义在 `/etc/fail2ban/paths_common.conf` 变量 `sshd_log` 中。如果 Fail2Ban 检测到连续次失败登录，它将禁止这些尝试源的 IP 地址。
+
+`[...] [DEFAULT] [...] bantime = 10m [...] maxretry = 5 [...] [sshd] port = ssh logpath = %(sshd_log)s backend = %(sshd_backend)s`
+
+Fail2Ban 将使用`/etc/fail2ban/filters.d/sshd.conf`中定义的 Python 正则表达式，针对`sshd`的日志文件检查`sshd`的失败登录尝试，该文件定义在`/etc/fail2ban/paths_common.conf`变量`sshd_log`中。如果 Fail2Ban 检测到连续次失败登录，它将禁止这些尝试源的 IP 地址。
 
 Fail2Ban 是防止最常见暴力破解的一种简单有效的方法，但它无法防止分布式暴力破解，即攻击者使用散布在互联网上的大量机器。
 
 提供针对分布式暴力破解额外保护的一种好方法是在每次失败尝试后人为增加登录时间。
 
-## 14.3.4. 检测更改
+## 14.3.4 检测更改
 
 一旦系统安装并配置完成，除非进行安全升级，否则大多数文件和目录通常没有理由（数据除外）。因此，确保文件实际上没有发生变化很有意义：因此任何意外的更改都值得调查。本节介绍了一些能够监控文件并在发生意外更改时警告管理员（或简单列出此类更改）的工具。
 
-### 14.3.4.1 使用 dpkg --verify 审核软件包
-
-***
+### 14.3.4.1 使用`dpkg --verify`审核软件包
 
 ### 进一步探讨：防止上游更改
 
+`dpkg --verify`对于检测来自 Debian 软件包的文件更改非常有用，但如果软件包本身被破坏（例如，Debian 镜像站被破坏），它将无用武处。防止此类攻击涉及使用 APT 的数字签名验证系统（参见第 6.6 节，“检查软件包真实性”），并确保只从认证的源安装软件包。
 
-
-
-
-`dpkg --verify` 对于检测来自 Debian 软件包的文件更改非常有用，但如果软件包本身被破坏（例如，Debian 镜像站被破坏），它将无用武处。防止此类攻击涉及使用 APT 的数字签名验证系统（参见第 6.6 节，“检查软件包真实性”），并确保只从认证的源安装软件包。
-
-`dpkg --verify`（或 `dpkg -V`）是一个有趣的工具，因为它允许发现哪些已安装的文件被修改过（可能由攻击者修改），但对此应持谨慎态度。为了工作，它依赖于存储在磁盘上 dpkg 自身数据库中的校验和（可以在 `/var/lib/dpkg/info/package.md5sums` 中找到）；因此，一个彻底的攻击者会更新这些文件，使其包含被篡改文件的新校验和。
+`dpkg --verify`（或`dpkg -V`）是一个有趣的工具，因为它允许发现哪些已安装的文件被修改过（可能由攻击者修改），但对此应持谨慎态度。为了工作，它依赖于存储在磁盘上 dpkg 自身数据库中的校验和（可以在`/var/lib/dpkg/info/package.md5sums`中找到）；因此，一个彻底的攻击者会更新这些文件，使其包含被篡改文件的新校验和。
 
 ### 文件指纹
 
 提醒：指纹是一个值，通常是一个数字（即使是十六进制表示），它包含了文件内容的某种签名。这种签名通过算法（MD5 或 SHA1 是著名的例子）计算得出，该算法在多程度上保证了即使文件内容发生最微的变化意味着指纹的变化；这被称为“雪崩效应”。这使得简单的数字指纹可以作为金石测试，以检查文件内容是否被更改。这些算法是不可逆的；换句话说，对于大多数算法而言，知道指纹并无法找到对应的内容。最近的数学进展似乎削弱了这些原则的绝对性，但到目前为止其使用尚未受到质疑，因为创建产生相同指纹的不同内容似乎仍然是一个相当困难的任务。
 
-运行 `dpkg -V` 将验证所有已安装的软件包，并为每个测试失败的文件打印一行。输出格式与 `rpm -V` 相同，其中每个字符表示对某些特定元数据的测试。遗憾的是，`dpkg` 并没有存储大多数测试所需的元数据，因此会对这些测试输出问号。目前只有校验和测试可以在第三个字符上产生“5”（当测试失败时）。
+运行`dpkg -V`将验证所有已安装的软件包，并为每个测试失败的文件打印一行。输出格式与`rpm -V`相同，其中每个字符表示对某些特定元数据的测试。遗憾的是，`dpkg`并没有存储大多数测试所需的元数据，因此会对这些测试输出问号。目前只有校验和测试可以在第三个字符上产生“5”（当测试失败时）。
 
-```
-# dpkg -V ??5?????? /lib/systemd/system/ssh.service ??5?????? c /etc/libvirt/qemu/networks/default.xml ??5?????? c /etc/lvm/lvm.conf ??5?????? c /etc/salt/roster
-```
-
-在上面的示例中，dpkg 报告了 SSH 服务文件的更改，这是管理员对软件包文件所做的修改，而不是使用适当 `/etc/systemd/system/ssh.service` 覆盖文件（应该像任何配置更改一样存储在 `/etc` 下方）。它还列出了多个被合法修改的配置文件（通过第二个字段上的字母“c”识别）。
-
-### 14.3.4.2. 审核软件包：debsums 及其局限性
-
-`debsums` 是 `dpkg -V` 的祖先，因此大部分已经过时。它受到与 dpkg 相同的限制。幸运的是，某些限制可以通过变通方法解决（而 dpkg 不提供类似的替代方案）。
-
-由于磁盘上的数据不可信，`debsums` 建议基于 `.deb` 文件进行检查，而不是依赖 dpkg 的数据库。为了下载所有安装软件包的可信 `.deb` 文件，我们可以依靠 APT 的认证下载。此操作可能很缓慢且单调，因此不应被视为一种经常使用的主动技术。
-
-```
-# apt-get --reinstall -d install `grep-status -e 'Status: install ok installed' -n -s Package` [ ... ] # debsums -p /var/cache/apt/archives --generate=all
+```text
+# dpkg -V ??5?????? /lib/systemd/system/ssh.service
+??5?????? c /etc/libvirt/qemu/networks/default.xml
+??5?????? c /etc/lvm/lvm.conf
+??5?????? c /etc/salt/roster
 ```
 
-注意，此示例使用了 dctrl-tools 包中的 `grep-status` 命令，该包默认未安装。
+在上面的示例中，dpkg 报告了 SSH 服务文件的更改，这是管理员对软件包文件所做的修改，而不是使用适当`/etc/systemd/system/ssh.service`覆盖文件（应该像任何配置更改一样存储在`/etc`下方）。它还列出了多个被合法修改的配置文件（通过第二个字段上的字母“c”识别）。
 
-可以通过在 `/etc/default/debsums` 中设置 `CRON_CHECK` 作为 cron 任务频繁运行 `debsums`。要忽略 `/etc` 目录之外某些故意修改或预期会更改的文件（如 `/usr/share/misc/pci.ids`），你可以将它们添加到 `/etc/debsums-ignore`。
+### 14.3.4.2 审核软件包：`debsums`及其局限性
 
-### 14.3.4.3. 监控：AIDE
+`debsums`是`dpkg -V`的祖先，因此大部分已经过时。它受到与 dpkg 相同的限制。幸运的是，某些限制可以通过变通方法解决（而 dpkg 不提供类似的替代方案）。
 
-AIDE 工具（*高级入侵检测环境*）允许检查文件完整性，并与之前记录的有效系统镜像对比任何更改。此镜像存储在数据库（`/var/lib/aide/aide.db`）中，包含系统中所有文件的相关信息（指纹、权限、时间戳等）。该数据库首先通过 `aideinit` 初始化；然后每天（通过 `/etc/cron.daily/aide` 脚本）使用，以检查没有重要内容发生变化。当检测到更改时，AIDE 将其记录在日志文件中（`/var/log/aide/*.log`），并通过电子邮件将其发现发送给管理员。
+由于磁盘上的数据不可信，`debsums`建议基于`.deb`文件进行检查，而不是依赖 dpkg 的数据库。为了下载所有安装软件包的可信`.deb`文件，我们可以依靠 APT 的认证下载。此操作可能很缓慢且单调，因此不应被视为一种经常使用的主动技术。
 
-###保护数据库
+```bash
+# apt-get --reinstall -d install `grep-status -e 'Status: install ok installed' -n -s Package` [ ... ]
+# debsums -p /var/cache/apt/archives --generate=all
+```
+
+注意，此示例使用了 dctrl-tools 包中的`grep-status`命令，该包默认未安装。
+
+可以通过在`/etc/default/debsums`中设置`CRON_CHECK`作为 cron 任务频繁运行`debsums`。要忽略`/etc`目录之外某些故意修改或预期会更改的文件（如`/usr/share/misc/pci.ids`），你可以将它们添加到`/etc/debsums-ignore`。
+
+### 14.3.4.3 监控：AIDE
+
+AIDE 工具（高级入侵检测环境）允许检查文件完整性，并与之前记录的有效系统镜像对比任何更改。此镜像存储在数据库（`/var/lib/aide/aide.db`）中，包含系统中所有文件的相关信息（指纹、权限、时间戳等）。该数据库首先通过`aideinit`初始化；然后每天（通过`/etc/cron.daily/aide`脚本）使用，以检查没有重要内容发生变化。当检测到更改时，AIDE 将其记录在日志文件中（`/var/log/aide/*.log`），并通过电子邮件将其发现发送给管理员。
+
+### 保护数据库
 
 由于 AIDE 使用本地数据库来比较文件状态，其结果的有效性直接取决于数据库的有效性。如果攻击者在受破坏的系统中获得了 root 权限，他们将能够数据库并掩盖踪迹。一种可能的替代方案是将参考数据存储在只读存储介质上。
 
-`/etc/default/aide` 中的许多选项可以调整 aide 软件包的行为。AIDE 本身的配置存储在 `/etc/aide/aide.conf` 和 `/etc/aide/aide.conf.d/`（实际上，这些文件仅被 `update-aide.conf` 用于生成 `/var/lib/aide/aide.conf.autogenerated`）。配置指示了需要检查哪些文件的哪些属性。例如，日志内容经常更改，只要这些文件的权限保持不变，就可以忽略此类更改，但可执行程序的内容和权限必须保持不变。虽然并不复杂，配置语法并不完全直观，因此建议阅读 `aide.conf(5)` 手册页。
+`/etc/default/aide`中的许多选项可以调整 aide 软件包的行为。AIDE 本身的配置存储在`/etc/aide/aide.conf`和`/etc/aide/aide.conf.d/`（实际上，这些文件仅被`update-aide.conf`用于生成`/var/lib/aide/aide.conf.autogenerated`）。配置指示了需要检查哪些文件的哪些属性。例如，日志内容经常更改，只要这些文件的权限保持不变，就可以忽略此类更改，但可执行程序的内容和权限必须保持不变。虽然并不复杂，配置语法并不完全直观，因此建议阅读`aide.conf(5)`手册页。
 
-新版本的数据库每天在 `/var/lib/aide/aide.db.new` 中生成；如果所有记录的更改都是合法的，可以使用它来替换参考数据库。
+新版本的数据库每天在`/var/lib/aide/aide.db.new`中生成；如果所有记录的更改都是合法的，可以使用它来替换参考数据库。
 
-### 替代方案 Tripwire 和 Samhain
+### 替代方案：Tripwire 和 Samhain
 
 Tripwire 与 AIDE 非常相似；甚至配置文件语法也几乎相同。tripwire 提供的主要新增是对配置文件进行签名的机制，以便攻击者无法指向不同版本的参考数据库。
 
-Samhain 也提供了类似的功能，以及一些帮助检测 rootkits 的功能（参见侧边栏 *快速查看 checksecurity 和 chkrootkit/rkhunter 软件包）。它也可以在网络范围内部署，并在中央服务器上记录踪迹（带有签名）。
+Samhain 也提供了类似的功能，以及一些帮助检测 rootkits 的功能（参见侧边栏“快速查看 checksecurity 和 chkrootkit/rkhunter 软件包”）。它也可以在网络范围内部署，并在中央服务器上记录踪迹（带有签名）。
 
 ### 快速查看
 
 这些软件包中的第一个包含几个小脚本，对系统执行基本检查（空密码、新的 setuid 文件等），并在需要时警告管理员。尽管名称明确，但管理员不应仅依赖它来确保 Linux 系统的安全。
 
-`chkrootkit` 和 `rkhunter` 软件包允许查找可能安装在系统上的 *rootkits*。提醒，这些是旨在隐藏系统被入侵情况并秘密控制机器的软件。这些测试并非 100% 可靠，但它们通常能引起管理员对潜在问题的注意。
+`chkrootkit`和`rkhunter`软件包允许查找可能安装在系统上的 rootkits。提醒，这些是旨在隐藏系统被入侵情况并秘密控制机器的软件。这些测试并非 100% 可靠，但它们通常能引起管理员对潜在问题的注意。
 
-`rkhunter` 还会执行检查以查看命令是否被修改、系统启动文件是否被修改，以及对网络接口的各种检查，包括对监听应用程序的检查。
+`rkhunter`还会执行检查以查看命令是否被修改、系统启动文件是否被修改，以及对网络接口的各种检查，包括对监听应用程序的检查。
 
-### 14.3.5. 检测入侵 (IDS/NIDS)
+## 14.3.5 检测入侵（IDS/NIDS）
 
-### 回归基础 拒绝服务
-
-
-
-
+### 回归基础：拒绝服务
 
 “拒绝服务”攻击只有一个目标：让服务不可用。无论这种攻击是通过过载查询使服务器过载，还是利用漏洞，最终结果都是相同的：服务不再运行。普通用户会感到不悦，而托管目标网络服务的实体会遭受声誉损失（可能还会产生损失，例如，如果该服务是一个电子商务网站）。
 
-这种攻击有时是“分布式的”；这通常涉及来自许多不同源的大量查询使服务器过载，导致服务器无法响应合法的查询。这些类型的攻击有了广为人知的缩写：`DDoS` 和 `DoS`（取决于拒绝服务攻击是否为分布式）。
+这种攻击有时是“分布式的”；这通常涉及来自许多不同源的大量查询使服务器过载，导致服务器无法响应合法的查询。这些类型的攻击有了广为人知的缩写：`DDoS`和`DoS`（取决于拒绝服务攻击是否为分布式）。
 
-`suricata`（在同名的 Debian 软件包中）是一个 NIDS —— 即*网络入侵检测系统*（Network Intrusion Detection System）。它的功能是监听网络并尝试检测入侵尝试和/或敌行为（包括拒绝服务攻击）。所有这些事件都记录在 `/var/log/suricata` 的多个文件中。可以使用第三方工具（Kibana/logstash）来更好地浏览所有收集的数据。
+`suricata`（在同名的 Debian 软件包中）是一个 NIDS —— 即网络入侵检测系统（Network Intrusion Detection System）。它的功能是监听网络并尝试检测入侵尝试和/或敌行为（包括拒绝服务攻击）。所有这些事件都记录在`/var/log/suricata`的多个文件中。可以使用第三方工具（Kibana/logstash）来更好地浏览所有收集的数据。
 
-→ [`suricata-ids.org`](https://suricata-ids.org)→ [`www.elastic.co/products/kibana`](https://www.elastic.co/products/kibana)
+- [`suricata-ids.org`](https://suricata-ids.org)
+- [`www.elastic.co/products/kibana`](https://www.elastic.co/products/kibana)
 
-**注意** 范围
+> **注意：范围**
+>
+> `suricata`的有效性受限于监控网络接口上的流量。如果它无法观察到真实流量，它显然无法检测到任何内容。因此，当它插入网络交换机时，它只会监控针对其运行机器的攻击，这可能并不是初意所在。因此，托管`suricata`的机器应该连接到交换机的“镜像”端口（mirror port），该端口通常用于级联交换机，因此可以获得流量。
 
-`suricata` 的有效性受限于监控网络接口上的流量。如果它无法观察到真实流量，它显然无法检测到任何内容。因此，当它插入网络交换机时，它只会监控针对其运行机器的攻击，这可能并不是初意所在。因此，托管 `suricata` 的机器应该连接到交换机的“镜像”端口（mirror port），该端口通常用于级联交换机，因此可以获得流量。
+配置`suricata`涉及查看和编辑`/etc/suricata/suricata-debian.yaml`，它非常长，因为每个参数都有丰富的注释。最少的配置需要描述本地网络覆盖的地址范围（`HOME_NET`参数）。在实践中，这意味着所有潜在攻击目标的集合。但要充分利用其作用，需要完整阅读它并根据本地情况进行调整。
 
-配置 `suricata` 涉及查看和编辑 `/etc/suricata/suricata-debian.yaml`，它非常长，因为每个参数都有丰富的注释。最少的配置需要描述本地网络覆盖的地址范围（`HOME_NET` 参数）。在实践中，这意味着所有潜在攻击目标的集合。但要充分利用其作用，需要完整阅读它并根据本地情况进行调整。
+此外，你还应该编辑`/etc/default/suricata`以定义要监控的网络接口并启用初始化脚本（通过设置`RUN=yes`）。你可能还想设置`LISTENMODE=pcap`，因为默认的`LISTENMODE=nfqueue`需要进一步配置才能正常工作（必须配置 netfilter 防火墙将数据包传递到`suricata`通过`NFQUEUE`目标处理的用户空间队列）。
 
-此外，你还应该编辑 `/etc/default/suricata` 以定义要监控的网络接口并启用初始化脚本（通过设置 `RUN=yes`）。你可能还想设置 `LISTENMODE=pcap`，因为默认的 `LISTENMODE=nfqueue` 需要进一步配置才能正常工作（必须配置 netfilter 防火墙将数据包传递到 `suricata` 通过 `NFQUEUE` 目标处理的用户空间队列）。
+为了检测不良行为，`suricata`需要一组监控规则：你可以在`snort-rules-default`软件包中找到这些规则。`snort`是 IDS 生态系统的历史参考，`suricata`能够重用为它编写的规则。
 
-为了检测不良行为，`suricata` 需要一组监控规则：你可以在 `snort-rules-default` 软件包中找到这些规则。`snort` 是 IDS 生态系统的历史参考，`suricata` 能够重用为它编写的规则。
+或者，可以使用`oinkmaster`（在同名的软件包中）从外部源下载 Snort 规则集。
 
-或者，可以使用 `oinkmaster`（在同名的软件包中）从外部源下载 Snort 规则集。
-
-**进阶** 与 `prelude` 集成
-
-Prelude 提供了安全信息的集中化监控。它的模块化架构包含一个服务器（`prelude-manager` 中的*管理器*/manager），它收集由各种类型的*传感器*（sensors）生成的告报。
-
-Suricata 可以被配置为这样的传感器。其他可能性包括 `prelude-lml`（*日志监控随从*/Log Monitor Lackey），它监控日志文件（方式类似于第 14.3.1 节，“使用 **logcheck** 监控日志”）。
+> **进阶：与`prelude`集成**
+>
+> Prelude 提供了安全信息的集中化监控。它的模块化架构包含一个服务器（`prelude-manager`中的管理器/manager），它收集由各种类型的传感器（sensors）生成的告报。
+>
+> Suricata 可以被配置为这样的传感器。其他可能性包括`prelude-lml`（日志监控随从/Log Monitor Lackey），它监控日志文件（方式类似于第 14.3.1 节，“使用`logcheck`监控日志”）。
 
 # 14.4 AppArmor 简介
 
-## 14.4.1. 原理
+## 14.4.1 原理
 
-AppArmor 是构建在 Linux LSM（*Linux 安全模块*）接口上的*强制访问控制*（MAC）系统。在实践中，内核在每次系统调用之前都会查询 AppArmor，以确定进程是否有权执行给的操作。通过这种机制，AppArmor 将程序限制在有限的资源中。
+AppArmor 是构建在 Linux LSM（Linux 安全模块）接口上的强制访问控制（MAC）系统。在实践中，内核在每次系统调用之前都会查询 AppArmor，以确定进程是否有权执行给的操作。通过这种机制，AppArmor 将程序限制在有限的资源中。
 
 AppArmor 在每个程序上应用一组规则（称为“配置文件”/profile）。内核所应用的配置文件取决于正在执行的程序的安装路径。与 SELinux（在第 14.5 节，“SELinux 简介”）相反，所应用的规则不取决于用户。所有用户在执行同一个程序时都面临同一组规则（但传统的用户权限仍然有效并可能导致不同的行为！）。
 
-AppArmor 配置文件存储在 `/etc/apparmor.d/` 中，它们包含了每个程序可以使用的资源的访问控制规则列表。配置文件由 `apparmor_parser` 命令编译并加载到内核。每个配置文件都可以以强制模式（enforcing mode）或投诉模式（complaining mode）加载。前者执行策略并报告违规尝试，而后者不强制策略但仍记录会被拒绝的系统调用。
+AppArmor 配置文件存储在`/etc/apparmor.d/`中，它们包含了每个程序可以使用的资源的访问控制规则列表。配置文件由`apparmor_parser`命令编译并加载到内核。每个配置文件都可以以强制模式（enforcing mode）或投诉模式（complaining mode）加载。前者执行策略并报告违规尝试，而后者不强制策略但仍记录会被拒绝的系统调用。
 
-## 14.4.2. 启用 AppArmor 和管理 AppArmor 配置文件
+## 14.4.2 启用 AppArmor 和管理 AppArmor 配置文件
 
-AppArmor 支持内置在 Debian 提供的标准内核中。因此，启用 AppArmor 只需要通过 root 权限执行 `apt install apparmor apparmor-profiles apparmor-utils` 安装一些软件包。
+AppArmor 支持内置在 Debian 提供的标准内核中。因此，启用 AppArmor 只需要通过 root 权限执行`apt install apparmor apparmor-profiles apparmor-utils`安装一些软件包。
 
-安装后，AppArmor 即可工作，`aa-status` 将快速确认这一点：
+安装后，AppArmor 即可工作，`aa-status`将快速确认这一点：
 
+```text
+# aa-status
+apparmor module is loaded.
+40 profiles are loaded.
+23 profiles are in enforce mode.
+/usr/bin/evince
+/usr/bin/evince-previewer
+[...]
+17 profiles are in complain mode.
+/usr/sbin/dnsmasq
+[...]
+14 processes have profiles defined.
+12 processes are in enforce mode.
+/usr/bin/evince (3462)
+[...]
+2 processes are in complain mode.
+/usr/sbin/avahi-daemon (429) avahi-daemon
+/usr/sbin/avahi-daemon (511) avahi-daemon
+0 processes are unconfined but have a profile defined.
 ```
-# aa-status apparmor module is loaded. 40 profiles are loaded. 23 profiles are in enforce mode. /usr/bin/evince /usr/bin/evince-previewer [...] 17 profiles are in complain mode. /usr/sbin/dnsmasq [...] 14 processes have profiles defined. 12 processes are in enforce mode. /usr/bin/evince (3462) [...] 2 processes are in complain mode. /usr/sbin/avahi-daemon (429) avahi-daemon /usr/sbin/avahi-daemon (511) avahi-daemon 0 processes are unconfined but have a profile defined.
+
+> **注意：更多 AppArmor 配置文件**
+>
+> apparmor-profiles 软件包包含了由上游 AppArmor 社区管理的配置文件。要获取更多配置文件，可以安装`apparmor-profiles-extra`，它包含了由 Ubuntu 和 Debian 开发的配置文件。
+
+可以通过调用`aa-enforce`和`aa-complain`在强制模式和投诉模式之间切换每个配置的状态，参数可以是可执行文件的路径或策略文件的路径。此外，可以使用`aa-disable`完全禁用配置文件，或使用`aa-audit`将置于审计模式（也记录允许的系统调用）。
+
+```bash
+# aa-enforce /usr/bin/pidgin
+Setting /usr/bin/pidgin to enforce mode.
+
+# aa-complain /usr/sbin/dnsmasq
+Setting /usr/sbin/dnsmasq to complain mode.
 ```
 
-**注意** 更多 AppArmor 配置文件
-
-apparmor-profiles 软件包包含了由上游 AppArmor 社区管理的配置文件。要获取更多配置文件，可以安装 `apparmor-profiles-extra`，它包含了由 Ubuntu 和 Debian 开发的配置文件。
-
-可以通过调用 `aa-enforce` 和 `aa-complain` 在强制模式和投诉模式之间切换每个配置的状态，参数可以是可执行文件的路径或策略文件的路径。此外，可以使用 `aa-disable` 完全禁用配置文件，或使用 `aa-audit` 将置于审计模式（也记录允许的系统调用）。
-
-```
-# aa-enforce /usr/bin/pidgin Setting /usr/bin/pidgin to enforce mode.
-# aa-complain /usr/sbin/dnsmasq Setting /usr/sbin/dnsmasq to complain mode.
-```
-
-## 14.4.3. 创建新配置文件
+## 14.4.3 创建新配置文件
 
 尽管创建 AppArmor 配置文件相当简单，但大多数程序都没有配置文件。本节将向你展示如何仅通过目标程序从头创建一个配置文件，并让 AppArmor 监控它所做的系统调用以及它访问的资源。
 
-需要被限制的重要程序是面向网络的程序，因为它们最可能成为远程攻击者的目标。这就是为什么 AppArmor 方便地提供了一个 `aa-unconfined` 命令来列出没有关联配置文件且暴露开放网络套接字的程序。使用 `--paranoid` 选项，你可以获得所有至少有一个活动网络连接的未限制进程。
+需要被限制的重要程序是面向网络的程序，因为它们最可能成为远程攻击者的目标。这就是为什么 AppArmor 方便地提供了一个`aa-unconfined`命令来列出没有关联配置文件且暴露开放网络套接字的程序。使用`--paranoid`选项，你可以获得所有至少有一个活动网络连接的未限制进程。
 
-
-
-
-
-# `aa-unconfined` 801 `/sbin/dhclient` 未受限制 409 `/usr/sbin/NetworkManager` 未受限制 411 `/usr/sbin/cupsd` 受限制于 `/usr/sbin/cupsd (enforce)'` 429 `/usr/sbin/avahi-daemon` 受限制于 `'avahi-daemon (enforce)'` 516 `/usr/sbin/cups-browsed` 受限制于 `/usr/sbin/cups-browsed (enforce)'` 538 `/usr/sbin/zebra` 未受限制 591 `/usr/sbin/named` 未受限制 847 `/usr/sbin/mysqld` 未受限制 849 `/usr/sbin/sshd` 未受限制 1013 `/usr/sbin/dhclient` (`/sbin/dhclient`) 未受限制 1276 `/usr/sbin/apache2` 未受限制 1322 `/usr/sbin/apache2` 未受限制 1323 `/usr/sbin/apache2` 未受限制 1324 `/usr/sbin/apache2` 未受限制 1325 `/usr/sbin/apache2` 未受限制 1327 `/usr/sbin/apache2` 未受限制 1829 `/usr/lib/ipsec/charon` 受限制于 `/usr/lib/ipsec/charon (enforce)'` 2132 `/usr/sbin/exim4` 未受限制 12865 `/usr/bin/python3.7` (`/usr/bin/python3`) 未受限制 12873 `/usr/bin/python3.7` (`/usr/bin/python3`) 未受限制
-
-在接下来的示例中，我们将尝试为 `/sbin/dhclient` 创建一个配置文件（profile）。为此我们将使用 `aa-genprof dhclient`。在 Debian Buster 中存在一个已知 Bug，会导致上述命令带有以下错误失败：`ERROR: Include file /etc/apparmor.d/local/usr.lib.dovecot.deliver not found`。请使用 `touch file` 创建缺失的文件来修复它。它将提示您在另一个窗口中使用该程序，并在完成后返回 `aa-genprof` 以扫描系统日志中的 AppArmor 事件，并将这些日志转换为访问规则。对于每个记录的事件，它将提供一条或多条规则建议，您可以通过多种方式批准或进一步编辑：
-
+```text
+# aa-unconfined
+801 /sbin/dhclient 未受限制
+409 /usr/sbin/NetworkManager 未受限制
+411 /usr/sbin/cupsd 受限制于 /usr/sbin/cupsd (enforce)
+429 /usr/sbin/avahi-daemon 受限制于 avahi-daemon (enforce)
+516 /usr/sbin/cups-browsed 受限制于 /usr/sbin/cups-browsed (enforce)
+538 /usr/sbin/zebra 未受限制
+591 /usr/sbin/named 未受限制
+847 /usr/sbin/mysqld 未受限制
+849 /usr/sbin/sshd 未受限制
+1013 /usr/sbin/dhclient (/sbin/dhclient) 未受限制
+1276 /usr/sbin/apache2 未受限制
+1322 /usr/sbin/apache2 未受限制
+1323 /usr/sbin/apache2 未受限制
+1324 /usr/sbin/apache2 未受限制
+1325 /usr/sbin/apache2 未受限制
+1327 /usr/sbin/apache2 未受限制
+1829 /usr/lib/ipsec/charon 受限制于 /usr/lib/ipsec/charon (enforce)
+2132 /usr/sbin/exim4 未受限制
+12865 /usr/bin/python3.7 (/usr/bin/python3) 未受限制
+12873 /usr/bin/python3.7 (/usr/bin/python3) 未受限制
 ```
+
+
+
+在接下来的示例中，我们将尝试为`/sbin/dhclient`创建一个配置文件（profile）。为此我们将使用`aa-genprof dhclient`。在 Debian Buster 中存在一个已知 Bug，会导致上述命令带有以下错误失败：`ERROR: Include file /etc/apparmor.d/local/usr.lib.dovecot.deliver not found`。请使用`touch file`创建缺失的文件来修复它。
+
+它将提示您在另一个窗口中使用该程序，并在完成后返回`aa-genprof`以扫描系统日志中的 AppArmor 事件，并将这些日志转换为访问规则。对于每个记录的事件，它将提供一条或多条规则建议，您可以通过多种方式批准或进一步编辑：
+
+```text
 # aa-genprof dhclient
 正在为 /usr/sbin/dhclient 写入配置文件。将 /usr/sbin/dhclient 设置为投诉模式（complain mode）。在开始之前，您可能希望检查想要限制的程序是否已存在配置文件。更多信息请参见以下 wiki 页面：https://gitlab.com/apparmor/apparmor/wikis/Profiles 分析中: /usr/sbin/dhclient 请在另一个窗口中启动要分析的程序并现在运行其功能。完成后，选择下方的“扫描 (Scan)”选项以扫描系统日志中的 AppArmor 事件。对于每个 AppArmor 事件，您将有机会选择允许还是拒绝访问。[(S)扫描系统日志以查找 AppArmor 事件] / (F)完成 完成 正在从 /var/log/syslog 读取日志条目。正在更新 /etc/apparmor.d 中的 AppArmor 配置文件。配置文件: /usr/sbin/dhclient 执行: /usr/sbin/dhclient-script 严重性: unknown (I)继承 / (C)子 / (P)配置 / (N)命名 / (U)未限制 / (X)开启 / (D)拒绝 / 动(r)终止 / (F)完成 P 在切换配置文件时，AppArmor 是否应该清理环境？清理环境更安全，但某些应用程序依赖于 LD_PRELOAD 或 LD_LIBRARY_PATH 的存在。(Y)是 / [(N)否] Y 正在为 /usr/sbin/dhclient-script 写入配置文件。投诉模式更改: 配置文件: /usr/sbin/dhclient 权限: net_raw 严重性: 8 [1 - capability net_raw,] [(A)允许] / (D)拒绝 / (I)忽略 / 审计(t) / 动(r)终止 / (F)完成 A 向配置文件添加权限 net_raw。配置文件: /sbin/dhclient 权限: net_bind_service 严重性: 8 [1 - #include <abstractions/nis> ] 2 - capability net_bind_service, (A)允许 / [(D)拒绝] / (I)忽略 / 审计(t) / 动(r)终止 / (F)完成 A 向配置文件添加 #include <abstractions/nis>。配置文件: /usr/sbin/dhclient 路径: /etc/ssl/openssl.cnf 新模式: owner r 严重性: 2 [1 - #include <abstractions/lightdm>] 2 - #include <abstractions/openssl> 3 - #include <abstractions/ssl_keys> 4 - owner /etc/ssl/openssl.cnf r, (A)允许 / [(D)拒绝] / (I)忽略 / (G)全局 带有 (E)扩展的全局 / (N)新 / 审计(t) / (O)者权限关闭 / 动(r)终止 / (F)完成 2 配置文件: /usr/sbin/dhclient 路径: /etc/ssl/openssl.cnf 新模式: owner r 严重性: 2 1 - #include <abstractions/lightdm> [2 - #include <abstractions/openssl>] 3 - #include <abstractions/ssl_keys> 4 - owner /etc/ssl/openssl.cnf r, [(A)允许] / (D)拒绝) / (I)忽略 / (G)全局 带有 (E)扩展的全局 / (N)新 / 动(r)终止 / (F)完成 / (M)更多 A [...] 配置文件: /usr/sbin/dhclient-script 路径: /usr/bin/dash 新模式: owner r 严重性: unknown [1 - #include <abstractions/lightdm>] 2 - #include <abstractions/ubuntu-browsers.d/plugins-common> 3 - owner /usr/bin/dash r, (A)允许 / [(D)拒绝] / (I)忽略 / (G)全局 带有 (E)扩展的全局 / (N)新 / 审计(t) / (O)者权限关闭 / 动(r)终止 / (F)完成 A 向配置文件添加 #include <abstractions/lightdm>。已删除了匹配的配置文件条目。您想保存它们吗？[1 - /usr/sbin/dhclient] 2 - /usr/sbin/dhclient-script 更改本地配置文件 / 保存 / c)清理 / 查看配置文件 / 查看更改 S 正在为 /usr/sbin/dhclient 写入配置文件。正在为 /usr/sbin/dhclient-script 写入配置文件。请在另一个窗口中启动要分析的程序并现在运行其功能。完成后，选择下方的“扫描 (Scan)”选项以扫描系统日志中的 AppArmor 事件。对于每个 AppArmor 事件，您将有机会选择允许还是拒绝访问。[(S)扫描系统日志以查找 AppArmor 事件] / (F)完成 F 重新加载了强制模式下的 AppArmor 配置文件。请考虑贡献您的新配置文件！
 ```
 
+| ![4](img/#ch14s04.html_aa-genprof-other-profile) | 注意，此访问请求不是`dhclient`配置文件的一部分，而是我们我们在允许`/usr/sbin/dhclient-script`以其自己的配置运行时而创建的新配置。在处理完所有记录事件后，程序将提议保存运行期间创建的所有配置。在这种情况下，我们可以在点击“Save”（保存）时同时保存两个配置（但你也可以单独保存它们），然后通过“Finish”（完成）退出程序。 |
 
+`aa-genprof`实际上只是`aa-logprof`的一个智能封装器：它会创建一个空配置，以投诉模式（complain mode）加载它，然后运行`aa-logprof`，这是一个根据已记录的配置违规行为来更新配置的工具。因此，你以后可以重新运行该工具来改进你刚刚创建的配置。
 
+如果你希望生成的配置是完整的，你应该按照所有合法的使用方式使用该程序。对于`dhclient`来说，这意味着通过 Network Manager 运行它、通过`ifupdown`运行它、手动运行等。最后，你可能会得到一个类似`/etc/apparmor.d/usr.sbin.dhclient`的文件：
 
-| ![4](img/#ch14s04.html_aa-genprof-other-profile) | 注意，此访问请求不是 `dhclient` 配置文件的一部分，而是我们我们在允许 `/usr/sbin/dhclient-script` 以其自己的配置运行时而创建的新配置。在处理完所有记录事件后，程序将提议保存运行期间创建的所有配置。在这种情况下，我们可以在点击“Save”（保存）时同时保存两个配置（但你也可以单独保存它们），然后通过“Finish”（完成）退出程序。 |
-
-`aa-genprof` 实际上只是 `aa-logprof` 的一个智能封装器：它会创建一个空配置，以投诉模式（complain mode）加载它，然后运行 `aa-logprof`，这是一个根据已记录的配置违规行为来更新配置的工具。因此，你以后可以重新运行该工具来改进你刚刚创建的配置。
-
-如果你希望生成的配置是完整的，你应该按照所有合法的使用方式使用该程序。对于 `dhclient` 来说，这意味着通过 Network Manager 运行它、通过 `ifupdown` 运行它、手动运行等。最后，你可能会得到一个类似 `/etc/apparmor.d/usr.sbin.dhclient` 的文件：
-
-```
+```text
 # Last Modified: Fri Jul 5 00:51:02 2019 #include <tunables/global> /usr/sbin/dhclient { #include <abstractions/base> #include <abstractions/nameservice> capability net_bind_service, capability net_raw, /bin/dash r, /etc/dhcp/* r, /etc/dhcp/dhclient-enter-hooks.d/* r, /etc/dhcp/dhclient-exit-hooks.d/* r, /etc/resolv.conf.* w, /etc/samba/dhcp.conf.* w, /proc/*/net/dev r, /proc/filesystems r, /run/dhclient*.pid w, /sbin/dhclient mr, /sbin/dhclient-script rCx, /usr/lib/NetworkManager/nm-dhcp-helper Px, /var/lib/NetworkManager/* r, /var/lib/NetworkManager/*.lease rw, /var/lib/dhcp/*.leases rw, owner /var/** mrwk, owner /var/** mrwk, owner /{,var/}run/** mrwk, }
 ```
 
-而 `/etc/apparmor.d/usr.sbin.dhclient-script` 可能类似于此所示：
+而`/etc/apparmor.d/usr.sbin.dhclient-script`可能类似于此所示：
 
-```
+```text
 # Last Modified: Fri Jul 5 00:51:55 2019 #include <tunables/global> /usr/sbin/dhclient-script { #include <abstractions/base> #include <abstractions/bash> #include <abstractions/lightdm> }
 ```
 
@@ -9681,27 +10019,27 @@ apparmor-profiles 软件包包含了由上游 AppArmor 社区管理的配置文�
 
 ## 14.5.1. 原则
 
-SELinux (*Security Enhanced Linux*) 是构建在 Linux 的 LSM (*Linux Security Modules*) 接口之上的*强制访问控制*系统。在实践中，内核在每次系统调用之前都会查询 SELinux，以确定进程是否有权执行给定的操作。
+SELinux（`Security Enhanced Linux`）是构建在 Linux 的 LSM（`Linux Security Modules`）接口之上的强制访问控制系统。在实践中，内核在每次系统调用之前都会查询 SELinux，以确定进程是否有权执行给定的操作。
 
-SELinux 使用一组规则——统称为*策略*（policy）——来授权或禁止操作。这些规则很难创建。幸运的是，系统提供了两种标准策略（*targeted*“目标型”和 *strict*“严格型”），以避免大部分的配置工作。
+SELinux 使用一组规则——统称为策略（policy）——来授权或禁止操作。这些规则很难创建。幸运的是，系统提供了两种标准策略（`targeted`“目标型”和`strict`“严格型”），以避免大部分的配置工作。
 
-在 SELinux 中，权限的管理与传统的 Unix 系统完全不同。进程的权限取决于其*安全上下文*（security context）。上下文由启动进程的用户*身份*（identity）、以及该用户当时所持有的*角色*（role）和*域*（domain）定义。权限实际上取决于域，但域之间的转换由角色控制。最后，角色之间可能的转换取决于用户身份。
+在 SELinux 中，权限的管理与传统的 Unix 系统完全不同。进程的权限取决于其安全上下文（security context）。上下文由启动进程的用户身份（identity）、以及该用户当时所持有的角色（role）和域（domain）定义。权限实际上取决于域，但域之间的转换由角色控制。最后，角色之间可能的转换取决于用户身份。
 
 图 14.1. 安全上下文与 Unix 用户![Security contexts and Unix users](img/selinux-context.png)
 
-在实践中，在登录期间，用户会被分分配一个默认的安全上下文（取决于他们应该能够许可的角色）。这定义了当前的域，从而定义了所有新子进程将携带的域。如果你想更改当前角色及其关联的域，必须调用 `newrole -r role_r -t domain_t`（通常一个给角色只允许一个域，因此 `-t` 参数通常可以省略）。此命令通过要求输入密码来验证你的身份。此功能禁止了程序自动切换角色。此类更改只有在 SELinux 策略中显式允许的情况下才能发生。
+在实践中，在登录期间，用户会被分分配一个默认的安全上下文（取决于他们应该能够许可的角色）。这定义了当前的域，从而定义了所有新子进程将携带的域。如果你想更改当前角色及其关联的域，必须调用`newrole -r role_r -t domain_t`（通常一个给角色只允许一个域，因此`-t`参数通常可以省略）。此命令通过要求输入密码来验证你的身份。此功能禁止了程序自动切换角色。此类更改只有在 SELinux 策略中显式允许的情况下才能发生。
 
-显然，权限并不适用于所有*对象*（文件、目录、套接字、设备等）。它们可能因对象而异。为了实现这一点，每个对象都关联到一个*类型*（type）（这被称为标记）。因此，域的权限通过对这些类型允许（或不允许）的操作集来表示（间接地，对所有标记为给定类型的对象生效）。
+显然，权限并不适用于所有对象（文件、目录、套接字、设备等）。它们可能因对象而异。为了实现这一点，每个对象都关联到一个类型（type）（这被称为标记）。因此，域的权限通过对这些类型允许（或不允许）的操作集来表示（间接地，对所有标记为给定类型的对象生效）。
 
 * * *
 
 *额外说明* 域和类型是等价的
 
-在内部，域只是一个类型，但仅适用于进程的类型。这就是为什么域的后缀和对象的类型一样都是 `_t`。
+在内部，域只是一个类型，但仅适用于进程的类型。这就是为什么域的后缀和对象的类型一样都是`_t`。
 
 * * *
 
-默认情况下，程序从启动它的用户那里继承其域，但标准的 SELinux 策略期望许多重要程序在专门的域中运行。为了实现这一点，这些可执行文件被标记了专门的类型（例如，**ssh** 被标记为 `ssh_exec_t`，当程序启动时，它会自动切换到 `ssh_t` 域）。这种自动域转换机制使得仅授予每个程序所需的权限成为可能。这是 SELinux 的基本原则。
+默认情况下，程序从启动它的用户那里继承其域，但标准的 SELinux 策略期望许多重要程序在专门的域中运行。为了实现这一点，这些可执行文件被标记了专门的类型（例如，`ssh`被标记为`ssh_exec_t`，当程序启动时，它会自动切换到`ssh_t`域）。这种自动域转换机制使得仅授予每个程序所需的权限成为可能。这是 SELinux 的基本原则。
 
 图 14.2. 域之间的自动转换![Automatic transitions between domains](img/selinux-transitions.png)
 
@@ -9709,58 +10047,52 @@ SELinux 使用一组规则——统称为*策略*（policy）——来授权或�
 
 *实践中* 查找安全上下文
 
-要找到给定进程的安全上下文，你应该使用 `ps` 的 `Z` 选项。
+要找到给定进程的安全上下文，你应该使用`ps`的`Z`选项。
 
-```
+```text
 $ ps axZ | grep vstfpd
 system_u:system_r:ftpd_t:s0 2094 ? Ss 0:00 /usr/sbin/vsftpd
 ```
 
-第一个字段包含身份、角色、域和 MCS 级别，用冒号分隔。MCS 级别（*多分类安全*）是一个干预机密性策略设置的参数，它根据文件的敏感性来调节对文件的访问。该功能将在书中不再解释。
+第一个字段包含身份、角色、域和 MCS 级别，用冒号分隔。MCS 级别（多分类安全）是一个干预机密性策略设置的参数，它根据文件的敏感性来调节对文件的访问。该功能将在书中不再解释。
 
-若要在 shell 中查找当前的安全上下文，你应该调用 `id -Z`。
+若要在 shell 中查找当前的安全上下文，你应该调用`id -Z`。
 
-```
+```text
 $ id -Z
 unconfined_u:unconfined_r:unconfined_t:s0-s0:c0.1023
 ```
 
-最后，要找到分配给文件的类型，你可以使用 `ls -Z`。
+最后，要找到分配给文件的类型，你可以使用`ls -Z`。
 
-```
+```text
 $ ls -Z test /usr/bin/ssh
 unconfined_u:object_r:user_home_t:s0 test system_u:object_r:ssh_exec_t:s0 /usr/bin/ssh
 ```
 
 值得注意的是，分配给文件的身份和角色并没有特殊意义（它们从未被使用），但为了统一，所有对象都分配分配了安全上下文。
 
-* * *
-
 ## 14.5.2. 设置 SELinux
 
 SELinux 支持内置在 Debian 提供的标准内核中。核心 Unix 工具无需任何修改即可支持 SELinux。因此，启用 SELinux 相对容易。
 
-执行 `apt install selinux-basics selinux-policy-default` 命令将自动安装配置 SELinux 系统所需的包。
+执行`apt install selinux-basics selinux-policy-default`命令将自动安装配置 SELinux 系统所需的包。
 
-`selinux-policy-default` 软件包包含了一组标准规则。默认情况下，该策略仅限制几个广泛开放服务的访问。用户会话不会受到限制，因此 SELinux 不太可能阻止合法的用户操作。然而，这确实增强了运行在机器上的系统服务的安全性。要设置与旧“strict”规则同的策略，你只需要禁用 `unconfined` 模块（模块管理在本节中将详细介绍）。
+`selinux-policy-default`软件包包含了一组标准规则。默认情况下，该策略仅限制几个广泛开放服务的访问。用户会话不会受到限制，因此 SELinux 不太可能阻止合法的用户操作。然而，这确实增强了运行在机器上的系统服务的安全性。要设置与旧“strict”规则同的策略，你只需要禁用`unconfined`模块（模块管理在本节中将详细介绍）。
 
-一旦安装了策略，你就应对所有可用文件进行标记（这意味着为它们分配一个类型）。此操作必须通过 `fixfiles relabel` 手动启动。
+一旦安装了策略，你就应对所有可用文件进行标记（这意味着为它们分配一个类型）。此操作必须通过`fixfiles relabel`手动启动。
 
+SELinux 系统现在已就绪。要启用它，您应该向 Linux 内核添加`selinux=1 security=selinux`参数。`audit=1`参数会启用 SELinux 日志记录，记录所有被拒绝的操作。最后，`enforcing=1`参数将规则投入应用：如果没有它，SELinux 将以默认的`permissive`（允许）模式运行，此时被拒绝的操作会被记录但仍会执行。因此，您应该修改 GRUB 引导加载程序的配置文件以附加所需的参数。一种简单的方法是修改`/etc/default/grub`中的`GRUB_CMDLINE_LINUX`变量并运行`update-grub`。SELinux 将在重启后变为激活。
 
-
-
-
-SELinux 系统现在已就绪。要启用它，您应该向 Linux 内核添加 `selinux=1 security=selinux` 参数。`audit=1` 参数会启用 SELinux 日志记录，记录所有被拒绝的操作。最后，`enforcing=1` 参数将规则投入应用：如果没有它，SELinux 将以默认的 `permissive`（允许）模式运行，此时被拒绝的操作会被记录但仍会执行。因此，您应该修改 GRUB 引导加载程序的配置文件以附加所需的参数。一种简单的方法是修改 `/etc/default/grub` 中的 `GRUB_CMDLINE_LINUX` 变量并运行 `update-grub`。SELinux 将在重启后变为激活。
-
-值得注意的是，`selinux-activate` 脚本会自动执行这些操作，并在下次启动时强制进行标记处理（这避免了在 SELinux 尚未激活且正在标记期间创建新的未标记文件）。
+值得注意的是，`selinux-activate`脚本会自动执行这些操作，并在下次启动时强制进行标记处理（这避免了在 SELinux 尚未激活且正在标记期间创建新的未标记文件）。
 
 ## 14.5.3. 管理 SELinux 系统
 
-SELinux 策略是一组模块化的规则集，其安装过程会根据已安装的服务检测并启用所有相关模块。因此，系统可以立即运行。然而，当在 SELinux 策略之后安装服务时，您必须能够手动启用相应的模块。这就是 `semodule` 命令的用途。此外，您必须能够定义每个用户可以授权的角色，这可以通过 `semanage` 命令完成。
+SELinux 策略是一组模块化的规则集，其安装过程会根据已安装的服务检测并启用所有相关模块。因此，系统可以立即运行。然而，当在 SELinux 策略之后安装服务时，您必须能够手动启用相应的模块。这就是`semodule`命令的用途。此外，您必须能够定义每个用户可以授权的角色，这可以通过`semanage`命令完成。
 
-这两个命令可以用于修改当前的 SELinux 配置，该配置存储在 `/etc/selinux/default/` 中。与在 `/etc/` 中可以找到的其他配置文件不同，所有这些文件都不能通过手动修改。您应该使用专为此目的设计的程序。
+这两个命令可以用于修改当前的 SELinux 配置，该配置存储在`/etc/selinux/default/`中。与在`/etc/`中可以找到的其他配置文件不同，所有这些文件都不能通过手动修改。您应该使用专为此目的设计的程序。
 
-### 深入学习 更多文档
+### 深入学习：更多文档
 
 由于 NSA（美国安全局）没有提供任何官方文档，社区建立了一个 wiki 来弥补。它汇了大量信息，但您必须意识到，大多数 SELinux 贡献者是 Fedora 用户（该发行版默认启用 SELinux）。因此，文档倾向于专门处理该发行版的内容。
 
@@ -9768,11 +10100,14 @@ SELinux 策略是一组模块化的规则集，其安装过程会根据已安装
 
 您还应该查看专门的 Debian wiki 页面以及 Russell Coker 的博客，他是致力于工作 SELinux 支持的最活跃的 Debian 开发者之一。
 
-→ [`wiki.debian.org/SELinux`](https://wiki.debian.org/SELinux) → [`etbe.coker.com.au/tag/selinux/`](https://etbe.coker.com.au/tag/selinux/)
+→ [`wiki.debian.org/SELinux`](https://wiki.debian.org/SELinux)  
+→ [`etbe.coker.com.au/tag/selinux/`](https://etbe.coker.com.au/tag/selinux/)
 
 ### 14.5.3.1. 管理 SELinux 模块
 
-可用的 SELinux 模块存储在 `/usr/share/selinux/default/` 目录下。要在当前配置中启用这些模块之一，应使用 `semodule -i module.pp.bz2`。`.pp.bz2` 扩展表示 `policy package`（使用 bzip2 压缩）。从当前配置中删除模块使用 `semodule -r module`。最后，`semodule -l` 命令列出当前安装的模块，并输出它们的版本号。可以使用 `semodule -e` 选择性地启用模块，使用 `semodule -d` 禁用。
+
+
+可用的 SELinux 模块存储在`/usr/share/selinux/default/`目录下。要在当前配置中启用这些模块之一，应使用`semodule -i module.pp.bz2`。`.pp.bz2`扩展表示`policy package`（使用 bzip2 压缩）。从当前配置中删除模块使用`semodule -r module`。最后，`semodule -l`命令列出当前安装的模块，并输出它们的版本号。可以使用`semodule -e`选择性地启用模块，使用`semodule -d`禁用。
 
 ```
 semodule -i /usr/share/selinux/default/abrt.pp.bz2
@@ -9788,15 +10123,15 @@ libsemanage.semanage_direct_remove_key: abrt module at priority 100 is now activ
 semodule -l
 ```
 
-`semodule` 会立即加载新配置，除非您使用 `-n` 选项。值得注意的是，该程序默认作用于当前配置（由 `/etc/selinux/config` 中的 `SELINUXTYPE` 变量指示），但您可以通过指定 `-s` 选项修改另一个配置。
+`semodule`会立即加载新配置，除非您使用`-n`选项。值得注意的是，该程序默认作用于当前配置（由`/etc/selinux/config`中的`SELINUXTYPE`变量指示），但您可以通过指定`-s`选项修改另一个配置。
 
 ### 14.5.3.2. 管理身份
 
-每当用户登录时，他们都会被分配一个 SELinux 身份。该身份定义了他们能够授权的角色。这两个映射（从用户到身份，以及从该身份到角色）可以使用 `semanage` 命令进行配置。
+每当用户登录时，他们都会被分配一个 SELinux 身份。该身份定义了他们能够授权的角色。这两个映射（从用户到身份，以及从该身份到角色）可以使用`semanage`命令进行配置。
 
-您绝对应该阅读 `semanage(8)` 手册页。所有管理的概念都有它们自己的手册页；例如 `semanage-login(8)`。尽管命令的语法对于所有管理的概念往往很相似，但建议阅读其手册页。您将发现大多数子命令的通用选项：`-a` 添加、`-d` 删除、`-m` 修改、`-l` 列出以及 `-t` 指明类型（或域）。
+您绝对应该阅读`semanage(8)`手册页。所有管理的概念都有它们自己的手册页；例如`semanage-login(8)`。尽管命令的语法对于所有管理的概念往往很相似，但建议阅读其手册页。您将发现大多数子命令的通用选项：`-a`添加、`-d`删除、`-m`修改、`-l`列出以及`-t`指明类型（或域）。
 
-`semanage login -l` 列出用户标识符与 SELinux 身份之间的当前映射。没有显式记录的用户将获得 `__default__` 条目中指定的身份。`semanage login -a -s user_u user` 命令将 `user_u` 身份关联到给定用户。最后，`semanage login -d user` 删除分配给此用户的映射条目。
+`semanage login -l`列出用户标识符与 SELinux 身份之间的当前映射。没有显式记录的用户将获得`__default__`条目中指定的身份。`semanage login -a -s user_u user`命令将`user_u`身份关联到给定用户。最后，`semanage login -d user`删除分配给此用户的映射条目。
 
 ```
 semanage login -a -s user_u rhertzog
@@ -9805,7 +10140,7 @@ Login Name SELinux User MLS/MCS Range Service __default__ unconfined_u s0-s0:c0.
 semanage login -d rhertzog
 ```
 
-`semanage user -l` 列出 SELinux 用户身份与允许的角色之间的映射。添加新身份需要定义相应的角色以及用于为个人文件（`/home/user/*`）分配类型的标记缀。前缀必须在 `user`、`staff` 和 `sysadm` 之间选择。`staff` 前缀产生类型为 `staff_home_dir_t` 的文件。使用 `semanage user -a -R roles -P prefix` 创建新的 SELinux 用户身份。最后，可以使用 `semanage user -d` 移除身份。
+`semanage user -l`列出 SELinux 用户身份与允许的角色之间的映射。添加新身份需要定义相应的角色以及用于为个人文件（`/home/user/*`）分配类型的标记缀。前缀必须在`user`、`staff`和`sysadm`之间选择。`staff`前缀产生类型为`staff_home_dir_t`的文件。使用`semanage user -a -R roles -P prefix`创建新的 SELinux 用户身份。最后，可以使用`semanage user -d`移除身份。
 
 ```
 semanage login -a -s user_u rhertzog 
@@ -9813,29 +10148,28 @@ semanage login -l
 Login Name SELinux User MLS/MCS Range Service __default__ unconfined_u s0-s0:c0.c1023 * rhertzog user_u s0 * root unconfined_u s0-s0:c0.c1023 *
 semanage login -d rhertzog
 ```
+
 （注：此节的源文本包含一些乱码/重复字符串；我已根据提供的命令上下文对逻辑进行了清理）。
 
 ### 14.5.3.3. 管理文件上下文、端口和布尔值
 
-每个 SELinux 模块提供一组文件标记规则，但也可以添加自定义标记规则以适应特定情况。例如，如果您想让 Web 服务器能够读取 `/srv/www/` 文件层次结构中的文件，可以执行 `semanage fcontext -a -t httpd_sys_content_t "/srv/www(/.*)?"` 然后运行 `restorecon -R /srv/www/`。前者命令注册新的标记规则，后者根据标记规则重置文件类型。
+每个 SELinux 模块提供一组文件标记规则，但也可以添加自定义标记规则以适应特定情况。例如，如果您想让 Web 服务器能够读取`/srv/www/`文件层次结构中的文件，可以执行`semanage fcontext -a -t httpd_sys_content_t "/srv/www(/.*)?"`然后运行`restorecon -R /srv/www/`。前者命令注册新的标记规则，后者根据标记规则重置文件类型。
 
-同样，TCP/UDP 端口的标记方式确保只有相应的守护进程可以监听它们。例如，如果您想让 Web 服务器能够监听 8080 端口，应运行 `semanage port -m -t http_port_t -p tcp 8080`。
+同样，TCP/UDP 端口的标记方式确保只有相应的守护进程可以监听它们。例如，如果您想让 Web 服务器能够监听 8080 端口，应运行`semanage port -m -t http_port_t -p tcp 8080`。
 
-某些 SELinux 模块导出布尔选项，您可以调整这些选项来更改默认规则的行为。可以使用 `getsebool` 工具检查这些选项（`getsebool boolean` 显示一个选项，`getsebool -a` 显示所有选项）。`setsebool boolean value` 命令更改布尔选项的当前值。`-P` 选项使更改永久，这意味着新值将成为默认值并在重启后保持有效。下面的示例允许 Web 服务器访问主目录（当用户在 `~/public_html/` 中有个人网站时非常用）。
-
-
-
-
+某些 SELinux 模块导出布尔选项，您可以调整这些选项来更改默认规则的行为。可以使用`getsebool`工具检查这些选项（`getsebool boolean`显示一个选项，`getsebool -a`显示所有选项）。`setsebool boolean value`命令更改布尔选项的当前值。`-P`选项使更改永久，这意味着新值将成为默认值并在重启后保持有效。下面的示例允许 Web 服务器访问主目录（当用户在`~/public_html/`中有个人网站时非常用）。
 
 `getsebool httpd_enable_homedirs` off
+
 `setsebool -P httpd_enable_homedirs` on
+
 `getsebool httpd_enable_homedirs` on
 
 ## 14.5.4 适配规则
 
-由于 SELinux 策略是模块化的，为那些缺少策略的（可能是自定义）应用程序开发新模块可能会很有趣。这些新模块将完善 `reference policy`（引用策略）。
+由于 SELinux 策略是模块化的，为那些缺少策略的（可能是自定义）应用程序开发新模块可能会很有趣。这些新模块将完善`reference policy`（引用策略）。
 
-创建新模块需要 `selinux-policy-dev` 软件包，以及 `selinux-policy-doc`。后者包含了标准规则的文档（`/usr/share/doc/selinux-policy-doc/html/`）以及作为模板创建新模块的示例文件。安装这些文件并仔细研究它们：
+创建新模块需要`selinux-policy-dev`软件包，以及`selinux-policy-doc`。后者包含了标准规则的文档（`/usr/share/doc/selinux-policy-doc/html/`）以及作为模板创建新模块的示例文件。安装这些文件并仔细研究它们：
 
 ```
 cp /usr/share/doc/selinux-policy-doc/Makefile Makefile
@@ -9844,7 +10178,7 @@ cp /usr/share/doc/selinux-policy-doc/example.if ./
 cp /usr/share/doc/selinux-policy-doc/example.te ./
 ```
 
-`.te` 文件是最重要的。它定义了规则。`.fc` 文件定义了“文件上下文”（file contexts），即分配给与此模块相关的文件的类型。`.fc` 文件中的数据在标记步骤中生效。最后，`.if` 文件定义了模块的接口：它是一组“公共函数”，其他模块可以使用这些函数来与你正在创建的模块进行正确的交互。
+`.te`文件是最重要的。它定义了规则。`.fc`文件定义了“文件上下文”（file contexts），即分配给与此模块相关的文件的类型。`.fc`文件中的数据在标记步骤中生效。最后，`.if`文件定义了模块的接口：它是一组“公共函数”，其他模块可以使用这些函数来与你正在创建的模块进行正确的交互。
 
 ### 14.5.4.1 编写 .fc 文件
 
@@ -9864,7 +10198,7 @@ cp /usr/share/doc/selinux-policy-doc/example.te ./
 
 在下例中，第一个接口（`myapp_domtrans`）控制谁可以执行该应用程序。第二个接口（`myapp_read_log`）授予对应用程序日志文件的读取权限。
 
-每个接口必须生成一组有效的规则，这些规则可以嵌入到 `.te` 文件中。因此，你应该声明你使用的所有类型（使用 `gen_require` 宏），并使用标准指令授予权限。但注意，你可以使用其他模块提供的接口。下一节将提供关于如何表达这些权限的更多解释。
+每个接口必须生成一组有效的规则，这些规则可以嵌入到`.te`文件中。因此，你应该声明你使用的所有类型（使用`gen_require`宏），并使用标准指令授予权限。但注意，你可以使用其他模块提供的接口。下一节将提供关于如何表达这些权限的更多解释。
 
 示例 14.3. example.if 文件：
 
@@ -9909,18 +10243,15 @@ interface(`myapp_read_log`,`gen_require(` type myapp_log_t;`) logging_search_log
 
 ### 14.5.4.3 编写 .te 文件
 
-查看 `example.te` 文件：
+查看`example.te`文件：
 
 ## 进阶：m4 宏语言
 
-为了正确结构化策略，SELinux 开发者使用了一个宏命令处理器。他们没有重复许多相似的 `allow` 指令，而是创建了“宏函数”来使用更高层次的逻辑，这使得策略具有更高的可读性。
+为了正确结构化策略，SELinux 开发者使用了一个宏命令处理器。他们没有重复许多相似的`allow`指令，而是创建了“宏函数”来使用更高层次的逻辑，这使得策略具有更高的可读性。
 
-在实践中，`m4` 被用于编译这些规则。它执行的是相反的操作：将所有这些高层指令扩展为巨大的 `allow` 指令数据库。
+在实践中，`m4`被用于编译这些规则。它执行的是相反的操作：将所有这些高层指令扩展为巨大的`allow`指令数据库。
 
 SELinux “接口”是：
-
-
-
 
 现在你只需要找到所需的最小规则集，以确保目标应用程序或服务正常运行。为了实现这一点，你应该对应用程序的工作原理以及它管理和/或生成什么的数据有良好的了解。
 
@@ -9935,19 +10266,30 @@ avc: denied { read write } for pid=1876 comm="syslogd" name="xconsole" dev=tmpfs
 ### 表 14.1.SELinux 跟踪分析
 
 | 消息 | 描述 |
+
 | --- | --- |
+
 | `avc: denied` | 一个操作被拒绝。 |
-| `{ read write }` | 该操作需要 `read` 和 `write` 权限。 |
-| `pid=1876` | PID 为 `1876` 的进程执行了该操作（或尝试执行）。 |
-| `comm="syslogd"` | 该进程是 `syslogd` 程序的的一个实例。 |
-| `name="xconsole"` | 目标对象名为 `xconsole`。有时你也可以用“path”变量——带有全路径——来代替。 |
-| `dev=tmpfs` | 托管目标对象的设备是 `tmpfs`（内存文件系统）。对于真实的磁盘，你可以看到托管对象的分区（例如，“sda3”）。 |
-| `ino=5510` | 该对象通过 inode 号 `5510` 识别。 |
+
+| `{ read write }` | 该操作需要`read`和`write`权限。 |
+
+| `pid=1876` | PID 为`1876`的进程执行了该操作（或尝试执行）。 |
+
+| `comm="syslogd"` | 该进程是`syslogd`程序的的一个实例。 |
+
+| `name="xconsole"` | 目标对象名为`xconsole`。有时你也可以用“path”变量——带有全路径——来代替。 |
+
+| `dev=tmpfs` | 托管目标对象的设备是`tmpfs`（内存文件系统）。对于真实的磁盘，你可以看到托管对象的分区（例如，“sda3”）。 |
+
+| `ino=5510` | 该对象通过 inode 号`5510`识别。 |
+
 | `scontext=system_u:system_r:syslogd_t:s0` | 这是执行操作的进程的安全上下文。 |
+
 | `tcontext=system_u:object_r:device_t:s0` | 这是目标对象的安全上下文。 |
+
 | `tclass=fifo_file` | 目标对象是一个 FIFO 文件。 |
 
-通过观察此日志项，可以构建一条允许此操作的规则。例如，`allow syslogd_t device_t:fifo_file { read write }`。这个过程可以自动化，而这正是 `policycoreutils` 包中的 `audit2allow` 命令所提供的功能。只有当各种对象已经根据必须限制的内容被正确标记时，这种方法才有用。在任何情况下，你都必须仔细检查生成的规则并根据你对应用程序的了解对其进行验证。实际上，这种方法倾向于授予比实际需要的更多的权限。正确的解决方案通常是创建新类型，并仅对这些类型授予权限。有时被拒绝的操作对应用程序并不是致命的，在这种情况下，可能最好是添加一条 `dontaudit` 规则，以便在实际被拒绝的情况下避免产生日志条目。
+通过观察此日志项，可以构建一条允许此操作的规则。例如，`allow syslogd_t device_t:fifo_file { read write }`。这个过程可以自动化，而这正是`policycoreutils`包中的`audit2allow`命令所提供的功能。只有当各种对象已经根据必须限制的内容被正确标记时，这种方法才有用。在任何情况下，你都必须仔细检查生成的规则并根据你对应用程序的了解对其进行验证。实际上，这种方法倾向于授予比实际需要的更多的权限。正确的解决方案通常是创建新类型，并仅对这些类型授予权限。有时被拒绝的操作对应用程序并不是致命的，在这种情况下，可能最好是添加一条`dontaudit`规则，以便在实际被拒绝的情况下避免产生日志条目。
 
 ***
 
@@ -9957,7 +10299,7 @@ avc: denied { read write } for pid=1876 comm="syslogd" name="xconsole" dev=tmpfs
 
 ### 14.5.4.4. 编译文件
 
-一旦 3 个文件（`example.if`、`example.fc` 和 `example.te`）符合你对新规则的预期，将它们重命名为 `myapp.*extension` 并运行 `make NAME=devel` 在 `myapp.pp` 文件中生成模块（你可以立即使用 `semodule -i myapp.pp` 加载它）。如果定义了多个模块，`make` 将创建所有对应的 `.pp` 文件。
+一旦 3 个文件（`example.if`、`example.fc`和`example.te`）符合你对新规则的预期，将它们重命名为`myapp.*extension`并运行`make NAME=devel`在`myapp.pp`文件中生成模块（你可以立即使用`semodule -i myapp.pp`加载它）。如果定义了多个模块，`make`将创建所有对应的`.pp`文件。
 
 # 14.6. 其他安全相关考虑
 
@@ -9991,40 +10333,39 @@ Apache 2 包含了允许过滤 HTTP 查询的模块。这可以阻止某些攻�
 
 设置这些检查可能是一项长期且困难的任务，但如果待部署的 Web 应用程序在安全性方面记录可疑，那么这样做是值得的。
 
-`mod_security2`（在 `libapache2-mod-security2` 包中）是此类主要的模块。它甚至自带许多许多插即用的规则（在 `modsecurity-crs` 包中），你可以轻松启用它们。
+`mod_security2`（在`libapache2-mod-security2`包中）是此类主要的模块。它甚至自带许多许多插即用的规则（在`modsecurity-crs`包中），你可以轻松启用它们。
 
 ***
 
-入侵的后果根据攻击者的动机会有不同程度的明显性。*脚本小子（*Script-kiddies*）只应用他们在网站上找到的配方；他们通常是破坏网页或删除数据。在更微妙的情况下，他们会在网页上添加不可见的内容，以提高搜索引擎中指向自己网站的推荐率。
-
-更高级的攻击者会超越此。一个灾难性场景可能会如下发生：攻击者获得了以 `www-data` 用户执行命令的能力，但执行命令需要许多操作。为了让他们的生活更容易，他们安装了其他专门设计用于远程执行各种命令的 Web 应用程序，例如浏览文件系统、检查权限、上传或下载文件、执行命令，甚至提供网络 shell。通常，漏洞将允许运行 `wget` 命令，将某些恶意软件下载到 `/tmp/`，然后执行它。恶意软件通常从一个之前被破解的外国网站下载，以掩盖踪迹并使攻击的真实来源变得困难。
 
 
+入侵的后果根据攻击者的动机会有不同程度的明显性。`Script-kiddies`（脚本小子）只应用他们在网站上找到的配方；他们通常是破坏网页或删除数据。在更微妙的情况下，他们会在网页上添加不可见的内容，以提高搜索引擎中指向自己网站的推荐率。
 
+更高级的攻击者会超越此。一个灾难性场景可能会如下发生：攻击者获得了以`www-data`用户执行命令的能力，但执行命令需要许多操作。为了让他们的生活更容易，他们安装了其他专门设计用于远程执行各种命令的 Web 应用程序，例如浏览文件系统、检查权限、上传或下载文件、执行命令，甚至提供网络 shell。通常，漏洞将允许运行`wget`命令，将某些恶意软件下载到`/tmp/`，然后执行它。恶意软件通常从一个之前被破解的外国网站下载，以掩盖踪迹并使攻击的真实来源变得困难。
 
-此时，攻击者已经拥有足够的行动自由度，他们通常会安装一个 IRC `bot`（一种连接到 IRC 服务器并可由该通道控制的机器人）。这种机器人通常被用于分享非法文件（未经授权的电影或软件拷贝等）。坚决的攻击者可能想更进一步。`www-data` 账户并不允许对机器进行完全访问，因此攻击者将尝试获取管理员权限。理论上，这是不可能的，但如果 Web 应用程序没有更新，那么内核和其他程序很可能也过时；这有时是因为管理员的决定导致的——尽管他们知道漏洞，但由于没有本地用户，他们忽略了系统升级。攻击者随后可以利用这第二个漏洞来获取 root 权限。
+此时，攻击者已经拥有足够的行动自由度，他们通常会安装一个 IRC`bot`（一种连接到 IRC 服务器并可由该通道控制的机器人）。这种机器人通常被用于分享非法文件（未经授权的电影或软件拷贝等）。坚决的攻击者可能想更进一步。`www-data`账户并不允许对机器进行完全访问，因此攻击者将尝试获取管理员权限。理论上，这是不可能的，但如果 Web 应用程序没有更新，那么内核和其他程序很可能也过时；这有时是因为管理员的决定导致的——尽管他们知道漏洞，但由于没有本地用户，他们忽略了系统升级。攻击者随后可以利用这第二个漏洞来获取`root`权限。
 
-### 词汇：特权提升 (Privilege escalation)
+### 词汇：特权提升（Privilege escalation）
 
-该术语涵盖了任何可以获取比给定用户通常拥有的更多权限的操作。`sudo` 程序的设计目的正是为了给某些用户提供管理权限。但该术语也用于描述攻击者利用漏洞获取不当权限的行为。
+该术语涵盖了任何可以获取比给定用户通常拥有的更多权限的操作。`sudo`程序的设计目的正是为了给某些用户提供管理权限。但该术语也用于描述攻击者利用漏洞获取不当权限的行为。
 
-现在攻击者拥有了该机器；他们通常会尝试尽可能地保持这种特权访问。这涉及到安装 `rootkit`，这种程序会替换系统的某些组件，以便攻击者在稍后的时间再次获得管理员权限；rootkit 还会试图隐藏自身以及任何入侵的痕迹。被篡改的 `ps` 程序会漏掉某些进程，`netstat` 将不会列出某些活动连接，以此此类推。利用 root 权限，攻击者能够观察整个系统，但没有发现重要数据；因此他们会尝试访问公司网络中的其他机器。通过分析管理员账户和历史文件，攻击者发现了哪些机器是经常访问的。通过用被篡改的程序替换 `sudo` 或 `ssh`，攻击者可以拦截管理员的一些密码，并将这些密码使用在检测到的服务器上……从那时起入侵就可以传播。
+现在攻击者拥有了该机器；他们通常会尝试尽可能地保持这种特权访问。这涉及到安装`rootkit`，这种程序会替换系统的某些组件，以便攻击者在稍后的时间再次获得管理员权限；rootkit 还会试图隐藏自身以及任何入侵的痕迹。被篡改的`ps`程序会漏掉某些进程，`netstat`将不会列出某些活动连接，以此类推。利用 root 权限，攻击者能够观察整个系统，但没有发现重要数据；因此他们会尝试访问公司网络中的其他机器。通过分析管理员账户和历史文件，攻击者发现了哪些机器是经常访问的。通过用被篡改的程序替换`sudo`或`ssh`，攻击者可以拦截管理员的一些密码，并将这些密码使用在检测到的服务器上……从那时起入侵就可以传播。
 
 这是一个可以通过几种措施防止的噩梦场景。接下来的几个章节将描述了其中一些措施。
 
 ## 14.6.3. 明智选择软件
 
-一旦知了潜在的安全问题，在部署服务的过程每一步都必须考虑它们，特别是在选择要安装的软件时。许多网站（如 `SecurityFocus.com`）维护着最近发现的漏洞列表，这可以让你在部署特定软件之前了解其安全记录。当然，这些信息必须与该软件的流行程度进行平衡：更广泛使用的程序是一个更具吸引力的目标，因此会受到更严格的审查。另一方面，一个小众程序可能充满了安全漏洞，由于缺乏对安全审计的兴趣，这些漏洞从未被公开。
+一旦知了潜在的安全问题，在部署服务的过程每一步都必须考虑它们，特别是在选择要安装的软件时。许多网站（如`SecurityFocus.com`）维护着最近发现的漏洞列表，这可以让你在部署特定软件之前了解其安全记录。当然，这些信息必须与该软件的流行程度进行平衡：更广泛使用的程序是一个更具吸引力的目标，因此会受到更严格的审查。另一方面，一个小众程序可能充满了安全漏洞，由于缺乏对安全审计的兴趣，这些漏洞从未被公开。
 
-### 词汇：安全审计 (Security audit)
+### 词汇：安全审计（Security audit）
 
 安全审计是彻底阅读和分析某些软件源代码的过程，寻找其可能包含的潜在安全漏洞。此类审计通常是主动的，其目的是确保程序满足某些安全要求。
 
 在自由软件世界中，通常有充足的选择空间，选择某一个软件而非另一个软件应该是基于适用于本地的标准的决策。更多的功能意味着代码中隐藏漏洞的风险增加；为某项任务选择最先进的程序实际上可能适得其反，更好的方法通常是选择符合要求的最简单的程序。
 
-### 词汇：零日漏洞 (Zero-day exploit)
+### 词汇：零日漏洞（Zero-day exploit）
 
-`zero-day exploit` 攻击很难防止；该术语涵盖了程序作者尚未获知的漏洞。
+`zero-day exploit`攻击很难防止；该术语涵盖了程序作者尚未获知的漏洞。
 
 ## 14.6.4. 作为一个整体管理机器
 
@@ -10032,7 +10373,7 @@ Apache 2 包含了允许过滤 HTTP 查询的模块。这可以阻止某些攻�
 
 出于同样的道理，防火墙通常会被配置为仅允许访问那些旨在供公共访问的服务。
 
-现在的计算机足够强大，可以在同一台物理机器上托管多个服务。从经济角度来看，这种可能性很有趣：只需要管理一台计算机，能耗更低等。然而，从安全角度来看，这种选择可能会成为问题。一个被破坏的服务可以导致对整台机器的访问，进而损害到托管在同一台计算机上的其他服务。这种风险可以通过隔离服务来缓解。这可以通过虚拟化（每个服务托管在专用虚拟机或容器中）或通过 `AppArmor/SELinux`（每个服务守护进程拥有一套设计良好的权限）来实现。
+现在的计算机足够强大，可以在同一台物理机器上托管多个服务。从经济角度来看，这种可能性很有趣：只需要管理一台计算机，能耗更低等。然而，从安全角度来看，这种选择可能会成为问题。一个被破坏的服务可以导致对整台机器的访问，进而损害到托管在同一台计算机上的其他服务。这种风险可以通过隔离服务来缓解。这可以通过虚拟化（每个服务托管在专用虚拟机或容器中）或通过`AppArmor/SELinux`（每个服务守护进程拥有一套设计良好的权限）来实现。
 
 ## 14.6.5. 用户也是玩家
 
@@ -10042,7 +10383,7 @@ Apache 2 包含了允许过滤 HTTP 查询的模块。这可以阻止某些攻�
 
 ### 快速查看：autolog
 
-`autolog` 软件包提供了一个程序，可以在可配置的延迟后自动断开不活动用户的连接。它还允许杀死会话结束后仍然持续的用户进程，从而防止用户运行守护进程。
+`autolog`软件包提供了一个程序，可以在可配置的延迟后自动断开不活动用户的连接。它还允许杀死会话结束后仍然持续的用户进程，从而防止用户运行守护进程。
 
 ## 14.6.6. 物理安全
 
@@ -10054,13 +10395,9 @@ Apache 2 包含了允许过滤 HTTP 查询的模块。这可以阻止某些攻�
 
 管理员在很大程度上是含式地被他们的用户以及整个网络的用户信任的。因此，他们应该避免任何可能被恶意分子利用的疏忽。
 
-
-
-
-
 攻击者控制了你的机器并将其作为正向基地（被称为“中继系统”）用此执行其他不法活动，这可能会给你带来法律麻烦，因为受攻击方最初会看到攻击来自你的系统，从而认为你就是攻击者（或共犯）。在很多情况下，攻击者将利用你的服务器作为中继来发送垃圾邮件，这本上不会产生太大影响（除非可能导致被列入黑名单，这会限制你发送合法邮件的能力），但无论如何，这仍然不会令人愉快。在其他情况下，你的机器可能会造成更严重的麻烦，例如拒绝服务攻击（DoS）。这有时会导致收入损失，因为合法服务将无法且数据可能被破坏；有时这还意味着实际成本，因为受攻击方可以对你提起法律诉讼。如果从你的服务器上共享了受版权法保护的作品的未经授权副本，权利人可以起诉你；如果受服务水平协议约束的其他公司在从你的机器发出的攻击后被迫支付罚金，他们也会因此采取法律行动。
 
-当这些情况发生时，仅仅声称清白通常是不够的；起码你需要有说服力的证据，显示你的系统中来自特定 IP 地址的可疑活动。如果你忽视了本章的建议，让攻击者获得了特权账户（特别是 `root`）的访问权限并用来掩盖踪迹，这将是不可能的。
+当这些情况发生时，仅仅声称清白通常是不够的；起码你需要有说服力的证据，显示你的系统中来自特定 IP 地址的可疑活动。如果你忽视了本章的建议，让攻击者获得了特权账户（特别是`root`）的访问权限并用来掩盖踪迹，这将是不可能的。
 
 # 14.7. 处理被入侵的机器
 
@@ -10070,89 +10407,83 @@ Apache 2 包含了允许过滤 HTTP 查询的模块。这可以阻止某些攻�
 
 应对破解攻击的第一步是意识到这种行为的存在。这并非显而易见，特别是在没有完善的监控基础设施的情况下。
 
-破解行为通常在对机器上托管的合法服务产生直接影响之前不会被发现，例如连接变慢、某些用户无法连接或任何其他类型的故障。面对这些问题，管理员需要仔细检查机器，并仔细审视哪些部分运行异常。这通常是他们发现异常进程的时候，例如，一个名为 `apache` 的进程而不是标准的 `/usr/sbin/apache2`。如果按照这个例子，应该做的是记录其进程标识符（PID），并检查 `/proc/*/pid*/exe` 查看该进程当前运行的是什么程序：
+破解行为通常在对机器上托管的合法服务产生直接影响之前不会被发现，例如连接变慢、某些用户无法连接或任何其他类型的故障。面对这些问题，管理员需要仔细检查机器，并仔细审视哪些部分运行异常。这通常是他们发现异常进程的时候，例如，一个名为`apache`的进程而不是标准的`/usr/sbin/apache2`。如果按照这个例子，应该做的是记录其进程标识符（PID），并检查`/proc/*/pid*/exe`查看该进程当前运行的是什么程序：
 
 ```
 # ls -al /proc/3719/exe
 lrwxrwxrwx 1 www-data www-data 0 2007-04-20 16:19 /proc/3719/exe -> /var/tmp/.bash_httpd/psybnc
 ```
 
-一个安装在 `/var/tmp/` 下并作为 Web 服务器运行的程序？毫无疑问，机器已被入侵。
+一个安装在`/var/tmp/`下并作为 Web 服务器运行的程序？毫无疑问，机器已被入侵。
 
 这只是一个例子，但许多其他线索也可以敲响管理员的警钟：
 
-- 某个命令选项不再有效；该命令声称的软件版本与 `dpkg` 显示的应安装版本不符；
+- 某个命令选项不再有效；该命令声称的软件版本与`dpkg`显示的应安装版本不符；
 - 命令行提示符或会话欢迎用语显示上一次连接来自另一个大洲的未知服务器；
-- 由 `/tmp/` 分区满导致的错误，结果结果发现该分区装满了非法的电影拷贝；
+- 由`/tmp/`分区满导致的错误，结果结果发现该分区装满了非法的电影拷贝；
 - 以及此类此类推。
 
 ## 14.7.2. 将服务器下线
 
 除极少数特殊情况外，破解都来自网络，攻击者需要工作的网络来到达其目标（访问机密数据、共享非法文件、通过使用机器作为中继来隐藏身份等）。如果攻击者尚未成功实施，将电脑断开网络连接将防止他们到达这些目标。
 
-这只有在可以物理上接触服务器时才可能。如果服务器托管在位于国家另一端的托管提供商数据中心，或者由于其他原因无法访问，通常的做法是先收集重要信息（参见第 14.7.3、14.7.5 和 14.7.6 节），然后通过关闭尽可能的服务（通常是除 `sshd` 外的所有服务）尽可能地隔离该服务器。这种情况仍然很尴尬，因为无法排除攻击者拥有与管理员一样的 SSH 访问权限；这使得“清理”机器变得更加困难。
+这只有在可以物理上接触服务器时才可能。如果服务器托管在位于国家另一端的托管提供商数据中心，或者由于其他原因无法访问，通常的做法是先收集重要信息（参见第 14.7.3、14.7.5 和 14.7.6 节），然后通过关闭尽可能的服务（通常是除`sshd`外的所有服务）尽可能地隔离该服务器。这种情况仍然很尴尬，因为无法排除攻击者拥有与管理员一样的 SSH 访问权限；这使得“清理”机器变得更加困难。
 
 ## 14.7.3. 保留所有可以作为证据的内容
 
 了解攻击和/或对攻击者采取法律行动需要对所有重要元素备份；这包括硬盘内容、所有运行进程的列表以及所有打开连接的列表。内存中的内容也可以使用，但在实践中很少使用。
 
-在行动的关键时刻，管理员往往倾向于在被入侵的机器上进行许多检查；这通常不是一个好主意。每个命令都可能被篡改并可能擦除证据。检查应限制在最小集合上（用于网络连接的 `netstat -tupan`，用于进程列表的 `ps auxf`，用于更多运行程序信息的 `ls -alR /proc/[0-9]*`），并且执行的每项检查都应仔细记录。
+在行动的关键时刻，管理员往往倾向于在被入侵的机器上进行许多检查；这通常不是一个好主意。每个命令都可能被篡改并可能擦除证据。检查应限制在最小集合上（用于网络连接的`netstat -tupan`，用于进程列表的`ps auxf`，用于更多运行程序信息的`ls -alR /proc/[0-9]*`），并且执行的每项检查都应仔细记录。
 
-**注意** 热分析
+**注意：热分析**
 
-虽然在系统运行时对其进行分析似乎很有诱惑力，特别是当无法物理访问服务器时，但最好避免这样做：简单来说，你无法信任当前安装在入侵系统上的程序。被篡改的 `ps` 命令可能会隐藏某些进程，或者被篡改的 `ls` 可能会隐藏文件；有时甚至内核都被入侵了！
+虽然在系统运行时对其进行分析似乎很有诱惑力，特别是当无法物理访问服务器时，但最好避免这样做：简单来说，你无法信任当前安装在入侵系统上的程序。被篡改的`ps`命令可能会隐藏某些进程，或者被篡改的`ls`可能会隐藏文件；有时甚至内核都被入侵了！
 
 如果仍然需要这种热分析，应小心只使用已知的程序。这样做的一种良好方法是使用带有纯净程序的救援光盘，或只读的网络共享。然而，如果内核本身被入侵，这些防御措施也可能还不够。
 
-一旦保存了“动态”元素，下一步是存储硬盘的完整镜像。如果文件系统仍在变化，则无法制作此类镜像，这就是为什么必须将其重新挂载为只读。最简单的解决方案通常是强制停止服务器（在运行 `sync` 后）并在救援光盘上重启。每个分区都应该使用 `dd` 等工具进行复制；这些镜像可以发送到另一个服务器（可能使用非常方便的 `nc` 工具）。另一种可能甚至更简单：只需将磁盘从机器中取出，并换一个可以重新格式化并安装的新磁盘。
+一旦保存了“动态”元素，下一步是存储硬盘的完整镜像。如果文件系统仍在变化，则无法制作此类镜像，这就是为什么必须将其重新挂载为只读。最简单的解决方案通常是强制停止服务器（在运行`sync`后）并在救援光盘上重启。每个分区都应该使用`dd`等工具进行复制；这些镜像可以发送到另一个服务器（可能使用非常方便的`nc`工具）。另一种可能甚至更简单：只需将磁盘从机器中取出，并换一个可以重新格式化并安装的新磁盘。
 
 ## 14.7.4. 重新安装
 
 在没有完全重新安装的情况下，不应让服务器上线。如果入侵非常严重（如果获得了管理员权限），几乎没有其他方法可以确保我们已经清除了攻击者可能留下的所有东西（特别是后门）。当然，必须应用所有的最新安全更新，以封堵攻击者利用的漏洞。理想情况下，分析攻击应该指向这一攻击向量，这样人们可以确定确实修复了它；否则，只能希望该漏洞是更新所修复的那些之一。
 
-
-
-
-
 重装远程服务器并不总是那么容易；它可能需要托管公司的协助，因为并非所有此类公司都提供自动重装系统。应注意不要从比破解之后的备份中重装机器。理想情况下，只应恢复数据，实际软件应从安装介质重新安装。
 
 ## 14.7.5. 取证分析
 
-现在服务已经恢复，是时候仔细查看受损系统的磁盘镜像了，以理解攻击向量。在挂载这些镜像时，应注意使用 `ro,nodev,noexec,noatime` 选项，以免更改内容（包括文件访问时间戳）或误运行受感染的程序。
+现在服务已经恢复，是时候仔细查看受损系统的磁盘镜像了，以理解攻击向量。在挂载这些镜像时，应注意使用`ro,nodev,noexec,noatime`选项，以免更改内容（包括文件访问时间戳）或误运行受感染的程序。
 
 追溯攻击场景通常涉及查找所有被修改和执行过的内容：
 
-*   `.bash_history` 文件通常提供非常有趣的内容；
-*   列出最近创建、修改或访问的文件也是如此；
-*   `strings` 命令通过从二进制文件中提取文本字符串，可以帮助识别由攻击者安装的程序；
-*   `/var/log/` 下的日志文件通常允许重建事件的时间轴；
-*   专用工具还可以恢复可能被删除的文件内容，包括攻击者经常删除的日志文件。
+- `.bash_history`文件通常提供非常有趣的内容；
+- 列出最近创建、修改或访问的文件也是如此；
+- `strings`命令通过从二进制文件中提取文本字符串，可以帮助识别由攻击者安装的程序；
+- `/var/log/`下的日志文件通常允许重建事件的时间轴；
+- 专用工具还可以恢复可能被删除的文件内容，包括攻击者经常删除的日志文件。
 
-其中一些操作可以通过专业软件变得更简单。特别是 `sleuthkit` 包提供了许多分析文件系统的工具。`Autopsy Forensic Browser` 图形界面（在 `autopsy` 包中）使得这些工具的使用更加方便。某些 Linux 发行版拥有“现场安装”镜像并包含许多取证分析程序，例如 Kali Linux（参见 Section A.8, “Kali Linux”），它具有*取证模式*；BlackArchLinux[^([]](#ch14s07.html_ftn.idm18170) 以及基于 Grml 的商业版 Grml-Forensic（参见 Section A.6, “Grml”)).
+其中一些操作可以通过专业软件变得更简单。特别是`sleuthkit`包提供了许多分析文件系统的工具。`Autopsy Forensic Browser`图形界面（在`autopsy`包中）使得这些工具的使用更加方便。某些 Linux 发行版拥有“现场安装”镜像并包含许多取证分析程序，例如 Kali Linux（参见 Section A.8, “Kali Linux”），它具有*取证模式*；BlackArchLinux[^([]](#ch14s07.html_ftn.idm18170)以及基于 Grml 的商业版 Grml-Forensic（参见 Section A.6, “Grml”）。
 
 ## 14.7.6. 重建攻击场景
 
 分析过程中收集的所有元素应该像拼图碎片一样组合在一起；第一个可疑文件的创建通常与证明破解的日志相关。一个真实世界的例子应该比长长的理论论述更明确。
 
-以下日志是 Apache `access.log` 的提取内容：
+以下日志是 Apache`access.log`的提取内容：
 
 ```
-www.falcot.com 200.58.141.84 - - [27/Nov/2004:13:33:34 +0100] "GET /phpbb/viewtopic.php?t=10&highlight=%2527%252esystem(chr(99)%252echr(100)%252echr(32)%252echr(47)%252echr(116)%252echr(109)%252echr(112)%252echr(59)%252echr(32)%252echr(119)%252echr(103)%252echr(101)%252echr(116)%252echr(32)%252echr(103)%252echr(97)%252echr(98)%252echr(114)%252echr(121)%252echr(107)%252echr(46)%252echr(97)%252echr(108)%252echr(116)%252echr(101)%252echr(114)%252echr(118)%252echr(105)%252echr(116)%252echr(97)%252echr(46)%252echr(111)%252echr(114)%252echr(103)%252echr(47)%252echr(98)%252echr(100)%252echr(32)%252echr(124)%252echr(124)%252echr(32)%252echr(99)%252echr(117)%252echr(114)%252echr(108)%252echr(102)%252echr(32)%252echr(103)%252echr(97)%252echr(98)%252echr(114)%252echr(121)%252echr(107)%252echr(46)%252echr(97)%252echr(108)%252echr(116)%252echr(101)%252echr(114)%252echr(118)%252echr(105)%252echr(116)%252echr(97)%252echr(46)%252echr(111)%252echr(114)%252echr(103)%252echr(47)%252echr(98)%252echr(100)%252echr(32)%252echr(45)%252echr(111)%252echr(98)%252echr(100)%252echr(59)%252echr(32)%252echr(99)%252echr(104)%252echr(109)%252echr(111)%252echr(100)%252echr(32)%252echr(43)%252echr(120)%252echr(32)%252echr(98)%252echr(100)%252echr(59)%252)
+www.falcot.com 200.58.141.84 - - [27/Nov/2004:13:33:34 +0100] "GET /phpbb/viewtopic.php?t=10&highlight=%2527%252esystem(chr(99)%252echr(100)%252echr(32)%252echr(47)%252echr(116)%252echr(109)%252echr(112)%252echr(59)%252echr(32)%252echr(119)%252echr(103)%252echr(101)%252echr(116)%252echr(32)%252echr(103)%252echr(97)%252echr(98)%252echr(114)%252echr(121)%252echr(107)%252echr(46)%252echr(97)%252echr(108)%252echr(116)%252echr(101)%252echr(114)%252echr(118)%252echr(105)%252echr(116)%252echr(97)%252echr(46)%252echr(111)%252echr(114)%252echr(103)%252echr(47)%252echr(98)%252echr(100)%252echr(32)%252echr(124)%252echr(124)%252echr(32)%252echr(99)%252echr(117)%252echr(114)%252echr(108)%252echr(102)%252echr(32)%252echr(103)%252echr(97)%252echr(98)%252echr(114)%252echr(121)%252echr(107)%252echr(46)%252echr(97)%252echr(108)%252echr(116)%252echr(101)%252echr(114)%252echr(118)%252echr(105)%252echr(116)%252echr(97)%252echr(46)%252echr(111)%252echr(114)%252echr(103)%252echr(47)%252echr(98)%252echr(100)%252echr(32)%252echr(45)%252echr(111)%252echr(45)%252echr(98)%252echr(100)%252echr(59)%252echr(32)%252echr(99)%252echr(104)%252echr(109)%252echr(111)%252echr(100)%252echr(32)%252echr(43)%252echr(120)%252echr(32)%252echr(98)%252echr(100)%252echr(59)%252)"
 ```
-
-
-
-
 
 → [`tracker.debian.org/`](https://tracker.debian.org/)
 
-## 15.1.1 获取源码
+## 15.1.1. 获取源码
 
-重构 Debian 软件包从获取其源代码开始。最简单的方法是使用 `apt-get source source-package-name` 命令。该命令要求 `/etc/apt/sources.list` 文件中包含 `deb-src` 行，并且拥有最新的索引文件（即 `apt-get update`）。如果你遵循了处理 APT 配置的章节中的说明，这些条件应该已经满足了（参见第 6.1 节，“填充 `sources.list` 文件”）。但请注意，你将从 `deb-src` 行中提到的 Debian 版本下载源码包。如果你需要另一个版本，可能需要从 Debian 镜像站或网站手动下载。这涉及获取两个或三个文件（扩展名为 `*.dsc` —— 用于 *Debian 源码控制* —— `*.tar.comp`，有时还有 `*.diff.gz` 或 `*.debian.tar.comp` —— `comp` 取所使用的压缩工具对应的 `gz`、`bz2` 或 `xz` 之一），然后运行 `dpkg-source -x file.dsc` 命令。如果 `*.dsc` 文件可以通过给 URL 直接访问，则有一种更简单的方法获取所有内容，即使用 `dget URL` 命令。该命令（可以在 devscripts 软件包中找到）会获取给定地址的 `*.dsc` 文件，然后分析其内容并自动获取其中引的一个或多个文件。一旦下载完成，它将使用 `dscverify` 验证下载的源码包的完整性，并提取源码包（除非使用了 `-d` 或 `--download-only` 选项）。除非提供了 `-u` 选项，否则需要 Debian keyring。
+
+
+重构 Debian 软件包从获取其源代码开始。最简单的方法是使用`apt-get source source-package-name`命令。该命令要求`/etc/apt/sources.list`文件中包含`deb-src`行，并且拥有最新的索引文件（即`apt-get update`）。如果你遵循了处理 APT 配置的章节中的说明，这些条件应该已经满足了（参见第 6.1 节，“填充` sources.list`文件”）。但请注意，你将从`deb-src`行中提到的 Debian 版本下载源码包。如果你需要另一个版本，可能需要从 Debian 镜像站或网站手动下载。这涉及获取两个或三个文件（扩展名为`*.dsc`——用于 *Debian 源码控制*——`*.tar.comp`，有时还有`*.diff.gz`或`*.debian.tar.comp`——`comp`取所使用的压缩工具对应的`gz`、`bz2`或`xz`之一），然后运行`dpkg-source -x file.dsc`命令。如果`*.dsc`文件可以通过给 URL 直接访问，则有一种更简单的方法获取所有内容，即使用`dget URL`命令。该命令（可以在`devscripts`软件包中找到）会获取给定地址的`*.dsc`文件，然后分析其内容并自动获取其中引的一个或多个文件。一旦下载完成，它将使用`dscverify`验证下载的源码包的完整性，并提取源码包（除非使用了`-d`或`--download-only`选项）。除非提供了`-u`选项，否则需要 Debian keyring。
 
 ## 15.1.2 进行修改
 
-让我们以 `samba` 软件包为例。
+让我们以`samba`软件包为例。
 
 ```
 $ apt source samba
@@ -10161,34 +10492,35 @@ Reading package lists... Done NOTICE: 'samba' packaging is maintained in the 'Gi
 
 软件包的源码现在位于一个以源码包名称及其版本命名的目录（`samba-4.9.5+dfsg`）中；这将是我们进行本地修改的地方。
 
-要做的第一件事是更改软件包的版本号，以便将重构的软件包与 Debian 提供的原始软件包区分来。假设当前版本为 `2:4.9.5+dfsg-5`，我们可以创建版本 `2:4.9.5+dfsg-5falcot1`，这清楚地指示了软件包的来源。这使得软件包的版本号高于 Debian 提供的版本，因此软件包可以容易地作为原始软件包的更新进行安装。这种更改最好通过 devscripts 软件包中的 `dch` 命令（*Debian CHangelog*）来实现。
+要做的第一件事是更改软件包的版本号，以便将重构的软件包与 Debian 提供的原始软件包区分来。假设当前版本为`2:4.9.5+dfsg-5`，我们可以创建版本`2:4.9.5+dfsg-5falcot1`，这清楚地指示了软件包的来源。这使得软件包的版本号高于 Debian 提供的版本，因此软件包可以容易地作为原始软件包的更新进行安装。这种更改最好通过`devscripts`软件包中的`dch`命令（*Debian Changelog*）来实现。
 
 ```
 $ cd samba-4.9.5+dfsg
 $ dch --local falcot
 ```
 
-上一个命令调用文本编辑器（`sensible-editor` —— 如果它在环境变量 `VISUAL` 或 `EDITOR` 中被提到，它应该是你喜欢的编辑器，否则使用默认编辑器）来记录此重构带来的差异。该编辑器告诉我们 `dch` 确实更改了 `debian/changelog` 文件。
+上一个命令调用文本编辑器（`sensible-editor`——如果它在环境变量`VISUAL`或`EDITOR`中被提到，它应该是你喜欢的编辑器，否则使用默认编辑器）来记录此重构带来的差异。该编辑器告诉我们`dch`确实更改了`debian/changelog`文件。
 
-当需要更改构建选项时，需要在 `debian/rules` 中进行更改，该文件驱动软件包构建过程中的步骤。在简单的情况下，涉及初始配置（`./configure …`）或实际构建（`$(MAKE) …` 或 `make …`）的行很容易。如果这些命令没有被显式调用，它们可能是另一个显式命令的副作用，在这种情况下，请参考它们的文档了解更多如何更改默认行为。对于使用 `dh` 的软件包，你可能需要为 `dh_auto_configure` 或 `dh_auto_build` 命令添加覆盖（参见它们各自的手页了解如何实现此点的说明）。
+当需要更改构建选项时，需要在`debian/rules`中进行更改，该文件驱动软件包构建过程中的步骤。在简单的情况下，涉及初始配置（`./configure …`）或实际构建（`$(MAKE) …`或`make …`）的行很容易。如果这些命令没有被显式调用，它们可能是另一个显式命令的副作用，在这种情况下，请参考它们的文档了解更多如何更改默认行为。对于使用`dh`的软件包，你可能需要为`dh_auto_configure`或`dh_auto_build`命令添加覆盖（参见它们各自的手页了解如何实现此点的说明）。
 
-根据对软件包的本地修改，可能还需要对 `debian/control` 文件进行更新，该文件包含了生成的软件包的描述。特别是，该文件包含 `Build-Depends` 行，控制了在软件包构建时必须满足的依赖列表。这些行通常引用源码包所在发行中的软件包版本，但这些版本可能在重构时使用的发行版中不可用。没有自动化方法可以判断依赖是真实的，还是仅为了保证只有在使用库的最新版本时才尝试构建——这是强制*自动构建器*（autobuilder）在构建期间使用给定软件包版本的唯一可用方法，这就是为什么 Debian 维护者经常使用严格版本化的构建依赖。
+根据对软件包的本地修改，可能还需要对`debian/control`文件进行更新，该文件包含了生成的软件包的描述。特别是，该文件包含`Build-Depends`行，控制了在软件包构建时必须满足的依赖列表。这些行通常引用源码包所在发行中的软件包版本，但这些版本可能在重构时使用的发行版中不可用。没有自动化方法可以判断依赖是真实的，还是仅为了保证只有在使用库的最新版本时才尝试构建——这是强制*自动构建器*（autobuilder）在构建期间使用给定软件包版本的唯一可用方法，这就是为什么 Debian 维护者经常使用严格版本化的构建依赖。
 
-如果你确定这些构建依赖过于严格，可以放地在本地放宽它们。阅读记录软件标准构建方式的文件（这些文件通常被称为 `INSTALL`）将帮助你确定合适的依赖。
+如果你确定这些构建依赖过于严格，可以放地在本地放宽它们。阅读记录软件标准构建方式的文件（这些文件通常被称为`INSTALL`）将帮助你确定合适的依赖。
 
 ***
 
 ### TIP 安装构建依赖
 
-`apt-get` 允许安装 `/etc/apt/sources.list` 文件中 `deb-src` 行提到的可用源码包的 `Build-Depends` 字段中提到的软件包。这只需运行 `apt-get build-dep source-package` 命令即可。
+`apt-get`允许安装`/etc/apt/sources.list`文件中`deb-src`行提到的可用源码包的`Build-Depends`字段中提到的软件包。这只需运行`apt-get build-dep source-package`命令即可。
 
 ***
 
 ## 15.1.3 开始重构
 
-当所有所需的更改已应用于源码后，我们就可以生成实际的二进制软件包（`.deb` 文件）。整个过程由 `dpkg-buildpackage` 命令管理。
+当所有所需的更改已应用于源码后，我们就可以生成实际的二进制软件包（`.deb`文件）。整个过程由`dpkg-buildpackage`命令管理。
 
 示例 15.1. 重构软件包
+
 ```
 $ dpkg-buildpackage -us -uc
 ```
@@ -10197,25 +10529,21 @@ $ dpkg-buildpackage -us -uc
 
 ### TOOL fakeroot
 
-本质上，软件包创建过程只是将一组现有的或已构建的文件收集到一个归档中；大多数文件在归档中的将归属于 *root*。然而，以该用户身份构建整个软件包意味着增加了风险；幸运的是，可以使用 `fakeroot` 命令避免这种情况。该工具可用于运行程序并让它认为自己是以 *root* 运行并创建具有任意所有权权限的文件。当该程序创建将成为 Debian 软件包的归档时，它被欺骗创建一个包含标记为任意所有者（包括 *root*）文件的归档。这种设置非常方便，以至于 `dpkg-buildpackage` 在构建软件包时默认使用 `fakeroot`。
+本质上，软件包创建过程只是将一组现有的或已构建的文件收集到一个归档中；大多数文件在归档中的将归属于 *root*。然而，以该用户身份构建整个软件包意味着增加了风险；幸运的是，可以使用`fakeroot`命令避免这种情况。该工具可用于运行程序并让它认为自己是以 *root* 运行并创建具有任意所有权权限的文件。当该程序创建将成为 Debian 软件包的归档时，它被欺骗创建一个包含标记为任意所有者（包括 *root*）文件的归档。这种设置非常方便，以至于`dpkg-buildpackage`在构建软件包时默认使用`fakeroot`。
 
+请注意，程序只是被欺骗“认为”它正在以特权账户运行，而该进程实际上是以运行`fakeroot program`的用户身份运行的（文件实际上是用该用户的权限创建的）。它在任何时候都没有真正获得可以滥用的 root 权限。
 
+如果`Build-Depends`字段未更新或相关软件包未安装，则之前的命令可能会失败。在这种情况下，可以通过向`dpkg-buildpackage`传递`-d`来覆盖此检查。然而，显式地忽略这些依赖会带来构建过程在后期阶段失败的风险。糟糕糟糕，软件包可能看起来构建成功，但无法正常运行：当某些程序在构建时缺少所需的库时，它们会自动禁用其部分功能。
 
-
-
-请注意，程序只是被欺骗“认为”它正在以特权账户运行，而该进程实际上是以运行 `fakeroot program` 的用户身份运行的（文件实际上是用该用户的权限创建的）。它在任何时候都没有真正获得可以滥用的 root 权限。
-
-如果 `Build-Depends` 字段未更新或相关软件包未安装，则之前的命令可能会失败。在这种情况下，可以通过向 `dpkg-buildpackage` 传递 `-d` 来覆盖此检查。然而，显式地忽略这些依赖会带来构建过程在后期阶段失败的风险。糟糕糟糕，软件包可能看起来构建成功，但无法正常运行：当某些程序在构建时缺少所需的库时，它们会自动禁用其部分功能。
-
-在大多数情况下，Debian 开发者会使用如 `debuild` 这样更高级程序；它会像往常一样运行 `dpkg-buildpackage`，但还会调用一个程序，该程序会运行许多检查以验证生成的软件包是否符合 Debian 策略。该脚本还会清理环境，以防止本地环境变量“污染”软件包构建。`debuild` 命令是 `devscripts` 套件中的工具之一，该套件共享一些一致性和配置，以简化维护者的工作。
+在大多数情况下，Debian 开发者会使用如`debuild`这样更高级程序；它会像往常一样运行`dpkg-buildpackage`，但还会调用一个程序，该程序会运行许多检查以验证生成的软件包是否符合 Debian 策略。该脚本还会清理环境，以防止本地环境变量“污染”软件包构建。`debuild`命令是`devscripts`套件中的工具之一，该套件共享一些一致性和配置，以简化维护者的工作。
 
 ### 快速查看 在 chrooted 环境中构建软件包
 
-`pbuilder` 程序（位于同名软件包中）允许在 `chrooted` 环境中构建 Debian 软件包。它首先创建一个包含构建软件包所需的最小系统的临时目录（包括 `Build-Depends` 字段中提到的软件包）。随后，在构建过程中，使用 `chroot` 命令将该目录作为根目录（`/`）。
+`pbuilder`程序（位于同名软件包中）允许在`chrooted`环境中构建 Debian 软件包。它首先创建一个包含构建软件包所需的最小系统的临时目录（包括`Build-Depends`字段中提到的软件包）。随后，在构建过程中，使用`chroot`命令将该目录作为根目录（`/`）。
 
-此工具允许构建过程在一个未被用户操作修改的环境中进行。这还允许快速检测缺失的构建依赖（因为除非记录了相应的依赖，否则构建将失败）。最后，它允许为并非系统整体使用的 Debian 版本构建软件包：机器本身可以使用 Stable 版本处理正常工作负载，而运行在同一台机器上的 `pbuilder` 可以使用 Unstable 版本进行软件包构建。
+此工具允许构建过程在一个未被用户操作修改的环境中进行。这还允许快速检测缺失的构建依赖（因为除非记录了相应的依赖，否则构建将失败）。最后，它允许为并非系统整体使用的 Debian 版本构建软件包：机器本身可以使用 Stable 版本处理正常工作负载，而运行在同一台机器上的`pbuilder`可以使用 Unstable 版本进行软件包构建。
 
-`schroot` 允许在 `chrooted` 环境中运行命令或登录 shell。
+`schroot`允许在`chrooted`环境中运行命令或登录 shell。
 
 # 15.2 构建你的第一个第一个软件包
 
@@ -10223,13 +10551,14 @@ $ dpkg-buildpackage -us -uc
 
 伪装软件包和元软件包的相似之处在于，它们都是空外壳，其存在仅仅是为了元数据对软件包处理栈产生的影响。
 
-伪装软件包的目的是欺骗 `dpkg` 和 `apt`，使其认为某些软件包已安装，尽管它只是一个空外壳。这允许在相应的软件安装在软件包系统范围之外时，满足对该软件包的依赖关系。这种方法虽然可行，但仍应尽可能避免，因为无法保证手动安装的软件行为与相应的软件包完全一致，也无法保证依赖于它的其他软件包能够正常工作。
+伪装软件包的目的是欺骗`dpkg`和`apt`，使其认为某些软件包已安装，尽管它只是一个空外壳。这允许在相应的软件安装在软件包系统范围之外时，满足对该软件包的依赖关系。这种方法虽然可行，但仍应尽可能避免，因为无法保证手动安装的软件行为与相应的软件包完全一致，也无法保证依赖于它的其他软件包能够正常工作。
 
 另一方面，元软件包主要是作为依赖项的集合存在的，因此安装元软件包实际上会一步到位地引入一组其他软件包。
 
-这两类软件包都可以通过 `equivs-control` 和 `equivs-build` 命令（在 `equivs` 软件包中）创建。`equivs-control file` 命令创建一个 Debian 软件包头文件，应该对该文件进行编辑，以包含预期的软件包名称、版本号、维护者名称、依赖项和描述。其他没有默认值的字段是可选的，可以删除。`Copyright`、`Changelog`、`Readme` 和 `Extra-Files` 字段不是 Debian 软件包的标准字段；它们仅在 `equivs-build` 的范围内有意义，并且不会保留在生成的软件包头文件中。
+这两类软件包都可以通过`equivs-control`和`equivs-build`命令（在`equivs`软件包中）创建。`equivs-control file`命令创建一个 Debian 软件包头文件，应该对该文件进行编辑，以包含预期的软件包名称、版本号、维护者名称、依赖项和描述。其他没有默认值的字段是可选的，可以删除。`Copyright`、`Changelog`、`Readme`和`Extra-Files`字段不是 Debian 软件包的标准字段；它们仅在`equivs-build`的范围内有意义，并且不会保留在生成的软件包头文件中。
 
-示例 15.2：`libxml-libxml-perl` 伪装软件包的头文件
+示例 15.2：`libxml-libxml-perl`伪装软件包的头文件
+
 ```
 Section: perl
 Priority: optional
@@ -10244,7 +10573,7 @@ This is a fake package to let the packaging system believe that this Debian pack
 . In fact, the package is not installed since a newer version of the module has been manually compiled & installed in the site_perl directory.
 ```
 
-下一步是用 `equivs-build file` 命令生成 Debian 软件包。完成：软件包在当前目录下创建，可以像处理其他 Debian 软件包一样处理它。
+下一步是用`equivs-build file`命令生成 Debian 软件包。完成：软件包在当前目录下创建，可以像处理其他 Debian 软件包一样处理它。
 
 ## 15.2.2 简单文件存档
 
@@ -10252,7 +10581,7 @@ Falcot Corp 的管理员需要创建一个 Debian 软件包，以便在大量机
 
 → [https://www.debian.org/doc/manuals/maint-guide/]
 
-第一步是创建一个 `falcot-data-1.0` 目录以包含目标源软件包。该软件包在逻辑上命名为 `falcot-data` 并带有 `1.0` 版本号。管理员随后将文档文件放在 `data` 子目录中。然后他们调用 `dh_make` 命令（来自 `dh-make` 软件包）添加软件包生成过程所需的文件，这些文件将全部存储在 `debian` 子目录下：
+第一步是创建一个`falcot-data-1.0`目录以包含目标源软件包。该软件包在逻辑上命名为`falcot-data`并带有`1.0`版本号。管理员随后将文档文件放在`data`子目录中。然后他们调用`dh_make`命令（来自`dh-make`软件包）添加软件包生成过程所需的文件，这些文件将全部存储在`debian`子目录下：
 
 ```bash
 $ cd falcot-data-1.0
@@ -10271,28 +10600,28 @@ Currently there is not top level Makefile. This may require additional tuning
 Done. Please edit the files in the debian/ subdirectory now.
 ```
 
-所选的软件包类型 (`indep`) 表示此源软件包将生成一个单一二进制软件包，该软件包可以在所有架构间共享（`Architecture: all`）。`single` 是对应项，会导致生成一个依赖于目标架构的单一二进制软件包（`Architecture: any`）。在这种情况下，前者的选择更为相关，因为软件包只包含文档而没有二进制程序，因此可以在所有架构的计算机上类似地使用。
+所选的软件包类型 (`indep`) 表示此源软件包将生成一个单一二进制软件包，该软件包可以在所有架构间共享（`Architecture: all`）。`single`是对应项，会导致生成一个依赖于目标架构的单一二进制软件包（`Architecture: any`）。在这种情况下，前者的选择更为相关，因为软件包只包含文档而没有二进制程序，因此可以在所有架构的计算机上类似地使用。
 
-`library` 类型对应于产生多个二进制软件包的源软件包。它对于共享库非常有用，因为它们需要遵循严格的打包规则。
+`library`类型对应于产生多个二进制软件包的源软件包。它对于共享库非常有用，因为它们需要遵循严格的打包规则。
 
 ### Tips 维护者的姓名和电子邮件地址
 
-大多数参与软件包维护的程序会在 `DEBFULLNAME` 和 `DEBEMAIL` 或 `EMAIL` 环境变量中查找你的姓名和电子邮件地址。一次性定义这些变量可以避免你重复输入。如果你常用的 shell 是 `bash`，只需在你的 `~/.bashrc` 文件中添加以下两行（你显然会将这些值替换为相关的值！）：
+大多数参与软件包维护的程序会在`DEBFULLNAME`和`DEBEMAIL`或`EMAIL`环境变量中查找你的姓名和电子邮件地址。一次性定义这些变量可以避免你重复输入。如果你常用的 shell 是`bash`，只需在你的`~/.bashrc`文件中添加以下两行（你显然会将这些值替换为相关的值！）：
 
 ```bash
 export EMAIL="hertzog@debian.org"
 export DEBFULLNAME="Raphael Hertzog"
 ```
 
-`dh_make` 命令创建了一个包含许多文件的 `debian` 子目录。其中某些是必须的，特别是 `rules`、`control`、`changelog` 和 `copyright`。带有 `.ex` 扩展的文件是示例文件，可以在需要时通过修改（并删除扩展名）来使用。如果不需要，建议删除它们。`compat` 文件应该保留，因为它是 `debhelper` 工具套件（均以 `dh_` 为前）在软件包构建过程各个阶段正常运行所所需的。
+`dh_make`命令创建了一个包含许多文件的`debian`子目录。其中某些是必须的，特别是`rules`、`control`、`changelog`和`copyright`。带有`.ex`扩展的文件是示例文件，可以在需要时通过修改（并删除扩展名）来使用。如果不需要，建议删除它们。`compat`文件应该保留，因为它是`debhelper`工具套件（均以`dh_`为前）在软件包构建过程各个阶段正常运行所所需的。
+
+`copyright`文件必须包含包中所包含的文档作者信息以及相关的许可。在我们的案例中，这些是内部文档，其使用被限制在 Falcot Corp 公司内部。默认的`changelog`文件通常是合适的；将“Initial release”（初始发布）替换为更详细的解释，并将分发类型从`unstable`改为`internal`即可。`control`文件也已更新：`Section`字段已改为`misc`，并删除了`Homepage`、`Vcs-Git`和`Vcs-Browser`字段。`Depends`字段已完成`firefox-esr | www-browser`，以确保能够显示包中文档的可用浏览器。
+
+示例 15.3. `control`文件
 
 
 
-
-`copyright` 文件必须包含包中所包含的文档作者信息以及相关的许可。在我们的案例中，这些是内部文档，其使用被限制在 Falcot Corp 公司内部。默认的 `changelog` 文件通常是合适的；将“Initial release”（初始发布）替换为更详细的解释，并将分发类型从 `unstable` 改为 `internal` 即可。`control` 文件也已更新：`Section` 字段已改为 `misc`，并删除了 `Homepage`、`Vcs-Git` 和 `Vcs-Browser` 字段。`Depends` 字段已完成 `firefox-esr | www-browser`，以确保能够显示包中文档的可用浏览器。
-
-示例 15.3. `control` 文件
-```
+```text
 falcot-data
 Section: misc
 Priority: optional
@@ -10310,7 +10639,8 @@ These documents MUST NOT leave the company. Their use is INTERNAL ONLY.
 ```
 
 示例 15.4. `changelog` 文件
-```
+
+```text
 falcot-data (1.0) internal; urgency=low
 * Initial Release.
 * Let's start with few documents:
@@ -10320,7 +10650,8 @@ falcot-data (1.0) internal; urgency=low
 ```
 
 示例 15.5. `copyright` 文件
-```
+
+```text
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
 Upstream-Name: falcot-data
 Files:
@@ -10328,23 +10659,19 @@ Files:
 License: All rights reserved.
 ```
 
-* * *
-
 # 回归基础
 
 ## `Makefile` 文件
 
 `Makefile` 文件是 `make` 程序使用的脚本；它描述了如何在依赖树中从相互之间构建一组文件的规则（例如，一个程序可以从一组源文件构建）。`Makefile` 文件以以下格式描述这些规则：
 
-```
+```makefile
 target: source1 source2 ... command1 command2
 ```
 
 此类规则的解释如下：如果其中一个 `source*` 文件比 `target`（目标）文件新，则需要使用 `command1` 和 `command2` 生成目标文件。
 
-请注意，命令行行必须以制表符（tab）开头；同样请注意，当命令行以连字符字符（`-`）开头时，命令执行失败不会中断整个过程。
-
-* *
+请注意，命令行必须以制表符（tab）开头；同样请注意，当命令行以连字符字符（`-`）开头时，命令执行失败不会中断整个过程。
 
 ## `rules` 文件
 
@@ -10352,14 +10679,15 @@ target: source1 source2 ... command1 command2
 
 尽管此文件是流程的核心，但它越来越多地只包含运行 `debhelper` 工具提供的标准命令集所需的极少内容。`dh_make` 生成的文件正是如此。为了安装我们的文件，我们只需通过创建以下 `debian/falcot-data.install` 文件来配置 `dh_install` 命令的行为：
 
-```
+```text
 data/* usr/share/falcot-data/
 ```
 
 此时，包就可以创建了。然而，我们会为它添加一点点装饰（a lick of paint，即美化处理）。由于管理员希望能够从图形化桌面环境的菜单中轻松访问文档，我们添加了一个 `falcot-data.desktop` 文件，并通过在 `debian/falcot-data.install` 中添加第二行，使它被安装到 `/usr/share/applications` 中。
 
 示例 15.6. `falcot-data.desktop` 文件
-```
+
+```ini
 [Desktop Entry]
 Name=Internal Falcot Corp Documentation
 Comment=Starts a browser to read the documentation
@@ -10371,7 +10699,7 @@ Categories=Documentation;
 
 更新后的 `debian/falcot-data.install` 如下所示：
 
-```
+```text
 data/* usr/share/falcot-data/
 falcot-data.desktop usr/share/applications/
 ```
@@ -10384,20 +10712,18 @@ Falcot Corp 开始逐渐维护许多 Debian 包，这些包是对现有包的本
 
 为了让部署更简单，他们希望将这些包集成到一个可以直接被 APT 使用的包归中。出于显然的维护考虑，他们希望将内部包与本地构建的包分开。目标是 `/etc/apt/sources.list.d/falcot.list` 文件如下：
 
-```
+```text
 deb http://packages.falcot.com/ updates/
 deb http://packages.falcot.com/ internal/
 ```
 
 管理员因此在他们的内部服务器上配置一个虚拟主机，以 `/srv/vhosts/packages/` 为根目录。归本身的管理委托给 `mini-dinstall` 命令（类似于命名的包）。该工具监控 `incoming/` 目录（在我们的案例中为 `/srv/vhosts/packages/incoming/`）并等待新包；当包上传时，它会被安装到 `/srv/vhosts/packages/` 的 Debian 归中。`mini-dinstall` 命令读取生成 Debian 包时的 `*.changes` 文件，这些文件包含了与包版本相关的所有文件（`*.deb`、`*.dsc`、`*.diff.gz/*.debian.tar.gz`、`*.orig.tar.gz` 或其他压缩工具的等效物），并使其知道要安装哪些文件。`*.changes` 文件还包含 `debian/changelog` 中提到的目标发行版（通常为 `unstable`），`mini-dinstall` 根据此信息决定应该安装在哪里。这就是为什么管理员在构建包之前必须更改此字段，将其设置为 `internal` 或 `updates`，取决于目标位置。`mini-dinstall` 随后生成 APT 所需的文件，如 `Packages.gz`。
 
-* * *
-
-# 替代方案：apt-ftarchive 和 reprepro
+# 替代方案：`apt-ftarchive` 和 `reprepro`
 
 如果 `mini-dinstall` 对于你的 Debian 归需求来说太复杂，也可以使用 `apt-ftarchive` 命令。该工具扫描目录内容并在其标准输出上显示相应的 `Packages` 文件。在 Falcot Corp 案例中，管理员可以将包直接上传到 `/srv/vhosts/packages/updates/` 或 `/srv/vhosts/packages/internal/`，然后运行以下命令创建 `Packages.gz` 文件：
 
-```
+```shell
 $ cd /srv/vhosts/package
 $ apt-ftarchive packages updates >updates/Packages
 $ gzip updates/Packages
@@ -10409,112 +10735,116 @@ $ gzip internal/Packages
 
 `repropro` 是用于相同用途的更高级工具。它可以生成、管理和同步本地包仓库。它将包和校验和存储在 Berkeley DB 文件中，因此不需要数据库服务器。通过 `repropro`，你可以检查镜像仓库的签名并创建生成的包索引的签名。
 
-* * *
-
 配置 `mini-dinstall` 需要设置 `~/.mini-dinstall.conf` 文件；在 Falcot Corp 案例中，其内容如下：
 
-
-
-
-
+```ini
 [DEFAULT]
+
 archive_style = flat
+
 archivedir = /srv/vhosts/packages
+
 verify_sigs = 0
+
 mail_to = admin@falcot.com
+
 generate_release = 1
+
 release_origin = Falcot Corp
+
 release_codename = stable
 
 [updates]
+
 release_label = Recompiled Debian Packages
+
 [internal]
+
 release_label = Internal Packages
+```
 
 一个值得注意的决定为每个存档生成 `Release` 文件。这有助于使用 `/etc/apt/preferences` 配置来管理包的安装优先级（详情请参见第 6.2.5 节，“管理优先级”）。
 
-## 安全 mini-dinstall 与权限
+## 安全 `mini-dinstall` 与权限
 
 由于 `mini-dinstall` 被设计为作为普通用户运行，因此不需要以 root 身份运行。最简单的方法是在负责创建 Debian 包的管理员的所属的用户账户中配置所有内容。由于只有该管理员有权限将文件放入 `incoming/` 目录，我们可以推断出管理员在部署之前已经验证了每个包的来源，因此 `mini-dinstall` 不需要再次进行此操作。这解释了 `verify_sigs = 0` 参数（意味着不需要验证签名）。然而，如果包的内容非常敏感，我们可以反转该设置，并选择使用包含允许创建包的人员公钥的密钥环进行身份验证（通过 `extra_keyrings` 参数配置）；`mini-dinstall` 将随后通过分析集成到 `*.changes` 文件中的签名来检查每个入站包的来源。
 
 调用 `mini-dinstall` 实际上会在后台启动一个守护进程。只要该守护进程运行，它就会每隔半小时检查一次 `incoming/` 目录中的新包；当新包到达时，它将被移动到存档，并重新生成相应的 `Packages.gz` 和 `Sources.gz` 文件。如果运行守护进程有问题，`mini-dinstall` 也可以在每次包上传到 `incoming/` 目录时以批模式（使用 `-b` 选项）手动调用。`mini-dinstall` 提供的其他可能性记录在它的 `mini-dinstall(1)` 手册页中。
 
-## 额外 生成签名存档
+## 额外生成签名存档
 
 APT 套件在安装包之前会对其处理的包进行加密签名链检查，以确保它们的真实性（参见第 6.6 节，“检查包真实性”）。私有 APT 存档可能会成为问题，因为使用它们的机器将一直显示未签名包的警告。因此，尽职的管理员会将内部存档与安全的 APT 机制集成。
 
-为了帮助这一过程，`mini-dinstall` 包含 `release_signscript` 配置选项，允许指定用于生成签名的脚本。一个很好的起点是 mini-dinstall 包在 `/usr/share/doc/mini-dinstall/examples/` 中提供的 `sign-release.sh` 脚本；可能会进行修改。
+为了帮助这一过程，`mini-dinstall` 包含 `release_signscript` 配置选项，允许指定用于生成签名的脚本。一个很好的起点是 `mini-dinstall` 包在 `/usr/share/doc/mini-dinstall/examples/` 中提供的 `sign-release.sh` 脚本；可能会进行修改。
 
 # 15.4. 成为包维护者
 
-### 15.4.1. 学习制作包
+## 15.4.1. 学习制作包
 
 创建一个高质量的 Debian 包并不总是一项简单任务，成为包维护者需要在理论和实践方面进行一些学习。这不仅仅是构建和安装软件的问题；相反，大部分复杂性源于理解问题和冲突，更广泛地说，源与其他众多可用包之间的相互作用。
 
-#### 15.4.1.1. 规则
+### 15.4.1.1. 规则
 
-Debian 包必须遵守 Debian 策略中编译的精确规则，且每个包维护者必须了解这些规则。这并不要求性记硬背，而是要知道它们的存在，并在当选择呈现非平凡替代方案时参考它们。每个 Debian 维护者都曾因为不知道某条规则而犯过错误，但只要在用户将其报告为错误 报告时修复该错误（得益于高级用户，这通常很快就会发生），就不是一个大问题。`debian/control` 中的 `Standards-Version` 字段指定了包所遵循的 Debian 策略版本。维护者应该遵守最新版本的 Debian 策略。
+Debian 包必须遵守 Debian 策略中编译的精确规则，且每个包维护者必须了解这些规则。这并不要求死记硬背，而是要知道它们的存在，并在当选择呈现非平凡替代方案时参考它们。每个 Debian 维护者都曾因为不知道某条规则而犯过错误，但只要在用户将其报告为错误报告时修复该错误（得益于高级用户，这通常很快就会发生），就不是一个大问题。`debian/control` 中的 `Standards-Version` 字段指定了包所遵循的 Debian 策略版本。维护者应该遵守最新版本的 Debian 策略。
 
 → [`www.debian.org/doc/debian-policy/`](https://www.debian.org/doc/debian-policy/)
 
-#### 15.4.1.2. 流程
+### 15.4.1.2. 流程
 
-Debian 并不是单个包的简单集合。每个人的打包工作都是集体项目的一部分；成为 Debian 意味着意味着了解 Debian 项目作为一个整体是如何运作的。每个开发者早晚都会与其他人交互。《Debian 开发者参考手册》（在 `developers-reference` 包中）总结了每位开发者必须知道的内容，以便与项目中的各个团队尽可能顺畅地交互，并充分利用可用资源。该文档还列出了开发者预期履行的若干职责。
+Debian 并不是单个包的简单集合。每个人的打包工作都是集体项目的一部分；成为 Debian 意味着了解 Debian 项目作为一个整体是如何运作的。每个开发者早晚都会与其他人交互。《Debian 开发者参考手册》（在 `developers-reference` 包中）总结了每位开发者必须知道的内容，以便与项目中的各个团队尽可能顺畅地交互，并充分利用可用资源。该文档还列出了开发者预期履行的若干职责。
 
 → [`www.debian.org/doc/manuals/developers-reference/`](https://www.debian.org/doc/manuals/developers-reference/)
 
-#### 15.4.1.3. 工具
+### 15.4.1.3. 工具
 
 许多工具可以帮助包维护者的工作。本节简要描述了它们，但没有提供完整细节，因为它们自己都有详尽的文档。
 
-##### 15.4.1.3.1. lintian 程序
+#### 15.4.1.3.1. `lintian` 程序
 
 这个工具是最重要的工具之一：它是 Debian 包检查器。它基于根据 Debian 策略创建的大量测试，并能快速、自动地检测出许多错误，这些错误可以在包发布之前进行修复。
 
 这个工具只是一个辅助工具，它有时会出错（例如，由于 Debian 策略随时间推移而变化，`lintian` 有时是过时的）。它还不是详尽的：没有得到任何 Lintian 错误不应解释为包是完美的证明；顶多只是避免了最常见的错误。
 
-##### 15.4.1.3.2. piuparts 程序
+#### 15.4.1.3.2. `piuparts` 程序
 
 这是另一个重要工具：它自动化了包的安装、升级、删除和清除（在隔离环境中），并检查这些操作中没有一个会导致错误。它可以帮助检测缺失的依赖，还能检测在包被清除后是否错误遗留的文件。
 
-##### 15.4.1.3.3. devscripts
+#### 15.4.1.3.3. `devscripts`
 
 `devscripts` 包包含了许多有助于帮助 Debian 开发者完成各种工作的程序：
 
-* `debuild` 允许生成包（使用 `dpkg-buildpackage`）并在之后运行 `lintian` 以检查其对 Debian 策略的合规性。
-* `debclean` 在生成二进制包后清理源包。
-* `dch` 允许快速方便地编辑源包中的 `debian/changelog` 文件。
-* `uscan` 检查上游作者是否发布了软件的新版本；这需要一个描述此类发布位置的 `debian/watch` 文件。
-* `debi` 允许安装（使用 `dpkg -i`）刚刚生成的 Debian 包，无需输入其完整名称和路径。
-* 类似地，`debc` 允许扫描最近生成的包的内容（使用 `dpkg -c`），无需输入其完整名称和路径。
-* `bts` 从命令行控制错误跟踪系统；该程序会自动生成相应的电子邮件。
-* `debrelease` 将最近生成的包上传到远程服务器，无需输入相关 `.changes` 文件的完整名称和路径。
-* `debsign` 对 `*.dsc` 和 `*.changes` 文件签名。
-* `uupdate` 在发布新上游版本时，自动创建包的新修订版本。
+- `debuild` 允许生成包（使用 `dpkg-buildpackage`）并在之后运行 `lintian` 以检查其对 Debian 策略的合规性。
+- `debclean` 在生成二进制包后清理源包。
+- `dch` 允许快速方便地编辑源包中的 `debian/changelog` 文件。
+- `uscan` 检查上游作者是否发布了软件的新版本；这需要一个描述此类发布位置的 `debian/watch` 文件。
+- `debi` 允许安装（使用 `dpkg -i`）刚刚生成的 Debian 包，无需输入其完整名称和路径。
+- 类似地，`debc` 允许扫描最近生成的包的内容（使用 `dpkg -c`），无需输入其完整名称和路径。
+- `bts` 从命令行控制错误跟踪系统；该程序会自动生成相应的电子邮件。
+- `debrelease` 将最近生成的包上传到远程服务器，无需输入相关 `.changes` 文件的完整名称和路径。
+- `debsign` 对 `*.dsc` 和 `*.changes` 文件签名。
+- `uupdate` 在发布新上游版本时，自动创建包的新修订版本。
 
-##### 15.4.1.3.4. debhelper 和 dh-make
-
-
-
-
+#### 15.4.1.3.4. `debhelper` 和 `dh-make`
 
 Debhelper 是一组脚本，用于简化创建符合策略的软件包；这些脚本从 `debian/rules` 调用。Debhelper 在 Debian 内部被广泛采用，事实是大多数官方 Debian 软件包都在使用它。它包含的所有命令都带有 `dh_` 前缀。
 
 `dh_make` 脚本（位于 `dh-make` 软件包中）会在最初包含软件源码的目录中创建生成 Debian 软件包所需的文件。从程序名称可以推断出，生成的文件默认使用 debhelper。
 
-### 15.4.1.3.5. autopkgtest
+#### 15.4.1.3.5. `autopkgtest`
 
 `autopkgtest` 使用源码包提供的测试对二进制包运行测试。
 
-### 15.4.1.3.6. reprotest
+#### 15.4.1.3.6. `reprotest`
 
 `reprotest` 在不同的环境下两次构建相同的源代码，然后检查每个构建产生的二进制文件之间是否存在差异。如果发现任何差异，则将使用 `diffoscope`（如果不可用，则使用 `diff`）详细显示这些差异以供日后分析。
 
-### 15.4.1.3.7. dupload and dput
+#### 15.4.1.3.7. `dupload` 和 `dput`
 
 `dupload` 和 `dput` 命令允许将 Debian 软件包上传到（可能是远程的）服务器。这允许开发者将软件包发布到 Debian 主服务器（`ftp-master.debian.org`），以便将其整合到存档中并通过镜像站分发。这些命令接受 `*.changes` 文件作为参数，并根据其内容推导出其他相关文件。
 
 ## 15.4.2. 接收流程
+
+
 
 成为“Debian 开发者”并不是一件简单的行政事务。该过程包含几个步骤，既是一次入会，也是一个选拔过程。无论如何，它都是形式化且记录完的，因此任何人都可以在新成员流程专用网站上跟踪自己的进度。
 
@@ -10557,9 +10887,6 @@ Debhelper 是一组脚本，用于简化创建符合策略的软件包；这些�
 这一步为候选人提供了一个机会，让他们说明打算在 Debian 项目中做什么，并展示他们已经为此做了什么。Debian 是一个务实的项目，如果行动与宣布的内容不符，光说是不够的。通常，当预期的项目角色与软件包维护有关时，必须由现有 Debian 开发者中的赞助人对拟议软件包的第一版本进行技术验证并上传到 Debian 服务器。
 
 *社区* 赞助
-
-
-
 
 Debian 开发者可以“赞助”由他人准备的软件包，这意味着他们在进行仔细审查后，将这些包发布到 Debian 官方仓库中。这种机制使得尚未通过新成员流程的外部人员也能偶尔为项目做出贡献。同时，它确保了所有包含在 Debian 中的软件包都经过了官方成员的检查。
 
@@ -10637,8 +10964,6 @@ Debian 项目完全承认衍生发行版的重要性，并积极支持所有参�
 
 ## A.2. Ubuntu
 
-
-
 Ubuntu 在自由软件领域的出现引起了不小的轰动，这并非偶然：创建该发行版的 Canonical Ltd. 公司起初雇佣了三十多名 Debian 开发者，并公开宣布了一个影响深远的目标：为普通公众提供一个每年发布两次的发行版。他们还承诺对每个版本维护一年半。
 
 这些目标不可避免地涉及缩小范围；Ubuntu 关注的软件包数量比 Debian 少，并且主要依赖 `GNOME` 桌面环境（尽管也有带有其他桌面环境的 Ubuntu 派生版）。所有内容都经过国际化处理，并以多种语言提供。
@@ -10683,9 +11008,6 @@ Knoppix 发行版几乎不需要介绍。它是第一个提供`live CD` 的流�
 
 → [`aptosid.com`](http://aptosid.com) → [`siduction.org`](https://siduction.org)
 
-
-
-
 Raspbian 是基于 Debian 的重新构建版本，针对流行的（且廉价的）树莓派单板计算机进行了优化。该平台的硬件性能优于 Debian `armel` 架构所能利用的，但缺少某些 `armhf` 所需的功能；因此，Raspbian 是一种中间方案，专门为该硬件重新构建，并包含了仅针对该计算机的补丁。
 
 → [`raspbian.org`](https://raspbian.org)
@@ -10710,122 +11032,155 @@ Distrowatch 网站引用了大量的 Linux 发行版，其中许多基于 Debian
 
 搜索表单可以帮助根据血缘追踪发行版。在 2019 年 6 月，选择 Debian 导致了 127 个活跃发行版！
 
+
+
 → [`distrowatch.com/search.php`](https://distrowatch.com/search.php)
 
 # 附录 B. 短期补习课程
 
 尽管这本书主要针对管理员和“高级用户”，但我们并不希望排除有积极性的初学者。因此，本附录将是一门速成课程，描述处理 Unix 计算机时涉及的基础概念。
 
-# B.1. Shell 和基础命令
+## B.1. Shell 和基础命令
 
 在 Unix 世界中，每位管理员迟早都要使用命令行；例如，当系统无法正常启动且仅提供命令行救援模式时。因此，能够处理此类界面是应对这种情况的基本生存技能。
 
-### 快速浏览 启动命令解释器
+### 快速浏览：启动命令解释器
 
 命令行环境可以从图形桌面运行，通过名为“终端”的应用程序。在 GNOME 中，你可以通过“活动”概览（当你移动鼠标到屏幕左上角时出现）并输入应用程序名称的首字母来启动它。在 Plasma 中，你可以在 K → 应用 → 系统菜单中找到它。
 
 本节仅对命令进行快速预览。所有命令都有许多此处未描述的选项，因此请参阅它们各自手册页中丰富的文档。
 
-## B.1.1. 浏览目录树和管理文件
+### B.1.1. 浏览目录树和管理文件
 
-一旦会话打开，`pwd` 命令（代表*打印工作目录* *print working directory*）会显示文件系统中的当前位置。使用 `cd directory` 命令更改当前目录（`cd` 代表*切换目录* *change directory*）。父目录始终称为 `..`（两个点），而当前目录也称为 `.`（一个点）。`ls` 命令允许*列出*目录的内容。如果不给出参数，它将在当前目录上操作。
+一旦会话打开，`pwd` 命令（代表“打印工作目录” *print working directory*）会显示文件系统中的当前位置。使用`cd directory`命令更改当前目录（`cd` 代表“切换目录” *change directory*）。父目录始终称为`..`（两个点），而当前目录也称为`.`（一个点）。`ls`命令允许“列出”目录的内容。如果不给出参数，它将在当前目录上操作。
 
-```
-$ pwd /home/rhertzog $ cd Desktop $pwd /home/rhertzog/Desktop $ cd . $pwd /home/rhertzog/Desktop $ cd .. $pwd /home/rhertzog $ls Desktop Downloads Pictures Templates Documents Music Public Videos
-```
-
-可以使用 `mkdir directory` 创建新目录，并使用 `rmdir directory` 删除现有的（空）目录。`mv` 命令允许*移动*和/或重命名文件和目录；*删除*一个文件则通过 `rm file` 实现。
-
-```
-$ mkdir test $ls Desktop Downloads Pictures Templates Videos Documents Music Public test $ mv test new $ls Desktop Downloads new Public Videos Documents Music Pictures Templates $ rmdir new $ ls Desktop Downloads Pictures Templates Videos Documents Music Public
-```
-
-## B.1.2. 显示和修改文本文件
-
-`cat file` 命令（旨在将文件*连接* *concatenate* *concatenate*到标准输出设备）读取文件并在终端上显示其内容。如果文件太大无法显示在屏幕上，请使用如 `less`（或 `more`）之类的分页器逐页显示。
-
-`editor` 命令启动文本编辑器（如 `vi` 或 `nano`），并允许创建、修改和读取文本文件。得益于重定向，有时可以直接从命令解释器创建最简单的文件：`echo "text" > file` 会创建一个名为 `file` 的文件，内容为“text”。也可以在该文件的末尾添加一行，使用如 `echo "moretext" >> file` 之类的命令。请注意此示例中的 `>>`。
-
-## B.1.3. 搜索文件和文件内容
-
-`find directory criteria` 命令根据若干标准在 `directory` 下的层次结构中查找文件。最常用的标准是 `-name name`：它允许通过文件名查找文件。
-
-`grep expression files` 命令搜索文件内容并提取匹配正则表达式的行（参见侧栏 *回到基础* 正则表达式）。添加 `-r` 选项可以对作为参数的目录包含的所有文件进行递归搜索。这允许在已知部分内容时查找文件。
-
-## B.1.4. 管理进程
-
-`ps aux` 命令列出当前运行的进程，并通过显示它们的 *pid*（进程 ID *process id*）来帮助识别它们。一旦知道进程的 *pid*，`kill -signal pid` 命令允许对其发送信号（如果该进程属于当前用户）。存在多种信号；最常用的是 `TERM`（优雅终止的请求）和 `KILL`（强制杀死）。
-
-命令解释器也可以在命令后带有“&”的情况下在后台运行程序。通过使用安符，用户可以立即恢复对 shell 的控制，即使命令仍在运行（对用户不可见；作为后台进程）。`jobs` 命令列出在后台运行的进程；运行 `fg %job-number`（*前台* *foreground*）将作业恢复到前台。当命令在前台运行时（无论是因为它是正常启动的，还是通过 `fg` 恢复到前台的），`Control`+`Z` 键组合会暂停进程并恢复对命令行的控制。然后可以使用 `bg %job-number`（*后台* *background*）在后台重启该进程。
-
-## B.1.5. 系统信息：内存、磁盘空间、标识
-
-`free` 命令显示内存信息；`df`（磁盘剩余 *disk free*）报告挂载在文件系统的每个磁盘上的可用磁盘空间。其 `-h` 选项（人类可读 *human readable*）将大小转换为更易读的单位（通常是兆字节或千字节）。类似地，`free` 命令支持 `-m` 和 `-g` 选项，并将其数据显示为兆字节或千字节。
-
-```
-$ free total free shared/cache available Mem: 16279260 5910248 523432 871036 9845580 9128964 Swap: 16601084 240640 16360444 $ df Filesystem 1K-blocks Used Available Use% Mounted ondev 8108516 0 8108516 0% /dev tmpfs 1627928 161800 1466128 10% /run /dev/mapper/vg_main-root 466644576 451332520 12919912 98% / tmpfs 8139628 146796 7992832 2% /dev/shm tmpfs 5120 4 5116 1% /run/lock tmpfs 8139628 0 8139628 0% /sys/fs/cgroup /dev/sda1 523248 1676 521572 1% /boot/efi tmpfs 1627924 88 1627836 1% /run/user/1000
+```shell
+$ pwd
+/home/rhertzog
+$ cd Desktop
+$ pwd
+/home/rhertzog/Desktop
+$ cd .
+$ pwd
+/home/rhertzog/Desktop
+$ cd ..
+$ pwd
+/home/rhertzog
+$ ls
+Desktop Downloads Pictures Templates Documents Music Public Videos
 ```
 
+可以使用`mkdir directory`创建新目录，并使用`rmdir directory`删除现有的（空）目录。`mv`命令允许“移动”和/或重命名文件和目录；“删除”一个文件则通过`rm file`实现。
 
-
-
-`id` 命令显示运行当前会话的用户身份，以及其所属的组列表。由于对某些文件或设备的访问可能仅限于组成员，因此检查可用的组权限可能会很有用。
-
+```shell
+$ mkdir test
+$ ls
+Desktop Downloads Pictures Templates Videos Documents Music Public test
+$ mv test new
+$ ls
+Desktop Downloads new Public Videos Documents Music Pictures Templates
+$ rmdir new
+$ ls
+Desktop Downloads Pictures Templates Videos Documents Music Public
 ```
-$ uid=1000(rhertzog) gid=1000(rhertzog) groups=1000(rhertzog),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),108(netdev),109(bluetooth),115(scanner)
+
+### B.1.2. 显示和修改文本文件
+
+`cat file`命令（旨在将文件“连接” *concatenate* 到标准输出设备）读取文件并在终端上显示其内容。如果文件太大无法显示在屏幕上，请使用如`less`（或`more`）之类的分页器逐页显示。
+
+`editor`命令启动文本编辑器（如`vi`或`nano`），并允许创建、修改和读取文本文件。得益于重定向，有时可以直接从命令解释器创建最简单的文件：`echo "text" > file`会创建一个名为`file`的文件，内容为“text”。也可以在该文件的末尾添加一行，使用如`echo "moretext" >> file`之类的命令。请注意此示例中的`>>`。
+
+### B.1.3. 搜索文件和文件内容
+
+`find directory criteria`命令根据若干标准在`directory`下的层次结构中查找文件。最常用的标准是`-name name`：它允许通过文件名查找文件。
+
+`grep expression files`命令搜索文件内容并提取匹配正则表达式的行（参见侧栏“回到基础：正则表达式”）。添加`-r`选项可以对作为参数的目录包含的所有文件进行递归搜索。这允许在已知部分内容时查找文件。
+
+### B.1.4. 管理进程
+
+`ps aux`命令列出当前运行的进程，并通过显示它们的`pid`（进程 ID *process id*）来帮助识别它们。一旦知道进程的`pid`，`kill -signal pid`命令允许对其发送信号（如果该进程属于当前用户）。存在多种信号；最常用的是`TERM`（优雅终止的请求）和`KILL`（强制杀死）。
+
+命令解释器也可以在命令后带有“&”的情况下在后台运行程序。通过使用安符，用户可以立即恢复对 shell 的控制，即使命令仍在运行（对用户不可见；作为后台进程）。`jobs`命令列出在后台运行的进程；运行`fg %job-number`（“前台” *foreground*）将作业恢复到前台。当命令在前台运行时（无论是因为它是正常启动的，还是通过`fg`恢复到前台的），`Control`+`Z`键组合会暂停进程并恢复对命令行的控制。然后可以使用`bg %job-number`（“后台” *background*）在后台重启该进程。
+
+### B.1.5. 系统信息：内存、磁盘空间、标识
+
+`free`命令显示内存信息；`df`（磁盘剩余 *disk free*）报告挂载在文件系统的每个磁盘上的可用磁盘空间。其`-h`选项（人类可读 *human readable*）将大小转换为更易读的单位（通常是兆字节或千字节）。类似地，`free`命令支持`-m`和`-g`选项，并将其数据显示为兆字节或千字节。
+
+```shell
+$ free
+total free shared/cache available
+Mem: 16279260 5910248 523432 871036 9845580 9128964
+Swap: 16601084 240640 16360444
+$ df
+Filesystem 1K-blocks Used Available Use% Mounted on
+dev 8108516 0 8108516 0% /dev
+tmpfs 1627928 161800 1466128 10% /run
+/dev/mapper/vg_main-root 466644576 451332520 12919912 98% /
+tmpfs 8139628 146796 7992832 2% /dev/shm
+tmpfs 5120 4 5116 1% /run/lock
+tmpfs 8139628 0 8139628 0% /sys/fs/cgroup
+/dev/sda1 523248 1676 521572 1% /boot/efi
+tmpfs 1627924 88 1627836 1% /run/user/1000
 ```
 
-# B.2. 文件系统层次结构的组织
+`id`命令显示运行当前会话的用户身份，以及其所属的组列表。由于对某些文件或设备的访问可能仅限于组成员，因此检查可用的组权限可能会很有用。
 
-## B.2.1. 根目录
+```shell
+$ id
+uid=1000(rhertzog) gid=1000(rhertzog) groups=1000(rhertzog),24(cdrom),25(floppy),27(sudo),29(audio),30(dip),44(video),46(plugdev),108(netdev),109(bluetooth),115(scanner)
+```
 
-Debian 系统根据*文件系统层次结构标准*(FHS)进行组织。该标准定义了每个目录的用途。例如，顶级目录描述如下：
+## B.2. 文件系统层次结构的组织
 
-* `/bin/`：基础程序；
-* `/boot/`：Linux 内核及早期启动过程所需的其他文件；
-* `/dev/`：设备文件；
-* `/etc/`：配置文件；
-* `/home/`：用户的个人文件；
-* `/lib/`：基础库；
-* `/media/*`：可移动设备的挂载点（CD-ROM、USB 闪盘等）；
-* `/mnt/`：临时挂载点；
-* `/opt/`：第三方提供的额外应用程序；
-* `/root/`：管理员（root）的个人文件；
-* `/run/`：不跨重启持久的易失性运行时数据；
-* `/sbin/`：系统程序；
-* `/srv/`：托管在该系统上的服务器所使用的数据；
-* `/tmp/`：临时文件；此目录通常在启动时被清空；
-* `/usr/`：应用程序；此目录进一步细划为 `bin`、`sbin`、`lib`（逻辑与根目录相同）。此外，`/usr/share/` 包含与架构无关的数据。`/usr/local/` 供管理员手动安装应用程序，而不会覆盖由软件包系统（`dpkg`）处理的文件。
-* `/var/`：守护进程处理的可变数据。这包括日志文件、队列、置桶、缓存等。
-* `/proc/` 和 `/sys/` 是 Linux 内核特有的（不属于 FHS）。内核使用它们将数据导出到用户空间（关于此概念的解释，请参见 第 B.3.4 节，“用户空间” 和 第 B.5 节，“用户空间”）。
+### B.2.1. 根目录
 
-注意，许多现代发行版（包括 Debian）将 `/bin`、`/sbin` 和 `/lib` 发布为指向 `/usr` 下对应目录的软链接，以便所有程序和库在单一树结构中可用。这使得更容易保护系统文件的完整性，并在多个容器之间共享这些系统文件等。
+Debian 系统根据“文件系统层次结构标准”（FHS）进行组织。该标准定义了每个目录的用途。例如，顶级目录描述如下：
 
-## B.2.2. 用户家目录
+- `/bin/`：基础程序；
+- `/boot/`：Linux 内核及早期启动过程所需的其他文件；
+- `/dev/`：设备文件；
+- `/etc/`：配置文件；
+- `/home/`：用户的个人文件；
+- `/lib/`：基础库；
+- `/media/*`：可移动设备的挂载点（CD-ROM、USB 闪盘等）；
+- `/mnt/`：临时挂载点；
+- `/opt/`：第三方提供的额外应用程序；
+- `/root/`：管理员（root）的个人文件；
+- `/run/`：不跨重启持久的易失性运行时数据；
+- `/sbin/`：系统程序；
+- `/srv/`：托管在该系统上的服务器所使用的数据；
+- `/tmp/`：临时文件；此目录通常在启动时被清空；
+- `/usr/`：应用程序；此目录进一步细划为`bin`、`sbin`、`lib`（逻辑与根目录相同）。此外，`/usr/share/`包含与架构无关的数据。`/usr/local/`供管理员手动安装应用程序，而不会覆盖由软件包系统（`dpkg`）处理的文件；
+- `/var/`：守护进程处理的可变数据。这包括日志文件、队列、置桶、缓存等；
+- `/proc/`和`/sys/`是 Linux 内核特有的（不属于 FHS）。内核使用它们将数据导出到用户空间（关于此概念的解释，请参见第 B.3.4 节“用户空间”和第 B.5 节“用户空间”）。
 
-用户家目录的内容没有标准，但仍有一些值得注意的惯例。其一个是用户家目录通常用波号（“~”）表示。这很有用，因为命令解释器会自动将波号替换为正确的目录（通常是 `/home/user/`）。
+注意，许多现代发行版（包括 Debian）将`/bin`、`/sbin`和`/lib`发布为指向`/usr`下对应目录的软链接，以便所有程序和库在单一树结构中可用。这使得更容易保护系统文件的完整性，并在多个容器之间共享这些系统文件等。
 
-传统上，应用程序配置文件通常直接存储在用户家目录下，但它们的通常以点开头（例如，`mutt` 邮件客户端将其配置存储在 `~/.muttrc`）。注意，以点开头的文件名默认是隐藏的；`ls` 仅在使用 `-a` 选项时才会列出它们，而图形化文件管理器需要被指示显示隐藏文件。
+### B.2.2. 用户家目录
+
+用户家目录的内容没有标准，但仍有一些值得注意的惯例。其一是用户家目录通常用波号（“~”）表示。这很有用，因为命令解释器会自动将波号替换为正确的目录（通常是`/home/user/`）。
+
+传统上，应用程序配置文件通常直接存储在用户家目录下，但它们通常以点开头（例如，`mutt`邮件客户端将其配置存储在`~/.muttrc`）。注意，以点开头的文件名默认是隐藏的；`ls`仅在使用`-a`选项时才会列出它们，而图形化文件管理器需要被指示显示隐藏文件。
 
 某些程序还会使用组织在一个目录中的多个配置文件（例如，`~/.ssh/`）。某些应用程序（如 Firefox）还会使用其目录来存储下载数据的缓存。这意味着这些目录可能会占用大量磁盘空间。
 
-这些直接存储在用户家目录下的配置文件通常统称为*点文件*（dotfiles），早已泛滥到导致这些目录可能因为它们而变得非常杂乱。幸运的是，在 FreeDesktop.org 伞下共同领导的一项工作产生了“XDG 基础目录规范”（XDG Base Directory Specification），这是一个旨在清理这些文件和目录的惯例。该规范规定配置文件应存储在 `~/.config` 下，缓存文件存储在 `~/.cache` 下，应用程序数据文件存储在 `~/.local`（或其子目录）下。这种做法逐渐流行，许多应用程序（尤其是图形程序）已开始遵循它。
+这些直接存储在用户家目录下的配置文件通常统称为“点文件”（dotfiles），早已泛滥到导致这些目录可能因为它们而变得非常杂乱。幸运的是，在 FreeDesktop.org 伞下共同领导的一项工作产生了“XDG 基础目录规范”（XDG Base Directory Specification），这是一个旨在清理这些文件和目录的惯例。该规范规定配置文件应存储在`~/.config`下，缓存文件存储在`~/.cache`下，应用程序数据文件存储在`~/.local`（或其子目录）下。这种做法逐渐流行，许多应用程序（尤其是图形程序）已开始遵循它。
 
-图形桌面通常在桌面上显示 `~/Desktop/` 目录（或对于未配置为英语的系统，相应的翻译）的内容（即在所有应用程序关闭或最小化后在屏幕上可见的内容）。
+图形桌面通常在桌面上显示`~/Desktop/`目录（或对于未配置为英语的系统，相应的翻译）的内容（即在所有应用程序关闭或最小化后在屏幕上可见的内容）。
 
-最后，邮件系统有时会将传入邮件存储在 `~/Mail/` 目录。
+最后，邮件系统有时会将传入邮件存储在`~/Mail/`目录。
 
-# B.3. 计算机的内部运作：涉及的不同层次
+## B.3. 计算机的内部运作：涉及的不同层次
 
 计算机通常被认为是非常抽象的，外部可见的界面比其内部复杂性简单得多。这种复杂性部分源于涉及组件的数量。然而，这些组件可以被分层查看，每一层只与其正上方或下方的层进行交互。
 
-只要一切运行正常，终端用户不需要知道这些细节也可以应付……面对诸如“互联网无法使用！”这样的问题时，要要做的事情是确定问题源于哪一层。网卡（硬件）工作正常吗？计算机识别它了吗？Linux 内核看到它了吗？网络参数配置正确吗？这些问题可以隔离出相应的层并关注潜在的问题源。
+只要一切运行正常，终端用户不需要知道这些细节也可以应付……面对诸如“互联网无法使用！”这样的问题时，要做的事情是确定问题源于哪一层。网卡（硬件）工作正常吗？计算机识别它了吗？Linux 内核看到它了吗？网络参数配置正确吗？这些问题可以隔离出相应的层并关注潜在的问题源。
 
-## B.3.1. 最深层：硬件
+### B.3.1. 最深层：硬件
 
 让我们从一个基础回顾开始：计算机首先是一组硬件元素的集合。通常有一个主板（称为 *motherboard*），上面带有一个（或多个）处理器、一些内存、设备控制器以及用于扩展板的插槽。这些控制器中最值得注意的是 IDE（并行 ATA）、SCSI 和串行 ATA，用于连接硬盘等存储设备。其他控制器包括 USB（它可以支持各种设备，从摄像头到温度计，从键盘到家庭自动化系统）和 IEEE1394（火线）。这些控制器通常允许连接多个设备，因此由控制器处理的整个子系统被称为“总线”。扩展板包括显卡等。
 
-*实践*检查硬件工作
+#### 实践：检查硬件工作
 
 检查硬件是否工作正常可能很困难。相反，证明它不工作正常有时非常简单。
 
@@ -10835,50 +11190,62 @@ Debian 系统根据*文件系统层次结构标准*(FHS)进行组织。该标准
 
 某些扩展板——尤其是 3D 显卡——包含冷却设备，如散热片和/或风扇。如果显卡已通电但风扇没有旋转，一个合理的解释是显卡过热了。这也适用于主板上的主处理器。
 
-## B.3.2. 启动器：BIOS 或 UEFI
-
-
-
-
+### B.3.2. 启动器：BIOS 或 UEFI
 
 硬件本身如果没有相应的软件驱动，是无法执行任何有用任务的。控制与硬件交互是操作系统和应用程序的目的。而这些程序反过来需要功能性的硬件才能运行。
 
-硬件与软件之间的这种共生并非自动发生。当计算机首次启动时，需要进行初始设置。这一角色由 `BIOS` 或 `UEFI` 承担，它们是嵌入在主板中的软件，在通电时自动运行。它的首要任务是寻找可以将其移交控制权的软件。通常，在 `BIOS` 的情况下，这涉及寻找第一个带有引导区（也称为`主引导记录`或 `MBR`）的硬盘硬盘，加载该引导区并运行它。从那时起，`BIOS` 通常就不再参与（直到下一次启动）。在 `UEFI` 的情况下，该过程涉及扫描磁盘，以找到一个包含更多待执行 `EFI` 应用程序的专用 `EFI` 分区。
+硬件与软件之间的这种共生并非自动发生。当计算机首次启动时，需要进行初始设置。这一角色由`BIOS`或`UEFI`承担，它们是嵌入在主板中的软件，在通电时自动运行。它的首要任务是寻找可以将其移交控制权的软件。通常，在`BIOS`的情况下，这涉及寻找第一个带有引导区（也称为`主引导记录`或`MBR`）的硬盘，加载该引导区并运行它。从那时起，`BIOS`通常就不再参与（直到下一次启动）。在`UEFI`的情况下，该过程涉及扫描磁盘，以找到一个包含更多待执行`EFI`应用程序的专用`EFI`分区。
 
-### Setup，BIOS/UEFI 配置工具
+#### Setup，BIOS/UEFI 配置工具
 
-`BIOS`/UEFI` 还包含一个名为 `Setup` 的软件，设计用于配置计算机的各个方面。具体而言，它允许选择首选启动设备（例如，你可以选择 `USB` 闪存盘或 `CD-ROM` 驱动器而不是默认硬盘）、设置系统时等。启动 `Setup` 通常涉及在计算机通电后很快按下某个按键。这个键通常是 `Del` 或 `Esc`，有时是 `F2` 或 `F10`。大多数情况下，该选择会在启动时显示在屏幕上。
+`BIOS`/`UEFI`还包含一个名为`Setup`的软件，设计用于配置计算机的各个方面。具体而言，它允许选择首选启动设备（例如，你可以选择`USB`闪存盘或`CD-ROM`驱动器而不是默认硬盘）、设置系统时钟等。启动`Setup`通常涉及在计算机通电后很快按下某个按键。这个键通常是`Del`或`Esc`，有时是`F2`或`F10`。大多数情况下，该选择会在启动时显示在屏幕上。
 
-引导区（或 `EFI` 分区）反过来包含另一个软件，称为 `bootloader`（引导加载），其目的是寻找并运行操作系统。由于这个 `bootloader` 并不是嵌入在主板中的，而是从磁盘加载的，它可以比 `BIOS` 更智能，这解释了为什么 `BIOS` 不自己加载操作系统。例如，`bootloader`（在 Linux 系统上通常是 `GRUB`）可以列出可用的操作系统并要求用户选择一个。通常，会提供超时时间和默认选项。有时用户还可以选择添加传递给内核的参数等。最终，会找到一个内核，将其加载到内存中并执行。
+引导区（或`EFI`分区）反过来包含另一个软件，称为`bootloader`（引导加载），其目的是寻找并运行操作系统。由于这个`bootloader`并不是嵌入在主板中的，而是从磁盘加载的，它可以比`BIOS`更智能，这解释了为什么`BIOS`不自己加载操作系统。例如，`bootloader`（在 Linux 系统上通常是`GRUB`）可以列出可用的操作系统并要求用户选择一个。通常，会提供超时时间和默认选项。有时用户还可以选择添加传递给内核的参数等。最终，会找到一个内核，将其加载到内存中并执行。
 
-### 注意：UEFI 是 BIOS 的现代替代品
+#### 注意：UEFI 是 BIOS 的现代替代品
 
-大多数新电脑默认以 `UEFI` 模式启动，但通常它们也支持传统的 `BIOS` 启动，以兼容尚未准备好利用 `UEFI` 的操作系统。
+大多数新电脑默认以`UEFI`模式启动，但通常它们也支持传统的`BIOS`启动，以兼容尚未准备好利用`UEFI`的操作系统。
 
-这种新系统消除了 `BIOS` 启动的一些局限性：通过使用专用分区，`bootloaders` 不再需要使用特殊技巧来挤进微小的`主引导记录`中然后发现内核进行启动。更好的是，通过一个构建良好的 Linux 内核，`UEFI` 可以直接引导内核而无需任何中间引导程序。`UEFI` 还是交付 `Secure Boot`（安全启动）的基础基础，该技术确保你只运行由你的操作系统供应商验证的软件。
+这种新系统消除了`BIOS`启动的一些局限性：通过使用专用分区，`bootloaders`不再需要使用特殊技巧来挤进微小的`主引导记录`中，然后发现内核进行启动。更好的是，通过一个构建良好的 Linux 内核，`UEFI`可以直接引导内核而无需任何中间引导程序。`UEFI`还是交付`Secure Boot`（安全启动）的基础，该技术确保你只运行由你的操作系统供应商验证的软件。
 
-`BIOS`/UEFI` 还负责检测和初始化许多设备。显然，这包括 `IDE/SATA` 设备（通常是硬盘和 `CD/DVD-ROM` 驱动器），还包括 `PCI` 设备。检测到的设备通常会在启动过程中列在屏幕上。如果列表滚动得太快，使用 `Pause` 键冻结它，直到有足够阅读。已安装但未出现的 `PCI` 设备是不吉利的征兆。最坏的情况下，设备存在故障；最好的情况下，它仅仅与当前的 `BIOS` 或主板版本不兼容。`PCI` 规范不断演进，旧主板不能保证能处理新的 `PCI` 设备。
+`BIOS`/`UEFI`还负责检测和初始化许多设备。显然，这包括`IDE/SATA`设备（通常是硬盘和`CD/DVD-ROM`驱动器），还包括`PCI`设备。检测到的设备通常会在启动过程中列在屏幕上。如果列表滚动得太快，使用`Pause`键冻结它，直到有足够时间阅读。已安装但未出现的`PCI`设备是不吉利的征兆。最坏的情况下，设备存在故障；最好的情况下，它仅仅与当前的`BIOS`或主板版本不兼容。`PCI`规范不断演进，旧主板不能保证能处理新的`PCI`设备。
 
-## B.3.3. 内核
+### B.3.3. 内核
 
-`BIOS`/UEFI` 和 `bootloader` 都只运行几秒钟；现在我们进入了运行时间较长的第一个软件——操作系统内核。这个内核扮演着交响团指挥家的角色，确保硬件和软件之间的协调。这一角色涉及多个任务，包括：驱动硬件、管理进程、用户和权限、文件系统等。内核为系统上的所有其他程序提供了共同基础。
+`BIOS`/`UEFI`和`bootloader`都只运行几秒钟；现在我们进入了运行时间较长的第一个软件——操作系统内核。这个内核扮演着交响团指挥家的角色，确保硬件和软件之间的协调。这一角色涉及多个任务，包括：驱动硬件、管理进程、用户和权限、文件系统等。内核为系统上的所有其他程序提供了共同基础。
 
-## B.3.4. 用户空间
+### B.3.4. 用户空间
 
 尽管内核之外发生的所有事情都可以归类为“用户空间”，但我们仍然可以将其分为不同的软件层。然而，它们的交互比以前更复杂，分类可能没那么简单。应用程序通常使用库，而库反过来涉及内核，但通信也可能涉及其他程序，甚至是许多库相互调用。
 
-# B.4. 内核处理的一些任务
+## B.4. 内核处理的一些任务
 
-## B.4.1. 硬件驱动
+### B.4.1. 硬件驱动
 
-内核的首要任务首先是控制硬件部分、检测它们、在计算机通电时开启它们等。它还通过简化的编程接口为高层软件提供这些设备，以便应用程序可以利用设备，而无需担心类似选项卡插在哪个扩展槽等细节。编程接口还提供了一个抽象层；这允许视频会议软件等独立于品牌和型号使用摄像头。软件只需使用 `Video for Linux` (`V4L`) 接口，内核会将该接口的函数调用翻译为正在使用的特定摄像头所需的实际硬件命令。
+内核的首要任务首先是控制硬件部分、检测它们、在计算机通电时开启它们等。它还通过简化的编程接口为高层软件提供这些设备，以便应用程序可以利用设备，而无需担心类似选项卡插在哪个扩展槽等细节。编程接口还提供了一个抽象层；这允许视频会议软件等独立于品牌和型号使用摄像头。软件只需使用`Video for Linux`（`V4L`）接口，内核会将该接口的函数调用翻译为正在使用的特定摄像头所需的实际硬件命令。
 
-内核通过 `/proc/` 和 `/sys/` 虚拟文件系统导出许多关于检测硬件的的。几个工具总结了这些细节。其中，`lspci`（在 `pciutils` 包中）列出 `PCI` 设备，`lsusb`（在 `usbutils` 包中）列出 `USB` 设备，`lspcmcia`（在 `pcmciautils` 包中）列出 `PCMCIA` 卡。这些工具对于识别设备的精确型号非常有用。这种识别也允许在网络上进行更精确的搜索，从而带来更相关的文档。
+内核通过`/proc/`和`/sys/`虚拟文件系统导出许多关于检测硬件的信息。几个工具总结了这些细节。其中，`lspci`（在`pciutils`包中）列出`PCI`设备，`lsusb`（在`usbutils`包中）列出`USB`设备，`lspcmcia`（在`pcmciautils`包中）列出`PCMCIA`卡。这些工具对于识别设备的精确型号非常有用。这种识别也允许在网络上进行更精确的搜索，从而带来更相关的文档。
 
-示例 B.1. `lspci` 和 `lsusb` 提供的信息示例
-```
-lspci [...] 00:02.1 Display controller: Intel Corporation Mobile 915GM/GMS/910GML Express Graphics Controller (rev 03) 00:1c.0 PCI bridge: Intel Corporation 82801FB/FBM/FR/FW/FRW (ICH6 Family) PCI Express Port 1 (rev 03) 00:1d.0 USB Controller: Intel Corporation 82801FB/FBM/FR/FW/FRW (ICH6 Family) USB UHCI #1 (rev 03) [...] 01:00.0 Ethernet controller: Broadcom Corporation NetXtreme BCM5751 Gigabit Ethernet PCI Express (rev 01) 02:03.0 Network controller: Intel Corporation PRO/Wireless 2200BG Network Connection (rev 05)
-lsusb Bus 005 Device 004: ID 413c:a005 Dell Computer Corp. Bus 005 Device 008: ID 413c:9001 Dell Computer Corp. Bus 005 Device 007: ID 045e:00dd Microsoft Corp. Bus 005 Device 006: ID 046d:c03d Logitech, Inc. [...] Bus 002 Device 004: ID 413c:8103 Dell Computer Corp. Wireless 350 Bluetooth
+**示例 B.1.** `lspci`和`lsusb`提供的信息示例
+
+
+
+```text
+lspci [...]
+00:02.1 Display controller: Intel Corporation Mobile 915GM/GMS/910GML Express Graphics Controller (rev 03)
+00:1c.0 PCI bridge: Intel Corporation 82801FB/FBM/FR/FW/FRW (ICH6 Family) PCI Express Port 1 (rev 03)
+00:1d.0 USB Controller: Intel Corporation 82801FB/FBM/FR/FW/FRW (ICH6 Family) USB UHCI #1 (rev 03)
+[...]
+01:00.0 Ethernet controller: Broadcom Corporation NetXtreme BCM5751 Gigabit Ethernet PCI Express (rev 01)
+02:03.0 Network controller: Intel Corporation PRO/Wireless 2200BG Network Connection (rev 05)
+
+lsusb
+Bus 005 Device 004: ID 413c:a005 Dell Computer Corp.
+Bus 005 Device 008: ID 413c:9001 Dell Computer Corp.
+Bus 005 Device 007: ID 045e:00dd Microsoft Corp.
+Bus 005 Device 006: ID 046d:c03d Logitech, Inc.
+[...]
+Bus 002 Device 004: ID 413c:8103 Dell Computer Corp. Wireless 350 Bluetooth
 ```
 
 这些程序有一个 `-v` 选项，列出更详细（但通常没有必要）的信息。最后，`lsdev` 命令（在 `procinfo` 包中）列出设备使用的通信资源。
@@ -10889,16 +11256,13 @@ lsusb Bus 005 Device 004: ID 413c:a005 Dell Computer Corp. Bus 005 Device 008: I
 
 文件系统是内核最特点之一。Unix 系统将所有文件存储合并到一个层次结构中，这允许用户（和应用程序）只需知道数据在该层次结构中的位置即可访问数据。
 
-
-
-
-这种分级树的起点被称为根目录，即 `/`。该目录可以包含命名的子目录。例如，`/` 的 `home` 子目录被称为 `/home/`。该子目录反又包含其他子目录，以此此类推。每个目录还可以包含文件，实际数据就存储在其中。因此，`/home/rmas/Desktop/hello.txt` 名称指的是存储在根目录下的 `home` 目录中 `rmas` 子目录的 `Desktop` 子目录下的名为 `hello.txt` 的文件。内核在这种命名系统与磁盘上的实际物理存储之间进行转换。
+这种分级树的起点被称为根目录，即 `/`。该目录可以包含命名的子目录。例如，`/` 的 `home` 子目录被称为 `/home/`。该子目录反又包含其他子目录，以此此类推。每个目录还可以包含文件，实际数据就存储在其中。因此，`/home/rmas/Desktop/hello.txt` 名称指的是存储在根目录下 `home` 目录中 `rmas` 子目录的 `Desktop` 子目录下的名为 `hello.txt` 的文件。内核在这种命名系统与磁盘上的实际物理存储之间进行转换。
 
 与其他系统不同，这里只有一个这样的层级结构，并且它可以整合来自几块磁盘的数据。其中一块磁盘被用作根目录，其他的磁盘被“挂载”到层级结构中的目录上（Unix 命令称为 `mount`）；这些其他磁盘随后在这些“挂载点”下可用。这允许用户的家目录（传统上存储在 `/home/` 中）存储在第二块硬盘上，该硬盘将包含 `rhertzog` 和 `rmas` 目录。一旦磁盘挂载到 `/home/`，这些目录就可以在它们通常的位置访问，并且像 `/home/rmas/Desktop/hello.txt` 的路径也可以继续工作。
 
 有许多文件系统格式，对应于磁盘上物理存储数据的多种方式。最广为人的是 `ext3` 和 `ext4`，但也存在其他格式。例如，`vfat` 是历史上 DOS 和 Windows 操作系统使用的系统，它允许在 Debian 以及 Windows 下使用硬盘。在任何情况下，文件系统在挂载之前必须在磁盘上准备好，这种操作被称为“格式化”。诸如 `mkfs.ext3`（其中 `mkfs` 代表 `MaKe FileSystem`）的命令负责格式化。这些命令需要一个代表要格式化分区的设备文件作为参数（例如 `/dev/sda1`）。此操作是破坏性的，应该只运行一次，除非人们故意想要擦掉文件系统并从头开始。
 
-还有网络文件系统，例如 `NFS`，数据并不存储在本地磁盘上。相反，数据通过网络传输到服务器，由服务器按需存储和检索。文件系统的抽象使得使用户无需担心：文件仍然以它们通常的层级方式进行访问。
+还有网络文件系统，例如 `NFS`，数据并不存储在本地磁盘上。相反，数据通过网络传输到服务器，由服务器按需存储和检索。文件系统的抽象使得用户无需担心：文件仍然以它们通常的层级方式进行访问。
 
 ## B.4.3. 共享函数
 
@@ -10906,19 +11270,19 @@ lsusb Bus 005 Device 004: ID 413c:a005 Dell Computer Corp. Bus 005 Device 008: I
 
 ## B.4.4. 进程管理
 
-进程是程序的运行实例。这需要内存来同时存储程序本身及其运行数据。内核负责创建和跟踪它们。当程序运行时，内核首先拨留一些内存，然后从文件系统将可执行代码加载到该内存中，然后开始运行代码。它保留有关该进程的信息，其中最可见的是一个被称为 `pid`（*进程标识符*）的标识号。
+进程是程序的运行实例。这需要内存来同时存储程序本身及其运行数据。内核负责创建和跟踪它们。当程序运行时，内核首先拨留一些内存，然后从文件系统将可执行代码加载到该内存中，然后开始运行代码。它保留有关该进程的信息，其中最可见的是一个被称为 `pid`（进程标识符）的标识号。
 
 Unix 类内核（包括 Linux）与其他大多数现代操作系统一样，能够实现“多任务”。换句话说，它们允许“同时”运行许多进程。实际上，在任何时刻只有一个运行中的进程，但内核将时间切成微小的切片并轮运行每个进程。由于这些时间片非常短（在毫秒范围内），它们营造了进程并行运行的幻象，尽管它们实际上在某些时间间隔内处于活跃状态，其余时间空闲。内核的工作是调整其调度机制以保持这种幻象，同时最大化全局系统性能。如果时间片太长，应用程序的响应速度可能不如预期。如果时间片太短，系统在频繁切换任务上浪费时间。这些决策可以通过进程优先级进行微调。高优先级进程将比低优先级进程运行得更长，且获得的时间片频率更高。
 
 ### 注意事项：多处理器系统（及其变体）
 
-上述关于同一时间只能运行一个进程的限制并不总是适用。实际的限制是，*每个处理器核心*同一时间只能运行一个运行进程。多处理器、多核心或“超线程”系统允许多个进程并行运行。尽管如此，仍然使用相同的时间分片系统，以处理活动进程多于可用处理器核心的情况。这并不稀奇：一个基础系统，即使是大部分处于空闲状态的系统，几乎也有几十个正在运行的进程。
+上述关于同一时间只能运行一个进程的限制并不总是适用。实际的限制是，每个处理器核心同一时间只能运行一个运行进程。多处理器、多核心或“超线程”系统允许多个进程并行运行。尽管如此，仍然使用相同的时间分片系统，以处理活动进程多于可用处理器核心的情况。这并不稀奇：一个基础系统，即使是大部分处于空闲状态的系统，几乎也有几十个正在运行的进程。
 
 当然，内核允许运行同一个程序的多个独立实例。但每个实例只能访问自己的时间片和内存。因此，它们的数据保持独立。
 
 ## B.4.5. 权限管理
 
-Unix 类系统也是多用户系统。它们提供了一个权限管理系统，支持单独的用户和组；它还允许基于权限控制操作。内核管理每个进程的数据，允许其控制权限。大多数时候，进程由启动它的用户识别。该进程仅被允许执行其所有者可以执行的操作。例如，尝试打开文件需要内核根据访问权限检查进程身份（有关此特定特定示例的更多信息，请参见 第 9.3 节，“管理权限`）。
+Unix 类系统也是多用户系统。它们提供了一个权限管理系统，支持单独的用户和组；它还允许基于权限控制操作。内核管理每个进程的数据，允许其控制权限。大多数时候，进程由启动它的用户识别。该进程仅被允许执行其所有者可以执行的操作。例如，尝试打开文件需要内核根据访问权限检查进程身份（有关此特定示例的更多信息，请参见第 9.3 节，“管理权限”）。
 
 # B.5. 用户空间
 
@@ -10928,36 +11292,33 @@ Unix 类系统也是多用户系统。它们提供了一个权限管理系统，
 
 当内核通过初始化阶段后，它启动了第一个进程 `init`。仅有 1 号进程本身很少有用，Unix 类系统在许多额外进程的情况下运行。
 
-首先，进程可以克隆自己（这被称为 *fork*）。内核分配一个新的（但完全相同的）进程内存空间，并将另一个进程来使用它。此时，这两个进程之间的唯一区别是它们的 `pid`。新进程通常被称为子进程，而 `pid` 不变的原始进程被称为父进程。
+首先，进程可以克隆自己（这被称为 `fork`）。内核分配一个新的（但完全相同的）进程内存空间，并将另一个进程来使用它。此时，这两个进程之间的唯一区别是它们的 `pid`。新进程通常被称为子进程，而 `pid` 不变的原始进程被称为父进程。
 
-有时，子进程会独立于父进程继续过自己的生活，其数据是从父进程复制的。然而，在许多情况下，这个子进程会执行另一个程序。除少数例外外，它的内存会被被新程序的内存替换，并开始执行该新程序。这就是 init 进程（进程号为 1）用于启动附加服务和执行整个启动序列的机制。在某个时刻，`init` 后代中的一个进程会启动一个供用户登录的图形界面（实际的事件序列在 第 9.1 节，“系统引导` 中进行了更详细的描述）。
-
-
-
+有时，子进程会独立于父进程继续过自己的生活，其数据是从父进程复制的。然而，在许多情况下，这个子进程会执行另一个程序。除少数例外外，它的内存会被新程序的内存替换，并开始执行该新程序。这就是 `init` 进程（进程号为 1）用于启动附加服务和执行整个启动序列的机制。在某个时刻，`init` 后代中的一个进程会启动一个供用户登录的图形界面（实际的事件序列在第 9.1 节，“系统引导”中进行了更详细的描述）。
 
 当一个进程完成其启动时执行的任务后，它就会终止。内核随后会回收分配给该进程的内存，并停止向其分配运行时间片。父进程会收到子进程终止的通知，这允许进程等待其分派给子进程的任务完成。这种行为在命令行解释器（称为 `shells`）中显而易见。当在 shell 中输入一个命令时，只有在命令执行完成后，提示符才会返回。大多数 shell 都允许在后台运行命令，这只需要在命令末尾添加一个 `&` 即可，非常简单。提示符会立即再次显示，但如果命令需要显示自己的数据，这可能会导致问题。
 
-## B.5.2. 守护进程 (Daemons)
+## B.5.2. 守护进程（Daemons）
 
 “守护进程”（daemon）是一个由启动序列自动启动的进程。它持续运行（在后台），以执行维护任务或为其他进程提供服务。这种“后台任务”实际上是任意的，从系统的角度来看，它们并不对应任何特定的内容。它们仅仅是进程，与其他进程非常相似，在自己的时间片到时时运行。区别仅在于人类语言：一个与用户没有交互而运行的进程（特别是在没有任何图形界面的情况下）被称为“在后台运行”或“作为守护进程运行”。
 
-**词汇表** Daemon，demon，是一个贬义词吗？
+**词汇表：** Daemon，demon，是一个贬义词吗？
 
 尽管 `daemon` 一词在希腊语源上与 `demon` 相同，但前者并不意味着魔鬼的邪恶，相反，它应该被理解为一种帮助精灵。这种区别在英语中足够微妙；而在其他语言中，由于同一个词同时用于这两种含义，情况就更糟了。
 
 第 9 章，*Unix 服务*详细描述了几个此类守护进程。
 
-## B.5.3. 进程间通信 (Inter-Process Communications)
+## B.5.3. 进程间通信（Inter-Process Communications）
 
-一个孤立的进程（无论是守护进程还是交互式应用程序）本身很少用用，这就是为什么有几种方法允许不同的进程相互进行通信，以交换数据或控制彼此。指代这种现象的通用术语是进程间通信，简称 `IPC`。
+一个孤立的进程（无论是守护进程还是交互式应用程序）本身很少有用，这就是为什么有几种方法允许不同的进程相互进行通信，以交换数据或控制彼此。指代这种现象的通用术语是进程间通信，简称 `IPC`。
 
 最简单的 `IPC` 系统是使用文件。想要发送数据的进程将其写入文件（文件名预先已知），而接收者只需要打开文件并读取其内容即可。
 
 在不想将数据存储在磁盘上的情况下，你可以使用 `pipe`（管道），它简单来说是一个具有两个端的对象；写入一端的字节流可以在另一端被读取。如果两端由不同的进程控制，这就会形成一个简单且方便的进程间通信通道。管道可以分为两类：命名管道和匿名管道。命名管道由文件系统上的条目表示（尽管传输的数据并不存储在那里），因此如果预先知道命名管道的位置，两个进程都可以独立地打开它。在通信进程之间存在关系的情况下（例如，父进程及其子进程），父进程也可以在派生（forking）之前创建一个匿名管道，并由子进程继承它。这样两个进程都将能够通过 `pipe` 交换数据，而不需要文件系统。
 
-**实践中** 一个具体的示例
+**实践中：** 一个具体的示例
 
-让我们详细描述一下当从 shell 运行一个复杂命令（`pipeline`）时发生了什么。假设我们有一个 `bash` 进程（Debian 上的标准用户 shell），`pid` 为 4374；在这个 shell 中，我们输入命令：`ls | sort`。
+让我们详细描述一下当从 shell 运行一个复杂命令（`pipeline`）时发生了什么。假设我们有一个 `bash` 进程，`pid` 为 4374；在这个 shell 中，我们输入命令：`ls | sort`。
 
 shell 首先解释输入的命令。在我们的案例中，它理解有两个程序（`ls` 和 `sort`），有一个数据流从一个流向另一个（用 `|` 字符表示，称为 `pipe`）。`bash` 首先创建一个匿名管道（该管道最初仅存在于 `bash` 进程内部）。
 
@@ -10975,19 +11336,18 @@ shell 首先解释输入的命令。在我们的案例中，它理解有两个�
 
 典型的 Unix 类系统在不同程度上利用了这些机制。
 
-## B.5.4. 库 (Libraries)
+## B.5.4. 库（Libraries）
 
 函数库在类 Unix 操作系统起着至关重要的作用。它们不是真正的程序，因为它们不能独立执行，而是供程序使用的代码片段。在常用库中，你可以找到：
 
-*   标准 C 库 (`glibc`)，包含基本函数，如打开文件或网络连接的函数，以及与其他内核交互的函数；
-*   图形工具包，如 Gtk+ 和 `Qt`，允许许多程序重用它们提供的图形对象；
-*   `libpng` 库，允许加载、解释和保存 PNG 格式的图像。由于这些库，应用程序可以使用现有代码。应用程序开发被简化，因为许多应用程序可以使用相同的函数。由于库通常由不同的人开发，系统的全局开发更符合 Unix 的历史哲学。
+- 标准 C 库（`glibc`），包含基本函数，如打开文件或网络连接的函数，以及与其他内核交互的函数；
+- 图形工具包，如 Gtk+ 和 `Qt`，允许许多程序重用它们提供的图形对象；
+- `libpng` 库，允许加载、解释和保存 PNG 格式的图像。
 
-**文化** Unix 之道：一次只一件事
+由于这些库，应用程序可以使用现有代码。应用程序开发被简化，因为许多应用程序可以使用相同的函数。由于库通常由不同的人开发，系统的全局开发更符合 Unix 的历史哲学。
+
+**文化：** Unix 之道：一次只一件事
 
 Unix 家族的基础概念之一是每个工具应该只做一件事并把它做好；应用程序随后可以重用这些工具来构建更高级的逻辑。这种哲学可以在许多形式中看到。Shell 脚本可能是最好的例子：它们组合了许多简单工具（如 `grep`、`wc`、`sort`、`uniq` 等）。这种哲学的另一种实现体现在代码库中：`libpng` 库允许读取和写入 PNG 图像，有不同的选项和方式，但它只做这些；不包含显示或编辑图像的函数。
 
-
-
-
-此外，这些库通常被称为“共享库”，因为内核只需将它们加载到内存中一次，即使多个进程同时使用同一个库也是如此。与相反（假设）的情况相比——即库代码根据使用它的进程数量数量被多次加载——这种方式可以节省内存。
+此外，这些库通常被称为“共享库”，因为内核只需将它们加载到内存中一次，即使多个进程同时使用同一个库也是如此。与相反（假设）的情况相比——即库代码根据使用它的进程数量被多次加载——这种方式可以节省内存。

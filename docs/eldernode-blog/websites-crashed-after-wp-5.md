@@ -1,10 +1,11 @@
+
 # wp 更新到 5.5 后网站崩溃 wordpress 5.5 网站崩溃
 
 > 原文：<https://blog.eldernode.com/websites-crashed-after-wp-5/>
 
 ![Websites crashed after wp update to 5.5](img/8ab6fb4dbe90a150d3a1526b5e638226.png)
 
-wp 升级到 5.5 后网站崩溃是大多数 WordPress 用户这些天面临的事实。在这篇文章中，我们将首先检查 WordPress 版本网站崩溃的原因。然后我们教你如何解决 **jQuery 迁移**和**分页 Bug 错误**。VPS 主机帮助你快速利用所有令人惊奇的 WordPress 功能，并避免 WordPress 网站频繁受到攻击。 ***留在我们身边。***
+wp 升级到 5.5 后网站崩溃是大多数 WordPress 用户这些天面临的事实。在这篇文章中，我们将首先检查 WordPress 版本网站崩溃的原因。然后我们教你如何解决 **jQuery 迁移**和**分页 Bug 错误**。VPS 主机帮助你快速利用所有令人惊奇的 WordPress 功能，并避免 WordPress 网站频繁受到攻击。***留在我们身边。***
 
 ## WP 更新到 5.5 后网站崩溃
 
@@ -16,7 +17,7 @@ wp 升级到 5.5 后网站崩溃是大多数 WordPress 用户这些天面临的�
 
 WordPress 5.5 不使用 jQuery Migrate JavaScript 库。 **jQuery Migrate** 是一个像桥梁一样在 WordPress 上运行旧代码的库。如果你在你的网站上使用旧插件和皮肤(尤其是那些不再更新的)，你很可能会遇到 WordPress 5.5 的问题。
 
-当然，请记住这并不是新版 WordPress 的错，而是旧插件和皮肤的使用导致了网站的 T2 中断。
+当然，请记住这并不是新版 WordPress 的错，而是旧插件和皮肤的使用导致了网站的`T2`中断。
 
 #### 如何修复 jQuery 迁移错误？
 
@@ -30,17 +31,17 @@ WordPress 5.5 不使用 jQuery Migrate JavaScript 库。 **jQuery Migrate** 是�
 
 ### wp 升级到 5.5 后网站崩溃，因为分页错误
 
-WordPress 分页是网站导航结构的一部分。将 WordPress 升级到**版本 5.5** 导致了糟糕的网站分页性能。据一些网站发布者称，在更新 WordPress 后，页面参数被从网站 URL 中删除，重定向链接变成 301 。这个问题的原因是 WordPress 在其分页中使用了" **page** "变量，但是大多数 WordPress 主题在其他应用中使用" page "变量。
+WordPress 分页是网站导航结构的一部分。将 WordPress 升级到**版本 5.5** 导致了糟糕的网站分页性能。据一些网站发布者称，在更新 WordPress 后，页面参数被从网站 URL 中删除，重定向链接变成 301 。这个问题的原因是 WordPress 在其分页中使用了" **page** "变量，但是大多数 WordPress 主题在其他应用中使用 "page" 变量。
 
 在 **WordPress 5.5** 中，页面变量只能接收数值，而在查询和外壳代码中，该变量还可以接收非数值字符串和字符。
 
 #### 如何修复 WordPress 上的分页错误？
 
-在 WordPress 中，“ **page** 变量只被定义为接收数值。例如，在查询中使用这个词作为“ page=offers & id=xxx？”遇到一个错误。
+在 WordPress 中，“ **page** "变量只被定义为接收数值。例如，在查询中使用这个词作为 "page=offers & id=xxx?" 遇到一个错误。
 
-**为了解决这个问题** ，你可以在你的查询中使用另一个词，比如“ mypage ，而不是使用单词“ page ”。
+**为了解决这个问题** ，你可以在你的查询中使用另一个词，比如 "mypage" ，而不是使用单词 "page"。
 
-**另一种解决方法** 是禁用该查询样式的“ redirect_canonical() ”函数。
+**另一种解决方法** 是禁用该查询样式的 "redirect_canonical()" 函数。
 
 **注意:** 在这样做之前，一定要咨询你的站点 SEO 专家，考虑这样做对你的站点 SEO 的后果。
 

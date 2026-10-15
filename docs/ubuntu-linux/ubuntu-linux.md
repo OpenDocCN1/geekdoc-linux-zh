@@ -1,31 +1,15 @@
+
 # Ubuntu® Linux 入门指南
-
-
-
-
-
-
 
 ![](img/cd016123ddbda18287605a828f4b873d_0_0.png)
 
 ![](img/cd016123ddbda18287605a828f4b873d_0_1.png)
-
-
-
-
-
-
-
-
-
 
 ![](img/cd016123ddbda18287605a828f4b873d_3_0.png)
 
 > 我们不重新发明轮子，我们重新发明光光。迷人的灯光提供了无限的可能性：创新技术和新市场带来了机遇与挑战。在一个您的专业知识需求迫切的环境中，享受我们全球集团内的支持性工作环境，并从国际化职业路径中受益。与其他专家密切合作实施可持续理念，并为影响我们的未来贡献力量。来加入我们，每天重新发明光。
 
 灯光来自 OSRAM SYLVLVANIA
-
-
 
 注脚 55
 
@@ -42,11 +26,12 @@ Mostafa A. Hamid
 # 关于技术审核员
 
 Mohamed Abbarra
+
 TechWorld 技术工程师
+
 海德拉巴大学信息系统学士
+
 邮箱：mohamed.abarra.in@gmail.com
-
-
 
 # 销售咨询
 
@@ -57,8 +42,8 @@ TechWorld 技术工程师
 - 英国及其他地区 +44 800 0588704
 
 pr@canonical.com
-webmaster@ubuntu.com
 
+webmaster@ubuntu.com
 
 如果您想立即与人联系，可以致电或写信 Canonical。位于伦敦的办公室是一个很好的起点。
 
@@ -72,6 +57,7 @@ webmaster@ubuntu.com
 主传真号码：+44 20 7630 2401
 
 # CANONICAL® LTD.
+
 ## 1.1 UBUNTU 背后的公司
 
 Canonical LTD是一家英国公司，创始人来自南非的 Mark Shuttleworth，他是公司的大脑。
@@ -91,6 +77,7 @@ UBUNTU 是我们本书的关注重点，它是一个为当今普通桌面用户�
 - GNU Bazaar
 
 Canonical LTD 网站为：
+
 http://canonical.com
 
 接下来，我们将了解更多关于 UBUNTU 和 LINUX 的细节。
@@ -141,7 +128,7 @@ DNS 配置可以通过以下设置完成，某些设置可能会根据环境而�
 
 让我们了解缓存服务器配置。
 
-使用以下命令编辑位于目录下的 named.options 文件：
+使用以下命令编辑位于目录下的 `named.options` 文件：
 
 ```bash
 sudo nano /etc/bind/named.options
@@ -149,7 +136,7 @@ sudo nano /etc/bind/named.options
 
 注意，文件将在终端以文本编辑模式打开，并找到如下章节：
 
-通过按下键盘上的 CTRL + W，nano 将允许您搜索 forwarders 章节并按下回车键。
+通过按下键盘上的 CTRL + W，nano 将允许您搜索 `forwarders` 章节并按下回车键。
 
 ```
 forwarders {
@@ -166,21 +153,17 @@ forwarders {
 dig -x your-ip-address
 ```
 
-您需要将 your-ip-address 更改为 ISP 提供的静态 IP 地址或路由器提供的 DHCP IP 地址，例如：192.168.1.2
+您需要将 `your-ip-address` 更改为 ISP 提供的静态 IP 地址或路由器提供的 DHCP IP 地址，例如：192.168.1.2
 
 让我们继续进入下一个配置选项，即主服务器，我们将应用以下配置选项：
 
 如果您将使用单台机器安装您的 DNS 基础架构，我们将遵循此配置。
 
-现在，我们将使用以下命令编辑位于 /etc/bind/named.conf.local 目录下的 named.conf.local 文件：
+现在，我们将使用以下命令编辑位于 `/etc/bind/named.conf.local` 目录下的 `named.conf.local` 文件：
 
 ```bash
 sudo nano /etc/bind/named.conf.local
 ```
-
-
-
-
 
 ## UBUNTU LINUX 上的域名系统
 
@@ -192,11 +175,11 @@ sudo nano /etc/bind/named.conf.local
 }
 ```
 
-当然，请将 example.com 更改为你自己的域名。
+当然，请将 `example.com` 更改为你自己的域名。
 
 如果你计划使用 DDNS（动态域名系统），目录将更改为以下内容：
 
-``````
+```
 zone "example.com" {
   type master;
   file "/var/lib/bind/db.example.com";
@@ -230,7 +213,7 @@ IN A 192.168.0.2
 ns IN A 192.168.0.2
 ```
 
-请注意，将 example.com 和 root.example.com 更改为你选择的域名，并将 IP 地址 192.168.0.2 更改为你的 ISP 的 IP 地址或路由器的 IP 地址。
+请注意，将 `example.com` 和 `root.example.com` 更改为你选择的域名，并将 IP 地址 `192.168.0.2` 更改为你的 ISP 的 IP 地址或路由器的 IP 地址。
 
 接下来，我们继续配置的下一个部分，并在对配置文件进行修改后，运行以下 2 个命令之一来重启 BIND9 服务：
 
@@ -257,7 +240,7 @@ zone "0.168.192.in-addr.arpa" {
 }
 ```
 
-当然，你将需要将 0.168.192 替换为你的 IP 地址反向格式的前三个字节，且条目中最后的 192 也是根据你的 IP 地址决定的。
+当然，你将需要将 `0.168.192` 替换为你的 IP 地址反向格式的前三个字节，且条目中最后的 `192` 也是根据你的 IP 地址决定的。
 
 让我们继续安装配置选项，我们将创建一个名为 `db.192` 或 `db.(你IP地址的第一个字节)` 的文件，该文件将与上一个区域条目中放置的文件完全相同，如下所示：
 
@@ -282,11 +265,9 @@ TTL 604800
 10 IN PTR example.com.
 ```
 
-
-
-
 最后，让我们通过一张详细图表来查看我们所的操作：
-![](img/cd016123ddbda1287605a828f4b873d_20_0.png)
+
+![](img/cd016123ddb1287605a828f4b873d_20_0.png)
 
 ## 在 Ubuntu 上开启 UFW
 
@@ -418,11 +399,8 @@ MAIL-STACK-DELIVERY
 ```
 
 现在，让我们开始安装过程，查看以下图表以说明组件是如何协同工作的：
+
 ![](img/cd016123ddb18287605a828f4b873d_26_0.png)
-
-
-
-
 
 之后，让我们继续下一步操作：
 
@@ -473,6 +451,10 @@ sudo openssl ca -in server.csr -config /etc/ssl/openssl.cnf
 
 之后，我们将继续进行 POSTFIX 配置，以使用我们使用的证书，如下所示：
 
+
+
+# Postfix TLS 配置
+
 ```
 sudo postconf -e 'smtp_tls_security_level = may'
 sudo postconf -e 'smtpd_tls_security_level = may'
@@ -488,13 +470,15 @@ OR
 sudo service postfix restart
 ```
 
-现在，我们将安装第二个包 dovecot 用于 SASL 身份验证，如下：
+# Dovecot SASL 身份验证
+
+现在，我们将安装第二个包 `dovecot` 用于 SASL 身份验证，如下：
 
 ```
 sudo apt install dovecot-core
 ```
 
-然后，我们将按照如下所示配置 dovecot-core 包：
+然后，我们将按照如下所示配置 `dovecot-core` 包：
 
 ```
 sudo nano /etc/dovecot/conf.d/10-master.conf
@@ -516,7 +500,7 @@ service auth {
 }
 ```
 
-对于 outlook 客户端，我们需要继续编辑以下文件：
+对于 `outlook` 客户端，我们需要继续编辑以下文件：
 
 ```
 sudo nano /etc/dovecot/conf.d/10-auth.conf
@@ -528,13 +512,15 @@ sudo nano /etc/dovecot/conf.d/10-auth.conf
 auth_mechanisms = plain login
 ```
 
-现在，我们将按照如下所示安装我们的最后一个包 mail-stack-delivery：
+# Mail-Stack-Delivery 安装
+
+现在，我们将按照如下所示安装我们的最后一个包 `mail-stack-delivery`：
 
 ```
 sudo apt install mail-stack-delivery
 ```
 
-之后，按照如下所示配置 POSTFIX 配置文件：
+之后，按照如下所示配置 `POSTFIX` 配置文件：
 
 ```
 sudo nano /etc/postfix/main.cf
@@ -547,19 +533,23 @@ smtptd_tls_cert_file = /etc/ssl/certs/ssl-mail.pem
 smtptd_tls_key_file = /etc/ssl/private/ssl-mail.pem
 ```
 
-当然，您需要将证书目录和文件名更改为系统内部适当的文件，就像在创建自签名证书时完全配置的那样。现在，我们将使用 telnet 连接到指定端口上的主机来测试我们的环境：
+当然，您需要将证书目录和文件名更改为系统内部适当的文件，就像在创建自签名证书时完全配置的那样。
+
+现在，我们将使用 `telnet` 连接到指定端口上的主机来测试我们的环境：
 
 ```
 telnet mail.example.com 25
 ```
 
-最后，我们需要输入以下命令并使用域名向我们的服务器发送 ehlo：
+最后，我们需要输入以下命令并使用域名向我们的服务器发送 `ehlo`：
 
 ```
 ehlo mail.example.com
 ```
 
-我们已经完成了邮件服务器的安装和配置程序，我们剩下的工作是设置一个全面的用户界面并获取日志，以及对邮件服务器进行故障排除以确保运行良好。出于安全考虑，我们将完成配置，因为安装过程中出现的大问题是因为正在处理核心内容。要安装 SMTP，我们将如下所示编辑 /etc/postfix/master.cf 文件：
+我们已经完成了邮件服务器的安装和配置程序，我们剩下的工作是设置一个全面的用户界面并获取日志，以及对邮件服务器进行故障排除以确保运行良好。出于安全考虑，我们将完成配置，因为安装过程中出现的大问题是因为正在处理核心内容。
+
+要安装 `SMTP`，我们将如下所示编辑 `/etc/postfix/master.cf` 文件：
 
 ```
 sudo nano /etc/postfix/master.cf
@@ -586,19 +576,21 @@ sudo postconf -e 'smtpd_tls_loglevel = 4'
 sudo postconf -e 'debug_peer_list = domain-example.com'
 ```
 
-当然，在每次配置之后，您必须重启与您所做更改相关的服务。现在让我们为 dovecot 包安装以下内容：
+当然，在每次配置之后，您必须重启与您所做更改相关的服务。
+
+现在让我们为 `dovecot` 包安装以下内容：
 
 ```
 sudo apt-get install dovecot-imap dovecot-pop3
 ```
 
-我们将按照如下所示修改 dovecot 包的配置：
+我们将按照如下所示修改 `dovecot` 包的配置：
 
 ```
 sudo nano /etc/dovecot/conf.d
 ```
 
-我们将按照如下所示修改 dovecot 包配置：
+我们将按照如下所示修改 `dovecot` 包配置：
 
 ```
 protocols = pop3 imap
@@ -607,18 +599,13 @@ mail_location = maildir:/home/%u
 
 按照如下格式如下：
 
-```u
+```
 mail_location = maildir:/home/%u
 disable_plaintext_auth = no
 ssl = yes
 ssl_file = /etc/ssl/certs/cert.pem
 key_file = /etc/ssl/private/cert.key
 ```
-
-```
-```
-
-```使用vecvec  的配置如下：
 
 ```
 protocol imap {
@@ -631,15 +618,13 @@ ssl_listen = 995
 }
 ```
 
-接下来，我们将按照如下内容将邮件邮件   ，，
-
-，，，设置设置 Maildir 格式：
+接下来，我们将按照如下内容将邮件邮件，设置 `Maildir` 格式：
 
 ```
-sudo nano /etcetcpostfix/main.cf
+sudo nano /etc/etcpostfix/main.cf
 ```
 
-然后，我们将按照如下所示配置它：现在我们将按照如下所示为所有用户更新 Maildir，添加到他们的 UBUNTU Skeleton 如下：
+然后，我们将按照如下所示配置它：现在我们将按照如下所示为所有用户更新 `Maildir`，添加到他们的 `UBUNTU` `Skeleton` 如下：
 
 ```
 sudo maildirmake.dovecot /etc/skel/Maildir
@@ -666,31 +651,27 @@ EXAMINE INBOX
 
 您是否想为邮件服务器安装一个反病毒扫描器并扫描所有邮件？
 
-如今邮件服务充满了垃圾和病毒攻击，有一个名为 Amavis-New 的包，它可以自动扫描感染的邮件并排除它们。让我们按照如下所示进行邮件反病毒软件的安装和包配置：
+如今邮件服务充满了垃圾和病毒攻击，有一个名为 `Amavis-New` 的包，它可以自动扫描感染的邮件并排除它们。让我们按照如下所示进行邮件反病毒软件的安装和包配置：
 
-要安装 amavis-new，我们需要运行以下命令：
+要安装 `amavis-new`，我们需要运行以下命令：
 
 ```
 sudo apt-get install amavisd-new spamassassin clamav-daemon
 sudo apt-get install libnet-dns-perl libmail-spf-perl pyzor razor
-sudo apt-get install arj bzip2 cabextract cpio file gzip
-lha nomarch pax rar unrar unzip unzoo zoo
+sudo apt-get install arj bzip2 cabextract cpio file gzip lha nomarch pax rar unrar unzip unzoo zoo
 ```
 
-接下来，我们将按照如下所示将以下内容配置到我们的 postfix 中，如下所示：
+接下来，我们将按照如下所示将以下内容配置到我们的 `postfix` 中，如下所示：
 
 ```
 sudo postconf -e "content_filter = smtp-amavis:[127.0.0.1]:10024"
 ```
 
-现在，我们将按照如下所示编辑文件 /etc/postfix/master.cf：
+现在，我们将按照如下所示编辑文件 `/etc/postfix/master.cf`：
 
 ```
 sudo nano /etc/postfix/master.cf
 ```
-
-
-
 
 随后在文件末尾添加以下内容：
 
@@ -700,7 +681,6 @@ smtp-amavis unix - - 2 smtp
 -o smtp_send_xforward_command=yes
 -o disable_dns_lookups=yes
 -o max_use=20
-
 127.0.0.1:10025 inet n - - smtppd
 -o content_filter=
 -o local_recipient_maps=
@@ -722,27 +702,27 @@ smtp-amavis unix - - 2 smtp
 -o receive_override_options=no_header_body_checks,no_unknown_recipient_checks
 ```
 
-现在，重启我们的 postfix 服务并执行以下命令：
+现在，重启我们的 `postfix` 服务并执行以下命令：
 
 ```
 sudo /etc/init.d/postfix reload
 chmod -R 775 /var/lib/amavis/tmp
 ```
 
-现在，我们将继续使用 squirrelmail 及其组件进行 GUI 安装。
+现在，我们将继续使用 `squirrelmail` 及其组件进行 `GUI` 安装。
 
-## 4.2 在 UBUNTU 上安装 OPEN WEB WEBMAIL*
+## 4.2 在 UBUNTU 上安装 OPEN WEB WEBMAIL
 
-安装 open webmail 需要在您的系统上安装以下软件包和编程语言：
+安装 `open webmail` 需要在您的系统上安装以下软件包和编程语言：
 
-- perl*
-- libauthen-pam-perl
-- libconvert-asn1-perl
-- libmd5-perl
-- libnet-ldap-perl
-- perl-suid
-- wwwconfig-common
-- libpg-perl
+- `perl`
+- `libauthen-pam-perl`
+- `libconvert-asn1-perl`
+- `libmd5-perl`
+- `libnet-ldap-perl`
+- `perl-suid`
+- `wwwconfig-common`
+- `libpg-perl`
 
 现在，让我们按照以下方式安装这些包：
 
@@ -750,54 +730,54 @@ chmod -R 775 /var/lib/amavis/tmp
 sudo apt-get install perl libauthen-pam-perl libconvert-asn1-perl libmd5-perl libnet-ldap-perl perl-suid wwwconfig-common libpg-perl
 ```
 
-现在，让我们继续对这些包进行配置，将其与我们的 POSTFIX 包集成：
+现在，让我们继续对这些包进行配置，将其与我们的 `POSTFIX` 包集成：
 
 ```
 sudo rm /var/www/openwebmail/index.html
 sudo ln -s /var/www/openwebmail/redirect.html /var/www/openwebmail/index.html
 ```
 
-现在，访问 http://localhost/openwebmail
+现在，访问 `http://localhost/openwebmail`
 你将发现邮件已经运行。
 之后，如果您想登录您的用户名和密码，或使用系统的任何用户名和密码来添加用户，或者如果您想删除用户，则需要从系统中删除该用户。
 
-最后的一件事是 openmail 的替代方案—— squirrelmail，让我们看看它是如何安装和配置的。
+最后的一件事是 `openmail` 的替代方案—— `squirrelmail`，让我们看看它是如何安装和配置的。
 
-要安装 squirrelmail，首先让我们按照以下方式安装 lamp-server 软件包，它包含了 PHP、MySQL 和 Apache Web 服务器：
+要安装 `squirrelmail`，首先让我们按照以下方式安装 `lamp-server` 软件包，它包含了 `PHP`、`MySQL` 和 `Apache Web` 服务器：
 
 ```
 sudo apt-get install tasksel
 sudo tasksel install lamp-server
 ```
 
-在提示时提供 mysql root 密码，并将密码记录在纸上或其他备忘录中，以免忘记，因为我们在其他配置和其他软件包的安装中仍然会需要它。
+在提示时提供 `mysql` `root` 密码，并将密码记录在纸上或其他备忘录中，以免忘记，因为我们在其他配置和其他软件包的安装中仍然会需要它。
 
-让我们按照以下方式安装 squirrelmail：
+让我们按照以下方式安装 `squirrelmail`：
 
 ```
 sudo apt-get install squirrelmail
 ```
 
-之后，让我们按照以下方式配置我们的 squirrelmail：
+之后，让我们按照以下方式配置我们的 `squirrelmail`：
 
 ```
 sudo squirrelmail-configure
 ```
 
-在选项 2 中，让我们进行以下更改：
+在选项 `2` 中，让我们进行以下更改：
 
 ```
 Update IMAP Settings : localhost:143
 Update SMTP Settings : localhost:25
 ```
 
-然后在选项 4 中，允许以下第 11 号设置：
+然后在选项 `4` 中，允许以下第 `11` 号设置：
 
 ```
 Allow server-side sorting
 ```
 
-执行以下命令按如下方式将 squirrelmail 集成到 Apache Web 服务器：
+执行以下命令按如下方式将 `squirrelmail` 集成到 `Apache Web` 服务器：
 
 ```
 sudo cp /etc/squirrelmail/apache.conf /etc/apache2/sites-available/squirrelmail
@@ -807,38 +787,38 @@ sudo a2ensite squirrelmail
 sudo service apache2 restart
 ```
 
-现在，访问以下 URL，你将发现它运行正常：
+现在，访问以下 `URL`，你将发现它运行正常：
 
-http://localhost/squirrelmail
+`http://localhost/squirrelmail`
 
 通过这种方式，我们完成了所有邮件服务器组件的安装、配置和故障排除。
 
-## UBUNTU 上的 KERBEROS 和联邦服务
+# UBUNTU 上的 KERBEROS 和联邦服务
 
 让我们开始吧！！！
 
 这部分有点像是你正在听的一首重金属歌曲，会让你的脑子有点嘈杂，但绝对很有趣。
 
-首先，让我们认识什么是 Kerberos 和联邦服务（Federation Services）。
+首先，让我们认识什么是 `Kerberos` 和联邦服务（`Federation Services`）。
 
-Kerberos 和联邦服务是我们使用 bind9 安装的域的一种保护机制。
+`Kerberos` 和联邦服务是我们使用 `bind9` 安装的域的一种保护机制。
 
-在 UBUNTU 上安装 Kerberos 和联邦服务的包有：
+在 `UBUNTU` 上安装 `Kerberos` 和联邦服务的包有：
 
-- slapd
-- ldap-utils
-- krb5-kdc-ldap
-- krb5-kdc
-- krb5-admin-server
-- ldapscripts
+- `slapd`
+- `ldap-utils`
+- `krb5-kdc-ldap`
+- `krb5-kdc`
+- `krb5-admin-server`
+- `ldapscripts`
 
-让我们先按照以下方式安装 OpenLDAP：
+让我们先按照以下方式安装 `OpenLDAP`：
 
 ```
 sudo apt install slapd
 ```
 
-现在，我们继续使用以下命令创建一个名为 /etc/ldap/slapd.d/add_content.ldif 的新 LDIF 文件：
+现在，我们继续使用以下命令创建一个名为 `/etc/ldap/slapd.d/add_content.ldif` 的新 `LDIF` 文件：
 
 ```
 sudo nano /etc/ldap/slapd.d/add_content.ldif
@@ -850,16 +830,13 @@ sudo nano /etc/ldap/slapd.d/add_content.ldif
 dn: ou=People,dc=example,dc=com
 objectClass: organizationalUnit
 ou: People
-
 dn: ou=Groups,dc=example,dc=com
 objectClass: organizationalUnit
 ou: Groups
-
 dn: cn=miners,ou=Groups,dc=example,dc=com
 objectClass: posixGroup
 cn: miners
 gNumber: 5000
-
 dn: uid=manon,ou=People,dc=example,dc=com
 objectClass: inetOrgPerson
 objectClass: posixAccount
@@ -883,7 +860,7 @@ ldapadd -x -D cn,dc=example,dc=com -W -f /etc/ldap/slapd.d/add_content.ldif
 
 在提示时，输入你之前的密码。
 
-## UBUNTU 上的 KERBEROS 和联邦服务
+# UBUNTU 上的 KERBEROS 和联邦服务
 
 之后，执行以下命令：
 
@@ -895,24 +872,34 @@ ldapsearch -x -L -b dc=example,dc=com
 
 ```
 entry: 20110829165435935248#000000#000000
-sudo ldapmodify -Q -Y EXTERNAL -H \
-ldap:///cn=(1)corba,cn=schema,cn=config
 ```
 
 
+
+`sudo ldapmodify -Q -Y EXTERNAL -H \`
+`ldap:///cn=(1)corba,cn=schema,cn=config`
 
 将以下条目添加到你的文件中，如果条目已存在则对其进行编辑：
 
 ```
 SERVER=localhost
+
 BINDDN=cn=admin,dc=example,dc=com
+
 BINDPWDFILE=/etc/ldapscripts/ldapscripts.password
+
 SUFFIX=dc=example,dc=com
+
 GSUFFIX='ou=Groups'
+
 USUFFIX='ou=People'
+
 MSUFFIX='ou=Computers'
+
 GIDSTART=10000
+
 UIDSTART=10000
+
 MIDSTART=10000
 ```
 
@@ -981,7 +968,7 @@ ldapmodify -x -D cn=admin,cn=config -W
 sudo apt install krb5-kdc krb5-admin-server krb5-kdc-ldap
 ```
 
-现在，编辑以下文件 /etc/krb5.conf 并在命令后添加内容：
+现在，编辑以下文件 `/etc/krb5.conf` 并在命令后添加内容：
 
 ```bash
 sudo nano /etc/krb5.conf
@@ -992,6 +979,7 @@ sudo nano /etc/krb5.conf
 ```ini
 [libdefaults]
 default_realm = EXAMPLE.COM
+
 [realms]
 EXAMPLE.COM = {
  kdc = kdc01.example.com
@@ -1001,10 +989,13 @@ admin_server = kdc02.example.com
 default_domain = example.com
 database_model = openldap_ldapconf
 }
+
 [domain_realm]
 .example.com = EXAMPLE.COM
+
 [dbdefaults]
 ldap_kerberos_container_dn = dc=example,dc=com
+
 [dbmodules]
 openldap_ldapconf = {
 db_library = ldap
@@ -1040,7 +1031,7 @@ scp ldap01:/etc/ssl/certs/cacert.pem . sudo
 cp cacert.pem /etc/ssl/certs
 ```
 
-现在，使用命令编辑 ldap.conf 文件：
+现在，使用命令编辑 `ldap.conf` 文件：
 
 ```bash
 sudo nano /etc/ldap/ldap.conf
@@ -1078,6 +1069,7 @@ Web 服务器是一种容器，包含了由软件和 Web 程序员编写的 Web 
 ```ini
 [libdefaults]
 default_realm = EXAMPLE.COM
+
 [realms]
 EXAMPLE.COM = {
  kdc = kdc01.example.com
@@ -1087,10 +1079,13 @@ admin_server = kdc02.example.com
 default_domain = example.com
 database_model = openldap_ldapconf
 }
+
 [domain_realm]
 .example.com = EXAMPLE.COM
+
 [dbdefaults]
 ldap_kerberos_container_dn = dc=example,dc=com
+
 [dbmodules]
 openldap_ldapconf = {
 db_library = ldap
@@ -1109,184 +1104,6 @@ lap_conns_per_server = 5
 sudo kdb5_ldap_util -D cn=admin,dc=example,dc=com create -subtrees \
 dc=example,dc=com -r EXAMPLE.COM -s H ldap://ldap01.example.com
 ```
-
-（注：此处后续文本包含大量 OCR 错误和重复，已根据逻辑流进行清理和翻译）
-
----
-
-以下是提供的文本的清理版本：
-
-将以下条目添加到你的文件中或：
--   SERVER=localhost
--   BINDDN=cn=admin,dc=example,dc=com
--   BINDPWDFILE=/etc/ldapscripts/ldapscripts.password
--   SUFFIX=dc=example,dc=com
--   GSUFFIX='ou=Groups'
--   USUFFIX='ou=People'
--   MSUFFIX='ou=Computers'
--   GIDSTART=10000
--   UIDSTART=10000
--   MIDSTART=10000
-
-当然，你需要根据你的环境更改这些条目。
-
-然后，执行以下命令来修改 ldap passwd 文件：
-
-```bash
-sudo sh -c "echo -n 'manon' > /etc/ldapscripts/ldapscripts.password"
-sudo chmod 400 /etc/ldapscripts/ldapscripts.password
-```
-
-之后，我们将使用以下命令创建用户、删除用户：
-
-```
-sudo ldadduser manon
-sudo ldapsetpasswd manon
-sudo ldapdeleteuser manon
-```
-
-并且，我们将按照以下方式添加和删除组：
-
-```bash
-sudo ldaddgroup niazi
-sudo ldapdeletegroup niazi
-```
-
-之后，我们将使用命令将用户添加到组或从组移除：
-
-```bash
-sudo ldaddusertogroup manon niazi
-sudo ldapdeleteuserfromgroup manon niazi
-```
-
-在 bookoon.com 下载免费电子书
-
-我们现在将使用以下命令加载新架构：
-
-```bash
-ldapadd -x -D cn=admin,cn=config -W -f /tmp/cn\kerberos.ldif
-```
-
-执行以下命令按如下所示向你的文件添加条目：
-
-```bash
-ldapmodify -x -D cn=admin,cn=config -W
-```
-
-然后按照如下所示添加内容：
-
-```text
-dn: olcDatabase=(1)hdb,cn=config
-add: olcDbIndex
-olcDbIndex: krbPrincipalName eq,pres,sub
-```
-
-最后，使用命令更新访问控制列表：
-
-```bash
-ldapmodify -x -D cn=admin,cn=config -W
-```
-
-现在，让我们安装以下软件包来创建我们的主 KDC：
-
-```bash
-sudo apt install krb5-kdc krb5-admin-server krb5-kdc-ldap
-```
-
-现在，编辑以下文件 /etc/krb5.conf 并在命令后添加内容：
-
-```bash
-sudo nano /etc/krb5.conf
-```
-
-然后，编辑文件的以下内容：
-
-```ini
-[libdefaults]
-default_realm = EXAMPLE.COM
-[realms]
-EXAMPLE.COM = {
- kdc = kdc01.example.com
-kdc = kdc02.example.com
-admin_server = kdc01.example.com
-admin_server = kdc02.example.com
-default_domain = example.com
-database_model = openldap_ldapconf
-}
-[domain_realm]
-.example.com = EXAMPLE.COM
-[dbdefaults]
-ldap_kerberos_container_dn = dc=example,dc=com
-[dbmodules]
-openldap_ldapconf = {
-db_library = ldap
-lap_kdc_dn = "cn=admin,dc=example,dc=com"
-lap_kadmind_dn = "cn=admin,dc=example,dc=com"
-lap_service_password_file = /etc/krb5kdc/service.keyfile
-lap_servers = ldap://ldap01.example.com
-com ldap://ldap02.example.com
-lap_conns_per_server = 5
-}
-```
-
-现在，使用以下命令创建一个领域，请注意我们在另一个章节中安装 Web 服务器时将使用此领域，请将领域名称和数据读取到一个文件中，以便在安装 Web 服务器的章节中使用。
-
-```bash
-sudo kdb5_ldap_util -D cn=admin,dc=example,dc=com create -subtrees \
-dc=example,dc=com -r EXAMPLE.COM -s H ldap://ldap01.example.com
-```
-
-然后我们需要使用以下命令创建一个名为 stash 的文件：
-
-```bash
-sudo kdb5_ldap_util -D cn=admin,dc=example,dc=com stashrvpw -f \
-/etc/krb5kdc/service.keyfile cn=admin,dc=example,dc=com
-```
-
-在 bookboom.com 下载免费电子书
-
-然后，使用以下命令从 LDAP 服务器复制 CA 文件：
-
-```bash
-scp ldap01:/etc/ssl/certs/cacert.pem . sudo
-cp cacert.pem /etc/ssl/certs
-```
-
-现在，使用命令编辑 ldap.conf 文件：
-
-```bash
-sudo nano /etc/ldap/ldap.conf
-```
-
-然后，向其添加这些内容：
-
-```text
-TLS_CACERT /etc/ssl/certs/cacert.pem
-```
-
-现在，运行以下命令添加 kerberos 主主体：
-
-```bash
-sudo kadmin.local
-```
-
-现在，重启所有相关服务：
-
-```bash
-sudo systemctl restart slapd.service
-sudo systemctl start krb5-kdc.service
-```
-
-# 在 UBUNTU 上使用 WEB 服务器
-
-Web 服务器是一种容器，包含了由软件和 Web 程序员编写的 Web 应用程序，该应用程序通过 Web 服务器执行其所有功能。
-
-## 6.1 在 UBUNTU 上安装 GLASSFISH 服务器
-
-Web 服务器是一种容器，包含了由软件和 Web 程序员编写的 Web 应用程序，该应用程序通过 Web 服务器执行其所有功能。
-
-
-
 
 ## 7.2 安装与配置 ORACLE DATABASE SERVER 12C EXPRESS EDITION
 
@@ -1309,13 +1126,12 @@ path/to/db/runInstaller
 http://bookboon.com
 我们将非常乐意听取您的意见。
 
-非常感谢 **Canonical LTD.**，这家 UBUNTU 背后的公司对本书进行了技术审阅。
+非常感谢 `Canonical LTD.`，这家 UBUNTU 背后的公司对本书进行了技术审阅。
 
 非常感谢您花时间阅读本书，我们真的希望它对您的帮助能像它对我们的帮助一样大。
 
-献给 **Manon Niazi**
+献给 `Manon Niazi`
 
 The Deutschländer
 
-我离开了农业学院，继续在计算机学院学习计算机科学，直到我遇到了德国人 Manon Niazi，因为我想制造一台名为“**Manon**”的设备。
-
+我离开了农业学院，继续在计算机学院学习计算机科学，直到我遇到了德国人 Manon Niazi，因为我想制造一台名为“`Manon`”的设备。

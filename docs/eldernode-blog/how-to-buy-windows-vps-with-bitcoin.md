@@ -1,3 +1,4 @@
+
 # 如何用比特币购买 Windows VPS(BTC)-elder node 博客
 
 > 原文：<https://blog.eldernode.com/how-to-buy-windows-vps-with-bitcoin/>
@@ -6,13 +7,13 @@
 
 VPS 服务器实际上是一台非常强大的计算机，它总是开着，并且有非常高速的互联网。VPS 服务器上可以安装多种操作系统。可以安装在 VPS 服务器上的操作系统之一是 Windows 操作系统。Windows Server 不同于 Windows Home 桌面。这些窗口是为虚拟服务器设计的，比安装在虚拟服务器上的常规窗口拥有更多的功能。使用这些窗口与您自己的笔记本电脑窗口非常相似。这些窗口被命名为 Windows Server 2003、2008、2012、2016 和 Windows Server 2019。在本文中，我们要一步一步地向您介绍**如何用比特币(BTC)** 购买 Windows VPS。可以按照这篇文章在 [Eldernode](https://eldernode.com/) 购买一台 **[Windows VPS](https://eldernode.com/windows-vps/)** 服务器。
 
-## **教程用比特币购买 windows VPS(BTC)**
+## 教程用比特币购买 windows VPS(BTC)
 
 通过选择 Windows 服务器，您可以更好地控制设置。Windows VPS Server 是一个虚拟服务器，具有强大的 Microsoft [Windows](https://blog.eldernode.com/tag/windows/) Server 操作系统，提供在这些服务器上应用任何内容的完全访问权限。这样，用不到一台[专用服务器](https://blog.eldernode.com/buy-dedicated-server-with-bitcoin/)，你就会拥有一台拥有强大虚拟化和硬件资源的服务器。您可以在上面安装服务器的操作系统版本，并以管理员权限连接到服务器，不受限制地管理您的项目。
 
-### **Windows VPS 服务器特性:**
+### Windows VPS 服务器特性
 
-在本节中，我们将提到 Windows VPS 服务器索引的一些功能:
+在本节中，我们将提到 Windows VPS 服务器索引的一些功能：
 
 **1-高速互联网**
 
@@ -30,15 +31,15 @@ VPS 服务器是永久打开的，根本不会关闭。这有助于做很多事�
 
 Windows VPS 服务器，因为它有 24 小时的互联网，您可以很容易地访问和使用虚拟服务器与您的 Windows 操作系统，有互联网在任何地方。
 
-下一节，我们将教你如何用比特币 (BTC)购买 **[Windows VPS。](https://eldernode.com/windows-vps/)**
+下一节，我们将教你如何用比特币 (BTC)购买 **[Windows VPS](https://eldernode.com/windows-vps/)**。
 
-### Windows VPS 位置:
+### Windows VPS 位置
 
 新加坡视窗 VPS，俄罗斯视窗 VPS，美国视窗 VPS，香港视窗 VPS，英国视窗 VPS，荷兰视窗 VPS，土耳其视窗 VPS，德国视窗 VPS，日本视窗 VPS，法国视窗 VPS，加拿大视窗 VPS 等等。
 
-### **用比特币购买 Windows VPS(BTC)**
+### 用比特币购买 Windows VPS(BTC)
 
-要从 Eldernode 购买 Windows VPS 服务器，只需按照以下步骤操作:
+要从 Eldernode 购买 Windows VPS 服务器，只需按照以下步骤操作：
 
 第一步是访问 [Eldernode 网站](https://eldernode.com/)。
 
@@ -54,13 +55,11 @@ Windows VPS 服务器，因为它有 24 小时的互联网，您可以很容易�
 
 ![windows vps packages on eldernode](img/7bee7007155305bb5cd5ee264afcc65e.png)
 
-***注:*** 需要注意的是，您可以按月或按年购买本部分的套餐。
+**注意：** 需要注意的是，您可以按月或按年购买本部分的套餐。
 
-在下一页，你会看到你想要的包装规格。请注意，在此页面上，您必须选择关于**位置**和**操作系统的信息。**您也可以在**可用插件**部分选择您想要的选项。然后点击页面右侧的**继续**。
+在下一页，你会看到你想要的包装规格。请注意，在此页面上，您必须选择关于**位置**和**操作系统**的信息。您也可以在**可用插件**部分选择您想要的选项。然后点击页面右侧的**继续**。
 
 ![configure windows vps informations](img/0bd25622b250f573454d36062a46422d.png)
-
-*
 
 ![how to order windows vps server](img/f66133d3f53098ff0cba5ea542b14521.png)
 
@@ -72,11 +71,9 @@ Windows VPS 服务器，因为它有 24 小时的互联网，您可以很容易�
 
 ![payment details in purchase server by bitcoin](img/c97549ae37b800b4f57a5b84c12400bb.png)
 
-下一步，在**选择硬币**部分点击 **BTC** 。然后点击右栏中的**完成结账**。
+下一步，在**选择硬币**部分点击 **BTC**。然后点击右栏中的**完成结账**。
 
 ![selecting the type of coin to buy windows vps](img/3d4034de15fac1b8e5ff77021f16b475.png)
-
-*
 
 ![server by btc](img/6a55fe58bea63be74221256f13fedbdc.png)
 

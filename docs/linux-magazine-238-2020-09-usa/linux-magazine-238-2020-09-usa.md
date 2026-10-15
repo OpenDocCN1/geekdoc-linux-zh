@@ -1,48 +1,5 @@
+
 # Linux Magazine 第 238 期 2020-09 美国
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ```c
 /*
@@ -54,13 +11,6 @@
  */
 #include "sched.h"
 ```
-
-
-
-
-
-
-
 
 ```text
 zramap.service 使用 zram 压缩 RAM 的服务
@@ -80,12 +30,7 @@ lines 1-6
 | /dev/zram1 lzo-size | 1,36G | 748 | 12M | 3 SWAP |
 | /dev/zram2 lzo-size | 1,36G | 748 | 12M | 3 SWAP |
 
-
-
 本页面介绍了您在 Arch Linux 系统中可以找到的内容。
-
-
-
 
 Bodhi 使用 Moksha 桌面管理器。我们的哲学是提供一个极简的基础系统，用户可以在其中安装他们需要的软件。在 Bodhi 中更新或安装软件需要连接网络。系统更新对您的网络安全至关重要。建议的系统更新方法是打开终端并运行：
 
@@ -93,19 +38,15 @@ Bodhi 使用 Moksha 桌面管理器。我们的哲学是提供一个极简的基
 sudo apt update && sudo apt upgrade
 ```
 
-
 - Debian 手册
 - Debian CLI、鼠标和 Java
 - Debian 新管理指南
 
-
 Cinnamon 桌面环境是一个高度开发的项目。
 
-在 2.0 版本中，Cinnamon 的创建是为了分支出 GNOME 2。GNOME 2 版本继承了一个名为“Muffin”的全新桌面环境，该环境是使用 GNOME 3 技术构建的。随后， Cinnamon 从 GNOME 2 分支以创建它自己的桌面环境。以下来自 GNOME 2 的分支包含：
+在 2.0 版本中，Cinnamon 的创建是为了分支出 GNOME 2。GNOME 2 版本继承了一个名为“Muffin”的全新桌面环境，该环境是使用 GNOME 3 技术构建的。随后，Cinnamon 从 GNOME 2 分支以创建它自己的桌面环境。以下来自 GNOME 2 的分支包含：
 
 从启动的项目视图编写代码此问题
-
-
 
 ```bash
 bbnanday:~/music$ | --stat
@@ -134,6 +75,7 @@ data: /home/bb/.local/share/autojump/autojump.txt
 | 8 [rub-poetry] | /home/bb/projects/rub-poetry |
 | 9 [shadow-o] | /home/bb/projects/shadow-of-the-lion |
 | [test] | /home/bb/projects/test |
+
 B: /home/bb/projects
 
 | 左侧 | 文件 | 命令 | 选项 | 大小 | 修改时间 | 名称 | 大小 | 修改时间 |
@@ -154,7 +96,7 @@ B: /home/bb/projects
 | /trv | | | | 4096 | 2016年4月21日 | /.config | 12288 | 6月25日 14:00 |
 | /bin | | | | 846926 (92%) | | UP-DIR | | |
 
-想更改你的计划 shell 吗？按下 C-c 并再次按下 C-again 返回 MC。
+想更改你的计划 shell 吗？按下 `C-c` 并再次按下 `C-again` 返回 MC。
 
 ```text
 creative
@@ -171,18 +113,9 @@ l50review-draft2.sxw
 l50review-draft3.sxw
 ```
 
-
-
-
-
-
 ADMIN 是您获取现实世界问题技术解决方案的来源。
 
 通过关于以下领域的实战文章提升您的管理技能：
-
-
-
-
 
 | :--- | :--- | :--- |
 | ace-tex-header | 9 | |
@@ -191,11 +124,8 @@ ADMIN 是您获取现实世界问题技术解决方案的来源。
 | findref-latex | 45 | |
 | bibtex | | |
 
-
-
-
-
 |---|---|---|
+
 | Alpine Linux 3.18 | v3.18 | mailing@alpinelinux.org |
 | Alpine Linux Edge | v3-edge | mailing@alpinelinux.org |
 | Alpine Linux 3.17 | v3.17.x | mailing@alpinelinux.org |
@@ -236,11 +166,9 @@ ADMIN 是您获取现实世界问题技术解决方案的来源。
 | 许可证： | | | | | 许可证： | | |
 | GPL, LGPL | | | GPL, LGPL | | | GPL-3.0-only AND GPL-2.1-only | |
 
-
-在软件作者和仓库的实际活动中，此历史可能包含由变基（rebase）产生的产物。例如，如果合并了两个项目，一个项目出现在更多的仓库中，而另一个从所有仓库中消失。请注意，此历史仍是一个实验性功能，可能会随时重置。
+在软件作者和仓库的实际活动中，此历史可能包含由变基（`rebase`）产生的产物。例如，如果合并了两个项目，一个项目出现在更多的仓库中，而另一个从所有仓库中消失。请注意，此历史仍是一个实验性功能，可能会随时重置。
 
 - 电子邮件：glandium@debian.org
-
 
 | 日期 | 事件 |
 |---|---|
@@ -266,7 +194,6 @@ ADMIN 是您获取现实世界问题技术解决方案的来源。
 | Debian 4.0 (Chimera) | 5 | 5 | 3 | 60.0% | 40.0% | - | HCO, U, html |
 | Kali Linux Rolling | 5 | 5 | 3 | 60.0% | 40.0% | - | HCO, U |
 
-
 更新过程简要说明：每个仓库分两个阶段更新：获取 (1)，仅下载数据；解析 (2)，涉及将格式转换为软件包并应用转换规则。每个阶段都可能独立失败。此外，获取阶段可能不返回数据（例如 HTTP 404），或者返回所有更改，此时需要解析。实际更新在尝试获取并解析所有仓库后进行，因此获取与实际更新之间存在额外的延迟。
 
 启用自动构建。
@@ -281,14 +208,12 @@ ADMIN 是您获取现实世界问题技术解决方案的来源。
 | Alpine Linux 3.21 | 11 分前 | 4 天前 | 1 周前 | ~~~~~~~~~ |
 | Alpine Linux Edge | 11 分前 | 5 小时前，12 处错误 | 3 天前，1 处错误 | ~~~~~~~~~ |
 
-
-
-
-
-
 《Linux Magazine》是您探索 Linux 世界的指南。翻开获取在其他地方都找不到的高级信息！
 
 通过以下内容扩展您的 Linux 技能：
+
+
+
 - 关于热门话题的深度文章，包括比特币、云计算等！
 - 关于实用工具的实操教程，将帮助您节省时间并保护数据安全
 - 故障排除与优化技巧
@@ -297,14 +222,7 @@ ADMIN 是您获取现实世界问题技术解决方案的来源。
 
 如果您想更进一步并利用 Linux 更多功能，请立即订阅，从此不再错过任何一期！
 
-
-
 在 Linux New Media 在线商店发现过去，并为新一年的 IT 解决方案投资。
-
-
-
-
-
 
 ```bash
 [11:26:23] $ asciima rec -l
@@ -321,35 +239,30 @@ asciima: press enter to upload to asciima.org, <ctrl-c> to save locally
 查看录制：
 ```
 
-此版本的 asciima 录制器尚未关联到任何 asciima.org 账户。所有未声明的录制（来自像此类未知安装版本）在上传后将被自动删除。
+此版本的 `asciima` 录制器尚未关联到任何 `asciima.org` 账户。所有未声明的录制（来自像此类未知安装版本）在上传后将被自动删除。
 
-如果您希望保留在该机器上进行的所有录制，请通过打开以下链接将此版本与 asciima.org 账户关联：
-[11:27:12] $ _
+如果您希望保留在该机器上进行的所有录制，请通过打开以下链接将此版本与 `asciima.org` 账户关联：
 
+`[11:27:12] $ _`
 
-gifcast 让您能够将视频片段转换为动画图像。以这种形式，视频可以集成到不允许嵌入第三方脚本的网站中。当您需要时，gifcast 也可以作为 Web 应用本地运行，无需在本地计算机上安装任何程序即可转换您的视频。
-
+`gifcast` 让您能够将视频片段转换为动画图像。以这种形式，视频可以集成到不允许嵌入第三方脚本的网站中。当您需要时，`gifcast` 也可以作为 Web 应用本地运行，无需在本地计算机上安装任何程序即可转换您的视频。
 
 在一张完整的可搜索 DVD 上获取每一期 *RASPBERRY PI GEEK*！包含超过 2,000 页的海量信息与乐趣！再加赠 2 份特刊版！立即购买！https://bit.ly/Archive-DVD
 
-
 从我们的特刊库中了解 Shell、LibreOffice、Linux 等内容。Linux Magazine 团队创建了一系列单行本，让您深入研究感兴趣的主题。提供纸质版或数字版。查看完整库！
-
-
-
-
 
 ## 站点配置
 
 ### 要求
 
-必须安装 Collab 服务器并配合公共 Collab 服务器 (https://collab.com) 一使用。
+必须安装 Collab 服务器并配合公共 Collab 服务器（`https://collab.com`）一使用。
 
-Collab 需要一个 'admin' 账户来访问和共享文件。
+Collab 需要一个 `admin` 账户来访问和共享文件。
 
 可以使用 `collabware` 安装本地 Collab 服务器。
 
 Collab 服务器还需要根据允许的用户数量进行使用——即多于默认安装的试用版或开发者版本。
+
 - 文件 (Files)
 - 导入 / 导出 (Import / Export)
 - 性能 (Performance)
@@ -364,10 +277,6 @@ Collab 服务器还需要根据允许的用户数量进行使用——即多于�
 https://bit.ly/HPC-ADMIN-Update
 
 我们很荣幸赞助此处展示的精选活动
-
-
-
-
 
 # 文档大纲
 
@@ -422,4 +331,3 @@ https://bit.ly/HPC-ADMIN-Update
 - 49
 - 50
 - 51
-

@@ -1,16 +1,17 @@
+
 # 打印所有二叉树路径
 
 > 原文：[`techbyexample.com/print-all-binary-tree-paths/`](https://techbyexample.com/print-all-binary-tree-paths/)
 
-# **概述**
+## 概述
 
 给定一棵树的根节点，目标是打印所有从根节点开始的树路径。
 
-**示例**
+### 示例
 
 ![](img/9a87d6b2a88fc41ddf4f755bc080acdf.png)
 
-**输出：**
+### 输出
 
 ```go
 1->2->4
@@ -18,9 +19,9 @@
 1->3->6
 ```
 
-# **程序**
+## 程序
 
-以下是相同的程序
+以下是相同的程序：
 
 ```go
 package main
@@ -77,10 +78,10 @@ func main() {
 }
 ```
 
-**输出：**
+### 输出
 
 ```go
 [1->2->4 1->3->5 1->3->6]
 ```
 
-同时，查看我们的系统设计教程系列 – [系统设计教程系列](https://techbyexample.com/system-design-questions/)
+同时，查看我们的系统设计教程系列：[系统设计教程系列](https://techbyexample.com/system-design-questions/)

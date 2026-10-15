@@ -1,19 +1,19 @@
+
 # 附录 P. 版本历史
 
 > 原文：[`tldp.org/LDP/abs/html/revisionhistory.html`](https://tldp.org/LDP/abs/html/revisionhistory.html)
 
-```sh
-      This document first appeared as a 60-page HOWTO in the late spring
-      of 2000\. Since then, it has gone through quite a number of updates
-      and revisions. This book could not have been written without the
-      assistance of the Linux community, and especially of the volunteers
-      of the Linux Documentation Project.
-
+```
+This document first appeared as a 60-page HOWTO in the late spring
+of 2000\. Since then, it has gone through quite a number of updates
+and revisions. This book could not have been written without the
+assistance of the Linux community, and especially of the volunteers
+of the Linux Documentation Project.
 ```
 
 这是向 LDP 请求提交版本 0.1 的电子邮件。
 
-```sh
+```
 From thegrendel@theriver.com Sat Jun 10 09:05:33 2000 -0700
 Date: Sat, 10 Jun 2000 09:05:28 -0700 (MST)
 From: "M. Leo Cooper" <thegrendel@theriver.com>
@@ -75,7 +75,7 @@ thegrendel@theriver.com
 | `1.5` | 2002 年 7 月 13 日 | PAPAYA 版本发布：修复了一些错误，增加了更多材料和脚本。 |
 | `1.6` | 2002 年 9 月 29 日 | POMEGRANATE 版本发布：修复了错误，增加了更多材料，增加了一个脚本。 |
 | `1.7` | 2003 年 1 月 5 日 | COCONUT 版本发布：修复了一些错误，增加了更多材料，增加了一个脚本。 |
-| `1.8` | 2003 年 5 月 10 日 | BREADFRUIT 版本发布：修复了一些错误，增加了更多脚本和材料。 |
+| `1.8` | 2003 年 5 月 10 日 | BREADFRUIT 版本发布：修复了错误，增加了更多脚本和材料。 |
 | `1.9` | 2003 年 6 月 21 日 | PERSIMMON 版本发布：修复了错误，增加了更多材料。 |
 | `2.0` | 2003 年 8 月 24 日 | GOOSEBERRY 版本发布：主要更新。 |
 | `2.1` | 2003 年 9 月 14 日 | HUCKLEBERRY 版本发布：修复了错误，增加了更多材料。 |

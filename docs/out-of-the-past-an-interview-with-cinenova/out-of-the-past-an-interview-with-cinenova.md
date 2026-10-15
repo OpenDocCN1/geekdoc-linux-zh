@@ -1,12 +1,7 @@
+
 # 《过去：Cinenova 访谈》
 
-
-
-
-
-
-文章
-
+## 文章
 
 作者：Mira Mattar，2011年6月28日
 
@@ -70,10 +65,6 @@ MV: 这方面有不同的层面。例如，Cinenova 未来如何继续下去？�
 
 Cinenova 作为一个组织及其各种活动在过去十年没有获得资金，直到与他人合作的想法从未被构想过；它在某些实际意义上可能有帮助，但可能对 Cinenova 的自主性产生潜在影响。我们将观察一切。拥有 The Showroom [这是一种可能] 的优势是，自从 Cinenova 驻扎在这里以来，人们一直在这里，我们与当地的女性小组启动了很多项目。但反对这一选择的许多实际和制度问题。
 
-
-
-
-
 MM: 你能多告诉我们一些关于你们在这里产生的一些工作吗？这些工作一直在计划之中吗？
 
 EH: 我们与当地机构“玛丽尔伯恩妇女避难所”（Marylebone Women's Refuge）合作过；他们与 Louise Shelley（来自 The Show）合作，为他们的艺术文化之夜选择了一些素材进行放映。展览充当了聚会和社交空间的作用，我们遇到了许多人，并将电影作为讨论的起点。
@@ -106,7 +97,7 @@ MM: 是的，考虑到收藏中有许多不同类型的电影。艺术电影、�
 
 EH: 这为 Cinenova 了一个结构上的问题；我们如何在艺术空间呈现这些作品？即使人们认为自己是艺术家、作家或策展人，也没有担任特定的角色；相反，这些角色并没有特定的斗争。也许我们克制了自己的倾向。
 
-图片：来自 Showroom 网站的 Cinenova 动画 GIF。http://www.theshowroom.org/programme.html?id=46
+图片：来自 Showroom 网站的 Cinenova 动画 GIF。`http://www.theshowroom.org/programme.html?id=46`
 
 MM: 你认为运作的顺畅与工作小组全是女性有关吗？
 
@@ -114,10 +105,7 @@ EH: 可能吧，更多是因为我们在项目早期就意识到了这些问题�
 
 MV: 但从更抽象的意义上说，这是一个很有趣的观点。请再次回到生产性劳动和我们包含的内容的想法，什么是工作，我们正在处理电影和视频收藏中的材料，以及谈判、选择、管理、代表等——为了代表它而执行的活动，但作为思考如何让一个受实际和时间限制的、参与这一过程的人群进行组织和去个体化的过程的一部分，“复制”这样恰当的内容涉及了哪些工作？——你可以这样说，Cinenova，广义的女性主义，在某些方面如此。
 
-https://www.metamute.org/editorial/articles/out-past-interview-cinenova
-
-
-
+`https://www.metamute.org/editorial/articles/out-past-interview-cinenova`
 
 以及艺术领域的政治项目。收藏中“女性工作”的概念引发了一个围绕角色和性别问题的讨论。这种事实如何影响女性的工作，以及我们共同所做的事情又是怎样的呢？
 
@@ -129,25 +117,18 @@ Emma Heddict 是一位位于伦敦的艺术家。
 
 Marina Vishmidt 是一位位于伦敦的作家，目前在伦敦大学玛丽皇后学院进行“作为艺术与资本生产模式的投机”的博士研究。她与 Metahaven 合编了 *Corporate Identity (2010)* 以及 *Media Mutandis: Art, Technologies and Politics* (NODE, London, 2006)。她是 *Mute*、*After* 和 *Texte zur Kunst* 的常驻投稿。她还参与了 Unemployed Cinenova、Cinenova 和 Signal 等集体项目。
 
-Mira Matter [miramatter AT@gmail.com] 是一位自由作家，*Mute* 和 3:AM 的特约编辑，住在伦敦南部。她住在 http://hermouth.blogspot.com/。
-
+Mira Matter [miramatter AT@gmail.com] 是一位自由作家，*Mute* 和 3:AM 的特约编辑，住在伦敦南部。她住在 `http://hermouth.blogspot.com/`。
 
 Cinenova 的展览《生殖劳动》（Reproductive Labour）于 2011 年 2 月 9 日至 3 月 26 日在 The Showroom 
 
-访问 [http://www.cinenova.org.uk] 查看 Cinenova 的档案列表
+访问 `http://www.cinenova.org.uk` 查看 Cinenova 的档案列表
 
 *Afterall* 对 Cinenova 的报道 [[http://www.afterall.org/online/cinenova/]] 包含了他们档案中八段独家且罕见的视频剪辑，包括 Pratiba Parmar、Lizzie Borden 和 Joanna Davis 等人的作品。该文章还包含了策展人、作家兼艺术家 George Clark 为每个视频剪辑撰写的介绍文字和个人评论。
-
 
 开始讨论...
 
 或使用 DISQUS 注册
 
-
-
-
 成为第一个评论的人。
-
-
 
 不要出售我的数据

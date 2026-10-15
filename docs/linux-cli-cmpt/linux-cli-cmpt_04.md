@@ -1,3 +1,4 @@
+
 # 命令行概述
 
 > 原文：[`learnbyexample.github.io/cli-computing/command-line-overview.html`](https://learnbyexample.github.io/cli-computing/command-line-overview.html)
@@ -10,7 +11,7 @@
 
 ## 你好，命令行
 
-打开一个 [终端模拟器](https://en.wikipedia.org/wiki/Terminal_emulator) 并按照以下所示输入命令。在开始处跟随一个空格字符的 `$` 是我使用的简单命令提示符。它可能对您来说不同。实际要输入的命令是 `echo` 后跟一个空格，然后是参数 `'Hello Command Line'`，最后按 `Enter` 键执行它。你应该会得到作为命令输出的参数回显。
+打开一个 [终端模拟器](https://en.wikipedia.org/wiki/Terminal_emulator) 并按照以下所示输入命令。在开始处跟随一个空格字符的 `$` 是我使用的简单命令提示符。它可能对您来说不同。实际要输入的命令是 `echo` 后跟一个空格，然后是参数`'Hello Command Line'`，最后按 `Enter` 键执行它。你应该会得到作为命令输出的参数回显。
 
 ```sh
 $ echo 'Hello Command Line'
@@ -55,7 +56,7 @@ $ exit
 引用 [wikipedia](https://en.wikipedia.org/wiki/Path_%28computing%29#Absolute_and_relative_paths):
 
 > **绝对**或**完整**路径指向文件系统中相同的位置，无论当前工作目录如何。要做到这一点，它必须包含根目录。
-> 
+
 > 相比之下，一个**相对**路径从某个给定的工作目录开始，避免了提供完整绝对路径的需要。一个文件名可以被视为基于当前工作目录的相对路径。如果工作目录不是文件的父目录，如果通过文件名来引用文件，将会出现文件未找到错误。
 
 例如，`/home/learnbyexample` 是一个绝对路径，而 `../design` 是一个相对路径。你将在接下来的章节中学习路径是如何用于执行任务的。
@@ -73,7 +74,7 @@ $ exit
 引用自 [wikipedia: Unix shell](https://en.wikipedia.org/wiki/Unix_shell):
 
 > Unix shell 是一种命令行解释器或 shell，它为类 Unix 操作系统提供命令行用户界面。shell 既是交互式命令语言，也是脚本语言，操作系统通过 shell 脚本来控制系统的执行。
-> 
+
 > 用户通常通过终端模拟器与 Unix shell 交互；然而，对于服务器系统，通过串行硬件连接或 Secure Shell 进行直接操作是常见的。所有 Unix shell 都提供文件名通配符、管道、here 文档、命令替换、变量和控制结构，用于条件测试和迭代。
 
 Shell 特性将在后面的章节中讨论。现在，打开终端并尝试以下命令：
@@ -113,9 +114,9 @@ $ echo "$SHELL"
 引自 [wikipedia：Unix 哲学](https://en.wikipedia.org/wiki/Unix_philosophy)：
 
 > +   编写只做一件事并且做得好的程序。
-> +   
+
 > +   编写可以协同工作的程序。
-> +   
+
 > +   编写处理文本流的程序，因为这是一个通用的接口。
 
 这些原则并不严格适用于所有命令行工具，但了解它们是好的。随着你对命令行工作的熟悉，你会更好地欣赏这些指南。
@@ -231,7 +232,7 @@ how are you?
 ```
 
 > ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 你的 Linux 发行版可能有一个易于使用的图形文本编辑器，例如 `GNOME 文本编辑器` 和 `mousepad`。有关可选择的编辑器列表，请参阅 [wiki.archlinux: 文本编辑器](https://wiki.archlinux.org/title/List_of_applications/Documents#Text_editors)。
-> 
+
 > ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 《Shell 脚本编程》章节将更详细地讨论脚本。
 
 ## 命令帮助
@@ -289,12 +290,14 @@ how are you?
     +   此外，这些详细信息也会在终端本身上显示，无需处理 `pager` 界面
 
 > ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 参见 [unix.stackexchange：如何使用 man 页面来学习如何使用命令？](https://unix.stackexchange.com/q/193815/109046) 和 [unix.stackexchange：man 页面中的颜色](https://unix.stackexchange.com/q/119/109046)。
-> 
+
 > ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) Linux 手册页通常是完整文档的简短版本。你可以使用 `info` 命令查看 GNU 工具的完整文档。`info` 也是一个 TUI 应用程序，但与 `man` 命令相比，其键配置不同。如果你更喜欢在网页浏览器中阅读，请参阅 [GNU 手册在线](https://www.gnu.org/manual/manual.html)。你也可以下载为 PDF 等格式的离线版本。
 
 ### type
 
-对于某些操作，shell 提供了自己的命令集，这些命令被称为内置命令。`type` 命令显示有关命令的信息，例如其路径、是否为内置命令、别名、函数等。
+
+
+对于某些操作，`shell` 提供了自己的命令集，这些命令被称为内置命令。`type` 命令显示有关命令的信息，例如其路径、是否为内置命令、别名、函数等。
 
 ```sh
 $ type cd
@@ -310,7 +313,7 @@ pwd is a shell builtin
 awk is /usr/bin/awk 
 ```
 
-如将在 Shell 定制 章节中讨论的，你可以创建别名来定制命令调用。你可以使用 `type` 命令来揭示此类别名的本质。以下是一些基于我使用的别名的示例：
+如将在 Shell 定制章节中讨论的，你可以创建别名来定制命令调用。你可以使用`type`命令来揭示此类别名的本质。以下是一些基于我使用的别名的示例：
 
 ```sh
 $ type p
@@ -320,13 +323,13 @@ $ type ls
 ls is aliased to 'ls --color=auto' 
 ```
 
-`type` 命令以反引号开头和单引号结尾的格式来格式化命令输出。这不利于语法高亮，因此我在上面的说明中已将反引号更改为单引号。
+`type`命令以反引号开头和单引号结尾的格式来格式化命令输出。这不利于语法高亮，因此我在上面的说明中已将反引号更改为单引号。
 
 > ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 参见 [unix.stackexchange：内置命令和非内置命令之间的区别是什么？](https://unix.stackexchange.com/q/11454/109046)
 
 ### help
 
-`help` 命令为内置命令提供文档。与 `man` 命令不同，整个文本都显示为命令输出。以下是一个默认格式的帮助页面示例。如果你想以伪 man 页面格式显示帮助内容，可以添加 `-m` 选项。
+`help`命令为内置命令提供文档。与`man`命令不同，整个文本都显示为命令输出。以下是一个默认格式的帮助页面示例。如果你想以伪 man 页面格式显示帮助内容，可以添加`-m`选项。
 
 ```sh
 $ help pwd
@@ -344,21 +347,20 @@ pwd: pwd [-LP]
     cannot be read. 
 ```
 
-你可以使用 `-d` 选项来获取命令的简短描述：
+你可以使用`-d`选项来获取命令的简短描述：
 
 ```sh
 $ help -d compgen
 compgen - Display possible completions depending on the options. 
 ```
 
-> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 使用 `help help` 命令获取关于 `help` 命令的文档。如果你不带任何参数使用 `help`，它将显示所有内部定义的 shell 命令。
+> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 使用`help help`命令获取关于`help`命令的文档。如果你不带任何参数使用`help`，它将显示所有内部定义的 shell 命令。
 
 ### whatis 和 whereis
 
 这里有一些获取关于命令的特定信息的方法：
 
 +   `whatis` 显示一行手册页描述
-
 +   `whereis` 定位命令的二进制文件、源文件和手册页文件
 
 ```sh
@@ -376,7 +378,7 @@ awk: /usr/bin/awk /usr/lib/x86_64-linux-gnu/awk /usr/share/awk
 
 ![explainshell 的 tar 命令示例](img/31983438e8f97f6a8e2f562b1dccc4dd.png)
 
-受此应用启发，我编写了一个 [Bash 脚本 ch](https://github.com/learnbyexample/command_help) 来从 `man` 和 `help` 页面中提取信息。以下是一些示例：
+受此应用启发，我编写了一个 [Bash 脚本 ch](https://github.com/learnbyexample/command_help) 来从`man`和`help`页面中提取信息。以下是一些示例：
 
 ```sh
 $ ch ls -vX
@@ -397,27 +399,19 @@ $ ch type -a
 ### 进一步阅读
 
 +   [Linux man 页面](https://www.mankier.com/) — 提供在线 man 页面的几个网站之一
-
 +   [ArchWiki](https://wiki.archlinux.org/title/Table_of_contents) — Arch Linux 和其他发行版的综合文档
-
 +   [Debian 参考](https://www.debian.org/doc/manuals/debian-reference/) — 对 Debian 系统的广泛概述，通过 shell 命令示例涵盖了系统管理的许多方面
 
 ## 快捷键和自动补全
 
-你可以使用几个快捷键在命令行中提高效率。这些将在 Shell 自定义 章节中讨论。以下是一些示例，以提供一个大致的概念：
+你可以使用几个快捷键在命令行中提高效率。这些将在 Shell 自定义章节中讨论。以下是一些示例，以提供一个大致的概念：
 
 +   `Ctrl+u` 删除光标左侧的所有内容
-
 +   `Ctrl+k` 从当前字符删除到行尾
-
 +   `Ctrl+c` 中断当前输入的命令
-
 +   `Ctrl+l` 清除终端屏幕并将提示符移动到顶部，任何作为当前命令一部分输入的字符将被保留
-
-+   使用 `↑` 和 `↓` 光标键导航历史记录中的先前使用的命令
-
++   使用`↑`和`↓`光标键导航历史记录中的先前使用的命令
     +   `Ctrl+p` 和 `Ctrl+n` 也可以用来代替箭头键
-
     +   你可以修改历史记录中的这些行之前的命令
 
 制表键可以帮助你根据上下文自动补全命令、别名、文件名等。如果只有一个可能的补全，它将在单次制表键按下时完成。否则，你可以按两次制表键来获取可能的匹配列表（如果有）。以下是一个在多个阶段使用多次制表键完成文件路径的示例。这不仅节省了时间，还帮助你避免输入错误，因为你同时正在验证路径。
@@ -441,28 +435,20 @@ $ ls /etc/dictionaries-common/words
 
 上面的例子中，按下制表键的字符是为了说明目的而精心挑选的。如果你尝试在每个字符后按下制表键，步骤数量会增加。随着经验的积累，使用制表键进行自动补全将成为你命令行使用中自然的一部分。
 
-> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 你可以设置一个选项，将单次和双次制表键的功能合并为单次制表键。这将在 Shell 自定义 章节中讨论。
+> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 你可以设置一个选项，将单次和双次制表键的功能合并为单次制表键。这将在 Shell 自定义章节中讨论。
 
 ## 实际应用案例
 
 如果命令行环境只有文件管理功能，我仍然会使用它。鉴于有各种各样的应用程序可用，我无法想象回到为每个用例使用不同的 GUI 应用程序。我的主要工作是编写电子书、博客文章和录制视频。以下是我在 CLI 中使用的几个主要工具：
 
 +   使用`head`、`tail`、`sort`、`grep`、`sed`、`awk`等命令进行文本处理（你将在后面的章节中了解这些命令）
-
 +   [git](https://git-scm.com/) — 版本控制
-
 +   [pandoc](https://github.com/jgm/pandoc/) — 从 Markdown 文件生成 PDF/EPUB 书籍版本
-
 +   [mdBook](https://github.com/rust-lang/mdBook) — 从 Markdown 文件生成的书籍的网页版本
-
 +   [zola](https://github.com/getzola/zola) — 静态网站生成器
-
 +   [ImageMagick](https://imagemagick.org/index.php) — 进行图像处理，如调整大小、添加边框等
-
 +   [oxipng](https://github.com/shssoichiro/oxipng)，[pngquant](https://pngquant.org/)和[svgcleaner](https://github.com/RazrFalcon/svgcleaner) — 优化图像
-
 +   [auto-editor](https://github.com/WyattBlue/auto-editor) — 从视频录制中移除静音部分
-
 +   [FFmpeg](https://github.com/FFmpeg/FFmpeg) — 视频处理，例如填充（`FFmpeg`也是`auto-editor`解决方案的主要部分）
 
 其中一些工作流程需要额外的管理，为此我编写了 shell 函数或脚本。我确实也需要 GUI 工具，例如，网页浏览器、图片查看器、PDF/EPUB 查看器、[SimpleScreenRecorder](https://github.com/MaartenBaert/ssr)等等。其中一些也可以在终端内处理，但我更倾向于在这种情况下使用 GUI。我确实从终端启动了一些工具，主要是为了提供要打开的文件或 URL。
@@ -483,11 +469,11 @@ $ echo apple     42 'banana     100'
 
 **3)** 阅读[bash 手册：波浪号扩展](https://www.gnu.org/software/bash/manual/html_node/Tilde-Expansion.html)。`~/projects`是相对路径还是绝对路径？参见[这个 unix.stackexchange 线程](https://unix.stackexchange.com/q/221970/109046)以获取答案。
 
-**4)** 当 `less` 命令处于活动状态时，你会使用哪个键来获取帮助？
+**4)** 当`less`命令处于活动状态时，你会使用哪个键来获取帮助？
 
-**5)** 在查看 `man` 页面时，如何将第 50 行移动到屏幕顶部（假设 `less` 命令是分页器）？
+**5)** 在查看`man`页面时，如何将第 50 行移动到屏幕顶部（假设`less`命令是分页器）？
 
-**6)** `Ctrl+k` 快捷键的作用是什么？
+**6)** `Ctrl+k`快捷键的作用是什么？
 
 **7)** 简要解释以下 shell 操作符的作用：
 
@@ -497,7 +483,7 @@ $ echo apple     42 'banana     100'
 
 *c)* `>>`
 
-**8)** `whatis` 命令显示关于命令的一行描述。但它似乎对 `whatis type` 不起作用。你应该使用什么代替？
+**8)** `whatis`命令显示关于命令的一行描述。但它似乎对`whatis type`不起作用。你应该使用什么代替？
 
 ```sh
 $ whatis cat
@@ -510,10 +496,10 @@ type: nothing appropriate.
 type - Display information about command type. 
 ```
 
-**9)** `/tmp` 目录的作用是什么？
+**9)** `/tmp`目录的作用是什么？
 
 **10)** 分别给出绝对路径和相对路径的示例。
 
-**11)** 你会在什么情况下使用 `man -k` 命令？
+**11)** 你会在什么情况下使用`man -k`命令？
 
-**12)** `man` 页面和 `info` 页面之间有区别吗？
+**12)** `man`页面和`info`页面之间有区别吗？

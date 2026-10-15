@@ -1,4 +1,5 @@
-# **Answer 1:**
+
+## Answer 1:
 
 ```
 bar:
@@ -7,6 +8,6 @@ bar/foo:
 . .. f2 f3
 ```
 
-# **Notes:**
+## Notes:
 
 Be careful with `rm -r`—that command removes an entire directory without prompting you. Many horror stories can be found on the internet of people inadvertently deleting important files when they weren’t paying attention!

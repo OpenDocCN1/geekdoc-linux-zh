@@ -1,22 +1,19 @@
-# 解读错误信息
 
-# 6\. 解读错误信息
+# 解读错误信息
 
 本章解释使用 SystemTap 过程中常见的错误信息。
 
-# 解析和文法错误
-
-# 6.1\. 解析和文法错误
+## 解析和文法错误
 
 解析和文法错误发生在 SystemTap 解析脚本和编译成 C 代码时。举个例子，把无效的值赋给变量或数组时，会报类型错误。
 
 **parse error: expected foo, saw bar**
 
-脚本存在语法或排版错误。SystemTap 会探测到脚本中存在的不正确结构，并指出有问题的探针。 举个例子，下面的 SystemTap 脚本是有问题的，里面的探针缺了处理程序：
+脚本存在语法或排版错误。SystemTap 会探测到脚本中存在的不正确结构，并指出有问题的探针。举个例子，下面的 SystemTap 脚本是有问题的，里面的探针缺了处理程序：
 
 ```
 probe vfs.read
-probe vfs.write 
+probe vfs.write
 ```
 
 尝试运行这个脚本，它会报告以下的错误信息，声称第 2 行第 1 列不应该是`probe`关键字。
@@ -24,7 +21,7 @@ probe vfs.write
 ```
 parse error: expected one of '. , ( ? ! { = +='
     saw: keyword at perror.stp:2:1
-1 parse error(s). 
+1 parse error(s).
 ```
 
 **parse error: embedded code in unprivileged script**
@@ -41,7 +38,7 @@ parse error: expected one of '. , ( ? ! { = +='
 probe syscall.open
 {
   printf ("%d(%d) open\n", execname(), pid())
-} 
+}
 ```
 
 **semantic error: unresolved type for identifier 'foo'**
@@ -53,12 +50,12 @@ probe syscall.open
 SystemTap 不能完成某个赋值操作，因为这个操作的接收者不合理。下面的示例代码就会发生这个错误：
 
 ```
-probe begin { printf("x") = 1 } 
+probe begin { printf("x") = 1 }
 ```
 
 **while searching for arity N function, semantic error: unresolved function call**
 
-脚本中的函数调用或数组索引表达式使用了不合理的参数个数。在 SystemTap，*arity*可以指数组的索引个数，也可以指函数的参数个数。
+脚本中的函数调用或数组索引表达式使用了不合理的参数个数。在 SystemTap，`arity`可以指数组的索引个数，也可以指函数的参数个数。
 
 **semantic error: array locals not supported, missing global declaration?**
 
@@ -66,11 +63,11 @@ probe begin { printf("x") = 1 }
 
 **semantic error: variable 'foo' modified during 'foreach' iteration**
 
-用`foreach`迭代数组`foo`的同时修改了该数组（赋新的值或使用了 delete）。如果在`foreach`迭代的过程中对数组`foo`调用了函数，也会显示这个错误。
+用`foreach`迭代数组`foo`的同时修改了该数组（赋新的值或使用了`delete`）。如果在`foreach`迭代的过程中对数组`foo`调用了函数，也会显示这个错误。
 
 **semantic error: probe point mismatch at position N, while resolving probe point foo**
 
-SystemTap 无法找到事件或 SystemTap 函数`foo`的定义。通常意味着 SystemTap 在 tapset 库中找不到匹配 foo 的项。`N`表示错误的行号和列号。
+SystemTap 无法找到事件或 SystemTap 函数`foo`的定义。通常意味着 SystemTap 在 tapset 库中找不到匹配`foo`的项。`N`表示错误的行号和列号。
 
 **semantic error: no match for probe point, while resolving probe point foo**
 
@@ -78,7 +75,7 @@ SystemTap 因为一些原因不能解析事件或处理函数`foo`。比如说�
 
 **semantic error: unresolved target-symbol expression**
 
-脚本中的一个处理程序用到了某个目标变量（target variable)，但这个目标变量无法解析。这个错误意味着该目标变量在处理程序的上下文里不存在。也许是编译器把代码优化掉了。
+脚本中的一个处理程序用到了某个目标变量（target variable），但这个目标变量无法解析。这个错误意味着该目标变量在处理程序的上下文里不存在。也许是编译器把代码优化掉了。
 
 **semantic error: libdwfl failure**
 
@@ -88,37 +85,35 @@ SystemTap 因为一些原因不能解析事件或处理函数`foo`。比如说�
 
 SystemTap 找不到适合的`kernel-debuginfo`包。
 
-# 运行时错误和警告
-
-# 6.2\. 运行时错误和警告
+## 运行时错误和警告
 
 运行时错误和警告发生在 SystemTap 安装了检测代码并开始收集数据的时候。
 
-**⁠WARNING: Number of errors: N, skipped probes: M**
+**WARNING: Number of errors: N, skipped probes: M**
 
 在运行时出错并/或跳过某些探针。由于诸如给定时间不足以执行完处理程序的原因，某些探针没有得到执行，`N`和`M`就是这些探针的数目。
 
-**⁠division by 0**
+**division by 0**
 
 代码里出现了除零错误。
 
-**⁠aggregate element not found**
+**aggregate element not found**
 
 在一个空的聚集变量上调用除`@count`以外的提取函数。这就跟除零差不多。关于聚集变量的更多信息，参见 3.5 数组操作中的“使用聚集变量”部分。
 
-**⁠aggregation overflow**
+**aggregation overflow**
 
 聚集变量数组中包含太多的键。（译注：前文有提及，数组的索引中最多只能使用九个键）
 
-**⁠MAXNESTING exceeded**
+**MAXNESTING exceeded**
 
 过多的嵌套函数调用。默认函数调用层级是 10。可以使用`-DMAXNESTING=NN`重编译脚本来修改这个限制。
 
-**⁠MAXACTION exceeded**
+**MAXACTION exceeded**
 
 处理程序太长了。默认一个探针的处理程序里面最多只能执行 1000 个语句。可以使用`--DMAXACTION=NN`或`-DMAXACTION_INTERRUPTIBLE=NN`重编译脚本来修改这个限制。
 
-**⁠kernel/user string copy fault at ADDR**
+**kernel/user string copy fault at ADDR**
 
 处理程序试图把一个来自内核或用户空间的字符串拷贝到无效地址`ADDR`。
 

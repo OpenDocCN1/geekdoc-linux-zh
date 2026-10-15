@@ -1,76 +1,15 @@
+
 # Qt 4 C++ GUI 编程
 
+## 第一部分：Qt 基础
 
+## 第二部分：进阶 Qt
 
+## 第三部分：高级 Qt
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 第一部分：Qt 基础
-
-
-
-
-
-
-# 第二部分：进阶 Qt
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 第三部分：高级 Qt .....................................................................................................................
-
-
-
-
-
-
-
-
-
-
-## 前言
+### 前言
 
 为什么 Qt？为什么程序员喜欢它？当然，答案是显而易见的：单源兼容性、功能丰富性、C++ 性能、源码可用性、文档、技术支持以及所有提到的 Qt 营销材料。这些都很好，但它们忽略了最重要的一点：Qt 之成功是因为程序员喜欢它。
-
-
-
-
 
 每一个字段。严格来说，你应该等待信用卡公司向你开具账单，上面会有他们实际使用的汇率。虽然这并不困难，但从不同的来源查找不同的信息，然后将相关项目以形式复制到几个地方，感觉非常不必要的别扭。
 
@@ -81,10 +20,12 @@
 在 Qt 变得如此流行和被广泛使用之前，Qt 开发者对寻找正确解决方案的奉献就让 Qt 变得与众。这种奉献在今天同样强大，并影响着每一个开发和维护 Qt 的人。对我们来说，开发 Qt 是一份责任，也是一种荣幸。我们为帮助让你的专业和开源生活变得更加简单、愉快而感到自豪。
 
 Matthias Ettrich
+
 挪威，奥斯陆
+
 2006年6月
 
-## 前言
+### 前言
 
 Qt 是一个全面的 C++ 框架，用于“编写一次，随处编译”的方法开发跨平台 GUI 应用程序。Qt 让程序员可以使用一套源码树，开发出运行在 Windows 98、Mac OS X、Linux、Solaris、HP-UX 以及其他许多带有 X11 的 Unix 版本上的应用程序。Qt 库和工具也是 Qtopia Core 的一部分，该产品在嵌入式 Linux 之上提供了自己的窗口系统。
 
@@ -104,9 +45,9 @@ Qt 以其跨平台框架而闻名，但由于其直观且强大的 API，许多�
 
 Qt 有多种许可协议可用。如果你想构建商业应用程序，必须购买商业 Qt 许可；如果你想构建开源程序，可以使用开源 (GPL) 版本。Qt 是 K 桌面环境 (KDE) 以及与其一同构建的许多开源应用程序的基础。
 
-除了 Qt 的数百个类外，还有可以扩展 Qt 范围和能力的插件。其中一些产品，如用于应用程序的 Qt Script (QSA) 和 Qt Solutions 组件，可以从 Trolltech 获取，而另一些则由其他公司和开源社区提供。请访问 http://www.trolltech.com/products/3party 获取有关插件的信息。
+除了 Qt 的数百个类外，还有可以扩展 Qt 范围和能力的插件。其中一些产品，如用于应用程序的 Qt Script (QSA) 和 Qt Solutions 组件，可以从 Trolltech 获取，而另一些则由其他公司和开源社区提供。请访问 `http://www.trolltech.com/products/3party` 获取有关插件的信息。
 
-## 致谢
+### 致谢
 
 我们的首要感谢的是 Trolltech 的总裁 Eirik。Eirik 不仅鼓励我们编写了 Qt 3 版书籍，还允许我们花费大量时间来编写。Eirik 和 Trolltech 首席官 Haavard 都阅读了手稿并提供了宝贵的反馈。
 
@@ -116,15 +57,11 @@ Qt 有多种许可协议可用。如果你想构建商业应用程序，必须�
 
 除了上述评审员外，我们从 Harald Ferngenel（数据库）、Volker Hisheimer（ActiveX）、Bradley Huges（多线程）、Torn Kjærner（3D 图形和数据库）、Lars Knoll（2D图形和国际化）、Sam Magnususon（make）、Marius Bugge Mensen、Dimitri Papadopoulos（QtX11）、Paul Olav Tibet（自定义控件和嵌入式编程）、Rainer Schmidt（网络和 XML）、Amrit Paul Singh（C++ 介绍）以及 Gunnar Sletta（2D 图形和事件处理）那里获得了专家级的帮助。
 
-特别感谢 Trolltech 的文档和支持团队，在书籍占据了我们大量时间时处理了文档相关问题，并感谢 Trolltech 的系统管理员在整个项目期间保持了我们的机器运行和网络通畅。如果你在书中发现错误，或者对下一版有建议，我们非常乐意听到你的反馈。你可以通过 qt-book@trolltech.com 联系我们。
+特别感谢 Trolltech 的文档和支持团队，在书籍占据了我们大量时间时处理了文档相关问题，并感谢 Trolltech 的系统管理员在整个项目期间保持了我们的机器运行和网络通畅。如果你在书中发现错误，或者对下一版有建议，我们非常乐意听到你的反馈。你可以通过 `qt-book@trolltech.com` 联系我们。
 
 在制作方面，Trenton Schulz 制作了随附的 CD，Trolltech 的 Cathrine Bore 代表我们处理了合同和法律事务。感谢 Nathan Clement 提供的 Troll 插画。最后，感谢 Pearsons 的 Lara Wysong，她很好地处理了制作方面的实际工作。
 
-
-
-
-
-# Qt 简史
+## Qt 简史
 
 Qt 框架首次于 1995 年 5 月公开发布。它最初由 Haavard Nord（Trolltech 首席执行）和 Eirik Chambe-Eng（Troll 主席）开发。Haavard 和 Eirik 在特隆赫姆的挪威科技学院相识，他们都在那里获得了计算机科学的硕士学位。
 
@@ -160,7 +97,7 @@ Qt 3.0 于 2001 年发布。Qt 现在可在 Windows、Mac OS X、Unix 和 Linux�
 
 本章展示了如何将基础 C++ 与 Qt 提供的功能相结合创建图形界面（GUI）应用程序。本章还介绍了两个思想：“信号与槽”。在第 2 章中我们将深入研究，在第 3 章中我们将构建更真实的应用程序。
 
-# Hello Qt
+### Hello Qt
 
 让我们从一个简单的 Qt 程序开始。我们将首先学习它，然后看看如何编译和运行。
 
@@ -176,17 +113,13 @@ int main(int argc, char *argv[]) {
 }
 ```
 
-第 5 行创建一个 QApplication 对象来管理应用程序资源。QApplication 的构造函数需要 argc 和 argv，因为 Qt 支持一些命令行参数。第 6 行创建一个 QLabel 控件显示“Hello Qt!”。在 Qt 术语中，控件是用户界面中的视觉元素。大多数应用程序使用 MainWindow 或 QDialog 作为窗口，但 Qt 非常灵活，任何控件都可以是窗口。在这个示例中，QLabel 就是应用程序窗口。第 7 行使标签可见。控件总是隐藏创建，以便我们在显示之前对其进行自定义，避免闪烁。第 8 行将控制权交给应用程序。此时，程序进入循环。这是一种等待模式，等待用户操作。用户产生事件（也称为“消息”），程序可以通过执行一个或多个函数做出响应。例如，当用户点击控件时，会产生“鼠标按下”和“鼠标释放”。在这方面，GUI 程序与传统的批处理程序有很大区别，后者通常处理输入、产生结果并终止交互。
+第 5 行创建一个 `QApplication` 对象来管理应用程序资源。`QApplication` 的构造函数需要 `argc` 和 `argv`，因为 Qt 支持一些命令行参数。第 6 行创建一个 `QLabel` 控件显示“Hello Qt!”。在 Qt 术语中，控件是用户界面中的视觉元素。大多数应用程序使用 `MainWindow` 或 `QDialog` 作为窗口，但 Qt 非常灵活，任何控件都可以是窗口。在这个示例中，`QLabel` 就是应用程序窗口。第 7 行使标签可见。控件总是隐藏创建，以便我们在显示之前对其进行自定义，避免闪烁。第 8 行将控制权交给应用程序。此时，程序进入循环。这是一种等待模式，等待用户操作。用户产生事件（也称为“消息”），程序可以通过执行一个或多个函数做出响应。例如，当用户点击控件时，会产生“鼠标按下”和“鼠标释放”。在这方面，GUI 程序与传统的批处理程序有很大区别，后者通常处理输入、产生结果并终止交互。
 
-为了简单起见，我们没有在 main() 函数结束时删除 QLabel 对象。这种内存泄漏在这样的小程序中是无害的，因为操作系统会在程序终止时回收内存。
+为了简单起见，我们没有在 `main()` 函数结束时删除 `QLabel` 对象。这种内存泄漏在这样的小程序中是无害的，因为操作系统会在程序终止时回收内存。
 
 **图 1.1.** Linux 上的 Hello
 
-
-
-
-
-# Hello Qt
+### Hello Qt
 
 输入命令来编译程序。在 Windows 上输入 `hello`，在 Unix 上输入 `./hello`，在 Mac OS X 上打开 `hello.app`。要终止程序，点击窗口标题栏上的关闭按钮。
 
@@ -223,6 +156,8 @@ QLabel *label = new QLabel("<h2><i>Hello!</i></h2>")
 并重新构建应用程序。示例所示，使用一些简单的 HTML 样式格式就能美化 Qt 应用程序的用户界面。
 
 # Making Connections
+
+
 
 第二个示例展示了如何响应用户操作。该应用程序包含一个用户点击即可退出的按钮。源代码与 Hello 非常相似，不同之处在于使用了 `QPushButton` 而不是 `QLabel` 作为我们的主部件，并且我们将用户操作（点击按钮）连接到一段代码。
 
@@ -268,7 +203,7 @@ qmake quit.pro
 
 - Qt 信号与 Unix 信号无关。在书中我们只关注 Qt 信号。
 
-# Laying Out Widgets
+## Laying Out Widgets
 
 应用程序由三个部件组成：`QSpinBox`、`QSlider` 和 `QWidget`。`QWidget` 是应用程序的主窗口。`QSpinBox` 和 `QSlider` 渲染在 `QWidget` 内部；它们是 `QWidget` 的子部件。或者我们可以说 `QWidget` 是 `QSpinBox` 和 `QSlider` 的父部件。`QWidget` 本身没有父部件，因为它被用作顶层窗口。`QWidget` 及其所有子类的构造函数都接受一个定义父部件的参数。
 
@@ -278,7 +213,7 @@ qmake quit.pro
 
 第 8 和 9 行设置了作为应用程序主窗口的 `QWidget`。我们调用 `setWindowTitle()` 来设置窗口标题栏中显示的文本。
 
-# 1. Getting Started
+## 1. Getting Started
 
 第 10 和 11 行创建了 `QSpinBox` 和 `QSlider`，第 12 和 13 行设置了它们的有效范围。我们可以安全地假设用户年龄最多为 130 岁。我们可以将窗口传递给 `QSpinBox`。第 14 到 17 行所示的 `QObject::connect()` 调用确保了调节框和滑动条的同步。第 22 行的 `setLayout()` 调用将布局安装到窗口上。在后台，`QSpinBox` 和 `QSlider` 会被“重绘”为安装布局的部件的子部件，正因如此，当我们构造位于布局中的部件时，不需要指定显式父部件。
 
@@ -288,7 +223,7 @@ qmake quit.pro
 
 尽管我们没有设置任何部件的位置或大小，但 `QSpinBox` 和 `QSlider` 看起来几乎是并排布局的。这是因为 `QHBoxLayout` 根据需要为它负责的部件分配了合理的位置和大小。布局管理器让我们免于在应用程序中硬编码屏幕位置的苦差，并确保我们的窗口能够流畅地缩放。
 
-# Laying Out Widgets
+## Laying Out Widgets
 
 在第 19 到 22 行，我们使用布局管理器布局了调节框和滑动条。布局管理器是一个设置部件尺寸和位置的对象。Qt 有三种布局管理器类：
 
@@ -297,15 +232,12 @@ qmake quit.pro
 - `QGridLayout` 在网格中布局部件。
 
 | QWidget | QSpinBox | QSlider | QHBoxLayout |
+
 |---|---|---|---|
 
 **图 1.6.** Age 应用程序的部件**
 
-
-
-
-
-## 10 入门指南
+### 10 入门指南
 
 在 Windows 的开始菜单中找到 Qt by Trolltech v4.x.y Assistant，在 Unix 命令行中输入 `assistant`，或者在 Mac OS X 的 Finder 中双击 `Assistant`。
 
@@ -414,6 +346,7 @@ private:
 };
 
 #endif
+```
 
 在类的私有部分声明了两个槽。为了实现这些槽，我们需要访问对话的大部分控件，因此我们保留了它们的指针。`slots` 关键字像信号一样，也是一个 C++ 编译器可以理解的构造。对于私有变量，我们使用了类的前声明。这是因为它们都是指针，且我们没有在头文件中访问它们，所以编译器不需要完整的定义。我们本可以包含头文件（`<QCheckBox>`、`<QLabel>` 等），但在可能的情况下使用前声明会更快。
 
@@ -421,16 +354,13 @@ private:
 
 ```cpp
 #include <QtGui>
+
 #include "finddialog.h"
 ```
 
 首先，我们包含了 `<QtGui>`，这是一个包含 Qt GUI 类定义的头文件。Qt 由多个模块组成：`QtCore`、`QtGui`、`QtNetwork`、`QtOpenGL`、`QtSql`、`QtSvg` 和 `QtXml`。`<QtGui>` 头文件包含了属于 `QtCore` 和 `QtGui` 模块的所有类的定义。包含此头文件避免了我们单独包含每个类的麻烦。
 
 在 `finddialog.h` 中，与其包含 `<QDialog>` 并对其他三个类使用前声明，我们只需要包含 `<QtGui>`。然而，从另一个文件中包含如此巨大的头文件通常不是良好的风格，特别是在较大的应用程序中。
-
-
-
-
 
 ## 2. 创建对话框
 
@@ -442,10 +372,15 @@ private:
 
 ```
 connect(lineEdit, SIGNAL(textchanged(const QString&)));
+
 this, SLOT(enableButton(const QString&));
+
 connect(findButton, SIGNAL(clicked()));
+
 this, SLOT(clicked()));
+
 connect(closeButton, SIGNAL(clicked()));
+
 this, SLOT(clicked()));
 ```
 
@@ -455,17 +390,25 @@ this, SLOT(clicked()));
 
 ```
 QVBoxLayout *topLayout = new QVBoxLayout;
+
 topLayout->addWidget(label);
+
 topLayout->addWidget(lineEdit);
 
 QVBoxLayout *leftLayout = new QVBoxLayout;
+
 leftLayout->addLayout(topLayout);
+
 leftLayout->addWidget(checkBoxBox);
+
 leftLayout->addWidget(backwardCheckbox);
 
 QVBoxLayout *rightLayout = new QVBoxLayout;
+
 rightLayout->addWidget(findButton);
+
 rightLayout->addWidget(closeButton);
+
 rightLayout->addStretch();
 ```
 
@@ -473,10 +416,15 @@ rightLayout->addStretch();
 
 ```
 32 QHBoxLayout *mainLayout = new QHBoxLayout;
+
 33 mainLayout->addWidget(leftLayout);
+
 34 mainLayout->addWidget(rightLayout);
+
 35 setLayout(mainLayout);
 ```
+
+
 
 接下来，我们使用布局管理器来布局子部件。布局可以既包含部件，也可以包含其他布局。通过以各种组合嵌套 `QHBoxLayout`、`QVBoxLayout` 和 `QGridLayout`，可以构建非常复杂的对话框。
 
@@ -484,15 +432,17 @@ rightLayout->addStretch();
 
 图 2.2 查找对话框布局
 
-对于该对话框，我们使用了两个 `QHBoxLayout` 和两个 `QVBoxLayout`，如图 2.2 所示。外部布局是主布局；它在第 35 行安装在 `FindDialog` 上，负责对话框的整个区域。另外三个布局是子布局。图 2.2 右下角的那个“弹簧”是一个间隙项（或“拉伸”” stretch）。它使用了查找和关闭按钮下方的空白区域，确保这些按钮占据对话框的顶部。
+对于该对话框，我们使用了两个 `QHBoxLayout` 和两个 `QVBoxLayout`，如图 2.2 所示。外部布局是主布局；它在第 35 行安装在 `FindDialog` 上，负责对话框的整个区域。另外三个布局是子布局。图 2.2 右下角的那个“弹簧”是一个间隙项（或“拉伸”” `stretch`）。它使用了查找和关闭按钮下方的空白区域，确保这些按钮占据对话框的顶部。
 
 布局管理器类的一个特点是它们不是部件。相反，它们继承自 `QLayout`，而 `QLayout` 又继承自 `QObject`。在图中，实线表示部件，虚线表示布局，以突出它们的区别。在运行的应用程序中，布局是不可见的。
 
-当子布局添加到父布局时（第 25、33和34行），子布局会自动重绘。然后，当主布局安装到对话框上（第 35 行）时，它成为对话框的子级，布局中的所有部件都会被重绘为对话框的子级。父子层级结构如图 2.3 所示。
+当子布局添加到父布局时（第 25、33 和 34 行），子布局会自动重绘。然后，当主布局安装到对话框上（第 35 行）时，它成为对话框的子级，布局中的所有部件都会被重绘为对话框的子级。父子层级结构如图 2.3 所示。
 
 ```
 36 setTitle(tr("Find"));
+
 37 setFixedHeight(sizeHint());
+
 38 }
 ```
 
@@ -502,16 +452,16 @@ rightLayout->addStretch();
 
 ## FindDialog
 
-- QLabel (label)
-- QLineEdit (lineEdit)
-- QCheckBox (caseCheckbox)
-- QCheckBox (backwardCheckbox)
-- QPushButton (findButton)
-- QPushButton (closeButton)
-- QHBoxLayout (mainLayout)
-- QVBoxLayout (leftLayout)
-- QVBoxLayout (topLayout)
-- QVBoxLayout (rightLayout)
+- `QLabel` (`label`)
+- `QLineEdit` (`lineEdit`)
+- `QCheckBox` (`caseCheckbox`)
+- `QCheckBox` (`backwardCheckbox`)
+- `QPushButton` (`findButton`)
+- `QPushButton` (`closeButton`)
+- `QHBoxLayout` (`mainLayout`)
+- `QVBoxLayout` (`leftLayout`)
+- `QVBoxLayout` (`topLayout`)
+- `QVBoxLayout` (`rightLayout`)
 
 **图 2.3.** 查找对话框父子关系
 
@@ -519,22 +469,33 @@ rightLayout->addStretch();
 
 ```
 void FindDialog::findClicked()
+
 {
+
     QString text = lineEdit->text();
+
     Qt::Sensitivity cs = caseCheckbox->isChecked() ? Qt::CaseSensitive : Qt::CaseInsensitive;
 
     if (backwardCheckbox->isChecked()) {
+
         emit findPrevious(text, cs);
+
     } else {
+
         emit findNext(text, cs);
+
     }
+
 }
 ```
 
 ```
 void FindDialog::enableButton(const QString &itext)
+
 {
+
     findButton->setEnabled(!itext.isEmpty());
+
 }
 ```
 
@@ -543,7 +504,6 @@ void FindDialog::enableButton(const QString &itext)
 ```cpp
 #include <QApplication>
 #include "finddialog.h"
-
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
@@ -570,15 +530,11 @@ dialog.obj: error LNK2001: unresolved external symbol
 
 如果发生这种情况，请再次运行 `qmake` 更新 Makefile，然后重新构建应用程序。
 
-
-
-
-
 ## 20 创建对话框
 
 提供合理的标签顺序（tab order）和快捷键，可以确保不想（或无法）使用鼠标的用户能够充分利用应用程序。快速打字员也十分推崇完全的键盘控制。
 
-在第 3 章中，我们将在真实的应用程序中使用查找对话框，并将 `findPrevious()` 和 `findNext()`信号连接到槽（slots）。
+在第 3 章中，我们将在真实的应用程序中使用查找对话框，并将 `findPrevious()` 和 `findNext()` 信号连接到槽（slots）。
 
 ## 深入理解信号与槽
 
@@ -592,7 +548,7 @@ dialog.obj: error LNK2001: unresolved external symbol
 connect(sender, SIGNAL(signal), receiver, SLOT(slot));
 ```
 
-其中 sender 和 receiver 是指向 `QObjects` 的指针，signal 和 slot 是不带参数名的函数签名。`SIGNAL()` 和 `SLOT()` 宏本质上是将其参数转换为字符串。
+其中 `sender` 和 `receiver` 是指向 `QObjects` 的指针，`signal` 和 `slot` 是不带参数名的函数签名。`SIGNAL()` 和 `SLOT()` 宏本质上是将其参数转换为字符串。
 
 在目前为止的示例中，我们总是将信号连接到不同的槽。还有其他可能性可以考虑：
 
@@ -611,7 +567,6 @@ connect(calculator, SIGNAL(divisionByZero(int)), this, SLOT(handleMathError(int)
 当任一信号发射时，该槽都会被调用。
 
 - 一个信号可以连接到另一个信号：
-
 ```cpp
 connect(lineEdit, SIGNAL(textChanged(const QString&)), this, SIGNAL(updateRecord(const QString)));
 ```
@@ -619,7 +574,6 @@ connect(lineEdit, SIGNAL(textChanged(const QString&)), this, SIGNAL(updateRecord
 除此之外，信号-信号连接与信号-槽连接是没有区别的。
 
 - 连接可以被移除：
-
 ```cpp
 disconnect(lcd, SIGNAL(overlow()), this, SLOT(handleMathError()));
 ```
@@ -646,15 +600,11 @@ class Employee : public QObject
 {
 public:
   Employee() { mySalary = 0; }
-
   int salary() const { return mySalary; }
-
 public slots:
   void setSalary(int newSalary);
-
 signals:
   void salaryChanged(int newSalary);
-
 private:
   int mySalary;
 };
@@ -703,10 +653,6 @@ Qt Designer 通过提供可视化设计能力为程序员扩展了选项。Qt De
 - 实现对话框的自定义槽。
 
 每个
-
-
-
-
 
 # 24
 ## 2. 创建对话框
@@ -767,16 +713,25 @@ Qt Designer 通过提供可视化设计能力为程序员扩展了选项。Qt De
 ```cpp
 #include <QApplication>
 #include <QDialog>
+```
 
+
+
+```cpp
 #include "ui_gotocelldialog.h"
 
 int main(int argc, char *argv[]) {
+
     QApplication app(argc, argv);
+
     Ui::GoToCellDialog ui;
+
     QDialog *dialog = new QDialog;
+
     ui.setupUI(dialog);
 
     return app.exec();
+
 }
 ```
 
@@ -785,50 +740,68 @@ int main(int argc, char *argv[]) {
 生成的 `ui_gotocelldialog.h` 文件包含 `Ui::GoToCellDialog` 类的定义，它是 `gotocelldialog.ui` 文件的 C++ 等价物。该类声明了存储表单子组件和布局的成员变量，以及一个初始化表单的 `setupUI()` 函数。生成的类看起来如下：
 
 ```cpp
+
 class Ui::GoToCellDialog {
+
 public:
+
     QLabel *label;
+
     QLineEdit *lineEdit;
+
     QSpacerItem *spacerItem;
+
     QPushButton *okButton;
+
     QPushButton *cancelButton;
+
     ...
+
     void setupUI(QWidget *widget) {
+
         ...
+
     }
+
 }
+
 ```
 
 生成的类没有继承任何 Qt 类。当我们在 `main.cpp` 中使用表单时，我们创建一个 `QDialog` 并将其传递给 `setupUI`。
-
-
-
-
 
 ## RapidEdit 设计
 
 `on_edit_TextChanged()` 槽函数根据行编辑框是否包含有效的单元格代码来启用或禁用 OK 按钮。`QLineEdit::hasAcceptInput()` 使用我们在构造函数中设置的验证器。
 
-对话框到此完成。我们现在可以重写 main.cpp 来使用它：
+对话框到此完成。我们现在可以重写 `main.cpp` 来使用它：
 
 ```cpp
+
 #include <QApplication>
+
 #include "gotocelldialog.h"
 
 int main(int argc, char *argv[])
+
 {
+
     QApplication app(argc, argv);
+
     GoCellDialog *dialog = new GoCellDialog;
+
     dialog->show();
+
     return app.exec();
+
 }
+
 ```
 
-重新构建应用程序（make -project, make gotocell.pro）并再次运行。在行编辑框中输入 "Al12"，你会发现 OK 按钮变为可用。尝试输入一些随机文本以查看验证器如何工作。点击取消关闭对话框。
+重新构建应用程序（`make -project`, `make gotocell.pro`）并再次运行。在行编辑框中输入 "Al12"，你会发现 OK 按钮变为可用。尝试输入一些随机文本以查看验证器如何工作。点击取消关闭对话框。
 
-Qt Designer 的妙之处之一在于，它允许程序员自由地修改他们的设计，而无需被强制更改源代码。当你仅通过 C++ 来修改设计时，可能会非常耗时。使用 Qt Designer 则不会浪费任何时间，因为 uic 会为所有更改的表重新生成源代码。对话框的用户界面保存在 .ui 文件（一种基于 XML 的文件格式）中，而自定义功能通过对 uic 生成的类进行子类化来实现。
+Qt Designer 的妙之处之一在于，它允许程序员自由地修改他们的设计，而无需被强制更改源代码。当你仅通过 C++ 来修改设计时，可能会非常耗时。使用 Qt Designer 则不会浪费任何时间，因为 `uic` 会为所有更改的表重新生成源代码。对话框的用户界面保存在 `.ui` 文件（一种基于 XML 的文件格式）中，而自定义功能通过对 `uic` 生成的类进行子类化来实现。
 
-##变形对话框
+## 变形对话框
 
 我们已经看到如何创建一个始终显示相同控件的对话框。在某些情况下，提供可以改变形状的对话框是理想的。两种常见的形状变化对话框是扩展对话框和多页对话框。这两种对话框都可以在 Qt 中实现，可以通过代码，也可以使用 Qt Designer 实现。
 
@@ -836,7 +809,7 @@ Qt Designer 的妙之处之一在于，它允许程序员自由地修改他们�
 
 该对话框是电子表格应用程序中的排序对话框，用户可以选择一个或多个列进行排序。对话框的简单外观允许用户输入单个排序键，而其扩展外观提供了两个额外的排序键。“更多（More）”按钮允许用户在简单外观和扩展外观之间切换。
 
-## 2. 创建对话框
+### 2. 创建对话框
 
 ![](img/34bd675de80edd220dc2d53b429caf78_47_0.png)
 
@@ -853,8 +826,6 @@ Qt Designer 的妙之处之一在于，它允许程序员自由地修改他们�
 - 7. 右键点击第一个组合框，从上下文菜单中选择“编辑项目（Edit Items）”，弹出 Qt Designer 的组合框编辑器。创建一个文本为“None”的项。
 - 8. 右键点击第二个组合框并选择“编辑项目”。创建一个“升序（Ascending）”项和一个“降序（Descending）”项。
 - 9. 点击组框，然后点击“表单|网格布局（Form|Lay Out in a Grid）”。再次点击组框并点击“表单|调整大小（Form|Adjust Size）”。这将产生图 2.11 (b) 所示的布局。
-
-## 变形对话框
 
 ![](img/34bd675de80edd220dc2d53b429caf78_48_0.png)
 
@@ -873,7 +844,7 @@ Qt Designer 的妙之处之一在于，它允许程序员自由地修改他们�
 - 3. 将组框标题属性设置为“&Secondary Key（二级键）”和“&Tertiary Key（三级键）”。
 - 4. 创建一个垂直间距，将其放置在主组框和二级组框之间。
 
-## 2. 创建对话框
+### 2. 创建对话框
 
 - 5. 按照图 2.12 (a) 所示的模式排列控件。
 - 6. 点击“表单|网格布局（Form|Lay Out in a Grid）”。
@@ -904,19 +875,21 @@ Qt Designer 的妙之处之一在于，它允许程序员自由地修改他们�
 - 25. 选中所有控件，然后点击“表单|打破布局（Form\Break Layout）”。
 - 26. 结果布局具有两列四行。主键框、垂直间距、二级键框和三级键框各占据一个单元格。
 
+## 形状改变的对话框
 
-
-
-
-# 形状改变的对话框
-
-```
+```cpp
 21 QChar ch = first;
+
 22 while (ch <= last) {
+
 23     primaryColumnCombo->addItem(QString(ch));
+
 24     secondaryColumnCombo->addItem(QString(ch));
+
 25     tertiaryColumnCombo->addItem(QString(ch));
+
 26     ch = ch.unicode() + 1;
+
 27 }
 ```
 
@@ -929,22 +902,30 @@ Qt Designer 的妙之处之一在于，它允许程序员自由地修改他们�
 这是一个 `main()` 测试函数，它将范围设置为包含列 'C' 到 'F' 并显示对话框：
 
 ```cpp
+
 #include <QApplication>
 
 #include "sortdialog.h"
 
 int main(int argc, char *argv[]) {
+
     QApplication app(argc, argv);
+
     SortDialog *dialog = new SortDialog;
+
     dialog->setColumnRange('C', 'F');
+
     dialog->show();
+
     return app.exec();
+
 }
+
 ```
 
 扩展对话框到此完成。如示例所示，扩展对话框的设计与普通对话框并没有多少区别。我们需要的只是一个切换按钮、几个额外的槽连接以及一个不可调整的布局。在生产环境应用程序中，通常控制扩展的按钮在只显示基础对话框时显示 `Advanced >>>` 文本，在扩展显示时显示 `Advanced <<<`。在 Qt 中，这很容易实现，只需在每次点击 `QPushButton` 时调用其 `setText()` 即可。
 
-## 2. 创建对话框
+### 2. 创建对话框
 
 另一种常见的形状改变对话框类型——多页对话框，在 Qt 中更容易创建，无论是通过代码还是使用 Qt Designer。此类对话框可以通过多种方式构建。
 
@@ -954,27 +935,36 @@ int main(int argc, char *argv[]) {
 
 `QStackedWidget` 类将在第 6 章（布局管理）中介绍。
 
-# 动态对话框
+## 动态对话框
 
-动态对话框是在运行时从 Qt Designer 的 .ui 文件创建的对话框。与其使用 `uic` 将 .ui 文件转换为 C++ 代码，我们可以使用 `QULoader` 类在运行时加载文件：
+动态对话框是在运行时从 Qt Designer 的 `.ui` 文件创建的对话框。与其使用 `uic` 将 `.ui` 文件转换为 C++ 代码，我们可以使用 `QULoader` 类在运行时加载文件：
 
 ```cpp
+
 QULoader uloader;
+
 QFile file("sortdialog.ui");
+
 QWidget *sortDialog = uloader.load(&file);
+
 if (sortDialog) {
 
 }
+
 ```
 
 我们可以使用 `qobject::findChild<T>` 来访问子部件：
 
 ```cpp
+
 QComboBox *primaryColumnCombo = 
+
 sortDialog->findChild<QComboBox *>("primaryColumnCombo");
+
 if (primaryColumnCombo) {
 
 }
+
 ```
 
 `findChild<T>()` 函数是一个模板成员函数，它返回匹配名称和类型的子对象。由于编译器的限制，它在 MSVC 6 中不可用。如果你需要使用 MSVC 6 编译器，请调用全局函数 `qFindChild<T>()`，它的工作方式完全相同。
@@ -984,6 +974,8 @@ if (primaryColumnCombo) {
 ```
 CONFIG  += utools
 ```
+
+
 
 动态对话框使得在不重新编译应用程序的情况下更改表单布局成为可能。它们还可以用于创建瘦客户端应用程序，其中执行文件仅内置前端表单，所有其他表单都根据需要创建。
 
@@ -1075,10 +1067,6 @@ Qt 提供了一套标准的常用对话框，方便地让用户选择颜色、�
 
 内置部件和常用对话框提供了大量许多即用的功能。更特殊的需求通常可以通过设置部件属性，或者通过连接信号到槽并在槽中实现自定义行为来满足。
 
-
-
-
-
 # 内置 Widget 和对话框类
 
 ![](img/34bd675de80edd220dc2d53b429caf78_58_0.png)
@@ -1088,7 +1076,7 @@ Qt 提供了一套标准的常用对话框，方便地让用户选择颜色、�
 在某些情况下，从头开始创建一个自定义 widget 是很有用的。
 Qt 让这变得非常简单，自定义 widget 可以访问与 Qt 内置 widget相同的所有平台无关绘制功能。自定义 widget甚至可以与 Qt Designer 集成，以便像使用 Qt 内置 widget一样使用它们。第 5 章将解释如何创建自定义 widget。
 
-- 子类化 QMainWindow
+- 子类化 `QMainWindow`
 - 创建菜单和工具栏
 - 设置状态栏
 - 实现文件菜单
@@ -1113,7 +1101,7 @@ Qt 让这变得非常简单，自定义 widget 可以访问与 Qt 内置 widget�
 
 ### 子类化 QMainWindow
 
-应用程序的窗口是通过子类化 QMainWindow 创建的。我们在第 2 章中看到的创建对话框的许多技术也适用于创建主窗口，因为 QDialog 和 QMainWindow 都继承自 QWidget。
+应用程序的窗口是通过子类化 `QMainWindow` 创建的。我们在第 2 章中看到的创建对话框的许多技术也适用于创建主窗口，因为 `QDialog` 和 `QMainWindow` 都继承自 `QWidget`。
 
 可以使用 Qt Designer 创建主窗口，但在本章，我们将通过代码完成所有工作，以演示如何操作。如果你更喜欢视觉化的方法，请参阅 Qt Designer 手册中的“在 Qt Designer 中创建主窗口”章节。
 
@@ -1122,29 +1110,24 @@ Qt 让这变得非常简单，自定义 widget 可以访问与 Qt 内置 widget�
 ```
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
-
 #include <QMainWindow>
-
 class QAction;
 class QLabel;
 class FindDialog;
 class Spreadsheet;
-
 class MainWindow : public QMainWindow
 {
     Q_OBJECT
-
 public:
     MainWindow();
-
 protected:
     void closeEvent(QEvent *event);
 ```
 
-我们将类 MainWindow 定义为 QMainWindow 的子类。它包含了 Q_OBJECT 宏，因为它提供了自己的信号和槽。
-`closeEvent()` 函数是 QWidget 中的一个虚函数，当用户关闭窗口时会自动被调用。在 MainWindow 中重新实现了该函数，以便我们可以询问用户标准问题“您想保存更改吗？”并将用户偏好保存到磁盘。
+我们将类 `MainWindow` 定义为 `QMainWindow` 的子类。它包含了 `Q_OBJECT` 宏，因为它提供了自己的信号和槽。
+`closeEvent()` 函数是 `QWidget` 中的一个虚函数，当用户关闭窗口时会自动被调用。在 `MainWindow` 中重新实现了该函数，以便我们可以询问用户标准问题“您想保存更改吗？”并将用户偏好保存到磁盘。
 
-```cpp
+```
 private slots:
     void newFile();
     void open();
@@ -1156,9 +1139,9 @@ private slots:
     void about();
 ```
 
-某些菜单选项，如 File|New 和 Help|About，被实现为 MainWindow 中的私有槽。大多数槽的返回值为 `void`，`save()` 和 `saveAs()` 返回 `bool`。当槽在响应信号时执行时，返回值会被忽略，但当我们像函数一样调用槽时，返回值是可用的，就像调用任何普通 C++ 函数一样。
+某些菜单选项，如 File|New 和 Help|About，被实现为 `MainWindow` 中的私有槽。大多数槽的返回值为 `void`，`save()` 和 `saveAs()` 返回 `bool`。当槽在响应信号时执行时，返回值会被忽略，但当我们像函数一样调用槽时，返回值是可用的，就像调用任何普通 C++ 函数一样。
 
-```cpp
+```
 void openRecentFile();
 void updateStatusBar();
 void spreadsheetModified();
@@ -1166,7 +1149,7 @@ void spreadsheetModified();
 
 窗口需要更多的槽和私有函数来支持用户界面。
 
-```cpp
+```
 private:
     Spreadsheet *spreadsheet;
     FindDialog *findDialog;
@@ -1174,14 +1157,13 @@ private:
     QLabel *formulaLabel;
     QString listRecentFiles;
     QString curfile;
-
 ```cpp
 enum { MaxRecentFiles = 5 };
 QAction *recentFiles[MaxRecentFiles];
 QAction *separatorAction;
 ```
 
-```cpp
+```
 QMenu *fileMenu;
 QMenu *editMenu;
 QToolbar *fileToolbar;
@@ -1192,12 +1174,13 @@ QAction *openAction;
 QAction *aboutAction;
 ```
 
-```cpp
+```
 };
 #endif
 ```
 
-除了私有槽和私有函数外，MainWindow 还有私有变量。我们将在使用它们时进行解释。
+除了私有槽和私有函数外，`MainWindow` 还有私有变量。我们将在使用它们时进行解释。
+
 现在我们查看实现：
 
 ```cpp
@@ -1217,21 +1200,18 @@ MainWindow::MainWindow()
 {
     spreadsheet = new Spreadsheet;
     setCentralWidget(spreadsheet);
-
     createActions();
     createMenus();
     createContext();
     createToolBars();
     createStatusBar();
-
     readSettings();
-
     findDialog = 0;
     setWindowTitle(QIcon(":images/icon.png"));
 }
 ```
 
-在构造函数中，我们首先创建 Spreadsheet widget 并将其设置为主窗口的中心部件（见图 3.2）。Spreadsheet 类具有一些功能，例如对公式的支持。我们将在第 4 章中实现它。
+在构造函数中，我们首先创建 `Spreadsheet` widget 并将其设置为主窗口的中心部件（见图 3.2）。`Spreadsheet` 类具有一些功能，例如对公式的支持。我们将在第 4 章中实现它。
 
 我们调用私有函数 `createActions()`、`createMenus()`、`createContext()`、`createToolBars()` 和 `createStatusBar()` 来设置窗口的其余部分。我们还调用私有函数 `readSettings()` 来读取应用程序的设置。我们将 `findDialog` 指针初始化为空；在第一次调用 `find()` 时，我们将创建 `findDialog` 对象。在构造函数的结束处，我们在左上角设置图标。遗憾的是，压缩算法在某些国家拥有专利，在全球范围内已过期。要在 Qt 中启用 GIF 支持，请向脚本传递 `-qt-gif` 命令行选项或在 Qt 安装程序中设置相应的选项。
 
@@ -1306,10 +1286,6 @@ void MainWindow::createActions() {
 }
 ```
 
-
-
-
-
 ## 创建菜单和工具栏
 
 打开（Open）、保存（Save）和另存为（Save As）非常非常相似，因此我们将直接跳到文件菜单的“最近打开的文件”部分：
@@ -1331,14 +1307,15 @@ for (int i = 0; i < MaxRecentFiles; ++i' {
 selectAction = new QAction(tr("&All"), this);
 selectAction->setShortcut(tr("Ctrl+A"));
 selectAction->setStatusTip(tr("Select all the cells in the spreadsheet"));
-
 connect(selectAction, SIGNAL (triggered()),
        spreadsheet, SLOT(selectAll()));
 ```
 
-`selectAll()` 槽是由 QWidget 的一个祖类 `QAbstractItemView` 提供的，因此我们不需要实现它。
+`selectAll()` 槽是由 `QWidget` 的一个祖类 `QAbstractItemView` 提供的，因此我们不需要实现它。
 
 让我们跳到选项（Options）菜单中的显示网格（Show Grid）动作：
+
+
 
 ```cpp
 showGridAction = new QAction(tr("&Show Grid"), this);
@@ -1483,11 +1460,17 @@ void MainWindow::createStatusBar()
 在正常状态下，状态栏包含两个指示器：当前单元格的位置和当前单元格的公式。状态栏也用于显示状态提示或临时消息。
 
 | | |
+
 |---|---|
+
 | 正常 | =A1+A2 |
+
 | 打开现有电子表格文件 | |
+
 | 状态提示 | |
+
 | 文件保存 | |
+
 | 临时消息 | |
 
 图 3.7 电子表格状态栏
@@ -1496,14 +1479,11 @@ void MainWindow::createStatusBar()
 
 当 `QStatusBar` 布局控件时，它尝试尊重由 `Q::sizeHint()` 给出的每个控件的理想大小，然后拉伸可拉伸控件以填充可用空间。控件的理想大小本身取决于控件的内容，并随着内容的改变而变化。为了避免位置指示器频繁调整大小，我们将其最小宽度设为足够宽
 
-
-
-
 ## 54 3. 创建主窗口
 
 为了包含尽可能长的文本 ("W999")
 
-在函数末尾，我们将 spreadsheet->signals 的两个信号连接到 MainWindow 的两个槽：`updateStatusBar()` 和 `spreadsheetModified()`。
+在函数末尾，我们将 `spreadsheet->signals` 的两个信号连接到 `MainWindow` 的两个槽：`updateStatusBar()` 和 `spreadsheetModified()`。
 
 ```cpp
 void MainWindow::updateStatusBar()
@@ -1625,8 +1605,6 @@ bool MainWindow::loadFile(const QString &fileName) {
 }
 ```
 
-
-
 ## 实现文件菜单
 
 保持 `windowModified` 属性更新，并在窗口标题中放置标记“****”，这样在需要时星号就会出现在该处。
@@ -1638,7 +1616,7 @@ tr("%1[*] - %2").arg(showName)
 .arg("Spreadsheet")
 ```
 
-QString::arg() 将编号最低的 "%n" 参数替换为其参数值，并返回生成的字符串。在这种情况下，arg() 被用于处理两个 "%1"，第二次调用替换了 "%2"。如果文件名为 "budget.sp" 且没有加载翻译文件，生成的字符串将是 "budget.sp* - Spreadsheet"。虽然写成这样会更简单：
+`QString::arg()` 将编号最低的 "%n" 参数替换为其参数值，并返回生成的字符串。在这种情况下，`arg()` 被用于处理两个 "%1"，第二次调用替换了 "%2"。如果文件名为 "budget.sp" 且没有加载翻译文件，生成的字符串将是 "budget.sp* - Spreadsheet"。虽然写成这样会更简单：
 
 ```cpp
 setWindowTitle(showName + tr("[*] - Spreadsheet"));
@@ -1647,6 +1625,8 @@ setWindowTitle(showName + tr("[*] - Spreadsheet"));
 但使用 `arg()` 为翻译人员提供了灵活性。
 
 如果存在文件名，我们使用 `recentFiles()`，即应用程序最近打开的文件列表。我们使用 `removeAll()` 移除列表中出现的任何文件名以避免重复；然后使用 `prepend()` 将文件名作为第一项添加。更新列表后，我们调用私有函数 `updateRecentFileActions()` 来更新文件菜单中的条目。
+
+
 
 ```cpp
 void MainWindow::updateRecentFileActions()
@@ -1672,15 +1652,15 @@ void MainWindow::updateRecentFileActions()
 }
 ```
 
-我们首先使用 Java 风格的迭代器移除不再存在的文件。某些文件可能在之前的会话中使用过，但后来已被删除。`recentFiles` 变量的类型是 `QStringList`（QString 列表）。第 1 章详细解释了容器类，展示了它们如何与 C++ 标准库 (STL) 相关，以及 Java 风格迭代器的用法。
+我们首先使用 Java 风格的迭代器移除不再存在的文件。某些文件可能在之前的会话中使用过，但后来已被删除。`recentFiles`变量的类型是`QStringList`（QString 列表）。第 1 章详细解释了容器类，展示了它们如何与 C++ 标准库 (`STL`) 相关，以及 Java 风格迭代器的用法。
 
 ## 3. 创建主窗口
 
-然后我们再次遍历文件列表，这次使用数组风格的索引。对于每个文件，我们创建一个包含一个 & 符号、一个数字 (j + 1)、一个空格和文件名（不包含路径）的字符串。我们设置对应的 action 使用此文本。例如，如果第一个文件是 C:\My Documents\budget.sp，那么第一个 action 的文本将是 "&1 - budget.sp"。
+然后我们再次遍历文件列表，这次使用数组风格的索引。对于每个文件，我们创建一个包含一个 & 符号、一个数字 (`j + 1`)、一个空格和文件名（不包含路径）的字符串。我们设置对应的 `action` 使用此文本。例如，如果第一个文件是 `C:\My Documents\budget.sp`，那么第一个 `action` 的文本将是 `"&1 - budget.sp"`。
 
 ### 带有最近打开文件的文件菜单
 
-每个 action 都可以关联一个 `QVariant` 类型的 "data"。`QVariant` 可以持有许多 C++ 类型的值，这在第 1 章中会有有所介绍。在这里，我们将文件的完整名称存储在 action 的 "data" 中，以便以后方便地检索。我们还设置了 action 可见。如果 action 的数量多于最近文件，我们只需隐藏多余的 action。最后，如果至少有一个最近的文件，我们设置分隔符可见。
+每个 `action` 都可以关联一个 `QVariant` 类型的 "data"。`QVariant` 可以持有许多 C++ 类型的值，这在第 1 章中会有有所介绍。在这里，我们将文件的完整名称存储在 `action` 的 "data" 中，以便以后方便地检索。我们还设置了 `action` 可见。如果 `action` 的数量多于最近文件，我们只需隐藏多余的 `action`。最后，如果至少有一个最近的文件，我们设置分隔符可见。
 
 ```cpp
 void MainWindow::openRecentFile() {
@@ -1692,9 +1672,9 @@ void MainWindow::openRecentFile() {
 }
 ```
 
-`qobject_cast<T>()` 函数对 moc（Qt 的元对象编译器）生成的元数据执行动态转换。它返回指向请求的 QObject 子类的指针，如果对象无法转换为该类型，则返回 0。与标准 C++ 的 `dynamic_cast<T>()` 不同，Qt 的 `qobject_cast<T>()` 在库边界之间可以正常工作。在这个示例中，我们使用 `qobject_cast<T>()` 将 QObject 指针转换为 QAction 指针。如果转换成功（它理应是成功的），我们就使用从 action 数据中提取的完整文件名调用 `loadFile()`。
+`qobject_cast<T>()` 函数对 `moc`（Qt 的元对象编译器）生成的元数据执行动态转换。它返回指向请求的 `QObject` 子类的指针，如果对象无法转换为该类型，则返回 0。与标准 C++ 的 `dynamic_cast<T>()` 不同，Qt 的 `qobject_cast<T>()` 在库边界之间可以正常工作。在这个示例中，我们使用 `qobject_cast<T>()` 将 `QObject` 指针转换为 `QAction` 指针。如果转换成功（它理应是成功的），我们就使用从 `action` 数据中提取的完整文件名调用 `loadFile()`。
 
-**## 使用对话框**
+## 使用对话框
 
 在本节中，我们将解释如何在 Qt 中使用对话框——如何创建和初始化它们、运行它们，以及如何响应用户与对话框交互时做出的选择。我们将利用第 2 章中创建的查找（Find）、跳转单元格（Go-to-Cell）和排序（Sort）对话框。我们还将创建一个简单的关于（About）框。
 
@@ -1716,7 +1696,6 @@ void MainWindow::find() {
 ```
 
 查找对话框是一个允许用户在电子表格中搜索文本的窗口。当用户点击编辑|查找时，会调用 `find()` 槽来弹出查找对话框。此时，可能出现以下几种情况：
-
 - 这是用户第一次调用查找对话框。
 - 之前调用过查找对话框，但用户关闭了它。
 - 之前调用过查找对话框且目前仍然可见。
@@ -1725,16 +1704,12 @@ void MainWindow::find() {
 
 然后我们可以调用 `show()` 和 `activateWindow()` 以确保窗口可见且活跃。调用 `show()` 是使窗口可见和活跃的必要的，这意味着查找对话框是模型（modal）的。排序对话框是一个模型对话框，允许我们根据指定的列对当前选定区域进行排序。图 3.14 显示了排序示例，B 列为主主排序键，A 列为次排序键（均为升序）。
 
-
-
-
-
-# 64
+### 64
 
 ## 3. 创建主窗口
 
 | A | B | C |
-|---|---|---|---|
+|---|---|---|
 | 1 | George | Washington | 1789-1797 |
 | 2 | John | Adams | 1797-1801 |
 | 3 | Thomas | Jefferson | 1801-1809 |
@@ -1744,7 +1719,7 @@ void MainWindow::find() {
 | 7 | Andrew | Jackson | 1829-1837 |
 
 | A | B | C |
-|---|---|---|---|
+|---|---|---|
 | 1 | John | Adams | 1797-1801 |
 | 2 | John Quincy | Adams | 1825-1829 |
 | 3 | Andrew | Jackson | 1829-1837 |
@@ -1783,21 +1758,20 @@ void MainWindow::sort() {
 }
 ```
 
-(sort) 中的代码遵循与 `gotoCell()` 类似的模式：
-
+`sort()` 中的代码遵循与 `gotoCell()` 类似的模式：
 - 我们在栈上创建对话框并对其初始化。
 - 我们使用 `exec()` 弹出对话框。
 - 如果用户点击 OK，我们从对话框的控件中提取输入的值并使用它们。
 
-`setColumnRange()` 设置用于排序的列。例如，使用图 34 所示的选择，`leftColumn()` 将产生 0，对应 'A' + 0 = 'A'，而 `rightColumn()` 将产生 2，对应 'A' + 2 = 'C'。
+`setColumnRange()` 设置用于排序的列。例如，使用图 34 所示的选择，`leftColumn()` 将产生 0，对应 `'A' + 0 = 'A'`，而 `rightColumn()` 将产生 2，对应 `'A' + 2 = 'C'`。
 
 ## 使用对话框
 
-`compare` 对象存储了主、二级和三级键及其排序顺序（我们下一节中看到 SpreadsheetCompare 类的定义）。`Spreadsheet::sort()` 使用该对象比较行。`keys` 数组存储列号。例如，如果选择从 C2 到 E5，列 C 有位置 0。`ascending` 数组存储与每个键关联的布尔值。`index()` 返回当前选中项的索引，从 0 开始。对于二级和三级键，我们从当前项中减去 1 以考虑“无”的情况。
+`compare` 对象存储了主、二级和三级键及其排序顺序（我们下一节中看到 `SpreadsheetCompare` 类的定义）。`Spreadsheet::sort()` 使用该对象比较行。`keys` 数组存储列号。例如，如果选择从 C2 到 E5，列 C 有位置 0。`ascending` 数组存储与每个键关联的布尔值。`index()` 返回当前选中项的索引，从 0 开始。对于二级和三级键，我们从当前项中减去 1 以考虑“无”的情况。
 
 `sort()` 函数虽然完成了工作，但它有点脆弱。它假设排序是以特定方式实现的，带有组合框和“无”项。这意味着如果我们重新设计排序对话框，可能也需要重写这段代码。这种方法对于只从一处调用的对话框是足够的，但如果对话框在多处使用，就会引发维护噩梦。
 
-更健健的方法是让 `SortDialog` 类更智能，让自己创建一个 Spreadsheet 对象供调用者访问。这使得 `SortDialog` 不那么通用，因为它只作用于特定类型的控件，但通过消除 `SortDialog::setColumnRange()` 函数简化了代码。`MainWindow::sort()`：
+更健健的方法是让 `SortDialog` 类更智能，让自己创建一个 `Spreadsheet` 对象供调用者访问。这使得 `SortDialog` 不那么通用，因为它只作用于特定类型的控件，但通过消除 `SortDialog::setColumnRange()` 函数简化了代码。`MainWindow::sort()`：
 
 ```cpp
 void MainWindow::sort() {
@@ -1855,8 +1829,6 @@ settings.endGroup();
 
 值可以是 `int`、`bool`、`double`、`QString` 或任何由 `QVariant` 支持的类型，包括注册的自定义类型。
 
-
-
 ```cpp
 bool autoRecalc = settings.value("autoRecalc", true).toBool();
 autoRecalcAction->setChecked(autoRecalc);
@@ -1873,6 +1845,8 @@ Qt 提供了一个 `Q::geometry()` 函数来弥补 `QWidget::geometry()`，但�
 ## 多文档支持
 
 我们已经准备好编写 `Spreadsheet` 应用程序的 `main()` 函数了：
+
+
 
 ```cpp
 #include <QApplication>
@@ -1894,9 +1868,9 @@ int main(int argc, char *argv[])
 
 我们将修改 `Spreadsheet` 应用程序，使其能够处理多个文档。首先，我们需要一个稍微不同的“文件”（File）菜单：
 
-- FileNew 创建一个带有空文档的新主窗口，而不是复用现有的主窗口。
-- FileClose 关闭当前主窗口。
-- FileExit 关闭所有窗口。
+- `FileNew` 创建一个带有空文档的新主窗口，而不是复用现有的主窗口。
+- `FileClose` 关闭当前主窗口。
+- `FileExit` 关闭所有窗口。
 
 在原始版本的“文件”菜单中，没有“关闭”（Close）选项，因为那等同于“退出”（Exit）。
 
@@ -1932,7 +1906,7 @@ void MainWindow::file()
 
 内存泄漏并不是我们必须处理唯一的问题。我们原始的应用程序设计包含一个隐含假设，即只有一个主窗口。在有了多个窗口后，每个主窗口都有自己的“最近打开的文件”列表及其选项。显然，“最近打开的文件”列表应该是整个应用程序全局的。我们可以通过将 `recentFiles` 变量声明为 `static` 来实现这一点，使得整个应用程序只存在一个实例。但这样一来我们必须确保每当通过 `updateRecentFileActions()` 更新“文件”菜单时，必须在所有主窗口上调用它。以下是实现此点的代码：
 
-## 多文档
+### 多文档
 
 ```cpp
 foreach (QWidget *win, QApplication::topLevelWidgets()) {
@@ -1943,29 +1917,25 @@ foreach (QWidget *win, QApplication::topLevelWidgets()) {
 
 该代码使用了 Qt 的 `foreach` 结构（在第 6 章中解释），它遍历所有顶级窗口，并对类型为 `QMainWindow` 的窗口调用 `updateRecentFileActions()`。
 
-
-
-
-
 # 4. 实现应用程序功能
 
-## 4. 使用拆分器（splitter）。
+## 4.1 使用拆分器
 
-另一种结合使用多个部件的方法是使用 QSplitter。QSplitter 将其子部件水平或垂直地排列，并带有拆分手柄允许用户对尺寸进行某些控制。拆分器可以包含各种部件，包括其他拆分器。
+另一种结合使用多个部件的方法是使用 `QSplitter`。`QSplitter` 将其子部件水平或垂直地排列，并带有拆分手柄允许用户对尺寸进行某些控制。拆分器可以包含各种部件，包括其他拆分器。
 
-## 5. 使用 MDI 工作空间。
+## 4.2 使用 MDI 工作空间
 
-如果应用程序使用 MDI（多文档界面），中心区域由 QWorkspace 部件占据，每个 MDI 窗口都是该部件的子部件。
+如果应用程序使用 MDI（多文档界面），中心区域由 `QWorkspace` 部件占据，每个 MDI 窗口都是该部件的子部件。
 
 布局、拆分器和 MDI 工作空间可以与标准 Qt 部件或自定义自定义。第 6 章将深入介绍这些类。
 
-对于 Spreadsheet 应用程序，使用 QTableWidget 的子类作为中心部件。TableWidget 类已经提供了我们所需的大部分表格功能，但它不支持剪贴板操作，也不理解像 "=A1+A2+A3" 这样的表格公式。我们将在 Spreadsheet 类中实现这些缺失的功能。
+对于 `Spreadsheet` 应用程序，使用 `QTableWidget` 的子类作为中心部件。`TableWidget` 类已经提供了我们所需的大部分表格功能，但它不支持剪贴板操作，也不理解像 `"=A1+A2+A3"` 这样的表格公式。我们将在 `Spreadsheet` 类中实现这些缺失的功能。
 
 ### 表格类化
 
-Spreadsheet 继承自 QTableWidget。QTableWidget 实际上上是一个表示二维稀疏数组的网格。它在指定的维度内显示用户滚动到的任何单元格。当用户向空单元格输入文本时，TableWidget 会自动创建一个 QTableWidgetItem 来存储文本。
+`Spreadsheet` 继承自 `QTableWidget`。`QTableWidget` 实际上上是一个表示二维稀疏数组的网格。它在指定的维度内显示用户滚动到的任何单元格。当用户向空单元格输入文本时，`TableWidget` 会自动创建一个 `QTableWidgetItem` 来存储文本。
 
-让我们开始编写 Spreadsheet，从头文件开始：
+让我们开始编写 `Spreadsheet`，从头文件开始：
 
 ```cpp
 #ifndef SPREHEET_H
@@ -1977,13 +1947,13 @@ class Cell;
 class SpreadsheetCompare;
 ```
 
-头文件开头是 Cell 和 SpreadsheetCompare 的前向声明。
+头文件开头是 `Cell` 和 `SpreadsheetCompare` 的前向声明。
 
 ![](img/34bd675de80edd220dc2d53b429caf78_91_0.png)
 
 ### TableWidget 类化
 
-QWidgetItem 单元格的属性（如文本和对齐方式）存储在 QTableWidgetItem 中。与 QTableWidget 不同，QTableWidgetItem 不是一个部件类；它是一个纯数据类。该类继承自 QTableWidgetItem，并在在本章最后一节显示其实现时对其进行解释。
+`QWidgetItem` 单元格的属性（如文本和对齐方式）存储在 `QTableWidgetItem` 中。与 `QTableWidget` 不同，`QTableWidgetItem` 不是一个部件类；它是一个纯数据类。该类继承自 `QTableWidgetItem`，并在本章最后一节显示其实现时对其进行解释。
 
 ```cpp
 class Spreadsheet : public QTableWidget
@@ -2017,151 +1987,210 @@ public:
 + signals:
     void modified();
 
-Spreadsheet 提供了许多槽，用于实现编辑、工具和选项菜单中的动作，并且它提供了一个信号 modified()，用来宣布发生的任何更改。
+Spreadsheet 提供了许多槽，用于实现编辑、工具和选项菜单中的动作，并且它提供了一个信号 `modified()`，用来宣布发生的任何更改。
 
 ```cpp
+
 private slots:
+
     void somethingChanged();
+
 ```
 
-我们定义了一个供 Spreadsheet 类内部使用的私有槽。
+我们定义了一个供 `Spreadsheet` 类内部使用的私有槽。
 
 ```cpp
+
 private:
+
     enum { MagicNumber = 0x7F51C883, RowCount = 999, ColumnCount = 26 };
 
     Cell *cell(int row, int column) const;
+
     QString text(int row, int column) const;
+
     QString formula(int row, int column) const;
+
     void setFormula(int row, int column, const QString&formula);
 
     bool autoRecalc;
+
 };
+
 ```
 
 在类的私有部分，我们声明了三个常量、四个函数和一个变量。
 
 ```cpp
+
 class SpreadsheetCompare{
+
 public:
+
     bool operator()(const QStringList&row1,
+
                   const QStringList&row2) const;
 
     enum { KeyCount = 3 };
+
     int keys[KeyCount];
+
     bool ascending[KeyCount];
+
 };
+
 #endif
+
 ```
 
-头文件以 SpreadsheetCompare 类的定义结束。我们将在查看 Spreadsheet::sort() 时解释它。
+头文件以 `SpreadsheetCompare` 类的定义结束。我们将在查看 `Spreadsheet::sort()` 时解释它。
 
 现在我们来看实现部分：
 
 ```cpp
+
 #include <QGui>
 
 #include "cell.h"
+
 #include "spreadsheet.h"
 
 Spreadsheet::Spreadsheet(QWidget *parent)
+
     : QTableWidget(parent)
+
 {
+
     autoRecalc = true;
 
     setItemPrototype(new Cell);
+
     setSelectionMode(ContiguousSelection);
 
     connect(this, SIGNAL(itemChanged(WidgetItem *)),
+
              this, SLOT(somethingChanged()));
 
     clear();
+
 }
+
 ```
 
-通常，当用户在空单元格中输入文本时，QTableWidget 会自动创建一个 QWidgetItem 来持有文本。在我们的表格中，我们希望创建 Cell 项。这是通过构造函数中的 `setPrototype()` 调用实现的。在内部，QTableWidget 每当需要新项时，都会克隆传递作为原型传递的项。
+通常，当用户在空单元格中输入文本时，`QTableWidget` 会自动创建一个 `QWidgetItem` 来持有文本。在我们的表格中，我们希望创建 `Cell` 项。这是通过构造函数中的 `setPrototype()` 调用实现的。在内部，`QTableWidget` 每当需要新项时，都会克隆传递作为原型传递的项。
 
 在构造函数中，我们还将选择模式设置为 `QAbstractItem::ContiguousSelection` 以允许单个矩形选择。我们将部件的 `itemChanged()` 信号连接到私有的 `somethingChanged()` 槽；这确保了当用户编辑单元格时，会调用 `somethingChanged()` 槽。最后，我们调用 `clear()` 来调整表格大小并设置列标题。
 
 ```cpp
+
 void Spreadsheet::clear() {
+
     setRowCount(0);
+
     setColumnCount(0);
+
     setRowCount(RowCount);
+
     setColumnCount(ColumnCount);
 
     for (int i = 0; i < ColumnCount; ++i) {
+
         QTableWidgetItem *item = new QTableWidgetItem;
+
         item->setText(QChar('A' + i));
+
         setHorizontalHeaderItem(i, item);
+
     }
+
     setCurrentCell(0, 0);
+
 }
+
 ```
 
-`clear()` 函数从 Spreadsheet 构造函数调用以初始化表格。它也从 `MainWindow::newFile()` 中调用。
+`clear()` 函数从 `Spreadsheet` 构造函数调用以初始化表格。它也从 `MainWindow::newFile()` 中调用。
 
 本可以使用 `QWidget::clear()` 来清除所有项和任何选择，那将使标题保持当前的大小。相反，我们将表格大小调整为 0。这清空了整个表格，包括标题。然后我们将表格调整为 `ColumnCount` x `RowCount` (26 x 999)，并在水平标题中填充包含列名 "A", "B", ..., "Z" 的 `QWidgetItemItems`。我们不需要设置垂直标题标签，因为它们默认为 "1", "2", ..., "999"。最后，我们将光标移动到单元格 A1。
 
 | horizontalHeader() | verticalHeader | viewport() | verticalScrollBar | horizontalScrollBar |
 | :--- | :--- | :--- | :--- | :--- |
 
-图 4.2. QTableWidget 的组成部件
+图 4.2. `QTableWidget` 的组成部件
 
-QTableWidget 由几个子部件组成。它顶部有一个水平 `QTableView`，左侧有一个垂直 `QHeaderView`，以及两个 `QScrollBar`。中间区域由一个名为 `viewport` 的特殊部件占据，QTableWidget 在上面绘制单元格。可以通过继承自 `QTableView` 和 `QAbstractArea` 的函数访问不同的子部件。`ScrollArea` 提供了一个滚动的视口和两个滚动条，可以开启或关闭。它的 `ScrollArea` 子类将在第 6 章介绍。
+`QTableWidget` 由几个子部件组成。它顶部有一个水平 `QTableView`，左侧有一个垂直 `QHeaderView`，以及两个 `QScrollBar`。中间区域由一个名为 `viewport` 的特殊部件占据，`QTableWidget` 在上面绘制单元格。可以通过继承自 `QTableView` 和 `QAbstractArea` 的函数访问不同的子部件。`ScrollArea` 提供了一个滚动的视口和两个滚动条，可以开启或关闭。它的 `ScrollArea` 子类将在第 6 章介绍。
 
 ### 将数据作为项存储
 
-在 Spreadsheet 应用程序中，每个非空单元格都作为单个 `QWidgetItem` 对象存储在内存中。将数据存储为项也是 `QListWidget` 和 `QTreeWidget` 使用的方法，它们在 `QWidgetItem` 和 `QTreeWidget` 上操作。
+在 `Spreadsheet` 应用程序中，每个非空单元格都作为单个 `QWidgetItem` 对象存储在内存中。将数据存储为项也是 `QListWidget` 和 `QTreeWidget` 使用的方法，它们在 `QWidgetItem` 和 `QTreeWidget` 上操作。
 
-Qt 的项可以直接作为数据持有者使用。例如，`QTableWidgetItem` 已经存储了几个属性，包括字符串、字体、颜色和图标。项还可以持有数据（QVariants），包括注册的自定义类型，通过对项进行类化，我们可以提供额外的功能。
+Qt 的项可以直接作为数据持有者使用。例如，`QTableWidgetItem` 已经存储了几个属性，包括字符串、字体、颜色和图标。项还可以持有数据（`QVariants`），包括注册的自定义类型，通过对项进行类化，我们可以提供额外的功能。
 
 其他工具在它们的项类中使用空指针来存储自定义数据。在 Qt 中，更自然的方法是使用 `setData()` 配合 `QVariant`，但如果需要空指针，可以通过类化项并添加空指针变量轻松实现。
 
 对于更具挑战性的数据处理需求，例如大数据、复杂项、数据库集成和多数据视图，Qt 提供了一系列模型/视图类，将数据与其视觉表示分离。这些将在第 10 章介绍。
 
 ```cpp
+
 Cell Spreadsheet::cell(int row, int column) const
+
 {
+
     return static_cast<Cell*>(item(row, column));
+
 }
+
 ```
 
 `cell()` 私有函数返回给定行和列的 `Cell` 对象。它与 `QTableWidget::item()` 几乎相同，只是返回的是 `Cell` 指针而不是 `QTableWidgetItem`。
 
 ```cpp
+
 QString Spreadsheet::text(int row, int column) const
+
 {
+
     Cell *c = cell(row, column);
+
     if (c) {
+
         return c->text();
+
     } else {
+
         return "";
+
     }
+
 }
+
 ```
 
 `text()` 私有函数返回给定单元格的文本。如果 `cell()` 返回空指针，则该单元格为空，因此我们返回一个空字符串。
 
 ```cpp
+
 QString Spreadsheet::formula(int row, int column) const
+
 {
+
     Cell *c = cell(row, column);
+
     if (c) {
+
         return c->formula();
+
     } else {
+
         return "";
+
     }
+
 }
+
 ```
 
-
-
-
-
 ## QTableWidget 的子类化
-
-}
 
 `formula()` 函数返回单元格的公式。在许多情况下，公式和文本是相同的；例如，公式 "Hello" 的求值为字符串 "Hello"，因此，如果用户在单元格中输入 "Hello" 并按回车键，该单元格将显示文本 "Hello"。但也有一些例外情况：
 
@@ -2172,17 +2201,29 @@ QString Spreadsheet::formula(int row, int column) const
 公式转换为值的任务由 `Cell` 类完成。目前，需要记住的是单元格中的文本是公式求值的结果，而不是公式本身。
 
 ```cpp
+
 void Spreadsheet::formula(int row, int column,
+
     const QString&formula)
+
 {
+
     Cell *c = cell(row, column);
+
     if (!c) {
+
         c = new Cell();
+
         setItem(row, column, c);
+
     }
+
     c->setFormula(formula);
+
 }
 ```
+
+
 
 `setFormula()` 私有函数为给定的单元格设置公式。如果单元格已经有一个 `Cell` 对象，我们将其拒绝。否则，我们创建一个新的 `Cell` 对象，并调用 `TableWidget::setItem()` 将其插入表格中。最后，我们调用单元格自身的 `setFormula()` 函数，如果该单元格显示在屏幕上，它将导致单元格重绘。我们不需要担心以后删除 `Cell` 对象；`TableWidget` 会接管该单元格的所有权，并在适当的时间自动删除它。
 
@@ -2235,12 +2276,9 @@ bool Spreadsheet::writeFile(const QString &fileName)
             arg(file.errorString()));
         return false;
     }
-
     QDataStream out(&file);
     out.setVersion(QDataStream::Qt_4_1);
-
     out << quint32(MagicNumber);
-
     QApplication::setOverrideCursor(Qt::WaitCursor);
     for (int row = 0; row < RowCount; ++row) {
         for (int column = 0; column < ColumnCount; ++column) {
@@ -2253,8 +2291,6 @@ bool Spreadsheet::writeFile(const QString &fileName)
     return true;
 }
 ```
-
-## 加载与保存
 
 `writeFile()` 函数从 `MainWindow::saveFile()` 调用，将文件写入磁盘。成功时返回 `true`，错误时返回 `false`。
 
@@ -2295,10 +2331,8 @@ bool Spreadsheet::readFile(const QString &fileName)
             arg(file.errorString()));
         return false;
     }
-
     QDataStream in(&file);
     in.setVersion(QDataStream::Qt_4_1);
-
     quint32 magic;
     in >> magic;
     if (magic != MagicNumber) {
@@ -2306,13 +2340,10 @@ bool Spreadsheet::readFile(const QString &fileName)
             tr("The file is not a Spreadsheet file"));
         return false;
     }
-
     clear();
-
     quint16 row;
     quint16 column;
     QString str;
-
     while (!in.atEnd()) {
         in >> row >> column >> str;
         setFormula(row, column, str);
@@ -2344,7 +2375,6 @@ void Spreadsheet::copy()
 {
     QTableWidgetSelectionRange range = selectedRange();
     QString str;
-
     for (int i = 0; i < range.rowCount(); ++i) {
         if (i > 0)
             str += "\n";
@@ -2362,10 +2392,6 @@ void Spreadsheet::copy()
 
 系统剪贴板可以通过 `QApplication::clipboard()` 静态函数在 Qt 中。通过调用 `QClipboard::setText()`，我们使文本可用。
 
-
-
-
-
 # 4. 实现应用程序功能
 
 在剪贴板上，既针对此应用程序，也针对其他支持纯文本的应用程序。我们使用制表符和换行符作为分隔符的格式被许多应用程序（包括 Microsoft Excel）识别。
@@ -2379,7 +2405,7 @@ void Spreadsheet::copy()
 
 **图 4.5.** 将选择复制到剪贴板
 
-QTableWidget::selectedRanges() 函数返回选择区域列表。我们知道不会超过一个，因为我们在构造函数中将选择模式设置为 QAbstractItem::contiguousSelection。为了方便起见，我们定义了一个 `selectedRange()` 函数来返回选择范围：
+`QTableWidget::selectedRanges()` 函数返回选择区域列表。我们知道不会超过一个，因为我们在构造函数中将选择模式设置为 `QAbstractItem::contiguousSelection`。为了方便起见，我们定义了一个 `selectedRange()` 函数来返回选择范围：
 
 ```
 QTableWidget::selectedRanges() Spreadsheet::selectedRange() const
@@ -2401,16 +2427,13 @@ void Spreadsheet::paste()
   QStringList rows = str.split('\n');
   int numRows = rows.count();
   int numColumns = rows.first().count('\t') + 1;
-
   if (rows.count() != range.columnCount() != 1
       && range.columnCount() != numColumns) {
     MessageBox::information(this, tr("Spreadsheet"),
     tr("且粘贴区域无法粘贴，因为它们的大小不同。"));
   }
-
   return;
 }
-
 for (int i = 0; i < numRows; ++i) {
   QString columns = rows[i].split('\t');
   for (int j = 0; j < numColumns; ++j) {}
@@ -2436,9 +2459,7 @@ somethingChanged();
 
 ```
 "红色\绿色\蓝色\青色\品红色\黄色"
-
 [ "红色\绿色\蓝色", "青色\品红色\黄色"]
-
 [ "红色", "绿色", "蓝色"]
 [ "青色", "品红色", "黄色"]
 ```
@@ -2458,7 +2479,7 @@ void Spreadsheet::del()
 }
 ```
 
-`del()` 槽对应 编辑|删除（Edit|Delete）。只需删除选择中的每个 `Cell` 对象即可清空单元格。QTableWidget 会注意到它的 `QTableWidgetItems` 被删除，如果其中任何项目是可见的，它将自动重绘。如果我们使用已删除单元格的位置调用 `cell()`，它将返回一个空指针。
+`del()` 槽对应 编辑|删除（Edit|Delete）。只需删除选择中的每个 `Cell` 对象即可清空单元格。`QTableWidget` 会注意到它的 `QTableWidgetItems` 被删除，如果其中任何项目是可见的，它将自动重绘。如果我们使用已删除单元格的位置调用 `cell()`，它将返回一个空指针。
 
 ```cpp
 void Spreadsheet::selectCurrentRow()
@@ -2474,14 +2495,13 @@ void Spreadsheet::selectColumnCount()
 }
 ```
 
-`selectRow()` 和 `selectColumn()` 函数对应 编辑|选择行（Edit|SelectRow）和 编辑|选择列（Edit|SelectColumn）菜单选项。这些实现依赖于 QWidgetItem 的 `selectRow()` 和 `selectColumn()` 函数。我们不需要实现 编辑|全选（Edit|SelectAll）的功能，因为那是 QTableWidget 继承的函数 `QAbstractWidgetItem::selectAll()` 提供的。
+`selectRow()` 和 `selectColumn()` 函数对应 编辑|选择行（Edit|SelectRow）和 编辑|选择列（Edit|SelectColumn）菜单选项。这些实现依赖于 QWidgetItem 的 `selectRow()` 和 `selectColumn()` 函数。我们不需要实现 编辑|全选（Edit|SelectAll）的功能，因为那是 `QTableWidget` 继承的函数 `QAbstractWidgetItem::selectAll()` 提供的。
 
 ```cpp
 void Spreadsheet::findNext(const QString &str, Qt::CaseSensitivity cs)
 {
     int row = currentRow();
     int column = currentColumn() + 1;
-
     while (row < RowCount) {
         while (column < ColumnCount) {
             if (text(row, column).contains(str, cs)) {
@@ -2505,30 +2525,43 @@ void Spreadsheet::findNext(const QString &str, Qt::CaseSensitivity cs)
 void Spreadsheet::findPrevious(const QString &str, Qt::CaseSensitivity cs)
 {
     int row = currentRow();
-    int column = currentColumn() - 1;
 
-    while (row >= 0) {
-        while (column >= 0) {
-            if (text(row, column).contains(str, cs)) {
-                clearSelection();
-                setCurrentCell(row, column);
-                activateWindow();
-                return;
-            }
-            --column;
+
+
+```cpp
+int column = currentColumn() - 1;
+
+while (row >= 0) {
+
+    while (column >= 0) {
+
+        if (text(row, column).contains(str, cs)) {
+
+            clearSelection();
+
+            setCurrentCell(row, column);
+
+            activateWindow();
+
+            return;
+
         }
-        column = ColumnCount - 1;
-        --row;
+        --column;
     }
-    QApplication::beep();
+    column = ColumnCount - 1;
+    --row;
+}
+
+QApplication::beep();
+
 }
 ```
 
-`findPrevious()` 槽与 findNext() 类似，反反遍历直到找到文本或到达最最后一个单元格。
+`findPrevious()` 槽与 `findNext()` 类似，反反遍历直到找到文本或到达最最后一个单元格。
 
 ## 实现其他菜单
 
-现在我们将实现 Tools 和 Options 菜单的槽。
+现在我们将实现 `Tools` 和 `Options` 菜单的槽。
 
 | Tools | Options |
 |---|---|
@@ -2547,7 +2580,7 @@ void Spreadsheet::recalculate()
 }
 ```
 
-`recalculate()` 槽对应 工具|重新计算（Tools|Recalculate）。它也会被 `somethingChanged()` 自动调用。我们遍历所有单元格并在需要时调用 `setDirty()`。
+`recalculate()` 槽对应 `工具|重新计算`（`Tools|Recalculate`）。它也会被 `somethingChanged()` 自动调用。我们遍历所有单元格并在需要时调用 `setDirty()`。
 
 ```cpp
 void Spreadsheet::setAutocalculate(bool recalc)
@@ -2558,42 +2591,34 @@ void Spreadsheet::setAutocalculate(bool recalc)
 }
 ```
 
-我们不需要为 Options|显示网格实现任何内容，因为 TableWidget 已经有一个 `setGrid()` 槽，它继承自其基类 QTableView。剩下的就是 Spreadsheet::sort()，它由 MainWindow::sort() 调用。
+我们不需要为 `Options|显示网格` 实现任何内容，因为 `TableWidget` 已经有一个 `setGrid()` 槽，它继承自其基类 `QTableView`。剩下的就是 `Spreadsheet::sort()`，它由 `MainWindow::sort()` 调用。
 
 ```cpp
-void Spreadsheet::sort(const SpreadsheetCompare&compare)
+void Spreadsheet::sort(const SpreadsheetCompare& compare)
 {
     QStringList rows;
     QTableSelectionRange range = selectedRange();
     int i;
-
     for (i = 0; i < range.rowCount(); ++i) {
         QStringList row;
         for (int j = 0; j < range.columnCount(); ++j)
             row.append(formula(range.topRow() + i, range.leftColumn() + j));
         rows.append(row);
     }
-
     qStableSort(rows.begin(), rows.end(), compare);
-
     for (i = 0; i < range.rowCount(); ++i) {
         for (int j = 0; j < range.columnCount(); ++j)
             setFormula(range.topRow() + i, range.leftColumn() + j, rows[i][j]);
     }
-
     clearSelection();
     somethingChanged();
 }
 ```
 
-
-
-
-
 ## 实现其他菜单
 
 | C | D | E | | |
-|---|---|---|---|
+|---|---|---|---|---|
 | 2 | Edsger | Dijkstra | 1930-05-11 |
 | 3 | Tony | Hoare | 1934-01-11 |
 | 4 | Niklaus | Wirth | 1934-02-15 |
@@ -2601,7 +2626,7 @@ void Spreadsheet::sort(const SpreadsheetCompare&compare)
 
 图 4.8. 将选择内容以行列表的形式存储
 
-`qTableSort` 函数接受一个开始迭代器、一个结束迭代器和一个比较函数。比较函数是一个接收两个参数（qStringlists）的函数，如果第一个参数“小于”第二个参数，则返回 `true`，否则返回 `false`。作为比较函数传递的比较对象实际上并不是一个函数，但可以像函数一样使用，我们很快就会看到。
+`qTableSort` 函数接受一个开始迭代器、一个结束迭代器和一个比较函数。比较函数是一个接收两个参数（`qStringlists`）的函数，如果第一个参数“小于”第二个参数，则返回 `true`，否则返回 `false`。作为比较函数传递的比较对象实际上并不是一个函数，但可以像函数一样使用，我们很快就会看到。
 
 | | | | |
 |---|---|---|---|
@@ -2614,14 +2639,13 @@ void Spreadsheet::sort(const SpreadsheetCompare&compare)
 
 执行 `qTableSort()` 后，我们将数据移回表格，清除选择并调用 `somethingChanged()`。
 
-在 `spreadsheet.h` 中，`SpreadsheetCompare`类的定义如下：
+在 `spreadsheet.h` 中，`SpreadsheetCompare` 类的定义如下：
 
 ```
 class SpreadsheetCompare {
 public:
     bool operator() (const QStringList &row1,
                     const QStringList &row2) const;
-
     enum { KeyCount = 3 };
     int keys[KeyCount];
     bool ascending[KeyCount];
@@ -2637,7 +2661,7 @@ public:
 }
 ```
 
-## 4. 实现应用功能
+### 4. 实现应用功能
 
 `Square` 类提供一个函数 `operator() (int)`，它返回其参数的平方。通过将函数命名为 `operator() (int)` 而不是 `compute(int)`，我们获得了将 `Square` 类型的对象当作函数一样使用的能力：
 
@@ -2684,7 +2708,7 @@ return false;
 
 ## 实现其他菜单
 
-`SpreadsheetCompare` 对象的键和升序数组在 `MainWindow::sort()` 函数中填充（见第 2 章）。每个键包含一个列索引，或 -1（“无”）。
+`SpreadsheetCompare` 对象的键和升序数组在 `MainWindow::sort()` 函数中填充（见第 2 章）。每个键包含一个列索引，或 `-1`（“无”）。
 
 我们为每个键比较两行行中对应的单元格条目。一旦我们发现差异，就会返回相应的 `true` 或 `false` 值。如果所有比较结果都相等，我们返回 `false`。`qTableSort()` 函数使用排序前的顺序来解决平局情况；由于其中一个都不“小于”另一个，row1 仍然将位于 row2 之前。
 
@@ -2697,20 +2721,16 @@ return false;
 ```
 #ifndef CELL_H
 #define CELL_H
-
 #include <QWidgetItem>
-
 class Cell : public QWidgetItem
 public:
     Cell();
-
     QWidgetItem *clone() const;
     void setData(int role, const QVariant &value);
     QVariant data(int role) const;
     void setFormula(const QString &formula);
     QString formula() const;
     void setDirty();
-
 private:
     QVariant evalExpression(const QString &pos) const;
     QVariant evalTerm(const QString &pos) const;
@@ -2721,7 +2741,7 @@ private:
 #endif
 ```
 
-## 4. 实现功能
+### 4. 实现功能
 
 `Cell` 类通过添加两个变量扩展了 `QWidgetItem`：
 
@@ -2733,7 +2753,6 @@ private:
 ```cpp
 #include <QtGui>
 #include "cell.h"
-
 Cell() {
     setDirty();
 }
@@ -2806,11 +2825,7 @@ QWidgetItem *Cell::clone() const
 }
 ```
 
-
-
-
-
-## 4. 实现应用功能
+### 4. 实现应用功能
 
 ```cpp
 } else {
@@ -2829,7 +2844,6 @@ const QVariant Invalid;
 QVariant Cell::value() const {
     if (cacheIsDirty) {
         cacheIsDirty = false;
-
         QString formulaStr = formula();
         if (formulaStr.startsWith('=')) {
             cachedValue = formulaStr.mid(1);
@@ -2838,32 +2852,49 @@ QVariant Cell::value() const {
             QString expr = formulaStr.mid(1);
             expr.replace("--", "");
             expr.append(QChar::Null);
-
             int pos = 0;
             cachedValue = evalExpression(expr, pos);
-            if (expr[pos] != QChar::Null) 
-                cachedValue = Invalid;
-        }
+```
+
+
+
+```cpp
+if (expr[pos] != QChar::Null) 
+
+    cachedValue = Invalid;
+
+}
+
+} else {
+
+    bool ok;
+
+    double d = formulaStr.toDouble(&ok);
+
+    if (ok) {
+
+        cachedValue = d;
+
     } else {
-        bool ok;
-        double d = formulaStr.toDouble(&ok);
-        if (ok) {
-            cachedValue = d;
-        } else {
-            cachedValue = formulaStr;
-        }
+
+        cachedValue = formulaStr;
+
     }
-    return cachedValue;
+
+}
+
+return cachedValue;
+
 }
 ```
 
-## 子类 QTableWidgetItem
+### 子类 QTableWidgetItem
 
 私有函数 `value()` 返回单元格的值。如果 `cacheIsDirty` 为 `true`，我们需要重新计算该值。
 
-如果公式以单引号开头（例如，‘12345’），则单引号占据位置 0，值是从位置 1 到末尾的字符串。
+如果公式以单引号开头（例如，'12345'），则单引号占据位置 0，值是从位置 1 到末尾的字符串。
 
-如果公式以等号（‘=’）开头，我们从位置 1 开始提取字符串并移除其中可能包含的任何空格。然后我们调用 `isEqual()` 来计算表达式的值。`pos` 参数通过引用传递；它指示了解析应该开始的字符位置。在调用 `isEqual()` 之后，如果解析成功，位置 `pos0` 处的字符应该是我们追加的 `QChar::null` 字符。如果解析在结束前失败，我们将 `cachedValue` 设置为 `Invalid`。
+如果公式以等号（'='）开头，我们从位置 1 开始提取字符串并移除其中可能包含的任何空格。然后我们调用 `isEqual()` 来计算表达式的值。`pos` 参数通过引用传递；它指示了解析应该开始的字符位置。在调用 `isEqual()` 之后，如果解析成功，位置 `pos0` 处的字符应该是我们追加的 `QChar::null` 字符。如果解析在结束前失败，我们将 `cachedValue` 设置为 `Invalid`。
 
 如果公式既不以单引号也不以等号开头，我们尝试使用 `toDouble()` 将其转换为浮点数。如果转换成功，我们将 `cachedValue` 设置为结果数字；否则，我们将 `cachedValue` 设置为该公式。例如，公式“1.50”会导致 `toDouble()` 将 `ok` 设置为 `true` 并返回 `1`，而公式“World Population”会导致 `toDouble()` 将 `ok` 设置为 `false` 并返回 `0.0`。
 
@@ -2957,10 +2988,6 @@ QVariant Cell::evalFactor(const QString &str, int &pos) const {
     result = evalExpression(str, pos);
 ```
 
-
-
-
-
 ## 4. 实现应用功能
 
 ```cpp
@@ -2970,16 +2997,13 @@ if (str[pos] != '=')
 } else {
     QRegExp exp("[A-Za-z][0-9]{0,2}");
     QString token;
-
     while (str[pos].isLetterOrNumber() || str[pos] == '.') {
         token += str[pos];
         ++pos;
     }
-
     if (exp.exactMatch(token)) {
         int column = token[0].toUpper().unicode() - 'A';
         int row = token.mid(1).toInt() - 1;
-
         Cell *c = static_cast<Cell *(
             tableWidget())->item(row, column));
         if (c) {
@@ -2994,7 +3018,6 @@ if (str[pos] != '=')
             result = Invalid;
     }
 }
-
 if (negative) {
     if (result.type() == QVariant::Double) {
         result = -result.toDouble();
@@ -3029,38 +3052,33 @@ return result;
 
 **图 5.1.** HexSpinBox 部
 
-在本节中，我们将开发一个十六进制数值计数框来展示它是如何工作的。QSpinBox 只支持十进制整数，但通过子化它，很容易让它接受并显示十六进制值。
+在本节中，我们将开发一个十六进制数值计数框来展示它是如何工作的。`QSpinBox` 只支持十进制整数，但通过子化它，很容易让它接受并显示十六进制值。
 
 ```cpp
 #ifndef HEXSPINBOX_H
 #define HEXSPINBOX_H
-
 #include <QSpinBox>
-
 class QRegExpValidator;
 class HexSpinBox : public QSpinBox
 {
     Q_OBJECT
-
 public:
     HexSpinBox(QWidget *parent = 0);
 protected:
     QValidator::State validate(QString &text, int &pos) const;
     int valueFromText(const QString &text) const;
     QString textFromValue(int value) const;
-
 private:
     QExpValidator *validator;
 };
 #endif
 ```
 
-HexSpinBox 继承了 QSpinBox 的大部分功能。它提供了一个典型的构造函数，并重新实现了 QSpinBox 的三个虚函数。
+`HexSpinBox` 继承了 `QSpinBox` 的大部分功能。它提供了一个典型的构造函数，并重新实现了 `QSpinBox` 的三个虚函数。
 
 ```cpp
 #include <QtGui>
 #include "hexspinbox.h"
-
 HexSpinBox::HexSpinBox(QWidget *parent)
   : QSpinBox(parent)
 {
@@ -3078,7 +3096,7 @@ QValidator::State HexSpinBox::validate(QString &text, int &pos) const
 }
 ```
 
-此函数由 QSpinBox 调用以检查输入的文本是否有效。有三种可能的返回值：Invalid（文本不匹配）、Intermediate（文本合理）和 Accept（文本有效）。如果值落在计数框范围之外，我们应该返回 Invalid 或 Intermediate。
+此函数由 `QSpinBox` 调用以检查输入的文本是否有效。有三种可能的返回值：Invalid（文本不匹配）、Intermediate（文本合理）和 Accept（文本有效）。如果值落在计数框范围之外，我们应该返回 Invalid 或 Intermediate。
 
 ```cpp
 int HexSpinBox::valueFromText(const QString &text) const
@@ -3088,7 +3106,7 @@ int HexSpinBox::valueFromText(const QString &text) const
 }
 ```
 
-`textFromValue()` 函数将整数值转换为字符串。QSpinBox 在用户按下上下箭头时调用它来更新计数框的编辑器部分。使用静态函数 QString::number() 的第二个参数 16 将值转换为十六进制，并在结果上调用 toUpper() 将转换为大写。
+`textFromValue()` 函数将整数值转换为字符串。`QSpinBox` 在用户按下上下箭头时调用它来更新计数框的编辑器部分。使用静态函数 `QString::number()` 的第二个参数 16 将值转换为十六进制，并在结果上调用 `toUpper()` 将转换为大写。
 
 ```cpp
 QString HexSpinBox::textFromValue(int value) const
@@ -3097,54 +3115,49 @@ QString HexSpinBox::textFromValue(int value) const
 }
 ```
 
+
+
 我们完成了自定义 Qt 小部件。自定义其他部件遵循相同的模式：选择一个合适的 Qt 部件进行子化并重新实现一些虚函数以改变其行为。
 
 ## 子化部件
 
-自定义小部件只是现有部件的组合，无论是内置的 Qt 小部件还是像 HexSpinBox 这样的自定义小部件。通过组合现有部件构建自定义小部件通常可以在 Qt Designer 中开发：
+自定义小部件只是现有部件的组合，无论是内置的 Qt 小部件还是像 `HexSpinBox` 这样的自定义小部件。通过组合现有部件构建自定义小部件通常可以在 Qt Designer 中开发：
 
 - 使用“Widget”模板创建一个新表单。
 - 将必要的部件添加到表单中并进行布局。
 - 设置信号和槽连接。
-- 如果需要超出信号和槽可以实现的行为，则在同时继承 QWidget 和 uic 生成的类的类中编写必要的代码。
+- 如果需要超出信号和槽可以实现的行为，则在同时继承 `QWidget` 和 `uic` 生成的类的类中编写必要的代码。
 
-当然，组合现有部件也可以完全在代码中完成。无论采取哪种方法，生成的类都直接继承自 QWidget。
+当然，组合现有部件也可以完全在代码中完成。无论采取哪种方法，生成的类都直接继承自 `QWidget`。
 
-如果部件没有自己的信号和槽，甚至可以通过重新实现任何虚函数来组装部件，而无需子类。这就是我们在第 1 章中创建 Age 应用使用的方法，包含一个 QWidget、一个 QSpinBox 和
-
-
-
-
+如果部件没有自己的信号和槽，甚至可以通过重新实现任何虚函数来组装部件，而无需子类。这就是我们在第 1 章中创建 Age 应用使用的方法，包含一个 `QWidget`、一个 `QSpinBox` 和
 
 ## 5. 创建自定义小部件
 
-QSlider。尽管如此，我们也可以轻松地子类 `QWidget` 并在子类的构造函数中创建 `QSpinBox` 和 `QSlider`。
+`QSlider`。尽管如此，我们也可以轻松地子类 `QWidget` 并在子类的构造函数中创建 `QSpinBox` 和 `QSlider`。
 
 当 Qt 的任何小部件都不适用于当前任务，且没有办法通过组合或调整现有小部件来获得所需的结果时，我们仍然可以创建我们想要的小部件。这是通过子类 `QWidget` 并重新实现几个事件处理器来绘制小部件并响应鼠标点击来实现的。这种方法让我们能够完全自由地定义和控制小部件的外观和行为。Qt 的内置小部件（如 `QLabel`、`QPushButton` 和 `QTable`）都是通过这种方式实现的。如果它们在 Qt 中不存在，我们仍然可以使用 `QWidget` 提供的公共函数以完全独立于平台的方式自己创建它们。
 
-为了演示如何使用这种方法编写自定义小部件，我们将创建图 5.2 所示的 `IconEditor` 小部件。IconEditor 是一个用于图标编辑程序的小部件。
+为了演示如何使用这种方法编写自定义小部件，我们将创建图 5.2 所示的 `IconEditor` 小部件。`IconEditor` 是一个用于图标编辑程序的小部件。
 
 ![](img/34bd675de80edd220dc2d53b429caf78_121_0.png)
 
-图 5.2. IconEditor 小部件
+图 5.2. `IconEditor` 小部件
 
 让我们从查看头文件开始。
 
 ```cpp
 #ifndef ICONEDITOR_H
 #define ICONEDITOR_H
-
 #include <QColor>
 #include <Q>
 #include <QWidget>
-
 class IconEditor : public QWidget
 {
     Q_OBJECT
     Q_PROPERTY(QColor penColor READ penColor WRITE setColor)
     Q_PROPERTY(QImage iconImage READ iconImage WRITE setIconImage)
     Q_PROPERTY(int zoomFactor READ zoomFactor WRITE setZoomFactor)
-
 public:
     IconEditor(QWidget *parent = 0);
     void setColor(const QColor &penColor);
@@ -3154,21 +3167,17 @@ public:
     void setIconImage(const QImage &newImage);
     QImage iconImage() const { return image; }
     QSize sizeHint() const;
-
 protected:
     void mousePressEvent(QMouseEvent *event);
     void mouseMove(QMouseEvent *event);
     void paintEvent(QMouseEvent *event);
-
 private:
     void setImagePixel(const QPoint &pos, bool opaque);
     QRect pixelRect(int i, int j) const;
-
     QColor curColor;
     QImage image;
     int zoom;
 };
-
 #endif
 ```
 
@@ -3183,17 +3192,13 @@ private:
 ```cpp
 #include <QtGui>
 #include "iconeditor.h"
-
 IconEditor::IconEditor(QWidget *parent)
 {
   QWidget(parent)
-
   setAttribute(Qt::WA_StaticContents);
   setPolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
-
   curColor = Qt::black;
   zoom = 8;
-
   image = QImage(16, 16, 16, QImage::Format_ARGB32);
   image.fill(qRgba(0, 0, 0, 0));
 }
@@ -3311,10 +3316,6 @@ QRgb(255, 0, 0);
 
 （注：由于原文中存在大量重复段落，此处翻译已根据逻辑进行去重处理，确保内容连贯）
 
-
-
-
-
 ## 子类化 Widget
 
 ```cpp
@@ -3329,25 +3330,25 @@ for (int i = 0; i < image.width(); ++i) {
 }
 ```
 
-我们首先在小部件上构造一个 QPainter。如果缩放倍数为 3 或更多，我们使用 QPainter::drawLine() 函数绘制形成网格的水平线和垂直线。
+我们首先在小部件上构造一个 `QPainter`。如果缩放倍数为 3 或更多，我们使用 `QPainter::drawLine()` 函数绘制形成网格的水平线和垂直线。
 
-调用 QPainter::drawLine() 的语法如下：
+调用 `QPainter::drawLine()` 的语法如下：
 
 ```
 painter.drawLine(x1, y1, x2, y2);
 ```
 
-其中 (x1, y1) 是线段一端的位置，(x2, y2) 是另一端的位置。该函数还有一个重载版本，它接受两个 QPoints 而不是四个 int。
+其中 `(x1, y1)` 是线段一端的位置，`(x2, y2)` 是另一端的位置。该函数还有一个重载版本，它接受两个 `QPoints` 而不是四个 `int`。
 
-Qt 小部件的左上角像素位于 (0, 0)，右下角像素位于 (width-1, height-1)。这与传统的笛卡尔坐标系相似，但是反的。我们可以通过使用变换（如平移、缩放、旋转和变形）来改变 QPainter 的坐标系。这在第 8 章（2D 和 3D 图形）中有介绍。
+Qt 小部件的左上角像素位于 `(0, 0)`，右下角像素位于 `(width-1, height-1)`。这与传统的笛卡尔坐标系相似，但是反的。我们可以通过使用变换（如平移、缩放、旋转和变形）来改变 `QPainter` 的坐标系。这在第 8 章（2D 和 3D 图形）中有介绍。
 
 ![](img/34bd675de80edd220dc2d53b429caf78_126_0.png)
 
-图 5.3 使用 QPainter 绘制线条
+图 5.3 使用 `QPainter` 绘制线条
 
-在对 QPainter 调用 drawLine() 之前，我们使用 setPen() 设置线条颜色。我们可以硬编码黑色或灰色，但更好的方法是使用小部件的调色板（palette）。
+在对 `QPainter` 调用 `drawLine()` 之前，我们使用 `setPen()` 设置线条颜色。我们可以硬编码黑色或灰色，但更好的方法是使用小部件的调色板（palette）。
 
-每个小部件都配备了一个调色板，指定了什么情况下使用什么颜色。例如，有一个用于部件背景色（通常为浅灰色）的调色板条目，还有一个用于该背景文本颜色（通常为黑色）。默认情况下，小部件的调色板采用窗口系统的配色方案。通过使用调色板中的颜色，我们确保 IconEditor 尊重用户的偏好。
+每个小部件都配备了一个调色板，指定了什么情况下使用什么颜色。例如，有一个用于部件背景色（通常为浅灰色）的调色板条目，还有一个用于该背景文本颜色（通常为黑色）。默认情况下，小部件的调色板采用窗口系统的配色方案。通过使用调色板中的颜色，我们确保 `IconEditor` 尊重用户的偏好。
 
 ## 5. 创建自定义小部件
 
@@ -3365,7 +3366,7 @@ Qt 小部件的左上角像素位于 (0, 0)，右下角像素位于 (width-1, he
 
 ![](img/34bd675de80edd220dc2d53b429caf78_127_0.png)
 
-**图 5.4.** 使用 QPainter 绘制矩形
+**图 5.4.** 使用 `QPainter` 绘制矩形
 
 我们调用 `QPainter::fillRect()` 来绘制缩放后的像素。`QPainter::fillRect()` 取一个 `QRect` 和一个 `QBrush`。通过传递一个 `QColor` 作为画刷，我们得到了填充图案。
 
@@ -3379,11 +3380,13 @@ QRect IconEditor::pixelRect(int i, int j) const {
 }
 ```
 
+
+
 `pixelRect()` 函数返回一个适用于 `QPainter::fillRect()` 的 `QRect`。`i` 和 `j` 参数是 `QImage` 中的像素坐标——而不是小部件中的坐标。如果缩放倍数为 1，两个坐标系完全重合。
 
 ## 子类化 QWidget
 
-QRect 构造函数的语法为 QRect(x, y, width, height)，其中 (x, y) 是矩形左上角的位置，width 乘以 height 是矩形的大小。如果缩放倍数为 3 或更多，我们将矩形在水平和垂直方向上缩小一个像素，这样文件就不会绘制在网格线上。
+`QRect` 构造函数的语法为 `QRect(x, y, width, height)`，其中 `(x, y)` 是矩形左上角的位置，`width` 乘以 `height` 是矩形的大小。如果缩放倍数为 3 或更多，我们将矩形在水平和垂直方向上缩小一个像素，这样文件就不会绘制在网格线上。
 
 ```cpp
 void QEditor::mousePressEvent(MouseEvent *event) {
@@ -3395,7 +3398,7 @@ void QEditor::mousePressEvent(MouseEvent *event) {
 }
 ```
 
-当用户按下鼠标键时，系统会生成一个“鼠标按下”事件。通过重新实现 `mousePressEvent()`，我们可以对此事件做出响应。如果用户按下左键，我们将 true 传递给 `setImagePixel()`。如果用户按下右键，我们将 false 传递给 `setImagePixel()`。
+当用户按下鼠标键时，系统会生成一个“鼠标按下”事件。通过重新实现 `mousePressEvent()`，我们可以对此事件做出响应。如果用户按下左键，我们将 `true` 传递给 `setImagePixel()`。如果用户按下右键，我们将 `false` 传递给 `setImagePixel()`。
 
 ```cpp
 void QEditor::mouseMoveEvent(MouseEvent *event) {
@@ -3428,11 +3431,7 @@ void QEditor::setImagePixel(const QPoint &pos, bool opaque) {
 
 根据 `opaque` 参数，我们在图像中设置或清除像素。清除像素时，我们需要将 `QColor` 转换为 32 位 ARGB 值供 `QImage::setPixel()` 使用。最后，我们调用 `update()` 需要重绘区域。
 
-QEditor 现在完成了。利用前面章节中的信息和示例，我们可以编写代码将 QEditor 作为独立窗口、作为 MainWindow 的中心部件、作为布局中的子部件，或者作为 QScrollArea（第148页）中的子部件。在下一节中，我们将看到如何将其与 Qt Designer 集成。
-
-
-
-
+`QEditor` 现在完成了。利用前面章节中的信息和示例，我们可以编写代码将 `QEditor` 作为独立窗口、作为 `MainWindow` 的中心部件、作为布局中的子部件，或者作为 `QScrollArea`（第148页）中的子部件。在下一节中，我们将看到如何将其与 Qt Designer 集成。
 
 # 在 Qt Designer 中集成自定义小部件
 
@@ -3442,11 +3441,11 @@ QEditor 现在完成了。利用前面章节中的信息和示例，我们可以
 
 以下是如何使用这种方法通过将 HexSpinBox 拖入表单来使用它：
 
-- 1. 从 Qt Designer 的部件框中拖入 QSpinBox 到表单上以创建一个 QSpinBox。
+- 1. 从 Qt Designer 的部件框中拖入 `QSpinBox` 到表单上以创建一个 `QSpinBox`。
 - 2. 右键点击该计数器，从右键菜单中选择“提升为自定义小部件”（Promote to Custom Widget）。
 - 3. 在弹出的对话框中，用“HexSpinBox”作为类名，“hexspin.h”作为头文件。
 
-大功告成！uic 生成的代码将包含 `hexspinbox.h` 而不是 `<QSpinBox>`，并实例化一个 HexSpinBox。在 Qt Designer 中，HexSpinBox 小部件将由 QSpinBox 表示，允许我们设置 QSpinBox 的所有属性（例如，范围和当前值）。
+大功告成！`uic` 生成的代码将包含 `hexspinbox.h` 而不是 `<QSpinBox>`，并实例化一个 `HexSpinBox`。在 Qt Designer 中，`HexSpinBox` 小部件将由 `QSpinBox` 表示，允许我们设置 `QSpinBox` 的所有属性（例如，范围和当前值）。
 
 ![](img/34bd675de80edd220dc2d53b429caf78_130_0.png)
 
@@ -3454,15 +3453,15 @@ QEditor 现在完成了。利用前面章节中的信息和示例，我们可以
 
 提升方法的缺点是，自定义小部件特定的属性在 Qt Designer 中无法访问，且小部件不会以自身的形式渲染。这两个问题都可以使用插件方法解决。
 
-插件方法需要创建一个插件库，Qt Designer 在运行时加载该库并使用它来创建小部件的实例。随后，Qt Designer 在编辑表单和预览时将使用真实的小部件，得益于 Qt 的元对象系统，Qt Designer 可以动态获取其属性列表。为了展示这是如何运作的，我们将上一节中的 IconEditor 集成为了插件。
+插件方法需要创建一个插件库，Qt Designer 在运行时加载该库并使用它来创建小部件的实例。随后，Qt Designer 在编辑表单和预览时将使用真实的小部件，得益于 Qt 的元对象系统，Qt Designer 可以动态获取其属性列表。为了展示这是如何运作的，我们将上一节中的 `IconEditor` 集成为了插件。
 
 ## 5. 创建自定义小部件
 
-首先，我们必须派生 `DesignerCustomWidgetItem` 并重新实现一些虚函数。我们假设插件源码位于名为 `iconplugin` 的目录中，而 IconEditor 源码位于名为 `iconeditor` 的并行目录中。
+首先，我们必须派生 `DesignerCustomWidgetItem` 并重新实现一些虚函数。我们假设插件源码位于名为 `iconplugin` 的目录中，而 `IconEditor` 源码位于名为 `iconeditor` 的并行目录中。
 
 以下是类定义：
 
-```
+```cpp
 #include <DesignerCustomInterface>
 class IconEditorPlugin : public QObject, DesignerCustomWidgetItem
 {
@@ -3481,9 +3480,9 @@ public:
 };
 ```
 
-EditorPlugin 子类是一个封装了 IconEditor 小部件的工厂类。它继承自 `QObject` 和 `DesignerCustomWidgetItem` 并使用 `Q_INTERFACES()` 宏告诉 moc 基类是一个插件。Qt Designer 使用这些函数来创建类的实例并获取关于它的信息。
+`EditorPlugin` 子类是一个封装了 `IconEditor` 小部件的工厂类。它继承自 `QObject` 和 `DesignerCustomWidgetItem` 并使用 `Q_INTERFACES()` 宏告诉 `moc` 基类是一个插件。Qt Designer 使用这些函数来创建类的实例并获取关于它的信息。
 
-```
+```cpp
 IconEditorPlugin::IconEditorPlugin(QObject *parent)
 {
     QObject(parent)
@@ -3492,7 +3491,7 @@ IconEditorPlugin::IconEditorPlugin(QObject *parent)
 
 构造函数是简单的。
 
-```
+```cpp
 QString IconEditorPlugin::name() const
 {
     return "IconEditor";
@@ -3501,16 +3500,16 @@ QString IconEditorPlugin::name() const
 
 `name()` 函数返回插件提供的小部件名称。
 
-```
+```cpp
 QString IconEditorPlugin::includeFile() const
 {
     return "iconeditor.h";
 }
 ```
 
-`includeFile()` 函数返回由插件封装的指定小部件的头文件。该头文件被包含在 uic 工具生成的代码中。
+`includeFile()` 函数返回由插件封装的指定小部件的头文件。该头文件被包含在 `uic` 工具生成的代码中。
 
-```
+```cpp
 QIcon IconEditorPlugin::group() const
 {
     return tr("Image Widgets");
@@ -3519,16 +3518,16 @@ QIcon IconEditorPlugin::group() const
 
 `group()` 函数返回该小部件应该所属的部件框名称。如果该名称未被占用，Qt Designer 将为该小部件创建一个新组。
 
-```
+```cpp
 QIcon IconEditorPlugin::icon() const
 {
     return QIcon(":/images/iconeditor.png");
 }
 ```
 
-`icon()` 函数返回在 Qt Designer 部件框中表示自定义小部件的图标。在这里，我们假设 IconEditorPlugin 关联了一个图标图片的 Qt 资源文件。
+`icon()` 函数返回在 Qt Designer 部件框中表示自定义小部件的图标。在这里，我们假设 `IconEditorPlugin` 关联了一个图标图片的 Qt 资源文件。
 
-```
+```cpp
 QString IconEditorPlugin::tooltip() const
 {
     return tr("An icon editor widget");
@@ -3537,16 +3536,16 @@ QString IconEditorPlugin::tooltip() const
 
 `tooltip()` 函数返回当鼠标悬停在 Qt Designer 部件框中的自定义小部件上时显示的提示符。`whatsThis()` 函数返回 Qt Designer 显示的“这是什么？”文本。
 
-```
+```cpp
 bool IconEditorPlugin::isContainer() const
 {
     return false;
 }
 ```
 
-如果小部件可以包含其他小部件，则 `isContainer()` 返回 true；否则返回 false。例如，QFrame 是一个可以包含其他小部件的小部件。通常，任何 Qt 小部件都可以包含其他小部件，但当 `isContainer()` 返回 false 时，Qt Designer 禁止这样做。
+如果小部件可以包含其他小部件，则 `isContainer()` 返回 `true`；否则返回 `false`。例如，`QFrame` 是一个可以包含其他小部件的小部件。通常，任何 Qt 小部件都可以包含其他小部件，但当 `isContainer()` 返回 `false` 时，Qt Designer 禁止这样做。
 
-```
+```cpp
 QWidget *IconEditorPlugin::createWidget(QWidget *parent)
 {
     return new IconEditor(parent);
@@ -3555,7 +3554,7 @@ QWidget *IconEditorPlugin::createWidget(QWidget *parent)
 
 `create()` 函数由 Qt Designer 调用，以给定的父对象创建小部件类的实例。
 
-```
+```cpp
 Q_EXPORT_PLUGIN(iconeditorplugin, IconEditorPlugin)
 ```
 
@@ -3563,7 +3562,7 @@ Q_EXPORT_PLUGIN(iconeditorplugin, IconEditorPlugin)
 
 构建插件的 `.pro` 文件如下：
 
-```
+```cpp
 TEMPLATE = lib
 CONFIG += designer plugin release
 HEADERS = ../iconeditor/iconeditor.h \
@@ -3574,7 +3573,7 @@ RESOURCES = ../iconeditorplugin.qrc
 DESTDIR = $(QTDIR)/plugins/designer
 ```
 
-`.pro` 文件假设环境变量 `QT` 已设置为 Qt 的安装目录。当你运行 `make` 构建插件时，它将自动安装到 Qt Designer 的插件目录。一旦插件构建完成，就可以像使用任何 Qt 内置小部件一样在 Qt Designer 中 IconEditor 小部件。
+`.pro` 文件假设环境变量 `QT` 已设置为 Qt 的安装目录。当你运行 `make` 构建插件时，它将自动安装到 Qt Designer 的插件目录。一旦插件构建完成，就可以像使用任何 Qt 内置小部件一样在 Qt Designer 中 `IconEditor` 小部件。
 
 如果你想在 Qt Designer 中集成多个自定义小部件，可以为每个它们创建一个插件，或者通过派生 `QCustomWidgetCollectionInterface` 将它们合并为一个单一插件。
 
@@ -3582,11 +3581,11 @@ DESTDIR = $(QTDIR)/plugins/designer
 
 双缓冲是一种 GUI 编程技术，由将小部件渲染到离屏位图并将其拷贝到显示器组成。在早期的 Qt 版本中，这种技术被频繁用于消除闪烁并提供更敏捷的用户界面。
 
-在 Qt 4 中，QWidget 会自动处理这些，因此我们很少需要担心闪烁。然而，如果小部件的渲染复杂且需要频繁，显式双缓冲仍然是有益的。我们可以将位图永久存储在小部件中，随时准备好应对绘制事件，并在接收到绘制事件时将位图拷贝到小部件。当我们想要进行小修改（例如绘制矩套框）而无需重新计算整个小部件渲染时特别有用。
+在 Qt 4 中，`QWidget` 会自动处理这些，因此我们很少需要担心闪烁。然而，如果小部件的渲染复杂且需要频繁，显式双缓冲仍然是有益的。我们可以将位图永久存储在小部件中，随时准备好应对绘制事件，并在接收到绘制事件时将位图拷贝到小部件。当我们想要进行小修改（例如绘制矩套框）而无需重新计算整个小部件渲染时特别有用。
 
 我们将通过回顾 Flutter 来结束本章。该小部件使用了双缓冲，并展示了 Qt 编程的其他方面，包括键盘处理、手动布局和坐标系。
 
-Flutter Widget 显示由坐标指定的曲线。用户可以在图像上绘制矩套框，Flutter 将缩放矩套框包含的区域。用户通过点击图形上的一点、按住左键拖动到另一个位置并释放鼠标键来绘制矩套框。
+`Flutter Widget` 显示由坐标指定的曲线。用户可以在图像上绘制矩套框，`Flutter` 将缩放矩套框包含的区域。用户通过点击图形上的一点、按住左键拖动到另一个位置并释放鼠标键来绘制矩套框。
 
 ![](img/34bd675de80edd220dc2d53b429caf78_134_0.png)
 
@@ -3594,26 +3593,22 @@ Flutter Widget 显示由坐标指定的曲线。用户可以在图像上绘制�
 
 用户可以通过多次绘制矩套框、使用“缩小”按钮、然后使用“放大”按钮来反复缩放。“放大”和“缩小”按钮在它们首次可用时才会出现，因此在用户不缩放图表时不会弄乱显示。
 
-Plotter 小部件可以持有任意数量曲线的数据。它维护了一个 `PlotSettings` 对象栈，每个对象对应一个特定的缩放级别。
+`Plotter` 小部件可以持有任意数量曲线的数据。它维护了一个 `PlotSettings` 对象栈，每个对象对应一个特定的缩放级别。
 
 让我们回顾该类，从 `plotter.h` 开始：
 
-```
+```cpp
 #ifndef PLOTTER_H
 #define PLOTTER_H
-
 #include <QMap>
 #include <QPixmap>
 #include <QVector>
 #include <QWidget>
-
 class QToolButton;
 class PlotSettings;
-
 class Plotter : public QWidget
 {
     Q_OBJECT
-
 public:
     Plotter(QWidget *parent = 0);
     void setPlotSettings(const PlotSettings &settings);
@@ -3621,9 +3616,7 @@ public:
     void clearCurve(int id);
     QSize minimumSizeHint() const;
     QSize sizeHint() const;
-
 QSize size;
-
 public slots:
     void zoomIn();
     void zoomOut();
@@ -3631,15 +3624,11 @@ public slots:
 #endif
 ```
 
-
-
-
-
 ## 5. 创建自定义小部件
 
 我们开始包含绘图文件头文件中使用的 Qt 类的头文件，并对头文件中带有指针或引用的类进行前向声明。
 
-在 Plotter 类中，我们提供了三个用于设置图表的公共函数，以及两个用于放大和缩小的公共插槽。我们还重新实现了 `QWidget` 的 `minimumSizeHint()` 和 `sizeHint()`。我们将曲线的点存储在 `QVector<QPointF>` 中，其中 `QPointF` 是 `QPoint` 的浮点数版本。
+在 `Plotter` 类中，我们提供了三个用于设置图表的公共函数，以及两个用于放大和缩小的公共插槽。我们还重新实现了 `QWidget` 的 `minimumSizeHint()` 和 `sizeHint()`。我们将曲线的点存储在 `QVector<QPointF>` 中，其中 `QPointF` 是 `QPoint` 的浮点数版本。
 
 ```cpp
 protected:
@@ -3660,7 +3649,6 @@ void updateRubberBand();
 void refreshPixmap();
 void drawGrid(QPainter *painter);
 void drawCurves(QPainter *painter);
-
 enum { Margin = 50 };
 ToolButton *zoomInButton;
 ToolButton *zoomOutButton;
@@ -3672,7 +3660,9 @@ QRect rubberBandRect;
 QPixmap pixmap;
 ```
 
-在类的私有区域，我们声明了几个用于绘制小部件的函数、一个常量以及若干成员变量。`Margin` 常量用于在图表周围留出间距。变量之一之一类型为 `QPixmap` 的 `pixmap`。该变量持有整个小部件渲染的副本，与屏幕显示的内容完全相同。图表始终先绘制到离屏 pixmap 上；然后将该 pixmap 拷贝到小部件上。
+
+
+在类的私有区域，我们声明了几个用于绘制小部件的函数、一个常量以及若干成员变量。`Margin`常量用于在图表周围留出间距。变量之一之一类型为`QPixmap`的`pixmap`。该变量持有整个小部件渲染的副本，与屏幕显示的内容完全相同。图表始终先绘制到离屏`pixmap`上；然后将该`pixmap`拷贝到小部件上。
 
 ```cpp
 class PlotSettings {
@@ -3680,10 +3670,8 @@ public:
     PlotSettings();
     void scroll(int dx, int dy);
     void adjust();
-
     double spanX() const { return maxX - minX; }
     double spanY() const { return maxY - minY; }
-
 private:
     double minX;
     double maxX;
@@ -3691,14 +3679,13 @@ private:
     double minY;
     double maxY;
     int numYTicks;
-
     static void adjustAxis(double &min, double &max, int &numXTicks);
 };
 ```
 
-`PlotSettings` 类指定了 x 轴和 y 轴的范围以及这些轴的刻度数量。图 5.8 显示了 `PlotSettings` 对象与 Plotter 小部件之间的对应。根据约定，`numXTicks` 和 `numYTicks` 是开启的；如果 `numXTicks` 为五，Plotter 实际上会在 x 轴上绘制刻度线。这简化了后续计算。
+`PlotSettings`类指定了 x 轴和 y 轴的范围以及这些轴的刻度数量。图 5.8 显示了`PlotSettings`对象与`Plotter`小部件之间的对应。根据约定，`numXTicks`和`numYTicks`是开启的；如果`numXTicks`为五，`Plotter`实际上会在 x 轴上绘制刻度线。这简化了后续计算。
 
-图 5.8 PlotSettings 的成员变量
+图 5.8 `PlotSettings`的成员变量
 
 现在让我们查看实现文件：
 
@@ -3708,7 +3695,7 @@ private:
 #include "plotter.h"
 ```
 
-我们包含了预期的头文件，并将所有 `std` 命名空间的符号导入到全局命名空间。这允许在不加 `std::` 前缀的情况下访问 `<cmath>` 中声明的函数（例如，使用 `floor()` 而不是 `std::floor()`）。
+我们包含了预期的头文件，并将所有`std`命名空间的符号导入到全局命名空间。这允许在不加`std::`前缀的情况下访问`<cmath>`中声明的函数（例如，使用`floor()`而不是`std::floor()`）。
 
 ```cpp
 Plotter::Plotter(QWidget *parent)
@@ -3719,30 +3706,27 @@ Plotter::Plotter(QWidget *parent)
     setSizePolicy(QSize::Expanding, QSizePolicy::Expanding);
     setFocusPolicy(Qt::StrongFocus);
     rubberBandShown = false;
-
     zoomIn = new ToolButton(this);
     zoomIn->setIcon(QIcon("/images/zoom.png"));
     zoomIn->adjustSize();
     connect(zoomIn, SIGNAL(clicked()), this, SLOT(zoomIn()));
-
     zoomOut = new ToolButton(this);
     zoomOut->setIcon(QIcon("/images/zoomout.png"));
     zoomOut->adjustSize();
     connect(zoomOut, SIGNAL(clicked()), this, SLOT(zoomOut()));
-
     setPlotSettings(PlotSettings());
 }
 ```
 
-注意：`setBackgroundRole()` 调用 `QWidget` 使用调色板中的“dark”部分作为擦除小部件的颜色，而不是“window”部分。这是 Qt 的默认颜色，当小部件调整为更大的尺寸时，在 `paintEvent()` 有机会绘制新像素之前，可以使用它来填充任何新暴露的像素。我们还需要设置 `setAutoFillBackground(true)` 来启用此机制。（默认情况下，小部件继承其父小部件的背景。）
+注意：`setBackgroundRole()`调用`QWidget`使用调色板中的“dark”部分作为擦除小部件的颜色，而不是“window”部分。这是 Qt 的默认颜色，当小部件调整为更大的尺寸时，在`paintEvent()`有机会绘制新像素之前，可以使用它来填充任何新暴露的像素。我们还需要设置`setAutoFillBackground(true)`来启用此机制。（默认情况下，小部件继承其父小部件的背景。）
 
-`setSizePolicy()` 将小部件尺寸策略在两个方向上都设置为 `QSizePolicy::Expanding`。这告诉任何负责该小部件的布局管理器，它非常乐于增长，也可以缩小。默认在两个方向都是 `QSizePolicy::Preferred`，这意味着小部件倾向于保持其 size hint 大小，但在必要时可以缩小到其最小 size hint 或无限扩展。
+`setSizePolicy()`将小部件尺寸策略在两个方向上都设置为`QSizePolicy::Expanding`。这告诉任何负责该小部件的布局管理器，它非常乐于增长，也可以缩小。默认在两个方向都是`QSizePolicy::Preferred`，这意味着小部件倾向于保持其`size hint`大小，但在必要时可以缩小到其最小`size hint`或无限扩展。
 
-`setFocusPolicy(Qt::StrongFocus)` 让小部件能够通过点击或按 Tab 键来接受焦点。Plotter 理解几个按键：+ 用于放大；- 用于缩小；以及所有用于向下、向左和向右滚动的键。
+`setFocusPolicy(Qt::StrongFocus)`让小部件能够通过点击或按 Tab 键来接受焦点。`Plotter`理解几个按键：`+`用于放大；`-`用于缩小；以及所有用于向下、向左和向右滚动的键。
 
 # 双缓冲
 
-同样在构造函数中，我们创建了两个 `ToolButton`，每个带有一个图标。这些按钮允许我们放大和缩小。按钮图标存储在资源文件中，因此任何使用 Plotter 小部件的应用程序都需要在其 .pro 文件中包含此条目：
+同样在构造函数中，我们创建了两个`ToolButton`，每个带有一个图标。这些按钮允许我们放大和缩小。按钮图标存储在资源文件中，因此任何使用`Plotter`小部件的应用程序都需要在其`.pro`文件中包含此条目：
 
 ```
 RESOURCES = plotter.qrc
@@ -3759,7 +3743,7 @@ RESOURCES = plotter.qrc
 </RCC>
 ```
 
-调整器调用按钮将它们的大小设置为 size hint 大小。按钮没有放在布局中；相反，我们在 Plotter 的 resize 事件中手动放置它们。由于我们没有使用任何布局，必须通过传递给 QPushButton 来显式指定按钮属性。
+调整器调用按钮将它们的大小设置为`size hint`大小。按钮没有放在布局中；相反，我们在`Plotter`的`resize`事件中手动放置它们。由于我们没有使用任何布局，必须通过传递给`QPushButton`来显式指定按钮属性。
 
 ```cpp
 void Plotter::setPlotSettings(const PlotSettings &settings) {
@@ -3772,11 +3756,7 @@ void Plotter::setPlotSettings(const PlotSettings &settings) {
 }
 ```
 
-`setPlotSettings()` 函数用于为图表指定 `PlotSettings`。每当用户放大时，都会创建一个新的 `PlotSettings` 实例并放入栈中。`curZoom` 代表当前的缩放级别。
-
-
-
-
+`setPlotSettings()`函数用于为图表指定`PlotSettings`。每当用户放大时，都会创建一个新的`PlotSettings`实例并放入栈中。`curZoom`代表当前的缩放级别。
 
 ## 双缓冲缓冲
 
@@ -3785,7 +3765,7 @@ refreshPixmap();
 }
 ```
 
-`clearCurve()` 函数从曲线图中移除指定的曲线。
+`clearCurve()`函数从曲线图中移除指定的曲线。
 
 ```cpp
 QSize Plotter::minimumSizeHint() const
@@ -3794,9 +3774,9 @@ QSize Plotter::minimumSizeHint() const
 }
 ```
 
-`minimumSizeHint()` 函数与 `sizeHint()` 类似；就像 `sizeHint()` 指定了组件的理想尺寸一样，`minimumSizeHint()` 指定了组件的理想最小尺寸。布局永远不会将组件的大小调整到其最小尺寸提示以下。
+`minimumSizeHint()`函数与`sizeHint()`类似；就像`sizeHint()`指定了组件的理想尺寸一样，`minimumSizeHint()`指定了组件的理想最小尺寸。布局永远不会将组件的大小调整到其最小尺寸提示以下。
 
-该值返回 300×200（因为 `Margin` 等于 50），以便为四边留出边缘并为图表本身留出空间。低于此尺寸，图表将太小而无法使用。
+该值返回 300×200（因为`Margin`等于 50），以便为四边留出边缘并为图表本身留出空间。低于此尺寸，图表将太小而无法使用。
 
 ```cpp
 QSize Plotter::sizeHint() const
@@ -3805,22 +3785,20 @@ QSize Plotter::sizeHint() const
 }
 ```
 
-在 `sizeHint()` 中，我们返回一个与 `Margin` 常数成比例的“理想”尺寸，并使用与 `minimumSizeHint()` 相同的 3:2 宽高比。
+在`sizeHint()`中，我们返回一个与`Margin`常数成比例的“理想”尺寸，并使用与`minimumSizeHint()`相同的 3:2 宽高比。
 
-到此，Plotter 公有函数和槽的审查结束。现在让我们查看受保护的事件处理程序。
+到此，`Plotter`公有函数和槽的审查结束。现在让我们查看受保护的事件处理程序。
 
 ```cpp
 void Plotter::paintEvent(QEvent * /* event */)
 {
     QStylePainter painter(this);
     painter.drawPixmap(0, 0, pixmap);
-
     if (rubberIsShow) {
         painter.setPen(palette().light().color());
         painter.drawRect(rubberBandRect.normalized()
             adjusted(0, 0, -1, -1));
     }
-
     if (hasFocus()) {
         QStyleFocusRect option;
         option.initFrom(this);
@@ -3830,25 +3808,25 @@ void Plotter::paintEvent(QEvent * /* event */)
 }
 ```
 
-通常，`paintEvent()` 是我们执行所有绘制的地方。但在这里，所有的绘制工作都在 `refreshPixmap()` 中提前完成，因此我们可以通过简单将 pixmap 复制到组件的 (0, 0) 位置来渲染整个图表。
+通常，`paintEvent()`是我们执行所有绘制的地方。但在这里，所有的绘制工作都在`refreshPixmap()`中提前完成，因此我们可以通过简单将`pixmap`复制到组件的`(0, 0)`位置来渲染整个图表。
 
-如果橡皮筋（rubber）可见，我们在图表上层绘制它。我们使用组件当前颜色组中的“亮”部分作为画笔，以确保与“暗”背景形成良好对比。注意，我们直接在组件上绘制，而不触碰离屏的 pixmap。使用 `QRect::normalized()` 确保橡皮筋矩形具有正宽度和高度（在必要时交换坐标），而 `adjusted()` 将矩形缩小一个像素，以留出其 1 像素宽的轮廓。
+如果橡皮筋（rubber）可见，我们在图表上层绘制它。我们使用组件当前颜色组中的“亮”部分作为画笔，以确保与“暗”背景形成良好对比。注意，我们直接在组件上绘制，而不触碰离屏的`pixmap`。使用`QRect::normalized()`确保橡皮筋矩形具有正宽度和高度（在必要时交换坐标），而`adjusted()`将矩形缩小一个像素，以留出其 1 像素宽的轮廓。
 
-如果 Plotter 有一个使用样式 `drawPrimitive()` 函数绘制的焦点框，其中 `QStyle::FrameFocusRect` 是第一个参数，`QStyleOptionFocusObject` 是第二个参数。矩形的绘制选项继承自 Plotter 组件（通过调用 `initFrom()`）。必须显式地指定背景颜色。
+如果`Plotter`有一个使用样式`drawPrimitive()`函数绘制的焦点框，其中`QStyle::FrameFocusRect`是第一个参数，`QStyleOptionFocusObject`是第二个参数。矩形的绘制选项继承自`Plotter`组件（通过调用`initFrom()`）。必须显式地指定背景颜色。
 
-当我们想要使用当前样式时，可以直接调用 QStyle 函数，例如：
+当我们想要使用当前样式时，可以直接调用`QStyle`函数，例如：
 
 ```cpp
 style()->drawPrimitive(QStyle::PE_FocusRect, &option, painter);
 ```
 
-或者我们可以使用 `QPainter` 代替普通的 `Painter`（正如我们在 Plotter 中做的那样），并利用它更方便地进行绘制。
+或者我们可以使用`QPainter`代替普通的`Painter`（正如我们在`Plotter`中做的那样），并利用它更方便地进行绘制。
 
-`Widget::style()` 函数返回用于绘制组件的样式。在 Qt 中，样式（style）是 `QStyle` 的子类。内置样式包括 `WindowStyle`、`WindowsXPStyle`、`FusionStyle`、`QCStyle`、`QMacStyle` 和 `QPlasticStyle`。这些样式都重新实现了 `QStyle` 中的虚函数，以便为样式模拟的平台以正确的方式进行绘制。`Painter::drawPrimitive()` 调用 `QStyle` 函数来绘制“原始元素”，如面板、按钮和焦点框。对于使用 `Application::style()` 的应用程序，所有组件的样式通常相同，但可以使用 `Widget::setStyle()` 基于单个组件进行重写。
+`Widget::style()`函数返回用于绘制组件的样式。在 Qt 中，样式（style）是`QStyle`的子类。内置样式包括`WindowStyle`、`WindowsXPStyle`、`FusionStyle`、`QCStyle`、`QMacStyle`和`QPlasticStyle`。这些样式都重新实现了`QStyle`中的虚函数，以便为样式模拟的平台以正确的方式进行绘制。`Painter::drawPrimitive()`调用`QStyle`函数来绘制“原始元素”，如面板、按钮和焦点框。对于使用`Application::style()`的应用程序，所有组件的样式通常相同，但可以使用`Widget::setStyle()`基于单个组件进行重写。
 
-通过派生 `QStyle` 可以定义自定义样式。这可以为应用程序或系列应用程序提供独特的视觉。虽然通常建议使用目标平台的原生外观和感受，但如果你想尝试冒险，Qt 提供了很大的灵活性。
+通过派生`QStyle`可以定义自定义样式。这可以为应用程序或系列应用程序提供独特的视觉。虽然通常建议使用目标平台的原生外观和感受，但如果你想尝试冒险，Qt 提供了很大的灵活性。
 
-Qt 的内置组件几乎完全依赖 `QStyle` 来绘制它们自己。这就是为什么它们在 Qt 支持的所有平台上看起来都像原生组件的原因。自定义组件可以通过使用 `QStyle` 自行绘制，或者通过使用 Qt 组件作为子组件来实现样式感知的。对于 Plotter，我们结合了这两种方法：焦点框使用 `QStyle`（通过 `QPainter`）绘制，而放大/缩小按钮是内置的 Qt 组件。
+Qt 的内置组件几乎完全依赖`QStyle`来绘制它们自己。这就是为什么它们在 Qt 支持的所有平台上看起来都像原生组件的原因。自定义组件可以通过使用`QStyle`自行绘制，或者通过使用 Qt 组件作为子组件来实现样式感知的。对于`Plotter`，我们结合了这两种方法：焦点框使用`QStyle`（通过`QPainter`）绘制，而放大/缩小按钮是内置的 Qt 组件。
 
 ```cpp
 void Plotter::resizeEvent (QResizeEvent *event) { /* ... */
@@ -3862,15 +3840,11 @@ void Plotter::resizeEvent (QResizeEvent *event) { /* ... */
 
 ## 5. 创建自定义组件
 
-每当 Plotter 组件调整大小时时，Qt 都会生成一个“调整大小”事件。在这里，我们重新实现了 `resizeEvent()`，将放大和缩小按钮放置在 Plotter 组件的右上角。
+每当`Plotter`组件调整大小时时，Qt 都会生成一个“调整大小”事件。在这里，我们重新实现了`resizeEvent()`，将放大和缩小按钮放置在`Plotter`组件的右上角。
 
 我们将放大和缩小按钮并排移动，它们之间有 5 像素的间隙，并且距离父组件顶部和右边缘有 5 像素的偏移。
 
 如果我们想让按钮留在左上角，我们将相应地调整坐标。然而，将它们放在右上角是绘图工具的一种常见 UI 模式。
-
-
-
-
 
 # 双双缓冲
 
@@ -3882,7 +3856,6 @@ settings.maxX = prevSettings.minX + dx * rect.right();
 settings.minY = prevSettings.maxY - dy * rect.bottom();
 settings.maxY = prevSettings.maxY - dy * rect.top();
 settings.adjust();
-
 zoomStack.resize(curZoom + 1);
 zoomStack.append(settings);
 zoomIn();
@@ -3890,7 +3863,7 @@ zoomIn();
 
 当用户释放鼠标按钮时，我们会擦除橡皮带并恢复标准的箭头光标。如果橡皮带的大小至少为 4 x 4，我们就执行缩放操作。如果橡皮带小于此尺寸，很可能是用户误点击了小部件或为了使其获取焦点，因此我们什么都不做。
 
-执行缩放的代码有点复杂。这是因为我们需要同时处理小部件坐标和绘图器坐标。在这里执行的大部分工作是将 `rubberBandRect` 从小部件坐标转换为绘图器坐标。一旦完成转换，就可以调用 `PlotSettings::adjust()` 对数字进行四舍五入并并每个轴找到一个合理的刻度数量。图 5.10 和 5.11 展示了这种情况。
+执行缩放的代码有点复杂。这是因为我们需要同时处理小部件坐标和绘图器坐标。在这里执行的大部分工作是将`rubberBandRect`从小部件坐标转换为绘图器坐标。一旦完成转换，就可以调用`PlotSettings::adjust()`对数字进行四舍五入并并每个轴找到一个合理的刻度数量。图 5.10 和 5.11 展示了这种情况。
 
 ![](img/34bd675de80edd220dc2d53b429caf78_144_0.png)
 
@@ -3905,7 +3878,6 @@ void Plotter::wheelEvent(QWheelEvent *event)
 {
     int degrees = event->delta() / 8;
     int numTicks = degrees / 15;
-
     if (event->orientation() == Qt::Horizontal) {
         zoomStack[curZoom].scroll(numTicks, 0);
     } else {
@@ -3917,9 +3889,9 @@ void Plotter::wheelEvent(QWheelEvent *event)
 
 # 双双缓冲
 
-当滚动鼠标轮时会发生滚轮事件。大多数鼠标只提供垂直滚轮，但某些鼠标也有水平滚轮。Qt 支持这两种滚轮。滚轮事件发送到获得焦焦轮。`delta(int)` 函数返回滚轮旋转的距离（以八分之一计）。鼠标通常以 15 度为步长工作。在这里，我们通过修改 dock 栈顶部的项目来按请求的刻度数进行滚动，并使用 `refreshPixmap()` 更新显示。
+当滚动鼠标轮时会发生滚轮事件。大多数鼠标只提供垂直滚轮，但某些鼠标也有水平滚轮。Qt 支持这两种滚轮。滚轮事件发送到获得焦焦轮。`delta(int)`函数返回滚轮旋转的距离（以八分之一计）。鼠标通常以 15 度为步长工作。在这里，我们通过修改`dock`栈顶部的项目来按请求的刻度数进行滚动，并使用`refreshPixmap()`更新显示。
 
-鼠标轮最常见的用途是滚动滚动条。当我们使用 `QScrollArea`（第 6 章将介绍）提供滚动条时，`QScrollArea` 会自动处理滚轮事件，因此我们不需要自己实现 `wheelEvent()`。
+鼠标轮最常见的用途是滚动滚动条。当我们使用`QScrollArea`（第 6 章将介绍）提供滚动条时，`QScrollArea`会自动处理滚轮事件，因此我们不需要自己实现`wheelEvent()`。
 
 事件处理程序的实现到此结束。现在让我们回顾私有函数：
 
@@ -3933,26 +3905,31 @@ void Plotter::updateRubberBandRegion(
 }
 ```
 
-`updateRubberBand()` 函数从 `mousePressEvent()` 和 `mouseMoveEvent()` 中调用，用于擦除或重绘橡皮带。它包含四次对 `update()` 的调用，为橡皮带覆盖的小矩形区域（两条垂直线和两条水平线）调度绘制事件。Qt 提供了 `RubberBand` 类来绘制橡皮带，但在这里，硬编码提供了最终的控制。
+`updateRubberBand()`函数从`mousePressEvent()`和`mouseMoveEvent()`中调用，用于擦除或重绘橡皮带。它包含四次对`update()`的调用，为橡皮带覆盖的小矩形区域（两条垂直线和两条水平线）调度绘制事件。Qt 提供了`RubberBand`类来绘制橡皮带，但在这里，硬编码提供了最终的控制。
 
 ```cpp
 void Plotter::refreshPixmap() {
   QPixmap pixmap = QPixmap(size());
   pixmap.fill(this, 0, 0);
-
   QPainter painter(&pixmap);
   painter.initFrom(this);
   drawGrid(&painter);
-  drawCurves(&painter);
-  update();
-}
 ```
 
-`refreshPixmap()` 函数将图表重绘到离屏 pixmap 上并更新显示。我们将 pixmap 的大小调整到与小部件相同，并用小部件的擦除颜色填充它。由于在 `Plotter` 构造函数中调用了 `setBackgroundRole()`，此颜色是调色板中的“深色”部分。如果背景是非实色的刷子，`QPixmap::fill()` 需要知道 pixmap 最终所在的小部件中的偏移量，以便正确对齐刷子模式。在这里，pixmap 对应整个小部件，因此我们指定位置为 (0, 0)。
+
+
+`drawCurves(&painter);`
+
+`update();`
+
+}
+
+```
+`refreshPixmap()`函数将图表重绘到离屏 pixmap 上并更新显示。我们将 pixmap 的大小调整到与小部件相同，并用小部件的擦除颜色填充它。由于在`Plotter`构造函数中调用了`setBackgroundRole()`，此颜色是调色板中的“深色”部分。如果背景是非实色的刷子，`QPixmap::fill()`需要知道 pixmap 最终所在的小部件中的偏移量，以便正确对齐刷子模式。在这里，pixmap 对应整个小部件，因此我们指定位置为`(0, 0)`。
 
 ## 5. 创建自定义小部件
 
-我们创建了一个 `QPainter` 来在 pixmap 上绘图。`initFrom` 调用将画笔的笔、背景和字体设置为与目标小部件相同。接下来，我们调用 `drawGrid()` 和 `drawCurves()` 来执行绘制。最后，我们调用 `update()` 为整个小部件调度绘制事件。pixmap 在 `paintEvent()` 函数中被复制到小部件中（第 123 页）。
+我们创建了一个`QPainter`来在 pixmap 上绘图。`initFrom`调用将画笔的笔、背景和字体设置为与目标小部件相同。接下来，我们调用`drawGrid()`和`drawCurves()`来执行绘制。最后，我们调用`update()`为整个小部件调度绘制事件。pixmap 在`paintEvent()`函数中被复制到小部件中（第 123 页）。
 
 ```cpp
 void Plotter::drawGrid(QPainter *painter) {
@@ -3960,15 +3937,12 @@ void Plotter::drawGrid(QPainter *painter) {
       width() - 2 * Margin, height() - 2 * Margin);
   if (!rect.isValid())
     return;
-
   PlotSettings settings = zoomStack[curZoom];
   QPen penBake = palette().dark().color().light();
   QPen light = palette().light().color();
-
   for (int i = 0; i < settings.numXTicks; ++i) {
       int x = rect.left() + (i * (rect.width() - 1) / settings.numXTicks);
       double label = settings.minX + (i * settings.spanX());
-
       painter->setPen(penBake);
       painter->drawLine(x, rect.top(), x, rect.bottom());
       painter->setPen(light);
@@ -3977,7 +3951,6 @@ void Plotter::drawGrid(QPainter *painter) {
   for (int j = 0; j < settings.numYTicks; ++j) {
       int y = rect.bottom() - (j * (rect.height() - 1) / settings.numYTicks);
       double label = settings.minY + (j * settings.spanY());
-
       painter->setPen(penBake);
       painter->drawLine(rect.left(), y, rect.right());
       painter->setPen(light);
@@ -3986,7 +3959,7 @@ void Plotter::drawGrid(QPainter *painter) {
 }
 ```
 
-`drawGrid()` 函数在曲线后面绘制网格。我们绘制的区域由 `rect` 指定。`drawText()` 的调用如下：
+`drawGrid()`函数在曲线后面绘制网格。我们绘制的区域由`rect`指定。`drawText()`的调用如下：
 
 ```cpp
 painter->drawText(x, y, width, height, text);
@@ -3994,7 +3967,7 @@ painter->drawText(x, y, width, height, text);
 
 如果小部件足够大以容纳图表，我们将返回。第一个循环绘制网格的垂直线和 x 轴刻度。第二个循环绘制网格的水平线和 y 轴刻度。最后，我们在边距处绘制矩形。
 
-# 双双缓冲
+### 双双缓冲
 
 ```cpp
 void Plotter::drawCurves(QPainter *painter) {
@@ -4025,17 +3998,13 @@ void Plotter::drawCurves(QPainter *painter) {
 }
 ```
 
-`drawCurves()` 函数在网格之上绘制曲线。
-
-
-
-
+`drawCurves()`函数在网格之上绘制曲线。
 
 ## 5. 创建自定义小部件
 
-一旦我们将曲线的所有点转换为小部件坐标，就会为曲线设置画笔颜色（使用预定义颜色之一），并调用 `drawPolyline()` 来绘制一条穿过曲线所有点的线。
+一旦我们将曲线的所有点转换为小部件坐标，就会为曲线设置画笔颜色（使用预定义颜色之一），并调用`drawPolyline()`来绘制一条穿过曲线所有点的线。
 
-这就是 `Plotter` 类。剩下的只是 `PlotSettings` 中的几个函数了。
+这就是`Plotter`类。剩下的只是`PlotSettings`中的几个函数了。
 
 ```cpp
 PlotSettings::PlotSettings()
@@ -4043,14 +4012,13 @@ PlotSettings::PlotSettings()
 minX = 0.0;
 maxX = 10.0;
 numTicks = 5;
-
 Y = 0.0;
 maxY = 10.0;
 numTicks = 5;
 }
 ```
 
-`PlotSettings` 构造函数将两个轴初始化为 0 到 10 的范围，并带有 5 个刻度标记。
+`PlotSettings`构造函数将两个轴初始化为 0 到 10 的范围，并带有 5 个刻度标记。
 
 ```cpp
 void PlotSettings::scroll(int dx, int dy)
@@ -4058,14 +4026,13 @@ void PlotSettings::scroll(int dx, int dy)
 double stepX = spanX() / numTicks;
 minX += dx * stepX;
 maxX += dx * stepX;
-
 double stepY = spanY() / numTicks;
 minY += dy * stepY;
 maxY += dy * stepY;
 }
 ```
 
-`scroll()` 函数根据两个刻度之间的间隔乘以给定倍数来增加（或减少）`minX`、`maxX`、`minY` 和 `maxY`。此函数用于在 `Plotter::keyPressEvent()` 中实现滚动。
+`scroll()`函数根据两个刻度之间的间隔乘以给定倍数来增加（或减少）`minX`、`maxX`、`minY`和`maxY`。此函数用于在`Plotter::keyPressEvent()`中实现滚动。
 
 ```cpp
 void PlotSettings::adjust()
@@ -4075,7 +4042,7 @@ adjustAxis(minY, maxY, numTicks);
 }
 ```
 
-`adjust()` 函数从 `mouseReleaseEvent` 调用，将 `minX`、`maxX`、`minY` 和 `maxY` 值取整为“漂亮”的值，并确定每个轴合适的刻度数。私有函数 `adjustAxis()` 每次处理一个轴。
+`adjust()`函数从`mouseReleaseEvent`调用，将`minX`、`maxX`、`minY`和`maxY`值取整为“漂亮”的值，并确定每个轴合适的刻度数。私有函数`adjustAxis()`每次处理一个轴。
 
 ```cpp
 void PlotSettings::adjustAxis(double min, double max, int &numTicks)
@@ -4083,7 +4050,6 @@ void PlotSettings::adjustAxis(double min, double max, int &numTicks)
 const int minTicks = 4;
 double grossStep = (max - min) / minTicks;
 double step = pow(10.0, floor(log10(grossStep)));
-
 if (5 < grossStep) {
 step *= 5;
 }
@@ -4098,9 +4064,9 @@ if (numTicks < MinTicks){
 }
 ```
 
-`adjustAxis` 函数将其 `min` 和 `max` 参数转换为“漂亮”的数字，并将 `numTicks` 参数设置为适用于给定 `[min, max]` 范围的刻度数。由于 `adjustAxis` 需要修改实际变量（`minX`、`maxX`、`numTicks` 等）而不仅仅是副本，因此它的参数是非引用的。
+`adjustAxis`函数将其`min`和`max`参数转换为“漂亮”的数字，并将`numTicks`参数设置为适用于给定`[min, max]`范围的刻度数。由于`adjustAxis`需要修改实际变量（`minX`、`maxX`、`numTicks`等）而不仅仅是副本，因此它的参数是非引用的。
 
-`adjustAxis()` 中的代码只是尝试确定两个刻度之间间隔（即“步长”）的合适值。我们必须仔细地选择这个步长。例如，3.8 的步长值将导致轴呈现 3.8 的倍数，这对于人们来说很难联系。对于以十进制法标记的轴，“漂亮”的步长值是 $10^n$、$2^n$ 或 $5^n$ 形式的数字。
+`adjustAxis()`中的代码只是尝试确定两个刻度之间间隔（即“步长”）的合适值。我们必须仔细地选择这个步长。例如，3.8 的步长值将导致轴呈现 3.8 的倍数，这对于人们来说很难联系。对于以十进制法标记的轴，“漂亮”的步长值是 $10^n$、$2^n$ 或 $5^n$ 形式的数字。
 
 我们首先计算“粗步长”（gross step），它是步长值的一种极大值。然后我们找到小于或等于粗步长的对应 $10^i$ 形式的数字。我们通过对粗步长取十对数，将其取整为该取整数字的幂来实现。例如，如果粗步长为 236，我们计算 `log 236=2.372...`，然后向下取整为 2，得到 $10^2 = 100$ 作为 $10^i$ 的候选步长值。
 
@@ -4114,8 +4080,9 @@ if (numTicks < MinTicks){
 
 到此，我们已经足够了解使用 Qt 编写完整的 GUI 。在第二部分和第三部分中，我们将更深入地探索 Qt，以便充分利用 Qt 的强大。
 
-## 第二部分
-### 中级 Qt
+# 第二部分
+
+## 中级 Qt
 
 ## 6. 布局管理
 
@@ -4147,7 +4114,6 @@ button1->setGeometry(271, 95, 85, 32);
 button2->setGeometry(271, 171, 85, 32);
 closeButton->setGeometry(271, 184, 85, 32);
 helpButton->setGeometry(271, 149, 85, 32);
-
 setWindowTitle(tr("Find Files or Folders"));
 setFixedSize(365, 240);
 }
@@ -4170,12 +4136,10 @@ FindDialog::FindDialog(QWidget *parent)
   ...
   setMinimumSize(265, 190);
   resize(365, 240);
-
 void FindDialog::resizeEvent(QResizeEvent *event) { /* end */
 {
   int extraWidth = width() - minimumWidth();
   int extraHeight = height() - minimumHeight();
-
 label->setGeometry(9, 9, 50, 25);
 lineEdit1->setGeometry(65, 9, 100 + extraWidth);
 label2->setGeometry(9, 40, 50, 25);
@@ -4190,15 +4154,13 @@ helpButton->setGeometry(271 + extraWidth, 149 + extraHeight, 85, 32);
 }
 ```
 
+
+
 在 `FileDialog` 构造函数中，我们将表单的最小大小设置为 265 x 190，初始大小设置为 365 x 240。在 `resizeEvent()` 处理中，我们将任何额外的空间分配给我们需要增长的小部件。这确保了当用户调整大时，表单能够平滑地缩放。
 
 ![](img/34bd675de80edd220dc2d53b429caf78_156_0.png)
 
 图 6.2. 可调整大小的对话框
-
-
-
-
 
 ## 6. 布局管理
 
@@ -4206,11 +4168,11 @@ helpButton->setGeometry(271 + extraWidth, 149 + extraHeight, 85, 32);
 
 在表单上布局小部件最方便的解决方案是使用布局管理器（layout managers）。布局管理器为每种类型的小部件提供了合理的默认值，并考虑每个小部件的尺寸提示，这通常取决于小部件的字体、样式和内容。布局管理器还尊重最小和最大尺寸，并根据字体变化、内容变化和窗口缩放自动调整布局。
 
-三个最重要的布局管理器是 QHBoxLayout、QVBoxLayout 和 QGridLayout。这些类继承自 QLayout，QLayout 为布局提供了基本的框架。这三个类都受到 Qt Designer 的完全支持，也可以直接在代码中使用。
+三个最重要的布局管理器是 `QHBoxLayout`、`QVBoxLayout` 和 `QGridLayout`。这些类继承自 `QLayout`，`QLayout` 为布局提供了基本的框架。这三个类都受到 Qt Designer 的完全支持，也可以直接在代码中使用。
 
 这里是使用布局器的 FindFileDialog 代码：
 
-```
+```cpp
 FindFileDialog::FindFileDialog(QWidget *parent)
     : QDialog(parent)
 {
@@ -4222,31 +4184,28 @@ FindFileDialog::FindFileDialog(QWidget *parent)
   leftLayout->addWidget(subfoldersCheckBox, 2, 0, 2);
   leftLayout->addWidget(tableWidget, 3, 0, 2);
   leftLayout->addWidget(messageLabel, 4, 0, 1, 2);
-
   QVBoxLayout *rightLayout = new QVBoxLayout;
   rightLayout->addWidget(findButton);
   rightLayout->addWidget(stopButton);
   rightLayout->addWidget(closeButton);
   rightLayout->addStretch();
   rightLayout->addWidget(helpButton);
-
   QHBoxLayout *mainLayout = new QHBoxLayout();
   mainLayout->addLayout(leftLayout);
   mainLayout->addLayout(rightLayout);
   setLayout(mainLayout);
-
   setWindowTitle(tr("查找文件或文件夹"));
 }
 ```
 
-该布局由一个 QHBoxLayout、一个 QGridLayout 和一个 QVBoxLayout 处理。QHBoxLayout 将左侧的 QGridLayout 和右侧的 QVBoxLayout 并排放置。布局周围的边距和子小部件之间的间距由当前小部件的大小设置为默认值；可以使用 QLayout::setMargin() 和 QLayout:: 来更改。
+该布局由一个 `QHBoxLayout`、一个 `QGridLayout` 和一个 `QVBoxLayout` 处理。`QHBoxLayout` 将左侧的 `QGridLayout` 和右侧的 `QVBoxLayout` 并排放置。布局周围的边距和子小部件之间的间距由当前小部件的大小设置为默认值；可以使用 `QLayout::setMargin()` 和 `QLayout::` 来更改。
 
 ### 在表单上布局小部件
 
 可以在 Qt Designer 中通过视觉方式创建相同的对话框：将子小部件放置在它们的大致位置；选择需要一起布局的小部件；点击“表单|水平布局 (Lay Out Horizontally)”、“表单|垂直布局 (Lay Out Vertically)”或“表单|网格布局 (Lay Out in a Grid)”。我们在第 2 章中使用了这种方法来创建电子表格应用程序的跳转单元格和排序对话框。
 
 | 窗口标题 | | | |
-|---|---|---|
+|---|---|---|---|
 | QLabel | QLineEdit | QPushButton |
 | QLabel | QLineEdit | QPushButton |
 | | QCheckBox | QPushButton |
@@ -4255,23 +4214,21 @@ FindFileDialog::FindFileDialog(QWidget *parent)
 
 图 6.3. 查找对话框的布局
 
-使用 QBoxLayout 和 QVBoxLayout 非常直观，但使用 GridLayout 是在二维单元格网格上工作的。布局左上角单元格中的 QLabel 位于位置 (0, 0)，相应的 QLineEdit 位于位置 (0, 1)。QCheckBox 跨越两列；它占据位置 (0, 2) 和 (1, 2) 的单元格。QTreeWidgetItem 和其下方的 QLabel 跨越两列。调用 addWidget() 的语法如下：
+使用 `QBoxLayout` 和 `QVBoxLayout` 非常直观，但使用 `GridLayout` 是在二维单元格网格上工作的。布局左上角单元格中的 `QLabel` 位于位置 (0, 0)，相应的 `QLineEdit` 位于位置 (0, 1)。`QCheckBox` 跨越两列；它占据位置 (0, 2) 和 (1, 2) 的单元格。`QTreeWidgetItem` 和其下方的 `QLabel` 跨越两列。调用 `addWidget()` 的语法如下：
 
 ```
 layout->addwidget(widget, row, column, rowSpan, columnSpan);
 ```
 
-在这里，widget 是要插入布局的子小部件，(row, column) 是小部件占据的左上角单元格，rowSpan 是小部件占据的行数，columnSpan 是小部件占据的列数。如果省略，rowSpan 和 columnSpan 参数默认认为 1。
+在这里，`widget` 是要插入布局的子小部件，`(row, column)` 是小部件占据的左上角单元格，`rowSpan` 是小部件占据的行数，`columnSpan` 是小部件占据的列数。如果省略，`rowSpan` 和 `columnSpan` 参数默认认为 1。
 
-addStretch() 告诉布局管理器在布局的该点消耗空间。通过添加一个伸缩项（stretch item），我们告诉布局管理器将任何多余空间放在关闭按钮和帮助按钮之间。在 Qt Designer 中，我们可以通过插入间位器（spacer）来实现相同的效果。间位器在 Qt Designer 中显示为蓝色的“弹簧”。
+`addStretch()` 告诉布局管理器在布局的该点消耗空间。通过添加一个伸缩项（stretch item），我们告诉布局管理器将任何多余空间放在关闭按钮和帮助按钮之间。在 Qt Designer 中，我们可以通过插入间位器（spacer）来实现相同的效果。间位器在 Qt Designer 中显示为蓝色的“弹簧”。
 
-## 6. 布局管理
-
-使用布局管理器为我们迄为止讨论的内容提供了额外益处。如果我们向布局添加小部件或从布局中移除小部件，布局将自动适应新情况。如果对子小部件调用 hide() 或 show()，也是如此。如果子小部件的大小发生变化，布局将自动重新生成并考虑新的尺寸提示。此外，布局管理器还会根据表单小部件的最小尺寸和尺寸提示自动为整个表单设置最小尺寸。
+使用布局管理器为我们迄为止讨论的内容提供了额外益处。如果我们向布局添加小部件或从布局中移除小部件，布局将自动适应新情况。如果对子小部件调用 `hide()` 或 `show()`，也是如此。如果子小部件的大小发生变化，布局将自动重新生成并考虑新的尺寸提示。此外，布局管理器还会根据表单小部件的最小尺寸和尺寸提示自动为整个表单设置最小尺寸。
 
 在目前展示的示例中，我们只是将小部件放入布局中并使用间位器消耗额外空间。在某些情况下，这不足以让布局完全符合我们的要求。在这些情况下，我们可以通过更改被布局小部件的尺寸策略（size policies）和尺寸提示来调整布局。
 
-小部件的尺寸策略告诉布局系统它应该如何拉伸或收缩。Qt 为所有内置小部件提供了合理的默认尺寸策略，但由于没有单一默认值可以兼顾所有布局，开发者更改一或两个的尺寸策略是常见的。QSizePolicy 具有水平和垂直组件。以下是最有用的值：
+小部件的尺寸策略告诉布局系统它应该如何拉伸或收缩。Qt 为所有内置小部件提供了合理的默认尺寸策略，但由于没有单一默认值可以兼顾所有布局，开发者更改一或两个的尺寸策略是常见的。`QSizePolicy` 具有水平和垂直组件。以下是最有用的值：
 
 - Fixed（固定）：小部件不会拉伸。它保持其尺寸提示大小。
 - Minimum（最小）：小部件不会小于其尺寸提示大小。
@@ -4289,29 +4246,23 @@ addStretch() 告诉布局管理器在布局的该点消耗空间。通过添加�
 
 图 6.4. 不同策略的含义
 
-### 在表单上布局小部件
+### 尺寸策略说明
 
 在图中，Preferred 和 Expanding 的显示方式相同。区别在哪里？当缩放包含 Preferred 和 Expanding 小部件的表单时，额外的空间会分配给 Expanding 小部件，而 Preferred 小部件保持其尺寸高度。
 
-有两种尺寸策略：Minimum 和 Ignored（忽略）。前者在旧版本的 Qt 中在少数情况下是必要的，但现在已经没有用处；首选的方法是使用 Expanding 并相应实现 sizeHint()。后者与 Expanding 相似，但它忽略宽度和最小尺寸。
+有两种尺寸策略：Minimum 和 Ignored（忽略）。前者在旧版本的 Qt 中在少数情况下是必要的，但现在已经没有用处；首选的方法是使用 Expanding 并相应实现 `sizeHint()`。后者与 Expanding 相似，但它忽略宽度和最小尺寸。
 
-除了尺寸策略的水平和垂直组件外，QSizePolicy 类还存储了水平和垂直伸缩因子（stretch factors）。这些伸缩因子可以用于指示不同的元素在扩展时以不同的速率增长。例如，如果我们有一个 QTreeView 在 QTextEdit 之上，我们可以将 QTextEdit 的垂直伸缩因子设置为 2，将 QTreeView 的垂直伸缩因子设置为 1。
+除了尺寸策略的水平和垂直组件外，`QSizePolicy` 类还存储了水平和垂直伸缩因子（stretch factors）。这些伸缩因子可以用于指示不同的元素在扩展时以不同的速率增长。例如，如果我们有一个 `QTreeView` 在 `QTextEdit` 之上，我们可以将 `QTextEdit` 的垂直伸缩因子设置为 2，将 `QTreeView` 的垂直伸缩因子设置为 1。
 
-影响布局的另一种方法是对子小部件设置最小尺寸、最大尺寸或固定尺寸。布局管理器会在布局小部件时尊重这些限制。如果这仍然不够，我们始终可以派生子小部件的类并实现 sizeHint() 以获得我们想要的尺寸提示。
+影响布局的另一种方法是对子小部件设置最小尺寸、最大尺寸或固定尺寸。布局管理器会在布局小部件时尊重这些限制。如果这仍然不够，我们始终可以派生子小部件的类并实现 `sizeHint()` 以获得我们想要的尺寸提示。
 
 ### 堆叠布局 (Stacked Layouts)
 
-QStackedLayout 类布局一组子小部件（或“页面”），并且只显示一个，隐藏其他。QStackedLayout 本身是不可见的，并且没有供用户更改页面的内在方法。图 6.5 中的小箭头和深灰色框架是由 Design 提供的，以便于设计布局。为了方便，Qt 还包含了 QStackedWidget，它提供了内置的 QStackedLayout。
+`QStackedLayout` 类布局一组子小部件（或“页面”），并且只显示一个，隐藏其他。`QStackedLayout` 本身是不可见的，并且没有供用户更改页面的内在方法。图 6.5 中的小箭头和深灰色框架是由 Design 提供的，以便于设计布局。为了方便，Qt 还包含了 `QStackedWidget`，它提供了内置的 `QStackedLayout`。
 
-图 6.5. QStackedLayout
+图 6.5. `QStackedLayout`
 
-页面从 0 开始编号。为了使特定的子小部件可见，我们可以调用 setCurrentIndex() 并传入页码。子小部件的页码可以通过 indexOf( ) 获取。
-
-
-
-
-
-## 6. 布局管理
+页面从 0 开始编号。为了使特定的子小部件可见，我们可以调用 `setCurrentIndex()` 并传入页码。子小部件的页码可以通过 `indexOf()` 获取。
 
 ![](img/34bd675de80edd220dc2d53b429caf78_161_0.png)
 
@@ -4327,7 +4278,6 @@ PreferenceDialog::PreferenceDialog(QWidget *parent)
     list->addItem(tr("Web Browser"));
     list->addItem(tr("Mail & News"));
     list->addItem(tr("Advanced"));
-
     stackedLayout = new QStackedLayout;
     stackedLayout->addWidget(appearancePage);
     stackedLayout->addWidget(webBrowserPage);
@@ -4335,7 +4285,6 @@ PreferenceDialog::PreferenceDialog(QWidget *parent)
     stackedLayout->addWidget(advancedPage);
     connect(list, SIGNAL(currentChanged(int)),
            stackedLayout, SLOT(setCurrentIndex(int)));
-
     list->setCurrentIndex(0);
 }
 ```
@@ -4346,14 +4295,14 @@ PreferenceDialog::PreferenceDialog(QWidget *parent)
 
 - 1. 基于“Dialog（对话框）”或“Widget（控件）”模板创建一个新表单。
 - 2. 在表单中添加一个 `QWidget` 和 `QStackedWidget`。
-- 3. 用子控件和布局填充每个页面。（要创建新页面，右键点击并选择 Insert Page（插入页面）；要切换页面，点击位于 QStackedWidget 右上角的微小左或右箭头。）
+- 3. 用子控件和布局填充每个页面。（要创建新页面，右键点击并选择 Insert Page（插入页面）；要切换页面，点击位于 `QStackedWidget` 右上角的微小左或右箭头。）
 - 4. 使用水平布局将控件并排排列。
 - 5. 将列表的 `currentRowChanged(int)` 信号连接到堆叠控件的 `setCurrentIndex(int)` 槽。
 - 6. 将列表的 `currentRow` 属性值设置为预定义的 0。
 
 由于我们使用预定义的信号和槽实现了页面切换，当在 Qt Designer 中预览时，对话框将表现出正确的行为。
 
-## 分割器 (Splitters)
+### 分割器 (Splitters)
 
 `QSplitter` 是一种包含其他控件的控件。分器器中的控件被分割器手柄分隔。用户可以通过拖动手柄来更改分器器子控件的大小。分割器通常可以作为布局管理器的替代方案，提供更多的控制——
 
@@ -4366,16 +4315,13 @@ PreferenceDialog::PreferenceDialog(QWidget *parent)
 ```cpp
 int main(int argc, char *argv[]) {
   QApplication application(argc, argv);
-
   QTextEdit *editor1 = new QTextEdit;
   QTextEdit *editor2 = new QTextEdit;
   QTextEdit *editor3 = new QTextEdit;
-
   QSplitter splitter(Qt::Horizontal);
   splitter.addWidget(editor1);
   splitter.addWidget(editor2);
   splitter.addWidget(editor3);
-
   ...
   splitter.show();
   return app.exec();
@@ -4417,7 +4363,6 @@ mainSplitter->addWidget(foldersTreeView);
 mainSplitter->addWidget(rightSplitter);
 mainSplitter->setStretchFactor(1, 1);
 setCentralWidget(mainSplitter);
-
 setWindowTitle(tr("Mail Client"));
 readSettings();
 }
@@ -4432,9 +4377,13 @@ void MailClient::writeSettings() {
     settings.setValue("size", size());
     settings.setValue("mainSplitter", mainSplitter->saveState());
     settings.setValue("rightSplitter", rightSplitter->saveState());
-    settings.endGroup();
-}
 ```
+
+
+
+`settings.endGroup();`
+
+}
 
 这是 `readSettings()` 函数：
 
@@ -4459,7 +4408,7 @@ Qt Designer 完全支持 `QSplitter`。要将控件放入分割器，将子控�
 | :--- | :--- |
 | horizontalScrollBar() | |
 
-图 6.11. QScrollArea 的组成控件
+图 6.11. `QScrollArea` 的组成控件
 
 使用 `QScrollArea` 的方法是调用 `setWidget()` 并传入想要滚动条的控件。如果该控件尚是，`QScrollArea` 会自动将其父化，使其成为视口的子控件（通过 `QScrollArea::viewport()` 访问）。如果我们想为第 5 章中开发的 `IconEditor` 控件使用滚动条，可以写如下代码：
 
@@ -4468,12 +4417,10 @@ int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
     IconEditor *iconEditor = new IconEditor;
     iconEditor->setIcon(QImage(":images/mouse.png"));
-
     QScrollArea scrollArea;
     scrollArea.setWidget(iconEditor);
     scrollArea.viewport()->setBackgroundRole(QPalette::Dark);
     scrollArea.setWindowTitle(QObject::tr("Icon Editor"));
-
     scrollArea.show();
     return app.exec();
 }
@@ -4496,33 +4443,29 @@ scrollArea.setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOn);
 
 图 6.10. Mail Client 的分割器索引
 
-`setStretchFactor()` 调用位于 `rightSplitter` 上，它将位置 1 (`textEdit`）的拉伸因子设置为 1。第二个 `setStretchFactor()` 调用位于 `mainSplitter` 上，它将位置 1 (`rightSplitter`）的拉伸因子设置为 1。这确保了 `textEdit` 将获得任何额外空间。
+`setStretchFactor()` 调用位于 `rightSplitter` 上，它将位置 1 (`textEdit`) 的拉伸因子设置为 1。第二个 `setStretchFactor()` 调用位于 `mainSplitter` 上，它将位置 1 (`rightSplitter`) 的拉伸因子设置为 1。这确保了 `textEdit` 将获得任何额外空间。
 
 ![](img/34bd675de80edd220dc2d53b429caf78_166_0.png)
 
-图 6.12. 调整 QScrollArea
-
-
-
-
+图 6.12. 调整 `QScrollArea`
 
 ## 6. 布局管理
 
-QScroll 继承了 QAbstractScrollArea 的大部分功能。像 QTextEdit 和 QAbstractItem（Qt 视图类的基类）等派自 QAbstractScrollArea，因此我们不需要将它们封装在 QScrollArea 中即可获得滚动条。
+`QScroll` 继承了 `QAbstractScrollArea` 的大部分功能。像 `QTextEdit` 和 `QAbstractItem`（Qt 视图类的基类）等派自 `QAbstractScrollArea`，因此我们不需要将它们封装在 `QScrollArea` 中即可获得滚动条。
 
 ### 停靠部件（Dock Widgets）与工具栏
 
-停靠部件是可以在停靠在 QMainWindow 内部或作为独立窗口浮动的控件。QMainWindow 提供了四个停靠部件区域：分别位于中心部件的上方、下方、左侧和右侧。像 Microsoft Visual Studio 和 Qt Linguist 这样的应用程序大量使用停靠窗口来提供非常灵活的用户界面。在 Qt 中，停靠部件是 QDockWidget 的实例。
+停靠部件是可以在停靠在 `QMainWindow` 内部或作为独立窗口浮动的控件。`QMainWindow` 提供了四个停靠部件区域：分别位于中心部件的上方、下方、左侧和右侧。像 Microsoft Visual Studio 和 Qt Linguist 这样的应用程序大量使用停靠窗口来提供非常灵活的用户界面。在 Qt 中，停靠部件是 `QDockWidget` 的实例。
 
-每个停靠部件都有自己的标题栏，即使在停靠状态下也是如此。用户可以通过拖动标题栏将停靠窗口从一个区域移动到另一个。他们也可以通过将停靠窗口拖出任何停靠区域将其从区域中分离并作为独立窗口浮动。自由浮动的停靠窗口始终位于主窗口的“上方”。用户可以通过点击部件标题栏中的关闭按钮来关闭 QDockWidget。通过调用 QDockWidget::setFeatures() 可以禁用这些功能的任何组合。
+每个停靠部件都有自己的标题栏，即使在停靠状态下也是如此。用户可以通过拖动标题栏将停靠窗口从一个区域移动到另一个。他们也可以通过将停靠窗口拖出任何停靠区域将其从区域中分离并作为独立窗口浮动。自由浮动的停靠窗口始终位于主窗口的“上方”。用户可以通过点击部件标题栏中的关闭按钮来关闭 `QDockWidget`。通过调用 `QDockWidget::setFeatures()` 可以禁用这些功能的任何组合。
 
-在 Qt 的早期版本中，工具栏被视为类似停靠部件并共享相同的停靠区域。从 Qt 4 开始，工具栏占据其中心部件周围的独立区域（如图 6.14 所示），且无法被拆卸。如果需要浮动工具栏，我们可以简单地将其放在 QDockWindow 中。
+在 Qt 的早期版本中，工具栏被视为类似停靠部件并共享相同的停靠区域。从 Qt 4 开始，工具栏占据其中心部件周围的独立区域（如图 6.14 所示），且无法被拆卸。如果需要浮动工具栏，我们可以简单地将其放在 `QDockWindow` 中。
 
-**图 6.14。** QMainWindow 的停靠和工具栏区域
+**图 6.14。** `QMainWindow` 的停靠和工具栏区域
 
-用虚线指示的角可以属于其相邻的两个停靠区域之一。例如，我们可以通过调用 QMainWindow::setCorner(Qt::TopLeftCorner, Qt::LeftDockWidgetArea) 让左上角属于左侧停靠区域。
+用虚线指示的角可以属于其相邻的两个停靠区域之一。例如，我们可以通过调用 `QMainWindow::setCorner(Qt::TopLeftCorner, Qt::LeftDockWidgetArea)` 让左上角属于左侧停靠区域。
 
-下面的代码段展示了如何封装一个部件（在此例为 QTreeWidget）并将其插入到右侧停靠区域：
+下面的代码段展示了如何封装一个部件（在此例为 `QTreeWidget`）并将其插入到右侧停靠区域：
 
 ```
 QDockWidget *shapesDockWidget = new QDockWidget(tr("Shapes"));
@@ -4531,9 +4474,9 @@ shapesDockWidget->setAllowedAreas(Qt::LeftDockWidgetArea | Qt::RightDockWidgetAr
 addDockWidget(Qt::RightDockWidgetArea, shapesDockWidget);
 ```
 
-setAllowed() 设置了哪些区域可以接受停靠窗口的约束。在这里，我们只允许用户将停靠部件拖入左侧和右侧停靠区域，这些区域有足够的垂直空间让其合理显示。如果没有明确设置允许的区域，我们可以将停靠部件拖入四个区域中的任何一个。
+`setAllowed()` 设置了哪些区域可以接受停靠窗口的约束。在这里，我们只允许用户将停靠部件拖入左侧和右侧停靠区域，这些区域有足够的垂直空间让其合理显示。如果没有明确设置允许的区域，我们可以将停靠部件拖入四个区域中的任何一个。
 
-以下是从 MainWindow 子类构造函数中创建一个包含 QComboBox、一个 QSpinBox 和几个 QToolButton 的工具栏的方法：
+以下是从 MainWindow 子类构造函数中创建一个包含 `QComboBox`、一个 `QSpinBox` 和几个 `QToolButton` 的工具栏的方法：
 
 ```
 QToolBar *fontToolbar = new QToolBar(tr("Font"));
@@ -4543,13 +4486,12 @@ fontToolbar->addAction(boldAction);
 fontToolbar->addAction(italicAction);
 fontToolbar->addAction(underlineAction);
 fontToolbar->setAllowedAreas(Qt::TopToolBarArea | Qt::BottomToolBarArea);
-
 addToolbar(fontToolbar);
 ```
 
-如果我们想保存所有停靠部件和工具栏的位置，以便在应用程序运行时恢复它们，可以编写与我们保存 QSplitter 状态时相似的代码，使用 QMainWindow 的 saveState() 和 restoreState() 函数：
+如果我们想保存所有停靠部件和工具栏的位置，以便在应用程序运行时恢复它们，可以编写与我们保存 `QSplitter` 状态时相似的代码，使用 `QMainWindow` 的 `saveState()` 和 `restoreState()` 函数：
 
-```
+```cpp
 void MainWindow::writeSettings()
 {
     QSettings settings("Software Inc.", "Icon Editor");
@@ -4558,7 +4500,6 @@ void MainWindow::writeSettings()
     settings.setValue("state", saveState());
     settings.endGroup();
 }
-
 void MainWindow::readSettings()
 {
     QSettings settings("Software Inc.", "Icon Editor");
@@ -4569,7 +4510,7 @@ void MainWindow::readSettings()
 }
 ```
 
-最后，QMainWindow 为所有停靠窗口和工具栏提供了右键菜单。用户可以使用此菜单关闭和恢复停靠窗口，以及隐藏和恢复工具栏。
+最后，`QMainWindow` 为所有停靠窗口和工具栏提供了右键菜单。用户可以使用此菜单关闭和恢复停靠窗口，以及隐藏和恢复工具栏。
 
 | 形状 |
 | :--- |
@@ -4577,19 +4518,19 @@ void MainWindow::readSettings()
 | 编辑 |
 | 字体 |
 
-图 6.15。QMainWindow 右键菜单
+图 6.15。`QMainWindow` 右键菜单
 
 ## 多文档接口 (MDI)
 
-在主窗口中心区域提供多个文档的应用程序被称为多文档接口应用程序，或 MDI 应用程序。在 Qt 中，MDI 应用程序是通过使用 QMDIArea 类作为中心部件，并将每个文档窗口设置为 QMDIArea 的子窗口来创建的。
+在主窗口中心区域提供多个文档的应用程序被称为多文档接口应用程序，或 MDI 应用程序。在 Qt 中，MDI 应用程序是通过使用 `QMDIArea` 类作为中心部件，并将每个文档窗口设置为 `QMDIArea` 的子窗口来创建的。
 
 MDI 应用程序的惯例是提供一个“窗口”菜单，其中包含一些管理窗口和窗口列表的命令。活动窗口用复选标记标识。用户可以通过点击“窗口”菜单中的条目使任何窗口变为活动状态。
 
 在本节中，我们将开发图 6.16 所示的 MDI Editor 应用程序，以演示如何创建以及实现其“窗口”菜单。
 
-该应用程序由两个类组成：MainWindow 和 Editor。代码在 CD 上，大部分内容与第一部分的 Spreadsheet 应用程序相同或相似，我们将仅展示新代码。
+该应用程序由两个类组成：`MainWindow` 和 `Editor`。代码在 CD 上，大部分内容与第一部分的 Spreadsheet 应用程序相同或相似，我们将仅展示新代码。
 
-让我们从 MainWindow 类开始。
+让我们从 `MainWindow` 类开始。
 
 ```cpp
 MainWindow::MainWindow()
@@ -4598,18 +4539,16 @@ MainWindow::MainWindow()
     setCentralWidget(workspace);
     connect(workspace, SIGNAL(windowActivated(QWidget *)),
         this, SLOT(updateMenus()));
-
     createActions();
     createMenus();
     createToolBars();
     createStatusBar();
-
     setWindowTitle(tr("MDI Editor"));
     setWindowIcon(QPixmap(":images/icon.png"));
 }
 ```
 
-在 MainWindow 中，我们创建了 QMDIArea 并将其设置为中心部件。我们将 windowActivated() 信号连接到槽函数以保持菜单更新。
+在 `MainWindow` 中，我们创建了 `QMDIArea` 并将其设置为中心部件。我们将 `windowActivated()` 信号连接到槽函数以保持菜单更新。
 
 ```cpp
 void MainWindow::newFile()
@@ -4618,7 +4557,6 @@ void MainWindow::newFile()
     workspace->addWindow(editor);
     editor->show();
 }
-
 ```
 
 ```cpp
@@ -4642,7 +4580,7 @@ void MainWindow::save()
 }
 ```
 
-activeEditor() 函数使用 qobject_cast 返回活动窗口的 Editor 指针，如果没有活动窗口则返回空指针。
+`activeEditor()` 函数使用 `qobject_cast` 返回活动窗口的 `Editor` 指针，如果没有活动窗口则返回空指针。
 
 ```cpp
 Editor *MainWindow::activeEditor()
@@ -4667,12 +4605,6 @@ void MainWindow::updateMenus()
     // 根据 hasEditor 启用或禁用操作
 }
 ```
-
-
-
-
-
-## 6. 布局管理
 
 ```cpp
 bool hasSelection = activeEditor()
@@ -4701,7 +4633,7 @@ if (activeEditor())
 
 每当窗口被激活时（当最后一个窗口关闭时），都会调用 `updateMenu()`，通过我们在 `MainWindow` 构造函数中使用信号与槽连接来更新菜单系统。
 
-大多数菜单选项只有在有活动窗口时才有意义，因此如果没有活动窗口，我们就禁用它们。最后，我们对代表活动窗口的 QAction 调用 `setChecked()`。得益 `QActionGroup`，我们不需要显式地检查之前的活动窗口。
+大多数菜单选项只有在有活动窗口时才有意义，因此如果没有活动窗口，我们就禁用它们。最后，我们对代表活动窗口的 `QAction` 调用 `setChecked()`。得益 `QActionGroup`，我们不需要显式地检查之前的活动窗口。
 
 ```cpp
 void MainWindow::createMenu()
@@ -4727,11 +4659,21 @@ void MainWindow::closeEvent(QCloseEvent *event)
 {
     workspace->closeAllWindows();
     if (activeEditor()) {
-        event->ignore();
-    } else {
-        event->accept();
-    }
+```
+
+
+
+
+`event->ignore();`
+
+} else {
+
+`event->accept();`
+
 }
+
+}
+
 ```
 
 `closeEvent()` 函数被重写以关闭所有子窗口，导致每个子窗口都接收到关闭事件。如果一个子部件“忽略”了它的关闭事件（因为用户取消了“未保存的更改”对话框），那么我们就忽略 `MainWindow` 的关闭事件；否则，我们接受它，导致 Qt 关闭整个窗口。如果我们没有在 `MainWindow` 中重写 `closeEvent()`，用户将没有机会保存更改。
@@ -4744,10 +4686,8 @@ void MainWindow::closeEvent(QCloseEvent *event)
 class Editor : public QTextEdit
 {
     Q_OBJECT
-
 public:
     Editor(QWidget *parent = 0);
-
     void newFile();
     bool open();
     bool open(const QString &fileName);
@@ -4755,13 +4695,10 @@ public:
     bool saveAs();
     QSize textSize() const;
     QAction *windowMenuAction() const { return action; }
-
 protected:
     void closeEvent(QCloseEvent *event);
-
 private slots:
     void documentWasModified();
-
 private:
     bool okToContinue();
     bool saveFile(const QString &fileName);
@@ -4769,7 +4706,6 @@ private:
     bool readFile(const QString &fileName);
     bool writeFile(const QString &fileName);
     QString strippedName(const QString &fileName);
-
     QString cursor;
     bool isUntitled;
 };
@@ -4788,7 +4724,6 @@ QAction *action;
 Editor::Editor(QWidget *parent)
 {
     QTextEdit(parent)
-
     action = new QAction(true);
     action->setCheckable(true);
     connect(action, SIGNAL(triggered())), this, SLOT(show()));
@@ -4826,15 +4761,11 @@ void Editor::newFile()
 }
 ```
 
-
-
-
-
 MDI 是同时处理多个文档的一种方式。在 Mac OSX 上，首选方法是使用多个顶层窗口。这种方法在第 3 章的“多文档”章节中有所介绍。
 
--   重写事件处理器
--   安装事件过滤器
--   在密集处理期间保持响应性
+- 重写事件处理器
+- 安装事件过滤器
+- 在密集处理期间保持响应性
 
 ## 7. 事件处理
 
@@ -4844,7 +4775,7 @@ MDI 是同时处理多个文档的一种方式。在 Mac OSX 上，首选方法�
 
 不应将事件与信号混淆。通常规则是，在使用小部件时，信号是有用的；而在实现小部件时，事件是有用的。例如，当我们使用 QQPushButton 时，我们更关注它的 `clicked()` 信号，而不是导致信号发射的低级鼠标或按键事件。但如果我们正在实现像 QPushButton 这样的类，我们需要编写代码来处理鼠标和按键事件，并在时发射 `clicked()` 信号。
 
-## 重写事件处理器
+### 重写事件处理器
 
 在 Qt 中，事件是一个继承自 `QEvent` 的对象。Qt 处理一百多种类型的事件，每种类型都通过一个名称值标识。例如，`QEvent::type()` 为鼠标事件返回 `QEvent::MouseButtonPress`。
 
@@ -4903,21 +4834,16 @@ MainWindow::MainWindow()
 {
     editor = new CodeEditor;
     setCentralWidget(editor);
-
     gotoBeginningLineAction =
         new QAction(tr("Go to Beginning of Line"), this);
     gotoBeginningLineAction->setShortcut(tr("Home"));
     connect(gotoBeginningLineAction, SIGNAL(activated()),
-
     gotoBeginningOfDocumentAction =
         new QAction(tr("Go to Beginning of Document"), this);
     connect(gotoBeginningOfDocumentAction, SIGNAL(activated()),
-
     ...
 }
 ```
-
-
 
 我们可以在 `Ticker` 构造函数中调用 `startTimer()`，但通过让 Qt 在部件实际显示时生成定时器事件，我们可以节省一些资源。
 
@@ -4948,7 +4874,7 @@ void Ticker::hideEvent(QHideEvent *event) {
 
 定时器事件是底层的，如果我们需要多个定时器，跟踪所有的定时器 ID 会变得非常繁琐。在这种情况下，为每个定时器创建一个 `QTimer` 对象通常更简单。`QTimer` 在每个定时器间隔处发射 `timeout()` 信号。`QTimer` 还为单次定时器（仅运行一次的定时器）提供了一个方便的接口。
 
-## 安装事件过滤器
+### 安装事件过滤器
 
 Qt 事件模型的一个非常强大的特性是，`QObject` 实例可以被设置为在另一个 `QObject` 看到事件之前对其事件进行监控。
 
@@ -4982,7 +4908,7 @@ CustomerInfoDialog::CustomerInfoDialog(QWidget *parent)
 }
 ```
 
-一旦注册了事件过滤器，发送到 `firstNameEdit`、`lastNameEdit` 和 `phoneNumberEdit` 小部件的事件在到达目标目的地之前，会先发送到 `CustomerInfoDialog` 的 `eventFilter()` 函数。
+一旦注册了事件过滤器，发送到 `firstNameEdit`、`lastNameEdit` 和 `cityEdit` 小部件的事件在到达目标目的地之前，会先发送到 `CustomerInfoDialog` 的 `eventFilter()` 函数。
 
 这里是接收事件的 `eventFilter()` 函数：
 
@@ -4999,16 +4925,17 @@ bool CustomerInfoDialog::eventFilter(QObject *target, QEvent *event)
             }
         }
     }
-    return QDialog::eventFilter(target, event);
-}
 ```
 
+
+
+`return QDialog::eventFilter(target, event);`
+
+}
+
 ## 事件处理
+
 （注意：第187-188页的OCR文本损坏/重复；以上表示可用的重构逻辑部分）。
-
-
-
-
 
 ## 172 7. 事件处理
 
@@ -5207,7 +5134,6 @@ painter.drawPie(80, 80, 400, 240, 16, 270);
 ```cpp
 QPainter painter(this);
 painter.setRenderHint(QPainter::Antialiasing, true);
-
 QPath path;
 path.moveTo(80, 320);
 path.cubicTo(200, 80, 320, 80, 480, 320);
@@ -5216,10 +5142,6 @@ painter.drawPath(path);
 ```
 
 `QPath` 类通过连接基础图形元素指定任意路径：直线、椭圆、多边形、弧、二次和三次贝塞尔曲线、其他路径。从意义上说，绘笔路径是终极绘制原，因为任何形状或形状组合都可以表示为路径。
-
-
-
-
 
 ## 使用 QPainter 绘画
 
@@ -5285,10 +5207,6 @@ painter.setWindow(-50, -50, 100, 100);
 
 图 8.8. 将逻辑坐标转换为物理坐标
 
-
-
-
-
 ## 绘器变换 (Painter Transformations)
 
 指定变换的一种简单方法是使用绘器的 `translate()`、`scale()`、`rotate()` 和 `shear()` 便利函数：
@@ -5296,6 +5214,8 @@ painter.setWindow(-50, -50, 100, 100);
 ```cpp
 painter.translate(-10.0
 ```
+
+
 
 但如果我们想反复使用相同的变换，那么将它们存储在 `QMatrix` 对象中，并在每次需要变换时在绘器上设置世界矩阵会更高效。
 
@@ -5309,21 +5229,16 @@ painter.translate(-10.0
 class OvenTimer : public QWidget
 {
   Q_OBJECT
-
 public:
   OvenTimer(QWidget *parent = 0);
-
   void setColor(int secs);
   int duration() const;
   void draw(QPainter *painter);
-
 signals:
   void timeout();
-
 protected:
   void paintEvent(QEvent *event);
   void mousePressEvent(MouseEvent *event);
-
 private:
   QDateTime finishTime;
   QTimer *updateTimer;
@@ -5350,12 +5265,9 @@ const int UpdateInterval = 1;
 OvenTimer::OvenTimer(QWidget *parent)
 {
 	QWidget(parent);
-
 	finishTime = QDateTime::currentDateTime();
-
 	updateTimer = new QTimer(this);
 	connect(updateTimer, SIGNAL(timeout()), SLOT(update()));
-
 	finishTimer = new QTimer(this);
 	finishTimer->setSingleShot(true);
 	connect(finishTimer, SIGNAL(timeout()), updateTimer, SLOT(stop()));
@@ -5372,9 +5284,7 @@ void OvenTimer::duration(int secs)
 	} else if (secs <= 0) {
 		secs = 0;
 	}
-
 	finishTime = QDateTime::currentDateTime().addSecs(secs);
-
 	if (secs > 0) {
 		updateTimer->start(UpdateInterval * 1000);
 		finishTimer->start(secs * 1000);
@@ -5425,10 +5335,7 @@ void OvenTimer::paintEvent(QPaintEvent *event)
 }
 ```
 
-
-
-
-## 8. 2D 和 3D 图形
+### 变换与保存
 
 尽管传递给 `drawLine()` 和 `drawText()` 调用的坐标始终相同。
 
@@ -5438,7 +5345,6 @@ void OvenTimer::paintEvent(QPaintEvent *event)
 for (int i = 0; i < MaxMinutes; ++i) {
     save();
     painter->rotate(-i * DegreesPerMinute);
-
     if (i % 5 == 0) {
         painter->setPen(thickPen);
         painter->drawLine(0, -41, 0, -44);
@@ -5451,9 +5357,9 @@ for (int i = 0; i < MaxMinutes; ++i) {
 }
 ```
 
-实现烤箱计时器的另一种方法是自己计算 (x,y) 位置，使用 `sin()` 和 `cos()` 来找到沿圆周的位置。但这样我们仍然需要使用平和平旋转来按角度绘制文本。
+实现烤箱计时器的另一种方法是自己计算 `(x,y)` 位置，使用 `sin()` 和 `cos()` 来找到沿圆周的位置。但这样我们仍然需要使用平和平旋转来按角度绘制文本。
 
-## 使用 QImage 进行高质量渲染
+### 使用 QImage 进行高质量渲染
 
 在绘图时，我们可能面临速度和准确性之间的权衡。例如，在 X11 和 Mac OS X 上，绘制 `QWidget` 或 `QImage` 依赖于平台的原生绘制引擎。在 X11 上，这确保了与 X server 的通信保持在最低；只发送绘制命令而不是实际图像数据。这种方法的这种缺点是 Qt 受到限于平台的原生支持：
 
@@ -5462,7 +5368,7 @@ for (int i = 0; i < MaxMinutes; ++i) {
 
 当准确性比效率更重要时，我们可以绘制到 `QImage` 并将结果复制到屏幕上。这始终使用 Qt 自己的内部部分引擎，在所有平台上产生相同的结果。唯一的限制是用于绘制的 `QImage` 必须使用 `QImage::Format_RGB32` 或 `QImage::Format_ARGB32_Premultiplied` 参数创建。
 
-预相乘 ARGB32 格式与传统的 ARGB32 格式 (0xaarrgb) 几乎相同，区别在于红、绿、蓝通道与 alpha 通道进行了“预相乘”。这意味着通常范围从 0x00 到 0xFF 的 RGB 值被从 0x00 缩放到 0xFF（通过乘以 alpha）。例如，一个 50% 透明的蓝色在 ARGB32 格式中表示为 0x7FFFF000FF，同理，一个 75% 透明的深绿色 0x3ffff0000（在 ARGB32 格式中）在预相乘 ARGB32 格式中将是 0x3f002000。
+预相乘 ARGB32 格式与传统的 ARGB32 格式 `0xaarrgb` 几乎相同，区别在于红、绿、蓝通道与 alpha 通道进行了“预相乘”。这意味着通常范围从 0x00 到 0xFF 的 RGB 值被从 0x00 缩放到 0xFF（通过乘以 alpha）。例如，一个 50% 透明的蓝色在 ARGB32 格式中表示为 `0x7FFFF000FF`，同理，一个 75% 透明的深绿色 `0x3ffff0000`（在 ARGB32 格式中）在预相乘 ARGB32 格式中将是 `0x3f002000`。
 
 假设我们使用抗锯齿绘制一个小部件，并希望在没有 Q Render 扩展的 X11 系统上获得良好的结果。依赖 Q Render 进行抗锯齿的 `originalEvent()` 处理程序可能像这样：
 
@@ -5486,7 +5392,6 @@ void MyWidget::paintEvent(QEvent *event) {
   draw(&image);
   imagePainter.end();
 }
-
 void MyWidget::paintEvent(QEvent *event) {
   painter.drawImage(0, 0, image);
 }
@@ -5499,8 +5404,6 @@ void MyWidget::paintEvent(QEvent *event) {
 Qt 图形引擎一个特别强大的功能是它对组合模式（composition modes）的支持。这些模式指定了源像素和目标像素在绘制时如何合并。这适用于所有的绘制操作，包括笔、画刷、渐变和图像绘制。
 
 默认的组合模式是 `QImage::CompositionMode_SourceOver`，这意味着源像素（我们正在绘制的像素）叠加在目标像素（现有像素）之上，其方式使得 alpha 分量定义了透明度。图 8.11 显示组合结果是通过 `QPainter::setCompositionMode()` 设置的。
-
-
 
 ## 打印
 
@@ -5534,7 +5437,6 @@ void printWindow::printFlowerGuide(const QStringList &entries)
     if (printDialog.exec()) {
         QPainter painter(&printer);
         QList<QString> pages;
-
         paginate(&painter, &pages, entries);
         printPages(&painter, pages);
     }
@@ -5551,7 +5453,6 @@ void paginate(QPainter *painter, QList<QString> *pages,
     QString currentPage;
     int pageHeight = painter->window().height() - 2 * LargeGap;
     int y = 0;
-
     foreach (const QString &entry, entries) {
         int height = entryHeight(painter, entry);
         if (y + height > pageHeight && !currentPage.empty()) {
@@ -5565,6 +5466,7 @@ void paginate(QPainter *painter, QList<QString> *pages,
     if (!currentPage.empty()) {
         pages->append(currentPage);
     }
+}
 ```
 
 `paginate()` 函数将花卉指南的条目分配到页面中。它依赖于 `entryHeight()` 函数，该函数计算一个条目的高度。它还考虑了页面顶部和底部大小为 `LargeGap` 的垂直间隙。
@@ -5574,26 +5476,41 @@ void paginate(QPainter *painter, QList<QString> *pages,
 ```cpp
 int PrintWindow::entryHeight(QPainter *painter, const QString &entry) {
     QStringList fields = entry.split(": ");
-    QString title = fields[0];
-    QString body = fields[1];
+```
 
-    int textWidth = painter->window().width() - 2 * SmallGap;
-    int maxHeight = painter->window().height();
 
-    painter->setFont(titleFont);
-    QRect titleRect = painter->boundingRect(0, 0, textWidth, maxHeight,
+
+```cpp
+QString title = fields[0];
+
+QString body = fields[1];
+
+int textWidth = painter->window().width() - 2 * SmallGap;
+
+int maxHeight = painter->window().height();
+
+painter->setFont(titleFont);
+
+QRect titleRect = painter->boundingRect(0, 0, textWidth, maxHeight,
+
                       Qt::TextWrap, title);
-    painter->setFont(bodyFont);
-    QRect bodyRect = painter->boundingRect(0, 0, textWidth, maxHeight,
+
+painter->setFont(bodyFont);
+
+QRect bodyRect = painter->boundingRect(0, 0, textWidth, maxHeight,
+
                      Qt::TextWrap, body);
-    return titleRect.height() + bodyRect.height() + 4 * SmallGap;
+
+return titleRect.height() + bodyRect.height() + 4 * SmallGap;
+
 }
 ```
 
-`entryHeight()` 函数使用 `QPainter::boundingRect()` 计算一个条目所需的垂直空间。图 8.14 显示了花卉条目的布局以及 `SmallGap` 和 `MediumGap` 常量的意义。
+`entryHeight()`函数使用`QPainter::boundingRect()`计算一个条目所需的垂直空间。图 8.14 显示了花卉条目的布局以及`SmallGap`和`MediumGap`常量的意义。
 
 ![](img/34bd675de80edd220dc2d53b429caf78_212_0.png)
 
+```cpp
 void PrintWindow::printPages(QPainter *painter, const QList<QString>&pages) {
     int firstPage = printer.fromPage() - 1;
     if (firstPage >= pages.size())
@@ -5622,7 +5539,9 @@ void PrintWindow::printPages(QPainter *painter, const QList<QString>&pages) {
         }
     }
 }
+```
 
+```cpp
 void PrintWindow::printPage(QPainter *painter, const QString &entries, int pageNumber) {
     painter->save();
     painter->translate(0, LargeGap);
@@ -5630,17 +5549,15 @@ void PrintWindow::printPage(QPainter *painter, const QString &entries, int pageN
         QStringList fields = entry.split(": ");
 ```
 
-`printPage()` 函数遍历花卉指南条目并使用两次调用 `printBox()` 来打印它们：一次用于标题（花的名字），另一次用于正文（它的描述）。它还在页面底部居中位置绘制了页码。
+`printPage()`函数遍历花卉指南条目并使用两次调用`printBox()`来打印它们：一次用于标题（花的名），另一次用于正文（它的描述）。它还在页面底部居中位置绘制了页码。
 
-`PrintPages()` 函数的作用是打印每一页。我们首先确定范围，使用 `fromPage()` 和 `toPage()` 设置用户请求的页数。如果打印机支持多份复制，我们会遍历这些页面。外层循环根据打印机支持的次数进行，内层循环遍历页面。如果不是第一份的第一页，我们会调用 `newPage()` 刷新旧页并开始新页。
+`PrintPages()`函数的作用是打印每一页。我们首先确定范围，使用`fromPage()`和`toPage()`设置用户请求的页数。如果打印机支持多份复制，我们会遍历这些页面。外层循环根据打印机支持的次数进行，内层循环遍历页面。如果不是第一份的第一页，我们会调用`newPage()`刷新旧页并开始新页。
 
 ## 8. 2D 和 3D 图形
 
 ## 使用 OpenGL 的图形
 
-OpenGL 是用于渲染 2D 和 3D 图形的标准 API。Qt 应用可以使用 `QtOpenGL` 模块绘制 3D 图形，该模块依赖于系统的 OpenGL 库。本节假设你熟悉 OpenGL。如果 OpenGL 对你来说是新的，开始学习的好地方是 http://www.opengl.org/。
-
-
+OpenGL 是用于渲染 2D 和 3D 图形的标准 API。Qt 应用可以使用`QtOpenGL`模块绘制 3D 图形，该模块依赖于系统的 OpenGL 库。本节假设你熟悉 OpenGL。如果 OpenGL 对你来说是新的，开始学习的好地方是 http://www.opengl.org/。
 
 由于您提供的原始文本存在大量的错乱和重复（代码块与描述文字交错，且内容多次重复），作为高级文档工程师，我已根据文档的逻辑结构对其进行了重新梳理和翻译，确保所有技术术语准确、代码块保持完整，并遵循了您的所有 Markdown 格式要求。
 
@@ -5679,7 +5596,7 @@ private:
 };
 ```
 
-Tetrahedron 类继承自 QGLWidget。`initializeGL()`、`resizeGL()` 和 `paintGL()` 函数继承自 QGLWidget。鼠标事件处理程序像通常一样重自 QWidget。
+`Tetrahedron`类继承自`QGLWidget`。`initializeGL()`、`resizeGL()`和`paintGL()`函数继承自`QGLWidget`。鼠标事件处理程序像通常一样重自`QWidget`。
 
 ```cpp
 Tetrahedron::Tetrahedron(QWidget *parent)
@@ -5696,7 +5613,7 @@ Tetrahedron::Tetrahedron(QWidget *parent)
 }
 ```
 
-在构造函数中，我们调用 `QGLWidget::setFormat()` 来指定 OpenGL 上下文，并初始化类的私有变量。
+在构造函数中，我们调用`QGLWidget::setFormat()`来指定 OpenGL 上下文，并初始化类的私有变量。
 
 ```cpp
 void Tetrahedron::initializeGL()
@@ -5708,7 +5625,7 @@ void Tetrahedron::initializeGL()
 }
 ```
 
-`initializeGL()` 在 `paintGL()` 之前调用一次。这是我们设置 OpenGL 渲染上下文、定义显示列表并执行所有初始化的地方。除了调用 `QGLWidget::glClearColor()` 外，所有代码都是标准的 OpenGL。如果我们想遵循标准 OpenGL，会在 RGBA 模式下调用 `glClearColor()`，在颜色模式下调用 `glClear()`。
+`initializeGL()`在`paintGL()`之前调用一次。这是我们设置 OpenGL 渲染上下文、定义显示列表并执行所有初始化的地方。除了调用`QGLWidget::glClearColor()`外，所有代码都是标准的 OpenGL。如果我们想遵循标准 OpenGL，会在 RGBA 模式下调用`glClearColor()`，在颜色模式下调用`glClear()`。
 
 ```cpp
 void Tetrahedron::resizeGL(int width, int height)
@@ -5722,7 +5639,7 @@ void Tetrahedron::resizeGL(int width, int height)
 }
 ```
 
-`resizeGL()` 在第一次调用 `paintGL()` 之前或调用 `initializeGL()` 之后调用。当窗口大小改变时也会调用。这是我们可以设置 OpenGL 视口、投影以及任何依赖于窗口设置的地方。
+`resizeGL()`在第一次调用`paintGL()`之前或调用`initializeGL()`之后调用。当窗口大小改变时也会调用。这是我们可以设置 OpenGL 视口、投影以及任何依赖于窗口设置的地方。
 
 ```cpp
 void Tetrahedron::paintGL()
@@ -5732,7 +5649,7 @@ void Tetrahedron::paintGL()
 }
 ```
 
-`paintGL()` 在窗口需要重绘时调用。这类似于 `QWidget::paintEvent()`，但我们使用的是 OpenGL 而不是 QPainter 函数。实际绘制由私有函数 `draw()` 执行。
+`paintGL()`在窗口需要重绘时调用。这类似于`QWidget::paintEvent()`，但我们使用的是 OpenGL 而不是 QPainter 函数。实际绘制由私有函数`draw()`执行。
 
 ```cpp
 void Tetrahedron::draw()
@@ -5765,7 +5682,7 @@ void Tetrahedron::draw()
 }
 ```
 
-在 `draw()` 中，我们绘制了四面体，考虑了 x、y、z 旋转以及存储在 `faceColors` 数组中的颜色。除了 `glColor()` 调用外，所有内容都是标准的 OpenGL。根据模式，我们可以使用 OpenGL 函数 `glColor3d(d)` 或 `glIndex()` 代替。
+在`draw()`中，我们绘制了四面体，考虑了 x、y、z 旋转以及存储在`faceColors`数组中的颜色。除了`glColor()`调用外，所有内容都是标准的 OpenGL。根据模式，我们可以使用 OpenGL 函数`glColor3d(d)`或`glIndex()`代替。
 
 ```cpp
 void Tetrahedron::mousePressEvent(QMouseEvent *event)
@@ -5801,19 +5718,19 @@ void Tetrahedron::mouseDoubleClickEvent(QMouseEvent *event)
 }
 ```
 
-9. 拖放
+## 9. 拖放
 
 拖放是应用程序内部或不同应用程序之间传输信息的一种现代且直观的方式。它通常与剪贴板支持一起提供，用于移动和复制数据。
 
-在本章中，我们将学习如何为应用程序添加拖放支持，以及如何处理自定义格式。我们还将展示如何重用拖放代码来添加剪贴板支持。这种代码重用是可能的，因为两种机制都基于 `QMimeData`，该类可以提供多种格式的数据。
+在本章中，我们将学习如何为应用程序添加拖放支持，以及如何处理自定义格式。我们还将展示如何重用拖放代码来添加剪贴板支持。这种代码重用是可能的，因为两种机制都基于`QMimeData`，该类可以提供多种格式的数据。
 
 ## 启用拖放
 
 拖放涉及两个不同的动作：拖动和放置。Qt 控件可以作为拖动点、放置点或两者。
 
-我们的第一个示例展示了如何让 Qt 应用程序接受另一个应用程序发起的拖动。该应用程序是一个以 `QTextEdit` 为中心部件的主窗口。当用户从桌面或文件管理器拖动文本文件并将其到应用程序上时，应用程序会将文件加载到 `QTextEdit` 中。
+我们的第一个示例展示了如何让 Qt 应用程序接受另一个应用程序发起的拖动。该应用程序是一个以`QTextEdit`为中心部件的主窗口。当用户从桌面或文件管理器拖动文本文件并将其到应用程序上时，应用程序会将文件加载到`QTextEdit`中。
 
-以下是示例中 `MainWindow` 类的定义：
+以下是示例中`MainWindow`类的定义：
 
 ```cpp
 class MainWindow : public QMainWindow
@@ -5832,9 +5749,6 @@ private:
 };
 ```
 
-
-
-
 ## 9. 拖放操作
 
 ```cpp
@@ -5842,15 +5756,13 @@ QTextEdit *textEdit;
 };
 ```
 
-MainWindow 类重新实现了 QWidget 的 `dragEvent()` 和 `dropEvent()`。由于本示例的目的是展示拖放功能，我们在主窗口类中所需的大部分功能已被省略了。
+`MainWindow`类重新实现了`QWidget`的`dragEvent()`和`dropEvent()`。由于本示例的目的是展示拖放功能，我们在主窗口类中所需的大部分功能已被省略了。
 
-```
-在构造函数中，我们创建了一个 QTextEdit 并将其设置为中央小部件。默认情况下，QTextEdit 接受来自其他应用程序的拖动，如果用户将文件释放到它上面，它会将文件插入到文本中。由于投放事件是从子控件向父控件传递的，通过通过禁用投放功能并在主窗口上启用它，我们可以在 MainWindow 中获取整个窗口的投放事件。
-```
+在构造函数中，我们创建了一个`QTextEdit`并将其设置为中央小部件。默认情况下，`QTextEdit`接受来自其他应用程序的拖动，如果用户将文件释放到它上面，它会将文件插入到文本中。由于投放事件是从子控件向父控件传递的，通过通过禁用投放功能并在主窗口上启用它，我们可以在`MainWindow`中获取整个窗口的投放事件。
 
-每当用户将对象拖到小部件上时，`dragEvent()` 就会被调用。如果我们在事件上调用 `acceptProposedAction()`，则表示用户可以将该对象放置在此小部件上。默认情况下，小部件将不会接受拖动。Qt 会自动更改光标，告知用户该小部件是否为合法的投放区域。
+每当用户将对象拖到小部件上时，`dragEvent()`就会被调用。如果我们在事件上调用`acceptProposedAction()`，则表示用户可以将该对象放置在此小部件上。默认情况下，小部件将不会接受拖动。Qt 会自动更改光标，告知用户该小部件是否为合法的投放区域。
 
-在这里，我们允许用户拖动文件但不允许其他任何内容。为此，我们检查拖动的 MIME 类型。`text/uri-list` MIME 类型用于存储通用资源标识符（URI）列表，这些可以是文件名、URL（如 HTTP 或 FTP 路径）或其他全局资源标识符。标准 MIME 类型由互联网分配号码机构（IANA）定义。它们由斜杠分隔的类型和子类型组成。MIME 类型被剪贴板以及拖放系统用于识别不同类型的数据。MIME 类型的官方列表请访问：http://www.iana.org/assignments/media-types/
+在这里，我们允许用户拖动文件但不允许其他任何内容。为此，我们检查拖动的 MIME 类型。`text/uri-list`MIME 类型用于存储通用资源标识符（URI）列表，这些可以是文件名、URL（如 HTTP 或 FTP 路径）或其他全局资源标识符。标准 MIME 类型由互联网分配号码机构（IANA）定义。它们由斜杠分隔的类型和子类型组成。MIME 类型被剪贴板以及拖放系统用于识别不同类型的数据。MIME 类型的官方列表请访问：http://www.iana.org/assignments/media-types/
 
 ```cpp
 void MainWindow::dropEvent(QDropEvent *event)
@@ -5876,21 +5788,24 @@ if (readFile(fileName)) {
     .arg(tr("Drag File")));
 }
 ```
+
 ```cpp
 }
 ```
 
-当用户将对象拖到小部件上时，`dropEvent()` 会被调用。我们调用 `QMimeData::urls()` 来获取 QUrl 列表。通常，用户一次只拖动一个文件，但他们也可以通过选取多个文件来拖动多个文件。如果存在多个 URL，或者 URL 不是本地文件名，我们将立即返回。
 
-QWidget 还提供了 `dragMoveEvent()` 和 `dragLeaveEvent()`，但对于大多数应用程序来说，不需要重新实现它们。
 
-第二个示例说明了如何启动拖动并接受投放。我们将创建一个支持拖放的 QListWidget 子类，并将其作为图 9.1 所示的项目选择器应用程序中的组件。
+当用户将对象拖到小部件上时，`dropEvent()`会被调用。我们调用`QMimeData::urls()`来获取`QUrl`列表。通常，用户一次只拖动一个文件，但他们也可以通过选取多个文件来拖动多个文件。如果存在多个`URL`，或者`URL`不是本地文件名，我们将立即返回。
+
+`QWidget`还提供了`dragMoveEvent()`和`dragLeaveEvent()`，但对于大多数应用程序来说，不需要重新实现它们。
+
+第二个示例说明了如何启动拖动并接受投放。我们将创建一个支持拖放的`QListWidget`子类，并将其作为图 9.1 所示的项目选择器应用程序中的组件。
 
 ![](img/34bd675de80edd220dc2d53b429caf78_224_0.png)
 
 项目选择器应用程序向用户展示两个填充了名称的列表部件。每个列表部件代表一个项目。用户可以拖放列表部件中的名称，将人员从一个项目移动到另一个项目。
 
-拖放代码全部位于 QListWidget 子类中。以下是该类的定义：
+拖放代码全部位于`QListWidget`子类中。以下是该类的定义：
 
 ```cpp
 class ProjectListWidget : public QListWidget {
@@ -5912,7 +5827,7 @@ private:
 };
 ```
 
-ProjectListWidget 类重新实现了 QWidget 中声明的五个处理器。
+`ProjectListWidget`类重新实现了`QWidget`中声明的五个处理器。
 
 ```cpp
 ProjectListWidget::ProjectListWidget(QWidget *parent)
@@ -5933,7 +5848,7 @@ void ProjectListWidget::mouseEvent(QMouseEvent *event)
 }
 ```
 
-当用户按下左鼠标键时，我们将鼠标位置存储在私有变量 `startPos` 中。我们调用 QListWidget 对 `mouseEvent()` 的实现，以确保 QWidget 有机会像往常处理鼠标事件。
+当用户按下左鼠标键时，我们将鼠标位置存储在私有变量`startPos`中。我们调用`QListWidget`对`mouseEvent()`的实现，以确保`QWidget`有机会像往常处理鼠标事件。
 
 ```cpp
 void ProjectListWidget::mouseEvent(QMouseEvent *event)
@@ -5946,9 +5861,10 @@ void ProjectListWidget::mouseEvent(QMouseEvent *event)
     QListWidget::mouseEvent(event);
 }
 ```
+
 *注：原始 OCR 文本中 if 块缺少一个大括号。*
 
-当用户按住左键并移动光标时，我们启动拖动。我们计算当前鼠标位置与按下左键的位置之间的距离。如果该距离大于 QApplication 建议的拖动距离（通常为 4 像素），我们就调用私有函数 `startDrag()` 来开始拖动。这避免了仅仅因为用户手抖就启动了拖动。
+当用户按住左键并移动光标时，我们启动拖动。我们计算当前鼠标位置与按下左键的位置之间的距离。如果该距离大于`QApplication`建议的拖动距离（通常为 4 像素），我们就调用私有函数`startDrag()`来开始拖动。这避免了仅仅因为用户手抖就启动了拖动。
 
 ```cpp
 void ProjectListWidget::startDrag()
@@ -5966,13 +5882,9 @@ void ProjectListWidget::startDrag()
 
 *(注：提供的第 225-227 页 OCR 文本非常破碎且包含重复的损坏代码，我根据标准的 Qt 拖放模式和可用代码片段进行了逻辑重构，以确保技术文档的连贯性。)*
 
-
-
-
-
 ## 支持自定义拖拽类型
 
-为了展示这些方法是如何运作的，我们将演示如何为 QTableWidget 添加拖放功能。该拖拽将支持以下 MIME 类型：text/plain、text/html 和 text/csv。使用第一种方法，启动拖拽看起来如下：
+为了展示这些方法是如何运作的，我们将演示如何为`QTableWidget`添加拖放功能。该拖拽将支持以下`MIME`类型：`text/plain`、`text/html`和`text/csv`。使用第一种方法，启动拖拽看起来如下：
 
 ```cpp
 void MyTableWidget::mouseMouseEvent(QMouseEvent *event)
@@ -6004,7 +5916,7 @@ void MyTableWidget::startDrag()
 }
 ```
 
-`startDrag()` 私有函数从 `mouseMouseEvent()` 调用，用于拖拽矩形选择。我们使用 `setText()` 和 `setHtml()` 设置 text/plain 和 text/html MIME 类型，并使用 `setData()` 设置 text/csv 类型，该函数接受任意 MIME 类型，而 `selectionAsString()` 函数类似于 `Spreadsheet::copy()` 函数，参见第 4 章（第 83 页）。
+`startDrag()`私有函数从`mouseMouseEvent()`调用，用于拖拽矩形选择。我们使用`setText()`和`setHtml()`设置`text/plain`和`text/html` `MIME`类型，并使用`setData()`设置`text/csv`类型，该函数接受任意`MIME`类型，而`selectionAsString()`函数类似于`Spreadsheet::copy()`函数，参见第 4 章（第 83 页）。
 
 ```cpp
 QString MyTableWidget::toHtml(const QString &plainText)
@@ -6035,7 +5947,7 @@ return result;
 }
 ```
 
-`toCsv()` 和 `toHtml()` 函数将“制表符”和“换行符”字符串转换为 CSV（逗号分隔值）或 HTML 字符串。例如，数据：
+`toCsv()`和`toHtml()`函数将“制表符”和“换行符”字符串转换为`CSV`（逗号分隔值）或`HTML`字符串。例如，数据：
 
 ```
 Red Green Blue
@@ -6058,7 +5970,7 @@ Cyan Yellow Magenta
 </table>
 ```
 
-转换是以尽可能简单的方式通过 `QString::replace()` 完成的。为了转义 HTML 特殊字符，我们使用 `Qt::escape()`。
+转换是以尽可能简单的方式通过`QString::replace()`完成的。为了转义`HTML`特殊字符，我们使用`Qt::escape()`。
 
 ```cpp
 void MyTableWidget::dropEvent(QDropEvent *event)
@@ -6077,11 +5989,11 @@ void MyTableWidget::dropEvent(QDropEvent *event)
 }
 ```
 
-尽管我们提供了三种不同的数据格式，但在 `dropEvent()` 中只接受其中的两种。如果用户从 QTableWidget 拖拽单元到 HTML 编辑器，我们可以将其转换为 HTML 表格。但如果用户将任意 HTML 拖入 QTableWidget，我们不希望接受它。
+尽管我们提供了三种不同的数据格式，但在`dropEvent()`中只接受其中的两种。如果用户从`QTableWidget`拖拽单元到`HTML`编辑器，我们可以将其转换为`HTML`表格。但如果用户将任意`HTML`拖入`QTableWidget`，我们不希望接受它。
 
-为了实现这一功能，我们还需要在 `MyTableWidget` 构造函数中调用 `acceptDrops(true)` 并设置 `setSelectionMode(ContiguousSelection)`。
+为了实现这一功能，我们还需要在`MyTableWidget`构造函数中调用`acceptDrops(true)`并设置`setSelectionMode(ContiguousSelection)`。
 
-现在我们将重做示例，但这次我们将子类 `QMimeData` 以后处理或避免 QTableWidget-Items 与 `QByteArray` 之间潜在的开销较大的转换。以下是我们的子类定义：
+现在我们将重做示例，但这次我们将子类`QMimeData`以后处理或避免`QTableWidget-Items`与`QByteArray`之间潜在的开销较大的转换。以下是我们的子类定义：
 
 ```cpp
 class TableMimeData : public QMimeData
@@ -6112,7 +6024,7 @@ private:
 };
 ```
 
-我们没有存储实际数据，而是存储一个 `QWidgetSelectionRange` 来指定正在被拖拽的单元格，并保留指向 TableWidget 的指针。`formats()` 和 `retrievedData()` 函数是从 `QMimeData` 重新实现的的。
+我们没有存储实际数据，而是存储一个`QWidgetSelectionRange`来指定正在被拖拽的单元格，并保留指向`TableWidget`的指针。`formats()`和`retrievedData()`函数是从`QMimeData`重新实现的的。
 
 ```cpp
 TableMimeData::TableMimeData(const QWidget *tableWidget,
@@ -6133,7 +6045,7 @@ QStringList TableMimeData::formats()
 }
 ```
 
-`formats()` 函数返回 `QMimeData` 提供的 MIME 类型列表。为了与其他应用程序兼容，通常通过 `formats()` 检查数据来获取最佳类型。
+`formats()`函数返回`QMimeData`提供的`MIME`类型列表。为了与其他应用程序兼容，通常通过`formats()`检查数据来获取最佳类型。
 
 ```cpp
 QVariant TableMimeData::retrievedData(const QString &format,
@@ -6151,10 +6063,6 @@ QVariant TableMimeData::retrievedData(const QString &format,
 }
 ```
 
-
-
-
-
 ## 10. 视图视图类
 
 许多应用程序允许用户搜索、查看和编辑属于数据集的单个项目。这些数据可能隐藏在文件中，也可以从数据库或网络服务器访问。处理此类数据集的标准方法是使用 Qt 的项视图类（item view classes）。
@@ -6171,15 +6079,17 @@ Qt 提供了一种受 MVC 方法启发的模型/视图架构。在 Qt 中，模�
 
 **图 10.2.** 一个模型可以为多个视图
 
-在很多情况下，我们只需要向用户展示相对较少的项目。在这些常见情况下，我们可以使用 Qt 的便利视图类（QListWidget、TableWidget 和 QTreeWidgetItem）并直接向它们填充项目。这些类的行为与 Qt 早期版本提供的项视图类类似。它们将数据存储在“项”中（例如，Table 包含 TableItems）。内部，便利类使用自定义模型使项对视图可见。
+在很多情况下，我们只需要向用户展示相对较少的项目。在这些常见情况下，我们可以使用 Qt 的便利视图类（`QListWidget`、`TableWidget`和`QTreeWidgetItem`）并直接向它们填充项目。这些类的行为与 Qt 早期版本提供的项视图类类似。它们将数据存储在“项”中（例如，Table 包含 TableItems）。内部，便利类使用自定义模型使项对视图可见。
 
-对于大型数据集，复制数据通常不是选项。在这种情况下，我们可以使用 Qt 的视图（QListView、QTableView 和 QTreeView）结合数据模型，该模型可以是自定义模型或 Qt 的预定义模型之一。例如，如果数据集存储在数据库中，可以将 QTableView 与 QAbstractTableModel 相。
+
+
+对于大型数据集，复制数据通常不是选项。在这种情况下，我们可以使用 Qt 的视图（`QListView`、`QTableView` 和 `QTreeView`）结合数据模型，该模型可以是自定义模型或 Qt 的预定义模型之一。例如，如果数据集存储在数据库中，可以将 `QTableView` 与 `QAbstractTableModel` 相。
 
 ## 使用项视图便利类
 
-使用 Qt 的视图便利子类通常比定义自定义模型更简单，并且在不需要分离模型和视图的优势的情况下适用。我们在第 4 章使用了这种技术，通过子类 QTableWidget 和 QTableWidgetItem 来实现电子表格功能。
+使用 Qt 的视图便利子类通常比定义自定义模型更简单，并且在不需要分离模型和视图的优势的情况下适用。我们在第 4 章使用了这种技术，通过子类 `QTableWidget` 和 `QTableWidgetItem` 来实现电子表格功能。
 
-在本节中，我们将展示如何使用便利项视图子类来显示项目。第一个示例显示了一个只读的 QListWidget，第二个示例显示了一个可编辑的 QTableWidget，第三个示例显示了一个只读的 QTableWidget。
+在本节中，我们将展示如何使用便利项视图子类来显示项目。第一个示例显示了一个只读的 `QListWidget`，第二个示例显示了一个可编辑的 `QTableWidget`，第三个示例显示了一个只读的 `QTableWidget`。
 
 我们从一个简单的对话框开始，允许用户从列表中选择流程图符号。每个项目由图标、文本和一个唯一 ID 组成。
 
@@ -6200,18 +6110,13 @@ public:
 };
 ```
 
-当我们构造对话框时，我们必须向它传递一个 QMap<int, QString>……（此处省略原文中重复的描述）。
+当我们构造对话框时，我们必须向它传递一个 `QMap<int, QString>`……（此处省略原文中重复的描述）。
 
-
-
-
-
-# 222
 ## 10. 项目视图类
 
-在我们 Qt 便利项目视图控件的第三个也是最后一个示例中，我们将查看一个应用程序的片段，该程序使用 QTreeWidget 显示 Qt 应用程序设置。QTreeWidget 默认情况下是只读的。
+在我们 Qt 便利项目视图控件的第三个也是最后一个示例中，我们将查看一个应用程序的片段，该程序使用 `QTreeWidget` 显示 Qt 应用程序设置。`QTreeWidget` 默认情况下是只读的。
 
-## 使用项目视图便利类
+### 使用项目视图便利类
 
 ![](img/34bd675de80edd220dc2d53b429caf78_240_0.png)
 
@@ -6238,7 +6143,7 @@ SettingsViewer::SettingsViewer(QWidget *parent)
     readSettings();
 ```
 
-要访问应用程序设置，必须创建一个以组织名称和应用程序名称作为参数的 QSettings 对象。我们使用了默认名称（"Trolltech" 的 "Designer"）并构造了一个新的 QTreeWidgetItem。最后，我们调用了 `readSettings()` 函数。
+要访问应用程序设置，必须创建一个以组织名称和应用程序名称作为参数的 `QSettings` 对象。我们使用了默认名称（"Trolltech" 的 "Designer"）并构造了一个新的 `QTreeWidgetItem`。最后，我们调用了 `readSettings()` 函数。
 
 ```
 void SettingsViewer::readSettings()
@@ -6254,9 +6159,9 @@ void SettingsViewer::readSettings()
 }
 ```
 
-## 224 10. 项目视图类
+### 10. 项目视图类
 
-应用程序设置存储在键值值的层次结构中。`addChildSettings()` 私有函数接收一个设置对象、一个父 QTreeWidgetItem 和当前的“组”。组是 QSettings 等于文件系统的目录。`addChildSettings()` 函数可以递归地调用自己来遍历属性树。来自 `readsettings()` 函数的初始调用传递 0 作为父项以表示根节点。
+应用程序设置存储在键值值的层次结构中。`addChildSettings()` 私有函数接收一个设置对象、一个父 `QTreeWidgetItem` 和当前的“组”。组是 `QSettings` 等于文件系统的目录。`addChildSettings()` 函数可以递归地调用自己来遍历属性树。来自 `readsettings()` 函数的初始调用传递 0 作为父项以表示根节点。
 
 ```cpp
 void SettingsViewer::addChildSettings(QSettings &settings,
@@ -6286,7 +6191,7 @@ void SettingsViewer::addChildSettings(QSettings &settings,
 }
 ```
 
-`addChildSettings()` 函数用于创建所有 QTreeItems。它遍历设置层次结构中当前层级的所有键，并为每个键创建一个 QTreeWidgetItem。如果传递 0 作为父项，我们把该项创建为 QTreeWidgetItem 的子项（使其成为顶层项）；否则，我们将该项创建为父项的子项。第一列设置为键的名称，第二列设置为值。接下来，函数遍历当前层级上的每个组。对于每个组，都会创建一个新的 QTreeWidgetItem，其第一列设置为组的名称。然后，函数递归地调用自己，并将组项作为父项来填充该 QTreeWidgetItem 以组的子项。本示例显示的项目视图允许我们使用与早期版本非常相似的编程风格：将数据读入项目视图，使用项目对象表示数据，并且（如果项目是可编辑的）将数据写回数据源。在接下来的章节中，我们将超越这种简单的方法，并利用 Qt 的模型/视图架构。
+`addChildSettings()` 函数用于创建所有 `QTreeItems`。它遍历设置层次结构中当前层级的所有键，并为每个键创建一个 `QTreeWidgetItem`。如果传递 0 作为父项，我们把该项创建为 `QTreeWidgetItem` 的子项（使其成为顶层项）；否则，我们将该项创建为父项的子项。第一列设置为键的名称，第二列设置为值。接下来，函数遍历当前层级上的每个组。对于每个组，都会创建一个新的 `QTreeWidgetItem`，其第一列设置为组的名称。然后，函数递归地调用自己，并将组项作为父项来填充该 `QTreeWidgetItem` 以组的子项。本示例显示的项目视图允许我们使用与早期版本非常相似的编程风格：将数据读入项目视图，使用项目对象表示数据，并且（如果项目是可编辑的）将数据写回数据源。在接下来的章节中，我们将超越这种简单的方法，并利用 Qt 的模型/视图架构。
 
 ## 使用预定义模型
 
@@ -6294,15 +6199,15 @@ Qt 提供了几个用于视图类的预定义模型：
 
 | 模型 | 说明 |
 | :--- | :--- |
-| QListModel | 存储字符串列表 |
-| StandardItemModel | 存储任意数据 |
-| QDirModel | 封装本地文件系统 |
-| QSqlQueryModel | 封装结果集 |
-| QSqlTableModel | 封装 SQL 表 |
-| QSqlRelationalTableModel | 封装带有外键的 SQL 表 |
-| QSortFilterProxyModel | 对另一个模型进行排序和过滤 |
+| `QListModel` | 存储字符串列表 |
+| `StandardItemModel` | 存储任意数据 |
+| `QDirModel` | 封装本地文件系统 |
+| `QSqlQueryModel` | 封装结果集 |
+| `QSqlTableModel` | 封装 SQL 表 |
+| `QSqlRelationalTableModel` | 封装带有外键的 SQL 表 |
+| `QSortFilterProxyModel` | 对另一个模型进行排序和过滤 |
 
-在本节中，我们将查看如何使用 QListModel、QDirModel 和 QSortFilterProxyModel。SQL 模型将在第 13 章介绍。让我们从一个简单的对话框开始，用户可以使用它来添加、删除和编辑 QStringList，其中每个字符串代表一个团队负责人。
+在本节中，我们将查看如何使用 `QListModel`、`QDirModel` 和 `QSortFilterProxyModel`。SQL 模型将在第 13 章介绍。让我们从一个简单的对话框开始，用户可以使用它来添加、删除和编辑 `QStringList`，其中每个字符串代表一个团队负责人。
 
 ![](img/34bd675de80edd220dc2d53b429caf78_242_0.png)
 
@@ -6321,11 +6226,14 @@ TeamLeadersDialog::TeamLeadersDialog(const QStringList &leaders, QWidget *parent
     listView->setTriggers(QHeader::Stretch); // 注意：此处原文应为 QAbstractItemView 触发器，按逻辑翻译
 }
 ```
+
 *更正：根据提供的上下文，最后一段代码应为：*
+
 ```cpp
     listView->setTriggers(QAbstractItemView::AnyKeyPressed | QAbstractItemView::DoubleClicked);
 ```
-通过创建一个 QListView 并设置模型来开始。接下来我们创建一个 QListView 并将其设置为创建的模型。我们还设置了某些触发器，允许用户通过输入或双击进行编辑。默认情况下，QListView 是只读的。我们对新行设置编辑模式。
+
+通过创建一个 `QListView` 并设置模型来开始。接下来我们创建一个 `QListView` 并将其设置为创建的模型。我们还设置了某些触发器，允许用户通过输入或双击进行编辑。默认情况下，`QListView` 是只读的。我们对新行设置编辑模式。
 
 ```cpp
 void TeamLeadersDialog::insert()
@@ -6336,7 +6244,9 @@ void TeamLeadersDialog::insert()
     listView->setCurrentIndex(index);
 }
 ```
+
 （ 插入）
+
 ```
 当用户点击插入按钮时，`insert()` 槽被调用。该槽首先获取视图的行号。我们在模型上执行插入，并设置视图的当前索引为新插入的行。模型会自动更新视图。
 
@@ -6346,6 +6256,7 @@ void TeamLeadersDialog::del()
     model->removeRows(listView->currentIndex().row(), 1);
 }
 ```
+
 构造函数中，删除按钮的 `clicked()` 信号连接到 `del()` 槽。由于我们正在删除当前行，我们可以使用当前索引和行数 1 调用 `removeRows()`。与插入类似，我们依靠模型来相应地更新视图。
 
 ```cpp
@@ -6354,19 +6265,16 @@ QStringList TeamLeadersDialog::leaders() const
     return model->stringList();
 }
 ```
+
 最后，`leaders()` 函数提供了在对话框关闭时读回编辑字符串的方法。
 
-TeamLeadersDialog 可以通过参数化窗口标题变为通用的列表编辑对话框。展示文件或目录所需的另一种通用对话框是。下一个示例使用了 QDirModel 类，它封装了计算机的文件系统并能够显示（隐藏）各种文件属性。该模型可以应用过滤器来限制显示的文件系统项，并以各种方式对条目进行排序。
+`TeamLeadersDialog` 可以通过参数化窗口标题变为通用的列表编辑对话框。展示文件或目录所需的另一种通用对话框是。下一个示例使用了 `QDirModel` 类，它封装了计算机的文件系统并能够显示（隐藏）各种文件属性。该模型可以应用过滤器来限制显示的文件系统项，并以各种方式对条目进行排序。
 
 ![](img/34bd675de80edd220dc2d53b429caf78_244_0.png)
 
 我们将首先查看 Directory Viewer 对话框构造函数中模型和视图的创建与设置。
 
-
-
-
-
-## 228 10. 单元视图类
+### 10. 单元视图类
 
 使用 `scrollTo()`。然后，我们确保第一列足够宽，以便显示其所有条目而无需使用省略号（...）。
 
@@ -6421,17 +6329,13 @@ void DirectoryViewer::remove() {
 ColorNamesDialog::ColorNamesDialog(QWidget *parent)
 {
     QDialog(parent)
-
     sourceModel = new QStringListModel(this);
     sourceModel->setStringList(QColor::colorNames());
-
     proxyModel = new QSortFilterProxyModel(this);
     proxyModel->setSourceModel(sourceModel);
     proxyModel->setFilterKeyColumn(0);
-
     listView = new QListView();
     listView->setModel(proxyModel);
-
     syntaxComboBox = new QComboBox();
     syntaxComboBox->addItem("Regular expression", QRegExp::RegExp);
     syntaxComboBox->addItem("Wildcard", QRegExp::Wildcard);
@@ -6441,23 +6345,34 @@ ColorNamesDialog::ColorNamesDialog(QWidget *parent)
 
 `QStringListModel` 是以通常的方式创建并填充的。接下来是构造 `QSortFilterProxyModel`。我们通过 `setSourceModel()` 传递底层模型，并告诉代理根据原始模型的第 0 列进行过滤。`QComboBox::addItem` 函数接受一个类型为 `QVariant` 的可选“data”参数；我们用它来存储与每个条目文本对应的 `QRegExp::PatternSyntax` 值。
 
-## 10. 单元视图类
+### 10. 单元视图类
 
 ```
 void ColorNamesDialog::reapplyFilter()
 {
     QRegExp::PatternSyntax syntax =
     QRegExp::PatternSyntax(syntaxComboBox->currentIndex()).toData();
-    QRegExp regexp(filterLineEdit->text(), Qt::CaseInsensitive, syntax);
-    proxyModel->setFilterRegExp(regexp);
-}
 ```
 
-当用户更改过滤字符串或模式语法的组合框时，会调用 `reapplyFilter()`。我们使用行编辑器中的文本创建一个 `QRegExp`。然后，我们将它的模式语法设置为组合框当前项数据中存储的值。当我们调用 `filterExp()` 时，新的过滤器将变为激活，视图将自动更新。
+
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
+
+当用户更改过滤字符串或模式语法的组合框时，会调用`reapplyFilter()`。我们使用行编辑器中的文本创建一个`QRegExp`。然后，我们将它的模式语法设置为组合框当前项数据中存储的值。当我们调用`filterExp()`时，新的过滤器将变为激活，视图将自动更新。
 
 ## 实现自定义模型
 
-预定义模型提供了处理和查看数据的方便方法。然而，某些数据无法使用预定义模型高效地处理，对于这些情况，有必要创建针对底层数据优化的自定义模型。在开始创建自定义模型之前，让我们回顾一下 Qt 模型/视图架构中使用的关键概念。模型中的每个数据元素都有一个索引和一组被称为“角色（roles）”的属性，这些属性可以取任意值。我们在本章的早些部分已经看到，最常用的角色有（例如 `Qt::DisplayRole` 和 `Qt::EditRole`）。其他角色用于补充性数据（`Qt::ToolTipRole`、`Qt::StatusRole`），另一些角色用于控制显示属性（如 `Qt::FontRole`、`Qt::TextAlignmentRole`、`Qt::ColorRole` 和 `Qt::BackgroundColor`）。
+预定义模型提供了处理和查看数据的方便方法。然而，某些数据无法使用预定义模型高效地处理，对于这些情况，有必要创建针对底层数据优化的自定义模型。在开始创建自定义模型之前，让我们回顾一下 Qt 模型/视图架构中使用的关键概念。模型中的每个数据元素都有一个索引和一组被称为“角色（roles）”的属性，这些属性可以取任意值。我们在本章的早些部分已经看到，最常用的角色有（例如`Qt::DisplayRole`和`Qt::EditRole`）。其他角色用于补充性数据（`Qt::ToolTipRole`、`Qt::StatusRole`），另一些角色用于控制显示属性（如`Qt::FontRole`、`Qt::TextAlignmentRole`、`Qt::ColorRole`和`Qt::BackgroundColor`）。
 
 | 列表模型 | 表格模型 | 树模型 |
 | :--- | :--- | :--- |
@@ -6465,10 +6380,6 @@ void ColorNamesDialog::reapplyFilter()
 | 0 | 0 | |
 | 1 | 1 | |
 | 2 | 2 | |
-
-
-
-
 
 ## 实现自定义模型
 
@@ -6485,32 +6396,28 @@ int CurrencyModel::columnCount(const QModelIndex & /* parent */) const
 }
 ```
 
-对于这个表格模型，行和列计数是 map 中货币的数量。`parent` 参数对于表格模型没有意义；这是因为 `rowCount()` 和 `columnCount()` 继承自更通用的 QAbstractItem 类，该类支持层级结构。
+对于这个表格模型，行和列计数是`map`中货币的数量。`parent`参数对于表格模型没有意义；这是因为`rowCount()`和`columnCount()`继承自更通用的`QAbstractItem`类，该类支持层级结构。
 
 ```cpp
 QVariant CurrencyModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid())
         return QVariant();
-
     if (role == Qt::AlignmentRole) {
         return (Qt::AlignRight);
     } else if (role == Qt::DisplayRole) {
         QString currency = currencyAt(index.row());
         QString columnCurrency = currencyAt(index.column());
-
         if (currencyMap.value(currency) == 0.0)
             return "####";
-
         double amount = currencyMap.value(columnCurrency);
         return QString("%1").arg(amount, 0, 'f', 4);
     }
-
     return QVariant();
 }
 ```
 
-`data()` 函数返回任何项的值。该项被指定为 QModelIndex。对于表格模型，QModelIndex 有趣的部分是它的行 `row()` 和列 `column()`。如果 `role` 是 `Qt::AlignmentRole`，我们返回适用于数字的对齐方式。如果显示角色是 `Qt::DisplayRole`，我们查找每个货币的值并计算汇率。我们可以返回计算后的 `double`，但我们将无法控制显示多少小数（除非我们使用自定义代理）。相反，我们返回格式化后的字符串，作为自定义的
+`data()`函数返回任何项的值。该项被指定为`QModelIndex`。对于表格模型，`QModelIndex`有趣的部分是它的行`row()`和列`column()`。如果`role`是`Qt::AlignmentRole`，我们返回适用于数字的对齐方式。如果显示角色是`Qt::DisplayRole`，我们查找每个货币的值并计算汇率。我们可以返回计算后的`double`，但我们将无法控制显示多少小数（除非我们使用自定义代理）。相反，我们返回格式化后的字符串，作为自定义的
 
 ## 10. 视图类
 
@@ -6524,7 +6431,7 @@ QVariant CurrencyModel::headerData(int section,
 }
 ```
 
-`headerData()` 函数由视图调用以填充其水平和垂直表头。`section` 参数是行或列数（取决于 `orientation`）。由于行和列具有相同的代码，我们不关心 `orientation`，只需返回 `section` 的代码。
+`headerData()`函数由视图调用以填充其水平和垂直表头。`section`参数是行或列数（取决于`orientation`）。由于行和列具有相同的代码，我们不关心`orientation`，只需返回`section`的代码。
 
 ```cpp
 void CurrencyModel::setCurrencyMap(const QMap<QString, double>&map)
@@ -6534,7 +6441,7 @@ void CurrencyModel::setCurrencyMap(const QMap<QString, double>&map)
 }
 ```
 
-调用者可以使用 `setCurrencyMap()` 更改 map。`AbstractItemModel::reset()` 调用所有使用该模型的视图，强制它们请求可见项的新数据。
+调用者可以使用`setCurrencyMap()`更改`map`。`AbstractItemModel::reset()`调用所有使用该模型的视图，强制它们请求可见项的新数据。
 
 ```cpp
 QString CurrencyModel::currencyAt(int offset)
@@ -6543,9 +6450,9 @@ QString CurrencyModel::currencyAt(int offset)
 }
 ```
 
-`currencyAt()` 函数返回 map 中给定 `offset` 处的键（货币代码）。我们使用 STL 迭代器找到项并对其调用 `key()`。
+`currencyAt()`函数返回`map`中给定`offset`处的键（货币代码）。我们使用 STL 迭代器找到项并对其调用`key()`。
 
-正如我们看到的，创建只读模型并不困难，取决于底层数据的性质，设计良好的模型在内存和速度上会有节省。下一个示例 `Cities` 是基于表格的，但这次所有数据都是用户输入的。该应用程序用于存储两个城市之间的距离。与之前的示例一样，我们可以简单地使用 `QTreeWidgetItem` 为每个城市存储一个项。然而，自定义模型可能更高效，因为从 A 到任何城市的距离与从 B 到 A 的距离相同，因此项沿主对角线镜像。
+正如我们看到的，创建只读模型并不困难，取决于底层数据的性质，设计良好的模型在内存和速度上会有节省。下一个示例`Cities`是基于表格的，但这次所有数据都是用户输入的。该应用程序用于存储两个城市之间的距离。与之前的示例一样，我们可以简单地使用`QTreeWidgetItem`为每个城市存储一个项。然而，自定义模型可能更高效，因为从 A 到任何城市的距离与从 B 到 A 的距离相同，因此项沿主对角线镜像。
 
 为了查看自定义模型与简单表格的比较，假设有三个城市 A、B 和 C。如果为每个组合存储值，我们需要九个值。一个精心设计的模型只需要三个项 (A, B)、(A, C) 和 (B, C)。
 
@@ -6575,7 +6482,7 @@ tableView.setModel(&cityModel);
 tableView.setAlternatingRowColors(true);
 ```
 
-我们重新实现了与上一个示例相同的函数。此外，我们还实现了 `setData()` 和 `flags()` 以使模型可编辑。以下是类定义：
+我们重新实现了与上一个示例相同的函数。此外，我们还实现了`setData()`和`flags()`以使模型可编辑。以下是类定义：
 
 ```cpp
 class CityModel : public AbstractTableModel {
@@ -6589,7 +6496,6 @@ public:
     bool setData(const QModelIndex &index, const QVariant &value, int role) override;
     QVariant headerData(int section, Qt::Orientation orientation, int role) const override;
     Qt::ItemFlags flags(const QModelIndex &index) const override;
-
 private:
     int offset(int offset) const;
     QStringList cities;
@@ -6599,7 +6505,7 @@ private:
 
 ## 10. 视图类
 
-对于这个模型，我们使用了正方形结构：存储名称的 `QStringList` 和存储距离的 `QVector<int>`。
+对于这个模型，我们使用了正方形结构：存储名称的`QStringList`和存储距离的`QVector<int>`。
 
 ```cpp
 CityModel::CityModel(QObject *parent)
@@ -6626,7 +6532,6 @@ QVariant CityModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid())
         return QVariant();
-
     if (role == Qt::AlignmentRole)
         return (Qt::AlignRight | Qt::VCenter);
     } else if (role == Qt::DisplayRole) {
@@ -6691,12 +6596,9 @@ Qt::ItemFlags CityModel::flags(const QModelIndex &index) const
 }
 ```
 
+除了对角线上的项外，为所有项添加`Qt::ItemEditable`标记（这些项始终为 0）。
 
-
-
-除了对角线上的项外，为所有项添加 `Qt::ItemEditable` 标记（这些项始终为 0）。
-
-```
+```cpp
 void CityModel::setCities(const QString &cityNames)
 {
     cities = cityNames;
@@ -6706,9 +6608,9 @@ void CityModel::setCities(const QString &cityNames)
 }
 ```
 
-如果给了一个新的城市列表，我们将私有的 `QStringList` 设置为新列表，调整大小并清除 `distances` 向量，然后调用 `QAbstractApiModel::reset()` 来通知任何视图其可见项必须重新获取。
+如果给了一个新的城市列表，我们将私有的`QStringList`设置为新列表，调整大小并清除`distances`向量，然后调用`QAbstractApiModel::reset()`来通知任何视图其可见项必须重新获取。
 
-```
+```cpp
 int CityModel::offsetOf(int row, int column)
 {
     if (row < column)
@@ -6717,7 +6619,7 @@ int CityModel::offsetOf(int row, int column)
 }
 ```
 
-私有函数 `offsetOf` 计算给定城市对在 `distances` 向量中的索引。例如，如果我们有 A、B、C、D，且用户更新了第 3 行第 1 列的 B 到 D，则偏移量为 $3 \times (3 - 1) / 2 = 4$。如果用户更新了第 1 行第 1 列的 C 到 B，得益于 `qSwap()`，将执行完全相同的计算并返回相同的偏移量。
+私有函数`offsetOf`计算给定城市对在`distances`向量中的索引。例如，如果我们有 A、B、C、D，且用户更新了第 3 行第 1 列的 B 到 D，则偏移量为$3 \times (3 - 1) / 2 = 4$。如果用户更新了第 1 行第 1 列的 C 到 B，得益于`qSwap()`，将执行完全相同的计算并返回相同的偏移量。
 
 | | A | B | C | D |
 |---|---|---|---|---|
@@ -6728,7 +6630,7 @@ int CityModel::offsetOf(int row, int column)
 
 > **图 10.13.** 城市和距离数据结构以及模型
 
-本节的最后一个示例展示了由 `|` 字符分隔的一个或多个项树的解析树。因此，正则表达式 "alpha|bravo|charlie" 包含三个项。每个项都是一个或多个因素的序列；例如，项 "bravo" 由五个因素组成（每个字母都是一个因素）。因素可以进一步分解为一个原子和一个可选的量词，如 `*`、`+` 和 `?`。由于正则表达式可以带有括号的子表达式，因此它们拥有递归解析树。
+本节的最后一个示例展示了由`|`字符分隔的一个或多个项树的解析树。因此，正则表达式 "alpha|bravo|charlie" 包含三个项。每个项都是一个或多个因素的序列；例如，项 "bravo" 由五个因素组成（每个字母都是一个因素）。因素可以进一步分解为一个原子和一个可选的量词，如`*`、`+`和`?`。由于正则表达式可以带有括号的子表达式，因此它们拥有递归解析树。
 
 图 10.14 所示的正则表达式 "ab|(cd)?" 匹配一个 'a' 后接 'b'，或者一个 'c' 后接 'd' 后接 'e'或者单独一个 'e'。因此它将匹配 "ab" 和 "cde"，但不会匹配 "bc" 或 "cd"。
 
@@ -6747,72 +6649,71 @@ RegexpParser 应用程序由四个类组成：
 
 让我们从 Node 类开始：
 
-```
+```cpp
 class Node {
 public:
     enum Type { RegExp, Expression, Term, Factor, Atom, Terminal };
     Node(Type type, const QString &str = "");
     ~Node();
-
     Type type;
-    QString str;
-    Node *parent;
-    QList<Node *> children;
+```
+
+
+
+`QString` `str`;
+
+`Node` *`parent`;
+
+`QList<Node *>` `children`;
+
 };
-```
 
-每个节点都有一个类型、一个字符串（可能是空的）、一个父节点（可能是 0）和一个子节点列表（可能是空的）。
+每个节点都有一个类型、一个字符串（可能是空的）、一个父节点（可能是 `0`）和一个子节点列表（可能是空的）。
 
-```
+```cpp
 Node::Node(Type type, const QString &str) {
     this->type = type;
     this->str = str;
     parent = 0;
+}
 ```
 
-构造函数简单地初始化节点的类型和字符串。由于所有数据都是公开的，使用 Node 的代码可以直接操作类型、字符串、父节点和子节点。
+构造函数简单地初始化节点的类型和字符串。由于所有数据都是公开的，使用 `Node` 的代码可以直接操作类型、字符串、父节点和子节点。
 
-```
+```cpp
 Node::Node()
     qDeleteAll(children);
 }
 ```
 
-`qDeleteAll()` 函数遍历指针容器并对每个指针调用 `delete`。它不会将指针设置为 0，因此如果如果在析构函数之外使用它，通常会在紧随其后对持有指针的容器调用 `clear()` 方法。
+`qDeleteAll()` 函数遍历指针容器并对每个指针调用 `delete`。它不会将指针设置为 `0`，因此如果如果在析构函数之外使用它，通常会在紧随其后对持有指针的容器调用 `clear()` 方法。
 
-现在我们已经定义了数据项（每个项由一个 Node 表示），准备好创建一个模型了：
+现在我们已经定义了数据项（每个项由一个 `Node` 表示），准备好创建一个模型了：
 
-```
+```cpp
 class RegExpModel : public QAbstractModel
 public:
     RegExpModel(QObject *parent = 0);
     ~RegExpModel();
-
     void setRootNode(Node *node);
-
     QModelIndex index(int row, int column, const QModelIndex &parent) const;
     QModelIndex parent(const QModelIndex &child) const;
-
     int rowCount(const QModelIndex &parent) const;
     int columnCount(const QModelIndex &parent) const;
     QVariant data(const QModelIndex &index, int role) const;
     QVariant headerData(int section, Q::Orientation orientation, int role) const;
-
 private:
     Node *nodeFromIndex(const QModelIndex &index) const;
     Node *rootNode;
 ```
 
-现在我们已经定义了数据项（每个项由一个 Node 表示），准备好创建一个模型：（注：此处原文似乎出现了大量重复和乱码的文本，根据高级文档工程师逻辑，我将基于核心代码逻辑进行结构性翻译，修复了原文中明显的逻辑重复错误）。
+现在我们已经定义了数据项（每个项由一个 `Node` 表示），准备好创建一个模型了：（注：此处原文似乎出现了大量重复和乱码的文本，根据高级文档工程师逻辑，我将基于核心代码逻辑进行结构性翻译，修复了原文中明显的逻辑重复错误）。
 
 （注：由于用户提供的待翻译文本部分存在大量无意义的重复和混乱，上述译文已基于 C++ 代码逻辑和 Markdown 规范进行了清理和专业翻译，确保输出符合逻辑性。）
 
-
-
-
 ## 实现自定义模型
 
-return QVariant();
+`return QVariant();`
 
 ```cpp
 if (index.column() == 0) {
@@ -6838,7 +6739,7 @@ if (index.column() == 0) {
 return QVariant();
 ```
 
-在 `data()` 中，我们获取所请求项的 `Node *` 并使用它来访问底层数据。如果调用者想要任何角色（如 `Qt::DisplayRole`）的值，或者我们无法为给定的模型索引检索 `Node`，则返回一个无效的 `QVariant`。如果列为 0，我们返回节点类型的名称；如果列为 1，我们返回节点的值（其字符串）。
+在 `data()` 中，我们获取所请求项的 `Node *` 并使用它来访问底层数据。如果调用者想要任何角色（如 `Qt::DisplayRole`）的值，或者我们无法为给定的模型索引检索 `Node`，则返回一个无效的 `QVariant`。如果列为 `0`，我们返回节点类型的名称；如果列为 `1`，我们返回节点的值（其字符串）。
 
 ```cpp
 QVariant RegExpModel::HeaderData(int section, Qt::Orientation orientation, int role) {
@@ -6858,6 +6759,7 @@ QVariant RegExpModel::HeaderData(int section, Qt::Orientation orientation, int r
 ```cpp
 void RegExpWindow::regExpChanged(const QString &regExp) {
     RegExpParser parser;
+```
 
 ## 10. 视图类
 
@@ -6865,7 +6767,8 @@ void RegExpWindow::regExpChanged(const QString &regExp) {
 Node *rootNode = parser.parse(regExp);
 regExp->setRootNode(rootNode);
 }
-```当用户更改应用程序行框中的文本时，主窗口的 `regExpChanged()` 槽会被调用。在这里，用户的文本被解析，解析器返回根节点的指针。
+```
+当用户更改应用程序行框中的文本时，主窗口的 `regExpChanged()` 槽会被调用。在这里，用户的文本被解析，解析器返回根节点的指针。
 
 我们没有显示 `RegExpParser` 类，因为它与 GUI 或模型/视图编程无关。此示例的完整源代码位于此处。
 
@@ -6914,13 +6817,9 @@ TrackEditor::TrackEditor(QList<Track> *tracks, QWidget *parent)
 }
 ```
 
-构造函数创建了一个表格部件，我们没有使用默认代理，而是设置了自定义的 `TrackDelegate`，传递持有时间的列。我们首先设置列标题，然后遍历数据填充行。构造函数创建了一个表格部件，我们没有使用默认代理，而是设置了自定义的 `TrackDelegate`，传递持有时间的列。我们首先设置列标题，然后遍历数据填充行。构造函数创建了一个表格部件，我们没有使用默认代理，而是设置了自定义的 `TrackDelegate`，传递持有时间的列。我们首先设置列标题，然后遍历数据填充行。构造函数创建了一个表格部件，我们没有使用默认代理，而是设置了自定义的 `TrackDelegate`，传递持有时间的列。我们首先设置列标题，然后遍历数据填充行。构造函数创建了一个表格部件，我们没有使用默认代理，而是设置了自定义的 `TrackDelegate`，传递持有时间的列。我们首先设置列标题，然后遍历数据填充行。构造函数创建了一个表格部件，我们没有使用默认代理，而是设置了自定义的 `TrackDelegate`，传递持有时间的列。我们首先设置列标题，然后遍历数据填充行。构造函数创建了一个表格部件，我们没有使用默认代理，而是设置了自定义的 `TrackDelegate`，传递持有时间的列。我们首先设置列标题，然后遍历数据填充行。构造函数创建了一个表格部件，我们没有使用默认代理，而是设置了自定义的 `TrackDelegate`，传递持有时间的列。我们首先设置列标题，然后遍历数据填充行。构造函数创建了一个表格部件，我们没有使用默认代理，而是设置了自定义的 `TrackDelegate`，传递持有时间的列。我们首先设置列标题，然后遍历数据填充行。构造函数创建了一个表格部件，我们没有使用默认代理，而是设置了自定义的 `TrackDelegate`，传递持有时间的列。我们首先设置列标题，然后遍历数据填充行。构造函数创建了一个表格部件，我们没有使用默认代理，而是设置了自定义的 `TrackDelegate`，传递持有时间的列。我们首先设置列标题，然后遍历数据填充行。
+构造函数创建了一个表格部件，我们没有使用默认代理，而是设置了自定义的 `TrackDelegate`，传递持有时间的列。我们首先设置列标题，然后遍历数据填充行。
 
 # 实现自定义代理
-
-
-
-
 
 ## 10. 视图项类
 
@@ -6955,7 +6854,7 @@ void TrackDelegate::setData(QWidget *editor,
 
 还可以使用多个视图在不进行任何形式的情况下查看同一个模型。通过一个视图所做的任何编辑将自动并立即反映在其他视图中。这种功能对于大型数据集特别有用，用户可能希望查看逻辑上相隔较远的部分。该架构还支持选择：当两个或多个视图使用同一个模型时，每个视图可以设置为拥有自己独立的选择，也可以可以在多个视图之间共享选择。
 
-Qt 的在线文档对项视图编程和实现它的类提供了全面的覆盖。请参阅 http://doc.trolltech.com/4.1/model-view.html 获取所有相关类的列表，以及 http://doc.trolltech.com/4.1/model-view-programming.html 获取更多信息以及与 Qt 带的相关示例的链接。
+Qt 的在线文档对项视图编程和实现它的类提供了全面的覆盖。请参阅 `http://doc.trolltech.com/4.1/model-view.html` 获取所有相关类的列表，以及 `http://doc.trolltech.com/4.1/model-view-programming.html` 获取更多信息以及与 Qt 带的相关示例的链接。
 
 - 顺序容器
 - 关联容器
@@ -6988,15 +6887,13 @@ Qt 还提供了在任意容器上执行操作的通用算法。例如，`qsort()
 
 如果我们预先知道需要多少项目，可以在定义 vector 时给它初始大小，并使用 `[]` 运算符为项目赋值；否则，我们必须稍后调整 vector 大或添加项目。这里有一个指定初始大小的示例：
 
+
+
 ```cpp
 QVector<double> vect(3);
 vect[0] = 1.0;
 vect[1] = 0.540302;
 ```
-
-
-
-
 
 ## 序列容器
 
@@ -7020,7 +6917,9 @@ while (i.hasPrevious()) {
 如果迭代器左侧有元素，则 `previous()` 返回 `true`；`previous()` 返回迭代器左侧的元素并将迭代器向后移动一个位置。关于 `next()` 和 `previous()` 迭代器的另一种思考方式是，它们返回的是迭代器跳过的元素。
 
 | A | B | C | D | E |
+
 |---|---|---|---|---|
+
 | previous() | | next() | | |
 
 > **图 11.4.** `previous()` 和 `next()` 对 Java 风格迭代器的影响
@@ -7066,8 +6965,11 @@ while (i.hasNext()) {
 容器的 `begin()` 函数返回一个 STL 风格的迭代器，指向容器中的第一个元素（例如 `list[0]`），`end()` 返回一个指向“最后一个元素之后”元素的迭代器（例如，对于大小为 5 的列表，返回 `list[5]`）。如果容器为空，`isEmpty()` 返回 `true`。这可以用来检查容器是否有任何元素，尽管通常为了这个目的调用 `isEmpty()` 更方便。
 
 | A | B | C | D | E |
+
 |---|---|---|---|---|
+
 | | | | | |
+
 | begin() | | | | |
 
 **图 11.5.** STL 风格迭代器的有效位置
@@ -7122,10 +7024,6 @@ while (i.hasNext()) {
 
 像这样复制容器听起来代价很高，但得益于一种被称为隐式共享（implicit sharing）的优化，事实并非如此。这种机制确保了我们总是遍历函数返回的数据。例如：隐式共享在我们在循环开始之前就已经发生，因此我们从代码中就不需要考虑它。这种共享机制在修改数据时是高效的。
 
-
-
-
-
 ```cpp
 if (movie.title() == "Citizen Kane") {
     cout << "Found Citizen Kane" << endl;
@@ -7137,12 +7035,14 @@ if (movie.title() == "Citizen Kane") {
 
 ## 关联容器 (Associative Containers)
 
-关联容器存储任意数量的相同类型的元素，并通过键进行索引。Qt 提供了两个主要的关联容器类：QMap<K, T> 和 QHash<K, T>。
+关联容器存储任意数量的相同类型的元素，并通过键进行索引。Qt 提供了两个主要的关联容器类：`QMap<K, T>` 和 `QHash<K, T>`。
 
-QMap<K, T> 是一种按键的升序存储键值对的数据结构。这种排列使其能够提供良好的查找和插入性能，并支持有序迭代。在内部，QMap<K, T> 是通过跳跃表（skip-list）实现的。
+`QMap<K, T>` 是一种按键的升序存储键值对的数据结构。这种排列使其能够提供良好的查找和插入性能，并支持有序迭代。在内部，`QMap<K, T>` 是通过跳跃表（skip-list）实现的。
 
 | 墨西哥墨西哥城 | 22350000 |
+
 | 首尔 | 22050000 |
+
 | 东京 | 34000000 |
 
 > 图 11.6. 从 QString 到 int 的映射
@@ -7178,13 +7078,13 @@ int seconds = map.value("delay", 30);
 
 这等同于
 
-QMap<K, T> 的 K 和 T 类型可以是基本数据类型（如 `int` 和 `double`）、指针类型，或具有默认构造函数、拷贝构造函数和赋值运算符的类。此外，K 类型必须拥有 `operator<>()`，因为 QMap<K, T> 使用该运算符按升序存储项。
+`QMap<K, T>` 的 K 和 T 类型可以是基本数据类型（如 `int` 和 `double`）、指针类型，或具有默认构造函数、拷贝构造函数和赋值运算符的类。此外，K 类型必须拥有 `operator<>()`，因为 `QMap<K, T>` 使用该运算符按升序存储项。
 
-QMap<K, T> 有两个方便的函数 `keys()` 和 `values()`，它们在处理小数据集时特别有用。它们返回包含所有键或值的 `QList`。
+`QMap<K, T>` 有两个方便的函数 `keys()` 和 `values()`，它们在处理小数据集时特别有用。它们返回包含所有键或值的 `QList`。
 
 映射通常是单值对应的：如果为已有的键分配一个新值，旧值将被新值替换，确保没有两个项共享同一个键。通过使用 `insert()` 函数或 `QMultiMap<K, T>` 方便类，可以拥有多个具有相同键的键值对。
 
-QMap<K, T> 拥有 `values(const K&)`，它返回给定键的所有值的 `QList`。例如：
+`QMap<K, T>` 拥有 `values(const K&)`，它返回给定键的所有值的 `QList`。例如：
 
 ```cpp
 QMap<int, QString> multiMap;
@@ -7197,15 +7097,15 @@ multiMap.insert(1, "uno");
 QList<QString> vals = multiMap.values(1);
 ```
 
-QHash<K, T> 是一种在哈希表中存储键值对的数据结构。它的接口与 QMap<K, T> 几乎相同，但它对 K 模板类型有不同的要求，并提供了比 QMap<K, T> 快得多的查找速度。另一个区别是 QHash<K, T> 是无序的。
+`QHash<K, T>` 是一种在哈希表中存储键值对的数据结构。它的接口与 `QMap<K, T>` 几乎相同，但它对 K 模板类型有不同的要求，并提供了比 `QMap<K, T>` 快得多的查找速度。另一个区别是 `QHash<K, T>` 是无序的。
 
 除了对存储在容器中的任何值的标准要求外，K 类型还需要提供 `operator==()` 并被全局 `hash()` 函数支持（该函数返回键的哈希值）。Qt 已经为整数类型、指针类型、`QChar`、`QString` 和 `ByteArray` 提供了 `hash()` 函数。
 
-在插入或删除项时，QHash<K, T> 会为其内部哈希表分配质数数量的桶（buckets）。也可以通过调用 `reserve()` 和 `squeeze()` 来微调性能，根据预期的存储数量来收缩哈希表，并通过 `squeeze()` 压缩当前的项数。常见的做法是使用预期的最大项数调用 `reserve()`，插入数据，最后如果项少于预期，则调用 `squeeze()` 以最小化内存占用。
+在插入或删除项时，`QHash<K, T>` 会为其内部哈希表分配质数数量的桶（buckets）。也可以通过调用 `reserve()` 和 `squeeze()` 来微调性能，根据预期的存储数量来收缩哈希表，并通过 `squeeze()` 压缩当前的项数。常见的做法是使用预期的最大项数调用 `reserve()`，插入数据，最后如果项少于预期，则调用 `squeeze()` 以最小化内存占用。
 
 哈希通常是单值对应的，可以使用 `insertMulti()` 函数或 `QMultiHash<K, T>` 方便子类为同一个键分配多个值。
 
-除了 QHash<K, T>，Qt 还提供了一个 `QCache<K, T>` 类用于缓存与键关联的对象，以及一个存储键的 `QSet<T>` 容器。在内部，两者都依赖于 QHash<K, T>，并且对 K 类型的类型与 QHash<K, T> 相同。
+除了 `QHash<K, T>`，Qt 还提供了一个 `QCache<K, T>` 类用于缓存与键关联的对象，以及一个存储键的 `QSet<T>` 容器。在内部，两者都依赖于 `QHash<K, T>`，并且对 K 类型的类型与 `QHash<K, T>` 相同。
 
 遍历关联容器中存储的所有键值对的最简单方法是使用 Java 风格的迭代器。由于迭代器可以同时访问键和值，用于关联容器的 Java 风格迭代器的工作方式与其对应物不同。主要区别是 `next()` 和 `value()` 返回的是一个表示对的对象。例如：
 
@@ -7268,9 +7168,6 @@ qfill(vec.begin(), vec.begin() + 5, 1009);
 qfill(vec.end() - 5, vec.end(), 2013);
 ```
 
-
-
-
 ## 11. 容器类
 
 `qCopy<int>` vect 将值从一个容器拷贝到另一个容器：
@@ -7280,19 +7177,19 @@ QVector<int> vect(list.count());
 qCopy(list.begin(), list.end(), vect.begin());
 ```
 
-qCopy() 也可以用于在同一个容器内拷贝值，只要源范围和目标范围不重叠。在下一个代码段中，我们使用它将列表的最后两个项替换为前两个项：
+`qCopy()` 也可以用于在同一个容器内拷贝值，只要源范围和目标范围不重叠。在下一个代码段中，我们使用它将列表的最后两个项替换为前两个项：
 
 ```
 qCopy(list.begin(), list.begin() + 2, list.end() - 2);
 ```
 
-qSort() 算法将容器中的项按升序排序：
+`qSort()` 算法将容器中的项按升序排序：
 
 ```
 qSort(list.begin(), list.end());
 ```
 
-默认情况下，qSort() 使用 `<` 运算符比较项。若要按降序排列，请使用 `qsort::qGreater<T>()` 作为第三参数（其中 T 是容器的数值类型），
+默认情况下，`qSort()` 使用 `<` 运算符比较项。若要按降序排列，请使用 `qsort::qGreater<T>()` 作为第三参数（其中 T 是容器的数值类型），
 
 ```
 qSort(list.begin(), list.end(), qGreater<int>());
@@ -7307,7 +7204,7 @@ bool insensitiveLessThan(const qString &str1, const qString&str2)
 }
 ```
 
-调用 qSort() 变为变为
+调用 `qSort()` 变为变为
 
 ```cpp
 QStringList list;
@@ -7315,16 +7212,16 @@ QStringList list;
 qSort(list.begin(), list.end(), insensitiveLessThan);
 ```
 
-qTableSort() 算法与 qSort() 类似，不同在于它保证相等的项在排序后的顺序与排序前相同。如果排序标准只考虑值的部分且结果对用户可见，那么这就非常有用。我们在第 4 章中使用了 qTableSort() 在电子表格应用程序中实现排序（第 88 页）。
+`qTableSort()` 算法与 `qSort()` 类似，不同在于它保证相等的项在排序后的顺序与排序前相同。如果排序标准只考虑值的部分且结果对用户可见，那么这就非常有用。我们在第 4 章中使用了 `qTableSort()` 在电子表格应用程序中实现排序（第 88 页）。
 
-qdeleteAll() 算法删除存储在容器中的每个指针。它只对值类型为指针类型的容器有意义。调用后，在对容器执行 `clear()` 之前，这些项仍然存在。例如：
+`qdeleteAll()` 算法删除存储在容器中的每个指针。它只对值类型为指针类型的容器有意义。调用后，在对容器执行 `clear()` 之前，这些项仍然存在。例如：
 
 ```
 qDeleteAll(list);
 list.clear();
 ```
 
-qSwap() 算法交换两个变量的值。例如：
+`qSwap()` 算法交换两个变量的值。例如：
 
 ```cpp
 int x1 = line.x1();
@@ -7339,13 +7236,15 @@ if (x1 > x2)
 
 ## 字符串、字节数组和变体
 
-QString、QByteArray 和 QVariant 是三个类，它们在容器中包含许多内容，并在某些语境下可以作为容器的替代品。此外，容器容器，这些类使用隐式共享作为内存和速度优化。
+`QString`、`QByteArray` 和 `QVariant` 是三个类，它们在容器中包含许多内容，并在某些语境下可以作为容器的替代品。此外，容器容器，这些类使用隐式共享作为内存和速度优化。
 
-我们将从 QString 开始。每个 GUI 程序都会使用字符串，不仅用于用户界面，还作为数据结构。C++ 原生提供了两种字符串：传统的 C 风格空终止字符数组和 `std::string`。与这些不同的是，QString 持有 16 位的 Unicode 值。Unicode 包含 ASCII 和 Latin-1 作为子集，并具有它们通常的值。但由于 QString 是 16 位的，它可以表示数千个字符，用于编写世界上大多数语言。关于 Unicode 的更多信息，请参阅第 17 章。
 
-使用 QString 时，我们不需要担心分配内存或确保数据是“0 终止”的等晦涩细节。从概念上讲，QString 可以被认为是一个 `QChar` 向量。QString 可以嵌入 "0" 字符。`length()` 函数返回整个字符串的大小，包括嵌入的 "0" 字符。
 
-QString 提供了一个 `+` 运算符来连接两个字符串，以及一个 `+=` 运算符将一个字符串附加另一个字符串。由于 QString 会自动在字符串数据的末尾预分配内存，通过重复追加字符来构建字符串非常快。这里有一个结合 `+` 和 `+=` 的示例：
+我们将从 `QString` 开始。每个 GUI 程序都会使用字符串，不仅用于用户界面，还作为数据结构。C++ 原生提供了两种字符串：传统的 C 风格空终止字符数组和 `std::string`。与这些不同的是，`QString` 持有 16 位的 Unicode 值。Unicode 包含 ASCII 和 Latin-1 作为子集，并具有它们通常的值。但由于 `QString` 是 16 位的，它可以表示数千个字符，用于编写世界上大多数语言。关于 Unicode 的更多信息，请参阅第 17 章。
+
+使用 `QString` 时，我们不需要担心分配内存或确保数据是“0 终止”的等晦涩细节。从概念上讲，`QString` 可以被认为是一个 `QChar` 向量。`QString` 可以嵌入 `"0"` 字符。`length()` 函数返回整个字符串的大小，包括嵌入的 `"0"` 字符。
+
+`QString` 提供了一个 `+` 运算符来连接两个字符串，以及一个 `+=` 运算符将一个字符串附加另一个字符串。由于 `QString` 会自动在字符串数据的末尾预分配内存，通过重复追加字符来构建字符串非常快。这里有一个结合 `+` 和 `+=` 的示例：
 
 ```cpp
 QString str = "User: ";
@@ -7366,7 +7265,7 @@ str.append("\n");
 str.sprintf("%s%%1f%%", "perfect competition", 100.0);
 ```
 
-此函数支持与 C++ 库中的 `sprintf()` 函数相同的格式说明符。在上面的示例中，str 被赋值为 "perfect competition 100.0%%"。
+此函数支持与 C++ 库中的 `sprintf()` 函数相同的格式说明符。在上面的示例中，`str` 被赋值为 `"perfect competition 100.0%%"`。
 
 另一种从其他字符串或数字构建字符串的方法是使用 `arg()`：
 
@@ -7375,17 +7274,13 @@ str = QString("%1 %2 (%3s-%4s)")
 .arg("permissive").arg("society").arg(1950).arg(1970);
 ```
 
-在这个示例中，"%1" 被替换为 "permissive"，"%2" 被替换为 "society"，"%3" 被替换为 "1950"，"%4" 被替换为 "1970"。结果是 "permissive society (1950s-1970s)"。`arg()` 有多个重载来处理不同类型。某些重载带有额外的参数来控制字段宽度、数值进制或浮点精度。通常情况下，`arg()` 是
+在这个示例中，`"%1"` 被替换为 `"permissive"`，`"%2"` 被替换为 `"society"`，`"%3"` 被替换为 `"1950"`，`"%4"` 被替换为 `"1970"`。结果是 `"permissive society (1950s-1970s)"`。`arg()` 有多个重载来处理不同类型。某些重载带有额外的参数来控制字段宽度、数值进制或浮点精度。通常情况下，`arg()` 是
 
-*(注：由于提供的 OCR 文本存在大量重复、断行和错误，此处已根据逻辑进行了清理和合并，并翻译了核心内容。)*
+## 11. 容器类
 
+`qDebug()` << `str.trimmed()`；
 
-
-
-## 268 11. 容器类
-
-qDebug() << str.trimmed();
-String str 可以描述为：
+`String` `str` 可以描述为：
 
 ```
 | B O B | T H E |
@@ -7418,7 +7313,7 @@ QString str = "polluter pays principle";
 QStringList words = str.split(" ");
 ```
 
-在示例中，我们将字符串 "polluter pays principle" 拆分为三个子字符串："polluter"、pays" 和 "principle"。 `split()` 有一个可选的第三参数，用于指定是保留子字符串（默认值）还是丢弃。
+在示例中，我们将字符串 `"polluter pays principle"` 拆分为三个子字符串：`"polluter"`、`pays"` 和 `"principle"`。 `split()` 有一个可选的第三参数，用于指定是保留子字符串（默认值）还是丢弃。
 
 `QStringList` 中的项可以使用 `join()` 合并成单个字符串。`join()` 的参数被插入在每对连接的字符串之间。例如，这里是创建一个创建一个由 `QStringList` 中包含的所有字符串、按字母顺序排序并用换行符分隔的单个字符串：
 
@@ -7455,7 +7350,7 @@ printf("%s\n", printable(str));
 
 `QByteArray` 类拥有与 `QString` 类似的 API。`QByteArray` 中存在如 `left()`、`right()`、`mid()`、`lower()`、`upper()`、`trimmed()` 和 `simplified()` 等函数，它们与 `QString` 的对应函数相同。`QByteArray` 适用于存储原始二进制数据和 8 位编码文本字符串。通常，我们建议使用 `QString` 处理文本数据而非 `QByteArray`，因为 `QString` 支持 Unicode。
 
-为了方便起见，`QByteArray` 自动确保“最后一个之后”的字节始终为 '\0'，这易于将 `QByteArray` 传递给接受 `const char *` 的函数。`QByteArray` 还支持嵌入 '\0' 字符，允许我们使用它来存储二进制数据。
+为了方便起见，`QByteArray` 自动确保“最后一个之后”的字节始终为 `'\0'`，这易于将 `QByteArray` 传递给接受 `const char *` 的函数。`QByteArray` 还支持嵌入 `'\0'` 字符，允许我们使用它来存储二进制数据。
 
 在某些情况下，我们需要在同一个变量中存储不同类型的数据。一种方法是将数据编码为 `QByteArray` 或 `QString`。例如，一个字符串可以包含一个文本值或字符串形式的数值值。这些方法提供了灵活性，但放弃了 C++ 的优势，特别是类型安全和效率。Qt 提供了一种更整洁的方法来处理可以不同类型的变量：`QVariant`。
 
@@ -7478,7 +7373,7 @@ fruitMap["Pineapple"] = 3.85;
 fruitMap["Pear"] = pearMap;
 ```
 
-在这里我们创建了一个具有字符串键（产品编号）和浮点数值（价格）或映射的 map。顶层 map 三个键："Orange"、"Pear" 和 "Pineapple。"Pear" 的值是另一个 map。
+在这里我们创建了一个具有字符串键（产品编号）和浮点数值（价格）或映射的 map。顶层 map 三个键：`"Orange"`、`"Pear"` 和 `"Pineapple"`。`"Pear"` 的值是另一个 map。
 
 在处理字符串时，我们通常需要确定字符串是否为空。这是通过调用 `isEmpty()` 或检查 `length()` 是否为 0 的。从 `const char *` 到 `QString` 的转换在大多数情况下是自动的，例如：
 
@@ -7514,10 +7409,6 @@ qRegisterMetaTypeStreamOperators<BusinessCard>("BusinessCard");
 
 Qt 的算法（包括此处未涵盖的 `qCopyBackward()` 和 `qEqual()`）在 Qt 文档中描述：http://doc.trolltech.com/4.1/algorithms.html。关于 Qt 容器的更多细节，包括时间度和增长策略的信息，请参 http://doc.trolltech.com/4.1/containers.html。
 
-
-
-
-
 - 读写二进制数据
 - 读写文本
 - 遍历目录
@@ -7528,12 +7419,12 @@ Qt 的算法（包括此处未涵盖的 `qCopyBackward()` 和 `qEqual()`）在 Q
 
 从文件或其他设备读取或写入数据是几乎每个应用程序都需要的。Qt 通过 `QIODevice` 为 I/O 提供了卓越的支持，它是一个强大的抽象类，封装了能够读写字节字节块的“设备”。Qt 包含了以下 `QIODevice` 子类：
 
-| QFile | 访问本地文件系统和嵌入资源中的文件 |
-| QTemporaryFile | 在本地文件系统中创建并访问临时文件 |
-| QBuffer | 从 `ByteArray` 读取或向写入数据 |
-| QProcess | 运行外部程序并处理进程间通信 |
-| QTcpSocket | 使用 TCP 在网络上传输数据流 |
-| QUdpSocket | 在网络上发送或接收 UDP 数据报 |
+| `QFile` | 访问本地文件系统和嵌入资源中的文件 |
+| `QTemporaryFile` | 在本地文件系统中创建并访问临时文件 |
+| `QBuffer` | 从 `ByteArray` 读取或向写入数据 |
+| `QProcess` | 运行外部程序并处理进程间通信 |
+| `QTcpSocket` | 使用 TCP 在网络上传输数据流 |
+| `QUdpSocket` | 在网络上发送或接收 UDP 数据报 |
 
 `QProcess`、`QTcpSocket` 和 `QUdpSocket` 是顺序访问设备，这意味着数据只能访问一次，从第一个字节开始按顺序进行到最后一个字节。`QFile`、`QTemporaryFile` 和 `QBuffer` 是随机访问设备，因此可以从任何位置读取任意次数；它们提供了 `QIODevice::seek(int)` 来重置文件指针。
 
@@ -7586,6 +7477,8 @@ out << uint32(0x012345678) << image << map;
 
 为了确保数字 `0x12345678` 在所有平台上都作为 32 位无符号整数写入，将其强制转换为 `quint32`，这是一种保证精确为 32 位的数据类型。为了互操作性，`QDataStream` 默认采用大端序；可以通过调用 `byteOrder()` 进行更改。
 
+
+
 我们不需要显式关闭文件，因为当 `QFile` 离开作用范围时会自动完成。如果我们想验证数据是否已写入，可以调用 `flush()` 并检查其返回值（true 表示成功）。
 
 读回数据的代码与我们写入时的代码镜像：
@@ -7611,13 +7504,9 @@ in >> n >> image >> map;
 
 如果文件成功打开，我们创建一个 `QDataStream` 并设置它的版本号。版本号是一个影响 Qt 数据类型表示方法的整数（基本 C++ 数据类型的表示方式始终相同的）。在 Qt 4.1 中，最全面的格式是版本 7。我们可以硬编码 7，或者使用 `QDataStream::Qt_4_1` 符号名。
 
+## 读取和写入二进制数据
 
-
-
-
-## 读取读取和写入二进制数据
-
-out << paintings;
+`out << paintings;`
 
 我们可以同样轻松地读取容器：
 
@@ -7630,16 +7519,16 @@ in >> paintings;
 
 当我们使用 QDatastream 时，Qt 会负责读取和写入每个类型，包括包含任意数量项目的容器。这让我们免去了构建结构化写入的内容，也不需要对读取的内容进行任何类型的解析。我们唯一的义务是确保按照写入相同的顺序读取所有类型，将所有细节交给 Qt 处理。
 
-QDatastream 对于我们的自定义应用程序文件格式和标准二进制格式非常有用。我们可以使用基本类型（如 `int16` 或 `float`）的流运算符来读写标准二进制格式，或者使用 `readRawBytes(file)` 和 `writeRawBytes(file)`。如果 QDatastream 仅用于读取和写入基本 C++ 数据类型，则我们不需要调用 `setVersion()`。
+QDatastream 对于我们的自定义应用程序文件格式和标准二进制格式非常有用。我们可以使用基本类型（如 `int16` 或 `float`）的流运算符来读写标准二进制格式，或者使用 `readRawBytes(file)` 和 `writeRawBytes(file)`。如果 QDataStream 仅用于读取和写入基本 C++ 数据类型，则我们不需要调用 `setVersion()`。
 
-到目前为止，加载和保存数据时流版本被硬编码为 `QDatastream::Qt_4`。这种方法简单且安全，但有一个缺点：我们无法利用新格式或更新的格式。例如，如果 Qt 的后续版本为 QFont 添加了新属性（在其点字大小、字体族等中），而我们将版本号硬编码为 `Qt_4_1`，那么该属性将无法被保存或加载。有两种解决方案。第一种是在文件中嵌入 QDatastream 版本号：
+到目前为止，加载和保存数据时流版本被硬编码为 `QDataStream::Qt_4`。这种方法简单且安全，但有一个缺点：我们无法利用新格式或更新的格式。例如，如果 Qt 的后续版本为 QFont 添加了新属性（在其点字大小、字体族等中），而我们将版本号硬编码为 `Qt_4_1`，那么该属性将无法被保存或加载。有两种解决方案。第一种是在文件中嵌入 QDatastream 版本号：
 
 ```
 QDataStream out(file);
 out << quint32(MagicNumber) << quint16(out.version());
 ```
 
-`MagicNumber` 是一个唯一标识文件类型的常量。这确保了我们始终使用最新版本的 QDatastream 写入数据，无论发生什么情况。当我们来读取文件时，我们读取流版本：
+`MagicNumber` 是一个唯一标识文件类型的常量。这确保了我们始终使用最新版本的 QDataStream 写入数据，无论发生什么情况。当我们来读取文件时，我们读取流版本：
 
 ```
 quint32 magic;
@@ -7702,7 +7591,7 @@ if (appVersion < 0x0103) {
 }
 ```
 
-在这个示例中，我们指定任何使用应用程序 1.3 版本之前的保存的文件都使用流版本 4 (Qt_3_0)，而使用应用程序 1.3 版本保存的文件使用流版本 7 (Qt_4_1)。
+在这个示例中，我们指定任何使用应用程序 1.3 版本之前的保存的文件都使用流版本 4 (`Qt_3_0`)，而使用应用程序 1.3 版本保存的文件使用流版本 7 (`Qt_4_1`)。
 
 总之，处理 QDataStream 版本有三种策略：硬编码版本、显式地写入和读取版本号，以及根据应用程序的版本使用不同的硬编码版本号。这些策略中的任何一种都可以用于确保旧版本应用程序写入的数据可以被新版本读取，即使该版本链接到较新版本的 Qt。一旦我们选择了处理 QDataStream 版本的策略，使用 Qt 读写二进制数据就是简单且可靠的。
 
@@ -7724,7 +7613,7 @@ bool copyFile(const QString &source, const QString &dest)
 }
 ```
 
-## 读取和写入文本
+# 读取与写入文本
 
 虽然二进制格式更紧凑，但它们不是人类可读的。在这些问题的情况下，我们可以使用 QTextStream。QTextStream 负责处理 C++ 基本类型，将其转换为字符串。以下示例向文件写入 "Thomas M. Disch: 334\n"：
 
@@ -7763,15 +7652,11 @@ stream.setCodec("UTF-8");
 
 示例中的 UTF-8 编码是一种兼容 ASCII 的编码，可以表示 Unicode 字符集。有关 Unicode 和 QTextStream 对编码的支持更多信息，请参阅第 17 章（国际化）。
 
-QText 具有多种选项，类似于 <iostream> 提供的选项。可以通过向流传递特殊对象（称为流操作符）来设置以改变其状态。以下示例在设置显示 (showbase)、大写字母 (upper-casedigit) 和十六进制 (hex) 选项后，输出整数 12345678，产生文本 "0BC614E"；
+QText 具有多种选项，类似于 <iostream> 提供的选项。可以通过向流传递特殊对象（称为流操作符）来设置以改变其状态。以下示例在设置显示 (`showbase`)、大写字母 (`upper-casedigit`) 和十六进制 (`hex`) 选项后，输出整数 12345678，产生文本 "0BC614E"；
 
-
-
-
-
-# 读取与写入文本
-
+```
 out << showcase << uppercased << hex << 12345678;
+```
 
 也可以使用成员函数设置选项：
 
@@ -7783,7 +7668,7 @@ out << 12345678;
 ```
 
 | setIntegerBase(int) |
-| :--- | :--- |
+| :--- |
 | 0 | 根据前缀自动检测（读取时） |
 | 2 | 二进制 |
 | 8 | 八进制 |
@@ -7791,7 +7676,7 @@ out << 12345678;
 | 16 | 十六进制 |
 
 | setNumberFlags(NumberFlags) |
-| :--- | :--- |
+| :--- |
 | ShowBase | 如果基数为 2 ("0")、8 ("O") 或 16 ("Ox")，则显示前缀 |
 | ForceSign | 实数始终显示符号 |
 | ForcePoint | 在数字中始终放置小数点分隔符 |
@@ -7799,7 +7684,7 @@ out << 12345678;
 | UppercaseDigits | 在十六进制数字中使用大写字母 |
 
 | setRealNumberNotation(RealNumberNotation) |
-| :--- | :--- |
+| :--- |
 | FixedNotation | 固定点计数法（例如 "0.000123"） |
 | ScientificNotation | 科学计数法（例如 "1.234568e-04"） |
 | SmartNotation | 固定点或科学计数法，以最紧凑的形式为主 |
@@ -7813,7 +7698,7 @@ out << 12345678;
 | 设置字段的最小宽度（默认为 0） |
 
 | setFieldAlignment(ImageAlign) |
-| :--- | :--- |
+| :--- |
 | AlignLeft | 在字段右侧填充 |
 | AlignRight | 在字段左侧填充 |
 | AlignCenter | 在字段两侧均填充 |
@@ -7864,13 +7749,15 @@ while (!in.atEnd()) {
 
 我们逐行读取 Spreadsheet 数据。readLine 函数会移除末尾的换行符。QString::split() 返回一个字符串列表，在分隔符出现的任何地方对其字符串进行分割。例如，行 `5 19 Total value` 导致 "5"、"19"、"Total"valuevalue"。如果我们至少有三个字段，就可以准备提取数据了。QStringList::takeFirst() 会移除列表中的第一个项并返回被移除的项。我们用它来提取行和列号。我们没有进行任何错误检查；如果读取到非整数行或列值，
 
-# 读取 写入文本
-
 QString::toInt() 将返回 0。当我们设置 setFormula() 时，必须将剩余字段拼接回单个字符串。
 
 在第二个 QTextStream 示例中，我们将使用逐字符的方法来实现程序，该程序读取文本文件并输出相同的文本，但移除行末尾的空格并将制表符替换为空格。程序的工作由 tidyFile() 函数完成：
 
-```
+
+
+# 读取 写入文本
+
+```cpp
 void tidyFile(QIODevice *inDevice, QIODevice *outDevice)
 {
     QTextStream in(inDevice);
@@ -7911,18 +7798,18 @@ void tidyFile(QIODevice *inDevice, QIODevice *outDevice)
 
 ## 输入/输出
 
-QDataStream 作用于 QIODevice 子类，可以是 QFile、QBuffer、QProcess、QTcpSocket 或 QdpSocket。此外，它也可以直接用在 QString 上。例如：
+`QDataStream` 作用于 `QIODevice` 子类，可以是 `QFile`、`QBuffer`、`QProcess`、`QTcpSocket` 或 `QdpSocket`。此外，它也可以直接用在 `QString` 上。例如：
 
-```
+```cpp
 QString str;
 QTextStream(&str) << oct << " " << dec << 25 << endl;
 ```
 
-这使得 str 的内容变为 "37 25\n"，因为十进制 31 在八进制中表示为 37。在这种情况下，我们不需要对字符串设置编码，因为 QString 始终是 Unicode。
+这使得 `str` 的内容变为 `"37 25\n"`，因为十进制 31 在八进制中表示为 37。在这种情况下，我们不需要对字符串设置编码，因为 `QString` 始终是 Unicode。
 
-让我们来看一个基于文本的文件格式的简单示例。在第一部分描述的 Spreadsheet 应用程序中，我们使用二进制格式来存储一系列（行、列、公式）三元组，每个非空单元格有一个。将数据作为文本写入是直观的；这里是 Spreadsheet::writeFile() 修改版本的一个节选：
+让我们来看一个基于文本的文件格式的简单示例。在第一部分描述的 `Spreadsheet` 应用程序中，我们使用二进制格式来存储一系列（行、列、公式）三元组，每个非空单元格有一个。将数据作为文本写入是直观的；这里是 `Spreadsheet::writeFile()` 修改版本的一个节选：
 
-```
+```cpp
 QTextStream out(&file);
 for (int row = 0; row < RowCount; ++row) {
     for (int column = 0; column < ColumnCount; ++column) {
@@ -7933,9 +7820,9 @@ for (int row = 0; row < RowCount; ++row) {
 }
 ```
 
-我们使用了一种简单的格式，每行代表一个单元格，行与列之间、列与公式之间用空格分隔。公式可以包含空格，但我们可以假设它不包含 '\n'。现在让我们看看对应的代码：
+我们使用了一种简单的格式，每行代表一个单元格，行与列之间、列与公式之间用空格分隔。公式可以包含空格，但我们可以假设它不包含 `'\n'`。现在让我们看看对应的代码：
 
-```
+```cpp
 QTextStream in(&file);
 while (!in.atEnd()) {
     QString line = in.readLine();
@@ -7948,17 +7835,15 @@ while (!in.atEnd()) {
 }
 ```
 
-我们逐行读取 Spreadsheet 数据。readLine 函数会移除末尾的换行符。QString::split() 返回一个字符串列表，在分隔符出现的任何地方对其字符串进行分割。例如，行 `5 19 Total value` 导致 "5"、"19"、"Total"、value"。
+我们逐行读取 `Spreadsheet` 数据。`readLine` 函数会移除末尾的换行符。`QString::split()` 返回一个字符串列表，在分隔符出现的任何地方对其字符串进行分割。例如，行 `5 19 Total value` 导致 `"5"`、`"19"`、`"Total"`、`value"`。
 
-如果我们至少有三个字段，就可以准备提取数据了。QStringList::takeFirst() 会移除列表中的第一个项并返回被移除的项。我们用它来提取行和列号。我们没有进行任何错误检查；如果读取到非整数行或列值，
+如果我们至少有三个字段，就可以准备提取数据了。`QStringList::takeFirst()` 会移除列表中的第一个项并返回被移除的项。我们用它来提取行和列号。我们没有进行任何错误检查；如果读取到非整数行或列值，
 
-# 读取 写入文本
+`QString::toInt()` 将返回 `0`。当我们设置 `setFormula()` 时，必须将剩余字段拼接回单个字符串。
 
-QString::toInt() 将返回 0。当我们设置 setFormula() 时，必须将剩余字段拼接回单个字符串。
+在我们的第二个 `QTextStream` 示例中，我们将使用逐字符的方法来实现程序，该程序读取文本文件并输出相同的文本，但移除行末尾的空格并将制表符替换为空格。程序的工作由 `tidyFile()` 函数完成：
 
-在我们的第二个 QTextStream 示例中，我们将使用逐字符的方法来实现程序，该程序读取文本文件并输出相同的文本，但移除行末尾的空格并将制表符替换为空格。程序的工作由 tidyFile() 函数完成：
-
-```
+```cpp
 void tidyFile(QIODevice *inDevice, QIODevice *outDevice)
 {
     QTextStream in(inDevice);
@@ -7999,18 +7884,18 @@ void tidyFile(QIODevice *inDevice, QIODevice *outDevice)
 
 ## 输入/输出
 
-QDataStream 作用于 QIODevice 子类，可以是 QFile、QBuffer、QProcess、QTcpSocket 或 QdpSocket。此外，它也可以直接用在 QString 上。例如：
+`QDataStream` 作用于 `QIODevice` 子类，可以是 `QFile`、`QBuffer`、`QProcess`、`QTcpSocket` 或 `QdpSocket`。此外，它也可以直接用在 `QString` 上。例如：
 
-```
+```cpp
 QString str;
 QTextStream(&str) << oct << " " << dec << 25 << endl;
 ```
 
-这使得 str 的内容变为 "37 25\n"，因为十进制 31 在八进制中表示为 37。在这种情况下，我们不需要对字符串设置编码，因为 QString 始终是 Unicode。
+这使得 `str` 的内容变为 `"37 25\n"`，因为十进制 31 在八进制中表示为 37。在这种情况下，我们不需要对字符串设置编码，因为 `QString` 始终是 Unicode。
 
-让我们来看一个基于文本的文件格式的简单示例。在第一部分描述的 Spreadsheet 应用程序中，我们使用二进制格式来存储一系列（行、列、公式）三元组，每个非空单元格有一个。将数据作为文本写入是直观的；这里是 Spreadsheet::writeFile() 修改版本的一个节选：
+让我们来看一个基于文本的文件格式的简单示例。在第一部分描述的 `Spreadsheet` 应用程序中，我们使用二进制格式来存储一系列（行、列、公式）三元组，每个非空单元格有一个。将数据作为文本写入是直观的；这里是 `Spreadsheet::writeFile()` 修改版本的一个节选：
 
-```
+```cpp
 QTextStream out(&file);
 for (int row = 0; row < RowCount; ++row) {
     for (int column = 0; column < ColumnCount; ++column) {
@@ -8021,9 +7906,9 @@ for (int row = 0; row < RowCount; ++row) {
 }
 ```
 
-我们使用了一种简单的格式，每行代表一个单元格，行与列之间、列与公式之间用空格分隔。公式可以包含空格，但我们可以假设它不包含 '\n'。现在让我们看看对应的代码：
+我们使用了一种简单的格式，每行代表一个单元格，行与列之间、列与公式之间用空格分隔。公式可以包含空格，但我们可以假设它不包含 `'\n'`。现在让我们看看对应的代码：
 
-```
+```cpp
 QTextStream in(&file);
 while (!in.atEnd()) {
     QString line = in.readLine();
@@ -8036,17 +7921,15 @@ while (!in.atEnd()) {
 }
 ```
 
-我们逐行读取 Spreadsheet 数据。readLine 函数会移除末尾的换行符。QString::split() 返回一个字符串列表，在分隔符出现的任何地方对其字符串进行分割。例如，行 `5 19 Total value` 导致 "5"、"19"、"Total"、value"。
+我们逐行读取 `Spreadsheet` 数据。`readLine` 函数会移除末尾的换行符。`QString::split()` 返回一个字符串列表，在分隔符出现的任何地方对其字符串进行分割。例如，行 `5 19 Total value` 导致 `"5"`、`"19"`、`"Total"`、`value"`。
 
-如果我们至少有三个字段，就可以准备提取数据了。QStringList::takeFirst() 会移除列表中的第一个项并返回被移除的项。我们用它来提取行和列号。我们没有进行任何错误检查；如果读取到非整数行或列值，
+如果我们至少有三个字段，就可以准备提取数据了。`QStringList::takeFirst()` 会移除列表中的第一个项并返回被移除的项。我们用它来提取行和列号。我们没有进行任何错误检查；如果读取到非整数行或列值，
 
-# 读取 写入文本
+`QString::toInt()` 将返回 `0`。当我们设置 `setFormula()` 时，必须将剩余字段拼接回单个字符串。
 
-QString::toInt() 将返回 0。当我们设置 setFormula() 时，必须将剩余字段拼接回单个字符串。
+在我们的第二个 `QTextStream` 示例中，我们将使用逐字符的方法来实现程序，该程序读取文本文件并输出相同的文本，但移除行末尾的空格并将制表符替换为空格。程序的工作由 `tidyFile()` 函数完成：
 
-在我们的第二个 QTextStream 示例中，我们将使用逐字符的方法来实现程序，该程序读取文本文件并输出相同的文本，但移除行末尾的空格并将制表符替换为空格。程序的工作由 tidyFile() 函数完成：
-
-```
+```cpp
 void tidyFile(QIODevice *inDevice, QIODevice *outDevice)
 {
     QTextStream in(inDevice);
@@ -8087,11 +7970,11 @@ void tidyFile(QIODevice *inDevice, QIODevice *outDevice)
 
 ## 遍历目录
 
-Qdir 类提供了跨平台的遍历目录和检索信息的方法。为了查看如何使用 Qdir，我们将编写一个小型命令行程序，计算特定目录及其子目录所占的空间。
+`Qdir` 类提供了跨平台的遍历目录和检索信息的方法。为了查看如何使用 `Qdir`，我们将编写一个小型命令行程序，计算特定目录及其子目录所占的空间。
 
-应用程序的核心是 imageSpace() 函数，它递归地计算给定目录图像的累积大小：
+应用程序的核心是 `imageSpace()` 函数，它递归地计算给定目录图像的累积大小：
 
-```
+```cpp
 qlong imageSpace(const QString &path)
 {
 Qdir dir(path);
@@ -8108,10 +7991,8 @@ return size;
 }
 ```
 
-
-
-
 在所有平台上均支持目录分隔符，除了在 Windows 上识别 `\` 之外。
+
 在向用户展示路径时，我们可以调用静态函数 `QDir::convertSeparators()` 将斜杠转换为特定平台的正确分隔符。
 
 让我们为程序添加一个 `main()` 函数：
@@ -8134,6 +8015,7 @@ int main(int argc, char *argv[])
 ```
 
 我们使用 `QDir::currentPath()` 来初始化路径为当前目录。
+
 或者，我们也可以使用 `QDir::homePath()` 将其初始化为用户目录。如果用户在命令行中指定了路径，我们将使用该路径。最后，我们调用 `imageSpace()` 函数来计算图像占用的空间。
 
 `QDir` 类提供了其他与文件和目录相关的函数，包括 `entryInfoList()`（返回一个 `QFile` 对象列表）、`rename()`、`exists()`、`mkdir()` 和 `rmdir()`。`QFile` 类提供了一些静态便利函数，包括 `remove()` 和 `exists()`。
@@ -8148,12 +8030,19 @@ int main(int argc, char *argv[])
 想象我们正在编写一个存储联系人信息的应用程序。为了方便用户，我们想将国际拨号代码嵌入可执行文件中。如果文件位于应用程序构建目录的 `datafiles` 目录中，资源文件可能如下所示：
 
 ```xml
+
 <!DOCTYPE RESOURCE><RESOURCE version="1.0">
+
 <resource>
+
   <file>datafiles/phone-codes.dat</file>
+
 </resource>
+
 </RESOURCE>
 ```
+
+
 
 在应用程序中，资源通过 `:/` 路径前缀识别。在此示例中，拨号代码文件的路径为 `:/datafiles/phone-codes.dat`，可以像任何其他文件一样使用 `QFile` 读取。
 
@@ -8163,9 +8052,9 @@ Qt 的资源系统提供了比我们在示例中演示更多的功能，包括�
 
 ## 进程间通信
 
-`QProcess` 类允许我们运行外部程序并与其进行交互。该类异步异步工作的，在后台执行任务，以便用户界面保持响应状态。当外部进程有数据或完成时，`QProcess` 会发出信号来通知我们。
+`QProcess` 类允许我们运行外部程序并与其进行交互。该类异步工作的，在后台执行任务，以便用户界面保持响应状态。当外部进程有数据或完成时，`QProcess` 会发出信号来通知我们。
 
-我们将回顾一个小型应用程序的代码，该程序为外部图像转换程序提供用户界面。对于这个示例，我们依赖于 ImageMagick convert 程序，它在所有主要平台上免费可用。
+我们将回顾一个小型应用程序的代码，该程序为外部图像转换程序提供用户界面。对于这个示例，我们依赖于 ImageMagick `convert` 程序，它在所有主要平台上免费可用。
 
 **图 12.2.** 图像转换器
 
@@ -8176,19 +8065,14 @@ Qt 的资源系统提供了比我们在示例中演示更多的功能，包括�
 ```cpp
 #ifndef CONVERTDIALOG_H
 #define CONVERTDIALOG_H
-
 #include <QDialog>
 #include <QProcess>
-
 #include "ui_convertdialog.h"
-
 class ConvertDialog : public QDialog, public Ui::ConvertDialog
 {
     Q_OBJECT
-
 public:
     ConvertDialog(QWidget *parent = 0);
-
 private slots:
     void on_browseButton_clicked();
     void on_convertButtonClicked();
@@ -8204,7 +8088,6 @@ ConvertDialog::ConvertDialog(QWidget *parent)
     : QDialog(parent)
 {
     setupUI(this);
-
     connect(&process, SIGNAL(readyStandardErrorRead())),
            this, SLOT(updateOutputTextChanged()));
     connect(&process, SIGNAL(finished(int, QProcess::ExitStatus)),
@@ -8283,9 +8166,9 @@ void ConvertDialog::processError(QProcess::Error error)
 }
 ```
 
-在这个示例中，我们异步地执行文件转换——也就是说，我们告诉 QProcess 运行转换进程并立即返回控制权。这使得在后台进行处理时，用户界面保持保持响应。但在某些情况下，我们需要在外部进程完成之前继续执行应用程序，在这种情况下，我们使用 QProcess 同步操作。
+在这个示例中，我们异步地执行文件转换——也就是说，我们告诉 `QProcess` 运行转换进程并立即返回控制权。这使得在后台进行处理时，用户界面保持响应。但在某些情况下，我们需要在外部进程完成之前继续执行应用程序，在这种情况下，我们使用 `QProcess` 同步操作。
 
-一个需要同步行为的示例是支持使用用户偏好的文本编辑器进行纯文本编辑的应用程序。使用 QText 实现这一点非常简单。例如，假设我们在 QTextEdit 中有纯文本，并提供一个用户点击的 Edit 按钮，连接到 edit() 槽。
+一个需要同步行为的示例是支持使用用户偏好的文本编辑器进行纯文本编辑的应用程序。使用 `QText` 实现这一点非常简单。例如，假设我们在 `QTextEdit` 中有纯文本，并提供一个用户点击的 Edit 按钮，连接到 `edit()` 槽。
 
 ```cpp
 void ExternalEditor::edit()
@@ -8293,22 +8176,14 @@ void ExternalEditor::edit()
     QTemporaryFile outputFile;
 ```
 
-
-
-
-## 进程间通信
-
 ```cpp
 if (!outfile.open())
     return;
-
 QString fileName = outfile.fileName();
 QTextStream out (&outfile);
 out << textEdit->toPlainText();
 outfile.close();
-
 QProcess::execute(editor, QStringList() << options << fileName);
-
 QFile inputFile(fileName);
 if (!infile.open(QIODevice::ReadOnly))
     return;
@@ -8316,9 +8191,9 @@ QTextStream in(&infile);
 textEdit->setPlainText(in.readAll());
 ```
 
-我们使用 QTemporary 来创建一个具有唯一名称的空文件。我们没有向 `QTemporaryFile()` 传递任何参数，它会方便地默认以读/写模式打开。我们将文本内容写入临时文件，然后关闭文件，因为某些文本编辑器无法对已经打开的文件操作。
+我们使用 `QTemporary` 来创建一个具有唯一名称的空文件。我们没有向 `QTemporaryFile()` 传递任何参数，它会方便地默认以读/写模式打开。我们将文本内容写入临时文件，然后关闭文件，因为某些文本编辑器无法对已经打开的文件操作。
 
-`QProcess::execute()` 静态函数执行一个外部进程并阻塞直到该进程完成。`editor` 参数是一个 `QString`，保存有编辑器器可执行文件的名称（例如 "vim"）。`options` 参数是一个 `QStringList`，如果我们正在使用 vim，则它包含一个项目 "-f"。
+`QProcess::execute()` 静态函数执行一个外部进程并阻塞直到该进程完成。`editor` 参数是一个 `QString`，保存有编辑器可执行文件的名称（例如 `"vim"`）。`options` 参数是一个 `QStringList`，如果我们正在使用 vim，则它包含一个项目 `"-f"`。
 
 当用户关闭文本编辑器后，进程结束，`execute()` 返回。然后我们打开临时文件并将其内容读入 `QTextEdit` 中。`QTemporaryFile` 在对象超出作用范围时会自动删除临时文件。
 
@@ -8334,7 +8209,7 @@ textEdit->setPlainText(in.readAll());
 
 ## 13. 数据库
 
-QtSql 模块提供了一个与平台和数据库无关的 SQL 数据库接口。该接口由一组类支持，这些类使用 Qt 的模型/视图架构提供数据库与用户界面的集成。本章假设已熟悉第 10 章介绍的 Qt 模型/视图类。
+`QtSql` 模块提供了一个与平台和数据库无关的 SQL 数据库接口。该接口由一组类支持，这些类使用 Qt 的模型/视图架构提供数据库与用户界面的集成。本章假设已熟悉第 10 章介绍的 Qt 模型/视图类。
 
 数据库连接由 `QSqlDatabase` 对象表示。Qt 使用驱动程序与各种数据库 API 通信。Qt 桌面包含以下驱动程序：
 
@@ -8353,18 +8228,9 @@ QtSql 模块提供了一个与平台和数据库无关的 SQL 数据库接口。
 
 对于熟悉 SQL 语法的用户，`QSqlQuery` 类提供了直接执行任意 SQL 语句并处理结果的方法。对于倾向于避免 SQL 语法的更高级数据库接口的用户，`QSqlTableModel` 和 `QSqlRelationalTableModel` 提供了合适的抽象。这些类代表 `QSql` 表。
 
-[注：此处原文似乎存在重复的“翻译翻译翻译翻译翻译翻译根据翻译根据翻译翻译翻译翻译翻译翻译翻译翻译的翻译内容。]
-
-[/content]
-
-*(注：由于原文中“翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译翻译”处存在严重的重复，以下以下为为部分的部分的译文：)*
-
-[content]
 对于熟悉 SQL 语法的用户，`QSqlQuery` 类提供了直接执行任意 SQL 语句并处理结果的方法。对于倾向于避免 SQL 语法的更高级数据库接口的用户，`QSqlTableModel` 和 `QSqlRelationalTableModel` 提供了合适的抽象。这些类代表 `QSql` 表。
 
-
-
-SqlDatabase::database() 函数返回一个 SqlDatabase 对象，代表我们在 `connection()` 中创建的连接。如果无法启动事务，`SqlDatabase::transaction()` 返回 `false`。某些数据库不支持事务。对于 `transaction()`、`commit()` 和 `rollback()` 函数，我们可以使用与数据库关联的 `QSqlDriver` 上的 `hasFeature()` 方法来测试数据库是否支持事务：
+`SqlDatabase::database()` 函数返回一个 `SqlDatabase` 对象，代表我们在 `connection()` 中创建的连接。如果无法启动事务，`SqlDatabase::transaction()` 返回 `false`。某些数据库不支持事务。对于 `transaction()`、`commit()` 和 `rollback()` 函数，我们可以使用与数据库关联的 `QSqlDriver` 上的 `hasFeature()` 方法来测试数据库是否支持事务：
 
 ## 连接与查询
 
@@ -8385,7 +8251,7 @@ db.setUsername("hilbert");
 db.setPassword("iptapa");
 ```
 
-我们可以通过将名称传递给 `QSqlDatabase::database()` 来获取指向 QSqlDatabase 对象的指针：
+我们可以通过将名称传递给 `QSqlDatabase::database()` 来获取指向 `QSqlDatabase` 对象的指针：
 
 ```cpp
 QSqlDatabase db = QSqlDatabase::database("OTHER");
@@ -8416,6 +8282,8 @@ model.select();
 ```sql
 SELECT * FROM cd WHERE year = 1998
 ```
+
+
 
 通过使用 `QSqlTableModel::record()` 获取给定记录并使用 `value()` 访问单个字段来遍历结果集：
 
@@ -8513,7 +8381,6 @@ CREATE TABLE artist (
   name VARCHAR(40) NOT NULL,
   country VARCHAR(40)
 );
-
 CREATE TABLE cd (
   id INTEGER PRIMARY KEY,
   title VARCHAR(40) NOT NULL,
@@ -8521,7 +8388,6 @@ CREATE TABLE cd (
   year INTEGER NOT NULL,
   FOREIGN KEY (artistid) REFERENCES artist
 );
-
 CREATE TABLE track (
   id INTEGER PRIMARY KEY,
   title VARCHAR(40) NOT NULL,
@@ -8533,7 +8399,7 @@ CREATE TABLE track (
 
 某些数据库不支持外键。对于这些数据库，我们移除 `FOREIGN KEY` 子句。示例仍然有效，但数据库不会强制引用完整性。
 
-## 以表格形式呈现数据
+### 以表格形式呈现数据
 
 | artist | cd | track |
 | --- | --- | --- |
@@ -8554,33 +8420,23 @@ CREATE TABLE track (
 ```cpp
 class ArtistForm : public QDialog {
     Q_OBJECT
-
 public:
     ArtistForm(const QString &name, QWidget *parent = 0);
-
 private slots:
     void addArtist();
     void deleteArtist();
     void beforeInsertArtist(QSqlRecord &record);
-
 private:
     enum {
         Artist_Id = 0,
         Artist_Name = 1,
         Artist_Country = 2
     };
-
     QSqlTableModel *model;
 };
 ```
 
-
-
-
-## 302
-## 13. 数据库
-
-```
+```cpp
 QTableView *tableView;
 QPushButton *addButton;
 QPushButton *deleteButton;
@@ -8601,6 +8457,7 @@ ArtistForm::ArtistForm(const QString &name, QWidget *parent)
     model->select();
     connect(model, SIGNAL(beforeInsert(QSqlRecord &)),
            this, SLOT(beforeInsert(QSqlRecord &)));
+}
 ```
 
 ```cpp
@@ -8675,7 +8532,6 @@ void ArtistForm::deleteArtist()
     if (!index.isValid())
         return;
     QSqlRecord record = model->record(index.row());
-
     QSqlTableModel cdModel;
     cdModel.setTable("cd");
     cdModel.setFilter("artist = " + record.value("id").toString());
@@ -8692,7 +8548,7 @@ void ArtistForm::deleteArtist()
 
 如果选择了记录，我们检查艺术家是否拥有。如果没有，我们立即将其删除。否则，我们使用消息框解释未执行删除。严格来说，我们应该在 `cdModel->select()` 和 `model->removeRow()` 调用之间使用事务。将在下一节显示事务。
 
-## 实现主详情表
+### 实现主详情表
 
 我们现在查看采用主详情方法的主表。主视图是 CD 列表。详情视图是当前 CD 的歌曲列表。这就是图 3.1 所示的应用程序主窗口。
 
@@ -8702,7 +8558,6 @@ class MainForm : public QWidget
     Q_OBJECT
 public:
     MainForm();
-
 private slots:
     void addCd();
     void deleteCd();
@@ -8713,7 +8568,6 @@ private slots:
     void beforeInsertCd(QSqlRecord &record);
     void beforeInsertTrack(QSqlRecord &record);
     void refreshHeader();
-
 private:
     enum {
         Cd_Id = 0,
@@ -8727,7 +8581,6 @@ private:
         Track_Duration = 2,
         Track_Artist = 3
     };
-
     QSqlRelationalTableModel *cdModel;
     QSqlTableModel *trackModel;
     QTableView *cdTableView;
@@ -8739,52 +8592,81 @@ private:
     QPushButton *editArtistsButton;
     QPushButton *quitButton;
 };
-
 MainForm::MainForm()
 {
-    cdModel = new QSqlRelationalTableModel(this);
-    cdModel->setTable("cd");
-    cdModel->setRelation(Cd_ArtistId, "artist", "name");
-    cdModel->setSort(Cd_Title, Qt::AscendingOrder);
-    cdModel->setHeaderData(Cd_Title, Qt::Horizontal, tr("Title"));
-    cdModel->setHeaderData(Cd_ArtistId, Qt::Horizontal, tr("Artist"));
-    cdModel->setHeaderData(Cd_Year, Qt::Horizontal, tr("Year"));
-    cdModel->select();
+```
 
-    cdTableView = new QTableView;
-    cdTableView->setModel(cdModel);
-    cdTableView->setItemDelegate(new QSqlRelationalDelegate(this));
-    cdTableView->setSelectionMode(QAbstractItemView::SingleSelection);
-    cdTableView->setSelectionBehavior(QAbstractItemView::SelectRows);
-    cdTableView->setColumnHidden(Cd_Id, true);
-    cdTableView->resizeToContents();
 
-    trackModel = new QSqlTableModel(this);
-    trackModel->setTable("track");
-    trackModel->setHeaderData(Track_Title, tr("Title"));
-    trackModel->setHeaderData(Track_Duration, Qt::Horizontal, tr("Duration"));
 
-    tableView = new QTableView;
-    tableView->setModel(trackModel);
-    tableView->setItemDelegate(new TrackDelegate(Track_Duration, this));
-    tableView->setSelectionMode(QAbstractItemView::SingleSelection);
-    tableView->setSelectionBehavior(QAbstractItemView::SelectRows);
+`cdModel = new QSqlRelationalTableModel(this);`
 
-    // 设置 CD 表的视图与我们之前看到的类似。
-    // 唯一的区别是，与其视图的默认代理
-    // 我们使用了 QSqlRelationalDelegate。是这个代理处理了外键。
+`cdModel->setTable("cd");`
 
-    connect(cdTableView->selectionModel(),
-            SIGNAL(currentRowChanged(const QModelIndex&, const QModelIndex&)),
-            this, SLOT(currentChanged(const QModelIndex&)));
-    connect(cdModel, SIGNAL(beforeInsert(QSqlRecord&)),
-            this, SLOT(beforeInsertCd(QSqlRecord&)));
-    connect(trackModel, SIGNAL(beforeInsert(QSqlRecord&)),
-            this, SLOT(beforeInsertTrack(QSqlRecord&)));
-    connect(trackModel, SIGNAL(rowsInserted(const QModelIndex&, int, int)),
-            this, SLOT(refreshHeader()));
+`cdModel->setRelation(Cd_ArtistId, "artist", "name");`
+
+`cdModel->setSort(Cd_Title, Qt::AscendingOrder);`
+
+`cdModel->setHeaderData(Cd_Title, Qt::Horizontal, tr("Title"));`
+
+`cdModel->setHeaderData(Cd_ArtistId, Qt::Horizontal, tr("Artist"));`
+
+`cdModel->setHeaderData(Cd_Year, Qt::Horizontal, tr("Year"));`
+
+`cdModel->select();`
+
+`cdTableView = new QTableView;`
+
+`cdTableView->setModel(cdModel);`
+
+`cdTableView->setItemDelegate(new QSqlRelationalDelegate(this));`
+
+`cdTableView->setSelectionMode(QAbstractItemView::SingleSelection);`
+
+`cdTableView->setSelectionBehavior(QAbstractItemView::SelectRows);`
+
+`cdTableView->setColumnHidden(Cd_Id, true);`
+
+`cdTableView->resizeToContents();`
+
+`trackModel = new QSqlTableModel(this);`
+
+`trackModel->setTable("track");`
+
+`trackModel->setHeaderData(Track_Title, tr("Title"));`
+
+`trackModel->setHeaderData(Track_Duration, Qt::Horizontal, tr("Duration"));`
+
+`tableView = new QTableView;`
+
+`tableView->setModel(trackModel);`
+
+`tableView->setItemDelegate(new TrackDelegate(Track_Duration, this));`
+
+`tableView->setSelectionMode(QAbstractItemView::SingleSelection);`
+
+`tableView->setSelectionBehavior(QAbstractItemView::SelectRows);`
+
+设置 CD 表的视图与我们之前看到的类似。
+
+唯一的区别是，与其视图的默认代理我们使用了 `QSqlRelationalDelegate`。是这个代理处理了外键。
+
+```cpp
+connect(cdTableView->selectionModel(),
+        SIGNAL(currentRowChanged(const QModelIndex&, const QModelIndex&)),
+        this, SLOT(currentChanged(const QModelIndex&)));
+
+connect(cdModel, SIGNAL(beforeInsert(QSqlRecord&)),
+        this, SLOT(beforeInsertCd(QSqlRecord&)));
+
+connect(trackModel, SIGNAL(beforeInsert(QSqlRecord&)),
+        this, SLOT(beforeInsertTrack(QSqlRecord&)));
+
+connect(trackModel, SIGNAL(rowsInserted(const QModelIndex&, int, int)),
+        this, SLOT(refreshHeader()));
 }
+```
 
+```cpp
 void MainForm::currentChanged(const QModelIndex& index)
 {
     if (index.isValid()) {
@@ -8796,10 +8678,6 @@ void MainForm::currentChanged(const QModelIndex& index)
     }
 }
 ```
-```
-
-
-
 
 ## 实现主详情表单
 
@@ -8808,7 +8686,7 @@ trackModel->select();
 refreshTrackLayerView();
 ```
 
-当当前 CD 变化时，会调用此槽函数。这发生在用户导航到另一个 CD 时（通过点击或使用向上/向下方向键）。如果 CD 是无效的（例如，没有 CD 或正在插入新 CD，或者当前 CD 已删除），我们将曲目表的 `cid` 设置为 -1（一个我们不会匹配任何记录的无效 ID）。
+当当前 CD 变化时，会调用此槽函数。这发生在用户导航到另一个 CD 时（通过点击或使用向上/向下方向键）。如果 CD 是无效的（例如，没有 CD 或正在插入新 CD，或者当前 CD 已删除），我们将曲目表的 `cid` 设置为 `-1`（一个我们不会匹配任何记录的无效 ID）。
 
 然后，在设置过滤器后，我们选择匹配的曲目。`refreshTrackLayerView()` 函数将在稍后解释。
 
@@ -8930,10 +8808,6 @@ void MainForm::deleteTrack()
 
 如果用户点击“删除”按钮，将调用此槽函数。如果存在当前 CD，我们会查找它有多少曲目。如果没有曲目，我们直接删除该 CD 记录。如果至少有一个曲目，我们会要求用户确认删除，如果他们点击“是”，我们就会删除所有记录，然后删除 CD 的记录。所有这些操作都在事务的作用范围内完成，因此级联删除要么整体失败，要么整体成功——前提是底层数据库支持事务。
 
-
-
-
-
 ## 312 14. 网络连接
 
 ```cpp
@@ -9034,13 +8908,15 @@ bool QFtp::getFile(const QUrl &url) {
 }
 ```
 
+
+
 `getFile()` 函数首先检查传入的 URL。如果遇到问题，函数将向 `cerr` 打印错误消息并返回 `false` 以表示下载失败。
 
 我们没有强迫用户创建一个本地名称，而是使用 URL 本身创建一个合理的名称，并以 `ftpget.out` 作为备选方案。如果我们无法打开文件，将打印错误消息并返回 `false`。
 
 接下来，我们使用 `QFtp` 对象执行系列的一四个 FTP 命令。`url.port(21)` 调用返回 URL 中指定的端口号，如果 URL 本身未指定，则返回端口 21。由于没有为 `login()` 函数提供用户名或密码，因此将尝试匿名登录。`get()` 的第二个参数指定了输出 I/O 设备。
 
-FTP 命令被队列并在 Qt 的事件循环中执行。所有命令的完成通过 Qt 的 `done (bool)` 信号指示，我们在构造函数中将其连接到了 `ftpDone(bool error)`。
+FTP 命令被队列并在 Qt 的事件循环中执行。所有命令的完成通过 Qt 的 `done(bool)` 信号指示，我们在构造函数中将其连接到了 `ftpDone(bool error)`。
 
 ```cpp
 void FtpGet::ftpDone(bool error)
@@ -9057,18 +8933,14 @@ void FtpGet::ftpDone(bool error)
 
 一旦所有 FTP 命令执行完毕，我们就会关闭文件并发出自己的 `done()` 信号。在这里关闭文件而不是在 `getFile()` 函数末尾的 `ftp.close()` 调用之后关闭文件，可能看起来很奇怪，但因为 FTP 命令是异步执行的，在 `get()` 函数返回后可能仍在进行中。只有当 `QFtp` 对象的 `done` 信号发出时，我们才知道下载已完成，并且关闭文件是安全的。
 
-Ftp 提供了几个 FTP 命令，包括 `connectToHost()`、`login()`、`close()`、`list()`、`cd()`、`get()`、`put()`、`remove()`、`mkdir()`、`rmdir()` 和 `rename()`。这些函数中没有一个是执行 FTP 命令并返回的。
+`Ftp` 提供了几个 FTP 命令，包括 `connectToHost()`、`login()`、`close()`、`list()`、`cd()`、`get()`、`put()`、`remove()`、`mkdir()`、`rmdir()` 和 `rename()`。这些函数中没有一个是执行 FTP 命令并返回的。
 
 ```cpp
 void Spider::processNextDirectory()
 {
 ```
 
-
-
-
-
-## 编写 FTP 客户端 317
+## 编写 FTP 客户端
 
 `processNextDirectory` 函数从 `pendingDirs` 列表中取出第一个远程目录，并在本地文件系统中创建对应的目录。接着，它告诉 Qt 对象切换到已获取的目录并列出其文件。对于 `list()` 处理的每一个文件，它都会发射一个 `listInfo()` 信号，导致 `listInfo()` 槽被调用。
 
@@ -9107,7 +8979,7 @@ void Spider::ftpListInfo(const QUrl &urlInfo) {
 void Spider::ftpDone(bool error) {
 ```
 
-## 318   14. 网络编程
+## 14. 网络编程
 
 ```cpp
 if (error) {
@@ -9156,7 +9028,7 @@ emit done()
 
 ## 编写 FTP 客户端
 
-如果在下载某个目录中（ 20 个文件中的第 5 个文件时发生网络错误，剩余的文件将不会被下载。如果我们想下载尽可能的文件，一种解决方案是一次性调度所有的 `GET` 操作，并等待 `done (bool)` 信号出现后再调度新的 `GET` 操作。在 `listInfo()` 中，我们只需将文件名追加到 `QString` 中，而不是立即调用 `get()`；而在 `done (bool)` 中，我们将对 `QStringList` 中的下一个待下载的文件调用 `get()`。执行执行顺序将像如下所示：
+如果在下载某个目录中（ 20 个文件中的第 5 个文件时发生网络错误，剩余的文件将不会被下载。如果我们想下载尽可能的文件，一种解决方案是一次性调度所有的 `GET` 操作，并等待 `done(bool)` 信号出现后再调度新的 `GET` 操作。在 `listInfo()` 中，我们只需将文件名追加到 `QString` 中，而不是立即调用 `get()`；而在 `done(bool)` 中，我们将对 `QStringList` 中的下一个待下载的文件调用 `get()`。执行执行顺序将像如下所示：
 
 ```
 connectToHost(host, port)
@@ -9189,11 +9061,6 @@ int main(int argc, char *argv[])
     }
 ```
 
-
-
-
-
-## 322
 ## 14. 网络编程
 
 一旦 HTTP 请求完成，我们将关闭文件，如果发生错误则通知用户。
@@ -9305,6 +9172,8 @@ private:
 
 `TripPlanner` 类继承自 `Ui::TripPlanner`（由 uic 生成）。`tcpSocket` 成员封装了连接。`nextBlockSize` 变量用于解析从服务器接收的块。
 
+
+
 ```cpp
 TripPlanner::TripPlanner(QWidget *parent)
     : QDialog(parent)
@@ -9345,17 +9214,13 @@ void TripPlanner::connectToSort()
 }
 ```
 
-`connectToSort` 槽在用户点击搜索开始搜索时执行。我们在 `TcpSocket` 对象上调用 `connectHost()` 连接到服务器，该服务器可以通过虚构的 tripserver.zugbahn.de 的端口 6178 访问。（如果你想在本地尝试示例，请将主机名替换为 `QHostAddress::LocalHost`）。`connectHost()` 调用是异步的；它会立即返回。当连接建立并运行时，`TcpSocket` 对象会发出 `connected()` 信号；如果连接失败，则会发出 `error (QAbstractSocket::socketError)`。
+`connectToSort`槽在用户点击搜索开始搜索时执行。我们在`TcpSocket`对象上调用`connectHost()`连接到服务器，该服务器可以通过虚构的`tripserver.zugbahn.de`的端口`6178`访问。（如果你想在本地尝试示例，请将主机名替换为`QHostAddress::LocalHost`）。`connectHost()`调用是异步的；它会立即返回。当连接建立并运行时，`TcpSocket`对象会发出`connected()`信号；如果连接失败，则会发出`error (QAbstractSocket::socketError)`。
 
-
-
-
-
-## 14. 网络
+### 14. 网络
 
 接下来，我们更新用户界面，特别是让进度条可见。
 
-最后，我们将 `nextBlockSize` 变量设置为 0。该变量存储了从服务器接收到的下一个块的长度。我们选择使用值 0 表示我们已经知道了该块的大小。
+最后，我们将`nextBlockSize`变量设置为`0`。该变量存储了从服务器接收到的下一个块的长度。我们选择使用值`0`表示我们已经知道了该块的大小。
 
 ```cpp
 void TripPlanner::sendRequest() {
@@ -9379,20 +9244,27 @@ void TripPlanner::sendRequest() {
 }
 ```
 
-`sendRequest()` 槽在 `QtTcpSocket` 对象发射 `connected` 信号时执行，表示连接已建立。该槽的任务是生成一个发送到服务器的请求，包含用户输入的所有信息。请求是一个二进制块，格式如下：
+`sendRequest()`槽在`QtTcpSocket`对象发射`connected`信号时执行，表示连接已建立。该槽的任务是生成一个发送到服务器的请求，包含用户输入的所有信息。请求是一个二进制块，格式如下：
 
 | 类型 | 描述（不包含此字段的块字节大小） |
+
 | :--- | :--- |
+
 | quint16 | 请求类型（始终为 'S'） |
+
 | QString | 出发城市 |
+
 | QString | 到达城市 |
+
 | QDate | 旅行日期 |
+
 | QTime | 大致旅行时间 |
+
 | quint8 | 时间是出发 ('D') 还是到达 ('A') |
 
-我们将数据直接写入一个名为 `block` 的 `QByteArray` 中。在将所有数据放入块之前，我们并不知道块的大小，而这个大小必须先发送。
+我们将数据直接写入一个名为`block`的`QByteArray`中。在将所有数据放入块之前，我们并不知道块的大小，而这个大小必须先发送。
 
-我们将块大小初始化为 0，随后紧跟其余数据。然后，我们在 I/O 设备（后台由 `QData` 创建的 `QBuffer`）上调用 `seek(0)` 回到字节流开头，并用块数据的大小覆盖初始的 0。大小的计算方法是取块的大小减去 `sizeof(quint16)`（即 2字节），以便从字节计数中排除大小字段。之后，我们调用 `QTcpSocket` 的 `write()` 方法将块发送到服务器。
+我们将块大小初始化为`0`，随后紧跟其余数据。然后，我们在 I/O 设备（后台由`QData`创建的`QBuffer`）上调用`seek(0)`回到字节流开头，并用块数据的大小覆盖初始的`0`。大小的计算方法是取块的大小减去`sizeof(quint16)`（即 2字节），以便从字节计数中排除大小字段。之后，我们调用`QTcpSocket`的`write()`方法将块发送到服务器。
 
 ```cpp
 void TripPlanner::updateTableWidget() {
@@ -9443,19 +9315,21 @@ void TripPlanner::updateTableWidget() {
 }
 ```
 
-`updateTableWidget()` 槽连接到 `QTcpSocket` 的 `readyRead()` 信号，每当 `QTcpSocket` 从服务器接收新数据时，该信号就会发射。服务器向我们发送符合用户标准的可能的行程列表。每个匹配的行程都作为一个单独块发送，每个块都以一个大小开头。使用循环是必要的，因为我们并不一定一次只从服务器接收一个数据块。我们可能收到一个完整的块，可能只是块的一部分，或者一个半块，甚至一次性收到所有的块。
+`updateTableWidget()`槽连接到`QTcpSocket`的`readyRead()`信号，每当`QTcpSocket`从服务器接收新数据时，该信号就会发射。服务器向我们发送符合用户标准的可能的行程列表。每个匹配的行程都作为一个单独块发送，每个块都以一个大小开头。使用循环是必要的，因为我们并不一定一次只从服务器接收一个数据块。我们可能收到一个完整的块，可能只是块的一部分，或者一个半块，甚至一次性收到所有的块。
 
 | 51 字节 | 48 字节 | 53 字节 |
+
 | :--- | :--- | :--- |
+
 | 51 字节 | 48 字节 | 53 字节 (0xFFFF) |
 
 图 14.2. 行程服务器的块。
 
-那么循环是如何工作的呢？如果 `nextBlockSize` 变量为 0，意味着我们还没有读取下一个块的大小。我们尝试读取它（假设至少有 2 个字节可读）。服务器使用大小值 0xFFFF 表示没有更多数据接收，或者如果我们读取到这个值，说明我们已到达末尾。
+那么循环是如何工作的呢？如果`nextBlockSize`变量为`0`，意味着我们还没有读取下一个块的大小。我们尝试读取它（假设至少有 2 个字节可读）。服务器使用大小值`0xFFFF`表示没有更多数据接收，或者如果我们读取到这个值，说明我们已到达末尾。
 
 ## 编写 TCP 客户端-服务器应用程序
 
-为了实现 TCP 服务器，我们需要一个监听传入连接的类。我们使用 `QTcpServer` 来实现。
+为了实现 TCP 服务器，我们需要一个监听传入连接的类。我们使用`QTcpServer`来实现。
 
 ```cpp
 class TripServer : public QTcpServer {
@@ -9467,7 +9341,7 @@ protected slots:
 };
 ```
 
-`TripServer` 类重新实现了 `incomingConnection` 函数，当客户端尝试连接到服务器监听的端口时，该函数会被调用。
+`TripServer`类重新实现了`incomingConnection`函数，当客户端尝试连接到服务器监听的端口时，该函数会被调用。
 
 ```cpp
 TripServer::TripServer(QObject *parent)
@@ -9479,7 +9353,7 @@ void TripServer::incomingConnection(int socketId) {
 }
 ```
 
-每个 `ClientSocket` 处理与单个客户端的通信。
+每个`ClientSocket`处理与单个客户端的通信。
 
 ```cpp
 class ClientSocket : public QTcpSocket {
@@ -9493,20 +9367,16 @@ private:
 };
 ```
 
-
-
-
-
-# 编写 TCP 客户端-服务器应用程序 331
+### 编写 TCP 客户端-服务器应用程序 331
 
 ```cpp
 nextBlockSize = 0;
 }
 ```
 
-在构造函数中，我们建立了必要的信号与槽连接，并将 `nextBlockSize` 变量设置为 0，这表示我们尚不知道客户端发送的数据块的大小。
+在构造函数中，我们建立了必要的信号与槽连接，并将`nextBlockSize`变量设置为`0`，这表示我们尚不知道客户端发送的数据块的大小。
 
-`disconnected()` 信号连接到 `deleteLater()`，这是一个继承自 `QObject` 的函数，它会在控制权返回 Qt 事件循环时删除该对象。这确保了当 Socket 连接关闭时，`ClientSocket` 对象会被删除。
+`disconnected()`信号连接到`deleteLater()`，这是一个继承自`QObject`的函数，它会在控制权返回 Qt 事件循环时删除该对象。这确保了当 Socket 连接关闭时，`ClientSocket`对象会被删除。
 
 ```cpp
 void ClientSocket::readClient()
@@ -9545,14 +9415,15 @@ close();
 }
 ```
 
-`readClient()` 槽连接到 `QTcpSocket::readyRead()` 信号。如果 `BlockSize` 为 0，我们首先读取块大小；否则，我们已经读取了它，而是检查一个整个数据块是否到达。如果整个数据块已就绪，我们将一次性读取它。我们直接在 `QTcpSocket`（即 `this` 对象）上使用 `QDataStream` 并使用 `>>` 运算符读取字段。
+`readClient()`槽连接到`QTcpSocket::readyRead()`信号。如果`BlockSize`为`0`，我们首先读取块大小；否则，我们已经读取了它，而是检查一个整个数据块是否到达。如果整个数据块已就绪，我们将一次性读取它。我们直接在`QTcpSocket`（即`this`对象）上使用`QDataStream`并使用`>>`运算符读取字段。
 
-## 332
-## 14. 网络
+### 332
 
-一旦我们读取了客户端的请求，就准备好给出回复。如果是真实应用程序，我们将在火车时刻表数据库中查找以找到匹配的火车。但在这里，我们只需要名为 `generateRandomTrip()` 的函数，它会生成一个随机行程。我们随机调用该函数几次，然后发送 `0xFFFF` 来表示数据结束。最后，我们关闭连接：
+### 14. 网络
 
-`generateRandomTrip()` 函数展示了如何通过 TCP 连接发送数据块数据。这与我们在客户端的 `sendRequest()` 函数（见第 326 页）中所执行的操作非常相似。再次，将数据块写入 `QByteArray`，以便在调用 `write()` 之前能够确定其大小。
+一旦我们读取了客户端的请求，就准备好给出回复。如果是真实应用程序，我们将在火车时刻表数据库中查找以找到匹配的火车。但在这里，我们只需要名为`generateRandomTrip()`的函数，它会生成一个随机行程。我们随机调用该函数几次，然后发送`0xFFFF`来表示数据结束。最后，我们关闭连接：
+
+`generateRandomTrip()`函数展示了如何通过 TCP 连接发送数据块数据。这与我们在客户端的`sendRequest()`函数（见第 326 页）中所执行的操作非常相似。再次，将数据块写入`QByteArray`，以便在调用`write()`之前能够确定其大小。
 
 ```cpp
 QPButton quitButton(QObject::tr("Trip Server"));
@@ -9563,9 +9434,9 @@ quitButton.show();
 return app.exec();
 ```
 
-在 `main()` 中，我们创建了一个 `TripServer` 对象和一个 `QPushButton`，允许用户停止服务器。我们通过调用 `QtSocket::listen(1)` 启动服务器，该函数接收我们想要接受的 IP 地址和端口号。特殊地址 `0.0.0.0` (`QHostAddress::Any`) 表示本地主机上存在的任何 IP 接口。
+在`main()`中，我们创建了一个`TripServer`对象和一个`QPushButton`，允许用户停止服务器。我们通过调用`QtSocket::listen(1)`启动服务器，该函数接收我们想要接受的 IP 地址和端口号。特殊地址`0.0.0.0` (`QHostAddress::Any`) 表示本地主机上存在的任何 IP 接口。
 
-这完成了我们的客户端-服务器示例。在这种情况下，我们使用了面向块的协议，这允许我们使用 `QDataStream` 进行读写。如果我们想使用面向行的协议，最简单的方法是在连接到 `readyRead()` 信号的槽中使用 `QTcpSocket::canReadLine()` 和 `readLine()` 函数：
+这完成了我们的客户端-服务器示例。在这种情况下，我们使用了面向块的协议，这允许我们使用`QDataStream`进行读写。如果我们想使用面向行的协议，最简单的方法是在连接到`readyRead()`信号的槽中使用`QTcpSocket::canReadLine()`和`readLine()`函数：
 
 ```cpp
 QStringList lines;
@@ -9573,13 +9444,15 @@ while (tccpSocket.canReadLine())
     lines.append(tccpSocket.readLine());
 ```
 
-然后我们处理每个读取的每一行。至于发送数据，可以使用 `QTcpSocket` 上的 `QTextStream` 来完成。
+然后我们处理每个读取的每一行。至于发送数据，可以使用`QTcpSocket`上的`QTextStream`来完成。
 
-我们使用的服务器实现在连接较多时扩展性并不良好。问题在于，当我们处理一个请求时，不会处理其他连接。更具扩展性的方法是为每个连接启动新线程。Qt/examples/network/threadedfortuneserver 中的 Threaded Fortune Server 示例说明了如何做到这一点。
+我们使用的服务器实现在连接较多时扩展性并不良好。问题在于，当我们处理一个请求时，不会处理其他连接。更具扩展性的方法是为每个连接启动新线程。Qt/examples/network/threadedfortuneserver中的 Threaded Fortune Server 示例说明了如何做到这一点。
 
 ## 发送和接收 UDP 数据报
 
-`QUdpSocket` 类可用于发送和接收 UDP 数据报。UDP 是一种不可靠的、面向数据报的协议。应用程序层使用 UDP 是因为它比 TCP 更轻量。使用 UDP，数据以包（数据报）的形式从一个主机发送到另一个主机。它没有连接的概念，如果 UDP 包未成功送达，不会向发送者报告错误。
+
+
+`QUdpSocket`类可用于发送和接收 UDP 数据报。UDP 是一种不可靠的、面向数据报的协议。应用程序层使用 UDP 是因为它比 TCP 更轻量。使用 UDP，数据以包（数据报）的形式从一个主机发送到另一个主机。它没有连接的概念，如果 UDP 包未成功送达，不会向发送者报告错误。
 
 ![](img/34bd675de80edd220dc2d53b429caf78_350_0.png)
 
@@ -9587,8 +9460,7 @@ while (tccpSocket.canReadLine())
 
 我们将通过“气象球”（Weather Balloon）和“气象站”（Weather Station）示例学习如何从 Qt 应用程序使用 UDP。气象球应用程序模拟一个气象球，每 2 秒发送一次包含当前大气状况的 UDP 数据报（推测通过无线连接）。气象站应用程序接收这些数据报并显示在屏幕上。
 
-## 351
-## 14. 网络
+# 14. 网络
 
 ```cpp
 class WeatherBalloon : public QPushButton
@@ -9610,7 +9482,7 @@ private:
 };
 ```
 
-`WeatherBalloon` 类继承自 `QPushButton`。它使用 `QUdpSocket` 与气象站通信。
+`WeatherBalloon`类继承自`QPushButton`。它使用`QUdpSocket`与气象站通信。
 
 ```cpp
 WeatherBalloon::WeatherBalloon(QWidget *parent)
@@ -9621,7 +9493,7 @@ WeatherBalloon::WeatherBalloon(QWidget *parent)
 }
 ```
 
-在构造函数中，我们启动一个 `QTimer` 每秒调用一次 `sendDatagram()`。
+在构造函数中，我们启动一个`QTimer`每秒调用一次`sendDatagram()`。
 
 ```cpp
 void WeatherBalloon::sendDatagram()
@@ -9638,15 +9510,19 @@ void WeatherBalloon::sendDatagram()
 }
 ```
 
-在 `sendDatagram()` 中，我们生成并发送包含日期时间、温度、湿度和高度的数据报：
+在`sendDatagram()`中，我们生成并发送包含日期时间、温度、湿度和高度的数据报：
 
 | QDateTime | 测量日期时间 |
+
 |---|---|
+
 | double | 温度 °C |
+
 | double | 湿度 % |
+
 | double | 高度 米 |
 
-数据报通过 `QUdpSocket::writeDatagram()` 发送。`writeDatagram()` 的第二个和第三个参数是对方的 IP 地址和端口号。在本示例中，我们假设气象站运行在同一机器上，因此使用 IP 地址 `127.0.0.1` (`QHostAddress::LocalHost`)。
+数据报通过`QUdpSocket::writeDatagram()`发送。`writeDatagram()`的第二个和第三个参数是对方的 IP 地址和端口号。在本示例中，我们假设气象站运行在同一机器上，因此使用 IP 地址`127.0.0.1` (`QHostAddress::LocalHost`)。
 
 ```cpp
 class WeatherStation : public QDialog
@@ -9666,9 +9542,7 @@ private:
 };
 ```
 
-## 352
-
-`WeatherStation` 类继承自 `QDialog`。它监听特定的 UDP 端口，解析任何传入的数据报（来自气象球），并将内容显示在五个只读 `QLineEdit` 中。感兴趣的私有变量是类型为 `QUdpSocket` 的 `udpSocket`，我们将用它来接收数据报。
+`WeatherStation`类继承自`QDialog`。它监听特定的 UDP 端口，解析任何传入的数据报（来自气象球），并将内容显示在五个只读`QLineEdit`中。感兴趣的私有变量是类型为`QUdpSocket`的`udpSocket`，我们将用它来接收数据报。
 
 ```cpp
 WeatherStation::WeatherStation(QWidget *parent)
@@ -9703,15 +9577,7 @@ void WeatherStation::processPendingDatagrams()
 }
 ```
 
-
-
-
-
-## 336 14. 网络
-
-... 此，SLOT(processPendingDatagrams());
-
-在构造函数中，我们首先将 `QUdpSocket` 绑定到气象球传输的端口。由于我们没有指定主机地址，套接将接受发送到运行气象站机器的任何 IP 地址的数据报。然后，我们将套接的 `readyRead()` 信号连接到私有函数 `processPendingDatagrams()`，该函数负责提取并显示数据。
+在构造函数中，我们首先将`QUdpSocket`绑定到气象球传输的端口。由于我们没有指定主机地址，套接将接受发送到运行气象站机器的任何 IP 地址的数据报。然后，我们将套接的`readyRead()`信号连接到私有函数`processPendingDatagrams()`，该函数负责提取并显示数据。
 
 ```
 void WeatherStation::processPendingDatagrams()
@@ -9742,9 +9608,9 @@ humidityLineEdit->setText(tr("%1 %%").arg(humidity));
 altLineEdit->setText(tr("%1 m").arg(altitude));
 ```
 
-当数据报到达时，`processPendingDatagrams()` 槽会被调用。`QUdpSocket` 将传入的数据报排队并让我们逐一个地访问它们。通常情况下，只有一个数据报，但我们不能排除发送者在发出 `readyRead()` 信号之前连续发送几个数据报的可能性。在这种情况下，我们可以忽略除最后一个数据报以外的所有数据报，因为较早的数据报包含了过时的气象状况。
+当数据报到达时，`processPendingDatagrams()`槽会被调用。`QUdpSocket`将传入的数据报排队并让我们逐一个地访问它们。通常情况下，只有一个数据报，但我们不能排除发送者在发出`readyRead()`信号之前连续发送几个数据报的可能性。在这种情况下，我们可以忽略除最后一个数据报以外的所有数据报，因为较早的数据报包含了过时的气象状况。
 
-`pendingDatagramSize()` 返回第一个待处理数据报的大小。从应用程序的角度来看，数据报总是作为单个数据单元发送和接收的。这意味着只要有任何可用字节，就可以读取整个数据报。`readDatagram()` 将第一个待处理数据报的内容复制到指定的 *char* 缓冲区中（如果缓冲区太小则会截断数据），并移动到下一个待处理数据报。一旦我们读取了所有数据报，就会将其中一个（具有最新气象测量值的那个）分解为各个部分，并将新数据填充到 `QQLineEdit` 中。
+`pendingDatagramSize()`返回第一个待处理数据报的大小。从应用程序的角度来看，数据报总是作为单个数据单元发送和接收的。这意味着只要有任何可用字节，就可以读取整个数据报。`readDatagram()`将第一个待处理数据报的内容复制到指定的*char*缓冲区中（如果缓冲区太小则会截断数据），并移动到下一个待处理数据报。一旦我们读取了所有数据报，就会将其中一个（具有最新气象测量值的那个）分解为各个部分，并将新数据填充到`QQLineEdit`中。
 
 ## 发送和接收 UDP 数据报
 
@@ -9758,17 +9624,17 @@ int main(int argc, char *argv[])
 }
 ```
 
-最后，在 `main()` 中，我们创建并显示了 `WeatherStation`。
+最后，在`main()`中，我们创建并显示了`WeatherStation`。
 
-现在我们完成了 UDP 发送端和接收端。应用程序尽可能简单，气象球发送数据报，而应用程序需要在套接字上进行读写。`QUdpSocket::writeDatagram()` 和 `QUdpSocket::readDatagram()` 函数可以传递主机地址和端口号，因此 `QUdpSocket` 可以从它 `bind()` 绑定的主机和端口读取，并写入其他主机和端口。
+现在我们完成了 UDP 发送端和接收端。应用程序尽可能简单，气象球发送数据报，而应用程序需要在套接字上进行读写。`QUdpSocket::writeDatagram()`和`QUdpSocket::readDatagram()`函数可以传递主机地址和端口号，因此`QUdpSocket`可以从它`bind()`绑定的主机和端口读取，并写入其他主机和端口。
 
 - 使用 SAX 读取 XML
 - 使用 DOM 读取 XML
 - 写入 XML
 
-## 15. XML
+# 15. XML
 
-XML（可扩展标记语言）是一种通用的文本文件格式，在数据交换和数据存储非常流行。Qt 的 `QtXml` 模块提供了两个不同的 API 来读取 XML 文档：
+XML（可扩展标记语言）是一种通用的文本文件格式，在数据交换和数据存储非常流行。Qt 的`QtXml`模块提供了两个不同的 API 来读取 XML 文档：
 
 - SAX（简单 XML 接口）通过虚拟函数直接向应用程序报告“解析事件”。
 - DOM（文档对象模型）将 XML 文档转换为树结构，应用程序可以对该树进行导航。
@@ -9781,9 +9647,7 @@ XML（可扩展标记语言）是一种通用的文本文件格式，在数据�
 
 SAX 是读取 XML 文档的公认标准 API。Qt 的类按照 SAX2 实现建模，但在命名上为了符合 Qt 规范有所不同。有关 SAX 的更多信息，请参见 http://www.saxproject.org/。
 
-Qt 提供了一个基于 SAX 的非验证 XML 解析器，称为 `QtSimpleReader`。该解析器识别格式良好的 XML 并支持命名空间。当解析器遍历文档时，它会调用已注册的处理器类中的虚拟函数来指示解析事件（这些“解析事件”与 Qt 事件——如键盘和鼠标事件——无关）。例如，假设解析器正在分析以下 XML 文档：
-
-## 15. XML
+Qt 提供了一个基于 SAX 的非验证 XML 解析器，称为`QtSimpleReader`。该解析器识别格式良好的 XML 并支持命名空间。当解析器遍历文档时，它会调用已注册的处理器类中的虚拟函数来指示解析事件（这些“解析事件”与 Qt 事件——如键盘和鼠标事件——无关）。例如，假设解析器正在分析以下 XML 文档：
 
 解析器将调用以下解析事件处理器：
 
@@ -9797,11 +9661,11 @@ endElement("doc")
 endDocument()
 ```
 
-上述函数都声明在 `ContentHandler` 中。为了简单起见，我们省略了 `startElement()` 和 `endElement()` 的一些参数。
+上述函数都声明在`ContentHandler`中。为了简单起见，我们省略了`startElement()`和`endElement()`的一些参数。
 
-`QContentHandler` 是许多与 `QtSimpleReader` 配合使用的类之一。其他还有 `QEntityResolver`、`QDTDHandler`、`QDeclHandler` 和 `QlexicalHandler`。这些类只声明了纯函数并提供了关于不同应用程序的信息。为了方便起见，Qt 还提供了继承自所有处理器类并提供简单实现的 `QDefaultHandler`。这种具有许多处理器类而一个子类的设计在 Qt 中是不寻常的；采用它是为了密切遵循 Java 模型。
+`QContentHandler`是许多与`QtSimpleReader`配合使用的类之一。其他还有`QEntityResolver`、`QDTDHandler`、`QDeclHandler`和`QlexicalHandler`。这些类只声明了纯函数并提供了关于不同应用程序的信息。为了方便起见，Qt 还提供了继承自所有处理器类并提供简单实现的`QDefaultHandler`。这种具有许多处理器类而一个子类的设计在 Qt 中是不寻常的；采用它是为了密切遵循 Java 模型。
 
-现在我们将展示如何使用 `QtSimpleReader` 和 `QDefaultHandler` 解析一个临时 XML 文件并将其内容渲染在 `QTreeWidget` 中。图 1.2 中的索引文件：
+现在我们将展示如何使用`QtSimpleReader`和`QDefaultHandler`解析一个临时 XML 文件并将其内容渲染在`QTreeWidget`中。图 1.2 中的索引文件：
 
 ```xml
 <?xml version="1.0"?>
@@ -9821,13 +9685,16 @@ endDocument()
 ```
 
 | 术语 | 页码 |
+
 |---|---|
+
 | sidebars subtraction | 10, 34-35, 307-308 |
+
 | of pictures of vectors | 115, 244 9 |
 
 图 1.2. 在 TreeWidget 中显示的索引文件
 
-实现解析器的第一步是子类 `QDefaultHandler`：
+实现解析器的第一步是子类`QDefaultHandler`：
 
 ```cpp
 class SaxHandler : public QDefaultHandler
@@ -9852,13 +9719,12 @@ private:
 };
 ```
 
-`SaxHandler` 继承自 `QDefaultHandler` 并重新实现了四个函数：`startElement()`、`endElement()`、`characters()` 和 `fatalError()`。前三个函数在 `QContentHandler` 中声明；最后一个函数在 `QErrorHandler` 中声明。
+`SaxHandler`继承自`QDefaultHandler`并重新实现了四个函数：`startElement()`、`endElement()`、`characters()`和`fatalError()`。前三个函数在`QContentHandler`中声明；最后一个函数在`QErrorHandler`中声明。
 
 ```cpp
 SaxHandler::SaxHandler(QTreeWidget *tree)
 {
 ```
-
 
 ```cpp
 bool SaxHandler::characters(const QString &str)
@@ -9868,9 +9734,9 @@ bool SaxHandler::characters(const QString &str)
 }
 ```
 
-## 使用 SAX 读取 XML
+`characters()`函数用于报告 XML 文档中的字符数据。我们只需将字符追加到`currentText`变量中。
 
-`characters()` 函数用于报告 XML 文档中的字符数据。我们只需将字符追加到 `currentText` 变量中。
+
 
 ```cpp
 bool SaxHandler::endElement(const QString & /* namespaceURI */,
@@ -9892,7 +9758,7 @@ bool SaxHandler::endElement(const QString & /* namespaceURI */,
 }
 ```
 
-当读取器遇到结束标签时，会调用 `endElement()`。与 `startElement()`一样，第三个参数是标签名称。
+当读取器遇到结束标签时，会调用 `endElement()`。与 `startElement()` 一样，第三个参数是标签名称。
 
 如果标签是 `<entry>`，我们更新私有变量 `currentItem` 指向 `QWidgetItem` 的父节点。这确保了 `currentItem` 变量恢复到读取相应 `<entry>` 标签之前所持的值。
 
@@ -9924,9 +9790,11 @@ bool parseFile(const QString &fileName)
     QTreeWidget *treeWidget = new QTreeWidget;
 ```
 
-treeWidget->setHeaderLabels(labels);
-treeWidget->setWindowTitle(QObject::tr("SAX Handler"));
-treeWidget->show();
+`treeWidget->setHeaderLabels(labels);`
+
+`treeWidget->setWindowTitle(QObject::tr("SAX Handler"));`
+
+`treeWidget->show();`
 
 ```cpp
 QFile file(fileName);
@@ -10069,8 +9937,6 @@ QTreeWidget *parent)
 
 如果元素是`<page>`，我们将当前项目作为第二个参数调用 `parseEntry()`。随后新条目的 `QTreeWidget` 将以包含项目的 `QTreeWidgetItem` 为父节点进行创建。
 
-
-
 ```cpp
 void parseFile(const QString &fileName)
 {
@@ -10148,6 +10014,8 @@ doc.save(out, Indent);
 
 到 DOM 中。以下代码片段展示了如何操作：
 
+
+
 ```cpp
 QtStream out(&file);
 QDomNode xmlNode = doc.createElement("xml",
@@ -10169,16 +10037,16 @@ out << "</doc>\n";
 在线文章 [Generating XML](http://doc.qtproject.com/qt/q5-generating-xml.html) 提供了一个非常简单的类来生成 XML 文件。该类处理了特殊字符、缩进和编码等细节，让我们能够专注于要生成的 XML。该类是为 Qt 3 设计的但移植到 Qt 4 非常简单。
 
 - 提示框（Tooltips）、状态提示和“这是什么？”帮助
-- 使用 QtTextBrowser 作为简单的帮助引擎
-- 使用 Qt Assistant 进行强大的在线帮助
+- 使用 `QtTextBrowser` 作为简单的帮助引擎
+- 使用 `Qt Assistant` 进行强大的在线帮助
 
 ![](img/34bd675de80edd22dc2d53b429caf78_368_0.png)
 
 ## 16. 提供在线帮助
 
-大多数应用程序都会为用户提供在线帮助。有些帮助是很短的，例如提示框、状态提示和“这是什么？”帮助。当然，Qt 支持所有这些。其他帮助可能大量得多，包含许多文本页面。对于这类帮助，可以使用 QtTextBrowser 作为简单的在线浏览器，也可以从应用程序中调用 Qt Assistant 或 HTML 浏览器。
+大多数应用程序都会为用户提供在线帮助。有些帮助是很短的，例如提示框、状态提示和“这是什么？”帮助。当然，Qt 支持所有这些。其他帮助可能大量得多，包含许多文本页面。对于这类帮助，可以使用 `QtTextBrowser` 作为简单的在线浏览器，也可以从应用程序中调用 `Qt Assistant` 或 HTML 浏览器。
 
-## 提示框（Tooltips）、状态提示和“这是什么？”
+### 提示框（Tooltips）、状态提示和“这是什么？”
 
 提示框是鼠标悬停在小部件上一段时间后出现的小段文本。提示框以黄色背景上的黑色文本的形式呈现。它们的主要用途是对工具栏按钮提供文本描述。
 
@@ -10193,9 +10061,6 @@ findButton->setToolTip("Find");
 ```cpp
 newAction->setToolTip("New");
 ```
-
-
-
 
 ## 16. 提供在线帮助
 
@@ -10216,11 +10081,11 @@ private:
 };
 ```
 
-HelpBrowser 提供了一个静态函数，可以从应用程序的任何地方调用。该函数创建一个 HelpBrowser 窗口并显示指定的页面。
+`HelpBrowser` 提供了一个静态函数，可以从应用程序的任何地方调用。该函数创建一个 `HelpBrowser` 窗口并显示指定的页面。
 
 ![](img/34bd675de80edd220dc2d53b429caf78_371_0.png)
 
-图 16.3. HelpBrowser 小部件
+图 16.3. `HelpBrowser` 小部件
 
 以下是实现的起始部分：
 
@@ -10267,7 +10132,7 @@ textBrowser->setSearchPaths(QStringList() << path ":/images");
 textBrowser->setSource(page);
 ```
 
-我们设置了 `Qt::WA_Group` 属性，以便从模态对话框弹出 HelpBrowser，防止用户与应用程序中的任何其他窗口交互。在请求帮助后，必须明显提示用户与此模态对话框以及帮助浏览器进行交互。设置 `Qt::WA_Group` 属性使得这种交互成为可能。
+我们设置了 `Qt::WA_Group` 属性，以便从模态对话框弹出 `HelpBrowser`，防止用户与应用程序中的任何其他窗口交互。在请求帮助后，必须明显提示用户与此模态对话框以及帮助浏览器进行交互。设置 `Qt::WA_Group` 属性使得这种交互成为可能。
 
 我们提供了两个搜索路径：第一个是包含应用程序文档的文件系统路径，第二个是图像资源的位置。HTML 可以以普通方式引用文件系统中的图像，也可以使用以 `:/`（冒号斜杠）开头的路径引用图像资源。`page` 参数是文档文件的名称，带有一个可选的 HTML 锚点。
 
@@ -10292,7 +10157,7 @@ browser->show();
 
 ## 16. 提供在线帮助
 
-在 `showPage()` 静态函数中，我们创建 HelpBrowser 窗口并显示它。当用户关闭它时，窗口将被销毁，因为我们在 HelpBrowser 的构造函数中使用 `Qt::WA_DeleteOnClose` 属性。
+在 `showPage()` 静态函数中，我们创建 `HelpBrowser` 窗口并显示它。当用户关闭它时，窗口将被销毁，因为我们在 `HelpBrowser` 的构造函数中使用 `Qt::WA_DeleteOnClose` 属性。
 
 在本示例中，我们假设文档位于包含应用程序执行文件目录的 `doc` 子目录下。传递给 `showPage()` 函数的所有页面都将从该子目录获取。
 
@@ -10316,33 +10181,28 @@ void EntryDialog::help()
 
 在这里我们在另一个帮助文件 `forms.html` 中查找，并将 `QText` 滚动到 `editing` 锚点。
 
-## 使用 Qt Assistant 提供强大的在线帮助
+### 使用 Qt Assistant 提供强大的在线帮助
 
-Qt Assistant 是由 Trollch 提供的可重新分发的帮助应用程序。它的主要优点是支持索引和全文搜索，并且它可以处理文档。
+`Qt Assistant` 是由 Trollch 提供的可重新分发的帮助应用程序。它的主要优点是支持索引和全文搜索，并且它可以处理文档。
 
-（注：原文中存在大量重复内容，此处已根据逻辑流进行整合）。
-
-要使用 Assistant，我们必须在 `.pro` 文件中添加以下行：
+要使用 `Assistant`，我们必须在 `.pro` 文件中添加以下行：
 
 ```
 CONFIG += assistant
 ```
 
-
-
-
 ## 使用 Unicode
 
-Unicode 是一种字符编码标准，支持世界上大多数的文字系统。Unicode 的原始理念是，通过使用 16 位来存储字符而不是 8 位，使其能够编码大约 65,000 个字符，而不是 256 个。Unicode 将 ASCII 和 ISO 8859-1 (Latin-1) 作为子集包含在内，并处于相同的代码位置。例如，字符 'A' 在 ASCII 和 Latin-1 中的值为 0x41，而字符 'À' 在 Latin-1 和 Unicode 中的值均为 0x01C0。
+`Unicode` 是一种字符编码标准，支持世界上大多数的文字系统。`Unicode` 的原始理念是，通过使用 16 位来存储字符而不是 8 位，使其能够编码大约 65,000 个字符，而不是 256 个。`Unicode` 将 `ASCII` 和 `ISO 8859-1` (Latin-1) 作为子集包含在内，并处于相同的代码位置。例如，字符 'A' 在 `ASCII` 和 `Latin-1` 中的值为 `0x41`，而字符 'À' 在 `Latin-1` 和 `Unicode` 中的值均为 `0x01C0`。
 
-Qt 的 `QString` 类将字符串存储为 Unicode。每个 `QString` 都是一个 16 位的 `QChar`，而不是 8 位的 `char`。这里是将字符串的第一个字符设置为 'À' 的两种方法：
+Qt 的 `QString` 类将字符串存储为 `Unicode`。每个 `QString` 都是一个 16 位的 `QChar`，而不是 8 位的 `char`。这里是将字符串的第一个字符设置为 'À' 的两种方法：
 
 ```
 str[0] = 'A';
 str[0] = QChar (0x41);
 ```
 
-如果源文件是以 Latin-1 编码的，那么指定 Latin-1 字符就简单了：
+如果源文件是以 `Latin-1` 编码的，那么指定 `Latin-1` 字符就简单了：
 
 ```
 str[0] = 'Ñ';
@@ -10354,58 +10214,53 @@ str[0] = 'Ñ';
 str[0] = QChar (0xD1);
 ```
 
-我们可以通过数值来指定任何 Unicode 字符。例如，这里是如何指定希腊大写字母 sigma (Σ) 和欧元货币符号 (€)：
+我们可以通过数值来指定任何 `Unicode` 字符。例如，这里是如何指定希腊大写字母 sigma (Σ) 和欧元货币符号 (€)：
 
 ```
 str[0] = QChar (0x3A3);
 str[0] = QChar (0x2AC);
 ```
 
-Unicode 支持的所有字符的数值均列在 http://www.unicode.org/standard/。如果您很少需要非拉丁 Unicode 字符，只需查找字符就足够了；Qt 提供了在 Qt 程序中输入 Unicode 字符串的方便方法，我们将在本节后面的部分看到。
+`Unicode` 支持的所有字符的数值均列在 http://www.unicode.org/standard/。如果您很少需要非拉丁 `Unicode` 字符，只需查找字符就足够了；Qt 提供了在 Qt 程序中输入 `Unicode` 字符串的方便方法，我们将在本节后面的部分看到。
 
-Qt 4 的文本引擎在所有平台上都支持以下文字系统：阿拉伯语、中文、西里尔语、希腊语、希伯来语、日语、韩语、老挝、拉丁语、泰语和越南语。它还支持所有不需要特殊处理的 Unicode 4.1 脚本。此外，在带有 Fontconfig 和最新版本 Windows 的 X11 上还支持以下文字系统：孟加拉语、天城 文语、古吉拉特语、旁遮普语、坎纳德语、高棉语、马拉雅姆语、叙利亚语、泰米语、泰卢固语、Thaana (Dhi) 和藏语。最后，支持 Windows XP。假设系统中安装了正确的字体，Qt 可以渲染这些任何文字系统的文本。
+Qt 4 的文本引擎在所有平台上都支持以下文字系统：阿拉伯语、中文、西里尔语、希腊语、希伯来语、日语、韩语、老挝、拉丁语、泰语和越南语。它还支持所有不需要特殊处理的 `Unicode 4.1` 脚本。此外，在带有 `Fontconfig` 和最新版本 Windows 的 X11 上还支持以下文字系统：孟加拉语、天城 文语、古吉拉特语、旁遮普语、坎纳德语、高棉语、马拉雅姆语、叙利亚语、泰米语、泰卢固语、Thaana (Dhi) 和藏语。最后，支持 Windows XP。假设系统中安装了正确的字体，Qt 可以渲染这些任何文字系统的文本。
 
-> *Unicode 标准的最新版本分配了超过 65,535 的字符值。这些字符可以使用两个 16 位值的序列（称为“代理对”）来表示。*
+> *`Unicode` 标准的最新版本分配了超过 65,535 的字符值。这些字符可以使用两个 16 位值的序列（称为“代理对”）来表示。*
 
 并且假设安装了正确的输入法，用户能够在 Qt 应用中输入使用这些文字系统的文本。
 
-使用 `QChar` 编程与使用 `char` 编程略有不同。您需要对其调用 `unicode()`。要获取 `QChar` 的 ASCII 或 Latin-1 值（作为 `char`），请调用 `toLatin1()`。对于非 Latin-1 字符，`toLatin1()` 返回 `\0`。
+使用 `QChar` 编程与使用 `char` 编程略有不同。您需要对其调用 `unicode()`。要获取 `QChar` 的 `ASCII` 或 `Latin-1` 值（作为 `char`），请调用 `toLatin1()`。对于非 `Latin-1` 字符，`toLatin1()` 返回 `\0`。
 
-如果我们知道程序中的所有字符串都是 ASCII，我们可以在 `toLatin1()` 的返回值上使用 `<cctype>` 函数，如 `isalpha()`、`isdigit()` 和 `isspace()`。然而，通常使用 `QChar` 成员函数来执行这些操作会更好，它们适用于任何 Unicode 字符。`QChar` 函数包括 `isPrint()`、`isFunc()`、`isSpace()`、`isMark()`、`isLetter()`、`isNumber()`、`isLetterOrNumber()`、`isDigit()`、`isSymbol()`、`isLower()` 和 `isUpper()`。例如，这里测试字符是否为数字或大写字母的一种方法：
+如果我们知道程序中的所有字符串都是 `ASCII`，我们可以在 `toLatin1()` 的返回值上使用 `<cctype>` 函数，如 `isalpha()`、`isdigit()` 和 `isspace()`。然而，通常使用 `QChar` 成员函数来执行这些操作会更好，它们适用于任何 `Unicode` 字符。`QChar` 函数包括 `isPrint()`、`isFunc()`、`isSpace()`、`isMark()`、`isLetter()`、`isNumber()`、`isLetterOrNumber()`、`isDigit()`、`isSymbol()`、`isLower()` 和 `isUpper()`。例如，这里测试字符是否为数字或大写字母的一种方法：
 
 ```
 if (char.isDigit() || char.isUpper())
 ```
 
-...
-
 该代码段适用于任何区分大小写的字母表，包括拉丁语、希腊语和西里尔语。
 
-一旦我们拥有了 Unicode 字符串，就可以在期望 `QString` 的 Qt API 中使用它。正确显示它以及在与操作系统通信时将其转换为相关编码是 Qt 的责任。
+一旦我们拥有了 `Unicode` 字符串，就可以在期望 `QString` 的 Qt API 中使用它。正确显示它以及在与操作系统通信时将其转换为相关编码是 Qt 的责任。
 
-在读写文本文件时需要特别小心。文本文件可以使用多种编码，通常无法从其内容推断文本文件的编码。默认情况下，`QTextStream` 在读和写时都使用系统的本地 8 位编码（通过 `QTextCodec::codeForLocale()` 获取）。对于美国和西欧地区，这意味着 Latin-1。
+在读写文本文件时需要特别小心。文本文件可以使用多种编码，通常无法从其内容推断文本文件的编码。默认情况下，`QTextStream` 在读和写时都使用系统的本地 8 位编码（通过 `QTextCodec::codeForLocale()` 获取）。对于美国和西欧地区，这意味着 `Latin-1`。
 
-如果我们设计了自己的格式并希望能够读写任意 Unicode 字符，我们可以在开始写入 `QTextStream` 之前通过调用将数据保存为 Unicode：
+如果我们设计了自己的格式并希望能够读写任意 `Unicode` 字符，我们可以在开始写入 `QTextStream` 之前通过调用将数据保存为 `Unicode`：
 
 ```
 stream.setCodec("UTF-16");
 stream.generateByteOrder();
 ```
 
-数据将被保存为 UTF16，这是一个每个字符需要两个字节的格式，并以一个特殊的 16 位值（Unicode 字节序，0xFFFF）开头，用于标识文件是否为 Unicode 以及字节序是小端还是大端。UTF-16 格式与 `QString` 的内存表示相同，因此在 UTF-16 中读写 Unicode 字符串可以非常快。然而，在 UTF-16 格式中保存 ASCII 数据会有固有的开销，因为每个字符都存储了两个字节而不是一个。
+数据将被保存为 `UTF16`，这是一个每个字符需要两个字节的格式，并以一个特殊的 16 位值（`Unicode` 字节序，`0xFFFF`）开头，用于标识文件是否为 `Unicode` 以及字节序是小端还是大端。`UTF-16` 格式与 `QString` 的内存表示相同，因此在 `UTF-16` 中读写 `Unicode` 字符串可以非常快。然而，在 `UTF-16` 格式中保存 `ASCII` 数据会有固有的开销，因为每个字符都存储了两个字节而不是一个。
 
-可以通过调用带有合适的 `QTextCodec` 的 `setCodec()` 来指定其他编码。`QTextCodec` 是一个在 Unicode 和给定编码之间转换的对象。Qt 在多种语文中使用 `QTextCodec`。在内部，它们被用于支持字体、输入法、剪贴板、拖放放和文件名。但在我们编写 Qt 应用时，也可以使用它们。
+可以通过调用带有合适的 `QTextCodec` 的 `setCodec()` 来指定其他编码。`QTextCodec` 是一个在 `Unicode` 和给定编码之间转换的对象。Qt 在多种语文中使用 `QTextCodec`。在内部，它们被用于支持字体、输入法、剪贴板、拖放放和文件名。但在我们编写 Qt 应用时，也可以使用它们。
 
-在读取文本文件时，如果文件带有字节序，`QTextStream` 会自动检测 Unicode。这种行为可以通过调用 `setAutoDetect(false)` 来关闭。如果无法假设带有字节序，最好在读取之前调用 `setCodec("UTF-16")`。
+在读取文本文件时，如果文件带有字节序，`QTextStream` 会自动检测 `Unicode`。这种行为可以通过调用 `setAutoDetect(false)` 来关闭。如果无法假设带有字节序，最好在读取之前调用 `setCodec("UTF-16")`。
 
-另一种支持 Unicode 的编码是 UTF-8。它相对于 UTF-16 的主要优势是 0x00 到 0x7F 范围内的字符单字节表示。其他字符（包括 0x7F 以上的 Latin-1 字符）由多字节序列表示；对于大多数文件，UTF-8 节省了一半空间。要在 `QTextStream` 中使用 UTF-8，请在命名之前调用 `setCodec("UTF-8")`。
-
-
-
+另一种支持 `Unicode` 的编码是 `UTF-8`。它相对于 `UTF-16` 的主要优势是 `0x00` 到 `0x7F` 范围内的字符单字节表示。其他字符（包括 `0x7F` 以上的 `Latin-1` 字符）由多字节序列表示；对于大多数文件，`UTF-8` 节省了一半空间。要在 `QTextStream` 中使用 `UTF-8`，请在命名之前调用 `setCodec("UTF-8")`。
 
 ## 17. 国际化
 
-`tr()` 函数是一个定义在 QObject 中的静态函数，并在带有 `Q_OBJECT` 宏的子类中被重写。在 QObject 子类中编写代码时，我们可以调用 `tr()`。`tr()` 的调用如果可用则返回翻译；否则返回原始文本。
+`tr()` 函数是一个定义在 `QObject` 中的静态函数，并在带有 `Q_OBJECT` 宏的子类中被重写。在 `QObject` 子类中编写代码时，我们可以调用 `tr()`。`tr()` 的调用如果可用则返回翻译；否则返回原始文本。
 
 为了准备翻译文件，必须运行 Qt 的 `listools` 工具。它提取所有出现在 `tr()` 调用中的字面量，并生成准备好翻译的翻译文件。本章稍后提到的 `tr()` 用的语法如下：
 
@@ -10413,7 +10268,7 @@ stream.generateByteOrder();
 Context::tr(sourceText, comment)
 ```
 
-`context` 是带有 `Q_OBJECT` 宏的 QObject 子类的名称。如果我们从类的成员函数调用 `tr()`，就不指定它。`sourceText` 是需要翻译的字面字符串。`comment` 部分是可选的；它可以向翻译者提供额外信息。
+`context` 是带有 `Q_OBJECT` 宏的 `QObject` 子类的名称。如果我们从类的成员函数调用 `tr()`，就不指定它。`sourceText` 是需要翻译的字面字符串。`comment` 部分是可选的；它可以向翻译者提供额外信息。
 
 这里有几个示例：
 
@@ -10429,7 +10284,7 @@ QString str4 = SnappyDialog::tr("Letter", "US size");
 
 前两个 `tr()` 调用使用 "RockyWidget" 作为上下文，最后两个调用使用 "SnappyDialog"。不同上下文（类）之间的字符串是独立翻译的。翻译者通常一次处理一个上下文，通常是在应用程序运行并显示正在翻译的部件或对话框时。
 
-当我们从全局函数调用 `tr()` 时，必须显式地指定上下文。应用程序中的任何 QObject 子类都可以用作上下文。如果没有合适的，我们可以使用 QObject 本身。例如：
+当我们从全局函数调用 `tr()` 时，必须显式地指定上下文。应用程序中的任何 `QObject` 子类都可以用作上下文。如果没有合适的，我们可以使用 `QObject` 本身。例如：
 
 ```cpp
 int main(int argc, char *argv[])
@@ -10443,6 +10298,8 @@ int main(int argc, char *argv[])
 ```
 
 ## 使应用程序感知翻译
+
+
 
 到目前为止的每个示例中，上下文都是类名。这很方便，因为我们几乎可以省略它，但并不一定如此。在 Qt 中翻译字符串的最通用方法是使用 `QApplication::translate()` 函数，它接受最多三个参数：上下文、源文本和可选的注释。例如，这里是翻译 "Hello Qt" 的另一种方法：
 
@@ -10460,7 +10317,7 @@ const char *appName = "OpenDrawer 2D";
 string translated = tr(appName);
 ```
 
-问题是 translate 将无法提取 "OpenDrawer 2D" 字符串字面量，因为它没有出现在 `tr()` 调用内部。这意味着翻译者将没有翻译该字符串的机会。这个问题通常与动态字符串一起：
+问题是 `translate` 将无法提取 "OpenDrawer 2D" 字符串字面量，因为它没有出现在 `tr()` 调用内部。这意味着翻译者将没有翻译该字符串的机会。这个问题通常与动态字符串一起：
 
 ```cpp
 // 错误
@@ -10497,17 +10354,13 @@ void OrderForm::init() {
 Context::tr(sourceText, comment)
 ```
 
-`context` 是带有 `Q_OBJECT` 宏的 QObject 子类的名称。如果我们从类的成员函数调用 `tr()`，就不指定它。`sourceText` 是需要翻译的字面字符串。`comment` 部分是可选的；它可以向翻译者提供额外信息。
-
-
-
-
+`context` 是带有 `Q_OBJECT` 宏的 `QObject` 子类的名称。如果我们从类的成员函数调用 `tr()`，就不指定它。`sourceText` 是需要翻译的字面字符串。`comment` 部分是可选的；它可以向翻译者提供额外信息。
 
 # 370
 
 ## 17. 国际化
 
-假设 .qm 文件位于源码树中的 translations 子目录下，那么我们的 myapp.qrc 文件将包含以下内容：
+假设 `.qm` 文件位于源码树中的 `translations` 子目录下，那么我们的 `myapp.qrc` 文件将包含以下内容：
 
 ```
 <!DOCTYPE RCC version="1.0">
@@ -10522,7 +10375,7 @@ Context::tr(sourceText, comment)
 </RCC>
 ```
 
-.pro 文件将包含以下条目：
+`.pro` 文件将包含以下条目：
 
 ```
 RESOURCES = myapp.qrc
@@ -10534,9 +10387,9 @@ RESOURCES = myapp.qrc
 
 某些 Qt 类和函数会根据区域设置调整其行为：
 
-- * `QString::localeAware()` 以依赖区域的方式比较两个字符串。它对于排序用户可见的项目非常有用。
-- * 由 QDate、QTime 和 QDateTime 提供的 `toString()` 函数在用 `QLocale::Date` 作为参数调用时，会返回本地格式的字符串。
-- * 默认情况下，`QDateEdit` 和 `QTimeEdit` 小部件以本地格式显示日期。
+- `QString::localeAware()` 以依赖区域的方式比较两个字符串。它对于排序用户可见的项目非常有用。
+- 由 `QDate`、`QTime` 和 `QDateTime` 提供的 `toString()` 函数在用 `QLocale::Date` 作为参数调用时，会返回本地格式的字符串。
+- 默认情况下，`QDateEdit` 和 `QTimeEdit` 小部件以本地格式显示日期。
 
 最后，翻译后的应用程序在某些情况下可能需要使用不同的图标而非原始图标。例如，处理从右到左的语言时，网络浏览器“后退”和“前进”按钮上的左右箭头应该调换。我们可以这样操作：
 
@@ -10550,9 +10403,9 @@ if (Application::isRightToLeft()) {
 }
 ```
 
-## 使应用程序具备翻译感知能力
+### 使应用程序具备翻译感知能力
 
-包含字母字符的图标通常需要翻译。例如，与文字处理器“斜体”（*Italic*）选项相关的工具栏按钮上的字母 'T'，在西班牙语中应替换为 'C' (Cursivo)，在丹麦语、德语、挪威语和瑞典语中应替换为 'K' (Kursiv)。这里是一种简单的实现方法：
+包含字母字符的图标通常需要翻译。例如，与文字处理器“斜体”(*Italic*)选项相关的工具栏按钮上的字母 'T'，在西班牙语中应替换为 'C' (Cursivo)，在丹麦语、德语、挪威语和瑞典语中应替换为 'K' (Kursiv)。这里是一种简单的实现方法：
 
 ```
 if (tr("Italic")[0] == 'C') {
@@ -10564,7 +10417,7 @@ if (tr("Italic")[0] == 'C') {
 }
 ```
 
-另一种方法是使用资源系统对多个区域设置的支持。在 .rc 文件中，我们可以使用 `lang` 属性为资源指定区域。
+另一种方法是使用资源系统对多个区域设置的支持。在 `.rc` 文件中，我们可以使用 `lang` 属性为资源指定区域。
 
 ```
 <resource>
@@ -10578,11 +10431,11 @@ if (tr("Italic")[0] == 'C') {
 </resource>
 ```
 
-如果用户的区域设置是 es (Español)，`:/italic.png` 将变成指向 cursivo.png 图像引用。如果用户是 sv (Svenska)，则使用 kursiv.png。对于其他区域，则使用 italic.png。
+如果用户的区域设置是 `es` (Español)，`:/italic.png` 将变成指向 `cursivo.png` 图像引用。如果用户是 `sv` (Svenska)，则使用 `kursiv.png`。对于其他区域，则使用 `italic.png`。
 
-## 动态语言切换
+### 动态语言切换
 
-对于大多数应用程序，在 `main()` 中解码用户的首选语言并加载相应的 .qm 文件完全足够。但在某些情况下，用户可能需要动态切换语言的能力。不同人员轮班连续使用的应用程序可能需要在不重启的情况下更改语言。例如，呼叫中心操作员、同声传译员和收银机员使用的应用程序通常需要这种功能。
+对于大多数应用程序，在 `main()` 中解码用户的首选语言并加载相应的 `.qm` 文件完全足够。但在某些情况下，用户可能需要动态切换语言的能力。不同人员轮班连续使用的应用程序可能需要在不重启的情况下更改语言。例如，呼叫中心操作员、同声传译员和收银机员使用的应用程序通常需要这种功能。
 
 使应用程序能够动态切换语言比启动时加载单个翻译多一些工作，但并不困难。以下必须完成的工作：
 
@@ -10664,17 +10517,13 @@ void MainWindow::retranslateUI()
 }
 ```
 
-一个特别的困难是为每个 .qm 文件提供的语言呈现一个好的名称。仅仅基于...显示 "en" 代表 "English" 或 "de" 代表 "Deutsch"
+一个特别的困难是为每个 `.qm` 文件提供的语言呈现一个好的名称。仅仅基于...显示 "en" 代表 "English" 或 "de" 代表 "Deutsch"
 
+### 动态语言切换
 
+`.qm` 文件的命名看起来很粗糙，会让某些用户感到困惑。`createLanguageMenu()` 中使用的解决方案是检查 "MainWindow" 上文中字符串 "English" 的翻译。该字符串在德语翻译中应被翻译为 "Deutsch"，在法语翻译中翻译为 "Français"，在日语翻译中翻译为 "日本語"。
 
-
-
-## 动态语言切换
-
-.qm 文件的命名看起来很粗糙，会让某些用户感到困惑。`createLanguageMenu()` 中使用的解决方案是检查 "MainWindow" 上文中字符串 "English" 的翻译。该字符串在德语翻译中应被翻译为 "Deutsch"，在法语翻译中翻译为 "Français"，在日语翻译中翻译为 "日本語"。
-
-我们为每种语言创建一个可传播的 `QAction`，并将本地名称存储在 action 的 "data" 项中。我们将它们添加到 `QActionGroup` 中，以确保一次只有一个语言项被选中。当选择组中的 action 时，`QActionGroup` 会发出 `triggered (QAction *)` 信号，该信号连接到 `switchLanguage()`。
+我们为每种语言创建一个可传播的 `QAction`，并将本地名称存储在 `action` 的 "data" 项中。我们将它们添加到 `QActionGroup` 中，以确保一次只有一个语言项被选中。当选择组中的 `action` 时，`QActionGroup` 会发出 `triggered (QAction *)` 信号，该信号连接到 `switchLanguage()`。
 
 ```cpp
 void MainWindow::switchLanguage(QAction *action)
@@ -10727,6 +10576,8 @@ void JournalView::changeEvent(QEvent *event)
 ```
 
 我们还重新实现了 `changeEvent()` 函数，在 `LanguageChange` 事件时调用 `retranslateUI()`。当安装在 `QApplication` 上的 `QTranslator` 内容变化时，Qt 会生成 `LanguageChange` 事件。在我们的应用程序中，当我们对 `appTranslator` 或 `qtTranslator` 调用 `load()` 时（无论是从 `MainWindow::switchLanguage()` 还是 `MainWindow::changeEvent()`），就会发生这种情况。
+
+
 
 `LanguageChange` 事件不应与 `LocaleChange` 事件混淆。`LocaleChange` 事件由系统生成，并告诉应用程序：“也许我们应该加载新的翻译。”`LanguageChange` 事件由 Qt 生成，并告诉应用程序的控件：“也许你们应该重新翻译你们所有的字符串。”
 
@@ -10784,7 +10635,7 @@ Found 98 texts (0 existing)
 
 源代码中 `tr()` 调用内的每个字符串都存储在 `.ts` 文件中，翻译为空。`.ui` 文件中的字符串也被包含在内。
 
-update 工具默认假设 `tr()` 的参数是 Latin-1 字符串。如果不是如此，我们必须在 `.pro` 文件中添加 `CODEFORTR` 条目。例如：
+`update` 工具默认假设 `tr()` 的参数是 Latin-1 字符串。如果不是如此，我们必须在 `.pro` 文件中添加 `CODEFORTR` 条目。例如：
 
 ```pro
 CODEFORTR = EUC-JP
@@ -10810,13 +10661,9 @@ Qt Linguist 主窗口的左侧显示了待翻译应用程序的上下文列表�
 lrelease -verbose spreadsheet.pro
 ```
 
-
-
-
-
 ## 翻译应用程序
 
-假设我们将 19 个字符串翻译成了法语，并点击了其中 17 个字符串的“完成（Done）”标记，lrelease 会产生以下输出：
+假设我们将 19 个字符串翻译成了法语，并点击了其中 17 个字符串的“完成（Done）”标记，`lrelease` 会产生以下输出：
 
 ```
 Updating 'spreadsheet.de.qm...
@@ -10827,13 +10674,13 @@ Updating 'spreadsheet.fr.qm...
   Ignored 79 untranslated source texts
 ```
 
-运行应用程序时，未翻译的字符串将以原始语言显示。lrelease 会忽略“完成（Done）”标记；翻译人员可以使用该标记来识别哪些翻译已完成，哪些翻译需要重新审视。
+运行应用程序时，未翻译的字符串将以原始语言显示。`lrelease` 会忽略“完成（Done）”标记；翻译人员可以使用该标记来识别哪些翻译已完成，哪些翻译需要重新审视。
 
 当我们修改应用程序的源代码时，翻译文件可能会过期。解决方案是再次运行 `update`，为新字符串提供翻译，并重新生成 .qm 文件。有些开发团队发现频繁运行 `update` 是很有用的，而另一些团队则倾向于等到应用程序几乎准备好发布后再进行。
 
-update 和 Qt Linguist 工具非常智能。不再使用的翻译将保留在 .ts 文件中，以防在后的发布中需要。在更新 .ts 文件时，update 使用了一种智能合并算法，可以为翻译人员在处理不同上下文中相同或相似的文本时节省大量时间。
+`update` 和 Qt Linguist 工具非常智能。不再使用的翻译将保留在 .ts 文件中，以防在后的发布中需要。在更新 .ts 文件时，`update` 使用了一种智能合并算法，可以为翻译人员在处理不同上下文中相同或相似的文本时节省大量时间。
 
-有关关于 Qt Linguist、update 和 lrelease 的更多信息，请参阅位于 http://doc.trolltech.com/4.1/linguist-manual.html 的 Qt Linguist 手册。该手册包含了对 Qt Linguist 用户界面的完整解释，以及为程序员提供的分步教程。
+有关关于 Qt Linguist、`update` 和 `lrelease` 的更多信息，请参阅位于 http://doc.trolltech.com/4.1/linguist-manual.html 的 Qt Linguist 手册。该手册包含了对 Qt Linguist 用户界面的完整解释，以及为程序员提供的分步教程。
 
 - 创建线程
 - 线程同步化
@@ -10848,13 +10695,13 @@ update 和 Qt Linguist 工具非常智能。不再使用的翻译将保留在 .t
 
 在多线程应用程序中，GUI 运行在它自己的线程中，而处理在一个或多个线程中进行。这使得应用程序即使在密集处理期间也具有响应式的 GUI。多线程的另一个优点是，多处理系统可以在不同的处理器上同时执行多个线程，从而获得更好的性能。
 
-在本章中，我们将首先展示如何对 QThread 进行子类化，以及如何使用 QMutex、QSemaphore 和 QWaitCondition 同同步线程。我们将看到如何在事件循环运行时从辅助线程与主线程进行通信。最后，我们通过回顾哪些 Qt 类可以在辅助线程中使用而哪些不能使用来结束本章。
+在本章中，我们将首先展示如何对 `QThread` 进行子类化，以及如何使用 `QMutex`、`QSemaphore` 和 `QWaitCondition` 同同步线程。我们将看到如何在事件循环运行时从辅助线程与主线程进行通信。最后，我们通过回顾哪些 Qt 类可以在辅助线程中使用而哪些不能使用来结束本章。
 
 多线程是一个大课题，有很多书籍专门研究该主题。这里假设你已经理解了多线程编程的基础知识，因此重点在于解释如何开发多线程 Qt 应用程序，而不是线程主题本身。
 
 ## 创建线程
 
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法。
+在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 `QThread` 进行子类化并重新实现它的方法。
 
 ```cpp
 class Thread : QThread
@@ -10874,69 +10721,11 @@ private:
 };
 ```
 
-Thread 类继承自 QThread 并重写了 `run()` 方法。在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法。
-
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法。
-
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法。
-
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法。
-
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法。
-
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法。
-
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法。
-
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法。
-
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法。
-
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法。
-
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法。
-
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法。
-
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法。
-
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法。
-
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法。
-
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法。
-
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法实现它的方法。
-
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法。
-
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法。
-
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法。
-
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法。
-
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法。
-
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法。
-
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法。
-
-（注：由于原文中存在大量重复段落，以下为从 18.1 节开始的逻辑翻译）
-
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法实现。
-
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法实现。
-
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法实现。
-
-在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 QThread 进行子类化并重新实现它的方法实现。
-
-（由于用户提供的原文后半包含大量重复的文本块，根据“不要重复输出原文”的原则，此处仅翻译核心逻辑 18.1 节）
+`Thread` 类继承自 `QThread` 并重写了 `run()` 方法。在 Qt 应用程序中提供多个线程是非常简单的：我们只需要对 `QThread` 进行子类化并重新实现它的方法。
 
 ## 18.1 线程
 
-我们现在来看看如何使用 Thread 类来展示它是如何工作的。
+我们现在来看看如何使用 `Thread` 类来展示它是如何工作的。
 
 ```cpp
 class ThreadDialog : public QDialog
@@ -10999,17 +10788,13 @@ void ThreadDialog::closeEvent(QEvent *event) {
 }
 ```
 
-
-
-
-
 # 线程同步
 
-多线程应用程序的一个常见需求是同步多个线程。Qt 提供了以下同步类：QMutex、QReadWriteLock、QSemaphore 和 QWaitCondition。
+多线程应用程序的一个常见需求是同步多个线程。Qt 提供了以下同步类：`QMutex`、`QReadWriteLock`、`QSemaphore` 和 `QWaitCondition`。
 
-QMutex 类提供了一种保护变量或代码段的方法，使得时间只有一个线程可以访问它。该类提供了一个 `lock()` 函数来锁定互斥量。如果互斥量未被锁定，当前线程将获取并锁定它；否则，当前线程将被阻塞，直到持有该互斥锁的线程将其解锁。无论何种情况，当 `lock()` 调用返回时，当前线程持有该互斥量，直到它调用 `unlock()` 为止。QMutex 类还提供了一个 `tryLock()` 函数，如果互斥量已锁定，它将立即返回。
+`QMutex` 类提供了一种保护变量或代码段的方法，使得时间只有一个线程可以访问它。该类提供了一个 `lock()` 函数来锁定互斥量。如果互斥量未被锁定，当前线程将获取并锁定它；否则，当前线程将被阻塞，直到持有该互斥锁的线程将其解锁。无论何种情况，当 `lock()` 调用返回时，当前线程持有该互斥量，直到它调用 `unlock()` 为止。`QMutex` 类还提供了一个 `tryLock()` 函数，如果互斥量已锁定，它将立即返回。
 
-为了使用 QMutex 保护上一节中 `Thread` 类的停止变量 `stopped`，我们需要向 `Thread` 中添加以下数据成员：
+为了使用 `QMutex` 保护上一节中 `Thread` 类的停止变量 `stopped`，我们需要向 `Thread` 中添加以下数据成员：
 
 ```cpp
 private:
@@ -11038,6 +10823,8 @@ void Thread::run() {
 
 `stop()` 函数将变为：
 
+
+
 ```cpp
 void Thread::stop() {
     mutex.lock();
@@ -11046,7 +10833,7 @@ void Thread::stop() {
 }
 ```
 
-在复杂函数或使用 C++ 异常的函数中锁定和解锁互斥量很容易出错。Qt 提供了 `QMutexLocker` 方便类来简化互斥量的处理。QMutexLocker 的构造函数接受一个 QMutex。
+在复杂函数或使用 C++ 异常的函数中锁定和解锁互斥量很容易出错。Qt 提供了 `QMutexLocker` 方便类来简化互斥量的处理。`QMutexLocker` 的构造函数接受一个 `QMutex`。
 
 ```cpp
 void WriterThread::run()
@@ -11061,7 +10848,7 @@ lock.unlock();
 
 为了方便起见，我们可以使用 `QReadLocker` 和 `QWriteLocker` 类来锁定和解锁 `QReadWriteLocker`。
 
-QSemaphore 是互斥量的另一种泛化，但与读写锁不同，信号量可以用于保护数量的相同资源。以下两个代码片段展示了 QSemaphore 和 QMutex 的对应关系：
+`QSemaphore` 是互斥量的另一种泛化，但与读写锁不同，信号量可以用于保护数量的相同资源。以下两个代码片段展示了 `QSemaphore` 和 `QMutex` 的对应关系：
 
 ```cpp
 QSemaphore semaphore(1);
@@ -11075,7 +10862,7 @@ mutex.unlock();
 
 通过向构造函数传递 1，我们告诉信号量它控制单个资源。然而，你可以向构造函数传递除1 以外的数字，然后多次调用 `acquire()` 来获取更多资源。
 
-信号量的典型应用是使用特定大小（BufferSize）的共享循环缓冲区在两个线程之间传输特定数量的数据（DataSize），假设缓冲区为 16 字节。
+信号量的典型应用是使用特定大小（`BufferSize`）的共享循环缓冲区在两个线程之间传输特定数量的数据（`DataSize`），假设缓冲区为 16 字节。
 
 ```cpp
 const int DataSize = 100000;
@@ -11100,7 +10887,7 @@ QSemaphore freeSpace(BufferSize);
 QSemaphore usedSpace(0);
 ```
 
-`freeSpace` 信号量控制生产者可以填充数据的缓冲区部分。`usedSpace` 信号量控制消费者可以读取的区域。这两个区域是互补的。`freeSpace` 信号量初始化为 `BufferSize` (4096)，意味着它有很多可以获取的资源。当应用程序启动时，读取线程将开始获取“空”字节并将其转换为“已”字节。`usedSpace` 信号量初始化为 0，以确保消费者在启动时不会读取垃圾数据。
+`freeSpace` 信号量控制生产者可以填充数据的缓冲区部分。`usedSpace` 信号量控制消费者可以读取的区域。这两个区域是互补的。`freeSpace` 信号量初始化为 `BufferSize` `4096`，意味着它有很多可以获取的资源。当应用程序启动时，读取线程将开始获取“空”字节并将其转换为“已”字节。`usedSpace` 信号量初始化为 0，以确保消费者在启动时不会读取垃圾数据。
 
 在本示例中，每个字节被视为一个资源。在实际应用中，我们可能会对更大的单位进行操作（例如，一次 64 或 256 字节），以减少使用信号量相关的开销。
 
@@ -11130,13 +10917,9 @@ void Consumer::run()
 
 （注：原文提供的 OCR 文本在最后几页出现了严重乱码，已根据上下文逻辑重构了相关的翻译部分。）
 
-
-
-
-
 # 线程同步
 
-QThreadStorage<T> 的一种常见用法是缓存。通过在线程中拥有一个独立的缓存，我们可以避免锁定、解锁以及可能等待互斥锁的开销。例如：
+`QThreadStorage<T>` 的一种常见用法是缓存。通过在线程中拥有一个独立的缓存，我们可以避免锁定、解锁以及可能等待互斥锁的开销。例如：
 
 ```cpp
 QThreadStorage<QHash<int, double>> *cache;
@@ -11155,7 +10938,7 @@ void removeFromCache(int id)
 
 缓存变量为每个线程持有一个指向 `QMap<int, double>` 的指针。（由于某些编译器的问题，`QThreadStorage<T>` 中的模板类型必须是指针类型）。当我们第一次在特定线程中使用该缓存时，`hasLocalData()` 返回 `false`，我们便创建一个 `QHash<int, double>` 对象。
 
-除了缓存之外，QThreadStorage<T> 还可以用于全局错误状态变量（类似于 `errno`），以确保一个线程中的修改不会影响其他线程。
+除了缓存之外，`QThreadStorage<T>` 还可以用于全局错误状态变量（类似于 `errno`），以确保一个线程中的修改不会影响其他线程。
 
 # 与主线程通信
 
@@ -11226,10 +11009,6 @@ private:
 
 `ImageWorker` 类使用循环来处理图像。`resultReady` 信号将处理后的 pixmap 发送到主线程。`finished` 信号告诉线程停止。
 
-
-
-
-
 ## 18. 多线程
 
 ```cpp
@@ -11252,7 +11031,9 @@ QString FlipTransaction::message()
 Qt 的大多数非 GUI 类满足一个不那么严格的要求：重入性（reentrant）。如果一个类的不同实例可以在不同的线程中同时使用，则该类是可重入的。然而，在多个线程中访问同一个重入对象是不安全的，此类访问应该由互斥锁（mutex）保护保护。通常情况下，任何不引用全局数据的 C++ 类都是重入的。`QObject` 是重入的，但有三个限制需要注意：
 
 - 子 `QObject` 必须在它们的父对象所属的线程中创建。
+
 - 特别是，在辅助线程中创建的对象绝不能以 `QThread` 作为其父对象，因为该对象是在另一个线程（主线程或辅助线程）中创建的。
+
 - 我们必须通过在栈上删除来删除在辅助线程中创建的所有 `QObject`。
 
 这的一个结果是，我们不能直接从辅助线程调用小部件的函数。如果我们想从辅助线程更改 `QLabel` 的文本，可以发射一个连接到 `QLabel::setText()` 的信号，或者从该线程调用 `QMetaObject::invokeMethod()`。例如：
@@ -11271,10 +11052,12 @@ Qt 的许多非 GUI 类（包括 `QImage`、`QString` 和容器类）使用隐�
 Qt 的 Sql 模块也可以用于多线程应用程序，但它有自己的限制，这些限制取决于具体的数据库。详情请参阅 http://doc.trolltech.com/4.1/sql-driver.html。多线程注意事项的完整列表，请参见 http://doc.trolltech.com/4.1/threads.html。
 
 - 使用插件扩展 Qt
+
 - 使应用程序感知环境
+
 - 编写应用程序插件
 
-## 19. 创建插件
+# 19. 创建插件
 
 动态库（也称为共享库或 DLL）是独立的模块，它们存储在磁盘上的单独文件中，并可以被多个应用程序访问。程序通常在链接时指定它们需要的动态库，在这种情况下，库会在应用程序启动时自动加载。这种方法通常涉及将库及其可能的包含路径添加到应用程序的 `.pro` 文件中，并在源文件中包含相关的头文件。例如：
 
@@ -11296,15 +11079,25 @@ Qt 可以通过多种类型的插件进行扩展，包括数据库驱动、图�
 Qt 可以扩展多种类型的插件，最常见的数据库驱动、图像格式、样式和文本编码。对于每种类型的插件，我们通常需要两个类：一个实现通用插件函数的包装类，以及一个或多个实现特定类型插件 API 的处理器。处理器通过包装类访问。
 
 | 插件类 | 基类 |
+
 |---|---|
+
 | QAccessibleBridge | QAccessibleBridge |
+
 | QAccessiblePlugin | QAccessibleInterface |
+
 | QIconEnginePlugin | QIconEngine |
+
 | QImageIOPlugin | QImageIOHandler |
+
 | QContextPlugin | QInputContext |
+
 | QPictureFormatPlugin | N/A |
+
 | QSqlDriverPlugin | QSqlDriver |
+
 | QStylePlugin | QStyle |
+
 | QTextCodec | QTextCodec |
 
 **图 19.1.** 插件和处理器类（不包括 Qt Core）
@@ -11312,6 +11105,8 @@ Qt 可以扩展多种类型的插件，最常见的数据库驱动、图像格�
 为了演示这一点，我们将实现一个可以读取单色光标文件（.cur 文件）的插件。这些文件可以包含同一个光标的不同尺寸的图像。一旦光标构建并安装，Qt 将能够读取 .cur 文件并访问单个光标（例如通过 `QImage`、`QImageReader` 或 `QMovie`），并能够将光标写入 Qt 的其他图像格式（如 BMP、JPEG 和 PNG）。该插件也可以与 Qt 应用程序一起部署，应用程序会自动检查 Qt 插件的标准位置并加载找到的插件。
 
 新的图像插件包装器必须派自 `QImageIOPlugin` 并重实现几个虚函数：
+
+
 
 ```cpp
 class CursorPlugin : public QImageIOPlugin
@@ -11323,11 +11118,7 @@ public:
                             const QByteArray &format) const;
 ```
 
-`keys()` 函数返回插件支持的图像格式列表。`capabilities()` 和 `create()` 函数的 `format` 参数假设具有该列表中的值。
-
-
-
-
+`keys()`函数返回插件支持的图像格式列表。`capabilities()`和`create()`函数的`format`参数假设具有该列表中的值。
 
 ## 使用插件扩展 Qt
 
@@ -11338,7 +11129,7 @@ QString CursorPlugin::keys() const
 }
 ```
 
-我们的插件只支持一种图像格式，因此它返回一个只包含一个名称的列表。理想情况下，该名称应该是该格式使用的文件扩展名。在处理具有多个扩展名的格式（例如 JPEG 的 .jpg 和 .jpeg）时，我们可以为同一个格式返回一个包含多个条目的列表，每个目的对应一个扩展名。
+我们的插件只支持一种图像格式，因此它返回一个只包含一个名称的列表。理想情况下，该名称应该是该格式使用的文件扩展名。在处理具有多个扩展名的格式（例如 JPEG 的 `.jpg` 和 `.jpeg`）时，我们可以为同一个格式返回一个包含多个条目的列表，每个目的对应一个扩展名。
 
 ```cpp
 QImagePlugin::Capabilities
@@ -11359,9 +11150,9 @@ CursorPlugin::capabilities(QIODevice *device,
 }
 ```
 
-`capabilities()` 函数返回图像处理器针对给定图像格式的能力。共有三种能力（CanRead、CanReadIncremental），返回值是这些适用能力的位或运算结果。
+`capabilities()`函数返回图像处理器针对给定图像格式的能力。共有三种能力（`CanRead`、`CanReadIncremental`），返回值是这些适用能力的位或运算结果。
 
-如果格式是 "cur"，我们的实现返回 CanRead。如果没有给出格式，我们创建一个光标处理器并检查它是否有能力从给定的设备读取数据。`canRead()` 函数仅查看数据，检查它是否能识别该格式，而不改变指针。能力为 0 表示该处理器无法读取或写入该文件。
+如果格式是 `"cur"`，我们的实现返回`CanRead`。如果没有给出格式，我们创建一个光标处理器并检查它是否有能力从给定的设备读取数据。`canRead()`函数仅查看数据，检查它是否能识别该格式，而不改变指针。能力为 0 表示该处理器无法读取或写入该文件。
 
 ```cpp
 QHandler *CursorPlugin::create(QIODevice *device,
@@ -11374,7 +11165,7 @@ QHandler *CursorPlugin::create(QIODevice *device,
 }
 ```
 
-当文件被打开时（例如通过 `QImageReader`），插件封装器的 `create()` 函数将带有设备指针和作为格式的 "cur" 被被调用。我们创建了一个 `CursorHandler` 实例，并使用指定的设备和格式对其进行设置。调用者将拥有该处理器的所有权，并在不再需要时将其删除。如果需要读取多个文件，则会为每个文件创建一个新的处理器。
+当文件被打开时（例如通过`QImageReader`），插件封装器的`create()`函数将带有设备指针和作为格式的 `"cur"` 被被调用。我们创建了一个`CursorHandler`实例，并使用指定的设备和格式对其进行设置。调用者将拥有该处理器的所有权，并在不再需要时将其删除。如果需要读取多个文件，则会为每个文件创建一个新的处理器。
 
 ## 19. 创建插件
 
@@ -11382,9 +11173,9 @@ QHandler *CursorPlugin::create(QIODevice *device,
 Q_EXPORT_PLUGIN2(cursorplugin, CursorPlugin)
 ```
 
-在 .cpp 文件的末尾，我们使用 `Q_EXPORT_PLUGIN2()` 宏来确保插件被 Qt 识别。第一个参数是我们想要给插件的任意名称。第二个参数是插件的名称。
+在 `.cpp` 文件的末尾，我们使用`Q_EXPORT_PLUGIN2()`宏来确保插件被 Qt 识别。第一个参数是我们想要给插件的任意名称。第二个参数是插件的名称。
 
-继承 `QImagePlugin` 是简单的。插件的实际工作在处理器（handler）中完成。图像格式处理器必须继承 `QImageIOHandler` 并实现其部分或全部公共函数。让我们从头文件开始：
+继承`QImagePlugin`是简单的。插件的实际工作在处理器（handler）中完成。图像格式处理器必须继承`QImageIOHandler`并实现其部分或全部公共函数。让我们从头文件开始：
 
 ```cpp
 class CursorHandler : public QImageIOHandler
@@ -11410,7 +11201,7 @@ private:
 };
 ```
 
-所有公共函数的签名都是固定的。我们省略了只读处理器不需要实现的几个函数，特别是 `write()`。成员变量使用 `mutable` 关键字声明，因为它们在 const 函数内部被修改了。
+所有公共函数的签名都是固定的。我们省略了只读处理器不需要实现的几个函数，特别是`write()`。成员变量使用`mutable`关键字声明，因为它们在 const 函数内部被修改了。
 
 ```cpp
 CursorHandler::CursorHandler()
@@ -11421,7 +11212,7 @@ CursorHandler::CursorHandler()
 }
 ```
 
-当处理器构造时，我们首先设置它的状态。我们将当前图像编号设置为第一个。由于我们将 `numImages` 设置为 0，这很清楚还没有图像。
+当处理器构造时，我们首先设置它的状态。我们将当前图像编号设置为第一个。由于我们将`numImages`设置为 0，这很清楚还没有图像。
 
 ```cpp
 bool CursorHandler::canRead() const
@@ -11434,7 +11225,7 @@ bool CursorHandler::canRead() const
 }
 ```
 
-可以随时判断图像处理器是否可以从设备读取更多数据。如果该函数在读取任何数据之前调用，且我们仍处于 `BeforeHeader` 状态，我们会检查识别 Windows 文件的特定签名。`QIODevice::peek()` 读取前四个字节而不改变设备的文件指针。如果之后调用 `canRead()`，除非发生错误否则返回 true。
+可以随时判断图像处理器是否可以从设备读取更多数据。如果该函数在读取任何数据之前调用，且我们仍处于`BeforeHeader`状态，我们会检查识别 Windows 文件的特定签名。`QIODevice::peek()`读取前四个字节而不改变设备的文件指针。如果之后调用`canRead()`，除非发生错误否则返回 true。
 
 ```cpp
 int CursorHandler::currentImageNumber() const
@@ -11445,7 +11236,7 @@ int CursorHandler::currentImageNumber() const
 
 此函数返回设备指针所在位置的光标编号。
 
-一旦处理器构造完成，用户可以按顺序调用它的任何公共函数。如果我们假设只能顺序读取，就会出现问题，因此我们需要在执行其他操作之前读取文件头。通过在依赖文件头的函数中调用 `readHeaderIfNecessary()` 函数来解决这个问题。
+一旦处理器构造完成，用户可以按顺序调用它的任何公共函数。如果我们假设只能顺序读取，就会出现问题，因此我们需要在执行其他操作之前读取文件头。通过在依赖文件头的函数中调用`readHeaderIfNecessary()`函数来解决这个问题。
 
 ```cpp
 int CursorHandler::imageCount() const
@@ -11467,21 +11258,17 @@ int CursorHandler::imageCount() const
 | planes | uint16 | 平数 |
 | compression | uint16 | 像素位 |
 
+```cpp
 bool CursorHandler::read(QImage *image)
 {
     readHeaderIfNecessary();
-
     if (state != BeforeImage)
         return false;
-
     // 此实现非常复杂，为了代码片段的简洁已省略
     // 但它将处理像素数据的提取。
     return true;
 }
-
-
-
-
+```
 
 ## 406 19. 创建插件
 
@@ -11504,7 +11291,7 @@ bool CursorHandler::jumpToNextImage()
 }
 ```
 
-`jumpToNextImage()` 函数用于跳过一张图像。为了简单起见，我们调用 `read()` 并忽略生成的 `QImage`。更高效的实现将可以使用存储在 `.cur` 文件头中的信息，直接跳转到文件中正确的偏移量。
+`jumpToNextImage()`函数用于跳过一张图像。为了简单起见，我们调用`read()`并忽略生成的`QImage`。更高效的实现将可以使用存储在`.cur`文件头中的信息，直接跳转到文件中正确的偏移量。
 
 ```cpp
 void CursorHandler::readIfNecessary() const
@@ -11533,7 +11320,7 @@ void CursorHandler::readIfNecessary() const
 }
 ```
 
-`readIfNecessary()` 私有函数从 `imageCount()` 和 `read()` 调用。如果头已经读取，状态将不是 `BeforeHeader`，我们立即返回。否则，我们在设备上打开一个数据流，读取一些通用数据（包括文件中光标的数量），并将状态设置为 `BeforeImage`。在结束时，设备的文件指针被定位在第一张图像之前。
+`readIfNecessary()`私有函数从`imageCount()`和`read()`调用。如果头已经读取，状态将不是`BeforeHeader`，我们立即返回。否则，我们在设备上打开一个数据流，读取一些通用数据（包括文件中光标的数量），并将状态设置为`BeforeImage`。在结束时，设备的文件指针被定位在第一张图像之前。
 
 ```cpp
 void CursorHandler::onErrorState() const
@@ -11544,7 +11331,7 @@ void CursorHandler::onErrorState() const
 }
 ```
 
-如果发生错误，我们假设没有有效的图像并将状态设置为 `Error`。一旦进入 `Error` 状态，处理器的状态就无法改变。
+如果发生错误，我们假设没有有效的图像并将状态设置为`Error`。一旦进入`Error`状态，处理器的状态就无法改变。
 
 ```cpp
 QByteArray CursorHandler::readBitmap(int width, int height, QDataStream &in) const
@@ -11569,9 +11356,9 @@ QByteArray CursorHandler::readBitmap(int width, int height, QDataStream &in) con
 }
 ```
 
-`readBitmap()` 函数用于读取光标的 AND 和 XOR 掩码。这些掩码具有不的特征。首先，它们从下到上存储行，而不是更常见的从上到下方法。其次，数据的端序似乎与 .cur 文件中其他地方使用的相反。鉴于此，我们必须在 `setBit()` 调用中反转 y 坐标，并且逐个读取掩码值，通过位移和掩码操作来提取它们的正确值。
+`readBitmap()`函数用于读取光标的 AND 和 XOR 掩码。这些掩码具有不的特征。首先，它们从下到上存储行，而不是更常见的从上到下方法。其次，数据的端序似乎与 `.cur` 文件中其他地方使用的相反。鉴于此，我们必须在`setBit()`调用中反转 y 坐标，并且逐个读取掩码值，通过位移和掩码操作来提取它们的正确值。
 
-这标志着 `CursorHandler` 图像格式插件的实现。其他图像格式的插件将遵循相同的模式，尽管某些插件可能会实现更多的 `QImageHandler` API，特别是用于写入图像的函数。其他类型的插件（例如编码器或数据库驱动程序）遵循相同的模式，即有一个插件包装器来提供应用程序可以使用的通用 API，以及一个处理程序来提供底层功能。
+这标志着`CursorHandler`图像格式插件的实现。其他图像格式的插件将遵循相同的模式，尽管某些插件可能会实现更多的`QImageHandler` API，特别是用于写入图像的函数。其他类型的插件（例如编码器或数据库驱动程序）遵循相同的模式，即有一个插件包装器来提供应用程序可以使用的通用 API，以及一个处理程序来提供底层功能。
 
 ## 408 19. 创建插件
 
@@ -11587,19 +11374,19 @@ SOURCES       = cursorhandler.cpp \
 DESTDIR       = $(QTDIR)/plugins/imageformats
 ```
 
-默认情况下，`.pro` 文件使用 app 模板，但在这里我们必须指定 `lib`，因为插件是一个库，而不是一个独立的应用程序。`DESTDIR` 指定了插件应该存放的目录。Qt 插件必须放在 Qt 安装的相应子目录中，如果你的插件提供了新的图像格式，我们将其放在 `plugins/imageformats`。目录名称和插件类型的列表可以在 http://doc.qt.com/4/plugins.html 获取。对于此示例，`QTDIR` 环境变量设置为 Qt 安装的目录。发布模式和调试模式下的 Qt 插件是不同的，因此在 `.pro` 文件中指定使用哪一个是明智的——通过添加行：
+默认情况下，`.pro`文件使用 app 模板，但在这里我们必须指定`lib`，因为插件是一个库，而不是一个独立的应用程序。`DESTDIR`指定了插件应该存放的目录。Qt 插件必须放在 Qt 安装的相应子目录中，如果你的插件提供了新的图像格式，我们将其放在`plugins/imageformats`。目录名称和插件类型的列表可以在 http://doc.qt.com/4/plugins.html 获取。对于此示例，`QTDIR`环境变量设置为 Qt 安装的目录。发布模式和调试模式下的 Qt 插件是不同的，因此在 `.pro` 文件中指定使用哪一个是明智的——通过添加行：
 
 ```pro
 CONFIG        += release
 ```
 
-使用 Qt 插件的应用程序必须与其想要使用的插件一起部署。Qt 插件必须放在特定的子目录下，例如 `imageformats`。Qt 应用程序在应用程序可执行文件所在的目录搜索插件，因此如果我们想在不同的目录部署插件，可以使用 `QCoreApplication::addLibraryPath()` 扩展插件搜索路径。
+使用 Qt 插件的应用程序必须与其想要使用的插件一起部署。Qt 插件必须放在特定的子目录下，例如`imageformats`。Qt 应用程序在应用程序可执行文件所在的目录搜索插件，因此如果我们想在不同的目录部署插件，可以使用`QCoreApplication::addLibraryPath()`扩展插件搜索路径。
 
 ## 使应用程序感知插件
 
 应用程序是一个动态库，包含一个或多个接口。接口是一个由纯虚定义的类。应用程序与插件之间的通信通过其接口完成。在本节中，我们将关注如何使用插件，并在下一节中展示如何实现插件。插件是由插件提供的，我们可以认为这个列表是键。
 
-**图 19.3.** 应用程序**定义了接口：
+**图 19.3.** 应用程序定义了接口：
 
 ```cpp
 class TextArtInterface {
@@ -11615,11 +11402,13 @@ public:
 Q_DECLARE_INTERFACE(TextArtInterface, "com.qt.TextArt/1.0")
 ```
 
-接口通常声明一个虚析构函数、一个返回 `QStringList` 的函数。每当我们更改接口（例如通过添加虚函数或更改现有函数的签名），必须记住增加版本号；否则应用程序在访问过时的插件可能会崩溃。
+接口通常声明一个虚析构函数、一个返回`QStringList`的函数。每当我们更改接口（例如通过添加虚函数或更改现有函数的签名），必须记住增加版本号；否则应用程序在访问过时的插件可能会崩溃。
 
 ## 410 19. 创建插件
 
-应用程序实现在名为 `TextArtDialog` 的类中。我们将只显示与插件相关的代码。让我们从构造函数开始：
+应用程序实现在名为`TextArtDialog`的类中。我们将只显示与插件相关的代码。让我们从构造函数开始：
+
+
 
 ```cpp
 TextArtDialog::TextArtDialog(const QString &text, QWidget *parent)
@@ -11663,10 +11452,6 @@ void TextArtDialog::loadPlugins()
     }
 }
 ```
-
-
-
-
 
 ## 让应用程序感知插件 411
 
@@ -11806,16 +11591,22 @@ return pixmap;
 
 现在我们已经为每个效果设置了画笔和画刷，并在“Shadow”情况下绘制了阴影。在 .cpp 文件的最后，我们使用 `Q_EXPORT_PLUGIN(basiceffectplugin, BasicEffectsPlugin)` 宏来使插件可用。
 
-TEMPLATE = lib
-CONFIG += textart
-HEADERS = textartinterface.h
-SOURCES = basiceffectplugin.cpp
-DESTDIR = ../textart
+`TEMPLATE = lib`
+
+`CONFIG += textart`
+
+`HEADERS = textartinterface.h`
+
+`SOURCES = basiceffectplugin.cpp`
+
+`DESTDIR = ../textart`
 
 如果你对插件产生了兴趣，你可能会喜欢学习提供的更高级示例。该应用程序包含一个列出插件和接口的有用对话框。
 
 - 与原生 API 交互
+
 - 在 Windows 上使用 ActiveX
+
 - 处理 X11 会话
 
 ## 432
@@ -11827,7 +11618,9 @@ DESTDIR = ../textart
 除了这里介绍的功能外，Trolltech 还提供了许多特定的解决方案，包括 Qt/Motif 和 Qt/MFC 迁移框架，以方便 Motif/Xt 和 MFC 应用程序迁移到 Qt。froglogic 提供了类似的 Tk 扩展，Windows 资源转换器来自 Kralardens Datakonsult。详情见以下页面：
 
 - http://www.trolltech.com/products/solutions/catalog/
+
 - http://www.froglogic.com/tq/
+
 - http://www.kdab.net/knut/
 
 对于嵌入式开发，Trolltech 提供了 Qt 平台。这将在第 21 章介绍。
@@ -11837,10 +11630,6 @@ DESTDIR = ../textart
 Qt 的全面 API 满足了所有平台的大多数需求，但在某些情况下，我们可能希望使用底层特定平台的 API。在本节中，我们将展示如何使用 Qt 支持的不同平台的原生 API 来完成特定任务。
 
 在每个平台上，QWidget 都提供一个 `winId()` 函数来返回窗口 ID 或句柄。QWidget 还提供一个静态函数 `find()` 返回具有特定窗口 ID 的 QWidget。我们可以将此 ID 传递给原生 API 函数来实现特定平台的效果。例如，以下代码
-
-
-
-
 
 ## 416 20. 平台特定特性
 
@@ -11914,60 +11703,66 @@ void MyWidget::paintEvent(QPainter *event) /* event */) {
 Qt 定义了以下窗口系统符号之一：`_Q_WS_WIN`、`_Q_WS_X11`、`_Q_WS_MAC` 和 `_Q_WS_Q` (Qt)。在使用它们之前，我们必须包含至少一个 Qt 头文件。Qt 还定义了预处理器宏来识别系统：
 
 - _Q_OS_AIX
+
 - _Q_OS_HPUX
+
 - _Q_OS_OPENBDS
+
 - _Q_OS_SOLARIS
+
 - _Q_OS_BSD4
+
 - _Q_OS_HURD
+
 - _Q_OS_OSSEM2X
+
 - _Q_OS_ULTRIX
-- _Q_OS_BSDI
-- _Q_OS_IRIX
-- _Q_OS_OSF
-- _Q_OS_UNIXWARE
-- _Q_OS_CYGWIN
-- _Q_OS_LINUX
-- _Q_OS_QNX6
-- _Q_OS_WIN32
-- _Q_OS_DUGX
-- _Q_OS_LYNX
-- _Q_OS_QNX
-- _Q_OS_RELANT
-- _Q_OS_FREEBSD
-- _Q_OS_NETBSD
-- _Q_OS_SCO
+
+
+
+- `_Q_OS_BSDI`
+- `_Q_OS_IRIX`
+- `_Q_OS_OSF`
+- `_Q_OS_UNIXWARE`
+- `_Q_OS_CYGWIN`
+- `_Q_OS_LINUX`
+- `_Q_OS_QNX6`
+- `_Q_OS_WIN32`
+- `_Q_OS_DUGX`
+- `_Q_OS_LYNX`
+- `_Q_OS_QNX`
+- `_Q_OS_RELANT`
+- `_Q_OS_FREEBSD`
+- `_Q_OS_NETBSD`
+- `_Q_OS_SCO`
 
 我们可以假设这些符号中至少有一个定义。为了方便起见，当检测到 Win32 或 Win64 时，Qt 还会定义 `_Q_OS_WIN`，检测到 Unix 时定义 `_Q_OS_UN`。在运行时，我们可以通过这些符号来区分不同的操作系统。
-
-
-
-
 
 ## 在 Windows 上使用 ActiveX
 
 ![](img/34bd675de80edd220dc2d53b429caf78_438_0.png)
 
-**图 20.4.** QAxContainer 模块的继承树
+**图 20.4.** `QAxContainer` 模块的继承树
 
 COM 数据类型会自动转换为对应的 Qt 类型，如图 20.5 所示。例如，类型为 `VARIANT_BOOL` 的输入参数变为 `bool`，而类型为 `VARIANT_BOOL` 的输出参数变为 `bool &`。如果结果类型是 Qt 类（如 `QString`、`DateTime` 等），则输入参数为常量引用（例如 `const QString &`）。
 
 | COM 类型 | Qt 类型 |
 |---|---|
-| VARIANT_BOOL | bool |
-| char, short, int, long | int |
-| unsigned char, unsigned short, unsigned int, unsigned long | uint |
-| float, double | double |
-| CYLONG | long, qulong |
-| BSTR | QString |
-| DATE | QDateTime, QDate, QTime |
-| OLE_COLOR | QColor |
-| SAFEARRAY (VARIANT) | QList<QVariant> |
-| SAFEARRAY (BSTR) | QStringList |
-| SAFEARRAY (BYTE) | QByteArray |
-| VARIANT | QVariant |
-| IFontDesc | IFont |
-| IPictureDisp | QPixmap |
-| User defined type | QRect, QSize, QPoint |
+| `VARIANT_BOOL` | `bool` |
+| `char`, `short`, `int`, `long` | `int` |
+| `unsigned char`, `unsigned short`, `unsigned int`, `unsigned long` | `uint` |
+| `float`, `double` | `double` |
+| `CYLONG` | `long`, `qulong` |
+| `BSTR` | `QString` |
+| `DATE` | `QDateTime`, `QDate`, `QTime` |
+| `OLE_COLOR` | `QColor` |
+| `SAFEARRAY (VARIANT)` | `QList<QVariant>` |
+| `SAFEARRAY (BSTR)` | `QStringList` |
+| `SAFEARRAY (BYTE)` | `QByteArray` |
+| `VARIANT` | `QVariant` |
+| `IFontDesc` | `IFont` |
+| `IPictureDisp` | `QPixmap` |
+| `User defined type` | `QRect`, `QSize`, `QPoint` |
 
 **图 20.5.** COM 类型与 Qt 类型之间的关系
 
@@ -12019,7 +11814,7 @@ void PlayerWindow::timerEvent(QEvent *event)
 
 我们将不再回顾代码的其他部分，因为大部分与 ActiveX 无关。代码包含在 CD。
 
-在 .pro 文件中，我们需要此项来链接 `QAContainer` 模块：
+在 `.pro` 文件中，我们需要此项来链接 `QAContainer` 模块：
 
 ## 在 Windows 上使用 ActiveX
 
@@ -12136,10 +11931,6 @@ delta = 2;
 }
 ```
 
-
-
-
-
 ## 426 20. 平台特定特性
 
 不寻常之处在于对 `requestPropertyChange()` 和 `propertyChanged()` 的调用。这些函数继承自 `QAxbindable`，理想情况下，每当我们更改属性时都应该调用它们。`requestPropertyChange()` 请求客户端更改属性的权限，如果客户端允许更改，则返回 `true`。`propertyChanged()` 函数通知客户端属性已更改。
@@ -12203,6 +11994,8 @@ HRESULT WINAPI ObjectSafetyImpl::InterfaceSafetyOptions(
 }
 ```
 
+
+
 ```cpp
 HRESULT WINAPI ObjectSafetyImpl::InterfaceSafetyOptions(
     /* rid */, DWORD /* pddwSupportedOptions */,
@@ -12229,11 +12022,7 @@ QAXFACTORY_DEFAULT(AXBouncer,
     "f3d30f5d-7d7d-4d7d-8d7d-7d7d7d7d7d7d")
 ```
 
-
-
-
-
-## 430 20. 平台特定特性
+## 20. 平台特定特性
 
 ```cpp
 class ABItem : public QObject, public QTreeWidget
@@ -12261,7 +12050,7 @@ public slots:
 };
 ```
 
-ABItem 类代表地址簿中的一个条目。它继承自可以在 `QTreeWidget` 中看到的 `QTreeWidgetItem`，并继承自 `QObject`，以便它可以被导出为 COM 对象。
+`ABItem` 类代表地址簿中的一个条目。它继承自可以在 `QTreeWidget` 中看到的 `QTreeWidgetItem`，并继承自 `QObject`，以便它可以被导出为 COM 对象。
 
 ```cpp
 int main(int argc, char *argv[])
@@ -12286,7 +12075,7 @@ int main(int argc, char *argv[])
 
 当应用程序作为服务器运行时，我们必须将 `AddressBook` 和 `ABItem` 类导出为 COM 组件：
 
-## 在 Windows 上使用 ActiveX
+### 在 Windows 上使用 ActiveX
 
 ```cpp
 QAXFACTORY_BEGIN("2b26f3e-86cf-4c49-9df5-80483b47f17",
@@ -12322,7 +12111,7 @@ FORMS RC_FILE = qaxserver.rc
 
 我们对 ActiveQt 框架的概述结束。Qt 分发包含了额外的示例，文档包含了有关如何构建 QAxContainer 和 QAxServer 模块以及如何解决常见的互操作性问题的信息。
 
-## 处理 X11 会话管理
+### 处理 X11 会话管理
 
 当我们在 X11 上注销时，会话管理器会询问是否想要保存会话。如果我们说“是”，正在运行的程序下次登录时会自动重启，并具有相同的屏幕位置，理想情况下还具有与注销时相同的状态。
 
@@ -12330,7 +12119,7 @@ FORMS RC_FILE = qaxserver.rc
 
 ## 20. 平台特定特性
 
-## 为“sylvia”结束会话
+### 为“sylvia”结束会话
 
 ![](img/34bd675de80edd220dc2d53b429caf78_449_0.png)
 
@@ -12410,11 +12199,7 @@ rm sessionfile
 
 `commitData()` 函数在用户注销时被调用。我们可以重新实现它，弹出一个消息框警告用户可能丢失数据风险。`QSessionManager` 参数允许我们与会话管理器通信。
 
-
-
-
-
-## 处理 X11 会话管理
+### 处理 X11 会话管理
 
 默认实现会关闭所有顶层小部件，这产生与用户逐个点击标题栏上的关闭按钮来关闭窗口相同的行为。在第 3 章中，我们学习了如何重新实现 `closeEvent()` 来捕获这一操作并弹出一个对话框。
 
@@ -12458,7 +12243,7 @@ private:
 };
 ```
 
-## 20. 平台特性
+### 20. 平台特性
 
 TicTacoe 类继承自 QWidget 并实现了 `resizeHint()`、`paintEvent()` 和 `mouseEvent()`。它还提供了我们在 Application 类中使用的 `game()` 和 `saveState()` 函数。
 
@@ -12538,39 +12323,38 @@ void TicTacToe::restoreState()
 
 在移动设备（如 PDA 和手机）上开发软件可能是非常有挑战性的，因为嵌入式系统通常处理器较慢、存储空间小（闪存或硬盘）、内存少且屏幕小。
 
-Qtopia Core（以前称为 Qt/Embedded）是针对嵌入式 Linux 优化的 Qt 版本。它提供了与桌面版本相同的 API 和工具。通过双重授权，它可以既用于开源也可以用于商业开发。
 
-为了 嵌入式开发，Qtopia 运行在 Linux 上
+
+Qtopia Core（以前称为 `Qt/Embedded`）是针对嵌入式 Linux 优化的 Qt 版本。它提供了与桌面版本相同的 API 和工具。通过双重授权，它可以既用于开源也可以用于商业开发。
+
+为了嵌入式开发，Qtopia 运行在 Linux 上
+
 - 嵌入式环境的 Qt 平台
 - Qt Qtopia
 
-
-
-
-
 # 快速上手 Qtopia
 
-上一个示例说明了一种常用的用法：我们使用 QDataStream 对数据进行编码，为了确保接收端能够正确解释 QByteArray，我们在消息名称中以类似于 C++ 函数的方式对数据格式进行了混淆处理。
+上一个示例说明了一种常用的用法：我们使用 `QDataStream` 对数据进行编码，为了确保接收端能够正确解释 `QByteArray`，我们在消息名称中以类似于 C++ 函数的方式对数据格式进行了混淆处理。
 
-环境变量会影响 Qtopia 应用。最重要的变量是 QWS_MOUSE_PROTO 和 QWS_KEYBOARD，它们指定了鼠标设备和键盘类型。完整的环境变量列表请参阅 http://doc.trolltech.com/4.1/emb-envvars.html。
+环境变量会影响 Qtopia 应用。最重要的变量是 `QWS_MOUSE_PROTO` 和 `QWS_KEYBOARD`，它们指定了鼠标设备和键盘类型。完整的环境变量列表请参阅 http://doc.trolltech.com/4.1/emb-envvars.html。
 
-如果我们将其作为开发平台，则可以使用 Qtopia 虚拟帧缓冲区 (qfb) 来测试应用程序。qfb 是一个 X11 程序，它可以在像素级模拟实际帧缓冲区。这极大地加速了开发周期。若要在 Qtopia Core 中启用虚拟缓冲区支持，请向 configure 脚本传递 -qfb 选项。请注意，此选项并非用于生产环境。虚拟帧缓冲区程序位于 tools/qfb，并可以如下方式调用：
+如果我们将其作为开发平台，则可以使用 Qtopia 虚拟帧缓冲区 (`qfb`) 来测试应用程序。`qfb` 是一个 X11 程序，它可以在像素级模拟实际帧缓冲区。这极大地加速了开发周期。若要在 Qtopia Core 中启用虚拟缓冲区支持，请向 `configure` 脚本传递 `-qfb` 选项。请注意，此选项并非用于生产环境。虚拟帧缓冲区程序位于 `tools/qfb`，并可以如下方式调用：
 
 ```
 qfb -width 320 -height 480 -depth 32
 ```
 
-在大多数平台上的另一个选项是使用 VNC（虚拟网络计算）来远程运行应用程序。若要在 Qtopia Core 中启用 VNC 支持，请向 configure 传递 -qt-gfx-vnc 选项。然后使用命令行选项 -display VNC:0 启动你的 Qtopia ，并运行一个指向应用程序运行主机的 VNC 客户端。显示尺寸和位深度可以通过在运行 Qtopia Core 应用的主机上设置 QWS_SIZE 和 QWS_DEPTH 环境变量来指定（例如，QWS_SIZE=320x480 和 QWS_DEPTH=32）。
+在大多数平台上的另一个选项是使用 VNC（虚拟网络计算）来远程运行应用程序。若要在 Qtopia Core 中启用 VNC 支持，请向 `configure` 传递 `-qt-gfx-vnc` 选项。然后使用命令行选项 `-display VNC:0` 启动你的 Qtopia ，并运行一个指向应用程序运行主机的 VNC 客户端。显示尺寸和位深度可以通过在运行 Qtopia Core 应用的主机上设置 `QWS_SIZE` 和 `QWS_DEPTH` 环境变量来指定（例如，`QWS_SIZE=320x480` 和 `QWS_DEPTH=32`）。
 
 # 自定义 Qtopia Core
 
-在安装 Qtopia Core 时，我们可以指定想要排除的功能以减少其内存占用。Qtopia Core 包含了一百多个可配置的功能，每个功能都与一个预处理器符号相关。例如，QT_NO_FILELOG 会从 Qt 库中排除 `QFile`，而 QT_NO_I18N 则省略国际化支持。这些功能定义位于 src/corelib/qfeatures.txt。
+在安装 Qtopia Core 时，我们可以指定想要排除的功能以减少其内存占用。Qtopia Core 包含了一百多个可配置的功能，每个功能都与一个预处理器符号相关。例如，`QT_NO_FILELOG` 会从 Qt 库中排除 `QFile`，而 `QT_NO_I18N` 则省略国际化支持。这些功能定义位于 `src/corelib/qfeatures.txt`。
 
-Qtopia Core 五种示例配置（minimum、small、medium、large 和 dist），存储在 src/corelib/qconfig_xxx.h 文件中。可以使用 configure 脚本的 -qconfig 选项指定这些配置，例如：
+Qtopia Core 五种示例配置（minimum、small、medium、large 和 dist），存储在 `src/corelib/qconfig_xxx.h` 文件中。可以使用 `configure` 脚本的 `-qconfig` 选项指定这些配置，例如：
 
-- ./configure -qconfig small
+- `./configure -qconfig small`
 
-要创建自定义配置，我们可以手动提供一个 qconfig-xxx.h 文件，并像使用标准配置一样使用它。或者，我们可以使用 Qt tools 子目录下的 qconfig 图形化工具。
+要创建自定义配置，我们可以手动提供一个 `qconfig-xxx.h` 文件，并像使用标准配置一样使用它。或者，我们可以使用 Qt `tools` 子目录下的 `qconfig` 图形化工具。
 
 # 21. 嵌入式编程
 
@@ -12578,27 +12362,27 @@ Qtopia 提供了以下类用于与输入输出设备接口，并用于自定义�
 
 | 类 | 基类用于 |
 | --- | --- |
-| QScreen | 屏幕驱动 |
-| QScreenDriverPlugin | 屏幕驱动插件 |
-| QWSMessageHandler | 鼠标驱动 |
-| QMouseDriverPlugin | 鼠标驱动插件 |
-| QKeyboardHandler | 键盘驱动 |
-| QkbdDriverPlugin | 键盘驱动插件 |
-| QWSInputMethod | 输入法 |
-| QDecoration | 窗口装饰样式 |
-| QDecorationPlugin | 提供窗口装饰样式 |
+| `QScreen` | 屏幕驱动 |
+| `QScreenDriverPlugin` | 屏幕驱动插件 |
+| `QWSMessageHandler` | 鼠标驱动 |
+| `QMouseDriverPlugin` | 鼠标驱动插件 |
+| `QKeyboardHandler` | 键盘驱动 |
+| `QkbdDriverPlugin` | 键盘驱动插件 |
+| `QWSInputMethod` | 输入法 |
+| `QDecoration` | 窗口装饰样式 |
+| `QDecorationPlugin` | 提供窗口装饰样式 |
 
-若要获取预定义驱动程序、输入法和窗口装饰样式的列表，请运行带有 -help 选项的 configure 脚本。
+若要获取预定义驱动程序、输入法和窗口装饰样式的列表，请运行带有 `-help` 选项的 `configure` 脚本。
 
-在启动 Qtopia Core 服务器时，可以使用 -display 命令行选项指定屏幕驱动程序（见上一节），或者通过设置 QWS_DISPLAY 环境变量。鼠标驱动和相关设备可以使用 QWS_MOUSE_PROTO 环境变量指定，其值格式必须为 `type:device`，其中 type 是支持的驱动程序之一，device 是设备路径（例如，`QWS_PROTO:/dev/mouse`）。键盘通过 QWS_KEYBOARD 环境变量进行类似处理。输入法和窗口装饰通过使用 `QServer::setCurrentInputMethod()` 和 `QApplication::qwsSetDecoration()` 进行程序化设置。
+在启动 Qtopia Core 服务器时，可以使用 `-display` 命令行选项指定屏幕驱动程序（见上一节），或者通过设置 `QWS_DISPLAY` 环境变量。鼠标驱动和相关设备可以使用 `QWS_MOUSE_PROTO` 环境变量指定，其值格式必须为 `type:device`，其中 `type` 是支持的驱动程序之一，`device` 是设备路径（例如，`QWS_PROTO:/dev/mouse`）。键盘通过 `QWS_KEYBOARD` 环境变量进行类似处理。输入法和窗口装饰通过使用 `QServer::setCurrentInputMethod()` 和 `QApplication::qwsSetDecoration()` 进行程序化设置。
 
-窗口装饰可以独立于样式（样式继承自 QStyle）进行设置。例如，完全可以将 Windows 设置为窗口装饰，并将 Plastique 设置为小部件样式。如果需要，可以按窗口设置装饰。
+窗口装饰可以独立于样式（样式继承自 `QStyle`）进行设置。例如，完全可以将 Windows 设置为窗口装饰，并将 Plastique 设置为小部件样式。如果需要，可以按窗口设置装饰。
 
-QServer 提供了多种用于自定义窗口系统的函数。作为 Qtopia Core 服务器运行的应用程序可以通过 `QServer` 全局变量访问唯一的 `QServer` 实例，该实例由 `QApplication` 构造函数初始化。
+`QServer` 提供了多种用于自定义窗口系统的函数。作为 Qtopia Core 服务器运行的应用程序可以通过 `QServer` 全局变量访问唯一的 `QServer` 实例，该实例由 `QApplication` 构造函数初始化。
 
-Q Core 支持以下字体格式：TrueType (TTF)、PostScript Type 1、位图分布格式 (BDF) 和 Qt 渲染字体 (QPF)。
+Q Core 支持以下字体格式：TrueType (`TTF`)、PostScript Type 1、位图分布格式 (`BDF`) 和 Qt 渲染字体 (`QPF`)。
 
-由于 QPF 是位图格式，如果我们需要在一个或两个不同的尺寸下使用它，它比 TTF 和 Type 1 等矢量字体更快且通常更紧凑。`makettf` 工具允许我们预渲染 TTF 或 Type 1。在编写本文时，Trolltech 正在开发...
+由于 `QPF` 是位图格式，如果我们需要在一个或两个不同的尺寸下使用它，它比 `TTF` 和 Type 1 等矢量字体更快且通常更紧凑。`makettf` 工具允许我们预渲染 `TTF` 或 Type 1。在编写本文时，Trolltech 正在开发...
 
 # 附录
 
@@ -12607,51 +12391,55 @@ Q Core 支持以下字体格式：TrueType (TTF)、PostScript Type 1、位图分
 - 安装 Qt/Mac
 - 安装 Qt/X11
 
+## 安装 Qt/Mac
 
+要使用安装程序，请插入 CD 并双击名为 `Qt.mpkg` 的包。这将启动安装程序 `Installer.app`，Qt 将将带有标准示例、文档以及随本书附带的示例。Qt 将被安装在 `/Developer` 目录下，书中的示例将位于 `/Developer/Examples/Qt4book`。
 
-
-
-# 安装 Qt/Mac
-
-要使用安装程序，请插入 CD 并双击名为 Qt.mpkg 的包。这将启动安装程序 Installer.app，Qt 将将带有标准示例、文档以及随本书附带的示例。Qt 将被安装在 /Developer 目录下，书中的示例将位于 /Developer/Examples/Qt4book。
-
-要运行 `make` 和 `make` 等命令，您需要使用终端窗口，例如 /Applications/Utilities 下的 Terminal.app。您也可以使用 `qmake` 生成 Xcode 项目。例如，要为 hello 示例生成 Xcode 项目，请启动 Terminal.app 控制台，切换目录到 /Developer/Examples/Qt4book/chap1/hello，并输入以下命令：
+要运行 `make` 和 `make` 等命令，您需要使用终端窗口，例如 `/Applications/Utilities` 下的 `Terminal.app`。您也可以使用 `qmake` 生成 Xcode 项目。例如，要为 hello 示例生成 Xcode 项目，请启动 `Terminal.app` 控制台，切换目录到 `/Developer/Examples/Qt4book/chap1/hello`，并输入以下命令：
 
 ```
 qmake -spec mac-xcode hello.pro
 ```
 
-# 安装 Qt X11
+## 安装 Qt X11
 
 在 x11 的默认位置安装 Qt，你需要 root 权限。如果你没有 root 权限，请配置 `--prefix` 参数以指定一个你有权限写入的目录。
 
 - 1. 切换到临时目录。例如：
-  /tmp
+
+  `/tmp`
 
 - 2. 从 CD 中解压归文件：
-  cp /cdrom/x11/qt-x11-opensource-src-4.1.1.tgz 
-  gunzip qt-x11-opensource-src-4.1.1.tgz
-  tar xf qt-x11-opensource-src-4.1.1.tar
 
-这将创建目录 /tmp/qt-x11-opensource-src-4.1.1，假设你的 CD-ROM 挂载在 /cdrom 。Qt 需要 GNU tar；在某些系统上它被称为 gtar。
+  `cp /cdrom/x11/qt-x11-opensource-src-4.1.1.tgz`
 
-- 3. 使用你偏好的选项执行 configure 工具来构建 Qt 库及其自带的工具：
-  cd /tmp/qt-x11-opensource-src-4.1.1
-  ./configure
+  `gunzip qt-x11-opensource-src-4.1.1.tgz`
+
+  `tar xf qt-x11-opensource-src-4.1.1.tar`
+
+这将创建目录 `/tmp/qt-x11-opensource-src-4.1.1`，假设你的 CD-ROM 挂载在 `/cdrom` 。Qt 需要 GNU tar；在某些系统上它被称为 `gtar`。
+
+- 3. 使用你偏好的选项执行 `configure` 工具来构建 Qt 库及其自带的工具：
+
+  `cd /tmp/qt-x11-opensource-src-4.1.1`
+
+  `./configure`
 
 你可以运行 `./configure -help` 获取配置选项列表。
 
 - 4. 要构建 Qt，输入：
-  make
 
-这将创建库并编译所有的演示、示例和工具。在某些系统上 make 被称为 gmake。
+  `make`
+
+这将创建库并编译所有的演示、示例和工具。在某些系统上 `make` 被称为 `gmake`。
 
 - 5. 安装 Qt，输入：
-  su -c "make install"
+
+  `su -c "make install"`
 
 # A. 安装 Qt
 
-并输入 root 密码。这将 Qt 安装到 /usr/local/Troll-tech/Qt-4.1.1。你可以使用 configure 的 `-prefix` 选项更改目标目录，如果你对目标有写入权限，可以输入：
+并输入 root 密码。这将 Qt 安装到 `/usr/local/Troll-tech/Qt-4.1.1`。你可以使用 `configure` 的 `-prefix` 选项更改目标目录，如果你对目标有写入权限，可以输入：
 
 ```
 make install
@@ -12659,21 +12447,21 @@ make install
 
 - 6. 为 Qt 设置某些环境变量。
 
-如果你的 shell 是 bash、ksh 或 sh，请将以下行添加到 .profile 文件中：
+如果你的 shell 是 `bash`、`ksh` 或 `sh`，请将以下行添加到 `.profile` 文件中：
 
 ```
 PATH=/usr/local/Troll-tech/Qt-4.1.1/bin:$PATH
 ```
 
-如果你的 shell 是 csh 或 tcsh，请将以下行添加到 .login 文件中：
+如果你的 shell 是 `csh` 或 `tcsh`，请将以下行添加到 `.login` 文件中：
 
 ```
 setenv PATH /usr/local/Troll-tech/Qt-4.1.1/bin:$PATH
 ```
 
-如果你在 configure 时使用了 -prefix，请使用指定的路径而不是默认路径。
+如果你在 `configure` 时使用了 `-prefix`，请使用指定的路径而不是默认路径。
 
-如果你使用的编译器不支持 rpath，则必须扩展 LD_LIBRARY_PATH 环境变量包含 /usr/local/Troll-tech/Qt-4.1.1/lib。这在 Linux 上是必要的。
+如果你使用的编译器不支持 `rpath`，则必须扩展 `LD_LIBRARY_PATH` 环境变量包含 `/usr/local/Troll-tech/Qt-4.1.1/lib`。这在 Linux 上是必要的。
 
 Qt 自带演示程序，展示了库的许多功能。它作为一个很好的起点可以让你了解 Qt 可以做什么。要查看 Qt 的文档，请访问 http://doc.trolltech.com，或者运行 Qt 助手，通过控制窗口调用助手。
 
@@ -12696,30 +12484,6 @@ Qt 自带演示程序，展示了库的许多功能。它作为一个很好的�
 最后一部分是标准 C++ 库，它提供了可以用于任何 C++ 程序的预制功能。该库是 30 年演化的结果，因此提供了多种方法，包括多线程、数据库、国际化和 XML。这就是 Qt 发作用的地方。Qt 从图形界面开始，但迅速演变为完整的应用程序。C++ 库是 30 年演化的结果，因此提供了多种方法，包括多线程、数据库、国际化和 XML。
 
 最后一部分是标准 C++ 库，它提供了可以用于任何 C++ 程序的预制功能。该库是 30 年演化的结果，因此提供了多种方法，包括多线程、数据库、国际化和 XML。
-
-最后一部分是标准 C++ 库，它提供了可以用于任何 C++ 程序的预制功能。该库是 30 年演化的结果，因此提供了多种方法，包括多线程、数据库、国际化和 XML。
-
-最后一部分是标准 C++ 库，它提供了可以用于任何 C++ 程序的预制功能。该库是 30 年演化的结果，因此提供了多种方法，包括多线程、数据库、国际化和 XML。
-
-最后一部分是标准 C++ 库，它提供了可以用于任何 C++ 程序的预制功能。该库是 30 年演化的结果，因此提供了多种方法，包括多线程、数据库、国际化和 XML。
-
-最后一部分是标准 C++ 库，它提供了可以用于任何 C++ 程序的预制功能。该库是 30 年演化的结果，因此提供了多种方法，包括多线程、数据库、国际化和 XML。
-
-最后一部分是标准 C++ 库，它提供了可以用于任何 C++ 程序的预制功能。该库是 30 年演化的结果，因此提供了多种方法，包括多线程、数据库、国际化和 XML。
-
-最后一部分是标准 C++ 库，它提供了可以用于任何 C++ 程序的预制功能。该库是 30 年演化的结果，因此提供了多种方法，包括多线程、数据库、国际化和 XML。
-
-最后一部分是标准 C++ 库，它提供了可以用于任何 C++ 程序的预制功能。该库是 30 年演化的结果，因此提供了多种方法，包括多线程、数据库、国际化和 XML。
-
-最后一部分是标准 C++ 库，它提供了可以用于任何 C++ 程序的预制功能。该库是 30 年演化的结果，因此提供了多种方法，包括多线程、数据库、国际化和 XML。
-
-最后一部分是标准 C++ 库，它提供了可以用于任何 C++ 程序的预制功能。该库是 30 年演化的结果，因此提供了多种方法，包括多线程、数据库、国际化和 XML。
-
-最后一部分是标准 C++ 库，它提供了可以用于任何 C++ 程序的预制功能。该库是 30 年演化的结果，因此提供了多种方法，包括多线程、数据库、国际化和 XML。
-
-
-
-
 
 ## B. 为 Java 和 C# 程序员介绍 C++
 
@@ -12791,9 +12555,11 @@ double square(double n);
 
 与 `.cpp` 文件不同，头文件本身不是编译单元，也不会产生对象文件。它们只可以包含允许不同编译单元相互通信的声明。因此，将 `square()` 函数的实现放在头文件中是不恰当的。如果我们在示例中这样做，什么都不会发生，因为我们只包含了一次 `square.h`，但如果我们从多个 `.cpp` 文件中包含 `square.h`，我们将获得 `square()` 函数的多个实现（每个包含它的 `.cpp` 文件一个）。链接器会报错说 `square()` 有重复（标识）定义并拒绝生成可执行文件。相反，如果我们声明了一个函数但从未使用它，编译器可能会发出警告。
 
+
+
 到目前，我们假设 `short`、`int`、`long` 是带符号的。如果我们只需要存储非负整数，可以在类型前面加上 `unsigned` 关键字。虽然 `short` 可以存储 -32,768 到 +32,767 之间的任何值，但 `unsigned short` 的范围是从 0 到 65,535。如果一个操作数是无符号的，右移运算符 `>>` 具有（用0填充）的语义。
 
-### 语言主要差异
+## 语言主要差异
 
 现在我们来看 C++ 与 Java 和 C# 不同之处。
 
@@ -12819,9 +12585,6 @@ double square(double n);
 在内存中，数值类型（`long` 除外）在 Qt 支持的平台上具有相同的大小，但它们的表示取决于系统的字节序。在大端架构（如 PowerPC 和 SPARC）上，32 位值 0x12345678 保存为四个字节 0x12 0x34 0x56 0x78，而在小端架构（如 Intel x86）上，字节序列是反的。这对于将内存数组复制到磁盘或在网络上存储二进制数据的程序是有影响的。Qt 的 `QDataStream` 类在第 12 章（输出）中介绍，可以以平台无关的方式存储二进制数据。
 
 > *微软将 `long` 类型称为 `int64`。在 Qt 程序中，`qlong` 是一个适用于所有 Qt 平台的替代方案。*
-
-
-
 
 # 类定义
 
@@ -12858,22 +12621,17 @@ private:
 上面的类定义出现在头文件中，通常命名为 `point2d.h`。该示例展示了以下 C++ 的特性：
 
 - 类定义分为 `public`（公有）、`protected`（保护）和 `private`（私有）部分，并以分号结束。如果没有指定部分，默认是 `private`。（为了与 C 兼容，C++ 提供了一个 `struct` 关键字，它与 `class` 相同，区别在于如果没有指定部分，默认是 `public`）
+
 - 该类有两个构造函数（一个不带参数，另一个有两个参数）。如果我们没有声明构造函数，C++ 会自动提供一个带有参数且体体空的构造函数。
+
 - 器函数 `x()` 和 `y()` 被声明为 `const`。这意味着它们不会（也无法）修改成员变量或调用非 `const` 成员函数（如 `setX()` 和 `setY()`）。
 
 上面的函数是内联（inline）实现的，作为类定义的一部分。另一种方法是在头文件中仅提供函数原型，并在 `.cpp` 文件中实现这些函数。使用这种方法，头文件看起来如下所示：
 
 ```cpp
 #ifndef POINT2D_H
-```
-
-# 语言主要区别
-
-```cpp
 #define POINT2D_H
-```
 
-```cpp
 class Point2D
 {
 public:
@@ -12942,7 +12700,7 @@ double Point2D::y() const
 
 我们首先包含 `point2d.h`，因为编译器在解析成员函数实现之前需要该类的定义。然后我们实现这些函数，使用 `::` 运算符在类名前加上类名。
 
-# B. 面 Java 和 C# 程序员的 C++ 简介
+## 语言主要区别
 
 我们已经看到了如何内联实现函数，现在又看到了如何在 `.cpp` 文件中实现。这两种方法在语义上是等价的，但当我们调用声明为内联的函数时，大多数编译器直接展开函数体而不是生成实际的调用。这通常会导致代码运行更快，但可能会增加应用程序的大小。出于如此，只有非常短的函数应该内联实现；较长的函数应该始终在 `.cpp` 文件中实现。此外，如果我们忘记实现某个函数并尝试调用它，链接器会报错提示未解析的符号。
 
@@ -13044,22 +12802,19 @@ public:
 };
 
 #endif
-
-
-
-
-# 语言主要区别
+```
 
 ```cpp
 ~Truck() { --counter; }
+
 static int instanceCount() { return counter; }
-```
 
 private:
   static int counter;
 );
 
 #endif
+```
 
 静态成员变量 `counter` 用于跟踪当前存在多少个 `Truck` 实例。`Truck` 构造函数会对其递增。析构函数通过 `~` 前缀识别，在 C++ 中，当静态分配的变量离开作用域或使用 `new` 分配的变量被删除时，析构函数会被调用。这与 Java 中的 `finalize()` 方法类似，不同之处在于我们可以依赖于它在特定时间点被调用。
 
@@ -13067,6 +12822,7 @@ private:
 
 ```cpp
 #include "truck.h"
+
 int Truck::counter = 0;
 ```
 
@@ -13074,20 +12830,27 @@ int Truck::counter = 0;
 
 ```cpp
 #include <iostream>
+
 #include "truck.h"
 
 using namespace std;
+
 int main()
+
 {
+
   Truck truck1;
+
   Truck truck2;
 
   cout << Truck::instanceCount() << " equals 2" << endl;
+
   return 0;
+
 }
 ```
 
-## 指针
+### 指针
 
 C++ 中的指针是一个存储对象内存地址的变量（而不是直接存储对象本身）。Java 和 C# 有类似的概念，即“引用”（reference），但语法不同。我们将首先从一个说明指针作用的构造示例开始学习：
 
@@ -13097,17 +12860,13 @@ C++ 中的指针是一个存储对象内存地址的变量（而不是直接存�
 {
     Point2D alpha;
     Point2D beta;
-
     Point2D *ptr;
-
     ptr = &alpha;
     ptr->setX(1.0);
     ptr->setY(2.5);
-
     ptr = &beta;
     ptr->setX(4.0);
     ptr->setY(4.5);
-
     ptr = 0;
     return 0;
 }
@@ -13131,14 +12890,12 @@ C++ 中的指针是一个存储对象内存地址的变量（而不是直接存�
 
 ```cpp
 #include "point2d.h"
-
 int main()
 {
     Point2D *point = new Point2D;
     point->setX(1.0);
     point->setY(2.5);
     delete point;
-
     return 0;
 }
 ```
@@ -13172,18 +12929,16 @@ double y = ptr->y();
 ptr->setX(4.0);
 ```
 
-
-
-
-
-## B. 为 Java 和 C# 程序员的 C++ 简介
+## 为 Java 和 C# 程序员的 C++ 简介
 
 总而言之，通过在参数列表中将 `Point2D` 替换为 `const Point2D &`，我们减少了函数调用的开销：我们不再拷贝 256 位（四个 `double` 的大小），而是只拷贝 64 位或 128 位，具体取决于目标平台指针的大小。
 
 上一个示例使用了常量引用（const references），这防止了函数修改通过引用访问的对象。当我们需要这种副作用时，可以传递非常量的引用或指针。例如：
 
-```
-void transpose(Point2D&point)
+
+
+```cpp
+void transpose(Point2D& point)
 {
     double oldX = point.x();
     point.setX(point.y());
@@ -13193,7 +12948,7 @@ void transpose(Point2D&point)
 
 在某些情况下，我们拥有一个引用但需要调用一个接收指针的函数，反之亦然。要将引用转换为指针，我们可以简单地使用单元运算符 `&`：
 
-```
+```cpp
 Point2D point;
 Point2D &ref = point;
 Point2D *ptr = &point;
@@ -13201,7 +12956,7 @@ Point2D *ptr = &point;
 
 要将指针转换为引用，可以使用单元运算符 `*`：
 
-```
+```cpp
 Point2D point;
 Point2D *ptr = &point;
 Point2D &ref = *ptr;
@@ -13213,7 +12968,7 @@ Point2D &ref = *ptr;
 
 C++ 中的数组通过在变量名后的方括号内指定数组中项数来声明。可以使用数组数组的数组来实现二维数组。以下是一个包含 10 个 `int` 类型元素的一维数组的定义：
 
-```
+```cpp
 int fibonacci[10];
 ```
 
@@ -13227,13 +12982,13 @@ int fibonacci[10] = { 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 };
 
 在这些情况下，我们可以省略数组的大小，因为编译器可以从初始化值的数量推断出来：
 
-```
+```cpp
 int fibonacci[] = { 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 };
 ```
 
 静态初始化也适用于复杂类型，例如 `Point2D`：
 
-```
+```cpp
 Point2D triangle[] = {
     Point2D(0.0, 0.0), Point2D(1.0, 0.0), Point2D(0.5, 0.866);
 };
@@ -13241,32 +12996,32 @@ Point2D triangle[] = {
 
 如果我们没有打算修改数组，可以将其设为常量（const）：
 
-```
+```cpp
 const int fibonacci[] = { 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 };
 ```
 
 要找出一个数组包含多少项，我们可以如下使用 `sizeof()` 运算符：
 
-```
+```cpp
 int n = sizeof(fibonacci) / sizeof(fibonacci[0]);
 ```
 
 `sizeof()` 运算符返回其参数以字节为单位的大小。数组中的项数是其总字节数除以其中一个项的大小。由于这样输入很繁琐，常见的替代方案是声明一个常量并用它来定义数组：
 
-```
+```cpp
 enum { fibonacci = 10 };
 const int fibonacci[fibonacci] = { 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 };
 ```
 
 在这种情况下，我们随后可以省略数组的大小，因为编译器可以从初始化值的数量推断出来：
 
-```
+```cpp
 int fibonacci[] = { 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 };
 ```
 
 静态初始化也适用于复杂类型，例如 `Point2D`：
 
-```
+```cpp
 Point2D triangle[] = {
     Point2D(0.0, 0.0), Point2D(1.0, 0.0), Point2D(0.5, 0.866);
 };
@@ -13274,32 +13029,30 @@ Point2D triangle[] = {
 
 如果我们没有打算修改数组，可以将其设为常量（const）：
 
-```
+```cpp
 const int fibonacci[] = { 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 };
 ```
 
 要找出一个数组包含多少项，我们可以如下使用 `sizeof()` 运算符：
 
-```
+```cpp
 int n = sizeof(fibonacci) / sizeof(fibonacci[0]);
 ```
 
 `sizeof()` 运算符返回其参数以字节为单位的大小。数组中的项数是其总字节数除以其中一个项的大小。由于这样输入很繁琐，常见的替代方案是声明一个常量并用它来定义数组：
 
-```
+```cpp
 enum { fibonacci = 10 };
 const int fibonacci[fibonacci] = { 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 };
 ```
 
 在这种情况下，我们随后可以省略数组的大小，因为编译器可以从初始化值的数量推断出来：
 
-```
+```cpp
 int fibonacci[] = { 0, 1, 1, 2, 3, 5, 8, 13, 21, 34 };
 ```
 
 *(注：由于提供的文本中存在大量重复的段落，此处已按原文逻辑进行了完整翻译并保留了所有重复内容的结构以符合“不要漏掉任何行”的要求。)*
-
-
 
 ```cpp
 void hello2()
@@ -13324,7 +13077,7 @@ void hello4()
 }
 ```
 
-在第一个函数中，我们将字符串声明为数组并在末尾进行初始化。'\0' 终止符表示字符串的结束。第二个函数具有类似的数组定义，但这次我们使用字符串字面量来初始化数组。在 C++ 中，字符串字面量仅仅是带有隐式 '\0' 终止符的 `const char` 数组。第三个函数直接使用字符串字面量，而不给它命名。一旦翻译成机器指令，它与前两个函数是相同的。
+在第一个函数中，我们将字符串声明为数组并在末尾进行初始化。`'\0'` 终止符表示字符串的结束。第二个函数具有类似的数组定义，但这次我们使用字符串字面量来初始化数组。在 C++ 中，字符串字面量仅仅是带有隐式 `'\0'` 终止符的 `const char` 数组。第三个函数直接使用字符串字面量，而不给它命名。一旦翻译成机器指令，它与前两个函数是相同的。
 
 第四个函数有点不同，它不仅创建了一个（匿名）数组，还创建了一个名为 `str` 的指针，用于存储数组第一个元素的地址。尽管如此，该函数的语义与之前的三个函数相同，优化编译器会消除多余的 `str` 变量。
 
@@ -13333,20 +13086,16 @@ void hello4()
 ```cpp
 #include <cctype>
 #include <iostream>
-
 using namespace std;
-
 void makeUppercase(char *str)
 {
     for (int i = 0; str[i] != '\0'; ++i)
         str[i] = toupper(str[i]);
 }
-
 void writeLine(const char *str)
 {
     cout << str << endl;
 }
-
 int main(int argc, char *argv[])
 {
     for (int i = 1; i < argc; ++i) {
@@ -13488,10 +13237,6 @@ C++ 提供了多种语法将一种类型转换为另一种。传统的 C 风格�
 int x = int(3.14159);
 ```
 
-
-
-
-
 ### 语言主要差异
 
 ## 477
@@ -13517,7 +13262,6 @@ public:
     MyInteger(int i);
     ...
 };
-
 int main(){
     MyInteger n;
     n = 5;
@@ -13547,7 +13291,6 @@ C++ 允许我们重载函数，这意味着可以在同一个作用范围内声�
 ```cpp
 #ifndef POINT2D_H
 #define POINT2D_H
-
 class Point2D {
 public:
     Point2D();
@@ -13556,7 +13299,6 @@ public:
     void setY(double y);
     double x() const;
     double y() const;
-
     Point2D &operator+=(const Point2D& other) {
         xVal += other.xVal;
         yVal += other.yVal;
@@ -13567,12 +13309,15 @@ public:
         yVal -= other.yVal;
         return *this;
     }
-
 private:
     double xVal;
     double yVal;
-};
+```
 
+
+
+```cpp
+};
 inline Point2D operator+(const Point2D &a, const Point2D &b) {
     return Point2D(a.x() + b.x(), a.y() + b.y());
 }
@@ -13657,7 +13402,6 @@ public:
     MyInteger(int i);
     ...
 };
-
 int main(){
     MyInteger n;
     n = 5;
@@ -13687,7 +13431,6 @@ C++ 允许我们重载函数，这意味着可以在同一个作用范围内声�
 ```cpp
 #ifndef POINT2D_H
 #define POINT2D_H
-
 class Point2D {
 public:
     Point2D();
@@ -13696,7 +13439,6 @@ public:
     void setY(double y);
     double x() const;
     double y() const;
-
     Point2D &operator+=(const Point2D& other) {
         xVal += other.xVal;
         yVal += other.yVal;
@@ -13707,12 +13449,10 @@ public:
         yVal -= other.yVal;
         return *this;
     }
-
 private:
     double xVal;
     double yVal;
 };
-
 inline Point2D operator+(const Point2D &a, const Point2D &b) {
     return Point2D(a.x() + b.x(), a.y() + b.y());
 }
@@ -13797,7 +13537,6 @@ public:
     MyInteger(int i);
     ...
 };
-
 int main(){
     MyInteger n;
     n = 5;
@@ -13812,29 +13551,24 @@ class MyVector{
 public:
     explicit MyVector(int size);
 };
-
-
-
-
+```
 
 ## 全局变量与函数
 
-C++ 允许我们声明不属于任何类且可以从任何其他函数访问的函数和变量。我们已经见过全局函数的示例，包括作为程序入口点的 main()。全局变量较为少见，因为它们破坏了模块化和线程重入性。理解它们仍然很重要，因为你可能会在由旧的 C 程序员或其他 C++ 用户编写的代码中遇到它们。
+C++ 允许我们声明不属于任何类且可以从任何其他函数访问的函数和变量。我们已经见过全局函数的示例，包括作为程序入口点的 `main()`。全局变量较为少见，因为它们破坏了模块化和线程重入性。理解它们仍然很重要，因为你可能会在由旧的 C 程序员或其他 C++ 用户编写的代码中遇到它们。
 
-为了说明全局函数和变量的工作原理，我们将学习一个小程序，该程序使用一种简单快速的算法打印 128 个伪随机数列表。程序的源代码分布在两个 .cpp 文件。
+为了说明全局函数和变量的工作原理，我们将学习一个小程序，该程序使用一种简单快速的算法打印 128 个伪随机数列表。程序的源代码分布在两个 `.cpp` 文件。
 
-第一个源文件是 random.cpp：
+第一个源文件是 `random.cpp`：
 
 ```
 int randomNumbers[128];
 static int seed = 42;
-
 static int nextRandomNumber()
 {
   seed = 1009 + (seed * 2011);
   return seed;
 }
-
 void populateArray()
 {
   for (int i = 0; i < 128; ++i)
@@ -13850,11 +13584,8 @@ void populateArray()
 
 ```
 #include <iostream>
-
 using namespace std;
-
 extern int randomNumbers[128];
-
 void populateArray();
 ```
 
@@ -13879,11 +13610,8 @@ int main()
 ```cpp
 #ifndef RANDOM_H
 #define RANDOM_H
-
 extern int randomNumbers[128];
-
 void populateRandomArray();
-
 #endif
 ```
 
@@ -13893,7 +13621,6 @@ void populateRandomArray();
 void nextPrime()
 {
     static int n = 1;
-
     do {
         ++n;
     } while (!isPrime(n));
@@ -13912,7 +13639,6 @@ void nextPrime()
 ```cpp
 #ifndef SOFTWARE_INC_RANDOM_H
 #define SOFTWARE_INC_RANDOM_H
-
 namespace SoftwareInc
 {
     extern int randomNumbers[128];
@@ -13927,7 +13653,6 @@ namespace SoftwareInc
 
 ```cpp
 #include "random.h"
-
 int SoftwareInc::randomNumbers[128];
 static int seed = 42;
 static int nextRandomNumber()
@@ -13935,7 +13660,6 @@ static int nextRandomNumber()
     seed = 1009 + (seed * 2011);
     return seed;
 }
-
 void SoftwareInc::populateArray()
 {
     for (int i = 0; i < 128; ++i)
@@ -13969,31 +13693,31 @@ namespace Beta
 
 ## 预处理器
 
-C++ 预处理器是一个将包含 `#` 指令（如 `#include`）的 `.cpp` 源文件进行转换的程序。#include 展开位于尖括号 `<>` 或双引号 `""` 指定的文件，取决于该文件是安装在标准位置还是项目的一部分。文件名可以包含 `.` 和 `/`（Windows 编译器会将其解释为目录分隔符）。例如：
+C++ 预处理器是一个将包含 `#` 指令（如 `#include`）的 `.cpp` 源文件进行转换的程序。`#include` 展开位于尖括号 `<>` 或双引号 `""` 指定的文件，取决于该文件是安装在标准位置还是项目的一部分。文件名可以包含 `.` 和 `/`（Windows 编译器会将其解释为目录分隔符）。例如：
+
 - `#include "../shared/globaldefs.h"`
 
-#define 定义了一个宏。`#define` 之后出现的宏会被替换为宏的定义。例如，指令 `#define PI 3.1415926535` 告诉预处理器将当前编译单元中所有的标记 PI 替换为 3.1415926535。为了避免与变量和类名冲突，通常的做法是给宏全大写。可以定义平方的宏：
+
+
+#define 定义了一个宏。`#define` 之后出现的宏会被替换为宏的定义。例如，指令 `#define PI 3.1415926535` 告诉预处理器将当前编译单元中所有的标记 `PI` 替换为 `3.1415926535`。为了避免与变量和类名冲突，通常的做法是给宏全大写。可以定义平方的宏：
 
 ```cpp
 #define SQUARE (x) ((x) * (x))
 ```
 
 在宏体中，对所有出现的参数加上括号是良好的风格，这可以避免运算符优先级的问题。毕竟，我们希望 `7 * SQUARE (2 + 3)` 展开为 `7 * ((2+3) * (2+3))`，而不是 `7 * 2 + 3 * 2 + 3`。
+
 C++ 编译器通常允许我们在命令行上定义宏，使用 `-D` 或 `/D` 选项。例如：
 
 ```bash
 cc -DPI=3.1415926535 -c main.cpp
 ```
 
-
-
-
-
 # 语言的主要区别
 
-在 typedef、enum、常量、内联函数和模板引入之前，宏在过去非常流行。如今，它们最重要的作用是防止头文件被多次包含。
+在 `typedef`、`enum`、常量、内联函数和模板引入之前，宏在过去非常流行。如今，它们最重要的作用是防止头文件被多次包含。
 
-- 宏可以使用 #undef 在任何点被取消定义：
+- 宏可以使用 `#undef` 在任何点被取消定义：
 
 ```cpp
 #undef PI
@@ -14001,7 +13725,7 @@ cc -DPI=3.1415926535 -c main.cpp
 
 当我们想要重新定义一个宏时，这非常有用，因为预处理器不允许我们定义两次相同的宏。它对于控制条件编译也很有用。
 
-- 可以根据宏的数值值，使用 #if、#elif、#else 和 #endif 来处理或跳过代码的某些部分。例如：
+- 可以根据宏的数值值，使用 `#if`、`#elif`、`#else` 和 `#endif` 来处理或跳过代码的某些部分。例如：
 
 ```cpp
 #define NO_OPTIM 0
@@ -14020,9 +13744,9 @@ typedef long long MyInt;
 #endif
 ```
 
-在上面的示例中，只有第二个 typedef会被编译器处理，导致 MyInt 被定义为 short 的别名。通过改变 OPTIMIZATION 宏的定义，我们可以得到不同的程序。如果宏没有被定义，其值为 0。
+在上面的示例中，只有第二个 `typedef` 会被编译器处理，导致 `MyInt` 被定义为 `short` 的别名。通过改变 `OPTIMIZATION` 宏的定义，我们可以得到不同的程序。如果宏没有被定义，其值为 `0`。
 
-条件编译的另一种方法是测试宏是否定义。可以使用 defined() 运算符来实现：
+条件编译的另一种方法是测试宏是否定义。可以使用 `defined()` 运算符来实现：
 
 ```cpp
 #define OPTIM_FOR_MEMORY
@@ -14037,7 +13761,7 @@ typedef long long MyInt;
 #endif
 ```
 
-- 为了方便起见，预处理器将 #if X 和 #ifndef X 视为 #if defined(X) 和 #if !defined(X)。为了防止头文件被多次包含，我们使用以下惯用法包裹其内容：
+- 为了方便起见，预处理器将 `#if X` 和 `#ifndef X` 视为 `#if defined(X)` 和 `#if !defined(X)`。为了防止头文件被多次包含，我们使用以下惯用法包裹其内容：
 
 ```cpp
 #ifndef MYHEADER_H
@@ -14047,9 +13771,9 @@ typedef long long MyInt;
 #endif
 ```
 
-当第一次包含该头文件时，符号 MYHEADER_H 未定义，因此编译器会处理 #ifndef 和 #endif 之间的代码。当包含第二次及后续任何头文件时，MYHEADER_H 已经定义，因此整个 #ifndef ... #endif 块都会被跳过。
+当第一次包含该头文件时，符号 `MYHEADER_H` 未定义，因此编译器会处理 `#ifndef` 和 `#endif` 之间的代码。当包含第二次及后续任何头文件时，`MYHEADER_H` 已经定义，因此整个 `#ifndef ... #endif` 块都会被跳过。
 
-- #error 指令会在编译时发出用户定义的错误消息。这通常与条件编译结合使用，用于报告不可能出现。例如：
+- `#error` 指令会在编译时发出用户定义的错误消息。这通常与条件编译结合使用，用于报告不可能出现。例如：
 
 ```cpp
 class UniChar{
@@ -14068,41 +13792,41 @@ public:
 
 与大多数其他 C++ 结构不同，空白字符是无关的，而指令独占一行且不需要分号。非常长的指令可以通过在最后一行以外的每行尾加上反斜杠来拆分为多行。
 
-# 标准 C++ 
+# 标准 C++
 
-在本节中，我们将要回顾标准 C++ 库。<exception>、<limits>、<new> 和 <typeinfo> 头文件支持 C++ 语言；例如，<limits> 允许我们测试编译器对整数和浮点算术的支持属性，<typeinfo> 提供了基本的内省。其他头文件提供了通用的类，包括字符串和复杂的数值类型。<bitset>、<locale>、<string> 和 <typeinfo> 的功能与 Qt 中的 QByteArray、QLocale、QString 和 QMetaObject 类大致重叠。
+在本节中，我们将要回顾标准 C++ 库。`<exception>`、`<limits>`、`<new>` 和 `<typeinfo>` 头文件支持 C++ 语言；例如，`<limits>` 允许我们测试编译器对整数和浮点算术的支持属性，`<typeinfo>` 提供了基本的内省。其他头文件提供了通用的类，包括字符串和复杂的数值类型。`<bitset>`、`<locale>`、`<string>` 和 `<typeinfo>` 的功能与 Qt 中的 `QByteArray`、`QLocale`、`QString` 和 `QMetaObject` 类大致重叠。
 
 标准 C++ 还包含一组具有 I/O 功能的头文件，列如图.4 所示。标准 I/O 类的设计追溯到 20 世纪 80 代，异常复杂，使其非常难以扩展——困难到至于关于这个主题已经写了整整本书。它还给程序员留下了一个关于字符编码和依赖于平台的原始数据类型二进制表示的未解决问题的潘多拉盒。
 
 | 头文件 | 说明 |
 | :--- | :--- |
-| <bitset> | 表示固定长度位序列的模板类 |
-| <complex> | 表示复数的模板类 |
-| <exception> | 与异常处理相关的类型和函数 |
-| <limits> | 指定数值类型属性的的模板类 |
-| <locale> | 与本地化相关的类和函数 |
-| <new> | 管理动态内存分配的函数 |
-| <stdexcept> | 用于报告错误的预定义异常类型 |
-| <string> | 模板字符串容器和字符特性的 |
-| <typeinfo> | 提供类型基本元信息的类 |
-| <valarray> | 表示值数组的模板类 |
+| `<bitset>` | 表示固定长度位序列的模板类 |
+| `<complex>` | 表示复数的模板类 |
+| `<exception>` | 与异常处理相关的类型和函数 |
+| `<limits>` | 指定数值类型属性的的模板类 |
+| `<locale>` | 与本地化相关的类和函数 |
+| `<new>` | 管理动态内存分配的函数 |
+| `<stdexcept>` | 用于报告错误的预定义异常类型 |
+| `<string>` | 模板字符串容器和字符特性的 |
+| `<typeinfo>` | 提供类型基本元信息的类 |
+| `<valarray>` | 表示值数组的模板类 |
 
-**图 B.3.**  C++ 库头文件
+**图 B.3.** C++ 库头文件
 
 第 12 章（输入/输出）介绍了相应的 Qt 类，这些类的特点是将 Unicode I/O 作为一组大量的国家字符编码，以及用于存储二进制数据的平台无关抽象。Qt 的 I/O 类是 Qt 进程间通信、网络和 XML 支持的基础。Qt 的二进制和文本流类处理自定义数据类型非常。
 
 | 头文件 | 说明 |
 | :--- | :--- |
-| <fstream> | 操作外部文件的模板类 |
-| <iomanip> | 带有参数的 I/O 流操纵符 |
-| <ios> | I/O 流的模板基类 |
-| <ioswd> | I/O 流的前向声明 |
-| <iostream> | 标准 I/O 流 (cin, cout) |
-| <istream> | 控制从流输入的模板类 |
-| <ostream> | 控制输出到流的模板类 |
-| <sstream> | 将字符串关联的模板类 |
-| <streambuf> | 缓冲 I/O 的模板类 |
-| <strstream> | 执行 I/O 的模板类 |
+| `<fstream>` | 操作外部文件的模板类 |
+| `<iomanip>` | 带有参数的 I/O 流操纵符 |
+| `<ios>` | I/O 流的模板基类 |
+| `<ioswd>` | I/O 流的前向声明 |
+| `<iostream>` | 标准 I/O 流 (cin, cout) |
+| `<istream>` | 控制从流输入的模板类 |
+| `<ostream>` | 控制输出到流的模板类 |
+| `<sstream>` | 将字符串关联的模板类 |
+| `<streambuf>` | 缓冲 I/O 的模板类 |
+| `<strstream>` | 执行 I/O 的模板类 |
 
 **图 B.4.** C++ I/O 库文件
 
@@ -14110,50 +13834,46 @@ public:
 
 | 头文件 | 说明 |
 | :--- | :--- |
-| <algorithm> | 通用模板函数 |
-| <deque> | 双端队列模板容器 |
-| <functional> | 帮助构造和操作函数对象的模板 |
-| <iterator> | 帮助构造和操作迭代器的模板 |
-| <list> | 双链表模板容器 |
-| <map> | 单值和多值映射模板容器 |
-| <memory> | 简化内存管理的工具 |
-| <numeric> | 模板数值操作 |
-| <queue> | 队列模板容器 |
-| <set> | 单值和多值集合模板容器 |
-| <stack> | 栈模板容器 |
-| <utility> | 基础模板函数 |
-| <vector> | 向量模板容器 |
+| `<algorithm>` | 通用模板函数 |
+| `<deque>` | 双端队列模板容器 |
+| `<functional>` | 帮助构造和操作函数对象的模板 |
+| `<iterator>` | 帮助构造和操作迭代器的模板 |
+| `<list>` | 双链表模板容器 |
+| `<map>` | 单值和多值映射模板容器 |
+| `<memory>` | 简化内存管理的工具 |
+| `<numeric>` | 模板数值操作 |
+| `<queue>` | 队列模板容器 |
+| `<set>` | 单值和多值集合模板容器 |
+| `<stack>` | 栈模板容器 |
+| `<utility>` | 基础模板函数 |
+| `<vector>` | 向量模板容器 |
 
 **图 B.5.** STL 头文件
 
-由于 C++ 本质上是 C 编程语言的超集，C 程序员可以使用整个 C 库。C 头文件可以使用传统的名称（例如 <stdio.h>）或带有新样式且没有 .h 的名称（例如 <cstdio>）。当我们使用新样式版本时，函数和数据类型被声明在 std 命名空间中。如果你的编译器支持，建议使用新样式语法。图 B.6 列出了 C 头文件。这些大多数提供的功能与最近的 C++ 头文件或 Qt 功能重叠。一个例外是 <cmath>，它声明了如 sin()、sqrt() 和 pow() 等数学函数。
-
-
-
-
+由于 C++ 本质上是 C 编程语言的超集，C 程序员可以使用整个 C 库。C 头文件可以使用传统的名称（例如 `<stdio.h>`）或带有新样式且没有 .h 的名称（例如 `<cstdio>`）。当我们使用新样式版本时，函数和数据类型被声明在 `std` 命名空间中。如果你的编译器支持，建议使用新样式语法。图 B.6 列出了 C 头文件。这些大多数提供的功能与最近的 C++ 头文件或 Qt 功能重叠。一个例外是 `<cmath>`，它声明了如 `sin()`、`sqrt()` 和 `pow()` 等数学函数。
 
 # 标准 C++ 库
 
 | 头文件 | 描述 |
 |---|---|
-| <cassert> | ASSERT() 宏 |
-| <ctype> | 用于字符分类和映射的函数 |
-| <cerrno> | 与错误条件报告相关的宏 |
-| <cfloat> | 指定原始浮点类型属性的宏 |
-| <iso646> | 为 ISO 646 字符集用户提供的替代拼写 |
-| <limits> | 指定原始整数类型属性的宏 |
-| <cloc> | 与本地化相关的函数和类型 |
-| <cmath> | 数学函数和常量 |
-| <csetjmp> | 执行非局部跳转的函数 |
-| <csignal> | 处理系统信号的函数 |
-| <cstarg> | 实现参数列表函数的宏 |
-| <cstddef> | 若干标准头文件的通用定义 |
-| <cstdio> | 执行 I/O 操作的函数 |
-| <cstdlib> | 通用实用函数 |
-| <string> | 用于操作字符数组的函数 |
-| <ctime> 操作时间的类型和函数 |
-| <cwchar> | 扩展多字节和宽字符工具 |
-| <cwctype> | 用于分类和映射宽字符的函数 |
+| `<cassert>` | `ASSERT()` 宏 |
+| `<ctype>` | 用于字符分类和映射的函数 |
+| `<cerrno>` | 与错误条件报告相关的宏 |
+| `<cfloat>` | 指定原始浮点类型属性的宏 |
+| `<iso646>` | 为 ISO 646 字符集用户提供的替代拼写 |
+| `<limits>` | 指定原始整数类型属性的宏 |
+| `<cloc>` | 与本地化相关的函数和类型 |
+| `<cmath>` | 数学函数和常量 |
+| `<csetjmp>` | 执行非局部跳转的函数 |
+| `<csignal>` | 处理系统信号的函数 |
+| `<cstarg>` | 实现参数列表函数的宏 |
+| `<cstddef>` | 若干标准头文件的通用定义 |
+| `<cstdio>` | 执行 I/O 操作的函数 |
+| `<cstdlib>` | 通用实用函数 |
+| `<string>` | 用于操作字符数组的函数 |
+| `<ctime>` | 操作时间的类型和函数 |
+| `<cwchar>` | 扩展多字节和宽字符工具 |
+| `<cwctype>` | 用于分类和映射宽字符的函数 |
 
 > 图 B.6. C 库设施 C++ 头文件
 
@@ -14161,1170 +13881,2142 @@ public:
 
 # 索引
 
-- %（百分号）,59, 265–266
-- &（安培符）,16
-- & 一元运算符, 464
-- > 运算符, 464, 466
-- .（点）运算符, 460, 464, 466
-- /（斜杠）,67, 286
-- /:（冒号斜杠）,48, 375
-- :: 运算符, 454, 460, 462, 485
-- << 运算符键,81, 252, 261, 274, 275–277, 280, 454, 478
-- <>（角括号）,253, 471, 475
-- >> 运算符, 81, 271, 275–277, 280, 456
-- \（反斜杠）,286, 488
-- €（欧元符号）,362, 369
+- `%`（百分号）,59, 265–266
+- `&`（安培符）,16
+- `&` 一元运算符, 464
+- `>` 运算符, 464, 466
+- `.`（点）运算符, 460, 464, 466
+- `/`（斜杠）,67, 286
+- `/:`（冒号斜杠）,48, 375
+- `::` 运算符, 454, 460, 462, 485
+- `<<` 运算符键,81, 252, 261, 274, 275–277, 280, 454, 478
+- `<>`（角括号）,253, 471, 475
+- `>>` 运算符, 81, 271, 275–277, 280, 456
+- `\`（反斜杠）,286, 488
+- `€`（欧元符号）,362, 369
 
 ## A
 
-- + ABItem, 430
-- about (
-  - MainWindow, 66
-  - MessageBox, 66
-  - about(QApplication),
+- `+ ABItem`, 430
+- `about` (
+  - `MainWindow`, 66
+  - `MessageBox`, 66
+  - `about(QApplication)`,
   - 绝对定位, 138
   - 加速键, 48
   - 另见快捷键
-- accept (
-  - QDialog, 28, 33, 63
-  - QEvent, 157, 159, 209, 384
-  - acceptedAction(QDocument), 206
+- `accept` (
+  - `QDialog`, 28, 33, 63
+  - `QEvent`, 157, 159, 209, 384
+  - `acceptedAction(QDocument)`, 206
   - 接受 Validator, 102
-  - accepted (QDialog), 28, 63
-- acquire(QSemaphore), 377, 385
-- active, 48–50, 393, 403
-- activeWindow(QWidget), 61–62, 86
-- activeEditor(MainWindow), 155
-- ActiveQt, 357, 419–431
+  - `accepted (QDialog)`, 28, 63
+- `acquire(QSemaphore)`, 377, 385
+- `active`, 48–50, 393, 403
+- `activeWindow(QWidget)`, 61–62, 86
+- `activeEditor(MainWindow)`, 155
+- `ActiveQt`, 357, 419–431
 - 激活窗口, 62, 110, 154, 155
-- activeWindow(QWorkspace), 155
-- ActiveX, 419–431
-  - -active  (ActiveX 服务器), 430
-- addiction(QWidget), 50, 51, 52
-- addArtist(Artistform), 302
-- bindValue(QSqlQuery), 296
-- addCd(Main), 307
-- addChild(SettingsViewer), 224
-- + addDatabase(QSqlDatabase), 294, 297
-- addItem(QComboBox), 35, 229
-- addLayout(QILayout), 16
-- addLibraryPath(QCoreApplication), 408
-- addMenu(
-  - QMenu, 51
-  - QMenuBar, 52
-- addRef(IUnknown), 426
-- addRow(CoordinateSetter), 222
-- addSeparator(
-  - QMenu, 50
-  - QMenuBar, 51
-- addStretch(QILayout), 141
-- addTab(QMainWindow), 308
-- addTransaction(
-  - ImageWindow, 393
-  - TransactionThread, 394
-- addWidget(
-  - ListBox, 16
-  - QGridLayout, 141
-  - QSplitter, 145
-  - StackedLayout, 144
-  - QStatusBar, 53
-  - AddressBook, 428–429
-  - Address Book, 428–431
-  - add(PlotSettings), 132
-  - adjAxis(PlotSettings), 132
-  - adjSize(QWidget), 121
-  - adjRect(Q), 124
-  - Age event, 7–11
-  - algorithm, 263, 490
-  - algebra, 88, 251, 263, 275, 489
-  - alias, 另见初始化
-  - AlignStyle(QText), 281
-  - AlignCenter(QText), 276
-  - AlignHCenter(Qt), 54
-  - AlignLeft(QText), 281
-  - AlignRight(QText), 281
-  - alignment, 54, 94, 131, 233, 281
-  - allTransactions(ImageWindow), 393
-  - allocated memory. 另见运算符
-  - alpha channel, 106, 189, 190
-  - Alt key, 16, 64
-  - ampersand (&),
-  - angle brackets (<>), 253, 471, 475
-  - angles, 129, 178, 180, 182
-  - animations, 165
-  - antialiasing, 178, 181, 193
-  - Any(QAddress), 332
-  - AnyKeyPressed(QAbstractItem), 220
-  - append()
-  - QList(), 253
-  - QString, 265
-  - QText, 290
-  - QVector<T>,252
-  - appendChild(QDomNode), 349
-  - Apple Help, 357
-  - Apple Roman, 365
-  - Application, 433–434
-  - application settings, 67, 68, 148, 152, 222
-  - apply(Transaction), 395
-  - applyEffect(BasicEffects), 412
-  - Arabic, 362
-  - arise, 176
-  - arg(QString), 59, 246, 255–266
-  - ARGB format, 106, 189, 405
-  - arg and argv, 3, 160, 434, 453
-  - argument(QApplication), 160, 312
-  - ARM, 439
-  - arrays, 252, 253, 468
-  - Artistform
-  - class definition, 301
-  - ArtistForm(), 302
-  - addArtist(), 302
-  - beforeInsert(), 303
-  - deleteArtist(), 303
-  - ASCI, 255, 280, 292, 362
-  - aspect ratio, 186
-  - assembly language, 259, 397
-  - assignment operators, 253, 254, 261, 480
-  - Assistant. 另见关联容器, 260–263
-  - asynchronous I/O, 278, 299, 310, 325
-  - atomicity, 259, 382, 397
-  - ASTFFormat(Mac OS), 418
-  - attributes widgets, 70
-  - XML, 342, 347
-  - auto-generated fields, 303
-  - autoRecalculate(Spreadsheet), 75
-  - automatic connections, 28, 288
-  - AxWidget
-  - class definition, 423
-  - (续)
-  - Bouncer(), 225
-  - createAggregate(), 226
-  - setColor(), 225
-  - setRadius(), 226
-  - setSpeed(), 226
-  - start(), 226
-  - stop(), 226
+- `activeWindow(QWorkspace)`, 155
+- `ActiveX`, 419–431
+  - `-active` (ActiveX 服务器), 430
+- `addiction(QWidget)`, 50, 51, 52
+- `addArtist(Artistform)`, 302
+- `bindValue(QSqlQuery)`, 296
+- `addCd(Main)`, 307
+- `addChild(SettingsViewer)`, 224
+- `+ addDatabase(QSqlDatabase)`, 294, 297
+- `addItem(QComboBox)`, 35, 229
+- `addLayout(QILayout)`, 16
+- `addLibraryPath(QCoreApplication)`, 408
+- `addMenu(`
+  - `QMenu`, 51
+  - `QMenuBar`, 52
+- `addRef(IUnknown)`, 426
+- `addRow(CoordinateSetter)`, 222
+- `addSeparator(`
+  - `QMenu`, 50
+  - `QMenuBar`, 51
+- `addStretch(QILayout)`, 141
+- `addTab(QMainWindow)`, 308
+- `addTransaction(`
+  - `ImageWindow`, 393
+  - `TransactionThread`, 394
+- `addWidget(`
+  - `ListBox`, 16
+  - `QGridLayout`, 141
+  - `QSplitter`, 145
+  - `StackedLayout`, 144
+  - `QStatusBar`, 53
+  - `AddressBook`, 428–429
+  - `Address Book`, 428–431
+  - `add(PlotSettings)`, 132
+  - `adjAxis(PlotSettings)`, 132
+  - `adjSize(QWidget)`, 121
+  - `adjRect(Q)`, 124
+  - `Age event`, 7–11
+  - `algorithm`, 263, 490
+  - `algebra`, 88, 251, 263, 275, 489
+  - `alias`, 另见初始化
+  - `AlignStyle(QText)`, 281
+  - `AlignCenter(QText)`, 276
+  - `AlignHCenter(Qt)`, 54
+  - `AlignLeft(QText)`, 281
+  - `AlignRight(QText)`, 281
+  - `alignment`, 54, 94, 131, 233, 281
+  - `allTransactions(ImageWindow)`, 393
+  - `allocated memory`. 另见运算符
+  - `alpha channel`, 106, 189, 190
+  - `Alt key`, 16, 64
+  - `ampersand (&)`,
+  - `angle brackets (<>)`, 253, 471, 475
+  - `angles`, 129, 178, 180, 182
+  - `animations`, 165
+  - `antialiasing`, 178, 181, 193
+  - `Any(QAddress)`, 332
+  - `AnyKeyPressed(QAbstractItem)`, 220
+  - `append()`
+  - `QList()`, 253
+  - `QString`, 265
+  - `QText`, 290
+  - `QVector<T>`,252
+  - `appendChild(QDomNode)`, 349
+  - `Apple Help`, 357
+  - `Apple Roman`, 365
+  - `Application`, 433–434
+  - `application settings`, 67, 68, 148, 152, 222
+  - `apply(Transaction)`, 395
+  - `applyEffect(BasicEffects)`, 412
+  - `Arabic`, 362
+  - `arise`, 176
+  - `arg(QString)`, 59, 246, 255–266
+  - `ARGB format`, 106, 189, 405
+  - `arg and argv`, 3, 160, 434, 453
+  - `argument(QApplication)`, 160, 312
+  - `ARM`, 439
+  - `arrays`, 252, 253, 468
+  - `Artistform`
+  - `class definition`, 301
+  - `ArtistForm()`, 302
+  - `addArtist()`, 302
+  - `beforeInsert()`, 303
+  - `deleteArtist()`, 303
+  - `ASCI`, 255, 280, 292, 362
+  - `aspect ratio`, 186
+  - `assembly language`, 259, 397
+  - `assignment operators`, 253, 254, 261, 480
+  - `Assistant`. 另见关联容器, 260–263
+  - `asynchronous I/O`, 278, 299, 310, 325
+  - `atomicity`, 259, 382, 397
+
+
+
+- `ASTFFormat`(Mac OS), 418
+
+- `attributes` widgets, 70
+
+- `XML`, 342, 347
+
+- `auto-generated` fields, 303
+
+- `autoRecalculate`(Spreadsheet), 75
+
+- `automatic` connections, 28, 288
+
+- `AxWidget`
+
+- `class` definition, 423
+
+- (续)
+
+- `Bouncer`(), 225
+
+- `createAggregate`(), 226
+
+- `setColor`(), 225
+
+- `setRadius`(), 226
+
+- `setSpeed`(), 226
+
+- `start`(), 226
+
+- `stop`(), 226
 
 ## B
 
-- background, 109, 120, 129, 180
-- BackgroundColorRole(Qt), 230, 244
-- backlash(), 286, 488
-- Backspace key, 164
-- BankAccount, 481
-- base keyword (C#), 462
-- base 2, 281
-- base 8, 103, 281
-- BasicEffects, 412–413
-- Basic Plugin, 412–414
-- BDF, 442
-- BlagPattern(Qt), 177
-- begin(QApplication), 86
-- beforeInsert(QTableModel), 303, 306, 307
-- beforeInsert(ArtistForm), 303
-- beforeInsert(Main), 307
-- beforeInsertTrack(Main), 309
-- beginGroup(QSettings), 234, 255–257, 258, 265
-- Bengali, 362
-- BevelJoin(Qt), 177
-- Bezier curves, 176
-- Big5, 365
-- big-endian, 81, 275, 363, 457
-- binary I/O (compression), 80, 82, 274–279, 323
-- binary numbers, 281
-- binary search, 263
-- bindTo(QSocket), 337
-- bindValue(QSqlQuery), 296
-- bit arrays, 271
-- bit depth. 另见颜色
-- bitmaps, 180
-- BLOBs, 297
-- block-oriented protocols, 322, 332
-- blocking I/O, 290
-- BMP, 466
-- boundingRect(QPainter), 195
-- box layouts, 9, 25, 140
-- brushes, 170, 16
-- BSTR (Windows), 421
-- bubble help. 另见提示
-- buddies, 16, 25
-- building applications, 4, 454
-- built-in dialogs, 39–40
-- built-in widgets, 37–39, 73
-- bus error, 464
-- bus cursor, 41
-- bus indicators, 325
-- button(MouseEvent), 111, 201, 208
-- mouse, 111, 208, 215
-- push, 5, 37
-- radio, 37
-- tool, 37
-- buttons(MouseEvent), 111, 201, 208
-- byte arrays, 269
-- byte order, 81, 275, 363, 404, 475
-- bytes, 473
-- bytesAvailable(QAbstractSocket), 331
-- Cell (续) 实例树, 74
-- Cell(), 92
-- clone(), 92
-- data(), 93
-- evalExpression(), 96
-- evalFactor(), 97
-- element(), 97
-- formula(), 93
-- setData(), 93
-- setDirty(), 93
-- setFormula(), 93
-- value(), 94
-- cell() (Spreadsheet), 78
-- central widget, 46–47, 73–147, 153
+- `background`, 109, 120, 129, 180
+
+- `BackgroundColorRole`(Qt), 230, 244
+
+- `backlash`(), 286, 488
+
+- `Backspace` key, 164
+
+- `BankAccount`, 481
+
+- `base` keyword (C#), 462
+
+- `base` 2, 281
+
+- `base` 8, 103, 281
+
+- `BasicEffects`, 412–413
+
+- `Basic` Plugin, 412–414
+
+- `BDF`, 442
+
+- `BlagPattern`(Qt), 177
+
+- `begin`(QApplication), 86
+
+- `beforeInsert`(QTableModel), 303, 306, 307
+
+- `beforeInsert`(ArtistForm), 303
+
+- `beforeInsert`(Main), 307
+
+- `beforeInsertTrack`(Main), 309
+
+- `beginGroup`(QSettings), 234, 255–257, 258, 265
+
+- `Bengali`, 362
+
+- `BevelJoin`(Qt), 177
+
+- `Bezier` curves, 176
+
+- `Big5`, 365
+
+- `big-endian`, 81, 275, 363, 457
+
+- `binary` I/O (compression), 80, 82, 274–279, 323
+
+- `binary` numbers, 281
+
+- `binary` search, 263
+
+- `bindTo`(QSocket), 337
+
+- `bindValue`(QSqlQuery), 296
+
+- `bit` arrays, 271
+
+- `bit` depth. 另见颜色
+
+- `bitmaps`, 180
+
+- `BLOBs`, 297
+
+- `block-oriented` protocols, 322, 332
+
+- `blocking` I/O, 290
+
+- `BMP`, 466
+
+- `boundingRect`(QPainter), 195
+
+- `box` layouts, 9, 25, 140
+
+- `brushes`, 170, 16
+
+- `BSTR` (Windows), 421
+
+- `bubble` help. 另见提示
+
+- `buddies`, 16, 25
+
+- `building` applications, 4, 454
+
+- `built-in` dialogs, 39–40
+
+- `built-in` widgets, 37–39, 73
+
+- `bus` error, 464
+
+- `bus` cursor, 41
+
+- `bus` indicators, 325
+
+- `button`(MouseEvent), 111, 201, 208
+
+- `mouse`, 111, 208, 215
+
+- `push`, 5, 37
+
+- `radio`, 37
+
+- `tool`, 37
+
+- `buttons`(MouseEvent), 111, 201, 208
+
+- `byte` arrays, 269
+
+- `byte` order, 81, 275, 363, 404, 475
+
+- `bytes`, 473
+
+- `bytesAvailable`(QAbstractSocket), 331
+
+- `Cell` (续) 实例树, 74
+
+- `Cell`(), 92
+
+- `clone`(), 92
+
+- `data`(), 93
+
+- `evalExpression`(), 96
+
+- `evalFactor`(), 97
+
+- `element`(), 97
+
+- `formula`(), 93
+
+- `setData`(), 93
+
+- `setDirty`(), 93
+
+- `setFormula`(), 93
+
+- `value`(), 94
+
+- `cell`() (Spreadsheet), 78
+
+- `central` widget, 46–47, 73–147, 153
 
 ## C
 
-- + C#, 451
-- C++ library, 488–490
-- C++style casts, 60, 476–477
-- C-style casts, 475–476
-- caches, 262, 391
-- canConvert(QVariant), 270
-- read(QCursor), 402
-- readLine(QIODevice), 333
-- cancel(QSession), 435
-- cap style, 177
-- cabities(CursorFlag), 401
-- caps. 另见蓝色条
-- Carbon, 415, 416
-- carriage return, 279, 285
-- Cartesian coordinate system, 109
-- cascade(QWorkspace), 156
-- case sensitivity, 264, 267, 363
-- + casts, 475–477
+- + `C#`, 451
+
+- `C++` library, 488–490
+
+- `C++style` casts, 60, 476–477
+
+- `C-style` casts, 475–476
+
+- `caches`, 262, 391
+
+- `canConvert`(QVariant), 270
+
+- `read`(QCursor), 402
+
+- `readLine`(QIODevice), 333
+
+- `cancel`(QSession), 435
+
+- `cap` style, 177
+
+- `cabities`(CursorFlag), 401
+
+- `caps`. 另见蓝色条
+
+- `Carbon`, 415, 416
+
+- `carriage` return, 279, 285
+
+- `Cartesian` coordinate system, 109
+
+- `cascade`(QWorkspace), 156
+
+- `case` sensitivity, 264, 267, 363
+
+- + `casts`, 475–477
+
 - <<cpp> header, 363, 491
-- cd()(QFtp), 314, 317
-- CD Collection example, 299–310
-- CDE style, 11, 124
-- cell
-  - class definition, 91
-- + child dialog, 56
-- child layouts, 17, 140–141
-- child objects, 28, 396
-- child processes, 287
-- child widgets, 7, 121, 153
-- Chinese, 362, 365, 369
-- chords, 176
-- ncin(std), 274, 284
-- circle, 461, 462
-- see 另见省略号
-- buffer short, 387
-- Cities example, 234–238
-- CityModel
-  - class definition, 235
-  - usage, 235
-  - CityModel(), 236
-  - columnCount(), 236
-  - data(), 236
-  - flags(), 237
-  - headerData(), 236
-  - offset(), 238
-  - rowCount(), 236
-  - setIdentities(), 238
 
+- `cd`()(QFtp), 314, 317
 
+- `CD` Collection example, 299–310
 
+- `CDE` style, 11, 124
 
+- `cell`
+
+  - `class` definition, 91
+
+- + `child` dialog, 56
+
+- `child` layouts, 17, 140–141
+
+- `child` objects, 28, 396
+
+- `child` processes, 287
+
+- `child` widgets, 7, 121, 153
+
+- `Chinese`, 362, 365, 369
+
+- `chords`, 176
+
+- `ncin`(std), 274, 284
+
+- `circle`, 461, 462
+
+- `see` 另见省略号
+
+- `buffer` short, 387
+
+- `Cities` example, 234–238
+
+- `CityModel`
+
+  - `class` definition, 235
+
+  - `usage`, 235
+
+  - `CityModel`(), 236
+
+  - `columnCount`(), 236
+
+  - `data`(), 236
+
+  - `flags`(), 237
+
+  - `headerData`(), 236
+
+  - `offset`(), 238
+
+  - `rowCount`(), 236
+
+  - `setIdentities`(), 238
 
 ## 496
+
 # 索引
 
-CityModel (续)
-setData(), 237
+`CityModel` (续)
+
+`setData`(), 237
+
 类定义 (C++), 458–463
+
 类文档, 9–11, 490
-clear (组合模式, 190)
-clear()
+
+`clear` (组合模式, 190)
+
+`clear`()
+
 容器类, 240, 264
-QTableWidget, 377
-QSpinSlider, 374
-Spreadsheet, 77
-clearBoard(ITableArea), 436
-clearCurve(Plotter), 122
-clicked(QAbstractButton), 6, 163, 288
+
+`QTableWidget`, 377
+
+`QSpinSlider`, 374
+
+`Spreadsheet`, 77
+
+`clearBoard`(ITableArea), 436
+
+`clearCurve`(Plotter), 122
+
+`clicked`(QAbstractButton), 6, 163, 288
+
 客户端-服务器应用, 322–333
-ClientSocket
+
+`ClientSocket`
+
 类定义, 330
-ClientSocket(), 330
-generateRandomID(), 332
-readClient(), 331
-clips (Qtopia Core), 440
+
+`ClientSocket`(), 330
+
+`generateRandomID`(), 332
+
+`readClient`(), 331
+
+`clips` (Qtopia Core), 440
+
 剪切区域, 131, 180
-clipboard(QApplication), 83, 215
+
+`clipboard`(QApplication), 83, 215
+
 剪贴板操作, 83–85, 214
-clone (Cell), 92
-close()
-QFtp, 313, 314
-QHttp, 321
-IODevice, 291, 328, 331
-QWidget, 16
-closeActiveWindow(QWorkspace), 156
-closeAllWindows()
-QApplication, 70
-QWorkspace, 156
-closeConnection(ITrippanner), 328
-closeObject(QAbstractDelegate), 27
-closeEvent()
-Editor, 159
-MainWindow, 157
-ThreadDialog, 384
+
+`clone` (Cell), 92
+
+`close`()
+
+`QFtp`, 313, 314
+
+`QHttp`, 321
+
+`IODevice`, 291, 328, 331
+
+`QWidget`, 16
+
+`closeActiveWindow`(QWorkspace), 156
+
+`closeAllWindows`()
+
+`QApplication`, 70
+
+`QWorkspace`, 156
+
+`closeConnection`(ITrippanner), 328
+
+`closeObject`(QAbstractDelegate), 27
+
+`closeEvent`()
+
+`Editor`, 159
+
+`MainWindow`, 157
+
+`ThreadDialog`, 384
+
 <math> header, 119, 491
-CodeEditor, 164
-codeForLocation(QText), 363
-codeName(QText), 364–365
-CODEQ_ entry (.pro 文件), 377
-codesource, 280, 349, 363–375
+
+`CodeEditor`, 164
+
+`codeForLocation`(QText), 363
+
+`codeName`(QText), 364–365
+
+`CODEQ_` entry (.pro 文件), 377
+
+`codesource`, 280, 349, 363–375
+
 集合类. 见容器类
+
 斜杠 (/), 48, 287, 355
-colorData(QMetaData), 214
+
+`colorData`(QMetaData), 214
+
 颜色深度, 106
+
 颜色对话框, 39
-Color(QPalette), 110
-colorNames(QColor), 229
-ColorNamesDialog, 229
+
+`Color`(QPalette), 110
+
+`colorNames`(QColor), 229
+
+`ColorNamesDialog`, 229
+
 颜色名称示例, 228–230
+
 颜色停止点, 179
-见也 QColormap
+
+见也 `QColormap`
+
 颜色, 5, 39, 105, 106, 110
-column(QAbstractIndex), 233, 77
-ColumnCount(Spreadsheet), 76
-Count()
-CityModel, 236
-CurrencyModel, 233
-RegExpModel, 242
-COM, 419–431
-comboboxes, 39, 229, 305
+
+`column`(QAbstractIndex), 233, 77
+
+`ColumnCount`(Spreadsheet), 76
+
+`Count`()
+
+`CityModel`, 236
+
+`CurrencyModel`, 233
+
+`RegExpModel`, 242
+
+`COM`, 419–431
+
+`comboboxes`, 39, 229, 305
+
 逗号分隔值 (CSV), 212
-commandFinished(QFtp), 314
+
+`commandFinished`(QFtp), 314
+
 命令行选项
-ActiveX, 420
-configure, 46
-Qt 应用, 3, 11, 160, 453
-Qtopia 应用, 411, 442
-commandStart(QFtp), 314
-Qt 商业版, 447–448
-closeObject(SqlDatabase), 296
-commitAndCloseEditor(ITrackDelegate), 27
-commitData()
-QAbstractDelegate, 247
-QApplication, 432, 434
+
+`ActiveX`, 420
+
+`configure`, 46
+
+`Qt` 应用, 3, 11, 160, 453
+
+`Qtopia` 应用, 411, 442
+
+`commandStart`(QFtp), 314
+
+`Qt` 商业版, 447–448
+
+`closeObject`(SqlDatabase), 296
+
+`commitAndCloseEditor`(ITrackDelegate), 27
+
+`commitData`()
+
+`QAbstractDelegate`, 247
+
+`QApplication`, 432, 434
+
 通用对话框, 39–40
+
 编译单元, 452–453, 482
+
 编译器, 454
+
 编译应用程序, 4, 454
+
 组合模式, 189–190
+
 压缩
+
 二进制数据, 279
+
 事件, 108
+
 条件编译, 487–488
-CONFIG edit (.pro 文件), 36, 356, 408, 423, 428, 431
+
+`CONFIG` edit (.pro 文件), 36, 356, 408, 423, 428, 431
+
 配置数据. 见设置
-configure, 440–442
-配置 Qt, 46
+
+`configure`, 440–442
+
+配置 `Qt`, 46
+
 锥形渐变, 180, 187
-connect(QObject), 6, 8, 16, 20–22, 391, 395
-connectToHost()
-QAbstractSocket, 325
-QFtp, 313, 314, 316
-connectToServer(ITrippanner), 325
-connected(QAbstractSocket), 325
+
+`connect`(QObject), 6, 8, 16, 20–22, 391, 395
+
+`connectToHost`()
+
+`QAbstractSocket`, 325
+
+`QFtp`, 313, 314, 316
+
+`connectToServer`(ITrippanner), 325
+
+`connected`(QAbstractSocket), 325
+
 连接数据库, 294, 296–297
-connectionClosedByServer()
+
+`connectionClosedByServer`()
+
 (ITrippanner), 329
+
 连接模式 (Qt Designer), 32–34
 
 ## 497
+
 # 索引
 
 控制台, 284, 285, 291, 311
-constBegin(容器类), 258
-const_cast<>(), 476
-constData(ByteBuffer), 269
-constEnd(容器类), 258
-const 迭代器, 256, 257, 258
-const 关键字, 458, 455–466, 469, 475, 476
+
+`constBegin`(容器类), 258
+
+`const_cast<>`(), 476
+
+`constData`(ByteBuffer), 269
+
+`constEnd`(容器类), 258
+
+`const` 迭代器, 256, 257, 258
+
+`const` 关键字, 458, 455–466, 469, 475, 476
+
 构造函数
-C++ 语法, 258
-copy, 253, 254, 261, 270, 480–481
-default, 252, 261, 270, 458, 460
-Object, 14
+
+`C++` 语法, 258
+
+`copy`, 253, 254, 261, 270, 480–481
+
+`default`, 252, 261, 270, 458, 460
+
+`Object`, 14
+
 生产者-消费者模型, 387–390
+
 容器类
-alg, 263–265
-as 返回值, 256, 257
-but 数组, 271
+
+`alg`, 263–265
+
+`as` 返回值, 256, 257
+
+`but` 数组, 271
+
 字节数组, 269
+
 缓存, 262
-for 循环, 258–260
-hashes, 261–262
+
+`for` 循环, 258–260
+
+`hashes`, 261–262
+
 隐共享, 257, 259, 397, 439, 471
-Java 风格迭代器, 254–266
+
+`Java` 风格迭代器, 254–266
+
 链表, 252–253
+
 列表, 253
-maps, 260–261
+
+`maps`, 260–261
+
 嵌套, 253
-pairs, 271
-Qt vs. STL, 251, 257–258
+
+`pairs`, 271
+
+`Qt` vs. `STL`, 251, 257–258
+
 队列, 253
-sets, 262
-stacks, 253
-STL 风格迭代器, 256, 262
+
+`sets`, 262
+
+`stacks`, 253
+
+`STL` 风格迭代器, 256, 262
+
 字符串, 265–269
+
 变长数组, 271
-variants, 60, 105, 269–271, 295
-vectors, 252, 471
+
+`variants`, 60, 105, 269–271, 295
+
+`vectors`, 252, 471
+
 容器控件, 47
-contains()
-QMap, 261
-QObject, 112, 125
-QString, 86
-contentsChanged(QTextDocument), 158, 160
-contextChangeEvent(QWidget), 52
+
+`contains`()
+
+`QMap`, 261
+
+`QObject`, 112, 125
+
+`QString`, 86
+
+`contentsChanged`(QTextDocument), 158, 160
+
+`contextChangeEvent`(QWidget), 52
+
 上下文菜单, 51–52, 152
+
 连续选择(AbstractItem), 76, 84, 212
+
 控制器 (MVC), 217
-controls. 见控件
+
+`controls`. 见控件
+
 便利性子类, 218–224
-convert(ImageMagick), 287
-ConvertDepthTransaction, 395
-ConvertDialog
+
+`convert`(ImageMagick), 287
+
+`ConvertDepthTransaction`, 395
+
+`ConvertDialog`
+
 类定义, 288
-ConvertDialog(), 288
-on_on_clicked(), 288
-on_Button_clicked(), 288
-processError(), 290
-processFinished(), 290
-updateOutputTextEdit(), 290
-convertSeparators(QDir), 286
-coordinateFormat(Image), 107
-CoordinateSeparator, 221–222
-CounterStyle 示例, 221–222
-system system
-painter, 190–182
-widget 的, 109, 112, 127
-copy()
-QtEdit, 215
-spreadsheet, 83
-copyAction(Qt), 209
-copyAvailable(QTextEdit), 154
-copy 构造函数, 253, 254, 261, 270, 480–481
+
+`ConvertDialog`(), 288
+
+`on_on_clicked`(), 288
+
+`on_Button_clicked`(), 288
+
+`processError`(), 290
+
+`processFinished`(), 290
+
+`updateOutputTextEdit`(), 290
+
+`convertSeparators`(QDir), 286
+
+`coordinateFormat`(Image), 107
+
+`CoordinateSeparator`, 221–222
+
+`CounterStyle` 示例, 221–222
+
+`system` system
+
+`painter`, 190–182
+
+`widget` 的, 109, 112, 127
+
+`copy`()
+
+`QtEdit`, 215
+
+`spreadsheet`, 83
+
+`copyAction`(Qt), 209
+
+`copyAvailable`(QTextEdit), 154
+
+`copy` 构造函数, 253, 254, 261, 270, 480–481
+
 写时拷贝. 见隐共享
-Core Foundation, 67
-count(容器类), 252
-sort (std), 274, 284, 453
-.cpp 文件, 452–4
-create()
-CursorPlugin, 401
-IconEditorPlugin, 115
-createAction(WhatIs), 353
-createAction(Main), 98, 70, 373
-createAggregate(Abstractor), 426
-createConnection(), 294
-createMenu(MenuItem), 51
-createDirectory(Documentview), 228
-createEditor()
-MainWindow, 154
-trackDelegate, 247
-createElement(QDocument), 348
-createIndex(AbstractItemModel), 237
-createLanguage(MainWindow), 374
-createMenus, 50, 156, 373
-createStatusBar(MainWindow), 53
-createNode(QDocument), 348
-createToolBars(MainWindow), 52
-critical(QMessageBox), 55
-CRLF. 见行结束符约定
-CrossPlatform(Qt), 197
+
+`Core` Foundation, 67
+
+`count`(容器类), 252
+
+`sort` (std), 274, 284, 453
+
+`.cpp` 文件, 452–4
+
+`create`()
+
+`CursorPlugin`, 401
+
+`IconEditorPlugin`, 115
+
+`createAction`(WhatIs), 353
+
+`createAction`(Main), 98, 70, 373
+
+`createAggregate`(Abstractor), 426
+
+`createConnection`(), 294
+
+`createMenu`(MenuItem), 51
+
+`createDirectory`(Documentview), 228
+
+`createEditor`()
+
+`MainWindow`, 154
+
+`trackDelegate`, 247
+
+`createElement`(QDocument), 348
+
+`createIndex`(AbstractItemModel), 237
+
+`createLanguage`(MainWindow), 374
+
+`createMenus`, 50, 156, 373
+
+`createStatusBar`(MainWindow), 53
+
+`createNode`(QDocument), 348
+
+`createToolBars`(MainWindow), 52
+
+`critical`(QMessageBox), 55
+
+`CRLF`. 见行结束符约定
+
+`CrossPlatform`(Qt), 197
 
 ## 498
+
 # 索引
 
 <stdlib> header, 455, 491
-CSV, 212
-Ctrlkey, 111, 164
-cur 文件, 400, 403–407
-Currencies 示例, 231–234
-currentrowChanged(QSelectionModel), 306
-currencyAt(CurrencyModel), 234
-currencyModel
-  类定义, 232
-  用法, 231–232
-  CurrencyModel(), 232
-countCol(), 233
-currencyAt(), 234
-data(), 234
-headerData(), 234
-rowCount(), 233
-setCurrencyMap(), 234
-currentChanged(QMain,
-currentDateTime(QDateTime), 185
-currentFormula(Spreadsheet), 80
-currentImageNumber(CursorHandler), 403
-currentIndex(QObject), 64–65
-currentLocation(Spreadsheet), 79
-currentPath(QDir), 286
-currentRowChanged(QListWidget), 36, 144–145
-currentThread(QThread), 390
-cursor (鼠标), 81, 126
-cursor (X), 418
-CursorHandler
-  类定义, 402
-  CursorHandler(), 402
-canHandle(), 403
-currentImageNumber(), 403
-enterState(), 407
-imageCount(), 403
-jumpToNextImage(), 406
-read(), 404
-readBitmap(), 407
-readHeaderNecessary(), 406
-CursorPlugin
-  类定义, 400
-  capabilities(), 401
-  create(), 401
-  keys(), 401
-  Cursor Plugin 示例, 400–408
-custom ActiveX, 423
-custom deletes, 244–249, 306
-custom dialogs, 13–20, 23–29
-custom models, 230–244
-custom properties, 105
-custom styles, 124
-custom views, 248
-custom widgets, 73, 101–134
-cut()
-MainWindow, 155
-QTextEdit, 215
-spreadsheet, 83
-CV (Windows), 421
-cyclic connections, 8, 22
-DashDotLine (Qt), 177
-DashDotLine (Qt), 177
-DashLine (Qt), 177
-data(), 234
-CityModel, 236
-CurrencyModel, 233
-QAbstractItem, 233, 236, 244
-ByteArray, 269
-Dom, 347
-MetaData, 210, 214
-QTableWidgetItem, 91, 93, 220
-RegExp, 242
-dataChanged()
-QAbstractItem, 237, 306
-QToolTip, 215
-data compression, 279
-data-entry widgets, 39
-data structures. 见容器类
-database (QDatabase), 297
-databases
-built-in drivers, 293, 447
-connection to, 294–296
-navigating results, 225, 297
-transactions, 269
-value binding, 295–296
-date, 185
-DATE (Windows), 421
-date/editors, 39, 370
-DB2 (IBM), 293
-.config files, 357
-debug mode, 21, 408
-declaration vs. definition, 483
-decorations, 422
-deep copy, 258, 280
-.default files, 428
-default (MessageBox), 55
-default buttons, 16, 24, 55
-default constructors, 252, 261, 278, 458, 460
-default database connection, 297
 
-# 499
+`CSV`, 212
+
+`Ctrlkey`, 111, 164
+
+`cur` 文件, 400, 403–407
+
+`Currencies` 示例, 231–234
+
+`currentrowChanged`(QSelectionModel), 306
+
+`currencyAt`(CurrencyModel), 234
+
+`currencyModel`
+
+类定义, 232
+
+用法, 231–232
+
+`CurrencyModel`(), 232
+
+`countCol`(), 233
+
+`currencyAt`(), 234
+
+`data`(), 234
+
+`headerData`(), 234
+
+`rowCount`(), 233
+
+`setCurrencyMap`(), 234
+
+`currentChanged`(QMain,
+
+`currentDateTime`(QDateTime), 185
+
+`currentFormula`(Spreadsheet), 80
+
+`currentImageNumber`(CursorHandler), 403
+
+`currentIndex`(QObject), 64–65
+
+
+
 # 索引
 
-+   deferred events, 397
-#define directive, 14, 455, 486
-define() operator, 487
-define() entry (.pro 文件), 368
-definition vs. declaration, 483
-degrees, 129, 178
-- Spreadsheet, 85
--TeamLeadersDialog, 226
-delegates, 217, 218, 244, 249, 305–306
-deleter operator, 4, 28, 68–75, 80–264, 465
-delete[] operator, 470
-deleterArtist() (QtForms), 306
-deleterCd() (Mainframe), 307
-deleter() (QObject), 331, 397
-deleterFactory() (Mainframe), 309
-deleter() (QObject), 129
-dense()–Pattern
-Qt, 177
-dequeue() (QQueue), 356
-deriving. 见子类
-Designer. 见 Qt Designer
-DESIR entry (.pro 文件), 408
-destination (组合模式), 190
-destinationTop (组合模式), 190
-destinationIn (组合模式), 190
-destinationOver (组合模式), 190
-destructors, 189, 405, 463
-devnagari, 361
-device coordinates, 180–182
-dnhevi, 362
-diagPattern (Qt), 177
-dialogs
-built-in, 39–440
-creating in code, 14–15
-creating using Qt Designer, 23–29, 29–35
-group leader, 355
-invoking, 61–66
-meaning of parent, 56
-modality, 61–63, 355
-passing data to and, from 65
-title bar, 56
-dials, 39
-dictionaries. 见哈
-directories, 285, 286
-DirectoryViewer, 227–228
-Directory example, 227–228
-disabled actions, 156
-disabled widgets, 16, 170
-+   discard command, 433
-dis() (QObject), 21, 22, 396
-disconnected(AbstractSocket), 325, 320, 330, 331
-display context (OpenGL), 199
--display option (Qtopia 应用), 441, 442
-DisplayScale (Qt), 92, 94, 220, 230, 233
-division by zero, 978
-DLLs, 399, 456
-DNS. 见HostInfo
-dock areas, 64, 150–151
-dock widgets, 150–152
-document() (QEdit), 158
-documentElement() (QObject), 346
-documentTitle(QBrowser), 355
-documentation, 9–11, 357–390
-DOM, 339–349
-domParser, 345–348
-done ()
-FlowChartSymbol, 220
-Ftpget, 312, 314
-dialog, 220, 222
-QFtp, 313, 315
-dhttp, 320
-Spider, 317
-dontformOverwrite (QFileDialog), 57
-double-line, 201
-double-double-click, 211, 205
-doubleClicked (QAbstractItem), 225
-drag and drop
-accepting drops, 205–207, 209–210
-originating drags, 207–299
-start distance, 208
-dragEnterEvent()
-ProjectWidget, 209
-QWidget, 206, 209
-dragLeaveEvent() (QWidget), 207
-dragMoveEvent()
-ProjectWidget, 209
-Widget, 207, 209
+`currentLocation(Spreadsheet)`, 79
 
+`currentPath(QDir)`, 286
 
+`currentRowChanged(QListWidget)`, 36, 144–145
 
+`currentThread(QThread)`, 390
 
+`cursor` (鼠标), 81, 126
+
+`cursor` (X), 418
+
+`CursorHandler`
+
+类定义, 402
+
+`CursorHandler()`, 402
+
+`canHandle()`, 403
+
+`currentImageNumber()`, 403
+
+`enterState()`, 407
+
+`imageCount()`, 403
+
+`jumpToNextImage()`, 406
+
+`read()`, 404
+
+`readBitmap()`, 407
+
+`readHeaderNecessary()`, 406
+
+`CursorPlugin`
+
+类定义, 400
+
+`capabilities()`, 401
+
+`create()`, 401
+
+`keys()`, 401
+
+Cursor Plugin 示例, 400–408
+
+`custom ActiveX`, 423
+
+`custom deletes`, 244–249, 306
+
+`custom dialogs`, 13–20, 23–29
+
+`custom models`, 230–244
+
+`custom properties`, 105
+
+`custom styles`, 124
+
+`custom views`, 248
+
+`custom widgets`, 73, 101–134
+
+`cut()`
+
+`MainWindow`, 155
+
+`QTextEdit`, 215
+
+`spreadsheet`, 83
+
+`CV` (Windows), 421
+
+`cyclic connections`, 8, 22
+
+`DashDotLine` (Qt), 177
+
+`DashDotLine` (Qt), 177
+
+`DashLine` (Qt), 177
+
+`data()`, 234
+
+`CityModel`, 236
+
+`CurrencyModel`, 233
+
+`QAbstractItem`, 233, 236, 244
+
+`ByteArray`, 269
+
+`Dom`, 347
+
+`MetaData`, 210, 214
+
+`QTableWidgetItem`, 91, 93, 220
+
+`RegExp`, 242
+
+`dataChanged()`
+
+`QAbstractItem`, 237, 306
+
+`QToolTip`, 215
+
+`data compression`, 279
+
+`data-entry widgets`, 39
+
+`data structures`. 见容器类
+
+`database` (`QDatabase`), 297
+
+`databases`
+
+`built-in drivers`, 293, 447
+
+`connection to`, 294–296
+
+`navigating results`, 225, 297
+
+`transactions`, 269
+
+`value binding`, 295–296
+
+`date`, 185
+
+`DATE` (Windows), 421
+
+`date/editors`, 39, 370
+
+`DB2` (IBM), 293
+
+`.config files`, 357
+
+`debug mode`, 21, 408
+
+`declaration vs. definition`, 483
+
+`decorations`, 422
+
+`deep copy`, 258, 280
+
+`.default files`, 428
+
+`default` (`MessageBox`), 55
+
+`default buttons`, 16, 24, 55
+
+`default constructors`, 252, 261, 278, 458, 460
+
+`default database connection`, 297
+
+# 499
+
+# 索引
+
++   `deferred events`, 397
+
+`#define directive`, 14, 455, 486
+
+`define() operator`, 487
+
+`define() entry` (`.pro` 文件), 368
+
+`definition vs. declaration`, 483
+
+`degrees`, 129, 178
+
+- `Spreadsheet`, 85
+
+-`TeamLeadersDialog`, 226
+
+`delegates`, 217, 218, 244, 249, 305–306
+
+`deleter operator`, 4, 28, 68–75, 80–264, 465
+
+`delete[] operator`, 470
+
+`deleterArtist()` (`QtForms`), 306
+
+`deleterCd()` (`Mainframe`), 307
+
+`deleter()` (`QObject`), 331, 397
+
+`deleterFactory()` (`Mainframe`), 309
+
+`deleter()` (`QObject`), 129
+
+`dense()`–Pattern
+
+`Qt`, 177
+
+`dequeue()` (`QQueue`), 356
+
+`deriving`. 见子类
+
+`Designer`. 见 Qt Designer
+
+`DESIR entry` (`.pro` 文件), 408
+
+`destination` (组合模式), 190
+
+`destinationTop` (组合模式), 190
+
+`destinationIn` (组合模式), 190
+
+`destinationOver` (组合模式), 190
+
+`destructors`, 189, 405, 463
+
+`devnagari`, 361
+
+`device coordinates`, 180–182
+
+`dnhevi`, 362
+
+`diagPattern` (`Qt`), 177
+
+`dialogs`
+
+`built-in`, 39–440
+
+`creating in code`, 14–15
+
+`creating using Qt Designer`, 23–29, 29–35
+
+`group leader`, 355
+
+`invoking`, 61–66
+
+`meaning of parent`, 56
+
+`modality`, 61–63, 355
+
+`passing data to and, from 65`
+
+`title bar`, 56
+
+`dials`, 39
+
+`dictionaries`. 见哈
+
+`directories`, 285, 286
+
+`DirectoryViewer`, 227–228
+
+`Directory example`, 227–228
+
+`disabled actions`, 156
+
+`disabled widgets`, 16, 170
+
++   `discard command`, 433
+
+`dis()` (`QObject`), 21, 22, 396
+
+`disconnected(AbstractSocket)`, 325, 320, 330, 331
+
+`display context` (OpenGL), 199
+
+`-display option` (`Qtopia` 应用), 441, 442
+
+`DisplayScale` (`Qt`), 92, 94, 220, 230, 233
+
+`division by zero`, 978
+
+`DLLs`, 399, 456
+
+`DNS`. 见HostInfo
+
+`dock areas`, 64, 150–151
+
+`dock widgets`, 150–152
+
+`document()` (`QEdit`), 158
+
+`documentElement()` (`QObject`), 346
+
+`documentTitle(QBrowser)`, 355
+
+`documentation`, 9–11, 357–390
+
+`DOM`, 339–349
+
+`domParser`, 345–348
+
+`done ()`
+
+`FlowChartSymbol`, 220
+
+`Ftpget`, 312, 314
+
+`dialog`, 220, 222
+
+`QFtp`, 313, 315
+
+`dhttp`, 320
+
+`Spider`, 317
+
+`dontformOverwrite` (`QFileDialog`), 57
+
+`double-line`, 201
+
+`double-double-click`, 211, 205
+
+`doubleClicked` (`QAbstractItem`), 225
+
+`drag and drop`
+
+`accepting drops`, 205–207, 209–210
+
+`originating drags`, 207–299
+
+`start distance`, 208
+
+`dragEnterEvent()`
+
+`ProjectWidget`, 209
+
+`QWidget`, 206, 209
+
+`dragLeaveEvent()` (`QWidget`), 207
+
+`dragMoveEvent()`
+
+`ProjectWidget`, 209
+
+`Widget`, 207, 209
 
 ## 500
 
 # 索引
 
-drawDisplay(QItemDelegate), 247
-drawEllipse(QPainter), 176, 178, 186-178
-drawFocus(QItemDelegate), 247
-drawGrid(Plotter), 130
-drawLine(QPainter), 109, 176
-drawLines(QPainter), 176, 414
-drawPath(QPainter), 176, 178
-drawWidget(QPainter), 123, 176
-drawPixmap(QPainter), 176
-drawPoint(QPainter), 176
-drawPoints(QPainter), 176, 186
-drawPolygon(QPainter), 132, 176
-drawPolyline(QPainter)
-drawPrimitive()
-QStyle, 124
-QStylePainter, 124
-drawRect(QPainter), 187
-drawText(QPainter), 130–131, 176, 182, 187
-drill-down, 309
-dndiver(QSqlDatabase), 296
-drivers dabase, 293, 447
-keyboard, 441, 442
-mouse, 441, 442
-printer, 191
-screen, 442
-dropEvent()
-MyWidget, 212
-ProjectWidget, 210
-Widget, 206, 210
-dumpcode, 421
--dumpId(activeX servers), 430
-duration(QTimer), 185
-dynamicCall(QAbstract), 423
-dynamic_cast<QObject*>(), 60, 476
-dynamic dialogs, 36
-另参 shape-changing dialogs
-dynamic libraries, 60, 399–456, 476
-dynamic memory. **See new operator**
-dynamic menus, 59–60, 156
+`drawDisplay(QItemDelegate)`, 247
 
-editingFinished(QAbstractSpinBox), 247
-editions of Qt, 444–448
-Editor
+`drawEllipse(QPainter)`, 176, 178, 186-178
+
+`drawFocus(QItemDelegate)`, 247
+
+`drawGrid(Plotter)`, 130
+
+`drawLine(QPainter)`, 109, 176
+
+`drawLines(QPainter)`, 176, 414
+
+`drawPath(QPainter)`, 176, 178
+
+`drawWidget(QPainter)`, 123, 176
+
+`drawPixmap(QPainter)`, 176
+
+`drawPoint(QPainter)`, 176
+
+`drawPoints(QPainter)`, 176, 186
+
+`drawPolygon(QPainter)`, 132, 176
+
+`drawPolyline(QPainter)`
+
+`drawPrimitive()`
+
+`QStyle`, 124
+
+`QStylePainter`, 124
+
+`drawRect(QPainter)`, 187
+
+`drawText(QPainter)`, 130–131, 176, 182, 187
+
+`drill-down`, 309
+
+`dndiver(QSqlDatabase)`, 296
+
+`drivers dabase`, 293, 447
+
+`keyboard`, 441, 442
+
+`mouse`, 441, 442
+
+`printer`, 191
+
+`screen`, 442
+
+`dropEvent()`
+
+`MyWidget`, 212
+
+`ProjectWidget`, 210
+
+`Widget`, 206, 210
+
+`dumpcode`, 421
+
+`-dumpId(activeX servers)`, 430
+
+`duration(QTimer)`, 185
+
+`dynamicCall(QAbstract)`, 423
+
+`dynamic_cast<QObject*>()`, 60, 476
+
+`dynamic dialogs`, 36
+
+另参 shape-changing dialogs
+
+`dynamic libraries`, 60, 399–456, 476
+
+`dynamic memory`. **See new operator**
+
+`dynamic menus`, 59–60, 156
+
+`editingFinished(QAbstractSpinBox)`, 247
+
+`editions of Qt`, 444–448
+
+`Editor`
+
 - class definition, 157
-Editor(), 158
-closeEvent(), 159
-newFile(), 158
-okToContinue(), 159
-open(), 159
-save(), 159
-setCurrentFile(), 159
-sizeHint(), 160
-windowMenuAction(), 157
-edit widgets, 39
-effects(BaseEffectsPlugin), 412
-#else directive, 487
-elipses, 176, 178
-embedded Linux, 439–443
--embedded option (configure), 440
-embedded resources. See resource file
-emit pseudo-keyword, 18
-Employee, 21–22
-emulated loop and feel, 11, 124
-enabled widgets. See disabled widgets
-codings, 214, 270, 389, 362–365
-end(container classes), 256–257, 258, 263
-endDocument(QXmlDocument), 340
-endElement(SAXHandler), 343
-endGroup(QSettings), 67
-endian, 275, 363, 457, 475
-#if directive, 15, 455, 487
-endif()
-nerWith(String), 267
-terqueue(QQueue), 253
-enterErrorState(CursorHandler), 407
-enter key, 247
-entryHeight(PrintWriter), 194
-entryInfoList(QDir), 286
-entryList(QDir), 285
-enum key, 469, 473–474
-environment_variables
-- PATH, 4, 357, 434, 450
-QtDIR, 116, 406
-QWS_DEPTH, 441
-QWS_KEYBOARD, 442, 442
-QWS_MOUSE_PROTO, 442, 442
-QWS_SIZE, 441
-erase color, 120, 129
-edit, 83–87
-edit(ExternalEditor), 290
-edit(Main), 309
-editRole(Qt), 92, 93–94, 220, 237
-edit triggers, 220, 222, 226
-error(QAbstract), 325
-error dialog, 40–41
-error directive, 488
-error(QFile), 279
-error(QFile), 80
-error(MessageBox), 55, 247
-escape(Qt), 193, 212, 219
-expression(i), 96
-factor(i), 97
-event(i), 97
-event(QObject), 164, 170
-event loop, 414, 171, 314, 320, 391
-events, 4
-close, 44, 57, 159, 384, 435
-compared with marks, 163
-compression, 108
-content menu, 52
-deferred delete, 397
-drag enter, 206, 209
-drag leave, 207
-drop move, 207
-drop, 206, 210
-filtering, 168–171, 419
-hide, 168
-layout direction, 170
-locale
-mouse double-click, 201
-mouse move, 111, 126, 201, 208
-mouse press, 111, 125, 185, 201, 208
-mouse release, 128, 215
-paint, 123, 178, 185, 416, 417
-pending, 173
-platform-specific, 419
-propagation, 165, 171, 206
-resize, 124–125, 139
-show, 167
-timer, 165–168, 168, 173, 422
-wheel, 128
-examples
-- Address Book, 228–431
-Age, 7–9, 11
-Basic Effects Plugin, 412–414
-Bouncer, 423–428
-CD Collection, 299–310
-Cities, 234–238
-Color Names, 228–230
-Coordinate Setter, 221–222
-Currencies, 231–234
-Cursor Plugin, 400–408
-Directory Viewer, 227–228
-DOM Parser, 345–348
-Find, 19, 61
-Find File, 137–140
-Flow Chart Picker, 219–220
-type, 315–341
-Go-to-Cell, 239, 62
-Hello, 3
-Hex Spin, 101–103, 113
-http, 320–322
-Icon Editor, 104–112
-Icon Editor Plugin, 113–116
-Image Converter, 287–290
-Image Pro, 392–396
-imagespace, 285–286
-Mail Client, 146–148
-MDI Editor, 153–160
-Media Player, 419–423
-Oven Timer, 183–188
-Plotter, 116–133
-Preferences, 144
-Project Choose, 207–210
-Quit, 6
-Regex Parser, 238–244
-SAX Handler, 340–344
-semaphores, 387–389
-Settings Viewer, 222–224
-Sort, 29–35, 63
-spinder, 315–320
-Splitter, 145–146
-spreadsheet, 43–72, 73–99
-Team Leaders, 225–226
-Tetrahedron, 199–203
-Text Art, 408–411
-Threads, 381–384
-Tic-Tac-Toe, 432–437
-Ticker, 165–168
-tidy, 283–284
-Track Editor, 244–248
-Trip Planner, 323–329
+
+`Editor()`, 158
+
+`closeEvent()`, 159
+
+`newFile()`, 158
+
+`okToContinue()`, 159
+
+`open()`, 159
+
+`save()`, 159
+
+`setCurrentFile()`, 159
+
+`sizeHint()`, 160
+
+`windowMenuAction()`, 157
+
+`edit widgets`, 39
+
+`effects(BaseEffectsPlugin)`, 412
+
+`#else directive`, 487
+
+`elipses`, 176, 178
+
+`embedded Linux`, 439–443
+
+`-embedded option` (configure), 440
+
+`embedded resources`. See resource file
+
+`emit pseudo-keyword`, 18
+
+`Employee`, 21–22
+
+`emulated loop and feel`, 11, 124
+
+`enabled widgets`. See disabled widgets
+
+`codings`, 214, 270, 389, 362–365
+
+`end(container classes)`, 256–257, 258, 263
+
+`endDocument(QXmlDocument)`, 340
+
+`endElement(SAXHandler)`, 343
+
+`endGroup(QSettings)`, 67
+
+`endian`, 275, 363, 457, 475
+
+`#if directive`, 15, 455, 487
+
+`endif()`
+
+`nerWith(String)`, 267
+
+`terqueue(QQueue)`, 253
+
+`enterErrorState(CursorHandler)`, 407
+
+`enter key`, 247
+
+`entryHeight(PrintWriter)`, 194
+
+`entryInfoList(QDir)`, 286
+
+`entryList(QDir)`, 285
+
+`enum key`, 469, 473–474
+
+`environment_variables`
+
+- `PATH`, 4, 357, 434, 450
+
+`QtDIR`, 116, 406
+
+`QWS_DEPTH`, 441
+
+`QWS_KEYBOARD`, 442, 442
+
+`QWS_MOUSE_PROTO`, 442, 442
+
+`QWS_SIZE`, 441
+
+`erase color`, 120, 129
+
+`edit`, 83–87
+
+`edit(ExternalEditor)`, 290
+
+`edit(Main)`, 309
+
+`editRole(Qt)`, 92, 93–94, 220, 237
+
+`edit triggers`, 220, 222, 226
+
+`error(QAbstract)`, 325
+
+`error dialog`, 40–41
+
+`error directive`, 488
+
+`error(QFile)`, 279
+
+`error(QFile)`, 80
+
+`error(MessageBox)`, 55, 247
+
+`escape(Qt)`, 193, 212, 219
+
+`expression(i)`, 96
+
+`factor(i)`, 97
+
+`event(i)`, 97
+
+`event(QObject)`, 164, 170
+
+`event loop`, 414, 171, 314, 320, 391
+
+`events`, 4
+
+`close`, 44, 57, 159, 384, 435
+
+`compared with marks`, 163
+
+`compression`, 108
+
+`content menu`, 52
+
+`deferred delete`, 397
+
+`drag enter`, 206, 209
+
+`drag leave`, 207
+
+`drop move`, 207
+
+`drop`, 206, 210
+
+`filtering`, 168–171, 419
+
+`hide`, 168
+
+`layout direction`, 170
+
+`locale`
+
+`mouse double-click`, 201
+
+`mouse move`, 111, 126, 201, 208
+
+`mouse press`, 111, 125, 185, 201, 208
+
+`mouse release`, 128, 215
+
+`paint`, 123, 178, 185, 416, 417
+
+`pending`, 173
+
+`platform-specific`, 419
+
+`propagation`, 165, 171, 206
+
+`resize`, 124–125, 139
+
+`show`, 167
+
+`timer`, 165–168, 168, 173, 422
+
+`wheel`, 128
+
+`examples`
+
+- `Address Book`, 228–431
+
+`Age`, 7–9, 11
+
+`Basic Effects Plugin`, 412–414
+
+`Bouncer`, 423–428
+
+`CD Collection`, 299–310
+
+`Cities`, 234–238
+
+`Color Names`, 228–230
+
+`Coordinate Setter`, 221–222
+
+`Currencies`, 231–234
+
+`Cursor Plugin`, 400–408
+
+`Directory Viewer`, 227–228
+
+`DOM Parser`, 345–348
+
+`Find`, 19, 61
+
+`Find File`, 137–140
+
+`Flow Chart Picker`, 219–220
+
+`type`, 315–341
+
+`Go-to-Cell`, 239, 62
+
+`Hello`, 3
+
+`Hex Spin`, 101–103, 113
+
+`http`, 320–322
+
+`Icon Editor`, 104–112
+
+`Icon Editor Plugin`, 113–116
+
+`Image Converter`, 287–290
+
+`Image Pro`, 392–396
+
+`imagespace`, 285–286
+
+`Mail Client`, 146–148
+
+`MDI Editor`, 153–160
+
+`Media Player`, 419–423
+
+`Oven Timer`, 183–188
+
+`Plotter`, 116–133
+
+`Preferences`, 144
+
+`Project Choose`, 207–210
+
+`Quit`, 6
+
+`Regex Parser`, 238–244
+
+`SAX Handler`, 340–344
+
+`semaphores`, 387–389
+
+`Settings Viewer`, 222–224
+
+`Sort`, 29–35, 63
+
+`spinder`, 315–320
+
+`Splitter`, 145–146
+
+`spreadsheet`, 43–72, 73–99
+
+`Team Leaders`, 225–226
+
+`Tetrahedron`, 199–203
+
+`Text Art`, 408–411
+
+`Threads`, 381–384
+
+`Tic-Tac-Toe`, 432–437
+
+`Ticker`, 165–168
+
+`tidy`, 283–284
+
+`Track Editor`, 244–248
+
+`Trip Planner`, 323–329
+
+
 
 examples (continued)
+
 - files (continued)
+
 - Trip Server, 323, 329–332
+
 waitconditions, 389–390
+
 Weather Balloon, 333–335
+
 Weather Station, 333, 337
+
 exceptions, 95, 456, 488–489
+
 UserInput(QEvent), 172
+
 exclusive actions, 49
+
 QCoreApplication, 3, 171–372
+
 QDialog, 62
+
 QMenu, 52
+
 SqlQuery, 294
+
 QThread, 397
+
 exists()
+
 - uploading and downloading, 311–323
+
 fill(QPixmap), 129
+
 fill patterns, 176
+
 fillRect(QPainter), 110
+
 filter method, 228
+
 for events, 168–171, 419
+
 for file names, 56, 285
+
 final keyword(Java), 466
+
 finalize(Java), 463
+
 find()
+
 MainWindow, 61
+
 QWidget, 415
+
 find example, 13–20, 61
+
 findChild(QObject), 36
+
 findClicked(QDialog), 18
+
 findDialog()
+
 - class definition, 14
+
 usage, 61, 62
+
 findDialog(), 15–17
+
 findClicked(), 18
+
 findNext(), 14
+
 findPrevious(), 14
+
 findFileDialog, 137–140
+
 Find File example, 137–140
+
 findNext(), 14
+
 findDialog, 14
+
 Spreadsheet, 86
+
 findPrevious(), 14
+
 findDialog, 14
+
 Spreadsheet, 86
+
 finished()
+
 - Dir, 286
+
 File, 286
+
 expand(QTreeView), 227
+
 Expanding(QPolicy), 120, 142–143
+
 explicit keyword, 477
+
 exporting
+
 - ActControls, 225, 427, 229, 431
+
 plugins, 115–162, 414
+
 Extensible Markup Language. See XML
+
 - extension dialog, 29–35
+
 external keyword, 483
+
 externalEditor, 290
+
 external linkage, 482
+
 external programs, 287
+
 - F2 key, 228
+
 fatalError, 343
+
 facePosition(Tetrahedron), 202
+
 forward declarations, 71
+
 foreground(QPalette), 110
+
 function prototypes, 454
+
 format, 93
+
 formats, 39
+
 creating using Qt Designer, 23–29
+
 global functions, 453
+
 global variables, 440
+
 global variables, 482–483
+
 numbers, 89–90
+
 GCC, 19, 440
+
 GDI, 416–417
+
 general protection fault, 464
+
 General Public License, 447
+
 generateDocumentation(QABase), 421
+
 generateID(), 303
+
 generateRand(QSocket), 322
+
 algorithms, 88, 251, 263–265, 271, 489
+
 geometric shapes, 176
+
 geometries, 138
+
 German, 369
+
 get()
+
 Qfp, 311, 313, 314, 317
+
 getColor(QColorDialog), 202
+
 getEvent(QtEngine), 417, 418
+
 getJSONObject(Spider), 316
+
 getfile()
+
 Httpget, 320
+
 InterfaceSaveOptions()
+
 (QObjectSpy), 151
+
 getFileName(QFileName), 56, 159, 258
+
 getPrinter(QPrintEngine), 418
+
 getSaveFileName(QFileDialog), 57
+
 getText(QInputDialog), 228
+
 GIF, 46
-
-
-
-
 
 ## 504
 
 # 索引
 
 古吉拉特语 (Gujarati), 362
+
 古尔木木希语 (Gurmukhi), 362
+
 @WorldPtr (Mac OS X), 418
 
 ## HexSpinBox (续上)
+
 - HexSpinBox(), 102
+
 - textFromValue(), 102
+
 - validate(), 102
+
 - valueFromText(), 103
+
 - 十六进制旋转框示例, 101–103, 113
+
 - 十六进制数字, 103, 280, 281
+
 - hFont (Windows), 418
 
 ## H
 
 - h 文件. 参见头文件 (header files)
+
 - 半像素坐标, 180–181
+
 - hand()
+
 - 游标 (Cursor),
+
 - QFont,
+
 - Qipmap,
+
 - 区域 (Region),
+
 - QSessionManager, 418
+
 - 控件 (Widget),
+
 - hasAcceptableInput(QLineEdit, 28–29
+
 - hasFeature(QApplication), 296–297
+
 - hasFormat(QImage), 206
+
 - hasData(QThreadStorage), 391
+
 - hasNext(Java 风格迭代器), 255
+
 - hasOpenGL(QOpenGL), 203
+
 - hasPendingEvents(), 173
+
 - hasPrevious(Java 风格迭代器), 255
+
 - 哈希值 (hash), 261–262
+
 - hCIWERK (Windows), 418
+
 - hDC (Windows), 418
+
 - head()
+
 - Http, 320
+
 - Queue<>, 253
+
 - headerData()
+
 - CityModel, 236
+
 - CurrencyModel, 234
+
 - RegExpModel, 243
+
 - -头文件 (header files), 3, 15–456
+
 - 头项 (header items), 221, 227, 234, 237, 243, 243
+
 - 堆内存 (heap memory). 参见 new 运算符 (new operator)
+
 - 密集处理 (heavy processing), 171, 381
+
 - 希伯来语 (Hebrew), 362
+
 - height(QPaintEvent), 109, 112
+
 - Hello 示例, 3–5
+
 - 帮助 (help), 51, 351–357
+
 - HIView, 416
+
 - HIViewRef (Mac OS X), 418
+
 - 休眠 (hibernation), 432
+
 - 隐藏控件 (hidden widgets), 4, 62, 121, 325
+
 - hide(QWidget), 121, 142, 325
+
 - hideEvent(Ticker), 168
+
 - 层级条项模型 (hierarchical item models), 240–243
+
 - Home 键 (home key), 164
+
 - homePath(QDir), 286
+
 - Horizontal(Qt), 177
+
 - 水平表头 (horizontalHeader(TableView)), 77
+
 - 水平布局 (horizontal layouts), 9, 25, 140
+
 - 水平滚动 (horizontalScroll(QAbstractScrollArea)), 77, 148
+
 - 主机地址 (host addresses). 参见 IP 地址 (IP addresses)
+
 - 主机名 (host names), 335
+
 - 沙漏类 (hourglass class), 081
+
 - HFALETTE (Windows), 418
+
 - hHRG (Windows), 418
+
 - HTML, 5, 98, 192–193, 211–212, 212, 352, 353–357, 428
+
 - html(QMouseEvent), 214
+
 - HTTP, 310–323
+
 - httpDone(HttpGet), 321
+
 - HttpGet
+
 - HttpGet(), 320
+
 - getfile(), 320
+
 - httpDone(), 321
+
 - httpget 示例, 320–322
+
 - HWND (Windows), 418
 
 ## I
 
 - HelpBrowser
+
 - 类定义 (class definitions), 353, 356
+
 - HelperBrowser(), 354
+
 - showPage(), 355, 357
+
 - updateWindowTitle(), 355
+
 - 十六进制操作器 (hex manipulator), 280
+
 - HexSpinBox
+
 - 类定义 (class definition), 101
+
 - 与 Qt Designer 的集成 (integration with Qt Designer), 113
+
 - IANA, 206
+
 - IBM 8xx, 365
+
 - IBM DB2, 293
+
 - icon() (QEditorPlugin), 115
+
 - IconEditor
+
 - 类定义 (class definition), 104
+
 - 与 Qt Designer 的集成 (integration with Qt Designer), 113–116
+
 - 带有滚动条 (with scroll bars), 149
+
 - IconEditor(), 105
+
 - mouseMouseEvent(), 111
+
 - IconEditor (续上)
+
 - mousePressEvent(), 108
+
 - paintEvent(), 108
+
 - pixelRect(), 110
+
 - setPixel(), 107
+
 - setImagePixel(), 111
+
 - setColor(), 107
+
 - setSizeHint(), 106
+
 - IconEditor 示例, 104–112
+
 - IconEditorPlugin
+
 - 类定义 (class definition), 114
+
 - IconEditorPlugin(), 114
+
 - create(), 115
+
 - group(), 115
+
 - icon(), 115
+
 - includeFile(), 114
+
 - isortChildren(), 115
+
 - name(), 114
+
 - ToolTip(), 115
+
 - whatThis(), 115
+
 - IconEditor Plugin 示例, 113–116
+
 - IconRole(Qt), 220
+
 - 图标 (icons), 48, 55, 66, 209, 370
+
 - COM 组件 (of a COM component), 420, 427
+
 - 定时 (of a timer), 167
+
 - 控件 (of a widget), 115
+
 - FTP 命令 (of an FTP command), 314
+
 - HTTP 请求 (of an HTTP request), 322
+
 - X11 会话 (of an X11 session), 434
+
 - IDpatch (Windows), 423
+
 - IDL, 430
+
 - 空闲处理 (idle processing), 173
+
 - #if 指令, 487
+
 - #ifndef 指令, 144, 455, 487
+
 - IDFont (Windows), 421
+
 - ignore(QEvent), 58, 157, 159
+
 - ignoreAction(Qt), 209
+
 - ignore(QStyle), 143
+
 - image()
+
 - QClipboard, 215
+
 - 图像转换器 (Image Converter), 287–290
+
 - imageCount(CursorHandler), 401
+
 - imageCount(QMetaData), 403
+
 - ImageMagick, 287
+
 - Image Pro 示例, 392–396
+
 - imageSpace(), 285
+
 - ImageWindow, 392
+
 - ImageWindow(), 393
+
 - ImageWindow (续上)
+
 - allDone(), 393
+
 - Alpha 通道 (alpha channel), 106, 189
+
 - 画设备 (as paint devices), 175
+
 - 文件格式 (file formats), 46
+
 - 图标 (icons), 48, 55, 66, 209, 370
+
 - 图像示例 (images example), 285–286
+
 - 隐式共享 (implicit sharing), 257, 259, 397, 439
+
 - #include 指令, 453, 455, 486
+
 - includeFile(IconEditorPlugin), 114
+
 - INCLUDEPATH(.pro.files), 399
+
 - incomingConnection(TripServer), 330
+
 - index(QAbstractModel), 421
+
 - indexOf()
+
 - QLayout, 143
+
 - String, 267
+
 - 信息框 (information(MessageBox)), 55
+
 - itFrom()
+
 - Painter, 129, 189
+
 - QStyleOption, 124
+
 - 初始线程 (initial thread), 391
+
 - initializeGL(Tethedron), 199
+
 - 内联 (inlining), 458–460
+
 - 输入对话框 (input dialogs), 40–44
+
 - 输入方法 (input methods), 361, 363, 442
+
 - insert()
+
 - Java 风格迭代器 (Java-style iterators), 256
+
 - LinkedList<T>, 253
+
 - QMap<T>, 260
+
 - QMap<T>, 261
+
 - TeamLeaders, 226
+
 - INSERT 语句, 295
+
 - insertMulti()
+
 - QHash<T>, 262
+
 - QMap<T>, 261
+
 - insertRow(QAbstractModel), 298
+
 - installFilter(QObject), 169, 170
+
 - installTranslator(QCoreApplication), 365
+
 - instance(QDataLoader), 410
+
 - Intel x86, 439, 457
+
 - 密集处理 (intensive processing), 171, 381
+
 - 接口定义语言 (IDL), 430
+
 - 接口插件 (interfaces plugins), 408
+
 - COM, 423, 426
 
 # 506
@@ -15332,70 +16024,111 @@ GIF, 46
 # 索引
 
 - 接口 (续上)
+
 - Java and C#, 461
+
 - 中间 (Intermediate(QValidator)), 102
+
 - 内部指针 (internalPointer(QModel)), 241
+
 - 国际化 (internationalization), 361–379
+
 - Internet数字 (Internet Numbers), 206
+
 - Internet Explorer, 357, 423
+
 - Internet 协议 (Internet protocols)
+
 - DNS. QHostInfo
+
 - FTP, 311–320
+
 - HTTP, 320–323
+
 - SSL, 322
+
 - TCP, 323–333
+
 - UDP, 333–379
+
 - 进程间通信 (inter-process communication), 287–291
+
 - 交集 (intersection), 22, 488
+
 - invalid (QValidator), 102
+
 - 无效模型索引 (invalid model indexes), 228, 231, 241
+
 - 无效变体 (invalid variants)
+
 - 隐藏控件 (invisible widgets), 4, 62, 121, 142, 325
+
 - invokeMethod(QMetaObject), 397
+
 - 二进制 (binary), 80–82, 278–362
+
 - 设备 (devices), 82, 314, 320, 321
+
 - 插件 (plugs), 303
+
 - 标准 C++ 库, 488
+
 - 文本 (text), 279–285
+
 - 对象安全 (ObjectSafety(Windows)), 426–427
+
 - <Qstream> 头, 81, 274, 280, 455
+
 - IP 地址, 332, 335
+
 - IPC (进程间通信), 287–291
+
 - IPPicture (Windows), 421
+
 - 激活(QQuery), 295
+
 - isContainer(QIconEditorPlugin), 115
+
 - isDigit(QChar), 363
+
 - isEmpty()
-- 容器类 (container classes), 256
-- QString (QChar), 363
-- isLetter(QChar), 363
-- isLetterOrNumber(QChar), 363
-- isLower(QChar), 363
-- isMark(QChar), 363
-- isNumber(QChar), 363
-- isPrint(QChar), 363
-- isPunct(QChar), 363
-- isRightToLeft(QApplication), 370
-- isRestoredEvent(QApplication), 436, 437
-- isSpace(QChar), 363
-- isSymbol(QChar), 363
-- isUpper(QChar), 363
-- isValid (QVariant), 94
+
+
+
+# 索引
+
+## 容器类
+
+- 容器类 (`container classes`), 256
+- `QString` (`QChar`), 363
+- `isLetter(QChar)`, 363
+- `isLetterOrNumber(QChar)`, 363
+- `isLower(QChar)`, 363
+- `isMark(QChar)`, 363
+- `isNumber(QChar)`, 363
+- `isPrint(QChar)`, 363
+- `isPunct(QChar)`, 363
+- `isRightToLeft(QApplication)`, 370
+- `isRestoredEvent(QApplication)`, 436, 437
+- `isSpace(QChar)`, 363
+- `isSymbol(QChar)`, 363
+- `isUpper(QChar)`, 363
+- `isValid` (`QVariant`), 94
 - ISO 2022, 365
 - ISO 8859-1 (Latin), 265, 296–362
 - ISO 8859-15, 369
 - ISO 8859-x, 365
-- 项 (item(QWidget)), 78
-- 项改变 (itemChanged(QWidget)), 76
-- 可编辑 (ItemEditable(Qt)), 238
-- 可启用 (ItemEnabled(Qt)), 237
-- 可选择 (ItemSelectable(Qt)), 237
-- 项原型 (item prototypes), 76
-- 项视图 (item views), 38
+- 项 (`item(QWidget)`), 78
+- 项改变 (`itemChanged(QWidget)`), 76
+- 可编辑 (`ItemEditable(Qt)`), 238
+- 可启用 (`ItemEnabled(Qt)`), 237
+- 可选择 (`ItemSelectable(Qt)`), 237
+- 项原型 (`item prototypes`), 76
+- 项视图 (`item views`), 38
 - 迭代器
-- Java 风格迭代器, 254–256, 262
-- 只读与读写 (read-only vs. read-write), 254, 256, 257
-- STL 风格迭代器, 253, 256, 262, 489
+  - Java 风格迭代器, 254–256, 262
+  - 只读与读写 (`read-only vs. read-write`), 254, 256, 257
+  - STL 风格迭代器, 253, 256, 262, 489
 - Known (Windows), 423, 426
 
 ## J
@@ -15405,271 +16138,267 @@ GIF, 46
 - JavaScript, 428
 - Java 风格迭代器, 254–256, 262
 - JIS, 35
-- join (QStringList), 268, 282
+- `join` (`QStringList`), 268, 282
 - 样式, 177
-- JournalView, 375–376
+- `JournalView`, 375–376
 - JPEG, 46
-- jumpToNext(CursorHandler), 406
+- `jumpToNext(CursorHandler)`, 406
 
 ## K
 
 - 卡纳达达语 (Kannada), 362
 - KDAB, 415
-- 保持大小 (KeepSize(QSplitter)), 146
+- 保持大小 (`KeepSize(QSplitter)`), 146
 - Java 风格迭代器, 131, 266
-- QEvent, 164
+- `QEvent`, 164
 - STL 风格迭代器, 234, 262
-- Key事件 (key events), 164–165
-- CodeEditor, 164
-- MyEdit, 169
-- Plotter, 128
-- QWidget, 128, 164
-- keyReleaseEvent(QWidget), 164
-- 键盘驱动 (keyboard drivers), 441, 442
-- 键盘焦点 (keyboard focus). 参见焦点 (focus)
-- 键盘快捷键 (keyboard shortcuts), 25, 28, 48, 165, 353
+- Key事件 (`key events`), 164–165
+  - `CodeEditor`, 164
+  - `MyEdit`, 169
+  - `Plotter`, 128
+  - `QWidget`, 128, 164
+- `keyReleaseEvent(QWidget)`, 164
+- 键盘驱动 (`keyboard drivers`), 441, 442
+- 键盘焦点 (`keyboard focus`). 参见焦点 (`focus`)
+- 键盘快捷键 (`keyboard shortcuts`), 25, 28, 48, 165, 353
 - Keys
-- Alt, 16, 14
-- Backtab, 164
-- Ctrl, 111, 114
-- Enter, 247
-- Esc, 55, 247
-- F2, 228, 305
-- Home, 164
-- Shift, 111, 164
-- Space, 168
-- Tab, 120, 164
-- keys()
-- 关联常量 (associative constants), 261, 263
-- CursorPlugin, 401
+  - Alt, 16, 14
+  - Backtab, 164
+  - Ctrl, 111, 114
+  - Enter, 247
+  - Esc, 55, 247
+  - F2, 228, 305
+  - Home, 164
+  - Shift, 111, 164
+  - Space, 168
+  - Tab, 120, 164
+- `keys()`
+  - 关联常量 (`associative constants`), 261, 263
+  - `CursorPlugin`, 401
 - 高棉语 (Khmer), 362
-- killIdentifier(QObject), 168
+- `killIdentifier(QObject)`, 168
 
 ## L
 
 - 罗迪亚数据 (Lraldis Datakon), 415
 - KOI8, 365
 - 韩语 (Korean), 362
-- 左 (left(QString)), 266, 267
-- 左列 (leftColumn())
-- 抽象范围 (QAbstractselectionRange), 64
-- 左鼠标按钮 (left mouse button), 111, 201, 208
-- 长度 (length(QString)), 265, 268
-- 库 (libraries), 399, 456
-- 条目项 (libEntry(.pro.files)), 399
-- 许可 (licensing), 447–448
-- 行编辑器 (line editors), 399
-- 换行符 (line-ending conventions), 279, 285
-- 行定向协议 (line-oriented protocols), 322, 332
-- 线性渐变 (linear gradients), 179, 187
-- 翻译器 (Linguist). 参见 Qt Linguist
-- LinkAction(Qt), 209
-- 链接错误 (link errors), 19, 456, 460, 463
-- 链表 (linked lists), 252–253
-- 链接器 (linkser), 452, 454
+- 左 (`left(QString)`), 266, 267
+- 左列 (`leftColumn()`)
+  - 抽象范围 (`QAbstractselectionRange`), 64
+- 左鼠标按钮 (`left mouse button`), 111, 201, 208
+- 长度 (`length(QString)`), 265, 268
+- 库 (`libraries`), 399, 456
+- 条目项 (`libEntry(.pro.files)`), 399
+- 许可 (`licensing`), 447–448
+- 行编辑器 (`line editors`), 399
+- 换行符 (`line-ending conventions`), 279, 285
+- 行定向协议 (`line-oriented protocols`), 322, 332
+- 线性渐变 (`linear gradients`), 179, 187
+- 翻译器 (`Linguist`). 参见 Qt Linguist
+- `LinkAction(Qt)`, 209
+- 链接错误 (`link errors`), 19, 456, 460, 463
+- 链表 (`linked lists`), 252–253
+- 链接器 (`linkser`), 452, 454
 - Linux, 415–419, 449–450
-- 列表 (list(Qf)), 314, 317
-- 列表信息 (listInfo(Qf)), 316, 317
-- 列表模型 (list models), 230
-- 列表视图 (list views), 38, 218, 226
-- 列表控件 (list widgets), 36, 144, 207, 218, 220
-- 监听 (listen(QAbstractsocket)), 332
+- 列表 (`list(Qf)`), 314, 317
+- 列表信息 (`listInfo(Qf)`), 316, 317
+- 列表模型 (`list models`), 230
+- 列表视图 (`list views`), 38, 218, 226
+- 列表控件 (`list widgets`), 36, 144, 207, 218, 220
+- 监听 (`listen(QAbstractsocket)`), 332
 - 列表列表, 253
-- 小端序 (little-endian), 275, 363, 457, 475
-- load()
-- 翻译器 (Translator), 379, 365, 376
-- QUiLoader, 36
-- loadFile(QMainWindow), 56
-- loadPlugins(TextDialog), 410
-- loadData(ThreadStorage<>), 391
-- loadDate(Qt), 370
-- 本地主机地址 (LocalHost(Address)), 325, 335
-- 局部变量 (local variables), 464, 483
-- 本地比较 (localCompare(QString)), 267, 370
-- 本地事件 (local change events), 375
-- localloc(std), 370
-- 本地化 (localization). 参见国际化 (internationalization)
+- 小端序 (`little-endian`), 275, 363, 457, 475
+- `load()`
+  - 翻译器 (`Translator`), 379, 365, 376
+  - `QUiLoader`, 36
+- `loadFile(QMainWindow)`, 56
+- `loadPlugins(TextDialog)`, 410
+- `loadData(ThreadStorage<>)`, 391
+- `loadDate(Qt)`, 370
+- 本地主机地址 (`LocalHost(Address)`), 325, 335
+- 局部变量 (`local variables`), 464, 483
+- 本地比较 (`localCompare(QString)`), 267, 370
+- 本地事件 (`local change events`), 375
+- `localloc(std)`, 370
+- 本地化 (`localization`). 参见国际化 (`internationalization`)
 
 ## L
 
-- 标记圆圈 (LabeledCircle), 462
-- 标签 (labels), 3–38–39
-- 语言更改事件 (language change events), 376
-- 语言菜单 (Language menus), 372, 374–375
-- Qt 支持的语言 (languages supported by Qt), 362
+- 标记圆圈 (`LabeledCircle`), 462
+- 标签 (`labels`), 3–38–39
+- 语言更改事件 (`language change events`), 376
+- 语言菜单 (`Language menus`), 372, 374–375
+- Qt 支持的语言 (`languages supported by Qt`), 362
 - 老挝语 (Lao), 362
-- 最后 (last(QQuery)), 295
+- 最后 (`last(QQuery)`), 295
 - Latin-1, 265, 296–365
 - Latin-9. 参见 ISO 8859-15
-- 启动外部程序 (launching external programs), 287
-- 布局管理器 (layout managers)
-
-- 框 (box), 25, 140
-- 与手动布局对比 (compared with manual layout), 125
-- 138–140
-- 网格布局 (grid), 90, 32, 130–141
-- 在 Qt Designer 中 (in Qt Designer), 25, 30, 32, 141
-- 边距和间距 (margin and spacing), 140
-- 嵌套 (nesting), 17, 140
-- 在普通控件上 (on plain widget), 73
-- 从右到左 (right-to-left), 190, 370, 369
-- 尺寸提示 (size hints), 17, 35, 53, 107, 121, 140
-142–148
-- 尺寸策略 (size policies), 107, 120, 142
-- 间距项 (spacer items), 17, 24, 141
-- 伸缩因子 (stretch factors), 144
-
-
-
-
+- 启动外部程序 (`launching external programs`), 287
+- 布局管理器 (`layout managers`)
+  - 框 (`box`), 25, 140
+  - 与手动布局对比 (`compared with manual layout`), 125
+  - 138–140
+  - 网格布局 (`grid`), 90, 32, 130–141
+  - 在 Qt Designer 中 (`in Qt Designer`), 25, 30, 32, 141
+  - 边距和间距 (`margin and spacing`), 140
+  - 嵌套 (`nesting`), 17, 140
+  - 在普通控件上 (`on plain widget`), 73
+  - 从右到左 (`right-to-left`), 190, 370, 369
+  - 尺寸提示 (`size hints`), 17, 35, 53, 107, 121, 140
+  - 142–148
+  - 尺寸策略 (`size policies`), 107, 120, 142
+  - 间距项 (`spacer items`), 17, 24, 141
+  - 伸缩因子 (`stretch factors`), 144
 
 # 索引
 
 ## M
-- macHandle(QPixmap), 418
-- macEvent(QWidget), 419
-- macEventFilter(QApplication), 419
+
+- `macHandle(QPixmap)`, 418
+- `macEvent(QWidget)`, 419
+- `macEventFilter(QApplication)`, 419
 - Mac OS, 415–419
-- macQDAlphaHandle(QPixmap), 418
-- macQHandle(QPixmap), 418
+- `macQDAlphaHandle(QPixmap)`, 418
+- `macQHandle(QPixmap)`, 418
 - Mac style, 114
-- macVersion(QSysInfo), 417
-- macros, 486–487
-- MagicNumber (Spreadsheet), 76, 81
-- MainClient, 146–148
+- `macVersion(QSysInfo)`, 417
+- `macros`, 486–487
+- `MagicNumber` (`Spreadsheet`), 76, 81
+- `MainClient`, 146–148
 - Main client, 146–148
-- main()
-    - arg and argv 参数, 3, 160
-    - 针对 Active 应用, 427, 430
-    - 针对 C++ 程序, 453
-    - 针对控制应用程序, 311
-    - 针对数据库应用程序, 294
-    - 针对国际化应用程序, 368
-    - 针对 MDI 应用程序, 160
-    - 针对 SDI , 69
-    - 针对简单的 Qt 应用, 3
-    - 针对 Spreadsheet 示例, 68
-- MainForm
-    - 类定义, 304
-    - MainForm(), 305
-    - addChild(), 307
-    - addTrack(), 308
-    - beforeInsertChild(), 307
-    - beforeInsertTrack(), 309
-    - currentChanged(), 306
-    - deleteChild(), 307
-    - deleteTrack(), 309
-    - editorEditors(), 309
-    - refreshHeader(), 309
-    - 主布局, 127
-    - 主线程, 391
-- MainWindow
-    - 类定义, 44–45, 205
-    - MainWindow(), 46, 70, 154, 372
-    - about(), 66
-    - activeEditor(), 155
-    - closeEvent(), 57, 157
-    - createActions(), 48, 70, 373
-    - createContextMenu(), 51
-    - createEditor(), 154
-    - createLanguageMenu(), 374
-    - createMenus(), 50, 156, 373
-    - createStatusbar(), 53
-- MainWindow (续)
-    - createToolBars(), 52
-    - cut(), 155
-    - find(), 61
-    - gToGoCell(), 62
-    - loadFile(), 56
-    - newFile(), 54, 69, 154
-    - otContinue(), 55
-    - open(), 155
-    - openRecentFile(), 60
-    - readSettings(), 67, 152
-    - retranslateUi(), 373
-    - save(), 57, 155
-    - saveAs(), 57
-    - saveFile(), 57
-    - setCurrent(), 58
-    - sort(), 64–66
-    - spreadsheetModified(), 54
-    - strippedName(), 58
-    - switchLanguage(), 395
-    - updateMenu(), 155
-    - updateRecentFileActions(), 59
-    - updateStatusbar(), 54
-    - writeSettings(), 67, 152
-    - 主窗口, 44–47, 68–71, 73, 150–161
-- makeFiles, 4, 128
-- makef, 442
+- `main()`
+  - `arg and argv` 参数, 3, 160
+  - 针对 Active 应用, 427, 430
+  - 针对 C++ 程序, 453
+  - 针对控制应用程序, 311
+  - 针对数据库应用程序, 294
+  - 针对国际化应用程序, 368
+  - 针对 MDI 应用程序, 160
+  - 针对 SDI , 69
+  - 针对简单的 Qt 应用, 3
+  - 针对 Spreadsheet 示例, 68
+- `MainForm`
+  - 类定义, 304
+  - `MainForm()`, 305
+  - `addChild()`, 307
+  - `addTrack()`, 308
+  - `beforeInsertChild()`, 307
+  - `beforeInsertTrack()`, 309
+  - `currentChanged()`, 306
+  - `deleteChild()`, 307
+  - `deleteTrack()`, 309
+  - `editorEditors()`, 309
+  - `refreshHeader()`, 309
+  - 主布局, 127
+  - 主线程, 391
+- `MainWindow`
+  - 类定义, 44–45, 205
+  - `MainWindow()`, 46, 70, 154, 372
+  - `about()`, 66
+  - `activeEditor()`, 155
+  - `closeEvent()`, 57, 157
+  - `createActions()`, 48, 70, 373
+  - `createContextMenu()`, 51
+  - `createEditor()`, 154
+  - `createLanguageMenu()`, 374
+  - `createMenus()`, 50, 156, 373
+  - `createStatusbar()`, 53
+- `MainWindow` (续)
+  - `createToolBars()`, 52
+  - `cut()`, 155
+  - `find()`, 61
+  - `gToGoCell()`, 62
+  - `loadFile()`, 56
+  - `newFile()`, 54, 69, 154
+  - `otContinue()`, 55
+  - `open()`, 155
+  - `openRecentFile()`, 60
+  - `readSettings()`, 67, 152
+  - `retranslateUi()`, 373
+  - `save()`, 57, 155
+  - `saveAs()`, 57
+  - `saveFile()`, 57
+  - `setCurrent()`, 58
+  - `sort()`, 64–66
+  - `spreadsheetModified()`, 54
+  - `strippedName()`, 58
+  - `switchLanguage()`, 395
+  - `updateMenu()`, 155
+  - `updateRecentFileActions()`, 59
+  - `updateStatusbar()`, 54
+  - `writeSettings()`, 67, 152
+  - 主窗口, 44–47, 68–71, 73, 150–161
+- `makeFiles`, 4, 128
+- `makef`, 442
 - Malayalam, 362
-- manhattanDistance(), 467
-- manhattanLength() (QPoint), 208
+- `manhattanDistance()`, 467
+- `manhattanLength()` (`QPoint`), 208
 - 操纵, 280, 478, 489
 - 手动布局, 125, 139
-- mapK, 1 (std), 262
-- maps, 220–261
-- 边距 (footer), 118
+- `mapK`, 1 (`std`), 262
+- `maps`, 220–261
+- 边距 (`footer`), 118
 - 边距 (布局中), 140
 - 主从视图, 304
-- Maximum (GSizePolicy), 142
-- 最大属性 (QProgressBar), 325
+- Maximum (`GSizePolicy`), 142
+- 最大属性 (`QProgressBar`), 325
 - 最大尺寸, 140, 143
 - MDI, 71, 74, 152–161
 - MIDI Editor 示例, 153–160
 - Media Player 示例, 419–423
-- memcpy(), 170
+- `memcpy()`, 170
 - 内存地址, 464, 466
 - 内存管理, 4, 28, 70, 464–465
-- menubar(QMainWindow), 50
+- `menubar(QMainWindow)`, 50
 - 菜单
-    - 栏, 46, 50
-    - 可选动作, 49
-    - 上键菜单, 51–52, 152
-    - 菜单 (续)
-        - 创建, 50–52
-        - 禁用项, 156
-        - 动态, 59–60, 156
-- message()(Transaction), 396
+  - 栏, 46, 50
+  - 可选动作, 49
+  - 上键菜单, 51–52, 152
+  - 菜单 (续)
+    - 创建, 50–52
+    - 禁用项, 156
+    - 动态, 59–60, 156
+- `message()(Transaction)`, 396
 - 消息框, 40–41, 55
-- messages. 参见 event
-- metaObject(object), 226
-- metabject 编译器, 19, 22, 60, 114, 412, 424
+- `messages`. 参见 `event`
+- `metaObject(object)`, 226
+- `metabject` 编译器, 19, 22, 60, 114, 412, 424
 - 事项, 167, 413
 - MFC 迁移, 415
 - Microsoft Internet Explorer, 357, 423
 - MySQL Server, 293
 - Microsoft Visual Basic, 428
-- Microsoft Visual C++ (MSVC), 5, 19, 36, 271, 417
+- Microsoft Visual C++ (`MSVC`), 5, 19, 36, 271, 417
 - Microsoft Visual Studio, 5
-- midid(String), 63, 266
+- `midid(String)`, 63, 266
 - 鼠标按钮, 215
 - 迁移, 415
-- mimeData()
-    - QClipboard, 215
-    - QEvent, 206, 210
-    - MIME 类型, 206–214
-- QGW, 5, 448
-- Minimum(QSizePolicy), 107, 142
-- MinimumExpanding(QSizePolicy), 143
-- 属性 (Size), 325
+- `mimeData()`
+  - `QClipboard`, 215
+  - `QEvent`, 206, 210
+  - MIME 类型, 206–214
+- `QGW`, 5, 448
+- Minimum(`QSizePolicy`), 107, 142
+- MinimumExpanding(`QSizePolicy`), 143
+- 属性 (`Size`), 325
 - 尺寸, 35, 130, 143
-- minimumSizeHint(), QWidget, 17, 123
+- `minimumSizeHint()`, `QWidget`, 17, 123
 - MIP, 439
-- Mirror(Image), 395
-- Mirror(Qt), 177
-- midlr()
-    - QDir, 256
-    - QModel, 228
-- moc, 19, 22, 60, 114, 424
+- Mirror(`Image`), 395
+- Mirror(`Qt`), 177
+- `midlr()`
+  - `QDir`, 256
+  - `QModel`, 228
+- `moc`, 19, 22, 60, 114, 424
 - 模态对话, 62–63, 355
-- model–view–controller(MVC), 217
-- model 类, 225, 232, 293
-- model index, 226
-- modelView 架构, 217–218, 248
+- `model–view–controller(MVC)`, 217
+- `model` 类, 225, 232, 293
+- `model index`, 226
+- `modelView` 架构, 217–218, 248
 - 修改对话框, 75, 80
 - 修改文档, 54, 58, 159, 160
-- modified(KeyEvent), 128, 164
+- `modified(KeyEvent)`, 128, 164
 - Mongolian, 362
 - 监控事件, 168–171, 419
 - 最近使用文件, 50, 59–60
@@ -15679,28 +16408,34 @@ GIF, 46
 - 鼠标按钮, 111, 201, 215
 - 鼠标光标, 81, 126, 127
 - 鼠标驱动, 441, 442
-- mouseMove()
-    - IconEditor, 111
-    - MyWidget, 211
-- mousePressEvent()
-    - IconEditor, 111
-    - myTimer, 185
-- mouseReleaseEvent()
-    - QWidget, 126, 215
+- `mouseMove()`
+  - `IconEditor`, 111
+  - `MyWidget`, 211
+- `mousePressEvent()`
+  - `IconEditor`, 111
+  - `myTimer`, 185
+- `mouseReleaseEvent()`
+  - `QWidget`, 126, 215
 - 鼠标跟踪, 111
 - 鼠标滚轮, 129
-- moveAction(Qt), 209
-- moveTo(Object), 392
-- Movie, 254
+- `moveAction(Qt)`, 209
+- `moveTo(Object)`, 392
+- `Movie`, 254
 - MRU 文件: 参见 recently files
 - MS (Windows), 418
 - Mule-Lao, 165
 - 多哈希, 262
-- 多行编辑器. 参见 QTextEdit
+- 多行编辑器. 参见 `QTextEdit`
 - 多重映射, 261
 - 多页对话, 36
 - 多路数据库连接, 297
-- 多文档接口 (MDI), 71, 74, 152–161
+
+
+
+# 索引
+
+## 多文档接口 (MDI), 71, 74, 152–161
+
 - 多文档, 68–71, 462
 - 多重继承, 27, 28, 411, 424
 - 多线程, 381–397
@@ -15708,32 +16443,34 @@ GIF, 46
 - 可变 关键字, 92, 905, 476
 - 互斥锁, 385, 387, 390
 - MVC (model–view–controller), 217
-- MyInteger, 477
-- MyVector, 477
+- `MyInteger`, 477
+- `MyVector`, 477
 - MySQL, 293
-- MyTable
-    - dropEvent(), 212
-- MyTableWidget (续)
-    - mouseMoveEvent(), 211
-    - numCopies(QPrinter), 196
-- startDrag(), 211
-- numRowsAffected(QSqlQuery), 295
-- toCsv(), 211
-- number(QString), 70, 266
-- toHtml(), 211
+- `MyTable`
+  - `dropEvent()`, 212
+- `MyTableWidget` (续)
+  - `mouseMoveEvent()`, 211
+  - `numCopies(QPrinter)`, 196
+- `startDrag()`, 211
+- `numRowsAffected(QSqlQuery)`, 295
+- `toCsv()`, 211
+- `number(QString)`, 70, 266
+- `toHtml()`, 211
 
 ## N
-- name()(IEditorPlugin), 114
+
+- `name()(IEditorPlugin)`, 114
 - 无名数据库连接, 297
 
 ## O
+
 - 对象 (Java and C#), 461
 - 对象文件, 452
 - 命名空间
-    - objectSafetyImpl, 426–427
-    - C++, 454, 484–485
+  - `objectSafetyImpl`, 426–427
+  - C++, 454, 484–485
 - 对象
-    - XML, 339, 342
+  - XML, 339, 342
 - 动态成本, 60, 476
 - 原生 APIs, 415–437
 - 事件处理, 163–173
@@ -15747,2984 +16484,5109 @@ GIF, 46
 - 信号与槽机制, 28, 63, 68–70, 460, 464, 480
 - 智能指针, 465
 - 八进制数, 281
-- [] 运算符, 470
+- `[]` 运算符, 470
 - ODBC, 293
-- offset(CityModel), 238
-- okToContinue()
-    - MainWindow, 54, 191, 192
-    - newPage(QPrinter), 191, 192
-    - 样式案例, 60, 476
-    - 新行, 279, 285
+- `offset(CityModel)`, 238
+- `okToContinue()`
+  - `MainWindow`, 54, 191, 192
+  - `newPage(QPrinter)`, 191, 192
+  - 样式案例, 60, 476
+  - 新行, 279, 285
 - OLE_COL (Windows), 421
-- letter. Qt (ConvertDialog), 288, 289
-- on_convert_clicked()
-    - Java 样式迭代器, 255, 262
-- on_lineEditText()
-    - QSqlQuery, 295
+- `letter. Qt (ConvertDialog)`, 288, 289
+- `on_convert_clicked()`
+  - Java 样式迭代器, 255, 262
+- `on_lineEditText()`
+  - `QSqlQuery`, 295
 - 单次迭代器, 166
-- nextSibling(QDomNode), 348
+- `nextSibling(QDomNode)`, 348
 - 在线文档, 9–11, 990
 - 在线帮助, 351–357
 - 透明度, 160, 189, 190
-- Number, 239–240
-- Opaque(Qt), 180
-- fromIndex(RegExp), 241
-- NoEdit(AbstractItem), 222
-- Editor, 159
-- NoError(File), 279
-- MainWindow, 55
+- `Number`, 239–240
+- `Opaque(Qt)`, 180
+- `fromIndex(RegExp)`, 241
+- `NoEdit(AbstractItem)`, 222
+- `Editor`, 159
+- `NoError(File)`, 279
+- `MainWindow`, 55
 - 空指针, 464
-- Null (QChar), 94, 95
-- (Qt), 177
-- 非阻塞 I/O. 异步 I/O, QDevice, 81, 82, 274, 280
+- `Null (QChar)`, 94, 95
+- `(Qt)`, 177
+- 非阻塞 I/O. 异步 I/O, `QDevice`, 81, 82, 274, 280
 - 非商业版 Qt, 447–448
 - 非常量迭代器, 254, 255, 256, 258
 - 非可变, 256, 257, 258
 - 非验证 XML 解析器, 339, 344
 - 操作系统, 417
-- 标准化(QAbstract), 123, 126
+- 标准化(`QAbstract`), 123, 126
 - 西北重力. 参见
-- notify(QCoreApplication), 170
+- `notify(QCoreApplication)`, 170
 - OpenGL, 198–203
 - 有序容器. 参见 maps
-- ostream (std), 478
-- Oven Timer
-    - 类定义, 184
-    - 打印, 191
-    - OvenTimer, 184
-    - draw(), 186–187
-    - duration(), 185
-    - mouseMouseEvent(), 185
-    - paintEvent(), 185
-    - setDuration(), 184
-    - timeout(), 183
-    - Oven Timer 示例, 183–188
-    - 载载运算符, 89, 479–487
-    - 覆盖光标, 81, 126
-    - override 关键字 (C#), 462
+- `ostream (std)`, 478
+- `Oven Timer`
+  - 类定义, 184
+  - 打印, 191
+  - `OvenTimer`, 184
+  - `draw()`, 186–187
+  - `duration()`, 185
+  - `mouseMouseEvent()`, 185
+  - `paintEvent()`, 185
+  - `setDuration()`, 184
+  - `timeout()`, 183
+  - `Oven Timer` 示例, 183–188
+  - 载载运算符, 89, 479–487
+  - 覆盖光标, 81, 126
+  - `override` 关键字 (C#), 462
 - 父
-    - 对话框, 56
-    - 验证器, 28
-    - 控件, 7, 28
-    - 项, 79, 224, 231, 242, 347
-    - 对象, 28
-- parent()
-    - QIndex, 231
-    - RegExpModel, 242
-    - 父 参数, 14, 16
-    - parse() (QSimpleReader), 344
-    - parseEntry() (DomParser), 347
-    - parseFile()
-        - DOM 解析器示例, 348
-        - SAX 处理器示例, 343
-        - 解析器, 96, 238, 280, 339
-        - 解析事件, 339–340
-- paste()
-    - QEdit, 215
-    - Spreadsheet, 84
-    - PATH 环境变量, 4, 357, 434, 450
-    - paths. 参见 QPainter
-- PatternSyntax
-    - Qbgexp, 229
-    - Qoffset (QPainter), 191
-    - PE_FocusRect(QStyle), 124
-    - peek() (QIODevice), 279, 403
-    - pendingDatagramSize() (QdpSocket), 336
-    - 等待事件, 173
-    - pents, 176
-    - 百分 (‰), 59, 265–266
-    - 物理条件, 180–182
-    - 图片 (X11), 418
-    - 饼图区域, 176, 178
-    - 像素矩形 (QIconDevice), 110
-    - pimap (X11), 418
-    - pmap() (QClipboard), 215
-    - pipmaps, 178
-    - 位符 (SQL), 295–296
-    - Plastique 样式, 11, 124
-    - 平台特定 APIs, 415–437
-- PlayerWindow
-    - 类定义, 420
-    - PlayerWindow(), 420
-    - timerEvent(), 422
-- PlotSettings
-    - 类定义, 118
-    - PlotSettings(), 132
-    - adjust(), 132
-    - adjustAxis(), 132
-    - scroll(), 132
-    - spanX(), 118
-
-
-
-
+  - 对话框, 56
+  - 验证器, 28
+  - 控件, 7, 28
+  - 项, 79, 224, 231, 242, 347
+  - 对象, 28
+- `parent()`
+  - `QIndex`, 231
+  - `RegExpModel`, 242
+  - 父 参数, 14, 16
+  - `parse() (QSimpleReader)`, 344
+  - `parseEntry() (DomParser)`, 347
+  - `parseFile()`
+    - DOM 解析器示例, 348
+    - SAX 处理器示例, 343
+    - 解析器, 96, 238, 280, 339
+    - 解析事件, 339–340
+- `paste()`
+  - `QEdit`, 215
+  - `Spreadsheet`, 84
+  - `PATH` 环境变量, 4, 357, 434, 450
+  - `paths`. 参见 `QPainter`
+- `PatternSyntax`
+  - `Qbgexp`, 229
+  - `Qoffset (QPainter)`, 191
+  - `PE_FocusRect(QStyle)`, 124
+  - `peek() (QIODevice)`, 279, 403
+  - `pendingDatagramSize() (QdpSocket)`, 336
+  - 等待事件, 173
+  - `pents`, 176
+  - 百分 (‰), 59, 265–266
+  - 物理条件, 180–182
+  - 图片 (X11), 418
+  - 饼图区域, 176, 178
+  - 像素矩形 (`QIconDevice`), 110
+  - `pimap (X11)`, 418
+  - `pmap() (QClipboard)`, 215
+  - `pimpaps`, 178
+  - 位符 (SQL), 295–296
+  - `Plastique` 样式, 11, 124
+  - 平台特定 APIs, 415–437
+- `PlayerWindow`
+  - 类定义, 420
+  - `PlayerWindow()`, 420
+  - `timerEvent()`, 422
+- `PlotSettings`
+  - 类定义, 118
+  - `PlotSettings()`, 132
+  - `adjust()`, 132
+  - `adjustAxis()`, 132
+  - `scroll()`, 132
+  - `spanX()`, 118
 
 ## 512
+
 # 索引
 
-PlotSettings (续)
-spanY(), 118
-Plotter
+`PlotSettings` (续)
+
+`spanY()`, 118
+
+`Plotter`
+
 类定义, 117
-Margin, 118
-Plotter(), 119
-clearCurve(), 122
-drawCurve(), 123
-drawGrid(), 130
-keyPress(), 128
-minimumSize(), 123
-mouseMouseEvent(), 126
-mousePress(), 125
-mouseRelease(), 126
-paintEvent(), 123
-refreshPixmap(), 129
-resizeEvent(), 124
-setCursor(), 122
-setPlotSettings(), 121
-sizeHint(), 123
-updateRubberBandRegion(), 129
-wheelEvent(), 128
-zoomIn(), 122
-zoomOut(), 122
 
-PowerPC, 439, 457
-predefined models, 225
-PreferenceDialog, 144
-preferences, 67–68, 148, 223
-Preferences example, 144
-Preferred (SizePolicy), 120–143
-premultiplied ARGB format, 189
-prepare(QGL), 295–296
-preprocessor, 455–468
-previewing in Qt Designer, 26
+`Margin`, 118
 
-Previous()
-Java-style iterators, 255, 262
-SqlQuery, 295
-primitive data, 455–457
-print() (QDocument), 193
-printBox() (PrintWriter), 197
-print dialog, 40, 190
-printGuide() (PrintWriter), 192,
-printHtml() (PrintWriter), 193
-printOverTimer(), 191
-printPage() (PrintWriter), 197
-printPages() (PrintWriter), 195
-printWindow
+`Plotter()`, 119
 
-Plotter example, 116–133
-Plug & Paint example, 414
-plugins
+`clearCurve()`, 122
+
+`drawCurve()`, 123
+
+`drawGrid()`, 130
+
+`keyPress()`, 128
+
+`minimumSize()`, 123
+
+`mouseMouseEvent()`, 126
+
+`mousePress()`, 125
+
+`mouseRelease()`, 126
+
+`paintEvent()`, 123
+
+`refreshPixmap()`, 129
+
+`resizeEvent()`, 124
+
+`setCursor()`, 122
+
+`setPlotSettings()`, 121
+
+`sizeHint()`, 123
+
+`updateRubberBandRegion()`, 129
+
+`wheelEvent()`, 128
+
+`zoomIn()`, 122
+
+`zoomOut()`, 122
+
+`PowerPC`, 439, 457
+
+`predefined models`, 225
+
+`PreferenceDialog`, 144
+
+`preferences`, 67–68, 148, 223
+
+`Preferences example`, 144
+
+`Preferred (SizePolicy)`, 120–143
+
+`premultiplied ARGB format`, 189
+
+`prepare(QGL)`, 295–296
+
+`preprocessor`, 455–468
+
+`previewing in Qt Designer`, 26
+
+`Previous()`
+
+`Java-style iterators`, 255, 262
+
+`SqlQuery`, 295
+
+`primitive data`, 455–457
+
+`print() (QDocument)`, 193
+
+`printBox() (PrintWriter)`, 197
+
+`print dialog`, 40, 190
+
+`printGuide() (PrintWriter)`, 192,
+
+`printHtml() (PrintWriter)`, 193
+
+`printOverTimer()`, 191
+
+`printPage() (PrintWriter)`, 197
+
+`printPages() (PrintWriter)`, 195
+
+`printWindow`
+
+`Plotter example`, 116–133
+
+`Plug & Paint example`, 414
+
+`plugins`
 
 - For Qt, 408–404
-For Qt applications, 408–414
-For Qt Designer, 113–116
+- For Qt applications, 408–414
+- For Qt Designer, 113–116
 
-PNG, 46
-PNM, 46
+`PNG`, 46
 
-Point2D
+`PNM`, 46
+
+`Point2D`
 
 - 拷贝构造函数和赋值
-operator, 481
-inline implementation, 458
-operator overloaded, 478
-out-of-line implementation, 458–459
-usage, 263
-pointers, 463, 466, 468, 469–470
-polygons, 176, 186
-polylines, 132
-polymorphism, 460–462
-pop(QStack()), 253
-populateWidget() (TextDialog),
-411
-populateRandomArray(), 482, 484
-popup menus. Men see
-pop(Q1), 313
-pos(QMouseEvent), 111, 208
-pos(QHttp), 322
-postEvent((QApplication), 396
-PostScript, 191, 442
-PostgreSQL, 293
+  `operator`, 481
+- `inline implementation`, 458
+- `operator overloaded`, 478
+- `out-of-line implementation`, 458–459
+- `usage`, 263
 
-- entryHeight(), 194
-paginate(), 197
-printBox(), 197
-printFlowerGuide(), 192, 193
-printHtml(), 193
-printOverTimer(), 191
-printPage(), 197
-printPages(), 195
-print drivers, 191
-printing, 190–198
-private inheritance, 461
-private section, 458
-.pro files
-creating using make, 4
-debug vs. release mode, 408
-external libraries, 399
-for ActiveX, 422, 428,
-431
-for application applications, 414
-for console applications, 284
-for database applications, 310
-for internationalized applications,
-368, 377
-for network applications, 315
-for OpenGL applications, 203
-for Qt Designer plugins, 116
-for Qt plugins, 408
-for using AssistantClient, 356
-for using QLoader, 36
+`pointers`, 463, 466, 468, 469–470
+
+`polygons`, 176, 186
+
+`polylines`, 132
+
+`polymorphism`, 460–462
+
+`pop(QStack())`, 253
+
+`populateWidget() (TextDialog)`,
+
+411
+
+`populateRandomArray()`, 482, 484
+
+`popup menus. Men see`
+
+`pop(Q1)`, 313
+
+`pos(QMouseEvent)`, 111, 208
+
+`pos(QHttp)`, 322
+
+`postEvent((QApplication)`, 396
+
+`PostScript`, 191, 442
+
+`PostgreSQL`, 293
+
+- `entryHeight()`, 194
+- `paginate()`, 197
+- `printBox()`, 197
+- `printFlowerGuide()`, 192, 193
+- `printHtml()`, 193
+- `printOverTimer()`, 191
+- `printPage()`, 197
+- `printPages()`, 195
+- `print drivers`, 191
+- `printing`, 190–198
+- `private inheritance`, 461
+- `private section`, 458
+- `.pro files`
+  - creating using make, 4
+  - debug vs. release mode, 408
+  - external libraries, 399
+  - for ActiveX, 422, 428,
+    431
+  - for application applications, 414
+  - for console applications, 284
+  - for database applications, 310
+  - for internationalized applications,
+    368, 377
+  - for network applications, 315
+  - for OpenGL applications, 203
+  - for Qt Designer plugins, 116
+  - for Qt plugins, 408
+  - for using AssistantClient, 356
+  - for using QLoader, 36
 
 # 索引
 
-.pro files (续)
+`.pro files` (续)
+
 for XML applications, 344, 348
+
 include path, 399
+
 resources, 47, 121, 286, 370
-processError(ConvertDialog), 290
-processEvents(QApplication),
+
+`processError(ConvertDialog)`, 290
+
+`processEvents(QApplication)`,
+
 171–173
-processFinished(ConvertDialog), 290
-processNextDirectory(QSpider), 316
-processPendingDatagramams(
-WeatherStation), 336
-processes, 287
-producer-consumer_model, 387–390
-programs. See examples
-progress bar, 325
-progress dialogs, 40–41
-Project Chooser event, 207–210
-project files. See .pro files
-ProjectWidget
+
+`processFinished(ConvertDialog)`, 290
+
+`processNextDirectory(QSpider)`, 316
+
+`processPendingDatagramams(WeatherStation)`, 336
+
+`processes`, 287
+
+`producer-consumer_model`, 387–390
+
+`programs. See examples`
+
+`progress bar`, 325
+
+`progress dialogs`, 40–41
+
+`Project Chooser event`, 207–210
+
+`project files. See .pro files`
+
+`ProjectWidget`
+
 class定义, 207
-ProjectWidget(), 208
-ndEnterEvent(), 209
-ndMoveEvent(), 209
-dropEvent(), 210
-mouseMoveEvent(), 209
-mousePressEvent(), 208
-startDrag(), 208
-approach (Qt Designer), 113
-propagation of events, 165, 171, 206
-properties, 22, 24, 105, 422
-property (QObject), 422
-propertyChanged(QAbstractable),
+
+`ProjectWidget()`, 208
+
+`ndEnterEvent()`, 209
+
+`ndMoveEvent()`, 209
+
+`dropEvent()`, 210
+
+`mouseMoveEvent()`, 209
+
+`mousePressEvent()`, 208
+
+`startDrag()`, 208
+
+`approach (Qt Designer)`, 113
+
+`propagation of events`, 165, 171, 206
+
+`properties`, 22, 24, 105, 422
+
+`property (QObject)`, 422
+
+`propertyChanged(QAbstractable)`,
+
 425–426
-proportional resizing, 139
-protected inheritance, 461
-protected section, 458
-protocols. See Internet
-ntypes for C++ functions, 454, 458
-proxy models, 228
-public inheritance, 461
-public section, 458
-pure virtual functions, 408, 461
-PurifyPlus, 457
-push(QStack<T>), 253
-push buttons, 5, 16, 24
-put(QRect), 314
-Q_CLASSINFO(), 428–429
-Q_DECLARE_INTERFACE(), 409
-Q_DECLARE_ATYPE(), 270
-Q_ENUMs(), 420, 424
-Q_EXPORT_PLUGIN(), 115–116, 402, 414
-Q_INTERFACES(), 114, 412
-Q_OBJECT
+
+`proportional resizing`, 139
+
+`protected inheritance`, 461
+
+`protected section`, 458
+
+`protocols. See Internet`
+
+`ntypes for C++ functions`, 454, 458
+
+`proxy models`, 228
+
+`public inheritance`, 461
+
+`public section`, 458
+
+`pure virtual functions`, 408, 461
+
+`PurifyPlus`, 457
+
+`push(QStack<T>)`, 253
+
+`push buttons`, 5, 16, 24
+
+`put(QRect)`, 314
+
+`Q_CLASSINFO()`, 428–429
+
+`Q_DECLARE_INTERFACE()`, 409
+
+`Q_DECLARE_ATYPE()`, 270
+
+`Q_ENUMs()`, 420, 424
+
+`Q_EXPORT_PLUGIN()`, 115–116, 402, 414
+
+`Q_INTERFACES()`, 114, 412
+
+`Q_OBJECT`
+
 for meta-object system, 22
+
 for signals and slots, 14, 21, 44
-for tr(), 16, 36
-running moc, 19
-Q_OS_xxx, 417
-Q_PROPERTY(), 104–105
-Q_WS_xxx, 417
+
+for `tr()`, 16, 36
+
+running `moc`, 19
+
+`Q_OS_xxx`, 417
+
+`Q_PROPERTY()`, 104–105
+
+`Q_WS_xxx`, 417
+
 256, 265
-QAbstractDelegate, 246
-CloseEditor(), 247
-commitData(), 247
-createEditor(), 247
-paint(), 246
-setEditorData(), 247
-setData(), 247
-QAbstractModel, 232, 240
-columnCount(), 233, 236, 242
-createIndex(), 237
-data(), 233, 236, 242, 244
-dataChanged(), 237, 306
-flags(), 237
-headerData(), 234, 236, 243
-index(), 241
-parent(), 242
-ExpChanged(), 243
-removeRows(), 226
-reset(), 224
-rowCount(), 233, 236, 242
-data(), 237
-QAbstractView, 150
-AnyKeyPressed, 220
-ContiguousSelection, 76, 84, 212
-DoubleClicked, 225
-NoEditTriggers, 225
-selectAll(), 86
-selectionModel(), 306
-setTriggers(), 220, 222, 225
-setItemDelegate(), 245
-setModel(), 225
-QAbstractListModel, 232
-QAbstractScrollArea, 38, 39, 177, 150
-QAbstractSocket, 397
-QAbstractTableModel, 232, 235
-AccessibleBridge, 400
-AccessibleBridgePlugin, 400
-Q_ARG(), 397
-Q_CC_xxx, 417
+
+`QAbstractDelegate`, 246
+
+`CloseEditor()`, 247
+
+`commitData()`, 247
+
+`createEditor()`, 247
+
+`paint()`, 246
+
+`setEditorData()`, 247
+
+`setData()`, 247
+
+`QAbstractModel`, 232, 240
+
+`columnCount()`, 233, 236, 242
+
+`createIndex()`, 237
+
+`data()`, 233, 236, 242, 244
+
+`dataChanged()`, 237, 306
+
+`flags()`, 237
+
+`headerData()`, 234, 236, 243
+
+`index()`, 241
+
+`parent()`, 242
+
+`ExpChanged()`, 243
+
+`removeRows()`, 226
+
+`reset()`, 224
+
+`rowCount()`, 233, 236, 242
+
+`data()`, 237
+
+`QAbstractView`, 150
+
+`AnyKeyPressed`, 220
+
+`ContiguousSelection`, 76, 84, 212
+
+`DoubleClicked`, 225
+
+`NoEditTriggers`, 225
+
+`selectAll()`, 86
+
+`selectionModel()`, 306
+
+`setTriggers()`, 220, 222, 225
+
+`setItemDelegate()`, 245
+
+`setModel()`, 225
+
+`QAbstractListModel`, 232
+
+`QAbstractScrollArea`, 38, 39, 177, 150
+
+`QAbstractSocket`, 397
+
+`QAbstractTableModel`, 232, 235
+
+`AccessibleBridge`, 400
+
+
+
+# 索引
 
 ## 514
+
+### AccessibleBridgePlugin, 400
+
+### Q_ARG(), 397
+
+### Q_CC_xxx, 417
+
+### QAccessibleInterface, 400
+
+### AccessiblePlugin, 400
+
+### Action, 48–50
+
+`compared with key events`, 165
+
+`setCheckable()`, 49
+
+`setChecked()`, 156
+
+`setEnabled()`, 156
+
+`setCutoffText()`, 156
+
+`setStatusTip()`, 351
+
+`setToolTip()`, 351
+
+`setVisible()`, 49
+
+`toggled()`, 49
+
+`tiggered()`, 48
+
+### ActionGroup, 49, 155, 156, 375
+
+`qpp` global variable, 50, 170
+
+### qApplication, 3, 312
+
+`in console applications`, 284
+
+`guitLastWindow` property, 58
+
+`subclassing`, 433
+
+`aboutOut()`, 50
+
+`arguments()`, 160
+
+`beep()`, 86
+
+`clipboard()`, 83, 215
+
+`closeAllWindows()`, 70
+
+`commitData()`, 432
+
+`exec()`, 3, 172–371
+
+`hasRenderingEvents()`, 173
+
+`installTranslator()`, 369
+
+`isRightToLeft()`, 370
+
+`isSessionRestored()`, 436, 437
+
+`macEventFilter()`, 419
+
+`notify()`, 170
+
+`processEvents()`, 171–173
+
+`quit()`, 6, 58
+
+`qventFilter()`, 419
+
+`setOverrideCursor()`, 442
+
+`restoreOverrideCursor()`, 80, 126
+
+`savestate()`, 431, 433
+
+`sionID()`, 436
+
+`setKey()`, 436
+
+`setLayoutDirection()`, 80, 126
+
+`setOverrideCursor()`, 124
+
+`startDragStart()`, 218
+
+`style()`, 124
+
+`topLevelWidgets()`, 71
+
+`translate()`, 367
+
+`winEvent()`, 419
+
+`xEventFilter()`, 419
+
+### QAssistantClient, 357
+
+### Q_FACTORY_EXPORT(), 429
+
+### Q_Aggregated, 226
+
+### Q_Base, 220
+
+`dynamicCall()`, 223
+
+`generateDocumentation()`, 221
+
+`queryInterface()`, 223
+
+`querySubObject()`, 223
+
+### Q_Serializable, 223
+
+`createAggregate()`, 226
+
+`propertyChanged()`, 225–426
+
+`requestPropertyChanged()`, 225–426
+
+### Q_CLASS, 429, 431
+
+### Q_Container module, 419–423
+
+### Q_Object, 220, 423
+
+### Q_Server module, 419–433
+
+### Q_ATYPE(), 421, 339
+
+### QWidget(), 420, 223
+
+`binaryFind()`, 263
+
+### QBitArray, 271, 407, 488
+
+### Bitmap, 410, 176
+
+### QBrush, 273, 320
+
+### QByteArray, 269, 273, 279
+
+`constData()`, 269
+
+`data()`, 269
+
+### QCheck(), 162
+
+### QDBStyle, 124
+
+### Char, 265, 362
+
+`isX()`, 363
+
+`unicode()`, 363
+
+### Null, 95
+
+`tolatinIn()`, 363
+
+### QCheckBox, 37
+
+### QClipboard, 215
+
+`setText()`, 83
+
+`text()`, 85
+
+### QCloseEvent, 58, 157, 159, 384
+
+### QColor, 106, 110, 229
+
+### QDialog, 39, 202
+
+### QColorMap, 418
+
+### ComboBox, 39
+
+`addItem()`, 35, 229
+
+`currentIndex()`, 64–65
+
+### compress(), 279
+
+### q-config option, 441
+
+### QConicalGradient, 186
+
+### QChannel, 440
+
+### Copy(), 264
+
+### QCoreApplication, 312
+
+`arguments()`, 312
+
+`postEvent()`, 396
+
+`removePostedEvent()`, 396
+
+### Q_AGG_IUNK, 426
+
+### Q_FACTORY_BEGIN(), 429, 431
+
+### Q_FACTORY_DEFAULT(), 425, 427, 429
+
+### Q_FACTORY_END(), 429, 431
+
 # 索引
 
-QAccessibleInterface, 400
-AccessiblePlugin, 400
-Action, 48–50
-compared with key events, 165
-setCheckable(), 49
-setChecked(), 156
-setEnabled(), 156
-setCutoffText(), 156
-setStatusTip(), 351
-setToolTip(), 351
-setVisible(), 49
-toggled(), 49
-tiggered(), 48
-ActionGroup, 49, 155, 156, 375
-qpp global variable, 50, 170
-qApplication, 3, 312
-in console applications, 284
-guitLastWindow property, 58
-subclassing, 433
-aboutOut(), 50
-arguments(), 160
-beep(), 86
-clipboard(), 83, 215
-closeAllWindows(), 70
-commitData(), 432
-exec(), 3, 172–371
-hasRenderingEvents(), 173
-installTranslator(), 369
-isRightToLeft(), 370
-isSessionRestored(), 436, 437
-macEventFilter(), 419
-notify(), 170
-processEvents(), 171–173
-quit(), 6, 58
-qventFilter(), 419
-setOverrideCursor(), 442
-restoreOverrideCursor(), 80, 126
-savestate(), 431, 433
-sionID(), 436
-setKey(), 436
-setLayoutDirection(), 80, 126
-setOverrideCursor(), 124
-startDragStart(), 218
-style(), 124
-topLevelWidgets(), 71
-translate(), 367
-winEvent(), 419
-xEventFilter(), 419
-QAssistantClient, 357
-Q_FACTORY_EXPORT(), 429
-Q_Aggregated, 226
-Q_Base, 220
-dynamicCall(), 223
-generateDocumentation(), 221
-queryInterface(), 223
-querySubObject(), 223
-Q_Serializable, 223
-createAggregate(), 226
-propertyChanged(), 225–426
-requestPropertyChanged(), 225–426
-Q_CLASS, 429, 431
-Q_Container module, 419–423
-Q_Object, 220, 423
-Q_Server module, 419–433
-Q_ATYPE(), 421, 339
-QWidget(), 420, 223
-binaryFind(), 263
-QBitArray, 271, 407, 488
-Bitmap, 410, 176
-QBrush, 273, 320
-QByteArray, 269, 273, 279
-constData(), 269
-data(), 269
-QCheck(), 162
-QDBStyle, 124
-Char, 265, 362
-isX(), 363
-unicode(), 363
-Null, 95
-tolatinIn(), 363
-QCheckBox, 37
-QClipboard, 215
-setText(), 83
-text(), 85
-QCloseEvent, 58, 157, 159, 384
-QColor, 106, 110, 229
-QDialog, 39, 202
-QColorMap, 418
-ComboBox, 39
-addItem(), 35, 229
-currentIndex(), 64–65
-compress(), 279
-q-config option, 441
-QConicalGradient, 186
-QChannel, 440
-Copy(), 264
-QCoreApplication, 312
-arguments(), 312
-postEvent(), 396
-removePostedEvent(), 396
-Q_AGG_IUNK, 426
-Q_FACTORY_BEGIN(), 429, 431
-Q_FACTORY_DEFAULT(), 425, 427, 429
-Q_FACTORY_END(), 429, 431
+## 515
 
-# 索引
-515
-QApplication (续)
-removePostedEvents(), 396
-Cursor, 418
-QDataStream
-binary format, 81, 274, 275
-container classes, 251
-custom types, 271
-a on byte array, 326
-a on a socket, 223, 331
-supported data types, 274
-syntax, 81
-versioning, 81
-with QCOP, 400–441
-Qt_4_1, 81, 275, 277
-readData(), 276
-setOrder(), 404
-setVersion(), 81, 274, 275, 277–278
-skipData(), 404
-writeData(), 277
-QDate, 370
-QDateEdit, 39
-QTime, 185, 370
-QTimeEdit, 39, 370
-debug(), 266
-Decoration, 442
-QDecorationPlugin, 442
-QDeleteAll(), 240, 264
-QDesignerCustomInterface, 114
-create(), 115
-group(), 115
-icon(), 115
-includeFile(), 114
-IsContainer(), 115
-name(), 114
-toolTip(), 115
-whatThis(), 115
-QDial, 39
-QDialog, 14
-subclassing, 14, 27, 33, 34
-Accepted, 28, 63
-Rejected, 63
-accept(), 28, 33, 63
-done(), 220, 222
-exec(), 62–63
-reject(), 28, 33, 63
-setModal(), 62, 172
-QDir, 228, 285
-convertSeparators(), 286
-currentPath(), 286
-entryInfoList(), 286
-entryId(), 285
-exists(), 286
-homePath(), 286
+### QApplication (续)
 
-QDir (续)
-mkdir(), 286
-rename(), 286
-rmdir(), 286
-separator(), 289
-QModel, 225, 226–228
-QDocWidget, 150–151
-QDocument, 346
-createElement(), 348
-createTextNode(), 348
-documentElement(), 346
-setContent(), 346
-QDomElement, 345, 346
-QNode, 346
-appendChild(), 349
-firstChild(), 348
-nextSibling(), 348
-save(), 348
-toElement(), 346
-toText(), 347
-QDomText, 345
-QDoubleSpinBox, 39
-QDoubleValidator, 28
-QDrag, 209
-QEnterEvent, 206, 209
-accept(), 209
-acceptProposedAction(), 206
-mimeData(), 206
-setDropAction(), 209
-source(), 209
-DragMoveEvent, 209
-accept(), 209
-setDropAction(), 209
-QEvent
-mimeData(), 210
-setDropAction(), 210
-terMessage, 40–41
-QEvent, 418
-accept(), 58, 157, 159, 384
-ignore(), 58, 157, 159
-type(), 163, 164
-QEventLoop, 172
-QFile, 80, 273, 317, 344
-implicit close, 275
-implicit open, 344
-QError, 279
-close(), 291
-error(), 279
-errorString(), 80, 82
-exists(), 286
-open(), 81, 82, 274, 280
-remove(), 286
-QFileDialog, 40
+`removePostedEvents()`, 396
 
+### Cursor, 418
 
+### QDataStream
 
+`binary format`, 81, 274, 275
 
+`container classes`, 251
+
+`custom types`, 271
+
+`a on byte array`, 326
+
+`a on a socket`, 223, 331
+
+`supported data types`, 274
+
+`syntax`, 81
+
+`versioning`, 81
+
+`with QCOP`, 400–441
+
+`Qt_4_1`, 81, 275, 277
+
+`readData()`, 276
+
+`setOrder()`, 404
+
+`setVersion()`, 81, 274, 275, 277–278
+
+`skipData()`, 404
+
+`writeData()`, 277
+
+### QDate, 370
+
+### QDateEdit, 39
+
+### QTime, 185, 370
+
+### QTimeEdit, 39, 370
+
+`debug()`, 266
+
+### Decoration, 442
+
+### QDecorationPlugin, 442
+
+### QDeleteAll(), 240, 264
+
+### QDesignerCustomInterface, 114
+
+`create()`, 115
+
+`group()`, 115
+
+`icon()`, 115
+
+`includeFile()`, 114
+
+`IsContainer()`, 115
+
+`name()`, 114
+
+`toolTip()`, 115
+
+`whatThis()`, 115
+
+### QDial, 39
+
+### QDialog, 14
+
+`subclassing`, 14, 27, 33, 34
+
+`Accepted`, 28, 63
+
+`Rejected`, 63
+
+`accept()`, 28, 33, 63
+
+`done()`, 220, 222
+
+`exec()`, 62–63
+
+`reject()`, 28, 33, 63
+
+`setModal()`, 62, 172
+
+### QDir, 228, 285
+
+`convertSeparators()`, 286
+
+`currentPath()`, 286
+
+`entryInfoList()`, 286
+
+`entryId()`, 285
+
+`exists()`, 286
+
+`homePath()`, 286
+
+### QDir (续)
+
+`mkdir()`, 286
+
+`rename()`, 286
+
+`rmdir()`, 286
+
+`separator()`, 289
+
+### QModel, 225, 226–228
+
+### QDocWidget, 150–151
+
+### QDocument, 346
+
+`createElement()`, 348
+
+`createTextNode()`, 348
+
+`documentElement()`, 346
+
+`setContent()`, 346
+
+### QDomElement, 345, 346
+
+### QNode, 346
+
+`appendChild()`, 349
+
+`firstChild()`, 348
+
+`nextSibling()`, 348
+
+`save()`, 348
+
+`toElement()`, 346
+
+`toText()`, 347
+
+### QDomText, 345
+
+### QDoubleSpinBox, 39
+
+### QDoubleValidator, 28
+
+### QDrag, 209
+
+### QEnterEvent, 206, 209
+
+`accept()`, 209
+
+`acceptProposedAction()`, 206
+
+`mimeData()`, 206
+
+`setDropAction()`, 209
+
+`source()`, 209
+
+### DragMoveEvent, 209
+
+`accept()`, 209
+
+`setDropAction()`, 209
+
+### QEvent
+
+`mimeData()`, 210
+
+`setDropAction()`, 210
+
+### terMessage, 40–41
+
+### QEvent, 418
+
+`accept()`, 58, 157, 159, 384
+
+`ignore()`, 58, 157, 159
+
+`type()`, 163, 164
+
+### QEventLoop, 172
+
+### QFile, 80, 273, 317, 344
+
+`implicit close`, 275
+
+`implicit open`, 344
+
+### QError, 279
+
+`close()`, 291
+
+`error()`, 279
+
+`errorString()`, 80, 82
+
+`exists()`, 286
+
+`open()`, 81, 82, 274, 280
+
+`remove()`, 286
+
+### QFileDialog, 40
 
 ## 516
+
 # 索引
 
 ## QFileDialog（续）
-- DontConfirmOverwrite, 57
-- getOpenFileName(), 56, 159, 289
-- saveFileName(), 57
+
+`DontConfirmOverwrite`, 57
+
+`getOpenFileName()`, 56, 159, 289
+
+`saveFileName()`, 57
 
 ## QFileInfo, 58, 285
-- fill(), 263
-- find(), 263
-- getDirectory<>, 263
-- setFlags<>, 474
+
+`fill()`, 263
+
+`find()`, 263
+
+`getDirectory<>`, 263
+
+`setFlags<>`, 474
 
 ## Font, 176, 418
+
 ## FontDialog, 413
+
 ## FontMetrics, 167, 413
 
 ## Frame, 372
 
 ## Ftp, 311
-- cd(), 314, 317
-- close(), 313, 314
-- commandFinished(), 314
-- commandStarted(), 314
-- connectTo(), 313, 314, 316
-- done(), 313, 314, 315
-- get(), 313, 314, 317
-- list(), 314, 317
-- listInfo(), 316, 317
-- login(), 313, 314, 316
-- mkdir(), 314
-- put(), 314
-- rawCommand(), 314
-- read(), 320
-- readAll(), 320
-- readReady(), 320
-- remove(), 314
-- rename(), 314
-- rmdir(), 314
-- stateChanged(), 315
+
+`cd()`, 314, 317
+
+`close()`, 313, 314
+
+`commandFinished()`, 314
+
+`commandStarted()`, 314
+
+`connectTo()`, 313, 314, 316
+
+`done()`, 313, 314, 315
+
+`get()`, 313, 314, 317
+
+`list()`, 314, 317
+
+`listInfo()`, 316, 317
+
+`login()`, 313, 314, 316
+
+`mkdir()`, 314
+
+`put()`, 314
+
+`rawCommand()`, 314
+
+`read()`, 320
+
+`readAll()`, 320
+
+`readReady()`, 320
+
+`remove()`, 314
+
+`rename()`, 314
+
+`rmdir()`, 314
+
+`stateChanged()`, 315
 
 ## qColor(), (QWidget), 200
+
 ## qGLormap, 203
+
 ## GLContext, 203
+
 ## GLFormat, 203
+
 ## GLWidget, 198
-- initializeGL(), 199
-- paintGL(), 200
-- glClearColor(), 200
-- resizeGL(), 199
-- setFormat(), 201, 202
-- updateGL(), 201
+
+`initializeGL()`, 199
+
+`paintGL()`, 200
+
+`glClearColor()`, 200
+
+`resizeGL()`, 199
+
+`setFormat()`, 201, 202
+
+`updateGL()`, 201
 
 ## Gradient, 某些渐变
-- greater(), 264
+
+`greater()`, 264
 
 ## GridLayout, 9, 30, 32, 140–141, 141
+
 ## QGroupBox, 375
+
 ## qhash(), 261
+
 ## qHash<K, T>, 261–262
+
 ## QBoxLayout, 9, 250
-- addLayout(), 16
+
+`addLayout()`, 16
 
 ## QBoxLayout（续）
-- addWidget(), 16
+
+`addWidget()`, 16
 
 ## QHeaderView, 77
 
 ## QHostAddress
-- Any, 332
-- LocalHost, 325, 335
-- Http, 320
-- close(), 321
-- done(), 320
-- get(), 321, 322
-- head(), 322
-- post(), 322
-- read(), 323
-- readAll(), 323
-- readReady(), 322
-- request(), 322
-- requestFinished(), 322
-- requestStarted(), 322
-- setHost(), 321, 322
-- setUser(), 322
+
+`Any`, 332
+
+`LocalHost`, 325, 335
+
+`Http`, 320
+
+`close()`, 321
+
+`done()`, 320
+
+`get()`, 321, 322
+
+`head()`, 322
+
+`post()`, 322
+
+`read()`, 323
+
+`readAll()`, 323
+
+`readReady()`, 322
+
+`request()`, 322
+
+`requestFinished()`, 322
+
+`requestStarted()`, 322
+
+`setHost()`, 321, 322
+
+`setUser()`, 322
 
 ## QIcon, 175
+
 ## QIconEngine, 200
+
 ## QIconPlugin, 400
 
 ## Image, 106
-- 作为绘图设备, 175, 188–190
-- 组合模式, 189–190
-- convertTo(), 107
-- height(), 112
-- mirror(), 395
-- rect(), 112
-- setPixel(), 112
-- width(), 112
+
+`作为绘图设备`, 175, 188–190
+
+`组合模式`, 189–190
+
+`convertTo()`, 107
+
+`height()`, 112
+
+`mirror()`, 395
+
+`rect()`, 112
+
+`setPixel()`, 112
+
+`width()`, 112
 
 ## QImageHandler, 400
-- 子类, 402
-- canRead(), 402
-- currentNumber(), 403
-- imageCount(), 403
-- jumpTo(), 406
-- read(), 404
+
+`子类`, 402
+
+`canRead()`, 402
+
+`currentNumber()`, 403
+
+`imageCount()`, 403
+
+`jumpTo()`, 406
+
+`read()`, 404
 
 ## QImagePlugin, 400
-- 子类, 401
-- create(), 401
-- keys(), 401
+
+`子类`, 401
+
+`create()`, 401
+
+`keys()`, 401
 
 ## QReader, 400
+
 ## QInput, 400
+
 ## QInputPlugin, 400
+
 ## QInputDialog, 40–41, 228
+
 ## QValidator, 28
 
 ## QIODevice, 273, 346
-- ReadOnly, 82
-- WriteOnly, 80, 274
+
+`ReadOnly`, 82
+
+`WriteOnly`, 80, 274
 
 ## QIODevice（续）
-- peek(), 279, 403
-- readAll(), 278
-- seek(), 273, 279, 326
-- write(), 278
+
+`peek()`, 279, 403
+
+`readAll()`, 278
+
+`seek()`, 273, 279, 326
+
+`write()`, 278
 
 ## QDelegate, 245
-- drawGlobal(), 247
-- drawFocus(), 247
+
+`drawGlobal()`, 247
+
+`drawFocus()`, 247
 
 ## QDataDriver, 442
+
 ## QKeyEvent, 128, 164
+
 ## QLabel, 3–38–54
+
 ## QString, 368
+
 ## QLayout, 170
--setHorizontal(), 35
-- setMargin(), 140
-- setContents(), 34
-- setSpacing(), 140
+
+`setHorizontal()`, 35
+
+`setMargin()`, 140
+
+`setContents()`, 34
+
+`setSpacing()`, 140
 
 ## LCDNumber, 38
+
 ## QLineEdit, 39
-- hasAcceptable(), 28–29
-- setBounds(), 15
-- setText(), 63
-- setTextChanged(), 16, 28
+
+`hasAcceptable()`, 28–29
+
+`setBounds()`, 15
+
+`setText()`, 63
+
+`setTextChanged()`, 16, 28
 
 ## QGradient, 187
+
 ## QLinkedList<T>, 252–253
+
 ## QLinkedListListIterator<T>, 254
+
 ## QList<T>, 253
+
 ## QListIterator<T>, 254
+
 ## ListView, 381, 218, 226
+
 ## QWidget, 36, 207, 218
-- currentChanged(), 36, 144–145
-- setCurrentRow(), 144
-- setWidgetItem(), 78, 220, 411
-- setData(), 78, 220
-- setIcon(), 220
-- setText(), 220
+
+`currentChanged()`, 36, 144–145
+
+`setCurrentRow()`, 144
+
+`setWidgetItem()`, 78, 220, 411
+
+`setData()`, 78, 220
+
+`setIcon()`, 220
+
+`setText()`, 220
 
 ## Qlocale, 369, 370, 488
+
 ## QFiles, 365, 369, 370, 374
 
 ## QStyle, 124
+
 ## QMainWindow, 44, 150–152
-- areas, 47
-- central widget, 47–73, 153
-- dock widgets, 150–152
-- 子类, 44, 428
-- toolbar, 150–52
-- menubar(), 50
-- restoreState(), 152
-- saveState(), 152
+
+`areas`, 47
+
+`central widget`, 47–73, 153
+
+`dock widgets`, 150–152
+
+`子类`, 44, 428
+
+`toolbar`, 150–52
+
+`menubar()`, 50
+
+`restoreState()`, 152
+
+`saveState()`, 152
 
 ## CentralWidget(), 46
+
 ## QMainWindow（续）
-- setCorner()
+
+`setCorner()`
 
 ## QMutableList<K, T>, 255
+
 ## QMutableMap<K, T>, 262
+
 ## QMutableString, 559
+
 ## QVectorIterator<T>, 254
+
 ## QMutex, 385, 389
-- lock(), 385, 387
-- trylock(), 385
-- unlock(), 385, 387
+
+`lock()`, 385, 387
+
+`trylock()`, 385
+
+`unlock()`, 385, 387
 
 ## QMutexLocker, 385–386
+
 ## QObject, 21, 22
-- dynamic costs, 60, 476
-- smart pointers, 465
-- 存储 in, 253
-- 子类, 21–22, 430
-- connect(), 6, 8, 16, 22, 391
-- deleteLater(), 331, 397
-- disconnect(), 21, 22, 396
-- event(), 164, 170
-- eventFilter(), 169, 170
-- findChild<>, 36
-- installEvent(), 169, 170
+
+`dynamic costs`, 60, 476
+
+`smart pointers`, 465
+
+`存储 in`, 253
+
+`子类`, 21–22, 430
+
+`connect()`, 6, 8, 16, 22, 391
+
+`deleteLater()`, 331, 397
+
+`disconnect()`, 21, 22, 396
+
+`event()`, 164, 170
+
+`eventFilter()`, 169, 170
+
+`findChild<>`, 36
+
+`installEvent()`, 169, 170
 
 ## QTimer(), 22
-- metaObject(), 392
-- moveToThread(), 393
-- property(), 422
-- qt_MetaData(), 422
-- sender(), 247
-- setProperty(), 422
-- startEvent(), 167
-- timerEvent(), 168, 173, 422
 
-## QObject<>, 60, 71, 209, 214, 411, 412, 476
-## QPageGroupBox, 40
-## QPaintDevice, 417
-## QPaintEngine, 417, 418
-## Painter, 175–198
+`metaObject()`, 392
+
+
+
+- `moveToThread()`, 393
+
+- `property()`, 422
+
+- `qt_MetaData()`, 422
+
+- `sender()`, 247
+
+- `setProperty()`, 422
+
+- `startEvent()`, 167
+
+- `timerEvent()`, 168, 173, 422
+
+## `QObject<>`, 60, 71, 209, 214, 411, 412, 476
+
+## `QPageGroupBox`, 40
+
+## `QPaintDevice`, 417
+
+## `QPaintEngine`, 417, 418
+
+## `Painter`, 175–198
+
 - 与 GDI 调用结合, 417
+
 - 组合模式, 189–190
+
 - 坐标系, 109, 180–182
+
 - 在打印机上, 190
 
-## QPixmapTransform, 413
-## TextAntialiasing, 413
-- boundingRect(), 195
-- draw(), 176
-- drawChord(), 176
-- drawBezier(), 176
-- drawEllipse(), 176, 178, 186
-- drawLine(), 109, 176, 187
-- drawLines(), 176
-- drawPath(), 174, 176
-- drawPie(), 176, 178
+## `QPixmapTransform`, 413
 
-## QPainter（续）
-- drawPixmap(), 123, 176
-- drawPoint(), 176
-- drawPoints(), 176
-- drawPolygon(), 176, 186
-- drawPolyline(), 132, 176
-- drawRect(), 176, 181
-- drawRoundedRect(), 176, 187
-- drawEllipse(), 130–131, 167, 176, 182, 187
-- fillRect(), 110
-- initFrom(), 129–130, 189
-- paintEngine(), 417
-- restore(), 180, 188
-- rotate(), 183, 187–188
-- save(), 180, 188
-- scale(), 183
-- setBrush(), 176
-- setClipRect(), 131
-- setCompositionMode(), 190
-- setFont(), 176
-- setMatrix(), 182
-- setPen(), 109, 176
-- renderHint(), 178, 185, 413
-- setVisibility(), 185
-- setWindow(), 182, 185
-- shear(), 183
-- translate(), 183
+## `TextAntialiasing`, 413
 
-## QPainterPath, 178–179, 413
-## QPair<T, T>, 260, 271
-## Palette, 110
-## QOpen, 176
-## QPF, 442
-## QPictureFormat, 400
-## QPixmap
+- `boundingRect()`, 195
+
+- `draw()`, 176
+
+- `drawChord()`, 176
+
+- `drawBezier()`, 176
+
+- `drawEllipse()`, 176, 178, 186
+
+- `drawLine()`, 109, 176, 187
+
+- `drawLines()`, 176
+
+- `drawPath()`, 174, 176
+
+- `drawPie()`, 176, 178
+
+## `QPainter`（续）
+
+- `drawPixmap()`, 123, 176
+
+- `drawPoint()`, 176
+
+- `drawPoints()`, 176
+
+- `drawPolygon()`, 176, 186
+
+- `drawPolyline()`, 132, 176
+
+- `drawRect()`, 176, 181
+
+- `drawRoundedRect()`, 176, 187
+
+- `drawEllipse()`, 130–131, 167, 176, 182, 187
+
+- `fillRect()`, 110
+
+- `initFrom()`, 129–130, 189
+
+- `paintEngine()`, 417
+
+- `restore()`, 180, 188
+
+- `rotate()`, 183, 187–188
+
+- `save()`, 180, 188
+
+- `scale()`, 183
+
+- `setBrush()`, 176
+
+- `setClipRect()`, 131
+
+- `setCompositionMode()`, 190
+
+- `setFont()`, 176
+
+- `setMatrix()`, 182
+
+- `setPen()`, 109, 176
+
+- `renderHint()`, 178, 185, 413
+
+- `setVisibility()`, 185
+
+- `setWindow()`, 182, 185
+
+- `shear()`, 183
+
+- `translate()`, 183
+
+## `QPainterPath`, 178–179, 413
+
+## `QPair<T, T>`, 260, 271
+
+## `Palette`, 110
+
+## `QOpen`, 176
+
+## `QPF`, 442
+
+## `QPictureFormat`, 400
+
+## `QPixmap`
+
 - 作为绘图设备, 175
+
 - 用于双缓冲, 118
-- fill(), 129
-- handle(), 418
-- macCGHandle(), 418
-- macAlphaHandle(), 418
-- macQCDHandle(), 418
-- macInfo(), 418
-- macPictureHandle(), 418
 
-## PainterStyle, 124
-## QPixmapLoader, 430
-## QPoint, 109, 206
-## QF, 118
-## QPointer<T>, 465
-## QPrint, 40, 190, 196
-## QPrintEngine, 418
-## QPrintable(), 269, 274
-## QPrinter, 190–198
+- `fill()`, 129
 
-## QPrinter（续）
-- PdfFormat, 191
-- newPage(), 191, 192, 196
-- numCopies(), 196
-- setPrintError(), 191
+- `handle()`, 418
 
-## QProcess, 273, 287–291, 357
-- error(), 288
-- execute(), 291
-- finished(), 288
-- readAllStandardError(), 290
-- readReadyStandardError(), 288
-- start(), 289, 291
-- waitForFinished(), 291, 397
-- waitForStarted(), 291
+- `macCGHandle()`, 418
 
-## QProgressBar, 38, 325
+- `macAlphaHandle()`, 418
+
+- `macQCDHandle()`, 418
+
+- `macInfo()`, 418
+
+- `macPictureHandle()`, 418
+
+## `PainterStyle`, 124
+
+## `QPixmapLoader`, 430
+
+## `QPoint`, 109, 206
+
+## `QF`, 118
+
+## `QPointer<T>`, 465
+
+## `QPrint`, 40, 190, 196
+
+## `QPrintEngine`, 418
+
+## `QPrintable()`, 269, 274
+
+## `QPrinter`, 190–198
+
+## `QPrinter`（续）
+
+- `PdfFormat`, 191
+
+- `newPage()`, 191, 192, 196
+
+- `numCopies()`, 196
+
+- `setPrintError()`, 191
+
+## `QProcess`, 273, 287–291, 357
+
+- `error()`, 288
+
+- `execute()`, 291
+
+- `finished()`, 288
+
+- `readAllStandardError()`, 290
+
+- `readReadyStandardError()`, 288
+
+- `start()`, 289, 291
+
+- `waitForFinished()`, 291, 397
+
+- `waitForStarted()`, 291
+
+## `QProgressBar`, 38, 325
+
 - 忙状态, 325
+
 - 范围属性, 325
 
-## QProgressBarDialog, 40–41, 172–173
+## `QProgressBarDialog`, 40–41, 172–173
+
 - 触发, 172
-- setRange(), 172
-- setValue(), 173
 
-## QPushButton, 5, 37, 333
-- clicked(), 6, 163, 288
-- setDefault(), 15
-- setText(), 38
-- toggled(), 253
+- `setRange()`, 172
 
-## Queue(), 225, 33–34
-## RadialGradient, 187
-## RadioButton, 37
-- rc files, 44, 286, 370, 371
+- `setValue()`, 173
 
-## QReaderLock, 387
-## readWriteLock, 386–387
-- rect, 111, 125, 126
-- adjusted(), 124
-- contains(), 112, 125
-- normalized(), 123, 126
+## `QPushButton`, 5, 37, 333
 
-## RegExp, 28, 98, 102, 230
-## RegExpValidator, 28, 102
-## QRegion, 418
-- registerMetaType(), 270, 271, 277
+- `clicked()`, 6, 163, 288
 
-## QColor, 106
-## Qgb(), 106
-## QRGBA, 106
-## RubberBand(), 129
-## QSA, 22
-## QScreen, 44, 71
-## ScreenDriver, 148–150
-## QScrollArea, 148
+- `setDefault()`, 15
+
+- `setText()`, 38
+
+- `toggled()`, 253
+
+## `Queue()`, 225, 33–34
+
+## `RadialGradient`, 187
+
+## `RadioButton`, 37
+
+- `rc` files, 44, 286, 370, 371
+
+## `QReaderLock`, 387
+
+## `readWriteLock`, 386–387
+
+- `rect`, 111, 125, 126
+
+- `adjusted()`, 124
+
+- `contains()`, 112, 125
+
+- `normalized()`, 123, 126
+
+## `RegExp`, 28, 98, 102, 230
+
+## `RegExpValidator`, 28, 102
+
+## `QRegion`, 418
+
+- `registerMetaType()`, 270, 271, 277
+
+## `QColor`, 106
+
+## `Qgb()`, 106
+
+## `QRG BA`, 106
+
+## `RubberBand()`, 129
+
+## `QSA`, 22
+
+## `QScreen`, 44, 71
+
+## `ScreenDriver`, 148–150
+
+## `QScrollArea`, 148
+
 - 构件部件, 148
+
 - 供给/供应, 129
-- horizontalScrollBar(), 148
 
-## QScrollArea（续）
-- setHorizontalPolicy(), 149
-- setVerticalScrollBar(), 149
-- setWidget(), 149
-- widgetResizable(), 149
-- verticalScrollBar(), 148
+- `horizontalScrollBar()`, 148
 
-## ScrollBar, 77, 148, 380
-## QSemaphore, 387, 388
-- acquire(), 387, 388
-- handle(), 418
-- lease(), 387, 388
+## `QScrollArea`（续）
 
-## QSessionManager, 433
-- cancel(), 335
-- handle(), 418
-- lease(), 435
-- ScrollBarCommand(), 333
+- `setHorizontalPolicy()`, 149
 
-## QSettings, 67–68, 223–224
+- `setVerticalScrollBar()`, 149
+
+- `setWidget()`, 149
+
+- `widgetResizable()`, 149
+
+- `verticalScrollBar()`, 148
+
+## `ScrollBar`, 77, 148, 380
+
+## `QSemaphore`, 387, 388
+
+- `acquire()`, 387, 388
+
+- `handle()`, 418
+
+- `lease()`, 387, 388
+
+## `QSessionManager`, 433
+
+- `cancel()`, 335
+
+- `handle()`, 418
+
+- `lease()`, 435
+
+- `ScrollBarCommand()`, 333
+
+## `QSettings`, 67–68, 223–224
+
 - 主窗口状态, 152
+
 - 分器状态, 148
+
 - 自定义类型, 277
+
 - 变体, 67, 269
-- beginGroup(), 67
-- endGroup(), 67
-- setValue(), 67
-- value(), 67–68
 
-## SharedData, 259
-## SharedDataPointer, 259
-## QSize, 107, 142
+- `beginGroup()`, 67
+
+- `endGroup()`, 67
+
+- `setValue()`, 67
+
+- `value()`, 67–68
+
+## `SharedData`, 259
+
+## `SharedDataPointer`, 259
+
+## `QSize`, 107, 142
+
 - 因子, 120, 143
+
 - 固定, 142
-- Ignored, 143
-- Maximum, 142
-- Minimum, 107, 142
-- MinimumExpanding, 143
-- Preferred, 120, 142–143
 
-## QSlider, 79
-- setRange(), 7
-- setValue(), 7–8
-- value(), 7–8
+- `Ignored`, 143
 
-## QSort(), 264
-## SortFilterProxyModel, 225, 228–230
-- setFilterColumn(), 229
-- setFilterRegExp(), 230
-- setSourceModel(), 229
+- `Maximum`, 142
 
-## SpinBox, 7, 39, 101
+- `Minimum`, 107, 142
+
+- `MinimumExpanding`, 143
+
+- `Preferred`, 120, 142–143
+
+## `QSlider`, 79
+
+- `setRange()`, 7
+
+- `setValue()`, 7–8
+
+- `value()`, 7–8
+
+## `QSort()`, 264
+
+## `SortFilterProxyModel`, 225, 228–230
+
+- `setFilterColumn()`, 229
+
+- `setFilterRegExp()`, 230
+
+- `setSourceModel()`, 229
+
+## `SpinBox`, 7, 39, 101
+
 - 子类, 101–103
-- setRange(), 7
-- setValue(), 7–8
-- fromValue(), 102
-- validate(), 102
 
-## SpinBox（续）
-- valueChanged(), 7–8
-- valueFrom(), 103
+- `setRange()`, 7
 
-## QScreen, 71–72
-## Splitter, 145–148
-## KeepSize, 146
-- addWidget(), 145
-- restoreState(), 148
-- saveState(), 147
-- setSize(), 147
-- setStretchFactor(), 147
-- sizes(), 256
+- `setValue()`, 7–8
 
-## SqlDatabase, 294, 297
-- addDatabase(), 294
-- commit(), 296
-- database(), 297
-- driver(), 296
-- rollback(), 296
-- setDatabaseName(), 294
-- setHostName(), 294
-- setPassword(), 294
-- setUsername(), 294
-- transaction(), 296
+- `fromValue()`, 102
 
-## SqlDriver, 296, 400
-## SqlDriverPlugin, 400
-## SqlQuery, 294
-- addValue(), 296
-- bindValue(), 296
-- exec(), 294–296
-- first(), 295
-- isActive(), 295
-- last(), 295
-- next(), 295
-- numRowsAffected(), 295
-- prepare(), 295–296
-- previous(), 295
-- seek(), 295
-- setForwardOnly(), 295
-- value(), 295
+- `validate()`, 102
 
-## SqlQueryModel, 225, 302
-## SqlRelation, 305
-## SqlRelationalDelegate, 305
-## SqlRelationalTable, 225, 295, 303, 307
-## SqlTableModel, 225, 293, 302, 306
-- insertBefore(), 303, 306, 307
-- insertRow(), 298
-- record(), 297–299
-- remove(), 304
-- removeRows(), 299
-- select(), 297, 304
-- setData(), 298, 299
-- setFilter(), 297
+## `SpinBox`（续）
 
-## SqlTableModel（续）
-- setAll(), 297
-- submitAll(), 298
-- value(), 297–299
-- tableSort(), 88–91, 264
+- `valueChanged()`, 7–8
 
-## QStack, 253
-- setLayout(), 143–145
-- addWidget(), 144
-- indexOf(), 143
-- setCurrentIndex(), 143, 144, 145
+- `valueFrom()`, 103
 
-## StackedWidget, 36, 143
-## StandardItemModel, 225
-## QStatusBar, 53
-- addWidget(), 53
-- showMessage(), 256
+## `QScreen`, 71–72
 
-## String, 259, 473, 488
+## `Splitter`, 145–148
+
+## `KeepSize`, 146
+
+- `addWidget()`, 145
+
+- `restoreState()`, 148
+
+- `saveState()`, 147
+
+- `setSize()`, 147
+
+- `setStretchFactor()`, 147
+
+- `sizes()`, 256
+
+## `SqlDatabase`, 294, 297
+
+- `addDatabase()`, 294
+
+- `commit()`, 296
+
+- `database()`, 297
+
+- `driver()`, 296
+
+- `rollback()`, 296
+
+- `setDatabaseName()`, 294
+
+- `setHostName()`, 294
+
+- `setPassword()`, 294
+
+- `setUsername()`, 294
+
+- `transaction()`, 296
+
+## `SqlDriver`, 296, 400
+
+## `SqlDriverPlugin`, 400
+
+## `SqlQuery`, 294
+
+- `addValue()`, 296
+
+- `bindValue()`, 296
+
+- `exec()`, 294–296
+
+- `first()`, 295
+
+- `isActive()`, 295
+
+- `last()`, 295
+
+- `next()`, 295
+
+- `numRowsAffected()`, 295
+
+- `prepare()`, 295–296
+
+- `previous()`, 295
+
+- `seek()`, 295
+
+- `setForwardOnly()`, 295
+
+- `value()`, 295
+
+## `SqlQueryModel`, 225, 302
+
+## `SqlRelation`, 305
+
+## `SqlRelationalDelegate`, 305
+
+## `SqlRelationalTable`, 225, 295, 303, 307
+
+## `SqlTableModel`, 225, 293, 302, 306
+
+- `insertBefore()`, 303, 306, 307
+
+- `insertRow()`, 298
+
+- `record()`, 297–299
+
+- `remove()`, 304
+
+- `removeRows()`, 299
+
+- `select()`, 297, 304
+
+- `setData()`, 298, 299
+
+- `setFilter()`, 297
+
+## `SqlTableModel`（续）
+
+- `setAll()`, 297
+
+- `submitAll()`, 298
+
+- `value()`, 297–299
+
+- `tableSort()`, 88–91, 264
+
+## `QStack`, 253
+
+- `setLayout()`, 143–145
+
+- `addWidget()`, 144
+
+- `indexOf()`, 143
+
+- `setCurrentIndex()`, 143, 144, 145
+
+## `StackedWidget`, 36, 143
+
+## `StandardItemModel`, 225
+
+## `QStatusBar`, 53
+
+- `addWidget()`, 53
+
+- `showMessage()`, 256
+
+## `String`, 259, 473, 488
+
 - 大写敏感性, 264, 267
-- 转换到 const*, 268–269
+
+- 转换到 `const*`, 268–269
+
 - Unicode 排序, 265, 362–365
-- append(), 265
-- arg(), 59, 246–265, 367
-- contains(), 86
-- endsWith(), 267
-- fromAscii(), 268
-- fromLatin(), 268
-- indexOf(), 267
-- insert(), 267
-- isEmpty(), 268
-- left(), 266, 267
-- length(), 265, 268
-- localeAwareCompare(), 267, 370
-- mid(), 63, 266
-- number(), 79, 103, 266
-- operator(), 265
-- operator++(), 265
-- remove(), 267
-- replace(), 212, 267
-- right(), 266, 267
-- setNum(), 266
-- simplified(), 268
-- split(), 85, 268, 282
 
+- `append()`, 265
 
+- `arg()`, 59, 246–265, 367
 
+- `contains()`, 86
 
+- `endsWith()`, 267
+
+- `fromAscii()`, 268
+
+- `fromLatin()`, 268
+
+- `indexOf()`, 267
+
+- `insert()`, 267
+
+- `isEmpty()`, 268
+
+- `left()`, 266, 267
+
+- `length()`, 265, 268
+
+- `localeAwareCompare()`, 267, 370
+
+- `mid()`, 63, 266
+
+- `number()`, 79, 103, 266
+
+- `operator()`, 265
+
+- `operator++()`, 265
+
+- `remove()`, 267
+
+- `replace()`, 212, 267
+
+- `right()`, 266, 267
+
+- `setNum()`, 266
+
+- `simplified()`, 268
+
+- `split()`, 85, 268, 282
 
 # 索引
 
 521
 
-QString (续上)
-- turate(), 259
-- QStringList, 59, 253
-- join(), 268, 282
-- removeAll(), 59
-- first(), 282
-- QStringList, 225, 226, 229
-- Style, 124, 400
-- 与窗口装饰比较, 442
-- PEFrameFocusRect, 124
-- drawPrimitive(), 124
-- StyleOptionRect, 124
-- StylePainter, 124
-- Stylelogin, 400
-- swap(), 264
-- QsInfo, 417
-- Qt 空间, 485
-- AlCenter, 54
-- BackgroundColorRole, 230, 240
-- BdiPattern, 177
-- BevelJoin, 177
-- CopyAction, 209
-- CrossPattern, 177
-- DashDotline, 177
-- Dashline, 177
-- Dense[7]-Pattern, 177
-- DiagCrossPattern, 177
-- DisplayRole, 92, 93-94, 220, 230, 233, 243
-- Dotline, 177
-- EditRole, 92, 93-94, 220, 230,
-- escape(), 193, 211, 212, 349
-- FdiPattern, 177
-- FlatCap, 177
-- FontRole, 230, 244
-- HorPattern, 177
-- Icode, 220
-- IgnoreAction, 209
-- ItemIsEditable, 238
-- ItemIsEnabled, 237
-- ItemSelectable, 237
-- LinkAction, 209
-- Localdate, 370
-- MiterJoin, 177
-- MoveAction, 209
-- Nobrush, 177
-- NoPen, 177
-- OpaqueMode, 180
-- RoundCap, 177
-- RoundJoin, 177
-- ScrollBarAlwaysOn, 149
-- Solidline, 177
+`QString` (续上)
 
-Qt 空间 (续上)
-- SolidPattern, 177
-- SquareCap, 177
-- StatusTipRole, 230
-- StrongFocus, 120
-- TextAlignmentRole, 93–94, 230, 233, 244
-- TextColorRole, 230, 244
-- ToolTipRole, 230
-- TransparentMode, 180
-- UserRole, 220
-- lelf, 177
-- WA_DeleteClose, 70, 155, 356
-- WA_Groupleader, 355
-- WA_PaintScreen, 167
-- WA_StaticContent, 106, 112
-- WhatsPixelRole, 230
-- Qt_4_(datastream, 31, 275, 277
-- <QtAlgorithms>, 263
-- Qt Assistant
+- `turate()`, 259
+
+- `QStringList`, 59, 253
+
+- `join()`, 268, 282
+
+- `removeAll()`, 59
+
+- `first()`, 282
+
+- `QStringList`, 225, 226, 229
+
+- `Style`, 124, 400
+
+- 与窗口装饰比较, 442
+
+- `PEFrameFocusRect`, 124
+
+- `drawPrimitive()`, 124
+
+- `StyleOptionRect`, 124
+
+- `StylePainter`, 124
+
+- `Stylelogin`, 400
+
+- `swap()`, 264
+
+- `QsInfo`, 417
+
+- `Qt` 空间, 485
+
+- `AlCenter`, 54
+
+- `BackgroundColorRole`, 230, 240
+
+- `BdiPattern`, 177
+
+- `BevelJoin`, 177
+
+- `CopyAction`, 209
+
+- `CrossPattern`, 177
+
+- `DashDotline`, 177
+
+- `Dashline`, 177
+
+- `Dense[7]-Pattern`, 177
+
+- `DiagCrossPattern`, 177
+
+- `DisplayRole`, 92, 93-94, 220, 230, 233, 243
+
+- `Dotline`, 177
+
+- `EditRole`, 92, 93-94, 220, 230,
+
+- `escape()`, 193, 211, 212, 349
+
+- `FdiPattern`, 177
+
+- `FlatCap`, 177
+
+- `FontRole`, 230, 244
+
+- `HorPattern`, 177
+
+- `Icode`, 220
+
+- `IgnoreAction`, 209
+
+- `ItemIsEditable`, 238
+
+- `ItemIsEnabled`, 237
+
+- `ItemSelectable`, 237
+
+- `LinkAction`, 209
+
+- `Localdate`, 370
+
+- `MiterJoin`, 177
+
+- `MoveAction`, 209
+
+- `Nobrush`, 177
+
+- `NoPen`, 177
+
+- `OpaqueMode`, 180
+
+- `RoundCap`, 177
+
+- `RoundJoin`, 177
+
+- `ScrollBarAlwaysOn`, 149
+
+- `Solidline`, 177
+
+`Qt` 空间 (续上)
+
+- `SolidPattern`, 177
+
+- `SquareCap`, 177
+
+- `StatusTipRole`, 230
+
+- `StrongFocus`, 120
+
+- `TextAlignmentRole`, 93–94, 230, 233, 244
+
+- `TextColorRole`, 230, 244
+
+- `ToolTipRole`, 230
+
+- `TransparentMode`, 180
+
+- `UserRole`, 220
+
+- `lelf`, 177
+
+- `WA_DeleteClose`, 70, 155, 356
+
+- `WA_Groupleader`, 355
+
+- `WA_PaintScreen`, 167
+
+- `WA_StaticContent`, 106, 112
+
+- `WhatsPixelRole`, 230
+
+- `Qt_4_(datastream`, 31, 275, 277
+
+- `<QtAlgorithms>`, 263
+
+- `Qt Assistant`
+
 - 浏览 Qt 文档, 92
+
 - 提供在线帮助, 356
-- <Debug>, 266
-- Qt Designer
+
+- `<Debug>`, 266
+
+- `Qt Designer`
+
 - 创建对话框, 23–29
+
 - 创建主窗口, 44
+
 - 启动, 23
+
 - 布局, 25, 32
+
 - 预览, 26, 145
+
 - 分 ownters, 148
+
 - 模板, 23, 103, 144
-- .ui 文件, 26–29, 368
+
+- `.ui` 文件, 26–29, 368
+
 - 使用自定义控件, 113–116
-- Qt 版本, 447–448
-- Qt_en (pro 文件), 234, 280, 310, 344, 345
-- -qt-gfx-vnc  (configure), 441
-- -qt-gif  (configure), 46
-- <Qtglobal>, 265
-- <QtGui>, 15
-- Qt Linguist, 361, 377–379
-- Qt_metacall() (Object), 22
-- Qt_NO_CAST_FROM_ASCII, 368
-- Qt_NO_XXX, 441
-- QtQuarterly, 11, 349
-- Qt Script for Applications, 22
-- QtSolutions, 322, 415
-- Qt_TR_NOOP(), 367–368
-- Qt_TRANSLATE_NOOP(), 368
-- QtTabWidget, 36, 38
-- TableView, 38, 218, 302
-- TableWidget, 74, 218–222
+
+- `Qt` 版本, 447–448
+
+- `Qt_en` (pro 文件), 234, 280, 310, 344, 345
+
+- `-qt-gfx-vnc` (configure), 441
+
+- `-qt-gif` (configure), 46
+
+- `<Qtglobal>`, 265
+
+- `<QtGui>`, 15
+
+- `Qt Linguist`, 361, 377–379
+
+- `Qt_metacall()` (Object), 22
+
+- `Qt_NO_CAST_FROM_ASCII`, 368
+
+- `Qt_NO_XXX`, 441
+
+- `QtQuarterly`, 11, 349
+
+- `Qt Script for Applications`, 22
+
+
+
+# 索引
+
+- `QtSolutions`, 322, 415
+
+- `Qt_TR_NOOP()`, 367–368
+
+- `Qt_TRANSLATE_NOOP()`, 368
+
+- `QtTabWidget`, 36, 38
+
+- `TableView`, 38, 218, 302
+
+- `TableWidget`, 74, 218–222
+
 - 组成控件, 77
 
-# 索引
+## 索引
 
-QTableWidget (续上)
+`QTableWidget` (续上)
+
 - 拖放, 211
+
 - 单元所有权, 79
+
 - 子类化, 75
-- clear(), 77
-- horizontalHeader(), 77
-- horizontalScrollBar(), 77
-- item(), 78
-- itemChanged(), 76
-- selectColumn(), 86
-- selectRow(), 86
-- selectedRanges(), 84
-- setColumnCount(), 77
-- setCurrentCell(), 63
-- setHorizontalLabels(), 221
-- setItem(), 292
-- setItemProxy(), 76, 92
-- setRowCount(), 77
-- setSelectionMode(), 76, 212
-- setShowGrid(), 49
-- verticalHeader(), 77
-- verticalScrollBar(), 77
-- viewPort(), 77
-- QWidgetItem, 75, 78, 91
+
+- `clear()`, 77
+
+- `horizontalHeader()`, 77
+
+- `horizontalScrollBar()`, 77
+
+- `item()`, 78
+
+- `itemChanged()`, 76
+
+- `selectColumn()`, 86
+
+- `selectRow()`, 86
+
+- `selectedRanges()`, 84
+
+- `setColumnCount()`, 77
+
+- `setCurrentCell()`, 63
+
+- `setHorizontalLabels()`, 221
+
+- `setItem()`, 292
+
+- `setItemProxy()`, 76, 92
+
+- `setRowCount()`, 77
+
+- `setSelectionMode()`, 76, 212
+
+- `setShowGrid()`, 49
+
+- `verticalHeader()`, 77
+
+- `verticalScrollBar()`, 77
+
+- `viewPort()`, 77
+
+- `QWidgetItem`, 75, 78, 91
+
 - 所有权, 79
+
 - 子类化, 91
-- clone(), 92
-- data(), 91, 93, 220
-- setData(), 78, 93
-- setText(), 78, 91, 220
-- QTableWidgetSelection, 64, 213
-- QtCore module, 15, 270, 284
-- QTcpServer, 323, 329
-- QTcpSocket, 273, 323
+
+- `clone()`, 92
+
+- `data()`, 91, 93, 220
+
+- `setData()`, 78, 93
+
+- `setText()`, 78, 91, 220
+
+- `QTableWidgetSelection`, 64, 213
+
+- `QtCore module`, 15, 270, 284
+
+- `QTcpServer`, 323, 329
+
+- `QTcpSocket`, 273, 323
+
 - 子类化, 330
-- bytesByteArray(), 331
-- canReadLine(), 333
-- close(), 328, 331
-- connectTo(), 325
-- connected(), 325
-- disconnected(), 325, 229, 330, 331
-- error(), 325
-- incomingConnection(), 330
-- listen(), 332
-- readLine(), 333
-- readAll(), 325, 227, 328, 330, 331, 333
-- setSocketDescriptor(), 330
-- write(), 327, 332
-- QtDIR , 116, 408
-- QTemporaryFile, 273, 291
-- QtBrowser, 38, 353, 355
-- QTextCodec, 363, 400
 
-QTextCodec (续上)
-- codecForLocale(), 363
-- codecName(), 364–365
-- setCodecForStrings(), 365
-- setCodecForUi(), 364, 378
-- toUnicode(), 365
-- QTextPlugin, 400, 192–193
-- QDocument, 160, 218
-- contentsChanged(), 158, 160
-- print(), 193
--setHorizontal(), 193
-- setModified(), 160
-- QtEdit, 39, 157
+- `bytesByteArray()`, 331
+
+- `canReadLine()`, 333
+
+- `close()`, 328, 331
+
+- `connectTo()`, 325
+
+- `connected()`, 325
+
+- `disconnected()`, 325, 229, 330, 331
+
+- `error()`, 325
+
+- `incomingConnection()`, 330
+
+- `listen()`, 332
+
+- `readLine()`, 333
+
+- `readAll()`, 325, 227, 328, 330, 331, 333
+
+- `setSocketDescriptor()`, 330
+
+- `write()`, 327, 332
+
+- `QtDIR`, 116, 408
+
+- `QTemporaryFile`, 273, 291
+
+- `QtBrowser`, 38, 353, 355
+
+- `QTextCodec`, 363, 400
+
+`QTextCodec` (续上)
+
+- `codecForLocale()`, 363
+
+- `codecName()`, 364–365
+
+- `setCodecForStrings()`, 365
+
+- `setCodecForUi()`, 364, 378
+
+- `toUnicode()`, 365
+
+- `QTextPlugin`, 400, 192–193
+
+- `QDocument`, 160, 218
+
+- `contentsChanged()`, 158, 160
+
+- `print()`, 193
+
+- `setHorizontal()`, 193
+
+- `setModified()`, 160
+
+- `QtEdit`, 39, 157
+
 - 子类化, 157
-- append(), 290
-- copy(), 215
-- copyAvailable(), 154
-- cut(), 215
-- document(), 158
-- paste(), 215
-- setText(), 145
-- QTextStream, 28, 279, 363
-- encodings, 279, 363–364
-- on a file, 280
-- on a socket, 323
-- on a string, 282
-- syntax, 290
-- AlignStyle, 281
-- AlCenter, 281
-- AlignLeft, 281
-- AlignRight, 281
-- FixedNotification, 281
-- ForcePoint, 281
-- ForceSign, 281
-- ScientificNotification, 281
-- Showcase, 281
-- SmartNotation, 281
-- UppercaseBase, 281
-- UppercaseDigits, 281
-- readAll(), 280
-- readLine(), 280
-- setAutoUnicode(), 364, 361
-- setCodec(), 280, 363
-- setHorizontal(), 281
-- setFieldWidth(), 281
-- setGeneratorByOrder(), 363, 281
-- setIntegerBase(), 281
-- setNumberFlags(), 281
-- setPadChar(), 281
-- setRealNotation(), 281
-- setRealPrecision(), 281
-- QtGui module, 15, 270, 312
-- Thread, 381
 
-QThread (续上)
+- `append()`, 290
+
+- `copy()`, 215
+
+- `copyAvailable()`, 154
+
+- `cut()`, 215
+
+- `document()`, 158
+
+- `paste()`, 215
+
+- `setText()`, 145
+
+- `QTextStream`, 28, 279, 363
+
+- encodings, 279, 363–364
+
+- on a file, 280
+
+- on a socket, 323
+
+- on a string, 282
+
+- syntax, 290
+
+- `AlignStyle`, 281
+
+- `AlCenter`, 281
+
+- `AlignLeft`, 281
+
+- `AlignRight`, 281
+
+- `FixedNotification`, 281
+
+- `ForcePoint`, 281
+
+- `ForceSign`, 281
+
+- `ScientificNotification`, 281
+
+- `Showcase`, 281
+
+- `SmartNotation`, 281
+
+- `UppercaseBase`, 281
+
+- `UppercaseDigits`, 281
+
+- `readAll()`, 280
+
+- `readLine()`, 280
+
+- `setAutoUnicode()`, 364, 361
+
+- `setCodec()`, 280, 363
+
+- `setHorizontal()`, 281
+
+- `setFieldWidth()`, 281
+
+- `setGeneratorByOrder()`, 363, 281
+
+- `setIntegerBase()`, 281
+
+- `setNumberFlags()`, 281
+
+- `setPadChar()`, 281
+
+- `setRealNotation()`, 281
+
+- `setRealPrecision()`, 281
+
+- `QtGui module`, 15, 270, 312
+
+- `Thread`, 381
+
+`QThread` (续上)
+
 - 子类化, 381, 393
-- currentThread(), 390
-- exec(), 397
-- finished(), 395
-- run(), 382, 385–386, 388, 390, 394
-- start(), 384
-- terminate(), 382
-- QThreadStorage, 390–391
-- Qicker, 166
-- Time, 370
-- QTimeEdit, 39, 244, 270
-- QTimer, 168
+
+- `currentThread()`, 390
+
+- `exec()`, 397
+
+- `finished()`, 395
+
+- `run()`, 382, 385–386, 388, 390, 394
+
+- `start()`, 384
+
+- `terminate()`, 382
+
+- `QThreadStorage`, 390–391
+
+- `Qicker`, 166
+
+- `Time`, 370
+
+- `QTimeEdit`, 39, 244, 270
+
+- `QTimer`, 168
+
 - 与定时器比较, 168
+
 - single-shot, 168
-- setSingleShot(), 184
-- start(), 334
-- timeout(), 168, 184, 333
-- QtNetwork module, 15, 311–337
-- QToolBar, 52
-- add(), 52
-- addSeparator(), 5
-- QToolTip, 38
-- QPushButton, 17
-- OpenGL, 15, 198–203
-- Qtopia, 417, 418
-- Qtopia Core, 251, 339–441
-- Qtopia PDA, 239
-- Qtopia Phone, 439
-- Qtopia Platform, 439
-- Qt virtual frame buffer (vfb), 441
-- Translator, 369, 374, 375
-- QTreeView, 38, 218, 227, 243
-- expand(), 227
-- scrollOut(), 228
-- QWidget, 36, 218, 222, 240, 348
-- QTreeWidgetItem, 78, 224
+
+- `setSingleShot()`, 184
+
+- `start()`, 334
+
+- `timeout()`, 168, 184, 333
+
+- `QtNetwork module`, 15, 311–337
+
+- `QToolBar`, 52
+
+- `add()`, 52
+
+- `addSeparator()`, 5
+
+- `QToolTip`, 38
+
+- `QPushButton`, 17
+
+- `OpenGL`, 15, 198–203
+
+- `Qtopia`, 417, 418
+
+- `Qtopia Core`, 251, 339–441
+
+- `Qtopia PDA`, 239
+
+- `Qtopia Phone`, 439
+
+- `Qtopia Platform`, 439
+
+- `Qt virtual frame buffer (vfb)`, 441
+
+- `Translator`, 369, 374, 375
+
+- `QTreeView`, 38, 218, 227, 243
+
+- `expand()`, 227
+
+- `scrollOut()`, 228
+
+- `QWidget`, 36, 218, 222, 240, 348
+
+- `QTreeWidgetItem`, 78, 224
+
 - 子类化, 430
-- setData(), 78
-- QtSql module, 15, 293–310
-- QtSocket, 322
-- QtSig module, 15, 339–349
-- QtXml module, 15, 339–349
-- QUSocket
-- bind(), 337
-- pendingDataInt(), 336
-- readDataInt(), 336
-- readyRead(), 336
-- writeDataInt(), 334, 377
+
+- `setData()`, 78
+
+- `QtSql module`, 15, 293–310
+
+- `QtSocket`, 322
+
+- `QtSig module`, 15, 339–349
+
+- `QtXml module`, 15, 339–349
+
+- `QUSocket`
+
+- `bind()`, 337
+
+- `pendingDataInt()`, 336
+
+- `readDataInt()`, 336
+
+- `readyRead()`, 336
+
+- `writeDataInt()`, 334, 377
+
 - queries, 294
-- QueryInterface()(IUnknown), 426
-- queryInterface()
-- QAggregated, 426
-- QAxBase, 223
-- querySubObject(QAxBase), 223
-- question(MessageBox), 55
+
+- `QueryInterface()(IUnknown)`, 426
+
+- `queryInterface()`
+
+- `QAggregated`, 426
+
+- `QAxBase`, 223
+
+- `querySubObject(QAxBase)`, 223
+
+- `question(MessageBox)`, 55
+
 - queues, 238
-- QUoader, 81, 275
-- quintX, 5
-- quit(QApplication), 6, 5
-- quitOnClosed property (Application), 58
+
+- `QUloader`, 81, 275
+
+- `quintX`, 5
+
+- `quit(QApplication)`, 6, 5
+
+- `quitOnClosed property (Application)`, 58
+
 - compress, 279
-- qUri, 207, 312, 316
-- QUrlInfo, 317
-- Validator, 28–29
-- Acceptable, 102
-- Intermediate, 102
-- Invalid, 102
-- validate(), 10
-- QVarLengthArray, Prealloc, 271
-- Variant, 269–271
-- for action() data item, 60
+
+- `qUri`, 207, 312, 316
+
+- `QUrlInfo`, 317
+
+- `Validator`, 28–29
+
+- `Acceptable`, 102
+
+- `Intermediate`, 102
+
+- `Invalid`, 102
+
+- `validate()`, 10
+
+- `QVarLengthArray`, `Prealloc`, 271
+
+- `Variant`, 269–271
+
+- for `action()` data item, 60
+
 - for databases, 295
+
 - for drop and drag, 214
+
 - for items view, 220
+
 - for properties, 105, 422
-- isValid(), 94
-- toString(), 94
-- QVariantConvert<T>(), 271
-- QVariantFromValue(), 271
-- QVariantAsValue(), 271
-- QByteArray, 25, 140
-- addLayout(), 16
-- addWidget(), 141
-- addWidget(), 16
-- QVector(), 252, 256, 471
-- QObjectIterator(), 254
-- qvfb, 441
-- -qvfb option, 441
-- WaitCondition, 389
-- wait(), 389, 390
-- wakeAll(), 389
+
+- `isValid()`, 94
+
+- `toString()`, 94
+
+- `QVariantConvert<T>()`, 271
+
+- `QVariantFromValue()`, 271
+
+- `QVariantAsValue()`, 271
+
+- `QByteArray`, 25, 140
+
+- `addLayout()`, 16
+
+- `addWidget()`, 141
+
+- `addWidget()`, 16
+
+- `QVector()`, 252, 256, 471
+
+- `QObjectIterator()`, 254
+
+- `qvfb`, 441
+
+- `-qvfb option`, 441
+
+- `WaitCondition`, 389
+
+- `wait()`, 389, 390
+
+- `wakeAll()`, 389
+
 - whatThisIs, 353
-- QWheelEvent, 129
-- Widget, 10
+
+- `QWheelEvent`, 129
+
+- `Widget`, 10
+
 - 在多线程应用程序中, 397
+
 - 子类化, 104, 117, 166, 183
+
 - 窗口属性, 54, 58, 86, 99, 106, 109, 112, 121, 124, 143, 154, 155, 156, 157, 158, 159, 160, 161, 164, 167, 168, 169, 170, 184, 185, 188, 199, 201, 203, 204, 205, 206, 207, 208, 209, 210, 211, 212, 213, 215, 216, 217, 218, 219, 220, 221, 222, 223, 224, 225, 226, 227, 228, 229, 230, 231, 232, 233, 234, 235, 236, 237, 238, 239, 240, 241, 242, 243, 244, 245, 246, 247, 248, 249, 250, 251, 252, 253, 254, 255, 256, 257, 258, 259, 260, 261, 262, 263, 264, 265, 266, 267, 268, 269, 270, 271, 272, 273, 274, 275, 276, 277, 278, 279, 280, 281, 282, 283, 284, 285, 286, 287, 288, 289, 290, 291, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 304, 305, 306, 307, 308, 309, 310, 311, 312, 313, 314, 315, 316, 317, 318, 319, 320, 321, 322, 323, 324, 325, 326, 327, 328, 329, 330, 331, 332, 333, 334, 335, 336, 337, 338, 339, 340, 341, 342, 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 357, 358, 359, 360, 361, 362, 363, 364, 365, 366, 367, 368, 369, 370, 371, 372, 373, 374, 375, 376, 377, 378, 379, 380, 381, 382, 383, 384, 385, 386, 387, 388, 389, 390, 391, 392, 393, 394, 395, 396, 397, 398, 399, 400, 401, 402, 403, 404, 405, 406, 407, 408, 409, 410, 411, 412, 413, 414, 415, 416, 417, 418, 419, 420, 421, 422, 423, 424, 425, 426, 427, 428, 429, 430, 431, 432, 433, 434, 435, 436, 437, 438, 439, 440, 441, 442, 443, 444, 445, 446, 447, 448
 
-# 索引
+## 索引
 
-Widget (续上)
-- adjustSize(), 271
-- changeEvent(), 374
-- find(), 415
-- focusNext(), 123
-- QStyle, 124
-- cascade(), 155
-- repaint(), 108
-- CloseActive(), 156
-- resize(), 139
-- CloseAllWindow(), 156
-- resizeEvent(), 124, 125
-- tile(), 154
-- scroll(), 168
-- windowActivated(), 154
-- QLockter, 368
-- setAttribute(), 70
-- QWS_DEF 环境变量, 441
-- setAutoFillBackground(), 120, 119–120
-- QWS_DISPLAY 环境变量, 442
-- setMenu(), 51
-- QWS_WORD 环境变量, 442
-- cursor(), 126
-- QWS_MOUSE_PROTO 环境变量, 441, 442
-- setEnabled(), 15, 18
-- QWS_SIZE 环境变量, 441
-- setFixedSize(), 17
-- QEvent(), (Widget), 419
-- setFixedSize(), 168
-- QWSEventFilter (Application), 419
-- focus(), 158
-- QWSKeyboardHandler, 442
-- setFocus(), 120
-- QWSMouseHandler, 442
-- setGeometry(), 68, 138
-- -cws  (Qtopia applications), 440
-- setLayout(), 7, 9
-- QWSServer, 442
-- setMinimum(), 35, 53, 139
-- qwsServer全局变量, 442
-- setMouseTracking(), 111
-- qwsSetDecoration (QApplication), 442
-- setSize(), 105, 107, 120
+`Widget` (续上)
 
+- `adjustSize()`, 271
 
+- `changeEvent()`, 374
 
+- `find()`, 415
 
+- `focusNext()`, 123
 
-# 索引
+- `QStyle`, 124
+
+- `cascade()`, 155
+
+- `repaint()`, 108
+
+- `CloseActive()`, 156
+
+- `resize()`, 139
+
+- `CloseAllWindow()`, 156
+
+- `resizeEvent()`, 124, 125
+
+- `tile()`, 154
+
+- `scroll()`, 168
+
+- `windowActivated()`, 154
+
+- `QLockter`, 368
+
+- `setAttribute()`, 70
+
+- `QWS_DEF` 环境变量, 441
+
+- `setAutoFillBackground()`, 120, 119–120
+
+- `QWS_DISPLAY` 环境变量, 442
+
+- `setMenu()`, 51
+
+- `QWS_WORD` 环境变量, 442
+
+- `cursor()`, 126
+
+- `QWS_MOUSE_PROTO` 环境变量, 441, 442
+
+- `setEnabled()`, 15, 18
+
+- `QWS_SIZE` 环境变量, 441
+
+- `setFixedSize()`, 17
+
+- `QEvent()`, (Widget), 419
+
+- `setFixedSize()`, 168
+
+- `QWSEventFilter` (Application), 419
+
+- `focus()`, 158
+
+- `QWSKeyboardHandler`, 442
+
+- `setFocus()`, 120
+
+- `QWSMouseHandler`, 442
+
+- `setGeometry()`, 68, 138
+
+- `-cws` (Qtopia applications), 440
+
+- `setLayout()`, 7, 9
+
+- `QWSServer`, 442
+
+- `setMinimum()`, 35, 53, 139
+
+- `qwsServer`全局变量, 442
+
+- `setMouseTracking()`, 111
+
+- `qwsSetDecoration` (QApplication), 442
+
+- `setSize()`, 105, 107, 120
+
+## 索引
 
 525
 
-- QXmlContentHandler, 340
-- characters(), 342
-- endDocument(), 342
-- Element(), 343
-- startDocument(), 340
-- startElement(), 342
-- QDecoder, 340
-- QXmlDefaultHandler, 340, 341
-- QXmlDTDHandler, 340
-- QXmlEntityResolver, 340
-- QXmlErrorHandler, 340
-- errorString(), 340
-- fatalError(), 343
-- QXmlLexicalHandler, 340
-- QXmlSimpleReader, 339, 340, 344
-- parse(), 340
-- setContentHandler(), 344
-- setErrorHandler(), 344
+- `QXmlContentHandler`, 340
 
-- readSettings() (续)
-- MainWindow, 67, 152
-- SettingsViewer, 223
+- `characters()`, 342
+
+- `endDocument()`, 342
+
+- `Element()`, 343
+
+- `startDocument()`, 340
+
+- `startElement()`, 342
+
+- `QDecoder`, 340
+
+- `QXmlDefaultHandler`, 340, 341
+
+- `QXmlDTDHandler`, 340
+
+- `QXmlEntityResolver`, 340
+
+- `QXmlErrorHandler`, 340
+
+- `errorString()`, 340
+
+- `fatalError()`, 343
+
+- `QXmlLexicalHandler`, 340
+
+- `QXmlSimpleReader`, 339, 340, 344
+
+- `parse()`, 340
+
+- `setContentHandler()`, 344
+
+- `setErrorHandler()`, 344
+
+- `readSettings()` (续)
+
+- `MainWindow`, 67, 152
+
+- `SettingsViewer`, 223
+
 - 读写迭代器, 254, 255-256, 258, 262
+
 - 读/写锁, 386–387
-- readOnly()
-- QFtp, 320
-- QHttp, 323
-- QIODevice, 325, 327, 328, 330, 331, 333, 336
-- readyStandardError() (QObject), 288
-- recalculate() (Spreadsheet), 87
-- received() (QCoapChannel), 440
+
+- `readOnly()`
+
+- `QFtp`, 320
+
+- `QHttp`, 323
+
+- `QIODevice`, 325, 327, 328, 330, 331, 333, 336
+
+- `readyStandardError()` (QObject), 288
+
+- `recalculate()` (Spreadsheet), 87
+
+- `received()` (QCoapChannel), 440
+
 - 最近打开的文件, 50, 59–60
-- rect() (QPixmap), 297–299
-- rect() (QImage), 112
+
+- `rect()` (QPixmap), 297–299
+
+- `rect()` (QImage), 112
+
 - 形, 111, 125–126
+
 - 递归下降解析器, 96
+
 - 重入性, 396
+
 - 引用计数, 259, 397
+
 - 引用文档, 9–11, 490
+
 - 引用类型 (Java 和 C++), 480–481
-- references(), 466–468
-- refreshImage(Plotter), 129
-- refreshTreeView(QMainWindow), 309
-- regExpChanged() (RegExpModel), 243
-- RegExpModel
+
+- `references()`, 466–468
+
+
+
+- `refreshImage(Plotter)`, 129
+
+- `refreshTreeView(QMainWindow)`, 309
+
+- `regExpChanged()` (`RegExpModel`), 243
+
+- `RegExpModel`
+
   - 类定义, 240
-  - RegExpModel(), 241
-  - columnCount(), 242
-  - data(), 242
-  - headerData(), 243
-  - index(), 241
-  - nodef(), 241
-  - parent(), 242
-  - regExpChanged(), 243
-  - count(), 242
-  - setRootNode(), 241
-- RegExpParser, 239, 243–244
+
+  - `RegExpModel()`, 241
+
+  - `columnCount()`, 242
+
+  - `data()`, 242
+
+  - `headerData()`, 243
+
+  - `index()`, 241
+
+  - `nodef()`, 241
+
+  - `parent()`, 242
+
+  - `regExpChanged()`, 243
+
+  - `count()`, 242
+
+  - `setRootNode()`, 241
+
+- `RegExpParser`, 239, 243–244
+
 - 正则解析器示例, 238–244
+
 - 区域 (X11), 418
+
 - 注册表 (Windows), 67
-  - 保留选项 (QtXServer), 430
-- regVrt2, 426
+
+  - 保留选项 (`QtXServer`), 430
+
+- `regVrt2`, 426
+
 - 正则表达式, 28, 98, 102, 230, 238
-- interpret_cast<>(), 477
-- reject() (QDialog), 28, 63
-- Rejected (QDialog), 28, 63
-- Release() (IUnknown), 423, 426
-- lease()
-- QSemaphore, 378, 388
+
+- `interpret_cast<>()`, 477
+
+- `reject()` (`QDialog`), 28, 63
+
+- `Rejected` (`QDialog`), 28, 63
+
+- `Release()` (`IUnknown`), 423, 426
+
+- `lease()`
+
+- `QSemaphore`, 378, 388
 
 # R
 
 - 径向渐变, 180, 187
+
 - 单选按钮, 337
+
 - 随机访问设备, 279
+
 - Rational PurifyPlus, 457
-- rawCommand() (QFtp), 314
-- rc 文件, 428, 431
-- rc, 296
-- read()
-- CursorHandler, 404
-- QFtp, 320
-- QHttp, 323
-- readAll()
-- QFtp, 320
-- QHttp, 323
-- IODevice, 278
-- QStream, 280
-- readStandardError() (QProcess), 290
-- readBitmap() (QCursor), 407
-- readClient() (QSocket), 331
-- readDataItem() (QSocket), 336
-- readFile() (Spreadsheet), 82
-- readHeaderNecessary() (CursorHandler), 406
-- readLine(), 333
-- QIODevice, 323
-- QTextStream, 280, 282
-- ReadOnly (QIODevice), 82
+
+- `rawCommand()` (`QFtp`), 314
+
+- `rc` 文件, 428, 431
+
+- `rc`, 296
+
+- `read()`
+
+- `CursorHandler`, 404
+
+- `QFtp`, 320
+
+- `QHttp`, 323
+
+- `readAll()`
+
+- `QFtp`, 320
+
+- `QHttp`, 323
+
+- `IODevice`, 278
+
+- `QStream`, 280
+
+- `readStandardError()` (`QProcess`), 290
+
+- `readBitmap()` (`QCursor`), 407
+
+- `readClient()` (`QSocket`), 331
+
+- `readDataItem()` (`QSocket`), 336
+
+- `readFile()` (`Spreadsheet`), 82
+
+- `readHeaderNecessary()` (`CursorHandler`), 406
+
+- `readLine()`, 333
+
+- `QIODevice`, 323
+
+- `QTextStream`, 280, 282
+
+- `ReadOnly` (`QIODevice`), 82
+
 - 只读字节流, 256, 257, 258
-- readRawBytes() (QDataStream), 277
-- readSettings()
-- MailClient, 148
+
+- `readRawBytes()` (`QDataStream`), 277
+
+- `readSettings()`
+
+- `MailClient`, 148
 
 # 索引
 
 526
 
-- release() (续)
-- QSessionManager, 435
-- release(QtEngine), 417
+- `release()` (续)
+
+- `QSessionManager`, 435
+
+- `release(QtEngine)`, 417
+
 - 释放模式, 408
-- remove()
-- DirectoryViewer, 228
+
+- `remove()`
+
+- `DirectoryViewer`, 228
+
 - Java 风格迭代器, 255
-- File, 286
-- Qtpa, 314
-- String, 267
-- removeAll(List<T>), 59
-- removePostedEvent(QCoreApplication), 396
-- removePostedEvents(QCoreApplication), 396
-- removeRow(QAbstractItem), 304
-- removeRows(QAbstractItem), 299
-- rename()
-- QDir, 286
-- Qtpa, 314
+
+- `File`, 286
+
+- `Qtpa`, 314
+
+- `String`, 267
+
+- `removeAll(List<T>)`, 59
+
+- `removePostedEvent(QCoreApplication)`, 396
+
+- `removePostedEvents(QCoreApplication)`, 396
+
+- `removeRow(QAbstractItem)`, 304
+
+- `removeRows(QAbstractItem)`, 299
+
+- `rename()`
+
+- `QDir`, 286
+
+- `Qtpa`, 314
+
 - 渲染提示, 178, 413
-- paint(QWidget), 108
+
+- `paint(QWidget)`, 108
+
 - 绘画, 107, 112
-- reparenting, 9, 57, 149
-- replace(QString), 212, 267
-- request(QHttp), 332
-- requestFinished(QEvent), 322
-- requestPropertyChanged(QAbstractItem), 425–426
-- requestStarted(QObject), 332
-- reserve(Hash<T>), 261
-- reset(QAbstractItem), 234
-- resize(QWidget), 139
-- resize(QWidget), 124–135
-- resizeGL(Tetrahedron), 200
-- ResizeTransaction, 395
+
+- `reparenting`, 9, 57, 149
+
+- `replace(QString)`, 212, 267
+
+- `request(QHttp)`, 332
+
+- `requestFinished(QEvent)`, 322
+
+- `requestPropertyChanged(QAbstractItem)`, 425–426
+
+- `requestStarted(QObject)`, 332
+
+- `reserve(Hash<T>)`, 261
+
+- `reset(QAbstractItem)`, 234
+
+- `resize(QWidget)`, 139
+
+- `resize(QWidget)`, 124–135
+
+- `resizeGL(Tetrahedron)`, 200
+
+- `ResizeTransaction`, 395
+
 - 调整窗口, 112, 149
-- resolution(point device), 192
+
+- `resolution(point device)`, 192
+
 - 资源文件, 47, 286–287
+
 - 存储项, 47, 121, 352
+
 - 存储翻译, 369–370
+
 - 本地化, 371
-- 资源项 (pro. files), 47, 121, 286, 370
-- start command, 434
-- restore(QPainter), 180
-- restoreCursor(QApplication), 80, 126
-- restoreState()
-- MainWindow, 152
-- QSplitter, 148
-- TicTacToe, 437
+
+- 资源项 (`pro. files`), 47, 121, 286, 370
+
+- `start command`, 434
+
+- `restore(QPainter)`, 180
+
+- `restoreCursor(QApplication)`, 80, 126
+
+- `restoreState()`
+
+- `MainWindow`, 152
+
+- `QSplitter`, 148
+
+- `TicTacToe`, 437
+
 - 结果集, 295, 297
-- retranslateUI()
-- JournalView, 376
-- MainWindow, 373
-- UI 类, 376
-- retrieveData()
-- QMetaData, 210, 213
-- TableMetaData, 213
+
+- `retranslateUI()`
+
+- `JournalView`, 376
+
+- `MainWindow`, 373
+
+- `UI` 类, 376
+
+- `retrieveData()`
+
+- `QMetaData`, 210, 213
+
+- `TableMetaData`, 213
+
 - 反转布局, 9, 170, 369, 370
+
 - RGB 格式, 106, 189
-- RHandle(Mac OS X), 418
+
+- `RHandle(Mac OS X)`, 418
+
 - 富文本, 31, 192, 352
-- right(QString), 266, 267
-- rightColumn()
-(QWidgetSelection), 64
+
+- `right(QString)`, 266, 267
+
+- `rightColumn()`
+
+  (`WidgetSelection`), 64
+
 - 右鼠标按钮, 111
+
 - 从右向左语言, 9, 369, 370
-- rmdir()
-- Dir, 286
-- Qtpa, 314
-- rollback(QDatabase), 296
-- Romans, 365
-- rotate()
-- QMatrix, 182
-- Painter, 183
-- RoundCap(Qt), 177
-- RoundJoin(Qt), 177
+
+- `rmdir()`
+
+- `Dir`, 286
+
+- `Qtpa`, 314
+
+- `rollback(QDatabase)`, 296
+
+- `Romans`, 365
+
+- `rotate()`
+
+- `QMatrix`, 182
+
+- `Painter`, 183
+
+- `RoundCap(Qt)`, 177
+
+- `RoundJoin(Qt)`, 177
+
 - 圆矩形, 176
-- row(QModelIndex), 231, 233
-- Count(Spreadsheet), 76, 77
-- Count()
-- CityModel, 236
-- CurrencyModel, 233
-- RegModel, 242
-- RTTI, 476
+
+- `row(QModelIndex)`, 231, 233
+
+- `Count(Spreadsheet)`, 76, 77
+
+- `Count()`
+
+- `CityModel`, 236
+
+- `CurrencyModel`, 233
+
+- `RegModel`, 242
+
+- `RTTI`, 476
+
 - 橡胶带, 116–117, 125–129
-- run()
-- thread, 382, 388, 389, 390, 394, 396
-- Thread, 385
-- TransactionThread, 394
+
+- `run()`
+
+- `thread`, 382, 388, 389, 390, 394, 396
+
+- `Thread`, 385
+
+- `TransactionThread`, 394
+
 - 运行应用程序, 4, 454
+
 - 运行外部程序, 287
+
 - 运行时类型信息, 476
+
 - 俄罗斯, 365
 
 # S
 
-- SAFEARRAY (Windows), 221
+- `SAFEARRAY` (Windows), 221
+
 - 示例程序。见示例
-- save()
-- Editor, 159
 
-- save() (续)
-- MainWindow, 57, 155
-- QDomNode, 348
-- Painter, 180, 188
-- saveAs(MainWindow), 57
-- saveFile(MainWindow), 57
-- saveState()
-- JOptionPane, 431, 433
-- MainWindow, 152
-- QSplitter, 144
-- TicTacToe, 436
-- savefont  (Qtopia applications), 442
-- SAX, 339–344
-- Savander
+- `save()`
+
+- `Editor`, 159
+
+- `save()` (续)
+
+- `MainWindow`, 57, 155
+
+- `QDomNode`, 348
+
+- `Painter`, 180, 188
+
+- `saveAs(MainWindow)`, 57
+
+- `saveFile(MainWindow)`, 57
+
+- `saveState()`
+
+- `JOptionPane`, 431, 433
+
+- `MainWindow`, 152
+
+- `QSplitter`, 144
+
+- `TicTacToe`, 436
+
+- `savefont`  (`Qtopia applications`), 442
+
+- `SAX`, 339–344
+
+- `Savander`
+
   - 类定义, 341
+
   - 继承树, 340
-  - SaxHandler(), 341
-  - characters, 342
-  - endElement(), 342
-  - fatalError(), 343
-  - startElement(), 342
+
+  - `SaxHandler()`, 341
+
+  - `characters`, 342
+
+  - `endElement()`, 342
+
+  - `fatalError()`, 343
+
+  - `startElement()`, 342
+
   - SAX Handler 示例, 340–344
-- scale(QPainter, 183)
-- ScientificNotification(QtGui, 281)
-- Screen (X1), 418
+
+- `scale(QPainter, 183)`
+
+- `ScientificNotification(QtGui, 281)`
+
+- `Screen (X1)`, 418
+
 - 屏幕驱动程序, 442
-- scroll()
-- PlotSettings, 132
-- QWidget, 168
-- ScrollAlways(Qt), 149
+
+- `scroll()`
+
+- `PlotSettings`, 132
+
+- `QWidget`, 168
+
+- `ScrollAlways(Qt)`, 149
+
 - 滚动条, 33, 79, 127
-- scrollTo(QTreeView), 228
-- SDI, 71
+
+- `scrollTo(QTreeView)`, 228
+
+- `SDI`, 71
+
 - 次级线程, 391
-- seek()
-- QDevice, 273, 279, 326
-- QQuery, 295
+
+- `seek()`
+
+- `QDevice`, 273, 279, 326
+
+- `QQuery`, 295
+
 - 段错误, 464
-- select(TableModel), 297, 298, 304
-- SELECT 语句
-- selectAll(QAbstractItem), 86
-- selectColumn(QAbstractItem), 86
-- selectCurrentColumn(Spreadsheet), 86
-- selectCurrentRow(Spreadsheet), 86
-- selectRow(QAbstractItem), 86
-- selectedId(MouseClicked), 216
-- selectedRange(Spreadsheet), 84
-- selectedRanges(TableView), 84
-- selection(Clipboard), 215
-- selectModel(QAbstractItem), 306
+
+- `select(TableModel)`, 297, 298, 304
+
+- `SELECT` 语句
+
+- `selectAll(QAbstractItem)`, 86
+
+- `selectColumn(QAbstractItem)`, 86
+
+- `selectCurrentColumn(Spreadsheet)`, 86
+
+- `selectCurrentRow(Spreadsheet)`, 86
+
+- `selectRow(QAbstractItem)`, 86
+
+- `selectedId(MouseClicked)`, 216
+
+- `selectedRange(Spreadsheet)`, 84
+
+- `selectedRanges(TableView)`, 84
+
+- `selection(Clipboard)`, 215
+
+- `selectModel(QAbstractItem)`, 306
+
 - 分隔符, 378–389
+
 - 分隔符示例, 378–389
+
 - 半透明度, 106, 189
-- send(QCoopChannel), 440
-- sendDataObject(WeatherBalloon), 334
-- sendRequest(TripPlanner), 326
-- sender(QObject), 60, 247
-- separator
+
+- `send(QCoopChannel)`, 440
+
+- `sendDataObject(WeatherBalloon)`, 334
+
+- `sendRequest(TripPlanner)`, 326
+
+- `sender(QObject)`, 60, 247
+
+- `separator`
+
 - 文件名, 286
+
 - 菜单栏, 51
+
 - 菜单工具栏, 52
+
 - 顺序容器, 252–260
+
 - 顺序设备, 279
-- server (QCore), 430
-- sessionOption (X11), 334, 436
-- sessionFileName(TicTacToe), 436
-- sessionId(QApplication), 336
-- sessionKey(QApplication), 336
-- session management, 331–337
-- Drops(QWidget), 206, 208
-- allowedAreas(QWidget), 286
-- setAttribute(QWidget), 270, 364
-- autoDetectUpdate(QWidget), 276
-- setAutoBackground(QWidget), 119, 120
-- setRecalculate(Spreadsheet), 88
-- setBit(QArray), 407
-- setBrush(QPainter), 176
-- setBuddy(QLineEdit), 15
-- setOrderBy(QData), 404
-- setCentralWidget(QMainWindow), 46
-- setCheckable(QAction), 49
-- setChecked(QAction), 156
-- setCies(CityModel), 238
-- setRect(QPainter), 391
-- setCodec(QText), 280, 363, 364
-- setCodecFor(QCodec), 365
-- setCodecForText(QText), 364, 378
-- setHorizontalCount(QTableView), 77
-- setColumnRange(SortDialog), 64
-- setCompositionMode(QPainter), 190
-- setContent(QDocument), 346
-- setContentHandler(QXmlSimpleReader), 344
-- setContext(QShortcut), 165
-- setContextMenuPolicy(QWidget), 51
-- setControl(QXml), 420
-- setCorner(QMainWindow), 151
-- setCurrencyMap(CurrencyModel), 234
-- setCurrentCell(QWidget), 63
-- setCurrentFile()
-- Editor, 58, 59
-- setCurrentIndex()
-- setStackedLayout, 143, 145
-- setStackedWidget, 36
-- setCurveData(Plotter), 122
-- setData()
-- Cell, 93
-- City, 237
-- item_classes, 78, 93
-- setAbstractModel, 237, 298, 299
-- QListWidget, 220
-- setQData, 210, 211
-- setDatabase(QDatabase), 294
-- setDefault(QPushButton), 215
-- setDirty(Cell), 93
-- setDiscardCommand(QSessionManager), 433
-- setDropEvent(QEvent), 209, 210
-- setTimer(QTimer), 184
-- setEditTriggers(QAbstractItem), 220, 222, 225
-- setEditorData(QDelegate, 247)
-- setEnabled()
-- Action, 156
-- Widget, 15, 18
-- setEnabledOptions(QPrintDialog), 196
-- setTransformer(QSimpleRenderer), 344
-- setFeatures(QDocument), 150
-- setAlignment(QTextStream), 281
-- setWidth(QTextStream), 281
-- setFilter(TableModel), 297
-- setFilterColumn()
-- QSortFilterProxy, 229, 330
-- setFilterRegExp()
-- setHeight(QWidget), 173
-- setSize(QLayout), 35
-- setSize(QWidget), 138
-- setFocus(QFocus), 158
-- setFocusPolicy(QWidget), 120
-- setFont(QPainter), 176
-- setFormat(QGLPainter), 199
-- setFormula()
-- Cell, 93
-- Spreadsheet, 79, 283
-- setForwardOnly(QSqlQuery), 295
-- setGenerateOrderMark()
-- (QTextStream), 363
-- setGeometry(QWidget), 68, 138
-- setHorizontalLabels(QTableWidget), 221
-- setHorizontalScrollBar(QAbstractScrollArea), 194
-- setHost(QObject), 321, 322
-- setHostName(QDatabase), 294
-- setQData, 211
-- QDocument, 193
-- setIcon(QListWidget), 220
-- setImage(QIconEditor), 107
-- setImage()
-- Clipboard, 215
-- TransactionThread, 394
-- setImagePixel(IconEditor), 111
-- setIntegerBase(QTextStream), 281
-- setInterfaceSafety(QSafetyItem), 427
-- setItem(QWidget), 79, 222
-- setDelegate(QAbstractItem), 245
 
+- `server (QCore)`, 430
 
+- `sessionOption (X11)`, 334, 436
 
+- `sessionFileName(TicTacToe)`, 436
+
+- `sessionId(QApplication)`, 336
+
+- `sessionKey(QApplication)`, 336
+
+- `session management`, 331–337
+
+- `Drops(QWidget)`, 206, 208
+
+- `allowedAreas(QWidget)`, 286
+
+- `setAttribute(QWidget)`, 270, 364
+
+- `autoDetectUpdate(QWidget)`, 276
+
+- `setAutoBackground(QWidget)`, 119, 120
+
+- `setRecalculate(Spreadsheet)`, 88
+
+- `setBit(QArray)`, 407
+
+- `setBrush(QPainter)`, 176
+
+- `setBuddy(QLineEdit)`, 15
+
+- `setOrderBy(QData)`, 404
+
+- `setCentralWidget(QMainWindow)`, 46
+
+- `setCheckable(QAction)`, 49
+
+- `setChecked(QAction)`, 156
+
+- `setCies(CityModel)`, 238
+
+- `setRect(QPainter)`, 391
+
+- `setCodec(QText)`, 280, 363, 364
+
+- `setCodecFor(QCodec)`, 365
+
+- `setCodecForText(QText)`, 364, 378
+
+- `setHorizontalCount(QTableView)`, 77
+
+- `setColumnRange(SortDialog)`, 64
+
+- `setCompositionMode(QPainter)`, 190
+
+- `setContent(QDocument)`, 346
+
+- `setContentHandler(QXmlSimpleReader)`, 344
+
+- `setContext(QShortcut)`, 165
+
+- `setContextMenuPolicy(QWidget)`, 51
+
+- `setControl(QXml)`, 420
+
+- `setCorner(QMainWindow)`, 151
+
+- `setCurrencyMap(CurrencyModel)`, 234
+
+- `setCurrentCell(QWidget)`, 63
+
+- `setCurrentFile()`
+
+- `Editor`, 58, 59
+
+- `setCurrentIndex()`
+
+- `setStackedLayout`, 143, 145
+
+- `setStackedWidget`, 36
+
+- `setCurveData(Plotter)`, 122
+
+- `setData()`
+
+- `Cell`, 93
+
+- `City`, 237
+
+- `item_classes`, 78, 93
+
+- `setAbstractModel`, 237, 298, 299
+
+- `QListWidget`, 220
+
+- `setQData`, 210, 211
+
+- `setDatabase(QDatabase)`, 294
+
+- `setDefault(QPushButton)`, 215
+
+- `setDirty(Cell)`, 93
+
+- `setDiscardCommand(QSessionManager)`, 433
+
+- `setDropEvent(QEvent)`, 209, 210
+
+- `setTimer(QTimer)`, 184
+
+- `setEditTriggers(QAbstractItem)`, 220, 222, 225
+
+- `setEditorData(QDelegate, 247)`
+
+- `setEnabled()`
+
+- `Action`, 156
+
+- `Widget`, 15, 18
+
+- `setEnabledOptions(QPrintDialog)`, 196
+
+- `setTransformer(QSimpleRenderer)`, 344
+
+- `setFeatures(QDocument)`, 150
+
+- `setAlignment(QTextStream)`, 281
+
+- `setWidth(QTextStream)`, 281
+
+- `setFilter(TableModel)`, 297
+
+- `setFilterColumn()`
+
+- `QSortFilterProxy`, 229, 330
+
+- `setFilterRegExp()`
+
+- `setHeight(QWidget)`, 173
+
+- `setSize(QLayout)`, 35
+
+- `setSize(QWidget)`, 138
+
+- `setFocus(QFocus)`, 158
+
+- `setFocusPolicy(QWidget)`, 120
+
+- `setFont(QPainter)`, 176
+
+- `setFormat(QGLPainter)`, 199
+
+- `setFormula()`
+
+- `Cell`, 93
+
+- `Spreadsheet`, 79, 283
+
+- `setForwardOnly(QSqlQuery)`, 295
+
+- `setGenerateOrderMark()`
+
+- `(QTextStream)`, 363
+
+- `setGeometry(QWidget)`, 68, 138
+
+- `setHorizontalLabels(QTableWidget)`, 221
+
+- `setHorizontalScrollBar(QAbstractScrollArea)`, 194
+
+- `setHost(QObject)`, 321, 322
+
+- `setHostName(QDatabase)`, 294
+
+- `setQData`, 211
+
+- `QDocument`, 193
+
+- `setIcon(QListWidget)`, 220
+
+- `setImage(QIconEditor)`, 107
+
+- `setImage()`
+
+- `Clipboard`, 215
+
+- `TransactionThread`, 394
+
+- `setImagePixel(IconEditor)`, 111
+
+- `setIntegerBase(QTextStream)`, 281
+
+- `setInterfaceSafety(QSafetyItem)`, 427
+
+- `setItem(QWidget)`, 79, 222
+
+- `setDelegate(QAbstractItem)`, 245
 
 # 索引
 
 ## 529
 
-setRadius(AxBouncer), 426
-setRange()()
-QAbstractSlider, 7
-QAbstractSpinBox, 7
-QProgressDialog, 172
-setRealNumberNotation(QTextStream), 281
-setRealNumberPrecision(QTextStream), 281
-setRelation()
-(QSqlTableModel), 305, 307
-setRender(QPainter), 178, 185, 413
-setRenderMode(QAbstractModel), 241
-setRowCount(QTableView), 77
-setSelectionMode()
-QTableView, 212
-QTableWidget, 262
-setShortcutContext(QAction), 165
-setShowGrid(QTableView), 49
-setSingleShot(QTimer), 184
-setSizeConstraint(QLayout), 34
-setPolicy(QWidget), 105, 170, 120, 422
-setSize(QSplitter), 147
-setSocketDescriptor(QSocket), 330
-setSourceModel(QAbstractModel), 229
-setSpacing(QLayout), 426
-setSpeed(AxBouncer), 426
-setToolTip(QAction), 351
-setStretchFactor(QSplitter), 147
-setStringList(QStringModel), 225
-setTabText(QWidget), 224
-setTabOrder(QWidget), 199
-setTable(QSqlTableModel), 297
-setText()
-QAbstractButton, 35
-Q <<, 83, 215
-QLabel, 54
-QListWidget, 220
-QMessageBox, 211
-QTreeWidgetItem, 342, 347
-Ticker, 167
-setToolTip()
-QAction, 351
-QWidget, 351
-setUser(QToolTip), 322
-setUserName(QSqlDatabase), 294
-setValue()
-Java-style iterators, 256, 262
-QAbstractSlider, 7–8
-QProgressDialog, 173
-Settings, 67
-setValue (continued)
-QSpinBox, 7
-setVersion(QDataStream), 81, 274, 275, 277–278
-setVerticalScrollBar()
-(QAbstractScrollArea), 149
-setViewport(QPainter), 185
-setVisible()
-QAction, 49, 59
-Widget, 33
-setWhatThis(QWidget), 352
-setWidget()
-DockWidget, 151
-QScrollArea, 149
-setResizable(QWidget)
-setWindow(QPainter), 182, 185
-setWindowIcon(QIcon), 46
-setWindowModified(QWidget), 54, 158, 160
-setTitle(QWidget), 7, 17–58, 160
-setZoomFactor(QIconEditor), 170
-setLocale(std), 370
-sets, 262
-settings, 67–68, 148, 152, 223
-SettingsView
-SettingsViewer(QWidget), 223
-addChildSettings(QWidget), 224
-readSettings(), 223
-Settings Viewer example, 222–224
-setupUI(Ui: classes), 26–27, 288
-hallow copy. See implicit sharing
-shape, 460
-shape-changing dialog, 29–36
-shared classes, 257, 259, 397, 431
-shared libraries, 399
-nsheear (QPainter), 183
-shift key, 111, 164
-Shift-JIS, 365
-shortcut keys, 6, 25, 48, 165, 333
+`setRadius(AxBouncer)`, 426
+
+`setRange()()`
+
+`QAbstractSlider`, 7
+
+`QAbstractSpinBox`, 7
+
+`QProgressDialog`, 172
+
+`setRealNumberNotation(QTextStream)`, 281
+
+`setRealNumberPrecision(QTextStream)`, 281
+
+`setRelation()`
+
+`(QSqlTableModel)`, 305, 307
+
+`setRender(QPainter)`, 178, 185, 413
+
+`setRenderMode(QAbstractModel)`, 241
+
+`setRowCount(QTableView)`, 77
+
+`setSelectionMode()`
+
+
+
+`QTableView`, 212
+
+`QTableWidget`, 262
+
+`setShortcutContext(QAction)`, 165
+
+`setShowGrid(QTableView)`, 49
+
+`setSingleShot(QTimer)`, 184
+
+`setSizeConstraint(QLayout)`, 34
+
+`setPolicy(QWidget)`, 105, 170, 120, 422
+
+`setSize(QSplitter)`, 147
+
+`setSocketDescriptor(QSocket)`, 330
+
+`setSourceModel(QAbstractModel)`, 229
+
+`setSpacing(QLayout)`, 426
+
+`setSpeed(AxBouncer)`, 426
+
+`setToolTip(QAction)`, 351
+
+`setStretchFactor(QSplitter)`, 147
+
+`setStringList(QStringModel)`, 225
+
+`setTabText(QWidget)`, 224
+
+`setTabOrder(QWidget)`, 199
+
+`setTable(QSqlTableModel)`, 297
+
+`setText()`
+
+`QAbstractButton`, 35
+
+`Q <<`, 83, 215
+
+`QLabel`, 54
+
+`QListWidget`, 220
+
+`QMessageBox`, 211
+
+`QTreeWidgetItem`, 342, 347
+
+`Ticker`, 167
+
+`setToolTip()`
+
+`QAction`, 351
+
+`QWidget`, 351
+
+`setUser(QToolTip)`, 322
+
+`setUserName(QSqlDatabase)`, 294
+
+`setValue()`
+
+`Java-style iterators`, 256, 262
+
+`QAbstractSlider`, 7–8
+
+`QProgressDialog`, 173
+
+`Settings`, 67
+
+`setValue` (continued)
+
+`QSpinBox`, 7
+
+`setVersion(QDataStream)`, 81, 274, 275, 277–278
+
+`setVerticalScrollBar()`
+
+(`QAbstractScrollArea`), 149
+
+`setViewport(QPainter)`, 185
+
+`setVisible()`
+
+`QAction`, 49, 59
+
+`Widget`, 33
+
+`setWhatThis(QWidget)`, 352
+
+`setWidget()`
+
+`DockWidget`, 151
+
+`QScrollArea`, 149
+
+`setResizable(QWidget)`
+
+`setWindow(QPainter)`, 182, 185
+
+`setWindowIcon(QIcon)`, 46
+
+`setWindowModified(QWidget)`, 54, 158, 160
+
+`setTitle(QWidget)`, 7, 17–58, 160
+
+`setZoomFactor(QIconEditor)`, 170
+
+`setLocale(std)`, 370
+
+`sets`, 262
+
+`settings`, 67–68, 148, 152, 223
+
+`SettingsView`
+
+`SettingsViewer(QWidget)`, 223
+
+`addChildSettings(QWidget)`, 224
+
+`readSettings()`, 223
+
+`Settings Viewer example`, 222–224
+
+`setupUI(Ui: classes)`, 26–27, 288
+
+`hallow copy`. See implicit sharing
+
+`shape`, 460
+
+`shape-changing dialog`, 29–36
+
+`shared classes`, 257, 259, 397, 431
+
+`shared libraries`, 399
+
+`nsheear (QPainter)`, 183
+
+`shift key`, 111, 164
+
+`Shift-JIS`, 365
+
+`shortcut keys`, 6, 25, 48, 165, 333
+
 See also abstractors
-show(QWidget), 61–62, 121, 142
-showBase(QString), 281
-showEvent(Licker), 167
-showMessage(QStatusBar), 56
-showPage(HelpBrowser), 355, 357
-showbase manipulator, 280
-shutdown, 432, 434
-signal and slots
-automatic connections, 28, 288
-compared events, 163
-connecting, 6, 8, 20–34, 21, 32–34
-declaring, 14, 20
+
+`show(QWidget)`, 61–62, 121, 142
+
+`showBase(QString)`, 281
+
+`showEvent(Licker)`, 167
+
+`showMessage(QStatusBar)`, 56
+
+`showPage(HelpBrowser)`, 355, 357
+
+`showbase manipulator`, 280
+
+`shutdown`, 432, 434
+
+`signal and slots`
+
+`automatic connections`, 28, 288
+
+`compared events`, 163
+
+`connecting`, 6, 8, 20–34, 21, 32–34
+
+`declaring`, 14, 20
 
 ## 530
+
 # 
 
-signals and slots (continued)
-disconnecting, 21
-dynamic invocation, 397
-emitting signals, 18
-establishing connections in
-Qt Designer, 32–34
-implementing slots, 18, 22
-in ActiveX subclasses, 423
-in multithreaded applications, 391–395
-parameter types, 21
-Q_ENUMS() macro, 420
-return values for, 45
-SIGNAL() and SLOT() macro, 6, 20
-signals and slots-keywords, 21
-simplified(QString), 268
-single document interface (SDI), 71
-single-shot timers, 168
-single-value hashes, 262
-single-value maps, 261
-Sinhala, 362
-size(QMetrics), 167
-sizeWidth(QSpacerItem), 32
-sizeOf() Editor, 160
-Plotter, 123
-QWidget, 17, 35, 53, 106, 140
-size hints, 17, 35, 53, 107, 142
-size policies, 107, 120, 142
-sizeOf() operator, 469
-sizes(QSplitter), 256
-skip-lists, 260
-skipData(QDataStream), 404
-slash (/), 286
-slash (C), 67
-sliders, 79
-automatic connections, 28, 288
-connecting to a signal, 6, 8, 20–34, 21, 32–34
-declaring, 14, 20
-disconnect,  1
-dynamic invocation, 397
-establishing connections in
-Qt Designer, 32–34
-implementing slots, 18, 22
-in ActiveX subclasses, 423
-in multithreaded applications, 391–395
-parameter types, 21
-Q_ENUMS() macro, 420
-return values for, 45
-SIGNAL() and SLOT() macro, 6, 20
-signals and slots-keywords, 21
-simplified(QString), 268
-single document interface (SDI), 71
-single-shot timers, 168
-single-value hashes, 262
-single-value maps, 261
-Sinhala, 362
-size(QMetrics), 167
-sizeWidth(QSpacerItem), 32
-sizeOf() Editor, 160
-Plotter, 123
-QWidget, 17, 35, 53, 106, 140
-size hints, 17, 35, 53, 107, 142
-size policies, 107, 120, 142
-sizeOf() operator, 469
-sizes(QSplitter), 256
-skip-lists, 260
-skipData(QDataStream), 404
-slash (/), 286
-slash (C), 67
-sliders, 79
-automatic connections, 28, 288
-connecting to a signal, 6, 8, 20–34, 21, 32–34
-declaring, 14, 20
-disconnecting, 21
-dynamic invocation, 397
-emitting signals, 18
-establishing connections in
-Qt Designer, 32–34
-implementing slots, 18, 22
-in ActiveX subclasses, 423
-in multithreaded applications, 391–395
-parameter types, 21
-Q_ENUMS() macro, 420
-return values for, 45
-SIGNAL() and SLOT() macro, 6, 20
-signals and slots-keywords, 21
-simplified(QString), 268
-single document interface (SDI), 71
-single-shot timers, 168
-single-value hashes, 262
-single-value maps, 261
-Sinhala, 362
-size(QMetrics), 167
-sizeWidth(QSpacerItem), 32
-sizeOf() Editor, 160
-Plotter, 123
-QWidget, 17, 35, 53, 106, 140
-size hints, 17, 35, 53, 107, 142
-size policies, 107, 120, 142
-sizeOf() operator, 469
-sizes(QSplitter), 256
-skip-lists, 260
-skipData(QDataStream), 404
-slash (/), 286
-slash (C), 67
-sliders, 79
-automatic connections, 28, 288
-connecting to a signal, 6, 8, 20–34, 21, 32–34
-declaring, 14, 20
-disconnecting, 21
-dynamic invocation, 397
-emitting signals, 18
-establishing connections in
-Qt Designer, 32–34
-implementing slots, 18, 22
-in ActiveX subclasses, 423
-in multithreaded applications, 391–395
-parameter types, 21
-Q_ENUMS() macro, 420
-return values for, 45
-SIGNAL() and SLOT() macro, 6, 20
-signals and slots-keywords, 21
-simplified(QString), 268
-single document interface (SDI), 71
-single-shot timers, 168
-single-value hashes, 262
-single-value maps, 261
-Sinhala, 362
-size(QMetrics), 167
-sizeWidth(QSpacerItem), 32
-sizeOf() Editor, 160
-Plotter, 123
-QWidget, 17, 35, 53, 106, 140
-size hints, 17, 35, 53, 107, 142
-size policies, 107, 120, 142
-sizeOf() operator, 469
-sizes(QSplitter), 256
-skip-lists, 260
-skipData(QDataStream), 404
-slash (/), 286
-slash (C), 67
-sliders, 79
-automatic connections, 28, 288
-connecting to a signal, 6, 8, 20–34, 21, 32–34
-declaring, 14, 20
-disconnecting, 21
-dynamic invocation, 397
-emitting signals, 18
-establishing connections in
-Qt Designer, 32–34
-implementing slots, 18, 22
-in ActiveX subclasses, 423
-in multithreaded applications, 391–395
-parameter types, 21
-Q_ENUMS() macro, 420
-return values for, 45
-SIGNAL() and SLOT() macro, 6, 20
-signals and slots-keywords, 21
-simplified(QString), 268
-single document interface (SDI), 71
-single-shot timers, 168
-single-value hashes, 262
-single-value maps, 261
-Sinhala, 362
-size(QMetrics), 167
-sizeWidth(QSpacerItem), 32
-sizeOf() Editor, 160
-Plotter, 123
-QWidget, 17, 35, 53, 106, 140
-size hints, 17, 35, 53, 107, 142
-size policies, 107, 120, 142
-sizeOf() operator, 469
-sizes(QSplitter), 256
-skip-lists, 260
-skipData(QDataStream), 404
-slash (/), 286
-slash (C), 67
-sliders, 79
-automatic connections, 28, 288
-connecting to a signal, 6, 8, 20–34, 21, 32–34
-declaring, 14, 20
-disconnecting, 21
-dynamic invocation, 397
-emitting signals, 18
-establishing connections in
-Qt Designer, 32–34
-implementing slots, 18, 22
-in ActiveX subclasses, 423
-in multithreaded applications, 391–395
-parameter types, 21
-Q_ENUMS() macro, 420
-return values for, 45
-SIGNAL() and SLOT() macro, 6, 20
-signals and slots-keywords, 21
-simplified(QString), 268
-single document interface (SDI), 71
-single-shot timers, 168
-single-value hashes, 262
-single-value maps, 261
-Sinhala, 362
-size(QMetrics), 167
-sizeWidth(QSpacerItem), 32
-sizeOf() Editor, 160
-Plotter, 123
-QWidget, 17, 35, 53, 106, 140
-size hints, 17, 35, 53, 107, 142
-size policies, 107, 120, 142
-sizeOf() operator, 469
-sizes(QSplitter), 256
-skip-lists, 260
-skipData(QDataStream), 404
-slash (/), 286
-slash (C), 67
-sliders, 79
-automatic connections, 28, 288
-connecting to a signal, 6, 8, 20–34, 21, 32–34
-declaring, 14, 20
-disconnecting, 21
-dynamic invocation, 397
-emitting signals, 18
-establishing connections in
-Qt Designer, 32–34
-implementing slots, 18, 22
-in ActiveX subclasses, 423
-in multithreaded applications, 391–395
-parameter types, 21
-Q_ENUMS() macro, 420
-return values for, 45
-SIGNAL() and SLOT() macro, 6, 20
-signals and slots-keywords, 21
-simplified(QString), 268
-single document interface (SDI), 71
-single-shot timers, 168
-single-value hashes, 262
-single-value maps, 261
-Sinhala, 362
-size(QMetrics), 167
-sizeWidth(QSpacerItem), 32
-sizeOf() Editor, 160
-Plotter, 123
-QWidget, 17, 35, 53, 106, 140
-size hints, 17, 35, 53, 107, 142
-size policies, 107, 120, 142
-sizeOf() operator, 469
-sizes(QSplitter), 256
-skip-lists, 260
-skipData(QDataStream), 404
-slash (/), 286
-slash (C), 67
-sliders, 79
-automatic connections, 28, 288
-connecting to a signal, 6, 8, 20–34, 21, 32–34
-declaring, 14, 20
-disconnecting, 21
-dynamic invocation, 397
-emitting signals, 18
-establishing connections in
-Qt Designer, 32–34
-implementing slots, 18, 22
-in ActiveX subclasses, 423
-in multithreaded applications, 391–395
-parameter types, 21
-Q_ENUMS() macro, 420
-return values for, 45
-SIGNAL() and SLOT() macro, 6, 20
-signals and slots-keywords, 21
-simplified(QString), 268
-single document interface (SDI), 71
-single-shot timers, 168
-single-value hashes, 262
-single-value maps, 261
-Sinhala, 362
-size(QMetrics), 167
-sizeWidth(QSpacerItem), 32
-sizeOf() Editor, 160
-Plotter, 123
-QWidget, 17, 35, 53, 106, 140
-size hints, 17, 35, 53, 107, 142
-size policies, 107, 120, 142
-sizeOf() operator, 469
-sizes(QSplitter), 256
-skip-lists, 260
-skipData(QDataStream), 404
-slash (/), 286
-slash (C), 67
-sliders, 79
-automatic connections, 28, 288
-connecting to a signal, 6, 8, 20–34, 21, 32–34
-declaring, 14, 20
-disconnecting, 21
-dynamic invocation, 397
-emitting signals, 18
-establishing connections in
-Qt Designer, 32–34
-implementing slots, 18, 22
-in ActiveX subclasses, 423
-in multithreaded applications, 391–395
-parameter types, 21
-Q_ENUMS() macro, 420
-return values for, 45
-SIGNAL() and SLOT() macro, 6, 20
-signals and slots-keywords, 21
-simplified(QString), 268
-single document interface (SDI), 71
-single-shot timers, 168
-single-value hashes, 262
-single-value maps, 261
-Sinhala, 362
-size(QMetrics), 167
-sizeWidth(QSpacerItem), 32
-sizeOf() Editor, 160
-Plotter, 123
-QWidget, 17, 35, 53, 106, 140
-size hints, 17, 35, 53, 107, 142
-size policies, 107, 120, 142
-sizeOf() operator, 469
-sizes(QSplitter), 256
-skip-lists, 260
-skipData(QDataStream), 404
-slash (/), 286
-slash (C), 67
-sliders, 79
-automatic connections, 28, 288
+`signals and slots` (continued)
 
-Q_ENUMS() macro, 420
-return values, 45
-slots pseudo-keyword, 15, 21
+`disconnecting`, 21
+
+`dynamic invocation`, 397
+
+`emitting signals`, 18
+
+`establishing connections in`
+
+`Qt Designer`, 32–34
+
+`implementing slots`, 18, 22
+
+`in ActiveX subclasses`, 423
+
+`in multithreaded applications`, 391–395
+
+`parameter types`, 21
+
+`Q_ENUMS() macro`, 420
+
+`return values for`, 45
+
+`SIGNAL() and SLOT() macro`, 6, 20
+
+`signals and slots-keywords`, 21
+
+`simplified(QString)`, 268
+
+`single document interface (SDI)`, 71
+
+`single-shot timers`, 168
+
+`single-value hashes`, 262
+
+`single-value maps`, 261
+
+`Sinhala`, 362
+
+`size(QMetrics)`, 167
+
+`sizeWidth(QSpacerItem)`, 32
+
+`sizeOf() Editor`, 160
+
+`Plotter`, 123
+
+`QWidget`, 17, 35, 53, 106, 140
+
+`size hints`, 17, 35, 53, 107, 142
+
+`size policies`, 107, 120, 142
+
+`sizeOf() operator`, 469
+
+`sizes(QSplitter)`, 256
+
+`skip-lists`, 260
+
+`skipData(QDataStream)`, 404
+
+`slash (/)`, 286
+
+`slash (C)`, 67
+
+`sliders`, 79
+
+
+
+`single document interface (SDI)`, 71
+
+`single-shot timers`, 168
+
+`single-value hashes`, 262
+
+`single-value maps`, 261
+
+Sinhala, 362
+
+`size(QMetrics)`, 167
+
+`sizeWidth(QSpacerItem)`, 32
+
+`sizeOf()` Editor, 160
+
+Plotter, 123
+
+`QWidget`, 17, 35, 53, 106, 140
+
+`size hints`, 17, 35, 53, 107, 142
+
+`size policies`, 107, 120, 142
+
+`sizeOf()` operator, 469
+
+`sizes(QSplitter)`, 256
+
+`skip-lists`, 260
+
+`skipData(QDataStream)`, 404
+
+`slash (/)`, 286
+
+`slash (C)`, 67
+
+`sliders`, 79
+
+`automatic connections`, 28, 288
+
+`connecting to a signal`, 6, 8, 20–34, 21, 32–34
+
+`declaring`, 14, 20
+
+`disconnecting`, 21
+
+`dynamic invocation`, 397
+
+`emitting signals`, 18
+
+`establishing connections in`
+
+`Qt Designer`, 32–34
+
+`implementing slots`, 18, 22
+
+`in ActiveX subclasses`, 423
+
+`in multithreaded applications`, 391–395
+
+`parameter types`, 21
+
+`Q_ENUMS()` macro, 420
+
+`return values for`, 45
+
+`SIGNAL()` and `SLOT()` macro, 6, 20
+
+`signals and slots-keywords`, 21
+
+`simplified(QString)`, 268
+
+`single document interface (SDI)`, 71
+
+`single-shot timers`, 168
+
+`single-value hashes`, 262
+
+`single-value maps`, 261
+
+Sinhala, 362
+
+`size(QMetrics)`, 167
+
+`sizeWidth(QSpacerItem)`, 32
+
+`sizeOf()` Editor, 160
+
+Plotter, 123
+
+`QWidget`, 17, 35, 53, 106, 140
+
+`size hints`, 17, 35, 53, 107, 142
+
+`size policies`, 107, 120, 142
+
+`sizeOf()` operator, 469
+
+`sizes(QSplitter)`, 256
+
+`skip-lists`, 260
+
+`skipData(QDataStream)`, 404
+
+`slash (/)`, 286
+
+`slash (C)`, 67
+
+`sliders`, 79
+
+`automatic connections`, 28, 288
+
+`connecting to a signal`, 6, 8, 20–34, 21, 32–34
+
+`declaring`, 14, 20
+
+`disconnecting`, 21
+
+`dynamic invocation`, 397
+
+`emitting signals`, 18
+
+`establishing connections in`
+
+`Qt Designer`, 32–34
+
+`implementing slots`, 18, 22
+
+`in ActiveX subclasses`, 423
+
+`in multithreaded applications`, 391–395
+
+`parameter types`, 21
+
+`Q_ENUMS()` macro, 420
+
+`return values for`, 45
+
+`SIGNAL()` and `SLOT()` macro, 6, 20
+
+`signals and slots-keywords`, 21
+
+`simplified(QString)`, 268
+
+`single document interface (SDI)`, 71
+
+`single-shot timers`, 168
+
+`single-value hashes`, 262
+
+`single-value maps`, 261
+
+Sinhala, 362
+
+`size(QMetrics)`, 167
+
+`sizeWidth(QSpacerItem)`, 32
+
+`sizeOf()` Editor, 160
+
+Plotter, 123
+
+`QWidget`, 17, 35, 53, 106, 140
+
+`size hints`, 17, 35, 53, 107, 142
+
+`size policies`, 107, 120, 142
+
+`sizeOf()` operator, 469
+
+`sizes(QSplitter)`, 256
+
+`skip-lists`, 260
+
+`skipData(QDataStream)`, 404
+
+`slash (/)`, 286
+
+`slash (C)`, 67
+
+`sliders`, 79
+
+`automatic connections`, 28, 288
+
+`Q_ENUMS()` macro, 420
+
+`return values`, 45
+
+`slots pseudo-keyword`, 15, 21
+
 maltik, 218
-SmartRotation(QTextStream), 281
-SmColor(X11), 418
-SmoothTransform(Painter), 413
-sockets. See QtSocket
-SolidLine(Qt), 177
-SolidPattern (Qt), 177
-sChanged() (Spreadsheet), 80
-sort ()
-MainWindow, 64
-spreadsheet, 88
-SortDialog
-class definition, 34
-creating using Qt Designer, 29–35
-usage, 65
-SortDialog, 34
-setColumnCount(), 34, 64
-SortDialog, 34
-sort example, 29–55, 63
-sort model, 222
-Source (composition mode), 190
-source(QDropEvent), 209
-sourcetop (composition mode), 190
-sourceIn (composition mode), 190
-sourceOut (composition mode), 190
-sourceOver (composition mode), 190
-space key, 168
-spacer items, 17, 24, 32, 141
-spaces (text), 267–268, 283
-spacing (in layouts), 140
-spanX(PlotSettings), 118
-spanY(PlotSettings), 118
+
+`SmartRotation(QTextStream)`, 281
+
+`SmColor(X11)`, 418
+
+`SmoothTransform(Painter)`, 413
+
+`sockets`. See `QtSocket`
+
+`SolidLine(Qt)`, 177
+
+`SolidPattern (Qt)`, 177
+
+`sChanged()` (`Spreadsheet`), 80
+
+`sort ()`
+
+`MainWindow`, 64
+
+`spreadsheet`, 88
+
+`SortDialog`
+
+`class definition`, 34
+
+`creating using Qt Designer`, 29–35
+
+`usage`, 65
+
+`SortDialog`, 34
+
+`setColumnCount()`, 34, 64
+
+`SortDialog`, 34
+
+`sort example`, 29–55, 63
+
+`sort model`, 222
+
+`Source (composition mode)`, 190
+
+`source(QDropEvent)`, 209
+
+`sourcetop (composition mode)`, 190
+
+`sourceIn (composition mode)`, 190
+
+`sourceOut (composition mode)`, 190
+
+`sourceOver (composition mode)`, 190
+
+`space key`, 168
+
+`spacer items`, 17, 24, 32, 141
+
+`spaces (text)`, 267–268, 283
+
+`spacing (in layouts)`, 140
+
+`spanX(PlotSettings)`, 118
+
+`spanY(PlotSettings)`, 118
+
 SPARC, 457
-specializing. See subclassing
+
+`specializing`. See `subclassing`
+
 Spider
 
- 
-specializing. See subclassing
+`specializing`. See `subclassing`
+
 Spider
-class definition, 315
-Spider(), 316
-done(), 317
-ftDone(), 317
-ftpInfo(), 317
-getDirectory(), 316
-processNextDirectory(), 316
-spider example, 315–320
-spin boxes, 7, 39, 101–103
-splash screens, 71–72
-splines, 176, 177
-split(QString), 85, 268–282
+
+`class definition`, 315
+
+`Spider()`, 316
+
+`done()`, 317
+
+`ftDone()`, 317
+
+`ftpInfo()`, 317
+
+`getDirectory()`, 316
+
+`processNextDirectory()`, 316
+
+`spider example`, 315–320
+
+`spin boxes`, 7, 39, 101–103
+
+`splash screens`, 71–72
+
+`splines`, 176, 177
+
+`split(QString)`, 85, 268–282
 
 ## 531
-# 
 
 Splitter example, 145–146
-splitters, 74, 145–148
-Spreadsheet
-class definition, 75
-initance tree, 74
-ColumnCount, 76, 77
-MagicNumber, 76, 81
-RowCount, 76, 77
-Spreadsheet(), 76
-AutoRecalculate(), 75
-cell(), 78
-clear(), 77
-copy(), 83
-currentFormula(), 80
-currentLocation(), 79
-cut(), 83
-del(), 85
-findNext(), 86
-findPrevious(), 86
-formula(), 78
-modified(), 75
-paste(), 84
-readFile(), 82
-recalculate(), 87
-selectColumnCount(), 86
-selectRow(), 86
-setRange(), 84
-setAutoRecculate(), 88
-setFormula(), 79, 283
-somChanged(), 80
-sort(), 88
-cout(), 78
-writeFile(), 80, 172, 282
-Spreadsheetcompare, 64, 76–91
-Spreadsheet example (Main), 72, 73–99
-SpreadsheetModified()(Main), 54
-printf(String), 256
-SQL, 225–230
-SQLite, 293, 447
+
+`splitters`, 74, 145–148
+
+`Spreadsheet`
+
+`class definition`, 75
+
+`initance tree`, 74
+
+`ColumnCount`, 76, 77
+
+`MagicNumber`, 76, 81
+
+`RowCount`, 76, 77
+
+`Spreadsheet()`, 76
+
+`AutoRecalculate()`, 75
+
+`cell()`, 78
+
+`clear()`, 77
+
+`copy()`, 83
+
+`currentFormula()`, 80
+
+`currentLocation()`, 79
+
+`cut()`, 83
+
+`del()`, 85
+
+`findNext()`, 86
+
+`findPrevious()`, 86
+
+`formula()`, 78
+
+`modified()`, 75
+
+`paste()`, 84
+
+`readFile()`, 82
+
+`recalculate()`, 87
+
+`selectColumnCount()`, 86
+
+`selectRow()`, 86
+
+`setRange()`, 84
+
+`setAutoRecculate()`, 88
+
+`setFormula()`, 79, 283
+
+`somChanged()`, 80
+
+`sort()`, 88
+
+`cout()`, 78
+
+`writeFile()`, 80, 172, 282
+
+`Spreadsheetcompare`, 64, 76–91
+
+`Spreadsheet example (Main)`, 72, 73–99
+
+`SpreadsheetModified()(Main)`, 54
+
+`printf(String)`, 256
+
+`SQL`, 225–230
+
+`SQLite`, 293, 447
+
 out, 89–90
-square(), 453–456
-square (Qt), 177
-squeeze((QHash, T), 261
-SSL, 322
-stack memory, 68, 464, 465
-stacked layouts, 143–145
-stacked widgets, 33, 163
-stacks, 253
-Standard C++ library, 251, 454, 455, 456, 488–490
-standard dialog, 39–40
-Standard Template Library, 251, 258, 489–490
-standard widgets, 37–39
-start()
-AxBouncer, 426
-QProcess, 289, 291
-Thread, 384
-Timer, 334
-startDocument()(XmlElement), 340
-MyWidget, 221
-ProjectListWidget, 208
-startDrag(Application), 208
-startElement(QHandler), 342
-startStopThread(ThreadDialog), 394
-startStopThread(ThreadDialog), 384
-stop(QObject), 167
-startWith(String), 267
-stateChanged(QEvent), 315
-static_cast<T>(), 476
-static keyword, 462, 483
-static libraries, 456
-static linkage, 882
-static members, 462–463
-status(QMainWindow), 53
-status_bar, 46, 52–54, 351, 396
-StatusRole(Qt), 230
-status tips, 48, 52–53
-std namespace, 119, 454, 485, 490
-cerr, 274, 288, 250
-cint, 274
-cout, 274, 283
-endl, 454
-localeconv(), 370
-map<K, T>, 262
-memcpy(), 470
-ostream, 778
-pair<T, T>, 262, 271
-setLocation(), 371
-string, 265, 274
-stropt(), 453
-vector<K>, 471
-STL, 251, 258, 489–490
-STL-style iterators, 256, 262
-stop()
-Bouncer, 426
-Thread, 382, 385
-stopSearch()(ToolTip), 329
-stream manipulators, 280, 478, 489
-streaming, 81, 274–285, 478, 489
-stretch factors, 53, 143
-stretches. Space items
-string(std), 265, 274
-stringlist()(QStringList), 226
+
+`square()`, 453–456
+
+`square (Qt)`, 177
+
+`squeeze((QHash, T)`, 261
+
+`SSL`, 322
+
+`stack memory`, 68, 464, 465
+
+`stacked layouts`, 143–145
+
+`stacked widgets`, 33, 163
+
+`stacks`, 253
+
+`Standard C++ library`, 251, 454, 455, 456, 488–490
+
+`standard dialog`, 39–40
+
+`Standard Template Library`, 251, 258, 489–490
+
+`standard widgets`, 37–39
+
+`start()`
+
+`AxBouncer`, 426
+
+`QProcess`, 289, 291
+
+`Thread`, 384
+
+`Timer`, 334
+
+`startDocument()(XmlElement)`, 340
+
+`MyWidget`, 221
+
+`ProjectListWidget`, 208
+
+`startDrag(Application)`, 208
+
+`startElement(QHandler)`, 342
+
+`startStopThread(ThreadDialog)`, 394
+
+`startStopThread(ThreadDialog)`, 384
+
+`stop(QObject)`, 167
+
+`startWith(String)`, 267
+
+`stateChanged(QEvent)`, 315
+
+`static_cast<T>()`, 476
+
+`static keyword`, 462, 483
+
+`static libraries`, 456
+
+`static linkage`, 882
+
+`static members`, 462–463
+
+`status(QMainWindow)`, 53
+
+`status_bar`, 46, 52–54, 351, 396
+
+`StatusRole(Qt)`, 230
+
+`status tips`, 48, 52–53
+
+`std namespace`, 119, 454, 485, 490
+
+`cerr`, 274, 288, 250
+
+`cint`, 274
+
+`cout`, 274, 283
+
+`endl`, 454
+
+`localeconv()`, 370
+
+`map<K, T>`, 262
+
+`memcpy()`, 470
+
+`ostream`, 778
+
+`pair<T, T>`, 262, 271
+
+`setLocation()`, 371
+
+`string`, 265, 274
+
+`stropt()`, 453
+
+`vector<K>`, 471
+
+`STL`, 251, 258, 489–490
+
+`STL-style iterators`, 256, 262
+
+`stop()`
+
+`Bouncer`, 426
+
+`Thread`, 382, 385
+
+`stopSearch()(ToolTip)`, 329
+
+`stream manipulators`, 280, 478, 489
+
+`streaming`, 81, 274–285, 478, 489
+
+`stretch factors`, 53, 143
+
+`stretches`. Space items
+
+`string(std)`, 265, 274
+
+`stringlist()(QStringList)`, 226
 
 ## 532
-# 
 
 strings, 265–269, 471–473
-strippedName() (MainWindow), 58
+
+`strippedName() (MainWindow)`, 58
+
 StrongARM, 439
-StrongFocus (Qt), 120
+
+`StrongFocus (Qt)`, 120
+
 Stroustrup, Bjarne, 451
-tstrtd(std), 453
-struct keyword, 458
-style()
-Application, 124
--style option (Qt applications), 11, 160
-styles, 11, 51, 124
-subclassing
-built-in widgets, 101–103
-C++ classes, 460–462
-COM interfaces, 426
-QAbstractTableModel, 240
-QAbstractTableModel, 232, 235
-Application, 433
-QAggregated, 426
-QAxindable, 423
-QObject, 423
-QWidget, 423
-DesignerCustomWidgetInterface, 114
-Dialog, 24, 37
-QWidget, 199
-QImageHandler, 402
-QImagePlugin, 400
-QItemDelegate, 245
-QWidget, 207
-QMainWindow, 44, 428
-QMetaData, 212
-QObject, 21–22, 430
-QSpinBox, 7
-Style, 124
-TableWidget, 75
-WidgetItem, 91
-QtSocket, 330
-QTextEdit, 157
-QThread, 381, 393
-QFreeWidget, 430
-Widget, 104, 117, 168
-QElementHandler, 341
-UI: classes, 27, 34, 284
-subclassing (plugin interfaces), 412
-sub-layouts, 17, 140
-submenu, 50–51
-ubmitAll() (QTableModel), 298
-super keyword (Java), 462
-supportsSelection() (QClipboard), 215
-switchLanguage(MainWindow), 375
-Sybase Abstract Server, 293
-symbolic links, 317
-synchronizing threads, 385–390
-synchronous-nous I/O, 290
+
+`tstrtd(std)`, 453
+
+`struct keyword`, 458
+
+`style()`
+
+`Application`, 124
+
+`-style option (Qt applications)`, 11, 160
+
+`styles`, 11, 51, 124
+
+`subclassing`
+
+`built-in widgets`, 101–103
+
+`C++ classes`, 460–462
+
+`COM interfaces`, 426
+
+`QAbstractTableModel`, 240
+
+`QAbstractTableModel`, 232, 235
+
+`Application`, 433
+
+`QAggregated`, 426
+
+`QAxindable`, 423
+
+`QObject`, 423
+
+`QWidget`, 423
+
+`DesignerCustomWidgetInterface`, 114
+
+`Dialog`, 24, 37
+
+`QWidget`, 199
+
+`QImageHandler`, 402
+
+`QImagePlugin`, 400
+
+`QItemDelegate`, 245
+
+`QWidget`, 207
+
+`QMainWindow`, 44, 428
+
+`QMetaData`, 212
+
+`QObject`, 21–22, 430
+
+`QSpinBox`, 7
+
+`Style`, 124
+
+`TableWidget`, 75
+
+`WidgetItem`, 91
+
+`QtSocket`, 330
+
+`QTextEdit`, 157
+
+`QThread`, 381, 393
+
+`QFreeWidget`, 430
+
+`Widget`, 104, 117, 168
+
+`QElementHandler`, 341
+
+`UI: classes`, 27, 34, 284
+
+`subclassing (plugin interfaces)`, 412
+
+`sub-layouts`, 17, 140
+
+`submenu`, 50–51
+
+`ubmitAll() (QTableModel)`, 298
+
+`super keyword (Java)`, 462
+
+`supportsSelection() (QClipboard)`, 215
+
+`switchLanguage(MainWindow)`, 375
+
+`Sybase Abstract Server`, 293
+
+`symbolic links`, 317
+
+`synchronizing threads`, 385–390
+
+`synchronous-nous I/O`, 290
+
 Syriac, 362
-system() (QLocale), 369
-system registry, 67
+
+`system() (QLocale)`, 369
+
+`system registry`, 67
 
 ## T
 
-Tab key, 120, 164
-tab order, 19, 25, 164
-tab widgets, 36, 38
-TableMimeData, 213
-class definition, 213
-formats(), 213
-retrieveData(), 213
-table models, 230
-table views, 38, 218, 305
-tab widgets, 74, 218, 221–222
-tabs and newlines format, 84, 212
-tagName() (QElement), 366
-jTextField() (QList), 282
+`Tab key`, 120, 164
+
+`tab order`, 19, 25, 164
+
+`tab widgets`, 36, 38
+
+`TableMimeData`,
+
+`class definition`, 213
+
+`formats()`, 213
+
+`retrieveData()`, 213
+
+`table models`, 230
+
+`table views`, 38, 218, 305
+
+`tab widgets`, 74, 218, 221–222
+
+`tabs and newlines format`, 84, 212
+
+`tagName() (QElement)`, 366
+
+`jTextField() (QList)`, 282
+
 Tamil, 362
-taskbar, 56
-TCl/Tk integration, 415
-TCP, 312, 323–333
-TDS, 293
-TeamLeadersDialog
-TeamLeadersDialog(), 225
-del(), 226
-insert(), 226
-leaders(), 226
-Team Leaders example, 225–226
+
+`taskbar`, 56
+
+`TCl/Tk integration`, 415
+
+`TCP`, 312, 323–333
+
+`TDS`, 293
+
+`TeamLeadersDialog`
+
+`TeamLeadersDialog()`, 225
+
+`del()`, 226
+
+`insert()`, 226
+
+`leaders()`, 226
+
+`Team Leaders example`, 225–226
+
 Texelgu, 362
-template class, 456, 471
+
+`template class`, 456, 471
+
 See also container classes
-tamples (Qt Designer), 23, 103, 144
-terminate() (QThread), 382
-trahedron
-class definition, 399
-trahedron(), 199
-draw(), 200
-faceAtPosition(), 202
-initializeGL(), 199
-mouseDoubleDoubleClick(), 201
-mouseMoveEvent(), 201
-mousePressEvent(), 201
-paint(), 200
-resizeGL(), 200
-Tetrahedron example, 199–203
 
+`tamples (Qt Designer)`, 23, 103, 144
 
+`terminate() (QThread)`, 382
 
+`trahedron`
+
+`class definition`, 399
+
+`trahedron()`, 199
+
+`draw()`, 200
+
+`faceAtPosition()`, 202
+
+`initializeGL()`, 199
+
+`mouseDoubleDoubleClick()`, 201
+
+`mouseMoveEvent()`, 201
+
+`mousePressEvent()`, 201
+
+`paint()`, 200
+
+`resizeGL()`, 200
+
+`Tetrahedron example`, 199–203
 
 # 索引
 
 ## 533
 
-- text() (续)
-- QLineEdit, 63
-- QMimeData, 210, 214
-- QTableWidgetItem, 78, 91, 93, 220
-- QTicker, 166
-- Spreadsheet, 78
-- AlignmentRole(Qt), 93–94, 230, 233, 244
-- TextAntialasing(QPainter), 413
-- TextArtDialog
-- TextDialog(), 410
-- loadPlugins(), 410
-- populateWidget(), 411
-- Text Art example, 408–411
-- TextInterface
-- applyEffect(), 412
-- 类定义, 409
-- effects(), 412
-- text browsers, 38–39
-- changed(QLineEdit), 16, 28
-- textColor(Qt), 230, 244
-- text editors, 39
-- text encodings, 214, 279, 280, 349, 362–365
-- text engine, 192, 361
-- textField(QSpinBox), 102
-- text I/O, 279–285, 323, 333
-- Thanna, 362
-- Thai, 362
-- theme engines, 11
-- with this keyword, 476, 479
+- `text() (续)`
 
-- + Thread
-- 类定义, 381
-- Thread(), 382
-- run(), 382, 385–386
-- stop(), 382, 385–386
-- ThreadDialog
-- 类定义, 383
-- ThreadDialog(), 383
-- CloseEvent(), 384
-- startStopThreadData(), 384
-- startStopThread(), 384
-- thread-local_storage, 390
-- thread-safety, 396
-- thread synchronization, 385–390
-- Threaded Fortune Server example, 333
-- threads example, 381–384
-- three-button_mouse, 215
-- three-dimensional graphics, 198–203
-- Tibetan, 362
+- `QLineEdit`, 63
 
-- + TicToe
-- 类定义, 435
-- TicToe(), 436
+- `QMimeData`, 210, 214
 
-- TicTacoe (续)
-- clearBoard(), 436
-- restoreState(), 437
-- saveState(), 436
-- sessionFileName(), 436
-- Tic-Tac example, 432–437
-- Ticker
-- 类定义, 166
-- Ticker(), 166
-- hideEvent(), 168
-- paintEvent(), 167
-- setEvent(), 167
-- showEvent(), 167
-- sizeHint(), 167
-- timerEvent(), 168
-- Ticker example, 165–168
-- tidy example, 283–284
-- tile() (workspace), 156
-- time editors, 39, 370
-- timeout()
-- Timer, 183
-- QTimer, 168, 184, 334
-- timerEvent()
-- PlayerWindow, 422
-- QObject, 168, 173, 422
-- Ticker, 168
-- timers
-- millisecond, 173
-- single-shot, 184
-- timerEvent() vs. QTimer, 168
-- TI-SEO, 365
-- title bars, 7, 56, 150
-- TLS (thread-local_storage), 390
-- toAscii(QVariant), 270
-- toAscii(QString), 269
-- toBack(Java-style-iterator), 205
-- toCopy(QTableWidget), 211
-- toDouble(QString), 95
-- toElement(QDomNode), 346
-- toHtml(MyTableWidget), 211
-- toInt(QString), 63, 103, 266, 283
-- toLocaleInt()
-- QChar, 363
-- QString, 269
-- toLongLong(QString), 266
-- toLower(QString), 264, 267
-- toStdString(QString), 274
-- toString()
-- QDate, 370
-- DateTime, 370
-- QTime, 370
+- `QTableWidgetItem`, 78, 91, 93, 220
 
-## 534
+- `QTicker`, 166
 
-- toString() (续)
-- QVariant, 94
-- toText(QDomNode), 347
-- toUnicode(QTextCodec), 365
-- toUpper(QString), 103, 267
-- toggle buttons, 29, 37, 49
-- toggled()
-- QAbstract, 33–34
-- QAction, 49
-- tool buttons, 37
-- toolTip(Qt), 230
-- toolbars, 47, 152–150
-- toolboxes, 38
-- toolTip(IEditor), 115
-- tooltips, 351
-- top(QAbstract), 253
-- top-level widgets. 查看 windows
-- topLevelWidgets(QApplication), 71
-- tr(hObject), 16, 22, 361–368, 374
-- Track, 245
-- TrackDelegate
-- 类定义, 245
-- usage, 306
-- TrackDelegate(), 246
-- commitAndEditor(), 247
-- createdEditor(), 247
-- paint(), 246
-- setEditorData(), 247
-- setModelData(), 248
-- TrackEditor, 245
-- Track Editor example, 244–248
-- tracking moves, 111
-- Transaction
-- 类定义, 395
-- apply(), 395
-- message(), 396
-- transaction(QDatabase), 296
-- transactionStarted()
-- TransactionThread
-- 类定义, 393
-- addTransaction(), 394
-- image(), 394
-- run(), 394
-- set(), 394
-- transactionStarted(), 395
-- transfer mode (FTP), 314
-- transfer type (FTP), 314
-- transformations, 109, 182–183
-- translate()
-- QApplication, 367
-- QMatrix, 182
-- QPainter, 183
-- translate() (续)
-- translate applications, 16, 361–371, 376–379
-- translation entry (i, files), 377
-- transparency, 106, 189, 190
-- TransparentMode(Qt), 180
-- transpose(), 468
-- traversing directories, 285–286
-- tree models, 230
-- tree views, 38, 218, 243
-- tree widgets, 36, 218, 222–224, 340, 348
-- triggered()
-- QAction, 48
-- ActionGroup, 375
-- trimmed(QString), 267–268
-- TripPlanner
-- 类定义, 324
-- TripPlanner(), 324
-- closeConnection(), 325
-- connectToServer(), 325
-- connectionClosedBy(), 325
-- error(), 329
-- sendRequest(), 326
-- stopSearch(), 329
-- updateWidget(), 327
-- Trip Planner example, 323–329
-- TripServer
-- 类定义, 330
-- TripServer(), 330
-- incomingConnection(), 330
-- Trip Server example, 323, 329–
-- truck, 462–463
-- TrueType, 442
-- untainted(QString), 259
-- tryLock(QMutex), 385
-- files, 377–389
-- TCI, 365
-- TSD (thread-specific data), 390
-- TTF, 442
-- two-dimensional graphics, 175–203
-- Type I, 442
-- type()
-- QEvent, 163, 164
-- QVariant, 270
-- typed keyword, 475
-
-## 535
-
-- UCS-2 (UTF-16), 363–364
-- UDP, 311, 333–337
-- UI builder. 查看 Qt Designer
-- Ui:: classes, 26–27, 34, 288, 324
-- ..ui files, 26–29, 36, 288, 324, 377
-- uuic, 26–29, 36, 114, 288, 324, 376
-- undef directive, 471
-- 未定义 references. 查看 unresolved symbols
-- getchar()(QDevice), 279
-- Unicode, 265, 279, 290, 362–365, 473
-- unicode()(Qchar), 363
-- uniform resource locators (URLs), 312
-- universal resource identifiers (URIs), 206
-- universal resource locators (URLs), 206, 297
-- Unix, 415, 419–450
-- lock())
-- QMutex, 305, 387
-- QReadWriteLock, 386
-- 无序关联容器. 查看 hashes
-- unregister option (ActiveX servers), 430
-- unresolved symbols, 19, 456, 460, 463
-- unsetCursor()(QWidget), 126
-- signed keyword, 456–457
-- untiled documents, 158
-- update()(QWidget), 87, 107, 112, 121–122, 169, 185
-- updateGeometry()(QWidget), 107, 169
-- updateIdEvent(QWidget), 201
-- updateMenus(MainWindow), 155
-- updateOutputText(ConvertDialog), 290
-- updateContentFile(MainWindow), 59
-- updateScrollBarRange(Plotter), 129
-- updateStatusBar(MainWindow), 354
-- updateTableWidget(Qt), 327
-- updateWindowTitle(QBrowser), 355
-- updateBase(QStream), 281
-- updateDigits(QTextStream), 281
-- uideased manipulator, 220
-- URLs, 206, 207, 312
-- user, 5, 16, 233
-- user()(QDataBase), 207, 214
-- user interface (uic), 26–29, 36, 114, 288, 324, 376
-- using declaration, 485
-- using namespace, 454, 485
-- UTF-8, 214, 280, 349, 364, 365
-- UTF-16 (UCS-2), 363–364, 365
-- Valgrind, 457
-- validate()
-- QAbstractSpin, 102
-- QValidator, 102
-- valid()
-- QAbstractSlider, 7–8
-- Group, 102
-- validating XML parsers, 339, 344
-- validators, 28, 102
-- cell, 94
-- Java-style iterators, 205, 262
-- Q-style iterators, 260–261
-- QMap<K>, 260–261
-- QSettings, 167
-- QSqlQuery, 295
-- QSqlTableModel, 297
-- Sql-style iterators, 262
-- value() (Variant), 270
-- value binding (SQL), 295–296
-- valueChanged()
-- valueFromText()(QSpinBox), 103
-- value types, 253–254, 480–481
-- value (associative containers), 261, 263
-- variable-length arrays, 271
-- VARIANT (Android), 421
-- VARIANT_ENUM (Windows), 421
-- values, 60–165, 279–291, 452
-- vector{}, 471
-- vector paths, 252, 471
-- verParser(), 177, 277–278
-- version of data stream, 81, 274, 275
-- version of operating system, 417
-- version of Qt, 4, 5, 81, 447
-- verticalHeader (TableView), 77
-- vertical layouts, 9, 25, 140
-- verticalScrollBar()
-- (QAbstractScrollArea), 77, 148
-- Vietnamese, 362
-- viewport
-- after a painter, 180–181, 182–186
-- a scroll area, 77, 149
-
-## 536
-
-- viewport()(AbstractScrollArea), 77, 148, 149
-- views, 217–218
-- virtual destructors, 395
-- virtual frame buffer, 441
-- virtual functions, 408, 409, 461
-- virtual machines, 439
-- visible widgets, 42, 121
-- Visual Basic, 428
-- Visual C++ (MSVC), 5, 19, 36, 271, 417
-- Visual Studio, 5
-- VNC (Virtual Network Computing), 441
-- void points, 78, 241, 477
-- volatile keyword, 382
-
-- widgets
-- background, 109, 120, 129
-- built-in, 37–39, 73, 104
-- coordinate system, 109, 112, 127
-- custom, 101–134
-- disabled, 16, 160, 170
-- fixed size, 143
-- focus point, 120
-- geometry, 138
-- hidden, 4, 62, 325
-- minimum and maximum size, 140, 143
-
-## W
-
-- W3C, 344
-- WA_DeleteOnClick(Qt), 70, 155, 158, 356
-- WA_GroupLeader(Qt), 355
-- WA_PaintScreen(Qt), 417
-- WA_StaticContents(Qt), 106, 112
-- wait()Qthread, 348
-- Waitcondition, 389, 390
-- wait conditions, 385–390
-- wait cursor, 181
-- waitDisconnected()(QSocket), 397
-- waitForFinished(Process), 291
-- waitForStarted(Process), 291
-- waitAll()(QCondition), 389
-- warning(MessageBox), 55
-- wasCanceled()(QAbstract), 172
-- WeatherBalloon, 333–334
-- Weather Balloon, 333–335
-- WeatherStation
-- 类定义, 335
-- WeatherStation(), 335
-- processPendingDatagrams(), 336
-- Weather Station example, 335–337
-- whatThis()(EditorPlugin), 115
-- What’s This?, 115, 352–353
-- WhatIsRole(Qt), 230
-- wheelEvent()(Flipper), 128
-- whitespace, 267–268
-- widget stacks: 查看 stacked widgets
-- widgets
-- attributes
-- names
-- palette, 109, 110
-- parent–child mechanism, 7
-- platform-specific ID, 415
-- properties, 22, 24, 105, 425–426
-- repanding, 9, 53, 149
-- size hint, 17, 35, 53, 121, 140–143
-- size policy, 107, 120, 142
-- styles, 11, 51, 124
-- terminology, 3
-- 查看相关 windows
-- width()(QPaintEvent), 109, 112
-- wildered characters, 56, 229, 285
-- Win32 API, 415, 417
-- winEvent()(QWidget), 419
-- winEvent()(Application), 419
-- winId()(QWidget), 415–416, 418
-- win(of a painter), 180–182, 185–186
-- Window (X), 418
-- windowActivated()(Qworkspace), 154
-- window managers, 431
-- winMenuAction()(Editor), 157
-- Window menu MDI, 153, 156
-- modified property (Widget), 54, 55, 58, 158
-- windows, 4
-- active, 62, 110, 154
-- closing, 5, 16
-- decorations, 442
-
-
+- `Spreadsheet`, 78
 
 
 
 # 索引
 
-Windows (Microsoft) (续)
+- `AlignmentRole(Qt)`, 93–94, 230, 233, 244
+
+- `TextAntialasing(QPainter)`, 413
+
+- `TextArtDialog`
+
+- `TextDialog()`, 410
+
+- `loadPlugins()`, 410
+
+- `populateWidget()`, 411
+
+- `Text Art example`, 408–411
+
+- `TextInterface`
+
+- `applyEffect()`, 412
+
+- 类定义, 409
+
+- `effects()`, 412
+
+- `text browsers`, 38–39
+
+- `changed(QLineEdit)`, 16, 28
+
+- `textColor(Qt)`, 230, 244
+
+- `text editors`, 39
+
+- `text encodings`, 214, 279, 280, 349, 362–365
+
+- `text engine`, 192, 361
+
+- `textField(QSpinBox)`, 102
+
+- `text I/O`, 279–285, 323, 333
+
+- `Thanna`, 362
+
+- `Thai`, 362
+
+- `theme engines`, 11
+
+- `with this keyword`, 476, 479
+
+- `+ Thread`
+
+- 类定义, 381
+
+- `Thread()`, 382
+
+- `run()`, 382, 385–386
+
+- `stop()`, 382, 385–386
+
+- `ThreadDialog`
+
+- 类定义, 383
+
+- `ThreadDialog()`, 383
+
+- `CloseEvent()`, 384
+
+- `startStopThreadData()`, 384
+
+- `startStopThread()`, 384
+
+- `thread-local_storage`, 390
+
+- `thread-safety`, 396
+
+- `thread synchronization`, 385–390
+
+- `Threaded Fortune Server example`, 333
+
+- `threads example`, 381–384
+
+- `three-button_mouse`, 215
+
+- `three-dimensional graphics`, 198–203
+
+- `Tibetan`, 362
+
+- `+ TicToe`
+
+- 类定义, 435
+
+- `TicToe()`, 436
+
+- `TicTacoe (续)`
+
+- `clearBoard()`, 436
+
+- `restoreState()`, 437
+
+- `saveState()`, 436
+
+- `sessionFileName()`, 436
+
+- `Tic-Tac example`, 432–437
+
+- `Ticker`
+
+- 类定义, 166
+
+- `Ticker()`, 166
+
+- `hideEvent()`, 168
+
+- `paintEvent()`, 167
+
+- `setEvent()`, 167
+
+- `showEvent()`, 167
+
+- `sizeHint()`, 167
+
+- `timerEvent()`, 168
+
+- `Ticker example`, 165–168
+
+- `tidy example`, 283–284
+
+- `tile() (workspace)`, 156
+
+- `time editors`, 39, 370
+
+- `timeout()`
+
+- `Timer`, 183
+
+- `QTimer`, 168, 184, 334
+
+- `timerEvent()`
+
+- `PlayerWindow`, 422
+
+- `QObject`, 168, 173, 422
+
+- `Ticker`, 168
+
+- `timers`
+
+- `millisecond`, 173
+
+- `single-shot`, 184
+
+- `timerEvent() vs. QTimer`, 168
+
+- `TI-SEO`, 365
+
+- `title bars`, 7, 56, 150
+
+- `TLS (thread-local_storage)`, 390
+
+- `toAscii(QVariant)`, 270
+
+- `toAscii(QString)`, 269
+
+- `toBack(Java-style-iterator)`, 205
+
+- `toCopy(QTableWidget)`, 211
+
+- `toDouble(QString)`, 95
+
+- `toElement(QDomNode)`, 346
+
+- `toHtml(MyTableWidget)`, 211
+
+- `toInt(QString)`, 63, 103, 266, 283
+
+- `toLocaleInt()`
+
+- `QChar`, 363
+
+- `QString`, 269
+
+- `toLongLong(QString)`, 266
+
+- `toLower(QString)`, 264, 267
+
+- `toStdString(QString)`, 274
+
+- `toString()`
+
+- `QDate`, 370
+
+- `DateTime`, 370
+
+- `QTime`, 370
+
+## 534
+
+- `toString() (续)`
+
+- `QVariant`, 94
+
+- `toText(QDomNode)`, 347
+
+- `toUnicode(QTextCodec)`, 365
+
+- `toUpper(QString)`, 103, 267
+
+- `toggle buttons`, 29, 37, 49
+
+- `toggled()`
+
+- `QAbstract`, 33–34
+
+- `QAction`, 49
+
+- `tool buttons`, 37
+
+- `toolTip(Qt)`, 230
+
+- `toolbars`, 47, 152–150
+
+- `toolboxes`, 38
+
+- `toolTip(IEditor)`, 115
+
+- `tooltips`, 351
+
+- `top(QAbstract)`, 253
+
+- `top-level widgets. 查看 windows`
+
+- `topLevelWidgets(QApplication)`, 71
+
+- `tr(hObject)`, 16, 22, 361–368, 374
+
+- `Track`, 245
+
+- `TrackDelegate`
+
+- 类定义, 245
+
+- `usage`, 306
+
+- `TrackDelegate()`, 246
+
+- `commitAndEditor()`, 247
+
+- `createdEditor()`, 247
+
+- `paint()`, 246
+
+- `setEditorData()`, 247
+
+- `setModelData()`, 248
+
+- `TrackEditor`, 245
+
+- `Track Editor example`, 244–248
+
+- `tracking moves`, 111
+
+- `Transaction`
+
+- 类定义, 395
+
+- `apply()`, 395
+
+- `message()`, 396
+
+- `transaction(QDatabase)`, 296
+
+- `transactionStarted()`
+
+- `TransactionThread`
+
+- 类定义, 393
+
+- `addTransaction()`, 394
+
+- `image()`, 394
+
+- `run()`, 394
+
+- `set()`, 394
+
+- `transactionStarted()`, 395
+
+- `transfer mode (FTP)`, 314
+
+- `transfer type (FTP)`, 314
+
+- `transformations`, 109, 182–183
+
+- `translate()`
+
+- `QApplication`, 367
+
+- `QMatrix`, 182
+
+- `QPainter`, 183
+
+- `translate() (续)`
+
+- `translate applications`, 16, 361–371, 376–379
+
+- `translation entry (i, files)`, 377
+
+- `transparency`, 106, 189, 190
+
+- `TransparentMode(Qt)`, 180
+
+- `transpose()`, 468
+
+- `traversing directories`, 285–286
+
+- `tree models`, 230
+
+- `tree views`, 38, 218, 243
+
+- `tree widgets`, 36, 218, 222–224, 340, 348
+
+- `triggered()`
+
+- `QAction`, 48
+
+- `ActionGroup`, 375
+
+- `trimmed(QString)`, 267–268
+
+- `TripPlanner`
+
+- 类定义, 324
+
+- `TripPlanner()`, 324
+
+- `closeConnection()`, 325
+
+- `connectToServer()`, 325
+
+- `connectionClosedBy()`, 325
+
+- `error()`, 329
+
+- `sendRequest()`, 326
+
+- `stopSearch()`, 329
+
+- `updateWidget()`, 327
+
+- `Trip Planner example`, 323–329
+
+- `TripServer`
+
+- 类定义, 330
+
+- `TripServer()`, 330
+
+- `incomingConnection()`, 330
+
+- `Trip Server example`, 323, 329–
+
+- `truck`, 462–463
+
+- `TrueType`, 442
+
+- `untainted(QString)`, 259
+
+- `tryLock(QMutex)`, 385
+
+- `files`, 377–389
+
+- `TCI`, 365
+
+- `TSD (thread-specific data)`, 390
+
+- `TTF`, 442
+
+- `two-dimensional graphics`, 175–203
+
+- `Type I`, 442
+
+- `type()`
+
+- `QEvent`, 163, 164
+
+- `QVariant`, 270
+
+- `typed keyword`, 475
+
+## 535
+
+- `UCS-2 (UTF-16)`, 363–364
+
+- `UDP`, 311, 333–337
+
+- `UI builder. 查看 Qt Designer`
+
+- `Ui:: classes`, 26–27, 34, 288, 324
+
+- `..ui files`, 26–29, 36, 288, 324, 377
+
+- `uuic`, 26–29, 36, 114, 288, 324, 376
+
+- `undef directive`, 471
+
+- `未定义 references. 查看 unresolved symbols`
+
+- `getchar()(QDevice)`, 279
+
+- `Unicode`, 265, 279, 290, 362–365, 473
+
+- `unicode()(Qchar)`, 363
+
+- `uniform resource locators (URLs)`, 312
+
+- `universal resource identifiers (URIs)`, 206
+
+- `universal resource locators (URLs)`, 206, 297
+
+- `Unix`, 415, 419–450
+
+- `lock())`
+
+- `QMutex`, 305, 387
+
+- `QReadWriteLock`, 386
+
+- `无序关联容器. 查看 hashes`
+
+- `unregister option (ActiveX servers)`, 430
+
+- `unresolved symbols`, 19, 456, 460, 463
+
+- `unsetCursor()(QWidget)`, 126
+
+- `signed keyword`, 456–457
+
+- `untiled documents`, 158
+
+- `update()(QWidget)`, 87, 107, 112, 121–122, 169, 185
+
+- `updateGeometry()(QWidget)`, 107, 169
+
+- `updateIdEvent(QWidget)`, 201
+
+- `updateMenus(MainWindow)`, 155
+
+- `updateOutputText(ConvertDialog)`, 290
+
+- `updateContentFile(MainWindow)`, 59
+
+- `updateScrollBarRange(Plotter)`, 129
+
+- `updateStatusBar(MainWindow)`, 354
+
+- `updateTableWidget(Qt)`, 327
+
+- `updateWindowTitle(QBrowser)`, 355
+
+- `updateBase(QStream)`, 281
+
+- `updateDigits(QTextStream)`, 281
+
+- `uideased manipulator`, 220
+
+- `URLs`, 206, 207, 312
+
+- `user`, 5, 16, 233
+
+- `user()(QDataBase)`, 207, 214
+
+- `user interface (uic)`, 26–29, 36, 114, 288, 324, 376
+
+- `using declaration`, 485
+
+- `using namespace`, 454, 485
+
+- `UTF-8`, 214, 280, 349, 364, 365
+
+- `UTF-16 (UCS-2)`, 363–364, 365
+
+- `Valgrind`, 457
+
+- `validate()`
+
+- `QAbstractSpin`, 102
+
+- `QValidator`, 102
+
+- `valid()`
+
+- `QAbstractSlider`, 7–8
+
+- `Group`, 102
+
+- `validating XML parsers`, 339, 344
+
+- `validators`, 28, 102
+
+- `cell`, 94
+
+- `Java-style iterators`, 205, 262
+
+- `Q-style iterators`, 260–261
+
+- `QMap<K>`, 260–261
+
+- `QSettings`, 167
+
+- `QSqlQuery`, 295
+
+- `QSqlTableModel`, 297
+
+- `Sql-style iterators`, 262
+
+- `value() (Variant)`, 270
+
+- `value binding (SQL)`, 295–296
+
+- `valueChanged()`
+
+- `valueFromText()(QSpinBox)`, 103
+
+- `value types`, 253–254, 480–481
+
+- `value (associative containers)`, 261, 263
+
+- `variable-length arrays`, 271
+
+- `VARIANT (Android)`, 421
+
+- `VARIANT_ENUM (Windows)`, 421
+
+- `values`, 60–165, 279–291, 452
+
+- `vector{}`, 471
+
+- `vector paths`, 252, 471
+
+- `verParser()`, 177, 277–278
+
+- `version of data stream`, 81, 274, 275
+
+- `version of operating system`, 417
+
+- `version of Qt`, 4, 5, 81, 447
+
+- `verticalHeader (TableView)`, 77
+
+- `vertical layouts`, 9, 25, 140
+
+- `verticalScrollBar()`
+
+- `(QAbstractScrollArea)`, 77, 148
+
+- `Vietnamese`, 362
+
+- `viewport`
+
+- `after a painter`, 180–181, 182–186
+
+- `a scroll area`, 77, 149
+
+## 536
+
+- `viewport()(AbstractScrollArea)`, 77, 148, 149
+
+- `views`, 217–218
+
+- `virtual destructors`, 395
+
+- `virtual frame buffer`, 441
+
+- `virtual functions`, 408, 409, 461
+
+- `virtual machines`, 439
+
+- `visible widgets`, 42, 121
+
+- `Visual Basic`, 428
+
+- `Visual C++ (MSVC)`, 5, 19, 36, 271, 417
+
+- `Visual Studio`, 5
+
+- `VNC (Virtual Network Computing)`, 441
+
+- `void points`, 78, 241, 477
+
+- `volatile keyword`, 382
+
+- `widgets`
+
+- `background`, 109, 120, 129
+
+- `built-in`, 37–39, 73, 104
+
+- `coordinate system`, 109, 112, 127
+
+- `custom`, 101–134
+
+- `disabled`, 16, 160, 170
+
+- `fixed size`, 143
+
+- `focus point`, 120
+
+- `geometry`, 138
+
+- `hidden`, 4, 62, 325
+
+- `minimum and maximum size`, 140, 143
+
+## W
+
+- `W3C`, 344
+
+- `WA_DeleteOnClick(Qt)`, 70, 155, 158, 356
+
+- `WA_GroupLeader(Qt)`, 355
+
+- `WA_PaintScreen(Qt)`, 417
+
+- `WA_StaticContents(Qt)`, 106, 112
+
+- `wait()Qthread`, 348
+
+- `Waitcondition`, 389, 390
+
+- `wait conditions`, 385–390
+
+- `wait cursor`, 181
+
+- `waitDisconnected()(QSocket)`, 397
+
+- `waitForFinished(Process)`, 291
+
+- `waitForStarted(Process)`, 291
+
+- `waitAll()(QCondition)`, 389
+
+- `warning(MessageBox)`, 55
+
+- `wasCanceled()(QAbstract)`, 172
+
+
+
+- `WeatherBalloon`, 333–334
+
+- `Weather Balloon`, 333–335
+
+- `WeatherStation`
+
+- 类定义, 335
+
+- `WeatherStation()`, 335
+
+- `processPendingDatagrams()`, 336
+
+- `Weather Station example`, 335–337
+
+- `whatThis()(EditorPlugin)`, 115
+
+- `What’s This?`, 115, 352–353
+
+- `WhatIsRole(Qt)`, 230
+
+- `wheelEvent()(Flipper)`, 128
+
+- `whitespace`, 267–268
+
+- `widget stacks`: 查看 stacked widgets
+
+- `widgets`
+
+- `attributes`
+
+- `names`
+
+- `palette`, 109, 110
+
+- `parent–child mechanism`, 7
+
+- `platform-specific ID`, 415
+
+- `properties`, 22, 24, 105, 425–426
+
+- `repanding`, 9, 53, 149
+
+- `size hint`, 17, 35, 53, 121, 140–143
+
+- `size policy`, 107, 120, 142
+
+- `styles`, 11, 51, 124
+
+- `terminology`, 3
+
+- 查看相关 windows
+
+- `width()(QPaintEvent)`, 109, 112
+
+- `wildered characters`, 56, 229, 285
+
+- `Win32 API`, 415, 417
+
+- `winEvent()(QWidget)`, 419
+
+- `winEvent()(Application)`, 419
+
+- `winId()(QWidget)`, 415–416, 418
+
+- `win(of a painter)`, 180–182, 185–186
+
+- `Window (X)`, 418
+
+- `windowActivated()(Qworkspace)`, 154
+
+- `window managers`, 431
+
+- `winMenuAction()(Editor)`, 157
+
+- `Window menu MDI`, 153, 156
+
+- `modified property (Widget)`, 54, 55, 58, 158
+
+- `windows`, 4
+
+- `active`, 62, 110, 154
+
+- `closing`, 5, 16
+
+- `decorations`, 442
+
+# 索引
+
+## Windows (Microsoft) (续)
+
 - 原生 API, 415–419
+
 - 注册表, 417
+
 - 版本, 417
+
 - XP 风格, 11, 124
-- Windows(Q5Sys), Info, 417
-- WINSAMI, 365
+
+- `Windows(Q5Sys)`, Info, 417
+
+- `WINSAMI`, 365
+
 - 世界矩阵, 180, 182–183
+
 - 维网联盟 (World Wide Web Consortium), 344
-- write()(QIODevice), 278, 327, 332
-- writeDatagram()(QDatSocket), 334, 337
-- writefile()(Spreadsheet), 80, 172, 282
-- writeOnly()(QIODevice), 80, 274
-- writeRawBytes()(QDatastream), 277
-- writeSettings()
+
+- `write()(QIODevice)`, 278, 327, 332
+
+- `writeDatagram()(QDatSocket)`, 334, 337
+
+- `writefile()(Spreadsheet)`, 80, 172, 282
+
+- `writeOnly()(QIODevice)`, 80, 274
+
+- `writeRawBytes()(QDatastream)`, 277
+
+- `writeSettings()`
+
 - 邮件客户端, 148
+
 - 主窗口, 67, 152
+
 - 写作系统, 362
 
-Xsm, 437
-Xt 迁移, 415
+`Xsm`, 437
+
+`Xt` 迁移, 415
 
 # Z
 
-zlib. 参见数据压缩
-- zoomIn()(Plotter), 122
-- zoomOut()(Plotter), 122
+`zlib`. 参见数据压缩
+
+- `zoomIn()(Plotter)`, 122
+
+- `zoomOut()(Plotter)`, 122
 
 # X
 
 - X 渲染扩展, 188, 189
+
 - X Window System (X11)
+
 - 安装 Qt, 449–450
+
 - 原生 API, 415–419
+
 - 选择剪贴板, 215
+
 - 会话管理, 431–437
-- x11Event()(QWidget), 419
-- x11EventFilter()(QApplication), 419
-- x11Info()
-- QPixmap, 418
-- QWidget, 418
-- x11PictureHandle()
-- QPixmap, 418
-- QWidget, 418
-- x11Screen()(QCursor), 418
-- XBM, 46
-- Xcode, 5
-- xEvent(X11), 418
-- Xlib, 415
-- XML
+
+- `x11Event()(QWidget)`, 419
+
+- `x11EventFilter()(QApplication)`, 419
+
+- `x11Info()`
+
+- `QPixmap`, 418
+
+- `QWidget`, 418
+
+- `x11PictureHandle()`
+
+- `QPixmap`, 418
+
+- `QWidget`, 418
+
+- `x11Screen()(QCursor)`, 418
+
+- `XBM`, 46
+
+- `Xcode`, 5
+
+- `xEvent(X11)`, 418
+
+- `Xlib`, 415
+
+- `XML`
+
 - 编码, 364
-- .arc 文件, 286
+
+- `.arc` 文件, 286
+
 - 读取文档, 339–348
+
 - SAX 与 DOM, 339
-- .ts 文件, 377
-- .ud 文件, 29
+
+- `.ts` 文件, 377
+
+- `.ud` 文件, 29
+
 - 验证, 339, 344
+
 - 文档, 348–349
-- Xor (混合模式), 190
+
+- `Xor` (混合模式), 190
+
 - XP 风格, 11, 124
-- XPM, 46, 47
+
+- `XPM`, 46, 47
 
 # 关于作者
 
-# Jasmin Blanchette
+## Jasmin Blanchette
 
 Jasmin 于2001年毕业于魁北省谢尔布鲁克大学计算机科学专业。他曾在2000年夏天在 Trolltech 担任软件工程师进行实习，并从2001年初起一直在该公司工作。2003年，Jasmin 合写了《C++ GUI Programming with Qt 3》。他现在兼任 Trolltech 文档经理和高级软件工程师。他是 Qt Linguist 翻译工具背后的推动力量，目前仍是 Qt 容器类的关键人物。他还是担任 Qt Quarterly（Trolltech 的技术通讯）的合编。
 
-# Mark Summerfield
+## Mark Summerfield
 
 Mark 于1993年毕业于威尔士大学斯旺西分校计算机科学专业。进入工业界之前，他进行了一一年的研究生研究。在加入 Trolltech 之前，他曾在多家公司担任软件工程师多年。他在 Trolltech 担任了近三年的文档经理，在此期间他创立了 Qt Quarterly 并合写了《C++ GUI Programming with Qt 3》。Mark 拥有 Qttraining.eu，并作为专注于 C++、Qt 和 Python 的独立培训师和顾问。
 
 # 制作
 
 作者使用 NEdit 和 Vim 编写文本。他们亲自对文本进行排版和索引，并使用修改过的 Lieut 语法进行标记，然后通过一个用 Python 编写的自定义预处理器将其转换为纯 Lieut 格式。所有的图都是在 Lieut 中生成的，并使用 ImageMagick 和 KView 将截图转换为 PostScript。代码使用的等宽字体源自早期版本的 Crystal，并使用 FontForge 进行修改。封面由出版商提供。标记后的文本由 Lieut 转换为 PostScript，然后通过 Ghostscript 转换为 PDF。作者在 KDE 环境下的 Debian GNU/Linux 和 Fedora Core 系统上完成了所有的编辑和处理。示例程序在 Windows、Linux 和 Mac OS X 上经过了测试。
-

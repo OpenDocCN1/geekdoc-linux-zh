@@ -1,20 +1,16 @@
+
 # Linux 调试、反汇编与逆向工程
-
-
-
-
-
 
 ## 前言
 
 本培训课程是先前出版的《Windows 调试、反汇编与逆向工程实战基础》（ISBN-13: 978-1908043984）¹ 的 Linux 版本。它同时是对《加速 Linux Core Dump 分析》（ISBN-13: 978-1908043979）² 培训课程的补充。
 
-虽然本书的骨架与其 Windows 前作相同，但由于操作系统、调试器 (GDB)、工具链 (GCC, 汇编器, 链接器)、应用程序二进制接口 (ABI) 甚至汇编语言风格 (AT&T) 的不同，内容经过了全面修订。
+虽然本书的骨架与其 Windows 前作相同，但由于操作系统、调试器（`GDB`）、工具链（`GCC`、汇编器、链接器）、应用程序二进制接口（`ABI`）甚至汇编语言风格（`AT&T`）的不同，内容经过了全面修订。
 
 本课程适用于：
 
 - 软件技术支持和升级工程师
-- 具有 JVM 背景的软件工程师
+- 具有 `JVM` 背景的软件工程师
 - 软件测试人员
 - 来自非 Linux 环境（例如 Windows 或 Mac OS X）的工程师
 - 没有汇编语言背景的 Linux C/C++ 软件工程师
@@ -24,31 +20,34 @@
 本书也可作为相关本科课程中 x64 汇编语言和 Linux 调试的补充材料。
 
 如果您发现任何错误，请通过此表单联系我们：
-https://www.patterndiagnostics.com/contact
+
+`https://www.patterndiagnostics.com/contact`
 
 Linkedin 页面：
-https://www.linkedin.com/company/software-diagnostics-services
+
+`https://www.linkedin.com/company/software-diagnostics-services`
 
 Facebook 页面：
-https://www.facebook.com/SoftwareDiagnosticsServices
+
+`https://www.facebook.com/SoftwareDiagnosticsServices`
 
 Twitter：
-https://twitter.com/DumpAnalysis
 
-¹ https://www.patterndiagnostics.com/practical-foundations-windows-debugging-disassembling-reversing
-² https://www.patterndiagnostics.com/accelerated-linux-core-dump-analysis-book
+`https://twitter.com/DumpAnalysis`
+
+¹ `https://www.patterndiagnostics.com/practical-foundations-windows-debugging-disassembling-reversing`
+
+² `https://www.patterndiagnostics.com/accelerated-linux-core-dump-analysis-book`
 
 ## 关于作者
 
-Dmitry Vostokov 是一位国际公认的专家、演讲者、教育者、科学家和作家。他是面向模式的软件诊断、取证和预测学科以及软件诊断学院 (DA+TA: DumpAnalysis.org + TraceAnalysis.org) 的创始人。
+Dmitry Vostokov 是一位国际公认的专家、演讲者、教育者、科学家和作家。他是面向模式的软件诊断、取证和预测学科以及软件诊断学院（`DA+TA: DumpAnalysis.org + TraceAnalysis.org`）的创始人。
 
-Vostokov 撰写了 50 多本书，涵盖软件诊断、异常检测与分析、软件与内存取证、根本原因分析与问题解决、内存转储 (Memory Dump) 分析、调试、软件跟踪与日志分析、逆向工程以及恶意软件分析。他在包括领导、技术和人员管理在内的各种行业的软件架构、设计、开发和维护方面拥有超过 25 年的经验。
+Vostokov 撰写了 50 多本书，涵盖软件诊断、异常检测与分析、软件与内存取证、根本原因分析与问题解决、内存转储（`Memory Dump`）分析、调试、软件跟踪与日志分析、逆向工程以及恶意软件分析。他在包括领导、技术和人员管理在内的各种行业的软件架构、设计、开发和维护方面拥有超过 25 年的经验。
 
-Dmitry 还创立了 Syndromatics, Analogio, BriteTrace, DiaThings, Logtellect, OpenTask 迭代与增量出版 (OpenTask.com), 软件诊断技术与服务 (原 Memory Dump Analysis Services) PatternDiagnostics.com 以及 Software Prognostics。在业余时间，他在 Debugging.TV 上演示各种主题，并探索软件叙事学 (Software Narratology) 及其进一步发展而成的物体叙事学 (Narratology of Things) 和物体诊断学 (Diagnostics of Things, DoT) 以及软件病理学 (Software Pathology)。
+Dmitry 还创立了 `Syndromatics`、`Analogio`、`BriteTrace`、`DiaThings`、`Logtellect`、`OpenTask` 迭代与增量出版（`OpenTask.com`）、软件诊断技术与服务（原 `Memory Dump Analysis Services`）`PatternDiagnostics.com` 以及 `Software Prognostics`。在业余时间，他在 `Debugging.TV` 上演示各种主题，并探索软件叙事学（`Software Narratology`）及其进一步发展而成的物体叙事学（`Narratology of Things`）和物体诊断学（`Diagnostics of Things, DoT`）以及软件病理学（`Software Pathology`）。
 
 他目前的研究兴趣领域包括理论软件诊断及其数学和计算机科学基础，人工智能、机器学习和数据挖掘在诊断与异常检测中的应用，软件诊断工程和诊断驱动开发，以及诊断工作流与交互。近期的研究领域还包括安全、函数式编程以及范畴论在软件开发和大数据中的应用。
-
-
 
 ## 第 x64.1 章：内存、寄存器和简单算术
 
@@ -57,13 +56,15 @@ Dmitry 还创立了 Syndromatics, Analogio, BriteTrace, DiaThings, Logtellect, O
 计算机内存由一系列内存单元组成，每个单元都有一个唯一的地址（位置）。每个单元包含一个“数字”。我们将这些“数字”称为地址（位置）中的内容。由于内存访问速度比算术指令慢，因此设有所谓的寄存器，用以加速需要内存存储临时结果的复杂操作。我们也可以将它们视为独立的内存单元。寄存器的名称即为其地址。
 
 ![](img/47fe95ac2b05f9cf0a4cad33d8640c96_11_0.png)
+
 图 x64.1.1
 
 ### Intel 64 位 PC 内部的内存和寄存器
 
-在这里，包含整数值的内存位置地址通常相差 4 或 8，我们还展示了两个名为 %RAX 和 %RDX 的寄存器。它们的前半部分分别被称为 %EAX 和 %EDX。
+在这里，包含整数值的内存位置地址通常相差 4 或 8，我们还展示了两个名为 `%RAX` 和 `%RDX` 的寄存器。它们的前半部分分别被称为 `%EAX` 和 `%EDX`。
 
 ![](img/47fe95ac2b05f9cf0a4cad33d8640c96_12_0.png)
+
 图 x64.1.2
 
 因为内存单元包含“数字”，所以我们从简单的算术开始，要求 PC 计算两个数字的和，以观察内存和寄存器的值如何变化。
@@ -72,50 +73,51 @@ Dmitry 还创立了 Syndromatics, Analogio, BriteTrace, DiaThings, Logtellect, O
 
 在我们的项目中，有两个内存地址（位置），我们称之为 “a” 和 “b”。我们可以将 “a” 和 “b” 视为各自地址（位置）的名称。现在我们引入一种特殊符号，其中 `(a)` 表示内存地址（位置） “a” 中的内容。如果我们使用 C 或 C++ 语言来编写项目，我们将内存位置 “a” 和 “b” 声明并定义为：
 
-```
+```c
 static int a, b;
 ```
 
 默认情况下，当我们加载程序时，静态内存位置会被填充为零，我们可以将加载程序后的初始内存布局描绘如下，如图 x64.1.3 所示。
 
 ![](img/47fe95ac2b05f9cf0a4cad33d8640c96_13_0.png)
+
 图 x64.1.3
 
 ### “算术”项目：计算机程序
 
 我们可以将计算机程序视为一系列用于操作内存单元和寄存器内容的指令。例如，加法操作：将内存单元 N₾12 的内容加到内存单元 N₾14 的内容中。在我们的伪代码中，可以写成：
 
-(14) + (12) -> (14)
+`(14) + (12) -> (14)`
 
 我们的第一个伪代码程序显示在表格的左侧：
 
 | 伪代码 | 汇编指令 |
 | :--- | :--- |
-| 1 -> (a) <br> 1 -> (b) <br> (b) + (a) -> (b) <br> (a) + 1 -> (a) <br> (b) * (a) -> (b) | 这里我们放置与伪代码相对应的汇编指令。 |
+| `1 -> (a)` <br> `1 -> (b)` <br> `(b) + (a) -> (b)` <br> `(a) + 1 -> (a)` <br> `(b) * (a) -> (b)` | 这里我们放置与伪代码相对应的汇编指令。 |
 
-'->' 表示将新值移动（赋值）到内存位置（地址）的内容中。';' 是注释符号，该行剩余部分为注释。'=' 显示内存位置（地址）当前的当前值。
+`->` 表示将新值移动（赋值）到内存位置（地址）的内容中。`;` 是注释符号，该行剩余部分为注释。`=` 显示内存位置（地址）当前的当前值。
 
 提醒一下，用高级编程语言编写的代码由编译器翻译成机器语言。然而，如果其数字代码用某种名为汇编语言的助记符系统表示，那么机器语言也是可读的。例如，`INC a` 是将存储在内存位置 “a” 处的值增加 1。
 
 ### “算术”项目：将数字赋值给内存位置
 
-我们提醒，“a” 表示内存单元的位置（地址），它也是地址 000055555555802c 的名称（见图 x64.1.3）。`(a)` 表示存储在地址 “a” 处的内容（数字）。
+我们提醒，“a” 表示内存单元的位置（地址），它也是地址 `000055555555802c` 的名称（见图 x64.1.3）。`(a)` 表示存储在地址 “a” 处的内容（数字）。
 
 如果我们使用 C 或 C++ 语言，“a” 被称为 “变量 a”，我们将其赋值写为：
 
-```
+```c
 a = 1 ;
 ```
 
 在 Intel 汇编语言中，我们写作：
 
-```
+```assembly
 mov $1, a
 ```
 
 在 GDB 反汇编输出中，我们看到以下代码，其中变量 “a” 和地址显示在注释中：
 
-```
+```assembly
 movl $0x1,0x2ef2(%rip) # 0x55555555802c <a>
 ```
 
@@ -123,13 +125,13 @@ movl $0x1,0x2ef2(%rip) # 0x55555555802c <a>
 
 | 伪代码 | 汇编 |
 | :--- | :--- |
-| 1 -> (a) ; (a) = 1 | movl $1, a |
-| 1 -> (b) ; (b) = 1 | movl $1, b |
-| (b) + (a) -> (b) | |
-| (a) + 1 -> (a) | |
-| (b) * (a) -> (b) | |
+| `1 -> (a) ; (a) = 1` | `movl $1, a` |
+| `1 -> (b) ; (b) = 1` | `movl $1, b` |
+| `(b) + (a) -> (b)` | |
+| `(a) + 1 -> (a)` | |
+| `(b) * (a) -> (b)` | |
 
-注意使用的是 `movl` 指令而不是 `mov`。这是因为 “a” 和 “b” 既可以指向 32 位（如 %EAX 或 %EDX 寄存器）也可以指向 64 位（如 %RAX 和 %RDX 寄存器）的内存单元。在寄存器的情况下，从它们的名称就可以清楚地知道我们使用的是 64 位的 %RAX 还是 32 位的 %EAX。但在内存地址 “a” 和 “b” 的情况下，不清楚它们是指 64 位还是 32 位单元。我们使用 `movl` 来消除歧义，表明我们使用 32 位内存单元，这足以容纳从 0 到 4294967295 的整数。
+注意使用的是 `movl` 指令而不是 `mov`。这是因为 “a” 和 “b” 既可以指向 32 位（如 `%EAX` 或 `%EDX` 寄存器）也可以指向 64 位（如 `%RAX` 和 `%RDX` 寄存器）的内存单元。在寄存器的情况下，从它们的名称就可以清楚地知道我们使用的是 64 位的 `%RAX` 还是 32 位的 `%EAX`。但在内存地址 “a” 和 “b” 的情况下，不清楚它们是指 64 位还是 32 位单元。我们使用 `movl` 来消除歧义，表明我们使用 32 位内存单元，这足以容纳从 0 到 4294967295 的整数。
 
 `0x2ef2(%rip)` 是编译器生成代码以计算地址 “a” 而非直接指定地址的方式。这种代码占用的内存空间较少。我们将在后面的章节中解释这一点。
 
@@ -138,6 +140,7 @@ movl $0x1,0x2ef2(%rip) # 0x55555555802c <a>
 执行前两条汇编语言指令后，我们得到了图 x64.1.4 所示的内存布局。
 
 ![](img/47fe95ac2b05f9cf0a4cad33d8640c96_16_0.png)
+
 图 x64.1.4
 
 ### 将数字赋值给寄存器
@@ -153,7 +156,7 @@ movl $0x1,0x2ef2(%rip) # 0x55555555802c <a>
 
 在汇编语言中，我们写作：
 
-```
+```assembly
 mov $1, %eax   # 1 被复制到 %RAX 寄存器的前半部分
 mov $1, %rax   # %RAX 寄存器的全部内容被替换为 1
 mov a, %eax
@@ -162,7 +165,7 @@ mov a, %rax
 
 在 GDB 反汇编输出中，我们可能会看到以下代码：
 
-```
+```assembly
 mov $0x0, %eax
 ```
 
@@ -174,16 +177,16 @@ mov $0x0, %eax
 (b) + (a) -> (b)
 ```
 
-回顾一下，“a” 和 “b” 分别表示位置（地址） 00005555555802c 和 000055555558030 的名称（见图 x64.1.4）。`(a)` 和 `(b)` 分别表示地址 “a” 和 “b” 处的内容，简单来说就是存储在那里的某些数字。
+回顾一下，“a” 和 “b” 分别表示位置（地址） `00005555555802c` 和 `000055555558030` 的名称（见图 x64.1.4）。`(a)` 和 `(b)` 分别表示地址 “a” 和 “b” 处的内容，简单来说就是存储在那里的某些数字。
 
 在 C 或 C++ 语言中，我们编写以下语句：
 
-```
+```c
 b = b + a;
 b += a;
 ```
 
-在汇编语言中，我们使用 `ADD` 指令。由于 AMD64 和 Intel EM64T 架构的限制，我们不能在一步（指令）中使用两个内存地址，例如 **add a, b**。我们只能使用 **add register, b** 指令，将存储在 **register**（寄存器）中的值加到内存单元 **b** 的内容中。请记住，这里的寄存器本身就像一个临时内存单元：
+在汇编语言中，我们使用 `ADD` 指令。由于 AMD64 和 Intel EM64T 架构的限制，我们不能在一步（指令）中使用两个内存地址，例如 `add a, b`。我们只能使用 `add register, b` 指令，将存储在 `register`（寄存器）中的值加到内存单元 `b` 的内容中。请记住，这里的寄存器本身就像一个临时内存单元：
 
 ```
 (a) -> register
@@ -201,14 +204,14 @@ register2 -> (b)
 
 在汇编语言中，我们写作：
 
-```
+```assembly
 mov a, %eax
 add %eax, b
 ```
 
-或者我们可以将 2 个寄存器相加，然后将结果移动到内存单元 b：
+或者我们可以将 2 个寄存器相加，然后将结果移动到内存单元 `b`：
 
-```
+```assembly
 mov b, %edx
 mov a, %eax
 add %edx, %eax
@@ -240,6 +243,7 @@ mov %eax,0x2ed8(%rip) # 0x555555558030 <b>
 在执行 `ADD` 和 `MOV` 指令后，我们得到了图 x64.1.5 所示的内存布局。
 
 ![](img/47fe95ac2b05f9cf0a4cad33d8640c96_20_0.png)
+
 图 x64.1.5
 
 ### 增加/减少内存和寄存器中的数字
@@ -253,7 +257,7 @@ mov %eax,0x2ed8(%rip) # 0x555555558030 <b>
 
 在 C 或 C++ 语言中，我们可以通过三种可能的方式来编写：
 
-```
+```c
 a = a + 1;
 ++a;
 a++;
@@ -265,24 +269,22 @@ b--;
 
 在汇编语言中，我们使用 `INC` 和 `DEC` 指令，并写作：
 
-```
+```assembly
 incl a
 inc %eax
 decl a
 dec %eax
 ```
 
-当我们需要指定 32 位内存单元时，使用 **incl**。当我们使用 “a” 时，它是具有歧义的。然而，使用 %eax 意味着使用 32 位值，因此 **inc** 是没有歧义的。
+当我们需要指定 32 位内存单元时，使用 `incl`。当我们使用 “a” 时，它是具有歧义的。然而，使用 `%eax` 意味着使用 32 位值，因此 `inc` 是没有歧义的。
 
 在 GDB 反汇编输出中，我们可能会看到相同的指令：
 
-```
+```assembly
 inc %eax
 or
 add $0x1,%eax # 编译器可能会决定使用 ADD 而不是 INC
 ```
-
-
 
 现在我们添加自增量的汇编语言翻译：
 
@@ -294,7 +296,7 @@ add $0x1,%eax # 编译器可能会决定使用 ADD 而不是 INC
 | `(a) + 1 -> (a)` | `; %eax = 1`<br>`; %eax = 2`<br>`; (a) = 2` | `mov a, %eax`<br>`add $1, %eax`<br>`mov %eax, a` |
 | `(b) * (a) -> (b)` | | |
 
-在执行 INC 或 ADD 指令后，内存布局如图片 x64.1.6 所示。
+在执行 `INC` 或 `ADD` 指令后，内存布局如图片 x64.1.6 所示。
 
 ![](img/47fe95ac2b05f9cf0a4cad33d8640c96_23_0.png)
 
@@ -312,23 +314,23 @@ add $0x1,%eax # 编译器可能会决定使用 ADD 而不是 INC
 
 在 C 或 C++ 语言中，我们可以用两种方式编写：
 
-```
+```c
 b = b * a;
 
 b *= a;
 ```
 
-在汇编语言中，我们使用 IMUL（Integer MULtiply，整数乘法）指令，编写如下：
+在汇编语言中，我们使用 `IMUL`（`Integer MULtiply`，整数乘法）指令，编写如下：
 
-```
+```assembly
 mov a, %eax
 imul b, %eax
 mov %eax, b
 ```
 
-该乘法指令意味着 (b) * %eax -> %eax，我们必须将 “a” 的内容放入 %EAX。乘法结果被放入寄存器 %EAX 中，随后其内容被保存到位置（地址）“b”。或者，我们可以将所有乘法操作数都放入寄存器中：
+该乘法指令意味着 `(b) * %eax -> %eax`，我们必须将 “a” 的内容放入 `%EAX`。乘法结果被放入寄存器 `%EAX` 中，随后其内容被保存到位置（地址）“b”。或者，我们可以将所有乘法操作数都放入寄存器中：
 
-```
+```assembly
 mov a, %eax
 mov b, %edx
 imul %edx, %eax
@@ -337,7 +339,7 @@ mov %eax, b
 
 在 GDB 的反汇编输出中，我们可能会看到以下代码：
 
-```
+```assembly
 mov 0x2ec3(%rip),%edx    # 0x55555558030 <b>
 mov 0x2eb9(%rip),%eax    # 0x5555555802c <a>
 imul %edx,%eax
@@ -348,13 +350,15 @@ mov %eax,0x2eb4(%rip)    # 0x55555558030 <b>
 
 | 伪代码 | 逻辑/状态 | 汇编 |
 |---|---|---|
-| 1 -> (a) | ; (a) = 1 | movl $1, a |
-| 1 -> (b) | ; (b) = 1 | movl $1, b |
-| (b) + (a) -> (b) | ; %eax = 1 <br> ; %edx = 1 <br> ; %eax = 2 <br> ; (b) = 2 | mov a, %eax <br> mov b, %edx <br> add %edx, %eax <br> mov %eax, b |
-| (a) + 1 -> (a) | ; %eax = 1 <br> ; %eax = 2 <br> ; (a) = 2 | mov a, %eax <br> add $1, %eax <br> mov %eax, a |
-| (b) * (a) -> (b) | ; %edx = 2 <br> ; %eax = 2 <br> ; %eax = 4 <br> ; (b) = 4 | mov b, %edx <br> mov a, %eax <br> imul %edx, %eax <br> mov %eax, b |
+| `1 -> (a)` | `; (a) = 1` | `movl $1, a` |
+| `1 -> (b)` | `; (b) = 1` | `movl $1, b` |
+| `(b) + (a) -> (b)` | `; %eax = 1` <br> `; %edx = 1` <br> `; %eax = 2` <br> `; (b) = 2` | `mov a, %eax` <br> `mov b, %edx` <br> `add %edx, %eax` <br> `mov %eax, b` |
+| `(a) + 1 -> (a)` | `; %eax = 1` <br> `; %eax = 2` <br> `; (a) = 2` | `mov a, %eax` <br> `add $1, %eax` <br> `mov %eax, a` |
+| `(b) * (a) -> (b)` | `; %edx = 2` <br> `; %eax = 2` <br> `; %eax = 4` <br> `; (b) = 4` | `mov b, %edx` <br> `mov a, %eax` <br> `imul %edx, %eax` <br> `mov %eax, b` |
 
-在执行 IMUL 和 MOV 指令后，内存布局如图片 x64.1.7 所示。
+在执行 `IMUL` 和 `MOV` 指令后，内存布局如图片 x64.1.7 所示。
+
+
 
 ![](img/47fe95ac2b05f9cf0a4cad33d8640c96_26_0.png)
 
@@ -407,7 +411,7 @@ sudo apt install build-essential
 sudo apt install gdb
 ```
 
-您可能还需要下载 git 来克隆源代码：
+您可能还需要下载 `git` 来克隆源代码：
 
 ```bash
 sudo apt install git
@@ -418,7 +422,8 @@ git clone https://bitbucket.org/softwarediagnostics/pflddr
 ### GDB 反汇编输出 – 无优化
 
 源代码可以从以下位置下载：
-https://bitbucket.org/softwarediagnostics/pflddr/src/master/x64/Chapter2/
+
+`https://bitbucket.org/softwarediagnostics/pflddr/src/master/x64/Chapter2/`
 
 如果我们以无优化模式（默认）编译和链接程序：
 
@@ -450,7 +455,7 @@ Find the GDB manual and other documentation resources online at:
 
 输入 "apropos word" 以搜索与 "word" 相关的命令...
 
-正在从 ./ArithmeticProjectC 读取符号...（未找到调试符号）...完成。
+正在从 `./ArithmeticProjectC` 读取符号...（未找到调试符号）...完成。
 
 ```bash
 (gdb)
@@ -548,8 +553,6 @@ Quit anyway? (y or n) y
 coredump@DESKTOP-IS6V2L0:~/pflddr/x64/Chapter2$
 ```
 
-
-
 ### GDB 反汇编输出 – 优化
 
 如果我们以优化模式编译并链接程序：
@@ -577,7 +580,7 @@ mov $2, a  # 2 -> (a)
 mov $4, b  # 4 -> (b)
 ```
 
-请注意，编译器还选择了先放置内存单元 “b” (000055555555802c)，然后是内存单元 “a” (0000555555558030)。
+请注意，编译器还选择了先放置内存单元 “b” (`000055555555802c`)，然后是内存单元 “a” (`0000555555558030`)。
 
 在这个可执行文件中，我们所有的汇编代码去哪了？如果我们观察，这段代码似乎直接将最终结果放入了 “b” 内存单元。为什么会这样？答案在于编译器优化。当代码以优化模式编译时，编译器可以直接从简单的 C/C++ 源代码本身计算出最终结果，并且仅生成更新相应内存位置所需的代码。
 
@@ -599,65 +602,70 @@ mov $4, b  # 4 -> (b)
 
 现在让我们看看，如果我们能数到十，十二块石头在算术记号中是如何表示的。我们有一个十个数组成的组加上两个：
 
-$12_{dec} = 1 * 10 + 2$ 或 $1 * 10^1 + 2 * 10^0$
+`$12_{dec} = 1 * 10 + 2$` 或 `$1 * 10^1 + 2 * 10^0$`
 
 这里有另一个关于一百二十三块石头的练习。我们有 **1** 组十乘十的石头，另一组 **2** 组十块的石头，以及最后一组 **3** 块石头：
 
-$123_{dec} = 1 * 10*10 + 2 * 10 + 3$ 或 $1 * 10^2 + 2 * 10^1 + 3 * 10^0$
+`$123_{dec} = 1 * 10*10 + 2 * 10 + 3$` 或 `$1 * 10^2 + 2 * 10^1 + 3 * 10^0$`
 
 我们可以将其形式化为以下求和记号：
 
-$N_{dec} = a_n * 10^n + a_{n-1} * 10^{n-1} + ... + a_2 * 10^2 + a_1 * 10^1 + a_0 * 10^0 \quad 0 \le a_i \le 9$
+`$N_{dec} = a_n * 10^n + a_{n-1} * 10^{n-1} + ... + a_2 * 10^2 + a_1 * 10^1 + a_0 * 10^0 \quad 0 \le a_i \le 9$`
 
 使用求和符号，我们得到这个公式：
 
-$N_{dec} = \sum_{i=0}^{n} a_i * 10^i$
+`$N_{dec} = \sum_{i=0}^{n} a_i * 10^i$`
 
 ### 三进制表示法（Base Three）
 
 现在我们回到牧羊人的十二块石头示例。我们有 **1** 组三乘三的石头，**1** 组三块的石头，以及一个空组 (**0**)（如果我们只有一块石头或有十三块而不是十二块石头，则该组不为空）。我们可以依次写下组数：**110**。因此，110 是十二块石头的三进制表示（记法），它等同于用十进制表示的 12：
 
-$12_{dec} = 1*3^2 + 1*3^1 + 0*3^0$
+`$12_{dec} = 1*3^2 + 1*3^1 + 0*3^0$`
 
-$N_{dec} = a_n*3^n + a_{n-1}*3^{n-1} + ... + a_2*3^2 + a_1*3^1 + a_0*3^0 \quad a_i = 0 \text{ 或 } 1 \text{ 或 } 2$
+`$N_{dec} = a_n*3^n + a_{n-1}*3^{n-1} + ... + a_2*3^2 + a_1*3^1 + a_0*3^0 \quad a_i = 0 \text{ 或 } 1 \text{ 或 } 2$`
 
-$N_{dec} = \sum_{i=0}^{n} a_i*3^i$
+`$N_{dec} = \sum_{i=0}^{n} a_i*3^i$`
 
 ### 二进制表示法（Base Two）
 
 在数到 2 的情况下，十二块石头有更多的组：**1100**。因此，1100 是十进制 12 的二进制表示（记法）：
 
-$12_{dec} = 1 * 2^3 + 1 * 2^2 + 0 * 2^1 + 0 * 2^0$
+`$12_{dec} = 1 * 2^3 + 1 * 2^2 + 0 * 2^1 + 0 * 2^0$`
 
-$127_{dec} = 1 * 2^6 + 1 * 2^5 + 1 * 2^4 + 1 * 2^3 + 0 * 2^2 + 1 * 2^1 + 1 * 2^0$ 或 $1111011_2$
+`$127_{dec} = 1 * 2^6 + 1 * 2^5 + 1 * 2^4 + 1 * 2^3 + 0 * 2^2 + 1 * 2^1 + 1 * 2^0$` 或 `$1111011_2$`
 
-$N_{dec} = a_n * 2^n + a_{n-1} * 2^{n-1} + ... + a_2 * 2^2 + a_1 * 2^1 + a_0 * 2^0 \quad a_i = 0$ 或 $1$
+`$N_{dec} = a_n * 2^n + a_{n-1} * 2^{n-1} + ... + a_2 * 2^2 + a_1 * 2^1 + a_0 * 2^0 \quad a_i = 0$` 或 `$1$`
 
-$N_{dec} = \sum_{i=0}^{n} a_i * 2^i$
+`$N_{dec} = \sum_{i=0}^{n} a_i * 2^i$`
 
 ### 十六进制表示法（Base Sixteen）
 
 如果我们能数到十六，十二块石头可以放入一个组，但我们需要更多的符号：A, B, C, D, E 和 F 分别代表十, 十一, 十二, 十三, 十四和十五：
 
-$12_{dec} = \text{C}$ 在十六进制表示（记法）中
+`$12_{dec} = \text{C}$` 在十六进制表示（记法）中
 
-$123_{dec} = 7B_{hex}$
+`$123_{dec} = 7B_{hex}$`
 
-$123_{dec} = 7 * 16^1 + 11 * 16^0$
+`$123_{dec} = 7 * 16^1 + 11 * 16^0$`
 
-$N_{dec} = \sum_{i=0}^{n} a_i * 16^i$
+`$N_{dec} = \sum_{i=0}^{n} a_i * 16^i$`
 
 ### 为什么使用十六进制？
 
-考虑这个用二进制记号写的数字：$110001010011_2$。它在十进制记号中的等值是 3155：
+考虑这个用二进制记号写的数字：`$110001010011_2$`。它在十进制记号中的等值是 3155：
 
-$3155_{dec} = 1*2^{11} + 1*2^{10} + 0*2^9 + 0*2^8 + 0*2^7 + 1*2^6 + 0*2^5 + 1*2^4 + 0*2^3 + 0*2^2 + 1*2^1 + 1*2^0$
+`$3155_{dec} = 1*2^{11} + 1*2^{10} + 0*2^9 + 0*2^8 + 0*2^7 + 1*2^6 + 0*2^5 + 1*2^4 + 0*2^3 + 0*2^2 + 1*2^1 + 1*2^0$`
 
 现在我们将二进制数字分成每四个一组，并用十进制和十六进制记号写下来：
 
 | 1100 | 0101 | 0011 |
+
 | :--- | :--- | :--- |
-| $12_{dec}$ | $5_{dec}$ | $3_{dec}$ |
+
+| `$12_{dec}$` | `$5_{dec}$` | `$3_{dec}$` |
+
+
+
 | $\text{C}_{hex}$ | $5_{hex}$ | $3_{hex}$ |
 
 我们可以看到，十六进制记号更加紧凑，因为每四个二进制数字组对应一个十六进制数。表 x64.3.1 列出了每四位二进制组合的十六进制等值。
@@ -692,13 +700,14 @@ $3155_{dec} = 1*2^{11} + 1*2^{10} + 0*2^9 + 0*2^8 + 0*2^7 + 1*2^6 + 0*2^5 + 1*2^
 指针的概念是熟练掌握 Linux 调试最需要深入理解的概念之一。根据定义，指针是一个内存单元或处理器寄存器，它包含另一个内存单元的地址，如图 x64.4.1 所示。它像任何内存单元一样拥有自己的地址。有时，指针被称为间接地址（与直接地址，即内存单元本身的地址相对）。迭代地，我们可以定义另一层间接层，并引入“指向指针的指针”，即一个包含另一个内存单元地址的内存单元或处理器寄存器，而后者又包含另一个内存单元的地址，依此类推。
 
 ![](img/47fe95ac2b05f9cf0a4cad33d8640c96_41_0.png)
+
 图 x64.4.1
 
 ### “指针”项目：内存布局与寄存器
 
 在我们的调试项目中，有两个内存地址（位置），“a” 和 “b”。我们可以将 “a” 和 “b” 视为地址（位置）的名称。提醒一下，记号 (a) 表示内存地址（位置） “a” 处的内容。
 
-我们还拥有寄存器 %RAX 和 %RBX 作为指向 “a” 和 “b” 的指针。这些寄存器分别包含 “a” 和 “b” 的地址。记号 (%RAX) 表示地址在寄存器 %RAX 中的内存单元的内容。
+我们还拥有寄存器 `%RAX` 和 `%RBX` 作为指向 “a” 和 “b” 的指针。这些寄存器分别包含 “a” 和 “b” 的地址。记号 (`%RAX`) 表示地址在寄存器 `%RAX` 中的内存单元的内容。
 
 在 C 和 C++ 语言中，我们声明并定义指向 “a” 和 “b” 的指针如下：
 
@@ -706,9 +715,10 @@ $3155_{dec} = 1*2^{11} + 1*2^{10} + 0*2^9 + 0*2^8 + 0*2^7 + 1*2^6 + 0*2^5 + 1*2^
 int *a, *b;
 ```
 
-程序执行前我们的项目内存布局如图 x64.4.2 所示。地址总是占用 64 位内存单元或完整的 64 位寄存器（如 %RAX 或 %RBX），它们不能放入 %EAX 或 %EBX 或 32 位内存单元中。
+程序执行前我们的项目内存布局如图 x64.4.2 所示。地址总是占用 64 位内存单元或完整的 64 位寄存器（如 `%RAX` 或 `%RBX`），它们不能放入 `%EAX` 或 `%EBX` 或 32 位内存单元中。
 
 ![](img/47fe95ac2b05f9cf0a4cad33d8640c96_42_0.png)
+
 图 x64.4.2
 
 ### “指针”项目：计算
@@ -760,9 +770,10 @@ movl $1, (%rax) # 将 %rax 用作指针
 ```
 
 本章的源代码可以从以下地址下载：
+
 https://bitbucket.org/softwarediagnostics/pflddr/src/master/x64/Chapter4/
 
-为了演示某些指令且不依赖于编译器如何翻译 C/C++ 代码，我们用汇编语言编写程序。在将其加载到 GDB 并按照第 x64.2 章所述反汇编其 main 函数之前，我们需要对其进行编译和链接。
+为了演示某些指令且不依赖于编译器如何翻译 C/C++ 代码，我们用汇编语言编写程序。在将其加载到 GDB 并按照第 x64.2 章所述反汇编其 `main` 函数之前，我们需要对其进行编译和链接。
 
 ```
 coredump@DESKTOP-IS6V2L0:~/pflddr/x64/Chapter4$ as PointersProject.asm -o PointersProject.o
@@ -770,8 +781,6 @@ coredump@DESKTOP-IS6V2L0:~/pflddr/x64/Chapter4$ ld PointersProject.o -o Pointers
 coredump@DESKTOP-IS6V2L0:~/pflddr/x64/Chapter4$ gdb ./PointersProject
 GNU gdb (Debian 8.2.1-2+b3) 8.2.1
 ```
-
-
 
 Copyright (C) 2018 Free Software Foundation, Inc.
 
@@ -795,7 +804,7 @@ License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
 
 输入 "apropos word word" 来搜索与 "word" 相关的命令...
 
-正在从 ./PointersProject... 读取符号...(未找到调试符号)...完成。
+正在从 `./PointersProject`... 读取符号...(未找到调试符号)...完成。
 
 (gdb)
 
@@ -832,7 +841,7 @@ Dump of assembler code for function _start:
 End of assembler dump.
 ```
 
-现在我们使用 GDB 命令 **info variables** 来检查变量 "a" 和 "b"，以验证之前在图 x64.4.2 中显示的内存布局：
+现在我们使用 GDB 命令 `info variables` 来检查变量 "a" 和 "b"，以验证之前在图 x64.4.2 中显示的内存布局：
 
 ```
 (gdb) info variables
@@ -846,7 +855,7 @@ Non-debugging symbols:
 0x000000000000402008 __end
 ```
 
-我们还验证 %RAX 和 %RBX 寄存器的值是否与图 x64.4.2 一致：
+我们还验证 `%RAX` 和 `%RBX` 寄存器的值是否与图 x64.4.2 一致：
 
 ```
 (gdb) info registers rax rbx
@@ -854,7 +863,7 @@ rax 0x0 0
 rbx 0x0 0
 ```
 
-我们指令 GDB 自动显示当前要执行的指令，以及寄存器 %RAX、%RBX 的值和变量 "a"、"b" 的内容：
+我们指令 GDB 自动显示当前要执行的指令，以及寄存器 `%RAX`、`%RBX` 的值和变量 "a"、"b" 的内容：
 
 ```
 (gdb) display/i $rip
@@ -941,6 +950,7 @@ rbx 0x0 0
 所有这些都对应于图 x64.4.3 中显示的内存布局。
 
 ![](img/47fe95ac2b05f9cf0a4cad33d8640c96_49_0.png)
+
 图 x64.4.3
 
 ### 使用指针进行数值相加
@@ -951,13 +961,13 @@ rbx 0x0 0
 (rbx) + (rax) -> (rbx)
 ```
 
-回想一下，(rax) 和 (rbx) 表示存储在 CPU 寄存器 %RAX 和 %RBX 中的地址（位置）所对应的内存单元的内容。上述语句等同于以下 C 或 C++ 语言表达式，其中 ‘*’ 运算符表示获取由 pa 或 pb 指针指向的内存内容（也称为指针解引用）：
+回想一下，(rax) 和 (rbx) 表示存储在 CPU 寄存器 `%RAX` 和 `%RBX` 中的地址（位置）所对应的内存单元的内容。上述语句等同于以下 C 或 C++ 语言表达式，其中 ‘*’ 运算符表示获取由 `pa` 或 `pb` 指针指向的内存内容（也称为指针解引用）：
 
 ```
 *pb = *pb + *pa;
 ```
 
-在汇编语言中，我们使用 ADD 指令来实现 ‘+’ 运算符，但我们不能在一条指令步骤中同时使用两个内存地址（addl 用于对 32 位整数进行加法）：
+在汇编语言中，我们使用 `ADD` 指令来实现 ‘+’ 运算符，但我们不能在一条指令步骤中同时使用两个内存地址（`addl` 用于对 32 位整数进行加法）：
 
 ```
 addl (%rax), (%rbx)    # 无效指令
@@ -977,7 +987,7 @@ mov (%rax), %edx
 add %edx, (%rbx)
 ```
 
-我们使用 add 而不是 addl，因为使用 %EDX 而不是 %RDX 意味着在进行 32 位整数加法。
+我们使用 `add` 而不是 `addl`，因为使用 `%EDX` 而不是 `%RDX` 意味着在进行 32 位整数加法。
 
 在 GDB 的反汇编输出中，我们确实看到了这些指令：
 
@@ -1037,11 +1047,12 @@ rdx    0x1    1
 所有这些都对应于图 x64.4.4 中显示的内存布局。
 
 ![](img/47fe95ac2b05f9cf0a4cad33d8640c96_52_0.png)
+
 图 x64.4.4
 
 ### 使用指针进行数值自增
 
-在伪代码中，这意味着增加（或减少）存储在地址由 %RAX 保存的内存位置中的数值：
+在伪代码中，这意味着增加（或减少）存储在地址由 `%RAX` 保存的内存位置中的数值：
 
 ```
 (rax) + 1 -> (rax)
@@ -1055,13 +1066,13 @@ rdx    0x1    1
 (*a)++;
 ```
 
-在汇编语言中，我们使用 INC 指令并编写：
+在汇编语言中，我们使用 `INC` 指令并编写：
 
 ```
 incl (%rax)
 ```
 
-当我们需要指定要增加的 32 位内存单元时，使用 **incl**。
+当我们需要指定要增加的 32 位内存单元时，使用 `incl`。
 
 在 GDB 的反汇编输出中，我们看到了相同的指令：
 
@@ -1077,16 +1088,18 @@ addl $0x1, (%rax)  # 编译器可能会决定使用 ADD 而不是 INC
 
 现在我们添加自增的汇编语言翻译：
 
+
+
 | C/伪代码 | 汇编 |
 | :--- | :--- |
-| address a -> rax | lea a, %rax |
-| 1 -> (rax) ; (a) = 1 | movl $1, (%rax) |
-| address b -> rbx | lea b, %rbx |
-| 1 -> (rbx) ; (b) = 1 | movl $1, (%rbx) |
-| (rbx) + (rax) -> (rbx) ; %edx = 1 | mov (%rax), %edx |
-| ; (b) = 2 | add %edx, (%rbx) |
-| (rax) + 1 -> (rax) ; (a) = 2 | incl (%rax) |
-| (rbx) * (rax) -> (rbx) | |
+| `address a -> rax` | `lea a, %rax` |
+| `1 -> (rax) ; (a) = 1` | `movl $1, (%rax)` |
+| `address b -> rbx` | `lea b, %rbx` |
+| `1 -> (rbx) ; (b) = 1` | `movl $1, (%rbx)` |
+| `(rbx) + (rax) -> (rbx) ; %edx = 1` | `mov (%rax), %edx` |
+| `; (b) = 2` | `add %edx, (%rbx)` |
+| `(rax) + 1 -> (rax) ; (a) = 2` | `incl (%rax)` |
+| `(rbx) * (rax) -> (rbx)` | |
 
 现在我们执行这条指令（提醒：当我们再次使用 `si` 命令时，`si` 命令的输出将显示下一条要执行的指令）：
 
@@ -1111,9 +1124,7 @@ addl $0x1, (%rax)  # 编译器可能会决定使用 ADD 而不是 INC
 5: /x (int)b = 0x2
 ```
 
-
-
-在执行 INC 指令后，内存布局如图 x64.4.5 所示。
+在执行 `INC` 指令后，内存布局如图 x64.4.5 所示。
 
 ![](img/47fe95ac2b05f9cf0a4cad33d8640c96_55_0.png)
 
@@ -1124,7 +1135,7 @@ addl $0x1, (%rax)  # 编译器可能会决定使用 ADD 而不是 INC
 我们的下一个伪代码语句执行乘法：
 
 ```
-`(rbx) * (rax) -> (rbx)`
+(rbx) * (rax) -> (rbx)
 ```
 
 这条语句的意思是将存储在 `%RBX` 寄存器中的地址所指向的内存单元的内容，与存储在 `%RAX` 寄存器中的地址所指向的内存单元中的值相乘。在 C 或 C++ 语言中，我们可以写一个与前几节看到的加法语句类似的表达式（注意 `*` 运算符有两个不同的含义：指针解引用和乘法）：
@@ -1134,7 +1145,7 @@ addl $0x1, (%rax)  # 编译器可能会决定使用 ADD 而不是 INC
 *pb *= *pa;
 ```
 
-后者是缩写形式。在汇编语言中，我们使用 IMUL（Integer MULtipli，整数乘法）指令：
+后者是缩写形式。在汇编语言中，我们使用 `IMUL`（Integer MULtipli，整数乘法）指令：
 
 ```asm
 mov (%rax), %eax
@@ -1150,7 +1161,7 @@ mov %eax, (%rbx)
 rax -> (rbx)
 ```
 
-在 GDB 反汇编输出中，我们看到如下内容：
+在 `GDB` 反汇编输出中，我们看到如下内容：
 
 ```asm
 0x000000000000401022 <+34>: mov (%rax),%eax
@@ -1162,18 +1173,18 @@ rax -> (rbx)
 
 | 伪代码 | 汇编 |
 | :--- | :--- |
-| address a -> rax | lea a, %rax |
-| 1 -> (rax) ; (a) = 1 | movl $1, (%rax) |
-| address b -> rbx | lea b, %rbx |
-| 1 -> (rbx) ; (b) = 1 | movl $1, (%rbx) |
-| (rbx) + (rax) -> (rbx) ; %edx = 1 | mov (%rax), %edx |
-| ; (b) = 2 | add %edx, (%rbx) |
-| (rax) + 1 -> (rax) ; (a) = 2 | incl (%rax) |
-| (rbx) * (rax) -> (rbx) ; %eax = 2 | mov (%rax), %eax |
-| ; %eax = 4 | imul (%rbx), %eax |
-| ; (b) = 4 | mov %eax, (%rbx) |
+| `address a -> rax` | `lea a, %rax` |
+| `1 -> (rax) ; (a) = 1` | `movl $1, (%rax)` |
+| `address b -> rbx` | `lea b, %rbx` |
+| `1 -> (rbx) ; (b) = 1` | `movl $1, (%rbx)` |
+| `(rbx) + (rax) -> (rbx) ; %edx = 1` | `mov (%rax), %edx` |
+| `; (b) = 2` | `add %edx, (%rbx)` |
+| `(rax) + 1 -> (rax) ; (a) = 2` | `incl (%rax)` |
+| `(rbx) * (rax) -> (rbx) ; %eax = 2` | `mov (%rax), %eax` |
+| `; %eax = 4` | `imul (%rbx), %eax` |
+| `; (b) = 4` | `mov %eax, (%rbx)` |
 
-现在我们执行这三条指令（提醒：当我们再次使用 **si** 命令时，**si** 命令的输出会显示下一条将要执行的指令）：
+现在我们执行这三条指令（提醒：当我们再次使用 `si` 命令时，`si` 命令的输出会显示下一条将要执行的指令）：
 
 ```
 [From the previous output]
@@ -1229,7 +1240,7 @@ a = 12;    // 10进制 12
 a = 0xC;    // 16进制 C
 ```
 
-在 GDB 的反汇编输出以及输入命令时，数字默认被解释为十进制。如果希望数字被解释为十六进制，我们需要在前面加上 `0x` 前缀，例如：
+在 `GDB` 的反汇编输出以及输入命令时，数字默认被解释为十进制。如果希望数字被解释为十六进制，我们需要在前面加上 `0x` 前缀，例如：
 
 ```asm
 mov 12, a
@@ -1249,25 +1260,28 @@ mov 0xC, a
 每个字节由 8 位（bit）组成。每位的值为 0 或 1。以下是一些以位字符串形式表示的字节、字、双字和四字的示例（我们也可以清楚地看到 4 位序列与十六进制数之间的对应关系，见表 x64.3.1）：
 
 - 字节 (Byte)
-    - C / C++: unsigned char
-    - 8 位
-    - 取值范围 $0_{\text{dec}} - 255_{\text{dec}}$ 或 $0_{\text{hex}} - \text{FF}_{\text{hex}}$
-    - 示例：$12_{\text{dec}}$ $00001100_{\text{bin}}$ $0\text{C}_{\text{hex}}$
+  - C / C++: `unsigned char`
+  - 8 位
+  - 取值范围 `$0_{\text{dec}} - 255_{\text{dec}}$` 或 `$0_{\text{hex}} - \text{FF}_{\text{hex}}$`
+  - 示例：`$12_{\text{dec}}$` `$00001100_{\text{bin}}$` `$0\text{C}_{\text{hex}}$`
+
 - 字 (Word)
-    - C / C++: unsigned short
-    - 16 位
-    - 取值范围 $0_{\text{dec}} - 65535_{\text{dec}}$ 或 $0_{\text{hex}} - \text{FFFF}_{\text{hex}}$
-    - 示例：$0000000000001100_{\text{bin}}$ $000\text{C}_{\text{hex}}$
+  - C / C++: `unsigned short`
+  - 16 位
+  - 取值范围 `$0_{\text{dec}} - 65535_{\text{dec}}$` 或 `$0_{\text{hex}} - \text{FFFF}_{\text{hex}}$`
+  - 示例：`$0000000000001100_{\text{bin}}$` `$000\text{C}_{\text{hex}}$`
+
 - 双字 (Doubleword)
-    - C / C++: unsigned int, unsigned
-    - 32 位
-    - 取值范围 $0_{\text{dec}} - 4294967295_{\text{dec}}$ 或 $0_{\text{hex}} - \text{FFFFFFFF}_{\text{hex}}$
-    - 示例：$00000000000000000000000000001100_{\text{bin}}$ $0000000\text{C}_{\text{hex}}$
+  - C / C++: `unsigned int`, `unsigned`
+  - 32 位
+  - 取值范围 `$0_{\text{dec}} - 4294967295_{\text{dec}}$` 或 `$0_{\text{hex}} - \text{FFFFFFFF}_{\text{hex}}$`
+  - 示例：`$00000000000000000000000000001100_{\text{bin}}$` `$0000000\text{C}_{\text{hex}}$`
+
 - 四字 (Quadword)
-    - C / C++: long, unsigned long long
-    - 64 位
-    - 取值范围 $0_{\text{dec}} - 18446744073709551615_{\text{dec}}$ 或 $0_{\text{hex}} - \text{FFFFFFFFFFFFFFFF}_{\text{hex}}$
-    - 示例：$1100_{\text{bin}}$ $000000000000000\text{C}_{\text{hex}}$
+  - C / C++: `long`, `unsigned long long`
+  - 64 位
+  - 取值范围 `$0_{\text{dec}} - 18446744073709551615_{\text{dec}}$` 或 `$0_{\text{hex}} - \text{FFFFFFFFFFFFFFFF}_{\text{hex}}$`
+  - 示例：`$1100_{\text{bin}}$` `$000000000000000\text{C}_{\text{hex}}$`
 
 ### 内存布局
 
@@ -1291,7 +1305,7 @@ mov 0xC, a
 
 ### 寻址类型
 
-正如我们在第 x64.5 章中所见，内存单元的大小可以是字节、字、双字或四字。因此，我们可以拥有指向字节的指针、指向字的指针、指向双字的指针以及指向四字的指针。在第 x64.4 章的 GDB 反汇编输出中，涉及指向存储 32 位（双字大小）值的内存指针的指令带有后缀。
+正如我们在第 x64.5 章中所见，内存单元的大小可以是字节、字、双字或四字。因此，我们可以拥有指向字节的指针、指向字的指针、指向双字的指针以及指向四字的指针。在第 x64.4 章的 `GDB` 反汇编输出中，涉及指向存储 32 位（双字大小）值的内存指针的指令带有后缀。
 
 以下是一些示例说明：
 
@@ -1307,9 +1321,9 @@ movl $0xFF, (%rax)
 movq $0xFF, (%rax)
 ```
 
-我们需要在 0xFF 前加上 `$` 前缀，以将其与作为内存地址的 0xFF 区分开来。
+我们需要在 `0xFF` 前加上 `$` 前缀，以将其与作为内存地址的 `0xFF` 区分开来。
 
-`movl` 指令执行后的内存布局如图 x64.6.3 所示。我们可以看到，尽管我们仅指定一个字节值 0xFF 作为 `movl` 指令的源操作数，但它替换了内存中双字的其余 3 个字节，因为我们将目标指定为指向 4 个字节的指针，且 0xFF 作为双字时为 0x000000FF。因此，我们需要指定 `l` 后缀来区分移动双字值和移动字节值。如果我们忘记指定而直接使用 `mov`，编译器会报错：
+`movl` 指令执行后的内存布局如图 x64.6.3 所示。我们可以看到，尽管我们仅指定一个字节值 `0xFF` 作为 `movl` 指令的源操作数，但它替换了内存中双字的其余 3 个字节，因为我们将目标指定为指向 4 个字节的指针，且 `0xFF` 作为双字时为 `0x000000FF`。因此，我们需要指定 `l` 后缀来区分移动双字值和移动字节值。如果我们忘记指定而直接使用 `mov`，编译器会报错：
 
 ```
 Error: no instruction mnemonic suffix given and no register operands; can't size instruction
@@ -1335,8 +1349,6 @@ movw $0x00FF, (%rax)
 
 图 x64.6.4 总结了各种寻址模式。
 
-
-
 图片 x64.6.1
 
 图片 x64.6.2
@@ -1347,7 +1359,7 @@ movw $0x00FF, (%rax)
 
 ### 重温寄存器
 
-%RAX, %RBX, %RCX, %RDX 这些 64 位寄存器可以用作内存指针。它们包含 x86 32 位寄存器 %EAX, %EBX, %ECX 和 %EDX。而这些 32 位部分又包含旧的 16 位寄存器 %AX, %BX, %CX 和 %DX（每个可持有-一个字）。在与 C 和 C++ 代码中简单循环相对应的汇编语言中，%CX 寄存器经常被用作循环计数器 (Counter)X：
+`%RAX`、`%RBX`、`%RCX`、`%RDX` 这些 64 位寄存器可以用作内存指针。它们包含 x86 32 位寄存器 `%EAX`、`%EBX`、`%ECX` 和 `%EDX`。而这些 32 位部分又包含旧的 16 位寄存器 `%AX`、`%BX`、`%CX` 和 `%DX`（每个可持有一个字）。在与 C 和 C++ 代码中简单循环相对应的汇编语言中，`%CX` 寄存器经常被用作循环计数器 (Counter)X：
 
 ```cpp
 for (int i = 0; i < N; ++i)
@@ -1357,7 +1369,7 @@ for (int i = 0; i < N; ++i)
 
 ### 空指针 (NULL Pointers)
 
-在 Linux 上，地址 0x0000000000000000 – 0x000000000000FFFF 被专门设置为不可访问。如果在驱动程序内部执行以下代码，将强制应用程序崩溃或导致内核恐慌 (kernel panic)：
+在 Linux 上，地址 `0x0000000000000000` – `0x000000000000FFFF` 被专门设置为不可访问。如果在驱动程序内部执行以下代码，将强制应用程序崩溃或导致内核恐慌 (kernel panic)：
 
 ```assembly
 mov $0xF, %rax
@@ -1382,19 +1394,19 @@ movb $1, (%rax) # 访问违例
 
 ### 作为指针的变量
 
-假设我们在 C 和 C++ 中声明并定义了两个内存地址（位置）“a”和“b”：
+假设我们在 C 和 C++ 中声明并定义了两个内存地址（位置）`a` 和 `b`：
 
 ```cpp
 int a, b;
 ```
 
-这些是普通的变量“a”和“b”。同样，我们可以在 C 和 C++ 中声明并定义另外两个内存地址（位置）“pa”和“pb”：
+这些是普通的变量 `a` 和 `b`。同样，我们可以在 C 和 C++ 中声明并定义另外两个内存地址（位置）`pa` 和 `pb`：
 
 ```cpp
 int *pa, *pb;
 ```
 
-这里 **pa** 是一个指向 int 的指针，换句话说，内存单元 **pa** 包含了另一个内存单元的地址，而该单元包含一个整数值。
+这里 `pa` 是一个指向 `int` 的指针，换句话说，内存单元 `pa` 包含了另一个内存单元的地址，而该单元包含一个整数值。
 
 ### 指针初始化
 
@@ -1428,13 +1440,13 @@ int array[1000000]; // 大小为 4,000,000 字节或 3.8Mb
 int array[1000000] = { 12 };
 ```
 
-这是因为该数组被放入了 `.data` 节，并包含以下整数序列 { 12, 0, 0, 0, 0 ... }。
+这是因为该数组被放入了 `.data` 节，并包含以下整数序列 `{ 12, 0, 0, 0, 0 ... }`。
 
 ### 更多伪代码符号
 
-提醒一下，**(a)** 表示地址 **a** 处的内存内容，**(rax)** 表示存储在 %RAX 寄存器中的地址处的 32 位内存单元的内容（这里 %RAX 是一个指针）。
+提醒一下，`(a)` 表示地址 `a` 处的内存内容，`(rax)` 表示存储在 `%RAX` 寄存器中的地址处的 32 位内存单元的内容（这里 `%RAX` 是一个指针）。
 
-我们还引入一个将在本章及后续章节中使用的额外符号：**\*(pa)** 表示存储在地址 **pa** 处的地址所指向的内容，这被称为对地址为 **pa** 的指针进行解引用。对应的 C/C++ 代码类似：
+我们还引入一个将在本章及后续章节中使用的额外符号：`*(pa)` 表示存储在地址 `pa` 处的地址所指向的内容，这被称为对地址为 `pa` 的指针进行解引用。对应的 C/C++ 代码类似：
 
 ```cpp
 int *pa = &a;
@@ -1450,19 +1462,22 @@ int a, b;
 int *pa, *pb = &b;
 ```
 
+
+
 项目代码对应于以下伪代码和汇编语言：
 
 | 伪代码 | 汇编 |
 | :--- | :--- |
-| address a -> (pa) | lea a, %rax <br> mov %rax, pa |
-| 1 -> \*(pa) ; (a) = 1 | mov pa, %rax <br> movl $1, (%rax) |
-| 1 -> \*(pb) ; (b) = 1 | mov pb, %rbx <br> movl $1, (%rbx) |
-| \*(pb) + \*(pa) -> \*(pb) ; (b) = 2 | mov (%rax), %ecx <br> add (%rbx), %ecx <br> mov %ecx, (%rbx) |
+| `address a -> (pa)` | `lea a, %rax` <br> `mov %rax, pa` |
+| `1 -> \*(pa) ; (a) = 1` | `mov pa, %rax` <br> `movl $1, (%rax)` |
+| `1 -> \*(pb) ; (b) = 1` | `mov pb, %rbx` <br> `movl $1, (%rbx)` |
+| `\*(pb) + \*(pa) -> \*(pb) ; (b) = 2` | `mov (%rax), %ecx` <br> `add (%rbx), %ecx` <br> `mov %ecx, (%rbx)` |
 
 本章的源代码可以从此处下载：
-https://bitbucket.org/softwarediagnostics/pflddr/src/master/x64/Chapter6/
 
-我们对其进行编译和链接，并按照 x64.4 章中所述将可执行文件加载到 GDB 中。我们得到以下输出：
+`https://bitbucket.org/softwarediagnostics/pflddr/src/master/x64/Chapter6/`
+
+我们对其进行编译和链接，并按照 `x64.4` 章中所述将可执行文件加载到 GDB 中。我们得到以下输出：
 
 ```bash
 coredump@DESKTOP-1S6V2L0::~/pflddr/x64/Chapter6$ as MemoryPointers.asm -o MemoryPointers.o
@@ -1500,9 +1515,9 @@ Breakpoint 1 at 0x401000
 Starting program: /home/coredump/pflddr/x64/Chapter6/MemoryPointers
 ```
 
-Breakpoint 1, 0x0000000000401000 in `_start ()`
+`Breakpoint 1, 0x0000000000401000 in _start ()`
 
-我们反汇编 main 函数：
+我们反汇编 `main` 函数：
 
 ```bash
 (gdb) disass main
@@ -1523,7 +1538,7 @@ Dump of assembler code for function _start:
 End of assembler dump.
 ```
 
-然后我们清除 %RAX, %RBX 和 %RCX 寄存器，以建立一个易于跟踪的内存布局：
+然后我们清除 `%RAX`, `%RBX` 和 `%RCX` 寄存器，以建立一个易于跟踪的内存布局：
 
 ```bash
 (gdb) set $rax = 0
@@ -1535,7 +1550,7 @@ rbx		0x0		0
 rcx		0x0		0
 ```
 
-我们还指令 GDB 自动显示当前将要执行的指令，%RAX, %RBX, %RCX 寄存器的值，以及变量 “a”, “b”, “pa”, “pb” 的内容：
+我们还指令 GDB 自动显示当前将要执行的指令，`%RAX`, `%RBX`, `%RCX` 寄存器的值，以及变量 `a`, `b`, `pa`, `pb` 的内容：
 
 ```bash
 (gdb) display/i $rip
@@ -1564,11 +1579,9 @@ rcx		0x0		0
 8: /x (long)pb = 0x402004
 ```
 
+我们可以看到 `pb` 变量包含地址 `0x402004`。接下来我们检查（变量）内存位置 `a`、`b`、`pa`、`pb` 的地址：
 
-
-我们可以看到 `pb` 变量包含地址 0x402004。接下来我们检查（变量）内存位置 “a”、“b”、“pa”、“pb” 的地址：
-
-```
+```bash
 (gdb) print &a
 $1 = <(data variable, no debug info)> 0x402000
 
@@ -1582,21 +1595,22 @@ $3 = <(data variable, no debug info)> 0x402008
 $4 = <(data variable, no debug info)> 0x402010
 ```
 
-我们还检查存储在地址 0x402004 处的值（`pb` 的值，即 `b` 的地址）：
+我们还检查存储在地址 `0x402004` 处的值（`pb` 的值，即 `b` 的地址）：
 
-```
+```bash
 (gdb) x 0x402004
 0x402004: 0x00000000
 ```
 
-这对应于执行第一条 LEA 指令之前的内存布局，如图 x64.6.5 所示。
+这对应于执行第一条 `LEA` 指令之前的内存布局，如图 `x64.6.5` 所示。
 
 ![](img/47fe95ac2b05f9cf0a4cad33d8640c96_84_0.png)
-图 x64.6.5
+
+图 `x64.6.5`
 
 然后我们逐步执行代码（**粗体**部分为变化之处）：
 
-```
+```bash
 (gdb) si
 0x000000000000401008 in _start ()
 
@@ -1611,7 +1625,7 @@ $4 = <(data variable, no debug info)> 0x402010
 8: /x (long)pb = 0x402004
 ```
 
-```
+```bash
 (gdb) si
 0x000000000000401010 in _start ()
 
@@ -1626,7 +1640,7 @@ $4 = <(data variable, no debug info)> 0x402010
 8: /x (long)pb = 0x402004
 ```
 
-```
+```bash
 (gdb) si
 0x000000000000401018 in _start ()
 
@@ -1641,7 +1655,7 @@ $4 = <(data variable, no debug info)> 0x402010
 8: /x (long)pb = 0x402004
 ```
 
-```
+```bash
 (gdb) si
 0x00000000000040101e in _start ()
 1: x/i $rip
@@ -1655,7 +1669,7 @@ $4 = <(data variable, no debug info)> 0x402010
 8: /x (long)pb = 0x402004
 ```
 
-```
+```bash
 (gdb) si
 0x000000000000401026 in _start ()
 1: x/i $rip
@@ -1669,7 +1683,7 @@ $4 = <(data variable, no debug info)> 0x402010
 8: /x (long)pb = 0x402004
 ```
 
-```
+```bash
 (gdb) si
 0x00000000000040102c in _start ()
 1: x/i $rip
@@ -1683,7 +1697,7 @@ $4 = <(data variable, no debug info)> 0x402010
 8: /x (long)pb = 0x402004
 ```
 
-```
+```bash
 (gdb) si
 0x00000000000040102e in _start ()
 1: x/i $rip
@@ -1697,7 +1711,7 @@ $4 = <(data variable, no debug info)> 0x402010
 8: /x (long)pb = 0x402004
 ```
 
-```
+```bash
 (gdb) si
 0x000000000000401030 in _start ()
 1: x/i $rip
@@ -1711,7 +1725,7 @@ $4 = <(data variable, no debug info)> 0x402010
 8: /x (long)pb = 0x402004
 ```
 
-```
+```bash
 (gdb) si
 0x000000000000401032 in _start ()
 1: x/i $rip
@@ -1725,20 +1739,21 @@ $4 = <(data variable, no debug info)> 0x402010
 8: /x (long)pb = 0x402004
 ```
 
-最终的内存布局和寄存器情况如图 x64.6.6 所示。
+最终的内存布局和寄存器情况如图 `x64.6.6` 所示。
 
 ![](img/47fe95ac2b05f9cf0a4cad33d8640c96_88_0.png)
-图 x64.6.6
 
-## 第 x64.7 章：逻辑指令和 RIP
+图 `x64.6.6`
+
+## 第 `x64.7` 章：逻辑指令和 `RIP`
 
 ### 指令格式
 
 我们已经看到汇编语言指令具有统一的格式：
 
-操作数可以是寄存器 (reg)、内存引用 (mem) 或某些数字，称为立即数 (imm)。典型的表示示例：
+操作数可以是寄存器 (`reg`)、内存引用 (`mem`) 或某些数字，称为立即数 (`imm`)。典型的表示示例：
 
-```
+```asm
 inc mem/reg
 dec mem/reg
 add reg/imm, mem/reg
@@ -1747,7 +1762,7 @@ add mem/imm, reg
 
 以及一些具体的汇编语言示例：
 
-```
+```asm
 inc (%rax)
 decl a
 addl $0x10, (%rax)
@@ -1759,7 +1774,8 @@ addq a, (%rax)
 除了算术指令外，还有所谓的逻辑移位指令，它们只是将位串向左或向右移位。
 
 左移：
-```
+
+```asm
 11111111 -> 11111110 ; 移位 1 位
 11111110 -> 11110000 ; 移位 3 位
 shl imm/reg, mem/reg
@@ -1768,7 +1784,8 @@ shlb $2, (%rax)
 ```
 
 右移：
-```
+
+```asm
 11111111 -> 01111111 ; 移位 1 位
 01111111 -> 00001111 ; 移位 3 位
 shr imm/reg, mem/reg
@@ -1778,33 +1795,37 @@ shrb $2, (%rax)
 
 ### 逻辑运算
 
-这里我们回顾一下逻辑运算及相应的真值表。我们将 True 缩写为 T，False 缩写为 F。
+这里我们回顾一下逻辑运算及相应的真值表。我们将 `True` 缩写为 `T`，`False` 缩写为 `F`。
 
 **AND（与）**
-- 1 and 1 = 1 (T and T = T)
-- 1 and 0 = 0 (T and F = F)
-- 0 and 1 = 0 (F and T = F)
-- 0 and 0 = 0 (F and F = F)
+
+- `1 and 1 = 1` (`T and T = T`)
+- `1 and 0 = 0` (`T and F = F`)
+- `0 and 1 = 0` (`F and T = F`)
+- `0 and 0 = 0` (`F and F = F`)
 
 **OR（或）**
-- 1 or 1 = 1 (T or T = T)
-- 1 or 0 = 1 (T or F = T)
-- 0 or 1 = 1 (F or T = T)
-- 0 or 0 = 0 (F or F = F)
+
+- `1 or 1 = 1` (`T or T = T`)
+- `1 or 0 = 1` (`T or F = T`)
+- `0 or 1 = 1` (`F or T = T`)
+- `0 or 0 = 0` (`F or F = F`)
 
 ### 将内存或寄存器清零
 
 有几种方法可以将零值放入寄存器或内存位置：
 
-- 1. 移动一个值：
-```assembly
+1. 移动一个值：
+
+```asm
 mov $0, a
 mov $0, %rax
 mov $0, %eax
 ```
 
-- 2. 使用 XOR（异或）逻辑运算：
-```assembly
+2. 使用 `XOR`（异或）逻辑运算：
+
+```asm
 xor %rax, %rax
 xor %eax, %eax
 ```
@@ -1813,10 +1834,10 @@ xor %eax, %eax
 
 | 输入 A | 输入 B | 结果 | 逻辑 |
 | :--- | :--- | :--- | :--- |
-| 1 | 1 | 0 | T xor T = F |
-| 1 | 0 | 1 | T xor F = T |
-| 0 | 1 | 1 | F xor T = T |
-| 0 | 0 | 0 | F xor F = F |
+| 1 | 1 | 0 | `T xor T = F` |
+| 1 | 0 | 1 | `T xor F = T` |
+| 0 | 1 | 1 | `F xor T = T` |
+| 0 | 0 | 0 | `F xor F = F` |
 
 由于源操作数与目的操作数相同，且相同的位会被清零，因此此操作会清除其目的操作数。
 
@@ -1824,7 +1845,7 @@ xor %eax, %eax
 
 考虑上一章项目中的这两个执行步骤：
 
-```
+```bash
 (gdb) si
 0x0000000000040102c in _start ()
 1: x/i $rip
@@ -1838,7 +1859,7 @@ xor %eax, %eax
 8: /x (long)pb = 0x402004
 ```
 
-```
+```bash
 (gdb) si
 0x0000000000040102e in _start ()
 1: x/i $rip
@@ -1852,12 +1873,15 @@ xor %eax, %eax
 8: /x (long)pb = 0x402004
 ```
 
-当地址 0000000000040102c 处的 MOV 指令正在执行时，另一个 CPU 寄存器 %RIP 指向地址 0000000000040102e 处待执行的下一条指令。如图 x64.7.1 所示。
+当地址 `0000000000040102c` 处的 `MOV` 指令正在执行时，另一个 CPU 寄存器 `%RIP` 指向地址 `0000000000040102e` 处待执行的下一条指令。如图 `x64.7.1` 所示。
 
 **RIP**
 
 | 地址 | 值 |
 | :--- | :--- |
+
+
+
 | 0000000000401024 | 40 |
 | 0000000000401025 | 00 |
 | 0000000000401026 | c7 |
@@ -1875,12 +1899,14 @@ xor %eax, %eax
 ![](img/47fe95ac2b05f9cf0a4cad33d8640c96_94_0.png)
 
 当前执行的指令：`mov (%rax),%ecx`
+
 下一条指令：`add (%rbx),%ecx`
+
 图 x64.7.1
 
 ### 代码段
 
-回想在第 x64.6 章中，我们讨论了存放程序数据的 **.data** 段。程序代码则被放在 **.text** 段中。
+回想在第 x64.6 章中，我们讨论了存放程序数据的 `.data` 段。程序代码则被放在 `.text` 段中。
 
 以下 GDB 命令列出了各种程序段及其信息：
 
@@ -1900,9 +1926,10 @@ Exec file:
 从代码反汇编中重建近似的 C 或 C++ 代码的能力，在内存转储分析和调试中至关重要。
 
 本章的项目可以从以下地址下载：
-https://bitbucket.org/softwarediagnostics/pflddr/src/master/x64/Chapter8/
 
-我们对其进行编译和链接，将可执行文件加载到 GDB 中，在 `main` 函数上设置断点，运行程序直到 GDB 触发断点，然后对其 main 函数进行反汇编：
+`https://bitbucket.org/softwarediagnostics/pflddr/src/master/x64/Chapter8/`
+
+我们对其进行编译和链接，将可执行文件加载到 GDB 中，在 `main` 函数上设置断点，运行程序直到 GDB 触发断点，然后对其 `main` 函数进行反汇编：
 
 ```bash
 coredump@DESKTOP-IS6V2L0:~/pflddr/x64/Chapter8$ gcc PointersAsVariables.cpp -o PointersAsVariables
@@ -1932,8 +1959,6 @@ Starting program: /home/coredump/pflddr/x64/Chapter8/PointersAsVariables
 
 Breakpoint 1, 0x0000555555555129 in main ()
 ```
-
-
 
 ```
 (gdb) dissas main
@@ -2136,347 +2161,21 @@ pb = &b;
 
 优化后的程序（使用 `-O2` 编译）包含极少的 CPU 指令：
 
-```
-(gdb) dissas main
-Dump of assembler code for function main:
 
-=> 0x0000555555555040 <+0>:  lea 0x2ffd(%rip),%rax    # 0x555555558044 <a>
-0x0000555555555047 <+7>:   movl $0x2,0x2ff3(%rip)    # 0x555555558044 <a>
-0x0000555555555051 <+17>:  mov %rax,0x2fe0(%rip)     # 0x555555558038 <pa>
-0x0000555555555058 <+24>:  lea 0x2fe1(%rip),%rax     # 0x555555558040 <b>
-0x000055555555505f <+31>:  mov %rax,0x2fca(%rip)     # 0x555555558030 <pb>
-0x0000555555555066 <+38>:  xor %eax,%eax
-0x0000555555555068 <+40>:  movl $0x4,0x2fce(%rip)    # 0x555555558040 <b>
-0x0000555555555072 <+50>:  retq
-End of assembler dump.
-```
 
-我们可以看到，编译器能够算出计算结果：`a = 2; b = 4;`。然而，还有一个问题：为什么编译器没有将初始化 `pa` 和 `pb` 变量的第一批指令优化掉？答案在于 C 和 C++ 中分离编译模型的本质。我们可以分别且独立地编译多个编译单元（`.c` 或 `.cpp` 文件）。因此，无法保证另一个编译单元不会引用我们全局声明并定义的 `pa` 和 `pb` 变量。
+进入`/path/to/xxx`目录，找到`xxx.json`。
 
-我们还可以看到编译器重新排列了指令顺序。这在伪代码中可以体现：
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
 
 ```
-address a -> rax
-1 -> (a)
-rax -> (pa)
+if (condVar > someVal) {console.log("xxx")}
 ```
 
-这是因为使用变量 `a` 的地址初始化 `pa` 与将 `1` 赋值给变量 `a` 所指向的内存单元是相互独立的，且重新排列后的指令序列在现代处理器上执行速度可能更快。
 
-## 第 x64.9 章：内存与栈
-
-### 栈：定义
-
-栈是一个简单的计算设备，具有两种操作：`push`（入栈）和 `pop`（出栈）。它允许我们将数据堆叠起来以便以 LIFO（后进先出）的方式记忆，并能快速检索最后堆叠的数据项，如图 x64.9.1 所示。
-
-![](img/47fe95ac2b05f9cf0a4cad33d8640c96_107_0.png)
-图 x64.9.1
-
-### 栈在内存中的实现
-
-CPU 的 `%RSP` 寄存器（栈指针）指向栈顶。如图 x64.9.2 所示，随着每条 `push` 指令的执行，栈向较低的内存地址生长，这在实现上表现为 `%RSP` 寄存器递减 8。我们可以使用以下指令读取栈顶值：
-
-```
-mov (%rsp), %rax
-```
-
-![](img/47fe95ac2b05f9cf0a4cad33d8640c96_108_0.png)
-图 x64.9.2
-
-相反的 `POP` 指令会增加 `%RSP` 寄存器的值，如图 x64.9.3 所示。
-
-![](img/47fe95ac2b05f9cf0a4cad33d8640c96_109_0.png)
-图 x64.9.3
-
-### 重点记忆
-
-以下是我们学习到的关于栈的总结，最后 3 点将在本书随后的章节中涵盖：
-
-- 栈操作是 LIFO —— 后进先出
-- 栈在内存中向低地址生长
-- `%RSP` 寄存器指向栈顶
-- 栈用于存储 `CALL` 指令的返回地址
-- 栈用于向函数传递额外参数
-- 栈用于存储函数参数值、局部变量和临时变量
-
-
-
-### PUSH 指令
-
-我们可以将存储在寄存器中的值、存储在内存地址中的值或常量（立即数操作数）压入栈中：
-
-**PUSH r/mem/imm**
-
-以下是参考 Intel 手册简化的 PUSH 伪代码：
-
-```
-IF OperandSize = 64
-    THEN
-        %RSP - 8 -> %RSP
-        OperandValue -> (%RSP) ; quadword
-    ELSE
-        %RSP - 2 -> %RSP
-        OperandValue -> (%RSP) ; word
-FI
-```
-
-示例：
-
-```
-push %rax
-pushw (%rbx)
-push $0
-```
-
-### POP 指令
-
-我们可以将存储在栈顶的值弹出到寄存器或内存地址中：
-
-```
-POP r/mem
-```
-
-以下是参考 Intel 手册简化的 POP 伪代码：
-
-```
-IF OperandSize = 64
-    THEN
-        (%RSP) -> OperandValue ; quadword
-        %RSP + 8 -> %RSP
-    ELSE
-        (%RSP) -> OperandValue ; word
-        %RSP + 2 -> %RSP
-FI
-```
-
-示例：
-
-```
-pop %rax
-popw (%rbx)
-```
-
-### 寄存器回顾
-
-到目前为止，我们已经看到并使用了通用 CPU 寄存器：
-
-- %RAX（其具体用途之一是包含函数的返回值）
-- %RBX
-- %RCX
-- %RDX
-
-我们还有特殊用途的寄存器：
-
-- %RIP（指令指针）
-- %RSP（栈指针）
-
-AMD64 和 Intel EM64T 架构引入了额外的通用寄存器：%R8, %R9, %R10, %R11, %R12, %R13, %R14, %R15。
-
-这些额外的寄存器在 x64 代码中被大量使用。更多的通用寄存器允许代码更快地执行，因为临时计算结果可以存储在寄存器中而不是内存位置中。以下是 `read` 函数的反汇编代码：
-
-```
-(gdb) disass read
-
-Dump of assembler code for function __GI__libc_read:
-0x00007ffff7ff2450 <+0>:  lea 0xd6299(%rip),%rax # 0x7ffff7fc86f0 <__libc_multiple_threads>
-0x00007ffff7ff2457 <+7>:  mov (%rax),%eax
-0x00007ffff7ff2459 <+9>:  test %eax,%eax
-0x00007ffff7ff245b <+11>: jne 0x7ffff7ff2470 <__GI__libc_read+32>
-0x00007ffff7ff245d <+13>: xor %eax,%eax
-0x00007ffff7ff245f <+15>: syscall
-0x00007ffff7ff2461 <+17>: cmp $0xffffffffffffff000,%rax
-0x00007ffff7ff2467 <+23>: ja 0x7ffff7ff24c0 <__GI__libc_read+112>
-0x00007ffff7ff2469 <+25>: retq
-0x00007ffff7ff246a <+26>: nopw 0x0(%rax,%rax,1)
-0x00007ffff7ff2470 <+32>: push %r12
-0x00007ffff7ff2472 <+34>: mov %rdx,%r12
-0x00007ffff7ff2475 <+37>: push %rbp
-0x00007ffff7ff2476 <+38>: mov %rsi,%rbp
-0x00007ffff7ff2479 <+41>: push %rbx
-0x00007ffff7ff247a <+42>: mov %edi,%ebx
-0x00007ffff7ff247c <+44>: sub $0x10,%rsp
-0x00007ffff7ff2480 <+48>: callq 0x7ffff7ff0e750 <__libc_enable_asynccancel>
-0x00007ffff7ef2485 <+53>:  mov    %r12,%rdx
-0x00007ffff7ef2488 <+56>:  mov    %rbp,%rsi
-0x00007ffff7ef248b <+59>:  mov    %ebx,%edi
-0x00007ffff7ef248d <+61>:  mov    %eax,%r8d
-0x00007ffff7ef2490 <+64>:  xor    %eax,%eax
-0x00007ffff7ef2492 <+66>:  syscall
-0x00007ffff7ef2494 <+68>:  cmp    $0xffffffffffffffff000,%rax
-0x00007ffff7ef249a <+74>:  ja     0x7ffff7ef2edf4 <_GI__libc_read+132>
-0x00007ffff7ef249c <+76>:  mov    %r8d,%di
-0x00007ffff7ef249f <+79>:  mov    %rax,0x8(%rsp)
-0x00007ffff7ef24a4 <+84>:  callq  0x7ffff7ef0e7b <_libc_disable_asynccancel>
-0x00007ffff7ef24a9 <+89>:  mov    0x8(%rsp),%rax
-0x00007ffff7ef24ae <+94>:  add    $0x10,%rsp
-0x00007ffff7ef24b2 <+98>:  pop    %rbx
-0x00007ffff7ef24b3 <+99>:  pop    %rbp
-0x00007ffff7ef24b4 <+100>: pop    %r12
-0x00007ffff7ef24b6 <+102>: retq
-0x00007ffff7ef24b7 <+103>: nopw   0x0(%rax,%rax,1)
-0x00007ffff7ef24c0 <+112>: mov    0xd9a9(%rip),%rdx  # 0x7ffff7fc2e70
-0x00007ffff7ef24c7 <+119>: neg    %eax
-0x00007ffff7ef24c9 <+121>: mov    %eax,%fs:(%rdx)
-0x00007ffff7ef24cc <+124>: mov    $0xffffffffffffffff,%rax
-0x00007ffff7ef24d3 <+131>: retq
-0x00007ffff7ef24d4 <+132>: mov    0xd995(%rip),%rdx  # 0x7ffff7fc2e70
-0x00007ffff7ef24db <+139>: neg    %eax
-0x00007ffff7ef24dd <+141>: mov    %eax,%fs:(%rdx)
-0x00007ffff7ef24e0 <+144>: mov    $0xffffffffffffffff,%rax
-0x00007ffff7ef24e7 <+151>: jmp    0x7ffff7ef249c <_GI__libc_read+76>
-```
-汇编转储结束。
-
-### 简化应用内存
-
-当可执行文件被加载到内存中时，其头部和节（sections）会被映射到内存页。某些数据和代码被原样复制，而某些数据则会被初始化并扩展。第一个栈也在这个阶段创建。%RIP 寄存器被设置为指向第一条程序指令，而 %RSP 指向栈顶。这个简化过程如图 x64.9.4 所示。
-
-![](img/47fe95ac2b05f9cf0a4cad33d8640c96_115_0.png)
-
-图 x64.9.4
-
-### 栈溢出
-
-默认情况下，栈的大小是有限制的（取决于系统和限制设置，在我们的系统中，它是 8192Kb 或 8388608 字节）。如果栈的增长超过了预留限制，就会发生栈溢出（段错误）。这可能是由无限递归、深层递归或非常大的局部变量引起的：
-
-```c
-int func()
-{
-    func();
-    return 0;
-}
-
-int func2()
-{
-    int array[10000000] = { 1 };
-    printf("%d", array[10000000-1]);
-}
-```
-
-### 跳转 (Jumps)
-
-在我们深入研究 C/C++ 函数之前，需要了解的另一个指令叫做 JMP（跳转）。图 x64.9.5 显示了内存中的指令以及对应的 %RIP 寄存器的值。
-
-![](img/47fe95ac2b05f9cf0a4cad33d8640c96_117_0.png)
-
-图 x64.9.5
-
-我们可以看到 JMP 指令改变了 %RIP 以指向另一个内存地址，程序执行从该位置继续。图 x64.9.5 中显示的代码会无限循环：这可以被认为是程序挂起（hang）并导致 CPU 飙升。
-
-以下是参考 Intel 手册的绝对 JMP 指令伪代码及一些示例：
-
-```
-; 格式和参数:
-
-JMP r/mem64
-
-; 伪代码:
-
-DEST -> RIP ; 新的执行目标地址
-
-; 示例:
-
-JMP 0x5555555558020
-
-JMP *%RAX
-```
-
-这种跳转被称为“绝对跳转”，因为我们指定的是完整的内存地址，而不是相对于当前 %RIP 值的 +/- 偏移量。后者被称为“相对跳转”。`*%RAX` 表示对存储在 %RAX 寄存器中地址的间接跳转。如图 x64.9.6 所示。
-
-![](img/47fe95ac2b05f9cf0a4cad33d8640c96_118_0.png)
-
-图 x64.9.6
-
-### 调用 (Calls)
-
-我们讨论两个实现 C 和 C++ 函数调用的核心指令。它们被调用作 CALL 和 RET。图 x64.9.7 显示了内存中的指令以及对应的 %RIP 和 %RSP 寄存器的值。
-
-![](img/47fe95ac2b05f9cf0a4cad33d8640c96_119_0.png)
-
-图 x64.9.7
-
-我们可以看到 CALL 指令将 %RIP 的当前值压入栈中，并改变 %RIP 以指向另一个内存地址。然后程序执行从新位置继续。RET 指令将保存的 %RIP 值从栈中弹出到 %RIP 寄存器。然后程序执行恢复到 CALL 指令之后的内存位置。
-
-以下是参考 Intel 手册的 CALL 指令伪代码及一些示例：
-
-```
-; 格式和参数:
-
-CALL r/mem64
-
-; 伪代码:
-
-PUSH RIP
-
-DEST -> RIP
-
-; 示例:
-
-CALL 0x555555558020
-
-CALL *%RAX
-```
-
-以下是参考 Intel 手册的 RET 指令伪代码：
-
-```
-; 格式:
-
-RET
-
-; 伪代码:
-
-POP() -> RIP
-```
-
-### 调用栈 (Call Stack)
-
-在 C 和 C++ 中，如果一个函数（调用者）调用另一个函数（被调用者），结果代码使用 CALL 指令实现，在执行期间，返回地址被保存在栈上。如果被调用者又调用另一个函数，返回地址也会被保存在栈上，依此类推。因此，我们有了所谓的返回地址“调用栈”。让我们通过一个简单但精简的例子来看看。
-
-假设我们有 3 个函数，其代码占用以下地址：
-
-| 函数 | 地址范围 |
-| :--- | :--- |
-| func | 0000001400010000 - 000000140001100 |
-| func2 | 0000001400011101 - 000000140001200 |
-| func3 | 000000140001201 - 000000140001300 |
-
-我们还有以下代码，其中 *func* 调用 *func2*，*func2* 调用 *func3*：
-
-```cpp
-void func()
-{
-    func2();
-}
-void func2()
-{
-    func3();
-}
-```
-
-当 *func* 调用 *func2* 时，调用者的返回地址被压入栈中，%RSP 指向 0000001400010000 - 000000140001100 范围内的某个值，例如 000000140001020。当 *func2* 调用 *func3* 时，调用者的返回地址同样被压入栈中，%RSP 指向 0000001400011101 - 000000140001200 范围内的某个值，例如 000000140001180。如果我们使用调试器中断 *func3* 并检查 %RIP，我们会发现其值在 000000140001201 - 000000140001300 范围内，例如 000000140001250。因此，我们得到了图 x64.9.8 所示的内存和寄存器布局（未显示常规的函数序言：我们将在下一章学习）。
-
-
-
-图 x64.9.8
-
-调试器检查 `%RIP` 寄存器的值以及栈顶的值，然后重建该调用栈：
-
-```
-func3
-func2
-func
-```
-
-调试器从所谓的符号信息中获取与 `func`、`func2` 和 `func3` 对应的地址范围，这些信息可能存储在可执行文件内部，或者存储在需要显式引用的某个外部文件中。
-
-### 在 GDB 中探索栈
-
-为了实时观察调用栈，我们有一个名为 "SimpleStack" 的项目，可以通过以下地址下载：
-
-https://bitbucket.org/softwarediagnostics/pflddr/src/master/x64/Chapter9/
-
-我们编译文件并将可执行文件加载到 GDB 中：
 
 ```
 coredump@DESKTOP-IS6V2L0:~/pflddr/x64/Chapter9$ gcc SimpleStack.c func.c func2.c func3.c -o SimpleStack
@@ -2508,29 +2207,32 @@ Find the GDB manual and other documentation resources online at:
 <http://www.gnu.org/software/gdb/documentation/>.
 ```
 
-如需帮助，请输入 "help"。
+如需帮助，请输入`help`。
 
-输入 "apropos word" 来搜索与 "word" 相关的命令...
+输入`apropos word`来搜索与`word`相关的命令……
 
-Reading symbols from ./.SimpleStack... (no debugging symbols found)...done.
+Reading symbols from `./.SimpleStack`... (no debugging symbols found)...done.
 
-然后我们在 main 函数上设置一个断点，运行程序直到 GDB 触发中断：
+然后我们在`main`函数上设置一个断点，运行程序直到 GDB 触发中断：
 
 ```
 (gdb) run
 Starting program: /home/coredump/pflddr/x64/Chapter9/SimpleStack
 ```
 
-Breakpoint 1, 0x0000555555555129 in main ()
+Breakpoint 1, 0x0000555555555129 in `main` ()
 
-函数 func3 内部有一个断点指令，允许调试器中断并停止程序执行以检查其状态。我们从 main 函数的断点处恢复程序执行，允许 main 函数调用 func，func 调用 func2，func2 调用 func3，并在 func3 内部执行显式断点：
+函数`func3`内部有一个断点指令，允许调试器中断并停止程序执行以检查其状态。我们从`main`函数的断点处恢复程序执行，允许`main`函数调用`func`，`func`调用`func2`，`func2`调用`func3`，并在`func3`内部执行显式断点：
 
+```
 (gdb) continue
 
 Continuing.
 
 Program received signal SIGTRAP, Trace/breakpoint trap.
-`0x000055555555516c` in `func3 ()`
+
+0x000055555555516c in func3 ()
+```
 
 ```
 (gdb) info registers $rip $rsp
@@ -2548,7 +2250,7 @@ rsp	0x7fffffffef500	0x7fffffffef500
 0x55555555516b <func3+4>: int3
 ```
 
-我们转储 **$rip-1** 的值，因为当执行停止在 int3 指令时，%RIP 指向的是下一条指令 (**nop**)。
+我们转储`$rip-1`的值，因为当执行停止在`int3`指令时，`%RIP`指向的是下一条指令（`nop`）。
 
 现在我们可以检查栈顶：
 
@@ -2573,7 +2275,7 @@ rsp	0x7fffffffef500	0x7fffffffef500
 < __libc_start_main+235>
 ```
 
-`%RIP` 的当前值指向 `func3`，而栈上的返回地址以**粗体**显示。GDB 能够重建如下的调用栈、栈追踪或回溯 (`bt`)：
+`%RIP`的当前值指向`func3`，而栈上的返回地址以粗体显示。GDB 能够重建如下的调用栈、栈追踪或回溯（`bt`）：
 
 ```
 (gdb) bt
@@ -2587,7 +2289,7 @@ rsp	0x7fffffffef500	0x7fffffffef500
 
 ### 栈的用途
 
-除了存储 CALL 指令的返回地址外，栈还用于向函数传递额外的参数以及存储局部变量。当我们需要在某些计算过程中或跨函数调用保留寄存器中的值时，栈还用于保存和恢复这些值。例如，假设我们要进行乘法运算，但与此同时，我们在寄存器 %RAX 和 %RDX 中有其他有价值的数据。乘法结果将覆盖 %RAX 和 %RDX 的值，因此我们将它们的值暂时放入栈中：
+除了存储`CALL`指令的返回地址外，栈还用于向函数传递额外的参数以及存储局部变量。当我们需要在某些计算过程中或跨函数调用保留寄存器中的值时，栈还用于保存和恢复这些值。例如，假设我们要进行乘法运算，但与此同时，我们在寄存器`%RAX`和`%RDX`中有其他有价值的数据。乘法结果将覆盖`%RAX`和`%RDX`的值，因此我们将它们的值暂时放入栈中：
 
 ```assembly
 mov  $10, %rax
@@ -2609,18 +2311,18 @@ pop  %rax ; 栈是后进先出 (LIFO)
 
 到目前为止，我们遇到了以下通用寄存器：
 
-- %RAX（其具体用途包括包含函数返回值和乘法结果的低位部分）
-- %RBX
-- %RCX（其具体用途之一是循环计数器）
-- %RDX（其具体用途之一是在乘法结果超过 64 位最大值时包含结果的高位部分）
-- %RIP（指令指针，指向下一条要执行的指令）
-- %RSP（栈指针，指向栈顶）
+- `%RAX`（其具体用途包括包含函数返回值和乘法结果的低位部分）
+- `%RBX`
+- `%RCX`（其具体用途之一是循环计数器）
+- `%RDX`（其具体用途之一是在乘法结果超过 64 位最大值时包含结果的高位部分）
+- `%RIP`（指令指针，指向下一条要执行的指令）
+- `%RSP`（栈指针，指向栈顶）
 
-接下来我们要介绍 Linux 平台上另一个重要的寄存器，称为基址指针寄存器，有时也称为栈帧指针寄存器 %RBP。
+接下来我们要介绍 Linux 平台上另一个重要的寄存器，称为基址指针寄存器，有时也称为栈帧指针寄存器`%RBP`。
 
 ### 数组元素的寻址
 
-我们也可以将栈内存视为内存单元的数组，通常 %RBP 寄存器用于像图 x64.10.1 所示那样对栈内存元素进行寻址，它滑动进入被称为“栈帧”的栈内存区域。第一个图描绘了 64 位（四字）内存单元，第二个图描绘了 32 位（双字）内存单元。
+我们也可以将栈内存视为内存单元的数组，通常`%RBP`寄存器用于像图 x64.10.1 所示那样对栈内存元素进行寻址，它滑动进入被称为“栈帧”的栈内存区域。第一个图描绘了 64 位（四字）内存单元，第二个图描绘了 32 位（双字）内存单元。
 
 ![](img/47fe95ac2b05f9cf0a4cad33d8640c96_129_0.png)
 
@@ -2639,9 +2341,9 @@ void func()
 
 在函数正文代码执行之前，将设置以下指针：
 
-- (%RBP) 包含前一个 %RBP 的值
-- -0x4(%RBP) 包含局部变量 var1（双字）
-- -0x8(%RBP) 包含局部变量 var2（双字）
+- `(%RBP)`包含前一个`%RBP`的值
+- `-0x4(%RBP)`包含局部变量`var1`（双字）
+- `-0x8(%RBP)`包含局部变量`var2`（双字）
 
 如图 x64.10.2 所示。
 
@@ -2649,9 +2351,9 @@ void func()
 
 图 x64.10.2
 
-### 函数序言 (Function Prolog)
+### 函数序言（Function Prolog）
 
-导致 %RBP 寄存器初始化并为局部变量留出空间的指令序列称为函数序言。图 x64.10.3 就是一个例子，其中 func 调用 func2，func2 有一个局部变量 var。有时，保存必要的寄存器也被认为是函数序言的一部分。
+导致`%RBP`寄存器初始化并为局部变量留出空间的指令序列称为函数序言。图 x64.10.3 就是一个例子，其中`func`调用`func2`，`func2`有一个局部变量`var`。有时，保存必要的寄存器也被认为是函数序言的一部分。
 
 ![](img/47fe95ac2b05f9cf0a4cad33d8640c96_131_0.png)
 
@@ -2659,7 +2361,7 @@ void func()
 
 ### 原始栈（无局部变量和函数参数）
 
-现在我们可以理解在第 x64.9 章项目 "SimpleStack" 中看到的原始栈上，除了函数返回地址之外还出现的附加数据（即函数调用之前等于前一个 %RSP 的前一个 %RBP）：
+现在我们可以理解在第 x64.9 章项目`SimpleStack`中看到的原始栈上，除了函数返回地址之外还出现的附加数据（即函数调用之前等于前一个`%RSP`的前一个`%RBP`）：
 
 ```
 (gdb) info registers $rsp $rbp
@@ -2681,7 +2383,7 @@ rbp		0x7ffffffe500	0x7ffffffe500
 (gdb) disass func2
 ```
 
-函数 func2 的汇编代码转储：
+函数`func2`的汇编代码转储：
 
 ```
 0x0000555555555156 <+0>: push %rbp
@@ -2699,7 +2401,7 @@ rbp		0x7ffffffe500	0x7ffffffe500
 (gdb) disass func
 ```
 
-函数 func 的汇编代码转储：
+函数`func`的汇编代码转储：
 
 ```
 0x0000555555555145 <+0>: push %rbp
@@ -2712,8 +2414,6 @@ rbp		0x7ffffffe500	0x7ffffffe500
 ```
 
 汇编转储结束。
-
-
 
 ```
 (gdb) disass main
@@ -2733,18 +2433,20 @@ Dump of assembler code for function main:
 End of assembler dump.
 ```
 
-### 函数收尾 (Function Epilog)
+### 函数收尾（Function Epilog）
 
-在函数代码返回调用者之前，它必须恢复 %RSP 和 %RBP 寄存器的前值，以便调用者能够从之前保存在栈上的正确地址恢复执行，并继续正确地对其自身的栈帧进行寻址。这一系列指令被称为函数收尾（function epilog），如图 x64.10.4 所示。
+在函数代码返回调用者之前，它必须恢复`%RSP`和`%RBP`寄存器的前值，以便调用者能够从之前保存在栈上的正确地址恢复执行，并继续正确地对其自身的栈帧进行寻址。这一系列指令被称为函数收尾（function epilog），如图 x64.10.4 所示。
 
 ![](img/47fe95ac2b05f9cf0a4cad33d8640c96_134_0.png)
+
 图 x64.10.4
 
-我们可能会看到 `leave` 指令，而不是 `mov %rbp,%rsp` 和 `pop %rbp` 的指令序列，`leave` 指令执行相同的功能，但占用的代码空间更少。
+我们可能会看到`leave`指令，而不是`mov %rbp,%rsp`和`pop %rbp`的指令序列，`leave`指令执行相同的功能，但占用的代码空间更少。
 
 ### “局部变量”项目
 
 本章的项目可以从以下链接下载：
+
 https://bitbucket.org/softwarediagnostics/pflddr/src/master/x64/Chapter10/
 
 我们编译该文件并将可执行文件加载到 GDB 中：
@@ -2766,11 +2468,13 @@ Find the GDB manual and other documentation resources online at:
 <http://www.gnu.org/software/gdb/documentation/>.
 ```
 
-如需帮助，请输入 "help"。
-输入 "apropos word" 来搜索与 "word" 相关的命令...
-Reading symbols from ./LocalVariables... (no debugging symbols found)...done.
+如需帮助，请输入`help`。
 
-然后，我们在 `main` 函数处设置断点并运行程序，直到 GDB 触发中断：
+输入`apropos word`来搜索与`word`相关的命令……
+
+Reading symbols from `./LocalVariables`... (no debugging symbols found)...done.
+
+然后，我们在`main`函数处设置断点并运行程序，直到 GDB 触发中断：
 
 ```
 (gdb) break main
@@ -2782,7 +2486,7 @@ Starting program: /home/coredump/pflddr/x64/Chapter10/LocalVariables
 Breakpoint 1, 0x0000555555555129 in main ()
 ```
 
-接下来我们对 `main` 函数进行反汇编：
+接下来我们对`main`函数进行反汇编：
 
 ```
 (gdb) disass main
@@ -2806,6 +2510,8 @@ End of assembler dump.
 ```
 
 其源代码如下：
+
+
 
 ```cpp
 int main()
@@ -2841,11 +2547,11 @@ int main()
 0x0000555555555158 <+51>:    retq                  # 返回 0
 ```
 
-编译器没有生成 `mov %rbp,%rsp` 指令，因为 %RSP 没有发生变化：没有调用函数，也没有保存寄存器。
+编译器没有生成`mov %rbp,%rsp`指令，因为`%RSP`没有发生变化：没有调用函数，也没有保存寄存器。
 
-### 优化后的可执行文件反汇编
+## 优化后的可执行文件反汇编
 
-如果我们使用 `-O1` 选项编译 LocalVariables.cpp，我们会看到非常简单的代码，它直接返回 0：
+如果我们使用`-O1`选项编译`LocalVariables.cpp`，我们会看到非常简单的代码，它直接返回 0：
 
 ```
 (gdb) dissas main
@@ -2858,14 +2564,15 @@ Dump of assembler code for function main:
 End of assembler dump.
 ```
 
-我们在前一个版本中看到的那些代码去哪了？它们被编译器优化掉了，因为计算结果从未被使用。变量 **a** 和 **b** 是 `main` 函数的局部变量，当我们从函数返回时，在外部无法访问它们的值。
+我们在前一个版本中看到的那些代码去哪了？它们被编译器优化掉了，因为计算结果从未被使用。变量`a`和`b`是`main`函数的局部变量，当我们从函数返回时，在外部无法访问它们的值。
 
 ## 第 x64.11 章：函数参数
 
 ### “FunctionParameters”项目
 
 本章将讲解调用者函数如何通过寄存器传递参数，以及被调用者（被调用函数）如何访问这些参数。我们使用可以通过此链接下载的以下项目：
-https://bitbucket.org/softwarediagnostics/pflddr/src/master/x64/Chapter11/
+
+`https://bitbucket.org/softwarediagnostics/pflddr/src/master/x64/Chapter11/`
 
 以下是项目源代码：
 
@@ -2893,7 +2600,7 @@ int arithmetic (int a, int b)
 
 ### 栈结构
 
-回顾上一章，%RBP 寄存器被用于寻址栈内存位置。这在图 x64.10.1 中有所阐述。这里我们为以下函数提供一个典型的栈内存布局示例：
+回顾上一章，`%RBP`寄存器被用于寻址栈内存位置。这在图 x64.10.1 中有所阐述。这里我们为以下函数提供一个典型的栈内存布局示例：
 
 ```c
 void func(int Param1, int Param2)
@@ -2913,29 +2620,30 @@ void func(int Param1, int Param2)
 具有 2 个参数和 2 个局部变量的函数的典型栈帧内存布局如图 x64.11.1 所示。
 
 ![](img/47fe95ac2b05f9cf0a4cad33d8640c96_141_0.png)
+
 图 x64.11.1
 
 ### 函数序言与收尾
 
-现在，在尝试理解 FunctionParameters 项目的反汇编之前，我们先看一个简单的例子：一个函数参数和一个局部变量，以此来阐述标准的函数序言（prolog）和收尾（epilog）指令序列以及相应的栈内存变化。
+现在，在尝试理解`FunctionParameters`项目的反汇编之前，我们先看一个简单的例子：一个函数参数和一个局部变量，以此来阐述标准的函数序言（prolog）和收尾（epilog）指令序列以及相应的栈内存变化。
 
 函数序言如图 x64.11.2 所示，函数收尾如图 x64.11.3 所示。
 
 ![](img/47fe95ac2b05f9cf0a4cad33d8640c96_142_0.png)
+
 图 x64.11.2
 
-这里，函数参数通过 %RDI 寄存器传递。由于该寄存器稍后可能在计算或向其他函数传递参数时被使用，因此它被保存在栈上。通常，当参数是像指针或长整型（long）这样的四字（quadwords）时，函数的前 6 个参数从左到右通过 %RDI, %RSI, %RDX, %RCX, %R8, 和 %R9 寄存器传递；当参数是像整数（int）这样的双字（doublewords）时，则通过 %EDI, %ESI, %EDX, %ECX, %R8D, 和 %R9D 寄存器传递。额外的参数则使用 PUSH 指令通过栈位置传递。
+这里，函数参数通过`%RDI`寄存器传递。由于该寄存器稍后可能在计算或向其他函数传递参数时被使用，因此它被保存在栈上。通常，当参数是像指针或长整型（long）这样的四字（quadwords）时，函数的前 6 个参数从左到右通过`%RDI`, `%RSI`, `%RDX`, `%RCX`, `%R8`, 和`%R9`寄存器传递；当参数是像整数（int）这样的双字（doublewords）时，则通过`%EDI`, `%ESI`, `%EDX`, `%ECX`, `%R8D`, 和`%R9D`寄存器传递。额外的参数则使用`PUSH`指令通过栈位置传递。
 
 ![](img/47fe95ac2b05f9cf0a4cad33d8640c96_143_0.png)
+
 图 x64.11.3
 
-我们还发现，当局部变量的存储空间通过 SUB 指令分配时，默认不会被初始化，并且在收尾阶段也不会被清除。分配之前内存中存在的任何内容都将成为局部变量的值，即所谓的“垃圾值”。
-
-
+我们还发现，当局部变量的存储空间通过`SUB`指令分配时，默认不会被初始化，并且在收尾阶段也不会被清除。分配之前内存中存在的任何内容都将成为局部变量的值，即所谓的“垃圾值”。
 
 ### 项目反汇编代码（含注释）
 
-以下是 `main` 和 `arithmetic` 函数的带注释反汇编代码，为了视觉清晰，已移除内存地址。
+以下是`main`和`arithmetic`函数的带注释反汇编代码，为了视觉清晰，已移除内存地址。
 
 ```assembly
 main:
@@ -2979,7 +2687,7 @@ pop %rbp	                  # 恢复之前的栈帧
 retq		                    # 结果值在 eax 中
 ```
 
-我们可以在第一个算术计算地址处设置断点，并检查由 `%RBP` 寄存器指向的原始栈数据：
+我们可以在第一个算术计算地址处设置断点，并检查由`%RBP`寄存器指向的原始栈数据：
 
 ```bash
 coredump@DESKTOP-IS6V2L0:~/pflddr/x64/Chapter11$ gcc FunctionParameters.cpp Arithmetic.cpp -o FunctionParameters
@@ -3056,7 +2764,7 @@ rbp    0x7fffffffe500    0x7fffffffe500
 
 ### 参数不匹配问题
 
-为了说明理解栈内存布局的重要性，请考虑这个典型的二进制接口不匹配问题。函数 `main` 调用带有两个参数的 `func`：
+为了说明理解栈内存布局的重要性，请考虑这个典型的二进制接口不匹配问题。函数`main`调用带有两个参数的`func`：
 
 ```c
 // main.c
@@ -3068,7 +2776,7 @@ int main ()
 }
 ```
 
-调用者希望被调用函数 `func` 看到如下的栈内存布局，并在 `%RDI` 中传递 1，在 `%RSI` 中传递 2：
+调用者希望被调用函数`func`看到如下的栈内存布局，并在`%RDI`中传递 1，在`%RSI`中传递 2：
 
 ![](img/47fe95ac2b05f9cf0a4cad33d8640c96_147_0.png)
 
@@ -3083,27 +2791,29 @@ int func (int a, int b, int c)
 }
 ```
 
-`func` 代码看到的栈内存布局如下：
+`func`代码看到的栈内存布局如下：
 
 ![](img/47fe95ac2b05f9cf0a4cad33d8640c96_147_1.png)
 
-我们可以看到，原始栈上的参数 `c` 获取的值来自 `%RDX` 中的某个随机值，而该值从未被调用者设置。这显然是一个软件缺陷（bug）。
+我们可以看到，原始栈上的参数`c`获取的值来自`%RDX`中的某个随机值，而该值从未被调用者设置。这显然是一个软件缺陷（bug）。
 
 ## 第 x64.12 章：更多指令
 
 ### CPU 标志寄存器
 
-除了通用寄存器外，CPU 还包含一个 64 位的 `%RFLAGS` 寄存器，其中单个位会根据算术和其他操作而被设置（置 1）或清除（置 0）。单独的机器指令可以操作某些位的值，而这些值会影响代码的执行。
+除了通用寄存器外，CPU 还包含一个 64 位的`%RFLAGS`寄存器，其中单个位会根据算术和其他操作而被设置（置 1）或清除（置 0）。单独的机器指令可以操作某些位的值，而这些值会影响代码的执行。
 
-例如，DF 位（方向标志，Direction Flag）决定内存拷贝操作的方向，可以通过 `STD` 指令设置，通过 `CLD` 指令清除。它的默认值为 0，其位置如图 x64.12.1 所示，图中仅显示了 64 位 `%RFLAGS` 的前 32 位。
+例如，`DF`位（方向标志，Direction Flag）决定内存拷贝操作的方向，可以通过`STD`指令设置，通过`CLD`指令清除。它的默认值为 0，其位置如图 x64.12.1 所示，图中仅显示了 64 位`%RFLAGS`的前 32 位。
 
 ![](img/47fe95ac2b05f9cf0a4cad33d8640c96_149_0.png)
 
 ### 快速填充内存的方法
 
-这可以通过 `STOSQ` 指令来实现，该指令将一个四字（quadword）值从 `%RAX` 存储到由 `%RDI` 寄存器指定的内存地址中（"D" 代表 destination 目的地）。当 `%RAX` 的值传输到内存后，该指令会将 `%RDI` 增加 8；如果 DF 标志为 0，则 `%RDI` 现在指向内存中的下一个四字。如果 DF 标志为 1，则 `%RDI` 的值减少 8，此时 `%RDI` 指向内存中的前一个四字。还有一个等效的 `STOSL` 指令，它存储双字（doublewords）并将 `%RDI` 增加或减少 4。
 
-如果在任何指令前加上 `REP` 前缀，它会导致该指令重复执行，直到 `%RCX` 寄存器的值减至 0。例如，我们可以编写一段简单的代码，理论上应该将“所有内存”清零（实际上由于访问违规会触发陷阱）：
+
+这可以通过`STOSQ`指令来实现，该指令将一个四字（quadword）值从`%RAX`存储到由`%RDI`寄存器指定的内存地址中（"D" 代表 destination 目的地）。当`%RAX`的值传输到内存后，该指令会将`%RDI`增加 8；如果 DF 标志为 0，则`%RDI`现在指向内存中的下一个四字。如果 DF 标志为 1，则`%RDI`的值减少 8，此时`%RDI`指向内存中的前一个四字。还有一个等效的`STOSL`指令，它存储双字（doublewords）并将`%RDI`增加或减少 4。
+
+如果在任何指令前加上`REP`前缀，它会导致该指令重复执行，直到`%RCX`寄存器的值减至 0。例如，我们可以编写一段简单的代码，理论上应该将“所有内存”清零（实际上由于访问违规会触发陷阱）：
 
 ```assembly
 xor %rax, %rax            # 填充 0
@@ -3112,7 +2822,7 @@ mov $0xffffffff / 4, %rcx # 0x1ffffff 个四字
 rep stosq
 ```
 
-以下是 `REP STOSQ` 的伪代码：
+以下是`REP STOSQ`的伪代码：
 
 ```
 WHILE (RCX != 0)
@@ -3131,22 +2841,24 @@ WHILE (RCX != 0)
 图 x64.12.2 展示了一个擦除 32 字节（4x8）的简单示例。
 
 ![](img/47fe95ac2b05f9cf0a4cad33d8640c96_151_0.png)
+
 图 x64.12.2
 
 ### 测试是否为 0
 
-如果指令结果为 0，则 `%RFLAGS` 寄存器中的 ZF 位被设置为 1，否则被清除。该位受以下指令影响：
+如果指令结果为 0，则`%RFLAGS`寄存器中的 ZF 位被设置为 1，否则被清除。该位受以下指令影响：
 
-- 算术指令（例如 `ADD`, `SUB`, `MUL`）
-- 逻辑比较指令 (`TEST`)
-- “算术”比较指令 (`CMP`)
+- 算术指令（例如`ADD`，`SUB`，`MUL`）
+
+- 逻辑比较指令（`TEST`）
+
+- “算术”比较指令（`CMP`）
 
 ZF 位的位置如图 x64.12.3 所示。
 
 ![](img/47fe95ac2b05f9cf0a4cad33d8640c96_152_0.png)
+
 图 x64.12.3
-
-
 
 ### TEST - 逻辑比较
 
@@ -3162,7 +2874,7 @@ TEST reg/imm, reg/mem
 TEST %EDX, %EDX
 ```
 
-假设 %EDX 寄存器包含 4 ($100_{bin}$)
+假设`%EDX`寄存器包含 4 ($100_{bin}$)
 
 ```
 100_{bin} AND 100_{bin} = 100_{bin}  != 0 (ZF 被清除)
@@ -3172,7 +2884,7 @@ TEST %EDX, %EDX
 TEST $1, %EDX
 ```
 
-假设 %EDX 包含 0 ($0_{bin}$)
+假设`%EDX`包含 0 ($0_{bin}$)
 
 ```
 0_{bin} AND 1_{bin} = 0_{bin}  == 0 (ZF 被设置)
@@ -3190,7 +2902,7 @@ ELSE
 
 ### CMP – 比较两个操作数
 
-该指令将第一个操作数与第二个操作数进行比较，并根据计算结果（结果将被丢弃）设置标志位（包括 ZF）。比较是通过从第二个操作数中减去第一个操作数来执行的（类似于 SUB 指令：sub $4, %eax）。
+该指令将第一个操作数与第二个操作数进行比较，并根据计算结果（结果将被丢弃）设置标志位（包括 ZF）。比较是通过从第二个操作数中减去第一个操作数来执行的（类似于 SUB 指令：`sub $4, %eax`）。
 
 ```
 CMP reg/imm, reg/mem
@@ -3203,7 +2915,7 @@ CMP reg/mem/imm, reg
 CMP $0, %EDI
 ```
 
-假设 %EDI 包含 0
+假设`%EDI`包含 0
 
 0 - 0 == 0 (ZF 被设置)
 
@@ -3211,9 +2923,10 @@ CMP $0, %EDI
 CMP $0x16, %EAX
 ```
 
-假设 %EAX 包含 4hex
+假设`%EAX`包含 4hex
 
 4hex - 16hex = FFFFFFEEhex != 0 (ZF 被清除)
+
 4dec - 22dec = -18dec
 
 以下是 CMP 指令的伪代码（省略了与 ZF 位无关的细节）：
@@ -3254,7 +2967,7 @@ TEST 指令用于检查单个位是否被设置：
 TEST $2, %EAX  # 2 == 0010bin 或在 C 语言中：if (var & 0x2)
 ```
 
-当 %EAX 值为 2 时的示例：
+当`%EAX`值为 2 时的示例：
 
 ```
 TEST $2, %EAX  # 0010bin AND 0100bin = 0000bin (ZF 被设置)
@@ -3265,9 +2978,9 @@ TEST $6, %EAX  # 0010bin AND 0110bin = 0010bin (ZF 被清除)
 
 考虑这两段 C 或 C++ 代码片段：
 
-CPU 顺序获取指令，因此我们必须告诉 CPU，如果某些条件（不）满足（例如，如果 a != 0），我们希望跳过某些指令。
+CPU 顺序获取指令，因此我们必须告诉 CPU，如果某些条件（不）满足（例如，如果 `a != 0`），我们希望跳过某些指令。
 
-JNZ（如果不为零则跳转）和 JZ（如果为零则跳转）测试 ZF 标志，如果 JNZ 的 ZF 位被清除或 JZ 的 ZF 位被设置，则更改 %RIP。以下汇编语言代码等同于上述 C/C++ 代码：
+JNZ（如果不为零则跳转）和 JZ（如果为零则跳转）测试 ZF 标志，如果 JNZ 的 ZF 位被清除或 JZ 的 ZF 位被设置，则更改`%RIP`。以下汇编语言代码等同于上述 C/C++ 代码：
 
 ```asm
 CMP  $0, A          MOV  A, %EAX
@@ -3289,25 +3002,25 @@ label2:             label1: DEC  %EAX
 
 ### 函数返回值
 
-许多函数通过 %RAX 寄存器返回结果。例如：
+许多函数通过`%RAX`寄存器返回结果。例如：
 
 ```cpp
 long func();
 ```
 
-返回值在 %RAX 中。
+返回值在`%RAX`中。
 
 ```cpp
 bool func();
 ```
 
-返回值在 %EAX 中。
+返回值在`%EAX`中。
 
-虽然 bool 值在内存中占用一个字节，但编译器可能会使用 %EAX 而不是 %AL。
+虽然 bool 值在内存中占用一个字节，但编译器可能会使用`%EAX`而不是`%AL`。
 
 ### 使用字节寄存器
 
-假设我们在 %AL 寄存器中有一个字节值，并希望将此值加到 %ECX 寄存器中。然而，我们不知道完整 %EAX 寄存器的其他部分包含什么值。我们不能使用如下指令，例如：
+假设我们在`%AL`寄存器中有一个字节值，并希望将此值加到`%ECX`寄存器中。然而，我们不知道完整`%EAX`寄存器的其他部分包含什么值。我们不能使用如下指令，例如：
 
 ```
 MOV %AL, %EBX # 操作数大小冲突
@@ -3340,7 +3053,7 @@ MOVZX %AL, %EBX
 ADD %EBX, %ECX
 ```
 
-我们也可以复用 %EAX 寄存器：
+我们也可以复用`%EAX`寄存器：
 
 ```
 MOVZX %AL, %EAX
@@ -3470,8 +3183,6 @@ End of assembler dump.
 0x555555556014: "%d %d"
 ```
 
-
-
 ```
 (gdb) x/s 0x55555555601a
 0x55555555601a: "Result = %d"
@@ -3491,23 +3202,41 @@ Dump of assembler code for function _Z10arithmeticIPi:
 0x00005555555551ca <+23>:   jmp     0x5555555551f8 <_Z10arithmeticIPi+69>
 0x00005555555551cc <+25>:   mov     -0x10(%rbp),%rax
 0x00005555555551d0 <+29>:   mov     (%rax),%edx
-0x00005555555551d2 <+31>:   mov     -0x4(%rbp),%eax
-0x00005555555551d5 <+34>:   add     %eax,%edx
-0x00005555555551d7 <+36>:   mov     -0x10(%rbp),%rax
-0x00005555555551db <+40>:   mov     %edx,(%rax)
-0x00005555555551dd <+42>:   addl    $0x1,-0x4(%rbp)
-0x00005555555551e1 <+46>:   mov     -0x10(%rbp),%rax
-0x00005555555551e5 <+50>:   mov     (%rax),%eax
-0x00005555555551e7 <+52>:   imul    -0x4(%rbp),%eax
-0x00005555555551eb <+56>:   mov     %eax,%edx
-0x00005555555551ed <+58>:   mov     -0x10(%rbp),%rax
-0x00005555555551f1 <+62>:   mov     %edx,(%rax)
-0x00005555555551f3 <+64>:   mov     $0x1,%eax
-0x00005555555551f8 <+69>:   pop     %rbp
-0x00005555555551f9 <+70>:   retq
 ```
 
+
+
+`0x00005555555551d2 <+31>:   mov     -0x4(%rbp),%eax`
+
+`0x00005555555551d5 <+34>:   add     %eax,%edx`
+
+`0x00005555555551d7 <+36>:   mov     -0x10(%rbp),%rax`
+
+`0x00005555555551db <+40>:   mov     %edx,(%rax)`
+
+`0x00005555555551dd <+42>:   addl    $0x1,-0x4(%rbp)`
+
+`0x00005555555551e1 <+46>:   mov     -0x10(%rbp),%rax`
+
+`0x00005555555551e5 <+50>:   mov     (%rax),%eax`
+
+`0x00005555555551e7 <+52>:   imul    -0x4(%rbp),%eax`
+
+`0x00005555555551eb <+56>:   mov     %eax,%edx`
+
+`0x00005555555551ed <+58>:   mov     -0x10(%rbp),%rax`
+
+`0x00005555555551f1 <+62>:   mov     %edx,(%rax)`
+
+`0x00005555555551f3 <+64>:   mov     $0x1,%eax`
+
+`0x00005555555551f8 <+69>:   pop     %rbp`
+
+`0x00005555555551f9 <+70>:   retq`
+
+```
 End of assembler dump.
+```
 
 ### main:
 
@@ -3518,18 +3247,15 @@ sub $0x20,%rsp           # 为局部变量和 main 函数参数创建栈帧
 mov %edi,-0x14(%rbp)    # 保存第一个 main 参数
 mov %rsi,-0x20(%rbp)    # 保存第二个 main 参数
 lea 0xe9a(%rip),%rdi    # 0x5555555556004 printf 的字符串参数地址
-
 mov $0x0,%eax
 callq 0x55555555030 <printf@plt>   # printf("Enter a and b: ")
 lea -0x8(%rbp),%rdx     # 地址 b -> rdx (第 3 个参数)
 lea -0x4(%rbp),%rax     # 地址 a -> rax
 mov %rax,%rsi           # rax -> rsi (第 2 个参数)
 lea 0xe9d(%rip),%rdi    # 0x5555555556014 scanf 字符串参数地址 (第 1 个参数)
-
 mov $0x0,%eax
 callq 0x55555555040 <scanf@plt>     # scanf("%d %d", &a, &b)
                                     # 参数通过 %rdi, %rsi, %rdx 传递
-
 mov -0x4(%rbp),%eax     # (a) -> eax (a 的值)
 lea -0x8(%rbp),%rdx     # 地址 b -> rdx
 mov %rdx,%rsi           # rdx -> rsi (第 2 个参数)
@@ -3538,14 +3264,11 @@ callq 0x555555551b3 <_Z10arithmeticIPiP>   # arithmetic (a, b)
 test %al,%al
                         # 测试是否为零
                         # arithmetic 函数返回的 bool 结果
-
 je 0x5555555551ac <main+103>        # 如果 = 0
                                     # 0x00005555555551ac -> rip
-
 mov -0x8(%rbp),%eax     # (b) -> eax (b 的值)
 mov %eax,%esi           # eax -> esi (第 2 个参数)
 lea 0xe78(%rip),%rdi    # 0x555555555601a printf 的字符串参数地址
-
 mov $0x0,%eax
 callq 0x55555555030 <printf@plt>    # printf("Result = %d", b)
 0x00005555555551ac <+103>:
@@ -3555,7 +3278,6 @@ leavq                   # 恢复之前的栈指针和栈帧，
                         # mov %rbp, %rsp
                         # pop %rbp
                         # 从 main 返回
-
 retq
 ```
 
@@ -3572,7 +3294,7 @@ mov  $0x0,%eax       # 返回值 0
 jmp  0x5555555551f8 < _Z10arithmeticPiPi+69> # 跳转到 epilog
 ```
 
-0x00005555555551cc <+25>:
+`0x00005555555551cc <+25>:`
 
 ```assembly
 mov  -0x10(%rbp),%rax # (p2) -> rax
@@ -3581,15 +3303,12 @@ mov  (%rax),%edx     # (rax) -> edx (*p2)
                      # 包含了我们命名为 b 的
                      # 变量的地址
                      # 我们也将 p1 命名为 a
-
 mov  -0x4(%rbp),%eax # (a) -> eax
 add  %eax,%edx       # eax + edx -> edx
                      # (a) + (b) -> edx
-
 mov  -0x10(%rbp),%rax # 地址 b -> rax
 mov  %edx,(%rax)     # edx -> (b)
                      # (a) + (b) -> (b)
-
 addl $0x1,-0x4(%rbp) # 1 + (a) -> (a)
 mov  -0x10(%rbp),%rax # 地址 b -> rax
 mov  (%rax),%eax     # (b) -> eax
@@ -3598,11 +3317,10 @@ mov  %eax,%edx       # eax -> edx
 mov  -0x10(%rbp),%rax # 地址 b -> rax
 mov  %edx,(%rax)     # edx -> (b)
                      # (a) * (b) -> (b)
-
 mov  $0x1,%eax       # 1 -> eax (返回值)
 ```
 
-0x00005555555551f8 <+69>:
+`0x00005555555551f8 <+69>:`
 
 ```assembly
 pop %rbp    # 恢复之前的栈帧
@@ -3666,7 +3384,6 @@ func+0x20
 
 ```assembly
 (gdb) dissas printf
-
 Dump of assembler code for function __printf:
  0x00007ffff77e60560 <+0>:  sub $0xd8,%rsp
  0x00007ffff77e60567 <+7>:  mov %rsi,0x28(%rsp)
@@ -3704,7 +3421,6 @@ Dump of assembler code for function __printf:
  0x00007ffff77e60618 <+182>: add $0xd8,%rsp
  0x00007ffff77e6061d <+189>: retq
  0x00007ffff77e6061e <+190>: callq 0x7ffff77127b0 <__stack_chk_fail>
-
 End of assembler dump.
 ```
 
@@ -3736,8 +3452,6 @@ mov %rip, %rdi
 add 0xea9, %rdx
 ```
 
-
-
 ### 参数传递
 
 **从左到右的前 6 个函数参数**
@@ -3746,13 +3460,12 @@ add 0xea9, %rdx
 %RDI, %RSI, %RDX, %RCX, %R8, and %R9
 ```
 
-> 注意：虽然我们还没有看到超过 6 个函数参数的示例，但它们是通过栈传递的，例如通过 PUSH 指令。
+> 注意：虽然我们还没有看到超过 6 个函数参数的示例，但它们是通过栈传递的，例如通过 `PUSH` 指令。
 
 **静态/全局变量地址（或字符串常量）**
 
 ```assembly
 mov $0x555555556004, reg
-
 lea 0xe9d(%rip), reg
 ```
 
@@ -3761,7 +3474,6 @@ lea 0xe9d(%rip), reg
 ```assembly
 mov -XXX(%rbp), reg ; 局部变量值
 call func
-
 lea -XXX(%rbp), reg ; 局部变量地址
 call func
 ```
@@ -3825,9 +3537,17 @@ Dump of assembler code for function _Z10arithmeticiPi:
 0x00005555555551b4 <+9>:    add     $0x1,%edi
 0x00005555555551b7 <+12>:   imul    %eax,%edi
 0x00005555555551ba <+15>:   mov     %edi,(%rsi)
+```
+
+
+
+```
 0x00005555555551bc <+17>:   mov     $0x1,%eax
+
 0x00005555555551c0 <+19>:   retq
+
 0x00005555555551c2 <+22>:    mov     $0x0,%eax
+
 0x00005555555551c7 <+28>:   retq
 
 End of assembler dump.

@@ -1,3 +1,4 @@
+
 # 进程基础
 
 ## 第一章 进程基础
@@ -45,7 +46,7 @@ Hello World
 
 ## Go 实现
 
-Go 实现的程序源码可参见 hello_world.go。
+Go 实现的程序源码可参见`hello_world.go`。
 
 ```
 package main
@@ -74,11 +75,11 @@ Hello World 进程运行时究竟发生了什么，接下来我们将从各个�
 
 首先我们来学习 PID 这个概念，PID 全称 Process ID，是标识和区分进程的 ID，它是一个全局唯一的正整数。
 
-原来 Hello World 进程运行时也有一个 PID，只是它运行结束后 PID 也释放了，我们可以通过 print_pid.go 程序显示当前进程的 PID。
+原来 Hello World 进程运行时也有一个 PID，只是它运行结束后 PID 也释放了，我们可以通过`print_pid.go`程序显示当前进程的 PID。
 
 ## 示例程序
 
-程序 print_pid.go 的源码如下，通过`Getpid()`函数可以获得当前进程的 PID。
+程序`print_pid.go`的源码如下，通过`Getpid()`函数可以获得当前进程的 PID。
 
 ```
 package main
@@ -118,7 +119,7 @@ root@87096bf68cb2:/go/src# go run print_pid.go
 
 ## 示例程序
 
-要想获得进程的 PPID，可以通过以下`Getppid()`这个函数来获得，print_ppid.go 程序的代码如下。
+要想获得进程的 PPID，可以通过以下`Getppid()`这个函数来获得，`print_ppid.go`程序的代码如下。
 
 ```
 package main
@@ -253,7 +254,7 @@ root@87096bf68cb2:/go/src# ./process_name
 
 进程参数一般可分为两类，一是 Argument，也就是作为进程运行的实体参数。例如`cp config.yml config.yml.bak`的这两个参数。
 
-设计 Go 程序时可以轻易地获得这些参数，argument.go 代码如下，代码来自[`gobyexample.com/command-line-arguments`](https://gobyexample.com/command-line-arguments)。
+设计 Go 程序时可以轻易地获得这些参数，`argument.go`代码如下，代码来自[`gobyexample.com/command-line-arguments`](https://gobyexample.com/command-line-arguments)。
 
 ```
 package main
@@ -286,7 +287,7 @@ c
 
 ## 获得进程 Flag
 
-使用 Flag 可以更容易得将命令行参数转化成我们需要的数据类型，其中 flag.go 代码如下，代码来自[`gobyexample.com/command-line-flags`](https://gobyexample.com/command-line-flags)。
+使用 Flag 可以更容易得将命令行参数转化成我们需要的数据类型，其中`flag.go`代码如下，代码来自[`gobyexample.com/command-line-flags`](https://gobyexample.com/command-line-flags)。
 
 ```
 package main
@@ -392,6 +393,8 @@ string_from_stdin
 
 我把演讲的 PPT 截图贴出来方便大家理解。
 
+
+
 ![](img/concurrent1.png) ![](img/concurrent2.png) ![](img/concurrent3.png) ![](img/concurrent4.png) ![](img/concurrent5.png) ![](img/concurrent6.png) ![](img/concurrent7.png) ![](img/concurrent8.png) ![](img/concurrent9.png) ![](img/concurrent10.png) ![](img/concurrent11.png) ![](img/concurrent12.png) ![](img/concurrent13.png)
 
 ## 总结
@@ -406,17 +409,17 @@ string_from_stdin
 
 下面以支持 100K 并发量的 Nginx 服务器为例。
 
-## 举个例子: Nginx
+## 举个例子：Nginx
 
 Nginx 是一个高性能、高并发的 Web 服务器，也就是说它可以同时处理超过 10 万个 HTTP 请求，而它建议的启动的进程数不要超过 CPU 个数，为什么呢？
 
-我们首先要知道 Nginx 是 Master-worker 模型，Master 进程只负责管理 Worker 进程，而 Worker 进程是负责处理真实的请求。每个 Worker 进程能够处理的请求数跟内存有关，因为在 Linux 上 Nginx 使用了 epoll 这种多路复用的 IO 接口，所以不需要多线程做并行也能实现并发。
+我们首先要知道 Nginx 是 Master-worker 模型，Master 进程只负责管理 Worker 进程，而 Worker 进程是负责处理真实的请求。每个 Worker 进程能够处理的请求数跟内存有关，因为在 Linux 上 Nginx 使用了 `epoll` 这种多路复用的 IO 接口，所以不需要多线程做并行也能实现并发。
 
 而多进程有一个坏处就是带来了 CPU 上下文切换时间，所以一味提高进程个数反而使系统系能下降。当然如果当前进程小于 CPU 个数，就没有充分利用多核的资源，所以 Nginx 建议 Worker 数应该等于 CPU 个数。
 
 ## 特殊情况
 
-我们想想进程数应该等于 CPU 数，但是如果进程有阻塞呢？这是是应该提高进程数增加并行数的。
+我们想想进程数应该等于 CPU 数，但是如果进程有阻塞呢？这时是应该提高进程数增加并行数的。
 
 在 Nginx 的例子中，如果 Nginx 主要负责静态内容的下载，而服务器内存比较小，大部分文件访问都需要读磁盘，这时候进程很容易阻塞，所以建议提高下 Worker 数目。
 
@@ -428,10 +431,10 @@ Nginx 是一个高性能、高并发的 Web 服务器，也就是说它可以同
 
 ```
 worker_processes 4;
-worker_cpu_affinity 1000 0100 0010 0001; 
+worker_cpu_affinity 1000 0100 0010 0001;
 ```
 
-这是通过系统调用 sched_setaffinity()实现了，感兴趣大家可以自行学习这方面的知识。
+这是通过系统调用 `sched_setaffinity()` 实现的，感兴趣大家可以自行学习这方面的知识。
 
 通过这个例子大家对进程的并发与并行应该有更深入的理解，接下来了解下进程状态的概念。
 
@@ -441,7 +444,7 @@ worker_cpu_affinity 1000 0100 0010 0001;
 
 根据进程的定义，我们知道进程是代码运行的实体，而进程有可能是正在运行的，也可能是已经停止的，这就是进程的状态。
 
-网上有人总结进程一共 5 种状态，也有总结是 8 种，究竟应该怎么算呢，最好的方法还是看 Linux 源码。进程状态的定义在[fs/proc/array.c](https://github.com/torvalds/linux/blob/b6da0076bab5a12afb19312ffee41c95490af2a0/fs/proc/array.c)文件中。
+网上有人总结进程一共 5 种状态，也有总结是 8 种，究竟应该怎么算呢，最好的方法还是看 Linux 源码。进程状态的定义在 `fs/proc/array.c` 文件中。
 
 ```
 /*
@@ -458,10 +461,10 @@ static const char * const task_state_array[] = {
   "t (tracing stop)",    /*   8 */
   "X (dead)",        /*  16 */
   "Z (zombie)",        /*  32 */
-}; 
+};
 ```
 
-这真的是 Linux 的源码，可以看出进程一共 7 种状态，含义也比较清晰，注意其中 D(disk sleep)称为不可中断睡眠状态(uninterruptible sleep)。
+这真的是 Linux 的源码，可以看出进程一共 7 种状态，含义也比较清晰，注意其中 D(disk sleep) 称为不可中断睡眠状态(uninterruptible sleep)。
 
 知道进程状态本身没什么
 
@@ -479,21 +482,28 @@ struct task_struct {
   void *stack;
   atomic_t usage;
   unsigned int flags;    /* per process flags, defined below */
-  unsigned int ptrace; 
+  unsigned int ptrace;
 ```
 
 ## 查看状态
 
-通过`ps aux`可以看到进程的状态。
+通过 `ps aux` 可以看到进程的状态。
 
-O：进程正在处理器运行,这个状态从来没有见过.
+O：进程正在处理器运行，这个状态从来没有见过。
+
 S：休眠状态（sleeping）
+
 R：等待运行（runable）R Running or runnable (on run queue) 进程处于运行或就绪状态
+
 I：空闲状态（idle）
+
 Z：僵尸状态（zombie）
+
 T：跟踪状态（Traced）
+
 B：进程正在等待更多的内存页
-D: 不可中断的深度睡眠，一般由 IO 引起，同步 IO 在做读或写操作时，cpu 不能做其它事情，只能等待，这时进程处于这种状态，如果程序采用异步 IO，这种状态应该就很少见到了
+
+D：不可中断的深度睡眠，一般由 IO 引起，同步 IO 在做读或写操作时，cpu 不能做其它事情，只能等待，这时进程处于这种状态，如果程序采用异步 IO，这种状态应该就很少见到了
 
 其中就绪状态表示进程已经分配到除 CPU 以外的资源，等 CPU 调度它时就可以马上执行了。运行状态就是正在运行了，获得包括 CPU 在内的所有资源。等待状态表示因等待某个事件而没有被执行，这时候不耗 CPU 时间，而这个时间有可能是等待 IO、申请不到足够的缓冲区或者在等待信号。
 
@@ -520,7 +530,7 @@ package main
 
 func main() {
   panic("Call panic()")
-} 
+}
 ```
 
 ## 运行结果
@@ -546,18 +556,18 @@ bgsweep()
 /usr/src/go/src/pkg/runtime/mgc0.c:1976
 runtime.goexit()
 /usr/src/go/src/pkg/runtime/proc.c:1445
-exit status 2 
+exit status 2
 ```
 
-我们可以看到最后一行输出了`exit status 2`，证明进程的退出码是 2，也就是异常退出。相比之下，运行 Hello World 程序并没有输出退出码，也就是进程正常结束了。
+我们可以看到最后一行输出了 `exit status 2`，证明进程的退出码是 2，也就是异常退出。相比之下，运行 Hello World 程序并没有输出退出码，也就是进程正常结束了。
 
 ## 使用退出码
 
 不管是正常退出还是异常退出，进程都结束了这个退出码有意义吗？
 
-当然有意义，我们在写 Bash 脚本时，可以根据前一个命令的退出码选择是否执行下一个命令。例如安装 Run 程序的命令`wget https://github.com/runscripts/run-release/blob/master/0.3.6/linux_amd64/run && sudo run --init`，只有下载脚本成功才会执行后面的安装命令。
+当然有意义，我们在写 Bash 脚本时，可以根据前一个命令的退出码选择是否执行下一个命令。例如安装 Run 程序的命令 `wget https://github.com/runscripts/run-release/blob/master/0.3.6/linux_amd64/run && sudo run --init`，只有下载脚本成功才会执行后面的安装命令。
 
-[Travis CI](https://travis-ci.org/)是为开源项目提供持续集成的网站，因为测试脚本是由开发者写的，Travis 只能通过测试脚本的返回值来判断这次测试是否正常通过。
+Travis CI 是为开源项目提供持续集成的网站，因为测试脚本是由开发者写的，Travis 只能通过测试脚本的返回值来判断这次测试是否正常通过。
 
 Docker 使用 Dockerfile 来构建镜像，这是类似 Bash 的领域定义语言(DSL)，每一行执行一个命令，如果命令的进程退出码不为 0，构建镜像的流程就会中止，证明 Dockerfile 有异常，方便用户排查问题。
 
@@ -574,10 +584,10 @@ root@87096bf68cb2:/go/src# ls /proc/1/
 attr        cmdline          cwd      fdinfo   loginuid   mounts      numa_maps      pagemap      sessionid  status   wchan
 auxv        comm             environ  gid_map  maps       mountstats  oom_adj        personality  smaps      syscall
 cgroup      coredump_filter  exe      io       mem        net         oom_score      projid_map   stat       task
-clear_refs  cpuset           fd       limits   mountinfo  ns          oom_score_adj  root         statm      uid_map 
+clear_refs  cpuset           fd       limits   mountinfo  ns          oom_score_adj  root         statm      uid_map
 ```
 
-我们可以看一下它的运行状态，通过`cat /proc/1/status`即可。
+我们可以看一下它的运行状态，通过 `cat /proc/1/status` 即可。
 
 ```
 root@87096bf68cb2:/go/src# cat /proc/1/status
@@ -621,10 +631,10 @@ Cpus_allowed_list:      0
 Mems_allowed:   00000000,00000001
 Mems_allowed_list:      0
 voluntary_ctxt_switches:        684
-nonvoluntary_ctxt_switches:     597 
+nonvoluntary_ctxt_switches:     597
 ```
 
-参考 Linux 手册可以看到更多信息，我们这不再深究，实际上`ps`命令获得的数据也是在这个文件系统获得的。
+参考 Linux 手册可以看到更多信息，我们这不再深究，实际上 `ps` 命令获得的数据也是在这个文件系统获得的。
 
 我们已经了解了这么多进程属性，是时候开始学习“传说中”的死锁问题了。
 
@@ -644,7 +654,7 @@ package main
 func main() {
   ch := make(chan int)
   <-ch
-} 
+}
 ```
 
 ## 运行结果
@@ -656,7 +666,7 @@ fatal error: all goroutines are asleep - deadlock!
 goroutine 16 [chan receive]:
 main.main()
 /go/src/deadlock.go:5 +0x4f
-exit status 2 
+exit status 2
 ```
 
 这里 Go 虚拟机已经替我们检测出死锁的情况，因为所有 Goroutine 都阻塞住没有运行，关于 Goroutine 的概念有机会详细介绍一下。
@@ -670,7 +680,7 @@ exit status 2
 相对于死锁，活锁(Livelock)是什么概念呢？有意思的是，百度百科把这个解释错了。
 
 ```
-如果事务 T1 封锁了数据 R,事务 T2 又请求封锁 R，于是 T2 等待。T3 也请求封锁 R，当 T1 释放了 R 上的封锁后，系统首先批准了 T3 的请求，T2 仍然等待。然后 T4 又请求封锁 R，当 T3 释放了 R 上的封锁之后，系统又批准了 T4 的请求......T2 可能永远等待。 
+如果事务 T1 封锁了数据 R,事务 T2 又请求封锁 R，于是 T2 等待。T3 也请求封锁 R，当 T1 释放了 R 上的封锁后，系统首先批准了 T3 的请求，T2 仍然等待。然后 T4 又请求封锁 R，当 T3 释放了 R 上的封锁之后，系统又批准了 T4 的请求......T2 可能永远等待。
 ```
 
 这显然是饿死(Starvation)的定义，进入活锁的进程是没有阻塞的，会继续使用 CPU，但外界看到整个进程都没有前进。
@@ -699,7 +709,7 @@ POSIX(Portable Operation System Interface)听起来好高端，就是一种操�
 
 POSIX 是一些 IEEE 标准，包括 1003.0、1003.1、1003.1b 和 2003 等，实际上连 Linux 也没有完全兼容这些定义，不过只用 Linux 来学习 POSIX 足够了。
 
-鉴于绝大多数程序员都没看过 IEEE 文档，我们就翻一下[IEEE 1003.1-2001](http://wenku.baidu.com/link?url=8dfQAy-mpeNdkDzX1LWCCEJia5x4_pS-Br6alnnrNweN8HxyXbHewGnxrPgFhQ3TzaAodlfHay9KiAuOmKbWvfSUr-36XyFIDgokfCldgR7)吧。
+鉴于绝大多数程序员都没看过 IEEE 文档，我们就翻一下 IEEE 1003.1-2001 吧。
 
 ![](img/ieee_1003.1.png)
 
@@ -707,11 +717,13 @@ POSIX 是一些 IEEE 标准，包括 1003.0、1003.1、1003.1b 和 2003 等，�
 
 ## POSIX 进程
 
-我们运行 Hello World 程序时，操作系统通过 POSIX 定义的`fork`和`exec`接口创建起一个 POSIX 进程，这个进程就可以使用通用的 IPC、信号等机制。
+我们运行 Hello World 程序时，操作系统通过 POSIX 定义的 `fork` 和 `exec` 接口创建起一个 POSIX 进程，这个进程就可以使用通用的 IPC、信号等机制。
 
 ## POSIX 线程
 
-POSIX 也定义了线程的标准，包括创建和控制线程的 API，在 Pthreads 库中实现，有关线程的知识有机会再深入学习。
+
+
+POSIX 也定义了线程的标准，包括创建和控制线程的 API，在 `Pthreads` 库中实现，有关线程的知识有机会再深入学习。
 
 # Nohup
 
@@ -719,15 +731,15 @@ POSIX 也定义了线程的标准，包括创建和控制线程的 API，在 Pth
 
 每个开发者都会躺过这个坑，在命令行跑一个后台程序，关闭终端后发现进程也退出了，网上搜一下发现要用`nohup`，究竟什么原因呢？
 
-原来普通进程运行时默认会绑定 TTY(虚拟终端)，关闭终端后系统会给上面所有进程发送 TERM 信号，这时普通进程也就退出了。当然还有些进程不会退出，这就是后面将会提到的守护进程。
+原来普通进程运行时默认会绑定 TTY（虚拟终端），关闭终端后系统会给上面所有进程发送 TERM 信号，这时普通进程也就退出了。当然还有些进程不会退出，这就是后面将会提到的守护进程。
 
 `Nohup`的原理也很简单，终端关闭后会给此终端下的每一个进程发送 SIGHUP 信号，而使用`nohup`运行的进程则会忽略这个信号，因此终端关闭后进程也不会退出。
 
 ## 举个例子
 
-我们用 Go 实现最简单的 Web 服务器，代码 web_server.go 如下。
+我们用 Go 实现最简单的 Web 服务器，代码`web_server.go`如下。
 
-```
+```go
 package main
 
 import (
@@ -747,7 +759,7 @@ func main() {
 
 然后在终端上运行，并测试一下。
 
-```
+```bash
 ➜ go build web_server.go
 ➜ ./web_server &
 [1] 25967
@@ -765,7 +777,7 @@ Saving to: 'index.html.4'
 
 如果关闭终端，`curl`命令就连不上我们的 Web 服务器了。如果使用`nohup`运行呢？
 
-```
+```bash
 ➜ go build web_server.go
 ➜ nohup ./web_server &
 [1] 25968

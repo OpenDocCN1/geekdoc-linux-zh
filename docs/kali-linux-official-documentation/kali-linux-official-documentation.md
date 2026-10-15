@@ -1,16 +1,13 @@
+
 # Kali Linux 官方文档
 
+## 00. Kali Linux 简介
 
-
-
-
-# 00. Kali Linux 简介
-
-## 什么是 Kali Linux？
+### 什么是 Kali Linux？
 
 Kali Linux 是一款高级的渗透测试和安全审计 Linux 发行版。
 
-## Kali Linux 特性
+### Kali Linux 特性
 
 Kali 是 BackTrack Linux 的完全重构，完全遵循 Debian 开发标准。我们已经引入了全新的基础设施，对所有工具经过了审查和封装，并使用 Git 作为我们的版本控制系统（VCS）。
 
@@ -18,38 +15,35 @@ Kali 是 BackTrack Linux 的完全重构，完全遵循 Debian 开发标准。�
 - **免费且将永远免费：** Kali Linux 与其前身一样是完全免费的，并且将永远免费。你永远不需要为 Kali Linux 付费。
 - **开源 Git 树：** 我们是开源的坚实支持者，我们的开发树对所有人可见，对于那些想要调整和重新构建包的用户，所有源代码均可可用。
 - **符合 FHS 标准：** Kali 的开发遵循文件系统层次结构标准（FHS），允许 Linux 用户轻松地定位二进制文件、支持文件、库文件等。
-- **广泛的无线设备支持：** 我们构建 Kali Linux是为了支持尽可能多的无线设备，使其能够在各种硬件上正常运行，并与许多 USB 及其他无线设备兼容。
+- **广泛的无线设备支持：** 我们构建 Kali Linux 是为了支持尽可能多的无线设备，使其能够在各种硬件上正常运行，并与许多 USB 及其他无线设备兼容。
 - **针对注入进行定制的自定义内核：** 作为一个渗透测试人员，开发团队经常需要进行无线评估，因此我们的内核包含了最新的注入功能。
 - **安全的开发环境：** Kali 团队由少数受信赖的个人组成，他们仅在运行多种安全协议时才提交包并与仓库进行交互。
 - **GPG 签名包和仓库：** 所有的 Kali 软件包在构建和提交时都会由个人开发者进行签名，随后存储库也会对这些包进行签名。
 - **多语言支持：** 尽管渗透测试工具是用英文编写的，但我们确保了 Kali 具有真正的多语言支持，允许更多用户使用其母语言进行操作，并找到工作所需的工具。
 - **完全可定制：** 我们完全理解并非所有人都会同意我们的决定，因此我们让那些更有冒险精神的用户能够尽可能地根据自己的喜好定制 Kali Linux，甚至可以到内核。
 - **支持 ARMEL 和 ARMF：** 随着基于 ARM 的系统变得日益普及且廉价，我们知道 Kali 的 ARM 支持需要做到我们能管理范围内尽可能强强大，导致了针对 ARMEL 和 ARMF 系统的可用安装版本。Kali Linux 集成了 ARM 仓库，用于 ARM 的主发行版工具将与发行版的其他部分同步更新。Kali 目前适用于以下 ARM 设备：
-
-- rk3306 mk/ss808
-- 树莓派 (Raspberry Pi)
-- ODROID U2/X2
-- Samsung Chromebook
-- EfikaMX
-- Beaglebone Black
-- CuBox
-- Galaxy Note 10.1
+  - rk3306 mk/ss808
+  - 树莓派 (Raspberry Pi)
+  - ODROID U2/X2
+  - Samsung Chromebook
+  - EfikaMX
+  - Beaglebone Black
+  - CuBox
+  - Galaxy Note 10.1
 
 Kali 专门为渗透测试定制，因此本站上的所有文档均假设用户已具备 Linux 操作系统的知识。
 
-## Kali LINUX
+### 我应该使用 Kali Linux 吗？
 
-## 我应该使用 Kali Linux 吗？
-
-## Kali Linux 与 Debian 之间的差异
+### Kali Linux 与 Debian 之间的差异
 
 Kali Linux 面向渗透测试和安全审计。因此，Kali Linux 实施了若干核心更改以反映这些需求：
 
 - 1. **设计上即为单用户、root 权限：** 出于安全审计的性质，Kali Linux 设计用于用于“单用户、root 用户”场景。
-- 2. **默认禁用网络服务：** Kali Linux 包含 sysvinit 钩子，默认情况下禁用网络服务。这些钩子允许我们在 Kali Linux 上安装各种服务，确保无论安装了哪些包，我们的发行版默认情况下都是安全的。蓝牙等额外服务也被默认列入黑名单。
+- 2. **默认禁用网络服务：** Kali Linux 包含 `sysvinit` 钩子，默认情况下禁用网络服务。这些钩子允许我们在 Kali Linux 上安装各种服务，确保无论安装了哪些包，我们的发行版默认情况下都是安全的。蓝牙等额外服务也被默认列入黑名单。
 - 3. **自定义 Linux 内核：** Kali Linux 使用上游内核，针对无线注入进行了补丁。
 
-## Kali Linux 适合你吗？
+### Kali Linux 适合你吗？
 
 作为发行版开发者，人们可能会期望我们推荐所有人使用 Kali Linux。然而事实是，Kali 是一份专门为专业渗透测试和安全审计设计的 Linux 发行版，因此，对于不熟悉 Kali 的人来说，它**不是**推荐的发行版。
 
@@ -57,37 +51,35 @@ Kali Linux 面向渗透测试和安全审计。因此，Kali Linux 实施了若�
 
 > 如果你正在寻找一个学习 Linux 基础的发行版并需要一个良好的起点，Kali Linux 并不是你的理想选择。你可能希望从 Ubuntu 或 Debian 开始。
 
-## Kali LINUX
+### Kali Linux 默认密码
 
-## Kali Linux 默认密码
+#### Kali Linux 默认 root 密码是 toor
 
-## Kali Linux 默认 root 密码是 toor
+#### 默认 root 密码
 
-## 默认 root 密码
+在安装过程中，Kali Linux 允许用户为 `root` 用户配置密码。然而，如果你决定启动现场镜像（live image），则 i386、amd64、VMWare 和 ARM 镜像均配置了默认 root 密码 - "`toor`" 不带引号）。
 
-在安装过程中，Kali Linux 允许用户为 *root* 用户配置密码。然而，如果你决定启动现场镜像（live image），则 i386、amd64、VMWare 和 ARM 镜像均配置了默认 root 密码 - "toor"不带引号）。
+## 01. 下载 Kali Linux
 
-# 01. 下载 Kali Linux
-
-## 下载官方 Kali 镜像
+### 下载官方 Kali 镜像
 
 > 警告！务必确保你从官方渠道下载 Kali Linux，并务必根据我们的官方值核对 SHA1 校验和。恶意实体可以很容易地修改 Kali 安装包以包含恶意代码并在非官方渠道托管。
 
-## 官方 Kali Linux 镜像
+### 官方 Kali Linux 镜像
 
-### ISO 文件
+#### ISO 文件
 
 Kali Linux 提供 32 位和 64 位格式的可启动 ISO 镜像。
 
 - 下载 Kali ISO
 
-### VMware 镜像
+#### VMware 镜像
 
 Kali 提供预先安装了 VMware Tools 的预制 VMware 虚拟机镜像。VMware 镜像以 32 位 PAE 格式提供。
 
 - 下载 Kali Vware 镜像
 
-### ARM 镜像
+#### ARM 镜像
 
 由于 ARM 架构的特性，无法拥有一个适用于所有设备的镜像。我们提供了适用于以下设备的 Kali Linux 镜像：
 
@@ -96,20 +88,20 @@ Kali 提供预先安装了 VMware Tools 的预制 VMware 虚拟机镜像。VMwar
 - ODROID U2/X2
 - Samsung Chromebook
 
-## 验证下载镜像的 SHA1 校验
+### 验证下载镜像的 SHA1 校验
 
-当你下载镜像时，请确保下载与之对应的 SHA1SUMS 和 SHA1SUMS.gpg 文件（即服务器上同一目录下）。
+当你下载镜像时，请确保下载与之对应的 `SHA1SUMS` 和 `SHA1SUMS.gpg` 文件（即服务器上同一目录下）。
 
-## 确保 SHA1UMS 的来源
+### 确保 SHA1UMS 的来源
 
-在验证镜像校验和之前，你必须确保 SHA1UMS 文件是由 Kali 生成的。这就是为什么该文件由 Kali 官方密钥通过 SHA1SUMS.gpg 签名。可以通过两种方式下载 Kali 官方密钥：
+在验证镜像校验和之前，你必须确保 `SHA1UMS` 文件是由 Kali 生成的。这就是为什么该文件由 Kali 官方密钥通过 `SHA1SUMS.gpg` 签名。可以通过两种方式下载 Kali 官方密钥：
 
 ```bash
 $ wget -q - http://archive.kali.org/archive-key.asc | gpg --import
 $ gpg --keyserver subkeys.pgp --recv-key 44C6513A8E4FB3D037F75ED4FF07D8BF6
 ```
 
-一旦拥有 SHA1SUMS 和 SHA1SUMS.gpg，你可以验证签名：
+一旦拥有 `SHA1SUMS` 和 `SHA1SUMS.gpg`，你可以验证签名：
 
 ```bash
 $ gpg --verify SHA1SUMS.gpg SHA1SUMS
@@ -117,9 +109,9 @@ gpg: Signature made Mar 7 21:26:40 2013 using RSA key 7D8DBF6
 gpg: Good signature from "Kali Linux Repository <devel@kali.org>"
 ```
 
-如果你没有得到“Good signature”信息或密钥 ID 不匹配，你应该停止操作并检查是否从合法的 Kali 镜像下载的。如果 SHA1UMS 文件是由 Kali 提供的，你可以验证下载的镜像具有正确的校验和。你可以生成校验和并与 SHA1UMS 中的内容进行手动对比，或使用验证这些校验和的工具。
+如果你没有得到“Good signature”信息或密钥 ID 不匹配，你应该停止操作并检查是否从合法的 Kali 镜像下载的。如果 `SHA1UMS` 文件是由 Kali 提供的，你可以验证下载的镜像具有正确的校验和。你可以生成校验和并与 `SHA1SUMS` 中的内容进行手动对比，或使用验证这些校验和的工具。
 
-## 在 Linux 上验证 SHA1 校验
+### 在 Linux 上验证 SHA1 校验
 
 通过手动对比：
 
@@ -130,25 +122,24 @@ $ grep kali-linux-1.0-i386.iso SHA1SUMS
 796e32f51d1bf51e838499c32c71a1c952cc052 kali-linux-1.0-i386.iso
 ```
 
+### 在 OSX 上验证 SHA1 校验和
 
+通过手动对比：
 
-
-
-# KALI LINUX
+## KALI LINUX
 
 官方 Linux 文档
+
 本 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
 
-通过使用 shalsum -c：
+通过使用 `shalsum -c`：
 
 ```
 grep kali-linux-1.0-i386.iso SHA1SUMS | shalsum
 kali-linux-1.0-i386.iso: OK
 ```
 
-## 在 OSX 上验证 SHA1 校验和
 
-通过手动对比：
 
 ```
 $ shasum kali-linux-1.0-i386.iso
@@ -217,9 +208,9 @@ lb config
 
 通过 config 目录，你的 ISO 支持重大的自定义选项，这些选项在 Debian live build 3.x 页面上有详细的文档说明。然而，对于不躁的用户，以下配置文件特别值得关注：
 
-**config/package-lists/kali.chroot** - 包含要在 Kali ISO 中安装的包列表。你可以选择安装特定的包，同时丢弃其他包。这里也是你可以更改 Kali ISO 桌面环境（KDE, Gnome, XFCE, LXDE, 等）的地方。
+`config/package-lists/kali.chroot` - 包含要在 Kali ISO 中安装的包列表。你可以选择安装特定的包，同时丢弃其他包。这里也是你可以更改 Kali ISO 桌面环境（KDE, Gnome, XFCE, LXDE, 等）的地方。
 
-hooks/ - 该目录允许我们在 Kali ISO live 构建的各个阶段挂钩脚本。有关挂钩的更多信息，请参阅 live build 手册。例如，Kali 通过这种方式添加其取证菜单：
+`hooks/` - 该目录允许我们在 Kali ISO live 构建的各个阶段挂钩脚本。有关挂钩的更多信息，请参阅 live build 手册。例如，Kali 通过这种方式添加其取证菜单：
 
 ```
 $ cat config/hooks/forensic-menu.binary
@@ -237,7 +228,7 @@ END
 
 ## 构建 ISO
 
-在生成 ISO 之前，你可以指定所需的架构，选择 amd64 或 i386。请注意，“lb build”需要 root 权限。如果你不指定架构，live build 将生成一个与主机架构相同的 ISO。
+在生成 ISO 之前，你可以指定所需的架构，选择 amd64 或 i386。请注意，`lb build` 需要 root 权限。如果你不指定架构，live build 将生成一个与主机架构相同的 ISO。
 
 如果你想在 32 位系统上构建 64 位 ISO，请确保启用了多架构支持：
 
@@ -254,6 +245,7 @@ lb config --architecture amd64 # 用于 64 位
 ```
 
 官方 Kali Linux 文档
+
 本 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
 
 ```
@@ -293,7 +285,7 @@ Kali Linux 默认使用 Gnome 环境。
 
 - 安装 Kali Linux 至少 8 GB 磁盘空间。
 - 对于 i386 和 amd64 架构，至少 512MB RAM。
-- CD-DVD  / USB 启动支持
+- CD-DVD / USB 启动支持
 
 ## 安装准备
 
@@ -305,13 +297,10 @@ Kali Linux 默认使用 Gnome 环境。
 
 1. 要开始安装，使用你选择的安装介质启动。你将看到 Kali 启动界面。选择*图形*（Graphical）或*文本模式*（Text-Mode）安装。在本例中，我们选择了 GUI 安装。
 
-
-
-
-
 # KALI LINUX
 
 官方 Kali Linux 文档
+
 此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_17_0.png)
@@ -338,19 +327,22 @@ Kali Linux 默认使用 Gnome 环境。
 - 英语 - English
 - 内部望语 - Esperanto
 - 爱沙尼亚语 - Eesti
+
+
+
 - 芬兰语 - Suomi
 - 法语 - Français
 - 加利西亚语 - Galego
 - 格鲁吉亚语 - ქართული
 - 德语 - Deutsch
 
-截图  返回 继续
+截图 返回 继续
 
 - 3. 安装程序将镜像拷贝到您的硬盘上，探测您的网络接口，然后提示您为系统输入主机名。在下面的示例中，我们将“kali”作为主机名。
 
 # KALI LINUX
 
-配置网络
+## 配置网络
 
 请为此系统输入主机名。
 
@@ -364,13 +356,13 @@ Kali Linux 默认使用 Gnome 环境。
 
 # KALI LINUX
 
-设置用户和密码
+## 设置用户和密码
 
 您需要为系统管理账户 'root' 设置密码。具有 root 权限的恶意或不合格用户可能会导致灾难性的结果，因此您应该仔细选择一个不易猜到的的 root 密码。它不应该是字典中的单词，也不应该是容易与您相关联的单词。
 
 良好的密码应包含字母、数字和标点符号的混合，并应定期更改。
 
-root 用户不应有空密码。如果您将其留空，root 账户将被禁用，系统的初始用户账户将获得使用 "sudo" 命令成为 root 的权限。
+root 用户不应有空密码。如果您将其留空，root 账户将被禁用，系统的初始用户账户将获得使用 "`sudo`" 命令成为 root 的权限。
 
 注意，您在输入时将看不到密码。
 
@@ -384,13 +376,14 @@ Root 密码：
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_20_1.png)
 
-截图  返回 继续
+截图 返回 继续
 
 - 5. 接下来，设置您的时区。
 
 # KALI LINUX
 
 官方 Kali Linux 文档
+
 此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_21_0.png)
@@ -398,6 +391,7 @@ Root 密码：
 ## 配置时钟
 
 > 如果所需的时区未列在列表中，请返回“选择语言”步骤，并选择一个使用所需时区的国家（您居住或所在的国家）。
+
 选择您的时区：
 
 - 东部 (Eastern)
@@ -417,6 +411,7 @@ Root 密码：
 # KALI LINUX
 
 官方 Kali Linux 文档
+
 此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_22_0.png)
@@ -442,6 +437,7 @@ Root 密码：
 # KALI LINUX
 
 官方 Kali Linux 文档
+
 此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_23_0.png)
@@ -452,9 +448,11 @@ Root 密码：
 
 以下分区将格式化：
 
-sda (0,0) 
-sda1 (0,0) ext4
-sda5 (0,0) swap
+`sda (0,0)` 
+
+`sda1 (0,0) ext4`
+
+`sda5 (0,0) swap`
 
 写入磁盘？
 
@@ -468,6 +466,7 @@ sda5 (0,0) swap
 # KALI LINUX
 
 官方 Kali Linux 文档
+
 此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_24_0.png)
@@ -488,6 +487,7 @@ sda5 (0,0) swap
 # KALI LINUX
 
 官方 Kali Linux 文档
+
 此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_25_0.png)
@@ -510,6 +510,7 @@ sda5 (0,0) swap
 # KALI LINUX
 
 官方 Kali Linux 文档
+
 此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_26_0.png)
@@ -517,6 +518,7 @@ sda5 (0,0) swap
 ## 完成安装
 
 > 安装完成
+
 安装已完成，是时候进入您的新系统了。请确保移除安装媒体（CD-ROM、软盘），以便进入新系统而不是重新启动安装。
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_26_1.png)
@@ -533,13 +535,10 @@ sda5 (0,0) swap
 
 在我们的示例中，我们将与 Windows 7 并并安装 Kali，Windows 目前占据了我们计算机上 100% 的磁盘空间。我们将从调整 Windows 分区以减少占用空间开始，然后在新创建的空分区中安装 Kali。
 
-
-
-
-
 # KALI LINUX
 
 Kali Linux 官方文档
+
 此 PDF 已在 docs.kali.org 上自动生成 - 2023年8月
 
 应用程序 位置
@@ -551,7 +550,9 @@ root
 计算机
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_28_0.png)
+
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_28_1.png)
+
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_28_2.png)
 
 运行应用程序
@@ -561,6 +562,7 @@ root
 # KALI LINUX
 
 Kali Linux 官方文档
+
 此 PDF 已在 docs.kali.org 上自动生成 - 2023年8月19日
 
 应用程序 位置 1月26日 周六 下午 7:18 声器 root
@@ -571,22 +573,26 @@ Kali Linux 官方文档
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_29_0.png)
 
-- 4. 一旦调整了 Windows 分区的大小，请确保在磁盘上点击“应用所有操作”。运行 gparted 并重启。
+
+
+- 4. 一旦调整了 Windows 分区的大小，请确保在磁盘上点击“应用所有操作”。运行 `gparted` 并重启。
 
 # KALI LINUX
 
 Kali Linux 官方文档
+
 此 PDF 已在 docs.kali.org 上自动生成 - 2013年8月19日
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_30_0.png)
 
 ## Kali Linux 安装步骤
 
-- 1. 从此处开始的安装程序与 Kali Linux 硬盘安装相似，直到进入分区阶段，此时您需要选择“引导 - 使用最大的连续空空间”，这是您之前用 gparted 创建的空空间。
+- 1. 从此处开始的安装程序与 Kali Linux 硬盘安装相似，直到进入分区阶段，此时您需要选择“引导 - 使用最大的连续空空间”，这是您之前用 `gparted` 创建的空空间。
 
 # KALI LINUX
 
 Kali Linux 官方文档
+
 此 PDF 已在 docs.kali.org 上自动生成 - 2013年8月19日
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_31_0.png)
@@ -596,21 +602,27 @@ Kali Linux 官方文档
 安装程序可以引导您对磁盘进行分区（使用不同的标准方案），或者如果您愿意，也可以手动进行。使用引导分区后，您之后仍然有机会重新检查并自定义结果。
 
 - 如果您选择对整个磁盘进行引导分区，接下来将询问您应该使用哪块磁盘。
+
 - 分区方法：
 
 | 引导 - 使用最大的连续空空间 |
+
 | 引导 - 使用整个磁盘 |
+
 | 引导 - 使用整个磁盘并设置 LVM |
+
 | 引导 - 使用整个磁盘并设置加密 LVM |
+
 | 手动 |
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_31_1.png)
 
-- 2. 安装完成后，重启。您应该会看到 GRUB 启动菜单，它将允许您启动到 Kali 或 Windows。
+- 2. 安装完成后，重启。您应该会看到 `GRUB` 启动菜单，它将允许您启动到 Kali 或 Windows。
 
 # KALI LINUX
 
 Kali Linux 官方文档
+
 此 PDF 已在 docs.kali.org 上自动生成 - 2013年8月19日
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_32_0.png)
@@ -626,20 +638,21 @@ Kali Linux 官方文档
 ## 准备 USB 拷贝
 
 - 1. [下载 Kali linux](https://www.kali.org/get-kali/)。
-2. 如果运行 Windows，下载 [Win32 Disk Imager](https://projects.sourceforge.net//)。
-3. *nix* 系统不需要特殊的软件。
-4. 一个 USB 密钥（至少 2GB 容量）。
+- 2. 如果运行 Windows，下载 [Win32 Disk Imager](https://projects.sourceforge.net//)。
+- 3. `*nix` 系统不需要特殊的软件。
+- 4. 一个 USB 密钥（至少 2GB 容量）。
 
 ## Kali Linux Live USB 安装步骤
 
 ### 在 Windows 机器上制作 Kali 镜像
 
-- 1. 将 USB 闪盘插入 Windows 端口并启动 Win32 Disk Imager 软件
-2. 选择要制作的 Kali Linux ISO 文件，并验证要覆盖的 USB 驱动器是正确的。
+- 1. 将 USB 闪盘插入 Windows 端口并启动 `Win32 Disk Imager` 软件
+- 2. 选择要制作的 Kali Linux ISO 文件，并验证要覆盖的 USB 驱动器是正确的。
 
 # KALI LINUX
 
 Kali Linux 官方文档
+
 此 PDF 已在 docs.kali.org 上自动生成 - 2013年8月19日
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_34_0.png)
@@ -648,44 +661,34 @@ Kali Linux 官方文档
 
 ## 在 Linux 机器上制作 Kali 镜像
 
-- 1. 将 USB 闪盘插入 Linux 端口并启动 Win32 Disk Imager 软件
-2. 选择要制作的 Kali Linux ISO 文件，并验证要覆盖的 USB 驱动器是正确的。
-3. *nix* 系统不需要特殊的软件。
-4. 一个 USB 密钥（至少 2GB 容量）。
-
+- 1. 将 USB 闪盘插入 Linux 端口并启动 `Win32 Disk Imager` 软件
+- 2. 选择要制作的 Kali Linux ISO 文件，并验证要覆盖的 USB 驱动器是正确的。
+- 3. `*nix` 系统不需要特殊的软件。
+- 4. 一个 USB 密钥（至少 2GB 容量）。
 - 3. 镜像制作完成后，安全地弹出 USB 驱动器。
-
-- 1. 将 USB 闪盘插入 Linux 端口并启动 Win32 Disk Imager 软件（这可能是 dd 错误）。
+- 1. 将 USB 闪盘插入 Linux 端口并启动 `Win32 Disk Imager` 软件（这可能是 dd 错误）。
 
 ## 为您的 Kali 添加持久化
 
 - 5. 一旦过程完成，挂载持久化分区。
-
 - 6. 将 USB 闪盘插入计算机。确保 BIOS 设置为从 USB 启动。当 Kali 启动界面出现时，在菜单中选择“Live”（不要按回车），并按 Tab 键。这将允许您编辑启动参数。每次需要挂载存储器时，在启动参数末尾添加“persistence”单词。
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_35_0.png)
 
 - 5. 一旦过程完成，挂载持久化分区。
-
 - 6. 将 USB 闪盘插入计算机。确保 BIOS 设置为从 USB 启动。当 Kali 启动界面出现时，在菜单中选择“Live”（不要按回车），并按 Tab 键。这将允许您编辑启动参数。每次需要挂载存储器时，在启动参数末尾添加“persistence”单词。
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_36_0.png)
 
 - 5. 一旦过程完成，挂载持久化分区。
-
 - 6. 将 USB 闪盘插入计算机。确保 BIOS 设置为从 USB 启动。当 Kali 启动界面出现时，在菜单中选择“Live”（不要按回车），并按 Tab 键。这将允许您编辑启动参数。每次需要挂载存储器时，在启动参数末尾添加“persistence”单词。
-
 - 5. 一旦过程完成，挂载持久化分区。
-
 - 6. 将 USB 闪盘插入计算机。确保 BIOS 设置为从 USB 启动。当 Kali 启动界面出现时，在菜单中选择“Live”（不要按回车），并按 Tab 键。这将允许您编辑启动参数。每次需要挂载存储器时，在启动参数末尾添加“persistence”单词。
-
-
-
-
 
 # KALI LINUX
 
 官方 Kali Linux 文档
+
 此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_39_0.png)
@@ -695,6 +698,7 @@ Kali Linux 官方文档
 # KALI LINUX
 
 官方 Kali Linux 文档
+
 此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_40_0.png)
@@ -760,9 +764,12 @@ root 密码：
 
 - 5. 接下来设置您的时区。
 
+
+
 # KALI LINUX
 
 官方 Kali Linux 文档
+
 此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_43_0.png)
@@ -772,7 +779,6 @@ root 密码：
 > 如果没有列出所需的时区，请返回“选择语言”步骤，并选择使用所需时区的国家（您居住或所在的国家）。
 
 选择您的时区：
-
 - 东部 (Eastern)
 - 中部 (Central)
 - 山山区 (Mountain)
@@ -787,13 +793,6 @@ root 密码：
 
 - 6. 安装程序现在将探测您的磁盘并为您提供四个选择。对于加密的 LVM 安装，请如如下所示选择“引导式 - 使用整个磁盘并设置加密 LVM”选项。
 
-## KALI LINUX
-
-官方 Kali Linux 文档
-此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
-
-![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_44_0.png)
-
 ## 分区磁盘
 
 安装程序可以引导您对磁盘进行分区（使用不同的标准方案）；或者如果您愿意，您也可以手动进行。使用引导式分区时，您稍后仍有机会查看并自定义结果。
@@ -801,7 +800,6 @@ root 密码：
 如果您选择对整个磁盘进行引导式分区，接下来将要求指定使用哪块磁盘。
 
 分区方法：
-
 - 引导式 - 使用整个磁盘
 - 引导式 - 使用整个磁盘并设置 LVM
 - 引导式 - 使用整个磁盘并设置加密 LVM
@@ -811,14 +809,9 @@ root 密码：
 
 - 7. 选择安装目标驱动器。在这种情况下，我们选择了 USB 驱动器。我们将使用此 USB 驱动器启动加密后的 Kali。
 
-## KALI LINUX
-
-## 分区磁盘
-
 注意，在您确认要进行更改之前，所选磁盘上的所有数据将被擦除。
 
 选择分区的磁盘：
-
 - SCSI (0,0,0) (sda) - 4.0 GB DataTraveler
 - SCSI (0,0,0) (sdb) - 21.5 GB Virtual
 
@@ -827,15 +820,6 @@ root 密码：
 截图 返回 继续
 
 - 8. 确认您的分区方案并继续安装。
-
-## KALI LINUX
-
-官方 Linux 文档
-此 PDF 从 docs.kali.org 自动生成 - 2013年8月19日
-
-![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_46_0.png)
-
-## 分区磁盘
 
 这是已配置分区和挂载点的概述。选择一个分区修改其设置（文件系统、挂载点等），选择一个空闲创建分区或初始化分区表。
 
@@ -854,11 +838,7 @@ root 密码：
 
 - 9. 接下来，将要求输入加密密码。您需要记住此密码，并在每次启动加密后的 Kali 时使用它。
 
-## KALI LINUX
-
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_47_0.png)
-
-## 分区磁盘
 
 您需要选择一个密码来加密 SCSI (0,0,0)，分区 #5 (sda)。加密的整体强度很大取决于此密码，因此您应该仔细选择一个不容易猜的密码。它不应该是字典中存在的单词或句子，也不应该是可以与您容易关联的短语。
 
@@ -874,32 +854,17 @@ root 密码：
 
 > 注意！如果您在此屏幕上选择“否”，您将无法从 Kali 存储库安装包。
 
-## KALI LINUX
-
-官方 Kali Linux 文档
-此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
-
-![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_48_0.png)
-
 ## 配置包管理器
 
 网络镜像可补充 CD-ROM 中包含的软件。这也可以提供新版本的软件。
 
 使用网络镜像吗？
-
 - 否
 - 是
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_48_1.png)
 
 - 11. 接下来，安装 GRUB。
-
-# KALI LINUX
-
-官方 Kali Linux 文档
-此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
-
-![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_49_0.png)
 
 ## 在硬盘上安装 GRUB 引导加载程序
 
@@ -908,28 +873,17 @@ root 密码：
 警告：如果安装程序未能检测到电脑上存在的另一个操作系统，修改主引导记录将导致操作系统暂时无法启动，尽管稍后可以手动配置 GRUB。
 
 将 GRUB 引导加载程序安装到主引导记录？
-
 - 否
 - 是
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_49_1.png)
 
-- 12. 最后，点击*继续* 重启进入您新的 Kali 安装。如果您使用 USB 设备作为目标驱动器，请确保在 BIOS 中启用了从 USB 设备启动。每次启动时，系统都会要求您输入之前设置的加密密码。
-
-
-
-
-
-## KALI LINUX
-
-Kali Linux 官方文档
-此 PDF 并在 docs.kali.org 自动生成 - 2013年8月19日
-
-![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_50_0.png)
+- 12. 最后，点击`继续`重启进入您新的 Kali 安装。如果您使用 USB 设备作为目标驱动器，请确保在 BIOS 中启用了从 USB 设备启动。每次启动时，系统都会要求您输入之前设置的加密密码。
 
 ## 完成安装
 
 > 安装完成
+
 安装已完成，现在是进入你的新系统的时间了。请确保移除安装媒体（CD-ROM、软盘），以便你启动的是新系统而不是重新开始安装。
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_50_1.png)
@@ -962,36 +916,32 @@ Kali mini ISO 是一种安装极简 Kali 系统并“从零开始”安装的便
 
 当你首次启动 mini ISO 时，将看到一个带有各种选项的小型启动菜单。对于本文，我们将仅进行基础安装。
 
-## KALI LINUX
-
-Kali Linux 官方文档
-此 PDF 并在 docs.kali.org 自动生成 - 2013年8月19日
-
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_52_0.png)
 
 接下来你将被提示各种信息，例如语言和键盘类型，然后你需要为安装选择一个主机名。我们将保持默认的 kali。
 
-## KALI LINUX
 
-Kali Linux 官方文档
+
 此 PDF 并在 docs.kali.org 自动生成 - 2013年8月19日
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_53_0.png)
 
 接下来，你需要选择时区，然后将向分分区选项。为了快速运行，我们将使用“引导式 - 使用整个磁盘”并按照提示一路完成，以创建新的分区设置。
 
-## KALI LINUX
+# KALI LINUX
 
-Linux 官方文档
+## Linux 官方文档
+
 此 PDF 并在 docs.kali.org 自动生成 - 2013年8月19日
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_54_0.png)
 
 为了减少网络带宽，默认将选择一小部分软件包。如果你想添加不同的服务或功能，这就是你进行选择的区域。
 
-## KALI LINUX
+# KALI LINUX
 
-Kali Linux 官方文档
+## Kali Linux 官方文档
+
 此 PDF 并在 docs.kali.org 自动生成 - 2013年8月19日
 
 ```
@@ -1018,9 +968,10 @@ Kali Linux 官方文档
 
 此时此时，安装程序将下载它所需的所有软件包并将它们安装到系统上。取决于你的互联网连接速度，这可能需要一些时间。最后，你将会被提示安装 GRUB 以完成安装。
 
-## KALI LINUX
+# KALI LINUX
 
-Kali Linux 官方文档
+## Kali Linux 官方文档
+
 此 PDF 并在 docs.kali.org 自动生成 - 2013年8月19日
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_56_0.png)
@@ -1029,19 +980,19 @@ Kali Linux 官方文档
 
 现在你已经完成了 Kali Linux 的安装，是时候对你的系统进行定制了。我们网站的 Kali 通用部分提供了更多信息，你也可以在我们的用户论坛中找到如何充分利用 Kali 的技巧。
 
-## Kali Linux 网络 PXE 安装
+# Kali Linux 网络 PXE 安装
 
-### 设置 PXE 服务器
+## 设置 PXE 服务器
 
 通过网络 (PXE) 启动和安装 Kali 对于没有 CDROM 或 USB 端口的单台笔记本电脑非常有用，适用于支持预填充（pre-seeding）的企业部署。
 
-首先，我们需要安装 dnsmasq 来提供 DHCP/TFTP。
+首先，我们需要安装 `dnsmasq` 来提供 DHCP/TFTP。
 
 ```bash
 apt-get install dnsmasq
 ```
 
-在 dnsmasq.conf 中，我们需要定义以下内容：
+在 `dnsmasq.conf` 中，我们需要定义以下内容：
 
 ```bash
 dhcp-range=192.168.1.50,192.168.1.150,255.255.255.0
@@ -1049,22 +1000,19 @@ dhcp-option=3,192.168.1.1
 dhcp-option=6,192.168.1.2
 ```
 
-配置后，需要重启 dnsmasq：
+配置后，需要重启 `dnsmasq`：
 
 ```bash
 service dnsmasq restart
 ```
 
-
-
-
-切换到 TTY，这将显示为一个带有登录提示的黑屏幕。我们需要以 root 身份登录并按照如下步骤停止 gdm3 服务。
+切换到 TTY，这将显示为一个带有登录提示的黑屏幕。我们需要以 `root` 身份登录并按照如下步骤停止 `gdm3` 服务。
 
 ```
 service gdm3 stop
 ```
 
-如果您使用的是 64 位的 Kali 系统，您可能想要安装 `ia32-libs` 软件包，以便 NVIDIA 安装程序能够安装 32 位库，尽管这是可选的。如果您选择不这样做，只需在安装程序询问您是否要安装 32 位库时简单地选择 **no** 即可。
+如果您使用的是 64 位的 Kali 系统，您可能想要安装 `ia32-libs` 软件包，以便 NVIDIA 安装程序能够安装 32 位库，尽管这是可选的。如果您选择不这样做，只需在安装程序询问您是否要安装 32 位库时简单地选择 `no` 即可。
 
 ```
 dpkg --add-architecture i386
@@ -1083,7 +1031,8 @@ chmod 755 NVIDIA-Linux-x86_64-310.44.run
 
 # KALI LINUX
 
-官方 Kali Linux 文档
+## 官方 Kali Linux 文档
+
 此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
 
 ```
@@ -1091,7 +1040,7 @@ root@kali:~# glxinfo | grep -i "direct rendering"
 direct rendering: Yes
 ```
 
-虽然利用 Kali 包含的 Cuda 工具超出了本文的范围，但检查并确保它们正常工作始终是一个好主意。以下命令使用 Oclhashcat-plus 配合软件包中包含的一些示例文件。
+虽然利用 Kali 包含的 Cuda 工具超出了本文的范围，但检查并确保它们正常工作始终是一个好主意。以下命令使用 `Oclhashcat-plus` 配合软件包中包含的一些示例文件。
 
 ```
 cd /usr/share/oclhashcat-plus/
@@ -1100,16 +1049,24 @@ cudaHashcat-plus v0.14 by atom starting...
 ```
 
 - Hashes: 共 6494 个，6494 个唯一摘要
+
 - Bitmaps: 16 位，65536 个条目，0xffffff 掩码，262144
+
 - Workload: 256 次循环，80 个加速器
+
 - Watchdog: 温度中止触发器设为 90c
+
 - Watchdog: 温度保持触发器设为 80c
+
 - Device #1: GeForce G210M, 511MB, 146Mhz, 2MCU
+
 - Device #2: GeForce 9400M, 253MB, 1100Mhz, 2MCU
+
 - Device #1: Kernel , /kernels/4318/m0000_a1.sm_12.64.ptx
+
 - Device #2: Kernel , /kernels/4318/m0000_a1.sm_11.64.ptx
 
-为 example.dict 生成的数据语句：121028 个单词，129988 个单词，129988 个密钥空间
+为 `example.dict` 生成的数据语句：121028 个单词，129988 个单词，129988 个密钥空间
 
 ```
 27b7965af0346604148f2a455fe52:mo0000
@@ -1127,7 +1084,7 @@ a48dd0f09abafake632f88e3c641b5f:ap2300000
 
 如果您决定在 VirtualBox 中安装 Kali Linux，您将需要按照下面的说明来成功安装 Linux 增强功能（Guest Additions）工具。
 
-您必须使用 **4.2.xx 或更高版本**的 VirtualBox，以利用改进之处，包括兼容性更新以及核心应用程序和增强功能稳定性的提升。
+您必须使用 `4.2.xx` 或更高版本 的 `VirtualBox`，以利用改进之处，包括兼容性更新以及核心应用程序和增强功能稳定性的提升。
 
 ## 在 Kali Linux 中安装 VirtualBox 增强功能
 
@@ -1152,9 +1109,10 @@ cd /root
 ./VboxAdditions.run
 ```
 
-## Kali Linux
+# Kali Linux
 
-官方 Kali Linux 文档
+## 官方 Kali Linux 文档
+
 此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_67.png)
@@ -1163,37 +1121,44 @@ cd /root
 
 ## 与宿主机共享文件夹
 
+
+
 要在宿主机与 Kali Linux 虚拟机之间共享文件夹需要完成几个步骤。
 
 从 VirtualBox 管理器选择您的 Kali Linux 虚拟机，并点击右侧的“共享文件夹”链接。这将启动一个添加文件夹的弹出窗口。在“文件夹路径”框中提供您想要共享的路径，或点击下拉箭头浏览您的宿主机。选择允许“自动挂载”和“永久”的复选框，并两次点击 OK 按钮。
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_68.png)
 
-您的共享文件夹现在将位于 media 目录下。您可以创建一个书签或链接以便访问该目录。
+您的共享文件夹现在将位于 `media` 目录下。您可以创建一个书签或链接以便访问该目录。
 
 ## Kali Linux
 
 官方 Kali Linux 文档
-此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
 
-# 书签
+此 PDF 在 `docs.kali.org` 上自动生成 - 2013年8月19日
+
+### 书签
+
 - 首页
 - 桌面
 - 文件系统
 - 垃圾箱
 
-# 网络
+### 网络
+
 - 浏览网络
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_69_0.png)
+
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_69_1.png)
+
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_69_2.png)
 
 ## 启动 Metasploit 框架
 
 与 Kali Linux 网络服务一样，启动时没有运行网络服务（包括数据库服务），因此需要采取几个步骤使 Metasploit 在数据库支持下运行。
 
-## 启动 Kali PostgreSQL 服务
+### 启动 Kali PostgreSQL 服务
 
 Metasploit 使用 PostgreSQL 作为其数据库，因此需要先启动。
 
@@ -1201,7 +1166,7 @@ Metasploit 使用 PostgreSQL 作为其数据库，因此需要先启动。
 service postgresql start
 ```
 
-您可以通过检查 `ss -ant` 的输出并确保端口 5432 正在监听来验证 PostgreSQL 是否运行。
+您可以通过检查 `ss -ant` 的输出并确保端口 `5432` 正在监听来验证 PostgreSQL 是否运行。
 
 ```
 State Recv-Q Send-Q Local Address:Port Peer Address:Port
@@ -1211,17 +1176,17 @@ LISTEN 0 128 127.0.0.1:5432 *:*
 LISTEN 0 128 ::1:5432 :::*
 ```
 
-## 启动 Kali Metasploit 服务
+### 启动 Kali Metasploit 服务
 
-运行 PostgreSQL 后，接下来我们需要启动 metasploit 服务。服务首次启动将创建一个 msf3 数据库用户和一个名为 msf3 的数据库。服务还将根据需要启动 Metasploit RPC 和 Web 服务器。
+运行 PostgreSQL 后，接下来我们需要启动 `metasploit` 服务。服务首次启动将创建一个 `msf3` 数据库用户和一个名为 `msf3` 的数据库。服务还将根据需要启动 Metasploit RPC 和 Web 服务器。
 
 ```
 service metasploit start
 ```
 
-## 在 Kali 中启动 msfconsole
+### 在 Kali 中启动 msfconsole
 
-现在 PostgreSQL Metasploit 服务正在运行，您可以启动 **msfconsole** 并使用下所示的 **db_status** 命令验证数据库连接。
+现在 PostgreSQL Metasploit 服务正在运行，您可以启动 `msfconsole` 并使用下所示的 `db_status` 命令验证数据库连接。
 
 ```
 msfconsole
@@ -1233,9 +1198,9 @@ msf > db_status
 msf >
 ```
 
-## 配置 Metasploit 开机启动
+### 配置 Metasploit 开机启动
 
-如果您希望 PostgreSQL 和 Metasploit 在启动时运行，可以使用 **update-rc.d** 如下启用服务：
+如果您希望 PostgreSQL 和 Metasploit 在启动时运行，可以使用 `update-rc.d` 如下启用服务：
 
 ```
 update-rc.d postgresql enable
@@ -1252,7 +1217,6 @@ BackTrack 为操作系统引入了“取证启动”选项，该选项一直持�
 
 - 1. 首先，内部硬盘不会被接触。这意味着如果有分区，它将不会被使用，且不会挂载内部磁盘。为了验证这一点，我们取了一个标准系统并移除了硬盘。将其连接到商业取证软件包后，我们对硬盘进行了哈希计算。然后我们重新-
 
-
 将硬盘连接到计算机并以取 取证模式启动 Kali。在运行 Kali 一段时间后，我们关闭了系统，拆下硬盘并再次获取哈希值。这些哈希值是匹配的，表明硬盘在任何时候都没有发生过任何更改。
 
 + 2. 另一个同样重要的更改是，我们禁用了任何可移动介质的自动挂载。因此，插入优 盘、CD 等设备将不会自动挂载。这一切背后的想法非常简单：在没有用户直接操作的情况下，任何介质都不应该发生任何变化。你作为用户所做的任何操作都由你负责。
@@ -1263,9 +1227,9 @@ BackTrack 为操作系统引入了“取证启动”选项，该选项一直持�
 
 ## Kali 虚拟机中的 VMware Tools
 
-如果你决定创建自己的 VMware 版 Kali Linux 安装，而不是使用我们的预制 VMware 镜像，你将需要按照下面的说明在你的 Kali 安装中成功安装 VMware Tools。你可以选择安装 open-vm-tools 或原生的 VMware tools。
+如果你决定创建自己的 VMware 版 Kali Linux 安装，而不是使用我们的预制 VMware 镜像，你将需要按照下面的说明在你的 Kali 安装中成功安装 VMware Tools。你可以选择安装 `open-vm-tools` 或原生的 VMware tools。
 
-## 安装 open-vm-tools
+### 安装 open-vm-tools
 
 这可能是获取 Kali VMware 虚拟机获取“VMware tools”功能最简单的方法。
 
@@ -1273,9 +1237,9 @@ BackTrack 为操作系统引入了“取证启动”选项，该选项一直持�
 apt-get install open-vm-tools
 ```
 
-## 在 Kali 中安装 VMware Tools
+### 在 Kali 中安装 VMware Tools
 
-如果 open-vm-tools 对你不起，或者你更倾向于使用原生的 VMware tools，请从安装 VMware Tools 安装程序所需的某些包开始：
+如果 `open-vm-tools` 对你不起，或者你更倾向于使用原生的 VMware tools，请从安装 VMware Tools 安装程序所需的某些包开始：
 
 ```
 echo cups enabled >> /usr/sbin/update-rc.cd
@@ -1285,7 +1249,7 @@ apt-get install gcc make linux-headers-$(uname -r)
 in -s /usr/src/linux-headers-$(uname -r)/include/generated/uapi/linux/version.h /usr/src/linux-headers-$(uname -r)/include/
 ```
 
-接下来，通过从相应的菜单中点击“安装 VMware Tools”来挂载 VMware Tools ISO。一旦 VMware Tools ISO 已附加到虚拟机，我们就挂载硬盘并将 VMware Tools 安装程序复制到 /tmp/。
+接下来，通过从相应的菜单中点击“安装 VMware Tools”来挂载 VMware Tools ISO。一旦 VMware Tools ISO 已附加到虚拟机，我们就挂载硬盘并将 VMware Tools 安装程序复制到 `/tmp/`。
 
 ```
 mkdir /mnt/vmware
@@ -1294,12 +1258,14 @@ mkdir /mnt/vmware
 ## KALI LINUX
 
 官方 Linux 文档
-此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
 
-mount /dev/cdrom/mnt/vmware/
-cp -rf /mnt/vmware/VMwareTools* /tmp/
+此 PDF 在 `docs.kali.org` 上自动生成 - 2013年8月19日
 
-最后，切换目录到 /tmp/，解压 tar 包并启动安装程序：
+`mount /dev/cdrom/mnt/vmware/`
+
+`cp -rf /mnt/vmware/VMwareTools* /tmp/`
+
+最后，切换目录到 `/tmp/`，解压 tar 包并启动安装程序：
 
 ```
 cd /tmp/
@@ -1310,20 +1276,20 @@ cd vmware-tools-distrib/
 
 按照 VMware Tools 安装的提示操作，完成后你就完成了。
 
-## VMware 中鼠标移动缓慢
+### VMware 中鼠标移动缓慢
 
-如果你的鼠标在 Kali Linux VMware 虚拟机中移动缓慢且迟钝，请尝试在 Kali 虚拟机中安装 **xserver-xorg-input-vmmouse** 包。
+如果你的鼠标在 Kali Linux VMware 虚拟机中移动缓慢且迟钝，请尝试在 Kali 虚拟机中安装 `xserver-xorg-input-vmmouse` 包。
 
 ```
 apt-get install xserver-xorg-input-vmmouse
 reboot
 ```
 
-## VMware Tools 无法编译！
+### VMware Tools 无法编译！
 
 这是一个困扰了我们的不幸现实，因为 Kali Linux 使用的是前沿内核，VMware 并不总是支持它。偶尔，可能需要从 [VMware 社区] 搜索“上游兼容 VMware Tools 补丁”。
 
-## 已知问题
+### 已知问题
 
 截至 2013年3月2日，VMware tools 将可以在内核 3.7 下进行编译，共享文件夹模块除外。已存在补丁可以修复此问题。
 
@@ -1337,11 +1303,13 @@ EfikaMX 是一款低端、低成本的 ARM 计算机。尽管规格并不理想�
 
 ## EfikaMX 上的原生 Kali - 易用版
 
+
+
 如果你只想在你的 EfikaMX 上安装 Kali，请遵循这些说明：
 
 - 获取一张快速的 8 GB（或更多）SD 卡。强烈建议使用 Class 10 卡。
 - 从我们的下载区域下载 Kali Linux EfikaMX 镜像。
-- 使用 **dd** 工具将此文件镜像到你的 SD 卡。在我们的示例中，我们假设存储设备位于 /dev/sdb。**根据需要更改此处。**
+- 使用 `dd` 工具将此文件镜像到你的 SD 卡。在我们的示例中，我们假设存储设备位于 `/dev/sdb`。**根据需要更改此处。**
 
 > 注意！此过程将擦除你的 SD 卡。如果你选择了错误的存储设备，你可能会擦除计算机的硬盘。
 
@@ -1349,23 +1317,27 @@ EfikaMX 是一款低端、低成本的 ARM 计算机。尽管规格并不理想�
 root@kali: ~ dd if=kali-1.0.3-efikamx.img of=/dev/sdb bs=512k
 ```
 
-此过程可能需要一段时间，取决于你的 USB 存储设备速度和镜像大小。一旦 dd 操作完成，在插入 SD 卡的情况下启动你的 EfikaMX。你将能够登录 Kali (root / ) 并运行 startx。就这样。
+此过程可能需要一段时间，取决于你的 USB 存储设备速度和镜像大小。一旦 `dd` 操作完成，在插入 SD 卡的情况下启动你的 EfikaMX。你将能够登录 Kali (`root` / ) 并运行 `startx`。就这样。
 
 ## EfikaMX 上的 Kali - 详细版
 
-如果你是一个开发者并想要折腾 Kali EfikaMX 镜像，包括内核配置并通常具有冒险精神，请查看自定义 EfikaMX 镜像。## KALI LINUX
+如果你是一个开发者并想要折腾 Kali EfikaMX 镜像，包括内核配置并通常具有冒险精神，请查看自定义 EfikaMX 镜像。
 
-在 Beaglebone 上的 Kali ARM 架构
+# KALI LINUX
+
+## 在 Beaglebone 上的 Kali ARM 架构
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_79_0.png)
 
-Beaglebone 是一款低端、低成本的 ARM 计算机。尽管规格并不理想，但廉廉的价格使其成为小型 Linux 系统的极极选择。## Beaglebone 上的原生 Kali - 易用版
+Beaglebone 是一款低端、低成本的 ARM 计算机。尽管规格并不理想，但廉廉的价格使其成为小型 Linux 系统的极极选择。
+
+## Beaglebone 上的原生 Kali - 易用版
 
 如果你只想在你的 Beaglebone 上安装 Kali，请遵循这些说明：
 
 - 1. 获取一张快速的 8 GB（或更多）SD 卡。强烈建议使用 Class 10 卡。
 - 2. 从我们的下载区域下载 Kali Linux Beaglebone镜像。
-- 3. 使用 **dd** 工具将此文件镜像到你的 SD 卡。在我们的示例中，我们假设存储设备位于 /dev/sdb。**根据需要更改此处。**
+- 3. 使用 `dd` 工具将此文件镜像到你的 SD 卡。在我们的示例中，我们假设存储设备位于 `/dev/sdb`。**根据需要更改此处。**
 
 > 注意！此过程将擦除你的 SD 卡。如果你选择了错误的存储设备，你可能会擦除计算机的硬盘。
 
@@ -1373,48 +1345,51 @@ Beaglebone 是一款低端、低成本的 ARM 计算机。尽管规格并不理�
 root@kali: ~ dd if=kali-1.0.3-efikamx.img of=/dev/sdb bs=512k
 ```
 
-此过程可能需要一段时间，取决于你的 USB 存储设备速度和镜像大小。一旦 dd 操作完成，在插入 SD 卡的情况下启动你的 Beaglebone。你将能够登录 Kali (root / ) 并运行 startx。就这样。## Beaglebone 上的 Kali - 详细版
+此过程可能需要一段时间，取决于你的 USB 存储设备速度和镜像大小。一旦 `dd` 操作完成，在插入 SD 卡的情况下启动你的 Beaglebone。你将能够登录 Kali (`root` / ) 并运行 `startx`。就这样。
 
-如果你是一个开发者并想要折腾 Kali Beaglebone 镜像，包括内核配置并通常具有冒险精神，请查看自定义 Beaglebone 镜像。在 CuBox 上安装 Kali ARM
+## Beaglebone 上的 Kali - 详细版
+
+如果你是一个开发者并想要折腾 Kali Beaglebone 镜像，包括内核配置并通常具有冒险精神，请查看自定义 Beaglebone 镜像。
+
+## 在 CuBox 上安装 Kali ARM
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_81_0.png)
 
-CuBox 是一款低端、低成本的 ARM 计算机。尽管规格并不理想，但廉廉的价格使其成为小型 Linux 系统的极极选择。## CuBox 上的原生 Kali - 易用版
+CuBox 是一款低端、低成本的 ARM 计算机。尽管规格并不理想，但廉廉的价格使其成为小型 Linux 系统的极极选择。
+
+## CuBox 上的原生 Kali - 易用版
 
 如果你只想在你的 CuBox 上安装 Kali，请遵循这些说明：
 
 - 1. 你需要在内部 SD 卡上有至少 7 GB 空闲空间用于我们的镜像。
 - 2. 如果你尚未执行，请对你的 Samsung Galaxy Note 10.1 进行 root。
 - 3. 从我们的下载区域下载 Kali Linux Galaxy Note 10.1 镜像。
-- 4. 将下载的 Kali 镜像重命名为 linux.img 并将其复制到 /storage/sdcard0。
-
-
-
-
+- 4. 将下载的 Kali 镜像重命名为 `linux.img` 并将其复制到 `/storage/sdcard0`。
 
 # KALI LINUX
 
 官方 Kali Linux 文档
+
 此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
 
-- 1. 从此处下载我们的 recovery.img 文件并将其拷贝到 /storage/sdcard0。
-- 2. 在你的 Galaxy Note 10.1 上获取 root 权限，更改 /storage/sdcard0 并备份你的恢复分区：
+- 1. 从此处下载我们的 `recovery.img` 文件并将其拷贝到 `/storage/sdcard0`。
+- 2. 在你的 Galaxy Note 10.1 上获取 root 权限，更改 `/storage/sdcard0` 并备份你的恢复分区：
 
 ```
 dd if=/dev/block/mmcblk0p6 of=recovery.img_orig
 ```
 
-- 3. 使用 dd 将下载的 recovery.img 镜像写入到恢复分区：
+- 3. 使用 `dd` 将下载的 `recovery.img` 镜像写入到恢复分区：
 
 **警告！** 此过程将覆盖你的恢复分区。请务必确保你自己在做什么。
+
 如果你在操作过程中失误，可能会导致设备变成“砖头”。
 
 ```
 dd if=recovery.img of=/dev/block/mmcblk0p6
 ```
 
-- 4. 将你的 Galaxy Note 10.1 重启到恢复模式。你可以通过**关闭设备**，然后同时按住**电源键**和**音量上键**来实现。当你看到“Samsung Galaxy Note 10.1”文字出现时，**松开电源键但保持音量上键**。这应该引导你进入 Kali 并自动登录 Gnome。root 密码为“changeme”（不带引号）！
-
+- 4. 将你的 Galaxy Note 10.1 重启到恢复模式。你可以通过**关闭设备**，然后同时按住**电源键**和**音量上键**来实现。当你看到“Samsung Galaxy Note 10.1”文字出现时，**松开电源键但保持音量上键**。这应该引导你进入 Kali 并自动登录 Gnome。`root` 密码为“changeme”（不带引号）！
 - 5. 通过进入：应用程序 (Applications) -> 通用辅助 (Universal Access) -> Florence Vital Keyboard 打开屏幕键盘。
 - 6. 无线功能可用，但如果不经过某些调整似乎会跳过网络扫描。**如果 Gnome 网络管理器未显示任何无线网络**，只需将你的无线网络添加为“隐藏”网络，你就可以像往常一样连接。
 - 7. 你可以在 Galaxy Note 中使用一个名为 Linux Deploy 的优秀 Android 应用程序轻松修改、调试和探索我们的镜像。
@@ -1422,6 +1397,7 @@ dd if=recovery.img of=/dev/block/mmcblk0p6
 # KALI LINUX
 
 官方 Kali Linux 文档
+
 此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
 
 ## 在 Samsung Chromebook 上安装 Kali
@@ -1430,7 +1406,7 @@ dd if=recovery.img of=/dev/block/mmcblk0p6
 
 三星 ARM Chromebook 是一款超便携式笔记本电脑。这曾是一项挑战，但我们现在有一个可以在 Chromebook 上运行非常良好的 Kali 镜像。
 
-> 我们的 Kali Chromebook 镜像包含两个启动分区——一个包含硬编码为从 SD 启动的内核，另一个包含硬编码为从 USB 启动的内核。根据你的 USB 存储介质类型，在将镜像 dd 写入你的 USB 设备后，请按照本指南最后阶段的说明，将相关的启动分区标记为更高的优先级。
+> 我们的 Kali Chromebook 镜像包含两个启动分区——一个包含硬编码为从 SD 启动的内核，另一个包含硬编码为从 USB 启动的内核。根据你的 USB 存储介质类型，在将镜像 `dd` 写入你的 USB 设备后，请按照本指南最后阶段的说明，将相关的启动分区标记为更高的优先级。
 
 ## Chromebook 版 Kali - 用户指南
 
@@ -1439,7 +1415,7 @@ dd if=recovery.img of=/dev/block/mmcblk0p6
 - 1. 准备一张快速的 8 GB SD 卡或 USB 闪盘。
 - 2. 将你的 Chromebook 进入开发者模式。
 - 3. 从我们的[下载](downloads) 区域下载 Kali Samsung ARM Chromebook 镜像。
-- 4. 使用 `dd` 工具将此文件制作到你的 USB /SD 设备。在我们的示例中，我们使用位于 /dev/sdb 的 USB 闪盘。**根据需要更改。**
+- 4. 使用 `dd` 工具将此文件制作到你的 USB /SD 设备。在我们的示例中，我们使用位于 `/dev/sdb` 的 USB 闪盘。**根据需要更改。**
 
 > 警告！此过程将擦除你的 SD 卡。如果你选择了错误的存储设备，可能会擦除你电脑的硬盘。
 
@@ -1457,7 +1433,7 @@ cgpt add -i 1 -S 1 -T 5 -P 10 -I KERN-A /dev/sdb
 cgpt add -i 2 -S 1 -T 5 -P 5 -I KERN-B /dev/sdb
 ```
 
-要查看你的分区列表和顺序，请使用命令 **cgpt show**。
+要查看你的分区列表和顺序，请使用命令 `cgpt show`。
 
 ```
 root@kali:~# cgpt show /dev/sdb
@@ -1476,18 +1452,28 @@ Type: ChromeOS kernel
 # KALI LINUX
 
 官方 Linux 文档
+
 此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
 
 UUID: 37CE46C9-0A7A-4994-B0FC-C0FCB4FDC1
-Attr: priority=5 tries=1 successful=1
-73728 3832490 3 Label: "Linux filesystem"
-Type: 06C3DAF-8483-4772-8E79-369D8477DE4
-UUID: E9E67EE1-C02E-481C-BA3F-E721515DB
-125045391 3 Sec GPT table
-125045423 1 Sec GPT header
-root@kali:~#
 
-一旦 dd 操作完成，在插好 SD / USB 的情况下启动 Chromebook（不是蓝色的 USB！）。在开发者提示符处，按下 CTRL+ALT+U，这应该引导你进入 Kali。登录 Kali (root /toor) 并运行 startx。大功完成！
+Attr: priority=5 tries=1 successful=1
+
+
+
+73728 3832490 3 Label: "Linux filesystem"
+
+Type: 06C3DAF-8483-4772-8E79-369D8477DE4
+
+UUID: E9E67EE1-C02E-481C-BA3F-E721515DB
+
+125045391 3 Sec GPT table
+
+125045423 1 Sec GPT header
+
+`root@kali:~#`
+
+一旦 `dd` 操作完成，在插好 SD / USB 的情况下启动 Chromebook（不是蓝色的 USB！）。在开发者提示符处，按下 CTRL+ALT+U，这应该引导你进入 Kali。登录 Kali (`root` / `toor`) 并运行 `startx`。大功完成！
 
 ## 三星 Chromebook 版 Kali - 开发者指南
 
@@ -1496,6 +1482,7 @@ root@kali:~#
 # KALI LINUX
 
 官方 Kali Linux 文档
+
 此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
 
 ## 在 MK/SS808 上安装 Kali ARM
@@ -1509,11 +1496,10 @@ Smart SS808 是一款基于 Rockchip 的 ARM 设备，有多种形式和型号�
 ## SS808 官方版 - 简单版
 
 如果你只是想在 SS808 上安装 Kali，请遵循以下指令：
-
 - 1. 准备一张快速的 8 GB SD 卡或 USB 闪盘。
 - 2. 将你的 Chromebook 进入开发者模式。
 - 3. 从我们的下载区域下载 Kali Samsung ARM Chromebook 镜像。
-- 4. 使用 dd 工具将此文件镜像制作到你的 USB /SD 设备。在我们的示例中，我们使用位于 /dev/sdb 的 USB 闪盘。**根据需要更改。**
+- 4. 使用 `dd` 工具将此文件镜像制作到你的 USB /SD 设备。在我们的示例中，我们使用位于 `/dev/sdb` 的 USB 闪盘。`根据需要更改。`
 
 > 警告！此过程将擦除你的 SD 卡。如果你选择了错误的存储设备，可能会擦除你电脑的硬盘。
 
@@ -1523,7 +1509,7 @@ dd if=kali-chromebook.img of=/dev/sdb bs=512k
 
 此过程取决于你的 USB 存储设备速度和镜像大小，可能需要一段时间。
 
-一旦 dd 操作完成，在插好 SD / USB 的情况下启动 Chromebook。在开发者提示符处进入 Kali。登录 Kali (root /toor) 并运行 startx。大功完成！
+一旦 `dd` 操作完成，在插好 SD / USB 的情况下启动 Chromebook。在开发者提示符处进入 Kali。登录 Kali (`root` / `toor`) 并运行 `startx`。大功完成！
 
 ## SS808 官方版 - 开发者指南
 
@@ -1532,6 +1518,7 @@ dd if=kali-chromebook.img of=/dev/sdb bs=512k
 # KALI LINUX
 
 官方 Kali Linux 文档
+
 此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
 
 ## 在 ODROID U2 上安装 Kali ARM
@@ -1545,10 +1532,9 @@ ODROID U2 是一款很棘手的硬件，因为没有控制台输出。理想情�
 ## ODROID U2 版 - 用户指南
 
 如果你只是想在你的强大的 ODROID 上安装 Kali，请遵循以下指令：
-
 - 1. 准备一张快速的 8 GB（及以上）micro 卡。强烈建议使用 Class 10 卡。
 - 2. 从下载区域下载 Kali Linux ODROID U2 镜像。
-- 3. 使用 **dd** 工具将此文件镜像到你的微 卡。在我们的示例中，我们假设存储设备位于 /dev/sdb。**根据需要更改。**
+- 3. 使用 `dd` 工具将此文件镜像到你的微 卡。在我们的示例中，我们假设存储设备位于 `/dev/sdb`。`根据需要更改。`
 
 > 警告！此过程将擦除你的 SD 卡。如果你选择了错误的存储设备，可能会擦除你电脑的硬盘。
 
@@ -1556,7 +1542,7 @@ ODROID U2 是一款很棘手的硬件，因为没有控制台输出。理想情�
 dd if=kali-ordoidu2.img of=/dev/sdb bs=1M
 ```
 
-此过程取决于你的 USB 存储设备速度和镜像大小，可能需要一段时间。dd 操作完成后，在插好 micro 卡的情况下启动 ODROID。你应该会看到一个 Gnome 登录界面——(root /toor)。大功完成！
+此过程取决于你的 USB 存储设备速度和镜像大小，可能需要一段时间。`dd` 操作完成后，在插好 micro 卡的情况下启动 ODROID。你应该会看到一个 Gnome 登录界面——(`root` / `toor`)。大功完成！
 
 ## 故障排除
 
@@ -1566,13 +1552,10 @@ dd if=kali-ordoidu2.img of=/dev/sdb bs=1M
 screen /dev/ttySAC1 115200
 ```
 
-
-
-
-
 # KALI LINUX
 
 官方 Kali Linux 文档
+
 此 PDF 已在 docs.kali.org 上自动生成 - 2013年8月19日
 
 ## 在树莓派上安装 Kali ARM
@@ -1586,7 +1569,6 @@ screen /dev/ttySAC1 115200
 ## 在树莓派上安装原生 Kali - 简易版
 
 如果你只是想在树莓派上安装 Kali，请遵循以下指令：
-
 - 准备一张良好的 8 GB（或更大）SD 卡。强烈建议使用 Class 10 读卡。
 - 从下载区域下载 Kali Linux 树莓派镜像。
 - 使用 `dd` 工具将文件写入 SD 卡。在我们的示例中，我们假设存储设备位于 `/dev/sdb`。请根据需要修改此路径。
@@ -1597,7 +1579,7 @@ screen /dev/ttySAC1 115200
 root@kali:~ dd if=kali-pi.img of=/dev/sdb bs=512k
 ```
 
-此过程的时间取决于你的 USB 存储设备速度和镜像大小。一旦 `dd` 操作完成，插入 SD 卡并启动树莓派。你将登录 Kali (root / root) 并运行 `startx`。大好了，完成了！
+此过程的时间取决于你的 USB 存储设备速度和镜像大小。一旦 `dd` 操作完成，插入 SD 卡并启动树莓派。你将登录 Kali (`root` / `root`) 并运行 `startx`。大好了，完成了！
 
 ## 树莓派上的 Kali - 详细版
 
@@ -1605,7 +1587,7 @@ root@kali:~ dd if=kali-pi.img of=/dev/sdb bs=512k
 
 ## 准备 Kali Linux ARM chroot
 
-虽然你可以从下载区域下载 Kali ARM 镜像，但有些人更倾向于构建自己的更新引导根文件系统 (rootfs)。以下步骤展示了构建 Kaliarmhf rootfs 的示例。如有需要请切换到 `armel`。
+虽然你可以从下载区域下载 Kali ARM 镜像，但有些人更倾向于构建自己的更新引导根文件系统 (`rootfs`)。以下步骤展示了构建 Kaliarmhf `rootfs` 的示例。如有需要请切换到 `armel`。
 
 ## 安装所需的工具和依赖
 
@@ -1615,7 +1597,7 @@ apt-get debootstrap qemu-user-static
 
 ## 定义架构和自定义包
 
-在这里，你为所需的 ARM 架构（armel vs armhf）定义一些环境变量，并列出镜像中要安装的包。这些包将贯穿全文，因此请确保根据你的需求修改它们。
+在这里，你为所需的 ARM 架构（`armel` vs `armhf`）定义一些环境变量，并列出镜像中要安装的包。这些包将贯穿全文，因此请确保根据你的需求修改它们。
 
 ```
 export packages="xfce4 kali-menu wpasupplicant kali-defaults initramfs-tools uboot-mkimage nmap openssh-server"
@@ -1624,7 +1606,7 @@ export architecture="armhf"
 
 ## 构建 Kali rootfs
 
-我们创建一个标准的目录结构，并从 Kali Linux 仓库引导 ARM rootfs。然后，我们将 `qemu-arm-static` 从宿主机复制到 rootfs 中，以启动第二阶段的 chroot。
+我们创建一个标准的目录结构，并从 Kali Linux 仓库引导 ARM `rootfs`。然后，我们将 `qemu-arm-static` 从宿主机复制到 `rootfs` 中，以启动第二阶段的 `chroot`。
 
 ```
 cd ~
@@ -1639,13 +1621,17 @@ cd rootfs
 
 官方 Linux 文档 此 PDF 已在 docs.kali.org 上自动生成 - 2013年8月19日
 
+```
 debootstrap --foreign --arch $architecture kali-$architecture http://archive.kali.org/kali cp /usr/bin/qemu-arm-static kali-$architecture/usr/bin/
+```
 
 ## 第二阶段 chroot
 
 在这里，我们配置基础镜像设置，例如键位、存储库、默认网络接口行为（根据需要更改）等。
 
-```
+
+
+```bash
 cd ~/arm-stuff/roots
 LANG=C chroot kali-$architecture/debootstrap/debootstrap --second-stage
 
@@ -1668,7 +1654,7 @@ nameserver 8.8.8.8
 EOF
 ```
 
-## 第三阶段 chroot
+### 第三阶段 chroot
 
 这是你进行自定义用用场。你的 `$packages` 将被安装，并设置了默认的“root”根密码，以及进行了其他配置更改和修复。
 
@@ -1678,37 +1664,39 @@ EOF
 
 官方 Kali Linux 文档 此 PDF 已在 docs.kali.org 上自动生成 - 2013年8月19日
 
+```bash
 export MALLOC_CHECK_=0
+
 export LC_ALL=C
+
 export DEBIAN_FRONTEND=noninteractive
 
 mount -t proc proc /kali-$architecture/proc
-mount -o bind /dev/kali-$architecture/dev/
-mount -o bind /dev/pts /kali-$architecture/dev/pts
 
+mount -o bind /dev/kali-$architecture/dev/
+
+mount -o bind /dev/pts /kali-$architecture/dev/pts
 ```
+
+```bash
 cat << EOF > kali-$architecture/defconf
 console-common console-data/keymap/policy select Select keymap from full list
 console-common console-data/keymap/full select en-latin1-nodekeys
 EOF
 ```
 
-```
+```bash
 cat << EOF > kali-$architecture/third-stage
 #!/bin/bash
 dpkg-divert --add --local --divert /usr/sbin/invoke-rc.d.chroot --rename /usr/sbin/invoke-rc.d
 cp /bin/true /usr/sbin/invoke-rc.d
 ```
 
-```
+```bash
 apt-get update
 apt-get install locales-all
 locale-gen en_US.8
 ```
-
-
-
-
 
 # KALI LINUX
 
@@ -1750,21 +1738,21 @@ kpartx -dv $loopdevice
 losetup -d loopdevice
 ```
 
-使用 **dd** 工具将此文件镜像到你的 SD 卡。在我们的示例中，我们假设存储设备位于 /dev/sdb。**根据需要更改此处。**
+使用 `dd` 工具将此文件镜像到你的 SD 卡。在我们的示例中，我们假设存储设备位于 `/dev/sdb`。**根据需要更改此处。**
 
 ```bash
 dd if=kali-custom-efikamx.img of=/dev/sdb bs=1M
 ```
 
-一旦 dd 操作完成，卸载并弹出 SD 卡，然后让你的 EfikaMX 启动到 Kali Linux。
+一旦 `dd` 操作完成，卸载并弹出 SD 卡，然后让你的 EfikaMX 启动到 Kali Linux。
 
 # 自定义 Beaglebone Black 镜像
 
-本文档描述了我们创建**自定义 Kali Linux Beaglebone Black ARM 镜像**的方法，并针对开发者。如果你想安装预制的 Kali 镜像，请查看我们的[在 Beaglebone Black 上安装 Kali]() 文章。
+本文档描述了我们创建 `自定义 Kali Linux Beaglebone Black ARM 镜像` 的方法，并针对开发者。如果你想安装预制的 Kali 镜像，请查看我们的[在 Beaglebone Black 上安装 Kali]() 文章。
 
 ### 01. 创建 Kali rootfs
 
-按照我们 Kali 文档中的描述，使用 **armhf** 架构构建 Kali rootfs。在此过程结束时，你应该在 ~/arm-stuff/rootfs/kali-armhf 中拥有一个填充了数据的 rootfs 目录。
+按照我们 Kali 文档中的描述，使用 `armhf` 架构构建 Kali rootfs。在此过程结束时，你应该在 `~/arm-stuff/rootfs/kali-armhf` 中拥有一个填充了数据的 rootfs 目录。
 
 ### 02. 创建镜像文件
 
@@ -1834,6 +1822,8 @@ echo nameserver 8.8.8.8 > /etc/resolv.conf
 
 如果你没有使用 ARM 硬件作为开发环境，你还需要设置一个 ARM 交叉编译环境来构建 ARM 内核和模块。完成后，请继续按照以下说明操作。
 
+
+
 ```bash
 cd ~/arm-stuff
 wget https://launchpad.net/linaro-toolchain-binaries/trunk/2013.03/+download/gcc-linaro-arm-linux-gnueabihf-4.7-2013.03-20130313_linux.tar.bz2
@@ -1862,39 +1852,58 @@ cd ..
 ./tools/rebuild.sh
 cd ..
 
+```
+
 ```bash
 cat << EOF > boot/uEnv.txt
+
 mmcroot=/dev/mmblk0p2
+
 mmcrootype=ext4 rootwait
+
 cmd-run loadimage; runfdt; run mmcargs; bootz 0x8020000
+
 EOF
+
 cp -v kernel/linux-dev/deploy/3.8-bone20.zImage boot/
+
 mkdir -p boot/dtbs
+
 tar -xf kernel/linux-dev/deploy/3.8-bone20.dtbs.tar.gz -C boot/
+
 tar -xf kernel/linux-dev/deploy/3.8-bone20.modules.tar.gz -C root/
+
 tar -xf kernel/linux-dev/deploy/3.8-bone20-firmware.tar.gz -C root/lib/firmware/
+
 ```
 
 ```bash
 cat << EOF > root/etc/stab
+
 /dev/mmblk0p2 / auto errors=remount-ro 0 1
+
 /dev/mmblk0p1 /boot auto 0 0
+
 EOF
+
 ```
 
 ```bash
 mount $rootp
+
 kpartx -dv $loopdevice
+
 losetup -d loopdevice
+
 ```
 
-使用 **dd** 工具将此文件镜像到你的 SD 卡。在我们的示例中，我们假设存储设备位于 /dev/sdb。**根据需要更改此处。**
+使用 `dd` 工具将此文件镜像到你的 SD 卡。在我们的示例中，我们假设存储设备位于 `/dev/sdb`。**根据需要更改此处。**
 
 ```bash
 dd if=kali-custom-bbb.img of=/dev/sdb bs=1M
 ```
 
-一旦 dd 操作完成，卸载并弹出 SD 卡，启动你的 Beaglebone Black Kali Linux。启动时需要按住“BOOT”按钮，它是靠近 microSD 卡的那个。
+一旦 `dd` 操作完成，卸载并弹出 SD 卡，启动你的 Beaglebone Black Kali Linux。启动时需要按住“BOOT”按钮，它是靠近 microSD 卡的那个。
 
 # 自定义 CuBox 镜像
 
@@ -1902,7 +1911,7 @@ dd if=kali-custom-bbb.img of=/dev/sdb bs=1M
 
 ### 01. 创建 Kali rootfs
 
-按照我们 Kali 文档中的描述，使用 armhf 架构构建 Kali rootfs。在此过程结束时，你应该在 ~/arm-stuff/rootfs/kali-armhf 中拥有一个填充了数据的 rootfs 目录。
+按照我们 Kali 文档中的描述，使用 `armhf` 架构构建 Kali rootfs。在此过程结束时，你应该在 `~/arm-stuff/rootfs/kali-armhf` 中拥有一个填充了数据的 rootfs 目录。
 
 ### 02. 创建镜像文件
 
@@ -1910,11 +1919,17 @@ dd if=kali-custom-bbb.img of=/dev/sdb bs=1M
 
 ```bash
 apt-get install kpartx xz-utils squash
+
 cd ~
+
 mkdir -p arm-stuff
+
 cd arm-stuff/
+
 mkdir -p images
+
 cd images
+
 dd if=/dev/zero of=kali-custom-cubox.img bs=1MB count=7000
 ```
 
@@ -1922,19 +1937,25 @@ dd if=/dev/zero of=kali-custom-cubox.img bs=1MB count=7000
 
 ```bash
 parted kali-custom-cubox.img --script -- mlabel msdos
+
 parted kali-custom-cubox.img --script -- mkpart primary ext4 0 -1
 ```
 
 ```bash
 loopdevice=`losetup -f --show kali-custom-cubox.img`
+
 device=`kpartx -va $loopdevice|sed -E '*/loop([0-9]).*\1/g' | head -1`
+
 device="/dev/mapper/${device}"
+
 rootp=${device}p1
 ```
 
 ```bash
 mkfs.ext4 $rootp
+
 mkdir -p root
+
 mount $rootp root
 ```
 
@@ -1942,6 +1963,7 @@ mount $rootp root
 
 ```bash
 rsync -HPavz /root/arm-stuff/rootfs/kali-armhf/
+
 echo nameserver 8.8.8.8 > /etc/resolv.conf
 ```
 
@@ -1951,31 +1973,57 @@ echo nameserver 8.8.8.8 > /etc/resolv.conf
 
 ```bash
 cd ~/arm-stuff
+
 wget https://launchpad.net/linaro-toolchain-binaries/trunk/2013.03/+download/gcc-linaro-arm-linux-gnueabihf-4.7-2013.03-20130313_linux.tar.bz2
+
 tar xf gcc-linaro-arm-linux-gnueabihf-4.7-2013.03-20130313_linux.tar.bz2
+
 export CC='pwd'/gcc-linaro-arm-linux-gnueabihf-4.7-2013.03-20130313_linux/bin/arm-linux-gnueabihf-
+
 git clone git://git.de/u-boot
+
 cd u-boot/
+
 git checkout v2013.04 -b beagle-bone-black
+
 wget https://raw.github.com/elif/u-boot/patches/master/v2013.04/0001-am335x-evm.Env.txt-bootz-n-fixes.patch
+
 patch -p1 < 0001-am335x-evm.Env.txt-bootz-n-fixes.patch
+
 make ARCH=arm CROSS_COMPILE=${CC} distclean
+
 make ARCH=arm CROSS_COMPILE=${CC} am335x-evm_config
+
 make ARCH=arm CROSS_COMPILE=${CC}
+
 cd ..
 
 mkdir -p kernel
+
 cd kernel
+
 git clone git://github.com/Robertelson/linux-dev
+
 cd linux-dev/
+
 git checkout origin/v3.8 -b
+
 ./build_kernel.sh
+
 mkdir -p patches
+
 wget http://rack-ng.org/mac8021.patch
+
 patch -p1 < patches/mac8021.patch
+
 cd ..
+
 ./tools/rebuild.sh
+
 cd ..
+```
+
+
 
 ```bash
 cat << EOF > boot/uEnv.txt
@@ -2003,13 +2051,13 @@ kpartx -dv $loopdevice
 losetup -d loopdevice
 ```
 
-使用 **dd** 工具将此文件镜像到你的 SD 卡。在我们的示例中，我们假设存储设备位于 /dev/sdb。**根据需要更改此处。**
+使用 `dd` 工具将此文件镜像到你的 SD 卡。在我们的示例中，我们假设存储设备位于 `/dev/sdb`。**根据需要更改此处。**
 
 ```bash
 dd if=kali-custom-bbb.img of=/dev/sdb bs=1M
 ```
 
-一旦 dd 操作完成，卸载并弹出 SD 卡，启动你的 Beaglebone Black Kali Linux。
+一旦 `dd` 操作完成，卸载并弹出 SD 卡，启动你的 Beaglebone Black Kali Linux。
 
 ```bash
 cat << EOF ~/arm-stuff/images/root/boot/boot.txt
@@ -2043,33 +2091,29 @@ mkimage -A arm -T script -C none "Boot.script for CuBox" -d ~/arm-stuff/images/r
 ~/arm-stuff/images/root/boot.scr
 ```
 
-
-
-
-
 ```
 umount /root
 kpartx -dv $loopdevice
 losetup -d $loopdevice
 ```
 
-使用 **dd** 工具将此文件镜像到你的 SD 卡中。在我们的示例中，假设存储设备位于 /dev/sdb。**根据需要更改此项。**
+使用 `dd` 工具将此文件镜像到你的 SD 卡中。在我们的示例中，假设存储设备位于 `/dev/sdb`。**根据需要更改此项。**
 
 ```bash
 dd if=kali-custom-cubox.img of=/dev/sdb bs=1M
 ```
 
-一旦 dd 操作完成，卸载并弹出 SD 卡，然后启动你的 CuBox 进入 Kali Linux。
+一旦 `dd` 操作完成，卸载并弹出 SD 卡，然后启动你的 CuBox 进入 Kali Linux。
 
 # 自定义树莓派镜像
 
 本文档描述了我们创建**自定义 Kali Linux 树莓派 ARM 镜像**的方法，目标群体是开发者。如果你想安装预制的 Kali 镜像，请查看我们的[在树莓派上安装 Kali](Install Kali on Raspberry Pi 文章。
 
-### 01. 创建 Kali rootfs
+## 01. 创建 Kali rootfs
 
-按照我们 Kali 文档中的描述构建 Kali rootfs，使用 **armel** 架构。在此过程结束时，你应该在 **~/arm-stuff/rootfs/kali-armel/** 目录下拥有一个填充了内容的 rootfs 目录。
+按照我们 Kali 文档中的描述构建 Kali rootfs，使用 `armel` 架构。在此过程结束时，你应该在 `~/arm-stuff/rootfs/kali-armel/` 目录下拥有一个填充了内容的 rootfs 目录。
 
-### 02. 创建镜像文件
+## 02. 创建镜像文件
 
 接下来，我们创建物理镜像文件，它将包含我们的树莓派 rootfs 和启动镜像。
 
@@ -2083,7 +2127,7 @@ cd images
 dd if=/dev/zero of=kali-custom-rpi.img bs=1MB count=7000
 ```
 
-### 03. 分区并挂载镜像文件
+## 03. 分区并挂载镜像文件
 
 ```bash
 parted kali-custom-rpi.img --script -- mlabel msdos
@@ -2111,14 +2155,14 @@ mount $root boot
 mount $boot boot
 ```
 
-### 04. 复制并修改 Kali rootfs
+## 04. 复制并修改 Kali rootfs
 
 ```bash
 rsync -HPavz /root/arm-stuff/rootfs/kali-armel/ root
 echo nameserver 8.8.8.8 > root/etc/resolv.conf
 ```
 
-### 05. 编译树莓派内核和模块
+## 05. 编译树莓派内核和模块
 
 如果你没有使用 ARM 硬件作为开发环境，你需要设置一个 ARM 交叉编译环境来构建 ARM 内核和模块。完成后，请按照以下指令操作。
 
@@ -2141,11 +2185,16 @@ make -j$(cat /proc/cpuinfo|grep processor|wc -l)
 # KALI LINUX
 
 官方 Kali Linux 文档
+
 此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
 
 make modules_install INSTALL_MOD_PATH=~/arm-stuff/images/root
+
 cd ~/tools/mkimage/
+
 python imagetool-uncompressed.py ../raspberrypi/arch/arm/boot/Image
+
+
 
 ```bash
 cd ~/arm-stuff/images
@@ -2164,16 +2213,18 @@ kpartx -dv $loopdevice
 losetup -d $loopdevice
 ```
 
-我们使用 dd 工具将此文件镜像到你的 SD 卡中。在我们的示例中，假设存储设备位于 /dev/sdb。根据需要更改此项。
+我们使用 `dd` 工具将此文件镜像到你的 SD 卡中。在我们的示例中，假设存储设备位于 `/dev/sdb`。根据需要更改此项。
 
 ```bash
 dd if=kali-pi.img of=/dev/sdb bs=1M
 ```
 
-一旦 dd 操作完成，卸载并弹出 SD 卡，然后启动你的 Pi 进入 Kali Linux。
+一旦 `dd` 操作完成，卸载并弹出 SD 卡，然后启动你的 Pi 进入 Kali Linux。
 
 # KALI LINUX
+
 官方 Linux 文档
+
 此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
 
 # 自定义 Chromebook 镜像
@@ -2182,11 +2233,11 @@ dd if=kali-pi.img of=/dev/sdb bs=1M
 
 在本指南中，我们创建了一个包含两个启动分区的镜像——其中一个硬编码从 SD 卡启动，另一个硬编码从 USB 启动。根据你的存储介质，按照指南最后阶段的说明，在镜像到 USB 后标记相关的启动分区。
 
-### 01. 创建 Kali rootfs
+## 01. 创建 Kali rootfs
 
-按照我们 Kali 文档中的描述构建 Kali rootfs，使用 **armhf** 架构。在此过程结束时，你应该在 `~/arm-stuff/rootfs/kali-armhf` 中拥有一个填充了内容的 rootfs。
+按照我们 Kali 文档中的描述构建 Kali rootfs，使用 `armhf` 架构。在此过程结束时，你应该在 `~/arm-stuff/rootfs/kali-armhf` 中拥有一个填充了内容的 rootfs。
 
-### 02. 创建镜像文件
+## 02. 创建镜像文件
 
 接下来，我们创建物理镜像文件，它将包含我们的 Chromebook rootfs 和启动镜像。
 
@@ -2200,7 +2251,7 @@ cd images
 dd if=/dev/zero of=kali-custom-chrome.img bs=1MB count=7000
 ```
 
-### 03. 分区并挂载镜像文件
+## 03. 分区并挂载镜像文件
 
 ```bash
 parted kali-custom-chrome.img --script -- mlabel msdos
@@ -2224,9 +2275,9 @@ mkdir -p root
 mount $root
 ```
 
-### 04. 复制并修改 Kali rootfs
+## 04. 复制并修改 Kali rootfs
 
-使用 **rsync** 将之前引导的 Kali rootfs 复制到挂载的镜像中。
+使用 `rsync` 将之前引导的 Kali rootfs 复制到挂载的镜像中。
 
 ```bash
 cd ~/arm-stuff/images/
@@ -2250,7 +2301,7 @@ End
 EOF
 ```
 
-### 05. 编译 Samsung 内核和模块
+## 05. 编译 Samsung 内核和模块
 
 如果你没有使用 ARM 硬件作为开发环境，你需要设置一个 ARM 环境来构建 ARM 内核和模块。完成后，请按照以下指令操作。
 
@@ -2265,7 +2316,9 @@ cd chromeos
 ```
 
 # KALI LINUX
+
 官方 Linux 文档
+
 此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
 
 ```bash
@@ -2305,7 +2358,9 @@ EOF
 ```
 
 # KALI LINUX
+
 官方 Linux 文档
+
 此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
 
 在我们的案例中，为内核应用无线注入补丁。
@@ -2319,6 +2374,8 @@ wget http://patches.airrack-ng.org/channel-negative-one.patch -O ../patches/nega
 等待，OCR逻辑有些混乱：
 
 配置，然后如下所示交叉编译 Chromium 内核。
+
+
 
 ```bash
 export ARCH=arm
@@ -2337,41 +2394,44 @@ mkimage -f kernel.it
 make modules_install INSTALL_MOD_PATH=~/arm-stuff/images/root/
 ```
 
-
-
-
-
 # KALI LINUX
 
-echo "console=tty1 debug verbose root=/dev/mmcblk1p3 rootwait rootfstype=ext4" > /tmp/config-sd
-echo "console=tty1 debug verbose root=/dev/sda3 rootwait rootfstype=ext4" > /tmp/config-usb
+`echo "console=tty1 debug verbose root=/dev/mmcblk1p3 rootwait rootfstype=ext4" > /tmp/config-sd`
 
-vbutyl_kernel --pack /tmp/newkern-sd --keyblock /usr/share/vboot/devkeys/kernel.keyblock --version 1
---signprivat /usr/share/vboot/devkeys/kernel_data_key.vbprivat --config=/tmp --arch arm
+`echo "console=tty1 debug verbose root=/dev/sda3 rootwait rootfstype=ext4" > /tmp/config-usb`
 
-vbutyl_kernel --pack /tmp/newkern-usb --keyblock /usr/share/vboot/devkeys/kernel.keyblock --version 1
---signprivat /usr/share/vboot/devkeys/kernel_data_key.vbprivat --config=/tmp/config-sd --vmlinuzkernel.itb --arch arm
+`vbutyl_kernel --pack /tmp/newkern-sd --keyblock /usr/share/vboot/devkeys/kernel.keyblock --version 1`
+
+`--signprivat /usr/share/vboot/devkeys/kernel_data_key.vbprivat --config=/tmp --arch arm`
+
+`vbutyl_kernel --pack /tmp/newkern-usb --keyblock /usr/share/vboot/devkeys/kernel.keyblock --version 1`
+
+`--signprivat /usr/share/vboot/devkeys/kernel_data_key.vbprivat --config=/tmp/config-sd --vmlinuzkernel.itb --arch arm`
 
 ## 06. 准备启动分区
 
-dd if=/tmp/newkern-sd of=$bootp1 # SD 卡第一个启动分区
-dd if=/tmp/newkern-usb of=$bootp2 # USB 第二个启动分区
+`dd if=/tmp/newkern-sd of=$bootp1` # SD 卡第一个启动分区
 
-mount $rootp
+`dd if=/tmp/newkern-usb of=$bootp2` # USB 第二个启动分区
 
-kpartx -dv $loopdevice
-losetup -d $loopdevice
+`mount $rootp`
+
+`kpartx -dv $loopdevice`
+
+`losetup -d $loopdevice`
 
 # 07. 写入镜像并标记 USB 驱动器启动
 
-dd if=kali-custom-chrome.img of=/dev/sdb bs=512k
-cgpt repair /dev/sdb
+`dd if=kali-custom-chrome.img of=/dev/sdb bs=512k`
 
-此时，你需要将启动分区 1 或 2 设置为更高的优先级。数字越高的分区将先启动。下面的示例将为第一个分区 (-i) 赋予优先级 10，从而成功地从 SD 卡启动。
+`cgpt repair /dev/sdb`
+
+此时，你需要将启动分区 1 或 2 设置为更高的优先级。数字越高的分区将先启动。下面的示例将为第一个分区 `-i` 赋予优先级 10，从而成功地从 SD 卡启动。
 
 # KALI LINUX
 
 官方 Linux 文档
+
 此 PDF 在 docs.kali.org 上自动自动生成 - 2013年8月19日
 
 ```
@@ -2408,6 +2468,7 @@ root@kali:~#
 # KALI LINUX
 
 官方 Linux 文档
+
 此 PDF 在 docs.kali.org 上自动自动生成 - 2013年8月19日
 
 # 自定义 MK/SS808 镜像
@@ -2473,22 +2534,35 @@ cd r306-kernel
 sed -i "vpu_service/d" arm/plat/Makefile
 ```
 
-```
+
+
+```bash
 export ARCH=arm
 export CROSS_COMPILE=~/arm-stuff/kernel/toolchains/arm-linux-gnueihf-4.6/bin/arm-linux-gnueihf-
-# UG802 和 MK802 的基础配置
-make r306_defconfig
-## MK808 的基础配置
-make r306_defconfig
-## 配置你的内核
-make menuconfig
+```
 
-# 根据 http://www.armvtech.com/armvtechforum/topic.php?f=66&t=835 配置内核
+### UG802 和 MK802 的基础配置
+```bash
+make r306_defconfig
+```
+
+### MK808 的基础配置
+```bash
+make r306_defconfig
+```
+
+### 配置你的内核
+```bash
+make menuconfig
+```
+
+根据 http://www.armvtech.com/armvtechforum/topic.php?f=66&t=835 配置内核
+```bash
 mkdir ../initramfs/
 wget http://www.armvtech.com/armvtechforum/topic.php?f=66&t=835/initramfs.cpio -O ../initramfs.cpio
 ```
 
-```
+```bash
 mkdir -p ../patches
 wget http://patches.aircrept.org/mac8211-v1.patch -O ../patches/mac8211.patch
 wget http://patches.aircrept.org/channel-negative.patch -O ../patches/negative.patch
@@ -2496,9 +2570,11 @@ patch -p1 < ../patches/mac8211.patch
 patch -p1 < ../patches/negative.patch
 ```
 
+```bash
 ./make_kernel.sh
-
 ```
+
+```bash
 make modules -j$(cat /proc/cpuinfo|grep processor|wc -l)
 make modules_install INSTALL_MOD_PATH=~/arm-stuff/images/root
 git clone https://git.kernel.org/pub/scm/linux/kernel/git/dmw/linux-firmware.git firmware-git
@@ -2506,33 +2582,35 @@ mkdir -p ~/arm-stuff/images/root/firmware
 cp -rf firmware-git/* ~/arm-stuff/images/root/
 ```
 
+```bash
 umount $root
 kpartx -dv $loopdevice
 losetup -d $loopdevice
+```
 
 ## 07. 将镜像写入 USB 设备
 
-使用 dd 工具此文件写入 SD 卡。在示例中，假设存储设备位于 /dev/sdb。根据需要进行更改。
+使用 `dd` 工具此文件写入 SD 卡。在示例中，假设存储设备位于 `/dev/sdb`。根据需要进行更改。
 
-```
+```bash
 dd if=kali-custom-ss808.img of=/dev/sdb bs=512k
 ```
 
-完成 dd 操作后，卸载并弹出 SD 卡，进入 Kali Linux 进入 MK/SS808。
+完成 `dd` 操作后，卸载并弹出 SD 卡，进入 Kali Linux 进入 MK/SS808。
 
 # 自定义 ODROID X2 U 镜像
 
-本文描述了我们创建**自定义 Kali Linux ODROID 镜像**的方法，并针对开发者。如果你想安装预制的 ODROID 镜像，请查看我们的 [在 ODROID 上安装 Kali]()() 文章。
+本文描述了我们创建`自定义 Kali Linux ODROID 镜像`的方法，并针对开发者。如果你想安装预制的 ODROID 镜像，请查看我们的 [在 ODROID 上安装 Kali]()() 文章。
 
 ### 01. 创建 Kali rootfs
 
-首先按照我们 Kali 文档中的描述使用 **armhf** 架构构建 Kali rootfs。在此过程结束时，你应该会在 `~/arm-stuff/rootfs/kali-armhf` 获得填充好的 rootfs 目录。
+首先按照我们 Kali 文档中的描述使用 `armhf` 架构构建 Kali rootfs。在此过程结束时，你应该会在 `~/arm-stuff/rootfs/kali-armhf` 获得填充好的 rootfs 目录。
 
 ### 02. 创建镜像文件
 
 接下来，我们创建一个物理镜像文件，它将包含我们的 ODROID rootfs 和启动镜像。
 
-```
+```bash
 apt-get install kpartx xz-utils uboot-mkimage
 cd ~
 mkdir -p arm-stuff
@@ -2544,13 +2622,13 @@ dd if=/dev/zero of=kali-custom-odroid.img bs=1MB count=7000
 
 ### 03. 分区并挂载镜像文件
 
-```
+```bash
 parted kali-custom-odroid.img --script -- mklabel mdos
 parted kali-custom-odroid.img --script -- mkpart fat32 4096s 266239s
 parted kali-custom-odroid.img --script -- mkpart ext4 266240s 100%
 ```
 
-```
+```bash
 loopdevice=`losetup -f --show kali-custom-odroid.img`
 device=`kpartx -va $loopdevice|sed -E '/loop[0-9]).*/1/' | head -1`
 device="/dev/mapper/${device}"
@@ -2564,9 +2642,9 @@ mount $root
 
 ### 04. 复制并修改 Kali rootfs
 
-使用 rsync 将你之前引导的 Kali rootfs 复制到挂载的镜像。
+使用 `rsync` 将你之前引导的 Kali rootfs 复制到挂载的镜像。
 
-```
+```bash
 rsync -avz ~/arm-stuff/rootfs/kali-armhf/ /root/
 echo nameserver 8.8.8.8 > root/resolv.conf
 ```
@@ -2575,9 +2653,9 @@ echo nameserver 8.8.8.8 > root/resolv.conf
 
 如果你没有使用 ARM 硬件作为开发环境，你需要设置 ARM 交叉编译环境来构建内核。完成后，按照以下步骤操作。
 
-编辑 ~/arm-stuff/images/root/etc/inittab 文件并找到“Example how to put a getty on a serial line”。
+编辑 `~/arm-stuff/images/root/etc/inittab` 文件并找到“Example how to put a getty on a serial line”。
 
-```
+```bash
 nano root/etc/inittab
 ```
 
@@ -2593,13 +2671,13 @@ T1:12345:respawn:/sbin/agetty 115200 ttySAC1 vt100
 T1:12345:respawn:/bin/login -f root ttySAC1 /dev/ttySAC1 >&1
 ```
 
-现在，确保 ~/arm-stuff/images/root/etc/udev/links.conf 文件中有 ttySAC1 条目。
+现在，确保 `~/arm-stuff/images/root/etc/udev/links.conf` 文件中有 `ttySAC1` 条目。
 
-```
+```bash
 nano root/etc/udev/links.conf
 ```
 
-如果不存在 ttySAC1 条目，请将其添加到文件中，使其如下所示：
+如果不存在 `ttySAC1` 条目，请将其添加到文件中，使其如下所示：
 
 ```
 M null c 1 3
@@ -2607,7 +2685,7 @@ M console c 5 1
 M ttySAC1 c 5 1
 ```
 
-在 ~/arm-stuff/images/root/etc/udev/links.conf 文件中添加 ttySAC 条目。
+在 `~/arm-stuff/images/root/etc/udev/links.conf` 文件中添加 ttySAC 条目。
 
 ```bash
 cat << EOF >> root/etc/securetty
@@ -2617,18 +2695,15 @@ ttySAC2
 EOF
 ```
 
-在 rootfs 中放置一个基础 xorg.conf 文件。
-
-
-
-
+在 rootfs 中放置一个基础 `xorg.conf` 文件。
 
 # KALI LINUX
 
 官方 Linux 文档
+
 此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
 
-```
+```bash
 cat << EOF > root/etc/X11/xorg.conf
 # X.Org X X server configuration file for xfree86-video-mali
 
@@ -2657,16 +2732,18 @@ EOF
 
 在 rootfs 目录下初始化 init：
 
-```
+```bash
 cd ~/arm-stuff/images/root
 ln -s /sbin/init init
 ```
 
-# 05. 编译 ODROID 内核和模块
+## 05. 编译 ODROID 内核和模块
 
 如果你没有使用 ARM 硬件作为开发环境，你将需要建立 ARM 交叉编译环境来构建 ARM 内核和模块。完成后后，请按照以下说明操作。
 
 我们现在需要获取 ODROID 内核源码并将其放入我们的开发树结构中：
+
+
 
 ```
 cd ~/arm-stuff
@@ -2700,7 +2777,7 @@ make -j$(cat /proc/cpuinfo|grep processor|wc -l)
 make modules_install INSTALL_MOD_PATH=~/arm-stuff/images/root/
 ```
 
-chroot rootfs 并创建 initrd。确保为 `mkinitramfs` 命令使用正确的内核版本/额外版本。在我们的案例中，它是“3.8.13”。
+`chroot` `rootfs` 并创建 `initrd`。确保为 `mkinitramfs` 命令使用正确的内核版本/额外版本。在我们的案例中，它是“3.8.13”。
 
 ```
 LANG=C chroot ~/arm-stuff/images/root/
@@ -2715,7 +2792,7 @@ exit
 
 ## 06. 准备启动分区
 
-将内核和生成的 initrd 文件拷贝到挂载的启动分区，如下所示。
+将内核和生成的 `initrd` 文件拷贝到挂载的启动分区，如下所示。
 
 ```
 mv ~/arm-stuff/images/root/ulnitrd ~/arm-stuff/images/boot/
@@ -2764,7 +2841,7 @@ umount -d $loopdevice
 dd if=kali-custom-odroid.img of=/dev/sdb bs=1M
 ```
 
-一旦操作完成，将 UART 串口线连接到 ODROID 并插入 microSD 卡启动。通过串口控制台，你将登录 Kali (root) 并运行 startx。
+一旦操作完成，将 UART 串口线连接到 ODROID 并插入 microSD 卡启动。通过串口控制台，你将登录 Kali (root) 并运行 `startx`。
 
 如果一切正常且你想让 ODROID 自动启动，请确保在 `.bash_profile` 中使用“autologin”行并添加以下内容：
 
@@ -2775,26 +2852,35 @@ if [ -z "$DISPLAY" ] && [ $(tty) = /dev/tty1 ]; then
 startx
 fi
 EOF
+```
 
-8. 安装 Mali 图驱动（可选）
+### 8. 安装 Mali 图驱动（可选）
 
 这些步骤是实验性的且未经过完全测试。应该在 Kali 内部执行。
 
 ```bash
 wget http://developer.arm.com/develop-for-mali/open-source-mali-linux-x11-drivers/
+
 apt-get install build-essential autoconf make libtool xutils-dev libdrm-dev
+
 wget http://developer.arm.com/downloads/DX910/r3p2-01rel0/DX910-SW-99003-r3p2-01rel0.tgz
+
 wget http://developer.arm.com/downloads/DX910/r3p2-01rel0/DX910-SW-99006-r3p2-01rel0.tgz
+
 wget --no-check https://dl.dropbox.com/u/6531725/mali_opengl_hf_lib.tgz
 ```
 
 ```
 tar -xzvf mali_opengl_hf_lib.tgz
+
 cp mali_opengl_hf_lib/* /usr/lib/
 
 tar -xzf DX910-SW-99003-r3p2-01rel0.tgz
+
 tar -xzvf DX910-SW-99003-r3p2-01rel0.tgz
+
 cd DX910-SW-99003-r3p2-01rel0/x11/xf86-video-mali-0.0.1/
+
 ./autogen.sh
 ```
 
@@ -2804,11 +2890,17 @@ chmod +x configure
 
 ```
 CFLAGS="-O3 -Wall -Wextra -I/usr/include/libdrm DX910-SW-99006-r3p2-01rel0/driver/src/include" LDFLAGS="-L/usr/lib -IMali -lpthread"
+
 ./configure --prefix=/usr --with-includes=/usr --with-libraries=/usr/lib
+
 cp -rf ../../../DX910-SW-99006-r3p2-01rel0/driver/src/include/ump src/
+
 mkdir -p umplock
+
 cd umplock
+
 wget http://service.linux.de/a10_source_1.5/lichee-linux-3.0/modules/mali/DX910-SW-99002-r3p0-04rel0/driver/src/devdrv/umplock/umpl_ioctl.h
+
 cd ..
 ```
 
@@ -2831,12 +2923,15 @@ make install
 
 ```
 apt-get install git-core gnupg bison gperf libbsd0-dev build-essential \
-zip curl libncurses5-dev zlib1g-dev libncurses-dev gcc-multilib g++-multilib
 ```
+
+
+
+`zip` `curl` `libncurses5-dev` `zlib1g-dev` `libncurses-dev` `gcc-multilib` `g++-multilib`
 
 如果你运行 64 位 Kali Linux 系统，按照以下方式为你的开发环境添加 i386 架构支持。
 
-```
+```bash
 dpkg --add-architecture i386
 apt-get update
 apt-get install ia32-libs
@@ -2846,7 +2941,7 @@ apt-get install ia32-libs
 
 从我们的 Git 仓库下载 Linaro 交叉编译器。
 
-```
+```bash
 cd ~
 mkdir -p arm-stuff/kernel/toolchains
 cd arm-stuff/kernel/toolchains
@@ -2857,7 +2952,7 @@ git clone git://github.com/offensive-security/arm-eabi-linaro-4.6.2.git
 
 要使用 Linaro 交叉编译器，你需要在会话中设置以下环境变量。
 
-```
+```bash
 export ARCH=arm
 export CROSS_COMPILE=~/arm-stuff/kernel/toolchains/arm-eabi-linaro-4.6.2/bin/arm-eabi-
 ```
@@ -2866,39 +2961,32 @@ export CROSS_COMPILE=~/arm-stuff/kernel/toolchains/arm-eabi-linaro-4.6.2/bin/arm
 
 ## 从源码重构软件包
 
-有时，我们需要从源码重构 Kali 软件包。幸运的是，这只需要通过 apt-get 获取包源码，根据需要进行修改，然后使用 Debian 工具进行重构。在例例中，我们将重新编译 `libfree` 包，以便为 `mifare-format` 工具添加一些额外的硬编码 Mifare 访问密钥。
+有时，我们需要从源码重构 Kali 软件包。幸运的是，这只需要通过 `apt-get` 获取包源码，根据需要进行修改，然后使用 Debian 工具进行重构。在例例中，我们将重新编译 `libfree` 包，以便为 `mifare-format` 工具添加一些额外的硬编码 Mifare 访问密钥。
 
-## 下载包源码
+### 下载包源码
 
-```
-## 获取源码包
+```bash
 apt-get source libfreefare
 cd libfreefare-0.3.4~svn1469/
 ```
 
-## 修改包源码
+### 修改包源码
 
 对包源码进行所需的更改。在我们的案例中，我们修改了一个示例文件 `mifare-classic-format.c`。
 
-```
+```bash
 nano examples/mifare-classic-format.c
 ```
 
-## 检查构建依赖
+### 检查构建依赖
 
 检查包可能具有任何构建依赖项。在构建包之前需要安装这些项。
 
+```bash
+dpkg-checkbuilddeps
 ```
-dpkg-checkbuildldeps
-```
 
-输出取决于你已安装的包，应该类似于以下内容。 |dpkg-
-
-
-
-
-
-# KALI LINUX
+输出取决于你已安装的包，应该类似于以下内容。
 
 `checkbuilddeps` 没有输出，这意味着你没有任何遗漏的依赖项，可以继续进行构建。
 
@@ -2906,7 +2994,7 @@ dpkg-checkbuildldeps
 dpkg-checkbuilddeps: Unmet build dependencies: dh-autoreconf libnfc-dev
 ```
 
-## 安装构建依赖
+### 安装构建依赖
 
 如果需要，请安装任何构建依赖，如 `dpkg-checkbuilddeps` 的输出所示：
 
@@ -2914,7 +3002,7 @@ dpkg-checkbuilddeps: Unmet build dependencies: dh-autoreconf libnfc-dev
 apt-get install dh-autoreconf libnfc-dev
 ```
 
-## 编译修改后的包
+### 编译修改后的包
 
 在安装所有依赖项后，调用 `dpkg-buildpackage` 来构建你的新版本是一件简单的事。
 
@@ -2922,7 +3010,7 @@ apt-get install dh-autoreconf libnfc-dev
 dpkg-buildpackage
 ```
 
-## 安装新包
+### 安装新包
 
 如果一切顺利，你应该可以安装新创建的包。
 
@@ -2936,7 +3024,7 @@ dpkg -i ../libfreeare*.deb
 
 有时，你可能想要添加某些官方 Kali Linux 内核未包含的驱动程序、补丁或内核功能。本指南将描述如何根据你的快速修改并重新编译 Kali Linux 内核。请注意，Kali Linux 内核默认已包含全局无线注入补丁。
 
-## 安装构建依赖
+### 安装构建依赖
 
 首先安装重新编译内核所需的所有构建依赖。
 
@@ -2944,7 +3032,7 @@ dpkg -i ../libfreeare*.deb
 apt-get install kernel-package ncurses-dev fakeroot bzip2
 ```
 
-## 下载 Kali Linux 内核源码
+### 下载 Kali Linux 内核源码
 
 下载并提取 Kali Linux 内核源码。
 
@@ -2955,7 +3043,7 @@ tar jpxf linux-source-3.7.tar.bz2
 cd linux-source-3.7/
 ```
 
-## 配置你的内核
+### 配置你的内核
 
 复制默认的 Kali Linux 内核 `.config` 文件，然后根据你的需求进行修改。这是你应用各种补丁的阶段。在示例中，我们正在重新编译一个 64 位内核。
 
@@ -2964,7 +3052,7 @@ cp /boot/config-3.7-trunk-amd64 .config
 make menuconfig
 ```
 
-## 编译内核
+### 编译内核
 
 编译你修改后的内核镜像。根据你的硬件情况，这可能需要一些时间。
 
@@ -2974,7 +3062,7 @@ make-kpkg clean
 fakeroot make-kpkg kernel_image
 ```
 
-## 安装内核
+### 安装内核
 
 一旦内核成功编译，继续安装新内核并重启。请注意，内核版本号可能会变化——在我们的示例中，它是 3.7.2。根据当前的内核版本，你可能需要进行相应的调整。
 
@@ -2984,6 +3072,8 @@ update-initramfs -c -k 3.7.2
 update-grub2
 reboot
 ```
+
+
 
 重启后，你的新内核应该就会运行。如果出现问题且内核无法启动，你仍然可以启动原始官方 Kali 内核并修复问题。
 
@@ -3008,20 +3098,20 @@ Kali Linux 的诞生是回馈社区的热爱之作。让每个人的事情变得
 - 不要发布如“我也一样”或“+1”等没有帮助的评论。
 - 不要抱怨修复一个 Bug 需要多长时间。
 
-# 如何报告 Bug
+## 如何报告 Bug
 
-Kali Linux Bug 跟踪器可以在 http://bugs.kali.org 找到。本本文档将引导你完成账户创建、创建系统配置以及如何提交详细报告到 Bug 跟踪器中。
+Kali Linux Bug 跟踪器可以在 `http://bugs.kali.org` 找到。本本文档将引导你完成账户创建、创建系统配置以及如何提交详细报告到 Bug 跟踪器中。
 
-# 创建 Kali Linux Bug 跟踪器账户
+### 创建 Kali Linux Bug 跟踪器账户
 
 如果你还没有创建账户，需要先完成此操作。创建账户将允许你提交报告并继续处理现有报告。
 
-在 Bug 跟踪器网站上，点击“Signup for new account”（注册新账户）开始流程。
+在 Bug 跟踪器网站上，点击“Signup for new account”开始流程。
 
 # KALI LINUX
 
 官方 Kali Linux 文档
-此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
+此 PDF 在 `docs.kali.org` 上自动生成 - 2013年8月19日
 
 # KALI LINUX
 BUG 跟踪器
@@ -3055,7 +3145,7 @@ BUG 跟踪器
 # KALI LINUX
 
 官方 Kali Linux 文档
-此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
+此 PDF 在 `docs.kali.org` 上自动生成 - 2013年8月19日
 
 # KALI LINUX
 BUG 跟踪器
@@ -3081,7 +3171,7 @@ BUG 跟踪器
 # KALI LINUX
 
 官方 Kali Linux 文档
-此 PDF 在 docs.kali.org 上自动生成 - 2013年8月19日
+此 PDF 在 `docs.kali.org` 上自动生成 - 2013年8月19日
 
 # KALI LINUX
 BUG 跟踪器
@@ -3094,13 +3184,9 @@ BUG 跟踪器
 
 [ 继续 ]
 
-# 在 Kali Linux Bug 跟踪器中创建配置
+## 在 Kali Linux Bug 跟踪器中创建配置
 
 虽然不是必须，但建议在你的 Bug 跟踪器账户中创建一个唯一的配置。你可以为每个系统创建一个自定义配置，也可以从提供的默认配置中选择。这些配置是作为 Bug 报告提交时定义平台、操作系统和版本信息的快捷方式。
-
-
-
-
 
 # KALI LINUX
 
@@ -3109,10 +3195,10 @@ BUG 跟踪器
 
 ![](img/a9ef2e82e60ca0e2c1f6c67b184f6420_144_0.png)
 
-该配置已如所示，当你在创建新的“报告问题”（Report Issue）时，它将显示在“选择配置”（Select Profile）下拉列表中。
+该配置已如所示，当你在创建新的“报告问题”时，它将显示在“选择配置”下拉列表中。
 你可以根据需要创建任意数量的不同配置，只需在提交 bug 报告时选择正确的一个即可。
 
-# 确保你没有重复之前的请求
+## 确保你没有重复之前的请求
 
 在开始报告之前，请在网站上搜索与你的问题相关的关键词。如果已经存在与硬件无关的现有 bug，请不要重复请求或添加不必要的注释（例如，“我也一样 (Me Too)”或“+1”）。如果该问题已被报告，你可以通过点击 ID 链接查看问题的状态。
 
@@ -3120,36 +3206,36 @@ BUG 跟踪器
 
 © Offensive Security 2013 页码：145 / 175
 
-## 创建报告
+### 创建报告
 
-要开始你的报告，请登录你的账户并点击落地页上的“报告问题”（Report Issue）链接。你需要尽可能地填写多的信息。如果有帮助，请查看文档开头的提示，以确保你的操作符合预期。
+要开始你的报告，请登录你的账户并点击落地页上的“报告问题”链接。你需要尽可能地填写多的信息。如果有帮助，请查看文档开头的提示，以确保你的操作符合预期。
 
 报告中的以下字段是必填的：
 
-- 类别 (Category)
-- 摘要 (Summary)
-- 描述 (Description)
+- 类别 `Category`
+- 摘要 `Summary`
+- 描述 `Description`
 
 尽管其他字段不是强制性的，但我们建议你在每个选项中尽可能包含多的信息，特别注意以下内容：
 
-- 可复现性 (Reproducibility)
-- 选择配置 (Select Profile)
-- 重现步骤 (Steps to Reproduce)
-- 附加信息 (Additional Information)
+- 可复现性 `Reproducibility`
+- 选择配置 `Select Profile`
+- 重现步骤 `Steps to Reproduce`
+- 附加信息 `Additional Information`
 - 上传文件（错误日志、截图）
 
-## 决定合适的类别
+### 决定合适的类别
 
 Kali bug 跟踪器目前共有四 (4) 种可用类别。在开始请求之前，请确保它被正确归类为以下之一：
 
-- 通用 bug (General Bug)
-- Kali 软件包 bug (Kali Package Bug)
-- 新工具请求 (New Tool Requests)
-- 工具升级 (Tool Upgrade)
+- 通用 bug `General Bug`
+- Kali 软件包 bug `Kali Package Bug`
+- 新工具请求 `New Tool Requests`
+- 工具升级 `Tool Upgrade`
 
-不要在 bug 跟踪器中请求支持。Kali Linux 提供了几种支持选项，包括 http://docs.kali.org、https://forums.kali.org 以及 freenode  IRC 聊天室 (#kali-linux)
+不要在 bug 跟踪器中请求支持。Kali Linux 提供了几种支持选项，包括 `http://docs.kali.org`、`https://forums.kali.org` 以及 freenode IRC 聊天室 (`#kali-linux`)
 
-## 提供具有描述性的摘要
+### 提供具有描述性的摘要
 
 摘要字段本质上是报告的“名称”，它是 Kali 开发人员和其他访问者首先看到的内容。请提供一个简短且具有描述性的摘要，用来描述该问题或请求。
 
@@ -3159,31 +3245,51 @@ Kali bug 跟踪器目前共有四 (4) 种可用类别。在开始请求之前，
 
 摘要不需要包含所有内容，但它应该传达你提交报告的原因。
 
-# 使用 dpkg 查找报告所需的软件包和版本
+## 使用 dpkg 查找报告所需的软件包和版本
 
-你可以通过 dpkg 标志的组合来查找安装了哪些软件包。在报告中包含这些命令输出的输出信息至关重要。输出也可以放在文件中并上传。（在本文稍后部分将讨论。）
+你可以通过 `dpkg` 标志的组合来查找安装了哪些软件包。在报告中包含这些命令输出的输出信息至关重要。输出也可以放在文件中并上传。（在本文稍后部分将讨论。）
 
-- search
-- list
-- status
+- `search`
+- `list`
+- `status`
 
 示例输出
 
 ```
+
+
+
+# KALI LINUX
+
+官方 Linux 文档
+此 PDF 已在 `docs.kali.org` 上于 2013年8月19日 自动生成
+
+```
 root@kali:~# # which chromium
 /usr/bin/chromium
+```
+
+```
 root@kali:~# # type chromium
 chromium is /usr/bin/chromium
+```
+
+```
 root@kali:~# # dpkg -search /usr/bin/chromium
 chromium: /usr/bin/chromium
+```
+
+```
 root@kali:~# # dpkg --list chromium
 Desired=Unknown/Install/Remove/Purge/Hold
 | Status=Not-Install/Conf-files/Unpacked/Half-conf/Half-inst/trig-aWait/Trig-pend
 | Err=(none)/Reinst-required (Status,Err: uppercase=bad)
 | Name      Version      Architecture Description
 + +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++====+
-
 ii chromium      24.0.1312.68 amd64      Google open chromium web
+```
+
+```
 root@kali:~# # dpkg -status chromium
 Package: chromium
 Status: install ok installed
@@ -3195,15 +3301,11 @@ amd64
 Source: chromium-browser
 ```
 
-# KALI LINUX
+Version: `24.0.1312.68-1`
 
-官方 Linux 文档
-此 PDF 已在 docs.kali.org 上于 2013年8月19日 自动生成
-
-```
-Version: 24.0.1312.68-1
 ...Output Truncated...
-```
+
+
 
 ## 构建描述场景
 
@@ -3215,18 +3317,14 @@ Version: 24.0.1312.68-1
 - 建议的修复方法，如果你能制作出补丁的话
 - 软件包版本以及任何与依赖包相关的信息
 - 内核版本、共享 C 库以及任何其他合适的细节
-- uname -a
-- dpkg -s libc6 | grep ^Version
-- 如果适用，软件版本 - (例如，python -V)
+- `uname -a`
+- `dpkg -s libc6 | grep ^Version`
+- 如果适用，软件版本 - (例如，`python -V`)
 - 你的硬件详情
 - 如果你报告的是设备驱动程序的问题，请列出系统中的所有硬件
 - 为了一个完整的
 
 *(注：后续文本为大量重复内容，已按要求处理，保留核心翻译结构)*
-
-
-
-
 
 # KALI LINUX
 
@@ -3246,20 +3344,17 @@ Kali Linux 官方文档
 请对你的请求保持耐心，开发者修复你的问题就像和你一样。我们热爱我们所做，并为继续让 Kali 成为最先进的渗透测试发行版感到自豪。
 
 本文根据列出的各种资源编写，并根据我们的需求进行了修改：
-
 - http://www.chiark.greenend.org.uk/~sgtatham/bugs.html - 获取于 2013年3月20日
 - https://help.ubuntu.com/community/ReportingBugs - 获取于 2013年3月20日
 - http://www.debian.org/Bugs/Reporting - 获取于 2013年3月20日
 
-# KALI LINUX
+## 在 Linux 中排查无线驱动问题
 
-Linux 官方文档 此 PDF 在 docs.kali.org 自动生成 - 2013年8月19日
-
-在 Linux 中排查无线驱动问题如果你不知道要寻找什么，可能会是一个令人沮丧的经历。本文旨在作为一个通用指南，更好地帮助你找到解决无线问题所需的信息。
+如果你不知道要寻找什么，可能会是一个令人沮丧的经历。本文旨在作为一个通用指南，更好地帮助你找到解决无线问题所需的信息。
 
 > 仔细阅读**任何**错误消息，因为它们**非常经常**告诉你哪里出了问题以及如何修复。如果不是，请使用你的 Google-Fu。
 
-## 1. 无接口
+### 1. 无接口
 
 字体 愚的问题：它是无线网卡吗？（我们见过几次了）
 - 设备插入了吗？
@@ -3268,20 +3363,20 @@ Linux 官方文档 此 PDF 在 docs.kali.org 自动生成 - 2013年8月19日
 - 如果是 Kali 虚拟机，除非你的卡是 USB 的，否则它将无法使用（VMWare/VirtualBox/QEMU 会虚拟化每一个 PCI 设备。它被附加到了虚拟机）
 - 如果 `dmesg` 中空无内容且不是虚拟机，那么你可能想尝试最新的 `compat-wireless`（有时你需要固件）-> 检查 Linux-Wireless 驱动
 
-## 2. 有接口但无法进行操作
+### 2. 有接口但无法进行操作
 
 - 读取错误消息
 - 如果没有错误消息，运行 `dmesg | tail`，它很可能会告诉你哪里出了问题
 - 可能缺少固件
 - 检查 `rfkill` 以及任何硬件开关和 BIOS 选项
 
-## 3. 无监听模式
+### 3. 无监听模式
 
 - STA 驱动（Ralink, Broadcom）以及其他制造商提供的驱动都不监听模式
 - `ndiswipper` 不支持监听模式且**永远不支持**。
 - Airodump-ng/Wireshark 不显示任何包：检查 `rfkill` 以及任何硬件开关和 BIOS 选项
 
-## 4. 注入
+### 4. 注入
 
 - 使用 `airplay-ng -9` 测试（确保网卡通过 `airmon-ng` 处于监听模式）
 - `airmon-ng` 未显示芯片信息：这不是大问题，因为它只是没有从网卡获取信息，并且不会改变网卡的能力
@@ -3292,11 +3387,6 @@ Linux 官方文档 此 PDF 在 docs.kali.org 自动生成 - 2013年8月19日
 
 - 我的卡能用 Aircrack-ng 吗？
 - Compat-wireless
-
-# KALI LINUX
-
-Linux 官方文档
-此 PDF 在 docs.kali.org 自动生成 - 2013年8月19日
 
 # 09. Kali 社区支持
 
@@ -3310,30 +3400,30 @@ Kali Linux 有位于 Freenode 网络上的官方 IRC 频道。官方 IRC 频道�
 我们努力尽可能保持非正式，但如果你能遵守这些，我们将不胜感激！
 泛而言之，如果你友好、宽容且理智，你可能不需要任何特定的规则知识就能走得很远——但为了避免疑义，规则就在这里。
 
-## 如何对待其他用户
+### 如何对待其他用户
 
 为了让频道成为我们所有用户喜爱的愉快去处，我们希望所有人尽可能保持友好和宽容。我们要求你克制脏话，并对频道成员和访客表示尊重。如果你发现自己对频道或其他用户感到沮丧，我们鼓励你花点时间做别的事。尽量确保你不要让别人觉得你只是在利用他们——帮助。
 
-## 如何争论
+### 如何争论
 
 为了让频道成为我们所有用户喜欢的愉快去处，我们希望所有人尽可能保持友好和宽容。我们要求你克制脏话，并对频道成员和访客表示尊重。如果你发现自己对频道或其他用户感到沮丧，我们鼓励你花点时间做别的事。尽量确保你不要让别人觉得你只是在利用他们——帮助。
 
-## 主题
+### 主题
 
 我们努力尽可能保持非正式，但如果你能遵守这些，我们将不胜感激！
 泛而言之，如果你友好、宽容且理智，你可能不需要任何特定的规则知识就能走得很远——但为了避免疑义，规则就在这里。
 
-## 寻求帮助
+### 寻求帮助
 
 如果你在寻求帮助，首先，谢谢！问题以及由此产生的讨论让 IRC 变得伟大，通过帮助营造氛围，你让所有人受益。
 
-## 提供完整信息
+### 提供完整信息
 
 如果你被要求提供更多信息，请准确提供。正确的答案将取决于此。从另一个角度来看：我们对你的问题了解得越多，对我们独立也有益——即使你是在向我们提问，你也可以教我们一些东西！
 
-## KALI LINUX
+## 支持或参与非法活动
 
-支持或参与非法活动——不言自明，我们不想帮助违法。
+不言自明，我们不想帮助违法。
 
 ## 政治/宗教事务
 
@@ -3343,51 +3433,49 @@ Kali Linux 有位于 Freenode 网络上的官方 IRC 频道。官方 IRC 频道�
 
 垃圾信息、刷屏、对其他用户的不尊重或语言攻击、误导性链接、故意错误的答案以及其他未指定的破坏性行为都是不受欢迎的。
 
-
-
-
-
-# KALI LINUX
-
 但不仅限于未经授权的机器人操作、频道公开日志，以及那些可以公开追踪你的 MP3 播放器播放内容或你的空闲状态的脚本。如果你有超过 5 行文本需要粘贴，请使用 pastebin 处理数据，然后将 URL 粘贴到频道中。
 
-## 与频道工作人员沟通
+### 与频道工作人员沟通
 
 有时，你可能会被要求将对话转移到其他地方、合理对待他人、将对话引导至特定方向或各种其他事项，以维护频道的氛围和实用性。如果你是此类请求的目标，请尽可能表现得合理；如果你对此有异议，请通过私信联系相关的频道工作人员，而不是在频道中制造噪音。
 
-## 纪律处分
+### 纪律处分
 
 多次违反规则将导致频道工作人员对你进行禁言 (+q)、封禁 (+b)、踢出或其他方式将你从频道中移除。如果你在我们提醒你注意规则后仍被发现故意忽视规则，这一点将尤为适用。许多形式的破坏性行为（如刷屏或恶意作剧）可能会导致在不警告的情况下受到纪律处分。我们尽可能避免使用强制手段，如果你能帮助我们实现这一目标，我们将不胜感激！当工作人员被迫使用权限进行频道管理时，如果你是旁观者，感谢你的理解并耐心等待事件结束，请通过不抱怨、不评论或幸灾乐祸来保持局势尽可能良好。这有助于让刷屏等反社会行为失去吸引力（反应越小，违规行为的回报率就越低），从而对你和我们都有利！
 
 ## 官方 Kali Linux 镜像
 
-## 使用官方存储库
+### 使用官方存储库
 
 Kali 提供三个存储库，这些库在全球范围内设有镜像：
-
 - kali.org (mirrorlist)：主软件包仓库；
 - security.kali.org (mirrorlist)：安全软件包仓库；
 - cdimage.kali.org (mirrorlist)：包含 ISO 镜像的存储库。
 
 当你使用上述 3 个主机时，你将被自动重定向到离你最近的镜像，该镜像保证是最新的。如果你倾向于手动选择镜像，请点击每个主机名附近的 *mirrorlist* 链接并选择适合你的镜像。
 
-# 设置 Kali Linux 镜像
+## 设置 Kali Linux 镜像
 
-## 要求
+### 要求
 
 要成为官方 Kali Linux 镜像站，你需要一台拥有大量磁盘空间、良好带宽、rsync 和 SSH 服务器的服务器。截至 2013-03-14，主软件包仓库约为 160 GB，ISO 镜像仓库约为 10 GB，但你可以预计这些数字会定期增长。你预计通过 HTTP 和 RSYNC 提供这些文件，因此你还需要相应的服务。FTP 访问是可选的。
 
-## 软件包存档的推送镜像
+### 软件包存档的推送镜像
 
 镜像基础设施使用基于 SSH 的触发器在需要刷新时 ping 镜像站。目前这种操作每天发生 4 次。
 
 如果你还没有专门用于镜像的账户，请创建一个账户（我们在这里将其命名为 "archvsync"）：
 
 ```bash
-$ sudo adduser --disabled-password archvsync
-Adding user 'archvsync' ...n[...]
-Is the information correct? [Y/n]
 ```
+
+
+
+$ sudo adduser --disabled-password archvsync
+
+Adding user 'archvsync' ...n[...]
+
+Is the information correct? [Y/n]
 
 # KALI LINUX
 
@@ -3411,17 +3499,14 @@ uid = nobody
 gid = nogroup
 max connections = 25
 socket options = SO_KEEPPALIVE
-
 [kali]
 path = /srv/mirrors/kali
 comment = The Kali Archive
 read only = true
-
 [kali-security]
 path = /srv/mirrors/kali-security
 comment = The Kali security archive
 read only = true
-
 [kali-images]
 path = /srv/mirrors/kali-images
 comment = The Kali ISO images
@@ -3430,9 +3515,9 @@ $ sudo service rsync start
 Starting rsync daemon: rsync.
 ```
 
-# KALI LINUX
+## KALI LINUX
 
-本教程未涵盖 Web 服务器和 FTP 服务器的配置。理想情况下，你应该将镜像导出到 http://yourmirror.net/kali、http://yourmirror.net/kali-security 和 http://yourmirror.net/kali-images（FTP 同样如此）。现在是有趣的部分：处理 SSH 触发器和实际镜像的专用用户的配置。你应该首先在用户账户中解压 ftpsync.tar.gz：
+本教程未涵盖 Web 服务器和 FTP 服务器的配置。理想情况下，你应该将镜像导出到 `http://yourmirror.net/kali`、`http://yourmirror.net/kali-security` 和 `http://yourmirror.net/kali-images`（FTP 同样如此）。现在是有趣的部分：处理 SSH 触发器和实际镜像的专用用户的配置。你应该首先在用户账户中解压 `ftpsync.tar.gz`：
 
 ```bash
 $ sudo su - archsync
@@ -3440,7 +3525,7 @@ $ wget http://archive.kali.org/ftpsync.tar.gz
 $ tar zxf ftpsync.tar.gz
 ```
 
-现在我们需要创建两个配置文件。我们从模板开始，并至少编辑 MIRRORNAME、TO、RSYNC_PATH 和 RSYNC_HOST 参数：
+现在我们需要创建两个配置文件。我们从模板开始，并至少编辑 `MIRRORNAME`、`TO`、`RSYNC_PATH` 和 `RSYNC_HOST` 参数：
 
 ```bash
 $ cp etc/ftpsync-conf.sample etc/ftpsync-conf
@@ -3459,20 +3544,20 @@ RSYNC_PATH="kali-security"
 RSYNC_HOST=archive.kali.org
 ```
 
-# KALI LINUX
+## KALI LINUX
 
-最后一步是设置 .ssh/authorized_keys 文件，以便 archive.kali.org 能够触发你的镜像：
+最后一步是设置 `.ssh/authorized_keys` 文件，以便 `archive.kali.org` 能够触发你的镜像：
 
 ```bash
 $ mkdir -p .ssh
 $ wget -O - -q http://archive.kali.org/.pub >> .ssh/authorized_keys
 ```
 
-如果你没有在家目录下解压 ftpsync.tar.gz，你必须向 devel@kali.org 发送邮件并提出问题或建议，以帮助我们改进 Kali。我们鼓励你在 bugs.kali.org 提交错误报告。
+如果你没有在家目录下解压 `ftpsync.tar.gz`，你必须向 `devel@kali.org` 发送邮件并提出问题或建议，以帮助我们改进 Kali。我们鼓励你在 `bugs.kali.org` 提交错误报告。
 
-请调整精确时间，以防止大量镜像同时导致 archive.kali.org 过载。
+请调整精确时间，以防止大量镜像同时导致 `archive.kali.org` 过载。
 
-# ISO 镜像手动镜像
+### ISO 镜像手动镜像
 
 ISO 镜像仓库不使用推送镜像，因此你必须调度运行：
 
@@ -3480,24 +3565,23 @@ ISO 镜像仓库不使用推送镜像，因此你必须调度运行：
 39 3 * * * bin/kali-images
 ```
 
+
+
 # 官方 Kali Linux 站点
 
 Kali Linux 有多个站点供用户使用。下列是官方 Kali 站点及其对应的用途。请注意，这些站点是官方 Kali 站点，也是信息的权威来源。
 
-- www.kali.org
-- docs.kali.org
-- forums.kali.org
-- bugs.kali.org
-- git.kali.org
+- `www.kali.org`
+- `docs.kali.org`
+- `forums.kali.org`
+- `bugs.kali.org`
+- `git.kali.org`
 
 Kali Linux 主站是我们交流 Kali Linux 新闻、基础信息和项目整体更新的主要手段。你可以在这里找到关于 Kali Linux 工具、功能和技巧的帖子。
 
-你现在所在地。我们的文档站点包含了基础的 Kali Linux 相关文档和教程。Kali 引入的变化是巨大的，我们已经涵盖了广泛的常见问题。docs.kali.org 的子域名也被认为是官方（文档翻译服务器）。
+你现在所在地。我们的文档站点包含了基础的 Kali Linux 相关文档和教程。Kali 引入的变化是巨大的，我们已经涵盖了广泛的常见问题。`docs.kali.org` 的子域名也被认为是官方（文档翻译服务器）。
 
 尽管我们尽力让 Kali Linux 变得完美，但不可预见的 Bug 和错误是不可避免的。当我们收到问题或建议时，我们总是乐意改进并能够有效地这样做。
-
-
-
 
 对于希望密切关注 Kali Linux 进展的用户，或想要知道何时应该运行 `apt-get upgrade` 的人员，我们的 Git 仓库树供公开查阅。
 
@@ -3523,7 +3607,7 @@ Kali Linux 有一个官方的错误跟踪器，我们的用户可以在向开发
 
 ## Kali Linux 社区论坛
 
-Kali Linux 拥有官方的社区驱动论坛，位于 forums.kali.org
+Kali Linux 拥有官方的社区驱动论坛，位于 `forums.kali.org`
 
 我们欢迎每个人加入 Kali Linux 社区，我们在下方列出了几条简单的规则。请在加入论坛之前花几分钟审阅这些规则。
 
@@ -3555,7 +3639,7 @@ Kali Linux 1.0 是基于 Debian Whezy 的 Debian 衍生版。因此，大多数 
 
 某些包显然必须分支以实现某些 Kali 特有的功能，但 Kali 努力通过尽可能导入上游包来将此类包的数量减少到最低（通过直接集成功能，或添加所需的钩子，以便在不实际修改上游包的情况下轻松启用它）。
 
- Kali 分支的每个包都维护在一个带有“debian”分支的 Git 仓库中，这样通过在 master 分支中执行简单的 *merge debian* 就可以轻松更新分支包。
+Kali 分支的每个包都维护在一个带有“debian”分支的 Git 仓库中，这样通过在 master 分支中执行简单的 *merge debian* 就可以轻松更新分支包。
 
 ### 新包
 
@@ -3619,15 +3703,22 @@ Kali Linux 默认不允许网络服务在重启后持续存在。当尝试安装
 
 ```
 root@kali:~# apt-get install apt-cacher-ng
+
 ...
 Setting up apt-cacher-ng (0.7.11-1) ...
-update-rc.d: We have no instructions for the apt-cacher-ng init script.
-update-rc.d: It looks like a network service, we disable it.
-...
-root@kali:~#
 ```
 
-注意看 `update-rc.d` 脚本如何默认禁用 apt-cacher-ng 守护进程的持久化。
+
+
+`update-rc.d`: We have no instructions for the apt-cacher-ng init script.
+
+`update-rc.d`: It looks like a network service, we disable it.
+
+...
+
+`root@kali:~#`
+
+注意看 `update-rc.d` 脚本如何默认禁用 `apt-cacher-ng` 守护进程的持久化。
 
 ## 服务启动
 
@@ -3635,19 +3726,23 @@ root@kali:~#
 
 ```
 root@kali:~# update-rc.d apt-cacher-ng enable
+
 update-rc.d: using dependency based boot sequencing
 ```
 
 ### 服务白名单和黑名单
 
-服务白名单和黑名单可以在 /usr/sbin/update-rc.d 文件中找到。通过该文件，你可以显式允许或拒绝服务以其默认状态自动启动。
+服务白名单和黑名单可以在 `/usr/sbin/update-rc.d` 文件中找到。通过该文件，你可以显式允许或拒绝服务以其默认状态自动启动。
 
 ```
 root@kali:~# tail -95 /usr/sbin/update-rc.d |more
+
 }
 
 __DATA___
+
 ## List of blacklisted init scripts
+
 #
 apache2 disabled
 avahi-daemon disabled
@@ -3656,7 +3751,9 @@ cups disabled
 dictd disabled
 ssh disabled
 ...
+
 ## List of whitelisted init scripts
+
 #
 acpid enabled
 acpi-fakeakeey enabled
@@ -3669,8 +3766,10 @@ anacron enabled
 # KALI LINUX
 
 官方 Kali Linux 文档
-此 PDF 已在 docs.kali.org 上自动生成 - 2013 年 8 月 19 日
+此 PDF 已在 `docs.kali.org` 上自动生成 - 2013 年 8 月 19 日
 
 # Kali Linux 安全更新策略
 
 Kali Linux 与 Debian 仓库紧密结合，因此对于 Kali 保持未更改的所有软件包（即绝大多数），其接收安全更新的频率与 Debian 主发行版完全一致。其他软件包由 Kali 团队尽力而为（best-effort basis）提供支持。
+
+```

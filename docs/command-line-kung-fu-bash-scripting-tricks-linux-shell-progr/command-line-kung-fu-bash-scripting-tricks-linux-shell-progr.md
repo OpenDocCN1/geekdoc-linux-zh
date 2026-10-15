@@ -1,28 +1,9 @@
+
 # Bash 脚本与命令行功夫：Linux 编程技巧与单行命令
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## 您的免费礼物
 
-感谢您阅读《Command Line Kung Fu》（命令行功夫），我想送您一份《Linux 应用程序对 Windows 的替代方案》的副本。书中介绍了目前 Linux 上 50 多种最流行的应用程序。这些应用程序允许您浏览网页、观看电影、收听音乐、连接您喜爱的社交网络、制作演示文稿等等。这份礼物是本的最佳补充，将帮助您在 Linux 的学习之路上更进一步。访问 [http://www.linuxtrainingacademy.com/linux-apps](http://www.linuxtrainingacademy.com/linux-apps) 下载您的免费礼物。
+感谢您阅读《Command Line Kung Fu》（命令行功夫），我想送您一份《Linux 应用程序对 Windows 的替代方案》的副本。书中介绍了目前 Linux 上 50 多种最流行的应用程序。这些应用程序允许您浏览网页、观看电影、收听音乐、连接您喜爱的社交网络、制作演示文稿等等。这份礼物是本的最佳补充，将帮助您在 Linux 的学习之路上更进一步。访问 `http://www.linuxtrainingacademy.com/linux-apps` 下载您的免费礼物。
 
 ## 引言
 
@@ -32,7 +13,7 @@
 
 尽管书名是《Command Line Kung Fu》（命令行功夫），但您不需要成为 Linux 忍者就能使用本书介绍的策略。这些技巧可以直接使用。您可以立即开始应用它们，而无需完全理解所有细节和细微差别。然而，如果您想要或需要更多信息，每个技巧后面都附有解释和实际现实世界示例。
 
-另外，如果您想看看这些命令的实际操作，请访问 [http://www.linuxtrainingacademy.com/fu](http://www.linuxtrainingacademy.com/fu)。在那里，您会找到一系列视频，演示本书中涵盖的一些命令。
+另外，如果您想看看这些命令的实际操作，请访问 `http://www.linuxtrainingacademy.com/fu`。在那里，您会找到一系列视频，演示本书中涵盖的一些命令。
 
 最后，如果您想要 Linux 命令行和操作系统概览，请阅读我的另一本书《Linux 入门》。它将为您提供坚实的基础，以便您构建您的 Linux 技能。
 
@@ -40,7 +21,7 @@
 
 ## Shell 历史记录
 
-## 以 Root 身份运行最后一个命令
+### 以 Root 身份运行最后一个命令
 
 ```bash
 $ sudo !!
@@ -89,7 +70,7 @@ sudo whoami
 root
 ```
 
-## 重复以给定字符串开头的最后一个命令
+### 重复以给定字符串开头的最后一个命令
 
 ```bash
 $ !<string>
@@ -129,13 +110,13 @@ UID PID PPID C STIME TTY TIME CMD
 $
 ```
 
-## 重用前一条命令中的第二个单词（第一个参数）
+### 重用前一条命令中的第二个单词（第一个参数）
 
 ```bash
 $ !^
 ```
 
-如果您需要获取前一条命令中的第二个单词，可以使用 "!^" 单词标识符。任何使用 "!^" 的地方都将被前一条命令中的第二个单词替换。您也可以将其视为前一条命令的第一个参数。
+如果您需要获取前一条命令中的第二个单词，可以使用 `!^` 单词标识符。任何使用 `!^` 的地方都将被前一条命令中的第二个单词替换。您也可以将其视为前一条命令的第一个参数。
 
 ```bash
 $ host www.google.com 8.8.8.8
@@ -164,13 +145,13 @@ rtt min/avg/max/mdev = 17.071/17.071/17.071/0.000 ms
 $
 ```
 
-## 重用前一条命令中的最后一个单词（最后一个参数）
+### 重用前一条命令中的最后一个单词（最后一个参数）
 
 ```bash
 $ !$
 ```
 
-我经常发现需要在前一条命令行上的最后一项上执行另一个操作。要在当前命令中访问该项，请使用 '!$'。
+我经常发现需要在前一条命令行上的最后一项上执行另一个操作。要在当前命令中访问该项，请使用 `!$`。
 
 ```bash
 $ unzip tpstreport.zip
@@ -185,7 +166,7 @@ du -sh reports/*
 $
 ```
 
-## 重用前一条命令中的第 N 个单词
+### 重用前一条命令中的第 N 个单词
 
 ```bash
 $ !!!:N
@@ -205,23 +186,19 @@ mv podcast.mp3 podcasts/
 $
 ```
 
-## 重复前一条命令并替换字符串
+### 重复前一条命令并替换字符串
 
 ```bash
 $ ^<string1>^<string2>^
 ```
 
-这个小技巧非常适合快速纠正打字错误。如果您省略 `^<string2>^`，则 `<string1>` 将从前一条命令中移除。By
+这个小技巧非常适合快速纠正打字错误。如果您省略 `^<string2>^`，则 `<string1>` 将从前一条命令中移除。
 
-
-
-
-
-## 命令行功夫
+### 命令行功夫
 
 默认情况下，只会替换 `<string1>` 的第一次出现。若要替换所有出现，请附加 `&`。除非使用 `&`，否则可以省略结尾的脱字符符号。
 
-```
+```bash
 $ grpe json /etc/passwd
 -bash: grpe: command not found
 $ ^pe^ep
@@ -238,28 +215,28 @@ cannon:x:1001:1001::/home/cannon:/bin/sh
 drwxr-xr-x 2 cannon ball 4096 Apr  7 00:22 /home/cannon
 ```
 
-## 引用当前命令中的某个词并重新使用它
+### 引用当前命令中的某个词并重新使用它
 
-```
+```bash
 $ !#:N
 ```
 
 `!#` 事件指示符代表当前命令行，而 `:N` 词指示符代表命令行上的一个词。词引用是基于零的，因此第一个词（几乎总是命令）是 `:0`，第二个词（或命令的第一个参数）是 `:1`，等等。
 
-```
+```bash
 $ mv Working-with-Files.pdf Chapter-18-!:1
 mv Working-with-Files.pdf Chapter-18-Working-with-Files.pdf
 ```
 
-## 保存你的命令行会话副本
+### 保存你的命令行会话副本
 
-```
+```bash
 $ script
 ```
 
 如果你想记录屏幕上看到的内容，请使用 `script` 命令。`script` 命令会捕获打印在终端上的所有内容，并将其保存到一个文件中。你可以为 `script` 提供文件名作为参数，或者让它创建名为 `typescript` 的默认文件。
 
-```
+```bash
 $ script
 Script started, file is typescript
 $ cd /usr/local/bin
@@ -285,15 +262,15 @@ Script done on Wed 09 Apr 2014 06:31:44 PM EDT
 $
 ```
 
-## 找出你最常使用的命令
+### 找出你最常使用的命令
 
-```
+```bash
 $ history | awk '{print $2}' | sort | uniq -c | sort -rn | head
 ```
 
 要获取 shell 历史记录中使用最频繁的前十个命令列表，请使用以下命令。
 
-```
+```bash
 $ history | awk '{print $2}' | sort | uniq -c | sort -rn | head
       61 ls
       45 cd
@@ -308,15 +285,15 @@ $ history | awk '{print $2}' | sort | uniq -c | sort -rn | head
 $
 ```
 
-## 清除你的 Shell 历史记录
+### 清除你的 Shell 历史记录
 
-```
+```bash
 $ history -c
 ```
 
 要清除你的 shell 历史记录，请使用 `history` 命令的 `-c` 选项。
 
-```
+```bash
 $ history | tail -5
     966  ls -lR Music/
     967  find Music/ -type f -is
@@ -332,15 +309,15 @@ $
 
 ## 文本处理和操作
 
-## 去除注释和空行
+### 去除注释和空行
 
-```
+```bash
 $ grep -E -v "^#|^$" file
 ```
 
 要从配置文件中去除所有噪音，请去掉注释和空行。这两个正则表达式（regular expressions）可以做到。`"^#"` 匹配以 `"#"` 开头的所有行。`"^$"` 匹配所有空行。`grep` 的 `-E` 选项允许我们使用正则表达式，而 `-v` 选项反转匹配结果。
 
-```
+```bash
 [jason@www conf]$ grep -E -v '^#|^$' httpd.conf | head
 ServerTokens OS
 ServerRoot "/etc/httpd"
@@ -355,29 +332,29 @@ MinSpareServers      5
 [jason@www conf]$ 
 ```
 
-## 使用 Vim 通过网络编辑文件
+### 使用 Vim 通过网络编辑文件
 
-```
+```bash
 $ vim scp://remote-host//path/to/file
 $ vim scp://remote-user@remote-host//path/to/file
 ```
 
 如果你想通过 SSH 使用 `vim` 编辑文件，可以让它完成来回复制文件的繁重工作。
 
-```
+```bash
 $ vim scp://linuxserver//home/jason/notes.txt
 ```
 
-## 以表格形式显示输出
+### 以表格形式显示输出
 
-```
+```bash
 $ alias ct='column -t'
 $ command | ct
 ```
 
 使用 `column` 命令将文本格式化为多列。通过使用 `-t` 选项，`column` 会计算输入包含的列数，并创建一个具有该列数的表格。这确实可以使许多命令的输出更易读。我发现自己如此频繁地使用它，以至于我为该命令创建了一个别名。
 
-```
+```bash
 $ alias ct='column -t'
 $ echo -e 'one two\nthree four'
 one two
@@ -394,22 +371,24 @@ $ mount -t ext4 / ct
 $
 ```
 
-## 获取输出行中的最后一个单词
+### 获取输出行中的最后一个单词
 
-```
+```bash
 $ awk '{print $NF}' file
 $ cat file | awk '{print $NF}'
 ```
 
 你可以使用 `$FIELD_NUMBER` 表示法让 `awk` 打印字段。要打印第一个字段，使用 `$1`；要打印第二个，使用 `$2`，等等。但是，如果你不知道字段的数量，或者不想去计算它们，请使用 `$NF`，它代表字段的总数。`awk` 以空格分隔字段，但你可以使用 `-F` 参数来改变这种行为。以下是如何打印系统中正在使用的所有 shell。使用冒号作为字段分隔符，然后打印最后一个字段。
 
-```
+```bash
 $ awk -F: '{print $NF}' /etc/passwd | sort -u
 ```
 
 如果你想显示系统中每个用户的 shell，可以这样做。
 
-```
+
+
+```bash
 $ awk -F: '{print $1,$NF}' /etc/passwd | sort | column -t
 adm /sbin/nologin
 apache /sbin/nologin
@@ -421,61 +400,61 @@ bob /bin/bash
 
 ## 使用 Less 查看彩色输出
 
-```
+```bash
 $ ls --color=always | less -R
 $ grep --color=always file | less -R
 ```
 
 一些 Linux 发行版为 `ls` 和 `grep` 创建带有 `--color=auto` 选项的别名。这导致仅当输出发送到终端时才使用颜色。当你将 `ls` 或 `grep` 的输出通过管道传输时，不会发出颜色代码。你可以使用 `--color=always` 强制 `ls` 或 `grep` 始终显示颜色。要让 `less` 命令显示产生颜色的原始控制字符，请使用 `-R` 选项。
 
-```
+```bash
 $ grep --color=always -l bob /etc/passwd | less -R
 $ ls -l --color=always /etc | less -R
 ```
 
 ## 在管道传输到 Grep 时保留颜色
 
-```
+```bash
 $ ls -l --color=always | grep --color=never string
 ```
 
-如果你将有颜色的输入通过管道传输到 `grep`，并且 `grep` 是带有 `--color=auto` 选项的别名，`grep` 将丢弃输入中的颜色并突出显示被 grep 的字符串。为了保留有颜色的输入，使用 `--color=never` 选项强制 `grep` 不使用颜色。
+如果你将有颜色的输入通过管道传输到 `grep`，并且 `grep` 是带有 `--color=auto` 选项的别名，`grep` 将丢弃输入中的颜色并突出显示被 `grep` 的字符串。为了保留有颜色的输入，使用 `--color=never` 选项强制 `grep` 不使用颜色。
 
-```
+```bash
 $ ls -l --color=always *.mp3 | grep --color=never jazz
 -rw-r--r--- 1 jason jason 21267371 Feb 16 11:12 jazz-album-1.mp3
 ```
 
 ## 使用 Sudo 将文本追加到文件
 
-```
+```bash
 $ echo text | sudo tee -a file
 ```
 
 如果你曾尝试在 `"sudo echo"` 命令后使用重定向将文本追加到文件，你会很快发现这不起作用。发生的情况是 `echo` 语句以 root 身份执行，但重定向以你自己身份发生。
 
-```
+```bash
 $ sudo echo "PRODUCTION Environment" >> /etc/motd
 bash: /etc/motd: Permission denied
 ```
 
 幸运的是，你可以将 `sudo` 与 `tee` 命令结合使用来将文本追加到文件。
 
-```
+```bash
 $ echo "PRODUCTION Environment" | sudo tee -a /etc/motd
 PRODUCTION Environment
 ```
 
 ## 更改字符串的大小写
 
-```
+```bash
 $ tr [:upper:][:lower:]
 $ tr [:lower:][:upper:]
 ```
 
 当你需要更改字符串的大小写时，请使用 `tr` 命令。你可以为 `tr` 提供范围，如 `"tr a-z A-Z"`，或者使用 `"tr [:lower:][:upper:]"`。
 
-```
+```bash
 $ ENVIRONMENT=PRODUCTION
 $ DIRECTORY=$(echo $ENVIRONMENT | tr [:upper:][:lower:])
 $ echo $ENVIRONMENT | sudo tee -a /etc/motd
@@ -487,13 +466,13 @@ $ sudo tar zxf wwwfiles.tgz -C /var/www/$DIRECTORY
 
 ## 以人类可读格式显示你的命令搜索路径
 
-```
+```bash
 $ echo $PATH | tr ':' '\n'
 ```
 
 读取冒号分隔的项目列表对我们人类来说不像对计算机那样容易。要用换行符替换冒号，请使用 `tr` 命令。
 
-```
+```bash
 $ echo $PATH
 /usr/bin:/bin:/usr/local/bin:/bin:/usr/bin:/usr/local/sbin:/usr/sbin:/sbin
 
@@ -510,21 +489,18 @@ $ echo $PATH | tr ':' '\n'
 
 ## 在没有 ... 的情况下从命令行创建文本文件
 
-
-
-
-## 使用编辑器
+### 使用编辑器
 
 如果你只需要做简短笔记，而不需要一个功能完整的文本编辑器，那么可以简单地使用 `cat` 并将输出重定向到文件。完成后按 `<ctrl-d>` 即可创建该文件。
 
-```
+```bash
 $ cat > file
 <ctrl-d>
 ```
 
 示例：
 
-```
+```bash
 $ cat > shopping.list
 eggs
 bacon
@@ -541,14 +517,14 @@ $
 
 `grep` 命令非常擅长提取单行文本。但如果你需要捕获一整块文本该怎么办？使用 `awk` 并提供一个起始模式和结束模式。该模式可以是一个简单的字符串，甚至可以是一个正则表达式。
 
-```
+```bash
 $ awk '/start-pattern/,/stop-pattern/' file.txt
 $ command | awk '/start-pattern/,/stop-pattern/'
 ```
 
 使用系统信息的示例：
 
-```
+```bash
 $ sudo dmidecode | awk /Processor/,/Manuf/
 Processor Information
 
@@ -561,7 +537,7 @@ Processor Information
 
 使用配置文件的示例：
 
-```
+```bash
 $ awk '/worker.c/,$/ 'httpd.conf
 <IfModule worker.c>
 
@@ -579,14 +555,14 @@ $
 
 你可以使用 `sed` 命令通过提供起始模式和结束模式，并告诉它删除该整个范围来删除一段文本。这些模式可以是字符串或正则表达式。由于 `#` 匹配第一行，而 `^$` 匹配第七行，此示例删除了前七行。
 
-```
+```bash
 $ sed '/start-pattern/,/stop-pattern/d' file
 $ command | sed '/start-pattern/,/stop-pattern/d' file
 ```
 
 示例：
 
-```
+```bash
 $ cat ports.conf
 # If you just change the port or add more ports here, you will likely also
 # have to change the VirtualHost statement in
@@ -625,13 +601,13 @@ Listen 443
 
 如果你发现自己反复犯同样的输入错误，可以通过设置别名来修复它。
 
-```
+```bash
 $ alias typo='correct spelling'
 ```
 
 修正命令名称中拼写错误的示例：
 
-```
+```bash
 $ grep root /etc/passwd
 bash: grep: command not found
 $ echo "alias grep='grep'" >> ~/.bash_profile
@@ -647,7 +623,7 @@ $
 
 将此函数添加到你的个人初始化文件（例如 `~/.bash_profile`）中：
 
-```
+```bash
 body() {
 	IFS= read -r header
 	printf '%s\n' "$header"
@@ -659,7 +635,7 @@ $ cat file | body sort
 
 示例：
 
-```
+```bash
 $ df -h | sort -k 5
 Filesystem Size Used Avail Use% Mounted on
 /dev/vda2 28G 3.2G 25G 12% /
@@ -667,7 +643,7 @@ tmpfs 504M 68K 504M 1% /dev/shm
 /dev/vda1 485M 444M 17M 97% /boot
 ```
 
-```
+```bash
 $ df -h | body sort -k 5
 Filesystem Size Used Avail Use% Mounted on
 /dev/vda2 28G 3.2G 25G 12% /
@@ -675,12 +651,12 @@ tmpfs 504M 68K 504M 1% /dev/shm
 /dev/vda1 485M 444M 17M 97% /boot
 ```
 
-```
+```bash
 $ ps -eo pid,%cpu,cmd | head -1
 PID %CPU CMD
 ```
 
-```
+```bash
 $ ps -eo pid,%cpu,cmd | sort -nrk2 | head
 675 12.5 mysqld
 PID %CPU CMD
@@ -694,7 +670,7 @@ PID %CPU CMD
 929 0.0 [bnx2fc]
 ```
 
-```
+```bash
 $ ps -eo pid,%cpu,cmd | body sort -nrk2 | head
 PID %CPU CMD
 675 12.5 mysqld
@@ -713,7 +689,7 @@ $
 
 `tr` 命令通常用于转换字符，但使用 `-d` 选项时它会删除字符。本示例展示了如何去除引号。
 
-```
+```bash
 $ command | tr -d "x"
 $ command | tr -d {SET}
 $ cat file | tr -d "X"
@@ -722,14 +698,14 @@ $ cat file | tr -d {set}
 
 示例：
 
-```
+```bash
 $ cat cities.csv
 1,"Chicago","USA","IL"
 2,"Austin","USA","TX"
 3,"Santa Cruz","USA","CA"
 ```
 
-```
+```bash
 $ cat cities.csv | cut -d, -f2
 
 "Chicago"
@@ -745,7 +721,7 @@ $
 
 你还可以让 `tr` 删除一组字符。此示例从输出中移除所有元音字母。
 
-```
+```bash
 $ cat cities.csv | cut -d, -f2 | tr -d [aeiou]
 "Chcgo"
 "Astin"
@@ -759,7 +735,7 @@ $
 
 让我们查找名为 `access.log` 的 Apache 网页服务器日志文件中所有唯一的 HTTP 状态码。为此，使用 `awk` 命令打印日志文件中的第九个字段。
 
-```
+```bash
 $ tail -1 access.log
 18.19.20.21 - - [19/Apr/2014:19:51:20 -0400] "GET /HTTP/1.1" 200 7136 "-" "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/33.0.1750.154 Safari/537.36"
 $ tail -1 access.log | awk '{print $9}'
@@ -774,7 +750,7 @@ $
 
 让我们再进一步，统计每种状态码的数量。
 
-```
+```bash
 $ awk '{print $9}' access.log | sort | uniq -c | sort -nr
 5641 200
 207 301
@@ -785,7 +761,7 @@ $ awk '{print $9}' access.log | sort | uniq -c | sort -nr
 
 现在让我们从 `access.log` 文件中提取状态码和小时，并统计这些组合的唯一出现次数。接下来，让我们按出现次数排序。这将显示网站最活跃的小时。
 
-```
+```bash
 $ cat access.log | awk '{print $9, $4}' | cut -c 1-4,18-19 | uniq -c | sort -n | tail
      72 200 09
      76 200 06
@@ -801,9 +777,9 @@ $ cat access.log | awk '{print $9, $4}' | cut -c 1-4,18-19 | uniq -c | sort -n |
 
 ## 网络与 SSH
 
-## 通过 Web 界面提供当前目录中的文件
+### 通过 Web 界面提供当前目录中的文件
 
-```
+```bash
 $ python -m SimpleHTTPServer
 $ python3 -m http.server
 ```
@@ -812,7 +788,7 @@ $ python3 -m http.server
 
 当你正在处理 HTML 内容并希望查看其在 Web 浏览器中的样子，而不必安装和配置一个功能完整的 Web 服务器时，这会非常有用。
 
-```
+```bash
 $ python -m SimpleHTTPServer
 Serving HTTP on 0.0.0.0 port 8000 ...
 localhost.localdomain -- [06/Apr/2014 21:49:20] "GET /HTTP/1.1" 200 -
@@ -820,19 +796,21 @@ localhost.localdomain -- [06/Apr/2014 21:49:20] "GET /HTTP/1.1" 200 -
 
 以下是如何在标准 HTTP 端口上启动 Web 服务器的方法。由于端口 80 是特权端口（即，1024 或更低），因此这样做需要 root 权限。
 
-```
+```bash
 $ sudo python -m SimpleHTTPServer 80
 Serving HTTP on 0.0.0.0 port 80 ...
 ```
 
-## 通过 SSH 在本地主机上挂载远程服务器的目录
+### 通过 SSH 在本地主机上挂载远程服务器的目录
 
-```
+```bash
 $ sshfs remote-host:directory mountpoint
 $ fusermount -u mountpoint
 ```
 
-有时，如果文件或目录是本地存在的，或者看起来是本地存在的，工作起来会更容易。例如，也许你有一个本地应用程序，它在你用于操作文件的服务器上不存在。你不需要从服务器下载文件，修改它，然后再将其上传回服务器，而是可以将远程目录挂载到本地工作站上。以下是通过 SSH 更新网站的示例。
+
+
+有时，如果文件或目录是本地存在的，或者看起来是本地存在的，工作起来会更容易。例如，也许你有一个本地应用程序，它在你用于操作文件的服务器上不存在。你不需要从服务器下载文件，修改它，然后再将其上传回服务器，而是可以将远程目录挂载到本地工作站上。以下是通过`SSH`更新网站的示例。
 
 ```
 $ mkdir web-files
@@ -841,19 +819,15 @@ $ bluefish web-files/index.html
 $ fusermount -u web-files
 ```
 
-就像 `ssh` 命令一样，如果你的远程用户名与本地用户名不同，你可以使用 `user@host` 格式。此外，如果冒号后未指定目录，则默认使用你的主目录。
+就像`ssh`命令一样，如果你的远程用户名与本地用户名不同，你可以使用`user@host`格式。此外，如果冒号后未指定目录，则默认使用你的主目录。
 
-
-
-
-
-## 使用 Curl 从命令行获取你的公网 IP
+## 使用`Curl`从命令行获取你的公网`IP`
 
 ```bash
 $ curl ifconfig.me
 ```
 
-如果你需要确定你的公网（互联网）IP 地址，可以使用 ifconfig.me 网站。
+如果你需要确定你的公网（互联网）`IP`地址，可以使用`ifconfig.me`网站。
 
 ```bash
 $ curl ifconfig.me
@@ -864,7 +838,7 @@ $ curl ifconfig.me/host
 pub2.kernel.org
 ```
 
-## 无密码 SSH 登录远程系统
+## 无密码`SSH`登录远程系统
 
 ```bash
 $ ssh-keygen
@@ -872,9 +846,9 @@ $ ssh-copy-id remote-host
 $ ssh remote-host
 ```
 
-为了无需密码即可 SSH 登录到远程主机，你需要一对 SSH 密钥，包含私钥和公钥。在远程主机上，公钥的内容需要位于 `~/.ssh/authorized_keys` 文件中。`ssh-copy-id` 脚本会执行这项工作。
+为了无需密码即可`SSH`登录到远程主机，你需要一对`SSH`密钥，包含私钥和公钥。在远程主机上，公钥的内容需要位于`~/.ssh/authorized_keys`文件中。`ssh-copy-id`脚本会执行这项工作。
 
-如果你想要生成一个没有密码的密钥，只需在提示输入口令（passphrase）时直接按回车即可。你也可以选择向 `-N` 选项提供一个空字符串（`ssh-keygen -N ""`）。
+如果你想要生成一个没有密码的密钥，只需在提示输入口令（passphrase）时直接按回车即可。你也可以选择向`-N`选项提供一个空字符串（`ssh-keygen -N ""`）。
 
 ```bash
 $ ssh-keygen
@@ -919,7 +893,7 @@ $
 $ sudo lsof -Pni
 ```
 
-`lsof` 命令不仅可以用于显示打开的文件，还可以显示打开的网络端口和网络连接。`-P` 选项可防止将端口号转换为端口名称。`-n` 选项可防止将 IP 地址转换为主机名。`-i` 选项指示 `lsof` 显示网络连接。
+`lsof`命令不仅可以用于显示打开的文件，还可以显示打开的网络端口和网络连接。`-P`选项可防止将端口号转换为端口名称。`-n`选项可防止将`IP`地址转换为主机名。`-i`选项指示`lsof`显示网络连接。
 
 ```bash
 $ sudo lsof -Pni
@@ -945,7 +919,7 @@ sshd             12342 jason     3u  IPv4  74023  0t0  TCP  192.168.122.60:22->1
 $ ssh remote-host cat /path/to/remote-file | diff /path/to/local-file -
 ```
 
-要显示本地文件和远程文件之间的差异，可以通过 SSH 使用 cat 命令查看文件，并将输出管道传入 diff 或 sdiff 命令。diff 和 sdiff 命令可以通过在其中一个文件名处提供减号（-）来接受标准输入代替文件。
+要显示本地文件和远程文件之间的差异，可以通过`SSH`使用`cat`命令查看文件，并将输出管道传入`diff`或`sdiff`命令。`diff`和`sdiff`命令可以通过在其中一个文件名处提供减号（`-`）来接受标准输入代替文件。
 
 ```bash
 $ ssh linuxsrv cat /etc/passwd | diff /etc/passwd -
@@ -964,7 +938,7 @@ $ mail recipient@domain.com
 $ echo 'message' | mail -s 'subject' recipient@domain.com
 ```
 
-使用 mail 命令可以发送电子邮件。你可以交互式地输入消息，或者通过管道输入。交互消息以 ctrl-d 结束。
+使用`mail`命令可以发送电子邮件。你可以交互式地输入消息，或者通过管道输入。交互消息以`ctrl-d`结束。
 
 ```bash
 $ mail jim@mycorp.com
@@ -981,21 +955,21 @@ $ mail -a /path/to/attachment recipient@domain.com
 $ echo 'message' | mail -s 'subject' -a /path/to/attachment recipient@domain.com
 ```
 
-如果你需要从命令行发送电子邮件附件，请使用 mail 命令的 -a 选项。
+如果你需要从命令行发送电子邮件附件，请使用`mail`命令的`-a`选项。
 
 ```bash
 $ echo "Here is the file you requested" | mail -s "The file" -a /tmp/files.tgz jim@mycorp.com
 ```
 
-## 创建 SSH 隧道以访问远程资源
+## 创建`SSH`隧道以访问远程资源
 
 ```bash
 $ ssh -N -L local-port:host:remote-port remote-host
 ```
 
-要创建 SSH 隧道，请使用 -L 选项。第一个端口是将在你的本地机器上打开的端口。到该端口的连接将通过 remote-host 进行隧道传输，并发送到 -L 选项中指定的主机和远程端口。-N 选项告诉 SSH 不要在远程主机上执行命令（例如你的 shell）。
+要创建`SSH`隧道，请使用`-L`选项。第一个端口是将在你的本地机器上打开的端口。到该端口的连接将通过`remote-host`进行隧道传输，并发送到`-L`选项中指定的主机和远程端口。`-N`选项告诉`SSH`不要在远程主机上执行命令（例如你的`shell`）。
 
-假设你想访问一个在互联网上不可用，但你拥有 SSH 访问权限的服务器可以访问的网站。你可以创建一个隧道，让你可以浏览该网站，就像你位于公司防火墙后面一样。此命令会将你本地机器端口 8000 上的任何连接通过跳板服务器转发到内网服务器端口 80。将你的 web 浏览器指向 http://localhost:8000 并开始浏览。
+假设你想访问一个在互联网上不可用，但你拥有`SSH`访问权限的服务器可以访问的网站。你可以创建一个隧道，让你可以浏览该网站，就像你位于公司防火墙后面一样。此命令会将你本地机器端口`8000`上的任何连接通过跳板服务器转发到内网服务器端口`80`。将你的`web`浏览器指向`http://localhost:8000`并开始浏览。
 
 ```bash
 $ ssh -N -L 8000:intranet.acme.com:80 jump-server &
@@ -1003,7 +977,7 @@ $ ssh -N -L 8000:intranet.acme.com:80 jump-server &
 $ firefox http://localhost:8000
 ```
 
-另一个用例是访问运行在你拥有 SSH 访问权限的服务器上的服务。如果你需要访问一个仅允许来自特定主机的数据库连接的 mysql 服务器，你可以为连接创建一个 SSH 隧道。由于 mysql 服务运行在远程主机的 localhost:3306 上，-L 选项应该如下所示：-L 3306:localhost:3306。你可以使用本地机器上的 mysql 命令行客户端连接到数据库，但更有趣的是使用图形化桌面应用程序（这些应用程序在服务器上不可用）。例如，你可以使用此隧道并通过 MySQL Workbench、Navicat 或其他应用程序连接到数据库。
+另一个用例是访问运行在你拥有`SSH`访问权限的服务器上的服务。如果你需要访问一个仅允许来自特定主机的数据库连接的`mysql`服务器，你可以为连接创建一个`SSH`隧道。由于`mysql`服务运行在远程主机的`localhost:3306`上，`-L`选项应该如下所示：`-L 3306:localhost:3306`。你可以使用本地机器上的`mysql`命令行客户端连接到数据库，但更有趣的是使用图形化桌面应用程序（这些应用程序在服务器上不可用）。例如，你可以使用此隧道并通过`MySQL Workbench`、`Navicat`或其他应用程序连接到数据库。
 
 ```bash
 $ ssh -N -L 3306:localhost:3306 db01 &
@@ -1024,13 +998,17 @@ mysql>
 $ sudo netstat -nutlp
 ```
 
-以下是 netstat 选项的说明，用于获取正在监听的程序及其端口的列表。
+以下是`netstat`选项的说明，用于获取正在监听的程序及其端口的列表。
 
-- -n 显示数字地址而不是解析符号名称
-- -u 包含 UDP 协议
-- -t 包含 TCP 协议
-- -l 仅显示监听套接字
-- -p 显示 PID 和程序名称
+- `-n` 显示数字地址而不是解析符号名称
+
+- `-u` 包含`UDP`协议
+
+- `-t` 包含`TCP`协议
+
+- `-l` 仅显示监听套接字
+
+- `-p` 显示`PID`和程序名称
 
 ```bash
 $ sudo netstat -nutlp
@@ -1044,40 +1022,39 @@ tcp   0      0      :::22                 :::*                    LISTEN 1161/ss
 udp   0      0      0.0.0.0:68            0.0.0.0:*                        1008/dhclient
 ```
 
-## 为特定远程主机使用不同的 SSH 密钥
+## 为特定远程主机使用不同的`SSH`密钥
 
-将以下内容放入 `~/.ssh/config` 文件中。
+将以下内容放入`~/.ssh/config`文件中。
 
 ```bash
 Host remote-host
     IdentityFile ~/.ssh/id_rsa-remote-host
 ```
 
-如果你需要或希望为不同的主机使用不同的 SSH 密钥，你可以使用 ssh 的 `-i` 选项在命令行中显式指定它们。
+如果你需要或希望为不同的主机使用不同的`SSH`密钥，你可以使用`ssh`的`-i`选项在命令行中显式指定它们。
 
 ```bash
 $ ssh -i ~/.ssh/id_rsa-db1 db1.example.com
 ```
 
-如果你不想每次都要指定密钥，可以在 `~/.ssh/config` 文件中创建一个条目并在那里指定密钥。
+如果你不想每次都要指定密钥，可以在`~/.ssh/config`文件中创建一个条目并在那里指定密钥。
 
 ```bash
 $ cat ~/.ssh/config
 ```
 
+### 特定主机配置
 
-
-
-
-## 特定主机配置
-
+```bash
 Host db1.example.com
 IdentityFile ~/.ssh/id_rsa-db1
+
 $ ssh db1.example.com
+```
 
 您可以在主机规格说明中使用通配符。
 
-```
+```bash
 $ cat ~/.ssh/config
 Host db*
 IdentityFile ~/.ssh/id_rsa-db1
@@ -1086,9 +1063,9 @@ IdentityFile ~/work-files/keys/id_rsa
 $ ssh jim@jumboj.work.net
 ```
 
-如果您的 SSH 密钥以相关主机的完全限定域名命名，您可以使用 % 转义字符来简化您的 ~/.ssh/config 文件。无需为每台服务器都创建一个主机条目，% 语法会扩展为您所连接主机的完全限定域名。
+如果您的`SSH`密钥以相关主机的完全限定域名命名，您可以使用`%`转义字符来简化您的`~/.ssh/config`文件。无需为每台服务器都创建一个主机条目，`%`语法会扩展为您所连接主机的完全限定域名。
 
-```
+```bash
 $ cat ~/.ssh/config
 Host *.example.com
 IdentityFile ~/.ssh/id_rsa-%h
@@ -1100,31 +1077,31 @@ id_rsa-lax-web-01.example.com.pub
 $ ssh lax-db-01.example.com
 ```
 
-# 避免在通过 SSH 连接时输入用户名
+## 避免在通过`SSH`连接时输入用户名
 
-将以下内容放入 `~/.ssh/config` 文件中。
+将以下内容放入`~/.ssh/config`文件中。
 
-```
+```bash
 Host remote-host
   User username
 ```
 
-如果您在本地 Linux 机器上的用户名与远程 Linux 机器上的用户名不同，您在通过 SSH 连接时必须指定它。它看起来像这样。
+如果您在本地`Linux`机器上的用户名与远程`Linux`机器上的用户名不同，您在通过`SSH`连接时必须指定它。它看起来像这样。
 
-```
+```bash
 $ ssh jim@server1.example.com
 ```
 
-为了避免每次都要输入 "username@"，请在您的 `~/.ssh/config` 文件中添加一个主机条目。
+为了避免每次都要输入`username@`，请在您的`~/.ssh/config`文件中添加一个主机条目。
 
-```
+```bash
 Host server1.example.com
   User jim
 ```
 
-一旦您配置了该主机条目，您就可以简单地 ssh 到远程主机。
+一旦您配置了该主机条目，您就可以简单地`ssh`到远程主机。
 
-```
+```bash
 $ whoami
 james
 $ ssh server1.example.com
@@ -1133,18 +1110,20 @@ jim
 $
 ```
 
-# 简化多跳 SSH 连接并透明地代理 SSH 连接
+## 简化多跳`SSH`连接并透明地代理`SSH`连接
 
-将以下内容放入 `~/.ssh/config` 文件中。
+将以下内容放入`~/.ssh/config`文件中。
 
-```
+```bash
 Host jump-host.example.com
 ProxyCommand none
 Host *.example.com
 ProxyCommand ssh -W %h:%p jump-host.example.com
 ```
 
-如果您需要访问位于 SSH 网关服务器或跳板服务器后面的主机，您可以通过指示 SSH 在您连接最终远程主机时自动使用 SSH 网关来简化操作。无需先连接网关，然后输入另一个 `ssh` 命令来连接目标主机，您只需在本地机器上输入 "ssh destination-host"。使用上述配置，此命令将通过 jump-host 将您的 ssh 连接代理到 server1。
+
+
+如果您需要访问位于 SSH 网关服务器或跳板服务器后面的主机，您可以通过指示 SSH 在您连接最终远程主机时自动使用 SSH 网关来简化操作。无需先连接网关，然后输入另一个 `ssh` 命令来连接目标主机，您只需在本地机器上输入 `ssh destination-host`。使用上述配置，此命令将通过 `jump-host` 将您的 `ssh` 连接代理到 `server1`。
 
 ```
 $ ssh server1.example.com
@@ -1164,9 +1143,9 @@ $ ssh remote-host
 $ screen -r
 ```
 
-当我有一个需要在远程主机上完成的长时间运行进程时，我在启动该进程之前总是先启动一个 screen 会话。我不希望网络连接的中断干扰远程主机上正在执行的工作。有时我会启动一个进程，从会话中分离出来，然后稍后重新连接，以检查我不在场时产生的所有输出。
+当我有一个需要在远程主机上完成的长时间运行进程时，我在启动该进程之前总是先启动一个 `screen` 会话。我不希望网络连接的中断干扰远程主机上正在执行的工作。有时我会启动一个进程，从会话中分离出来，然后稍后重新连接，以检查我不在场时产生的所有输出。
 
-首先，ssh 到远程主机。接下来，启动一个 screen 会话。开始在远程主机上执行您的工作。通过输入 ctrl-a 然后按 d 来从 screen 会话中分离。您启动的进程在您离开时仍将在 screen 会话中运行。此外，生成的任何输出都可以在稍后查看。
+首先，`ssh` 到远程主机。接下来，启动一个 `screen` 会话。开始在远程主机上执行您的工作。通过输入 `ctrl-a` 然后按 `d` 来从 `screen` 会话中分离。您启动的进程在您离开时仍将在 `screen` 会话中运行。此外，生成的任何输出都可以在稍后查看。
 
 ```
 $ ssh remote-host
@@ -1188,9 +1167,9 @@ $ exit
 $ exit
 ```
 
-要重新连接到您的 screen 会话，请连接到远程主机并输入 screen -r。如果有输出滚出了屏幕顶部之外，您可以通过输入 ctrl-a 然后按 escape 键来查看。现在使用 vi 导航键绑定来查看输出历史。例如，您可以输入 k 向上移动一行，或按 ctrl-b 向上翻一页。当您查看完输出历史后，按 escape 键返回实时会话。要退出您的 screen 会话，请输入 exit。
+要重新连接到您的 `screen` 会话，请连接到远程主机并输入 `screen -r`。如果有输出滚出了屏幕顶部之外，您可以通过输入 `ctrl-a` 然后按 `escape` 键来查看。现在使用 `vi` 导航键绑定来查看输出历史。例如，您可以输入 `k` 向上移动一行，或按 `ctrl-b` 向上翻一页。当您查看完输出历史后，按 `escape` 键返回实时会话。要退出您的 `screen` 会话，请输入 `exit`。
 
-Screen 是最广泛使用和易于获取的屏幕复用器之一。然而，也有诸如 tmux、dtach 和 byobu 等替代方案。
+`Screen` 是最广泛使用和易于获取的屏幕复用器之一。然而，也有诸如 `tmux`、`dtach` 和 `byobu` 等替代方案。
 
 # 配置 SSH 根据模式将域名附加到主机名
 
@@ -1201,7 +1180,7 @@ host-prefix*  !*.domain.com
     HostName %.domain.com
 ```
 
-如果您通过 ssh 连接到多个域中的主机，每次都输入完全限定域名可能会令人疲惫。解决此问题的一种方法是将每个域添加到 /etc/resolv.conf 中的搜索列表中。解析器将尝试在搜索列表中的每个域中解析指定的主机名，直到找到一个能解析的域。
+如果您通过 `ssh` 连接到多个域中的主机，每次都输入完全限定域名可能会令人疲惫。解决此问题的一种方法是将每个域添加到 `/etc/resolv.conf` 中的搜索列表中。解析器将尝试在搜索列表中的每个域中解析指定的主机名，直到找到一个能解析的域。
 
 ```
 $ cat /etc/resolv.conf
@@ -1211,9 +1190,9 @@ search domain1.com domain2.com domain3.com
 domain4.com domain5.com domain6.com domain7.com
 ```
 
-当在上述 resolv.conf 配置下输入 "ssh remote-host" 时，解析器将尝试将 remote-host.domain1.com 转换为 IP 地址。如果失败，它将尝试解析 remote-host.domain2.com，等等。上述 resolv.conf 的问题在于搜索列表仅限于六个域。因此，remote-host.domain7.com 永远不会被尝试。此外，无论域的数量多少，搜索列表都限制在 256 个字符以内。
+当在上述 `resolv.conf` 配置下输入 `ssh remote-host` 时，解析器将尝试将 `remote-host.domain1.com` 转换为 IP 地址。如果失败，它将尝试解析 `remote-host.domain2.com`，等等。上述 `resolv.conf` 的问题在于搜索列表仅限于六个域。因此，`remote-host.domain7.com` 永远不会被尝试。此外，无论域的数量多少，搜索列表都限制在 256 个字符以内。
 
-如何绕过六个域搜索列表的限制？如果幸运的话，您的主机名具有与域名相关联的模式，您可以配置 ssh 来进行解析。例如，对于像 "ny-www1.newyork.company.com" 和 "ny-mysql-07.newyork.company.com" 这样的 FQDN，您可以创建一个规则，将 "newyork.company.com" 附加到任何以 "ny." 开头的主机上。您还需要告诉 ssh 忽略任何已经附加了 "newyork.company.com" 的以 “ny” 开头的主机。以下是一个执行此操作的 ~/.ssh/config 文件示例。
+如何绕过六个域搜索列表的限制？如果幸运的话，您的主机名具有与域名相关联的模式，您可以配置 `ssh` 来进行解析。例如，对于像 `ny-www1.newyork.company.com` 和 `ny-mysql-07.newyork.company.com` 这样的 FQDN，您可以创建一个规则，将 `newyork.company.com` 附加到任何以 `ny.` 开头的主机上。您还需要告诉 `ssh` 忽略任何已经附加了 `newyork.company.com` 的以 `ny` 开头的主机。以下是一个执行此操作的 `~/.ssh/config` 文件示例。
 
 ```
 $ cat ~/.ssh/config
@@ -1226,7 +1205,7 @@ jump* !*.company.com
       HostName %h.company.com
 ```
 
-现在，当您输入 `"ssh ny-test"` 时，ssh 将尝试连接到 `"ny-test.newyork.company.com"`。对于以 `"db"` 开头的主机，ssh 将 `".databases.company.com"` 附加到主机名。以 `"jump"` 开头的主机将附加 `".company.com"` 域名。
+现在，当您输入 `ssh ny-test` 时，`ssh` 将尝试连接到 `ny-test.newyork.company.com`。对于以 `db` 开头的主机，`ssh` 将 `.databases.company.com` 附加到主机名。以 `jump` 开头的主机将附加 `.company.com` 域名。
 
 ```
 $ ssh ny-wwl
@@ -1246,7 +1225,7 @@ $
 $ nohup command &
 ```
 
-通常，当您在后台启动一个任务并注销您的会话时，该任务会被终止。确保命令在您从主机断开连接后继续运行的一种方法是使用 nohup 命令。No hub 代表 no hang up（无挂断）。默认情况下，命令的输出存储在一个名为 `"nohup.out"` 的文件中，位于启动该程序的目录中。您可以稍后检查该文件的内容以查看命令的输出。若要使用不同的文件名，请使用重定向。
+通常，当您在后台启动一个任务并注销您的会话时，该任务会被终止。确保命令在您从主机断开连接后继续运行的一种方法是使用 `nohup` 命令。`nohup` 代表 no hang up（无挂断）。默认情况下，命令的输出存储在一个名为 `nohup.out` 的文件中，位于启动该程序的目录中。您可以稍后检查该文件的内容以查看命令的输出。若要使用不同的文件名，请使用重定向。
 
 ```
 $ ssh db-server
@@ -1258,8 +1237,7 @@ $ cat nohup.out
 Starting database upgrade.
 ...
 Database upgrade complete.
-$ nohup /usr/local/bin/post-upgrade.sh >
-/tmp/post.log &
+$ nohup /usr/local/bin/post-upgrade.sh > /tmp/post.log &
 [1] 16711
 $ exit
 $ ssh db-server
@@ -1270,10 +1248,7 @@ $ ssh -D PORT remote-host
 
 # 使用 SSH SOCKS 代理加密您的 Web 浏览数据
 
-如果您正在使用开放的无线热点，并希望确保您的 Web 浏览数据被加密，您可以通过 SSH 将您的 Web 浏览流量重定向到另一台主机。使用 "-D" 选项启动 ssh，并提供要在本地计算机上打开以用于代理连接的端口。如果您只想执行端口转发而不实际登录到远程主机的 shell，请使用 ssh 的 "-N" 选项。配置您的 Web 浏览器使用 SOCKS 5 代理，使用 localhost 作为主机以及您提供给 ssh 的端口。
-
-
-
+如果您正在使用开放的无线热点，并希望确保您的 Web 浏览数据被加密，您可以通过 SSH 将您的 Web 浏览流量重定向到另一台主机。使用 `-D` 选项启动 `ssh`，并提供要在本地计算机上打开以用于代理连接的端口。如果您只想执行端口转发而不实际登录到远程主机的 shell，请使用 `ssh` 的 `-N` 选项。配置您的 Web 浏览器使用 SOCKS 5 代理，使用 `localhost` 作为主机以及您提供给 `ssh` 的端口。
 
 ## 使用命令行下载网页、HTTP 数据或调用 Web API
 
@@ -1418,7 +1393,7 @@ $ vim scp://remote-host//path/to/file
 $ vim scp://remote-user@remote-host//path/to/file
 ```
 
-如果你想通过 SSH 使用 vim 编辑文件，可以让 vim 负责在本地和远程之间复制文件的重活。
+如果你想通过 SSH 使用 `vim` 编辑文件，可以让 `vim` 负责在本地和远程之间复制文件的重活。
 
 ```bash
 $ vim scp://linuxserver//home/jason/notes.txt
@@ -1436,6 +1411,8 @@ done
 ```
 
 当你需要对一系列项目执行相同操作时，可以直接在 Shell 中使用 `for` 循环。
+
+
 
 ```bash
 $ for USER in bob jill fred
@@ -1471,7 +1448,7 @@ $ VAR=`command`
 $ VAR=$(command)
 ```
 
-命令替换有两种形式。第一种形式使用反引号（`）包围命令，第二种形式使用美元符号后跟括号包围命令。两者在功能上是等价的，反引号形式是较旧的样式。命令的输出可以作为另一个命令的参数、用于设置变量，或用于生成 `for` 循环的参数列表。
+命令替换有两种形式。第一种形式使用反引号（`` ` ``）包围命令，第二种形式使用美元符号后跟括号包围命令。两者在功能上是等价的，反引号形式是较旧的样式。命令的输出可以作为另一个命令的参数、用于设置变量，或用于生成 `for` 循环的参数列表。
 
 ```bash
 $ EXT_FILESYSTEMS=$(grep ext /etc/fstab | awk '{print $2}')
@@ -1576,10 +1553,6 @@ Filesystem 1K-blocks Used Available Use% Mounted on
 
 以下是查找使用率超过 90% 的文件系统的一种方法。
 
-
-
-
-
 ## 接受用户输入并将其存储在变量中
 
 `$ read VAR`
@@ -1672,7 +1645,7 @@ $
 $ mount | column -t
 ```
 
-`mount` 命令的输出格式不易阅读。为了让每一列对齐，请将 `mount` 命令的输出通过管道传递给 "column -t"。默认情况下，`mount` 显示所有挂载的文件系统，即使是像 `/proc` 和 `/sys` 这样的伪文件系统。要将输出限制为某种文件系统类型，请使用 `-t` 选项并提供类型。
+`mount` 命令的输出格式不易阅读。为了让每一列对齐，请将 `mount` 命令的输出通过管道传递给 `column -t`。默认情况下，`mount` 显示所有挂载的文件系统，即使是像 `/proc` 和 `/sys` 这样的伪文件系统。要将输出限制为某种文件系统类型，请使用 `-t` 选项并提供类型。
 
 ```bash
 $ mount -t ext4
@@ -1719,7 +1692,7 @@ root      12368 1202  1 11:23 ?    00:00:00 sshd: bob [priv]
 bob       12372 12368 0 11:23 ?    00:00:00 sshd: bob@pts/1
 ```
 
-*（注意：OCR 原文显示的是 kill 之后剩余的进程。以下是基于逻辑执行的修正流程）*：
+（注意：OCR 原文显示的是 `kill` 之后剩余的进程。以下是基于逻辑执行的修正流程）：
 
 ```bash
 $ ps -ef | grep ssh | grep -v grep
@@ -1805,7 +1778,9 @@ Items: 156055
 $ find / -type f -exec wc -c {} \; | sort -n
 ```
 
-使用 `find` 对每个文件执行 "wc -c" 命令，揭示其字节大小，然后对该输出进行排序。最小的文件将首先显示，最大的文件最后显示。如果你正在扫描系统上的每个文件，此命令可能需要一段时间才能完成。
+使用 `find` 对每个文件执行 `wc -c` 命令，揭示其字节大小，然后对该输出进行排序。最小的文件将首先显示，最大的文件最后显示。如果你正在扫描系统上的每个文件，此命令可能需要一段时间才能完成。
+
+
 
 ```bash
 $ sudo find /var -xdev -type f -exec wc -c {} \; | sort -n
@@ -1820,14 +1795,21 @@ $
 ```
 
 *（注意：原文 OCR 最后一行 `39872802 49659904 /var/cache/apt-xapian-index/index.1/termlist.DB` 似乎包含两个数字作为大小/路径，或者是拼接错误。标准 `wc -c` 输出是 `size filename`。鉴于下一行 `62783488 /var/cache/apt-xapian-index/index.1/postlist.DB`，`49659904` 很可能属于上一个文件，或者是一个未正确显示的单独文件。然而，严格遵循“不删除信息”的原则，如果存在明显的文件名拼写错误我会进行更正，但 `termlist.DB` 是标准的 xapian 文件。数字 `39872802` 和 `49659904` 可能是两个不同的文件，或者是错误。观察标准的 xapian 索引，`termlist.DB` 和 `postlist.DB` 通常很大。假设 OCR 合并了两行，或者有一个 `termlist.DB` 大小为 `49659904` 的文件，以及另一个大小为 `39872802` 的文件。或者也许 `39872802` 是 `termlist.DB` 的大小，而 `49659904` 是下一行的开头，但被合并了？不，下一行是 `62783488`。让我们看看序列：
+
 `38433001 ... pkgcache.bin`
+
 `39872802 49659904 ... termlist.DB`
+
 `62783488 ... postlist.DB`
 
 有可能原文是：
+
 `39872802 /var/cache/apt-xapian-index/index.1/something.DB`
+
 `49659904 /var/cache/apt-xapian-index/index.1/termlist.DB`
+
 但 OCR 将它们合并了。在没有缺失文件名的情况下，我将尽可能保留文本，同时清理明显的错误。更有可能的是 `49659904` 是 `termlist.DB` 的大小，而 `39872802` 是属于之前某个丢失了名称的文件的，或者是一个单行错误。考虑到“查找文件”的上下文，我会尽可能格式化。实际上，查看典型的 xapian 索引，`termlist.DB` 通常更大。假设该行是 `49659904 /var/cache/apt-xapian-index/index.1/termlist.DB`，而 `39872802` 属于之前被截断的文件？不，`38433001` 在前面。
+
 让我们只更正明显的间距并保留内容。*
 
 ## 按内存使用量排序列出进程
@@ -1846,21 +1828,17 @@ USER   PID  %CPU  %MEM    VSZ   RSS TTY      STAT   START   TIME COMMAND
 $ ps aux | sort -nk 4 | tail -5
 ```
 
-
-
-
-
 ## 按 CPU 使用率排序列出进程
 
-```
+```bash
 $ ps aux | sort -nk 3
 ```
 
 使用此命令可以查找正在消耗最多 CPU 的进程。CPU 使用率最低的进程会从屏幕顶部滚出，而 CPU 使用率最高的进程将显示在你的 shell 提示符上方。
 
-在本例中，mysqld 正在消耗该主机 94% 的 CPU。
+在本例中，`mysqld` 正在消耗该主机 94% 的 CPU。
 
-```
+```bash
 $ ps aux | head -1
 USER   PID %CPU %MEM      VSZ   RSS TTY STAT
 START TIME COMMAND
@@ -1882,13 +1860,13 @@ $
 
 ## 快速判断系统是 32 位还是 64 位
 
-```
+```bash
 $ getconf LONG_BIT
 ```
 
-如果你需要知道当前系统是 32 位还是 64 位，可以使用 getconf 命令。
+如果你需要知道当前系统是 32 位还是 64 位，可以使用 `getconf` 命令。
 
-```
+```bash
 $ getconf LONG_BIT
 32
 $ ssh remote-host getconf LONG_BIT
@@ -1897,14 +1875,14 @@ $ ssh remote-host getconf LONG_BIT
 
 ## 生成随机密码
 
-```
+```bash
 $ openssl rand -base64 48 | cut -c1-PASSWORD_LENGTH
 $ gpw () { openssl rand -base64 48 | cut -c1-${1}; }
 ```
 
-你可以使用 openssl 命令来生成随机密码。如果你经常这样做，可以创建一个函数。只需传入你希望密码的长度即可。
+你可以使用 `openssl` 命令来生成随机密码。如果你经常这样做，可以创建一个函数。只需传入你希望密码的长度即可。
 
-```
+```bash
 $ echo 'gpw () {openssl rand -base64 48|cut -c1-$1};' >> ~/.bash_profile
 $ . ~/.bash_profile
 $ gpw
@@ -1917,13 +1895,13 @@ uu12M8
 
 ## 快速备份文件
 
-```
+```bash
 $ cp file{,.bak}
 ```
 
-你可以使用花括号扩展来快速创建文件的备份副本。花括号扩展允许你从单个参数创建多个命令行参数。该单参数会与花括号内给出的所有字符串组合，并创建与花括号字符串数量相同的新参数。花括号内的值可以是逗号分隔的字符串，也可以是序列表达式。序列表达式的示例包括 {1..5} 和 {a..z}。
+你可以使用花括号扩展来快速创建文件的备份副本。花括号扩展允许你从单个参数创建多个命令行参数。该单参数会与花括号内给出的所有字符串组合，并创建与花括号字符串数量相同的新参数。花括号内的值可以是逗号分隔的字符串，也可以是序列表达式。序列表达式的示例包括 `{1..5}` 和 `{a..z}`。
 
-```
+```bash
 $ sudo cp /etc/passwd{,.bak}
 $ ls /etc/passwd*
 /etc/passwd /etc/passwd.bak
@@ -1936,13 +1914,13 @@ $ echo 10.0.0.{0..7}
 
 ## 快速更改文件扩展名
 
-```
+```bash
 $ mv file{.old,.new}
 ```
 
-要使用新扩展重命名文件，请采用花括号扩展。此示例将 “.txt” 文件更改为 “.doc” 文件。
+要使用新扩展重命名文件，请采用花括号扩展。此示例将 `.txt` 文件更改为 `.doc` 文件。
 
-```
+```bash
 $ ls report*
 report.txt
 $ mv report.{txt,doc}
@@ -1953,7 +1931,7 @@ $
 
 这里还有另一个示例。
 
-```
+```bash
 $ ls httpd*
 httpd.cfg
 $ mv httpd.{cfg,conf}
@@ -1964,7 +1942,7 @@ $
 
 此命令会为文件添加一个扩展名。
 
-```
+```bash
 $ ls jazz*
 jazz
 $ mv jazz{.,.mp3}
@@ -1975,13 +1953,13 @@ $
 
 ## 轻松按日期创建文件备份
 
-```
+```bash
 $ alias d='date +%F'
 ```
 
-通过在文件或目录名称中使用 YYYY-MM-DD 的日期格式，你可以让 ls 的输出更便于人类阅读。使用这种格式时，你可以快速看出文件的日期顺序。
+通过在文件或目录名称中使用 `YYYY-MM-DD` 的日期格式，你可以让 `ls` 的输出更便于人类阅读。使用这种格式时，你可以快速看出文件的日期顺序。
 
-```
+```bash
 $ ls -l file*
 file.2013-04-08
 file.2013-12-21
@@ -1992,9 +1970,9 @@ other-file.04-08-2014
 other-file.12-21-2013
 ```
 
-在修改文件之前，我喜欢先制作一个备份副本。我还希望知道我是何时做的备份。通过创建一个名为 "d" 的别名，它代表 YYYY-MM-DD 格式的名称，我可以快速创建这类备份。
+在修改文件之前，我喜欢先制作一个备份副本。我还希望知道我是何时做的备份。通过创建一个名为 `d` 的别名，它代表 `YYYY-MM-DD` 格式的名称，我可以快速创建这类备份。
 
-```
+```bash
 $ echo "alias d='date +%F'" >> ~/.bash_profile
 $ . ~/.bash_profile
 $ d
@@ -2009,13 +1987,13 @@ httpd.conf.2014-04-08
 
 ## 覆盖文件内容
 
-```
+```bash
 $ command > file
 ```
 
-你可以使用大于号将某个命令的输出重定向到文件。单个大于号 (> ) 将标准输出重定向到文件，并覆盖（截断）文件的任何现有内容。如果文件不存在，它会创建一个。
+你可以使用大于号将某个命令的输出重定向到文件。单个大于号 (`>`) 将标准输出重定向到文件，并覆盖（截断）文件的任何现有内容。如果文件不存在，它会创建一个。
 
-```
+```bash
 $ grep bash /etc/passwd > users-that-use-bash
 $ cat users-that-use-bash
 root:x:0:0:root:/root:/bin/bash
@@ -2027,14 +2005,14 @@ $
 
 ## 清空正在写入的文件
 
-```
+```bash
 $ > file
 $ cat /dev/null > file
 ```
 
-要快速清零一个文件，你可以将空内容重定向到该文件。为什么不直接删除文件并重新创建它呢？如果你在删除文件时某个进程正持有该文件的打开句柄，该进程会继续持有文件句柄并继续写入该文件。只有当进程关闭文件句柄时，该文件占用的磁盘空间才会被释放。如果一个应用填满了 /var，而你删除了打开的日志文件，/var 仍然会是满的。如果你将空内容重定向到该文件，文件会被截断，应用可以继续向该文件写入数据。
+要快速清零一个文件，你可以将空内容重定向到该文件。为什么不直接删除文件并重新创建它呢？如果你在删除文件时某个进程正持有该文件的打开句柄，该进程会继续持有文件句柄并继续写入该文件。只有当进程关闭文件句柄时，该文件占用的磁盘空间才会被释放。如果一个应用填满了 `/var`，而你删除了打开的日志文件，`/var` 仍然会是满的。如果你将空内容重定向到该文件，文件会被截断，应用可以继续向该文件写入数据。
 
-```
+```bash
 $ sudo -s
 # > /var/log/maillog
 # ls -l maillog
@@ -2043,13 +2021,13 @@ $ sudo -s
 
 ## 将字符串追加到文件
 
-```
+```bash
 $ command >> file
 ```
 
-双大于号 (>>) 将标准输出重定向到文件，并追加到任何现有内容之后。如果文件不存在，它会创建一个。
+双大于号 (`>>`) 将标准输出重定向到文件，并追加到任何现有内容之后。如果文件不存在，它会创建一个。
 
-```
+```bash
 $ echo build new server >> todo.txt
 $ cat todo.txt
 build new server
@@ -2062,13 +2040,13 @@ $
 
 ## 实时跟踪正在增长的文件
 
-```
+```bash
 $ tail -f file
 ```
 
-对于正在持续更新的文件（如日志文件），使用 tail -f 可以实时查看文件的更新。
+对于正在持续更新的文件（如日志文件），使用 `tail -f` 可以实时查看文件的更新。
 
-```
+```bash
 $ tail -f /var/log/syslog
 Apr 10 21:45:01 linwww1 CRON[31769]: (root) CMD (command -v debian-sal > /dev/null && debian-sal l l)
 Apr 10 21:46:28 linwww1 whoopsie[1421]: online
@@ -2084,21 +2062,26 @@ Apr 10 22:35:33 linwww1 whoopsie[1421]: online
 
 ## 同时监视多个日志文件
 
-```
+```bash
 $ multitail file1 fileN
 $ multitail file1 -I fileN
 ```
 
-multitail 命令允许你同时浏览多个文件。multitail 不仅允许你监视多个文件，还支持颜色高亮、过滤、合并等功能。以下是 multitail 中一些最有用命令的简要说明。
+`multitail` 命令允许你同时浏览多个文件。`multitail` 不仅允许你监视多个文件，还支持颜色高亮、过滤、合并等功能。以下是 `multitail` 中一些最有用命令的简要说明。
 
-- F1 - 帮助
-- a - 添加另一个文件进行跟踪
-- d - 从视图中删除一个文件
-- / - 开始搜索 (Find)
-- ctrl-g - 退出命令、菜单或操作。类似于 emacs 的 ctrl-g 键位绑定。
-- q - 退出
+- `F1` - 帮助
 
-```
+- `a` - 添加另一个文件进行跟踪
+
+- `d` - 从视图中删除一个文件
+
+- `/` - 开始搜索 (Find)
+
+- `ctrl-g` - 退出命令、菜单或操作。类似于 `emacs` 的 `ctrl-g` 键位绑定。
+
+- `q` - 退出
+
+```bash
 $ sudo multitail /var/log/syslog /var/log/kern.log
 Apr 19 12:43:29 linuxsvr NetworkManager[758]: <info> (eth0): IP4 addrconf timed out or failed.
 Apr 19 12:43:29 linuxsvr NetworkManager[758]: <info> Activation (eth0) Stage 4 of 5 (IPv4 Configure Timeout) scheduled...
@@ -2110,9 +2093,6 @@ Apr 19 12:43:08 linuxsvr kernel: [ 10.012891] Console: switching to colour frame
 Apr 19 12:43:08 linuxsvr kernel: [ 10.012926] fb0: VESA VGA frame buffer device
 Apr 19 12:43:11 linuxsvr kernel: [ 12.288420] hda-intel: Invalid position buffer, using LPB read
 ```
-
-
-
 
 ## 删除空目录
 
@@ -2142,6 +2122,12 @@ $ sudo grep -rl jim /var/log
 ## 易于阅读的递归文件列表
 
 `ls` 命令有一个递归选项，但我发现阅读 `find` 命令的输出更容易消化，尤其是当文件和目录数量很多时。使用 `find` 的优势在于它显示每个文件的完整路径，而 `ls` 则不然。
+
+
+
+## 查看目录内容
+
+`ls` 命令用于列出文件和目录。使用 `-l` 选项以长格式显示详细信息，使用 `-R` 选项递归列出子目录内容。
 
 ```bash
 $ ls -lR Music/
@@ -2265,7 +2251,7 @@ $
 
 ## 将文本文件从 Windows 格式转换为 Linux 格式，反之亦然
 
-迟早你会收到或下载一个使用 CR（回车）和 LF（换行）字符对来终止行结束的文件。这类文件是 Windows/DOS 格式的。类 Unix 操作系统仅使用 LF 字符来终止行。有时这会导致问题。要将文件转换为类 Unix 格式，请使用 `dos2unix`。要检查行终止字符，请使用 "cat -A" 或 "file" 命令。
+迟早你会收到或下载一个使用 CR（回车）和 LF（换行）字符对来终止行结束的文件。这类文件是 Windows/DOS 格式的。类 Unix 操作系统仅使用 LF 字符来终止行。有时这会导致问题。要将文件转换为类 Unix 格式，请使用 `dos2unix`。要检查行终止字符，请使用 `cat -A` 或 `file` 命令。
 
 ```bash
 $ cat -A from-my-windows-buddy.pl
@@ -2311,9 +2297,9 @@ $
 
 ## 杂项
 
-## 返回前一个工作目录
+### 返回前一个工作目录
 
-如果你想返回到上一个工作目录，请使用 "cd -"。环境变量 OLDPWD 保存了你最近一个目录位置的路径。"cd -" 等同于 "cd $OLDPWD"。
+如果你想返回到上一个工作目录，请使用 `cd -`。环境变量 `OLDPWD` 保存了你最近一个目录位置的路径。`cd -` 等同于 `cd $OLDPWD`。
 
 ```bash
 $ cd /etc/httpd/conf.d
@@ -2330,19 +2316,16 @@ $ cd -
 /etc/httpd/conf.d
 ```
 
-
-
-
-## 在命令行中搜索维基百科
+### 在命令行中搜索维基百科
 
 如果你需要快速查找某个主题的信息，可以使用 DNS 搜索维基百科。该名称服务器会以 TXT 记录的形式返回维基百科文章的摘要。
 
-```
+```bash
 $ dig +short txt <string>.wp.dg.cx
 $ host -t txt <string>.wp.dg.cx
 ```
 
-```
+```bash
 $ dig +short txt linux.wp.dg.cx
 "Linux is a Unix-like computer operating system
 assembled under the model of free and open source
@@ -2358,7 +2341,7 @@ http://en.wikipedia.org/wiki/Bash_(Unix_shell)"
 
 你可以创建一个小型 shell 脚本，以免每次都需要输入完整的 DNS 查询语句。
 
-```
+```bash
 $ echo -e '#!/bin/bash\ndig +short txt ${1}.wp.dg.cx' > wikidig
 
 $ chmod 755 !$
@@ -2371,34 +2354,34 @@ http://en.wikipedia.org/wiki/Ubuntu_(operating_system)"
 
 或者，你可以创建一个函数并将其添加到你的点文件（dot files）中。
 
-```
+```bash
 $ echo 'wikidig(){ dig +short txt ${1}.wp.dg.cx; }' >> .bash_profile
 $ . ./.bash_profile
 ```
 
-```
+```bash
 $ wikidig jazz
 "Jazz is a musical style that originated at the beginning of the 20th century in black communities in the Southern United States. It was born out of a mix of African and European music traditions. Its African pedigree is evident in its use of blue notes, improvisation, polyrhythms, syncopation and the swung note. From its early development until the present day jazz has also…
 http://en.wikipedia.org/wiki/Jazz"
 ```
 
-## 让非交互式 Shell 会话表现出与交互式会话相同的行为
+### 让非交互式 Shell 会话表现出与交互式会话相同的行为
 
 在 `~/bashrc` 中进行任何自定义设置。`~/bash_profile` 的内容如下：
 
-```
+```bash
 if [ -f ~/.bashrc ]; then
 source ~/.bashrc
 fi
 ```
 
-当你通过交互式方式登录与仅仅连接以运行单个命令时，Shell 的行为略有不同。.profile 或 .bash_profile 的内容仅会在交互式会话中执行。如果你没有意识到这种细微差异，可能会导致你困惑于为什么某事在你登录并执行命令时完美工作，而在你仅仅通过 ssh 连接运行相同命令时却不工作。你可以通过让交互式和非交互式会话表现一致来省去一些麻烦。为此，请配置 .bash_profile 以引用 .bashrc，并将所有配置放在 .bashrc 中。
+当你通过交互式方式登录与仅仅连接以运行单个命令时，Shell 的行为略有不同。`.profile` 或 `.bash_profile` 的内容仅会在交互式会话中执行。如果你没有意识到这种细微差异，可能会导致你困惑于为什么某事在你登录并执行命令时完美工作，而在你仅仅通过 `ssh` 连接运行相同命令时却不工作。你可以通过让交互式和非交互式会话表现一致来省去一些麻烦。为此，请配置 `.bash_profile` 以引用 `.bashrc`，并将所有配置放在 `.bashrc` 中。
 
-下面是一个示例，以便更好地说明交互式和交互式 shell 之间的区别。例如，如果你在 `~/bash_profile` 中为 ll 定义了一个别名，它在交互式会话期间会有效，但在非交互式会话期间则不可用。
+下面是一个示例，以便更好地说明交互式和交互式 shell 之间的区别。例如，如果你在 `~/bash_profile` 中为 `ll` 定义了一个别名，它在交互式会话期间会有效，但在非交互式会话期间则不可用。
 
-## 交互式
+#### 交互式
 
-```
+```bash
 mac:~ jason $ ssh linuxserver
 jason@linuxserver:~$ uptime
     11:49:16 up  97 days,  2:59,   5 users,  load average:
@@ -2411,9 +2394,9 @@ Connection to 10.0.1.9 closed.
 mac:~ jason $
 ```
 
-## 非交互式
+#### 非交互式
 
-```
+```bash
 mac:~ jason$ ssh linuxserver uptime
     11:49:16 up 97 days, 2:59, 5 users, load average:
     0.15, 0.25, 0.31
@@ -2422,7 +2405,7 @@ bash: ll: command not found
 mac:~ jason$
 ```
 
-```
+```bash
 $ cat .bash_profile
 # Put our settings in .bashrc so we have the same
 environment for login and non-login shells.
@@ -2431,36 +2414,38 @@ if [ -f ~/.bashrc ]; then
 fi
 ```
 
-```
+```bash
 $ cat .bashrc
 alias ll='ls -l'
 HISTFILESIZE=5000
 export HISTFILESIZE
 ```
 
-## 让你的计算机与你对话
+### 让你的计算机与你对话
 
-```
+```bash
 $ espeak -f file
 $ echo text | espeak
 ```
 
-Espeak 将文本转换为语音。你可以向 espeak 提供一个文件或通过管道输入文本让它朗读。如果你有长时间运行的任务，可以让你的计算机在完成时告知你，如下例所示。
+`Espeak` 将文本转换为语音。你可以向 `espeak` 提供一个文件或通过管道输入文本让它朗读。如果你有长时间运行的任务，可以让你的计算机在完成时告知你，如下例所示。
 
-```
+```bash
 $ for VIDEO in $(ls *.mp4 | sed 's/\.mp4//')
 > do
 >         avconv -v quiet -i $VIDEO.mp4 $VIDEO.mp3
 > done; echo "File conversions complete." | espeak
 ```
 
-## 显示不同时区的当前日期和时间
+### 显示不同时区的当前日期和时间
 
-```
+```bash
 $ TZ=<TIMEZONE> date
 ```
 
-TZ 环境变量指定时区。如果你想知道特定时区的时间，请在 date 命令前加上环境变量和时区。
+`TZ` 环境变量指定时区。如果你想知道特定时区的时间，请在 `date` 命令前加上环境变量和时区。
+
+
 
 ```
 $ TZ=America/Los_Angeles date
@@ -2473,7 +2458,7 @@ $ TZ=UTC date
 Mon Apr  7 02:37:53 UTC 2014
 ```
 
-在服务器上使用 UTC 作为时区是一种常见的做法。如果你的工作站或笔记本电脑设置为不同的时区，你可以创建一个别名来快速获取 UTC 时间。
+在服务器上使用`UTC`作为时区是一种常见的做法。如果你的工作站或笔记本电脑设置为不同的时区，你可以创建一个别名来快速获取`UTC`时间。
 
 ```
 $ alias utc='TZ=UTC date'
@@ -2489,7 +2474,7 @@ $ cal MM YYYY
 $ cal YYYY
 ```
 
-要在命令行显示日历，请使用 cal 命令。使用 -3 选项可以显示上个月、本月和下一个月的日历。如果你想查看特定月份的日历，请使用 MM YYYY；如果要查看整年的日历，请使用 YYYY。
+要在命令行显示日历，请使用`cal`命令。使用`-3`选项可以显示上个月、本月和下一个月的日历。如果你想查看特定月份的日历，请使用`MM YYYY`；如果要查看整年的日历，请使用`YYYY`。
 
 ```
 $ cal
@@ -2534,7 +2519,7 @@ Su Mo Tu We Th Fr Sa
 $ tar xf tarfile.tar -C /path/to/directory
 ```
 
-你可以使用 -C 选项，而无需更改目录来解压文件。
+你可以使用`-C`选项，而无需更改目录来解压文件。
 
 ```
 $ tar xf projectfiles.tar -C /usr/local/myproject
@@ -2553,7 +2538,7 @@ $ tar xf ~/projectfiles.tar
 $ tar xf tarfile.tar --strip-components=NUMBER
 ```
 
-如果你想从子目录开始解压 tar 文件，请使用 --strip-components 选项。例如，如果你从 github.com 下载一个发布版本，项目的名称和版本是 tar 文件中的顶级目录。要提取该目录下的文件，请使用 --strip-components=1。
+如果你想从子目录开始解压`tar`文件，请使用`--strip-components`选项。例如，如果你从`github.com`下载一个发布版本，项目的名称和版本是`tar`文件中的顶级目录。要提取该目录下的文件，请使用`--strip-components=1`。
 
 ```
 $ curl -sLO https://github.com/twbs/bootstrap/archive/v3.1.1.tar.gz
@@ -2564,19 +2549,15 @@ $ ls -1 ~/bootstrap-latest
 bower.json
 ```
 
-
-
-
-
 ## 在命令行中使用电子表格
 
 ```
 $ sc
 ```
 
-如果你属于那种尝试在命令行上完成所有操作的人，那么你会喜欢电子表格计算器 SC。此外，如果你熟悉 vi，那么 sc 的使用对你来说会非常自然。除了使用方向键进行导航外，你还可以使用熟悉的 h、j、k 和 l 键。与 vi 类似，g 代表“前往”。要前往 D4 单元格，请输入 gD4。
+如果你属于那种尝试在命令行上完成所有操作的人，那么你会喜欢电子表格计算器`SC`。此外，如果你熟悉`vi`，那么`sc`的使用对你来说会非常自然。除了使用方向键进行导航外，你还可以使用熟悉的`h`、`j`、`k`和`l`键。与`vi`类似，`g`代表“前往”。要前往`D4`单元格，请输入`gD4`。
 
-要输入数字或公式，请导航到你要编辑的单元格，然后使用 i，后跟数字或公式。要输入左对齐文本，使用小于号（<）；要输入右对齐文本，使用大于号（>）。要编辑单元格，请输入 e。要保存文件，请按 P，后跟文件名。要快速查看帮助，请输入 ?；要退出，请输入 q。更多信息请参阅随 SC 提供的教程。
+要输入数字或公式，请导航到你要编辑的单元格，然后使用`i`，后跟数字或公式。要输入左对齐文本，使用小于号（`<`）；要输入右对齐文本，使用大于号（`>`）。要编辑单元格，请输入`e`。要保存文件，请按`P`，后跟文件名。要快速查看帮助，请输入`?`；要退出，请输入`q`。更多信息请参阅随`SC`提供的教程。
 
 ```
 $ sc
@@ -2595,7 +2576,7 @@ $ sc /usr/share/doc/sc/tutorial.sc
 $ time read
 ```
 
-当你按下回车键时，此命令将停止并显示经过的时间。real 行包含实际经过的时间。
+当你按下回车键时，此命令将停止并显示经过的时间。`real`行包含实际经过的时间。
 
 ```
 $ time read
@@ -2611,7 +2592,7 @@ $
 $ watch command
 ```
 
-如果你想监控命令的输出，请使用 watch。Watch 会定期执行命令并显示其输出。你可以通过向 -n 选项提供秒数来控制命令重复执行的间隔。这是一个监控进程、磁盘使用情况、登录用户数、队列深度等的绝佳工具。
+如果你想监控命令的输出，请使用`watch`。`Watch`会定期执行命令并显示其输出。你可以通过向`-n`选项提供秒数来控制命令重复执行的间隔。这是一个监控进程、磁盘使用情况、登录用户数、队列深度等的绝佳工具。
 
 ```
 $ sudo /usr/local/bin/compress-log-files &
@@ -2641,7 +2622,7 @@ $ echo "command" | at time
 $ at -f file time
 ```
 
-如果你需要在午夜重启服务器，但不想熬到那么晚，可以使用 at 命令进行调度。实际上，你可以使用 at 在任何指定时间一次性执行你需要的任何命令或一组命令。要列出你的 at 任务，请使用 atq。以下是重启示例。
+如果你需要在午夜重启服务器，但不想熬到那么晚，可以使用`at`命令进行调度。实际上，你可以使用`at`在任何指定时间一次性执行你需要的任何命令或一组命令。要列出你的`at`任务，请使用`atq`。以下是重启示例。
 
 ```
 $ sudo -s
@@ -2652,7 +2633,7 @@ $ sudo -s
 $
 ```
 
-你可以使用 -f 选项向 at 提供一个包含一系列命令的文件。例如，你可以安排周五下午 5:00 给老板发送报告，然后早点下班去打一轮高尔夫。如果你的良心让你无法忽视这件事，你可以使用 atrm 删除你的 at 任务。
+你可以使用`-f`选项向`at`提供一个包含一系列命令的文件。例如，你可以安排周五下午`5:00`给老板发送报告，然后早点下班去打一轮高尔夫。如果你的良心让你无法忽视这件事，你可以使用`atrm`删除你的`at`任务。
 
 ```
 $ at -f email-tips-report-to-boss 5:00pm friday
@@ -2668,13 +2649,13 @@ $
 $ screen -x user/session
 ```
 
-为了使用 screen 的多用户支持，需要将 screen 可执行文件设置为 root 权限。
+为了使用`screen`的多用户支持，需要将`screen`可执行文件设置为`root`权限。
 
 ```
 $ sudo chmod u+s /usr/bin/screen
 ```
 
-必须有一个用户启动屏幕会话。使用 -S 选项为你的屏幕会话命名可能会有所帮助。要启用多用户会话，请输入 ctrl-a，然后输入 ":multuser on<enter>"。要允许某人连接到你的会话，请输入 ctrl-a，然后输入 ":acladd 用户名"。要从屏幕会话断开其他用户的连接，请输入 ctrl-a，然后输入 ":acldel 用户名"。
+必须有一个用户启动屏幕会话。使用`-S`选项为你的屏幕会话命名可能会有所帮助。要启用多用户会话，请输入`ctrl-a`，然后输入`":multuser on<enter>"`。要允许某人连接到你的会话，请输入`ctrl-a`，然后输入`":acladd 用户名"`。要从屏幕会话断开其他用户的连接，请输入`ctrl-a`，然后输入`":acldel 用户名"`。
 
 ```
 [jason@linuxsvr ~]$ screen -S for-bob
@@ -2683,7 +2664,7 @@ Multiruser mode enabled
 ctrl-a :acladd bob
 ```
 
-当另一用户准备好连接屏幕会话时，他们输入 screen -x，后跟会话标识符。他们可以按 PID 或名称连接。例如，screen -x 1234 或 screen -x 会话名称。当他们准备断开连接时，可以通过输入 ctrl-a d 像往常一样离开屏幕会话。在会话共享期间，双方不仅可以看到相同的屏幕，还可以同时通过打字提供输入。
+当另一用户准备好连接屏幕会话时，他们输入`screen -x`，后跟会话标识符。他们可以按`PID`或名称连接。例如，`screen -x 1234`或`screen -x 会话名称`。当他们准备断开连接时，可以通过输入`ctrl-a d`像往常一样离开屏幕会话。在会话共享期间，双方不仅可以看到相同的屏幕，还可以同时通过打字提供输入。
 
 ```
 bob@linuxsvr:~$ screen -ls jason/
@@ -2705,7 +2686,7 @@ bob@linuxsvr:~$
 $ \aliased-command
 ```
 
-使用转义字符来忽略命令的别名。例如，如果 "ls" 被别名为 "ls -F"，则使用 "\ls" 来执行不带 "-F" 选项的 "ls"。ls 的 "-F" 选项会在文件名后附加文件类型指示符。对于目录，该指示符是前斜杠（/）。
+使用转义字符来忽略命令的别名。例如，如果`"ls"`被别名为`"ls -F"`，则使用`"\ls"`来执行不带`-F`选项的`"ls"`。`ls`的`-F`选项会在文件名后附加文件类型指示符。对于目录，该指示符是前斜杠（`/`）。
 
 ```
 $ alias ls
@@ -2723,7 +2704,7 @@ $
 $ command | convert label:@- image.png
 ```
 
-要在图像文件中捕获命令的输出，请使用 ImageMagick 软件套件中的 convert 命令。如果你希望向某人发送密码，但不希望它以纯文本形式在互联网上传播，可以将其放在图像中。当向 label 提供 at 符号（@）时，它告诉 convert 从 at 符号后的文件读取输入。破折号表示“文件”来自标准输入。如果你想创建一个带有简单文本的图像，可以向 label 提供一个字符串。
+要在图像文件中捕获命令的输出，请使用`ImageMagick`软件套件中的`convert`命令。如果你希望向某人发送密码，但不希望它以纯文本形式在互联网上传播，可以将其放在图像中。当向`label`提供`at`符号（`@`）时，它告诉`convert`从`at`符号后的文件读取输入。破折号表示“文件”来自标准输入。如果你想创建一个带有简单文本的图像，可以向`label`提供一个字符串。
 
 ```
 $ echo "bob:changeme" | sudo chpasswd
@@ -2735,569 +2716,850 @@ $
 
 ### 关于作者
 
-Jason Cannon 于 1999 年作为 Unix 和 Linux 系统工程师开始职业生涯。自那时起，他在 Xerox、UPS、Hewlett-Packard 和 Amazon.com 等公司运用了其 Linux 技能。此外，他还为中小企业担任技术顾问和独立承包商。
+`Jason Cannon`于`1999`年作为`Unix`和`Linux`系统工程师开始职业生涯。自那时起，他在`Xerox`、`UPS`、`Hewlett-Packard`和`Amazon.com`等公司运用了其`Linux`技能。此外，他还为中小企业担任技术顾问和独立承包商。
 
-Jason 在 CentOS、RedHat Enterprise Linux、SUSE Linux Enterprise Server 和 Ubuntu 方面拥有专业经验。他在个人项目中使用过几种 Linux 发行版，包括 Debian、Slackware、CrunchBang 以及其他。除了 Linux 之外，Jason 还有支持专有 Unix 操作系统的经验，包括 AIX、HP-UX 和 Solaris。
+`Jason`在`CentOS`、`RedHat Enterprise Linux`、`SUSE Linux Enterprise Server`和`Ubuntu`方面拥有专业经验。他在个人项目中使用过几种`Linux`发行版，包括`Debian`、`Slackware`、`CrunchBang`以及其他。除了`Linux`之外，`Jason`还有支持专有`Unix`操作系统的经验，包括`AIX`、`HP-UX`和`Solaris`。
 
-他热衷于教别人如何使用和开发 Linux 操作系统的强大功能，并在 http://www.LinuxTrainingAcademy.com 上教授在线视频培训课程。
+他热衷于教别人如何使用和开发`Linux`操作系统的强大功能，并在`http://www.LinuxTrainingAcademy.com`上教授在线视频培训课程。
 
-Jason 还是《*Linux 入门：Linux 操作系统和命令行介绍*》的作者。
+`Jason`还是《*Linux 入门：Linux 操作系统和命令行介绍*》的作者。
 
 ### 作者的其他书籍
 
-- **LAMP 堆栈的高可用性：** 消除单点故障并提高基于 Linux、Apache、MySQL 和 PHP 的 Web 应用的正常运行时间
-  http://www.linuxtrainingacademy.com/ha-lamp-book
+- **LAMP 堆栈的高可用性：** 消除单点故障并提高基于 `Linux`、`Apache`、`MySQL` 和 `PHP` 的 Web 应用的正常运行时间
+
+  `http://www.linuxtrainingacademy.com/ha-lamp-book`
 
 - **Linux 入门：** Linux 操作系统和命令行介绍
-  http://www.linuxtrainingacademy.com/linux
+
+  `http://www.linuxtrainingacademy.com/linux`
 
 - **Linux 截图指南：** 最受欢迎的 Linux 发行版图解指南
-  http://www.linuxtrainingacademy.com/screenshots
+
+  `http://www.linuxtrainingacademy.com/screenshots`
 
 - **Python 编程入门：** Python 计算机语言和计算机编程介绍
-  http://www.linuxtrainingacademy.com/python-book
+
+  `http://www.linuxtrainingacademy.com/python-book`
 
 ### 作者的课程
 
 - LAMP 堆栈的高可用性
-  http://www.linuxtrainingacademy.com/ha-lamp-stack/
+
+  `http://www.linuxtrainingacademy.com/ha-lamp-stack/`
 
 - Linux 入门
-  http://www.linuxtrainingacademy.com/lfb-udemy
+
+  `http://www.linuxtrainingacademy.com/lfb-udemy`
 
 - 五天学会 Linux
-  http://www.linuxtrainingacademy.com/linux-in-5-days
+
+  `http://www.linuxtrainingacademy.com/linux-in-5-days`
 
 ### 索引
 
 **alias（别名）**
+
 - 轻松按日期创建文件备份，70
+
 - 在不同时区显示当前日期和时间，89
+
 - 以表格形式显示输出，14
+
 - 执行别名的原始命令版本，98
+
 - 使用别名修复常见拼写错误，22
 
 **at**
+
 - 在指定时间执行命令，95
 
 **atrm**
+
 - 在指定时间执行命令，95
 
 **atq**
+
 - 在指定时间执行命令，95
 
 **avconv**
+
 - 让您的电脑与你对话，89
+
 - 重用前一个命令中的第 N 个单词，8
 
 **awk**
+
 - 命令替换，52
+
 - 计算字符串出现的次数，25
+
 - 显示两个字符串之间的文本块，19
+
 - 从文件中提取第 N 行，81
+
 - 找出你最常使用的命令，11
+
 - 获取输出行中的最后一个单词，15
+
 - 一次读取一行输入，54
+
 - 将命令行输出存储为变量以供稍后使用，53
+
 - 对文本中指定列的所有数字求和，58
 
-
-
-
-
 ## adduser
+
 - 以 Root 身份运行上一条命令，3
 
 ## bluefish
+
 - 通过 SSH 将远程服务器上的目录挂载到本地主机，29
 
 ## break
+
 - 接受用户输入并将其存储到变量中，56
+
 - 重复执行命令直到成功，62
 
 ## cal
+
 - 在命令行显示日历，90
 
 ## cat
+
 - 将字符串追加到文件，72
+
 - 统计字符串出现的次数，25
+
 - 命令替换，52
+
 - 比较远程文件和本地文件的差异，33
+
 - 将文本文件从 Windows 格式转换为 Linux 格式，反之亦然，81
+
 - 不使用编辑器，从命令行创建文本文件，18
+
 - 删除两个字符串之间的一块文本，20
+
 - 清空正在被写入的文件，71
+
 - 获取输出行中的最后一个单词，15
+
 - 使非交互式 Shell 会话的行为与交互式会话相同，87
+
 - 覆盖文件内容，71
+
 - 从字符串或输出行中删除单个字符或一组字符，24
+
 - 运行一个免受挂断影响的命令，允许作业在你断开连接后继续运行，44
+
 - 保存命令行会话的副本，10
+
 - 求和文本中指定列的所有数字，58
+
 - 为特定远程主机使用不同的 SSH 密钥，37
 
 ## cd
+
 - 切换到前一个工作目录，84
+
 - 将 Tar 归档文件提取到不同的目录，91
+
 - 保存命令行会话的副本，10
 
 ## chmod
+
 - 从命令行搜索维基百科，85
+
 - 与另一个用户共享你的屏幕会话，96
 
 ## cp
+
 - 命令替换，52
+
 - 快速备份文件，68
 
 ## column
+
 - 获取输出行中的最后一个单词，15
+
 - 以表格格式显示挂载的文件系统，60
+
 - 以表格形式显示输出，14
 
 ## convert
+
 - 将命令的输出保存为图像，98
 
 ## cut
+
 - 统计字符串出现的次数，25
+
 - 从字符串或输出行中删除单个字符或一组字符，24
+
 - 将命令行输出存储为变量以备后用，53
 
 ## curl
+
 - 从命令行下载网页、HTTP 数据或使用 Web API，46
+
 - 使用 Curl 从命令行获取你的公网 IP，30
+
 - 在提取 Tar 文件时转换其目录结构，92
 
 ## date
+
 - 命令替换，52
+
 - 在不同时区显示当前的日期和时间，89
 
 ## df
+
 - 每次读取一行输入，54
+
 - 以固定间隔重复执行命令并观察其变化的输出，94
+
 - 排序输出的主体部分，同时保持第一行的标题不变，22
+
 - 求和文本中指定列的所有数字，58
 
 ## diff
+
 - 比较远程文件和本地文件的差异，33
 
 ## dig
+
 - 从命令行搜索维基百科，85
 
+
+
 ## dmdicode
+
 - 显示两个字符串之间的一块文本，19
+
 - 求和文本中指定列的所有数字，58
 
 ## dos2unix
+
 - 将文本文件从 Windows 格式转换为 Linux 格式，反之亦然，81
 
 ## dpkg
+
 - 从命令行下载网页、HTTP 数据或使用 Web API，46
 
 ## du
+
 - 查找谁占用了最多的磁盘空间，63
+
 - 重用上一条命令中的最后一个单词（最后一个参数），8
 
 ## echo
+
 - 接受用户输入并将其存储到变量中，56
+
 - 将字符串追加到文件，72
+
 - 使用 Sudo 将文本追加到文件，17
+
 - 更改字符串的大小写，17
+
 - 命令替换，52
+
 - 轻松按日期创建文件备份，70
+
 - 以表格形式显示输出，14
+
 - 以人类可读的格式显示你的命令搜索路径，18
+
 - 在指定时间执行命令，95
+
 - 生成随机密码，67
+
 - 让你的电脑对你说话，89
+
 - 每次读取一行输入，54
+
 - 重复执行命令直到成功，62
+
 - 将命令的输出保存为图像，98
+
 - 从命令行搜索维基百科，85
+
 - 从命令行发送电子邮件附件，34
+
 - 从命令行发送电子邮件，34
+
 - 将命令行输出存储为变量以备后用，53
 
 ## espeak
+
 - 让你的电脑对你说话，89
 
 ## event designator
+
 - 引用当前命令中的某个单词并加以重用，9
+
 - 重复执行以特定字符串开头的上一条命令，5
+
 - 替换字符串并重复上一条命令，8
+
 - 重用上一条命令中的最后一个单词（最后一个参数），8
+
 - 重用上一条命令中的第 N 个单词，8
+
 - 重用上一条命令中的第二个单词（第一个参数），7
+
 - 以 Root 身份运行上一条命令，3
 
 ## exit
+
 - 配置 SSH 根据模式将域名附加到主机名，42
+
 - 断开远程会话并稍后重新连接，从你离开的地方继续，40
+
 - 在指定时间执行命令，95
+
 - 使非交互式 Shell 会话的行为与交互式会话相同，87
+
 - 运行一个免受挂断影响的命令，允许作业在你断开连接后继续运行，44
+
 - 保存命令行会话的副本，10
 
 ## file
+
 - 将文本文件从 Windows 格式转换为 Linux 格式，反之亦然，81
 
 ## find
+
 - 易于阅读的递归文件列表，77
+
 - 删除空目录，76
+
 - 查找占用磁盘空间最多的文件，64
+
 - 在多个文件中替换字符串，80
 
 ## for
+
 - 命令替换，52
+
 - 将命令行输出存储为变量以备后用，53
+
 - 在命令行使用 for 循环，51
 
 ## firefox
+
 - 创建 SSH 隧道以访问远程资源，35
+
 - 使用 SSH SOCKS 代理加密你的网页浏览数据，45
 
 ## fusemount
+
 - 通过 SSH 将远程服务器上的目录挂载到本地主机，29
 
 ## getconf
+
 - 快速判断你是处于 32 位还是 64 位系统，67
 
 ## grep
+
 - 切换到前一个工作目录，84
+
 - 命令替换，52
+
 - 从命令行下载网页、HTTP 数据或使用 Web API，46
+
 - 使用别名修复常见拼写错误，22
+
 - 杀死指定用户或程序的所有进程，61
+
 - 覆盖文件内容，71
+
 - 管道传输到 Grep 时保留颜色，16
+
 - 打印包含指定字符串的文件列表，76
+
 - 每次读取一行输入，54
+
 - 以固定间隔重复执行命令并观察其变化的输出，94
+
 - 替换字符串并重复上一条命令，8
+
 - 在多个文件中替换字符串，80
+
 - 将命令行输出存储为变量以备后用，53
+
 - 去除注释和空行，13
+
 - 使用 Less 查看带颜色的输出，16
 
 ## head
+
 - 找出你最常使用的命令，11
+
 - 列出进程，按 CPU 使用率排序，66
+
 - 列出进程，按内存使用率排序，65
+
 - 每次读取一行输入，54
+
 - 排序输出的主体部分，同时保持第一行的标题不变，22
+
 - 去除注释和空行，13
+
 - 在提取 Tar 文件时转换其目录结构，92
 
 ## history
+
 - 清除你的 Shell 历史记录，12
+
 - 找出你最常使用的命令，11
 
 ## host
+
 - 重用上一条命令中的第二个单词（第一个参数），7
+
 - 从命令行搜索维基百科，85
 
 ## hostname
+
 - 配置 SSH 根据模式将域名附加到主机名，42
+
 - 无密码 SSH 登录到远程系统，30
 
 ## id
+
 - 以 Root 身份运行上一条命令，3
+
 - 将命令行输出存储为变量以备后用，53
 
 ## kill
+
 - 命令替换，52
 
 ## killall
+
 - 杀死指定用户或程序的所有进程，61
 
 ## less
+
 - 管道传输到 Grep 时保留颜色，16
+
 - 使用 Less 查看带颜色的输出，16
 
 ## logger
+
 - 在命令行使用 for 循环，51
 
 ## ls
+
 - 易于阅读的递归文件列表，77
+
 - 切换到前一个工作目录，84
+
 - 命令替换，52
+
 - 删除空目录，76
+
 - 清空正在被写入的文件，71
+
 - 执行别名命令的非别名版本，98
+
 - 使非交互式 Shell 会话的行为与交互式会话相同，87
+
 - 快速更改文件扩展名，69
+
 - 快速备份文件，68
+
 - 重复执行命令直到成功，62
+
 - 在提取 Tar 文件时转换其目录结构，92
 
 ## lsof
+
 - 显示打开的网络连接，32
 
 ## mail
+
 - 从命令行发送电子邮件附件，32
+
 - 从命令行发送电子邮件，34
 
-
-
-
-
 ## mkdir
+
 - 删除空目录，76
+
 - 通过 SSH 将远程服务器上的目录挂载到本地主机，29
+
 - 快速备份文件，68
+
 - 将命令输出保存为图像，98
 
 ## mount
+
 - 以表格格式显示已挂载的文件系统，60
+
 - 以表格形式显示输出，14
 
 ## multitail
+
 - 同时监视多个日志文件，73
 
 ## mv
+
 - 快速更改文件扩展名，69
+
 - 引用当前命令的单词并重复使用，9
+
 - 重用上一条命令的第 N 个单词，8
 
 ## mysql
+
 - 创建 SSH 隧道以访问远程资源，35
 
 ## ncdu
+
 - 查找谁占用的磁盘空间最多，63
 
 ## netstat
+
 - 查找哪些程序正在监听哪些端口，36
 
 ## nohup
+
 - 运行一个不受挂起影响的命令，允许在断开连接后继续运行任务，44
 
 ## openssl
+
 - 生成随机密码，67
 
 ## passwd
+
 - 将命令行输出存储为变量以供稍后使用，53
+
 - 在命令行中使用 for 循环，51
 
 ## ping
+
 - 重复命令直到成功，62
+
 - 重用上一条命令的第二个单词（第一个参数），7
 
 ## pkill
+
 - 终止给定用户或程序的所有进程，61
 
 ## ps
+
 - 命令替换，52
+
 - 终止给定用户或程序的所有进程，61
+
 - 列出进程，按 CPU 使用率排序，66
+
 - 列出进程，按内存使用率排序，65
+
 - 重复以给定字符串开头的上一条命令，5
+
 - 对输出正文进行排序，同时保持第一行标题不变，22
 
 ## python
+
 - 通过 Web 界面提供当前目录中的文件，28
 
 ## read
+
 - 接受用户输入并将其存储在变量中，56
+
 - 逐行读取输入，54
+
 - 简易命令行秒表，94
 
 ## reboot
+
 - 在指定时间执行命令，95
 
 ## reset
+
 - 重置终端模拟器的显示，85
 
 ## rm
+
 - 重用上一条命令的最后一个单词（最后一个参数），8
 
 ## sed
+
 - 删除两个字符串之间的文本块，20
+
 - 让电脑与你对话，89
+
 - 在多个文件中替换字符串，80
 
 ## sc
+
 - 在命令行中使用电子表格，93
 
 ## screen
+
 - 断开远程会话并在稍后重新连接，继续之前未完成的流程，40
+
 - 与另一个用户共享屏幕会话，96
 
 ## script
+
 - 保存命令行会话的副本，10
 
 ## sort
+
 - 计算字符串出现的次数，25
+
 - 查找你最常使用的命令，11
+
 - 查找占用最多磁盘空间的文件，64
+
 - 查找谁占用的磁盘空间最多，63
+
 - 获取输出行中的最后一个单词，15
+
 - 列出进程，按 CPU 使用率排序，66
+
 - 列出进程，按内存使用率排序，65
+
 - 对输出正文进行排序，同时保持第一行标题不变，22
 
 ## ssh
+
 - 避免在通过 SSH 连接时输入用户名，39
+
 - 配置 SSH 根据模式将域名附加到主机名，42
+
 - 比较远程文件和本地文件之间的差异，33
+
 - 创建 SSH 隧道以访问远程资源，35
+
 - 断开远程会话并在稍后重新连接，继续之前未完成的流程，40
+
 - 使用 SSH SOCKS 代理加密你的网页浏览数据，45
+
 - 列出进程，按内存使用率排序，65
+
 - 使非交互式 Shell 会话的行为与交互式会话相同，87
+
 - 运行一个不受挂起影响的命令，允许在断开连接后继续运行任务，44
+
 - 快速判断你是在 32 位还是 64 位系统上，67
+
 - 简化多跳 SSH 连接并透明代理 SSH 连接，40
+
 - 无需密码即可通过 SSH 进入远程系统，30
+
 - 为给定的远程主机使用不同的 SSH 密钥，37
 
 ## ssh-copy-id
+
 - 无需密码即可通过 SSH 进入远程系统，30
 
 ## ssh-keygen
+
 - 无需密码即可通过 SSH 进入远程系统，30
 
 ## sshfs
+
 - 通过 SSH 将远程服务器上的目录挂载到本地主机，29
 
 ## su
+
 - 以根用户身份运行上一条命令，3
 
 ## sudo
+
 - 使用 Sudo 将文本追加到文件，17
+
 - 更改字符串的大小写，17
+
 - 显示两个字符串之间的文本块，19
+
 - 从命令行下载网页、HTTP 数据或使用 Web API，46
+
 - 清空正在被写入的文件，71
+
 - 在指定时间执行命令，95
+
 - 查找哪些程序正在监听哪些端口，36
+
 - 查找占用最多磁盘空间的文件，64
+
 - 查找谁占用的磁盘空间最多，63
+
 - 终止给定用户或程序的所有进程，61
+
 - 打印包含给定字符串的文件列表，76
+
 - 快速备份文件，68
+
 - 按固定间隔重复命令并监视其变化的输出，94
+
 - 重复以给定字符串开头的上一条命令，5
+
 - 以根用户身份运行上一条命令，3
+
 - 保存命令行会话的副本，10
+
 - 将命令输出保存为图像，98
+
 - 通过 Web 界面提供当前目录中的文件，28
+
 - 与另一个用户共享屏幕会话，96
+
 - 将命令行输出存储为变量以供稍后使用，53
+
 - 在命令行中使用 for 循环，51
+
 - 同时监视多个日志文件，73
 
 ## tail
+
 - 更改字符串的大小写，17
+
 - 计算字符串出现的次数，25
+
 - 跟随文件增长，73
+
 - 在命令行中使用 for 循环，51
 
 ## tar
+
 - 将 Tar 归档解压到不同的目录，91
+
 - 在解压 Tar 文件时转换目录结构，92
 
 ## tee
+
 - 使用 Sudo 将文本追加到文件，17
+
 - 更改字符串的大小写，17
 
 ## tree
+
 - 以树状格式查看文件和目录，78
 
 ## time
+
 - 简易命令行秒表，94
 
 ## tr
+
 - 更改字符串的大小写，17
+
 - 以人类可读的格式显示你的命令搜索路径，18
+
 - 逐行读取输入，54
+
 - 从字符串或输出行中删除一个字符或一组字符，24
 
 ## uname
+
 - 简化多跳 SSH 连接并透明代理 SSH 连接，40
 
 ## uniq
+
 - 计算字符串出现的次数，25
+
 - 查找你最常使用的命令，11
 
 ## userdir
+
 - 以根用户身份运行上一条命令，3
 
 ## vim
+
 - 使用 Vim 通过网络编辑文件，14
 
 ## w
+
 - 重复以给定字符串开头的上一条命令，5
 
 ## wc
+
 - 按固定间隔重复命令并监视其变化的输出，94
 
 ## watch
+
 - 按固定间隔重复命令并监视其变化的输出，94
 
 ## wget
+
 - 从命令行下载网页、HTTP 数据或使用 Web API，46
 
 ## while
+
 - 接受用户输入并将其存储在变量中，56
+
 - 逐行读取输入，54
+
 - 重复命令直到成功，62
 
 ## who
+
 - 重复以给定字符串开头的上一条命令，5
 
 ## whoami
+
 - 避免在通过 SSH 连接时输入用户名，39
+
 - 以根用户身份运行上一条命令，3
 
 ## uptime
+
 - 使非交互式 Shell 会话的行为与交互式会话相同，87
+
 - 以根用户身份运行上一条命令，3
 
 ## unzip
+
 - 重用上一条命令的最后一个单词（最后一个参数），8
 
 ## unix2dos
+
 - 在 Windows 格式和 Linux 格式之间转换文本文件，81
 
 ## yes
+
 - 自动对任何命令回答是，59
 
 ## 附录
 
 ## 商标
 
-Firefox 是 Mozilla 基金会的注册商标。
+`Firefox` 是 `Mozilla` 基金会的注册商标。
 
-ImageMagick 是 ImageMagick Studio LLC 的注册商标。
+`ImageMagick` 是 `ImageMagick Studio LLC` 的注册商标。
 
-Linux® 是 Linus Torvalds 在美国及其他国家的注册商标。
+`Linux`® 是 `Linus Torvalds` 在美国及其他国家的注册商标。
 
-Mac 和 OS X 是 Apple Inc. 的商标，在美国及其他国家注册。
+`Mac` 和 `OS X` 是 `Apple Inc.` 的商标，在美国及其他国家注册。
 
-Open Source 是 Open Source Initiative 的注册认证标记。
+`Open Source` 是 `Open Source Initiative` 的注册认证标记。
 
-Sun 和 Oracle Solaris 是 Oracle Corporation 及其关联公司在美国及其他国家的商标或注册商标。
+`Sun` 和 `Oracle Solaris` 是 `Oracle Corporation` 及其关联公司在美国及其他国家的商标或注册商标。
 
-UNIX 是 The Open Group 的注册商标。
+`UNIX` 是 `The Open Group` 的注册商标。
 
-Windows 是 Microsoft Corporation 在美国及其他国家的注册商标。
+`Windows` 是 `Microsoft Corporation` 在美国及其他国家的注册商标。
 
 在此提到的所有其他产品名称均为其各自所有者的商标。
 
-
-
-
-
 ## 命令行功夫
 
-JASON CANNON
+`JASON CANNON`
 
-http://LinuxTrainingAcademy.com
+`http://LinuxTrainingAcademy.com`
 
 ![](img/a6ad8334bb72214983f67e3b3c9eb145_131_0.png)
 
-ISBN 9781499222036
+`ISBN 9781499222036`
 
-9 781499 222036
+`9 781499 222036`
 
-03-BFX-357
-
+`03-BFX-357`

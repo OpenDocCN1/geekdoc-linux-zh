@@ -1,126 +1,217 @@
-# Bash脚本：关于Bash你需要知道的一切，第2版
 
-
+# Bash 脚本：关于 Bash 你需要知道的一切，第 2 版
 
 ![](img/cover.jpeg)
 
-# 简介
-# 什么是 Shell 提示符？
-# 瘫痪从何时开始又结束？
-# 命令
-## 简单命令
-## 复杂命令
-## 复合命令
-# 什么是 Shell 脚本？
-# 只有 Bash 才有优势
-# 什么是交互式环境？
+## 简介
+
+## 什么是 Shell 提示符？
+
+## 进程何时开始和结束？
+
+## 命令
+
+### 简单命令
+
+### 复杂命令
+
+### 复合命令
+
+## 什么是 Shell 脚本？
+
+## 只有 Bash 才有优势
+
+## 什么是交互式环境？
+
 # 第一章
+
 ## 创建并运行 Bash 程序
+
 ### 编写与命名
-# 在什么巧合程序可以运行？
+
+## 在什么巧合程序可以运行？
+
 ### 添加注释
+
 # 第二章
+
 ## Bash 环境
+
 ### Shell 初始化文件
+
 ### Bash 中的变量
+
 #### 变量类型
+
 #### 根据内容分类变量
+
 #### 创建变量
+
 #### 导出变量
-#### `*` `$` 与 `@` `$` 的区别
- 使用变量循环 Shell 程序
+
+#### `*`、`$` 与 `@`、`$` 的区别
+
+#### 使用变量循环 Shell 程序
+
 ### Bash 中的引用字符
+
 #### 实用程序引号类型
+
 #### 字符转义
+
 #### 单引号
+
 #### 双引号
-#### 语言区域 (Locales)
+
+#### 语言区域（Locales）
+
 ### Bash 中的扩展
-#### 扩展的大括号 `{}` 
-#### 长度扩展 (`~`) 
+
+#### 扩展的大括号 `{}`
+
+#### 长度扩展（`~`）
+
 #### 命令替换
+
 #### 计算扩展
+
 #### 进程替换
+
 #### 扩展文件名
+
 ### Bash 中的替代命令
+
 #### 实用程序替代命令
+
 #### 创建和删除替代命令
+
 #### 更快的函数
+
 # 第三章
+
 ## Bash 中的通配符
+
 ### 正则表达式
+
 ### 基础与扩展通配符的区别
-### `Grep` 命令
-#### `Grep` 命令与典型表达式
+
+### `grep` 命令
+
+#### `grep` 命令与典型表达式
+
 ### 行与词轴
+
 ### 字符类型
+
 ### 通配符
+
 #### 使用 Bash 特性匹配模式
+
 #### 字符范围
+
 # 第四章
+
 ## Bash 中的条件结构
+
 ### 用于 `if` 的表达式
+
 ### 随后的命令 `then`
+
 ### 扫描文件
+
 ### 检查机会选项
+
 ### `if` 语句的简单应用
+
 ### 文本比较
+
 ### `if` / `then` / `else` 结构
+
 #### `[]` 与 `[[]]` 的区别
+
 #### 检查命令行参数
+
 #### 包含空格的文件名
+
 #### 嵌套 `if` 语句
+
 ### 逻辑操作
+
 ### 在 `if` 使用 `exit` 语句
+
 # 第五章
+
 ## Bash 中的重复任务
+
 ### Bash 中的 `for` 循环
+
 #### 如何制作迭代循环
+
 #### 示例
-#### `Basename` 命令
-### Bash 中的 `While` 循环
+
+#### `basename` 命令
+
+### Bash 中的 `while` 循环
+
 #### 如何制作 `while` 循环
-
-
-
-
 
 ## 嵌套循环
 
 ## 计算平均值
 
-## Bash 中的 Until 循环
+## Bash 中的 `until` 循环
 
-## 如何制作一个 until 循环
+## 如何制作一个 `until` 循环
 
-# Break 和 Continue 命令
-## Break 命令
-## Continue 命令
+# `break` 和 `continue` 命令
+
+## `break` 命令
+
+## `continue` 命令
 
 # 第六章
+
 ## Bash 中的函数
+
 ### 什么是函数？
+
 ### 函数语法
+
 ### 函数中的位置参数
+
 ### 显示函数
+
 ## 变量回收
+
 ### 修改路径
-### unset marge
+
+### `unset marge`
 
 # 第七章
+
 ## 编写交互式 Bash 程序
+
 ### 在 Bash 中查看消息
-### 交互式还是非交互式程序？ 使用 echo 命令
+
+### 交互式还是非交互式程序？使用 `echo` 命令
+
 ### 在 Bash 中获取用户输入
-### 使用 read 命令
+
+### 使用 `read` 命令
+
 ### 请求用户输入
+
 ### 重定向和文件描述符
+
 ### 重定向错误
+
 ### 关闭文件描述符
 
 # 简介
 
-它是一个能够接收你输入的命令并请求内核执行这些命令的程序。也就是说，它和你操作系统之间充当了中间人，换句话说，它代表了系统的外层或接口，它接收你的指令并给你结果。然后它会再次显示提示符，表示已结束，并等待你输入更多命令。这就是为什么 shell 被称为命令解释器，类似于 Windows 中的 `.com`。它还包含一种类似于高阶语言的编程语言，非常强大，通过它可以解决任何问题。此外，一个重要特性是可以创建一个文件来创建另一个程序，这让你能够产生所谓的脚本。这里有很多类型的 shell，但最著名和常用的是两种类型：
+它是一个能够接收你输入的命令并请求内核执行这些命令的程序。也就是说，它和你操作系统之间充当了中间人，换句话说，它代表了系统的外层或接口，它接收你的指令并给你结果。然后它会再次显示提示符，表示已结束，并等待你输入更多命令。这就是为什么 shell 被称为命令解释器，类似于 Windows 中的 `.com`。它还包含一种类似于高阶语言的编程语言，非常强大，通过它可以解决任何问题。此外，一个重要特性是可以创建一个文件来创建另一个程序，这让你能够产生所谓的脚本。
+
+这里有很多类型的 shell，但最著名和常用的是两种类型：
 
 - Bourne shell 包括 `sh`、`ksh`、`bash`
 - C shell 包括 `csh`、`tcsh`
@@ -132,20 +223,25 @@
 提示符（无论是 `%` 还是 `$`）取决于你正在使用的 shell 类型。当提示符出现时，意味着 shell 正在等待你输入要执行的命令。如果你以 root 身份登录系统，会出现提示符。以下是每种类型 shell 的优缺点：
 
 第一类包括：
+
 - 符号为 `sh` 的 Bourne shell
 - 符号为 `ksh` 的 Korn shell
 - 符号为 `bash` 的 Bourne again shell（再次 Bourne 壳）
 
 第二类包括：
-- C shell, TENEX / TOPS C shell，符号为 `tcsh`
 
-shell 的起源于 Bourne shell，Stephen R. Bourne 在 20 世纪 70 年代中期在 AT&T 实验室的 unix 系统上编写了它。因此，有些人称它为“The Shell”，因为它最早出现。这个 shell 通常位于 `/bin/sh`。如前提到的，shell 是一个命令解释器，同时也包含一种使用 ALGOL 语言的编程语言，包含以下内容：变量、函数、程序控制命令、循环命令、数学表达式等。所有 Bourne 类型都共享这些特征，但这种原始类型的缺点是难以使用。它没有自动补全功能，也没有保存已执行命令的命令。
+- C shell、TENEX / TOPS C shell，符号为 `tcsh`
+
+shell 的起源于 Bourne shell，Stephen R. Bourne 在 20 世纪 70 年代中期在 AT&T 实验室的 Unix 系统上编写了它。因此，有些人称它为“The Shell”，因为它最早出现。这个 shell 通常位于 `/bin/sh`。
+
+如前提到的，shell 是一个命令解释器，同时也包含一种使用 ALGOL 语言的编程语言，包含以下内容：变量、函数、程序控制命令、循环命令、数学表达式等。所有 Bourne 类型都共享这些特征，但这种原始类型的缺点是难以使用。它没有自动补全功能，也没有保存已执行命令的命令。
 
 十年后，1980 年，Bill Joy 编写了 C shell，避免了在类型中发现困难，并将语法公式从 ALGOL 转换为 C 语言。在其中发现的一些特性有：文本补全、保存之前写过的命令。我们通常在 `/bin/csh` 路径下找到这个 shell。它的缺点是：支持 I/O 操作的能力弱，缺乏函数，因此不建议用于编程，仅供使用。
 
-TENEX / TOPS C shell (符号为 `tcsh`) 是 `csh` 的改进版本，增加了许多功能，包括使用箭头（上/下）查看已执行的命令，以及使用箭头（左/右）修改这些命令。此时，在两种类型的 shell 之后，David Korn 在 AT&T 编写了符号为 `ksh` 的 Korn shell。它结合了 C shell 和 Bourne shell 的便利性，使得 `ksh` 成为许多用户的首选。
+TENEX / TOPS C shell（符号为 `tcsh`）是 `csh` 的改进版本，增加了许多功能，包括使用箭头（上/下）查看已执行的命令，以及使用箭头（左/右）修改这些命令。此时，在两种类型的 shell 之后，David Korn 在 AT&T 编写了符号为 `ksh` 的 Korn shell。它结合了 C shell 和 Bourne shell 的便利性，使得 `ksh` 成为许多用户的首选。
 
 总的来说，`ksh` 兼容第一类即 `sh`。这种并行关系有 3 个变体：
+
 - 符号为 `ksh` 的官方版本
 - 符号为 `pdksh` 的公共领域版本
 - 最后是符号为 `dtksh` 的桌面版本
@@ -158,41 +254,37 @@ shell 程序员经常使用第一和第二版本。第三种 `dtksh` 是给 shel
 
 当你登录系统时，`getty` 开始工作，要求你输入用户名和密码，然后将其传递给 `login` 程序，该程序通过与 `/etc/passwd` 比对来检查输入的数据，如下：
 
-```
+```text
 SudaNix: x: 500: 500: ahmad: /home/SudaNix: /bin/bash
 ```
 
-匹配的情况下，将执行文件中的，在此情况下是 `/bin/bash`，当你退出登录时 Shell 结束工作，可以通过输入命令 `/bin/csh` 更改进程类型，此处切换到 Cshell 并退出
+匹配的情况下，将执行文件中的，在此情况下是 `/bin/bash`，当你退出登录时 Shell 结束工作，可以通过输入命令 `/bin/csh` 更改进程类型，此处切换到 Cshell 并退出。
 
- 交互式和非交互式进程！！
+## 交互式和非交互式进程
 
 当你看到提示符时，这意味着进程以交互式方式运行，我的意思是交互式，也就是说，预期你会编写要执行的命令。这是通常正常情况：你进入系统，然后进程开始工作……然后你输入一些命令并退出系统，Shell 被挂起。
 
-这与非交互式进程相矛盾：
-
-
-
-
+这与非交互式进程相矛盾。
 
 这意味着你与 Shell 之间没有交互，也就是说，它不会等待你输入任何命令，而是执行保存在文件中的命令，并在到达文件末尾时停止工作，这被称为脚本（script）。两个基本概念是：
 
-# 命令 (Commands)
+# 命令（Commands）
 
 它是一个你可以通过输入其名称并按回车来运行的程序。例如：`date` 命令显示日、日期、小时。注意 `$` 提示符重新出现，这表示程序已执行完毕。
 
 另一个例子是 `who` 命令，它显示系统所有用户的名称，外还包含一些信息。命令有几种类型，即：简单命令、复杂命令。
 
-### 简单命令 (Simple commands)
+## 简单命令（Simple commands）
 
 从名字就能很易地看出它是简单的，只包含程序的名称，例如之前的两个 `date`、`who`，以及我之后将提到的很多命令。
 
-### 复杂命令 (Complex commands)
+## 复杂命令（Complex commands）
 
 一个简单的程序名加上一个或多个参数。为了清楚起见举个例子：
 
 如所述，我们为你提供了所有用户及其访问系统时间的信息，但通过输入它：你正在操作的用户名和你访问系统的时间。所以 `am` 和 `i` 是干扰 `who` 调整其行为的中间环节。大多数现有命令都接受许多改变默认行为的参数，我们稍后会看到。
 
-### 复合命令 (Compound commands)
+## 复合命令（Compound commands）
 
 它们是结合了简单命令和复杂命令的命令。通过分号分隔；例如命令：`date;` `who am i;`
 
@@ -204,23 +296,23 @@ SudaNix: x: 500: 500: ahmad: /home/SudaNix: /bin/bash
 
 在编写任何命令并在 shell 执行之前，要确保它执行的命令或程序位于特定的路径 `PATH` 中，如果没有，则会给你 `command not found` 的错误。
 
-## 什么是 shell 脚本 (What is shell script?)
+## 什么是 shell 脚本（What is shell script）？
 
 它是一个包含一组用于实现特定目的的文件，shell 以交互方式执行它们，你通过以下示例看到定义：例如，工具箱包含工具（螺丝刀、螺丝、木头、锤子……等）。它可以制造椅子、桌子、柜子等。使用相同的工具，但通过特定的组合，它可以制造任何想要的东西。
 
 这个例子与 shell 脚本非常相似。要构建你想要的任何东西，你必须使用正确的工具并调用它们命令或程序，即上面提到的。
 
-编写第一个 shell 脚本：打开任何文档 - 文本文件 - 输入以下内容：
+编写第一个 shell 脚本：打开任何文档——文本文件——输入以下内容：
 
-```
+```bash
 date; who;
 ```
 
-以任何名称保存文件并将其命名为 `sudanix`
+以任何名称保存文件并将其命名为 `sudanix`。
 
 现在你运行这个脚本，输入：
 
-```
+```bash
 /bin/bash sudanix
 ```
 
@@ -230,28 +322,28 @@ date; who;
 
 这是为了让文件变得可执行而最重要的步骤之一……任何我们只通过名称执行。如下：
 
-通过命令将文件转换为可执行文件
+通过命令将文件转换为可执行文件：
 
-```
+```bash
 chmod a +x ./sudanix
 ```
 
 但我们必须确保将使用哪种 shell。因为我们不能保证所有的 shell 用户都在 `bash` 上工作，我们将在脚本开头添加此行。
 
-```
+```bash
 #!/bin/bash
 ```
 
 注意这一行位于脚本的开头。特别是在第一行！！否则，脚本将如下：
 
-```
+```bash
 #!/bin/bash
 date; who;
 ```
 
 现在要执行此脚本，按以下格式编写它，并注意要在脚本所在的文件夹中。
 
-```
+```bash
 ./sudanix
 ```
 
@@ -263,35 +355,35 @@ GNU 项目，参考 GNU's Not UNIX（GNU 并不是 Unix），为管理 Unix 类�
 
 Bash 倡议与 GNU 的其他项目一样，最初是为了保留使用、研究、复制、修改和重新发布程序的自由，并推广和传播这些权利，因为这些是创造力的催化剂。在任何其他巧合中。
 
-## 优势仅在 bash 中找到
+# 优势仅在 bash 中找到
 
-### 调用 (Invocation)
+## 调用（Invocation）
 
 有许多你可以使用的多字符选项，还可以使用 shell 中默认的 `set` 命令设置单字符选项。在本文档中，我们将展示一些其他流行的选项，你可以在 info 指南中找到完整列表，在 features 之后是 Invoking。
 
-### Bash 中的启动文件 (Startup files)
+## Bash 中的启动文件（Startup files）
 
 启动文件是 Bash 在启动时读取并执行的脚本。以下解释说明了启动 shell 的不同方式，以及相应读取的启动文件。
 
-#### 作为交互式登录 shell 调用 (Invoke as an interactive shell, or with login)
+### 作为交互式登录 shell 调用（Invoke as an interactive shell, or with login）
 
 这里的交互式意味着你可以输入命令，shell 不会因为激活而工作。“登录 shell”意味着你在通过系统身份验证后进入 shell，通常通过输入用户名和密码。
 
 读取文件：
 
-`/etc/profile`
-`~/.bash_profile`, `~/.bash_login`, 或 `~/.profile`: 读取第一个可读文件。
-`~/.bash_logout` 在注销时读取。
+- `/etc/profile`
+- `~/.bash_profile`、`~/.bash_login` 或 `~/.profile`：读取第一个可读文件。
+- `~/.bash_logout` 在注销时读取。
 
 如果配置文件存在无法读取，将打印错误消息；如果文件不存在，bash 将查找下一个文件。
 
-#### 作为非登录交互式 shell 调用 (Call as an interactive shell without logging in)
+### 作为非登录交互式 shell 调用（Call as an interactive shell without logging in）
 
 非登录 shell 意味着你不需要通过系统，例如通过点击图标或列表项打开终端，它是非登录 shell。
 
 读取文件：
 
-`~/.bashrc`
+- `~/.bashrc`
 
 此文件通常在 `bash_profile` 中被引用：
 
@@ -301,26 +393,26 @@ if [ -f ~/.bashrc ]; then
 fi
 ```
 
-#### 调用是交互 (The call is interactive)
+### 调用是交互（The call is interactive）
 
 所有的文本代码使用非交互式 shell，并被编程执行特定任务，否则无法编程执行其他任务。
 
 读取文件：
 
-由 `BASH_ENV` 选择。PATH 不在此文件中用于搜索。如果你想使用它，请指定完整路径和文件名。
+由 `BASH_ENV` 选择。`PATH` 不在此文件中用于搜索。如果你想使用它，请指定完整路径和文件名。
 
-#### 从 sh 内部顺序调用 (Call by order from within sh)
+### 从 `sh` 内部顺序调用（Call by order from within sh）
 
-Bash 尝试表现像 Steve Bourne 编写的旧 sh 软件，同时尝试符合 POSIX 标准。
+Bash 尝试表现像 Steve Bourne 编写的旧 `sh` 软件，同时尝试符合 POSIX 标准。
 
 读取文件：
 
-`/etc/profile`
-`~/.profile`
+- `/etc/profile`
+- `~/.profile`
 
 `ENV` 变量可以引用额外的启动信息。
 
-### POSIX 模式 (POSIX mode)
+## POSIX 模式（POSIX mode）
 
 该选项通过 `set` 命令激活：
 
@@ -334,44 +426,40 @@ set -o posix
 
 由 `ENV` 变量指定。
 
-### 远程分页 (Remote paging)
+## 远程分页（Remote paging）
 
 bash 使用 `rshd` 命令启动时读取的文件：
 
-`~/.bashrc`
+- `~/.bashrc`
 
-避免使用 r-tools
+### 避免使用 r-tools
 
+请注意使用 `rlogin`、`telnet`、`rsh` 和 `rcp` 等不安全工具的危险，因为它们会在网络上明文传输敏感数据。如果需要远程管理系统、传输文件等，请使用安全 Shell 协议（`ssh`），该协议可以从 `http://www.openssh.org` 免费获取。你还可以找到针对非 Unix 类系统的不同程序，请查看你本地的软件镜像。
 
-
-
-
-请注意使用 `rlogin`、`telnet`、`rsh` 和 `rcp` 等不安全工具的危险，因为它们会在网络上明文传输敏感数据。如果需要远程管理系统、传输文件等，请使用安全 Shell 协议 (`ssh`)，该协议可以从 `http://www.openssh.org` 免费获取。你还可以找到针对非 Unix 类系统的不同程序，请查看你本地的软件镜像。
-
-当 UID 不等于 EUID 时的调用
+### 当 UID 不等于 EUID 时的调用
 
 在这种情况下，启动时不会读取任何文件。
 
-### 交互式 shell (Interactive shells)
+# 交互式 shell（Interactive shells）
 
-#### 什么是交互式 shell？
+## 什么是交互式 shell？
 
 交互式 shell 按照如下方式在用户的终端上进行读写：
 
 输入和输出连接到终端。当调用 `bash` 命令且不添加任何非选项参数时，会启动交互式 bash 行为，除非该选项是一个被读取的字符串，或者 shell 被触发读取标准输入。这允许位置参数的初始化，请参阅 Bash 环境。
 
-##### 这种 shell 是交互式的吗？
+### 这种 shell 是交互式的吗？
 
 要判断 shell 是否为交互式，请查看特殊参数 `-` 的内容，如果它包含 `"i"`，则该 shell 是交互式的：
 
-```
+```bash
 hsoub: ~> echo $ -
 himBH
 ```
 
 在非交互式 shell 中，`PS1` 提示符不会初始化，即它会回到零。
 
-###### 交互式 shell 行为
+#### 交互式 shell 行为
 
 - Bash 读取启动文件。
 - 默认启用函数控制。
@@ -380,11 +468,14 @@ himBH
 - 当接收到文件结束符（简称 `EOF`）时，Bash 会解释 `ignoreeof` 选项而不是直接退出。
 - 默认启用命令历史和日志扩展，并在 shell 关闭时将日志保存在 `HISTFILE` 指向的文件中。默认情况下，`HISTFILE` 指向 `/.bash_history`。
 - 自动激活别名扩展。
-- 在没有陷获 (traps) 的情况下，`SIGTERM` 信号会被忽略。
-- 在没有陷获的情况下，`SIGINT` 会被捕获并处理，因此按下 `Ctrl + C` 等不会让你退出当前所在的交互式 shell。
+
+
+
+- 在没有陷阱（traps）的情况下，`SIGTERM` 信号会被忽略。
+- 在没有陷阱的情况下，`SIGINT` 会被捕获并处理，因此按下 `Ctrl + C` 等不会让你退出当前所在的交互式 shell。
 - 可以通过 `huponexit` 选项设置退出时向所有函数发送 `SIGHUP` 信号。
 - 命令在读取后立即执行。
-- 定期检查邮件 bash。
+- 定期检查邮件 Bash。
 - Bash 可以设置为在遇到未定义的变量时关闭。此行为在交互模式下被禁用。
 - 当 shell 命令遇到重定向错误时，不会导致 shell 关闭或退出。
 - 在 POSIX 模式下使用特殊内置命令时，重复错误不会导致意外。更多关于包含命令的信息请参见 shell 包含的命令。
@@ -395,9 +486,9 @@ himBH
 
 有关更多解释，请参阅 Bash 中的变量、更多 Bash 选项、Bash 中的信号捕获（获取更多信号），以及讨论输入命令时发生的各种不同扩展的 Bash 扩展。
 
-### 条件表达式 (Conditional Expressions)
+### 条件表达式（Conditional Expressions）
 
-条件表达式通过组合命令 `[]`、包含的命令和 `test` 以及内置命令使用。表达式可以是单目的的或二目的的。
+条件表达式通过组合命令 `[]`、包含的命令和 `test` 以及内置命令使用。表达式可以是单目的或二目的。
 
 还有文本运算符（字符串运算符）和数值比较运算符。这两类运算符都是二元运算符，需要两个元素来执行操作。
 
@@ -405,11 +496,11 @@ himBH
 
 更多条件表达式请查看条件结构的详细描述，更多文件描述符请查看重定向和文件描述。
 
-### Shell 中的算术表达式 Shell Arithmetic Expressions
+### Shell 中的算术表达式（Shell Arithmetic Expressions）
 
-shell 允许将算术表达式作为 shell 扩展之一进行求值，或通过 `let` 命令求值，并评估为固定宽整数且不溢出，但除以 0 会被捕获并报告为错误。C 语言中关于操作数、优先级和结合性的规则适用于此处的对应项，请参阅 bash 环境。
+shell 允许将算术表达式作为 shell 扩展之一进行求值，或通过 `let` 命令求值，并评估为固定宽整数且不溢出，但除以 0 会被捕获并报告为错误。C 语言中关于操作数、优先级和结合性的规则适用于此处的对应项，请参阅 Bash 环境。
 
-### 备选命令 (Alternative commands)
+### 备选命令（Alternative Commands）
 
 当作为简单命令的第一个单词使用时，备选命令允许将一个单词替换为多个单词的文本。shell 保留了一个备选命令列表，可以使用 `alias` 和 `unalias` 创建或取消。
 
@@ -435,9 +526,9 @@ Bash 在执行该行的任何命令之前，至少读取整行输入。备选命
 
 将此设置添加到 `vimrc` 文件中很有用，以便默认安装。
 
-将 Unix 命令置于你创建的文件中，就像你要在命令行输入这些命令一样（参见：在 Bash 中执行命令）。这些命令可以是 shell 函数、嵌入命令、Unix 命令等。现在给该文件起一个描述其执行任务的名称，并确保该名称不会与已有的命令冲突。为了确保这一点，shell 程序的名称通常以 `.sh` 结尾，但这并阻止系统中存在与你选择的名称相同的其他代码。你可以使用 `which` 或 `whereis` 等文件和程序搜索命令在系统中搜索具有相同名称的文件或代码：
+将 Unix 命令置于你创建的文件中，就像你要在命令行输入这些命令一样（参见：在 Bash 中执行命令）。这些命令可以是 shell 函数、嵌入命令、Unix 命令等。现在给该文件起一个描述其执行任务的名称，并确保该名称不会与已有的命令冲突。为了确保这一点，shell 程序的名称通常以 `.sh` 结尾，但这并不阻止系统中存在与你选择的名称相同的其他代码。你可以使用 `which` 或 `whereis` 等文件和程序搜索命令在系统中搜索具有相同名称的文件或代码：
 
-```
+```bash
 which -a script_name
 
 whereis script_name
@@ -445,14 +536,11 @@ whereis script_name
 locate script_name
 ```
 
-```
+```text
 script1.sh
 ```
 
-
-
-
-在这个示例中，我们将使用 `echo` 命令在屏幕上打印通知，告知用户在每个任务执行之前将发生什么。告诉用户正在发生的情况是非常重要的，以避免用户因为觉得程序“什么都没做”而产生恐慌。请参阅编写交互式 Bash 程序中的中的详细用户通知说明。
+在这个示例中，我们将使用 `echo` 命令在屏幕上打印通知，告知用户在每个任务执行之前将发生什么。告诉用户正在发生的情况是非常重要的，以避免用户因为觉得程序“什么都没做”而产生恐慌。请参阅编写交互式 Bash 程序中的详细用户通知说明。
 
 ### `script1.sh` 文件
 
@@ -533,7 +621,7 @@ wiki @ hsoub:~/scripts $ echo $VALUE
 wiki @ hsoub:~/scripts $
 ```
 
-这是实现 shell 脚本的最常见，最好在子 shell 中进行。在子 shell 中创建的变量、函数和别名仅对该子 shell 的 Bash 会话有效。当该 shell 关闭并控制权重新交回时，一切都会被清理，程序对环境所的所有更改都会被取消。如果你没有将脚本文件夹放入 `PATH` 变量，且它不是当前目录，你也可以使用此命令执行程序——`script_name` 表示你的程序名称：
+这是实现 shell 脚本的最常见方式，最好在子 shell 中进行。在子 shell 中创建的变量、函数和别名仅对该子 shell 的 Bash 会话有效。当该 shell 关闭并控制权重新交回时，一切都会被清理，程序对环境所做的所有更改都会被取消。如果你没有将脚本文件夹放入 `PATH` 变量，且它不是当前目录，你也可以使用此命令执行程序——`script_name` 表示你的程序名称：
 
 ```bash
 ./script_name.sh
@@ -547,13 +635,13 @@ sh script_name.sh
 bash -x script_name.sh
 ```
 
-上述任何命令中指定的 shell 都将作为你当前 shell 的子 shell 并执行程序。当你希望程序带有特定选项运行或在程序内未指定的条件下运行时，你可以这样做这样做。如果你想在与当前相同的 shell 中执行程序，必须先使用 `source` 命令：
+上述任何命令中指定的 shell 都将作为你当前 shell 的子 shell 并执行程序。当你希望程序带有特定选项运行或在程序内未指定的条件下运行时，你可以这样做。如果你想在与当前相同的 shell 中执行程序，必须先使用 `source` 命令：
 
 ```bash
 source script_name.sh
 ```
 
-### `source = . `
+### `source = .`
 
 Bash shell 中包含的 `source` 命令与 Bourne 环境中的一个命令同义。在这种情况下，shell 不需要任何执行权限，命令在 shell 的当前上下文中执行，因此你的当前环境中发生的任何更改在程序执行完毕后都是可见并保留的：
 
@@ -563,7 +651,7 @@ wiki @ hsoub:~/scripts $ echo $COLOR
 black
 wiki @ hsoub:~/scripts $ echo $VALUE
 9
-wiki @ hsoub:~/scripts $ 
+wiki @ hsoub:~/scripts $
 ```
 
 ## 程序将在什么环境下运行？
@@ -581,10 +669,6 @@ wiki @ hsoub:~/scripts $
 ### 添加注释
 
 注意，任何行中 `#` 符号之后的内容都会被忽略，并且只有在你打开源文件时才会显示。注释让你能够更容易修改你所做的、如何做以及为什么选择这些顺序。
-
-
-
-
 
 如果通过登录选项交互式地调用 `Bash`，它会读取 `/etc/profile` 中的指令；如果作为 `sh` 调用，这些指令通常会设置 `PATH`、`USER`、`MAIL`、`HOSTNAME`、`HISTSIZE` 变量，这些都是 shell 变量。
 
@@ -657,7 +741,7 @@ unset i
 
 通过分离不同类型 shell 的配置文件，可以避免不理解 `Bash` shell 语法的 shell 产生的错误。在登录时进行 shell 实例化。
 
-你可能会发现系统中的 `/etc/profile` 文件仅包含 shell 环境和程序启动设置，而 `/etc/bashrc` 包含了 shell 函数的系统级定义及其替代命令。`/etc/bashrc` 文件也可以在 `/etc/profile` 文件或用户的 shell 配置文件中引用。
+你可能会发现系统中的 `/etc/profile` 文件仅包含 shell 环境和程序启动设置，而 `/etc/bashrc` 包含了 shell 函数的系统级定义及其备选命令。`/etc/bashrc` 文件也可以在 `/etc/profile` 文件或用户的 shell 配置文件中引用。
 
 源码包含了 `bashrc` 文件的示例，你可以在 `/usr/share/doc/bash-2.05b/startup-files/` 中找到一个副本。以下是随 `Bash` 文档自带的 `bashrc` 文件部分内容：
 
@@ -685,9 +769,11 @@ pskill ()
 ### 用户设置文件
 
 #### 在我的电脑上找不到这些文件！？
+
 你可能在你的家目录中找不到这些文件。
 
 #### 文件 `bash_profile/.~`
+
 如果你设置了个人用户环境，此文件最好用。此处的用户可以添加额外的选项或更改默认设置：
 
 ```bash
@@ -720,19 +806,22 @@ case "$OS" in
 esac
 ```
 
-该用户通过上述设置，除了 `bashrc` 文件外，还在不同操作系统上设置了退格键登录。以及 `bash_login`。已读取了用户特定信息。
+该用户通过上述设置，除了 `bashrc` 文件外，还在不同操作系统上设置了退格键登录，以及 `bash_login`。已读取了用户特定信息。
 
-######## 文件 `bash_login/.~`
-此文件包含特定的设置，通常只在登录系统时实现。在接下来的示例中，我们将使用它在登录系统时执行。在下面的示例中，我们将使用它设置 `umask` 值并显示连接的用户列表：
+#### 文件 `bash_login/.~`
+
+此文件包含特定的设置，通常只在登录系统时实现。在接下来的示例中，我们将使用它在登录系统时执行。在下面的示例中，我们将使用它设置 `umask` 值并显示连接的用户列表。
+
+
 
 ```bash
 ##############################################################
-# #
-# Bash_login 文件 #
-# #
-# 当登录时从 bash shell 中执行。 #
-# #
-# (来自 .bash_profile) #
+#                                                            #
+# Bash_login 文件                                             #
+#                                                            #
+# 当登录时从 bash shell 中执行。                               #
+#                                                            #
+# (来自 .bash_profile)                                       #
 ##############################################################
 
 # 文件保护
@@ -745,13 +834,16 @@ cal `date +%m`
 
 它将读取 `date +'%Y'`
 
-#### 文件 `profile/.~`
+## 文件 `profile/.~`
+
 `profile/.~` 在不存在 `bash_profile/.~` 和 `bash_login/.~` 时被读取，这些可能包含其他 shell 访问的设置。
 
-#### `Bash`
+## `Bash`
+
 注意这些 shell 可能不理解 `Bash` 的语言结构。
 
-#### 文件 `bashrc/.~`
+## 文件 `bashrc/.~`
+
 现在通常会在非登录 shell 中看到 `bashrc/.~`，因为从图形界面登录时没有发生登录过程，这使得用户不需要在多个文件中输入相同的设置。
 
 在下面的 `bashrc` 文件示例中，在读取 `/etc/bashrc` 后，为特定程序指定了替代命令并设置了变量：
@@ -798,7 +890,8 @@ export IRCNAME="frnk"
 wiki ~>
 ```
 
-#### 文件 `bash_logout/.~`
+## 文件 `bash_logout/.~`
+
 `bash_logout/.~` 包含了特定的注销指令。在接下来的示例中，它是一个简单的 `clear` 语句，用于在关闭后留空窗口，这对于远程连接非常有用：
 
 ```bash
@@ -807,18 +900,15 @@ wiki ~> cat .bash_logout
 
 ```bash
 ##############################################################
-# #
-# Bash_logout 文件 #
-# #
-# 注销时从 bash shell 中执行命令 #
-# #
+#                                                            #
+# Bash_logout 文件                                            #
+#                                                            #
+# 注销时从 bash shell 中执行命令                              #
+#                                                            #
 ##############################################################
 
 clear
 ```
-
-
-
 
 在修改上述提到的任何文件时，用户必须重新连接到系统以激活这些修改，或者使用另一种方法，对他编辑过的文件使用 `source` 命令。当以这种方式解释 Bash 时，修改将应用于当前的 shell 会话中：
 
@@ -846,13 +936,13 @@ export PS1 = "[some value]"
 echo "PS1 is now set to $ PS1"
 ```
 
-### Bash 中的变量
+## Bash 中的变量
 
-#### 变量类型
+### 变量类型
 
 Shell 变量是大写的，Bash 维护着两个变量的列表：
 
-#### 全局变量
+### 全局变量
 
 你会在所有 shell 中找到通用变量或环境变量，可以使用 `env` 或 `printenv` 命令来显示环境变量。这些程序位于 sh-utils 包中。以下是 `printenv` 命令的输出示例：
 
@@ -900,9 +990,6 @@ MAIL = / var / mail / wiki
 MANPATH = / usr / man: / usr / share / man /: / usr / local / man: / usr / X11R
 ```
 
-
-
-
 ```
 wiki ~> echo $ MYVAR1 $ first_name $ full_name
 
@@ -911,7 +998,7 @@ wiki ~> echo $ MYVAR1 $ first_name $ full_name
 wiki ~>
 ```
 
-#### 导出变量
+### 导出变量
 
 如上例生成的变量仅在当前 shell 中可用，它是一个局部变量，当前 shell 的子进程不会识别此变量。
 
@@ -1074,10 +1161,6 @@ $ date
 
 #### 单引号
 
-
-
-
-
 单引号 `''` 用于保留引号内每个字符的字面值，且即使在单引号前面有斜杠，两个单引号之间也不会出现单引号。我们继续上一个示例：
 
 ```
@@ -1095,22 +1178,22 @@ $ date
 
 两个双引号也可以用于两个双引号标签内部，请参见以下示例以进一步说明：
 
-```
-hsoub ~> echo "$ date"
-20021226
 
-hsoub ~> echo "` date``
-Sun Apr 20 11:22:06 CEST 2003
 
-hsoub ~> echo "I'd say: \" Go for it! \ ""
-I'd say: "Go for it!"
+`hsoub ~> echo "$ date"`
+`20021226`
 
-hsoub ~> echo "\"
-More input> "
+`hsoub ~> echo "` date``
+`Sun Apr 20 11:22:06 CEST 2003`
 
-hsoub ~> echo "\\"
-\
-```
+`hsoub ~> echo "I'd say: \" Go for it! \ ""`
+`I'd say: "Go for it!"`
+
+`hsoub ~> echo "\"`
+`More input> `
+
+`hsoub ~> echo "\\"`
+`\`
 
 ### ANSI-C 引用
 
@@ -1150,6 +1233,7 @@ spell spill spall
 ```
 hsoub ~> export PATH = "$ PATH: ~ / testdir"
 ```
+
 `Testdir / ~` 将扩展为 `$ HOME / testdir`，所以如果 `$ HOME` 是 `var / home / hsoub /`，则 `var / home / hsoub / testdir /` 文件夹将被添加到 `PATH` 变量的内容中。
 
 系数和变量扩展
@@ -1196,11 +1280,6 @@ Thu Feb 6 10:06:20 CET 2003
 在使用旧的反引号形式替换时，反斜杠保留其字面含义，除非它后面跟着 `$` 或 `` ` `` 符号；并且当使用 `$ COMMAND` 公式时，括号中的所有字符由命令组成，没有一个被特殊处理。
 
 命令覆盖也可以重叠，为了在使用反引号公式时创建重叠，请在斜杠前加上反斜杠。如果替换出现在双引号中，则文件名将根据结果进行扩展。
-
-
-
-
-
 
 算术扩展允许对算术表达式进行求值和算术运算，算术扩展的公式为 `$(arithmetic expression)`。表达式中的所有单位都受到系数扩展、顺序替换和引用移除的影响，且计算替换可以重叠。
 
@@ -1283,7 +1362,7 @@ alias which = 'type'
 alias xt = 'xterm -bg'
 ```
 
-hsoub ~>
+`hsoub ~>`
 
 替代命令用于确定系统中多个默认版本，或指定默认选项，并用于纠正拼写。简单命令的第一个单词如果没有加引号则会被检查。替代命令名和替换文本可能包含 shell 元字符，替代命令名可以包含 `=`。替换文本的第一个单词也会扫描替代命令，但该单词在读取时递归扩展。如果替代命令值的最后一个字符是空格或制表符，则检查下一个单词的替代命令。如果 shell 不是交互式的，除非使用 `shopt` 设置了 `expand-aliases` 选项，否则不会扩展替代命令。
 
@@ -1313,9 +1392,6 @@ bash: dh: command not found
 
 hsoub ~>
 ```
-
-
-
 
 Bash 在执行该行上的任何命令之前，会至少读取一整行输入。替代命令（Alternative commands）只有在命令被读取但未执行时才会展开，因此，在另一个命令的同一行上定义替代命令，在下一行输入之前不会生效。该行中位于替代命令定义之后的命令不受新替代命令的影响。这种行为在执行函数时也是一个问题。当读取但未执行一个新函数的定义时，替代命令会被展开，因为函数本身是一个复合命令。结果是，函数中指定的替代命令即使在函数执行后也是不可用的。但为了安全起见，请将替代命令设置放在单独的一行，并且不要在批量命令中使用 `alias` 命令。此外，子进程不会继承替代命令，且 Bourne shell 并不识别替代命令。
 
@@ -1355,95 +1431,123 @@ hsoub ~> grep -n root / etc / passwd
 12: operator: x: 11: 0: operator: / root: / sbin / nologin
 ```
 
+
+
 ```
-hsoub ~> grep -v bash / etc / passwd | grep -v nologin
-sync: x: 5: 0: sync: / sbin: / bin / sync
-shutdown: x: 6: 0: shutdown: / sbin: / sbin / shutdown
-halt: x: 7: 0: halt: / sbin: / sbin / halt
-news: x: 9: 13: news: / var / spool / news:
-mailnull: x: 47: 47 :: / var / spool / mqueue: / dev / null
-xfs: x: 43: 43: X Font Server: / etc / X11 / fs: / bin / false
-rpc: x: 32: 32: Portmapper RPC user: /: / bin / false
-nscd: x: 28: 28: NSCD Daemon: /: / bin / false
-named: x: 25: 25: Named: / var / named: / bin / false
-squid: x: 23: 23 :: / var / spool / squid: / dev / null
-ldap: x: 55: 55: LDAP User: / var / lib / ldap: / bin / false
-apache: x: 48: 48: Apache: / var / www: / bin / false
+hsoub ~> grep -v bash /etc/passwd | grep -v nologin
+sync: x: 5: 0: sync: /sbin: /bin/sync
+shutdown: x: 6: 0: shutdown: /sbin: /sbin/shutdown
+halt: x: 7: 0: halt: /sbin: /sbin/halt
+news: x: 9: 13: news: /var/spool/news:
+mailnull: x: 47: 47 :: /var/spool/mqueue: /dev/null
+xfs: x: 43: 43: X Font Server: /etc/X11/fs: /bin/false
+rpc: x: 32: 32: Portmapper RPC user: /: /bin/false
+nscd: x: 28: 28: NSCD Daemon: /: /bin/false
+named: x: 25: 25: Named: /var/named: /bin/false
+squid: x: 23: 23 :: /var/spool/squid: /dev/null
+ldap: x: 55: 55: LDAP User: /var/lib/ldap: /bin/false
+apache: x: 48: 48: Apache: /var/www: /bin/false
 ```
 
 ```
-hsoub ~> grep -c false / etc / passwd
+hsoub ~> grep -c false /etc/passwd
 7
 ```
 
 ```
-hsoub ~> grep -i ps ~ .bash * | grep -v history
-/home/hsoub/.bashrc:PS1="\[\033[1;44m\font>$USER is in \ w \ [\ 033 [0m \] ""
+hsoub ~> grep -i ps ~/.bash* | grep -v history
+/home/hsoub/.bashrc:PS1="\[\033[1;44m\font>$USER is in \w \ [\033[0m\] ""
 ```
 
-hsoub 用户显示包含 `/etc/passwd` root 文本的行。
-接着显示包含该文本的行号。
-然后查看第三条命令，用户不使用 bash 但使用 nologin shell 的账户不会显示。
+`hsoub` 用户显示包含 `/etc/passwd` root 文本的行。
 
-hsoub 用户显示包含 `/etc/passwd` root 文本的行。
 接着显示包含该文本的行号。
-然后查看第三条命令，用户不使用 bash 但使用 nologin shell 的账户不会显示。
 
-hsoub 用户显示包含 `/etc/passwd` root 文本的行。
-接着显示包含该文本的行号。
-然后查看第三条命令，用户不使用 bash 但使用 nologin shell 的账户不会显示。
+然后查看第三条命令，用户不使用 `bash` 但使用 `nologin` shell 的账户不会显示。
 
-hsoub 用户显示包含 `/etc/passwd` root 文本的行。
-接着显示包含该文本的行号。
-然后查看第三条命令，用户不使用 bash 但使用 nologin shell 的账户不会显示。
+`hsoub` 用户显示包含 `/etc/passwd` root 文本的行。
 
-hsoub 用户显示包含 `/etc/passwd` root 文本的行。
 接着显示包含该文本的行号。
-然后查看第三条命令，用户不使用 bash 但使用 nologin shell 的账户不会显示。
 
-hsoub 用户显示包含 `/etc/passwd` root 文本的行。
-接着显示包含该文本的行号。
-然后查看第三条命令，用户不使用 bash 但使用 nologin shell 的账户不会显示。
+然后查看第三条命令，用户不使用 `bash` 但使用 `nologin` shell 的账户不会显示。
 
-hsoub 用户显示包含 `/etc/passwd` root 文本的行。
-接着显示包含该文本的行号。
-然后查看第三条命令，用户不使用 bash 但使用 nologin shell 的账户不会显示。
+`hsoub` 用户显示包含 `/etc/passwd` root 文本的行。
 
-hsoub 用户显示包含 `/etc/passwd` root 文本的行。
 接着显示包含该文本的行号。
-然后查看第三条命令，用户不使用 bash 但使用 nologin shell 的账户不会显示。
 
-hsoub 用户显示包含 `/etc/passwd` root 文本的行。
-接着显示包含该文本的行号。
-然后查看第三条命令，用户不使用 bash 但使用 nologin shell 的账户不会显示。
+然后查看第三条命令，用户不使用 `bash` 但使用 `nologin` shell 的账户不会显示。
 
-hsoub 用户显示包含 `/etc/passwd` root 文本的行。
-接着显示包含该文本的行号。
-然后查看第三条命令，用户不使用 bash 但使用 nologin shell 的账户不会显示。
+`hsoub` 用户显示包含 `/etc/passwd` root 文本的行。
 
-hsoub 用户显示包含 `/etc/passwd` root 文本的行。
 接着显示包含该文本的行号。
-然后查看第三条命令，用户不使用 bash 但使用 nologin shell 的账户不会显示。
 
-hsoub 用户显示包含 `/etc/passwd` root 文本的行。
-接着显示包含该文本的行号。
-然后查看第三条命令，用户不使用 bash 但使用 nologin shell 的账户不会显示。
+然后查看第三条命令，用户不使用 `bash` 但使用 `nologin` shell 的账户不会显示。
 
-hsoub 用户显示包含 `/etc/passwd` root 文本的行。
-接着显示包含该文本的行号。
-然后查看第三条命令，用户不使用 bash 但使用 nologin shell 的账户不会显示。
+`hsoub` 用户显示包含 `/etc/passwd` root 文本的行。
 
-hsoub 用户显示包含 `/etc/passwd` root 文本的行。
 接着显示包含该文本的行号。
-然后查看第三条命令，用户不使用 bash 但使用 nologin shell 的账户不会显示。
 
-hsoub 用户显示包含 `/etc/passwd` root 文本的行。
-接着显示包含该文本的行号。
-然后查看第三条命令，用户不使用 bash 但使用 nologin shell 的账户不会显示。
+然后查看第三条命令，用户不使用 `bash` 但使用 `nologin` shell 的账户不会显示。
 
-hsoub 用户显示包含 `/etc/passwd` root 文本的行。
+`hsoub` 用户显示包含 `/etc/passwd` root 文本的行。
+
 接着显示包含该文本的行号。
-然后查看第三条命令，用户不使用 bash 但使用 nologin shell 的账户不会显示。
+
+然后查看第三条命令，用户不使用 `bash` 但使用 `nologin` shell 的账户不会显示。
+
+`hsoub` 用户显示包含 `/etc/passwd` root 文本的行。
+
+接着显示包含该文本的行号。
+
+然后查看第三条命令，用户不使用 `bash` 但使用 `nologin` shell 的账户不会显示。
+
+`hsoub` 用户显示包含 `/etc/passwd` root 文本的行。
+
+接着显示包含该文本的行号。
+
+然后查看第三条命令，用户不使用 `bash` 但使用 `nologin` shell 的账户不会显示。
+
+`hsoub` 用户显示包含 `/etc/passwd` root 文本的行。
+
+接着显示包含该文本的行号。
+
+然后查看第三条命令，用户不使用 `bash` 但使用 `nologin` shell 的账户不会显示。
+
+`hsoub` 用户显示包含 `/etc/passwd` root 文本的行。
+
+接着显示包含该文本的行号。
+
+然后查看第三条命令，用户不使用 `bash` 但使用 `nologin` shell 的账户不会显示。
+
+`hsoub` 用户显示包含 `/etc/passwd` root 文本的行。
+
+接着显示包含该文本的行号。
+
+然后查看第三条命令，用户不使用 `bash` 但使用 `nologin` shell 的账户不会显示。
+
+`hsoub` 用户显示包含 `/etc/passwd` root 文本的行。
+
+接着显示包含该文本的行号。
+
+然后查看第三条命令，用户不使用 `bash` 但使用 `nologin` shell 的账户不会显示。
+
+`hsoub` 用户显示包含 `/etc/passwd` root 文本的行。
+
+接着显示包含该文本的行号。
+
+然后查看第三条命令，用户不使用 `bash` 但使用 `nologin` shell 的账户不会显示。
+
+`hsoub` 用户显示包含 `/etc/passwd` root 文本的行。
+
+接着显示包含该文本的行号。
+
+然后查看第三条命令，用户不使用 `bash` 但使用 `nologin` shell 的账户不会显示。
+
+`hsoub` 用户显示包含 `/etc/passwd` root 文本的行。
+
+接着显示包含该文本的行号。
+
+然后查看第三条命令，用户不使用 `bash` 但使用 `nologin` shell 的账户不会显示。
 
 ### Grep 命令与表达式
 
@@ -1453,25 +1557,31 @@ hsoub 用户显示包含 `/etc/passwd` root 文本的行。
 
 ### Grep 命令与表达式。
 
-hsoub 用户显示包含 `/etc/passwd` root 文本的行。
-接着显示包含该文本的行号。
-然后查看第三条命令，用户不使用 bash 但使用 nologin shell 的账户不会显示。
+`hsoub` 用户显示包含 `/etc/passwd` root 文本的行。
 
-hsoub 用户显示包含 `/etc/passwd` root 文本的行。
 接着显示包含该文本的行号。
-然后查看第三条命令，用户不使用 bash 但使用 nologin shell 的账户不会显示。
 
-hsoub 用户显示包含 `/etc/passwd` root 文本的行。
+然后查看第三条命令，用户不使用 `bash` 但使用 `nologin` shell 的账户不会显示。
+
+`hsoub` 用户显示包含 `/etc/passwd` root 文本的行。
+
 接着显示包含该文本的行号。
-然后查看第三条命令，用户不使用 bash 但使用 nologin shell 的账户不会显示。
+
+然后查看第三条命令，用户不使用 `bash` 但使用 `nologin` shell 的账户不会显示。
+
+`hsoub` 用户显示包含 `/etc/passwd` root 文本的行。
+
+接着显示包含该文本的行号。
+
+然后查看第三条命令，用户不使用 `bash` 但使用 `nologin` shell 的账户不会显示。
 
 ### 行与单词
 
-从之前的示例中，我们现在显示以 root 开头的行：
+从之前的示例中，我们现在显示以 `root` 开头的行：
 
 ```
-hsoub ~> grep root / etc / passwd
-root: x: 0: 0: root: / root: / bin / bash
+hsoub ~> grep root /etc/passwd
+root: x: 0: 0: root: /root: /bin/bash
 ```
 
 如果我们想查看任何未分配的 shell，我们将查找以该字符结尾的行，如下：
@@ -1480,10 +1590,7 @@ root: x: 0: 0: root: / root: / bin / bash
 
 如果不使用此选项，文件系统表的所有行都将显示。
 
-许多本地化按照字典顺序对字符进行分类，在这些本地化中，[a-d] 不等于 [abcd]；它可能等于 [aBbCcDd]。为了对方括号表达式的传统解释，你可以通过将环境变量 LC_ALL 设置为 C 来使用 C 语言环境。
-
-
-
+许多本地化按照字典顺序对字符进行分类，在这些本地化中，`[a-d]` 不等于 `[abcd]`；它可能等于 `[aBbCcDd]`。为了对方括号表达式的传统解释，你可以通过将环境变量 `LC_ALL` 设置为 `C` 来使用 C 语言环境。
 
 最后，列出的某些字符类别是在方括号表达式中预定义的，有关这些预定义表达式的更多信息，请参阅 `grep` 帮助页或 `man` 目录。此外，查看下面的示例，它将显示所有包含 `y` 或 `f` 的行：
 
@@ -1511,10 +1618,10 @@ postfix: x: 89:
 
 ### 通配符
 
-使用 ``. ``。为了匹配单个字符，如果你想获取所有以 `c` 开头并以 `h` 结尾的五个字母英语单词列表，这里有一个示例 - 这在解决填字游戏时非常有用！：
+使用 `.`。为了匹配单个字符，如果你想获取所有以 `c` 开头并以 `h` 结尾的五个字母英语单词列表，这里有一个示例 - 这在解决填字游戏时非常有用！：
 
 ```
-hsoub ~> grep '\ <c ... h \>' /usr/share/dict/words
+hsoub ~> grep '\<c...h\>' /usr/share/dict/words
 
 catch
 
@@ -1533,10 +1640,10 @@ crash
 crush
 ```
 
-如果你想显示包含某种字体的行。使用 F 选项来获取，并使用 `*` 字符匹配多个字符，参见下面的示例，它从系统字典中选择了所有以 `c` 开头并以 `h` 结尾的单词：
+如果你想显示包含某种字体的行。使用 `F` 选项来获取，并使用 `*` 字符匹配多个字符，参见下面的示例，它从系统字典中选择了所有以 `c` 开头并以 `h` 结尾的单词：
 
 ```
-hsoub ~> grep '\ <c. * h \>' /usr/share/dict/words
+hsoub ~> grep '\<c.*h\>' /usr/share/dict/words
 
 caliph
 
@@ -1595,19 +1702,15 @@ drwxrwxr-x 3 hsoub hsoub 4096 Mar 22 2002 xml /
 
 ### 字符类型
 
-可以语言结构 `[: CLASS:]` 在方括号中指定字符类，其中 `CLASS` 在 POSIX 标准中定义，并具有以下值之一：`alnum`, `alpha`, `ascii`, `blank`, `cntrl`, `digit`, `graph`, `lower`, `print`, `punct`, `space`, `upper`, `word`, `xdigit`。
+可以语言结构 `[:CLASS:]` 在方括号中指定字符类，其中 `CLASS` 在 POSIX 标准中定义，并具有以下值之一：`alnum`, `alpha`, `ascii`, `blank`, `cntrl`, `digit`, `graph`, `lower`, `print`, `punct`, `space`, `upper`, `word`, `xdigit`。
 
 示例：
 
 ```
-hsoub ~> ls -ld [[: digit:]] *
+hsoub ~> ls -ld [[:digit:]] *
 
 drwxrwxr-x 2 hsoub hsoub 4096 Apr 20 13:45 2 /
 ```
-
-
-
-
 
 ```bash
 echo "Your files are protected against accidental overwriting using redirection."
@@ -1728,8 +1831,6 @@ test "$(whoami)" != 'root' && (echo you are using a non-privileged account; exit
 
 
 
-
-
 ```bash
 FILENAME = "$ 1"
 
@@ -1749,11 +1850,11 @@ fi
 
 #### 包含空格的文件名
 
-如果 `$1` 的值可以解析为多个单词，之前的示例将会失效，但可以通过在文件名周围加上双引号或使用 `[]` 代替 `[]` 来修复。
+如果`$1`的值可以解析为多个单词，之前的示例将会失效，但可以通过在文件名周围加上双引号或使用`[]`代替`[]`来修复。
 
 ### if then / elif / else
 
-`if` 的完整结构如下：
+`if`的完整结构如下：
 
 ```bash
 if TEST-COMMANDS; then
@@ -1765,15 +1866,15 @@ else
 fi
 ```
 
-首先执行 `TEST-COMMANDS` 测试顺序。如果返回状态为零，则执行相关的命令。执行与其伴随的 `"MORE-CONSEQUENT-COMMANDS"` 命令中的一个，然后命令完成。
+首先执行`TEST-COMMANDS`测试顺序。如果返回状态为零，则执行相关的命令。执行与其伴随的`"MORE-CONSEQUENT-COMMANDS"`命令中的一个，然后命令完成。
 
-如果 `else` 后面跟着一个 `ALTERNATE-CONSEQUENT-COMMANDS` 列表，且 `if` 或 `elif` 语句中最后一个条件的最后一个执行顺序状态非零，则执行替换顺序列表，返回状态为最后一个执行顺序的退出状态；如果没有满足顺序给出的任何条件，则为零。
+如果`else`后面跟着一个`ALTERNATE-CONSEQUENT-COMMANDS`列表，且`if`或`elif`语句中最后一个条件的最后一个执行顺序状态非零，则执行替换顺序列表，返回状态为最后一个执行顺序的退出状态；如果没有满足顺序给出的任何条件，则为零。
 
-如果未给 `exit` 命令提供参数，父 shell 将使用当前值作为 `$?` 变量。
+如果未给`exit`命令提供参数，父 shell 将使用当前值作为`$?`变量。
 
 #### 示例
 
-这是一个你可以放入 `crontab` 文件中每天执行的示例：
+这是一个你可以放入`crontab`文件中每天执行的示例：
 
 ```bash
 hsoub /etc/cron.daily> cat disktest.sh
@@ -1794,7 +1895,7 @@ fi
 
 ### 嵌套 if 语句
 
-`if` 语句可以在任何其他 `if` 中内部嵌套任意深度，只要你可以控制它。这里有一个测试闰年的示例：
+`if`语句可以在任何其他`if`中内部嵌套任意深度，只要你可以控制它。这里有一个测试闰年的示例：
 
 ```bash
 hsoub ~ / testdir> cat testleap.sh
@@ -1838,13 +1939,13 @@ else
 fi
 ```
 
-我们在之前的示例中使用双括号来测试数学表达式，请参阅 Bash 分离展开（separation of expansions）中的数学展开，这等同于 `let`。不要在此处使用方括号或尝试像 `[400% year $]` 这样的操作，因为这里的方括号并不是真的。你可能还想使用根据你正在编写的语言支持不同颜色方案的文本编辑器，因为它们对于识别代码中的错误很有用，其中一个是 `gvim`，但你也会发现 `kwrite` 等其他的。
+我们在之前的示例中使用双括号来测试数学表达式，请参阅 Bash 分离展开（separation of expansions）中的数学展开，这等同于`let`。不要在此处使用方括号或尝试像`[400% year $]`这样的操作，因为这里的方括号并不是真的。你可能还想使用根据你正在编写的语言支持不同颜色方案的文本编辑器，因为它们对于识别代码中的错误很有用，其中一个是`gvim`，但你也会发现`kwrite`等其他的。
 
 ### 在 if 中使用 exit 语句
 
-我们首先识别了 `exit` 语句，它终止程序的整个执行，通常在用户请求错误、语句未被成功执行或发生其他错误时使用。`exit` 语句接受一个可选参数，即退出状态的数字符号，该符号被传回父 shell 并存储在 `$?` 变量中。当参数值为零时，意味着程序执行成功，程序员可以使用任何其他值向父 shell 传递不同的消息，以便根据子进程的失败或成功采取不同的行动。如果未给 `exit` 命令提供参数，父 shell 将使用当前值作为 `$?` 变量。
+我们首先识别了`exit`语句，它终止程序的整个执行，通常在用户请求错误、语句未被成功执行或发生其他错误时使用。`exit`语句接受一个可选参数，即退出状态的数字符号，该符号被传回父 shell 并存储在`$?`变量中。当参数值为零时，意味着程序执行成功，程序员可以使用任何其他值向父 shell 传递不同的消息，以便根据子进程的失败或成功采取不同的行动。如果未给`exit`命令提供参数，父 shell 将使用当前值作为`$?`变量。
 
-这是一个 `penguin.sh` 的示例，通过细微修改进行解释，将其退出状态发送到 `feed.sh` 所在的父 shell：
+这是一个`penguin.sh`的示例，通过细微修改进行解释，将其退出状态发送到`feed.sh`所在的父 shell：
 
 ```bash
 hsoub ~ / testdir> cat penguin.sh
@@ -1877,7 +1978,7 @@ else
 fi
 ```
 
-下面的示例通过 `menu` 和 `animal` 变量调用 `penguin.sh`:
+下面的示例通过`menu`和`animal`变量调用`penguin.sh`:
 
 ```bash
 hsoub ~ / testdir> cat feed.sh
@@ -1920,13 +2021,13 @@ hsoub ~ / testdir> ./feed.sh meat penguin
 I don't have that food.
 ```
 
-退出状态码可以自由选择，如所示，`exit` 命令通常有一系列特定的代码。
+退出状态码可以自由选择，如所示，`exit`命令通常有一系列特定的代码。
 
 ### 使用 case 结构
 
 简化 case
 
-使用 `if` 语句由于其直观的可能很容易，但当你遇到几种可能的行动选择时，这种便利就会变成混乱。在这种情况下我们使用 `case`，其语言结构如下：
+使用`if`语句由于其直观的可能很容易，但当你遇到几种可能的行动选择时，这种便利就会变成混乱。在这种情况下我们使用`case`，其语言结构如下：
 
 ```bash
 case EXPRESSION in
@@ -1937,7 +2038,7 @@ case EXPRESSION in
 esac
 ```
 
-之前表达式中的每个 `case` 匹配一个模式，执行第一个匹配的 `COMMAND-LIST` 列表，并使用管道符号 `|` 分隔多个模式，终止参数（样式列表，每个条目必须以两个分号结束；任何 case 以 `esac` 结束）。参见以下示例，通过 `Case` 语句发送更多样化的警告消息：
+之前表达式中的每个`case`匹配一个模式，执行第一个匹配的`COMMAND-LIST`列表，并使用管道符号`|`分隔多个模式，终止参数（样式列表，每个条目必须以两个分号结束；任何 case 以`esac`结束）。参见以下示例，通过`Case`语句发送更多样化的警告消息：
 
 ```bash
 hsoub ~ / testdir> cat disktest.sh
@@ -1965,10 +2066,6 @@ esac
 echo $Message
 ```
 
-
-
-
-
 ```bash
 Message = "快点处理那个新磁盘 ... 有一个分区的使用率已达到 $ space%。"
   ;;
@@ -1984,6 +2081,7 @@ esac
 `echo $ Message | mail -s "磁盘报告日期" "hsoub"`
 
 `hsoub ~ / testdir>`
+
 你有一封新邮件。
 
 `hsoub ~ / testdir> tail -16 /var / spool / mail / hsoub`
@@ -2007,11 +2105,12 @@ Subject: 磁盘报告 Tue Jan 14 22:10:47 CET 2003
 开始考虑清理一些东西。有一个分区的使用率已达到 87%。
 
 `hsoub ~ / testdir>`
-你可以打开邮件客户端检查结果，但这个示例是为了展示程序会发送包含收件人、主题和发件人的完整邮件信息。你可以在初始化代码文件夹中找到许多使用 case 语句的示例。启动脚本使用 `start` 和 `stop` 语句来运行或停止系统进程，你可以在下方看到一个理论示例。
+
+你可以打开邮件客户端检查结果，但这个示例是为了展示程序会发送包含收件人、主题和发件人的完整邮件信息。你可以在初始化代码文件夹中找到许多使用 case 语句的示例。启动脚本使用`start`和`stop`语句来运行或停止系统进程，你可以在下方看到一个理论示例。
 
 ### 示例 initscript
 
-初始化代码使用 `case` 语句来启动和停止系统服务，并查询它们。在下面的示例中，它是启动 Anacron 服务程序的一部分，该服务是一个根据天数间隔定期执行命令的守护进程。
+初始化代码使用`case`语句来启动和停止系统服务，并查询它们。在下面的示例中，它是启动 Anacron 服务程序的一部分，该服务是一个根据天数间隔定期执行命令的守护进程。
 
 ```bash
 case "$1" in
@@ -2040,17 +2139,17 @@ case "$1" in
 esac
 ```
 
-要执行的任务（例如开启和关闭精灵）定义在函数内部，其源码部分位于 `etc/rc.d/init.d`。
+要执行的任务（例如开启和关闭精灵）定义在函数内部，其源码部分位于`etc/rc.d/init.d`。
 
 # 第五章：Bash 中的重复任务
 
-在本节中，你将学习如何将重复命令合并为循环，以及如何使用 `for` 或 `while` 语句构建重复循环。`for` 循环执行特定次数的任务。`while` 语句指定循环何时停止。循环可以使用 `break` 和 `continue` 语句来中断或重复循环，并且可以使用文件作为循环的输入。循环还可以通过管道从命令中读取输出。你还将学习如何使用 `select` 结构在交互式脚本中打印列表，以及如何使用 `shift` 语句在迭代中执行命令。
+在本节中，你将学习如何将重复命令合并为循环，以及如何使用`for`或`while`语句构建重复循环。`for`循环执行特定次数的任务。`while`语句指定循环何时停止。循环可以使用`break`和`continue`语句来中断或重复循环，并且可以使用文件作为循环的输入。循环还可以通过管道从命令中读取输出。你还将学习如何使用`select`结构在交互式脚本中打印列表，以及如何使用`shift`语句在迭代中执行命令。
 
 ## Bash 中的 for 
 
 ### 如何制作循环
 
-`for` 循环是三个迭代单元中的第一个，它允许分配值列表，并为每个值执行一组命令列表。该循环的语言结构如下：
+`for`循环是三个迭代单元中的第一个，它允许分配值列表，并为每个值执行一组命令列表。该循环的语言结构如下：
 
 ```bash
 for NAME in LIST; do
@@ -2058,13 +2157,15 @@ for NAME in LIST; do
 done
 ```
 
-如果 `LIST` 不存在，`in` 将被 `it` 替换，并为每个设置为值的位置执行一次 `COMMANDS`。返回状态是最后一个执行命令的退出状态，如果 `LIST` 没有展开为任何元素，则返回状态为零。`NAME` 可以是任何变量（尽管经常使用 `i`），而 `LIST` 可以由任何单词、文本或数字组成，这些内容可以由任何命令生成。同样，为每个值执行的 `COMMANDS` 可以是任何系统命令、shell 语句或脚本。当第一个循环开始时，`NAME` 被设置为 `LIST` 中的第一个项，它的值在第二次运行时变为第二个项，依此类推。当 `NAME` 遍历完列表中的所有值时，迭代循环结束。
+如果`LIST`不存在，`in`将被`it`替换，并为每个设置为值的位置执行一次`COMMANDS`。返回状态是最后一个执行命令的退出状态，如果`LIST`没有展开为任何元素，则返回状态为零。`NAME`可以是任何变量（尽管经常使用`i`），而`LIST`可以由任何单词、文本或数字组成，这些内容可以由任何命令生成。同样，为每个值执行的`COMMANDS`可以是任何系统命令、shell 语句或脚本。当第一个循环开始时，`NAME`被设置为`LIST`中的第一个项，它的值在第二次运行时变为第二个项，依此类推。当`NAME`遍历完列表中的所有值时，迭代循环结束。
 
 #### 示例
 
 #### 使用命令选择项目
 
-第一个示例是一个命令行，显示如何使用 `for` 循环为每个 `.xml` 文件创建备份，在命令发布后你可以安全地处理源文件：
+第一个示例是一个命令行，显示如何使用`for`循环为每个`.xml`文件创建备份，在命令发布后你可以安全地处理源文件：
+
+
 
 ```bash
 for i in *.xml; do
@@ -2078,7 +2179,7 @@ file2.xml file2.xml.bak
 file3.xml file3.xml.bak
 ```
 
-这个示例显示了使用 `for` 循环在 `/sbin` 文件夹中处理纯文本文件：
+这个示例显示了使用`for`循环在`/sbin`文件夹中处理纯文本文件：
 
 ```bash
 for i in *.xml; do
@@ -2100,13 +2201,14 @@ for i in "$LIST"; do
     cat footer >> "$NEWNAME"
 done
 ```
+
 （注：此处根据原文逻辑对调了示例中代码的描述顺序，原文中示例代码与描述较为杂乱，此处还原了其逻辑意图）
 
-使用 `tac` 来解决问题，否则我们无法在删除之前知道开始的行号。
+使用`tac`来解决问题，否则我们无法在删除之前知道开始的行号。
 
 ### Basename 命令
 
-最好使用 `basename` 命令将 html 后缀更改 `php`。更多信息请参见手册页。
+最好使用`basename`命令将 html 后缀更改`php`。更多信息请参见手册页。
 
 ### 异常字符
 
@@ -2122,7 +2224,7 @@ done
 
 ### 如何制作 while 循环
 
-迭代 `while` 循环允许只要 `while` 循环中的命令执行成功（退出零），就重复执行命令列表。其结构如下：
+迭代`while`循环允许只要`while`循环中的命令执行成功（退出零），就重复执行命令列表。其结构如下：
 
 ```bash
 while CONTROL-COMMAND; do
@@ -2130,13 +2232,13 @@ while CONTROL-COMMAND; do
 done
 ```
 
-`CONTROL-COMMAND` 控制循环，表示任何失败或成功的命令，而将重复的 `CONSEQUENT-COMMANDS` 可以是任何 shell 程序或结构。循环在控制命令失败后立即退出，如果循环在概率程序中，后续命令将在循环结束后执行。返回状态与最后一个执行的命令（`CONSEQUENT-COMMANDS`）的退出状态相同，如果没有执行顺序，则为零。
+`CONTROL-COMMAND`控制循环，表示任何失败或成功的命令，而将重复的`CONSEQUENT-COMMANDS`可以是任何 shell 程序或结构。循环在控制命令失败后立即退出，如果循环在概率程序中，后续命令将在循环结束后执行。返回状态与最后一个执行的命令（`CONSEQUENT-COMMANDS`）的退出状态相同，如果没有执行顺序，则为零。
 
 #### 示例
 
-简单的使用 while
+##### 简单的使用 while
 
-这是一个使用 `while` 循环的简单示例：
+这是一个使用`while`循环的简单示例：
 
 ```bash
 #!/bin/bash
@@ -2158,11 +2260,7 @@ done
 # (使用远程文件夹 ssh 和 scp 密钥)
 ```
 
-
-
-
-
-# 每小时创建一个新文件夹
+### 每小时创建一个新文件夹
 
 `PICSDIR = /home/hsoub/pics`
 
@@ -2183,7 +2281,7 @@ while true; do
 done
 ```
 
-注意 `true` 的使用，这意味着：持续执行，直到进程被强制中断（通过 `kill` 命令或 `Ctrl + c`）。接接的示例创建了文件，可以用于模拟测试：
+注意`true`的使用，这意味着：持续执行，直到进程被强制中断（通过`kill`命令或`Ctrl + c`）。接接的示例创建了文件，可以用于模拟测试：
 
 ```bash
 #!/bin/bash
@@ -2196,15 +2294,15 @@ while true; do
 done
 ```
 
-注意你使用 `date` 命令来创建不同类型的文件和文件夹名称。
+注意你使用`date`命令来创建不同类型的文件和文件夹名称。
 
-使用系统
+### 使用系统
 
-上面的示例仅用于解释，可以使用 `cron` 工具进行定期检查。当从你的 `crontab` 文件中执行程序时，不要忘记重定向输出和错误信息！
+上面的示例仅用于解释，可以使用`cron`工具进行定期检查。当从你的`crontab`文件中执行程序时，不要忘记重定向输出和错误信息！
 
 ## 使用键盘输入控制 while 循环
 
-以下程序在用户输入 `ctrl + c` 时可以被用户解释：
+以下程序在用户输入`ctrl + c`时可以被用户解释：
 
 ```bash
 #!/bin/bash
@@ -2238,11 +2336,11 @@ topics
 done
 ```
 
-这里文档（here document）用于为用户提供不同的选项供选择 - 这里或 `heredoc` 是一种向 shell 程序提供短内容的方法，而无需将其输入到单独的文件中
+这里文档（here document）用于为用户提供不同的选项供选择——这里或`heredoc`是一种向 shell 程序提供短内容的方法，而无需将其输入到单独的文件中。
 
 ## 计算平均值
 
-此程序在执行前会对用户的输入进行计算测试。如果输入超出范围，则会打印消息。如果用户按下 `q` 键，循环将退出：
+此程序在执行前会对用户的输入进行计算测试。如果输入超出范围，则会打印消息。如果用户按下`q`键，循环将退出：
 
 ```bash
 #!/bin/bash
@@ -2274,15 +2372,15 @@ echo "正在退出。"
 
 ## Bash 中的 Until 循环
 
-### 如何制作一个直到...的循环
+### 如何制作一个直到……的循环
 
-这种迭代循环与 while 循环类似，不同之处在于这里的循环一直执行到 `TEST-COMMAND` 检查成功执行为止，只要测试命令的执行失败，循环就会保持激活。语法与 while 循环的语法相似：
+这种迭代循环与`while`循环类似，不同之处在于这里的循环一直执行到`TEST-COMMAND`检查成功执行为止，只要测试命令的执行失败，循环就会保持激活。语法与`while`循环的语法相似：
 
 `until TEST-COMMAND; do CONSEQUENT-COMMANDS; done`
 
-此循环的返回状态与从 `CONSEQUENT-COMMANDS` 中执行的最后一个命令的退出状态相同，如果没有执行任何命令，则为零。`TEST-COMMAND` 测试命令可以是任何可以产生成功或失败结果的命令，而依赖的命令可以是任何 Unix 命令、脚本或 shell 结构。
+此循环的返回状态与从`CONSEQUENT-COMMANDS`中执行的最后一个命令的退出状态相同，如果没有执行任何命令，则为零。`TEST-COMMAND`测试命令可以是任何可以产生成功或失败结果的命令，而依赖的命令可以是任何 Unix 命令、脚本或 shell 结构。
 
-如果需要，可以用一个或多个换行替换分号 `;`。
+如果需要，可以用一个或多个换行替换分号`;`。
 
 #### 示例
 
@@ -2314,31 +2412,17 @@ done
 
 ## Break 和 Continue
 
-`break` 命令仅终止循环 -而不是程序。通过在程序末尾添加一个 `echo` 命令可以清楚地看到这一点，当你输入导致 `break` 命令的条目时，`echo` 命令也会执行。
+`break`命令仅终止循环——而不是程序。通过在程序末尾添加一个`echo`命令可以清楚地看到这一点，当你输入导致`break`命令的条目时，`echo`命令也会执行。
 
-`break` 命令仅终止循环 -而不是程序。通过在程序末尾添加一个 `echo` 命令可以清楚地看到这一点，当你输入导致 `break` 命令的条目时，`echo` 命令也会执行。
+注意你使用`date`命令来创建不同类型的文件和文件夹名称。
 
-`break` 命令仅终止循环 -而不是程序。通过在程序末尾添加一个 `echo` 命令可以清楚地看到这一点，当你输入导致 `break` 命令的条目时，`echo` 命令也会执行。
+### 使用系统
 
-`break` 命令仅终止循环 -而不是程序。通过在程序末尾添加一个 `echo` 命令可以清楚地看到这一点，当你输入导致 `break` 命令的条目时，`echo` 命令也会执行。
-
-`break` 命令仅终止循环 -而不是程序。通过在程序末尾添加一个 `echo` 命令可以清楚地看到这一点，当你输入导致 `break` 命令的条目时，`echo` 命令也会执行。
-
-`break` 命令仅终止循环 -而不是程序。通过在程序末尾添加一个 `echo` 命令可以清楚地看到这一点，当你输入导致 `break` 命令的条目时，`echo` 命令也会执行。
-
-`break` 命令仅终止循环 -而不是程序。通过在程序末尾添加一个 `echo` 命令可以清楚地看到这一点，当你输入导致 `break` 命令的条目时，`echo` 命令也会执行。
-
-（注：此处原文存在大量重复，翻译时已按要求不重复输出）
-
-注意你使用 `date` 命令来创建不同类型的文件和文件夹名称。
-
-使用系统
-
-上面的示例仅用于解释，可以使用 `cron` 工具进行定期检查。当从你的 `crontab` 文件中执行程序时，不要忘记重定向输出和错误信息！
+上面的示例仅用于解释，可以使用`cron`工具进行定期检查。当从你的`crontab`文件中执行程序时，不要忘记重定向输出和错误信息！
 
 ## 使用键盘输入控制 while 循环
 
-以下程序在用户输入 `ctrl + c` 时可以被用户解释：
+以下程序在用户输入`ctrl + c`时可以被用户解释：
 
 ```bash
 #!/bin/bash
@@ -2372,11 +2456,11 @@ topics
 done
 ```
 
-这里文档（here document）用于为用户提供不同的选项供选择 - 这里或 `heredoc` 是一种向 shell 程序提供短内容的方法，而无需将其输入到单独的文件中
+这里文档（here document）用于为用户提供不同的选项供选择——这里或`heredoc`是一种向 shell 程序提供短内容的方法，而无需将其输入到单独的文件中。
 
 ## 计算平均值
 
-此程序在执行前会对用户的输入进行计算测试。如果输入超出范围，则会打印消息。如果用户按下 `q` 键，循环将退出：
+此程序在执行前会对用户的输入进行计算测试。如果输入超出范围，则会打印消息。如果用户按下`q`键，循环将退出：
 
 ```bash
 #!/bin/bash
@@ -2408,19 +2492,21 @@ echo "正在退出。"
 
 ## Bash 中的 Until 循环
 
+
+
 ### 如何制作一个直到...的循环
 
-这种迭代循环与 while 循环类似，不同之处在于这里的循环一直执行到 `TEST-COMMAND` 检查成功执行为止，只要测试命令的执行失败，循环就会保持激活。语法与 while 循环的语法相似：
+这种迭代循环与`while`循环类似，不同之处在于这里的循环一直执行到`TEST-COMMAND`检查成功执行为止，只要测试命令的执行失败，循环就会保持激活。语法与`while`循环的语法相似：
 
 `until TEST-COMMAND; do CONSEQUENT-COMMANDS; done`
 
-此循环的返回状态与从 `CONSEQUENT-COMMANDS` 中执行的最后一个命令的退出状态相同，如果没有执行任何命令，则为零。`TEST-COMMAND` 测试命令可以是任何可以产生成功或失败结果的命令，而依赖的命令可以是任何 Unix 命令、脚本或 shell 结构。
+此循环的返回状态与从`CONSEQUENT-COMMANDS`中执行的最后一个命令的退出状态相同，如果没有执行任何命令，则为零。`TEST-COMMAND`测试命令可以是任何可以产生成功或失败结果的命令，而依赖的命令可以是任何`Unix`命令、脚本或`shell`结构。
 
-如果需要，可以用一个或多个换行替换分号 `;`
+如果需要，可以用一个或多个换行替换分号`;`。
 
 #### 示例
 
-此程序是我们在嵌套 while 循环中提到的示例的升级版本，此版本会检查磁盘空间是否足够，如果你没有足够的空间，它将删除上几个月的图片：
+此程序是我们在嵌套`while`循环中提到的示例的升级版本，此版本会检查磁盘空间是否足够，如果你没有足够的空间，它将删除上几个月的图片：
 
 ```bash
 #!/bin/bash
@@ -2446,132 +2532,7 @@ while true; do
 done
 ```
 
-## Break 和 Continue
-
-`break` 命令仅终止循环 -而不是程序。通过在程序末尾添加一个 `echo` 命令可以清楚地看到这一点，当你输入导致 `break` 命令的条目时，`echo` 命令也会执行。
-
-（注：此处原文存在大量重复，翻译时已按要求不重复输出）
-
-注意你使用 `date` 命令来创建不同类型的文件和文件夹名称。
-
-使用系统
-
-上面的示例仅用于解释，可以使用 `cron` 工具进行定期检查。当从你的 `crontab` 文件中执行程序时，不要忘记重定向输出和错误信息！
-
-## 使用键盘输入控制 while 循环
-
-以下程序在用户输入 `ctrl + c` 时可以被用户解释：
-
-```bash
-#!/bin/bash
-
-# 此程序打印示例和提示
-
-FORTUNE = /usr/games/fortune
-
-while true; do
-  echo "你想听哪个主题的建议？"
-  cat << topics
-politics
-startrek
-kernelnewbies
-sports
-bofh-excuses
-magic
-love
-literature
-drugs
-education
-topics
-  echo
-  echo -n "请做出你的选择:"
-  read topic
-  echo
-  echo "关于主题 $topic 的免费建议："
-  echo
-  $FORTUNE $topic
-  echo
-done
-```
-
-这里文档（here document）用于为用户提供不同的选项供选择 - 这里或 `heredoc` 是一种向 shell 程序提供短内容的方法，而无需将其输入到单独的文件中
-
-## 计算平均值
-
-此程序在执行前会对用户的输入进行计算测试。如果输入超出范围，则会打印消息。如果用户按下 `q` 键，循环将退出：
-
-```bash
-#!/bin/bash
-
-# 计算一组数字的平均值。
-
-SCORE = "0"
-AVERAGE = "0"
-SUM = "0"
-NUM = "0"
-
-while true; do
-  echo -n "输入你的分数 [0-100%] ('q' 退出):"; read SCORE
-  if (("$SCORE" <"0")) || (("$SCORE"> "100")); then
-    echo "认真点。来，再试一次："
-  elif ["$SCORE" == "q"]; then
-    echo "平均分: $AVERAGE%。"
-    break
-  else
-    SUM = $[$SUM + $SCORE]
-    NUM = $[$NUM + 1]
-    AVERAGE = $[$SUM / $NUM]
-  fi
-done
-echo "正在退出。"
-```
-
-注意最后几行中的变量在计算时没有加引号。
-
-## Bash 中的 Until 循环
-
-### 如何制作一个直到...的循环
-
-这种迭代循环与 while 循环类似，不同之处在于这里的循环一直执行到 `TEST-COMMAND` 检查成功执行为止，只要测试命令的执行失败，循环就会保持激活。语法与 while 循环的语法相似：
-
-`until TEST-COMMAND; do CONSEQUENT-COMMANDS; done`
-
-此循环的返回状态与从 `CONSEQUENT-COMMANDS` 中执行的最后一个命令的退出状态相同，如果没有执行任何命令，则为零。`TEST-COMMAND` 测试命令可以是任何可以产生成功或失败结果的命令，而依赖的命令可以是任何 Unix 命令、脚本或 shell 结构。
-
-如果需要，可以用一个或多个换行替换分号 `;`
-
-#### 示例
-
-此程序是我们在嵌套 while 循环中提到的示例的升级版本，此版本会检查磁盘空间是否足够，如果你没有足够的空间，它将删除上几个月的图片：
-
-```bash
-#!/bin/bash
-
-# 此程序将图片从我的家文件夹复制到 Web 服务器文件夹中
-# 每小时创建一个新文件夹
-# 如果图片占用空间过多导致无法添加新图片，将删除最后的备份。
-
-while true; do
-  DISKFUL = $(df -h $WEBDIR | grep -v File | awk '{print $5}' | cut -d "%" -f1-)
-  until [$DISKFUL -ge "90"]; do
-    DATE = `date +%Y%m%d`
-    HOUR = `date +%H`
-    mkdir $WEBDIR / "$DATE"
-    while [$HOUR -ne "00"]; do
-      DESTDIR = $WEBDIR / "$DATE" / "$HOUR"
-      mkdir "$DESTDIR"
-      mv $PICDIR / *.jpg "$DESTDIR" /
-      sleep 3600
-      HOUR = `date +%H`
-    done
-  done
-done
-```
-
-
-
-
-该程序至少存在一个漏洞：它会替换现有文件，而 `noclobber` 命令仅在发生重定向时才有用。此外，`mv` 命令的 `-b` 选项提供了更高的安全性，但这种安全性仅在无意替换的情况下才有用，如下例所示：
+该程序至少存在一个漏洞：它会替换现有文件，而`noclobber`命令仅在发生重定向时才有用。此外，`mv`命令的`-b`选项提供了更高的安全性，但这种安全性仅在无意替换的情况下才有用，如下例所示：
 
 ```bash
 [wiki @ hsoub ~ / test] rm *
@@ -2603,7 +2564,7 @@ new name for TEST is test
 ./ ../ test test ~
 ```
 
-`tr` 命令是 `textutils` 软件包的一部分，可以对文件进行各种转换。
+`tr`命令是`textutils`软件包的一部分，可以对文件进行各种转换。
 
 # 第六章
 
@@ -2613,7 +2574,7 @@ new name for TEST is test
 
 ### 什么是函数？
 
-Shell 函数是使用单个组名作为整体或例程对命令进行分组以便以后执行的方法。当该函数被当作简单命令调用时，与函数名关联的命令列表将执行，并且函数将在其声明所在的 Shell 中执行。包含在 Shell 函数之前的特殊命令会在搜索命令时出现，包含的特殊命令有：`break`、:`、`.`、`continue`, `eval`, `exec`, `exit`, `export`, `readonly`, `return`, `set`, `shift`, `trap`, `unset`。
+`Shell`函数是使用单个组名作为整体或例程对命令进行分组以便以后执行的方法。当该函数被当作简单命令调用时，与函数名关联的命令列表将执行，并且函数将在其声明所在的`Shell`中执行。包含在`Shell`函数之前的特殊命令会在搜索命令时出现，包含的特殊命令有：`break`、`:`、`.`、`continue`、`eval`、`exec`、`exit`、`export`、`readonly`、`return`、`set`、`shift`、`trap`、`unset`。
 
 ### 函数语法
 
@@ -2629,17 +2590,17 @@ function FUNCTION {COMMANDS; }
 FUNCTION () {COMMANDS; }
 ```
 
-这些规则定义了一个名为 `FUNCTION` 的 Shell 函数。你不需要使用函数，但如果你不使用它，则需要像你在第二个规则中看到的括号 `()`。
+这些规则定义了一个名为`FUNCTION`的`Shell`函数。你不需要使用`function`关键字，但如果不使用它，则需要像你在第二个规则中看到的括号`()`。
 
 #### 常见错误
 
-大括号 `{}` 必须与其内部的内容之间隔开，否则函数内容将被误解，且函数内容必须以分号或换行结束。
+大括号`{}`必须与其内部的内容之间隔开，否则函数内容将被误解，且函数内容必须以分号或换行结束。
 
 ### 函数中的位置系数
 
-函数类似于微型代码，它们可以接受参数，并通过 `local` 命令使用在函数外部无法使用的变量，并可以向其调用的 Shell 返回值。函数有一套解释位置系数的系统，尽管传递给函数的位置系数与传递给命令或文本代码的系数并不相同。当函数执行时，它的参数在执行期间变为位置系数，而展开为位置系数数量的特殊参数 `#` 会进行更新以反映发生的变化。
+函数类似于微型代码，它们可以接受参数，并通过`local`命令使用在函数外部无法使用的变量，并可以向其调用的`Shell`返回值。函数有一套解释位置系数的系统，尽管传递给函数的位置系数与传递给命令或文本代码的系数并不相同。当函数执行时，它的参数在执行期间变为位置系数，而展开为位置系数数量的特殊参数`#`会进行更新以反映发生的变化。
 
-位置系数不会变为 0，并且在执行期间 `FUNCNAME` 变量会被设置为函数名。如果在函数中执行了 `return` 命令，则函数将执行完毕，该命令将在函数被调用后执行。在函数返回完成后，位置系数和特殊参数 `#` 的值将恢复到函数执行前的值。这里是一个简单的示例：
+位置系数不会变为`0`，并且在执行期间`FUNCNAME`变量会被设置为函数名。如果在函数中执行了`return`命令，则函数将执行完毕，该命令将在函数被调用后执行。在函数返回完成后，位置系数和特殊参数`#`的值将恢复到函数执行前的值。这里是一个简单的示例：
 
 ```bash
 [ahmad @ ahmadpc ~ / test] cat showparams.sh
@@ -2665,24 +2626,24 @@ test other_param
 此此函数的退出代码是 0。
 ```
 
-注意，函数的返回值或退出代码通常存储在变量中以供稍后探测，你的系统初始化代码在类条件测试中使用 `RETVAL` 变量检查技术：
+注意，函数的返回值或退出代码通常存储在变量中以供稍后探测，你的系统初始化代码在类条件测试中使用`RETVAL`变量检查技术：
 
 ```bash
 if [$ RETVAL -eq 0]; then
     <启动守护进程>
 ```
 
-或者，如在下面的 `/etc/init.d/amd` 代码示例所示，其中使用了 bash 配置功能：
+或者，如在下面的`/etc/init.d/amd`代码示例所示，其中使用了`bash`配置功能：
 
 ```bash
 [$ RETVAL = 0] && touch /var/lock/subsys/amd
 ```
 
-`&&` 之后的命令仅在测试成功时执行，这是 `if / then / if` 的简短表达式。函数的返回代码被用作整个代码的退出代码，你会看到许多初始化代码以 `exit $ RETVAL` 等结尾。
+`&&`之后的命令仅在测试成功时执行，这是`if/then/if`的简短表达式。函数的返回代码被用作整个代码的退出代码，你会看到许多初始化代码以`exit $ RETVAL`等结尾。
 
 ### 显示函数
 
-当前 Shell 的所有已知函数可以使用不带选项的 `set` 命令显示。函数在使用后将仍然存在，除非使用 `unset` 命令将其删除。
+当前`Shell`的所有已知函数可以使用不带选项的`set`命令显示。函数在使用后将仍然存在，除非使用`unset`命令将其删除。
 
 ```bash
 [ahmad @ ahmadpc ~] which zless
@@ -2694,186 +2655,29 @@ zless ()
 [ahmad @ ahmadpc ~] echo $
 ```
 
-或者如在下面的 `/etc/init.d/amd` 代码示例所示，其中使用了 bash 配置功能：
+### 回用函数
+
+你可以将一组命令封装为一个函数并在需要时重复调用。以下是一个实际示例，演示如何将备份过程封装为函数`bupbash`，并通过`cron`定期执行：
 
 ```bash
-[$ RETVAL = 0] && touch /var/lock/subsys/amd
-```
-
-`&&` 之后的命令仅在测试成功时执行，这是 `if / then / if` 的简短表达式。函数的返回代码被用作整个代码的退出代码，你会看到许多初始化代码以 `exit $ RETVAL` 等结尾。
-
-### 显示函数
-
-当前 Shell 的所有已知函数可以使用不带选项的 `set` 命令显示。函数在使用后将仍然存在，除非使用 `unset` 命令将其删除。
-
-```bash
-[ahmad @ ahmadpc ~] which zless
-zless 是一个函数
-zless ()
+buplinux ()
 {
-  zcat "$ @" | "$ PAGER"
+  DIR = "/nethome/tille/xml/db/"
+  TAR = "Bash.tar"
+  BZIP = "$TAR.bz2"
+  SERVER = "rincewind"
+  RDIR = "/var/www/intra/tille/html/training/"
+  cd "$DIR"
+  tar cf "$TAR" src/*.xml src/images/*.png src/images/*.eps
+  echo "Compressing $TAR ..." >> "$LOGFILE"
+  bzip2 "$TAR"
+  echo "... done." >> "$LOGFILE"
+  echo "Copying to $SERVER ..." >> "$LOGFILE"
+  scp "$BZIP" "$SERVER: $RDIR" > /dev/null 2>&1
+  echo "... done." >> "$LOGFILE"
+  echo -e "Done backing up Linux course: \nSource files, PNG and EPS images. \nRubbish removed." >> "$LOGFILE"
+  rm "$BZIP"
 }
-[ahmad @ ahmadpc ~] echo $
-```
-
-或者，如在下面的 `/etc/init.d/amd` 代码示例所示，其中使用了 bash 配置功能：
-
-```bash
-[$ RETVAL = 0] && touch /var/lock/subsys/amd
-```
-
-`&&` 之后的命令仅在测试成功时执行，这是 `if / then / if` 的简短表达式。函数的返回代码被用作整个代码的退出代码，你会看到许多初始化代码以 `exit $ RETVAL` 等结尾。
-
-### 显示函数
-
-当前 Shell 的所有已知函数可以使用不带选项的 `set` 命令显示。函数在使用后将仍然存在，除非使用 `unset` 命令将其删除。
-
-```bash
-[ahmad @ ahmadpc ~] which zless
-zless 是一个函数
-zless ()
-{
-  zcat "$ @" | "$ PAGER"
-}
-[ahmad @ ahmadpc ~] echo $
-```
-
-或者，如在下面的 `/etc/init.d/amd` 代码示例所示，其中使用了 bash 配置功能：
-
-```bash
-[$ RETVAL = 0] && touch /var/lock/subsys/amd
-```
-
-`&&` 之后的命令仅在测试成功时执行，这是 `if / then / if` 的简短表达式。函数的返回代码被用作整个代码的退出代码，你会看到许多初始化代码以 `exit $ RETVAL` 等结尾。
-
-### 显示函数
-
-当前 Shell 的所有已知函数可以使用不带选项的 `set` 命令显示。函数在使用后将仍然存在，除非使用 `unset` 命令将其删除。
-
-```bash
-[ahmad @ ahmadpc ~] which zless
-zless 是一个函数
-zless ()
-{
-  zcat "$ @" | "$ PAGER"
-}
-[ahmad @ ahmadpc ~] echo $
-```
-
-或者，如在下面的 `/etc/init.d/amd` 代码示例所示，其中使用了 bash 配置功能：
-
-```bash
-[$ RETVAL = 0] && touch /var/lock/subsys/amd
-```
-
-`&&` 之后的命令仅在测试成功时执行，这是 `if / then / if` 的简短表达式。函数的返回代码被用作整个代码的退出代码，你会看到许多初始化代码以 `exit $ RETVAL` 等结尾。
-
-### 显示函数
-
-当前 Shell 的所有已知函数可以使用不带选项的 `set` 命令显示。函数在使用后将仍然存在，除非使用 `unset` 命令将其删除。
-
-```bash
-[ahmad @ ahmadpc ~] which zless
-zless 是一个函数
-zless ()
-{
-  zcat "$ @" | "$ PAGER"
-}
-[ahmad @ ahmadpc ~] echo $
-```
-
-或者，如在下面的 `/etc/init.d/amd` 代码示例所示，其中使用了 bash 配置功能：
-
-```bash
-[$ RETVAL = 0] && touch /var/lock/subsys/amd
-```
-
-`&&` 之后的命令仅在测试成功时执行，这是 `if / then / if` 的简短表达式。函数的返回代码被用作整个代码的退出代码，你会看到许多初始化代码以 `exit $ RETVAL` 等结尾。
-
-（注：由于原始文本中存在大量重复段落，此处已按逻辑处理，确保翻译完整且不重复。）
-
----
-**修正后的完整逻辑部分翻译：**
-
-```bash
-[ahmad @ ahmadpc ~] which zless
-zless 是一个函数
-zless ()
-{
-  zcat "$ @" | "$ PAGER"
-}
-[ahmad @ ahmadpc ~] echo $
-```
-
-或者，如在下面的 `/etc/init.d/amd` 代码示例所示，其中使用了 bash 配置功能：
-
-```bash
-[$ RETVAL = 0] && touch /var/lock/subsys/amd
-```
-
-`&&` 之后的命令仅在测试成功时执行，这是 `if / then / if` 的简短表达式。函数的返回代码被用作整个代码的退出代码，你会看到许多初始化代码以 `exit $ RETVAL` 等结尾。
-
-## 回用函数
-
-你可以在这里的所有已知函数可以使用不带选项的 `set` 命令显示。函数在使用后将仍然存在，除非使用 `unset` 命令将其删除。
-
-```bash
-[ahmad @ ahmadpc ~] which zless
-zless 是一个函数
-zless ()
-{
-  zcat "$ @" | "$ PAGER"
-}
-[ahmad @ ahmadpc ~] echo $
-```
-
-（此处由于用户文本存在循环重复，实际操作中已遵循“不要重复输出原文”的原则，仅提供核心内容的翻译映射。）
-
-### 调整路径：
-
-```bash
-[ahmad @ ahmadpc ~] which zless
-zless 是一个函数
-zless ()
-{
-  zcat "$ @" | "$ PAGER"
-}
-[ahmad @ ahmadpc ~] echo $
-```
-
-或者，如在下面的 `/etc/init.d/amd` 代码示例所示，其中使用了 bash 配置功能：
-
-```bash
-[$ RETVAL = 0] && touch /var/lock/subsys/amd
-```
-
-`&&` 之后的命令仅在测试成功时执行，这是 `if / then / if` 的简短表达式。函数的返回代码被用作整个代码的退出代码，你会看到许多初始化代码以 `exit $ RETVAL` 等结尾。
-
-## 回用函数
-
-你可以在这里的所有已知函数可以使用不带选项的 `set` 命令显示。函数在使用后将仍然存在，除非使用 `unset` 命令将其删除。
-
----
-**特别说明：由于您提供的英文文本中 `zless` 和 `RETVAL` 部分出现了多次完全重复，根据“注意一定不要重复输出原文”的指令，在最终译文中我仅翻译了每个逻辑块一次，以确保输出整洁专业。**
-
-
-
-
-
-```bash
-BZIP = "$TAR.bz2"
-SERVER = "rincewind"
-RDIR = "/var/www/intra/tille/html/training/"
-cd "$DIR"
-tar cf "$TAR" src/*.xml src/images/*.png src/images/*.eps
-echo "Compressing $TAR ..." >> "$LOGFILE"
-bzip2 "$TAR"
-echo "... done." >> "$LOGFILE"
-echo "Copying to $SERVER ..." >> "$LOGFILE"
-scp "$BZIP" "$SERVER: $RDIR" > /dev/null 2>&1
-echo "... done." >> "$LOGFILE"
-echo -e "Done backing up Linux course: \nSource files, PNG and EPS images. \nRubbish removed." >> "$LOGFILE"
-rm "$BZIP"
 ```
 
 ```bash
@@ -2910,7 +2714,7 @@ fi
 echo -e "Remote backup`date` SUCCESS \n ---------- " >> "$LOGFILE"
 ```
 
-该程序通过 `cron` ，这意味着它在无需用户干预的情况下运行，因此我们将 `scp` 命令的标准错误重定向到 `/dev/null`。有些人可能认为所有这些独立步骤可以合并成如下形式：
+该程序通过`cron`运行，这意味着它在无需用户干预的情况下运行，因此我们将`scp`命令的标准错误重定向到`/dev/null`。有些人可能认为所有这些独立步骤可以合并成如下形式：
 
 `tar c dir_to_backup / | bzip2 | ssh server "cat> backup.tar.bz2"`
 
@@ -2918,14 +2722,16 @@ echo -e "Remote backup`date` SUCCESS \n ---------- " >> "$LOGFILE"
 
 # 第七章
 
+
+
 ## 编写交互式 Bash 程序
 
-在本节中，我们将学习如何获取用户反馈以及如何用户输入数据（通常使用 `echo` / `read` 结构），并讨论如何使用文件描述符和重定向将文件作为输入和输出，以及如何将其与用户输入相结合。本节还强调了为使用我们 shell 程序的用户提供详细信息的重要性。与其编写简短的文档，不如提供过的信息。
+在本节中，我们将学习如何获取用户反馈以及如何获取用户输入数据（通常使用`echo` / `read`结构），并讨论如何使用文件描述符和重定向将文件作为输入和输出，以及如何将其与用户输入相结合。本节还强调了为使用我们 shell 程序的用户提供详细信息的重要性。与其编写简短的文档，不如提供更多的信息。
 
 Here documents 是一种 shell 结构，允许为用户创建列表并保存选项，还可以用于在后台执行交互式任务而不受干扰。
 
-- 在 Bash 中查看用户消息：Bash 中交互式和非交互式程序的区别，`echo` 命令的简单解释。
-- 在 Bash 中获取用户输入：`read` 命令的解释、文件描述符、请求用户输入、文档及其用例，以及重定向的各种状态。
+- 在 Bash 中查看用户消息：Bash 中交互式和非交互式程序的区别，`echo`命令的简单解释。
+- 在 Bash 中获取用户输入：`read`命令的解释、文件描述符、请求用户输入、文档及其用例，以及重定向的各种状态。
 
 ## 在 Bash 中查看用户消息
 
@@ -2933,15 +2739,16 @@ Here documents 是一种 shell 结构，允许为用户创建列表并保存选�
 
 某些 shell 脚本无需用户干预即可运行，被称为非交互式程序。这些程序的优点之一是它们以意想不到的方式工作，并且可以在后台运行。然而，其他 shell 程序需要用户输入，或者在工作时向用户打印消息。这类程序也有其优点。
 
-在编写交互式程序时，不要懒于写注释。务必放置消息告诉用户，例如，等待输出出现，因为程序正在计算。尽可能，尝试提供过程长度的估算或用户应该等待多久。在从用户输入的情况下，最好提供关于你希望用户输入的数据的清晰透明的信息。你用于向用户打印的命令是 `echo` 和 `printf`，我们将在下面讨论一些示例，尽管你可能已经习惯使用 `echo`。
+在编写交互式程序时，不要懒于写注释。务必放置消息告诉用户，例如，等待输出出现，因为程序正在计算。尽可能，尝试提供过程长度的估算或用户应该等待多久。在从用户输入的情况下，最好提供关于你希望用户输入的数据的清晰透明的信息。你用于向用户打印的命令是`echo`和`printf`，我们将在下面讨论一些示例，尽管你可能已经习惯使用`echo`。
 
 ### 使用 echo 命令
 
-`echo` 命令输出两个空格分隔的参数并以换行符结束，返回状态始终为零。`echo` 命令还接受几个选项：
+`echo`命令输出两个空格分隔的参数并以换行符结束，返回状态始终为零。`echo`命令还接受几个选项：
+
 - `-e`：允许使用反斜杠转义字符（参见转义字符章节）。
 - `-n`：停止末尾换行符。
 
-这里是一个添加注释的示例，我们在其中使用了命令行参数的两个示例，将条件 `if` 语句的高级用法分开：
+这里是一个添加注释的示例，我们在其中使用了命令行参数的两个示例，将条件`if`语句的高级用法分开：
 
 ```bash
 #!/bin/bash
@@ -2963,7 +2770,7 @@ else
     echo -e "..."
     exit 2
   else
-    echo -e "..."$..."
+    echo -e "..."$"..."
     exit 3
   fi
 fi
@@ -3007,18 +2814,15 @@ echo -e "Thanks for visiting the Zoo, hope to see you again soon!"
 
 ### 使用 read 命令
 
-`read` 命令是 `echo` 和 `printf` 命令的补充命令，其语法如下：
+`read`命令是`echo`和`printf`命令的补充命令，其语法如下：
 
 `read [options] NAME1 NAME2 ... NAMEN`
 
-从标准输入或作为 `u` 选项参数的文件描述符中读取一行，将行的第一个单词分配给第一个名称 `NAME1`，第二个单词分配给第二个名称 `NAME2`，以此类推，并将的单词及其之间的分隔符分配给最后一个名称 `NAMEN`，但如果从输入流读取的单词少于名称，则为这些名称分配空值。
+从标准输入或作为`u`选项参数的文件描述符中读取一行，将行的第一个单词分配给第一个名称`NAME1`，第二个单词分配给第二个名称`NAME2`，以此类推，并将剩余的单词及其之间的分隔符分配给最后一个名称`NAMEN`，但如果从输入流读取的单词少于名称，则为这些名称分配空值。
 
+如果`read`命令没有遇到文件结束符、命令超时（time out），或者作为`u-`参数输入了无效的文件描述符，则其返回代码为零。
 
-
-
-如果 `read` 命令没有遇到文件结束符、命令超时（time out），或者作为 u- 参数输入了无效的文件描述符，则其返回代码为零。
-
-以下是 `testleap.sh` 的改进版本，它消除了嵌套的 `if` 语句，分离了 Bash 中条件 `if` 语句的高级用法：
+以下是`testleap.sh`的改进版本，它消除了嵌套的`if`语句，分离了 Bash 中条件`if`语句的高级用法：
 
 ```bash
 hsoub ~ / test> cat leaptest.sh
@@ -3107,18 +2911,23 @@ hsoub ~ / test> cat friends
 [anny @ octarine tmp] $ friends.sh
 
 Hello, anny. 此脚本将会在你注册到 Hsoub 的朋友数据库中。
+
 输入你的名字并按 [ENTER]: anny
+
 输入你的性别并按 [ENTER]: f
+
 你多大大了? 22
+
 你的头发是什么颜色的? black
+
 你已加入 Hsoub 的朋友列表。
 ```
 
 你的朋友列表很快就会像这样：
-tille 24 black
-anny 22 black
-katya 22 blonde
-maria 21 black
+`tille 24 black`
+`anny 22 black`
+`katya 22 blonde`
+`maria 21 black`
 --output omitted--
 
 这种情况并不理想，因为任何人都可以修改用户的计算机文件（但不能删除它们），你可以使用程序文件上的特殊访问模式来解决这个问题，请参阅 Linux 指南中的 SUID 和 SGID。
@@ -3135,33 +2944,36 @@ maria 21 black
 
 ```bash
 hsoub ~> ls -l /dev/std*
+
 lrwxrwxrwx 1 root root 17 Oct 2 07:46 /dev/stderr -> ../proc/self/fd/2
+
 lrwxrwxrwx 1 root root 17 Oct 2 07:46 /dev/stdin -> ../proc/self/fd/0
+
 lrwxrwxrwx 1 root root 17 Oct 2 07:46 /dev/stdout -> ../proc/self/fd/1
 ```
 
 ```bash
 hsoub ~> ls -l /proc/self/fd/[0-2]
+
 lrwx-xr-x 1 root root 64 May 20 10:00 0 -> ../dev/pts/0
+
 lrwx-xr-x 1 root root 64 May 20 10:00 1 -> ../dev/pts/0
+
 lrwx-xr-x 1 root root 64 May 20 10:00 2 -> ../dev/pts/0
 ```
 *(注：源文本中的示例输出存在碎片化/损坏；上面的格式反映了标准的 Linux 行为以保持逻辑性).*
 
-
-
-
 以下命令仅将标准输出重定向到目标文件，因为在重定向输出之前，标准错误已经复制到了标准输出中。
 
-当你确定用户不需要错误时，通常会将错误重定向到 `/dev/null/`，你可以在系统的启动程序中找到成百个这样的示例。Bash 允许将标准输出和标准错误都重定向到以此图中 `FILE` 扩展结果命名的文件：`File <&`，这等同于 `FILE 2> & 1`（之前的示例中使用的结构）。这也可以与重定向到 `/dev/null/` 结合使用，例如当你想执行一个命令而不查看它可能产生的错误或输出时。
+当你确定用户不需要错误时，通常会将错误重定向到`/dev/null/`，你可以在系统的启动程序中找到成百个这样的示例。Bash 允许将标准输出和标准错误都重定向到以此图中`FILE`扩展结果命名的文件：`File <&`，这等同于`FILE 2> & 1`（之前的示例中使用的结构）。这也可以与重定向到`/dev/null/`结合使用，例如当你想执行一个命令而不查看它可能产生的错误或输出时。
 
 ## 文件输入与输出
 
-### 使用 `/dev/fd/`
+### 使用 /dev/fd/
 
-`/dev/fd/` 文件夹包含命名为 0、1、2 等数字的条目，打开 `/dev/fd/N/` 文件等同于重复 `N` 文件描述符。即使你的系统拥有 `/dev/stdin/`、`/dev/stdout/` 和 `/dev/stderr/`，你会发现它们分别被映射为 `/dev/fd/0/`、`/dev/fd/1` 和 `/dev/fd/2`。
+`/dev/fd/`文件夹包含命名为 0、1、2 等数字的条目，打开`/dev/fd/N/`文件等同于重复`N`文件描述符。即使你的系统拥有`/dev/stdin/`、`/dev/stdout/`和`/dev/stderr/`，你会发现它们分别被映射为`/dev/fd/0/`、`/dev/fd/1`和`/dev/fd/2`。
 
-`/dev/fd/` 文件的主要用途是一个巧合，这种机制允许使用路径名参数的程序像处理其他路径名一样处理标准输入和标准输出。如果系统中不支持 `/dev/fd/`，你应该找到一种解决问题的方法，例如使用连字符 `-` 来表示程序应该从管道读取，见下面的示例：
+`/dev/fd/`文件的主要用途是一个巧合，这种机制允许使用路径名参数的程序像处理其他路径名一样处理标准输入和标准输出。如果系统中不支持`/dev/fd/`，你应该找到一种解决问题的方法，例如使用连字符`-`来表示程序应该从管道读取，见下面的示例：
 
 ```
 hsoub ~> filter body.txt.gz | cat header.txt - footer.txt
@@ -3183,6 +2995,7 @@ hsoub ~ /testdir> cat sysnotes.sh
 #! /bin/bash
 
 # 此脚本对重要的配置文件文件创建索引，将它们合并到
+
 # 备份文件中并允许为每个文件添加注释。
 
 CONFIG=/var/tmp/sysconfig.out
@@ -3192,63 +3005,90 @@ rm "$CONFIG" 2> /dev/null
 echo "Output will be saved in $CONFIG."
 
 # 创建一个 fd 7，目标与 fd 0 相同（保存 stdin "value"）
+
 exec 7 <& 0
 
 # 更新 fd 0 指目标文件 /etc/passwd
+
 exec </etc/passwd
 
 # 读取 /etc/passwd 的第一行
+
 read rootpasswd
 
 echo "Saving root account info ..."
+
 echo "Your root account info:" >> "$CONFIG"
+
 echo $rootpasswd >> "$CONFIG"
 
 # 更新 fd 0 指向 fd 7 的目标（旧 fd 0 的目标）；删除 fd 7
+
 exec 0 <& 7 7 <& -
 
 echo -n "Enter comment or [ENTER] for no comment:"
+
 read comment; echo $comment >> "$CONFIG"
 
 echo "Saving hosts information ..."
 
 # 首先准备一个不包含任何注释的 hosts 文件
+
 TEMP="/var/tmp/hosts.tmp"
+
 cat /etc/hosts | grep -v "^ #" >"$TEMP"
+
 exec 7 <& 0
+
 exec <"$TEMP"
 
 read ip1 name1 alias1
+
 read ip2 name2 alias2
 
 echo "Your local host configuration:" >> "$CONFIG"
+
 echo "$ip1 $name1 $alias1" >> "$CONFIG"
+
 echo "$ip2 $name2 $alias2" >> "$CONFIG"
+
 exec 0 <& 7 7 <& -
 
 echo -n "Enter comment or [ENTER] for no comment:"
+
 read comment; echo $comment >> "$CONFIG"
+
 rm "$TEMP"
 ```
 
 输出：
 ```text
 hsoub ~/testdir> sysnotes.sh
+
 Output will be saved in /var/tmp/sysconfig.out.
+
 Saving root account info ...
+
 Enter comment or [ENTER] for no comment: hint for password: blue lagoon
+
 Saving hosts information ...
+
 Enter comment or [ENTER] for no comment: in central DNS
 
 hsoub ~/testdir> cat /var/tmp/sysconfig.out
 
 Your root account info:
+
 root: x: 0: 0: root: /root/: /bin/bash
+
 hint for password: blue lagoon
 
 Your local host configuration:
+
 127.0.0.1 localhost.localdomain localhost
+
 192.168.42.1 tintagel.kingarthur.com tintagel
+
 in central DNS
 ```
 
@@ -3260,7 +3100,7 @@ in central DNS
 exec fd <& -
 ```
 
-在上一个示例中，分配给标准输入的文件描述符 `7` 在用户每次需要访问标准输入物理设备（通常是键盘）时被关闭。看下面的示例，仅将标准错误重定向到管道：
+在上一个示例中，分配给标准输入的文件描述符`7`在用户每次需要访问标准输入物理设备（通常是键盘）时被关闭。看下面的示例，仅将标准错误重定向到管道：
 
 ```bash
 hsoub ~> cat listdirs.sh
@@ -3268,22 +3108,37 @@ hsoub ~> cat listdirs.sh
 #! /bin/bash
 
 # 此程序原封输出标准输出，而标准错误被交给
+
 # awk 进行处理
+
 INPUTDIR="$1"
 
-# fd 6 目标是当前 shell 中的 fd 1 目标（控制输出）
+
+
+# `fd 6` 目标是当前 shell 中的 `fd 1` 目标（控制输出）
+
+```sh
 exec 6> & 1
-
-# fd 1 指向管道，fd 2 指向 fd 1 目标（管道），
-# fd 1 指向 fd 6 目标（控制输出），关闭 fd 6，执行 ls
-ls "$INPUTDIR" /* 2> & 1> & 6 6> & - \
-# 为 awk 关闭了 fd 6，但没有关闭 ls。
-| awk 'BEGIN {FS=":"}{print "YOU HAVE TO"}' 6> & -
-
-# 关闭当前 shell 中的 fd 6
-exec 6> & -
-
 ```
 
-Documents Here
+# `fd 1` 指向管道，`fd 2` 指向 `fd 1` 目标（管道）
 
+# `fd 1` 指向 `fd 6` 目标（控制输出），关闭 `fd 6`，执行 `ls`
+
+```sh
+ls "$INPUTDIR" /* 2> & 1> & 6 6> & - \
+```
+
+# 为 `awk` 关闭了 `fd 6`，但没有关闭 `ls`
+
+```sh
+| awk 'BEGIN {FS=":"}{print "YOU HAVE TO"}' 6> & -
+```
+
+# 关闭当前 shell 中的 `fd 6`
+
+```sh
+exec 6> & -
+```
+
+## Documents Here

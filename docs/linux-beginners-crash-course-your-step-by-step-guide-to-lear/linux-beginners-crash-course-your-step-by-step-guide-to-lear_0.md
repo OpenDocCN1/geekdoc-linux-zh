@@ -1,16 +1,12 @@
+
 # LINUX 入门指南：快速轻松学习 Linux 操作系统和命令行的步步指南！
 
+![image](img/cover.jpg)
 
-
-![](img/cover.jpg)
-
-
-––––––––
-
-
-
+---
 
 ## Jeremy Li 的其他作品
+
 * [LINUX：入门速成课程。你轻松快速学习 Linux 操作系统和命令行行的分步指南！](https://www.draft2digital.com/catalog/364138)
 * [黑客攻击](https://www.draft2digital.com/catalog/271347)
 * [CompTIA A+ 认证](https://www.draft2digital.com/catalog/267010)
@@ -19,14 +15,15 @@
 * [Windows 10](https://www.draft2digital.com/catalog/367515)
 * [编程五卷合集](https://www.draft2digital.com/catalog/509137)
 
+![image](img/chapter_title_corner_decoration_left.png) |  | ![image](img/chapter_title_corner_decoration_right.png)
 
-| ![image](img/chapter_title_corner_decoration_left.png) |  | ![image](img/chapter_title_corner_decoration_right.png) |
 ![image](img/chapter_title_above.png)
 
 # 引言
+
 ![image](img/chapter_title_below.png)
 
-在我们详细讨论 Linux 之前，让我们先尝试理解“开源软件开发”这一术语。
+在我们详细讨论 Linux 之前，让我们先尝试理解"开源软件开发"这一术语。
 
 开源已经走向成熟，并存在了很长时间。对于许多计算机和技术发烧友来说，尝试接触这种软件曾是不可接受的。多年来情况发生了变化，尽管在许多阵营中仍有巨大的反对意见，但这种软件在改变我们的世界方面产生了重大影响。我们许多人可能在毫无不知情的情况下在使用开源软件。
 
@@ -44,11 +41,14 @@
 
 然而，凭借最新的技术的定期开发，`Fedora` 在基准测试中优于 `Ubuntu`。因此，很大程度上取决于软件的用途。如果是从 Windows 迁移，`Ubuntu` 是明显的选择；如果你是一个认真的编程极客，`Fedora` 是最佳选择。Linux 基金建议同时学习 `Ubuntu` 和 `Fedora` 以获得完整的 Linux 体验。
 
-| ![image](img/chapter_title_corner_decoration_left.png) |  | ![image](img/chapter_title_corner_decoration_right.png) |
+![image](img/chapter_title_corner_decoration_left.png) |  | ![image](img/chapter_title_corner_decoration_right.png)
+
 ![image](img/chapter_title_above.png)
 
 # 第 1 章
+
 ## Linux 对比 Windows
+
 ![image](img/chapter_title_below.png)
 
 我在阅读关于 Linux 内容时经历的最令人疲惫的事情，就是那些完全缺乏同理心和分寸感的盲目狂热。我们大多数人倾向于认为：如果没有坏，就不要修。这对于 Linux 爱好者来说是陌生的。
@@ -59,15 +59,12 @@
 
 以下是你可能想要从 Windows 切换到 Linux 的一些可能原因：
 
-1. 许可：除非你愿意承担使用盗版软件的风险，否则遵循有利于企业软件制造商的规则和法律可能非常昂贵。`Linux` 是免费的，许可通常只影响那些修改软件本身的人。你可能需要为包装付费，虽然有些公司为 `Linux` 制作非免费的软件，但你实际需要的几乎任何东西都可以免费下载。你可以制作任何你喜欢的副本，并在任意数量的机器上使用。
+1. **许可**：除非你愿意承担使用盗版软件的风险，否则遵循有利于企业软件制造商的规则和法律可能非常昂贵。`Linux` 是免费的，许可通常只影响那些修改软件本身的人。你可能需要为包装付费，虽然有些公司为 `Linux` 制作非免费的软件，但你实际需要的几乎任何东西都可以免费下载。你可以制作任何你喜欢的副本，并在任意数量的机器上使用。
 
 2. **控制**：`Linux` 是一个非常注重 DIY（DIY）的系统。虽然你可能不理解为了运行所需的后台的所有内容，但关于它是什么以及为什么需要的信息是免费获取的。没有基于高薪培训和昂贵访问系统晦涩细节的秘密崇拜。如果你工作或业务需要，可以获得昂贵的认证，但对于仅仅使用它并不是必需的。事实上，整个 `Linux` 用户社区通常非常乐于帮助你理解。重点是，供应商与某些第三方之间没有秘密协议强迫你接受不符合你最佳利益的东西，以便他们以你为代价盈利。整个 `Linux` 社区强烈反对监视，并拒绝向第三方交出任何控制权。
 
-
-
-
-
 ### 3 安全
+
 Linux 社区也极重视安全，因此破解 Linux 系统通常更难。它并非无懈击，只是计算机不太可能受到外部威胁的侵害。犯罪黑客倾向于自己使用 Linux，因为其内置了许多安全因素。
 
 同理，计算机犯罪分子之间秘密交谈的背景噪音也表明，他们并不热于面对破解一个配置得当的 Linux 盒的挑战。这可能部分是因为，付出如此巨大难度的代价，他们能够获取并用于犯罪活动的系统数量要少得多。
@@ -75,7 +72,8 @@ Linux 社区也极重视安全，因此破解 Linux 系统通常更难。它并�
 攻击 Linux 系统的这些工作利润并不高，因此我们可能永远无法知道它到底有多脆弱，因为很少有人愿意投入时间和资源去去攻击它们。即使你和你所有的朋友都切换到 Linux，它在连接互联网的个人电脑中的比例可能一直保持在很低的水平。（服务器则是另一回事。）无论如何，一旦你习惯了 Linux 系统的运作方式，就可以放松心情，不必过度担心针对你系统的随机攻击。外界的威胁很少能对 Linux 产生任何影响。
 
 ### 4 臃肿
-你可以轻松找到一个既界面友好又保持最新，且在旧硬件上运行良好的 Linux 操作系统。因此，你那台无法真正处理 Win7 的旧 XP 机器可以完美运行当前版本的 Linux，并且在未来的很多几年里也是如此。这在 Linux 的历史上并非一直如此，但在过去的十年左右，Windows 在执行相同工作时对性能的需求开始比 Linux 高得多。
+
+你可以轻松找到一个既界面友好又保持最新，且在旧硬件上运行良好的 Linux 操作系统。因此，你那台无法真正处理 `Win7` 的旧 `XP` 机器可以完美运行当前版本的 Linux，并且在未来的很多几年里也是如此。这在 Linux 的历史上并非一直如此，但在过去的十年左右，Windows 在执行相同工作时对性能的需求开始比 Linux 高得多。
 
 你不会从 Windows 切换到 Linux 的首要原因是缺乏便利性。开源可能在某种技术正统性上表现出政治性，甚至是近乎宗教的狂热。他们不喜欢硬件制造商保留商业秘密的这种想法，并拒绝理解这如何影响用户。
 
@@ -83,46 +81,53 @@ Linux 社区也极重视安全，因此破解 Linux 系统通常更难。它并�
 
 与 Windows 相比，某些活动非常复杂，例如家庭网络和打印机共享。这些事情可以做到，但会涉及更多工作。
 
-让我们面对现实吧：Linux 软件版本与 Windows 版本在执行类似操作时的兼容性全凭运气。开源通常缺乏关键功能。对于写作者来说，你在 Linux 下能获得的免费最佳文字处理器仍然与 Word 2000 相比并不理想。至少，Linux 下的语法检查仍然原始且几乎毫无用处。
+让我们面对现实吧：Linux 软件版本与 Windows 版本在执行类似操作时的兼容性全凭运气。开源通常缺乏关键功能。对于写作者来说，你在 Linux 下能获得的免费最佳文字处理器仍然与 `Word 2000` 相比并不理想。至少，Linux 下的语法检查仍然原始且几乎毫无用处。
 
-开源办公套件在某些方面总是落后于商业软件。（但你可以轻松让 MS Office 在 Linux 上运行，以及其他流行的 Windows 软件。）
+开源办公套件在某些方面总是落后于商业软件。（但你可以轻松让 `MS Office` 在 Linux 上运行，以及其他流行的 Windows 软件。）
 
 不要盲目地陷入其中。你做的任何选择都存在问题。
 
 以下是 Linux 和 Windows 之间的一些主要区别。
 
 ### 1 图形用户界面 (GUI)
-Linux 和 Windows 都提供了图形界面。Windows 的图形界面随着时间不断变化，但第一个让最终用户选择界面更改的 Windows 版本是 Windows XP，而 Linux 一直都有这一规定。另一个需要注意的点是，Linux 可以在图形模式或非图形模式下运行。
+
+Linux 和 Windows 都提供了图形界面。Windows 的图形界面随着时间不断变化，但第一个让最终用户选择界面更改的 Windows 版本是 `Windows XP`，而 Linux 一直都有这一规定。另一个需要注意的点是，Linux 可以在图形模式或非图形模式下运行。
 
 ### 2 从 CD 运行
+
 Linux 可以做到而 Windows 做不到的一点是从 CD 运行。
 
 ### 3 病毒
+
 与 Windows 相比，Linux 没有病毒。
 
 ### 4 技术性
+
 在这一领域，Linux 凌于 Windows 之。
 
 ### 5 系统稳定性
+
 运行时，Linux 提供的稳定性比 Windows 高。
 
 ### 6 系统崩溃
+
 Windows 崩溃频率通常比 Linux 高。
 
 ### 7 成本
+
 购买 Linux 的成本比 Windows 低。
 
 ### 8 维护与管理
+
 一旦 Linux 系统配置得当，其维护和管理就接近于 Windows。
 
 ### 9 硬件支持
+
 多年来，Linux 从未以硬件支持闻名，但随着许多 Linux 发行版的出现，这种情况正在迅速变化。
 
 ### 10 问题优先，解决方案
+
 作为一名 IT 专业人士，这是我最喜欢的观点之一。
-
-
-
 
 这些都代表了集成的桌面显示系统，但也有许多集成程度不高的 GUI 仅负责控制显示。它们没有添加我们认为理所当然的各种配套工具和各种小型应用程序。
 
@@ -146,7 +151,7 @@ Windows 崩溃频率通常比 Linux 高。
 
 事实上，在最近几年中，一些最耗能的 Linux 系统使用的计算机功率仍少于目前的 Windows 操作系统。使用当前版本的 `Kubuntu`，你通常使用的电力比 `Win7` 或 `Vista` 少，比 `Win8` 少得多。同时，你可能在驱动、稳定性和安全性方面遇到的麻烦会更少。再次，它并不完美，但在许多方面可能更好。
 
-| ![image](img/chapter_title_corner_decoration_left.png) |  | ![image](img/chapter_title_corner_decoration_right.png) |
+![image](img/chapter_title_corner_decoration_left.png) |  | ![image](img/chapter_title_corner_decoration_right.png)
 
 ![image](img/chapter_title_above.png)
 
@@ -159,29 +164,32 @@ Windows 崩溃频率通常比 Linux 高。
 Linux 是一个非常强大的操作系统，由许多其他部分组成。这些部分包括：
 
 ### 启动加载程序 (Bootloader)
+
 这是具有管理计算机启动过程能力的软件。你总是会将其体验为一个启动画面，它会在你进入主操作系统后偶尔弹出并消失。
 
 ### 内核 (kernel)
-等一下！我们忘记强调 Linux 是什么了吗？`kernel` 是整个软件包中真正被称为“Linux”的片段。它是计算机系统的核心部分，被授权管理包括内存、中央处理器（`CPU`）和其他设备设备在许多资源。在操作系统的安排或组织中，`kernel` 始终处于底层。
+
+等一下！我们忘记强调 Linux 是什么了吗？`kernel` 是整个软件包中真正被称为"Linux"的片段。它是计算机系统的核心部分，被授权管理包括内存、中央处理器（`CPU`）和其他设备设备在许多资源。在操作系统的安排或组织中，`kernel` 始终处于底层。
 
 ### 守护进程 (Daemons)
+
 你是否对计算机如何调度其他活动感到惊讶？在 Linux 中，`daemons` 是启动过程中或你登录计算机时启动的后台服务。这些服务可能包括调度、声音和打印等。
 
 ### 解释壳 (The Shell)
+
 你听说过 Linux 命令行吗？命令行就是我们所称的 `shell`。这是一个命令处理过程，让你能够通过在文本界面中输入各种命令来控制你的 PC。对于许多不习惯使用命令的人来说，这种文本界面非常可怕，因为他们认为命令行是过时的。对于现代桌面 Linux 来说，这已是过去式了，因为你不会在命令行上手忙脚乱。
 
 ### 图形服务器 (Graphical Server)
+
 它指的是通过显示器向用户显示或传输图形信息的部分。在大多数情况下，它被称为 `X server`。
 
 ### 桌面环境 (Desktop Environment)
+
 它是更熟悉的图形用户界面的结合，允许用户与核心系统交互。桌面环境的一些示例包括 `XFCE`、`Cinnamon`、`Unity`、`GNOME`、`KDE` 和 `Enlightment`。桌面环境及其工具的选择因用户而异。然而，`KDE` 和 `Gnome` 环境的能力非常相似。
 
 ### 应用程序 (Applications)
+
 这些你可以很容易找到并安装的高质量软件标题。应用程序有助于各种功能，例如 `Ubuntu Software Center` 用于快速搜索不同的应用。
-
-
-
-
 
 大多数时候，我们倾向于将命令行留给需要执行大规模批处理任务或需要执行特定操作的任务。以下是你作为 Linux 初学者必须掌握的一些命令。
 
@@ -228,11 +236,13 @@ $
 
 ## 文件系统导航
 
+
+
 Linux 系统中的数据被结构化为文件，然后在更高层级组织成目录。目录形成树形结构，我们称之为文件系统。
 
 `ls` 命令。此命令允许用户列出 PC 文件系统中包含的文件或目录。举个例子：
 
-所有以 `d..` 开头的条目代表目录。要列出隐藏文件，使用命令 `$ ls -a`。 `$ ls -l` 将输出详细列表。
+所有以 `d..` 开头的条目代表目录。要列出隐藏文件，使用命令 `$ ls -a`。`$ ls -l` 将输出详细列表。
 
 ## 用户信息
 
@@ -271,10 +281,15 @@ $
 对于系统关机，你可以使用下面说明的各种命令：
 
 - `halt` 命令将立即停止系统。
+
 - `init 0` 命令将在同步和清理系统后关闭系统电源。
+
 - `init 6` 命令将关闭系统并重启。
+
 - `poweroff` 命令将关闭系统电源。
+
 - `reboot` 命令将重启你的 PC。
+
 - `shutdown` 命令将关闭 PC。
 
 要关闭 PC，你需要是超级用户或 `root` 权限。
@@ -313,23 +328,41 @@ whois: /usr/share/man/man1/whois.1.g
 ## 文件与目录操作
 
 - `Mkdir`。此命令通常用于在 PC 文件系统上创建新目录。
+
 - `file` 命令使用时会检查文件类型，无论文件的扩展名如何。
+
 - `pwd` 将始终显示当前目录的精确路径。
+
 - `cd` 命令用于在 Shell 中从一个位置更改或切换目录到另一个位置。
+
 - `mv` 是用于移动目录或文件的命令，并删除原始文件或目录。
+
 - `cp` 是复制命令，用于将文件或目录从 PC 文件系统的一个位置复制或移动到另一个位置。
+
 - shell 命令 `rm` 用于从文件系统删除或移除目录或文件。
+
 - `cat` 命令用于查看或将文件的内容/详情打印到终端供查看。
+
 - `grep` 命令用于搜索文件内容并允许在终端上查看详情。
+
 - `chown` 用于更改文件的所有权或目录的所有权。
+
 - `$ chgrp group filelist` 用于更改文件的组所有权。
+
 - `chmod` 赋予用户更改权限的权限，包括执行、读取和写入权限。
+
 - `ps` 命令列出系统中正在运行的所有进程。
+
 - `kill` 和 `killall` 命令终止任何运行的进程。
+
 - `locate` 命令搜索功能强大，将在任何找到搜索字符串的地方显示结果以及特定的文件位置。
+
 - `ipconfig` 命令对于配置设备至关重要。
+
 - `lspci` 是用于提供连接到 PCI 总线的所有设备（包括显卡）反馈的命令。
+
 - `lsusb` 将列出连接到 USB 集线器的每个设备。
+
 - `pstree` 命令以树形层次列出进程，使用户可以看到与特定程序一起运行的进程。
 
 要创建普通文件，使用 `vi` 编辑器。例如：
@@ -346,13 +379,9 @@ $ wc filename 给出文件的总单词数
 
 你不能删除虚拟的 `/proc` 文件系统。`/proc` 文件系统包含大量文件，每个文件都包含一条信息。当启动新进程时，`/proc` 文件系统中会为它创建一个新目录并在其中创建大量数据。除了持有大部分内核参数的 `/proc/sys` 目录外，`/proc` 通常是只读的。特定的工具如 `free`、`top` 和 `lspci` 用于这些数据文件。
 
-结论
+## 结论
 
 免费下载一个 Linux 版本并将其放入 CD 或 USB 闪存非常简单。然后从这里启动你的常规 Windows 电脑。你的电脑将加载 Linux 系统，你可以自由地从中尝试。学习 Linux，看看你是否喜欢它，当你在不插 CD 或内存棒的情况下重启电脑时，它会直接回到正常的 Windows 电脑，对你的系统或文件不会造成任何损坏。
-
-
-
-
 
 虽然其他人只会让你从内存棒或 CD 运行默认系统，因为每次重启时，所有更改都会丢失。但这仍然可以让你学到很多东西，如果你喜欢它，那么在你的系统上进行双系统安装，以便能够进行永久性更改（例如安装新软件），可能是你的下一步选择。
 
@@ -371,10 +400,15 @@ $ wc filename 给出文件的总单词数
 ## Jeremy Li 的其他作品
 
 - [LINUX：入门快速速成。你学习 Linux 操作系统和命令行的步步指南，简单快速！](https://www.draft2digital.com/catalog/364138)
-- [黑客攻击](https://www.draft2digital.com/catalog/271347)
-- [CompTIA A+ 认证](https://www.draft2digital.com/catalog/267010)
-- [树莓派 3](https://www.draft2digital.com/catalog/368705)
-- [Amazon Echo](https://www.draft2digital.com/catalog/267555)
-- [Windows 10](https://www.draft2digital.com/catalog/367515)
-- [编程 5 本书合集](https://www.draft2digital.com/catalog/509137)
 
+- [黑客攻击](https://www.draft2digital.com/catalog/271347)
+
+- [CompTIA A+ 认证](https://www.draft2digital.com/catalog/267010)
+
+- [树莓派 3](https://www.draft2digital.com/catalog/368705)
+
+- [Amazon Echo](https://www.draft2digital.com/catalog/267555)
+
+- [Windows 10](https://www.draft2digital.com/catalog/367515)
+
+- [编程 5 本书合集](https://www.draft2digital.com/catalog/509137)

@@ -1,3 +1,4 @@
+
 # 如何在 Windows 10 - Windows VPS 服务器中禁用自动更新
 
 > 原文：<https://blog.eldernode.com/disable-auto-update-in-windows/>
@@ -8,21 +9,21 @@
 
 有几种方法可以阻止 Windows 10 更新。在本文中，我们将教你一个肯定能回答你的方法。
 
-**注意:** 我们建议您不要因为安全问题停止 Windows update 以及接收安全更新。如果关闭了，要时不时手动更新，避免可能的危险。
+**注意：** 我们建议您不要因为安全问题停止 Windows update 以及接收安全更新。如果关闭了，要时不时手动更新，避免可能的危险。
 
-[**在 Eldernode**](https://eldernode.com/windows-vps/) 选择您的完美 Windows 虚拟专用服务器包
+[在 Eldernode](https://eldernode.com/windows-vps/) 选择您的完美 Windows 虚拟专用服务器包。
 
 ## 禁用 Windows 10 自动更新
 
-**1。**第一步，在你的开始栏中搜索服务并打开。
+**1。** 第一步，在你的开始栏中搜索服务并打开。
 
 ![how to disable auto update in windows 10](img/c91c7d5639ff59800bdaff976f44d782.png)
 
-**2。**在**服务**窗口中，找到 Windows Update 服务，双击将其打开。
+**2。** 在**服务**窗口中，找到 Windows Update 服务，双击将其打开。
 
 ![how to disable auto update in windows 10](img/a865018a5678bda54b6e05322fd0689a.png)
 
-**3。**在此部分，将启动类型选项设置为禁用，点击应用。
+**3。** 在此部分，将启动类型选项设置为禁用，点击应用。
 
 应用服务后停止。
 
@@ -32,23 +33,23 @@
 
 现在你必须阻止这个服务重启并更新它。
 
-**4。**从开始菜单，搜索 [任务调度器](https://docs.microsoft.com/en-us/windows/win32/taskschd/task-scheduler-start-page) ，找到后打开它。
+**4。** 从开始菜单，搜索[任务调度器](https://docs.microsoft.com/en-us/windows/win32/taskschd/task-scheduler-start-page)，找到后打开它。
 
 ![how to disable auto update in windows 10](img/698c5103d6c90695202dd857db9f6947.png)
 
-**5。**在本节中，按照以下顺序转到 Windows Update 目录:
+**5。** 在本节中，按照以下顺序转到 Windows Update 目录：
 
-微软**>**Windows**>**Windows更新
+微软 > Windows > Windows 更新
 
 ![how to disable auto update in windows 10](img/408e3fd0176ab7bfcb72df7d80e8ed68.png)
 
-**6。**选择本节定义的所有任务，删除。
+**6。** 选择本节定义的所有任务，删除。
 
 ![how to disable auto update in windows 10](img/452302858bb9975b6d7a718aa5e413f9.png)
 
 这样，您可以阻止 Windows update，并且不再需要设置另一个部分。
 
-**亦作，见:**
+## 亦作，见
 
 [如何在 Windows 10 中添加文件启动](https://eldernode.com/add-files-to-startup/)
 

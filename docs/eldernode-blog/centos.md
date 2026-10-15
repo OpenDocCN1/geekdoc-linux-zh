@@ -1,4 +1,5 @@
-# CentOS 教程- ElderNode 博客
+
+# CentOS 教程：ElderNode 博客
 
 > 原文：<https://blog.eldernode.com/tag/centos/>
 

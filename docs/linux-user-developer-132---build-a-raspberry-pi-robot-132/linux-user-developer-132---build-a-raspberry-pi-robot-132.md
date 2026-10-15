@@ -1,51 +1,17 @@
+
 # Linux User & Developer 132 - 构建一个树莓派机器人指南 132
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_0_0.png)
 
-
-
-
-
-
 ![](img/511bb591be9ee7dc0f73776baf9a0548_1_0.png)
 
-
-
-
-
-
-
-
-
 ![](img/511bb591be9ee7dc0f73776baf9a0548_1_1.png)
+
 ![](img/511bb591be9ee7dc0f73776baf9a0548_1_2.png)
 
 # 欢迎
 
-
 Mihalis Tsoukalakis 拥有超过15 年的 UNIX 系统管理和编程经验，自1993年起就开始使用 Linux。他还精通网络管理、Cisco 设备。在本期中，Mihalis 使用 Graph 处理大型数据结构（48-5）。
-
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_2_0.png)
 
@@ -69,12 +35,8 @@ Russell Burns，编辑
 
 Robert Zweblist 是一位航空工程师，目前在课程中用 Python 进行复杂模拟建模。在他的特约编辑的帮助下，Rob 告诉我们如何使用云存储来保护数字资产的安全。他还展示了如何使用树莓派摄像头模块拍摄快照。
 
-
-
-
-
-
 # 新闻
+
 Linux 社区最新动态
 
 ## 开源
@@ -100,7 +62,6 @@ dotCloud 的系统需要红帽的官方批准，两家公司正共同致力于�
 - 哈佛大学，波士顿
 - 美国
 - conference.joomla.org
-
 - 佛罗里达州，湖心布纳维斯塔
 - 美国
 - www.suse.com
@@ -126,7 +87,6 @@ dotCloud 的系统需要红帽的官方批准，两家公司正共同致力于�
 - 伦敦，威斯敏斯特
 - rewiredsite.com
 - 英国
-
 - 维也纳，FH Technik
 - 奥地利
 - drucamp.at
@@ -193,15 +153,12 @@ Google 宣布了一个分支公司，由苹果公司的 Arthur Levinson 运营�
 
 根据 RSA 的，RSA 正在进行代码审查，以确保所有 Dual EC DRG 算法的使用均不适用。
 
-
-
-
-
 ## 开源
 
 您的 Linux 新闻与观点来源
 
 www.linuxuser.co.uk 直接发送邮件...
+
 获取最新新闻和观点请邮件至：linuxuser@imagine-publishing.com
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_9_0.png)
@@ -249,15 +206,7 @@ PostgreSQL 的出现是因为我们从未忘记 PostgreSQL 用户的数据是最
 协作开发是开源的优势，只要它尊重所产软件的核心价值。坚持下去，并吸引更多加入的人，扩大兴趣的力量和改变的速度。因此，让我们以正确的方式让开源成功——而不是低成本低质量的选项。
 
 > Simon Riggs 是 2Quad 的技术官。作为一名十年的 PostgreSQL 老兵，他所在的团队已经构建了许多目前全球使用的功能 www.2quad.com
-
 > 正 Simon 先生在中间提到，“你不能违背核心指令”，无论开源指令是什么，它都是“必须”。
-
-
-
-
-
-
-
 
 ## 飞速前进？
 
@@ -281,8 +230,6 @@ Steam 是一项对那些喜欢在 PC 上玩游戏的人非常有益的业务。�
 
 > Simon Brew 是一位 Linux、Windows 和 Mac OS 的技术作家兼编辑
 
-
-
 自由软件专栏
 
 ## 开源
@@ -299,6 +246,8 @@ Steam 是一项对那些喜欢在 PC 上玩游戏的人非常有益的业务。�
 
 最初，允许向那些做出贡献的人免费分发 EMACS。1983 年 4 月，斯托曼发布了它（lib/ftp/gnu/gnu/emacs），通过复制它将其保留在内部，然后他停止在软件公司出售它。
 
+
+
 非常固执，并忽略了为什么你应该改变目标的所有理由，正如许多其他人想要受到这些目标的影响。我根本不在乎那个，我想站在正确的一边，但我没有赢，至少不只是让它就此结束。
 
 “这关乎钱，”他说，“这关乎自由。我想我为自己想要的是自由，能够自由地进行计算，自由地合作，而不被禁止分享。GNU/Linux 系统基于这一理念，并由于某些原因变得流行。
@@ -308,6 +257,7 @@ Steam 是一项对那些喜欢在 PC 上玩游戏的人非常有益的业务。�
 自由软件提供了斯托曼如此丰富的变和和见解，正如 GNU 项目历史所暗示的，自由软件的斗争和自由，感谢他人的贡献，以及它的存在。
 
 # 理查德·希尔斯 (Richard Hill)
+
 为多种物提供艺术、音乐、数字权利、Linux 和自由软件
 
 GNU 并不是第一个免费分发的软件，但它是第一个持久的、“旨在使软件免费的显性政治运动”的体现。
@@ -332,26 +282,25 @@ GNU 并不是第一个免费分发的软件，但它是第一个持久的、“�
 
 # 开源 (OpenSource)
 
-
 # 约翰·马斯特斯 (JON MASTERS)
 
 ## 内核专栏
 
-Jon Masters 总结了 Linux 社区的最新动态，包括 3.11 的发布
+`Jon Masters` 总结了 Linux 社区的最新动态，包括 3.11 的发布
 
-Jon Masters 是一位在 Linux 界工作了 18 年的黑客，他在 13 岁时首次参加了会议。他住在马萨诸塞州，在一家大公司工作。
+`Jon Masters` 是一位在 Linux 界工作了 18 年的黑客，他在 13 岁时首次参加了会议。他住在马萨诸塞州，在一家大公司工作。
 
 Linux Tor瓦尔斯宣布了内核 3.11 版本的发布，代号为“Linux For Work (on Windows 3.1)”，并表示“噢，看……”并且再也没有写过。他在当月晚些时候还了 RC 3.12 版本。
 
 3.11 发布后，Linux 开启了“合并窗口”（代码合并到下一个版本的时间）。按照惯例，Linux 发了一封中期合并邮件，维持他希望尽早看到拉取请求而不是等待合并窗口关闭。
 
-我们之前涵盖了 3.11 发布周期的各个方面。尽管此版本的最终特性是一个新的 OTMPFILE 标志，用于打开系统调用，并用于 SELinux
+我们之前涵盖了 3.11 发布周期的各个方面。尽管此版本的最终特性是一个新的 `OTMPFILE` 标志，用于打开系统调用，并用于 SELinux
 
-文件导出到 NFS（这应该改进对网络文件的细粒度控制）。Kernel 在网上关于这些功能的精彩介绍：kernelnewbies.org/Linux_3.11
+文件导出到 NFS（这应该改进对网络文件的细粒度控制）。Kernel 在网上关于这些功能的精彩介绍：`kernelnewbies.org/Linux_3.11`
 
 ### 临时文件
 
-OTMPFILE 标志是一个（主要通过文件名使删除显而易见的安全功能），它也是内核在创建时使用的标志，但它在文件系统中可见的，直到立即删除。这如何被使用？Linux（或其他系统）可能会以这些文件的形式使用临时数据，通常存储在内存支持的（tmpfs）内存系统上。
+`OTMPFILE` 标志是一个（主要通过文件名使删除显而易见的安全功能），它也是内核在创建时使用的标志，但它在文件系统中可见的，直到立即删除。这如何被使用？Linux（或其他系统）可能会以这些文件的形式使用临时数据，通常存储在内存支持的（`tmpfs`）内存系统上。
 
 在回应 Linux 的评论时，他询问他使用的 SSD。他在当月晚些时候还提到，“我很久以前放弃了备份。我已经移动到了几台不同的机器上，然后密钥等备份在独立的 SSD 密钥上。所以备份磁盘是不方便的。许多人倾向于一个立足。但不是更多，”Linux
 
@@ -359,21 +308,17 @@ OTMPFILE 标志是一个（主要通过文件名使删除显而易见的安全�
 
 16 www.linuxusoker.com
 
-
-
-
-
 # 观点
 
 内核专栏 – Jon Masters
 
 ## 开源
 
-针对临时文件的利用可能会被归入历史，或者去猜它以后会被用什么命名。符号链接可以指向另一个文件，例如系统密码文件 (/etc/passwd 或 /etc/shadow)。更糟糕的是，如果编写内核源码的程序具有低效的优化示例，但 Lennox 响应并被触发，那么攻击者将能够禁用系统操作，或者在某些情况下获得他们不应拥有的权限。这种攻击存在于文件问题的一个窗口期，在该窗口期内没有符号链接来检查该文件。这可能是一个极短的时间，但对于性能足够好的计算机来说，攻击者已经写了所有脚本来实现自动化。多年来，人们对文件问题提出了其他解决方案，但要正确实现非常复杂，且无法让程序员避免错误。通过实现一个用于原子化创建临时文件的简单原语，针对临时文件的利用历史就可以被终结。
+针对临时文件的利用可能会被归入历史，或者去猜它以后会被用什么命名。符号链接可以指向另一个文件，例如系统密码文件 (`/etc/passwd` 或 `/etc/shadow`)。更糟糕的是，如果编写内核源码的程序具有低效的优化示例，但 Lennox 响应并被触发，那么攻击者将能够禁用系统操作，或者在某些情况下获得他们不应拥有的权限。这种攻击存在于文件问题的一个窗口期，在该窗口期内没有符号链接来检查该文件。这可能是一个极短的时间，但对于性能足够好的计算机来说，攻击者已经写了所有脚本来实现自动化。多年来，人们对文件问题提出了其他解决方案，但要正确实现非常复杂，且无法让程序员避免错误。通过实现一个用于原子化创建临时文件的简单原语，针对临时文件的利用历史就可以被终结。
 
-移除对 MIPS 架构的支持，“MAINTAINERS 中与 MIPS 架构相关的网站[内核源代码中包含的一段文本]已无法使用且无法出售。Linux 维护者在 2012 年响应了维护者的呼声。维护者的拉取请求出现在 2011 年初。Arnd 回复说该架构可能被移除，而 Al Viro 则提供了代码库中未解决 bug 的示例。随后它一段时间内被视为移除，以让大家知道 MIPS 不是一种流行的架构，而且这不是一个标准，因此你不应该在互联网上找到相关新闻。但随着 SoC（系统级芯片）的采用，这些 MIPS 特性也被采用了。他承诺致力于开发新功能，他后来确实做到了。
+移除对 MIPS 架构的支持，“`MAINTAINERS` 中与 MIPS 架构相关的网站[内核源代码中包含的一段文本]已无法使用且无法出售。Linux 维护者在 2012 年响应了维护者的呼声。维护者的拉取请求出现在 2011 年初。Arnd 回复说该架构可能被移除，而 Al Viro 则提供了代码库中未解决 bug 的示例。随后它一段时间内被视为移除，以让大家知道 MIPS 不是一种流行的架构，而且这不是一个标准，因此你不应该在互联网上找到相关新闻。但随着 SoC（系统级芯片）的采用，这些 MIPS 特性也被采用了。他承诺致力于开发新功能，他后来确实做到了。
 
-几年前，我们在《Linux User & Developer》中写过一种名为 MIPS 的新架构，它是将新架构上游到内核的基准。似乎这最终可能会走向同样的道路。当时参与该工作的 MIPS 开发者曾与 Arnd Rupprecht 交流，他是比过去更有方法地处理 Linux 架构移植的维护者，也是 asm-generic 工作的作者，该工作为此类移植提供了通用的框架。Günter Roeck 在一个标题为的补丁中指出：
+几年前，我们在《Linux User & Developer》中写过一种名为 MIPS 的新架构，它是将新架构上游到内核的基准。似乎这最终可能会走向同样的道路。当时参与该工作的 MIPS 开发者曾与 Arnd Rupprecht 交流，他是比过去更有方法地处理 Linux 架构移植的维护者，也是 `asm-generic` 工作的作者，该工作为此类移植提供了通用的框架。Günter Roeck 在一个标题为的补丁中指出：
 
 ## 退役 MIPS 架构
 
@@ -381,9 +326,8 @@ OTMPFILE 标志是一个（主要通过文件名使删除显而易见的安全�
 
 其他内核开发者需要修复这些需求，而维护者需要确保内核在真实硬件（或模拟器）上继续工作和构建。随后他指出 GCC 端口目前已经过时，并计划移除，当他们意识到真正的问题更多在于架构上：MIPS 不需要了，但它被用于各种运行 Linux 的系统和架构中，以便日常保留它，从长期来看（为了获取新功能）。毕竟，为了受益，一个架构必须由实现者投入足够的资源进行良好维护。讨论之后，新的补丁被发布并合并到 3.12 版本。
 
-
-
 意大利面结节点
+
 现在看起来像是一团可怕的电线乱，但通过逐渐添加电机和传感器，并边测试边检查，它很快就会变得非常有意义
 
 ## 构建一台树莓派机器人
@@ -393,6 +337,7 @@ OTMPFILE 标志是一个（主要通过文件名使删除显而易见的安全�
 机器人领域从未像现在这样更令人激动。但最近即使是构建一个能移动环境并对外部刺激做出反应的最基础机器人也花费数千美元。像树莓派这样结构化的开发，在今天不可能以几分之一的价格完成。无论你是否已经有了一台树莓派并在过去接触过电子产品，直到你将为你的项目总共花费超过 100 英元为止。在这个专题中，我们将探索电子产品、编程和基础人工智能的各个方面。你不需要在这些迷人的领域有任何经验，但我们希望你会被激发去学习。我们将在未来的几个期数中回到我们的机器人身上，为它赋予新技能，我们需要花费巨资在电机、传感器和执行器上以进行真正的计算机科学。项目涵盖接下来的 18 页，由于机器学习、导航和人工智能等令人兴奋的领域将对你和你神奇的机器人开放。
 
 全部到位
+
 底盘、电机和轮子因为价格实惠而成为热门选择。正如你看到的，甚至为树莓派预留了 USB 电池组的位置
 
 # 作者简介
@@ -402,16 +347,18 @@ Russell Barnes 是《Linux User》的编辑，拥有15 年的开源倡导者和�
 Jason Barnett 是树莓派爱好者、硬件极客、nobit 构建者、STEM 大使以及俱乐部志愿者。他还是几个入门级项目 MotorPTX 的创建者。
 
 > 注意
+
 > 尽管我们出于安全考虑仔细构建了这一专题，但事故仍会发生。Imagine Publishing 对于遵循本专题对树莓派及相关硬件造成的损坏不承担责任。
 
 构建你自己的 Linux 驱动机器人
 
 很高兴见到你
+
 虽然这个廉价的超声传感器不能真正让我们的机器人看到，但它能够像蝙蝠或海豚一样利用回声定位
 
 一个动人的时刻
-我们将使用的第一个传感器是这些微开关或触摸传感器。这将使我们的机器人在碰撞到任何东西时对其环境做出反应。
 
+我们将使用的第一个传感器是这些微开关或触摸传感器。这将使我们的机器人在碰撞到任何东西时对其环境做出反应。
 
 # 树莓派机器人
 
@@ -428,23 +375,22 @@ Jason Barnett 是树莓派爱好者、硬件极客、nobit 构建者、STEM 大�
 我们严重依赖 Modympi 丰富的黑客和原型配件，如面包板、电阻包和跳线线
 
 www.dawnrobotics.co.uk
+
 Dawn Robotics 的 Alan Braun 机器人。这就是为什么我们依靠他的服务 Magician 底盘和超声传感器
 
 如果你在寻找最好的外壳、电缆和配件，Pimoroni 是必不可少的，他们还有很丰富的传感器
 
 cpc.farnell.com
+
 我们从 CPC 购买了树莓派、微开关和我们的一些工具。他们有惊人的种类，而且提供的价格非常优惠
 
 # 编写并运行 Python 代码
 
-你可以使用任何你熟悉的开发环境编写 Python 代码，无论是 IDLE、Geany 还是其他。尽管如此，有很多要说的打开 LeafPad。编写代码并将其保存为 .py 文件。它更快、更方便，如果你在学习编程，以后会感谢我们的。
+你可以使用任何你熟悉的开发环境编写 Python 代码，无论是 IDLE、Geany 还是其他。尽管如此，有很多要说的打开 LeafPad。编写代码并将其保存为 `.py` 文件。它更快、更方便，如果你在学习编程，以后会感谢我们的。
 
 在运行你的脚本或我们的示例时，你需要高级权限，否则你的代码无法与 GPIO 引脚交互。
-在这种情况下，只需在终端中进入文件所在目录并输入：sudo python file.py（其中 'file' 是你的代码文件名）。
 
-
-
-
+在这种情况下，只需在终端中进入文件所在目录并输入：`sudo python file.py`（其中 'file' 是你的代码文件名）。
 
 构建你自己的 Linux 驱动机器人
 
@@ -487,6 +433,7 @@ GPIO.setup(BCM)
 紫色引脚 这些引脚可以使用，也可以用于串口连接等事情
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_20_0.png)
+
 ![](img/511bb591be9ee7dc0f73776baf9a0548_20_1.png)
 
 通常在演示电子电路图或硬件读取接线板时，有两种选择。Fritzing 是一种方法，另一种适用于任何从事电子设备的人。该工具允许你选择组件，并使用拖放式界面创建电路，然后将其输出为图像。希望你在项目中使用 Fritzing 的乐趣能像我们做这个项目时一样多！fritzing.org
@@ -494,7 +441,6 @@ GPIO.setup(BCM)
 > 我们强烈建议为你的 Pi 配备 Wi-Fi 终端并通过 SSH 连接到你的 Pi
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_20_2.png)
-
 
 # 树莓派机器人
 
@@ -505,10 +451,15 @@ GPIO.setup(BCM)
 我们机器人的基础技能是移动，这由我们的 Magician 底盘提供的电机处理。电机有许多尺寸和类型，但在这里我们将使用两个直流电机来驱动它。由于 Pi 提供的功率有限，我们需要一些额外的电池和一个 IC 来开启和关闭我们的电机。千万不要从 Pi 为它们供电。我们将使用的电机驱动器是一个 H 桥。这个（有时被称为 L293D 的）IC）将处理独立的电源控制，并为两个电机提供双向控制。
 
 | 组件 |  |
+
 | :--- | :--- |
+
 | 树莓派 | 兼容版本 1 和版本 2 的 B 型和 A 型树莓派 |
+
 | 多个电机 | 单个电机驱动器可以处理 2 个直流电机，独立控制 |
+
 | 额外电源 | 电机由四节 AA 电池供电，提供 6 特，非常适合大多数小型机器人 |
+
 | 电机驱动器 | 位于接线板中间的 L293D 将执行所有艰苦工作 |
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_21_0.png)
@@ -523,13 +474,16 @@ GPIO.setup(BCM)
 - 4 节 AA 电池
 - 电池盒
 
- 01 添加 L293D
+01 添加 L293D
+
 将 L293D 芯片放置在接线板中间，连接所有的红色和黑色电缆，注意引脚。橙色线将用于电池。
 
- 02 配置数据线
+02 配置数据线
+
 双检连接以确保你的是正确的。从 Pi GPIO 引脚到 L293D 输入引脚有六根线。这些线将负责我们的电机。
 
- 03 完成电路
+03 完成电路
+
 现在我们可以连接电机了。我们还不知道它们向哪个方向旋转，所以确保你可以轻松地调换它们。最后，添加电池并插入树莓派。
 
 > 注意：不要将电机直接连接到树莓派。这样做可能会损坏处理器，导致昂贵的文书工作。
@@ -540,13 +494,14 @@ GPIO.setup(BCM)
 
 ## 电机电路代码
 
-使用 Python 控制电机通过一个名为 RPi.GPIO 的库变得非常简单。它被导入到你的脚本中并将处理它们的开启和关闭。它还可以接收来自传感器的输入（我们将在几页后介绍），但首先让我们的电机转起来。'board' 对应引脚的功能，'BCM' 是编号方案。在这种方案中我们将使用 BCM。这并非必须，但（为了避免混淆）为每个电机清晰使用 GPIO 名称是一个好主意。
+使用 Python 控制电机通过一个名为 `RPi.GPIO` 的库变得非常简单。它被导入到你的脚本中并将处理它们的开启和关闭。它还可以接收来自传感器的输入（我们将在几页后介绍），但首先让我们的电机转起来。'board' 对应引脚的功能，'BCM' 是编号方案。在这种方案中我们将使用 BCM。这并非必须，但（为了避免混淆）为每个电机清晰使用 GPIO 名称是一个好主意。
 
 ## 第一次电机测试，这里是如何让你的电机动起来
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_22_0.png)
 
 开始
+
 我们剩下的工作是告诉引脚它们用于我们的电机。为了清晰起见，我们根据 GPIO 对它们进行了命名。一旦设置好引脚，我们将让脚本运行几秒之前改变它们的方向。
 
 ```python
@@ -558,7 +513,7 @@ MotorIB = 23
 MotorB = 25
 Motor2a = 9
 Motor = 
-我们剩下的工作是告诉引脚它们用于我们的电机。为了清晰起见，我们根据 GPIO 对它们进行了命名。一旦设置好引脚，我们将让脚本运行几秒之前改变它们的方向。
+```
 
 ```python
 import RPi.GPIO as GPIO
@@ -569,101 +524,14 @@ MotorIB = 23
 MotorB = 25
 Motor2a = 9
 Motor = 
+```
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-GPIO..
-
-
-
-..)
+```python
 GPIO.setup(MotorA, GPIO.OUTPUT)
 GPIO.setup(MotorIB, GPIO.OUTPUT)
 GPIO.setup(MotorB, GPIO.OUTPUT)
 GPIO.setup(Motor2, GPIO.OUTPUT)
-GPIO.
-
-Motor2
-
-
-Motor2 = 2
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
 
 ```python
 import RPi.GPIO as GPIO
@@ -675,91 +543,13 @@ MotorB = 25
 Motor2a = 9
 Motor = 
 ```
-GPIO.setup(MotorA, GPIO.OUTPUT)
-GPIO.setup(MotorIB, GPIO.OUTPUT)
-GPIO.setup(MotorB, GPIO.OUTPUT)
 
-print ("Going forward")
-GPIO.output(MotorA, GPIO.HIGH)
-GPIO.output(MotorIB, GPIO.LOW)
-GPIO.output(MotorB, GPIO.HIGH)
-GPIO.output(Motor2a, GPIO.LOW)
-sleep(2)
+`GPIO.setup(MotorA, GPIO.OUTPUT)`
 
-print ("Going backward")
-GPIO.output(MotorA, GPIO.LOW)
-GPIO.output(MotorIB, GPIO.HIGH)
-GPIO.output(MotorB, GPIO.LOW)
-GPIO.output(Motor2a, GPIO.HIGH)
-sleep(2)
 
-print ("For 2 seconds")
-GPIO.output(MotorA, GPIO.OUTPUT)
-GPIO.output(MotorIB, GPIO.OUTPUT)
-GPIO.output(MotorB, GPIO.OUTPUT)
-GPIO.output(Motor2a, GPIO.OUTPUT)
-sleep(2)
-
-print ("And stop before cleaning")
-GPIO.cleanup()
-
-> It’s a good idea to give the pins a name. So we’ll use the L23D pins for controlling easily
-
-```python
-#!/usr/bin/python3
-# motor_test.py - May 17, 2023 14:53:23 UTC
-import RPi.GPIO as GPIO
-from time import sleep
-
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(MotorA, GPIO.OUTPUT)
-GPIO.setup(MotorIB, GPIO.OUTPUT)
-GPIO.setup(MotorB, GPIO.OUTPUT)
-GPIO.setup(Motor2a, GPIO.OUTPUT)
-
-print ("Going forward")
-GPIO.output(MotorA, GPIO.HIGH)
-GPIO.output(MotorIB, GPIO.LOW)
-GPIO.output(MotorB, GPIO.HIGH)
-GPIO.output(Motor2a, GPIO.LOW)
-sleep(2)
-
-print ("Going backward")
-GPIO.output(MotorA, GPIO.LOW)
-GPIO.output(MotorIB, GPIO.HIGH)
-GPIO.output(MotorB, GPIO.LOW)
-GPIO.output(Motor2a, GPIO.HIGH)
-sleep(2)
-
-print ("For 2 seconds")
-GPIO.output(MotorA, GPIO.OUTPUT)
-GPIO.output(MotorIB, GPIO.OUTPUT)
-GPIO.output(MotorB, GPIO.OUTPUT)
-GPIO.output(Motor2a, GPIO.OUTPUT)
-sleep(2)
-
-print ("And stop before cleaning")
-GPIO.cleanup()
-```
-MAKING MOVEMENT
-The pins should be on to create movement - forwards, backwards and stopping.
-
-04 Prepare your script
-Login into your树莓派 - username is 'pi' and password 'raspberry'. We will now create our first script, in nano motor_test.py to open this. This will be the open part.
-
-05 Save your code
-Testing the code, but remember it's sensitive. Capital letters are important and indent the code with a space, keeping it consistent. When hold Ctrl and X, then Y to.
-
-06 Test your motors
-Now it is time for to run your python motor_test.py. If something doesn't work, revise the wires, making sure to check the pins and the things that bind them.
-
-[/content] (注：由于原文中存在大量重复的错误片段和断句，译文已根据逻辑进行了清理和对齐，确保了核心内容的完整性)
-
-**(注：作为高级文档工程师，我注意到你提供的原始文本中包含大量重复的、片段和乱码的字符。在翻译过程中，我遵循了“不要重复输出原文”的原则，剔除了冗余的重复内容，确保了文档的逻辑通顺。)**
-
-[content]
 
 # 你需要的一切
+
 构建你自己的 Linux 驱动机器人
 
 ## 通过 SSH 轻松访问
@@ -780,9 +570,9 @@ ifconfig
 ssh pi@xxx.xxx.xxx
 ```
 
-输入你稍才编写的密码。如果你更改了默认名称 'pi'，请不要忘记更新它。
+输入你稍才编写的密码。如果你更改了默认名称 `pi`，请不要忘记更新它。
 
-现在输入你的 Pi 密码（默认为 'raspberry'），你将连接到你的 Pi。从这里，你可以导航到你的脚本并像往常一样执行它们。你还可以可以使用 nano 编辑你的文件。
+现在输入你的 Pi 密码（默认为 `raspberry`），你将连接到你的 Pi。从这里，你可以导航到你的脚本并像往常一样执行它们。你还可以可以使用 `nano` 编辑你的文件。
 
 通用型输入/输出（GPIO）树莓派引脚是此类项目成功的关键。我们使用它们来控制电机、传感器和执行器。
 
@@ -801,6 +591,7 @@ GPIO.setup(BCM)
 紫色引脚 这些引脚可以使用，也可以用于串口连接等事情
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_20_0.png)
+
 ![](img/511bb591be9ee7dc0f73776baf9a0548_20_1.png)
 
 通常在演示电子电路图或硬件读取接线板时，有两种选择。Fritzing 是一种方法，另一种适用于任何从事电子设备的人。该工具允许你选择组件，并使用拖放式界面创建电路，然后将其输出为图像。希望你在项目中使用 Fritzing 的乐趣能像我们做这个项目时一样多！fritzing.org
@@ -808,8 +599,6 @@ GPIO.setup(BCM)
 > 我们强烈建议为你的 Pi 配备 Wi-Fi 终端并通过 SSH 连接到你的 Pi
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_20_2.png)
-
-
 
 ## 构建电机电路
 
@@ -836,13 +625,16 @@ GPIO.setup(BCM)
 - 4 节 AA 电池
 - 电池盒
 
- 01 添加 L293D
+01 添加 L293D
+
 将 L293D 芯片放置在接线板中间，连接所有的红色和黑色电缆，注意引脚。橙色线将用于电池。
 
- 02 配置数据线
+02 配置数据线
+
 双检连接以确保你的是正确的。从 Pi GPIO 引脚到 L293D 输入引脚有六根线。这些线将负责我们的电机。
 
- 03 完成电路
+03 完成电路
+
 现在我们可以连接电机了。我们还不知道它们向哪个方向旋转，所以确保你可以轻松地调换它们。最后，添加电池并插入树莓派。
 
 > 注意：不要将电机直接连接到树莓派。这样做可能会损坏中央处理器，导致昂贵的文书工作。
@@ -850,17 +642,19 @@ GPIO.setup(BCM)
 ![](img/511bb591be9ee7dc0f73776baf9a0548_21_1.png)
 
 ## 电机电路
+
 构建你自己的 Linux 驱动机器人
 
 ## 电机电路代码
 
-使用 Python 控制电机通过一个名为 RPi.GPIO 的库变得非常简单。它被导入到你的脚本中并将处理它们的开启和关闭。它还可以接收来自传感器的输入（我们将在几页后介绍），但首先让我们的电机转起来。'board' 对应引脚的功能，'BCM' 是编号方案。在这种方案中我们将使用 BCM。这并非必须，但（为了避免混淆）为每个电机清晰使用 GPIO 名称是一个好主意。
+使用 Python 控制电机通过一个名为 `RPi.GPIO` 的库变得非常简单。它被导入到你的脚本中并将处理它们的开启和关闭。它还可以接收来自传感器的输入（我们将在几页后介绍），但首先让我们的电机转起来。`board` 对应引脚的功能，`BCM` 是编号方案。在这种方案中我们将使用 BCM。这并非必须，但（为了避免混淆）为每个电机清晰使用 GPIO 名称是一个好主意。
 
 ## 第一次电机测试，这里是如何让你的电机动起来
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_22_0.png)
 
 开始
+
 我们剩下的工作是告诉引脚它们用于我们的电机。为了清晰起见，我们根据 GPIO 对它们进行了命名。一旦设置好引脚，我们将让脚本运行几秒之前改变它们的方向。
 
 ```python
@@ -873,33 +667,54 @@ MotorB = 25
 Motor2a = 9
 Motor = 
 ```
+
+```python
 GPIO.setup(MotorA, GPIO.OUTPUT)
+
 GPIO.setup(MotorIB, GPIO.OUTPUT)
+
 GPIO.setup(MotorB, GPIO.OUTPUT)
 
 print ("Going forward")
+
 GPIO.output(MotorA, GPIO.HIGH)
+
 GPIO.output(MotorIB, GPIO.LOW)
+
 GPIO.output(MotorB, GPIO.HIGH)
+
 GPIO.output(Motor2a, GPIO.LOW)
+
 sleep(2)
 
 print ("Going backward")
+
 GPIO.output(MotorA, GPIO.LOW)
+
 GPIO.output(MotorIB, GPIO.HIGH)
+
 GPIO.output(MotorB, GPIO.LOW)
+
 GPIO.output(Motor2a, GPIO.HIGH)
+
 sleep(2)
 
 print ("For 2 seconds")
+
 GPIO.output(MotorA, GPIO.OUTPUT)
+
 GPIO.output(MotorIB, GPIO.OUTPUT)
+
 GPIO.output(MotorB, GPIO.OUTPUT)
+
 GPIO.output(Motor2a, GPIO.OUTPUT)
+
 sleep(2)
 
 print ("And stop before cleaning")
+
 GPIO.cleanup()
+```
 
 > It’s a good idea to give the pins a name. So we’ll use the L23D pins for controlling easily
 
@@ -939,21 +754,22 @@ sleep(2)
 print ("And stop before cleaning")
 GPIO.cleanup()
 ```
+
 MAKING MOVEMENT
+
 The pins should be on to create movement - forwards, backwards and stopping.
 
 04 Prepare your script
+
 Login into你的树莓派 - username is 'pi' and password 'raspberry'. We will now create我们的第一个脚本，in nano motor_test.py to open this. This will be the open part.
 
 05 Save your code
+
 Testing the code, but remember it's sensitive. Capital letters are important and indent the code with a space, keeping it consistent. When hold Ctrl and X, then Y to.
 
 06 Test your motors
+
 Now it is time for to run你的 python motor_test.py. If something doesn't work, revise the wires, making sure to check the pins and the things that bind them.
-
-
-
-
 
 # 树莓派机器人
 
@@ -966,26 +782,26 @@ Now it is time for to run你的 python motor_test.py. If something doesn't work,
 这个底盘套件包含两个底板、电机和两个轮子，以及一个电池盒，非常适合作为基础机器人的起点。一旦准备好，我们就可以开始通过新的电机功能来扩展机器人，在添加传感器之前完成。
 
 - 整理零件：将所有部件铺开并熟悉它们。组装过程大部分都是非常直接的，但电机支架需要小心处理![](img/511bb591be9ee7dc0f73776baf9a0548_23_0.png)
-
 - 组装电机支架：将支架穿过底盘，并用第二个支架夹住电机。将螺栓穿过孔位并在末端加上螺母![](img/511bb591be9ee7dc0f73776baf9a0548_23_1.png)
-
 - 组合部件：将电机线穿过底盘，使用六角垫柱和螺丝安装顶板，然后是上万向轮![](img/511bb591be9ee7dc0f73776baf9a0548_23_2.png)
-
 - 接线连接：所有部件到位后，使用电机电路连接树莓派并开启电源。运行测试脚本确保其工作正常。
-
 - 添加面包板：大多数面包板的底部都有粘性垫，你可以撕开贴上，或者使用蓝胶胶进行不那么永久的固定。先安装这个。
-
 - 安装你的树莓派：树莓派第 2 版和某些外壳底部有孔，请利用这些孔进行安装，并将电池组固定好。
 
 ## 构建小贴士
 
 ### 慢慢来
+
 最好在不看说明书的情况下假设你已经理解了组装过程。手册是为了提供帮助的——尽管用上它吧！
 
 ### 欢迎修改
+
 不要把自己局限于设计中。如果你需要为传感器切割一组新孔，请多量两次再切一次，但不要觉得受限于原始选项。
 
 ### 丰富的选择
+
+
+
 在构建平台方面，有无限的选择空间。四轮、履带和六足机器人都是可能的。我们本月的机器人平台风格是朋友——请查看第 76-77 页的评论。
 
 ## 在 Python 中创建移动函数
@@ -995,10 +811,12 @@ Now it is time for to run你的 python motor_test.py. If something doesn't work,
 现在我们有一个外观非常漂亮的机器人，并且所有线都连接在正确的位置（除了可能需要的电机），我们可以插上树莓派并编写第一个控制电机的脚本。在轻松检查电机是否工作之前，我们希望能够妥善地控制并让它移动，为此我们需要创建自己的函数。
 
 ### 01 设置引脚
+
 首先，我们将导入所需的类，并像之前电机测试那样设置引脚。
 
 ### 02 启用 PWM 支持
-为了控制速度，我们将使用脉冲宽度调制 (PWM)。由于 Enable 引脚支持此并适用于两个方向：
+
+为了控制速度，我们将使用脉冲宽度调制 `PWM`。由于 `Enable` 引脚支持此并适用于两个方向：
 
 ```python
 import RPi.GPIO as GPIO
@@ -1012,6 +830,7 @@ GPIO.setup(11,GPIO.OUTPUT)
 ```
 
 ### 03 创建移动函数
+
 Python 允许我们简化和复用代码，使其更易读。我们将利用这一点将想要的内容放入函数中保存。
 
 ```python
@@ -1021,7 +840,7 @@ Motor2 = GPIO.PWM(11, 50)
 Motor2.start(0)
 ```
 
-在 Python 中，通过将重复动作分组到一个定义中来实现。使用 `def` 块，我们可以轻松地传递速度等参数并方便地编写代码。我们还会在引脚上添加 PWM，以便设置电机应该运行的速度。
+在 Python 中，通过将重复动作分组到一个定义中来实现。使用 `def` 块，我们可以轻松地传递速度等参数并方便地编写代码。我们还会在引脚上添加 `PWM`，以便设置电机应该运行的速度。
 
 ```python
 def forward(speed):
@@ -1034,6 +853,7 @@ def forward(speed):
 ```
 
 ### 04 如何更改速度
+
 通过添加 `(speed)` 参数，我们可以向函数输入输入，将其结果——电机的速度返回回脚本。
 
 ```python
@@ -1046,9 +866,10 @@ def backward(speed):
     Motor2.dutyCycle(speed)
 ```
 
-我们将设置引脚并设置输出；然后在两个引脚上启用 PWM。在接下来的代码块中，我们将创建函数，并给它们易记的名字，通过使用它们来向左向右移动。通过这种方法，我们只需要在最后写我们想要的内容。我们将告诉电机前进 10（即全速）持续 3 秒，然后向后退 3 秒。
+我们将设置引脚并设置输出；然后在两个引脚上启用 `PWM`。在接下来的代码块中，我们将创建函数，并给它们易记的名字，通过使用它们来向左向右移动。通过这种方法，我们只需要在最后写我们想要的内容。我们将告诉电机前进 10（即全速）持续 3 秒，然后向后退 3 秒。
 
 ### 05 让它移动
+
 在调用脚本之前，最困难的工作已经完成了。为了让机器人移动，我们将使用变量：
 
 ```python
@@ -1075,9 +896,10 @@ def right(speed):
     Motor2.dutyCycle(speed)
 ```
 
-PWM 用于通过快速开关改变电机等部件的电压。我们还可以通过分离（和右）来控制每个电机，允许我们原地转动。通过这种方法，意味着一个高移动性的机器人！在 Python 中，我们使用函数来重复代码段；这允许我们多次使用相同的代码并进行更改。我们想要精确地控制并让它移动。
+`PWM` 用于通过快速开关改变电机等部件的电压。我们还可以通过分离（和右）来控制每个电机，允许我们原地转动。通过这种方法，意味着一个高移动性的机器人！在 Python 中，我们使用函数来重复代码段；这允许我们多次使用相同的代码并进行更改。我们想要精确地控制并让它移动。
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_24_0.png)
+
 ![](img/511bb591be9ee7dc0f73776baf9a0548_24_1.png)
 
 # 树莓派机器人
@@ -1091,30 +913,38 @@ PWM 用于通过快速开关改变电机等部件的电压。我们还可以通�
 触摸可能没有想象的那么复杂，但赋予机器人第一个感觉将有助于它导航路径，赋予它非常基础的智能。你可以尝试使用木棍或吸管扩展它。添加多个开关让机器人对周围有更好的感知，并允许使用非常简单的代码控制它的移动。它将是变量，我们只需要在正面添加开关。让我们创建电路并测试开始。
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_25_0.png)
+
 ![](img/511bb591be9ee7dc0f73776baf9a0548_25_1.png)
+
 ![](img/511bb591be9ee7dc0f73776baf9a0548_25_2.png)
 
 ## 零件列表
+
 - 面包板
 - 跳线导
 - 2X 10 电阻
 - 2 个微开关
 
 ### 额外开关
+
 通过遵循电路并连接到空引脚，你可以轻松添加更多开关，而不只是跳线。
 
 ### 下拉电阻
+
 由于我们处理的是数字逻辑，开关必须开启或关闭，电阻通过弱弱下拉引脚来帮助。
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_25_3.png)
 
 ### 3.3V 电源
+
 由于树莓派没有过电压保护，我们不能输入超过 3.3V 的电压，否则会损坏处理器。
 
 ### NO NC
-大多数开关标记为 NO 和 NC；分别代表常开（Normally Open）和常闭（Normally Closed）。开启简单意味着没有电流通过。
+
+大多数开关标记为 `NO` 和 `NC`；分别代表常开（Normally Open）和常闭（Normally Closed）。开启简单意味着没有电流通过。
 
 ### 你的微开关已接线，让它们工作
+
 现在开关已经安装好且很简单，但如提到的，重要的是记住树莓派只耐受 3.3 伏，所以我们只使用 3.3V 引脚而不是其他的
 
 用于读取的 Python 代码非常简单且直接。由于每个 GPIO 引脚有一个开关，我们可以让 Python 在我们询问时告诉我们处于什么状态。我们想要做的第一件事是使用我们的库并将引脚设置为 BCM 模式。
@@ -1128,7 +958,7 @@ from time import sleep
 GPIO.setup(GPIO.BCM)
 ```
 
-创建一个 `True` 循环将创建一个永远 true无限循环。我们将输入状态存储在变量中，并使用 `if` 语句检查它是 1（已按下）还是 0（未按下）。我们将在屏幕上显示哪个开关被按下，这将帮助我们决定在哪个侧放置微开关。
+创建一个 `True` 循环将创建一个永远 `true`无限循环。我们将输入状态存储在变量中，并使用 `if` 语句检查它是 1（已按下）还是 0（未按下）。我们将在屏幕上显示哪个开关被按下，这将帮助我们决定在哪个侧放置微开关。
 
 ```python
 GPIO.setup(18, GPIO.IN)
@@ -1143,11 +973,6 @@ while True:
 ```
 
 > 显示哪个开关被按下
-
-
-
-
-
 
 # 安装微型开关
 
@@ -1164,21 +989,27 @@ while True:
 通过重构代码来实现变体，例如为右侧电机创建一个函数，并在启动时运行它，以创建一个新路径并继续。
 
 - 01 安装开关
+
 将微型开关放置在尽可能靠近机器人前端的位置，间距足够远，以便我们判断机器人撞击物体时面朝的方向。
 
 - 03 使用开关登录
+
 当机器人开始运行时，使用带有电池的树莓派派是一个好主意。通过 Wi-Fi，我们可以使用以下方式远程连接
 
 - 04 创建并保存你的工作
+
 和之前处理电机一样，我们将使用 `nano` 创建脚本。通过输入 `bumpers.py` 来执行。保存不同部分的独立脚本。我们也可以它们作为创建更大脚本的参考。
 
 - 02 与电机接线
+
 在列上找到几条空闲的（虚拟）轨道，将跳线连接到下拉电阻上，并如图所示连接开关。
 
 - 05 原地测试
+
 将脚本复制到 `bumpers.py`。为了保存，我们对其进行测试并进行任何修改。在脚本运行时，按下微型开关，看看我们发现了什么！
 
 - 06 修改并改进你的代码
+
 当你启动脚本时，电机将开始旋转。按下开关将使电机反转，并在前进之前旋转一个电机。尝试不同的变量并根据你的喜好调整其响应。
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_26_0.png)
@@ -1186,6 +1017,7 @@ while True:
 # 碰撞机器人完整代码列表
 
 import GPIO.util as GPIO
+
 from time import sleep
 
 ```
@@ -1282,9 +1114,11 @@ while True:
 | 安全第一 |
 | :--- |
 | 得益于晶体管，在使用电子元件时进入 GPIO 引脚的电压安全 |
+
 | 降低电流 |
 | :--- |
 | 晶体管只产生少量的电流，有助于平滑输出 |
+
 | 循线传感器 |
 | :--- |
 | 传感器有各种形状和大小，但大多数公共引脚；OUT 引脚 |
@@ -1306,15 +1140,19 @@ while True:
 当循线传感器准备好且树莓派开启时，我们现在可以编写一个与电机代码非常相似的脚本，我们只是读取 GPIO 状态，检查它是高还是低。在屏幕上显示传感器数据允许我们了解传感器对黑色和白面的响应并相应规划代码。
 
 - 01 启动你的项目
+
 登录树莓派启动终端并创建 `lineflow.py`。这将是我们循线机器人的第一个脚本。
 
 - 02 读取传感器
+
 读取数据。由于每个传感器都不同，我们可能需要调整代码以适应输出。
 
 - 03 打印到屏幕
+
 像之前一样保存文件。你需要打印语句来显示传感器是否检测到亮暗之间的差异。
 
 - 04 我们有了数据
+
 当正确运行时，脚本将告诉我们它可以看到黑色或白色。在它前面放一些纸来测试。
 
 ```python
@@ -1385,11 +1223,14 @@ Motor2.start(0)
 | 前缀用于检测并将线条提升到主管。它是 GPIO 引脚的电平。别忘记它！ |
 
 - 01 安装传感器
+
 使用六角杆将传感器安装在 10cm 处，保持足够的距离，否则将没有机会调整灵敏度。
 
 - 04 通电并登录
 
-连接电机和电源线，然后到 GPIO 引脚。现在登录你的计算机以便我们能够添加循线代码。
+
+
+连接电机和电源线，然后到 `GPIO` 引脚。现在登录你的计算机以便我们能够添加循线代码。
 
 ```python
 def forward():
@@ -1443,28 +1284,41 @@ def right():
     Motor2.ChangeDutyCycle(cycle)
 ```
 
+```python
 while True:
+
     input = GPIO.input(14)
+
     if input == 0:
+
         print("left pressed")
+
         backward(MB)
+
         sleep(1)
+
         left(75)
+
         sleep(2)
+
     elif input == 1:
+
         print("right pressed")
+
         backward(MB)
+
         sleep(1)
+
         right(75)
+
         sleep(2)
+
     else:
+
         forward(75)
+
         sleep(0.1)
 ```
-
-
-
-
 
 # 树莓派机器人
 
@@ -1480,15 +1334,15 @@ while True:
 
 超声波传感器有两种引脚类型。两种类型的工作方式非常相似。由于我们希望对两者都使用相同的代码，我们将把 4 引传感器接线，使其工作得像一个 3 引超声波传感器。然而，我们将重点关注 Dawn Robotics 提供的价格实惠的 3 引型号。
 
-由于我们只需要一个 GPIO 引脚，我们首先将其设为输入，并发送一个 10ms 的脉冲来触发传感器并开始计数。当回声返回时，我们停止计数并计算所需的时间。最后需要的是时间转换为我们可以读取的测量值，在此例中为厘米。
+由于我们只需要一个 `GPIO` 引脚，我们首先将其设为输入，并发送一个 10ms 的脉冲来触发传感器并开始计数。当回声返回时，我们停止计数并计算所需的时间。最后需要的是时间转换为我们可以读取的测量值，在此例中为厘米。
 
 ### 4 引传感器
 
-最常见的是 4 引 HC-SR04，能够计算高达 4 米的距离。除了电源和地线外，它还包含 Trig（触发）和 Echo（回声）引脚。
+最常见的是 4 引 `HC-SR04`，能够计算高达 4 米的距离。除了电源和地线外，它还包含 `Trig`（触发）和 `Echo`（回声）引脚。
 
 ### 3 引传感器
 
-我们正在使用 3 引传感器，它有一个合并的 Echo/Trig 引脚。其功能与...相同——
+我们正在使用 3 引传感器，它有一个合并的 `Echo/Trig` 引脚。其功能与...相同——
 
 ### 分压器
 
@@ -1504,13 +1358,13 @@ while True:
 
 ### 仅需一个 GPIO 引脚
 
-为了节省 GPIO 引脚，一个引脚将在输出和输入之间切换，以发送和接收脉冲。这对于高达 4 引的模型非常有效
+为了节省 `GPIO` 引脚，一个引脚将在输出和输入之间切换，以发送和接收脉冲。这对于高达 4 引的模型非常有效
 
 ### 添加云台套件
 
 云台支架非常有用，因为它们可以与任何传感器结合，使机器人能够在不物理移动身体的情况下转动它的“头”，通常在 0 到 180 度之间。通过这种方式，通过使用一些精确的时间来感知舵机。脉冲之间的时间告诉了舵机算法。
 
-树莓派并不是一个非常出色的实时设备，它在保持稳定位置方面可能会遇到困难，因为它可能会忘记正在做什么，例如去检查某些邮件。如果能从不同角度读取数据，不是很棒吗？这里有...Richard 为 Linux ServoBlaster 编写了一个内核，它可以完美地处理时序，无论定时器在器中发生了什么，都能提供精确的时钟。这只需要向传感器发送你所需的内容：/dev/servoblaster，舵机就会活跃起来！
+树莓派并不是一个非常出色的实时设备，它在保持稳定位置方面可能会遇到困难，因为它可能会忘记正在做什么，例如去检查某些邮件。如果能从不同角度读取数据，不是很棒吗？这里有...Richard 为 Linux `ServoBlaster` 编写了一个内核，它可以完美地处理时序，无论定时器在器中发生了什么，都能提供精确的时钟。这只需要向传感器发送你所需的内容：`/dev/servoblaster`，舵机就会活跃起来！
 
 云台由两个特殊的名为舵机的设备控制。舵机允许在其量程范围内进行精确移动。
 
@@ -1521,107 +1375,170 @@ while True:
 ### 完整的超声波代码
 
 ```python
+
 import RPi.GPIO as GPIO
+
 from time import sleep
+
 from time import time
+
 import os
 
 GPIO.setmode(GPIO.BCM)
 
 GPIO.setup(24,GPIO.OUT)
+
 GPIO.setup(25,GPIO.OUT)
+
 GPIO.setup(23,GPIO.OUT)
+
 GPIO.setup(10,GPIO.IN)
+
 GPIO.setup(11,GPIO.IN)
 
 Motor = GPIO.PWM(22, 58)
+
 Motor.start(0)
+
 Motor2 = GPIO.PWM(18, 58)
+
 Motor2.start(0)
 
 Echo = 17
 
 def forward(speed):
+
     GPIO.output(24,GPIO.HIGH)
+
     GPIO.output(25,GPIO.HIGH)
+
     GPIO.output(23,GPIO.LOW)
+
     Motor.ChangeCycle(speed)
+
     Motor2.ChangeCycle(speed)
 
 def back(speed):
+
     GPIO.output(24,GPIO.LOW)
+
     GPIO.output(25,GPIO.LOW)
+
     GPIO.output(23,GPIO.HIGH)
+
     Motor.ChangeCycle(speed)
+
     Motor2.ChangeCycle(speed)
 
 def left(speed):
+
     GPIO.output(24,GPIO.LOW)
+
     GPIO.output(25,GPIO.HIGH)
+
     GPIO.output(23,GPIO.HIGH)
+
     Motor.ChangeCycle(speed)
+
     Motor2.ChangeCycle(speed)
 
 def right(speed):
+
     GPIO.output(24,GPIO.HIGH)
+
     GPIO.output(25,GPIO.LOW)
+
     GPIO.output(23,GPIO.HIGH)
+
     Motor.ChangeCycle(speed)
+
     Motor2.ChangeCycle(speed)
 
 def stop():
+
     GPIO.output(24,GPIO.LOW)
+
     GPIO.output(25,GPIO.LOW)
+
     GPIO.output(23,GPIO.LOW)
+
     Motor.ChangeCycle(0)
+
     Motor2.ChangeCycle(0)
 
 def get_distance():
+
     GPIO.output(10,GPIO.HIGH)
+
     start = time()
+
     while GPIO.input(10) == 0:
+
         pass
+
     GPIO.output(10,GPIO.LOW)
+
     stop = time()
+
     while GPIO.input(10) == 1:
+
         pass
+
     distance = (stop-start) * 1700
+
     return distance
+
 ```
 
 ```python
+
 disleft = get_distance()
+
 print("left: " + str(disleft))
+
 string = int((disleft-30) / 2)
+
 right = get_distance()
+
 print("right: " + str(right))
+
 if disleft < 30:
+
     print("left")
+
     left(100)
+
 elif right < 30:
+
     print("right")
+
     right(100)
+
 else:
+
     print("turn")
+
     turn(100)
 ```
+
+
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_30.png)
 
 # 安装你的 y 轴
 
 有点麻烦，但它会运行的。现在我们必须设置它们；首先我们需要内核支持它，所以我们使用：
-- wget https://github.com/oleebo/linux-servblaster/master/linux-servoblaster.tar.gz
-- tar -xvf linux-servoblaster.tar.gz
-- cd linux-servoblaster
-- make
-- sudo make install
-- chmod +x /dev/servoblaster
-- 之后运行 ./dev/servoblaster
+- `wget https://github.com/oleebo/linux-servblaster/master/linux-servoblaster.tar.gz`
+- `tar -xvf linux-servoblaster.tar.gz`
+- `cd linux-servoblaster`
+- `make`
+- `sudo make install`
+- `chmod +x /dev/servoblaster`
+- 之后运行 `./dev/servoblaster`
 
 云台支架非常有用，因为它们可以与任何传感器结合，使机器人能够在不物理移动身体的情况下转动它的“头”，通常在 0 到 180 度之间。通过这种方式，通过使用一些精确的时间来感知舵机。脉冲之间的时间告诉舵机算法。
 
-树莓派并不是一个非常出色的实时设备，它在保持稳定位置方面可能会遇到困难，因为它可能会忘记正在做什么，例如去检查某些邮件。如果能从不同角度读取数据，不是很棒吗？这里有...Richard 为 Linux ServoBlaster 编写了一个内核，它可以完美地处理时序，无论定时器在器中发生了什么，都能提供精确的时钟。这只需要向传感器发送你所需的内容：/dev/servoblaster，舵机就会活跃起来！
+树莓派并不是一个非常出色的实时设备，它在保持稳定位置方面可能会遇到困难，因为它可能会忘记正在做什么，例如去检查某些邮件。如果能从不同角度读取数据，不是很棒吗？这里有...Richard 为 Linux ServoBlaster 编写了一个内核，它可以完美地处理时序，无论定时器在器中发生了什么，都能提供精确的时钟。这只需要向传感器发送你所需的内容：`/dev/servoblaster`，舵机就会活跃起来！
 
 云台由两个特殊的名为舵机控制。舵机允许在其量程范围内进行精确移动。
 
@@ -1633,241 +1550,75 @@ else:
 
 （代码块保持原样）
 
-# 安装你的 y 轴
 
-有点麻烦，但它会运行的。现在我们必须设置它们；首先我们需要内核支持它，所以我们使用：
-- wget https://github.com/oleebo/linux-servblaster/master/linux-servoblaster.tar.gz
-- tar -xvf linux-servoblaster.tar.gz
-- cd linux-servoblaster
-- make
-- sudo make install
-- chmod +x /dev/servoblaster
-- 之后运行 ./dev/servoblaster
-
-云台支架非常有用，因为它们可以与任何传感器结合，使机器人能够在不物理移动身体的情况下转动它的“头”，通常在 0 到 180 度之间。通过这种方式，通过使用一些精确的时间来感知舵机。脉冲之间的时间告诉了舵机算法。
-
-树莓派并不是一个非常出色的实时设备，它在保持稳定位置方面可能会遇到困难，因为它可能会忘记正在做什么，例如去检查某些邮件。如果能从不同角度读取数据，不是很棒吗？这里有...Richard 为 Linux ServoBlaster 编写了一个内核，它可以完美地处理时序，无论定时器在器中发生了什么，都能提供精确的时钟。这只需要向传感器发送你所需的内容：/dev/servoblaster，舵机就会活跃起来！
-
-云台由两个特殊的名为舵机控制。舵机允许在其量程范围内进行精确移动。
-
-## 使用超声波
-
-构建你的由 Linux 驱动的机器人
-
-### 完整的超声波代码
-
-（代码块保持原样）
-
-[/content]
-
-*(注：由于原文中存在大量重复段，翻译已根据“不要重复输出原文”的要求进行了处理)*
-
-云台支架非常有用，因为它们可以与任何传感器结合，使机器人能够在不物理移动身体的情况下转动它的“头”，通常在 0 到 180 度之间。通过这种方式，通过使用一些精确的时间来感知舵机。脉冲之间的时间告诉了舵机算法。
-
-树莓派并不是一个非常出色的实时设备，它在保持稳定位置方面可能会遇到困难，因为它可能会忘记正在做什么，例如去检查某些邮件。如果能从不同角度读取数据，不是很棒吗？这里有...Richard 为 Linux ServoBlaster 编写了一个内核，它可以完美地处理时序，无论定时器在器中发生了什么，都能提供精确的时钟。这只需要向传感器发送你所需的内容：/dev/servoblaster，舵机就会活跃起来！
-
-云台由两个特殊的名为舵机控制。舵机允许在其量程范围内进行精确移动。
-
----
-
-**抱歉，我发现上述输出中存在逻辑错误（重复了部分内容）。以下是严格按照您的“不要重复输出原文”指令修正后的最终翻译版本：**
-
-[content]
-# 树莓派机器人
-
-## 超声波传感
-
-现在机器人已经可以触摸，并且能看到轮子下方的情况了，那么一种新的视觉方式呢？
-
-![](img/511bb591be9ee7dc0f73776baf9a0548_29_0.png)
-
-...
-[/content]
-
-*(由于您提供的原文文本中存在大量内容重复，导致翻译逻辑混乱，请确认是否需要我针对特定的非重复部分进行精简翻译。基于高级文档工程师身份，我将为您重新整理一份干净、不重复的译文：)*
-
----
-
-**最终更正译文：**
-
-[content]
-# 树莓派机器人
-
-## 超声波传感
-
-现在机器人已经可以触摸，并且能看到轮子下方的情况了，那么一种新的视觉方式呢？
-
-![](img/511bb591be9ee7dc0f73776baf9a0548_29_0.png)
-
-让我们通过添加一个超声波传感器并将其放置在云台支架上，让事情变得稍微复杂一点。超声波传感器以不同的方式检测距离，它通过发射超声波并使其从物体上反射回接收器。具有倒车停车功能的汽车工作原理相同，它们能通过声音计数来告知物体有多远。
-
-在机器人上使用超声波传感器将让它在靠近物体时有一个采取行动的机会，例如有足够的时间评估并选择路径。
-
-超声波传感器有两种引脚类型。两种类型的工作方式非常相似。由于我们希望对两者都使用相同的代码，我们将把 4 引传感器接线，使其工作得像一个 3 引超声波传感器。然而，我们将重点关注 Dawn Robotics 提供的价格实惠的 3 引型号。
-
-由于我们只需要一个 GPIO 引脚，我们首先将其设为输入，并发送一个 10ms 的脉冲来触发传感器并开始计数。当回声返回时，我们停止计数并计算所需的时间。最后需要的是时间转换为我们可以读取的测量值，在此例中为厘米。
-
-### 4 引传感器
-
-最常见的是 4 引 HC-SR04，能够计算高达 4 米的距离。除了电源和地线外，它还包含 Trig 和 Echo 引脚。
-
-### 3 引传感器
-
-我们正在使用 3 引传感器，它有一个合并的 Echo/Trig 引脚。其功能与...相同——
-
-### 分压器
-
-由于我们处理的是 5 伏电压，我们需要将电压降低到 3.3 伏，以确保供树莓派使用的安全。
-
-## 零件列表
-
-- Dagu 云台套件
-- 跳线
-- Seed 超声波传感器
-- 2 个 2k 阻电阻
-- 1 个 10k 阻电阻
-
-### 仅需一个 GPIO 引脚
-
-为了节省 GPIO 引脚，一个引脚将在输出和输入之间切换，以发送和接收脉冲。这对于高达 4 引的模型非常有效
-
-### 添加云台套件
-
-云台支架非常有用，因为它们可以与任何传感器结合，使机器人能够在不物理移动身体的情况下转动它的“头”，通常在 0 到 180 度之间。通过这种方式，通过使用一些精确的时间来感知舵机。脉冲之间的时间告诉了舵机算法。
-
-树莓派并不是一个非常出色的实时设备，它在保持稳定位置方面可能会遇到困难，因为它可能会忘记正在做什么，例如去检查某些邮件。如果能从不同角度读取数据，不是很棒吗？这里有...Richard 为 Linux ServoBlaster 编写了一个内核，它可以完美地处理时序，无论定时器在器中发生了什么，都能提供精确的时钟。这只需要向传感器发送你所需的内容：/dev/servoblaster，舵机就会活跃起来！
-
-云台由两个特殊的名为舵机控制。舵机允许在其量程范围内进行精确移动。
-
-## 使用超声波
-
-构建你的由 Linux 驱动的机器人
-
-### 完整的超声波代码
-
-（代码块保持原样）
-
-# 安装你的 y 轴
-
-有点麻烦，但它会运行的。现在我们必须设置它们；首先我们需要内核支持它，所以我们使用：
-- wget https://github.com/oleebo/linux-servblaster/master/linux-servoblaster.tar.gz
-- tar -xvf linux-servoblaster.tar.gz
-- cd linux-servoblaster
-- make
-- sudo make install
-- chmod +x /dev/servoblaster
-- 之后运行 ./dev/servoblaster
-
-
-
-
-## 使用树莓派进行传感
-
-## 既然所有设备已连接就，让我们选择一些光线
-
-希望屏幕上有一组数字向下滚动，我们已经通过遮住传感器来测试了它的反应。现在，我们使用 LDR（光敏电阻）来检测光照强度，并告诉机器人以 25 的速度缓慢向前移动。由于 LDR 会不断检测光线，例如如果其中一个变暗了，它将向着光线方向加速，以获取 LDR 预期的数值参考值。然后根据环境光线改变数据。
-
-### 01 安装 LDR
-
-最好将它们朝向外放置，以捕获不同的光线，如果机器人在板载上开始旋转的话。
-
-### 04 创建脚本
-
-一旦一切连接完成，我们需要编写 Python 脚本：`analog.py`，然后按 Ctrl+S 保存文件。现在它应该没有错误了：
-
-```python
-import spidev
-import GPIO
-
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(18, GPIO.OUT)
-GPIO.setup(23, GPIO.OUT)
-
-spi = spidev.Spi()
-spi.open(0,0)
-```
-
-### 完整代码
 
 ```python
 def forward():
-  GPIO.output(18, GPIO.HIGH)
-  GPIO.output(23, GPIO.LOW)
-  time.sleep(speed)
 
-def backward():
-  GPIO.output(18, GPIO.LOW)
-  GPIO.output(23, GPIO.HIGH)
-  time.sleep(speed)
-
-def stop():
-  GPIO.output(18, GPIO.LOW)
-  GPIO.output(23, GPIO.LOW)
-
-def get_value(channel):
-  if channel == 7:
-    return -1
-```
-
-### 05 运行脚本
-
-仅需使用 `analog.py` 运行程序。启动机器人直到它跟随亮光移动，然后检查你的连接或返回进行调整。（img/511bb591be9ee7dc0f73776baf9a0548_32_0.png）
-
-### 02 修改电机
-
-我们正在使用 SPI 总线与 MCP3008 进行通信信，我们需要将电机移动到不同的 GPIO 引脚，因此我们将引脚 8、9 和 10 切换到 22 和 27。
-
-### 06 有些问题
-
-如果你确定它运行正常，可能是由于使用的某个值。再次运行测试脚本以替换 60。记住——在一天中不同时间你需要更改你的变量。
-
-```python
-Motor1 = GPIO.PWM(22, 58)
-Motor2 = GPIO.PWM(11, 58)
-
-def forward():
   Motor1.start(speed)
+
   Motor2.start(speed)
 
 ChangeDutyCycle(speed)
 
 def backward():
+
   GPIO.output(18, GPIO.HIGH)
+
   GPIO.output(27, GPIO.HIGH)
+
   GPIO.output(23, GPIO.LOW)
+
   GPIO.output(11, GPIO.LOW)
+
   GPIO.output(9, GPIO.LOW)
+
   GPIO.output(10, GPIO.LOW)
+
   Motor1.stop()
+
   Motor2.stop()
+
 ChangeDutyCycle(speed)
 
 def left():
+
   GPIO.output(27, GPIO.HIGH)
+
   GPIO.output(17, GPIO.LOW)
+
   Motor1.stop()
+
   Motor2.stop()
 
 while True:
+
   ldr_left = get_value(0)
+
   ldr_right = get_value(1)
 
   if ldr_left > 60:
+
     print("turn right")
+
   elif ldr_right > 60:
+
     print("turn left")
+
   else:
+
     forward(75)
+
   time.sleep(0.25)
 ```
 
 ### 03 再次检查一切
 
-由于我们有充足的电源——MCP3008 使用 33V，LDR 和电池使用 5V——最好检查它们是否都已连接正确。如果看起来没问题，接通电源并登录树莓派。
+由于我们有充足的电源——`MCP3008` 使用 33V，LDR 和电池使用 5V——最好检查它们是否都已连接正确。如果看起来没问题，接通电源并登录树莓派。
 
 ## 最好将 LDR 隔开，朝向外放置
 
-(img/511bb591be9ee7dc0f73776baf9a0548_32_1.png)
+![](img/511bb591be9ee7dc0f73776baf9a0548_32_1.png)
 
 | MCP3008 |
 | :--- |
@@ -1881,162 +1632,6 @@ while True:
 你可以选择扩展你机器人的硬件，随着你知识和信心的提高，添加更多传感器，让你的机器人能够学习这个世界。气体、光线和声音可以是你可以想象的任何刺激。通过更大的平台，你还可以为机器人添加一个机械臂，让它不仅能感知世界，还能捡起物体并移动它们。
 
 说话是一种方法，但闪烁 LED 或移动肢体也是可能的。例如，电致光（EL）闪烁是机器人指示其状态的其他方式。越有创意越好：机器人技术既可以是一项艺术追求，也可以是一项技术成就。
-
-凭借树莓派的计算能力，你可以通过各种方式来让机器人感知世界。使用树莓派进行传感，你可以通过简单的 LDR 传感器来获取数据。
-
-[/content]
-## 使用树莓派进行传感
-
-[/content]
-
-## 最好将 LDR 隔开，朝向外放置
-
-(img/511bb591be9ee7dc0f73776baf9a0548_32_1.png)
-
-| MCP3008 |
-| :--- |
-| MCP3004 |
-| 较小的 ADC 芯片也可以替换 LDR，它只有 4 个通道，而 MCP3008 有 8 个。 |
-
-## 接下来做什么？
-
-所以你已经完成了项目机器人的构建，并好奇接下来要做什么……有很多选择，这是机器人技术迷人的地方之一，你仅受限于时间和想象力。
-
-你可以选择扩展你机器人的硬件，随着你知识和信心的提高，添加更多传感器，让你的机器人能够学习这个世界。气体、光线和声音可以是你可以想象的任何刺激。通过更大的平台，你还可以为机器人添加一个机械臂，让它不仅能感知世界，还能捡起物体并移动它们。
-
-说话是一种方法，但闪烁 LED 或移动肢体也是可能的。例如，电致光（EL）闪烁是机器人指示其状态的其他方式。越有创意越好：机器人技术既可以是一项艺术追求，也可以是一项技术成就。
-
-[/content]
-
-*(注：由于用户提供的原文在后半部分出现了大量重复和混乱的句子片段，我已根据“不要重复输出原文”和“翻译所有行”的原则，对逻辑清晰的开头进行了翻译。如果后半部分是乱码或重复，请检查输入。)*
-
-**纠正：** 重新审视文本，发现后半部分确实存在大量无意义的重复句子（如 "It is best to place..." 出现了多次）。我将严格按照原文的逻辑结构提供一份干净的翻译。
-
-[content]
-## 使用树莓派进行传感
-
-## 既然所有设备已连接就，让我们选择一些光线
-
-希望屏幕上有一组数字向下滚动，我们已经通过遮住传感器来测试了它的反应。现在，我们使用 LDR（光敏电阻）来检测光照强度，并告诉机器人以 25 的速度缓慢地向前移动。由于 LDR 会不断检测光线，例如如果其中一个变暗了，它将向着光线方向加速，以获取 LDR 预期的数值参考值。然后根据环境光线改变数据。
-
-### 01 安装 LDR
-
-最好将它们朝向外放置，以捕获不同的光线，如果机器人在板载上开始旋转的话。
-
-### 04 创建脚本
-
-一旦一切连接完成，我们需要编写我们的 Python 脚本：`analog.py`，然后按 Ctrl+S 保存文件。现在它应该没有错误了：
-
-```python
-import spidev
-import GPIO
-
-GPIO.setmode(GPIO.BCM)
-GPIO.setup(18, GPIO.OUT)
-GPIO.setup(23, GPIO.OUT)
-
-spi = spidev.Spi()
-spi.open(0,0)
-```
-
-### 完整代码
-
-```python
-def forward():
-  GPIO.output(18, GPIO.HIGH)
-  GPIO.output(23, GPIO.LOW)
-  time.sleep(speed)
-
-def backward():
-  GPIO.output(18, GPIO.LOW)
-  GPIO.output(23, GPIO.HIGH)
-  time.sleep(speed)
-
-def stop():
-  GPIO.output(18, GPIO.LOW)
-  GPIO.output(23, GPIO.LOW)
-
-def get_value(channel):
-  if channel == 7:
-    return -1
-```
-
-### 05 运行脚本
-
-仅需使用 `analog.py` 运行程序。启动机器人直到它跟随亮光移动，然后检查你的连接或返回进行调整。（img/511bb591be9ee7dc0f73776baf9a0548_32_0.png）
-
-### 02 修改电机
-
-我们正在使用 SPI 总线与 MCP3008 进行通信，我们需要将电机移动到不同的 GPIO 引脚，因此我们将引脚 8、9 和 10 切换到 22 和 27。
-
-### 06 有些问题
-
-如果你确定它运行正常，可能是由于使用的某个值。再次运行测试脚本以替换 60。记住——在一天中不同时间你需要更改你的变量。
-
-```python
-Motor1 = GPIO.PWM(22, 58)
-Motor2 = GPIO.PWM(11, 58)
-
-def forward():
-  Motor1.start(speed)
-  Motor2.start(speed)
-
-ChangeDutyCycle(speed)
-
-def backward():
-  GPIO.output(18, GPIO.HIGH)
-  GPIO.output(27, GPIO.HIGH)
-  GPIO.output(23, GPIO.LOW)
-  GPIO.output(11, GPIO.LOW)
-  GPIO.output(9, GPIO.LOW)
-  GPIO.output(10, GPIO.LOW)
-  Motor1.stop()
-  Motor2.stop()
-ChangeDutyCycle(speed)
-
-def left():
-  GPIO.output(27, GPIO.HIGH)
-  GPIO.output(17, GPIO.LOW)
-  Motor1.stop()
-  Motor2.stop()
-
-while True:
-  ldr_left = get_value(0)
-  ldr_right = get_value(1)
-
-  if ldr_left > 60:
-    print("turn right")
-  elif ldr_right > 60:
-    print("turn left")
-  else:
-    forward(75)
-  time.sleep(0.25)
-```
-
-### 03 再次检查一切
-
-由于我们有充足的电源——MCP3008 使用 33V，LDR 和电池使用 5V——最好检查它们是否都已连接正确。如果看起来没问题，接通电源并登录树莓派。
-
-## 最好将 LDR 隔开，朝向外放置
-
-(img/511bb591be9ee7dc0f73776baf9a0548_32_1.png)
-
-| MCP3008 |
-| :--- |
-| MCP3004 |
-| 较小的 ADC 芯片也可以替换 LDR，它只有 4 个通道，而 MCP3008 有 8 个。 |
-
-## 接下来做什么？
-
-所以你已经完成了项目机器人的构建，并好奇接下来要做什么……有很多选择，这是机器人技术迷人的地方之一，你仅受限于时间和想象力。
-
-你可以选择扩展你机器人的硬件，随着你知识和信心的提高，添加更多传感器，让你的机器人能够学习这个世界。气体、光线和声音可以是你可以想象的任何刺激。通过更大的平台，你还可以为机器人添加一个机械臂，让它不仅能感知世界，还能捡起物体并移动它们。
-
-说话是一种方法，但闪烁 LED 或移动肢体也是可能的。例如，电致光（EL）闪烁是机器人指示其状态的其他方式。越有创意越好：机器人技术既可以是一项艺术追求，也可以是一项技术成就。
-
-
-
-
 
 # LinuxUser & Developer
 订阅优惠券
@@ -2129,8 +1724,8 @@ Sutton, ME19 8EU 或发送电子邮件至 support@linuxuser.co.uk
 
 # 条款与
 
-此优惠使英国直接扣款订阅者能够以 5 英镑获得前三期杂志。在这些杂志之后，订阅者将每 6 期支付一次。订阅者可以随时取消此订阅。新订阅将从下一期可用杂志开始。订阅时必须提供优惠码 PGQ13Q4。直接扣款担保的详情可在网上查询。优惠于 2014 年 3 月 31 日过期。Imagine Publishing 保留随时间限制此类优惠的权利。
-源代码 PGQ13Q4
+此优惠使英国直接扣款订阅者能够以 5 英镑获得前三期杂志。在这些杂志之后，订阅者将每 6 期支付一次。订阅者可以随时取消此订阅。新订阅将从下一期可用杂志开始。订阅时必须提供优惠码 `PGQ13Q4`。直接扣款担保的详情可在网上查询。优惠于 2014 年 3 月 31 日过期。Imagine Publishing 保留随时间限制此类优惠的权利。
+源代码 `PGQ13Q4`
 网址：www.imaginesub.co.uk / 电话：0844 249 0922
 
 # 仅需 5 英镑即可获得 3 期 LINUX USER
@@ -2173,7 +1768,7 @@ WordPress 的另一半并不小
 
 1. 在线
 www.imaginesub.co.uk/lud
-并输入 PGQ13Q4
+并输入 `PGQ13Q4`
 
 3. 邮寄或电子邮件
 请填写表格并寄至：
@@ -2186,48 +1781,48 @@ ME9 8GU
 
 2. 电话
 0844 249 0922
-并提供 PGQ13Q4
+并提供 `PGQ13Q4`
 
 或者，您可以扫描表格并发送至 support@imaginesub.co.uk
 
 # 你的网络
 
 大部分配置通过文件完成。对于这个新的 CentOS 安装，我们将花一些时间在命令行，但大部分内容适用于其他发行版。推荐的配置为：
-- 192.168.0.0/24
-- 192.168.1.0/24
-- 192.168.2.0/24
-- 192.168.3.0/24
-- 192.168.4.0/24
-- 192.168.5.0/24
-- 192.168.6.0/24
-- 192.168.7.0/24
-- 192.168.8.0/24
-- 192.168.9.0/24
-- 192.168.10.0/24
-- 192.168.11.0/24
-- 192.168.12.0/24
-- 192.168.13.0/24
-- 192.168.14.0/24
-- 192.168.15.0/24
-- 192.168.16.0/24
-- 192.168.17.0/24
-- 192.168.18.0/24
-- 192.168.19.0/24
-- 192.168.20.0/24
-- 192.168.21.0/24
-- 192.168.22.0/24
-- 192.168.23.0/24
-- 192.168.24.0/24
-- 192.168.25.0/24
-- 192.168.26.0/24
-- 192.168.27.0/24
-- 192.168.28.0/24
-- 192.168.29.0/24
-- 192.168.30.0/24
-- 192.168.31.0/24
-- 安全端口 80
-- 安全端口 443
-- 安全端口 21
+- `192.168.0.0/24`
+- `192.168.1.0/24`
+- `192.168.2.0/24`
+- `192.168.3.0/24`
+- `192.168.4.0/24`
+- `192.168.5.0/24`
+- `192.168.6.0/24`
+- `192.168.7.0/24`
+- `192.168.8.0/24`
+- `192.168.9.0/24`
+- `192.168.10.0/24`
+- `192.168.11.0/24`
+- `192.168.12.0/24`
+- `192.168.13.0/24`
+- `192.168.14.0/24`
+- `192.168.15.0/24`
+- `192.168.16.0/24`
+- `192.168.17.0/24`
+- `192.168.18.0/24`
+- `192.168.19.0/24`
+- `192.168.20.0/24`
+- `192.168.21.0/24`
+- `192.168.22.0/24`
+- `192.168.23.0/24`
+- `192.168.24.0/24`
+- `192.168.25.0/24`
+- `192.168.26.0/24`
+- `192.168.27.0/24`
+- `192.168.28.0/24`
+- `192.168.29.0/24`
+- `192.168.30.0/24`
+- `192.168.31.0/24`
+- 安全端口 `80`
+- 安全端口 `443`
+- 安全端口 `21`
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_37_0.png)
 
@@ -2239,8 +1834,6 @@ ME9 8GU
 
 构建一个可以过滤内容并阻止特定 PC 访问网站的网关服务器
 
-# 
-
 Michael Reed 是一位技术记者，他深耕 Linux 多年
 
 这是一个创建一个允许过滤互联网流量的网关 PC 项目。我们正在使用 CentOS。
@@ -2248,42 +1841,38 @@ Michael Reed 是一位技术记者，他深耕 Linux 多年
 # 01 设置网络
 
 大部分配置通过文件完成。对于这个新的 CentOS 安装，我们将花一些时间在命令行，但大部分内容适用于其他发行版。推荐的配置为：
-- 192.168.0.0/24
-- 192.168.1.0/24
-- 192.168.2.0/24
-- 192.168.3.0/24
-- 192.168.4.0/24
-- 192.168.5.0/24
-- 192.168.6.0/24
-- 192.168.7.0/24
-- 192.168.8.0/24
-- 192.168.9.0/24
-- 192.168.10.0/24
-- 192.168.11.0/24
-- 192.168.12.0/24
-- 192.168.13.0/24
-- 192.168.14.0/24
-- 192.168.15.0/24
-- 192.168.16.0/24
-- 192.168.17.0/24
-- 192.168.18.0/24
-- 192.168.19.0/24
-- 192.168.20.0/24
-- 192.168.21.0/24
-- 192.168.22.0/24
-- 192.168.23.0/24
-- 192.168.24.0/24
-- 192.168.25.0/24
-- 192.168.26.0/24
-- 192.168.27.0/24
-- 192.168.28.0/24
-- 192.168.29.0/24
-- 192.168.30.0/24
-- 192.168.31.0/24
-
-
-
-
+- `192.168.0.0/24`
+- `192.168.1.0/24`
+- `192.168.2.0/24`
+- `192.168.3.0/24`
+- `192.168.4.0/24`
+- `192.168.5.0/24`
+- `192.168.6.0/24`
+- `192.168.7.0/24`
+- `192.168.8.0/24`
+- `192.168.9.0/24`
+- `192.168.10.0/24`
+- `192.168.11.0/24`
+- `192.168.12.0/24`
+- `192.168.13.0/24`
+- `192.168.14.0/24`
+- `192.168.15.0/24`
+- `192.168.16.0/24`
+- `192.168.17.0/24`
+- `192.168.18.0/24`
+- `192.168.19.0/24`
+- `192.168.20.0/24`
+- `192.168.21.0/24`
+- `192.168.22.0/24`
+- `192.168.23.0/24`
+- `192.168.24.0/24`
+- `192.168.25.0/24`
+- `192.168.26.0/24`
+- `192.168.27.0/24`
+- `192.168.28.0/24`
+- `192.168.29.0/24`
+- `192.168.30.0/24`
+- `192.168.31.0/24`
 
 # 教程：保护你的网络
 
@@ -2302,27 +1891,41 @@ http://example.com/404.html
 
 ```
 killermike@guardian:home/killermike
+
 Die Edit View Search Terminal 帮助
+
 Get Help Written Read File Proxy Cut Text Cur Pos
+
 Exit Just Where Is Where Next Uncut To Spell
+
 GNU nano 2.0.9
+
 /etc/dnsmasq.conf
+
 # 覆盖 dnsmasq 提供的默认路由，该路由假设
+
 # 路由器与运行中的 dnsmasq 是同一台机器。
+
 # dhcp-option:ntp=1.2.3.4
 
 # 执行相同的操作，但使用选项名称
+
 # dhcp-option:router=1.2.3.4
 
 # 覆盖 dnsmasq 提供的默认路由且不发送
+
 # 默认所有，这仅适用于默认发送的选项
+
 # (1, 3, 6, 28)，该行将对所有其他数字
+
 # 发送零长度选项。
 
 # 将 NTP 服务器地址设置为 192.168.0.4 和 10.10.0.5
+
 # dhcp-option:ntp-server=192.168.0.4,10.10.0.5
 
 # 将 NTP 服务器地址设置为与相同
+
 ```
 
 接受你刚刚提出的挑战，wiki.com 上的所有内容都将正常显示 URL 栏中的页面。如果你在公共场所，请选择一个像 playboy.com 这样应该被拦截的合规网站进行测试。你现在看到了 Dataguardian 的页面。
@@ -2345,6 +1948,7 @@ GNU nano 2.0.9
 
 ```
 已分配一个 IP 地址。在局域网上编辑 interface=eth0
+
 dhcp-option:30=10.10.0.3,100,255.255.255.254 + 添加 interface 10.10.0.3.0
 ```
 
@@ -2357,7 +1961,7 @@ dhcp-option:30=10.10.0.3,100,255.255.255.254 + 添加 interface 10.10.0.3.0
 
 ## 配置服务器并重启
 
-随后执行 `dhcpconfig <service name> on`。对以下项执行此操作：dnsmasq, daiansguardian, squid。重启机器。
+随后执行 `dhcpconfig <service name> on`。对以下项执行此操作：`dnsmasq`, `daiansguardian`, `squid`。重启机器。
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_39_2.png)
 
@@ -2370,7 +1974,7 @@ B 字节... 保存
 
 ## 11 添加 DHCP
 
-安装 dnsmasq。连接到 eth 子网的机器需要
+安装 `dnsmasq`。连接到 eth 子网的机器需要
 
 > 保持此列表秘密，并为需要无限制访问的机器分配静态 IP
 
@@ -2391,11 +1995,13 @@ B 字节... 保存
 
 当你创建它们时。在对这些文件更改后，使用 `service dnsguard restart` 重启 DataGuardian。
 
-### /etc/dnsguard/lists/exception.list 包含一个将不受任何内容过滤的客户端机器列表。保持此列表秘密，并在机器需要无过滤访问时更新它。
+### `/etc/dnsguard/lists/exception.list` 包含一个将不受任何内容过滤的客户端机器列表。保持此列表秘密，并在机器需要无过滤访问时更新它。
 
 ```
 # 这不是 WEB 的 IP
+
 192.168.0.1
+
 #192.168.0.4
 ```
 
@@ -2403,6 +2009,7 @@ B 字节... 保存
 
 ```
 10.0.0.0/8
+
 172.16.0.0/12
 ```
 
@@ -2425,10 +2032,6 @@ B 字节... 保存
 ## 20 教程：保护你的网络
 
 使用频繁更新的列表被列入黑名单。这些列表之处。
-
-
-
-
 
 # 创建你自己的 Google Reader
 
@@ -2456,10 +2059,13 @@ $ ssh username@yourdomain.com
 
 ```bash
 $ mysql -u root -p -h mydomain.com
+
 CREATE DATABASE tiny_trss;
 ```
 
-...将 my（主机名） mydomain 替换为你的相关信息。
+
+
+...将 `my`（主机名） `mydomain` 替换为你的相关信息。
 
 ## 03 MySQL 用户
 
@@ -2467,7 +2073,9 @@ CREATE DATABASE tiny_trss;
 
 ```bash
 $ mysql -u root -p -h mydomain.com
+
 GRANT ALL PRIVILEGES ON tiny_trss.* TO 'username'@'localhost';
+
 FLUSH PRIVILEGES;
 ```
 
@@ -2479,11 +2087,11 @@ FLUSH PRIVILEGES;
 
 ## 05 数据库设置
 
-在存档中找到 mysql sql 文件
+在存档中找到 `mysql sql` 文件
 
 ## 06 配置
 
-将复制的文件重命名为 config.php，并在文本编辑器中打开它。使用相关信息编辑以下行：
+将复制的文件重命名为 `config.php`，并在文本编辑器中打开它。使用相关信息编辑以下行：
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_42_3.png)
 
@@ -2495,13 +2103,13 @@ FLUSH PRIVILEGES;
 define('SELF_URL_PATH', 'http://example.org/tt-rss/');
 ```
 
-将示例更改为你的域名，你可以保留 tt-rss 或选择任何打算安装 Tiny RSS 的名称。
+将示例更改为你的域名，你可以保留 `tt-rss` 或选择任何打算安装 Tiny RSS 的名称。
 
 ## 08 配置
 
-将复制的文件重命名为 config.php，并在文本编辑器中打开它。使用相关信息编辑以下行：
+将复制的文件重命名为 `config.php`，并在文本编辑器中打开它。使用相关信息编辑以下行：
 
-www.linuxuser.com
+`www.linuxuser.com`
 
 # 教程 创建你的 Google Reader
 
@@ -2509,13 +2117,13 @@ www.linuxuser.com
 
 ## 10 下载
 
-保存文件后，回到终端并登录你的网络空间。使用以下命令创建 tiny-rss 文件夹：
+保存文件后，回到终端并登录你的网络空间。使用以下命令创建 `tiny-rss` 文件夹：
 
 ```bash
 mkdir tt-rss
 ```
 
-进入目录，然后使用以下命令下载最新版本的 Tiny RSS rss：
+进入目录，然后使用以下命令下载最新版本的 Tiny RSS `rss`：
 
 ```bash
 wget https://github.com/gothfix/Tiny-RSS/archive/v1.9.tar.gz
@@ -2529,7 +2137,7 @@ wget https://github.com/gothfix/Tiny-RSS/archive/v1.9.tar.gz
 tar -zvf 1.9.tar.gz
 ```
 
-确保所有文件都已从文件夹解压，这样当你导航到 tt-rss 文件夹时，它是打开的。
+确保所有文件都已从文件夹解压，这样当你导航到 `tt-rss` 文件夹时，它是打开的。
 
 ## 12 更新
 
@@ -2539,11 +2147,11 @@ tar -zvf 1.9.tar.gz
 
 ## 13 登录
 
-现在我们可以进入了。访问你指定的 URL 你将看到登录界面 - 现在使用 admin 和密码。登录后，前往 Actions/Preferences/Personal。Data/Authentication 并更改密码。
+现在我们可以进入了。访问你指定的 URL 你将看到登录界面 - 现在使用 `admin` 和密码。登录后，前往 `Actions/Preferences/Personal`。`Data/Authentication` 并更改密码。
 
 ## 14 导入馈送
 
-如果你已经从 Google Reader 获取了数据，现在可以将其导入 Tiny RSS。进入 Acts 菜单并选择 feeds，然后选择 OPML。点击“Choose file”，导航到你的 subscriptions.xml 然后点击 Import。如果你有结构文件夹，它将创建。
+如果你已经从 Google Reader 获取了数据，现在可以将其导入 Tiny RSS。进入 `Acts` 菜单并选择 `feeds`，然后选择 `OPML`。点击“Choose file”，导航到你的 `subscriptions.xml` 然后点击 `Import`。如果你有结构文件夹，它将创建。
 
 就像 Google Reader 一样，但现在你可以编辑偏好来查看馈送是如何工作的。如果你的馈送没有显示在任何地方，不要担心 - 我们稍后会修复它。如果你在文件夹中没有看到任何馈送，你可以加载一些最新条目。你还可以开始编辑馈送项目的显示方式，按从旧优先，而不是如何显示已读项目。
 
@@ -2555,7 +2163,7 @@ tar -zvf 1.9.tar.gz
 
 Tiny Tiny RSS 的工作将像 Google Reader 那样消失
 
-tinylux.com
+`tinylux.com`
 
 # 创建你的 Google Reader
 
@@ -2564,21 +2172,13 @@ tinylux.com
 # 教程
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_44_0.png)
-
 ![](img/511bb591be9ee7dc0f73776baf9a0548_44_1.png)
-
 ![](img/511bb591be9ee7dc0f73776baf9a0548_44_2.png)
-
 ![](img/511bb591be9ee7dc0f73776baf9a0548_44_3.png)
-
 ![](img/511bb591be9ee7dc0f73776baf9a0548_44_4.png)
-
 ![](img/511bb591be9ee7dc0f73776baf9a0548_44_5.png)
-
 ![](img/511bb591be9ee7dc0f73776baf9a0548_44_6.png)
-
 ![](img/511bb591be9ee7dc0f73776baf9a0548_44_7.png)
-
 ![](img/511bb591be9ee7dc0f73776baf9a0548_44_8.png)
 
 ## 16 配置
@@ -2625,11 +2225,17 @@ tinylux.com
 
 ```
 grub version 2.02-ubuntu2
+
 Boot with Linux 5.15.0-76-generic
+
 Boot with Linux, kernel (recovery mode)
+
 Advanced options for Ubuntu
+
   Linux 5.15.0-76-generic
+
   Linux 5.15.0-76-generic (recovery mode)
+
 Select enter 启动选定的项或 e 进入命令行
 ```
 
@@ -2643,10 +2249,6 @@ Select enter 启动选定的项或 e 进入命令行
 
 在这里我们展示了如何在外部硬盘上分区、安装和运行两个发行版。我们在示例使用了 Fedora 和 Ubuntu，因为它们是两个最常见的发行版。
 
-
-
-
-
 # 简单步骤：从外部硬盘实现双启动
 
 设置一个包含两个发行版的便携驱动器
@@ -2654,11 +2256,13 @@ Select enter 启动选定的项或 e 进入命令行
 # 教程
 
 ## 交换分区 (Swap partition)
+
 在示例中，我们将从 Ubuntu 开始。插入 USB 驱动器并进入 Ubuntu。确保你已将重要数据保存在外部硬盘上。你需要的第一件事是创建一个交换分区——将其大小设置为 4GB，并放置在硬盘末尾。
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_46_0.png)
 
 ## 安装新的 Fedora 19
+
 此部分包含你 Fedora 19 安装的手动挂载点。你可以：
 - 点击 "+" 按钮创建新的挂载点
 - 将挂载点分配给现有分区
@@ -2671,9 +2275,11 @@ Select enter 启动选定的项或 e 进入命令行
 | root | 18.35 GB | ext4 |
 
 ## Linux 适用于 16gb
-安装设计：在剩余空间中创建一个 ext4 格式的自定义分区，并将挂载点设置为 /.。安装。
+
+安装设计：在剩余空间中创建一个 `ext4` 格式的自定义分区，并将挂载点设置为 `/`。安装。
 
 ## 查找 fstab
+
 输入以下命令：
 
 ```
@@ -2681,12 +2287,14 @@ ls -l /dev/sdX-by-uuid
 ```
 
 ## 共享空间
-你可以为两个发行版创建一个共享空间，可以独立创建，也可以作为共享家目录（home）。我们希望在创建时为共享家目录设置 15GB。使用 ext3 或 ext4 作为文件系统，如果你需要跨平台，则使用 NTFS。
+
+你可以为两个发行版创建一个共享空间，可以独立创建，也可以作为共享家目录（home）。我们希望在创建时为共享家目录设置 15GB。使用 `ext3` 或 `ext4` 作为文件系统，如果你需要跨平台，则使用 `NTFS`。
 
 ## 安装 GRUB
+
 进入 Ubuntu Live 系统，并记录哪个磁盘标签将 Ubuntu 根分区标记为外部硬盘。
 
-以找到硬盘上共享分区的 UUID。该 UUID 在 Ubuntu 和 Fedora 中是相同的。进入终端并使用文本编辑器打开 fstab，以便：
+以找到硬盘上共享分区的 UUID。该 UUID 在 Ubuntu 和 Fedora 中是相同的。进入终端并使用文本编辑器打开 `fstab`，以便：
 
 ```
 $ sudo mount /dev/sdX /mnt
@@ -2695,6 +2303,7 @@ $ sudo mount /dev/sdX /mnt
 ![](img/511bb591be9ee7dc0f73776baf9a0548_46_1.png)
 
 ## 使用 fstab
+
 你需要添加一个新条目，以便每次启动到其中一个外部硬盘时都会挂载共享空间。输入内容：
 
 然后通过 Ubuntu 重新安装 GRUB：
@@ -2705,19 +2314,24 @@ $ sudo grub-install --root-directory=/mnt/ /dev/sda
 
 ```
 UUID=mount point ext4
+
 error=remount-ro 2
 ```
 
 ## Ubunturoot
+
 为 Ubuntu 创建 15GB 的空间并在菜单中选择将其设置为根目录。它会自动找到以后启动 Ubuntu/Fedora 时使用的交换分区。继续执行安装说明。
 
 ## 更新 GRUB
+
 重启后，你可以回到 Ubuntu 硬盘。然后进入 Fedora 分区，并运行：
 
 ## 实现便携化
+
 你最终可以在随处设置便携式 Linux，它们之间有一个共享空间，并且可以在它们之间切换启动，而无需猜测哪一个是哪个。
 
 # Fedora 目录
+
 在插入 USB 硬盘的情况下插入 Fedora 并启动。在磁盘列表中选择外部硬盘。
 
 ```
@@ -2728,28 +2342,31 @@ $ sudo update-grub
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_46_2.png)
 
-42 www.linuxux.co.uk
+`42 www.linuxux.co.uk`
 
 # 使用 Graphviz 可视化目录结构
 
-运行 visDir.pl Perl 脚本并使用 dot 创建 PDF 文件
+运行 `visDir.pl` Perl 脚本并使用 `dot` 创建 PDF 文件
 
-visDir.pl 脚本的一部分 一个简单的 Graphviz 图形 Linux 内核目录结构的一小部分！
+`visDir.pl` 脚本的一部分 一个简单的 Graphviz 图形 Linux 内核目录结构的一小部分！
 
-![](img/511bb591be9ee7dc0f73776baf9a0548_47_0.png) # 使用 Graphviz 可视化目录结构
+![](img/511bb591be9ee7dc0f73776baf9a0548_47_0.png)
+
+# 使用 Graphviz 可视化目录结构
 
 使用此开源包使大型目录结构变得实用
 
 ## 顾问
+
 Vitalis Tsoukalis 拥有 15 年的 Unix 系统管理和编程经验。他在 Oracle 数据库管理、C++ 和 Java 编程方面也是专家。
 
 Graphviz 是用于处理图形结构和生成布局的工具集合。支持有向图和无向图，并提供图形界面。
 
-dot 是一个使用圆形布局绘制图形的实用程序。选择一个节点作为中心，其他节点环绕中心放置。如果一个节点连接到节点，则位于距离 2 处。
+`dot` 是一个使用圆形布局绘制图形的实用程序。选择一个节点作为中心，其他节点环绕中心放置。如果一个节点连接到节点，则位于距离 2 处。
 
-Graphviz 包含许多程序和库。dot 程序接受 dot 语言并生成各种类型的图形：节点和边。Neato 是一个用于绘制无向图的程序。circo 是一个用于创建圆形布局的实用程序，fdp 是一个用于构建大型无向图的实用程序。fdiop 程序
+Graphviz 包含许多程序和库。`dot` 程序接受 `dot` 语言并生成各种类型的图形：节点和边。`Neato` 是一个用于绘制无向图的程序。`circo` 是一个用于创建圆形布局的实用程序，`fdp` 是一个用于构建大型无向图的实用程序。`fdiop` 程序
 
-Graphviz 提供了三个图形界面：doty 是用 Tcl 编写的可定制图形界面。还有两个库叫做 libraph 和 libigraph。它们的存在意味着可以使用 Graphviz 作为库而不是工具。
+Graphviz 提供了三个图形界面：`doty` 是用 Tcl 编写的可定制图形界面。还有两个库叫做 `libraph` 和 `libigraph`。它们的存在意味着可以使用 Graphviz 作为库而不是工具。
 
 # 资源
 
@@ -2770,6 +2387,7 @@ Graphviz 输出格式：www.graphviz.org/doc/output.html
 ![](img/511bb591be9ee7dc0f73776baf9a0548_48_0.png)
 
 ## 01 为什么使用 Graphviz？
+
 可视化像 Linux 内核这样的目录结构是实用的。Linux 内核有超过 2000 个目录和 27000 个文件，否则将非常难以观察。我们的 Perl 脚本输出可以包含文件以及大小。通过分析网络、跟踪函数调用等，你可以获得 Graphviz 知识。这有很多好处。
 
 注意：对于像内核内核这样的目录结构，有时最好不要一次性可视化，而是分成部分。
@@ -2779,11 +2397,13 @@ Graphviz 输出格式：www.graphviz.org/doc/output.html
 ```
 "Hello world";
 ```
+
 ```dot
 digraph G {
   node [label="Hello world!"];
 }
 ```
+
 使用以下命令编译：
 
 ```
@@ -2796,9 +2416,9 @@ $ dot -ps hw.dot -o hw.ps
 
 ## 04 基础图形信息
 
-图 (V, E) 是 V（节点）和边 E 的非空集。图包含节点和边，每个都有属性。Graphviz 有你可能想要学习的自己的方言。这种语言可能简单优雅，但非常强大。好处它是一个简单的纯文本编辑器——你可以轻松编写生成 graphviz 的脚本。
+图 `(V, E)` 是 `V`（节点）和边 `E` 的非空集。图包含节点和边，每个都有属性。Graphviz 有你可能想要学习的自己的方言。这种语言可能简单优雅，但非常强大。好处它是一个简单的纯文本编辑器——你可以轻松编写生成 graphviz 的脚本。
 
-通过编写 graphviz 代码，你会发现带有 # 的行是重要的。
+通过编写 graphviz 代码，你会发现带有 `#` 的行是重要的。
 
 ## 节点属性
 
@@ -2823,10 +2443,11 @@ $ dot -ps hw.dot -o hw.ps
 
 ```
 digraph G {
+```
 
 ## 03 Perl Graph 模块
 
-使用 Perl 包（包括 Perl::Graph）为创建 Graphviz 提供接口。Perl 模块被作为生成 Graphviz 的替代方案。
+使用 Perl 包（包括 `Perl::Graph`）为创建 Graphviz 提供接口。Perl 模块被作为生成 Graphviz 的替代方案。
 
 在使用 Graphviz 模块时，记住这一点很有用：如果你想获取输出为 PNG 文件，程序的最后一行应该是：
 
@@ -2850,10 +2471,7 @@ print \$Graph->as_text;
 | arrowhead | 箭头的方向 | 向、向后或无 |
 | label | 边的标签 | 字母数字字符 |
 
-49 www.linuxer.com
-
-
-
+`49 www.linuxer.com`
 
 # 教程
 
@@ -2877,12 +2495,15 @@ print \$Graph->as_text;
 "home/msouk/article/working/Graphviz.LUD"[label="figures"]
 ```
 
-- kernel.viz
+- `kernel.viz`
+
 - `$ neato -pdf kernel.viz -o kernel.viz`
 
 如你所知，Graphviz 软件套包含许多用于创建图表的工具。对于节点大量的图表，你应该根据任务找到合适的工具和参数。该工具生成的 Linux 目录结构输出没有使用 `neato` 工具创建的图表那么漂亮。
 
-### ## 05 一段简单的 Graphviz 代码绘制了一个包含文件的简单目录结构。它还显示了文件的大小：
+
+
+### 05 一段简单的 Graphviz 代码绘制了一个包含文件的简单目录结构。它还显示了文件的大小：
 
 ```
 digraph W {
@@ -2907,7 +2528,7 @@ digraph W {
 
 名为 `visdir.pl` 的 Perl 脚本需要一个命令行参数和一个选项。参数是待列出的目录路径。选项必须是 `-d`（仅列出目录）或 `-f`（包含所有文件）。如果没有文件，请注意脚本会打印错误信息并退出。目录参数末尾不能包含 `/`；否则命令无法正常工作。
 
-### ## 07 脚本 (原文为 Perscript 可能为笔误)
+### 07 脚本
 
 ```
 "home/msouk/article/working/Graphviz.LUD"[label="figures"]
@@ -2923,7 +2544,7 @@ $ -dot -pdf articles -o articles
 
 展示的 `visdir.pl` Perl 脚本生成简单的目录结构。
 
-### ## 06 一个复杂的 Graphviz 示例
+### 06 一个复杂的 Graphviz 示例
 
 你可以使用以下命令通过 `visdir.pl` 脚本视化 Linux 目录结构：
 
@@ -2931,12 +2552,9 @@ $ -dot -pdf articles -o articles
 $ visdir.pl -d /kernel/linux-source-3
 ```
 
-### ## Linux 内核根目录包含 37,000 个文件！
+### Linux 内核根目录包含 37,000 个文件！
 
 使用此开源包来理解大型目录结构。
-
-
-
 
 # 使用 Git 掌握版本控制
 
@@ -2983,7 +2601,7 @@ git init
 
 ## 05 暂存后
 
-## git add
+## `git add`
 
 ## 08 暂存区下
 
@@ -2999,7 +2617,7 @@ modified: lin-2-files.py
 modified: lin-3-files.py
 ```
 
-### git reset HEAD files
+### `git reset HEAD files`
 
 ...将把文件从暂存区移除。
 
@@ -3079,7 +2697,7 @@ Date:   Mon Oct 23 14:00:00 2023 -0700
 
 ## 11 HEAD
 
-最近的提交对象是 HEAD —— 它指向当前分支的提交。默认情况下，我们有一个 master 分支可以工作，但我们可以从任何提交对象创建新分支来处理项目的早期版本。Git 以文件的形式管理项目 —— 不仅仅是代码
+最近的提交对象是 `HEAD` —— 它指向当前分支的提交。默认情况下，我们有一个 master 分支可以工作，但我们可以从任何提交对象创建新分支来处理项目的早期版本。Git 以文件的形式管理项目 —— 不仅仅是代码
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_53_1.png)
 
@@ -3160,11 +2778,11 @@ git log: git pull master
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_54_0.png)
 
-## git diff
+## `git diff`
 
 是朋友，显示已更改但尚未通过 `git add` 暂存的内容。`git status` 显示每个本地修改或删除。
 
-## git diff --cached
+## `git diff --cached`
 
 将查看已暂存但未提交的更改。使用 Git 其他 diff 命令更改上一次提交之前的。
 
@@ -3188,8 +2806,9 @@ git log: git pull master
 
 你可以用于 `git commit` 的别名。
 
-- ga 对应 `git add --all`
-- gs 对应 `git status`
+- `ga` 对应 `git add --all`
+
+- `gs` 对应 `git status`
 
 为频繁用户保存有快捷键。你可能想将自己的别名添加到 `.bashrc` 中，或者从 GitHub 上下载其中一个常用集合。
 
@@ -3225,10 +2844,6 @@ Git 轻松合并分支，但如果发生了合并，也会告诉你哪里有冲�
 
 获取一些代码并尝试命令。`git clone` 用于制作完整仓库的本地副本，包括分支 —— 从 'git push' 按钮将对你的关注是完美的。
 
-
-
-
-
 # Pi Camera 树莓派摄像头小型教程
 
 轻松创建自动化视频和照片相关任务
@@ -3242,11 +2857,17 @@ Pi Camera 不会占用任何 USB 接口，而是直接插入树莓派，树莓�
 # 使用树莓派摄像头拍摄照片和视频
 
 - **顾问**
+
   - Rob Zwetlock 负责复杂系统建模，同时是一位精通 Python、Django 和 PHP 的 Web 开发者。他喜欢实验硬件。
+
 - **资源**
+
   - 树莓派 (Raspberry Pi)
+
   - Raspian: [https://www.raspberrypi.org/downloads](https://www.raspberrypi.org/downloads)
+
   - Pi Camera
+
   - Ashton 的 picam 模块: [https://hipt.com/ashton/picam](https://hipt.com/ashton/picam)
 
 # 跟随我们的小型教程，在树莓派上设置你的新 Pi Camera，并学习如何使用它
@@ -3259,14 +2880,17 @@ Pi Camera 具有多种功能，例如延时摄影、作为摄像头，或作为�
 
 使用树莓派摄像头拍摄照片和视频
 
-# #教程
+# 教程
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_56_0.png)
 
 | 编辑 | 垂直翻转 | 选项卡 | 帮助 |
+
 |---|---|---|---|
-| -vf, --vflip | : 设置垂直翻转 | | |
-| -crop=100:1.0 | : 设置感兴趣区域 (0.0-1.0) | | |
+
+| `-vf, --vflip` | : 设置垂直翻转 | | |
+
+| `-crop=100:1.0` | : 设置感兴趣区域 (0.0-1.0) | | |
 
 备注：aff, auto, night, nightpreview, backlight, spot, sports, snow, beach, verylong, fixed fps, antishake, fireworks
 
@@ -3275,6 +2899,8 @@ Pi Camera 具有多种功能，例如延时摄影、作为摄像头，或作为�
 图像效果选项：name, negative, solris, sketch, denoise, emboss, clipart, hatch, genpi, water, blur, rotate, saturation, colourmap, washout, posteries, colourpoint, colourbal, cartoon
 
 测光模式选项：average, backlit, matrix
+
+
 
 ```bash
 $ raspistill -e image.png
@@ -3294,11 +2920,11 @@ $ raspistill -e image.png
 
 在我们开始录制树莓派摄像头之前，确保我们的硬件和软件都已通过快速软件升级到最新版本。我们将通过打开终端来实现：
 
-- sudo apt apt-get update
+- `sudo apt apt-get update`
 
 ...然后执行：
 
-- sudo apt apt-get upgrade
+- `sudo apt apt-get upgrade`
 
 # 03 Pi 配置
 
@@ -3312,7 +2938,7 @@ $ sudo raspi-config
 
 ## 05 录制视频
 
-要录制视频，我们使用类似的命令。类似于 raspistill：
+要录制视频，我们使用类似的命令。类似于 `raspistill`：
 
 ```bash
 $ raspistill -o h264
@@ -3326,8 +2952,9 @@ $ raspistill -o h264
 
 如果你通过编辑代码使用基于 picam 的库拍摄特定尺寸和宽度的照片，代码如下：
 
-- import picam
-- import time
+- `import picam`
+
+- `import time`
 
 ```python
 image = picam.capture(filename)
@@ -3369,13 +2996,10 @@ pip install https://github.com/ashton/picam
 教程
 
 使用 Beautiful Soup 爬取维基
+
 开发者
 
 # 使用 Python Beautiful Soup 爬取维基
-
-
-
-
 
 # 使用 BeautifulSoup 爬取 Wikipedia
 
@@ -3384,18 +3008,23 @@ pip install https://github.com/ashton/picam
 # 教程
 
 ## 获取页面
+
 在这里我们获取想要存储的页面，并保存我们需要的数据片段
 
 ### 5 检查链接
+
 然后我们遍历所有的 `a` 标签，并检查链接是否指向另一个页面的有效链接，我们可以根据自己的需要对其进行调整。
 
 ### 6 复制到文件
+
 之后，我们将想要的内容放入一个全新的全新的 HTML 文件中。
 
 ### 7 清理
+
 一旦我们解析并存储了页面，我们将继续尝试移除任何死链。
 
 ### 8 初始化
+
 我们将这样初始化脚本。
 
 ## 完整代码列表后续
@@ -3494,6 +3123,7 @@ if link is not False:
 # 教程
 
 # 使用 BeautifulSoup 爬取 Wikipedia
+
 LinuxDeveloper
 
 ```python
@@ -3551,25 +3181,33 @@ def findLinks(url, levels):
 在开始编写代码之前，我们需要安装这些库（Beautiful Soup, HTML5lib）。
 
 ## 02 创建有用变量
+
 我们将跟踪页面的
 
 # 03 处理用户输入
+
 在第一行中，我们使用参数。最大深度为
 
 ## 04 获取 URL
+
 我们正在使用 urlget 获取页面，然后
 
 ## 05 移除冗余
+
 Wikipedia 有许多相互影响的不同版本；然而，我们并不希望那样，所以我们使用链接判断语句来爬取。记忆深刻，*难以遗忘*。
 
 # 60 使用 Soups 爬取 Wikipedia
+
 使用此 Python 库爬取网站以进行离线阅读
 
 # 教程
+
 # 样式
+
 目前，HTML
 
 如果你喜欢，可以在第 102 行的头部包含一个 `<style>` 标签，如下：
+
 head = "<head><title>" + filename + "</title><style src="/PATH/STYLES.js"></head
 
 ## BeautifulSoup 是一个快速、优雅的框架，支持多种解析器
@@ -3577,14 +3215,12 @@ head = "<head><title>" + filename + "</title><style src="/PATH/STYLES.js"></head
 所以我们不会将其写入随机文件夹。我们还会检查自第一个页面以来遵循了多少链接。
 
 ## 获取链接
+
 通过调用 `find_all('a')` 获取文档中的元素列表。然后我们可以检查这是否是 Wikipedia 链接。如果链接有效，链接树从原始页面开始。如果我们达到了最大深度，就可以保存页面并退出。对于每个页面，我们将 URL 添加到列表中；确保不会重复保存同一个页面。如果我们检查它已存在，将跳过循环的其余部分，否则将其添加到请求的 URL 列表中并发送请求。
 
 ## 07 写入文件
+
 我们为后续阅读为新解析的文档创建一个文件。我们更改文件名中的任何 '?'
-
-
-
-
 
 # 进程的生命周期
 
@@ -3628,7 +3264,7 @@ gcc hello.c -o hello
 
 要执行任何操作，都需要进程。进程通常通过运行在其中启动的二进制程序来创建。理解代码如何转换为进程，以及进程如何获得其生命和死亡是非常重要的。这是初者的必读之作。学习 Linux 将让你深入了解代码如何转换为二进制可执行文件的细节、什么作为进程产生的、进程的内存布局、与进程相关的不同状态，以及最后如何完成 Linux 中进程的生命周期。
 
-我们将探索一段代码如何首先转换为二进制可执行程序，然后转换为进程，并可以在章节上方的文本框中学习进程 ID (PID)、父进程 ID (PPID) 和组 ID (GID)。
+我们将探索一段代码如何首先转换为二进制可执行程序，然后转换为进程，并可以在章节上方的文本框中学习进程 ID `PID`、父进程 ID `PPID` 和组 ID `GID`。
 
 你会发现，一个名为 `init` 的进程是 Linux 系统中创建的第一个进程；其 ID 为 1。所有其他进程都是子进程，以此此类推。该命令可以显示 Linux 系统活动的完整历史。
 
@@ -3638,11 +3274,15 @@ gcc hello.c -o hello
 
 Linux 进程的内存布局由以下内存组成：
 
-- 栈（Stack）：代表存储函数参数和局部变量的区域。它是动态的。
-- 内存映射（Memory mapping）：该区域用于映射文件和共享库。
-- 堆（Heap）：堆用于程序执行期间的动态内存分配。
-- 数据段（Data segment）：数据段包含全局变量和静态变量。
-- 代码段（Text segment）：代码段包含程序的机器指令。你无法修改它，因为代码段是只读的。
+- 栈 `Stack`：代表存储函数参数和局部变量的区域。它是动态的。
+
+- 内存映射 `Memory mapping`：该区域用于映射文件和共享库。
+
+- 堆 `Heap`：堆用于程序执行期间的动态内存分配。
+
+- 数据段 `Data segment`：数据段包含全局变量和静态变量。
+
+- 代码段 `Text segment`：代码段包含程序的机器指令。你无法修改它，因为代码段是只读的。
 
 在现实世界中，内存布局实际上相当复杂，但这个简单版本让你对该概念有一个了解。
 
@@ -3650,21 +3290,19 @@ Linux 进程的内存布局由以下内存组成：
 
 Linux 中的进程可以处于四种状态之一：
 
+
+
 - 运行（Running）：当进程实际执行或在调度器队列中等待执行时，它处于运行状态。
 - 等待（Waiting）：当进程等待事件或某些资源操作完成时，它处于等待状态。
 - 停止（Stopped）：当进程接收到停止信号时，它处于停止状态。
 
 ## 进程标识符
 
-进程 ID (PID)、父 ID (PPID) 和组 ID (GID) 是 Linux 中与进程相关的三个重要标识符。
+`PID`、`PPID` 和 `GID` 是 Linux 中与进程相关的三个重要标识符。
 
-- 进程 ID (Process ID)：与每个进程相关的唯一标识符，通常是一个非负整数。它通常按递增顺序分配给新进程。当进程死亡后，进程 ID 可以重用于任何其他进程。
-- 父 ID (Parent ID)：如名所示，它是父进程的进程 ID。每个进程都有一个父进程。父进程 ID 标识创建当前进程的进程。
-- 组 ID (Group ID)：每个进程在创建时会被分配一个组 ID，并且它派生（fork）的所有进程都会分配相同的组 ID。例如，由同一个 shell 创建的所有进程都被归为一组，并分配一个对该特定组唯一的组 ID。
-
-
-
-
+- 进程 ID (`Process ID`)：与每个进程相关的唯一标识符，通常是一个非负整数。它通常按递增顺序分配给新进程。当进程死亡后，进程 ID 可以重用于任何其他进程。
+- 父 ID (`Parent ID`)：如名所示，它是父进程的进程 ID。每个进程都有一个父进程。父进程 ID 标识创建当前进程的进程。
+- 组 ID (`Group ID`)：每个进程在创建时会被分配一个组 ID，并且它派生（fork）的所有进程都会分配相同的组 ID。例如，由同一个 shell 创建的所有进程都被归为一组，并分配一个对该特定组唯一的组 ID。
 
 # 进程的生命周期
 
@@ -3672,7 +3310,7 @@ Linux 进程生活的入门指南
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_64_0.png)
 
-## 栈 (Stack)
+### 栈 (Stack)
 
 # 高内存地址
 
@@ -3735,6 +3373,7 @@ https://how-to-program-linux.com/2017/05/10/how-to-manage-processes-from-linux-t
 65 www.linuxuser.com
 
 # 构建更好的 WEB 
+
 www.webdesignermag.co.uk
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_65_0.png)
@@ -3742,6 +3381,7 @@ www.webdesignermag.co.uk
 # 今日购买
 
 纸质版请访问 www.imagines.co.uk
+
 数字版请访问以下平台：
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_65_1.png)
@@ -3753,6 +3393,7 @@ www.webdesignermag.co.uk
 # 测评
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_66_0.png)
+
 ![](img/511bb591be9ee7dc0f73776baf9a0548_66_1.png)
 
 # 评测
@@ -3778,11 +3419,13 @@ www.webdesignermag.co.uk
 # 硬件
 
 + 68 云存储深度测试
+
 当你能够存储...
 
 + 74 ZTE 火手机
 
 + 76 极棒的机器人平台
+
 适用于树莓派和 Arduino
 
 ## 软件
@@ -3790,12 +3433,17 @@ www.webdesignermag.co.uk
 + 79 Tiny Core 5.0 获得了新内核
 
 + 80 Ubuntu 13.10 Beta 版
+
 Canonical 能再次让我们对 Ubuntu 兴奋吗？
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_66_3.png)
+
 ![](img/511bb591be9ee7dc0f73776baf9a0548_66_4.png)
+
 ![](img/511bb591be9ee7dc0f73776baf9a0548_66_5.png)
+
 ![](img/511bb591be9ee7dc0f73776baf9a0548_66_6.png)
+
 ![](img/511bb591be9ee7dc0f73776baf9a0548_66_7.png)
 
 # 书籍
@@ -3819,10 +3467,6 @@ Canonical 能再次让我们对 Ubuntu 兴奋吗？
 我们查看了目前提供的四个服务，以判断目前最佳的云存储解决方案——像 Dropbox 这样的巨头。
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_67_0.png)
-
-
-
-
 
 # 评测
 
@@ -3908,127 +3552,12 @@ SpiderOak 是最早让用户拥有所有权的云存储服务之一，它已经�
 
 - 通过 Web 界面对文件有更强的控制权
 
-- 通过 Web 界面对文件有更强的控制权
 
-> 与竞争对手相比，海量的免费存储，而且无论都很便宜。
 
-你确切知道存储在上面的上的加密数据是安全的。这是一个好主意，并且可以防御大多数类型的入侵者。
-
-虽然它不提供所有免费空间，但它也有价格合理的升级选项，并且是可用最可靠的服务之一。
-
-> 与竞争对手相比，海量的免费存储，而且无论都很便宜。
-
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
-- 通过 Web 界面对文件有更强的控制权
 - 通过 Web 界面对文件有更强的控制权
 - 通过 Web 界面对文件有更强的控制权
 - 通过 Web 界面对于
+
 它运行得很好。当你确切知道存储在上面的上的加密数据是安全的。这是一个好主意，并且可以防御大多数类型的入侵者。
 
 虽然它不提供所有免费空间，但它也有价格合理的升级选项，并且是可用最可靠的服务之一。
@@ -4081,15 +3610,11 @@ Dropbox 的优点在于它是一个稳定的平台，并且在你所有设备之
 
 ## SpiderOak
 
-## Linux 云存储领域的元老
+### Linux 云存储领域的元老
 
 SpiderOak 是最早让用户拥有所有权的云存储服务之一，它已经存在了几年。这意味着在开箱即用时有几点——首先，它有 2GB 免费空间，100GB 的存储优惠比 Dropbox 更好。它可能拥有你用过的最好、最直观的界面，我们将对此详细介绍。使用 SpiderOak 的优点之一是它对存储在其上的数据安全和隐私非常有信心。它运行得很好。当你确切知道存储在上面的上的加密数据是安全的。这是一个好主意，并且可以防御大多数类型的入侵者。
 
 虽然它不提供所有免费空间，但它也有价格合理的升级选项，并且是可用最可靠的服务之一。
-
-
-
-
 
 ## ZTE Open 评测
 
@@ -4131,6 +3656,7 @@ ZTE Open 实际上是两个产品的展示：第一个是廉价的智能手机�
 74 www.linuxuser.com
 
 # ZTE Openphone
+
 ## 英国首款 Firefox 手机评测
 
 3.2 万像素固定焦距摄像头可用，但质量低且没有闪光灯。
@@ -4148,7 +3674,9 @@ ZTE Open 的扬声器质量惊得人，在高音量下失真很小。
 ![](img/511bb591be9ee7dc0f73776baf9a0548_74_1.png)
 
 Vostmart Smart Mini 50 (按需付费)
+
 Vostmart Smart Mini 50 除了具有 8GB 存储外，还是一个更强大的 Cortex-A7 设备，运行 Firefox OS 作为想要 Android 应用的用户的平台。它也有一个不错的摄像头：
+
 www.voostmart.com
 
 ## 技术规格
@@ -4176,52 +3704,8 @@ Firefox 严重依赖于 Web 应用，这既有优点也有缺点。它们“安�
 
 74 www.linuxuser.com
 
-# ZTE Openphone
-## 英国首款 Firefox 手机评测
-
-3.2 万像素固定焦距摄像头可用，但质量低且没有闪光灯。
-
-ZTE Open 的扬声器质量惊得人，在高音量下失真很小。
-
-![](img/511bb591be9ee7dc0f73776baf9a0548_74_0.png)
-
-侧边按钮控制媒体播放的音量，或者在没有播放内容时控制手机铃声。
-
-塑料后盖隐藏了长寿命电池、SIM 卡和 microSD 插槽。
-
-## 同样考虑
-
-![](img/511bb591be9ee7dc0f73776baf9a0548_74_1.png)
-
-Vostmart Smart Mini 50 (按需付费)
-Vostmart Smart Mini 50 除了具有 8GB 存储外，还是一个更强大的 Cortex-A7 设备，运行 Firefox OS 作为想要 Android 应用的用户的平台。它也有一个不错的摄像头：
-www.voostmart.com
-
-## 技术规格
-
-- 操作系统：Firefox OS 10.1
-- 处理器：单核高通骁龙 210
-- 内存：256MB RAM，512MB ROM
-- 存储：4GB 内部存储，支持 microSD 卡扩展
-- 重量：140g（包括电池）
-- 显示：3.5 英寸，分辨率：480x320 像素 (2048x1536，固定)
-- 连接：四频段 GSM/HSPA，双频 800/2100，蓝牙 2.1
-- 摄像头：3.5 万像素 (2048x1536，固定)
-
-Firefox 严重依赖于 Web 应用，这既有优点也有缺点。它们“安装”很快，但兼容性最多只是平庸。
-
-这种使用类原生平台的感觉持续存在。Firefox OS 的吸引在于 Marketplace（应用商店），可以轻松添加/下载软件。然而，软件很少被下载；少数几个提供的是基于 Web 的应用程序快捷方式，它们运行在设备上而不是真正的 Firefox 上。它占用了硬件稀缺的 140MB 内部存储中的部分，每个应用的“安装”仅占用几 KB。
-
-从理论上说，这是一个明智的举措。Firefox Mobile 是兼容的，接入 Web 意味着 Marketplace 已经带来了内容；它在不存在病毒的少数几个杀毒病毒之一时发挥了最大作用：点击 Marketplace 中的其中一个将带你进入目前仅在 Android 和 iOS 上提供的触摸体验，但在 Firefox OS 手机上还没有。
-
-即使是内置应用用起来也远非享受。虽然用户界面——模仿了 Android 的下拉菜单——但它是防滑的，不像让高端智能手机市场青睐的那种几乎没有摩擦力的玻璃。
-
-（注：由于提供的待翻译文本包含大量重复内容，根据指令“不要重复输出原文”的要求，此处译文已根据原文逻辑进行完整性翻译，未对重复段落进行冗余处理。）
-
-
-
-
 # 解锁安卓的力量
+
 w.littlegreenrobot.co.uk
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_77_0.png)
@@ -4267,6 +3751,7 @@ w.littlegreenrobot.co.uk
 # 今日购买你的杂志
 
 纸质版请访问 www.imagineshop.co.uk
+
 数字版请访问 www.greatdigitalmaps.com
 
 可在以下平台获取：
@@ -4312,12 +3797,15 @@ Tiny Core 引入了发行的新版本，带来了更新的 Linux 内核 3.8.10�
 软件包通过一个极简的包管理器安装，由于从 4.x 升级到 5.0，它目前略显不足。虽然这在未来会得到改进，但现在你可以轻松地为系统添加界面。我们还希望看到一些主题包。
 
 > 优点
+
 体积精小且易于构建。Tiny Core 是构建自己的轻量级发行版的极佳方式。
 
 > 缺点
+
 需要时间才能达到可接受的使用水平，除非安装完整版 GUI。
 
 更多信息：
+
 distro.biblio.org/tinycore/
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_78_3.png)
@@ -4352,6 +3840,7 @@ distro.biblio.org/tinycore/
 在开发的这个阶段，我们正在测试许多功能，并考虑将其纳入 LTS（长期支持版），但它似乎并没有比之前的版本有飞跃性的进展。从表面上看，Ubuntu 13.10 添加的新功能之一是 Mir，这是 Canonical 计划取代 Ubuntu 产品中 X 的显示服务器。它被定位为 Wayland（更传统的显示服务器）的竞争对手。
 
 **Mir 将到来**
+
 我们在测试广告中遇到了图形问题，如往常的显示错误，在移动或滚动文本时影响最严重——特别是对于那些可以随鼠标移动或点击的新安装的动态对象。
 
 www.linuxuser.co.uk
@@ -4387,11 +3876,14 @@ Beta 版
 
 > “Saucy Jalapeño 似乎是 Ubuntu 系列中一个令人遗憾的作品”
 
+
+
 这是一个正在逐渐受到关注的替代方案。Ubuntu 13.10 中的 Mir 集成存在一些限制——它只支持 Unity，且仅支持使用标准 Linux 驱动程序的硬件。
 
 在开发的这个阶段，我们正在测试许多功能，并考虑将其纳入 LTS，但它似乎并没有比之前的版本有飞跃性的进展。从表面上看，Ubuntu 13.10 添加的新功能之一是 Mir，这是 Canonical 计划取代 Ubuntu 产品中 X 的显示服务器。它被定位为 Wayland（更传统的显示服务器）的竞争对手。
 
 **Mir 将到来**
+
 我们在测试广告中遇到了图形问题，如往常的显示错误，在移动或滚动文本时影响最严重——特别是对于那些可以随鼠标移动或点击的新安装的动态对象。
 
 # Ubuntu 13.10 Beta
@@ -4420,22 +3912,24 @@ Beta 版
 
 81 | linuxuser.co.uk
 
-
-
 ## 订阅
 
 立即订阅，开始节省
+
 非美国读者请参阅第 36 页
 
 ## 美国特别优惠
 
 ## 订阅
+
 今日订阅即可获得
+
 5 期免费赠
 
 ## 订阅者专属福利
 
 - *立即订阅，13 期仅需支付 $122*
+
 * 每期低至 $9.39 – 商店售价通常为 $15.99
 
 欲了解更多信息和订购请访问 www.imaginesubs.co.uk/lud 或拨打 +44 (0) 1795418661
@@ -4453,10 +3947,15 @@ Imagine Publishing 出版了 20 多本月刊，其中某些已发行超过 10 �
 ### 理解与使用 C 语言
 
 | 作者 | Richard Reese |
+
 | --- | --- |
+
 | 出版社 | O'Reilly |
+
 | ISBN | 978-1493434184 |
+
 | 价格 | £22.99 |
+
 | 评分 | ★★★★ |
 
 指针存储内存地址，这很简单，但要真正精通 C 语言，复杂的指针模型是必不可少的。从栈和堆，通过数据结构，到安全问题，Reese 是一位出色的导师。
@@ -4474,9 +3973,13 @@ Brendan Holmes 是一个热爱硬件的人——他梦想拥有摆满了电子�
 ### 视觉营销革命：帮助社交媒体营销人员连接客户的 26 条规则
 
 | 作者 | Stephanie Diamond |
+
 | --- | --- |
+
 | 出版社 | Queues |
+
 | ISBN | 978-029848652 |
+
 | 价格 | £16.99 |
 
 许多初创公司发现自己必须跳出舒适区来应对新业务。Stephanie Diamond 的视觉营销指南为与客户建立提供了许多见解，还包含了团队内部沟通的实用技巧。
@@ -4484,9 +3987,13 @@ Brendan Holmes 是一个热爱硬件的人——他梦想拥有摆满了电子�
 ### Python 食谱 - 第3 版：树莓派配方
 
 | 作者 | David Beasley & Brian Jones |
+
 | --- | --- |
+
 | 出版社 | O'Reilly |
+
 | ISBN | 978-1491944037 |
+
 | 价格 | £30.50 |
 
 更新后的 3.3 是大家期待的评估。是时候开始放弃 Python 2 并学习常用任务了，这将帮助你充分利用它。食谱分为几个章节：“初学者”和“进阶”，包括“生成器与生成器”、“数据编码与处理”以及“并发”。每个章节至少包含两个针对不同情况的食谱，这可能会向你介绍一些你忽略或未使用的模块。食谱采用“问题，解决方案”格式。解决方案是简短的代码片段，其他部分则通过展示揭示真实价值，让你深入了解 Python 编程。
@@ -4494,9 +4001,13 @@ Brendan Holmes 是一个热爱硬件的人——他梦想拥有摆满了电子�
 ### 网络安全实战：理解事件检测与预防
 
 | 作者 | Richardijlich |
+
 | --- | --- |
+
 | 出版社 | Starch |
+
 | ISBN | 978-1593285204 |
+
 | 价格 | £34.98 |
 
 网络被入侵是不可避免的：数据丢失是……法医研究表明时间就是金钱，在真正的损害发生前等待几天。你如何检测和预防漏洞呢？网络安全监控（NSM）是监控、检测和响应事件的实践。这本书涉及了 NSM 中用的一系列工具，关键不仅在于检测，还在于涵盖所有威胁。
@@ -4504,10 +4015,15 @@ Brendan Holmes 是一个热爱硬件的人——他梦想拥有摆满了电子�
 ### Spring 实战
 
 | 作者 | Willie White & Craig Walls |
+
 | --- | --- |
+
 | 出版社 | Manning Publishing |
+
 | ISBN | 978-1593285204 |
+
 | 价格 | £39.99 |
+
 | 评分 | ★★★★ |
 
 这是一本涵盖 MVC、集成到 SQL 等所有常见情况的全面且编写良好的指南。在此过程中，从 RabbitMQ 的所有内容都将在 Spring 示例中得到讨论和涵盖。
@@ -4517,13 +4033,19 @@ Brendan Holmes 是一个热爱硬件的人——他梦想拥有摆满了电子�
 ### 使用 BLACKNIGHT 的 LINUX 云模板释放力量
 
 ubuntu
+
 fedora
+
 CentOS
+
 debian
 
 方案起：
+
 - 512MB 内存
+
 - 5GB 空间
+
 - 25GB 流量
 
 使用优惠码 Snux 订购云托管一年可节省 25% - DOMAINS - HOSTING - EMAIL sales@blacknight.com | +44 (0) 84552804 | www.blacknight.com
@@ -4531,8 +4053,11 @@ debian
 ### 与我们一起构建机器人吧！
 
 树莓派彩色 LED 板
+
 18 通道 8 位 PWM (0-255)
+
 可独立寻址色彩
+
 每个 LED 最多支持 300 个 LED 完美契合树莓派内部
 
 ```
@@ -4546,6 +4071,7 @@ http://pibow.com/products/piglow
 内部摄像头板安装架 三脚架安装块 铝 手工饰面 安全功能 被动式冷却 WWW.PROTOARMOUR.COM RASPBERRY PI 是 RASPBERRY PI 基金会的商标
 
 用 ModPi 让你的创意变为现实
+
 www.modmypi.com @modmypi
 
 ### MODMYPI
@@ -4569,11 +4095,13 @@ www.modmypi.com @modmypi
 ## 联系我们
 
 网站：www.linuxuser.com
+
 邮箱：linuxuser@imagine-publishing.com
 
 ## 常见问题解答
 
 - Facebook: Linux User & Developer
+
 - Twitter: @linuxusermag
 
 ## 你的问题已解答
@@ -4583,6 +4111,7 @@ www.modmypi.com @modmypi
 ## 常见问题解答：桌面端
 
 问。我如何在标准的 Ubuntu 安装上安装 Cinnamon？我在 Ubuntu 上，且无法更改发行版。
+
 答。有一个官方仓库可以使用安装 Cinnamon：
 
 ```
@@ -4598,13 +4127,14 @@ $ sudo apt-get install cinnamon
 注销，并在菜单中选择 Cinnamon。
 
 问。我在哪里找到切换发行版的菜单？
+
 答。在登录界面，一旦你选择用户，就会看到菜单。在 Ubuntu 上，按钮……
 
 问。我更倾向于其他……？
+
 答。MATE 是一个现代桌面环境……（等待，遵循文本流）
+
 答。在 Ubuntu 上，按钮……（等待，OCR 文本是乱码的，让我们重新读一遍源文件）。[/
-
-
 
 # 问题与解答
 
@@ -4728,8 +4258,6 @@ sudo apt-get update
 
 最后，我们安装桌面版
 
-
-
 ```
 sudo apt-get install firefox-netflix
 ```
@@ -4748,10 +4276,6 @@ sudo apt-get zsync
 
 然后从浏览器复制链接并输入：[zsync](...) 将下载所有必要的文件并进行你需要的任何更改。
 
-
-
-
-
 ## 赞助机会
 
 ## 托管列表
@@ -4769,21 +4293,37 @@ sudo apt-get zsync
 ![](img/511bb591be9ee7dc0f73776baf9a0548_89_1.png)
 
 Netcera
+
 www.netcera.co.uk/linux
 
 | 套餐 | 电话 | 每月费用 | 最短合同期限 | CPU / 核心 / 速度 | 磁盘空间 | 1GBPS 网络连接 | 硬件 RAID | 远程电源重启 | 永久虚拟机 | 运行时间保证 | 网络备份 | 私有套件 | 24/7 支持 |
+
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+
 | 2200DC | 080061 2801 | £25 | 12 个 | 双核 2.2GHz | N/A | N/A | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+
 | 3000DC | 080061 2801 | £80 | 12 个 | 双核 3.5GHz | 250GB | N/A | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+
 | 2600DC | 080061 2801 | £130 | 12 个 | 双核 2.66GHz | 500GB | N/A | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+
 | Developer | 080061 2801 | £32.89 | 1 个 | N/A | 1TB | N/A | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+
 | One | 080061 2801 | £99 | 1 个 | N/A | 50GB | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+
 | Reseller | 080061 2801 | £24.99 | 1 个 | N/A | 无限制 | N/A | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Starter Linux | | | £20 | 12 个 | N/A | 200GB | ✓ | N/A | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Starter Windows | | | £20 | 12 个 | N/A | 200GB | ✓ | N/A | ✓ | ✓ | ✓ | ✓ | ✓ |
-| Business Linux | | | £45 | 12 个 | N/A | 400GB | ✓ | N/A | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+| Starter Linux | | | £20 | 12 个 | N/A | 200GB | ✓ | N/A | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+| Starter Windows | | | £20 | 12 个 | N/A | 200GB | ✓ | N/A | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+| Business Linux | | | £45 | 12 个 | N/A | 400GB | ✓ | N/A | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+
+
+
 | Business Windows | | | £45 | 12 个 | N/A | 400GB | ✓ | N/A | ✓ | ✓ | ✓ | ✓ | ✓ |
+
 | Ultimate Linux | | | £60 | 12 个 | N/A | 无限制 | ✓ | N/A | ✓ | ✓ | ✓ | ✓ | ✓ |
+
 | Ultimate Windows | | | £60 | 12 个 | N/A | 无限制 | ✓ | N/A | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_89_2.png)
@@ -4791,30 +4331,47 @@ www.netcera.co.uk/linux
 PoundHost
 
 | 套餐 | 每月费用 | 最短合同期限 | CPU / 核心 / 速度 | 磁盘空间 | 1GBPS 网络连接 | 硬件 RAID | 远程电源重启 | 永久虚拟机 | 运行时间保证 | 网络备份 | 私有套件 | 24/7 支持 |
+
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
+
 | FastServer2 | 0816777730 | £229 | 6 个 | 双核/四核 Xeon | 1TB | 100 Mbps | | | | 99.90% | ✓ | | |
+
 | Budget III | 0816777730 | £50 | 1 个 | Intel Xeon E3430 | 160GB | 10 Mbps | | | | 99.90% | ✓ | | |
+
 | SSD 4 | 0816777730 | £65 | 1 个 | 四核 Xeon E3430 | 520SSD | 100 Mbps | | | | 99.90% | ✓ | | |
+
 | Merin | 0816777730 | £199 | 1 个 | 2 路 Intel Xeon 四核 | 500GB | 100 Mbps | | | | 99.90% | ✓ | | |
+
 | 056.5 | 0816777730 | £275 | 1 个 | 六核四核 | SATA-III | | | | | 99.90% | ✓ | | |
+
 | Cloud Server | 0816777730 | £52 | 1 个 | 4 vCPU (AMD EPY) | 40GB | Gbps 共享节点 | | | | 99.90% | ✓ | ✓ | |
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_89_3.png)
 
 PoundHost
+
 www.poundhost.co.uk
 
 | 套餐 | 每月费用 | 最短合同期限 | CPU / 核心 / 速度 | 磁盘空间 | 1GBPS 网络连接 | 硬件 RAID | 远程电源重启 | 永久虚拟机 | 运行时间保证 | 网络备份 | 私有套件 | 24/7 支持 |
+
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
+
 | Linux Dual Core | | £74.99 | 12 个 | 双核 2.35GHz | 160GB | | | | ✓ | 99.99% | | |
+
 | Windows Dual Core | | £89.99 | 12 个 | 双核 | 160GB | | | | ✓ | 99.99% | | |
+
 | Linux Quad Core | | £149.99 | 12 个 | 四核 2.5GHz | 160GB | | | | ✓ | 99.99% | | |
+
 | Webhosting PowerEdge R210 | | £79.99 | 12 个 | 4x3.6GHz | 250GB | 至 1Gbps | | | | ✓ | 99.99% | Free | ✓ |
+
 | Webhosting PowerEdge R210 | | £119.99 | 12 个 | 4x2.66GHz | 250GB | 100M/s | | | | ✓ | 99.99% | Free | ✓ |
+
 | Webhosting PowerEdge R210 | | £149.99 | 12 个 | 4x2.85GHz | 500GB | 100M/s | | | | ✓ | 99.99% | Free | ✓ |
 
 ## 获取您的亮点！联系 RHIAN
+
 rhian.carter@imagine-publishing.uk
+
 +44(0)120568421
 
 ## 专用服务器列表
@@ -4822,44 +4379,63 @@ rhian.carter@imagine-publishing.uk
 ![](img/511bb591be9ee7dc0f73776baf9a0548_90_0.png)
 
 | 套餐 | 电话 | 费用 | 网站空间 | 每月 | 带宽 | 账户 | 支持 | 购物车 | 病毒过滤 | 防火墙 | 邮件支持 | 网站控制 | 服务协议 |
+
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
+
 | 1&1 Starter (Linux) | 0844351211 | £29.88 | 无限制 | 1000 | | | | | | | | |
+
 | 1&1 Standard (Linux) | 0844351211 | £59.88 | 5GB | 1000 | | | | | | | | |
+
 | 1&1 Standard (Win) | 0844351211 | £59.88 | 5GB | 1000 | | | | | | | | |
+
 | 1&1 Unlimited (Linux) | 0844351211 | £83.88 | 无限制 | 1000 | | | | | | | | |
+
 | 1&1 Unlimited (Win) | 0844351211 | £83.88 | 无限制 | 1000 | | | | | | | | |
+
 | 1&1 Business | 0844351211 | £119.88 | 无限制 | 无限制 | | | | | | | | |
 
 1&1 Internet Ltd
 
 | 套餐 | 电话 | 费用 | 网站空间 | 每月 | 带宽 | 账户 | 支持 | 购物车 | 病毒过滤 | 防火墙 | 邮件支持 | 网站控制 | 服务协议 |
+
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
+
 | ehosting(www.ehosting.com) | 0844994100 | £23.88 | 1GB | 10 | | | | | | | | | |
+
 | ehosting(www.ehosting.com) | 0844994100 | £45.88 | 2GB | 25 | | | | | | | | | |
+
 | ehosting(www.ehosting.com) | 0844994100 | £67.88 | 5GB | 50 | | | | | | | | | |
+
 | Equipe(www.equipe.com) | 0214314485 | £42.00 | 4GB | 50 | | | | | | | | | |
+
 | Equipe(www.equipe.com) | 0214314485 | £72.00 | 8GB | 100 | | | | | | | | | |
+
 | Equipe(www.equipe.com) | 0214314485 | £102.00 | 15GB | | | | | | | | | | |
+
 | eurofast.com(www.eurohosting.com) | 0844994100 | £23.88 | 500MB | 5 | | | | | | | | | |
+
 | eurofast.com(www.eurohosting.com) | 0844994100 | £37.88 | 2GB | 10 | | | | | | | | | |
+
 | eurofast.com(www.eurohosting.com) | 0844994100 | £62.88 | 10GB | 25 | | | | | | | | | |
+
 | Evolving(www.evolving.co.uk) | | £39.99 | 500MB | 1 | | | | | | | | | |
+
 | Evolving(www.evolving.co.uk) | | £54.99 | 1GB | 3 | | | | | | | | | |
+
 | Evolving(www.evolving.co.uk) | | £79.99 | 2GB | 5 | | | | | | | | | |
+
 | Evolving(www.evolving.co.uk) | | £159.99 | 10GB | 10 | | | | | | | | | |
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_90_1.png)
-
-
-
-
 
 # 您的观点
 
 您的 Linux 新闻与观点来源
 
 联系我们...
+
 注册并发表您的评论... 直接给我们发送邮件...
+
 www.linuxuser.co.uk/forum/ | linuxuser@imagine-publishing.uk
 
 # 您的观点
@@ -4891,6 +4467,7 @@ Will Schrier
 # Carlos Lopez 说：
 
 - 如果你计划将其用于其他任何用途，请务必小心。这个板带有臭名昭著的 PowerVR Cedarev/Cedartrail GPU，这对 Linux 用户来说是一场噩梦。
+
 - AMD600 的开源驱动仅支持基础 2D，而且属性多到没法用。此外，这个专有驱动仅适用于 Ubuntu 10.04 和 Mee。
 
 # Adrian Placeau 说：
@@ -4910,10 +4487,13 @@ Will Schrier
 一些结果对 MinBoard 的印象并不深刻
 
 # 您的观点
+
 来信
+
 GNOME, AV Linux, 教程文件
 
 Android 杂志
+
 随着越来越多的 Android 功能合并回 Linux 内核，扩展到为这一全球最流行的移动操作系统之一进行开发。全球范围内有超过 2500 万用户和 5 亿台 Android 设备，有一个巨大的受众准备好消费应用。对于许多 Android 开发者来说，请关注我们的姐妹杂志《Android 杂志》，它补贴了桌面版。除了有让你保持更新的新闻和评论，还有关于破解设备的教程和建议。在 www.littlegreen.org 了解更多信息。
 
 Mir 在 13.0 中取代了 Unity - 到目前为止，我们并不印象深刻
@@ -4932,21 +4512,20 @@ Mark Barrow 还记得几年前我们依靠非常糟糕的硬件通过局域网�
 
 Daniel Hansson 不仅如此，在 Ubuntu 的下一个 LTS 版本中完全实现 Mir 似乎在暗示，到目前为止，进展并不顺利。与 Unity 不同，由于它是核心显示服务器，Canonical 可能无法坚持立场并最终转向 Wayland。这确实是我们对操作系统的问题。
 
-
-
-
-
 或拨打英国地区 0844 856 0644 / 海外地区 +44(0)1795 592869
 
 # 这个圣诞节，我们为每个人准备了惊喜
 
 订阅任何杂志仅需
+
 # £29.99*
 
 > 节省高达 50%
 
 立即购买
+
 现刻拨打 0844 856 0644
+
 提供订单代码：XMAS1
 
 *此优惠仅限英国邮送。海外邮送订阅费用为 £49.99
@@ -5015,6 +4594,8 @@ Brasero 是最流行的开源光盘刻录工具。如果您的发行版尚未安
 
 **Audacity** 这款最好的开源音频编辑器是一款非常强大的软件，在过去的一年里，它已经与其他专业编辑工具媲美。它非常适合音乐和播客编辑。
 
+
+
 ## 完整索引
 
 **Ubuntu 13.10 Beta** Ubuntu 的下一步，13.10 是第一个替换 Canonical X 版本的发行版，也是 Ubuntu 的下一个 LTS（长期支持）版本。请参阅第 80 页查看本月对该测试版的完整评论。
@@ -5054,10 +4635,7 @@ Brasero 是最流行的开源光盘刻录工具。如果您的发行版尚未安
 | | | |
 | | | |
 | | | |
-| | | |
 | Linux User | GIMP | Thunderbird |
-| | | |
-| | | |
 | | | |
 | | | |
 | | | |
@@ -5078,19 +4656,25 @@ Brasero 是最流行的开源光盘刻录工具。如果您的发行版尚未安
 # 活动
 
 2017年10月212:10
+
 周三
+
 14 条推文
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_97_5.png)
+
 ![](img/511bb591be9ee7dc0f73776baf9a0548_97_6.png)
+
 ![](img/511bb591be9ee7dc0f73776baf9a0548_97_7.png)
 
 # 音乐
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_97_9.png)
+
 AI
 
 # UBUNTU TOUCH
+
 已来！
 
 了解 Canonical 的移动部门是否已经付费
@@ -5116,10 +4700,6 @@ AI
 
 ![](img/511bb591be9ee7dc0f73776baf9a0548_97_10.png)
 
-
-
-
-
 # 你愿意成为 Code Club 的志愿者吗？
 
 Code Club 是一个面向全国的针对 9-11 岁儿童的志愿者引导课后编程俱乐部网络。
@@ -5139,32 +4719,35 @@ Code Club 是一个面向全国的针对 9-11 岁儿童的志愿者引导课后�
 # 首月免费优惠券代码：PHCLOUD2
 
 > 我使用 PoundHost 的服务已经快 4 年了，我可以告诉你，这是一项一流的服务。
-
+> 
 > 服务绝对出色！市面上最棒的托管公司。我爱死它了！独立服务器超级便宜而且超级快！
-
+> 
 > PoundHost 的网络非常快且稳如磐石，支持工单总能得到员工的快速响应，他们显然非常专业。
-
-他们在处理设置、更改和紧急事务时既优秀又快速，而且性价比/质量比是最好的。
-
-对于那些正在寻找最佳托管服务的人，我强烈推荐 PoundHost。向所有 PoundHost 员工表示诚挚的感谢。
-
-如果你需要以极廉的价格和出色的支持获取服务器，别找了，你会对 PoundHost 感到非常意的。
-
-Marcelo 先生
-早期项目
-
-Jaroslaw Glogowski
-Mobi Marketing
-
-技术总监
-Clever Computer Consultants
-
-*1CPU, 1GB RAM, 40gb 存储, 5th带宽
+> 
+> 他们在处理设置、更改和紧急事务时既优秀又快速，而且性价比/质量比是最好的。
+> 
+> 对于那些正在寻找最佳托管服务的人，我强烈推荐 PoundHost。向所有 PoundHost 员工表示诚挚的感谢。
+> 
+> 如果你需要以极廉的价格和出色的支持获取服务器，别找了，你会对 PoundHost 感到非常意的。
+> 
+> Marcelo 先生
+> 
+> 早期项目
+> 
+> Jaroslaw Glogowski
+> 
+> Mobi Marketing
+> 
+> 技术总监
+> 
+> Clever Computer Consultants
+> 
+> *1CPU, 1GB RAM, 40gb 存储, 5th带宽
 
 | 独立数据 | 云服务器 | VPS | 域名 | 电子邮件 | 网站制作器 | 电子商务 | 服务器 | SSL | 网站推广 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | Dada 数据与统计： | 490,000 名客户 | 8,000 台独立服务器 | | | | 6,000 台虚拟服务器 (VPS) | | | 1,800,000 个域名 |
 
 tel: 01905 342 339
-www.poundhost.com
 
+www.poundhost.com

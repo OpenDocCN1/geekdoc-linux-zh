@@ -1,3 +1,4 @@
+
 # 第二部分\. 基础
 
 > 原文：[`tldp.org/LDP/abs/html/part2.html`](https://tldp.org/LDP/abs/html/part2.html)

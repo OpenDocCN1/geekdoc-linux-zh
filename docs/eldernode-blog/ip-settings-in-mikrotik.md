@@ -1,4 +1,5 @@
-# 如何在 MikroTik - ElderNode 博客中配置 IP 设置
+
+# 在 MikroTik - ElderNode 博客中配置 IP 设置
 
 > 原文：<https://blog.eldernode.com/ip-settings-in-mikrotik/>
 
@@ -6,11 +7,11 @@
 
 MikroTik 中的 IP 设置；如您所知，路由器运行在网络的第三层(IP)。路由器接口上有 IP 是配置路由器的要求之一。在本教程中，我们将解释如何在 [MikroTik](https://blog.eldernode.com/tag/mikrotik/) 路由器接口上设置 IP。你可以使用 [Eldernode](https://eldernode.com/) 提供的套装来购买 [MikroTik VPS](https://eldernode.com/mikrotik-vps-server/) 服务器。
 
-### 在路由器板端口上设置 IP:
+## 在路由器板端口上设置 IP
 
 在 [MikroTik](https://mikrotik.com/) 接口上设置 IP 是我们配置 MikroTik 路由器或任何其他路由器的第一步。我们可以在 MikroTik 的每个端口上设置一个或多个 IP，但在此之前，最好根据需要重命名我们的接口。
 
-从右侧菜单中选择接口选项。然后进入**界面列表**窗口。在此窗口中，您将看到路由器接口列表。该列表包括所有真实接口(如以太网、无线等。)和虚拟接口(如 VLAN、VPN 等。).
+从右侧菜单中选择接口选项。然后进入**界面列表**窗口。在此窗口中，您将看到路由器接口列表。该列表包括所有真实接口(如以太网、无线等。)和虚拟接口(如 VLAN、VPN 等.)。
 
 ![mikrotik-eldernode-1](img/f0415de43c66e1cc04f1fde6eef7302c.png)
 
@@ -32,9 +33,9 @@ MikroTik 中的 IP 设置；如您所知，路由器运行在网络的第三层(
 
 显然，不同的端口需要接收不同范围的 IP；否则，我们将得到一条错误消息。
 
-DHCP 客户端:
+## DHCP 客户端
 
-### MikroTik 可以通过 **DHCP** 接收每个端口的 IP。为此，请进入 **IP- > DHCP** 客户端菜单。
+MikroTik 可以通过 **DHCP** 接收每个端口的 IP。为此，请进入 **IP- > DHCP** 客户端菜单。
 
 ![mikrotik-eldernode-5](img/a8baec4feb1404fa7d88838a65f2ec58.png)
 

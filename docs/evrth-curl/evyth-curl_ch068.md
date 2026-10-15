@@ -1,14 +1,16 @@
+
+
 # trurl
 
-*trurl* 是一个独立的命令行工具，其唯一目的是解析、操作和输出 URL 及其部分。它是 curl 的配套工具，满足您的命令行和脚本需求。
+`trurl`是一个独立的命令行工具，其唯一目的是解析、操作和输出 URL 及其部分。它是`curl`的配套工具，满足您的命令行和脚本需求。
 
-trurl 使用 libcurl 的 URL 解析器。这确保了 curl 和 trurl 对 URL 的看法始终一致，并且这两个工具以相同和一致的方式解析它们。
+`trurl`使用`libcurl`的 URL 解析器。这确保了`curl`和`trurl`对 URL 的看法始终一致，并且这两个工具以相同和一致的方式解析它们。
 
 ## 用法
 
-通常，您会将一个或多个 URL 传递给 trurl，并指定您希望输出的组件。可能还会在修改 URL（s）的同时进行。
+通常，您会将一个或多个 URL 传递给`trurl`，并指定您希望输出的组件。可能还会在修改 URL（s）的同时进行。
 
-trurl 了解 URL，每个 URL 由最多十个独立且独立的 *组件* 组成。这些组件可以使用 trurl 提取、删除和更新。
+`trurl`了解 URL，每个 URL 由最多十个独立且独立的*组件*组成。这些组件可以使用`trurl`提取、删除和更新。
 
 ## trurl 示例命令行
 
@@ -132,4 +134,5 @@ https://curl.se/this%20has%20space/index.html
 
 ## 更多
 
-您想了解的所有关于 trurl 的信息都可以在 [`curl.se/trurl`](https://curl.se/trurl) 找到。它可能已经适用于您选择的 Linux 发行版。
+您想了解的所有关于`trurl`的信息都可以在[`curl.se/trurl`](https://curl.se/trurl)找到。它可能已经适用于您选择的 Linux 发行版。
+

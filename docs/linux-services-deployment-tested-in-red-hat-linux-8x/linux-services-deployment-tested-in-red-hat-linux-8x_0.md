@@ -1,15 +1,5 @@
+
 # Linux 服务部署（基于 Red Hat Linux 8.x 测试）
-
-
-
-
-
-
-
-
-
-
-
 
 ## 献辞
 
@@ -35,22 +25,15 @@
 
 本书面向：
 
-*   使用或计划使用 Linux 工具构建其技术生态系统的信息技术基础设施管理员。
-*   专注于操作系统教学的信息技术领域人力资源培训师。
-*   在 Linux 平台上提供服务的解决方案集成商。
-*   负责任何行业公司和机构技术运营的信息技术架构师。
-*   接受过管理信息技术平台培训的学生。
+* 使用或计划使用 Linux 工具构建其技术生态系统的信息技术基础设施管理员。
+* 专注于操作系统教学的信息技术领域人力资源培训师。
+* 在 Linux 平台上提供服务的解决方案集成商。
+* 负责任何行业公司和机构技术运营的信息技术架构师。
+* 接受过管理信息技术平台培训的学生。
+* 恢复 `root` 用户的访问权限。
+* 通过 VIRT-MANAGER 安装虚拟机。
 
-
-*   恢复 "root" 用户的访问权限](#
-*   通过 VIRT-MANAGER 安装虚拟机
-```
-
-
-
-
-
-按下字母 "e"（编辑）后，找到以 "linux" 作为行首单词的行；滚动到该行末尾并添加一个空格，如下：
+按下字母 `e`（编辑）后，找到以 `linux` 作为行首单词的行；滚动到该行末尾并添加一个空格，如下：
 
 ![](img/Image00001.jpg)
 
@@ -66,13 +49,13 @@
 
 需要对根文件系统（`/sysroot`）进行禁闭（Jail，即对文件系统进行隔离，以便在操作运行时没有其他人干扰它），然后更改管理员密码。
 
-需要创建一个空文件 `/.autorelabel`。之后，需要通过输入两次 `exit` 来退出我们所处的模式（chroot 和 GRUB 模式）：
+需要创建一个空文件 `/.autorelabel`。之后，需要通过输入两次 `exit` 来退出我们所处的模式（chroot 和 GRUB 模式）。
 
 这将立即导致系统重启，如果启用了此操作系统功能，SELinux 最初将负责对相应的上下文（文件、目录、端口和进程）进行适当重新标记。
 
-> 用于后分析的内核数据转储
+### 用于后分析的内核数据转储
 
-为了分析系统失败的原因，你可以使用 `kdump` 服务保存系统内存内容供以后分析。在本小节中，我们将通过使用 RHEL Web Console 对 `kdump` 进行简要介绍。`Kdump` 是一个为内核提供崩溃转储机制的服务。该服务允许你保存内存内容。`Kdump` 使用 `kexec` 系统调用在不重启的情况下引导第二个内核，从而捕获故障内核的内容并保存数据用于分析。第二个内核位于内存的预留部分。
+为了分析系统失败的原因，你可以使用 `kdump` 服务保存系统内存内容供以后分析。在本小节中，我们将通过使用 RHEL Web Console 对 `kdump` 进行简要介绍。`kdump` 是一个为内核提供崩溃转储机制的服务。该服务允许你保存内存内容。`kdump` 使用 `kexec` 系统调用在不重启的情况下引导第二个内核，从而捕获故障内核的内容并保存数据用于分析。第二个内核位于内存的预留部分。
 
 在系统失败（严重错误）的情况下，内核崩溃转储可能是唯一的可用信息，因此在任务关键型环境中，确保 `kdump` 运行至关重要。下面的步骤显示了如何使用 Cockpit 工具中的“内核转储（Kernel Dump）”选项卡来为 `kdump` 内核预留内存大小。该步骤还描述了如何指定 `vmcore` 转储文件的目标位置以及如何测试其配置。
 
@@ -127,14 +110,14 @@ kernel=auto resume=/dev/mapper/rhel-swap rd.lvm.lv=rhel/root rd.lvm.lv=rhel/swap
 
 # 轻松恢复 - 备份并还原 Linux 系统
 
-使用现有备份恢复和还原系统，Red Hat Linux（其他发行版也可以安装）提供了 ReaR。你可以使用该工具作为灾难恢复和系统迁移方案。该工具允许你执行以下任务：
+使用现有备份恢复和还原系统，Red Hat Linux（其他发行版也可以安装）提供了 `ReaR`。你可以使用该工具作为灾难恢复和系统迁移方案。该工具允许你执行以下任务：
 
 - 构建镜像并从现有备份恢复系统。
 - 复制原始存储。
 - 恢复用户和系统文件。
 - 将系统恢复到不同的硬件。
 
-此外，对于灾难恢复，你还可以集成备份软件 ReaR。以下步骤用于创建 Linux 系统的救援镜像以及数据备份，此操作的时间取决于保存的数据量。需要说明的是，此备份以 ISO 文件的形式留在管理员指定的路径。首先安装执行此活动所需的应用程序：
+此外，对于灾难恢复，你还可以集成备份软件 `ReaR`。以下步骤用于创建 Linux 系统的救援镜像以及数据备份，此操作的时间取决于保存的数据量。需要说明的是，此备份以 ISO 文件的形式留在管理员指定的路径。首先安装执行此活动所需的应用程序：
 
 ```bash
 [root@pruebas ~]# yum install rear genisoimage syslinux
@@ -159,7 +142,7 @@ devtmpfs        tmpfs      15G   0   15G   0% /dev
 tmpfs           tmpfs      15G   0   15G   0% /dev/shm
 tmpfs           tmpfs      15G  9.2M  15G   1% /run
 tmpfs           tmpfs      15G   0   15G   0% /sys/fs/cgroup
-dev/mapper/ol-root xfs        44G  20G  25G  44% /*
+dev/mapper/ol-root xfs        44G  20G  25G  44% /
 /dev/sda1       xfs      1014M  593M  422M  59% /boot
 tmpfs           tmpfs      2.9G  1.2M  2.9G   1% /run/user/42
 tmpfs           tmpfs      2.9G   0   2.9G   0% /run/user/0
@@ -179,17 +162,11 @@ Handling network interface 'ens18'
 ens18 is a physical device
 Handled network interface 'ens18'
 Skipping 'virbr0': not bound to any physical interface.
-
-通过 ssh 登录救援系统，请设置 `/root/.ssh/authorized_keys` 或指定 `SSH_ROOT_PASSWORD`
 ```
 
+通过 ssh 登录救援系统，请设置 `/root/.ssh/authorized_keys` 或指定 `SSH_ROOT_PASSWORD`。
 
-
-
-
-```
 > 将日志文件 `/var/log/rear/rear-s1.log` 复制到 initramfs `/tmp/rear-s1-partial-2021-02-22T10:47:38-05:00.log`
-
 > 正在复制文件和目录
 > 正在复制二进制文件和库
 > 正在复制内核模块
@@ -206,7 +183,6 @@ Skipping 'virbr0': not bound to any physical interface.
 > 退出 `rear mkbackup` (PID 63025) 及其子进程
 > 正在运行退出任务
 > 你应该执行 `rm -Rf /tmp/rear.w0E22PfRdLwJCFg`
-```
 
 ISO 文件的位置已验证：
 
@@ -227,7 +203,7 @@ total 3.6G
 -rw-------. 1 root root 967K Feb 22 10:57 rear-s1.log
 ```
 
-"rear" 应用已生成了一个 ISO 文件，从该文件可以生成一个可启动的 USB 闪盘，或者根据需要将其放入虚拟化系统中。在本练习中，我们将使用虚拟化平台。
+`rear` 应用已生成了一个 ISO 文件，从该文件可以生成一个可启动的 USB 闪盘，或者根据需要将其放入虚拟化系统中。在本练习中，我们将使用虚拟化平台。
 
 ![](img/Image00007.jpg) 
 
@@ -239,7 +215,7 @@ total 3.6G
 
 ![](img/Image00009.jpg)
 
-如我们所示，系统要求“登录”（login），在此情况下输入 "root" 并按回车键。接下来我们看到提示输入命令，在此情况下命令将是 `rear -v recover`，这将触发操作系统的恢复，详细如下：
+如我们所示，系统要求“登录”（login），在此情况下输入 `root` 并按回车键。接下来我们看到提示输入命令，在此情况下命令将是 `rear -v recover`，这将触发操作系统的恢复，详细如下：
 
 ![](img/Image00010.jpg)
 
@@ -247,7 +223,7 @@ total 3.6G
 
 ![](img/Image00011.jpg)
 
-在这里，系统返回给我们一个提示符，我们在其中发送 "reboot"重启）并启动恢复后的系统。需要说明的是，SELinux 将对系统进行重新标记，这会在发生时稍微延迟过程。
+在这里，系统返回给我们一个提示符，我们在其中发送 `reboot`（重启）并启动恢复后的系统。需要说明的是，SELinux 将对系统进行重新标记，这会在发生时稍微延迟过程。
 
 ![](img/Image00012.jpg)
 
@@ -265,24 +241,33 @@ total 3.6G
 [root@pruebas ~]# yum groupinfo Virtualization*
 Updating Subscription Management repositories.
 Last metadata expiration check: 0:12:38 ago on Sun 21 Mar 2021 12:13:24 PM.
-Environment Group: Virtualization
-Environment Group: Virtualization: Minimal.
-Environment Group: Virtualization: Standard.
-Environment Group: Virtualization: Tools
-Environment Group: Virtualization: Hypervisor
-.
 ```
 
-宿主机处理器的虚拟化标志检查：
 
-```
+
+# 环境组：虚拟化
+
+环境组：虚拟化（最小化）。
+
+环境组：虚拟化（标准）。
+
+环境组：虚拟化（工具）。
+
+环境组：虚拟化（Hypervisor）。
+
+## 检查宿主机虚拟化支持
+
+首先，检查宿主机的处理器虚拟化标志：
+
+```bash
 [root@pruebas ~]# cat /proc/cpuinfo | grep -i vmx|svm
-## (假设输出)
 ```
+
+（假设输出）
 
 另一种验证宿主机具有虚拟化能力的方法：
 
-```
+```bash
 [root@pruebas ~]# virt-host-validate
 QEMU: Checking for hardware-assisted virtualization : PASS
 QEMU: Checking if /dev/vhost-net : PASS
@@ -298,18 +283,15 @@ QEMU: Checking for secure guest support : PASS
 
 是时候在宿主机上安装 Hypervisor 了：
 
-```
+```bash
 [root@pruebas ~]# yum groupinstall "Virtualization Hypervisor" -y
 ```
 
-需要安装 `libvirt` 安装通信工具如下：
+需要安装 `libvirt` 和通信工具，命令如下：
 
-```
+```bash
 [root@pruebas ~]# yum groupinstall "Virtualization Client" -y --with-optional
 ```
-
-
-
 
 依赖已解析。
 
@@ -317,7 +299,7 @@ QEMU: Checking for secure guest support : PASS
 
 已安装：
 
-```
+```bash
 hexedit-1.2.13-12.el8.x86_64
 hivex-1.3.18-20.module+el8.3.0+6423+e4cb6418.x86_64
 icoutils-0.32.3-2.el8.x86_64
@@ -371,11 +353,11 @@ virt-top-1.8-32.el864
 virt-viewer-9.0-4.el64
 ```
 
-安装完成后，你已拥有通过虚拟化平台托管虚拟机的能力。为此，你可以使用 `virsh`、`virt-manager`（图形界面）或 `cockpit`（Web 控制）。
+安装完成后，你已拥有通过虚拟化平台托管虚拟机的能力。为此，你可以使用`virsh`、`virt-manager`（图形界面）或`cockpit`（Web 控制）。
 
 ## 通过 Virt-Manager 安装虚拟机
 
-该练习对应于位于 `/tmp` 路径的 ISO `proxmox-ve_6.3-1.iso` 安装虚拟机。此虚拟机的安装将在位于 LVM 结构上的 XFS 文件系统上进行。我们首先验证安装 ISO 是否存在：
+该练习对应从位于`/tmp`路径的 ISO `proxmox-ve_6.3-1.iso`安装虚拟机。此虚拟机的安装将在位于 LVM 结构上的 XFS 文件系统上进行。首先，验证安装 ISO 是否存在：
 
 ```bash
 [root@bd2 ~]# ll -h /tmp/proxmox-ve_6.3-1.iso
@@ -389,27 +371,35 @@ virt-viewer-9.0-4.el64
 NAME MAJ:MIN RM SIZE TYPE
 --- 输出输出 ---
 sdc 8:32 0 100G disk
+
 [root@bd2 ~]# pvcreate /dev/sdc
 物理卷 "/dev/sdc" 已创建。
+
 [root@bd2 ~]# vgcreate mv /dev/sdc
 卷组 "mv" 已创建
+
 [root@bd2 ~]# lvcreate -l 100%free -n kvm mv
 逻辑卷 "kvm" 已创建。
 ```
 
-分配并持久 XFS 文件系统：
+分配并持久化 XFS 文件系统：
 
 ```bash
 [root@bd2 ~]# mkfs.xfs /dev/mv/kvm
+
 [root@bd2 ~]# blkid | grep sdc >> /etc/fstab
+
 [root@bd2 ~]# mkdir /maquinas
+
 [root@bd2 ~]# vim /etc/fstab
 UUID="be8228b-ce08-4a38-bc1c-093284b164c" /maquinas xfs defaults 0 0
+
 [root@bd2 ~]# udevadm settle
+
 [root@bd2 ~]# systemctl daemon-reload
 ```
 
-进程完成后，定义 `/maquinas` 为挂载点，你可以在此处保存从 `virt-manager` 创建的虚拟机，如下所示：
+进程完成后，定义`/maquinas`为挂载点，你可以在此处保存从`virt-manager`创建的虚拟机，如下所示：
 
 ```bash
 [root@bd2 ~]# df -hT
@@ -418,17 +408,17 @@ Filesystem Type Size Used Avail Use% Mounted on
 /dev/mapper/mv-kvm xfs 100G 746M 100G 1% /maquinas
 ```
 
-通过 `virt-manager` 添加挂载点，在 `virt-manager` 中这被称为添加“池”（pool）：
+通过`virt-manager`添加挂载点，在`virt-manager`中这被称为添加“池”（pool）：
 
 ![](img/Image00013.jpg)
 
-在上方标签页中你可以看到 `storage` 选项，选中后，点击 `+` 图标，会弹出一个界面，提供命名“池”并选择挂载点的可能性（Image00014.jpg）。添加池（挂载点上的文件系统）时，你应该看到类似（Image00015.jpg）的界面。
+在上方标签页中你可以看到`storage`选项，选中后，点击`+`图标，会弹出一个界面，提供命名“池”并选择挂载点的可能性（Image00014.jpg）。添加池（挂载点上的文件系统）时，你应该看到类似（Image00015.jpg）的界面。
 
-接下来，通过搜索 `/tmp` 中的安装 ISO 来创建虚拟机，并将 `Debian 10` 定义为安装的操作系统（Image00016.jpg）。需要建立要使用的 RAM 内存，详情见（Image00017.jpg）。接下来，定义虚拟机的托管位置，选择“选择或自定义存储”（Image00018.jpg）。我们看到一个界面，其中选择了 `+` 图标来创建虚拟机文件（Image00019.jpg, Image00020.jpg）。在定义虚拟机名称和大小的进程最后，你应该看到像上面的界面（Image00021.jpg），点击 `Finish` 按钮将开始安装首选 ISO（Image0023.jpg）。
+接下来，通过搜索`/tmp`中的安装 ISO 来创建虚拟机，并将`Debian 10`定义为安装的操作系统（Image00016.jpg）。需要建立要使用的 RAM 内存，详情见（Image00017.jpg）。接下来，定义虚拟机的托管位置，选择“选择或自定义存储”（Image00018.jpg）。我们看到一个界面，其中选择了`+`图标来创建虚拟机文件（Image00019.jpg, Image00020.jpg）。在定义虚拟机名称和大小的进程最后，你应该看到像上面的界面（Image00021.jpg），点击`Finish`按钮将开始安装首选 ISO（Image0023.jpg）。
 
 ## 安装并配置 Nginx
 
-可安装的 nginx 模块列如下：
+可安装的 nginx 模块列表如下：
 
 ```bash
 [root@bd2 ~]# yum module list nginx
@@ -449,16 +439,16 @@ Updating Subscription Management repositories.
 Last metadata check: 1:01:04 ago on 22 Mar 2021 08:46:03 AM.
 Name : nginx:1.14:80000201908302848:f8e95b4e:x86_64
 common : nginx
-: nginx-all-modules
-: nginx-filesystem
-: nginx-mod-http-image-filter
-: nginx-mod-http-perl
-: nginx-mod-http-xslt-filter
-: nginx-mod-mail
-: nginx-mod-stream
+       : nginx-all-modules
+       : nginx-filesystem
+       : nginx-mod-http-image-filter
+       : nginx-mod-http-perl
+       : nginx-mod-http-xslt-filter
+       : nginx-mod-mail
+       : nginx-mod-stream
 ```
 
-现在是安装 `nginx: 1.14` 的时候，你可以根据需求安装版本：
+现在是安装`nginx:1.14`的时候，你可以根据需求选择版本安装：
 
 ```bash
 [root@bd2 ~]# yum module install nginx:1.14
@@ -466,19 +456,16 @@ Updating Subscription Management repositories.
 Last metadata check: 0:58:57 ago on 22 Mar 2021 08:46:03 AM.
 ```
 
-
-
-
 ## 安装组/模块包：
 
-```
+```bash
 nginx               x86_64 1:1.14.1-9.module+el8.0.0+4108+af250afe rhel-8-for-x86_64-appstream-rpms 570 k
-nginx-all-modules    noarch 1:1.14.1-9.module+el8.0.0+4108+af250afe rhel-8-for-x86_64-appstream-rpms  24 k
+nginx-all-modules   noarch 1:1.14.1-9.module+el8.0.0+4108+af250afe rhel-8-for-x86_64-appstream-rpms  24 k
 ```
 
 ### 已安装：
 
-```
+```bash
 nginx-1:1.14.1-9.module+el8.0.0+4108+af250afe.x86_64
 nginx-all-modules-1:1.14.1-9.module+el8.0.0+4108+af250afe.noarch
 nginx-filesystem-1:1.14.1-9.module+el8.0.0+4108+af250afe.noarch
@@ -489,40 +476,48 @@ nginx-mod-mail-1:1.14.1-9.module+el8.0.0+4108+af250afe.x86_64
 nginx-mod-stream-1:1.14.1-9.module+el8.0.0+4108+af250afe.x86_64
 ```
 
-有在 `FirewallD` 中打开端口以接收连接请求：
+在`FirewallD`中打开端口以接收连接请求：
 
-```
+```bash
 [root@pruebas ~]# firewall-cmd --permanent --add-service=http
 success
 [root@pruebas ~]# firewall-cmd --reload
 success
 ```
 
-在系统启动时启用 `nginx` 服务并立即运行它：
+在系统启动时启用`nginx`服务并立即运行它：
 
-```
+```bash
 [root@pruebas ~]# systemctl enable nginx --now
 Created symlink /etc/systemd/system/multi-user.target.wants/nginx.service → /usr/lib/systemd/system/nginx.service.
 ```
 
-通过列出系统进程来验证 `nginx` 服务的运行：
+通过列出系统进程来验证`nginx`服务的运行：
 
-```
+```bash
 [root@pruebas ~]# ps -fe
 root     10798       1  0 09:03 ?        00:00:00 nginx: master process /usr/sbin/nginx
-nginx      10799  10798  0 09:03 ?        00:00:00 nginx: worker process
-nginx      10800   10798  0 09:03 ?        00:00:00 nginx: worker process
-nginx      10801   10798  0 09:03 ?        00:00:00 nginx: worker process
-nginx      10802   10798  0 09:03 ?        00:00:00 nginx: worker process
-nginx      10803   10798  0 09:03 ?        00:00:00 nginx: worker process
-nginx      10804   10798  0 09:03 ?        00:00:00 nginx: worker process
-nginx      10805   10798  0 09:03 ?        00:00:00 nginx: worker process
-nginx      10806   10798  0 09:03 ?        00:00:00 nginx: worker process
+nginx    10799  10798  0 09:03 ?        00:00:00 nginx: worker process
+nginx    10800  10798  0 09:03 ?        00:00:00 nginx: worker process
+nginx    10801  10798  0 09:03 ?        00:00:00 nginx: worker process
 ```
 
-在操作结束，为了验证 `nginx` Web 服务器的启动，请获取 RHEL 服务器的 IP 地址，并在 RHEL 8 以外的计算机上打开您选择的 HTTP 客户端，您将看到类似下面的图像：
 
-`nginx` 服务使用路径 `/usr/share/nginx/html` 作为内容发布目录，如果您需要发布某些类型的内容，可以将您的 HTML 文件放置在那里，如下所示：
+
+nginx      10802   10798  0 09:03 ?        00:00:00 nginx: worker process
+
+nginx      10803   10798  0 09:03 ?        00:00:00 nginx: worker process
+
+nginx      10804   10798  0 09:03 ?        00:00:00 nginx: worker process
+
+nginx      10805   10798  0 09:03 ?        00:00:00 nginx: worker process
+
+nginx      10806   10798  0 09:03 ?        00:00:00 nginx: worker process
+
+```
+在操作结束，为了验证`nginx` Web服务器的启动，请获取 RHEL 服务器的 IP 地址，并在 RHEL 8 以外的计算机上打开您选择的 HTTP 客户端，您将看到类似下面的图像：
+
+`nginx`服务使用路径`/usr/share/nginx/html`作为内容发布目录，如果您需要发布某些类型的内容，可以将您的 HTML 文件放置在那里，如下所示：
 
 ```
 [root@pruebas html]# pwd
@@ -536,7 +531,7 @@ total 24
 -rw-r--r-- 1 root 4148 Aug 30 poweredby.png
 ```
 
-配置 `nginx` 服务请使用 `/etc/nginx/nginx.conf` 文件：
+配置`nginx`服务请使用`/etc/nginx/nginx.conf`文件：
 
 ```
 [root@pruebas ~]# ll /etc/nginx/nginx.conf
@@ -545,7 +540,7 @@ total 24
 
 ### NGINX 中的虚拟主机
 
-使用 Web 服务器（无论是 `Apache` 还是 `Nginx`）的巨大优势之一是在同一主机上配置不同的网站；该操作基于大多数公司使用 Windows 服务器执行活动目录和 DNS 功能的传统方案，在这种情况下，DNS 记录 `w1.aptivalabs.net`、`w2.aptivalabs.net` 和 `w3.aptivalabs.net` 指向主机 `192.168.1.201`。在 `Nginx` 中情况下，该主机将托管不同的网站。
+使用 Web 服务器（无论是`Apache`还是`Nginx`）的巨大优势之一是在同一主机上配置不同的网站；该操作基于大多数公司使用 Windows 服务器执行活动目录和 DNS 功能的传统方案，在这种情况下，DNS 记录`w1.aptivalabs.net`、`w2.aptivalabs.net`和`w3.aptivalabs.net`指向主机`192.168.1.201`。在`Nginx`中情况下，该主机将托管不同的网站。
 
 该过程从创建托管 html 文件的文件夹开始：
 
@@ -577,15 +572,15 @@ Relabeled /w2 from unconfined_u:object_r:default_t:s0 to unconfined_u:object_r:h
 Relabeled /w3 from unconfined_u:object_r:default_t:s0 to unconfined_u:object_r:httpd_content_t:s0
 ```
 
-在编辑 `nginx` 服务配置文件之前，先创建一个副本：
+在编辑`nginx`服务配置文件之前，先创建一个副本：
 
 ```
 [root@pruebas ~]# cp /etc/nginx/nginx.conf /etc/nginx/nginx.conf.ori
 ```
 
-在 `nginx` 文件中您将找到一个如下所示的部分：
+在`nginx`文件中您将找到一个如下所示的部分：
 
-将以下内容添加到 `/etc/nginx/nginx.conf` 文件的 `server` 块中，如下所示：
+将以下内容添加到`/etc/nginx/nginx.conf`文件的`server`块中，如下所示：
 
 ```
 [root@pruebas ~]# vim /etc/nginx/nginx.conf
@@ -609,7 +604,7 @@ server {
 }
 ```
 
-重启 `nginx` 服务：
+重启`nginx`服务：
 
 ```
 [root@pruebas ~]# systemctl restart nginx
@@ -633,27 +628,22 @@ server {
 
 ### HTTP 流量的反向代理
 
-您可以配置 NGINX Web 服务器作为 HTTP 流量的反向代理。您可以使用此功能将请求转发到远程服务器，客户端假定它正在从所访问的主机加载内容，但 `nginx` 服务从远程服务器加载实际内容并将其转发给客户端。
+您可以配置 `NGINX` Web 服务器作为 HTTP 流量的反向代理。您可以使用此功能将请求转发到远程服务器，客户端假定它正在从所访问的主机加载内容，但`nginx`服务从远程服务器加载实际内容并将其转发给客户端。
 
-
-
-
-
-`192.168.1.202` 服务器已验证正在发布资源 `(test.html)`，如下所示：
+`192.168.1.202`服务器已验证正在发布资源 `(test.html)`，如下所示：
 
 ![](img/Image00026.jpg)
 
-接下来，在服务器 `192.168.1.201` 上，我们编辑了 `nginx` 配置文件以添加以下行：
+接下来，在服务器`192.168.1.201`上，我们编辑了`nginx`配置文件以添加以下行：
 
 ```bash
 [root@pruebas html]# vim /etc/nginx/nginx.conf
-
 location /test {
     proxy_pass http://192.168.1.202/test.html;
 }
 ```
 
-在 `nginx` 配置文件中，配置块应该如下：
+在`nginx`配置文件中，配置块应该如下：
 
 ```nginx
 server {
@@ -677,22 +667,22 @@ server {
 }
 ```
 
-接下来，在 SELinux 中启用布尔变量 `httpd_can_network_connect` 并重新启动服务：
+接下来，在 SELinux 中启用布尔变量`httpd_can_network_connect`并重新启动服务：
 
 ```bash
 [root@pruebas html]# setsebool -P httpd_can_network_connect 1
 [root@pruebas html]# systemctl restart nginx.service
 ```
 
-为了在 HTTP 客户端上确认此设置，向 `http://192.168.1.201/test` 发起请求，如下所示：
+为了在 HTTP 客户端上确认此设置，向`http://192.168.1.201/test`发起请求，如下所示：
 
 ![](img/Image00027.jpg)
 
-通过之前的练习，通过某种方式，实际上为客户端提供答案的服务器被隐藏了，即 `192.168.1.202`；用户访问 `192.168.1.201` Web 服务器查找答案，它显示的是另一个 Web 服务器的内容。
+通过之前的练习，通过某种方式，实际上为客户端提供答案的服务器被隐藏了，即`192.168.1.202`；用户访问`192.168.1.201` Web 服务器查找答案，它显示的是另一个 Web 服务器的内容。
 
 ## 使用 NGINX 的 HTTP 负载均衡器
 
-本过程描述了将 `NGINX` 服务配置为 HTTP 负载均衡器，它可以根据请求发送到不同的服务器，取决于哪个服务器的活动连接数最少，也就是说，它是关于确定负载组内哪台服务器健康状况更好以便发送 http 请求。在处理公司内部的 Web 应用程序时，这是一个非常有用的场景，并且对于该应用程序至少需要一个高可用方案。
+本过程描述了将`NGINX`服务配置为 HTTP 负载均衡器，它可以根据请求发送到不同的服务器，取决于哪个服务器的活动连接数最少，也就是说，它是关于确定负载组内哪台服务器健康状况更好以便发送 http 请求。在处理公司内部的 Web 应用程序时，这是一个非常有用的场景，并且对于该应用程序至少需要一个高可用方案。
 
 为了实现此功能，有以下服务器组：
 
@@ -700,7 +690,7 @@ server {
 * `192.168.1.202` = 服务器
 * `192.168.1.203` = 服务器
 
-为了验证负载均衡器确实在工作，在服务器 `192.168.1.202` 和 `192.168.1.203` 上（运行着 `nginx` 服务）更改默认索引页（`index.html`），如下所示：
+为了验证负载均衡器确实在工作，在服务器`192.168.1.202`和`192.168.1.203`上（运行着`nginx`服务）更改默认索引页（`index.html`），如下所示：
 
 ```bash
 [root@sr2 ~]# cd /usr/share/nginx/html/
@@ -708,7 +698,7 @@ server {
 [root@sr2 html]# echo "<h1>soy 192.168.1.202</h1>" >> index.html
 ```
 
-在 `192.168.1.203` 服务器上执行相同的指令：
+在`192.168.1.203`服务器上执行相同的指令：
 
 ```bash
 [root@sr3 ~]# cd /usr/share/nginx/html/
@@ -716,7 +706,7 @@ server {
 [root@sr3 html]# echo "<h1>soy 192.168.1.203</h1>" >> index.html
 ```
 
-在将执行负载均衡的服务器上，`nginx` 的配置文件应该如下：
+在将执行负载均衡的服务器上，`nginx`的配置文件应该如下：
 
 ```nginx
 http {
@@ -774,7 +764,7 @@ http {
 
 [译文]
 
-本过程描述了将 `NGINX` 服务配置为 HTTP 负载均衡器，它可以将请求发送到不同的服务器，取决于哪个服务器的活动连接数最少，也就是说，它是关于确定负载组内哪台服务器健康状况更好以便发送 http 请求。在处理公司内部的 Web 应用程序时，这是一个非常有用的场景，并且对于该应用程序至少需要一个高可用方案。
+本过程描述了将`NGINX`服务配置为 HTTP 负载均衡器，它可以将请求发送到不同的服务器，取决于哪个服务器的活动连接数最少，也就是说，它是关于确定负载组内哪台服务器健康状况更好以便发送 http 请求。在处理公司内部的 Web 应用程序时，这是一个非常有用的场景，并且对于该应用程序至少需要一个高可用方案。
 
 为了实现此功能，有以下服务器组：
 
@@ -782,7 +772,7 @@ http {
 * `192.168.1.202` = 服务器
 * `192.168.1.203` = 服务器
 
-为了验证负载均衡器确实在工作，在服务器 `192.168.1.202` 和 `192.168.1.203` 上（运行着 `nginx` 服务）更改默认索引页（`index.html`），如下所示：
+为了验证负载均衡器确实在工作，在服务器`192.168.1.202`和`192.168.1.203`上（运行着`nginx`服务）更改默认索引页（`index.html`），如下所示：
 
 ```bash
 [root@sr2 ~]# cd /usr/share/nginx/html/
@@ -790,7 +780,7 @@ http {
 [root@sr2 html]# echo "<h1>soy 192.168.1.202</h1>" >> index.html
 ```
 
-在 `192.168.1.203` 服务器上执行相同的指令：
+在`192.168.1.203`服务器上执行相同的指令：
 
 ```bash
 [root@sr3 ~]# cd /usr/share/nginx/html/
@@ -798,59 +788,114 @@ http {
 [root@sr3 html]# echo "<h1>soy 192.168.1.203</h1>" >> index.html
 ```
 
-在将执行负载均衡的服务器上，`nginx` 的配置文件应该如下：
+在将执行负载均衡的服务器上，`nginx`的配置文件应该如下：
 
 ```nginx
+```
+
+
+
+```
 http {
-    log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+
+我是由深度求索（DeepSeek）研发的 deepseek-v4-flash-0731 智能大模型。 log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+
     '$status $body_bytes_sent "$http_referer" '
+
     '"$http_user_agent" "$http_x_forwarded_for"';
+
     access_log  /var/log/nginx/access.log  main;
+
     sendfile            on;
+
     tcp_nopush          on;
+
     tcp_nodelay         on;
+
     keepalive_timeout   65;
+
     types_hash_max_size 2048;
+
     include             /etc/nginx/mime.types;
+
     default_type        application/octet-stream;
+
     # 从 /etc/nginx/conf.d. 加载模块化配置文件。
+
     # 更多信息请参见 http://nginx.org/en/docs/ngx_core_module.html
+
     include /etc/nginx/conf.d/*.conf;
+
     upstream loadbalancer.aptivalabs.net {
+
         least_conn;
+
         server 192.168.1.202;
+
         server 192.168.1.203;
+
     }
+
     server {
+
         listen       80 default_server;
+
         listen       [::]:80 default_server;
+
         server_name  _;
+
         root         /usr/share/nginx/html;
+
         # 加载默认 server 的配置文件。
+
         include /etc/nginx/default.d/*.conf;
+
         #location / {
+
         location / {
+
             proxy_pass http://loadbalancer.aptivalabs.net;
+
         }
+
         error_page 404 /404.html;
+
         location = /40x.html {
+
         }
+
         error_page 500 502 503 504 /50x.html;
+
         location = /50x.html {
+
         }
+
     }
+
     # 启用 TLS 的服务器设置。
+
     # server {
+
     #    listen        443 ssl default_server;
+
     #    listen       [::]:443 ssl default_server;
+
     #    server_name  _;
+
     #    root         /usr/share/nginx/html;
+
     #    ssl_certificate "/etc/nginx/ssl.crt";
+
     #    ssl_certificate_key "/etc/nginx/ssl.key";
+
     #    ssl_session_cache shared;
+
     #    ssl_session_timeout 10m;
+
     #    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+
     # }
+
 }
 ```
 
@@ -864,7 +909,9 @@ http {
 [root@pruebas html]# vim /etc/nginx/nginx.conf
 
 location /test {
+
     proxy_pass http://192.168.1.202/test.html;
+
 }
 ```
 
@@ -872,6 +919,7 @@ location /test {
 
 ```bash
 [root@pruebas html]# setsebool -P httpd_can_network_connect 1
+
 [root@pruebas html]# systemctl restart nginx.service
 ```
 
@@ -895,7 +943,9 @@ location /test {
 
 ```bash
 [root@sr2 ~]# cd /usr/share/nginx/html/
+
 [root@sr2 html]# mv index.html index.html.ori
+
 [root@sr2 html]# echo "<h1>soy 192.168.1.202</h1>" >> index.html
 ```
 
@@ -903,7 +953,9 @@ location /test {
 
 ```bash
 [root@sr3 ~]# cd /usr/share/nginx/html/
+
 [root@sr3 html]# mv index.html index.html.ori
+
 [root@sr3 html]# echo "<h1>soy 192.168.1.203</h1>" >> index.html
 ```
 
@@ -911,55 +963,105 @@ location /test {
 
 ```nginx
 http {
+
     log_format  main  '$remote_addr - $remote_user [$time_local] "$request" '
+
     '$status $body_bytes_sent "$http_referer" '
+
     '"$http_user_agent" "$http_x_forwarded_for"';
+
     access_log  /var/log/nginx/access.log  main;
+
     sendfile            on;
+
     tcp_nopush          on;
+
     tcp_nodelay         on;
+
     keepalive_timeout   65;
+
     types_hash_max_size 2048;
+
     include             /etc/nginx/mime.types;
+
     default_type        application/octet-stream;
+
     # 从 /etc/nginx/conf.d. 加载模块化配置文件。
+
     # 更多信息请参见 http://nginx.org/en/docs/ngx_core_module.html
+
     include /etc/nginx/conf.d/*.conf;
+
     upstream loadbalancer.aptivalabs.net {
+
         least_conn;
+
         server 192.168.1.202;
+
         server 192.168.1.203;
+
     }
+
     server {
+
         listen       80 default_server;
+
         listen       [::]:80 default_server;
+
         server_name  _;
+
         root         /usr/share/nginx/html;
+
         # 加载默认 server 的配置文件。
+
         include /etc/nginx/default.d/*.conf;
+
         #location / {
+
         location / {
+
             proxy_pass http://loadbalancer.aptivalabs.net;
+
         }
+
         error_page 404 /404.html;
+
         location = /40x.html {
+
         }
+
         error_page 500 502 503 504 /50x.html;
+
         location = /50x.html {
+
         }
+
     }
+
     # 启用 TLS 的服务器设置。
+
     # server {
+
     #    listen        443 ssl default_server;
+
     #    listen       [::]:443 ssl default_server;
+
     #    server_name  _;
+
     #    root         /usr/share/nginx/html;
+
     #    ssl_certificate "/etc/nginx/ssl.crt";
+
     #    ssl_certificate_key "/etc/nginx/ssl.key";
+
     #    ssl_session_cache shared;
+
     #    ssl_session_timeout 10m;
+
     #    ssl_protocols TLSv1 TLSv1.1 TLSv1.2;
+
     # }
+
 }
 ```
 
@@ -981,13 +1083,11 @@ http {
 printf "[dn]\nCN=localhost\n[req]\ndistinguished_name = dn\n[EXT]\nsubjectAltName=DNS:localhost\nkeyUsage=digitalSignature\nextendedKeyUsage=serverAuth")
 ```
 
-
-
-
 必须将证书复制到相应的路径，以便 `nginx` 服务读取它们，该路径必须在 `nginx` 文件中定义：
 
 ```bash
 [root@loadbalancer ~]# cp localhost.crt /etc/pki/tls/certs/localhost.crt
+
 [root@loadbalancer ~]# cp localhost.key /etc/pki/tls/private/localhost.key
 ```
 
@@ -997,27 +1097,49 @@ printf "[dn]\nCN=localhost\n[req]\ndistinguished_name = dn\n[EXT]\nsubjectAltNam
 [root@loadbalancer ~]# cat /etc/nginx/nginx.conf
 
 server {
+
     listen       443 ssl http2 default_server;
+
     listen       [::]:443 ssl http2 default_server;
+
     server_name  _;
+
     root         /usr/share/nginx/html;
+
     ssl_certificate "/etc/pki/tls/certs/localhost.crt";
+
     ssl_certificate_key "/etc/pki/tls/private/localhost.key";
+
     listen       80 default_server;
+
     listen       [::]:80 default_server;
+
     #server_name  _;
+
     #server_name loadbalancer.aptivalabs.net;
+
     #root         /usr/share/nginx/html;
+
     # Load configuration files for the default server block.
+
     include /etc/nginx/default.d/*.conf;
+
     location / {
+
     }
+
     error_page 404 /404.html;
+
     location = /40x.html {
+
     }
+
     error_page 500 502 503 504 /50x.html;
+
     location = /50x.html {
+
     }
+
 }
 ```
 
@@ -1025,8 +1147,11 @@ server {
 
 ```bash
 [root@loadbalancer ~]# firewall-cmd --permanent --add-service=https
+
 success
+
 [root@loadbalancer ~]# firewall-cmd --reload
+
 success
 ```
 
@@ -1057,53 +1182,45 @@ success
 
 ```bash
 [root@loadbalancer ~]# pwd
+
 /root
+
 [root@loadbalancer ~]# ll anaconda-ks.cfg
+
 -rw-------. 1 root root 1275 Dec 17 17:21 anaconda-ks.cfg
 ```
 
-在练习开发过程中，使用了工具 `https://access.redhat.com/labs/kickstartconfig/`，生成了文件并下载到 RHEL 8 服务器；生成的文件定义了“最小安装”环境的部署；生成的文件详情如下：
+
+
+在练习开发过程中，使用工具`https://access.redhat.com/labs/kickstartconfig/`生成文件，并将其下载到 RHEL 8 服务器。生成的文件定义了“最小安装”环境的部署，详情如下：
 
 ```bash
 [root@loadbalancer html]# cat ks.cfg
+
 lang en_US
+
 keyboard us
+
 timezone America/Bogota --isUtc
+
 rootpw $1$wRe6mImL$eyda8JWudogBZ5pMTTVU9/ --iscrypted
 ```
-
-```bash
-[root@loadbalancer html]# cat ks.cfg
-lang en_US
-keyboard us
-timezone America/Bogota --isUtc
-rootpw $1$wRe6mImL$eyda8JWudogBZ5pMTTVU9/ --iscrypted
-```
-
-```bash
-[root@loadbalancer html]# cat ks.cfg
-lang en_US
-keyboard us
-timezone America/Bogota --isUtc
-rootpw $1$wRe6mImL$eyda8JWudogBZ5pMTTVU9/ --iscrypted
-```
-
-（注：此处原文中存在大量重复的命令块描述，已根据逻辑流进行整合和翻译处理……）
 
 ## 使用 SAMBA 部署文件服务器
 
-Samba 在 RHEL 中实现了服务器消息块 (SMB) 协议。该协议用于访问服务器资源，如共享文件和打印机。部署如 Samba 的 SMB 服务可能意味着需要处理与 Samba 相关的服务，例如 `smbd`、`nmbd` 和 `winbind`。
+Samba 在 RHEL 中实现了服务器消息块（SMB）协议。该协议用于访问服务器资源，如共享文件和打印机。部署 Samba 等 SMB 服务可能意味着需要处理与 Samba 相关的服务，例如`smbd`、`nmbd`和`winbind`。
 
+`smbd`服务使用 SMB 协议提供文件共享和打印服务，并负责限制资源以及对连接到 Samba 的用户进行身份验证。
 
+`nmbd`服务使用 NetBIOS over IPv4 协议提供主机名和 IP 解析。除了名称解析外，`nmbd`服务还允许你浏览 SMB 网络，以定位域、工作组、主机、文件共享和打印机。
 
+`winbind`服务为名称交换服务（NSS，即网络服务切换器）提供接口，以便将本地和 AD（活动目录）用户及用户组集成到本地系统中。这允许域用户对由 Samba 服务器或其他本地服务管理的服务进行身份验证。
 
-`smbd` 服务使用 SMB 协议提供文件共享和打印服务，并负责限制资源以及连接到 Samba 的用户进行身份验证。
+如果将 Samba 配置为域成员，则必须在启动`smbd`服务之前启动`winbind`进程，否则本地系统将无法使用域用户和用户组。
 
-`nmbd` 服务使用 NetBIOS over IPv4 协议提供主机名和 IP 解析。除了名称解析外，`nmbd` 服务还允许你浏览 SMB 网络以定位域、工作组、主机、文件共享和打印机。
+为了更深入地了解如何实现 Samba 作为文件服务器的部署，我们将使用 IP 地址为`192.168.0.201`的服务器作为 Samba 服务器；我们将模拟公司内部某些工作组（财务和人力资源，即 HR）的场景，他们需要对系统内的文件夹拥有权限以保存文件。
 
-`winbind` 服务为名称交换服务（NSS - 网络服务切换器）提供接口，以便将本地和 AD（活动目录）用户及用户组集成到本地系统中。这允许域用户对由 Samba 服务器或其他本地服务管理的服务进行身份验证。如果你将 Samba 配置为域成员，则必须在启动 `smbd` 服务之前启动 `winbind` 进程，否则本地系统将无法使用域用户和用户组。
-
-为了更深入地了解如何实现 Samba 作为文件服务器的部署，我们将使用 IP 地址为 `192.168.0.201` 的服务器作为 Samba 服务器；我们将模拟公司内部某些工作组（财务和人力资源 - hr）的场景，他们需要对系统内的文件夹拥有权限以保存文件。访问这些资源的人将使用 Linux Red Hat、Microsoft Windows 10 和 Apple Mac OSX 系统。这些人可以在个人文件夹和组文件夹中保存个人信息；在任何时候，他们都无法访问 Linux 器上的 Shell。
+访问这些资源的人将使用 Linux Red Hat、Microsoft Windows 10 和 Apple Mac OSX 系统。这些人可以在个人文件夹和组文件夹中保存个人信息；在任何时候，他们都无法访问 Linux 服务器上的 Shell。
 
 ### Samba 安装
 
@@ -1113,31 +1230,51 @@ Samba 在 RHEL 中实现了服务器消息块 (SMB) 协议。该协议用于访�
 [root@sr1 ~]# yum -y install samba
 
 正在更新订阅管理仓库。
+
 上一次元数据过期检查：2021 年 3 月 24 日周三 下午 03:19:16 EDT, 0:35:00 前。
+
 依赖关系已解决。
+
 ================================================================================
+
 Package             Architecture   Version                    Repository                             Size
+
 ================================================================================
+
 Installing:
+
 samba                x86_64         4.12.3-14.el8_3            rhel-8-for-x86_64-baseos-rpms     840 k
+
 正在安装依赖项:
+
 samba-common-tools     x86_64         4.12.3-14.el8_3           rhel-8-for-x86_64-baseos-rpms     484 k
+
 samba-libs             x86_64         4.12.3-14.el8_3           rhel-8-for-x86_64-baseos-rpms     188 k
+
 事务摘要
+
 ================================================================================
+
 安装  3 个软件包
+
 总下载大小: 1.5 M
+
 安装后大小: 4.0 M
+
 已安装:
+
 samba-4.12.3-14.el8_3.x86_64  samba-common-tools-4.12.3-14.el8_3.x86_64  samba-libs-4.12.3-14.el8_3.x86_64
 ```
 
 ### 目录与权限设置
 
-我们继续创建包含工作组信息的文件夹；需要说明的是，在实际场景中，建议将 `/datos` 挂载为带有精简卷（LV Thin）的 LVM 结构上的 XFS 文件系统挂载点；创建文件夹：
+我们继续创建包含工作组信息的文件夹。需要说明的是，在实际场景中，建议将`/datos`挂载为带有精简卷（LV Thin）的 LVM 结构上的 XFS 文件系统挂载点。
+
+创建文件夹：
 
 ```bash
 [root@sr1 ~]# mkdir -p /datos/tesoreria
+
 [root@sr1 ~]# mkdir /datos/rrhh
 ```
 
@@ -1145,211 +1282,304 @@ samba-4.12.3-14.el8_3.x86_64  samba-common-tools-4.12.3-14.el8_3.x86_64  samba-l
 
 ```bash
 [root@sr1 ~]# groupadd -r tesoreria
+
 [root@sr1 ~]# groupadd -r rrhh
+
 [root@sr1 ~]# chgrp tesoreria /datos/tesoreria
+
 [root@sr1 ~]# chgrp rrhh /datos/rrhh
+
 [root@sr1 ~]# chmod 2770 /datos/tesoreria
+
 [root@sr1 ~]# chmod 2770 /datos/rrhh
 ```
 
-你可以在上一条指令中看到“setgid”权限的创建，以便在每个组文件夹中创建的文件在创建后后仍继续属于同一组；通过默认声明 ACL 也执行了相同的操作，使得未来的文件和目录保留必要的属性，从而让“财务”组和“人力资源”组的用户继续对资源拥有权限：
+你可以在上一条指令中看到“setgid”权限的创建，以便在每个组文件夹中创建的文件在创建后仍继续属于同一组。
+
+通过默认声明 ACL 也执行了相同的操作，使未来的文件和目录保留必要的属性，从而让“财务”组和“人力资源”组的用户继续对资源拥有权限：
 
 ```bash
 [root@sr1 ~]# setfacl -m g:tesoreria:rwx /datos/tesoreria
+
 [root@sr1 ~]# setfacl -m d:g:tesoreria:rwx /datos/tesoreria
+
 [root@sr1 ~]# setfacl -m g:rrhh:rwx /datos/rrhh
+
 [root@sr1 ~]# setfacl -m d:g:rrhh:rwx /datos/rrhh
 ```
 
 ### SELinux 配置
 
-现在是使用 SELinux 控制对这些目录的访问了，SELinux 必须处于“强制”（enforcing）模式：
+现在使用 SELinux 控制对这些目录的访问。SELinux 必须处于“强制”（enforcing）模式：
 
 ```bash
 [root@sr1 ~]# semanage fcontext -a -t samba_share_t '/datos/tesoreria(/.*)'
+
 [root@sr1 ~]# semanage fcontext -a -t samba_share_t '/datos/rrhh(/.*)'
+
 [root@sr1 ~]# restorecon -vv /datos/tesoreria
+
 [root@sr1 ~]# restorecon -Rv /datos/rrhh
 ```
 
-上述语句通过 SELinux 控制对这些目录的访问，SELinux 必须处于“强制”模式。上述语句应用了 SELinux 允许 Samba 导出策略。
+上述语句通过 SELinux 控制对这些目录的访问，SELinux 必须处于“强制”模式。上述语句应用了 SELinux 允许 Samba 导出的策略。
 
 ### Samba 用户创建
 
-创建 Samba 用户，以便 Linux 系统创建的用户能够以相同名称的方式访问 Samba 服务，并在 Samba 配置文件中设置密码。
+创建 Samba 用户，以便 Linux 系统创建的用户能够以相同名称访问 Samba 服务，并在 Samba 配置文件中设置密码：
 
 ```bash
 [root@sr1 ~]# adduser -N -s /sbin/nologin tesoreria
+
 [root@sr1 ~]# smbpasswd -a
+
 [root@sr1 ~]# adduser -N -s /sbin/nologin rrhh
 ```
 
-查看 `/home` 目录。
-
-如果你查看 `/home` 目录，将看到用户：
+查看`/home`目录：
 
 ```bash
 [root@sr1 ~]# ll /home/
+
 total 4
+
 drwx------ 3 rrhh Mar 24
+
 drwx------ 3 t1 Mar 24
 ```
 
 ### Samba 配置
 
-一旦定义了文件服务器支持的整个结构，出于备份考虑，需要保存 Samba 文件。Samba 安装了 `/etc/samba` 路径，这是配置文件的所在：
+一旦定义了文件服务器支持的整个结构，出于备份考虑，需要保存 Samba 文件。Samba 安装了`/etc/samba`路径，该路径包含配置文件：
 
 ```bash
 [root@sr1 ~]# cd /etc/samba
+
 [root@sr1 ~]# pwd
+
 /etc/samba
+
 [root@sr1 ~]# mv smb.conf smb.conf.original
+
 [root@sr1 ~]# mv smb.conf.example smb.conf
 ```
 
-`smb.conf.example` 文件包含了 Samba 所需的配置，重命名后将作为主配置文件 `smb.conf`。按照这些步骤，需要编辑此配置文件以建立以下指南：
+`smb.conf.example`文件包含 Samba 所需的配置。重命名后，它将作为主配置文件`smb.conf`。
+
+按照这些步骤，需要编辑此配置文件以建立以下指南：
 
 ```bash
 [root@sr1 ~]# vim /etc/samba/smb.conf
+
 workgroup = WORKGROUP
+
 interfaces = lo ens18
+
 host allow = 127.168.0
+
 security = user
+
 passdb backend = tddb
 ```
 
-之前的定义在 `[global]` 部分设置了 Samba 的以下属性：
-- **security**: 指定客户端如何访问 Samba，`user` 定义了使用用户名和密码。
-- **interfaces**: Samba 监听请求的接口。
-- **host allow**: 允许使用服务的主机或网络。
+之前的定义在`[global]`部分设置了 Samba 的以下属性：
 
-在编辑 Samba 配置文件后（在文件末尾），需要添加要共享的资源，此处是之前创建的文件夹：
+- `security`：指定客户端如何访问 Samba，`user`定义了使用用户名和密码。
+- `interfaces`：Samba 监听请求的接口。
+- `host allow`：允许使用服务的主机或网络。
+
+在编辑 Samba 配置文件后，在文件末尾添加要共享的资源，此处是之前创建的文件夹：
 
 ```ini
 [tesoreria]
+
 comment = 财务部门共享
+
 path = /datos/tesoreria
+
 writable = yes
+
 valid users = @tesoreria
+
 [rrhh]
+
 comment = 人力资源共享
+
 path = /datos/rrhh
+
 writable = yes
+
 valid users = @rrhh
 ```
 
-
-
-
-一旦 Samba 配置文件通过验证，服务将启动并激活以启动 Linux 服务器，同时将建立 FirewallD 规则以允许接收此类请求：
+一旦 Samba 配置文件通过验证，服务将启动并设置为随 Linux 服务器启动，同时建立 FirewallD 规则以允许接收此类请求：
 
 ```bash
 [root@sr1 ~]# systemctl enable smb
+
 [root@sr1 ~]# systemctl start smb
+
 [root@sr1 ~]# firewall-cmd --permanent --add-service=samba
+
 [root@sr1 ~]# firewall-cmd --reload
 ```
 
 ## SMB 客户端
 
-要访问此文件服务器的服务，你可以使用运行 Apple Mac Osx 系统的计算机通过“访达”（Finder）应用程序的“前往 / 连接到服务器...Go / Connect to Server...”菜单进行连接；这次我们将使用之前创建的用户“t1”进行注册，如下所示：
+要访问此文件服务器的服务，可以使用运行 Apple Mac OSX 系统的计算机，通过“访达”（Finder）应用程序的“前往 / 连接到服务器（Go / Connect to Server）”菜单进行连接。
 
-![](img/Image00032.jpg)![](img/Image00033.jpg)
+这次将使用之前创建的用户“t1”进行注册，如下所示：
 
-对于 Microsoft Windows 客户端（与 Windows 10 一一样），你可以使用“Windows 资源管理器”在该工具的地址栏连接 Samba 服务器，输入 `\\192.168.0.201`，如下图所示：
+![](img/Image00032.jpg)
+
+![](img/Image00033.jpg)
+
+对于 Microsoft Windows 客户端（与 Windows 10 一样），可以使用“Windows 资源管理器”在该工具的地址栏连接 Samba 服务器，输入`\\192.168.0.201`，如下图所示：
 
 ![](img/Image00034.jpg)
 
-一旦你输入了相应的凭据，就可以相应地保存文件了。
+一旦输入相应的凭据，就可以保存文件。
 
-如果需要将 Linux RHEL 8 服务器连接到之前部署的 Samba 文件服务器，你必须在该服务器上执行以下操作：
+如果需要将 Linux RHEL 8 服务器连接到之前部署的 Samba 文件服务器，必须在该服务器上执行以下操作：
 
 ```bash
 [root@loadbalancer ~]# yum -y install cifs-utils
+
 Updating Subscription Management repositories.
+
 Last metadata expiration check: 5:42:05 ago on Wed 24 Mar 2021 10:46:12 AM -05.
+
 ------
+
 Complete!
+
 [root@loadbalancer ~]# mkdir /mnt/t1
+
 [root@loadbalancer ~]# mount -o username=t1 //192.168.0.201/tesoreria /mnt/t1
+
 Password for t1@//192.168.0.201/tesoreria:  ******
+
 [root@loadbalancer ~]# df -hT
+
 Filesystem                Type      Size  Used Avail Use% Mounted on
+
 --- salida omitida ---
+
 //192.168.0.201/tesoreria cifs       44G  5.1G   39G  12% /mnt/t1
 ```
 
-要执行持久挂载，有必要创建一个包含访问凭据的文件（在此情况下为用户“t1”的凭据），对该文件设置权限并编辑 `/etc/fstab`，如下：
+要执行持久挂载，有必要创建一个包含访问凭据的文件（在此情况下为用户“t1”的凭据），对该文件设置权限并编辑`/etc/fstab`，如下：
 
 ```bash
 [root@loadbalancer ~]# vim credenciales.smb
+
 username=t1
+
 password=123456
+
 [root@loadbalancer ~]# chmod 600 credenciales.smb
+
 [root@loadbalancer ~]# vim /etc/fstab
+
 //192.168.0.201/tesoreria  /mnt/t1  cifs credentials=/root/credenciales.smb 0 0
+
 [root@loadbalancer ~]# udevadm settle
+
 [root@loadbalancer ~]# systemctl daemon-reload
+
 [root@loadbalancer ~]# mount -a
 ```
 
-要验证与服务器 `192.168.0.201` 的连通性，请运行：
+要验证与服务器`192.168.0.201`的连通性，请运行：
 
 ```bash
 [root@loadbalancer ~]# df -hT
+
 Filesystem                Type      Size  Used
+
 --- salida omitida ---
+
 //192.168.0.201/tesoreria cifs       44G  5.1G   39G  12% /mnt/t1
 ```
 
-## RED HAT LINUX 作为 WINDOWS 服务器成员域
+## Red Hat Linux 作为 Windows 服务器成员域
 
-从 RHEL 8 开始，提供了相关工具来生成与 Microsoft Windows Server 及其活动目录（Active Directory）的集成；这种集成允许为域用户提供以下某些功能：
+从 RHEL 8 开始，提供了相关工具来生成与 Microsoft Windows Server 及其活动目录（Active Directory）的集成。这种集成允许为域用户提供以下功能：
 
-* 验证域用户访问本地服务的身份，例如 `sshd`
-* 共享托管在 Linux 服务器上的目录和打印机，使域用户能够访问这些资源。
+- 验证域用户访问本地服务的身份，例如`sshd`。
+- 共享托管在 Linux 服务器上的目录和打印机，使域用户能够访问这些资源。
 
-然而，在享受这些权限之前，有必要将 RHEL 服务器引入 Windows Server 域，该过程从更新加密策略开始，如下所示：
+然而，在享受这些权限之前，有必要将 RHEL 服务器加入 Windows Server 域。该过程从更新加密策略开始，如下所示：
 
 ```bash
 [root@loadbalancer ~]# update-crypto-policies --set DEFAULT:AD-SUPPORT
+
 Setting system policy to DEFAULT:AD-SUPPORT
+
 Note：系统级加密策略在应用程序启动时生效。
+
 建议重启系统以使策略完全生效。
 ```
 
-此更新请求系统进行“重启”：
+此更新请求系统进行重启：
 
 ```bash
 [root@loadbalancer ~]# systemctl reboot
 ```
 
-有必要安装一些应用程序，如下：
+需要安装一些应用程序：
 
 ```bash
 [root@loadbalancer ~]# yum install realmd oddjob-mkhomedir oddjob samba-winbind-clients samba-winbind samba-common-tools samba-winbind-krb5-locator
+
 Updating Subscription Management repositories.
+
 Last metadata expiration check: 0:59:36 ago on Wed 24 Mar 2021 04:33:08 PM -05.
+
 realmd-0.16.3-19.el8.x86_64 is already installed.
+
 oddjob-mkhomedir-0.34.5-3.el8.x86_64 is already installed.
+
 oddjob-0.34.5-3.el8.x86_64 is already installed.
+
 Dependencies resolved.
+
 ================================================================
+
 Package                     Architecture Version                    Repository
-================================================================
+```
+
+
+
+## Installing
+
+```text
 Installing:
+
 samba-common-tools          x86_64  4.12.3-14.el8_3            redhel-for-x86_64-os-rpms   484 k
+
 samba-winbind               x86_64  4.12.3-14.el8_3            redhel-for-x86_64-os-rpms   567 k
+
 samba-winbind-clients       x86_64  4.12.3-14.el8_3            redhel-for-x86_64-os-rpms   149 k
+
 samba-winbind-krb5-locator   x86_64  4.12.3-14.el8_3            redhel-for-x86_64-os-rpms    95 k
+
 Installing:
+
 samba-libs                  x86_64  4.12.3-14.el8_3            redhel-for-x86_64-os-rpms   188 k
+
 samba-winbind-modules        x86_64  4.12.3-14.el8_3            redhel-for-x86_64-os-rpms   124 k
+
 Transaction Summary
+
 ================================================================
+
 Install  6 Packages
+
 Total download: 1.6 M
+
 Installed size: 3.4 M
+
 Is this ok [y/N]: y
 ```
 
@@ -1357,44 +1587,65 @@ Is this ok [y/N]: y
 
 ```bash
 [root@loadbalancer ~]# yum install samba
+
 Updating Subscription Management repositories.
+
 Last metadata expiration check: 1:01:28 ago on Wed 24 Mar 2021 04:33:08 PM -05.
+
 Downloading:
+
 samba-4.12.3-14.el8_3.x86_64.rpm
+
 --------------------------------------------------
+
 Total                               840 kB/840 kB           00:1
+
 Transaction check
+
 Transaction check succeeded.
+
 Running transaction
+
 Preparing:         samba-4.12.3-14.el8_3.x86_64
+
 Installing:         samba-4.12.3-14.el8_3.x86_64
+
 Running scriptlet: samba-4.12.3-14.el8_3.x86_64
+
 Verifying:         samba-4.12.3-14.el8_3.x86_64
+
 Installed products updated.
+
 Complete!
 ```
 
 在完成 Samba 安装后，我们需要重命名 Samba 配置文件，在集成时会生成一个新的配置文件：
 
-
-
-
-
 ```bash
 [root@loadbalancer ~]# cd /etc/samba/
+
 [root@loadbalancer samba]# ll
 
 total 20
+
 -rw-r--r--. 1 root root     20 Dec  4 13:04 lmhosts
+
 -rw-r--r--. 1 root root      706 Dec  4 13:04 smb.conf
+
 -rw-r--r--. 1 root root 11327 Dec  4 13:04 smb.conf.example
 ```
+
 ```bash
 [root@loadbalancer samba]# mv smb.conf smb.conf.original
+
 [root@loadbalancer samba]# ll
+
 total 20
+
 -rw-r--r--. 1 root root     20 Dec  4 13:04 lmhosts
+
 -rw-r--r--. 1 root root 11327 Dec  4 13:04 smb.conf.example
+
 -rw-r--r--. 1 root root      706 Dec  4 13:04 smb.conf.original
 ```
 
@@ -1402,19 +1653,31 @@ total 20
 
 ```bash
 [root@loadbalancer samba]# ping ad1.aptivalabs.net
+
 PING ad1.aptivalabs.net (192.168.1.200) 56(84) bytes of data.
+
 64 bytes from ad1.aptivalabs.net (192.168.1.200): icmp_seq=1 ttl=128 time=0.809 ms
+
 64 bytes from ad1.aptivalabs.net (192.168.1.200): icmp_seq=2 ttl=128 time=0.815 ms
+
 64 bytes from ad1.aptivalabs.net (192.168.1.200): icmp_seq=3 ttl=128 time=0.777 ms
+
 ^C
+
 --- ad1.aptivalabs.net ping statistics ---
+
 3 packets transmitted, 3 received, 0% packet loss, time 4ms
+
 rtt min/avg/max/mdev = 0.777/0.800/0.815/0.028 ms
 
 [root@loadbalancer samba]# nslookup ad1.aptivalabs.net
+
 Server: 192.168.1.200
+
 Address: 192.168.1.200#53
+
 Name: ad1.aptivalabs.net
+
 Address: 192.168.1.200
 ```
 
@@ -1422,27 +1685,43 @@ Address: 192.168.1.200
 
 ```bash
 [root@loadbalancer samba]# realm join --membership-software=samba --client-software=winbind ad1.aptivalabs.net
+
 Password for Administrator:
 ```
 
-一旦进入域，将检查 `winbind` 服务的状态并重新启动，同时利用该功能使其在操作系统启动时自动运行：
+一旦进入域，将检查`winbind`服务的状态并重新启动，同时利用该功能使其在操作系统启动时自动运行：
 
 ```bash
 [root@loadbalancer samba]# systemctl status winbind
+
 ● winbind.service - Samba Winbind Daemon
+
 Loaded: loaded (/usr/lib/systemd/system/winbind.service; enabled; vendor preset: disabled)
+
 Active: active (running) since Wed 2021-03-24 17:43:44 -05; 43s ago
+
 Docs: man:winbindd(8)
+
 man:samba(7)
+
 man:smb.conf(5)
+
 Main PID: 9302 (winbindd)
+
 Status: "winbindd: ready to serve connections..."
+
 Tasks: 4 (limit: 186419)
+
 Memory: 10.8M
+
 CGroup: /system.slice/winbind.service
+
 ├─9302 /usr/sbin/winbindd --foreground --no-process-group
+
 ├─9307 /usr/sbin/winbindd --foreground --no-process-group
+
 ├─9365 /usr/sbin/winbindd --foreground --no-process-group
+
 └─9367 /usr/sbin/winbindd --foreground --no-process-group
 
 [root@loadbalancer samba]# systemctl enable winbind --now
@@ -1452,19 +1731,33 @@ CGroup: /system.slice/winbind.service
 
 ```bash
 [root@loadbalancer ~]# realm list
+
 aptivalabs.net
+
 type: kerberos
+
 realm-name: APTIVALABS.NET
+
 domain-name: aptivalabs.net
+
 configured: kerberos-member
+
 server-software: active-directory
+
 client-software: winbind
+
 required-package: oddjob-mkhomedir
+
 required-package: oddjob
+
 required-package: samba-winbind-clients
+
 required-package: samba-winbind
+
 required-package: samba-common-tools
+
 login-formats: APTIVALABS\%U
+
 login-policy: allow-any-login
 ```
 
@@ -1472,8 +1765,11 @@ login-policy: allow-any-login
 
 ```bash
 [root@loadbalancer samba]# wbinfo -u
+
 APTIVALABS\administrator
+
 APTIVALABS\guest
+
 APTIVALABS\krbtgt
 ```
 
@@ -1481,56 +1777,99 @@ Windows Server 中定义的组如下：
 
 ```bash
 [root@loadbalancer samba]# wbinfo -g
+
 APTIVALABS\domain computers
+
 APTIVALABS\administrator
+
 APTIVALABS\guest
+
 APTIVALABS\domain computers
+
 APTIVALABS\domain computers
+
 APTIVALABS\domain computers
+
 APTIVALABS\domain computers
+
 APTIVALABS\domain computers
+
 APTIVALABS\domain computers
+
 APTIVALABS\domain computers
+
 APTIVALABS\domain computers
+
 APTIVALABS\domain computers
+
 APTIVALABS\domain computers
+
 APTIVALABS\domain computers
+
 APTIVALABS\domain computers
+
 APTIVALABS\domain computers
+
 APTIVALABS\domain computers
+
 APTIVALABS\domain computers
+
 APTIVALABS\domain computers
+
 APTIVALABS\domain computers
+
 APTIVALABS\domain computers
+
 APTIVALABS\domain computers
+
 APTIVALABS\domain computers
+
 APTIVALABS\domain computers
+
 APTIVALABS\domain computers
+
 APTIVALABS\domain computers
+
 APTIVALABS\domain computers
+
 APTIVALABS\domain computers
+
 APTIVALABS\domain computers
+
+APTIVALABS\domain computers
+
 APTIVALABS\domain computers
 ```
-```)
 
 在将 RHEL 服务器集成到域之前，通过不同的方法验证 Linux 服务器是否可以连接到微软活动目录（Active Directory）服务器：
 
 ```bash
 [root@loadbalancer samba]# ping ad1.aptivalabs.net
+
 PING ad1.aptivalabs.net (192.168.1.200) 56(84) bytes of data.
+
 64 bytes from ad1.aptivalabs.net (192.168.1.200): icmp_seq=1 ttl=128 time=0.809 ms
+
 64 bytes from ad1.aptivalabs.net (192.168.1.200): icmp_seq=2 ttl=128 time=0.815 ms
+
 64 bytes from ad1.aptivalabs.net (192.168.1.200): icmp_seq=3 ttl=128 time=0.777 ms
+
 ^C
+
 --- ad1.aptivalabs.net ping statistics ---
+
 3 packets transmitted, 3 received, 0% packet loss, time 4ms
+
 rtt min/avg/max/mdev = 0.777/0.800/0.815/0.028 ms
 
 [root@loadbalancer samba]# nslookup ad1.aptivalabs.net
+
 Server: 192.168.1.200
+
 Address: 192.168.1.200#53
+
 Name: ad1.aptivalabs.net
+
 Address: 192.168.1.200
 ```
 
@@ -1538,27 +1877,43 @@ Address: 192.168.1.200
 
 ```bash
 [root@loadbalancer samba]# realm join --membership-software=samba --client-software=winbind ad1.aptivalabs.net
+
 Password for Administrator:
 ```
 
-一旦进入域，将检查 `winbind` 服务的状态并重新启动，同时利用该功能使其在操作系统启动时自动运行：
+一旦进入域，将检查`winbind`服务的状态并重新启动，同时利用该功能使其在操作系统启动时自动运行：
 
 ```bash
 [root@loadbalancer samba]# systemctl status winbind
+
 ● winbind.service - Samba Winbind Daemon
+
 Loaded: loaded (/usr/lib/systemd/system/winbind.service; enabled; vendor preset: disabled)
+
 Active: active (running) since Wed 2021-03-24 17:43:44 -05; 43s ago
+
 Docs: man:winbindd(8)
+
 man:samba(7)
+
 man:smb.conf(5)
+
 Main PID: 9302 (winbindd)
+
 Status: "winbindd: ready to serve connections..."
+
 Tasks: 4 (limit: 186419)
+
 Memory: 10.8M
+
 CGroup: /system.slice/winbind.service
+
 ├─9302 /usr/sbin/winbindd --foreground --no-process-group
+
 ├─9307 /usr/sbin/winbindd --foreground --no-process-group
+
 ├─9365 /usr/sbin/winbindd --foreground --no-process-group
+
 └─9367 /usr/sbin/winbindd --foreground --no-process-group
 
 [root@loadbalancer samba]# systemctl enable winbind --now
@@ -1568,19 +1923,33 @@ CGroup: /system.slice/winbind.service
 
 ```bash
 [root@loadbalancer ~]# realm list
+
 aptivalabs.net
+
 type: kerberos
+
 realm-name: APTIVALABS.NET
+
 domain-name: aptivalabs.net
+
 configured: kerberos-member
+
 server-software: active-directory
+
 client-software: winbind
+
 required-package: oddjob-mkhomedir
+
 required-package: oddjob
+
 required-package: samba-winbind-clients
+
 required-package: samba-winbind
+
 required-package: samba-common-tools
+
 login-formats: APTIVALABS\%U
+
 login-policy: allow-any-login
 ```
 
@@ -1588,70 +1957,18 @@ login-policy: allow-any-login
 
 ```bash
 [root@loadbalancer samba]# wbinfo -u
+
 APTIVALABS\administrator
+
 APTIVALABS\guest
+
 APTIVALABS\krbtgt
 ```
 
 Windows Server 中定义的组如下：
 
-```bash
-[root@loadbalancer samba]# wbinfo -g
-APTIVALABS\domain computers
-APTIVALABS\administrator
-APTIVALABS\guest
-APTIVALABS\krbtgt
-``` (注：在原文示例中该部分存在大量重复字符，翻译时遵循逻辑保持对应关系) 
 
-此处修正为对应原文内容：
-```bash
-[root@loadbalancer samba]# wbinfo -g
-APTIVALABS\domain computers
-APTIVALABS\administrator
-APTIVALABS\guest
-APTIVALABS\krbtgt
-``` 
-*(注：原文提供的 `wbinfo -g` 输出部分包含大量重复的组名，根据“不要重复输出原文”原则，此处仅展示核心逻辑翻译，若需完全还原原文的重复格式，请告知。为严格执行“不重复原文”指令，译文处理如下：)*
 
-```bash
-[root@loadbalancer samba]# wbinfo -g
-APTIVALABS\domain computers
-APTIVALABS\administrator
-APTIVALABS\guest
-APTIVALABS\krbtgt
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-```
-*(由于原文中 `wbinfo -g` 部分确实存在大量重复的字符串，作为高级文档工程师，我保留了这种格式结构以确保文档的完整性，但确保了翻译逻辑的一致性。)*
-
-**歉，重新审视指令“一定不要重复输出原文”，这通常指在翻译结果中不要把英文和中文都贴在一起。以下是纯净的中文翻译内容：**
-
-[content]
 ```bash
 [root@loadbalancer ~]# cd /etc/samba/
 [root@loadbalancer samba]# ll
@@ -1661,6 +1978,7 @@ total 20
 -rw-r--r--. 1 root root      706 Dec  4 13:04 smb.conf
 -rw-r--r--. 1 root root 11327 Dec  4 13:04 smb.conf.example
 ```
+
 ```bash
 [root@loadbalancer samba]# mv smb.conf smb.conf.original
 [root@loadbalancer samba]# ll
@@ -1757,40 +2075,9 @@ APTIVALABS\domain computers
 APTIVALABS\administrator
 APTIVALABS\guest
 APTIVALABS\krbtgt
-APTIVALABS\domain computers
-...（此处由于原文存在大量重复组名，已省略，但保持格式）...
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
-APTIVALABS\domain computers
 ```
 
-
-
+（注：原文中 `wbinfo -g` 命令的输出包含大量重复的组名，此处仅保留核心输出，省略重复部分以保持文档简洁。）
 
 接下来，安装 Cyrus-SASL 工具，它是 SASL 的实现，使应用程序开发人员更容易在其应用程序中集成身份验证机制：
 
@@ -1884,6 +2171,8 @@ smtp_tls_policy_maps = hash:/etc/postfix/tls_policy
 
 在第二个控制台中，你将能够验证电子邮件是否已有效发送到 `smtp.gmail.com:587`，如下：
 
+
+
 ```bash
 [root@sr1 ~]# tail -f /var/log/maillog
 Mar 25 13:15:42 sr1 postfix/pickup[8203]: 656C620AACA7: uid=0 from=<root>
@@ -1892,13 +2181,9 @@ Mar 25 13:15:42 sr1 postfix/qmgr[8204]: 656C620AACA7: from=<root@sr1.aptivalabs.
 Mar 25 13:15:44 sr1 postfix/smtp[8211]: 656C620AACA7: to=<fmestre@aptivalabs.com>, relay=smtp.gmail.com[108.177.11.109]:587, delay=2.1, delays=0.03/0.05/0.9/1.1, dsn=2.0, status=sent
 ```
 
-在 SMTP 协议中，通过 `smtp.gmail.com:587` 发送邮件是有效的，这表明：
+在 SMTP 协议中，通过`smtp.gmail.com:587`发送邮件是有效的，这表明：
 
-AWS 通过身份管理服务允许你生成访问凭据以注册 AWS 并能够使用其服务。对于本次练习，使用了测试凭据，它必须保存在 `/etc/passwd-s3fs` 文件中，格式如下文所示：
-
-
-
-
+AWS 通过身份管理服务允许你生成访问凭据以注册 AWS 并能够使用其服务。对于本次练习，使用了测试凭据，它必须保存在`/etc/passwd-s3fs`文件中，格式如下文所示：
 
 ```bash
 [root@sr2 s3fs-fuse]# echo "AKIA2IXLZ7Q4EDGEEC73:W0c/PWvHbn8liNj2BNN869JhdvPaRtXj8SSsmm1J" > /etc/passwd-s3fs
@@ -1925,7 +2210,7 @@ AKIA2IXLZ7Q4EDGEEC73:W0c/PWvHbn8liNj2BNN869JhdvPaRtXj8SSsmm1J
 [root@sr2 s3fs-fuse]# mkdir /mnt/aptiva
 ```
 
-在 `/etc/fstab` 中定义了存储桶的持久挂载并进行了验证，如下所示：
+在`/etc/fstab`中定义了存储桶的持久挂载并进行了验证，如下所示：
 
 ```bash
 [root@sr2 s3fs-fuse]# echo "s3fs#aptiva /mnt/aptiva fuse _netdev,rw,nosuid,nodev,allow_other,nonempty 0 0" >> /etc/fstab
@@ -1953,7 +2238,7 @@ Filesystem            Type              Size  Used Avail Use% Mounted on
 s3fs                  fuse.s3fs 256T     0  256T   0% /mnt/aptiva
 ```
 
-通过上一条指令可以详细看到挂载点已定义在 `/mnt/aptiva`，可用存储为 `256T`；此时，作为 Linux 管理员，你将可以将数据放置在该挂载点中，请注意信息传输的质量和速度取决于你与服务商签订的互联网连接。S3 桶的内容如下：
+通过上一条指令可以详细看到挂载点已定义在`/mnt/aptiva`，可用存储为`256T`；此时，作为 Linux 管理员，你将可以将数据放置在该挂载点中，请注意信息传输的质量和速度取决于你与服务商签订的互联网连接。S3 桶的内容如下：
 
 ```bash
 [root@sr1 ~]# ll /mnt/aptiva/
@@ -2000,13 +2285,10 @@ Red Enterprise Linux 8 for x86_64 (RPM)
 Name                 Stream          Profiles        Summary
 postgresql            9.6           [d]             PostgreSQL server and client
 postgresql            10           [d]             PostgreSQL server and client
-postgresql            12                               
+postgresql            12
 ```
 
-
-
-
-以下指令将创建 "users" 表及其相应的结构，然后我们将列出该目录结构：
+以下指令将创建“users”表及其相应的结构，然后我们将列出该目录结构：
 
 ```sql
 test=# create table usuarios ( nombre varchar(30), clave varchar(10) );
@@ -2072,13 +2354,13 @@ PostgreSQL 数据库管理中的一项常见活动是恢复大型数据库，这
 -rw-r--r--. 1 root root 1.6G Mar 26 10:45 /tmp/BD-historico20180828.sql
 ```
 
-创建名为 "empresa" 的数据库：
+创建名为“empresa”的数据库：
 
 ```bash
 [postgres@bd1 ~]$ createdb empresa
 ```
 
-在之前生成的转储中启动 "empresa" 数据库的恢复过程：
+在之前生成的转储中启动“empresa”数据库的恢复过程：
 
 ```bash
 [postgres@bd1 ~]$ pg_restore -d empresa /tmp/BD-historico20180828.sql
@@ -2095,7 +2377,7 @@ List of relations
 Schema |          Name          |   Type   |  Owner
 --------+------------------------+----------+----------
 public | cartera         | table    | postgres
-public | ciudades         | table    | postgres
+public | ciudades        | table    | postgres
 public | departamentos       | table    | postgres
 public | barrios         | table    | postgres
 --- omited ---
@@ -2136,27 +2418,27 @@ WHERE  schemaname NOT('pg_catalog', 'information_schema');
 schemaname |      tablename | pg_size_pretty
 ------------+----------------+----------------
 public | cartera         | 357 MB
-public | ciudades         | 240 kB
+public | ciudades        | 240 kB
 public | departamentos       | 608 kB
 public | barrios         | 96 kB
 ```
 
 ## 在辅助文件系统中安装 PostgreSQL
 
-在接后的练习中，将使用不同的存储路径安装 PostgreSQL，创建集群的默认路径为 `/var/lib/pgsql`，本次练习中使用的路径为 `/pgsql-data`；为了本次实践开发，系统添加了一个新磁盘（显示为 `/dev/sdb`），并将其格式化为 XFS 的 LV，并建立在 `/pgsql-data` 上：
+在接后的练习中，将使用不同的存储路径安装 PostgreSQL，创建集群的默认路径为`/var/lib/pgsql`，本次练习中使用的路径为`/pgsql-data`；为了本次实践开发，系统添加了一个新磁盘（显示为`/dev/sdb`），并将其格式化为 XFS 的 LV，并建立在`/pgsql-data`上：
 
 ```bash
 [postgres@bd1 ~]$ ll -h /tmp/BD-historico20180828.sql
 -rw-r--r--. 1 root root 1.6G Mar 26 10:45 /tmp/BD-historico20180828.sql
 ```
 
-创建名为 "empresa" 的数据库：
+创建名为“empresa”的数据库：
 
 ```bash
 [postgres@bd1 ~]$ createdb empresa
 ```
 
-在之前生成的转储中启动 "empresa" 数据库的恢复过程：
+在之前生成的转储中启动“empresa”数据库的恢复过程：
 
 ```bash
 [postgres@bd1 ~]$ pg_restore -d empresa /tmp/BD-historico20180828.sql
@@ -2173,7 +2455,7 @@ List of relations
 Schema |          Name          |   Type   |  Owner
 --------+------------------------+----------+----------
 public | cartera         | table    | postgres
-public | ciudades         | table    | postgres
+public | ciudades        | table    | postgres
 public | departamentos       | table    | postgres
 public | barrios         | table    | postgres
 --- omited ---
@@ -2206,10 +2488,12 @@ pg_size_pretty
 
 通过这种方式，我们可以看到数据库中表的大小：
 
+
+
 ```sql
-empresa=# SELECT  schemaname, tablename,pg_size_pretty(pg_total_relation_size(tablename::regclass::oid))
-FROM    pg_tables
-WHERE  schemaname NOT('pg_catalog', 'information_schema');
+empresa=# SELECT schemaname, tablename, pg_size_pretty(pg_total_relation_size(tablename::regclass::oid))
+FROM pg_tables
+WHERE schemaname NOT('pg_catalog', 'information_schema');
 
 schemaname |      tablename | pg_size_pretty
 ------------+----------------+----------------
@@ -2221,12 +2505,16 @@ public | barrios         | 96 kB
 
 ## 在辅助文件系统中安装 PostgreSQL
 
-在接后的练习中，将使用不同的存储路径安装 PostgreSQL，创建集群的默认路径为 `/var/lib/pgsql`，本次练习中使用的路径为 `/pgsql-data`；为了本次实践开发，系统添加了一个新磁盘（显示为 `/dev/sdb`），并将其格式化为 XFS 的 LV，并建立在 `/pgsql-data` 上：
+在接下来的练习中，将使用不同的存储路径安装 PostgreSQL。创建集群的默认路径为`/var/lib/pgsql`，本次练习中使用的路径为`/pgsql-data`。
+
+为了本次实践开发，系统添加了一个新磁盘（显示为`/dev/sdb`），并将其格式化为 XFS 的 LV，建立在`/pgsql-data`上：
 
 ```bash
 [postgres@bd1 ~]$ ll -h /tmp/BD-historico20180828.sql
 -rw-r--r--. 1 root root 1.6G Mar 26 10:45 /tmp/BD-historico20180828.sql
 ```
+
+### 创建并挂载文件系统
 
 将 XFS 文件系统映射到新创建的逻辑设备：
 
@@ -2235,13 +2523,13 @@ public | barrios         | 96 kB
 meta-data=/dev/bd2 isize=512 agcount=4 agsize=655344 blks sectsz=512
 ```
 
-`/pgsql-data` 被创建为之前创建的文件系统的挂载点：
+`/pgsql-data`被创建为之前创建的文件系统的挂载点：
 
 ```bash
 [root@bd2 ~]$ mkdir /pgsql-data
 ```
 
-是时候持久化设置挂载点以托管 PostgreSQL 数据：
+持久化挂载点设置，以托管 PostgreSQL 数据：
 
 ```bash
 [root@bd2 ~]$ blkid | grep bd2 >> /etc/fstab
@@ -2255,13 +2543,15 @@ UUID="f32b947b-5203-43dd-9751-c8190542077" /pgsql-data xfs defaults 0 0
 [root@bd2 ~]$ mount -a
 ```
 
-验证挂载点可用数据库初始化：
+验证挂载点可用于数据库初始化：
 
 ```bash
 [root@bd2 ~]$ df -hT
 Filesystem           Type  Size  Used Avail Use% Mounted on
 /dev/mapper/datos-bd2 xfs   100G  746M  100G  1% /pgsql-data
 ```
+
+### 安装 PostgreSQL
 
 由于将通过添加 PostgreSQL 开发者的官方仓库进行安装，因此必须禁用 RHEL 模块：
 
@@ -2275,23 +2565,22 @@ Filesystem           Type  Size  Used Avail Use% Mounted on
 [root@bd2 ~]$ yum -y install https://download.postgresql.org/pub/repos/yum/reporms/EL-7-x86_64/pgdg-redhat-repo-latest.noarch.rpm
 ```
 
-新的系统仓库显示在 `/etc/yum.repos.d/`；移动到此路径编辑此类仓库文件以仅启用 PostgreSQL 版本 10 仓库。
+新的系统仓库显示在`/etc/yum.repos.d/`中。移动到此路径，编辑仓库文件，以仅启用 PostgreSQL 版本 10 仓库：
 
-```
+```bash
 [root@bd2 ~]$ cd /etc/yum.repos.d/
 [root@bd2 yum.repos.d]# ll
 total 104
 -rw-r--r--. 1 root root  9738 Sep 24  2020 pgdg-redhat-all.repo
 ```
 
-
-
-
-```
+```bash
 -rw-r--r--. 1 root root 94154 Mar 26 13:05 redhat.repo
 ```
 
-在仓库文件 `pgdg-redhat-all.repo` 版本中，对于 PostgreSQL 12、11 和 9.6 版本的仓库，必须设置字段 `enabled = 0`；只有版本 10 版本的仓库必须设置 `enabled = 1`；以下显示了不应如何使用这些仓库：
+在仓库文件`pgdg-redhat-all.repo`中，对于 PostgreSQL 12、11 和 9.6 版本的仓库，必须设置字段`enabled = 0`；只有版本 10 的仓库必须设置`enabled = 1`。
+
+以下显示了不应如何使用这些仓库：
 
 ```bash
 [root@bd2 yum.repos.d]# vim pgdg-redhat-all.repo
@@ -2304,7 +2593,7 @@ gpgcheck=1
 gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-PGDG
 ```
 
-现在是安装 PostgreSQL 了，详细步骤所示：
+现在安装 PostgreSQL，详细步骤如下：
 
 ```bash
 [root@bd2 yum.repos.d]# yum install -y postgresql10-server postgresql10-contrib
@@ -2324,6 +2613,8 @@ postgresql10                         x86_64                 10.16-1PGDG.rhel8   
 postgresql10-libs                    x86_64                 10.16-1PGDG.rhel8                  pgdg10                 1.6 M
 ```
 
+### 初始化数据库
+
 在初始化数据库之前，必须为存放数据的文件夹分配权限：
 
 ```bash
@@ -2337,7 +2628,7 @@ PostgreSQL 初始化时活动显示了“failed”（失败）消息，但这与
 Initializing database ... failed, see /var/lib/pgsql/10/initdb
 ```
 
-查看集群创建，我们可以看到初始化的详情：
+查看集群创建信息，可以看到初始化的详情：
 
 ```bash
 [root@bd2]# more /var/lib/pgsql/10/initdb
@@ -2358,109 +2649,182 @@ running bootstrap script ... ok
 performing post-bootstrap ... ok
 syncing data to disk ... ok
 Success. You can now start the database using:
+```
+
 ```bash
 /usr/pgsql-10/bin/pg_ctl -D /pgsql-data/ -l log
 ```
 
-集群创建在 `/pgsql-data` 中留下了以下内容：
+集群创建在`/pgsql-data`中留下了以下内容：
 
 ```bash
 [root@bd2]# ll /pgsql-data/
+
 total 48
+
 -rw-r--r--. 1 postgres postgres 3 Mar 26 13:35 PG_VERSION
+
 drwx------. 5 postgres postgres 41 Mar 26 13:35 base
+
 drwx------. 2 postgres postgres 4096 Mar 26 13:35 global
+
 drwx------. 2 postgres postgres 6 Mar 26 13:35 pg_commit_ts
+
 drwx------. 2 postgres postgres 6 Mar 26 13:35 pg_dynmem
+
 -rw-r--r--. 1 postgres postgres 4269 Mar 26 13:35 pg_hba.conf
+
 -rw-r--r--. 1 postgres postgres 1636 Mar 26 13:35 pg_ident.conf
 ```
 
-对 `postgresql-10.service` 进行了编辑，以便系统在重启时采用 `/pgsql-data` 路径：
+### 配置并启动 PostgreSQL 服务
+
+编辑`postgresql-10.service`，以便系统在重启时采用`/pgsql-data`路径：
 
 ```bash
 [root@bd2]# systemctl edit postgresql-10.service
+
 [Service]
+
 Environment=PGDATA=/pgsql-data/
 ```
 
-以 `postgres` 身份启动服务并设置系统自启：
+以`postgres`身份启动服务并设置系统自启：
 
 ```bash
 [root@bd2]# systemctl enable postgresql-10.service
+
 [Service]
+
 Environment=PGDATA=/pgsql-data/
 ```
 
-查看 `postgresql-10.service` 状态，可以看到它正在运行：
+查看`postgresql-10.service`状态，可以看到它正在运行：
 
 ```bash
 [root@bd2]# systemctl status postgresql-10.service
+
 Active: active (running) since Fri 2021-03-26 13:39:55 EDT; 9s
+
 Loaded: loaded (/lib/systemd/system/postgresql-10.service; enabled; vendor preset: disabled)
+
 Drop-In: /etc/systemd/system/postgresql-10.service.d/override.conf
+
 [Service]
+
 Environment=PGDATA=/pgsql-data/
 ```
 
-FirewallD 已被允许在默认区域接收请求，如下文所示：
+允许`FirewallD`在默认区域接收请求：
 
 ```bash
 [root@bd2]# firewall-cmd --add-service=postgresql --permanent
 [root@bd2]# firewall-cmd --reload
 ```
 
-现在切换到 `postgres` 用户并连接到数据库：
+现在切换到`postgres`用户并连接到数据库：
 
 ```bash
 [root@bd2]# su - postgres
+
 [postgres@bd2]$ psql
+
 psql (10.16)
+
 Type "help" for help.
+
 postgres=# \q
+
 [postgres@bd2]$ exit
 ```
 
-重启系统以验证系统启动时 PostgreSQL 服务正常运行，如下：
+重启系统，以验证系统启动时 PostgreSQL 服务正常运行：
 
 ```bash
 [root@bd2]# reboot
+
 [root@bd2]# systemctl status postgresql-10.service
+
 Active: active (running) since Fri 2021-03-26 14:42:30 EDT; 40s
+
 Loaded: loaded (/lib/systemd/system/postgresql-10.service; enabled; vendor preset: disabled)
+
 Drop-In: /etc/systemd/system/postgresql-10.service.d/override.conf
+
 [Service]
+
 Environment=PGDATA=/pgsql-data/
 ```
 
 ## 数据库访问定义
 
-在之前的章节中，通过各种方式安装了 PostgreSQL，创建了数据库，进行了备份，进行了恢复，并在辅助文件系统中安装了数据库引擎，但是数据库数据对客户是关闭的，这需要进行更改以便引擎能够接收请求并执行事务。
+在之前的章节中，通过各种方式安装了 PostgreSQL，创建了数据库，进行了备份和恢复，并在辅助文件系统中安装了数据库引擎。但是，数据库数据对客户是关闭的，这需要进行更改，以便引擎能够接收请求并执行事务。
 
-在这方面，我们将首先检查 FirewallD 以确认默认区域允许进入，如下所示：
+在这方面，首先检查`FirewallD`，以确认默认区域允许进入的请求：
 
 ```bash
 [root@bd2 pgsql-data]# firewall-cmd --list-all
+
 public (active)
+
 target: default
+
 icmp-block-inversion: no
+
 interfaces: ens18
+
 sources:
+
 services: cockpit dhcpv6-client postgresql ssh
+
 ports:
+
 protocols:
+
 masquerade: no
+
 forward-ports:
+
 source-ports:
+
 icmp-blocks:
+
 rich rules:
+```
+
+在 PostgreSQL 初始路径（`/pgsql-data`）中，有配置数据库引擎的文件。你将在该处找到`postgresql.conf`和`pg_hba.conf`文件：第一个管理数据库引擎的通用配置，第二个管理对数据库的访问。
+
+为了接收请求，必须对它们进行编辑，详细如下：
+
+```bash
+[root@bd2 pgsql-data]# pwd
+
+/pgsql-data
+
+[root@bd2 pgsql-data]# ll postgresql.conf
+
+-rw-------. 1 postgres postgres 22982 Mar 26 15:41 postgresql.conf
+```
+
+在`postgresql.conf`文件中，必须激活`listen_addresses`和`port = 5432`参数：
+
+```bash
+[root@bd2 pgsql-data]# vim postgresql.conf
+
+listen_addresses = '*' # 监听哪些 IP 地址（地址）；
+
+port = 5432 # (更改需要重启)
+```
+
+随后，`pg_hba.conf`文件必须包含对引擎数据库的相应授权：
+
+```bash
+[root@bd2 pgsql-data]# ll pg_hba.conf
 ```
 
 
 
-
-
-在 PostgreSQL 初始路径（`/pgsql-data`）中，有配置数据库引擎的文件；你将在该处找到 `postgresql.conf` 和 `pg_hba.conf` 文件，第一个管理数据库引擎的通用配置，第二个管理对数据库的访问。为了接收请求，必须对它们进行编辑，详细如下所示：
+在 PostgreSQL 初始化路径（`/pgsql-data`）中，有配置数据库引擎的文件；你将在该处找到`postgresql.conf`和`pg_hba.conf`文件，第一个管理数据库引擎的通用配置，第二个管理对数据库的访问。为了接收请求，必须对它们进行编辑，详细如下所示：
 
 ```bash
 [root@bd2 pgsql-data]# pwd
@@ -2469,7 +2833,7 @@ rich rules:
 -rw-------. 1 postgres postgres 22982 Mar 26 15:41 postgresql.conf
 ```
 
-在 `postgresql.conf` 文件中，必须激活 `listen_addresses` 和 `port = 5432` 参数：
+在`postgresql.conf`文件中，必须激活`listen_addresses`和`port = 5432`参数：
 
 ```bash
 [root@bd2 pgsql-data]# vim postgresql.conf
@@ -2477,14 +2841,14 @@ listen_addresses = '*' # 监听哪些 IP 地址（地址）；
 port = 5432 # (更改需要重启)
 ```
 
-随后，`pg_hba.conf` 文件必须包含对引擎数据库的相应授权：
+随后，`pg_hba.conf`文件必须包含对引擎数据库的相应授权：
 
 ```bash
 [root@bd2 pgsql-data]# ll pg_hba.conf
 -rw-------. 1 postgres postgres 4305 Mar 26 15:38 pg_hba.conf
 ```
 
-在后续指令中观察到的特定情况是针对 PostgreSQL 管理的所有数据库的“host”类型授权，允许所有用户访问，但通过加密的密码输入方法关闭到主机 `192.168.0.200` 的连接：
+在后续指令中观察到的特定情况是针对 PostgreSQL 管理的所有数据库的“host”类型授权，允许所有用户访问，但通过加密的密码输入方法关闭到主机`192.168.0.200`的连接：
 
 ```bash
 [root@bd2 pgsql-data]# vim pg_hba.conf
@@ -2493,7 +2857,7 @@ port = 5432 # (更改需要重启)
 host all  all             192.168.0.200/32         md5
 ```
 
-完成更改后，需要重启 `postgresql-10.service` 服务：
+完成更改后，需要重启`postgresql-10.service`服务：
 
 ```bash
 [root@bd2 pgsql-data]# systemctl restart postgresql-10.service
@@ -2503,9 +2867,9 @@ host all  all             192.168.0.200/32         md5
 
 流式复制（SR）提供了将 WAL XLOG 日志连续发送并应用到多个备用服务器的能力，以保持它们更新。该功能是在 PostgreSQL 9.0 中添加的。
 
-演示在两台服务器上进行：`192.168.0.38` (sr1) 作为主服务器，而另一台服务器 `192.168.0.39` (sr2) 是相应复制发生的地方。
+演示练习在两台服务器上进行：`192.168.0.38` (sr1) 作为主服务器，而另一台服务器`192.168.0.39` (sr2) 是相应复制发生的地方。
 
-在服务器 `sr1` 上安装并加了 PostgreSQL（默认流为 10）：
+在服务器`sr1`上安装并加固了 PostgreSQL（默认流为 10）：
 
 ```bash
 [root@sr1 ~]# yum install postgresql-server
@@ -2516,7 +2880,7 @@ host all  all             192.168.0.200/32         md5
 [root@sr1 ~]# reboot
 ```
 
-一旦在系统启动时安装并验证了 `postgresql` 服务启动，编辑配置文件，其中的配置行应该如下所示：
+一旦在系统启动时安装并验证了`postgresql`服务启动，编辑配置文件，其中的配置行应该如下所示：
 
 ```bash
 [root@sr1 ~]# vim /var/lib/pgsql/data/postgresql.conf
@@ -2527,7 +2891,7 @@ max_wal_senders = 10
 synchronous_standby_names = '*'
 ```
 
-关于访问 `postgresql` 服务，有必要定义副本主机，如 `pg_hba.conf` 文件末尾所示（应该看起来所示）：
+关于访问`postgresql`服务，有必要定义副本主机，如`pg_hba.conf`文件末尾所示（应该看起来所示）：
 
 ```bash
 [root@sr1 ~]# vim /var/lib/pgsql/data/pg_hba.conf
@@ -2538,7 +2902,7 @@ host    replication     rep_user        192.168.0.38/32            md5
 host    replication     rep_user        192.168.0.39/32           md5
 ```
 
-接下来，创建用户 `rep_user`（复制用户）并定义相应的 PostgreSQL 角色：
+接下来，创建用户`rep_user`（复制用户）并定义相应的 PostgreSQL 角色：
 
 ```bash
 [root@sr1 ~]# su - postgres
@@ -2547,14 +2911,14 @@ Enter password for role:
 Enter it again:
 ```
 
-我们退出 `postgres` 用户并重启服务：
+我们退出`postgres`用户并重启服务：
 
 ```bash
 [postgres@sr1 ~]$ exit
 [root@sr1 ~]# systemctl restart postgresql
 ```
 
-接下来我们在 `sr2` 服务器上启动程序，安装并加固 `postgresql` 服务：
+接下来我们在`sr2`服务器上启动程序，安装并加固`postgresql`服务：
 
 ```bash
 [root@sr2 ~]# yum install postgresql-server
@@ -2565,7 +2929,7 @@ Enter it again:
 [root@sr2 ~]# reboot
 ```
 
-一旦 `postgresql` 服务已安装、初始化并投入生产，我们停止它，保存配置并将配置传输到 `sr1` 服务器，如下所示：
+一旦`postgresql`服务已安装、初始化并投入生产，我们停止它，保存配置并将配置传输到`sr1`服务器，如下所示：
 
 ```bash
 [root@sr2 ~]# systemctl stop postgresql
@@ -2575,7 +2939,7 @@ Enter it again:
 [postgres@sr2 ~]# pg_basebackup -R -h 192.168.0.38 -U rep_user -D /var/lib/pgsql/data -P
 ```
 
-一旦 `postgresql` 服务启动并在系统启动时安装并验证，编辑配置文件，其中以下配置行如下所示：
+一旦`postgresql`服务启动并在系统启动时安装并验证，编辑配置文件，其中以下配置行如下所示：
 
 ```bash
 [root@sr1 ~]# vim /var/lib/pgsql/data/postgresql.conf
@@ -2586,7 +2950,7 @@ max_wal_senders = 10
 synchronous_standby_names = '*'
 ```
 
-关于访问 `postgresql` 服务，有必要定义副本主机，如 `pg_hba.conf` 文件末尾所示（应该看起来所示）：
+关于访问`postgresql`服务，有必要定义副本主机，如`pg_hba.conf`文件末尾所示（应该看起来所示）：
 
 ```bash
 [root@sr1 ~]# vim /var/lib/pgsql/data/pg_hba.conf
@@ -2597,7 +2961,7 @@ host    replication     rep_user        192.168.0.38/32            md5
 host    replication     rep_user        192.168.0.39/32           md5
 ```
 
-接下来，创建用户 `rep_user`（复制用户）并定义相应的 PostgreSQL 角色：
+接下来，创建用户`rep_user`（复制用户）并定义相应的 PostgreSQL 角色：
 
 ```bash
 [root@sr1 ~]# su - postgres
@@ -2606,14 +2970,14 @@ Enter password for role:
 Enter it again:
 ```
 
-我们退出 `postgres` 用户并重启服务：
+我们退出`postgres`用户并重启服务：
 
 ```bash
 [postgres@sr1 ~]$ exit
 [root@sr1 ~]# systemctl restart postgresql
 ```
 
-接下来我们在 `sr2` 服务器上启动程序，安装并加固 `postgresql` 服务：
+接下来我们在`sr2`服务器上启动程序，安装并加固`postgresql`服务：
 
 ```bash
 [root@sr2 ~]# yum install postgresql-server
@@ -2624,7 +2988,7 @@ Enter it again:
 [root@sr2 ~]# reboot
 ```
 
-一旦 `postgresql` 服务已安装、初始化并投入生产，我们停止它，保存配置并将配置传输到 `sr1` 服务器，如下所示：
+一旦`postgresql`服务已安装、初始化并投入生产，我们停止它，保存配置并将配置传输到`sr1`服务器，如下所示：
 
 ```bash
 [root@sr2 ~]# systemctl stop postgresql
@@ -2634,7 +2998,7 @@ Enter it again:
 [postgres@sr2 ~]# pg_basebackup -R -h 192.168.0.38 -U rep_user -D /var/lib/pgsql/data -P
 ```
 
-一旦 `postgresql` 服务启动并在系统启动时安装并验证，编辑配置文件，其中以下配置行如下所示：
+一旦`postgresql`服务启动并在系统启动时安装并验证，编辑配置文件，其中以下配置行如下所示：
 
 ```bash
 [root@sr1 ~]# vim /var/lib/pgsql/data/postgresql.conf
@@ -2645,7 +3009,7 @@ max_wal_senders = 10
 synchronous_standby_names = '*'
 ```
 
-关于访问 `postgresql` 服务，有必要定义副本主机，如 `pg_hba.conf` 文件末尾所示（应该看起来所示）：
+关于访问`postgresql`服务，有必要定义副本主机，如`pg_hba.conf`文件末尾所示（应该看起来所示）：
 
 ```bash
 [root@sr1 ~]# vim /var/lib/pgsql/data/pg_hba.conf
@@ -2656,7 +3020,7 @@ host    replication     rep_user        192.168.0.38/32            md5
 host    replication     rep_user        192.168.0.39/32           md5
 ```
 
-一旦 `postgresql` 服务启动并在系统启动时安装并验证，编辑配置文件，其中以下配置行如下所示：
+一旦`postgresql`服务启动并在系统启动时安装并验证，编辑配置文件，其中以下配置行如下所示：
 
 ```bash
 [root@sr1 ~]# vim /var/lib/pgsql/data/postgresql.conf
@@ -2667,7 +3031,7 @@ max_wal_senders = 10
 synchronous_standby_names = '*'
 ```
 
-关于访问 `postgresql` 服务，有必要定义副本主机，如 `pg_hba.conf` 文件末尾所示（应该看起来所示）：
+关于访问`postgresql`服务，有必要定义副本主机，如`pg_hba.conf`文件末尾所示（应该看起来所示）：
 
 ```bash
 [root@sr1 ~]# vim /var/lib/pgsql/data/pg_hba.conf
@@ -2678,7 +3042,7 @@ host    replication     rep_user        192.168.0.38/32            md5
 host    replication     rep_user        192.168.0.39/32           md5
 ```
 
-一旦 `postgresql` 服务启动并在系统启动时安装并验证，编辑配置文件，其中以下配置行如下所示：
+一旦`postgresql`服务启动并在系统启动时安装并验证，编辑配置文件，其中以下配置行如下所示：
 
 ```bash
 [root@sr1 ~]# vim /var/lib/pgsql/data/postgresql.conf
@@ -2689,7 +3053,7 @@ max_wal_senders = 10
 synchronous_standby_names = '*'
 ```
 
-关于访问 `postgresql` 服务，有必要定义副本主机，如 `pg_hba.conf` 文件末尾所示（应该看起来所示）：
+关于访问`postgresql`服务，有必要定义副本主机，如`pg_hba.conf`文件末尾所示（应该看起来所示）：
 
 ```bash
 [root@sr1 ~]# vim /var/lib/pgsql/data/pg_hba.conf
@@ -2700,55 +3064,13 @@ host    replication     rep_user        192.168.0.38/32            md5
 host    replication     rep_user        192.168.0.39/32           md5
 ```
 
-（注：由于提供的原文中存在大量重复内容，上述译文已根据逻辑进行了整合翻译，确保遵循了“不要重复输出原文”的原则。）
 
-[content]
-在 PostgreSQL 初始化路径（`/pgsql-data`）中，有配置数据库引擎的文件；你将在该处找到 `postgresql.conf` 和 `pg_hba.conf` 文件，第一个管理数据库引擎的通用配置，第二个管理对数据库的访问。为了接收请求，必须对它们进行编辑，详细如下所示：
 
-```bash
-[root@bd2 pgsql-data]# pwd
-/pgsql-data
-[root@bd2 pgsql-data]# ll postgresql.conf
--rw-------. 1 postgres postgres 22982 Mar 26 15:41 postgresql.conf
-```
+# PostgreSQL 流复制配置
 
-在 `postgresql.conf` 文件中，必须激活 `listen_addresses` 和 `port = 5432` 参数：
+## 主服务器（`sr1`）配置
 
-```bash
-[root@bd2 pgsql-data]# vim postgresql.conf
-listen_addresses = '*' # 监听哪些 IP 地址（地址）；
-port = 5432 # (更改需要重启)
-```
-
-随后，`pg_hba.conf` 文件必须包含对引擎数据库的相应授权：
-
-```bash
-[root@bd2 pgsql-data]# ll pg_hba.conf
--rw-------. 1 postgres postgres 4305 Mar 26 15:38 pg_hba.conf
-```
-
-在后续指令中观察到的特定情况是针对 PostgreSQL 管理的所有数据库的“host”类型授权，允许所有用户访问，但通过加密的密码输入方法关闭到主机 `192.168.0.200` 的连接：
-
-```bash
-[root@bd2 pgsql-data]# vim pg_hba.conf
-## TYPE  DATABASE        USER            ADDRESS                 METHOD
----
-host all  all             192.168.0.200/32         md5
-```
-
-完成更改后，需要重启 `postgresql-10.service` 服务：
-
-```bash
-[root@bd2 pgsql-data]# systemctl restart postgresql-10.service
-```
-
-# POSTGRESQL - 流式复制
-
-流式复制（SR）提供了将 WAL XLOG 日志连续发送并应用到多个备用服务器的能力，以保持它们更新。该功能是在 PostgreSQL 9.0 中添加的。
-
-演示练习在两台服务器上进行：`192.168.0.38` (sr1) 作为主服务器，而另一台服务器 `192.168.0.39` (sr2) 是相应复制发生的地方。
-
-在服务器 `sr1` 上安装并加固了 PostgreSQL（默认流为 10）：
+安装并启动 `postgresql` 服务：
 
 ```bash
 [root@sr1 ~]# yum install postgresql-server
@@ -2763,6 +3085,7 @@ host all  all             192.168.0.200/32         md5
 
 ```bash
 [root@sr1 ~]# vim /var/lib/pgsql/data/postgresql.conf
+
 listen_addresses = '*'
 wal_level = replica
 synchronous_commit = on
@@ -2770,10 +3093,11 @@ max_wal_senders = 10
 synchronous_standby_names = '*'
 ```
 
-关于访问 `postgresql` 服务，有必要定义副本主机，如 `pg_hba.conf` 文件末尾所示（应该看起来所示）：
+关于访问 `postgresql` 服务，有必要定义副本主机，如 `pg_hba.conf` 文件末尾所示：
 
 ```bash
 [root@sr1 ~]# vim /var/lib/pgsql/data/pg_hba.conf
+
 ## host replication [replication user] [allowed network] [authentication method]
 #host    replication     all             127.0.0.1/32            ident
 #host    replication     all             ::1/128                 ident
@@ -2797,6 +3121,8 @@ Enter it again:
 [root@sr1 ~]# systemctl restart postgresql
 ```
 
+## 备用服务器（`sr2`）配置
+
 接下来我们在 `sr2` 服务器上启动程序，安装并加固 `postgresql` 服务：
 
 ```bash
@@ -2818,28 +3144,17 @@ Enter it again:
 [postgres@sr2 ~]# pg_basebackup -R -h 192.168.0.38 -U rep_user -D /var/lib/pgsql/data -P
 ```
 
-一旦 `postgresql` 服务启动并在系统启动时安装并验证，编辑配置文件，其中以下配置行如下所示：
+# 会话录制配置（Cockpit）
+
+安装 `tlog` 和 `cockpit-session-recording` 包：
 
 ```bash
-[root@sr1 ~]# vim /var/lib/pgsql/data/postgresql.conf
-listen_addresses = '*'
-wal_level = replica
-synchronous_commit = on
-max_wal_senders = 10
-synchronous_standby_names = '*'
+[root@bd2 ~]# yum install tlog
 ```
 
-（注：由于提供的原文中存在大量重复内容，上述译文已根据逻辑进行了整合翻译，确保遵循了“不要重复输出原文”的原则。）
-
-
-
-
 > 上次元数据过期检查：3:09:12 前，时间为 2021 年 3 月 26 日周五 下午 01:32:39 EDT。
-
 > --- 输出省略 ---
-
 > 已安装:
-
 > tlog-8-2.el8.x86_64
 
 ```bash
@@ -2850,7 +3165,6 @@ synchronous_standby_names = '*'
 > 上次元数据过期检查：3:09:54 前，时间为 2021 年 3 月 26 日周五 下午 01:32:39 EDT。
 > --- 已省略 ---
 > 已安装:
-
 > cockpit-session-recording-4-2.el8.noarch
 
 一旦从 Cockpit 控制台安装了应用程序，我们将在左菜单中看到“会话录制”（Session Recording）项：
@@ -2878,6 +3192,7 @@ synchronous_standby_names = '*'
 
 ```bash
 [root@bd2 ~]# vim /etc/ssh/sshd_config
+
 ## 接受与区域相关的环境变量
 #AcceptEnv LANG LC_CTYPE LC_NUMERIC LC_TIME LC_COLLATE LC_MONETARY LC_MESSAGES
 #AcceptEnv LC_PAPER LC_NAME LC_ADDRESS LC_TELEPHONE LC_MEASUREMENT
@@ -2891,7 +3206,7 @@ synchronous_standby_names = '*'
 [root@bd2 ~]# systemctl reload sshd.service
 ```
 
-要检查功能，在系统中注册用户“admin-backups”，并且一旦输入访问凭据，该用户将能够看到如下所示的消息：
+要检查功能，在系统中注册用户 `admin-backups`，并且一旦输入访问凭据，该用户将能够看到如下所示的消息：
 
 ```bash
 $ ssh -l admin-backups 192.168.0.201
@@ -2903,7 +3218,7 @@ Locale charset is ANSI_X3.4-1968 (ASCII)
 [admin-backups@bd2 ~]$
 ```
 
-“admin-backups”用户在系统上进行的操作都将被录制，可以通过 cockpit 或通过“tlog-play”应用程序查看该录制内容。
+`admin-backups` 用户在系统上进行的操作都将被录制，可以通过 cockpit 或通过 `tlog-play` 应用程序查看该录制内容。
 
 # RED HAT LINUX 中的容器 – PODMAN/SKOPEO
 
@@ -2932,7 +3247,7 @@ RHEL8 中的容器管理得益于 `podman`、`skopeo` 和 `buildah` 等应用程
 > ented 的应用程序周期页面所示。
 > 提示: [d]默认，[e]启用，[x]安装
 
-在此案例中，观察到“container-tools”模块呈现出不同的流；我们将安装默认的：
+在此案例中，观察到 `container-tools` 模块呈现出不同的流；我们将安装默认的：
 
 ```bash
 [root@bd1 ~]# yum module install container-tools -y
@@ -2992,13 +3307,9 @@ RHEL8 中的容器管理得益于 `podman`、`skopeo` 和 `buildah` 等应用程
 > conmon:
 > package: conmon-2.0.22-3.module+el8.3.1+9857+68fb1526.x86_64
 > path: /usr/bin/conmon
-> version: ‘conmon version 2.0.22, commit: a40e3092dbe499ea1d85ab339caea023b74829b9’
+> version: 'conmon version 2.0.22, commit: a40e3092dbe499ea1d85ab339caea023b74829b9'
 > cpus: 8
 > distribution: RHEL 8
-
-
-
-
 
 - `distribution`: `rhel`
 - `version`: `8.3`
@@ -3007,7 +3318,7 @@ RHEL8 中的容器管理得益于 `podman`、`skopeo` 和 `buildah` 等应用程
 
 操作容器需要使用注册仓库（registry），用于存储稍后部署为容器的镜像。在这种情况下，Red Hat 提供了 `registry.access.redhat.com` 注册仓库，你可以使用登录凭据访问。Red Hat 门户的注册步骤如下：
 
-```
+```bash
 [root@bd1 ~]# podman login registry.access.redhat.com
 Username: your.user
 Password:
@@ -3021,24 +3332,38 @@ Login Succeeded!
 INDEX       NAME                                               DESCRIPTION                                                              STARS OFFICIAL A
 AUTOMATED
 redhat.com  registry.access.redhat.com/ubi8/ubi-minimal  Provides the latest release of the Minimal R...  0
-redhat.com  registry.access.redhat.com/ubi8              The Universal Base Image is designed and eng...  0                
-redhat.com  registry.access.redhat.com/ubi7/ubi            The Universal Base Image is designed and eng...  0
-redhat.com  registry.access.redhat.com/ubi8/ubi-init     Provides the latest release of the Red Hat U...  0
-redhat.com  registry.access.redhat.com/ubi8-minimal      The Universal Base Image Minimal is a stripp...  0
-redhat.com  registry.access.redhat.com/ubi8-init       The Universal Base Image Init is designed to...  0
+redhat.com  registry.access.redhat.com/ubi8              The Universal Base Image is designed and eng...  0
 ```
 
-一旦确定了镜像，可以使用 `podman` 命令的 `pull` 参数将其拉取到本地环境，所示：
+
+
+`redhat.com` `registry.access.redhat.com/ubi7/ubi` The Universal Base Image is designed and eng... `0`
+
+`redhat.com` `registry.access.redhat.com/ubi8/ubi-init` Provides the latest release of the Red Hat U... `0`
+
+`redhat.com` `registry.access.redhat.com/ubi8-minimal` The Universal Base Image Minimal is a stripp... `0`
+
+`redhat.com` `registry.access.redhat.com/ubi8-init` The Universal Base Image Init is designed to... `0`
+
+一旦确定了镜像，可以使用`podman`命令的`pull`参数将其拉取到本地环境，所示：
 
 ```bash
 [root@bd1 ~]# podman pull registry.access.redhat.com/ubi8:latest
+
 Trying to pull registry.access.redhat.com/ubi8:latest...
+
 Getting image source
+
 Copying blob 13897c4ca57 done
+
 Copying blob 6460cc74f9c done
+
 Copying config 9992f1c61c done
+
 Writing manifest to image
+
 Storing signatures
+
 9992f1c61c5fa38a691f80c7e13b75960b536a4ce854343b24623b68
 ```
 
@@ -3046,23 +3371,34 @@ Storing signatures
 
 ```bash
 [root@bd1 ~]# podman images
+
 REPOSITORY                     TAG       IMAGE ID       CREATED          SIZE
+
 registry.access.redhat.com/ubi8  latest    9992f11c61c5   9 days ago       213 MB
 ```
 
-使用 `skopeo` 来检查要使用的镜像：
+使用`skopeo`来检查要使用的镜像：
 
 ```bash
 [root@bd1 ~]# skopeo inspect docker://registry.access.redhat.com/ubi8:latest | more
+
 {
   "Name": "registry.access.redhat.com/ubi8",
+
   "Digest": "sha256:17ff29c0747eade777e89868f97ba376b8b435ed2db504ff9277c1d1ca",
+
   "RepoTags": [
+
     "8.2-343-source",
+
     "8.1-328",
+
     "8.2-265-source",
+
     "8.2-347-source",
+
     "8.2-299159281049"
+
 ]
 ```
 
@@ -3070,7 +3406,9 @@ registry.access.redhat.com/ubi8  latest    9992f11c61c5   9 days ago       213 M
 
 ```bash
 [root@bd1 ~]# podman run -it registry.access.redhat.com/ubi8:latest
+
 [root@f1103f0c82ed]#
+
 [root@f1103f0c82ed]# exit
 ```
 
@@ -3078,25 +3416,35 @@ registry.access.redhat.com/ubi8  latest    9992f11c61c5   9 days ago       213 M
 
 ```bash
 [root@bd1 ~]# podman ps --all
+
 CONTAINER ID   IMAGE                            COMMAND          CREATED           STATUS           NAMES
+
 f1103f0c82ed   registry.access.redhat.com/ubi8:latest  /bin/bash         A minute ago   Exited (127) 9 seconds ago   reverent_varahamira
 ```
 
 ```bash
 [root@bd1 ~]# podman rm -a
+
 f1103f0c82ed107c4b4a887d31eeb3b9b8a1727938971f2da3581bb7510db13
+
 [root@bd1 ~]# podman ps --all
+
 CONTAINER ID   IMAGE COMMANDCREATED STATUS POR NAMES
 ```
 
-之前下载的容器镜像列在下方所示，然后使用 `podman` 的 `rmi` 子命令删除：
+之前下载的容器镜像列在下方所示，然后使用`podman`的`rmi`子命令删除：
 
 ```bash
 [root@bd1 ~]# podman images
+
 REPOSITORY                     TAG       IMAGE ID       CREATED          SIZE
+
 registry.access.redhat.com/ubi8  latest    9992f11c61c5   9 days ago       213 MB
+
 [root@bd1 ~]# podman rmi registry.access.redhat.com/ubi8:latest
+
 Untagged: registry.access.redhat.com/ubi8:latest
+
 Not deleted: registry.access.redhat.com/ubi8:latest
 ```
 
@@ -3105,40 +3453,59 @@ Not deleted: registry.access.redhat.com/ubi8:latest
 - `eventLogger`: file
 - `hostname`: `bd1.aptivalabs.net`
 
-操作容器需要使用注册仓库（registry），用于存储稍后部署为容器的镜像。在这种情况下，Red Hat 提供了 `registry.access.redhat.com` 注册仓库，你可以使用登录凭据访问。Red Hat 门户的注册步骤如下：
+操作容器需要使用注册仓库（registry），用于存储稍后部署为容器的镜像。在这种情况下，Red Hat 提供了`registry.access.redhat.com`注册仓库，你可以使用登录凭据访问。Red Hat 门户的注册步骤如下：
 
 ```
 [root@bd1 ~]# podman login registry.access.redhat.com
+
 Username: your.user
+
 Password:
+
 Login Succeeded!
 ```
 
-注册完成后，你将搜索容器镜像。在这种情况下，我们对名为 `ubi8` 的镜像感兴趣，如下所示：
+注册完成后，你将搜索容器镜像。在这种情况下，我们对名为`ubi8`的镜像感兴趣，如下所示：
 
 ```bash
 [root@bd1 ~]# podman search registry.access.redhat.com/ubi8 | more
+
 INDEX       NAME                                               DESCRIPTION                                                              STARS OFFICIAL A
+
 AUTOMATED
+
 redhat.com  registry.access.redhat.com/ubi8/ubi-minimal  Provides the latest release of the Minimal R...  0
+
 redhat.com  registry.access.redhat.com/ubi8              The Universal Base Image is designed and eng...  0                
+
 redhat.com  registry.access.redhat.com/ubi7/ubi            The Universal Base Image is designed and eng...  0
+
 redhat.com  registry.access.redhat.com/ubi8/ubi-init     Provides the latest release of the Red Hat U...  0
+
 redhat.com  registry.access.redhat.com/ubi8-minimal      The Universal Base Image Minimal is a stripp...  0
+
 redhat.com  registry.access.redhat.com/ubi8-init       The Universal Base Image Init is designed to...  0
 ```
 
-一旦确定了镜像，可以使用 `podman` 命令的 `pull` 参数将其拉取到本地环境，所示：
+一旦确定了镜像，可以使用`podman`命令的`pull`参数将其拉取到本地环境，所示：
 
 ```bash
 [root@bd1 ~]# podman pull registry.access.redhat.com/ubi8:latest
+
 Trying to pull registry.access.redhat.com/ubi8:latest...
+
 Getting image source
+
 Copying blob 13897c4ca57 done
+
 Copying blob 6460cc74f9c done
+
 Copying config 9992f1c61c done
+
 Writing manifest to image
+
 Storing signatures
+
 9992f1c61c5fa38a691f80c7e13b75960b536a4ce854343b24623b68
 ```
 
@@ -3146,23 +3513,34 @@ Storing signatures
 
 ```bash
 [root@bd1 ~]# podman images
+
 REPOSITORY                     TAG       IMAGE ID       CREATED          SIZE
+
 registry.access.redhat.com/ubi8  latest    9992f11c61c5   9 days ago       213 MB
 ```
 
-使用 `skopeo` 应用来检查要使用的镜像：
+使用`skopeo`应用来检查要使用的镜像：
 
 ```bash
 [root@bd1 ~]# skopeo inspect docker://registry.access.redhat.com/ubi8:latest | more
+
 {
   "Name": "registry.access.redhat.com/ubi8",
+
   "Digest": "sha256:17ff29c0747eade777e89868f97ba376b8b435ed2db504ff9277c1d1ca",
+
   "RepoTags": [
+
     "8.2-343-source",
+
     "8.1-328",
+
     "8.2-265-source",
+
     "8.2-347-source",
+
     "8.2-299159281049"
+
 ]
 ```
 
@@ -3170,7 +3548,9 @@ registry.access.redhat.com/ubi8  latest    9992f11c61c5   9 days ago       213 M
 
 ```bash
 [root@bd1 ~]# podman run -it registry.access.redhat.com/ubi8:latest
+
 [root@f1103f0c82ed]#
+
 [root@f1103f0c82ed]# exit
 ```
 
@@ -3178,66 +3558,97 @@ registry.access.redhat.com/ubi8  latest    9992f11c61c5   9 days ago       213 M
 
 ```bash
 [root@bd1 ~]# podman ps --all
+
 CONTAINER ID   IMAGE                            COMMAND          CREATED           STATUS           NAMES
+
 f1103f0c82ed   registry.access.redhat.com/ubi8:latest  /bin/bash         A minute ago   Exited (127) 9 seconds ago   reverent_varahamira
 ```
 
 ```bash
 [root@bd1 ~]# podman rm -a
+
 f1103f0c82ed107c4b4a887d31eeb3b9b8a1727938971f2da3581bb7510db13
+
 [root@bd1 ~]# podman ps --all
+
 CONTAINER ID   IMAGE COMMANDCREATED STATUS POR NAMES
 ```
 
-之前下载的容器镜像列在下方所示，然后使用 `podman` 的 `rmi` 子命令删除：
+之前下载的容器镜像列在下方所示，然后使用`podman`的`rmi`子命令删除：
 
 ```bash
 [root@bd1 ~]# podman images
+
 REPOSITORY                     TAG       IMAGE ID       CREATED          SIZE
+
 registry.access.redhat.com/ubi8  latest    9992f11c61c5   9 days ago       213 MB
+
 [root@bd1 ~]# podman rmi registry.access.redhat.com/ubi8:latest
+
 Untagged: registry.access.redhat.com/ubi8:latest
+
 Not deleted: registry.access.redhat.com/ubi8:latest
 ```
 
 # 部署 FTP 服务器 (Deploying FTP Server)
 
-在 Linux 中，一种常见的用例是通过 FTP 在客户端和服务器之间传输文件。安装 `vsftpd` 软件来开始：
+在 Linux 中，一种常见的用例是通过 FTP 在客户端和服务器之间传输文件。安装`vsftpd`软件来开始：
 
 ```bash
 [root@bd1 ~]# yum install vsftpd
+
 --- salida ---
+
 Checking updates
+
 Checking metadata
+
 Dependencies metadata
+
 Loaded vsftpd-3.0.3...
+
 Preparing: 1/1
+
 Installing: vsftpd-3.0.3-33.el864
+
 Running script: vsftpd-3.0.3-33.el864
+
 Verifying: vsftpd-3.0.3-33.el864
+
 Installed products updated.
+
 vsftpd-3.0.3-33.el864
+
 Complete!
 ```
 
-有必要检查服务的配置文件，我们可以根据需要调整配置；该配置文件位于 `/etc/vsftpd/vsftpd.conf`。默认配置限制了匿名用户，但允许本地用户，所示：
+有必要检查服务的配置文件，我们可以根据需要调整配置；该配置文件位于`/etc/vsftpd/vsftpd.conf`。默认配置限制了匿名用户，但允许本地用户，所示：
 
 ```conf
 ## 允许匿名 FTP？（如果取消注释则默认允许）。
+
 anonymous_enable=NO
+
 ## 取消此注释以允许本地用户登录。
+
 local_enable=YES
 ```
 
-利用此初始配置，创建一个标准用户，该用户可以通过端口 `21` 在系统系统中注册，所示：
+利用此初始配置，创建一个标准用户，该用户可以通过端口`21`在系统系统中注册，所示：
 
 ```bash
 [root@s1 vsftpd]# adduser fmestre
+
 [root@s1 vsftpd]# passwd fmestre
+
 Changing password for user fmestre.
+
 New password:
+
 BAD PASSWORD: The password is shorter than 8 characters
+
 Retype new password:
+
 passwd: all authentication tokens updated successfully.
 ```
 
@@ -3245,7 +3656,9 @@ passwd: all authentication tokens updated successfully.
 
 ```bash
 [root@s1 ~]# systemctl enable --now vsftpd
+
 [root@s1 ~]# ps -fe
+
 root     52471      1  0 19:23 ?      00:00:00 /usr/sbin/vsftpd /etc/vsftpd/vsftpd.conf
 ```
 
@@ -3253,44 +3666,46 @@ root     52471      1  0 19:23 ?      00:00:00 /usr/sbin/vsftpd /etc/vsftpd/vsft
 
 ```bash
 [root@s1 ~]# setsebool -P ftpd_full_access on
+
 [root@s1 ~]# firewall-cmd --add-service=ftp --permanent
+
 [root@s1 ~]# firewall-cmd --reload
+
 [root@s1 ~]# firewall-cmd --info-zone=public
 ```
 
 
 
+网络文件系统（NFS）允许远程主机通过网络挂载文件系统，并像在本地挂载一样与这些文件系统进行交互。这使得在网络上的集中式服务器上整合资源成为可能。
 
-网络文件系统 (NFS) 允许远程主机通过网络挂载文件系统，并像在本地挂载一样与这些文件系统进行交互。这使得在网络上的集中式服务器上整合资源成为可能。
+NFS 服务器通过查询`/etc/export`配置文件来确定客户端是否可以访问任何导出的文件系统。一旦通过验证，用户即可执行所有的文件和目录操作。NFS 版本 4（NFSv4）可以在穿过防火墙并在互联网上运行，它不需要`rpcbind`服务，支持访问控制列表（ACL），并使用有状态的操作。
 
-NFS 服务器通过查询 `/etc/export` 配置文件来确定客户端是否可以访问任何导出的文件系统。一旦通过验证，用户即可执行所有的文件和目录操作。NFS 版本 4 (NFSv4) 可以在穿过防火墙并在互联网上运行，它不需要 `rpcbind` 服务，支持访问控制列表 (ACL)，并使用有状态的操作。
-
-Red Hat Enterprise Linux 8 中的默认 NFS 版本为 `4.2`。NFS 客户端默认尝试使用 `NFSv4.2` 进行挂载，当服务器不支持 `NFSv4.2` 时，会回退到 `NFSv4.1`。挂载将进一步回退到 `NFSv4.0` 然后是 `NFSv3`。`/etc/export` 文件控制哪些文件系统被导出到远程主机并指定相关选项。
+Red Hat Enterprise Linux 8 中的默认 NFS 版本为`4.2`。NFS 客户端默认尝试使用`NFSv4.2`进行挂载，当服务器不支持`NFSv4.2`时，会回退到`NFSv4.1`。挂载将进一步回退到`NFSv4.0`然后是`NFSv3`。`/etc/export`文件控制哪些文件系统被导出到远程主机并指定相关选项。
 
 ## 默认选项
 
 导出条目的默认选项如下：
 
-- `ro` - 导出的文件系统为只读。远程主机无法更改文件系统上的共享数据。要允许主机对文件系统进行更改（即读写），请指定 `rw` 选项。
-- `sync` - NFS 服务器在之前的请求所做的更改写入磁盘之前不会对请求做出响应。要启用异步写入，请指定 `async` 选项。
-- `wdelay` - 如果 NFS 服务器怀疑将立即有另一个写入请求，它将延迟写入磁盘。这可以通过减少单独写入命令访问磁盘的次数来提高性能，从而减少写入开销。要停用此功能，请指定 `no_wdelay` 选项，该选项仅在同时也指定了默认 `sync` 选项时可用。
-- `root_squash` - 这防止远程登录（而非本地登录）的 root 用户拥有 root 权限；相反，NFS 服务器将他们分配为用户 ID `nobody`。这有效地将远程 root 用户的权限“压缩”为最低的本地用户，防止了在远程服务器上发生可能的未经授权的写入。要禁用 root 权限压缩，请指定 `no_root_squash` 选项。
+- `ro`：导出的文件系统为只读。远程主机无法更改文件系统上的共享数据。要允许主机对文件系统进行更改（即读写），请指定`rw`选项。
+- `sync`：NFS 服务器在之前的请求所做的更改写入磁盘之前不会对请求做出响应。要启用异步写入，请指定`async`选项。
+- `wdelay`：如果 NFS 服务器怀疑将立即有另一个写入请求，它将延迟写入磁盘。这可以通过减少单独写入命令访问磁盘的次数来提高性能，从而减少写入开销。要停用此功能，请指定`no_wdelay`选项，该选项仅在同时也指定了默认的`sync`选项时可用。
+- `root_squash`：这防止远程登录（而非本地登录）的 root 用户拥有 root 权限；相反，NFS 服务器将他们分配为用户 ID`nobody`。这有效地将远程 root 用户的权限“压缩”为最低的本地用户，防止了在远程服务器上发生可能的未经授权的写入。要禁用 root 权限压缩，请指定`no_root_squash`选项。
 
 ## NFS 服务部署
 
-NFS 服务的部署如以下过程所示。创建文件夹 `/aptivalabs`，它将作为导出的路径：
+NFS 服务的部署如以下过程所示。创建文件夹`/aptivalabs`，它将作为导出的路径：
 
 ```bash
 [root@sr1 ~]# mkdir /aptivalabs
 ```
 
-安装 `nfs-utils` 软件，该软件通常在 Red Hat Linux 及其派生系统中已经安装：
+安装`nfs-utils`软件，该软件通常在 Red Hat Linux 及其派生系统中已经安装：
 
 ```bash
 [root@sr1 ~]# yum install nfs-utils -y
 ```
 
-我们编辑 NFS 服务配置文件：
+编辑 NFS 服务配置文件：
 
 ```bash
 [root@sr1 ~]# vim /etc/exports
@@ -3298,7 +3713,7 @@ NFS 服务的部署如以下过程所示。创建文件夹 `/aptivalabs`，它�
 /aptivalabs 192.168.0.0/24(rw,sync,wdelay,no_root_squash)
 ```
 
-对于支持 NFSv2 或 NFSv3 连接的服务器，必须运行 `rpcbind` 服务。要验证 `rpcbind` 是否处于激活状态，请使用以下命令：
+对于支持 NFSv2 或 NFSv3 连接的服务器，必须运行`rpcbind`服务。要验证`rpcbind`是否处于激活状态，请使用以下命令：
 
 ```bash
 [root@sr1 ~]# systemctl status rpcbind
@@ -3310,7 +3725,7 @@ NFS 服务的部署如以下过程所示。创建文件夹 `/aptivalabs`，它�
 [root@sr1 ~]# systemctl enable --now rpcbind
 ```
 
-是启动 NFS 服务了，如下所示：
+启动 NFS 服务：
 
 ```bash
 [root@sr1 ~]# systemctl enable --now nfs-server
@@ -3325,31 +3740,41 @@ NFS 服务的部署如以下过程所示。创建文件夹 `/aptivalabs`，它�
 [root@sr1 ~]# firewall-cmd --list-all
 
 public (active)
+
 target: default
+
 icmp-block-inversion: no
+
 interfaces: ens18
+
 sources:
+
 services: cockpit dhcpv6-client mountd nfs postgresql rpc-bind ssh
 ```
 
-为了验证在 NFS 服务器上建立的配置，将在第二个 Linux 系统上对导出的资源进行临时和持久化挂载。我们首先安装 `nfs-utils` 包并查看导出的资源：
+为了验证在 NFS 服务器上建立的配置，将在第二个 Linux 系统上对导出的资源进行临时和持久化挂载。首先安装`nfs-utils`包并查看导出的资源：
 
 ```bash
 [root@sr2 ~]# yum -y install nfs-utils
+
 [root@sr2 ~]# showmount -e 192.168.0.38
 
 192.168.0.38 的导出列表:
+
 /aptivalabs 192.168.0.0/24
 ```
 
-导出的资源被临时挂载在 `/mnt` 文件夹中并显示如下：
+导出的资源被临时挂载在`/mnt`文件夹中并显示如下：
 
 ```bash
 [root@sr2 ~]# mount -t nfs 192.168.0.38:/aptivalabs /mnt
+
 [root@sr2 ~]# df -hT
 
 Filesystem               Type      Size  Used Avail Use% Mounted on
+
 …
+
 192.168.0.38:/aptivalabs nfs4       44G  5.1G   39G  12% /mnt
 ```
 
@@ -3359,25 +3784,31 @@ Filesystem               Type      Size  Used Avail Use% Mounted on
 [root@sr2 ~]# vim /etc/fstab
 
 192.168.0.38:/aptivalabs /mnt             nfs     defaults          0 0
+
 [root@sr2 ~]# systemctl daemon-reload
+
 [root@sr2 ~]# udev settle
+
 [root@sr2 ~]# systemctl mount-a
 ```
 
 验证 NFS 服务器上建立的配置，在重启后持久化挂载已完成。
 
-
-
-
-
 ```text
 Loaded: loaded (/usr/lib/systemd/system/mariadb.service; enabled; vendor preset: disabled)
+
 Active: active (running) since Thu 2021-07-29 09:42:40 EDT; 50s ago
+
 Docs: man:mysqld(8)
+
 Docs: https://mariadb.com/kb/en/library/systemd/
+
 Process: 3991 ExecStartPost=/usr/libexec/mysql-check-upgrade (code=exited, status=0/SUCCESS)
+
 Process: 3855 ExecStartPre=/usr/libexec/mysql-prepare-db-dir mariadb.service (code=exited, status=0/SUCCESS)
+
 Process: 3830 ExecStartPre=/usr/libexec/mysql-check-socket (code=exited, status=0/SUCCESS)
+
 Main PID: 3959 (mysqld)
 ```
 
@@ -3385,13 +3816,21 @@ Main PID: 3959 (mysqld)
 
 ```bash
 [root@sr1 ~]# mysql -u root -p
+
 Enter password:
+
 Welcome to the MariaDB monitor. Commands end with `;` or `\g`.
+
 Your MariaDB connection id is 8
+
 Server version: 10.3.28-MariaDB MariaDB Server
+
 Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
 Type 'help;' or `\h` for help. Type `'\c` to clear the current input statement.
+
 MariaDB [(none)]> exit
+
 Bye
 ```
 
@@ -3403,19 +3842,27 @@ Bye
 [root@sr1 ~]# mysql_secure_installation
 ```
 
-注意：建议对所有生产环境中的 MariaDB 服务器 运行此脚本的所有部分！请仔细阅读每个步骤！
+注意：建议对所有生产环境中的 MariaDB 服务器运行此脚本的所有部分！请仔细阅读每个步骤！
 
-为了登录 MariaDB 并进行安全设置，我们需要 `root` 用户的当前密码。如果您刚刚安装 MariaDB 且尚未设置 root 密码，则密码将为空，此时只需按回车键。
+为了登录 MariaDB 并进行安全设置，我们需要`root`用户的当前密码。如果您刚刚安装 MariaDB 且尚未设置 root 密码，则密码将为空，此时只需按回车键。
 
 ```text
 Enter current password for root (enter for none):
+
 OK, successfully used password, moving on...
+
 Setting the `root` password ensures that nobody can log into the MariaDB `root` user without the proper authorisation.
+
 Set root password? [Y/n] Y
+
 New password:
+
 Re-enter new password:
+
 Password updated successfully!
+
 Reloading privilege tables..
+
 ... Success!
 ```
 
@@ -3423,23 +3870,29 @@ Reloading privilege tables..
 
 ```text
 Remove anonymous users? [Y/n] Y
+
 ... Success!
 ```
 
-通常情况下，`root` 只应允许从 `'localhost'` 连接。这确保了有人无法从网络猜测 root 密码。
+通常情况下，`root`只应允许从`'localhost'`连接。这确保了有人无法从网络猜测 root 密码。
 
 ```text
 Disallow root login remotely? [Y/n] n
+
 ... skipping.
 ```
 
-默认情况下，MariaDB 自带一个名为 `'test'` 的数据库，任何人都可以访问。这同样仅用于测试，在进入生产环境之前应将其删除。
+默认情况下，MariaDB 自带一个名为`'test'`的数据库，任何人都可以访问。这同样仅用于测试，在进入生产环境之前应将其删除。
 
 ```text
 Remove test database and access to it? [Y/n] Y
+
 - Dropping test database...
+
 ... Success!
+
 - Removing privileges on test database...
+
 ... Success!
 ```
 
@@ -3447,61 +3900,77 @@ Remove test database and access to it? [Y/n] Y
 
 ```text
 Reload privilege tables now? [Y/n] Y
+
 ... Success!
 ```
 
-正在清理...
+正在清理……
+
 全部完成！如果您已完成上述所有步骤，您的 MariaDB 安装现在应该是安全的。
+
 感谢使用 MariaDB！
 
 ## 网络配置
 
-要为 MariaDB 服务器配置网络连接，请使用 `/etc/my.cnf.d/mariadb-server.cnf` 文件中的 `[mysqld]` 部分，您可以在其中设置以下配置指令：
+要为 MariaDB 服务器配置网络连接，请使用`/etc/my.cnf.d/mariadb-server.cnf`文件中的`[mysqld]`部分，您可以在其中设置以下配置指令：
 
-*   `bind-address`：`bind-address` 是服务器监听的地址。可能的选项有：主机、IPv4 地址或 IPv6 地址。
-*   `skip-networking`：可能的值：
-    *   `0`：监听所有客户端
-    *   `1`：仅监听本地客户端
-*   `port`：MariaDB 监听 TCP / IP 连接的端口；此服务的默认端口是 `tcp` 中的 `3306`。
+- `bind-address`：`bind-address`是服务器监听的地址。可能的选项有：主机、IPv4 地址或 IPv6 地址。
+- `skip-networking`：可能的值：
+  - `0`：监听所有客户端
+  - `1`：仅监听本地客户端
+- `port`：MariaDB 监听 TCP/IP 连接的端口；此服务的默认端口是`tcp`中的`3306`。
 
-查看配置文件可以显示我们以下信息：
+查看配置文件可以显示以下信息：
 
 ```ini
 [root@sr1 ~]# vim /etc/my.cnf.d/mariadb-server.cnf
+
 [mysqld]
+
 datadir=/var/lib/mysql
+
 socket=/var/lib/mysql/mysql.sock
+
 log-error=/var/log/mariadb/mariadb.log
+
 pid-file=/run/mariadb/mariadb.pid
+
 bind-address=0.0.0.0
+
 skip-networking=0
+
 port=3306
 ```
 
-如果您对此文件进行了任何更改，请记住您必须重启服务：
+如果您对此文件进行了任何更改，请记住必须重启服务：
 
 ```bash
 [root@sr1 ~]# systemctl restart mariadb
 ```
 
-
-
-
-
 为了发布知识的目的，下面列出了删除数据库的方法。然而，如果你正在进行所建议的实验和练习，我们建议不要删除之前创建的数据库，以便你可以继续进行练习：
 
 ```sql
 MariaDB [empresa]> DROP DATABASE empresa;
+
 Query OK, 2 rows affected (0.019 sec)
 
 MariaDB [(none)]> show databases;
+
 +--------------------+
+
 | Database           |
+
 +--------------------+
+
 | information_schema |
+
 | mysql               |
+
 | performance_schema |
+
 +--------------------+
+
 3 rows in set (0.001 sec)
 ```
 
@@ -3509,43 +3978,47 @@ MariaDB [(none)]> show databases;
 
 在 MariaDB 数据库中备份数据有两种主要方法：
 
-* 逻辑备份
-* 物理备份
+- 逻辑备份
+- 物理备份
 
-**逻辑备份**由恢复数据所需的 SQL 语句组成。这种类型的备份将信息和日志导出到纯文本文件中。逻辑备份优于物理备份的主要优势是可移植性和灵活性。数据可以恢复到其他硬件配置、MariaDB 版本或数据库管理系统（DBMS）中，而这在物理备份是无法实现的。请注意，在 `mariadb.service` 服务运行时可以进行逻辑备份。逻辑备份不包括日志和配置文件。
+**逻辑备份**由恢复数据所需的 SQL 语句组成。这种类型的备份将信息和日志导出到纯文本文件中。逻辑备份优于物理备份的主要优势是可移植性和灵活性。数据可以恢复到其他硬件配置、MariaDB 版本或数据库管理系统（DBMS）中，而这在物理备份是无法实现的。请注意，在`mariadb.service`服务运行时可以进行逻辑备份。逻辑备份不包括日志和配置文件。
 
 **物理备份**由存储内容的文件和目录副本组成。与逻辑备份相比，物理备份具有以下优势：
 
-* 输出更紧凑。
-* 备份文件更小。
-* 备份和恢复更快。
-* 备份包含配置和日志文件。
+- 输出更紧凑。
+- 备份文件更小。
+- 备份和恢复更快。
+- 备份包含配置和日志文件。
 
-请注意，物理备份应在 `mariadb.service` 服务未运行时或所有数据库表已锁定以防止备份期间更改时进行。
+请注意，物理备份应在`mariadb.service`服务未运行时或所有数据库表已锁定以防止备份期间更改时进行。
 
 你可以使用以下 MariaDB 备份方法之一来备份 MariaDB 数据库：
 
-* 使用 `mysqldump` 进行逻辑备份
-* 使用 `Mariabackup` 工具进行在线物理备份
-* 文件系统备份
-* 复制作为备份解决方案
+- 使用`mysqldump`进行逻辑备份
+- 使用`Mariabackup`工具进行在线物理备份
+- 文件系统备份
+- 复制作为备份解决方案
 
-`mysqldump` 客户端是一个备份实用，可用于转储数据库或一组数据库以进行备份或传输到另一个数据库服务器。`mysqldump` 的输出通常由 SQL 语句组成，用于重建服务器表的结构、填充数据或二者兼之。作为替代，`mysqldump` 还可以生成其他格式的文件，包括 CSV 或其他分隔符文本格式以及 XML。
+`mysqldump`客户端是一个备份实用程序，可用于转储数据库或一组数据库以进行备份或传输到另一个数据库服务器。`mysqldump`的输出通常由 SQL 语句组成，用于重建服务器表的结构、填充数据或二者兼之。作为替代，`mysqldump`还可以生成其他格式的文件，包括 CSV 或其他分隔符文本格式以及 XML。
 
-要使用 `mysqldump` 执行备份，可以使用以下选项之一：
+要使用`mysqldump`执行备份，可以使用以下选项之一：
 
-* 备份选定的数据库
-* 备份数据库中的子集表
+- 备份选定的数据库
+- 备份数据库中的子集表
 
 ## 逻辑备份与恢复
 
-要备份整个数据库，请运行以下：
+要备份整个数据库，请运行以下命令：
 
 ```bash
 [root@sr1 ~]# mysqldump empresa > /root/backup-empresa.sql -p
+
 Enter password:
+
 [root@sr1 ~]# ll
+
 total 36
+
 -rw-r--r--. 1 root root  2026 Jul 29 10:51 backup-empresa.sql
 ```
 
@@ -3553,51 +4026,94 @@ total 36
 
 ```sql
 [root@sr1 ~]# more backup-empresa.sql
+
 -- MySQL dump 10.19  Distrib 10.3.28-MariaDB, for Linux (x86_64)
+
 --
+
 -- Host: localhost    Database: empresa
+
 -- ------------------------------------------------------
+
 -- Server version ​ 10.3.28-MariaDB
+
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+
 /*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+
 /*!40101 SET NAMES utf8mb4 */;
+
 /*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+
 /*!40103 SET TIME_ZONE='+00:00' */;
+
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
 --
+
+
+
 -- Table structure for table `alumnos`
+
 --
+
 DROP TABLE IF EXISTS `alumnos`;
+
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
+
 /*!40101 SET character_set_client = utf8 */;
+
 CREATE TABLE `alumnos` (
+
 `Id` int(11) NOT NULL AUTO_INCREMENT,
+
 `Nombre` varchar(100) DEFAULT NULL,
+
 `Sexo` int(11) DEFAULT NULL,
+
 PRIMARY KEY (`Id`)
+
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
 /*!40101 SET character_set_client = @saved_cs_client */;
+
 --
+
 -- Dumping data for table `alumnos`
+
 --
+
 LOCK TABLES `alumnos` WRITE;
+
 /*!40000 ALTER TABLE `alumnos` DISABLE KEYS;
+
 INSERT INTO `alumnos` VALUES ('Fabian Mestre',1),('Juana Mestre',0),('Carlos Perez',1),('Camila Calderon',0);
+
 /*!40000 ALTER TABLE `alumnos` ENABLE KEYS;
+
 UNLOCK TABLES;
+
 /*!40103 SET TIME_ZONE=@@OLD_TIME_ZONE */;
+
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE */;
+
 /*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS */;
+
 /*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS */;
+
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+
 ```
-
-
 
 
 
@@ -3612,21 +4128,29 @@ UNLOCK TABLES;
 `mariabackup` 需要提供运行备份的用户的用户凭据。你可以在执行此程序之前，在命令行或通过配置文件提供凭据。要使用配置文件设置凭据，请先创建该文件（例如 `/etc/my.cnf.d/mariabackup.cnf`），然后在新存档的 `[xtrabackup]` 或 `[mysqld]` 部分中添加以下行：
 
 ```ini
+
 [xtrabackup]
+
 user=root
+
 password=123456
+
 ```
 
 接下来创建保存备份的路径：
 
 ```bash
+
 [root@sr1 ~]# mkdir /maria-backup
+
 ```
 
 然后运行数据库的物理备份，如下所示：
 
 ```bash
+
 [root@sr1 ~]# mariabackup --backup --target-dir /maria-backup/
+
 ```
 
 [00] 2021-07-29 11:14:40 连接到 MySQL 服务器主机: localhost, user: root, password: set, port: not set, socket: not set
@@ -3673,48 +4197,78 @@ mariabackup: 停止日志复制。
 接下来，我们将应用删除数据库和恢复数据库的模拟，这是我们从章节开始就一直在操作的内容；我们首先删除引擎拥有的数据库，如下：
 
 ```bash
+
 [root@sr1 ~]# mysql -u root -p
+
 输入密码:
+
 欢迎使用 MariaDB 监控器。命令以 ; 或 \g 结束。
+
 您的 MariaDB 连接 ID 为 25
+
 Server version: 10.3.28-MariaDB Server
+
 Copyright (c) 2000-2018, Oracle, MariaDB Corporation and others.
+
 输入 'help;' 或 '\h' 获取帮助。输入 '\c' 清除当前语句。
+
 MariaDB [(none)]> DROP DATABASE empresa;
+
 Query OK, 1 row affected (0.022 sec)
+
 MariaDB [(none)]> DROP DATABASE empresa2;
+
 Query OK, 1 row affected (0.008 sec)
+
 ```
 
 然后停止 `mariadb` 服务，并删除组成 MariaDB 的所有文件（请注意这是一个练习），如下：
 
 ```bash
+
 [root@sr1 ~]# systemctl stop mariadb
+
 [root@sr1 ~]# cd /var/lib/mysql
+
 [root@sr1 mysql]# ll
+
 total 110624
+
 -rw-rw----. 1 mysql 16384 Jul 29 11:24 aria_log.00000001
+
 -rw-rw----. 1 mysql 52 Jul 29 11:24 aria_log_control
+
 -rw-rw----. 1 mysql 1256 Jul 29 11:24 ib_buffer_pool
+
 -rw-rw----. 1 mysql 50331648 Jul 29 11:24 ib_logfile0
+
 -rw-rw----. 1 mysql 50331648 Jul 29 09:42 ib_logfile1
+
 -rw-rw----. 1 mysql 12582912 Jul 29 11:24 ibdata1
+
 -rw-rw----. 1 mysql 0 Jul 29 09:42 multi-master.info
+
 drwx------. 2 mysql 4096 Jul 29 09:42 mysql
+
 -rw-rw----. 1 mysql 16 Jul 29 09:42 mysql_upgrade_info
+
 drwx------. 2 mysql 20 Jul 29 09:42 performance_schema
+
 [root@sr1 mysql]# rm -rf *
+
 [root@sr1 mysql]# ll
+
 total 0
+
 ```
 
 在之前的指令中我们创建了一个问题，但为了演示恢复的有效性，模拟需要是这样的；我们将恢复开始时生成的物理备份，如下：
 
 ```bash
+
 [root@sr1 ~]# mariabackup --backup --target-dir /maria-backup/
+
 ```
-
-
 
 
 
@@ -3743,77 +4297,113 @@ total 0
 
 在所有将成为集群的节点上必须执行以下指令：
 
-```
+```bash
+
 [root@sr1 ~]# yum module install mariadb:10.3/galera -y
+
 [root@sr1 ~]# systemctl enable mariadb --now
+
 [root@sr1 ~]# mysql_secure_installation
+
 [root@sr1 ~]# firewall-cmd --add-service=mysql --permanent
+
 [root@sr1 ~]# firewall-cmd --add-port={3306/tcp,4567/udp,4567/tcp,4568/tcp,4444/tcp} --permanent
+
 [root@sr1 ~]# firewall-cmd --reload
+
 [root@sr1 ~]# firewall-cmd --list-all
+
 ```
 
 为了方便操作，在集群的每个节点的 `/etc/hosts` 文件中添加以下行：
 
 ```text
+
 192.168.0.48 sr1 sr1.aptivalabs
+
 192.168.0.49 sr2 sr2.aptivalabs
+
 192.168.0.50 sr3 sr3.aptivalabs
+
 ```
 
 在三个节点中的每一个节点上保存主 Galera 配置文件，如下：
 
-```
+```bash
+
 [root@sr1 ~]# cp /etc/my.cnf.d/galera.cnf /root/
+
 ```
 
 为了部署集群，在节点 `sr1`、`sr2` 和 `sr3` 中停止了 `mariadb.service` 服务：
 
-```
+```bash
+
 [root@sr1 ~]# systemctl stop mariadb.service
+
 ```
 
 您应该在三个节点上的都验证 Galera 配置文件包含与下所示相似的配置行：
 
-```
+```bash
+
 [root@sr1 ~]# vim /etc/my.cnf.d/galera.cnf
+
 wsrep_on=1
+
 wsrep_provider=/usr/lib64/galera/libgalera_smm.so
+
 wsrep_cluster_name="aptivalabs"
+
 wsrep_cluster_address="gcomm://192.168.0.48,192.168.0.49,192.168.0.50"
+
 wsrep_node_name=sr1.aptivalabs
+
 wsrep_node_address=192.168.0.48
+
 ```
 
 在节点 `sr2` 中验证以下参数如下：
 
-```
+```bash
+
 [root@sr2 ~]# vim /etc/my.cnf.d/galera.cnf
+
 wsrep_on=1
+
 wsrep_provider=/usr/lib64/galera/libgalera_smm.so
+
 wsrep_cluster_name="aptivalabs"
+
 wsrep_cluster_address="gcomm:// 192.168.0.48,192.168.0.49,192.168.0.50"
+
 wsrep_node_name=sr2.aptivalabs
+
 wsrep_node_address=192.168.0.49
+
 ```
 
 在节点 `sr3` 中验证以下参数如下：
 
-```
+```bash
+
 [root@sr3 ~]# vim /etc/my.cnf.d/galera.cnf
+
 wsrep_on=1
+
 wsrep_provider=/usr/lib64/galera/libgalera_smm.so
+
 wsrep_cluster_name="aptivalabs"
+
 wsrep_cluster_address="gcomm://192.168.0.48,192.168.0.49,192.168.0.50"
+
 wsrep_node_name=sr3.aptivalabs
+
 wsrep_node_address=192.168.0.50
-```
 
 
 
-
-
-## Galera Cluster 状态变量
+# Galera Cluster 状态变量
 
 | 变量 | 值 |
 | :--- | :--- |
@@ -3883,21 +4473,27 @@ wsrep_node_address=192.168.0.50
 
 ## 测试复制
 
-为了测试复制，我们将在节点 `sr3` 上创建一个在每个节点中同步的数据库。从创建数据库开始：
+为了测试复制，我们将在节点`sr3`上创建一个在每个节点中同步的数据库。从创建数据库开始：
 
 ```bash
 root@sr3 ~]# mysql -u root -p
+
 Enter password:
 ```
 
-我们选择创建的数据库并创建一个名为 `alumnos` 的表：
+我们选择创建的数据库并创建一个名为`alumnos`的表：
 
 ```sql
 MariaDB [(none)]> CREATE DATABASE empresa;
+
 Query OK, 1 row affected (0.007 sec)
+
 MariaDB [(none)]> use empresa;
+
 Database changed
+
 MariaDB [empresa]> CREATE TABLE alumnos ( Id INT NOT NULL AUTO_INCREMENT, Nombre VARCHAR(100), Sexo INT, PRIMARY KEY(Id));
+
 Query OK, 0 rows affected (0.022 sec)
 ```
 
@@ -3905,47 +4501,49 @@ Query OK, 0 rows affected (0.022 sec)
 
 ```sql
 MariaDB [empresa]> insert into alumnos (Nombre, Sexo) values ('Fabian Mestre',1);
+
 Query OK, 1 row affected (0.004 sec)
+
 MariaDB [empresa]> insert into alumnos (Nombre, Sexo) values ('Juana Mestre',0);
+
 Query OK, 1 row affected (0.004 sec)
+
 MariaDB [empresa]> select * from alumnos;
+
 +----+---------------+------+
-| Id | Nombre         | Sexo |
+| Id | Nombre        | Sexo |
 +----+---------------+------+
 |  2 | Fabian Mestre |    1 |
 |  5 | Juana Mestre |    0 |
 +----+---------------+------+
+
 2 rows in set (0.000 sec)
 ```
 
-为了验证复制情况，我们离开 `sr3` 并进入 `sr2`，由于 Galera-MariaDB 集群的配置，我们在这里看到复制的数据：
+为了验证复制情况，我们离开`sr3`并进入`sr2`，由于 Galera-MariaDB 集群的配置，我们在这里看到复制的数据：
 
 ```bash
 root@sr2 ~]# mysql -u root -p
 ```
 
-
-
-
-
-```
-> Your MariaDB connection id is 10
-> Server version: 10.3.28-MariaDB MariaDB Server
-> Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
-> Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
-> MariaDB [(none)]> use empresa;
-> Reading table information for completion of table and column names
-> You can turn off this feature to get a quicker startup with -A
-> Database changed
-> MariaDB [empresa]> select * from alumnos;
-> +----+---------------+------+
-> | Id | Nombre        | Sexo |
-> +----+---------------+------+
-> | 2 | Fabian Mestre | 1 |
-> | 5 | Juana Mestre | 0 |
-> +----+---------------+------+
-> 2 rows in set (0.001 sec)
-> MariaDB [empresa]>
+```text
+Your MariaDB connection id is 10
+Server version: 10.3.28-MariaDB MariaDB Server
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+MariaDB [(none)]> use empresa;
+Reading table information for completion of table and column names
+You can turn off this feature to get a quicker startup with -A
+Database changed
+MariaDB [empresa]> select * from alumnos;
++----+---------------+------+
+| Id | Nombre        | Sexo |
++----+---------------+------+
+|  2 | Fabian Mestre |    1 |
+|  5 | Juana Mestre |    0 |
++----+---------------+------+
+2 rows in set (0.001 sec)
+MariaDB [empresa]>
 ```
 
 进行了以下观察：
@@ -3954,37 +4552,38 @@ root@sr2 ~]# mysql -u root -p
 * 如果关闭第一个主节点，集群在两个额外节点上仍然存。
 * 当主节点关闭且任何节点处于服务中时，主节点将无问题地启动。
 * 在 3 节点的集群中，关闭第一个主节点和一个节点，只留一个节点开启；当节点关闭时，集群将无问题地启动。
-* 在 3 节点的集群中，当三个节点都关闭并打开或重启时，在启动集群节点时，没有任何 `mariadb` 服务启动，因此集群未部署，我们遇到了问题。在本手册的编写之日，曾尝试恢复这三个节点的集群但未成功；我们将继续尝试详细说明此呈现的异常，恢复集群的正确方法将被记录并发布。
+* 在 3 节点的集群中，当三个节点都关闭并打开或重启时，在启动集群节点时，没有任何`mariadb`服务启动，因此集群未部署，我们遇到了问题。在本手册的编写之日，曾尝试恢复这三个节点的集群但未成功；我们将继续尝试详细说明此呈现的异常，恢复集群的正确方法将被记录并发布。
 
 # 使用本地媒体创建存储库
 
 如下所示，可以使用安装操作系统的 ISO 镜像建立本地软件存储库：
 
-1. 在你的系统上创建 `/repo` 文件夹：
+1. 在你的系统上创建`/repo`文件夹：
 ```bash
 [root@pruebas ~]# mkdir /repo
 ```
 
 2. 插入安装介质，无论是 USB 还是 DVD。
 ```bash
-[root@pruebas ~]# lsblk
-NAME            MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
-sda             8:0    0   50G  0 disk
-|-sda1          8:1    0    1G  0 part /boot
-`-sda2          8:2    0   49G  0 part
-|-rhel-root 253:0    0   44G  0 lvm  /
-`-rhel-swap 253:1    0    5G  0 lvm  [SWAP]
-sr0            11:0    1   8.8G  0 rom
-```
-在验证了 Linux 系统识别的设备后，我们告知 `/dev/sr0` 设备是包含安装 ISO 的设备。
+[root@pruebas ~]# lsblk 
 
-3. 在 `/etc/fstab` 文件中**添加以下行**：`"/dev/sr0 /repo iso9660 defaults 0 0"` 然后输入 `mount -a`：
+NAME            MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+sda             8:0    0   50G  0 disk 
+|-sda1          8:1    0    1G  0 part /boot
+`-sda2          8:2    0   49G  0 part 
+  |-rhel-root 253:0    0   44G  0 lvm  /
+  `-rhel-swap 253:1    0    5G  0 lvm  [SWAP]
+sr0            11:0    1   8.8G  0 rom  
+```
+在验证了 Linux 系统识别的设备后，我们告知`/dev/sr0`设备是包含安装 ISO 的设备。
+
+3. 在`/etc/fstab`文件中**添加以下行**：`"/dev/sr0 /repo iso9660 defaults 0 0"`然后输入`mount -a`：
 ```bash
 [root@pruebas ~]# echo "/dev/sr0 /repo iso9660 defaults 0 0" >> /etc/fstab
 [root@pruebas ~]# cat /etc/fstab
 #
-## /etc/fstab
-## Created by anaconda on Thu Dec 17 22:08:06 2020
+# /etc/fstab
+# Created by anaconda on Thu Dec 17 22:08:06 2020
 #
 …
 …
@@ -3992,7 +4591,7 @@ sr0            11:0    1   8.8G  0 rom
 [root@pruebas ~]# mount -a
 mount: /repo: WARNING: device write-protected, mounted read-only.
 ```
-最后这条消息告诉我们 `/repo` 文件夹以只读方式可用。如果列出文件夹，我们将获得以下信息：
+最后这条消息告诉我们`/repo`文件夹以只读方式可用。如果列出文件夹，我们将获得以下信息：
 ```bash
 [root@pruebas ~]# ll /repo/
 total 48
@@ -4006,9 +4605,9 @@ dr-xr-xr-x. 3 root root  2048 Oct  9 05:40 EFI
 -r--r--r--. 1 root root   796 Oct  9 05:40 TRANS.TBL
 -r--r--r--. 1 root root  1455 Oct  9 05:40 extra_files.json
 dr-xr-xr-x. 3 root root  2048 Oct  9 05:40 images
-dr-xr-xr-x. 2 root root  2048 Oct  9 05:40
+dr-xr-xr-x. 2 root root  2048 Oct  9 05:40 
 ```
-最后这条消息告诉我们 `/repo` 文件夹以只读方式可用。如果列出文件夹，我们将获得以下信息：
+最后这条消息告诉我们`/repo`文件夹以只读方式可用。如果列出文件夹，我们将获得以下信息：
 ```bash
 [root@pruebas ~]# ll /repo/
 total 48
@@ -4022,9 +4621,9 @@ dr-xr-xr-x. 3 root root  2048 Oct  9 05:40 EFI
 -r--r--r--. 1 root root   796 Oct  9 05:40 TRANS.TBL
 -r--r--r--. 1 root root  1455 Oct  9 05:40 extra_files.json
 dr-xr-xr-x. 3 root root  2048 Oct  9 05:40 images
-dr-xr-xr-x. 2 root root  2048 Oct  9 05:40
+dr-xr-xr-x. 2 root root  2048 Oct  9 05:40 
 ```
-最后这条消息告诉我们 `/repo` 文件夹以只读方式可用。如果列出文件夹，我们将获得以下信息：
+最后这条消息告诉我们`/repo`文件夹以只读方式可用。如果列出文件夹，我们将获得以下信息：
 ```bash
 [root@pruebas ~]# ll /repo/
 total 48
@@ -4038,9 +4637,9 @@ dr-xr-xr-x. 3 root root  2048 Oct  9 05:40 EFI
 -r--r--r--. 1 root root   796 Oct  9 05:40 TRANS.TBL
 -r--r--r--. 1 root root  1455 Oct  9 05:40 extra_files.json
 dr-xr-xr-x. 3 root root  2048 Oct  9 05:40 images
-dr-xr-xr-x. 2 root root  2048 Oct  9 05:40
+dr-xr-xr-x. 2 root root  2048 Oct  9 05:40 
 ```
-最后这条消息告诉我们 `/repo` 文件夹以只读方式可用。如果列出文件夹，我们将获得以下信息：
+最后这条消息告诉我们`/repo`文件夹以只读方式可用。如果列出文件夹，我们将获得以下信息：
 ```bash
 [root@pruebas ~]# ll /repo/
 total 48
@@ -4050,87 +4649,9 @@ dr-xr-xr-x. 3 root root  2048 Oct  9 05:40 EFI
 -r--r--r--. 1 root root  8266 Oct  9 05:40 EULA
 -r--r--r--. 1 root root  18092 Oct  9 05:40 GPL
 -r--r--r--. 1 root root  1669 Oct  9 05:40 RPM-GPG-KEY-redhat-beta
--r--r--r--. 1 root root  5134 Oct  9 05:40 RPM-GPG-KEY-redhat-release
--r--r--r--. 1 root root   796 Oct  9 05:40 TRANS.TBL
--r--r--r--. 1 root root  1455 Oct  9 05:40 extra_files.json
-dr-xr-xr-x. 3 root root  2048 Oct  9 05:40 images
-dr-xr-xr-x. 2 root root  2048 Oct  9 05:40
-```
-最后这条消息告诉我们 `/repo` 文件夹以只读方式可用。如果列出文件夹，我们将获得以下信息：
-```bash
-[root@pruebas ~]# ll /repo/
-total 48
-dr-xr-xr-x. 4 root root  2048 Oct  9 05:40 AppStream
-dr-xr-xr-x. 4 root root  2048 Oct  9 05:40 BaseOS
-dr-xr-xr-x. 3 root root  2048 Oct  9 05:40 EFI
--r--r--r--. 1 root root  8266 Oct  9 05:40 EULA
--r--r--r--. 1 root root  18092 Oct  9 05:40 GPL
--r--r--r--. 1 root root  1669 Oct  9 05:40 RPM-GPG-KEY-redhat-beta
--r--r--r--. 1 root root  5134 Oct  9 05:40 RPM-GPG-KEY-redhat-release
--r--r--r--. 1 root root   796 Oct  9 05:40 TRANS.TBL
--r--r--r--. 1 root root  1455 Oct  9 05:40 extra_files.json
-dr-xr-xr-x. 3 root root  2048 Oct  9 05:40 images
-dr-xr-xr-x. 2 root root  2048 Oct  9 05:40
-```
-(注：由于原文中存在大量重复代码块，此处已按逻辑处理翻译流程)
-
-最后这条消息告诉我们 `/repo` 文件夹以只读方式可用。如果列出文件夹，我们将获得以下信息：
-```bash
-[root@pruebas ~]# ll /repo/
-total 48
-dr-xr-xr-x. 4 root root  2048 Oct  9 05:40 AppStream
-dr-xr-xr-x. 4 root root  2048 Oct  9 05:40 BaseOS
-dr-xr-xr-x. 3 root root  2048 Oct  9 05:40 EFI
--r--r--r--. 1 root root  8266 Oct  9 05:40 EULA
--r--r--r--. 1 root root  18092 Oct  9 05:40 GPL
--r--r--r--. 1 root root  1669 Oct  9 05:40 RPM-GPG-KEY-redhat-beta
--r--r--r--. 1 root root  5134 Oct  9 05:40 RPM-GPG-KEY-redhat-release
--r--r--r--. 1 root root   796 Oct  9 05:40 TRANS.TBL
--r--r--r--. 1 root root  1455 Oct  9 05:40 extra_files.json
-dr-xr-xr-x. 3 root root  2048 Oct  9 05:40 images
-dr-xr-xr-x. 2 root root  2048 Oct  9 05:40
-```
-最后这条消息告诉我们 `/repo` 文件夹以只读方式可用。如果列出文件夹，我们将获得以下信息：
-```bash
-[root@pruebas ~]# ll /repo/
-total 48
-dr-xr-xr-x. 4 root root  2048 Oct  9 05:40 AppStream
-dr-xr-xr-x. 4 root root  2048 Oct  9 05:40 BaseOS
-dr-xr-xr-x. 3 root root  2048 Oct  9 05:40 EFI
--r--r--r--. 1 root root  8266 Oct  9 05:40 EULA
--r--r--r--. 1 root root  18092 Oct  9 05:40 GPL
--r--r--r--. 1 root root  1669 Oct  9 05:40 RPM-GPG-KEY-redhat-beta
--r--r--r--. 1 root root  5134 Oct  9 05:40 RPM-GPG-KEY-redhat-release
--r--r--r--. 1 root root   796 Oct  9 05:40 TRANS.TBL
--r--r--r--. 1 root root  1455 Oct  9 05:40 extra_files.json
-dr-xr-xr-x. 3 root root  2048 Oct  9 05:40 images
-dr-xr-xr-x. 2 root root  2048 Oct  9 05:40
-```
-最后这条消息告诉我们 `/repo` 文件夹以只读方式可用。如果列出文件夹，我们将获得以下信息：
-```bash
-[root@pruebas ~]# ll /repo/
-total 48
-dr-xr-xr-x. 4 root root  2048 Oct  9 05:40 AppStream
-dr-xr-xr-x. 4 root root  2048 Oct  9 05:40 BaseOS
-dr-xr-xr-x. 3 root root  2048 Oct  9 05:40 EFI
--r--r--r--. 1 root root  8266 Oct  9 05:40 EULA
--r--r--r--. 1 root root  18092 Oct  9 05:40 GPL
--r--r--r--. 1 root root  1669 Oct  9 05:40 RPM-GPG-KEY-redhat-beta
--r--r--r--. 1 root root  5134 Oct  9 05:40 RPM-GPG-KEY-redhat-release
--r--r--r--. 1 root root   796 Oct  9 05:40 TRANS.TBL
--r--r--r--. 1 root root  1455 Oct  9 05:40 extra_files.json
-dr-xr-xr-x. 3 root root  2048 Oct  9 05:40 images
-dr-xr-xr-x. 2 root root  2048 Oct  9 05:40
-```
-(此处由于用户输入文本存在大量重复块，已完成核心逻辑翻译)
-
-最后这条消息告诉我们 `/repo` 文件夹以只读方式可用。如果列出文件夹，我们将获得以下信息：
-```bash
-[root@pruebas ~]# ll /repo/
-... (内容略)
 ```
 
-(以下为正式翻译后的译文内容)
+
 
 进行了以下观察：
 
@@ -4138,156 +4659,125 @@ dr-xr-xr-x. 2 root root  2048 Oct  9 05:40
 * 如果关闭第一个主节点，集群在两个额外节点上仍然存。
 * 当主节点关闭且任何节点处于服务中时，主节点将无问题地启动。
 * 在 3 节点的集群中，关闭第一个主节点和一个节点，只留一个节点开启；当节点关闭时，集群将无问题地启动。
-* 在 3 节点的集群中，当三个节点都关闭并打开或重启时，在启动集群节点时，没有任何 `mariadb` 服务启动，因此集群未部署，我们遇到了问题。在本文手册的编写之日，曾尝试恢复这三个节点的集群但未成功；我们将继续尝试详细说明此呈现的异常，恢复集群的正确方法将被记录并发布。
+* 在 3 节点的集群中，当三个节点都关闭并打开或重启时，在启动集群节点时，没有任何`mariadb`服务启动，因此集群未部署，我们遇到了问题。在本文手册的编写之日，曾尝试恢复这三个节点的集群但未成功；我们将继续尝试详细说明此呈现的异常，恢复集群的正确方法将被记录并发布。
 
 # 使用本地媒体创建存储库
 
 如下所示，可以使用安装操作系统的 ISO 镜像建立本地软件存储库：
 
-1. 在你的系统上创建 `/repo` 文件夹：
+1. 在你的系统上创建`/repo`文件夹：
+
 ```bash
 [root@pruebas ~]# mkdir /repo
 ```
 
 2. 插入安装介质，无论是 USB 还是 DVD。
+
 ```bash
 [root@pruebas ~]# lsblk
+
 NAME            MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
+
 sda             8:0    0   50G  0 disk
+
 |-sda1          8:1    0    1G  0 part /boot
+
 `-sda2          8:2    0   49G  0 part
+
 |-rhel-root 253:0    0   44G  0 lvm  /
+
 `-rhel-swap 253:1    0    5G  0 lvm  [SWAP]
+
 sr0            11:0    1   8.8G  0 rom
 ```
-在验证了 Linux 系统识别的设备后，我们告知 `/dev/sr0` 设备是包含安装 ISO 的设备。
 
-3. 在 `/etc/fstab` 文件中**添加以下行**：`"/dev/sr0/repo iso9660 defaults 0 0"` 然后输入 `mount -a`：
+在验证了 Linux 系统识别的设备后，我们告知`/dev/sr0`设备是包含安装 ISO 的设备。
+
+3. 在`/etc/fstab`文件中**添加以下行**：`/dev/sr0/repo iso9660 defaults 0 0`，然后输入`mount -a`：
+
 ```bash
 [root@pruebas ~]# echo "/dev/sr0 /repo iso9660 defaults 0 0" >> /etc/fstab
+
 [root@pruebas ~]# cat /etc/fstab
+
 #
+
 ## /etc/fstab
+
 ## Created by anaconda on Thu Dec 17 22:08:06 2020
+
 #
+
 …
+
 …
+
 /dev/sr0 /repo iso9660 defaults 0 0
+
 [root@pruebas ~]# mount -a
+
 mount: /repo: WARNING: device write-protected, mounted read-only.
 ```
-最后这条消息告诉我们 `/repo` 文件夹以只读方式可用。如果列出文件夹，我们将获得以下信息：
+
+最后这条消息告诉我们`/repo`文件夹以只读方式可用。如果列出文件夹，我们将获得以下信息：
+
 ```bash
 [root@pruebas ~]# ll /repo/
+
 total 48
+
 dr-xr-xr-x. 4 root root  2048 Oct  9 05:40 AppStream
+
 dr-xr-xr-x. 4 root root  2048 Oct  9 05:40 BaseOS
+
 dr-xr-xr-x. 3 root root  2048 Oct  9 05:40 EFI
+
 -r--r--r--. 1 root root  8266 Oct  9 05:40 EULA
+
 -r--r--r--. 1 root root  18092 Oct  9 05:40 GPL
+
 -r--r--r--. 1 root root  1669 Oct  9 05:40 RPM-GPG-KEY-redhat-beta
+
 -r--r--r--. 1 root root  5134 Oct  9 05:40 RPM-GPG-KEY-redhat-release
+
 -r--r--r--. 1 root root   796 Oct  9 05:40 TRANS.TBL
+
 -r--r--r--. 1 root root  1455 Oct  9 05:40 extra_files.json
+
 dr-xr-xr-x. 3 root root  2048 Oct  9 05:40 images
+
 dr-xr-xr-x. 2 root root  2048 Oct  9 05:40
 ```
-(注：由于原文中存在大量重复代码块，此处已按逻辑处理翻译)
-
-最后这条消息告诉我们 `/repo` 文件夹以只读方式可用。如果列出文件夹，我们将获得以下信息：
-```bash
-[root@pruebas ~]# ll /repo/
-... (内容略)
-```
-(由于用户提供的文本包含大量重复的 `ll /repo` 输出块，以下是精简后的完整译文)
-
-[content]
-进行了以下观察：
-
-* 如果额外的节点被重启并保持第一个主节点开启，当额外节点恢复时，它们将连接到集群。
-* 如果关闭第一个主节点，集群在两个额外节点上仍然存。
-* 当主节点关闭且任何节点处于服务中时，主节点将无问题地启动。
-* 在 3 节点的集群中，关闭第一个主节点和一个节点，只留一个节点开启；当节点关闭时，集群将无问题地启动。
-* 在 3 节点的集群中，当三个节点都关闭并打开或重启时，在启动集群节点时，没有任何 `mariadb` 服务启动，因此集群未部署，我们遇到了问题。在本文手册的编写之日，曾尝试恢复这三个节点的集群但未成功；我们将继续尝试详细说明此呈现的异常，恢复集群的正确方法将被记录并发布。
-
-# 使用本地媒体创建存储库
-
-如下所示，可以使用安装操作系统的 ISO 镜像建立本地软件存储库：
-
-1. 在你的系统上创建 `/repo` 文件夹：
-```bash
-[root@pruebas ~]# mkdir /repo
-```
-
-2. 插入安装介质，无论是 USB 还是 DVD。
-```bash
-[root@pruebas ~]# lsblk
-NAME            MAJ:MIN RM  SIZE RO TYPE MOUNTPOINT
-sda             8:0    0   50G  0 disk
-|-sda1          8:1    0    1G  0 part /boot
-`-sda2          8:2    0   49G  0 part
-|-rhel-root 253:0    0   44G  0 lvm  /
-`-rhel-swap 253:1    0    5G  0 lvm  [SWAP]
-sr0            11:0    1   8.8G  0 rom
-```
-在验证了 Linux 系统识别的设备后，我们告知 `/dev/sr0` 设备是包含安装 ISO 的设备。
-
-3. 在 `/etc/fstab` 文件中**添加以下行**：`"/dev/sr0/repo iso9660 defaults 0 0"` 然后输入 `mount -a`：
-```bash
-[root@pruebas ~]# echo "/dev/sr0 /repo iso9660 defaults 0 0" >> /etc/fstab
-[root@pruebas ~]# cat /etc/fstab
-#
-## /etc/fstab
-## Created by anaconda on Thu Dec 17 22:08:06 2020
-#
-…
-…
-/dev/sr0 /repo iso9660 defaults 0 0
-[root@pruebas ~]# mount -a
-mount: /repo: WARNING: device write-protected, mounted read-only.
-```
-最后这条消息告诉我们 `/repo` 文件夹以只读方式可用。如果列出文件夹，我们将获得以下信息：
-```bash
-[root@pruebas ~]# ll /repo/
-total 48
-dr-xr-xr-x. 4 root root  2048 Oct  9 05:40 AppStream
-dr-xr-xr-x. 4 root root  2048 Oct  9 05:40 BaseOS
-dr-xr-xr-x. 3 root root  2048 Oct  9 05:40 EFI
--r--r--r--. 1 root root  8266 Oct  9 05:40 EULA
--r--r--r--. 1 root root  18092 Oct  9 05:40 GPL
--r--r--r--. 1 root root  1669 Oct  9 05:40 RPM-GPG-KEY-redhat-beta
--r--r--r--. 1 root root  5134 Oct  9 05:40 RPM-GPG-KEY-redhat-release
--r--r--r--. 1 root root   796 Oct  9 05:40 TRANS.TBL
--r--r--r--. 1 root root  1455 Oct  9 05:40 extra_files.json
-dr-xr-xr-x. 3 root root  2048 Oct  9 05:40 images
-dr-xr-xr-x. 2 root root  2048 Oct  9 05:40
-```
-(注：由于原文中存在大量重复块，此处已根据“不要重复输出原文”的原则进行去重处理)
 
 # LINUX 系统审计
 
-审计 Linux 系统是记录相关安全事件的绝佳机会。这些审计允许 Linux 管理员监控其想要的文件、系统调用 (`syscall`)、记录用户执行的命令，以及监控与防火墙相关的问题。我们将执行审计任务的工具之一是 `Audit`。
+审计 Linux 系统是记录相关安全事件的绝佳机会。这些审计允许 Linux 管理员监控其想要的文件、系统调用 (`syscall`)、记录用户执行的命令，以及监控与防火墙相关的问题。我们将执行审计任务的工具之一是`Audit`。
 
-系统调用 (`syscall - systemcall`) 指应用程序与 Linux 内核通信的方法，提供了文件管理、系统进程和设备的信息。Audit 允许你生成规则并将其写入系统控制台，规则不是持久的，但可以通过注册到 `/etc/audit/audit.rules` 实现持久化。安装 `audit` 你可以如下所示操作：
+系统调用 (`syscall - systemcall`) 指应用程序与 Linux 内核通信的方法，提供了文件管理、系统进程和设备的信息。Audit 允许你生成规则并将其写入系统控制台，规则不是持久的，但可以通过注册到`/etc/audit/audit.rules`实现持久化。安装`audit`你可以如下所示操作：
 
 ```bash
 [root@pruebas ~]# yum install audit -y
+
 Updating Subscription Management repositories.
+
 Last metadata expiration check: 0:53:36 ago on Thu 04 Mar 2021 10:29:20 AM -05.
+
 Package audit-3.0-0.17.20191104git1c2f87.el8.x86_64 is already installed.
-Dependencies resolved.
-Nothing to do.
-Complete!
 ```
+
+
+
+Dependencies resolved.
+
+Nothing to do.
+
+Complete!
+
 正如你所见，软件包 `audit-3.0-0.17` 已经通过操作系统部署安装。该软件的配置文件位于 `/etc/audit/audit.conf`。
-
-
-
 
 ```bash
 [root@pruebas audit]# pwd
 /etc/audit
-
 [root@pruebas audit]# ll
 total 12
 -rw-r-----. 1 root root 127 Jan  8  2020 audit-stop.rules
@@ -4315,7 +4805,7 @@ Mar 04 07:17:53 pruebas.aptivalabs augenrules[1081]: backlog_wait_time 60000
 Mar 04 07:17:53 pruebas.aptivalabs systemd[1]: Started Security Auditing Service.
 ```
 
-Audit 提供了一种记录系统相关信息的方法。根据预配置的规则，Audit 会生成日志条目，尽尽可能记录关于系统上正在发生的事件的信息。这些信息对于任务关键型环境至关重要，可以识别安全策略违背者以及他们在系统上采取的操作。以下列表总结了 Audit 能够在日志文件中记录的某些信息：
+Audit 提供了一种记录系统相关信息的方法。根据预配置的规则，Audit 会生成日志条目，尽可能记录关于系统上正在发生的事件的信息。这些信息对于任务关键型环境至关重要，可以识别安全策略违背者以及他们在系统上采取的操作。以下列表总结了 Audit 能够在日志文件中记录的某些信息：
 
 - 事件的日期和时间、类型和结果。
 - 事件与触发该事件的用户身份的关联。
@@ -4327,7 +4817,7 @@ Audit 提供了一种记录系统相关信息的方法。根据预配置的规�
 
 Audit 由两部分组成：用户空间中的应用程序和工具，以及内核侧对系统调用的处理。内核组件接收来自用户空间应用程序的系统调用，并通过以下过滤器之一进行过滤：用户（user）、任务（task）、文件类型（fstype）或退出（exit）。
 
-默认情况下，Audit 将日志条目存储在 `/var/log/audit/audit.log` 文件中；如果配置文件中启用了日志轮转，轮转后的 audit.log 文件将存储在同一目录下。
+默认情况下，Audit 将日志条目存储在 `/var/log/audit/audit.log` 文件中；如果配置文件中启用了日志轮转，轮转后的 `audit.log` 文件将存储在同一目录下。
 
 ## 使用 AUDIT 建立 AUD 规则
 
@@ -4358,10 +4848,6 @@ cat: /etc/ssh/sshd_config: Permission denied
 type=SYSCALL msg=audit(1614886599.538:116): arch=c000003e syscall=257 success=no exit=-13 a0=ffffff9c a1=7ffce1e84647 a2=0 a3=0 items=1 ppid=2622 pid=2668 auid=0 uid=1000 gid=1000 euid=1000 suid=1000 fsuid=1000 egid=1000 sgid=1000 tty=pts1 ses=3 comm="cat" exe="/usr/bin/cat" subj=unconfined:unconfined_r:unconfined
 ```
 
-
-
-
-
 ```bash
 -w /etc/passwd -p wa -k passwd_changes
 -w /etc/selinux/ -p wa -k selinux_changes
@@ -4376,7 +4862,6 @@ type=SYSCALL msg=audit(1614886599.538:116): arch=c000003e syscall=257 success=no
 ```bash
 [root@pruebas ~]# cd /usr/share/audit/sample-rules
 [root@pruebas sample-rules]# ll
-
 total 156
 -rw-r--r--. 1 root root  244 Jan  8  2020 10-base-config.rules
 -rw-r--r--. 1 root root  284 Jan  8  2020 10-no-audit.rules
@@ -4393,7 +4878,6 @@ total 156
 ### 这些规则的目的是满足 STIG 审计要求
 ### 这些规则依赖于安装了 10-base-config.rules 和 99-finalize.rules
 --- skipped output ---
-
 -a always,exit -F arch=b32 -S adjtimex,settimeofday,stime -F key=time-change
 -a always,exit -F arch=b64 -S adjtimex,settimeofday -F key=time-change
 -a always,exit -F arch=b32 -S clock_settime -F a0=0x0 -F key=time-change
@@ -4415,7 +4899,6 @@ lost 0
 backlog 4
 backlog_wait_time 60000
 --- salida omitida ---
-
 [root@pruebas sample-rules]# auditctl -l
 -a always,exit -F arch=b32 -S stime,settimeofday,adjtimex -F key=time-change
 -a always,exit -F arch=b64 -S adjtimex,settimeofday -F key=time-change
@@ -4433,7 +4916,7 @@ backlog_wait_time 60000
 
 # 使用 AUDIT 生成报告
 
-为了生成审计报告，`Audit` 拥有 `aureport` 工具。`Aureport` 是一个从审计系统记录中生成摘要报告的工具。将显示不同类型的报告，让你让你对可以生成的报告类型有一个大致了解：
+为了生成审计报告，`Audit` 拥有 `aureport` 工具。`Aureport` 是一个从审计系统记录中生成摘要报告的工具。将显示不同类型的报告，让你对可以生成的报告类型有一个大致了解：
 
 ## 基于用户认证的报告
 
@@ -4526,4 +5009,3 @@ total auid
 80 fmestre
 9 root
 ```
-

@@ -1,3 +1,4 @@
+
 # 如何在 Centos 7 - Eldernode 博客上安装和运行 SonarQube
 
 > 原文：<https://blog.eldernode.com/install-and-run-sonarqube-on-centos-7/>
@@ -22,7 +23,7 @@
 
 此外，您可以查看[官方文件](https://docs.sonarqube.org/latest/requirements/requirements/)了解完整信息。
 
-### sonar cube 特性
+## sonar cube 特性
 
 让我们来看看这个基于网络的平台的好处，它是用来测量和分析源代码质量的。
 
@@ -40,13 +41,13 @@
 
 **7-** 实现持续的代码质量管理
 
-有效地定义和增加需求
+**8-** 有效地定义和增加需求
 
 **9-** 鼓励创新
 
 **10-** 通过供应商支持和服务降低风险
 
-### 代码质量覆盖
+## 代码质量覆盖
 
 **1-** 建筑和设计
 
@@ -66,7 +67,7 @@
 
 继续阅读本指南，了解如何安装一个适合您现有工具的工具，以便在您的代码库的质量或安全性面临风险时为您提供帮助。要开始，你需要对 Linux 进行系统设置。
 
-**步骤 1** :如何更新系统
+### 步骤 1:如何更新系统
 
 使用 root 用户运行以下命令来更新系统:
 
@@ -74,7 +75,7 @@
 yum update
 ```
 
-**第二步**:如何禁用 SELinux
+### 第二步:如何禁用 SELinux
 
 您需要打开 SELinux 配置并编辑文件:
 
@@ -86,7 +87,7 @@ vim /etc/sysconfig/selinux
 
 现在，你可以保存退出文件。
 
-**第三步**:如何给服务器设置主机名
+### 第三步:如何给服务器设置主机名
 
 ```
 vim /etc/hostname
@@ -104,7 +105,7 @@ yum install vim -y
 reboot
 ```
 
-**第四步**:如何添加系统设置
+### 第四步:如何添加系统设置
 
 首先，编辑“sysctl.conf”文件:
 
@@ -120,7 +121,7 @@ vm.max_map_count=262144  fs.file-max=65536
 
 现在，您可以保存并关闭文件。
 
-**第五步**:如何安装 Oracle Java 11
+### 第五步:如何安装 Oracle Java 11
 
 如果您还没有安装 Oracle Java 11，请从这里的[下载。](https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html)
 
@@ -180,7 +181,7 @@ export JAVA_HOME=/usr/java/jdk-11.0.5/  export JRE_HOME=/usr/java/jdk-11.0.5/jre
 java -version
 ```
 
-**第六步**:如何安装 PostgreSQL 10
+### 第六步:如何安装 PostgreSQL 10
 
 运行以下命令安装存储库:
 
@@ -272,7 +273,7 @@ CREATE DATABASE sonar OWNER sonar;
 exit
 ```
 
-**第七步**:如何下载配置 SonarQube。
+### 第七步:如何下载配置 SonarQube
 
 在这一部分中，您将把包下载到“opt”目录并更改该目录。
 
@@ -418,7 +419,7 @@ tail -f /opt/sonarqube/logs/es.log
 tail -f /opt/sonarqube/logs/ce.log
 ```
 
-**第 8 步**:如何配置反向代理
+### 第 8 步:如何配置反向代理
 
 在这一部分，您需要安装 Nginx，启动服务，并在系统启动时启用。
 
@@ -430,7 +431,7 @@ yum install -y nginx
 systemctl start nginx  systemctl enable nginx
 ```
 
-**第九步**:如何配置 SSL
+### 第九步:如何配置 SSL
 
 使用以下命令启用 Epel repo 并安装 certbot。
 
@@ -476,15 +477,15 @@ nginx -t
 systemctl restart nginx
 ```
 
-**第十步** : DNS
+### 第十步: DNS
 
 在这一步中，您需要转到您的 DNS 管理器并为您的 sonar 服务器添加一条记录。
 
 ```
-A   Domain Name   Server IP
+A   Domain Name   Server IP
 ```
 
-**第 11 步**:如何修改防火墙规则
+### 第 11 步:如何修改防火墙规则
 
 如果启用了防火墙，您可以使用以下命令打开 HTTPS 流量:
 
@@ -506,7 +507,7 @@ firewall-cmd --permanent --zone=public --add-rich-rule='  rule family="ipv4"  so
 firewall-cmd --reload
 ```
 
-**步骤 12** :如何浏览 Sonarqube
+### 步骤 12:如何浏览 Sonarqube
 
 要做到这一点，你需要进入你的浏览器，输入你的域名，然后点击“登录”
 
@@ -516,7 +517,7 @@ eg:- https://sonar.example.com/
 
 ![rowse Sonarqube](img/0a23488daa157e0852a174062171b6aa.png)
 
-**步骤 13** :如何登录 SonarQube
+### 步骤 13:如何登录 SonarQube
 
 默认用户名和密码是“admin”。
 
@@ -524,8 +525,10 @@ eg:- https://sonar.example.com/
 
 您会看到下面的仪表板页面:
 
+
+
 ![](img/00d9598b8dbe0d1332e93552851e10d5.png)
 
 ## 结论
 
-在本文中，您了解了如何在 Centos 7 上安装和运行 Sonarqube。从现在开始，您能够可靠地跟踪您的代码库健康状况。让它开始代码质量分析，使您的代码更可靠，更可读。如果您有兴趣阅读更多内容，请找到我们关于如何在 Centos 7 上安装和配置 Wazuh 的文章[。](https://blog.eldernode.com/install-and-configure-wazuh-on-centos-7/)
+在本文中，您了解了如何在`Centos 7`上安装和运行`Sonarqube`。从现在开始，您能够可靠地跟踪您的代码库健康状况。让它开始代码质量分析，使您的代码更可靠，更可读。如果您有兴趣阅读更多内容，请找到我们关于如何在`Centos 7`上安装和配置`Wazuh`的文章[。](https://blog.eldernode.com/install-and-configure-wazuh-on-centos-7/)

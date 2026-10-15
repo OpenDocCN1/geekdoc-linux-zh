@@ -1,28 +1,30 @@
+
+
 # 程序：反转字符串中的元音字母
 
 > 原文：[`techbyexample.com/reverse-vowels-of-a-string/`](https://techbyexample.com/reverse-vowels-of-a-string/)
 
-# **概述**
+## 概述
 
-给定一个字符串。目标是反转该字符串中的所有元音字母
+给定一个字符串。目标是反转该字符串中的所有元音字母。
 
-**示例 1**
+### 示例 1
 
 ```go
 Input: "simple"
 Output: "sempli"
 ```
 
-**示例 2**
+### 示例 2
 
 ```go
 Input: "complex"
 Output: "cemplox"
 ```
 
-# **程序**
+## 程序
 
-以下是相同的程序
+以下是相同的程序：
 
 ```go
 package main
@@ -88,7 +90,7 @@ func main() {
 }
 ```
 
-**输出：**
+### 输出
 
 ```go
 sempli
@@ -96,3 +98,4 @@ cemplox
 ```
 
 另外，请查看我们的系统设计教程系列 – [系统设计教程系列](https://techbyexample.com/system-design-questions/)
+

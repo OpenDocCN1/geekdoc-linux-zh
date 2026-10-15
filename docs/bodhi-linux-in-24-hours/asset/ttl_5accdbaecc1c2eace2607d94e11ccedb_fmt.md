@@ -1,2 +1,0 @@
-
-# Bodhi Linux 24小时

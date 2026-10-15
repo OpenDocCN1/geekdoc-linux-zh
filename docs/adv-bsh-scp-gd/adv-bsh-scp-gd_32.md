@@ -1,8 +1,9 @@
+
 # 第二十七章\. 数组
 
 > 原文：[`tldp.org/LDP/abs/html/arrays.html`](https://tldp.org/LDP/abs/html/arrays.html)
 
-新版本的 Bash 支持一维数组。数组元素可以使用 `**variable[xx]**` 符号初始化。或者，脚本可以通过显式的 `**declare -a variable**` 语句引入整个数组。要取消引用（检索数组元素的值），使用 *花括号* 符号，即 `**${element[xx]}**`。
+新版本的 `Bash` 支持一维数组。数组元素可以使用 `variable[xx]` 符号初始化。或者，脚本可以通过显式的 `declare -a variable` 语句引入整个数组。要取消引用（检索数组元素的值），使用 *花括号* 符号，即 `${element[xx]}`。
 
 **示例 27-1\. 简单数组使用**
 
@@ -93,11 +94,10 @@ base64_charset=( {A..Z} {a..z} {0..9} + / = )
                #+ in the "Contributed Scripts" appendix.
 ```
 
-|
+`Bash` 允许对变量进行数组操作，即使这些变量没有明确声明为数组。
 
-Bash 允许对变量进行数组操作，即使这些变量没有明确声明为数组。
-
-&#124;  ```sh string=abcABC123ABCabc
+```sh
+string=abcABC123ABCabc
 echo ${string[@]}               # abcABC123ABCabc
 echo ${string[*]}               # abcABC123ABCabc 
 echo ${string[0]}               # abcABC123ABCabc
@@ -108,9 +108,9 @@ echo ${#string[@]}              # 1
                                 # The string itself.
 
 # Thank you, Michael Zick, for pointing this out.
-```  &#124;
+```
 
-再次证明 Bash 变量是无类型的 Bash 变量无类型。|
+再次证明 `Bash` 变量是无类型的。
 
 **示例 27-2\. 格式化诗歌**
 
@@ -157,7 +157,7 @@ exit 0
 # Modify this script to pretty-print a poem from a text data file.
 ```
 
-数组变量有自己的语法，甚至标准的 Bash 命令和运算符也有针对数组使用的特殊选项。
+数组变量有自己的语法，甚至标准的 `Bash` 命令和运算符也有针对数组使用的特殊选项。
 
 **示例 27-3\. 各种数组操作**
 
@@ -210,9 +210,11 @@ echo ${#array2[*]}     # 3     (number of elements in array)
 exit
 ```
 
-许多标准 字符串操作 都适用于数组。
+许多标准 **字符串操作** 都适用于数组。
 
 **示例 27-4\. 数组上的字符串操作**
+
+
 
 ```sh
 #!/bin/bash
@@ -331,9 +333,9 @@ exit 0
 #  Bash is more powerful than you think!
 ```
 
-命令替换 可以构建数组的各个元素。
+命令替换可以构建数组的各个元素。
 
-**示例 27-5\. 将脚本内容加载到数组中**
+### 示例 27-5：将脚本内容加载到数组中
 
 ```sh
 #!/bin/bash
@@ -367,9 +369,9 @@ exit 0
 #+ complete with whitespace, line breaks, etc.
 ```
 
-在数组上下文中，一些 Bash 内置命令 的含义略有不同。例如，unset 删除数组元素，甚至整个数组。
+在数组上下文中，一些 Bash 内置命令的含义略有不同。例如，`unset` 删除数组元素，甚至整个数组。
 
-**示例 27-6\. 数组的某些特殊属性**
+### 示例 27-6：数组的某些特殊属性
 
 ```sh
 #!/bin/bash
@@ -437,9 +439,11 @@ echo ${colors[@]}            # List array again, now empty.
 exit 0
 ```
 
-如前例所示，**${array_name[@]}** 或 **${array_name[*]}** 指的是数组的 *所有* 元素。同样，要获取数组中元素的数量，可以使用 **${#array_name[@]}** 或 **${#array_name[*]}**。**${#array_name}** 是 **${array_name[0]}** 的长度（字符数），即数组的第一个元素。
+如前例所示，`${array_name[@]}` 或 `${array_name[*]}` 指的是数组的所有元素。同样，要获取数组中元素的数量，可以使用 `${#array_name[@]}` 或 `${#array_name[*]}`。`${#array_name}` 是 `${array_name[0]}` 的长度（字符数），即数组的第一个元素。
 
-**示例 27-7\. 空数组和空元素**
+### 示例 27-7：空数组和空元素
+
+
 
 ```sh
 #!/bin/bash
@@ -596,7 +600,7 @@ echo "Elements in array10:  ${array10[@]}"
 exit
 ```
 
-**${array_name[@]}** 和 **${array_name[*]}** 之间的关系类似于 $@ 和 $* 之间的关系。这种强大的数组符号有许多用途。
+`${array_name[@]}` 和 `${array_name[*]}` 之间的关系类似于 `$@` 和 `$*` 之间的关系。这种强大的数组符号有许多用途。
 
 ```sh
 # Copying an array.
@@ -625,9 +629,10 @@ array[${#array[*]}]="new element"
 # Thanks, S.C.
 ```
 
-| ![提示](img/753d054f4c48fb039314a9e5947964cd.png) | 使用 **array=( element1 element2 ... elementN )** 初始化操作，借助 命令替换，可以将文本文件的内容加载到数组中。
+| ![提示](img/753d054f4c48fb039314a9e5947964cd.png) | 使用 `array=( element1 element2 ... elementN )` 初始化操作，借助命令替换，可以将文本文件的内容加载到数组中。 |
 
-&#124;  ```sh #!/bin/bash
+```sh
+#!/bin/bash
 
 filename=sample_file
 
@@ -641,7 +646,7 @@ declare -a array1
 array1=( `cat "$filename"`)                #  Loads contents
 #         List file to stdout              #+ of $filename into array1.
 #
-#  array1=( `cat "$filename" &#124; tr '\n' ' '`)
+#  array1=( `cat "$filename" | tr '\n' ' '`)
 #                            change linefeeds in file to spaces. 
 #  Not necessary because Bash does word splitting,
 #+ changing linefeeds to spaces.
@@ -654,13 +659,13 @@ echo ${array1[@]}            # List the array.
 
 element_count=${#array1[*]}
 echo $element_count          # 8
-```  &#124;
-
-|
+```
 
 精巧的脚本使得添加数组操作成为可能。
 
 **示例 27-8\. 初始化数组**
+
+
 
 ```sh
 #! /bin/bash
@@ -747,9 +752,10 @@ times
 
 exit 0
 ```
-| ![注意](img/068cd6dc5ba56f1437f9ae6e0cb52ede.png) | 在数组声明中添加多余的 **declare -a** 语句可能会加快对数组后续操作的执行速度。 |
 
-**示例 27-9\. 复制和连接数组**
+| ![注意](img/068cd6dc5ba56f1437f9ae6e0cb52ede.png) | 在数组声明中添加多余的 `declare -a` 语句可能会加快对数组后续操作的执行速度。 |
+
+### 示例 27-9\. 复制和连接数组
 
 ```sh
 #! /bin/bash
@@ -818,7 +824,7 @@ echo "Array Before = ${before[@]}"
 exit 0
 ```
 
-**示例 27-10\. 关于连接数组的更多内容**
+### 示例 27-10\. 关于连接数组的更多内容
 
 ```sh
 #! /bin/bash
@@ -931,11 +937,11 @@ echo '- - in versions of Bash newer than version 2.05b - -'
 exit 0
 ```
 
---
-
 数组允许将旧熟悉算法作为 shell 脚本部署。是否这 necessarily 是一个好主意，留给读者决定。
 
-**示例 27-11\. 冒泡排序**
+### 示例 27-11\. 冒泡排序
+
+
 
 ```sh
 #!/bin/bash
@@ -1034,7 +1040,7 @@ done                            # End of outer loop
 exit 0
 ```
 
---
+---
 
 是否可以在数组中嵌套数组？
 
@@ -1067,11 +1073,11 @@ echo "${SubArray[@]}"
 exit 0
 ```
 
---
+---
 
-嵌入式数组与 间接引用 结合使用，创造了一些有趣的可能性
+嵌入式数组与间接引用结合使用，创造了一些有趣的可能性
 
-**示例 27-12\. 嵌入式数组和间接引用**
+**示例 27-12. 嵌入式数组和间接引用**
 
 ```sh
 #!/bin/bash
@@ -1140,11 +1146,13 @@ exit 0
 #   (Difficult) exercise for the reader: implement this.
 ```
 
---
+---
 
-数组可以实现一个 shell 脚本版本的 *埃拉托斯特尼筛法*。当然，这种资源密集型应用实际上应该用编译语言编写，例如 C。作为脚本运行时速度极慢。
+数组可以实现一个 shell 脚本版本的*埃拉托斯特尼筛法*。当然，这种资源密集型应用实际上应该用编译语言编写，例如 C。作为脚本运行时速度极慢。
 
-**示例 27-13\. 埃拉托斯特尼筛法**
+**示例 27-13. 埃拉托斯特尼筛法**
+
+
 
 ```sh
 #!/bin/bash
@@ -1277,7 +1285,7 @@ echo ${Primes[*]}
 exit $?
 ```
 
-**示例 27-14\. 埃拉托斯特尼筛法，优化版**
+## 示例 27-14\. 埃拉托斯特尼筛法，优化版
 
 ```sh
 #!/bin/bash
@@ -1324,7 +1332,7 @@ exit $?
 
 数组在一定程度上适合模拟 Bash 没有原生支持的复杂数据结构。
 
-**示例 27-15\. 模拟后进先出栈**
+## 示例 27-15\. 模拟后进先出栈
 
 ```sh
 #!/bin/bash
@@ -1446,7 +1454,9 @@ exit 0
 
 对数组“下标”的复杂操作可能需要中间变量。对于涉及此类操作的项目，再次考虑使用更强大的编程语言，例如 Perl 或 C。
 
-**示例 27-16\. 复杂数组应用：*探索一个奇特的数学级数*** 
+## 示例 27-16\. 复杂数组应用：*探索一个奇特的数学级数*
+
+
 
 ```sh
 #!/bin/bash
@@ -1513,7 +1523,7 @@ exit 0
 
 Bash 只支持一维数组，尽管一些技巧可以模拟多维数组。
 
-**示例 27-17\. 模拟二维数组，然后倾斜它**
+## 示例 27-17. 模拟二维数组，然后倾斜它
 
 ```sh
 #!/bin/bash
@@ -1576,7 +1586,7 @@ do                             #+ columns vary,
 done  
 
 # The simpler equivalent is
-#     echo ${alpha[*]} &#124; xargs -n $Columns
+#     echo ${alpha[*]} | xargs -n $Columns
 
 echo
 }

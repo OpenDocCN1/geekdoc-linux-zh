@@ -1,22 +1,23 @@
+
 # 组合求和问题的程序
 
 > 原文：[`techbyexample.com/program-combination-sum-problem/`](https://techbyexample.com/program-combination-sum-problem/)
 
-## **概述**
+## 概述
 
 给定一个整数数组和一个目标数字，目标是找到数组中所有能够和为目标数字的组合数。
 
-数组中的每个元素可以在同一组合中使用任意次数
+数组中的每个元素可以在同一组合中使用任意次数。
 
-示例
+### 示例
 
-```go
+```text
 Input: [3,4,10,11]
 Target: 10
 Output: [[3,3,4],[10]]
 ```
 
-## **程序**
+## 程序
 
 下面是相应的程序。
 
@@ -67,8 +68,8 @@ func main() {
 }
 ```
 
-**输出**
+## 输出
 
-```go
+```text
 [[10] [3 3 4]]
 ```

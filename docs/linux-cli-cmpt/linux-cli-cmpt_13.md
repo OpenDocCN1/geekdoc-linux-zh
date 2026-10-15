@@ -1,3 +1,4 @@
+
 # 比较文件
 
 > 原文：[`learnbyexample.github.io/cli-computing/comparing-files.html`](https://learnbyexample.github.io/cli-computing/comparing-files.html)
@@ -6,7 +7,7 @@
 
 > ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) [example_files](https://github.com/learnbyexample/cli-computing/tree/master/example_files) 目录包含本章中使用的示例输入文件。
 
-## cmp
+## `cmp`
 
 `cmp` 命令用于比较文本和二进制文件。如果两个输入文件内容相同，则不显示输出并退出状态为 `0`。如果有差异，则打印第一个差异的详细信息，如行号和字节位置，退出状态将为 `1`。
 
@@ -29,37 +30,28 @@ $ echo $?
 1 
 ```
 
-> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 使用 `-s` 选项来抑制输出，当你只需要退出状态时。`-i` 选项将允许你跳过输入的初始字节。 
+> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 使用 `-s` 选项来抑制输出，当你只需要退出状态时。`-i` 选项将允许你跳过输入的初始字节。
 
-## diff
+## `diff`
 
-有助于查找文本文件之间的差异。所有差异都会打印出来，这可能不适合长文件。
+`diff` 有助于查找文本文件之间的差异。所有差异都会打印出来，这可能不适合长文件。
 
 ### 常用选项
 
 常用选项如下。示例将在后续章节中讨论。
 
 +   `-i` 忽略大小写
-
 +   `-w` 忽略空白字符
-
 +   `-b` 忽略空白数量的变化
-
 +   `-B` 忽略空白行
-
 +   `-E` 忽略由于制表符扩展引起的变化
-
 +   `-z` 忽略行尾的空白字符
-
 +   `-y` 两列输出
-
 +   `-r` 递归地比较两个指定目录之间的文件
-
 +   `-s` 当两个文件相同时代码显示消息
-
 +   `-q` 报告文件是否不同，而不是差异的详细信息
 
-### 默认 diff
+### 默认 `diff`
 
 默认情况下，`diff` 输出显示以 `<` 为前缀的第一输入文件的行，以及以 `>` 为前缀的第二文件的行。使用 `---` 作为分组分隔符。每个差异都由一个表示差异的命令前缀，这些命令被像 `patch` 这样的工具所理解。
 
@@ -125,11 +117,8 @@ world                        |  4
 ### 进一步阅读
 
 +   `gvimdiff` 使用 GVim 编辑两个、三个或四个版本的文件并显示差异
-
 +   [GUI diff 和合并工具](http://askubuntu.com/questions/2946/what-are-some-good-gui-diff-and-merge-applications-available-for-ubuntu)
-
 +   [difftastic](https://github.com/Wilfred/difftastic) — 理解语法的结构化差异工具
-
 +   [icdiff](https://github.com/jeffkaufman/icdiff) — 改进的彩色差异
 
 ## 练习

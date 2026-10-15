@@ -1,10 +1,11 @@
+
 # 在句柄之间共享数据
 
 有时应用程序需要在传输之间共享数据。添加到同一多句柄的所有简单句柄会自动在同一个多句柄中的句柄之间完成大量的共享，但有时这并不是你想要的。
 
 ## 多句柄
 
-所有添加到同一多句柄的简单句柄自动共享 连接缓存 和 dns 缓存。
+所有添加到同一多句柄的简单句柄自动共享连接缓存和 DNS 缓存。
 
 ## 简单句柄之间的共享
 
@@ -14,9 +15,9 @@ libcurl 有一个通用的“共享接口”，其中应用程序创建一个“
 CURLSH *share = curl_share_init();
 ```
 
-共享对象可以设置为共享所有或任何 cookie、连接缓存、dns 缓存和 SSL 会话 ID 缓存。
+共享对象可以设置为共享所有或任何 cookie、连接缓存、DNS 缓存和 SSL 会话 ID 缓存。
 
-例如，设置共享以保存 cookie 和 dns 缓存：
+例如，设置共享以保存 cookie 和 DNS 缓存：
 
 ```sh
 curl_share_setopt(share, CURLSHOPT_SHARE, CURL_LOCK_DATA_COOKIE);
@@ -29,7 +30,7 @@ curl_share_setopt(share, CURLSHOPT_SHARE, CURL_LOCK_DATA_DNS);
 curl_easy_setopt(curl, CURLOPT_SHARE, share);
 ```
 
-使用此 `curl` 句柄完成的传输会将其 cookie 和 dns 信息存储在 `share` 句柄中。你可以设置多个简单句柄以共享相同的共享对象。
+使用此`curl`句柄完成的传输会将其 cookie 和 DNS 信息存储在`share`句柄中。你可以设置多个简单句柄以共享相同的共享对象。
 
 ## 要共享的内容
 
@@ -45,7 +46,7 @@ curl_easy_setopt(curl, CURLOPT_SHARE, share);
 
 如果你想在多线程环境中让传输共享共享对象。也许你有一个具有许多核心的 CPU，你希望每个核心运行其自己的线程并传输数据，但你仍然希望不同的传输共享数据。那么你需要设置互斥回调。
 
-如果你没有使用线程并且 *知道* 你以串行方式逐个访问共享对象，则不需要设置任何锁。但如果同时有多个传输访问共享对象，则需要设置互斥回调以防止数据损坏甚至崩溃。
+如果你没有使用线程并且*知道*你以串行方式逐个访问共享对象，则不需要设置任何锁。但如果同时有多个传输访问共享对象，则需要设置互斥回调以防止数据损坏甚至崩溃。
 
 由于 libcurl 本身不知道如何锁定事物或甚至不知道你使用的是哪种线程模型，你必须确保只允许一次访问的互斥锁。一个用于 pthreads 应用程序的锁回调可能如下所示：
 
@@ -75,7 +76,7 @@ curl_share_setopt(share, CURLSHOPT_UNLOCKFUNC, unlock_cb);
 
 在后续传输中，可以将`CURLOPT_SHARE`设置为 NULL 以防止传输继续共享。在这种情况下，句柄可能以空缓存开始下一次传输，这些缓存是之前共享的数据。
 
-在两次传输之间，共享对象也可以更新以共享不同的属性集，这样共享该对象的句柄在下一次共享时将共享不同的数据集。当取消共享 DNS 数据时，可以使用 curl_share_setopt()的`CURLSHOPT_UNSHARE`选项从共享对象中移除要共享的项目：
+在两次传输之间，共享对象也可以更新以共享不同的属性集，这样共享该对象的句柄在下一次共享时将共享不同的数据集。当取消共享 DNS 数据时，可以使用`curl_share_setopt()`的`CURLSHOPT_UNSHARE`选项从共享对象中移除要共享的项目：
 
 ```sh
 curl_share_setopt(share, CURLSHOPT_UNSHARE, CURL_LOCK_DATA_DNS);

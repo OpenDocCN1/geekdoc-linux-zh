@@ -1,3 +1,4 @@
+
 # 使用 OpenVAS 保护服务器的 4 个步骤
 
 > 原文：<https://blog.eldernode.com/4-steps-to-secure-your-server-with-openvas/>
@@ -6,27 +7,24 @@
 
 如果你是网络或网站管理员，你应该注意安全规则和原则的执行。但是您可能无法控制和监控所有漏洞。漏洞扫描器是在自动安全管理中发挥重要作用的工具。最著名的安全扫描器之一是 OpenVAS，它具有扫描各种漏洞的能力。本文将介绍用 OpenVAS 保护您的服务器的 4 个步骤。如果你打算[购买 VPS](https://eldernode.com/vps/) 服务器，你可以查看 [Eldernode](https://eldernode.com/) 网站上提供的套装。
 
-## **什么是 OpenVAS？**
+## 什么是 OpenVAS？
 
 [OpenVAS](https://blog.eldernode.com/install-and-configure-openvas-on-ubuntu/) 代表开放漏洞评估系统，是一款开源的免费扫描工具。它可以检测各种服务器和网络设备的安全问题。这个扫描器是在 GNU/GPL 许可下提供的，它从一个有着悠久历史和每日更新的提要中获取检测漏洞的测试。Greenbone Network 在 2006 年开发了 OpenVAS。web 服务器使用 OpenVAS 来防止对网站或服务器的未授权访问。它还允许用户访问各种 Web 应用程序。
 
-## **OpenVAS 功能**
+## OpenVAS 功能
 
 以下是一些高级 OpenVAS 功能:
 
-–未经认证的测试
+- 未经认证的测试
+- 各种高级和低级互联网协议
+- 针对大规模扫描的性能调整
+- 强大的内部编程语言
 
-–各种高级和低级互联网协议
-
-–针对大规模扫描的性能调整
-
-–强大的内部编程语言
-
-## **使用 OpenVAS** 保护您的服务器安全 
+## 使用 OpenVAS 保护您的服务器安全
 
 在这一步中，我们将向您介绍使用 OpenVAS 保护您的服务器的 4 个步骤。这 4 个步骤是 OpenVAS 安装、OpenVAS 配置、OpenVAS 监控和 OpenVAS 管理。
 
-### **1-在您的服务器上安装 open vas**
+### 1- 在您的服务器上安装 OpenVAS
 
 首先，使用以下命令更新您的系统软件包:
 
@@ -34,7 +32,7 @@
 sudo apt update
 ```
 
-一些 OpenVAS 组件在默认的存储库中可用，但是最好使用 PPAs 来维护软件包的更新版本。因此，首先，您应该安装 python-software-properties 包，它允许您轻松地使用 PPA。为此，请运行以下命令:
+一些 OpenVAS 组件在默认的存储库中可用，但是最好使用 PPAs 来维护软件包的更新版本。因此，首先，您应该安装 `python-software-properties` 包，它允许您轻松地使用 PPA。为此，请运行以下命令:
 
 ```
 sudo apt install python-software-properties
@@ -58,7 +56,7 @@ sudo apt update
 sudo apt install openvas-manager openvas-scanner openvas-administrator openvas-cli greenbone-security-assistant sqlite3 xsltproc texlive-latex-base texlive-latex-extra texlive-latex-recommended htmldoc alien rpm nsis fakeroot
 ```
 
-### **2-在您的服务器上配置 open vas**
+### 2- 在您的服务器上配置 OpenVAS
 
 OpenVAS 的 SSL 证书可以使用默认可用的包装工具生成。您应该使用管理权限调用它，如下所示，以将其放在文件系统的受限部分:
 
@@ -154,9 +152,9 @@ sudo openvas-certdata-sync
 rm -rf ~/openvas* ~/usr ~/etc
 ```
 
-### 3-使用 OpenVAS 监控漏洞
+### 3- 使用 OpenVAS 监控漏洞
 
-首先，您应该使用**open vas/green bone**Security Assistant web 界面创建一个目标。为此，导航到**配置**部分，选择**目标**并点击所示图标创建一个新目标:
+首先，您应该使用 OpenVAS/Greenbone Security Assistant web 界面创建一个目标。为此，导航到**配置**部分，选择**目标**并点击所示图标创建一个新目标:
 
 ![Create-target-OpenVAS](img/d57546018679a797663d5893b5b1aa9f.png)
 
@@ -182,11 +180,11 @@ rm -rf ~/openvas* ~/usr ~/etc
 
 扫描任务将针对选定的目标运行。如果您重新加载页面，您可以检查进度。
 
-完成后，您可以看到状态变为 **Done:**
+完成后，您可以看到状态变为 **Done**:
 
 ![Vulnerability-scan-finish-OpenVAS- Secure your server with OpenVAS](img/d5e6fe44b7bcb6f6b51d25c088d53fbb.png)
 
-### **4-管理 OpenVAS**
+### 4- 管理 OpenVAS
 
 您需要设置 OpenVAS 用户和端口，因为您需要一个用户来进入服务。创建一个名为“marilyn”的用户，其管理员角色如下所示:
 
@@ -202,10 +200,10 @@ sudo openvasad -c add_user -n admin -r Admin
 sudo nano /etc/default/greenbone-security-assistant
 ```
 
-顶部的参数指定了 web 界面将监听的地址。要允许它侦听来自互联网的连接，您应该将值从 127.0.0.1 更改为您的 VPS 的公共 IP 地址:
+顶部的参数指定了 web 界面将监听的地址。要允许它侦听来自互联网的连接，您应该将值从 `127.0.0.1` 更改为您的 VPS 的公共 IP 地址:
 
 ```
-<pre> GSA_ADDRESS=<span class=“highlight”>your_server_IP_address</span> </pre>
+GSA_ADDRESS=your_server_IP_address
 ```
 
 **保存**并关闭文件。

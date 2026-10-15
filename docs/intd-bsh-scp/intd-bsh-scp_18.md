@@ -1,8 +1,9 @@
+
 # 使用 jq 在 BASH 中处理 JSON
 
 `jq`命令行工具是一个轻量级且灵活的命令行**JSON**处理器。它在解析 BASH 中的 JSON 输出时非常出色。
 
-`jq`的一个优点是它是用可移植的 C 语言编写的，并且没有运行时依赖。你只需要下载一个二进制文件或使用包管理器如 apt，通过一条命令安装它。
+`jq`的一个优点是它是用可移植的 C 语言编写的，并且没有运行时依赖。你只需要下载一个二进制文件或使用包管理器如`apt`，通过一条命令安装它。
 
 ## 编写脚本规划
 
@@ -14,7 +15,7 @@
 
 > [`quizapi.io/clientarea/settings/token`](https://quizapi.io/clientarea/settings/token)
 
-QuizAPI 对开发者免费。
+`QuizAPI`对开发者免费。
 
 ## 安装 jq
 
@@ -22,90 +23,80 @@ QuizAPI 对开发者免费。
 
 这里是一个根据你的操作系统需要使用的命令列表：
 
-+   在 Ubuntu/Debian 上安装 jq：
++   在 Ubuntu/Debian 上安装`jq`：
 
 ```sh
-      sudo apt-get install jq 
-
+sudo apt-get install jq
 ```
 
-+   在 Fedora 上安装 jq：
++   在 Fedora 上安装`jq`：
 
 ```sh
-      sudo dnf install jq 
-
+sudo dnf install jq
 ```
 
-+   在 openSUSE 上安装 jq：
++   在 openSUSE 上安装`jq`：
 
 ```sh
-      sudo zypper install jq 
-
+sudo zypper install jq
 ```
 
-+   在 Arch 上安装 jq：
++   在 Arch 上安装`jq`：
 
 ```sh
-      sudo pacman -S jq 
-
+sudo pacman -S jq
 ```
 
 +   使用 Homebrew 在 Mac 上安装：
 
 ```sh
-      brew install jq 
-
+brew install jq
 ```
 
 +   使用 MacPort 在 Mac 上安装：
 
 ```sh
-      port install jq 
-
+port install jq
 ```
 
 如果你使用的是其他操作系统，我建议查看这里的官方文档以获取更多信息：
 
 > [`jqlang.org/download/`](https://jqlang.org/download/)
 
-一旦安装了 jq，你可以通过运行此命令来检查你的当前版本：
+一旦安装了`jq`，你可以通过运行此命令来检查你的当前版本：
 
 ```sh
-      jq --version 
-
+jq --version
 ```
 
 ## 使用 jq 解析 JSON
 
-一旦安装了`jq`和 QuizAPI API 密钥，你就可以直接在终端中解析 QuizAPI 的 JSON 输出了。
+一旦安装了`jq`和`QuizAPI` API 密钥，你就可以直接在终端中解析`QuizAPI`的 JSON 输出了。
 
 首先，创建一个变量来存储你的 API 密钥：
 
 ```sh
-      API_KEY=YOUR_API_KEY_HERE 
-
+API_KEY=YOUR_API_KEY_HERE
 ```
 
-为了从 QuizAPI 的一个端点获取一些输出，你可以使用 curl 命令：
+为了从`QuizAPI`的一个端点获取一些输出，你可以使用`curl`命令：
 
 ```sh
-      curl "https://quizapi.io/api/v1/questions?apiKey=${API_KEY}&limit=10" 
-
+curl "https://quizapi.io/api/v1/questions?apiKey=${API_KEY}&limit=10"
 ```
 
-为了获得更具体的输出，你可以在 QuizAPI URL 生成器这里使用：
+为了获得更具体的输出，你可以在`QuizAPI` URL 生成器这里使用：
 
 > [`quizapi.io/api-config`](https://quizapi.io/api-config)
 
-在运行 curl 命令后，你会得到的输出看起来可能像这样：
+在运行`curl`命令后，你会得到的输出看起来可能像这样：
 
 ![原始 JSON 输出](img/KghOfzj.png)
 
-这可能很难阅读，但多亏了 jq 命令行工具，我们只需要将 curl 命令通过 jq 管道传输，我们就会看到一个格式良好的 JSON 输出：
+这可能很难阅读，但多亏了`jq`命令行工具，我们只需要将`curl`命令通过`jq`管道传输，我们就会看到一个格式良好的 JSON 输出：
 
 ```sh
-      curl "https://quizapi.io/api/v1/questions?apiKey=${API_KEY}&limit=10" | jq 
-
+curl "https://quizapi.io/api/v1/questions?apiKey=${API_KEY}&limit=10" | jq
 ```
 
 > 注意最后的`| jq`。
@@ -114,22 +105,20 @@ QuizAPI 对开发者免费。
 
 ![bash jq 格式化](img/ebdTtVf.png)
 
-现在，这看起来要好看得多！jq 命令行工具为我们格式化了输出并添加了一些漂亮的颜色！
+现在，这看起来要好看得多！`jq`命令行工具为我们格式化了输出并添加了一些漂亮的颜色！
 
 ## 使用 jq 获取第一个元素
 
 假设我们只想从 JSON 输出中获取第一个元素，为了做到这一点，我们必须指定我们想要看到的索引，使用以下语法：
 
 ```sh
-      jq .[0] 
-
+jq .[0]
 ```
 
-现在，如果我们再次运行 curl 命令并将输出通过 jq .[0]管道传输，就像这样：
+现在，如果我们再次运行`curl`命令并将输出通过`jq .[0]`管道传输，就像这样：
 
 ```sh
-      curl "https://quizapi.io/api/v1/questions?apiKey=${API_KEY}&limit=10" | jq.[0] 
-
+curl "https://quizapi.io/api/v1/questions?apiKey=${API_KEY}&limit=10" | jq .[0]
 ```
 
 你将只得到第一个元素，输出将看起来像这样：
@@ -138,16 +127,15 @@ QuizAPI 对开发者免费。
 
 ## 仅获取特定键的值
 
-有时候您可能只想获取特定键的值，比如说在我们的例子中，QuizAPI 返回了一个包含问题、答案、描述等信息的列表，但如果你只想获取问题而不想获取附加信息怎么办？
+有时候您可能只想获取特定键的值，比如说在我们的例子中，`QuizAPI`返回了一个包含问题、答案、描述等信息的列表，但如果你只想获取问题而不想获取附加信息怎么办？
 
 使用`jq`将会非常直接，您只需要在`jq`命令后添加键，所以它看起来会是这样：
 
 ```sh
-      jq .[].question 
-
+jq .[].question
 ```
 
-我们必须添加`.[]`，因为 QuizAPI 返回的是一个数组，通过指定`.[]`，我们告诉 jq 我们想要获取数组中所有元素的`.question`值。
+我们必须添加`.[]`，因为`QuizAPI`返回的是一个数组，通过指定`.[]`，我们告诉`jq`我们想要获取数组中所有元素的`.question`值。
 
 您将得到的输出将看起来像这样：
 
@@ -169,36 +157,37 @@ QuizAPI 对开发者免费。
 
 +   为了做到这一点，我已经编写了以下脚本：
 
-> **注意：**请确保将 API_KEY 部分替换为您的实际 QuizAPI 密钥：
+> **注意：**请确保将`API_KEY`部分替换为您的实际`QuizAPI`密钥：
 
 ```sh
-      #!/bin/bash ### Make an API call to QuizAPI and store the output in a variable##
+#!/bin/bash
+### Make an API call to QuizAPI and store the output in a variable##
 output=$(curl 'https://quizapi.io/api/v1/questions?apiKey=API_KEY&limit=10' 2>/dev/null)
 
 ##
 # Get only the first question
 ##
-output=$(echo $output | jq .[0])
+output=$(echo $output | jq .[0])
 
 ##
 # Get the question
 ##
-question=$(echo $output | jq .question)
+question=$(echo $output | jq .question)
 
 ##
 # Get the answers
 ##
 
-answer_a=$(echo $output | jq .answers.answer_a)
-answer_b=$(echo $output | jq .answers.answer_b)
-answer_c=$(echo $output | jq .answers.answer_c)
-answer_d=$(echo $output | jq .answers.answer_d)
+answer_a=$(echo $output | jq .answers.answer_a)
+answer_b=$(echo $output | jq .answers.answer_b)
+answer_c=$(echo $output | jq .answers.answer_c)
+answer_d=$(echo $output | jq .answers.answer_d)
 
 ##
 # Output the question
 ##
 
-echo "
+echo "
 Question: ${question}
 
 A) ${answer_a}
@@ -206,8 +195,7 @@ B) ${answer_b}
 C) ${answer_c}
 D) ${answer_d}
 
-" 
-
+"
 ```
 
 如果您运行脚本，您将得到以下输出：
@@ -216,7 +204,7 @@ D) ${answer_d}
 
 我们甚至可以更进一步，使其具有交互性，这样我们就可以直接在我们的终端中选择答案。
 
-已经有一个 bash 脚本通过使用 QuizAPI 和`jq`来完成这个任务：
+已经有一个 bash 脚本通过使用`QuizAPI`和`jq`来完成这个任务：
 
 您可以在此查看该脚本：
 

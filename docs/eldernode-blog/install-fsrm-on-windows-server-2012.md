@@ -1,3 +1,4 @@
+
 # 如何在 Windows Server 2012 上安装 FSRM-elder node 博客
 
 > 原文：<https://blog.eldernode.com/install-fsrm-on-windows-server-2012/>
@@ -6,11 +7,11 @@
 
 [更新日期:2021-02-01]在 Windows 服务器上创建任何文件管理策略之前，您必须在服务器上安装文件服务器资源管理器(FSRM)。**如何在 Windows Server 2012 上安装 FSRM**是与 Windows Server 相关的应用课题之一，本文将对此进行探讨。一旦安装了这个角色，您就可以使用它的各种工具来管理服务器文件。你可以访问 [Eldernode](https://eldernode.com/) 提供的包来购买 [Windows VPS](https://eldernode.com/windows-vps/) 服务器。请继续关注本文的其余部分。
 
-## **教程在 Windows Server 2012 上安装 FSRM**
+## 教程在 Windows Server 2012 上安装 FSRM
 
 FSRM 是微软 [Windows](https://blog.eldernode.com/tag/windows/) 服务器中可用的功能之一。此功能使您能够更好地管理存储在文件服务器中的数据并对其进行分类。使用 FSRM，您可以对文件服务器上的文件进行分类，并为每个创建的类别分配特定的任务。您可以为创建的每个文件夹和宗卷设定特定的空间量，报告您拥有的储存空间量，并对其进行监控。
 
-### **FSRM 可用工具**
+### FSRM 可用工具
 
 **配额管理:**这允许管理员根据文件夹结构而不是驱动器结构来划分磁盘空间。
 
@@ -36,7 +37,7 @@ FSRM 是微软 [Windows](https://blog.eldernode.com/tag/windows/) 服务器中�
 
 ***注意:***FSRM 角色是文件和存储服务。
 
-### **安装 FSRM 角色的分步教程**
+### 安装 FSRM 角色的分步教程
 
 1.在**服务器管理器**中，点击**添加角色和功能**。
 

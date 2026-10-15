@@ -1,8 +1,9 @@
+
 # 在数组中就地移除给定值的所有出现
 
 > 原文：[`techbyexample.com/remove-element/`](https://techbyexample.com/remove-element/)
 
-## **概述**
+## 概述
 
 给定一个整数数组和一个目标元素。将数组中所有该目标元素的出现移除。移除操作必须在原地完成。
 
@@ -12,11 +13,11 @@ Target: 4
 Output: [1, 2, 5]
 
 Input: [1, 2, 3]
-Target:3
+Target: 3
 Output: [1, 2]
 ```
 
-## **程序**
+## 程序
 
 这是相应的程序。
 
@@ -51,7 +52,7 @@ func main() {
 }
 ```
 
-**输出**
+## 输出
 
 ```go
 [1 2 5]

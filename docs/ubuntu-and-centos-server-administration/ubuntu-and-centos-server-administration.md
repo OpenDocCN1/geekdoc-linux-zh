@@ -1,21 +1,7 @@
+
 # Ubuntu 和 CentOS 服务器管理指南
 
-
-
-
-
-
-
-
-
-
 献给我的侄 Safiyyah Nawar 和 Nuzairah Zainab
-
-
-
-
-
-
 
 # 引言
 
@@ -30,16 +16,11 @@ Linux 操作系统在很多方面都非常出色，原因如下：
 - 多平台操作系统：Linux 目前可以运行超过 24 种类型的平台以及 64 位的 Intel 架构个人电脑。所有的 Apple Mac 变体、Sun Spark 和 iPod，甚至是微软的 Xbox。
 - 可操作性操作系统：Linux 可以与大多数网络协议和大多数语言配合，它可以轻松与 Windows 操作系统、Unix 以及其他市场份额较小的操作系统进行交互。
 - 可扩展操作系统：Linux 操作系统支持了从树莓派（一种信用卡大小的计算机）到非常强大的服务器。世界上大多数服务器都在运行 Linux 操作系统。它们也运行在低功耗计算机上。
-
 - 可移植操作系统：Linux 是一个可移植的操作系统。Linux 主要使用 C 语言编写。C 语言是一种专门为编写操作系统级软件设计的语言，它可以被移植到新的计算机上运行。
 - 灵活操作系统：Linux 操作系统可以用于制作路由器、图形工作站、家庭娱乐计算机、文件服务器、Web 服务器、邮件服务器、集群等任何计算目的。
 - 稳定：Linux 内核非常成熟。因为其稳定性，它被世界上大多数服务器使用。
 - 高效：Linux 的设计允许你只包含你需要的内容，这就是为什么它可以从树莓派运行到大型服务器。
 - 免费：Linux 是一个免费的操作系统。
-
-
-
-
 
 ## Linux 历史
 
@@ -98,19 +79,27 @@ https://centos.org/download/
 ## VMware 安装
 
 ### 第 1 步
+
 安装所需的构建包：
+
 `sudo apt install build-essential`
 
 ### 第 2 步
+
 从网站下载 VMware player。
 
 ### 第 3 步
+
 进入安装目录并赋予文件可执行权限：
+
 `chmod 777 vmware-player`
 
 ### 第 4 步
+
 我们稍后会讨论 `chmod 777`，现在直接使用即可。
+
 使用 sudo 执行程序：
+
 `sudo ./vmware-player`
 
 不需要许可证密钥。如果你想安装 VMware workstation 而不是 VMware player，则需要许可证密钥。安装成功后将显示界面。
@@ -118,22 +107,29 @@ https://centos.org/download/
 ## Ubuntu 服务器安装
 
 要求：
+
 1. 带有至少 4GB 内存的主机 PC
 2. VMware WORKSTATION/VIRTUALBOX
 3. UBUNTU SERVER ISO
 
 ### 第 1 步
+
 启动虚拟机向导。
 
 ### 第 2 步
+
 选择安装媒体或源。
 
 ### 第 3 步
+
 VM 的配置所示。
 
 ### 第 4 步
+
 开始安装，设置语言：
+
 Willkommen! Bienvenue! Доброловать! Welcome! 选择您的语言：
+
 - English
 - Asturiano
 - Hrvatski
@@ -152,14 +148,19 @@ Willkommen! Bienvenue! Доброловать! Welcome! 选择您的语言：
 选择 DHCP 网络。稍后我们将配置服务器的 IP 地址。
 
 注意：
+
 ens33 - DHCP 192.168.0.24
+
 00:0c:29:46:31:ae Intel Corporation / 8254EM Gigabit Controller (10/100/X)
 
 ### 第 5 步
+
 选择安装 SSH 服务器以便我们可以连接主机。
 
 ### 第 6 步
+
 有三种分区类型：
+
 - 引导：使用整个磁盘进行引导分区系统
 - 手动：用户必须手动分配空间。最小化设置：
   1. /boot
@@ -170,6 +171,7 @@ ens33 - DHCP 192.168.0.24
 选择整个磁盘进行安装。我们选择整个磁盘引导分区来讨论引导系统。
 
 ### 第 7 步
+
 使用您的凭据登录。
 
 总结：我们学习了如何在虚拟机 DHCP 网络上设置 Ubuntu 服务器。使用引导分区。
@@ -177,43 +179,48 @@ ens33 - DHCP 192.168.0.24
 ## CentOS 服务器安装
 
 要求：
+
 1. 带有至少 4GB 内存的主机 PC
 2. VMware WORKSTATION/VIRTUALBOX
 3. CentOS7 SERVER ISO
 
 ### 第 1 步
+
 启动 VMware 新虚拟机向导。
 
 ### 第 2 步
+
 选择安装媒体或源并选择磁盘大小。
 
 ### 第 3 步
+
 VMware 的配置所示。
 
 ### 第 4 步
+
 开始安装，首先设置语言。
 
 ### 第 5 步
+
 在软件选择中选择带有 GUI 的服务器。
 
 ### 第 6 步
+
 选择用于安装的卷。在此安装中，我们选择整个磁盘引导分区。
 
 ### 第 7 步
+
 输入 root 密码并确认。创建用户并为用户设置密码。
 
 ### 第 8 步
+
 等待安装完成。完成后重启系统。
 
 ### 第 9 步
+
 使用 root 凭据登录。
 
 总结：我们学习了如何在虚拟机上设置 CentOS 服务器。
-
-
-
-
-
 
 ubuntu 服务器：每当你执行任何需要超级用户权限的操作时，都会使用 `sudo` 命令。此命令允许普通用户执行需要超级用户权限的任务。输入 `sudo` 后跟你的命令，系统可能会提示你输入密码；在提供密码后，它将以超级用户权限执行操作。但如果你想进入 root shell（根终端），请输入此命令：
 
@@ -252,83 +259,99 @@ Shell 本身是一个从键盘接收命令并将其交给操作系统执行的�
 ## 命令名：ls
 
 描述：
+
 `ls` 命令用于查看目录内部的文件和文件夹。它是 Linux 中最常用的命令。
 
 语法：
+
 `ls [-option] <directory>`
 
-- 1) ls -m 将用逗号分隔显示文件和文件夹
-- 2) ls -a 同时显示隐藏文件
-- 3) ls -l 将以列表格式显示文件和文件夹
-- 4) ls -lh 将显示文件列表及其大小
-- 5) ls -i 将显示文件和文件夹的 Inode 列表
-- 6) ls -t 将按修改时间列出目录列表
+- 1) `ls -m` 将用逗号分隔显示文件和文件夹
+- 2) `ls -a` 同时显示隐藏文件
+- 3) `ls -l` 将以列表格式显示文件和文件夹
+- 4) `ls -lh` 将显示文件列表及其大小
+- 5) `ls -i` 将显示文件和文件夹的 Inode 列表
+- 6) `ls -t` 将按修改时间列出目录列表
 
 ## 命令名：more
 
 描述：
+
 它的工作方式类似于 `more` 命令。它也提供了滚动选项。
 
 语法：
+
 ```
 More -E <options> <file_name>
 ```
 
-- 1) less -E : 在第一次到达文件末尾时自动退出。
-- 2) less -f : 强制打开非普通文件。
-- 3) less -F : 如果整个文件可以在第一个屏幕显示则退出。
-- 4) less -g : 高亮上次搜索命令找到的字符串
-- 5) less -G : 抑制对搜索命令找到的字符串的所有高亮
-- 6) less -i : 导致搜索行号
-- 7) less -p <pattern> : 告诉 less 从文件中模式第一次出现的地方开始
-- 8) less -s : 将连续的空行压缩为单行空行以忽略大小
-- 9) less -n : 抑制行号
-- 10) less -p <pattern> : 告诉 less 从文件中模式第一次出现的地方开始
-- 11) less -s : 将连续的空行压缩
-- 12) less -N : 显示行号
+- 1) `less -E` : 在第一次到达文件末尾时自动退出。
+- 2) `less -f` : 强制打开非普通文件。
+- 3) `less -F` : 如果整个文件可以在第一个屏幕显示则退出。
+- 4) `less -g` : 高亮上次搜索命令找到的字符串
+- 5) `less -G` : 抑制对搜索命令找到的字符串的所有高亮
+- 6) `less -i` : 导致搜索行号
+- 7) `less -p <pattern>` : 告诉 less 从文件中模式第一次出现的地方开始
+- 8) `less -s` : 将连续的空行压缩为单行空行以忽略大小
+- 9) `less -n` : 抑制行号
+- 10) `less -p <pattern>` : 告诉 less 从文件中模式第一次出现的地方开始
+- 11) `less -s` : 将连续的空行压缩
+- 12) `less -N` : 显示行号
 
 ## 命令名：strings
 
 描述：
+
 显示文件内容
 
 语法：
+
 `strings <filename>`
 
 ## 命令名：tree
 
 描述：
+
 以树状格式显示目录结构
 
 语法：
+
 `Tree <directory>`
+
 [你可能需要通过包管理器安装工具]
 
 ## 命令名：dir
 
 描述：
+
 显示目录内部的文件和文件夹
 
 语法：
+
 `dir <directory_name>`
+
 [在使用此命令之前你必须安装 'tree' 工具]
 
 ## 命令名：cal
 
 描述：
+
 显示日历
 
 语法：
-`cal <year>`
-`cal <month> <year>`
 
+`cal <year>`
+
+`cal <month> <year>`
 
 ## 命令名：clear
 
 描述：
+
 清除屏幕
 
 语法：
+
 ```
 clear
 ```
@@ -336,9 +359,11 @@ clear
 ## 命令名：bc
 
 描述：
+
 基础计算器
 
 语法：
+
 ```
 bc
 ```
@@ -346,88 +371,109 @@ bc
 ## 命令名：mkdir
 
 描述：
+
 创建目录
 
 语法：
+
 `mkdir <directory>: : 用于创建单个目录`
+
 `mkdir -p <directory/directory>:` 
+
 用于创建递归目录
 
 ## 命令名：rmdir
 
 描述：
+
 删除空目录
+
 [你无法用此命令删除任何包含文件的目录]
 
 语法：
+
 `rmdir <empty_directory>`
 
 ## 命令名：file
 
 描述：
+
 显示文件类型
 
 语法：
+
 `file <filename>`
 
 ## 命令名：ln
 
 描述：
+
 创建源文件名的名的链接。在硬链接的情况下，如果你删除主文件，链接不会删除；但在软链接的情况下，如果你删除了主文件，链接文件将被删除。
 
 语法：
+
 `ln <option> <source_file> <shortcut_file>`
 
-- ln -s : 用于创建软链接
-- ln -P : 用于创建硬链接
+- `ln -s` : 用于创建软链接
+- `ln -P` : 用于创建硬链接
 
 ## 命令名：history
 
 描述：
+
 显示用户的命令历史
 
 语法：
+
 `history`
 
 ## 命令名：locate
 
 描述：
+
 在整个系统中搜索文件
 
 语法：
+
 `Locate <file>`
 
 ## 命令名：uname
 
 描述：
+
 关于内核的所有信息
 
 语法：
-- uname -a : 所有信息
-- uname -s : 输出内核名称
-- uname -n : 输出主机名
-- uname -r : 输出内核版本
-- uname -v : 输出内核版本
-- uname -m : 输出机器类型
-- uname -p : 输出处理器类型
-- uname -i : 输出硬件平台
-- uname -o : 输出操作系统
+
+- `uname -a` : 所有信息
+- `uname -s` : 输出内核名称
+- `uname -n` : 输出主机名
+- `uname -r` : 输出内核版本
+- `uname -v` : 输出内核版本
+- `uname -m` : 输出机器类型
+- `uname -p` : 输出处理器类型
+- `uname -i` : 输出硬件平台
+- `uname -o` : 输出操作系统
 
 ## 命令名：tar
 
 描述：
+
 创建存档和解压存档
 
 语法：
-- tar -cvf <archive_name> <source> : 创建创建
-- tar -xvf : 用于解压
+
+- `tar -cvf <archive_name> <source>` : 创建创建
+- `tar -xvf` : 用于解压
 
 ## 命令名：gzip
 
 描述：
+
 压缩普通文件或存档
 
 语法：
+
 ```
 gzip <file_name>
 ```
@@ -435,9 +481,11 @@ gzip <file_name>
 ## 命令名：gunzip
 
 描述：
+
 用于解压缩文件
 
 语法：
+
 ```
 gunzip <compressed_file>
 ```
@@ -445,9 +493,11 @@ gunzip <compressed_file>
 ## 命令名：lsmod
 
 描述：
+
 显示内核使用的模块列表
 
 语法：
+
 ```
 lsmod
 ```
@@ -455,29 +505,37 @@ lsmod
 ## 命令名：rmmod
 
 描述：
+
 删除内核使用的任何模块 [除非你确定自己在做什么，否则不要这样做]
 
 语法：
+
 `rmmod <module_name>`
+
 你需要 root 用户才能执行此操作
-- rmmod -f : 强制卸载模块并可能导致机器崩溃
-- rmmod -v : 更多消息
-- rmmod -V : 显示版本
+
+- `rmmod -f` : 强制卸载模块并可能导致机器崩溃
+- `rmmod -v` : 更多消息
+- `rmmod -V` : 显示版本
 
 ## 命令名：modprobe
 
 描述：
+
 向系统添加新模块
 
 语法：
+
 `modprobe <module_name>`
 
 ## 命令名：ps
 
 描述：
+
 查看系统当前运行进程
 
 语法：
+
 ```
 ps
 ```
@@ -485,9 +543,11 @@ ps
 ## 命令名：top
 
 描述：
+
 top 命令用于进程监控。[关于 top 的更多信息见进程管理]
 
 语法：
+
 ```
 top
 ```
@@ -495,9 +555,11 @@ top
 ## 命令名：renice
 
 描述：
+
 用于更改系统中运行进程的优先级。[更多见进程管理章节]
 
 语法：
+
 ```
 renice -n <priority> -p <pid>
 ```
@@ -505,9 +567,11 @@ renice -n <priority> -p <pid>
 ## 命令名：kill
 
 描述：
+
 用于为此目的终止进程
 
 语法：
+
 ```
 Kill -<sigterm> -p pid
 ```
@@ -515,9 +579,11 @@ Kill -<sigterm> -p pid
 ## 命令名：uptime
 
 描述：
+
 显示系统运行时间以及过去1 分钟、5 分钟和15 分钟的平均负载。[这些信息可以在 top 和 htop 命令中找到]
 
 语法：
+
 ```
 uptime
 ```
@@ -525,344 +591,374 @@ uptime
 ## 命令名：iostat
 
 描述：
+
 显示 CPU 和 I/O 信息 [更多信息见进程管理设备]
 
 语法：
-- 1) iostat -c : 生成 CPU 状态
-- 2) iostat -d : 生成所有设备的 I/O 统计
-- 3) iostat -x : 生成详细 I/O 统计
-- 4) iostat -x : 生成详细 I/O 统计和 CPU 信息
-- 5) iostat -p <devices> : 为特定设备生成详细信息
-- 6) iostat -m : 以兆字节为单位生成统计
+
+- 1) `iostat -c` : 生成 CPU 状态
+- 2) `iostat -d` : 生成所有设备的 I/O 统计
+- 3) `iostat -x` : 生成详细 I/O 统计
+- 4) `iostat -x` : 生成详细 I/O 统计和 CPU 信息
+- 5) `iostat -p <devices>` : 为特定设备生成详细信息
 
 
 
+- `iostat -m` : 以兆字节为单位生成统计
+- `iostat -k` : 生成以字节为单位的统计
+- `iostat -N` : 生成 LVM 选项
+- `iostat -t` : 生成带有时间戳的统计
+- `nfsostat` : 显示 NFS 设备的信息
 
-
-
-- 7) iostat -k : 生成以字节为单位的统计
-- 8) iostat -N : 生成 LVM 选项
-- 9) iostat -t : 生成带有时间戳的统计
-- 10) nfsostat : 显示 NFS 设备的信息
-
-## 命令名: hostnamectl
+## 命令名: `hostnamectl`
 
 描述：
+
 显示主机及其相关设置，也可更改主机及其相关设置
 
 语法：
-Hostnamectl : 提供有关当前主机及其属性的信息
 
-hostnamectl set-hostname <hostname> : 它将更改主机
+`Hostnamectl` : 提供有关当前主机及其属性的信息
 
-## 命令名: pwd
+`hostnamectl set-hostname <hostname>` : 它将更改主机
+
+## 命令名: `pwd`
 
 描述：
+
 打印当前目录路径
 
 语法：
-pwd
 
-## 命令名: dmesg
+`pwd`
+
+## 命令名: `dmesg`
 
 描述：
-显示启动期间检测到的硬件状态 [文件位置为 /var/log/dmesg]
+
+显示启动期间检测到的硬件状态 [文件位置为 `/var/log/dmesg`]
 
 语法：
+
 ```
 dmesg
 ```
 
-## 命令名: init
+## 命令名: `init`
 
 描述：
-显示启动期间检测到的硬件状态 [文件位置为 /var/log/dmesg]
+
+显示启动期间检测到的硬件状态 [文件位置为 `/var/log/dmesg`]
 
 语法：
-- Init <run_level>
-- 0 : 关机机器
-- 6 : 重启机器
-- 2, 3, 4, 5 :启动运行级别。
-- 1, s, S :进入救援模式
-- q, Q :重新加载 init 配置
-- u, U :执行 init
 
-## 命令名: mkswap
+- `Init <run_level>`
+- `0` : 关机机器
+- `6` : 重启机器
+- `2, 3, 4, 5` :启动运行级别。
+- `1, s, S` :进入救援模式
+- `q, Q` :重新加载 init 配置
+- `u, U` :执行 init
+
+## 命令名: `mkswap`
 
 描述：
+
 用于格式化交换空间的分区
 
 语法：
+
 ```
 mkswap <file_system>
 ```
 
-## 命令名: swapon
+## 命令名: `swapon`
 
 描述：
+
 激活交换空间
 
 语法：
+
 ```
 swapon -a <file_system>:
 [启用 /etc/fstab 中的所有交换分区]
+```
 
-## 命令名: swapoff
+## 命令名: `swapoff`
 
 描述：
 停用交换分区
 
 语法：
+
 ```
 swapoff <file_system>
 ```
 
-## 命令名: mkfs
+## 命令名: `mkfs`
 
 描述：
 用于格式化分区的工具 [关于文件系统的信息]
 
 语法：
+
 ```
 mkfs -t <fs_type> <file_system>
 ```
-- 1) mkfs.ext2/dev/sdx: 用于 ext2 文件系统
-- 2) mkfs.ext3/dev/sdx: 用于 ext3 文件系统
-- 3) mkfs.ext4/dev/sdx: 用于 ext4 文件系统
-- 4) mkfs.minix/dev/sdx: 用于 minix 文件系统
-- 5) mkfs.xfs/dev/sdx: 用于 xfs 文件系统
 
-## 命令名: poweroff
+- `1) mkfs.ext2/dev/sdx` : 用于 ext2 文件系统
+- `2) mkfs.ext3/dev/sdx` : 用于 ext3 文件系统
+- `3) mkfs.ext4/dev/sdx` : 用于 ext4 文件系统
+- `4) mkfs.minix/dev/sdx` : 用于 minix 文件系统
+- `5) mkfs.xfs/dev/sdx` : 用于 xfs 文件系统
+
+## 命令名: `poweroff`
 
 描述：
 关机机器
 
 语法：
-poweroff
-
+`poweroff`
 
 描述：
 显示当前登录的用户名
 
 语法：
-whoami
+`whoami`
 
-## 命令名: wc
+## 命令名: `wc`
 
 描述：
 用于统计指定文件的行数、单词数和字符数
 
 语法：
-- 1) wc <file_names>
-- 2) wc -m <file> : 打印字符
-- 3) wc -w <file> : 打印单词
-- 4) wc -l <file> : 打印行
+- `1) wc <file_names>`
+- `2) wc -m <file>` : 打印字符
+- `3) wc -w <file>` : 打印单词
+- `4) wc -l <file>` : 打印行
 
-## 命令名: w
+## 命令名: `w`
 
 描述：
 显示谁登录了计算机正在做什么
 
 语法：
-w
+`w`
 
-## 命令名: arch
+## 命令名: `arch`
 
 描述：
 显示计算机架构
 
 语法：
-arch
+`arch`
 
-## 命令名: alias
+## 命令名: `alias`
 
 描述：
 在执行命令时将一个字符串替换为另一个字符串
 
 语法：
-Alias <string>='target string'
+`Alias <string>='target string'`
 
-## 命令名: bg
+## 命令名: `bg`
 
 描述：
 将任何前台作业发送到后台
 
 语法：
-bg
+`bg`
 
-## 命令名: cp
+## 命令名: `cp`
 
 描述：
 将文件或组从一个地复制到另一个地
 
 语法：
-cp <source_file> <target_destination>
+`cp <source_file> <target_destination>`
 
-## 命令名: echo
+## 命令名: `echo`
 
 描述：
 显示作为参数的文本/字符串
 
 语法：
+
 ```
 echo <arguments>
 ```
 
-## 命令名: fdisk
+## 命令名: `fdisk`
 
 描述：
 格式化磁盘以及创建分区 [磁盘管理信息]
 
 语法：
+
 ```
 fdisk <file_system>
 ```
 
-## 命令名: cfdisk
+## 命令名: `cfdisk`
 
 描述：
 使用基于文本的 GUI 界面格式化磁盘以及创建分区 [磁盘管理信息]
 
 语法：
+
 ```
 sudo cfdisk
 ```
 
-## 命令名: lsblk
+## 命令名: `lsblk`
 
 描述：
 显示系统中使用的可用空间和交换内存
 
 语法：
+
 ```
 lsblk
 ```
 
-## 命令名: lsmod
+## 命令名: `lsmod`
 
 描述：
 列出当前加载的内核模块 [以良好的格式打印 '/proc/modules' 内容]
 
 语法：
+
 ```
 lsmod
 ```
 
-## 命令名: lspci
+## 命令名: `lspci`
 
 描述：
 显示当前连接的 PCI 总线 [连接到计算机的设备列表]
 
 语法：
+
 ```
 lspci
 ```
 
-## 命令名: lshw
+## 命令名: `lshw`
 
 描述：
 列出计算机的所有硬件详细信息
 
 语法：
+
 ```
 lshw
 ```
 
-## 命令名: lscpu
+## 命令名: `lscpu`
 
 描述：
 显示关于 CPU 的详细信息
 
 语法：
+
 ```
 lscpu
 ```
 
-## 命令名: man
+## 命令名: `man`
 
 描述：
 显示你正在使用的工具或命令的参考
 
 语法：
+
 ```
 man <command>
 ```
-
 
 描述：
 赋予超级用户权限
 
 语法：
+
 ```
 sudo <command>
 ```
 
-## 命令名: ip
+## 命令名: `ip`
 
 描述：
 用于执行若干网络任务
 
 语法：
+
 ```
 ip <option> <command>
 ```
 
-## 命令名: touch
+## 命令名: `touch`
 
 描述：
 创建一个空文件
 
 语法：
+
 ```
 touch <file_name>
 ```
 
-## 命令名: ifconfig
+## 命令名: `ifconfig`
 
 描述：
 显示 IP 地址相关信息
 
 语法：
+
 ```
 ifconfig
 ```
 
-## 命令名: grep
+## 命令名: `grep`
 
 描述：
 用于搜索关键词的全局正则表达式
 
 语法：
+
 ```
 ls | grep initrd
 ```
 
-## 命令名: wget
+## 命令名: `wget`
 
 描述：
 交互式命令行下载器
 
 语法：
+
 ```
 wget <download_url>
 ```
 
-## 命令名: reboot
+## 命令名: `reboot`
 
 描述：
 重启系统
 
 语法：
+
 ```
 reboot
 ```
 
-## 命令名: ping
+## 命令名: `ping`
 
 描述：
 测试物理和逻辑上活跃的任何主机或网络
 
 语法：
+
 ```
 ping <ip_address/domain_name>
 ```
@@ -915,20 +1011,16 @@ ping <ip_address/domain_name>
 | 数据链路层 | 链路层 |
 | 物理层 | |
 
-
-
-
-
 ## IP 地址分配
 
 IP 地址是网络技术中最重要的主题。IP 地址本质上是一个用于标识机器的数字标识符。IP 地址是软件地址，而不是硬件地址，这意味着它可以根据你所连接的网络而改变。硬件地址是 NIC 地址，也称为物理地址，它是无法的。
 
 ## IP 地址的重要元素
 
--   **位 (Bit):** 位是 0 或 1 的一个数字。
--   **字节 (Byte):** 由 8 位组成，就是一个普通的 8 位二进制数。
--   **网络地址 (Network Address):** 网络地址用于将数据包发送到网络。例如 10.0.0.0、192.168.0.0 等。
--   **广播地址 (Broadcast Address):** 主机用于向网络上的所有节点发送信息。地址类似于 192.168.0.255、172.166.255.255。
+- **位 (Bit):** 位是 0 或 1 的一个数字。
+- **字节 (Byte):** 由 8 位组成，就是一个普通的 8 位二进制数。
+- **网络地址 (Network Address):** 网络地址用于将数据包发送到网络。例如 10.0.0.0、192.168.0.0 等。
+- **广播地址 (Broadcast Address):** 主机用于向网络上的所有节点发送信息。地址类似于 192.168.0.255、172.166.255.255。
 
 每个 IP 地址包含两个不同的部分：
 
@@ -997,11 +1089,11 @@ D 类 IP 地址是一种特殊地址。它被称为组播地址。它基本上�
 
 ## Ping
 
-ping 代表 Packet Gopher，是一种 ICMP 回显请求和响应消息，用于检查开启机器的物理和逻辑连通性。
+`ping` 代表 Packet Gopher，是一种 ICMP 回显请求和响应消息，用于检查开启机器的物理和逻辑连通性。
 
 ## Traceroute
 
-Traceroute 用于查找数据包穿过互联网的路径。
+`Traceroute` 用于查找数据包穿过互联网的路径。
 
 ## 在 CENTOS 7 中设置静态 IP 的简单方法
 
@@ -1059,14 +1151,23 @@ ifconfig
 ```
 ```bash
 [vagrant@tanvir ~]$ ifconfig
+
 eth1:flags=4163<BROADCAST,RUNNING,MULTICAST> mtu 1500
+
   inet 192.178.0.10 netmask 255.255.255.0 broadcast 192.178.0.255
+
   inet6 fe80::a00d:27ff:5aa3 prefixlen 64 scopeid 0x<link>
+
   ether 08:00:27:cd:5a:a3 txqueuel 1000 (Ethernet)
+
   RX packets 62 bytes 5854 (5.7 KiB)
+
   RX errors 0 dropped 0 overflows 0
+
   TX packets 24 bytes 2452 (2.3 KiB)
+
   TX errors 0 dropped 0 overflows 0 collisions 0
+
 [vagrant@tanvir ~]$
 ```
 我们可以看到 IP 地址已更改。
@@ -1078,21 +1179,25 @@ ping 8.8.8.8
 ```
 ```bash
 [vagrant@tanvir ~]$ ping 8.8.8.8
+
 PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+
 64 bytes from 8.8.8.8: icmp_seq=1 ttl=63 time=80.2 ms
+
 64 bytes from 8.8.8.8: icmp_seq=2 ttl=63 time=102 ms
+
 64 bytes from 8.8.8.8: icmp_seq=3 ttl=63 time=123 ms
+
 ^C
+
 --- 8.8.8.8 ping statistics ---
+
 3 packets transmitted, 3 received, 0% packet loss, time 2005ms
+
 rtt min/avg/max/mdev = 80.248/101.916/123.156/17.519 ms
 ```
 
 所以连接已建立通。这就是为 CentOS 7/Redhat7 服务器分配静态地址的简单方法。
-
-
-
-
 
 # Tanvir Rahman
 
@@ -1106,8 +1211,11 @@ rtt min/avg/max/mdev = 80.248/101.916/123.156/17.519 ms
 
 ```
 IP ADDRESS : 192.168.0.10
+
 BNET MASK: 255.255.255.0
+
 GATEWAY: 192.168.0.1
+
 DNS: 8.8.8.8
 ```
 
@@ -1121,56 +1229,89 @@ DNS: 8.8.8.8
 
 我们必须进入 `/etc/sysconfig/network-scripts/` 目录
 
-=> cd /etc/sysconfig/network-scripts
+=> `cd /etc/sysconfig/network-scripts`
 
 在该目录下有很多文件。从那里，我们需要选择 `ifcfg-eth1` [你的文件名可能不同。根据你的接口选择文件，其格式类似于 `ifcfg-<interface>`]
 
 ```
 [vagrant@tanvir ~]$ $ cd /etc/sysconfig/network-scripts/
-[vagrant@tanvir network-scripts~]$ ls
-ifcfg-eth0 ifdown-ippp ifdown-sit ifup-bnepf ifup-plusb ifup-TeamPort
-ifcfg-eth1 ifdown-ipv6 ifdown-Team ifup-eth ifup-post ifup-tunnel
-ifcfg-lo ifdown-isdn ifdown-TeamPort ifup-ippp ifup-ppp ifup-wireless
-ifdown ifdown-post ifdown-tunnel ifup-ipv6 ifup-routes init.ipv6-global
-ifdown-bnep ifdown-ppp ifup ifup-isdn ifup-sit network-functions
-ifdown-eth ifdown-routes ifup-aliases ifup-plip ifup-Team network-functions-ipv6
-[vagrant@tanvir network-scripts~]$ 
 ```
+
+
+
+[vagrant@tanvir network-scripts~]$ `ls`
+
+`ifcfg-eth0` `ifdown-ippp` `ifdown-sit` `ifup-bnepf` `ifup-plusb` `ifup-TeamPort`
+
+`ifcfg-eth1` `ifdown-ipv6` `ifdown-Team` `ifup-eth` `ifup-post` `ifup-tunnel`
+
+`ifcfg-lo` `ifdown-isdn` `ifdown-TeamPort` `ifup-ippp` `ifup-ppp` `ifup-wireless`
+
+`ifdown` `ifdown-post` `ifdown-tunnel` `ifup-ipv6` `ifup-routes` `init.ipv6-global`
+
+`ifdown-bnep` `ifdown-ppp` `ifup` `ifup-isdn` `ifup-sit` `network-functions`
+
+`ifdown-eth` `ifdown-routes` `ifup-aliases` `ifup-plip` `ifup-Team` `network-functions-ipv6`
+
+[vagrant@tanvir network-scripts~]$ 
 
 ## 第四步
 
 我们必须使用 root 权限的文本编辑器编辑该文件。
 我们需要编辑 `ifcfg-eth1` 文件
-=>vim ifcfg-eth1
+=>`vim ifcfg-eth1`
 
 ```
 BOOTPROTO=static
+
 ONBOOT=yes
+
 IPADDR=192.168.0.10
+
 PREFIX=24
+
 GATEWAY=192.168.0.1
+
 DNS1=8.8.8.8
 ```
 
 ```
 # VAGRANT-BEGIN
+
 # 以下内容由 Vagrant 自动生成。请勿修改。
+
 BOOTPROTO=static
+
 ONBOOT=yes
+
 DEVICE=eth1
+
 NM_CONTROLLED=yes
+
 #VAGRANT-END
+
 TYPE=Ethernet
+
 PROXY_METHOD=none
+
 BROWSER_ONLY=no
+
 IPADDR=192.168.0.10
+
 PREFIX=24
+
 GATEWAY=192.168.0.1
+
 DNS1=8.8.8.8
+
 DEFROUTE=yes
+
 IPV4_FAILURE_FATAL=no
+
 IPV6INIT=no
+
 NAME="System eth1"
+
 UUID=9c2fad9-6ecb-4d-8a47-6f50c4
 ```
 
@@ -1178,25 +1319,31 @@ UUID=9c2fad9-6ecb-4d-8a47-6f50c4
 
 如果我们查看 IP 地址，会发现 IP 地址没有变化。要使更改，我们需要重启接口。使用此命令关闭接口
 
-=>sudo ifdown eth1
+=>`sudo ifdown eth1`
 
 然后再次启动接口
 
-=>sudo ifup eth1
+=>`sudo ifup eth1`
 
 ## 第六步
 
 然后我们使用以下命令检查 IP 地址
 
-=>ifconfig eth1
+=>`ifconfig eth1`
 
 ```
 [vagrant@tanvir ~]$ ifconfig eth1
+
 eth1:flags=4163<BROADCAST,MULTICAST> mtu 1500
+
       inet 192.168.0.10 mask 255.255.255.0 broadcast 192.168.0.255
+
       inet6 fe80::a00:27ff:fedc:aa3 prefixlen 64 scope link
+
       ether 08:00:27:cd:5a:a3 txuel 1000 (Ethernet)
+
       RX packets 62 bytes 5854 (5.7 KiB) errors 0 dropped 0
+
       TX packets 24 bytes 2452 (2.3 KiB) errors 0 collisions 0
 ```
 
@@ -1204,7 +1351,7 @@ eth1:flags=4163<BROADCAST,MULTICAST> mtu 1500
 
 我们必须通过 ping 网络来测试连接
 
-=>ping 8.8.8.8
+=>`ping 8.8.8.8`
 
 这样连接就是通的并正在运行。这是提供 IP 地址的另一种方法。
 
@@ -1214,36 +1361,38 @@ eth1:flags=4163<BROADCAST,MULTICAST> mtu 1500
 
 在 Redhat 7 中，我们使用 `hostnamectl` 命令查看主机名的状态
 
-=>hostnamectl status
+=>`hostnamectl status`
 
 更改主机名使用
 
-=>hostnamectl set-hostname <name>
+=>`hostnamectl set-hostname <name>`
 
 移除主机名
 
-=>hostnamectl set-hostname ""
+=>`hostnamectl set-hostname ""`
 
 在 Linux 系统中，我们使用 DNS 解析主机名。首先我们需要知道如何配置客户端，有几个地方需要查看 `/etc/hosts`，如果我们查看该文件会看到类似这样的内容
 
 ```
 =>cat /etc/hosts
 127.0.0.1 localhost
+
 ::1 localhost
 ```
 
 如果你使用 `ping localhost` 命令，计算机从 hosts 文件找到它的地址，这就是计算机知道与谁通信的方式。让我们添加 `mysite` 到 127.0.0.1
 
-=>cat /etc/hosts
+=>`cat /etc/hosts`
 
 ```
 127.0.0.1 localhost
+
 ::1 localhost
 ```
 
 然后如果我们 `ping mysite`，我们可以看到
 
-=> ping mysite
+=> `ping mysite`
 PING localhost (127.0.0.1) 56(84) bytes of data.
 64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.129 ms
 64 bytes from localhost (127.0.0.1): icmp_seq=2 ttl=64 time=0.112 ms
@@ -1252,7 +1401,7 @@ PING localhost (127.0.0.1) 56(84) bytes of data.
 
 如果我们查看该文件
 
-=>cat /resolv.conf
+=>`cat /resolv.conf`
 # Generated by NetworkManager
 nameserver 10.0.2.3
 ```
@@ -1260,11 +1409,12 @@ nameserver 10.0.2.3
 名称服务器 10.0.2.3（在你的计算机上可能不同），实际上这里 10.0.2.3 是我们 DNS 服务器的 IP。我们可以在文件中添加一些 DNS 服务器，如：
 
 - nameserver 8.8.8.8
+
 - nameserver 8.8.4.4
 
 8.8.8.8 是公用的 Google DNS 服务器。但当问题出现时，计算机使用 `/etc/hosts` 文件还是 `/etc/resolv.conf` 的决策存储在名为 `/etc/nsswitch.conf` 的文件中。如果我们查看该文件
 
-=>cat /etc/nsswitch.conf| grep hosts
+=>`cat /etc/nsswitch.conf| grep hosts`
 
 在文件中看到这一行
 
@@ -1276,7 +1426,7 @@ hosts: files dns
 
 之后当你 `ping www.google.com` 时，它将 ping localhost 地址
 
-=> ping www.google.com
+=> `ping www.google.com`
 
 ```
 PING www.google.com (127.0.0.1) 56(84) bytes of data.
@@ -1286,7 +1436,7 @@ PING www.google.com (127.0.0.1) 56(84) bytes of data.
 
 ### 设置静态 IP
 
-### 简单方法
+#### 简单方法
 
 你需要根据你的网络规范，为机器选择一个静态 IP 地址、子网掩码和网关。
 
@@ -1309,7 +1459,7 @@ DNS: 8.8.8.8
 
 我们必须进入 `/etc/sysconfig/network-scripts/` 目录
 
-=> cd /etc/sysconfig/network-scripts
+=> `cd /etc/sysconfig/network-scripts`
 
 在该目录下有很多文件。从那里，我们需要选择 `ifcfg-eth1` [你的文件名可能不同。根据你的接口选择文件，其格式类似于 `ifcfg-<interface>`]
 
@@ -1328,8 +1478,10 @@ ifdown-eth ifdown-routes ifup-aliases ifup-plip ifup-Team network-functions-ipv6
 ## 第四步
 
 我们必须使用 root 权限的文本编辑器编辑该文件。
+
 我们需要编辑 `ifcfg-eth1` 文件
-=>vim ifcfg-eth1
+
+=>`vim ifcfg-eth1`
 
 ```
 BOOTPROTO=static
@@ -1366,17 +1518,17 @@ UUID=9c2fad9-6ecb-4d-8a47-6f50c4
 
 如果我们查看 IP 地址，会发现 IP 地址没有变化。要使更改，我们需要重启接口。使用此命令关闭接口
 
-=>sudo ifdown eth1
+=>`sudo ifdown eth1`
 
 然后再次启动接口
 
-=>sudo ifup eth1
+=>`sudo ifup eth1`
 
 ## 第六步
 
 然后我们使用以下命令检查 IP 地址
 
-=>ifconfig eth1
+=>`ifconfig eth1`
 
 ```
 [vagrant@tanvir ~]$ ifconfig eth1
@@ -1392,7 +1544,7 @@ eth1:flags=4163<BROADCAST,MULTICAST> mtu 1500
 
 我们必须通过 ping 网络来测试连接
 
-=>ping 8.8.8.8
+=>`ping 8.8.8.8`
 
 这样连接就是通的并正在运行。这是提供 IP 地址的另一种方法。
 
@@ -1402,15 +1554,15 @@ eth1:flags=4163<BROADCAST,MULTICAST> mtu 1500
 
 在 Redhat 7 中，我们使用 `hostnamectl` 命令查看主机名的状态
 
-=>hostnamectl status
+=>`hostnamectl status`
 
 更改主机名使用
 
-=>hostnamectl set-hostname <name>
+=>`hostnamectl set-hostname <name>`
 
 移除主机名
 
-=>hostnamectl set-hostname ""
+=>`hostnamectl set-hostname ""`
 
 在 Linux 系统中，我们使用 DNS 解析主机名。首先我们需要知道如何配置客户端，有几个地方需要查看 `/etc/hosts`，如果我们查看该文件会看到类似这样的内容
 
@@ -1422,7 +1574,7 @@ eth1:flags=4163<BROADCAST,MULTICAST> mtu 1500
 
 如果你使用 `ping localhost` 命令，计算机从 hosts 文件找到它的地址，这就是计算机知道与谁通信的方式。让我们添加 `mysite` 到 127.0.0.1
 
-=>cat /etc/hosts
+=>`cat /etc/hosts`
 
 ```
 127.0.0.1 localhost
@@ -1431,17 +1583,21 @@ eth1:flags=4163<BROADCAST,MULTICAST> mtu 1500
 
 然后如果我们 `ping mysite`，我们可以看到
 
-=> ping mysite
+=> `ping mysite`
 PING localhost (127.0.0.1) 56(84) bytes of data.
+
 64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.129 ms
+
 64 bytes from localhost (127.0.0.1): icmp_seq=2 ttl=64 time=0.112 ms
 
 127 是回环地址，但这种方法并不高效。我们不可能手动添加成千上万个域名和 IP。为什么会有 DNS 服务器？DNS 的作用是通过服务器自动解析域名，该服务器配置在 `/etc/resolv.conf` 文件中。
 
 如果我们查看该文件
 
-=>cat /resolv.conf
+=>`cat /resolv.conf`
+
 # Generated by NetworkManager
+
 nameserver 10.0.2.3
 ```
 
@@ -1452,7 +1608,7 @@ nameserver 10.0.2.3
 
 8.8.8.8 是公用的 Google DNS 服务器。但当问题出现时，计算机使用 `/etc/hosts` 文件还是 `/etc/resolv.conf` 的决策存储在名为 `/etc/nsswitch.conf` 的文件中。如果我们查看该文件
 
-=>cat /etc/nsswitch.conf| grep hosts
+=>`cat /etc/nsswitch.conf| grep hosts`
 
 在文件中看到这一行
 
@@ -1464,17 +1620,19 @@ hosts: files dns
 
 之后当你 `ping www.google.com` 时，它将 ping localhost 地址
 
-=> ping www.google.com
+=> `ping www.google.com`
 
 ```
 PING www.google.com (127.0.0.1) 56(84) bytes of data.
+
 64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.129 ms
+
 64 bytes from localhost (127.0.0.1): icmp_seq=2 ttl=64 time=0.112 ms
 ```
 
 ### 设置静态 IP
 
-### 简单方法
+#### 简单方法
 
 你需要根据你的网络规范，为机器选择一个静态 IP 地址、子网掩码和网关。
 
@@ -1482,8 +1640,11 @@ PING www.google.com (127.0.0.1) 56(84) bytes of data.
 
 ```
 IP ADDRESS : 192.168.0.10
+
 BNET MASK: 255.255.255.0
+
 GATEWAY: 192.168.0.1
+
 DNS: 8.8.8.8
 ```
 
@@ -1497,82 +1658,118 @@ DNS: 8.8.8.8
 
 我们必须进入 `/etc/sysconfig/network-scripts/` 目录
 
-=> cd /etc/sysconfig/network-scripts
+=> `cd /etc/sysconfig/network-scripts`
 
 在该目录下有很多文件。从那里，我们需要选择 `ifcfg-eth1` [你的文件名可能不同。根据你的接口选择文件，其格式类似于 `ifcfg-<interface>`]
 
 ```
 [vagrant@tanvir ~]$ $ cd /etc/sysconfig/network-scripts/
-[vagrant@tanvir network-scripts~]$ ls
-ifcfg-eth0 ifdown-ippp ifdown-sit ifup-bnepf ifup-plusb ifup-TeamPort
-ifcfg-eth1 ifdown-ipv6 ifdown-Team ifup-eth ifup-post ifup-tunnel
-ifcfg-lo ifdown-isdn ifdown-TeamPort ifup-ippp ifup-ppp ifup-wireless
-ifdown ifdown-post ifdown-tunnel ifup-ipv6 ifup-routes init.ipv6-global
-ifdown-bnep ifdown-ppp ifup ifup-isdn ifup-sit network-functions
-ifdown-eth ifdown-routes ifup-aliases ifup-plip ifup-Team network-functions-ipv6
-[vagrant@tanvir network-scripts~]$ 
-```
 
+[vagrant@tanvir network-scripts~]$ ls
+
+ifcfg-eth0 ifdown-ippp ifdown-sit ifup-bnepf ifup-plusb ifup-TeamPort
+
+ifcfg-eth1 ifdown-ipv6 ifdown-Team ifup-eth ifup-post ifup-tunnel
+
+ifcfg-lo ifdown-isdn ifdown-TeamPort ifup-ippp ifup-ppp ifup-wireless
+
+ifdown ifdown-post ifdown-tunnel ifup-ipv6 ifup-routes init.ipv6-global
+
+ifdown-bnep ifdown-ppp ifup ifup-isdn ifup-sit network-functions
+
+
+
+ifdown-eth ifdown-routes ifup-aliases ifup-plip ifup-Team network-functions-ipv6
+
+[vagrant@tanvir network-scripts~]$ 
+
+```
 ## 第四步
 
 我们必须使用 root 权限的文本编辑器编辑该文件。
 我们需要编辑 `ifcfg-eth1` 文件
-=>vim ifcfg-eth1
-
+=>`vim ifcfg-eth1`
+```
 ```
 BOOTPROTO=static
+
 ONBOOT=yes
+
 IPADDR=192.168.0.10
+
 PREFIX=24
+
 GATEWAY=192.168.0.1
+
 DNS1=8.8.8.8
 ```
-
 ```
 # VAGRANT-BEGIN
+
 # 以下内容由 Vagrant 自动生成。请勿修改。
+
 BOOTPROTO=static
+
 ONBOOT=yes
+
 DEVICE=eth1
+
 NM_CONTROLLED=yes
+
 #VAGRANT-END
+
 TYPE=Ethernet
+
 PROXY_METHOD=none
+
 BROWSER_ONLY=no
+
 IPADDR=192.168.0.10
+
 PREFIX=24
+
 GATEWAY=192.168.0.1
+
 DNS1=8.8.8.8
+
 DEFROUTE=yes
+
 IPV4_FAILURE_FATAL=no
+
 IPV6INIT=no
+
 NAME="System eth1"
+
 UUID=9c2fad9-6ecb-4d-8a47-6f50c4
 ```
-
 ## 第五步
 
 如果我们查看 IP 地址，会发现 IP 地址没有变化。要使更改，我们需要重启接口。使用此命令关闭接口
 
-=>sudo ifdown eth1
+=>`sudo ifdown eth1`
 
 然后再次启动接口
 
-=>sudo ifup eth1
+=>`sudo ifup eth1`
 
 ## 第六步
 
 然后我们使用以下命令检查 IP 地址
 
-=>ifconfig eth1
-
+=>`ifconfig eth1`
 ```
 [vagrant@tanvir ~]$ ifconfig eth1
+
 eth1:flags=4163<BROADCAST,MULTICAST> mtu 1500
+
       inet 192.168.0.10 mask 255.255.255.0 broadcast 192.168.0.255
+
       inet6 fe80::a00:27ff:fedc:aa3 prefixlen 64 scope link
+
       ether 08:00:27:cd:5a:a3 txuel 1000 (Ethernet)
+
       RX packets 62 bytes 5854 (5.7 KiB) errors 0 dropped 0
+
       TX packets 24 bytes 2452 (2.3 KiB) errors 0 collisions 0
 ```
 
@@ -1580,7 +1777,7 @@ eth1:flags=4163<BROADCAST,MULTICAST> mtu 1500
 
 我们必须通过 ping 网络来测试连接
 
-=>ping 8.8.8.8
+=>`ping 8.8.8.8`
 
 这样连接就是通的并正在运行。这是提供 IP 地址的另一种方法。
 
@@ -1590,36 +1787,35 @@ eth1:flags=4163<BROADCAST,MULTICAST> mtu 1500
 
 在 Redhat 7 中，我们使用 `hostnamectl` 命令查看主机名的状态
 
-=>hostnamectl status
+=>`hostnamectl status`
 
 更改主机名使用
 
-=>hostnamectl set-hostname <name>
+=>`hostnamectl set-hostname <name>`
 
 移除主机名
 
-=>hostnamectl set-hostname ""
+=>`hostnamectl set-hostname ""`
 
 在 Linux 系统中，我们使用 DNS 解析主机名。首先我们需要知道如何配置客户端，有几个地方需要查看 `/etc/hosts`，如果我们查看该文件会看到类似这样的内容
-
 ```
-=>cat /etc/hosts
+=>`cat /etc/hosts`
+
 127.0.0.1 localhost
+
 ::1 localhost
 ```
-
 如果你使用 `ping localhost` 命令，计算机从 hosts 文件找到它的地址，这就是计算机知道与谁通信的方式。让我们添加 `mysite` 到 127.0.0.1
 
-=>cat /etc/hosts
-
+=>`cat /etc/hosts`
 ```
 127.0.0.1 localhost
+
 ::1 localhost
 ```
-
 然后如果我们 `ping mysite`，我们可以看到
 
-=> ping mysite
+=> `ping mysite`
 PING localhost (127.0.0.1) 56(84) bytes of data.
 64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.129 ms
 64 bytes from localhost (127.0.0.1): icmp_seq=2 ttl=64 time=0.112 ms
@@ -1628,19 +1824,19 @@ PING localhost (127.0.0.1) 56(84) bytes of data.
 
 如果我们查看该文件
 
-=>cat /resolv.conf
+=>`cat /resolv.conf`
 # Generated by NetworkManager
 nameserver 10.0.2.3
 ```
-
 名称服务器 10.0.2.3（在你的计算机上可能不同），实际上这里 10.0.2.3 是我们 DNS 服务器的 IP。我们可以在文件中添加一些 DNS 服务器，如：
 
 - nameserver 8.8.8.8
+
 - nameserver 8.8.4.4
 
 8.8.8.8 是公用的 Google DNS 服务器。但当问题出现时，计算机使用 `/etc/hosts` 文件还是 `/etc/resolv.conf` 的决策存储在名为 `/etc/nsswitch.conf` 的文件中。如果我们查看该文件
 
-=>cat /etc/nsswitch.conf| grep hosts
+=>`cat /etc/nsswitch.conf| grep hosts`
 
 在文件中看到这一行
 
@@ -1652,17 +1848,12 @@ hosts: files dns
 
 之后当你 `ping www.google.com` 时，它将 ping localhost 地址
 
-=> ping www.google.com
-
+=> `ping www.google.com`
 ```
 PING www.google.com (127.0.0.1) 56(84) bytes of data.
 64 bytes from localhost (127.0.0.1): icmp_seq=1 ttl=64 time=0.129 ms
 64 bytes from localhost (127.0.0.1): icmp_seq=2 ttl=64 time=0.112 ms
 ```
-
-
-
-
 
 # Tanvir Rahman
 
@@ -1711,8 +1902,8 @@ or
 # 第 8 步
 
 然后如果我们使用命令检查 IP 地址
-=>ifconfig eth1
 
+=>`ifconfig eth1`
 ```
 [vagrant@tanvir ~]$ $ ifconfig eth1
 eth1: flags=4163<UP,BROADCAST,RUNNING,MULTICAST> mtu 1500
@@ -1725,14 +1916,13 @@ TX packets 24 bytes 2452 (2.3 KiB)
 TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0
 [vagrant@tanvir ~]$ 
 ```
-
 我们可以看到 IP 地址已经更改。
 
 # 第九步
 
 我们必须通过 ping 网络来测试连接。
 
-=>ping 8.8.8.8
+=>`ping 8.8.8.8`
 
 # Tanvir Rahman
 
@@ -1749,7 +1939,6 @@ TX errors 0 dropped 0 overruns 0 carrier 0 collisions 0
 # 第 2 步
 
 不同的接口有不同的 'yaml' 。在我的虚拟机中有两个接口。所以有两个不同的接口，你必须根据想要配置的接口来配置配置文件。
-
 ```
 vagrantrant@localhost:/etc/netplan$ ls
 01-netcfg.yaml 99-vagrant.yaml
@@ -1760,7 +1949,7 @@ vagrant@localhost:/etc/netplan$
 
 在编辑文件之前你必须进行备份
 
-=>cp 99-vagrant.yaml 99-vagrant.yaml.bak
+=>`cp 99-vagrant.yaml 99-vagrant.yaml.bak`
 
 [这非常重要，因为如果你在缩进上出了错，可以使用备份继续操作]
 
@@ -1768,10 +1957,9 @@ vagrant@localhost:/etc/netplan$
 
 编辑文件
 
-=>sudo vim 99-vagrant.yaml
+=>`sudo vim 99-vagrant.yaml`
 
 文件格式将如下所示
-
 ```yaml
 # datasource. 对其进行的更改不会跨实例持久化。
 # 若要禁用 cloud-init 的网络配置功能，请写入文件
@@ -1783,12 +1971,14 @@ network: {config: disabled}
       dhcp4: true
   version: 2
 ```
-
 我们分配的 IP 地址将是
 
 IP 地址 : 192.168.0.102
+
 子网掩码 : 255.255.255.0
+
 网关 : 192.168.0.1
+
 DNS : 8.8.8.8
 
 # 第 5 步
@@ -1796,7 +1986,6 @@ DNS : 8.8.8.8
 # UBUNTU $ CENTOS 管理员
 
 填写如下
-
 ```yaml
 # datasource. 对其进行的更改不会跨实例持久化。
 # 若要禁用 cloud-init 的网络配置功能，请写入文件
@@ -1814,7 +2003,6 @@ network:
 # 第 6 步
 
 查找错误
-
 ```bash
 =>sudo netplan debug
 ```
@@ -1822,9 +2010,9 @@ network:
 # 第 7 步
 
 应用更改
-
 ```bash
 =>sudo netplan apply 提供静态 IP 地址的新方法
+```
 
 *** Linux 软件包管理
 
@@ -1855,28 +2043,29 @@ network:
 # UBUNTU 软件包管理
 
 # 使用 dpkg 安装软件包
-
 ```bash
 =>dpkg -i <package_name>
 ```
 
 # 当前软件包列表：
 
-列出 Ubuntu 服务器中所有当前软件包的命令是 =>dpkg -L
+列出 Ubuntu 服务器中所有当前软件包的命令是 =>`dpkg -L`
 
 # 软件包安装状态
 
 如果你需要知道任何软件包是否已安装，以下命令显示
-
 ```bash
 =>dpkg-get-selections <package_name>
 ```
-
 ```
 root@ubuntu-bionic ~]$ dpkg-get-selections git
+
 root@ubuntu-bionic ~]$ dpkg-get-selections postgresql
+
 root@ubuntu-bionic ~]$ dpkg-get-selections java
+
 dpkg: no packages matching java
+
 root@ubuntu-bionic ~]$ 
 ```
 
@@ -1884,46 +2073,64 @@ root@ubuntu-bionic ~]$
 
 使用此命令检查已安装软件包的详细信息
 
-=>sudo dpkg -s <package_name>
+=>`sudo dpkg -s <package_name>`
 
 # dpkg 的缺点：
 
 假设我们想安装下载的软件包 webmin.deb。我们将显示某些此类依赖问题，并且它在没有的情况下安装程序
-
 ```
 root@ubuntu-bionic ~]$ ls
+
 webmin_1920_all.deb
+
 root@ubuntu-bionic ~]$ dpkg -i webmin_1920_all.deb
+
 Selecting previously unselected package webmin.
+
 (Reading database: 65008 files and directories currently installed).
+
 Preparing to unpack webmin_1920_all.deb ...
+
 Unpacking webmin (1920) ...
+
 dpkg: dependency problems prevent configuration of webmin:
+
 webmin depends on libnet-ssleay-perl; however:
+
 Package libnet-ssleay-perl is not installed.
+
 webmin depends on libauthen-pam-perl; however:
+
 Package libauthen-pam-perl is not installed.
+
 webmin depends on libio-pty-perl; however:
+
 Package libio-pty-perl is not installed.
+
 webmin depends on apt-show-versions; however:
+
 Package apt-show-versions is not installed.
+
 webmin depends on python; however:
+
 Package python is not installed.
+
 dpkg: error processing package webmin (--install):
+
 dependency problems - leaving unconfigured
+
 Processing triggers for ureadhead (0.100.8-21) ...
+
 Processing triggers for systemd (237-ubuntu10.23) ...
+
 Errors were encountered while processing:
+
 webmin
+
 root@ubuntu-bionic ~]$ 
 ```
-
 要解决这个问题，我们可以使用在线软件包管理系统
-=>sudo apt-get install -f
-
-
-
-
+=>`sudo apt-get install -f`
 
 Tanvir Rahman
 
@@ -1932,7 +2139,6 @@ Tanvir Rahman
 # 移除软件包：
 
 使用此命令可以从系统中移除软件包
-
 ```
 =>dpkg -r <package_name>
 ```
@@ -1940,53 +2146,64 @@ Tanvir Rahman
 # 彻底删除软件包和配置文件：
 
 使用此命令可以完全删除软件包及其相关的配置文件
-
 ```
 =>dpkg -P <package_name>
 ```
 
 如果你发现一个文件并想知道它属于哪个软件包，请使用此命令
-
 ```
 =>dpkg -S <file_path>
 ```
+
+
 
 # UBUNTU $ CENTOS 管理员
 
 ```
 root@ubuntu-bionic:-# dpkg -S /bin/cp
+```
 coreutils:/bin/cp
+
+```
 root@ubuntu-bionic:-# dpkg -S /bin/cat
+```
 coreutils:/bin/cat
+
+```
 root@ubuntu-bionic:-# dpkg -S /bin/ping
+```
 iputils-ping:/bin/ping
+
+```
 root@ubuntu-bionic:-# _
 ```
 
 # 重新配置软件包：
 
-如果你在软件包配置时遇到任何问题，可以使用此命令重新配置软件包 =>dpkg-reconfigure <package_name>
+如果你在软件包配置时遇到任何问题，可以使用此命令重新配置软件包 =>`dpkg-reconfigure <package_name>`
 
 但要执行此操作你需要知道软件包的确切名称。它将回退安装过程并给你重新配置的机会。
 
 ```
 root@ubuntu-bionic: # dpkg-reconfigure webmin
+```
 Webmin 安装完成。你现在可以使用 root 密码以 root 身份登录 https://ubuntu-bionic:10000/，
 或者作为任何可以使用 sudo 运行命令的用户以 root 身份运行命令。
-root@ubuntu-bionic: # |
-```
 
+```
+root@ubuntu-bionic: # |
 ```
 
 # 使用 apt 安装软件包
 
-apt 工具是一个强大且免费的软件包管理命令行程序，它用于与 Ubuntu 的 APT（高级软件包工具）库配合，以执行新软件软件包的安装、删除现有软件软件包、升级现有软件软件包，甚至可以用于升级整个操作系统。
+`apt` 工具是一个强大且免费的软件包管理命令行程序，它用于与 Ubuntu 的 APT（高级软件包工具）库配合，以执行新软件软件包的安装、删除现有软件软件包、升级现有软件软件包，甚至可以用于升级整个操作系统。
 
-在 ubuntu 服务器或任何基于 Debian 的操作系统上，安装过程中会在 /etc/apt/sources.list 中填充一个存储库 URL，但你可以添加存储库。
+在 ubuntu 服务器或任何基于 Debian 的操作系统上，安装过程中会在 `/etc/apt/sources.list` 中填充一个存储库 URL，但你可以添加存储库。
 
-# 更新存储库：
+## 更新存储库：
 
 在安装任何软件包之前，你需要更新软件存储库。
+
 命令
 
 ```
@@ -1995,7 +2212,7 @@ apt 工具是一个强大且免费的软件包管理命令行程序，它用于�
 
 [你需要 root 权限来执行此操作]
 
-# 升级现有软件：
+## 升级现有软件：
 
 使用此命令将每个软件包升级到最新版本
 
@@ -2003,7 +2220,7 @@ apt 工具是一个强大且免费的软件包管理命令行程序，它用于�
 =>sudo apt upgrade
 ```
 
-# 更新 OS 发行版
+## 更新 OS 发行版
 
 使用此命令用于升级发行版，例如将 ubuntu 16.0 升级到 ubuntu 的最新版本
 
@@ -2011,7 +2228,7 @@ apt 工具是一个强大且免费的软件包管理命令行程序，它用于�
 =>sudo apt dist-upgrade
 ```
 
-# 安装软件包
+## 安装软件包
 
 使用此命令用于安装软件包
 
@@ -2022,13 +2239,14 @@ sudo apt install <package_name>
 ```
 
 例如
+
 要安装 vim 编辑器我们使用此命令
 
 ```
 sudo apt install vim
 ```
 
-# 移除软件包
+## 移除软件包
 
 使用此命令用于移除软件包
 
@@ -2037,13 +2255,14 @@ sudo apt remove <package_name>
 ```
 
 例如
+
 要移除 vim 编辑器我们使用此命令
 
 ```
 sudo apt remove vim
 ```
 
-[此命令将移除软件包但不会移除依赖项。要移除这些依赖项，使用此命令] 
+[此命令将移除软件包但不会移除依赖项。要移除这些依赖项，使用此命令]
 
 ```
 sudo apt autoremove
@@ -2051,13 +2270,13 @@ sudo apt autoremove
 
 # apt-cache 命令
 
-apt-cache 命令行工具用于搜索 apt 软件软件包缓存。简单来说，此工具用于搜索软件软件包、收集软件包信息并
+`apt-cache` 命令行工具用于搜索 apt 软件软件包缓存。简单来说，此工具用于搜索软件软件包、收集软件包信息并
 
 # UBUNTU $ CENTOS 管理员
 
 还用于搜索基于 Ubuntu 的系统中有哪些可供安装的软件包。
 
-# Apt-cache search 命令
+## Apt-cache search 命令
 
 ```
 =>sudo apt-cache search <package_name>
@@ -2065,17 +2284,17 @@ apt-cache 命令行工具用于搜索 apt 软件软件包缓存。简单来说�
 
 此命令显示所有程序将显示所有依赖于这些软件包的程序。假设你安装 gmail 软件包，此命令
 
-=>sudo apt-cache search gmailn 将显示所有依赖于这些软件包的软件包，如 'thunderbird'
+=>`sudo apt-cache search gmailn` 将显示所有依赖于这些软件包的软件包，如 'thunderbird'
 
-# 软件包详情
+## 软件包详情
 
-你也可以通过 apt 查看任何软件包的详情，就像 dpkg -s 命令一样
+你也可以通过 apt 查看任何软件包的详情，就像 `dpkg -s` 命令一样
 
 ```
 =>sudo apt-cache show vim
 ```
 
-# 查找未满足的依赖项：
+## 查找未满足的依赖项：
 
 此命令将查找未满足的依赖项
 
@@ -2083,7 +2302,7 @@ apt-cache 命令行工具用于搜索 apt 软件软件包缓存。简单来说�
 =>sudo apt unmet
 ```
 
-# 查找特定依赖项：
+## 查找特定依赖项：
 
 使用此命令查找软件包的依赖项
 
@@ -2091,7 +2310,7 @@ apt-cache 命令行工具用于搜索 apt 软件软件包缓存。简单来说�
 =>sudo apt depends
 ```
 
-# 查找反向依赖项：
+## 查找反向依赖项：
 
 使用此命令查找反向依赖项
 
@@ -2113,13 +2332,13 @@ sudo apt rdepends
 
 # Aptitude 软件包管理工具：
 
-有一个名为 aptitude 的新软件包管理工具，要使用它首先需要通过此命令安装
+有一个名为 `aptitude` 的新软件包管理工具，要使用它首先需要通过此命令安装
 
 ```
 =>apt install aptitude
 ```
 
-# 通过 aptitude 安装软件包：
+## 通过 aptitude 安装软件包：
 
 使用 aptitude 安装
 
@@ -2133,7 +2352,7 @@ aptitude install <package_name>
 aptitude install emacs
 ```
 
-# 通过 aptitude 搜索软件包：
+## 通过 aptitude 搜索软件包：
 
 使用此命令通过 aptitude 搜索任何软件包
 
@@ -2143,7 +2362,7 @@ aptitude search package_name
 
 # Tanvir Rahman
 
-aptitude 的主要优势是当你不带标志运行 aptitude 程序时
+`aptitude` 的主要优势是当你不带标志运行 aptitude 程序时
 
 ```
 aptitude
@@ -2157,11 +2376,12 @@ aptitude
 
 # Apt 存储库
 
-当我们使用 apt 命令安装或搜索软件包时，它将搜索在线存储库列表存储在 /etc/apt/sources.list 和 /etc/apt/sources.list.d/ 中
+当我们使用 apt 命令安装或搜索软件包时，它将搜索在线存储库列表存储在 `/etc/apt/sources.list` 和 `/etc/apt/sources.list.d/` 中
 
 # Tanvir Rahman
 
 例如：
+
 首先使用 vim 编辑器打开文件
 
 ```
@@ -2174,7 +2394,7 @@ aptitude
 deb http://archive.getdeb.net/ubuntu
 ```
 
-或者用户可以通过交互式命令添加存储库。使用 add-repository（或 symlink-add-repository）命令来添加存储库。你只需要按照下面的命令提供引用地址。
+或者用户可以通过交互式命令添加存储库。使用 `add-repository`（或 `symlink-add-repository`）命令来添加存储库。你只需要按照下面的命令提供引用地址。
 
 ```
 =>add-repository 'deb://archive.getdeb.net/ubuntu wily-deb'
@@ -2188,15 +2408,15 @@ deb http://archive.getdeb.net/ubuntu
 
 > # CENTOS 软件包管理
 
-Rpm（红帽软件包管理器）和 Yum（Yellowdog Updater）软件包管理工具基本上用于 Centos/Redhat、fedora 等操作系统。
+`Rpm`（红帽软件包管理器）和 `Yum`（Yellowdog Updater）软件包管理工具基本上用于 Centos/Redhat、fedora 等操作系统。
 
-类似于基于 Debian 的操作系统的 dpkg。rpm 是本地软件包管理工具（低级软件包管理工具）。而 Yum 是在线软件包管理工具（高级软件包管理工具）。Yum 类似于 ubuntu OS 中的 apt。
+类似于基于 Debian 的操作系统的 `dpkg`。`rpm` 是本地软件包管理工具（低级软件包管理工具）。而 `Yum` 是在线软件包管理工具（高级软件包管理工具）。`Yum` 类似于 ubuntu OS 中的 `apt`。
 
-就像 dpkg 一样，rpm 在安装软件可能会遇到依赖问题，而 yum 会自动搜索并安装它们。
+就像 `dpkg` 一样，`rpm` 在安装软件可能会遇到依赖问题，而 `yum` 会自动搜索并安装它们。
 
 # rpm 软件包管理
 
-安装软件包：
+## 安装软件包：
 
 使用此命令通过 rpm 安装软件包
 
@@ -2204,7 +2424,7 @@ Rpm（红帽软件包管理器）和 Yum（Yellowdog Updater）软件包管理�
 =>rpm -i <package_name>
 ```
 
-# 移除软件包
+## 移除软件包
 
 使用此命令通过 rpm 移除软件包
 
@@ -2213,10 +2433,6 @@ Rpm（红帽软件包管理器）和 Yum（Yellowdog Updater）软件包管理�
 ```
 
 [如果一个软件包依赖于另一个软件包，除非你移除依赖于它的软件包，否则你无法通过 rpm 命令移除它。例如，如果你想移除 `openssh` 软件包，因为 ‘open-ssh client’ 软件包依赖于它。首先你必须移除它。但如果你使用 yum 命令移除任何软件包，这将自动发生。]
-
-
-
-
 
 ## 强制安装包：
 
@@ -2288,7 +2504,7 @@ Rpm（红帽软件包管理器）和 Yum（Yellowdog Updater）软件包管理�
 =>rpm -q -a
 ```
 
-你可以通过此命令找到任何已安装的包 =>rpm -q -a | grep <packages_name> 示例
+你可以通过此命令找到任何已安装的包 =>`rpm -q -a | grep <packages_name>` 示例
 
 ```
 =>rpm -q -a | grep dhcp
@@ -2296,7 +2512,7 @@ Rpm（红帽软件包管理器）和 Yum（Yellowdog Updater）软件包管理�
 
 ## Yum 包管理：
 
-yum（Yellowdog Updater Modified）是一个更高级的包管理工具，你可以使用 yum 完成所有用 rpm 能够完成的操作。yumyum 使用了许多第三方仓库，通过解析它们的依赖问题来自动安装包。
+`yum`（Yellowdog Updater Modified）是一个更高级的包管理工具，你可以使用 yum 完成所有用 rpm 能够完成的操作。`yumyum` 使用了许多第三方仓库，通过解析它们的依赖问题来自动安装包。
 
 ## 查找包信息：
 
@@ -2322,7 +2538,7 @@ yum（Yellowdog Updater Modified）是一个更高级的包管理工具，你可
 =>yum install <package_name>
 ```
 
-此命令会请求确认。要自动安装，只需添加 -y 选项。
+此命令会请求确认。要自动安装，只需添加 `-y` 选项。
 
 ```
 =>yum install -y <package_name>
@@ -2336,11 +2552,12 @@ yum（Yellowdog Updater Modified）是一个更高级的包管理工具，你可
 =>yum remove <package_name>
 ```
 
-此命令会请求确认。要自动安装，只需添加 -y 选项。
+此命令会请求确认。要自动安装，只需添加 `-y` 选项。
 
 ```
 =>yum remove -y <package_name>
 ```
+
 或者
 
 ```
@@ -2399,7 +2616,7 @@ yum（Yellowdog Updater Modified）是一个更高级的包管理工具，你可
 =>yum update
 ```
 
-[yum 优于 apt 命令的主要优势之一是，在安装任何包之前，yum 会自动更新仓库]
+[`yum` 优于 `apt` 命令的主要优势之一是，在安装任何包之前，`yum` 会自动更新仓库]
 
 ## 列出所有组包：
 
@@ -2411,7 +2628,7 @@ yum（Yellowdog Updater Modified）是一个更高级的包管理工具，你可
 
 ## 安装组包：
 
-我们使用 groupinstall 安装特定的包组。
+我们使用 `groupinstall` 安装特定的包组。
 
 ```
 =>yum groupinstall <group package name>
@@ -2425,23 +2642,23 @@ yum（Yellowdog Updater Modified）是一个更高级的包管理工具，你可
 
 ## 更新组包：
 
-我们使用 groupupdate 更新特定的包组。
+我们使用 `groupupdate` 更新特定的包组。
 
-=>yum groupupdate <group package name>
+=>`yum groupupdate <group package name>`
 
 例如：
 
-=>yum groupupdate 'Basic Web Server'
+=>`yum groupupdate 'Basic Web Server'`
 
 ## 删除组包：
 
-我们使用 groupremove 删除特定的包组。
+我们使用 `groupremove` 删除特定的包组。
 
-=>yum groupremove <group package name>
+=>`yum groupremove <group package name>`
 
 例如：
 
-=>yum groupremove 'Basic Web Server'
+=>`yum groupremove 'Basic Web Server'`
 
 ## 列出启用的 yum 仓库：
 
@@ -2505,7 +2722,7 @@ yum（Yellowdog Updater Modified）是一个更高级的包管理工具，你可
 
 ## Yumdownloader：
 
-在 redhat/centos 系统中有一个名为downloader 的工具。该工具的作用是下载 rpm 文件。这意味着它只下载 rpm 文件但不安装。以下命令用于 rpm 文件
+在 redhat/centos 系统中有一个名为`downloader` 的工具。该工具的作用是下载 rpm 文件。这意味着它只下载 rpm 文件但不安装。以下命令用于 rpm 文件
 
 ```
 =>yumdownloader <package_name>
@@ -2532,16 +2749,18 @@ yum（Yellowdog Updater Modified）是一个更高级的包管理工具，你可
 ## Yum 仓库
 
 就像 ubuntu 包管理中的 'sources.list' 文件一样，也有存储仓库文件的地方。它位于 '/etc/yum.repos.d'
-我们可以使用 ls -s 命令列出所有文件。你会看到类似
 
-可能有多个 .repo 文件，如果你使用此命令查看文件内容
+我们可以使用 `ls -s` 命令列出所有文件。你会看到类似
+
+可能有多个 `.repo` 文件，如果你使用此命令查看文件内容
 
 ```
 =>cat repofile.repo
 ```
 
 示例
-=>cat CentOS-Base.repo
+
+=>`cat CentOS-Base.repo`
 
 如果你查看文件内部，它就像 'sources.list'。只是略有不同
 
@@ -2555,7 +2774,7 @@ yum（Yellowdog Updater Modified）是一个更高级的包管理工具，你可
 
 如果你愿意可以禁用 gpgcheck，因为仓库可能没有加密。
 
-在 /etc/yum.conf 有一个配置文件，通过更改配置，你可以自定义 yum 工具的操作。
+在 `/etc/yum.conf` 有一个配置文件，通过更改配置，你可以自定义 yum 工具的操作。
 
 ```
 keepcache=0 不保留缓存文件
@@ -2565,11 +2784,7 @@ keepcache=0 不保留缓存文件
 =>plugins=1 允许 yum 安装插件
 ```
 
-yum 使用不同的插件，其中一个是 fastest mirror。它寻找最快的镜像，以便用户能够尽可能快地找到包。
-
-
-
-
+`yum` 使用不同的插件，其中一个是 fastest mirror。它寻找最快的镜像，以便用户能够尽可能快地找到包。
 
 # 两种包管理系统的对比
 
@@ -2587,49 +2802,54 @@ yum 使用不同的插件，其中一个是 fastest mirror。它寻找最快的�
 | 安装包 | sudo aptitude install <pkg> | sudo rpm -i <pkg> / sudo dpkg -i <pkg> |
 | 移除包 | sudo apt remove <pkg> | sudo yum remove <pkg> / sudo dpkg -r <pkg> |
 | | sudo aptitude remove <pkg> | sudo yum erase <pkg> / rpm -e <pkg> |
-| 检查完整性 | sudo dpkg -V <pkg> | sudo rpm -V <pkg> |
-| 更新包/系统 | sudo apt update | sudo yum update |
-| 升级系统 | sudo apt upgrade | sudo yum upgrade |
+
+
+
+| 检查完整性 | `sudo dpkg -V <pkg>` | `sudo rpm -V <pkg>` |
+
+| 更新包/系统 | `sudo apt update` | `sudo yum update` |
+
+| 升级系统 | `sudo apt upgrade` | `sudo yum upgrade` |
 
 # YUM 服务器
 
-# 在不配置 FTP 服务器的情况下
+## 在不配置 FTP 服务器的情况下
 
 每个 centos 或 red hat 安装 DVD 都带有许多用于各种基础服务器设置的必要包。我们可以使用这些包来创建一个本地 yum 服务器，这样我们就可以安装带有相应依赖项的包。我们可以通过创建并配置 ftp 服务器来实现这一目标。或者，我们也可以可以在不创建任何 FTP 服务器的情况下创建 yum 服务器……如果你创建了 FTP 服务器，网络上的多个主机都可以访问你的 yum 服务器并拉取必要的包，但如果你在没有配置 FTP 服务器的情况下进行配置，则只有你自己可以使用你的本地 yum 服务器。
 
-# 第 1 步
+### 第 1 步
 
-我们将 cdrom 挂载到 /media 文件夹中
+我们将 cdrom 挂载到 `/media` 文件夹中
 
 ```bash
 => mount /dev/cdrom /media
 ```
 
-# 第 2 步
+### 第 2 步
 
-在 / 目录下创建一个名为 “myrepo”的目录
+在 `/` 目录下创建一个名为 `myrepo` 的目录
 
-# 第 3 步
+### 第 3 步
 
-将 cdrom 中的所有文件复制到 “myrepo” 中
+将 cdrom 中的所有文件复制到 `myrepo` 中
 
 ```bash
 => cp -r /media/* /myrepo
 ```
 
-# 第 4 步
+### 第 4 步
 
-进入 /etc/yum.repos.d
+进入 `/etc/yum.repos.d`
 
 ```bash
 [root@localhost ~]# cd /etc/yum.repos.d/
 ```
 
-[如果你只想保留本地仓库，可以删除文件夹中剩余的文件] 
+[如果你只想保留本地仓库，可以删除文件夹中剩余的文件]
 
-创建一个名为 “myrepo.repo”的文件
+创建一个名为 `myrepo.repo` 的文件
 
-# 第 5 步
+### 第 5 步
 
 ```bash
 =>vim myrepo.repo
@@ -2639,7 +2859,7 @@ enabled=1
 gpgcheck=0
 ```
 
-# 第 6 步
+### 第 6 步
 
 使用此命令更新
 
@@ -2647,7 +2867,7 @@ gpgcheck=0
 [root@localhost ~]# yum update --disablerepo="*" --enablerepo='myrepo'
 ```
 
-# 第 7 步
+### 第 7 步
 
 安装包
 
@@ -2655,67 +2875,76 @@ gpgcheck=0
 yum install --disablerepo="*" --enablerepo='myrepo' <package name>
 ```
 
-# 在带有 FTP 服务器的情况下
+## 在带有 FTP 服务器的情况下
 
 首先，我们必须安装一个文件服务器。为了安装它，我们必须先先安装一些依赖项，因为 rpm 不会安装依赖项。Vsftpd 是文件服务器包。这些包在 sr0 驱动器中，我们首先挂载它。
 
-# 第 1 步
+### 第 1 步
 
 ```bash
 =>mount /dev/sr0 /mnt
 =>cd /mnt/Packages
 ```
 
-# 第 2 步
+### 第 2 步
 
 为了正常工作，我们必须安装这些包是 vsftpd 的依赖项
 
-1) python-deltarpm
-2) createrepo
+1) `python-deltarpm`
 
-# 第 3 步
+2) `createrepo`
+
+### 第 3 步
 
 安装命令：
-=> rpm ivh -force -nodeps python-deltarpm*
+
+=> `rpm ivh -force -nodeps python-deltarpm*`
+
 或者创建仓库时，我们需要安装另一个包
-=> rpm -ivh -force -nodeps createrepo*
+
+=> `rpm -ivh -force -nodeps createrepo*`
+
 之后，我们安装 vsftpd 并设置文件服务器
 
-# 第 4 步
+### 第 4 步
 
-=> rpm -ivh -force -nodeps vsftpd*
-在安装 vsftpd 后，会自动创建 /var/ftp/pub 目录。在 pub 目录下，文件服务器中的所有文件都是公开的。在 pub 目录内部，我们创建一个名为 rhel7 的另一个目录（你可以将其命名为任何名称）。
+=> `rpm -ivh -force -nodeps vsftpd*`
+
+在安装 vsftpd 后，会自动创建 `/var/ftp/pub` 目录。在 pub 目录下，文件服务器中的所有文件都是公开的。在 pub 目录内部，我们创建一个名为 rhel7 的另一个目录（你可以将其命名为任何名称）。
 
 创建文件夹（如果尚未创建）
 
 ```bash
 =>mkdir -p /var/ftp/pub/rhel7
 ```
+
 现在将 sr0 中的所有内容复制到此文件夹中
 
-# 第 5 步
+### 第 5 步
 
 ```bash
 =>cp -rv /mnt/* /var/ftp/pub/rhel7/
 ```
 
-# 第 6 步
+### 第 6 步
 
-现在我们将创建配置文件。在此之前，我们必须从 /etc/yum.repos.d 文件夹中删除所有的 /etc 配置
+现在我们将创建配置文件。在此之前，我们必须从 `/etc/yum.repos.d` 文件夹中删除所有的 `/etc` 配置
 
 ```bash
 =>cd /etc/yum.repos.d
 =>rm -rf *
 ```
+
 使用 vim 编辑器创建一个文件
 
-# 第 7 步
+### 第 7 步
 
 ```bash
 =>vim rhel7.repo
 ```
 
 在文件中添加设置路径的行：
+
 在编辑器中
 
 ```
@@ -2726,12 +2955,13 @@ enabled=1
 gpgcheck=0
 ```
 
-# 第 8 步
+### 第 8 步
 
 现在我们使用包命令创建仓库是：
-=>createpo -v /var/ftp/pub/rhel7/Packages
 
-# 第 9 步
+=>`createpo -v /var/ftp/pub/rhel7/Packages`
+
+### 第 9 步
 
 ```bash
 => yum clean all
@@ -2741,11 +2971,11 @@ gpgcheck=0
 
 # APT 服务器
 
-# 在带有 APACHE WEB 服务器的情况下
+## 在带有 APACHE WEB 服务器的情况下
 
 就像 centros 一样，debian/Ubuntu 服务器也提供了制作本地包管理服务器的机会。在 debian 服务器或其他基于 debian 的服务器上，我们使用本地 APT 仓库。使用本地 APT 仓库可以节省大量带宽并让客户端从本地安装必要的包。
 
-# 第 1 步
+### 第 1 步
 
 以 root 用户登录并更新系统
 
@@ -2753,60 +2983,66 @@ gpgcheck=0
 => apt update && apt upgrade
 ```
 
-# 第 2 步
+### 第 2 步
 
 安装
 
-=>apt install build-essential
+=>`apt install build-essential`
 
-# 第 3 步
+### 第 3 步
 
 我们需要 web 服务器来提供包
 
-=>apt install apache2
+=>`apt install apache2`
 
-# 第 4 步
+### 第 4 步
 
 在浏览器中查看 web 服务器是否正在运行
 
-# 第 5 步
+### 第 5 步
 
-根据系统创建目录。例如，如果你使用 32 位系统创建 “i386”目录；对于 64 位系统使用 “amd64”目录。
+根据系统创建目录。例如，如果你使用 32 位系统创建 `i386` 目录；对于 64 位系统使用 `amd64` 目录。
 
 ```bash
 => mkdir /var/www/html/packages/amd64
 ```
 
-# 第 6 步
+### 第 6 步
 
 从 Debian 安装介质复制 DEB 包。我们需要逐个 DVD 复制到目标
 
 - 1) 挂载第一个 DVD
+
 ```bash
-=> mount /dev/cdrom 
+=> mount /dev/cdrom
 ```
-- 2) 使用此命令在目标位置复制所有 .deb 文件
+
+- 2) 使用此命令在目标位置复制所有 `.deb` 文件
+
 ```bash
 => find /media/cdrom/pool -name "*.deb" -exec cp {} /var/www/html/packages/amd64 \;
 ```
+
 - 3) 卸载 dvd，插入下一个 dvd 并重复上述操作
 
-# 第 7 步
+### 第 7 步
 
 两个过程并将所有包复制到目标。
 
-# 第 8 步
+### 第 8 步
 
 要验证这一点，访问浏览器访问 'http://localhost/packages/amd64' URL。你将在那里找到所有的包。
 
-# 第 9 步
+### 第 9 步
 
-进入 “var/www/html/packages/amd64”目录
+进入 `var/www/html/packages/amd64` 目录
 
 ```bash
 dpkg-scanpackages . /dev/null | gzip -9 > Packages.gz
 ```
+
 [Packages.gz – P 必须大大写]
+
 [取决于包的数量，这需要一些时间]
 
 示例输出：
@@ -2815,23 +3051,21 @@ dpkg-scanpackages: info: Wrote 1151 entries to output file.
 
 [我们创建了目录文件。但每当我们添加新包时都需要执行这个过程]
 
-# 第 10 步
+### 第 10 步
 
-编辑 /etc/apt/sources.list
+编辑 `/etc/apt/sources.list`
 
-1) "/etc/apt/sources.list" 包含所有仓库位置。我们必须删除[或注释掉所有在线仓库并在文件中添加此行]，并且我们需要为服务器添加一个标记以安装来自不可信任/不安全的仓库。
+1) `"/etc/apt/sources.list"` 包含所有仓库位置。我们必须删除[或注释掉所有在线仓库并在文件中添加此行]，并且我们需要为服务器添加一个标记以安装来自不可信任/不安全的仓库。
 
 ```bash
 =>vim /etc/apt/sources.list
 ```
+
 ```
 deb [allow-insecure=yes] file:/var/www/html/packages/amd64/
 ```
+
 [注意 amd64 后面必须有一个空格：amd64/<空格> ]
-
-
-
-
 
 Tanvir Rahman
 
@@ -2846,15 +3080,16 @@ Tanvir Rahman
 ## 第 5 步
 
 从 Debian 安装介质拷贝所有的 DEB 软件包
+
 Debian 服务器带有三张 DVD，它们包含不同的软件包。你必须逐一从所有 DVD 中复制到目标位置。
 
-- 1) 挂载第一张 DVD，搜索并拷贝所有的 *.deb 文件到 /packages/amd64
+- 1) 挂载第一张 DVD，搜索并拷贝所有的 `*.deb` 文件到 `/packages/amd64`
 
 ```
 => mount /dev/cdrom/media/cdrom
 ```
 
-- 2) 使用此命令搜索并拷贝所有 .deb 文件到目标位置
+- 2) 使用此命令搜索并拷贝所有 `.deb` 文件到目标位置
 
 ```
 => find /media/cdrom/pool -name "*.deb" -exec cp {} /packages/amd64 \;
@@ -2866,7 +3101,7 @@ Debian 服务器带有三张 DVD，它们包含不同的软件包。你必须逐
 
 ## 第 6 步
 
-进入 "packages/amd64" 目录。
+进入 `"packages/amd64"` 目录。
 
 ```
 =>cd /packages/amd64
@@ -2894,9 +3129,9 @@ dpkg-scanpackages: info: Wrote 1151 entries to output Packages file.
 
 ## 第 8 步
 
-编辑 /etc/apt/sources.list
+编辑 `/etc/apt/sources.list`
 
-- 1) "/etc/apt/sources.list" 所有的仓库位置。我们必须删除 [或注释掉所有在线仓库并在文件中添加此行]。而且我们必须添加一个标记来强制服务器从不可信的/不安全的仓库安装软件包。
+- 1) `"/etc/apt/sources.list"` 所有的仓库位置。我们必须删除 [或注释掉所有在线仓库并在文件中添加此行]。而且我们必须添加一个标记来强制服务器从不可信的/不安全的仓库安装软件包。
 
 ```
 =>vim /etc/apt/sources.list
@@ -2945,38 +3180,66 @@ deb [allow-insecure=yes] file:/packages/amd64 /
 ```
 => ps aux | egrep '\['
 ```
+
 root@localhost ~# ps aux | egrep '\['
+
 root      2 0.0 0.0 0 ? S 16:11 0:00 [kthread]
+
 root      3 0.0 0.0 0 ? S 16:11 0:00 [ksoftirqd/0]
+
 root      5 0.0 0.0 0 ? S< 16:11 0:00 [kworker/u2:0H]
+
 root      6 0.0 0.0 0 ? S 16:11 0:00 [worker/u256:0]
+
 root      7 0.0 0.0 0 ? S 16:11 0:00 [migration/0]
+
 root      8 0.0 0.0 0 ? S 16:12 0:02 [rcu-sched]
+
 root      9 0.0 0.0 0 ? R 16:11 0:00 [webback]
+
 root     10 0.0 0.0 0 ? S< 16:11 0:00 [lru-add-drain]
+
 root     11 0.0 0.0 0 ? S 16:11 0:00 [watchdog/0]
+
 root     13 0.0 0.0 0 ? S 16:11 0:00 [kdevtmpfs]
+
 root     14 0.0 0.0 0 ? S< 16:11 0:00 [netns]
+
 root     15 0.0 0.0 0 ? S 16:11 0:00 [kthreaskd]
+
 root     16 0.0 0.0 0 ? S 16:11 0:00 [webback]
+
 root     17 0.0 0.0 0 ? S 16:11 0:00 [kintegrityd]
+
 root     18 0.0 0.0 0 ? S< 16:11 0:00 [bioset]
+
 root     19 0.0 0.0 0 ? S 16:11 0:00 [bioset]
+
 root     20 0.0 0.0 0 ? S 16:11 0:00 [bioset]
+
 root     21 0.0 0.0 0 ? S 16:11 0:00 [kbockld]
+
 root     22 0.0 0.0 0 ? S 16:11 0:00 [md]
+
 root     23 0.0 0.0 0 ? S< 16:11 0:00 [cdac-poller]
+
 root     24 0.0 0.0 0 ? S 16:11 0:00 [watchdogd]
+
 root     30 0.0 0.0 0 ? S 16:11 0:00 [kswapd]
+
 root     31 0.0 0.0 0 ? SN 16:11 0:00 [ksmsd]
+
 这些进程都是内核进程。其中一些对系统管理员非常重要。例如：
+
 - kthread 管理内核线程
+
 - md/0 管理 raid 子系统
+
 - kswapd 管理系统可用交换空间[这通常不会影响系统管理员。有时发生内存溢出，你会在 'top' 命令的列表中看到 kswapd 进程]
 
 ## 内核模块
 
-内核模块位于 '/lib/modules' 目录下
+内核模块位于 `'/lib/modules'` 目录下
 
 ```
 [root@localhost modules]# ls
@@ -2989,6 +3252,7 @@ tanvirrahman@pop-os:/lib/modules> ls
 5.0.0-21-generic
 tanvirrahman@pop-os:/lib/modules>
 ```
+
 此目录下有多个目录，每个目录对应内核。目录下有很多文件对应不同的设备。
 
 ```
@@ -3000,7 +3264,8 @@ build alias dep.dep mod softupdates extra.alias.bin builtin.bin devname networki
 tanvirrahman@pop-os:/lib/modules$ ls
 build alias dep.dep devnane softdep initrd misc.alias.bin builtin.bin dep.bin order vdso
 ```
-内核模块根据硬件制造商在启动时加载。你可以管理哪些驱动会被加载，哪些不加载。要找到已加载的模型使用 ‘lsmod’ 命令。[你需要 root 用户权限]
+
+内核模块根据硬件制造商在启动时加载。你可以管理哪些驱动会被加载，哪些不加载。要找到已加载的模型使用 `lsmod` 命令。[你需要 root 用户权限]
 
 ```
 root@localhost 3.10.0-957.el7.x86_64]# lsmod
@@ -3020,7 +3285,8 @@ nf_conntrack_ipv6    18935 7
 nf_defrag_ipv6        35104 4
 nf_nat_ipv6          14131 1
 ```
-添加任何内核模块我们使用 modprobe。如果想向系统添加蓝牙模块，使用此命令。
+
+添加任何内核模块我们使用 `modprobe`。如果想向系统添加蓝牙模块，使用此命令。
 
 ```
 root@localhost 3.10.0-957.el7.x86_64]# modprobe bluetooth
@@ -3029,7 +3295,9 @@ root@localhost 3.10.0-957.el7.x86_64]#
 
 ## 虚拟文件
 
-文件有两种类型：一种是磁盘上的真实文件（如 '/boot'），另一种是内核创建的伪文件。它对于系统管理员访问内部变量有用。目录内部有很多数字，这些都是进程，因此 /proc/ 会为你显示这些细节。
+文件有两种类型：一种是磁盘上的真实文件（如 `'/boot'`），另一种是内核创建的伪文件。它对于系统管理员访问内部变量有用。目录内部有很多数字，这些都是进程，因此 `/proc/` 会为你显示这些细节。
+
+
 
 ```
 root@pop-os:~/proc/
@@ -3062,11 +3330,7 @@ root@pop-os:~/proc/
 1125 1391 1506 1846 1946 2056 2166 2368 2468 2608
 ```
 
-
-
-
-
-# SSH: 安全外壳 (Secure Shell Shell)
+# SSH: 安全外壳 Secure Shell
 
 ## 什么是 SSH?
 
@@ -3075,31 +3339,30 @@ SSH 是一种用于安全网络服务的加密协议。
 ## 用途
 
 - 用于远程登录
-- 安全文件传输 (SFTP/SCP)
+- 安全文件传输 `SFTP`/`SCP`
 - 端口转发
-- 用于加密代理进行浏览的 SOCKS 协议
-- 通过 SSHFS 进行安全的远程文件挂载
+- 用于加密代理进行浏览的 `SOCKS` 协议
+- 通过 `SSHFS` 进行安全的远程文件挂载
 
 ## 使用密码 SSH 登录
 
 要求：
-
 - 我们有两台服务器
-1) server1, ip: 192.168.0.10/24
-2) server2, ip : 192.168.0.11/24
+  1) `server1`, ip: `192.168.0.10/24`
+  2) `server2`, ip : `192.168.0.11/24`
 
-## 第 1 步
+### 第 1 步
 
-我们需要 server2 上安装 openssh-server [在 centos 服务器中实际上是预装的]
+我们需要 `server2` 上安装 `openssh-server` [在 centos 服务器中实际上是预装的]
 
 ```bash
 =>yum update -y
 =>yum install sshd -y
 ```
 
-## 第 2 步
+### 第 2 步
 
-2) 从 server1 使用命令并输入密码
+2) 从 `server1` 使用命令并输入密码
 
 ```bash
 =>ssh root@192.168.0.11
@@ -3123,9 +3386,9 @@ Last login: Sat Sep 7 13:54:57 2019 from 192.168.0.6
 [root@server2 ~]#
 ```
 
-## 第 3 步
+### 第 3 步
 
-我们已经登录到 server 2。使用 ifconfig hostnamectl 进行检查。
+我们已经登录到 `server 2`。使用 `ifconfig` `hostnamectl` 进行检查。
 
 ## UBUNTU $ CENTOS 管理员
 
@@ -3150,12 +3413,14 @@ inet6 fe80::59c2:fdc0 scope link valid
 ### 第 1 步
 
 检查是否存在现有密钥
-=> ls -l ~/.ssh
+
+=> `ls -l ~/.ssh`
 
 ### 第 2 步
 
-从 server1 上创建密钥对
-语法：ssh-keygen -t <algorithm> -b <size>
+从 `server1` 上创建密钥对
+
+语法：`ssh-keygen -t <algorithm> -b <size>`
 
 ```bash
 [root@server1 ~]#root@server1 ~# ssh-keygen -t rsa -b 4096
@@ -3171,13 +3436,14 @@ The key's randomart is:
 RSA 4096
 ...
 ```
+
 [现在它会要求你输入密码短，我们先跳过，稍后讨论]
 
 ### 第 3 步
 
-我们需要将公钥发送到 server2。我们可以手动完成，也可以使用这条命令
+我们需要将公钥发送到 `server2`。我们可以手动完成，也可以使用这条命令
 
-=>ssh-copy-id server2@192.168.0.11
+=>`ssh-copy-id server2@192.168.0.11`
 
 ```bash
 [root@server1 ~]#
@@ -3195,7 +3461,7 @@ Last login: Sat Sep 7 15:29:15 2019 from 192.168.0.6
 [root@server2 ~]#
 ```
 
-## 第 4 步
+### 第 4 步
 
 登录
 
@@ -3205,9 +3471,9 @@ Last login: Sat Sep 7 15:29:15 2019 from 192.168.0.6
 
 这次不会询问密码。
 
-## 什么是密码短语 (Passphrase)?
+## 什么是密码短语 Passphrase?
 
-有时你会使用 SSH 连接，有时不需要。例如你可以创建一个 cron 任务自动连接到服务器进行数据备份。当你使用 SSH 时，使用密码短语是个好主意，但为了自动化你不应该使用。
+有时你会使用 SSH 连接，有时不需要。例如你可以创建一个 `cron` 任务自动连接到服务器进行数据备份。当你使用 SSH 时，使用密码短语是个好主意，但为了自动化你不应该使用。
 
 ## 使用 SCP 复制文件（安全拷贝）
 
@@ -3217,7 +3483,7 @@ Last login: Sat Sep 7 15:29:15 2019 from 192.168.0.6
 scp <local_file> <destination>
 ```
 
-我们将从 server1 发送名为 'test.txt' 的文件到 server2。
+我们将从 `server1` 发送名为 '`test.txt`' 的文件到 `server2`。
 
 ```bash
 root@server2~
@@ -3244,7 +3510,7 @@ sftp> get redhat-release
 
 # 端口转发
 
-端口转发允许从一个系统访问另一个系统。例如你在 server2 的 80 端口运行了一个 Web 服务器，你可以使用此命令通过浏览器访问它
+端口转发允许从一个系统访问另一个系统。例如你在 `server2` 的 80 端口运行了一个 Web 服务器，你可以使用此命令通过浏览器访问它
 
 ```bash
 =>curl localhost
@@ -3270,7 +3536,8 @@ font-weight: 200;
 }
 </style>
 ```
-但你可以使用 server1 浏览它。你必须建立端口转发连接。
+
+但你可以使用 `server1` 浏览它。你必须建立端口转发连接。
 
 ## UBUNTU $ CENTOS 管理员
 
@@ -3281,7 +3548,7 @@ curl: (7) Failed connect to 192.168.0.11:80; No route to host
 [root@server1 ~]#
 ```
 
-所以我们将 server2 的 80 端口转发到 server1 的 8000 端口，就可以通过 server1 的 8000 端口命令访问 server2 中 Web 服务器的内容：
+所以我们将 `server2` 的 80 端口转发到 `server1` 的 8000 端口，就可以通过 `server1` 的 8000 端口命令访问 `server2` 中 Web 服务器的内容：
 
 ```bash
 =>ssh -L 8000:localhost:80 root@192.168.0.11
@@ -3299,21 +3566,17 @@ Last login: Sat Sep 7 16:44:29 2019 from 192.168.0.6
 [root@server1 ~]#
 ```
 
-它将转发端口并让我们从 server1 访问资源。这对于访问防火墙后的文件非常有用。
+它将转发端口并让我们从 `server1` 访问资源。这对于访问防火墙后的文件非常有用。
 
 ```bash
 [root@server1 ~]# 
 [root@server1 ~]# curl localhost:8000
 ```
 
-
-
-
-
 - → 你可以将端口从 22 更改为你想要的任何端口，但默认是 22
 - → 某些云服务器的密码验证被设置为 no，因为它们使用了公私钥对，这样更安全
 - → X11 转发默认设置为 yes。如果你想通过图形界面进行工作，这将让你实现。
-- → 允许 root 登录（Permit root login）设置为 no。它应该始终设置为 no，因为 root 登录会带来重大的安全风险。
+- → 允许 root 登录 `Permit root login` 设置为 no。它应该始终设置为 no，因为 root 登录会带来重大的安全风险。
 
 # TELNET
 
@@ -3321,33 +3584,33 @@ Last login: Sat Sep 7 16:44:29 2019 from 192.168.0.6
 
 ## 什么是 Telnet？
 
-Telnet 是一种网络协议，用于基于 TCP/IP 的网络连接远程计算机。它默认使用端口 23。它基本上用于远程管理。当你使用 telnet 连接到另一台计算机时，它将允许你从本地系统与主机进行通信。
+`Telnet` 是一种网络协议，用于基于 TCP/IP 的网络连接远程计算机。它默认使用端口 23。它基本上用于远程管理。当你使用 `telnet` 连接到另一台计算机时，它将允许你从本地系统与主机进行通信。
 
 ## Telnet 的问题
 
-Telnet 存在一些安全漏洞，因为：
-
+`Telnet` 存在一些安全漏洞，因为：
 - 它以明文格式传输登录数据。它没有加密。所有内容都以明文形式发送。
-- 不建议在公共网络（WAN）上使用 telnet
-- 更好的替代方案是 SSH，它是加密的。
+- 不建议在公共网络 `WAN` 上使用 `telnet`
+- 更好的替代方案是 `SSH`，它是加密的。
 
-# 安装 Telnet 服务 (Centos)
+# 安装 Telnet 服务 Centos
 
-## 第 1 
+## 第 1
 
-- 1) 安装 telnet 客户端和 telnet 服务
-=> yum install telnet telnet-server
+- 1) 安装 `telnet` 客户端和 `telnet-server` 服务
 
-## 第 2 
+=> `yum install telnet telnet-server`
 
-- 2) 在启动时启用 telnet 服务
+## 第 2
+
+- 2) 在启动时启用 `telnet` 服务
 
 ```
 => systemctl enable telnet.socket
 => systemctl start telnet.socket
 ```
 
-## 第 4 
+## 第 4
 
 - 3) 在防火墙中启用 Telnet
 
@@ -3356,7 +3619,7 @@ Telnet 存在一些安全漏洞，因为：
 => firewall-cmd --reload
 ```
 
-## 第 5 
+## 第 5
 
 - 4) 创建用户 [默认禁用 root 登录]
 
@@ -3367,14 +3630,15 @@ Telnet 存在一些安全漏洞，因为：
 
 服务器端配置到此
 
-# 安装 Telnet 客户端 (centos)
+# 安装 Telnet 客户端 centos
 
-## 第 1 
+## 第 1
 
-- 1) 安装 telnet 客户端
-=> yum install telnet
+- 1) 安装 `telnet` 客户端
 
-## 第 2 
+=> `yum install telnet`
+
+## 第 2
 
 - 2) 连接到系统
 
@@ -3394,16 +3658,18 @@ Telnet 存在一些安全漏洞，因为：
 
 # Tanvir Rahman
 
-## 第 4 
+## 第 4
 
 - 4) 在防火墙中启用 Telnet。Telnet 工作在端口 23，因此添加该端口。
+
+
 
 ```
 => ufw allow 23
 => ufw reload
 ```
 
-[ufw] 是用于 ubuntu/debian 服务器的防火墙]
+`[ufw]` 是用于 ubuntu/debian 服务器的防火墙
 
 [默认禁用 root 登录]
 
@@ -3411,12 +3677,15 @@ Telnet 存在一些安全漏洞，因为：
 
 # 安装 Telnet 客户端 (Ubuntu)
 
-## 第 1 
+## 第 1 步
 
 - 1) 安装 telnet 客户端
-=> apt install telnet -y
 
-## 第 2 
+```
+=> apt install telnet -y
+```
+
+## 第 2 步
 
 - 2) 连接到系统
 
@@ -3469,1366 +3738,1991 @@ sr0               11:0   1 1024M 0 rom
 sr1               11:1   1 1024M 0 rom
 ```
 
-所以我们有块设备 sdb 和 sdc，都是 30 GB，而且它们是完全空的。它们只是原始磁盘。所以这些是尚未进行任何分区的块设备。表格中的交换 分区作为虚拟内存来支持内存，在内存不足的情况下，它可以帮助防止内存溢出。在块设备中创建分区的命令是：
+所以我们有块设备 `sdb` 和 `sdc`，都是 30 GB，而且它们是完全空的。它们只是原始磁盘。所以这些是尚未进行任何分区的块设备。表格中的交换 分区作为虚拟内存来支持内存，在内存不足的情况下，它可以帮助防止内存溢出。在块设备中创建分区的命令是：
 
+```
 => sudo fdisk /dev/sdb
+```
 
-然后查看命令，我们需要输入 'm'
+然后查看命令，我们需要输入 `'m'`
 
 # 命令 (m 获取帮助): m
+
 命令操作
 
 a 切换启动项
+
 b 打印分区
+
 c 显示分区
+
 d 删除分区
+
 e 使用扩展分区
+
 f 打印分区表
+
 g 创建 GPT 分区表
+
 h 交互式帮助
+
 i 忽略签名
+
 j 更改签名类型
+
 m 帮助
+
 n 新分区
+
 o 创建主分区表
+
 p 打印分区表
+
 q 退出不保存更改
+
 r 标记扇区
+
 s 切换类型
+
 t 更改分区类型
+
 u 更改系统标识
+
 v 显示分区表并退出
+
 x 退出不保存更改
+
 y 写入更改并退出
+
 z 退出并重置
 
 分区类型列表：
-7 Linux
-8 Linux-swap
-8e LVM
-9 HP-Linux
-81 NTFS
-82 Linux9
-82 Linux
-83 Solaris
-84 Solaris
-85 Solaris
-86 Linux
-17 Linux
-18 Linux
-19 Linux
-20 Linux
-21 Linux
-22 Linux
-23 Linux
-24 Linux
-25 Linux
-26 Linux
-27 Linux
-28 Linux
-29 Linux
-30 Linux
-31 Linux
-32 Linux
-33 Linux
-34 Linux
-35 Linux
-36 Linux
-37 Linux
-38 Linux
-39 Linux
-40 Linux
-41 Linux
-42 Linux
-43 Linux
-44 Linux
-45 Linux
-46 Linux
-47 Linux
-48 Linux
-49 Linux
-50 Linux
-51 Linux
-52 Linux
-53 Linux
-54 Linux
-55 Linux
-56 Linux
-57 Linux
-58 Linux
-59 Linux
-60 Linux
-61 Linux
-62 Linux
-63 Linux
-64 Linux
-65 Linux
-66 Linux
-67 Linux
-68 Linux
-69 Linux
-70 Linux
-71 Linux
-72 Linux
-73 Linux
-74 Linux
-75 Linux
-76 Linux
-77 Linux
-78 Linux
-79 Linux
-80 Linux
-81 Linux
-82 Linux
-83 Linux
-84 Linux
-85 Linux
-86 Linux
-87 Linux
-88 Linux
-89 Linux
-90 Linux
-91 Linux
-92 Linux
-93 Linux
-94 Linux
-95 Linux
-96 Linux
-97 Linux
-98 Linux
-99 Linux
-a 0 Linux
-a 1 Linux
-a 2 Linux
-a 3 Linux
-a 4 Linux
-a 5 Linux
-a 6 Linux
-a 7 Linux
-a 8 Linux
-a 9 Linux
-a a Linux
-a b Linux
-a c Linux
-a d Linux
-a e Linux
-a f Linux
-a g Linux
-a h Linux
-a i Linux
-a j Linux
-a k Linux
-a l Linux
-a m Linux
-a n Linux
-a o Linux
-a p Linux
-a q Linux
-a r Linux
-a s Linux
-a t Linux
-a u Linux
-a v Linux
-a w Linux
-a x Linux
-a y Linux
-a z Linux
-b 0 Linux
-b 1 Linux
-b 2 Linux
-b 3 Linux
-b 4 Linux
-b 5 Linux
-b 6 Linux
-b 7 Linux
-b 8 Linux
-b 9 Linux
-b a Linux
-b b Linux
-b c Linux
-b d Linux
-b e Linux
-b f Linux
-b g Linux
-b h Linux
-b i Linux
-b j Linux
-b k Linux
-b l Linux
-b m Linux
-b n Linux
-b o Linux
-b p Linux
-b q Linux
-b r Linux
-b s Linux
-b t Linux
-b u Linux
-b v Linux
-b w Linux
-b x Linux
-b y Linux
-b z Linux
-c 0 Linux
-c 1 Linux
-c 2 Linux
-c 3 Linux
-c 4 Linux
-c 5 Linux
-c 6 Linux
-c 7 Linux
-c 8 Linux
-c 9 Linux
-c a Linux
-c b Linux
-c c Linux
-c d Linux
-c e Linux
-c f Linux
-c g Linux
-c h Linux
-c i Linux
-c j Linux
-c k Linux
-c l Linux
-c m Linux
-c n Linux
-c o Linux
-c p Linux
-c q Linux
-c r Linux
-c s Linux
-c t Linux
-c u Linux
-c v Linux
-c w Linux
-c x Linux
-c y Linux
-c z Linux
-d 0 Linux
-d 1 Linux
-d 2 Linux
-d 3 Linux
-d 4 Linux
-d 5 Linux
-d 6 Linux
-d 7 Linux
-d 8 Linux
-d 9 Linux
-d a Linux
-d b Linux
-d c Linux
-d d Linux
-d e Linux
-d f Linux
-d g Linux
-d h Linux
-d i Linux
-d j Linux
-d k Linux
-d l Linux
-d m Linux
-d n Linux
-d o Linux
-d p Linux
-d q Linux
-d r Linux
-d s Linux
-d t Linux
-d u Linux
-d v Linux
-d w Linux
-d x Linux
-d y Linux
-d z Linux
-e 0 Linux
-e 1 Linux
-e 2 Linux
-e 3 Linux
-e 4 Linux
-e 5 Linux
-e 6 Linux
-e 7 Linux
-e 8 Linux
-e 9 Linux
-e a Linux
-e b Linux
-e c Linux
-e d Linux
-e e Linux
-e f Linux
-e g Linux
-e h Linux
-e i Linux
-e j Linux
-e k Linux
-e l Linux
-e m Linux
-e n Linux
-e o Linux
-e p Linux
-e q Linux
-e r Linux
-e s Linux
-e t Linux
-e u Linux
-e v Linux
-e w Linux
-e x Linux
-e y Linux
-e z Linux
-f 0 Linux
-f 1 Linux
-f 2 Linux
-f 3 Linux
-f 4 Linux
-f 5 Linux
-f 6 Linux
-f 7 Linux
-f 8 Linux
-f 9 Linux
-f a Linux
-f b Linux
-f c Linux
-f d Linux
-f e Linux
-f f Linux
-f g Linux
-f h Linux
-f i Linux
-f j Linux
-f k Linux
-f l Linux
-f m Linux
-f n Linux
-f o Linux
-f p Linux
-f q Linux
-f r Linux
-f s Linux
-f t Linux
-f u Linux
-f v Linux
-f w Linux
-f x Linux
-f y Linux
-f z Linux
-g 0 Linux
-g 1 Linux
-g 2 Linux
-g 3 Linux
-g 4 Linux
-g 5 Linux
-g 6 Linux
-g 7 Linux
-g 8 Linux
-g 9 Linux
-g a Linux
-g b Linux
-g c Linux
-g d Linux
-g e Linux
-g f Linux
-g g Linux
-g h Linux
-g i Linux
-g j Linux
-g k Linux
-g l Linux
-g m Linux
-g n Linux
-g o Linux
-g p Linux
-g q Linux
-g r Linux
-g s Linux
-g t Linux
-g u Linux
-g v Linux
-g w Linux
-g x Linux
-g y Linux
-g z Linux
-h 0 Linux
-h 1 Linux
-h 2 Linux
-h 3 Linux
-h 4 Linux
-h 5 Linux
-h 6 Linux
-h 7 Linux
-h 8 Linux
-h 9 Linux
-h a Linux
-h b Linux
-h c Linux
-h d Linux
-h e Linux
-h f Linux
-h g Linux
-h h Linux
-h i Linux
-h j Linux
-h k Linux
-h l Linux
-h m Linux
-h n Linux
-h o Linux
-h p Linux
-h q Linux
-h r Linux
-h s Linux
-h t Linux
-h u Linux
-h v Linux
-h w Linux
-h x Linux
-h y Linux
-h z Linux
-i 0 Linux
-i 1 Linux
-i 2 Linux
-i 3 Linux
-i 4 Linux
-i 5 Linux
-i 6 Linux
-i 7 Linux
-i 8 Linux
-i 9 Linux
-i a Linux
-i b Linux
-i c Linux
-i d Linux
-i e Linux
-i f Linux
-i g Linux
-i h Linux
-i i Linux
-i j Linux
-i k Linux
-i l Linux
-i m Linux
-i n Linux
-i o Linux
-i p Linux
-i q Linux
-i r Linux
-i s Linux
-i t Linux
-i u Linux
-i v Linux
-i w Linux
-i x Linux
-i y Linux
-i z Linux
-j 0 Linux
-j 1 Linux
-j 2 Linux
-j 3 Linux
-j 4 Linux
-j 5 Linux
-j 6 Linux
-j 7 Linux
-j 8 Linux
-j 9 Linux
-j a Linux
-j b Linux
-j c Linux
-j d Linux
-j e Linux
-j f Linux
-j g Linux
-j h Linux
-j i Linux
-j j Linux
-j k Linux
-j l Linux
-j m Linux
-j n Linux
-j o Linux
-j p Linux
-j q Linux
-j r Linux
-j s Linux
-j t Linux
-j u Linux
-j v Linux
-j w Linux
-j x Linux
-j y Linux
-j z Linux
-k 0 Linux
-k 1 Linux
-k 2 Linux
-k 3 Linux
-k 4 Linux
-k 5 Linux
-k 6 Linux
-k 7 Linux
-k 8 Linux
-k 9 Linux
-k a Linux
-k b Linux
-k c Linux
-k d Linux
-k e Linux
-k f Linux
-k g Linux
-k h Linux
-k i Linux
-k j Linux
-k k Linux
-k l Linux
-k m Linux
-k n Linux
-k o Linux
-k p Linux
-k q Linux
-k r Linux
-k s Linux
-k t Linux
-k u Linux
-k v Linux
-k w Linux
-k x Linux
-k y Linux
-k z Linux
-l 0 Linux
-l 1 Linux
-l 2 Linux
-l 3 Linux
-l 4 Linux
-l 5 Linux
-l 6 Linux
-l 7 Linux
-l 8 Linux
-l 9 Linux
-l a Linux
-l b Linux
-l c Linux
-l d Linux
-l e Linux
-l f Linux
-l g Linux
-l h Linux
-l i Linux
-l j Linux
-l k Linux
-l l Linux
-l m Linux
-l n Linux
-l o Linux
-l p Linux
-l q Linux
-l r Linux
-l s Linux
-l t Linux
-l u Linux
-l v Linux
-l w Linux
-l x Linux
-l y Linux
-l z Linux
-m 0 Linux
-m 1 Linux
-m 2 Linux
-m 3 Linux
-m 4 Linux
-m 5 Linux
-m 6 Linux
-m 7 Linux
-m 8 Linux
-m 9 Linux
-m a Linux
-m b Linux
-m c Linux
-m d Linux
-m e Linux
-m f Linux
-m g Linux
-m h Linux
-m i Linux
-m j Linux
-m k Linux
-m l Linux
-m m Linux
-m n Linux
-m o Linux
-m p Linux
-m q Linux
-m r Linux
-m s Linux
-m t Linux
-m u Linux
-m v Linux
-m w Linux
-m x Linux
-m y Linux
-m z Linux
-n 0 Linux
-n 1 Linux
-n 2 Linux
-n 3 Linux
-n 4 Linux
-n 5 Linux
-n 6 Linux
-n 7 Linux
-n 8 Linux
-n 9 Linux
-n a Linux
-n b Linux
-n c Linux
-n d Linux
-n e Linux
-n f Linux
-n g Linux
-n h Linux
-n i Linux
-n j Linux
-n k Linux
-n l Linux
-n m Linux
-n n Linux
-n o Linux
-n p Linux
-n q Linux
-n r Linux
-n s Linux
-n t Linux
-n u Linux
-n v Linux
-n w Linux
-n x Linux
-n y Linux
-n z Linux
-o 0 Linux
-o 1 Linux
-o 2 Linux
-o 3 Linux
-o 4 Linux
-o 5 Linux
-o 6 Linux
-o 7 Linux
-o 8 Linux
-o 9 Linux
-o a Linux
-o b Linux
-o c Linux
-o d Linux
-o e Linux
-o f Linux
-o g Linux
-o h Linux
-o i Linux
-o j Linux
-o k Linux
-o l Linux
-o m Linux
-o n Linux
-o o Linux
-o p Linux
-o q Linux
-o r Linux
-o s Linux
-o t Linux
-o u Linux
-o v Linux
-o w Linux
-o x Linux
-o y Linux
-o z Linux
-p 0 Linux
-p 1 Linux
-p 2 Linux
-p 3 Linux
-p 4 Linux
-p 5 Linux
-p 6 Linux
-p 7 Linux
-p 8 Linux
-p 9 Linux
-p a Linux
-p b Linux
-p c Linux
-p d Linux
-p e Linux
-p f Linux
-p g Linux
-p h Linux
-p i Linux
-p j Linux
-p k Linux
-p l Linux
-p m Linux
-p n Linux
-p o Linux
-p p Linux
-p q Linux
-p r Linux
-p s Linux
-p t Linux
-p u Linux
-p v Linux
-p w Linux
-p x Linux
-p y Linux
-p z Linux
-q 0 Linux
-q 1 Linux
-q 2 Linux
-q 3 Linux
-q 4 Linux
-q 5 Linux
-q 6 Linux
-q 7 Linux
-q 8 Linux
-q 9 Linux
-q a Linux
-q b Linux
-q c Linux
-q d Linux
-q e Linux
-q f Linux
-q g Linux
-q h Linux
-q i Linux
-q j Linux
-q k Linux
-q l Linux
-q m Linux
-q n Linux
-q o Linux
-q p Linux
-q q Linux
-q r Linux
-q s Linux
-q t Linux
-q u Linux
-q v Linux
-q w Linux
-q x Linux
-q y Linux
-q z Linux
-r 0 Linux
-r 1 Linux
-r 2 Linux
-r 3 Linux
-r 4 Linux
-r 5 Linux
-r 6 Linux evenr 7 Linux
-r 8 Linux
-r 9 Linux
-r a Linux
-r b Linux
-r c Linux
-r d Linux
-r e Linux
-r f Linux
-r g Linux
-r h Linux
-r i Linux
-r j Linux
-r k Linux
-r l Linux
-r m Linux
-r n Linux
-r o Linux
-r p Linux
-r q Linux
-r r Linux
-r s Linux
-r t Linux
-r u Linux
-r v Linux
-r w Linux
-r x Linux
-r y Linux
-r z Linux
-s 0 Linux
-s 1 Linux
-s 2 Linux
-s 3 Linux
-s 4 Linux
-s 5 Linux
-s 6 Linux
-s 7 Linux
-s 8 Linux
-s 9 Linux
-s a Linux
-s b Linux
-s c Linux
-s d Linux
-s e Linux
-s f Linux
-s g Linux
-s h Linux
-s i Linux
-s j Linux
-s k Linux
-s l Linux
-s m Linux
-s n Linux
-s o Linux
-s p Linux
-s q Linux
-s r Linux
-s s Linux
-s t Linux
-s u Linux
-s v Linux
-s w Linux
-s x Linux
-s y Linux
-s z Linux
-t 0 Linux
-t 1 Linux
-t 2 Linux
-t 3 Linux
-t 4 Linux
-t 5 Linux
-t 6 Linux
-t 7 Linux
-t 8 Linux
-t 9 Linux
-t a Linux
-t b Linux
-t c Linux
-t d Linux
-t e Linux
-t f Linux
-t g Linux
-t h Linux
-t i Linux
-t j Linux
-t k Linux
-t l Linux
-t m Linux
-t n Linux
-t o Linux
-t p Linux
-t q Linux
-t r Linux
-t s Linux
-t t Linux
-t u Linux
-t v Linux
-t w Linux
-t x Linux
-t y Linux
-t z Linux
-u 0 Linux
-u 1 Linux
-u 2 Linux
-u 3 Linux
-u 4 Linux
-u 5 Linux
-u 6 Linux
-u 7 Linux
-u 8 Linux
-u 9 Linux
-u a Linux
-u b Linux
-u c Linux
-u d Linux
-u e Linux
-u f Linux
-u g Linux
-u h Linux
-u i Linux
-u j Linux
-u k Linux
-u l Linux
-u m Linux
-u n Linux
-u o Linux
-u p Linux
-u q Linux
-u r Linux
-u s Linux
-u t Linux
-u u Linux
-u v Linux
-u w Linux
-u x Linux
-u y Linux
-u z Linux
-v 0 Linux
-v 1 Linux
-v 2 Linux
-v 3 Linux
-v 4 Linux
-v 5 Linux
-v 6 Linux
-v 7 Linux
-v 8 Linux
-v 9 Linux
-v a Linux
-v b Linux
-v c Linux
-v d Linux
-v e Linux
-v f Linux
-v g Linux
-v h Linux
-v i Linux
-v j Linux
-v k Linux
-v l Linux
-v m Linux
-v n Linux
-v o Linux
-v p Linux
-v q Linux
-v r Linux
-v s Linux
-v t Linux
-v u Linux
-v v Linux
-v w Linux
-v x Linux
-v y Linux
-v z Linux
-w 0 Linux
-w 1 Linux
-w 2 Linux
-w 3 Linux
-w 4 Linux
-w 5 Linux
-w 6 Linux evenw 7 Linux
-w 8 Linux
-w 9 Linux
-w a Linux
-w b Linux
-w c Linux
-w d Linux
-w e Linux
-w f Linux
-w g Linux
-w h Linux
-w i Linux
-w j Linux
-w k Linux
-w l Linux
-w m Linux
-w n Linux
-w o Linux
-w p Linux
-w q Linux
-w r Linux
-w s Linux
-w t Linux
-w u Linux
-w v Linux
-w w Linux
-w x Linux
-w y Linux
-w z Linux
-x 0 Linux
-x 1 Linux
-x 2 Linux
-x 3 Linux
-x 4 Linux
-x 5 Linux
-x 6 Linux
-x 7 Linux
-x 8 Linux
-x 9 Linux
-x a Linux
-x b Linux
-x c Linux
-x d Linux
-x e Linux
-x f Linux
-x g Linux
-x h Linux
-x i Linux
-x j Linux
-x k Linux
-x l Linux
-x m Linux
-x n Linux
-x o Linux
-x p Linux
-x q Linux
-x r Linux
-x s Linux
-x t Linux
-x u Linux
-x v Linux
-x w Linux
-x x Linux
-x y Linux
-x z Linux
-y 0 Linux
-y 1 Linux
-y 2 Linux
-y 3 Linux
-y 4 Linux
-y 5 Linux
-y 6 Linux
-y 7 Linux
-y 8 Linux
-y 9 Linux
-y a Linux
-y b Linux
-y c Linux
-y d Linux
-y e Linux
-y f Linux
-y g Linux
-y h Linux
-y i Linux
-y j Linux
-y k Linux
-y l Linux
-y m Linux
-y n Linux
-y o Linux
-y p Linux
-y q Linux
-y r Linux
-y s Linux
-y t Linux
-y u Linux
-y v Linux
-y w Linux
-y x Linux
-y y Linux
-y z Linux
-z 0 Linux
-z 1 Linux
-z 2 Linux
-z 3 Linux
-z 4 Linux
-z 5 Linux
-z 6 Linux
-z 7 Linux
-z 8 Linux
-z 9 Linux
-z a Linux
-z b Linux
-z c Linux
-z d Linux
-z e Linux
-z f Linux
-z g Linux
-z h Linux
-z i Linux
-z j Linux
-z k Linux
-z l Linux
-z m Linux
-z n Linux
-z o Linux
-z p Linux
-z q Linux
-z r Linux
-z s Linux
-z t Linux
-z u Linux
-z v Linux
-z w Linux
-z x Linux
-z y Linux
-z z Linux
 
-分区类型类型列表：
 7 Linux
+
 8 Linux-swap
+
 8e LVM
+
 9 HP-Linux
+
 81 NTFS
+
 82 Linux9
+
 82 Linux
+
 83 Solaris
+
 84 Solaris
+
 85 Solaris
+
 86 Linux
+
 17 Linux
+
 18 Linux
+
 19 Linux
+
 20 Linux
+
 21 Linux
+
 22 Linux
+
 23 Linux
+
 24 Linux
+
 25 Linux
+
 26 Linux
+
 27 Linux
+
 28 Linux
+
 29 Linux
+
 30 Linux
+
 31 Linux
+
 32 Linux
+
 33 Linux
+
 34 Linux
+
 35 Linux
+
 36 Linux
+
 37 Linux
+
 38 Linux
+
 39 Linux
+
 40 Linux
+
 41 Linux
+
 42 Linux
+
 43 Linux
+
 44 Linux
+
 45 Linux
+
 46 Linux
+
 47 Linux
+
 48 Linux
+
 49 Linux
+
 50 Linux
+
 51 Linux
+
 52 Linux
+
 53 Linux
+
 54 Linux
+
 55 Linux
+
 56 Linux
+
 57 Linux
+
 58 Linux
+
 59 Linux
+
 60 Linux
+
 61 Linux
+
 62 Linux
+
 63 Linux
+
 64 Linux
+
 65 Linux
+
 66 Linux
+
 67 Linux
+
 68 Linux
+
 69 Linux
+
 70 Linux
+
 71 Linux
+
 72 Linux
+
 73 Linux
+
 74 Linux
+
 75 Linux
+
 76 Linux
+
 77 Linux
+
 78 Linux
+
 79 Linux
+
 80 Linux
+
 81 Linux
+
 82 Linux
+
 83 Linux
+
 84 Linux
+
 85 Linux
+
 86 Linux
+
 87 Linux
+
 88 Linux
+
 89 Linux
+
 90 Linux
+
 91 Linux
+
 92 Linux
+
 93 Linux
+
 94 Linux
+
 95 Linux
+
 96 Linux
+
 97 Linux
+
 98 Linux
+
 99 Linux
+
 a 0 Linux
+
 a 1 Linux
+
 a 2 Linux
+
 a 3 Linux
+
 a 4 Linux
+
 a 5 Linux
+
 a 6 Linux
+
 a 7 Linux
+
 a 8 Linux
+
 a 9 Linux
+
 a a Linux
+
 a b Linux
+
 a c Linux
+
 a d Linux
+
 a e Linux
+
 a f Linux
+
 a g Linux
+
 a h Linux
+
 a i Linux
+
 a j Linux
+
 a k Linux
+
 a l Linux
+
 a m Linux
+
 a n Linux
+
 a o Linux
+
 a p Linux
+
 a q Linux
+
 a r Linux
+
 a s Linux
+
 a t Linux
+
 a u Linux
+
 a v Linux
+
 a w Linux
+
 a x Linux
+
 a y Linux
+
 a z Linux
+
 b 0 Linux
+
 b 1 Linux
+
 b 2 Linux
+
 b 3 Linux
+
 b 4 Linux
+
 b 5 Linux
+
 b 6 Linux
+
 b 7 Linux
+
 b 8 Linux
+
 b 9 Linux
+
 b a Linux
+
 b b Linux
+
 b c Linux
+
 b d Linux
+
 b e Linux
+
 b f Linux
+
 b g Linux
+
 b h Linux
+
 b i Linux
+
 b j Linux
+
 b k Linux
+
 b l Linux
+
 b m Linux
+
 b n Linux
+
 b o Linux
+
 b p Linux
+
 b q Linux
+
 b r Linux
+
 b s Linux
+
 b t Linux
+
 b u Linux
+
 b v Linux
+
 b w Linux
+
 b x Linux
+
 b y Linux
+
 b z Linux
+
 c 0 Linux
+
 c 1 Linux
+
 c 2 Linux
+
 c 3 Linux
+
 c 4 Linux
+
 c 5 Linux
+
 c 6 Linux
+
 c 7 Linux
+
 c 8 Linux
+
 c 9 Linux
+
 c a Linux
+
 c b Linux
+
 c c Linux
+
 c d Linux
+
 c e Linux
+
 c f Linux
+
 c g Linux
+
 c h Linux
+
 c i Linux
+
 c j Linux
+
 c k Linux
+
 c l Linux
+
 c m Linux
+
 c n Linux
+
 c o Linux
+
 c p Linux
+
 c q Linux
+
 c r Linux
+
 c s Linux
+
 c t Linux
+
 c u Linux
+
 c v Linux
+
 c w Linux
+
 c x Linux
+
 c y Linux
+
 c z Linux
+
 d 0 Linux
+
 d 1 Linux
+
 d 2 Linux
+
 d 3 Linux
+
 d 4 Linux
+
 d 5 Linux
+
 d 6 Linux
+
 d 7 Linux
+
 d 8 Linux
+
 d 9 Linux
+
 d a Linux
+
 d b Linux
+
 d c Linux
+
 d d Linux
+
 d e Linux
+
 d f Linux
+
 d g Linux
+
 d h Linux
+
 d i Linux
+
 d j Linux
+
 d k Linux
+
 d l Linux
+
 d m Linux
+
 d n Linux
+
 d o Linux
+
 d p Linux
+
 d q Linux
+
 d r Linux
+
 d s Linux
+
 d t Linux
+
 d u Linux
+
 d v Linux
+
 d w Linux
+
 d x Linux
+
 d y Linux
+
 d z Linux
+
 e 0 Linux
+
 e 1 Linux
+
 e 2 Linux
+
 e 3 Linux
+
 e 4 Linux
+
 e 5 Linux
+
 e 6 Linux
+
 e 7 Linux
+
 e 8 Linux
+
 e 9 Linux
+
 e a Linux
+
 e b Linux
+
 e c Linux
+
 e d Linux
+
 e e Linux
+
 e f Linux
+
 e g Linux
+
 e h Linux
+
 e i Linux
+
 e j Linux
+
 e k Linux
+
 e l Linux
+
 e m Linux
+
 e n Linux
+
 e o Linux
+
 e p Linux
+
 e q Linux
+
 e r Linux
+
 e s Linux
+
 e t Linux
+
 e u Linux
+
 e v Linux
+
 e w Linux
+
 e x Linux
+
 e y Linux
+
 e z Linux
+
 f 0 Linux
+
 f 1 Linux
+
 f 2 Linux
+
 f 3 Linux
+
 f 4 Linux
+
 f 5 Linux
+
 f 6 Linux
+
 f 7 Linux
+
 f 8 Linux
+
 f 9 Linux
+
 f a Linux
+
 f b Linux
+
 f c Linux
+
 f d Linux
+
 f e Linux
+
 f f Linux
+
 f g Linux
+
 f h Linux
+
 f i Linux
+
 f j Linux
+
 f k Linux
+
 f l Linux
+
+f m Linux
+
+f n Linux
+
+f o Linux
+
+f p Linux
+
+f q Linux
+
+f r Linux
+
+f s Linux
+
+f t Linux
+
+f u Linux
+
+f v Linux
+
+f w Linux
+
+f x Linux
+
+f y Linux
+
+f z Linux
+
+g 0 Linux
+
+g 1 Linux
+
+g 2 Linux
+
+g 3 Linux
+
+g 4 Linux
+
+g 5 Linux
+
+g 6 Linux
+
+g 7 Linux
+
+g 8 Linux
+
+g 9 Linux
+
+g a Linux
+
+g b Linux
+
+g c Linux
+
+g d Linux
+
+g e Linux
+
+g f Linux
+
+g g Linux
+
+g h Linux
+
+g i Linux
+
+g j Linux
+
+g k Linux
+
+g l Linux
+
+g m Linux
+
+g n Linux
+
+g o Linux
+
+g p Linux
+
+g q Linux
+
+g r Linux
+
+g s Linux
+
+g t Linux
+
+g u Linux
+
+g v Linux
+
+g w Linux
+
+g x Linux
+
+g y Linux
+
+g z Linux
+
+h 0 Linux
+
+h 1 Linux
+
+h 2 Linux
+
+h 3 Linux
+
+h 4 Linux
+
+h 5 Linux
+
+h 6 Linux
+
+h 7 Linux
+
+h 8 Linux
+
+h 9 Linux
+
+h a Linux
+
+h b Linux
+
+h c Linux
+
+h d Linux
+
+h e Linux
+
+h f Linux
+
+h g Linux
+
+h h Linux
+
+h i Linux
+
+h j Linux
+
+h k Linux
+
+h l Linux
+
+h m Linux
+
+h n Linux
+
+h o Linux
+
+h p Linux
+
+h q Linux
+
+h r Linux
+
+h s Linux
+
+h t Linux
+
+h u Linux
+
+h v Linux
+
+h w Linux
+
+h x Linux
+
+h y Linux
+
+h z Linux
+
+i 0 Linux
+
+i 1 Linux
+
+i 2 Linux
+
+i 3 Linux
+
+i 4 Linux
+
+i 5 Linux
+
+i 6 Linux
+
+i 7 Linux
+
+i 8 Linux
+
+i 9 Linux
+
+i a Linux
+
+i b Linux
+
+i c Linux
+
+i d Linux
+
+i e Linux
+
+i f Linux
+
+i g Linux
+
+i h Linux
+
+i i Linux
+
+i j Linux
+
+i k Linux
+
+i l Linux
+
+i m Linux
+
+i n Linux
+
+i o Linux
+
+i p Linux
+
+i q Linux
+
+i r Linux
+
+i s Linux
+
+i t Linux
+
+i u Linux
+
+i v Linux
+
+i w Linux
+
+i x Linux
+
+i y Linux
+
+i z Linux
+
+j 0 Linux
+
+j 1 Linux
+
+j 2 Linux
+
+j 3 Linux
+
+j 4 Linux
+
+j 5 Linux
+
+j 6 Linux
+
+j 7 Linux
+
+j 8 Linux
+
+j 9 Linux
+
+j a Linux
+
+j b Linux
+
+j c Linux
+
+j d Linux
+
+j e Linux
+
+j f Linux
+
+j g Linux
+
+j h Linux
+
+j i Linux
+
+j j Linux
+
+j k Linux
+
+j l Linux
+
+j m Linux
+
+j n Linux
+
+j o Linux
+
+j p Linux
+
+j q Linux
+
+j r Linux
+
+j s Linux
+
+j t Linux
+
+j u Linux
+
+j v Linux
+
+j w Linux
+
+j x Linux
+
+j y Linux
+
+j z Linux
+
+k 0 Linux
+
+k 1 Linux
+
+k 2 Linux
+
+k 3 Linux
+
+k 4 Linux
+
+k 5 Linux
+
+k 6 Linux
+
+k 7 Linux
+
+k 8 Linux
+
+k 9 Linux
+
+k a Linux
+
+k b Linux
+
+k c Linux
+
+k d Linux
+
+k e Linux
+
+k f Linux
+
+k g Linux
+
+k h Linux
+
+k i Linux
+
+k j Linux
+
+k k Linux
+
+k l Linux
+
+k m Linux
+
+k n Linux
+
+k o Linux
+
+k p Linux
+
+k q Linux
+
+k r Linux
+
+k s Linux
+
+k t Linux
+
+k u Linux
+
+k v Linux
+
+k w Linux
+
+k x Linux
+
+k y Linux
+
+k z Linux
+
+l 0 Linux
+
+l 1 Linux
+
+l 2 Linux
+
+l 3 Linux
+
+l 4 Linux
+
+l 5 Linux
+
+l 6 Linux
+
+l 7 Linux
+
+l 8 Linux
+
+l 9 Linux
+
+l a Linux
+
+l b Linux
+
+l c Linux
+
+l d Linux
+
+l e Linux
+
+l f Linux
+
+l g Linux
+
+l h Linux
+
+l i Linux
+
+l j Linux
+
+l k Linux
+
+l l Linux
+
+l m Linux
+
+l n Linux
+
+l o Linux
+
+l p Linux
+
+l q Linux
+
+l r Linux
+
+l s Linux
+
+l t Linux
+
+l u Linux
+
+l v Linux
+
+l w Linux
+
+l x Linux
+
+l y Linux
+
+l z Linux
+
+m 0 Linux
+
+m 1 Linux
+
+m 2 Linux
+
+m 3 Linux
+
+m 4 Linux
+
+m 5 Linux
+
+m 6 Linux
+
+m 7 Linux
+
+m 8 Linux
+
+m 9 Linux
+
+m a Linux
+
+m b Linux
+
+m c Linux
+
+m d Linux
+
+m e Linux
+
+m f Linux
+
+m g Linux
+
+m h Linux
+
+m i Linux
+
+m j Linux
+
+m k Linux
+
+m l Linux
+
+m m Linux
+
+m n Linux
+
+m o Linux
+
+m p Linux
+
+m q Linux
+
+m r Linux
+
+m s Linux
+
+m t Linux
+
+m u Linux
+
+m v Linux
+
+m w Linux
+
+m x Linux
+
+m y Linux
+
+m z Linux
+
+n 0 Linux
+
+n 1 Linux
+
+n 2 Linux
+
+n 3 Linux
+
+n 4 Linux
+
+n 5 Linux
+
+n 6 Linux
+
+n 7 Linux
+
+n 8 Linux
+
+n 9 Linux
+
+n a Linux
+
+n b Linux
+
+n c Linux
+
+n d Linux
+
+n e Linux
+
+n f Linux
+
+n g Linux
+
+n h Linux
+
+n i Linux
+
+n j Linux
+
+n k Linux
+
+n l Linux
+
+n m Linux
+
+n n Linux
+
+n o Linux
+
+n p Linux
+
+n q Linux
+
+n r Linux
+
+n s Linux
+
+n t Linux
+
+n u Linux
+
+
+
+`n` `v` Linux
+`n` `w` Linux
+`n` `x` Linux
+`n` `y` Linux
+`n` `z` Linux
+`o` `0` Linux
+`o` `1` Linux
+`o` `2` Linux
+`o` `3` Linux
+`o` `4` Linux
+`o` `5` Linux
+`o` `6` Linux
+`o` `7` Linux
+`o` `8` Linux
+`o` `9` Linux
+`o` `a` Linux
+`o` `b` Linux
+`o` `c` Linux
+`o` `d` Linux
+`o` `e` Linux
+`o` `f` Linux
+`o` `g` Linux
+`o` `h` Linux
+`o` `i` Linux
+`o` `j` Linux
+`o` `k` Linux
+`o` `l` Linux
+`o` `m` Linux
+`o` `n` Linux
+`o` `o` Linux
+`o` `p` Linux
+`o` `q` Linux
+`o` `r` Linux
+`o` `s` Linux
+`o` `t` Linux
+`o` `u` Linux
+`o` `v` Linux
+`o` `w` Linux
+`o` `x` Linux
+`o` `y` Linux
+`o` `z` Linux
+`p` `0` Linux
+`p` `1` Linux
+`p` `2` Linux
+`p` `3` Linux
+`p` `4` Linux
+`p` `5` Linux
+`p` `6` Linux
+`p` `7` Linux
+`p` `8` Linux
+`p` `9` Linux
+`p` `a` Linux
+`p` `b` Linux
+`p` `c` Linux
+`p` `d` Linux
+`p` `e` Linux
+`p` `f` Linux
+`p` `g` Linux
+`p` `h` Linux
+`p` `i` Linux
+`p` `j` Linux
+`p` `k` Linux
+`p` `l` Linux
+`p` `m` Linux
+`p` `n` Linux
+`p` `o` Linux
+`p` `p` Linux
+`p` `q` Linux
+`p` `r` Linux
+`p` `s` Linux
+`p` `t` Linux
+`p` `u` Linux
+`p` `v` Linux
+`p` `w` Linux
+`p` `x` Linux
+`p` `y` Linux
+`p` `z` Linux
+`q` `0` Linux
+`q` `1` Linux
+`q` `2` Linux
+`q` `3` Linux
+`q` `4` Linux
+`q` `5` Linux
+`q` `6` Linux
+`q` `7` Linux
+`q` `8` Linux
+`q` `9` Linux
+`q` `a` Linux
+`q` `b` Linux
+`q` `c` Linux
+`q` `d` Linux
+`q` `e` Linux
+`q` `f` Linux
+`q` `g` Linux
+`q` `h` Linux
+`q` `i` Linux
+`q` `j` Linux
+`q` `k` Linux
+`q` `l` Linux
+`q` `m` Linux
+`q` `n` Linux
+`q` `o` Linux
+`q` `p` Linux
+`q` `q` Linux
+`q` `r` Linux
+`q` `s` Linux
+`q` `t` Linux
+`q` `u` Linux
+`q` `v` Linux
+`q` `w` Linux
+`q` `x` Linux
+`q` `y` Linux
+`q` `z` Linux
+`r` `0` Linux
+`r` `1` Linux
+`r` `2` Linux
+`r` `3` Linux
+`r` `4` Linux
+`r` `5` Linux
+`r` `6` Linux evenr 7 Linux
+`r` `8` Linux
+`r` `9` Linux
+`r` `a` Linux
+`r` `b` Linux
+`r` `c` Linux
+`r` `d` Linux
+`r` `e` Linux
+`r` `f` Linux
+`r` `g` Linux
+`r` `h` Linux
+`r` `i` Linux
+`r` `j` Linux
+`r` `k` Linux
+`r` `l` Linux
+`r` `m` Linux
+`r` `n` Linux
+`r` `o` Linux
+`r` `p` Linux
+`r` `q` Linux
+`r` `r` Linux
+`r` `s` Linux
+`r` `t` Linux
+`r` `u` Linux
+`r` `v` Linux
+`r` `w` Linux
+`r` `x` Linux
+`r` `y` Linux
+`r` `z` Linux
+`s` `0` Linux
+`s` `1` Linux
+`s` `2` Linux
+`s` `3` Linux
+`s` `4` Linux
+`s` `5` Linux
+`s` `6` Linux
+`s` `7` Linux
+`s` `8` Linux
+`s` `9` Linux
+`s` `a` Linux
+`s` `b` Linux
+`s` `c` Linux
+`s` `d` Linux
+`s` `e` Linux
+`s` `f` Linux
+`s` `g` Linux
+`s` `h` Linux
+`s` `i` Linux
+`s` `j` Linux
+`s` `k` Linux
+`s` `l` Linux
+`s` `m` Linux
+`s` `n` Linux
+`s` `o` Linux
+`s` `p` Linux
+`s` `q` Linux
+`s` `r` Linux
+`s` `s` Linux
+`s` `t` Linux
+`s` `u` Linux
+`s` `v` Linux
+`s` `w` Linux
+`s` `x` Linux
+`s` `y` Linux
+`s` `z` Linux
+`t` `0` Linux
+`t` `1` Linux
+`t` `2` Linux
+`t` `3` Linux
+`t` `4` Linux
+`t` `5` Linux
+`t` `6` Linux
+`t` `7` Linux
+`t` `8` Linux
+`t` `9` Linux
+`t` `a` Linux
+`t` `b` Linux
+`t` `c` Linux
+`t` `d` Linux
+`t` `e` Linux
+`t` `f` Linux
+`t` `g` Linux
+`t` `h` Linux
+`t` `i` Linux
+`t` `j` Linux
+`t` `k` Linux
+`t` `l` Linux
+`t` `m` Linux
+`t` `n` Linux
+`t` `o` Linux
+`t` `p` Linux
+`t` `q` Linux
+`t` `r` Linux
+`t` `s` Linux
+`t` `t` Linux
+`t` `u` Linux
+`t` `v` Linux
+`t` `w` Linux
+`t` `x` Linux
+`t` `y` Linux
+`t` `z` Linux
+`u` `0` Linux
+`u` `1` Linux
+`u` `2` Linux
+`u` `3` Linux
+`u` `4` Linux
+`u` `5` Linux
+`u` `6` Linux
+`u` `7` Linux
+`u` `8` Linux
+`u` `9` Linux
+`u` `a` Linux
+`u` `b` Linux
+`u` `c` Linux
+`u` `d` Linux
+`u` `e` Linux
+`u` `f` Linux
+`u` `g` Linux
+`u` `h` Linux
+`u` `i` Linux
+`u` `j` Linux
+`u` `k` Linux
+`u` `l` Linux
+`u` `m` Linux
+`u` `n` Linux
+`u` `o` Linux
+`u` `p` Linux
+`u` `q` Linux
+`u` `r` Linux
+`u` `s` Linux
+`u` `t` Linux
+`u` `u` Linux
+`u` `v` Linux
+`u` `w` Linux
+`u` `x` Linux
+`u` `y` Linux
+`u` `z` Linux
+`v` `0` Linux
+`v` `1` Linux
+`v` `2` Linux
+`v` `3` Linux
+`v` `4` Linux
+`v` `5` Linux
+`v` `6` Linux
+`v` `7` Linux
+`v` `8` Linux
+`v` `9` Linux
+`v` `a` Linux
+`v` `b` Linux
+`v` `c` Linux
+`v` `d` Linux
+`v` `e` Linux
+`v` `f` Linux
+`v` `g` Linux
+`v` `h` Linux
+`v` `i` Linux
+`v` `j` Linux
+`v` `k` Linux
+`v` `l` Linux
+`v` `m` Linux
+`v` `n` Linux
+`v` `o` Linux
+`v` `p` Linux
+`v` `q` Linux
+`v` `r` Linux
+`v` `s` Linux
+`v` `t` Linux
+`v` `u` Linux
+`v` `v` Linux
+`v` `w` Linux
+`v` `x` Linux
+`v` `y` Linux
+`v` `z` Linux
+`w` `0` Linux
+`w` `1` Linux
+`w` `2` Linux
+`w` `3` Linux
+`w` `4` Linux
+`w` `5` Linux
+`w` `6` Linux evenw 7 Linux
+`w` `8` Linux
+`w` `9` Linux
+`w` `a` Linux
+`w` `b` Linux
+`w` `c` Linux
+`w` `d` Linux
+`w` `e` Linux
+`w` `f` Linux
+`w` `g` Linux
+`w` `h` Linux
+`w` `i` Linux
+`w` `j` Linux
+`w` `k` Linux
+`w` `l` Linux
+`w` `m` Linux
+`w` `n` Linux
+`w` `o` Linux
+`w` `p` Linux
+`w` `q` Linux
+`w` `r` Linux
+`w` `s` Linux
+`w` `t` Linux
+`w` `u` Linux
+`w` `v` Linux
+`w` `w` Linux
+`w` `x` Linux
+`w` `y` Linux
+`w` `z` Linux
+`x` `0` Linux
+`x` `1` Linux
+`x` `2` Linux
+`x` `3` Linux
+`x` `4` Linux
+`x` `5` Linux
+`x` `6` Linux
+`x` `7` Linux
+`x` `8` Linux
+`x` `9` Linux
+`x` `a` Linux
+`x` `b` Linux
+`x` `c` Linux
+`x` `d` Linux
+`x` `e` Linux
+`x` `f` Linux
+`x` `g` Linux
+`x` `h` Linux
+`x` `i` Linux
+`x` `j` Linux
+`x` `k` Linux
+`x` `l` Linux
+`x` `m` Linux
+`x` `n` Linux
+`x` `o` Linux
+`x` `p` Linux
+`x` `q` Linux
+`x` `r` Linux
+`x` `s` Linux
+`x` `t` Linux
+`x` `u` Linux
+`x` `v` Linux
+`x` `w` Linux
+`x` `x` Linux
+`x` `y` Linux
+`x` `z` Linux
+`y` `0` Linux
+`y` `1` Linux
+`y` `2` Linux
+`y` `3` Linux
+`y` `4` Linux
+`y` `5` Linux
+`y` `6` Linux
+`y` `7` Linux
+`y` `8` Linux
+`y` `9` Linux
+`y` `a` Linux
+`y` `b` Linux
+`y` `c` Linux
+`y` `d` Linux
+`y` `e` Linux
+`y` `f` Linux
+`y` `g` Linux
+`y` `h` Linux
+`y` `i` Linux
+`y` `j` Linux
+`y` `k` Linux
+`y` `l` Linux
+`y` `m` Linux
+`y` `n` Linux
+`y` `o` Linux
+`y` `p` Linux
+`y` `q` Linux
+`y` `r` Linux
+`y` `s` Linux
+`y` `t` Linux
+`y` `u` Linux
+`y` `v` Linux
+`y` `w` Linux
+`y` `x` Linux
+`y` `y` Linux
+`y` `z` Linux
+`z` `0` Linux
+`z` `1` Linux
+`z` `2` Linux
+`z` `3` Linux
+`z` `4` Linux
+`z` `5` Linux
+`z` `6` Linux
+`z` `7` Linux
+`z` `8` Linux
+`z` `9` Linux
+`z` `a` Linux
+`z` `b` Linux
+`z` `c` Linux
+`z` `d` Linux
+`z` `e` Linux
+`z` `f` Linux
+`z` `g` Linux
+`z` `h` Linux
+`z` `i` Linux
+`z` `j` Linux
+`z` `k` Linux
+`z` `l` Linux
+`z` `m` Linux
+`z` `n` Linux
+`z` `o` Linux
+`z` `p` Linux
+`z` `q` Linux
+`z` `r` Linux
+`z` `s` Linux
+`z` `t` Linux
+`z` `u` Linux
+`z` `v` Linux
+`z` `w` Linux
+`z` `x` Linux
+`z` `y` Linux
+`z` `z` Linux
+
+## 分区类型类型列表：
+
+`7` Linux
+`8` Linux-swap
+`8e` LVM
+`9` HP-Linux
+`81` NTFS
+`82` Linux9
+`82` Linux
+`83` Solaris
+`84` Solaris
+`85` Solaris
+`86` Linux
+`17` Linux
+`18` Linux
+`19` Linux
+`20` Linux
+`21` Linux
+`22` Linux
+`23` Linux
+`24` Linux
+`25` Linux
+`26` Linux
+`27` Linux
+`28` Linux
+`29` Linux
+`30` Linux
+`31` Linux
+`32` Linux
+`33` Linux
+`34` Linux
+`35` Linux
+`36` Linux
+`37` Linux
+`38` Linux
+`39` Linux
+`40` Linux
+`41` Linux
+`42` Linux
+`43` Linux
+`44` Linux
+`45` Linux
+`46` Linux
+`47` Linux
+`48` Linux
+`49` Linux
+`50` Linux
+`51` Linux
+`52` Linux
+`53` Linux
+`54` Linux
+`55` Linux
+`56` Linux
+`57` Linux
+`58` Linux
+`59` Linux
+`60` Linux
+`61` Linux
+`62` Linux
+`63` Linux
+`64` Linux
+`65` Linux
+`66` Linux
+`67` Linux
+`68` Linux
+`69` Linux
+`70` Linux
+`71` Linux
+`72` Linux
+`73` Linux
+`74` Linux
+`75` Linux
+`76` Linux
+`77` Linux
+`78` Linux
+`79` Linux
+`80` Linux
+`81` Linux
+`82` Linux
+`83` Linux
+`84` Linux
+`85` Linux
+`86` Linux
+`87` Linux
+`88` Linux
+`89` Linux
+`90` Linux
+`91` Linux
+`92` Linux
+`93` Linux
+`94` Linux
+`95` Linux
+`96` Linux
+`97` Linux
+`98` Linux
+`99` Linux
+`a` `0` Linux
+`a` `1` Linux
+`a` `2` Linux
+`a` `3` Linux
+`a` `4` Linux
+`a` `5` Linux
+`a` `6` Linux
+`a` `7` Linux
+`a` `8` Linux
+`a` `9` Linux
+`a` `a` Linux
+`a` `b` Linux
+`a` `c` Linux
+`a` `d` Linux
+`a` `e` Linux
+`a` `f` Linux
+`a` `g` Linux
+`a` `h` Linux
+`a` `i` Linux
+`a` `j` Linux
+`a` `k` Linux
+`a` `l` Linux
+`a` `m` Linux
+`a` `n` Linux
+`a` `o` Linux
+`a` `p` Linux
+`a` `q` Linux
+`a` `r` Linux
+`a` `s` Linux
+`a` `t` Linux
+`a` `u` Linux
+`a` `v` Linux
+`a` `w` Linux
+`a` `x` Linux
+`a` `y` Linux
+`a` `z` Linux
+`b` `0` Linux
+`b` `1` Linux
+`b` `2` Linux
+`b` `3` Linux
+`b` `4` Linux
+`b` `5` Linux
+`b` `6` Linux
+`b` `7` Linux
+`b` `8` Linux
+`b` `9` Linux
+`b` `a` Linux
+`b` `b` Linux
+`b` `c` Linux
+`b` `d` Linux
+`b` `e` Linux
+`b` `f` Linux
+`b` `g` Linux
+`b` `h` Linux
+`b` `i` Linux
+`b` `j` Linux
+`b` `k` Linux
+`b` `l` Linux
+`b` `m` Linux
+`b` `n` Linux
+`b` `o` Linux
+`b` `p` Linux
+`b` `q` Linux
+`b` `r` Linux
+`b` `s` Linux
+`b` `t` Linux
+`b` `u` Linux
+`b` `v` Linux
+`b` `w` Linux
+`b` `x` Linux
+`b` `y` Linux
+`b` `z` Linux
+`c` `0` Linux
+`c` `1` Linux
+`c` `2` Linux
+`c` `3` Linux
+`c` `4` Linux
+`c` `5` Linux
+`c` `6` Linux
+`c` `7` Linux
+`c` `8` Linux
+`c` `9` Linux
+`c` `a` Linux
+`c` `b` Linux
+`c` `c` Linux
+`c` `d` Linux
+`c` `e` Linux
+`c` `f` Linux
+`c` `g` Linux
+`c` `h` Linux
+`c` `i` Linux
+`c` `j` Linux
+`c` `k` Linux
+`c` `l` Linux
+`c` `m` Linux
+`c` `n` Linux
+`c` `o` Linux
+`c` `p` Linux
+`c` `q` Linux
+`c` `r` Linux
+`c` `s` Linux
+`c` `t` Linux
+`c` `u` Linux
+`c` `v` Linux
+`c` `w` Linux
+`c` `x` Linux
+`c` `y` Linux
+`c` `z` Linux
+`d` `0` Linux
+`d` `1` Linux
+`d` `2` Linux
+`d` `3` Linux
+`d` `4` Linux
+`d` `5` Linux
+`d` `6` Linux
+`d` `7` Linux
+`d` `8` Linux
+`d` `9` Linux
+`d` `a` Linux
+`d` `b` Linux
+`d` `c` Linux
+`d` `d` Linux
+`d` `e` Linux
+`d` `f` Linux
+`d` `g` Linux
+`d` `h` Linux
+`d` `i` Linux
+`d` `j` Linux
+`d` `k` Linux
+`d` `l` Linux
+`d` `m` Linux
+`d` `n` Linux
+`d` `o` Linux
+`d` `p` Linux
+`d` `q` Linux
+`d` `r` Linux
+`d` `s` Linux
+`d` `t` Linux
+`d` `u` Linux
+`d` `v` Linux
+`d` `w` Linux
+`d` `x` Linux
+`d` `y` Linux
+`d` `z` Linux
+`e` `0` Linux
+`e` `1` Linux
+`e` `2` Linux
+`e` `3` Linux
+`e` `4` Linux
+`e` `5` Linux
+`e` `6` Linux
+`e` `7` Linux
+`e` `8` Linux
+`e` `9` Linux
+`e` `a` Linux
+`e` `b` Linux
+`e` `c` Linux
+`e` `d` Linux
+`e` `e` Linux
+`e` `f` Linux
+`e` `g` Linux
+`e` `h` Linux
+`e` `i` Linux
+`e` `j` Linux
+`e` `k` Linux
+`e` `l` Linux
+`e` `m` Linux
+`e` `n` Linux
+`e` `o` Linux
+`e` `p` Linux
+`e` `q` Linux
+`e` `r` Linux
+`e` `s` Linux
+`e` `t` Linux
+`e` `u` Linux
+`e` `v` Linux
+`e` `w` Linux
+`e` `x` Linux
+`e` `y` Linux
+`e` `z` Linux
+`f` `0` Linux
+`f` `1` Linux
+`f` `2` Linux
+`f` `3` Linux
+`f` `4` Linux
+`f` `5` Linux
+`f` `6` Linux
+`f` `7` Linux
+`f` `8` Linux
+`f` `9` Linux
+`f` `a` Linux
+`f` `b` Linux
+`f` `c` Linux
+`f` `d` Linux
+`f` `e` Linux
+`f` `f` Linux
+`f` `g` Linux
+`f` `h` Linux
+`f` `i` Linux
+`f` `j` Linux
+`f` `k` Linux
+`f` `l` Linux
+
+
+
 f m Linux
 f n Linux
 f o Linux
@@ -5417,7 +6311,8 @@ v u Linux
 v v Linux
 v w Linux
 v x Linux
-v y Linux evenv z Linux
+v y Linux
+v z Linux
 w 0 Linux
 w 1 Linux
 w 2 Linux
@@ -5555,17 +6450,22 @@ z p Linux
 z q Linux
 z r Linux
 z s Linux
+
+
+
 z t Linux
+
 z u Linux
+
 z v Linux
+
 z w Linux
+
 z x Linux
+
 z y Linux
+
 z z Linux
-
-
-
-
 
 # CRON
 
@@ -5577,26 +6477,30 @@ cron 是一个旨在在后台执行调度命令的系统守护进程。Cron 有�
 
 => 分钟 小时 日 月份 星期 命令
 
-| UBUNTU $ CENTOS 管理员 | |
+| UBUNTU $ CENTOS 管理员 |  |
 | :--- | :--- |
 | 分钟 | 范围 (0-59) |
 | 小时 | 范围 (0-23) |
 | 日 | 范围 (1-31) |
 | 月份 | 范围 (1-12) |
 | 星期 | 范围 (0-6) |
-| 命令 | |
+| 命令 |  |
 
 编辑 cron 文件的命令是：
-=>crontab -e
+
+=> `crontab -e`
 
 例如：
-=>0 0 31 10 * |lsblk
-[这意味着在 10 月(10) 31 号凌晨，它将在后台运行 lsblk 命令]
+
+=> `0 0 31 10 * |lsblk`
+
+[这意味着在 10 月(10) 31 号凌晨，它将在后台运行 `lsblk` 命令]
 
 另一个示例：
+
 此命令用于在特定时间给某发邮件：
 
-=>37 * 1-5 echo "check system" | mail -e "check the server uptime" admin@example.com
+=> `37 * 1-5 echo "check system" | mail -e "check the server uptime" admin@example.com`
 
 [如果你从后往前读，你会发现它每周 6 天、每月、每月的每一天，在早上 7:30 向服务器管理员发送邮件]
 
@@ -5640,7 +6544,7 @@ RAID 5 也是容错的。它是镜像的替代方案。它不是通过完全复�
 
 | 驱动器 1 | 驱动器 2 | 驱动器 3 | 驱动器 4 |
 | :--- | :--- | :--- | :--- |
-| | | 全盘校验 | |
+|  |  | 全盘校验 |  |
 
 RAID 提供了更快的访问和恢复能力，使其成为服务器常用的冗余方法。
 
@@ -5651,6 +6555,7 @@ RAID 10 实际上 RAID 1 + RAID 0。它使用了这两种技术来存储数据�
 ## 在 CENTOS 7 中创建 RAID 0
 
 RAID 0 不容错，但它具有一些优势：
+
 - 高性能
 - 读写速度会很快
 - 两个磁盘-静态 IP 地址（以你想 ssh 服务器为例）
@@ -5669,15 +6574,14 @@ RAID 0 不容错，但它具有一些优势：
 | 打印机 | 自动检测 |
 | USB 控制器 | 自动检测 |
 | 声器 | 自动检测 |
-
-| 磁盘信息 | |
+| 磁盘信息 |  |
 | :--- | :--- |
 | 当前大小 | 70 GB |
 | 最大容量 | 70 GB |
 | 系统空闲空间 | 43 GB |
 | 磁盘类型 | 自动检测 |
-| 定义分区 | 存在
-- 扩展磁盘 | 存在
+| 定义分区 | 存在 |
+| 扩展磁盘 | 存在 |
 
 ### 步骤 2
 
@@ -5689,9 +6593,9 @@ RAID 0 不容错，但它具有一些优势：
 
 ### 步骤 4
 
-执行 **lsblk** 命令查看块设备：
+执行 `lsblk` 命令查看块设备：
 
-=>lsblk
+=> `lsblk`
 
 ```
 [root@server2 ~]# lsblk
@@ -5711,22 +6615,23 @@ sr0 11:0 4.36G rom
 
 ### 步骤 5
 
-安装 **mdadm** 包：
+安装 `mdadm` 包：
 
-=>yum update
-=> yum install mdadm -y
+=> `yum update`
+
+=> `yum install mdadm -y`
 
 ### 步骤 6
 
 检查软件包的版本：
 
-=> mdadm -version
+=> `mdadm -version`
 
 ### 步骤 7
 
 使用 mdadm 硬盘：
 
-=> mdadm --examine /dev/sd[b-c]
+=> `mdadm --examine /dev/sd[b-c]`
 
 ```
 [root@server2 ~]# mdadm --examine /dev/sd[b-c]
@@ -5737,9 +6642,11 @@ mdadm: No md superblock detected on /dev/sdc.
 ### 步骤 8
 
 为 RAID 创建分区：
-=>fdisk /dev/sdb
+
+=> `fdisk /dev/sdb`
 
 创建分区的说明：
+
 1. 按 'n' 创建新分区。
 2. 然后选择 'P' 作为主分区。
 3. 接下来选择分区编号为 1。
@@ -5747,15 +6654,12 @@ mdadm: No md superblock detected on /dev/sdc.
 5. 接下来按 'P' 打印定义的分区。
 
 在分区上创建 Linux raid auto 的说明：
+
 1. 按 'L' 列出所有可用类型。
 2. 输入 't' 选择分区。
 3. 选择 'fd' 作为 Linux raid auto 并按回车应用。
 4. 然后再次使用 'P' 打印我们所做的更改。
 5. 使用 'w' 写入更改。
-
-
-
-
 
 # UBUNTU $ CENTOS 管理员
 
@@ -5766,9 +6670,11 @@ mdadm: No md superblock detected on /dev/sdc.
 ```
 
 更改将仅保留在内存中，直到你决定写入它们。
+
 在使用 write 命令之前请小心。
 
 设备不包含识别的分区表
+
 正在创建一个磁盘符为 0xc4707f2b 的新 DOS 标签磁盘。
 
 ```
@@ -5784,6 +6690,7 @@ Command (m for help): n
 ```
 
 最后一个扇区，+sectors +size(K,M,G) (2048-41943039, default 41943039)
+
 使用默认值 41943039
 
 ```
@@ -5807,22 +6714,35 @@ Command (m for help): p
 # Tanvir Rahman
 
 ```
+
 [root@server2]# fdisk /dev/sdb
+
 欢迎使用 fdisk (util-linux 2.23.2)。
+
 更改将仅保留在内存中，直到你决定写入它们。
+
 在使用 write 命令之前请小心。
 
 Command (m for help): t
+
 选择分区 1
+
 Hex 代码 (type to list all): fd
+
 将分区 'Linux' 类型更改为 'Linux raid autodet'
 
 Command (m for help): p
+
 Disk /dev/sdb: 21.5 GB, 2147483640 bytes, 41943040 sectors
+
 Units = sectors of 1 + 512 = 512 bytes
+
 扇区大小 (逻辑/物理): 512 bytes / 512 bytes
+
 I/O (minimum/optimal): 512 bytes / 512 bytes
+
 磁盘类型: dos
+
 磁盘符: 0xc407f2b
 
 | Device | Start | End | Blocks | Id | System |
@@ -5830,11 +6750,15 @@ I/O (minimum/optimal): 512 bytes / 512 bytes
 | /dev/sdb1 | 2048 | 41943039 | 20970496 | Linux raid autodet |
 
 Command (m for help): w
+
 分区表已更改！
 
 正在调用 ioctl() 重新读取分区表。
+
 正在同步磁盘。
+
 [root@server2]#
+
 ```
 
 **查看块设备**
@@ -5842,26 +6766,38 @@ Command (m for help): w
 #  9
 
 对 'sd' 执行步骤
-=>fdisk /dev/sdb
+=> `fdisk /dev/sdb`
 
 #  10
 
 使用 'lsblk' 检查
-=>lsblk
+=> `lsblk`
 
 ```
 [root@server2 ~]# lsblk
+
 NAME      MAJ:MIN SIZE TYPE MOUNTPOINT
+
 sda       8:0    0 70G 0 disk
+
 -sda1    8:1    0  1G 0 part /boot
+
 -sda2    8:2    0 69G 0 part
+
 -centos-root 253:0 0 45G lvm /
+
 -centos-swap 253:1 0 20G lvm [SWAP]
+
 -centos-home 253:2 0 22G lvm /home
+
 sdb       8:16   0 20G 0 disk
+
 -sdb1    8:17   0 20G 0 part
+
 sdc       8:32   0 20G 0 disk
+
 -sdc1    8:33   0 20G 0 part
+
 sr0       11:0   1 4.3G 0 rom
 ```
 
@@ -5871,9 +6807,13 @@ sr0       11:0   1 4.3G 0 rom
 
 ```
 [root@server2 ~]# mdadm --examine /dev/sd[b-c]1
+
 mdadm: 在 /dev/sdb1 未检测到 md 超块。
+
 mdadm: 在 /dev/sdc1 未检测到 md 超块。
+
 [root@server2 ~]#
+
 [root@server2 ~]#
 ```
 
@@ -5882,116 +6822,157 @@ mdadm: 在 /dev/sdc1 未检测到 md 超块。
 # 12
 
 创建 RAID md 设备
-=>mdadm --create /dev/md0 --level=stripe --raid-devices=2 /dev/sd[b-c]1
+=> `mdadm --create /dev/md0 --level=stripe --raid-devices=2 /dev/sd[b-c]1`
 
 ```
 [root@server2 ~]#
+
 [root@server2 ~]# mdadm --create /dev/md0 --level=stripe --raid-devices=2 /dev/sd[b-c]1
+
 mdadm: 默认版本 1
+
 mdadm: 数组 /dev/md0 已启动。
+
 [root@server2]#
 ```
 
 # 13
 
 查看 RAID 0 设备的详情
-=>mdadm --detail /dev/md0
+=> `mdadm --detail /dev/md0`
 
 # 14
 
 在系统上分配文件系统
-=>mkfs.ext4 /dev/md0
+=> `mkfs.ext4 /dev/md0`
 
 ```
 [root@server2 ~]# mkfs.ext4 /dev/md0
-文件系统类型 Linux
-块大小=4096 (log=2)
-碎片大小=4096 (log=2)
-Stride=128, width=256
-inodes=262144, 532480 blocks (5%) 留给 root
-最大文件系统块=2157969408
-groups=32768, 8192 inodes per group
-Superblocks 存储在块上: 32768, 98304, 163840, 229376, 249412, 319200, 384736, 409600
-分配组表: 完成
-写入 inode 表: 完成
-创建日志 (32768 块): 完成
-写入超级块和文件系统信息: 完成
 
+文件系统类型 Linux
+
+块大小=4096 (log=2)
+
+碎片大小=4096 (log=2)
+
+Stride=128, width=256
+
+inodes=262144, 532480 blocks (5%) 留给 root
+
+最大文件系统块=2157969408
+
+groups=32768, 8192 inodes per group
+
+Superblocks 存储在块上: 32768, 98304, 163840, 229376, 249412, 319200, 384736, 409600
+
+分配组表: 完成
+
+写入 inode 表: 完成
+
+创建日志 (32768 块): 完成
+
+写入超级块和文件系统信息: 完成
 ```
 
 # 15
 
 挂载卷
-=>mkdir /mnt/raid0
-=>mount /dev/md0 /mnt/raid0
+=> `mkdir /mnt/raid0`
+=> `mount /dev/md0 /mnt/raid0`
 
 # 16
 
 检查挂载的卷
-=>df -h
+=> `df -h`
 
 ```
 [root@server2 ~]# df Size Used Avail% Mounted on
+
 Filesystem
+
 /dev/mapper/centos-root 45G 3.8G 42% /dev
+
 tmpfs 974M 0 974M 0% /dev/shm
+
 tmpfs 991M 11M 981M 0% /run
+
 tmpfs 991M 0 991M 0% /sys/fs/cgroup
+
 dev/sda1 1014M 166M 849M 17% /boot
+
 /dev/mapper/centos-home 22G 39M 22G 17% /home
+
 tmpfs 199M 12K 199M 0% /run/user
+
 tmpfs 199M 0 199M 0% /run/user/0
+
 /dev/md0 40G 49M 38G 1% /mnt/raid0
+
 [root@server2 ~]#
 ```
 
 # 17
 
 使用 lsblk 检查块设备
-=>lsblk
+=> `lsblk`
 
 ```
 [root@server2 ~]# lsblk
+
 NAME MAJ:MIN RM TYPE MOUNTPOINT
+
 sda 8:0 0 70G 0 disk
+
 -sda1 8:1 0 1G 0 part /boot
+
 -centos-root 253:0 0 45G 0 lvm /
+
 -sda2 8:2 0 69G 0 part
+
 -centos-swap 253:1 0 26G 0 lvm [SWAP]
+
 -centos-home 253:2 0 22G 0 lvm /home
+
 sdb 8:16 0 20G 0 disk
+
 -sdb1 8:17 0 20G 0 part
+
 -md0 9:0 0 20G 0 raid0 /mnt/raid0
+
 sdc 8:32 0 20G 0 disk
+
 -sdc1 8:33 0 20G 0 part
+
 -md1 9:0 0 40G 0 raid0 /mnt/raid0
+
 sr0 11:0 1 4.36G 0 rom
+
 [root@server2 ~]#
 ```
+
+
 
 # 在 CENTOS 7 中创建 RAID 1
 
 RAID 0 没有容错，但有一些优势：
 
--→ 高性能
+- 高性能
 - 不浪费空间
 - 读写速度快
 
-在虚拟机中设置 RAID 0 :
+在虚拟机中设置 RAID 0：
 
-要求:
+要求：
 - 虚拟机
 - 两个磁盘
 - 网络连接
-- 静态 IP 地址（如果你想 ssh 连接服务器）
+- 静态 IP 地址（如果你想 `ssh` 连接服务器）
 
-# 1
+## 1
 
-在 centos7 虚拟机中添加两个20GB 磁盘。
+在 `centos7` 虚拟机中添加两个 `20GB` 磁盘。
 
-# Tanvir Rahman
-
-硬件选项
+### 硬件选项
 
 | 设备 | 摘要 |
 | :--- | :--- |
@@ -6000,16 +6981,21 @@ RAID 0 没有容错，但有一些优势：
 | 硬盘 (SCSI) | 70 GB |
 
 磁盘文件
-/home/tanvirrahman/vmware/raid0/CentOS 7 64-bit (fresh image)-cl1vi
+`/home/tanvirrahman/vmware/raid0/CentOS 7 64-bit (fresh image)-cl1vi`
 
 容量
 当前大小: 8.8 MB
 最大大小: 70 GB
 
-# UBUNTU $ CENTOS 管理员
+## Tanvir Rahman
+
+### UBUNTU $ CENTOS 管理员
 
 ```
 [root@server2 -]#
+```
+
+```
 [root@server2 -]# fdisk /dev/sdb
 欢迎使用 fdisk (util-linux 2.23.2)。
 ```
@@ -6018,42 +7004,59 @@ RAID 0 没有容错，但有一些优势：
 在使用 write 命令之前请小心。
 
 设备不包含识别的分区表
-正在创建一个磁盘符为 0xc4707f2b 的新 DOS 标签磁盘。
+正在创建一个磁盘符为 `0xc4707f2b` 的新 DOS 标签磁盘。
 
 ```
 Command (m for help): n
-分区类型:
-  p (primary, 0 extended, 4 free)
-  e
-选择 (default p): p
-分区编号 (1-4, default 1):
-起始扇区 (2048-41943039, default 2048):
-使用默认值 2048
-类型为 Linux 的分区 1，大小为 20 Gib
 ```
 
+分区类型:
+
+  `p` (primary, 0 extended, 4 free)
+
+  `e`
+
+选择 (default `p`): `p`
+
+分区编号 (1-4, default 1):
+
+起始扇区 (2048-41943039, default 2048):
+
+使用默认值 2048
+
+类型为 Linux 的分区 1，大小为 20 Gib
+
+```
 最后一个扇区，+sectors +size(K,M,G) (2048-41943039, default 41943039)
 使用默认值 41943039
+```
 
 ```
 Command (m for help): p
 Disk /dev/sdb: 21.5 GB, 2147483640 bytes, 41943040 sectors
+
 Units = sectors of 1 * 512 = 512 bytes
+
 扇区大小 (逻辑/物理): 512 bytes / 512 bytes
+
 I/O 大小 (minimum/optimal): 512 bytes / 512 bytes
+
 磁盘类型: dos
+
 磁盘符: 0xc470f2b
 ```
 
 | Device | Boot | End | Blocks | Id | System |
 | :--- | | | | | |
-| /dev/sdb1 | 2048 | 41943039 | 20970496 | Linux |
+| `/dev/sdb1` | 2048 | 41943039 | 20970496 | Linux |
 
 ```
 Command (m for help): p
+```
+
 > [在分区上创建 raid]
 
-# Tanvir Rahman
+## Tanvir Rahman
 
 ```
 [root@server2]# fdisk /dev/sdb
@@ -6073,11 +7076,13 @@ Units = sectors of 1 + 512 = 512 bytes
 I/O (minimum/optimal): 512 bytes / 512 bytes
 磁盘类型: dos
 磁盘符: 0xc407f2b
+```
 
 | Device | Start | End | Blocks | Id | System |
 | :--- | | | | | |
-| /dev/sdb1 | 2048 | 41943039 | 20970496 | Linux raid autodet |
+| `/dev/sdb1` | 2048 | 41943039 | 20970496 | Linux raid autodet |
 
+```
 Command (m for help): w
 分区表已更改！
 
@@ -6086,17 +7091,19 @@ Command (m for help): w
 [root@server2]#
 ```
 
-**查看块设备**
+### 查看块设备
 
-# 9
+## 9
 
-对 'sdd' 执行步骤
-=>fdisk /dev/sdb
+对 `'sdd'` 执行步骤
 
-# 10
+=>`fdisk /dev/sdb`
 
-使用 'lsblk' 检查
-=>lsblk
+## 10
+
+使用 `'lsblk'` 检查
+
+=>`lsblk`
 
 ```
 [root@server2 ~]# lsblk
@@ -6114,9 +7121,9 @@ sdc       8:32   0 20G 0 disk
 sr0       11:0   1 4.3G 0 rom
 ```
 
-# 11
+## 11
 
-使用 'mdadm' 检查
+使用 `'mdadm'` 检查
 
 ```
 [root@server2 ~]# mdadm --examine /dev/sd[b-c]1
@@ -6126,12 +7133,13 @@ mdadm: 在 /dev/sdc1 未检测到 md 超块。
 [root@server2 ~]#
 ```
 
-# Tanvir Rahman
+## Tanvir Rahman
 
-# 12
+## 12
 
 创建 RAID md 设备
-=>mdadm --create /dev/md0 --level=stripe --raid-devices=2 /dev/sd[b-c]1
+
+=>`mdadm --create /dev/md0 --level=stripe --raid-devices=2 /dev/sd[b-c]1`
 
 ```
 [root@server2 ~]#
@@ -6141,15 +7149,17 @@ mdadm: 数组 /dev/md0 已启动。
 [root@server2]#
 ```
 
-# 13
+## 13
 
 查看 RAID 0 设备的详情
-=>mdadm --detail /dev/md0
 
-# 14
+=>`mdadm --detail /dev/md0`
+
+## 14
 
 在系统上分配文件系统
-=>mkfs.ext4 /dev/md0
+
+=>`mkfs.ext4 /dev/md0`
 
 ```
 [root@server2 ~]# mkfs.ext4 /dev/md0
@@ -6165,19 +7175,21 @@ Superblocks 存储在块上: 32768, 98304, 163840, 229376, 249412, 319200, 38473
 写入 inode 表: 完成
 创建日志 (32768 块): 完成
 写入超级块和文件系统信息: 完成
-
 ```
 
-# 15
+## 15
 
 挂载卷
-=>mkdir /mnt/raid0
-=>mount /dev/md0 /mnt/raid0
 
-# 16
+=>`mkdir /mnt/raid0`
+
+=>`mount /dev/md0 /mnt/raid0`
+
+## 16
 
 检查挂载的卷
-=>df -h
+
+=>`df -h`
 
 ```
 [root@server2 ~]# df Size Used Avail% Mounted on
@@ -6194,10 +7206,11 @@ tmpfs 199M 0 199M 0% /run/user/0
 [root@server2 ~]#
 ```
 
-# 17
+## 17
 
-使用 lsblk 检查块设备
-=>lsblk
+使用 `lsblk` 检查块设备
+
+=>`lsblk`
 
 ```
 [root@server2 ~]# lsblk
@@ -6218,11 +7231,7 @@ sr0 11:0 1 4.36G 0 rom
 [root@server2 ~]#
 ```
 
-
-
-
-
-# 创建分区
+## 创建分区
 
 ```bash
 [root@server2 ~]# fdisk /dev/sdb
@@ -6253,17 +7262,19 @@ Units = sectors of 1 * 512 = 512 bytes
 I/O 大 (最小/最优): 512 bytes / 512 bytes
 磁盘标签类型: dos
 磁盘标识: 0xc4707f2b
+```
 
 | Device | Start | End | Blocks | Id | System |
 |---|---|---|---|---|---|
-| /dev/sdb1 | 2048 | 41943039 | 20970496 | 83 | Linux |
+| `/dev/sdb1` | 2048 | 41943039 | 20970496 | 83 | Linux |
 
+```
 命令 (m 获取帮助): :
 ```
 
-## 在该分区上创建 raid
+### 在该分区上创建 raid
 
-## Tanvir Rahman
+### Tanvir Rahman
 
 ```bash
 [root@server2 ~]# fdisk /dev/sdb
@@ -6290,21 +7301,21 @@ Device Boot Start Blocks Id System
 [root@server2 ~]#
 ```
 
-## 查看块设备
+### 查看块设备
 
-## 步骤 9
+### 步骤 9
 
-对 'sdc' 执行步骤 8
+对 `'sdc'` 执行步骤 8
 
-=>fdisk /dev/sdc
+=>`fdisk /dev/sdc`
 
-## 步骤 10
+### 步骤 10
 
-使用 'lsblk' 检查
+使用 `'lsblk'` 检查
 
-## UBUNTU $ CENTOS 员员
+### UBUNTU $ CENTOS 员员
 
-=>lsblk
+=>`lsblk`
 
 | NAME | MAJ:MIN RM SIZE TYPE MOUNTPOINT |
 |---|---|---|---|---|---|
@@ -6320,9 +7331,9 @@ Device Boot Start Blocks Id System
 | └-sdc1 | 8:33 0 200G | part | |
 | sr0 | 11:0 1 4.36G | rom | |
 
-## 步骤 11
+### 步骤 11
 
-使用 ‘mdadm’ 检查
+使用 `'mdadm'` 检查
 
 ```bash
 [root@server2 ~# mdadm --dev/sd[b-c]1
@@ -6332,13 +7343,13 @@ mdadm: No md superblock detected on /dev/sdc1.
 [root@server2 ~]#
 ```
 
-## Tanvir Rahman
+### Tanvir Rahman
 
-## 步骤 12
+### 步骤 12
 
 创建 RAID md 设备（带镜像）
 
-=>mdadm --create /dev/md0 --level=mirror --raid-devices=2 /dev/sd[b-c]1
+=>`mdadm --create /dev/md0 --level=mirror --raid-devices=2 /dev/sd[b-c]1`
 
 ```bash
 [root@server2 ~# mdadm --create /dev/md0 --level=mirror --raid-devices=2 /dev/sd[b-c]1
@@ -6348,17 +7359,17 @@ mdadm: array /dev/md0 started.
 [root@server2 ~#]
 ```
 
-## 步骤 13
+### 步骤 13
 
 查看 RAID 设备的详情
 
-=>mdadm --detail /dev/md0
+=>`mdadm --detail /dev/md0`
 
-## 步骤 14
+### 步骤 14
 
 文件系统分区
 
-=>mkfs.ext4 /dev/md0
+=>`mkfs.ext4 /dev/md0`
 
 ```bash
 [root@server2 ~]# mkfs.ext4 /dev/md0
@@ -6375,18 +7386,21 @@ Creating journal (3768 blocks): done
 Writing superblocks and filesystem information: done
 ```
 
-## 步骤 15
+### 步骤 15
 
 挂载卷
 
-=>mkdir /mnt/raid0
-=>mount /dev/md0 /mnt/raid0
+=>`mkdir /mnt/raid0`
 
-## Tanvir Rahman
+=>`mount /dev/md0 /mnt/raid0`
 
-## 步骤 16
+### Tanvir Rahman
+
+### 步骤 16
 
 检查挂载的卷
+
+
 
 ```bash
 [root@server2 ~# df -h
@@ -6405,9 +7419,9 @@ tmpfs                   199M     0  199M 0% /run/user/0
 
 ## 步骤 17
 
-使用 lsblk 查看块设备
+使用 `lsblk` 查看块设备
 
-=>lsblk
+=>`lsblk`
 
 ```bash
 [root@server2 ~]# lsblk
@@ -6467,11 +7481,6 @@ sdc       8:10   20G 0 disk
 sr0      8:13    4.3G 0 rom
 ```
 
-
-
-
-
-
 # Tanvir Rahman
 
 ```bash
@@ -6509,7 +7518,7 @@ I/O 大小 (对齐/最佳): 512 bytes / 512 bytes
 
 # 步骤 9
 
-对 'sdc' 和 'sdd' 执行步骤 8
+对 `sdc` 和 `sdd` 执行步骤 8
 
 ```bash
 =>fdisk /dev/sdc
@@ -6518,11 +7527,11 @@ I/O 大小 (对齐/最佳): 512 bytes / 512 bytes
 
 # 步骤 10
 
-使用 'lsblk' 检查
+使用 `lsblk` 检查
 
-# UBUNTU $ CENTOS  way员
+# UBUNTU $ CENTOS way员
 
-=>lsblk
+=>`lsblk`
 
 ```bash
 [root@localhost ~]# lsblk
@@ -6545,7 +7554,7 @@ sr0              11:0    1 4.3G  0 rom /run/media/root/CentOS 7 x86_64
 
 # 步骤 11
 
-使用 ‘mdadm' 检查
+使用 `mdadm` 检查
 
 ```bash
 [root@localhost ~]# mdadm --examine /dev/sd[b-d]1
@@ -6614,7 +7623,7 @@ dev/md0                40G   38G  95% /mnt/raid5
 
 # 步骤 18
 
-使用 lsblk 检查块设备
+使用 `lsblk` 检查块设备
 
 ```bash
 [root@localhost ~]# lsblk
@@ -6634,7 +7643,6 @@ sdd              8:48   0 20G  0 disk
 sr0              11:0    1 4.3G  0 rom /run/media/root/CentOS 7 x86_64
 [root@localhost ~]# _
 ```
-
 
 # 在 CENTOS 7 中创建 RAID 10
 
@@ -6661,20 +7669,15 @@ sr0              11:0    1 4.3G  0 rom /run/media/root/CentOS 7 x86_64
 
 # 步骤 4
 
-应用 'lsblk' 命令查看块设备
+应用 `lsblk` 命令查看块设备
 
 ```bash
 =>lsblk
 ```
 
-
-
-
-
-
 # UBUNTU $ CENTOS 管理员
 
-=>lsblk
+=>`lsblk`
 
 | NAME | MAJ:MIN | RM | SIZE | TYPE | MOUNTPOINT |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -6697,20 +7700,22 @@ sr0              11:0    1 4.3G  0 rom /run/media/root/CentOS 7 x86_64
 | └-sde1 | 8:65 | 0 | 20G | part | |
 | └-md0 | 9:0 | 0 | 40G | raid10 | |
 | sr0 | 11:0 | 1 | 4.3G | rom | |
+
 [root@localhost ~]#
 
-# 第 11 
+# 第 11
 
-使用 'mdadm' 检查
-=>mdadm --examine /dev/sd[b-e]1
+使用 `mdadm` 检查
 
-# 第 12 
+=>`mdadm --examine /dev/sd[b-e]1`
+
+# 第 12
 
 创建 RAID md 设备（镜像）
 
 # Tanvir Rahman
 
-=>mdadm --create /dev/md0 --level=10 --raid-devices=4 /dev/sd[b-e]1
+=>`mdadm --create /dev/md0 --level=10 --raid-devices=4 /dev/sd[b-e]1`
 
 ```bash
 [root@localhost]# mdadm --create /dev/md0 --level=10 --raid-devices=4 /dev/sd[b-e]1
@@ -6719,11 +7724,11 @@ mdadm: array /dev/md0 started.
 [root@localhost]# 
 ```
 
-# 第 13 
+# 第 13
 
 查看 RAID 0 设备的详细信息
 
-=>mdadm -detail /dev/md0
+=>`mdadm -detail /dev/md0`
 
 # UBUNTU $ CENTOS 管理员
 
@@ -6762,7 +7767,7 @@ Number Major Minor RaidDevice State
 [root@localhost ~]# 
 ```
 
-# 第 14 
+# 第 14
 
 使用此命令验证
 
@@ -6779,18 +7784,19 @@ Raid Level : raid10
 [root@localhost raid10]# 
 ```
 
-# 第 15 
+# 第 15
 
 在文件系统上分配文件分区
 
-=>mkfs.ext4 /dev/md0
+=>`mkfs.ext4 /dev/md0`
 
-# 第 16 
+# 第 16
 
 挂载卷
 
-=>mkdir /mnt/raid10
-=>mount /dev/md0 /mnt/raid10
+=>`mkdir /mnt/raid10`
+
+=>`mount /dev/md0 /mnt/raid10`
 
 # UBUNTU $ CENTOS 管理员
 
@@ -6801,11 +7807,13 @@ Raid Level : raid10
 [root@localhost]# ls
 ```
 
-# 第 17 
+# 第 17
 
 检查挂载的卷
 
-=>df -h
+=>`df -h`
+
+
 
 ```bash
 [root@localhost raid10]# mdadm -E /dev/sd[b-e]1 | grep raid10
@@ -6816,11 +7824,11 @@ Raid Level : raid10
 [root@localhost raid10]#
 ```
 
-# 第 18 
+# 第 18
 
-使用 lsblk 检查块设备
+使用 `lsblk` 检查块设备
 
-=>lsblk
+=> `lsblk`
 
 ```bash
 [root@localhost raid10]# lsblk
@@ -6850,12 +7858,14 @@ NAME | MAJ:MIN | RM | SIZE | TYPE | MOUNTPOINT |
 
 # LINUX 进程管理
 
-我们在 Linux 操作系统中所的一切的一切都由进程处理。有不同的命令来管理进程：如何启动和停止进程、如何在前台和后台运行进程、如何自定义进程以及如何使用 'cron' 和 'anacron' 调度进程执行。进程管理和进程监控是提高和优化服务器性能的方法。
+我们在 Linux 操作系统中所的一切的一切都由进程处理。有不同的命令来管理进程：如何启动和停止进程、如何在前台和后台运行进程、如何自定义进程以及如何使用 `cron` 和 `anacron` 调度进程执行。进程管理和进程监控是提高和优化服务器性能的方法。
 
 # 不同类型的
 
 Linux 基本上有两种进程：
+
 1) 自动进程（后台进程）
+
 2) 交互式进程
 
 # 自动进程
@@ -6869,13 +7879,14 @@ Linux 基本上有两种进程：
 # 一后台进程（守护进程）
 
 | 进程名称（守护进程） |  |
+
 | :--- | :--- |
 
 # UBUNTU $ CENTOS 管理员
 
-systemd 是产生所有其他进程的 Unix 程序。在 2016 年之后，它取代了大多数 Linux 操作系统中的 Init 进程。systemd 是所有进程树的顶层进程。如果我们打开终端并使用 'pstree' 命令查看进程树。
+`systemd` 是产生所有其他进程的 Unix 程序。在 2016 年之后，它取代了大多数 Linux 操作系统中的 Init 进程。`systemd` 是所有进程树的顶层进程。如果我们打开终端并使用 `pstree` 命令查看进程树。
 
-为 pstree 命令安装包：
+为 `pstree` 命令安装包：
 
 ```bash
 ubuntu : sudo apt-get install pstree
@@ -6883,24 +7894,25 @@ centos : sudo yum install pstree
 suse : sudo zypper install pstree
 ```
 
-Cron 是一个作业调度程序。该程序用于调度任务，这些任务可以是按时间间隔定期运行的命令和 shell 脚本。它通常用于系统自动化。对于从互联网下载文件或在固定时间间隔下载或发送电子邮件非常有用。它是动态主机配置协议守护进程。此程序在后台运行并自动为客户端计算机设置 TCP/IP 信息。
+`Cron` 是一个作业调度程序。该程序用于调度任务，这些任务可以是按时间间隔定期运行的命令和 shell 脚本。它通常用于系统自动化。对于从互联网下载文件或在固定时间间隔下载或发送电子邮件非常有用。它是动态主机配置协议守护进程。此程序在后台运行并自动为客户端计算机设置 TCP/IP 信息。
 
 | ftpd | 该程序处理文件服务器。它处理来自用户的 ftp 请求 |
+
 | Httpd | Httpd 是 Web 服务器守护进程，处理 Web 服务器请求 |
+
 | sshd | sshd 安全 shell 程序。它处理来自用户的 ssh 请求 |
+
 | nfsd | Nfsd 处理用户对 nfs 操作请求（nfs 代表网络文件系统） |
+
 | Sendmail | SMTP 守护进程。它处理 smtp 请求 |
+
 | fingerd | 为 finger 提供网络接口，Finger 用于查找并显示用户信息 |
-
-
-
-
 
 ## UBUNTU & CENTOS 管理员
 
 情况保持不变。这意味着如果我们运行一个程序或在后台运行一个程序，我们仍然可以在终端中看到输出和错误信息（如果发生的话）。如果我们不想要终端输出，可以使用符号 `>` 将此输出重定向到文件中。例如：
 
-command > /somewhere
+`command > /somewhere`
 
 例如，如果我们输入 `ls > output.txt`
 
@@ -6909,7 +7921,9 @@ command > /somewhere
 ## 如何将进程发送到后台
 
 有两种简单的方法可以将任何进程发送到后台：
+
 1) 在任何命令的末尾添加 `&` 符号
+
 2) 在中断正在运行的前台进程后使用 `bg` 命令
 
 1) 假设我们想在后台运行 `ping 8.8.8.8 > out.txt` 命令，我们在命令末尾添加一个 `&` 符号 => `ping 8.8.8.8 > out.txt &`
@@ -6945,17 +7959,21 @@ vagrant@localhost ~$ █
 ## 将进程从后台调前台
 
 要将任何进程从后台带回前台，我们使用 `fg` 命令。
+
 如果只输入 `fg`，它会将最后一个后台作业带回前台。要将特定作业带回前台，我们在 `fg` 命令后使用进程 ID。
 
 例如：
-=>fg %1
-=>fg %2
+
+=> `fg %1`
+
+=> `fg %2`
 
 ## Tanvir Rahman
 
 ## 进程管理
 
 Linux 操作系统有很多优秀的性能监控工具。
+
 下面解释了其中一些：
 
 ### ps
@@ -6971,7 +7989,8 @@ PID TTY TIME CMD
 ```
 
 通过 `ps` 命令，我们可以尝试不同的开关，例如，如果我们使用 `ps -e`，我们可以看到系统中的所有进程，或者你可以使用此命令逐个查看：
-=> ps -e | more
+
+=> `ps -e | more`
 
 ```
 vagrant@localhost:~# ps -e | more
@@ -7013,6 +8032,7 @@ PID TTY          TIME CMD
 37 ?            00:00:00 worker/31
 38 ?            00:00:00 worker/32
 ```
+
 （注：此处示例文本输出不全，翻译时保持了逻辑一致性）
 
 通过 `ps` 命令，我们可以尝试不同的开关...（此处原文内容重复，按要求显示逻辑）
@@ -7030,10 +8050,6 @@ PID TTY          TIME CMD
 
 （由于原文中 `ps` 之后存在大量重复的占位符和描述，译文已根据核心逻辑进行处理，并保持格式一致）
 
-
-
-
-
 UBUNTU $ CENTOS 管理员
 
 处于睡眠模式，最后一个是僵尸进程（僵尸进程是指已停止但无法向其父进程提供退出状态的进程）。
@@ -7041,8 +8057,11 @@ UBUNTU $ CENTOS 管理员
 第三行：第三行包含这些值
 
 | 表头名称 | 描述 |
+
 | :--- | :--- |
+
 | us | 代表用户空间。它代表用户空间中的 CPU 活动。这些活动实际上是由用户名的不同命令启动的 |
+
 | sy | 代表系统空间中的 CPU 活动。这些实际上是内核程序。它们通常代表守护进程（Daemons）执行工作。 |
 
 ni 表示处理低优先级进程花费的时间以及 CPU 空闲时间。高值实际上表示系统未执行任何操作。
@@ -7058,8 +8077,11 @@ CPU 与软件通信花费的时间。通常它应该很低（si）。
 第五行：这部分是 top 窗口的下部。它提供了关于 CPU 使用率最活跃的进程详情。
 
 | 表头名称 | 描述 |
+
 | :--- | :--- |
+
 | PID | 每个进程都有唯一的进程 ID（称为 PID），进程 ID 非常重要。例如，如果你想杀死一个进程，你需要提供该进程的 ID |
+
 | USER | 使用该进程的用户名。许多进程作为 root 运行，所以你会经常看到它 |
 
 PR 显示进程的优先级。这个数字指示进程何时再次获得 CPU 周期。值越小，优先级越高。高优先级进程将更早获得 CPU 周期，而低优先级进程较后获得 CPU 周期。
@@ -7073,10 +8095,15 @@ RES 进程此时正在使用的内存大小。
 SHR 进程与其他进程共享的共享内存量。
 
 - S 显示进程的状态
+
 - ‘R’表示正在运行
+
 - ‘S’表示处于睡眠模式
+
 - ‘Z’表示僵尸进程
+
 - ‘T’表示已停止，可能是由作业控制信号引起的
+
 - ‘D’表示不可中断睡眠
 
 %CPU 上一个轮询周期（通常为 5 秒）使用的 CPU 比例。
@@ -7096,7 +8123,9 @@ COMMAND
 有不同的命令用于终止进程
 
 | 进程终止命令 | 描述 |
+
 | :--- | :--- |
+
 | Kill | 最常用的命令，带有数字参数（SIGKILL），如果没有指定信号，则向进程发送默认信号（15） |
 
 killall 如果我们想杀死多个进程，可以使用 `killall` 命令。例如，如果我们使用 `killall httpd`，它将杀死 Apache 服务器的所有实例。
@@ -7127,14 +8156,16 @@ Linux 操作系统有一些高级进程监控工具。下面解释其中一些�
 
 在 CentOS 中安装，我们只需要添加 EPEL 仓库， `yum` 就能找到它。
 
-- =>sudo yum -y install epel-release
-- =>sudo yum -y update
-- =>sudo yum install htop
+- => `sudo yum -y install epel-release`
+
+- => `sudo yum -y update`
+
+- => `sudo yum install htop`
 
 安装成功后，我们必须输入：
 
 ```
-=>sudo htop
+=> sudo htop
 ```
 
 我们应该能看到系统的系统的状态。
@@ -7144,35 +8175,46 @@ Linux 操作系统有一些高级进程监控工具。下面解释其中一些�
 让我们谈谈 top 工具的每个选项。
 
 - 1. 第一选项是 CPU，显示 CPU 利用率百分比并以图形模式显示。
+
 - 2. 第二选项是内存选项，显示实际使用的内存。
+
 - 3) 第三选项是系统使用的交换空间（Swap）。
+
 - 4) 右侧下一个选项是任务（Task）。显示总任务数、线程和运行中的任务。
+
 - 5) 下一个选项显示系统的平均负载（Load average）。
+
 - 6) 右侧第三选项显示服务器的运行时间（Uptime），显示服务器运行的时间。
 
 下部提供了进程详情，就像 `top` 命令一样，让我们再次查看：
 
 | 表头名称 | 描述 |
+
 | :--- | :--- |
+
 | PID | 每个进程都有唯一的进程 ID（称为 PID），进程 ID 非常重要。例如，如果你想杀死一个进程，你需要提供该进程的 ID |
-| USER | 使用该进程的用户名。许多进程作为 root 运行，所以你会经常看到它 |
+
+
+
+| `USER` | 使用该进程的用户名。许多进程作为 root 运行，所以你会经常看到它 |
 
 显示进程的优先级。这个数字指示进程何时再次获得 CPU 周期。值越小，优先级越高。高优先级进程将更早获得 CPU 周期，而低优先级进程较后获得 CPU 周期。
 
-PRI 进程的 NICE 值。通过 NICE 值我们可以更改进程的优先级。
+`PRI` 进程的 `NICE` 值。通过 `NICE` 值我们可以更改进程的优先级。
 
-NI 进程占用的内存总量。
+`NI` 进程占用的内存总量。
 
-RES 进程此时正在使用的内存大小。
+`RES` 进程此时正在使用的内存大小。
 
-SHR 进程与其他进程共享的共享内存量。
+`SHR` 进程与其他进程共享的共享内存量。
 
-S 显示进程的状态：
-- ‘R’表示正在运行
-- ‘S’表示处于睡眠模式
-- ‘Z’表示僵尸进程
-- ‘T’表示已停止，可能是由作业控制信号引起的
-- ‘D’表示不可中断睡眠
+`S` 显示进程的状态：
+
+- ‘`R`’表示正在运行
+- ‘`S`’表示处于睡眠模式
+- ‘`Z`’表示僵尸进程
+- ‘`T`’表示已停止，可能是由作业控制信号引起的
+- ‘`D`’表示不可中断睡眠
 
 上一个轮询周期（通常为 5 秒）使用的 CPU 比例。
 
@@ -7186,25 +8228,22 @@ S 显示进程的状态：
 
 | 名称 | 描述 |
 | :--- | :--- |
-| F1 | 帮助选项。包含其他所有选项的描述和快捷键 |
-| F2 | 设置选项，通过此选项你可以自定义 `htop` 工具的外观。你还可以设置输出的颜色以及你喜的选项 |
-| F3 | 通过此选项你可以搜索特定的进程，只需输入 F3 和进程名称即可找到 |
-| F4 | 你可以使用此命令过滤进程，如果你输入一个进程名称，它将显示所有具有相同命令名的进程 |
+| `F1` | 帮助选项。包含其他所有选项的描述和快捷键 |
+| `F2` | 设置选项，通过此选项你可以自定义 `htop` 工具的外观。你还可以设置输出的颜色以及你喜的选项 |
+| `F3` | 通过此选项你可以搜索特定的进程，只需输入 `F3` 和进程名称即可找到 |
+| `F4` | 你可以使用此命令过滤进程，如果你输入一个进程名称，它将显示所有具有相同命令名的进程 |
 
+`F6` 是排序选项。你可以通过不同的选项对进程进行排序。你可以通过 `PID`、`USER`、`Priority`、`Time` 等对进程进行排序。
 
+`F7` 用于降低任何进程的 Nice 值；Nice 值越低，优先级越高。
 
+`F8` 用于增加任何进程的 Nice 值；Nice 值越高，优先级越低。
 
-F6 是排序选项。你可以通过不同的选项对进程进行排序。你可以通过 PID、USER、Priority、Time 等对进程进行排序。
+使用它的 kill 命令，你选择一个进程并按下 `F9`，它将向你显示想要发送给该进程的信号列表。这就是你可以杀死任何进程的方法。
 
-F7 用于降低任何进程的 Nice 值；Nice 值越低，优先级越高。
+`htop` 的退出命令
 
-F8 用于增加任何进程的 Nice 值；Nice 值越高，优先级越低。
-
-使用它的 kill 命令，你选择一个进程并按下 F9，它将向你显示想要发送给该进程的信号列表。这就是你可以杀死任何进程的方法。
-
-htop 的退出命令
-
-你也可以像使用 top 命令一样，通过命令找到按用户过滤的进程。
+你也可以像使用 `top` 命令一样，通过命令找到按用户过滤的进程。
 
 ```
 =>htop -u <username>
@@ -7212,18 +8251,18 @@ htop 的退出命令
 
 ## Fuser
 
-FUSER 命令基本上用于识别使用文件、目录或套接字（sockets）的进程。该工具基本上会显示使用作为参数传递给命令的文件的进程 PID。假设你被分配了一项任务来识别正在使用特定文件的进程，'fuser' 命令让你根据它们所访问的文件（或目录、套接字）来识别进程。对于块特殊设备，该命令会列出在该设备上使用任何文件的进程。不仅如此，该工具还允许你杀死这些进程，这样你就不必单独使用 KILL 或 KILLALL 命令了。
+`FUSER` 命令基本上用于识别使用文件、目录或套接字（sockets）的进程。该工具基本上会显示使用作为参数传递给命令的文件的进程 `PID`。假设你被分配了一项任务来识别正在使用特定文件的进程，`'fuser'` 命令让你根据它们所访问的文件（或目录、套接字）来识别进程。对于块特殊设备，该命令会列出在该设备上使用任何文件的进程。不仅如此，该工具还允许你杀死这些进程，这样你就不必单独使用 `KILL` 或 `KILLALL` 命令了。
 
-Fuser 命令的输出显示进程 PID 列表，后面跟着一个指示进程如何使用文件的字母。因为 fuser 命令不仅显示进程，还显示访问类型。
+`Fuser` 命令的输出显示进程 `PID` 列表，后面跟着一个指示进程如何使用文件的字母。因为 `fuser` 命令不仅显示进程，还显示访问类型。
 
 每种访问类型由一个字母表示
 
 | 项目 | 说明 |
 | --- | --- |
-| c | 将文件作为当前目录。 |
-| e | 将文件作为程序的执行对象。 |
-| r | 将文件作为根目录 |
-| m | 将文件作为共享库（或其他可加载对象） |
+| `c` | 将文件作为当前目录。 |
+| `e` | 将文件作为程序的执行对象。 |
+| `r` | 将文件作为根目录 |
+| `m` | 将文件作为共享库（或其他可加载对象） |
 
 [记住 Linux 将一切都视为文件]
 
@@ -7244,7 +8283,7 @@ root@localhost vagrant]# fuser /
 root@localhost vagrant]#
 ```
 
-但这只显示了 PID，而且很难理解。所以我们添加了冗余标志 - ( v )，让结果更清晰。
+但这只显示了 `PID`，而且很难理解。所以我们添加了冗余标志 `- ( v )`，让结果更清晰。
 
 ```
 root@localhost vagrant]# fuser -v /
@@ -7283,13 +8322,13 @@ root 46rc.. kaluad
 
 [杀死进程]
 
-假设你想知道哪个进程正在使用特定文件。例如，创建一个 file.txt 并存储 www.google.com 的输出。
+假设你想知道哪个进程正在使用特定文件。例如，创建一个 `file.txt` 并存储 `www.google.com` 的输出。
 
 ```
 =>ping www.google.com
 ```
 
-[杀死进程] 假设你想知道哪个进程正在使用特定文件。例如，创建一个 file.txt 并存储 www.google.com 的输出。
+[杀死进程] 假设你想知道哪个进程正在使用特定文件。例如，创建一个 `file.txt` 并存储 `www.google.com` 的输出。
 
 ```
 =>ping www.google.com
@@ -7299,7 +8338,7 @@ root 46rc.. kaluad
 
 [进程]
 
-你也可以像使用 top 命令一样，通过命令找到按用户过滤的进程。
+你也可以像使用 `top` 命令一样，通过命令找到按用户过滤的进程。
 
 ```
 =>htop -u <username>
@@ -7307,18 +8346,18 @@ root 46rc.. kaluad
 
 ## Fuser
 
-FUSER 命令基本上用于识别使用文件、目录或套接字（sockets）的进程。该工具基本上会显示作为参数传递给命令的文件的进程 PID。假设你被分配了一项任务来识别正在使用特定文件的进程，'fuser' 命令让你根据它们所访问的文件（或目录、套接字）来识别进程。对于块特殊设备，该命令会列出在该设备上使用任何文件的进程。不仅如此，该工具还允许你杀死这些进程，这样你就不必单独使用 KILL 或 KILLALL 命令了。
+`FUSER` 命令基本上用于识别使用文件、目录或套接字（sockets）的进程。该工具基本上会显示作为参数传递给命令的文件的进程 `PID`。假设你被分配了一项任务来识别正在使用特定文件的进程，`'fuser'` 命令让你根据它们所访问的文件（或目录、套接字）来识别进程。对于块特殊设备，该命令会列出在该设备上使用任何文件的进程。不仅如此，该工具还允许你杀死这些进程，这样你就不必单独使用 `KILL` 或 `KILLALL` 命令了。
 
-Fuser 命令的输出显示进程 PID 列表，后面跟着一个指示进程如何使用文件的字母。因为 fuser 命令不仅显示进程，还显示访问类型。
+`Fuser` 命令的输出显示进程 `PID` 列表，后面跟着一个指示进程如何使用文件的字母。因为 `fuser` 命令不仅显示进程，还显示访问类型。
 
 每种访问类型由一个字母表示
 
 | 项目 | 说明 |
 | --- | --- |
-| c | 将文件作为当前目录。 |
-| e | 将文件作为程序的执行对象。 |
-| r | 将文件作为根目录 |
-| m | 将文件作为共享库（或其他可加载对象） |
+| `c` | 将文件作为当前目录。 |
+| `e` | 将文件作为程序的执行对象。 |
+| `r` | 将文件作为根目录 |
+| `m` | 将文件作为共享库（或其他可加载对象） |
 
 [记住 Linux 将一切都视为文件]
 
@@ -7339,7 +8378,7 @@ root@localhost vagrant]# fuser /
 root@localhost vagrant]#
 ```
 
-但这只显示了 PID，而且很难理解。所以我们添加了冗余标志 - ( v )，让结果更清晰。
+但这只显示了 `PID`，而且很难理解。所以我们添加了冗余标志 `- ( v )`，让结果更清晰。
 
 ```
 root@localhost vagrant]# fuser -v /
@@ -7378,23 +8417,21 @@ root 46rc.. kaluad
 
 [杀死进程]
 
-假设你想知道哪个进程正在使用特定文件。例如，创建一个 file.txt 并存储 www.google.com 的输出。
+假设你想知道哪个进程正在使用特定文件。例如，创建一个 `file.txt` 并存储 `www.google.com` 的输出。
 
 ```
 =>ping www.google.com
 ```
-
-
-
 
 # Tanvir Rahman
 
 为什么 1 类型虚拟化的性能优于 2 类型？
 
 示例：
-- 1) virtualbox
-- 2) VMware
-- 3) Qemu
+
+- 1) `virtualbox`
+- 2) `VMware`
+- 3) `Qemu`
 
 # 容器 (CONTAINERS)
 
@@ -7402,9 +8439,9 @@ root 46rc.. kaluad
 
 容器并不是同一个概念。1979年，UNIX 为操作系统添加了一个名为 `chroot` 的服务。它提供了一个隔离的运行环境，应用程序和服务可以在其中运行。
 
-2008年，Linux 引入了 LXC（Linux 容器），现在仍被广泛使用；这是一个流行的开源应用，为进程监控创建一个隔离的环境。
+2008年，Linux 引入了 `LXC`（Linux 容器），现在仍被广泛使用；这是一个流行的开源应用，为进程监控创建一个隔离的环境。
 
-2003年，DOCKER 公司将这一技术推向了。DockerDocker容器拥有强大的应用程序接口 (API) 命令接口。
+2003年，DOCKER 公司将这一技术推向了。DockerDocker容器拥有强大的应用程序接口 (`API`) 命令接口。
 
 # UBUNTU $ CENTOS 管理员
 
@@ -7426,22 +8463,24 @@ root 46rc.. kaluad
 
 # UBUNTU $ CENTOS 管理员但也存在问题。
 
-第一个问题是可移植性。当你尝试将应用程序从一个位置迁移到另一个位置时，我们必须将整个操作系统传递给应用程序。运行在 VMware 上的操作系统无法原生运行在 virtualbox 上，这并不是完全可的。
+第一个问题是可移植性。当你尝试将应用程序从一个位置迁移到另一个位置时，我们必须将整个操作系统传递给应用程序。运行在 `VMware` 上的操作系统无法原生运行在 `virtualbox` 上，这并不是完全可的。
 
-另一个问题是资源浪费，当你在服务器上部署应用程序时，即使是在虚拟机上，操作系统就需要大量的资源。这是对硬件资源的极大浪费。你会发现你大部分资源都浪费在了操作系统上。在 docker 中，你不必这样做。
+另一个问题是资源浪费，当你在服务器上部署应用程序时，即使是在虚拟机上，操作系统就需要大量的资源。这是对硬件资源的极大浪费。你会发现你大部分资源都浪费在了操作系统上。在 `docker` 中，你不必这样做。
 
 # 创建 UBUNTU 虚拟服务器
 
-我们可以使用 KVM, libvirt 来创建一个虚拟服务器。
+我们可以使用 `KVM`, `libvirt` 来创建一个虚拟服务器。
 
 # 安装软件包
 
-如果你在 ubuntu 中：
+如果你在 `ubuntu` 中：
+
 ```bash
 sudo apt install kvm libvirt-bin virt-manager virt-viewer virt-top virt-what
 ```
 
-如果你在 Centos/RedHat 中：
+如果你在 `Centos/RedHat` 中：
+
 ```bash
 sudo yum groupinstall "virtualization"
 ```
@@ -7462,40 +8501,55 @@ virt-install -name=my_os -vcpus=1 -memory=2048 -cdrom=<path_of_the_iso> --disk s
 
 # Tanvir Rahman
 
+```
 =>osinfo-query os
+```
 
 [important]
 
-你刚刚安装的操作系统将存储在 "/home/.local/share/libvirt/images" 文件夹中。因此，如果你想完全删除操作系统，必须手动删除文件夹内部的文件。查找所有已安装操作系统的列表：
+你刚刚安装的操作系统将存储在 `"/home/.local/share/libvirt/images"` 文件夹中。因此，如果你想完全删除操作系统，必须手动删除文件夹内部的文件。查找所有已安装操作系统的列表：
 
+```
 =>virsh list
+```
 
 启动虚拟机：
+
+```
 =>virsh start <VM_name>
+```
 
 关闭虚拟机：
+
+```
 =>virsh shutdown <VM_name>
+```
 
 强制关闭虚拟机：
+
+```
 =>virsh destroy <VM_name>
+```
 
 强制关闭并取消定义虚拟机：
+
 ```bash
 =>virsh undefine <VM_name>
 ```
 
 然后你必须删除目录中的文件：
-'/home/.local/share/libvirt/images'
+
+`'/home/.local/share/libvirt/images'`
 
 # APACHE 服务器
 
-你会发现你大部分资源都浪费在了操作系统上。在 docker 中，你不必这样做。
+你会发现你大部分资源都浪费在了操作系统上。在 `docker` 中，你不必这样做。
 
 # APACHE 服务器
 
-你会发现你大部分资源都浪费在了操作系统上。在 docker 中，你不必这样做。
+你会发现你大部分资源都浪费在了操作系统上。在 `docker` 中，你不必这样做。
 
-包含公共 html 文件。在里面存储了所有的应用程序和 html/css 文件，并且公共用户可以访问。
+包含公共 `html` 文件。在里面存储了所有的应用程序和 `html/css` 文件，并且公共用户可以访问。
 
 ```bash
 /etc/httpd/conf/httpd.conf
@@ -7505,7 +8559,7 @@ virt-install -name=my_os -vcpus=1 -memory=2048 -cdrom=<path_of_the_iso> --disk s
 
 # ServerRoot "/etc/httpd"
 
-这个 /etc/httpd 是服务器配置、错误和日志的所在地。它是存储所有内容的目录顶层。
+这个 `/etc/httpd` 是服务器配置、错误和日志的所在地。它是存储所有内容的目录顶层。
 
 # ServerName:
 
@@ -7513,19 +8567,15 @@ virt-install -name=my_os -vcpus=1 -memory=2048 -cdrom=<path_of_the_iso> --disk s
 
 # DocumentRoot:
 
-→ DocumentRoot 显示了 Web 文（html, css, images）所在的位置。也可以使用 aliases 重定向到其他目录并
-
-
-
-
+→ `DocumentRoot` 显示了 Web 文（`html`, `css`, `images`）所在的位置。也可以使用 `aliases` 重定向到其他目录并
 
 # Tanvir Rahman
 
-符号链接。默认路径为 /var/www/html
+符号链接。默认路径为 `/var/www/html`
 
 # ErrorLog:
 
-ErrorLog 告诉你包含所有服务器错误的日志所在位置。该文件对于解决配置错误和所有问题，以及确定流量特征至关重要。默认情况下，所有级别为 `warning` 及以上的消息都会被记录。
+`ErrorLog` 告诉你包含所有服务器错误的日志所在位置。该文件对于解决配置错误和所有问题，以及确定流量特征至关重要。默认情况下，所有级别为 `warning` 及以上的消息都会被记录。
 
 默认位置是：
 
@@ -7569,6 +8619,8 @@ ErrorLog 告诉你包含所有服务器错误的日志所在位置。该文件�
 =>service apache2 start
 ```
 
+
+
 在基于 Red-hat 的系统中查找 Web 服务器进程的命令：
 
 ```bash
@@ -7599,7 +8651,7 @@ Web 服务器可以根据流量负载动态杀死和创建进程
 
 # 本地访问 Web 服务器
 
-你可以直接在浏览器中输入 URL "localhost" 来访问网站。
+你可以直接在浏览器中输入 URL `"localhost"` 来访问网站。
 
 大多数情况下，如果我们已经正确安装了 Web 服务器，我们将看到一个显示 Apache Web 服务器正在运行的测试页面。
 
@@ -7613,13 +8665,13 @@ vim /etc/hosts
 127.0.0.1 www.example.com
 ```
 
-然后我们就可以使用名称 "www.example.com" 在本地访问网站了。
+然后我们就可以使用名称 `"www.example.com"` 在本地访问网站了。
 
 # 外部访问 Web 服务器
 
-# UBUNTU $ CENTOS 管理员
+## UBUNTU $ CENTOS 管理员
 
-我们可以从其他机器访问同一个网站。如果 IP 地址在同一个子网内，我们只需要通过输入 IP 地址即可访问网站。但在这种情况下，使用名称 "www.example.com" 没有帮助的，因为在另一台机器上，没有任何信息告诉它 "www.example.com" 是特定计算机的 IP 地址。我们也可以通过在 hosts 文件中放置相同的名称来解析它。
+我们可以从其他机器访问同一个网站。如果 IP 地址在同一个子网内，我们只需要通过输入 IP 地址即可访问网站。但在这种情况下，使用名称 `"www.example.com"` 没有帮助的，因为在另一台机器上，没有任何信息告诉它 `"www.example.com"` 是特定计算机的 IP 地址。我们也可以通过在 hosts 文件中放置相同的名称来解析它。
 
 理论上，我们可以在网络中的每台主机上这样做，但这既不合理也不实际。要将域名添加到每台主机的每个 hosts 文件中是不可能的。即使我们执行了操作，我们也无法从网络外部访问网站。
 
@@ -7631,22 +8683,29 @@ vim /etc/hosts
 
 Apache Web 服务器是高度可定制的。有很多指令可以进行自定义。我们将讨论以下内容：
 
-1) 目录标签 (Directory Tags)
-2) Order(allow,deny)
-3)  (Indexes)
-4) Directory Match
-5) 文件标签 (Files tags)
-6) Directory, File 和 Locations 标签
-7) 重定向 (Redirect)
+1) 目录标签 `Directory Tags`
+
+2) `Order(allow,deny)`
+
+3) `Indexes`
+
+4) `Directory Match`
+
+5) 文件标签 `Files tags`
+
+6) `Directory`, `File` 和 `Locations` 标签
+
+7) 重定向 `Redirect`
 
 我们还涵盖了：
 
 1) 为两个网站配置同一个 IP
+
 2) 为两个不同的网站配置两个 IP
 
-# UBUNTU $ CENTOS 管理员
+## UBUNTU $ CENTOS 管理员
 
-1) 目录标签
+### 目录标签
 
 目录标签采用以下形式：
 
@@ -7656,7 +8715,7 @@ Apache Web 服务器是高度可定制的。有很多指令可以进行自定义
 </Directory>
 ```
 
-应用于 "/" 目录的目录目录配置：
+应用于 `"/"` 目录的目录目录配置：
 
 ```apache
 <Directory />
@@ -7665,27 +8724,31 @@ Apache Web 服务器是高度可定制的。有很多指令可以进行自定义
 </Directory>
 ```
 
-=>Options FollowSymLinks
+`=>Options FollowSymLinks`
 
-它允许 Web 页面使用符号链接指向位于根 (/) 目录任何位置的文件
+它允许 Web 页面使用符号链接指向位于根 `(/)` 目录任何位置的文件
 
-=>AllowOverride none
+`=>AllowOverride none`
 
 它告知选项所实施的限制是否由 `.htaccess` 文件控制。默认值为 `none`，因此不会因为配置错误导致安全漏洞。
 
-→ Order(allow  own deny)
+`→ Order(allow own deny)`
 
 `Order` 指令指定了 `allow` 和 `deny` 的工作方式。`(allow,deny)` 的顺序创建一个默认允许，用于创建黑名单。`Order(deny,allow)` 创建一个默认拒绝，用于创建白名单。
 
 `allow` 和 `deny` 决定对目录的访问。我们可以使用以下方式允许或拒绝客户端访问服务器：
 
 - 主机名
+
 - 域名
+
 - IP 地址
+
 - 部分 IP 地址
+
 - 子网及更多
 
-例如，如果他们的服务器 IP 是 "192.168.10.200"（在局域网内），我们只想允许该 IP 并拒绝所有其他，语法为：
+例如，如果他们的服务器 IP 是 `"192.168.10.200"`（在局域网内），我们只想允许该 IP 并拒绝所有其他，语法为：
 
 ```apache
 <Directory />
@@ -7697,11 +8760,13 @@ Allow from 192.168.10.200
 
 更改此项后我们必须重新加载服务器。[记住，如果不添加 `allow` 语句，将没有人访问网站，即使是你也不行]。
 
-=> service httpd restart
-或者
-=> service apache2 restart
+`=> service httpd restart`
 
-→ Indexes
+或者
+
+`=> service apache2 restart`
+
+`→ Indexes`
 
 `indexes` 指令告诉服务器在请求时显示哪个索引。它取决于目录并被称为 `DirectoryIndex`。索引实际上告诉服务器显示哪些文件列表。如果未找到文件，它将显示目录列表。
 
@@ -7709,11 +8774,11 @@ Allow from 192.168.10.200
 
 `indexes` 指令用于显示目录列表。
 
-→ DirectoryMatch:
+`→ DirectoryMatch:`
 
 `DirectoryMatch` 用于根据正则表达式对多个目录应用规则。它与 `Directory` 标签类似，但适用于多个路径。
 
-→ Files tags:
+`→ Files tags:`
 
 `Files` 标签用于对特定文件应用规则。它与 `directory` 标签非常相似，但在文件级别工作。例如：
 
@@ -7723,11 +8788,11 @@ Allow from 192.168.10.200
 </Files>
 ```
 
-→ Location tags:
+`→ Location tags:`
 
 `location` 标签用于对特定的 URL 路径应用规则。它们与 `directory` 标签类似，但基于 URL。
 
-→ Redirect:
+`→ Redirect:`
 
 `Redirect` 设置允许将 URL 重定向到新域名。你可以更改域名或重定向到另一个站点。语法为：
 
@@ -7738,13 +8803,13 @@ Allow from 192.168.10.200
 </IfModule>
 ```
 
-# UBUNTU $ CENTOS 管理员
+## UBUNTU $ CENTOS 管理员
 
-DirectoryMatch 用于处理多个文件。它也被配置中使用的标签所涵盖。
+`DirectoryMatch` 用于处理多个文件。它也被配置中使用的标签所涵盖。
 
 # 创建虚拟主机
 
-# 第一步
+## 第一步
 
 首先，我们需要创建一个存储网站数据的目录结构。默认 Apache 服务器的文档根为：
 
@@ -7752,7 +8817,7 @@ DirectoryMatch 用于处理多个文件。它也被配置中使用的标签所�
 "/var/www"
 ```
 
-我们在文档根内部为两个不同的虚拟主机创建目录，并在每个文件夹内部创建一个 "public" 文件夹。public 文件夹内部的文件可以通过 public 访问：
+我们在文档根内部为两个不同的虚拟主机创建目录，并在每个文件夹内部创建一个 `"public"` 文件夹。public 文件夹内部的文件可以通过 public 访问：
 
 ```bash
 =>sudo mkdir -p /var/www/first_site.com/public
@@ -7761,12 +8826,9 @@ DirectoryMatch 用于处理多个文件。它也被配置中使用的标签所�
 
 我们将通过 VPS 服务器提供两个网站：
 
-1) first_site.com
-2) second_site.com
+1) `first_site.com`
 
-
-
-
+2) `second_site.com`
 
 # Tanvir Rahman
 
@@ -7777,25 +8839,29 @@ DirectoryMatch 用于处理多个文件。它也被配置中使用的标签所�
 =>chown -R user:<group> /var/www/second_site.com/public
 ```
 
-# 第 3 步
+## 第 3 步
 
-我们给 "/var/www" 递归赋予 755 权限
-=>sudo chmod -R 755 /var/www
+我们给 `"/var/www"` 递归赋予 755 权限
+
+`=>sudo chmod -R 755 /var/www`
 
 为什么用 755：
+
 ----------------
 
-- +=>意味着用户可以读取、写入和执行
-- =>用户组只能读取和执行
-- =>其他用户只能读取和执行
+- `+=>`意味着用户可以读取、写入和执行
 
-# 第 4 步
+- `=>`用户组只能读取和执行
 
-我们必须在 first_site 和 second_site 的 public 文件夹内各创建一个 index.html 文件，并放入一些 HTML 代码，这样在配置完成后，我们就能确认它是否正在正常工作。
+- `=>`其他用户只能读取和执行
 
-# 第 5 步
+## 第 4 步
 
-# UBUNTU & CENTOS 管理员
+我们必须在 `first_site` 和 `second_site` 的 public 文件夹内各创建一个 `index.html` 文件，并放入一些 HTML 代码，这样在配置完成后，我们就能确认它是否正在正常工作。
+
+## 第 5 步
+
+## UBUNTU & CENTOS 管理员
 
 现在我们必须添加虚拟主机配置。你可以添加其中两个。
 
@@ -7807,29 +8873,31 @@ DirectoryMatch 用于处理多个文件。它也被配置中使用的标签所�
 </VirtualHost>
 ```
 
-在主 httpd.conf 文件内部，其实有更高效的方法，我们在 /etc/httpd/ 创建两个目录：
-- 1)sites-available
-- 2)sites-enabled
+在主 `httpd.conf` 文件内部，其实有更高效的方法，我们在 `/etc/httpd/` 创建两个目录：
 
-sites-available 目录存放配置文件，sites-enabled 目录包含这些文件的符号链接。当我们想要启用时，只需添加符号链接；当想要禁用时，只需删除符号链接，不需要删除整个文件。
+- 1)`sites-available`
+
+- 2)`sites-enabled`
+
+`sites-available` 目录存放配置文件，`sites-enabled` 目录包含这些文件的符号链接。当我们想要启用时，只需添加符号链接；当想要禁用时，只需删除符号链接，不需要删除整个文件。
 
 ```
 =>sudo mkdir /etc/httpd/sites-available
 =>sudo mkdir /etc/httpd/sites-enabled
 ```
 
-# 第 6 步
+## 第 6 步
 
-现在我们编辑主 httpd.conf 文件，并包含 sites-enabled 目录下所有的配置文件。
+现在我们编辑主 `httpd.conf` 文件，并包含 `sites-enabled` 目录下所有的配置文件。
 
 ```
 =>vim /etc/httpd/conf/httpd.conf
 =>Include sites-enabled/*.conf
 ```
 
-但是 sites-enabled 目录下还没有配置。让我们创建它。
+但是 `sites-enabled` 目录下还没有配置。让我们创建它。
 
-# 第 7 步
+## 第 7 步
 
 ```
 =>vim /etc/httpd/sites-available/first_site.conf
@@ -7843,7 +8911,7 @@ sites-available 目录存放配置文件，sites-enabled 目录包含这些文�
 </VirtualHost>
 ```
 
-# 第 8 步
+## 第 8 步
 
 ```
 =>vim /etc/httpd/sites-available/second_site.conf
@@ -7857,20 +8925,21 @@ sites-available 目录存放配置文件，sites-enabled 目录包含这些文�
 </VirtualHost>
 ```
 
-好了，现在我们可以为 sites-enabled 创建链接。
+好了，现在我们可以为 `sites-enabled` 创建链接。
 
-# 第 9 步
+## 第 9 步
 
-=>sudo ln -s /etc/httpd/sites-available/first_site.conf /etc/httpd/sites-enabled/first_site.conf
-=>sudo ln -s /etc/httpd/sites-available/second_site.conf /etc/httpd/sites-enabled/second_site.conf
+`=>sudo ln -s /etc/httpd/sites-available/first_site.conf /etc/httpd/sites-enabled/first_site.conf`
+
+`=>sudo ln -s /etc/httpd/sites-available/second_site.conf /etc/httpd/sites-enabled/second_site.conf`
 
 完成 ... 让我们重启服务器。
 
 # Tanvir Rahman
 
-# 第 10 步
+## 第 10 步
 
-进入 '/etc/httpd/conf/httpd.conf' 并添加
+进入 `'/etc/httpd/conf/httpd.conf'` 并添加
 
 ```
 =>listen 81
@@ -7906,9 +8975,9 @@ Tanvir Rahman
 
 # 在 CentOS 中安装带 php 和 mysql 的 liteserver
 
-# 第 1 步
+## 第 1 步
 
-安装 'epel-release' 仓库
+安装 `'epel-release'` 仓库
 
 ```
 =>yum install epel-release -y
@@ -7930,7 +8999,7 @@ updates | 3.4 kB 00:00
 (4/4): base/7/x86_64/group_xr | 166 kB 00:03
 ```
 
-# 第 2 步
+## 第 2 步
 
 安装 litespeed 服务器仓库
 
@@ -7948,25 +9017,21 @@ litespeed-repo-1.1.el7.centos ########################### [100%]
 [root@localhost #] 
 ```
 
-# 第 3 步
+## 第 3 步
 
-安装 'mariadb-server' 和 'litespeed' 服务器，因为我们将使用它们。
+安装 `'mariadb-server'` 和 `'litespeed'` 服务器，因为我们将使用它们。
 
 ```
 =>yum install mariadb-server litespeed
 ```
 
-# 第 4 步
+## 第 4 步
 
 安装带 php 和 mysql 的 mariadb-server
 
 ```
 =>yum install mariadb-server -y
 ```
-
-
-
-
 
 ```bash
 root@localhost ~]# systemctl status lws
@@ -7977,70 +9042,90 @@ Docs: man:systemd-sys-generator(8)
 root@localhost ~]#
 ```
 
-# 步骤 11
+## 步骤 11
 
 打开终端并输入 `ifconfig` 获取您的 IP 地址。在浏览器中访问宿主机地址 `<ip_address>:8080`，该端口是 Web 服务器的主端口。
 
-# 步骤 12
+## 步骤 12
 
 点击此按钮测试已安装的 php。
 
 phpinfo() - Mozilla
 
 | 特性 | 值 |
+
 | :--- | :--- |
+
 | 系统 | Linux localhost 3.10.0-957-x86_64 |
+
 | 构建日期 | Jul 22 2019 11:31:48 |
+
 | 服务器 API | LiteSpeed PHP/7.5 |
+
 | 虚拟目录 | 已禁用 |
+
 | 配置文件 (php.ini) | /usr/local/etc/php/php.ini |
+
 | 加载的配置文件 | /usr/local/etc/php/php.ini |
+
 | 扫描此目录查找额外的 .ini 文件 | /usr/local/etc/php/php.ini.d/ |
+
 | 已解析的额外 .ini 文件 | /usr/local/etc/php/php.ini.d/array.ini, calendar.ini, ctype.ini, curl.ini, dom.ini, fileinfo.ini, gettext.ini, intl.ini, mbstring.ini, opcache.ini, pdo_mysql.ini, sqlite3.ini, mysqli.ini, xml.ini, xmlreader.ini, xmlwriter.ini |
+
 | PHP API | 2011106 |
+
 | PHP 扩展 | 2021226 |
+
 | Zend 扩展 | 2201226 |
 
 如果显示此页面，说明 php 工作正常
 
-# 步骤 13
+## 步骤 13
 
 你可以在此处更改锁定内容的设置和上传文件的权限。
 
-# 步骤 14
+## 步骤 14
 
 访问管理面板：
+
 ```bash
 <your_ip>:7080
 ```
+
 7080 端口是 Web 服务器的管理端口。
 
-# 步骤 15
+## 步骤 15
 
 你可以在此处查看所有状态
 
 # 在此服务器上运行 PHP 代码
 
-# 步骤 1
+## 步骤 1
 
-进入 '/usr/local/lsws/Example/html' 目录：
+进入 `'/usr/local/lsws/Example/html'` 目录：
+
 ```bash
 cd /usr/local/lsws/Example/html
 ```
 
-# 步骤 2
+## 步骤 2
 
 你可以在此处删除现有内容（可选）：
+
 ```bash
 rm -rf *
 ```
 
-# 步骤 3
+## 步骤 3
 
-使用你喜喜欢的文本编辑器添加名为 *index.php* 的 php 文件：
+使用你喜喜欢的文本编辑器添加名为 `*index.php*` 的 php 文件：
+
 ```bash
 vim index.php
 ```
+
+
+
 ```php
 <?php
 echo "Working Perfectly";
@@ -8049,19 +9134,19 @@ echo "Working Perfectly";
 
 # 步骤 4
 
-使用浏览器访问管理页面，并进入虚拟主机（Virtual Host）选项
+使用浏览器访问管理页面，并进入虚拟主机（`Virtual Host`）选项
 
 # 步骤 5
 
-选择 *Example* 主
+选择 `Example` 主
 
 # 步骤 6
 
-在文件（Files）下的自动（Auto）选项中添加 index.php
+在文件（`Files`）下的自动（`Auto`）选项中添加 `index.php`
 
 # 步骤 7
 
-在重写（Rewrite）控制下，将“Auto load from .htaccess”更改为“Yes”
+在重写（`Rewrite`）控制下，将“`Auto load from .htaccess`”更改为“`Yes`”
 
 | 重写控制 | 状态 |
 | :--- | :--- |
@@ -8072,7 +9157,7 @@ echo "Working Perfectly";
 
 # 步骤 8
 
-重启 Web 服务器
+重启 `Web` 服务器
 
 # 步骤 9
 
@@ -8080,7 +9165,7 @@ echo "Working Perfectly";
 
 # 邮件服务器
 
-邮件服务器提供用户之间的通信服务（电子邮件服务器）。一个域名可以被看作是大型网络的一部分，通过邮件服务器，用户可以发送和接收电子邮件。当用户发送消息时，邮件首先从主机发送到邮件服务器，然后邮件服务器通过 smtp 协议将邮件发送到目标用户所在的另一台邮件服务器。用户通过 pop3 或 imap 协议下载消息。
+邮件服务器提供用户之间的通信服务（电子邮件服务器）。一个域名可以被看作是大型网络的一部分，通过邮件服务器，用户可以发送和接收电子邮件。当用户发送消息时，邮件首先从主机发送到邮件服务器，然后邮件服务器通过 `smtp` 协议将邮件发送到目标用户所在的另一台邮件服务器。用户通过 `pop3` 或 `imap` 协议下载消息。
 
 # 邮件发送机制
 
@@ -8088,96 +9173,104 @@ echo "Working Perfectly";
 
 # MUA
 
-首先，邮件用户代理（MUA）是邮件客户端，例如 Thunderbird，用于撰写邮件。
+首先，邮件用户代理（`MUA`）是邮件客户端，例如 `Thunderbird`，用于撰写邮件。
 
 # MTA
 
-邮件传输代理（MTA）通过互联网传输消息。MTA 使用 smtp 协议来发送消息，MTA 实际上是邮件服务器。
+邮件传输代理（`MTA`）通过互联网传输消息。`MTA` 使用 `smtp` 协议来发送消息，`MTA` 实际上是邮件服务器。
 
 # SENDMAIL & POSTFIX
 
-在 Linux 和 Unix 系统上，最常见且预装的 MTA 是 sendmail。邮件服务器不断检查来自其他邮件服务器的新邮件并在它们之间进行传输。虽然 sendmail 是默认 MTA，但它并不是最流行的。最流行的 MTA 是 postfix。其他 MTA 还包括：
-- Qmail
-- Exim
-- Courier
+在 Linux 和 Unix 系统上，最常见且预装的 `MTA` 是 `sendmail`。邮件服务器不断检查来自其他邮件服务器的新邮件并在它们之间进行传输。虽然 `sendmail` 是默认 `MTA`，但它并不是最流行的。最流行的 `MTA` 是 `postfix`。其他 `MTA` 还包括：
 
-Red hat 和 CentOS 实际上会为你同时安装 postfix 和 sendmail。
+- `Qmail`
+- `Exim`
+- `Courier`
+
+`Red hat` 和 `CentOS` 实际上会为你同时安装 `postfix` 和 `sendmail`。
 
 # 基础电子邮件协议
 
 接收邮件的协议：
-- pop3 协议
-- imap 协议
+
+- `pop3` 协议
+- `imap` 协议
 
 发送邮件的协议：
-- smtp 协议
 
-pop3 和 imap 实际上用于接收邮件。如果你使用任何如 Mozilla Thunderbird 或 Microsoft outlook 的邮件客户端，你可以配置 pop3 或 imap 协议来获取邮件，你甚至可以为移动设备配置这些协议，但如果你想知道应该使用哪种协议或哪种协议更好，你可能需要了解一下，这并不是谁比谁更好的问题，实际上取决于你的需求。
+- `smtp` 协议
+
+`pop3` 和 `imap` 实际上用于接收邮件。如果你使用任何如 `Mozilla Thunderbird` 或 `Microsoft outlook` 的邮件客户端，你可以配置 `pop3` 或 `imap` 协议来获取邮件，你甚至可以为移动设备配置这些协议，但如果你想知道应该使用哪种协议或哪种协议更好，你可能需要了解一下，这并不是谁比谁更好的问题，实际上取决于你的需求。
 
 # pop3
 
-pop3 代表邮局协议（post office protocol）。它是一个非常简单直观的协议，因为它所做的事情是将邮件从邮件服务器下载到你的设备上。而且它只从你的收件箱下载邮件。除此之外它不做任何其他事情。它不会下载你的草稿、已发送或其他任何内容，它不提供同步功能。如果你在两台电脑上使用 pop3 配置同一个邮件账户，它无法与服务器进行同步。
+`pop3` 代表邮局协议（`post office protocol`）。它是一个非常简单直观的协议，因为它所做的事情是将邮件从邮件服务器下载到你的设备上。而且它只从你的收件箱下载邮件。除此之外它不做任何其他事情。它不会下载你的草稿、已发送或其他任何内容，它不提供同步功能。如果你在两台电脑上使用 `pop3` 配置同一个邮件账户，它无法与服务器进行同步。
 
 # imap
 
-imap 代表互联网消息访问协议（Internet message access protocols）。IMAP 比 pop3 复杂一点。它非常适合在多个设备上管理邮件，因为它在邮件服务器上留下了缓存（本地副本）。它会同步文件夹结构及其内部的所有文件。因此，如果邮件客户端配置了 IMAP，你将在每个设备上看到相同的文件夹结构。但它也有一个缺点：如果你在其中一个设备上删除了邮件，邮件服务器和其他设备上的邮件也会被删除。如果你在文件夹结构中添加了文件夹，其他客户端也会这样做。
+`imap` 代表互联网消息访问协议（`Internet message access protocols`）。`IMAP` 比 `pop3` 复杂一点。它非常适合在多个设备上管理邮件，因为它在邮件服务器上留下了缓存（本地副本）。它会同步文件夹结构及其内部的所有文件。因此，如果邮件客户端配置了 `IMAP`，你将在每个设备上看到相同的文件夹结构。但它也有一个缺点：如果你在其中一个设备上删除了邮件，邮件服务器和其他设备上的邮件也会被删除。如果你在文件夹结构中添加了文件夹，其他客户端也会这样做。
 
-要设置协议，你需要更改邮件客户端的设置，例如，如果你想从邮件服务器使用 pop 或 imap，你需要在邮件服务器设置中添加服务器地址。
+要设置协议，你需要更改邮件客户端的设置，例如，如果你想从邮件服务器使用 `pop` 或 `imap`，你需要在邮件服务器设置中添加服务器地址。
 
 # IMAP VS POP3
 
-pop3 优点：
-1) 如果只在一台设备上使用，pop3 更好。
-2) pop3 保存邮件服务器的位置。
+`pop3` 优点：
+
+1) 如果只在一台设备上使用，`pop3` 更好。
+2) `pop3` 保存邮件服务器的位置。
 3) 节省互联网带宽，因为它只在有新邮件时才使用互联网。
 
-pop3 缺点：
+`pop3` 缺点：
+
 1) 没有邮件备份。
 2) 无法同时与多个客户端使用。
 3) 由于下载整个带附件的文件，你的设备可能会感染病毒。
 
-IMAP 优点：
+`IMAP` 优点：
+
 1) 所有邮件都存储在邮件服务器上。
 2) 你可以在多个设备上管理它。
 3) 同步。
 
-IMAP 缺点：
+`IMAP` 缺点：
+
 1) 没有网络连接时无法查看邮件。
 
 # SMTP
 
-SMTP 是发送邮件的协议，而 pop3 和 imap 用于接收邮件。SMTP 是一组验证并传输邮件的命令。当你从邮件客户端发送邮件时，它会通过 SMTP 协议发送到邮件服务器。你的邮件服务器也称为 SMTP 服务器，例如 gmail (smtp.gmail.com)。然后你的 SMTP 服务器将再次通过 smtp 协议将发送到接收者的 SMTP 服务器。然后你可以通过 pop3 或 imap 下载邮件，也可以通过 WEBMAIL 直接从服务器上读取。
+`SMTP` 是发送邮件的协议，而 `pop3` 和 `imap` 用于接收邮件。`SMTP` 是一组验证并传输邮件的命令。当你从邮件客户端发送邮件时，它会通过 `SMTP` 协议发送到邮件服务器。你的邮件服务器也称为 `SMTP` 服务器，例如 `gmail (smtp.gmail.com)`。然后你的 `SMTP` 服务器将再次通过 `smtp` 协议将发送到接收者的 `SMTP` 服务器。然后你可以通过 `pop3` 或 `imap` 下载邮件，也可以通过 `WEBMAIL` 直接从服务器上读取。
 
+`SMTP` 使用 `TCP` 协议，这是一种面向连接的协议。这意味着它能确保邮件送递。因此，万一邮件未能送达到目的地，你将收到相关通知。就像 `POP3` 和 `IMAP` 一样，你必须将其配置到你的邮件客户端中，例如如果你使用 `Gmail`。
 
-
-
-SMTP 使用 TCP 协议，这是一种面向连接的协议。这意味着它能确保邮件送递。因此，万一邮件未能送达到目的地，你将收到相关通知。就像 POP3 和 IMAP 一样，你必须将其配置到你的邮件客户端中，例如如果你使用 Gmail。
-
-你需要在你的发送邮件服务中添加 'smtp.gmail.com'。
+你需要在你的发送邮件服务中添加 '`smtp.gmail.com`'。
 
 # 邮件服务器
-maildomain-abc.com
+
+`maildomain-abc.com`
 
 # 邮件服务器
-maildomain-xyz.com
+
+`maildomain-xyz.com`
 
 ![](img/5e8a2bb431e5309eb9c40e886b58672b_357_0.png)
 
-POP3
-IMAP
+`POP3`
 
-POP3
-IMAP
+`IMAP`
 
-SMTP
-SMTP
+`POP3`
 
-Ana@maildomain-abc.com
+`IMAP`
 
-Lav@maildomain-xyz.com
+`SMTP`
 
-## 在 CENTOS 服务器上使用 POSTFIX、
-DOVECOT 和 SQUIRREL 邮件服务进行设置
+`SMTP`
+
+`Ana@maildomain-abc.com`
+
+`Lav@maildomain-xyz.com`
+
+## 在 CENTOS 服务器上使用 POSTFIX、DOVECOT 和 SQUIRREL 邮件服务进行设置
 
 ## 设置 POSTFIX
 
@@ -8186,20 +9279,21 @@ DOVECOT 和 SQUIRREL 邮件服务进行设置
 在服务器上分配一个静态 IP 地址 [请阅读关于如何分配静态 IP 地址的 IP 地址章节]
 
 使用的地址如下：
-- ip: 192.168.0.100
-- 子网掩码: 255.255.255.0
-- 网关: 192.168.0.1
-- dns: 8.8.8.8
+
+- `ip`: `192.168.0.100`
+- 子网掩码: `255.255.255.0`
+- 网关: `192.168.0.1`
+- `dns`: `8.8.8.8`
 
 你的 IP 地址可能与此不同。
 
 ### 第 2 步
 
-更改主机名并提供 FQDN（完全限定域名）
+更改主机名并提供 `FQDN`（完全限定域名）
 
 ## UBUNTU $ CENTOS 管理员
 
-主机名 : mailserver.it.local
+主机名 : `mailserver.it.local`
 
 ```bash
 =>hostnamectl set-hostname mailserver.it.local
@@ -8208,17 +9302,17 @@ DOVECOT 和 SQUIRREL 邮件服务进行设置
 
 ### 第 3 步
 
-在 '/etc/hosts' 文件中添加主机条目
+在 `'/etc/hosts'` 文件中添加主机条目
 
 ```bash
 =>vim /etc/hosts
 ```
 
-192.168.0.100 mailserver.it.local mailserver
+`192.168.0.100 mailserver.it.local mailserver`
 
 ### 第 4 步
 
-使用 ping 测试域名
+使用 `ping` 测试域名
 
 ```bash
 => ping mailserver.it.local
@@ -8226,54 +9320,57 @@ DOVECOT 和 SQUIRREL 邮件服务进行设置
 
 ### 第 5 步
 
-在文件中将 Selinux 从 'enforcing（强制）' 为 'disabled（禁用）'
+在文件中将 `Selinux` 从 '`enforcing（强制）`' 为 '`disabled（禁用）`'
 
 ```bash
 '/etc/sysconfig/selinux'
 ```
 
-SELINUX=disabled
+`SELINUX=disabled`
 
 ### 第 6 步
 
 更新仓库
 
-=> yum update
+`=> yum update`
 
 ### 第 7 步
 
-安装 epel-release
+安装 `epel-release`
 
-=> yum install epel-release -y
-=> yum update
+`=> yum install epel-release -y`
+
+`=> yum update`
 
 ### 第 8 步
 
 通过防火墙允许默认的 Apache 80 端口
 
-=> firewall-cmd -permanent -add-port=80/tcp
-=> firewall-cmd -reload
+`=> firewall-cmd -permanent -add-port=80/tcp`
+
+`=> firewall-cmd -reload`
 
 ### 第 9 步
 
-安装 Postfix 包
+安装 `Postfix` 包
 
-=> yum install postfix -y
+`=> yum install postfix -y`
 
 ## UBUNTU $ CENTOS 管理员
 
 额外步骤：
-[ 如果你使用 VIM 编辑器，请在主目录下编辑名为 'vimrc' 的文件并添加行 'set number'。之后就可以在文本文件中看到行号了。 ]
+
+[ 如果你使用 `VIM` 编辑器，请在主目录下编辑名为 '`vimrc`' 的文件并添加行 '`set number`'。之后就可以在文本文件中看到行号了。 ]
 
 ### 第 10 步
 
-配置 postfix
+配置 `postfix`
 
 ## 配置 POSTFIX
 
 ### 第 1 步
 
-编辑 /etc/postfix/main.cf 文件
+编辑 `/etc/postfix/main.cf` 文件
 
 ```bash
 =>vim /etc/postfix/main.cf
@@ -8282,37 +9379,49 @@ SELINUX=disabled
 进行以下更改
 
 - [跳转到第 75 行]
+
   I) 取消注释并更改主机名，设置你的主机名
+
   ```bash
   =>myhostname = mailserver.it.local
   ```
 
 - [跳转到第 83 行]
+
   II) 取消注释并更改域名名，设置你的域名名
+
   ```bash
   =>mydomain = it.local
   ```
 
 - [跳转到第 98 行]
+
   III) 取消注释该行
+
   ```bash
   =>myorigin = $myhostname
   ```
 
 - [跳转到第 99 行]
+
   IV) 取消注释该行
+
   ```bash
   =>myorigin = $mydomain
   ```
 
 - [跳转到第 113 行]
+
   V) 取消注释该行
+
   ```bash
   =>inet_interface = all
   ```
 
 - [跳转到第 119 行]
+
   VI) 取消注释该行
+
   ```bash
   =>inet_protocols = all
   ```
@@ -8320,77 +9429,101 @@ SELINUX=disabled
 ## UBUNTU $ CENTOS 管理员
 
 - [跳转到第 166 行]
+
   VII) 取消注释该行
-  =>mydestination = $hostname, localhost.$mydomain, localhost,$mydomain,
+
+  `=>mydestination = $hostname, localhost.$mydomain, localhost,$mydomain,`
 
 - [跳转到第 264 行]
-  VIII) 取消注释该行并使用 CIDR 符号添加你的 IP 地址
-  => mynetworks = 192.168.0.100/24, 127.0.0.0/8
+
+  VIII) 取消注释该行并使用 `CIDR` 符号添加你的 IP 地址
+
+  `=> mynetworks = 192.168.0.100/24, 127.0.0.0/8`
 
 - [跳转到第 419 行]
+
   IX) 取消注释该行
-  => home_mailbox = Maildir/
+
+  `=> home_mailbox = Maildir/`
 
 - X) 保存并退出文件
 
 ### 第 11 步
 
-重启 postfix 服务器
-=> systemctl restart postfix
+重启 `postfix` 服务器
+
+`=> systemctl restart postfix`
 
 ### 第 12 步
 
-检查 postfix 服务器的状态
-=> systemctl status postfix
+检查 `postfix` 服务器的状态
+
+`=> systemctl status postfix`
 
 ### 第 13 步
 
-启用 postfix 服务器在开机时运行
-=> systemctl enable postfix
+启用 `postfix` 服务器在开机时运行
+
+`=> systemctl enable postfix`
 
 ## DOVECOT
 
 ### 第 14 步
 
-安装 dovecot 包
-=> yum install dovecot -y
+安装 `dovecot` 包
+
+`=> yum install dovecot -y`
 
 ## 配置 DOVECOT
 
 ### 第 1 步
 
-- I) 编辑 '/etc/dovecot/dovecot.conf'
-  => vim /etc/dovecot/dovecot.conf
-  - [跳转到第 24 行]
-    I) 取消注释该行
-    =>protocols = imap pop3 lmtp
+- I) 编辑 `'/etc/dovecot/dovecot.conf'`
 
-- II) 编辑 '/etc/dovecot/conf.d/10-mail.conf'
+  `=> vim /etc/dovecot/dovecot.conf`
+
+  - [跳转到第 24 行]
+
+    I) 取消注释该行
+
+    `=>protocols = imap pop3 lmtp`
+
+- II) 编辑 `'/etc/dovecot/conf.d/10-mail.conf'`
 
 ## UBUNTU $ CENTOS 管理员
 
-=> vim /etc/dovecot/conf.d/10-mail.conf
+`=> vim /etc/dovecot/conf.d/10-mail.conf`
 
 - [跳转到第 24 行]
-  I) 取消注释该行
-  =>mail_location = maildir:~/Maildir
 
-- III) 编辑 '/etc/dovecot/conf.d/10-auth.conf'
-  => vim /etc/dovecot/conf.d/10-auth.conf
+  I) 取消注释该行
+
+  `=>mail_location = maildir:~/Maildir`
+
+- III) 编辑 `'/etc/dovecot/conf.d/10-auth.conf'`
+
+  `=> vim /etc/dovecot/conf.d/10-auth.conf`
 
 - [跳转到第 10 行]
+
   I) 取消注释该行
-  =>disable_plaintext_auth = yes
+
+  `=>disable_plaintext_auth = yes`
 
 - [跳转到第 100 行]
-  II) 添加单词 'login'
-  =>auth_mechanisms = plain login after plain
 
-- IIV) 编辑 '/etc/dovecot/conf.d/10-master.conf'
-  => vim /etc/dovecot/conf.d/10-auth.conf
+  II) 添加单词 '`login`'
+
+  `=>auth_mechanisms = plain login after plain`
+
+- IIV) 编辑 `'/etc/dovecot/conf.d/10-master.conf'`
+
+  `=> vim /etc/dovecot/conf.d/10-auth.conf`
 
 - [跳转到第 91 和 92 行]
-  I) 取消注释该行并添加 user 'postfix' 和 group 'postfix'
+
+  I) 取消注释该行并添加 user '`postfix`' 和 group '`postfix`'
+
   ```bash
 unix_listener authdb
 {
@@ -8404,18 +9537,21 @@ group = postfix    # add postfix
 
 ### 第 15 步
 
-重启 dovecot 服务器
-=> systemctl restart dovecot
+重启 `dovecot` 服务器
+
+`=> systemctl restart dovecot`
 
 ### 第 16 步
 
-检查 dovecot 服务器的状态
-=> systemctl status dovecot
+检查 `dovecot` 服务器的状态
+
+`=> systemctl status dovecot`
 
 ### 第 17 步
 
-启用 dovecot 服务器开机时运行
-=> systemctl enable dovecot
+启用 `dovecot` 服务器开机时运行
+
+`=> systemctl enable dovecot`
 
 ## UBUNTU $ CENTOS 管理员
 
@@ -8423,19 +9559,24 @@ group = postfix    # add postfix
 
 ### 第 18 步
 
-安装 squirrelmail 包
-=> yum install squirrelmail -y
+安装 `squirrelmail` 包
+
+`=> yum install squirrelmail -y`
 
 ## SQUIRREL MAIL 配置
 
-- i) 进入 '/usr/share/squirrelmail/config'
-  => cd /usr/share/squirrelmail/config
+- i) 进入 `'/usr/share/squirrelmail/config'`
 
-- ii) 执行 'conf.pl'
-  => ./conf.pl
+  `=> cd /usr/share/squirrelmail/config`
+
+- ii) 执行 '`conf.pl`'
+
+  `=> ./conf.pl`
+
   [将出现配置提示]
 
 - ii)
+
   - I) 更改组织
   - II) 更改名称
   - III) 给出一个名称
@@ -8543,19 +9684,21 @@ group = postfix    # add postfix
   - XCVIX) 按 99
   - C) 按 100
 
-
-
-
 # 安装 VSFTPD
 
-在 centros, fedora, redhat 中：
-=> sudo yum install vsftpd
+在 `centros`, `fedora`, `redhat` 中：
+
+`=> sudo yum install vsftpd`
 
 在基于 Debian 的发行版中：
-=> sudo apt install vsftpd
+
+`=> sudo apt install vsftpd`
 
 如果你想让服务器自动启动：
-=> chkconfig vsftpd on
+
+`=> chkconfig vsftpd on`
+
+
 
 在安装时，`/var` 目录中你想要共享文件的 ftp 目录位于 `/var/ftp/pub` 目录。一旦连接网络，你可以在该目录下创建子目录，远程用户可以连接到你的系统并下载 `pub` 目录中的文件，如果你给予了权限，他们也可以上传文件。所有默认配置都已应用于这些目录，但 vsftpd 不会创建任何允许你上传文件的目录。我们通常称之为 `incoming_` 目录。你必须创建该目录并将其添加到默认 ftp 用户组，并赋予写权限，这样用户就可以上传文件了，从而用户在该目录中上传文件。
 
@@ -8567,15 +9710,20 @@ group = postfix    # add postfix
 
 # 为匿名用户创建 FTP 服务器
 
-# 步骤 1
+## 步骤 1
 
 打开防火墙（如果有的话），我们需要同时打开 ftp-data（端口 20）和 ftp（端口 21）
+
+```
 => sudo ufw allow ftp-data
+```
+```
 => sudo ufw allow ftp
+```
 
 # Tanvir Rahman
 
-# 步骤 2
+## 步骤 2
 
 创建一个用于共享的目录
 
@@ -8583,7 +9731,7 @@ group = postfix    # add postfix
 => sudo mkdir -p /var/ftp/pub
 ```
 
-# 步骤 3
+## 步骤 3
 
 将权限设置为 nobody:nogroup
 
@@ -8591,7 +9739,7 @@ group = postfix    # add postfix
 => sudo chown nobody:nogroup /var/ftp/pub
 ```
 
-# 步骤 4
+## 步骤 4
 
 配置匿名访问
 
@@ -8605,9 +9753,10 @@ group = postfix    # add postfix
 => anonymous_enable=YES
 => local_enable=NO
 ```
-[我们将 local_enable 设置为 NO，因为我们不想允许本地用户通过 FTP 上传文件]
 
-# 步骤 5
+[我们将 `local_enable` 设置为 NO，因为我们不想允许本地用户通过 FTP 上传文件]
+
+## 步骤 5
 
 在下方添加一些自定义配置，首先设置用户目录
 
@@ -8620,52 +9769,83 @@ ftp:ftp
 => hide_ids=YES
 ```
 
-# 步骤 6
+## 步骤 6
 
 重启服务器
+
+```
 => sudo service vsftpd restart
+```
 
 # 创建虚拟 FTP主机
 
-# 步骤 1
+## 步骤 1
 
 我们必须进入 `/etc/vsftpd.conf` 文件并取消（如果已注释）取消以下内容的注释：
 
-1) write_enable=YES
-2) local_enable=YES
+1) `write_enable=YES`
+
+2) `local_enable=YES`
 
 # Tanvir Rahman
 
-1) 如果你将 write_enable 设置为 YES，用户就可以在服务器上上传或写入，否则用户无法上传任何内容。
+1) 如果你将 `write_enable` 设置为 YES，用户就可以在服务器上上传或写入，否则用户无法上传任何内容。
 
-2) 将 local_enable 设置为 YES 将允许本地用户账户连接到文件服务器，如果你没有取消该行。那么，如果你安装了 ftp 服务器并尝试使用 ftp 客户端访问它，你将无法连接到服务器。
+2) 将 `local_enable` 设置为 YES 将允许本地用户账户连接到文件服务器，如果你没有取消该行。那么，如果你安装了 ftp 服务器并尝试使用 ftp 客户端访问它，你将无法连接到服务器。
 
-# 步骤 2
+## 步骤 2
 
 创建一个组
+
+```
 => sudo useradd <groupname>
+```
+
 示例：
+
+```
 => sudo groupadd ftpgroup
+```
 
 创建一个用户并将其添加到组中，设置主目录
+
+```
 => sudo useradd -d <path> -g <group> <username>
+```
+
 示例：
+
+```
 => sudo useradd -d /home/ftpfolder -g ftpgroup ftpuser
+```
 
 添加密码：
+
+```
 => passwd <user>
+```
+
 示例：
+
+```
 => passwd ftpuser
+```
 
 # UBUNTU $ CENTOS 管理员
 
-# 步骤 3
+## 步骤 3
 
 创建相应的文件夹：
+
+```
 => sudo mkdir -p /home/forftp/files
+```
 
 将所有权更改为用户和组
+
+```
 => sudo chown -R ftpuser:ftpgroup /home/forftp/files
+```
 
 对 ftp 用户的主目录只给予读取权限以防被删除，并对 root 及相应的用户给予写权限，对其他用户仅给予读取权限：
 
@@ -8674,17 +9854,27 @@ ftp:ftp
 => sudo chmod 775 /home/forftp/files
 ```
 
-# 步骤 4
+## 步骤 4
 
+```
 => /bin/systemctl restart vsftpd.service
+```
+
 或直接使用
+
+```
 => service vsftpd restart
+```
 
 从浏览器访问 ftp 服务器：
-url（针对普通用户）：ftp://<user>:<password>@<ip/domainname>
-匿名用户的 url：ftp://<ip address>
+
+url（针对普通用户）：`ftp://<user>:<password>@<ip/domainname>`
+
+匿名用户的 url：`ftp://<ip address>`
+
 或
-ftp://<ftp/anonymous>:<ftp/anonymous>@ip
+
+`ftp://<ftp/anonymous>:<ftp/anonymous>@ip`
 
 # 代理服务器
 
@@ -8698,47 +9888,29 @@ ftp://<ftp/anonymous>:<ftp/anonymous>@ip
 
 它是一个将客户端电脑与网站浏览隔离开的服务器。代理服务器替你浏览互联网，然后将数据重定向到你的个人计算机。但事实并非如此。它具有许多额外功能使其变得非常有用。如果你正在使用代理服务器，互联网流量将通过代理服务器。代理服务器创建网络请求并将其发送到你的计算机。但问题是，为什么它变得如此重要，为什么不直接去呢
 
-（此处省略原文中重复的段落，根据要求进行清理并保留核心逻辑）
-
-# 代理服务器
-
-# 什么是代理服务器？
-
-代理服务器充当你与互联网之间的网关。
-
-它是一个将客户端电脑与网站浏览隔离开的服务器。代理服务器替你浏览互联网，然后将数据重定向到你的个人计算机。但事实并非如此。它具有许多额外功能使其变得非常有用。如果你正在使用代理服务器，互联网流量将通过代理服务器。代理服务器创建网络请求并将其发送到你的计算机。但问题是，为什么它变得如此重要，为什么不直接去呢
-
-实际上，我将清理 OCR 提供的重复代理文本，同时保留原始词汇：
-
-# 代理服务器
-
-# 什么是代理服务器？
-
-代理服务器充当你与互联网之间的网关。
-
-它是一个将客户端电脑与网站浏览隔离开的服务器。代理服务器替你浏览互联网，然后将数据重定向到你的个人计算机。但事实并非如此。它具有许多额外功能使其变得非常有用。如果你正在使用代理服务器，互联网流量将通过代理服务器。代理服务器创建网络请求并将其发送到你的计算机。但问题是，为什么它变得如此重要，为什么不直接去呢
-
-（注：由于原文存在大量重复的 OCR 错误文本，高级工程师已根据指令进行了逻辑合并和去重）
-
-
-
-
-
 # 第 4 步
 
 检查进程状态
+
+```
 => systemctl status squid
+```
 
 # 第 5 步
 
 在此配置中编辑 squid 配置文件
+
 -> 我们可以为可以使用代理服务器的客户端编写 acl（访问控制列表）
 
 - 我们可以选择缓存内存
+
 - 使用 acl 允许或拒绝特定网络的使用
+
 - 为代理服务器客户端阻止或允许访问特定网站
 
+```
 => vim /etc/squid/squid.conf
+```
 
 * 默认情况下，squid 监听 3128 端口，你可以更改它并设置不同的端口。如果我们想更改端口，必须更改 `http_port` 行并指定新端口。
 
@@ -8751,7 +9923,7 @@ http_port 3128
 # --with-openssl 的情况下，此选项才可用
 ```
 
-# http_port : 端口
+`http_port` : 端口
 
 你可以通过 acl（访问控制列表）控制 squid 服务器的访问
 
@@ -8768,15 +9940,21 @@ http_port 3128
 ~
 ```
 
+```
 =>vim allowed_ips.txt
+```
 
 # UBUNTU $ CENTOS 管理员
 
-192.168.x.x
-192.168.x.x
-192.168.x.x
-192.168.x.x
-192.168.x.x
+`192.168.x.x`
+
+`192.168.x.x`
+
+`192.168.x.x`
+
+`192.168.x.x`
+
+`192.168.x.x`
 
 * 现在将文件添加到 acl 中。
 
@@ -8786,17 +9964,21 @@ http_port 3128
 http_access allow Allowed_ips
 ```
 
+```
 => vim /etc/squid/squid.conf
+```
 
-# ## 语法
+## 语法
 
-#acl <name> src "<filepath>"
-#http_access allow <name>
+`#acl <name> src "<filepath>"`
+
+`#http_access allow <name>`
 
 # Tanvir Rahman
 
-acl Allowed_ips src '/etc/squid/allowed_ips.txt' 
-http_access allow Allowed_ips
+`acl Allowed_ips src '/etc/squid/allowed_ips.txt'` 
+
+`http_access allow Allowed_ips`
 
 或者你可以通过允许所有客户端给所有客户端提供访问权限
 
@@ -8807,12 +9989,13 @@ http_access allow localhost
 http_access allow all
 ```
 
-http_access allow all
+`http_access allow all`
 
 更改配置后，我们必须重启服务，
+
 以便配置更改成功加载。
 
-386
+`386`
 
 ```bash
 =>systemctl restart squid
@@ -8820,20 +10003,22 @@ http_access allow all
 
 # 监控用户访问和服务器缓存
 
-# 第 1 步
+## 第 1 步
 
 监控用户的访问情况
-进入文件 '/var/log/squid/access.log' 
+
+进入文件 `'/var/log/squid/access.log'` 
 
 ```bash
 => tail -f access.log
 => cat -f access.log | more
 ```
 
-# 第 2 步
+## 第 2 步
 
 监控用户的缓存
-进入文件 '/var/log/squid/cache.log' 
+
+进入文件 `'/var/log/squid/cache.log'` 
 
 ```bash
 => tail -f cache.log
@@ -8842,45 +10027,60 @@ http_access allow all
 
 以上是在 Ubuntu 中设置代理服务器的基础配置。
 
-<!-- 无内容 -->
-
 # 在 CENTOS 中设置 SQUID 代理服务器
 
 # 服务端配置
 
-# 第 1 步
+## 第 1 步
 
 更新 centos 中的软件源
-=> yum update -y
 
-# 第 2 步
+```
+=> yum update -y
+```
+
+## 第 2 步
 
 安装 squid 软件包
-=> yum install squid -y
 
-# 第 3 步
+```
+=> yum install squid -y
+```
+
+## 第 3 步
 
 在开机时启用并启动 squid 服务
+
+```
 => systemctl enable squid
 => systemctl start squid
+```
 
-# 第 4 步
+## 第 4 步
 
 检查进程状态
-=> systemctl status squid
 
-# 第 5 步
+```
+=> systemctl status squid
+```
+
+## 第 5 步
 
 在此配置中编辑 squid 配置文件
 
 # Tanvir Rahman
 
 -> 我们可以为可以使用代理服务器的客户端编写 acl
+
 -> 我们选择缓存内存
+
 -> 使用 acl 允许或拒绝特定网络的使用
+
 -> 为代理客户端阻止或允许访问特定网站
 
+```
 => vim /etc/squid/squid.conf
+```
 
 * 默认情况下，squid 监听 3128 端口，你可以更改它并设置不同的端口。如果我们想更改端口，必须更改 `http_port` 行并指定新端口。
 
@@ -8894,7 +10094,7 @@ cache_dir ufs /var/spool/squid 100 256
 # 将核心转储保留在第一个目录
 ```
 
-http_port : 端口
+`http_port` : 端口
 
 你可以通过 acl（访问控制列表）控制 squid 服务器的访问
 
@@ -8902,13 +10102,19 @@ http_port : 端口
 
 * 创建一个名为“allowed_ips.txt”的文件并允许的 IP 地址
 
+```
 =>vim allowed_ips.txt
+```
 
-- 192.168.x.x
-- 192.168.x.x
-- 192.168.x.x
-- 192.168.x.x
-- 192.168.x.x
+- `192.168.x.x`
+
+- `192.168.x.x`
+
+- `192.168.x.x`
+
+- `192.168.x.x`
+
+- `192.168.x.x`
 
 ```bash
 # 在此处插入你自己的规则以允许你的客户端访问
@@ -8918,15 +10124,19 @@ http_access allow Allowed_ips
 
 # Tanvir Rahman
 
+```
 => vim /etc/squid/squid.conf
+```
 
-# ## 语法
+## 语法
 
-#acl <name> src "<filepath>"
-#http_access allow <name>
+`#acl <name> src "<filepath>"`
 
-acl Allowed_ips src '/etc/squid/allowed_ips.txt' 
-http_access allow Allowed_ips
+`#http_access allow <name>`
+
+`acl Allowed_ips src '/etc/squid/allowed_ips.txt'` 
+
+`http_access allow Allowed_ips`
 
 或者你可以通过允许所有客户端给所有客户端提供访问权限
 
@@ -8937,9 +10147,10 @@ http_access allow localhost
 http_access allow all
 ```
 
-http_access allow all
+`http_access allow all`
 
 更改配置后，我们必须重启服务，
+
 以便配置更改成功加载。
 
 ```bash
@@ -8948,20 +10159,22 @@ http_access allow all
 
 # 监控用户访问和服务器缓存
 
-# 第 1 步
+## 第 1 步
 
 监控用户的访问情况
-进入文件 '/var/log/squid/access.log' 
+
+进入文件 `'/var/log/squid/access.log'` 
 
 ```bash
 => tail -f access.log
 => cat -f access.log | more
 ```
 
-# 第 2 步
+## 第 2 步
 
 监控用户的缓存
-进入文件 '/var/log/squid/cache.log' 
+
+进入文件 `'/var/log/squid/cache.log'` 
 
 ```bash
 => tail -f cache.log
@@ -8969,184 +10182,62 @@ http_access allow all
 ```
 
 以上是在 Ubuntu 中设置代理服务器的基础配置。
-
-<!-- 无内容 -->
-
-# 在 CENTOS 中设置 SQUID 代理服务器
-
-# 服务端配置
-
-# 第 1 步
-
-更新 centos 中的软件源
-=> yum update -y
-
-# 第 2 步
-
-安装 squid 软件包
-=> yum install squid -y
-
-# 第 3 步
-
-在开机时启用并启动 squid 服务
-=> systemctl enable squid
-=> systemctl start squid
-
-# 第 4 步
-
-检查进程状态
-=> systemctl status squid
-
-# 第 5 步
-
-在此配置中编辑 squid 配置文件
-
-# Tanvir Rahman
-
--> 我们可以为可以使用代理服务器的客户端编写 acl
--> 我们选择缓存内存
--> 使用 acl 允许或拒绝特定网络的使用
--> 为代理客户端阻止或允许访问特定网站
-
-=> vim /etc/squid/squid.conf
-
-* 默认情况下，squid 监听 3128 端口，你可以更改它并设置不同的端口。如果我们想更改端口，必须更改 `http_port` 行并指定新端口。
-
-```bash
-# Squid 通常监听 3128 端口
-http_port 3128
-
-# 取消注释并调整以下内容以磁盘缓存
-cache_dir ufs /var/spool/squid 100 256
-
-# 将核心转储保留在第一个目录
-```
-
-http_port : 端口
-
-你可以通过 acl（访问控制列表）控制 squid 服务器的访问
-
-你可以创建一个文本文件，列出允许的 IP 地址列表并将其包含在 acl 中，同时拒绝所有其他 IP 地址，以防止其他客户端连接到代理服务器。
-
-* 创建一个名为“allowed_ips.txt”的文件并允许的 IP 地址
-
-=>vim allowed_ips.txt
-
-- 192.168.x.x
-- 192.168.x.x
-- 192.168.x.x
-- 192.168.x.x
-- 192.168.x.x
-
-```bash
-# 在此处插入你自己的规则以允许你的客户端访问
-#acl Allowed_ips src "/etc/squid/allowed_ips.txt"
-http_access allow Allowed_ips
-```
-
-# Tanvir Rahman
-
-=> vim /etc/squid/squid.conf
-
-# ## 语法
-
-#acl <name> src "<filepath>"
-#http_access allow <name>
-
-acl Allowed_ips src '/etc/squid/allowed_ips.txt' 
-http_access allow Allowed_ips
-
-或者你可以通过允许所有客户端给所有客户端提供访问权限
-
-```bash
-# http_access allow localnet
-http_access allow localhost
-# 最后拒绝对此代理的所有其他访问
-http_access allow all
-```
-
-http_access allow all
-
-更改配置后，我们必须重启服务，
-以便配置更改成功加载。
-
-```bash
-=>systemctl restart squid
-```
-
-# 监控用户访问和服务器缓存
-
-# 第 1 步
-
-监控用户的访问情况
-进入文件 '/var/log/squid/access.log' 
-
-```bash
-=> tail -f access.log
-=> cat -f access.log | more
-```
-
-# 第 2 步
-
-监控用户的缓存
-进入文件 '/var/log/squid/cache.log' 
-
-```bash
-=> tail -f cache.log
-=> cat -f cache.log | more
-```
-
-
-
-
 
 # 第 5 步
 
 应用更改
+
+```
 => exportfs -ra
+```
 
 # 客户端配置
 
-# 第 1 步
+## 第 1 步
 
 安装必要的软件包
-=>yum install nfs-utils nfs-utils-lib
 
-# 第 2 步
+```
+=>yum install nfs-utils nfs-utils-lib
+```
+
+## 第 2 步
 
 挂载卷
+
+```
 => mount -t nfs 192.168.0.7:/var/lib/nfspub /mnt
-它会将公共目录挂载到 /mnt 文件夹
+```
+
+
+
+它会将公共目录挂载到`/mnt`文件夹
 
 # 在 UBUNTU 中设置 NFS 服务器
 
-# 服务端配置
+## 服务端配置
 
-# 环境要求
+### 环境要求
+- `UBUNTU`服务器
+- `CENTOS`客户端
+- 服务器 IP 地址:`192.168.0.7/24`
 
-- UBUNTU 服务器
-- CENTOS 客户端
-- 服务器 IP 地址: 192.168.0.7/24
-
-# 第 1 步
-
-首先在 ubuntu 系统中安装内核模块
+### 第 1 步
+首先在`ubuntu`系统中安装内核模块
 
 ```
 =>apt update
 => apt install nfs-kernel-server
 ```
 
-# 第 2 步
-
+### 第 2 步
 我们必须将该服务添加到防火墙中
 
 ```
 => ufw allow from 192.168.0.7/24 to any port nfs
 ```
 
-# 第 3 步
-
+### 第 3 步
 在启动时启用 NFS 服务
 
 ```
@@ -9154,60 +10245,68 @@ http_access allow all
 =>systemctl start nfs
 ```
 
-# 第 4 步
-
+### 第 4 步
 创建两个目录
-
-- 1) 用于 root 的 /var/lib/nfsroot
-- 2) 用于公共用户的 /var/lib/nfspub
+- 1) 用于`root`的`/var/lib/nfsroot`
+- 2) 用于公共用户的`/var/lib/nfspub`
 
 ```
 =>mkdir -p /var/lib/nfsroot
 =>mkdir -p /var/lib/nfspub
 ```
 
-# 第 5 步
-
+### 第 5 步
 赋予公共目录权限
+
+```
 =>chmod 777 /var/lib/nfspub
+```
 
-# 第 6 步
+### 第 6 步
+编辑`/etc/exports`文件以进行共享文件系统
 
-编辑 /etc/exports 文件以进行共享文件系统
+```
 =>vim /etc/exports
+```
 
-/var/lib/nfsroot 192.168.0.7/24(rw,sync,no_root,root_squash)
-/var/lib/nfspub *(rw,sync,root_squash)
+`/var/lib/nfsroot 192.168.0.7/24(rw,sync,no_root,root_squash)`
 
-- * -> 所有人都可以使用
-- rw -> 读写权限
-- sync -> 如果修改了数据，数据将在双方同步
-- root_squash -> 当以 root 身份登录时，将被视为用户 nobody:nobody
+`/var/lib/nfspub *(rw,sync,root_squash)`
 
-# 第 5 步
+- `*` -> 所有人都可以使用
+- `rw` -> 读写权限
+- `sync` -> 如果修改了数据，数据将在双方同步
+- `root_squash` -> 当以`root`身份登录时，将被视为用户`nobody:nobody`
 
+### 第 7 步
 应用更改
+
+```
 => exportfs -ra
+```
 
-# 客户端配置
+## 客户端配置
 
-# 第 1 步
-
+### 第 1 步
 安装必要的软件包
+
+```
 =>yum install nfs-utils nfs-utils-lib
+```
 
-# 第 2 步
-
+### 第 2 步
 挂载卷
+
+```
 => mount -t nfs 192.168.0.7:/var/lib/nfspub /mnt
-它会将公共目录挂载到 /mnt 文件夹
+```
+
+它会将公共目录挂载到`/mnt`文件夹
 
 # SAMBA 服务器
 
-# 什么是 SAMBA
-
-Samba 是一种开源软件，用于与 Windows 客户端通信并共享资源，就像挂载主机自己的文件系统一样。Samba 通过通用网络文件系统 (CIFS) 提供此功能。SAMBA 提供以下服务：
-
+## 什么是 SAMBA
+`Samba`是一种开源软件，用于与`Windows`客户端通信并共享资源，就像挂载主机自己的文件系统一样。`Samba`通过通用网络文件系统 (`CIFS`) 提供此功能。`SAMBA`提供以下服务：
 - 文件与打印服务
 - 身份验证与授权
 - 域名解析
@@ -9215,32 +10314,28 @@ Samba 是一种开源软件，用于与 Windows 客户端通信并共享资源�
 
 # 在 CENTOS 中设置 SAMBA 服务器
 
-# 服务端配置
+## 服务端配置
 
-# 第 1 步
-
+### 第 1 步
 要求：
-1) CENTOS 服务器，IP: 192.168.0.50
-2) 客户端 (UBUNTU 或 CENTOS)，IP: 192.168.0.100
+1) `CENTOS`服务器，IP:`192.168.0.50`
+2) 客户端 (`UBUNTU`或`CENTOS`)，IP:`192.168.0.100`
 3) 互联网连接
 
-# 第 2 步
-
-更新存储库并安装必要的 samba 软件包
+### 第 2 步
+更新存储库并安装必要的`samba`软件包
 
 ```
 => yum update -y
 =>yum install samba samba-client samba-common
 ```
 
-# 第 3 步
-
-创建一个组并向该组中添加可以使用 samba 共享的用户。
-
-- =>groupadd test
-=>useradd user1
-=>usermod -a -G test user1
-=>usermod -a -G test user2
+### 第 3 步
+创建一个组并向该组中添加可以使用`samba`共享的用户。
+- `=>groupadd test`
+- `=>useradd user1`
+- `=>usermod -a -G test user1`
+- `=>usermod -a -G test user2`
 
 ```
 [root@localhost ~]# groupadd test
@@ -9250,14 +10345,16 @@ Samba 是一种开源软件，用于与 Windows 客户端通信并共享资源�
 [root@localhost ~]# 
 ```
 
-# 第 4 步
-
+### 第 4 步
 创建目录并为该用户提供适当的权限
 
-CENTOS 管理员
+`CENTOS`管理员
+
+```
 =>mkdir /share
 =>chmod 777 /share
 =>chgrp test /share
+```
 
 ```
 [root@localhost ~]# mkdir /share
@@ -9265,14 +10362,15 @@ CENTOS 管理员
 [root@localhost ~]# chgrp test
 ```
 
-# 第 5 步
+### 第 5 步
+配置`SELinux`。你可以禁用`SELinux`或设置适当的布尔值，否则它将不允许你连接到服务器。在这里我们不会禁用`SELinux`，而是将更改布尔值。
 
-配置 SELinux。你可以禁用 SELinux 或设置适当的布尔值，否则它将不允许你连接到服务器。在这里我们不会禁用 SELinux，而是将更改布尔值。
-
+```
 =>setsebool -P samba_export_all=ro samba_export_all=rw
 =>getsebool -a | grep samba_export
 =>semanage context -t samba_t "/share(/?"
 =>restorecon /share
+```
 
 ```
 [root@localhost]# setsebool -P samba_export_all=ro
@@ -9284,24 +10382,27 @@ samba_export_all=on
 [root@localhost]# restorecon /share
 ```
 
-# 第 6 步
-
+### 第 6 步
 我们必须更改防火墙设置以允许连接。
 
+```
 =>firewall-cmd --permanent --add-service=samba
 =>firewall-cmd --reload
+```
 
-CENTOS 管理员
+`CENTOS`管理员
+
 ```
 [root@localhost ~]# firewall-cmd --permanent --add-service=samba
 [root@localhost ~]# firewall-cmd --reload
 ```
 
-# 第 7 步
-
+### 第 7 步
 这是最重要的部分，我们需要编辑共享的配置。
 
+```
 =>vim /etc/exports
+```
 
 ```.conf
 
@@ -9314,11 +10415,12 @@ writable=yes
 create
 ```
 
-# 第 8 步
+### 第 8 步
+使用`testparm`命令测试配置。如果配置错误，它会提示。
 
-使用 `testparm` 命令测试配置。如果配置错误，它会提示。
-
+```
 =>testparm
+```
 
 ```
 [root@localhost]# testparm
@@ -9327,12 +10429,13 @@ rlimit_max: 1024 increasing rlimit_max (16384)
 Server role: STANDONE
 ```
 
-# 第 9 步
+### 第 9 步
+我们必须为`samba`添加`test`组的用户。
 
-我们必须为 samba 添加 test 组的用户。
-
+```
 =>smbpasswd -a user1
 =>smbpasswd -a user2
+```
 
 ```
 [root@localhost ~]# smbpasswd -a user1
@@ -9345,24 +10448,26 @@ Retype New Password:
 Added user2.
 ```
 
-# 第 10 步
+### 第 10 步
+重启`samba`服务使更改生效。
 
-重启 samba 服务使更改生效。
-
+```
 =>systemctl start smb
 =>systemctl start nmb
+```
 
 ```
 [root@localhost]# systemctl start smb
 [root@localhost]# systemctl start nmb
 ```
 
-# 第 11 步
+### 第 11 步
+我们必须在启动时启用`smb`和`nmb`服务。
 
-我们必须在启动时启用 smb 和 nmb 服务。
-
+```
 =>systemctl enable smb
 =>systemctl enable nmb
+```
 
 ```
 [root@localhost]# systemctl enable smb
@@ -9371,13 +10476,13 @@ Created symlink /etc/systemd/system/multi-user.target.wants/smb.service -> /usr/
 Created symlink /etc/systemd/system/multi-user.target.wants/nmb.service -> /usr/lib/systemd/system/nmb.service.
 ```
 
-# 第 12 步
-
+### 第 12 步
 从服务器测试连接。
 
+```
 =>smbclient -L localhost -U user1
-
 =>smbclient -L localhost -U user2
+```
 
 ```
 [root@localhost ~]# smbclient -L localhost -U user1
@@ -9396,11 +10501,7 @@ Server      Comment
 Workgroup   Master
 ```
 
-
-
-
-
-# Tanvir Rahman
+`Tanvir Rahman`
 
 ```bash
 root@pop-os:~
@@ -9411,11 +10512,12 @@ root@pop-os:~
 >|
 ```
 
-# 第 4 步
-
+### 第 4 步
 挂载网络共享
 
+```
 => mount //192.168.0.50/share /share -o username=user1
+```
 
 ```bash
 root@pop-os:~
@@ -9425,27 +10527,26 @@ root@pop-os:~
 >|
 ```
 
-# 第 5 步
-
+### 第 5 步
 查看网络共享
 
 ```bash
 => mount | grep cifs
 ```
 
-# 额外步骤（永久挂载）
-
-在 /share 文件夹中添加凭据文件
+## 额外步骤（永久挂载）
+在`/share`文件夹中添加凭据文件
 
 ```bash
 => vim /share/.smbcredentials
 ```
 
+```
 username=user1
-
 password=<password_for_user_1>
+```
 
-在 '/etc/fstab' 文件中添加条目
+在`'/etc/fstab'`文件中添加条目
 
 ```bash
 => vim /etc/fstab
@@ -9456,11 +10557,12 @@ password=<password_for_user_1>
 credentials=/share/.smbcredentials
 ```
 
-# 测试共享
+## 测试共享
+从客户端在`/share`文件夹中创建一个文件
 
-从客户端在 /share 文件夹中创建一个文件
-
+```
 => touch /share/test.txt
+```
 
 ```bash
 root@pop-os:/share
@@ -9472,7 +10574,9 @@ root@pop-os:/share
 
 现在从服务器端测试
 
+```
 => ls -l /share
+```
 
 ```bash
 [root@localhost ~]# ls -l /share
@@ -9482,31 +10586,29 @@ total 0
 ```
 
 # 设置 SAMBA
+
 ## UBUNTU 中的服务器配置
 
-服务器端配置
+### 服务端配置
 
-# 第 1 步
-
+#### 第 1 步
 - 要求：
-  1) UBUNTU 服务器，IP: 192.168.0.50
-  2) 客户端 (UBUNTU 或 CENTOS),IP: 192.168.0.100
+  1) `UBUNTU`服务器，IP:`192.168.0.50`
+  2) 客户端 (`UBUNTU`或`CENTOS`),IP:`192.168.0.100`
   3) 互联网连接
 
-# 第 2 步
+#### 第 2 步
+更新软件库并安装必要的`samba`软件包
 
-更新软件库并安装必要的 samba 软件包
-
-# Tanvir Rahman
+`Tanvir Rahman`
 
 ```bash
 => apt update -y
 => apt install samba
 ```
 
-# 第 3 步
-
-创建一个组，并将可以使用 samba 共享的用户添加到组中。
+#### 第 3 步
+创建一个组，并将可以使用`samba`共享的用户添加到组中。
 
 ```bash
 => groupadd test
@@ -9516,8 +10618,7 @@ total 0
 => usermod -a -G test user2
 ```
 
-# 第 4 步
-
+#### 第 4 步
 检查状态
 
 ```bash
@@ -9525,8 +10626,7 @@ total 0
 => sudo systemctl status smbd
 ```
 
-# 第 5 步
-
+#### 第 5 步
 创建一个目录并为该用户和组赋予适当权限
 
 ```bash
@@ -9535,9 +10635,8 @@ total 0
 => chgrp test /share
 ```
 
-# 第 6 步
-
-配置 SELinux。你可以禁用 SELinux 或设置正确的布尔值和安全性，否则它将不允许你连接到服务器。在这里，我们不会禁用 SELinux，而是更改布尔值。
+#### 第 6 步
+配置`SELinux`。你可以禁用`SELinux`或设置正确的布尔值和安全性，否则它将不允许你连接到服务器。在这里，我们不会禁用`SELinux`，而是更改布尔值。
 
 ```bash
 => setboolean -P samba_export_all_ro=1 samba_export_all_rw=1
@@ -9546,8 +10645,7 @@ total 0
 => restorecon /share
 ```
 
-# 第 7 步
-
+#### 第 7 步
 我们必须更改防火墙设置以允许连接
 
 ```bash
@@ -9555,9 +10653,8 @@ total 0
 => ufw reload
 ```
 
-# 第 8 步
-
-这是部分最重要的路径。我们需要编辑 samba 共享的配置
+#### 第 8 步
+这是部分最重要的路径。我们需要编辑`samba`共享的配置
 
 ```bash
 => vim /etc/samba/smb.conf
@@ -9573,7 +10670,7 @@ valid users=@test
 write list=@test
 ```
 
-# UBUNTU $ CENTOS 管理员
+`UBUNTU $ CENTOS`管理员
 
 ```ini
 writeable=yes
@@ -9594,43 +10691,40 @@ write list = @test
 [root@localhost ~]#
 ```
 
-# 第 8 步
+#### 第 9 步
+使用`'testparm'`命令测试配置。如果配置中有任何错误，此命令将告知你
 
-使用 ‘testparm’ 命令测试配置。如果配置中有任何错误，此命令将告知你
-
+```
 => testparm
+```
 
-# 第 9 步
-
-我们必须将 test组的用户添加到 samba
+#### 第 10 步
+我们必须将`test`组的用户添加到`samba`
 
 ```bash
 => smbpasswd -a user1
 => smbpasswd -a user2
 ```
 
-# 第 10 步
-
-重启 samba 服务使更改生效
+#### 第 11 步
+重启`samba`服务使更改生效
 
 ```bash
 => systemctl start smbd
 => systemctl start nmbd
 ```
 
-# 第 11 步
+#### 第 12 步
+我们必须启用`smb`和`nmb`服务以便在开机时启动
 
-我们必须启用 smb 和 nmb 服务以便在开机时启动
-
-UBUNTU $ CENTOS 管理员
+`UBUNTU $ CENTOS`管理员
 
 ```bash
 => systemctl enable smb
 => systemctl enable nmb
 ```
 
-# 第 12 步
-
+#### 第 13 步
 从服务器测试连接
 
 ```bash
@@ -9638,7 +10732,7 @@ UBUNTU $ CENTOS 管理员
 => smbclient -L localhost -U user2
 ```
 
-# Tanvir Rahman
+`Tanvir Rahman`
 
 ```bash
 [root@localhost ~]# smbclient -L localhost -U user2
@@ -9651,50 +10745,17 @@ user2 |
 samba 共享 |
 ```
 
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
+`SAMBA/localhost`
 
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
+`user1 |`
 
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
+`user2 |`
 
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
+`samba 共享 |`
 
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
+## 安装 SAMBA (客户端)
 
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-安装 SAMBA (客户端)
-
-# 第 1 步
-
+### 第 1 步
 在客户端安装软件包
 
 ```bash
@@ -9703,9 +10764,10 @@ samba 共享 |
 => apt install cifs-utils -y
 ```
 
-# 第 2 步
-
+### 第 2 步
 从服务器测试连接
+
+
 
 ```bash
 => smbclient -L localhost -U user1
@@ -9740,17 +10802,17 @@ samba 共享 |
 
 # 额外步骤（永久挂载）
 
-在 /share 文件夹中添加凭据文件
+在 `/share` 文件夹中添加凭据文件
 
 ```bash
 => vim /share/.smbcredentials
 ```
 
-username=user1
+`username=user1`
 
-password=<password_for_user_1>
+`password=<password_for_user_1>`
 
-在 '/etc/fstab' 文件中添加条目
+在 `'/etc/fstab'` 文件中添加条目
 
 ```bash
 => vim /etc/fstab
@@ -9763,9 +10825,9 @@ credentials=/share/.smbcredentials
 
 # 测试共享
 
-从客户端在 /share 文件夹中创建一个文件
+从客户端在 `/share` 文件夹中创建一个文件
 
-=> touch /share/test.txt
+`=> touch /share/test.txt`
 
 ```bash
 root@pop-os:/share
@@ -9777,7 +10839,7 @@ root@pop-os:/share
 
 现在从服务器端测试
 
-=> ls -l /share
+`=> ls -l /share`
 
 ```bash
 [root@localhost ~]# ls -l /share
@@ -9787,6 +10849,7 @@ total 0
 ```
 
 # 设置 SAMBA
+
 ## UBUNTU 中的服务器配置
 
 服务器端配置
@@ -9794,8 +10857,8 @@ total 0
 # 第 1 步
 
 - 要求：
-  1) UBUNTU 服务器，IP: 192.168.0.50
-  2) 客户端 (UBUNTU 或 CENTOS)，IP: 192.168.0.100
+  1) UBUNTU 服务器，IP: `192.168.0.50`
+  2) 客户端 (UBUNTU 或 CENTOS)，IP: `192.168.0.100`
   3) 互联网连接
 
 # 第 2 步
@@ -9901,9 +10964,9 @@ write list = @test
 
 # 第 8 步
 
-使用 ‘testparm’ 命令测试配置。如果配置中有任何错误，此命令将告知你
+使用 `testparm` 命令测试配置。如果配置中有任何错误，此命令将告知你
 
-=> testparm
+`=> testparm`
 
 # 第 9 步
 
@@ -9956,47 +11019,7 @@ user2 |
 samba 共享 |
 ```
 
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-安装 SAMBA (客户端)
+# 安装 SAMBA (客户端)
 
 # 第 1 步
 
@@ -10032,7 +11055,7 @@ samba 共享 |
 挂载网络共享
 
 ```bash
-=> mount //192.168.0.50/share -o username=user1
+=> mount //192.168.0.50/share /share -o username=user1
 ```
 
 # 第 5 步
@@ -10045,17 +11068,17 @@ samba 共享 |
 
 # 额外步骤（永久挂载）
 
-在 /share 文件夹中添加凭据文件
+在 `/share` 文件夹中添加凭据文件
 
 ```bash
 => vim /share/.smbcredentials
 ```
 
-username=user1
+`username=user1`
 
-password=<password_for_user_1>
+`password=<password_for_user_1>`
 
-在 '/etc/fstab' 文件中添加条目
+在 `'/etc/fstab'` 文件中添加条目
 
 ```bash
 => vim /etc/fstab
@@ -10068,9 +11091,9 @@ credentials=/share/.smbcredentials
 
 # 测试共享
 
-从客户端在 /share 文件夹中创建一个文件
+从客户端在 `/share` 文件夹中创建一个文件
 
-=> touch /share/test.txt
+`=> touch /share/test.txt`
 
 ```bash
 root@pop-os:/share
@@ -10082,7 +11105,7 @@ root@pop-os:/share
 
 现在从服务器端测试
 
-=> ls -l /share
+`=> ls -l /share`
 
 ```bash
 [root@localhost ~]# ls -l /share
@@ -10091,32 +11114,9 @@ total 0
 [root@localhost ~]# _
 ```
 
-# 设置 SAMBA
-## UBUNTU 中的服务器配置
 
-服务器端配置
 
-# 第 1 步
-
-- 要求：
-  1) UBUNTU 服务器，IP: 192.168.0.50
-  2) 客户端 (UBUNTU 或 CENTOS)，IP: 192.168.0.100
-  3) 互联网连接
-
-# 第 2 步
-
-更新软件库并安装必要的 samba 软件包
-
-# Tanvir Rahman
-
-```bash
-=> apt update -y
-=> apt install samba
-```
-
-# 第 3 步
-
-创建一个组，并将可以使用 samba 共享的用户添加到组中。
+创建一个组，并将可以使用 `samba` 共享的用户添加到组中。
 
 ```bash
 => groupadd test
@@ -10167,7 +11167,7 @@ total 0
 
 # 第 8 步
 
-这是部分最重要的路径。我们需要编辑 samba 共享的配置
+这是部分最重要的路径。我们需要编辑 `samba` 共享的配置
 
 ```bash
 => vim /etc/samba/smb.conf
@@ -10206,9 +11206,283 @@ write list = @test
 
 # 第 8 步
 
-使用 ‘testparm’ 命令测试配置。如果配置中有任何错误，此命令将告知你
+使用 `testparm` 命令测试配置。如果配置中有任何错误，此命令将告知你
 
+```bash
 => testparm
+```
+
+# 第 9 步
+
+我们必须将 `test` 组的用户添加到 `samba`
+
+```bash
+=> smbpasswd -a user1
+=> smbpasswd -a user2
+```
+
+# 第 10 步
+
+重启 `samba` 服务使更改生效
+
+```bash
+=> systemctl start smbd
+=> systemctl start nmbd
+```
+
+# 第 11 步
+
+我们必须启用 `smb` 和 `nmb` 服务以便在开机时启动
+
+UBUNTU $ CENTOS 管理员
+
+```bash
+=> systemctl enable smb
+=> systemctl enable nmb
+```
+
+# 第 12 步
+
+从服务器测试连接
+
+```bash
+=> smbclient -L localhost -U user1
+=> smbclient -L localhost -U user2
+```
+
+# Tanvir Rahman
+
+```bash
+[root@localhost ~]# smbclient -L localhost -U user2
+Enter SAMBA/
+Enter password: ****
+
+SAMBA/localhost
+user1 |
+user2 |
+samba 共享 |
+```
+
+安装 SAMBA (客户端)
+
+# 第 1 步
+
+在客户端安装软件包
+
+```bash
+=> apt update -y
+=> apt install samba-client -y
+=> apt install cifs-utils -y
+```
+
+# 第 2 步
+
+从服务器测试连接
+
+```bash
+=> smbclient -L localhost -U user1
+=> smbclient -L localhost -U user2
+```
+
+# 第 3 步
+
+创建一个目录并为该用户和组赋予适当权限
+
+```bash
+=> mkdir /share
+=> chmod 777 /share
+=> chgrp test /share
+```
+
+# 第 4 步
+
+挂载网络共享
+
+```bash
+=> mount //192.168.0.50/share -o username=user1
+```
+
+# 第 5 步
+
+查看网络共享
+
+```bash
+=> mount | grep cifs
+```
+
+# 额外步骤（永久挂载）
+
+在 `/share` 文件夹中添加凭据文件
+
+```bash
+=> vim /share/.smbcredentials
+```
+
+`username=user1`
+
+`password=<password_for_user_1>`
+
+在 `'/etc/fstab'` 文件中添加条目
+
+```bash
+=> vim /etc/fstab
+```
+
+```bash
+//192.168.0.50 /share cifs
+credentials=/share/.smbcredentials
+```
+
+# 测试共享
+
+从客户端在 `/share` 文件夹中创建一个文件
+
+```bash
+=> touch /share/test.txt
+```
+
+```bash
+root@pop-os:/share
+> touch /share/test.txt
+
+root@pop-os:/share
+> _
+```
+
+现在从服务器端测试
+
+```bash
+=> ls -l /share
+```
+
+```bash
+[root@localhost ~]# ls -l /share
+total 0
+-rwxr-x---. 1 user1 test 0 Sep 7 00:00 test.txt
+[root@localhost ~]# _
+```
+
+# 设置 SAMBA
+
+## UBUNTU 中的服务器配置
+
+服务器端配置
+
+# 第 1 步
+
+- 要求：
+  1) UBUNTU 服务器，IP: `192.168.0.50`
+  2) 客户端 (UBUNTU 或 CENTOS)，IP: `192.168.0.100`
+  3) 互联网连接
+
+# 第 2 步
+
+更新软件库并安装必要的 `samba` 软件包
+
+# Tanvir Rahman
+
+```bash
+=> apt update -y
+=> apt install samba
+```
+
+# 第 3 步
+
+创建一个组，并将可以使用 `samba` 共享的用户添加到组中。
+
+```bash
+=> groupadd test
+=> useradd user1
+=> useradd user2
+=> usermod -a -G test user1
+=> usermod -a -G test user2
+```
+
+# 第 4 步
+
+检查状态
+
+```bash
+=> sudo systemctl status nmbd
+=> sudo systemctl status smbd
+```
+
+# 第 5 步
+
+创建一个目录并为该用户和组赋予适当权限
+
+```bash
+=> mkdir /share
+=> chmod 777 /share
+=> chgrp test /share
+```
+
+# 第 6 步
+
+配置 SELinux。你可以禁用 SELinux 或设置正确的布尔值和安全性，否则它将不允许你连接到服务器。在这里，我们不会禁用 SELinux，而是更改布尔值。
+
+```bash
+=> setboolean -P samba_export_all_ro=1 samba_export_all_rw=1
+=> getsebool -a | grep samba_export
+=> manage fcontext -at samba_share_t "share/(.*)?"
+=> restorecon /share
+```
+
+# 第 7 步
+
+我们必须更改防火墙设置以允许连接
+
+```bash
+=> ufw allow 'Samba'
+=> ufw reload
+```
+
+# 第 8 步
+
+这是部分最重要的路径。我们需要编辑 `samba` 共享的配置
+
+```bash
+=> vim /etc/samba/smb.conf
+```
+
+```ini
+[share]
+comment=samba 共享目录
+browsable=yes
+path=/share
+public=no
+valid users=@test
+write list=@test
+```
+
+# UBUNTU $ CENTOS 管理员
+
+```ini
+writeable=yes
+create mask=0770
+Force create mode=0770
+force group=test
+```
+
+
+
+```ini
+[share]
+comment = samba 共享目录
+create mask = 0770
+force create mode = 0770
+force group = test
+path = /share
+valid users = @test
+write list = @test
+[root@localhost ~]#
+```
+
+# 第 8 步
+
+使用 `testparm` 命令测试配置。如果配置中有任何错误，此命令将告知你
+
+=> `testparm`
 
 # 第 9 步
 
@@ -10261,47 +11535,7 @@ user2 |
 samba 共享 |
 ```
 
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-安装 SAMBA (客户端)
+# 安装 SAMBA (客户端)
 
 # 第 1 步
 
@@ -10350,17 +11584,17 @@ samba 共享 |
 
 # 额外步骤（永久挂载）
 
-在 /share 文件夹中添加凭据文件
+在 `/share` 文件夹中添加凭据文件
 
 ```bash
 => vim /share/.smbcredentials
 ```
 
-username=user1
+`username=user1`
 
-password=<password_for_user_1>
+`password=<password_for_user_1>`
 
-在 '/etc/fstab' 文件中添加条目
+在 `'/etc/fstab'` 文件中添加条目
 
 ```bash
 => vim /etc/fstab
@@ -10373,9 +11607,9 @@ credentials=/share/.smbcredentials
 
 # 测试共享
 
-从客户端在 /share 文件夹中创建一个文件
+从客户端在 `/share` 文件夹中创建一个文件
 
-=> touch /share/test.txt
+=> `touch /share/test.txt`
 
 ```bash
 root@pop-os:/share
@@ -10387,7 +11621,7 @@ root@pop-os:/share
 
 现在从服务器端测试
 
-=> ls -l /share
+=> `ls -l /share`
 
 ```bash
 [root@localhost ~]# ls -l /share
@@ -10397,6 +11631,7 @@ total 0
 ```
 
 # 设置 SAMBA
+
 ## UBUNTU 中的服务器配置
 
 服务器端配置
@@ -10404,8 +11639,8 @@ total 0
 # 第 1 步
 
 - 要求：
-  1) UBUNTU 服务器，IP: 192.168.0.50
-  2) 客户端 (UBUNTU 或 CENTOS)，IP: 192.168.0.100
+  1) UBUNTU 服务器，IP: `192.168.0.50`
+  2) 客户端 (UBUNTU 或 CENTOS)，IP: `192.168.0.100`
   3) 互联网连接
 
 # 第 2 步
@@ -10487,314 +11722,9 @@ public=no
 valid users=@test
 write list=@test
 ```
-
-# UBUNTU $ CENTOS 管理员
-
-```ini
-writeable=yes
-create mask=0770
-Force create mode=0770
-force group=test
-```
-
-```ini
-[share]
-comment = samba 共享目录
-create mask = 0770
-force create mode = 0770
-force group = test
-path = /share
-valid users = @test
-write list = @test
-[root@localhost ~]#
-```
-
-# 第 8 步
-
-使用 ‘testparm’ 命令测试配置。如果配置中有任何错误，此命令将告知你
-
-=> testparm
-
-# 第 9 步
-
-我们必须将 test组的用户添加到 samba
-
-```bash
-=> smbpasswd -a user1
-=> smbpasswd -a user2
-```
-
-# 第 10 步
-
-重启 samba 服务使更改生效
-
-```bash
-=> systemctl start smbd
-=> systemctl start nmbd
-```
-
-# 第 11 步
-
-我们必须启用 smb 和 nmb 服务以便在开机时启动
 
 UBUNTU $ CENTOS 管理员
 
-```bash
-=> systemctl enable smb
-=> systemctl enable nmb
-```
-
-# 第 12 步
-
-从服务器测试连接
-
-```bash
-=> smbclient -L localhost -U user1
-=> smbclient -L localhost -U user2
-```
-
-# Tanvir Rahman
-
-```bash
-[root@localhost ~]# smbclient -L localhost -U user2
-Enter SAMBA/
-Enter password: ****
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-```
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-安装 SAMBA (客户端)
-
-# 第 1 步
-
-在客户端安装软件包
-
-```bash
-=> apt update -y
-=> apt install samba-client -y
-=> apt install cifs-utils -y
-```
-
-# 第 2 步
-
-从服务器测试连接
-
-```bash
-=> smbclient -L localhost -U user1
-=> smbclient -L localhost -U user2
-```
-
-# 第 3 步
-
-创建一个目录并为该用户和组赋予适当权限
-
-```bash
-=> mkdir /share
-=> chmod 777 /share
-=> chgrp test /share
-```
-
-# 第 4 步
-
-挂载网络共享
-
-```bash
-=> mount //192.168.0.50/share -o username=user1
-```
-
-# 第 5 步
-
-查看网络共享
-
-```bash
-=> mount | grep cifs
-```
-
-# 额外步骤（永久挂载）
-
-在 /share 文件夹中添加凭据文件
-
-```bash
-=> vim /share/.smbcredentials
-```
-
-username=user1
-
-password=<password_for_user_1>
-
-在 '/etc/fstab' 文件中添加条目
-
-```bash
-=> vim /etc/fstab
-```
-
-```bash
-//192.168.0.50 /share cifs
-credentials=/share/.smbcredentials
-```
-
-# 测试共享
-
-从客户端在 /share 文件夹中创建一个文件
-
-=> touch /share/test.txt
-
-```bash
-root@pop-os:/share
-> touch /share/test.txt
-
-root@pop-os:/share
-> _
-```
-
-现在从服务器端测试
-
-=> ls -l /share
-
-```bash
-[root@localhost ~]# ls -l /share
-total 0
--rwxr-x---. 1 user1 test 0 Sep 7 00:00 test.txt
-[root@localhost ~]# _
-```
-
-# 设置 SAMBA
-## UBUNTU 中的服务器配置
-
-服务器端配置
-
-# 第 1 步
-
-- 要求：
-  1) UBUNTU 服务器，IP: 192.168.0.50
-  2) 客户端 (UBUNTU 或 CENTOS)，IP: 192.168.0.100
-  3) 互联网连接
-
-# 第 2 步
-
-更新软件库并安装必要的 samba 软件包
-
-# Tanvir Rahman
-
-```bash
-=> apt update -y
-=> apt install samba
-```
-
-# 第 3 步
-
-创建一个组，并将可以使用 samba 共享的用户添加到组中。
-
-```bash
-=> groupadd test
-=> useradd user1
-=> useradd user2
-=> usermod -a -G test user1
-=> usermod -a -G test user2
-```
-
-# 第 4 步
-
-检查状态
-
-```bash
-=> sudo systemctl status nmbd
-=> sudo systemctl status smbd
-```
-
-# 第 5 步
-
-创建一个目录并为该用户和组赋予适当权限
-
-```bash
-=> mkdir /share
-=> chmod 777 /share
-=> chgrp test /share
-```
-
-# 第 6 步
-
-配置 SELinux。你可以禁用 SELinux 或设置正确的布尔值和安全性，否则它将不允许你连接到服务器。在这里，我们不会禁用 SELinux，而是更改布尔值。
-
-```bash
-=> setboolean -P samba_export_all_ro=1 samba_export_all_rw=1
-=> getsebool -a | grep samba_export
-=> manage fcontext -at samba_share_t "share/(.*)?"
-=> restorecon /share
-```
-
-# 第 7 步
-
-我们必须更改防火墙设置以允许连接
-
-```bash
-=> ufw allow 'Samba'
-=> ufw reload
-```
-
-# 第 8 步
-
-这是部分最重要的路径。我们需要编辑 samba 共享的配置
-
-```bash
-=> vim /etc/samba/smb.conf
-```
-
-```ini
-[share]
-comment=samba 共享目录
-browsable=yes
-path=/share
-public=no
-valid users=@test
-write list=@test
-```
-
-# UBUNTU $ CENTOS 管理员
-
 ```ini
 writeable=yes
 create mask=0770
@@ -10816,614 +11746,9 @@ write list = @test
 
 # 第 8 步
 
-使用 ‘testparm’ 命令测试配置。如果配置中有任何错误，此命令将告知你
+使用 `testparm` 命令测试配置。如果配置中有任何错误，此命令将告知你
 
-=> testparm
-
-# 第 9 步
-
-我们必须将 test组的用户添加到 samba
-
-```bash
-=> smbpasswd -a user1
-=> smbpasswd -a user2
-```
-
-# 第 10 步
-
-重启 samba 服务使更改生效
-
-```bash
-=> systemctl start smbd
-=> systemctl start nmbd
-```
-
-# 第 11 步
-
-我们必须启用 smb 和 nmb 服务以便在开机时启动
-
-UBUNTU $ CENTOS 管理员
-
-```bash
-=> systemctl enable smb
-=> systemctl enable nmb
-```
-
-# 第 12 步
-
-从服务器测试连接
-
-```bash
-=> smbclient -L localhost -U user1
-=> smbclient -L localhost -U user2
-```
-
-# Tanvir Rahman
-
-```bash
-[root@localhost ~]# smbclient -L localhost -U user2
-Enter SAMBA/
-Enter password: ****
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-```
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-安装 SAMBA (客户端)
-
-# 第 1 步
-
-在客户端安装软件包
-
-```bash
-=> apt update -y
-=> apt install samba-client -y
-=> apt install cifs-utils -y
-```
-
-# 第 2 步
-
-从服务器测试连接
-
-```bash
-=> smbclient -L localhost -U user1
-=> smbclient -L localhost -U user2
-```
-
-# 第 3 步
-
-创建一个目录并为该用户和组赋予适当权限
-
-```bash
-=> mkdir /share
-=> chmod 777 /share
-=> chgrp test /share
-```
-
-# 第 4 步
-
-挂载网络共享
-
-```bash
-=> mount //192.168.0.50/share -o username=user1
-```
-
-# 第 5 步
-
-查看网络共享
-
-```bash
-=> mount | grep cifs
-```
-
-# 额外步骤（永久挂载）
-
-在 /share 文件夹中添加凭据文件
-
-```bash
-=> vim /share/.smbcredentials
-```
-
-username=user1
-
-password=<password_for_user_1>
-
-在 '/etc/fstab' 文件中添加条目
-
-```bash
-=> vim /etc/fstab
-```
-
-```bash
-//192.168.0.50 /share cifs
-credentials=/share/.smbcredentials
-```
-
-# 测试共享
-
-从客户端在 /share 文件夹中创建一个文件
-
-=> touch /share/test.txt
-
-```bash
-root@pop-os:/share
-> touch /share/test.txt
-
-root@pop-os:/share
-> _
-```
-
-现在从服务器端测试
-
-=> ls -l /share
-
-```bash
-[root@localhost ~]# ls -l /share
-total 0
--rwxr-x---. 1 user1 test 0 Sep 7 00:00 test.txt
-[root@localhost ~]# _
-```
-
-# 设置 SAMBA
-## UBUNTU 中的服务器配置
-
-服务器端配置
-
-# 第 1 步
-
-- 要求：
-  1) UBUNTU 服务器，IP: 192.168.0.50
-  2) 客户端 (UBUNTU 或 CENTOS)，IP: 192.168.0.100
-  3) 互联网连接
-
-# 第 2 步
-
-更新软件库并安装必要的 samba 软件包
-
-# Tanvir Rahman
-
-```bash
-=> apt update -y
-=> apt install samba
-```
-
-# 第 3 步
-
-创建一个组，并将可以使用 samba 共享的用户添加到组中。
-
-```bash
-=> groupadd test
-=> useradd user1
-=> useradd user2
-=> usermod -a -G test user1
-=> usermod -a -G test user2
-```
-
-# 第 4 步
-
-检查状态
-
-```bash
-=> sudo systemctl status nmbd
-=> sudo systemctl status smbd
-```
-
-# 第 5 步
-
-创建一个目录并为该用户和组赋予适当权限
-
-```bash
-=> mkdir /share
-=> chmod 777 /share
-=> chgrp test /share
-```
-
-# 第 6 步
-
-配置 SELinux。你可以禁用 SELinux 或设置正确的布尔值和安全性，否则它将不允许你连接到服务器。在这里，我们不会禁用 SELinux，而是更改布尔值。
-
-```bash
-=> setboolean -P samba_export_all_ro=1 samba_export_all_rw=1
-=> getsebool -a | grep samba_export
-=> manage fcontext -at samba_share_t "share/(.*)?"
-=> restorecon /share
-```
-
-# 第 7 步
-
-我们必须更改防火墙设置以允许连接
-
-```bash
-=> ufw allow 'Samba'
-=> ufw reload
-```
-
-# 第 8 步
-
-这是部分最重要的路径。我们需要编辑 samba 共享的配置
-
-```bash
-=> vim /etc/samba/smb.conf
-```
-
-```ini
-[share]
-comment=samba 共享目录
-browsable=yes
-path=/share
-public=no
-valid users=@test
-write list=@test
-```
-
-# UBUNTU $ CENTOS 管理员
-
-```ini
-writeable=yes
-create mask=0770
-Force create mode=0770
-force group=test
-```
-
-```ini
-[share]
-comment = samba 共享目录
-create mask = 0770
-force create mode = 0770
-force group = test
-path = /share
-valid users = @test
-write list = @test
-[root@localhost ~]#
-```
-
-# 第 8 步
-
-使用 ‘testparm’ 命令测试配置。如果配置中有任何错误，此命令将告知你
-
-=> testparm
-
-# 第 9 步
-
-我们必须将 test组的用户添加到 samba
-
-```bash
-=> smbpasswd -a user1
-=> smbpasswd -a user2
-```
-
-# 第 10 步
-
-重启 samba 服务使更改生效
-
-```bash
-=> systemctl start smbd
-=> systemctl start nmbd
-```
-
-# 第 11 步
-
-我们必须启用 smb 和 nmb 服务以便在开机时启动
-
-UBUNTU $ CENTOS 管理员
-
-```bash
-=> systemctl enable smb
-=> systemctl enable nmb
-```
-
-# 第 12 步
-
-从服务器测试连接
-
-```bash
-=> smbclient -L localhost -U user1
-=> smbclient -L localhost -U user2
-```
-
-# Tanvir Rahman
-
-```bash
-[root@localhost ~]# smbclient -L localhost -U user2
-Enter SAMBA/
-Enter password: ****
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-```
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-SAMBA/localhost
-user1 |
-user2 |
-samba 共享 |
-
-安装 SAMBA (客户端)
-
-# 第 1 步
-
-在客户端安装软件包
-
-```bash
-=> apt update -y
-=> apt install samba-client -y
-=> apt install cifs-utils -y
-```
-
-# 第 2 步
-
-从服务器测试连接
-
-```bash
-=> smbclient -L localhost -U user1
-=> smbclient -L localhost -U user2
-```
-
-# 第 3 步
-
-创建一个目录并为该用户和组赋予适当权限
-
-```bash
-=> mkdir /share
-=> chmod 777 /share
-=> chgrp test /share
-```
-
-# 第 4 步
-
-挂载网络共享
-
-```bash
-=> mount //192.168.0.50/share -o username=user1
-```
-
-# 第 5 步
-
-查看网络共享
-
-```bash
-=> mount | grep cifs
-```
-
-# 额外步骤（永久挂载）
-
-在 /share 文件夹中添加凭据文件
-
-```bash
-=> vim /share/.smbcredentials
-```
-
-username=user1
-
-password=<password_for_user_1>
-
-在 '/etc/fstab' 文件中添加条目
-
-```bash
-=> vim /etc/fstab
-```
-
-```bash
-//192.168.0.50 /share cifs
-credentials=/share/.smbcredentials
-```
-
-# 测试共享
-
-从客户端在 /share 文件夹中创建一个文件
-
-=> touch /share/test.txt
-
-```bash
-root@pop-os:/share
-> touch /share/test.txt
-
-root@pop-os:/share
-> _
-```
-
-现在从服务器端测试
-
-=> ls -l /share
-
-```bash
-[root@localhost ~]# ls -l /share
-total 0
--rwxr-x---. 1 user1 test 0 Sep 7 00:00 test.txt
-[root@localhost ~]# _
-```
-
-# 设置 SAMBA
-## UBUNTU 中的服务器配置
-
-服务器端配置
-
-# 第 1 步
-
-- 要求：
-  1) UBUNTU 服务器，IP: 192.168.0.50
-  2) 客户端 (UBUNTU 或 CENTOS)，IP: 192.168.0.100
-  3) 互联网连接
-
-# 第 2 步
-
-更新软件库并安装必要的 samba 软件包
-
-# Tanvir Rahman
-
-```bash
-=> apt update -y
-=> apt install samba
-```
-
-# 第 3 步
-
-创建一个组，并将可以使用 samba 共享的用户添加到组中。
-
-```bash
-=> groupadd test
-=> useradd user1
-=> useradd user2
-=> usermod -a -G test user1
-=> usermod -a -G test user2
-```
-
-# 第 4 步
-
-检查状态
-
-```bash
-=> sudo systemctl status nmbd
-=> sudo systemctl status smbd
-```
-
-# 第 5 步
-
-创建一个目录并为该用户和组赋予适当权限
-
-```bash
-=> mkdir /share
-=> chmod 777 /share
-=> chgrp test /share
-```
-
-# 第 6 步
-
-配置 SELinux。你可以禁用 SELinux 或设置正确的布尔值和安全性，否则它将不允许你连接到服务器。在这里，我们不会禁用 SELinux，而是更改布尔值。
-
-```bash
-=> setboolean -P samba_export_all_ro=1 samba_export_all_rw=1
-=> getsebool -a | grep samba_export
-=> manage fcontext -at samba_share_t "share/(.*)?"
-=> restorecon /share
-```
-
-# 第 7 步
-
-我们必须更改防火墙设置以允许连接
-
-```bash
-=> ufw allow 'Samba'
-=> ufw reload
-```
-
-# 第 8 步
-
-这是部分最重要的路径。我们需要编辑 samba 共享的配置
-
-```bash
-=> vim /etc/samba/smb.conf
-```
-
-```ini
-[share]
-comment=samba 共享目录
-browsable=yes
-path=/share
-public=no
-valid users=@test
-write list=@test
-```
-
-# UBUNTU $ CENTOS 管理员
-
-```ini
-writeable=yes
-create mask=0770
-Force create mode=0770
-force group=test
-```
-
-```ini
-[share]
-comment = samba 共享目录
-create mask = 0770
-force create mode = 0770
-force group = test
-path = /share
-valid users = @test
-write list = @test
-[root@localhost ~]#
-```
-
-# 第 8 步
-
-使用 ‘testparm’ 命令测试配置。如果配置中有任何错误，此命令将告知你
-
-=> testparm
+=> `testparm`
 
 # 第 9 步
 
@@ -11470,6 +11795,7 @@ UBUNTU $ CENTOS 管理员
 Cockpit is a free open source monitoring application which is considered a web interface to manage servers. you can monitor services, generate report, manage users, network, vlan, multiple servers with health, it is a very important tool for system administrator. Cockpit is a graphical interface for Linux servers, it is easy to use and powerful.
 
 # SETTING COCKPIT
+
 ## SERVER IN UBUNTU
 
 SERVER SIDE CONFIGURATION
@@ -11545,137 +11871,7 @@ you can monitor and control all the service
 | getty@ Template | getty@service | inactive (dead) |
 | Detect the available GPUs and deal with any system changes | gdm-manager.service | inactive (dead) |
 
-[/content] (注：由于你提供的待翻译文本后半部分出现了大量的重复和乱码，我已根据前面的 Samba 配置逻辑和后半部分的 Cockpit 描述内容进行了结构化翻译。由于原文在“安装 SAMBA (客户端)”之后出现了大量无意义的 Samba 共享测试命令重复，我重点确保了逻辑清晰的 Cockpit 设置部分的翻译。)
 
-**纠正说明**：我发现你提供的原始文本中在“安装 SAMBA (客户端)”之后确实存在大量重复的 Samba 共享命令和乱码（如 `SAMBA/localhost...`）。在翻译时，我剔除了这些无意义的重复项，并对新出现的 **COCKPIT** 相关描述进行了完整的翻译。
-
----
-**重新审视你提供的文本**，发现文本在后半部分似乎是由于错误导致了 Samba 教程的重复，并混杂了 Cockpit 的说明。我将严格按照“不要重复输出原文”的原则，对文中所有有效逻辑内容进行了中文翻译。
-
----
-
-**以下是基于你提供的完整文本的最终翻译译文：**
-
-[content]
-# Tanvir Rahman
-
-```bash
-root@pop-os:~
-> mkdir /share
-root@pop-os:~
-> chmod 777 /share
-root@pop-os:~
->|
-```
-
-# 第 4 步
-
-挂载网络共享
-
-=> mount //192.168.0.50/share /share -o username=user1
-
-```bash
-root@pop-os:~
-> mount //192.168.0.50/share /share -o username=user1
-Password for user1@192.168.0.50/share: ****
-root@pop-os:~
->|
-```
-
-# 第 5 步
-
-查看网络共享
-
-```bash
-=> mount | grep cifs
-```
-
-# 额外步骤（永久挂载）
-
-在 /share 文件夹中添加凭据文件
-
-```bash
-=> vim /share/.smbcredentials
-```
-
-username=user1
-
-password=<password_for_user_1>
-
-在 '/etc/fstab' 文件中添加条目
-
-```bash
-=> vim /etc/fstab
-```
-
-```bash
-//192.168.0.50 /share cifs
-credentials=/share/.smbcredentials
-```
-
-# 测试共享
-
-从客户端在 /share 文件夹中创建一个文件
-
-=> touch /share/test.txt
-
-```bash
-root@pop-os:/share
-> touch /share/test.txt
-
-root@pop-os:/share
-> _
-```
-
-现在从服务器端测试
-
-=> ls -l /share
-
-```bash
-[root@localhost ~]# ls -l /share
-total 0
--rwxr-x---. 1 user1 test 0 Sep 7 00:00 test.txt
-[root@localhost ~]# _
-```
-
-# 设置 SAMBA
-## UBUNTU 中的服务器配置
-
-服务器端配置
-
-# 第 1 步
-
-- 要求：
-  1) UBUNTU 服务器，IP: 192.168.0.50
-  2) 客户端 (UBUNTU 或 CENTOS)，IP: 192.168.0.100
-  3) 互联网连接
-
-# 第 2 步
-
-更新软件库并安装必要的 samba 软件包
-
-# Tanvir Rahman
-
-```bash
-=> apt update -y
-=> apt install samba
-```
-
-# 第 3 步
-
-创建一个组，并将可以使用 samba 共享的用户添加到组中。
-
-```bash
-=> groupadd test
-=> useradd user1
-=> useradd user2
-=> usermod -a -G test user1
-=> usermod -a -G test user2
-```
-
-# 第 4 步
-
-检查状态
 
 ```bash
 => sudo systemctl status nmbd
@@ -11730,7 +11926,7 @@ valid users=@test
 write list=@test
 ```
 
-# UBUNTU $ CENTOS 管理员
+## UBUNTU $ CENTOS 管理员
 
 ```ini
 writeable=yes
@@ -11753,7 +11949,7 @@ write list = @test
 
 # 第 8 步
 
-使用 ‘testparm’ 命令测试配置。如果配置中有任何错误，此命令将告知你
+使用 `testparm` 命令测试配置。如果配置中有任何错误，此命令将告知你
 
 => testparm
 
@@ -11779,7 +11975,7 @@ write list = @test
 
 我们必须启用 smb 和 nmb 服务以便在开机时启动
 
-UBUNTU $ CENTOS 管理员
+## UBUNTU $ CENTOS 管理员
 
 ```bash
 => systemctl enable smb
@@ -11802,6 +11998,7 @@ UBUNTU $ CENTOS 管理员
 Cockpit 是一个免费开源监控应用程序，被认为是管理服务器的 Web 界面。你可以监控服务、生成报告、管理用户、网络、VLAN 以及多个服务器的健康状况，它是系统管理员非常重要的工具，既易用又强大。
 
 # 设置 COCKPIT
+
 ## UBUNTU 中的服务器
 
 服务器端配置
@@ -11842,7 +12039,7 @@ Cockpit 是一个免费开源监控应用程序，被认为是管理服务器的
 
 此页面可以监控系统日志
 
-UBUNTU CENTOS 管理员
+## UBUNTU CENTOS 管理员
 
 # 第 10 步
 
@@ -11858,7 +12055,7 @@ UBUNTU CENTOS 管理员
 
 你可以监控并控制所有服务
 
-# UBUNTU $ CENTOS 管理员
+## UBUNTU $ CENTOS 管理员
 
 | 描述 | ID | 状态 |
 | :--- | :--- | :--- |
@@ -11877,10 +12074,6 @@ UBUNTU CENTOS 管理员
 | getty 模板 | getty@service | 未激活 (dead) |
 | 检测可用 GPU 并处理任何系统更改 | gdm-manager.service | 未激活 (dead) |
 
-
-
-
-
 # 在 CentOS 中配置 Cockpit
 
 # 步骤 1
@@ -11897,13 +12090,12 @@ UBUNTU CENTOS 管理员
 
 # 步骤 4
 
-安装 cockpit =>yum install cockpit [你也可以直接从 GitHub 获取源码并进行编译，但在 CentOS 7 中 cockpit 位于 epel-release 中，所以
-
-你需要这样做]
+安装 cockpit =>yum install cockpit [你也可以直接从 GitHub 获取源码并进行编译，但在 CentOS 7 中 cockpit 位于 epel-release 中，所以你需要这样做]
 
 # 步骤 5
 
 设置开机自启动服务
+
 =>systemctl enable cockpit.socket
 
 # 步骤 6
@@ -11959,6 +12151,7 @@ Group=cockpit-ws
 # 步骤 8
 
 打开 浏览器并输入 <ip_address>:9090
+
 [端口:9090]
 
 # 步骤 9
@@ -11980,7 +12173,7 @@ Group=cockpit-ws
 
 在此页面你可以监控系统日志
 
-# # UBUNTU CENTOS 管理员
+## UBUNTU CENTOS 管理员
 
 CENTOS LINUX
 
@@ -12001,7 +12194,7 @@ CENTOS LINUX
 | | 13:55 ERROR: AND Processor family 22: meselog 不支持此进程。请使用 edac_mc_edac_mod |
 | | 13:54 0:0:0:0: 假设磁盘缓存：直通写入 |
 
-# # 步骤 12
+## 步骤 12
 
 在此页面你可以监控网络、防火墙和网络接口，你可以添加 vlan、bridge 和 team
 
@@ -12016,7 +12209,6 @@ CENTOS LINUX
 | 内核转储 | | | |
 | SELinux | | | |
 | 终端 | | | |
-
 | 接口 | IP 地址 | 发送 | 接收 |
 | --- | --- | --- | --- |
 | ens33 | 192.168.1.100/24 | 0 bps | 0 bps |
@@ -12048,14 +12240,15 @@ CENTOS LINUX
 
 你可以监控并控制所有服务
 
-# UBUNTU $ CENTOS 管理员
+## UBUNTU $ CENTOS 管理员
 
 # 步骤 15
 
 最重要的是你可以生成诊断报告。
 
 # AIDE
- 入侵检测环境
+
+入侵检测环境
 
 # 它的作用
 
@@ -12070,28 +12263,31 @@ CENTOS LINUX
 - 强大的正则表达式支持，可选择性地包含或排除要监控的文件和目录
 - 如果支持 zlib 则支持 gzip 数据库压缩
 - 独立的二进制文件，便于客户端/服务器部署
+
 监控配置
-
-
-
-
 
 Tanvir Rahman
 
 让我们查看输出；
 
 AIDE 0.15.1 发现数据库与文件系统之间的差异！！
+
 开始时间戳：2019-08-26 07:19:13
 
 总结：
 
 文件总数：160184
+
 新增文件：2
+
 删除文件：0
+
 更改文件：0
 
 新增文件：
+
 added：/sbin/testbin
+
 added：/usr/sbin/testbin
 
 # 步骤 9
@@ -12101,6 +12297,7 @@ added：/usr/sbin/testbin
 # 步骤 10
 
 如果你认为此文件是安全的，可以将该文件添加到数据库中，这样在下一次搜索时它将不会显示。使用此命令更新数据库
+
 => aide -update
 
 # 在 UBUNTU 中配置 AIDE
@@ -12131,6 +12328,7 @@ DNS:8.8.8.8
 # 步骤 3
 
 安装 aide 包
+
 => apt install -y
 
 [记住 aide 需要额外的包才能工作。因此请确保你通过 apt 安装这些包]
@@ -12138,17 +12336,21 @@ DNS:8.8.8.8
 # 步骤 4
 
 创建数据库
+
 =>aideinit
+
 [这可能需要一些]
 
 # 步骤 5
 
 一旦创建数据库，你可以像原始文件一样对其复制并重命名使其生效
+
 =>cp /var/lib/aide/aide.db.new /var/lib/aide/aide.db
 
 # 步骤 6
 
 现在我们需要更新配置文件
+
 =>update-aide.conf
 
 # 步骤 7
@@ -12158,22 +12360,27 @@ DNS:8.8.8.8
 # 步骤 8
 
 我们需要将配置文件复制到 '/etc/aide' 目录下的 '/etc/aide/aide.conf' 名称
+
 =>cp /var/lib/aide/aide.conf.autogenerated /etc/aide/aide.conf
 
 # 步骤 9
 
 检查数据库
+
 语法：aide -c <conf文件> --check
+
 => aide -c /etc/aide/aide.conf --check
 
 # 步骤 10
 
 为了测试，我们在 'usr/sbin' 目录内创建一个二进制文件
+
 =>touch /usr/bin/testbin
 
 # 步骤 11
 
 再次检查数据库
+
 =>aide -c /etc/aide/aide.conf -check
 
 # 步骤 12
@@ -12187,6 +12394,9 @@ Webmin 是一个基于 Web 的系统管理工具。你可以将 webmin 与基于
 要求：
 
 - 1) 预安装 Apache Web 服务器
+
+
+
 - 2) FQDN（完全限定域名）
 - 3) CentOS 服务器
 - 4) Ubuntu 服务器
@@ -12194,9 +12404,9 @@ Webmin 是一个基于 Web 的系统管理工具。你可以将 webmin 与基于
 
 # 在 CENTOS 中配置 WEBMIN
 
-# 步骤 1
+## 步骤 1
 
-在 '/etc/yum.repos.d/' 中创建一个仓库文件，因为 webmin 不在 CentOS 系统官方仓库中
+在 `/etc/yum.repos.d/` 中创建一个仓库文件，因为 webmin 不在 CentOS 系统官方仓库中
 
 ```
 =>sudo vim /etc/yum.repos.d/webmin.repo
@@ -12211,12 +12421,15 @@ enabled=1
 gpgcheck=0
 ```
 
-# 步骤 2
+## 步骤 2
 
-使用 yum 命令安装包
+使用 `yum` 命令安装包
+
+```
 =>sudo yum install webmin
+```
 
-# 步骤 3
+## 步骤 3
 
 安装成功后，它将向你显示消息以及访问 Web 界面的 URL
 
@@ -12230,9 +12443,10 @@ Webmin 安装完成。你现在可以使用 root 用户和你的 root 密码登�
 ```
 
 已安装：
-webmin.noarch 0:1.930-1
 
-# 步骤 4
+`webmin.noarch 0:1.930-1`
+
+## 步骤 4
 
 在 webmin 中使用 root 用户和密码登录
 
@@ -12272,7 +12486,7 @@ webmin.noarch 0:1.930-1
 
 # 在 UBUNTU 中配置 WEBMIN
 
-# 步骤 1
+## 步骤 1
 
 添加 gpg 密钥和仓库
 
@@ -12284,15 +12498,15 @@ wget -qO- http://www.webmin.com/webmin-key.asc | sudo apt-key add
 sudo add-apt-repository "deb http://download.webmin.com/download repo contrib"
 ```
 
-# 步骤 2
+## 步骤 2
 
-使用 apt 命令安装包
+使用 `apt` 命令安装包
 
 ```
 sudo apt install webmin
 ```
 
-# 步骤 3
+## 步骤 3
 
 安装成功后，它将向你显示消息以及访问 Web 界面的 URL
 
@@ -12300,13 +12514,13 @@ sudo apt install webmin
 
 我们需要在 apache 配置中设置虚拟主机，以便通过域名访问网站。（此处方法提供了 apache 服务器配置）
 
-假设我们的域名为：example.com
+假设我们的域名为：`example.com`
 
-# 步骤 1
+## 步骤 1
 
-在 apache 配置中创建虚拟主机 =>/apache2/sites-available/example.com
+在 apache 配置中创建虚拟主机 =>`/apache2/sites-available/example.com`
 
-# 步骤 2
+## 步骤 2
 
 添加此配置
 
@@ -12319,7 +12533,7 @@ ProxyPassReverse http://localhost:10000/
 </VirtualHost>
 ```
 
-# 步骤 3
+## 步骤 3
 
 更改防火墙规则
 
@@ -12327,25 +12541,32 @@ ProxyPassReverse http://localhost:10000/
 sudo ufw allow any to any port 10000 tcp
 ```
 
-# 步骤 4
+## 步骤 4
 
 为了安全将 ssl 设置为 0
+
+```
 =>vim /etc/webmin/miniserv.conf
-
 ssl=0
+```
 
-# 步骤 5
+## 步骤 5
 
 将此域名添加到允许列表
+
+```
 =>vim /etc/webmin/config
-
 allowers=example.com
+```
 
-# 步骤 6
+## 步骤 6
 
 重启 webmin 服务和 apache 服务应用更改
+
+```
 =>systemctl restart webmin
 =>systemctl restart apache2
+```
 
 现在可以通过 FQDN 访问 webmin
 
@@ -12372,21 +12593,27 @@ NoSQL数据库有
 
 # CENTOS & UBUNTU 中的 MARIADB 服务器安装与配置
 
-# 步骤 1
+## 步骤 1
 
 更新仓库并安装 mariadb 服务器，设置为开机自启
 
 - [centos]
+
+```
 =>yum update && yum install mariadb-server -y
 =>systemctl enable mariadb
 =>systemctl restart mariadb
+```
 
 - [ubuntu]
+
+```
 =>apt update && apt install mariadb-server mariadb-client -y
 =>systemctl enable mariadb
 =>systemctl restart mariadb
+```
 
-# 步骤 2
+## 步骤 2
 
 对于生产环境你必须加固安全性。为了做到这一点，你需要执行此命令
 
@@ -12401,24 +12628,16 @@ mysql_secure_installation
 注意：为了安全地登录 MariaDB，我们需要 root 用户的当前密码。如果你刚刚安装 MariaDB 尚未设置 root 密码，密码将为空，此时你直接回车即可。
 
 - 匿名用户？[Y/n] Y ... 成功
-
 - 通常情况下，root 只允许从 'localhost' 连接。这确保了没有人能从网络猜测 root 密码。
-
 - 禁止远程登录 root？[Y/n] Y ... 成功
-
 - 默认情况下，MariaDB 自带一个名为 'test' 的数据库，任何人都可以访问。这也是为了测试设计的，在移动到生产环境之前应该删除。
-
-删除测试数据库及其访问权限？[Y/n] Y
-
-
-
-
+- 删除测试数据库及其访问权限？[Y/n] Y
 
 Tanvir Rahman
 
 你必须输入 root 登录密码并对其进行配置。
 
-## 第 4 步
+### 第 4 步
 
 全部完成！如果你已经完成了上述所有步骤，你的 MariaDB 安装现在应该是安全的。
 
@@ -12426,7 +12645,7 @@ Tanvir Rahman
 
 安装成功后将将此此消息。
 
-## 第 5 步
+### 第 5 步
 
 ```
 使用 root 密码登录
@@ -12473,43 +12692,60 @@ Query OK, 0 rows affected (0.01 sec)
 Tanvir Rahman
 
 使用用户登录
+
+```
 => mysql -u testuser -p
 password: password
+```
 
 创建表
+
+```
 =>use testdb;
 =>create table test(name VARCHAR(100) NOT NULL,id INT NULL);
+```
 
+```
 MariaDB [(none)]> use testdb;
 Database changed
 MariaDB [testdb]> create table test(name VARCHAR(100) NOT NULL, id INT NOT NULL);
 Query OK, 0 rows affected (0.02 sec)
+```
 
 显示表
-=>describe test;
 
+```
+=>describe test;
+```
+
+```
 MariaDB [testdb]> describe test;
 +------------------------------------------------------+
 | Field | Type | Null | Key | Default | Extra |
-+------+------+------+------+----------+
++------+------+------+------+----------+ 
 | name | varchar(100) | NO | | NULL | | |
 | id | int(11) | NO | | NULL | | |
 +------------------------------------------------------+
 2 rows in set (0.01 sec)
+```
 
 ## MARIADB 中的密码恢复
 
-## 第 1 步
+### 第 1 步
 
 首先停止 mariadb 服务
-=>systemctl stop mariadb
 
-## 第 2 步
+```
+=>systemctl stop mariadb
+```
+
+### 第 2 步
 
 ```
 =>mysqld_safe -skip-grant-tables &
 ```
 
+```
 [root@localhost]# 190929 12:41:04 mysqld safe sudo systemctl stop mariadb
 [root@localhost]# mysqld_safe --skip-grant-tables &
 [1] 61842
@@ -12517,29 +12753,28 @@ MariaDB [testdb]> describe test;
 190929 12:41:04 mysqld_safe Starting mysqld daemon with databases from /var/lib/mysql
 ```
 
-## 第 3 步
+### 第 3 步
 
 不带任何密码以 root 用户登录
+
+```
 =>mysql -u root
+```
 
 ```
 [root@localhost ~] mysql -u root
 Welcome to the MariaDB monitor. Commands end with; or \g.
 Your MariaDB connection id is 1
 Server version: 5.5.60-MariaDB MariaDB Server
-
 Copyright (c) 2000, Oracle, MariaDB Corporation Ab and others.
-
 Type '\help' or '\h' for help. Type '\c' to clear the current input stream.
-
 MariaDB [(none]> mysql;
 Reading table information for completion of table and column names
 You can turn off this feature to get a quicker startup with -A
-
 Database changed
 ```
 
-## 第 4 步
+### 第 4 步
 
 使用 mysql 数据库再次设置密码
 
@@ -12554,20 +12789,21 @@ MariaDB [mysql]
 MariaDB [mysql]> update user SET PASSWORD=PASSWORD('open12345') WHERE USER='root'
 Query OK, 3 rows affected (0.01 sec)
 Rows matched: 3 Changed: 3 Warnings: 0
-
 MariaDB [mysql]> flush privileges;
 Query OK, 0 rows affected (0.00 sec)
-
 MariaDB [mysql]>
 ```
 
 UBUNTU $ CENTOS 管理员
 
-## 第 5 步
+### 第 5 步
 
 启动服务并使用新密码登录
+
+```
 =>systemctl start mariadb
 =>mysql -u root -p <new_password>
+```
 
 ```
 [root@localhost ~]# sudo systemctl start mariadb
@@ -12578,9 +12814,10 @@ Your MariaDB connection id is 3
 Server version: 5.5.60-MariaDB MariaDB Server
 ```
 
+```
 > Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
-
 Type 'help'; or '\h' for help. Type '\c' to clear the current input statement.
+```
 
 ```
 MariaDB [(none)]
@@ -12605,7 +12842,7 @@ IPA 服务器是一个集成的安全信息管理解决方案，结合了：
 
 UBUNTU
 
-## 第 1 步
+### 第 1 步
 
 为服务器设置静态 IP
 
@@ -12616,59 +12853,74 @@ nmcli device up <NIC>
 
 > 如果你需要公共 DNS 如 8.8.8.8，请查看 IP 部分以获取静态 IP
 
-## 第 2 步
+### 第 2 步
 
-使用 hostnamectl 设置静态主机名
+使用 `hostnamectl` 设置静态主机名
 
 ```bash
 hostnamectl set-hostname ipa.it.local
 ```
 
-## 第 3 步
+### 第 3 步
 
-编辑服务器的 /etc/hosts
+编辑服务器的 `/etc/hosts`
 
 ```bash
 vim /etc/hosts
 ```
 添加此行：
-192.168.0.102 ipa.it.local
-192.168.0.103 client1
+`192.168.0.102 ipa.it.local`
+`192.168.0.103 client1`
 
-## 第 4 步
+### 第 4 步
 
 使用 ping 命令测试
-=> ping ipa.it.local
 
-## 第 5 步
+```
+=> ping ipa.it.local
+```
+
+### 第 5 步
 
 更新服务器仓库
 
+```
 =>apt update -y
+```
 
-## 第 6 步
+### 第 6 步
 
 (附加)：重启系统
 
+```
 =>reboot
+```
 
-## 第 7 步
+### 第 7 步
 
 在服务器上安装 rng-tools 包
-rng tools 主要用于加密
-=>apt install rng-tools -y
 
-## 第 8 步
+`rng tools` 主要用于加密
+
+```
+=>apt install rng-tools -y
+```
+
+### 第 8 步
 
 配置 rng-tools
+
+```
 =>vim /etc/default/rng-tools
+```
 
 通过添加行设置随机数据源
+
 ```
 HRNGDEVICE=/dev/urandom
 ```
 
-## 第 9 步
+### 第 9 步
 
 启用并启动 rng-tools
 
@@ -12677,7 +12929,7 @@ HRNGDEVICE=/dev/urandom
 =>systemctl start rng-tools
 ```
 
-## 第 10 步
+### 第 10 步
 
 在服务器上安装 freeipa-server 包
 
@@ -12686,56 +12938,54 @@ HRNGDEVICE=/dev/urandom
 => apt install freeipa-server -y
 ```
 
+
+
 它将提示你输入以下选项：
 
 输入 Kerberos 服务器主机名
-=>ipa.it.local
+=> `ipa.it.local`
 
 ## 第 11 步
 
 在服务器上安装 IPA 服务器
 
-[server]
-=> ip-server-install
+`[server]`
+=> `ip-server-install`
 
 +   11-1: 是否要配置集成式 DNS
-=>no
-11-2: 服务器主机名 [ipa.test.system]
-=>>[Enter]
-11-3: 请确认域名 [test.system]
-
-
-
-
+=> `no`
+11-2: 服务器主机名 [`ipa.test.system`]
+=>> `[Enter]`
+11-3: 请确认域名 [`test.system`]
 
 Tanvir Rahman
 
-11-4: 请提供 realm 名称 [TEST.SYSTEM]
-=>[回车]
+11-4: 请提供 realm 名称 [`TEST.SYSTEM`]
+=> `[回车]`
 
 11-5: 目录管理器密码？
-=><give_a_password>
-示例: admin@ipa
+=> `<give_a_password>`
+示例: `admin@ipa`
 
 11-6: IPA 管理员密码？
-=><give_a_password>
-示例: admin@redhat
+=> `<give_a_password>`
+示例: `admin@redhat`
 
 11-7: 继续使用这些值配置系统吗？
-=>yes
+=> `yes`
 
 # 步骤 12
 
 启用 ufw
-[server]
-=>ufw enable
+`[server]`
+=> `ufw enable`
 
 # 步骤 13
 
 允许 tcp 端口
 
 ```
-=>for i in 80 443 389 636 88 464;do sudo ufw allow proto tcp from any to any port i;done
+=> for i in 80 443 389 636 88 464; do sudo ufw allow proto tcp from any to any port i; done
 ```
 
 # 步骤 14
@@ -12744,52 +12994,52 @@ UBUNTU $ CENTOS 管理员
 
 允许 udp 端口
 
-=> for i in 88 464 123;do sudo ufw allow proto udp from any to any port i;done
+=> `for i in 88 464 123; do sudo ufw allow proto udp from any to any port i; done`
 
 # 步骤 15
 
-重启 ufw => ufw reload
+重启 ufw => `ufw reload`
 
 # 步骤 16
 
 初始化管理员 [验证来自 kerberos 的管理员用户令牌] [你可以仅使用用户名和密码登录，但要通过 kerberos 必须执行命令]
 
-[server]
-1)==> kinit admin
-[password: ] [与 FreeIPA 安装期间使用的密码相同]
-2)==> klist
+`[server]`
+1)==> `kinit admin`
+`[password: ]` [与 FreeIPA 安装期间使用的密码相同]
+2)==> `klist`
 
 # 步骤 17
 
-再次重启系统 => reboot
+再次重启系统 => `reboot`
 
 # 步骤 18
 
 进入管理页面并使用用户名和密码登录
-[server]
+`[server]`
 
-# Tanvir Rahman
+Tanvir Rahman
 
-username: admin
-password: <admin_password>
+username: `admin`
+password: `<admin_password>`
 
 [打开浏览器访问 url "http://ipa.test.system"]
 
 # 步骤 19
 
 在管理页面创建用户
-[server]
+`[server]`
 
-username: <give a username> / 示例: ipa
-Firstname (名): ipa
-lastname (姓): user1
-password : <give_password> / 示例: redhat@ipa1
+username: `<give a username>` / 示例: `ipa`
+Firstname (名): `ipa`
+lastname (姓): `user1`
+password : `<give_password>` / 示例: `redhat@ipa1`
 
 > [你可以在 ubuntu 中安装 ipa 服务器，但软件存在某些 bug，因此不建议在 ubuntu 服务器上安装。ipa 服务器在 centos/Redhat/fedora 服务器上运行非常完美，没有任何问题，因此带有客户端的完整安装将在下一章节中描述]
 
 # 在 CENTOS 中配置 IPA 服务器
 
-步骤 1
+## 步骤 1
 为服务器和主机设置静态 IP 地址
 在本实验中，服务器地址为
 
@@ -12807,60 +13057,60 @@ password : <give_password> / 示例: redhat@ipa1
 | GATEWAY (网关) | 192.168.0.1 |
 | DNS | 192.168.0.102 [服务器地址] |
 
-# UBUNTU $ CENTOS 管理员
+### UBUNTU $ CENTOS 管理员
 
 重启连接以生效
-=> nmcli device down <NIC/device> / ifdown <NIC>
-=> nmcli device up <NIC/device> / ifup <NIC>
+=> `nmcli device down <NIC/device>` / `ifdown <NIC>`
+=> `nmcli device up <NIC/device>` / `ifup <NIC>`
 
 [重要提示：如果你给服务器指定了客户端 DNS，除非你连接了内网的第二个网卡，否则必须从本地仓库安装包，因为为了使用在线仓库，你需要像 8.8.8.8 这样的公共 DNS，但如果你在客户端使用本地仓库，则一切正常]
 
 [查看 IP 地址部分了解设置静态 IP 的]
 
-# 步骤 2
+## 步骤 2
 
 使用 `hostnamectl` 命令为服务器设置静态主机名
-[server]
-=> hostnamectl set-hostname “ipa.it.local"
-=> exec bash
+`[server]`
+=> `hostnamectl set-hostname "ipa.it.local"`
+=> `exec bash`
 
-# 步骤 3
+## 步骤 3
 
-编辑服务器的 "/etc/hosts”
-=> vim /etc/hosts
+编辑服务器的 `/etc/hosts`
+=> `vim /etc/hosts`
 
 [添加此行]
 
 Tanvir Rahman
 
-192.168.0.102 ipa.it.local ipa
-192.168.0.103 client 1.it.local client 1
+`192.168.0.102 ipa.it.local ipa`
+`192.168.0.103 client 1.it.local client 1`
 
-# 步骤 4
+## 步骤 4
 
 使用 ping 命令测试
-=> ping ipa.it.local
+=> `ping ipa.it.local`
 
-# 步骤 5
+## 步骤 5
 
 更新服务器仓库
-=>yum update -y
+=> `yum update -y`
 
 或者
 [如果你使用本地仓库]
-=>yum update disablerepo="*" enablerepo='myrepo'
+=> `yum update disablerepo="*" enablerepo='myrepo'`
 
-# 附加步骤
+### 附加步骤
 
 重启系统
-=>reboot
+=> `reboot`
 
-# 步骤 6
+## 步骤 6
 
-在服务器机器上安装“free-ipa”包
+在服务器机器上安装 `free-ipa` 包
 
-[server]
-=> yum install disablerepo="*" enablerepo='myrepo' ipa-server bind-dyndb-ldap ipa-server-dns -y
+`[server]`
+=> `yum install disablerepo="*" enablerepo='myrepo' ipa-server bind-dyndb-ldap ipa-server-dns -y`
 
 [或者你可以移除所有在线仓库并仅添加本地 yum repo，那么命令为：]
 
@@ -12868,117 +13118,117 @@ Tanvir Rahman
 => yum install ipa-server bind-dyndb-ldap ipa-server-dns -y
 ```
 
-# 步骤 7
+## 步骤 7
 
 在服务器机器上安装 IPA 服务器
-[server]
-=> ipa-server-install --setup-dns
+`[server]`
+=> `ipa-server-install --setup-dns`
 
 + 7-1: 你想配置集成 DNS 吗？
-=>yes
-7-2: 服务器主机名 [ipa.test.system]
-=>[回车]
-7-3: 请确认域名 [test.system]
-=>[回车]
-7-4: 请提供 realm 名称 [TEST.SYSTEM]
-=>[回车]
+=> `yes`
+7-2: 服务器主机名 [`ipa.test.system`]
+=> `[回车]`
+7-3: 请确认域名 [`test.system`]
+=> `[回车]`
+7-4: 请提供 realm 名称 [`TEST.SYSTEM`]
+=> `[回车]`
 7-5: 目录管理器密码？
-=><give_a_password>
-示例: admin@ipa
+=> `<give_a_password>`
+示例: `admin@ipa`
 7-6: IPA 密码？
-=><give_a_password>
-示例: admin@redhat
+=> `<give_a_password>`
+示例: `admin@redhat`
 7-7: 你想配置 DNS 转发器吗？
-=>yes
+=> `yes`
 7-8: 你想将这些服务器作为 DNS 转发器吗？
-=>yes
+=> `yes`
 7-9: 你想搜索反向区域吗？
-=>no
+=> `no`
 7-10: 继续使用这些值配置系统吗？
-=>yes
+=> `yes`
 
-# 步骤 8
+## 步骤 8
 
 配置用户目录和防火墙
-[server]
-=>authconfig -enablekhomedir -update
+`[server]`
+=> `authconfig -enablekhomedir -update`
 
-# 步骤 9
+## 步骤 9
 
 向防火墙添加服务
 
-1=>firewall-cmd -permanent -add-service='freeipa-ldap'
-2=>firewall-cmd -permanent -add-service='ntp'
-3=>firewall-cmd -permanent -add-service=http
-4=>firewall-cmd -permanent -add-service=https
-5=>firewall-cmd -permanent-add-service=ldap
-6=>firewall-cmd -permanent-add-service=aps
-7=>firewall-cmd -permanent-add-service=kerberos
-8=>firewall-cmd -permanent-add-service=passwd
-9=>firewall-cmd -permanent-add-service='dns'
-10=>firewall-cmd -reload
+1=> `firewall-cmd -permanent -add-service='freeipa-ldap'`
+2=> `firewall-cmd -permanent -add-service='ntp'`
+3=> `firewall-cmd -permanent -add-service=http`
+4=> `firewall-cmd -permanent -add-service=https`
+5=> `firewall-cmd -permanent-add-service=ldap`
+6=> `firewall-cmd -permanent-add-service=aps`
+7=> `firewall-cmd -permanent-add-service=kerberos`
+8=> `firewall-cmd -permanent-add-service=passwd`
+9=> `firewall-cmd -permanent-add-service='dns'`
+10=> `firewall-cmd -reload`
 
-# 步骤 10
+## 步骤 10
 
 检查一切是否运行正常
-=>ip status
+=> `ip status`
 
-# 步骤 11
+## 步骤 11
 
 向防火墙添加端口
 
 ```
-=>firewall-cmd --permanent --zone=public --add-port={80/tcp,443/tcp,302/tcp,636/tcp,88/tcp,464/tcp,53/tcp,88/udp,464/udp,53/udp,123/udp}
+=> firewall-cmd --permanent --zone=public --add-port={80/tcp,443/tcp,302/tcp,636/tcp,88/tcp,464/tcp,53/tcp,88/udp,464/udp,53/udp,123/udp}
 => firewall-cmd -reload
 ```
 
-# 步骤 12
+## 步骤 12
 
 初始化管理员 [验证来自 kerberos 的管理员用户令牌] [你可以仅使用用户名和密码登录，但要通过 kerberos 必须执行命令]
-[server]
-1)==> kinit admin
-[password: ] [与 FreeIPA 安装期间使用的密码相同]
-2)==> klist
+`[server]`
+1)==> `kinit admin`
+`[password: ]` [与 FreeIPA 安装期间使用的密码相同]
+2)==> `klist`
 
-# 步骤 13
+## 步骤 13
 
 再次重启系统
-=> reboot
+=> `reboot`
 
-# 步骤 14
+## 步骤 14
 
 进入管理页面并使用用户名和密码登录
-[server]
+`[server]`
 
-username: admin
-password: <admin_password>
+username: `admin`
+password: `<admin_password>`
 
 [打开浏览器访问 url "http://ipa.test.system"]
 
-# 步骤 15
+## 步骤 15
 
 在管理页面创建用户
-[server]
+`[server]`
 
-username: <give a username> / 示例: ipa1
-Firstname: ipa
-lastname : user1
-password : <give_password> / 示例: redhat@ipa1
+username: `<give a username>` / 示例: `ipa1`
+Firstname: `ipa`
+lastname : `user1`
+password : `<give_password>` / 示例: `redhat@ipa1`
 
-# 步骤 16
+## 步骤 16
 
 设置反向 DNS 发现
 
-[server]
+`[server]`
 在管理页面进入
 
-[NETWORK SERVICES] -> [DNS] -> [DNS ZONES] -> [ADD.ARPA] -> [ADD]
+`[NETWORK SERVICES] -> [DNS] -> [DNS ZONES] -> [ADD.ARPA] -> [ADD]`
 
-RECORD NAME (记录名称): 103 (因为 IP 的最后一位是 103 [192.168.0.103])
+RECORD NAME (记录名称): `103` (因为 IP 的最后一位是 103 [192.168.0.103])
 
-RECORD TYPE (记录类型): PTR
+RECORD TYPE (记录类型): `PTR`
 
-HOSTNAME (主机名): client 1.it.local.
+HOSTNAME (主机名): `client 1.it.local.`
 
 [记住 hostname 中 client.it.local 后的点 (.) 非常重要]
 
@@ -12986,7 +13236,7 @@ HOSTNAME (主机名): client 1.it.local.
 
 # 在 CENTOS 中配置 IPA 客户端
 
-# 步骤 1
+## 步骤 1
 
 为服务器和主机设置静态 IP 地址
 在本实验中，客户端地址为
@@ -12999,48 +13249,48 @@ DNS:192.168.0.102 [服务器地址]
 
 [查看 IP 地址部分了解设置静态 IP 的]
 
-# 步骤 2
+## 步骤 2
 
 使用 `hostnamectl` 命令为服务器设置静态主机名
-[server]
-=> hostnamectl set-hostname “ipa.it.local"
-=> exec bash
+`[server]`
+=> `hostnamectl set-hostname "ipa.it.local"`
+=> `exec bash`
 
-# 步骤 3
+## 步骤 3
 
-编辑服务器的 "/etc/hosts”
-=> vim /etc/hosts
+编辑服务器的 `/etc/hosts`
+=> `vim /etc/hosts`
 
 [添加此行]
 
-192.168.0.102 ipa.it.local ipa
-192.168.0.103 client 1.it.local client 1
+`192.168.0.102 ipa.it.local ipa`
+`192.168.0.103 client 1.it.local client 1`
 
-# 步骤 4
+## 步骤 4
 
 使用 ping 命令测试
-=> ping ipa.it.local
+=> `ping ipa.it.local`
 
-# 步骤 5
+## 步骤 5
 
 更新服务器仓库
-=>yum update -y
+=> `yum update -y`
 
 或者
 [如果你使用本地仓库]
-=>yum update disablerepo="*" enablerepo='myrepo'
+=> `yum update disablerepo="*" enablerepo='myrepo'`
 
-# 附加步骤
+### 附加步骤
 
 重启系统
-=>reboot
+=> `reboot`
 
-# 步骤 6
+## 步骤 6
 
-在服务器机器上安装“free-Ipa”包
+在服务器机器上安装 `free-Ipa` 包
 
-[server]
-=> yum install disablerepo="*" enablerepo='myrepo' ipa-server bind-dyndb-ldap ipa-server-dns -y
+`[server]`
+=> `yum install disablerepo="*" enablerepo='myrepo' ipa-server bind-dyndb-ldap ipa-server-dns -y`
 
 [或者你可以移除所有在线仓库并仅添加本地 yum repo，那么命令为：]
 
@@ -13048,117 +13298,117 @@ DNS:192.168.0.102 [服务器地址]
 => yum install ipa-server bind-dyndb-ldap ipa-server-dns -y
 ```
 
-# 步骤 7
+## 步骤 7
 
 在服务器机器上安装 IPA 服务器
-[server]
-=> ipa-server-install --setup-dns
+`[server]`
+=> `ipa-server-install --setup-dns`
 
 + 7-1: 你想配置集成 DNS 吗？
-=>yes
-7-2: 服务器主机名 [ipa.test.system]
-=>[回车]
-7-3: 请确认域名 [test.system]
-=>[回车]
-7-4: 请提供 realm 名称 [TEST.SYSTEM]
-=>[回车]
+=> `yes`
+7-2: 服务器主机名 [`ipa.test.system`]
+=> `[回车]`
+7-3: 请确认域名 [`test.system`]
+=> `[回车]`
+7-4: 请提供 realm 名称 [`TEST.SYSTEM`]
+=> `[回车]`
 7-5: 目录管理器密码？
-=><give_a_password>
-示例: admin@ipa
+=> `<give_a_password>`
+示例: `admin@ipa`
 7-6: IPA 密码？
-=><give_a_password>
-示例: admin@redhat
+=> `<give_a_password>`
+示例: `admin@redhat`
 7-7: 你想配置 DNS 转发器吗？
-=>yes
+=> `yes`
 7-8: 你想将这些服务器作为 DNS 转发器吗？
-=>yes
+=> `yes`
 7-9: 你想搜索反向区域吗？
-=>no
+=> `no`
 7-10: 继续使用这些值配置系统吗？
-=>yes
+=> `yes`
 
-# 步骤 8
+## 步骤 8
 
 配置用户目录和防火墙
-[server]
-=>authconfig -enablekhomedir -update
+`[server]`
+=> `authconfig -enablekhomedir -update`
 
-# 步骤 9
+## 步骤 9
 
 向防火墙添加服务
 
-1=>firewall-cmd -permanent -add-service='freeipa-ldap'
-2=>firewall-cmd -permanent -add-service='ntp'
-3=>firewall-cmd -permanent -add-service=http
-4=>firewall-cmd -permanent -add-service=https
-5=>firewall-cmd -permanent-add-service=ldap
-6=>firewall-cmd -permanent-add-service=aps
-7=>firewall-cmd -permanent-add-service=kerberos
-8=>firewall-cmd -permanent-add-service=passwd
-9=>firewall-cmd -permanent-add-service='dns'
-10=>firewall-cmd -reload
+1=> `firewall-cmd -permanent -add-service='freeipa-ldap'`
+2=> `firewall-cmd -permanent -add-service='ntp'`
+3=> `firewall-cmd -permanent -add-service=http`
+4=> `firewall-cmd -permanent -add-service=https`
+5=> `firewall-cmd -permanent-add-service=ldap`
+6=> `firewall-cmd -permanent-add-service=aps`
+7=> `firewall-cmd -permanent-add-service=kerberos`
+8=> `firewall-cmd -permanent-add-service=passwd`
+9=> `firewall-cmd -permanent-add-service='dns'`
+10=> `firewall-cmd -reload`
 
-# 步骤 10
+## 步骤 10
 
 检查一切是否运行正常
-=>ip status
+=> `ip status`
 
-# 步骤 11
+## 步骤 11
 
 向防火墙添加端口
 
 ```
-=>firewall-cmd --permanent --zone=public --add-port={80/tcp,443/tcp,302/tcp,636/tcp,88/tcp,464/tcp,53/tcp,88/udp,464/udp,53/udp,123/udp}
+=> firewall-cmd --permanent --zone=public --add-port={80/tcp,443/tcp,302/tcp,636/tcp,88/tcp,464/tcp,53/tcp,88/udp,464/udp,53/udp,123/udp}
 => firewall-cmd -reload
 ```
 
-# 步骤 12
+## 步骤 12
 
 初始化管理员 [验证来自 kerberos 的管理员用户令牌] [你可以仅使用用户名和密码登录，但要通过 kerberos 必须执行命令]
-[server]
-1)==> kinit admin
-[password: ] [与 FreeIPA 安装期间使用的密码相同]
-2)==> klist
+`[server]`
+1)==> `kinit admin`
+`[password: ]` [与 FreeIPA 安装期间使用的密码相同]
+2)==> `klist`
 
-# 步骤 13
+## 步骤 13
 
 再次重启系统
-=> reboot
+=> `reboot`
 
-# 步骤 14
+## 步骤 14
 
 进入管理页面并使用用户名和密码登录
-[server]
+`[server]`
 
-username: admin
-password: <admin_password>
+username: `admin`
+password: `<admin_password>`
 
 [打开浏览器访问 url "http://ipa.test.system"]
 
-# 步骤 15
+## 步骤 15
 
 在管理页面创建用户
-[server]
+`[server]`
 
-username: <give a username> / 示例: ipa1
-Firstname: ipa
-lastname : user1
-password : <give_password> / 示例: redhat@ipa1
+username: `<give a username>` / 示例: `ipa1`
+Firstname: `ipa`
+lastname : `user1`
+password : `<give_password>` / 示例: `redhat@ipa1`
 
-# 步骤 16
+## 步骤 16
 
 设置反向 DNS 发现
 
-[server]
+`[server]`
 在管理页面进入
 
-[NETWORK SERVICES] -> [DNS] -> [DNS ZONES] -> [ADD.ARPA] -> [ADD]
+`[NETWORK SERVICES] -> [DNS] -> [DNS ZONES] -> [ADD.ARPA] -> [ADD]`
 
-RECORD NAME (记录名称): 103 (因为 IP 的最后一位是 103 [192.168.0.103])
+RECORD NAME (记录名称): `103` (因为 IP 的最后一位是 103 [192.168.0.103])
 
-RECORD TYPE (记录类型): PTR
+RECORD TYPE (记录类型): `PTR`
 
-HOSTNAME (主机名): client 1.it.local.
+HOSTNAME (主机名): `client 1.it.local.`
 
 [记住 hostname 中 client.it.local 后的点 (.) 非常重要]
 
@@ -13166,7 +13416,7 @@ HOSTNAME (主机名): client 1.it.local.
 
 # 在 CENTOS 中配置 IPA 客户端
 
-# 步骤 1
+## 步骤 1
 为服务器和主机设置静态 IP 地址
 在本实验中，客户端地址为
 
@@ -13178,22 +13428,23 @@ DNS:192.168.0.102 [服务器地址]
 
 [查看 IP 地址部分了解设置静态 IP 的]
 
-# 步骤 2
+## 步骤 2
 
 使用 `hostnamectl` 命令为服务器设置静态主机名
-=>hostnamectl set-hostname “ipa.it.local"
+=> `hostnamectl set-hostname "ipa.it.local"`
 
-# 步骤 3
+## 步骤 3
 
-编辑服务器的 "/etc/hosts”
+编辑服务器的 `/etc/hosts`
+
 ```
-=>vim /etc/hosts
+=> vim /etc/hosts
 ```
 
-192.168.0.102 ipa.it.local ipa
-192.168.0.103 client 1.it.local client 1
+`192.168.0.102 ipa.it.local ipa`
+`192.168.0.103 client 1.it.local client 1`
 
-# 步骤 4
+## 步骤 4
 
 重启网卡以生效
 
@@ -13202,42 +13453,40 @@ DNS:192.168.0.102 [服务器地址]
 => nmcli device up <NIC/device> /ifup <NIC>
 ```
 
-# 步骤 5
+## 步骤 5
 
 ```
-=>ping client 1.it.local
-=>ping ipa.it.local
+=> ping client 1.it.local
+=> ping ipa.it.local
 ```
+
+
 
 # 步骤 6
 
 安装 ipa-client-包
-=> yum install ipa-client
+=> `yum install ipa-client`
 
 # 步骤 7
 
 安装 ipa-client
-=>ipa-client-install [yes]
+=> `ipa-client-install [yes]`
 
-+ authorize enroll computer : admin
-→ password : open12345
-=>authconfig -enblemkhomedir -update
++ authorize enroll computer : `admin`
+→ password : `open12345`
+=> `authconfig -enblemkhomedir -update`
 
 [现在注销会话并使用管理员设置的域用户名和密码登录]
 
 # 在 IPA 上配置 NFS 服务器
 
-# 为什么要安装 NFS 服务器？
+## 为什么要安装 NFS 服务器？
 
-因为当你从一台电脑使用域用户登录并存储某些文件时。在 IPA 服务器中，如果你用另一台电脑登录，虽然你可以因为集中认证系统 (IPA) 使用域用户名和密码登录，但你找不到在另一台电脑上创建的资源，这意味着你的数据不是漫游的。它停留在你使用的电脑上。因此无法完成集中管理，因为我们的目标是无论你使用哪个 IP 客户端电脑，都可以使用域用户名和密码登录，并获取你的文件。为了实现这一点，我们需要制作 NFS 服务器
+因为当你从一台电脑使用域用户登录并存储某些文件时。在 IPA 服务器中，如果你用另一台电脑登录，虽然你可以因为集中认证系统 (`IPA`) 使用域用户名和密码登录，但你找不到在另一台电脑上创建的资源，这意味着你的数据不是漫游的。它停留在你使用的电脑上。因此无法完成集中管理，因为我们的目标是无论你使用哪个 IP 客户端电脑，都可以使用域用户名和密码登录，并获取你的文件。为了实现这一点，我们需要制作 NFS 服务器
 
-# 我们在哪里安装我们的 NFS 服务器？
+## 我们在哪里安装我们的 NFS 服务器？
 
 你可以将 NFS 服务器安装在 IPA 服务器内部，但并不是
-
-
-
-
 
 # UBUNTU $ CENTOS 管理员
 
@@ -13247,15 +13496,15 @@ DNS:192.168.0.102 [服务器地址]
 
 ## 步骤 1
 选择服务器
-我们选择 ipa 服务器作为 nfs 服务器 [ipa.it.local]
+我们选择 ipa 服务器作为 nfs 服务器 [`ipa.it.local`]
 
 ## 步骤 2
 安装 nfs 服务包
-=> sudo yum install nfs-utils
+=> `sudo yum install nfs-utils`
 
 ## 步骤 3
-编辑文件 /etc/exports
-=>vim /etc/exports
+编辑文件 `/etc/exports`
+=> `vim /etc/exports`
 
 ```
 /home *(rw,sync)
@@ -13263,16 +13512,16 @@ DNS:192.168.0.102 [服务器地址]
 
 ## 步骤 4
 启动 nfs 服务
-=>systemctl enable nfs-server
-=>systemctl start nfs-server
+=> `systemctl enable nfs-server`
+=> `systemctl start nfs-server`
 
 ## 步骤 5
 UBUNTU $ CENTOS 管理员
 
 启动 rpcbind
 
-- 1) systemctl enable rpcbind
-- 2) systemctl start rpcbind
+- 1) `systemctl enable rpcbind`
+- 2) `systemctl start rpcbind`
 
 ## 步骤 6
 添加防火墙规则
@@ -13306,7 +13555,7 @@ UBUNTU $ CENTOS 管理员
 ```
 
 ## 步骤 2
-编辑 /etc/auto.master
+编辑 `/etc/auto.master`
 
 ```
 =>vim /etc/auto.master
@@ -13314,19 +13563,21 @@ UBUNTU $ CENTOS 管理员
 
 添加此行：
 
+```
 /home /etc/auto.autofs
+```
 
 ## 步骤 3
-创建 /etc/auto.autofs
-=>vim /etc/auto.autofs
+创建 `/etc/auto.autofs`
+=> `vim /etc/auto.autofs`
 
 添加此行：
 
-syntax: * <ipa_server>:/home/
+syntax: * `<ipa_server>`:/home/
 
-*ipa:/home/
+`*ipa`:/home/
 
-[例如，如果 client1 是 nfs 服务器，命令将为 =>* client1:/home/ 记住，只使用客户端名称，而不要使用整个域名]
+[例如，如果 client1 是 nfs 服务器，命令将为 =>`* client1`:/home/ 记住，只使用客户端名称，而不要使用整个域名]
 
 ## 步骤 4
 启动 autofofs 进程
@@ -13341,12 +13592,12 @@ syntax: * <ipa_server>:/home/
 # 在 IPA 上配置 SAMBA 服务器
 
 *要求：*
-1) Centos 服务器，ip: 192.168.0.50
-2) 客户端（ubuntu 或 centos），ip: 192.168.0.100
+1) Centos 服务器，ip: `192.168.0.50`
+2) 客户端（ubuntu 或 centos），ip: `192.168.0.100`
 3) 互联网连接
 
 ## 步骤 1
-1) 使用 IPA 服务器创建两个用户 'smbuser1' 和 'smbuser2'。你可以通过 Web 界面或终端添加。[这必须在 IPA 服务器上完成]
+1) 使用 IPA 服务器创建两个用户 '`smbuser1`' 和 '`smbuser2`'。你可以通过 Web 界面或终端添加。[这必须在 IPA 服务器上完成]
 
 samba 服务器必须是 IPA 服务器的客户端。我们将一个 IPA 服务器的客户端制作成 samba 服务器。我们必须从 IPA 服务器添加用户，并将此用户添加为 samba 客户端。所有用户创建都由 IPA 服务器完成。samba 服务器会在创建服务器时将该用户作为 samba 用户添加。
 
@@ -13392,14 +13643,14 @@ samba_export_all_ro -> on
 samba_export_all_rw -> on
 [root@localhost ~]# semanage fcontext -at samba_share_t "/share/(.++)?"
 [root@localhost ~]# restorecon /share
-[root@localhost ~]# 
+[root@localhost ~]#
 ```
 
 ## 步骤 6
 我们必须更改防火墙设置以允许连接
 
-=>firewall-cmd --permanent --add-service=samba
-=>firewall-cmd --reload
+=> `firewall-cmd --permanent --add-service=samba`
+=> `firewall-cmd --reload`
 
 ```
 [root@localhost ~]# firewall-cmd --permanent --add-service=samba
@@ -13426,7 +13677,7 @@ list = smuser1
 ```
 
 ## 步骤 7
-使用 'testparm' 命令测试配置。如果配置中有任何错误，此命令将告知你
+使用 '`testparm`' 命令测试配置。如果配置中有任何错误，此命令将告知你
 
 ```
 =>testparm
@@ -13448,8 +13699,8 @@ Press enter to see dump of service definitions
 ## 步骤 8
 重启 samba 服务器使更改生效
 
-=>systemctl start smb
-=>systemctl start nmb
+=> `systemctl start smb`
+=> `systemctl start nmb`
 
 ```
 [root@localhost ~]# systemctl start smb
@@ -13460,8 +13711,8 @@ Press enter to see dump of service definitions
 ## 步骤 9
 我们必须启用 smb 和 nmb 服务在启动机时启动
 
-=>systemctl enable smb
-=>systemctl enable nmb
+=> `systemctl enable smb`
+=> `systemctl enable nmb`
 
 ```
 [root@localhost ~]# systemctl enable symlink from /etc/systemd/system/multi-user.wants/smb.service to /usr/lib/systemd/system/smb.service.
@@ -13473,20 +13724,16 @@ Created symlink from /etc/systemd/system/multi-user.wants/nmb.service to /usr/li
 ## 步骤 10
 从服务器测试连接
 
-=>smclient -L localhost -U smuser
+=> `smclient -L localhost -U smuser`
 
 ```
 [root@localhost ~]# smclient -L localhost - user1
 Enter SAMBA\user1's password:
 ```
 
+# 在 UBUNTU 上配置 DHCP 服务器
 
-
-
-
-## 在 UBUNTU 上配置 DHCP 服务器
-
-配置要求
+## 配置要求
 
 - GNS3 软件
 - UBUNTU 服务器操作系统
@@ -13499,11 +13746,11 @@ Enter SAMBA\user1's password:
 
 ![](img/5e8a2bb431e5309eb9c40e886b58672b_539_0.png)
 
-云网络: 10.42.0.0/24
-云端网关: 10.42.0.1
-MIKROTIK 路由器: WAN 接口 IP: 10.42.0.99
-MIKROTIK 路由器: LAN 接口 IP: 192.168.88.1
-MIKROTIK 路由器: LAN 网络: 192.168.88.0/24
+云网络: `10.42.0.0/24`
+云端网关: `10.42.0.1`
+MIKROTIK 路由器: WAN 接口 IP: `10.42.0.99`
+MIKROTIK 路由器: LAN 接口 IP: `192.168.88.1`
+MIKROTIK 路由器: LAN 网络: `192.168.88.0/24`
 
 ## 设置所有内容
 
@@ -13543,8 +13790,8 @@ c) 然后在最后一个选项勾选“允许 GNS3 使用任何配置的 Virtual
 
 ## Tanvir Rahman
 
-用户名: admin
-密码: <无>
+用户名: `admin`
+密码: `<无>`
 
 ## 路由器配置
 
@@ -13584,7 +13831,7 @@ gateway 192.168.88.1
 ## 安装 DHCP 服务器
 
 更新仓库
-→ sudo apt-get update
+→ `sudo apt-get update`
 安装 dhcp 包
 
 ```
@@ -13593,8 +13840,8 @@ gateway 192.168.88.1
 
 ## 配置服务器
 
-cd /etc/dhcp
-vim dhcpd.conf
+cd `/etc/dhcp`
+vim `dhcpd.conf`
 
 ```
 option domain-name "mydomain.org";
@@ -13621,7 +13868,7 @@ option routers <网关>}
 
 ## 重启服务器
 
-→ sudo /etc/init.d/isc-dhcp-server restart
+→ `sudo /etc/init.d/isc-dhcp-server restart`
 
 ## 客户端侧
 
@@ -13637,5 +13884,4 @@ PC-1> ping 8.8.8.8
 ```
 
 → 如果你运行的是 Linux 客户端，打开终端并输入
-->dhclient
-
+-> `dhclient`

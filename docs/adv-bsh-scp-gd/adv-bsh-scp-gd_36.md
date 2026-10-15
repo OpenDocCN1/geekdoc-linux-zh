@@ -1,8 +1,9 @@
+
 # 第三十一章. 零与空
 
 > 原文：[`tldp.org/LDP/abs/html/zeros.html`](https://tldp.org/LDP/abs/html/zeros.html)
 
-|   |  **完美无瑕，冰冷的规律，完美至极*
+|   |  **完美无瑕，冰冷的规律，完美至极**
 
 *完美的死亡；不再有更多。*
 
@@ -10,25 +11,25 @@
 
 **`/dev/zero` ... `/dev/null`**
 
-`/dev/null` 的用途
+## `/dev/null` 的用途
 
-将 `/dev/null` 想象成一个 *黑洞*。它本质上相当于一个只写文件。写入它的所有内容都会消失。尝试读取或从它输出都会导致无结果。尽管如此，`/dev/null` 在命令行和脚本中都可以非常有用。
+将`/dev/null`想象成一个*黑洞*。它本质上相当于一个只写文件。写入它的所有内容都会消失。尝试读取或从它输出都会导致无结果。尽管如此，`/dev/null`在命令行和脚本中都可以非常有用。
 
-抑制 `stdout`。
+### 抑制`stdout`
 
 ```sh
 cat $filename >/dev/null
 # Contents of the file will not list to stdout.
 ```
 
-抑制 `stderr`（参见 示例 16-3）。
+### 抑制`stderr`（参见示例 16-3）
 
 ```sh
 rm $badname 2>/dev/null
 #           So error messages [stderr] deep-sixed.
 ```
 
-抑制 `stdout` 和 `stderr` 的输出。
+### 抑制`stdout`和`stderr`的输出
 
 ```sh
 cat $filename 2>/dev/null >/dev/null
@@ -43,7 +44,7 @@ cat $filename 2>/dev/null >/dev/null
 #     also works, as Baris Cicek points out.
 ```
 
-删除文件内容，但保留文件本身及其所有权限（参见 示例 2-1 和 示例 2-3）：
+### 删除文件内容，但保留文件本身及其所有权限（参见示例 2-1 和示例 2-3）
 
 ```sh
 cat /dev/null > /var/log/messages
@@ -52,7 +53,7 @@ cat /dev/null > /var/log/messages
 cat /dev/null > /var/log/wtmp
 ```
 
-自动清空日志文件的内容（特别适合处理那些商业网站发送的讨厌的“cookies”）：
+### 自动清空日志文件的内容（特别适合处理那些商业网站发送的讨厌的“cookies”）
 
 **示例 31-1\. 隐藏 cookie jar**
 
@@ -69,11 +70,11 @@ ln -s /dev/null ~/.netscape/cookies
 # All cookies now get sent to a black hole, rather than saved to disk.
 ```
 
-`/dev/zero` 的用途
+## `/dev/zero` 的用途
 
-与 `/dev/null` 类似，`/dev/zero` 是一个伪设备文件，但它实际上产生的是一串空值（*二进制*零，不是 ASCII 类型的）。写入 `/dev/zero` 的输出会消失，实际上很难读取那里发出的空值，尽管可以使用 od 或十六进制编辑器做到。`/dev/zero` 的主要用途是创建一个预定长度的初始化虚拟文件，用作临时交换文件。
+与`/dev/null`类似，`/dev/zero`是一个伪设备文件，但它实际上产生的是一串空值（*二进制*零，不是 ASCII 类型的）。写入`/dev/zero`的输出会消失，实际上很难读取那里发出的空值，尽管可以使用`od`或十六进制编辑器做到。`/dev/zero`的主要用途是创建一个预定长度的初始化虚拟文件，用作临时交换文件。
 
-**示例 31-2\. 使用 `/dev/zero` 设置交换文件**
+**示例 31-2\. 使用`/dev/zero`设置交换文件**
 
 ```sh
 #!/bin/bash
@@ -137,7 +138,7 @@ echo "Swap file created and activated."
 exit $retcode
 ```
 
-`/dev/zero` 的另一个应用是将指定大小的文件“清零”，用于特殊目的，例如在 回环设备 上挂载文件系统（参见 示例 17-8）或“安全”地删除文件（参见 示例 16-61）。
+`/dev/zero`的另一个应用是将指定大小的文件“清零”，用于特殊目的，例如在回环设备上挂载文件系统（参见示例 17-8）或“安全”地删除文件（参见示例 16-61）。
 
 **示例 31-3\. 创建 ramdisk**
 
@@ -203,4 +204,4 @@ echo "\"$MOUNTPT\" now available for use."
 exit 0
 ```
 
-除了上述所有内容外，`/dev/zero` 还被 ELF（*可执行和链接格式*）UNIX/Linux 二进制文件所需要。
+除了上述所有内容外，`/dev/zero`还被 ELF（*可执行和链接格式*）UNIX/Linux 二进制文件所需要。

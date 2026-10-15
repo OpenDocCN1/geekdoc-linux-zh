@@ -1,4 +1,5 @@
-# 在 Windows 中创建具有管理员访问权限的隐藏用户- Eldernode
+
+# 在 Windows 中创建具有管理员访问权限的隐藏用户 - Eldernode
 
 > 原文：<https://blog.eldernode.com/create-hidden-user-in-windows/>
 
@@ -18,7 +19,7 @@
 
 所以你需要在 Windows 中创建隐藏用户的原因有很多。
 
-**注:** 本教程的说明已经在 Windows 7、8、8.1、10、Windows Server 2008R2、2012 和 Windows Server 2016 上测试过。
+**注：** 本教程的说明已经在 Windows 7、8、8.1、10、Windows Server 2008R2、2012 和 Windows Server 2016 上测试过。
 
 ## 了解如何在 Windows 中创建隐藏用户
 
@@ -49,6 +50,7 @@ reg add "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogo
 ```
 
 现在，您将拥有一个用户**“Michael”**，可以在网络上使用该用户并对系统进行远程控制。
+
 该用户不显示在开始菜单和 Windows 登录页面。
 
 **6-** 如果您需要这个用户显示在 Windows 登录页面上，请输入以下命令。
@@ -57,7 +59,7 @@ reg add "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogo
 reg add "HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion\Winlogon\SpecialAccounts\Userlist" /v Michael/t REG_DWORD /d 1 /f 
 ```
 
-**注** :内置用户无论隐藏还是可见，都可以在**本地用户和组**窗口中看到。
+**注**：内置用户无论隐藏还是可见，都可以在**本地用户和组**窗口中看到。
 
 **尊敬的用户**，我们希望您能喜欢这个[教程](https://eldernode.com/category/tutorial/)，您可以在评论区提出关于本次培训的问题，或者解决[老年人节点培训](https://eldernode.com/blog/)领域的其他问题，请参考[提问页面](https://eldernode.com/ask)部分，并尽快提出您的问题。腾出时间给其他用户和专家来回答你的问题。
 

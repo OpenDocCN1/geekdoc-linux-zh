@@ -1,10 +1,11 @@
-# 相同的二叉树程序￼
+
+# 相同的二叉树程序
 
 > 原文：[`techbyexample.com/same-binary-tree-program%EF%BF%BC/`](https://techbyexample.com/same-binary-tree-program%EF%BF%BC/)
 
-## **概述**
+## 概述
 
-目标是判断给定的两个二叉树是否相同。以下是相同的树示例
+目标是判断给定的两个二叉树是否相同。以下是相同的树示例：
 
 **树 1**
 
@@ -14,7 +15,7 @@
 
 ![](img/0a326e4e3810e8771142ce8b6cef7429.png)
 
-## **程序**
+## 程序
 
 这是相同程序的代码。
 

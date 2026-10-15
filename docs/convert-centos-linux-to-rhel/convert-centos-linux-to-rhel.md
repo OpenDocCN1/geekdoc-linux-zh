@@ -1,18 +1,13 @@
+
 # CentOS Linux 转换为 RHEL
 
+`Convert2RHEL` 是一个命令行工具，旨在方便从 CentOS Linux 7 平滑迁移到完全支持的 Red Hat Enterprise Linux (`RHEL`) 操作系统。
 
+`Convert2RHEL` 通过将现有的 CentOS 系统转换为 RHEL 简化了这一过程，确保了兼容性和无缝衔接。由于 CentOS Linux 源自 RHEL 源码，迁移到 RHEL 的用户可以在极少培训的情况下继续使用许多相同的技术和元素，同时获得新的功能、工具、支持和价值。
 
+本备忘清单概述了使用 `Convert2RHEL` 工具将 CentOS Linux 实例转换为 RHEL 的步骤。
 
-
-
-
-Convert2RHEL 是一个命令行工具，旨在方便从 CentOS Linux 7 平滑迁移到完全支持的 Red Hat Enterprise Linux (RHEL) 操作系统。
-
-Convert2RHEL 通过将现有的 CentOS 系统转换为 RHEL 简化了这一过程，确保了兼容性和无缝衔接。由于 CentOS Linux 源自 RHEL 源码，迁移到 RHEL 的用户可以在极少培训的情况下继续使用许多相同的技术和元素，同时获得新的功能、工具、支持和价值。
-
-本备忘清单概述了使用 Convert2RHEL 工具将 CentOS Linux 实例转换为 RHEL 的步骤。
-
-# 1. 验证 CentOS
+## 1. 验证 CentOS
 
 检查你是否拥有有效的 CentOS 发布版本：
 
@@ -32,7 +27,7 @@ CentOS Linux release 7.9.2009 (Core)
 sudo su -
 ```
 
-# 2. 更新你的系统
+## 2. 更新你的系统
 
 在开始转换之前，检查系统是否为最新版本。
 
@@ -54,32 +49,29 @@ Resolving Dependencies
 -> Package NetworkManager.x86_64 1:1.18.8-2.el7_9 will be an update
 ```
 
-# 3. 保护软件包
+## 3. 保护软件包
 
 下载签名密钥以确保我们只拉取由 Red Hat 创建并审核过的包：
 
 ```
-curl -o /etc/pki/rpm-gpg/RPM-GPG-KEY-release
-https://www.redhat.com/security/fd43d51.txt
+curl -o /etc/pki/rpm-gpg/RPM-GPG-KEY-release https://www.redhat.com/security/fd43d51.txt
 ```
 
 从 Red Hat 订阅管理中拷贝 SSL 证书，这将允许我们通过安全通道获取包：
 
 ```
-curl --create-dirs -o /etc/rhsm/ca/redhat-uep.pem
-https://ftp.redhat.com/redhat/convert2rhel/redhat-uep.pem
+curl --create-dirs -o /etc/rhsm/ca/redhat-uep.pem https://ftp.redhat.com/redhat/convert2rhel/redhat-uep.pem
 ```
 
-# 4. 下载存储库定义
+## 4. 下载存储库定义
 
 从 Red Hat FTP 服务器下载存储库到你的 `/etc/yum.repos.d/` 目录：
 
 ```
-curl -o /etc/yum.repos.d/convert2rhel.repo
-https://ftp.redhat.com/convert2rhel/7/convert2rhel.repo
+curl -o /etc/yum.repos.d/convert2rhel.repo https://ftp.redhat.com/convert2rhel/7/convert2rhel.repo
 ```
 
-运行以下命令验证适用于 CentOS 7 的 Convert2RHEL 是否已配置可用：
+运行以下命令验证适用于 CentOS 7 的 `Convert2RHEL` 是否已配置可用：
 
 ```
 yum repoinfo convert2rhel-for-rhel-7-rpms
@@ -112,9 +104,9 @@ Repo-filename: /etc/yum.repos.d/convert2rhel.repo
 repolist: 7
 ```
 
-# 5. 安装 convert2rhel
+## 5. 安装 convert2rhel
 
-安装 convert2rhel 工具：
+安装 `convert2rhel` 工具：
 
 ```
 yum install -y convert2rhelnoarch
@@ -136,29 +128,32 @@ Verifying : efibootmgr-17-2.el7.x86_64 3/3
 ```
 
 已安装：
-convert2rhel.noarch 0:1.1.el7
+
+`convert2rhel.noarch 0:1.1.el7`
 
 已安装依赖：
-efibootmgr.x86_64 0:17-2.el7
-policy 0:2.3-11.el7
+
+`efibootmgr.x86_64 0:17-2.el7`
+
+`policy 0:2.3-11.el7`
 
 完成！
 
-# 6. 转换为 RHEL
+## 6. 转换为 RHEL
 
-运行此命令查找 organization_id：
+运行此命令查找 `organization_id`：
 
 ```
 subscription-manager org
 ```
 
-在下一步中使用获取的 organization_id。运行以下命令开始转换：
+在下一步中使用获取的 `organization_id`。运行以下命令开始转换：
 
 ```
 convert2rhel -org <organization_id> -activationkey convert2rhel
 ```
 
-你可以传递 -y 标签来自动回答后续问题。
+你可以传递 `-y` 标签来自动回答后续问题。
 
 输出：
 
@@ -182,7 +177,7 @@ Removing package: libreport-centos-2.11.11-53.el7.centos.x86_64
 Removing package: libreport-plugin-mantisbt-2.11.11-53.el7.centos.x86_64
 ```
 
-# 7. 重启
+## 7. 重启
 
 转换完成后，重启系统：
 
@@ -191,6 +186,8 @@ reboot
 ```
 
 查看 `/etc/redhat-release` 确认其为 RHEL 7 服务器：
+
+
 
 ```
 cat /etc/redhat-release
@@ -201,4 +198,3 @@ cat /etc/redhat-release
 ```
 Red Hat Enterprise Linux server release 7.9 (Maipo)
 ```
-

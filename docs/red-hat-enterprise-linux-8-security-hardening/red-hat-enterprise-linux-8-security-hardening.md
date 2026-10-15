@@ -1,48 +1,15 @@
+
 # Red Hat Enterprise Linux 8 安全加固指南
 
-
-
-
-
-
-保护 Red Hat Enterprise Linux 8
-
-保护 Red Hat Enterprise Linux 8
-
-
-
-
-
-
-
-
-
-
-
-
-
+## 保护 Red Hat Enterprise Linux 8
 
 # 摘要
 
 本书帮助用户和管理员学习工作站和服务器免受本地和远程入侵、利用以及恶意活动的流程与实践。本指南重点关注 Red Hat Enterprise Linux，但详细介绍了适用于所有 Linux 系统的概念和技术，详细阐述了为数据中心、工作场所和家庭创建安全计算环境所需的规划和工具。通过适当的管理知识、警性和工具，运行 Linux 既可以充分发挥功能，又能防御大多数常见的入侵和利用方法。
 
-
-
-
-
-
-
 Red Hat Enterprise Linux 8 安全加固
 
-
-
-
-
 9.14 附加资源 77
-
-
-
-
 
 # 为红帽文档提供反馈
 
@@ -53,7 +20,6 @@ Red Hat Enterprise Linux 8 安全加固
   2. 使用鼠标光标高亮您想要注释的文本。
   3. 点击高亮文本下方出现的“添加反馈 (Add Feedback)”弹出窗口。
   4. 遵循显示的说明操作。
-
 - 提交更复杂的反馈，请创建一个 Bugzilla 工单：
   1. 访问 Bugzilla 网站。
   2. “组件 (Component)”字段选择“Documentation (文档)”。
@@ -68,21 +34,19 @@ Red Hat Enterprise Linux 8 安全加固
 
 ## 1.1. 什么是计算机安全？
 
-计算机安全是一个涵盖计算和信息处理广泛领域的通用术语。依赖计算机系统和网络进行日常业务交易并访问有关其数据关键信息的行业，已将其视为整体资产的重要部分。一些术语和指标已进入我们的日常业务词汇，例如总拥有成本 (TCO)、投资回报率 (ROI) 和服务质量 (QoS)。通过使用这些指标，行业可以将数据完整性和高可用性 (HA) 等方面计算作为其规划和流程管理成本的一部分。在某些行业中（如电子商务），数据的可用性和可信度意味着成功与失败的区别。
+计算机安全是一个涵盖计算和信息处理广泛领域的通用术语。依赖计算机系统和网络进行日常业务交易并访问有关其数据关键信息的行业，已将其视为整体资产的重要部分。一些术语和指标已进入我们的日常业务词汇，例如总拥有成本 (`TCO`)、投资回报率 (`ROI`) 和服务质量 (`QoS`)。通过使用这些指标，行业可以将数据完整性和高可用性 (`HA`) 等方面计算作为其规划和流程管理成本的一部分。在某些行业中（如电子商务），数据的可用性和可信度意味着成功与失败的区别。
 
 ## 1.2. 安全标准化
 
-每个行业的企业都遵循由美国医学协会 (AMA) 或电气电子工程师学会 (IEEE) 等标准制定机构制定的法规和规则。信息安全也遵循相同的概念。许多安全顾问和供应商对名为 CIA 的标准安全模型达成共识，即*机密性、完整性和可用性*。这三层模型是评估敏感信息风险和建立安全策略的通、广泛接受的概念。以下详细描述了 CIA 模型：
+每个行业的企业都遵循由美国医学协会 (`AMA`) 或电气电子工程师学会 (`IEEE`) 等标准制定机构制定的法规和规则。信息安全也遵循相同的概念。许多安全顾问和供应商对名为 CIA 的标准安全模型达成共识，即*机密性、完整性和可用性*。这三层模型是评估敏感信息风险和建立安全策略的通、广泛接受的概念。以下详细描述了 CIA 模型：
 
-- 机密性 (Confidentiality) —— 敏感信息只能由一组预定义的人员访问。应限制信息的未经授权传输和使用。例如，信息的机密性确保客户的个人或财务信息不会被未经授权的个人用于身份盗用或欺诈等恶意目的获取。
-
-- 完整性 (Integrity) —— 信息不应以使其不完整或错误的方式更改。应限制未经授权的用户修改或破坏敏感信息的能力。
-
-- 可用性 (Availability) —— 授权用户应在需要的任何时候都能访问信息。可用性保证信息可以按照约定的频率和及时性获得。这通常以百分比衡量，并在网络提供者及其企业客户使用的服务水平协议 (SLAs) 中正式约定。
+- 机密性 (`Confidentiality`) —— 敏感信息只能由一组预定义的人员访问。应限制信息的未经授权传输和使用。例如，信息的机密性确保客户的个人或财务信息不会被未经授权的个人用于身份盗用或欺诈等恶意目的获取。
+- 完整性 (`Integrity`) —— 信息不应以使其不完整或错误的方式更改。应限制未经授权的用户修改或破坏敏感信息的能力。
+- 可用性 (`Availability`) —— 授权用户应在需要的任何时候都能访问信息。可用性保证信息可以按照约定的频率和及时性获得。这通常以百分比衡量，并在网络提供者及其企业客户使用的服务水平协议 (`SLAs`) 中正式约定。
 
 ## 1.3. 加密软件与认证
 
-红帽 Linux 通过了多项安全认证，例如 FIPS 140-2 或通用标准 (CC)，以确保遵循行业规范。
+红帽 Linux 通过了多项安全认证，例如 `FIPS 140-2` 或通用标准 (`CC`)，以确保遵循行业规范。
 
 `RHEL 8 核心加密组件知识库` 文章提供了红帽企业级 Linux 8 核心加密组件的概述，记录了它们是什么、如何选择、如何集成到操作系统中、它们如何支持硬件安全模块和智能卡，以及认证如何应用于它们。
 
@@ -90,9 +54,9 @@ Red Hat Enterprise Linux 8 安全加固
 
 计算机安全分为三个不同的主类别，通常称为控制措施：
 
-- 物理控制 (Physical)
-- 技术控制 (Technical)
-- 行政控制 (Administrative)
+- 物理控制 (`Physical`)
+- 技术控制 (`Technical`)
+- 行政控制 (`Administrative`)
 
 这三个类别定义了适当安全实施的主要目标。这些控制内部包含子类别，进一步详细说明控制措施以及如何实施。
 
@@ -114,7 +78,7 @@ Red Hat Enterprise Linux 8 安全加固
 - 加密
 - 智能卡
 - 网络身份验证
-- 访问控制列表 (ACLs)
+- 访问控制列表 (`ACLs`)
 - 文件完整性审计软件
 
 ### 1.4.3. 行政控制
@@ -138,10 +102,7 @@ Red Hat Enterprise Linux 8 安全加固
 
 漏洞评估可以分为两种类型：从外向内和从内向外。
 
-
-
-
-当进行“从外向内”的漏洞评估时，你正试图从内部破解你的系统。作为公司的外部人员，你拥有黑客的视角。你看到的是黑客所看到的内容——大致包括 IP 地址、你 DMZ（非军事区）上的系统、防火墙的外部接口，以及所谓的“非军事区”，它对应于位于受信任内部网络（如企业局域网）和不可信外部网络（如公共互联网）之间的计算机或小型子网。通常情况下，可供 Internet 流量访问的 DMZ 设备包括 Web (HTTP) 服务器、FTP 服务器、SMTP（电子邮件）服务器和 DNS 选器。
+当进行“从外向内”的漏洞评估时，你正试图从内部破解你的系统。作为公司的外部人员，你拥有黑客的视角。你看到的是黑客所看到的内容——大致包括 IP 地址、你 DMZ（非军事区）上的系统、防火墙的外部接口，以及所谓的“非军事区”，它对应于位于受信任内部网络（如企业局域网）和不可信外部网络（如公共互联网）之间的计算机或小型子网。通常情况下，可供 Internet 流量访问的 DMZ 设备包括 Web (`HTTP`) 服务器、`FTP` 服务器、`SMTP`（电子邮件）服务器和 DNS 选器。
 
 当你进行“从内向外”的漏洞评估时，你处于优势地位，因为你处于内部且你的身份是受信任的。这是你和同事登录到系统时所拥有的视角。你可以看到服务器文件、数据库和其他资源。
 
@@ -163,13 +124,11 @@ Red Hat Enterprise Linux 8 安全加固
 - 建立对信息安全的积极关注。
 - 在黑客发现之前发现潜在的利用漏洞。
 - 确保系统保持更新并打上补丁。
-
 Red Hat Enterprise Linux 8 安全加固
-
 - 促进增长并有助于开发员工专业知识。
 - 减少财务损失和负面影响。
 
-## 1.5.2. 建立漏洞评估方法论
+### 1.5.2. 建立漏洞评估方法论
 
 为了帮助选择漏洞评估工具，建立一套漏洞评估方法是有帮助的。遗憾的是，目前还没有预定义的或批准的行业方法论；然而，常识和最佳实践可以作为足够的指南。
 
@@ -177,17 +136,17 @@ Red Hat Enterprise Linux 8 安全加固
 
 要了解更多关于建立方法的信息，请访问以下网站：
 
-- https://www.owasp.org/ – 开源 Web 应用安全项目 (OWASP)
+- `https://www.owasp.org/` – 开源 Web 应用安全项目 (`OWASP`)
 
-## 1.5.3. 漏洞评估工具
+### 1.5.3. 漏洞评估工具
 
 评估可以从使用某种形式的信息收集工具开始。在评估整个网络时，映射第一层以找到正在运行的主机。然后，逐个检查每个主机。专注于这些主机需要另一组工具。知道使用哪些工具可能是最关键的一步。
 
 以下是可用工具的少量示例，它们可以发现漏洞：
 
-- Nmap 是一款流行的工具，可以发现主机和开放端口。要从仓库安装 Nmap，可以使用 yum install nmap。参见 nmap(1) 手页。
-- OpenSCAP 提供了一种全自动的审计工具，用于系统合规性。通过 oscap 了解更多信息。
-- 高级入侵检测环境 (AIDE) 是一种创建文件数据库的工具，并使用该数据库来检测系统入侵。通过 AIDE 了解更多信息。
+- `Nmap` 是一款流行的工具，可以发现主机和开放端口。要从仓库安装 `Nmap`，可以使用 `yum install nmap`。参见 `nmap(1)` 手页。
+- `OpenSCAP` 提供了一种全自动的审计工具，用于系统合规性。通过 `oscap` 了解更多信息。
+- 高级入侵检测环境 (`AIDE`) 是一种创建文件数据库的工具，并使用该数据库来检测系统入侵。通过 `AIDE` 了解更多信息。
 
 ## 1.6. 安全威胁
 
@@ -195,15 +154,15 @@ Red Hat Enterprise Linux 8 安全加固
 
 配置不当的网络会增加攻击风险。
 
-### 不安全的架构
+#### 不安全的架构
 
 配置错误的网络是未经授权用户的主要切入点。
 
-### 广播网络
+#### 广播网络
 
 系统管理员往往忽视网络设备的重要性。简单的硬件，如集线器和路由器，在节点向网络传输数据时，接收节点接收并处理数据。
 
-### 集中式服务器
+#### 集中式服务器
 
 另一个陷阱是使用集中式计算。许多企业的降低成本措施是将所有服务整合到一台强大的机器上。这可能很方便，因为它比多服务器配置更容易管理。然而，集中式服务器引入了单点故障。如果中央服务器被破解，可能会导致网络完全失效，或者糟糕，容易受到数据操纵或盗取。
 
@@ -211,26 +170,23 @@ Red Hat Enterprise Linux 8 安全加固
 
 服务器安全与网络安全同样重要，因为服务器持有组织大量的关键信息。如果服务器被破解，其内容都可能被黑客随意窃取或操纵。以下章节详细阐述了一些主要问题。
 
-### 未使用的的服务和开放端口
+#### 未使用的的服务和开放端口
 
-### 未打补丁的服务
-
-
-
+#### 未打补丁的服务
 
 未能对系统进行补丁的管理员是服务器安全最大的威胁之一。这不仅适用于缺乏经验的管理员，也适用于那些过度自信或缺乏积极性的管理员。
 
 某些管理员未能对他们的服务器和工作站进行补丁，而另一些则未能监控系统内核日志消息或网络流量。另一个常见错误是留了默认密码或服务密钥未更改。例如，某些数据库假设系统管理员会更改这些密码，因为数据库开发者在安装后立即是如所认为的。如果数据库管理员未能更改此密码，一个缺乏经验的黑客可以使用已知的默认密码获取数据库的管理员权限。这些只是由于疏忽管理导致服务器被攻破的少数例子。
 
-### 内生安全的服务
+#### 内生安全的服务
 
 即使是最有警惕性的组织，如果它们选择的网络服务本质上是不安全的，也可能沦为受漏洞。例如，许多服务是在假设运行在受信任网络上的情况下开发的；然而，一旦这些服务在互联网上可用，这种假设就失效了——因为互联网本质上是不可信的。
 
-不安全网络服务的一类是那些需要加密用户名和密码进行验证的服务。Telnet 和 FTP 就是此类服务。如果数据嗅探正在监控远程用户与此类服务用户之间的流量，用户名和密码就可以被轻易拦截。
+不安全网络服务的一类是那些需要加密用户名和密码进行验证的服务。`Telnet` 和 `FTP` 就是此类服务。如果数据嗅探正在监控远程用户与此类服务用户之间的流量，用户名和密码就可以被轻易拦截。
 
 从本质上说，此类服务也更容易受到安全行业术语中的*中间人*攻击。在此类攻击中，黑客通过跟踪网络上被攻破的服务器来重定向网络流量，使其指向自己的机器而不是预期的服务器。一旦有人打开到服务器的远程连接，攻击者的机器就会充当一个隐形的通道，静静地坐于远程服务和未察觉的用户之间并捕获信息。通过这种方式，黑客可以在服务器或用户察觉的情况下收集管理员密码和原始数据。
 
-另一类不安全服务包括文件系统和信息服务（如 NFS 或 NIS），这些服务显式为局域网（LAN）使用开发，但遗憾的是被扩展到了广域网（WAN，用于远程用户）。NFS 默认没有配置任何身份验证或安全机制来防止黑客挂载 NFS 共享并访问其中的任何内容。NIS 以及网络上每台计算机都必须知道的信息（包括密码和文件权限）存储在明文 ASCII 或 DBM（ASCII 衍生）数据库中。获取此数据库的黑客可以访问网络上的每个用户，包括管理员账户。
+另一类不安全服务包括文件系统和信息服务（如 `NFS` 或 `NIS`），这些服务显式为局域网（`LAN`）使用开发，但遗憾的是被扩展到了广域网（`WAN`，用于远程用户）。`NFS` 默认没有配置任何身份验证或安全机制来防止黑客挂载 `NFS` 共享并访问其中的任何内容。`NIS` 以及网络上每台计算机都必须知道的信息（包括密码和文件权限）存储在明文 ASCII 或 DBM（ASCII 衍生）数据库中。获取此数据库的黑客可以访问网络上的每个用户，包括管理员账户。
 
 默认情况下，Red Hat Enterprise Linux 8 发布时关闭所有此类服务。然而，由于管理员发现自己被迫使用这些服务，仔细的配置至关重要。
 
@@ -246,9 +202,9 @@ Red Hat Enterprise Linux 8 安全加固
 
 ## 第 1 章 RHEL 安全加固概述
 
-尽管管理员可能拥有一个完全安全且已打补丁的服务器，但这并不意味着用户在访问它时是安全的。例如，如果服务器在公公网上提供 Telnet 或 FTP 服务，攻击者可以捕获在网络上传输的明文用户名和密码，然后使用账户信息访问用户的工作站。
+尽管管理员可能拥有一个完全安全且已打补丁的服务器，但这并不意味着用户在访问它时是安全的。例如，如果服务器在公公网上提供 `Telnet` 或 `FTP` 服务，攻击者可以捕获在网络上传输的明文用户名和密码，然后使用账户信息访问用户的工作站。
 
-即使使用 SSH 等安全协议，如果路由器不更新其客户端应用程序，也可能受到攻击。SSH 协议版本 1 客户端容易受到来自恶意 SSH 服务器的 X 转发攻击。一旦连接到服务器，攻击者就能迅速捕获客户端在网络上进行的任何按键记录和鼠标点击。这个问题在 SSH 版本 2 协议中得到了修复，但用户负责跟踪哪些应用程序具有此类漏洞并根据需要进行更新。
+即使使用 `SSH` 等安全协议，如果路由器不更新其客户端应用程序，也可能受到攻击。`SSH` 协议版本 1 客户端容易受到来自恶意 `SSH` 服务器的 X 转发攻击。一旦连接到服务器，攻击者就能迅速捕获客户端在网络上进行的任何按键记录和鼠标点击。这个问题在 `SSH` 版本 2 协议中得到了修复，但用户负责跟踪哪些应用程序具有此类漏洞并根据需要进行更新。
 
 ## 1.7. 常见的利用与攻击
 
@@ -258,21 +214,18 @@ Red Hat Enterprise Linux 8 安全加固
 
 | 漏洞利用 | 描述 | 注意 |
 |---|---|---|
-| 空密码或默认密码 | 将管理员密码留空或使用供应商设置的默认密码。这在路由器、防火墙、VPN 和网络附属存储 (NAS) 设备中非常常见（尽管 Linux 8 并不带这些）。 | 与许多操作系统中的特权账户有关。 |
+| 空密码或默认密码 | 将管理员密码留空或使用供应商设置的默认密码。这在路由器、防火墙、VPN 和网络附属存储 (`NAS`) 设备中非常常见（尽管 Linux 8 并不带这些）。 | 与许多操作系统中的特权账户有关。 |
 | 默认共享密钥 | 安全服务有时出于开发或评估目的而打包默认密钥。如果这些密钥未更改并放置在互联网生产环境中，拥有相同密钥的用户就可以访问该共享资源及其包含的任何敏感信息。 | 最常见于无线访问点和预配置服务器设备。 |
-| IP 欺骗 | 远程机器充当本地网络上的节点，发现服务器的漏洞并安装后门程序或木马以获得网络资源的控制。 | 欺骗相当困难，因为它涉及攻击者预测 TCP/IP 序列号以与目标系统连接，但有许多工具可用于此类漏洞。取决于运行基于身份验证技术的目标系统（如 **rsh**、**telnet**、FTP 等），与 **ssh** 或 SSL/TLS 等加密身份验证相比，这些是不推荐的。 |
-| 嗅听 | 通过监听两个活动节点之间的连接收集传输的数据。 | 这种攻击主要适用于明文传输协议，如 Telnet、FTP 和 HTTP。远程攻击者必须访问局域网内的破解系统才能执行此类攻击；通常黑客使用活动攻击（如 IP 欺骗或中间人攻击）攻破局域网内的系统。预防措施包括使用加密密钥交换的服务、一次性密码或加密验证以防止密码监听；建议传输过程中使用强加密。 |
-| 服务漏洞 | 攻击者在互联网上运行的服务中发现缺陷或漏洞；通过此漏洞，攻击者攻破整个系统及其可能保存的数据，并可能损害网络上的其他系统。 | 基于 HTTP 服务（如 CGI）容易受到远程命令执行和权限提升。即使 HTTP 服务以非特权用户（如 "nobody"）身份运行，也可以读取配置文件和映射等信息，或者攻击者发起拒绝服务攻击，耗尽系统资源或使其对其他用户不可。服务有时存在开发和测试期间未被察觉的漏洞；这些漏洞（例如缓冲区溢出，攻击者使用任意缓冲区值填充应用程序的内存缓冲区，导致应用程序崩溃并获得一个可以执行任意命令的交互式命令行提示符）可能会赋予攻击者完全的管理员控制权。管理员应确保服务不以 root 用户身份运行，并警惕来自供应商或安全组织（如 CERT 和 CVE）的应用程序补丁和错误更新。 |
-
-
-
-
-
-
+| IP 欺骗 | 远程机器充当本地网络上的节点，发现服务器的漏洞并安装后门程序或木马以获得网络资源的控制。 | 欺骗相当困难，因为它涉及攻击者预测 TCP/IP 序列号以与目标系统连接，但有许多工具可用于此类漏洞。取决于运行基于身份验证技术的目标系统（如 `rsh`、`telnet`、`FTP` 等），与 `ssh` 或 `SSL/TLS` 等加密身份验证相比，这些是不推荐的。 |
+| 嗅听 | 通过监听两个活动节点之间的连接收集传输的数据。 | 这种攻击主要适用于明文传输协议，如 `Telnet`、`FTP` 和 `HTTP`。远程攻击者必须访问局域网内的破解系统才能执行此类攻击；通常黑客使用活动攻击（如 IP 欺骗或中间人攻击）攻破局域网内的系统。预防措施包括使用加密密钥交换的服务、一次性密码或加密验证以防止密码监听；建议传输过程中使用强加密。 |
+| 服务漏洞 | 攻击者在互联网上运行的服务中发现缺陷或漏洞；通过此漏洞，攻击者攻破整个系统及其可能保存的数据，并可能损害网络上的其他系统。 | 基于 `HTTP` 服务（如 `CGI`）容易受到远程命令执行和权限提升。即使 `HTTP` 服务以非特权用户（如 "nobody"）身份运行，也可以读取配置文件和映射等信息，或者攻击者发起拒绝服务攻击，耗尽系统资源或使其对其他用户不可。服务有时存在开发和测试期间未被察觉的漏洞；这些漏洞（例如缓冲区溢出，攻击者使用任意缓冲区值填充应用程序的内存缓冲区，导致应用程序崩溃并获得一个可以执行任意命令的交互式命令行提示符）可能会赋予攻击者完全的管理员控制权。管理员应确保服务不以 `root` 用户身份运行，并警惕来自供应商或安全组织（如 `CERT` 和 `CVE`）的应用程序补丁和错误更新。 |
 | 漏洞 | 描述 | 注意事项 |
 |---|---|---|
 | 应用程序漏洞 | 桌面和工作站应用程序（如电子邮件客户端）可能会执行任意代码、植入木马以供未来入侵，或导致系统崩溃。如果被攻破的工作站在网络的其他部分具有管理权限，则可能发生进一步的利用。 | 工作站和桌面更容易受到攻击，因为员工通常缺乏检测入侵的专业知识或经验；因此，必须告知个人他们在安装未经授权的软件或打开未请求的邮件附件时所承担的风险。可以实施某些保护措施，使客户端软件不自动打开或执行附件。此外，使用 Red Hat Network或其他系统管理服务自动更新工作站软件，可以减轻多席安全部署的负担。 |
-| 拒绝服务 (DoS) 攻击 | 攻击者或攻击者小组通过向目标主机（服务器、路由器或工作站）发送未经授权的数据包，对组织的网络或服务器资源进行攻击。这导致资源无法供合法用户使用。 | 美国报告的最严重的 DoS 案例发生在 2000 年。几个高流量的商业和政府网站由于受到协同 ping 洪流攻击而无法使用，该攻击使用了几个具有高带宽连接的被攻破系统作为僵尸，或重定向的广播节点。源包通常是伪造的（以及重发的），使得难以调查攻击的真实来源。使用 iptables 的入站过滤技术（IETF rfc2267）以及网络入侵检测系统（如 snort）进展有助于管理员追踪和防止分布式 DoS 攻击。 |
+
+
+
+| 拒绝服务 (DoS) 攻击 | 攻击者或攻击者小组通过向目标主机（服务器、路由器或工作站）发送未经授权的数据包，对组织的网络或服务器资源进行攻击。这导致资源无法供合法用户使用。 | 美国报告的最严重的 DoS 案例发生在 2000 年。几个高流量的商业和政府网站由于受到协同 ping 洪流攻击而无法使用，该攻击使用了几个具有高带宽连接的被攻破系统作为僵尸，或重定向的广播节点。源包通常是伪造的（以及重发的），使得难以调查攻击的真实来源。使用 `iptables` 的入站过滤技术（IETF rfc2267）以及网络入侵检测系统（如 `snort`）进展有助于管理员追踪和防止分布式 DoS 攻击。 |
 
 # 第 2 章：在安装期间保护 RHEL 安全
 
@@ -291,15 +244,16 @@ Red Hat Enterprise Linux 8 安全加固
 更改 BIOS 设置的主要原因如下——如果入侵者访问了 BIOS，他们可以将其设置为：
 
 - 防止更改 BIOS 设置——如果入侵者访问了 BIOS，他们可以将其设置为从 CD-ROM 或闪存驱动器启动。这使得他们能够进入救援模式或单用户模式，从而允许他们在系统上启动任意进程或复制敏感数据。
+
 - 防止系统启动——某些 BIOS 允许对启动过程进行密码保护。当激活后时，攻击者将被强制在 BIOS 启动引导加载程序之前输入密码。
 
 由于不同计算机设置 BIOS 密码的方法不同，请参阅计算机说明书以获取特定指令。
 
 如果您忘记了 BIOS 密码，可以通过主板上的跳线帽（jumpers）或断开 CMOS 电池来重置。因此，如果可能，锁定机箱是一个良好的习惯。但在尝试断开 CMOS 电池之前，请先查阅计算机或主板的说明书。
 
-### 2.1.1.1. 基于非 BIOS 的系统安全
+#### 2.1.1.1. 基于非 BIOS 的系统安全
 
-其他系统和架构使用不同的程序来执行底层任务，这些任务大致等于 x86 系统上的 BIOS。例如，统一扩展固件接口 (UEFI) shell。关于类似 BIOS 类程序密码保护的指令，请参阅制造商的说明。
+其他系统和架构使用不同的程序来执行底层任务，这些任务大致等于 x86 系统上的 BIOS。例如，统一扩展固件接口 (`UEFI`) shell。关于类似 BIOS 类程序密码保护的指令，请参阅制造商的说明。
 
 ## 2.2. 磁盘分区
 
@@ -317,7 +271,7 @@ Red Hat 建议为 `/boot`、`/`、`/home`、`/tmp` 和 `/var/tmp/` 目录创建�
 
 `/tmp` 和 `/var/tmp` 目录都用于存储不需要长期保存的数据。然而，如果大量数据涌入其中一个目录，将耗尽存储空间。如果这些目录存储在 `/` 中，您的系统可能会不稳定并崩溃。因此，将这些目录移动到分区是一个好主意。
 
-### 注意
+#### 注意
 
 在安装过程中，有一个加密区的选项。您必须提供密码。该密码将作为解锁块加密的密钥。
 
@@ -341,14 +295,14 @@ Red Hat 建议为 `/boot`、`/`、`/home`、`/tmp` 和 `/var/tmp/` 目录创建�
 # yum update
 ```
 
-2. 虽然防火墙服务 **firewalld** 在安装 Red Hat Enterprise Linux 时会自动启用，但在某些情况下可能会显式禁用，例如在 kickstart 配置中。在这种情况下，建议重新启用防火墙。要启动 **firewalld**，请 root 执行以下命令：
+2. 虽然防火墙服务 `firewalld` 在安装 Red Hat Enterprise Linux 时会自动启用，但在某些情况下可能会显式禁用，例如在 kickstart 配置中。在这种情况下，建议重新启用防火墙。要启动 `firewalld`，请 root 执行以下命令：
 
 ```bash
 # systemctl start firewalld
 # systemctl enable firewalld
 ```
 
-3. 为了增强安全性，禁用不需要的服务。例如，如果您的计算机上没有安装打印机，使用以下命令禁用 **cups** 服务：
+3. 为了增强安全性，禁用不需要的服务。例如，如果您的计算机上没有安装打印机，使用以下命令禁用 `cups` 服务：
 
 ```bash
 # systemctl disable cups
@@ -362,10 +316,6 @@ $ systemctl list-units | grep service
 
 [1] 由于不同制造商的系统 BIOS 不同，某些可能不支持任何类型的密码保护，而某些可能只支持一种而不不支持另一种。
 
-
-
-
-
 # 第 3 章. 使用系统级加密策略
 
 加密策略是一个用于配置核心加密子系统的系统，涵盖了 TLS、IPC、SSH、DNSSec 和 Kerberos 协议。它提供了一小组策略，管理员可以从中进行选择。
@@ -377,21 +327,29 @@ $ systemctl list-units | grep service
 Red Hat Linux 8 包含以下策略级别：
 
 | 策略 | 描述 |
+
 | :--- | :--- |
+
 | DEFAULT | 默认系统级加密策略为当前的威胁模型提供了安全设置。它允许使用 TLS 1.2 和 1.3 协议，以及 IKE2 和 SSH2 协议。如果 RSA 密钥和 Diffie-Hellman 参数长度至少为 2048 位，则会被接受。 |
+
 | LEGACY | 此策略确保与 Red Hat Enterprise Linux 5 及更早版本具有最大的兼容性；由于攻击面增加，其安全性较低。除了 DEFAULT 级别的算法和协议外，它还包含了对 TLS 1.0 和 1.1 协议的支持。排除了 DSA、3DES 和 RC4 算法，如果 RSA 密钥和 Diffie-Hellman 参数长度至少为 1023 位，则会被接受。 |
+
 | FUTURE | 一种保守的安全级别，能够抵御任何近期的未来攻击。该级别不允许在签名算法中使用 SHA-1。如果 RSA 密钥和 Diffie-Hellman 参数长度至少为 3072 位，则会被接受。 |
+
 | FIPS | 符合 FIPS140-2 要求的策略级别。这由 `fips-mode-setup` 工具在内部使用，该工具会将 RHEL 系统切换到 FIPS 模式。 |
 
 > 重要
+
 由于 Customer Portal API 上的证书所使用的加密密钥不符合 FUTURE 系统级加密策略的要求，`redhat-support-tool` 实用目前无法在此策略级别工作。
 
 为了解决这个问题，在连接到 Customer Portal API 时请使用 `DEFAULT` 加密策略。
 
 > 注意
+
 策略级别中描述的特定算法和密码仅在应用程序支持它们时才可用。
 
 ### 管理加密策略的工具
+
 要查看或更改当前系统级加密策略，请使用 `update-crypto-policies` 工具，例如：
 
 ```
@@ -404,14 +362,21 @@ Setting system policy to FUTURE
 要确保加密策略的更改生效，请重启系统。
 
 ### 通过移除不安全的密码套件和协议来实现强加密默认
+
 以下列表包含了从 RHEL 8 核心加密库中移除的密码套件和协议。它们不存在于源码中，或者其支持在构建期间被禁用，因此应用程序无法使用它们。
 
 - DES（自 RHEL 7 起）
+
 - 所有导出级密码套件（自 RHEL 7 起）
+
 - 签名中的 MD5（自 RHEL 7 起）
+
 - SSLv2（自 RHEL 7 起）
+
 - SSLv3（自 RHEL 8 起）
+
 - 所有小于 224 位的 ECC 曲线（自 RHEL 6 起）
+
 - 所有二进制域 ECC 曲线（自 RHEL 6 起）
 
 ## 在所有策略级别中禁用的密码套件和协议
@@ -419,15 +384,25 @@ Setting system policy to FUTURE
 以下密码套件和协议在所有加密策略级别中均禁用。只有通过显式配置单个协议才能启用。
 
 - 参数小于 1024 位的 DH
+
 - 密钥大小小于 1024 位的 RSA
+
 - Camellia
+
 - ARIA
+
 - SEED
+
 - IDEA
+
 - 仅完整性密码套件
+
 - 使用 SHA-384 HMAC 的 TLS CBC 模式密码套件
+
 - AES-CCM8
+
 - 所有与 TLS 1.3 不兼容的 ECC 曲线，包括 secp256k
+
 - Ikev1（自 RHEL 8 起）
 
 ## 在加密策略级别中启用的密码套件和协议
@@ -437,18 +412,31 @@ Setting system policy to FUTURE
 ### Red Hat Enterprise Linux 8 安全加固
 
 | | LEGACY | DEFAULT | FIPS | FUTURE |
+
 | :--- | :--- | :--- | :--- | :--- |
+
 | IKEv1 | no | no | no | no |
+
 | 3DES | yes | no | no | no |
+
 | RC4 | yes | no | no | no |
+
 | DH | 至少 1024-位 | 至少 2048-位 | 至少 2048-位 | 至少 3072-位 |
+
 | RSA | 至少 1024-位 | 至少 2048-位 | 至少 2048-位 | 至少 3072-位 |
+
 | DSA | yes | no | no | no |
+
 | TLS v1.0 | yes | no | no | no |
+
 | TLS v1.1 | yes | no | no | no |
+
 | 数字签名中的 SHA-1 | yes | yes | no | no |
+
 | CBC 模式密码 | yes | yes | yes | no |
+
 | 小于 256 位的对称密码 | yes | yes | no | no |
+
 | 证书中的 SHA-1 | yes | yes | no | no |
 
 ## 3.2. 切换到兼容早期版本的系统级加密策略
@@ -456,10 +444,13 @@ Setting system policy to FUTURE
 RHEL 8 中的系统级策略允许与早期版本兼容，提供了 `LEGACY` 策略级别。
 
 > 警告
+
 > 切换到 `LEGACY` 策略会导致安全性降低。
 
 ### 步骤
+
 1. 要切换到 `LEGACY` 策略，输入以下命令：
+
 ```bash
 # update-crypto-policies --set LEGACY
 Setting system policy to LEGACY
@@ -470,19 +461,25 @@ Setting system policy to LEGACY
 系统级策略包含一个策略级别，根据联邦信息处理（FIPS）出版物 140-2 启用模块自检。
 
 ### 步骤
+
 1. 在 RHEL 中启用 FIPS 模式：
+
 ```bash
 # fips-mode-setup --enable
 Setting system policy to FIPS
 FIPS mode will be enabled.
 ```
+
 2. 重启系统使设置生效：
+
 ```bash
 # reboot
 ```
 
 ### 验证步骤
+
 1. 重启后，可以检查 FIPS 模式状态：
+
 ```bash
 # fips-mode-setup --check
 FIPS mode is enabled.
@@ -493,20 +490,27 @@ FIPS mode is enabled.
 在容器中根据联邦信息标准（FIPS）出版物 140-2 模块自检：
 
 ### 前提条件
+
 - 主机系统必须先切换到 FIPS 模式。
 
 ### 步骤
+
 1. 从主机将系统 fips 文件挂载到容器中。
+
 2. 在容器内设置策略级别：
+
 ```
 $ update-crypto-policies --set FIPS
 ```
+
 RHEL 8.2 引入了切换容器 FIPS 模式的替代方法。容器内需要以下命令：
+
 ```
 # mount --bind /usr/share/crypto-policies/back-ends/FIPS /etc/crypto-policies/back-ends
 ```
 
 > 注意
+
 在 RHEL 8 中，`fips-setup` 命令在容器中无法正常工作，无法用其启用或检查 FIPS 模式。
 
 ## 3.5. 将应用程序排除在系统级加密策略之外
@@ -564,6 +568,7 @@ $ curl https://example.com --ciphers DES-CBC3-SHA:RSA-DES-CBC3-SHA
 使用此过程调整任何系统级加密策略级别或完整自定义策略的算法或协议。![](img/ce77567a90cabeaf166ca2952.png)
 
 > 注意
+
 RHEL 8 提供了系统级加密策略的自定义。
 
 ### 步骤
@@ -575,10 +580,13 @@ RHEL 8 提供了系统级加密策略的自定义。
 ```
 
 sha1_in_certs = 0
+
 min_rsa_size = 3072
+
 cipher = -256-GCM -256-CBC -128-GCM -128-CBC
 
 ### 重要
+
 在策略模块文件名中使用大写字母。
 
 - 2. 将你的策略应用于 DEFAULT 系统级加密策略级别：
@@ -596,6 +604,7 @@ cipher = -256-GCM -256-CBC -128-GCM -128-CBC
 ### 其他资源
 
 - 详情请参考 update-crypto-policies(8) 手页中的 Custom Policies 部分以及 update-crypto-policies(8) 手页中的 Crypto Policy Format 部分。
+
 - RHEL 8 提供了自定义系统级加密策略的示例。
 
 ## 3.7. 创建并设置系统级加密策略
@@ -603,11 +612,14 @@ cipher = -256-GCM -256-CBC -128-GCM -128-CBC
 以下步骤演示了如何通过策略文件自定义系统级加密策略。
 
 ### 注意
+
 RHEL 8 提供了系统级加密策略的自定义。
 
 ### 步骤
 
-- 1. 为你的自定义创建一个策略文件：
+
+
+## 为你的自定义创建一个策略文件
 
 ```
 # cd /etc/crypto-policies/policies/
@@ -620,19 +632,19 @@ RHEL 8 提供了系统级加密策略的自定义。
 # cp /usr/share/crypto-policies/policies/DEFAULT.pol /etc/crypto-policies/policies/MYPOLICY.pol
 ```
 
-- 2. 使用你选择的文本编辑器编辑该文件以符合你的需求，例如：
+## 使用你选择的文本编辑器编辑该文件以符合你的需求，例如：
 
 ```
 # vi /etc/crypto-policies/policies/MYPOLICY.pol
 ```
 
-- 3. 将系统级加密策略切换到你的自定义级别：
+## 将系统级加密策略切换到你的自定义级别：
 
 ```
 # update-crypto-policies --set MYPOLICY
 ```
 
-- 4. 使你的加密设置对于已运行的服务生效，请重启系统：
+## 使你的加密设置对于已运行的服务生效，请重启系统：
 
 ```
 # reboot
@@ -640,7 +652,7 @@ RHEL 8 提供了系统级加密策略的自定义。
 
 ### 其他资源
 
-- 详情请参考 update-crypto-policies(8) 手页中的 Custom Policies 部分以及 update-crypto-policies(8) 手页中的 Crypto Policy Format 部分。
+- 详情请参考 `update-crypto-policies(8)` 手页中的 Custom Policies 部分以及 `update-crypto-policies(8)` 手页中的 Crypto Policy Format 部分。
 - RHEL 8 提供了自定义系统级加密策略的示例。
 
 ## 3.8. 相关信息
@@ -653,24 +665,21 @@ RHEL 8 提供了系统级加密策略的自定义。
 
 ## 4.1. 通过 PKCS #11 支持加密硬件
 
-PKCS #11（密钥加密标准）定义了用于加密加密信息的执行加密设备的应用程序接口（API）。这些设备被称为令牌（tokens），可以以硬件或软件形式实现。
+`PKCS #11`（密钥加密标准）定义了用于加密加密信息的执行加密设备的应用程序接口（API）。这些设备被称为令牌（tokens），可以以硬件或软件形式实现。
 
-PKCS #11 令牌可以存储各种对象，例如证书、数据对象以及公钥、私钥或密钥。这些对象可以通过 PKCS #11 URI 方案唯一标识。
+`PKCS #11` 令牌可以存储各种对象，例如证书、数据对象以及公钥、私钥或密钥。这些对象可以通过 `PKCS #11 URI` 方案唯一标识。
 
-PKCS #11 URI 是根据对象属性识别 PKCS #11 模块特定对象的标准方法。这允许你通过 URI 字符串为所有库和应用程序配置相同的设置。
+`PKCS #11 URI` 是根据对象属性识别 `PKCS #11` 模块特定对象的标准方法。这允许你通过 URI 字符串为所有库和应用程序配置相同的设置。
 
-Red Hat Linux 8 默认为智能卡提供 OpenSC PKCS #11 驱动程序。硬件令牌和 HSM 可以拥有自己的在 Red Hat Linux 中没有对应的 PKCS #11 模块。你可以使用 `p11-kit` 工具注册你的 PKCS #11 模块，它是系统内智能卡驱动程序的封装器。
+Red Hat Linux 8 默认为智能卡提供 `OpenSC` `PKCS #11` 驱动程序。硬件令牌和 HSM 可以拥有自己的在 Red Hat Linux 中没有对应的 `PKCS #11` 模块。你可以使用 `p11-kit` 工具注册你的 `PKCS #11` 模块，它是系统内智能卡驱动程序的封装器。
 
-要让你自己的 PKCS #11 模块在系统上工作，请向 `/etc/pkcs11/modules/` 目录添加一个新的文本文件。
+要让你自己的 `PKCS #11` 模块在系统上工作，请向 `/etc/pkcs11/modules/` 目录添加一个新的文本文件。
 
-
-
-
-- p p11-kit(8) 手册
-- ssh(1) 手册
-- ssh-keygen(1) 手册
-- opensnc.conf(5) 手册
-- pscd(8) 手册
+- `p11-kit(8)` 手册
+- `ssh(1)` 手册
+- `ssh-keygen(1)` 手册
+- `opensnc.conf(5)` 手册
+- `pscd(8)` 手册
 
 ## 4.3. 在 APACHE 和 NGINX 中使用 HTTPS 代理的 私钥
 
@@ -678,42 +687,40 @@ Apache 和 Nginx HTTP 服务器可以使用存储在硬件安全模块（HSM）�
 
 ### Apache HTTP 服务器
 
-对于 HTTPS 协议形式的通信，Apache HTTP 服务器 (httpd) 使用 OpenSSL 库。OpenSSL 原生不支持 PKCS #11。要利用 HSM，你必须安装 `openssl-pkcs11` 包，该包通过引擎接口提供对 PKCS #11 模块的。例如，可以在 `/etc/http/conf.d/ssl.conf` 配置中使用 PKCS #11 URI 代替普通文件密钥和证书：
+对于 HTTPS 协议形式的通信，Apache HTTP 服务器 (`httpd`) 使用 OpenSSL 库。OpenSSL 原生不支持 `PKCS #11`。要利用 HSM，你必须安装 `openssl-pkcs11` 包，该包通过引擎接口提供对 `PKCS #11` 模块的。例如，可以在 `/etc/http/conf.d/ssl.conf` 配置中使用 `PKCS #11 URI` 代替普通文件密钥和证书：
 
 ```
 SSLCertificateFile "pkcs11:id=%01;token=softhm;type=cert"
 SSLCertificateKey "pkcs11:id=%01;token=softhm;type=private;pin=value-111111"
 ```
 
-安装 `httpd-manual` 以获取 Apache HTTP 服务器的完整文档，包括 TLS 配置。`/etc/http/conf.d/ssl.conf` 配置文件的详细信息在 /usr/share/http/manual/mod/mod_ssl.html 中描述。
+安装 `httpd-manual` 以获取 Apache HTTP 服务器的完整文档，包括 TLS 配置。`/etc/http/conf.d/ssl.conf` 配置文件的详细信息在 `/usr/share/http/manual/mod/mod_ssl.html` 中描述。
 
 ### Nginx HTTP 和代理服务器
 
-由于 Nginx 使用 OpenSSL 进行加密操作，对于 PKCS #11，它必须通过 `openssl-pkcs11` 引擎。Nginx 目前仅支持来自 HSM 的私钥，证书必须作为普通文件单独提供。修改 `/etc/nginx/nginx.conf` 配置文件中 `server` 部分的 `ssl_certificate` 和 `ssl_certificate_key` 选项：
+由于 Nginx 使用 OpenSSL 进行加密操作，对于 `PKCS #11`，它必须通过 `openssl-pkcs11` 引擎。Nginx 目前仅支持来自 HSM 的私钥，证书必须作为普通文件单独提供。修改 `/etc/nginx/nginx.conf` 配置文件中 `server` 部分的 `ssl_certificate` 和 `ssl_certificate_key` 选项：
 
 ```
 ssl_certificate /path/to/cert.pem
 ssl_certificate_key "engine:pkcs11:token=softhm;id=%01;type=private;pin=value-111111"
 ```
 
-请注意，Nginx 配置文件中的 PKCS #11 URI 需要 `engine:pkcs11` 前缀。这是因为另一个 `pkcs11` 指的是引擎名称。
+请注意，Nginx 配置文件中的 `PKCS #11 URI` 需要 `engine:pkcs11` 前缀。这是因为另一个 `pkcs11` 指的是引擎名称。
 
 ## 4.4. 使用智能卡配置应用程序的身份验证
 
-- `wget` 网络下载器允许你指定 PKCS #11 URI 代替本地存储的私钥路径，并简化了为需要安全存储的私钥和证书的任务创建脚本。例如：
+- `wget` 网络下载器允许你指定 `PKCS #11 URI` 代替本地存储的私钥路径，并简化了为需要安全存储的私钥和证书的任务创建脚本。例如：
 
 ```
-$ wget -private-key 'pkcs11:token=softhm;id=%01;type=private;pin=value-111111' --
-certificate 'pkcs11:token=softhm;id=%01;type=cert' https://example.com/
+$ wget -private-key 'pkcs11:token=softhm;id=%01;type=private;pin=value-111111' --certificate 'pkcs11:token=softhm;id=%01;type=cert' https://example.com/
 ```
 
 请参阅 `wget(1)` 手册获取更多信息。
 
-- 为 `curl` 工具指定 PKCS #11 URI 的原理类似：
+- 为 `curl` 工具指定 `PKCS #11 URI` 的原理类似：
 
 ```bash
-$ curl -key 'pkcs#11:token=softhmid=%01;type=private?pin-value=111111' --cert
-  'pkcs#11:token=softhmid=%01;type=cert' https://example.com/'
+$ curl -key 'pkcs#11:token=softhmid=%01;type=private?pin-value=111111' --cert 'pkcs#11:token=softhmid=%01;type=cert' https://example.com/'
 ```
 
 请参阅 `(curl(1)` 手册获取更多信息。
@@ -722,11 +729,11 @@ $ curl -key 'pkcs#11:token=softhmid=%01;type=private?pin-value=111111' --cert
 
 ### 在自定义应用程序中使用 PKCS #11 URI
 
-如果你的应用程序使用 GnuTLS 或 NSS 库，通过它们内置对 PKCS #11 的支持确保了对 PKCS #11 URI 支持。此外，依赖 OpenSSL 库的应用程序可以通过 `openssl-pkcs11` 引擎访问加密硬件。对于需要与智能卡上的私钥工作且不使用 GnuTLS 或 OpenSSL 的应用程序，使用 `p1kit` 来实现 PKCS #11 模块的注册。参阅 `p1kit(8)` 手册获取更多信息。
+如果你的应用程序使用 GnuTLS 或 NSS 库，通过它们内置对 `PKCS #11` 的支持确保了对 `PKCS #11 URI` 支持。此外，依赖 OpenSSL 库的应用程序可以通过 `openssl-pkcs11` 引擎访问加密硬件。对于需要与智能卡上的私钥工作且不使用 GnuTLS 或 OpenSSL 的应用程序，使用 `p1kit` 来实现 `PKCS #11` 模块的注册。参阅 `p1kit(8)` 手册获取更多信息。
 
 ## 4.5. 相关信息
 
-- pkcs11.conf(5) 手册
+- `pkcs11.conf(5)` 手册
 
 # 第 5 章 使用共享系统证书
 
@@ -745,11 +752,13 @@ $ curl -key 'pkcs#11:token=softhmid=%01;type=private?pin-value=111111' --cert
 ### 5.2. 添加新证书
 
 1. 要将简单 PEM 或 DER 格式的证书添加到信任列表，将证书文件复制到 `/usr/share/pki/ca-trust/anchors/` 或 `/etc/pki/ca-trust/`，例如：
+
 ```
 # cp test-ca.pem /usr/share/pki/ca-trust/anchors/
 ```
 
 2. 要更新系统级信任存储配置，使用 `update-ca-trust` 命令：
+
 ```
 # update-ca-trust
 ```
@@ -770,6 +779,7 @@ $ trust --help
   anchor    添加、删除、信任锚点
   dump      以内部格式转储
 ```
+
 通过 `trust--help` 获取更多信息
 
 - 要列出所有信任锚点和证书，使用 `list` 命令：
@@ -794,7 +804,7 @@ usage: trust list --filter=<what>
 -q, --quiet 静默命令输出
 ```
 
-- 要将信任锚点存储到系统级信任存储，使用 `trust anchor` 子命令并指定证书路径。将 path/to/certificate.crt 替换为你的证书路径和文件名：
+- 要将信任锚点存储到系统级信任存储，使用 `trust anchor` 子命令并指定证书路径。将 `path/to/certificate.crt` 替换为你的证书路径和文件名：
 
 ```
 # trust anchor path/to/certificate.crt
@@ -817,12 +827,8 @@ usage: trust list --filter=<what>
 
 欲了解更多信息，请参阅以下手册页：
 
-- update-ca-trust(8)
-- trust(1)
-
-
-
-
+- `update-ca-trust(8)`
+- `trust(1)`
 
 # 第 6 章 扫描系统以检查合规性与漏洞
 
@@ -832,43 +838,43 @@ usage: trust list --filter=<what>
 
 ## 6.1. RHEL 中的配置合规性工具
 
-Red Hat Linux 提供了能够让您执行全自动合规性审计的工具。这些工具基于安全内容自动化协议 (SCAP)，旨在对合规性策略进行自动化审计。
+Red Hat Linux 提供了能够让您执行全自动合规性审计的工具。这些工具基于安全内容自动化协议 (`SCAP`)，旨在对合规性策略进行自动化审计。
 
 - **SCAP Workbench** - `scap-workbench` 图形实用程序用于对本地或远程系统执行配置和漏洞扫描。您可以使用它根据这些扫描和评估生成报告。
-- **OpenSCAP** - **OpenSCAP** 库以及配套的 **oscap** 命令行工具用于对本地系统执行配置和漏洞扫描、验证配置内容，并根据扫描和评估生成报告和指南。
-- **SCAP Security Guide (SSG)** - **scap-security-guide** 包提供了 Linux 系统的最新安全策略集。该指南由策略加固建议的目录组成，并在适用时与政府要求挂钩。该项目弥补了通用策略需求与特定实施指南之间的差距。
-- **Script Engine (SCE)** - SCE 是 SCAP 协议的扩展，允许管理员使用脚本语言（如 Bash、Python 和 Ruby）编写其安全内容。SCE 扩展由 **openscap-engine-sce** 包提供。SCE 本身不属于 SCAP 标准的一部分。
+- **OpenSCAP** - **OpenSCAP** 库以及配套的 `oscap` 命令行工具用于对本地系统执行配置和漏洞扫描、验证配置内容，并根据扫描和评估生成报告和指南。
+- **SCAP Security Guide (SSG)** - `scap-security-guide` 包提供了 Linux 系统的最新安全策略集。该指南由策略加固建议的目录组成，并在适用时与政府要求挂钩。该项目弥补了通用策略需求与特定实施指南之间的差距。
+- **Script Engine (SCE)** - SCE 是 SCAP 协议的扩展，允许管理员使用脚本语言（如 Bash、Python 和 Ruby）编写其安全内容。SCE 扩展由 `openscap-engine-sce` 包提供。SCE 本身不属于 SCAP 标准的一部分。
 
 若要对多个系统执行自动审计，您可以使用针对 Red Hat Satellite 的 OpenSCAP 解决方案。
 
 ### 附加资源
 
-- **oscap()** - **oscap** 命令行工具的手手册提供了可用选项列表及其用法的说明。
+- **oscap()** - `oscap` 命令行工具的手手册提供了可用选项列表及其用法的说明。
 - **Red Hat 演示：创建自定义安全策略内容以实现安全合规性自动化** - 一项实操实验室，旨在让您通过 Red Hat Enterprise 中提供的工具获取自动化安全合规性的初步体验，以符合行业标准安全策略和自定义策略。如果您正在进行培训或需要为团队访问这些练习，请联系您的 Red Hat 账户获取更多详细信息。
 - **Red Hat 演示：使用 RHEL 安全技术自我防护** - 一项实操实验室，用于学习如何使用 Red Hat Enterprise Linux 中提供的关键安全技术（包括 OpenSCAP）在 RHEL 系统的所有级别实现安全。如果您需要培训或为团队访问这些练习，请联系您的 Red Hat 账户团队获取更多详细信息。
-- scap-workbench(8) - SCAP Workbench 应用程序的手册提供了该应用程序的基本信息以及指向 SCAP 内容潜在来源的链接。
-- scap-security-guide(8) - scap-security-guide 项目的手册提供了有关各种可用 SCAP 安全配置的进一步文档。此外还提供了如何使用 OpenSCAP 工具利用基准的示例。
+- `scap-workbench(8)` - SCAP Workbench 应用程序的手册提供了该应用程序的基本信息以及指向 SCAP 内容潜在来源的链接。
+- `scap-security-guide(8)` - scap-security-guide 项目的手册提供了有关各种可用 SCAP 安全配置的进一步文档。此外还提供了如何使用 OpenSCAP 工具利用基准的示例。
 - 有关在 Red Hat Satellite 中使用 OpenSCAP 的更多详情，请参阅《管理 Red Hat Satellite 指南》中的“安全合规性管理”。
 
 ## 6.2. 漏洞扫描
 
 ### 6.2.1. Red Hat 安全告告 OVAL 馈
 
-Red Hat Enterprise Linux 的审计能力基于安全内容自动化协议 (SCAP) 标准。SCAP 是一个多用途规范框架，支持自动化配置、漏洞和补丁检查、技术控制合规审计以及安全测量。
+Red Hat Enterprise Linux 的审计能力基于安全内容自动化协议 (`SCAP`) 标准。`SCAP` 是一个多用途规范框架，支持自动化配置、漏洞和补丁检查、技术控制合规审计以及安全测量。
 
-SCAP 规范创建了一个生态系统，其中安全内容的格式是已知且标准化的，尽管并未强制扫描器或策略编辑器的实现。这使得组织可以构建一次其安全策略 (SCAP)，无论使用多少个安全供应商。
+`SCAP` 规范创建了一个生态系统，其中安全内容的格式是已知且标准化的，尽管并未强制扫描器或策略编辑器的实现。这使得组织可以构建一次其安全策略 (`SCAP`)，无论使用多少个安全供应商。
 
-开放漏洞评估语言 (OVAL) 是 SCAP 的核心且唯一组件。与其他工具和自定义脚本不同，OVAL 以声明式方式描述资源的所需状态。OVAL 代码永远不会被直接执行，除非 OVAL 解释器工具调用它。OVAL 的声明性本质确保了被评估的系统不会被意外识别。
+开放漏洞评估语言 (`OVAL`) 是 `SCAP` 的核心且唯一组件。与其他工具和自定义脚本不同，`OVAL` 以声明式方式描述资源的所需状态。`OVAL` 代码永远不会被直接执行，除非 `OVAL` 解释器工具调用它。`OVAL` 的声明性本质确保了被评估的系统不会被意外识别。
 
-与其他 SCAP 组件一样，OVAL 基于 XML。SCAP 标准定义了多种文档格式。每种格式都包含不同的信息并具有特定用途。
+与其他 `SCAP` 组件一样，`OVAL` 基于 XML。`SCAP` 标准定义了多种文档格式。每种格式都包含不同的信息并具有特定用途。
 
 Red Hat Product Security 通过跟踪和调查所有影响 Red Hat 客户的安全问题来帮助客户评估和管理风险。它在 Red Hat 客户门户上提供及时简洁的补丁和安全公告。Red Hat 创建并提供了 OVAL 路径定义，提供了我们公告的机器可读版本。
 
-由于平台、版本和其他因素的差异，Red Hat Product Security 对漏洞的定性评分与第三方提供的通用漏洞评分系统 (CVSS) 基准评分并不直接对应。因此，我们建议您使用 RHSA oval 而不是第三方提供的 oval。
+由于平台、版本和其他因素的差异，Red Hat Product Security 对漏洞的定性评分与第三方提供的通用漏洞评分系统 (`CVSS`) 基准评分并不直接对应。因此，我们建议您使用 RHSA oval 而不是第三方提供的 oval。
 
 RHSA OVAL 定义是独立且完整的包，并在 Red Hat 客户门户发布新安全公告的一小时内进行更新。
 
-每个 OVAL 路径一一对应于一个 Red Hat 安全公告 (RHSA)。由于一个 RHSA 可能包含多个漏洞的修复，每个漏洞按其常见漏洞和披露 (CVE) 分别列出，并在我们的公共数据库中有链接。
+每个 OVAL 路径一一对应于一个 Red Hat 安全公告 (`RHSA`)。由于一个 `RHSA` 可能包含多个漏洞的修复，每个漏洞按其常见漏洞和披露 (`CVE`) 分别列出，并在我们的公共数据库中有链接。
 
 RHSA OVAL 定义用于检查安装在系统上的 RPM 软件包的版本。可以扩展这些定义以包含进一步检查，例如发现是否使用了漏洞配置。这些定义涵盖了由 Red Hat 分发的软件。需要额外的定义来检测第三方软件的补丁状态。
 
@@ -881,20 +887,24 @@ RHSA OVAL 定义用于检查安装在系统上的 RPM 软件包的版本。可�
 - Red Hat 与 OVAL 的兼容性
 - Red Hat 与 CVE 的兼容性
 - [产品安全概述] 中的通知和公告
+
+
+
 - 安全数据指标
+
 - 扫描容器和镜像漏洞
 
 ### 6.2.2. 扫描系统漏洞
 
-**oscap** 命令行工具允许您扫描本地系统、验证配置内容，并根据这些扫描和评估生成报告和指南。该工具作为 OpenSCAP 库的前端，并根据其处理的 SCAP 内容类型将其功能分组模块（子命令）。
+`oscap`命令行工具允许您扫描本地系统、验证配置内容，并根据这些扫描和评估生成报告和指南。该工具作为 OpenSCAP 库的前端，并根据其处理的 SCAP 内容类型将其功能分组模块（子命令）。
 
 ### 前提条件
 
-- 已启用 **AppStream** 仓库。
+- 已启用 `AppStream`仓库。
 
 ### 步骤
 
-1. 安装 **openscap-scanner** 包：
+1. 安装 `openscap-scanner`包：
 
 ```bash
 sudo yum install openscap-scanner
@@ -906,7 +916,7 @@ sudo yum install openscap-scanner
 # wget -O - https://www.redhat.com/security/data/oval/v2/RHEL8/rhel-8.oval.bz | bzip2 -decompress > rhel-8.oval.xml
 ```
 
-3. 扫描系统漏洞并将保存到 *vulnerability.html* 文件：
+3. 扫描系统漏洞并将保存到 `vulnerability.html`文件：
 
 ```bash
 # oscap oval eval --report vulnerability.html rhel-8.oval.xml
@@ -922,29 +932,29 @@ sudo yum install openscap-scanner
 
 附加资源
 
+`oscap(8)`手页。
 
-
-
-
-oscap(8) 手页。
-
-- The [Red Hat OVAL 定义]() 列表。
+- The [Red Hat OVAL 定义]()列表。
 
 ### 6.2.3. 扫描远程系统的漏洞
 
-你可以使用 OpenSCAP 扫描器，通过 SSH 协议使用 **oscap-ssh** 工具对远程系统进行漏洞检查。
+你可以使用 OpenSCAP 扫描器，通过 SSH 协议使用 `oscap-ssh`工具对远程系统进行漏洞检查。
 
 ### 前提条件
 
-- 已启用 **AppStream** 仓库。
-- 远程系统上安装了 **openscap-scanner** 软件包。
+- 已启用 `AppStream`仓库。
+
+- 远程系统上安装了 `openscap-scanner`软件包。
+
 - 远程系统上运行着 SSH 服务。
 
 ### 步骤
 
-- 1. 安装 **openscap-utils** 包：
+- 1. 安装 `openscap-utils`包：
+
 2. 为你的系统下载最新的 RHSA OVAL 定义：
-3. 扫描主机名为 *machine1*、SSH 运行在端口 22 且用户名为 *josec* 的远程系统进行漏洞扫描，并将结果保存到 *remote-vulnerability.html* 文件中：
+
+3. 扫描主机名为 `machine1`、SSH 运行在端口 22 且用户名为 `josec`的远程系统进行漏洞扫描，并将结果保存到 `remote-vulnerability.html`文件中：
 
 ```bash
 # yum install openscap-utils
@@ -960,18 +970,19 @@ oscap(8) 手页。
 
 ### 附加资源
 
-- **oscap-ssh(8)** 手页。
-- [Red Hat OVAL 定义]() 列表。
+- `oscap-ssh(8)`手页。
+
+- [Red Hat OVAL 定义]()列表。
 
 ## 6.3. 配置合规性扫描
 
 ### 6.3.1. RHEL 8 中的配置合规性
 
-你可以使用配置合规性扫描来符合特定组织定义的基线。例如，如果你为美国政府工作，你可能需要遵守操作系统保护配置方案 (OSPP)；如果你是支付处理商，可能需要符合支付卡行业数据安全标准 (PCI-DSS)。你也可以执行配置合规性扫描来加固系统安全。
+你可以使用配置合规性扫描来符合特定组织定义的基线。例如，如果你为美国政府工作，你可能需要遵守操作系统保护配置方案 (`OSPP`)；如果你是支付处理商，可能需要符合支付卡行业数据安全标准 (`PCI-DSS`)。你也可以执行配置合规性扫描来加固系统安全。
 
-Red Hat 建议你遵循 SCAP Security Guide 软件包提供的安全内容自动化协议 (SCAP) 内容，因为这些符合 Red Hat 针对影响组件的最佳实践。
+Red Hat 建议你遵循 SCAP Security Guide 软件包提供的安全内容自动化协议 (`SCAP`)内容，因为这些符合 Red Hat 针对影响组件的最佳实践。
 
-SCAP Security Guide 提供了符合 SCAP 1.2 和 SCAP 1.3 标准的内容。openscap scanner 实用程序兼容 SCAP Security Guide 软件包提供的提供的 SCAP 1.2 和 SCAP 1.3 内容。
+SCAP Security Guide 提供了符合 SCAP 1.2 和 SCAP 1.3 标准的内容。`openscap` scanner 实用程序兼容 SCAP Security Guide 软件包提供的提供的 SCAP 1.2 和 SCAP 1.3 内容。
 
 ### 重要
 
@@ -983,7 +994,7 @@ SCAP Security Guide 套件以数据流文档的形式提供了多个平台的配
 
 ![](img/ce7756f7a90c9abeaf166ca2952129eb_42_0.png)
 
-配置方案（Profile）是基于安全策略的规则集，例如操作系统保护配置方案 (OSPP) 或支付卡行业数据安全标准 (PCI-DSS)。这允许你以自动方式对系统进行安全标准进行审计。
+配置方案（Profile）是基于安全策略的规则集，例如操作系统保护配置方案 (`OSPP`)或支付卡行业数据安全标准 (`PCI-DSS`)。这允许你以自动方式对系统进行安全标准进行审计。
 
 你可以修改（剪裁）配置方案以自定义某些规则，例如密码长度。有关配置方案定制的更多信息，请参阅《使用 SCAP Workbench 自定义安全配置》。
 
@@ -1004,11 +1015,11 @@ SCAP Security Guide 套件以数据流文档的形式提供了多个平台的配
 
 ### 6.3.3. 查看配置合规配置方案
 
-在决定使用配置方案进行扫描或修复之前，可以使用 **oscap info** 子命令列出它们并检查它们的详细描述。
+在决定使用配置方案进行扫描或修复之前，可以使用 `oscap info`子命令列出它们并检查它们的详细描述。
 
 ### 前提条件
 
-- 已安装 **openscap-scanner** 和 **scap-security-guide** 软件包。
+- 已安装 `openscap-scanner`和 `scap-security-guide`软件包。
 
 ### 步骤
 
@@ -1023,12 +1034,13 @@ ssg-rhel6-ds-1.2.xml ssg-rhel8-oval.xml
 ssg-rhel8-ds.xml ssg-rhel8-xcdf.xml
 ```
 
-- 2. 使用 **oscap info** 子命令显示所选数据流的详细信息。包含数据流的 XML 文件通过文件名中的 **-ds** 字符串进行指示。在 **Profiles** 部分，你可以找到可用配置方案列表及其 ID：
+- 2. 使用 `oscap info`子命令显示所选数据流的详细信息。包含数据流的 XML 文件通过文件名中的 `-ds`字符串进行指示。在 `Profiles`部分，你可以找到可用配置方案列表及其 ID：
 
 ```bash
 $ oscap info /usr/share/xml/scap/scap/content/ssg-rhel8-ds.xml
 ```
-（注：此处根据上下文逻辑推断原文中可能省略了具体路径或示例文件为ssg-rhel8-ds.xml，实际显示如下）
+
+（注：此处根据上下文逻辑推断原文中可能省略了具体路径或示例文件为`ssg-rhel8-ds.xml`，实际显示如下）
 
 ```bash
 $ oscap info /usr/share/xml/scap/scap/content/ssg-rhel8-ds.xml
@@ -1048,42 +1060,51 @@ Profiles:
 （注：此处部分为原文示例中的乱码或重复内容，已按逻辑对齐）
 
 Title: OSSP - 操作系统保护配置方案
+
 Profiles:
+
 Title: PCI-DSS 3.2 for Red Hat 8
+
 合规性配置方案的 ID...
 
 ```bash
 $ oscap info /usr/share/xml/scap/scap/content/ssg-rhel8-ds.xml
 ```
+
 ...
+
 Profiles:
+
 ```
 
 ```bash
-$ oscap info /usr/share/xml/scap/scap/content/ssg-rhel8-ds.xml
-```
-...
-Title: PCI-DSS 3.2...
 
-```bash
 $ oscap info /usr/share/xml/scap/scap/content/ssg-rhel8-ds.xml
+
 ```
 ...
 Title: PCI-DSS 3.2...
 
-- 3. 使用 **oscap info** 命令显示所选数据流的详细信息。包含数据流的 XML 文件通过文件名中的 **-ds** 字符串进行指示。在 **Profiles** 部分，你可以找到可用配置方案列表及其 ID：
+```bash
+
+$ oscap info /usr/share/xml/scap/scap/content/ssg-rhel8-ds.xml
+
+```
+...
+Title: PCI-DSS 3.2...
+
+- 3. 使用 `oscap info`命令显示所选数据流的详细信息。包含数据流的 XML 文件通过文件名中的 `-ds`字符串进行指示。在 `Profiles`部分，你可以找到可用配置方案列表及其 ID：
 
 ```bash
+
 $ oscap info /usr/share/xml/scap/scap/content/ssg-rhel8-ds.xml
+
 ```
 ...
 Profiles:
 ```
 
 (注：原文后部分存在大量重复和格式错乱，译文已根据 Markdown 逻辑进行了清理和对齐，保留了核心含义)
-
-
-
 
 使用此程序通过 SCAP Security Guide 项目中的 Ansible playbook 文件，根据特定的基线对您的系统进行修复。本示例使用了通用操作系统的保护配置文件（OSPP）。
 
@@ -1093,8 +1114,9 @@ Profiles:
 
 ### 前提条件
 
-- 您的 RHEL 8 系统上已安装了 `scap-security-guide` 软件包。
-- 已安装 `ansible` 软件包。更多信息请参阅《Ansible 安装指南》。
+- 您的 RHEL 8 系统上已安装了 `scap-security-guide`软件包。
+
+- 已安装 `ansible`软件包。更多信息请参阅《Ansible 安装指南》。
 
 ### 步骤
 
@@ -1108,7 +1130,7 @@ Profiles:
 
 ### 验证步骤
 
-- 1. 评估系统对 OSPP 配置文件的符合性，并将扫描结果保存到 `ospsp_report.html` 文件中：
+- 1. 评估系统对 OSPP 配置文件的符合性，并将扫描结果保存到 `ospsp_report.html`文件中：
 
 ```
 # xccdf eval --profile ospsp --report ospsp_report.html /usr/share/xml/scap/content/ssg-rhel8-ds.xml
@@ -1116,7 +1138,8 @@ Profiles:
 
 ### 附加资源
 
-- `scap-security-guide(8)` 和 `oscap(8)` 手页
+- `scap-security-guide(8)`和 `oscap(8)`手页
+
 - Ansible 文档
 
 ## 6.6. 创建修复 Ansible Playbook 以使系统符合特定基线
@@ -1125,7 +1148,7 @@ Profiles:
 
 ### 前提条件
 
-- 您的 RHEL 8 系统上已安装了 `scap-security-guide` 软件包。
+- 您的 RHEL 8 系统上已安装了 `scap-security-guide`软件包。
 
 ### 步骤
 
@@ -1141,15 +1164,16 @@ Profiles:
 # xccdf generate --fix-type ansible --output ospp-remediations.yml
 ```
 
-- 3. `ospp-remediations.yml` 文件包含了针对步骤 1 步扫描中失败规则的 Ansible 修复方案。在检查此生成的文件后，您可以使用 `ansible-playbook ospp-remediations.yml` 命令对其进行应用。
+- 3. `ospp-remediations.yml`文件包含了针对步骤 1 步扫描中失败规则的 Ansible 修复方案。在检查此生成的文件后，您可以使用 `ansible-playbook ospp-remediations.yml`命令对其进行应用。
 
 ### 验证步骤
 
-- 1. 在您选择的文本编辑器中，检查 `ospp-remediations.yml` 文件是否包含步骤 1 步扫描中失败的规则。
+- 1. 在您选择的文本编辑器中，检查 `ospp-remediations.yml`文件是否包含步骤 1 步扫描中失败的规则。
 
 ### 附加资源
 
-- `scap-security-guide(8)` 和 `oscap(8)` 手页
+- `scap-security-guide(8)`和 `oscap(8)`手页
+
 - Ansible 文档
 
 ## 6.7. 创建用于后续应用的修复 Bash 脚本
@@ -1158,11 +1182,11 @@ Profiles:
 
 ### 前提条件
 
-- 您的 RHEL 8 系统上已安装了 `scap-security-guide` 软件包。
+- 您的 RHEL 8 系统上已安装了 `scap-security-guide`软件包。
 
 ### 步骤
 
-- 1. 使用 `oscap` 命令扫描系统并将结果保存到 XML 文件中。在以下示例中，`oscap` 根据 `pci-dss` 配置文件评估系统：
+- 1. 使用 `oscap`命令扫描系统并将结果保存到 XML 文件中。在以下示例中，`oscap`根据 `pci-dss`配置文件评估系统：
 
 ```
 # xccdf eval --profile pci-dss --results pci-dss-results.xml /usr/share/xml/scap/content/ssg-rhel8-ds.xml
@@ -1174,19 +1198,19 @@ Profiles:
 # xccdf generate --profile pci-dss --fix-type bash --output pci-dss-remediations.sh pci-dss-remediations.xml
 ```
 
-- 3. `pci-dss-remediations.sh` 文件包含了步骤 1 步扫描中失败规则的补措施。在检查此文件后，当您位于该文件所在的目录时，可以使用 `./pci-dss-remediations.sh` 命令对其进行应用。
+- 3. `pci-dss-remediations.sh`文件包含了步骤 1 步扫描中失败规则的补措施。在检查此文件后，当您位于该文件所在的目录时，可以使用 `./pci-dss-remediations.sh`命令对其进行应用。
 
 ### 验证步骤
 
-- 1. 在您选择的文本编辑器中，检查 `pci-dss-remediations.sh` 文件是否包含步骤 1 步扫描中失败的规则。
+- 1. 在您选择的文本编辑器中，检查 `pci-dss-remediations.sh`文件是否包含步骤 1 步扫描中失败的规则。
 
 ### 附加资源
 
-- `scap-security-guide(8)`、`oscap(8)` 和 `bash(1)` 手页
+- `scap-security-guide(8)`、`oscap(8)`和 `bash(1)`手页
 
 ## 6.8. 使用 SCAP Workbench 使用自定义配置文件扫描系统
 
-SCAP Benchmark 包含在 `scap-benchmark` 软件包中，是一个图形实用程序，允许用户对本地或远程系统执行配置和漏洞扫描、执行系统修复，并根据扫描评估生成报告。注意，与 `oscap` 命令行工具相比，SCAP Benchmark 的功能有限。SCAP Benchmark 以数据流文件的形式处理安全内容。
+SCAP Benchmark 包含在 `scap-benchmark`软件包中，是一个图形实用程序，允许用户对本地或远程系统执行配置和漏洞扫描、执行系统修复，并根据扫描评估生成报告。注意，与 `oscap`命令行工具相比，SCAP Benchmark 的功能有限。SCAP Benchmark 以数据流文件的形式处理安全内容。
 
 ### 6.8.1. 使用 SCAP Workbench 扫描并修复系统
 
@@ -1194,11 +1218,11 @@ SCAP Benchmark 包含在 `scap-benchmark` 软件包中，是一个图形实用�
 
 ### 前提条件
 
-- 您的系统上安装了 `scap-benchmark` 软件包。
+- 您的系统上安装了 `scap-benchmark`软件包。
 
 ### 步骤
 
-- 1. 要运行 SCAP Workbench，请在 GNOME 桌面环境中输入 `scap-workbench` 并按回车：
+- 1. 要运行 SCAP Workbench，请在 GNOME 桌面环境中输入 `scap-workbench`并按回车：
 
 ```
 $ scap-workbench
@@ -1210,12 +1234,13 @@ $ scap-workbench
 
 ![](img/ce775f7a90c8af16ca29521)
 
-- 3. 通过勾选 **Remediate**（修复）复选框允许自动修复。启用此选项后，**SCAP Workbench** 将尝试根据策略修复系统。
+- 3. 通过勾选 `Remediate`（修复）复选框允许自动修复。启用此选项后，**SCAP Workbench**将尝试根据策略修复系统。
 
 > 警告
-> 如果不谨慎使用，带有 `Remediate` 选项的系统评估可能会导致系统无法运行。红帽不提供任何自动化方法来撤销安全加固修复所作的更改。在默认配置下，RHEL 系统支持修复功能。如果您的系统在安装后被更改过，运行修复可能无法使其符合所需的配置方案。
 
-- 4. 点击 **Scan** 按钮使用选定的配置文件扫描系统。
+> 如果不谨慎使用，带有 `Remediate`选项的系统评估可能会导致系统无法运行。红帽不提供任何自动化方法来撤销安全加固修复所作的更改。在默认配置下，RHEL 系统支持修复功能。如果您的系统在安装后被更改过，运行修复可能无法使其符合所需的配置方案。
+
+- 4. 点击 **Scan**按钮使用选定的配置文件扫描系统。
 
 # ssg-rhel8-ds.xml - SCAP Workbench
 
@@ -1227,9 +1252,9 @@ $ scap-workbench
 | 目标 | 本地机器 机器（通过 SSH） 展开 |
 | 规则 | 审计备份限制失败<br>启用对启动前守护进程的审计失败<br>启用审计通过<br>配置 SSSD 凭据过期<br>配置 SSSD 内存缓存过期<br>禁用 SSH 登录失败<br>禁用空密码访问 失败<br>Kerberos 认证通过<br>基于主机的认证通过<br>禁用 Rhosts RSA 认证支持<br>禁用 SSH 用户已知主机支持失败 | 100% (151 个结果，151 个已选中) |
 
-- 5. 以 XCCDF、ARF 或 HTML 文件格式存储扫描结果，点击 **Save Results** 下拉框。选择 **HTML Report** 选项生成人类可读格式的扫描报告。XCCDF 和 ARF 格式适用于自动处理。您可以重复选择这三个选项。
+- 5. 以 XCCDF、ARF 或 HTML 文件格式存储扫描结果，点击 **Save Results**下拉框。选择 **HTML Report**选项生成人类可读格式的扫描报告。XCCDF 和 ARF 格式适用于自动处理。您可以重复选择这三个选项。
 
-- 6. 使用 **Generate remediation role** 弹出菜单将结果导出到文件。
+- 6. 使用 **Generate remediation role**弹出菜单将结果导出到文件。
 
 ### 6.8.2. 使用 SCAP Workbench 定制安全配置文件
 
@@ -1237,16 +1262,15 @@ $ scap-workbench
 
 ### 前提条件
 
-- 您的系统上安装了 `scap-workbench` 软件包。
+- 您的系统上安装了 `scap-workbench`软件包。
 
 ### 步骤
 
-- 1. 运行 **SCAP Workbench**，并通过 **File** 菜单中的 **Open content from SCAP Security Guide** 或 **Open Other Content** 选择要定制的配置文件。
-
-- 2. 根据需要调整选定的安全配置文件，点击 **Customize** 按钮。
 
 
+- 1. 运行 `SCAP Workbench`，并通过 `File` 菜单中的 `Open content from SCAP Security Guide` 或 `Open Other Content` 选择要定制的配置文件。
 
+- 2. 根据需要调整选定的安全配置文件，点击 `Customize` 按钮。
 
 ### Red Hat Enterprise Linux 8 安全加固
 
@@ -1254,31 +1278,36 @@ $ scap-workbench
 
 ![](img/ce7756f7a90c9abeaf166ca2952129eb_51_0.png)
 
-- 3. 找到规则以修改按逻辑分组组织的规则的树形结构，或者修改**搜索(Search)**字段。
+- 3. 找到规则以修改按逻辑分组组织的规则的树形结构，或者修改 `搜索(Search)` 字段。
+
 - 4. 使用树结构中的复选框包含或排除规则，或修改适用规则的值。
 
 ![](img/ce7756f7a90c9abeaf166ca2952129eb_51_1.png)
 
-- 5. 点击**确定(OK)**按钮确认更改。
+- 5. 点击 `确定(OK)` 按钮确认更改。
 
 - 6. 要永久保存您的更改，请使用以下方法之一：
-* 使用**文件(File)**菜单中的**仅保存自定义(Save Customization Only)**单独保存自定义文件。
-* 通过**文件(File)**菜单中的**全部保存(Save All)**一次性保存所有内容。如果您选择了**保存到目录(Into a directory)**选项，**SCAP Workbench**将把数据流文件和自定义文件都保存到指定位置。您可以将其作为备份方案。
+
+* 使用 `文件(File)` 菜单中的 `仅保存自定义(Save Customization Only)` 单独保存自定义文件。
+
+* 通过 `文件(File)` 菜单中的 `全部保存(Save All)` 一次性保存所有内容。如果您选择了 `保存到目录(Into a directory)` 选项，`SCAP Workbench` 将把数据流文件和自定义文件都保存到指定位置。您可以将其作为备份方案。
 
 # 第 6 章。扫描系统以检查配置合性和漏洞
 
-通过选择**作为 RPM**选项，您可以指示 **SCAP Workbench** 创建一个包含数据流文件和自定义文件的 RPM 包。这对于向无法远程扫描的系统分发安全内容，以及交付内容进行进一步处理非常有用。
+通过选择 `作为 RPM` 选项，您可以指示 `SCAP Workbench` 创建一个包含数据流文件和自定义文件的 RPM 包。这对于向无法远程扫描的系统分发安全内容，以及交付内容进行进一步处理非常有用。
 
 ### 注意
 
-由于 **SCAP Workbench** 不支持自定义规则基于结果的修复，请配合 **oscap** 命令行工具使用导出的报告。
+由于 `SCAP Workbench` 不支持自定义规则基于结果的修复，请配合 `oscap` 命令行工具使用导出的报告。
 
 ![](img/ce7756f7a90c9abeaf166ca2952129eb_52_0.png)
 
 ## 6.8.3. 相关信息
 
-- scap-workbench(8) man page
+- `scap-workbench(8)` man page
+
 - SCAP Workbench 用户手册
+
 - 使用 Satellite 6.x 部署自定义 SCAP 策略 - 关于定制脚本的知识库文章
 
 # 6.9. 在安装后立即部署符合安全配置的系统
@@ -1291,28 +1320,39 @@ $ scap-workbench
 
 ### 前提条件
 
-- 您已进入**图形化(graphical)**安装程序。请注意，**OSCAP Anaconda 附加组件**不支持纯文本安装。
-- 您已进入**安装摘要(Installation Summary)**窗口。
+- 您已进入 `图形化(graphical)` 安装程序。请注意，`OSCAP Anaconda 附加组件` 不支持纯文本安装。
+
+- 您已进入 `安装摘要(Installation Summary)` 窗口。
 
 ### 步骤
 
-- 从**安装摘要(Installation Summary)**窗口，点击**软件选择(Software Selection)**。打开**软件选择**窗口。
-- 从**基础环境(Base Environment)**窗格中，选择**服务器(Server)**环境。您只能选择一个基础环境。
+- 从 `安装摘要(Installation Summary)` 窗口，点击 `软件选择(Software Selection)`。打开 `软件选择` 窗口。
+
+- 从 `基础环境(Base Environment)` 窗格中，选择 `服务器(Server)` 环境。您只能选择一个基础环境。
 
 > ### 警告
+
 如果您想部署符合标准的系统，请勿使用带 GUI 的基础环境 Server。作为 SCAP指南一部分提供的安全配置文件可能与 Server GUI 的扩展包集不兼容。更多信息请参见例如 BZ#1648162 BZ#1871756, BZ#1816199。
 
-- 1. 点击**完成(Done)**应用设置并返回**安装摘要**窗口。
-- 2. 点击**安全策略(Security Policy)**。打开**安全策略**窗口。
-- 3. 要在系统上启用安全策略，将**应用安全策略(Apply security policy)**开关切换到**开启(ON)**。
-- 4. 从配置文件面板中选择**通用操作系统保护配置文件(Protection Profile for General Purpose Operating Systems)**。
-- 5. 点击**选择配置文件(Select Profile)**确认选择。
-- 6. 在窗口底部显示的**已执行或未执行的(Changes that were done or not to be done)**窗格中确认更改。完成任何手动更改。
-- 7. 由于 OSPP 有必须满足的严格分区要求，请为 **/boot**, **/home**, **/var**, **/var/log**, **/tmp** 和 **/var/log/audit** 创建独立的分区。
+- 1. 点击 `完成(Done)` 应用设置并返回 `安装摘要` 窗口。
+
+- 2. 点击 `安全策略(Security Policy)`。打开 `安全策略` 窗口。
+
+- 3. 要在系统上启用安全策略，将 `应用安全策略(Apply security policy)` 开关切换到 `开启(ON)`。
+
+- 4. 从配置文件面板中选择 `通用操作系统保护配置文件(Protection Profile for General Purpose Operating Systems)`。
+
+- 5. 点击 `选择配置文件(Select Profile)` 确认选择。
+
+- 6. 在窗口底部显示的 `已执行或未执行的(Changes that were done or not to be done)` 窗格中确认更改。完成任何手动更改。
+
+- 7. 由于 OSPP 有必须满足的严格分区要求，请为 `/boot`, `/home`, `/var`, `/var/log`, `/tmp` 和 `/var/log/audit` 创建独立的分区。
+
 - 8. 完成图形安装过程。
 
 > ### 注意
-图形安装程序在成功后会自动创建一个相应的 Kickstart 文件。您可以使用 **/root/anaconda-kscfg** 自动安装符合 OSPP 的系统。
+
+图形安装程序在成功后会自动创建一个相应的 Kickstart 文件。您可以使用 `/root/anaconda-kscfg` 自动安装符合 OSPP 的系统。
 
 ### 验证步骤
 
@@ -1333,14 +1373,15 @@ $ scap-workbench
 
 ### 前提条件
 
-- 您的 RHEL 8 系统上安装了 scap-security-guide 包。
+- 您的 RHEL 8 系统上安装了 `scap-security-guide` 包。
 
 ### 步骤
 
-- 1. 在您选择的编辑器中打开 /usr/share/scap-security-guide/kickstarts/ssg-rhel8-ossp-ks.cfg Kickstart 文件。
-- 2. 更新分区方案以符合您的配置需求。为了符合 OSPP 标准get，必须保留 /boot, /home, /var, /var/log, /var/tmp 和 /var/log/audit 的独立分区，您只能更改分区的大小。
+- 1. 在您选择的编辑器中打开 `/usr/share/scap-security-guide/kickstarts/ssg-rhel8-ossp-ks.cfg` Kickstart 文件。
 
-> > 警告 OSCAP Anaconda Addon 插件不支持纯文本安装，请勿在 Kickstart 文件中使用文本选项。更多信息请参见 RHBZ#1674001。
+- 2. 更新分区方案以符合您的配置需求。为了符合 OSPP 标准get，必须保留 `/boot`, `/home`, `/var`, `/var/log`, `/var/tmp` 和 `/var/log/audit` 的独立分区，您只能更改分区的大小。
+
+> > 警告 `OSCAP Anaconda Addon` 插件不支持纯文本安装，请勿在 Kickstart 文件中使用文本选项。更多信息请参见 RHBZ#1674001。
 
 - 3. 按照“使用 Kickstart 执行自动安装”中的描述启动 Kickstart 安装。
 
@@ -1365,13 +1406,13 @@ $ scap-workbench
 
 使用此程序查找容器或容器镜像中的安全漏洞。
 
-注意 scap-podman 命令从 RHEL 8.2 开始可用。对于 RHEL 8.1 和 8.0，请使用“在 RHEL 8 中使用 OpenSCAP 扫描容器”知识库文章中的解决方法。
+注意 `scap-podman` 命令从 RHEL 8.2 开始可用。对于 RHEL 8.1 和 8.0，请使用“在 RHEL 8 中使用 OpenSCAP 扫描容器”知识库文章中的解决方法。
 
 ![](img/ce7756f7a90c9abeaf166ca2952129eb_54_1.png)
 
 ### 前提条件
 
-已安装 openscap-utils 包。
+已安装 `openscap-utils` 包。
 
 ### 步骤
 
@@ -1394,7 +1435,7 @@ registry.access.redhat.com/ubi8/ubi latest 096ca6a207 7 weeks ago 239 MB
 # oscap-podman 096ca207 oval eval --report vulnerability.html rhel-8.xml
 ```
 
-注意 oscap-podman 命令需要 root 权限，容器 ID 是第一个参数。
+注意 `oscap-podman` 命令需要 root 权限，容器 ID 是第一个参数。
 
 ### 验证步骤
 
@@ -1406,7 +1447,7 @@ $ firefox vulnerability.html &
 
 ### 其他资源
 
-- 有更多信息请参见 oscap-podman(8) 和 oscap(8) man pages。
+- 有更多信息请参见 `oscap-podman(8)` 和 `oscap(8)` man pages。
 
 # 6.11. 评估容器或容器镜像与特定基准的符合性
 
@@ -1414,16 +1455,13 @@ $ firefox vulnerability.html &
 
 ![](img/ce7756f7a90c9abeaf166ca2952129eb_55_0.png)
 
-> 注意 scap-podman 命令从 RHEL 8.2 开始可用。对于 RHEL 8.1 和 8.0，请使用“在 RHEL 8 中使用 OpenSCAP 扫描容器”知识库文章中的解决方法。
+> 注意 `scap-podman` 命令从 RHEL 8.2 开始可用。对于 RHEL 8.1 和 8.0，请使用“在 RHEL 8 中使用 OpenSCAP 扫描容器”知识库文章中的解决方法。
 
 ### 前提条件
 
-已安装 openscap-utils 和 scap-security-guide 包。
+已安装 `openscap-utils` 和 `scap-security-guide` 包。
 
 ### 步骤
-
-
-
 
 获取容器或容器镜像的 ID，例如：
 
@@ -1433,13 +1471,13 @@ REPOSITORY TAG IMAGE ID CREATED SIZE
 registry.redhat.com/ubi8/ubi latest 096ca65a207 7 weeks ago 239 MB
 ```
 
-评估容器对 OSPP 配置档的合规性，并将扫描结果保存到 report.html HTML 文件中
+评估容器对 OSPP 配置档的合规性，并将扫描结果保存到 `report.html` HTML 文件中
 
 ```
 # oscap-09cae65a2207 xcdff eval --report report.html --profile ospsp/usr/share/xml/scap/content/scap-rhel8-ds.html
 ```
 
-将 09cae65a2007 替换为您的容器镜像 ID，并将 `ospsp` 值替换为 `pci-dss`，如果您正在评估对 PCI-DSS 基准的合规性。注意，`oscap-podman` 命令需要权限。
+将 `09cae65a2007` 替换为您的容器镜像 ID，并将 `ospsp` 值替换为 `pci-dss`，如果您正在评估对 PCI-DSS 基准的合规性。注意，`oscap-podman` 命令需要权限。
 
 ### 验证步骤
 
@@ -1450,7 +1488,8 @@ $ firefox report.html &
 ```
 
 > 注意
-标记为 notapplicable 的规则是不适用于容器化系统的规则。这些规则仅适用于裸机和虚拟化系统。
+
+标记为 `notapplicable` 的规则是不适用于容器化系统的规则。这些规则仅适用于裸机和虚拟化系统。
 
 ### 附加资源
 
@@ -1465,29 +1504,49 @@ $ firefox report.html &
 # 表 6.2. RHEL 支持的 SCAP Security GUIDE 版本
 
 | Red Hat Enterprise Linux 版本 | SCAP Security Guide 版本 |
+
 |---|---|
+
 | RHEL 6.6 | scap-security-guide-0.18-3.el6 |
+
 | RHEL 6.9 | scap-security-guide-0.18-3.el6 |
+
 | RHEL 6.10 | scap-security-guide-0.18-4.el6 |
+
 | RHEL 7.2 AUS | scap-security-guide-0.25-3.el7 |
+
 | RHEL 7.3 AUS | scap-security-guide-0.130-5.el7_3 |
+
 | RHEL 7.4 AUS, E4S | scap-security-guide-0.133-6.el7_4 |
+
 | RHEL 7.5 (batch update) | scap-security-guide-0.136-10.el7_5 |
+
 | RHEL 7.6 EUS | scap-security-guide-0.140-13.el7_6 |
+
 | RHEL 7.7 EUS | scap-security-guide-0.143-13.el7 |
+
 | RHEL 7.8 (batch update) | scap-security-guide-0.146-11.el7 |
+
 | RHEL 8.0 SAP | scap-security-guide-0.142-11.el8 |
+
 | RHEL 8.1 EUS | scap-security-guide-0.146-1.el8 |
+
 | RHEL 8.2 (batch update) | scap-security-guide-0.148-7.el8 |
 
 # 6.13. 相关信息
 
 +   - OpenSCAP 项目页面 - OpenSCAP 项目主页提供了关于 `scap` 工具以及与其他 SCAP 相关的组件和项目的详细信息。
+
 -- SCAP Workbench 项目页面 - SCAP Workbench 项目主页提供了关于 `scap-workbench` 程序的详细信息。
+
 -- SCAP Security Guide (SSG) 项目页面 - SSG 主页为 Red Hat Enterprise Linux 提供了最新的安全内容。
+
 -- Red Hat Security Demos：创建自定义策略内容以自动化安全合规性 - 这是一个实操实验室，通过使用 Red Hat Enterprise Linux 中包含的工具（结合行业标准安全策略和安全策略），获得自动化安全合规性的经验。如果您需要培训或亲自访问这些实验室，请联系您的 Red 账户团队获取详情。
+
 -- Red Hat Security Demos：使用 RHEL 安全技术保护自己 - 这是一个实操实验室，学习如何使用 Red Hat Enterprise Linux 和 OpenSCAP 中提供的关键安全技术，在您的 RHEL 系统各个层级实现安全。如果您需要培训或亲自访问这些实验室，请联系您的 Red 账户团队获取详情。
+
 -- 美国标准与技术研究院 (NIST) SCAP 页面 - 该页面代表了大量的 SCAP 相关材料，包括 SCAP 出版物、规范和 SCAP 验证计划。
+
 -- 国家漏洞数据库 (NVD) - 该页面代表了最大的 SCAP 内容库和其他基于 SCAP 的漏洞管理数据库。
 
 +   - **Red Hat OVAL 内容库** - 这是一个包含 Red Hat Enterprise Linux 系统漏洞 OVAL 定义的存储库。这是推荐的漏洞内容源。
@@ -1512,11 +1571,14 @@ $ firefox report.html &
 
 操作步骤
 
-+   1. 安装 aide 软件包：
++   1. 安装 `aide` 软件包：
+
 ```bash
 # yum install aide
 ```
+
 2. 生成初始数据库：
+
 ```bash
 # aide --init
 ```
@@ -1524,9 +1586,11 @@ $ firefox report.html &
 > 在默认配置中，`aide --init` 命令会检查 `/etc/aide.conf` 文件中定义的一组目录和文件。要在 AIDE 数据库中包含额外的目录或文件，并更改它们的监控参数，请相应地编辑 `/etc/aide.conf`。
 
 +   3. 开始使用 aide，从初始数据库文件名中删除 `.new` 字符串：
+
 ```bash
 # mv /var/lib/aide/aide.db.new /var/lib/aide/aide.db.gz
 ```
+
 4. 要更改 AIDE 数据库的位置，请编辑 `/etc/aide.conf` 文件并修改 `DBDIR` 变量。为了额外的安全，请将数据库、配置和 `/usr/sbin/aide` 二进制文件存储在安全位置（例如只读介质）。
 
 # 7.2. 使用 AIDE 执行完整性检查
@@ -1538,24 +1602,38 @@ $ firefox report.html &
 操作步骤
 
 +   1. 发起手动检查：
+
 ```bash
 # aide --check
 ```
 
-> 在默认配置中，`aide --init` 命令会检查 `/etc/aide.conf` 文件中定义的一组目录和文件。要在 AIDE 数据库中包含额外的目录或文件，并更改它们的监控参数，请相应地编辑 `/etc/aide.conf`。
 
-+   3. 开始使用 aide，从初始数据库文件名中删除 `.new` 字符串：
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
+
+在默认配置中，`aide --init`命令会检查`/etc/aide.conf`文件中定义的一组目录和文件。要在 AIDE 数据库中包含额外的目录或文件，并更改它们的监控参数，请相应地编辑`/etc/aide.conf`。
+
+### 3. 开始使用 aide，从初始数据库文件名中删除 `.new` 字符串：
+
 ```bash
 # mv /var/lib/aide/aide.db.new /var/lib/aide/aide.db.gz
 ```
-4. 要更改 AIDE 数据库的位置，请编辑 `/etc/aide.conf` 文件并修改 `DBDIR` 变量。为了额外的安全，请将数据库、配置和 `/usr/sbin/aide` 二进制文件存储在安全位置（例如只读介质）。
+
+### 4. 要更改 AIDE 数据库的位置，请编辑`/etc/aide.conf`文件并修改`DBDIR`变量。为了额外的安全，请将数据库、配置和`/usr/sbin/aide`二进制文件存储在安全位置（例如只读介质）。
 
 ## 7.3. 更新 AIDE
 
-在验证更改后，`aide --init` 命令会检查 `/etc/aide.conf` 文件中定义的一组目录和文件。要在 AIDE 数据库中包含额外的目录或文件，并更改它们的监控参数，请相应地编辑 `/etc/aide.conf`。
-
-
-
+在验证更改后，`aide --init`命令会检查`/etc/aide.conf`文件中定义的一组目录和文件。要在 AIDE 数据库中包含额外的目录或文件，并更改它们的监控参数，请相应地编辑`/etc/aide.conf`。
 
 ### 附加资源
 
@@ -1568,8 +1646,6 @@ $ firefox report.html &
 
 LUKS2 格式的设计是为了以后对各个部分进行更新，而无需更改二进制结构。LUKS 内部使用 JSON 文本格式存储元数据，同时它可以检测元数据损坏，并允许从元数据副本进行自动修复。
 
-![](img/ce7756f7a90c9abeaf166ca2952129eb_62_0.png)
-
 > 注意
 > 在需要兼容仅支持 LUKS1 的旧系统中，请使用 LUKS2。请注意，RHEL 7 从 7.6 版本开始支持 LUKS2 格式。
 
@@ -1578,8 +1654,8 @@ LUKS2 格式的设计是为了以后对各个部分进行更新，而无需更�
 
 | LUKS 版本 | 加密命令 |
 |---|---|
-| LUKS2 | cryptsetup reencrypt |
-| LUKS1 | cryptsetup-reencrypt |
+| LUKS2 | `cryptsetup reencrypt` |
+| LUKS1 | `cryptsetup-reencrypt` |
 
 ## 在线重加密
 
@@ -1596,31 +1672,31 @@ LUKS1 格式不支持在线重加密。
 
 LUKS2 格式的灵感来源于 LUKS1。在某些情况下，你可以将 LUKS1 转换为 LUKS2。在以下特定场景下无法进行转换：
 
-- LUKS1 设备被标记为由基于策略的解密（PBD - Clevis）解决方案使用。当检测到某些 luksmeta 元数据时，cryptsetup 工具将转换该设备。
+- LUKS1 设备被标记为由基于策略的解密（PBD - Clevis）解决方案使用。当检测到某些 `luksmeta` 元数据时，`cryptsetup` 工具将转换该设备。
 - 设备处于活动状态。在进行任何转换之前，设备必须处于非活动状态。
 
 ## 8.3. LUKS2 重加密期间数据保护的选项
 
 LUKS2 提供了多个选项，在重加密过程中优先考虑性能或数据保护：
 
-### 校验和 (checksum)
+### 校验和 `checksum`
 
 这是默认模式。它平衡了数据保护和性能。该模式在重加密区域存储扇区的单独校验和，因此恢复过程可以检测 LUKS2 已经重加密的扇区。该模式要求块设备扇区是原子。
 
-### 日志 (journal)
+### 日志 `journal`
 
 这是最安全的模式，但速度最慢。该模式在二进制区域写入重加密区域，由 LUKS2 写入数据。
 
-### 无 (none)
+### 无 `none`
 
-此模式优先考虑性能且不提供数据保护。它仅防止安全终止导致损坏，例如 SIGTERM 信号或用户按下 Ctrl+C。任何意外的系统崩溃或应用程序崩溃可能导致数据损坏。
+此模式优先考虑性能且不提供数据保护。它仅防止安全终止导致损坏，例如 `SIGTERM` 信号或用户按下 `Ctrl+C`。任何意外的系统崩溃或应用程序崩溃可能导致数据损坏。
 
-你可以使用 cryptsetup 的 `--resilience` 选项来选择模式。
+你可以使用 `cryptsetup` 的 `--resilience` 选项来选择模式。
 
 如果 LUKS2 重加密过程意外强制终止，LUKS2 可以通过以下方式之一执行恢复：
 
-- 自动：在下次打开 LUKS2 设备的操作期间进行。此操作由 cryptsetup open 命令或通过 system-cryptsetup 挂载设备触发。
-- 手动：通过在 LUKS2 设备上使用 cryptsetup repair 命令。
+- 自动：在下次打开 LUKS2 设备的操作期间进行。此操作由 `cryptsetup open` 命令或通过 `system-cryptsetup` 挂载设备触发。
+- 手动：通过在 LUKS2 设备上使用 `cryptsetup repair` 命令。
 
 ## 8.4. 使用 LUKS2 加密块设备上的现有数据
 
@@ -1639,19 +1715,24 @@ LUKS2 提供了多个选项，在重加密过程中优先考虑性能或数据�
 操作步骤
 
 - 1. 卸载你加密的设备上的所有文件系统。例如：
+
 ```bash
 # unmount /dev/sdb1
 ```
 
 - 2. 为存储 LUKS 头留出可用空间。选择适用于你场景的以下选项之一：
+
   - 在加密逻辑卷的情况下，你可以扩展逻辑卷而不调整文件大小。例如：
+
 ```bash
 # lvextend -L+32M vg0/lv0
 ```
-  - 使用分区管理工具（如 parted）扩展分区。
-  - 缩小设备上的文件系统。你可以使用 resize2fs 实用处理 ext2、ext3 或 ext4 文件系统。注意，你不能缩小 XFS 文件系统。
+
+  - 使用分区管理工具（如 `parted`）扩展分区。
+  - 缩小设备上的文件系统。你可以使用 `resize2fs` 实用处理 `ext2`、`ext3` 或 `ext4` 文件系统。注意，你不能缩小 XFS 文件系统。
 
 - 3. 初始化加密。例如：
+
 ```bash
 # cryptsetup reencrypt \
   --encrypt \
@@ -1663,18 +1744,20 @@ LUKS2 提供了多个选项，在重加密过程中优先考虑性能或数据�
 该命令会要求你输入密码并启动加密过程。
 
 - 4. 挂载设备：
+
 ```bash
 # mount /dev/mapper/sdb1_encrypted /mnt/sdb1_encrypted
 ```
 
 - 5. 启动在线加密：
+
 ```bash
 # cryptsetup reencrypt --reuse-only /dev/sdb1
 ```
 
 附加资源
 
-- 详情请参阅 cryptsetup(8)、lvextend(8)、resize2fs(8) 和 parted(8) 手页。
+- 详情请参阅 `cryptsetup(8)`、`lvextend(8)`、`resize2fs(8)` 和 `parted(8)` 手页。
 
 ## 8.5. 使用带有分离标头的 LUKS 加密块设备上的现有数据
 
@@ -1693,10 +1776,13 @@ LUKS2 提供了多个选项，在重加密过程中优先考虑性能或数据�
 操作步骤
 
 - 1. 卸载设备上的所有文件系统。例如：
+
 ```
 # umount /dev/sdb1
 ```
+
 - 2. 初始化加密：
+
 ```bash
 # cryptsetup reencrypt \
 --encrypt \
@@ -1710,18 +1796,20 @@ LUKS2 提供了多个选项，在重加密过程中优先考虑性能或数据�
 该命令会要求你输入密码并启动加密过程。
 
 - 3. 挂载设备：
+
 ```bash
 # mount /dev/mapper/sdb1_encrypted /mnt/sdb1_encrypted
 ```
 
 - 4. 启动在线加密：
+
 ```bash
 # cryptsetup reencrypt --resume-only --header /path/to/header /dev/sdb1
 ```
 
 ### 附加资源
 
-- 更多详情请参阅 cryptsetup(8) 手页。
+- 更多详情请参阅 `cryptsetup(8)` 手页。
 
 ## 8.6. 使用 LUKS2 加密空白块设备
 
@@ -1734,46 +1822,49 @@ LUKS2 提供了多个选项，在重加密过程中优先考虑性能或数据�
 操作步骤
 
 - 1. 将分区设置为加密的 LUKS 分区：
+
 ```
 # cryptsetup luksFormat /dev/sdb1
 ```
 
 - 2. 打开 LUKS 分区：
+
 ```
 # cryptsetup open /dev/sdb1 sdb1_encrypted
 ```
 
 这会解锁分区并将其映射到设备映射器。要执行此操作，你需要创建一个文件系统。例如：
+
 ```
 # mkfs -t ext4 /dev/mapper/sdb1_encrypted
 ```
 
 - 3. 挂载设备：
+
 ```bash
 # mount /dev/mapper/sdb1_encrypted /mnt/sdb1_encrypted
 ```
 
 ### 附加资源
 
-- 更多详情请参阅 cryptsetup(8) 手页。
+- 更多详情请参阅 `cryptsetup(8)` 手页。
 
 ## 第 9 章. 使用基于策略的解密配置加密卷的自动解锁
 
-[content
 基于策略的解密（PBD）是一套技术，用于解锁硬盘和虚拟机上的加密卷。PBD 使用了多种解锁方法，例如用户密码、可信平台模块（TPM）设备、连接到系统的 PKCS11 设备（例如智能卡）或网络服务器。
 
 PBD 还将不同的解锁方法组合成策略，使得能够以不同的方式解锁同一个卷。红帽企业 Linux 中 PBD 的当前实现包含 Clevis 框架和插件。目前有：
 
-- tang - 使用网络服务器解锁
-- tpm2 - 使用 TPM 策略解锁
+- `tang` - 使用网络服务器解锁
+- `tpm2` - 使用 TPM 策略解锁
 
 网络边界加密（NBDE）是 PBD 的子类，允许将加密卷绑定到特殊的网络服务器。NBDE 的当前实现包含了 Tang 服务器的 Clevis 插件以及 Tang 服务器本身。
 
-##9.1. 网络边界加密
+## 9.1. 网络边界加密
 
 在红帽企业 Linux 中，NBDE 通过以下组件和技术实现。
 
-图 9.1 使用 LUKS 加密卷时的 NBDE 方案。luksmeta 包不用于 LUKS2 卷。
+图 9.1 使用 LUKS 加密卷时的 NBDE 方案。`luksmeta` 包不用于 LUKS2 卷。
 
 | CLEVIS 框架 | TANG 服务器 |
 | :--- | :--- |
@@ -1782,10 +1873,7 @@ PBD 还将不同的解锁方法组合成策略，使得能够以不同的方式�
 
 Tang 是一个将数据绑定到网络呈现的服务器。当系统绑定到安全网络时，它使包含数据的系统可用。Tang 是无状态的，不需要 TLS 或身份验证。与托管型解决方案（服务器存储所有加密密钥并了解每个使用的密钥）不同，Tang 与任何客户端密钥交互，因此永远不会从客户端获取身份识别信息。
 
-Clevis 是一个自动解密的插件化框架。在 NBDE 中，Clevis 提供 LUKS 卷的自动解锁。clevis 包提供了该功能的客户端实现。
-
-
-
+Clevis 是一个自动解密的插件化框架。在 NBDE 中，Clevis 提供 LUKS 卷的自动解锁。`clevis` 包提供了该功能的客户端实现。
 
 ## 9. 使用基于策略的解密配置加密卷自动解锁
 
@@ -1799,7 +1887,7 @@ Clevis 和 Tang 是提供网络绑定（network-bound encryption）的客户端�
 
 用于 Tang 的 Clevis pin 使用其中一个公钥生成一个唯一的、在密码学上强大的加密密钥。一旦使用该密钥对数据进行加密，密钥就会被丢弃。Clevis 客户端应将配置操作产生的状态存储在方便的位置。加密数据的过程就是配置步骤。
 
-LUKS 2 (LUKS2) 是 Red Hat Enterprise Linux 8 中的默认格式，因此 NBDE 的配置状态存储在 LUKS2 头部中。lukmeta 软件包对 NBDE 配置状态的利用仅用于使用 LUKS1 加密的卷。用于 Tang 的 Clevis pin 同时支持 LUKS1 和 LUKS2，无需特殊指定。
+LUKS 2 (`LUKS2`) 是 Red Hat Enterprise Linux 8 中的默认格式，因此 NBDE 的配置状态存储在 LUKS2 头部中。`lukmeta` 软件包对 NBDE 配置状态的利用仅用于使用 LUKS1 加密的卷。用于 Tang 的 Clevis pin 同时支持 LUKS1 和 LUKS2，无需特殊指定。
 
 当客户端准备访问其数据时，它会加载配置步骤中产生的元数据并响应恢复加密密钥。这一过程就是恢复步骤。
 
@@ -1817,7 +1905,7 @@ LUKS 2 (LUKS2) 是 Red Hat Enterprise Linux 8 中的默认格式，因此 NBDE �
 # yum install clevis
 ```
 
-- 2. 要解密数据，使用 `clevis decrypt` 命令并提供 JSON Web Encryption (JWE) 格式的密文，例如：
+- 2. 要解密数据，使用 `clevis decrypt` 命令并提供 JSON Web Encryption (`JWE`) 格式的密文，例如：
 
 ```
 $ clevis decrypt < secret.jwe
@@ -1825,7 +1913,7 @@ $ clevis decrypt < secret.jwe
 
 其他资源
 
-- - 快速参考，请查看内置的 CLI 帮助：
+- 快速参考，请查看内置的 CLI 帮助：
 
 ```
 $ clevis
@@ -1845,7 +1933,7 @@ clevis decrypt      使用加密时定义的策略进行解密
 - `clevis unbind` 解除绑定到 LUKS 卷的插件
 - `clevis unlock` 解锁 LUKS 卷
 
-- - 欲需更多信息，请参阅 `clevis(1)` 手页。
+- 欲需更多信息，请参阅 `clevis(1)` 手页。
 
 ## 9.3. 在 SELinUX 强制模式下部署 TANG 服务器
 
@@ -1853,16 +1941,18 @@ clevis decrypt      使用加密时定义的策略进行解密
 
 ### 前提条件
 
-- - 已安装 `policycoreutils-python-utils` 包及其依赖项。
+- 已安装 `policycoreutils-python-utils` 包及其依赖项。
 
- 步骤
+步骤
 
 - 1. 要安装 tang 包及其依赖项，以 root 身份输入以下命令：
+
 ```bash
 # yum install tang
 ```
 
-- 2. 选择一个未占用的端口（例如 7500/tcp），并允许 tangd 服务绑定到该端口：
+- 2. 选择一个未占用的端口（例如 `7500/tcp`），并允许 tangd 服务绑定到该端口：
+
 ```bash
 # semanage port -a t tangd_port -p tcp 7500
 ```
@@ -1870,22 +1960,25 @@ clevis decrypt      使用加密时定义的策略进行解密
 注意，一个端口只能被一个服务使用，因此尝试使用已占用的端口将返回 `ValueError: Port already defined` 错误信息。
 
 - 3. 在防火墙中打开端口：
+
 ```bash
 # firewall-cmd --add-port=7500/tcp
 # firewall-cmd --runtime-to-permanent
 ```
 
 - 4. 启用 tangd 服务：
+
 ```bash
 # systemctl enable tangd.socket
 ```
 
 - 5. 创建覆盖文件：
+
 ```bash
 # systemctl edit tangd.socket
 ```
 
-- 6. 在编辑界面中（打开了位于 /etc/systemd/system/tangd.socket.d/ 目录下的空 override.conf 文件），通过添加以下行将 Tang 服务器的默认端口从 80 更改为之前指定的数字：
+- 6. 在编辑界面中（打开了位于 `/etc/systemd/system/tangd.socket.d/` 目录下的空 override.conf 文件），通过添加以下行将 Tang 服务器的默认端口从 80 更改为之前指定的数字：
 
 ```
 [Socket]
@@ -1918,11 +2011,11 @@ Listen=[:]:7500 (Stream)
 
 其他资源
 
-- - tang(8) 手页
-- semanage(8) 手页
-- firewall-cmd(1) 手页
-- systemd.unit(5) 和 systemd.socket(5) 手页
-- jose(1) 手页
+- `tang(8)` 手页
+- `semanage(8)` 手页
+- `firewall-cmd(1)` 手页
+- `systemd.unit(5)` 和 `systemd.socket(5)` 手页
+- `jose(1)` 手页
 
 ## 9.4. 轮换 Tang 服务器密钥并更新客户端上的绑定
 
@@ -1930,7 +2023,7 @@ Listen=[:]:7500 (Stream)
 
 前提条件
 
-- - Tang 服务器正在运行。
+- Tang 服务器正在运行。
 - 客户端上已安装 `clevis` 和 `clevis-luks` 包。
 - 注意 `clevis list`、`clevis luks report` 和 `clevis luks regen` 已在 RHEL 8.2 中引入。
 
@@ -1946,9 +2039,9 @@ Listen=[:]:7500 (Stream)
 
 - 2. 检查 Tang 服务器是否接受新密钥，例如：
 
-```
+
+
 # tang-show-keys 7500
-```
 
 - 3. 将旧密钥重命名为以 `.` 开头以隐藏它们。注意示例中的文件名与密钥目录中的实际文件名不同：
 
@@ -1984,18 +2077,15 @@ Tang 会立即获取所有更改。当添加新密钥时，客户端会获取新
 # rm .*.jwk
 ```
 
-
-
-
-
 ## 9. 使用基于策略的解密配置加密卷的自动解锁
 
 > > 注意
+> 
 > 在客户端仍在使用旧密钥时移除旧密钥可能会导致数据丢失。如果您不小心删除了此类密钥，请在客户端上运行 `clevis lumps regen` 命令，并手动提供您的 LUKS 密码。
 
 ## 更多资源
 
-- *tang-show-keys(1), clevis-luks-list(1), clevis-luks-report(1) 和 clevis-luks-regen(1)* 手页
+- `tang-show-keys(1)`, `clevis-luks-list(1)`, `clevis-luks-report(1)` 和 `clevis-luks-regen(1)` 手页
 
 ## 9.5. 为带有 TANG 的 NBDE 系统部署加密客户端
 
@@ -2003,7 +2093,7 @@ Tang 会立即获取所有更改。当添加新密钥时，客户端会获取新
 
 ### 前提条件
 
-- * 已安装 Clevis 框架。
+- 已安装 Clevis 框架。
 - 有一个可用的 Tang 服务器。
 
 ### 步骤
@@ -2016,9 +2106,10 @@ $ clevis encrypt tang '{"url":"http://tang.srv:port"}}' input-plain.txt > secret
 ```
 
 _Oslk0-E216qfdDiVmdoZjaA
+
 您是否要信任这些密钥？[ynN] y
 
-更改上一个示例中安装 tang 的 http://tang.srv:port URL。输出文件 `secret.jwe` 包含以 JSON Web 加密（JWE）格式加密的密密文。该密文是从 `input-plain.txt` 文件读取的。
+更改上一个示例中安装 tang 的 `http://tang.srv:port` URL。输出文件 `secret.jwe` 包含以 JSON Web 加密（JWE）格式加密的密密文。该密文是从 `input-plain.txt` 文件读取的。
 
 或者，如果您的配置需要无需 SSH 就与 Tang 服务器进行非交互式通信，您可以下载广告并将其保存到文件中：
 
@@ -2052,15 +2143,17 @@ $ clevis encrypt tang
 
 - 如需更多信息，请查看以下手页：
 
-clevis(1)
-\clevis-luks-unlockers(7)
+`clevis(1)`
+
+`\clevis-luks-unlockers(7)`
 
 ## 9.6. 手动从 LUKS 加密卷中移除 CLEVIS PIN
 
 使用以下步骤手动移除由 `clevis bind` 命令创建的元数据，并擦除包含 Clevis 添加的口令的密钥槽（slot）。
 
 > 重要
-> 从 LUKS 加密卷中移除 Clevis pin 的推荐方法是通过 `clevis locks unbind` 命令。使用 `clevis unbind` 的移除过程仅包含一个步骤，适用于 LUKS1 和 LUKS2 卷。以下示例命令移除了绑定步骤创建的元数据，并擦除了 /dev/sda2 设备上的 1 号密钥槽：
+> 
+> 从 LUKS 加密卷中移除 Clevis pin 的推荐方法是通过 `clevis locks unbind` 命令。使用 `clevis unbind` 的移除过程仅包含一个步骤，适用于 LUKS1 和 LUKS2 卷。以下示例命令移除了绑定步骤创建的元数据，并擦除了 `/dev/sda2` 设备上的 1 号密钥槽：
 
 ```bash
 # clevis locks unbind -d /dev/sda2 -s 1
@@ -2072,7 +2165,7 @@ clevis(1)
 
 ### 步骤
 
-- 1. 检查哪个 LUKS 版本（例如 /dev/sda2）被加密，并识别绑定到 Clevis 的槽（slot）和令牌（token）：
+- 1. 检查哪个 LUKS 版本（例如 `/dev/sda2`）被加密，并识别绑定到 Clevis 的槽（slot）和令牌（token）：
 
 ```bash
 # cryptsetup luksDump /dev/sda2
@@ -2193,28 +2286,35 @@ clevis encrypt tpm2 '{"pcr_bank":"sha1","pcr_ids":"0,1"}' input-plain.txt > secr
 ```
 
 广告信息包含以下签名密钥：
+
 _Ostk0-E216qfdDiVmdoZjaA
 
 您是否要信任这些密钥？[ynN] y
+
 您正准备初始化 LUKS 设备。
 
 > 建议在初始化之前进行备份。
+
 您是否要初始化 /sda2？[yn] y
+
 此命令执行四个步骤：
+
 a. 创建相同熵的新密钥。
 b. 使用 Clevis 加密新密钥。
 c. 将 JWE 对象存储在 LUKS 头部。
 d. 启用新密钥。
 
 > 注意
-> 从 LUKS 加密卷中移除 Clevis pin 的推荐方法是通过 `clevis locks unbind` 命令。使用 `clevis unbind` 的移除过程仅包含一个步骤，适用于 LUKS1 和 LUKS2 卷。以下示例命令移除了绑定步骤创建的元数据，并擦除了 /dev/sda2 设备上的 1 号密钥槽：
+> 
+> 从 LUKS 加密卷中移除 Clevis pin 的推荐方法是通过 `clevis locks unbind` 命令。使用 `clevis unbind` 的移除过程仅包含一个步骤，适用于 LUKS1 和 LUKS2 卷。以下示例命令移除了绑定步骤创建的元数据，并擦除了 `/dev/sda2` 设备上的 1 号密钥槽：
 
 ```bash
 # clevis locks unbind -d /dev/sda2 -s 1
 ```
 
 - 4. 现在可以使用现有密码解锁卷。
-5. 如要启用早期引导，在已安装的系统上输入以下命令：
+
+- 5. 如要启用早期引导，在已安装的系统上输入以下命令：
 
 ```bash
 # yum install clevis-dracut
@@ -2236,8 +2336,9 @@ d. 启用新密钥。
 ### 步骤
 
 - 1. 指导 Kickstart 对磁盘进行分区，使根分区启用 LUKS 加密。该密码对于注册过程是临时的。
-  - /part --type="xfs" --ondisk=vda --size=256
-  - /part --type="xfs" --ondisk=vda --grow=encrypted --passphrase=temppass
+
+  - `/part --type="xfs" --ondisk=vda --size=256`
+  - `/part --type="xfs" --ondisk=vda --grow=encrypted --passphrase=temppass`
 
 - 2. 通过在 `%packages` 部分列出相关的 Clevis 包进行安装：
 
@@ -2255,22 +2356,19 @@ curl -sfg http://tang.srv/adv -o adv.jws
 clevis luks bind -f -k -d /dev/vda \
 ```
 
-
-
-
-
 # 9. 使用基于策略的解密配置加密卷的自动解锁
 
 在之前的示例中，请注意，作为绑定配置的一部分，我们删除了 Tang 服务器上的广告，使得绑定能够完全非交互地完成。
 
 > **警告**
-`cryptsetup luksRemoveKey` 命令将防止对对其应用的 LUKS 设备进行任何进一步的管理。只有对于 LUKS 设备，您才能使用 `dmsetup` 命令恢复已删除的主密钥。
+> 
+> `cryptsetup luksRemoveKey` 命令将防止对对其应用的 LUKS 设备进行任何进一步的管理。只有对于 LUKS 设备，您才能使用 `dmsetup` 命令恢复已删除的主密钥。
 
 当您使用 TPM 2.0 策略而不是 Tang 服务器时，您可以使用类似的程序。
 
 ### 附加资源
 
-- clevis(1)、clevis-luks-bind(1)、`cryptsetup(8)` 和 `dmsetup(8)` 手页
+- `clevis(1)`、`clevis-luks-bind(1)`、`cryptsetup(8)` 和 `dmsetup(8)` 手页
 - [使用 Kickstart 安装 Red Hat Enterprise Linux 8](#)
 
 ## 9.10. 配置 LUKS 加密（LUKS-encrypted）的可移动存储设备的自动解锁
@@ -2280,14 +2378,19 @@ clevis luks bind -f -k -d /dev/vda \
 ### 步骤
 
 - 1. 为了自动解锁 LUKS 加密的可移动存储设备（例如 USB 驱动器），请安装 `clevis-udisks` 软件包：
+
 ```bash
 # yum install clevis-udisks
 ```
+
 - 2. 重启系统，然后使用“配置 LUKS 加密卷的手动注册”中描述的 `clevis luks bind` 命令执行绑定步骤，例如：
+
 ```bash
 # clevis luks bind -d /dev/sdb1 'http://tang.server'
 ```
+
 - 3. 现在，LUKS 加密的可移动设备可以在您的 GNOME 桌面会话中自动解锁。绑定到 clevis 策略的设备也可以通过 `clevis luks unlock` 命令解锁：
+
 ```bash
 # clevis luks unlock -d /dev/sdb1
 ```
@@ -2298,7 +2401,7 @@ clevis luks bind -f -k -d /dev/vda \
 
 欲更多信息，请参阅以下手页：
 
-- clevis-luks-unlockers(7)
+- `clevis-luks-unlockers(7)`
 
 ## 9.11. 部署高可用 NBDE 系统
 
@@ -2323,22 +2426,36 @@ Clevis 提供了 SSS 的实现。它创建一个密钥并将其分成若干份�
 ```
 当两个 Tang 服务器至少有一个可用时，以下命令将解密 LUKS 加密设备：
 ```bash
+
 # clevis luks bind -d /dev/sda1 sss '{"t":"1","pins":[{"url":"http://tang1.srv"},{"url":"http://tang2.srv"}]}'
+
 ```
 
 上一个命令使用了以下配置：
 ```json
+
 {
+
   "t":"1",
+
   "pins":[
+
     {
+
       "url":"http://tang1.srv"
+
     },
+
     {
+
       "url":"http://tang2.srv"
+
     }
+
   ]
+
 }
+
 ```
 
 # 9.12. 使用基于策略的解密配置加密卷的自动解锁
@@ -2349,35 +2466,50 @@ Clevis 提供了 SSS 的实现。它创建一个密钥并将其分成若干份�
 
 当 **tang** 服务器和 **tpm2** 设备均可用时，以下命令将成功绑定 LUKS 加密设备。现在 SSS 阈值设置为 2 的配置方案为：
 ```json
+
 {
+
   "t":2,
+
   "pins":{
+
     "tang":
+
       {
+
         "url":"http://tang1.srv"
+
       }
+
     },
+
     "tpm2":{
+
       "pcr_ids":"0,1"
+
     }
+
   }
+
 }
 ```
+
+
 
 ### 附加资源
 
 - 有关推荐的高可用 NBDE 设置的更多信息，请参阅以下手页：
-- tang(8)，High Availability 节
-- clevis(1)，Section Shamir's Secret Sharing 节
-- clevis-sss(1)
+- `tang(8)`，High Availability 节
+- `clevis(1)`，Section Shamir's Secret Sharing 节
+- `clevis-sss(1)`
 
 ### 9.12. 在 NBDE 中部署虚拟机
 
-**luks bind** 命令不会更改 LUKS 主密钥。这意味着如果您为虚拟机或云环境创建了 LUKS 加密镜像，所有运行该镜像的实例都将共享该主密钥。
+`luks bind` 命令不会更改 LUKS 主密钥。这意味着如果您为虚拟机或云环境创建了 LUKS 加密镜像，所有运行该镜像的实例都将共享该主密钥。
 
 这并不是 Clevis 的限制，而是 LUKS 的设计原理。如果您要在云中部署加密卷，需要确保通过 Kickstart 为每个 Red Hat Enterprise Linux 实例执行安装过程，以避免共享主密钥。
 
-如果您打算在虚拟化环境中部署自动解锁，Red Hat 强烈建议使用带有 Kickstart 文件的 Lorax 或 virt-install（参见“使用 Kickstart 配置 LUKS 加密卷”）或其他自动化工具，以确保每个虚拟机都有唯一的主密钥。
+如果您打算在虚拟化环境中部署自动解锁，Red Hat 强烈建议使用带有 Kickstart 文件的 Lorax 或 `virt-install`（参见“使用 Kickstart 配置 LUKS 加密卷”）或其他自动化工具，以确保每个虚拟机都有唯一的主密钥。
 
 ### 注意
 
@@ -2387,11 +2519,11 @@ Clevis 提供了 SSS 的实现。它创建一个密钥并将其分成若干份�
 
 欲更多信息，请参阅手页：
 
-- clevis-luks-bind(1)
+- `clevis-luks-bind(1)`
 
 ## 9.13. 使用 NBDE 为云环境构建自动注册的镜像
 
-在云环境中部署自动注册的加密镜像可能会带来独特的挑战。与其他虚拟化环境一样，建议减少从单个镜像启动的实例数量，以避免共享主密钥。因此，最佳实践是创建不要在任何公共仓库中共享的自定义镜像，并为数量的实例提供基础。创建的具体数量取决于部署的安全策略以及与 LUKS 主密钥攻击向量相关的风险承受能力。对于启用 LUKS 的自动化部署，应使用 Lorax 或 virt-install 配合 Kickstart 文件，以确保镜像构建过程中主密钥的唯一性。
+在云环境中部署自动注册的加密镜像可能会带来独特的挑战。与其他虚拟化环境一样，建议减少从单个镜像启动的实例数量，以避免共享主密钥。因此，最佳实践是创建不要在任何公共仓库中共享的自定义镜像，并为数量的实例提供基础。创建的具体数量取决于部署的安全策略以及与 LUKS 主密钥攻击向量相关的风险承受能力。对于启用 LUKS 的自动化部署，应使用 Lorax 或 `virt-install` 配合 Kickstart 文件，以确保镜像构建过程中主密钥的唯一性。
 
 云环境提供了两种 Tang 服务器部署选项，我们在此进行考虑。首先，Tang 服务器可以在云环境内部部署。其次，Tang 服务器可以部署在云外部的独立基础设施上，并在两个基础设施之间建立 VPN 链路。
 
@@ -2403,11 +2535,7 @@ Clevis 提供了 SSS 的实现。它创建一个密钥并将其分成若干份�
 
 ## 9.14. 附加资源
 
-- tang(8)、clevis(1)、jose(1) 和 clevis-luks-unlockers(7) 手页。
-
-
-
-
+- `tang(8)`、`clevis(1)`、`jose(1)` 和 `clevis-luks-unlockers(7)` 手页。
 
 # 第10章 系统审计
 
@@ -2424,7 +2552,7 @@ Linux 审计（Audit）系统提供了一种跟踪系统上安全相关信息的
 - 事件与触发事件的用户身份的关联。
 - 对 Audit 配置的所有修改以及对 Audit 日志文件的访问尝试。
 - 所有对身份验证机制的使用（如 SSH、Kerberos 等）。
-- 对任何信任数据库（如 /etc/passwd）的更改。
+- 对任何信任数据库（如 `/etc/passwd`）的更改。
 - 向系统或从系统导入导出信息的尝试。
 - 根据用户身份、主体和对象标签以及其他属性来包含或排除事件。
 
@@ -2489,16 +2617,16 @@ Audit 系统由两个主要部分组成：用户空间的应用程序和工具�
 
 用户空间的 Audit 守护进程从内核收集信息并在日志文件中创建条目。其他 Audit 用户空间工具与 Audit 守护进程、内核 Audit 组件或 Audit 日志文件交互：
 
-- auditctl – 审计控制工具与内核 Audit 组件交互，以管理规则并控制事件生成过程的许多参数。
-- 其余 Audit Audit 以 Audit 日志文件的内容作为输入并根据用户的需求生成输出。例如，aureport 工具生成所有记录事件的报告。
+- `auditctl` – 审计控制工具与内核 Audit 组件交互，以管理规则并控制事件生成过程的许多参数。
+- 其余 Audit Audit 以 Audit 日志文件的内容作为输入并根据用户的需求生成输出。例如，`aureport` 工具生成所有记录事件的报告。
 
-在 RHEL 8 中，Audit 分发守护进程 (**audisp**）的功能已集成到 Audit 守护进程 (**audit**）中。与实时分析程序交互的文件的配置如下：
+在 RHEL 8 中，Audit 分发守护进程（**`audisp`**）的功能已集成到 Audit 守护进程（**`audit`**）中。与实时分析程序交互的文件的配置如下：
 
 ## 10.3. 为安全配置审计
 
-以下设置位于 **/etc/audit/auditd.conf**：
+以下设置位于 **`/etc/audit/auditd.conf`**：
 
-**log**: 存储 Audit 日志的目录，应位于 /var/log/audit/。
+**log**: 存储 Audit 日志的目录，应位于 `/var/log/audit/`。
 
 **max_file**: 设置的日志文件在轮转之前的最大大小，单位为千字节。
 
@@ -2545,21 +2673,15 @@ Audit 系统由两个主要部分组成：用户空间的应用程序和工具�
 > 注意
 **service** 命令是与 **auditd** 守护进程交互的正确方式。您需要使用 **service** 命令以便正确记录 **audit** 值。您可以使用 **systemctl** 命令执行两个操作：**enable** 和 **status**。
 
-
-
-
-
 ## 10.5. 理解审计日志文件
 
-默认情况下，审计系统将日志条目存储在 /var/log/audit.log 文件；如果启用了日志轮转（log rotation），audit.log 文件将存储在同一目录下。
+默认情况下，审计系统将日志条目存储在 `/var/log/audit.log` 文件；如果启用了日志轮转（log rotation），audit.log 文件将存储在同一目录下。
 
-添加以下审计规则，以记录每次读取或修改 /etc/ssh/sshd_config 文件的尝试：
+添加以下审计规则，以记录每次读取或修改 `/etc/ssh/sshd_config` 文件的尝试：
 
 ```
 # auditctl -w /etc/ssh/sshd_config -p wa -k sshd_config
 ```
-
-
 
 如果 auditd 守护进程正在运行，例如使用以下命令会在审计日志文件中创建一个新事件：
 
@@ -2695,47 +2817,43 @@ exit=13
 type=PATH audit(1364481363.243:24287): item=0 name="/etc/ssh/sshd_config" inode=40928
 ```
 
-`PATH` 记录记录了路径信息。`item=0` 是项索引，`name="/etc/ssh/sshd_config"` 是文件名，`inode=40928` 是索引 号。
 
 
-
-
+`PATH` 记录记录了路径信息。`item=0` 是项索引，`name="/etc/ssh/sshd_config"` 是文件名，`inode=40928` 是索引号。
 
 ## 第四记录
 
 `type` 字段包含记录的类型。在此示例中，`PROCTITLE` 值指定了该记录通过系统调用到内核，提供了由此 Audit 事件触发的完整命令行。
 
-proctitle:636174002F6574632F7376382F73766845F63F6E66969
+`proctitle:636174002F6574632F7376382F73766845F63F6E66969`
 
 `proctitle` 字段记录了用于调用分析进程的命令完整命令行。该字段采用十六进制编码，以便允许用户影响 Audit 日志解析器。该文本解码了触发此 Audit 事件的命令。当使用 `ausearch` 命令搜索 Audit 记录时，使用 `-i --interpret` 选项自动将十六进制值转换为人类可读的等效值。`636174002F6574632F7376382F73766845F63F6E66969` 值解释为 `cat /etc/ssh/sshd_config`。
 
-## 10.6. 使用 AUDCTL 定义和执行审计 规则
+## 10.6. 使用 AUDCTL 定义和执行审计规则
 
 Audit 系统根据一组捕获在日志文件中的规则运行。Audit 规则可以通过命令行使用 `auditctl` 工具进行设置，也可以通过在 `/etc/audit/rules.d/` 目录下进行设置。
 
 `auditctl` 命令允许你控制 Audit 系统的基本功能，并定义决定哪些 Audit 事件被记录的规则。
 
-## 文件系统规则示例
+### 文件系统规则示例
 
-- 1. 定义一条规则，允许对 /etc/passwd 文件的所有访问和每次属性更改：
-  > # auditctl -w /etc/passwd -p wa -k password_changes
-- 2. 定义一条规则，允许对 /etc/selinux/ 目录下的所有文件的所有访问和每次属性更改：
-  > # auditctl -w /etc/selinux/ -p wa -k sel_changes
+- 1. 定义一条规则，允许对 `/etc/passwd` 文件的所有访问和每次属性更改：
+  > `# auditctl -w /etc/passwd -p wa -k password_changes`
+- 2. 定义一条规则，允许对 `/etc/selinux/` 目录下的所有文件的所有访问和每次属性更改：
+  > `# auditctl -w /etc/selinux/ -p wa -k sel_changes`
 
-## 系统调用规则示例
+### 系统调用规则示例
 
 - 1. 定义一条规则，每当程序使用 `adjtime` 或 `setwimeday` 系统调用时，创建一个日志条目，并使用 64 位架构：
-  > # auditctl -a always,exit -F arch=b64 -S adjtime -S settimeday -k time_change
+  > `# auditctl -a always,exit -F arch=b64 -S adjtime -S settimeday -k time_change`
 - 2. 定义一条规则，每当 ID 为 1000 或更大的系统用户删除或重命名文件时，创建一个日志条目：
-  > # auditctl -a always,exit -S unlink -S unlink -S rename -F audit>=1000 -F audit!=429467295 -k delete
+  > `# auditctl -a always,exit -S unlink -S unlink -S rename -F audit>=1000 -F audit!=429467295 -k delete`
 
 注意，`-F audit!=429467295` 选项用于排除设置了登录 UID 的用户。
 
-## 可执行文件规则
+### 可执行文件规则
 
-要定义一条记录所有对 /bin/id 程序执行操作的规则，请执行以下命令：
-
-# 红帽企业 Linux 8 安全加固
+要定义一条记录所有对 `/bin/id` 程序执行操作的规则，请执行以下命令：
 
 ```
 # auditctl -a always, -F exe=/bin/id -F arch=b64 -S execve -k execution_bin_id
@@ -2745,7 +2863,7 @@ Audit 系统根据一组捕获在日志文件中的规则运行。Audit 规则�
 
 - 查看 `auditctl(8)` 手页以获取更多信息、性能提示和额外的用法示例。
 
-## 10.7. 定义持久化审计 规则
+## 10.7. 定义持久化审计规则
 
 要定义跨重启有效的持久化审计规则，你必须将它们包含在 `/etc/audit/rules.d/audit.rules` 文件中，或者使用 `augrules` 程序读取位于 `/etc/audit/rules/` 下的规则。
 
@@ -2755,14 +2873,14 @@ Audit 系统根据一组捕获在日志文件中的规则运行。Audit 规则�
 # auditctl -R /usr/share/audit/sample-rules/30-stig.rules
 ```
 
-## 10.8. 使用预配置 规则
+## 10.8. 使用预配置规则
 
 在 `/usr/share/audit/sample-rules` 目录下，audit 软件包提供了一组遵循各种标准的预配置规则：
 
-- 30-nis.rules: 审计规则配置符合《国家安全计划操作手册》中规定的要求。
-- 30-ospp-v4.rules: 审计规则配置符合 OSPP（通用系统保护规范文件）版本 4.2 定义的要求。
-- 30-pci-dss-v3.rules: 审计规则配置符合支付卡行业数据标准（PCI DSS）v3.1 设的要求。
-- 30-stig.rules: 审计规则配置符合安全实施指南（STIG）设的要求。
+- `30-nis.rules`: 审计规则配置符合《国家安全计划操作手册》中规定的要求。
+- `30-ospp-v4.rules`: 审计规则配置符合 OSPP（通用系统保护规范文件）版本 4.2 定义的要求。
+- `30-pci-dss-v3.rules`: 审计规则配置符合支付卡行业数据标准（PCI DSS）v3.1 设的要求。
+- `30-stig.rules`: 审计规则配置符合安全实施指南（STIG）设的要求。
 
 要使用这些配置文件，请将它们复制到 `/etc/audit/rules.d/` 目录并使用 `augrules --load` 命令，例如：
 
@@ -2779,7 +2897,7 @@ Audit 系统根据一组捕获在日志文件中的规则运行。Audit 规则�
 - 审计规则有一套编号方案，允许你进行排序。要了解更多关于命名方案的信息，请查看 `/usr/share/doc/audit/rules/README`。
 - 查看 `audit.rules(7)` 手页以获取更多信息、故障排除和额外的用法示例。
 
-## 10.9. 使用 AUGENRULES 定义持久化 规则
+## 10.9. 使用 AUGENRULES 定义持久化规则
 
 `augenrules` 脚本读取位于 `/etc/audit/rules.d/` 目录下的规则并将其编译为 `audit.rules` 文件。该脚本根据自然排序按特定顺序处理所有以 `.rules` 结尾的文件。此目录中的文件组织成具有以下含义的组：
 
@@ -2817,28 +2935,23 @@ rate_limit 0
 步骤
 
 - 1. 将 `/lib/systemd/system/auditd.service` 文件复制到 `/etc/systemd/system/` 目录：
-
 ```
 # cp -f /lib/systemd/system/auditd.service /etc/systemd/system/
 ```
 - 2. 使用你喜欢的编辑器编辑 `/etc/systemd/system/auditd.service` 文件：
-
 ```
 # vi /etc/systemd/system/auditd.service
 ```
 - 3. 注释掉包含 `augenrules` 的行，并取消包含 `auditctl -R` 的行：
-
 ```
 ExecStartPost=/augenrules
 ExecStartPost=/auditctl -R /etc/audit/audit.rules
 ```
 - 4. 重新加载系统守护进程：
-
 ```
 # systemctl daemon-reload
 ```
 - 5. 重启 auditd 服务：
-
 ```
 # service auditd
 ```
@@ -2850,7 +2963,7 @@ ExecStartPost=/auditctl -R /etc/audit/audit.rules
 
 ## 10.11. 相关信息
 
-有关审计 系统的更多信息，请参考以下来源。
+有关审计系统的更多信息，请参考以下来源。
 
 在线来源
 
@@ -2864,20 +2977,20 @@ audit 软件包提供的文档可以在 `/usr/share/doc/audit/` 找到。
 
 手册页
 
-- audispd.conf(5)
-- auditd.conf(5)
-- ausearch-expression(5)
-- audit.rules(7)
-- audispd(8)
-- auditctl(8)
-- auditd(8)
-- aulast(8)
-- aulastlog(8)
-- aureport(8)
-- ausearch(8)
-- ausyscall(8)
-- autrace(8)
-- aaudit(8) (注：根据上下文从 auvirt 纠正)
+- `audispd.conf(5)`
+- `auditd.conf(5)`
+- `ausearch-expression(5)`
+- `audit.rules(7)`
+- `audispd(8)`
+- `auditctl(8)`
+- `auditd(8)`
+- `aulast(8)`
+- `aulastlog(8)`
+- `aureport(8)`
+- `ausearch(8)`
+- `ausyscall(8)`
+- `autrace(8)`
+- `aaudit(8)` (注：根据上下文从 auvirt 纠正)
 
 ## 第 11 章. 配置和管理白名单
 
@@ -2907,13 +3020,10 @@ audit 软件包提供的文档可以在 `/usr/share/doc/audit/` 找到。
 ### 步骤
 
 - 1. 安装 `policyd` 软件包：
-
-
-
-## yum install facolicyd
-
-2. 启用并启动 facolicyd 服务：
-
+```
+# yum install facolicyd
+```
+- 2. 启用并启动 facolicyd 服务：
 ```
 # systemctl enable --now facolicyd
 ```
@@ -2921,28 +3031,13 @@ audit 软件包提供的文档可以在 `/usr/share/doc/audit/` 找到。
 ### 验证步骤
 
 - 1. 验证 facolicyd 服务是否正常运行：
-
 ```
 # systemctl status facolicyd
 ● facolicyd.service - File Access Policy Daemon
  Loaded: loaded (/usr/lib/systemd/system/facolicyd.service; enabled: vendor preset)
  Active: active (running) since Tue 2019-10-15 18:02:35 CEST, 55s ago
- Process: 8818 Start=/usr/bin/facolicyd (code=exit, status=0/SUCCESS)
- Main PID: 8819 (facolicyd)
- Tasks: 4 (limit: 11500)
- Memory: 78.2M
- CGGroup: system.slice/facolicyd.service
-        └ /usr/bin/facolicyd
-
-Oct 15 18:02:35 localhost.localdomain system[1]: Starting File Access Policy D
-Oct 15 18:02:35 localhost.localdomain system[facolicyd[8819]]: Initialization of the da-
-Oct 15 18:02:35 localhost.localdomain system[facolicyd[8819]]: Reading RPMDB into memory
-Oct 15 18:02:35 localhost.localdomain system[1]: Started File Access Policy Da
-Oct 15 18:02:36 localhost.localdomain system[facolicyd[8819]]: Creating database
 ```
-
 - 2. 以没有 root 权限的用户登录，并检查应用程序白名单是否生效，例如：
-
 ```
 $ /bin/ls /tmp
 $ /tmp
@@ -2960,37 +3055,28 @@ facolicyd 包中的默认规则集不会影响系统功能。对于自定义场�
 ### 步骤
 
 - 1. 将您的自定义二进制文件复制到所需的目录，例如：
-
 ```
 $ /bin/ls /tmp
 $ /tmp
 bash: /tmp/ls: Operation not permitted
 ```
-
 停止 facolicyd 服务：
-
 ```
 # systemctl stop facolicyd
 ```
-
 使用调试模式识别原因。由于 `facolicyd --debug` 命令的输出非常详细，且您可以通过 Ctrl+C 停止它或杀死相应的进程，请将错误输出重定向到文件：
-
 ```
 # facolicyd --debug facolicyd.output &
 [1] 51341
 ```
-
 或者，您可以在另一个终端中运行 facolicyd 调试模式。
 
 重复之前被允许的命令：
-
 ```
 $ /tmp/ls
 bash: /tmp/ls: Operation not permitted
 ```
-
 通过将任务切回前台并按下 Ctrl+C 来停止调试模式：
-
 ```
 # fg
 facolicyd --debug
@@ -3000,15 +3086,11 @@ Allowed accesses: 2
 Denied accesses: 1
 ...]
 ```
-
 或者，杀死 facolicyd 调试模式的进程：
-
 ```
 # kill 51341
 ```
-
 找到拒绝执行您的应用程序的规则：
-
 ```
 # cat facolicyd.output
 ...]
@@ -3016,65 +3098,58 @@ rule:9 dec=deny_audit perm=execute auid=1000 pid=51362 exe=/usr/bin/bash file=/t
 type=application/x-executable
 ...]
 ```
-
 在 `/etc/facolicyd/facolicyd.rules` 文件中，于拒绝您自定义二进制文件的规则之前添加新的允许规则。根据上一个命令的输出，在本例中该规则编号为 9：
-
 ```
 allow perm=execute exe=/usr/bin/bash trust=1 : path=/tmp/ls ftype=application/x-executable
 trust=0
 ```
-
 或者，您可以通过在 `/etc/facolicyd/facolicyd.rules` 文件中添加以下规则来允许 /tmp 目录下所有二进制文件的执行：
-
 ```
 allow perm=execute exe=/usr/bin/bash trust=1 : dir=/tmp/ all trust=0
 ```
-
 - 8. 为了防止自定义二进制文件的内容更改，使用 SHA-256 校验和定义所需的规则：
-
 ```
 $ sha256sum /tmp/ls
 780b75c90b2d4a1ea4679fcb358c892b1251b68d91927c80fc0d9d9d148b25e836 ls
 ```
-
 将规则更改为遵循以下定义：
-
 ```
 allow perm=execute exe=/usr/bin/bash trust=1 :
 sha256hash=780b75c90b2d4a1ea4679fcb358c892b1251b68d91927c80fc0d9d9d148b25e836
 ```
-
 - 9. 启动 facolicyd
-
-
-
-
 
 ### Red Hat Enterprise Linux 8 安全加固
 
 ### 验证步骤
 
 - 验证 **usbguard** 服务正在运行：
-
 ```
 systemctl enable --now usbguard
 usbguard.service - USBguard daemon
 Loaded: (/usr/lib/systemd/system/usbguard.service); enabled; vendor preset: disabled
 Active: active (running) since Thu 2019-11-07 09:44:07 CET; 3min 16s ago
-Docs: man.usbguard-daemon(8)
-Main PID: 6122 (usbguard-daemon)
+```
+
+
+
+Docs: `man.usbguard-daemon(8)`
+
+Main PID: 6122 (`usbguard-daemon`)
+
 Tasks: 3 (limit: 11493)
+
 Memory: 1.2M
-CGroup: system.slice/usbguard.service
---6122 /usr/bin/usbguard-daemon -f -s /etc/usbguard/usbguard-daemon.conf
-```
 
-```
-Nov 07 09:44:06 localhost.local systemd[1]: Starting USBguard daemon...
-Nov 07 09:44:07 localhost.local systemd[1]: Started USBguard daemon.
-```
+CGroup: `system.slice/usbguard.service`
 
-- 列出由 **USBGuard** 识别的 USB 设备：
+`--6122 /usr/bin/usbguard-daemon -f -s /etc/usbguard/usbguard-daemon.conf`
+
+Nov 07 09:44:06 localhost.local `systemd[1]`: Starting USBguard daemon...
+
+Nov 07 09:44:07 localhost.local `systemd[1]`: Started USBguard daemon.
+
+- 列出由 `USBGuard` 识别的 USB 设备：
 
 ```
 # usbguard list-devices
@@ -3083,19 +3158,19 @@ allow: id 1d6b:0002 serial "0000:02:00:00" name "xHCI Host Controller" hash...
 
 ## 更多资源
 
-- **usbguard(1)** 和 **usbguard-daemon.conf(5)** 手页
+- `usbguard(1)` 和 `usbguard-daemon.conf(5)` 手页
 
-## 12.3. 使用 CLI 阻塞和授权 USB 设备
+# 12.3. 使用 CLI 阻塞和授权 USB 设备
 
-本过程概述了如何使用 **usbguard** 命令授权和阻塞 USB 设备。
+本过程概述了如何使用 `usbguard` 命令授权和阻塞 USB 设备。
 
 ### 前提条件
 
-- **usbguard** 服务已安装并运行。
+- `usbguard` 服务已安装并运行。
 
 ### 步骤
 
-- 列出由 **USBGuard** 识别的 USB 设备：
+- 列出由 `USBGuard` 识别的 USB 设备：
 
 ```
 # usbguard list-devices
@@ -3129,41 +3204,41 @@ block: 6: id 1ab1:0000024937962" name "Voyager"
 
 ### 注意
 
-USBGuard 使用 block（阻塞）和 reject（拒绝）术语，具有以下含义：
+`USBGuard` 使用 `block`（阻塞）和 `reject`（拒绝）术语，具有以下含义：
 
 - *block*：暂时不要与此设备交互。
 - *reject*：忽略此设备，就像它不存在一样。
 
 ## 更多资源
 
-- *列出 usbguard 命令的所有选项：*
+- *列出 `usbguard` 命令的所有选项：*
 
 ```
 $ usbguard --help
 ```
 
-- usbguard(1) 手页
+- `usbguard(1)` 手页
 
-## 12.4. 为 USB 设备创建自定义策略
+# 12.4. 为 USB 设备创建自定义策略
 
 以下过程包含为 USB 设备创建规则集的步骤，以反映您应用场景的需求。
 
 ### 前提条件
 
-- *usbguard 服务已安装并运行。*
-- */etc/usbguard/rules.conf 文件包含一个由 usbguard generate-policy 命令生成的初始规则集。*
+- *`usbguard` 服务已安装并运行。*
+- */etc/usbguard/rules.conf* 文件包含一个由 `usbguard generate-policy` 命令生成的初始规则集。
 
 ### 步骤
 
-- 1. 创建一个授权当前连接的 USB 设备的策略，并将生成的规则存储到 rules.conf 文件中：
+- 1. 创建一个授权当前连接的 USB 设备的策略，并将生成的规则存储到 `rules.conf` 文件中：
 
 ```
 # usbguard generate-policy --no-hashes > ./rules.conf
 ```
 
---no-hashes 选项不会为设备生成哈希属性。在配置设置中避免使用哈希属性，因为它们不是持久的。
+`--no-hashes` 选项不会为设备生成哈希属性。在配置设置中避免使用哈希属性，因为它们不是持久的。
 
-- 2. 使用您喜欢的文本编辑器编辑 rules.conf 文件，例如：
+- 2. 使用您喜欢的文本编辑器编辑 `rules.conf` 文件，例如：
 
 ```
 # vi ./rules.conf
@@ -3177,7 +3252,7 @@ $ usbguard --help
 allow with-interface equals ( 08::* )
 ```
 
-请参阅 usbguard-conf(5) 手页获取详细的规则语言描述和更多示例。
+请参阅 `usbguard-conf(5)` 手页获取详细的规则语言描述和更多示例。
 
 - 4. 安装更新后的策略：
 
@@ -3185,7 +3260,7 @@ allow with-interface equals ( 08::* )
 # install -m 0600 -o root -g root /etc/usbguard/rules.conf
 ```
 
-- 5. 重启 usbguard 以应用新策略：
+- 5. 重启 `usbguard` 以应用新策略：
 
 ```
 # systemctl restart usbguard
@@ -3202,40 +3277,40 @@ allow with-interface equals ( 08::* )
 
 ## 更多资源
 
-- rules.conf(5) 手
+- `rules.conf(5)` 手
 
-## 12.5. 授权用户和组使用 IPC 接口
+# 12.5. 授权用户和组使用 IPC 接口
 
 本过程用于授权特定用户或组使用 USBGuard 接口。默认情况下，只有 root 用户可以使用此接口。
 
 ### 前提条件
 
-- usbguard 服务已安装并运行。
-- /etc/usbguard/rules.conf 文件包含一个由 generate-policy 命令生成的初始规则集。
+- `usbguard` 服务已安装并运行。
+- */etc/usbguard/rules.conf* 文件包含一个由 `generate-policy` 命令生成的初始规则集。
 
 ### 步骤
 
-- 1. 使用您喜欢的编辑器编辑 /etc/usbguard/usbguard-daemon.conf 文件：
+- 1. 使用您喜欢的编辑器编辑 */etc/usbguard/usbguard-daemon.conf* 文件：
 
 ```
 # vi /etc/usbguard/usbguard-daemon.conf
 ```
 
-- 2. 例如，添加一行允许 wheel 组的所有用户使用接口，并保存文件：
+- 2. 例如，添加一行允许 `wheel` 组的所有用户使用接口，并保存文件：
 
 ```
 IPCAllowGroups=wheel
 ```
 
-3. 使用 usbguard 命令添加用户或组。例如，以下命令允许 joesec 用户完全访问设备、策略列表和异常部分：
+3. 使用 `usbguard` 命令添加用户或组。例如，以下命令允许 `josec` 用户完全访问设备、策略列表和异常部分：
 
 ```
 # usbguard add-user joesec --devices ALL --policy list,listen --exceptions ALL
 ```
 
-要移除 joesec 用户的权限，请使用 usbguard remove-user 命令。
+要移除 `josec` 用户的权限，请使用 `usbguard remove-user` 命令。
 
-4. 重启 usbguard 守护进程以应用更改：
+4. 重启 `usbguard` 守护进程以应用更改：
 
 ```
 # systemctl restart usbguard
@@ -3243,32 +3318,32 @@ IPCAllowGroups=wheel
 
 ## 更多资源
 
-- usbguard(1) 和 rules.conf(5) 页
+- `usbguard(1)` 和 `rules.conf(5)` 页
 
-## 12.6. 将 USBGuard 授权事件记录到 Linux 审计日志
+# 12.6. 将 USBGuard 授权事件记录到 Linux 审计日志
 
-使用以下步骤将 USBGuard 授权事件集成到标准的 Linux 审计日志。默认情况下，usbguard 守护进程将事件记录到 /var/log/usbguard/usbguard-audit.log 文件。
+使用以下步骤将 USBGuard 授权事件集成到标准的 Linux 审计日志。默认情况下，`usbguard` 守护进程将事件记录到 */var/log/usbguard/usbguard-audit.log* 文件。
 
 ### 前提条件
 
-- usbguard 服务已安装并运行。
-- auditd 服务正在运行。
+- `usbguard` 服务已安装并运行。
+- `auditd` 服务正在运行。
 
 ### 步骤
 
-- 1. 使用您喜欢的文本编辑器编辑 usbguard-daemon.conf 文件：
+- 1. 使用您喜欢的文本编辑器编辑 `usbguard-daemon.conf` 文件：
 
 ```
 # vi /etc/usbguard/usbguard-daemon.conf
 ```
 
-- 2. 将 AuditBackend 从 FileAudit 为 LinuxAudit：
+- 2. 将 `AuditBackend` 从 `FileAudit` 为 `LinuxAudit`：
 
 ```
 AuditBackend=LinuxAudit
 ```
 
-- 3. 重启 usbguard 守护进程以应用配置更改：
+- 3. 重启 `usbguard` 守护进程以应用配置更改：
 
 ```
 # systemctl restart usbguard
@@ -3284,11 +3359,10 @@ AuditBackend=LinuxAudit
 
 ## 更多资源
 
-- usbguard-daemon.conf(5) 手页
+- `usbguard-daemon.conf(5)` 手页
 
-## 12.7. 更多资源
+# 12.7. 更多资源
 
-- usbguard(1), rules.conf(5), usbguard-daemon.conf(8) 和 usbguard-daemon.conf(5) 页
+- `usbguard(1)`, `rules.conf(5)`, `usbguard-daemon.conf(8)` 和 `usbguard-daemon.conf(5)` 页
 
 - USBGuard 主页
-

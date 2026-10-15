@@ -1,3 +1,4 @@
+
 # 替代服务
 
 [RFC 7838](https://www.rfc-editor.org/rfc/rfc7838.txt)定义了一个 HTTP 头信息，允许服务器通过使用`Alt-Svc:`响应头告诉客户端，该服务器在另一个位置有一个或多个*替代方案*。

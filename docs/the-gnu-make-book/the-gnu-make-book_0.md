@@ -1,23 +1,19 @@
+
 # GNU Make 入门指南
-
-
 
 ![](img/orm_front_cover.jpg)
 
 ![GNU Make 书](img/orm_front_cover.jpg)
 
-
-
-
-# 关于作者
+## 关于作者
 
 John Graham-Cumming 是一位资深 GNU `make` 专家。他编写了广誉的基于机器学习的 POPFile 邮件过滤器，并成功促使英国政府对阿兰·图灵的待遇道歉。他拥有牛津大学计算机安全博士学位，目前就职于 CloudFlare。
 
-# 关于技术审查员
+## 关于技术审查员
 
 Paul Smith 自 1996 年起一直是自由软件基金会 GNU `make` 项目的维护者。他从 20 世纪 80 年就开始使用并贡献自由软件，从 1993 年开始贡献 GNU/Linux。在职业上，他编写网络和数据库系统软件。在生活中，他喜欢和妻子孩子一起骑自行车和潜水。
 
-# 前言
+## 前言
 
 我不记得自己第一次遇到 `make` 程序是什么时候了，但我想，和很多程序员一样，我当时正尝试构建他人的软件。和许多程序员一样，我可能被 `make` 语法的简单性所吸引和诱惑，却没有意识到这个通用程序背后隐藏的深度和力量。
 
@@ -27,7 +23,7 @@ Paul Smith 自 1996 年起一直是自由软件基金会 GNU `make` 项目的维
 
 我希望这本书能为那些每天处理 Makefile 的朋友，或者任何想过“现在，我该如何用 `make` 实现它？”的人提供实际帮助。如果你是 GNU `make` 的新手，我建议你从第 1 章开始，并顺序读完本书。否则，请随意跳读。无论如何，我希望你能找到一些想法，帮助你减少调试 Makefile 上花费的时间，花更多时间在快速构建上。
 
-## 注意事项
+### 注意事项
 
 由于 GNU `make` 对不同类型的空白字符敏感，每当需要制表符（tab）时，我都使用了 `→` 以清晰起见。
 
@@ -37,40 +33,36 @@ Paul Smith 自 1996 年起一直是自由软件基金会 GNU `make` 项目的维
 
 本章涵盖了可能被认为是基础 GNU `make` 知识的内容，但重点介绍了容易误解的功能，并澄清了 GNU `make` 中一些令人疑惑的部分。它涵盖了 GNU `make` 3.79.1、3.81、3.82 和 4.0 版本之间的差异。如果你在使用 3.79.1 之前的版本，可能应该升级。
 
-本章绝不能替代官方的 GNU `make` 手册（自由软件基金会，2004 年）。我强烈建议你拥有一份。你也可以 `[`www.gnu.org/make/manual`](http://www.gnu.org/make/manual)` 找到该手册。
+本章绝不能替代官方的 GNU `make` 手册（自由软件基金会，2004 年）。我强烈建议你拥有一份。你也可以在[`www.gnu.org/make/manual`](http://www.gnu.org/make/manual)找到该手册。
 
-# 将环境变量引入 GNU make
+## 将环境变量引入 GNU `make`
 
-在 GNU `make` 启动时在环境中设置的任何变量在 Makefile 内部都可以作为 GNU make 变量可用。例如，考虑以下简单的 Makefile：
+在 GNU `make` 启动时在环境中设置的任何变量在 Makefile 内部都可以作为 GNU `make` 变量可用。例如，考虑以下简单的 Makefile：
 
-```
+```make
 $(info $(FOO))
 ```
 
-如果在运行 GNU `make` 时环境变量中设置了 `FOO` 为 `foo`，则此 Makefile 将输出 `foo`，从而验证 `FOO` 在 Makefile 内部确实被设置为 `foo`。你可以通过 GNU make 的 `$(origin)` 函数来发现 `FOO` 是从哪里获取该值的。尝试如下所示添加 Makefile（新部分已加粗）：
+如果在运行 GNU `make` 时环境变量中设置了 `FOO` 为 `foo`，则此 Makefile 将输出 `foo`，从而验证 `FOO` 在 Makefile 内部确实被设置为 `foo`。你可以通过 GNU `make` 的 `$(origin)` 函数来发现 `FOO` 是从哪里获取该值的。尝试如下所示添加 Makefile：
 
-```
+```make
 $(info $(FOO) $(origin FOO))
 ```
 
-如果变量 `FOO` 在环境中定义并自动导入到 GNU make，则 `$(origin FOO)` 的值为 `environment`。当你运行 Makefile 时，它应该输出 `foo environment`。
+如果变量 `FOO` 在环境中定义并自动导入到 GNU `make`，则 `$(origin FOO)` 的值为 `environment`。当你运行 Makefile 时，它应该输出 `foo environment`。
 
 从环境中导入的变量可以在 Makefile 内部被覆盖。只需设置其值即可：
 
-```
+```make
 FOO=bar
 $(info $(FOO) $(origin FOO))
 ```
-
-
-
-
 
 在 Makefile 中，通常可以在开始构建时通过命令行设置一些选项（options）。例如，你可能想在 Makefile 之外更改正在执行的构建类型或指定目标架构。
 
 最常见的用例可能是一个调试选项，用于指定构建时应该创建可调试（debug）代码还是发布版（release）代码。处理此问题的简单方法是使用一个名为 `BUILD_DEBUG` 的 Makefile 变量，在 Makefile 中将其设置为 `yes`，并在构建发布版本时在命令行对其进行覆盖。例如，Makefile 的开头附近可能会有 `BUILD_DEBUG := yes` 这一行。然后 `BUILD_DEBUG` 变量将用于 Makefile 的其他地方，以决定如何设置编译器的调试选项。因为 `BUILD_DEBUG` 在 Makefile 中设置为 `yes`，所以默认会进行调试构建。那么在发布时，可以从命令行覆盖此默认值：
 
-```
+```shell
 $ make BUILD_DEBUG=no
 ```
 
@@ -78,7 +70,7 @@ $ make BUILD_DEBUG=no
 
 考虑这个简单的 Makefile，它打印 `BUILD_DEBUG` 的值，该值在 Makefile 开始时已设置为 `yes`：
 
-```
+```make
 BUILD_DEBUG := yes
 .PHONY: all
 all: ; @echo BUILD_DEBUG is $(BUILD_DEBUG)
@@ -88,7 +80,7 @@ all: ; @echo BUILD_DEBUG is $(BUILD_DEBUG)
 
 在此示例中，与 `all` 目标相关的命令通过分号被放置在与目标名称同一行。另一种方法是：
 
-```
+```make
 BUILD_DEBUG := yes
 .PHONY: all
 all:
@@ -99,7 +91,7 @@ all:
 
 现在尝试运行三次这个 Makefile：一次不带任何选项，一次在 GNU `make` 的命令行上设置 `BUILD_DEBUG`，最后一次在环境中设置 `BUILD_DEBUG`：
 
-```
+```shell
 $ make
 BUILD_DEBUG is yes
 $ make BUILD_DEBUG=no
@@ -113,7 +105,7 @@ BUILD_DEBUG is yes
 
 Makefile 中的定义覆盖已导入的环境变量的问题可以通过 GNU `make` 的“大杀器”来解决：`-e` 选项，它让环境具有优先级。但这会影响所有变量。
 
-```
+```shell
 $ export BUILD_DEBUG=no
 $ make
 BUILD_DEBUG is yes
@@ -123,11 +115,11 @@ $ make -e BUILD_DEBUG=maybe
 BUILD_DEBUG is maybe
 ```
 
-需要记住的规则是：*命令行胜过 Makefile，Makefile 胜过环境*。命令行上定义的变量优先级高于 Makefile 中定义的相同变量，而后者的优先级又高于环境中定义的相同变量。
+需要记住的规则是：命令行胜过 Makefile，Makefile 胜过环境。命令行上定义的变量优先级高于 Makefile 中定义的相同变量，而后者的优先级又高于环境中定义的相同变量。
 
 可以设置一个默认值为 `yes` 的 `BUILD_DEBUG` 变量，并且可以在命令行或环境中对其进行覆盖。GNU `make` 提供了两种方法来实现此，这两种方法都依赖于检查变量是否已经定义。这里是一种方法：将原始 Makefile 中对 `BUILD_DEBUG` 的设置替换为：
 
-```
+```make
 ifndef BUILD_DEBUG
 BUILD_DEBUG := yes
 endif
@@ -135,7 +127,7 @@ endif
 
 现在，如果 `BUILD_DEBUG` 尚未设置（这就是 `ifndef` 的意思：未定义），它将被设置为 `yes`；否则，保持原样。由于输入 `ifndef SOME_VARIABLE` 和 `endif` 稍微有点繁琐，GNU `make` 提供了 `?=` 形式的简写：
 
-```
+```make
 BUILD_DEBUG ?= yes
 .PHONY: all
 all: ; @echo BUILD_DEBUG is $(BUILD_DEBUG)
@@ -143,7 +135,7 @@ all: ; @echo BUILD_DEBUG is $(BUILD_DEBUG)
 
 `=` 运算符告诉 GNU `make` 除非 `BUILD_DEBUG` 已定义，否则将其设置为 `yes`；如果已定义，则对其原不管。重新运行测试的结果如下：
 
-```
+```shell
 $ make
 BUILD_DEBUG is yes
 $ make BUILD_DEBUG=no
@@ -155,7 +147,7 @@ BUILD_DEBUG is no
 
 这种技术提供了极大的灵活性。Makefile 中的默认设置可以在环境中以及通过命令行上的临时覆盖被覆盖：
 
-```
+```shell
 $ export BUILD_DEBUG=no
 $ make BUILD_DEBUG=aardark
 BUILD_DEBUG is aardark
@@ -171,7 +163,7 @@ BUILD_DEBUG is aardark
 
 考虑这个简单的 Makefile：
 
-```
+```make
 FOO=bar
 
 all: ; @echo FOO is $$FOO
@@ -183,11 +175,11 @@ all: ; @echo FOO is $$FOO
 
 如果你在运行 `make` 之前定义了 `FOO`，你会看到 `FOO is bar`。
 
- `make` 还会向子环境添加一些变量——具体来说 `MAKEFLAGS`、`MFLAGS` 和 `MAKELEVEL`。`MAKEFLAGS` 和 `MFLAGS` 变量包含了命令行上指定的标志：`MAKEFLAGS` 包含了 GNU `make` 内部使用的格式标志，而 `MFLAGS` 仅出于历史原因而存在。永远在配方中使用 `MAKEFLAGS`。如果你真的需要，可以设置 `MFLAGS`。
+`make` 还会向子环境添加一些变量——具体来说 `MAKEFLAGS`、`MFLAGS` 和 `MAKELEVEL`。`MAKEFLAGS` 和 `MFLAGS` 变量包含了命令行上指定的标志：`MAKEFLAGS` 包含了 GNU `make` 内部使用的格式标志，而 `MFLAGS` 仅出于历史原因而存在。永远在配方中使用 `MAKEFLAGS`。如果你真的需要，可以设置 `MFLAGS`。
 
 如果你不确定 `FOO` 是否在环境中，但想确保它进入运行命令的环境，请使用 `export` 指令。例如，你可以通过修改 Makefile 来确保 `FOO` 出现在子环境中，如下所示：
 
-```
+```make
 export FOO=bar
 
 all: ; @echo FOO is $$FOO
@@ -197,7 +189,7 @@ all: ; @echo FOO is $$FOO
 
 你可以使用 `unexport` 从环境中移除变量。为了确保 `FOO` 从子环境中排除，无论它在父环境中是否被设置过，请运行以下操作：
 
-```
+```make
 FOO=bar
 unexport FOO
 
@@ -208,7 +200,7 @@ all: ; @echo FOO is $$FOO
 
 你可能想知道如果 `export` 和 `unexport` 一个变量会发生什么。答案是最后定义的指令生效。`export` 指令也可以配合目标特定的变量使用，为特定规则修改环境。例如：
 
-```
+```make
 export FOO=bar
 
 all: export FOO=just for all
@@ -224,16 +216,13 @@ GNU `make` 还会向子环境添加一些变量——具体来说 `MAKEFLAGS`、
 
 如果你真的需要，可以设置 `MFLAGS`。`MAKELEVEL` 变量包含了通过 `$(MAKE)` 递归 `make` 的深度，从零开始。关于这些变量的更多详细信息，请参阅 GNU `make` 手册。
 
-
-
-
-你也可以确保每个 Makefile 变量都被导出，这可以通过单独的一一行写 `export` 或者通过指定 `.EXPORT_ALL_VARIABLES:` 来实现。但这些“地毯式”的方法可能不是好主意，因为它们会让子进程环境充斥无用的——甚至可能是有害的——变量。
+你也可以确保每个 Makefile 变量都被导出，这可以通过单独的一行写 `export` 或者通过指定 `.EXPORT_ALL_VARIABLES:` 来实现。但这些“地毯式”的方法可能不是好主意，因为它们会让子进程环境充斥无用的——甚至可能是有害的——变量。
 
 ## `$(shell)` 环境
 
 你可能认为调用 `$(shell)` 时使用的环境与执行规则命令时使用的环境是相同的。事实上，事实并非如此。`$(shell)` 使用的环境与 GNU `make` 启动时的环境完全相同，没有任何添加或删除。你可以通过下面的 Makefile 来验证这一点，它在 `$(shell)` 调用内部和规则中都获取了 `FOO` 的值：
 
-```
+```make
 export FOO=bar
 
 $(info $(shell printenv | grep FOO))
@@ -243,7 +232,7 @@ all: ; @printenv | grep FOO
 
 其输出如下：
 
-```
+```shell
 $ export FOO=foo
 $ make
 FOO=foo
@@ -252,20 +241,20 @@ FOO=bar
 
 无论你做什么，`$(shell)` 获取的都是父进程环境。
 
-这是 GNU `make` 的一个 bug（bug #10593——详见 `[http://savannah.gnu.org/bugs/?10593]`）。这个问题之所以没有被修复的原因之一是，显而易见的解决方案——直接在 `$(shell)` 中使用规则环境——会产生相当严重的后果。考虑这个 Makefile：
+这是 GNU `make` 的一个 bug（bug #10593——详见[`http://savannah.gnu.org/bugs/?10593`](http://savannah.gnu.org/bugs/?10593)）。这个问题之所以没有被修复的原因之一是，显而易见的解决方案——直接在 `$(shell)` 中使用规则环境——会产生相当严重的后果。考虑这个 Makefile：
 
-```
+```make
 export FOO=$(shell echo fooey)
 all: ; @echo FOO is $$FOO
 ```
 
-在 `all` 规则中 `FOO` 的值是多少？为了在 `all` 的环境中获取 `FOO` 的值，`$(shell)` 必须被展开，这需要获取 `FOO` 的值——这又需要展开 `$(shell)` 调用，如此循环，*无止境*。
+在 `all` 规则中 `FOO` 的值是多少？为了在 `all` 的环境中获取 `FOO` 的值，`$(shell)` 必须被展开，这需要获取 `FOO` 的值——这又需要展开 `$(shell)` 调用，如此循环，无止境。
 
 面对这个问题，GNU `make` 的开发者选择了最简单的办法：他们根本没有去修复这个 bug。
 
-鉴于这个 bug 短内不会消失，一个通变方案是必要的。幸运的是，大多数优秀的 shell 都有一种内联设置环境变量的方法。因此，本节第一个 Makefile 可以修改为：
+鉴于这个 bug 短期内不会消失，一个通用方案是必要的。幸运的是，大多数优秀的 shell 都有一种内联设置环境变量的方法。因此，本节第一个 Makefile 可以修改为：
 
-```
+```make
 export FOO=bar
 
 $(info $(shell FOO=$(FOO) printenv | grep FOO))
@@ -275,7 +264,7 @@ all: ; @printenv | grep FOO
 
 这得到了预期的结果：
 
-```
+```shell
 $ make
 FOO=bar
 FOO=bar
@@ -285,18 +274,20 @@ FOO=bar
 
 如果环境中只需要一个额外的变量，这种技术运行良好。但如果需要很多变量，可能会有些问题，因为在单条命令行上设置多个 shell 变量会变得混乱。
 
-更全面的解决方案是编写一个 `$(shell)` 命令的替代品，它*可以*导出变量。这里有一个函数 `env_shell` 正是这样做：
+更全面的解决方案是编写一个 `$(shell)` 命令的替代品，它可以导出变量。这里有一个函数 `env_shell` 正是这样做：
 
-```
+```make
 env_file = /tmp/env
 env_shell = $(shell rm -f $(env_file))$(foreach V,$1,$(shell echo export
 $V=$($V) >> $(env_file)))$(shell echo '$2' >> $(env_file))$(shell /bin/bash -e
 $(env_file))
 ```
 
-在解释它如何工作之前，这里是在之前的 Makefile 中使用它的方法。你只需要将 `$(shell)` 更改为 `$(call env_shell)`。`env_shell` 的第一个参数是你需要添加到环境中的变量列表，而第二个参数是要待执行的命令。这里是导出了 `FOO` 的更新 Makefile：
 
-```
+
+在解释它如何工作之前，这里是之前的 `Makefile` 中使用它的方法。你只需要将 `$(shell)` 更改为 `$(call env_shell)`。`env_shell` 的第一个参数是你需要添加到环境中的变量列表，而第二个参数是待执行的命令。下面是导出了 `FOO` 的更新后的 `Makefile`：
+
+```makefile
 export FOO=bar
 
 $(info $(call env_shell,FOO,printenv | grep FOO))
@@ -304,41 +295,43 @@ $(info $(call env_shell,FOO,printenv | grep FOO))
 all: ; @printenv | grep FOO
 ```
 
-当你运行它时，你会看到输出：
+当你运行它时，会看到以下输出：
 
-```
+```text
 $ make
 FOO=bar
 FOO=bar
 ```
 
-现在回到 `env_shell` 的工作原理。首先，它创建一个 shell 脚本，将第一个参数中的所有变量添加到环境中；然后，它执行第二个参数中的命令。默认情况下，该 shell 脚本存储在 `env_file` 变量命名的文件中（之前已将其设置为 `/tmp/env`）。
+## `env_shell` 的工作原理
+
+首先，它创建一个 shell 脚本，将第一个参数中的所有变量添加到环境中；然后，它执行第二个参数中的命令。默认情况下，该 shell 脚本存储在 `env_file` 变量命名的文件中（之前已将其设置为 `/tmp/env`）。
 
 `/tmp/env` 最终包含：
 
-```
+```sh
 export FOO=bar
 printenv | grep FOO
 ```
 
 我们可以将 `env_shell` 的调用分为四个部分：
 
-* 它使用 `$(shell rm -f $(env_file))` 删除 `/tmp/env`。
-* 它使用循环 `$(foreach V,$1,$(shell echo export $V=$($V) >> $(env_file)))` 添加包含第一个参数（`$1`）中每个变量定义的行。
-* 它使用 `$(shell echo '$2' >> $(env_file))` 将要执行的实际命令追加到第二个参数（`$2`）。
-* 它通过调用 `shell` 并使用 `-e` 选项运行 `/tmp/env`：`$(shell /bin/bash -e $(env_file))`。
+- 它使用 `$(shell rm -f $(env_file))` 删除 `/tmp/env`。
+- 它使用循环 `$(foreach V,$1,$(shell echo export $V=$($V) >> $(env_file)))` 添加包含第一个参数（`$1`）中每个变量定义的行。
+- 它使用 `$(shell echo '$2' >> $(env_file))` 将要执行的实际命令追加到第二个参数（`$2`）。
+- 它通过调用 `shell` 并使用 `-e` 选项运行 `/tmp/env`：`$(shell /bin/bash -e $(env_file))`。
 
 这不是一个完美的解决方案；如果 GNU `make` 能自己解决这个问题就好了。
 
 ## 目标特定变量和模式特定变量
 
-每个 `make` 用户都熟悉全局变量。一旦在 Makefile 中定义它们，就可以任何地方使用。本节介绍了目标特定变量和模式特定变量，并展示了如何根据目标的名称选择性地更改值。
+每个 `make` 用户都熟悉全局变量。一旦在 `Makefile` 中定义它们，就可以在任何地方使用。本节介绍目标特定变量和模式特定变量，并展示如何根据目标的名称选择性地更改值。
 
 ### 目标变量
 
-下面显示了一个简单的 Makefile，说明了全局作用域和局部作用域的区别：
+下面显示了一个简单的 `Makefile`，说明全局作用域和局部作用域之间的区别：
 
-```
+```makefile
 .PHONY: all baz
 
 ➊ VAR = global scope
@@ -352,15 +345,15 @@ printenv | grep FOO
    bar: ; @echo $@ is $(VAR)
 ```
 
-这个 Makefile 有三个目标：`all`、`foo` 和 `baz`。所有目标都是伪目标；因为我们只想演示全局作用域，这个 Makefile 并没有实际生成文件。`all` 目标要求 `foo` 和 `bar`，而 `bar` 依赖 `baz`。每个目标的命令都是相同的——使用 shell `echo` 打印 `VAR` 的值。
+这个 `Makefile` 有三个目标：`all`、`foo` 和 `baz`。所有目标都是伪目标；因为我们只想演示全局作用域，这个 `Makefile` 并没有实际生成文件。`all` 目标要求 `foo` 和 `bar`，而 `bar` 依赖 `baz`。每个目标的命令都是相同的——使用 shell `echo` 打印 `VAR` 的值。
 
-`VAR` 变量最初在 ➊ 被定义为 `global scope`。这是 `VAR` 在 Makefile 中任何地方的值——除非使用目标特定变量覆盖了该值。
+`VAR` 变量最初在 ➊ 被定义为 `global scope`。这是 `VAR` 在 `Makefile` 中任何地方的值，除非使用目标特定变量覆盖了该值。
 
-为了说明局部作用域，在 ` ` `bar` 重新定义为 `local scope`。目标特定变量定义与普通变量定义完全相同：它们使用相同的 `=`、`:=`、`+=` 和 `?=` 操作，但前面是定义该变量的目标名称（及其冒号）。
+为了说明局部作用域，在 `bar` 重新定义为 `local scope`。目标特定变量定义与普通变量定义完全相同：它们使用相同的 `=`、`:=`、`+=` 和 `?=` 操作，但前面是定义该变量的目标名称及其冒号。
 
-如果你在这个 Makefile 上运行 GNU `make`，你将得到输出：
+如果你在这个 `Makefile` 上运行 GNU `make`，将得到以下输出：
 
-```
+```text
 In foo VAR is global scope
 In baz VAR is global scope
 In bar VAR is local scope
@@ -371,49 +364,46 @@ In all VAR is global scope
 
 果真，在 `bar` 的规则内部，`VAR` 的值是 `local scope`。因为在 `all` 或 `foo` 中没有 `VAR` 的局部定义，因此在这些规则中 `VAR` 的值为 `global scope`。
 
+但是 `baz` 呢？`Makefile` 的输出显示，`baz` 中 `VAR` 的值为 `local scope`（局部作用域），尽管并没有为 `baz` 显式定义目标特定的 `VAR`。这是因为 `baz` 是 `bar` 的前提条件，因此具有与 `bar` 相同的局部作用域变量。
 
-
-
-但是 `baz` 呢？makefile 的输出显示 `baz` 中 `VAR` 的值为 `local scope`（局部作用域），尽管并没有为 `baz` 显式定义目标特定的 `VAR`。这是因为 `baz` 是 `bar` 的前提条件，因此具有与 `bar` 相同的局部作用域变量。
-
-目标特定变量（Target-specific variables）不仅适用于一个目标，还适用于该目标的所有前提条件，以及*它们*的所有前提条件，以此类推。目标特定变量的作用范围是整个目标树，从定义该变量的目标开始计算。
+目标特定变量（Target-specific variables）不仅适用于一个目标，还适用于该目标的所有前提条件，以及它们的所有前提条件，以此类推。目标特定变量的作用范围是整个目标树，从定义该变量的目标开始计算。
 
 请注意，由于 `all`、`foo`、`bar` 和 `baz` 具有完全相同的配方（recipe），可以将它们全部写在同一行中，如下所示：
 
-```
+```makefile
 all foo bar baz: ; @echo In $@ VAR is $(VAR)
 ```
 
-但 但在本节中，我避免了使用多个目标，因为这有时会引起混淆（许多 GNU `make` 用户认为这一行代表一条规则，会对 `all`、`foo`、`bar` 和 `baz` 运行一次，但实际上实际上是四条独立的规则）。
+但在本节中，我避免使用多个目标，因为这有时会引起混淆。许多 GNU `make` 用户认为这一行代表一条规则，会对 `all`、`foo`、`bar` 和 `baz` 运行一次，但实际上是四条独立的规则。
 
 ### 模式特定变量
 
-模式特定变量（Pattern-specific variables）的工作方式与目标特定变量类似。但它们不是为目标定义的，而是为某种模式定义的，并应用于所有匹配该模式的目标。下面的示例与示例 1-1 类似，但经过了修改以包含一个模式特定变量：
+模式特定变量（Pattern-specific variables）的工作方式与目标特定变量类似。但它们不是为目标定义的，而是为某种模式定义的，并应用于所有匹配该模式的目标。下面的示例与示例 1-1 类似，但经过了修改，以包含模式特定变量：
 
-```
- .PHONY: all foo bar baz
+```makefile
+.PHONY: all foo bar baz
 
-   VAR = global scope
+VAR = global scope
 
-   all: foo bar
-   all: ; @echo In $@ VAR is $(VAR)
+all: foo bar
+all: ; @echo In $@ VAR is $(VAR)
 
-   foo: ; @echo In $@ VAR is $(VAR)
+foo: ; @echo In $@ VAR is $(VAR)
 
-   bar: VAR = local scope
-   bar: baz
-   bar: ; @echo In $@ VAR is $(VAR)
+bar: VAR = local scope
+bar: baz
+bar: ; @echo In $@ VAR is $(VAR)
 
-   baz: ; @echo In $@ VAR is $(VAR)
+baz: ; @echo In $@ VAR is $(VAR)
 
 ➊ f%: VAR = starts with f
 ```
 
-最后一行 ➊ 将任何以 `f` 开头并后跟任何其他字符（即 `%` 通配符）的目标的 `VAR` 设置为值 `starts with f`。（也可以使用多个目标来实现这一点。但目前不要担心这一点。）
+最后一行 ➊ 将任何以 `f` 开头并后跟任何其他字符（即 `%` 通配符）的目标的 `VAR` 设置为值 `starts with f`。也可以使用多个目标来实现这一点，但目前不要担心这一点。
 
-现在，如果你运行 `make`，你会得到如下输出：
+现在，如果你运行 `make`，将得到如下输出：
 
-```
+```text
 $ make
 In foo VAR is starts with f
 In baz VAR is local scope
@@ -423,170 +413,169 @@ In all VAR is global scope
 
 这与示例 1-2 相同，但在 `foo` 的规则中，`VAR` 的值通过模式特定定义设置为 `starts with f`。
 
-值得注意的是，这与 GNU `make` 的模式规则（pattern rules）无关。你可以使用模式特定变量定义更改普通规则中变量的值。你也可以配合模式规则使用它。
+值得注意的是，这与 GNU `make` 的模式规则（pattern rules）无关。你可以使用模式特定变量定义更改普通规则中变量的值，也可以配合模式规则使用它。
 
-例如，假设一个 makefile 使用内置的 `%.o: %.c` 模式规则：
+例如，假设一个 `Makefile` 使用内置的 `%.o: %.c` 模式规则：
 
-```
+```makefile
 %.o: %.c
 ## 执行的命令（内置）:
 → $(COMPILE.c) $(OUTPUT_OPTION) $<
 ```
 
-可以使用模式特定变量为该规则构建的每个 `.o` 文件设置变量。以下是如何为每个 `.o` 文件为 `CFLAGS` 添加 `-g` 选项：
+可以使用模式特定变量为该规则构建的每个 `.o` 文件设置变量。以下是如何为每个 `.o` 文件的 `CFLAGS` 添加 `-g` 选项：
 
-```
+```makefile
 %.o: CFLAGS += -g
 ```
 
-在项目中，拥有一个编译文件的标准规则，并且针对特定文件或一组原本使用相同命令的文件需要该规则的略有不同的版本，这并不罕见。例如，这里有一个使用模式规则构建两个子目录（`lib1` 和 `lib2`）中所有 `.c` 文件的 makefile：
+在项目中，拥有一个编译文件的标准规则，并且针对特定文件或一组原本使用相同命令的文件，需要该规则的略有不同的版本，这并不罕见。例如，下面是一个使用模式规则构建两个子目录（`lib1` 和 `lib2`）中所有 `.c` 文件的 `Makefile`：
 
-```
- lib1_SRCS := $(wildcard lib1/*.c)
-   lib2_SRCS := $(wildcard lib2/*.c)
+```makefile
+lib1_SRCS := $(wildcard lib1/*.c)
+lib2_SRCS := $(wildcard lib2/*.c)
 
-   lib1_OBJS := $(lib1_SRCS:.c=.o)
-   lib2_OBJS := $(lib2_SRCS:.c=.o)
+lib1_OBJS := $(lib1_SRCS:.c=.o)
+lib2_OBJS := $(lib2_SRCS:.c=.o)
 
-   .PHONY: all
-   all: $(lib1_OBJS) $(lib2_OBJS)
+.PHONY: all
+all: $(lib1_OBJS) $(lib2_OBJS)
 
 ➊ %.o: %.c ; @$(COMPILE.C) -o $@ $<
 ```
 
-首先，makefile 将 `lib1/*` 中所有 `.c` 文件列表存入变量 `lib1_SRCS`，并将 `lib2/*` 中的 C 文件存入 `lib2_SRCS`。然后，它使用替换引用（substitution reference）将 `.c` 更改为 `.o`，并将结果存储在 `lib1_OBJS` 和 `lib2_OBJS` 中。最后一行 ➊ 中的模式规则使用 GNU `make` 内置变量 `COMPILE.C` 运行编译器，将 `.c` 文件编译为 `.o` 文件。makefile 构建了 `lib1_OBJS` 和 `lib2_OBJS` 中的所有对象，因为它们是 `all` 的前提条件。`lib1_OBJS` 和 `lib2_OBJS` 都包含一个与 `.c` 文件对应的 `.o` 文件列表。当 GNU `make` 搜索 `.o` 文件（`all` 的前提条件）时，它发现这些文件缺失，但可以使用 `%.o: %.c` 规则来构建它们。
+首先，`Makefile` 将 `lib1/*` 中所有 `.c` 文件的列表存入变量 `lib1_SRCS`，并将 `lib2/*` 中的 C 文件存入 `lib2_SRCS`。然后，它使用替换引用（substitution reference）将 `.c` 更改为 `.o`，并将结果存储在 `lib1_OBJS` 和 `lib2_OBJS` 中。最后一行 ➊ 中的模式规则使用 GNU `make` 内置变量 `COMPILE.C` 运行编译器，将 `.c` 文件编译为 `.o` 文件。
+
+`Makefile` 构建了 `lib1_OBJS` 和 `lib2_OBJS` 中的所有对象，因为它们是 `all` 的前提条件。`lib1_OBJS` 和 `lib2_OBJS` 都包含一个与 `.c` 文件对应的 `.o` 文件列表。当 GNU `make` 搜索 `.o` 文件（`all` 的前提条件）时，它发现这些文件缺失，但可以使用 `%.o: %.c` 规则来构建它们。
 
 如果所有文件都相同，这种方法可以正常工作。但如果某些特定文件需要不同的标志（例如开启调试信息），则可以使用模式特定变量来覆盖。例如：
 
-```
+```makefile
 special.o: CFLAGS += -g
 ```
 
 这样，对于 `special.o`，`CFLAGS` 会增加 `-g`，而其他文件则保持不变。
 
-### 版本版本
+## 版本
 
 由于 GNU `make` 定期更新且新功能不断加入，了解运行的版本是非常重要的。你可以通过两种方式实现这一点：查看 `MAKE_VERSION` 或查看 `.FEATURES`（在 `make` 3.81 中引入）。也可以检查特定的功能，如 `$(eval)`。
 
-### MAKE_VERSION
+### `MAKE_VERSION`
 
-`MAKE_VERSION` 变量包含 `make` 版本号。这是一个打印版本的示例 makefile：
+`MAKE_VERSION` 变量包含 `make` 版本号。下面是一个打印版本的示例 `Makefile`：
 
-```
+```makefile
 .PHONY: all
 all: ; @echo $(MAKE_VERSION)
 ```
 
-当 GNU `make` 3.80 解析此时的输出如下：
+当 GNU `make` 3.80 解析此 `Makefile` 时，输出如下：
 
-```
+```text
 $ make
 3.80
 ```
 
-如果你想确定是否为 3.80 或更高版本？假设版本号总是 `X.YY.Z` 或 `X.YY` 格式，以下代码片段在版本等于或小于运行时时将 `ok` 变量设置为非空：
+如果你想确定版本是否为 3.80 或更高版本，假设版本号总是 `X.YY.Z` 或 `X.YY` 格式，以下代码片段在版本等于或高于运行时版本时，将 `ok` 变量设置为非空：
 
-```
+```makefile
 need := 3.80
 ok := $(filter $(need),$(firstword $(sort $(MAKE_VERSION) $(need))))
 ```
 
-如果 `ok` 不为空，则使用的版本要求的或更高；如果它为空，则版本过旧。该代码片段通过创建一个运行的 `make` 版本（`MAKE_VERSION`）和所需版本（`need`）的空格列表，并对该列表进行排序。假设运行版本是 3.81\.`$(sort $(MAKE_VERSION) $(need))` 将是 `3.80 3.81`。它的 `firstword` 是 `3.80`，因此 `$(filter)` 调用将保留 `3.80`。因此，`ok` 将是非空。
+如果 `ok` 不为空，则使用的版本满足要求或更高；如果它为空，则版本过旧。该代码片段通过创建一个包含运行中的 `make` 版本（`MAKE_VERSION`）和所需版本（`need`）的空格分隔列表，并对该列表进行排序。
 
-现在假设运行版本是 3.79.1\.`$(sort $(MAKE_VERSION) $(need))` 将是 `3.79.1 3.80`，`firstword` 返回 `3.79.1`。`$(filter)` 调用将移除 `3.79.1`，因此 `ok` 将为空。
+假设运行版本是 3.81，`$(sort $(MAKE_VERSION) $(need))` 将是 `3.80 3.81`。它的 `firstword` 是 `3.80`，因此 `$(filter)` 调用将保留 `3.80`。因此，`ok` 将是非空。
+
+现在假设运行版本是 3.79.1，`$(sort $(MAKE_VERSION) $(need))` 将是 `3.79.1 3.80`，`firstword` 返回 `3.79.1`。`$(filter)` 调用将移除 `3.79.1`，因此 `ok` 将为空。
 
 ### 注意
 
-*此片段对于从 10.01 开始的 `make` 版本无法正常工作，因为它假设主版本号是个位数。幸运的是，那还有很远的路！*
+此片段对于从 10.01 开始的 `make` 版本无法正常工作，因为它假设主版本号是个位数。幸运的是，那还有很远的路！
 
-## .FEATURES
+## `.FEATURES`
 
-GNU `make` 3.81 引入了默认变量 `.FEATURES`，它包含了受支持的功能列表。在 GNU `make` 3.81 中，`.FEATURES` 中列出了并支持七个功能：
+GNU `make` 3.81 引入了默认变量 `.FEATURES`，它包含受支持的功能列表。在 GNU `make` 3.81 中，`.FEATURES` 中列出了并支持七个功能：
 
-*   `archives`.使用 `archive(member)` 语法处理归档 (`ar`) 文件
-
-
-
-
-
-*   `check-symlink`。`-L` 和 `--check-symlink-times` 标记。
-*   `else-if`。非嵌套形式 `else if X` 中的 else 分。
-*   `jobserver`。使用作业服务器进行并行构建。
-*   `order-only`。`order-only` 依赖项支持。
-*   `second-expansion`。依赖列表的双重展开。
-*   `target-specific`。目标特定和模式特定的变变量。
+- `archives`：使用 `archive(member)` 语法处理归档（`ar`）文件。
+- `check-symlink`：`-L` 和 `--check-symlink-times` 标记。
+- `else-if`：非嵌套形式 `else if X` 中的 `else` 分支。
+- `jobserver`：使用作业服务器进行并行构建。
+- `order-only`：`order-only` 依赖项支持。
+- `second-expansion`：依赖列表的双重展开。
+- `target-specific`：目标特定和模式特定的变量。
 
 GNU `make` 3.82 添加并支持以下内容：
 
-*   `oneshell``.ONESHELL` 特殊目标。
-*   `shortest-stem`。在匹配目标的模式规则之间选择时使用最短名称选项。
-*   `undefine`。`undefine` 指令。
+- `oneshell`：`.ONESHELL` 特殊目标。
+- `shortest-stem`：在匹配目标的模式规则之间选择时使用最短名称选项。
+- `undefine`：`undefine` 指令。
 
 GNU `make` 4.0 增加了以下内容：
 
-*   `guile`。如果编译 GNU `make` 时带有 GNU Guile 支持，则此项存在并支持 `$(guile)` 函数。
-*   `load`。支持加载动态对象以增强 GNU `make` 的功能。
-*   `output-sync`。支持 `-O`（以及 `--output-sync`）命令行选项。
+- `guile`：如果编译 GNU `make` 时带有 GNU Guile 支持，则此项存在并支持 `$(guile)` 函数。
+- `load`：支持加载动态对象以增强 GNU `make` 的功能。
+- `output-sync`：支持 `-O`（以及 `--output-sync`）命令行选项。
 
-你可以在最近的 GNU make 版本: 3.81, 3.82 和 4.0 中找到关于这些及许多其他特性的细节。
+你可以在最近的 GNU `make` 版本 3.81、3.82 和 4.0 中找到关于这些及许多其他特性的细节。
 
 要检查特定功能是否可用，可以使用以下 `is_feature` 函数：如果请求的功能受支持，它返回 `T`；如果功能缺失，则返回空字符串：
 
-```
+```makefile
 is_feature = $(if $(filter $1,$(.FEATURES)),T)
 ```
 
-例如，下面的 Makefile 使用 `is_feature` 来输出 `archives` 功能是否可用：
+例如，下面的 `Makefile` 使用 `is_feature` 来输出 `archives` 功能是否可用：
 
-```
+```makefile
 .PHONY: all
 all: ; @echo archives are $(if $(call is_feature,archives),,not )available
 ```
 
-这里是使用 GNU `make` 3.81 的输出结果：
+下面是使用 GNU `make` 3.81 时的输出结果：
 
-```
+```text
 $ make
 archives are available
 ```
 
-如果你想检查是否支持 `.FEATURES` 变量，可以使用 MAKE_VERSION 中描述的方法，或者简单展开 `.FEATURES` 并查看它是否为空。下面的 Makefile 片段正是这样做：如果 `.FEATURES` 变量存在且包含任何功能，则将 `has_features` 设置为 `T`（表示真）：
+如果你想检查是否支持 `.FEATURES` 变量，可以使用 `MAKE_VERSION` 中描述的方法，或者简单展开 `.FEATURES` 并查看它是否为空。下面的 `Makefile` 片段正是这样做的：如果 `.FEATURES` 变量存在且包含任何功能，则将 `has_features` 设置为 `T`（表示真）：
 
-```
+```makefile
 has_features := $(if $(filter default,$(origin .FEATURES)),$(if $(.FEATURES),T))
 ```
 
-该片段首先使用 `$(origin)` 检查 `.FEATURES` 变量是否为默认变量；这样，如果有人在 Makefile 中定义了 `.FEATURES`，`has_features` 就不会被骗。如果是默认变量，第二个 `$(if)` 将检查 `.FEATURES` 是否为空。
+该片段首先使用 `$(origin)` 检查 `.FEATURES` 变量是否为默认变量；这样，如果有人在 `Makefile` 中定义了 `.FEATURES`，`has_features` 就不会被骗。如果是默认变量，第二个 `$(if)` 将检查 `.FEATURES` 是否为空。
 
 ## 检测 `$(eval)`
 
-`$(eval)` 函数是一个强大的 GNU `make` 特性，在 3.80 版本中引入。`$(eval)` 的参数会被展开，然后像 Makefile 的一部分一样被解析，允许你在运行时修改 Makefile。
+`$(eval)` 函数是一个强大的 GNU `make` 特性，在 3.80 版本中引入。`$(eval)` 的参数会被展开，然后像 `Makefile` 的一部分一样被解析，允许你在运行时修改 `Makefile`。
 
-如果你使用 `$(eval)`，检查读取你 makefile 的 GNU `make` 版本是否支持该功能是非常重要的。你可以像之前的那样使用 `MAKE_VERSION` 来检查版本是否为 3.80。或者，你可以使用下面的代码片段，仅当 `$(eval)` 被实现时才将 `eval_available` 设置为 `T`：
+如果你使用 `$(eval)`，检查读取你的 `Makefile` 的 GNU `make` 版本是否支持该功能非常重要。你可以像之前那样使用 `MAKE_VERSION` 来检查版本是否为 3.80。或者，你可以使用下面的代码片段，仅当 `$(eval)` 被实现时才将 `eval_available` 设置为 `T`：
 
-```
+```makefile
 $(eval eval_available := T)
 ```
 
 如果 `$(eval)` 不可用，GNU `make` 将寻找名为 `eval eval_available := T` 的变量并尝试获取其值。当然，这个变量不存在，因此 `eval_available` 将被设置为空字符串。
 
-你可以配合 `ifneq` 使用 `eval_available`，以便在 `$(eval)` 未实现时生成一个致命错误。
+你可以配合 `ifneq` 使用 `eval_available`，以便在 `$(eval)` 未实现时生成一个致命错误：
 
-```
+```makefile
 ifneq ($(eval_available),T)
 $(error This makefile only works with a Make program that supports $$(eval))
 endif
 ```
 
-如果你无法检查 `MAKE_VERSION`，`eval_available` 函数将特别有用——例如，你的 make 正在使用非 GNU `make` 工具运行，如 `clearmake` 或 `emake`。
+如果你无法检查 `MAKE_VERSION`，`eval_available` 函数将特别有用，例如你的 `make` 正在使用非 GNU `make` 工具运行，如 `clearmake` 或 `emake`。
 
 # 使用布尔值
 
 GNU `make` 的 `$(if)` 函数和 `ifdef` 结构都将空字符串和未定义的变量视为假，将其他任何内容视为真。但它们在评估参数的方式上存在细微差异。
 
-`$(if)` 函数——即 `$(if X,if-part,else-part)`——如果 `X` 不为空，则展开 `if-part`，否则展开 `else-part`。在使用 `$(if)` 时，条件会被展开，并对*展开后*的值进行空值测试。下面的代码片段报告称它执行了 *else-part* 分支：
+`$(if)` 函数，即 `$(if X,if-part,else-part)`，如果 `X` 不为空，则展开 `if-part`，否则展开 `else-part`。在使用 `$(if)` 时，条件会被展开，并对展开后的值进行空值测试。下面的代码片段报告称它执行了 `else-part` 分支：
 
-```
+```makefile
 EMPTY =
 VAR =
 $(if $(VAR),if-part,else-part)
@@ -594,7 +583,9 @@ $(if $(VAR),if-part,else-part)
 
 ## `$(if)` 函数
 
-`$(if)` 函数在 `X` 不为空时展开 `if-part`，否则展开 `else-part`。在使用 `$(if)` 时，条件会被展开，并对*展开后*的值进行空值测试。下面的代码片段报告称它执行了 *else-part* 分支：
+
+
+`$(if)` 函数在 `X` 不为空时展开 `if-part`，否则展开 `else-part`。在使用 `$(if)` 时，条件会被展开，并对展开后的值进行空值测试。下面的代码片段报告称它执行了 `else-part` 分支：
 
 ```
 EMPTY =
@@ -616,14 +607,11 @@ endif
 
 ## 未定义变量
 
-如果变量未定义，`$(if)` 和 `ifdef` 将将其视为空字符串。
+如果变量未定义，`$(if)` 和 `ifdef` 将其视为空字符串。
 
 ```
 $(if $(VAR),if-part,else-part)
 ```
-
-
-
 
 GNU `make` 在 3.81 版本之前没有内置的逻辑运算符，直到该版本添加了 `$(or)` 和 `$(and)`。不过，可以很容易地创建操作布尔值的用户自定义函数。这些函数通常使用 GNU `make` 的 `$(if)` 函数来做决策。`$(if)` 将任何非空字符串视为 `'true'`，将空字符串视为 `'false'`。
 
@@ -635,13 +623,13 @@ GNU `make` 在 3.81 版本之前没有内置的逻辑运算符，直到该版本
 or = $1$2
 ```
 
-你可以使用一致的真值值 中的 `make-truth` 函数来清理 `or` 的结果，使其在真时为 `T`，在假时为空字符串：
+你可以使用一致的真值值中的 `make-truth` 函数来清理 `or` 的结果，使其在真时为 `T`，在假时为空字符串：
 
 ```
 or = $(call make-truth,$1$2)
 ```
 
-或者为了更紧凑的版本，你可以直接写：
+或者，为了更紧凑的版本，你可以直接写：
 
 ```
 or = $(if $1$2,T).
@@ -754,7 +742,7 @@ download: export _check = $(call assert-present,curly)
 download: ; @echo Download...
 ```
 
-download 目标的第一行设置了目标特定的变量 `_check` 并将其导出为调用 `assert-present` 的结果。这导致 `$(call)` 只有在实际作为构建的一部分时才会发生，因为 `_check` 的值在准备配方时会被展开。例如，`make all` 不检查 `curly` 是否存在：
+`download` 目标的第一行设置了目标特定的变量 `_check` 并将其导出为调用 `assert-present` 的结果。这导致 `$(call)` 只有在实际作为构建的一部分时才会发生，因为 `_check` 的值在准备配方时会被展开。例如，`make all` 不检查 `curly` 是否存在：
 
 ```
 $ make all
@@ -765,7 +753,7 @@ Makefile:5: *** 'curly' missing. Stop.
 
 ## 延迟变量赋值
 
-GNU `make` 提供了两种定义变量的方法：简单运算符 `:=` 和递归运算符 `=` 。简单运算符 `:=` 会立即评估其右侧并使用结果的值设置变量值。例如：
+GNU `make` 提供了两种定义变量的方法：简单运算符 `:=` 和递归运算符 `=`。简单运算符 `:=` 会立即评估其右侧并使用结果的值设置变量值。例如：
 
 ```
 BAR = before
@@ -775,11 +763,7 @@ BAR = after
 
 这段代码片段导致 `FOO` 的值为 `before the rain`，因为在使用 `:=` 设置 `FOO` 时，`BAR` 的值是 `before`。
 
-相反，
-
-
-
-
+相反：
 
 ```
 BAR = before
@@ -787,9 +771,9 @@ FOO = $(BAR) the rain
 BAR = after
 ```
 
-这导致 `FOO` 的取值为 `$(BAR) the rain`，而 `$(FOO)` 求值结果为 `after the rain`。这是因为 `=` 定义了一个递归变量（变量可以包含使用 `$()` 或 `${}` 语法引用其他变量的引用），其值在每次使用变量时都会被确定。相比之下，使用 `:=` 定义的简单变量具有单一的固定值，该值在定义时通过立即展开所有变量引用来确定的。
+这导致 `FOO` 的取值为 `$(BAR) the rain`，而 `$(FOO)` 求值结果为 `after the rain`。这是因为 `=` 定义了一个递归变量（变量可以包含使用 `$()` 或 `${}` 语法引用其他变量的引用），其值在每次使用变量时都会被确定。相比之下，使用 `:=` 定义的简单变量具有单一的固定值，该值在定义时通过立即展开所有变量引用来确定。
 
-简单变量具有显著的速度优势，因为它们是固定字符串，不需要在每次使用时进行展开。它们用起来可能比较棘手，因为编写 Makefile 的人员通常会假设变量可以按任何顺序设置，因为递归定义的变量（使用 **`*=`** 设置的变量）只有在被使用时才会获得其最终值。尽管如此，简单变量的访问速度通常比递归变量快，如果可能，我倾向于始终使用 `:=`。
+简单变量具有显著的速度优势，因为它们是固定字符串，不需要在每次使用时进行展开。它们用起来可能比较棘手，因为编写 Makefile 的人员通常会假设变量可以按任何顺序设置，因为递归定义的变量（使用 `*=` 设置的变量）只有在被使用时才会获得其最终值。尽管如此，简单变量的访问速度通常比递归变量快，如果可能，我倾向于始终使用 `:=`。
 
 但如果你能兼得两者的优点呢？一个变量只在第一次使用时设置，但会被设置为一个不会改变的固定值。如果变量的值需要大量计算，但最多只需要计算一次，或者如果变量从未被使用可能根本不需要计算，这将非常有用。可以通过 `$(eval)` 函数实现这一点。
 
@@ -838,11 +822,11 @@ After use SHALIST is: 3405ad0433933b9b489756cb3484698ac57ce821 ./foo.c
 
 在 GNU `make` 中，列表元素由空格分隔。例如，`peter paul and mary` 是一个包含四个元素的列表，`C:\Documents And Settings\Local User` 也是如此。GNU `make` 有几个用于操作列表的内置函数：
 
-*   `$(firstword)`。获取列表中的第一个单词。
-*   `$(words)`。统计列表元素的数量。
-*   `$(word)`。提取特定索引（从 1 开始计数）的单词。
-*   `$(wordlist)`。从列表中提取一个范围的单词。
-*   `$(foreach)`。让你遍历列表。
+- `$(firstword)`：获取列表中的第一个单词。
+- `$(words)`：统计列表元素的数量。
+- `$(word)`：提取特定索引（从 1 开始计数）的单词。
+- `$(wordlist)`：从列表中提取一个范围的单词。
+- `$(foreach)`：让你遍历列表。
 
 获取列表的第一个元素是非常轻而易见的：
 
@@ -853,9 +837,9 @@ $(info The first word is $(firstword $(MY_LIST)))
 
 那将输出 `The first word is a`。
 
-你可以通过计算列表中单词的数量 *N*，然后取第 *N* 个单词来获取最后一个元素。这里有一个 `lastword` 函数：
+你可以通过计算列表中单词的数量 `N`，然后取第 `N` 个单词来获取最后一个元素。这里有一个 `lastword` 函数：
 
-*注意：GNU make 3.81 及更高版本具有内置的 lastword，它比之前的实现更快。*
+*注意：GNU make 3.81 及更高版本具有内置的 `lastword`，它比之前的实现更快。*
 
 去掉列表的第一个单词只需返回从第二个元素到结束的子列表：
 
@@ -872,11 +856,12 @@ $(info $(notfirst,MY_LIST))
 ```
 notlast = $(wordlist 2,$(words $(1 dummy)),$(1 dummy))
 ```
+
 （注：此处示例应配合 `program for directed compilation` 使用）
 
 # 用户定义函数
 
-本节关于在 Makefile 中定义 `make` 函数。在第 5 章中，你将学习如何通过 C 来定义更复杂的。我们在之前的章节中使用了许多用户定义函数，但现在我们将仔细观察。
+本节关于在 Makefile 中定义 `make` 函数。在第 5 章中，你将学习如何通过 C 来定义更复杂的函数。我们在之前的章节中使用了许多用户定义函数，但现在我们将仔细观察。
 
 ## 基础知识
 
@@ -886,7 +871,7 @@ notlast = $(wordlist 2,$(words $(1 dummy)),$(1 dummy))
 make_date = $1/$2/$3
 ```
 
-使用 `make_date` 时可以这样 `$(call)` 它：
+使用 `make_date` 时可以这样通过 `$(call)` 调用它：
 
 ```
 today := $(call make_date,5,5,2014)
@@ -898,10 +883,7 @@ today := $(call make_date,5,5,2014)
 
 特殊参数 `$0` 包含函数的名称。在前面的示例中，`$0` 是 `make_date`。
 
-由于函数本质上是引用了由 GNU `make` 自动为你创建并填充的特殊变量的变量（如果你对任何参数变量 [`$1`，等]使用 `$(origin)` 函数，它们会被归类为 `automatic`，就像 `$@` 一样），你可以使用内置的 GNU `make` 函数来构建复杂的函数。
-
-
-
+由于函数本质上是引用了由 GNU `make` 自动为你创建并填充的特殊变量的变量（如果你对任何参数变量（`$1` 等）使用 `$(origin)` 函数，它们会被归类为 `automatic`，就像 `$@` 一样），你可以使用内置的 GNU `make` 函数来构建复杂的函数。
 
 这是一个使用 `$(subst)` 函数将路径中的每个 `/` 转换为 `\` 的函数：
 
@@ -909,7 +891,7 @@ today := $(call make_date,5,5,2014)
 unix_to_dos = $(subst /,\,$1)
 ```
 
-不要担心这段代码中 `/` 和 `\` 的使用。GNU `make` 对转义字符的处理非常少，在大多数情况下，字面量 `\` 就是一个实际的反斜杠字符。你可以在第 4 章 中阅读更多关于 `make` 如何处理转义的详细信息。
+不要担心这段代码中 `/` 和 `\` 的使用。GNU `make` 对转义字符的处理非常少，在大多数情况下，字面量 `\` 就是一个实际的反斜杠字符。你可以在第 4 章中阅读更多关于 `make` 如何处理转义的详细信息。
 
 ## 参数处理的陷阱
 
@@ -938,6 +920,8 @@ SWAPPED := $(call swap,first$cargument,second)
 ```
 
 或者甚至调用那个 `,` 变量并使用它（带括号）：
+
+
 
 ```
 , := ,
@@ -1026,10 +1010,6 @@ foo:.c
 在 3.81 版本之前，GNU `make` 支持在规则依赖列表中使用 `$$@`（注意是两个 `$`）（这种语法源于 SysV `make`）。例如，可以使用 `foo: $$@.c` 并相当于 `foo: foo.c`。这意味着 `$$@` 在规则命令中的值为 `$@`。要在 GNU `make` 3.81 及更高版本中使用该功能，必须在 Makefile 中定义 `.SECONDEXPANSION`。作为奖励，GNU `make` 在规则定义中支持所有的标准自动变量（但注意 `$$` 等自动变量始终为空，因为它们在解析 Makefile 时无法计算）。
 
 二次展开不仅可以用于自动变量。用户定义的变量也可以进行*二次展开*，它们最终将获得在 Makefile 中最后定义的赋值。例如，你可以执行如下操作：
-
-
-
-
 
 ```
 .SECONDEXPANSION:
@@ -1173,10 +1153,6 @@ GNU `make` 3.82 在 3.81 四年后发布，引入了许多新特性——以及�
 
 ### 向后不兼容
 
-
-
-
-
 GNU `make` 3.82 的 `NEWS` 文件开头包含了七个向后兼容性警告。以下是快速概述：
 
 *   在 GNU `make` 中，执行规则命令的 shell 是通过 `-c` 命令行选项调用的，该选项告诉 shell 从 shell 的第一个非参数参数中读取要执行的命令。例如，当执行以下小型规则时，`make` 实际上执行了 `execve("/bin/sh", ["/bin/sh", "-c", "echo \"hello\""], ...)`。为了运行 `echo "hello"`，`make` 使用 shell `/bin/sh` 并为其添加了 `-c` 命令行选项。
@@ -1235,80 +1211,84 @@ GNU `make` 3.82 的 `NEWS` 文件开头包含了七个向后兼容性警告。�
 
 *   模式规则和模式特定变量的应用顺序以前是它们在 Makefile 中被发现的顺序。这在 GNU `make` 3.82 中发生了变化：它们现在按“最短匹配干”（'shortest stem'）顺序应用。例如，下面的 Makefile 显示了在 GNU `make` 3.81 和 3.82 中如何使用不同的模式规则。
 
-    ```
-    all: output.o
 
-    out%.o: ; @echo Using out%.o rule
-    outp%.o: ; @echo Using outp%.o rule
-    ```
 
-    *干*（stem）是模式中被 `%` 匹配的部分。在 GNU `make` 3.81 及之前的版本中，`out%.o` 规则匹配是因为它是先定义的：
+```make
+all: output.o
 
-    ```
-    $ make-3.81
-    Using out%.o rule
-    ```
-
-    在 GNU `make` 3.82 及后续版本中，使用 `outp%.o` 规则是因为它的干更短：
-
-    ```
-    $ make-3.82
-    Using outp%.o rule
-    ```
-
-    相似的行为也发生在模式特定变量。
-
-### 新命令行选项：--eval
-
-新的 `--eval` 命令行选项导致 `make` 在解析 Makefile 之前通过 `$(eval)` 运行其参数。例如，如果你有这个 Makefile 并运行 `make --eval=FOO=bar`，你会看到输出 `FOO has value bar`。
-
+out%.o: ; @echo Using out%.o rule
+outp%.o: ; @echo Using outp%.o rule
 ```
+
+*干*（stem）是模式中被`%`匹配的部分。在 GNU`make` 3.81 及之前的版本中，`out%.o`规则匹配是因为它是先定义的：
+
+```text
+$ make-3.81
+Using out%.o rule
+```
+
+在 GNU`make` 3.82 及后续版本中，使用`outp%.o`规则是因为它的干更短：
+
+```text
+$ make-3.82
+Using outp%.o rule
+```
+
+相似的行为也发生在模式特定变量。
+
+### 新命令行选项：`--eval`
+
+新的`--eval`命令行选项导致`make`在解析 Makefile 之前通过`$(eval)`运行其参数。例如，如果你有这个 Makefile 并运行`make --eval=FOO=bar`，你会看到输出`FOO has value bar`。
+
+```make
 all: ; @echo FOO has value $(FOO)
 ```
 
-这是因为在解析 Makefile 之前，行 `FOO=bar` 被视为类似于 Makefile 的第一行，并将 `FOO` 设置为 `bar`。
+这是因为在解析 Makefile 之前，行`FOO=bar`被视为类似于 Makefile 的第一行，并将`FOO`设置为`bar`。
 
-### 新特殊变量：.RECIPEPREFIX 和 .SHELLFLAGS
+### 新特殊变量：`.RECIPEPREFIX`和`.SHELLFLAGS`
 
-GNU `make` 3.82 引入两个新的特殊变量：
+GNU`make` 3.82 引入两个新的特殊变量：
 
-*   `.RECIPEPREFIX`。GNU `make` 使用 `TAB` 字符作为显著空白来开始规则中的命令。你可以通过 `.RECIPEPREFIX` 变量更改此。（如果 `.RECIPEPREFIX` 为空字符串，则使用 `TAB`）。例如：
+- `.RECIPEPREFIX`。GNU`make`使用`TAB`字符作为显著空白来开始规则中的命令。你可以通过`.RECIPEPREFIX`变量更改此。（如果`.RECIPEPREFIX`为空字符串，则使用`TAB`）。例如：
 
-    ```
-    .RECIPEPREFIX = >
+  ```make
+  .RECIPEPREFIX = >
 
-    all:
-    > @echo Making all
-    ```
+  all:
+  > @echo Making all
+  ```
 
-    此外，`.RECIPEPREFIX` 可以在 Makefile 中多次更改。
+  此外，`.RECIPEPREFIX`可以在 Makefile 中多次更改。
 
-*   `.SHELLFLAGS`。GNU `make` 使用 `TAB` 字符作为显著空白来开始规则命令。你可以通过 `.RECIPEPREFIX` 变量更改此。（如果 `.RECIPEPREFIX` 为空字符串，则使用 `TAB`）。例如：
+- `.SHELLFLAGS`。GNU`make`使用`TAB`字符作为显著空白来开始规则命令。你可以通过`.RECIPEPREFIX`变量更改此。（如果`.RECIPEPREFIX`为空字符串，则使用`TAB`）。例如：
 
-    ```
-    .RECIPEPREFIX = >
+  ```make
+  .RECIPEPREFIX = >
 
-    all:
-    > @echo Making all
-    ```
-    （注：此处原文描述 .SHELLFLAGS 时似乎混用了 .RECIPEPREFIX 的示例，已按原文逻辑翻译）
-    此外，`.RECIPEPREFIX` 可以在 Makefile 中多次更改。
+  all:
+  > @echo Making all
+  ```
 
-### .ONESLL 目标
+  （注：此处原文描述`.SHELLFLAGS`时似乎混用了`.RECIPEPREFIX`的示例，已按原文逻辑翻译）
 
-当执行规则命令时，每一行都在一个独立的 shell 中执行。如果在 Makefile 中设置了 `.ONESLL`，所有行都在单个 shell 中执行。例如：
+  此外，`.RECIPEPREFIX`可以在 Makefile 中多次更改。
 
-```
+### `.ONESLL`目标
+
+当执行规则命令时，每一行都在一个独立的 shell 中执行。如果在 Makefile 中设置了`.ONESLL`，所有行都在单个 shell 中执行。例如：
+
+```make
 all:
   echo hello
   echo world
 ```
 
-### 使用 private 和 undefine 修改变量
+### 使用`private`和`undefine`修改变量
 
-目标变量通常对所有目标定义。但如果目标变量前带有 `private`，则它只对该目标定义。在下面的 Makefile 中，`DEBUG` 只对 `foo.o` 被设置为 `1`：
+目标变量通常对所有目标定义。但如果目标变量前带有`private`，则它只对该目标定义。在下面的 Makefile 中，`DEBUG`只对`foo.o`被设置为`1`：
 
-```
+```make
 DEBUG=0
 
 foo.o: private DEBUG=1
@@ -1319,27 +1299,27 @@ foo.c: foo.in
 	echo DEBUG is $(DEBUG) for $@
 ```
 
-GNU `make` 3.82 的另一个关键字是 `undefine`，它允许取消定义一个变量：
+GNU`make` 3.82 的另一个关键字是`undefine`，它允许取消定义一个变量：
 
-```
+```make
 SPECIAL_FLAGS := xyz
 $(info SPECIAL_FLAGS $(SPECIAL_FLAGS))
 undefine SPECIAL_FLAGS
 $(info SPECIAL_FLAGS $(SPECIAL_FLAGS))
 ```
 
-你可以使用 `$(flavor)` 函数检测空变量和未定义变量之间的差异。例如，以下代码输出 `simple` 然后是 `undefined`：
+你可以使用`$(flavor)`函数检测空变量和未定义变量之间的差异。例如，以下代码输出`simple`然后是`undefined`：
 
-```
+```make
 EMPTY :=
 $(info $(flavor EMPTY))
 undefine EMPTY
 $(info $(flavor EMPTY))
 ```
 
-在 3.82 之前的 GNU `make` 版本中，`define` 指令（用于定义变量）总是创建一个递归变量。例如，这里的 `COMMANDS` 将递归变量，在每次使用时展开：
+在 3.82 之前的 GNU`make`版本中，`define`指令（用于定义变量）总是创建一个递归变量。例如，这里的`COMMANDS`将递归变量，在每次使用时展开：
 
-```
+```make
 FILE = foo.c
 
 define COMMANDS
@@ -1348,51 +1328,48 @@ shasum $(FILE)
 endef
 ```
 
-在 GNU 3.82 中，可以在 `define` 语句名后添加可选的 `=`、`:=` 或 `+=`。默认行为是新变量递归展开；这与添加 `=` 相同。添加 `:=` 创建简单变量，在定义时展开 `define` 的主体。添加 `+=` 则将多行追加到现有变量中。
+在 GNU 3.82 中，可以在`define`语句名后添加可选的`=`、`:=`或`+=`。默认行为是新变量递归展开；这与添加`=`相同。添加`:=`创建简单变量，在定义时展开`define`的主体。添加`+=`则将多行追加到现有变量中。
 
-下面的 Makefile 创建了一个名为 `COMMANDS` 的简单变量，然后向其添加行：
+下面的 Makefile 创建了一个名为`COMMANDS`的简单变量，然后向其添加行：
 
-```
+```make
 FILE = foo.c
 
-   define COMMANDS :=
-   wc -l $(FILE)
-   shasum $(FILE)
-   endef
+define COMMANDS :=
+wc -l $(FILE)
+shasum $(FILE)
+endef
 
-   define COMMANDS +=
-   
-   wc -c $(FILE)
-   endef
-   $(info $(COMMANDS))
+define COMMANDS +=
+
+wc -c $(FILE)
+endef
+$(info $(COMMANDS))
 ```
 
-注意上面额外的空行。这是为了让 `wc -c $(FILE)` 在 `shasum $(FILE)` 之后新的一行中出现。如果没有它，`wc -c $(FILE)` 将追加到 `shasum $(FILE)` 后面而没有换行符。
+注意上面额外的空行。这是为了让`wc -c $(FILE)`在`shasum $(FILE)`之后新的一行中出现。如果没有它，`wc -c $(FILE)`将追加到`shasum $(FILE)`后面而没有换行符。
 
-
-
-
-GNU `make` 4.0 的发布了两个主要特性：与 GNU Guile 语言的集成，以及一个用于动态加载对象以运行时扩展 `make` 功能的实验性选项。此外，新的命令行选项对于调试特别有帮助。
+GNU`make` 4.0 的发布了两个主要特性：与 GNU Guile 语言的集成，以及一个用于动态加载对象以运行时扩展`make`功能的实验性选项。此外，新的命令行选项对于调试特别有帮助。
 
 ## Guile
 
-GNU `make` 4.0 变化是引入了新的 `$(guile)` 函数，其参数是用 GNU Guile 语言编写的代码。该代码会被执行，其返回值会被转换为字符串，并由 `$(guile)` 函数返回。
+GNU`make` 4.0 变化是引入了新的`$(guile)`函数，其参数是用 GNU Guile 语言编写的代码。该代码会被执行，其返回值会被转换为字符串，并由`$(guile)`函数返回。
 
-能够切换到另一种语言的能力为 GNU `make` 增加了极大的功能。以下是一个使用 Guile 检查文件是否存在的简单示例：
+能够切换到另一种语言的能力为 GNU`make`增加了极大的功能。以下是一个使用 Guile 检查文件是否存在的简单示例：
 
-```
+```make
 $(if $(guile (access? "foo.c" R_OK)),$(info foo.c exists))
 ```
 
-在 GNU `make` 中使用 GNU Guile 的详细信息将在第 5 章 中介绍。
+在 GNU`make`中使用 GNU Guile 的详细信息将在第 5 章中介绍。
 
 ## 加载动态对象
 
-在本书中我们没有使用 `load` 运算符在 C 中定义函数，但关于如何在 C 中定义函数以及加载动态对象的解释将在第 5 章 中介绍。
+在本书中我们没有使用`load`运算符在 C 中定义函数，但关于如何在 C 中定义函数以及加载动态对象的解释将在第 5 章中介绍。
 
-## 使用 --output-sync 同步输出
+## 使用`--output-sync`同步输出
 
-如果你使用递归 `make` 或使用作业服务器（job server）并行运行规则，`make` 产生的输出可能非常难以阅读，因为来自不同规则和子 make 的输出会混杂在一起。
+如果你使用递归`make`或使用作业服务器（job server）并行运行规则，`make`产生的输出可能非常难以阅读，因为来自不同规则和子 make 的输出会混杂在一起。
 
 考虑以下（稍显刻意的）makefile：
 
@@ -1412,11 +1389,11 @@ three four:
 → @echo $@ line finish
 ```
 
-这个 makefile 包含四个目标：`one`、`two`、`three` 和 `four`。如果你使用 `-j` 选项，这些目标将并行构建。添加两次 `sleep` 调用是为了模拟执行时间不同的命令。
+这个 makefile 包含四个目标：`one`、`two`、`three`和`four`。如果你使用`-j`选项，这些目标将并行构建。添加两次`sleep`调用是为了模拟执行时间不同的命令。
 
-当使用 `-j4` 选项（并行运行四个作业）运行时，输出可能如下：
+当使用`-j4`选项（并行运行四个作业）运行时，输出可能如下：
 
-```
+```text
 $ make -j4
 one line start
 three line start
@@ -1432,9 +1409,9 @@ three line finish
 four line finish
 ```
 
-每个规则的输出行混合在一起，使得非常很难判断哪个输出属于哪个规则。指定 `-Otarget`（或 `--output-sync=target`）会让 `make` 跟踪哪些输出与哪个目标相关，并仅在规则完成后刷出输出。现在，每个目标的完整输出都是清晰可读：
+每个规则的输出行混合在一起，使得非常很难判断哪个输出属于哪个规则。指定`-Otarget`（或`--output-sync=target`）会让`make`跟踪哪些输出与哪个目标相关，并仅在规则完成后刷出输出。现在，每个目标的完整输出都是清晰可读：
 
-```
+```text
 $ make -j4 -Otarget
 two line start
 two line middle
@@ -1450,11 +1427,11 @@ three line middle
 three line finish
 ```
 
-指定 `--output-sync=recurse` 可以处理递归子 make——即调用 `$(MAKE)` 的规则——它通过缓冲规则的整个输出（*包括*子 make）并一次性输出。这防止了子 make 输出的混合，但可能会导致 `make` 输出出现长时间停顿。
+指定`--output-sync=recurse`可以处理递归子 make——即调用`$(MAKE)`的规则——它通过缓冲规则的整个输出（*包括*子 make）并一次性输出。这防止了子 make 输出的混合，但可能会导致`make`输出出现长时间停顿。
 
-## --trace 命令行选项
+## `--trace`命令行选项
 
-你可以使用新的 `--trace` 选项来跟踪 makefile 中规则的执行。当在 `make` 命令行指定该选项时，每个被执行的规则命令将被打印出来，并带有关于规则定义位置以及执行原因的信息。
+你可以使用新的`--trace`选项来跟踪 makefile 中规则的执行。当在`make`命令行指定该选项时，每个被执行的规则命令将被打印出来，并带有关于规则定义位置以及执行原因的信息。
 
 例如，这个简单的 makefile 有四个目标：
 
@@ -1471,9 +1448,9 @@ part-three:
 → @echo Make $@
 ```
 
-使用 `--trace` 运行：
+使用`--trace`运行：
 
-```
+```text
 $ make --trace
 makefile:10: target 'part-three' does not exist
 echo Make part-three
@@ -1488,21 +1465,21 @@ Make part-two
 
 这向你展示了为什么每个规则被运行了、它们在 makefile 中的位置，以及执行了哪些命令。
 
-## 新赋值运算符：!= 和 ::=
+## 新赋值运算符：`!=`和`::=`
 
-你可以使用 `!=` 运算符执行 shell 命令并将变量设置为命令的输出，其方式类似于 `$(shell)`。例如，下行使用 `!=` 获取当前日期和时间到变量中：
+你可以使用`!=`运算符执行 shell 命令并将变量设置为命令的输出，其方式类似于`$(shell)`。例如，下行使用`!=`获取当前日期和时间到变量中：
 
 ```make
 CURRENTLY != date
 ```
 
-`!=` 的一个重要微妙之处在于，生成的变量是递归的，因此它的值在每次使用该变量时都会被展开。如果执行的命令（即 `!=` 的右侧）返回一个 `$`，它会被 `make` 解释为变量引用并进行展开。由于此原因，使用 `:=` 配合 `$(shell)` 比使用 `!=` 更安全。（这是为了兼容 BSD `make` 而添加的，也可能被添加到 POSIX。）
+`!=`的一个重要微妙之处在于，生成的变量是递归的，因此它的值在每次使用该变量时都会被展开。如果执行的命令（即`!=`的右侧）返回一个`$`，它会被`make`解释为变量引用并进行展开。由于此原因，使用`:=`配合`$(shell)`比使用`!=`更安全。（这是为了兼容 BSD`make`而添加的，也可能被添加到 POSIX。）
 
-`::=` 运算符与 `:=` 完全相同，是为了 POSIX 兼容性而添加的。
+`::=`运算符与`:=`完全相同，是为了 POSIX 兼容性而添加的。
 
-## $(file) 函数
+## `$(file)`函数
 
-你可以使用新的 `$(file)` 函数来创建或向文件追加。以下 makefile 使用 `$(file)` 创建了一个文件：
+你可以使用新的`$(file)`函数来创建或向文件追加。以下 makefile 使用`$(file)`创建了一个文件：
 
 ```make
 LOG = make.log
@@ -1523,9 +1500,9 @@ part-three:
 → @echo Make $@
 ```
 
-很容易看出 `$(file)` 函数是 `make` 的一个有用补充。
+很容易看出`$(file)`函数是`make`的一个有用补充。
 
-```
+```text
 $ make
 Make part-three
 Make part-one
@@ -1538,27 +1515,27 @@ part-two
 
 ## GNU make 4.1 新特性
 
-`make` 的最新版本是 4.1。它于 2014 年 10 月 5 日发布，包含了两个有用的更改以及大量的错误修复和改进。
+`make`的最新版本是 4.1。它于 2014 年 10 月 5 日发布，包含了两个有用的更改以及大量的错误修复和改进。
 
-引入了新变量 `MAKE_TERUT` 和 `MAKE_TERM`。如果 `make` 认为 `stdout` 和 `stderr` 分别发送到了控制台，这些布尔值将被设置为真（即不为空）。
+引入了新变量`MAKE_TERUT`和`MAKE_TERM`。如果`make`认为`stdout`和`stderr`分别发送到了控制台，这些布尔值将被设置为真（即不为空）。
 
-`$(file)` 函数经过修改可以在不写入内容的情况下文件。如果没有文本参数，文件只需被打开并关闭；你可以使用 `$(file > MY_FILE))` 来创建一个空文件。
+`$(file)`函数经过修改可以在不写入内容的情况下文件。如果没有文本参数，文件只需被打开并关闭；你可以使用`$(file > MY_FILE))`来创建一个空文件。
 
 # 第 2 章 Makefile 调试
 
-本章涵盖了在调试 makefile 时非常有用的技术。缺乏内置调试工具以及 `make` 中变量追踪的复杂性，使得理解为什么某个目标被构建（或通常没有构建）变得非常有挑战性。
+本章涵盖了在调试 makefile 时非常有用的技术。缺乏内置调试工具以及`make`中变量追踪的复杂性，使得理解为什么某个目标被构建（或通常没有构建）变得非常有挑战性。
 
 本章的第一个示例展示了在 makefile 中添加的最有用行；它等同于插入代码的打印语句。
 
 ## 打印变量的值
 
-如果你查看过 makefile，你会意识到 makefile 变量（通常称为变量）是任何 `make` 过程的核心。变量通常定义了将编译哪些文件、传递给编译器的命令行参数，甚至在哪里寻找编译器。如果你尝试过调试 makefile，你就知道自己最常的问题是：“变量 `X` 的值是多少？”
+如果你查看过 makefile，你会意识到 makefile 变量（通常称为变量）是任何`make`过程的核心。变量通常定义了将编译哪些文件、传递给编译器的命令行参数，甚至在哪里寻找编译器。如果你尝试过调试 makefile，你就知道自己最常的问题是：“变量`X`的值是多少？”
 
-GNU `make` 没有内置的调试器，也不提供像 Perl 或 Python 脚本语言那样的交互性。那么，如何确定变量的值呢？
+GNU`make`没有内置的调试器，也不提供像 Perl 或 Python 脚本语言那样的交互性。那么，如何确定变量的值呢？
 
 看看示例 2-1，它只是设置了各种变量：
 
-示例 2-1. 设置各种变量的简单 makefile
+**示例 2-1. 设置各种变量的简单 makefile**
 
 ```make
 X=$(YS) hate $(ZS)
@@ -1571,27 +1548,25 @@ S=s
 all:
 ```
 
-`X` 的值是多少？
+`X`的值是多少？
 
+由于这个 Makefile 规模小且结构简单，追踪所有变量赋值是可能的，但即便如此，得出`X`的值是`dogs hate cats`仍然需要一些精力。在一个数千行的 Makefile 中，特别是一个充分利用 GNU`make`变量和函数的 Makefile，要确定一个变量的值确实是一项大量的工作。幸运的是，这里有一个小型的`make`配方可以为你完成所有工作：
 
-
-由于这个 Makefile 规模小且结构简单，追踪所有变量赋值是可能的，但即便如此，得出 `X` 的值是 `dogs hate cats` 仍然需要一些精力。在一个数千行的 Makefile 中，特别是一个充分利用 GNU `make` 变量和函数的 Makefile，要确定一个变量的值确实是一项大量的工作。幸运的是，这里有一个小型的 `make` 配方可以为你完成所有工作：
-
-```
+```make
 print-%: ; @echo $* = $($*)
 ```
 
-现在，你可以通过以下命令找到变量 `X` 的值：
+现在，你可以通过以下命令找到变量`X`的值：
 
-```
+```text
 $ make print-X
 ```
 
-由于不存在针对 `print-X` 目标的显式规则，`make` 会查找模式规则，找到 `print-%`（`%` 起通配符的作用），并运行关联命令。该命令使用 `$*`，这是一个特殊变量，它包含规则中 `%` 匹配到的值，用于打印变量名，然后执行 `$($*)` 获取其值。这在 Makefile 中是一项非常有用的技巧，因为它允许计算变量名。在这种情况下，要打印的变量名来自另一个变量 `$*`。
+由于不存在针对`print-X`目标的显式规则，`make`会查找模式规则，找到`print-%`（`%`起通配符的作用），并运行关联命令。该命令使用`$*`，这是一个特殊变量，它包含规则中`%`匹配到的值，用于打印变量名，然后执行`$($*)`获取其值。这在 Makefile 中是一项非常有用的技巧，因为它允许计算变量名。在这种情况下，要打印的变量名来自另一个变量`$*`。
 
-以下是如何使用该规则打印 Makefile 中定义的变量值，参考 示例 2-1：
+以下是如何使用该规则打印 Makefile 中定义的变量值，参考示例 2-1：
 
-```
+```text
 $ make print-X
 X = dogs hate cats
 $ make print-YS
@@ -1600,39 +1575,41 @@ $ make print-S
 S = s
 ```
 
-有时候，知道变量是*如何*定义的很有用。`make` 拥有 `$(origin)` 函数，它返回一个包含变量*类型*的字符串——即变量是在 Makefile 中定义的、在命令行定义的还是在环境中定义的。修改 `print-%` 以同时打印来源信息也很简单：
+有时候，知道变量是*如何*定义的很有用。`make`拥有`$(origin)`函数，它返回一个包含变量*类型*的字符串——即变量是在 Makefile 中定义的、在命令行定义的还是在环境中定义的。修改`print-%`以同时打印来源信息也很简单：
 
-```
+```make
 print-%: ; @echo $* = '$($*)' from $(origin $*)
 ```
 
-现在我们看到 `YS` 是在 Makefile 中定义的：
+现在我们看到`YS`是在 Makefile 中定义的：
 
-```
+```text
 $ make print-YS
 YS = 'dogs' from file
 ```
 
-如果我们在命令行上覆盖 `YS` 的值，我们将看到：
+如果我们在命令行上覆盖`YS`的值，我们将看到：
 
-```
+```text
 $ make print-YS YS=fleas
 YS = 'fleas' from command line
 ```
 
-由于 `YS` 是在 `make` 命令行上设置的，它的 `$(origin)` 现在是 `command line` 而不再是 `file`。
+由于`YS`是在`make`命令行上设置的，它的`$(origin)`现在是`command line`而不再是`file`。
 
 # 导出所有 Makefile 变量
 
 前面的部分展示了如何使用特殊规则打印单个 Makefile 变量的值。但如果你想打印 Makefile 中定义的每一个变量呢？
 
-幸运的是，GNU `make` 3.80 引入了几个新功能，使得使用单个规则打印 Makefile 中定义的所有变量值成为可能。
+幸运的是，GNU`make` 3.80 引入了几个新功能，使得使用单个规则打印 Makefile 中定义的所有变量值成为可能。
 
-再次考虑 示例 2-1。它设置了五个变量：`X`、`Y`、`Z`、`S`、`YS` 和 `ZS`。在示例中添加以下行可以创建一个名为 `printvars` 的目标，它将导出 Makefile 中定义的所有变量，如 示例 2-2 所示。
+再次考虑示例 2-1。它设置了五个变量：`X`、`Y`、`Z`、`S`、`YS`和`ZS`。在示例中添加以下行可以创建一个名为`printvars`的目标，它将导出 Makefile 中定义的所有变量，如示例 2-2 所示。
 
-示例 2-2. 打印所有变量的目标
+**示例 2-2. 打印所有变量的目标**
 
-```
+
+
+```make
 .PHONY: printvars
 printvars:
 → @$(foreach V,$(sort $(.VARIABLES)),            \
@@ -1640,11 +1617,11 @@ printvars:
 → $(origin $V)),$(info $V=$($V) ($(value $V)))))
 ```
 
-在我们仔细观察其工作原理之前，请尝试自己试一下，如 示例 2-3 所示。
+在我们仔细观察其工作原理之前，请尝试自己试一下，如示例 2-3 所示。
 
-示例 2-3. 通过 `printvars` 导出 示例 2-1 中的所有变量
+### 示例 2-3：通过`printvars`导出示例 2-1 中的所有变量
 
-```
+```text
 $ make printvars
 MAKEFILE_LIST= Makefile helper.mak ( Makefile helper.mak)
 MAKEFLAGS= ()
@@ -1657,27 +1634,29 @@ Z=cat (cat)
 ZS=cats ($(Z)$(S))
 ```
 
-注意 `make` 额外抛出了三个没有显式定义的变量——`MAKEFILE_LIST`、`MAKEFLAGS` 和 `SHELL`——但其余都在 Makefile 中定义。每一行都显示了变量名、其完全替换后的值以及它的定义方式。
+注意`make`额外抛出了三个没有显式定义的变量——`MAKEFILE_LIST`、`MAKEFLAGS`和`SHELL`——但其余都在 Makefile 中定义。每一行都显示了变量名、其完全替换后的值以及其定义方式。
 
 当用于打印变量的复杂长行重新格式化成这样时，理解起来要简单得多：
 
+```make
+$(foreach V,$(sort $(.VARIABLES)),
+    $(if
+➊   $(filter-out environment% default automatic,$(origin $V)),
+      $(info $V=$($V) ($(value $V)))))
+    )
 ```
- $(foreach V,$(sort $(.VARIABLES)),
-     $(if
-➊    $(filter-out environment% default automatic,$(origin $V)),
-       $(info $V=$($V) ($(value $V)))))
-     )
-```
 
-`$(VARIABLES)` 变量是 `make` 3.80 中的新功能：它是 Makefile 中所有变量名的列表。首先，`$(sort)` 对其排序。然后`$(foreach)` 遍历排序后的列表，将 `V` 设置为每个名称。`$(if)` 语句表示如果 `$(origin)` 的结果匹配 `environment%`、`default` 或 `automatic`（这些是 `$(origin)` 返回的类型），则返回空字符串；否则保持原样。这意味着 `$(if)` 的谓词仅在变量被定义时为真。`$(info $V=$($V) ($(value $V)))` 输出包含变量名、其展开值和其定义值的消息。`$(value)` 函数是另一个新功能；它输出变量的值而不进行扩展。在 示例 2-3 中，`$(YS)` 会返回 `dogs`，但 `$(value YS)` 会返回 `$(Y)$(S)`。也就是说，`$(value YS)` 显示 `YS` 是如何定义的，而不是最终值。这是一个非常有用的功能。
+`$(VARIABLES)`变量是`make` 3.80 中的新功能：它是 Makefile 中所有变量名的列表。首先，`$(sort)`对其排序。然后`$(foreach)`遍历排序后的列表，将`V`设置为每个名称。`$(if)`语句表示，如果`$(origin)`的结果匹配`environment%`、`default`或`automatic`（这些是`$(origin)`返回的类型），则返回空字符串；否则保持原样。这意味着`$(if)`的谓词仅在变量被定义时为真。`$(info $V=$($V) ($(value $V)))`输出包含变量名、其展开值和其定义值的消息。
 
-随着 Makefile 的增大，确定变量在哪里使用可能会变得困难。特别是由于 GNU `make` 的递归变量：变量的使用可能隐藏在 Makefile 的其他变量声明中。此配方展示了如何在使用变量时对其进行追踪。
+`$(value)`函数是另一个新功能；它输出变量的值而不进行扩展。在示例 2-3 中，`$(YS)`会返回`dogs`，但`$(value YS)`会返回`$(Y)$(S)`。也就是说，`$(value YS)`显示`YS`是如何定义的，而不是最终值。这是一个非常有用的功能。
 
-对于此示例，我们将使用 示例 2-4 中的 Makefile（行已编号以便稍后引用）。
+随着 Makefile 的增大，确定变量在哪里使用可能会变得困难。特别是由于 GNU `make`的递归变量：变量的使用可能隐藏在 Makefile 的其他变量声明中。此配方展示了如何在使用变量时对其进行追踪。
 
-示例 2-4. 用于追踪的示例 Makefile
+对于此示例，我们将使用示例 2-4 中的 Makefile（行已编号以便稍后引用）。
 
-```
+### 示例 2-4：用于追踪的示例 Makefile
+
+```make
  1 X=$(YS) hate $(ZS)
  2 Y=dog
  3 YS=$(Y)$(S)
@@ -1688,26 +1667,23 @@ ZS=cats ($(Z)$(S))
  8 all: $(YS) $(ZS)
  9 all: ; @echo $(X)
 10
- 11 $(YS): ; @echo $(Y) $(Y)
- 12 $(ZS): ; @echo $(Z) $(Z)
+11 $(YS): ; @echo $(Y) $(Y)
+12 $(ZS): ; @echo $(Z) $(Z)
 ```
 
 运行时，该 Makefile 输出：
 
-```
+```text
 dog dog
 cat cat
 dogs hate cats
 ```
 
+如果你追踪了示例 2-4，你会发现变量`$(Y)`在第 8、9 和 11 行被使用，在第 12 行被使用了两次。变量的使用频率之高真是令人惊叹！这是因为`make`只有在需要时（即当变量被使用并进行展开时）才会获取递归展开变量（例如示例 2-4 中的`YS`）的值，而递归展开的变量往往是深度嵌套的。
 
+在示例 2-4 简单的 Makefile 中追踪一个变量已经够烦人的了，但要在真实的 Makefile 中执行这种操作几乎是不可能的。幸运的是，通过以下代码可以让`make`为你完成工作，你应当将这些代码添加到被追踪的 Makefile 的开头（它只会在显式调用时才生效）：
 
-
-如果你追踪了示例 2-4，你会发现变量 `$(Y)` 在第 8、9 和 11 行被使用，在第 12 行被使用了两次。变量的使用频率之高真是令人惊叹！这是因为 `make` 只有在需要时（即当变量被使用并进行展开时）才会获取递归展开变量（例如示例 2-4 中的 `YS`）的值，而递归展开的变量往往是深度嵌套的。
-
-在示例 2-4 简单的 Makefile 中追踪一个变量已经够烦人的了，但要在真实的 Makefile 中执行这种操作几乎是不可能的。幸运的是，通过以下代码可以让 `make` 为你完成工作，你应当将这些代码添加到被追踪的 Makefile 的开头（它只会在显式调用时才生效）：
-
-```
+```make
 ifdef TRACE
 .PHONY: _trace _value
 _trace: ; @$(MAKE) --no-print-directory TRACE= \
@@ -1716,9 +1692,9 @@ _value: ; @echo '$(value $(TRACE))'
 endif
 ```
 
-在我们深入探讨其工作原理之前，这里有一个使用它来追踪示例 Makefile 中 `Y` 值的例子。要使用追踪器，通过将 `TRACE` 变量设置为你想追踪的变量名，告诉 `make` 运行 `trace` 目标。追踪变量 `Y` 如下：
+在我们深入探讨其工作原理之前，这里有一个使用它来追踪示例 Makefile 中`Y`值的例子。要使用追踪器，通过将`TRACE`变量设置为你想追踪的变量名，告诉`make`运行`trace`目标。追踪变量`Y`如下：
 
-```
+```text
 $ make TRACE=Y
 Makefile:8: TRACE Y
 Makefile:11: TRACE Y
@@ -1730,11 +1706,11 @@ Makefile:9: TRACE Y
 dogs hate cats
 ```
 
-从 `TRACE` 输出可以看出，`Y` 第一次在第 8 行 `all` 目标的定义中使用，该目标通过 `$(YS)` 引用了 `Y`；接着在第 11 行 `cats` 目标的定义中使用，该目标也使用了 `$(YS)`；然后在第 12 行使用了两次，分别是对 `$(Y)` 的两次直接引用；最后在第 9 行通过 `$(X)` 使用，`$(X)` 引用了 `$(YS)`，而 `$(YS)` 又引用了 `$(Y)`。
+从`TRACE`输出可以看出，`Y`第一次在第 8 行`all`目标的定义中使用，该目标通过`$(YS)`引用了`Y`；接着在第 11 行`cats`目标的定义中使用，该目标也使用了`$(YS)`；然后在第 12 行使用了两次，分别是对`$(Y)`的两次直接引用；最后在第 9 行通过`$(X)`使用，`$(X)`引用了`$(YS)`，而`$(YS)`又引用了`$(Y)`。
 
-同样，我们可以使用追踪器找到 `$(S)` 的位置：
+同样，我们可以使用追踪器找到`$(S)`的位置：
 
-```
+```text
 $ make TRACE=S
 Makefile:8: TRACE S
 Makefile:8: TRACE S
@@ -1747,92 +1723,89 @@ Makefile:9: TRACE S
 dogs hate cats
 ```
 
-输出显示 `S` 第一次在第 8 行使用了两次（`all` 目标使用了 `XS` 和 `YS`，两者都使用了 `S`）。然后 `S` 再次出现在第 4 行（因为使用了 `YS`）和第 12 行（因为使用了 `XS`）。最后，`S` 在第 9 行使用了两次，此时 `X` 被回显，因为 `X` 被 `XS` 和 `YS` 使用，而两者都使用了 `S`。
+输出显示`S`第一次在第 8 行使用了两次（`all`目标使用了`XS`和`YS`，两者都使用了`S`）。然后`S`再次出现在第 4 行（因为使用了`YS`）和第 12 行（因为使用了`XS`）。最后，`S`在第 9 行使用了两次，此时`X`被回显，因为`X`被`XS`和`YS`使用，而两者都使用了`S`。
 
 ## 变量追踪器的工作原理
 
-GNU `make` 拥有一个特殊的 `$(warning)` 函数，它会向 `STDERR` 输出警告消息并返回空字符串。从高层面上来说，我们的追踪代码将被追踪变量的值修改为包含一个 `$(warning)` 消息。每当变量被展开时，就会打印该警告；每当 `make` 输出警告消息时，它会打印正在使用的 Makefile 名称和行号。
+GNU `make`拥有一个特殊的`$(warning)`函数，它会向`STDERR`输出警告消息并返回空字符串。从高层面上来说，我们的追踪代码将被追踪变量的值修改为包含一个`$(warning)`消息。每当变量被展开时，就会打印该警告；每当`make`输出警告消息时，它会打印正在使用的 Makefile 名称和行号。
 
-例如，假设 `Y` 的定义从
+例如，假设`Y`的定义从：
 
-```
+```make
 Y=dog
 ```
 
-改为
+改为：
 
-```
+```make
 Y=$(warning TRACE Y)dog
 ```
 
-那么，每当 `$(Y)` 被展开时，就会生成一个警告，且 `$(Y)` 的值为 `dog`。由于 `$(warning)` 不返回任何值，因此 `Y` 的值不受影响。
+那么，每当`$(Y)`被展开时，就会生成一个警告，且`$(Y)`的值为`dog`。由于`$(warning)`不返回任何值，因此`Y`的值不受影响。
 
-为了添加此 `$(warning)` 调用，追踪代码首先获取被追踪变量的未展开值，然后在其前面加上适当的 `$(warning)`，最后使用经过特殊修改的检查变量值运行所需的 `make`。它使用了 `$(value)` 函数，正如你在示例 2-2 中看到的，该函数允许你获取变量的未展开值。
+为了添加此`$(warning)`调用，追踪代码首先获取被追踪变量的未展开值，然后在其前面加上适当的`$(warning)`，最后使用经过特殊修改的检查变量值运行所需的`make`。它使用了`$(value)`函数，正如你在示例 2-2 中看到的，该函数允许你获取变量的未展开值。
 
-这是追踪器的详细原理。如果定义了 `TRACE`，`make` 将处理追踪定义块。在这种情况下，由于 `_trace` 是遇到的第一个目标，它将成为默认运行的规则。`_trace` 规则包含一条复杂的命令：
+这是追踪器的详细原理。如果定义了`TRACE`，`make`将处理追踪定义块。在这种情况下，由于`_trace`是遇到的第一个目标，它将成为默认运行的规则。`_trace`规则包含一条复杂的命令：
 
-```
+```make
 @$(MAKE) --no-print-directory TRACE= \
        $(TRACE)='$$(warning TRACE $(TRACE))$(shell $(MAKE) TRACE=$(TRACE) _value)'
 ```
 
-命令的右侧是一个 `$(shell)` 调用，它以不同的目标重新运行 Makefile。如果我们正在追踪 `Y`，`make` 将处理该命令：
+命令的右侧是一个`$(shell)`调用，它以不同的目标重新运行 Makefile。如果我们正在追踪`Y`，`make`将处理该命令：
 
-```
+```make
 @$(MAKE) --no-print-directory TRACE= \
        $(TRACE)='$$(warning TRACE $(TRACE))$(shell $(MAKE) TRACE=$(TRACE) _value)'
 ```
 
-
-
-
-此命令将正的 `make` 输出写入命令行，同时将跟踪跟踪输出重定向到 `trace.log`。
+此命令将正的`make`输出写入命令行，同时将跟踪输出重定向到`trace.log`。
 
 # 跟踪规则执行
 
-在 GNU `make` 4.0 之前，还没有内置方法可以跟踪 makefile 目标的执行顺序。GNU `make` 4.0 添加了 `--trace` 选项，我在 GNU make 4.0 Tracing 中涵盖了内容，但如果你需要使用较早版本的 `make`，拥有另一种跟踪 Makefile 的方法会非常有用。这里展示的技巧适用于 GNU `make` 4.0 及更早版本。
+在 GNU `make` 4.0 之前，还没有内置方法可以跟踪 makefile 目标的执行顺序。GNU `make` 4.0 添加了`--trace`选项，我在 GNU make 4.0 Tracing 中涵盖了内容，但如果你需要使用较早版本的`make`，拥有另一种跟踪 Makefile 的方法会非常有用。这里展示的技巧适用于 GNU `make` 4.0 及更早版本。
 
-### 注意
-
-*如果你曾盯着晦涩难懂的日志输出并自问：“哪条规则导致了该输出？”或“`foo` 规则的输出在哪里？”，那么这一节就是为你准备的。老实说，谁没有想过 GNU `make` 的日志文件输出意味着什么呢？*
+> **注意**
+>
+> 如果你曾盯着晦涩难懂的日志输出并自问：“哪条规则导致了该输出？”或“`foo`规则的输出在哪里？”，那么这一节就是为你准备的。老实说，谁没有想过 GNU `make`的日志文件输出意味着什么呢？
 
 ## 示例
 
 本节使用了以下示例 Makefile：
 
-```
+```make
 .PHONY: all
 all: foo.o bar
 
 bar: ; @touch $@
 ```
 
-它构建两个文件：`foo.o` 和 `bar`。我们假设 `foo.c` 存在，以便 `make` 的内置规则创建 `foo.o`；而 `bar` 是一个简单的 `touch $@ $@`。如果你第一次使用此 Makefile 运行 `make`，你会看到以下输出：
+它构建两个文件：`foo.o`和`bar`。我们假设`foo.c`存在，以便`make`的内置规则创建`foo.o`；而`bar`是一个简单的`touch $@`。如果你第一次使用此 Makefile 运行`make`，你会看到以下输出：
 
-```
+```text
 $ make
 cc -c -o foo.o foo.c
 ```
 
-此日志输出相当晦涩。没有任何 `bar` 规则运行的迹象（因为 `touch $@` 使用 `@` 修饰符隐藏了，这阻止了命令的打印）。也没有迹象表明 `foo.o` 规则生成了 `cc` 编译行。同样也没有迹象表明使用了 `all` 规则。
+此日志输出相当晦涩。没有任何`bar`规则运行的迹象（因为`touch $@`使用了`@`修饰符隐藏了，这阻止了命令的打印）。也没有迹象表明`foo.o`规则生成了`cc`编译行。同样也没有迹象表明使用了`all`规则。
 
-当然你可以使用 `make -n`（它仅打印将执行的命令而不实际执行）来查看 GNU `make` 将执行的工作：
+当然你可以使用`make -n`（它仅打印将执行的命令而不实际执行）来查看 GNU `make`将执行的工作：
 
-```
+```text
 $ make -n
 cc -c -o foo.o foo.c
 touch bar
 ```
 
-在这种情况下它是实用的，但通常情况下 `make -n` 的输出可能和普通日志文件一样晦涩，而且没有提供任何方法将日志中的行与 makefile 中的行进行匹配。
+在这种情况下它是实用的，但通常情况下`make -n`的输出可能和普通日志文件一样晦涩，而且没有提供任何方法将日志中的行与 makefile 中的行进行匹配。
 
 ## SHELL 技巧
 
-增强 GNU `make` 输出的一种简单方法是重新定义 `SHELL`，它是一个内置变量，包含当 `make` 执行命令时使用的 shell 名称。大多数 shell 都有一个 `-x` 选项，会导致它们打印即将执行的每条命令；因此，如果你在 Makefile 中通过附加 `-x` 来修改 `SHELL`，它将在运行 makefile 时打印每条命令。
+增强 GNU `make`输出的一种简单方法是重新定义`SHELL`，它是一个内置变量，包含当`make`执行命令时使用的 shell 名称。大多数 shell 都有一个`-x`选项，会导致它们打印即将执行的每条命令；因此，如果你在 Makefile 中通过附加`-x`来修改`SHELL`，它将在运行 makefile 时打印每条命令。
 
-以下是使用 GNU `make` 的 `+=` 运算符向 `SHELL` 添加 `-x` 修改后的示例 Makefile：
+以下是使用 GNU `make`的`+=`运算符向`SHELL`添加`-x`修改后的示例 Makefile：
 
-```
+```make
 SHELL += -x
 
 .PHONY: all
@@ -1841,28 +1814,28 @@ all: foo.o bar
 bar: ; @touch $@
 ```
 
-在某些 shell 中这可能不起（shell 可能期望单个单词的选项）。在 GNU `make` 4.0 及后续版本中，名为 `.SHELLFLAGS` 的变量包含 shell 的标志，可以通过设置它来避免此问题，而不是修改 `SHELL`。
+在某些 shell 中这可能不起（shell 可能期望单个单词的选项）。在 GNU `make` 4.0 及后续版本中，名为`.SHELLFLAGS`的变量包含 shell 的标志，可以通过设置它来避免此问题，而不是修改`SHELL`。
 
-现在 Makefile 的输出显示 `touch bar` 是 `bar` 规则生成的：
+现在 Makefile 的输出显示`touch bar`是`bar`规则生成的：
 
-```
+```text
 $ make
 cc -c -o foo.o foo.c
 + cc -c -o foo.o foo.c
 + touch bar
 ```
 
-`SHELL` 技巧有一个缺点：它会减慢 `make` 的速度。如果保持 `SHELL` 不变，`make` 在知道可以直接执行命令时通常会避免使用 shell——例如编译和链接等简单操作。但一旦在 Makefile 中重新定义了 `SHELL`，`make` 将始终使用 shell，从而减慢速度。
+`SHELL`技巧有一个缺点：它会减慢`make`的速度。如果保持`SHELL`不变，`make`在知道可以直接执行命令时通常会避免使用 shell——例如编译和链接等简单操作。但一旦在 Makefile 中重新定义了`SHELL`，`make`将始终使用 shell，从而减慢速度。
 
-当然，这并不意味着这是一个糟糕的调试技巧：为了短暂的变慢换取额外的信息是非常小的代价。但重新定义 `SHELL` 无法帮助跟踪日志文件行与 makefile 之间的之间的关系。幸运的是，通过更智能的重新定义 `SHELL` 可以实现。
+当然，这并不意味着这是一个糟糕的调试技巧：为了短暂的变慢换取额外的信息是非常小的代价。但重新定义`SHELL`无法帮助跟踪日志文件行与 makefile 之间的关系。幸运的是，通过更智能的重新定义`SHELL`可以实现。
 
 ## 更智能的 SHELL 技巧
 
-如果 `SHELL` 已定义，`make` 在运行每个规则的每一行之前都会展开其值。这意味着如果 `SHELL` 的展开输出信息，那么就可以在每个规则运行之前打印信息。
+如果`SHELL`已定义，`make`在运行每个规则的每一行之前都会展开其值。这意味着如果`SHELL`的展开输出信息，那么就可以在每个规则运行之前打印信息。
 
-正如你在 跟踪变量值 中看到的，`$(warning)` 函数可以非常有帮助地输出你选择的字符串，以及 Makefile 的名称和写入 `$(warning)` 的行号。通过向 `SHELL` 添加 `$(warning)` 调用，可以在每次 `SHELL` 展开时打印详细信息。下面的代码段正是这样做的：
+正如你在跟踪变量值中看到的，`$(warning)`函数可以非常有帮助地输出你选择的字符串，以及 Makefile 的名称和写入`$(warning)`的行号。通过向`SHELL`添加`$(warning)`调用，可以在每次`SHELL`展开时打印详细信息。下面的代码段正是这样做的：
 
-```
+```make
 OLD_SHELL := $(SHELL)
 SHELL = $(warning Building $@)$(OLD_SHELL)
 
@@ -1872,12 +1845,9 @@ all: foo.o bar
 bar: ; @touch $@
 ```
 
-第一行将 `SHELL` 的原始值捕存在名为 `OLD_SHELL` 的变量中。注意使用 `:=` 来获取 `SHELL` 的值。
+第一行将`SHELL`的原始值保存在名为`OLD_SHELL`的变量中。注意使用`:=`来获取`SHELL`的值。
 
-
-
-
-```
+```text
 $ make --trace
 <builtin>: update target 'foo.o' due to: foo.c
 cc    -c -o foo.o foo.c
@@ -1885,21 +1855,21 @@ Makefile:4: target 'bar' does not exist
 touch bar
 ```
 
-当使用 `--trace` 选项时，GNU `make` 4.0 会覆盖 `@` 修饰符（在前面的示例中用于抑制 `touch bar`），其方式与 `-n` 和 `--just-print` 标志相同。
+当使用`--trace`选项时，GNU `make` 4.0 会覆盖`@`修饰符（在前面的示例中用于抑制`touch bar`），其方式与`-n`和`--just-print`标志相同。
 
-# Makefile 断言 (Assertions)
+# Makefile 断言（Assertions）
 
-大多数编程语言都有断言（assertions）：如果所断言的值为真，则语句什么都不做，但如果为假，则会导致致命错误。它们通常被用作运行时调试辅助，以捕获异常情况。C 语言中一个典型的断言可能看起来像 `assert( foo != bar )`，如果 `foo` 和 `bar` 相同，它会导致致命错误。
+大多数编程语言都有断言（assertions）：如果所断言的值为真，则语句什么都不做，但如果为假，则会导致致命错误。它们通常被用作运行时调试辅助，以捕获异常情况。C 语言中一个典型的断言可能看起来像`assert(foo != bar)`，如果`foo`和`bar`相同，它会导致致命错误。
 
-遗憾的是，GNU `make` 并没有任何形式的内置断言。但从现有函数可以轻松创建断言，而且在 GNU Make 标准库 (GMSL) 中甚至定义了方便的断言函数。
+遗憾的是，GNU `make`并没有任何形式的内置断言。但从现有函数可以轻松创建断言，而且在 GNU Make 标准库（GMSL）中甚至定义了方便的断言函数。
 
-GMSL 项目（在第 6 章 中有介绍）提供了两个断言函数：`assert` 和 `assert_exists`。
+GMSL 项目（在第 6 章中有介绍）提供了两个断言函数：`assert`和`assert_exists`。
 
 ## assert
 
-如果 `assert` 的第一个参数为假，该函数将输出一个致命错误。与 `make` 的 `$(if)` 函数一样，GMSL 将任何非空字符串视为真，将空字符串视为假。因此，如果 `assert` 的参数为空字符串，则断言将导致致命错误；`assert` 的第二个参数将作为错误的一部分打印出来。例如，这个 Makefile 会立即中断，因为 `$(FOO)` 和 `$(BAR)` 相同的：
+如果`assert`的第一个参数为假，该函数将输出一个致命错误。与`make`的`$(if)`函数一样，GMSL 将任何非空字符串视为真，将空字符串视为假。因此，如果`assert`的参数为空字符串，则断言将导致致命错误；`assert`的第二个参数将作为错误的一部分打印出来。例如，这个 Makefile 会立即中断，因为`$(FOO)`和`$(BAR)`相同：
 
-```
+```make
 include gmsl
 
 FOO := foo
@@ -1908,30 +1878,30 @@ BAR := foo
 $(call assert,$(call sne,$(FOO),$(BAR)),FOO and BAR should not be equal)
 ```
 
-由于 `assert` 不是内置函数——它是在 GMSL Makefile 中用户定义的——因此我们必须使用 `$(call)`。
+由于`assert`不是内置函数——它是在 GMSL Makefile 中用户定义的——因此我们必须使用`$(call)`。
 
 我们得到如下消息：
 
-```
+```text
 Makefile:5: *** GNU Make Standard Library: Assertion failure: FOO and BAR should
 not be equal. Stop.
 ```
 
-断言使用了另一个 GMSL 函数 `sne`，它比较两个字符串，如果它们不等则返回真，否则返回假。
+断言使用了另一个 GMSL 函数`sne`，它比较两个字符串，如果它们不等则返回真，否则返回假。
 
 由于“真”仅仅意味着*非空字符串*，因此很容易断言一个变量已定义：
 
-```
+```make
 include gmsl
 
 $(call assert,$(FOO),FOO is not defined)
 ```
 
-你可以使用这个断言，例如检查用户是否设置了所有必要的命令行变量；如果 make 正常运行需要 `FOO`，但用户忘记在命令行上设置了它，那么该断言将导致错误。
+你可以使用这个断言，例如检查用户是否设置了所有必要的命令行变量；如果 make 正常运行需要`FOO`，但用户忘记在命令行上设置了它，那么该断言将导致错误。
 
-你甚至可以使用断言来强制确保不使用某些命令行标志。这里有一个防止用户设置 `-i`（忽略错误标志）的示例：
+你甚至可以使用断言来强制确保不使用某些命令行标志。这里有一个防止用户设置`-i`（忽略错误标志）的示例：
 
-```
+```make
 include gmsl
 
 $(foreach o,$(MAKEFLAGS),$(call assert,$(call sne,-i,$o),You can't use the -i option))
@@ -1942,13 +1912,15 @@ $(MAKEFLAGS)))),i),You can't use the -i option)
 endif
 ```
 
-这个示例比之前的两个复杂，因为 `make` 有两种方式将 `-i` 标志存储在 `MAKEFLAGS` 中：作为熟悉形式 `-i` 的标志，或者作为 `MAKEFLAGS` 第单词中的单字符块。也就是说，设置命令行标志 `-i -k` 会导致 `MAKEFLAGS` 的值为 `ki`。因此，循环中的第一个 `assert` 查找 `-i`，第二个 `assert` 在 `MAKEFLAGS` 的第一个单词中搜索 `i`。
 
-## assert_exists
 
-构建构建成功取决于所有必要文件的存在，因此 GMSL 提供了一个专门用于在文件缺失时发出警告的断言。`assert_exists` 函数有一个参数：必须存在的文件名。例如，为了在 makefile 运行任何命令之前检查 `foo.txt` 文件是否存在，你可以在开头添加一个断言：
+这个示例比之前的两个复杂，因为 `make` 有两种方式将 `-i` 标志存储在 `MAKEFLAGS` 中：作为熟悉形式 `-i` 的标志，或者作为 `MAKEFLAGS` 第一个单词中的单字符块。也就是说，设置命令行标志 `-i -k` 会导致 `MAKEFLAGS` 的值为 `ki`。因此，循环中的第一个 `assert` 查找 `-i`，第二个 `assert` 在 `MAKEFLAGS` 的第一个单词中搜索 `i`。
 
-```
+## `assert_exists`
+
+构建成功取决于所有必要文件的存在，因此 GMSL 提供了一个专门用于在文件缺失时发出警告的断言。`assert_exists` 函数有一个参数：必须存在的文件名。例如，为了在 Makefile 运行任何命令之前检查 `foo.txt` 文件是否存在，你可以在开头添加一个断言：
+
+```make
 include gmsl
 
 $(call assert_exists,foo.txt)
@@ -1956,20 +1928,20 @@ $(call assert_exists,foo.txt)
 
 如果文件不存在，构建将停止：
 
-```
+```text
 Makefile:3: *** GNU Make Standard Library: Assertion failure: file 'foo.txt'
 missing. Stop.
 ```
 
-断言停止了构建，并显示了 makefile 中找到断言的行（在本例中为 3）。
+断言停止了构建，并显示了 Makefile 中找到断言的行（在本例中为 3）。
 
-## assert_target_directory
+## `assert_target_directory`
 
 在构建真实的 Makefile 时，一个常见问题是你必须在构建期间或之前构建目录层次结构。你可以通过创建一个特殊的 `assert_target_directory` 变量来确保在每个规则运行之前每个目录都存在，如示例 2-8 所示。
 
-示例 2-8. 创建一个 assert_target_directory 变量
+**示例 2-8：创建一个 `assert_target_directory` 变量**
 
-```
+```make
 include gmsl
 
 assert_target_directory = $(call assert,$(wildcard (dir $@)),Target directory $(dir $@) missing)
@@ -1977,15 +1949,15 @@ assert_target_directory = $(call assert,$(wildcard (dir $@)),Target directory $(
 foo/all: ; @$(call assert_target_directory)
 ```
 
-通过在每个规则开头插入 `$(call assert_target_directory)`，`make` 会检查目标所在的目录是否存在。例如，如果 `foo/` 不存在，示例 2-8 中的 makefile 结果如下：
+通过在每个规则开头插入 `$(call assert_target_directory)`，`make` 会检查目标所在的目录是否存在。例如，如果 `foo/` 不存在，示例 2-8 中的 Makefile 结果如下：
 
-```
+```text
 Makefile:6: *** GNU Make Standard Library: Assertion failure: Target directory foo/ missing. Stop.
 ```
 
-错误给出了文件名和发生问题时的行号，使得查找问题变得轻而易举。作为一个最后的技巧，可以使用两行修改来跟踪嵌套 makefile 中的缺失目录，尽管会影响性能：
+错误给出了文件名和发生问题时的行号，使得查找问题变得轻而易举。作为一个最后的技巧，可以使用两行修改来跟踪嵌套 Makefile 中的缺失目录，尽管会影响性能：
 
-```
+```make
 include gmsl
 
 assert_target_directory = $(call assert,$(wildcard (dir $@)),Target directory $(dir $@) missing)
@@ -1998,7 +1970,7 @@ foo/all: ; @echo $@
 
 `make` 展开 `SHELL` 的值，因此对每个规则都会调用 `assert_target_directory`。这个简单的更改意味着每个规则都会检查目录是否存在。`SHELL` 的新值由 `assert_target_directory` 调用（它始终返回空字符串）以及存储在 `OLD_SHELL` 中的 `SHELL` 原值组成。注意 `OLD_SHELL` 是使用 `:=` 定义的，这样 `SHELL` 就不会引用自己——`OLD_SHELL` 包含了运行时 `SHELL` 的值，可以安全地重新定义 `SHELL`。如果 `OLD_SHELL` 使用 `=` 定义，`make` 将由于循环引用而无法运行。
 
-# 交互式 GNU make 调试器
+# 交互式 GNU `make` 调试器
 
 尽管非常流行，但调试功能仍然很少。GNU `make` 有一个 `-d` 选项，可以输出关于构建的大量（但不一定有用）调试信息，以及一个 `-p` 选项可以打印 GNU `make` 内部的规则和变量数据库。本节将展示如何仅使用函数构建 GNU `make` 的交互式调试器。
 
@@ -2006,15 +1978,11 @@ foo/all: ; @echo $@
 
 ## 调试器实战
 
-
-
-
-
 在查看调试器如何工作之前，让我们先来看看如何使用它。调试器以及这些示例都假设你正在使用 GNU `make` 3.80 或更高版本。示例 2-9 显示了一个示例 Makefile，它根据先决条件 `foo` 和 `bar` 构建 `all`。
 
-### 示例 2-9. 使用 `__BREAKPOINT` 变量设置断点
+### 示例 2-9：使用 `__BREAKPOINT` 变量设置断点
 
-```
+```make
 MYVAR1 = hello
 MYVAR2 = $(MYVAR1) everyone
 all: MYVAR3 = $(MYVAR2)
@@ -2025,11 +1993,11 @@ foo bar:
 → @echo Building $@
 ```
 
-为了说明调试器的用法，我们在 `all` 规则的配方开头插入了一个仅包含变量 `__BREAKPOINT` 的行，从而设置一个断点。`$(__BREAKPOINT)` 在规则执行时会被展开，导致调试器在 `all` 规则即将运行之前中断执行并提示，如[示例 2-9]所示。
+为了说明调试器的用法，我们在 `all` 规则的配方开头插入了一个仅包含变量 `__BREAKPOINT` 的行，从而设置一个断点。`$(__BREAKPOINT)` 在规则执行时会被展开，导致调试器在 `all` 规则即将运行之前中断执行并提示，如示例 2-9 所示。
 
 当在没有名为 `all`、`foo` 或 `bar` 的现有文件的情况下执行此 Makefile 时，会发生如下：
 
-```
+```text
 $ make
 Building foo
 Building bar
@@ -2040,13 +2008,13 @@ Makefile:51: - Prerequisites 'foo bar' are newer than 'all'
 1>
 ```
 
-首先，你会看到执行 `foo` 和 `bar` 规则的输出（`Building foo` 和 `Building bar` 行），然后进入调试器。调试器中断显示了发生中断的行以及在哪个 Makefile。在本例中，断点发生在 Makefile 的第 51 行。（之所以是第 51 行是因为[示例 2-9]中没有显示使调试器工作的所有实际 GNU `make` 变量。）
+首先，你会看到执行 `foo` 和 `bar` 规则的输出（`Building foo` 和 `Building bar` 行），然后进入调试器。调试器中断显示了发生中断的行以及在哪个 Makefile。在本例中，断点发生在 Makefile 的第 51 行。（之所以是第 51 行是因为示例 2-9 中没有显示使调试器工作的所有实际 GNU `make` 变量。）
 
 调试器还会输出关于正在构建的规则的信息。在这里你可以看到 `all` 是从 `foo` 和 `bar` 构建的，且第一个先决条件是 `foo`。这很重要，因为第一个先决条件被存储在 GNU `make` 的自动变量 `$<` 中（`$<` 通常用于编译的源代码文件名）。调试器还显示了 `all` 规则运行的原因：`foo` 和 `bar` 都比 `all` 新（因为它们都刚刚被各自的规则构建过）。
 
-最后，调试器提示 `1>` 输入命令。调试器在接受 32 条命令之前会自动继续继续 Makefile 的执行。数字 `1` 表示这是第一条命令；一旦达到 `32>`，调试器将自动继续。首要操作是通过输入 `h` 请求帮助：
+最后，调试器提示 `1>` 输入命令。调试器在接受 32 条命令之前会自动继续 Makefile 的执行。数字 `1` 表示这是第一条命令；一旦达到 `32>`，调试器将自动继续。首要操作是通过输入 `h` 请求帮助：
 
-```
+```text
 1< h
 Makefile:51: c       continue
 Makefile:51: q       quit
@@ -2056,9 +2024,9 @@ Makefile:51: d VAR   print definition of $(VAR)
 2>
 ```
 
-调试器提供了两种停止调试的方法：输入 `c` 继续正常执行 Makefile；输入 `q` 退出 `make`。三个调试器命令 `v`、`o` 和 `d` 允许用户通过询问变量的值、其来源（定义何处）或其定义来查询 GNU `make` 变量。例如，[示例 2-9] 中的 Makefile 包含两个变量 `MYVAR1` 和 `MYVAR2`，以及一个特定于 `all` 规则的变量 `MYVAR3`。第一步是询问调试器这些变量的值：
+调试器提供了两种停止调试的方法：输入 `c` 继续正常执行 Makefile；输入 `q` 退出 `make`。三个调试器命令 `v`、`o` 和 `d` 允许用户通过询问变量的值、其来源（定义何处）或其定义来查询 GNU `make` 变量。例如，示例 2-9 中的 Makefile 包含两个变量 `MYVAR1` 和 `MYVAR2`，以及一个特定于 `all` 规则的变量 `MYVAR3`。第一步是询问调试器这些变量的值：
 
-```
+```text
 2> v MYVAR1
 Makefile:55: MYVAR1 has value 'hello'
 3> v MYVAR2
@@ -2070,7 +2038,7 @@ Makefile:55: MYVAR3 has value 'hello everyone'
 
 如果还不清楚 `MYVAR3` 如何获取值，你可以询问调试器其定义：
 
-```
+```text
 5> d MYVAR3
 Makefile:55: MYVAR3 is defined as '$(MYVAR2)'
 6>
@@ -2078,7 +2046,7 @@ Makefile:55: MYVAR3 is defined as '$(MYVAR2)'
 
 这显示 `MYVAR3` 被定义为 `$(MYVAR2)`。因此，显而易见的下一步是查找 `MYVAR2` 是如何定义的（以及 `MYVAR1`）：
 
-```
+```text
 6> d MYVAR2
 Makefile:55: MYVAR2 is defined as '$(MYVAR1) everyone' 7
 > d MYVAR1
@@ -2088,7 +2056,7 @@ Makefile:55: MYVAR1 is defined as 'hello'
 
 如果还不清楚 `MYVAR1` 从何获取值，`o` 命令将显示其来源：
 
-```
+```text
 8> o MYVAR1
 Makefile:55: MYVAR1 is defined in the file
 9
@@ -2096,9 +2064,9 @@ Makefile:55: MYVAR1 is defined in the file
 
 ### 模式中的断点
 
-除了在普通规则中设置断点外，你也可以模式中设置断点。每当命中模式规则时，调试器都会暂停。例如：
+除了在普通规则中设置断点外，你也可以在模式中设置断点。每当命中模式规则时，调试器都会暂停。例如：
 
-```
+```make
 %.x:
 	$(__BREAKPOINT)
 ```
@@ -2107,7 +2075,7 @@ Makefile:55: MYVAR1 is defined in the file
 
 此外，如果需要，你可以直接在 Makefile 中插入断点。Makefile 的解析将在断点处暂停。例如，对于每个 `FOO` 的定义：
 
-```
+```make
 FOO = foo
 $(__BREAKPOINT)
 FOO = bar
@@ -2116,7 +2084,7 @@ $(__BREAKPOINT)
 
 这是一个示例运行：
 
-```
+```text
 $ make
 Makefile:76: GNU Make Debugger Break
 1> v FOO
@@ -2130,26 +2098,23 @@ Makefile:78: FOO has value 'bar'
 
 ### 调试器内部
 
-调试器利用 GMSL 中定义的函数（你可以在第 6 章中更多关于 GMSL 的信息）。调试器的第一行包含了 GMSL 函数：
+调试器利用 GMSL 中定义的函数（你可以在第 6 章中更多了解 GMSL）。调试器的第一行包含了 GMSL 函数：
 
-```
+```make
 include gmsl
 
 __LOOP := 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21 22 23 24 25 26 27 28 29 30 31 32
 ```
 
-调试器使用 `__PROMPT` 变量输出 `n>` 并读取带单个参数的命令。`__PROMPT` 使用 shell 命令 `read` 将命令和参数获取环境变量 `$CMD` 和 `$ARG`，然后返回一个包含两个元素的列表：第一个元素是命令，第二个是参数。
+调试器使用 `__PROMPT` 变量输出 `n>` 并读取带单个参数的命令。`__PROMPT` 使用 Shell 命令 `read` 将命令和参数获取环境变量 `$CMD` 和 `$ARG`，然后返回一个包含两个元素的列表：第一个元素是命令，第二个是参数。
 
-```
+```make
 __PROMPT = $(shell read -p "$(__HISTORY)> " CMD ARG ; echo $$CMD $$ARG)
 ```
 
-
-
-
 你使用 `__BREAK` 变量来获取并处理单个命令。首先，它将 `__PROMPT` 的结果存储在 `__INPUT` 中，然后调用 `__DEBUG` 函数（处理调试器命令），并传入两个参数：由 `__PROMPT` 在 `__INPUT` 中返回的命令及其参数。
 
-```
+```make
 __BREAK = $(eval __INPUT := $(__PROMPT))       \
           $(call __DEBUG,                      \
               $(word 1,$(__INPUT)),            \
@@ -2160,7 +2125,7 @@ __BREAK = $(eval __INPUT := $(__PROMPT))       \
 
 `__DEBUG` 由一组嵌套的 `$(if)` 语句组成，使用 GMSL 的 `seq` 函数来判断 `__c` 是否为有效的调试器命令。如果是，则展开 `$(if)` 的第一个参数；如果不是，则检查下一个 `$(if)`。例如，`v` 命令（输出变量的值）的处理如下：
 
-```
+```make
 $(if $(call seq,$(__c),v),$(warning $(__a) has value '$($(__a))'), ... next if ... )
 ```
 
@@ -2168,7 +2133,7 @@ $(if $(call seq,$(__c),v),$(warning $(__a) has value '$($(__a))'), ... next if .
 
 当 `__DEBUG` 完成时，它返回 `$(true)` 或 `$(false)`（空字符串）。`$(true)` 表示调试器应该停止提示命令并继续执行（`q` 命令通过调用 GNU `make` 的 `$(error)` 函数来处理，会导致致命错误并停止 `make`）：
 
-```
+```make
 __DEBUG = $(eval __c = $(strip $1))                      \
           $(eval __a = $(strip $2))                      \
           $(if $(call seq,$(__c),c),                     \
@@ -2190,9 +2155,9 @@ __DEBUG = $(eval __c = $(strip $1))                      \
         $(warning Unknown command '$(__c)')))))))
 ```
 
-最后，我们来到 `__BREAKPOINT` 的定义（我们在 示例 2-9）中使用的断点变量）。它首先输出一个包含信息的 banner（稍后你会看到 `__BANNER` 的作用）；然后通过调用 `__BREAK` 循环请求命令。如果 `__LOOP` 中的项用尽（这是定义 32 个命令限制的地方）或者 `__BREAK` 的调用返回 `$(true)`，循环将终止：
+最后，我们来到 `__BREAKPOINT` 的定义（我们在示例 2-9 中使用的断点变量）。它首先输出一个包含信息的 banner（稍后你会看到 `__BANNER` 的作用）；然后通过调用 `__BREAK` 循环请求命令。如果 `__LOOP` 中的项用尽（这是定义 32 个命令限制的地方）或者 `__BREAK` 的调用返回 `$(true)`，循环将终止：
 
-```
+```make
 __BREAKPOINT = $(__BANNER)                              \
                $(eval __TERMINATE := $(false))          \
                $(foreach __HISTORY,                     \
@@ -2201,7 +2166,9 @@ __BREAKPOINT = $(__BANNER)                              \
                       $(eval __TERMINATE := $(__BREAK))))
 ```
 
-`__BANNER` 显示调试器已在断点停止，通过检查 GNU `make` 自动变量，它可以提供关于正在构建的规则的信息：
+`__BANNER` 显示调试器已在断点停止，通过检查 GNU `make` 自动变量，它可以提供关于正在构建的规则的信息。
+
+
 
 ```
 __BANNER = $(warning GNU Make Debugger Break)           \
@@ -2261,8 +2228,6 @@ __BANNER = $(warning GNU Make Debugger Break)           \
            $(if $?,$(warning - Prerequisites '$?' are newer than '$@'))
 ```
 
-
-
 在查看调试器如何工作之前，让我们先看看如何使用它。调试器以及这些示例都假设你正在使用 GNU `make` 3.80 或更高版本。
 
 这是一个示例 Makefile，它根据先决条件 `foo` 和 `bar` 构建 `all`。
@@ -2281,7 +2246,7 @@ foo bar: ; @echo Building $@
 $(__BREAKPOINT)
 ```
 
-为了说明调试器的用法，我们在 Makefile 的末尾插入一行仅包含变量 `$(__BREAKPOINT)` 的代码，从而设置一个断点。`$(__BREAKPOINT)` 会在 Makefile 完成解析时展开，导致调试器在运行任何规则之前中断执行并提示输入。（调试器通过开首的 `include gmd` 命令包含在此处。你可以从 GMD 网站 `[`gmd.sf.net/`](http://gmd.sf.net/) 获取 GMD 文件；它们都是开源代码。）
+为了说明调试器的用法，我们在 Makefile 的末尾插入一行仅包含变量 `$(__BREAKPOINT)` 的代码，从而设置一个断点。`$(__BREAKPOINT)` 会在 Makefile 完成解析时展开，导致调试器在运行任何规则之前中断执行并提示输入。（调试器通过开首的 `include gmd` 命令包含在此处。你可以从 GMD 网站 [`gmd.sf.net/`](http://gmd.sf.net/) 获取 GMD 文件；它们都是开源代码。）
 
 当在不存在名为 `all`、`foo` 或 `bar` 的文件的情况下执行此 Makefile 时，会发生以下情况：
 
@@ -2395,9 +2360,6 @@ __BP_CHECK = $(if $(call set_is_member,$@,        \
 __BP_FLAG :=
 ```
 
-
-
-
 `__BP_CHECK` 用于检查当前构建的目标（存储在标准的 GNU `make` 自动变量 `$@` 中）是否存在于断点列表中。它使用 GMSL 函数 `set_is_member` 来此操作。如果目标存在，它会执行两件事：它将一个名为 `__BP_FLAG` 的内部变量设置为断点激活的目标，然后对一个变量执行 `$(call)` 操作，并将结果存储在名为 `__IGNORE` 的变量中以将其丢弃。这样做是为了确保 `__BP_CHECK` 的返回值始终为空；毕竟，它最终被用在 `SHELL` 的定义中，而 `SHELL` 最终只需要要执行的 `shell` 的名称。
 
 丰富的 GNU `make` 用户会对这种奇怪的语法 `$(call SHELL,__BREAKPOINT)` 感到困惑。这涉及到某些 GNU `make` 的“火箭科学”技巧。
@@ -2420,7 +2382,9 @@ __BP_FLAG :=
 
 为了说明 `remake` 的操作，让我们使用 示例 2-10 示例 makefile：
 
-示例 2-10. 用于说明 remake 的简单 makefile
+
+
+## 示例 2-10. 用于说明 `remake` 的简单 `makefile`
 
 ```
 .PHONY: all
@@ -2438,7 +2402,7 @@ bam:
 → @touch $@
 ```
 
-对此 makefile 标准的 GNU `make -n`（或 `--just-print`）选项会产生以下输出：
+对此 `makefile` 标准的 GNU `make -n`（或 `--just-print`）选项会产生以下输出：
 
 ```
 $ make -n
@@ -2448,7 +2412,7 @@ touch bam
 touch baz
 ```
 
-但 `remake` 为每个规则提供了 makefile 和行号信息。这些信息显示了目标（`$@` 的值）和要运行的命令：
+但 `remake` 为每个规则提供了 `makefile` 和行号信息。这些信息显示了目标（`$@` 的值）和要运行的命令：
 
 ```
 $ remake -n
@@ -2470,7 +2434,7 @@ touch baz
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ```
 
-当然，你必须运行任何真实的 makefile 来理解其执行过程。`remake` 提供了一个方便的跟踪选项 `-x`，它可以在运行 makefile 的同时输出关于为什么要构建目标的信息，并显示执行的命令及其输出：
+当然，你必须运行任何真实的 `makefile` 来理解其执行过程。`remake` 提供了一个方便的跟踪选项 `-x`，它可以在运行 `makefile` 的同时输出关于为什么要构建目标的信息，并显示执行的命令及其输出：
 
 ```
 $ remake -x
@@ -2479,7 +2443,7 @@ Updating goal targets....
 Makefile:2  File `all' does not exist.
   Makefile:4 File `foo' does not exist.
     Makefile:7 File `bar' does not exist.
-    Makefile:7 Must remake target `bar`.
+    Makefile:7 Must remake target `bar'.
 ##>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 Makefile:8: bar
 touch bar
@@ -2507,7 +2471,7 @@ Updating goal targets....
 Makefile:2 File `all' does not exist.
   Makefile:4 File `foo' does not exist.
     Makefile:7 File `bar' does not exist.
-    Makefile:7 Must remake target `bar`.
+    Makefile:7 Must remake target `bar'.
 ##>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 Makefile:8: bar
 touch -z bar
@@ -2526,7 +2490,7 @@ touch baz
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
 ```
 
-在输出输出的底部，是依赖 `bar` 成功构建的调用栈，此外还有 `touch` 生成的错误、实际执行的命令以及它在 makefile 中的位置。
+在输出输出的底部，是依赖 `bar` 成功构建的调用栈，此外还有 `touch` 生成的错误、实际执行的命令以及它在 `makefile` 中的位置。
 
 ## 调试
 
@@ -2549,11 +2513,7 @@ foo: bar
 remake<0>
 ```
 
-所以第一个断点发生在 makefile 第 2 行，显示第一个目标是 `all`（并显示完整的依赖列表）。输入 `h` 可以获得完整的帮助信息：
-
-
-
-
+所以第一个断点发生在 `makefile` 第 2 行，显示第一个目标是 `all`（并显示完整的依赖列表）。输入 `h` 可以获得完整的帮助信息：
 
 ```
 remake<0> h
@@ -2602,8 +2562,8 @@ remake<1> s
 bar:
 remake<2> s
       Makefile:7 File `bar' does not exist.
-      Makefile:7 Must remake target `bar`.
-Invoking recipe from Makefile:8 to update target `bar`.
+      Makefile:7 Must remake target `bar'.
+Invoking recipe from Makefile:8 to update target `bar'.
 ##>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 touch -z bar
 ##<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
@@ -2625,7 +2585,7 @@ bar
 remake<4>
 ```
 
-在调试器中，你可以修复 Makefile 中的错误，然后输入 `R` 重新启动构建：
+在调试器中，你可以修复 `Makefile` 中的错误，然后输入 `R` 重新启动构建：
 
 ```
 remake<4> R
@@ -2649,7 +2609,7 @@ remake<0> c
 
 # 目标、宏值与展开
 
-当在调试器中停止时，可以查询 Makefile 中目标的信息，例如变量值（已展开和未展开的）和命令。例如，在 示例 2-10 中，在断点处停止时，你可以使用 `target` 命令找到 `remake` 关于 `all` 目标的所有信息：
+当在调试器中停止时，可以查询 `Makefile` 中目标的信息，例如变量值（已展开和未展开的）和命令。例如，在 示例 2-10 中，在断点处停止时，你可以使用 `target` 命令找到 `remake` 关于 `all` 目标的所有信息：
 
 ```
 $ remake -X
@@ -2724,7 +2684,7 @@ foo: bar
 remake<2>
 ```
 
-由于目标 `foo` 拥有命令，它们被列在底部（以及它们在哪个 Makefile 中被找到）。要查看命令的展开形式，请使用 `target` 命令的 `expand` 修饰符：
+由于目标 `foo` 拥有命令，它们被列在底部（以及它们在哪个 `Makefile` 中被找到）。要查看命令的展开形式，请使用 `target` 命令的 `expand` 修饰符：
 
 ```
 remake<2> target foo expand
@@ -2748,6 +2708,8 @@ remake<4> print COMPILE.c
 remake<7> expand COMPILE.c
 (origin default) COMPILE.c := cc -c
 ```
+
+
 
 `remake` 还可以使用 `set`（展开字符串并将变量设置为该值）和 `setq`（在不展开的情况下将变量设置为字符串）设置变量值。例如，将 `CC` 从 `cc` 改为 `gcc` 会改变 make 使用的 C 编译器：
 
@@ -2774,9 +2736,6 @@ remake<12>
 # 当 CPPFLAGS 变化时重建
 
 本节将向你展示如何实现 GNU make 的重要“缺失功能”：当目标的命令发生变化时重建目标的能力。
-
-
-
 
 例如，当在一个非调试构建之后运行调试构建时（例如通过先运行 `make` 后运行 `make DEBUG=1`）会发生什么呢？除非构建结构已经设计为使得目标名称取决于构建是调试模式还是非调试模式，否则什么都不会发生。
 
@@ -2904,10 +2863,6 @@ g++ -c -DDEBUG= -o foo.o foo.c),$(shell touch foo.o.force))
 
 `.sig` 文件由 `signature` 创建：
 
-
-
-
-
 ```
 include gmsl
 
@@ -3009,9 +2964,6 @@ foo.o: $(call to-md5,$(1))
 	$(shell md5sum $* | cut -d' ' -f1) > $@
 ```
 
-
-
-
 为了查看此黑科技在其中一个前提文件的校验和发生变化时如何更新对象文件，让我们创建 `foo.c` 和 `foo.h` 文件并运行 GNU `make`：
 
 ```
@@ -3078,11 +3030,13 @@ $(shell cat $@ 2>/dev/null),$(CHECKSUM)),echo $(CHECKSUM) > $@)
 
 第二个改进是让校验和对源文件中空白的变化不敏感。毕竟，如果两个开发者对缩进大小的意见分歧导致对象文件在其他任何内容都未发生变化的情况下重新构建，那将是一件遗憾。
 
+
+
 `md5sum` 工具没有忽略空格的方法，但可以很容易地通过 `tr` 对源文件进行处理，在交给 `md5sum` 进行校验和之前剔除空格。（不过，请注意，删除所有空格可能不是一个好主意，至少对于大多数语言而言是如此。）
 
 # 自动依赖生成
 
-任何比简单示例更大的项目都会面临依赖管理问题。随着工程师修改项目，必须生成并保持依赖项的最新状态。GNU `make` 并没有提供处理此问题的工具。GNU `make` 提供的仅是通过其熟悉的 `target` : `prerequisite1 prerequisite2` `...` 语法表达文件之间关系的机制。
+任何比简单示例更大的项目都会面临依赖管理问题。随着工程师修改项目，必须生成并保持依赖项的最新状态。GNU `make` 并没有提供处理此问题的工具。GNU `make` 提供的仅是通过其熟悉的 `target: prerequisite1 prerequisite2 ...` 语法表达文件之间关系的机制。
 
 GNU `make` 的依赖语法是有缺陷的，因为它不仅仅是一个前提列表：第一个前提具有特殊含义。冒号右侧的任何内容都是前提，但带有配方（即命令）的第一个前提是特殊的：它是被赋值给自动变量 `$<` 的前提，并且通常也是传递给编译器（或其他命令）以生成目标的前提。
 
@@ -3144,7 +3098,7 @@ depend:
 → @makedepend -f - $(SRCS) > $(DEPENDS)
 ```
 
-使用此 Makefile 执行 `make depend` 会触发 `depend` 规则，对源（由 `SRCS` 定义）运行 `makedepend`并将结果输出到名为 `dependencies.d` 的文件中（由 `DEPENDS` 定义）。
+使用此 Makefile 执行 `make depend` 会触发 `depend` 规则，对源（由 `SRCS` 定义）运行 `makedepend` 并将结果输出到名为 `dependencies.d` 的文件中（由 `DEPENDS` 定义）。
 
 Makefile 最后一行通过包含 `dependencies.d` 文件来添加依赖项。
 
@@ -3176,8 +3130,6 @@ SRCS = foo.c bar.c baz.c
 -include $(SRCS:.c=.d)
 ```
 
-
-
 此版本仍然使用 `makedepend` 来生成依赖关系，但自动化了该过程，仅对已更改源运行 `makedepend`。它通过将每个 `.c` 文件与 `.d` 文件关联来实现。例如，`foo.o`（由 `foo.c` 构建）有一个 `foo.d` 文件，其中仅包含 `foo.o` 的依赖行。
 
 以下是 `foo.d` 的内容：
@@ -3188,7 +3140,7 @@ SRCS = foo.c bar.c baz.c
 foo.o foo.d : foo.h header.h common.h
 ```
 
-注意有一个新增：此行指定了何时重建 `foo.o`，同时也指定了在相同条件下应该重建 `foo.d`。如果与 `foo.o` 关联的任何源发生变化，`foo.d` 就会被重建。`foo.c` 未在列表中，因为它是作为重建 `.d` 文件的模式规则的一部分被提到的（主 Makefile 中的 `%.d : %.c` 规则意味着如果 `foo.c` 发生变化，`foo.d` 将被重建）。`foo.d` 是通过在示例 3-4. 需要时自动运行 makedepend 中所示的 `sed` 魔法添加到 `makedepend` 创建的依赖行的。
+注意有一个新增：此行指定了何时重建 `foo.o`，同时也指定了在相同条件下应该重建 `foo.d`。如果与 `foo.o` 关联的任何源发生变化，`foo.d` 就会被重建。`foo.c` 未在列表中，因为它是作为重建 `.d` 文件的模式规则的一部分被提到的（主 Makefile 中的 `%.d : %.c` 规则意味着如果 `foo.c` 发生变化，`foo.d` 将被重建）。`foo.d` 是通过在示例 3-4. 需要时自动运行 `makedepend` 中所示的 `sed` 魔法添加到 `makedepend` 创建的依赖行的。
 
 主 Makefile 的最后一行包含了所有的 `.d` 文件：`$(SRCS:.c=.d)` 通过将 `SRCS` 变量中的源列表扩展从 `.c` 更改为 `.d`。`include` 还告诉 GNU `make` 检查 `.d` 文件是否需要重建。
 
@@ -3233,9 +3185,6 @@ SRCS = foo.c bar.c baz.c
 ```
 foo.d : foo.h header.h common.h
 ```
-
-
-
 
 本节解释了当一个命令更新了多个文件时应该如何处理，以及如何表达这种关系，以便 GNU `make` 知道更新了多个文件并采取正确的行为。
 
@@ -3335,8 +3284,6 @@ $(OUT)/%.lib $(OUT)/%.dll: $(VERSION_RESOURCE)
 
 使用模式规则的一种可能替代方案是引入单个文件，以指示多目标规则中的任何目标是否已构建。创建一个单个“指示”文件可以将多个文件转换为单个文件，而 GNU `make` 理解单个文件。以下是重写后的 示例 3-5
 
-
-
 ```
 .PHONY: all
 all: a b
@@ -3360,9 +3307,9 @@ sp :=
 sp +=
 sentinel = .sentinel.$(subst $(sp),_,$(subst /,_,$1))
 atomic = $(eval $1: $(call sentinel,$1) $(2))
-```:
-```make
+```
 
+```make
 .PHONY: all
 all: a b
 
@@ -3391,16 +3338,12 @@ $(call atomic,a b,
 
 `/src/` 是顶层目录，你在此输入 `make` 以获取完整构建。`/src/` 内部有一个 `library/` 目录，从源文件 `lib1.c` 和 `lib2.c` 构建名为 `lib.a` 的库：
 
-
-
-
-
 ```
 /src/library/lib1.c
 /src/library/lib2.c
 ```
 
-`/src/executable/` 目录从两个源文件（`foo.c` 和 `bar.c`）构建一个名为 `exec` 的执行文件，并与库 `lib.a`链接：
+`/src/executable/` 目录从两个源文件（`foo.c` 和 `bar.c`）构建一个名为 `exec` 的执行文件，并与库 `lib.a` 链接：
 
 ```
 /src/executable/foo.c
@@ -3440,19 +3383,21 @@ executable: library
 
 ## 一种灵活的非递归 make 系统
 
-在转向非递归 `make` 时，理想的顶级 makefile 看起来像示例 3-6。
 
-示例 3-6. 一个小的非递归 makefile
 
-```
+在转向非递归 `make` 时，理想的顶级 `makefile` 看起来像示例 3-6。
+
+### 示例 3-6：一个小的非递归 `makefile`
+
+```make
 SUBDIRS = library executable
 
 include $(addsuffix /makefile,$(SUBDIRS))
 ```
 
-这仅仅是说包含每个子目录下的 makefile。技巧在于让它工作起来！在查看方法之前，这里是 `library` 和 `executable` 子目录中 makefile 内容的骨架：
+这仅仅是说包含每个子目录下的 `makefile`。技巧在于让它工作起来！在查看方法之前，这里是 `library` 和 `executable` 子目录中 `makefile` 内容的骨架：
 
-```
+```make
 # /src/library/Makefile
 
 include root.mak
@@ -3464,9 +3409,9 @@ BINARY_EXT := $(_LIBEXT)
 include bottom.mak
 ```
 
-以及
+以及：
 
-```
+```make
 # /src/executable/Makefile
 
 include root.mak
@@ -3478,21 +3423,21 @@ BINARY_EXT := $(_EXEEXT)
 include bottom.mak
 ```
 
-这些 makefile 分别指定了要构建的源文件（在 `SRCS` 变量中）、最终链接的二进制文件名称（在 `BINARY` 变量中）以及二进制文件的类型（使用 `BINARY_EXT` 变量，该变量由特殊变量 `_LIBEXT` 和 `_EXEEXT` 设置）。
+这些 `makefile` 分别指定了要构建的源文件（在 `SRCS` 变量中）、最终链接的二进制文件名称（在 `BINARY` 变量中）以及二进制文件的类型（使用 `BINARY_EXT` 变量，该变量由特殊变量 `_LIBEXT` 和 `_EXEEXT` 设置）。
 
-这两个 makefile 都 `include` 了位于 `/src/` 目录下的通用 makefile `root.mak`、`top.mak` 和 `bottom.mak`。
+这两个 `makefile` 都 `include` 了位于 `/src/` 目录下的通用 `makefile`：`root.mak`、`top.mak` 和 `bottom.mak`。
 
 由于被包含的 `.mak` 文件不在子目录中，GNU `make` 需要去查找它们。若要在 `/src` 中查找 `.mak` 文件，请执行以下操作：
 
-```
+```shell
 $ make -I /src
 ```
 
 在这里，你使用了 `-I` 命令行选项，将目录添加到 `include` 搜索路径中。
 
-要求用户在 `make` 命令行中添加任何内容是不理想的。为了避免这种情况，你可以创建一个自动向上遍历源码树寻找 `.mak` 文件的简单方法。以下是 `/src/ library` 的实际 makefile：
+要求用户在 `make` 命令行中添加任何内容是不理想的。为了避免这种情况，你可以创建一个自动向上遍历源码树寻找 `.mak` 文件的简单方法。以下是 `/src/library` 的实际 `makefile`：
 
-```
+```make
 sp :=
 sp +=
 _walk = $(if $1,$(wildcard /$(subst $(sp),/,$1)/$2) $(call _walk,$(wordlist 2,$(words $1),x $1),$2))
@@ -3511,13 +3456,13 @@ include $(_ROOT)/bottom.mak
 
 `_find` 函数从 `$1` 所在的目录开始向上遍历目录树，寻找名为 `$2` 的文件。实际的查找是通过调用 `_walk` 函数实现的，它向上遍历树，在从 `$1` 开始的逐个缩短的路径中寻找文件 `$2`。
 
-makefile 开头的代码块找到了 `root.mak` 的位置，它与 `top.mak` 和 `bottom.mak` 位于同一目录（即 `/src`），并将该目录保存在 `_ROOT` 中。
+`makefile` 开头的代码块找到了 `root.mak` 的位置，它与 `top.mak` 和 `bottom.mak` 位于同一目录（即 `/src`），并将该目录保存在 `_ROOT` 中。
 
-然后，makefile 就可以使用 `$(_ROOT)/` 来 `include` `root.mak`、`top.mak` 和 `bottom.mak` 文件，而无需输入 `make` 以外的任何内容。
+然后，`makefile` 就可以使用 `$(_ROOT)/` 来 `include` `root.mak`、`top.mak` 和 `bottom.mak` 文件，而无需输入 `make` 以外的任何内容。
 
-以下是第一个包含的 makefile（`root.mak`）的内容：
+以下是第一个包含的 `makefile`（`root.mak`）的内容：
 
-```
+```make
 _push = $(eval _save$1 := $(MAKEFILE))
 _pop = $(eval $(save$1))
 _INCLUDE = $(call _pop,$1)
@@ -3546,11 +3491,7 @@ _EXEEXT :=
 
 `bottom.mak` 使用这些变量来设置实际构建模块的规则：
 
-
-
-
-
-```
+```make
 $(_MODULE_NAME)_OBJS := $(addsuffix $(_OBJEXT),$(addprefix \
 $($(_MODULE_NAME)_OUTPUT)/,$(basename $(SRCS)))) $(DEPS)
 $(_MODULE_NAME)_BINARY := $($(_MODULE_NAME)_OUTPUT)/$(BINARY)$(BINARY_EXT)
@@ -3596,9 +3537,9 @@ endif
 
 之后，使用 `$(shell)` 来设置模块输出的目录。最后，特定的规则将该模块输出目录中的对象文件与该模块源目录中的源文件关联起来。
 
-在准备好这些基础设施后，我们终于可以查看 `executable` 目录下的 Makefile：
+在准备好这些基础设施后，我们终于可以查看 `executable` 目录下的 `Makefile`：
 
-```
+```make
 sp :=
 sp +=
 _walk = $(if $1,$(wildcard /$(subst $(sp),/,$1)/$2) $(call _walk,$(wordlist 2,$(words $1),x $1),$2))
@@ -3619,19 +3560,19 @@ DEPS := $(library_BINARY)
 include $(_ROOT)/bottom.mak
 ```
 
-这看起来和库的 Makefile 非常相似，但存在差异。由于可执行文件需要库，`DEPS` 行指定了可执行文件依赖于库创建的二进制文件。由于每个模块都有对应对象和二进制文件的唯一变量，因此通过引用 `$(library_BINARY)`很容易定义这种依赖关系，它将展开为库模块创建的库文件的完整路径。
+这看起来和库的 `Makefile` 非常相似，但存在差异。由于可执行文件需要库，`DEPS` 行指定了可执行文件依赖于库创建的二进制文件。由于每个模块都有对应对象和二进制文件的唯一变量，因此通过引用 `$(library_BINARY)` 很容易定义这种依赖关系，它将展开为库模块创建的库文件的完整路径。
 
-为了确保 `$(library_BINARY)` 被定义，有必要包含来自 `library` 目录的 Makefile。`root.mak` 文件提供了两个使之变得极其简单的函数：`DEPENDS_ON` 和 `DEPENDS_ON_NO_BUILD`。
+为了确保 `$(library_BINARY)` 被定义，有必要包含来自 `library` 目录的 `Makefile`。`root.mak` 文件提供了两个使之变得极其简单的函数：`DEPENDS_ON` 和 `DEPENDS_ON_NO_BUILD`。
 
-`DEPENDS_ON_NO_BUILD` 只是为指定的模块设置变量，以便在 Makefile 中使用。如果在 `executable` Makefile 中使用该函数，则库（`lib.a`）必须存在可执行文件才能成功构建。另一方面，`DEPENDS_ON` 在此处被用于确保在需要时构建 `library`。
+`DEPENDS_ON_NO_BUILD` 只是为指定的模块设置变量，以便在 `Makefile` 中使用。如果在 `executable` `Makefile` 中使用该函数，则库（`lib.a`）必须存在可执行文件才能成功构建。另一方面，`DEPENDS_ON` 在此处被用于确保在需要时构建 `library`。
 
 `DEPENDS_ON_NO_BUILD` 提供了类似于经典递归构建的功能，这种构建不知道如何构建该库但依赖于它。`DEPENDS_ON` 更灵活，因为在不需要递归的情况下，你可以指定关系并确保代码被构建。
 
-## 使用非递归 make 系统
+## 使用非递归 `make` 系统
 
 非递归 `make` 系统提供了极大的灵活性。这里是几个示例，说明了非递归 `make` 系统与递归系统一样灵活（甚至更高！）。从顶层构建所有内容只需要简单的 `make`（在这些示例中，我们使用 `make -n` 命令以便清晰地显示命令）：
 
-```
+```shell
 $ cd /src
 make -n
 cc -c -o '/tmp/out/library/lib1.o' '/home/jgc/doc/nonrecursive/library.c
@@ -3645,90 +3586,86 @@ g++ /tmp/out/executable/foo.o /tmp/out/executable/bar.o /tmp/out/library/lib.a -
 
 清理所有内容也是简单的：
 
-```
+```shell
 $ cd /src
 make -n
 ```
 
 从顶层目录，清理任何模块也是模块的：
 
-```
+```shell
 $ cd /src
 make -n
 ```
 
-```
+```shell
 $ cd /src
 make -n
 ```
 
-```
+```shell
 $ cd /src
 make -n
 ```
 
-```
+```shell
 $ cd /src
 make -n
 ```
 
-```
+```shell
 $ cd /src
 make -n
 ```
 
-```
+```shell
 $ cd /src
 make -n
 ```
 
-```
+```shell
 $ cd /src
 make -n
 ```
 
-```
+```shell
 $ cd /src
 make -n
 ```
 
-```
+```shell
 $ cd /src
 make -n
 ```
 
-```
+```shell
 $ cd /src
 make -n
 ```
 
-```
+```shell
 $ cd /src
 make -n
 ```
 
 ## 关于子模块
 
-假设源码树实际上是
+假设源码树实际上是：
 
-
-
-
-
-```
+```text
 /src/
 /src/library/
 /src/library/sublibrary
 /src/executable/
 ```
 
-在 `library` 之下有一个额外的 `sublibrary`，它使用以下 makefile 从 `slib1.c` 和 `slib2.c` 构建出 `slib.a`：
+在 `library` 之下有一个额外的 `sublibrary`，它使用以下 `makefile` 从 `slib1.c` 和 `slib2.c` 构建出 `slib.a`：
 
-```
+```make
 sp :=
 sp +=
 _walk = $(if $1,$(wildcard /$(subst $(sp),/,$1)/$2) $(call _walk,$(wordlist 2,$(words $1),x $1),$2))
-_find = $(firstword $(call _walk,$(strip (subst /, ,$1)),$2))
+_find = $(firstword (call _walk,$(strip (subst /, ,$1)),$2))
 _ROOT := $(patsubst %/root.mak,%,$(call _find,$(CURDIR),root.mak))
 
 include $(_ROOT)/root.mak
@@ -3741,9 +3678,9 @@ BINARY_EXT := $(_LIBEXT)
 include $(_ROOT)/bottom.mak
 ```
 
-要指定 `library` 依赖于 `sublibrary`，只需在 library 目录下的 makefile 中添加一个 `DEPENDS_ON` 调用即可：
+要指定 `library` 依赖于 `sublibrary`，只需在 `library` 目录下的 `makefile` 中添加一个 `DEPENDS_ON` 调用即可：
 
-```
+```make
 sp :=
 sp +=
 _walk = $(if $1,$(wildcard /$(subst $(sp),/,$1)/$2) $(call _walk,$(wordlist 2,$(words $1),x $1),$2))
@@ -3768,6 +3705,12 @@ include $(_ROOT)/bottom.mak
 回到并重复之前的示例，我们看到 `sublibrary` 已成功地包含了 `library` 的构建中（并自动包含了 `executable` 的构建）。
 
 以下是从顶部的完整构建过程，随后是 `clean` 操作：
+
+
+
+## 构建示例
+
+在 `/src` 目录下执行以下命令：
 
 ```
 $ cd /src
@@ -3822,11 +3765,7 @@ ar r '/tmp/out/library/sublibrary/slib.a' /tmp/out/library/sublibrary/slib1.o /t
 sublibrary/slib2.o
 ```
 
-
-
-
-
-## 详解 $(shell)
+## 详解 `$(shell)`
 
 `$(shell)` 是 GNU `make` 中相当于 shell 中反引号（`` ` ``）的操作符。它执行一个命令，将结果扁坦化（将所有包括换行符在内的空白字符转换为空格），并返回生成的字符串。
 
@@ -3858,7 +3797,7 @@ CWD = $(shell pwd)
 
 我们稍后在考虑如何优化一个反复获取工作目录而浪费时间的示例 Makefile 时，会再介绍 `pwd` 命令。
 
-## = 和 := 的区别
+## `=` 和 `:=` 的区别
 
 在 99% 的情况下，你会看到 Makefile 中使用 `=` 形式的变量定义，如下：
 
@@ -3892,6 +3831,7 @@ bar fooey barney
 请记住以下两种情况：
 
 - 当在 Makefile 中定义规则时，变量将求值为它们在 Makefile 中*该点*的值。
+
 - 在配方（recipe，即命令部分）中使用的变量具有最终值：即变量在 Makefile 结束时的任何值。
 
 如果将 `FOOBAR` 的定义改为使用 `:=` 而不是 `=`，运行该 Makefile 将得到完全不同的结果：
@@ -3919,7 +3859,7 @@ BAZ=bazzy
 
 结果是 `FOOBAR` 为 `foo bar baz`。如果使用 `=` 而不是 `:=`，当追加 `$(BAZ)` 时，它不会被展开，结果 `FOOBAR` 将是 `foo baz bazzy`。
 
-## = 的隐藏成本
+## `=` 的隐藏成本
 
 看这个示例 Makefile：
 
@@ -3947,12 +3887,9 @@ all: $(OBJS)
 CWD := $(shell pwd)
 ```
 
-## (eval) 与变量缓存
+## `(eval)` 与变量缓存
 
 在上一节中，你学习了如何使用 `:=` 来加速 Makefile，从而避免重复执行 `$(shell)`。遗憾的是，重构 Makefile 以使用 `:=` 可能会出现问题，因为它们可能依赖于以任何顺序定义变量。
-
-
-
 
 在本节中，你将学习如何使用 GNU `make` 的 `$(eval)` 函数，在利用 `=` 获取递归展开变量的优势的同时，能够获得类似于 `:=` 带来的速度提升。
 
@@ -4080,9 +4017,9 @@ cache = $(if $(cached-$1),,$(eval cached-$1 := 1)$(eval cache-$1 := $($1))$(cach
 
 
 
-要更新 Makefile，只需将任何对变量的引用改为对 `cache` 函数的调用。例如，你可以通过简单的查找和替换，将示例 4-1 中所有的 `$(FOO)` 更改为 `$(call cache,FOO)`。结果所示示例 4-2。
+要更新 `Makefile`，只需将任何对变量的引用改为对 `cache` 函数的调用。例如，你可以通过简单的查找和替换，将示例 4-1 中所有的 `$(FOO)` 更改为 `$(call cache,FOO)`。结果所示示例 4-2。
 
-### 示例 4-2. 使用 `cache` 函数的示例 4-1 的修改版本
+### 示例 4-2：使用 `cache` 函数的示例 4-1 的修改版本
 
 ```
 C := 1234567890 ABCDEFGHIJKLMNOPQRSTUVWXYZ
@@ -4108,11 +4045,11 @@ _DUMMY := $(call cache,FOO)
 all:
 ```
 
-在我的机器上运行这段代码显示，现在对 `FOO` 只有一次访问，对 `C` 仍然是九次访问，运行时间为 2.4 秒。它没有 `:=` 版本（耗时 1.8 秒）那么快，但仍然快了 24%。在一个大型 Makefile 中，这种技术可以产生显著差异。
+在我的机器上运行这段代码显示，现在对 `FOO` 只有一次访问，对 `C` 仍然是九次访问，运行时间为 2.4 秒。它没有 `:=` 版本（耗时 1.8 秒）那么快，但仍然快了 24%。在一个大型 `Makefile` 中，这种技术可以产生显著差异。
 
 ## 结语
 
-处理变量最快的方法是尽可能使用 `:=`，但这需要仔细留心，而且可能最好只在一个新的 Makefile 中这样做（想象一下要回头重构一个现有的 Makefile 来使用 `:=` 是有多困难）。
+处理变量最快的方法是尽可能使用 `:=`，但这需要仔细留心，而且可能最好只在一个新的 `Makefile` 中这样做（想象一下要回头重构一个现有的 `Makefile` 来使用 `:=` 是有多困难）。
 
 如果你不得不使用 `=`，这里介绍的 `cache` 函数可以为你提供速度提升，进行增量短时间构建的开发者们会特别感激这一点。
 
@@ -4128,9 +4065,9 @@ $(subst 2,TWO,$C)$(subst 1,ONE,$C))$(value FOO)
 
 ## 隐藏目标的麻烦
 
-看一眼示例 4-3 中的 Makefile：
+看一眼示例 4-3 中的 `Makefile`：
 
-### 示例 4-3. 在此 makefile 中，生成 foo 的规则也会生成 foo.c。
+### 示例 4-3：在此 `Makefile` 中，生成 `foo` 的规则也会生成 `foo.c`
 
 ```
 .PHONY: all
@@ -4143,17 +4080,17 @@ foo:
 →  touch $@
 ```
 
-它包含一个让粗心者的陷阱，会导致 `make` 报告错误、使 `-n` 选项失效并阻止快速并行 `make`。它甚至会导致 GNU make 执行错误的工作并更新一个已经是新的文件。
+它包含一个让粗心者的陷阱，会导致 `make` 报告错误、使 `-n` 选项失效并阻止快速并行 `make`。它甚至会导致 GNU `make` 执行错误的工作并更新一个已经是新的文件。
 
-上看，这个 Makefile 看起来非常简单。如果你通过 GNU make 运行它，它会构建 `foo`（生成 `foo` 和 `foo.c` 文件），然后使用底部的模式从 `foo.c` 生成 `foo.o`。它最终执行了以下命令：
+上看，这个 `Makefile` 看起来非常简单。如果你通过 GNU `make` 运行它，它会构建 `foo`（生成 `foo` 和 `foo.c` 文件），然后使用底部的模式从 `foo.c` 生成 `foo.o`。它最终执行了以下命令：
 
 ```
 touch foo.c
 ```
 
-这是一个致命缺陷。Makefile 中没有处提到生成 `foo` 的规则实际上也生成了 `foo.c`。因此，`foo.c` 是一个 GNU make 未感知的“隐藏目标”，而隐藏目标会导致无数的问题。
+这是一个致命缺陷。`Makefile` 中没有处提到生成 `foo` 的规则实际上也生成了 `foo.c`。因此，`foo.c` 是一个 GNU `make` 未感知的“隐藏目标”，而隐藏目标会导致无数的问题。
 
-GNU make 非常擅长跟踪需要构建的目标以及目标之间的依赖关系。但 `make` 程序的性能取决于输入。如果你不告诉 `make` 这种关系，它就会出错。
+GNU `make` 非常擅长跟踪需要构建的目标以及目标之间的依赖关系。但 `make` 程序的性能取决于输入。如果你不告诉 `make` 这种关系，它就会出错。
 
 ### 隐藏目标缺失时的意外错误
 
@@ -4165,9 +4102,9 @@ $ make
 No rule to make target `foo.c', needed by `foo`.
 ```
 
-### -n 选项失效
+### `-n` 选项失效
 
-GNU make 中非常有用的 `-n` 选项让它打印将执行的命令而不实际执行：
+GNU `make` 中非常有用的 `-n` 选项让它打印将执行的命令而不实际执行：
 
 ```
 $ make -n
@@ -4176,9 +4113,9 @@ touch foo.c
 
 你看到 `make` 并没有实际运行 `touch` 命令，因为 `foo.c` 缺失了。
 
-### 无法并行 make
+### 无法并行 `make`
 
-GNU make 提供了一项方便的功能，允许它同时运行多个任务。如果在构建中有许多编译，指定 `-j` 选项（后跟任务数）可以最大化 CPU 利用率并缩短构建时间。
+GNU `make` 提供了一项方便的功能，允许它同时运行多个任务。如果在构建中有许多编译，指定 `-j` 选项（后跟任务数）可以最大化 CPU 利用率并缩短构建时间。
 
 不幸的是，一个隐藏目标破坏了这个计划。这是在示例 4-3 中运行 `make -3` 的输出：
 
@@ -4189,9 +4126,9 @@ No rule to make target `foo.c', needed by `foo`.
 Waiting for unfinished jobs....
 ```
 
-GNU make 同时尝试构建 `foo`、`foo.o` 和 `foo.c`，并发现它不知道如何 `foo.c`，因为它应该等待 `foo`。
+GNU `make` 同时尝试构建 `foo`、`foo.o` 和 `foo.c`，并发现它不知道如何 `foo.c`，因为它应该等待 `foo`。
 
-### 隐藏目标被更新时 make 执行错误的工作
+### 隐藏目标被更新时 `make` 执行错误的工作
 
 假设运行 `make` 时文件 `foo.c` 已经存在。因为 `make` 不知道生成 `foo` 的规则会干扰 `foo.c`，即使它是新的，它也会被更新。在示例 4-2 中，`foo.c` 被一个无害的 `touch` 操作修改（仅更改文件时间戳），但不同的操作可能会破坏或覆盖文件的内容：
 
@@ -4205,9 +4142,9 @@ touch foo.o
 
 `make` 因为 `foo` 缺失而重新构建，并更新 `foo.c`，尽管它显然已经是新的。
 
-### 你无法引导 make 构建 foo.o
+### 你无法引导 `make` 构建 `foo.o`
 
-你希望输入 `make foo.o` 会导致 GNU make 从 `foo.c` 构建 `foo.o`，并在时构建 `foo.c`。但 `make` 并不知道如何构建 `foo.c`。那只是在构建 `foo` 时偶然发生的：
+你希望输入 `make foo.o` 会导致 GNU `make` 从 `foo.c` 构建 `foo.o`，并在时构建 `foo.c`。但 `make` 并不知道如何构建 `foo.c`。那只是在构建 `foo` 时偶然发生的：
 
 ```
 $ rm -f foo.c
@@ -4215,25 +4152,23 @@ $ make foo.o
 No rule to make target `foo.c', needed by `foo.o`.
 ```
 
-### 因此，如果 `foo.c` 缺失，`make foo.o` 会导致错误。
+### 因此，如果 `foo.c` 缺失，`make foo.o` 会导致错误
 
 希望你现在已经相信了隐藏目标是一个坏主意，并且会导致各种构建问题。
 
-# GNU make 的转义规则
+# GNU `make` 的转义规则
 
-
-
-有时你需要在 makefile 中插入特殊字符。例如，你可能需要在 `$(error)` 消息中包含一个换行符，在 `$(subst)` 中包含一个空格，或者将逗号作为 GNU `make` 函数的参数。这三个简单的任务在 GNU `make` 中执行起来可能异常令人沮丧；本节将带你了解消除这种挫败感的简单语法。
+有时你需要在 `makefile` 中插入特殊字符。例如，你可能需要在 `$(error)` 消息中包含一个换行符，在 `$(subst)` 中包含一个空格，或者将逗号作为 GNU `make` 函数的参数。这三个简单的任务在 GNU `make` 中执行起来可能异常令人沮丧；本节将带你了解消除这种挫败感的简单语法。
 
 GNU `make` 在任何包含命令的行开头使用制表符是一个众闻名的语言特性，但其他一些特殊字符也会让你困惑。GNU `make` 处理 `$`、`%`、`?`、`*`、`[`、`~`、`\` 和 `#` 的方式都是特殊的。
 
-### 处理 `$`
+## 处理 `$`
 
-每个 GNU make 用户都熟悉用 `$` 来开始变量引用。你可以写 `$(variable)`（带括号）或 `${variable}`（带花括号）来获取 `variable` 的值，如果变量名是单个字符（例如 `a`），你可以省略括号直接使用 `$a`。
+每个 GNU `make` 用户都熟悉用 `$` 来开始变量引用。你可以写 `$(variable)`（带括号）或 `${variable}`（带花括号）来获取 `variable` 的值，如果变量名是单个字符（例如 `a`），你可以省略括号直接使用 `$a`。
 
 要获取一个字面上的 `$`，你需要写 `$$`。因此，要定义一个包含单个 `$` 符号的变量，你会写：`dollar := $$`。
 
-### 使用 `%`
+## 使用 `%`
 
 转义 `%` 并不像 `$` 那么简单，但只需要在三种情况下进行，且每种情况规则相同：在 `vpath` 指令中、在 `$(patsubst)` 中以及在模式规则或静态模式规则中。
 
@@ -4243,16 +4178,16 @@ GNU `make` 在任何包含命令的行开头使用制表符是一个众闻名的
 - 如果你需要在 `%` 前面放置一个字面量的 `\`（即你希望 `\` 不要转义 `%`），请用 `\` 对其转义（换句话说，`\\%` 变成一个字面量 `\`，后跟一个*将要*用于模式匹配的 `%` 字符）。
 - 不要担心在模式的任何地方转义 `\`。它会被视为字面量。例如，`\hello` 就是 `\hello`。
 
-### 通配符与路径
+## 通配符与路径
 
-符号 `?`、`*`、`[` 和 `]` 出现在文件名中会被特殊处理。一个如下所示的 makefile：
+符号 `?`、`*`、`[` 和 `]` 出现在文件名中会被特殊处理。一个如下所示的 `makefile`：
 
 ```
 *.c:
 →  @command
 ```
 
-实际上会搜索当前目录下所有的 `.c` 文件，并为每个文件定义一个规则。目标（以及依赖项和 `include` 指令中提到的文件）会被通配（（搜索文件系统并将文件名与通配符进行匹配）。通配符的含义与 Bourne shell 中的相同。
+实际上会搜索当前目录下所有的 `.c` 文件，并为每个文件定义一个规则。目标（以及依赖项和 `include` 指令中提到的文件）会被通配（搜索文件系统并将文件名与通配符进行匹配）。通配符的含义与 Bourne shell 中的相同。
 
 `~` 字符在文件名中也被特殊处理，并展开为当前用户的家目录。
 
@@ -4263,9 +4198,9 @@ GNU `make` 在任何包含命令的行开头使用制表符是一个众闻名的
 →  @command
 ```
 
-这个 makefile 为名为（字面量上的）`*.c` 的文件定义了一个规则。
+这个 `makefile` 为名为（字面量上的）`*.c` 的文件定义了一个规则。
 
-### 续行
+## 续行
 
 除了转义功能外，你还可以将行尾的 `\` 作为续行符：
 
@@ -4278,7 +4213,7 @@ something else
 
 在这里，`all` 规则有三个依赖项：`prerequisite`、`something` 和 `else`。
 
-### 注释
+## 注释
 
 你可以使用 `#` 字符开始注释，并可以使用 `\` 转义将其变为字面量：
 
@@ -4288,7 +4223,7 @@ pound := \#
 
 在这里，`$(pound)` 是单个字符：`#`。
 
-### 我只想一个换行符！
+## 我只想一个换行符！
 
 GNU `make` 尽力让你免受换行符的影响。你无法转义换行符——没有用于特殊字符的语法（例如，你不能写 `\n`），即使 `$(shell)` 函数也会从返回值中删除换行符。
 
@@ -4318,9 +4253,9 @@ $(error This is an error message (\n)with two lines)
 
 我们将在下一节详细介绍特殊变量名。
 
-### 函数参数：空格与逗号
+## 函数参数：空格与逗号
 
-许多 GNU make 用户遇到的问题之一是 GNU make 函数参数中空格和逗号的处理。考虑以下 `$(subst)` 的用法：
+许多 GNU `make` 用户遇到的问题之一是 GNU `make` 函数参数中空格和逗号的处理。考虑以下 `$(subst)` 的用法：
 
 ```
 spaces-to-commas = $(subst ,,,$1)
@@ -4330,16 +4265,12 @@ spaces-to-commas = $(subst ,,,$1)
 
 它定义了一个名为 `spaces-to-commas` 的函数，将其参数中的所有空格转换为逗号（这对于创建 CSV 文件可能很有用）。遗憾的是，它无法工作，原因有两个：
 
-- `$(subst)` 的第一个参数是一个空格。GNU make 会移除函数参数周围所有的前导尾空白。在这种情况下，第一个参数被解释为空字符串。
-- 第二个参数是逗号。GNU make 无法区分用于参数分隔的逗号和作为参数本身的逗号。此外，没有办法转义逗号。
+- `$(subst)` 的第一个参数是一个空格。GNU `make` 会移除函数参数周围所有的前导尾空白。在这种情况下，第一个参数被解释为空字符串。
+- 第二个参数是逗号。GNU `make` 无法区分用于参数分隔的逗号和作为参数本身的逗号。此外，没有办法转义逗号。
 
-### 幻地带
+## 幻地带
 
 你可以采取 `$( )` 和 `$(\n)` 这样的定义并走得远，定义名为 `# `=` 或 `:` 的变量。这里是一些有趣的变量定义：
-
-
-
-
 
 ```
 # 定义变量 $= 或 $(=) ，其值为 =
@@ -4357,8 +4288,6 @@ dollar := $$
 $(dollar) := $$
 ```
 
-```
-
 这些定义可能没什么大用处，但如果你想将 GNU `make` 语法推向极限，可以尝试这个：
 
 ```
@@ -4369,11 +4298,11 @@ $(dollar) := $$
 
 # `$(wildcard)` 的问题
 
-`$(wildcard)` 函数是 GNU `make` 的通配符函数（glob function）。它是获取 Makefile 内部文件列表的一种方法，但它的行为可能会出乎意。它提供的结果并不总是与运行 `ls` 一致。继续阅读了解原因以及如何处理。
+`$(wildcard)` 函数是 GNU `make` 的通配符函数（glob function）。它是获取 `Makefile` 内部文件列表的一种方法，但它的行为可能会出乎意料。它提供的结果并不总是与运行 `ls` 一致。继续阅读了解原因以及如何处理。
 
 ## `$(wildcard)` 详解
 
-你可以在 Makefile 或规则的任何地方使用 `$(wildcard)` 来获取匹配一个或多个*通配符*样式模式的文件列表。例如，`$(wildcard *.foo)` 返回以 `.foo` 结尾的文件列表。记住，列表是一个字符串，列表元素之间用空格分隔，因此 `$(wildcard *.foo)` 可能会返回 `a.foo b.foo c.foo`。（如果文件名包含空格，返回的列表可能看起来是不正确的，因为无法区分列表分隔符——空格——与文件名中的空格。）
+你可以在 `Makefile` 或规则的任何地方使用 `$(wildcard)` 来获取匹配一个或多个*通配符*样式模式的文件列表。例如，`$(wildcard *.foo)` 返回以 `.foo` 结尾的文件列表。记住，列表是一个字符串，列表元素之间用空格分隔，因此 `$(wildcard *.foo)` 可能会返回 `a.foo b.foo c.foo`。（如果文件名包含空格，返回的列表可能看起来是不正确的，因为无法区分列表分隔符——空格——与文件名中的空格。）
 
 你也可以带入模式列表来调用 `$(wildcard)`，例如 `$(wildcard *.foo *.bar)` 会返回所有以 `.foo` 或 `.bar` 结尾的文件。`$(wildcard)` 函数支持以下通配符运算符：`*`（匹配 0 或多个字符）、`?`（匹配 1 个字符）和 `[...]`（匹配字符，如 `[123]`，或字符范围，如 `[a-z]`）。
 
@@ -4395,15 +4324,19 @@ $(info a.foo is $(call if-exists,a.foo,there,not there))
 
 以下每个示例都使用两个变量来获取特定目录下以 `.foo` 结尾的文件列表：`WILDCARD_LIST` 和 `LS_LIST` 分别通过调用 `$(wildcard)` 和 `$(shell ls)` 返回以 `.foo` 结尾的文件列表。变量 `DIRECTORY` 示例查找文件的目录；对于当前目录，`DIRECTORY` 留空。
 
-初始的 Makefile 如下所示：
+初始的 `Makefile` 如下所示：
 
 ```
 WILDCARD_LIST = wildcard returned '\$(wildcard $(DIRECTORY)*.foo)\'
+
 LS_LIST = ls returned '\$(shell ls $(DIRECTORY)*.foo)\'
 
 .PHONY: all
+
 all:
+
 →  @echo $(WILDCARD_LIST)
+
 →  @echo $(LS_LIST)
 ```
 
@@ -4412,83 +4345,97 @@ all:
 ```
 $ touch a.foo
 $ make
+
 wildcard returned 'a.foo'
+
 ls returned 'a.foo'
 ```
 
-现在扩展 Makefile，使用 `touch` 创建一个名为 `b.foo` 的文件。Makefile 应该像 示例 4-4 返回不同的结果。")所示：
+现在扩展 `Makefile`，使用 `touch` 创建一个名为 `b.foo` 的文件。`Makefile` 应该像示例 4-4 所示，返回不同的结果。
 
-示例 4-4. 当你运行这个 Makefile 时，`ls` 和 `$(wildcard)` 返回不同的结果。
+### 示例 4-4：当你运行这个 `Makefile` 时，`ls` 和 `$(wildcard)` 返回不同的结果
 
 ```
 WILDCARD_LIST = wildcard returned '\$(wildcard $(DIRECTORY)*.foo)\'
+
 LS_LIST = ls returned '\$(shell ls $(DIRECTORY)*.foo)\'
 
 .PHONY: all
+
 all: b.foo
+
 → @echo $(WILDCARD_LIST)
+
 → @echo $(LS_LIST)
 
 b.foo:
+
 → @touch $@
 ```
 
-通过 GNU `make` 运行此 Makefile（仅带有已存在的 `a.foo` 文件）会得到以下意外的输出：
+通过 GNU `make` 运行此 `Makefile`（仅带有已存在的 `a.foo` 文件）会得到以下意外的输出：
 
 ```
 $ touch a.foo
 $ make
+
 wildcard returned 'a.foo'
+
 ls returned 'a.foo b.foo'
 ```
 
+
+
 `ls` 返回了正确的列表（因为在运行 `all` 规则时 `b.foo` 已经创建），但 `$(wildcard)` 没有；`$(wildcard)` 似乎显示的是 `b.foo` 创建之前的状态。
 
-在子目录（而不是当前工作目录中）中操作 `.foo` 文件会导致不同的输出，如 示例 4-5 返回相同的结果。")所示。示例 4-5. 这，`ls` 和 `$(wildcard)` 返回相同的结果。
+在子目录（而不是当前工作目录中）中操作 `.foo` 文件会导致不同的输出，如示例 4-5 所示。示例 4-5：这时，`ls` 和 `$(wildcard)` 返回相同的结果。
 
 ## 意外结果解释
 
-我们得到意外且显然不一致的结果，是因为 GNU `make` 包含它自己的目录条目缓存。`$(wildcard)` 从该缓存中读取（而不是像 `ls` 那样直接从磁盘读取）。了解缓存何时被填充对于理解 `$(wildcard)` 返回的结果至关重要。
+我们得到意外且显然不一致的结果，是因为 GNU `make` 包含它自己的目录条目缓存。`$(wildcard)` 从该缓存中读取（而不是像 `ls` 那样直接从磁盘读取）。了解缓存何时被填充，对于理解 `$(wildcard)` 返回的结果至关重要。
 
 GNU `make` 只在被强制时填充缓存（例如，当它需要读取目录条目以满足 `$(wildcard)` 或通配符请求时）。如果你知道 GNU `make` 只在需要时填充缓存，就可以解释这些结果。
 
-在 示例 4-4 返回不同的结果。")中，GNU `make` 在启动时填充了当前目录的缓存。因此，文件 `b.foo` 没有出现在 `$(wildcard)` 的输出中，因为它在填充缓存时还。
+在示例 4-4 中，GNU `make` 在启动时填充了当前目录的缓存。因此，文件 `b.foo` 没有出现在 `$(wildcard)` 的输出中，因为它在填充缓存时还不存在。
 
-在 示例 4-5 返回相同的结果。")中，GNU `make` 直到需要时才填充来自 `subdir` 的条目。这些条目第一次需要用于 `$(wildcard)`，而它是在 `subdir/b.foo` 创建之后执行的；因此 `subdir/b.foo` 确实出现在 `$(wildcard)` 的输出中。
+在示例 4-5 中，GNU `make` 直到需要时才填充来自 `subdir` 的条目。这些条目第一次需要用于 `$(wildcard)`，而它是在 `subdir/b.foo` 创建之后执行的；因此，`subdir/b.foo` 确实出现在 `$(wildcard)` 的输出中。
 
+在示例 4-6 中，`$(warning)` 发生在 Makefile 的开头并填充了缓存（因为它执行了 `$(wildcard)`）；因此，在整个 `make` 运行期间，`$(wildcard)` 的输出中缺少 `subdir/b.foo`。
 
+预测缓存何时被填充是非常困难的。`$(wildcard)` 会填充缓存，在规则的目标或前提条件列表中使用诸如 `*` 的通配符运算符也会填充缓存。示例 4-7 是构建两个文件（`subdir/b.foo` 和 `subdir/c.foo`）并执行了几个 `$(wildcard)` 的 Makefile：
 
+示例 4-7：当 GNU `make` 填充时，`$(wildcard)` 缓存可能难以理解。
 
-在 示例 4-6 返回不同的结果。") 中，`$(warning)` 发生在 Makefile 的开头并填充了缓存（因为它执行了 `$(wildcard)`）；因此，在整个 `make` 运行期间，`$(wildcard)` 的输出中缺少 `subdir/b.foo`。
-
-预测缓存何时被填充是非常困难的。`$(wildcard)` 会填充缓存，在规则的目标或前提条件列表中使用诸如 `*` 的通配符运算符也会填充缓存。示例 4-7 缓存可能难以理解。") 是构建两个文件（`subdir/b.foo` 和 `subdir/c.foo`）并执行了几个 `$(wildcard)` 的 Makefile：
-
-示例 4-7. 当 GNU `make` 填充时，`$(wildcard)` 缓存可能难以理解。
-
-```
+```make
 DIRECTORY=subdir/
 
 .PHONY: all
+
 all: $(DIRECTORY)b.foo
-→  @echo $(WILDCARD_LIST)
-→  @echo $(LS_LIST)
+	@echo $(WILDCARD_LIST)
+	@echo $(LS_LIST)
+
 $(DIRECTORY)b.foo: $(DIRECTORY)c.foo
-→  @touch $@
-→  @echo $(WILDCARD_LIST)
-→  @echo $(LS_LIST)
+	@touch $@
+	@echo $(WILDCARD_LIST)
+	@echo $(LS_LIST)
 
 $(DIRECTORY)c.foo:
-→  @touch $@
+	@touch $@
 ```
 
 输出可能会让你感到惊讶：
 
-```
- $ make
-   wildcard returned 'subdir/a.foo subdir/c.foo'
-   ls returned 'subdir/a.foo subdir/c.foo'
+```text
+$ make
+
+wildcard returned 'subdir/a.foo subdir/c.foo'
+
+ls returned 'subdir/a.foo subdir/c.foo'
+
 ➊ wildcard returned 'subdir/a.foo subdir/c.foo'
-   ls returned 'subdir/a.foo subdir/b.foo subdir/c.foo'
+
+ls returned 'subdir/a.foo subdir/b.foo subdir/c.foo'
 ```
 
 尽管第一个 `$(wildcard)` 是在 `subdir/b.foo` 的规则中执行的，并且在创建 `subdir/b.foo` 的 `touch` 之后，但在 `$(wildcard)` 的输出中并没有提到 `subdir/b.foo` ➊。`ls` 的输出中也没有提到 `subdir/b.foo`。
@@ -4509,20 +4456,24 @@ Makefile 开发者面临的一个常见问题是需要在构建之前（或至�
 
 `foo.c` 与 Makefile 在同一目录下，但 `foo.o` 被放置在 `/out/`：
 
-```
+```make
 .PHONY: all
+
 all: /out/foo.o
 
 /out/foo.o: foo.c
-→  @$(COMPILE) -o $@
+	@$(COMPILE) -o $@
 ```
 
 只要 `/out/` 存在，这个示例就可以正常工作。但如果不存在，你将收到来自编译器的错误：
 
-```
+```text
 $ make
+
 Assembler messages:
+
 FATAL: can't create /out/foo.o: No such file or directory
+
 make: *** [/out/foo.o] Error 1
 ```
 
@@ -4532,34 +4483,28 @@ make: *** [/out/foo.o] Error 1
 
 由于 GNU `make` 擅长创建不存在的内容，将 `/out/` 设置为 `/out/foo.o` 的前提条件并编写一个创建目录的规则似乎是显而易见的。这样，当我们需要构建 `/out/foo.o` 时，目录就会被创建。示例 4-8 展示了重构后的 Makefile，其中目录作为前提条件并有一个使用 `mkdir` 构建目录的规则。
 
-示例 4-8. 这个 Makefile 可能会做多余的工作。
+示例 4-8：这个 Makefile 可能会做多余的工作。
 
-```
+```make
 OUT = /out
 
 .PHONY: all
+
 all: $(OUT)
+
+$(OUT)/foo.o: foo.c $(OUT)/.f
+	@$(COMPILE.C) -o $@ $<
+
+$(OUT)/.f:
+	mkdir -p $(dir $@)
+	touch $@
 ```
-
-
 
 为了做到这一点，你可以在目录下存储一个特殊的空文件，我将其称为 `marker`（标记）文件，并将其作为前提条件。因为它是一个普通文件，所以适用于标准的 GNU `make` 重建规则，且其时间戳不受目录更改的影响。
 
 如果你添加一个规则来构建该标记文件（并确保该目录存在），你可以通过指定该标记文件作为目录的代理，从而将一个目录指定为前提条件。
 
-```
-OUT = /out
-.PHONY: all
-all: $(OUT)/foo.o
-
-$(OUT)/foo.o: foo.c $(OUT)/.f
-→  @$(COMPILE.C) -o $@ $<
-$(OUT)/.f:
-→  mkdir -p $(dir $@)
-→  touch $@
-```
-
-注意构建 `$(OUT)/.f` 的规则如何在必要时创建目录并触碰（touch）`.f` 文件。由于目标是一个文件（`.f`），因此可以安全地作为 `$(OUT)/foo.o` 规则中的前提条件。
+注意构建 `$(OUT)/.f` 的规则如何在必要时创建目录并触碰（`touch`）`.f` 文件。由于目标是一个文件（`.f`），因此可以安全地作为 `$(OUT)/foo.o` 规则中的前提条件。
 
 `$(OUT)/.f` 规则使用 GNU `make` 函数 `$(dir FILE)` 来提取目标的目录部分（即 `.f` 文件的路径），并将该目录传递给 `mkdir`。
 
@@ -4567,16 +4512,19 @@ $(OUT)/.f:
 
 为了方便使用，你可以创建函数来自动生成创建目录的规则，并计算 `.f` 文件的正确名称：
 
-```
+```make
 marker = $1.f
+
 make_dir = $(eval $1.f: ; @mkdir -p $$(dir $$@) ; touch $$@)
 
 OUT = /out
+
 .PHONY: all
+
 all: $(OUT)/foo.o
 
 $(OUT)/foo.o: foo.c $(call marker,$(OUT))
-→  @$(COMPILE.C) -o $@ $<
+	@$(COMPILE.C) -o $@ $<
 
 $(call make-dir,$(OUT))
 ```
@@ -4587,22 +4535,24 @@ $(call make-dir,$(OUT))
 
 在 GNU `make` 3.80 及更高版本中，另一种解决方案是使用“仅顺序”（order-only）前提条件。仅顺序前提条件会像正常一样在目标之前构建，但当前提条件变化时，不会导致目标重建。通常，当前提条件被重建时，目标也会被重建，因为 GNU `make` 假设目标依赖于该前提条件。仅顺序前提条件不同：它们在目标之前构建，但目标不会仅仅因为仅顺序前提条件的构建而更新。
 
-这正是我们希望在原始错误示例 示例 4-8 中实现的：避免每次目录时间戳变化时都重建 `.o` 文件。
+这正是我们希望在原始错误示例示例 4-8中实现的：避免每次目录时间戳变化时都重建 `.o` 文件。
 
 仅顺序前提条件是任何位于线符号 `|` 之后的前提条件，且必须放置在任何普通前提条件之后。
 
-事实上，只需在 [示例 4-8] 的错误示例中添加这一个字符即可让它正常工作：
+事实上，只需在示例 4-8的错误示例中添加这一个字符即可让它正常工作：
 
-```
- OUT = /out
+```make
+OUT = /out
 
-   .PHONY: all
-   all: $(OUT)/foo.o
-   $(OUT)/foo.o: foo.c | $(OUT)/
-   →  @$(COMPILE.C) -o $@
+.PHONY: all
+
+all: $(OUT)/foo.o
+
+$(OUT)/foo.o: foo.c | $(OUT)/
+	@$(COMPILE.C) -o $@
 
 $(OUT)/:
-   →  mkdir -p $@
+	mkdir -p $@
 ```
 
 如果目录不存在，则会运行 `$(OUT)/` 的规则，但目录的变化不会导致 `$(OUT)/foo.o` 被重建。
@@ -4611,13 +4561,15 @@ $(OUT)/:
 
 在典型的 makefile 中（而不是像这种简单的示例），目标通常使用模式规则构建，如下：
 
-```
+```make
 OUT = /out
+
 .PHONY: all
+
 all: $(OUT)/foo.o
 
 $(OUT)/%.o: %.c
-→  @$(COMPILE.C) -o $@
+	@$(COMPILE.C) -o $@
 ```
 
 但我们可以更改此模式规则，使用标记文件自动构建目录。
@@ -4626,7 +4578,7 @@ $(OUT)/%.o: %.c
 
 通过为每个目录使用标记文件并结合二次扩展，你可以创建一个 makefile，只需在任何规则的前提条件列表中进行简单添加，即可仅在需要时自动创建目录：
 
-```
+```make
 OUT = /tmp/out
 
 .SECONDARY:
@@ -4634,11 +4586,11 @@ OUT = /tmp/out
 all: $(OUT)/foo.o
 
 $(OUT)/%.o: %.c $$@D/.f
-→  @$(COMPILE.C) -o $@
+	@$(COMPILE.C) -o $@
 
 %/.f:
-→  mkdir -p $(dir $@)
-→  touch $@
+	mkdir -p $(dir $@)
+	touch $@
 ```
 
 用于生成 `.o` 文件的模式规则使用了一个特殊的前提条件 `$@D/.f`，它利用二次扩展特性获取构建目标所在的目录。这是通过对 `$@` 应用 `D` 修饰符实现的，从而获取目标的目录（而 `$@` 本身获取目标的名称）。
@@ -4649,15 +4601,16 @@ $(OUT)/%.o: %.c $$@D/.f
 
 也可以需要在它们的规则内部创建目录；这被称为“行内”创建目录。例如：
 
-```
+```make
 OUT = /out
 
 .PHONY: all
+
 all: $(OUT)/foo.o
 
 $(OUT)/foo.o: foo.c
-→  mkdir -p $(@D)
-→  @$(COMPILE.C) -o $@
+	mkdir -p $(@D)
+	@$(COMPILE.C) -o $@
 ```
 
 在这里，我修改了 `$(OUT)/foo.o` 规则，使其每次都使用 `-p` 创建目录。这仅在少数规则需要创建目录时才有效。更新每个规则以添加 `mkdir` 是非常费力的，并且很可能遗漏某些规则。
@@ -4672,67 +4625,67 @@ GNU `make` 将空格字符视为列表分隔符；任何包含空格的字符串
 
 在 makefile 中编写此类内容的朴素方法是：
 
-```
+```make
 foo bar: bar baz
-→  @echo Making $@ from $<
+	@echo Making $@ from $<
 ```
 
 但这样做不起作用。GNU `make` 无法区分空格是文件名的一部分还是不是文件名的一部分的情况。事实上，这种朴素编写的 makefile 与以下内容完全相同：
 
-```
+```make
 foo: bar baz
-→  @echo Making $@ from $<
+	@echo Making $@ from $<
+
 bar: bar baz
-→  @echo Making $@ from $<
+	@echo Making $@ from $<
 ```
 
 在文件名周围加上引号也是不起作用。如果你尝试这样做：
 
-```
+```make
 "foo bar": "bar baz"
-→  @echo Making $@ from $<
+	@echo Making $@ from $<
 ```
 
 GNU `make` 认为你是在说四个名为 `"foo`、`bar"`、`bar` 和 `baz"` 的文件。GNU `make` 忽略双引号并像通常一样通过空格分割列表。
 
-## 使用 \ 转义空格
+## 使用 `\` 转义空格
 
-处理空格问题的方法是是 GNU `make` 的转义运算符 `\`，你可以用它来转义敏感字符（例如转义 `#` 以免其开始注释，或转义 `%` 以免其被用作通配符）。
+处理空格问题的方法是使用 GNU `make` 的转义运算符 `\`，你可以用它来转义敏感字符（例如转义 `#` 以免其开始注释，或转义 `%` 以免其被用作通配符）。
 
 因此，使用 `\` 转义带空格文件名规则中的空格。我们的示例 makefile 可以重写为：
 
-```
+```make
 foo\ bar: bar\ baz
-→  @echo Making $@ from $<
+	@echo Making $@ from $<
 ```
 
 它可以正常工作。`\` 在解析 makefile 时会被移除，因此实际的目标和前提条件名称正确包含空格。这将反映在自动变量中（例如 `$@`）。
 
 当 `foo bar` 需要更新时，简单的 makefile 将输出：
 
-```
+```text
 $ make
+
 Making foo bar from bar baz
 ```
 
-
-
 你也可以在 GNU `make` 的 `$(wildcard)` 函数内部使用相同的转义机制。检查 `foo bar` 是否存在，你可以使用 `$(wildcard foo\ bar)`，GNU `make` 会将 `foo bar` 视为一个单一文件名在文件系统中进行查找。
 
-遗憾的是，GNU `make` 其他处理空格分隔列表的函数并不支持空格的转义。例如，`$(sort foo\ bar)` 的输出是列表 `bar foo\` `，而不是你可能预期的 `foo\ bar`。事实上，`$(wildcard)` 是唯一支持使用 `\` 字符转义空格的 GNU `make` 函数。
+遗憾的是，GNU `make` 其他处理空格分隔列表的函数并不支持空格的转义。例如，`$(sort foo\ bar)` 的输出是列表 `bar foo\`，而不是你可能预期的 `foo\ bar`。事实上，`$(wildcard)` 是唯一支持使用 `\` 字符转义空格的 GNU `make` 函数。
 
 当你必须处理包含目标列表的自动变量时，就会导致一个问题。考虑这个稍微复杂一点的例子：
 
-```
+```make
 foo\ bar: bar\ baz a\ b
-→ @echo Making $@ from $<
+	@echo Making $@ from $<
 ```
 
 现在 `foo bar` 有两个先决条件 `bar baz` 和 `a b`。在这种情况下，`$^`（所有先决条件的列表）的值是什么？它是 `bar baz a b`：转义消失了，而且即使转义没有消失，由于只有 `$(wildcard)` 支持 `\`，这一事实意味着它也是没用的。从 GNU `make` 的角度来看，`$^` 是一个包含四个元素的列表。
 
 查看自动变量的定义告诉我们在文件名存在空格的情况下，哪些变量是安全的。表 4-1 显示了每个自动变量及其是否安全。
 
-表 4-1. 自动变量安全性
+表 4-1：自动变量安全性
 
 | 自动变量 | 是否安全？ |
 | --- | --- |
@@ -4744,15 +4697,15 @@ foo\ bar: bar\ baz a\ b
 | `$^` | 否 |
 | `$+` | 否 |
 
-本质上是列表的变量（`$?`, `$^` 和 `$+`）是不安全的，因为 GNU make 的列表是用空格分隔的；其他的都是安全的。
+本质上是列表的变量（`$?`、`$^` 和 `$+`）是不安全的，因为 GNU `make` 的列表是用空格分隔的；其他的都是安全的。
 
 情况变得糟糕。尽管表格中的前四个自动变量是安全的，但它们带有 `D` 和 `F` 后缀的修改版本（提取对应自动变量的目录和文件名部分）是不安全的。这是因为它们是基于 `dir` 和 `notdir` 函数定义的。
 
 考虑这个 Makefile：
 
-```
+```make
 /tmp/foo\ bar/baz: bar\ baz a\ b
-→  @echo Making $@ from $<
+	@echo Making $@ from $<
 ```
 
 `$@` 的值如预期是 `/tmp/foo bar/baz`，但 `$(@D)` 的值是 `/tmp bar`（而不是 `/tmp/foo bar`），且 `$(@F)` 的值是 `foo baz`（而不是简单的 `baz`）。
@@ -4761,10 +4714,12 @@ foo\ bar: bar\ baz a\ b
 
 处理空格问题的另一种方法是将空格转换为问号。这里是转换后的 Makefile：
 
-```
+```make
 foo?bar: bar?baz
-→  @echo Making $@ from $<
+	@echo Making $@ from $<
 ```
+
+
 
 由于 GNU `make` 对目标和先决条件的名称进行通配符匹配（globbing）并尊重发现的任何空格，这将有效。但结果是不一致的。
 
@@ -4776,11 +4731,15 @@ foo?bar: bar?baz
 
 ```
 sp :=
+
 sp +=
+
 qs = $(subst ?,$(sp),$1)
+
 sq = $(subst $(sp),?,$1)
 
 $(call sq,foo bar): $(call sq,bar baz)
+
 → @echo Making $(call qs,$@) from $(call qs,$<)
 ```
 
@@ -4800,7 +4759,7 @@ $(call sq,foo bar): $(call sq,bar baz)
 
 **使用 `\` 进行转义。**
 
-如果你需要这些空格，请使用 `\` 进行转义，这会提供一致的结果。只需确保避免 表 4-1 中列出的不安全的自动变量即可。
+如果你需要这些空格，请使用 `\` 进行转义，这会提供一致的结果。只需确保避免表 4-1 中列出的不安全的自动变量即可。
 
 如果你使用 `\` 进行转义并需要处理包含空格的文件名列表，最好的办法是将空格替换为其他字符，然后再改回来。
 
@@ -4808,9 +4767,11 @@ $(call sq,foo bar): $(call sq,bar baz)
 
 ```
 space :=
+
 space +=
 
 s+ = $(subst \$(space),+,$1)
+
 +s = $(subst +,\$(space),$1)
 ```
 
@@ -4818,6 +4779,7 @@ s+ = $(subst \$(space),+,$1)
 
 ```
 SRCS := a\ b.c c\ d.c e\ f.c
+
 SRCS := $(call s+,$(SRCS))
 
 OBJS := $(SRCS:.c=.o)
@@ -4835,9 +4797,11 @@ Makefile 创建者经常必须处理文件系统路径，但 GNU `make` 提供�
 
 ```
 .PHONY: all
+
 all: ../foo
 
 .././foo:
+
 → touch $@
 ```
 
@@ -4845,6 +4809,7 @@ all: ../foo
 
 ```
 $ make
+
 make: *** No rule to make target '../foo', needed by 'all'. Stop.
 ```
 
@@ -4852,18 +4817,17 @@ make: *** No rule to make target '../foo', needed by 'all'. Stop.
 
 ```
 .PHONY: all
+
 all: ../foo
 
 ./../foo:
+
 → touch $@
 ```
 
 你会发现它按照预期工作。
 
 第一个 Makefile 失败是因为 GNU `make` 不对目标名称进行路径处理，因此它看到了两个不同的目标 `../foo` 和 `.././foo`，无法建立它们之间的联系。第二个 Makefile 之所以有效是因为我在上一句话中撒了谎。GNU `make` 确实会进行非常小的路径处理：它会从目标名称开头的 `./`。因此在第二个 Makefile 中，两个目标都是 `../foo`，它按照预期工作。
-
-
-
 
 GNU `make` 目标的通用规则是：它们被视为字面字符串，而不会对其进行任何方式的解释。因此，当你在 Makefile 中引用目标时，确保始终使用相同的字符串是非常关重要的。
 
@@ -4875,6 +4839,7 @@ GNU `make` 目标的通用规则是：它们被视为字面字符串，而不会
 
 ```
 /tmp/sub directory/target:
+
 → @do stuff
 ```
 
@@ -4882,8 +4847,11 @@ GNU `make` 实际上会将其解释为两个规则，一个针对 `/tmp/sub`，�
 
 ```
 /tmp/sub:
+
 → @do stuff
+
 directory/target:
+
 → @do stuff
 ```
 
@@ -4917,6 +4885,7 @@ vpath %c ../src;../thirdparty/src /src
 
 ```
 SRCDIR := src
+
 MODULE_DIR := module_1
 
 MODULE_SRCS := $(SRCDIR)/$(MODULE_DIR)
@@ -4928,6 +4897,7 @@ MODULE_SRCS := $(SRCDIR)/$(MODULE_DIR)
 / := /
 
 SRCDIR := src
+
 MODULE_DIR := module_1
 
 MODULE_SRCS := $(SRCDIR)$/$(MODULE_DIR)
@@ -4939,15 +4909,13 @@ MODULE_SRCS := $(SRCDIR)$/$(MODULE_DIR)
 SEP := /
 
 SRCDIR := src
+
 MODULE_DIR := module_1
 
 MODULE_SRCS := $(SRCDIR)$(SEP)$(MODULE_DIR)
 ```
 
 现在当你切换到 Windows 时，只需将 `/`（或 `SEP`）重新定义为 `\` 即可。赋值字面量 `\` 比较困难，但你可以重新定义 `/`（或 `SEP`）。
-
-
-
 
 `realpath` 是 GNU `make` 中对 C 库函数 `realpath` 的封装器，它可以移除 `./`、解析 `../`、移除重复的 `/` 并跟踪符号链接。`realpath` 的参数必须在文件系统中存在。`realpath` 返回的路径是绝对路径。如果路径不存在，该函数返回一个空字符串。
 
@@ -4965,6 +4933,7 @@ OpenSSL Makefile 中的 `clean` 规则看起来如下：
 
 ```
 clean:
+
 →  rm -f *.o *.obj lib tags core .pure .nfs* *.old *.bak fluff $(EXE)
 ```
 
@@ -4978,15 +4947,21 @@ clean:
 
 ```
 mostlyclean::
+
 → rm -f *.o
 
 clean:: mostlyclean
+
 → -$(LIBTOOL) --mode=clean rm -f $(program) $(programs)
+
 → rm -f $(library).a squeeze *.bad *.dvi *.lj
 
 extraclean::
+
 → rm -f *.aux *.bak *.bbl *.blg *.dvi *.log *.pl *.tfm *.vf *.vpl
+
 → rm -f *.*pk *.*gf *.mpx *.i *.s *~ *.orig *.rej *\#*
+
 → rm -f CONTENTS.tex a.out core mfput.* texput.* mpout.*
 ```
 
@@ -5004,6 +4979,7 @@ extraclean::
 
 ```
 clean:
+
 → @-rm *.o &> /dev/null
 ```
 
@@ -5019,9 +4995,13 @@ clean:
 SUBDIRS = library executable
 
 .PHONY: clean
+
 clean:
+
 → for dir in $(SUBDIRS); do \
+
 → $(MAKE) -C $$dir clean; \
+
 → done
 ```
 
@@ -5041,12 +5021,9 @@ clean:
 
 要以并行模式启动 GNU `make`，可以在命令行上指定 `-j` 或 `--jobs` 选项。该选项的参数是 GNU `make` 并运行的最大进程数。
 
-例如，输入 `make --jobs=4` 允许 GNU `make` 并行运行多四个子进程，这在理论上提供了 4 倍的最大加速。然而，理论时间受到 Makefile 中限制的严重限制。要计算最大实际加速比，你需要使用阿达尔定律（在阿达尔定律与并行的限制 中有介绍）。
+例如，输入 `make --jobs=4` 允许 GNU `make` 并行运行多四个子进程，这在理论上提供了 4 倍的最大加速。然而，理论时间受到 Makefile 中限制的严重限制。要计算最大实际加速比，你需要使用阿达尔定律（在阿达尔定律与并行的限制中有介绍）。
 
 （注：原文后续部分存在大量重复段落，已根据要求在翻译中忽略掉重复内容。）
-
-
-
 
 原因是，当在并行运行时，构建 `t2` 的规则可能会在构建 `t3` 的规则之前发生，而 `t2` 需要 `t3` 已经构建完成。在串行执行的情况下，这种情况没有发生，因为有从左到右的假设：构建 `t1` 的规则是 `t1: t3 t2`，这意味着 `t3` 会在 `t2` 之前被构建。
 
@@ -5064,17 +5041,23 @@ GNU `make` 在并行运行时可能崩溃的另一种方式是多个规则使用
 TMP_FILE := /tmp/scratch_file
 
 .PHONY: all
+
 all: t
 
 t: t1 t2
+
 → cat t1 t2 > $@
 
 t1:
+
 → echo Output from $@ > $(TMP_FILE)
+
 → cat $(TMP_FILE) > $@
 
 t2:
+
 → echo Output from $@ > $(TMP_FILE)
+
 → cat $(TMP_FILE) > $@
 ```
 
@@ -5082,10 +5065,15 @@ t2:
 
 ```
 $ make
+
 echo Output from t1 > /tmp/scratch_file
+
 cat /tmp/scratch_file > t1
+
 echo Output from t2 > /tmp/scratch_file
+
 cat /tmp/scratch_file > t2
+
 cat t1 t2 > t
 ```
 
@@ -5093,6 +5081,7 @@ cat t1 t2 > t
 
 ```
 Output from t1
+
 Output from t2
 ```
 
@@ -5100,10 +5089,15 @@ Output from t2
 
 ```
 $ make --jobs=2
+
 echo Output from t1 > /tmp/scratch_file
+
 echo Output from t2 > /tmp/scratch_file
+
 cat /tmp/scratch_file > t1
+
 cat /tmp/scratch_file > t2
+
 cat t1 t2 > t
 ```
 
@@ -5111,8 +5105,11 @@ cat t1 t2 > t
 
 ```
 Output from t2
+
 Output from t2
 ```
+
+
 
 发生这种情况是因为 `t1` 和 `t2` 之间不存在依赖关系（因为它们都不需要对方的输出），所以它们可以并行运行。在输出中，你可以看到它们正在并行运行，但两个规则的输出交织在一起了。由于两个 `echo` 语句先执行，`t2` 覆盖了 `t1` 的输出，因此当临时文件（两个规则共享）最终被 `cat` 到 `t1` 时，它的值是错误的，导致 `t` 的值错误。
 
@@ -5120,12 +5117,15 @@ Output from t2
 
 示例 4-10 中 Makefile 的简单解决方案是将 `TMP_FILE` 的定义更改为 `TMP_FILE = /tmp/scratch_file.$@`，这样它的名称将取决于正在构建的目标。现在，并行运行将如下所示：
 
-```
+```bash
 $ make --jobs=2
+
 echo Output from t1 > /tmp/scratch_file.t1
 echo Output from t2 > /tmp/scratch_file.t2
+
 cat /tmp/scratch_file.t1 > t1
 cat /tmp/scratch_file.t2 > t2
+
 cat t1 t2 > t
 ```
 
@@ -5133,13 +5133,15 @@ cat t1 t2 > t
 
 考虑示例 4-11 中的示例 Makefile，它使用 `lockfile` 命令来锁定文件并模拟写锁。尽管文件被锁定，每个作业都会等待几秒：
 
-示例 4-11. 在共享文件上锁定可以锁定并行构建并使其串行执行。
+> 示例 4-11. 在共享文件上锁定可以锁定并行构建并使其串行执行。
 
-```
+```make
 LOCK_FILE := lock.me
 
 .PHONY: all
+
 all: t1 t2
+
 → @echo done.
 
 t1:
@@ -5154,18 +5156,20 @@ t2:
 → @rm $(LOCK_FILE)
 → @echo done
 ```
+
 （注：示例 11 的输入在源码中不完整，我根据上下文进行了格式化）。
 
-## 递归 make 的正确方法
+## 递归 `make` 的正确方法
 
 如果使用 `MAKE` 的 Makefile 小心，GNU `make` 足够智能可以跨共享并行性。GNU `make` 拥有一种跨大多数平台的消息传递机制（Windows 支持在 make 4.0 中添加），并允许子作业使用通过 `-j` 指定的所有作业。
 
 唯一的陷阱是，你必须以允许子作业并行运行的方式来编写 Makefile。使用 shell `for` 循环处理每个子作业的经典递归 `make` 不允许同时运行多个子作业。例如：
 
-```
+```make
 SUBDIRS := foo baz
 
 .PHONY: all
+
 all:
 → for d in $(SUBDIRS);     \
 → do                       \
@@ -5179,10 +5183,11 @@ all:
 
 解决方案是移除 `for` 循环并将其替换为每个目录的单个规则：
 
-```
+```make
 SUBDIRS := foo bar baz
 
 .PHONY: all $(SUBDIRS)
+
 all: $(SUBDIRS)
 
 $(SUBDIRS):
@@ -5191,21 +5196,20 @@ $(SUBDIRS):
 
 每个目录都被视为一个伪目标，因为目录本身并没有被实际构建。
 
-
-
-
-现在每个目录都可以在其他目录运行时同时运行，并行性最大化；甚至目录之间可以存在依赖关系，导致某些子 make 在其他 make 之前运行。当确保一个子 make 在另一个 make 之前运行很重要时，目录依赖关系会非常有用。
+现在每个目录都可以在其他目录运行时同时运行，并行性最大化；甚至目录之间可以存在依赖关系，导致某些子 `make` 在其他 `make` 之前运行。当确保一个子 `make` 在另一个 `make` 之前运行很重要时，目录依赖关系会非常有用。
 
 ## 阿姆达尔法则与并行化的限性
 
 此外，项目中可以实现的并行化程度存在实际限制。请查看示例 4-12：
 
-示例 4-12. 使用 `sleep` 模拟需要时间完成的任务
+> 示例 4-12. 使用 `sleep` 模拟需要时间完成的任务
 
 ```make
 .PHONY: all
+
 all: t
 → @echo done
+
 t: t1 t2 t3 t4 t5 t6 t7 t8 t9 t10 t11 t12
 → @sleep 10
 → @echo Made $@
@@ -5263,6 +5267,7 @@ t12:
 
 ```bash
 $ time make
+
 Made t1
 Made t2
 Made t8
@@ -5277,6 +5282,7 @@ Made t12
 Made t11
 Made t
 done
+
 make 0.04s user 0.03s system 0% cpu 1:28.68 total
 ```
 
@@ -5288,7 +5294,7 @@ make 0.04s user 0.03s system 0% cpu 1:28.68 total
 
 在示例 4-12 示例中，34% 的构建无法并行化。表 4-4 显示了应用阿姆达尔法则的结果：
 
-表 4-4. 基于处理器数量的最大加速
+> 表 4-4. 基于处理器数量的最大加速
 
 | 处理器数量 | 最大加速比 |
 | --- | --- |
@@ -5308,20 +5314,17 @@ make 0.04s user 0.03s system 0% cpu 1:28.68 total
 
 观察构建的结构，我们可以看到 8 个处理器是最大值，因为有 5 个任务可以在没有任何依赖的情况下并行运行：`t1`、`t2`、`t4`、`t6` 和 `t7`。一旦它们的依赖关系满足，三个小任务 `t3`、`t9` 和 `t11` 就可以并行运行。然而，瓶颈仍然是最长的串行链。
 
+> 示例 4-15. 由示例 4-14 包含的 makefile
 
-
-
-
-示例 4-15. 由示例 4-14 包含的 makefile
-
-```
+```make
 THIS_MAKEFILE := $(call where-am-i)
+
 $(warning $(THIS_MAKEFILE))
 ```
 
-将示例 4-13、示例 4-14 和 示例 4-15 这三个 makefile 放在 `/tmp`（以及子目录）中并运行 GNU `make`，将得到以下输出：
+将示例 4-13、示例 4-14 和示例 4-15 这三个 makefile 放在 `/tmp`（以及子目录）中并运行 GNU `make`，将得到以下输出：
 
-```
+```text
 foo/makefile:2: /tmp/foo/makefile
 foo/bar/makefile:2: /tmp/foo/bar/makefile
 ```
@@ -5332,7 +5335,7 @@ foo/bar/makefile:2: /tmp/foo/bar/makefile
 
 在本章中，你将发现一些你通常不需要、但有时会非常有用的技术。例如，有时通过在 C 甚至 Guile 中创建新函数来扩展 GNU `make` 的语言是有用的。本章将展示如何做到这一点以及更多内容。
 
-# 算术运算
+## 算术运算
 
 GNU `make` 没有内置的算术能力。但可以创建用于整数加、减、乘、除的函数。你还可以创建用于整数比较的函数，例如大于或不等于。这些函数完全通过使用 GNU `make` 的内置列表和字符串处理函数实现：`$(subst)`、`$(filter)`、`$(filter-out)`、`$(words)`、`$(wordlist)`、`$(call)`、`$(foreach)` 和 `$(if)`。在我们定义了算术函数后，将在 GNU `make` 中实现一个简单的计算器。
 
@@ -5340,7 +5343,7 @@ GNU `make` 没有内置的算术能力。但可以创建用于整数加、减、
 
 给定这种表示法，我们可以使用 `$(words)` 函数将内部形式（所有 `x`）转换为人类可读的形式。例如，以下内容将输出 5：
 
-```
+```make
 five := x x x x x
 
 all: ; @echo $(words $(five))
@@ -5348,13 +5351,13 @@ all: ; @echo $(words $(five))
 
 让我们创建一个用户定义函数 `decode`，将其从 `x` 的表示法转换为数字：
 
-```
+```make
 decode = $(words $1)
 ```
 
 在 makefile 中使用 `decode`，我们需要使用 GNU `make` 函数 `$(call)`，它可以带一组参数调用用户定义函数：
 
-```
+```make
 five := x x x x
 
 all: ; @echo $(call decode$(five))
@@ -5362,19 +5365,21 @@ all: ; @echo $(call decode$(five))
 
 参数将存储在临时变量 `$1`、`$2` 等中。在接收一个参数（要解码的数字）的 `decode` 中，我们使用 `$1`。
 
-## 加法和减法
+### 加法和减法
 
 现在我们有了表示法，就可以定义加、增（加 1）和减（减 1）的函数了：
 
-```
+```make
 plus = $1 $2
+
 increment = x
+
 decrement = $(wordlist 2,$(words $1))
 ```
 
 `plus` 函数将其参数创建一个列表；仅通过拼接就可以实现使用 `x` 表示法的加法。`increment` 函数向其参数添加单个 `x`。`decrement` 函数通过请求从 2 开始的整个 `x` 字符串来剥离其参数中的第一个 `x`。例如，以下代码将输出 1：
 
-```
+```make
 two := x
 three := x x
 four := x x x
@@ -5386,42 +5391,45 @@ all: ; @echo $(call decode,$(call plus$(five),$(six)))
 
 注意在 `decode` 的调用内部嵌套了对 `plus` 的调用，以便输出的是数字 1 而不是 `x` 列表。我们可以创建另一个简单函数 `double`，使其参数翻倍：
 
-```
+```make
 double = $1 $1
 ```
 
-实现减法比加法更有挑战性。但在在此之前，让我们实现 `max` 和 `min` 函数：
+实现减法比加法更有挑战性。但在此之前，让我们实现 `max` 和 `min` 函数：
 
-```
+```make
 max = $(subst xx,x,$(join $1,$2))
+
 min = $(subst xx,x,$(filter xx,$(join $1,$2)))
 ```
 
 `max` 函数使用了两个 GNU `make` 内置函数：`$(join)` 和 `$(subst)`。`$(join LIST1,LIST2)` 两个列表，并通过拼接 `LIST1` 的第一个元素与 `LIST2` 的第一个元素，以此类推将它们连接在一起。如果一个列表比另一个长，剩余项将附加在最后。`$(subst FROM,TO,LIST)` 遍历列表并将匹配 `FROM` 的元素替换为 `TO` 值。要查看 `max` 如何工作，考虑 `$(call max$(five),$(six))` 中的事件序列：
 
-```
+```text
 $(call max$(five),$(six))
-→  $(call max,x x x x,x x x x x)
-→  $(subst xx,x,$(join x x x x,x x x x x))
-→  $(subst xx,x,xx xx xx x)
-→  x x x x
+
+→ $(call max,x x x x,x x x x x)
+→ $(subst xx,x,$(join x x x x,x x x x x))
+→ $(subst xx,x,xx xx xx x)
+→ x x x x
 ```
 
-首先，`$(join)` 将包含五个 `x` 的列表与包含六 `x` 的列表连接，得到一个包含六个元素的列表，其中前五个是 `xx`。然后，`$(subst)` 将前五个 `xx` 转 `x`。最终结果是六个 `x`，即最大值。
+首先，`$(join)` 将包含五个 `x` 的列表与包含六个 `x` 的列表连接，得到一个包含六个元素的列表，其中前五个是 `xx`。然后，`$(subst)` 将前五个 `xx` 转 `x`。最终结果是六个 `x`，即最大值。
 
 要实现 `min`，我们使用类似的技巧，但只保留 `xx` 并丢弃 `x`：
 
-```
+```text
 $(call min$(five),$(six))
-→  $(call min,x x x x,x x x x x)
-→  $(subst xx,x,$(join x x x x,x x x x x))
-→  $(subst xx,x,xx xx xx x)
-→  x x x x
+
+→ $(call min,x x x x,x x x x x)
+→ $(subst xx,x,$(join x x x x,x x x x x))
+→ $(subst xx,x,xx xx xx x)
+→ x x x x
 ```
 
 `xx` 代表两个列表可能连接的地方。两个列表较短的那个只有 `xx`。`$(filter PATTERN,LIST)` 函数遍历列表并移除不匹配模式的元素。类似的模式也适用于减法：
 
-```
+```make
 subtract = $(if $(call gte,$1,$2), \
        $(filter-out xx,$(join $1,$2)), \
        $(warning Subtraction underflow))
@@ -5429,54 +5437,60 @@ subtract = $(if $(call gte,$1,$2), \
 
 暂时忽略定义中的 `$(warning)` 和 `$(if)` 部分，专注于 `$(filter-out)`。`$(filter-out)` 是 `$(filter)` 的相反操作：它从列表中移除匹配模式的元素。例如，我们可以看到这里的 `$(filter-out)` 实现了减法：
 
-```
+```text
 $(filter-out xx,$(join $(six),$(five)))
-→  $(filter-out xx,$(join x x x x x,x x x x x))
-→  $(filter-out xx,xx xx xx x)
-→  x
+→ $(filter-out xx,$(join x x x x x,x x x x x))
+→ $(filter-out xx,xx xx xx x)
+→ x
 ```
-
-
-
 
 此操作方式与 `$(call eq,$(five),$(five))` 相同，但将其中一个 `$(five)` 替换为 `$(six)`。由于 `$(filter 5,6)` 是一个空字符串，结果为假。
 
 因此，`$(filter)` 函数充当了某种字符串相等运算符；在我们的案例中，这两个字符串是两个数字字符串的长度。`gt` 函数的实现方式类似：如果第一个数字字符串的长度不等于两个数字字符串的最大值，它返回一个非空字符串。这里是一个示例：
 
-```
+```text
 $(call gt,$(six),$(five))
-→  $(call gt,x x x x x x,x x x x x)
-→  $(filter-out $(words x x x x x),
+
+→ $(call gt,x x x x x x,x x x x x)
+→ $(filter-out $(words x x x x x),
    $(words $(call max,x x x x x x,x x x x x)))
-→  $(filter-out $(words x x x x x),$(words x x x x x x))
-→  $(filter-out 5,6)
-→  6
+→ $(filter-out $(words x x x x x x),$(words x x x x x x))
+→ $(filter-out 5,6)
+→ 6
 ```
 
 `gt` 函数的工作方式与 `eq`（之前描述过的）类似，但它使用的是 `$(filter-out)` 而不是 `$(filter)`。它将两个 `x` 表示形式的数字转换为数字，但使用 `$(filter-out)` 将其中第一个与两个中的最大值进行比较。当第一个数字大于第二个数字时，两个不同的数字被输入到 `$(filter-out)`。由于它们是不同的，`$(filter-out)` 返回一个非空字符串，表示真。
 
 这里有一个第一个数字小于第二个数字的示例：
 
-```
+```text
 $(call gt,$(five),$(six))
-→  $(call gt,x x x x x,x x x x x x)
-→  $(filter-out $(words x x x x x x x),
+
+→ $(call gt,x x x x x,x x x x x x)
+→ $(filter-out $(words x x x x x x x),
    $(words $(call max,x x x x x,x x x x x x)))
-→  $(filter-out $(words x x x x x x x),$(words x x x x x x))
-→  $(filter-out 6,6)
+→ $(filter-out $(words x x x x x x x),$(words x x x x x x))
+→ $(filter-out 6,6)
 ```
 
 在这里，因为两个数字的最大与第二个数字相同（因为它是最大的），`$(filter-out)` 接收到相同的数字并返回一个空字符串，表示假。
 
-同样地，我们可以定义*不等于* (`ne`)、*小于* (`lt`) 和*小于或等于* (`lte`) 运算符：
+同样地，我们可以定义不等于（`ne`）、小于（`lt`）和小于或等于（`lte`）运算符：
 
+```make
 ```
+
+
+
+```make
 lt = $(filter-out $(words $1),$(words $(call max,$1,$2)))
+
 ne = $(filter-out $(words $1),$(words $2))
+
 lte = $(call lt,$1,$2)$(call eq,$1,$2)
 ```
 
-`lte` 是根据 `lt` 和 `eq` 定义的。因为非空字符串意味着*真*，`lte` 只是拼接了 `lt` 和 `eq` 返回的值；如果其中一个返回真，那么 `lte` 就返回真。
+`lte` 是根据 `lt` 和 `eq` 定义的。因为非空字符串意味着真，`lte` 只是拼接了 `lt` 和 `eq` 返回的值；如果其中一个返回真，那么 `lte` 就返回真。
 
 ## 乘法与除法
 
@@ -5484,37 +5498,47 @@ lte = $(call lt,$1,$2)$(call eq,$1,$2)
 
 乘法使用 `$(foreach VAR,LIST,DO)` 函数。它将名为 `VAR` 的变量设置为 `LIST` 中的每个元素，并执行 `DO` 所指示的操作。因此，乘法的实现非常简单：
 
-```
+```make
 multiply = $(foreach a,$1,$2)
 ```
 
 `multiply` 只是根据第一个参数中 `x` 的数量，将其第二个参数字符串连接在一起。例如：
 
-```
+```make
 $(call multiply,$(two),$(three))
+
 →  $(call multiply,x x,x x x)
+
 →  $(foreach a,x x,x x x)
+
 →  x x x x x x
 ```
 
 `divide` 是所有函数中最复杂的，因为它需要递归：
 
-```
+```make
 divide = $(if $(call gte,$1,$2),             \
+
     x $(call divide,$(call subtract,$1,$2),$2),)
 ```
 
 如果它的第一个参数小于第二个参数，除法将返回 `0`，因为 `$(if)` 的 `ELSE` 部分是空的（请见末尾的 `,)`）。如果可以进行除法，`divide` 通过使用 `subtract` 函数反复从第一个参数中减去第二个参数来工作。每减一次，它就会添加一个 `x` 并再次调用 `divide`。这里是一个示例：
 
-```
+```make
 $(call divide,$(three),$(two))
+
 →  $(call divide,x x x,x x)
+
 →  $(if $(call gte,x x x,x x),
+
    x $(call divide,$(call subtract,x x x,x x),x x),)
 
 →  x $(call divide,$(call subtract,x x x,x x),x x)
+
 →  x $(call divide,x,x x)
+
 →  x $(if $(call gte,x,x x),
+
    x $(call divide,$(call subtract,x,x x),x x),)
 
 →  x
@@ -5524,14 +5548,15 @@ $(call divide,$(three),$(two))
 
 在除以 2 的特殊情况下，我们可以避免递归；我们定义 `halve` 函数为 `double` 的相反：
 
-```
+```make
 halve = $(subst xx,x,      \
+
    $(filter-out xy,))
 ```
 
 到目前你已经已经了 `halve` 中使用的所有函数。通过一个示例，例如 `$(call halve,$(five))`，来看看它是如何工作的。唯一棘手的地方是将用户输入的数字转换为 `x` 字符串。`encode` 函数通过从预定义列表中删除 `x` 的子字符串来实现这一点：
 
-```
+```make
 16 := x x x x x x x x x x x x
 ```
 
@@ -5541,45 +5566,59 @@ halve = $(subst xx,x,      \
 
 为了真正展示这个库，这里有一个完全用 GNU `make` 函数实现的逆波兰计数法计算器：
 
-```
+```make
 stack :=
 
 push = $(eval stack := $$1 $(stack))
+
 pop = $(word 1,$(stack))$(eval stack := $(wordlist 2,$(words $(stack)),$(stack)))
+
 pope = $(call encode,$(call pop))
+
 pushd = $(call push,$(call decode,$1))
+
 comma := ,
+
 calculate = $(foreach t,$(subst $(comma), ,$1),$(call handle,$t))$(stack)
+
 seq = $(filter $1,$2)
+
 handle = $(call pushd,                            
+
     $(if $(call seq,+,$1),                        \
+
       $(call plus,$(call pope),$(call pope)),     \
+
       $(if $(call seq,-,$1),                      \
+
       $(call subtract,$(call pope),$(call pope)), \\
+
         $(if $(call seq,*,$1),                    \
+
      $(call multiply,$(call pope),$(call pope)),  \
+
         $(if $(call seq,/,$1),                    \
+
        $(call divide,$(call pope),$(call pope)),  \
+
            $())
 ```
 
 运算符和数字通过 `calc` 变量传递给 GNU `make`，用逗号分隔。例如：
 
-```
+```shell
 $ make calc="3,1,-,3,21,5,*,+/"
+
 54
 ```
 
 显然，这不是 GNU `make` 设计初衷，但它确实展示了 GNU `make` 函数的力量。这里是完整的注释 Makefile：
 
-
-
-
-
 ```make
 # input_int consists of 65536 x's built from the 16 x's in 16
 
 16 := x x x x x x x x x x x x x x x x
+
 input_int := $(foreach a,$(16),$(foreach b,$(16),$(foreach c,$(16),$(16)))))
 
 ## decode turns a number in x's representation into an integer for human
@@ -5599,35 +5638,50 @@ encode = $(wordlist 1,$1,$(input_int))
 plus = $1 $2
 
 subtract = $(if $(call gte,$1,$2),     \
+
        $(filter-out xx,$(join $1,$2)), \
+
        $(warning Subtraction underflow))
 
 # multiply multiplies its two arguments and divide divides its first
 # argument by its second
 
 multiply = $(foreach a,$1,$2)
+
 divide = $(if $(call gte,$1,$2),x $(call divide,$(call subtract,$1,$2),$2),)
 
 # max returns the maximum of its arguments and min the minimum
 
 max = $(subst xx,x,$(join $1,$2))
+
 min = $(subst xx,x,$(filter xx,$(join $1,$2)))
 
 # The following operators return a non-empty string if their result is true:
+
 #
+
 ## gt First argument is greater than second argument
+
 ## gte First argument is greater than or equal to second argument
+
 ## lt First argument is less than second argument
 
 # lte First argument is less than or equal to second argument
+
 # eq First argument is numerically equal to the second argument
+
 # ne First argument is not numerically equal to the second argument
 
 gt = $(filter-out $(words $2),$(words $(call max,$1,$2)))
+
 lt = $(filter-out $(words $1),$(words $(call max,$1,$2)))
+
 eq = $(filter $(words $1),$(words $2))
+
 ne = $(filter-out $(words $1),$(words $2))
+
 gte = $(call gt,$1,$2)$(call eq,$1,$2)
+
 lte = $(call lt,$1,$2)$(call eq,$1,$2)
 
 # increment adds 1 to its argument, decrement subtracts 1\. Note that
@@ -5635,11 +5689,13 @@ lte = $(call lt,$1,$2)$(call eq,$1,$2)
 # will incorrectly say that 0 - 1 = 0
 
 increment = $1 x
+
 decrement = $(wordlist 2,$(words $1),$1)
 
 # double doubles its argument, and halve halves it
 
 double = $1 $1
+
 halve = $(subst xx,x,$(filter-out xy x y,$(join $1,$(foreach a,$1,y x))))
 
 # This code implements a Reverse Polish Notation calculator by
@@ -5654,12 +5710,14 @@ halve = $(subst xx,x,$(filter-out xy x y,$(join $1,$(foreach a,$1,y x))))
 stack :=
 
 push = $(eval stack := $$1 $(stack))
+
 pop = $(word 1,$(stack))$(eval stack := $(wordlist 2,$(words $(stack)),$(stack)))
 
 # pope pops a number off the stack and encodes it
 # and pushd pushes a number onto the stack after decoding
 
 pope = $(call encode,$(call pop))
+
 pushd = $(call push,$(call decode,$1))
 
 # calculate runs through the input numbers and operations and either
@@ -5668,6 +5726,7 @@ pushd = $(call push,$(call decode,$1))
 # finished, there will be one item on the stack, which is the result.
 
 comma := ,
+
 calculate=$(foreach t,$(subst $(comma), ,$1),$(call handle,$t))$(stack)
 
 # seq is a string equality operator that returns true (a non-empty
@@ -5680,23 +5739,35 @@ seq = $(filter $1,$2)
 # number, it is pushed.
 
 handle = $(call pushd,                            \
-      $(if $(call seq,+,$1),                      \
-        $(call plus,$(call pope),$(call pope)),   \
-        $(if $(call seq,-,$1),                    \
-      $(call subtract,$(call pope),$(call pope)), \
-          $(if $(call seq,*,$1),                  \
-      $(call multiply,$(call pope),$(call pope)), \
-            $(if $(call seq,/,$1),                \
-       $(call divide,$(call pope),$(call pope)),  \
-              $(call encode,$1))))))))))
 
+      $(if $(call seq,+,$1),                      \
+
+        $(call plus,$(call pope),$(call pope)),   \
+
+        $(if $(call seq,-,$1),                    \
+
+      $(call subtract,$(call pope),$(call pope)), \
+
+          $(if $(call seq,*,$1),                  \
+
+      $(call multiply,$(call pope),$(call pope)), \
+
+            $(if $(call seq,/,$1),                \
+
+       $(call divide,$(call pope),$(call pope)),  \
+
+              $(call encode,$1))))))))))
+```
+
+```make
 .PHONY: calc
+
 calc: ; @echo $(call calculate,$(calc))
 ```
 
-当你学习 GNU Make 标准库时，将在 第 6 章 中更深入地了解这些技术。
+当你学习 GNU Make 标准库时，将在第 6 章中更深入地了解这些技术。
 
-# 创建 XML 物清单 (Bill of Materials)
+# 创建 XML 物清单（Bill of Materials）
 
 使用标准的 GNU `make` 输出，很难回答构建了什么以及为什么构建。本节介绍了一种简单技术，让 `make` 创建物清单（BOM）。
 
@@ -5704,45 +5775,52 @@ calc: ; @echo $(call calculate,$(calc))
 
 示例 5-1 展示了一个 Makefile。我们将查看其 BOM，然后反推 BOM 是如何生成的。在这种情况下，GNU `make` 生成如下内容：
 
-```
+```shell
 $ make
+
 Making baz
+
 Making foo
+
 Making all
 ```
 
-在这里，makefile 运行的每个规则都添加了 `<rule>` 标签，其 `target` 属性提供了构建目标的名称。如果规则有任何先决项，在`<rule>`/`</rule>` 对中，先决项将被封装在 `<prereq>`/`</prereq>`。你可以通过标签的嵌套看到 Makefile 的结构。将 XML 文档加载到 XML 编辑器（或直接加载到浏览器中）可以任意展开或收缩树以探索 Makefile 的结构。
+在这里，Makefile 运行的每个规则都添加了 `<rule>` 标签，其 `target` 属性提供了构建目标的名称。如果规则有任何先决项，在 `<rule>`/`</rule>` 对中，先决项将被封装在 `<prereq>`/`</prereq>`。你可以通过标签的嵌套看到 Makefile 的结构。将 XML 文档加载到 XML 编辑器（或直接加载到浏览器中）可以任意展开或收缩树以探索 Makefile 的结构。
 
 ## 工作原理
 
-为了创建 示例 5-2 中所示的内容，对示例 Makefile 进行了修改，使用标准的 `include` 方法包含了一个特殊的 `bom` Makefile。包含该文件后，我们可以通过命令行运行 GNU `make`（例如 `make bom-all`）来生成 XML 输出。
+为了创建示例 5-2 中所示的内容，对示例 Makefile 进行了修改，使用标准的 `include` 方法包含了一个特殊的 `bom` Makefile。包含该文件后，我们可以通过命令行运行 GNU `make`（例如 `make bom-all`）来生成 XML 输出。
 
-`bom-all` 指令 GNU `make` 从 `all`目标开始构建 BOM。这就像你输入了 `make all`，但现在会 XML 文档。默认情况下，XML 文档与 Makefile 同名，但附加 `.xml`。如果示例 Makefile 是 `example.mk`，创建的 XML 文档将是 `example.mk.xml`。
+`bom-all` 指令 GNU `make` 从 `all` 目标开始构建 BOM。这就像你输入了 `make all`，但现在会生成 XML 文档。默认情况下，XML 文档与 Makefile 同名，但附加 `.xml`。如果示例 Makefile 是 `example.mk`，创建的 XML 文档将是 `example.mk.xml`。
 
 示例 5-3 显示了要包含的 `bom` Makefile 的内容：
 
-示例 5-3. 创建 XML BOM 的 bom Makefile
+示例 5-3. 创建 XML BOM 的 `bom` Makefile
 
-
-
-
-
-```
+```make
 ➊ PARENT_MAKEFILE := $(word $(words $(MAKEFILE_LIST)),x $(MAKEFILE_LIST))
+
 ➋ bom-file := $(PARENT_MAKEFILE).xml
+```
 
-➌ bom-old-shell := $(SHELL)
-➍ SHELL = $(bom-run)$(bom-old-shell)
 
-   bom-%: %
-➎ → @$(shell rm -f $(bom-file))$(call bom-dump,$*)
-   bom-write = $(shell echo '$1' >> $(bom-file))
-➞ bom-dump = $(if $(bom-prereq-$1),$(call bom-write,<rule target="$1">)      \
-   $(call bom-write,<prereq>)$(foreach p,$(bom-prereq-$1),                    \
-   $(call bom-dump,$p))$(call bom-write,</prereq>)$(call bom-write,</rule>),  \
-   $(call bom-write,<rule target="$1" />))
 
-➐ bom-run = $(if $@,$(eval bom-prereq-$@ := $^))
+```make
+bom-old-shell := $(SHELL)
+
+SHELL = $(bom-run)$(bom-old-shell)
+
+bom-%: %
+	@$(shell rm -f $(bom-file))$(call bom-dump,$*)
+
+bom-write = $(shell echo '$1' >> $(bom-file))
+
+bom-dump = $(if $(bom-prereq-$1),$(call bom-write,<rule target="$1">) \
+	$(call bom-write,<prereq>)$(foreach p,$(bom-prereq-$1), \
+	$(call bom-dump,$p))$(call bom-write,</prereq>)$(call bom-write,</rule>), \
+	$(call bom-write,<rule target="$1" />))
+
+bom-run = $(if $@,$(eval bom-prereq-$@ := $^))
 ```
 
 首先，我们通过提取包含 `bom` 的 makefile 名称并存入 `PARENT_MAKEFILE` ➊ 来确定 XML 文件的正确名称，然后追加 `.xml`，并将生成的名称存储在 `bom-file` 中 ➋。
@@ -5763,22 +5841,22 @@ Making all
 
 示例 5-3 中的技巧有一些注意事项。其中一个注意事项是该技术可能会产生海量的输出。这是因为它会在任何目标下方打印整个树。如果一个目标在树中出现多次，那么一个巨大的树就会在输出中重复多次。即使对于较小的项目，这可能导致 XML 的导出时间变得非常漫长。
 
-作为解决方法，我们可以更改 `bom-dump` 的定义，为每个目标只导出一次依赖项信息。这比 示例 5-3 中的方法快得多，并且可以使用下面的脚本进行处理以帮助理解 `make` 的结构：
+作为解决方法，我们可以更改 `bom-dump` 的定义，为每个目标只导出一次依赖项信息。这比示例 5-3 中的方法快得多，并且可以使用下面的脚本进行处理以帮助理解 `make` 的结构：
 
-```
+```make
 bom-%: %
-→  @$(shell rm -f $(bom-file))$(call bom-write,<bom>)$(call bom-dump,$*)$(call bom-write,</bom>)
+	@$(shell rm -f $(bom-file))$(call bom-write,<bom>)$(call bom-dump,$*)$(call bom-write,</bom>)
 
 bom-write = $(shell echo '$1' >> $(bom-file))
 
 bom-dump = $(if $(bom-prereq-$1),$(call bom-write,<rule target="$1">) \
-$(call bom-write,<prereq>)$(foreach p,$(bom-prereq-$1),               \
-$(call bom-write,<rule target="$p" />))$(call bom-write,</prereq>)$(call bom-write,<rule target="$1" />))
+	$(call bom-write,<prereq>)$(foreach p,$(bom-prereq-$1), \
+	$(call bom-write,<rule target="$p" />))$(call bom-write,</prereq>)$(call bom-write,<rule target="$1" />))
 ```
 
 # 高级自定义函数
 
-在 第 1 章 中，我们学习了如何在 `make` 中创建自定义函数。现在我们将查看 GNU `make` 源码，看看如何通过编写一些 C 代码来增强 `make`。
+在第 1 章中，我们学习了如何在 `make` 中创建自定义函数。现在我们将查看 GNU `make` 源码，看看如何通过编写一些 C 代码来增强 `make`。
 
 首先，我们从软件基金会获取 GNU `make` 源码。对于本节，我使用的是 `make` 3.81。对于 `make` 3.82 或 4.0，情况没有太大变化。
 
@@ -5786,15 +5864,19 @@ $(call bom-write,<rule target="$p" />))$(call bom-write,</prereq>)$(call bom-wri
 
 完成后，我们在同一个目录下获得了一个工作的 GNU `make`。
 
-## 开始修改 GNU make
+## 开始修改 GNU `make`
 
 知道正在运行哪个版本的 GNU `make` 非常方便，因此作为第一次修改，让我们更改请求版本信息时打印的消息。这里是默认的：
 
-```
+```text
 $ make -v
+
 GNU Make 3.81
+
 Copyright (C) 2006 Free Software Foundation, Inc.
+
 这是自由软件，请查看源代码以了解复制条件。
+
 本程序不提供任何保证，甚至是对于商业性或特定用途的保证。
 
 此程序编译自 i386-apple-darwin9.2.0
@@ -5804,49 +5886,45 @@ Copyright (C) 2006 Free Software Foundation, Inc.
 
 让我们更改该消息，使其在版本号之后打印 `(with jgc's modifications)`。为了实现这一点，我们需要用编辑器打开 `main.c` 文件并找到 `print_version` 函数（位于 2922 行），它看起来如下：
 
-
-
-
-
 ```c
 /* Print version information. */
 
 static void
 print_version (void)
 {
-static int printed_version = 0;
+  static int printed_version = 0;
+  char *precede = print_data_base_flag ? "# " : "";
 
-char *precede = print_data_base_flag ? "# " : "";
+  if (printed_version)
+    /* Do it only once. */
+    return;
 
-if (printed_version)
- /* Do it only once. */
- return;
+  /* Print this untranslated. The coding standards recommend translating the
+     (C) to the copyright symbol, but this string is going to change every
+     year, and none of the rest of it should be translated (including the
+     word "Copyright", so it hardly seems worth it. */
 
-/* Print this untranslated. The coding standards recommend translating the
-  (C) to the copyright symbol, but this string is going to change every
-  year, and none of the rest of it should be translated (including the
-  word "Copyright", so it hardly seems worth it. */
-
-printf ("%sGNU Make %s\n\
+  printf ("%sGNU Make %s\n\
 %sCopyright (C) 2006 Free Software Foundation, Inc.\n",
-    precede, version_string, precede);
+          precede, version_string, precede);
 
-printf (_("%sThis is free software; see the source for copying conditions.\n\
+  printf (_("%sThis is free software; see the source for copying conditions.\n\
 %sThere is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A\n\
 %sPARTICULAR PURPOSE.\n"),
-     precede, precede, precede);
+          precede, precede, precede);
 
-if (!remote_description || *remote_description == '\0')
- printf (_("\n%sThis program built for %s\n"), precede, make_host);
-else
- printf (_("\n%sThis program built for %s (%s)\n"),
-     precede, make_host, remote_description);
+  if (!remote_description || *remote_description == '\0')
+    printf (_("\n%sThis program built for %s\n"), precede, make_host);
+  else
+    printf (_("\n%sThis program built for %s (%s)\n"),
+            precede, make_host, remote_description);
 
-printed_version = 1;
+  printed_version = 1;
 
-/* Flush stdout so the user doesn't have to wait to see the
-  version information while things are thought about. */
-fflush (stdout);
+  /* Flush stdout so the user doesn't have to wait to see the
+     version information while things are thought about. */
+
+  fflush (stdout);
 }
 ```
 
@@ -5855,17 +5933,22 @@ fflush (stdout);
 ```c
 printf ("%sGNU Make %s (with jgc's modifications)\n\
 %sCopyright (C) 2006 Free Software Foundation, Inc.\n",
-    precede, version_string, precede);
+        precede, version_string, precede);
 ```
 
 保存文件，然后重新运行 `make`。现在输入 `make -v`：
 
-```
+```text
 $ ./make -v
+
 GNU Make 3.81 (with jgc's modifications)
+
 Copyright (C) 2006 Free Software Foundation, Inc.
+
 This is free software; see the source for copying conditions.
+
 There is NO warranty; not even for MERCHANTABILITY or FITNESS FOR A
+
 PARTICULAR PURPOSE.
 
 This program built for i386-apple-darwin9.2.0
@@ -5880,21 +5963,24 @@ GNU `make` 的内置函数定义在 `function.c` 文件中。要开始理解该�
 ```c
 static struct function_table_entry function_table_init[] =
 {
-/* Name/size */          /* MIN MAX EXP? Function */
-{ STRING_SIZE_TUPLE("abspath"),    0, 1, 1, func_abspath},
-{ STRING_SIZE_TUPLE("addprefix"),   2, 2, 1,
-func_addsuffix_addprefix},
-{ STRING_SIZE_TUPLE("addsuffix"),   2, 2, 1,
-func_addsuffix_addprefix},
-{ STRING_SIZE_TUPLE("basename"),   0, 1, 1, func_basename_dir},
-{ STRING_SIZE_TUPLE("dir"),      0, 1, 1, func_basename_dir},
---snip--
+  /* Name/size */          /* MIN MAX EXP? Function */
 
-{ STRING_SIZE_TUPLE("value"),     0, 1, 1, func_value},
-{ STRING_SIZE_TUPLE("eval"),     0, 1, 1, func_eval},
+  { STRING_SIZE_TUPLE("abspath"),    0, 1, 1, func_abspath},
+  { STRING_SIZE_TUPLE("addprefix"),  2, 2, 1,
+    func_addsuffix_addprefix},
+  { STRING_SIZE_TUPLE("addsuffix"),  2, 2, 1,
+    func_addsuffix_addprefix},
+  { STRING_SIZE_TUPLE("basename"),   0, 1, 1, func_basename_dir},
+  { STRING_SIZE_TUPLE("dir"),        0, 1, 1, func_basename_dir},
+
+  --snip--
+
+  { STRING_SIZE_TUPLE("value"),      0, 1, 1, func_value},
+  { STRING_SIZE_TUPLE("eval"),       0, 1, 1, func_eval},
+
 #ifdef EXPERIMENTAL
-{ STRING_SIZE_TUPLE("eq"),      2, 2, 1, func_eq},
-{ STRING_SIZE_TUPLE("not"),      0, 1, 1, func_not},
+  { STRING_SIZE_TUPLE("eq"),         2, 2, 1, func_eq},
+  { STRING_SIZE_TUPLE("not"),        0, 1, 1, func_not},
 #endif
 };
 ```
@@ -5913,15 +5999,16 @@ func_addsuffix_addprefix},
 static char*
 func_findstring (char *o, char **argv, const char *funcname UNUSED)
 {
-/* 在第二个字符串中查找第一个字符串的首次出现。 */
-if (strstr (argv[1], argv[0]) != 0)
- o = variable_buffer_output (o, argv[0], strlen (argv[0]));
+  /* 在第二个字符串中查找第一个字符串的首次出现。 */
 
-return o;
+  if (strstr (argv[1], argv[0]) != 0)
+    o = variable_buffer_output (o, argv[0], strlen (argv[0]));
+
+  return o;
 }
 ```
 
-实现 GNU `make` 内置函数的 C 函数有三个参数：`o`（指向写入函数输出的缓冲区指针）、`argv`（以空结尾的字符串数组形式的函数参数）以及 `funcname`（包含函数名称的字符串；大多数函数不需要它，但如果一个 C 例程处理多个 GNU `make` 函数，它就会很有帮助）。
+实现 GNU `make` 内置函数的 C 函数有三个参数：`o`（指向写入函数输出的缓冲区指针）、`argv`（以空结尾的字符串数组形式的函数参数）以及 `funcname`（包含函数名称的字符串；大多数函数不需要它，但如果一个 C 例程处理多个 GNU `make` 函数，它就很有帮助）。
 
 你可以看到 `func_findstring` 仅仅使用了标准 C 库的 `strstr` 函数来查找其第二个参数（在 `argv[1]` 中）是否存在于其第一个参数（在 `argv[0]` 中）。
 
@@ -5943,31 +6030,33 @@ return o;
 { STRING_SIZE_TUPLE("reverse"), 1, 1, 1, func_reverse},
 ```
 
-现在我们可以定义 `func_reverse`，它通过交换字符反转 `argv[0]` 中的字符串，然后更新输出缓冲区 `o`，如 示例 5-4 所示：
+现在我们可以定义 `func_reverse`，它通过交换字符反转 `argv[0]` 中的字符串，然后更新输出缓冲区 `o`，如示例 5-4 所示：
 
-示例 5-4. 使用 C 定义 GNU make 函数
+**示例 5-4. 使用 C 定义 GNU `make` 函数**
 
 ```c
 static char*
 func_reverse(char *o, char **argv, const char *funcname UNUSED)
 {
-int len = strlen(argv[0]);
-if (len > 0) {
- char * p = argv[0];
- int left = 0;
- int right = len - 1;
- while (left < right) {
-  char temp = *(p + left);
-  *(p + left) = *(p + right);
-  *(p + right) = temp;
-  left++;
-  right--;
- }
+  int len = strlen(argv[0]);
 
- o = variable_buffer_output(o, p, len);
-}
+  if (len > 0) {
+    char *p = argv[0];
+    int left = 0;
+    int right = len - 1;
 
-return o;
+    while (left < right) {
+      char temp = *(p + left);
+      *(p + left) = *(p + right);
+      *(p + right) = temp;
+      left++;
+      right--;
+    }
+
+    o = variable_buffer_output(o, p, len);
+  }
+
+  return o;
 }
 ```
 
@@ -5978,14 +6067,18 @@ return o;
 ```make
 EMPTY :=
 
-$(info Empty string: [$(reverse $(EMPTY))];
+$(info Empty string: [$(reverse $(EMPTY))])
 
 EVEN := 1234
-$(info Even length string: [$(reverse $(EVEN))]);
+
+$(info Even length string: [$(reverse $(EVEN))])
 
 ODD := ABCDE
-$(info Odd length string: [$(reverse $(ODD))]);
 ```
+
+
+
+`$(info Odd length string: [$(reverse $(ODD))]);`
 
 输出显示它工作正常：
 
@@ -5998,15 +6091,11 @@ Odd length string: [EDCBA]
 
 使用 C 语言让你能够访问完整的 C 库函数；因此，你可以创建的 GNU `make` 内置函数仅限于想象力。
 
-# GNU make 4.0 加载对象
+## GNU make 4.0 加载对象
 
 向 GNU `make` 添加 `reverse` 函数相当复杂，因为我们必须修改 GNU `make` 的源代码。但使用 GNU `make` 4.0 或更高版本，可以在不更改源代码的情况下向 `make` 添加 C 函数。GNU `make` 4.0 添加了一个 `load` 指令，可以使用它来加载包含 C 编写的 GNU `make` 函数的共享对象。
 
-你可以通过将 示例 5-4 中的 `reverse` 函数保存为名为 `reverse.c` 的文件并进行一些修改，将其转换为可加载的 GNU `make` 对象。
-
-
-
-
+你可以通过将示例 5-4 中的 `reverse` 函数保存为名为 `reverse.c` 的文件并进行一些修改，将其转换为可加载的 GNU `make` 对象。
 
 ```c
 #include <string.h>
@@ -6026,7 +6115,6 @@ char* func_reverse(const char *nm, unsigned int argc, char **argv)
     }
     return p;
   }
-
   return NULL;
 }
 
@@ -6039,14 +6127,14 @@ int reverse_gmk_setup()
 
 通过调用 ➌ 处的 `gmk_add_function`，`reverse` 函数被添加到了 GNU `make` 中。随后，`reverse` 函数就可以像任何其他 GNU `make` 内置函数一样使用了。字符串的实际反转由 `func_reverse` 处理，它在 ➋ 处调用 GNU `make` API 函数 `gmk_alloc` 为新字符串分配空间。
 
-在 ➊ 处有一个特殊的未未使用变量 `plugin_is_GPL_compatible`，这是任何可加载模块所必需的。
+在 ➊ 处有一个特殊的未使用变量 `plugin_is_GPL_compatible`，这是任何可加载模块所必需的。
 
 要使用新的 `reverse` 函数，你需要将 `reverse.c` 文件编译为 `.so` 文件并将其加载到 GNU `make` 中：
 
 ```make
- all:
-   --snip--
-   load reverse.so
+all:
+  --snip--
+  load reverse.so
 ➍ reverse.so: reverse.c ; @$(CC) -shared -fPIC -o $@ $<
 ```
 
@@ -6060,15 +6148,14 @@ A_PALINDROME := $(reverse saippuakivikauppias)
 
 注意，没有必要使用 `$(call)`。`reverse` 函数与其他任何内置的 GNU `make` 函数完全一样。
 
-# 在 GNU make 中使用 Guile
+## 在 GNU make 中使用 Guile
 
 GNU `make` 4.0 通过 `$(guile)` 函数引入了一个重大变化。该函数的参数被发送到内置的 Guile 语言并由其执行。（GNU Guile 是 Scheme 的实现，而 Scheme 本身是 Lisp。）`$(guile)` 的返回值是执行后的 Guile 代码的返回值，在转换为 GNU `make` 识别的类型后返回。严格来说，GNU `make` 并没有数据类型（一切都是字符串），尽管它有时会将字符串视为其他类型（例如，许多函数将带有空格的字符串视为列表）。
 
 以下是如何使用 `$(guile)` 和 Guile 函数 `reverse` 反转一个列表：
 
 ```make
- NAMES := liesl friedrich louisa kurt brigitta marta gretl
-
+NAMES := liesl friedrich louisa kurt brigitta marta gretl
 ➊ $(info $(guile (reverse '($(NAMES)))))
 ```
 
@@ -6108,9 +6195,6 @@ endef
 
 $(guile $(setup))
 ```
-
-
-
 
 `print-help` 使用 GNU `make` 的 `$(warning)` 函数，根据传递给它的两个参数输出适当的消息。第一个参数（存储在 `$1` 中）是目标的名称，第二个（存储在 `$2` 中）是帮助文本；它们通过 `--` 隔开。`$(warning)`向控制台写入消息并返回一个空字符串；因此，你可以安全地在规则的依赖列表（prerequisite list）中使用 `print-help`。
 
@@ -6169,38 +6253,33 @@ endef
 
 `last-element` 通过使用 `$(words)` 获取单词计数并返回其引用的单词，从而返回列表中的最后一个单词。由于 GNU `make` 的列表从位置 1 开始，`$(words LIST)` 是最后一个元素的索引。
 
-## 使用 print-help 为 Makefile 编写文档
+### 使用 print-help 为 Makefile 编写文档
 
 使用 `print-help` 为 Makefile 编写文档非常简单。只需在你想要记录的每个目标的依赖列表中添加相关的 `$(call print-help,target,description)` 即可。如果你将该调用紧挨于用于该目标的命令添加，那么帮助系统不仅会打印帮助信息，还会引导用户指向 makefile 中查找更多信息的地方。
 
 保持文档更新也很容易，因为目标的描述实际上是目标定义的一部分，而不是在单独的帮助列表中。
 
-## 完整的 help-system.mak
+### 完整的 help-system.mak
 
 最后，这是完整的 `help_system.mak` 文件：
 
 ```
 help: ; @echo $(if $(need-help),,Type \'$(MAKE)$(dash-f) help\' to get help)
-
 need-help := $(filter help,$(MAKECMDGOALS))
-
 define print-help
 $(if $(need-help),$(warning $1 -- $2))
 endef
-
 define last-element
 $(word $(words $1),$1)
 endef
-
 this-makefile := $(call last-element,$(MAKEFILE_LIST))
 other-makefiles := $(filter-out $(this-makefile),$(MAKEFILE_LIST))
 parent-makefile := $(call last-element,$(other-makefiles))
-
 dash-f := $(if $(filter-out Makefile makefile GNUmakefile, \
 $(parent-makefile)), -f $(parent-makefile))
 ```
 
-# 第 6 章：GNU Make 库
+## 第 6 章：GNU Make 库
 
 *GNU Make Library (GMSL)* 是一个托管在 SourceForge 上的开源项目，我启动它是为了防止 makefile 编写者重复造轮子，实现了一些常用函数，例如反转列表、字符串大写或对列表中的每个元素进行映射。
 
@@ -6208,7 +6287,7 @@ GMSL 拥有列表处理、完整的整数算术库以及用于数据结构的函
 
 在本章中，你将学习如何在真实的 makefile 使用 GMSL 的函数。此外，你将看到 GMSL 不同类别的参考。有关 GMSL 的最新版本，请访问 [`gmsl.sf.net/`](http://gmsl.sf.net/)。
 
-## 导入 GMSL
+### 导入 GMSL
 
 GMSL 通过一对名为 `gmsl` 和 `__gmsl` 的 makefile 实现。`__gmsl` 由 `gmsl` 导入，因此要在 makefile 中包含 GMSL，只需添加：
 
@@ -6232,19 +6311,13 @@ GMSL 使用了一个小技巧来使其位置完全灵活。因为 `gmsl` 使用 
 
 假设 `gmsl` 存储在 `/foo` 中并通过 `include /foo/gmsl` 包含。为了在不修改 `gmsl` 以硬编码 `__gmsl` 位置的情况下让其工作，`gmsl` 利用 `MAKEFILE_LIST` 确定它所在的位置，并在 `include __gmsl` 之前为其加上正确的路径。
 
-
-
-
-
 ```make
 # Try to determine where this file is located. If the caller did
 # include /foo/gmsl then extract the /foo/ so that __gmsl gets
 # included transparently
-
 __gmsl_root := $(word $(words $(MAKEFILE_LIST)),$(MAKEFILE_LIST))
 
 # If there are any spaces in the path in __gmsl_root then give up
-
 ifeq (1,$(words $(__gmsl_root)))
 __gmsl_root := $(patsubst %gmsl,%,$(__gmsl_root))
 else
@@ -6253,6 +6326,8 @@ endif
 
 include $(__gmsl_root)__gmsl
 ```
+
+
 
 如果你想让你的 Makefile 具有位置无关性（location independent），这是一个非常实用的技巧。
 
@@ -6364,16 +6439,11 @@ Stop.
 $(call assert,$(wildcard $(OUTDIR)/.),OUTDIR must be a directory)
 ```
 
-这会检查 `$(OUTDIR)` 是否包含点（**.**）。如果不包含，则 `$(OUTDIR)` 不是目录，`wildcard` 的调用将返回空字符串，导致断言失败。
+这会检查 `$(OUTDIR)` 是否包含点（`.`）。如果不包含，则 `$(OUTDIR)` 不是目录，`wildcard` 的调用将返回空字符串，导致断言失败。
 
 ## DEBUG 是否设置为 Y？
 
 GMSL 拥有逻辑运算符 `and`、`or`、`xor`、`nand`、`nor`、`xnor` 和 `not`，它们与 GNU `make` 的真值概念以及 GMSL 变量 `$(true)` 和 `$(false)` 配合工作。
-
-
-
-
-[content]
 
 你可以将 GNU `make`（以及 GMSL）的布尔值同时用于 GMSL 函数和 GNU `make` 内置的 `$(if)`。GMSL 逻辑运算符的设计目的是为了配合 `$(if)` 和 GNU `make` 预处理器 `ifeq` 指令使用。
 
@@ -6381,7 +6451,6 @@ GMSL 拥有逻辑运算符 `and`、`or`、`xor`、`nand`、`nor`、`xnor` 和 `n
 
 ```
 include gmsl
-
 debug_needed := $(call or,$(call seq,$(DEBUG),Y),$(call seq,$(DEBUG),y))
 ```
 
@@ -6389,7 +6458,6 @@ debug_needed := $(call or,$(call seq,$(DEBUG),Y),$(call seq,$(DEBUG),y))
 
 ```
 include gmsl
-
 debug_needed := $(call seq,$(call lc,$(DEBUG)),y)
 ```
 
@@ -6397,7 +6465,6 @@ debug_needed := $(call seq,$(call lc,$(DEBUG)),y)
 
 ```
 include gmsl
-
 debug_needed := $(call or,$(call seq,$(call lc,$(DEBUG)),y),$(call seq,$(call lc,$(DEBUG)),yes))
 ```
 
@@ -6409,7 +6476,6 @@ debug_needed := $(call or,$(call seq,$(call lc,$(DEBUG)),y),$(call seq,$(call lc
 
 ```
 include gmsl
-
 $(call assert,$(call or,$(call seq,$(DEBUG),Y),$(call seq,$(DEBUG),N)),DEBUG must be Y or N)
 ```
 
@@ -6445,7 +6511,6 @@ GMSL 的 `or` 运算符让这变得清晰得多：
 
 ```
 include gmsl
-
 ifeq ($(true),$(call or,$(call seq,$(DEBUG),Y),$(call seq,$(DEBUG),Yes)))
 --snip--
 endif
@@ -6463,7 +6528,6 @@ GMSL 函数 `uniq` 用于移除列表中的重复项。GNU `make` 有内置的 `
 
 ```
 include gmsl
-
 simple-path := $(call merge,:,$(call uniq,$(call split,:,$(PATH))))
 ```
 
@@ -6502,10 +6566,6 @@ echo 'char * ver = "1.0.1";' > version.c
 
 本节是 GNU Make 标准库 1.1.7 的完整参考，涵盖了 GMSL 逻辑运算符；整数函数；列表、字符串和集合操作函数；关联数组以及命名栈。对于每一类 GMSL 函数，你将看到一个函数介绍，随后是一个列出参数和返回值的快速参考部分。如需获取最新版本的完整参考，请访问 GMSL 网站：*[`gmsl.sf.net/`](http://gmsl.sf.net/)*。
 
-
-
-
-
 如果你对高级 GNU `make` 编程感兴趣，那么研究 GMSL 的源码是非常值得的（尤其是 `__gmsl` 文件）。创建单个 GMSL 函数所使用的技术在其他情况下通常很有用。
 
 ## 逻辑运算符
@@ -6543,404 +6603,407 @@ contains-word = $(call make-bool,$(filter $1,$2))
 january-now := $(call contains-word,Jan,$(shell date))
 ```
 
-使用 `contains-word` 可以重新定义 `january-now`。
+
+
+使用`contains-word`可以重新定义`january-now`。
 
 ### not
 
-GMSL 包含了所有常见的逻辑运算符。最简单的是 `not` 函数，它在逻辑上取反其参数：
+GMSL 包含了所有常见的逻辑运算符。最简单的是`not`函数，它在逻辑上取反其参数：
 
 ```
 not
 
 参数: 单个布尔值
+
 返回:  如果布尔值为 $(false) 则返回 $(true)，反之亦然
 ```
 
-例如，`$(call not,$(true))` 返回 `$(false)`。
+例如，`$(call not,$(true))`返回`$(false)`。
 
 ### and
 
-`and` 函数在两个参数都为真时（且仅当在此时）返回 `$(true)`：
+`and`函数在两个参数都为真时（且仅当在此时）返回`$(true)`：
 
 ```
 and
 
 参数: 两个布尔值
+
 返回:   如果两个参数都是 $(true) 则返回 $(true)
 ```
 
-例如，`$(call and,$(true),$(false))` 返回 `$(false)`。
+例如，`$(call and,$(true),$(false))`返回`$(false)`。
 
 ### or
 
-`or` 函数在任意一个参数为真时返回 `$(true)`：
+`or`函数在任意一个参数为真时返回`$(true)`：
 
 ```
 or
 
 参数: 两个布尔值
+
 返回:   如果其中一个参数为 $(true) 则返回 $(true)
 ```
 
-例如，`$(call or,$(true),$(false))` 返回 `$(true)`。
+例如，`$(call or,$(true),$(false))`返回`$(true)`。
 
 ### xor
 
-`xor` 函数是异或：
+`xor`函数是异或：
 
 ```
 xor
 
 参数: 两个布尔值
+
 返回:   如果恰好有一个布尔值为真则返回 $(true)
 ```
 
-例如，`$(call xor,$(true),$(false))` 返回 `$(true)`。
+例如，`$(call xor,$(true),$(false))`返回`$(true)`。
 
 ### nand
 
-`nand` 仅仅是“非与”
+`nand`仅仅是“非与”：
 
 ```
 nand
 
 参数: 两个布尔值
+
 返回:   “非与”的值
 ```
 
-例如，`$(call nand,$(true),$(false))` 返回 `$(true)`，而 `$(call and,$(true),$(false))` 返回 `$(false)`。
+例如，`$(call nand,$(true),$(false))`返回`$(true)`，而`$(call and,$(true),$(false))`返回`$(false)`。
 
 ### nor
 
-`nor` 仅仅是“非或”
+`nor`仅仅是“非或”：
 
 ```
 nor
 
 参数: 两个布尔值
+
 返回:   “非或”的值
 ```
 
-例如，`$(call nor,$(true),$(false))` 返回 `$(false)`，而 `$(call or,$(true),$(false))` 返回 `$(true)`。
+例如，`$(call nor,$(true),$(false))`返回`$(false)`，而`$(call or,$(true),$(false))`返回`$(true)`。
 
 ### xnor
 
-很少使用的 `xnor` 是“非异或”：
+很少使用的`xnor`是“非异或”：
 
 ```
 xnor
 
 参数: 两个布尔值
+
 返回:   “非异或”的值
 ```
 
-注意，GMSL 逻辑函数 `and` 和 `or` 不是短路逻辑；在执行逻辑 `and` 或 `or` 之前，这些函数的两个参数都会被展开。GNU `make` 3.81 引入了具有短路功能的内置 `and` 和 `or` 函数：它们先求值第一个参数，然后决定是否有必要求值第二个。
+注意，GMSL 逻辑函数`and`和`or`不是短路逻辑；在执行逻辑`and`或`or`之前，这两个函数的参数都会被展开。GNU `make` 3.81 引入了具有短路功能的内置`and`和`or`函数：它们先求值第一个参数，然后决定是否有必要求值第二个。
 
 ## 整数算术函数
 
-在第 5 章(#ch05.html "第 5 章 突破极限") 中，你已经了如何通过将非负整数表示为 `x` 的列表在 GNU `make` 中进行算术运算。例如，4 是 `x x x x`。GMSL 对整数使用了相同的表示方法，并提供了大量的函数用于整数计算。
+在第 5 章（#ch05.html "第 5 章 突破极限"）中，你已经了解了如何通过将非负整数表示为`x`的列表在 GNU `make`中进行算术运算。例如，4 是`x x x x`。GMSL 对整数使用了相同的表示方法，并提供了大量的函数用于整数计算。
 
 算术库函数有两种形式：每种函数的一种形式接收整数作为参数，另一种形式接收编码后的参数（`x`）。
 
-算术库函数以两种形式出现：每种函数的一种形式接收整数作为参数，另一种形式接收编码后的参数（`x`）。
-
-算术库函数以两种形式出现：每种函数的一种形式接收整数作为参数，另一种形式接收编码后的参数（`x`）。
-
-算术库函数以两种形式出现：每种函数的一种形式接收整数作为参数，另一种形式接收编码后的参数（`x`）。
-
-算术库函数以两种形式出现：每种函数的一种形式接收整数作为参数，另一种形式接收编码后的参数（`x`）。
-
-算术库函数以两种形式出现：每种函数的一种形式接收整数作为参数，另一种形式接收编码后的参数（`x`）。
-
-算术库函数以两种形式出现：每种函数的一种形式接收整数作为参数，另一种形式接收编码后的参数（`x`）。
-
-算术库函数以两种形式出现：每种函数的一种形式接收整数作为参数，另一种形式接收编码后的参数（`x`）。
-
-算术库函数以两种形式出现：每种函数的一种形式接收整数作为参数，另一种形式接收编码后的参数（`x`）。
-
-算术库函数以两种形式出现：每种函数的一种形式接收整数作为参数，另一种形式接收编码后的参数（`x`）。
-
-算术库函数以两种形式出现：每种函数的一种形式接收整数作为参数，另一种形式接收编码后的参数（`x`）。
-
-算术库函数以两种形式出现：每种函数的一种形式接收整数作为参数，另一种形式接收编码后的参数（`x`）。
-
-算术库函数以两种形式出现：每种函数的一种形式接收整数作为参数，另一种形式接收编码后的参数（`x`）。
-
-算术库函数以两种形式出现：每种函数的一种形式接收整数作为参数，另一种形式接收编码后的参数（`x`）。
-
-算术库函数以两种形式出现：每种函数的一种形式接收整数作为参数，另一种形式接收编码后的参数（`x`）。
-
-算术库函数以两种形式出现：每种函数的一种形式接收整数作为参数，另一种形式接收编码后的参数（`x`）。
-
-（注：由于原文中 `x` 列表表示部分的描述存在大量重复，此处对后续算术函数部分的描述已保持逻辑翻译：）
-
-算术库函数以两种形式出现：每种函数的一种形式接收整数作为参数，另一种形式接收编码后的参数（`x`）。
-
-算术库函数以两种形式出现：每种函数的一种形式接收整数作为参数，另一种形式接收编码后的参数（`x`）。
-
-算术库函数以两种形式出现：每种函数的一种形式接收整数作为参数，另一种形式接收编码后的参数（`x`）。
-
-（此处根据原文逻辑继续翻译具体函数部分）
-
 ### int_decode
 
-`int_decode` 函数接收一个 `x` 表示的数字并返回其整数：
+`int_decode`函数接收一个`x`表示的数字并返回其整数：
 
 ```
 int_decode
 
 参数: 1: x 表示的数字
+
 返回:   该数字对应的整数
 ```
 
 ### int_encode
 
-`int_encode` 是 `int_decode` 的相反：它接收一个整数并返回 `x` 表示：
+`int_encode`是`int_decode`的相反：它接收一个整数并返回`x`表示：
 
 ```
 int_encode
 
 参数: 1: 可读的整数
+
 返回:   x 表示的字符串
 ```
 
 ### int_plus
 
-`int_plus` 将两个 `x` 表示的数字相加并返回它们的和：
+`int_plus`将两个`x`表示的数字相加并返回它们的和：
 
 ```
 int_plus
 
 参数: 1: x 表示的数字
+
        2: 另一个 x 表示的数字
+
 返回:   x 表示的和的结果
 ```
 
 ### plus
 
-要进行整数加法，使用 `plus` 函数，它在 `x` 表示之间转换并调用 `int_plus`：
+要进行整数加法，使用`plus`函数，它在`x`表示之间转换并调用`int_plus`：
 
 ```
 plus (wrapped version of int_plus)
 
 参数: 1: 整数
+
        2: 另一个整数
+
 返回:   两个整数的和
 ```
 
 ### int_subtract
 
-`int_subtract` 减去两个 `x` 表示的数字并返回其差的 `x` 表示：
+`int_subtract`减去两个`x`表示的数字并返回其差的`x`表示：
 
 ```
 int_subtract
 
 参数: 1: x 表示的数字
+
        2: 另一个 x 表示的数字
+
 返回:   x 表示的差的结果
 ```
 
 ### subtract
 
-要进行整数减法，使用 `subtract` 函数，它在 `x` 表示之间转换并调用 `int_subtract`：
+要进行整数减法，使用`subtract`函数，它在`x`表示之间转换并调用`int_subtract`：
 
 ```
 subtract (wrapped version of int_subtract)
 
 参数: 1: 整数
+
        2: 另一个整数
+
 返回:   两个整数的差
 ```
 
 ### int_multiply
 
-`int_multiply` 乘以两个处于 `x` 表示的数字：
+`int_multiply`乘以两个处于`x`表示的数字：
 
 ```
 int_multiply
 
 参数: 1: x 表示的数字
+
        2: 另一个 x 表示的数字
+
 返回:   x 表示的乘积的结果
 ```
 
 ### multiply
 
-`multiply` 将乘以两个整数并返回它们的乘积。它自动在 `x` 表示之间转换并调用 `int_multiply`：
+`multiply`将乘以两个整数并返回它们的乘积。它自动在`x`表示之间转换并调用`int_multiply`：
 
 ```
 multiply (wrapped version of int_multiply)
 
 参数: 1: 整数
+
        2: 另一个整数
+
 返回:   两个整数的乘积
 ```
 
 ### int_divide
 
-`int_divide` 将一个数字除以另一个；两者都以 `x` 表示，结果亦是：
-
-
-
-
+`int_divide`将一个数字除以另一个；两者都以`x`表示，结果亦是：
 
 ```
 int_divide
+
 Arguments: 1: 一个 x 表示法下的数字
+
            2: 另一个 x 表示法下的数字
+
 Returns:   参数 1 除以参数 2 在 x 表示法下的 
+
            整数除法结果
 ```
 
-### ### divide
+### divide
 
-`divide` 函数调用 `int_divide` 对两个十进制整数进行除法，并自动在 `x`-表示法之间转换：
+`divide`函数调用`int_divide`对两个十进制整数进行除法，并自动在`x`-表示法之间转换：
 
 ```
 divide (wrapped version of int_divide)
 
 Arguments: 1: 一个整数
+
            2: 另一个整数
+
 Returns:   第一个参数除以第二个参数的整数除法
 ```
 
-### ### int_max and int_min
+### int_max and int_min
 
-`int_max` 和 `int_min` 分别返回两个 x-表示法数字的极大值和最小值：
+`int_max`和`int_min`分别返回两个 x-表示法数字的极大值和最小值：
 
 ```
 int_max, int_min
 
 Arguments: 1: 一个 x 表示法下的数字
+
            2: 另一个 x 表示法下的数字
+
 Returns:   其参数在 x 表示法下的最大值或最小值
 ```
 
-### ### max and min
+### max and min
 
-`int_max` 和 `int_min` 的十进制整数等效函数是 `max` 和 `min`；它们会自动在 x-表示法之间转换：
+`int_max`和`int_min`的十进制整数等效函数是`max`和`min`；它们会自动在 x-表示法之间转换：
 
 ```
 max, min
 
 Arguments: 1: 一个整数
+
            2: 另一个整数
+
 Returns:   其整数参数的最大值或最小值
 ```
 
-### ### int_inc
+### int_inc
 
-`int_inc` 是一个短小的辅助函数，仅用于向 x-表示法下的数字加 1：
+`int_inc`是一个短小的辅助函数，仅用于向 x-表示法下的数字加 1：
 
 ```
 int_inc
 
 Arguments: 1: 一个 x 表示法下的数字
+
 Returns:   x 表示法下加了 1 的数字
 ```
 
-### ### inc
+### inc
 
-`inc` 函数向十进制整数加 1：
+`inc`函数向十进制整数加 1：
 
 ```
 inc
 
 Arguments: 1: 一个整数
+
 Returns:   加了 1 的参数
 ```
 
-### ### int_dec
+### int_dec
 
-`int_inc` 的相反函数是 `int_dec`：它将一个数字减 1：
+`int_inc`的相反函数是`int_dec`：它将一个数字减 1：
 
 ```
 int_dec
 
 Arguments: 1: 一个 x 表示法下的数字
+
 Returns:   x 表示法下减了 1 的数字
 ```
 
-### ### dec
+### dec
 
-`dec` 函数将十进制整数减减 1：
+`dec`函数将十进制整数减减 1：
 
 ```
 dec
 
 Arguments: 1: 一个整数
+
 Returns:   减了 1 的参数
 ```
 
-### ### int_double
+### int_double
 
-`double` 和 `halve` 函数（以及对应的 `int_double` 和 `int_halve`）是为了性能考虑而提供的。如果你乘以 2 或除以 2，这些函数会比乘和除法更快。
+`double`和`halve`函数（以及对应的`int_double`和`int_halve`）是为了性能考虑而提供的。如果你乘以 2 或除以 2，这些函数会比乘和除法更快。
 
-`int_double` 将一个整数翻倍：
+`int_double`将一个整数翻倍：
 
 ```
 int_double
 
 Arguments: 1: 一个 x 表示法下的数字
+
 Returns:   x 表示法下翻倍 (* 2) 的数字
 ```
 
-### ### double
+### double
 
-`double` 将一个十进制整数翻倍：
+`double`将一个十进制整数翻倍：
 
 ```
 double
 
 Arguments: 1: 一个整数
+
 Returns:   整数乘以 2
 ```
 
-在内部，它会转换为 `x`-表示法并调用 `int_double`。
+在内部，它会转换为`x`-表示法并调用`int_double`。
 
-### ### int_halve
+### int_halve
 
-你可以通过对 x-表示法下的数字调用 `int_halve` 来执行除 2 的整数除法：
+你可以通过对 x-表示法下的数字调用`int_halve`来执行除 2 的整数除法：
 
 ```
 int_halve
 
 Arguments: 1: 一个 x 表示法下的数字
+
 Returns:   x 表示法下减 (/ 2) 的数字
 ```
 
-### ### halve
+### halve
 
-最后，还有 `halve`：
+最后，还有`halve`：
 
 ```
 halve
 
 Arguments: 1: 一个整数
+
 Returns:   除以 2 的整数
 ```
 
-这是 `int_halve` 的十进制整数等效函数。
+这是`int_halve`的十进制整数等效函数。
 
-## ### 整数比较函数
+## 整数比较函数
 
-所有整数比较函数都返回 `$(true)` 或 `$(false)`：
+所有整数比较函数都返回`$(true)`或`$(false)`：
 
 ```
 int_gt, int_gte, int_lt, int_lte, int_eq, int_ne
 
 Arguments: 两个要比较的 x 表示法数字
+
 Returns:   $(true) 或 $(false)
 
 int_gt  第一个参数大于第二个参数
+
 int_gte 第一个参数大于等于第二个参数
+
 int_lt  第一个参数小于第二个参数
+
 int_lte 第一个参数小于等于第二个参数
+
 int_eq  第一个参数在数值上等于第二个参数
+
 int_ne  第一个参数在数值上不等于第二个参数
 ```
 
-这些可以用于 GNU `make` 和 GMSL 函数，也可以用于期望布尔值值的指令（例如 GMSL 逻辑运算符）。
+这些可以用于 GNU `make`和 GMSL 函数，也可以用于期望布尔值值的指令（例如 GMSL 逻辑运算符）。
 
 但你更有可能使用这些版本的比较函数：
 
@@ -6948,52 +7011,61 @@ int_ne  第一个参数在数值上不等于第二个参数
 gt, gte, lt, lte, eq, ne
 
 Arguments: 两个要比较的整数
+
 Returns:   $(true) 或 $(false)
 
 int_gt  第一个参数大于第二个参数
+
 int_gte 第一个参数大于等于第二个参数
+
 int_lt  第一个参数小于第二个参数
+
 int_lte 第一个参数小于等于第二个参数
+
 int_eq  第一个参数在数值上等于第二个参数
+
 int_ne  第一个参数在数值上不等于第二个参数
 ```
 
-这些函数的操作是对十进制整数，而不是 GMSL 使用的内部 `x`-表示法。
+这些函数的操作是对十进制整数，而不是 GMSL 使用的内部`x`-表示法。
 
-## ### 杂项整数函数
+## 杂项整数函数
 
-你可能不会对 GNU `make` 算术进行任何高级操作，但这里详细介绍的杂项函数涉及进制转换和数值序列的生成。它们有时是有用的。
+你可能不会对 GNU `make`算术进行任何高级操作，但这里详细介绍的杂项函数涉及进制转换和数值序列的生成。它们有时是有用的。
 
-### ### sequence
+### sequence
 
-你使用 `sequence` 函数来生成数字序列：
+你使用`sequence`函数来生成数字序列：
 
 ```
 sequence
 
 Arguments: 1: 一个整数
+
            2: 一个整数
+
 Returns:   如果 arg1 >= arg2 则返回序列 [arg1 arg2]；如果 arg2 > arg1 则返回 [arg2 arg1]
 ```
 
-例如，`$(call sequence,10,15)` 返回 `10 15`。
+例如，`$(call sequence,10,15)`返回`10 15`。
 
-### ### dec2hex, dec2bin, and decoct
+### dec2hex, dec2bin, and decoct
 
-`dec2hex`、`dec2bin` 和 `decoct` 函数在十进制、二进制和八进制之间进行转换：
+`dec2hex`、`dec2bin`和`decoct`函数在十进制、二进制和八进制之间进行转换：
 
 ```
 dec2hex, dec2bin, decoct
 
 Arguments: 1: 一个整数
+
 Returns:   转换为十六进制、二进制或八进制的整数
 ```
 
-例如，`$(call dechex,42)` 返回 `2a`。
+例如，`$(call dechex,42)`返回`2a`。
 
-### ### repeat and pad
+### repeat and pad
 
-有了 `repeat`，我们只需要一种方法将字符串填充到某些字符长度。`pad` 函数实现了这一点：
+有了`repeat`，我们只需要一种方法将字符串填充到某些字符长度。`pad`函数实现了这一点：
 
 ```
 pad = $(call repeat,$1,$(call subtract,$2,$(call strlen,$3)))$3
@@ -7001,34 +7073,31 @@ pad = $(call repeat,$1,$(call subtract,$2,$(call strlen,$3)))$3
 padded2hex = $(call pad,0,$2,$(call dechex,$1))
 ```
 
-它的三个参数是填充字符、填充输出的总字符宽度以及要填充的字符串。例如，`$(call pad,0,4,2a)` 将返回 `002a`。从这里可以很容易定义一个 `padded2hex`。
+它的三个参数是填充字符、填充输出的总字符宽度以及要填充的字符串。例如，`$(call pad,0,4,2a)`将返回`002a`。从这里可以很容易定义一个`padded2hex`。
 
-正如你预期的，`$(call padded2hex,42,8)` 返回 `0000002a`。
+正如你预期的，`$(call padded2hex,42,8)`返回`0000002a`。
 
-## ### 列表操作函数
+## 列表操作函数
 
-在 GNU `make` 和 GMSL 术语中，列表是带有空白符分隔的字符字符串。GNU `make` 处理列表的内置函数以及 GMSL 函数都将多个空格视为单个空格。因此，列表 `1 2 3` 和 `1  2 3` 是相同的。
+在 GNU `make`和 GMSL 术语中，列表是带有空白符分隔的字符字符串。GNU `make`处理列表的内置函数以及 GMSL 函数都将多个空格视为单个空格。因此，列表`1 2 3`和`1  2 3`是相同的。
 
 我将在接下来的章节中详细介绍一些列表操作函数。这些函数在用法上比其他函数更复杂，并且通常出现在函数式语言中。
 
-
-
-
-
 ### 使用 map 对列表应用函数
 
-当你使用 GNU `make` 函数（无论是内置函数还是你自定义的）时，你实际上是在使用一种简单的函数式语言进行编程。在函数式编程中，通常有一个 `map` 函数，它可以将一个函数应用于列表的每一个元素上。GMSL 定义 `map` 正是为了实现这一功能。例如：
+当你使用 GNU `make`函数（无论是内置函数还是你自定义的）时，你实际上是在使用一种简单的函数式语言进行编程。在函数式编程中，通常有一个`map`函数，它可以将一个函数应用于列表的每一个元素上。GMSL 定义`map`正是为了实现这一功能。例如：
 
 ```
 SRCS := src/FOO.c src/SUBMODULE/bar.c src/foo.c
+
 NORMALIZED := $(call uniq,$(call map,lc,$(SRCS)))
 ```
 
-假设 `SRCS` 中有一组文件名列表（可能指定了路径），这将确保所有文件名都转换为小写，然后应用 `uniq` 函数来获取唯一的源文件列表。
+假设`SRCS`中有一组文件名列表（可能指定了路径），这将确保所有文件名都转换为小写，然后应用`uniq`函数来获取唯一的源文件列表。
 
-这里使用了 GMSL 函数 `lc` 将 `SRCS` 中的每个文件名转换为小写。你可以对内置函数和用户定义函数同时使用 `map` 函数。在这里，`NORMALIZED` 的结果将是 `src/foo.c src/submodule/bar.c`。
+这里使用了 GMSL 函数`lc`将`SRCS`中的每个文件名转换为小写。你可以对内置函数和用户定义函数同时使用`map`函数。在这里，`NORMALIZED`的结果将是`src/foo.c src/submodule/bar.c`。
 
-`map` 的另一个用可能是获取每个源文件的大小的大小：
+`map`的另一个用可能是获取每个源文件的大小的大小：
 
 ```
 size = $(firstword $(shell wc -c $1))
@@ -7036,23 +7105,26 @@ size = $(firstword $(shell wc -c $1))
 SOURCE_SIZES := $(call map,size,$(SRCS))
 ```
 
-在这里我们定义了一个 `size` 函数，它使用 `$(shell)` 调用 `wc`，然后将其应用到 `SRCS` 中的每个文件。
+在这里我们定义了一个`size`函数，它使用`$(shell)`调用`wc`，然后将其应用到`SRCS`中的每个文件。
 
-在这里，`SOURCE_SIZES` 可能类似于 `1538 1481`，每个源文件对应一个元素。
+在这里，`SOURCE_SIZES`可能类似于`1538 1481`，每个源文件对应一个元素。
 
 ### 一个 reduce 函数
 
-函数式语言中的另一个常用函数是 `reduce`。`reduce` 将一个接受两个参数的函数应用于列表的连续元素，并将函数的返回值传递给下一次调用。GMSL 没有内置的 `reduce` 函数，但你可以很容易地定义它：
+函数式语言中的另一个常用函数是`reduce`。`reduce`将一个接受两个参数的函数应用于列表的连续元素，并将函数的返回值传递给下一次调用。GMSL 没有内置的`reduce`函数，但你可以很容易地定义它：
 
 ```
 reduce = $(if $2,$(call $0,$1,$(call rest,$2),$(call $1,$3,$(firstword $2))),$3)
 ```
 
-### 使用 reduce 求数字列表
+
+
+
+### 使用 `reduce` 求数字列表
 
 将 `reduce` 与 `plus` 函数结合，你可以轻松地创建一个 GNU `make` 函数来对数字列表求和：
 
-```
+```make
 sum-list = $(call reduce,plus,$1,0)
 ```
 
@@ -7060,7 +7132,7 @@ sum-list = $(call reduce,plus,$1,0)
 
 以下是它的工作原理。假设调用了 `$(call sum-list,1 2 3 4 5)`。将执行以下 `plus` 的调用序列：
 
-```
+```make
 $(call plus,1,0) 返回 1
 $(call plus,1,2) 返回 3
 $(call plus,3,3) 返回 6
@@ -7072,7 +7144,7 @@ $(call plus,10,5) 返回 15
 
 你可以将 `sum-list` 与 `SOURCE_SIZES` 变量结合，获取源代码的总大小：
 
-```
+```make
 TOTAL_SIZE := $(call sum-list,$(SOURCE_SIZES))
 ```
 
@@ -7084,7 +7156,7 @@ GMSL 为列表定义的另一个有趣函数是 `pairmap`。它接受三个参�
 
 假设 `SRCS` 包含一个源文件列表。使用我们定义的 `size` 函数结合 `map`，定义了 `SOURCE_SIZES`，它包含了每个源文件的大小列表。使用 `pairmap`，我们可以将两个列表压缩在一起，输出每个文件名及其大小：
 
-```
+```make
 zip = $1:$2
 
 SOURCES_WITH_SIZES := $(call pairmap,zip,$(SRCS),$(SOURCE_SIZES))
@@ -7092,139 +7164,157 @@ SOURCES_WITH_SIZES := $(call pairmap,zip,$(SRCS),$(SOURCE_SIZES))
 
 `zip` 函数被依次应用于源文件名和大小，并生成一个用冒号分隔文件名及其大小的字符串。使用本节中的示例文件和大小，`SOURCES_WITH_SIZES` 将是 `src/foo.c:1538 src/submodule/bar.c:1481`。
 
-### first
+### `first`
 
 `first` 接收一个列表并返回其第一个元素：
 
-```
+```text
 first
 
 参数: 1: 一个列表
+
 返回值:   返回列表的第一个元素
 ```
 
 注意 `first` 与 GNU `make` 函数 `$(firstword)` 是相同的。
 
-### last
+### `last`
 
 `last` 函数返回列表的最后一个元素：
 
-```
+```text
 last
 
 参数: 1: 一个列表
+
 返回值:   返回列表的最后一个元素
 ```
 
 GNU `make` 3.81 了 `$(lastword)`，其工作方式与 `last` 相同。
 
-### rest
+### `rest`
 
 `rest` 函数几乎是 `first` 的相反。它返回列表除第一个元素以外的所有内容：
 
-```
+```text
 rest
 
 参数: 1: 一个列表
+
 返回值:   移除了第一个元素的列表
 ```
 
-### chop
+### `chop`
 
 要移除列表的最后一个元素，请使用 `chop`：
 
-```
+```text
 chop
 
 参数: 1: 一个列表
+
 返回值:   移除了最后一个元素的列表
 ```
 
-### map
+### `map`
 
 `map` 遍历列表并在每个元素上调用函数：
 
-```
+```text
 map
 
 参数
+
 1: 要调用的函数
+
 2: 列表
+
 返回值:   应用函数后的列表
 ```
 
-### pairmap
+### `pairmap`
 
 `pairmap` 类似于 `map`，但它作用于一对列表：
 
-```
+```text
 pairmap
 
 参数
+
 1: 要调用的函数
+
 2: 第一个列表
+
 3: 第二个列表
+
 返回值:   对对应用函数后的列表
 ```
 
-### leq
+### `leq`
 
 `leq` 列表相等函数在列表仅有空格不同时会正确返回 `$(true)`：
 
-```
+```text
 leq
 
 参数: 1: 要比较的列表...
+
 2: 此列表
+
 返回值:   如果列表相同则返回 true
 ```
 
 例如，`leq` 认为 `1 2 3` 和 `1 2 3` 是相同的。
 
-### lne
+### `lne`
 
 `lne` 是 `leq` 的相反：当两个列表不等时返回 `$(true)`：
 
-```
+```text
 lne
 
 参数: 1: 要比较的列表...
+
 2: 此列表
+
 返回值:   如果列表不同则返回 true
 ```
 
-### reverse
+### `reverse`
 
 `reverse` 一个列表可能是用的（因为可以反向传递给 `$(foreach)`）：
 
-```
+```text
 reverse
 
 参数: 1: 要反转的列表
+
 返回值:   反转后的列表
 ```
 
-### uniq
+### `uniq`
 
-内置的 `$(sort)`会对列表去重，但它是在排序的同时完成的。GMSL 的 `uniq` 函数在去重的同时保留了元素出现的顺序：
+内置的 `$(sort)` 会对列表去重，但它是在排序的同时完成的。GMSL 的 `uniq` 函数在去重的同时保留了元素出现的顺序：
 
-```
+```text
 uniq
 
 参数: 1: 要去重的列表
+
 返回值:   保留原始顺序的去重列表
 ```
 
 例如，`$(call uniq,a c b a c b)` 将返回 `a c b`。
 
-### length
+### `length`
 
 获取列表中元素的数量，调用 `length`：
 
-```
+```text
 length
 
 参数: 1: 一个列表
+
 返回值:   列表元素的数量
 ```
 
@@ -7234,10 +7324,11 @@ length
 
 字符串是任何字符的序列，包括空格。字符串相等（和字符串不等）函数 `seq` 对于包含空格或仅由空格组成的字符串也有效。例如：
 
-```
+```make
 # space 包含空格字符
 
 space :=
+
 space +=
 
 # tab 包含制表符
@@ -7245,9 +7336,13 @@ space +=
 tab :=→  # 需要保护制表符
 
 $(info $(call seq,White Space,White Space))
+
 $(info $(call seq,White$(space)Space,White Space))
+
 $(info $(call sne,White$(space)Space,White$(tab)Space))
+
 $(info $(call seq,$(tab),$(tab)))
+
 $(info $(call sne,$(tab),$(space)))
 ```
 
@@ -7255,30 +7350,28 @@ $(info $(call sne,$(tab),$(space)))
 
 与列表处理函数一样，我将在后续章节中详细介绍几个更复杂的函数。
 
-### 将 CSV 数据拆分为 GNU make 列表
-
-
-
+### 将 CSV 数据拆分为 GNU `make` 列表
 
 你可以使用 `split` 函数将 CSV 格式的值转换为 GNU `make` 列表。例如，通过逗号进行分割可以将一个 CSV 行转换为一个列表，并从该列表中提取出单独的项目：
 
-```
+```make
 CSV_LINE := src/foo.c,gcc,-Wall
 
 comma := ,
+
 FIELDS := $(call split,$(comma),$(CSV_LINE))
 
 $(info Compile '$(word 1,$(FIELDS))' using compiler '$(word 2,$(FIELDS))' with \
 options '$(word 3,$(FIELDS))')
 ```
 
-注意变量 `comma` 被定义为包含一个逗号字符，以便在 `$(call)` 调用 `split` 函数时使用。这个技巧在 第 1 章 中被讨论过。
+注意变量 `comma` 被定义为包含一个逗号字符，以便在 `$(call)` 调用 `split` 函数时使用。这个技巧在第 1 章中被讨论过。
 
-### 从目录列表创建 PATH
+### 从目录列表创建 `PATH`
 
 `merge` 函数是 `split` 的相反操作：它通过某些字符分隔列表项，从列表生成一个字符串。例如，要将目录列表转换为适用于 `PATH` 的形式（通常由冒号分隔），可以如下所示定义 `list-to-path`：
 
-```
+```make
 DIRS := /usr/bin /usr/sbin /usr/local/bin /home/me/bin
 
 list-to-path = $(call merge,:,$1)
@@ -7288,13 +7381,13 @@ $(info $(call list-to-path,$(DIRS)))
 
 输出为 `/usr/bin:/usr/sbin:/usr/local/bin:/home/me/bin`。
 
-### 使用 tr 翻译字符
+### 使用 `tr` 翻译字符
 
 最复杂的字符串函数是 `tr`，它的操作类似于 shell 程序 `tr`。它将一组字符集合中的每个字符转换为第二个列表中对应的字符。GMSL 定义了一些用于 `tr` 的常用字符类（class）。例如，它定义了名为 `[A-Z]` 和 `[a-z]` 的变量（是的，它们的名字确实就是这样），它们包含了大写字母和小写字母。
 
 我们可以使用 `tr` 创建一个将文本转换为黑客语（leet-speak）的函数：
 
-```
+```make
 leet = $(call tr,A E I O L T,4 3 1 0 1 7,$1)
 
 $(info $(call leet,I AM AN ELITE GNU MAKE HAXOR))
@@ -7302,114 +7395,131 @@ $(info $(call leet,I AM AN ELITE GNU MAKE HAXOR))
 
 输出为 `1 4M 4N 31173 GNU M4K3 H4X0R`。
 
-### seq
+### `seq`
 
 命名稍显误导的 `seq` 函数用于测试两个字符串是否相等：
 
-```
+```text
 seq
 
 Arguments: 1: 一个用于比较的字符串...
+
            2: ...此字符串
+
 Returns:   如果两个字符串相同，则返回 $(true)
 ```
 
-### sne
+### `sne`
 
 相反的，即字符串不相等，通过 `sne` 进行测试：
 
-```
+```text
 sne
 
 Arguments: 1: 一个用于比较的字符串...
+
            2: ...此字符串
+
 Returns:   如果两个字符串不相同，则返回 $(true)
 ```
 
-### streln
+### `streln`
 
 `length` 函数获取列表的长度；字符串对应的等函数是 `strlen`：
 
-```
+```text
 strlen
 
 Arguments: 1: 一个字符串
+
 Returns:   字符串的长度
 ```
 
-### substr
+### `substr`
 
 可以使用 `substr` 函数提取子字符串：
 
-```
+```text
 substr
 
 Arguments: 1: 一个字符串
+
            2: 起始偏移量（第一个字符为 1）
+
            3: 结束偏移量（包含该位置）
+
 Returns:   一个子字符串
 ```
 
 注意在 GMSL 中，字符串从位置 1 开始，而不是 0。
 
-### split
+### `split`
 
 要将字符串分割为列表，使用 `split` 函数：
 
-```
+```text
 split
 
 Arguments: 1: 用于分割的字符
+
            2: 要分割的字符串
+
 Returns:   一个在第一个参数指定的分割字符处用空格分隔的列表
 ```
 
-注意，如果字符串中包含空格，结果可能不符合预期。GNU `make` 使用空格作为列表分隔符，这使得处理空格和列表变得非常困难。关于 GNU `make` 处理空格的更多信息，请参见 第 4 章。
+注意，如果字符串中包含空格，结果可能不符合预期。GNU `make` 使用空格作为列表分隔符，这使得处理空格和列表变得非常困难。关于 GNU `make` 处理空格的更多信息，请参见第 4 章。
 
-### merge
+### `merge`
 
 `merge` 是 `split` 的相反操作。它接收一个列表并输出一个在每个列表元素之间插入字符的字符串：
 
-```
+```text
 merge
 
 Arguments: 1: 放在字段之间的字符
+
            2: 要合并为字符串的列表
+
 Returns:   单个字符串，列表元素由第一个参数中的字符分隔
 ```
 
-### tr
+### `tr`
 
 你使用 `tr` 函数翻译单个字符，它是创建 `uc` 和 `lc` 函数的构建模块：
 
-```
+```text
 tr
 
-Arguments: 1: 要翻译的字符列表 
+Arguments: 1: 要翻译的字符列表
+
            2: 翻译后的字符列表
+
            3: 要翻译的文本
+
 Returns:   翻译字符后的文本
 ```
 
-### uc
+### `uc`
 
 `uc` 对字母 a-z 执行简单的大写转换：
 
-```
+```text
 uc
 
 Arguments: 1: 要转换为大写的文本
+
 Returns:   大写形式的文本
 ```
 
-### lc
+### `lc`
 
 最后，我们还有 `lc`：
 
-```
+```text
 lc
 
 Arguments: 1: 要转换为小写的文本
+
 Returns:   小写形式的文本
 ```
 
@@ -7419,126 +7529,139 @@ Returns:   小写形式的文本
 
 集合由排序且去重复的列表表示。要从列表创建集合，请使用 `set_create` 或从 `empty_set` 开始并使用 `set_insert` 插入单个元素。空集由变量 `empty_set` 定义。
 
-例如，一个 Makefile 可以在使用 从目录列表创建 PATH 中讨论的标记技术来跟踪它所创建的所有目录。
+例如，一个 Makefile 可以在使用“从目录列表创建 `PATH`”中讨论的标记技术来跟踪它所创建的所有目录。
 
-### set_create
+### `set_create`
 
 通过 `set_create` 创建一个集合：
 
-```
+```text
 set_create
 
 Arguments: 1: 元素列表
+
 Returns:   新创建的集合
 ```
 
 它接收一个列表并返回一个集合。注意集合可能包含空格。
 
-### set_insert
+### `set_insert`
 
 一旦创建了集合，可以使用 `set_insert` 向其添加元素：
 
-```
+```text
 set_insert
 
 Arguments: 1: 要插入集合的单个元素
+
            2: 集合
+
 Returns:   插入元素后的集合
 ```
 
-### set_remove
+### `set_remove`
 
 调用 `set_remove` 从集合中删除元素：
 
-```
+```text
 set_remove
 
 Arguments: 1: 要从集合删除的单个元素
+
            2: 集合
+
 Returns:   删除元素后的集合
 ```
 
 当元素不存在时，从集合移除也不会报错。
 
-### set_is_member
+### `set_is_member`
 
 要测试元素是否为集合的成员，调用 `set_is_member`。它返回一个指示元素是否存在的布尔值：
 
-```
+```text
 set_is_member
 
 Arguments: 1: 单个元素
+
            2: 集合
+
 Returns:   如果元素在集合中，则返回 $(true)
 ```
 
-### set_union
+### `set_union`
 
 通过对两个集合调用 `set_union` 函数来合并它们。返回合并后的集合：
 
-```
+```text
 set_union
 
 Arguments: 1: 集合
+
            2: 集合
+
 Returns:   两个集合的并集
 ```
 
-### set_intersection
+### `set_intersection`
 
 要确定两个集合的公共元素，使用 `set_intersection`。它返回两个集合中都存在的元素集合：
 
-```
+```text
 set_intersection
 
 Arguments: 1: 集合
+
            2: 集合
+
 Returns:   两个集合的交集
 ```
 
-### set_is_subset
+### `set_is_subset`
 
 有时需要知道一个集合是否是另一个的子集，可以通过调用 `set_is_subset` 来测试：
 
-```
+```text
 set_is_subset
 
 Arguments: 1: 集合
+
            2: 集合
+
 Returns:   如果第一个集合是第二个集合的子集，则返回 $(true)
 ```
 
 `set_is_subset` 返回一个指示第一个集合是否为第二个集合子集的布尔值。
 
-### set_equal
+### `set_equal`
 
 要确定两个集合是否相等，调用 `set_equal`：
 
-```
+```text
 set_equal
 
 Arguments: 1: 集合
+
            2: 集合
+
 Returns:   如果两个集合相同，则返回 $(true)
 ```
 
 如果两个集合完全相同，`set_equal` 返回 `$(true)`。
 
-
-
-
-
 `associative array`（关联数组）将一个键值（不包含空格的字符串）映射到单个值（任何字符串）。关联数组有时被称为映射（maps）甚至哈希表（尽管这是一个实现细节，且 GMSL 关联数组并没有使用哈希）。
 
-你可以将关联数组作为`lookup tables`（查找表）。例如：
+你可以将关联数组作为 `lookup tables`（查找表）。例如：
 
-```
+```make
 C_FILES := $(wildcard *.c)
 
 get-size = $(call first,$(shell wc -c $1))
+
 $(foreach c,$(C_FILES),$(call set,c_files,$c,$(call get-size,$c)))
 
 $(info All the C files: $(call keys,c_files))
+
 $(info foo.c has size $(call get,c_files,foo.c))
 ```
 
@@ -7548,63 +7671,76 @@ $(info foo.c has size $(call get,c_files,foo.c))
 
 以下是运行示例：
 
-```
+```text
 $ make
+
 All the C files: bar.c foo.c foo.c
+
 has size 551
 ```
 
 第一行是找到的所有 `.c` 文件列表；它是使用 `keys` 函数获取关联数组中的所有键打印的。第二行是通过 `get` 查询 `foo.c` 的长度得到的。
 
-### set
+### `set`
 
 GMSL 内部跟踪命名的关联数组，但没有必要显式创建它们。只需调用 `set` 来向数组添加元素，如果数组不存在，则会自动创建。请注意，数组的键不能包含空格。
 
-```
+```text
 set
 
 Arguments: 1: 关联数组名称
+
            2: 要关联的键值
+
            3: 与键关联的值
+
 Returns:   无
 ```
 
-### get
+### `get`
 
 要从关联数组中检索一个项，请调用 `get`。如果键不存在，`get` 将返回一个空字符串。
 
-```
+```text
 get
 
 Arguments: 1: 关联数组名称
+
            2: 要检索的键
+
 Returns:   数组中该键所存储的值
 ```
 
-### keys
+### `keys`
 
 `keys` 函数返回关联数组中存在的所有键的列表。你可以配合 `$(foreach)` 使用它遍历关联数组：
 
-```
+```text
 keys
 
 Arguments: 1: 关联数组名称
+
 Returns:   数组中所有定义键的列表
 ```
 
+
+
+
 ### defined
 
-要测试键是否存在于关联数组中，请调用 `defined`：
+要测试键是否存在于关联数组中，请调用`defined`：
 
 ```
 defined
 
 Arguments: 1: 关联数组名称
+
            2: 要测试的键
+
 Returns:   如果键已定义（即非空），返回 $(true)
 ```
 
-`defined` 返回一个布尔值，指示该键是否已定义。
+`defined`返回一个布尔值，指示该键是否已定义。
 
 ## Named Stacks（命名栈）
 
@@ -7626,13 +7762,13 @@ $(info $(call dump-tree))
 
 ### traverse-tree
 
-`traverse-tree` 函数使用 `$(wildcard)` 函数查找参数（存储在 `$1` 中）的所有子目录（查找目录下始终存在的 `.` 文件）。它使用 `$(patsubst)` 函数去掉 `$(wildcard)` 返回的每个值结尾的 `/.`，以获取完整的目录名。
+`traverse-tree`函数使用`$(wildcard)`函数查找参数（存储在`$1`中）的所有子目录（查找目录下始终存在的`.`文件）。它使用`$(patsubst)`函数去掉`$(wildcard)`返回的每个值结尾的`/.`，以获取完整的目录名。
 
-在进入该目录之前，它会将找到的目录推入名为 `dirs` 的栈。
+在进入该目录之前，它会将找到的目录推入名为`dirs`的栈。
 
 ### dump-tree
 
-`dump-tree` 函数从 `dirs` 栈中 `pop` 项，直到没有剩余（直到 `depth` 变为 `0`）。
+`dump-tree`函数从`dirs`栈中`pop`项，直到没有剩余（直到`depth`变为`0`）。
 
 示例 6-1 显示了一个目录结构。
 
@@ -7645,6 +7781,7 @@ bar  foo
 
 sources/bar:
 barsub
+
 sources/bar/barsub:
 
 sources/foo:
@@ -7658,22 +7795,18 @@ sources/foo/subdir/subsubdir:
 sources/foo/subdir2:
 ```
 
-如果 `sources` 下存在此目录结构，makefile 将输出：
+如果`sources`下存在此目录结构，makefile 将输出：
 
 ```
 sources/foo sources/foo/subdir2 sources/foo/subdir sources/foo/subdir/
 subsubdir sources/bar sources/bar/barsub
 ```
 
-如果希望以深度优先的方式的方式遍历目录树，可以使用栈函数来定义 `dfs`，它会搜索目录树并构建一个包含按深度优先顺序排列目录的 `dirs` 栈：
+如果希望以深度优先的方式遍历目录树，可以使用栈函数来定义`dfs`，它会搜索目录树并构建一个包含按深度优先顺序排列目录的`dirs`栈：
 
 ```
 __dfs = $(if $(call sne,$(call depth,work),0),$(call push,dirs,$(call depth,work))
 ```
-
-
-
-
 
 # 表 6-1. GMSL 常量
 
@@ -7683,62 +7816,67 @@ __dfs = $(if $(call sne,$(call depth,work),0),$(call push,dirs,$(call depth,work
 | `false` | (空字符串) | 布尔值 false |
 | `gmsl_version` | `1 1 7` | 当前 GMSL 版本号（主版本、次要版本、修订版本） |
 
-你可以通过将它们封装在 `$()` 或 `${}` 中，像访问普通 GNU `make` 变量一样访问这些常量。
+你可以通过将它们封装在`$()`或`${}`中，像访问普通 GNU `make` 变量一样访问这些常量。
 
 ## gmsl_compatible
 
-你已经在检查 GMSL 版本 中了解过 `gmsl_compatible` 函数：
+你已经在检查 GMSL 版本中了解过`gmsl_compatible`函数：
 
 ```
 gmsl_compatible
 
 参数: 包含所需库版本号（主、次要
+
            修订版本）的列表
+
 返回值: 如果库的当前版本与请求的版本号兼容，则返回 $(true)，否则返回 $(false)
 ```
 
-在第 1 章 中，你见过一个使用目标为 `print-%` 的模式规则来输出变量值的配方。由于这个规则非常有用，GMSL 定义了它自己的 `gmsl-print-%` 目标，你可以用它来打印包含 GMSL 的 Makefile 中定义的任何变量的值。
+在第 1 章中，你见过一个使用目标为`print-%`的模式规则来输出变量值的配方。由于这个规则非常有用，GMSL 定义了它自己的`gmsl-print-%`目标，你可以用它来打印包含 GMSL 的 Makefile 中定义的任何变量的值。
 
 例如：
 
 ```
 include gmsl
-
 FOO := foo bar baz
 all:
 ```
 
 ## gmsl-print-%
 
-`gmsl-print-%` 可用于打印任何 Makefile 变量，包括 GMSL 内部的变量。例如，`make gmsl-print-gmsl_version` 会打印当前的 GMSL 版本。
+`gmsl-print-%`可用于打印任何 Makefile 变量，包括 GMSL 内部的变量。例如，`make gmsl-print-gmsl_version`会打印当前的 GMSL 版本。
 
 ```
 gmsl-print-% (目标不是函数)
 
 参数: % 应该替换为你想要打印的变量名
+
 动作: 打印与 % 匹配的变量及其值
 ```
 
 ## assert
 
-正如在 Makefile 断言 中讨论过的样，在 Makefile 中使用断言可能是很有用的。GMSL 提供了两个断言函数：`assert` 和 `assert_exists`。
+正如在 Makefile 断言中讨论过的，在 Makefile 中使用断言可能是很有用的。GMSL 提供了两个断言函数：`assert`和`assert_exists`。
 
 ```
 assert
 
 参数: 1: 必须为真的布尔值，否则断言将失败
+
        2: 随断言一起打印的消息
+
 返回值: 无
 ```
 
 ## assert_exists
 
-为了断言单个文件或目录是否存在，GMSL 提供了 `assert_exists` 函数：
+为了断言单个文件或目录是否存在，GMSL 提供了`assert_exists`函数：
 
 ```
 assert_exists
 
 参数: 1: 必须存在的文件名，如果缺失则将生成断言
+
 返回值: 无
 ```
 
@@ -7752,31 +7890,34 @@ assert_exists
 | --- | --- |
 | `GMSL_NO_WARNINGS` | 如果设置，则阻止 GMSL 输出警告信息。例如，算术函数可能会产生下溢警告。 |
 | `GMSL_NO_ERRORS` | 如果设置，则阻止 GMSL 生成致命错误：除以零或断言失败是致命的。 |
-| `GMSL_TRACE` | 启用函数追踪。对 GMSL 函数的调用将导致名称和参数被追踪。请参见追踪变量值 获取关于 Makefile 追踪的讨论。 |
+| `GMSL_TRACE` | 启用函数追踪。对 GMSL 函数的调用将导致名称和参数被追踪。请参见追踪变量值获取关于 Makefile 追踪的讨论。 |
 
 这些环境变量都可以在环境或命令行中设置。
 
-例如，这个 Makefile 包含一个始终失败的断言，这将停止 `make` 进程：
+例如，这个 Makefile 包含一个始终失败的断言，这将停止`make`进程：
 
 ```
 include gmsl
-
 $(call assert,$(false),Always fail)
-
 all:
 ```
 
-设置 `GMSL_NO_ERRORS` 可以防止断言停止 `make` 进程。在这种情况下，`assert` 的输出会被隐藏，且 `make` 将继续进行：
+设置`GMSL_NO_ERRORS`可以防止断言停止`make`进程。在这种情况下，`assert`的输出会被隐藏，且`make`将继续进行：
 
 ```
 $ make
 Makefile:5: *** GNU Make Standard Library: Assertion failure: Always fail.
 Stop.
+
 $ make GMSL_NO_ERRORS=1
 make: Nothing to be done for 'all'.
 ```
 
+
+
+```text
 在 Makefile 中放置几个恰当的 GMSL 断言可以产生巨大影响。通过检查 Makefile 的先决条件（例如特定文件是否存在或编译器是否具有特定版本号），负责的 Makefile 编写者可以提醒用户问题，而无需强制他们去调试 `make` 往往晦涩难懂的输出。
+```
 
 # 目录 A. 更新
 
@@ -7792,7 +7933,7 @@ make: Nothing to be done for 'all'.
 
 *作者* MICHAEL KERRISK
 
-2010 年 10 月, 1552 页，$99.95
+2010 年 10 月，1552 页，$99.95
 
 ISBN 978-1-59327-220-3
 
@@ -7806,7 +7947,7 @@ ISBN 978-1-59327-220-3
 
 *作者* BRIAN WARD
 
-2014 年 11 月, 392 页，$39.95
+2014 年 11 月，392 页，$39.95
 
 ISBN 978-1-59327-567-9
 
@@ -7818,7 +7959,7 @@ ISBN 978-1-59327-567-9
 
 *作者* WILLIAM E. SHOTTS,
 
-2012 年 1 月, 480 页，$39.95
+2012 年 1 月，480 页，$39.95
 
 ISBN 978-1-59327-389-7
 
@@ -7830,7 +7971,7 @@ ISBN 978-1-59327-389-7
 
 *作者* V. ANTON SPRA
 
-2012 年 8 月, 256 页，$34.95
+2012 年 8 月，256 页，$34.95
 
 ISBN 978-1-59327-474-5
 
@@ -7842,1954 +7983,853 @@ ISBN 978-1-59327-474-5
 
 *作者* MICHAEL LUCAS
 
-2013 年 4 月, 536 页，$59.95
+2013 年 4 月，536 页，$59.95
 
 # 索引
 
-### 关于索引的说明
+## 关于索引的说明
 
 索引链接显示为条目所在的章节。由于某些章节有多个标记，条目拥有多个链接并不稀见。点击任何链接将直接跳转到文本中的标记处。
 
-### 符号
+## 符号
 
-`@`: 命令，assert
-`\` (反斜杠),assert
-续行符，assert
-转义 `%`，assert
-转义空格，assert
-
-`::=` 新赋值：assert
-`:=` 运算符，assert
-简单部分，assert
-和 `$(shell)` 调用，assert
-vs. `=` 号，assert
-变量定义，assert
-
-`$`, 变量引用，assert
-`$*` 变量，assert
-`$$` (双美元符号)，用于字面量 `$`，assert
-`$$@`, 调用内置函数，assert
-`<$` 自动变量，黑技巧演示，assert
-`?` 自动变量，GNU make 3.82 的新特性，assert
-`=` (等号) 运算符，assert
-vs. `:=`，assert
-
-
-
-
-
-- 隐藏成本的，= 和 := 的区别
+- `@`：命令，assert
+- `\`（反斜杠）：assert
+- 续行符：assert
+- 转义 `%`：assert
+- 转义空格：assert
+- `::=`：新赋值：assert
+- `:=`：运算符，assert
+- 简单部分，assert
+- 和 `$(shell)` 调用，assert
+- 与 `=` 号的比较，assert
+- 变量定义，assert
+- `$`：变量引用，assert
+- `$*`：变量，黑技巧演示，assert
+- `$$`（双美元符号）：用于字面量 `$`，assert
+- `$$@`：调用内置函数，assert
+- `<$`：自动变量，黑技巧演示，assert
+- `?`：自动变量，GNU make 3.82 的新特性，assert
+- `=`（等号）：运算符，assert
+- 与 `:=` 的比较，assert
+- 隐藏成本的 `=` 和 `:=` 的区别
 - 用于变量定义，命令检测
-- `!=` 运算符，用于 shell 命令执行，新赋值运算符：!= 和 ::=
-- `>` 运算符，新赋值运算符：!= 和 ::=
-- `>>` 运算符，用于追加日志，新赋值运算符：!= 和 ::=
-- `#` (哈希号)，用于开始注释，续行
-- `%` (百分号)，打印 Makefile 变量的值, 处理 $
-- 转义，处理 $
-- 作为通配配符，打印 Makefile 变量的值
-- `+` (加号)，用于转义空格，我的建议
-- `+=` 运算符，示例
-- `+s` 函数，我的建议
-- `?` (问号)，处理 $, 将空格转换为问号
-- 将空格转换为，将空格转换为问号
-- 在文件名中，处理 $
-- `?=` 运算符，从 Makefile 外部设置变量, GNU make 陷阱：ifndef 和 ?=, GNU make 陷阱：ifndef 和 ?=
-- 来自...的问题，GNU make 陷阱：ifndef 和 ?=
-- 用于设置变量，GNU make 陷阱：ifndef 和 ?=
-- `;` (分号)，用于单行命令，从 Makefile 外部设置变量
-- `''` (单引号)，变量跟踪器的工作原理
-- `/` (斜杠)，转换为 `\`，将空格转换为问号, 使用 / 或 \
-- 8.3 文件名，用于 Windows 系统，将空格转换为问号
-
-### A
-- `$(abspath)` 函数，新函数, 内置路径函数和变量
-- 加法，算术运算
-- `$(addprefix)` 函数，动态断点演示
-- `$(addsuffix)` 函数，动态断点演示, 检查 GMSL 版本
-- 阿姆达尔定律，使用 -j (或 -jobs), 递归 make 的正确方法
-- 以及并行化限制，递归 make 的正确方法
-- 逻辑函数，用户自定义逻辑运算符, 逻辑运算符
-- `$(and)` 函数，新函数
-- 归档 (ar) 文件，隐藏临时文件问题
-- 归档功能，在 GNU make 3.81 中，`MAKE_VERSION`](ch01.html_iddle1053)
-- 参数，条件中的未定义变量, 基础知识
-- 丢弃不需要的，条件中的未定义变量
-- 拆分列表，基础知识
-- 算术，突破边界, 算术运算, 加法和减法, 乘法和除法
-- 加减法，算术运算
-- 计算器，乘法和除法
-- 乘法和除法，加法和减法
-- 关联数组，`set_is_subset`](ch06.html_iddle1060)
-- `assert-command-present` 函数，内置逻辑运算符 (GNU make 3.81 及以后)
-- `assert_exists` 函数，`assert`](ch02.html_iddle1062), 使用断言检查输入, `gmsl_compatible`
-- `assert` 函数，GNU make 4.0 追踪, `gmsl_compatible`
-- 断言，用于检查输入，查找程序
-- `assert_target_directory` 变量，`assert_exists`](ch02.html_iddle1068)
-- 关联数组，在 GMSL 中，`set_is_subset`](ch06.html_iddle1069)
-- `atomic` 函数，使用哨文件
-- `atomic` 规则，处理 makedepend
-- 自动变量，内置函数, 解决方案 4：使用仅顺序依赖构建目录, `Escape Spaces with \`
-- 在依赖列表中，解决方案 4：使用仅顺序依赖构建目录
-- 文件名中的空格安全性，`Escape Spaces with \`
-- 有性和赋值，内置函数
-
-### B
-- 向后兼容性，用于 GNU make 3.82，GNU make 3.82 的新特性`
-- 反斜杠 (`\`)，处理 $, 续行, 示例, 使用 / 或 \`
-- 作为续行字符，续行
-- 将斜杠转换为，使用 / 或 \`
-- 转义 %，处理 $
-- 转义空格，示例
-- `basename` 函数，Windows 特性：不区分大小写但保留大小`
-- 材料清单，XML，使用我们的算术库：计算器
-- 二进制数，将十进制转换为，整数比较函数
-- 布尔值，检测 `eval`, 布尔值逻辑运算, 调用 GMSL 函数, 使用断言检查输入
-- 在 GMSL 中，调用 GMSL 函数
-- 使用布尔值的逻辑运算，布尔值逻辑运算
-- 添加断点函数，动态断点演示
-- 断点，`assert_target_directory`](ch02.html_iddle1088), 调试器演示, 模式中的断点
-- 在 GNU make 调试器中，`assert_target_directory`](ch02.html_iddle1088)
-- 在 Makefile 中，模式中的断点
-- 在模式中，调试器演示
-- 构建，重启，调试
-- 构建主规则和调用 `$(make)`，使用哨兵文件
-- 内置函数，参数处理陷阱, .FEATURES`, 开始修改 GNU make
-- 结构剖析，开始修改 GNU make
-- 调用，参数处理陷阱
-- GNU make 3.81 的新特性，`.FEATURES`](ch01.html_iddle1095)
-
-### C
-- `cache` 函数，通过缓存提高速度
-- 目录条目缓存，使用 `$(wildcard)` 读取，意外结果
-- 缓存，`eval` 的副作用, 缓存变量`
-- 通过缓存提高速度，缓存变量`
-- 变量值，`eval` 的副作用
-- 计算器，乘法和除法
-- call 关键字，内置逻辑运算符 (GNU make 3.81 及以后)
-- `$(call)` 函数，参数处理陷阱, 调用 GMSL 函数
-- 使用内置函数，参数处理陷阱
-- 不区分大小写的比较，检查 GMSL 版本
-- 区分大小写的目标比较，Windows 特性：不区分大小写但保留大小`
-- -c 命令行选项，在 GNU make 3.82 中，GNU make 3.82 的新特性`
-- .c 文件，在 #include 语句中，示例 Makefile
-
-
-
-
-
-## C 函数，内置函数的剖析, 反转字符串
-
-## 访问库，反转字符串
-
-## 参数，内置函数的剖析
-
-## 字符翻译，将 CSV 数据拆分为 GNU make 列表
-
-## --check-symlink-times 选项，MAKE_VERSION, .SECONDEXPANSION
-
-## chop 函数，last
-
-## 非递归 make 中的清理，灵活的非递归 make 系统
-
-## clean 规则，灵活的非递归 make 系统, Usman 律, 静默失败, 静默失败
-
-## 递归，静默失败
-
-## 的静默失败，静默失败
-
-## 命令行，将环境变量引入 GNU make, 将环境变量引入 GNU make, 将环境变量引入 GNU make, 从 Makefile 外部设置变量, 从 Makefile 外部设置变量, GNU make 3.82 的新特性, 使用 private 和 undefine 关键字修改变量, 使用 private 和 undefine 关键字修改变量, 使用 --output-sync 同步输出, 变量跟踪器的工作原理, 变量跟踪器的工作原理, 示例, assert, assert_target_directory, assert_target_directory, 当 CPPFLAGS 变化时重新构建, 让删除的文件从依赖中消失, GNU make 中的原子规则, 灵活的非递归 make 系统, 灵活的非递归 make 系统, 隐藏目标的问题, 隐藏目标的问题, 处理 $, 使用 -j (或 -jobs), 导入 GMSL, 导入 GMSL
-
-## 标志，用于强制不使用的断言，assert
-
-## 选项，将环境变量引入 GNU make, 将环境变量引入 GNU make, 从 Makefile 外部设置变量, GNU make 3.82 的新特性, 使用 private 和 undefine 关键字修改变量, 使用 private 和 undefine 关键字修改变量, 使用 --output-sync 同步输出, 变量跟踪器的工作原理, 示例, assert_target_directory, assert_target_directory, 当 CPPFLAGS 变化时重新构建, 让删除的文件从依赖中消失, GNU make 中的原子规则, 灵活的非递归 make 系统, 灵活的非递归 make 系统, 隐藏目标的问题, 隐藏目标的问题, 处理 $, 使用 -j (或 -jobs), 导入 GMSL, 导入 GMSL-d 选项，assert_target_directory-e 选项，将环境变量引入 GNU make, 从 Makefile 外部设置变量, GNU make 3.82 的新特性-environment-overrides 选项，将环境变量引入 GNU make-include-dirt 选项，导入 GMSL-I 选项，灵活的非递归 make 系统, 导入 GMSL-j4 选项，使用 private 和 undefine 关键字修改变量-j 选项，使用 private 和 undefine 关键字修改变量, GNU make 中的原子规则, 隐藏目标的问题, 使用 -j (或 -jobs)-MD 选项，让删除的文件从依赖中消失-n 选项，示例, 灵活的非递归 make 系统, 隐藏目标的问题, 处理 $-p 选项，assert_target_directory 不带的 make 命令，当 CPPFLAGS 变化时重新构建--trace 选项，使用 --output-sync 同步输出, 变量跟踪器的工作原理 override，变量跟踪器的工作原理设置变量值，将环境变量引入 GNU make 在定义的变量，从 Makefile 外部设置变量命令，从 Makefile 外部设置变量, 内置逻辑运算符 (GNU make 3.81 及以后), GNU make 中的原子规则要避免的操作，GNU make 中的原子规则检测，内置逻辑运算符 (GNU make 3.81 及以后)用于多行的分号，从 Makefile 外部设置变量函数参数中的逗号，我想要一个换行以 # 开头的注释，续接比较，检查 GMSL 版本, double 不区分大小写，检查 GMSL 版本整数的函数，doubleCOMPILE.C 变量，当 CPPFLAGS 变化时重新构建, 示例 Makefile 条件中的未定义变量，使用布尔值常量，函数记忆化作为 \ 的续接字符，续接自增计数器，一个 $(eval) 副影响 CPPFLAGS 变化后重新构建，构建与重新构建 CSV 数据拆分为 GNU make 列表，lengthCURDIR 变量，Windows 的特殊性：不区分大小写但保留大小, 让 $(wildcard) 递归当前目录，Windows 的特殊性：不区分大小写但保留大小, 内置路径函数和变量查找完整路径，内置路径函数和变量
-
-### D
-
-Guile 中的数据类型，在 GNU make 中使用 Guile
-
-date 命令，ifend 是做什么的, GMSL 参考
-
-调试器，帮助，动态断点实战
-
-调试 Makefile，Makefile 调试, Makefile 调试, 打印 Makefile 变量值, 跟踪变量值, 变量跟踪器的工作原理, assert_target_directory, 只需打印和跟踪
-
-转出 Makefile 中的所有变量，打印 Makefile 变量值
-
-
-
-
-
-# GNU make 调试器，断言目标目录
-
-remake 项目中的交互式调试器，仅打印与跟踪
-
-打印 Makefile 变量值，Makefile 调试
-
-跟踪规则执行，变量跟踪器如何工作
-
-跟踪变量值，跟踪变量值
-
-## `dec2bin` 函数，整数比较函数
-
-## `dec2hex` 函数，整数比较函数
-
-## `dec2oct` 函数，整数比较函数
-
-## `dec` 函数，整数自增
-
-十进制数，转换为十六进制、二进制或八进制，整数比较函数
-
-## 解码用户定义函数，算术运算, 使用我们的算术库：计算器
-
-## `decrement` 函数，使用我们的算术库：计算器
-
-递减，算术运算
-
-## `.DEFAULT_GOAL` 变量，.特性
-
-## `define` 指令，使用 private 和 undefine 关键字更改变量, 延续
-
-用于换行符，延续
-
-延迟变量赋值，命令检测
-
-## 删除的文件，使其从依赖关系中消失，让删除的文件从依赖关系中消失
-
-删除哨兵文件，使用哨兵文件
-
-## 依赖关系，操作中的技巧, 自动依赖生成, 让删除的文件从依赖关系中消失, 使用哨兵文件, 灵活的非递归 make 系统, 子模块如何？, 使用 -j (或 -jobs)
-
-自动生成，操作中的技巧
-
-定义，灵活的非递归 make 系统
-
-生成表示规则的，自动依赖生成
-
-关于 make 过程和信息，使用哨兵文件
-
-让删除的文件从...消失，让删除的文件从依赖关系中消失
-
-缺失，使用 -j (或 -jobs)
-
-子模块的，子模块如何？
-
-依赖语法，操作中的技巧
-
-## `depth` 函数，push
-
-## `dfs` 函数，dump-tree
-
-## 目录，else, assert_exists, 使用哨兵文件, ifndef 的作用, 意外的结果, 意外结果的解释, 不应做的事, 不应做的事, 方案 3：使用目录标记文件, Windows 特异性：大小写不敏感但保留大小, Windows 特异性：大小写不敏感但保留大小, 内置路径函数和变量, 递归 make 的正确方法, dump-tree
-
-构建层级结构，意外结果的解释
-
-检查是否存在，assert_exists
-
-...中的文件数量，ifndef 的作用
-
-当前的，Windows 特异性：大小写不敏感但保留大小, 内置路径函数和变量
-
-为...查找完整路径，内置路径函数和变量
-
-对于当前的 make，Windows 特异性：大小写不敏感但保留大小
-
-搜索列表，else
-
-用于构建的仅顺序依赖，方案 3：使用目录标记文件
-
-作为伪目标，递归 make 的正确方法
-
-对于 GNU make，使用哨兵文件
-
-通过 `shell` 调用创建，不应做的事
-
-测试是否存在，不应做的事
-
-遍历，dump-tree
-
-使用 `wildcard` 读取条目缓存，...意外的结果
-
-目录标记文件，方案 2：当...时
-
-`dir` 函数，Windows 特异性：大小写不敏感但保留大小
-
-`divide` 函数，算术运算, 使用我们的算术库：计算器
-
-除法，算术运算
-
-`.dll` 文件，技巧
-
-除法，算术运算
-
-文档，技巧
-
-`print_help` 函数，技巧
-
-用于...调试器](#ch03.html_iddle1123)
-
-`print_help` 用于，技巧
-
-对于...调试器，技巧
-
-$ 用于，技巧
-
-$ 用于，技巧
-
-...值，技巧
-
-...值，技巧
-
-`ifdef` 和，技巧
-
-变量，技巧
-
-`endif`，技巧
-
-`else-if` 功能，技巧
-
-
-
-
-
-- `=` 的隐藏成本，= 和 := 的区别
-- 用于变量定义，命令检测
-- 错误，技巧, 隐藏目标问题
--  {缺失隐藏目标导致的错误，隐藏目标问题
-- 递归作为，技巧
-- `$(error)` 函数，通过 `q` 命令调用，调试器内部原理
-- 错误信息，内置逻辑运算符（GNU make 3.81 及后续版本）, GNU make 3.82 的新特性
-- 来自混合模式目标，GNU make 3.82 的新特性
-- 用于构建系统中缺失的软件，内置逻辑运算符（GNU make 3.81 及后续版本）
-- 转义规则，你无法并行化 make
-- `eval_available` 函数，检测 `$(eval)``
-- `--eval` 命令行选项，新命令行选项：--eval
-- `$(eval)` 函数，检测 `$(eval)``, 延迟变量赋值, = 的隐藏成本, $(eval)` 的副作用
-- 检测，检测 `$(eval)``
-- 来自...的副作用，`$(eval)` 的副作用
-- 以及变量缓存，= 的隐藏成本
-- `expand` 命令，目标、宏值与扩展
-- `export` 指令，命令使用的环境
-
-### F
-- 假值常量，函数记忆化
-- 特性，支持列表的扩展，else
-- `.FEATURES` 变量，模式特定变量, MAKE_VERSION`, else
-- `file-exists` 函数，在 GNU make 中使用 Guile
-- `$(file)` 函数，新赋值运算符：!= 和 ::=
-- 文件名，解决方案 5：使用模式规则、二次扩展和标记文件, Usman 律
-- clean 规则与，Usman 律
-- 带有空格，解决方案 5：使用模式规则、二次扩展和标记文件
-- 文件，新赋值运算符：!= 和 ::=, 当文件校验和变化时重新构建, 黄昏带
-- 创建或追加，新赋值运算符：!= 和 ::=
-- 检测变化，当文件校验和变化时重新构建
-- 获取...的列表，黄昏带
-- 填充缓存，意外结果
-- `$(filter)` 函数，调用内置函数, `.FEATURES`](ch01.html_iddle1283)
-- `$(filter-out)` 函数，导出每个 Makefile 变量, 加法与减法, 加法与减法
-- `_find` 函数，灵活的非递归 make 系统
-- 查找路径上的程序，检查 GMSL 版本
-- `findpath` 函数，检查 GMSL 版本
-- `findstring` 函数，内置函数的解析
-- `first` 函数，使用 reduce 数字列表
-- `$(firstword)` 函数，延迟变量赋值
-- `$(firstword $(origin))` 函数，获取 GNU make`
-- 用于 shell 的标志，`SHELL`
-- `$(flavor)` 函数，新函数, 使用 private 和 undef 修改变量
+- `!=` 运算符：用于 shell 命令执行，新赋值运算符：`!=` 和 `::=`
+- `>` 运算符：新赋值运算符：`!=` 和 `::=`
+- `>>` 运算符：用于追加日志，新赋值运算符：`!=` 和 `::=`
+- `#`（哈希号）：用于开始注释，续行
+- `%`（百分号）：打印 Makefile 变量的值，处理 `$`
+- 转义：处理 `$`
+- 作为通配符：打印 Makefile 变量的值
+- `+`（加号）：用于转义空格，我的建议
+- `+=` 运算符：示例
+- `+s` 函数：我的建议
+- `?`（问号）：处理 `$`，将空格转换为问号
+- 将空格转换为问号
+- 在文件名中：处理 `$`
+- `?=` 运算符：从 Makefile 外部设置变量，GNU make 陷阱：`ifndef` 和 `?=`
+- 来自……的问题：GNU make 陷阱：`ifndef` 和 `?=`
+- 用于设置变量：GNU make 陷阱：`ifndef` 和 `?=`
+- `;`（分号）：用于单行命令，从 Makefile 外部设置变量
+- `''`（单引号）：变量跟踪器的工作原理
+- `/`（斜杠）：转换为 `\`，将空格转换为问号，使用 `/` 或 `\`
+- 8.3 文件名：用于 Windows 系统，将空格转换为问号
+
+## A
+
+- `$(abspath)` 函数：新函数，内置路径函数和变量
+- 加法：算术运算
+- `$(addprefix)` 函数：动态断点演示
+- `$(addsuffix)` 函数：动态断点演示，检查 GMSL 版本
+- 阿姆达尔定律：使用 `-j`（或 `-jobs`），递归 `make` 的正确方法
+- 以及并行化限制：递归 `make` 的正确方法
+- 逻辑函数：用户自定义逻辑运算符，逻辑运算符
+- `$(and)` 函数：新函数
+- 归档（`ar`）文件：隐藏临时文件问题
+- 归档功能：在 GNU make 3.81 中，`MAKE_VERSION`
+- 参数：条件中的未定义变量，基础知识
+- 丢弃不需要的参数：条件中的未定义变量
+- 拆分列表：基础知识
+- 算术：突破边界，算术运算，加法和减法，乘法和除法
+- 加减法：算术运算
+- 计算器：乘法和除法
+- 乘法和除法：加法和减法
+- 关联数组：`set_is_subset`
+- `assert-command-present` 函数：内置逻辑运算符（GNU make 3.81 及以后）
+- `assert_exists` 函数：`assert`，使用断言检查输入，`gmsl_compatible`
+- `assert` 函数：GNU make 4.0 追踪，`gmsl_compatible`
+- 断言：用于检查输入，查找程序
+- `assert_target_directory` 变量：`assert_exists`
+- 关联数组：在 GMSL 中，`set_is_subset`
+- `atomic` 函数：使用哨文件
+- `atomic` 规则：处理 makedepend
+- 自动变量：内置函数，解决方案 4：使用仅顺序依赖构建目录，使用 `\` 转义空格
+- 在依赖列表中：解决方案 4：使用仅顺序依赖构建目录
+- 文件名中的空格安全性：使用 `\` 转义空格
+- 有性和赋值：内置函数
+
+## B
+
+- 向后兼容性：用于 GNU make 3.82，GNU make 3.82 的新特性
+- 反斜杠（`\`）：处理 `$`，续行，示例，使用 `/` 或 `\`
+- 作为续行字符：续行
+- 将斜杠转换为反斜杠：使用 `/` 或 `\`
+- 转义 `%`：处理 `$`
+- 转义空格：示例
+- `basename` 函数：Windows 特性：不区分大小写但保留大小写
+- 材料清单：XML，使用我们的算术库：计算器
+- 二进制数：将十进制转换为二进制，整数比较函数
+- 布尔值：检测 `eval`，布尔值逻辑运算，调用 GMSL 函数，使用断言检查输入
+- 在 GMSL 中：调用 GMSL 函数
+- 使用布尔值的逻辑运算：布尔值逻辑运算
+- 添加断点函数：动态断点演示
+- 断点：`assert_target_directory`，调试器演示，模式中的断点
+- 在 GNU make 调试器中：`assert_target_directory`
+- 在 Makefile 中：模式中的断点
+- 在模式中：调试器演示
+- 构建：重启，调试
+- 构建主规则和调用 `$(make)`：使用哨兵文件
+- 内置函数：参数处理陷阱，`.FEATURES`，开始修改 GNU make
+- 结构剖析：开始修改 GNU make
+- 调用：参数处理陷阱
+- GNU make 3.81 的新特性：`.FEATURES`
+
+## C
+
+- `cache` 函数：通过缓存提高速度
+- 目录条目缓存：使用 `$(wildcard)` 读取，意外结果
+- 缓存：`eval` 的副作用，缓存变量
+- 通过缓存提高速度：缓存变量
+- 变量值：`eval` 的副作用
+- 计算器：乘法和除法
+- `call` 关键字：内置逻辑运算符（GNU make 3.81 及以后）
+- `$(call)` 函数：参数处理陷阱，调用 GMSL 函数
+- 使用内置函数：参数处理陷阱
+- 不区分大小写的比较：检查 GMSL 版本
+- 区分大小写的目标比较：Windows 特性：不区分大小写但保留大小写
+- `-c` 命令行选项：在 GNU make 3.82 中，GNU make 3.82 的新特性
+- `.c` 文件：在 `#include` 语句中，示例 Makefile
+- C 函数：内置函数的剖析，反转字符串
+- 访问库：反转字符串
+- 参数：内置函数的剖析
+- 字符翻译：将 CSV 数据拆分为 GNU make 列表
+- `--check-symlink-times` 选项：`MAKE_VERSION`，`.SECONDEXPANSION`
+- `chop` 函数：`last`
+- 非递归 `make` 中的清理：灵活的非递归 `make` 系统
+- `clean` 规则：灵活的非递归 `make` 系统，Usman 律，静默失败
+- 递归：静默失败
+- 命令行：将环境变量引入 GNU make，从 Makefile 外部设置变量，GNU make 3.82 的新特性，使用 `private` 和 `undefine` 关键字修改变量，使用 `--output-sync` 同步输出，变量跟踪器的工作原理，示例，`assert`，`assert_target_directory`，当 `CPPFLAGS` 变化时重新构建，让删除的文件从依赖中消失，GNU make 中的原子规则，灵活的非递归 `make` 系统，隐藏目标的问题，处理 `$`，使用 `-j`（或 `-jobs`），导入 GMSL
+- 标志：用于强制不使用的断言，`assert`
+- 选项：将环境变量引入 GNU make，从 Makefile 外部设置变量，GNU make 3.82 的新特性，使用 `private` 和 `undefine` 关键字修改变量，使用 `--output-sync` 同步输出，变量跟踪器的工作原理，示例，`assert_target_directory`，当 `CPPFLAGS` 变化时重新构建，让删除的文件从依赖中消失，GNU make 中的原子规则，灵活的非递归 `make` 系统，隐藏目标的问题，处理 `$`，使用 `-j`（或 `-jobs`），导入 GMSL
+- `-d` 选项：`assert_target_directory`
+- `-e` 选项：将环境变量引入 GNU make，从 Makefile 外部设置变量，GNU make 3.82 的新特性
+- `--environment-overrides` 选项：将环境变量引入 GNU make
+- `-I` 选项：导入 GMSL
+- `-j4` 选项：使用 `private` 和 `undefine` 关键字修改变量
+- `-j` 选项：使用 `-j`（或 `-jobs`），GNU make 中的原子规则，隐藏目标的问题
+- `-MD` 选项：让删除的文件从依赖中消失
+- `-n` 选项：示例，灵活的非递归 `make` 系统，隐藏目标的问题，处理 `$`
+- `-p` 选项：`assert_target_directory`，不带选项的 `make` 命令
+- `--trace` 选项：使用 `--output-sync` 同步输出，变量跟踪器的工作原理
+- `override`：变量跟踪器的工作原理
+- 设置变量值：将环境变量引入 GNU make
+- 在定义的变量：从 Makefile 外部设置变量
+- 命令：从 Makefile 外部设置变量，内置逻辑运算符（GNU make 3.81 及以后），GNU make 中的原子规则
+- 要避免的操作：GNU make 中的原子规则
+- 检测：内置逻辑运算符（GNU make 3.81 及以后）
+- 用于多行的分号：从 Makefile 外部设置变量
+- 函数参数中的逗号：我想要一个换行
+- 我想要一个以 `#` 开头的注释：续行
+- 续接比较：检查 GMSL 版本
+- `double`：不区分大小写，检查 GMSL 版本
+- 整数的函数：`double`
+- `COMPILE.C` 变量：当 `CPPFLAGS` 变化时重新构建
+- 示例 Makefile
+- 条件中的未定义变量：使用布尔值常量
+- 函数记忆化：一个 `$(eval)` 副作用
+- 作为 `\` 的续接字符：续接自增计数器
+- 续接自增计数器：一个 `$(eval)` 副作用
+- `CPPFLAGS` 变化后重新构建：构建与重新构建
+- CSV 数据拆分为 GNU make 列表：`length`
+- `CURDIR` 变量：Windows 的特殊性：不区分大小写但保留大小
+- 让 `$(wildcard)` 递归当前目录：Windows 的特殊性：不区分大小写但保留大小
+- 查找完整路径：内置路径函数和变量
+
+## D
+
+- Guile 中的数据类型：在 GNU make 中使用 Guile
+- `date` 命令：`ifend` 是做什么的，GMSL 参考
+- 调试器：帮助，动态断点实战
+- 调试 Makefile：Makefile 调试，打印 Makefile 变量值，跟踪变量值，变量跟踪器的工作原理，`assert_target_directory`，只需打印和跟踪
+- 转出 Makefile 中的所有变量：打印 Makefile 变量值
+- GNU make 调试器：断言目标目录
+- `remake` 项目中的交互式调试器：仅打印与跟踪
+- 打印 Makefile 变量值：Makefile 调试
+- 跟踪规则执行：变量跟踪器如何工作
+- 跟踪变量值：跟踪变量值
+- `dec2bin` 函数：整数比较函数
+- `dec2hex` 函数：整数比较函数
+- `dec2oct` 函数：整数比较函数
+- `dec` 函数：整数自增
+- 十进制数：转换为十六进制、二进制或八进制，整数比较函数
+- 解码用户定义函数：算术运算，使用我们的算术库：计算器
+- `decrement` 函数：使用我们的算术库：计算器
+- 递减：算术运算
+- `.DEFAULT_GOAL` 变量：`.FEATURES`
+- `define` 指令：使用 `private` 和 `undefine` 关键字更改变量，延续
+- 用于换行符：延续
+- 延迟变量赋值：命令检测
+- 删除的文件：使其从依赖关系中消失，让删除的文件从依赖关系中消失
+- 删除哨兵文件：使用哨兵文件
+- 依赖关系：操作中的技巧，自动依赖生成，让删除的文件从依赖关系中消失，使用哨兵文件，灵活的非递归 `make` 系统，子模块如何？使用 `-j`（或 `-jobs`）
+- 自动生成：操作中的技巧
+- 定义：灵活的非递归 `make` 系统
+- 生成表示规则的依赖关系：自动依赖生成
+- 关于 `make` 过程和信息：使用哨兵文件
+- 让删除的文件从依赖关系中消失
+- 缺失：使用 `-j`（或 `-jobs`）
+- 子模块：子模块如何？
+- 依赖语法：操作中的技巧
+- `depth` 函数：`push`
+- `dfs` 函数：`dump-tree`
+- 目录：`else`，`assert_exists`，使用哨兵文件，`ifndef` 的作用，意外的结果，不应做的事，方案 3：使用目录标记文件，Windows 特异性：大小写不敏感但保留大小，内置路径函数和变量，递归 `make` 的正确方法，`dump-tree`
+- 构建层级结构：意外结果的解释
+- 检查是否存在：`assert_exists`
+- 当前目录：Windows 特异性：大小写不敏感但保留大小，内置路径函数和变量
+- 为目录查找完整路径：内置路径函数和变量
+- 对于当前的 `make`：Windows 特异性：大小写不敏感但保留大小
+- 搜索列表：`else`
+- 用于构建的仅顺序依赖：方案 3：使用目录标记文件
+- 作为伪目标：递归 `make` 的正确方法
+- 对于 GNU make：使用哨兵文件
+- 通过 `shell` 调用创建：不应做的事
+- 测试是否存在：不应做的事
+- 遍历：`dump-tree`
+- 使用 `wildcard` 读取条目缓存：意外的结果
+- 目录标记文件：方案 2：当……时
+- `dir` 函数：Windows 特异性：大小写不敏感但保留大小
+- `divide` 函数：算术运算，使用我们的算术库：计算器
+- 除法：算术运算
+- `.dll` 文件：技巧
+- 文档：技巧
+- `print_help` 函数：技巧
+- 调试器：`print_help` 用于技巧
+- `$`：用于技巧
+- 值：技巧
+- `ifdef` 和 `endif`：技巧
+- `else-if` 功能：技巧
+- `=` 的隐藏成本：`=` 和 `:=` 的区别
+- 用于变量定义：命令检测
+- 错误：技巧，隐藏目标问题
+- 缺失隐藏目标导致的错误：隐藏目标问题
+- 递归：技巧
+- `$(error)` 函数：通过 `q` 命令调用，调试器内部原理
+- 错误信息：内置逻辑运算符（GNU make 3.81 及后续版本），GNU make 3.82 的新特性
+- 来自混合模式目标：GNU make 3.82 的新特性
+- 用于构建系统中缺失的软件：内置逻辑运算符（GNU make 3.81 及后续版本）
+- 转义规则：你无法并行化 `make`
+- `eval_available` 函数：检测 `$(eval)`
+- `--eval` 命令行选项：新命令行选项：`--eval`
+- `$(eval)` 函数：检测 `$(eval)`，延迟变量赋值，`=` 的隐藏成本，`$(eval)` 的副作用
+- 检测：检测 `$(eval)`
+- 来自……的副作用：`$(eval)` 的副作用
+- 变量缓存：`=` 的隐藏成本
+- `expand` 命令：目标、宏值与扩展
+- `export` 指令：命令使用的环境
+
+## F
+
+- 假值常量：函数记忆化
+- 特性：支持列表的扩展，`else`
+- `.FEATURES` 变量：模式特定变量，`MAKE_VERSION`，`else`
+- `file-exists` 函数：在 GNU make 中使用 Guile
+- `$(file)` 函数：新赋值运算符：`!=` 和 `::=`
+- 文件名：解决方案 5：使用模式规则、二次扩展和标记文件，Usman 律
+- `clean` 规则：Usman 律
+- 带有空格：解决方案 5：使用模式规则、二次扩展和标记文件
+- 文件：新赋值运算符：`!=` 和 `::=`，当文件校验和变化时重新构建
+- 创建或追加：新赋值运算符：`!=` 和 `::=`
+- 检测变化：当文件校验和变化时重新构建
+- 获取文件列表：黄昏带
+- 填充缓存：意外结果
+- `$(filter)` 函数：调用内置函数，`.FEATURES`
+- `$(filter-out)` 函数：导出每个 Makefile 变量，加法与减法
+- `_find` 函数：灵活的非递归 `make` 系统
+- 查找路径上的程序：检查 GMSL 版本
+- `findpath` 函数：检查 GMSL 版本
+- `findstring` 函数：内置函数的解析
+- `first` 函数：使用 reduce 数字列表
+- `$(firstword)` 函数：延迟变量赋值
+- `$(firstword $(origin))` 函数：获取 GNU make
+- 用于 shell 的标志：`SHELL`
+- `$(flavor)` 函数：新函数，使用 `private` 和 `undefine` 修改变量
 - `FORCE`：空规则，修改后的 Makefile
-- `$(foreach)` 函数，延迟变量赋值
-- 软件基金，GNU make 手册，基础知识
-- `function.c` 文件，修改 GNU make`
-- 函数，布尔值逻辑运算符, 列表操作, 参数处理注意事项, 我想要换行, 陷阱, 修改 GNU make`, push`
-- 参数，空格和逗号，我想要换行
-- 内置，参数处理注意事项, 修改 GNU make`
-- ...的解析，修改 GNU make`
-- 调用，参数处理注意事项
-- 记忆化，push`
-- 用户定义，布尔值逻辑运算符, 列表操作, 陷阱
-- 高级，陷阱
-- 带布尔值，布尔值逻辑运算符
+- `$(foreach)` 函数：延迟变量赋值
+- 软件基金：GNU make 手册，基础知识
+- `function.c` 文件：修改 GNU make
+- 函数：布尔值逻辑运算符，列表操作，参数处理注意事项，我想要换行，陷阱，修改 GNU make，`push`
+- 参数：空格和逗号，我想要换行
+- 内置函数：参数处理注意事项，修改 GNU make
+- 函数解析：修改 GNU make
+- 函数调用：参数处理注意事项
+- 记忆化：`push`
+- 用户定义函数：布尔值逻辑运算，列表操作，陷阱
+- 高级函数：陷阱
+- 带布尔值：布尔值逻辑运算
 
-### G
-- `gcc`, `-MP` 选项，消除 makedepend`
-- 生成代码的时间戳，工作原理
-- `get` 函数，关联数组
-- `get-url` 变量，在 GNU make 中使用 Guile
-- 全局作用域，`$(shell`, 目标特定和模式特定变量`
-- 局部作用域，目标特定和模式特定变量`
-- 变量的，`$(shell`
-- 通配符字符，处理 `$`
-- 通配符函数，黄昏带
-- `gmk_add` 函数，GNU make 4.0 可加载对象`
-- GMSL，GNU Make 标准库 (参见 GNU Make 标准库 (GMSL))
-- gmsl，导入 GMSL`
-- `_gmsl`,导入 GMSL`
-- `gmsl_compatible` 函数，调用 GMSL 函数, 函数记忆化
-- `GMSL_NO_ERRORS` 环境变量，环境变量
-- `GMSL_NO_WARNINGS` 环境变量，环境变量
-- `gmsl-print-%`,`gmsl_compatible`
-- GMSL 参考，GMSL 参考, `nand`, double`, 整数比较函数`, dec2hex, dec2bin, 和 dec2oct`, length`, merge`, set_is_subset`, defined`, push`, 函数记忆化`, 函数记忆化`, 环境变量`
-- 关联数组，set_is_subset`
-- 常量，函数记忆化
-- 环境变量，环境变量
-- 函数记忆化，push`
-- 整数算术函数，`nand`
-- 整数比较函数，`double`
-- 列表操作函数，`dec2hex, dec2bin, 和 dec2oct`
-- 逻辑运算符，GMSL 参考
-- 杂项调试设施，函数记忆化`
-- 杂项整数函数，整数比较函数`
-- 命名栈，`defined`
-- 集合操作函数，`merge`
-- 字符串操作函数，`length`
+## G
 
-
-
-
+- `gcc`：`-MP` 选项，消除 makedepend
+- 生成代码的时间戳：工作原理
+- `get` 函数：关联数组
+- `get-url` 变量：在 GNU make 中使用 Guile
+- 全局作用域：`$(shell)`，目标特定和模式特定变量
+- 局部作用域：目标特定和模式特定变量
+- 变量的作用域：`$(shell)`
+- 通配符字符：处理 `$`
+- 通配符函数：黄昏带
+- `gmk_add` 函数：GNU make 4.0 可加载对象
+- GMSL：GNU Make 标准库（参见 GNU Make 标准库（GMSL））
+- `gmsl`：导入 GMSL
+- `_gmsl`：导入 GMSL
+- `gmsl_compatible` 函数：调用 GMSL 函数，函数记忆化
+- `GMSL_NO_ERRORS` 环境变量：环境变量
+- `GMSL_NO_WARNINGS` 环境变量：环境变量
+- `gmsl-print-%`：`gmsl_compatible`
+- GMSL 参考：GMSL 参考，`nand`，`double`，整数比较函数，`dec2hex`、`dec2bin` 和 `dec2oct`，`length`，`merge`，`set_is_subset`，`defined`，`push`，函数记忆化，环境变量
+- 关联数组：`set_is_subset`
+- 常量：函数记忆化
+- 环境变量：环境变量
+- 函数记忆化：`push`
+- 整数算术函数：`nand`
+- 整数比较函数：`double`
+- 列表操作函数：`dec2hex`、`dec2bin` 和 `dec2oct`
+- 逻辑运算符：GMSL 参考
+- 杂项调试设施：函数记忆化
+- 杂项整数函数：整数比较函数
+- 命名栈：`defined`
+- 集合操作函数：`merge`
+- 字符串操作函数：`length`
 
 # GNU Guile 语言
 
-GNU Guile 语言，特性](#ch01.html_iddle1342), 使用 private 和 undefine 关键字更改变量, 使用 private 和 undefine 关键字更改变量, GNU make 4.0 可载对象, 在 GNU make 中使用 Guile, 在 GNU make 中使用 Guile, 在 GNU make 中使用 Guile
-
 ## 数据类型
 
-在在 GNU make 中使用 Guile 中的数据类型
+在 GNU make 中使用 Guile 中的数据类型。
 
-`$(guile)` 函数，特性](#ch01.html_iddle1342), 使用 private 和 undefine 关键字更改变量, GNU make 4.0 可载对象
-
-`reverse` 函数，在在 GNU make 中使用 Guile 中
-
-在文件中存储代码，在在 GNU make 中使用 Guile 中
+- `$(guile)` 函数：特性，使用 `private` 和 `undefine` 关键字更改变量，GNU make 4.0 可加载对象
+- `reverse` 函数：在 GNU make 中使用 Guile
+- 在文件中存储代码：在 GNU make 中使用 Guile
 
 ## GNU make
 
-`GNU make`，模式特定变量, `MAKE_VERSION`](ch01.html_iddle1348), 特性](#ch01.html_iddle1350), 特性](#ch01.html_iddle1352), 调用内置函数, GNU make 3.82 新特性, 使用 private 和 undefine 关键字更改变量, `$(file)` 函数` 函数), 一个更聪明的 SHELL 技巧, 内置路径函数和变量, 反转字符串
+`GNU make`：模式特定变量，`MAKE_VERSION`，特性，调用内置函数，GNU make 3.82 新特性，使用 `private` 和 `undefine` 关键字更改变量，`$(file)` 函数，一个更聪明的 `SHELL` 技巧，内置路径函数和变量，反转字符串
 
 ### 版本 3.81
 
-`MAKE_VERSION`](ch01.html_iddle1348), 调用内置函数, 内置路径函数和变量
-
-`abspath` 和 `realpath`，内置路径函数和变量](#ch04.html_iddle1347)
-
-特性，`MAKE_VERSION`](ch01.html_iddle1348), 调用内置函数
+- `MAKE_VERSION`：调用内置函数，内置路径函数和变量
+- `abspath` 和 `realpath`：内置路径函数和变量
+- 特性：`MAKE_VERSION`，调用内置函数
 
 ### 版本 3.82 特性
 
-特性](#ch01.html_iddle1350), GNU make 3.82 新特性
+- 特性：GNU make 3.82 新特性
 
 ### 版本 4.0
 
-特性](#ch01.html_iddle1352), 使用 private 和 undefine 关键字更改变量, 一个更聪明的 SHELL 技巧, 反转字符串
-
-特性，特性](#ch01.html_iddle1352), 使用 private 和 undefine 关键字更改变量
-
-可载对象，反转字符串](#ch05.html_iddle1354)
-
-`--trace` 命令行选项，一个更聪明的 SHELL 技巧](#ch02.html_iddle1355)
+- 特性：使用 `private` 和 `undefine` 关键字更改变量
+- 可加载对象：反转字符串
+- `--trace` 命令行选项：一个更聪明的 `SHELL` 技巧
 
 ### 版本 4.1 特性
 
-特性，`$(file)` 函数](#ch01.html_iddle1356) 版本检查，模式特定变量](#ch01.html_iddle1357)
+- 特性：`$(file)` 函数
+- 版本检查：模式特定变量
 
 ## GNU make 调试器
 
-`GNU make 调试器``assert_target_directory`](ch02.html_iddle1358), `assert_target_directory`](ch02.html_iddle1367), 调试器实战, 调试器实战, 调试器实战, Makefile 中的断点, 调试器内部`, 调试器内部`, 动态断点实战
-
-添加断点函数，动态断点实战](#ch02.html_iddle1359)
-
-模式中的断点，调试器实战](#ch02.html_iddle1360)
-
-代码，调试器内部`](ch02.html_iddle1361)
-
-动态断点，调试器内部`](ch02.html_iddle1362)
-
-帮助信息，调试器实战](#ch02.html_iddle1363)
-
-来自调试器的信息输出，调试器实战](#ch02.html_iddle1364)
-
-内部原理，Makefile 中的断点](#ch02.html_iddle1365)
-
-停止，调试器实战](#ch02.html_iddle1366)
-
-使用 `assert_target_directory`](ch02.html_iddle1367)
-
-## GNU 标准库 (GMSL)
-
-`GNU 标准库 (GMSL)`，GNU make 4.0 追踪`](ch02.html_iddle1369), GNU 标准库, 导入 GMSL, 导入 GMSL, 调用 GMSL 函数, 调用 GMSL 函数, 检查 GMSL 版本, GMSL 参考, `nand`](ch06.html_iddle1377), `double`](ch06.html_iddle1378), 整数比较函数, `dec2hex`, `dec2bin`, 和 `dec2oct`](ch06.html_iddle1380), `length`](ch06.html_iddle1387), `merge`](ch06.html_iddle1386), `set_is_subset`](ch06.html_iddle1370), `set_is_subset`](ch06.html_iddle1385), `defined`](ch06.html_iddle1383), `push`](ch06.html_iddle1375), 函数记忆化, 环境变量
-
-断言函数，GNU make 4.0 追踪`](ch02.html_iddle1369)
-
-关联数组，`set_is_subset`](ch06.html_iddle1370)
-
-调用函数，调用 GMSL 函数](#ch06.html_iddle1371)
-
-检查版本，调用 GMSL 函数](#ch06.html_iddle1372)
-
-环境变量，环境变量](#ch06.html_iddle1373)
-
-调试设施，函数记忆化](#ch06.html_iddle1374)
-
-记忆化，`push`](ch06.html_iddle1375)
-
-导入，导入 GMSL](#ch06.html_iddle1376)
-
-整数算术函数，`nand`](ch06.html_iddle1377)
-
-整数比较函数，`double`](ch06.html_iddle1378)
-
-导入，导入 GMSL](#ch06.html_iddle1379)
-
-列表操作函数，`dec2hex`, `dec2bin`, 和 `dec2oct`](ch06.html_iddle1380)
-
-逻辑运算符，GMSL 参考](#ch06.html_iddle1381)
-
-杂整数函数，整数比较函数](#ch06.html_iddle1382)
-
-命名栈，`defined`](ch06.html_iddle1383)
-
-真实世界示例，检查 GMSL 版本](#ch06.html_iddle1384)
-
-引用，`set_is_subset`](ch06.html_iddle1385) (参见 GMSL 参考)
-
-集合操作函数，`merge`](ch06.html_iddle1386)
-
-字符串操作函数，`length`](ch06.html_iddle1387)
-
-make 命令的目标，自文档化 Makefile](#ch05.html_iddle1388)
-
-大于 (gt) 运算符，加法](#ch05.html_iddle1389), 减法, 使用我们的算术库
-
-`gte` 函数，减法](#ch05.html_iddle1392), 乘法和除法, 使用我们的算术库
-
-`gt` 函数，减法](#ch05.html_iddle1395), 乘法和除法, 使用我们的算术库
-
-`Guile`，使用 private 和 undefine 关键字更改变量](#ch01.html_iddle1398) (参见 GNU Guile 语言)
-
-`$(guile)` 函数，特性](#ch01.html_iddle1399), 使用 private 和 undefine 关键字更改变量, GNU make 4.0 可载对象
-
-### H
-
-`halve` 函数，`int_inc`](ch06.html_iddle1402), `double`](ch06.html_iddle1403)
-
-哈标记 (#)，用于开始注释，续体](#ch04.html_iddle1404)
-
-`help`，用于调试器，调试器实战](#ch02.html_iddle1405), 动态断点实战
-
-`help_system.mak` 文件，用 print-help 文档化](#ch05.html_iddle1407)
-
-十六进制数，转换为十进制，整数比较函数](#ch06.html_iddle1308)
-
-隐藏目标，结结](#ch04.html_iddle1409)
-
-隐藏临时文件，缺失依赖](#ch04.html_iddle1410)
-
-`http-get` 函数，在 GNU make 中使用 Guile](#ch05.html_iddle1411)
-
-### I
-
-`ifcase` 函数，检查 GMSL 版本](#ch06.html_iddle1412)
-
-`ifdef` 指令，检测 $(eval`](ch01.html_iddle1413), DEBUG 是否为 Y 或 N
-
-`ifeq` 指令，DEBUG 是否为 Y 或 N](#ch06.html_iddle1415)
-
-`if-exists` 函数，幻影带](#ch04.html_iddle1416)
-
-`$(if)` 函数，检测 $(eval`](ch01.html_iddle1417), 调试器内部`
-
-嵌套在 `_DEBUG` 中，调试器内部`](ch02.html_iddle1418)
-
-`ifndef` 指令，从 外部设置变量](#ch01.html_iddle1419), GNU make 陷阱：ifndef 和 ?=
-
-问题来自，GNU make 陷阱：ifndef 和 ?=](#ch04.html_iddle1420)
-
-
-
-
-
-`ifneq` 指令，自定义逻辑运算符， DEBUG 是否设置为 Y 或 N？
-
-导入，GNU Make 标准库 (GMSL)，导入 GMSL
-
-`inc` 函数，int_inc
-
-`include` 语句，使用哨兵文件
-
-.c 文件中的 `#include` 语句，一个 Makefile 示例
-
-增量函数，使用我们的算术库：计算器
-
-递增，进行算术运算
-
-信息，来自调试器的输出，调试器的实战
-
-`$(info text)` 函数，.FEATURES
-
-内联目录创建，方案 5：使用模式规则、二次展开和标记文件
-
-输入，用于检查的断言，在路径上查找程序
-
-`int_dec` 函数，int_inc
-
-`int_decode` 函数，整数算术函数
-
-`int_divide` 函数，int_divide
-
-`int_double` 函数，int_inc
-
-整数算术函数，在 GMSL 中，nand
-
-整数比较函数，在 GMSL 中，double
-
-`int_encode` 函数，整数算术函数
-
-`int_halve` 函数，double
-
-`int_inc` 函数，int_inc
-
-`int_max` 函数，int_divide
-
-`int_min` 函数，int_divide
-
-`int_multiply` 函数，int_subtract
-
-`int_plus` 函数，nand
-
-`int_subtract` 函数，int_subtract
-
-### J
-
-jobserver 功能，在 GNU make 3.81 中，MAKE_VERSION
-
-`--jobs` 选项，用于并行执行，使用 -j (或 -jobs)
-
-`$(join)` 函数，加法与减法
-
-### K
-
-`keys` 函数，关联数组
-
-### L
-
-末元素函数，自文档化的 Makefiles
-
-`last` 函数，新函数，last
-
-`$(lastword)` 函数，简单的列表操作，新函数
-
-`-L` 命令行选项，.SECONDEXPANSION
-
-`lc` 函数，检查 GMSL 版本，merge
-
-`length` 函数，length
-
-`leq` 函数，pairmap
-
-小于 (`lt`) 运算符，加法与减法，使用我们的算术库：计算器
-
-小于或等于 (`lte`) 运算符，加法与减法，使用我们的算术库：计算器，使用我们的算术库：计算器
-
-`.lib` 文件，构建构建规则，使用模式规则
-
-行，添加到变量中，使用 private 和 undefine 关键字更改变量
-
-列表操作函数，在 GMSL 中，dec2hex, dec2bin, and dec2oct
-
-列表，延迟变量赋值，简单的列表操作，参数处理的陷阱，调用内置函数，GNU make 4.0 可加载对象，在预处理器中使用逻辑运算符，dec2hex, dec2bin, and dec2oct，将 CSV 数据拆分为 GNU make 列表
-
-将函数应用到每个成员，参数处理的陷阱
-
-处理，延迟变量赋值
-
-从...删除重复项，调用内置函数，在预处理器中使用逻辑运算符
-
-从...移除第一个单词，简单的列表操作
-
-反转，GNU make 4.0 可加载对象
-
-空格和，dec2hex, dec2bin, and dec2oct
-
-列表到路径的变量，将 CSV 数据拆分为 GNU make 列表
-
-`lne` 函数，pairmap
-
-可加载对象，反转字符串
-
-`load` 指令，.FEATURES，使用 private 和 undefine 关键字更改变量，反转字符串
-
-局部作用域，对比全局作用域，目标特定和模式特定的变量
-
-逻辑运算符，使用布尔值的逻辑运算，使用布尔值的逻辑运算，自定义逻辑运算符，DEBUG 是否设置为 Y 或 N？，GMSL 参考
-
-使用布尔值，使用布尔值的逻辑运算
-
-内置的，自定义逻辑运算符
-
-在 GMSL 中，GMSL 参考
-
-在预处理器中，DEBUG 是否设置为 Y 或 N？
-
-自定义的，使用布尔值的逻辑运算
-
-查找表，作为关联数组的，set_is_subset`
-
-`ls` 函数，意外结果
-
-`lt` (小于) 函数，加法与减法，使用我们的算术库：计算器
-
-`lte` (小于或等于) 运算符，加法与减法，使用我们的算术库：计算器，使用我们的算术库：计算器
-
-`.lib` 文件，构建的规则，使用模式规则
-
-行，添加到变量中，使用 private 和 undefine 关键字更改变量
-
-列表操作函数，在 GMSL 中，dec2hex, dec2bin, and dec2oct
-
-列表，延迟变量赋值，简单的列表操作，参数处理的陷阱，调用内置函数，GNU make 4.0 可加载对象，在预处理器中使用逻辑运算符，dec2hex, dec2bin, and dec2oct，将 CSV 数据拆分为 GNU make 列表
-
-将函数应用到每个成员，参数处理的陷阱
-
-处理，延迟变量赋值
-
-从...删除重复项，调用内置函数，在预处理器中使用逻辑运算符
-
-从...移除第一个单词，简单的列表操作
-
-反转，GNU make 4.0 可加载对象
-
-空格和，dec2hex, dec2bin, and dec2oct
-
-列表到路径的变量，将 CSV 数据拆分为 GNU make 列表
-
-`lne` 函数，pairmap
-
-可加载对象，反转字符串
-
-`load` 指令，.FEATURES，使用 private 和 undefine 关键字更改变量，反转字符串
-
-局部作用域，对比全局作用域，目标特定和模式特定的变量
-
-逻辑运算符，使用布尔值的逻辑运算，使用布尔值的逻辑运算，自定义逻辑运算符，DEBUG 是否设置为 Y 或 N？，GMSL 参考
-
-使用布尔值，使用布尔值的逻辑运算
-
-内置的，自定义逻辑运算符
-
-在 GMSL 中，GMSL 参考
-
-在预处理器中，DEBUG 是否设置为 Y 或 N？
-
-自定义的，使用布尔值的逻辑运算
-
-查找表，作为关联数组的，set_is_subset`
-
-`ls` 函数，意外结果
-
-`lt` (小于) 函数，加法与减法，使用我们的算术库：计算器
-
-`lte` (小于或等于) 运算符，加法与减法，使用我们的算术库：计算器，使用我们的算术库：计算器
-
-`.lib` 文件，构建的规则，使用模式规则
-
-行，添加到变量中，使用 private 和 undefine 关键字更改变量
-
-列表操作函数，在 GMSL 中，dec2hex, dec2bin, and dec2oct
-
-列表，延迟变量赋值，简单的列表操作，参数处理的陷阱，调用内置函数，GNU make 4.0 可加载对象，在预处理器中使用逻辑运算符，dec2hex, dec2bin, and dec2oct，将 CSV 数据拆分为 GNU make 列表
-
-### J
-
-jobserver 功能，在 GNU make 3.81 中，MAKE_VERSION
-
-`--jobs` 选项，用于并行执行，使用 -j (或 -jobs)
-
-`$(join)` 函数，加法与减法
-
-### K
-
-`keys` 函数，关联数组
-
-### L
-
-末元素函数，自文档化的 Makefiles
-
-`last` 函数，新函数，last
-
-`$(lastword)` 函数，简单的列表操作，新函数
-
-`-L` 命令行选项，.SECONDEXPANSION
-
-`lc` 函数，检查 GMSL 版本，merge
-
-`length` 函数，length
-
-`leq` 函数，pairmap
-
-小于 (`lt`) 运算符，加法与减法，使用我们的算术库：计算器
-
-小于或等于 (`lte`) 运算符，加法与减法，使用我们的算术库：计算器，使用我们的算术库：计算器
-
-`.lib` 文件，构建的规则，使用模式规则
-
-行，添加到变量中，使用 private 和 undefine 关键字更改变量
-
-列表操作函数，在 GMSL 中，dec2hex, dec2bin, and dec2oct
-
-列表，延迟变量赋值，简单的列表操作，参数处理的陷阱，调用内置函数，GNU make 4.0 可加载对象，在预处理器中使用逻辑运算符，dec2hex, dec2bin, and dec2oct，将 CSV 数据拆分为 GNU make 列表
-
-将函数应用到每个成员，参数处理的陷阱
-
-处理，延迟变量赋值
-
-从...删除重复项，调用内置函数，在预处理器中使用逻辑运算符
-
-从...移除第一个单词，简单的列表操作
-
-反转，GNU make 4.0 可加载对象
-
-空格和，dec2hex, dec2bin, and dec2oct
-
-列表到路径的变量，将 CSV 数据拆分为 GNU make 列表
-
-`lne` 函数，pairmap
-
-可加载对象，反转字符串
-
-`load` 指令，.FEATURES，使用 private 和 undefine 关键字更改变量，反转字符串
-
-局部作用域，对比全局作用域，目标特定和模式特定的变量
-
-逻辑运算符，使用布尔值的逻辑运算，使用布尔值的逻辑运算，自定义逻辑运算符，DEBUG 是否设置为 Y 或 N？，GMSL 参考
-
-使用布尔值，使用布尔值的逻辑运算
-
-内置的，自定义逻辑运算符
-
-在 GMSL 中，GMSL 参考
-
-在预处理器中，DEBUG 是否设置为 Y 或 N？
-
-自定义的，使用布尔值的逻辑运算
-
-查找表，作为关联数组的，set_is_subset`
-
-`ls` 函数，意外结果
-
-`lt` (小于) 函数，加法与减法，使用我们的算术库：计算器
-
-`lte` (小于或等于) 运算符，加法与减法，使用我们的算术库：计算器，使用我们的算术库：计算器
-
-`.lib` 文件，构建的规则，使用模式规则
-
-行，添加到变量中，使用 private 和 undefine 关键字更改变量
-
-列表操作函数，在 GMSL 中，dec2hex, dec2bin, and dec2oct
-
-列表，延迟变量赋值，简单的列表操作，参数处理的陷阱，调用内置函数，GNU make 4.0 可加载对象，在预处理器中使用逻辑运算符，dec2hex, dec2bin, and dec2oct，将 CSV 数据拆分为 GNU make 列表
-
-### J
-
-jobserver 功能，在 GNU make 3.81 中，MAKE_VERSION
-
-`--jobs` 选项，用于并行执行，使用 -j (或 -jobs)
-
-`$(join)` 函数，加法与减法
-
-### K
-
-`keys` 函数，关联数组
-
-### L
-
-末元素函数，自文档化的 Makefiles
-
-`last` 函数，新函数，last
-
-`$(lastword)` 函数，简单的列表操作，新函数
-
-`-L` 命令行选项，.SECONDEXPANSION
-
-`lc` 函数，检查 GMSL 版本，merge
-
-`length` 函数，length
-
-`leq` 函数，pairmap
-
-小于 (`lt`) 运算符，加法与减法，使用我们的算术库：计算器
-
-小于或等于 (`lte`) 运算符，加法与减法，使用我们的算术库：计算器，使用我们的算术库：计算器
-
-`.lib` 文件，构建的规则，使用模式规则
-
-行，添加到变量中，使用 private 和 undefine 关键字更改变量
-
-列表操作函数，在 GMSL 中，dec2hex, dec2bin, and dec2oct
-
-列表，延迟变量赋值，简单的列表操作，参数处理的陷阱，调用内置函数，GNU make 4.0 可加载对象，在预处理器中使用逻辑运算符，dec2hex, dec2bin, and dec2oct，将 CSV 数据拆分为 GNU make 列表
-
-将函数应用到每个成员，参数处理的陷阱
-
-处理，延迟变量赋值
-
-从...删除重复项，调用内置函数，在预处理器中使用逻辑运算符
-
-从...移除第一个单词，简单的列表操作
-
-反转，GNU make 4.0 可加载对象
-
-空格和，dec2hex, dec2bin, and dec2oct
-
-列表到路径的变量，将 CSV 数据拆分为 GNU make 列表
-
-`lne` 函数，pairmap
-
-可加载对象，反转字符串
-
-`load` 指令，.FEATURES，使用 private 和 undefine 关键字更改变量，反转字符串
-
-局部作用域，对比全局作用域，目标特定和模式特定的变量
-
-逻辑运算符，使用布尔值的逻辑运算，使用布尔值的逻辑运算，自定义逻辑运算符，DEBUG 是否设置为 Y 或 N？，GMSL 参考
-
-使用布尔值，使用布尔值的逻辑运算
-
-内置的，自定义逻辑运算符
-
-在 GMSL 中，GMSL 参考
-
-在预处理器中，DEBUG 是否设置为 Y 或 N？
-
-自定义的，使用布尔值的逻辑运算
-
-查找表，作为关联数组的，set_is_subset`
-
-`ls` 函数，意外结果
-
-`lt` (小于) 函数，加法与减法，使用我们的算术库：计算器
-
-`lte` (小于或等于) 运算符，加法与减法，使用我们的算术库：计算器，使用我们的算术库：计算器
-
-`.lib` 文件，构建的规则，使用模式规则
-
-行，添加到变量中，使用 private 和 undefine 关键字更改变量
-
-列表操作函数，在 GMSL 中，dec2hex, dec2bin, and dec2oct
-
-列表，延迟变量赋值，简单的列表操作，参数处理的陷阱，调用内置函数，GNU make 4.0 可加载对象，在预处理器中使用逻辑运算符，dec2hex, dec2bin, and dec2oct，将 CSV 数据拆分为 GNU make 列表
-
-### J
-
-jobserver 功能，在 GNU make 3.81 中，MAKE_VERSION
-
-`--jobs` 选项，用于并行执行，使用 -j (或 -jobs)
-
-`$(join)` 函数，加法与减法
-
-### K
-
-`keys` 函数，关联数组
-
-### L
-
-末元素函数，自文档化的 Makefiles
-
-`last` 函数，新函数，last
-
-`$(lastword)` 函数，简单的列表操作，新函数
-
-`-L` 命令行选项，.SECONDEXPANSION
-
-`lc` 函数，检查 GMSL 版本，merge
-
-`length` 函数，length
-
-`leq` 函数，pairmap
-
-小于 (`lt`) 运算符，加法与减法，使用我们的算术库：计算器
-
-小于或等于 (`lte`) 运算符，加法与减法，使用我们的算术库：计算器，使用我们的算术库：计算器
-
-`.lib` 文件，构建的规则，使用模式规则
-
-行，添加到变量中，使用 private 和 undefine 关键字更改变量
-
-列表操作函数，在 GMSL 中，dec2hex, dec2bin, and dec2oct
-
-列表，延迟变量赋值，简单的列表操作，参数处理的陷阱，调用内置函数，GNU make 4.0 可加载对象，在预处理器中使用逻辑运算符，dec2hex, dec2bin, and dec2oct，将 CSV 数据拆分为 GNU make 列表
-
-将函数应用到每个成员，参数处理的陷阱
-
-处理，延迟变量赋值
-
-从...删除重复项，调用内置函数，在预处理器中使用逻辑运算符
-
-从...移除第一个单词，简单的列表操作
-
-反转，GNU make 4.0 可加载对象
-
-空格和，dec2hex, dec2bin, and dec2oct
-
-列表到路径的变量，将 CSV 数据拆分为 GNU make 列表
-
-`lne` 函数，pairmap
-
-可加载对象，反转字符串
-
-`load` 指令，.FEATURES，使用 private 和 undefine 关键字更改变量，反转字符串
-
-局部作用域，对比全局作用域，目标特定和模式特定的变量
-
-逻辑运算符，使用布尔值的逻辑运算，使用布尔值的逻辑运算，自定义逻辑运算符，DEBUG 是否设置为 Y 或 N？，GMSL 参考
-
-使用布尔值，使用布尔值的逻辑运算
-
-内置的，自定义逻辑运算符
-
-在 GMSL 中，GMSL 参考
-
-在预处理器中，DEBUG 是否设置为 Y 或 N？
-
-自定义的，使用布尔值的逻辑运算
-
-查找表，作为关联数组的，set_is_subset`
-
-`ls` 函数，意外结果
-
-`lt` (小于) 函数，加法与减法，使用我们的算术库：计算器
-
-`lte` (小于或等于) 运算符，加法与减法，使用我们的算术库：计算器，使用我们的算术库：计算器
-
-`.lib` 文件，构建的规则，使用模式规则
-
-行，添加到变量中，使用 private 和 undefine 关键字更改变量
-
-列表操作函数，在 GMSL 中，dec2hex, dec2bin, and dec2oct
-
-列表，延迟变量赋值，简单的列表操作，参数处理的陷阱，调用内置函数，GNU make 4.0 可加载对象，在预处理器中使用逻辑运算符，dec2hex, dec2bin, and dec2oct，将 CSV 数据拆分为 GNU make 列表
-
-### J
-
-jobserver 功能，在 GNU make 3.81 中，MAKE_VERSION
-
-`--jobs` 选项，用于并行执行，使用 -j (或 -jobs)
-
-`$(join)` 函数，加法与减法
-
-### K
-
-`keys` 函数，关联数组
-
-### L
-
-末元素函数，自文档化的 Makefiles
-
-`last` 函数，新函数，last
-
-`$(lastword)` 函数，简单的列表操作，新函数
-
-`-L` 命令行选项，.SECONDEXPANSION
-
-`lc` 函数，检查 GMSL 版本，merge
-
-`length` 函数，length
-
-`leq` 函数，pairmap
-
-小于 (`lt`) 运算符，加法与减法，使用我们的算术库：计算器
-
-小于或等于 (`lte`) 运算符，加法与减法，使用我们的算术库：计算器，使用我们的算术库：计算器
-
-`.lib` 文件，构建的规则，使用模式规则
-
-行，添加到变量中，使用 private 和 undefine 关键字更改变量
-
-列表操作函数，在 GMSL 中，dec2hex, dec2bin, and dec2oct
-
-列表，延迟变量赋值，简单的列表操作，参数处理的陷阱，调用内置函数，GNU make 4.0 可加载对象，在预处理器中使用逻辑运算符，dec2hex, dec2bin, and dec2oct，将 CSV 数据拆分为 GNU make 列表
-
-将函数应用到每个成员，参数处理的陷阱
-
-处理，延迟变量赋值
-
-从...删除重复项，调用内置函数，在预处理器中使用逻辑运算符
-
-从...移除第一个单词，简单的列表操作
-
-反转，GNU make 4.0 可加载对象
-
-空格和，dec2hex, dec2bin, and dec2oct
-
-列表到路径的变量，将 CSV 数据拆分为 GNU make 列表
-
-`lne` 函数，pairmap
-
-可加载对象，反转字符串
-
-`load` 指令，.FEATURES，使用 private 和 undefine 关键字更改变量，反转字符串
-
-局部作用域，对比全局作用域，目标特定和模式特定的变量
-
-逻辑运算符，使用布尔值的逻辑运算，使用布尔值的逻辑运算，自定义逻辑运算符，DEBUG 是否设置为 Y 或 N？，GMSL 参考
-
-使用布尔值，使用布尔值的逻辑运算
-
-内置的，自定义逻辑运算符
-
-在 GMSL 中，GMSL 参考
-
-在预处理器中，DEBUG 是否设置为 Y 或 N？
-
-自定义的，使用布尔值的逻辑运算
-
-查找表，作为关联数组的，set_is_subset`
-
-`ls` 函数，意外结果
-
-`lt` (小于) 函数，加法与减法，使用我们的算术库：计算器
-
-`lte` (小于或等于) 运算符，加法与减法，使用我们的算术库：计算器，使用我们的算术库：计算器
-
-`.lib` 文件，构建的规则，使用模式规则
-
-行，添加到变量中，使用 private 和 undefine 关键字更改变量
-
-列表操作函数，在 GMSL 中，dec2hex, dec2bin, and dec2oct
-
-列表，延迟变量赋值，简单的列表操作，参数处理的陷阱，调用内置函数，GNU make 4.0 可加载对象，在预处理器中使用逻辑运算符，dec2hex, dec2bin, and dec2oct，将 CSV 数据拆分为 GNU make 列表
-
-### J
-
-jobserver 功能，在 GNU make 3.81 中，MAKE_VERSION
-
-`--jobs` 选项，用于并行执行，使用 -j (或 -jobs)
-
-`$(join)` 函数，加法与减法
-
-### K
-
-`keys` 函数，关联数组
-
-### L
-
-末元素函数，自文档化的 Makefiles
-
-`last` 函数，新函数，last
-
-`$(lastword)` 函数，简单的列表操作，新函数
-
-`-L` 命令行选项，.SECONDEXPANSION
-
-`lc` 函数，检查 GMSL 版本，merge
-
-`length` 函数，length
-
-`leq` 函数，pairmap
-
-小于 (`lt`) 运算符，加法与减法，使用我们的算术库：计算器
-
-小于或等于 (`lte`) 运算符，加法与减法，使用我们的算术库：计算器，使用我们的算术库：计算器
-
-`.lib` 文件，构建的规则，使用模式规则
-
-行，添加到变量中，使用 private 和 undefine 关键字更改变量
-
-列表操作函数，在 GMSL 中，dec2hex, dec2bin, and dec2oct
-
-列表，延迟变量赋值，简单的列表操作，参数处理的陷阱，调用内置函数，GNU make 4.0 可加载对象，在预处理器中使用逻辑运算符，dec2hex, dec2bin, and dec2oct，将 CSV 数据拆分为 GNU make 列表
-
-将函数应用到每个成员，参数处理的陷阱
-
-处理，延迟变量赋值
-
-从...删除重复项，调用内置函数，在预处理器中使用逻辑运算符
-
-从...移除第一个单词，简单的列表操作
-
-反转，GNU make 4.0 可加载对象
-
-空格和，dec2hex, dec2bin, and dec2oct
-
-列表到路径的变量，将 CSV 数据拆分为 GNU make 列表
-
-`lne` 函数，pairmap
-
-可加载对象，反转字符串
-
-`load` 指令，.FEATURES，使用 private 和 undefine 关键字更改变量，反转字符串
-
-局部作用域，对比全局作用域，目标特定和模式特定的变量
-
-逻辑运算符，使用布尔值的逻辑运算，使用布尔值的逻辑运算，自定义逻辑运算符，DEBUG 是否设置为 Y 或 N？，GMSL 参考
-
-使用布尔值，使用布尔值的逻辑运算
-
-内置的，自定义逻辑运算符
-
-在 GMSL 中，GMSL 参考
-
-在预处理器中，DEBUG 是否设置为 Y 或 N？
-
-自定义的，使用布尔值的逻辑运算
-
-查找表，作为关联数组的，set_is_subset`
-
-`ls` 函数，意外结果
-
-`lt` (小于) 函数，加法与减法，使用我们的算术库：计算器
-
-`lte` (小于或等于) 运算符，加法与减法，使用我们的算术库：计算器，使用我们的算术库：计算器
-
-`.lib` 文件，构建的规则，使用模式规则
-
-行，添加到变量中，使用 private 和 undefine 关键字更改变量
-
-列表操作函数，在 GMSL 中，dec2hex, dec2bin, and dec2oct
-
-列表，延迟变量赋值，简单的列表操作，参数处理的陷阱，调用内置函数，GNU make 4.0 可加载对象，在预处理器中使用逻辑运算符，dec2hex, dec2bin, and dec2oct，将 CSV 数据拆分为 GNU make 列表
-
-### J
-
-jobserver 功能，在 GNU make 3.81 中，MAKE_VERSION
-
-`--jobs` 选项，用于并行执行，使用 -j (或 -jobs)
-
-`$(join)` 函数，加法与减法
-
-### K
-
-`keys` 函数，关联数组
-
-### L
-
-末元素函数，自文档化的 Makefiles
-
-`last` 函数，新函数，last
-
-`$(lastword)` 函数，简单的列表操作，新函数
-
-`-L` 命令行选项，.SECONDEXPANSION
-
-`lc` 函数，检查 GMSL 版本，merge
-
-`length` 函数，length
-
-`leq` 函数，pairmap
-
-小于 (`lt`) 运算符，加法与减法，使用我们的算术库：计算器
-
-小于或等于 (`lte`) 运算符，加法与减法，使用我们的算术库：计算器，使用我们的算术库：计算器
-
-`.lib` 文件，构建的规则，使用模式规则
-
-行，添加到变量中，使用 private 和 undefine 关键字更改变量
-
-列表操作函数，在 GMSL 中，dec2hex, dec2bin, and dec2oct
-
-列表，延迟变量赋值，简单的列表操作，参数处理的陷阱，调用内置函数，GNU make 4.0 可加载对象，在预处理器中使用逻辑运算符，dec2hex, dec2bin, and dec2oct，将 CSV 数据拆分为 GNU make 列表
-
-将函数应用到每个成员，参数处理的陷阱
-
-处理，延迟变量赋值
-
-从...删除重复项，调用内置函数
-
-从...移除第一个单词，简单的列表操作
-
-反转，GNU make 4.0 可加载对象
-
-空格和，dec2hex, dec2bin, and dec2oct
-
-列表到路径的变量，将 CSV 数据拆分为 GNU make 列表
-
-`lne` 函数，pairmap
-
-可加载对象，反转字符串
-
-`load` 指令，.FEATURES，使用 private 和 undefine 关键字更改变量，反转字符串
-
-局部作用域，对比全局作用域，目标特定和模式特定的变量
-
-逻辑运算符，使用布尔值的逻辑运算，使用布尔值的逻辑运算，自定义逻辑运算符，DEBUG 是否设置为 Y 或 N？，GMSL 参考
-
-使用布尔值，使用布尔值的逻辑运算
-
-内置的，自定义逻辑运算符
-
-在 GMSL 中，GMSL 参考
-
-在预处理器中，DEBUG 是否设置为 Y 或 N？
-
-自定义的，使用布尔值的逻辑运算
-
-查找表，作为关联数组的，set_is_subset`
-
-`ls` 函数，意外结果
-
-`lt` (小于) 函数，加法与减法，使用我们的算术库：计算器
-
-`lte` (小于或等于) 运算符，加法与减法，使用我们的算术库：计算器，使用我们的算术库：计算器
-
-`.lib` 文件，构建的规则，使用模式规则
-
-行，添加到变量中，使用 private 和 undefine 关键字更改变量
-
-列表操作函数，在 GMSL 中，dec2hex, dec2bin, and dec2oct
-
-列表，延迟变量赋值
-
-### J
-
-jobserver 功能，在 GNU make 3.81 中，MAKE_VERSION
-
-`--jobs` 选项，用于并行执行，使用 -j (或 -jobs)
-
-`$(join)` 函数，加法与减法
-
-### K
-
-`keys` 函数，关联数组
-
-### L
-
-末元素函数，自文档化的 Makefiles
-
-`last` 函数，新函数，last
-
-`$(lastword)` 函数，简单的列表操作，新函数
-
-`-L` 命令行选项，.SECONDEXPANSION
-
-`lc` 函数，检查 GMSL 版本，merge
-
-`length` 函数，length
-
-`leq` 函数，pairmap
-
-小于 (`lt`) 运算符，加法与减法，使用我们的算术库：计算器
-
-小于或等于 (`lte`) 运算符，加法与减法，使用我们的算术库：计算器，使用我们的算术库：计算器
-
-`.lib` 文件，构建的规则，使用模式规则
-
-行，添加到变量中，使用 private 和 undefine 关键字更改变量
-
-列表操作函数，在 GMSL 中，dec2hex, dec2bin, and dec2oct
-
-列表，延迟变量赋值，简单的列表操作，参数处理的陷阱，调用内置函数，GNU make 4.0 可加载对象，dec2hex, dec2bin, and dec2oct，将 CSV 数据拆分为 GNU make 列表
-
-将函数应用到每个成员，参数处理的陷阱
-
-处理，延迟变量赋值
-
-从...删除重复项，调用内置函数
-
-从...移除第一个单词，简单的列表操作
-
-反转，GNU make 4.0 可加载对象
-
-空格和，dec2hex, dec2bin, and dec2oct
-
-列表到路径的变量，将 CSV 数据拆分为 GNU make 列表
-
-`lne` 函数，pairmap
-
-可加载对象，反转字符串
-
-`load` 指令，.FEATURES，使用 private 和 undefine 关键字更改变量，反转字符串
-
-局部作用域，对比全局作用域，目标特定和模式特定的变量
-
-逻辑运算符，使用布尔值的逻辑运算
-
-使用布尔值，使用布尔值的逻辑运算
-
-内置的，自定义逻辑运算符
-
-在 GMSL 中，GMSL 参考
-
-在预处理器中，DEBUG 是否设置为 Y 或 N？
-
-自定义的，使用布尔值的逻辑运算
-
-查找表，作为关联数组的，set_is_subset`
-
-`ls` 函数，意外结果
-
-`lt` (小于) 函数，加法与减法
-
-`lte` (小于或等于) 运算符，加法与减法，使用我们的算术库：计算器
-
-`.lib` 文件，构建的规则，使用模式规则
-
-行，添加到变量中，使用 private 和 undefine 关键字更改变量
-
-列表操作函数，在 GMSL 中，dec2hex, dec2bin, and dec2oct
-
-列表，延迟变量赋值
-
-### J
-
-jobserver 功能，在 GNU make 3.81 中，MAKE_VERSION
-
-`--jobs` 选项，用于并行执行，使用 -j (或 -jobs)
-
-`$(join)` 函数，加法与减法
-
-### K
-
-`keys` 函数，关联数组
-
-### L
-
-末元素函数，自文档化的 Makefiles
-
-`last` 函数，新函数
-
-`$(lastword)` 函数，简单的列表操作
-
-`-L` 命令行选项，.SECONDEXPANSION
-
-`lc` 函数，检查 GMSL 版本
-
-`length` 函数，length
-
-`leq` 函数，pairmap
-
-小于 (`lt`) 运算符，加法与减法
-
-小于或等于 (`lte`) 运算符，加法与减法
-
-`.lib` 文件，构建的规则，使用模式规则
-
-行，添加到变量中，使用 private 和 undefine 关键字更改变量
-
-列表操作函数，在 GMSL 中，dec2hex, dec2bin, and dec2oct
-
-列表，延迟变量赋值
-
-将函数应用到每个成员，参数处理的陷阱
-
-处理，延迟变量赋值
-
-从...删除重复项，调用内置函数
-
-从...移除第一个单词，简单的列表操作
-
-反转，GNU make 4.0 可加载对象
-
-空格和，dec2hex, dec2bin, and dec2oct
-
-列表到路径的变量，将 CSV 数据拆分为 GNU make 列表
-
-`lne` 函数，pairmap
-
-可加载对象，反转字符串
-
-`load` 指令，.FEATURES，使用 private 和 undefine 关键字更改变量，反转字符串
-
-局部作用域，对比全局作用域，目标特定和模式特定的变量
-
-逻辑运算符，使用布尔值的逻辑运算，自定义逻辑运算符，DEBUG 是否设置为 Y 或 N？，GMSL 参考
-
-使用布尔值，使用布尔值的逻辑运算
-
-内置的，自定义逻辑运算符
-
-在 GMSL 中，GMSL 参考
-
-在预处理器中，DEBUG 是否设置为 Y 或 N？
-
-自定义的，使用布尔值的逻辑运算
-
-查找表，作为关联数组的，set_is_subset`
-
-`ls` 函数，意外结果
-
-`lt` (小于) 函数，加法与减法
-
-`lte` (小于或等于) 运算符，加法与减法
-
-`.lib` 文件，构建的规则，使用模式规则
-
-行，添加到变量中，使用 private 和 undefine 关键字更改变量
-
-列表操作函数，在 GMSL 中，dec2hex, dec2bin, and dec2oct
-
-列表，延迟变量赋值
-
-
-
-
-
-# `make` 规则，用于变量值，打印 Makefile 变量的值
-
-# `MAKE_RESTARTS` 变量，.FEATURES
-
-# `MAKE_VERSION` 变量，模式特定变量
-
-# `map` 函数，参数处理陷阱, 签名如何工作, 在路径上查找程序, 使用 map 将函数应用到列表, last
-
-# `max` 函数，加法与减法, 使用我们的算术库：计算器, int_divide
-
-# `.md5` 文件，文件校验和变化时重新构建, 修改后的 Makefile
-
-# 强制重新构建，修改后的 Makefile
-
-# `md5` 函数，记忆化版本，函数记忆化
-
-# `Mecklenburg, Robert`，将空格转换为问号
-
-# `memoization`，函数，push
-
-# `merge` 函数，merge
-
-# `message digest` 函数，文件校验和变化时重新构建
-
-# `MFLAGS` 变量，命令使用的环境
-
-# `min` 函数，加法与减法, 使用我们的算术库：计算器, int_divide
-
-# 杂项与调试设施，在 GMSL 中，函数记忆化
-
-# 杂项整数函数，在 GMSL 中，整数比较函数
-
-# 混合模式目标的错误消息来自，GNU make 3.82 的新功能
-
-# `mkdir` 命令，Makefile 示例
-
-# 修改 GNU make，陷阱
-
-# 模块，模块的规则，灵活的非递归 make 系统
-
-# 乘法，加法与减法
-
-# `multiply` 函数，乘法与除法, 使用我们的算术库：计算器, int_subtract
-
-### N
-
-# `name`，向后兼容性, 使 `$(wildcard)` 递归
-
-# 当前 Makefile 的查找，使 `$(wildcard)` 递归
-
-# 变量中的空格，向后兼容性
-
-# 命名栈，在 GMSL 中，defined
-
-# `nand` 函数，用户自定义逻辑运算符, nand
-
-# `ndef` (未定义) 直接，从 Makefile 外部设置变量
-
-# `ne` (不等于) 运算符，加法与减法, 使用我们的算术库：计算器
-
-# `need-help` 变量，自文档化 Makefile
-
-# 换行符，续行
-
-# `NEWS` 文件，调用内置函数
-
-# 非空字符串，返回结果的函数，新函数
-
-# 非空字符串，作为真值，条件中的未定义变量
-
-# 非递归 make 命令，使用哨兵文件
-
-# `nor` 函数，用户自定义逻辑运算符, nand
-
-# 无规则可以做的错误，Windows 的特性：大小写不敏感但保留大小写
-
-# `not defined (ndef)` 直接，从 Makefile 外部设置变量
-
-# `notdir` 函数，Windows 的特性：大小写不敏感但保留大小写
-
-# 不等于 (ne) 运算符，加法与减法
-
-# `not` 函数，使用布尔值的逻辑操作, 逻辑运算符
-
-# `.NOTALLEL`，隐藏临时文件
-
-### O
-
-# `.o` (对象) 文件，Makefile 示例, 修改后的 Makefile, 不应做的事, 方案 5：使用模式规则、二次展开和标记文件
-
-# 对应的 .sig 文件，Makefile 示例
-
-# 对...的破解更新，修改后的 Makefile
-
-# 用于制作模式规则，方案 5：使用模式规则、二次展开和标记文件
-
-# 不必要的重新构建，不应做的事
-
-# 八进制数，转换为，整数比较函数
-
-# `oneshell` 特性，.FEATURES
-
-# `.ONESHELL` 目标，新命令行选项：--evalch01.html_iddle158
-
-# `or` 函数，[使用布尔值的逻辑操作, 用户自定义逻辑运算符, 使用断言检查输入, 逻辑运算符
-
-# 用于调试设置，使用断言检查输入
-
-# `$(or)` 函数，新函数
-
-# 顺序依赖特性，在 GNU make 3.81 中，`MAKE_VERSION`](ch01.html_iddle1584
-
-# 顺序仅依赖项，用于构建目录，方案 3：使用目录标记文件
-
-# `$(origin)` 函数，复习基础, 基础, 打印 Makefile 变量的值
-
-# `--output-sync` 选项，.FEATURES, 修改变量### P
-
-# 填充数字，用于 `dec2hex`, `dec2bin`, `dec2oct`](ch06.html_iddle1592
-
-# `pair` 函数，求列表和](#ch06.html_iddle1593), last, 隐藏目标, 使用 -j (jobs), 递归构建的方法](ch04.html_iddle159
-
-# `parent-makefile` 变量，自文档化 Makefile, 处理 $, 我的建议, 目标匹配, Windows 的特性：大小写不敏感但保留大小写, Windows 的特性：大小写不敏感但保留大小写, 使 `$(wildcard)` 递归, 检查 GMSL 版本` 递归](#ch04.html_iddle1505
-
-# 在路径上查找程序，检查 GMSL 版本](#ch06.html_iddle156
-
-# 用于拆分的函数，Windows 的特性：大小写不敏感但保留大小写` 函数，定义](#ch06.html_iddle1511
-
-# 模式规则，模式特定变量, GNU make 中的原子规则, 方案 4：使用顺序仅依赖项构建目录
-
-
-
-
-
-- 为了构建目标，解决方案 4：使用仅顺序依赖来构建目录
-- `%.o: %.c`，模式特定变量
-- 模式中的断点，在调试器实战
-- 模式特定变量，$(shell) 环境
-- `peek` 函数，`push`
-- 百分号 (`%`)，打印 Makefile 变量的值, 处理 $
-- 转义，处理 $
-- 作为通配符使用，打印 Makefile 变量的值
-- `plugin_is_GPL_compatible` 变量，GNU make 4.0 可载对象
-- `plus` 函数，算术运算, 使用我们的算术库：计算器, `nand`
-- 加号 (`+`)，用于转义空格，我的建议
-- `pop` 函数，使用我们的算术库：计算器, `dump-tree`, `push`
-- POSIX 系统，GNU make 3.82 的新特性, 处理路径列表, 使用 / 或 \\
-- 使用 `/` 作为路径分隔符，处理路径列表
-- 区分大小写的文件，在使用 / 或 \
-- 和 make，GNU make 3.82 的新特性
-- 珍贵文件，解决方案 5：使用模式规则、二次展开和标记文件
-- 预处理器中的逻辑运算符，在 DEBUG 是否设置为 Y 或 N?
-- 依赖项列表，调用内置函数, 解决方案 4：使用仅顺序依赖来构建目录
-- 规则中的自动变量，在解决方案 4：使用仅顺序依赖来构建目录
-- 规则的，调用内置函数
-- 依赖项，不允许使用 `=` 符号，GNU make 3.82 的新特性
-- `print` 命令，目标、宏值和展开
-- `print-help` 函数，在 GNU make 中使用 Guile, 使用 print-help 档 Makefile
-- 打印，Makefile 调试, 打印 Makefile 变量的值, 示例
-- 命令，在示例
-- Makefile 中每个定义的变量，打印 Makefile 变量的值
-- Makefile 变量值，Makefile 调试
-- `print_variable` 函数，参数处理陷阱
-- `print_variables` 函数，调用内置函数
-- `print_version` 函数，开始修改 GNU make
-- `private` 关键字，使用 private 和 undefine 关键字更改变量
-- 解决问题，拆分参数列表，基础
-- 处理器，基于数量的最高速度，阿达尔定律与并行化的局限性
-- 在路径中查找程序，检查 GMSL 版本
-- `pushd` 函数，使用我们的算术库：计算器
-- `push` 函数，使用我们的算术库：计算器, `push`
-- `pwd` 命令，`$(shell) 详解`
-- `PWD` 变量，Windows 奇特性：不大小敏感但保留大小
-### Q
-- `q` 命令，调试器内部
-- `qs` 函数，将空格转换为问号
-- 问号 (`?`)，处理 $, 将空格转换为问号
-- 将空格转换为，将空格转换为问号
-- 在文件名中，处理 $
-- 引号，在目标名称中添加，动态断点实战
-### R
-- `r` 命令（移除断点），动态断点实战
-- `realpath` 函数，新函数, 内置路径函数和变量
-- 重建，构建与重构, 重构 CPPFLAGS 变化, 签名工作原理
-- 在 `CPPFLAGS` 变化后，构建与重构
-- 示例 Makefile，重构 CPPFLAGS 变化
-- 当文件校验和改变时，签名工作原理
-- `.RECIPEPREFIX` 变量，新命令行选项：--eval`
-- 递归，调用内置函数, 技巧, 使用哨兵文件, 无痛非递归 make, 静默失败, 隐藏的临时文件, `dump-tree`
-- 带有 clean，静默失败
-- 在 `dfs` 函数中，`dump-tree`
-- 作为错误，技巧
-- 用于的函数，调用内置函数
-- 与 make 使用，使用哨兵文件, 无痛非递归 make, 隐藏的临时文件
-- 递归展开的变量，`$(shell) 详解`, 变量的值
-- 递归评估时间，变量的值
-- 递归变量，用于定义，变量赋值
-- `reduce` 函数，调用内置函数, 应用函数到列表
-- 递归实现，调用内置函数
-- 重制项目，技巧, 打印调试
-- 交互式调试器中，打印调试
-- `2hex, 2bin, and 2oct`](ch06.html_iddle1680)
-- `rest` 函数，`last`
-- `reverse.c` 文件，反转字符串
-- `reverse` 函数，在 GNU make 中使用 Guile, `pairmap`
-- 在 Guile 中，在 GNU make 中使用 Guile
-- 逆波兰表达式计算器，乘法与除法
-- 反转，内置函数的分析, GNU make 4.0 可载对象
-- 列表，GNU make 4.0 可载对象
-- 字符串，内置函数的分析
-- 规则，调用内置函数, 向后兼容, 同步输出到--output-sync`, 签名工作原理, `$(shell) 详解`, 无法并行 make, 陷阱
-- 定义和变量值，`$(shell) 详解`
-- 转义，无法并行 make
-- 没有命令时，陷阱
-- 应用顺序，向后兼容
-- 依赖项列表的，调用内置函数
-- 跟踪执行，同步输出到--output-sync`
-- 包装命令，签名工作原理
-- 在不带命令行选项的情况下运行 GNU make，重构 CPPFLAGS 变化
-- 运行时调试辅助，GNU make 4.0 跟踪
-### S
-- 二次展开功能，`MAKE_VERSION`, 解决方案 4：使用仅顺序依赖来构建目录
-
-
-
-
-
-在 GNU make 3.81 中，`MAKE_VERSION`
-
-`.SECONDEXPANSION` 目标，调用内置函数, 解决方案 4：使用仅顺序依赖项构建目录
-
-自文档化 makefiles，在 GNU make 中使用 Guile
-
-分号（`;`），用于单行命令，从 Makefile 外部设置变量
-
-哨兵文件，使用模式规则, 使用哨兵文件
-
-删除，使用哨兵文件
-
-`seq`（字符串等同）函数，使用我们的算术库：计算器, 使用断言检查输入, 使用断言检查输入, 将 CSV 数据拆分为 GNU make 列表
-
-调试设置，使用断言检查输入
-
-序列函数，整数比较函数
-
-`set_create` 函数，merge, 集合操作函数
-
-`set_equal` 函数，`set_is_subset`
-
-`set` 函数，目标、宏值和展开, 关联数组
-
-`set_insert` 函数，merge, 集合操作函数
-
-`set_intersection` 函数，`set_remove`
-
-`set_is_member` 函数，动态断点实战, 简单部分, `set_remove`
-
-`set_is_subset` 函数，`set_is_subset`
-
-集合操作函数，在 GMSL 中，merge
-
-`setq` 命令，目标、宏值和展开
-
-`set_remove` 函数，`set_remove`
-
-`set_union` 函数，`set_remove`
-
-`s+` 函数，我的建议
-
-共享文件，源自隐藏的临时文件问题
-
-`$(shell)` 调用，命令使用的环境, 内置逻辑运算符（GNU make 3.81 及后续), 变量跟踪器如何工作, ifndef 做了什么, = 的隐藏成本, 不应的操作
-
-`and :=`，ifndef 做了什么
-
-创建目录，不应的操作
-
-环境，命令使用的环境
-
-递归展开的变量和= 的隐藏成本
-
-在哪个命令中，内置逻辑运算符（GNU make 3.81 及后续)
-
-shell 命令，用于执行的 `!=` 运算符，新赋值运算符：!= 和 ::=
-
-`.SHELLFLAGS` 变量，新命令行选项：--eval, 示例
-
-SHELL 技巧，其工作原理
-
-shell 调用，单次与多次，新命令行选项：--eval
-
-shell 脚本，用于向环境添加变量，$(shell) 环境
-
-`SHELL` 变量，示例, SHELL 技巧, 简单部分
-
-添加 `$(warning)`，SHELL 技巧
-
-为了处理断点而展开，简单部分
-
-重定义，示例
-
-短路函数，`and`
-
-最短路径特性，.FEATURES
-
-最短路径顺序，用于模式规则，向后兼容性
-
-`.sig` 文件，内容，签名如何工作
-
-签名 Makefile，示例, 签名如何工作
-
-签名系统，局限性，签名如何工作
-
-简单变量，使用 `=` 定义，延迟变量赋值
-
-简单展开变量，= 和 := 的区别
-
-单引号（''`），变量跟踪器如何工作
-
-`size` 函数，使用 map 对列表应用函数
-
-斜杠（/），转换为 `\`，使用 / 或 `\``
-
-Smith, Paul，让删除的文件从依赖项中消失
-
-`sne`（字符串不等于）函数，`assert`, 签名如何工作, `sne`
-
-`$(sort)` 函数，调用内置函数
-
-源码系统，时间戳来源，签名如何工作
-
-空格，条件中的未定义变量, 我想要一个换行符！, 我想要一个换行符！, 解决方案 5：使用模式规则、二次展开和标记文件, 解决方案 5：使用模式规则、二次展开和标记文件, 示例 Makefile, 将空格转换为问号, 处理路径列表
-
-（另见空白）
-
-在目标名中避免，处理路径列表
-
-转换为问号，将空格转换为问号
-
-定义，我想要一个换行符！
-
-使用 `\` 转义，示例
-
-带有...的文件名，解决方案 5：使用模式规则、二次展开和标记文件
-
-函数中的，我想要一个换行符！
-
-空格转逗号函数，解决方案 5：使用模式规则、二次展开和标记文件
-
-在 Makefile 中，无法并行处理
-
-作为变量名，无法并行处理
-
-字符，无法并行处理的参数：空格和逗号
-
-集合操作函数，在 GMSL 中，merge
-
-`setq` 命令，目标、宏值和展开
-
-`set_remove` 函数，`set_remove`
-
-`set_union` 函数，`set_remove`
-
-`s+` 函数，我的建议
-
-
-
+`GNU make 调试器`：`assert_target_directory`，调试器实战，调试器内部，动态断点实战
+
+- 添加断点函数：动态断点实战
+- 模式中的断点：调试器实战
+- 代码：调试器内部
+- 动态断点：调试器内部
+- 帮助信息：调试器实战
+- 来自调试器的信息输出：调试器实战
+- 内部原理：Makefile 中的断点
+- 停止：调试器实战
+- 使用 `assert_target_directory`
+
+## GNU 标准库（GMSL）
+
+`GNU 标准库（GMSL）`：GNU make 4.0 追踪，GNU 标准库，导入 GMSL，调用 GMSL 函数，检查 GMSL 版本，GMSL 参考，`nand`，`double`，整数比较函数，`dec2hex`、`dec2bin` 和 `dec2oct`，`length`，`merge`，`set_is_subset`，`defined`，`push`，函数记忆化，环境变量
+
+- 断言函数：GNU make 4.0 追踪
+- 关联数组：`set_is_subset`
+- 调用函数：调用 GMSL 函数
+- 检查版本：调用 GMSL 函数
+- 环境变量：环境变量
+- 调试设施：函数记忆化
+- 记忆化：`push`
+- 导入：导入 GMSL
+- 整数算术函数：`nand`
+- 整数比较函数：`double`
+- 列表操作函数：`dec2hex`、`dec2bin` 和 `dec2oct`
+- 逻辑运算符：GMSL 参考
+- 杂项整数函数：整数比较函数
+- 命名栈：`defined`
+- 真实世界示例：检查 GMSL 版本
+- 引用：`set_is_subset`（参见 GMSL 参考）
+- 集合操作函数：`merge`
+- 字符串操作函数：`length`
+
+- `make` 命令的目标：自文档化 Makefile
+- 大于（`gt`）运算符：加法，减法，使用我们的算术库
+- `gte` 函数：减法，乘法和除法，使用我们的算术库
+- `gt` 函数：减法，乘法和除法，使用我们的算术库
+- `Guile`：使用 `private` 和 `undefine` 关键字更改变量（参见 GNU Guile 语言）
+- `$(guile)` 函数：特性，使用 `private` 和 `undefine` 关键字更改变量，GNU make 4.0 可加载对象
+- `halve` 函数：`int_inc`，`double`
+- 哈希标记（`#`）：用于开始注释，续行
+- `help`：用于调试器，调试器实战，动态断点实战
+- `help_system.mak` 文件：用 `print-help` 文档化
+- 十六进制数：转换为十进制，整数比较函数
+- 隐藏目标：结论
+- 隐藏临时文件：缺失依赖
+- `http-get` 函数：在 GNU make 中使用 Guile
+
+## I
+
+- `ifcase` 函数：检查 GMSL 版本
+- `ifdef` 指令：检测 `$(eval)`，DEBUG 是否为 Y 或 N
+- `ifeq` 指令：DEBUG 是否为 Y 或 N
+- `if-exists` 函数：幻影带
+- `$(if)` 函数：检测 `$(eval)`，调试器内部
+- 嵌套在 `_DEBUG` 中：调试器内部
+- `ifneq` 指令：自定义逻辑运算符，DEBUG 是否设置为 Y 或 N？
+- 导入：GNU Make 标准库（GMSL），导入 GMSL
+- `inc` 函数：`int_inc`
+- `include` 语句：使用哨兵文件
+- `.c` 文件中的 `#include` 语句：一个 Makefile 示例
+- 增量函数：使用我们的算术库：计算器
+- 递增：进行算术运算
+- 信息：来自调试器的输出，调试器实战
+- `$(info text)` 函数：`.FEATURES`
+- 内联目录创建：方案 5：使用模式规则、二次展开和标记文件
+- 输入：用于检查的断言，在路径上查找程序
+- `int_dec` 函数：`int_inc`
+- `int_decode` 函数：整数算术函数
+- `int_divide` 函数：`int_divide`
+- `int_double` 函数：`int_inc`
+- 整数算术函数：在 GMSL 中，`nand`
+- 整数比较函数：在 GMSL 中，`double`
+- `int_encode` 函数：整数算术函数
+- `int_halve` 函数：`double`
+- `int_inc` 函数：`int_inc`
+- `int_max` 函数：`int_divide`
+- `int_min` 函数：`int_divide`
+- `int_multiply` 函数：`int_subtract`
+- `int_plus` 函数：`nand`
+- `int_subtract` 函数：`int_subtract`
+
+## J
+
+- `jobserver` 功能：在 GNU make 3.81 中，`MAKE_VERSION`
+- `--jobs` 选项：用于并行执行，使用 `-j`（或 `-jobs`）
+- `$(join)` 函数：加法与减法
+
+## K
+
+- `keys` 函数：关联数组
+
+## L
+
+- 末元素函数：自文档化的 Makefiles
+- `last` 函数：新函数，`last`
+- `$(lastword)` 函数：简单的列表操作，新函数
+- `-L` 命令行选项：`.SECONDEXPANSION`
+- `lc` 函数：检查 GMSL 版本，`merge`
+- `length` 函数：`length`
+- `leq` 函数：`pairmap`
+- 小于（`lt`）运算符：加法与减法，使用我们的算术库：计算器
+- 小于或等于（`lte`）运算符：加法与减法，使用我们的算术库：计算器
+- `.lib` 文件：构建规则，使用模式规则
+- 行：添加到变量中，使用 `private` 和 `undefine` 关键字更改变量
+- 列表操作函数：在 GMSL 中，`dec2hex`、`dec2bin` 和 `dec2oct`
+- 列表：延迟变量赋值，简单的列表操作，参数处理的陷阱，调用内置函数，GNU make 4.0 可加载对象，在预处理器中使用逻辑运算符，`dec2hex`、`dec2bin` 和 `dec2oct`，将 CSV 数据拆分为 GNU make 列表
+- 将函数应用到每个成员：参数处理的陷阱
+- 处理列表：延迟变量赋值
+- 从列表中删除重复项：调用内置函数，在预处理器中使用逻辑运算符
+- 从列表中移除第一个单词：简单的列表操作
+- 反转：GNU make 4.0 可加载对象
+- 空格和：`dec2hex`、`dec2bin` 和 `dec2oct`
+- 列表到路径的变量：将 CSV 数据拆分为 GNU make 列表
+- `lne` 函数：`pairmap`
+- 可加载对象：反转字符串
+- `load` 指令：`.FEATURES`，使用 `private` 和 `undefine` 关键字更改变量，反转字符串
+- 局部作用域：对比全局作用域，目标特定和模式特定的变量
+- 逻辑运算符：使用布尔值的逻辑运算，自定义逻辑运算符，DEBUG 是否设置为 Y 或 N？，GMSL 参考
+- 使用布尔值：使用布尔值的逻辑运算
+- 内置的：自定义逻辑运算符
+- 在 GMSL 中：GMSL 参考
+- 在预处理器中：DEBUG 是否设置为 Y 或 N？
+- 自定义的：使用布尔值的逻辑运算
+- 查找表：作为关联数组的 `set_is_subset`
+- `ls` 函数：意外结果
+- `lt`（小于）函数：加法与减法，使用我们的算术库：计算器
+- `lte`（小于或等于）运算符：加法与减法，使用我们的算术库：计算器
+
+## M
+
+- `make` 规则：用于变量值，打印 Makefile 变量的值
+- `MAKE_RESTARTS` 变量：`.FEATURES`
+- `MAKE_VERSION` 变量：模式特定变量
+- `map` 函数：参数处理陷阱，签名如何工作，在路径上查找程序，使用 `map` 将函数应用到列表，`last`
+- `max` 函数：加法与减法，使用我们的算术库：计算器，`int_divide`
+- `.md5` 文件：文件校验和变化时重新构建，修改后的 Makefile
+- 强制重新构建：修改后的 Makefile
+- `md5` 函数：记忆化版本，函数记忆化
+- `Mecklenburg, Robert`：将空格转换为问号
+- `memoization`：函数，`push`
+- `merge` 函数：`merge`
+- `message digest` 函数：文件校验和变化时重新构建
+- `MFLAGS` 变量：命令使用的环境
+- `min` 函数：加法与减法，使用我们的算术库：计算器，`int_divide`
+- 杂项与调试设施：在 GMSL 中，函数记忆化
+- 杂项整数函数：在 GMSL 中，整数比较函数
+- 混合模式目标的错误消息：来自 GNU make 3.82 的新功能
+- `mkdir` 命令：Makefile 示例
+- 修改 GNU make：陷阱
+- 模块：模块的规则，灵活的非递归 `make` 系统
+- 乘法：加法与减法
+- `multiply` 函数：乘法与除法，使用我们的算术库：计算器，`int_subtract`
+
+## N
+
+- `name`：向后兼容性，使 `$(wildcard)` 递归
+- 当前 Makefile 的查找：使 `$(wildcard)` 递归
+- 变量中的空格：向后兼容性
+- 命名栈：在 GMSL 中，`defined`
+- `nand` 函数：用户自定义逻辑运算符，`nand`
+- `ndef`（未定义）指令：从 Makefile 外部设置变量
+- `ne`（不等于）运算符：加法与减法，使用我们的算术库：计算器
+- `need-help` 变量：自文档化 Makefile
+- 换行符：续行
+- `NEWS` 文件：调用内置函数
+- 非空字符串：返回结果的函数，新函数
+- 非空字符串作为真值：条件中的未定义变量
+- 非递归 `make` 命令：使用哨兵文件
+- `nor` 函数：用户自定义逻辑运算符，`nand`
+- 无规则可以做的错误：Windows 的特性：大小写不敏感但保留大小写
+- `not defined (ndef)` 指令：从 Makefile 外部设置变量
+- `notdir` 函数：Windows 的特性：大小写不敏感但保留大小写
+- 不等于（`ne`）运算符：加法与减法
+- `not` 函数：使用布尔值的逻辑操作，逻辑运算符
+- `.NOTPARALLEL`：隐藏临时文件
+
+## O
+
+- `.o`（对象）文件：Makefile 示例，修改后的 Makefile，不应做的事，方案 5：使用模式规则、二次展开和标记文件
+- 对应的 `.sig` 文件：Makefile 示例
+- 对……的破解更新：修改后的 Makefile
+- 用于制作模式规则：方案 5：使用模式规则、二次展开和标记文件
+- 不必要的重新构建：不应做的事
+- 八进制数：转换为十进制，整数比较函数
+- `oneshell` 特性：`.FEATURES`
+- `.ONESHELL` 目标：新命令行选项：`--eval`
+- `or` 函数：使用布尔值的逻辑操作，用户自定义逻辑运算符，使用断言检查输入，逻辑运算符
+- 用于调试设置：使用断言检查输入
+- `$(or)` 函数：新函数
+- 顺序依赖特性：在 GNU make 3.81 中，`MAKE_VERSION`
+- 顺序仅依赖项：用于构建目录，方案 3：使用目录标记文件
+- `$(origin)` 函数：复习基础，基础，打印 Makefile 变量的值
+- `--output-sync` 选项：`.FEATURES`，修改变量
+
+## P
+
+- 填充数字：用于 `dec2hex`、`dec2bin`、`dec2oct`
+- `pair` 函数：求列表和，`last`，隐藏目标，使用 `-j`（`-jobs`），递归构建的方法
+- `parent-makefile` 变量：自文档化 Makefile，处理 `$`，我的建议，目标匹配，Windows 的特性：大小写不敏感但保留大小写，使 `$(wildcard)` 递归，检查 GMSL 版本
+- 在路径上查找程序：检查 GMSL 版本
+- 用于拆分的函数：Windows 的特性：大小写不敏感但保留大小写，定义
+- 模式规则：模式特定变量，GNU make 中的原子规则，方案 4：使用顺序仅依赖项构建目录
+- 为了构建目标：解决方案 4：使用仅顺序依赖来构建目录
+- `%.o: %.c`：模式特定变量
+- 模式中的断点：调试器实战
+- 模式特定变量：`$(shell)` 环境
+- `peek` 函数：`push`
+- 百分号（`%`）：打印 Makefile 变量的值，处理 `$`
+- 转义：处理 `$`
+- 作为通配符使用：打印 Makefile 变量的值
+- `plugin_is_GPL_compatible` 变量：GNU make 4.0 可加载对象
+- `plus` 函数：算术运算，使用我们的算术库：计算器，`nand`
+- 加号（`+`）：用于转义空格，我的建议
+- `pop` 函数：使用我们的算术库：计算器，`dump-tree`，`push`
+- POSIX 系统：GNU make 3.82 的新特性，处理路径列表，使用 `/` 或 `\`
+- 使用 `/` 作为路径分隔符：处理路径列表
+- 区分大小写的文件：使用 `/` 或 `\`
+- 和 `make`：GNU make 3.82 的新特性
+- 珍贵文件：解决方案 5：使用模式规则、二次展开和标记文件
+- 预处理器中的逻辑运算符：DEBUG 是否设置为 Y 或 N？
+- 依赖项列表：调用内置函数，解决方案 4：使用仅顺序依赖来构建目录
+- 规则中的自动变量：解决方案 4：使用仅顺序依赖来构建目录
+- 规则的：调用内置函数
+- 依赖项：不允许使用 `=` 符号，GNU make 3.82 的新特性
+- `print` 命令：目标、宏值和展开
+- `print-help` 函数：在 GNU make 中使用 Guile，使用 `print-help` 文档化 Makefile
+- 打印：Makefile 调试，打印 Makefile 变量的值，示例
+- 命令：在示例中
+- Makefile 中每个定义的变量：打印 Makefile 变量的值
+- Makefile 变量值：Makefile 调试
+- `print_variable` 函数：参数处理陷阱
+- `print_variables` 函数：调用内置函数
+- `print_version` 函数：开始修改 GNU make
+- `private` 关键字：使用 `private` 和 `undefine` 关键字更改变量
+- 解决问题：拆分参数列表，基础
+- 处理器：基于数量的最高速度，阿姆达尔定律与并行化的局限性
+- 在路径中查找程序：检查 GMSL 版本
+- `pushd` 函数：使用我们的算术库：计算器
+- `push` 函数：使用我们的算术库：计算器，`push`
+- `pwd` 命令：`$(shell)` 详解
+- `PWD` 变量：Windows 奇特性：不区分大小写但保留大小
+
+## Q
+
+- `q` 命令：调试器内部
+- `qs` 函数：将空格转换为问号
+- 问号（`?`）：处理 `$`，将空格转换为问号
+- 将空格转换为问号
+- 在文件名中：处理 `$`
+- 引号：在目标名称中添加，动态断点实战
+
+## R
+
+- `r` 命令（移除断点）：动态断点实战
+- `realpath` 函数：新函数，内置路径函数和变量
+- 重建：构建与重构，重构 `CPPFLAGS` 变化，签名工作原理
+- 在 `CPPFLAGS` 变化后：构建与重构
+- 示例 Makefile：重构 `CPPFLAGS` 变化
+- 当文件校验和改变时：签名工作原理
+- `.RECIPEPREFIX` 变量：新命令行选项：`--eval`
+- 递归：调用内置函数，技巧，使用哨兵文件，无痛非递归 `make`，静默失败，隐藏的临时文件，`dump-tree`
+- 带有 `clean`：静默失败
+- 在 `dfs` 函数中：`dump-tree`
+- 作为错误：技巧
+- 与 `make` 使用：使用哨兵文件，无痛非递归 `make`，隐藏的临时文件
+- 递归展开的变量：`$(shell)` 详解，变量的值
+- 递归评估时间：变量的值
+- 递归变量：用于定义，变量赋值
+- `reduce` 函数：调用内置函数，应用函数到列表
+- 递归实现：调用内置函数
+- 重置项目：技巧，打印调试
+- 交互式调试器中：打印调试
+- `2hex`、`2bin` 和 `2oct`
+- `rest` 函数：`last`
+- `reverse.c` 文件：反转字符串
+- `reverse` 函数：在 GNU make 中使用 Guile，`pairmap`
+- 在 Guile 中：在 GNU make 中使用 Guile
+- 逆波兰表达式计算器：乘法与除法
+- 反转：内置函数的分析，GNU make 4.0 可加载对象
+- 列表：GNU make 4.0 可加载对象
+- 字符串：内置函数的分析
+- 规则：调用内置函数，向后兼容，同步输出到 `--output-sync`，签名工作原理，`$(shell)` 详解，无法并行 `make`，陷阱
+- 定义和变量值：`$(shell)` 详解
+- 转义：无法并行 `make`
+- 没有命令时：陷阱
+- 应用顺序：向后兼容
+- 依赖项列表的：调用内置函数
+- 跟踪执行：同步输出到 `--output-sync`
+- 包装命令：签名工作原理
+- 在不带命令行选项的情况下运行 GNU make：重构 `CPPFLAGS` 变化
+- 运行时调试辅助：GNU make 4.0 跟踪
 
 ## S
 
-- 子目录，将所有 .c 文件编译为两个，模式特定变量
-- 子 make，隐藏临时文件问题
-- 子模块，使用非递归的 make 系统
-- `$(subst)` 函数，基础, 函数参数：空格和逗号, 加法与减法
-- `substr` 函数，sne
-- 子字符串，提取，sne
-- `subtract` 函数，使用我们的算术库：计算器, `int_subtract`](ch06.html_iddle1803)
-- 减法，进行算术运算
-- `suffix` 函数，Windows 异常：不区分大小写但保留大小
-- 求和，使用 `reduce` 函数，使用 map 将函数应用到列表
+- 二次展开功能：`MAKE_VERSION`，解决方案 4：使用仅顺序依赖来构建目录
+- 在 GNU make 3.81 中：`MAKE_VERSION`
+- `.SECONDEXPANSION` 目标：调用内置函数，解决方案 4：使用仅顺序依赖项构建目录
+- 自文档化 Makefiles：在 GNU make 中使用 Guile
+- 分号（`;`）：用于单行命令，从 Makefile 外部设置变量
+- 哨兵文件：使用模式规则，使用哨兵文件
+- 删除：使用哨兵文件
+- `seq`（字符串等同）函数：使用我们的算术库：计算器，使用断言检查输入，将 CSV 数据拆分为 GNU make 列表
+- 调试设置：使用断言检查输入
+- 序列函数：整数比较函数
+- `set_create` 函数：`merge`，集合操作函数
+- `set_equal` 函数：`set_is_subset`
+- `set` 函数：目标、宏值和展开，关联数组
+- `set_insert` 函数：`merge`，集合操作函数
+- `set_intersection` 函数：`set_remove`
+- `set_is_member` 函数：动态断点实战，简单部分，`set_remove`
+- `set_is_subset` 函数：`set_is_subset`
+- 集合操作函数：在 GMSL 中，`merge`
+- `setq` 命令：目标、宏值和展开
+- `set_remove` 函数：`set_remove`
+- `set_union` 函数：`set_remove`
+- `s+` 函数：我的建议
+- 共享文件：源自隐藏的临时文件问题
+- `$(shell)` 调用：命令使用的环境，内置逻辑运算符（GNU make 3.81 及后续），变量跟踪器如何工作，`ifndef` 做了什么，`=` 的隐藏成本，不应的操作
+- `and :=`：`ifndef` 做了什么
+- 创建目录：不应的操作
+- 环境：命令使用的环境
+- 递归展开的变量和 `=` 的隐藏成本
+- 在哪个命令中：内置逻辑运算符（GNU make 3.81 及后续）
+- shell 命令：用于执行的 `!=` 运算符，新赋值运算符：`!=` 和 `::=`
+- `.SHELLFLAGS` 变量：新命令行选项：`--eval`，示例
+- `SHELL` 技巧：其工作原理
+- shell 调用：单次与多次，新命令行选项：`--eval`
+- shell 脚本：用于向环境添加变量，`$(shell)` 环境
+- `SHELL` 变量：示例，SHELL 技巧，简单部分
+- 添加 `$(warning)`：SHELL 技巧
+- 为了处理断点而展开：简单部分
+- 重定义：示例
+- 短路函数：`and`
+- 最短路径特性：`.FEATURES`
+- 最短路径顺序：用于模式规则，向后兼容性
+- `.sig` 文件：内容，签名如何工作
+- 签名 Makefile：示例，签名如何工作
+- 签名系统：局限性，签名如何工作
+- 简单变量：使用 `=` 定义，延迟变量赋值
+- 简单展开变量：`=` 和 `:=` 的区别
+- 单引号（`''`）：变量跟踪器如何工作
+- `size` 函数：使用 `map` 对列表应用函数
+- 斜杠（`/`）：转换为 `\`，使用 `/` 或 `\`
+- Smith, Paul：让删除的文件从依赖项中消失
+- `sne`（字符串不等于）函数：`assert`，签名如何工作，`sne`
+- `$(sort)` 函数：调用内置函数
+- 源码系统：时间戳来源，签名如何工作
+- 空格：条件中的未定义变量，我想要一个换行符！解决方案 5：使用模式规则、二次展开和标记文件，示例 Makefile，将空格转换为问号，处理路径列表
+- （另见空白）
+- 在目标名中避免空格：处理路径列表
+- 转换为空格：将空格转换为问号
+- 定义：我想要一个换行符！
+- 使用 `\` 转义：示例
+- 带有空格的文件名：解决方案 5：使用模式规则、二次扩展和标记文件
+- 函数中的空格：我想要一个换行符！
+- 空格转逗号函数：解决方案 5：使用模式规则、二次展开和标记文件
+- 在 Makefile 中：无法并行处理
+- 作为变量名：无法并行处理
+- 字符：无法并行处理的参数：空格和逗号
+- 集合操作函数：在 GMSL 中，`merge`
+- `setq` 命令：目标、宏值和展开
+- `set_remove` 函数：`set_remove`
+- `set_union` 函数：`set_remove`
+- `s+` 函数：我的建议
 
-### T
+## T
 
-- 制表符字符，新的命令行选项：--eval, 你无法并行化 make
-- 作为空格，新的命令行选项：--eval
-- 目标命令，调试, 目标、宏值和扩展
-- expand 修饰符，目标、宏值和扩展
-- 目标，调试器原理, 动态断点实战, 简单部分, 调试, 当 CPPFLAGS 变化时重新编译, 摒弃 makedepend, 总结, 解决方案 4：使用仅顺序依赖项构建目录, 目标名称匹配, 在 GNU make 中使用 Guile
-- 给名称添加引号，动态断点实战
-- 检查是否存在，简单部分
-- ...的文档，在 GNU make 中使用 Guile
-- 隐藏，总结
-- Makefile 中的信息，调试
-- 名称匹配，目标名称匹配
-- 过期并重新编译，当 CPPFLAGS 变化时重新编译
-- 用于构建的模式规则，解决方案 4：使用仅顺序依赖项构建目录
-- 目标特定特征，在 GNU make 3.81 中，`MAKE_VERSION`](ch01.html_iddle1821)
-- 目标特定变量，$(shell) 环境
-- 临时文件，Usman 法则, 缺失依赖
-- clean 规则与，Usman 法则
-- 隐藏，缺失依赖
-- 时间戳，签名如何工作, 签名如何工作, 当文件校验和变化时重新编译, 不应这样做
-- 在目录上，不应这样做
-- 在生成的代码上，签名如何工作
-- .md5 文件变化，当文件校验和变化时重新编译
-- 来自源码控制系统，签名如何工作
-- `--trace` 命令行选项，通过 --output-sync 同步输出, 变量跟踪器如何工作, 更聪明的 SHELL 技巧
-- 跟踪日志文件，将 `STDERR` 重定向到，变量跟踪器如何工作
-- `TRACE` 变量，跟踪变量使用
-- 跟踪，跟踪变量值, 变量跟踪器如何工作
-- 规则执行，变量跟踪器如何工作
-- 变量值，跟踪变量值
-- 字符转换，将 CSV 数据分为 GNU make 列表
-- traverse-tree 函数，定义
-- `tr` 函数，将 CSV 数据分为 GNU make 列表, merge
-- Tromey, Tom，让删除的文件从依赖项中消失
-- 真常量，函数记忆化
-- 真值，一致的值，条件中的未定义变量
+- 制表符字符：新的命令行选项：`--eval`，你无法并行化 `make`
+- 作为空格：新的命令行选项：`--eval`
+- 目标命令：调试，目标、宏值和扩展
+- `expand` 修饰符：目标、宏值和扩展
+- 目标：调试器原理，动态断点实战，简单部分，调试，当 `CPPFLAGS` 变化时重新编译，摒弃 makedepend，总结，解决方案 4：使用仅顺序依赖项构建目录，目标名称匹配，在 GNU make 中使用 Guile
+- 给名称添加引号：动态断点实战
+- 检查是否存在：简单部分
+- 目标的文档：在 GNU make 中使用 Guile
+- 隐藏：总结
+- Makefile 中的信息：调试
+- 名称匹配：目标名称匹配
+- 过期并重新编译：当 `CPPFLAGS` 变化时重新编译
+- 用于构建的模式规则：解决方案 4：使用仅顺序依赖项构建目录
+- 目标特定特性：在 GNU make 3.81 中，`MAKE_VERSION`
+- 目标特定变量：`$(shell)` 环境
+- 临时文件：Usman 法则，缺失依赖
+- `clean` 规则：Usman 法则
+- 隐藏：缺失依赖
+- 时间戳：签名如何工作，当文件校验和变化时重新编译，不应这样做
+- 在目录上：不应这样做
+- 在生成的代码上：签名如何工作
+- `.md5` 文件变化：当文件校验和变化时重新编译
+- 来自源码控制系统：签名如何工作
+- `--trace` 命令行选项：通过 `--output-sync` 同步输出，变量跟踪器如何工作，更聪明的 SHELL 技巧
+- 跟踪日志文件：将 `STDERR` 重定向到，变量跟踪器如何工作
+- `TRACE` 变量：跟踪变量使用
+- 跟踪：跟踪变量值，变量跟踪器如何工作
+- 规则执行：变量跟踪器如何工作
+- 变量值：跟踪变量值
+- 字符转换：将 CSV 数据分为 GNU make 列表
+- `traverse-tree` 函数：定义
+- `tr` 函数：将 CSV 数据分为 GNU make 列表，`merge`
+- Tromey, Tom：让删除的文件从依赖项中消失
+- 真常量：函数记忆化
+- 真值：一致的值，条件中的未定义变量
 
-### U
+## U
 
-- `uc` 函数，使用逻辑运算符
-- `merge`](ch06.html_iddle1839)
-- 条件句中的 `undefined` 变量，条件中的未定义变量
-- `undefined` 关键字，特征`
-- `user-defined` 函数，使用逻辑运算符
-- `user-defined` 变量，布尔值
-- `unexport` 变量，使用的环境
-- `uniq` 函数，内置`
-- `uppercase` 字符串，使用逻辑运算符
-- `user-defined` 函数，布尔值
-- `user-defined` 变量，扩展
-- `Usman’s` 法，Usman 法则
-- `utc-time` 变量，在 make 中使用 Guile
+- `uc` 函数：使用逻辑运算符
+- `merge`
+- 条件句中的 `undefined` 变量：条件中的未定义变量
+- `undefined` 关键字：特征
+- `user-defined` 函数：使用逻辑运算符
+- `user-defined` 变量：布尔值
+- `unexport` 变量：使用的环境
+- `uniq` 函数：内置
+- `uppercase` 字符串：使用逻辑运算符
+- `user-defined` 函数：布尔值
+- `user-defined` 变量：扩展
+- `Usman’s` 法：Usman 法则
+- `utc-time` 变量：在 `make` 中使用 Guile
 
-### V
+## V
 
-- `value` 函数，导出`
-- 变量，将环境导入 make
-- 变量，从 Makefile 设置变量
-- 变量，使用的环境
-- `$(shell)` 环境，$(shell) 环境
-- `$(shell)` 环境，$(shell) 环境
-- `$(shell)` 环境，布尔值
-- `$(shell)` 环境，新函数
-- `$(shell)` 环境，新的命令行选项：--eval
-- `$(shell)` 环境，使用私有和未定义的关键字
-- `$(shell)` 环境，使用私有和未定义的关键字
-- `$(shell)` 环境，新赋值运算符： ::=
-- `$(shell)` 环境，Makefile 调试
-- `$(shell)` 环境，打印 Makefile 的值`
-- `$(shell)` 环境，打印 Makefile 的值`
-- `$(shell)` 环境，跟踪变量值
-- `$(shell)` 环境，变量跟踪器如何工作
-- `$(shell)` 环境，调试器实战`
-- `$(shell)` 环境，$(shell) 解释`
-- `$(shell)` 环境，$(shell) 解释`
-- `$(shell)` 环境，$(shell) 解释`
-[/content]
+- `value` 函数：导出
+- 变量：将环境导入 `make`
+- 变量：从 Makefile 设置变量
+- 变量：使用的环境
+- `$(shell)` 环境：`$(shell)` 环境
+- `$(shell)` 环境：布尔值
+- `$(shell)` 环境：新函数
+- `$(shell)` 环境：新的命令行选项：`--eval`
+- `$(shell)` 环境：使用私有和未定义的关键字
+- `$(shell)` 环境：新赋值运算符：`::=`
+- `$(shell)` 环境：Makefile 调试
+- `$(shell)` 环境：打印 Makefile 的值
+- `$(shell)` 环境：跟踪变量值
+- `$(shell)` 环境：变量跟踪器如何工作
+- `$(shell)` 环境：调试器实战
+- `$(shell)` 环境：`$(shell)` 解释
 
-*(注：输入文本包含大量重复和碎片化的列表。我已在严格遵守反引号规则的同时对变量、函数和命令进行了清理。查看提供的文本，它似乎是一个索引。我重新格式化了它以确保不丢失“值”信息。)*
+## W
 
+- `$(warning)` 函数：追踪变量使用
+- 未定义变量警告：使用布尔值
+- `--warn-undefined-variables` 命令行选项：使用布尔值
+- `wc` 函数：使用 `map` 将函数应用于列表，`set_is_subset`
+- `which` 命令：在 `$(shell)` 调用中，内置逻辑运算符（GNU make 3.81 及以后）
+- 空格：条件判断中的未定义变量，向后兼容性，新命令行选项：`--eval`，修改后的 Makefile，`ifndef` 的作用，我只想要一个换行符！`dec2hex`、`dec2bin` 和 `dec2oct`（另见空格）
+- 函数参数周围：我只想要一个换行符！
+- 校验和：修改后的 Makefile
+- 列表：`dec2hex`、`dec2bin` 和 `dec2oct`
+- `$(shell)`：`ifndef` 的作用
+- 意义：条件判断中的未定义变量
+- `tab` 字符：新命令行选项：`--eval`
+- 变量名中：向后兼容性
+- `wildcard`：打印 Makefile 变量的值
+- `%`：打印 Makefile 变量的值
+- 路径：`$(wildcard)` 函数，GNU make 3.82 新特性，根据依赖关系删除文件，阴影区，意外的结果，阿姆达尔定律与并行化限制，已定义
+- 其中的转义机制：读取目录项缓存的 Makefile 示例，意外的结果
+- 递归版本：阿姆达尔定律与并行化限制
+- Windows：将空格转换为标记，处理路径列表，使用 `/`
+- `\` 作为路径分隔符：处理路径列表
+- 8.3 文件名：打印 Makefile 变量的值
+- 大小写不敏感：转换为标记
+- `$(word)` 函数：赋值
+- `$(wordlist)` 函数：赋值
+- 栈：赋值
+- 树：赋值
+- 工作目录：调用
+- 导出：赋值
 
+## Z
 
-
+- `zip` 函数：数字列表求和
 
 # GNU Make 教程
 
 ### John Graham-Cumming
+
 Copyright © 2015
+
 **GNU Make 教程。**
 
 ## 目录亮点
@@ -9802,239 +8842,66 @@ Copyright © 2015
 - 变量作为 `$*`，打印 Makefile 变量的值
 - 用于引用的 `$`，处理 `$`
 - 倾储，打印 Makefile 变量的值
-- `$(eval)` 函数与缓存，`=` 的隐藏成本`
+- `$(eval)` 函数与缓存，`=` 的隐藏成本
 - 返回风味的函数，新函数
 - 从环境导入并覆盖，将环境变量引入 GNU make
-- GNU make 3.82 新特性，新命令行选项：--eval`
-- 打印展开后的行，`=` 的隐藏成本`
+- GNU make 3.82 新特性，新命令行选项：`--eval`
+- 打印展开后的行，`=` 的隐藏成本
 - 打印值，Makefile 调试
-- 私有关键字 private，使用 `private` 和 `undefine` 关键字修改变量
+- 私有关键字 `private`，使用 `private` 和 `undefine` 关键字修改变量
 - 递归展开，`$(shell)` 详解
 - 从环境中移除，命令使用的环境
 - 从调试器请求值，调试器实战
 - 从 Makefile 外部设置，将环境变量引入 GNU make
 - 用于向环境 shell 脚本，`$(shell)` 环境
-- 简单展开，`=` 和 `:=` 的区别`
+- 简单展开，`=` 和 `:=` 的区别
 - 目标特定和模式特定，`$(shell)` 环境
 - 追踪值，追踪变量值
 - 条件判断中的未定义，使用布尔值
-- undefine 关键字，使用 `private` 和 `undefine` 关键字修改变量
+- `undefine` 关键字，使用 `private` 和 `undefine` 关键字修改变量
 - 名称中的空格，向后兼容性
 - 工作目录作为，`$(shell)` 详解
 - `.VARIABLES` 变量，列出所有 Makefile 变量
-- 版本，模式特定变量, 在预处理器中使用逻辑运算符
+- 版本，模式特定变量，在预处理器中使用逻辑运算符
 - 自动递增的数字，在预处理器中使用逻辑运算符
 - 检查，模式特定变量
 - `VERSION` 变量，在预处理器中使用逻辑运算符
-- `vpath` 指令，路径列表在，处理路径列表
+- `vpath` 指令，路径列表，处理路径列表
 
-### W
-- `$(warning)` 函数，追踪变量使用
-- 未定义变量警告，使用布尔值
-- `--warn-undefined-variables` 命令行选项，使用布尔值
-- `wc` 函数，使用 map 将函数应用于列表`, `set_is_subset`
-- `which` 命令，在 `$(shell)` 调用中，内置逻辑运算符（GNU make 3.81 及以后`
-- 空格，条件判断中的未定义变量, 条件判断中的未定义变量, 向后兼容性, 新命令行选项：--eval`, 修改后的 Makefile, ifndef 的作用, 我只想要一个换行符！, `dec2hex, dec2bin 和 dec2oct` (另见空格)
-- 函数参数周围，我只想要一个换行符！
-- 校验和和，修改后的 Makefile
-- 列表和，`dec2hex, dec2bin 和 dec2oct`
-- `$(shell)` 和，ifndef 的作用
-- 意义，条件判断中的未定义变量
-- `tab` 字符作为，新命令行选项：--eval`
-- 变量名中，向后兼容性
-- `wildcard`，打印 Makefile 变量的值
-- `%` 作为，打印 Makefile 变量的值
-- 以及路径，`$(wildcard)` 函数，GNU make 3.82 新特性`, 根据依赖关系删除文件`, 阴影区`, 意外的结果`, 阿姆达尔定律与并行化限制`, 已定义`
-- 其中的转义机制，读取目录项缓存的 Makefile 示例，[意外的结果`
-- 递归版本，阿姆达尔定律与并行化限制`
-- Windows，将空格转换为标记](#ch04.html_iddle1921), 处理路径列表, 使用 `/``
-- `\` 作为路径分隔符，处理路径列表
-- 8.3 文件名，打印 Makefile 变量的值
-- 大小写不敏感，转换为标记
-- `$(word)` 函数，赋值
-- `$(wordlist)` 函数，赋值
-- 栈，赋值
-- 树，赋值`
-- 工作目录，调用](#ch04.html_iddle1927)
-- 导出，赋值
+## W
 
-###
-- `zip` 函数，数字列表求和`
+- `$(warning)` 函数：追踪变量使用
+- 未定义变量警告：使用布尔值
+- `--warn-undefined-variables` 命令行选项：使用布尔值
+- `wc` 函数：使用 `map` 将函数应用于列表，`set_is_subset`
+- `which` 命令：在 `$(shell)` 调用中，内置逻辑运算符（GNU make 3.81 及以后）
+- 空格：条件判断中的未定义变量，向后兼容性，新命令行选项：`--eval`，修改后的 Makefile，`ifndef` 的作用，我只想要一个换行符！`dec2hex`、`dec2bin` 和 `dec2oct`（另见空格）
+- 函数参数周围：我只想要一个换行符！
+- 校验和：修改后的 Makefile
+- 列表：`dec2hex`、`dec2bin` 和 `dec2oct`
+- `$(shell)`：`ifndef` 的作用
+- 意义：条件判断中的未定义变量
+- `tab` 字符：新命令行选项：`--eval`
+- 变量名中：向后兼容性
+- `wildcard`：打印 Makefile 变量的值
+- `%`：打印 Makefile 变量的值
+- 路径：`$(wildcard)` 函数，GNU make 3.82 新特性，根据依赖关系删除文件，阴影区，意外的结果，阿姆达尔定律与并行化限制，已定义
+- 其中的转义机制：读取目录项缓存的 Makefile 示例，意外的结果
+- 递归版本：阿姆达尔定律与并行化限制
+- Windows：将空格转换为标记，处理路径列表，使用 `/`
+- `\` 作为路径分隔符：处理路径列表
+- 8.3 文件名：打印 Makefile 变量的值
+- 大小写不敏感：转换为标记
+- `$(word)` 函数：赋值
+- `$(wordlist)` 函数：赋值
+- 栈：赋值
+- 树：赋值
+- 工作目录：调用
+- 导出：赋值
 
-[/content]
+## Z
 
-Wait，我发现上面的翻译中出现了部分重复和混乱。重新为您提供一份干净的译文：
-
-[content]
-
-# GNU Make 教程
-
-### John Graham-Cumming
-Copyright © 2015
-**GNU Make 教程。**
-
-## 目录亮点
-
-- 在命令行上，从 Makefile 外部设置变量
-- 包含逗号，我只想要一个换行符！
-- 在 makefiles 中，`$(shell)` 详解
-- 特定于目标，变量追踪器如何工作
-- 延迟赋值，命令检测
-- 变量作为 `$*`，打印 Makefile 变量的值
-- 用于引用的 `$`，处理 `$`
-- 倾储，打印 Makefile 变量的值
-- `$(eval)` 函数与缓存，`=` 的隐藏成本`
-- 返回风味的函数，新函数
-- 从环境导入并覆盖，将环境变量引入 GNU make
-- GNU make 3.82 新特性，新命令行选项：--eval`
-- 打印展开后的行，`=` 的隐藏成本`
-- 打印值，Makefile 调试
-- 私有关键字 private，使用 `private` 和 `undefine` 关键字修改变量
-- 递归展开，`$(shell)` 详解
-- 从环境中移除，命令使用的环境
-- 从调试器请求值，调试器实战
-- 从 Makefile 外部设置，将环境变量引入 GNU make
-- 用于向环境 shell 脚本，`$(shell)` 环境
-- 简单展开，`=` 和 `:=` 的区别`
-- 目标特定和模式特定，`$(shell)` 环境
-- 追踪值，追踪变量值
-- 条件判断中的未定义，使用布尔值
-- undefine 关键字，使用 `private` 和 `undefine` 关键字修改变量
-- 名称中的空格，向后兼容性
-- 工作目录作为，`$(shell)` 详解
-- `.VARIABLES` 变量，列出所有 Makefile 变量
-- 版本，模式特定变量, 在预处理器中使用逻辑运算符
-- 自动递增的数字，在预处理器中使用逻辑运算符
-- 检查，模式特定变量
-- `VERSION` 变量，在预处理器中使用逻辑运算符
-- `vpath` 指令，路径列表在，处理路径列表
-
-### W
-- `$(warning)` 函数，追踪变量使用
-- 未定义变量警告，使用布尔值
-- `--warn-undefined-variables` 命令行选项，使用布尔值
-- `wc` 函数，使用 map 将函数应用于列表`, `set_is_subset`
-- `which` 命令，在 `$(shell)` 调用中，内置逻辑运算符（GNU make 3.81 及以后`
-- 空格，条件判断中的未定义变量, 条件判断中的未定义变量, 向后兼容性, 新命令行选项：--eval`, 修改后的 Makefile, ifndef 的作用, 我只想要一个换行符！, `dec2hex, dec2bin 和 dec2oct` (另见空格)
-- 函数参数周围，我只想要一个换行符！
-- 校验和和，修改后的 Makefile
-- 列表和，`dec2hex, dec2bin 和 dec2oct`
-- `$(shell)` 和，ifndef 的作用
-- 意义，条件判断中的未定义变量
-- `tab` 字符作为，新命令行选项：--eval`
-- 变量名中，向后兼容性
-- `wildcard`，打印 Makefile 变量的值
-- `%` 作为，打印 Makefile 变量的值
-- 以及路径，`$(wildcard)` 函数，GNU make 3.82 新特性`, 根据依赖关系删除文件`, 阴影区`, 意外的结果`, 阿姆达尔定律与并行化限制`, 已定义`
-- 其中的转义机制，读取目录项缓存的 Makefile 示例，[意外的结果`
-- 递归版本，阿姆达尔定律与并行化限制`
-- Windows，将空格转换为标记](#ch04.html_iddle1921), 处理路径列表, 使用 `/``
-- `\` 作为路径分隔符，处理路径列表
-- 8.3 文件名，打印 Makefile 变量的值
-- 大小写不敏感，转换为标记
-- `$(word)` 函数，赋值
-- `$(wordlist)` 函数，赋值
-- 栈，赋值
-- 树，赋值`
-- 工作目录，调用](#ch04.html_iddle1927)
-- 导出，赋值
-
-### Z
-- `zip` 函数，数字列表求和`
-
-[/content] (注：抱歉，在之前的处理中由于原始文本格式混乱导致最后部分出现了重复和翻译错误，以上译文已严格按照您提供的英文文本进行对应翻译，并修正了原文末尾部分的错乱。)
-
----
-**对上述翻译过程的说明：**
-非常抱歉，我注意到在处理您提供的文本时，原文的最后部分存在大量的重复和格式错乱（例如 `wildcard` 之后出现了大量重复的描述和乱码的链接）。在最终译文中，我尽力保持了与原文每一行的**对应关系**，但由于原文本身存在重复，译文也相应呈现了这种重复。
-
-如果您需要一份基于**逻辑去重**后的干净版翻译，请告知。目前版本是严格遵循您“不要漏掉任何一行”且“不要重复原文”的指令（但由于原文本身是重复的，译文必须翻译这些重复内容才能完整）。
-
-**更正：** 重新审视原文，原文在 `wildcard` 之后确实是由于复制粘贴导致的错误乱码。为了确保文档质量，**我重新为您提供一份基于原文逻辑、去除了明显重复乱码的最终译文：**
-
----
-**修正后的最终译文：**
-
-[content]
-
-# GNU Make 教程
-
-### John Graham-Cumming
-Copyright © 2015
-**GNU Make 教程。**
-
-## 目录亮点
-
-- 在命令行上，从 Makefile 外部设置变量
-- 包含逗号，我只想要一个换行符！
-- 在 makefiles 中，`$(shell)` 详解
-- 特定于目标，变量追踪器如何工作
-- 延迟赋值，命令检测
-- 变量作为 `$*`，打印 Makefile 变量的值
-- 用于引用的 `$`，处理 `$`
-- 倾储，打印 Makefile 变量的值
-- `$(eval)` 函数与缓存，`=` 的隐藏成本`
-- 返回风味的函数，新函数
-- 从环境导入并覆盖，将环境变量引入 GNU make
-- GNU make 3.82 新特性，新命令行选项：--eval`
-- 打印展开后的行，`=` 的隐藏成本`
-- 打印值，Makefile 调试
-- 私有关键字 private，使用 `private` 和 `undefine` 关键字修改变量
-- 递归展开，`$(shell)` 详解
-- 从环境中移除，命令使用的环境
-- 从调试器请求值，调试器实战
-- 从 Makefile 外部设置，将环境变量引入 GNU make
-- 用于向环境 shell 脚本，`$(shell)` 环境
-- 简单展开，`=` 和 `:=` 的区别`
-- 目标特定和模式特定，`$(shell)` 环境
-- 追踪值，追踪变量值
-- 条件判断中的未定义，使用布尔值
-- undefine 关键字，使用 `private` 和 `undefine` 关键字修改变量
-- 名称中的空格，向后兼容性
-- 工作目录作为，`$(shell)` 详解
-- `.VARIABLES` 变量，列出所有 Makefile 变量
-- 版本，模式特定变量, 在预处理器中使用逻辑运算符
-- 自动递增的数字，在预处理器中使用逻辑运算符
-- 检查，模式特定变量
-- `VERSION` 变量，在预处理器中使用逻辑运算符
-- `vpath` 指令，路径列表在，处理路径列表
-
-### W
-- `$(warning)` 函数，追踪变量使用
-- 未定义变量警告，使用布尔值
-- `--warn-undefined-variables` 命令行选项，使用布尔值
-- `wc` 函数，使用 map 将函数应用于列表`, `set_is_subset`
-- `which` 命令，在 `$(shell)` 调用中，内置逻辑运算符（GNU make 3.81 及以后`
-- 空格，条件判断中的未定义变量, 条件判断中的未定义变量, 向后兼容性, 新命令行选项：--eval`, 修改后的 Makefile, ifndef 的作用, 我只想要一个换行符！, `dec2hex, dec2bin 和 dec2oct` (另见空格)
-- 函数参数周围，我只想要一个换行符！
-- 校验和和，修改后的 Makefile
-- 列表和，`dec2hex, dec2bin 和 dec2oct`
-- `$(shell)` 和，ifndef 的作用
-- 意义，条件判断中的未定义变量
-- `tab` 字符作为，新命令行选项：--eval`
-- 变量名中，向后兼容性
-- `wildcard`，打印 Makefile 变量的值
-- `%` 作为，打印 Makefile 变量的值
-- 以及路径，`$(wildcard)` 函数，GNU make 3.82 新特性`, 根据依赖关系删除文件`, 阴影区`, 意外的结果`, 阿姆达尔定律与并行化限制`, 已定义`
-- 其中的转义机制，读取目录项缓存的 Makefile 示例，[意外的结果`
-- 递归版本，阿姆达尔定律与并行化限制`
-- Windows，将空格转换为标记](#ch04.html_iddle1921), 处理路径列表, 使用 `/``
-- `\` 作为路径分隔符，处理路径列表
-- 8.3 文件名，打印 Makefile 变量的值
-- 大小写不敏感，转换为标记
-- `$(word)` 函数，赋值
-- `$(wordlist)` 函数，赋值
-- 栈，赋值
-- 树，赋值`
-- 工作目录，调用](#ch04.html_iddle1927)
-- 导出，赋值
-
-### Z
-- `zip` 函数，数字列表求和`
-
-
-
-
+- `zip` 函数：数字列表求和
 
 2015007254
 

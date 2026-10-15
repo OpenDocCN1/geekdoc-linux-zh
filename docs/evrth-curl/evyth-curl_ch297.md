@@ -1,16 +1,17 @@
+
 # Windows 与 Unix
 
 与 Windows 方式相比，Unix 方式编程 curl 存在一些差异。可能最显著的四个细节是：
 
 ## 套接字操作的不同函数名
 
-在 curl 中，这是通过定义和宏来解决的，因此除了定义它们的头文件之外，源代码在所有地方看起来都是一样的。使用的宏是 `sclose()`、`sread()` 和 `swrite()`。
+在 curl 中，这是通过定义和宏来解决的，因此除了定义它们的头文件之外，源代码在所有地方看起来都是一样的。使用的宏是`sclose()`、`sread()`和`swrite()`。
 
 ## 初始化调用
 
 Windows 需要对套接字进行几个初始化调用。
 
-这由 `curl_global_init()` 调用处理，但如果其他库也这样做等，可能存在应用程序需要改变该行为的原因。
+这由`curl_global_init()`调用处理，但如果其他库也这样做等，可能存在应用程序需要改变该行为的原因。
 
 我们需要 WinSock 版本 2.2，并在全局初始化期间加载此版本。
 
@@ -28,6 +29,6 @@ Windows 需要对套接字进行几个初始化调用。
 
 ## Ifdefs
 
-在源代码内部，我们努力避免使用 `#ifdef [Your OS]`。所有处理功能的条件语句*应该*以 `#ifdef HAVE_THAT_WEIRD_FUNCTION` 的格式出现。由于 Windows 无法运行配置脚本，我们在 lib 目录中维护一个 `curl_config-win32.h` 文件，该文件应该与 Windows 机器上的 `curl_config.h` 文件看起来完全一样。
+在源代码内部，我们努力避免使用`#ifdef [Your OS]`。所有处理功能的条件语句*应该*以`#ifdef HAVE_THAT_WEIRD_FUNCTION`的格式出现。由于 Windows 无法运行配置脚本，我们在 lib 目录中维护一个`curl_config-win32.h`文件，该文件应该与 Windows 机器上的`curl_config.h`文件看起来完全一样。
 
 一般而言：curl 经常在几十种操作系统上编译。不要走钢丝。

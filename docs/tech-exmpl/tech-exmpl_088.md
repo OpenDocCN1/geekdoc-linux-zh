@@ -1,12 +1,14 @@
-# 从链表中删除倒数第 n 个节点
+
+
+# 从链表中删除倒数第 `n` 个节点
 
 > 原文：[`techbyexample.com/remove-nth-node-end-linked-list/`](https://techbyexample.com/remove-nth-node-end-linked-list/)
 
-## **概述**
+## 概述
 
-目标是从链表的末尾删除倒数第 n 个节点。如果链表的大小为**x**，那么倒数第 n 个节点的位置是(x-n+1)
+目标是从链表的末尾删除倒数第 `n` 个节点。如果链表的大小为 `x`，那么倒数第 `n` 个节点的位置是 `x - n + 1`。
 
-示例
+### 示例
 
 ```go
 Input: 1->2->3->4->5
@@ -14,7 +16,7 @@ Node to be deleted from the end: 2
 Output: 1->2->3->5
 ```
 
-## **程序**
+## 程序
 
 这是相应的程序。
 
@@ -119,7 +121,7 @@ func lengthOfList(head *ListNode) int {
 }
 ```
 
-**输出**
+## 输出
 
 ```go
 1
@@ -133,3 +135,4 @@ func lengthOfList(head *ListNode) int {
 3
 5
 ```
+

@@ -1,4 +1,5 @@
-# 介绍 Icinga 2 Linux 服务器监控工具- Eldernode 博客
+
+# 介绍 Icinga 2 Linux 服务器监控工具 - Eldernode 博客
 
 > 原文：<https://blog.eldernode.com/icinga-2-linux-server-monitoring-tool/>
 
@@ -8,17 +9,17 @@
 
 ## Icinga 2 Linux 服务器监控工具
 
-[Icinga](https://icinga.com/) 是 2009 年从 Nagios 中独立出来的开源计算机系统，成为一款原创的网络监控应用。一些变化是添加新的特性和数据库连接器。IDODB 是**I**cinga**D**ATA**O**ut**D**database，它是附加组件或 Icinga web 接口访问的历史监控数据的存储点。Icinga 支持 MySQL、Oracle 和 [PostgreSQL](https://blog.eldernode.com/tutorial-postgresql-installation-ubuntu-20/) 。Icinga 2 也是用 C++编写的，可以在 Linux 和 Windows 上构建，并遵守 GNU 许可证的条款。 **Icinga 2** 已准备好监控您的整个基础设施，并生成系统数据分析的结果，以帮助您获得可用且稳定的证据。通过收集有关系统功能的详细数据，您将能够检查它的启动和运行情况，并根据您的需求及时采取行动。
+[Icinga](https://icinga.com/) 是 2009 年从 Nagios 中独立出来的开源计算机系统，成为一款原创的网络监控应用。一些变化是添加新的特性和数据库连接器。IDODB 是 **I**cinga **D**ATA **O**ut **D**atabase，它是附加组件或 Icinga web 接口访问的历史监控数据的存储点。Icinga 支持 MySQL、Oracle 和 [PostgreSQL](https://blog.eldernode.com/tutorial-postgresql-installation-ubuntu-20/) 。Icinga 2 也是用 C++ 编写的，可以在 Linux 和 Windows 上构建，并遵守 GNU 许可证的条款。**Icinga 2** 已准备好监控您的整个基础设施，并生成系统数据分析的结果，以帮助您获得可用且稳定的证据。通过收集有关系统功能的详细数据，您将能够检查它的启动和运行情况，并根据您的需求及时采取行动。
 
 ### Icinga 2 如何监控
 
-在这一部分中，我们将回顾 Icinga2 选择了什么样的监控方式来与用户一起运行。Icinga 2 能够为属性使用不同的值类型来表示正确的必要信息，这将导致有效的配置。例如，要检查您的[主机和服务](https://eldernode.com/vps-hosting/)的可用性，您需要 Icinga 2 的监控。任何时候你都可以添加一个主机和服务来被 Icinga 2 监控。看看一些可以检查的**主机**和**服务**:
+在这一部分中，我们将回顾 Icinga2 选择了什么样的监控方式来与用户一起运行。Icinga 2 能够为属性使用不同的值类型来表示正确的必要信息，这将导致有效的配置。例如，要检查您的[主机和服务](https://eldernode.com/vps-hosting/)的可用性，您需要 Icinga 2 的监控。任何时候你都可以添加一个主机和服务来被 Icinga 2 监控。看看一些可以检查的**主机**和**服务**：
 
-**1-** 网络服务的监控(HTTP、SMTP、SNMP、SSH 等。)
+**1-** 网络服务的监控（HTTP、SMTP、SNMP、SSH 等。）
 
-**2-** 监控主机资源(CPU 负载、磁盘使用量、系统负载或当前登录的用户数量等。)
+**2-** 监控主机资源（CPU 负载、磁盘使用量、系统负载或当前登录的用户数量等。）
 
-**3-** 监控服务器组件(交换机、路由器、温湿度传感器等。)
+**3-** 监控服务器组件（交换机、路由器、温湿度传感器等。）
 
 **4-** 监控停机和无法访问的主机
 
@@ -50,7 +51,7 @@
 
 ### Icinga 2 的特点
 
-当你决定使用 ice 2 时，你会安全地离开**监控管理**和**运行检查**，因为 Icinga2 很好地完成了向你发送必要的**通知**的任务。此外，您还可以在下面看到其他一些好处:
+当你决定使用 Icinga 2 时，你会安全地离开**监控管理**和**运行检查**，因为 Icinga2 很好地完成了向你发送必要的**通知**的任务。此外，您还可以在下面看到其他一些好处：
 
 **1-** 灵活的模块化架构
 
@@ -58,7 +59,7 @@
 
 **3-** 企业级可扩展性和认证
 
-**4-** 100%开源和社区驱动
+**4-** 100% 开源和社区驱动
 
 **5-** 旨在使监控更容易
 

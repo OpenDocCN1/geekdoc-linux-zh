@@ -1,3 +1,4 @@
+
 # 如何在 Ubuntu 20.10 上设置和配置 UrBackup
 
 > 原文：<https://blog.eldernode.com/setup-and-configure-urbackup-on-ubuntu/>
@@ -6,23 +7,21 @@
 
 UrBackup 是一个开源的客户端/服务器备份系统。该工具通过结合映像和文件备份来执行数据安全和快速恢复。使用 UrBackup，可以在系统运行时进行文件和映像备份，而不会中断当前进程。有趣的是，UrBackup 会不断查看您想要备份的文件夹。通过这样做，它将快速找到以前备份之间的差异。因此，增量文件备份非常快。在本文中，我们将教你如何在 Ubuntu 20.10 上设置和配置 UrBackup。如果你想购买一台 [Ubuntu VPS](https://eldernode.com/ubuntu-vps) 服务器，你可以访问 [Eldernode](https://eldernode.com/) 中提供的软件包。
 
-## **教程在 Ubuntu 20.10 上设置和配置 UrBackup**
+## 教程在 Ubuntu 20.10 上设置和配置 UrBackup
 
 在本教程中，在介绍了安装 UrBackup 的先决条件之后，我们将教你如何在 [Ubuntu](https://blog.eldernode.com/tag/ubuntu/) 20.10 上安装 UrBackup 服务器。然后，在下一步中，我们将逐步向您解释如何添加新的备份客户端。最后，你将学会如何使用 [UrBackup](https://www.urbackup.org/) ，然后如何在 Ubuntu 上使用 UrBackup 创建备份。请跟随我们继续这篇文章。
 
-### **在 Ubuntu 20.10 上安装 UrBackup 的要求**
+### 在 Ubuntu 20.10 上安装 UrBackup 的要求
 
-_ Ubuntu 20.10
-
-_ 具有 Sudo 权限的 Root 用户。
-
-_ 在开始安装之前，您还必须在登录到 Ubuntu 服务器后使用以下命令更新您的系统:
+- Ubuntu 20.10
+- 具有 Sudo 权限的 Root 用户。
+- 在开始安装之前，您还必须在登录到 Ubuntu 服务器后使用以下命令更新您的系统:
 
 ```
 apt-get update -y
 ```
 
-## **在 Ubuntu 20.10 上安装 UrBackup 服务器| Ubuntu 20.04**
+## 在 Ubuntu 20.10 上安装 UrBackup 服务器 | Ubuntu 20.04
 
 在这一节，我们将一步步教你如何在 Ubuntu 20.10 上安装 UrBackup Server。为此，只需按顺序执行以下步骤。第一步是通过执行以下命令，使用正式的 PPA 存储库安装 UrBackup 服务器:
 
@@ -38,11 +37,11 @@ apt update
 apt install urbackup-server
 ```
 
-最后，在执行完上面的命令后，键入“ **y** ”并回车。这将开始安装 UrBackup 服务器及其相关软件包。下一节，我们将告诉你如何在 Ubuntu 20.10 上安装 UrBackup 客户端。跟着我们。
+最后，在执行完上面的命令后，键入“y”并回车。这将开始安装 UrBackup 服务器及其相关软件包。下一节，我们将告诉你如何在 Ubuntu 20.10 上安装 UrBackup 客户端。跟着我们。
 
-## **在 Ubuntu 20** 上安装 UrBackup 客户端
+## 在 Ubuntu 20 上安装 UrBackup 客户端
 
-在上一节中安装了 UrBackup 服务器后，现在在本节中，我们将教您如何逐步添加新的备份客户端。您可以点击**Add new Internet client/client behind NAT**来添加一个新的客户端备份到 UrBackup 服务器。下一步，你需要确保**从**设置**中启用互联网模式**。因此，您需要将您的客户端主机名设置为 FQDN 或 IP。然后点击**添加客户端**如下图:
+在上一节中安装了 UrBackup 服务器后，现在在本节中，我们将教您如何逐步添加新的备份客户端。您可以点击 **Add new Internet client/client behind NAT** 来添加一个新的客户端备份到 UrBackup 服务器。下一步，你需要确保**从**设置**中启用互联网模式**。因此，您需要将您的客户端主机名设置为 FQDN 或 IP。然后点击**添加客户端**如下图:
 
 ![how to add client on urbackup on ubuntu](img/3f34201386d56496bd1cad874aab0bed.png)
 
@@ -58,13 +57,13 @@ TF=`mktemp` && wget "http://your_server_ip:55414/x?a=download_client&lang=en&cli
 systemctl status urbackupclientbackend
 ```
 
-如下图所示，在执行上述命令后，您将看到 **UrBackup 客户端**已启动并运行在端口“ **35621** ”上:
+如下图所示，在执行上述命令后，您将看到 **UrBackup 客户端**已启动并运行在端口“35621”上:
 
 ![how to start urbackup client on ubuntu](img/710633eb7b7588fcf7abe611434fddfb.png)
 
-### **如何在 Ubuntu 上使用 UrBackup**
+### 如何在 Ubuntu 上使用 UrBackup
 
-在这一节，我们想教你如何在 Ubuntu 上设置和使用 UrBackup。值得注意的是，可以使用默认端口“ **55414** ”访问 UrBackup web 服务器接口。前提是防火墙允许。
+在这一节，我们想教你如何在 Ubuntu 上设置和使用 UrBackup。值得注意的是，可以使用默认端口“55414”访问 UrBackup web 服务器接口。前提是防火墙允许。
 
 您可以在浏览器中打开以下地址:
 
@@ -78,7 +77,7 @@ https://your_ip:55414
 
 ![adding admin user with urbackup](img/072d3507111a0fbd06d20be5bb9b19aa.png)
 
-### **如何在 Ubuntu 上使用 UrBackup 创建备份**
+### 如何在 Ubuntu 上使用 UrBackup 创建备份
 
 在这一节中，我们想看看如何在 Ubuntu 上使用 UrBackup 创建备份。有趣的是，您可以添加任意多的客户。然后，在下一步中，您可以使用以下命令添加任何要备份的文件夹:
 
@@ -97,7 +96,7 @@ https://your_ip:55414
 最后，您可以从服务器使用以下命令来检查备份服务器的存储路径中是否有备份文件:
 
 ```
-[[email protected]](/cdn-cgi/l/email-protection):~# ls -lhtr /media/BACKUP/urbackup/54.152.19.6/210110-1726/backup/
+[[email protected]](/cdn-cgi/l/email-protection):~# ls -lhtr /media/BACKUP/urbackup/54.152.19.6/210110-1726/backup/
 ```
 
 ```

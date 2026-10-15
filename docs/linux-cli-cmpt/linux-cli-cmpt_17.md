@@ -1,3 +1,5 @@
+
+
 # 练习解答
 
 > 原文：[`learnbyexample.github.io/cli-computing/exercise-solutions.html`](https://learnbyexample.github.io/cli-computing/exercise-solutions.html)
@@ -11,7 +13,7 @@
 ```sh
 $ type -a echo
 echo is a shell builtin
-echo is /bin/echo 
+echo is /bin/echo
 ```
 
 如上所示的结果，内建命令具有优先级，因此这是默认版本。
@@ -20,7 +22,7 @@ echo is /bin/echo
 
 ```sh
 $ echo apple     42 'banana     100'
-apple 42 banana     100 
+apple 42 banana     100
 ```
 
 是的，文档有助于理解上述结果。从 `help echo`（因为内建版本是默认版本）：
@@ -68,7 +70,7 @@ type: nothing appropriate.
 
 # need to use 'help -d' since 'type' is a shell builtin
 $ help -d type
-type - Display information about command type. 
+type - Display information about command type.
 ```
 
 **9)** `/tmp` 目录的作用是什么？
@@ -81,17 +83,16 @@ type - Display information about command type.
 
 **10)** 请分别给出绝对路径和相对路径的示例。
 
-+   绝对路径：`/usr/share/dict/words`
-
-+   相对路径：`../../projects`
++ 绝对路径：`/usr/share/dict/words`
++ 相对路径：`../../projects`
 
 **11)** 你会在什么情况下使用 `man -k` 命令？
 
 根据 `man man`：
 
 > `-k, --apropos`
-> 
-> 等同于 apropos。搜索简短的手册页描述中的关键字并显示任何匹配项。有关详细信息，请参阅 apropos(1)。
+>
+> 等同于 `apropos`。搜索简短的手册页描述中的关键字并显示任何匹配项。有关详细信息，请参阅 `apropos(1)`。
 
 例如：
 
@@ -100,7 +101,7 @@ type - Display information about command type.
 $ man -k column
 colrm (1)            - remove columns from a file
 column (1)           - columnate lists
-git-column (1)       - Display data in columns 
+git-column (1)       - Display data in columns
 ```
 
 **12)** `man` 页面和 `info` 页面之间有区别吗？
@@ -154,7 +155,7 @@ $ pwd
 
 $ cd ../todos
 $ pwd
-/home/learnbyexample/cli-computing/example_files/scripts/ls_examples/todos 
+/home/learnbyexample/cli-computing/example_files/scripts/ls_examples/todos
 ```
 
 **4)** 根据以下场景，你将如何切换到用户主目录下的 `cli-computing` 目录？然后，你将如何返回到上一个工作目录？
@@ -169,7 +170,7 @@ $ pwd
 
 $ cd -
 $ pwd
-/home/learnbyexample/all/projects/square_tictactoe 
+/home/learnbyexample/all/projects/square_tictactoe
 ```
 
 **5)** 你会如何列出当前目录的内容，每行一个，同时以可读的格式显示条目的大小？
@@ -188,7 +189,7 @@ total 7.4M
 4.0K projects
 7.4M report.log
    0 scripts
-4.0K todos 
+4.0K todos
 ```
 
 **6)** 你会使用哪个 `ls` 命令选项来进行基于版本的条目排序？
@@ -196,31 +197,31 @@ total 7.4M
 根据 `man ls`：
 
 > `-v`
-> 
+>
 > 文本中（版本）数字的自然排序
 
 **7)** 你会使用哪个 `ls` 命令选项来根据条目大小进行排序？
 
 > `-S`
-> 
+>
 > 按文件大小排序，从大到小
 
 **8)** 你会使用哪个 `ls` 命令选项来根据文件扩展名进行排序？
 
 > `-X`
-> 
+>
 > 按条目扩展名字母顺序排序
 
 **9)** `ls` 命令的 `-G` 选项做什么？
 
 > `-G, --no-group`
-> 
+>
 > 在长列表中，不打印组名
 
 **10)** `ls` 命令的 `-i` 选项做什么？
 
 > `-i, --inode`
-> 
+>
 > 打印每个文件的索引号
 
 **11)** 每行只列出目录。
@@ -233,7 +234,7 @@ $ ls -1d */
 backups/
 projects/
 scripts/
-todos/ 
+todos/
 ```
 
 **12)** 假设已经存在一个名为 `notes` 的常规文件。如果你使用 `mkdir -p notes` 命令会发生什么？
@@ -244,7 +245,7 @@ notes
 
 # what would happen here?
 $ mkdir -p notes
-mkdir: cannot create directory ‘notes’: File exists 
+mkdir: cannot create directory ‘notes’: File exists
 ```
 
 **13)** 使用一个或多个命令来匹配以下场景：
@@ -261,7 +262,7 @@ $ ls -1F
 cost.txt
 ghost/
 quest/
-toast/ 
+toast/
 ```
 
 **14)** 使用一个或多个命令来匹配以下场景：
@@ -280,15 +281,15 @@ $ touch shopping/festival.xlsx
 $ tree -F
 .
 ├── hobbies/
-│   ├── painting/
-│   │   └── waterfall.bmp
-│   ├── trekking/
-│   │   └── himalayas.txt
-│   └── writing/
+│   ├── painting/
+│   │   └── waterfall.bmp
+│   ├── trekking/
+│   │   └── himalayas.txt
+│   └── writing/
 └── shopping/
     └── festival.xlsx
 
-5 directories, 3 files 
+5 directories, 3 files
 ```
 
 > ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 不要删除此目录，稍后练习中需要使用。
@@ -296,7 +297,7 @@ $ tree -F
 **15)** 如果要创建的目录已经存在，你会使用哪个 `mkdir` 命令选项来不显示错误？
 
 > `-p, --parents`
-> 
+>
 > 如果存在，则不报错，按需创建父目录
 
 **16)** 使用一个或多个命令来匹配以下场景：
@@ -311,13 +312,13 @@ toast/
 $ rm -r cost.txt ghost toast
 
 $ ls -1F
-quest/ 
+quest/
 ```
 
 **17)** `rm` 命令的 `-f` 选项做什么？
 
 > `-f, --force`
-> 
+>
 > 忽略不存在的文件和参数，永不提示
 
 例如，它有助于删除写保护的文件（前提是你有删除这些文件的适当权限）。
@@ -325,24 +326,20 @@ quest/
 **18)** 你会使用哪个选项来交互式地使用 `rm` 命令删除文件？
 
 > `-i`
-> 
+>
 > 在每次删除前提示
-> 
+
 > `-I`
-> 
+>
 > 在删除超过三个文件之前或递归删除时提示一次；比 `-i` 更不侵入，同时仍然提供对大多数错误的保护
 
 **19)** 使用 `rm` 删除的文件是否可以轻松恢复？你需要采取一些额外步骤或使用特殊命令来使文件更难恢复？
 
-+   使用 `rm` 删除的文件仍然可以通过时间和技巧恢复
-
-    +   [unix.stackexchange: 恢复已删除的文件](https://unix.stackexchange.com/q/80270/109046)
-
-    +   [unix.stackexchange: 恢复意外删除的文件](https://unix.stackexchange.com/q/2677/109046)
-
-+   如果你想使删除的文件更难恢复，可以使用 `shred` 等命令
-
-    +   [wiki.archlinux: 安全擦除磁盘](https://wiki.archlinux.org/title/Securely_wipe_disk)
++ 使用 `rm` 删除的文件仍然可以通过时间和技巧恢复
+  + [unix.stackexchange: 恢复已删除的文件](https://unix.stackexchange.com/q/80270/109046)
+  + [unix.stackexchange: 恢复意外删除的文件](https://unix.stackexchange.com/q/2677/109046)
++ 如果你想使删除的文件更难恢复，可以使用 `shred` 等命令
+  + [wiki.archlinux: 安全擦除磁盘](https://wiki.archlinux.org/title/Securely_wipe_disk)
 
 **20)** 你的 Linux 发行版是否提供将删除的文件发送到垃圾箱的工具（这有助于恢复删除的文件）？
 
@@ -351,12 +348,12 @@ quest/
 **21)** 你会使用哪个选项来交互式地接受/防止 `cp` 命令覆盖同名文件？以及哪个选项可以防止覆盖而无需手动确认？
 
 > `-i, --interactive`
-> 
-> 在覆盖前提示（覆盖了之前的 -n 选项）
-> 
+>
+> 在覆盖前提示（覆盖了之前的 `-n` 选项）
+
 > `-n, --no-clobber`
-> 
-> 不要覆盖现有文件（覆盖了之前的 -i 选项）
+>
+> 不要覆盖现有文件（覆盖了之前的 `-i` 选项）
 
 **22)** `cp` 命令是否允许你重命名正在复制的文件或目录？如果是，能否重命名多个正在复制的文件/目录？
 
@@ -365,19 +362,19 @@ quest/
 **23)** `cp` 命令的 `-u`、`-b` 和 `-t` 选项做什么？
 
 > `-u, --update`
-> 
+>
 > 仅当源文件比目标文件新或目标文件缺失时才复制
-> 
+
 > `--backup[=CONTROL]`
-> 
+>
 > 为每个现有目标文件创建备份
-> 
+
 > `-b`
-> 
+>
 > 与 `--backup` 类似，但不接受参数
-> 
+
 > `-t, --target-directory=DIRECTORY`
-> 
+>
 > 将所有源参数复制到目录中
 
 **24)** 下面两个命令之间的区别是什么？
@@ -385,17 +382,16 @@ quest/
 ```sh
 $ cp ip.txt op.txt
 
-$ mv ip.txt op.txt 
+$ mv ip.txt op.txt
 ```
 
-+   `cp` 创建 `ip.txt` 的新副本，命名为 `op.txt` — 两个具有相同内容的文件
-
-+   `mv` 将 `ip.txt` 重命名为 `op.txt` — 只有一个文件
++ `cp` 创建 `ip.txt` 的新副本，命名为 `op.txt` — 两个具有相同内容的文件
++ `mv` 将 `ip.txt` 重命名为 `op.txt` — 只有一个文件
 
 **25)** 你会使用哪个选项来交互式地接受/阻止 `mv` 命令覆盖同名文件？
 
 > `-i, --interactive`
-> 
+>
 > 在覆盖前提示
 
 **26)** 使用一个或多个命令来匹配以下场景。你应该已经在之前的练习中创建了此目录结构。
@@ -404,11 +400,11 @@ $ mv ip.txt op.txt
 $ tree -F
 .
 ├── hobbies/
-│   ├── painting/
-│   │   └── waterfall.bmp
-│   ├── trekking/
-│   │   └── himalayas.txt
-│   └── writing/
+│   ├── painting/
+│   │   └── waterfall.bmp
+│   ├── trekking/
+│   │   └── himalayas.txt
+│   └── writing/
 └── shopping/
     └── festival.xlsx
 
@@ -420,21 +416,24 @@ $ rm -r hobbies/*/
 $ tree -F
 .
 ├── hobbies/
-│   ├── himalayas.txt
-│   └── waterfall.bmp
+│   ├── himalayas.txt
+│   └── waterfall.bmp
 └── shopping/
     └── festival.xlsx
 
-2 directories, 3 files 
+2 directories, 3 files
 ```
 
 **27)** `mv` 命令的 `-t` 选项做什么？
 
 > `-t, --target-directory=DIRECTORY`
-> 
+>
 > 将所有源参数移动到目录中
 
-**28)** 根据下面的文件名和预期输出确定并实现 `rename` 逻辑。
+
+
+
+**28)** 根据下面的文件名和预期输出确定并实现`rename`逻辑。
 
 ```sh
 $ touch '(2020) report part 1.txt' 'analysis part 3 (2018).log'
@@ -450,23 +449,23 @@ $ ls -1
 analysis_part_3_2018.log 
 ```
 
-**29)** `ln` 命令指定源和目标的方式是否与 `cp` 和 `mv` 命令相同？
+**29)** `ln`命令指定源和目标的方式是否与`cp`和`mv`命令相同？
 
 是的。
 
-**30)** 哪个 `tar` 选项有助于根据文件扩展名压缩归档？此选项可以用作代替 `-z`（用于 `gzip`），`-j`（用于 `bzip2`）和 `-J`（用于 `xz`）。
+**30)** 哪个`tar`选项有助于根据文件扩展名压缩归档？此选项可以用作代替`-z`（用于`gzip`），`-j`（用于`bzip2`）和`-J`（用于`xz`）。
 
 > `-a, --auto-compress`
-> 
+
 > 使用归档后缀来确定压缩程序。
 
 ## Shell 特性
 
-> ![信息](img/147d5d96e6e103c258c8b5f99e9505a9.png) 使用 `globs.sh` 脚本进行与通配符相关的练习，除非另有说明。
-> 
+> ![信息](img/147d5d96e6e103c258c8b5f99e9505a9.png) 使用`globs.sh`脚本进行与通配符相关的练习，除非另有说明。
+
 > ![信息](img/147d5d96e6e103c258c8b5f99e9505a9.png) 为可能需要创建一些文件的练习创建一个临时目录。之后可以删除这样的练习目录。
 
-**1)** 使用 `echo` 命令以如下所示显示文本。根据需要使用适当的引号。
+**1)** 使用`echo`命令以如下所示显示文本。根据需要使用适当的引号。
 
 ```sh
 # can also use: echo "that's"'    great! $x = $y + $z'
@@ -474,7 +473,7 @@ $ echo 'that'\''s    great! $x = $y + $z'
 that's    great! $x = $y + $z 
 ```
 
-**2)** 使用 `echo` 命令以如下格式显示三个变量的值。
+**2)** 使用`echo`命令以如下格式显示三个变量的值。
 
 ```sh
 $ n1=10
@@ -502,7 +501,7 @@ $ ls [0-9]*
 100.sh  42.txt 
 ```
 
-**5)** 列出扩展名不以 `t` 或 `l` 开头的文件名。假设扩展名至少有一个字符。
+**5)** 列出扩展名不以`t`或`l`开头的文件名。假设扩展名至少有一个字符。
 
 ```sh
 # can also use: ls *.[!tl]*
@@ -517,7 +516,7 @@ $ ls *.?
 main.c  math.h 
 ```
 
-**7)** 列出扩展名不是 `txt` 的文件名。
+**7)** 列出扩展名不是`txt`的文件名。
 
 ```sh
 $ shopt -s extglob
@@ -533,7 +532,7 @@ $ ls *[^[:word:]]*.*
 report-00.log  report-02.log  report-04.log  report-98.log 
 ```
 
-列出在 `.` 字符之前至少有一个非单词字符（例如 `-`）的文件。
+列出在`.`字符之前至少有一个非单词字符（例如`-`）的文件。
 
 **9)** 列出扩展名前只有小写字母的文件名。
 
@@ -542,7 +541,7 @@ $ ls +([a-z]).*
 calc.py  hello.py  hi.sh  ip.txt  main.c  math.h  notes.txt 
 ```
 
-**10)** 列出以 `ma` 或 `he` 或 `hi` 开头的文件名。
+**10)** 列出以`ma`或`he`或`hi`开头的文件名。
 
 ```sh
 $ ls ma* he* hi*
@@ -586,17 +585,17 @@ $ ls report*
 report_2020.txt  report_2021.txt  report_2021.txt.bkp  report_2022.txt 
 ```
 
-**13)** 内置的 `set` 命令做什么？
+**13)** 内置的`set`命令做什么？
 
-根据 `help set` 的说明：
+根据`help set`的说明：
 
 > 更改 shell 属性和位置参数的值，或显示 shell 变量的名称和值。
 
-**14)** `|` 管道运算符的作用是什么？你会在什么情况下添加 `tee` 命令？
+**14)** `|`管道运算符的作用是什么？你会在什么情况下添加`tee`命令？
 
-`|` 将一个命令的输出作为输入传递给另一个命令。`tee` 命令可以帮助将命令的输出保存到文件中，并在终端上显示。
+`|`将一个命令的输出作为输入传递给另一个命令。`tee`命令可以帮助将命令的输出保存到文件中，并在终端上显示。
 
-**15)** 你能推断出以下命令的作用吗？*提示*：参见 `help printf`。
+**15)** 你能推断出以下命令的作用吗？*提示*：参见`help printf`。
 
 ```sh
 $ printf '%s\n' apple car dragon
@@ -605,11 +604,11 @@ car
 dragon 
 ```
 
-根据 `help printf` 的说明：
+根据`help printf`的说明：
 
 > 格式根据需要重复使用，以消耗所有参数。如果参数的数量少于格式要求的数量，额外的格式说明符将表现得像提供了零值或空字符串，具体取决于情况。
 
-在上述示例中，格式 `%s\n` 被应用于所有三个参数。
+在上述示例中，格式`%s\n`被应用于所有三个参数。
 
 **16)** 使用大括号展开以及相关的命令和 shell 特性来得到以下结果。*提示*：参见前一个问题。
 
@@ -628,7 +627,7 @@ item_18
 item_20 
 ```
 
-**17)** 在 `ip.txt` 包含的文本如前一个问题所示的情况下，使用大括号展开和相关的命令来得到以下结果。
+**17)** 在`ip.txt`包含的文本如前一个问题所示的情况下，使用大括号展开和相关的命令来得到以下结果。
 
 ```sh
 $ printf '%s\n' apple_{1..3}_banana_{6..8} >> ip.txt
@@ -650,13 +649,13 @@ apple_3_banana_7
 apple_3_banana_8 
 ```
 
-**18)** 如果有的话，`<` 和 `|` shell 运算符之间的区别是什么？
+**18)** 如果有的话，`<`和`|`shell 运算符之间的区别是什么？
 
-+   `<` 重定向运算符可以帮助您将文件数据作为输入传递给命令
++   `<`重定向运算符可以帮助您将文件数据作为输入传递给命令
 
-+   `|` 运算符将一个命令的输出作为输入传递给另一个命令
++   `|`运算符将一个命令的输出作为输入传递给另一个命令
 
-**19)** 通常用哪个字符来表示 `stdin` 数据作为文件参数？
+**19)** 通常用哪个字符来表示`stdin`数据作为文件参数？
 
 `-`
 
@@ -666,13 +665,13 @@ apple_3_banana_8
 
 *b)* `2>` — 将命令的标准错误重定向到文件
 
-*c)* `&>` — 同时重定向 `stdout` 和 `stderr`（覆盖现有文件）
+*c)* `&>` — 同时重定向`stdout`和`stderr`（覆盖现有文件）
 
-*d)* `&>>` — 同时重定向 `stdout` 和 `stderr`（追加到现有文件）
+*d)* `&>>` — 同时重定向`stdout`和`stderr`（追加到现有文件）
 
-*e)* `|&` — 将 `stdout` 和 `stderr` 作为输入传递给另一个命令
+*e)* `|&` — 将`stdout`和`stderr`作为输入传递给另一个命令
 
-**21)** 如果你使用以下 `grep` 命令，`op.txt` 的内容将是什么？
+**21)** 如果你使用以下`grep`命令，`op.txt`的内容将是什么？
 
 ```sh
 # press Ctrl+d after the line containing 'histogram'
@@ -689,7 +688,7 @@ this is a sample line
 histogram 
 ```
 
-**22)** 如果你使用以下命令，`op.txt` 的内容将是什么？
+**22)** 如果你使用以下命令，`op.txt`的内容将是什么？
 
 ```sh
 $ qty=42
@@ -707,7 +706,7 @@ apple 42
 ice cream 
 ```
 
-注意，`qty` 变量的值被替换为 `$qty`。您必须使用 `'end'` 或 `\end` 来避免 shell 替换。
+注意，`qty`变量的值被替换为`$qty`。您必须使用`'end'`或`\end`来避免 shell 替换。
 
 **23)** 修正以下命令以获得以下预期的输出。
 
@@ -753,7 +752,7 @@ $ printf 'hello' | tr 'a-z' 'A-Z' || echo ' there'
 HELLO 
 ```
 
-在这两种情况下，第一个命令成功（退出状态 `0`）。`&&` 和 `||` 是短路运算符。它们的第二个操作数只有在第一个操作数成功或失败时才会执行。
+在这两种情况下，第一个命令成功（退出状态`0`）。`&&`和`||`是短路运算符。它们的第二个操作数只有在第一个操作数成功或失败时才会执行。
 
 **26)** 修正以下命令以获得以下预期的输出。
 
@@ -805,7 +804,7 @@ $ printf '\n\n\ndragon\n\n\nunicorn\n\n\n' | cat -bs
      2  unicorn 
 ```
 
-**2)** 向 `cat` 命令传递适当的参数以获取以下输出。
+**2)** 向`cat`命令传递适当的参数以获取以下输出。
 
 ```sh
 $ cat greeting.txt
@@ -838,9 +837,9 @@ light orange
 deep blue 
 ```
 
-不。输出不同是因为 `tac` 分别为每个输入文件反转内容。
+不。输出不同是因为`tac`分别为每个输入文件反转内容。
 
-**4)** 阅读关于 `tac` 命令的手册，并使用适当的选项和参数以获取以下输出。
+**4)** 阅读关于`tac`命令的手册，并使用适当的选项和参数以获取以下输出。
 
 ```sh
 $ cat blocks.txt
@@ -861,20 +860,20 @@ banana
 ```
 
 > `-b, --before`
-> 
+
 > 在前面而不是后面附加分隔符
-> 
+
 > `-s, --separator=STRING`
-> 
+
 > 使用 STRING 作为分隔符而不是换行符
 
-**5)** `less -n` 和 `less -N` 选项之间的区别是什么？`cat -n` 和 `less -n` 是否具有类似的功能？
+**5)** `less -n`和`less -N`选项之间的区别是什么？`cat -n`和`less -n`是否具有类似的功能？
 
-`less -N` 启用行号，而 `less -n` 禁用行号。`cat -n` 启用行号，因此它不与 `less -n` 功能类似。
+`less -N`启用行号，而`less -n`禁用行号。`cat -n`启用行号，因此它不与`less -n`功能类似。
 
-**6)** 您会使用哪个命令在现有的 `less` 会话中打开另一个文件？您会使用哪些命令在先前和下一个文件之间导航？
+**6)** 您会使用哪个命令在现有的`less`会话中打开另一个文件？您会使用哪些命令在先前和下一个文件之间导航？
 
-您可以使用 `:e filename` 打开另一个文件（类似于 Vim 文本编辑器）。您可以使用 `:p` 和 `:n` 在上一个文件和下一个文件之间切换。
+您可以使用`:e filename`打开另一个文件（类似于 Vim 文本编辑器）。您可以使用`:p`和`:n`在上一个文件和下一个文件之间切换。
 
 **7)** 使用适当的命令和 shell 功能以获取以下输出。
 
@@ -922,7 +921,7 @@ papaya
 apple 
 ```
 
-**10)** 使用 `head` 和 `tail` 命令的组合从给定输入中获取第 11 到 14 个字符。
+**10)** 使用`head`和`tail`命令的组合从给定输入中获取第 11 到 14 个字符。
 
 ```sh
 # can also use: tail -c +11 | head -c4
@@ -930,14 +929,16 @@ $ printf 'apple\nfig\ncarpet\njeep\nbus\n' | head -c14 | tail -c +11
 carp 
 ```
 
-**11)** 从输入文件 `table.txt` 和 `fruits.txt` 中提取前六个字节。
+**11)** 从输入文件`table.txt`和`fruits.txt`中提取前六个字节。
+
+
 
 ```sh
 $ head -q -c6 table.txt fruits.txt
 brown banana 
 ```
 
-**12)** 从输入文件 `fruits.txt` 和 `table.txt` 中提取最后六个字节。
+**12)** 从输入文件`fruits.txt`和`table.txt`中提取最后六个字节。
 
 ```sh
 $ tail -q -c6 fruits.txt table.txt
@@ -947,11 +948,11 @@ mango
 
 ## 搜索文件和文件名
 
-> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 对于 `grep` 练习，除非另有说明，请使用 [example_files/text_files](https://github.com/learnbyexample/cli-computing/tree/master/example_files/text_files) 目录作为输入文件。
-> 
-> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 对于 `find` 练习，除非另有说明，请使用 `find.sh` 脚本。
+> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 对于`grep`练习，除非另有说明，请使用 [example_files/text_files](https://github.com/learnbyexample/cli-computing/tree/master/example_files/text_files)目录作为输入文件。
 
-**1)** 显示来自输入文件 `blocks.txt`、`ip.txt` 和 `uniform.txt` 包含 `an` 的行。显示带有和没有文件名前缀的结果。
+> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 对于`find`练习，除非另有说明，请使用`find.sh`脚本。
+
+**1)** 显示来自输入文件`blocks.txt`、`ip.txt`和`uniform.txt`包含`an`的行。显示带有和没有文件名前缀的结果。
 
 ```sh
 $ grep 'an' blocks.txt ip.txt uniform.txt
@@ -965,14 +966,14 @@ light orange
 mango 
 ```
 
-**2)** 显示 `sample.txt` 输入文件中包含整个单词 `he` 的行。
+**2)** 显示`sample.txt`输入文件中包含整个单词`he`的行。
 
 ```sh
 $ grep -w 'he' sample.txt
 14) He he he 
 ```
 
-**3)** 仅匹配包含 `car` 的整行，不考虑大小写。匹配的行应显示带有行号前缀。
+**3)** 仅匹配包含`car`的整行，不考虑大小写。匹配的行应显示带有行号前缀。
 
 ```sh
 $ printf 'car\nscared\ntar car par\nCar\n' | grep -nix 'car'
@@ -980,7 +981,7 @@ $ printf 'car\nscared\ntar car par\nCar\n' | grep -nix 'car'
 4:Car 
 ```
 
-**4)** 显示 `purchases.txt` 中除包含 `tea` 的行之外的所有行。
+**4)** 显示`purchases.txt`中除包含`tea`的行之外的所有行。
 
 ```sh
 $ grep -v 'tea' purchases.txt
@@ -991,10 +992,10 @@ toothpaste
 soap 
 ```
 
-**5)** 显示 `sample.txt` 中包含 `do` 但不包含 `it` 的所有行。
+**5)** 显示`sample.txt`中包含`do`但不包含`it`的所有行。
 
 ```sh
-# can also use: grep -P '^(?!.*it).*do' sample.txt
+# 也可以使用：grep -P '^(?!.*it).*do' sample.txt
 $ grep 'do' sample.txt | grep -v 'it'
 13) Much ado about nothing 
 ```
@@ -1020,9 +1021,7 @@ $ grep --no-group-separator -B1 -wE 'are|he' sample.txt
 14) He he he 
 ```
 
-> `--no-group-separator`
-> 
-> 当使用`-A`、`-B`或`-C`时，不要在行组之间打印分隔符。
+> `--no-group-separator`：当使用`-A`、`-B`或`-C`时，不要在行组之间打印分隔符。
 
 **8)** 提取所有包含或不包含文本的`()`对，前提是它们内部不包含`()`字符。
 
@@ -1056,7 +1055,7 @@ subtle
 sets
 store_2
 
-# alternate solutions, but these won't scale well with more conditions
+# 替代方案，但在更多条件下扩展性不好
 $ echo "$words" | grep -ow 's\w*t\w*' | grep 'e'
 $ echo "$words" | grep -owE 's\w*(t\w*e|e\w*t)\w*' 
 ```
@@ -1064,7 +1063,7 @@ $ echo "$words" | grep -owE 's\w*(t\w*e|e\w*t)\w*'
 **11)** 提取所有首尾字符相同的完整单词。
 
 ```sh
-# can also use: grep -owE '(\w)(\w*\1)?'
+# 也可以使用：grep -owE '(\w)(\w*\1)?'
 $ echo 'oreo not a _oh_ pip RoaR took 22 Pop' | grep -owE '\w|(\w)\w*\1'
 oreo
 a
@@ -1107,7 +1106,7 @@ $ echo 'dragon,42,unicorn,3.14,shapeshifter\n' | grep -oP ',\K.+(?=,)'
 **15)** 递归搜索包含`ello`的文件。
 
 ```sh
-# change to the 'scripts' directory and source the 'grep.sh' script
+# 切换到'scripts'目录并source'grep.sh'脚本
 $ source grep.sh
 
 $ grep -rl 'ello'
@@ -1120,7 +1119,7 @@ colors_2
 **16)** 递归搜索包含`blue`的文件，但不要在`backups`目录内搜索。
 
 ```sh
-# change to the 'scripts' directory and source the 'grep.sh' script
+# 切换到'scripts'目录并source'grep.sh'脚本
 $ source grep.sh
 
 $ grep -rl --exclude-dir='backups' 'blue'
@@ -1132,7 +1131,7 @@ colors_2
 **17)** 递归搜索包含`blue`的文件，但文件同时包含`teal`时不搜索。
 
 ```sh
-# change to the 'scripts' directory and source the 'grep.sh' script
+# 切换到'scripts'目录并source'grep.sh'脚本
 $ source grep.sh
 
 $ grep -rlZ 'blue' | xargs -r0 grep -L 'teal'
@@ -1144,7 +1143,7 @@ backups/color list.txt
 **18)** 在`backups`目录中查找所有常规文件。
 
 ```sh
-# change to the 'scripts' directory and source the 'find.sh' script
+# 切换到'scripts'目录并source'find.sh'脚本
 $ source find.sh
 
 $ find backups -type f
@@ -1170,7 +1169,7 @@ $ find -type f -name '*.[psv]*'
 **20)** 找出所有名称中不包含小写字母`g`到`l`的常规文件。
 
 ```sh
-# can also use: find -type f ! -name '*[g-l]*'
+# 也可以使用：find -type f ! -name '*[g-l]*'
 $ find -type f -not -name '*[g-l]*'
 ./todos/TRIP.txt
 ./todos/wow.txt 
@@ -1179,7 +1178,7 @@ $ find -type f -not -name '*[g-l]*'
 **21)** 找出所有路径中至少有一个目录名以`p`或`d`开头的常规文件。
 
 ```sh
-# can also use: find -type f -regex '.*/[pd].*/.*'
+# 也可以使用：find -type f -regex '.*/[pd].*/.*'
 $ find -type f -path '*/[pd]*/*'
 ./projects/tictactoe/game.py
 ./projects/calculator/calc.sh
@@ -1200,7 +1199,7 @@ $ find -type d -name '*[bd]*'
 **23)** 找出所有隐藏目录。
 
 ```sh
-# can also use: find -mindepth 1 -type d -name '.*'
+# 也可以使用：find -mindepth 1 -type d -name '.*'
 $ find -type d -name '.?*'
 ./projects/.venv 
 ```
@@ -1221,18 +1220,14 @@ $ find -mindepth 2 -maxdepth 2 -type f
 
 `m`代表修改时间戳，`a`代表访问时间戳。这些选项与`24`小时周期一起使用。
 
-> `-atime n`
-> 
-> 文件最后访问时间为`n*24`小时前。当`find`确定文件上次访问的 24 小时周期数时，任何小数部分将被忽略，因此要匹配`-atime +1`，文件至少需要被访问两天。
-> 
-> `-mtime n`
-> 
-> 文件数据最后修改时间为`n*24`小时前。参见注释了解`-atime`如何影响文件修改时间的解释。
+> `-atime n`: 文件最后访问时间为`n*24`小时前。当`find`确定文件上次访问的24小时周期数时，任何小数部分将被忽略，因此要匹配`-atime +1`，文件至少需要被访问两天。
+
+> `-mtime n`: 文件数据最后修改时间为`n*24`小时前。参见注释了解`-atime`如何影响文件修改时间的解释。
 
 **26)** 找出所有空常规文件。
 
 ```sh
-# can also use: find -type f -size 0
+# 也可以使用：find -type f -size 0
 $ find -type f -empty
 ./projects/tictactoe/game.py
 ./projects/calculator/calc.sh
@@ -1275,9 +1270,7 @@ $ find -type f -executable
 ./hello_world.py 
 ```
 
-> `-可执行`
-> 
-> 匹配当前用户可执行的可执行文件和可搜索的目录（在文件名解析意义上）。
+> `-executable`: 匹配当前用户可执行的可执行文件和可搜索的目录（在文件名解析意义上）。
 
 **30)** 列出至少一个将`find`输出通过管道传递到`xargs`命令而不是使用`find -exec`选项的使用案例。
 
@@ -1288,19 +1281,19 @@ $ find -type f -executable
 来自[unix.stackexchange: find 和 locate 的优缺点](https://unix.stackexchange.com/q/60205/109046)：
 
 > `locate`使用预构建的数据库，该数据库应定期更新，而`find`则遍历文件系统以定位文件。
-> 
+
 > 因此，`locate`比`find`快得多，但如果数据库（可以看作是一个缓存）没有更新，则可能不准确（参见`updatedb`命令）。
 
 ## 文件属性
 
-> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 使用[example_files/text_files](https://github.com/learnbyexample/cli-computing/tree/master/example_files/text_files)目录作为以下练习中使用的输入文件，除非另有说明。
-> 
+> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 使用 [example_files/text_files](https://github.com/learnbyexample/cli-computing/tree/master/example_files/text_files)目录作为以下练习中使用的输入文件，除非另有说明。
+
 > ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 为可能需要您创建一些文件和目录的练习创建一个临时目录。您可以在之后删除此类练习目录。
 
-**1)** 将`greeting.txt`输入文件中的行数保存到`lines` shell 变量中。
+**1)** 将`greeting.txt`输入文件中的行数保存到`lines`shell变量中。
 
 ```sh
-$ lines=$(wc -l &LTgreeting.txt)
+$ lines=$(wc -l greeting.txt)
 $ echo "$lines"
 2 
 ```
@@ -1330,22 +1323,18 @@ $ printf 'greeting.txt\0scores.csv' | wc --files0-from=-
 6 10 95 total 
 ```
 
-> `--files0-from=F`
-> 
-> 从文件 F 中读取由 NUL 终止的名称指定的文件中的输入；如果 F 是-，则从标准输入读取名称
+> `--files0-from=F`: 从文件F中读取由NUL终止的名称指定的文件中的输入；如果F是`-`，则从标准输入读取名称。
 
 **5)** `wc -c`和`wc -m`选项之间的区别是什么？以及您会使用哪个选项来获取最长行长度？
 
-> `-c, --bytes`
-> 
-> 打印字节数
-> 
-> `-m, --chars`
-> 
-> 打印字符数
-> 
+> `-c, --bytes`: 打印字节数。
+
+> `-m, --chars`: 打印字符数。
+
+
+
 > `-L, --max-line-length`
-> 
+
 > 打印最大显示宽度
 
 **6)** 查找以`.log`结尾的文件名，并以可读格式报告它们的大小。对于第一种情况，使用`find+du`组合，对于第二种情况，使用`ls`命令（带有适当的 shell 功能）。
@@ -1380,7 +1369,7 @@ $ du -sc --si *
 **8)** `du --apparent-size`选项的作用是什么？
 
 > `--apparent-size`
-> 
+
 > 打印明显大小，而不是磁盘使用情况；尽管明显大小通常较小，但由于文件中的空洞（稀疏文件）、内部碎片、间接块等，它可能更大
 
 **9)** 你将在什么情况下使用 `df` 命令而不是 `du`？哪个 `df` 命令选项将帮助你仅报告感兴趣的特定字段？
@@ -1396,8 +1385,8 @@ df (1)               - report file system disk space usage
 要仅获取感兴趣的特定字段：
 
 > `--output[=FIELD_LIST]`
-> 
-> 使用由 FIELD_LIST 定义的输出格式，或者如果省略 FIELD_LIST，则打印所有字段。
+
+> 使用由 `FIELD_LIST` 定义的输出格式，或者如果省略 `FIELD_LIST`，则打印所有字段。
 
 **10)** 按照以下格式显示 `scores.csv` 和 `timings.txt` 文件的大小。
 
@@ -1410,7 +1399,7 @@ timings.txt: 49
 **11)** 哪个 `touch` 选项可以帮助你在文件尚不存在时防止文件创建？
 
 > `-c, --no-create`
-> 
+
 > 不创建任何文件
 
 **12)** 假设 `new_file.txt` 在当前工作目录中不存在。下面显示的 `stat` 命令的输出将会是什么？
@@ -1422,8 +1411,8 @@ $ stat -c '%y' new_file.txt
 ```
 
 > `-t STAMP`
-> 
-> 使用 [[CC]YY]MMDDhhmm[.ss] 而不是当前时间
+
+> 使用 `[[CC]YY]MMDDhhmm[.ss]` 而不是当前时间
 
 **13)** 以下 `touch` 命令是否有效？如果是，随后的 `stat` 命令的输出将会是什么？
 
@@ -1480,19 +1469,19 @@ drwxrwxr-x
 
 显示的 10 个字符与文件类型和权限相关。第一个字符表示 **文件类型**。最常见的是：
 
-+   `-` 普通文件
++ `-` 普通文件
 
-+   `d` 目录
++ `d` 目录
 
-+   `l` 符号链接
++ `l` 符号链接
 
 其余九个字符代表三组 **文件权限**，分别为 *用户* (`u`)、*组* (`g`) 和 *其他人* (`o`)，顺序如下。
 
-+   *用户* — 文件所有者
++ *用户* — 文件所有者
 
-+   *组* — 作为组的一部分具有文件访问权限的用户
++ *组* — 作为组的一部分具有文件访问权限的用户
 
-+   *其他人* — 除了所有者之外的其他人
++ *其他人* — 除了所有者之外的其他人
 
 **权限参考表：**
 
@@ -1560,11 +1549,11 @@ $ stat -c '%a %A' test_dir
 
 **1)** 你如何调用一个在后台执行的命令？在作业启动后，你会做什么来将其推送到后台？你可以使用哪些命令来跟踪活动作业？
 
-+   在命令后添加一个 `&` 字符将在后台执行它
++ 在命令后添加一个 `&` 字符将在后台执行它
 
-+   `Ctrl+z`（挂起当前运行作业）后跟 `bg`（将最近挂起的作业推送到后台）
++ `Ctrl+z`（挂起当前运行作业）后跟 `bg`（将最近挂起的作业推送到后台）
 
-+   `jobs` 或 `ps` 命令有助于跟踪活动作业
++ `jobs` 或 `ps` 命令有助于跟踪活动作业
 
 **2)** 作业编号旁边的 `+` 和 `-` 符号表示什么？
 
@@ -1576,24 +1565,24 @@ $ stat -c '%a %A' test_dir
 
 从 `info bash`（章节 *作业控制基础*）：
 
-> 在 shell 中有许多引用作业的方法。字符 `%` 引入作业规范（JOBSPEC）。
-> 
+> 在 shell 中有许多引用作业的方法。字符 `%` 引入作业规范（`JOBSPEC`）。
+
 > 作业编号 `n` 可以称为 `%n`。
 
 **4)** 哪个选项可以帮助你自定义 `ps` 命令所需的输出字段？
 
 > `-o format`
-> 
+
 > 用户定义的格式。格式是一个空白分隔或逗号分隔的列表，它提供了一种指定单个输出列的方法。
 
 **5)** `pgrep -a` 和 `pgrep -l` 选项之间的区别是什么？
 
 > `-a, --list-full`
-> 
+
 > 列出完整的命令行以及进程 ID。
-> 
+
 > `-l, --list-name`
-> 
+
 > 列出进程名称以及进程 ID。
 
 **6)** 如果作业编号是 `2`，你会使用 `kill %2` 还是 `kill 2` 来向该进程发送 `SIGTERM`？
@@ -1621,7 +1610,7 @@ free (1)             - Display amount of free and used memory in the system
 
 ## 多功能文本处理工具
 
-> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 使用 [example_files/text_files](https://github.com/learnbyexample/cli-computing/tree/master/example_files/text_files) 目录中的输入文件进行以下练习。
+> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 使用 `example_files/text_files` 目录中的输入文件进行以下练习。
 
 **1)** 对于给定的输入，将所有 `0xA0` 替换为 `0x50`，将 `0xFF` 替换为 `0x7F`。
 
@@ -1754,25 +1743,27 @@ The dot meta character
 
 **10)** 将所有 `e` 替换为 `3`，除了前两个匹配项。
 
+
+
 ```sh
 $ echo 'asset sets tests site' | sed 's/e/3/3g'
 asset sets t3sts sit3
 
 $ echo 'sample item teem eel' | sed 's/e/3/3g'
-sample item t33m 33l 
+sample item t33m 33l
 ```
 
-**11)** 以下示例字符串使用 `,` 作为分隔符，字段值也可以为空。使用 `sed` 仅替换第三个字段为 `42`。
+**11)** 以下示例字符串使用`,`作为分隔符，字段值也可以为空。使用`sed`仅替换第三个字段为`42`。
 
 ```sh
 $ echo 'lion,,ant,road,neon' | sed 's/[^,]*/42/3'
 lion,,42,road,neon
 
 $ echo ',,,' | sed 's/[^,]*/42/3'
-,,42, 
+,,42,
 ```
 
-**12)** 对于输入文件 `table.txt`，计算并显示每行最后字段的数字乘积。考虑空格为该文件的字段分隔符。
+**12)** 对于输入文件`table.txt`，计算并显示每行最后字段的数字乘积。考虑空格为该文件的字段分隔符。
 
 ```sh
 $ cat table.txt
@@ -1784,10 +1775,10 @@ $ awk 'BEGIN{p = 1} {p *= $NF} END{print p}' table.txt
 -923.16
 
 # alternate solutions
-$ perl -lane 'BEGIN{$p = 1} {$p *= $F[-1]} END{print $p}' table.txt 
+$ perl -lane 'BEGIN{$p = 1} {$p *= $F[-1]} END{print $p}' table.txt
 ```
 
-**13)** 从每条输入行中提取 `()` 或 `)(` 之间的内容。假设每行中 `()` 字符只会出现一次。
+**13)** 从每条输入行中提取`()`或`)(`之间的内容。假设每行中`()`字符只会出现一次。
 
 ```sh
 $ printf 'apple(ice)pie\n(almond)pista\nyo)yoyo(yo\n'
@@ -1798,10 +1789,10 @@ yo)yoyo(yo
 $ printf 'apple(ice)pie\n(almond)pista\nyo)yoyo(yo\n' | awk -F'[()]' '{print $2}'
 ice
 almond
-yoyo 
+yoyo
 ```
 
-**14)** 对于输入文件 `scores.csv`，以下格式显示 `Name` 和 `Physics` 字段。
+**14)** 对于输入文件`scores.csv`，以下格式显示`Name`和`Physics`字段。
 
 ```sh
 $ cat scores.csv
@@ -1819,7 +1810,7 @@ Lin:83
 # alternate solutions
 $ awk -F, -v OFS=: '{print $1, $3}' scores.csv
 $ perl -F, -lane 'print "$F[0]:$F[2]"' scores.csv
-$ perl -F, -lane 'print join ":", @F[0,2]' scores.csv 
+$ perl -F, -lane 'print join ":", @F[0,2]' scores.csv
 ```
 
 **15)** 按以下格式提取并显示第三和第一个单词。
@@ -1833,20 +1824,20 @@ concession_42:just
 
 # alternate solutions
 $ echo '%whole(Hello)--{doubt}==ado==' | perl -lne '@F = /\w+/g; print "$F[2]:$F[0]"'
-$ echo 'just,\joint*,concession_42<=nice' | perl -lne '@F = /\w+/g; print "$F[2]:$F[0]"' 
+$ echo 'just,\joint*,concession_42<=nice' | perl -lne '@F = /\w+/g; print "$F[2]:$F[0]"'
 ```
 
-**16)** 对于输入文件 `scores.csv`，添加一个名为 **GP** 的列，该列通过将 50% 的权重分配给数学，以及 25% 分别分配给物理和化学来计算。
+**16)** 对于输入文件`scores.csv`，添加一个名为`GP`的列，该列通过将50%的权重分配给数学，以及25%分别分配给物理和化学来计算。
 
 ```sh
 $ awk -F, -v OFS=, '{$(NF+1) = NR==1 ? "GP" : ($2/2 + ($3+$4)/4)} 1' scores.csv
 Name,Maths,Physics,Chemistry,GP
 Ith,100,100,100,100
 Cy,97,98,95,96.75
-Lin,78,83,80,79.75 
+Lin,78,83,80,79.75
 ```
 
-**17)** 从 `para.txt` 输入文件中显示包含任何数字字符的所有段落。
+**17)** 从`para.txt`输入文件中显示包含任何数字字符的所有段落。
 
 ```sh
 $ cat para.txt
@@ -1862,7 +1853,7 @@ brown earth
 
 $ awk -v RS= '/[0-9]/' para.txt
 2 apples
-12 bananas 
+12 bananas
 ```
 
 **18)** 输入具有 ASCII NUL 字符作为记录分隔符。将其更改为以下所示的点和新行字符。
@@ -1872,20 +1863,20 @@ $ printf 'apple\npie\0banana\ncherry\0' | awk -v RS='\0' -v ORS='.\n' '1'
 apple
 pie.
 banana
-cherry. 
+cherry.
 ```
 
-**19)** 对于输入文件 `sample.txt`，只有当在两行之前找到 `you` 时，才打印包含 `do` 的匹配行。例如，如果 `do` 在第 10 行，而第 8 行包含 `you`，则应打印第 10 行。
+**19)** 对于输入文件`sample.txt`，只有当在两行之前找到`you`时，才打印包含`do`的匹配行。例如，如果`do`在第10行，而第8行包含`you`，则应打印第10行。
 
 ```sh
 $ awk 'p2 ~ /you/ && /do/; {p2=p1; p1=$0}' sample.txt
  6) Just do-it
 
 # alternate solutions
-$ perl -ne 'print if $p2 =~ /you/ && /do/; $p2=$p1; $p1=$_' sample.txt 
+$ perl -ne 'print if $p2 =~ /you/ && /do/; $p2=$p1; $p1=$_' sample.txt
 ```
 
-**20)** 对于输入文件 `blocks.txt`，从包含 `%=%=` 的行提取内容，直到但不包括下一个这样的行。要提取的块由通过 `-v` 选项传递的变量 `n` 指示。
+**20)** 对于输入文件`blocks.txt`，从包含`%=%=`的行提取内容，直到但不包括下一个这样的行。要提取的块由通过`-v`选项传递的变量`n`指示。
 
 ```sh
 $ cat blocks.txt
@@ -1903,19 +1894,19 @@ banana
 $ awk -v n=2 '$0 == "%=%="{c++} c==n' blocks.txt
 %=%=
 brown
-green 
+green
 ```
 
-**21)** 使用 `awk` 命令显示 `c1.txt` 中存在但不在 `c2.txt` 中的行。
+**21)** 使用`awk`命令显示`c1.txt`中存在但不在`c2.txt`中的行。
 
 ```sh
 $ awk 'NR==FNR{a[$0]; next} !($0 in a)' c2.txt c1.txt
 Brown
 Purple
-Teal 
+Teal
 ```
 
-**22)** 通过根据 `names.txt` 文件中的名称列表匹配第一个字段来显示 `scores.csv` 中的行。
+**22)** 通过根据`names.txt`文件中的名称列表匹配第一个字段来显示`scores.csv`中的行。
 
 ```sh
 $ printf 'Ith\nLin\n' > names.txt
@@ -1924,10 +1915,10 @@ $ awk -F, 'NR==FNR{a[$1]; next} $1 in a' names.txt scores.csv
 Ith,100,100,100
 Lin,78,83,80
 
-$ rm names.txt 
+$ rm names.txt
 ```
 
-**23)** 仅保留 `duplicates.txt` 输入文件中重复行的第一个副本。仅使用最后字段的内容来确定重复项。
+**23)** 仅保留`duplicates.txt`输入文件中重复行的第一个副本。仅使用最后字段的内容来确定重复项。
 
 ```sh
 $ cat duplicates.txt
@@ -1946,10 +1937,10 @@ blue,ruby,water,333
 dark red,sky,rose,555
 
 # alternate solutions
-$ perl -F, -lane 'print if !$seen{$F[-1]}++' duplicates.txt 
+$ perl -F, -lane 'print if !$seen{$F[-1]}++' duplicates.txt
 ```
 
-**24)** 对于输入文件 `table.txt`，如果第二个字段以 `b` 开头，则打印输入行。使用 `awk` 和 `perl` 构建解决方案。
+**24)** 对于输入文件`table.txt`，如果第二个字段以`b`开头，则打印输入行。使用`awk`和`perl`构建解决方案。
 
 ```sh
 $ awk '$2 ~ /^b/' table.txt
@@ -1958,10 +1949,10 @@ yellow banana window shoes 3.14
 
 $ perl -lane 'print if $F[1] =~ /^b/' table.txt
 brown bread mat hair 42
-yellow banana window shoes 3.14 
+yellow banana window shoes 3.14
 ```
 
-**25)** 对于输入文件 `table.txt`，仅保留倒数第二个字段。将更改写回输入文件本身。原始内容应保存到 `table.txt.bkp`。之后，从该备份文件恢复内容。
+**25)** 对于输入文件`table.txt`，仅保留倒数第二个字段。将更改写回输入文件本身。原始内容应保存到`table.txt.bkp`。之后，从该备份文件恢复内容。
 
 ```sh
 # make the changes
@@ -1980,16 +1971,16 @@ table.txt
 $ cat table.txt
 brown bread mat hair 42
 blue cake mug shirt -7
-yellow banana window shoes 3.14 
+yellow banana window shoes 3.14
 ```
 
-**26)** 反转 `table.txt` 输入文件的第一字段内容。
+**26)** 反转`table.txt`输入文件的第一字段内容。
 
 ```sh
 $ perl -lane '$F[0] = reverse $F[0]; print "@F"' table.txt
 nworb bread mat hair 42
 eulb cake mug shirt -7
-wolley banana window shoes 3.14 
+wolley banana window shoes 3.14
 ```
 
 **27)** 按字典顺序对给定的逗号分隔输入进行排序。将输出字段分隔符更改为冒号字符。
@@ -1997,7 +1988,7 @@ wolley banana window shoes 3.14
 ```sh
 $ ip='floor,bat,to,dubious,four'
 $ echo "$ip" | perl -F, -lane 'print join ":", sort @F'
-bat:dubious:floor:four:to 
+bat:dubious:floor:four:to
 ```
 
 **28)** 过滤包含数字字符的字段。
@@ -2005,10 +1996,10 @@ bat:dubious:floor:four:to
 ```sh
 $ ip='5pearl 42 east 1337 raku_6 lion 3.14'
 $ echo "$ip" | perl -lane 'print join " ", grep {/\d/} @F'
-5pearl 42 1337 raku_6 3.14 
+5pearl 42 1337 raku_6 3.14
 ```
 
-**29)** 以下输入中有几个以数字字符结尾的单词。将包含 `test` 的单词更改为以下输出所示。也就是说，将匹配部分重新编号为 `1`、`2` 等。不包含 `test` 的单词不应更改。
+**29)** 以下输入中有几个以数字字符结尾的单词。将包含`test`的单词更改为以下输出所示。也就是说，将匹配部分重新编号为`1`、`2`等。不包含`test`的单词不应更改。
 
 ```sh
 $ ip='test_12:test123\nanother_test_4,no_42\n'
@@ -2018,10 +2009,10 @@ another_test_4,no_42
 
 $ printf '%b' "$ip" | perl -pe 's/test\w*?\K\d+/++$i/ge'
 test_1:test2
-another_test_3,no_42 
+another_test_3,no_42
 ```
 
-**30)** 对于输入文件 `table.txt`，将第三字段的内容更改为全部大写。使用 `sed`、`awk` 和 `perl` 构建解决方案。
+**30)** 对于输入文件`table.txt`，将第三字段的内容更改为全部大写。使用`sed`、`awk`和`perl`构建解决方案。
 
 ```sh
 $ sed 's/[^ ]*/\U&/3' table.txt
@@ -2037,14 +2028,14 @@ yellow banana WINDOW shoes 3.14
 $ perl -lane '$F[2] = uc $F[2]; print "@F"' table.txt
 brown bread MAT hair 42
 blue cake MUG shirt -7
-yellow banana WINDOW shoes 3.14 
+yellow banana WINDOW shoes 3.14
 ```
 
 ## 排序内容
 
-> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 使用以下练习中使用的输入文件所在的 [example_files/text_files](https://github.com/learnbyexample/cli-computing/tree/master/example_files/text_files) 目录。
+> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 使用以下练习中使用的输入文件所在的[example_files/text_files](https://github.com/learnbyexample/cli-computing/tree/master/example_files/text_files)目录。
 
-**1)** 默认的 `sort` 不适用于数字。更正以下使用的命令：
+**1)** 默认的`sort`不适用于数字。更正以下使用的命令：
 
 ```sh
 # wrong output
@@ -2061,17 +2052,17 @@ $ printf '100\n10\n20\n3000\n2.45\n' | sort -n
 10
 20
 100
-3000 
+3000
 ```
 
-**2)** 哪个 `sort` 选项可以帮助你忽略大小写？
+**2)** 哪个`sort`选项可以帮助你忽略大小写？
 
 ```sh
 $ printf 'Super\nover\nRUNE\ntea\n' | LC_ALL=C sort -f
 over
 RUNE
 Super
-tea 
+tea
 ```
 
 **3)** 阅读`sort`手册，并使用适当的选项来获取以下输出。
@@ -2089,43 +2080,43 @@ $ printf '+120\n-1.53\n3.14e+4\n42.1e-2' | sort -g
 -1.53
 42.1e-2
 +120
-3.14e+4 
+3.14e+4
 ```
 
 > `-g, --general-numeric-sort`
-> 
+
 > 根据一般数值进行比较
 
-**4)** 使用第二字段的内容按数值升序排序 `scores.csv` 文件。应保留标题行作为第一行，如下所示。*提示*：参见 Shell 特性章节。
+**4)** 使用第二字段的内容按数值升序排序`scores.csv`文件。应保留标题行作为第一行，如下所示。*提示*：参见 Shell 特性章节。
 
 ```sh
 $ (sed -u '1q' ; sort -t, -k2,2n) < scores.csv
 Name,Maths,Physics,Chemistry
 Lin,78,83,80
 Cy,97,98,95
-Ith,100,100,100 
+Ith,100,100,100
 ```
 
-**5)** 按第四列数字降序排序 `duplicates.txt` 的内容。仅保留具有相同数字的第一行副本。
+**5)** 按第四列数字降序排序`duplicates.txt`的内容。仅保留具有相同数字的第一行副本。
 
 ```sh
 $ sort -t, -k4,4nr -u duplicates.txt
 dark red,sky,rose,555
 blue,ruby,water,333
 dark red,ruby,rose,111
-brown,toy,bread,42 
+brown,toy,bread,42
 ```
 
-**6)** 如果输入未排序，`uniq` 会抛出错误吗？你认为以下输入的输出会是什么？
+**6)** 如果输入未排序，`uniq`会抛出错误吗？你认为以下输入的输出会是什么？
 
-`uniq` 不一定需要输入已排序。相邻行用于比较目的。
+`uniq`不一定需要输入已排序。相邻行用于比较目的。
 
 ```sh
 $ printf 'red\nred\nred\ngreen\nred\nblue\nblue' | uniq
 red
 green
 red
-blue 
+blue
 ```
 
 **7)** 仅保留基于输入行前两个字符的唯一条目。如有必要，对输入进行排序。
@@ -2139,7 +2130,7 @@ $ printf '3) cherry\n1) apple\n2) banana\n1) almond\n'
 
 $ printf '3) cherry\n1) apple\n2) banana\n1) almond\n' | sort | uniq -u -w2
 2) banana
-3) cherry 
+3) cherry
 ```
 
 **8)** 计算输入行重复的次数，并按以下格式显示结果。
@@ -2148,17 +2139,17 @@ $ printf '3) cherry\n1) apple\n2) banana\n1) almond\n' | sort | uniq -u -w2
 $ printf 'brown\nbrown\nbrown\ngreen\nbrown\nblue\nblue' | sort | uniq -c | sort -n
       1 green
       2 blue
-      4 brown 
+      4 brown
 ```
 
-**9)** 使用 `comm` 命令显示 `c1.txt` 中存在但不在 `c2.txt` 中的行。假设输入文件已经排序。
+**9)** 使用`comm`命令显示`c1.txt`中存在但不在`c2.txt`中的行。假设输入文件已经排序。
 
 ```sh
 # can also use: comm -13 c2.txt c1.txt
 $ comm -23 c1.txt c2.txt
 Brown
 Purple
-Teal 
+Teal
 ```
 
 **10)** 使用适当的选项来获取以下预期的输出。
@@ -2169,10 +2160,12 @@ $ join <(printf 'apple 2\nfig 5') <(printf 'Fig 10\nmango 4')
 
 # expected output
 $ join -i <(printf 'apple 2\nfig 5') <(printf 'Fig 10\nmango 4')
-fig 5 10 
+fig 5 10
 ```
 
-**11)** 如果有的话，`sort -u` 和 `uniq -u` 选项之间有什么区别？
+**11)** 如果有的话，`sort -u`和`uniq -u`选项之间有什么区别？
+
+
 
 `sort -u` 保留被认为是重复的第一份副本。`uniq -u` 仅保留唯一副本（即，重复的副本甚至不会成为输出的一部分）。
 
@@ -2198,12 +2191,12 @@ $ cmp -i2 x1.txt x2.txt
 $ echo $?
 0
 
-$ rm x[12].txt 
+$ rm x[12].txt
 ```
 
 > `-i, --ignore-initial=SKIP`
 > 
-> 跳过两个输入的前 SKIP 个字节
+> 跳过两个输入的前 `SKIP` 个字节
 
 **3)** `diff -d` 选项的作用是什么？
 
@@ -2215,7 +2208,7 @@ $ rm x[12].txt
 
 > `--color[=WHEN]`
 > 
-> 着色输出；WHEN 可以是 `never`、`always` 或 `auto`（默认值）
+> 着色输出；`WHEN` 可以是 `never`、`always` 或 `auto`（默认值）
 
 **5)** 使用适当的选项获取以下预期的输出。
 
@@ -2230,7 +2223,7 @@ $ diff -W 40 --left-column -y f1.txt f2.txt
 1                  (
 2                  |    hello
 3                  (
-world              |    4 
+world              |    4
 ```
 
 > `--left-column`
@@ -2254,7 +2247,7 @@ $ diff d1.txt d2.txt
 $ diff -si d1.txt d2.txt
 Files d1.txt and d2.txt are identical
 
-$ rm d[12].txt 
+$ rm d[12].txt
 ```
 
 ## 各种文本处理工具
@@ -2269,14 +2262,14 @@ $ seq 100 -5 80
 95
 90
 85
-80 
+80
 ```
 
 **2)** 下面的序列可以用 `seq` 生成吗？如果是，怎么做？
 
 ```sh
 $ seq -w -s, 01.5 6
-01.5,02.5,03.5,04.5,05.5 
+01.5,02.5,03.5,04.5,05.5
 ```
 
 **3)** 显示来自 `/usr/share/dict/words`（或等效的词典单词文件）中包含 `s`、`e` 和 `t` 的任意顺序的三个随机单词。下面的输出只是一个示例。
@@ -2286,18 +2279,18 @@ $ seq -w -s, 01.5 6
 $ grep -P '^(?=.*s)(?=.*e).*t' /usr/share/dict/words | shuf -n3
 supplemental
 foresight
-underestimates 
+underestimates
 ```
 
 **4)** 简要描述 `shuf` 命令选项 `-i`、`-e` 和 `-r` 的用途。
 
 > `-i, --input-range=LO-HI`
 > 
-> 将 LO 到 HI 之间的每个数字视为一个输入行
+> 将 `LO` 到 `HI` 之间的每个数字视为一个输入行
 > 
 > `-e, --echo`
 > 
-> 将每个 ARG 视为一个输入行
+> 将每个 `ARG` 视为一个输入行
 > 
 > `-r, --repeat`
 > 
@@ -2317,7 +2310,7 @@ $ echo 'apple,banana,cherry,dates' | awk -F, -v OFS=, '{print $3, $1, $3}'
 cherry,apple,cherry
 
 # alternate solutions
-$ echo 'apple,banana,cherry,dates' | perl -F, -lane 'print join ",", @F[2,0,2]' 
+$ echo 'apple,banana,cherry,dates' | perl -F, -lane 'print join ",", @F[2,0,2]'
 ```
 
 **6)** 显示除了第二个字段之外的内容，格式如下。你能构造两种不同的解决方案吗？
@@ -2327,7 +2320,7 @@ $ echo 'apple,banana,cherry,dates' | cut -d, --output-delimiter=' ' -f1,3-
 apple cherry dates
 
 $ echo '2,3,4,5,6,7,8' | cut -d, --output-delimiter=' ' --complement -f2
-2 4 5 6 7 8 
+2 4 5 6 7 8
 ```
 
 **7)** 从输入行中提取前三个字符，如下所示。你也能使用 `head` 命令来完成这个任务吗？如果不能，为什么？
@@ -2337,7 +2330,7 @@ $ printf 'apple\nbanana\ncherry\ndates\n' | cut -c-3
 app
 ban
 che
-dat 
+dat
 ```
 
 `head` 不能使用，因为它作用于整个输入，而 `cut` 是按行工作的。
@@ -2355,7 +2348,7 @@ $ cut -d, -f1,3 scores.csv | column -s, -t
 Name  Physics
 Ith   100
 Cy    98
-Lin   83 
+Lin   83
 ```
 
 **9)** 以以下格式显示 `table.txt` 的内容。
@@ -2364,7 +2357,7 @@ Lin   83
 $ column -t table.txt
 brown   bread   mat     hair   42
 blue    cake    mug     shirt  -7
-yellow  banana  window  shoes  3.14 
+yellow  banana  window  shoes  3.14
 ```
 
 **10)** 使用 `tr` 命令实现 [ROT13](https://en.wikipedia.org/wiki/ROT13) 密码。
@@ -2374,21 +2367,21 @@ $ echo 'Hello World' | tr 'a-zA-Z' 'n-za-mN-ZA-M'
 Uryyb Jbeyq
 
 $ echo 'Uryyb Jbeyq' | tr 'a-zA-Z' 'n-za-mN-ZA-M'
-Hello World 
+Hello World
 ```
 
 **11)** 仅保留字母、数字和空白字符。
 
 ```sh
 $ echo 'Apple_42 cool,blue Dragon:army' | tr -dc '[:alnum:][:space:]'
-Apple42 coolblue Dragonarmy 
+Apple42 coolblue Dragonarmy
 ```
 
 **12)** 使用 `tr` 获取以下输出。
 
 ```sh
 $ echo '!!hhoowwww !!aaaaaareeeeee!! yyouuuu!!' | tr -sd '!' 'a-z'
-how are you 
+how are you
 ```
 
 **13)** `paste -s` 对多个输入文件分别工作。如果你需要将所有输入文件视为单个源，你会如何解决这个问题？
@@ -2404,7 +2397,7 @@ $ cat fruits.txt ip.txt | paste -sd,
 banana,papaya,mango,deep blue,light orange,blue delight
 
 # alternate solutions
-$ awk '{printf s $0; s=","} END{print ""}' fruits.txt ip.txt 
+$ awk '{printf s $0; s=","} END{print ""}' fruits.txt ip.txt
 ```
 
 **14)** 使用适当的选项获取以下预期的输出。
@@ -2423,7 +2416,7 @@ deep blue
 papaya
 light orange
 mango
-blue delight 
+blue delight
 ```
 
 **15)** 使用 `pr` 命令获取以下预期的输出。
@@ -2439,7 +2432,7 @@ $ seq -w 16 | pr -4ts,
 01,05,09,13
 02,06,10,14
 03,07,11,15
-04,08,12,16 
+04,08,12,16
 ```
 
 **16)** 使用 `pr` 命令将输入文件 `fruits.txt` 和 `ip.txt` 连接起来，如下所示。
@@ -2448,7 +2441,7 @@ $ seq -w 16 | pr -4ts,
 $ pr -mts' : ' fruits.txt ip.txt
 banana : deep blue
 papaya : light orange
-mango : blue delight 
+mango : blue delight
 ```
 
 **17)** `cut` 命令不支持选择最后 `N` 个字段的方法。本章中介绍的哪个工具可以与 `cut` 结合使用以获得以下输出？
@@ -2462,7 +2455,7 @@ ry
 es
 
 # alternate solutions
-$ printf 'apple\nbanana\ncherry\ndates\n' | grep -o '..$' 
+$ printf 'apple\nbanana\ncherry\ndates\n' | grep -o '..$'
 ```
 
 **18)** 阅读关于 `split` 的文档，并使用适当的选项来获取以下输入文件 `purchases.txt` 的输出。
@@ -2486,12 +2479,12 @@ tea
 soap
 tea
 
-$ rm xa? 
+$ rm xa?
 ```
 
 > `-l, --lines=NUMBER`
 > 
-> 每个输出文件中放置 NUMBER 行/记录
+> 每个输出文件中放置 `NUMBER` 行/记录
 
 **19)** 阅读关于 `split` 的文档，并使用适当的选项来获取以下输出。
 
@@ -2508,12 +2501,12 @@ cherry,
 ==> xad <==
 dates
 
-$ rm xa? 
+$ rm xa?
 ```
 
 > `-t, --separator=SEP`
 > 
-> 使用 SEP 而不是换行符作为记录分隔符；`\0`（零）指定了空字符
+> 使用 `SEP` 而不是换行符作为记录分隔符；`\0`（零）指定了空字符
 
 **20)** 将输入文件 `purchases.txt` 分割，使得包含 `powder` 行之前的文本是第一个文件的一部分，其余的是第二个文件的一部分，如下所示。
 
@@ -2533,7 +2526,7 @@ tea
 soap
 tea
 
-$ rm xx0? 
+$ rm xx0?
 ```
 
 **21)** 编写一个通用的解决方案，用于转换逗号分隔的数据。以下是一个示例输入/输出。你可以使用本书中介绍的任何工具。
@@ -2545,14 +2538,14 @@ Ith,100,100,100
 Cy,97,98,95
 Lin,78,83,80
 
-$ tr ',' '\n' &LTscores.csv | pr -$(wc -l &LTscores.csv)ts,
+$ tr ',' '\n' < scores.csv | pr -$(wc -l < scores.csv)ts,
 Name,Ith,Cy,Lin
 Maths,100,97,78
 Physics,100,98,83
 Chemistry,100,95,80
 
 # alternate solution if you have GNU datamash installed
-$ datamash -t, transpose &LTscores.csv 
+$ datamash -t, transpose < scores.csv
 ```
 
 参见我的博客文章 [使用 GNU datamash 进行 CLI 计算](https://learnbyexample.github.io/cli-computation-gnu-datamash/)。
@@ -2569,7 +2562,7 @@ $ xargs -a table.txt -n4 | column -t
 brown   bread  mat     hair
 42      blue   cake    mug
 shirt   -7     yellow  banana
-window  shoes  3.14 
+window  shoes  3.14
 ```
 
 ## Shell 脚本
@@ -2590,7 +2583,7 @@ hello
 # expected output
 $ printf '    \n#!/bin/bash\n\necho hello\n' > try.sh
 $ ./try.sh
-hello 
+hello
 ```
 
 **2)** 以下命令会工作吗？如果是，输出会是什么？
@@ -2599,7 +2592,7 @@ hello
 
 ```sh
 $ echo echo hello | bash
-hello 
+hello
 ```
 
 **3)** 你会在什么情况下使用 `source` 脚本而不是使用 `bash` 或通过 shebang 创建可执行文件？
@@ -2612,7 +2605,7 @@ hello
 $ fruit='banana'
 
 $ echo "${fruit}shake"
-bananashake 
+bananashake
 ```
 
 **5)** 你会对以下代码进行哪些修改以获得预期的输出？
@@ -2628,12 +2621,14 @@ $ echo "$n"
 $ declare -i n=100
 $ n+=100
 $ echo "$n"
-200 
+200
 ```
 
 **6)** 以下代码是否有效？如果是，`echo` 命令的输出会是什么？
 
 是的，这是有效的。数组索引可以任意使用，它们不必是连续的。
+
+
 
 ```sh
 $ declare -a colors
@@ -2641,19 +2636,19 @@ $ colors[3]='green'
 $ colors[1]='blue'
 
 $ echo "${colors[@]}"
-blue green 
+blue green
 ```
 
-**7)** 你会如何获取变量内容的最后三个字符？
+### 7) 你会如何获取变量内容的最后三个字符？
 
 ```sh
 $ fruit='banana'
 
 $ echo "${fruit: -3}"
-ana 
+ana
 ```
 
-**8)** 第二个 `echo` 命令会出错吗？如果不，输出会是什么？
+### 8) 第二个 `echo` 命令会出错吗？如果不，输出会是什么？
 
 没有错误。它会给出索引 `0` 处元素的长度。
 
@@ -2663,10 +2658,10 @@ $ echo "${#fruits[@]}"
 3
 
 $ echo "${#fruits}"
-5 
+5
 ```
 
-**9)** 对于给定的数组，使用参数扩展来删除直到第一个/最后一个空格的字符。
+### 9) 对于给定的数组，使用参数扩展来删除直到第一个/最后一个空格的字符。
 
 ```sh
 $ colors=('green' 'dark brown' 'deep sky blue white')
@@ -2681,10 +2676,10 @@ sky blue white
 $ printf '%s\n' "${colors[@]##* }"
 green
 brown
-white 
+white
 ```
 
-**10)** 使用参数扩展来获取以下预期的输出。
+### 10) 使用参数扩展来获取以下预期的输出。
 
 ```sh
 $ ip='apple:banana:cherry:dragon'
@@ -2693,10 +2688,10 @@ $ echo "${ip%:*}"
 apple:banana:cherry
 
 $ echo "${ip%%:*}"
-apple 
+apple
 ```
 
-**11)** 是否可以使用参数扩展来实现以下预期的输出？如果是，如何？
+### 11) 是否可以使用参数扩展来实现以下预期的输出？如果是，如何？
 
 这是可能的。对于第二和第三种情况，必须启用 `extglob`。
 
@@ -2718,10 +2713,10 @@ fig:Mistborn:Piranesi
 $ echo "${ip1/%+([^:])/end}"
 apple:banana:cherry:end
 $ echo "${ip2/%+([^:])/end}"
-Cradle:Mistborn:end 
+Cradle:Mistborn:end
 ```
 
-**12)** 对于给定的输入，按照以下显示的预期输出更改大小写。
+### 12) 对于给定的输入，按照以下显示的预期输出更改大小写。
 
 ```sh
 $ ip='This is a Sample STRING'
@@ -2733,10 +2728,10 @@ $ echo "${ip,,}"
 this is a sample string
 
 $ echo "${ip~~}"
-tHIS IS A sAMPLE string 
+tHIS IS A sAMPLE string
 ```
 
-**13)** 为什么以下显示的条件表达式失败？
+### 13) 为什么以下显示的条件表达式失败？
 
 ```sh
 $ touch ip.txt
@@ -2745,18 +2740,16 @@ $ [[-f ip.txt]] && echo 'file exists'
 
 # need to use space after [[ and before ]]
 $ [[ -f ip.txt ]] && echo 'file exists'
-file exists 
+file exists
 ```
 
-**14)** `==` 和 `=~` 字符串比较操作符之间的区别是什么？
+### 14) `==` 和 `=~` 字符串比较操作符之间的区别是什么？
 
-+   `s1 = s2` 或 `s1 == s2` 检查两个字符串是否相等
+- `s1 = s2` 或 `s1 == s2` 检查两个字符串是否相等。
+  - 在测试 `s1` 时，`s2` 的未引用部分将被视为通配符。
+- `s1 =~ s2` 检查 `s1` 是否与 `s2` 提供的 POSIX 扩展正则表达式匹配。
 
-    +   在测试 `s1` 时，`s2` 的未引用部分将被视为通配符
-
-+   `s1 =~ s2` 检查 `s1` 是否与 `s2` 提供的 POSIX 扩展正则表达式匹配
-
-**15)** 为什么以下使用的条件表达式两次都显示 `failed`？修改表达式，使第一个正确地说 `matched` 而不是 `failed`。
+### 15) 为什么以下使用的条件表达式两次都显示 `failed`？修改表达式，使第一个正确地说 `matched` 而不是 `failed`。
 
 引用部分将被视为字面字符串。通配符应未引用。
 
@@ -2773,10 +2766,10 @@ failed
 $ [[ $f1 == +([0-9]).txt ]] && echo 'matched' || echo 'failed'
 matched
 $ [[ $f2 == +([0-9]).txt ]] && echo 'matched' || echo 'failed'
-failed 
+failed
 ```
 
-**16)** 提取给定变量内容中 `:` 字符后面的数字。
+### 16) 提取给定变量内容中 `:` 字符后面的数字。
 
 ```sh
 $ item='chocolate:50'
@@ -2785,10 +2778,10 @@ $ [[ $item =~ :([0-9]+) ]] && echo "${BASH_REMATCH[1]}"
 
 $ item='50 apples, fig:100, books-12'
 $ [[ $item =~ :([0-9]+) ]] && echo "${BASH_REMATCH[1]}"
-100 
+100
 ```
 
-**17)** 修改以下表达式，使其正确报告 `true` 而不是 `false`。
+### 17) 修改以下表达式，使其正确报告 `true` 而不是 `false`。
 
 ```sh
 $ num=12345
@@ -2800,10 +2793,10 @@ $ [[ $num -gt 3 ]] && echo 'true' || echo 'false'
 true
 
 # alternate solutions
-$ (( num > 3 )) && echo 'true' || echo 'false' 
+$ (( num > 3 )) && echo 'true' || echo 'false'
 ```
 
-**18)** 编写一个名为 `array.sh` 的 shell 脚本，该脚本接受用户输入的数组，然后是另一个输入作为索引。显示该索引处的相应值。以下是一些示例。
+### 18) 编写一个名为 `array.sh` 的 shell 脚本，该脚本接受用户输入的数组，然后是另一个输入作为索引。显示该索引处的相应值。以下是一些示例。
 
 ```sh
 $ cat array.sh
@@ -2819,10 +2812,10 @@ element at index '1' is: banana
 $ bash array.sh
 enter array elements: dragon unicorn centaur
 enter array index: -1
-element at index '-1' is: centaur 
+element at index '-1' is: centaur
 ```
 
-**19)** 编写一个名为 `case.sh` 的 shell 脚本，该脚本接受恰好两个命令行参数。第一个参数可以是 `lower`、`upper` 或 `swap`，并应用于转换第二个参数的内容。以下是一些脚本调用示例，包括如果命令行参数不符合脚本预期会发生什么。
+### 19) 编写一个名为 `case.sh` 的 shell 脚本，该脚本接受恰好两个命令行参数。第一个参数可以是 `lower`、`upper` 或 `swap`，并应用于转换第二个参数的内容。以下是一些脚本调用示例，包括如果命令行参数不符合脚本预期会发生什么。
 
 ```sh
 $ cat case.sh
@@ -2868,10 +2861,10 @@ $ echo $?
 
 $ ./case.sh apple lower 2> /dev/null
 $ echo $?
-1 
+1
 ```
 
-**20)** 编写一个名为 `loop.sh` 的 shell 脚本，该脚本显示每个作为命令行参数传递的文件的行数。
+### 20) 编写一个名为 `loop.sh` 的 shell 脚本，该脚本显示每个作为命令行参数传递的文件的行数。
 
 ```sh
 $ printf 'apple\nbanana\ncherry\n' > items_1.txt
@@ -2887,10 +2880,10 @@ number of lines in 'items_1.txt' is: 3
 
 $ bash loop.sh items_1.txt items_2.txt
 number of lines in 'items_1.txt' is: 3
-number of lines in 'items_2.txt' is: 5 
+number of lines in 'items_2.txt' is: 5
 ```
 
-**21)** 编写一个名为 `read_file.sh` 的 shell 脚本，该脚本逐行读取文件并将其作为参数传递给 `paste -sd,` 命令。你能否使用 `xargs` 命令而不是脚本编写一个解决方案？
+### 21) 编写一个名为 `read_file.sh` 的 shell 脚本，该脚本逐行读取文件并将其作为参数传递给 `paste -sd,` 命令。你能否使用 `xargs` 命令而不是脚本编写一个解决方案？
 
 ```sh
 $ printf 'apple\nbanana\ncherry\n' > items_1.txt
@@ -2910,10 +2903,10 @@ dragon,owl,unicorn,troll,centaur
 # but -n1 is necessary to be equivalent to the shell script shown above
 $ xargs -a list.txt -d'\n' -n1 paste -sd,
 apple,banana,cherry
-dragon,owl,unicorn,troll,centaur 
+dragon,owl,unicorn,troll,centaur
 ```
 
-**22)** 编写一个名为 `add_path` 的函数，该函数将当前工作目录的路径添加到它接收的参数之前，并显示结果。以下是一些示例。
+### 22) 编写一个名为 `add_path` 的函数，该函数将当前工作目录的路径添加到它接收的参数之前，并显示结果。以下是一些示例。
 
 ```sh
 $ add_path() { echo "${@/#/$PWD/}" ; }
@@ -2928,41 +2921,41 @@ $ cd cli-computing
 $ pwd
 /home/learnbyexample/cli-computing
 $ add_path f1
-/home/learnbyexample/cli-computing/f1 
+/home/learnbyexample/cli-computing/f1
 ```
 
-**23)** `bash -x` 和 `bash -v` 选项的作用是什么？
+### 23) `bash -x` 和 `bash -v` 选项的作用是什么？
 
-> `-x`
-> 
-> 打印执行的命令及其参数。
-> 
-> `-v`
-> 
-> 打印读取的 shell 输入行。
+#### `-x`
 
-**24)** `shellcheck` 是什么，你会在什么情况下使用它？
+打印执行的命令及其参数。
 
-[shellcheck](https://www.shellcheck.net/) 是一个静态分析工具，它为脚本提供警告和建议。
+#### `-v`
+
+打印读取的 shell 输入行。
+
+### 24) `shellcheck` 是什么，你会在什么情况下使用它？
+
+[`shellcheck`](https://www.shellcheck.net/) 是一个静态分析工具，它为脚本提供警告和建议。
 
 根据 `man shellcheck`：
 
-> ShellCheck 是用于 sh/bash 脚本的静态分析和 linting 工具。它主要关注处理典型的初学者和中级语法错误和陷阱，在这些情况下，shell 只会给出神秘的错误消息或奇怪的行为，但它也会报告一些更高级的问题，在这些情况下，边缘情况可能导致延迟失败。
+> ShellCheck 是用于 `sh`/`bash` 脚本的静态分析和 linting 工具。它主要关注处理典型的初学者和中级语法错误和陷阱，在这些情况下，shell 只会给出神秘的错误消息或奇怪的行为，但它也会报告一些更高级的问题，在这些情况下，边缘情况可能导致延迟失败。
 
 ## Shell Customization
 
-**1)** 你会使用哪个命令来显示所有或特定环境变量的名称和值？
+### 1) 你会使用哪个命令来显示所有或特定环境变量的名称和值？
 
 ```sh
 $ whatis printenv
-printenv (1)         - print all or part of environment 
+printenv (1)         - print all or part of environment
 ```
 
-**2)** 如果你为已存在的命令（例如`ls`）添加了一个别名，你将如何调用原始命令而不是别名？
+### 2) 如果你为已存在的命令（例如 `ls`）添加了一个别名，你将如何调用原始命令而不是别名？
 
-通过在前面加`\`或使用`command`内建命令。例如，`\ls`或`command ls`。
+通过在前面加 `\` 或使用 `command` 内建命令。例如，`\ls` 或 `command ls`。
 
-**3)** 为什么下面的别名不起作用？你会用什么呢？
+### 3) 为什么下面的别名不起作用？你会用什么呢？
 
 你不能向别名传递参数，需要使用函数。
 
@@ -2979,10 +2972,10 @@ txt
 $ ext scores.csv
 csv
 $ ext file.txt.txt
-txt 
+txt
 ```
 
-**4)** 你会如何移除当前 shell 会话中的特定别名/函数定义？
+### 4) 你会如何移除当前 shell 会话中的特定别名/函数定义？
 
 ```sh
 $ alias hw='echo hello world'
@@ -2997,10 +2990,10 @@ $ hw
 hello there
 $ unset -f hw
 $ hw
-hw: command not found 
+hw: command not found
 ```
 
-**5)** 编写一个别名和一个函数，通过将`:`转换为换行符，在单独的行上显示`PATH`环境变量的内容。以下是一个示例输出。
+### 5) 编写一个别名和一个函数，通过将 `:` 转换为换行符，在单独的行上显示 `PATH` 环境变量的内容。以下是一个示例输出。
 
 ```sh
 $ echo "$PATH"
@@ -3020,67 +3013,69 @@ $ f_p
 /usr/local/bin
 /usr/bin
 /bin
-/usr/games 
+/usr/games
 ```
 
-**6)** 登录 shell 是否会自动读取并执行`~/.bashrc`？
+### 6) 登录 shell 是否会自动读取并执行 `~/.bashrc`？
 
-不。从`info bash`中得知：
+不。从 `info bash` 中得知：
 
-> 当启动一个不是登录 shell 的交互式 shell 时，如果存在`~/.bashrc`文件，Bash 会读取并执行该文件中的命令。
+> 当启动一个不是登录 shell 的交互式 shell 时，如果存在 `~/.bashrc` 文件，Bash 会读取并执行该文件中的命令。
 
-参见[unix.stackexchange：为什么 bashrc 检查当前 shell 是否是交互式的？](https://unix.stackexchange.com/q/257571/109046)
+参见[unix.stackexchange：为什么 bashrc 检查当前 shell 是否是交互式的？](https://unix.stackexchange.com/q/257571/109046)。
 
-**7)** 如果你希望有无限的历史条目，应该将`HISTSIZE`赋值为多少？
+### 7) 如果你希望有无限的历史条目，应该将 `HISTSIZE` 赋值为多少？
 
 任何负数。
 
 > `HISTSIZE`
-> 
-> 历史列表中需要记住的最大命令数。如果值为 0，则命令不会保存在历史列表中。数值小于 0 会导致每个命令都保存在历史列表中（没有限制）。在读取任何启动文件后，shell 将默认值设置为 500。
+>
+> 历史列表中需要记住的最大命令数。如果值为 `0`，则命令不会保存在历史列表中。数值小于 `0` 会导致每个命令都保存在历史列表中（没有限制）。在读取任何启动文件后，shell 将默认值设置为 `500`。
 
-**8)** 绑定`set completion-ignore-case on`的作用是什么？
+### 8) 绑定 `set completion-ignore-case on` 的作用是什么？
 
 > `completion-ignore-case`
-> 
-> 如果设置为`on`，Readline 将以不区分大小写的方式执行文件名匹配和完成。默认值是`off`。
+>
+> 如果设置为 `on`，Readline 将以不区分大小写的方式执行文件名匹配和完成。默认值是 `off`。
 
-**9)** 哪个快捷键可以帮助你交互式地搜索命令历史？
+### 9) 哪个快捷键可以帮助你交互式地搜索命令历史？
 
-> 要在历史中向后搜索特定字符串，请输入`C-r`。输入`C-s`则通过历史向前搜索。
+要在历史中向后搜索特定字符串，请输入 `C-r`。输入 `C-s` 则通过历史向前搜索。
 
-**10)** 短路键`Alt+b`和`Alt+f`的作用是什么？
+### 10) 快捷键 `Alt+b` 和 `Alt+f` 的作用是什么？
 
 > `forward-word (M-f)`
-> 
+>
 > 向前移动到下一个单词的末尾。单词由字母和数字组成。
-> 
+>
 > `backward-word (M-b)`
-> 
+>
 > 返回到当前或上一个单词的开头。单词由字母和数字组成。
 
-**11)** `Ctrl+l`快捷键和`clear`命令之间有区别吗？
+### 11) `Ctrl+l` 快捷键和 `clear` 命令之间有区别吗？
 
-`Ctrl+l`保留已输入的内容，不会尝试完全删除回滚缓冲区。你可以使用`clear`命令来达到这个目的。
+`Ctrl+l` 保留已输入的内容，不会尝试完全删除回滚缓冲区。你可以使用 `clear` 命令来达到这个目的。
 
-**12)** 你会使用哪个快捷键来删除光标前的字符直到行首？
+### 12) 你会使用哪个快捷键来删除光标前的字符直到行首？
 
 > `unix-line-discard (C-u)`
-> 
+
+
+
 > 从光标处向后删除到当前行的开头。
 
 **13)** 短路键`Alt+t`和`Ctrl+t`的作用是什么？
 
 > `transpose-chars (C-t)`
-> 
+
 > 将光标前的字符向前拖动到光标处的字符上，同时将光标也向前移动。如果插入点位于行尾，则交换该行的最后两个字符。负数参数没有效果。
-> 
+
 > `transpose-words (M-t)`
-> 
+
 > 将点之前的单词拖过点，同时将点也移动过那个单词。如果插入点位于行尾，则交换该行最后两个单词。
 
 **14)** `Shift+Insert` 和 `Shift+Ctrl+v` 快捷键之间有区别吗？
 
-+   `Shift+Ctrl+v` 粘贴剪贴板内容
++ `Shift+Ctrl+v` 粘贴剪贴板内容
 
-+   `Shift+Insert` 粘贴最后高亮的文本部分（不一定是剪贴板内容）
++ `Shift+Insert` 粘贴最后高亮的文本部分（不一定是剪贴板内容）

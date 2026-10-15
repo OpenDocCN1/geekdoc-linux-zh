@@ -1,3 +1,4 @@
+
 # 如何在 CentOS 8 和 Centos 7 - Eldernode 上安装 Python 3.9
 
 > 原文：<https://blog.eldernode.com/install-python-3-9-on-centos/>
@@ -30,7 +31,7 @@ yum update
 cd /opt  wget https://www.python.org/ftp/python/3.9.0/Python-3.9.0tgz 
 ```
 
-*注意*:如果 **wget** 没有启用，可以用以下命令安装:
+*注意*:如果`wget`没有启用，可以用以下命令安装:
 
 ```
 yum install wget -y 
@@ -39,12 +40,12 @@ yum install wget -y
 然后，使用下面的命令，您必须提取下载的归档文件:
 
 ```
-tar xzf Python-3.9.0tgz
+tar xzf Python-3.9.0tgz 
 ```
 
 ### 第三步:如何在 CentOS 上安装 Python
 
-解压缩后，转到 Python-3.9.0 文件夹，然后根据您的服务器或系统环境配置源文件。
+解压缩后，转到`Python-3.9.0`文件夹，然后根据您的服务器或系统环境配置源文件。
 
 ```
 cd Python-3.9.0  sudo ./configure --enable-optimizations  sudo make altinstall 
@@ -122,25 +123,23 @@ Python 3.9.0
 [[[email protected]](/cdn-cgi/l/email-protection) ~]# tar -xzf Python-3.9.0.tgz 
 ```
 
-第三步:如何安装 Python 3.9
+#### 第三步:如何安装 Python 3.9
 
-#### 提取之后，您可以通过运行以下命令切换到结果目录:
+提取之后，您可以通过运行以下命令切换到结果目录:
 
 然后，通过键入以下命令准备从源代码编译 Python:
-
-要完成安装而不替换系统上的默认系统 Python，请使用命令 belwo:
 
 ```
 [[[email protected]](/cdn-cgi/l/email-protection) Python-3.9.0]# ./configure --enable-optimizations
 ```
 
-过一会儿，从源代码编译代码就完成了。要测试新的 Python 3 版本，请运行以下命令:
+要完成安装而不替换系统上的默认系统 Python，请使用命令 belwo:
 
 ```
 [[[email protected]](/cdn-cgi/l/email-protection) Python-3.9.0]# make altinstall
 ```
 
-就像之前通过 Yum 安装 Python 3 时一样，您会进入一个 Python shell，输出您当前使用的版本:
+过一会儿，从源代码编译代码就完成了。要测试新的 Python 3 版本，请运行以下命令:
 
 ```
 [[[email protected]](/cdn-cgi/l/email-protection) Python-3.9.0]# python3.8

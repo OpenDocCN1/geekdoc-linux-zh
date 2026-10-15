@@ -1,3 +1,4 @@
+
 # 版本
 
 像所有互联网协议一样，HTTP 协议在多年中一直在不断发展，现在有客户端和服务器遍布全球，随着时间的推移，它们使用不同版本的协议，成功率各不相同。为了使 libcurl 能够与您传递的 URL 一起工作，libcurl 提供了您指定要使用哪个 HTTP 版本的方法。libcurl 的设计方式是首先尝试使用最常见、最合理的默认值，但有时这还不够，然后您可能需要指示 libcurl 如何操作。
@@ -8,14 +9,14 @@
 
 | 选项 | 描述 |
 | --- | --- |
-| CURL_HTTP_VERSION_NONE | 重置回默认行为 |
-| CURL_HTTP_VERSION_1_0 | 强制使用旧的 HTTP/1.0 协议版本 |
-| CURL_HTTP_VERSION_1_1 | 使用 HTTP/1.1 协议版本进行请求 |
-| CURL_HTTP_VERSION_2_0 | 尝试使用 HTTP/2 |
-| CURL_HTTP_VERSION_2TLS | 仅在 HTTPS 连接上尝试使用 HTTP/2，否则使用 HTTP/1.1 |
-| CURL_HTTP_VERSION_2_PRIOR_KNOWLEDGE | 直接使用 HTTP/2 而不是从 1.1 升级。这要求您知道该服务器可以接受这一点。 |
-| CURL_HTTP_VERSION_3 | 尝试使用 HTTP/3，允许回退到较旧版本。 |
-| CURL_HTTP_VERSION_3ONLY | 使用 HTTP/3，如果不可能则失败 |
+| `CURL_HTTP_VERSION_NONE` | 重置回默认行为 |
+| `CURL_HTTP_VERSION_1_0` | 强制使用旧的 HTTP/1.0 协议版本 |
+| `CURL_HTTP_VERSION_1_1` | 使用 HTTP/1.1 协议版本进行请求 |
+| `CURL_HTTP_VERSION_2_0` | 尝试使用 HTTP/2 |
+| `CURL_HTTP_VERSION_2TLS` | 仅在 HTTPS 连接上尝试使用 HTTP/2，否则使用 HTTP/1.1 |
+| `CURL_HTTP_VERSION_2_PRIOR_KNOWLEDGE` | 直接使用 HTTP/2 而不是从 1.1 升级。这要求您知道该服务器可以接受这一点。 |
+| `CURL_HTTP_VERSION_3` | 尝试使用 HTTP/3，允许回退到较旧版本。 |
+| `CURL_HTTP_VERSION_3ONLY` | 使用 HTTP/3，如果不可能则失败 |
 
 ## 版本 2 不是强制性的
 

@@ -1,11 +1,6 @@
+
 # OSINT 的 Linux：初学者 21 天课程
 
-
-
-
-
-
-
 在制作这门课程时，我给一个朋友打了电话并问道：
 
 - 还记得六个月前你说你开始读一本关于 Kali Linux 取证分析的书吗？
@@ -17,41 +12,13 @@
 
 对话结束后，我打开了这本书的文件，并删除了所有需要使用 Linux 虚拟机的章节。为了让读者没有理由停止，前 20 天我们将仅在浏览器中操作。直到第 21 天，我们才会考虑是否是时候安装 Linux 了。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-应用。在 Windows 上可以做同样的事情吗？
-
 ## 这门课程适合什么人？
 
-这门课程主要面向那些**从事 OSINT 专业工作或对其简单感兴趣的人**。你将在其中发现许多关于各种数据收集和分析自动化的内容。
+这门课程主要面向那些从事 OSINT 专业工作或对其简单感兴趣的人。你将在其中发现许多关于各种数据收集和分析自动化的内容。
 
-在我的 Twitter (https://twitter.com/cyb_detective) 账号上，我经常编写 OSINT 的用工具，包括各种 Linux 实用程序。很多读者问过：“太酷了！可以在 Windows 上运行这个吗？”
+在我的 Twitter `https://twitter.com/cyb_detective` 账号上，我经常编写 OSINT 的用工具，包括各种 Linux 实用程序。很多读者问过：“太酷了！可以在 Windows 上运行这个吗？”
 
-是的，在 Windows 上运行 Linux 实用程序有很多方法。但它们比在虚拟机（VM）、VPS（虚拟专用服务器）或在线开发环境中运行 Linux 要复杂得多。
+是的，在 Windows 上运行 Linux 实用程序有很多方法。但它们比在虚拟机 `VM`、VPS `虚拟专用服务器` 或在线开发环境中运行 Linux 要复杂得多。
 
 创建这个简短教程是为了向你清晰地展示：
 
@@ -59,7 +26,7 @@
 - 数百项任务（与 OSINT 相关以及不仅限于此）可以通过 Linux 简化和自动化。
 - 使用 Linux 命令行是一种真正的、无与伦比的享受。
 
-这门课程是为**完全学者**设计的。在最后一天之前，我甚至不会要求你安装带有 Linux 的虚拟机，所有的示例都可以在浏览器中尝试。你不需要任何特殊知识。如果你知道如何使用电子邮件，就能应对这门课程。只需放松并仔细遵循说明即可。
+这门课程是为完全学者设计的。在最后一天之前，我甚至不会要求你安装带有 Linux 的虚拟机，所有的示例都可以在浏览器中尝试。你不需要任何特殊知识。如果你知道如何使用电子邮件，就能应对这门课程。只需放松并仔细遵循说明即可。
 
 阅读时，请记住这是一门短课程，所以很多内容被省略了。而且非常重要的内容也被省略了。它的设计初衷主要是向你展示 Linux 的能力，并在面对不同任务时向你展示“向哪个方向看”。
 
@@ -77,172 +44,23 @@ Linux 之所以好是因为你可以用许多不同的方式解决同一个问�
 
 # 第 0 天 准备工作
 
-Eric Raymond 在他的《如何成为黑客》（关于 Linux 的取证）中提到，Gitpod 是一个提供 Linux 开发环境的服务。你可以直接在浏览器中使用它。Gitpod 允许你在无需本地安装的情况下运行 Linux。这对于新手非常方便。
-
-对话结束后，我打开了这本书的文件，并删除了所有需要使用 Linux 虚拟机的章节。为了让读者没有理由停止，前 20 天我们将仅在浏览器中操作。直到第 21 天，我们才会考虑是否是时候安装 Linux 了。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-应用。在 Windows 上可以做同样的事情吗？
-
-
-这门课程主要面向那些**从事 OSINT 专业工作或对其简单感兴趣的人**。你将在其中发现许多关于各种数据收集和分析自动化的内容。
-
-在我的 Twitter (https://twitter.com/cyb_detective) 账号上，我经常编写 OSINT 的用工具，包括各种 Linux 实用程序。很多读者问过：“太酷了！可以在 Windows 上运行这个吗？”
-
-是的，在 Windows 上运行 Linux 实用程序有很多方法。但它们比在虚拟机（VM）、VPS（虚拟专用服务器）或在线开发环境中运行 Linux 要复杂得多。
-
-创建这个简短教程是为了向你清晰地展示：
-
-- Linux 和命令行非常易用。真的简单。极其简单。
-- 数百项任务（与 OSINT 相关以及不仅限于此）可以通过 Linux 简化和自动化。
-- 使用 Linux 命令行是一种真正的、无与伦比的享受。
-
-这门课程是为**完全学者**设计的。在最后一天之前，我甚至不会要求你安装带有 Linux 的虚拟机，所有的示例都可以在浏览器中尝试。你不需要任何特殊知识。如果你知道如何使用电子邮件，就能应对这门课程。只需放松并仔细遵循说明即可。
-
-阅读时，请记住这是一门短课程，所以很多内容被省略了。而且非常重要的内容也被省略了。它的设计初衷主要是向你展示 Linux 的能力，并在面对不同任务时向你展示“向哪个方向看”。
-
-## 哪些人应该避开这门课程？
-
-Linux 之所以好是因为你可以用许多不同的方式解决同一个问题。我不确定本课程中描述的方法就是解决问题的最好、最快的方法。它们编写是为了直观地向你展示命令行的魔法，并激发你内心的发明精神。
-
-我建议以下类别的读者将此书视为参考：
-
-- 准备考试的学生
-- 准备从事 Linux 相关工作的 IT 专家
-- 想要成为黑客的人
-
-这本书主要是关于 OSINT 的。
-
-# 第 0 天 准备工作
-
-Eric Raymond 在他的《如何成为黑客》（关于 Linux 的取证）中提到，Gitpod 是一个提供 Linux 开发环境的服务。你可以直接在浏览器中使用运行。Gitpod 允许你在无需本地安装的情况下运行 Linux。这对于新手非常方便。
-
-对话结束后，我打开了这本书的文件，并删除了所有需要使用 Linux 虚拟机的章节。为了让读者没有理由停止，前 20 天我们将仅在浏览器中操作。直到第 21 天，我们才会考虑是否是时候安装 Linux 了。
-
-[/content] (抱歉，由于您提供的文本中包含大量重复的占位符内容，我已按照“不要重复输出原文”的原则，对核心内容进行了整合翻译。)
-
----
-
-**注：由于您提供的待翻译文本存在严重的逻辑重复（目录和正文多次重复），以下是基于该文本逻辑的完整翻译：**
-
-[content]
-
-
-在制作这门课程时，我给一个朋友打了电话并问道：
-
-- 还记得六个月前你说你开始读一本关于 Kali Linux 取证分析的书吗？
-- 记得。
-- 你读了多少了？
-- 我停在第 5 章了。
-- 那本书叫什么名字？
-- 《安装 Kali Linux》
-
-对话结束后，我打开了这本书的文件，并删除了所有需要使用 Linux 虚拟机的章节。为了让读者没有理由停止，前 20 天我们将仅在浏览器中操作。直到第 21 天，我们才会考虑是否是时候安装 Linux 了。
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 接下来要做什么？
-
-应用。在 Windows 上可以做同样的事情吗？
-
-## 这门课程适合什么人？
-
-这门课程主要面向那些**从事 OSINT 专业工作或对其简单感兴趣的人**。你将在其中发现许多关于各种数据收集和分析自动化的内容。
-
-在我的 Twitter (https://twitter.com/cyb_detective) 账号上，我经常编写 OSINT 的用工具，包括各种 Linux 实用程序。很多读者问过：“太酷了！可以在 Windows 上运行这个吗？”
-
-是的，在 Windows 上运行 Linux 实用程序有很多方法。但它们比在虚拟机（VM）、VPS（虚拟专用服务器）或在线开发环境中运行 Linux 要复杂得多。
-
-创建这个简短教程是为了向你清晰地展示：
-
-- Linux 和命令行非常易用。真的简单。极其简单。
-- 数百项任务（与 OSINT 相关以及不仅限于此）可以通过 Linux 简化和自动化。
-- 使用 Linux 命令行是一种真正的、无与伦比的享受。
-
-这门课程是为**完全学者**设计的。在最后一天之前，我甚至不会要求你安装带有 Linux 的虚拟机，所有的示例都可以在浏览器中尝试。你不需要任何特殊知识。如果你知道如何使用电子邮件，就能应对这门课程。只需放松并仔细遵循说明即可。
-
-阅读时，请记住这是一门短课程，所以很多内容被省略了。而且非常重要的内容也被省略了。它的设计初衷主要是向你展示 Linux 的能力，并在面对不同任务时向你展示“向哪个方向看”。
-
-## 哪些人应该避开这门课程？
-
-Linux 之所以好是因为你可以用许多不同的方式解决同一个问题。我不确定本课程中描述的方法就是解决问题的最好、最快的方法。它们编写是为了直观地向你展示命令行的魔法，并激发你内心的发明精神。
-
-我建议以下类别的读者将此书视为参考：
-
-- 准备考试的学生
-- 准备从事 Linux 相关工作的 IT 专家
-- 想要成为黑客的人
-
-这本书主要是关于 OSINT 的。
-
-# 第 0 天 准备工作
-
-Eric Raymond 在他的《如何成为黑客》（关于 Linux 的取证）中提到，Gitpod 是一个提供 Linux 开发环境的服务。你可以直接在浏览器中使用运行。Gitpod 允许你在无需本地安装的情况下运行 Linux。这对于新手非常方便。
-
-（后续重复部分已根据要求过滤）
-
-
-
+Eric Raymond 在他的《如何成为黑客》（关于 Linux 的取证）中提到，`Gitpod` 是一个提供 Linux 开发环境的服务。你可以直接在浏览器中使用它。`Gitpod` 允许你在无需本地安装的情况下运行 Linux。这对于新手非常方便。
 
 ## cd linux-for-OSINT-21-day/Day_1
 
 | 问题 | 输出 | 端口 | 调试控制台 | 终端 |
 | :--- | :--- | :--- | :--- | :--- |
-| gitpod /workspace/linux-for-OSINT-21-day (main) $ cd .. | | | | |
+| `gitpod /workspace/linux-for-OSINT-21-day (main) $ cd ..` | | | | |
+
+
+
 | gitpod /workspace $ cd linux-for-OSINT-21-day/Day_1 | | | | |
 
 现在让我们重命名文件为 `new_file.txt` 并在屏幕上显示它（将 `ls` 命令的结果写入文件）：
 
-ls>new_file.txt
-cat new_file.txt
+`ls>new_file.txt`
+
+`cat new_file.txt`
 
 ```
 gitpod /workspace/linux-for-OSINT-21-day/Day_1 (main) $ ls>new_file.txt
@@ -257,18 +75,28 @@ gitpod /workspace/linux-for-OSINT-21-day/Day_1 (main) $
 
 如果你想将文本从一个文件复制到另一个文件，请使用 `cp` 命令：
 
-cp new_file.txt copy_new.txt
+`cp new_file.txt copy_new.txt`
 
 | 问题 | 输出 | 端口 | 调试控制台 | 终端 |
+
 | :--- | :--- | :--- | :--- | :--- |
+
 | gitpod /workspace/linux-for-OSINT-21-day (main) $ cd Day_1 | | | | |
+
 | gitpod /workspace/linux-for-OSINT-21-day/Day_1 (main) $ cp new_file.txt copy_new.txt | | | | |
+
 | gitpod /workspace/linux-for-OSINT-21-day/Day_1 (main) $ ls | | | | |
+
 commands.txt copy_new.txt new_file.txt new_folder
+
 gitpod /workspace/linux-for-OSINT-21-day/Day_1 (main) $ cat copy_new_file.txt | | | | |
+
 commands.txt
+
 new_file.txt
+
 new_folder
+
 gitpod /workspace/linux-for-OSINT-21-day/Day_1 (main) $
 
 目录也可以用相同的方式复制：
@@ -278,8 +106,11 @@ cp -r new_folder copy_new_folder
 ```
 
 - gitpod/workspace/linux-for-OSINT-21-day/Day_1 (main) $ cp
+
 - gitpod/workspace/linux-for-OSINT-21-day/Day_1 (main) $ ls
+
 commands.txt copy_new_file.txt copy_new_folder new_file.txt new_folder
+
 - gitpod/workspace/linux-for-OSINT-21-day/Day_1 (main) $ 
 
 现在让我们删除创建的副本文件和目录：
@@ -290,16 +121,24 @@ rm -d copy_new_folder
 ```
 
 - gitpod/workspace/linux-for-OSINT-21-day/Day_1 (main) $ ls
+
 commands.txt copy_new_file.txt copy_new_folder new_file.txt new_folder
+
 - gitpod /workspace/linux-for-OSINT-21-day/Day_1 (main) $ rm copy_new_file.txt
+
 - gitpod /workspace/linux-for-OSINT-21-day/Day_1 (main) $ ls
+
 commands.txt copy_new_folder new_file.txt new_folder
+
 - gitpod /workspace/linux-for-OSINT-21-day/Day_1 (main) $ rm -d copy_new_folder
+
 - gitpod /workspace/linux-for-OSINT-21-day/Day_1 (main) $ ls
+
 commands.txt new_file.txt new_folder
+
 - gitpod /workspace/linux-for-OSINT-21-day/Day_1 (main) $ 
 
-今天到此为止。我们学习了处理 Linux 文件的最基础命令，并尝试了最简单的方法来使用它们。但本课程中提到的所有工具（cat, ls, cd, rm）都有许多不同的选项。
+今天到此为止。我们学习了处理 Linux 文件的最基础命令，并尝试了最简单的方法来使用它们。但本课程中提到的所有工具（`cat`, `ls`, `cd`, `rm`）都有许多不同的选项。
 
 要查找任何 Linux 命令的所有选项，请使用 `man`（手册）命令。例如：
 
@@ -309,7 +148,7 @@ man rm
 
 ![](img/03e4d38bded7def6bb51288422c4f89d_12_0.png)
 
-按 **q** 退出。
+按 `q` 退出。
 
 如果你在输入某些命令时出错，请记住，如果你在使用 Gitpod，始终可以创建一个新的工作区。
 
@@ -326,11 +165,13 @@ Bash (https://www.gnu.org/software/bash/) 是一种由 Brian Fox 编写并于 19
 稍后执行的命令可以存储在扩展名为 `.sh` 的文件中。我们将用它来编写命令，以自动化 Linux 中的各种任务，并将 Bash 脚本与其他编程语言（Python, Go 等）编写的工具相结合。
 
 进入当前文件夹：
+
 ```
 cd Day_2
 ```
 
 运行创建_folders.sh：
+
 ```bash
 create_folders.sh
 ```
@@ -450,21 +291,19 @@ for.sh
 
 ![](img/03e4d38bded7def6bb51288422c4f89d_18_0.png)
 
-
-
-
-
 ## 第 3 天. 安装和运行工具
 
-Linux 工具是可以在命令行或 bash 脚本中运行的命令。在过去的课程中，我们已经使用了其中一些工具：cat, bash, cd, man, cp, mkdir。这些是每个 Linux 发行版中默认安装的工具。
+
+
+Linux 工具是可以在命令行或 `bash` 脚本中运行的命令。在过去的课程中，我们已经使用了其中一些工具：`cat`, `bash`, `cd`, `man`, `cp`, `mkdir`。这些是每个 Linux 发行版中默认安装的工具。
 
 你可以使用特殊的命令来查看你自己的发行版中安装的工具和应用程序的完整列表。具体命令取决于你发行版的类型。例如：
 
-- Ubuntu, Debian: dpkg -l
-- Fedora, RHEL: rpm -qa
-- OpenBSD, FreeBSD: pkg-info
-- Gentoo: query list 或 emergix
-- Arch Linux: pacman -Q
+- Ubuntu, Debian: `dpkg -l`
+- Fedora, RHEL: `rpm -qa`
+- OpenBSD, FreeBSD: `pkg-info`
+- Gentoo: `query list` 或 `emergix`
+- Arch Linux: `pacman -Q`
 
 如果你正在使用 Gitpod，则需要使用 Ubuntu 的命令。
 
@@ -590,7 +429,7 @@ echo "$i"
 done
 ```
 
-你可以将 .txt 替换为任何扩展。你还可以搜索包含特定单词的文件。实际上，上面的脚本并没有意义，因为文件名只是通过命令显示的。尝试：
+你可以将 `.txt` 替换为任何扩展。你还可以搜索包含特定单词的文件。实际上，上面的脚本并没有意义，因为文件名只是通过命令显示的。尝试：
 
 ```bash
 find -name "*.txt" -type f
@@ -617,7 +456,7 @@ $ gitpod/workspace/Linux-For-OSINT-21-day (main) $ find -name "*.txt" -type f
 $ gitpod/workspace/linux-for-OSINT-21-day (main) $
 ```
 
-但通过逐个遍历文件名，我们可以对每个文件执行重复操作（使用任何 Linux 工具处理文件）。只需将 "echo" 命令替换为其他。例如，让我们尝试将所有 txt 文件转换为 csv 格式。
+但通过逐个遍历文件名，我们可以对每个文件执行重复操作（使用任何 Linux 工具处理文件）。只需将 `"echo"` 命令替换为其他。例如，让我们尝试将所有 txt 文件转换为 csv 格式。
 
 ## 将 .txt 文件保存为 .csv
 
@@ -631,32 +470,31 @@ sed 's/+/g' "$i"="${i}.csv";
 done
 ```
 
-注意 [sed 命令](https://www.gnu.org/sed/manual/sed.html)。我们用它将空格替换为逗号，并在第 7 天回来。
+
+
+注意 [`sed` 命令](https://www.gnu.org/sed/manual/sed.html)。我们用它将空格替换为逗号，并在第 7 天回来。
 
 ## Xargs
 
-[Xargs](https://man7.org/linux/man-pages/man1/xargs.1.html) 是一个允许使用输入参数运行不同 Linux 命令的工具。这包括从存储在文件中的读取这些参数。
+[`Xargs`](https://man7.org/linux/man-pages/man1/xargs.1.html) 是一个允许使用输入参数运行不同 Linux 命令的工具。这包括从存储在文件中的读取这些参数。
 
 看看它是如何工作的示例。
 
 ![](img/03e4d38bded7def6bb51288422c4f89d_30_0.png)
 
-让我们创建 txt_files 文件夹中的所有归档：
+让我们创建 `txt_files` 文件夹中的所有归档：
 
 ```bash
 find txt_files -name "*.zip" -type f | xargs rm -
 ```
 
-现在让我们使用 Xargs 创建存档：
+现在让我们使用 `Xargs` 创建存档：
 
 ![](img/03e4d38bded7def6bb51288422c4f89d_30_1.png)
 
 ![](img/03e4d38bded7def6bb51288422c4f89d_30_2.png)
 
-如你所示，在命令的右部分，我们使用 cat 命令逐行读取文件。在左侧，我们带有 `-I` 标志运行 xargs，将每行都作为文件名变量，并在运行 zip 命令时将该变量作为参数中的文件名。
-
-
-
+如你所示，在命令的右部分，我们使用 `cat` 命令逐行读取文件。在左侧，我们带有 `-I` 标志运行 `xargs`，将每行都作为文件名变量，并在运行 `zip` 命令时将该变量作为参数中的文件名。
 
 今天，我们将学习 Linux 中自动化数据收集最重要的技能之一 - 使用 `Curl` 工具下载文件。这在处理请求、爬取网站、从归档或其他源下载数据时非常派用场。
 
@@ -664,7 +502,7 @@ find txt_files -name "*.zip" -type f | xargs rm -
 
 这并不是完整的帮助文档，此菜单是按类别拆分的。使用使用 `--help category` 可以获取所有类别的概览。要查看所有选项，请查阅手册或使用 `--help all`。
 
-[Curl](https://curl.se/) 是一个从服务器或向服务器传输数据的工具，支持支持的许多协议之一（DICT, FILE, FTP, FPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3S, RTSP, SCP, SFTP, SMB, SMBS, SMTP, SMTPS, TELNET）。它不需要安装，在 Linux 中默认可用。
+[`Curl`](https://curl.se/) 是一个从服务器或向服务器传输数据的工具，支持支持的许多协议之一（DICT, FILE, FTP, FPS, GOPHER, HTTP, HTTPS, IMAP, IMAPS, LDAP, LDAPS, POP3S, RTSP, SCP, SFTP, SMB, SMBS, SMTP, SMTPS, TELNET）。它不需要安装，在 Linux 中默认可用。
 
 让我们尝试下载文件。使用 `-o` 标记将原始文件名更改为 `file.pdf`：
 
@@ -672,20 +510,26 @@ find txt_files -name "*.zip" -type f | xargs rm -
 
 在命令行中输入：
 
-## Cd 第 5 天
+### Cd 第 5 天
+
+```bash
 curl https://eduscol.education.fr/document/3366/download -o file.pdf
+```
 
 现在让我们尝试使用 `Xargs` 命令（我们昨天讨论过它）从链接列表下载文件。
 
 ![](img/03e4d38bded7def6bb51288422c4f89d_33_0.png)
 
-## xargs -n 1 curl -O < urls.txt
+```bash
+xargs -n 1 curl -O < urls.txt
+```
 
 使用 `-H` 标记，你可以发送带有不同 http 头的请求。此功能在自动化向各种 API 发送请求时非常有用。
 
 Netlas API (https://github.com/netlas-io/netlas-cookbook) 的简单示例：
 
 ### curl -X
+
 ```bash
 curl -X 'https://api.netlas.io/api/responses?q=lid.com&source_type=include&start=0&fields=*' -H 'accept: application/json' > api_request_result.txt
 ```
@@ -772,20 +616,7 @@ modified: Thu, 11 Jul 2023 04:00:00
 
 对于复杂的查询，你可以使用特殊服务来查看网页信息。使用 `-I` 标记发送 HEAD 请求并获取标头（不包含正文）：
 
-```bash
-$ gitpod /workspace/linux-for-OSINT-21-day/day_5 (main) $ curl -I https://osint.nl/
-HTTP/200 OK
-date: Wed 23 Oct 2023 23:36:23 GMT
-content-type: text/html; charset=utf-8
-cache-control: max-age=3600
-expires: Wed 23 Oct 2023 23:36:23 GMT
-x-cache: hit-from-cache-b6d3f5f7963d5eb
-expires=25-Dec-2023 22:36:23 GMT; Max-Age=3600; path=/; domain=.osint.nl; secure; HttpOnly; Same
-vary: *
-modified: Thu, 11 Jul 2023 04:00:00
-```
 
-对于复杂的查询，你可以使用特殊服务来查看网页信息。使用 `-I` 标记发送 HEAD 请求并获取标头（不包含正文）：
 
 ```bash
 $ gitpod /workspace/linux-for-OSINT-21-day/day_5 (main) $ curl -I https://osint.nl/
@@ -815,20 +646,7 @@ vary: *
 modified: Thu, 11 Jul 2023 04:00:00
 ```
 
-对于复杂的查询，你可以使用特殊服务来查看网页信息。使用 `-I` 标记发送 HEAD 请求并获取标头（不包含正文）：
 
-```bash
-$ gitpod /workspace/linux-for-OSINT-21-day/day_5 (main) $ curl -I https://osint.nl/
-HTTP/200 OK
-date: Wed 23 Oct 2023 23:36:23 GMT
-content-type: text/html; charset=utf-8
-cache-control: max-age=3600
-expires: Wed 23 Oct 2023 23:36:23 GMT
-x-cache: hit-from-cache-b6d3f5f7963d5eb
-expires=25-Dec-2023 22:36:23 GMT; Max-Age=3600; path=/; domain=.osint.nl; secure; HttpOnly; Same
-vary: *
-modified: Thu, 11 Jul 2023 04:00:00
-```
 
 对于复杂的查询，你可以使用特殊服务来查看网页信息。使用 `-I` 标记发送 HEAD 请求并获取标头（不包含正文）：
 
@@ -845,7 +663,10 @@ vary: *
 modified: Thu, 11 Jul 2023 04:00:00
 ```
 
-对于复杂的查询，你可以使用特殊服务来查看网页信息。使用 `-I` 标记发送 HEAD 请求并获取标头（不包含正文）：
+`grep` 允许在文件中搜索匹配某些文本（正则表达式）。
+注意这里 `grep` 就可以在文件中进行匹配。
+
+
 
 ```bash
 $ gitpod /workspace/linux-for-OSINT-21-day/day_5 (main) $ curl -I https://osint.nl/
@@ -860,264 +681,7 @@ vary: *
 modified: Thu, 11 Jul 2023 04:00:00
 ```
 
-对于复杂的查询，你可以使用特殊服务来查看网页信息。使用 `-I` 标记发送 HEAD 请求并获取标头（不包含正文）：
-
-```bash
-$ gitpod /workspace/linux-for-OSINT-21-day/day_5 (main) $ curl -I https://osint.nl/
-HTTP/200 OK
-date: Wed 23 Oct 2023 23:36:23 GMT
-content-type: text/html; charset=utf-8
-cache-control: max-age=3600
-expires: Wed 23 Oct 2023 23:36:23 GMT
-x-cache: hit-from-cache-b6d3f5f7963d5eb
-expires=25-Dec-2023 22:36:23 GMT; Max-Age=3600; path=/; domain=.osint.nl; secure; HttpOnly; Same
-vary: *
-modified: Thu, 11 Jul 2023 04:00:00
-```
-
-对于复杂的查询，你可以使用特殊服务来查看网页信息。使用 `-I` 标记发送 HEAD 请求并获取标头（不包含正文）：
-
-```bash
-$ gitpod /workspace/linux-for-OSINT-21-day/day_5 (main) $ curl -I https://osint.nl/
-HTTP/200 OK
-date: Wed 23 Oct 2023 23:36:23 GMT
-content-type: text/html; charset=utf-8
-cache-control: max-age=3600
-expires: Wed 23 Oct 2023 23:36:23 GMT
-x-cache: hit-from-cache-b6d3f5f7963d5eb
-expires=25-Dec-2023 22:36:23 GMT; Max-Age=3600; path=/; domain=.osint.nl; secure; HttpOnly; Same
-vary: *
-modified: Thu, 11 Jul 2023 04:00:00
-```
-
-对于复杂的查询，你可以使用特殊服务来查看网页信息。使用 `-I` 标记发送 HEAD 请求并获取标头（不包含正文）：
-
-```bash
-$ gitpod /workspace/linux-for-OSINT-21-day/day_5 (main) $ curl -I https://osint.nl/
-HTTP/200 OK
-date: Wed 23 Oct 2023 23:36:23 GMT
-content-type: text/html; charset=utf-8
-cache-control: max-age=3600
-expires: Wed 23 Oct 2023 23:36:23 GMT
-x-cache: hit-from-cache-b6d3f5f7963d5eb
-expires=25-Dec-2023 22:36:23 GMT; Max-Age=3600; path=/; domain=.osint.nl; secure; HttpOnly; Same
-vary: *
-modified: Thu, 11 Jul 2023 04:00:00
-```
-
-对于复杂的查询，你可以使用特殊服务来查看网页信息。使用 `-I` 标记发送 HEAD 请求并获取标头（不包含正文）：
-
-```bash
-$ gitpod /workspace/linux-for-OSINT-21-day/day_5 (main) $ curl -I https://osint.nl/
-HTTP/200 OK
-date: Wed 23 Oct 2023 23:36:23 GMT
-content-type: text/html; charset=utf-8
-cache-control: max-age=3600
-expires: Wed 23 Oct 2023 23:36:23 GMT
-x-cache: hit-from-cache-b6d3f5f7963d5eb
-expires=25-Dec-2023 22:36:23 GMT; Max-Age=3600; path=/; domain=.osint.nl; secure; HttpOnly; Same
-vary: *
-modified: Thu, 11 Jul 2023 04:00:00
-```
-
-对于复杂的查询，你可以使用特殊服务来查看网页信息。使用 `-I` 标记发送 HEAD 请求并获取标头（不包含正文）：
-
-```bash
-$ gitpod /workspace/linux-for-OSINT-21-day/day_5 (main) $ curl -I https://osint.nl/
-HTTP/200 OK
-date: Wed 23 Oct 2023 23:36:23 GMT
-content-type: text/html; charset=utf-8
-cache-control: max-age=3600
-expires: Wed 23 Oct 2023 23:36:23 GMT
-x-cache: hit-from-cache-b6d3f5f7963d5eb
-expires=25-Dec-2023 22:36:23 GMT; Max-Age=3600; path=/; domain=.osint.nl; secure; HttpOnly; Same
-vary: *
-modified: Thu, 11 Jul 2023 04:00:00
-```
-
-对于复杂的查询，你可以使用特殊服务来查看网页信息。使用 `-I` 标记发送 HEAD 请求并获取标头（不包含正文）：
-
-```bash
-grep 允许在文件中搜索匹配某些文本（正则表达式）。
-注意这里 grep 就可以在文件中进行匹配。
-$ gitpod /workspace/linux-for-OSINT-21-day/day_5 (main) $ curl -I https://osint.nl/
-HTTP/200 OK
-date: Wed 23 Oct 2023 23:36:23 GMT
-content-type: text/html; charset=utf-8
-cache-control: max-age=3600
-expires: Wed 23 Oct 2023 23:36:23 GMT
-x-cache: hit-from-cache-b6d3f5f7963d5eb
-expires=25-Dec-2023 22:36:23 GMT; Max-Age=3600; path=/; domain=.osint.nl; secure; HttpOnly; Same
-vary: *
-modified: Thu, 11 Jul 2023 04:00:00
-```
-
-对于复杂的查询，你可以使用特殊服务来查看网页信息。使用 `-I` 标记发送 HEAD 请求并获取标头（不包含正文）：
-
-```bash
-$ gitpod /workspace/linux-for-OSINT-21-day/day_5 (main) $ curl -I https://osint.nl/
-HTTP/200 OK
-date: Wed 23 Oct 2023 23:36:23 GMT
-content-type: text/html; charset=utf-8
-cache-control: max-age=3600
-expires: Wed 23 Oct 2023 23:36:23 GMT
-x-cache: hit-from-cache-b6d3f5f7963d5eb
-expires=25-Dec-2023 22:36:23 GMT; Max-Age=3600; path=/; domain=.osint.nl; secure; HttpOnly; Same
-vary: *
-modified: Thu, 11 Jul 2023 04:00:00
-```
-
-对于复杂的查询，你可以使用特殊服务来查看网页信息。使用 `-I` 标记发送 HEAD 请求并获取标头（不包含正文）：
-
-```bash
-$ gitpod /workspace/linux-for-OSINT-21-day/day_5 (main) $ curl -I https://osint.nl/
-HTTP/200 OK
-date: Wed 23 Oct 2023 23:36:23 GMT
-content-type: text/html; charset=utf-8
-cache-control: max-age=3600
-expires: Wed 23 Oct 2023 23:36:23 GMT
-x-cache: hit-from-cache-b6d3f5f7963d5eb
-expires=25-Dec-2023 22:36:23 GMT; Max-Age=3600; path=/; domain=.osint.nl; secure; HttpOnly; Same
-vary: *
-modified: Thu, 11 Jul 2023 04:00:00
-```
-
-对于复杂的查询，你可以使用特殊服务来查看网页信息。使用 `-I` 标记发送 HEAD 请求并获取标头（不包含正文）：
-
-```bash
-$ gitpod /workspace/linux-for-OSINT-21-day/day_5 (main) $ curl -I https://osint.nl/
-HTTP/200 OK
-date: Wed 23 Oct 2023 23:36:23 GMT
-content-type: text/html; charset=utf-8
-cache-control: max-age=3600
-expires: Wed 23 Oct 2023 23:36:23 GMT
-x-cache: hit-from-cache-b6d3f5f7963d5eb
-expires=25-Dec-2023 22:36:23 GMT; Max-Age=3600; path=/; domain=.osint.nl; secure; HttpOnly; Same
-vary: *
-modified: Thu, 11 Jul 2023 04:00:00
-```
-
-对于复杂的查询，你可以使用特殊服务来查看网页信息。使用 `-I` 标记发送 HEAD 请求并获取标头（不包含正文）：
-
-```bash
-$ gitpod /workspace/linux-for-OSINT-21-day/day_5 (main) $ curl -I https://osint.nl/
-HTTP/200 OK
-date: Wed 23 Oct 2023 23:36:23 GMT
-content-type: text/html; charset=utf-8
-cache-control: max-age=3600
-expires: Wed 23 Oct 2023 23:36:23 GMT
-x-cache: hit-from-cache-b6d3f5f7963d5eb
-expires=25-Dec-2023 22:36:23 GMT; Max-Age=3600; path=/; domain=.osint.nl; secure; HttpOnly; Same
-vary: *
-modified: Thu, 11 Jul 2023 04:00:00
-```
-
-对于复杂的查询，你可以使用特殊服务来查看网页信息。使用 `-I` 标记发送 HEAD 请求并获取标头（不包含正文）：
-
-```bash
-$ gitpod /workspace/linux-for-OSINT-21-day/day_5 (main) $ curl -I https://osint.nl/
-HTTP/200 OK
-date: Wed 23 Oct 2023 23:36:23 GMT
-content-type: text/html; charset=utf-8
-cache-control: max-age=3600
-expires: Wed 23 Oct 2023 23:36:23 GMT
-x-cache: hit-from-cache-b6d3f5f7963d5eb
-expires=25-Dec-2023 22:36:23 GMT; Max-Age=3600; path=/; domain=.osint.nl; secure; HttpOnly; Same
-vary: *
-modified: Thu, 11 Jul 2023 04:00:00
-```
-
-对于复杂的查询，你可以使用特殊服务来查看网页信息。使用 `-I` 标记发送 HEAD 请求并获取标头（不包含正文）：
-
-```bash
-$ gitpod /workspace/linux-for-OSINT-21-day/day_5 (main) $ curl -I https://osint.nl/
-HTTP/200 OK
-date: Wed 23 Oct 2023 23:36:23 GMT
-content-type: text/html; charset=utf-8
-cache-control: max-age=3600
-expires: Wed 23 Oct 2023 23:36:23 GMT
-x-cache: hit-from-cache-b6d3f5f7963d5eb
-expires=25-Dec-2023 22:36:23 GMT; Max-Age=3600; path=/; domain=.osint.nl; secure; HttpOnly; Same
-vary: *
-modified: Thu, 11 Jul 2023 04:00:00
-```
-
-对于复杂的查询，你可以使用特殊服务来查看网页信息。使用 `-I` 标记发送 HEAD 请求并获取标头（不包含正文）：
-
-```bash
-$ gitpod /workspace/linux-for-OSINT-21-day/day_5 (main) $ curl -I https://osint.nl/
-HTTP/200 OK
-date: Wed 23 Oct 2023 23:36:23 GMT
-content-type: text/html; charset=utf-8
-cache-control: max-age=3600
-expires: Wed 23 Oct 2023 23:36:23 GMT
-x-cache: hit-from-cache-b6d3f5f7963d5eb
-expires=25-Dec-2023 22:36:23 GMT; Max-Age=3600; path=/; domain=.osint.nl; secure; HttpOnly; Same
-vary: *
-modified: Thu, 11 Jul 2023 04:00:00
-```
-
-对于复杂的查询，你可以使用特殊服务来查看网页信息。使用 `-I` 标记发送 HEAD 请求并获取标头（不包含正文）：
-
-```bash
-$ gitpod /workspace/linux-for-OSINT-21-day/day_5 (main) $ curl -I https://osint.nl/
-HTTP/200 OK
-date: Wed 23 Oct 2023 23:36:23 GMT
-content-type: text/html; charset=utf-8
-cache-control: max-age=3600
-expires: Wed 23 Oct 2023 23:36:23 GMT
-x-cache: hit-from-cache-b6d3f5f7963d5eb
-expires=25-Dec-2023 22:36:23 GMT; Max-Age=3600; path=/; domain=.osint.nl; secure; HttpOnly; Same
-vary: *
-modified: Thu, 11 Jul 2023 04:00:00
-```
-
-对于复杂的查询，你可以使用特殊服务来查看网页信息。使用 `-I` 标记发送 HEAD 请求并获取标头（不包含正文）：
-
-```bash
-$ gitpod /workspace/linux-for-OSINT-21-day/day_5 (main) $ curl -I https://osint.nl/
-HTTP/200 OK
-date: Wed 23 Oct 2023 23:36:23 GMT
-content-type: text/html; charset=utf-8
-cache-control: max-age=3600
-expires: Wed 23 Oct 2023 23:36:23 GMT
-x-cache: hit-from-cache-b6d3f5f7963d5eb
-expires=25-Dec-2023 22:36:23 GMT; Max-Age=3600; path=/; domain=.osint.nl; secure; HttpOnly; Same
-vary: *
-modified: Thu, 11 Jul 2023 04:00:00
-```
-
-对于复杂的查询，你可以使用特殊服务来查看网页信息。使用 `-I` 标记发送 HEAD 请求并获取标头（不包含正文）：
-
-```bash
-$ gitpod /workspace/linux-for-OSINT-21-day/day_5 (main) $ curl -I https://osint.nl/
-HTTP/200 OK
-date: Wed 23 Oct 2023 23:36:23 GMT
-content-type: text/html; charset=utf-8
-cache-control: max-age=3600
-expires: Wed 23 Oct 2023 23:36:23 GMT
-x-cache: hit-from-cache-b6d3f5f7963d5eb
-expires=25-Dec-2023 22:36:23 GMT; Max-Age=3600; path=/; domain=.osint.nl; secure; HttpOnly; Same
-vary: *
-modified: Thu, 11 Jul 2023 04:00:00
-```
-
-对于复杂的查询，你可以使用特殊服务来查看网页信息。使用 `-I` 标记发送 HEAD 请求并获取标头（不包含正文）：
-
-```bash
-$ gitpod /workspace/linux-for-OSINT-21-day/day_5 (main) $ curl -I https://osint.nl/
-HTTP/200 OK
-date: Wed 23 Oct 2023 23:36:23 GMT
-content-type: text/html; charset=utf-8
-cache-control: max-age=3600
-expires: Wed 23 Oct 2023 23:36:23 GMT
-x-cache: hit-from-cache-b6d3f5f7963d5eb
-expires=25-Dec-2023 22:36:23 GMT; Max-Age=3600; path=/; domain=.osint.nl; secure; HttpOnly; Same
-vary: *
-modified: Thu, 11 Jul 2023 04:00:00
-```
-
-对于复杂的查询，你可以使用特殊服务来查看网页信息。使用 `-I` 标记发送 HEAD 请求并获取标头（不包含正文）：
+对于复杂的查询，你可以使用特殊服务来查看网页信息。使用 `-I` 标记发送 `HEAD` 请求并获取标头（不包含正文）：
 
 ```bash
 $ gitpod /workspace/linux-for-OSINT-21-day/day_5 (main) $ curl -I https://osint.nl/
@@ -1134,9 +698,11 @@ modified: Thu, 11 Jul 2023 04:00:00
 
 对于复杂的查询，你可以使用特殊服务来查看网页信息。
 
+
+
+`grep`允许在文件中搜索匹配某些文本（正则表达式）。
+注意这里`grep`就可以在文件中进行匹配。
 ```bash
-grep 允许在文件中搜索匹配某些文本（正则表达式）。
-注意这里 grep 就可以在文件中进行匹配。
 $ gitpod /workspace/linux-for-OSINT-21-day/day_5 (main) $ curl -I https://osint.nl/
 HTTP/200 OK
 date: Wed 23 Oct 2023 23:36:23 GMT
@@ -1148,9 +714,6 @@ expires=25-Dec-2023 22:36:23 GMT; Max-Age=3600; path=/; domain=.osint.nl; secure
 vary: *
 modified: Thu, 11 Jul 2023 04:00:00
 ```
-
-
-
 
 ```text
 example.txt U X
@@ -1181,19 +744,19 @@ bciqazcm763858nk2jd986etajvwqwwsliv8oxwcct
 $ gitpool /workspace/linux-OSINT-21-day/Day_6 (main) $ _
 ```
 
-# grep -F gmail Day_6/example.txt
+# `grep -F gmail Day_6/example.txt`
 
-默认情况下，Grep 工具是区分大小写的。要禁用此选项（同时搜索 "gmail" 和 "MAIL"、"Gmail"），请添加 -i 标记。
+默认情况下，`Grep`工具是区分大小写的。要禁用此选项（同时搜索"`gmail`"和"`MAIL`"`Gmail"`），请添加`-i`标记。
 
-## grep -F i gmail Day_6/example.txt
+## `grep -F i gmail Day_6/example.txt`
 
-现在，让我们尝试查找包含至少一个数字的行（使用简单的正则表达式 [0-9]）：
+现在，让我们尝试查找包含至少一个数字的行（使用简单的正则表达式`[0-9]`）：
 
 ```bash
 grep '[0-9]' example.txt
 ```
 
-## example.txt U emails.txt U commands.txt U
+## `example.txt U emails.txt U commands.txt U`
 
 ```
 Day_6 > example.txt
@@ -1218,11 +781,11 @@ git workspace/linux-for-OSINT-21-day/Day_6 (main) $ grep -n "gmail" example.txt
 6 example@gmail.com
 ```
 
-如果你想在结果中显示行号，请使用 -n 标记：
+如果你想在结果中显示行号，请使用`-n`标记：
 
-## grep -n "gmail" example.txt
+## `grep -n "gmail" example.txt`
 
-## example.txt U emails.txt U commands.txt U
+## `example.txt U emails.txt U commands.txt U`
 
 ```
 Day_6 > emails.txt
@@ -1240,7 +803,7 @@ example.txt:johnsmith@gmail.com
 emails.txt:sector85gmail.kz
 emails.txt:cyberdetective.kz
 emails.txt:jakecrepemail.kz
-``` (Wait, let me re-align the translation flow)
+```
 
 现在任务稍微复杂了一些。让我们找到包含邮箱的字符串：
 
@@ -1251,60 +814,71 @@ grep -E -o
 
 我们在命令中使用了一些其他有用的标记：
 
-- E - 使用扩展正则表达式。
-- o - 只显示匹配的部分（而不是整行）。
-- r - 搜索当前目录下的所有文件，以及子目录下的所有文件![](img/03e4d38bded76bb5128842c.png)。
+- `E` - 使用扩展正则表达式。
+- `o` - 只显示匹配的部分（而不是整行）。
+- `r` - 搜索当前目录下的所有文件，以及子目录下的所有文件![](img/03e4d38bded76bb5128842c.png)。
 
-在 **Grep** 的帮助下，你不仅可以搜索数字和邮箱，还可以搜索 IP 地址、加密货币钱包、用户名、邮政码等。
+在**`Grep`**的帮助下，你不仅可以搜索数字和邮箱，还可以搜索 IP 地址、加密货币钱包、用户名、邮政码等。
 
 我们将不会深入介绍它们的语法。对于大多数 OSINT 目的，你只需要从 Stackoverflow 或在线库复制正则表达式：
 
-[RegexLib](https://regexlib.com/)
+[`RegexLib`](https://regexlib.com/)
 
-[RegexHub](https://projects.lukeha.com/regexhub/)
+[`RegexHub`](https://projects.lukeha.com/regexhub/)
 
-而且，你始终可以使用 ChatGPT 或 Phind 来编写正则表达式（我们将讨论更多关于 **Day 20** 的辅助工具）。
+而且，你始终可以使用 ChatGPT 或 Phind 来编写正则表达式（我们将讨论更多关于**Day 20**的辅助工具）。
 
-如果你对这个主题感兴趣，Medium 博客有一篇非常详细且长的文章介绍了：**正则表达式在 OSINT 中有什么用。理论以及使用 Google 表格的方法**](https://medium.com/osint-ambition/this-article-consists-of-three-short-parts-31d1fab5)。
+如果你对这个主题感兴趣，Medium 博客有一篇非常详细且长的文章介绍了：**正则表达式在 OSINT 中有什么用。理论以及使用 Google 表格的方法**[`https://medium.com/osint-ambition/this-article-consists-of-three-short-parts-31d1fab5`](https://medium.com/osint-ambition/this-article-consists-of-three-short-parts-31d1fab5)。
 
-我们也可以与其他 Linux 工具配合使用正则表达式：**find, sed, tr,** 等。
+我们也可以与其他 Linux 工具配合使用正则表达式：`find`, `sed`, `tr`, 等。
 
 如果你想搜索特定扩展名的文件，或者名称包含特定字符串的文件，请用星号替换文件名：
 
 ```bash
 grep -n "gmail" *.txt
 ```
+
 PROBLEMS OUTPUT DEBUG CONSOLE TERMINAL
+
 $ gitpool /workspace/linux-OSINT-21-day/Day_6 (main) $ Day_6
+
 $ gitpool /workspace/linux-OSINT-21-day/Day_6 (main) grep "gmail" example.txt
+
 johnsmith@gmail.com
+
 example@gmail.com
+
 $ gitpool /workspace/linux-OSINT-21-day/Day_6 (main) grep '[0-9]' example.txt
+
 103.21.244.25
+
 34x4VRoCGjym3xR7yCVPFHoCNxv4Tweo
+
 bciqazcm763858nk2jd986etajvwqwwsliv8oxwcct
+
 23.04.1991
+
 173.245.49.202
+
 $ gitpool /workspace/linux-OSINT-21-day/Day_6 (main) $ _
-
-
-
-
 
 ## 第 7 天
 
-sed s/Happy/Merry/ sed_sample.txt (替换每个数字)
+`sed s/Happy/Merry/ sed_sample.txt` (替换每个数字)
 
-现在让我们尝试使用正则表达式将文件中的文本替换为 "no":
+现在让我们尝试使用正则表达式将文件中的文本替换为"`no`":
+
+
 
 ![](img/03e4d38bded7def6bb51288422c4f89d_47_0.png)
 
-## sed /[0-9]/no/g digits.txt
+## `sed /[0-9]/no/g digits.txt`
 
 ![](img/03e4d38bded7def6bb51288422c4f89d_48_0.png)
 
-sed -n 7p sed_sample.txt
-sed -n 5,12p sed_sample.txt
+`sed -n 7p sed_sample.txt`
+
+`sed -n 5,12p sed_sample.txt`
 
 对于一个只有几十行的文件，这个命令似乎毫无意义。但当你拥有一个例如包含数千万行的 CSV 文件，且 Excel 拒绝打开它，而你需要查看第 108100、999588、10009898 行的内容以确保数据格式正确时，它的真正威力就会显现出来。
 
@@ -1346,7 +920,7 @@ We all like-like our figgy pudding
 
 ![](img/03e4d38bded7def6bb51288422c4f89d_49_0.png)
 
-更多示例可以在“Useful sed” Github 仓库（https://github.com/adrianlarion/useful-sed）中找到。
+更多示例可以在“Useful sed” Github 仓库（`https://github.com/adrianlarion/useful-sed`）中找到。
 
 ```
 使用此工具生成 sed 命令，你可以在 Linux 或 Unix 机器上运行它。
@@ -1354,15 +928,15 @@ We all like-like our figgy pudding
 
 ![](img/03e4d38bded7def6bb51288422c4f89d_50_0.png)
 
-不要试图记忆组合 Sed 命令的语法规则。你始终可以在 StackOverflow 上找到示例，向某些 AI 助手寻求帮助，或者使用特殊的在线服务如 Sed 命令生成器（https://www.jamiebalafour/scot/devkit/sed/）。
+不要试图记忆组合 Sed 命令的语法规则。你始终可以在 StackOverflow 上找到示例，向某些 AI 助手寻求帮助，或者使用特殊的在线服务如 Sed 命令生成器（`https://www.jamiebalafour/scot/devkit/sed/`）。
 
 # AWK
 
-Awk (https://www.gnu.org/software/gawk/manual/gawk.html) 是一种用于文本处理的脚本语言。有趣的事实是：Awk 并不是技术缩写，而是该语言三位开发者的字母组合：Alfred V. Aho, Peter J. Weiner 和 Brian W. Kernighan。
+`Awk` (`https://www.gnu.org/software/gawk/manual/gawk.html`) 是一种用于文本处理的脚本语言。有趣的事实是：`Awk` 并不是技术缩写，而是该语言三位开发者的字母组合：Alfred V. Aho, Peter J. Weiner 和 Brian W. Kernighan。
 
-Awk 像 Sed 一样不需要安装，因为 Linux 默认包含它。
+`Awk` 像 `Sed` 一样不需要安装，因为 Linux 默认包含它。
 
-首先，让我们尝试显示文件的整个文本。使用 Cat 会更容易，但这个示例对于理解 awk 语法是必要的：
+首先，让我们尝试显示文件的整个文本。使用 `Cat` 会更容易，但这个示例对于理解 `awk` 语法是必要的：
 
 ```
 PROBLEMS OUTPUT PORTS DEBUG TERMINAL # zsh - dev_7
@@ -1385,7 +959,7 @@ awk '{print $0}' sample.txt
 awk '{print NR,$0}' sample.txt
 ```
 
-让我们只显示文档的第一列和第三列（使用标志 -F 指明分隔符为逗号）：
+让我们只显示文档的第一列和第三列（使用标志 `-F` 指明分隔符为逗号）：
 
 ![](img/03e4d38bded7def6bb51288422c4f89d_51_1.png)
 
@@ -1395,7 +969,7 @@ awk -F, '{print $1,$3}' sample.txt
 
 现在只输出以特定字符开头的字符串：
 
-example.csv | awk_sample.txt
+`example.csv | awk_sample.txt`
 
 ```
 +,2016,1
@@ -1405,25 +979,23 @@ Another title (1986,1880): The British Invention, Mary, eloquently written curat
 First image (2014): Terry, Mary,some other 2015,3
 ```
 
-
-
-
-
 # 第 8 天 Vim 文本编辑器
 
-一个有趣的事实，如果你在 Google 中输入 "emacs"，搜索引擎会问你：“你是指 vi 吗？”（vim 是 vi 文本编辑器的改进版本，于 1976 年引入）。全球许多开发者都热爱 Vim，他们已经使用了几十年，并不断发现这个文本编辑器的某些惊人功能。
+一个有趣的事实，如果你在 Google 中输入 "emacs"，搜索引擎会问你：“你是指 vi 吗？”（`vim` 是 `vi` 文本编辑器的改进版本，于 1976 年引入）。全球许多开发者都热爱 Vim，他们已经使用了几十年，并不断发现这个文本编辑器的某些惊人功能。
 
 ![](img/03e4d38bded7def6bb51288422c4f89d_54_0.png)
 
-Vim (https://www.vim.org) - 是一款通用且高度可配置的命令行文本编辑器。它的第一个版本出现在 1991 年，尽管有许多其他文本编辑器和 IDE（集成开发环境）作为竞争对手，但它一直保持流行。让我们运行它，看看它擅长什么。
+`Vim` (`https://www.vim.org`) - 是一款通用且高度可配置的命令行文本编辑器。它的第一个版本出现在 1991 年，尽管有许多其他文本编辑器和 IDE（集成开发环境）作为竞争对手，但它一直保持流行。让我们运行它，看看它擅长什么。
 
 ![](img/03e4d38bded7def6bb51288422c4f89d_55_0.png)
 
 让我们来安装：
 
-## sudo apt update
+## `sudo apt update`
 
-## sudo apt install vim
+## `sudo apt install vim`
+
+
 
 ```bash
 bash - Day_14
@@ -1455,27 +1027,39 @@ Processing triggers vim-runtime (2.0.2-3ubuntu1.2.13)
 ## 问题 输出调试控制台 终端
 
 od aliquip non prehendr
+
 quis ut ullamcorper consectetur adipiscing elit. Quibus id nulla est non esse velit vitae, a a incid in risus mauris; Quam neque aut protulis, popularia sunt, eu aum a ele deserunt. Duo Nemo Regis struc
+
 iam velit vehicula nisl eget velit eu mauris.
 
 Iam in mauris, qui in velit nulla, euismod gravida, tellus, elequent a nisque. Nam non tincidunt, fingint, vinguent, Ariston Atqui percipisc et et turpis
+
 re augue neque, cum prime sint mollis magnis, hendrer posuere libero. Ferieri. Inquin, trarias, nulla pacto, ut non diam, quis velit eu nisl, lectus diam, eu ad estabitur est, quiviridis maximus optimat in reibus, ut reliqu
+
 ab obrut?
 
 Quis iste dolore tempus
+
 Summa exim non velit non non nonet? Donec pra mi ips velit necubacit id nisi vester bao M. Tubulis, quam quam, us condensatus posuere. P. Quod si ita sit, currer pharetra facilisis sanda massa.
 
 Ex exum omnis scriptis et Institutit cum omnis diam lobortis facilisis, omnis historia. Patientes. Cum ente feri turpis torrens oratu, quo
+
 Quid ut ex diam in velit, nisl eget, eu nibh mollis congis mauris, nisl tellus tenas, nequeasque orationem risus dapibus. El reidrapitur ipe s e\exa, ex nisl, a nisl, a nisl nisl, nisl elit, eu a feugitur erat, non diam, non idelerit, non non tellus reibus 1 or
+
 massa non esse ad beatud vitae satis. Nam at vero sit,ums accredit, ut appetit bibendum quam habenaat et per si ipsa nequeat,
 
 Quem si tenueris, non modum Cicconrone, sed etiam me abducas licebit.
+
 Stulti autem malorum memoria primme torquent, lobortis praiterita grata recordation nequean renovat.
+
 Fis esse nisl a nisl erat.
 
 Quae autem nulla mauris institutionis lobortis oblibit?
+
 Verum at nisl eget diam, eget verba rapipluit;
+
 Hoc est non quod non habere, sed neque dictum liquem,
+
 nique.
 
 "Text_example.txt" [noesil] 211, 3518
@@ -1495,15 +1079,15 @@ vim text example.txt
 
 我们暂时不会对此文本做更多操作，直接进入最重要的问题。
 
-Vim (https://www.vim.org) - 是一款通用且高度可配置的命令行文本编辑器。它的第一个版本出现在 1991 年，尽管有许多其他文本编辑器和 IDE（集成开发环境）作为竞争对手，但它一直保持流行。让我们运行它，看看它擅长什么。
+`Vim` (https://www.vim.org) - 是一款通用且高度可配置的命令行文本编辑器。它的第一个版本出现在 1991 年，尽管有许多其他文本编辑器和 IDE（集成开发环境）作为竞争对手，但它一直保持流行。让我们运行它，看看它擅长什么。
 
 ![](img/03e4d38bded7def6bb51288422c4f89d_55_0.png)
 
 让我们来安装：
 
-## sudo apt update
+## `sudo apt update`
 
-## sudo apt install vim
+## `sudo apt install vim`
 
 ```bash
 bash - Day_14
@@ -1534,31 +1118,45 @@ Processing triggers vim-runtime (2.0.2-3ubuntu1.2.13)
 
 ## 问题 输出调试控制台 终端
 
+
+
 od aliquip non prehendr
+
 quis ut ullamcorper consectetur adipiscing elit. Quibus id nulla est non esse velit vitae, a a incid in risus mauris; Quam neque aut protulis, popularia sunt, eu aum a ele deserunt. Duo Nemo Regis struc
+
 iam velit vehicula nisl eget velit eu mauris.
 
 Iam in mauris, qui in velit nulla, euismod gravida, tellus, elequent a nisque. Nam non tincidunt, fingint, vinguent, Ariston Atqui percipisc et et turpis
+
 re augue neque, cum prime sint mollis magnis, hendrer posuere libero. Ferieri. Inquin, trarias, nulla pacto, ut non diam, quis velit eu nisl, lectus diam, eu ad estabitur est, quiviridis maximus optimat in reibus, ut reliqu
+
 ab obrut?
 
 Quis iste dolore tempus
+
 Summa exim non velit non non nonet? Donec pra mi ips velit necubacit id nisi vester bao M. Tubulis, quam quam, us condensatus posuere. P. Quod si ita sit, currer pharetra facilisis sanda massa.
 
 Ex exum omnis scriptis et Institutit cum omnis diam lobortis facilisis, omnis historia. Patientes. Cum ente feri turpis torrens oratu, quo
+
 Quid ut ex diam in velit, nisl eget, eu nibh mollis congis mauris, nisl tellus tenas, nequeasque orationem risus dapibus. El reidrapitur ipe s e\exa, ex nisl, a nisl, a nisl nisl, nisl elit, eu a feugitur erat, non diam, non idelerit, non non tellus reibus 1 or
+
 massa non esse ad beatud vitae satis. Nam at vero sit,ums accredit, ut appetit bibendum quam habenaat et per si ipsa nequeat,
 
 Quem si tenueris, non modum Cicconrone, sed etiam me abducas licebit.
+
 Stulti autem malorum memoria primme torquent, lobortis praiterita grata recordation nequean renovat.
+
 Fis esse nisl a nisl erat.
 
 Quae autem nulla mauris institutionis lobortis oblibit?
+
 Verum at nisl eget diam, eget verba rapipluit;
+
 Hoc est non quod non habere, sed neque dictum liquem,
+
 nique.
 
-"Text_example.txt" [noesil] 211, 3518
+`"Text_example.txt"` [noesil] 211, 3518
 
 1,2 Top
 
@@ -1568,10 +1166,6 @@ vim text example.txt
 ```
 
 我们暂时不会对此文本做更多操作，直接进入最重要的问题。
-
-
-
-
 
 # 问题 输出端口 调试 控制台 终端
 
@@ -1595,13 +1189,13 @@ $ cat README.md
 $ |
 ```
 
-现在让我们获取活动会话的列表，看看是否存在一个名为 "demo-screen" 的新会话：
+现在让我们获取活动会话的列表，看看是否存在一个名为 `"demo-screen"` 的新会话：
 
 ```
 screen -ls
 ```
 
-要返回名为 "demo-screen" 的会话，只需在命令行中输入：
+要返回名为 `"demo-screen"` 的会话，只需在命令行中输入：
 
 ```
 # screen -r demo-screen
@@ -1609,7 +1203,7 @@ screen -ls
 
 然后再次按 `Ctrl+A+D` 退出。
 
-如果你想删除名为 "demo-screen" 的会话，输入：
+如果你想删除名为 `"demo-screen"` 的会话，输入：
 
 ```
 gitpod /workspace/linux-for-OSINT-21-day/Day_9 (main) $
@@ -1634,9 +1228,9 @@ No Sockets found in /run/screen/S-gitpod
 
 # Crontab
 
-使用 crontab 的另一个重要优势是能够为特定时间调度特定的操作。
+使用 `crontab` 的另一个重要优势是能够为特定时间调度特定的操作。
 
-Crontab (https://ss64.com/bash/crontab.html) 是一个用于编辑 crontab 文件的工具，它存储了由 cron 守护进程（在 UNIX 术语中）执行的命令计划。
+`Crontab` (https://ss64.com/bash/crontab.html) 是一个用于编辑 crontab 文件的工具，它存储了由 cron 守护进程（在 UNIX 术语中）执行的命令计划。
 
 这是一个来自维基百科的示例，展示了 crontab 文件：
 
@@ -1664,6 +1258,8 @@ Gitpod 完全禁止使用 Crontab 工具。我们今天不会再尝试任何其�
 由 Cronitor 提供的 cron 调度表达式快速简便编辑器。
 
 ## “从周一到周五，每天的 22:00。”
+
+
 
 ```
 next at 2023-05-17 22:00:00
@@ -1696,7 +1292,7 @@ random
 @reboot (非标准)
 ```
 
-Crontab Guru (https://crontab.guru/) 是一个允许你快速组合 cron 调度表达式的在线服务。
+`Crontab Guru` (https://crontab.guru/) 是一个允许你快速组合 cron 调度表达式的在线服务。
 
 # 第 10 天。文本分析和编辑工具
 
@@ -1704,7 +1300,7 @@ Crontab Guru (https://crontab.guru/) 是一个允许你快速组合 cron 调度�
 
 ## Cat
 
-Cat (https://man.linux.org/man/1/cat) - 用于查看文件内容的工具。我们之前已经用过它，它看起来非常简单。它允许一次查看多个文件的内容：
+`Cat` (https://man.linux.org/man/1/cat) - 用于查看文件内容的工具。我们之前已经用过它，它看起来非常简单。它允许一次查看多个文件的内容：
 
 ```
 cat file1 file2
@@ -1718,7 +1314,7 @@ cat file1 file2 > file3
 
 ## Cut
 
-Cut (https://man.linux.org/man/1/cut) - 用于提取文件部分的工具。我们之前已经用过它，它看起来非常简单。它允许你提取文件中的特定字符：
+`Cut` (https://man.linux.org/man/1/cut) - 用于提取文件部分的工具。我们之前已经用过它，它看起来非常简单。它允许你提取文件中的特定字符：
 
 你可以使用 `-c` 提取前 5 个字符：
 
@@ -1726,7 +1322,7 @@ Cut (https://man.linux.org/man/1/cut) - 用于提取文件部分的工具。我�
 cut -c 1-5 file
 ```
 
-Cut 还可以通过分隔符来提取字段：
+`Cut` 还可以通过分隔符来提取字段：
 
 ```
 cut -d ":" -f1 file
@@ -1734,7 +1330,7 @@ cut -d ":" -f1 file
 
 ## Uniq
 
-Uniq (https://man.linux.org/man/1/uniq) - 用于删除文件中重复的行的工具。让我们尝试对文件进行去重（前提文件必须经过排序的）：
+`Uniq` (https://man.linux.org/man/1/uniq) - 用于删除文件中重复的行的工具。让我们尝试对文件进行去重（前提文件必须经过排序的）：
 
 ```
 uniq file
@@ -1742,7 +1338,7 @@ uniq file
 
 ## Sort
 
-Sort (https://man.linux.org/man/1/sort) - 对文件进行排序的工具。我们可以使用 `-r` 参数进行反序排序：
+`Sort` (https://man.linux.org/man/1/sort) - 对文件进行排序的工具。我们可以使用 `-r` 参数进行反序排序：
 
 ```
 sort -r file
@@ -1750,15 +1346,11 @@ sort -r file
 
 ## Iconv
 
-Iconv (https://man.linux.org/man/1/iconv) - 用于将文本从一种编码转换为另一种编码的工具。我们现在没有合适的测试文件，但了解它的存在是很有用的：
+`Iconv` (https://man.linux.org/man/1/iconv) - 用于将文本从一种编码转换为另一种编码的工具。我们现在没有合适的测试文件，但了解它的存在是很有用的：
 
 ```
 iconv -f UTF-8 -t ASCII utf8.txt acii.txt
 ```
-
-
-
-
 
 ![](img/03e4d38bded7def6bb51288422c4f89d_74_0.png)
 
@@ -1767,8 +1359,6 @@ iconv -f UTF-8 -t ASCII utf8.txt acii.txt
 ```
 cd Day 11 
 ffmpeg -i video_sample.flv -r 1 frame%d.png
-```
-
 ```
 
 逐帧查看视频可以让你快速了解视频的内容，并突出显示其中的关键片段。这是一个简单但非常节省时间的技巧。注意，如果你在 Gitpod 中右键点击文件或文件夹，可以从工作区下载它们。
@@ -1785,29 +1375,49 @@ ffmpeg -i video_sample.flv -q:a 0 -map a audio.mp3
 
 ## 转录音频
 
-PocketSphinx (https://github.com/cmusphinx/pocketsphinx) 是一个非常语音识别器。
+`PocketSphinx` (https://github.com/cmusphinx/pocketsphinx) 是一个非常语音识别器。
 
 ```bash
 $ gitpod /workspace/linux-os-DSINT-21-day/Day_11 (main) sudo apt install pocketsphinx pocketsphinx-en-us
+
 Reading package lists... Done
+
 Building dependency index... Done
+
 Reading state information... Done
+
 Setting pocketsphinx to the latest version (0.8.0+real1pha+1-14ubuntu)
+
 pocketsphinx-en-us set to be manually installed.
+
 The following NEW packages will be installed:
+
 0 1 newly installed, 0 to remove and 87 not upgraded.
+
 0 upgraded, 1 newly installed failed.
+
 After this operation, 140 KB of additional disk space will be used.
+
 Do you want to continue? [Y/n] Y
+
 Building dependency tree [1/1]
+
 Fetched 72.6 KB in 0 s [111 KB/s]
+
 Decrypting package information, since apt is not installed
+
 Selecting previously installed packages
+
 Reading database ... 30684 files and currently installed.
+
 Preparing archives pocketsphinx (0.8.0+real1pha+1-14ubuntu_amd64.deb)
+
 Unpacking pocketsphinx (0.8.0+real1pha+1-14ubuntu)
+
 Setting pocketsphinx (0.8.0+real1pha+1-14ubuntu)
+
 Processing triggers for man-db (2.10.2-1)
+
 gitpod /workspace/linux-os-DSINT-21-day/Day_11 (main) $
 ```
 
@@ -1819,19 +1429,25 @@ gitpod /workspace/linux-os-DSINT-21-day/Day_11 (main) $
 
 如果你处理其他语言的音频录制，可以轻松地获得高质量的结果。但不遗憾的是，完整的列表可以在这里找到。
 
-PocketSphinx 是一个易于使用的工具，可以产生高质量的结果。但它不支持音频文件格式，只支持 16000 Hz 的 wav 格式。
+`PocketSphinx` 是一个易于使用的工具，可以产生高质量的结果。但它不支持音频文件格式，只支持 16000 Hz 的 wav 格式。
 
 ```bash
 # /workspace/linux-os-DSINT-21-day/Day_11 ~ $ sphinx-f -i test_spec_wav -o test_spec_16000.wav
+
 ## sphinx-f -i test_spec_wav -o test_spec_16000.wav
 ```
 
-Generating python documentation
-Built with Python 3.10.12 (main, Nov 20 2023, 15:14:05) [GCC 12.3.0] on Linux
-Using Sphinx 5.3.3 - 2023.12.06
+
+
+## Generating Python Documentation
+
+Built with `Python 3.10.12` (main, Nov 20 2023, 15:14:05) [GCC 12.3.0] on Linux
+Using `Sphinx 5.3.3` - 2023.12.06
+
+```
 [info] reading conf.py...
 [info] extensions: ['sphinx.ext.autodoc', 'sphinx.ext.extpages', 'sphinx.ext.-ext', 'sphinx.ext-ext', 'sphinx.ext-sphinx.ext-todo', 'sphinx.ext-sphinx.ext-github', 'sphinx-ext-sphinx.ext-todo']
-[info] configoc:-sphinx-ext-libsphinx-ext-pages-sphinx-ext-libsphinx-ext-sphinx-ext-libsphinx-ext-link-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-extphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-extphinx-ext-link-ext-ext-ext-ext-sphinx-ext-extphinx-ext-link-ext-ext-ext-ext-sphinx-ext-
+[info] configoc:-sphinx-ext-libsphinx-ext-pages-sphinx-ext-libsphinx-ext-sphinx-ext-libsphinx-ext-link-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-extphinx-ext-link-ext-ext-ext-ext-sphinx-ext-libsphinx-ext-link-ext-ext-ext-ext-sphinx-ext-extphinx-ext-link-ext-ext-ext-ext-sphinx-ext-extphinx-ext-link-ext-ext-ext-ext-sphinx-ext-extphinx-ext-link-ext-ext-ext-ext-sphinx-ext-
 phext-ext-link-ext-ext-ext-ext-sphinx-ext-
 phinx-ext-link-ext-ext-ext-ext-sphinx-ext-
 ph
@@ -1853,8 +1469,9 @@ phinx-ext-link-ext-ext-ext-ext-sphinx-ext-
 phinx-ext-link-ext-ext-ext-ext-sphinx-ext-
 phinx-ext-link-ext-ext-ext-ext-sphinx-ext-
 phinx-ext-ext-ext
+```
 
-幸运的是，大多数音频格式都可以通过 ffmpeg 轻松转换。例如：
+幸运的是，大多数音频格式都可以通过 `ffmpeg` 轻松转换。例如：
 
 ```bash
 ffmpeg -i test_speech.wav -ar 16000 -ac 1 test_speech.wav
@@ -1862,69 +1479,115 @@ ffmpeg -i test_speech.wav -ar 16000 -ac 1 test_speech.wav
 
 ![](img/03e4d38bded7def6bb51288422c4f89d_77_0.png)
 
-现在尝试将音频转换为文本：如果你需要不同语言的高质量语音识别，建议你查看 OpenAI Whisper (https://openai.com/research/whisper)。这是一个付费工具，但它非常好。
+现在尝试将音频转换为文本：如果你需要不同语言的高质量语音识别，建议你查看 OpenAI Whisper (<https://openai.com/research/whisper>)。这是一个付费工具，但它非常好。
 
 ## 从图像中提取文本
 
-Tesseract（等待，Tesseract OCR）Tesseract OCR (https://github.com/tesseract-ocr/tesseract) 是一个简单的光学识别工具。
+Tesseract OCR (<https://github.com/tesseract-ocr/tesseract>) 是一个简单的光学识别工具。
 
 ```bash
 $ gitpod /workspace/linux-os-DSINT-21-day/Day_1 (main) sudo apt install tesseract-ocr
+
 Reading package lists... Done
+
 Building dependency tree... Done
+
 Reading state information... Done
+
 The following NEW packages will be installed:
+
 libesseract3 libgif7 libjpeg5 tesseract-ocr tesseract-osd
+
 Suggested packages:
+
 tesseractdata
+
 The following NEW packages will be installed:
+
 libesseract3 libgif7 libjpeg5 tesseract-ocr tesseract-osd
+
 upgraded, 7 packages installed, 0 to remove and 20 not upgraded.
+
 Need to get 7684 KB of additional disk space will be used.
+
 Do you want to continue? [Y/n]
+
 Get:1 http://archive.ubuntu.com/ubuntu jammy/amd64/libesseract3_3.6.0-ubuntu1 [360 KB]
+
 Get:2 http://archive.ubuntu.com/ubuntu jammy/amd64/libgif7_1.5.9-2ubuild2 [330.8 KB]
+
 Get:3 http://archive.ubuntu.com/ubuntu universe/amd64/libjpeg5_2_0.2-ubuntuild1 [1380 KB]
+
 Get:4 http://archive.ubuntu.com/ubuntu universe/amd64/tesseract-ocr_4.1.1-2ubuntu0.4+77274cfa-1 [1593 KB]
+
 Get:5 http://archive.ubuntu.com/ubuntu universe/amd64/tesseract-ocr-osd_4.1.1-2ubuntu0.4+77274cfa [2990 KB]
+
 Fetched 7684 KB in 1 s (7.7 MB/s)
+
 Setting up apt archive keyring, since apt-utils is not installed
+
 Selecting previously unselected package libesseract3
+
 Reading dependency lists... Done
-Building dependency tree... Done
-Reading state information... Done
-The following NEW packages will be installed:
-libesseract3 (3.6.0-ubuntu1)amd64
-Unpacking libesseract3 (3.6.0-ubuntu1)...
-Setting up libesseract3 (3.6.0-ubuntu1)amd64.
-Selecting previously unselected package libgif7
-Unpacking libgif7 (1.5.9-2ubuild2)amd64..
-Setting up libgif7 (1.5.9-2ubuild2)amd64.
-Selecting previously unselected package libjpeg5
-Unpacking libjpeg5 (2_0.2-ubuntuild1)...amd64..
-Setting up libjpeg5 (2_0.2-ubuntuild1)amd64.
-Selecting previously unselected package tesseract-ocr
-Unpacking tesseract-ocr (4.1.1-2ubuntu0.4+77274cfa-1)amd64..
-Setting up tesseract-ocr (4.1.1-2ubuntu0.4+77274cfa)amd64.
-Selecting previously unselected package tesseract-ocr-osd
-Unpacking tesseract-ocr-osd (4.1.1-2ubuntu0.4+77274cfa)amd64..
-Setting up tesseract-ocr-osd (4.1.1-2ubuntu0.4+77274cfa)amd64.
 ```
 
 
+
+Building dependency tree... Done
+
+Reading state information... Done
+
+The following NEW packages will be installed:
+
+`libesseract3` (3.6.0-ubuntu1)amd64
+
+Unpacking `libesseract3` (3.6.0-ubuntu1)...
+
+Setting up `libesseract3` (3.6.0-ubuntu1)amd64.
+
+Selecting previously unselected package `libgif7`
+
+Unpacking `libgif7` (1.5.9-2ubuild2)amd64..
+
+Setting up `libgif7` (1.5.9-2ubuild2)amd64.
+
+Selecting previously unselected package `libjpeg5`
+
+Unpacking `libjpeg5` (2_0.2-ubuntuild1)...amd64..
+
+Setting up `libjpeg5` (2_0.2-ubuntuild1)amd64.
+
+Selecting previously unselected package `tesseract-ocr`
+
+Unpacking `tesseract-ocr` (4.1.1-2ubuntu0.4+77274cfa-1)amd64..
+
+Setting up `tesseract-ocr` (4.1.1-2ubuntu0.4+77274cfa)amd64.
+
+Selecting previously unselected package `tesseract-ocr-osd`
+
+Unpacking `tesseract-ocr-osd` (4.1.1-2ubuntu0.4+77274cfa)amd64..
+
+Setting up `tesseract-ocr-osd` (4.1.1-2ubuntu0.4+77274cfa)amd64.
 
 ```bash
 gitpod /workspace/linux-for-OSINT-21-day/day_21 (main)$ cd day_21
+
 gitpod /workspace/linux-for-OSINT-21-day/day_21 (main)$ tesseract text.png text.txt
+
 T Open Source OCR Engine v4.1.1 with Leptonica
+
 gitpod /workspace/linux-for-OSINT-21-day/day_21 (main)$ cat text.txt
+
 我们在在这个命令中使用了其他几个标记：
+
 -u 使用扩展正则表达式语法。
+
 -s 仅显示匹配的行部分（而不是所有行）。
+
 -r 搜索当前目录下的所有文件以及子目录中的所有文件。
 ```
 
-## tesseract text.png text.txt
+## `tesseract text.png text.txt`
 
 当我们将视频、音频和图片转换为文本后，就可以对其进行翻译了！这是自动化这一过程许多方法之一。
 
@@ -1936,64 +1599,122 @@ Translate Shell (https://github.com/soimort/translate-shell) 是一个基于 Goo
 
 ```bash
 $ gitpad ~/workspace/linux-ubuntu-20.04-main$ sudo apt install translate-shell
+
 Reading packages...
+
 Building dependency tree... Done
+
 The following additional packages will be installed
+
 shell-common libicu66 libicu66-dev-x86-64 libribbi-bin-iconv-perl rwrap getutils-base debi64
+
 shell-common libicu66 libicu66-dev-x86-64 libribbi-bin-iconv-perl rwrap getutils-base debi64
+
 libribbi-bin-iconv-perl rwrap\ translate-shell
+
 12 packages will be installed, 0 newly installed, 0 upgraded, 0 not to remove.
+
 You want to continue? [Y/n] y
+
 Setting up architecture... done
+
 The following packages will be installed:
+
   * libicu66 (66.1-2ubuntu2) [47.0 KB]
+
   * libicu66-dev-x86-64 (66.1-2ubuntu2) [33.2 MB]
+
   * libribbi-bin-iconv-perl (1.0.1-1) [132.5 KB]
+
   * rwrap (0.1.1-1) [123.5 KB]
+
   * getutils-base (6.1-2ubuntu2) [88.5 KB]
+
   * translate-shell (1.7.0-1) [25.0 KB]
+
 6 new packages will be installed, 33.7 MB of additional disk space will be used.
+
 After this operation, 1248.5 MB less will be available.
+
 Do you want to continue? [Y/n] y
+
 Reading package information... Done
+
 Building dependency tree... Done
+
 Reading package lists... Done
+
 Fetching metadata: 1.2 MB in 1 s
+
 Get: 1/6 http://archive.ubuntu.com/ubuntu focal/main/amd64/libicu66_66.1-2ubuntu2_amd64.deb [47.0 KB]
+
 Get: 2/6 http://archive.ubuntu.com/ubuntu focal/main/amd64/libicu66-dev-x86-64_66.1-2ubuntu2_amd64.deb [33.2 MB]
+
 Get: 3/6 http://archive.ubuntu.com/ubuntu focal/main/libribbi-bin-iconv-perl_1.0.1-1_all.deb [132.5 KB]
+
 Get: 4/6 http://archive.ubuntu.com/ubuntu focal/main/amd64/rwrap_0.1.1-1_amd64.deb [123.5 KB]
+
 Get: 5/6 http://archive.ubuntu.com/ubuntu focal/main/amd64/getutils-base_6.1-2ubuntu2_amd64.deb [88.5 KB]
+
 Get: 6/6 http://archive.ubuntu.com/ubuntu focal/main/amd64/translate-shell_1.7.0-1_amd64.deb [25.0 KB]
+
 Fetched 33.7 MB in 6 files, 1s (33.7 MB/s)
+
 Selecting previously installed packages
+
 Selecting previously unselected packages:
+
   libicu66_66.1-2ubuntu2_amd64.deb
+
   libicu66-dev-x86-64_66.1-2ubuntu2_amd64.deb
+
   libribbi-bin-iconv-perl_1.0.1-1_all.deb
+
   rwrap_0.1.1-1_amd64.deb
+
   getutils-base_6.1-2ubuntu2_amd64.deb
+
   translate-shell_1.7.0-1_amd64.deb
+
 Unpacking libribbi-bin-iconv-perl (1.0.1-1)...
+
 Preparing unpack...
+
 Unpacking 1/6 libicu66 (66.1-2ubuntu2) ...
+
 Preparing unpack...
+
 Unpacking 2/6 libicu66-dev-x86-64 (66.1-2ubuntu2) ...
+
 Preparing unpack...
+
 Unpacking 3/6 libribbi-bin-iconv-perl (1.0.1-1) ...
+
 Preparing unpack...
+
 Unpacking 4/6 rwrap (0.1.1-1) ...
+```
+
+
+
 Preparing unpack...
-Unpacking 5/6 getutils-base (66.1-2ubuntu2) ...
+
+Unpacking 5/6 `getutils-base` (66.1-2ubuntu2) ...
+
 Preparing unpack...
-Unpacking 6/6 translate-shell (1.7.0-1) ...
+
+Unpacking 6/6 `translate-shell` (1.7.0-1) ...
+
 Setting up...
+
 Generating trigger files...
+
 Processing triggers...
 
 ## sudo install-shell
 
 关于不同语言的翻译代码可以在此页面找到：https://github.com/soimort/translate-shell。
+
 今天，我们探索了去年自动化媒体分析的最易用命令行工具。如果你必须独立完成，我建议学习更多关于 AI 识别的工具。
 
 # 第12 天
@@ -2026,7 +1747,7 @@ Requirement already satisfied: markdown-it-py==2.0.0 /home/gitpod/pyenv/versions
 Requirement already satisfied: pytest-7.4.0 /home/gitpod/pyenv/versions/3.12.0/lib/python3.12/site-packages (from ocrmympdf) (0.0)
 ```
 
-OCRmy (https://github.com/ocrmympdf/ocrmympdf) - 用于向扫描 PDF 文件添加光学字符识别（OCR）文本的工具。它使文本可搜索和可处理。
+`OCRmy` (https://github.com/ocrmympdf/ocrmympdf) - 用于向扫描 PDF 文件添加光学字符识别（OCR）文本的工具。它使文本可搜索和可处理。
 
 让我们安装：
 
@@ -2050,9 +1771,6 @@ Get: 10/6 https://archive.ubuntu.com/ubuntu jammy-updates InRelease [119 KB]
 Get: 10/6 https://archive.ubuntu.com/ubuntu jammy-updates/main/amd64 Packages [2,956 B]
 Get: 12/6 https://ppa.launchpad.net/ondre/apache/ubuntu jammy/main amd64 Packages [3,956 B]
 ```
-
-
-
 
 让我们运行：
 
@@ -2080,33 +1798,52 @@ ocrymypdf --force-ocr pdf for ocr.pdf result.pdf
 在 AAO-HNSF 患者分单上进行联合品牌只需 1-2-3 步，非常简单！
 
 ### 1 下载并保存患者分单
+
 - 下载分单
+
 你需要安装 Adobe Acrobat Reader。
-你可以在此处免费安装：get.adobe.com/reader
+
+你可以在此处免费安装：`get.adobe.com/reader`
+
 - 将其保存到你的电脑
+
 记住你保存在哪里；在接下来的步骤中你需要访问它。
 
 ### 2 上传你的 Logo 和地址
-你的图像必须保存为 .pdf 文件！
-- 有关如何将你的 Logo/地址保存为 .pdf 文件的更多信息，请参阅下文说明。
-- 如果文件未以 .pdf 格式保存，将无法将个人信息上传到患者分单中。
+
+你的图像必须保存为 `.pdf` 文件！
+
+- 有关如何将你的 Logo/地址保存为 `.pdf` 文件的更多信息，请参阅下文说明。
+
+- 如果文件未以 `.pdf` 格式保存，将无法将个人信息上传到患者分单中。
+
 - 打开已保存的分单文档
+
 - 点击页面底部的空白区域
+
 - 在选择图标（Select Icon）窗口中，
+
 - 浏览到你想要插入的 pdf 文件，然后点击确定
+
 - Logo/以及地址文件将根据文本适当调整大小。
+
+
+
 - 在白色图像字段下方的蓝色矩形中输入你的网址。
 
 ### 3 你已准备好打印了！
+
 - 保存你的文件。
+
 确保在关闭文档之前保存文件，以确保下次打开文档时，你的 Logo 或地址会那里。
+
 - 你现在已准备好打印了！
 
 ![](img/03e4d38bded7def6bb51288422c4f89d_85_0.png)
 
 查看文件时，文本应该是可以选择、复制和粘贴的。
 
-现在让我们尝试从 PDF 文件中提取文本并将其保存到单独的文件。我们将使用 `pdftotext` 命令，它是 poppler-utils（https://popper.js.org/docs/v2/utils/）的一部分。
+现在让我们尝试从 PDF 文件中提取文本并将其保存到单独的文件。我们将使用 `pdftotext` 命令，它是 `poppler-utils`（https://popper.js.org/docs/v2/utils/）的一部分。
 
 # 从 PDF 提取文本
 
@@ -2144,7 +1881,7 @@ Setting up poppler-utils (22.02.0-ubuntu0.3).
 Processing triggers for libc-bin (2.35-ubuntu0.3)...
 ```
 
-首先，让我们安装 poppler-utils：
+首先，让我们安装 `poppler-utils`：
 
 ```
 sudo apt clean
@@ -2188,9 +1925,11 @@ Setting up poppler-utils (22.02.0-ubuntu0.3).
 Processing triggers for libc-bin (2.35-ubuntu0.3)...
 ```
 
-你现在可以回到第 6 天和第 7 天使用那里描述的命令来处理提取的文本。某些情况下，直接使用 `grep` 在 PDF 中更方便。让我们尝试从 PDF 文件中提取文本并将其保存到单独的文件。我们将使用 `pdftotext` 命令，它是 poppler-utils（https://popper.js.org/docs/v2/utils/）的一部分。
+你现在可以回到第 6 天和第 7 天使用那里描述的命令来处理提取的文本。某些情况下，直接使用 `grep` 在 PDF 中更方便。让我们尝试从 PDF 文件中提取文本并将其保存到单独的文件。我们将使用 `pdftotext` 命令，它是 `poppler-utils`（https://popper.js.org/docs/v2/utils/）的一部分。
 
 # 从 PDF 提取文本
+
+
 
 ```
 Get27 http://archive.ubuntu.com/jammy-backports/universe/amd64 Packages [28.1 KB]
@@ -2226,7 +1965,7 @@ Setting up poppler-utils (22.02.0-ubuntu0.3).
 Processing triggers for libc-bin (2.35-ubuntu0.3)...
 ```
 
-首先，让我们安装 poppler-utils：
+首先，让我们安装 `poppler-utils`：
 
 ```
 sudo apt clean
@@ -2235,7 +1974,7 @@ sudo apt update
 sudo apt-get install poppler-utils --fix-missing
 ```
 
-## pdftotext result.txt
+## `pdftotext result.txt`
 
 你现在可以回到第 6 天和第 7 天使用那里描述的命令来处理提取的文本。某些情况下，直接使用 `grep` 在 PDF 中更方便。
 
@@ -2270,7 +2009,7 @@ Setting up poppler-utils (22.02.0-ubuntu0.3).
 Processing triggers for libc-bin (2.35-ubuntu0.3)...
 ```
 
-你现在可以回到第 6 天和第 7 天使用那里描述的命令来处理提取的文本。某些情况下，直接使用 `grep` 在 PDF 中更方便。让我们尝试从 PDF 文件中提取文本并将其保存到单独的文件。我们将使用 `pdftotext` 命令，它是 poppler-utils（https://popper.js.org/docs/v2/utils/）的一部分。
+你现在可以回到第 6 天和第 7 天使用那里描述的命令来处理提取的文本。某些情况下，直接使用 `grep` 在 PDF 中更方便。让我们尝试从 PDF 文件中提取文本并将其保存到单独的文件。我们将使用 `pdftotext` 命令，它是 `poppler-utils`（https://popper.js.org/docs/v2/utils/）的一部分。
 
 # 从 PDF 提取文本
 
@@ -2284,93 +2023,148 @@ Reading information...
 ```
 
 此外，`poppler-utils` 允许你从 PDF 中提取图像。让我们尝试：
+
 $ apt update 
+
 ``` 某些情况下，直接使用 `grep` 在 PDF 中更方便。让我们尝试：
 
 ```
-$ gitpod/workspace/linux-for-OSINT-21-day (main) exiftool Day_12/result.pdf
-ExifTool Version : 12.40
-File Name : result.pdf
-Directory : Day_12
-File Size : 1112 Kib
-File Modification/Time : 2023-12-17 13:10:51
-File Access/Time : 2023-12-17 17:31:59
-File Change/Time : 2023-12-17 17:31:59
-File Permissions : -rw-r--
-File Type : PDF
-File Extension : pdf
-MIME Type : application/pdf
-PDF Version : 1.7
-Linearized : Yes
-Author : 
-Create Date : 2023-12-17 11:43:55
-Modify Date : 2023-12-17 13:10:49
-Language : en
-MP Toolkit : 2.9-3, framework 1.6
-Producer : pikeepdf 8.10
-Creator Tool : ocrmymdf 15.4 / Tesseract OCR 4.1
-Document ID : uuid:f4a1f26e-d7a4-11f9-b000-457653ffad
-Format : application/pdf
-Part : 2
-Conformance : B
-Creator : 
-Metadata Date : 2023-12-17 13:10:49.574827+00
-Page Count : 1
-```
 
+$ gitpod/workspace/linux-for-OSINT-21-day (main) exiftool Day_12/result.pdf
+
+ExifTool Version : 12.40
+
+File Name : result.pdf
+
+Directory : Day_12
+
+File Size : 1112 Kib
+
+File Modification/Time : 2023-12-17 13:10:51
+
+File Access/Time : 2023-12-17 17:31:59
+
+File Change/Time : 2023-12-17 17:31:59
+
+File Permissions : -rw-r--
+
+File Type : PDF
+
+File Extension : pdf
+
+MIME Type : application/pdf
+
+PDF Version : 1.7
+
+Linearized : Yes
+
+Author : 
+
+Create Date : 2023-12-17 11:43:55
+
+Modify Date : 2023-12-17 13:10:49
+
+Language : en
+
+MP Toolkit : 2.9-3, framework 1.6
+
+Producer : pikeepdf 8.10
+
+Creator Tool : ocrmymdf 15.4 / Tesseract OCR 4.1
+
+
+
+Document ID : `uuid:f4a1f26e-d7a4-11f9-b000-457653ffad`
+
+Format : `application/pdf`
+
+Part : `2`
+
+Conformance : `B`
+
+Creator : 
+
+Metadata Date : `2023-12-17 13:10:49.574827+00`
+
+Page Count : `1`
+
+```
 如果你只需要某些元数据字段，可以使用其他 Linux 工具（如 `grep`）进行过滤：
+```
 
 ```
 $ gitpod/workspace/linux-for-OSINT-21-day (main) exiftool Day_12/result.pdf | grep ^Producer
+
 Producer : pikeepdf 8.10
+
 gitpod/workspace/linux-for-OSINT-21-day (main) $
 ```
-
-
-
 
 ## 输出端口 调试 控制台 终端
 
 ```
 $ gitop/workspace/linux-for-DS99INT-23-day (main) $ libreoffice -h
+
 LibreOffice 7.2.2
+
 用法: [参数 ...]
+
 参数 -- 开关，切换参数和文档 URI [文件名)。
+
 在不带特殊参数的情况下使用：
+
 打开启动中心；如果在不带任何参数的情况下使用。
+
 尝试在适合它们的组件（文件）中打开文件（文件）。
+
 (file) macro://Library.MacroName
+
 打开文件并运行该文件中的宏。
+
 获取帮助和信息：
+
 --help | 显示此帮助和指南。
+
 --helpwriter 在 Writer 上打开内置的在线帮助。
+
 --helpcalc 在 Calc 上打开内置的在线帮助。
+
 --helpdraw 在 Draw 上打开内置的在线帮助。
+
 --helpbase 在 Base 上打开内置的在线帮助。
+
 --helpbasic 在 Base 脚本语言上打开内置的在线帮助。
+
 --helpmath 在 Math 上打开内置的在线帮助。
+
 --version 显示版本和相关事实。
+
 --stempdirectory (MacOS 沙盒) 返回当前用户的临时目录。覆盖所有参数。
+
 --quickstart(no) 激活快速启动服务。
+
 --nolockcheck 禁用对使用同一个安装的远程实例的检查。
+
 --filter 强制输入过滤器类型。例如：
+
 --filtercat 强制 Office Open Wk
+
 --filtertest (编码) URI，如果..
 ```
 
 用于验证安装是否正确的帮助命令。你将喜欢此工具拥有的大量功能。
 
-## libreoffice -h
+## `libreoffice -h`
 
 | example.docx v | example.txt |
 | 第 53 天 | 示例文档 |
 
 此文档是使用标题、列表、图像替代文本、表格和列的可访问性技术创建的。它应该是可访问的。
 
-标题
+### 标题
 本文档中有八个章节标题。在开头，“示例文档”是一个 1 级标题。主要章节标题，如“标题...
 
-列表
+### 列表
 本文档章节的后续大纲是一个包含六个项目的有序（编号的）列表。第五个项目“表格”包含一个嵌套的有序列表：
 1. 标题
 2. 列表
@@ -2378,19 +2172,23 @@ LibreOffice 7.2.2
 ```
 问题 历史 端口 调试 控制台 终端 +
 $ gitop/workspace/linux-for-DS99INT-23-day (main) $ 第 53 天
+
 $ gitop/workspace/linux-for-DS99INT-23-day/example.txt $ libreoffice --convert to example.docx
+
 convert /gitop/workspace/linux-for-DS99INT-23-day/example.txt --using filter : Text
+
 deiving: /gitop/workspace/linux-for-DS99INT-23-day/example.txt
+
 $ gitop/workspace/linux-for-DS99INT-23-day (main) $ example.txt
 ```
 
 现在将 doc 文件转换为 txt 文件：
 
-## libreoffice --headless --convert-to txt example.docx
+## `libreoffice --headless --convert-to txt example.docx`
 
 ![](img/03e4d38bded7def6bb51288422c4f89d_94_0.png)
 
-## libreoffice --headless --convert-to csv example.xlsx
+## `libreoffice --headless --convert-to csv example.xlsx`
 
 LibreOffice 包含了用于处理各种文件格式的应用程序。例如：
 
@@ -2406,43 +2204,43 @@ LibreOffice 包含了用于处理各种文件格式的应用程序。例如：
 
 你可以在这里阅读更多信息：
 
-- LibreOffice Basic 编程指南 (https://wiki.documentfoundation.org/Documentation/BASIC_Guide)
-- LibreOffice Python 设计指南 (https://wiki.documentfoundation.org/Documentation/Python_Design_Guide)
+- LibreOffice Basic 编程指南 (`https://wiki.documentfoundation.org/Documentation/BASIC_Guide`)
+- LibreOffice Python 设计指南 (`https://wiki.documentfoundation.org/Documentation/Python_Design_Guide`)
 
 你可以在这里阅读更多信息：
 
-- LibreOffice Basic 编程指南 (https://wiki.documentfoundation.org/Documentation/BASIC_Guide)
-- LibreOffice Python 设计指南 (https://wiki.documentfoundation.org/Documentation/Python_Design_Guide)
+- LibreOffice Basic 编程指南 (`https://wiki.documentfoundation.org/Documentation/BASIC_Guide`)
+- LibreOffice Python 设计指南 (`https://wiki.documentfoundation.org/Documentation/Python_Design_Guide`)
 
 关于这里，你可以阅读更多信息。此文档是使用标题、列表、图像替代文本、表格和列的可访问性技术创建的。它应该是可访问的。
-
-
-
-
 
 # 输出端口 调试 控制台 终端
 
 ```
 $ gitpod /workspace/linux-for-OSINT-21-day/13 (main) jq -h
+
 jq - 命令行 JSON 解析器 (版本 1.6)
 ```
 
 ```
 用法: jq [options] jq filter [file...]
+
 jq [options] --args jq filter [strings...]
+
 jq [options] --jsonargs jq filter [JSON_TEXTS...]
 ```
 
-jq 是一个用于处理 JSON 输入的工具，它将给定的过滤器应用于 JSON 输入，并将结果以 JSON 格式输出到标准输出。
+`jq` 是一个用于处理 JSON 输入的工具，它将给定的过滤器应用于 JSON 输入，并将结果以 JSON 格式输出到标准输出。
 
 最简单的过滤器是 `.`，它会将 jq 的输入原封不动地复制到输出（格式除外），但请注意内部使用 IEEE754 进行数值表示（这具有相应的影响）。
 
-对于更高级的过滤器，请使用 jq(i) map("jq") 和/或 https://github.io/jq/
+对于更高级的过滤器，请使用 `jq(i) map("jq")` 和/或 `https://github.io/jq/`
 
 示例：
 
 ```
 $ echo '{"foo": 0}' | jq
+
 { "foo": 0}
 ```
 
@@ -2456,7 +2254,7 @@ $ echo '{"foo": 0}' | jq
 - 单色（不为 JSON 上色）；
 - 输出时对对象的键排序；
 - 使用制表符进行缩进
-- 将变量 $a 设置为值 <>
+- 将变量 `$a` 设置为值 `<>`
 
 ```
 -arg a v
@@ -2466,76 +2264,104 @@ $ echo '{"foo": 0}' | jq
 
 ![](img/03e4d38bded7def6bb51288422c4f89d_100_0.png)
 
-# cd Day 14
-jq '.people[0].firstName_json_test.json'
+# `cd Day 14`
+`jq '.people[0].firstName_json_test.json'`
 
 现在让我们显示所有 "people 键" 的 `firstName` 值：
 
 ![](img/03e4d38bded7def6bb51288422c4f89d_101_0.png)
 
-jq '.people[1].firstName_json_test.json'
+`jq '.people[1].firstName_json_test.json'`
 
 同样，你可以访问所有键的任何属性的任何值。
 
-JSONPath 在线评估 - jsonpath.com
+JSONPath 在线评估 - `jsonpath.com`
 
 ![](img/03e4d38bded7def6bb51288422c4f89d_101_1.png)
 
-我们使用了一个结构非常简单的 JSON 文件作为示例，但在调查过程中，你很可能需要处理结构包含数十个不同层次的文件。可以使用特殊的在线服务，如 JSON Online Evaluator (https://jsonpath.com)。
+我们使用了一个结构非常简单的 JSON 文件作为示例，但在调查过程中，你很可能需要处理结构包含数十个不同层次的文件。可以使用特殊的在线服务，如 JSON Online Evaluator (`https://jsonpath.com`)。
 
 ## XML
 
 ```xml
+
 xml_sample.xml
+
 Day_14 xml_sample.xml
+
 1 <CATALOG>
-2  <div id="in-page-channel-node-id" data-channel-name="in_page_channel_l8gdhe">
-3   <TITLE>Empire Bublesque</TITLE>
-4   <ARTIST>Bob Dylan</ARTIST>
-5   <COUNTRY>USA</COUNTRY>
-6   <COMPANY>Columbia</COMPANY>
-7   <PRICE>18.90</PRICE>
-8   <YEAR>1985</YEAR>
-9  </div
-10 
-11 <TITLE>Hide your heart</TITLE>
-12 <ARTIST>Bonnie Tyler</ARTIST>
-13 <COUNTRY>UK</COUNTRY>
-14 <COMPANY>CBS Records</COMPANY>
-15 <PRICE>9.90</PRICE>
-16 <YEAR>1988</YEAR>
-17 
-18 
-19 <TITLE>Greatest Hits</TITLE>
-20 <ARTIST>Dolly Parton</ARTIST>
-21 <COUNTRY>USA</COUNTRY>
-22 <COMPANY>RCA</COMPANY>
-23 <PRICE>9,90</PRICE>
-24 <YEAR>1982</YEAR>
+
+
+
+<div id="in-page-channel-node-id" data-channel-name="in_page_channel_l8gdhe">
+
+<TITLE>Empire Bublesque</TITLE>
+
+<ARTIST>Bob Dylan</ARTIST>
+
+<COUNTRY>USA</COUNTRY>
+
+<COMPANY>Columbia</COMPANY>
+
+<PRICE>18.90</PRICE>
+
+<YEAR>1985</YEAR>
+</div
+
+<TITLE>Hide your heart</TITLE>
+<ARTIST>Bonnie Tyler</ARTIST>
+<COUNTRY>UK</COUNTRY>
+<COMPANY>CBS Records</COMPANY>
+<PRICE>9.90</PRICE>
+<YEAR>1988</YEAR>
+
+<TITLE>Greatest Hits</TITLE>
+<ARTIST>Dolly Parton</ARTIST>
+<COUNTRY>USA</COUNTRY>
+<COMPANY>RCA</COMPANY>
+<PRICE>9,90</PRICE>
+<YEAR>1982</YEAR>
 ```
 
-XML（扩展标记语言）是一种类似于 HTML 的标记语言，但没有预定义的标签（用户可以定义自己的标签）。XMLstarlet (https://xml..net/doc/xmlstarlet-ug.html) 是一个从 XML 文件提取数据的跨平台工具。
+XML（扩展标记语言）是一种类似于 HTML 的标记语言，但没有预定义的标签（用户可以定义自己的标签）。`XMLstarlet` (https://xml..net/doc/xmlstarlet-ug.html) 是一个从 XML 文件提取数据的跨平台工具。
 
 让我们安装：
 
 ```
 $ gitpod /workspace/linux-for-OSINT-21-day (main) sudo apt-get install xmlstarlet
+
 Reading package lists...
+
 Building dependency tree...
+
 Reading state information...
+
 将安装以下软件包：
+
 xmlstarlet
+
 0 个升级，1 个新，0 个移除。
+
 将使用 265 KB 的磁盘空间。
+
 Get:1 http://archive.ubuntu.com/ubuntu jammy/universe/xmlstarlet_1.6.1-2_amd64 [265 KB]
+
 获取 265 KB，耗时 1 秒 (XXX KB)
+
 由于 apt-utils 未安装，正在设置未选软件包 xmlstarlet。
+
 正在读取数据库...已安装 3559 个文件和目录。）
+
 解压 /usr/cache/archives/xmlstarlet_1.6.1-2_amd64 ...
+
 解压 xmlstarlet (1.6-2) ...
+
 设置 xmlstarlet (1.6-2) ...
+
 处理 man-db (10.2) 的触发器...
+
 $ gitpod /workspace/linux-for-OSINT-21-day (main) $
+
 apt-get install xmllet
 ```
 
@@ -2543,8 +2369,11 @@ apt-get install xmllet
 
 ```
 xmlstarlet sel -t -m "//TITLE" -n xml_sample.xml
+
 <TITLE>Empire Bublesque</TITLE>
+
 <TITLE>Hide your heart</TITLE>
+
 <TITLE>Greatest Hits</TITLE>
 ```
 
@@ -2579,6 +2408,7 @@ xmlstarlet sel -t -m "//TITLE" -n xml_sample.xml
 ## TIMELINE
 xml_sample.xml
 Day_14
+
 ```
 xmlstarlet sel -t -m "//TITLE" -v -n xml_sample.xml
 ```
@@ -2586,13 +2416,21 @@ xmlstarlet sel -t -m "//TITLE" -v -n xml_sample.xml
 ## COUNTRY
 发现元素：26
 ```xml
+
 <XML id="in-page-channel-node-id" data-channel-name="in_page_channel_id">
+
 <TITLE>Empire Bublesque</TITLE>
+
 <BODY>Bob Dylan</BODY>
+
 <COMPANY>Colombia</COMPANY>
+
 <ID>950</ID>
+
 <YEAR>1998</YEAR>
+
 <TITLE>Wide your heart</TITLE>
+
 </XML>
 ```
 1. USA
@@ -2613,43 +2451,67 @@ xmlstarlet sel -t -m "//TITLE" -v -n xml_sample.xml
 为了查找 XML 文档中的路径数据，可以使用特殊服务如 XPath (http://xpath.com)。
 
 ## CSV
-如果你错过了第 6 天和第 7 天，建议你回去看看。Grep 和 Awk 的知识足以高效地处理 CSV 文件。某些用户倾向于用 CSVgrep 替换 grep (https://csvkit.readthedocs.io/en/1.0.2/scripts/csvgrep.html)。它搜索特定列更方便一些。
+如果你错过了第 6 天和第 7 天，建议你回去看看。`Grep` 和 `Awk` 的知识足以高效地处理 CSV 文件。某些用户倾向于用 `CSVgrep` 替换 `grep` (https://csvkit.readthedocs.io/en/1.0.2/scripts/csvgrep.html)。它搜索特定列更方便一些。
 
-让我们安装 CSVKit (https://csvkit.readthedocs.io/en/1.0.2/index.html):
+让我们安装 `CSVKit` (https://csvkit.readthedocs.io/en/1.0.2/index.html):
 
 ```
 $ gitpod@ubuntu-linux-host-02-27-23-may $ sudo apt-get install csvkit
+
 Reading package lists...
+
 Building dependency tree...
+
 Reading state information...
+
 将安装以下软件包：
+
 python3-pip
+
 python3-setuptools
+
 python3-wheel
+
 python3-apt-pkg-config
+
 python3-six-python3-cryptodome
+
 python3-cryptography
+
 python3-mime-client
+
 python3-dateutil-python3-pytz
+
 python3-requests
+
 python3-urllib3-python3-idna
+
 python3-bacon3
+
 python3-six-python3-requests-python3-setbuild-python3-pyyaml
+
 python3-pygments
+
 python3-tabulate-python3-six
+
 110 个新软件包将安装，0 个升级，0 个移除。
+
 执行此操作后，将使用 55.4 MB 的磁盘空间。
+
 Get:1 http://archive.ubuntu.com/ubuntu/pool/main/p/python3/python3-pip_20.0.2-2ubuntu1_amd64 [2.2 MB]
+
 Get:2 http://archive.ubuntu.com/ubuntu/pool/main/p/python3/python3-setuptools_39.2.0-2ubuntu1_amd64 [17 KB]
+
 Get:3 http://archive.ubuntu.com/ubuntu/pool/main/p/python3/python3-wheel_0.36.2-2ubuntu1_amd64 [121 KB]
+
 Get:4 http://archive.ubuntu.com/ubuntu/pool/main/p/python3/python3-apt-pkg-config_2.4.1-1ubuntu1_amd64 [115 KB]
+
 Get:5 http://archive.ubuntu.com/ubuntu/pool/main/p/python3/python3-six_3.9.2-2ubuntu1_all [25 KB]
+
 Get:6 http://archive.ubuntu.com/ubuntu/pool/main/p/python3/python3-requests_2.25.0-2ubuntu1_all [196 KB]
+
 获取 265 KB，耗时 1 秒 (XXX KB)
 ```
-
-
-
 
 # 资源管理器
 
@@ -2662,14 +2524,21 @@ test_json_to_csv.py
 ```python
 Day_14
 import pandas as pd
-df = pd.read_json('test_json_to_csv.json', orient='records')
-df.to_csv('test_json_to_csv.csv', index=False)
 ```
+
+
+
+`df = pd.read_json('test_json_to_csv.json', orient='records')`
+
+`df.to_csv('test_json_to_csv.csv', index=False)`
 
 ```json
 Day_14
+
 1 {"name":"Thomas","male","age":28,"id":734982382}
+
 2 {"name":"Jackson","male","age":32,"id":734982382}
+
 3 {"name":"Emily","female","age":24,"id":56475675}
 ```
 
@@ -2688,26 +2557,26 @@ Day_14
 - Day_13
 - Day_14
 
-- commands.txt
-- data.csv
-- example.csv
-- output.csv
-- test_json_to_csv.py
-- work_archive.csv
+- `commands.txt`
+- `data.csv`
+- `example.csv`
+- `output.csv`
+- `test_json_to_csv.py`
+- `work_archive.csv`
 
-```
 问题 输出 无注释 调试 控制台 终端
-```
 
 ```bash
 $ git pull /workspace/linux-for-OSINT-21-day/Day_14 (main)
+
 $ git pull /workspace/linux-for-OSINT-21-day/Day_14 (main) | csvcut -k people test.json > test_json_to.csv
-$ git pull /workspace/linux-for-OSINT-21-day/Day_14 (main) 
+
+$ git pull /workspace/linux-for-OSINT-21-day/Day_14 (main)
 ```
 
-## in2csv -k people json test.json > test_json_to.csv
+`in2csv -k people json test.json > test_json_to.csv`
 
-Csvcut (https://csvkit.readthedocs.io/en/latest/scripts/csvcut.html) 是用于过滤和截断 CSV 文件的工具。
+`Csvcut` (https://csvkit.readthedocs.io/en/latest/scripts/csvcut.html) 是用于过滤和截断 CSV 文件的工具。
 
 ```bash
 cut cut_csv.csv -k U
@@ -2715,43 +2584,60 @@ cut cut_csv.csv -k U
 
 ```text
 Day_14 cut
+
 1 domain,part
+
 2 codingutor,www.perfdension-wolfsgru.de,www.elite-general-albau.de,addavear,caus,domain,online,domnik-peter
+
 3 codingutor,www.perfdension-wolfsgru.de,www.elite-general-albau.de,addavear,caus,domain,domnik-peter
+
 4 "about-communications.com,www.alainegrado.de,medizinisches-versorgungszentrum,caus,stefanbach,wolfs-cave,de
+
 5 "about-communications.com,www.alainegrado.de,medizinisches-versorgungszentrum,caus,stefanbach,wolfs-cave,de
+
 6 "about-communications.com,www.alainegrado.de,medizinisches-versorgungszentrum,caus,stefanbach,wolfs-cave,de
+
 7 patmx.tech,product_communication,netia-tablu.com,wolf-fishern,chip-com-project.de,dx-humanistic-perkeche
+
 8 "dogoxibrouse,sexberts.com,armilla,whacksams.com,nordline,sexberts.com,gmail,linux-sexberts.com
+
 9 "northberthshriesiroges.com,northberthshriesiroges.com,mailman.com,thebearlovers.com,mail.com,dumed.net,dumdu
+
 10 "northberthshriesiroges.com,northberthshriesiroges.com,mailman.com,thebearlovers.com,mail.com,dumed.net,dumdu
+
 11 "northberthshriesiroges.com,northberthshriesiroges.com,mailman.com,thebearlovers.com,mail.com,dumed.net,dumdu
+
 12 "northberthshriesiroges.com,northberthshriesiroges.com,mailman.com,thebearlovers.com,mail.com,dumed.net,dumdu
+
 13 "northberthshriesiroges.com,northberthshriesiroges.com,mailman.com,thebearlovers.com,mail.com,dumed.net,dumdu
+
 14 "northberthshriesiroges.com,northberthshriesiroges.com,mailman.com,thebearlovers.com,mail.com,dumed.net,dumdu
+
 15 "northberthshriesiroges.com,northberthshriesiroges.com,mailman.com,thebearlovers.com,mail.com,dumed.net,dumdu
+
 16 "natesupweb.com.br,www.natesupweb.com.br"
-17
 ```
 
-```
 问题 输出 端口 调试 控制台 终端
-```
 
 ```bash
 $ git pull /workspace/linux-for-OSINT-21-day/Day_14 (main)
+
 $ git pull /workspace/linux-for-OSINT-21-day/Day_14 (main) | csvcut -k people example.csv > cut_csv.csv
+
 $ git pull /workspace/linux-for-OSINT-21-day/Day_14 (main)
 ```
 
 ```bash
 csvcut -c domain example.csv > cut_csv.csv
-```同样值得注意：
-- csvjoin (https://csvkit.readthedocs.io/en/latest/scripts/csvjoin.html)
-- csvsort (https://csvkit.readthedocs.io/en/latest/scripts/csvsort.html)
-- csvstat (https://csvkit.readthedocs.io/en/latest/scripts/csvstat.html)。
+```
 
-当处理 XML 或 JSON 格式的数据时，建议你将其转换为 CSV。在许多情况下，在命令行中操作会更方便（如上所述，可以使用 in2csv）。
+同样值得注意：
+- `csvjoin` (https://csvkit.readthedocs.io/en/latest/scripts/csvjoin.html)
+- `csvsort` (https://csvkit.readthedocs.io/en/latest/scripts/csvsort.html)
+- `csvstat` (https://csvkit.readthedocs.io/en/latest/scripts/csvstat.html)。
+
+当处理 XML 或 JSON 格式的数据时，建议你将其转换为 CSV。在许多情况下，在命令行中操作会更方便（如上所述，可以使用 `in2csv`）。
 
 # 第15天：爬取 (Scraping)
 
@@ -2775,7 +2661,7 @@ katana -list domains.txt > results.txt
 
 ## Nuclei
 
-Nuclei (https://github.com/projectdiscovery/nuclei) 是 ProjectDiscovery 的另一个优秀工具。它主要用于扫描网站漏洞，但在从网页收集数据方面也做得出色。
+`Nuclei` (https://github.com/projectdiscovery/nuclei) 是 ProjectDiscovery 的另一个优秀工具。它主要用于扫描网站漏洞，但在从网页收集数据方面也做得出色。
 
 ```bash
 go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
@@ -2784,20 +2670,35 @@ go install -v github.com/projectdiscovery/nuclei/v3/cmd/nuclei@latest
 克隆 Juicy templates（我们将在第19天详细讨论该命令）：
 
 ```bash
-$ gitpod /workspace/linux-for-OSINT-21-day/Day_15 (main)
-$ git clone https://github.com/cipher87/juicyinfo-nuclei-templates
-正在克隆 'juicyinfo-nuclei-templates'...
-remote: Enumerating objects: 100
-remote: Counting objects: 100 (73%), done.
-remote: Counting pack: 173 (100%), done.
-remote: Total: 173 (delta 41), 8 (delta 0), pack 100
-Receiving objects: 100 (173/173), 14.55 MB/s | done.
-Resolving deltas: 100% (41/41), done.
-$ gitpod /workspace/linux-for-OSINT-21-day/Day_15 (main)
-$ git clone https://github.com/cipher87/juicyinfo-nuclei-templates
 ```
 
+
+
+$ gitpod /workspace/linux-for-OSINT-21-day/Day_15 (main)
+
+$ git clone https://github.com/cipher87/juicyinfo-nuclei-templates
+
+正在克隆 'juicyinfo-nuclei-templates'...
+
+remote: Enumerating objects: 100
+
+remote: Counting objects: 100 (73%), done.
+
+remote: Counting pack: 173 (100%), done.
+
+remote: Total: 173 (delta 41), 8 (delta 0), pack 100
+
+Receiving objects: 100 (173/173), 14.55 MB/s | done.
+
+Resolving deltas: 100% (41/41), done.
+
+$ gitpod /workspace/linux-for-OSINT-21-day/Day_15 (main)
+
+$ git clone https://github.com/cipher87/juicyinfo-nuclei-templates
+
+```
 现在，让我们扫描通过 Katana 收集的所有链接，并从页面中提取包含 Github单词的链接（我们将使用 github 模板完成）：
+```
 
 ```bash
 nuclei -t juicyinfo-nuclei-templates/juicyinfo/github.yaml -l results.txt > extracted_github_links.txt
@@ -2813,19 +2714,16 @@ nuclei -t juicyinfo-nuclei-templates/juicyinfo/title.yaml -l results.txt > extra
 
 ```yaml
 id: extract-titles
-
 info:
   name: Extract titles
   author: cipher87
   severity: info
   description: Extract titles from web page
   tags: osint,scrap
-
 requests:
   - method: GET
     path:
       - "{{BaseURL}}"
-
 matches:
   - type: regex
     part: body
@@ -2840,7 +2738,7 @@ extractors:
 
 ## HTML2TEXT
 
-Html2text (https://alir3z.github.io/html2text/) 是非常简单的 Python 脚本，可以清理网页的 html 标签并使其易于读取和自动化检索。
+Html2text (`https://alir3z.github.io/html2text/`) 是非常简单的 Python 脚本，可以清理网页的 html 标签并使其易于读取和自动化检索。
 
 ```bash
 $ gitpod /workspace/linux-for-OSINT-21-day (main) $ apt-get install html2text
@@ -2871,11 +2769,7 @@ $ gitpod /workspace/linux-for-OSINT-21-day (main) $ sudo apt-get install html2te
 
 你可以使用第5天和第6天提到的 `curl` 和 `grep` 组合完成相同的事情，但当然，你可以为你的任务使用任何你想到的正则表达式。
 
-打开 title.yaml 文件并简单将 title 替换为其他内容。如果你愿意，以上述方式运行 Nuclei。
-
-
-
-
+打开 `title.yaml` 文件并简单将 `title` 替换为其他内容。如果你愿意，以上述方式运行 Nuclei。
 
 @ gitpod/workspace/Linux-for-OSINT-21-day/Day_15 (main) $ html2text example.html
 
@@ -2887,15 +2781,15 @@ $ gitpod /workspace/linux-for-OSINT-21-day (main) $ sudo apt-get install html2te
 | 
 *****示例 DOCX 文件 *****
 DOCX Microsoft Word Open XML Format Document 文件 是一种常用的文字处理文件格式，由微软在 Microsoft Word 2007 及以上版本中创建，用于替代 DOC 文件。它使用 Open XML 标记语言。
-
 在下方你将找到一组可选的示例 .docx 文档文件供你下载。右侧有一些关于该文件的详细信息（例如其大小），以便你能够最好地决定哪一个最符合你的需求。
 sample4.docx
 DOCX / 13,51 MB
-
 下载
 sample3.docx
 DOCX / 33,57 KB
 ```
+
+
 
 ## html2text example.html
 
@@ -2907,9 +2801,9 @@ DOCX / 33,57 KB
 
 应该说的是，Linux 和 Bash 并不总是爬虫的正确工具。对于许多与 OSINT 相关的任务，任何支持以 CSV 格式导出数据的许多爬虫浏览器插件（特别注意 AI 爬取）可能就足够了，正如所知，这些插件在 Linux 中处理非常方便。几个例子如下：
 
-- Webscraper.io (https://webscraper.io)
-- DataMiner (https://dataminer.io)
-- Instant Data Scraper (https://chromewebstore.google.com/detail/instant-data-scraper/ofaokhiedipichpaobibbibbnahnkdoijah)
+- Webscraper.io (`https://webscraper.io`)
+- DataMiner (`https://dataminer.io`)
+- Instant Data Scraper (`https://chromewebstore.google.com/detail/instant-data-scraper/ofaokhiedipichpaobibbibbnahnkdoijah`)
 
 以及许多许多其他。
 
@@ -2923,40 +2817,62 @@ DOCX / 33,57 KB
 
 ```
 PROMPT OUTPUT PORT CONSOLE TERMINAL
+
 $ pip install duckduckgo-osint-21-Day_21 [main] & Edit Day_17
+
 $ pip install duckduckgo-osint-21-Day_21 [main] & pip install ddgr
+
 (collecting)
+
 Downloading ddgr-2.1-py3-none-any.whl (38 KB)
+
 Installing collected packages: ddgr-2.1
+
 Successfully installed ddgr-2.1.
 ```
 
 从终端使用 DuckDuckGo。
 
 位置参数：
-KEYWORD
+`KEYWORD`
 
 ```
 搜索关键词
-选项:
---help                  显示帮助信息并退出
---page N               输出页码（默认: 20）显示每页获取的结果数
---region-specific search -u --region=us (默认: 默认) https://duckduckgo.com/us
---colorize             输出颜色（默认: auto）意味着仅当输出为 tty 设备时；- 无颜色
---timeout SEC           超时，等同于 colour-timeout
---json                 以 JSON 格式输出；意味着 --n--limit LIMIT             限制结果（1 天, 1 小, 1 周, 1 月, 1 年）
---time-limit SPAN      时间限制（秒）
---expand               扩展搜索查询
---proxy URL            设置 HTTP 代理 URL；格式：http://[user:password@]host[:port]
---unsafe               禁用安全搜索
---max N                最大结果数
---json                 json
---py-browser           使用无头浏览器
---no-prompt            不提示
---rev,--reverse         反向列出条目
 ```
 
-DuckDuckGo search (https://github.com/jarun/ddgr) 是一个用 Python 编写的命令行实用，允许你自动化 DuckDuckGo 搜索。
+选项:
+
+`--help` 显示帮助信息并退出
+
+`--page N` 输出页码（默认: 20）显示每页获取的结果数
+
+`--region-specific search -u --region=us` (默认: 默认) `https://duckduckgo.com/us`
+
+`--colorize` 输出颜色（默认: auto）意味着仅当输出为 tty 设备时；- 无颜色
+
+`--timeout SEC` 超时，等同于 colour-timeout
+
+`--json` 以 JSON 格式输出；意味着 `--n--limit LIMIT` 限制结果（1 天, 1 小, 1 周, 1 月, 1 年）
+
+`--time-limit SPAN` 时间限制（秒）
+
+`--expand` 扩展搜索查询
+
+`--proxy URL` 设置 HTTP 代理 URL；格式：`http://[user:password@]host[:port]`
+
+`--unsafe` 禁用安全搜索
+
+`--max N` 最大结果数
+
+`--json` json
+
+`--py-browser` 使用无头浏览器
+
+`--no-prompt` 不提示
+
+`--rev,--reverse` 反向列出条目
+
+`DuckDuckGo search` (`https://github.com/jarun/ddgr`) 是一个用 Python 编写的命令行实用，允许你自动化 DuckDuckGo 搜索。
 
 让我们从 PyPI 包管理器安装：
 
@@ -2966,14 +2882,38 @@ pip install ddgr
 
 ![](img/03e4d38bded7def6bb51288422c4f89d_119_0.png)
 
-现在让我们尝试在 DuckDuckGo 上搜索单词 "osint"并将结果写入文本文件：
+现在让我们尝试在 DuckDuckGo 上搜索单词 "`osint`" 并将结果写入文本文件：
 
 ```
 cd Day_16
 ddgr osint>search osint.txt
 ```
 
-如果你只想从结果文件中提取引用链接（例如，为了自动爬取），你可以结合 Cat 和 Gre 命令使用：
+如果你只想从结果文件中提取引用链接（例如，为了自动爬取），你可以结合 `Cat` 和 `Gre` 命令使用：
+
+5. 如何获取 OSINT | SANS Institute [`www.sans.org`]
+
+学习如何从社区和资源获取 OSINT，练习技术并在 OSINT 领域寻找工作。该博客分享了各种方法
+
+6. 什么是开源情报 (OSINT?) | SentinelOne [`www.sentinelone.com`]
+
+OSINT 即开源情报，是从中收集和分析关于个人或组织的信息。
+
+7. 开源情报训练 | SANS Institute [`www.sans.org`]
+
+8. 开源情报训练 (OSINT?) | SentinelOne [`www.sentinelone.com`]
+
+OSINT 即开源情报，是从中收集和分析关于个人或组织的信息。
+
+9. 开源情报训练 | SANS Institute [`www.sans.org`]
+
+10. 什么是开源情报 (OSINT?) | SentinelOne [`www.sentinelone.com`]
+
+OSINT 即开源情报，是从中收集和分析关于个人或组织的信息。
+
+
+
+如果你只想从结果文件中提取引用链接（例如，为了自动爬取），你可以结合 `Cat` 和 `Gre` 命令使用：
 
 5. 如何获取 OSINT | SANS Institute [www.sans.org]
 
@@ -2997,40 +2937,60 @@ OSINT 即开源情报，是从中收集和分析关于个人或组织的信息�
 
 ```
 PROMPT OUTPUT PORT CONSOLE TERMINAL
+
 $ pip install duckduckgo-osint-21-Day_21 [main] & Edit Day_17
+
 $ pip install duckduckgo-osint-21-Day_21 [main] & pip install ddgr
+
 (collecting)
+
 Downloading ddgr-2.1-py3-none-any.whl (38 KB)
+
 Installing collected packages: ddgr-2.1
+
 Successfully installed ddgr-2.1.
 ```
 
 从终端使用 DuckDuckGo。
 
 位置参数：
-KEYWORD
+`KEYWORD`
 
-```
 搜索关键词
-选项:
---help                  显示帮助信息并退出
---page N               输出页码（默认: 20）显示每页获取的结果数
---region-specific search -u --region=us (默认: 默认) https://duckduckgo.com/us
---colorize             输出颜色（默认: auto）意味着仅当输出为 tty 设备时；- 无颜色
---timeout SEC           超时，等同于 colour-timeout
---json                 以 JSON 格式输出；意味着 --n--limit LIMIT             限制结果（1 天, 1 小, 1 周, 1 月, 1 年）
---time-limit SPAN      时间限制（秒）
---expand               扩展搜索查询
---proxy URL            设置 HTTP 代理 URL；格式：http://[user:password@]host[:port]
---unsafe               禁用安全搜索
---max N                最大结果数
---json                 json
---py-browser           使用无头浏览器
---no-prompt            不提示
---rev,--reverse         反向列出条目
-```
 
-DuckDuckGo search (https://github.com/jarun/ddgr) 是一个用 Python 编写的命令行实用，允许你自动化 DuckDuckGo 搜索。
+选项:
+
+`--help` 显示帮助信息并退出
+
+`--page N` 输出页码（默认: 20）显示每页获取的结果数
+
+`--region-specific search -u --region=us` (默认: 默认) https://duckduckgo.com/us
+
+`--colorize` 输出颜色（默认: auto）意味着仅当输出为 tty 设备时；- 无颜色
+
+`--timeout SEC` 超时，等同于 colour-timeout
+
+`--json` 以 JSON 格式输出；意味着 `--n--limit LIMIT` 限制结果（1 天, 1 小, 1 周, 1 月, 1 年）
+
+`--time-limit SPAN` 时间限制（秒）
+
+`--expand` 扩展搜索查询
+
+`--proxy URL` 设置 HTTP 代理 URL；格式：http://[user:password@]host[:port]
+
+`--unsafe` 禁用安全搜索
+
+`--max N` 最大结果数
+
+`--json` json
+
+`--py-browser` 使用无头浏览器
+
+`--no-prompt` 不提示
+
+`--rev,--reverse` 反向列出条目
+
+`DuckDuckGo search` (https://github.com/jarun/ddgr) 是一个用 Python 编写的命令行实用，允许你自动化 DuckDuckGo 搜索。
 
 让我们从 PyPI 包管理器安装：
 
@@ -3047,7 +3007,7 @@ cd Day_16
 ddgr osint>search osint.txt
 ```
 
-如果你只想从结果文件中提取引用链接（例如，为了自动爬取），你可以结合 Cat 和 Gre 命令使用：
+如果你只想从结果文件中提取引用链接（例如，为了自动爬取），你可以结合 `Cat` 和 `Gre` 命令使用：
 
 5. 如何获取 OSINT | SANS Institute [www.sans.org]
 
@@ -3071,40 +3031,60 @@ OSINT 即开源情报，是从中收集和分析关于个人或组织的信息�
 
 ```
 PROMPT OUTPUT PORT CONSOLE TERMINAL
+
 $ pip install duckduckgo-osint-21-Day_21 [main] & Edit Day_17
+
 $ pip install duckduckgo-osint-21-Day_21 [main] & pip install ddgr
+
 (collecting)
+
 Downloading ddgr-2.1-py3-none-any.whl (38 KB)
+
 Installing collected packages: ddgr-2.1
+
 Successfully installed ddgr-2.1.
 ```
 
 从终端使用 DuckDuckGo。
 
 位置参数：
-KEYWORD
+`KEYWORD`
 
-```
 搜索关键词
-选项:
---help                  显示帮助信息并退出
---page N               输出页码（默认: 20）显示每页获取的结果数
---region-specific search -u --region=us (默认: 默认) https://duckduckgo.com/us
---colorize             输出颜色（默认: auto）意味着仅当输出为 tty 设备时；- 无颜色
---timeout SEC           超时，等同于 colour-timeout
---json                 以 JSON 格式输出；意味着 --n--limit LIMIT             限制结果（1 天, 1 小, 1 周, 1 月, 1 年）
---time-limit SPAN      时间限制（秒）
---expand               扩展搜索查询
---proxy URL            设置 HTTP 代理 URL；格式：http://[user:password@]host[:port]
---unsafe               禁用安全搜索
---max N                最大结果数
---json                 json
---py-browser           使用无头浏览器
---no-prompt            不提示
---rev,--reverse         反向列出条目
-```
 
-DuckDuckGo search (https://github.com/jarun/ddgr) 是一个用 Python 编写的命令行实用，允许你自动化 DuckDuckGo 搜索。
+选项:
+
+`--help` 显示帮助信息并退出
+
+`--page N` 输出页码（默认: 20）显示每页获取的结果数
+
+`--region-specific search -u --region=us` (默认: 默认) https://duckduckgo.com/us
+
+`--colorize` 输出颜色（默认: auto）意味着仅当输出为 tty 设备时；- 无颜色
+
+`--timeout SEC` 超时，等同于 colour-timeout
+
+`--json` 以 JSON 格式输出；意味着 `--n--limit LIMIT` 限制结果（1 天, 1 小, 1 周, 1 月, 1 年）
+
+`--time-limit SPAN` 时间限制（秒）
+
+`--expand` 扩展搜索查询
+
+`--proxy URL` 设置 HTTP 代理 URL；格式：http://[user:password@]host[:port]
+
+`--unsafe` 禁用安全搜索
+
+`--max N` 最大结果数
+
+`--json` json
+
+`--py-browser` 使用无头浏览器
+
+`--no-prompt` 不提示
+
+`--rev,--reverse` 反向列出条目
+
+`DuckDuckGo search` (https://github.com/jarun/ddgr) 是一个用 Python 编写的命令行实用，允许你自动化 DuckDuckGo 搜索。
 
 让我们从 PyPI 包管理器安装：
 
@@ -3121,156 +3101,112 @@ cd Day_16
 ddgr osint>search osint.txt
 ```
 
-如果你只想从结果文件中提取引用链接（例如，为了自动爬取），你可以结合 Cat 和 Gre 命令使用：
 
-5. 如何获取 OSINT | SANS Institute [www.sans.org]
+
+如果你只想从结果文件中提取引用链接（例如，为了自动爬取），你可以结合 `Cat` 和 `Gre` 命令使用：
+
+5. 如何获取 OSINT | SANS Institute [`www.sans.org`]
 
 学习如何从社区和资源获取 OSINT，练习技术并在 OSINT 领域寻找工作。该博客分享了各种方法
 
-6. 什么是开源情报 (OSINT?) | SentinelOne [www.sentinelone.com]
+6. 什么是开源情报 (OSINT?) | SentinelOne [`www.sentinelone.com`]
 
 OSINT 即开源情报，是从中收集和分析关于个人或组织的信息。
 
-7. 开源情报训练 | SANS Institute [www.sans.org]
+7. 开源情报训练 | SANS Institute [`www.sans.org`]
 
-8. 开源情报训练 (OSINT?) | SentinelOne [www.sentinelone.com]
+8. 开源情报训练 (OSINT?) | SentinelOne [`www.sentinelone.com`]
+
+OSINT 即开源情报，是从中收集和分析关于个人或组织的信息。
+
+9. 开源情报训练 | SANS Institute [`www.sans.org`]
+
+10. 什么是开源情报 (OSINT?) | SentinelOne [`www.sentinelone.com`]
 
 OSINT 即开源情报，是从中收集和分析关于个人或组织的信息。
 
-9. 开源情报训练 | SANS Institute [www.sans.org]
-
-10. 什么是开源情报 (OSINT?) | SentinelOne [www.sentinelone.com]
-
-OSINT 即开源情报，是从中收集和分析关于个人或组织的信息。
+`PROMPT OUTPUT PORT CONSOLE TERMINAL`
 
 ```
-PROMPT OUTPUT PORT CONSOLE TERMINAL
 $ pip install duckduckgo-osint-21-Day_21 [main] & Edit Day_17
+
 $ pip install duckduckgo-osint-21-Day_21 [main] & pip install ddgr
+
 (collecting)
+
 Downloading ddgr-2.1-py3-none-any.whl (38 KB)
+
 Installing collected packages: ddgr-2.1
+
 Successfully installed ddgr-2.1.
 ```
 
 从终端使用 DuckDuckGo。
 
 位置参数：
-KEYWORD
+`KEYWORD`
 
-```
 搜索关键词
+
 选项:
---help                  显示帮助信息并退出
---page N               输出页码（默认: 20）显示每页获取的结果数
---region-specific search -u --region=us (默认: 默认) https://duckduckgo.com/us
---colorize             输出颜色（默认: auto）意味着仅当输出为 tty 设备时；- 无颜色
---timeout SEC           超时，等同于 colour-timeout
---json                 以 JSON 格式输出；意味着 --n--limit LIMIT             限制结果（1 天, 1 小, 1 周, 1 月, 1 年）
---time-limit SPAN      时间限制（秒）
---expand               扩展搜索查询
---proxy URL            设置 HTTP 代理 URL；格式：http://[user:password@]host[:port]
---unsafe               禁用安全搜索
---max N                最大结果数
---json                 json
---py-browser           使用无头浏览器
---no-prompt            不提示
---rev,--reverse         反向列出条目
-```
 
-DuckDuckGo search (https://github.com/jarun/ddgr) 是一个用 Python 编写的命令行实用，允许你自动化 DuckDuckGo 搜索。
+`--help` 显示帮助信息并退出
 
-让我们从 PyPI 包管理器安装：
+`--page N` 输出页码（默认: 20）显示每页获取的结果数
 
-```
-pip install ddgr
-```
+`--region-specific search -u --region=us` (默认: 默认) `https://duckduckgo.com/us`
 
-![](img/03e4d38bded7def6bb51288422c4f89d_119_0.png)
+`--colorize` 输出颜色（默认: auto）意味着仅当输出为 tty 设备时；- 无颜色
 
-现在让我们尝试在 DuckDuckGo 上搜索单词 "osint"并将结果写入文本文件：
+`--timeout SEC` 超时，等同于 colour-timeout
 
-```
-cd Day_16
-ddgr osint>search osint.txt
-```
+`--json` 以 JSON 格式输出；意味着 `--n--limit LIMIT` 限制结果（1 天, 1 小, 1 周, 1 月, 1 年）
 
-如果你只想从结果文件中提取引用链接（例如，为了自动爬取），你可以结合 Cat 和 Gre 命令使用：
+`--time-limit SPAN` 时间限制（秒）
 
-5. 如何获取 OSINT | SANS Institute [www.sans.org]
+`--expand` 扩展搜索查询
 
-学习如何从社区和资源获取 OSINT，练习技术并在 OSINT 领域寻找工作。该博客分享了各种方法
+`--proxy URL` 设置 HTTP 代理 URL；格式：`http://[user:password@]host[:port]`
 
-6. 什么是开源情报 (OSINT?) | SentinelOne [www.sentinelone.com]
+`--unsafe` 禁用安全搜索
 
-OSINT 即开源情报，是从中收集和分析关于个人或组织的信息。
+`--max N` 最大结果数
 
-7. 开源情报训练 | SANS Institute [www.sans.org]
+`--json` json
 
-8. 开源情报训练 (OSINT?) | SentinelOne [www.sentinelone.com]
+`--py-browser` 使用无头浏览器
 
-OSINT 即开源情报，是从中收集和分析关于个人或组织的信息。
+`--no-prompt` 不提示
 
-9. 开源情报训练 | SANS Institute [www.sans.org]
-
-10. 什么是开源情报 (OSINT?) | SentinelOne [www.sentinelone.com]
-
-OSINT 即开源情报，是从中收集和分析关于个人或组织的信息。
-
-```
-PROMPT OUTPUT PORT CONSOLE TERMINAL
-$ pip install duckduckgo-osint-21-Day_21 [main] & Edit Day_17
-$ pip install duckduckgo-osint-21-Day_21 [main] & pip install ddgr
-(collecting)
-Downloading ddgr-2.1-py3-none-any.whl (38 KB)
-Installing collected packages: ddgr-2.1
-Successfully installed ddgr-2.1.
-```
-
-从终端使用 DuckDuckGo。
-
-位置参数：
-KEYWORD
-
-```
-搜索关键词
-选项:
---help                  显示帮助信息并退出
---page N               输出页码（默认: 20）显示每页获取的结果数
---region-specific search -u --region=us (默认: 默认) https://duckduckgo.com/us
---colorize             输出颜色（默认: auto）意味着仅当输出为 tty 设备时；- 无颜色
---timeout SEC           超时，等同于 colour-timeout
---json                 以 JSON 格式输出；意味着 --n--limit LIMIT             限制结果（1 天, 1 小, 1 周, 1 月, 1 年）
---time-limit SPAN      时间限制（秒）
---expand               扩展搜索查询
---proxy URL            设置 HTTP 代理 URL；格式：http://[user:password@]host[:port]
---unsafe               禁用安全搜索
---max N                最大结果数
---json                 json
---py-browser           使用无头浏览器
---no-prompt            不提示
---rev,--reverse         反向列出条目
-```
-
-
-
-
+`--rev,--reverse` 反向列出条目
 
 # 问题 输出端口调试控制台 终端
 
 ```
 Requirement already satisfied: certifi-normalizer==4.2 in /home/gitpod/pyvenv/versions/3.12.8/lib/python3.12/site-packages (from requests==2.31.0)
+
 Requirement already satisfied: idna==3.10 in /home/gitpod/pyvenv/versions/3.12.8/lib/python3.12/site-packages (from requests==2.31.0) (3.4)
+
 Requirement already satisfied: urllib3==1.26.1 in /home/gitpod/pyvenv/versions/3.12.8/lib/python3.12/site-packages (from requests==2.31.0) (3.2)
+
 Requirement already satisfied: charset-normalizer==4.2 in /home/gitpod/pyvenv/versions/3.12.8/lib/python3.12/site-packages (from requests==2.31.0)
+
 Downloading requests-2.31.0-py3-none-any.whl (62.2 kB)
+
 Collecting requests: ██████████ 100% 62.2/62.2 kB [00:00:00.05, 1244.00kB/s]
+
 Building wheel for requests...
+
   Using collected requests-2.31.0-py3-none-any.whl (62.2 kB)
+
   Created wheel requests-2.31.0-py3
+
 Installed requests-2.31.0
+
 Successfully installed requests-2.31.0
+
 Installing collected packages: certifi, idna, requests
+
 Successfully installed requests-2.31.0
 ```
 
@@ -3280,25 +3216,37 @@ Successfully installed requests-2.31.0
 
 ```
 PROBLEMS OUTPUT PORTS DEBUG CONSOLE Linux-for-OSINT-21-day
+
 gitpod~//linux-OSINT-21-day (main) $ netlas -h
+
 Usage: netlas [OPTIONS] COMMAND [ARGS...]
 
 Options:
+
   -h, --help    显示此消息并退出。
 
 Commands:
+
   count         计算查询结果的成本。
+
 download       下载数据。
+
 host          主机（ip 或域名）信息。
+
 indices        获取可用的数据索引。
+
 profile       获取用户配置数据。
+
 savekey       将 API 密钥保存到本地系统。
+
 search (query) 查询查询。
+
   stat          获取查询统计信息。
+
   gitped~//linux-OSINT-21-day (main) $ _
 ```
 
-首先，让我们安装 Netlas Python 软件包 (https://readthedocs.org/projects/netlas-python/)：
+首先，让我们安装 Netlas Python 软件包 (`https://readthedocs.org/projects/netlas-python/`)：
 
 在发送请求之前，或者从你的个人账户中复制 API 密钥（每天免费 50 次请求）；
 
@@ -3306,10 +3254,15 @@ search (query) 查询查询。
 
 ```
 $ netlas_results.txt -u
+
 $ netlas_results.txt
+
 1 {"date": "": "url": "https://217.160.158.203/443/", "last_updated": "2023-10-22T22:11:55.284Z", "jarm": "50d35f1619c2f92c80ed00022430dc37c994108"}
+
 ...（此处省略部分未翻译的 JSON 内容，保持格式一致）...
+
 "fingerprint_md": "73852222222222222226666b",
+
 "extensions": [{"subject_key_id": "444e05d7b3f7239a1c91bb82a0d1234f8fc","certificate_chain": ""}]}
 ```
 $ gitpod/workspace/linux-OSINT-21-day (main) $ netlas download netlas_results.txt
@@ -3317,6 +3270,8 @@ $ gitpod/workspace/linux-OSINT-21-day (main) $
 ```
 
 Let's try to find we have the word "osint" in the tag of your response. Note that in the query, we filter for "http" to search only the web pages. But Netlas has advanced operators. For example:
+
+
 
 ```
 http:
@@ -3327,7 +3282,7 @@ port:
 ip:
 ```
 
-You can extract any data from the results file using jq utility, which is described in Day 14:
+You can extract any data from the results file using `jq` utility, which is described in Day 14:
 
 ```
 $ gitpod/workspace/linux-OSINT-21-day (main) $ jq .data.http.title netlas_results.txt > netlas_extracted.txt
@@ -3354,23 +3309,28 @@ Today we will return to the topic we started about Day 5: downloading (for later
 
 ## FTP
 
-On the fifth day, we already talked about the curl utility which supports uploading through different protocols. But still, the FTP utility (https://www.gnu.org/inetutils/manual/html/ftp-invocation.html) is a bit more convenient for this task. If you need to transfer files, you will probably be more comfortable using a GUI client as FileZilla (https://wiki.filezilla-project.org/Main_Page) rather than command line. But FileZilla (like many other FTP clients) allows you to automate various actions using the command line (https://wiki.filezilla-project.org/Command-line_arguments).
+On the fifth day, we already talked about the `curl` utility which supports uploading through different protocols. But still, the FTP utility (https://www.gnu.org/inetutils/manual/html/ftp-invocation.html) is a bit more convenient for this task. If you need to transfer files, you will probably be more comfortable using a GUI client as FileZilla (https://wiki.filezilla-project.org/Main_Page) rather than command line. But FileZilla (like many other FTP clients) allows you to automate various actions using the command line (https://wiki.filezilla-project.org/Command-line_arguments).
 
 ## Torrents
 
-It is illegal to use leaked data files, but many OSINT professionals use them anyway to gather more information. Often the leaked data is stored as huge files on torrents. For example, I had to deal with one network leak that weighed hundreds of gigabytes. Unpacking the archives and extracting the necessary data using jq utility took more than two days! Thanks to screen (Day 9) I only had to spend an hour writing commands and checking sessions a few times to see if everything's going well.
+It is illegal to use leaked data files, but many OSINT professionals use them anyway to gather more information. Often the leaked data is stored as huge files on torrents. For example, I had to deal with one network leak that weighed hundreds of gigabytes. Unpacking the archives and extracting the necessary data using `jq` utility took more than two days! Thanks to `screen` (Day 9) I only had to spend an hour writing commands and checking sessions a few times to see if everything's going well.
 
 Seedbox is a high-bandwidth remote server used to upload and download digital files from a peer-to-peer (P2P) network (tech slang). Here are some examples of popular services for monthly seedbox rentals:
 
 - RapidSeedbox (https://www.rapidseedbox.com)
+
 - Cloudboxes (https://cloudboxes.io)
+
 - DediSeedbox (https://dediseedbox.com/)
 
 Seedboxes is a very handy thing, but you can run command torrent clients on your VPS if you want:
 
 - Aria (https://aria2.github.io)
+
 - Transmission-cli (https://cli-ck.io/transmission-cli-user-guide/)
+
 - WebTorrent-cli (https://github.com/webtortrent/webtortrent-cli)
+
 - Stig (https://github.com/rndusr/stig)
 
 ## File sharing services
@@ -3378,28 +3338,32 @@ Seedboxes is a very handy thing, but you can run command torrent clients on your
 When using files uploaded to various file sharing sites in investigations, you should keep in mind that their downloading can be automated. Here are some examples of command line utilities for different services that will help you do:
 
 - Google Drive (https://github.com/glotlabs/qdrive)
+
 - Dropbox (https://github.com/dropbox/dbxcli)
+
 - Mega.nz (https://github.com/meganz/MEGAcmd)
+
 - OneDrive (https://github.com/skilion/onedrive)
 
-But be careful when using them and never use accounts where you have important information stored for authorization. **After all, these are unofficial utilities and accounts can be blocked for using them.**
+But be careful when using them and never use accounts where you have important information stored for authorization. After all, these are unofficial utilities and accounts can be blocked for using them.
 
 ## Social media
 
 When you work with a lot of content that is published on some popular social network, check to see if someone else has made a utility to automate its uploading. For example:
 
 - YouTube-dl (https://youtube-dl.org)
+
 - SlideShare (https://github.com/mohan3d/slideshare-go)
+
 - Spotify (https://github.com/spotDL/spotify-downloader)
+
 - You Get (https://github.com/soimort/you-get)
-
-
-
-
 
 ## Whois
 
 Whois 是一个简单的实用程序，用于显示域名的基本信息：该域名是否已注册、注册日期、付费持有期的结束日期，以及所有者的联系方式。
+
+
 
 ```
 PROBLEMS OUTPUT PORTS DEBUG CONSOLE TERMINAL
@@ -3429,6 +3393,8 @@ $ gitpod/workspace/linux-for-OSINT-21-day (main) $
 ```
 sudo apt-get install whois
 ```
+
+
 
 ```
 $ gitpod /workspace/linux-OSINT-21-day (main) $ whois github.com
@@ -3460,23 +3426,26 @@ Last update of whois databases: 2023-12-16T09:51:05Z <<<<
 NOTICE: The expiration date displayed in the record is the date the registrar's sponsorship of the domain name registration in the registry is current and does not necessarily reflect the expiration date of the domain registrant's agreement with the sponsoring registrar. Users may consult the sponsoring registrar's Whois database to view the registrar's reported date of expiration for this registration.
 
 TERMS OF USE: You are not authorized to access or query our Whois
+```
 
 And let's gather information about GitHub.com:
 
 ## github.com
+
 PROBLEMS OUTPUT PORTS DEBUG CONSOLE TERMINAL
 Focus folder in explorer (cmd + click)
-* gitpod/workspace/linux-for-OSINT-21-day (main) $ whois035.nl | grep 'Creation'
+* gitpod/workspace/linux-for-OSINT-21-day (main) $ `whois035.nl` | `grep` 'Creation'
 Creation Date: 2017-05-29
-$ gitpod/workspace/linux-for-OSINT-21-day (main) $ whois035.nl | grep 'Creation'
+$ gitpod/workspace/linux-for-OSINT-21-day (main) $ `whois035.nl` | `grep` 'Creation'
 
-If you only need certain information from whois, you can extract the necessary strings with grep.
-The dnsutils package (https://packages.debian.org/buster/dnsutils) includes three commands:
-- dig - query the DNS
-- nslookup - the older way to do it
-- nsupdate - perform dynamic updates.
+If you only need certain information from `whois`, you can extract the necessary strings with `grep`.
+The `dnsutils` package (`https://packages.debian.org/buster/dnsutils`) includes three commands:
+- `dig` - query the DNS
+- `nslookup` - the older way to do it
+- `nsupdate` - perform dynamic updates.
 
 For the purposes of this course, we will consider only the.
+```
 $ gitpod/workspace/linux-for-OSINT-21-day (main) $ sudo apt-get install dnsutils
 Reading lists... Done
 Building dependency tree... Done
@@ -3513,6 +3482,8 @@ Selecting previously installed package dnsutils
 Setting up dnsutils (9.16.12-ubuntu22.04.3_amd64.deb) ...
 ```
 
+
+
 ```
 $ gitpod /workspace/Linux-for-OSINT-21-day (main) $ dig google.com
 ; << DIG 9.10.12-Ubuntu22.04.3-Ubuntu >>> google.com
@@ -3532,35 +3503,30 @@ $ gitpod /workspace/Linux-for-OSINT-21-day (main) $ dig google.com
 
 如你所见，它显示了信息、DNS 信息以及与该域名相关的各种服务器地址，这些可以用于进一步调查以及许多其他信息。
 
-
-
-
-
 # 20 个领域调查 Python 软件包
 
 只需在命令行中输入：`pip install + 包名`
 
-- python-whois
-- dnstwist
-- builtwith
-- waybackpy
-- netlas
-- pyseoanalyzer
-- shodan
-- dns-crawler
-- oxydork
-- urlscanio
-
-- virustotal-python
-- pysnyk
-- pydork
-- EmailHarvester
-- sitemap-generator
-- censys
-- wapiti3
-- dirhunt
-- cloudscraper
-- metadata_parser
+- `python-whois`
+- `dnstwist`
+- `builtwith`
+- `waybackpy`
+- `netlas`
+- `pyseoanalyzer`
+- `shodan`
+- `dns-crawler`
+- `oxydork`
+- `urlscanio`
+- `virustotal-python`
+- `pysnyk`
+- `pydork`
+- `EmailHarvester`
+- `sitemap-generator`
+- `censys`
+- `wapiti3`
+- `dirhunt`
+- `cloudscraper`
+- `metadata_parser`
 
 ![](img/03e4d38bded7def6bb51288422c4f89d_134_0.png)
 
@@ -3572,7 +3538,7 @@ $ gitpod /workspace/Linux-for-OSINT-21-day (main) $ dig google.com
 
 # 第 19 天 Git 和 Github
 
-Git (https://git-scm.com) 是由 Linus Torvalds 创建的软件版本控制系统。根据 StackOverflow 的 2022 年调查，超过 93% 的开发者将其作为主要的版本控制工具（https://survey.stackoverflow.com/2022/#section-version-control-version-control-systems）。
+`Git` (https://git-scm.com) 是由 Linus Torvalds 创建的软件版本控制系统。根据 StackOverflow 的 2022 年调查，超过 93% 的开发者将其作为主要的版本控制工具（https://survey.stackoverflow.com/2022/#section-version-control-version-control-systems）。
 
 Git 和 Linux 的情况极其罕见，一个人在一生中成功发明了两个改变游戏规则的软件（1991 年的 Linux，2005 年的 Git）。
 
@@ -3593,7 +3559,7 @@ sudo apt-get install git
 
 仓库包含所有项目文件，包括修订历史。在其他地方已经有一个项目仓库了？导入它。
 
-必填字段用星号 (\*) 标记：
+必填字段用星号 (`*`) 标记：
 
 | | 仓库名称 * |
 |---|---|
@@ -3615,11 +3581,11 @@ sudo apt-get install git
 |---|---|
 | [ ] 你可以在这里为你的项目编写详细描述。了解关于 README。 |
 
-添加 .gitignore
+添加 `.gitignore`
 
 | | gitignore |
 |---|---|
-| | 从模板中选择以忽略文件列表。了解关于 .gitignore。 |
+| | 从模板中选择以忽略文件列表。了解关于 `.gitignore`。 |
 
 选择许可证
 
@@ -3633,10 +3599,7 @@ sudo apt-get install git
 
 ![](img/03e4d38bded7def6bb51288422c4f89d_136_0.png)
 
-查看图片，填写仓库名称和描述字段，将仓库设为私有，创建一个 README.MD 文件并点击 Create（创建）。
-
-
-
+查看图片，填写仓库名称和描述字段，将仓库设为私有，创建一个 `README.MD` 文件并点击 Create（创建）。
 
 ![](img/03e4d38bded7def6bb51288422c4f89d_141_0.png)
 
@@ -3646,7 +3609,7 @@ sudo apt-get install git
 
 ## explainshell.com
 
-关于 Shell 中的 for user in！主题 . 显示所有，导航：解释 crontab(1) 解释 shell 语法
+关于 Shell 中的 `for user in！` 主题 . 显示所有，导航：解释 `crontab(1)` 解释 shell 语法
 
 ```bash
 for user in $(cut -f1 -d: /etc/passwd); do crontab -l -u $user 2>/dev/null; done
@@ -3673,7 +3636,7 @@ for user in $(cut -f1 -d: /etc/passwd); do crontab -l -u $user 2>/dev/null; done
 
 答案 | PHIND VS 模型
 
-使用 curl 命令下载 google.com，可以使用以下命令：
+使用 `curl` 命令下载 `google.com`，可以使用以下命令：
 
 ```bash
 curl https://www.google.com/?hl=en_us.html
@@ -3681,32 +3644,37 @@ curl https://www.google.com/?hl=en_us.html
 
 以下是该命令的逐步解释：
 
-- 1. curl 是用于通过 URL 传输数据的工具。它支持多种协议，包括 HTTP、HTTPS、FTP、FTPS、SCP、SMTP 和 SSL/TLS。
-- 2. google.com 是你想要下载的网站 URL。这是 Google 的主页。
-- 3. > 是 Unix 类操作系统中的一种重定向，它用于将命令的输出重定向到文件。在这种情况下，它将 curl 的输出（即页面的 HTML 内容）重定向到名为 google.html 的本地文件。
-- 4. google.html 是正在保存的文件名。如果文件不存在，将创建它。如果文件已存在，将会被覆盖。
-- 5. 运行命令后，google.html 文件将位于你的当前目录。该文件包含 Google 主页的 HTML 内容。你可以在网页浏览器中打开此文件查看网页，或者可以在文本编辑器中打开它查看 HTML 源代码。
+- 1. `curl` 是用于通过 URL 传输数据的工具。它支持多种协议，包括 HTTP、HTTPS、FTP、FTPS、SCP、SMTP 和 SSL/TLS。
+- 2. `google.com` 是你想要下载的网站 URL。这是 Google 的主页。
+- 3. `>` 是 Unix 类操作系统中的一种重定向，它用于将命令的输出重定向到文件。在这种情况下，它将 `curl` 的输出（即页面的 HTML 内容）重定向到名为 `google.html` 的本地文件。
+- 4. `google.html` 是正在保存的文件名。如果文件不存在，将创建它。如果文件已存在，将会被覆盖。
+- 5. 运行命令后，`google.html` 文件将位于你的当前目录。该文件包含 Google 主页的 HTML 内容。你可以在网页浏览器中打开此文件查看网页，或者可以在文本编辑器中打开它查看 HTML 源代码。
 
 ## 建议
 
-我可以使用 curl 下载 Google 主页的特定部分吗？
+我可以使用 `curl` 下载 Google 主页的特定部分吗？
 
 ![](img/03e4d38bded7def6bb51288422c4f89d_143_0.png)
 
 | 来源 | Y |
 | :--- | :--- |
-| 1. https://stackoverflow.com/questions/48130-how-to | 使用 curl 或 wget 下载 Google Drive 文件 |
+
+
+
+| 1. https://stackoverflow.com/questions/48130/how-to | 使用 `curl` 或 `wget` 下载 Google Drive 文件 |
 | 2. 知识共享是我们的优先事项。当文件很大时，Google 返回代码。 | |
 | 3. https://networkworld.com/article/957290-how-to-download-a-website-using-curl/ | |
-| 4. 使用 curl 可能最好的方法是从具有更多内容的页面下载。 | |
+| 4. 使用 `curl` 可能最好的方法是从具有更多内容的页面下载。 | |
 | 5. https://phind.com/post/command-examples | |
 | 6. https://www.digitalocean.com/community/tutorials/ | |
 
-命令的语法如下：curl [options] [URL]
-在最简单的形式下，当没有调用任何选项时，curl 显示内容。
-步骤 1 — 获取远程文件。在框外，如果没有任何参数，curl 命令将获取一个文件。
+命令的语法如下：`curl [options] [URL]`
 
-另外，我想让你注意 AI 助手 Phind (https://www.phind.com/)，它不仅写命令，还提供来自 StackOverflow 等各种网站的解释。
+在最简单的形式下，当没有调用任何选项时，`curl` 显示内容。
+
+步骤 1 — 获取远程文件。在框外，如果没有任何参数，`curl` 命令将获取一个文件。
+
+另外，我想让你注意 AI 助手 Phind (`https://www.phind.com/`)，它不仅写命令，还提供来自 StackOverflow 等各种网站的解释。
 
 ## 代码检查器
 
@@ -3716,7 +3684,7 @@ StackOverflow 用户、AI 助手以及每个代码的人都会出错。这些工
 
 查找 shell 脚本中的错误。
 
-你可以通过 apt、dnf 或 brew 在本地安装它。
+你可以通过 `apt`、`dnf` 或 `brew` 在本地安装它。
 
 粘贴一个脚本尝试一下。
 
@@ -3727,9 +3695,6 @@ StackOverflow 用户、AI 助手以及每个代码的人都会出错。这些工
 # ：ShellCheck 可以检测到一些低级语义问题
 while getopts "f:s:" opt; do
 ```
-
-
-
 
 # 第 21 天。哪种 Linux 发行版更好用？
 
@@ -3744,8 +3709,8 @@ while getopts "f:s:" opt; do
 
 这里是另外两个针对网络安全专业人员的 Linux 发行版列表：
 
-- Distro Forensics Github 仓库 (https://github.com/CScorza/DistroForensics)
-- Linux for OSINT Twitter 列表 (https://twitter.com/cyb_detective/status/1441860681173033473)
+- Distro Forensics Github 仓库 (`https://github.com/CScorza/DistroForensics`)
+- Linux for OSINT Twitter 列表 (`https://twitter.com/cyb_detective/status/1441860681173033473`)
 
 但如果你从事网络安全工作，并不意味着你必须使用专为安全专业人士设计的发行版。这完全没有必要。
 
@@ -3756,6 +3721,7 @@ while getopts "f:s:" opt; do
 来自 Reddit 的图片。
 
 有数百种不同的 Linux 发行版及其变体（见上图）。
+
 选择一个一个：
 
 - 符合你计算机系统要求且运行快速的
@@ -3777,21 +3743,16 @@ while getopts "f:s:" opt; do
 ![](img/03e4d38bded7def6bb51288422c4f89d_149_7.png)
 ![](img/03e4d38bded7def6bb51288422c4f89d_149_8.png)
 
-你可以将 Linux 作为虚拟机使用。在 LinuxVMImages 网站 (https://www.linuxvmimages.com/) 下载不同发行版的镜像。
+你可以将 Linux 作为虚拟机使用。在 LinuxVMImages 网站 (`https://www.linuxvmimages.com/`) 下载不同发行版的镜像。
 
-但也要考虑其他使用形式，例如 VPS（虚拟专用服务器）。租用费用每月几美元起（例如从 $3.99 到 $15 不等）或可启动的 USB 驱动器（Ubuntu 和 Windows 的说明示例 https://ubuntu.com/create-usb-stick-for-windows-overview）。
+但也要考虑其他使用形式，例如 VPS（虚拟专用服务器）。租用费用每月几美元起（例如从 $3.99 到 $15 不等）或可启动的 USB 驱动器（Ubuntu 和 Windows 的说明示例 `https://ubuntu.com/create-usb-stick-for-windows-overview`）。
 
 | 主机 | LXC | OS | CPU | RAM | 磁盘 | COW | 导入镜像 | 加载 | 内存转储 | 捕获 | 启用 | 链接 | 鼠标 | 全屏 | 缩放 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
 | | | | | | | | | | | | | | | | | |
 
 *(注：由于原文表格内容包含大量乱码或占位符，此处保持格式对应，未翻译无意义字符)*
-
 *(注：原文后续部分似乎包含大量重复的乱码/占位符文本，已根据指令进行清理处理)*
-
-
-
-
 
 # README © CC0-1.0 许可证
 
@@ -3840,20 +3801,23 @@ while getopts "f:s:" opt; do
 - Awesome Fish
 - 其他 Awesome 列表
 
-如果你打开 Awesome Shell (https://github.com/albecay/awesome-shell) 仓库，你就能看到大量的命令行工具。它包含了几乎 400 多个链接（这些是最实用且著名的工具）。
+如果你打开 Awesome Shell (`https://github.com/albecay/awesome-shell`) 仓库，你就能看到大量的命令行工具。它包含了几乎 400 多个链接（这些是最实用且著名的工具）。
 
 第三，如果你确实某些仅存在于 Windows 的应用程序，仍然可以使用启动器在 Linux 上运行它们，例如：
 
-- Wine (http://winehg.org)
-- CrossOver (http://codeweavers.com/crossover)
+- Wine (`http://winehg.org`)
+- CrossOver (`http://codeweavers.com/crossover`)
 
 遗憾的是，它们并不总是那么方便，而且经常产生错误。例如，我最近未能通过 Wine 运行一个查看牙科图片的程序。但在许多情况下，它们是可以工作的。
 
 第四，Linux 允许你在自定义桌面 GUI 时具有最大的灵活性（与 Windows 和 Mac 不可比拟）。你可以尝试其中一种流行的 Linux 桌面环境：
 
-- Gnome 3 (https://www.gnome.org/gnome-3/)
-- KDE (https://www.kde.org/)
-- Cinnamon (http://developer.linuxmint.com/projects.html)
+- Gnome 3 (`https://www.gnome.org/gnome-3/`)
+- KDE (`https://www.kde.org/`)
+- Cinnamon (`http://developer.linuxmint.com/projects.html`)
+
+
+
 - Mate (http://mate-desktop.com/)
 - Xfce (http://www.xfce.org)
 
@@ -3878,4 +3842,3 @@ while getopts "f:s:" opt; do
 [来自noon.com/how-to-install-bash-on-windows-10-lbq73yj3 来自 HackerNoon 如何在 Windows 中安装 bash](https://hackernoon.com/how-to-install-bash-on-windows-10-lbq73yj3)
 
 [geeksforgeeks.org/how-to-run-linux-software-on-windows/ GeeksForGeeks 如何在 Windows 上运行 Linux 软件](https://www.geeksforgeeks.org/how-to-run-linux-software-on-windows/)
-

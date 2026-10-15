@@ -1,28 +1,29 @@
+
 # 在一组字符串中查找最长公共前缀
 
 > 原文：[`techbyexample.com/longest-common-prefix-program/`](https://techbyexample.com/longest-common-prefix-program/)
 
-## **概述**
+## 概述
 
 给定一个字符串数组，目标是从该数组中找到最长公共前缀。如果没有公共前缀，应该输出一个空字符串。
 
-示例 1
+### 示例 1
 
 ```go
 Input: ["fan", "fat", "fame"]
 Output: "fa"
 ```
 
-示例 2
+### 示例 2
 
 ```go
 Input: ["bat", "van", "cat"]
 Output: ""
 ```
 
-## **程序**
+## 程序
 
-以下是相同的程序
+以下是相同的程序：
 
 ```go
 package main
@@ -54,7 +55,6 @@ func longestCommonPrefix(strs []string) string {
 				match = false
 				break
 			}
-
 		}
 
 		if match {
@@ -76,11 +76,13 @@ func main() {
 }
 ```
 
-**输出：**
+## 输出
 
 ```go
 "fa"
 ""
 ```
 
-**注意：** 另外，查看我们的系统设计教程系列：[系统设计教程系列](https://techbyexample.com/system-design-questions/)
+## 注意
+
+另外，查看我们的系统设计教程系列：[系统设计教程系列](https://techbyexample.com/system-design-questions/)

@@ -1,4 +1,5 @@
-# 附录 M. 样本 .bashrc 和 .bash_profile 文件
+
+# 附录 M. 样本 `.bashrc` 和 `.bash_profile` 文件
 
 > 原文：[`tldp.org/LDP/abs/html/sample-bashrc.html`](https://tldp.org/LDP/abs/html/sample-bashrc.html)
 
@@ -8,7 +9,9 @@ Emmanuel Rouat 贡献了以下非常详尽的`.bashrc`文件，该文件是为 L
 
 仔细研究这个文件，并在您的`.bashrc`文件或甚至脚本中自由地重用代码片段和函数。
 
-**示例 M-1\. 样本 `.bashrc` 文件**
+**示例 M-1. 样本 `.bashrc` 文件**
+
+
 
 ```sh
 # =============================================================== #
@@ -69,14 +72,14 @@ function get_xserver ()
 {
     case $TERM in
         xterm )
-            XSERVER=$(who am i &#124; awk '{print $NF}' &#124; tr -d ')''(' )
+            XSERVER=$(who am i | awk '{print $NF}' | tr -d ')''(' )
             # Ane-Pieter Wieringa suggests the following alternative:
             #  I_AM=$(who am i)
             #  SERVER=${I_AM#*(}
             #  SERVER=${SERVER%*)}
             XSERVER=${XSERVER%%:*}
             ;;
-            aterm &#124; rxvt)
+            aterm | rxvt)
             # Find some code that works here. ...
             ;;
     esac
@@ -84,7 +87,7 @@ function get_xserver ()
 
 if [ -z ${DISPLAY:=""} ]; then
     get_xserver
-    if [[ -z ${XSERVER}  &#124;&#124; ${XSERVER} == $(hostname) &#124;&#124;
+    if [[ -z ${XSERVER}  || ${XSERVER} == $(hostname) ||
        ${XSERVER} == "unix" ]]; then
           DISPLAY=":0.0"          # Display on local host.
     else
@@ -239,7 +242,7 @@ XLOAD=$(( 400*${NCPU} ))        # Xlarge load
 # Returns system load as percentage, i.e., '40' rather than '0.40)'.
 function load()
 {
-    local SYSLOAD=$(cut -d " " -f1 /proc/loadavg &#124; tr -d '.')
+    local SYSLOAD=$(cut -d " " -f1 /proc/loadavg | tr -d '.')
     # System load of the current host.
     echo $((10#$SYSLOAD))       # Convert to decimal.
 }
@@ -266,7 +269,7 @@ function disk_color()
         echo -en ${Red}
         # No 'write' privilege in the current directory.
     elif [ -s "${PWD}" ] ; then
-        local used=$(command df -P "$PWD" &#124;
+        local used=$(command df -P "$PWD" |
                    awk 'END {print $5} {sub(/%/,"")}')
         if [ ${used} -gt 95 ]; then
             echo -en ${ALERT}           # Disk almost full (>95%).
@@ -284,9 +287,9 @@ function disk_color()
 # Returns a color according to running/suspended jobs.
 function job_color()
 {
-    if [ $(jobs -s &#124; wc -l) -gt "0" ]; then
+    if [ $(jobs -s | wc -l) -gt "0" ]; then
         echo -en ${BRed}
-    elif [ $(jobs -r &#124; wc -l) -gt "0" ] ; then
+    elif [ $(jobs -r | wc -l) -gt "0" ] ; then
         echo -en ${BCyan}
     fi
 }
@@ -296,7 +299,7 @@ function job_color()
 # Now we construct the prompt.
 PROMPT_COMMAND="history -a"
 case ${TERM} in
-  *term &#124; rxvt &#124; linux)
+  *term | rxvt | linux)
         PS1="\[\$(load_color)\][\A\[${NC}\] "
         # Time of day (with load info):
         PS1="\[\$(load_color)\][\A\[${NC}\] "
@@ -366,7 +369,7 @@ alias lu='ls -ltur'        #  Sort by/show access time,most recent last.
 
 # The ubiquitous 'll': directories first, with alphanumeric sorting:
 alias ll="ls -lv --group-directories-first"
-alias lm='ll &#124;more'        #  Pipe through 'more'
+alias lm='ll |more'        #  Pipe through 'more'
 alias lr='ll -R'           #  Recursive ls.
 alias la='ll -A'           #  Show hidden files.
 alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
@@ -378,7 +381,7 @@ alias tree='tree -Csuh'    #  Nice alternative to 'recursive ls' ...
 alias more='less'
 export PAGER=less
 export LESSCHARSET='latin1'
-export LESSOPEN='&#124;/usr/bin/lesspipe.sh %s 2>&-'
+export LESSOPEN='|/usr/bin/lesspipe.sh %s 2>&-'
                 # Use this if lesspipe.sh exists.
 export LESS='-i -N -w  -z-4 -g -e -M -X -F -R -P%t?f%f \
 :stdin .?pb%pb\%:?lbLine %lb:?bbByte %bb:-...'
@@ -411,7 +414,7 @@ alias kk='ll'
 function xtitle()
 {
     case "$TERM" in
-    *term* &#124; rxvt)
+    *term* | rxvt)
         echo -en  "\e]0;$*\a" ;;
     *)  ;;
     esac
@@ -425,7 +428,7 @@ alias make='xtitle Making $(basename $PWD) ; make'
 function man()
 {
     for i ; do
-        xtitle The $(basename $1&#124;tr -d .[:digit:]) manual
+        xtitle The $(basename $1|tr -d .[:digit:]) manual
         command man -a "$i"
     done
 }
@@ -478,8 +481,8 @@ Usage: fstr [-i] \"pattern\" [\"filename pattern\"] "
         echo "$usage"
         return;
     fi
-    find . -type f -name "${2:-*}" -print0 &#124; \
-xargs -0 egrep --color=always -sn ${case} "$1" 2>&- &#124; more
+    find . -type f -name "${2:-*}" -print0 | \
+xargs -0 egrep --color=always -sn ${case} "$1" 2>&- | more
 
 }
 
@@ -532,19 +535,19 @@ function sanitize() { chmod -R u=rwX,g=rX,o= "$@" ;}
 #-------------------------------------------------------------
 
 function my_ps() { ps $@ -u $USER -o pid,%cpu,%mem,bsdtime,command ; }
-function pp() { my_ps f &#124; awk '!/awk/ && $0~var' var=${1:-".*"} ; }
+function pp() { my_ps f | awk '!/awk/ && $0~var' var=${1:-".*"} ; }
 
 function killps()   # kill by process name
 {
     local pid pname sig="-TERM"   # default signal
-    if [ "$#" -lt 1 ] &#124;&#124; [ "$#" -gt 2 ]; then
+    if [ "$#" -lt 1 ] || [ "$#" -gt 2 ]; then
         echo "Usage: killps [-SIGNAL] pattern"
         return;
     fi
     if [ $# = 2 ]; then sig=$1 ; fi
-    for pid in $(my_ps&#124; awk '!/awk/ && $0~pat { print $1 }' pat=${!#} )
+    for pid in $(my_ps| awk '!/awk/ && $0~pat { print $1 }' pat=${!#} )
     do
-        pname=$(my_ps &#124; awk '$1~var { print $5 }' var=$pid )
+        pname=$(my_ps | awk '$1~var { print $5 }' var=$pid )
         if ask "Kill process $pid <$pname> with signal $sig?"
             then kill $sig $pid
         fi
@@ -560,8 +563,8 @@ function mydf()         # Pretty-print of 'df' output.
           echo -e $fs" :No such file or directory" ; continue
         fi
 
-        local info=( $(command df -P $fs &#124; awk 'END{ print $2,$3,$5 }') )
-        local free=( $(command df -Pkh $fs &#124; awk 'END{ print $4 }') )
+        local info=( $(command df -P $fs | awk 'END{ print $2,$3,$5 }') )
+        local free=( $(command df -Pkh $fs | awk 'END{ print $4 }') )
         local nbstars=$(( 20 * ${info[1]} / ${info[0]} ))
         local out="["
         for ((j=0;j<20;j++)); do
@@ -578,7 +581,7 @@ function mydf()         # Pretty-print of 'df' output.
 
 function my_ip() # Get IP adress on ethernet.
 {
-    MY_IP=$(/sbin/ifconfig eth0 &#124; awk '/inet/ { print $2 } ' &#124;
+    MY_IP=$(/sbin/ifconfig eth0 | awk '/inet/ { print $2 } ' |
       sed -e s/addr://)
     echo ${MY_IP:-"Not connected"}
 }
@@ -587,8 +590,8 @@ function ii()   # Get current host related info.
 {
     echo -e "\nYou are logged on ${BRed}$HOST"
     echo -e "\n${BRed}Additionnal information:$NC " ; uname -a
-    echo -e "\n${BRed}Users logged on:$NC " ; w -hs &#124;
-             cut -d " " -f1 &#124; sort &#124; uniq
+    echo -e "\n${BRed}Users logged on:$NC " ; w -hs |
+             cut -d " " -f1 | sort | uniq
     echo -e "\n${BRed}Current date :$NC " ; date
     echo -e "\n${BRed}Machine stats :$NC " ; uptime
     echo -e "\n${BRed}Memory stats :$NC " ; free
@@ -615,7 +618,7 @@ function ask()          # See 'killps' for example of use.
 {
     echo -n "$@" '[y/n] ' ; read ans
     case "$ans" in
-        y*&#124;Y*) return 0 ;;
+        y*|Y*) return 0 ;;
         *) return 1 ;;
     esac
 }
@@ -623,7 +626,7 @@ function ask()          # See 'killps' for example of use.
 function corename()   # Get name of app that created a corefile.
 {
     for file ; do
-        echo -n $file : ; gdb --core=$file --batch &#124; head -1
+        echo -n $file : ; gdb --core=$file --batch | head -1
     done
 }
 
@@ -664,41 +667,41 @@ complete -A directory  mkdir rmdir
 complete -A directory   -o default cd
 
 # Compression
-complete -f -o default -X '*.+(zip&#124;ZIP)'  zip
-complete -f -o default -X '!*.+(zip&#124;ZIP)' unzip
-complete -f -o default -X '*.+(z&#124;Z)'      compress
-complete -f -o default -X '!*.+(z&#124;Z)'     uncompress
-complete -f -o default -X '*.+(gz&#124;GZ)'    gzip
-complete -f -o default -X '!*.+(gz&#124;GZ)'   gunzip
-complete -f -o default -X '*.+(bz2&#124;BZ2)'  bzip2
-complete -f -o default -X '!*.+(bz2&#124;BZ2)' bunzip2
-complete -f -o default -X '!*.+(zip&#124;ZIP&#124;z&#124;Z&#124;gz&#124;GZ&#124;bz2&#124;BZ2)' extract
+complete -f -o default -X '*.+(zip|ZIP)'  zip
+complete -f -o default -X '!*.+(zip|ZIP)' unzip
+complete -f -o default -X '*.+(z|Z)'      compress
+complete -f -o default -X '!*.+(z|Z)'     uncompress
+complete -f -o default -X '*.+(gz|GZ)'    gzip
+complete -f -o default -X '!*.+(gz|GZ)'   gunzip
+complete -f -o default -X '*.+(bz2|BZ2)'  bzip2
+complete -f -o default -X '!*.+(bz2|BZ2)' bunzip2
+complete -f -o default -X '!*.+(zip|ZIP|z|Z|gz|GZ|bz2|BZ2)' extract
 
 # Documents - Postscript,pdf,dvi.....
-complete -f -o default -X '!*.+(ps&#124;PS)'  gs ghostview ps2pdf ps2ascii
+complete -f -o default -X '!*.+(ps|PS)'  gs ghostview ps2pdf ps2ascii
 complete -f -o default -X \
-'!*.+(dvi&#124;DVI)' dvips dvipdf xdvi dviselect dvitype
-complete -f -o default -X '!*.+(pdf&#124;PDF)' acroread pdf2ps
-complete -f -o default -X '!*.@(@(?(e)ps&#124;?(E)PS&#124;pdf&#124;PDF)?\
-(.gz&#124;.GZ&#124;.bz2&#124;.BZ2&#124;.Z))' gv ggv
+'!*.+(dvi|DVI)' dvips dvipdf xdvi dviselect dvitype
+complete -f -o default -X '!*.+(pdf|PDF)' acroread pdf2ps
+complete -f -o default -X '!*.@(@(?(e)ps|?(E)PS|pdf|PDF)?\
+(.gz|.GZ|.bz2|.BZ2|.Z))' gv ggv
 complete -f -o default -X '!*.texi*' makeinfo texi2dvi texi2html texi2pdf
 complete -f -o default -X '!*.tex' tex latex slitex
 complete -f -o default -X '!*.lyx' lyx
-complete -f -o default -X '!*.+(htm*&#124;HTM*)' lynx html2ps
+complete -f -o default -X '!*.+(htm*|HTM*)' lynx html2ps
 complete -f -o default -X \
-'!*.+(doc&#124;DOC&#124;xls&#124;XLS&#124;ppt&#124;PPT&#124;sx?&#124;SX?&#124;csv&#124;CSV&#124;od?&#124;OD?&#124;ott&#124;OTT)' soffice
+'!*.+(doc|DOC|xls|XLS|ppt|PPT|sx?|SX?|csv|CSV|od?|OD?|ott|OTT)' soffice
 
 # Multimedia
 complete -f -o default -X \
-'!*.+(gif&#124;GIF&#124;jp*g&#124;JP*G&#124;bmp&#124;BMP&#124;xpm&#124;XPM&#124;png&#124;PNG)' xv gimp ee gqview
-complete -f -o default -X '!*.+(mp3&#124;MP3)' mpg123 mpg321
-complete -f -o default -X '!*.+(ogg&#124;OGG)' ogg123
+'!*.+(gif|GIF|jp*g|JP*G|bmp|BMP|xpm|XPM|png|PNG)' xv gimp ee gqview
+complete -f -o default -X '!*.+(mp3|MP3)' mpg123 mpg321
+complete -f -o default -X '!*.+(ogg|OGG)' ogg123
 complete -f -o default -X \
-'!*.@(mp[23]&#124;MP[23]&#124;ogg&#124;OGG&#124;wav&#124;WAV&#124;pls&#124;\
-m3u&#124;xm&#124;mod&#124;s[3t]m&#124;it&#124;mtm&#124;ult&#124;flac)' xmms
-complete -f -o default -X '!*.@(mp?(e)g&#124;MP?(E)G&#124;wma&#124;avi&#124;AVI&#124;\
-asf&#124;vob&#124;VOB&#124;bin&#124;dat&#124;vcd&#124;ps&#124;pes&#124;fli&#124;viv&#124;rm&#124;ram&#124;yuv&#124;mov&#124;MOV&#124;qt&#124;\
-QT&#124;wmv&#124;mp3&#124;MP3&#124;ogg&#124;OGG&#124;ogm&#124;OGM&#124;mp4&#124;MP4&#124;wav&#124;WAV&#124;asx&#124;ASX)' xine
+'!*.@(mp[23]|MP[23]|ogg|OGG|wav|WAV|pls|\
+m3u|xm|mod|s[3t]m|it|mtm|ult|flac)' xmms
+complete -f -o default -X '!*.@(mp?(e)g|MP?(E)G|wma|avi|AVI|\
+asf|vob|VOB|bin|dat|vcd|ps|pes|fli|viv|rm|ram|yuv|mov|MOV|qt|\
+QT|wmv|mp3|MP3|ogg|OGG|ogm|OGM|mp4|MP4|wav|WAV|asx|ASX)' xine
 
 complete -f -o default -X '!*.pl'  perl perl5
 
@@ -714,9 +717,9 @@ COMP_WORDBREAKS=${COMP_WORDBREAKS/=/}
 
 _get_longopts()
 {
-  #$1 --help &#124; sed  -e '/--/!d' -e 's/.*--\([^[:space:].,]*\).*/--\1/'&#124; \
-  #grep ^"$2" &#124;sort -u ;
-    $1 --help &#124; grep -o -e "--[^[:space:].,]*" &#124; grep -e "$2" &#124;sort -u
+  #$1 --help | sed  -e '/--/!d' -e 's/.*--\([^[:space:].,]*\).*/--\1/'| \
+  #grep ^"$2" |sort -u ;
+    $1 --help | grep -o -e "--[^[:space:].,]*" | grep -e "$2" |sort -u
 }
 
 _longopts()
@@ -766,7 +769,7 @@ _tar()
             ;;
         *z*f)
             ext='tar.gz'
-            regex='t\(ar\.\)\(gz\&#124;Z\)'
+            regex='t\(ar\.\)\(gz\|Z\)'
             ;;
         *[Ijy]*f)
             ext='t?(ar.)bz?(2)'
@@ -783,8 +786,8 @@ _tar()
         # Complete on files in tar file.
         #
         # Get name of tar file from command line.
-        tar=$( echo "$COMP_LINE" &#124; \
-                        sed -e 's&#124;^.* \([^ ]*'$regex'\) .*$&#124;\1&#124;' )
+        tar=$( echo "$COMP_LINE" | \
+                        sed -e 's|^.* \([^ ]*'$regex'\) .*$|\1|' )
         # Devise how to untar and list it.
         untar=t${COMP_WORDS[1]//[^Izjyf]/}
 
@@ -849,7 +852,7 @@ _make()
     [ ! -f $makef ] && return 0
 
     # Deal with included Makefiles.
-    makef_inc=$( grep -E '^-?include' $makef &#124;
+    makef_inc=$( grep -E '^-?include' $makef |
                  sed -e "s,^.* ,"$makef_dir"/," )
     for file in $makef_inc; do
         [ -f $file ] && makef="$makef $file"
@@ -859,13 +862,13 @@ _make()
     #+ to matches of that word.
     if [ -n "$cur" ]; then gcmd='grep "^$cur"' ; else gcmd=cat ; fi
 
-    COMPREPLY=( $( awk -F':' '/^[a-zA-Z0-9][^$#\/\t=]*:([^=]&#124;$)/ \
+    COMPREPLY=( $( awk -F':' '/^[a-zA-Z0-9][^$#\/\t=]*:([^=]|$)/ \
                                {split($1,A,/ /);for(i in A)print A[i]}' \
-                                $makef 2>/dev/null &#124; eval $gcmd  ))
+                                $makef 2>/dev/null | eval $gcmd  ))
 
 }
 
-complete -F _make -X '+($*&#124;*.[cho])' make gmake pmake
+complete -F _make -X '+($*|*.[cho])' make gmake pmake
 
 _killall()
 {
@@ -877,8 +880,8 @@ _killall()
     #+ (the first sed evaluation
     #+ takes care of swapped out processes, the second
     #+ takes care of getting the basename of the process).
-    COMPREPLY=( $( ps -u $USER -o comm  &#124; \
-        sed -e '1,1d' -e 's#[]\[]##g' -e 's#^.*/##'&#124; \
+    COMPREPLY=( $( ps -u $USER -o comm  | \
+        sed -e '1,1d' -e 's#[]\[]##g' -e 's#^.*/##'| \
         awk '{if ($0 ~ /^'$cur'/) print $0}' ))
 
     return 0
@@ -891,6 +894,8 @@ complete -F _killall killall killps
 # sh-shell:bash
 # End:
 ```
+
+
 
 此外，这里是从 Andrzej Szelachowski 的指导性`.bash_profile`文件中摘录的一段内容。
 

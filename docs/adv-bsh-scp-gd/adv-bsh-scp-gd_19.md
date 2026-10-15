@@ -1,10 +1,9 @@
+
 # 第十五章. 内部命令和内置命令
 
 > 原文：[`tldp.org/LDP/abs/html/internal.html`](https://tldp.org/LDP/abs/html/internal.html)
 
 一个*内置命令*是包含在 Bash 工具集中的**命令**，字面上是*内置的*。这可能是出于性能原因——内置命令比通常需要*派生*（[[1]](#FTN.AEN8607)一个单独的进程的外部命令）执行得更快——或者因为某个特定的内置命令需要直接访问 shell 内部。
-
-|
 
 当一个命令或 shell 本身启动（或*生成*）一个新的子进程来执行一个任务时，这被称为*派生*。这个新进程是*子进程*，而派生它的*父进程*仍在执行。
 
@@ -12,7 +11,8 @@
 
 **示例 15-1. 生成多个自身实例的脚本**
 
-&#124;  ```sh #!/bin/bash
+```sh
+#!/bin/bash
 # spawn.sh
 
 PIDS=$(pidof sh $0)  # Process IDs of the various instances of this script.
@@ -41,13 +41,11 @@ exit 0               # Not necessary; script will never get to here.
 #  Is having a script spawn multiple instances of itself
 #+ an advisable scripting technique.
 #  Why or why not?
-```  &#124;
+```
 
 通常情况下，Bash 内置命令在脚本中执行时不会派生子进程。脚本中的外部系统命令或过滤器通常*会*派生子进程。
 
-|
-
-一个内置命令可能是一个同义词，与同名的系统命令，但 Bash 内部重新实现了它。例如，Bash 的**echo**命令与**/bin/echo**不同，尽管它们的行为几乎相同。
+一个内置命令可能是一个同义词，与同名的系统命令，但 Bash 内部重新实现了它。例如，Bash 的`echo`命令与`/bin/echo`不同，尽管它们的行为几乎相同。
 
 ```sh
 #!/bin/bash
@@ -58,9 +56,9 @@ echo "This line uses the \"echo\" builtin."
 
 一个*关键字*是一个*保留*的词、标记或运算符。关键字对 shell 有特殊的意义，实际上构成了 shell 语法的构建块。例如，*for*、*while*、*do*和*!*都是关键字。与内置命令类似，关键字是硬编码到 Bash 中的，但与*内置命令*不同，关键字本身不是一个命令，而是*命令构造的子单元*。[[2]](#FTN.AEN8650)
 
-**I/O**
+## I/O
 
-**echo**
+### echo
 
 打印（到`stdout`）一个表达式或变量（参见示例 4-1）。
 
@@ -69,26 +67,24 @@ echo Hello
 echo $a
 ```
 
-要打印转义字符，**echo**需要`-e`选项。参见示例 5-2。
+要打印转义字符，`echo`需要`-e`选项。参见示例 5-2。
 
-通常，每个**echo**命令都会打印一个终端换行符，但`-n`选项会抑制这个行为。
+通常，每个`echo`命令都会打印一个终端换行符，但`-n`选项会抑制这个行为。
 
-| ![Note](img/068cd6dc5ba56f1437f9ae6e0cb52ede.png) | 可以使用**echo**将一系列命令传递到管道中。
+可以使用`echo`将一系列命令传递到管道中。
 
-&#124;  ```sh if echo "$VAR" &#124; grep -q txt   # if [[ $VAR = *txt* ]]
+```sh
+if echo "$VAR" | grep -q txt   # if [[ $VAR = *txt* ]]
 then
   echo "$VAR contains the substring sequence \"txt\""
 fi
-```  &#124;
+```
 
-|
+结合命令替换，`echo`可以设置变量。``a=`echo "HELLO" | tr A-Z a-z` ``参见示例 16-22、示例 16-3、示例 16-47 和示例 16-48。
 
-| ![Note](img/068cd6dc5ba56f1437f9ae6e0cb52ede.png) | 结合命令替换，**echo**可以设置变量。``**a=`echo "HELLO" &#124; tr A-Z a-z`**``参见示例 16-22、示例 16-3、示例 16-47 和示例 16-48。 |
-| --- | --- |
+注意，`echo` `command`会删除`*command*`输出产生的任何换行符。
 
-注意，**echo `command`**会删除`*command*`输出产生的任何换行符。
-
-$IFS（内部字段分隔符）变量通常包含 \n（换行符）作为其集合中的 空白字符 之一。因此，Bash 会将 `*command*` 的输出在换行符处拆分为 **echo** 的参数。然后 **echo** 输出这些参数，并用空格分隔。
+`$IFS`（内部字段分隔符）变量通常包含 `\n`（换行符）作为其集合中的空白字符之一。因此，Bash 会将`*command*`的输出在换行符处拆分为`echo`的参数。然后`echo`输出这些参数，并用空格分隔。
 
 ```sh
 bash$ **ls -l /usr/share/apps/kjezz/sounds**
@@ -97,7 +93,6 @@ bash$ **ls -l /usr/share/apps/kjezz/sounds**
 
 bash$ **echo `ls -l /usr/share/apps/kjezz/sounds`**
 total 40 -rw-r--r-- 1 root root 716 Nov 7 2000 reflect.au -rw-r--r-- 1 root root ...
-
 ```
 
 那么，我们如何在 echoed 字符串中嵌入换行符呢？
@@ -150,28 +145,25 @@ echo $string1
 # Thanks, Steve Parker, for pointing this out.
 ```
 
-| ![注意](img/068cd6dc5ba56f1437f9ae6e0cb52ede.png) | 此命令是 shell 内置命令，与 `/bin/echo` 不同，尽管其行为相似。
+此命令是 shell 内置命令，与`/bin/echo`不同，尽管其行为相似。
 
-&#124;  ```sh bash$ **type -a echo**
+```sh
+bash$ **type -a echo**
 echo is a shell builtin
  echo is /bin/echo
+```
 
-```  &#124;
+### printf
 
-|
+`printf`，格式化打印命令，是`echo`的增强版。它是*C*语言`printf()`库函数的有限变体，其语法略有不同。
 
-**printf**
+`printf` `*format-string*`... `*parameter*`...
 
-**printf**，格式化打印命令，是 **echo** 的增强版。它是 *C* 语言 `printf()` 库函数的有限变体，其语法略有不同。
+这是 Bash 的*内置*版本的`/bin/printf`或`/usr/bin/printf`命令。有关系统命令的深入内容，请参阅`printf`手册页。
 
-**printf** `*format-string*`... `*parameter*`...
+旧版本的 Bash 可能不支持`printf`。
 
-这是 Bash 的 *内置* 版本的 `/bin/printf` 或 `/usr/bin/printf` 命令。有关系统命令的深入内容，请参阅 **printf** 手册页。
-
-| ![注意](img/05aa79b283e0d53b5a94a522ee0b6cfe.png) | 旧版本的 Bash 可能不支持 **printf**。 |
-| --- | --- |
-
-**示例 15-2\. **printf** 的实际应用**
+**示例 15-2. `printf`的实际应用**
 
 ```sh
 #!/bin/bash
@@ -217,7 +209,7 @@ echo $Msg; echo $Msg
 exit 0
 ```
 
-格式化错误信息是 **printf** 的一个有用应用。
+格式化错误信息是`printf`的一个有用应用。
 
 ```sh
 E_BADDIR=85
@@ -232,18 +224,18 @@ error()
   exit $E_BADDIR
 }
 
-cd $var &#124;&#124; error $"Can't cd to %s." "$var"
+cd $var || error $"Can't cd to %s." "$var"
 
 # Thanks, S.C.
 ```
 
-参见 示例 36-17。
+参见示例 36-17。
 
-**read**
+### read
 
-“从 `stdin` 读取变量的值”，即交互式地从键盘获取输入。`-a` 选项允许 **read** 获取数组变量（参见 示例 27-6）。
+“从`stdin`读取变量的值”，即交互式地从键盘获取输入。`-a`选项允许`read`获取数组变量（参见示例 27-6）。
 
-**示例 15-3\. 变量赋值，使用 **read****
+**示例 15-3. 变量赋值，使用`read`**
 
 ```sh
 #!/bin/bash
@@ -270,9 +262,9 @@ echo "var2 = $var2      var3 = $var3"
 exit 0
 ```
 
-没有相关变量的 **read** 将其输入分配给专用变量 $REPLY。
+没有相关变量的`read`将其输入分配给专用变量`$REPLY`。
 
-**示例 15-4\. 当 **read** 没有变量时会发生什么**
+**示例 15-4. 当`read`没有变量时会发生什么**
 
 ```sh
 #!/bin/bash
@@ -324,9 +316,11 @@ echo            #   #!/bin/bash  line discarded.
 exit 0
 ```
 
-通常，输入一个 `**\**` 会抑制对 **read** 的输入中的换行符。`-r` 选项会导致输入的 `**\**` 被字面地解释。
+通常，输入一个`\`会抑制对`read`的输入中的换行符。`-r`选项会导致输入的`\`被字面地解释。
 
-**示例 15-5\. **read** 的多行输入**
+**示例 15-5. `read`的多行输入**
+
+
 
 ```sh
 #!/bin/bash
@@ -362,7 +356,7 @@ echo
 exit 0
 ```
 
-**read** 命令有一些有趣的可选参数，允许回显提示并甚至读取按键而不按 **ENTER**。
+`read` 命令有一些有趣的可选参数，允许回显提示并甚至读取按 **ENTER**。
 
 ```sh
 # Read a keypress without hitting ENTER.
@@ -377,9 +371,9 @@ echo; echo "Keypress was "\"$keypress\""."
 # Using these options is tricky, since they need to be in the correct order.
 ```
 
-`-n` 选项对 **read** 命令也允许检测 **箭头键** 和某些其他不寻常的键。
+`-n` 选项对 `read` 命令也允许检测箭头键和某些其他不寻常的键。
 
-**示例 15-6\. 检测箭头键**
+### 示例 15-6：检测箭头键
 
 ```sh
 #!/bin/bash
@@ -403,42 +397,42 @@ echo -n "Press a key...  "
 # May need to also press ENTER if a key not listed above pressed.
 read -n3 key                      # Read 3 characters.
 
-echo -n "$key" &#124; grep "$arrowup"  #Check if character code detected.
+echo -n "$key" | grep "$arrowup"  #Check if character code detected.
 if [ "$?" -eq $SUCCESS ]
 then
   echo "Up-arrow key pressed."
   exit $SUCCESS
 fi
 
-echo -n "$key" &#124; grep "$arrowdown"
+echo -n "$key" | grep "$arrowdown"
 if [ "$?" -eq $SUCCESS ]
 then
   echo "Down-arrow key pressed."
   exit $SUCCESS
 fi
 
-echo -n "$key" &#124; grep "$arrowrt"
+echo -n "$key" | grep "$arrowrt"
 if [ "$?" -eq $SUCCESS ]
 then
   echo "Right-arrow key pressed."
   exit $SUCCESS
 fi
 
-echo -n "$key" &#124; grep "$arrowleft"
+echo -n "$key" | grep "$arrowleft"
 if [ "$?" -eq $SUCCESS ]
 then
   echo "Left-arrow key pressed."
   exit $SUCCESS
 fi
 
-echo -n "$key" &#124; grep "$insert"
+echo -n "$key" | grep "$insert"
 if [ "$?" -eq $SUCCESS ]
 then
   echo "\"Insert\" key pressed."
   exit $SUCCESS
 fi
 
-echo -n "$key" &#124; grep "$delete"
+echo -n "$key" | grep "$delete"
 if [ "$?" -eq $SUCCESS ]
 then
   echo "\"Delete\" key pressed."
@@ -490,9 +484,9 @@ exit $?
 while true
 do
   read -sn1 a
-  test "$a" == `echo -en "\e"` &#124;&#124; continue
+  test "$a" == `echo -en "\e"` || continue
   read -sn1 a
-  test "$a" == "[" &#124;&#124; continue
+  test "$a" == "[" || continue
   read -sn1 a
   case "$a" in
     A)  echo "up";;
@@ -508,28 +502,99 @@ done
 #  --------
 #  1) Add detection of the "Home," "End," "PgUp," and "PgDn" keys.
 ```
-| ![注意 | **read** 的 `-n` 选项不会检测 **ENTER**（换行符）键。 |**read** 的 `-t` 选项允许定时输入（参见 示例 9-4 和 示例 A-41）。`-u` 选项接受目标文件的 文件描述符。**read** 命令也可能从重定向到 `stdin` 的文件中“读取”其变量的值 重定向。如果文件包含多于一行，只有第一行会被分配给变量。如果 **read** 有多个参数，那么这些变量中的每一个都会分配一个连续的 空白分隔 字符串。注意！**示例 15-7\. 使用 *read* 与 文件重定向**```sh
-#!/bin/bashread var1 <data-fileecho "var1 = $var1"# var1 set to the entire first line of the input file "data-file"read var2 var3 <data-fileecho "var2 = $var2   var3 = $var3"# Note non-intuitive behavior of "read" here.# 1) Rewinds back to the beginning of input file.# 2) Each variable is now set to a corresponding string,#    separated by whitespace, rather than to an entire line of text.# 3) The final variable gets the remainder of the line.# 4) If there are more variables to be set than whitespace-terminated strings#    on the first line of the file, then the excess variables remain empty.echo "------------------------------------------------"# How to resolve the above problem with a loop:while read linedo  echo "$line"done <data-file# Thanks, Heiner Steven for pointing this out.echo "------------------------------------------------"# Use $IFS (Internal Field Separator variable) to split a line of input to# "read", if you do not want the default to be whitespace.echo "List of all users:"OIFS=$IFS; IFS=:       # /etc/passwd uses ":" for field separator.while read name passwd uid gid fullname ignoredo  echo "$name ($fullname)"done </etc/passwd   # I/O redirection.IFS=$OIFS              # Restore original $IFS.# This code snippet also by Heiner Steven.#  Setting the $IFS variable within the loop itself#+ eliminates the need for storing the original $IFS#+ in a temporary variable.#  Thanks, Dim Segebart, for pointing this out.echo "------------------------------------------------"echo "List of all users:"while IFS=: read name passwd uid gid fullname ignoredo  echo "$name ($fullname)"done </etc/passwd   # I/O redirection.echoecho "\$IFS still $IFS"exit 0```  || --- || ![注意](img/068cd6dc5ba56f1437f9ae6e0cb52ede.png) | 将输出通过 管道 输送到一个 *读取*，使用 echo 来设置变量 将会失败。然而，将 cat 的输出通过管道 *似乎* 可以工作。
 
-&#124;  ```sh cat file1 file2 &#124;
+> **注意**
+>
+> `read` 的 `-n` 选项不会检测 **ENTER**（换行符）键。`read` 的 `-t` 选项允许定时输入（参见示例 9-4 和示例 A-41）。`-u` 选项接受目标文件的文件描述符。`read` 命令也可能从重定向到 `stdin` 的文件中“读取”其变量的值。如果文件包含多于一行，只有第一行会被分配给变量。如果 `read` 有多个参数，那么这些变量中的每一个都会分配一个连续的、由空白分隔的字符串。
+
+### 示例 15-7：使用 `read` 与文件重定向
+
+```sh
+#!/bin/bash
+
+read var1 <data-file
+echo "var1 = $var1"
+# var1 set to the entire first line of the input file "data-file"
+
+read var2 var3 <data-file
+echo "var2 = $var2   var3 = $var3"
+# Note non-intuitive behavior of "read" here.
+# 1) Rewinds back to the beginning of input file.
+# 2) Each variable is now set to a corresponding string,
+#    separated by whitespace, rather than to an entire line of text.
+# 3) The final variable gets the remainder of the line.
+# 4) If there are more variables to be set than whitespace-terminated strings
+#    on the first line of the file, then the excess variables remain empty.
+
+echo "------------------------------------------------"
+
+# How to resolve the above problem with a loop:
 while read line
 do
-echo $line
-done
-```  &#124;
+  echo "$line"
+done <data-file
 
-然而，正如 Bjn Eriksson 所展示的：
+# Thanks, Heiner Steven for pointing this out.
 
-**示例 15-8\. 从管道读取的问题**
+echo "------------------------------------------------"
 
-&#124;  ```sh #!/bin/sh
+# Use $IFS (Internal Field Separator variable) to split a line of input to
+# "read", if you do not want the default to be whitespace.
+
+echo "List of all users:"
+OIFS=$IFS; IFS=:       # /etc/passwd uses ":" for field separator.
+while read name passwd uid gid fullname ignore
+do
+  echo "$name ($fullname)"
+done </etc/passwd   # I/O redirection.
+
+IFS=$OIFS              # Restore original $IFS.
+
+# This code snippet also by Heiner Steven.
+#  Setting the $IFS variable within the loop itself
+#+ eliminates the need for storing the original $IFS
+#+ in a temporary variable.
+#  Thanks, Dim Segebart, for pointing this out.
+
+echo "------------------------------------------------"
+echo "List of all users:"
+
+while IFS=: read name passwd uid gid fullname ignore
+do
+  echo "$name ($fullname)"
+done </etc/passwd   # I/O redirection.
+
+echo
+echo "\$IFS still $IFS"
+
+exit 0
+```
+
+> **注意**
+>
+> 将输出通过管道输送到一个 `read`，使用 `echo` 来设置变量将会失败。然而，将 `cat` 的输出通过管道输送到 `read` 似乎可以工作。
+>
+> ```sh
+> cat file1 file2 |
+> while read line
+> do
+>   echo $line
+> done
+> ```
+>
+> 然而，正如 Bjn Eriksson 所展示的：
+
+### 示例 15-8：从管道读取的问题
+
+```sh
+#!/bin/sh
 # readpipe.sh
 # This example contributed by Bjon Eriksson.
 
 ### shopt -s lastpipe
 
 last="(null)"
-cat $0 &#124;
+cat $0 |
 while read line
 do
     echo "{$line}"
@@ -552,7 +617,7 @@ exit 0  # End of code.
 
 {#!/bin/sh}
 {last="(null)"}
-{cat $0 &#124;}
+{cat $0 |}
 {while read line}
 {do}
 {echo "{$line}"}
@@ -564,63 +629,67 @@ All done, last: (null)
 
 The variable (last) is set within the loop/subshell
 but its value does not persist outside the loop.
-```  &#124;
-
-*gendiff* 脚本通常在许多 Linux 发行版的 `/usr/bin` 中找到，它将 find 的输出通过管道输送到一个 *while read* 构造。
-
-&#124;  ```sh find $1 \( -name "*$2" -o -name ".*$2" \) -print &#124;
-while read f; do
-. . .
-```  &#124;
-
-|
-
-| ![提示](img/753d054f4c48fb039314a9e5947964cd.png) | 可以将文本 *粘贴* 到 *read* 的输入字段中（但不能粘贴多行！）。参见 示例 A-38。 |
-| --- | --- |
-
-**文件系统**
-
-**cd**
-
-熟悉的 **cd** 改变目录命令在脚本中很有用，其中执行命令需要位于指定的目录中。
-
-```sh
-(cd /source/directory && tar cf - . ) &#124; (cd /dest/directory && tar xpvf -)
 ```
 
-来自 [之前引用 的 Alan Cox 示例]
+`gendiff` 脚本通常在许多 Linux 发行版的 `/usr/bin` 中找到，它将 `find` 的输出通过管道输送到一个 `while read` 构造。
 
-**cd** 的 `-P`（物理）选项会导致它忽略符号链接。
+```sh
+find $1 \( -name "*$2" -o -name ".*$2" \) -print |
+while read f; do
+  . . .
+```
 
-**cd -** 将目录更改为 $OLDPWD，即上一个工作目录。
+> **提示**
+>
+> 可以将文本粘贴到 `read` 的输入字段中（但不能粘贴多行！）。参见示例 A-38。
 
-| ![注意](img/05aa79b283e0d53b5a94a522ee0b6cfe.png) | 当遇到两个正斜杠时，**cd** 命令的行为可能不符合预期。
+## 文件系统
 
-&#124;  ```sh bash$ **cd //**
-bash$ **pwd**
-//
+### `cd`
 
-```  &#124;
+熟悉的 `cd` 改变目录命令在脚本中很有用，其中执行命令需要位于指定的目录中。
 
-当然，输出应该是 `/`。这在命令行和脚本中都是一个问题。|
+```sh
+(cd /source/directory && tar cf - . ) | (cd /dest/directory && tar xpvf -)
+```
 
-**pwd**
+来自之前引用的 Alan Cox 示例。
 
-打印工作目录。这会给出用户（或脚本）的当前目录（参见 示例 15-9）。效果等同于读取内置变量 $PWD 的值。
+`cd` 的 `-P`（物理）选项会导致它忽略符号链接。
 
-**pushd**, **popd**, **dirs**
+`cd -` 将目录更改为 `$OLDPWD`，即上一个工作目录。
 
-这个命令集是一个用于标记工作目录的机制，是一种有序地在目录间来回移动的方法。使用一个下推 栈 来跟踪目录名称。选项允许对目录栈进行各种操作。
+> **注意**
+>
+> 当遇到两个正斜杠时，`cd` 命令的行为可能不符合预期。
+>
+> ```sh
+> bash$ cd //
+> bash$ pwd
+> //
+> ```
+>
+> 当然，输出应该是 `/`。这在命令行和脚本中都是一个问题。
 
-`**pushd dir-name**` 将路径 `*dir-name*` 压入目录栈（到栈的 *顶部*）并同时将当前工作目录更改为 `*dir-name*`
+### `pwd`
 
-**popd** 从目录栈中移除（弹出）顶部目录路径名称，并同时将当前工作目录更改为栈顶的目录。
+打印工作目录。这会给出用户（或脚本）的当前目录（参见示例 15-9）。效果等同于读取内置变量 `$PWD` 的值。
 
-**dirs** 列出目录栈的内容（与 $DIRSTACK 变量进行比较）。成功的 **pushd** 或 **popd** 将自动调用 **dirs**。
+### `pushd`、`popd`、`dirs`
+
+这个命令集是一个用于标记工作目录的机制，是一种有序地在目录间来回移动的方法。使用一个下推栈来跟踪目录名称。选项允许对目录栈进行各种操作。
+
+`pushd dir-name` 将路径 `dir-name` 压入目录栈（到栈的顶部）并同时将当前工作目录更改为 `dir-name`。
+
+`popd` 从目录栈中移除（弹出）顶部目录路径名称，并同时将当前工作目录更改为栈顶的目录。
+
+`dirs` 列出目录栈的内容（与 `$DIRSTACK` 变量进行比较）。成功的 `pushd` 或 `popd` 将自动调用 `dirs`。
 
 需要对当前工作目录进行各种更改而不硬编码目录名称更改的脚本可以利用这些命令。请注意，隐含的 `$DIRSTACK` 数组变量，可以从脚本内部访问，包含目录栈的内容。
 
-**示例 15-9\. 更改当前工作目录**
+
+
+**示例 15-9. 更改当前工作目录**
 
 ```sh
 #!/bin/bash
@@ -655,9 +724,9 @@ exit 0
 
 **let**
 
-**let** 命令在变量上执行 *算术* 操作。 [[3]](#FTN.AEN9009) 在许多情况下，它作为一个更简单的 expr 版本。
+**`let`** 命令在变量上执行 *算术* 操作。[[3]](#FTN.AEN9009) 在许多情况下，它作为一个更简单的 `expr` 版本。
 
-**示例 15-10\. 让 *let* 执行算术运算。**
+**示例 15-10. 让 `let` 执行算术运算。**
 
 ```sh
 #!/bin/bash
@@ -709,9 +778,10 @@ echo $t  #     11
 exit
 ```
 
-| ![注意](img/05aa79b283e0d53b5a94a522ee0b6cfe.png) | 在某些情况下，*let* 命令可能会返回一个令人惊讶的 退出状态。
+在某些情况下，`let` 命令可能会返回一个令人惊讶的退出状态。
 
-&#124;  ```sh # Evgeniy Ivanov points out:
+```sh
+# Evgeniy Ivanov points out:
 
 var=0
 echo $?     # 0
@@ -736,28 +806,25 @@ echo $?     # 1
 #+ this is part of the design spec for 'let' . . .
 # "If the last ARG evaluates to 0, let returns 1;
 #  let returns 0 otherwise." ['help let']
-```  &#124;
+```
 
-|
+**`eval`**
 
-**eval**
+**`eval arg1 [arg2] ... [argN]`**
 
-`**eval arg1 [arg2] ... [argN]**`
+将表达式或表达式列表中的参数合并，并 *评估* 它们。表达式中的任何变量都会被展开。最终结果是 **将字符串转换为命令**。
 
-将表达式或表达式列表中的参数合并，并 `*评估*` 它们。表达式中的任何变量都会被展开。最终结果是 **将字符串转换为命令**。
+`eval` 命令可以用于从命令行或脚本中生成代码。
 
-| ![提示](img/753d054f4c48fb039314a9e5947964cd.png) | *eval* 命令可以用于从命令行或脚本中生成代码。 |
-| --- | --- |
 ```sh
 bash$ **command_string="ps ax"**
 bash$ **process="ps ax"**
-bash$ **eval "$command_string" &#124; grep "$process"**
+bash$ **eval "$command_string" | grep "$process"**
 26973 pts/3    R+     0:00 grep --color ps ax
  26974 pts/3    R+     0:00 ps ax
+```
 
-```  |
-
-每次调用 *eval* 都会强制重新评估其参数。
+每次调用 `eval` 都会强制重新评估其参数。
 
 ```sh
 a='$b'
@@ -774,7 +841,7 @@ eval eval echo $a   # d
 # Thank you, E. Choroba.
 ```
 
-**示例 15-11\. 展示 *eval* 的效果**
+**示例 15-11. 展示 `eval` 的效果**
 
 ```sh
 #!/bin/bash
@@ -797,7 +864,7 @@ echo
 echo "==========================================================="
 echo
 
-eval "`seq 3 &#124; sed -e 's/.*/echo var&=ABCDEFGHIJ/'`"
+eval "`seq 3 | sed -e 's/.*/echo var&=ABCDEFGHIJ/'`"
 # var1=ABCDEFGHIJ
 # var2=ABCDEFGHIJ
 # var3=ABCDEFGHIJ
@@ -818,7 +885,7 @@ eval major=${version/./;minor=}     #  Replaces '.' in version by ';minor='
 echo Major: $major, minor: $minor   #  Major: 3, minor: 4
 ```
 
-**示例 15-12\. 使用 *eval* 在变量之间进行选择**
+**示例 15-12. 使用 `eval` 在变量之间进行选择**
 
 ```sh
 #!/bin/bash
@@ -857,7 +924,7 @@ choose_array      # (null)
 # Thank you, Antonio Macchi, for pointing this out.
 ```
 
-**示例 15-13\. **回显** 命令行参数***
+**示例 15-13. 回显命令行参数**
 
 ```sh
 #!/bin/bash
@@ -901,7 +968,7 @@ Command-line parameter $4 = fourth
 Command-line parameter $5 = fifth
 ```
 
-**示例 15-14\. 强制注销**
+**示例 15-14. 强制注销**
 
 ```sh
 #!/bin/bash
@@ -915,7 +982,7 @@ SERPORT=ttyS3
 #+ the modem port on your machine may be different --
 #+ /dev/ttyS1 or /dev/ttyS2.
 
-killppp="eval kill -9 `ps ax &#124; awk '/ppp/ { print $1 }'`"
+killppp="eval kill -9 `ps ax | awk '/ppp/ { print $1 }'`"
 #                     -------- process ID of ppp -------  
 
 $killppp                     # This variable is now a command.
@@ -939,7 +1006,9 @@ exit $?
 #+      if [ fuser -s /dev/modem ]; then . . .
 ```
 
-**示例 15-15\. 一种 *rot13* 版本**
+**示例 15-15. 一种 `rot13` 版本**
+
+
 
 ```sh
 #!/bin/bash
@@ -965,27 +1034,29 @@ echo $var                    # foobar
 exit 0
 ```
 
-这里是使用 *eval* 来 *评估* 一个复杂表达式的另一个例子，这个例子来自 YongYe 的 [俄罗斯方块游戏脚本](https://github.com/yongye/shell/blob/master/Tetris_Game.sh) 的早期版本。
+这里是使用`eval`来*评估*一个复杂表达式的另一个例子，这个例子来自 YongYe 的[俄罗斯方块游戏脚本](https://github.com/yongye/shell/blob/master/Tetris_Game.sh)的早期版本。
 
 ```sh
 eval ${1}+=\"${x} ${y} \"
 ```
 
-示例 A-53 使用 *eval* 将 数组 元素转换为命令列表。
+示例 A-53 使用`eval`将数组元素转换为命令列表。
 
-*eval* 命令出现在 间接引用 的旧版本中。
+`eval`命令出现在间接引用的旧版本中。
 
 ```sh
 eval var=\$$var
 ```
-| ![提示](img/753d054f4c48fb039314a9e5947964cd.png) | *eval* 命令可以用于 参数化花括号扩展。 |
-| ![注意](img/05aa79b283e0d53b5a94a522ee0b6cfe.png) | *eval* 命令可能存在风险，通常在存在合理替代方案时应该避免使用。`**eval $COMMANDS**` 执行 `*COMMANDS*` 的内容，可能包含诸如 **rm -rf *** 这样的不愉快惊喜。在未知作者编写的未知代码上运行 **eval** 是非常危险的。 |
 
-**set**
+| ![提示](img/753d054f4c48fb039314a9e5947964cd.png) | `eval`命令可以用于参数化花括号扩展。 |
 
-**set** 命令更改内部脚本变量/选项的值。这种用法之一是切换 选项标志，这有助于确定脚本的行为。另一个应用是重置脚本视为命令（``**set `command`**``）结果的 位置参数。然后脚本可以解析命令输出的 字段。
+| ![注意](img/05aa79b283e0d53b5a94a522ee0b6cfe.png) | `eval`命令可能存在风险，通常在存在合理替代方案时应该避免使用。`eval $COMMANDS`执行`COMMANDS`的内容，可能包含诸如`rm -rf *`这样的不愉快惊喜。在未知作者编写的未知代码上运行`eval`是非常危险的。 |
 
-**示例 15-16\. 使用 *set* 与位置参数**
+## `set`
+
+`set`命令更改内部脚本变量/选项的值。这种用法之一是切换选项标志，这有助于确定脚本的行为。另一个应用是重置脚本视为命令（`` `set `command` ` ``）结果的位置参数。然后脚本可以解析命令输出的字段。
+
+### 示例 15-16. 使用`set`与位置参数
 
 ```sh
 #!/bin/bash
@@ -1026,7 +1097,7 @@ exit 0
 
 更多关于位置参数的乐趣。
 
-**示例 15-17\. 反转位置参数**
+### 示例 15-17. 反转位置参数
 
 ```sh
 #!/bin/bash
@@ -1095,7 +1166,7 @@ c
 a b
 ```
 
-不带任何选项或参数调用 **set** 仅列出所有已初始化的 环境 和其他变量。
+不带任何选项或参数调用`set`仅列出所有已初始化的环境和其他变量。
 
 ```sh
 bash$ **set**
@@ -1110,9 +1181,9 @@ AUTHORCOPY=/home/bozo/posts
 
 ```
 
-使用 `--` 选项与 **set** 显式地将变量的内容分配给位置参数。如果没有变量跟在 `--` 后面，它将 *取消设置* 位置参数。
+使用`--`选项与`set`显式地将变量的内容分配给位置参数。如果没有变量跟在`--`后面，它将*取消设置*位置参数。
 
-**示例 15-18\. 重新分配位置参数**
+### 示例 15-18. 重新分配位置参数
 
 ```sh
 #!/bin/bash
@@ -1155,11 +1226,11 @@ echo "second parameter = $second_param"           # (null value)
 exit 0
 ```
 
-参见 示例 11-2 和 示例 16-56。
+参见示例 11-2 和示例 16-56。
 
-**取消设置**
+## `unset`
 
-**unset** 命令删除壳变量，实际上将其设置为 *null*。请注意，此命令不会影响位置参数。
+`unset`命令删除壳变量，实际上将其设置为*null*。请注意，此命令不会影响位置参数。
 
 ```sh
 bash$ **unset PATH**
@@ -1169,7 +1240,7 @@ bash$ **echo $PATH**
 bash$ 
 ```
 
-**示例 15-19\. "取消设置" 变量**
+### 示例 15-19. "取消设置"变量
 
 ```sh
 #!/bin/bash
@@ -1190,16 +1261,16 @@ fi
 
 exit 0
 ```
-| ![注意](img/068cd6dc5ba56f1437f9ae6e0cb52ede.png) | 在大多数情况下，一个未声明的变量和一个已被取消设置的变量是等效的。然而，${parameter:-default} 参数替换结构可以区分这两个变量。 |
 
-**export**
+| ![注意](img/068cd6dc5ba56f1437f9ae6e0cb52ede.png) | 在大多数情况下，一个未声明的变量和一个已被取消设置的变量是等效的。然而，`${parameter:-default}`参数替换结构可以区分这两个变量。 |
 
-**export** [[4]](#FTN.AEN9199) 命令使运行脚本或壳的所有子进程可用变量。**export** 命令的一个重要用途是在 启动文件 中，初始化并使后续用户进程可访问 环境变量。
+## `export`
+
+`export`[[4]](#FTN.AEN9199)命令使运行脚本或壳的所有子进程可用变量。`export`命令的一个重要用途是在启动文件中，初始化并使后续用户进程可访问环境变量。
 
 | ![警告](img/05aa79b283e0d53b5a94a522ee0b6cfe.png) | 很遗憾，没有方法可以将变量导回父进程，即调用或调用脚本的进程或壳。 |
-| --- | --- |
 
-**示例 15-20\. 使用 *export* 将变量传递给嵌入的 *awk* 脚本**
+### 示例 15-20. 使用`export`将变量传递给嵌入的`awk`脚本
 
 ```sh
 #!/bin/bash
@@ -1240,47 +1311,44 @@ awk "$awkscript" "$filename"
 exit 0
 ```
 
-| ![提示](img/753d054f4c48fb039314a9e5947964cd.png) | 可以在同一个操作中初始化和导出变量，例如 **export var1=xxx**。然而，正如 Greg Keraunen 指出的，在某些情况下，这可能会产生与设置变量然后导出它的不同效果。|
+| ![提示](img/753d054f4c48fb039314a9e5947964cd.png) | 可以在同一个操作中初始化和导出变量，例如`export var1=xxx`。然而，正如 Greg Keraunen 指出的，在某些情况下，这可能会产生与设置变量然后导出它的不同效果。 |
 
-&#124;  ```sh bash$ **export var=(a b); echo ${var[0]}**
+```sh
+bash$ **export var=(a b); echo ${var[0]}**
 (a b)
 
 bash$ **var=(a b); export var; echo ${var[0]}**
 a
 
-```  &#124;
+```
 
-|
+| ![注意](img/068cd6dc5ba56f1437f9ae6e0cb52ede.png) | 要导出的变量可能需要特殊处理。参见示例 M-2。 |
 
-| ![注意](img/068cd6dc5ba56f1437f9ae6e0cb52ede.png) | 要导出的变量可能需要特殊处理。参见 示例 M-2。 |
-| --- | --- |
+## `declare`, `typeset`
 
-**声明**, **排版**
+`declare`和`typeset`命令指定和/或限制变量的属性。
 
-The declare 和 typeset 命令指定和/或限制变量的属性。
+## `readonly`
 
-**只读**
+与`declare -r`相同，将变量设置为只读，或者实际上作为常量。尝试更改变量的操作将失败并显示错误消息。这是 shell 中*C*语言`const`类型限定符的类似物。
 
-与 declare -r 相同，将变量设置为只读，或者实际上作为常量。尝试更改变量的操作将失败并显示错误消息。这是 shell 中 *C* 语言 **const** 类型限定符的类似物。
+## `getopts`
 
-**getopts**
+这个强大的工具解析传递给脚本的命令行参数。这是 Bash 中`getopt`外部命令和*C*程序员熟悉的`getopt`库函数的类似物。它允许将多个选项[[5]](#FTN.AEN9289)和相关参数传递并连接到脚本（例如`scriptname -abc -e /usr/local`）。
 
-这个强大的工具解析传递给脚本的命令行参数。这是 Bash 中 getopt 外部命令和 *C* 程序员熟悉的 *getopt* 库函数的类似物。它允许将多个选项 [[5]](#FTN.AEN9289) 和相关参数传递并连接到脚本（例如 `**scriptname -abc -e /usr/local**`）。
+`getopts`构造使用两个隐含变量。`$OPTIND`是参数指针（*OPTion INDex*），而`$OPTARG`（*OPTion ARGument*）是与选项关联的（可选的）参数。在声明标签中的冒号后面，该选项被标记为具有关联的参数。
 
-**getopts** 构造使用两个隐含变量。`$OPTIND` 是参数指针（*OPTion INDex*），而 `$OPTARG`（*OPTion ARGument*）是与选项关联的（可选的）参数。在声明标签中的冒号后面，该选项被标记为具有关联的参数。
-
-**getopts** 构造通常包含在一个 while 循环 中，它逐个处理选项和参数，然后递增隐含的 `$OPTIND` 变量以指向下一个。
+`getopts`构造通常包含在一个`while`循环中，它逐个处理选项和参数，然后递增隐含的`$OPTIND`变量以指向下一个。
 
 | ![注意](img/068cd6dc5ba56f1437f9ae6e0cb52ede.png) |
-| --- |
 
-1.  从命令行传递给脚本的参数必须以短横线（`-`）开头。正是这个前缀 `-` 让 **getopts** 能够识别命令行参数为 *选项*。实际上，**getopts** 不会处理没有前缀 `-` 的参数，并且会在遇到第一个缺少它们的参数时终止选项处理。
+1.  从命令行传递给脚本的参数必须以短横线（`-`）开头。正是这个前缀`-`让`getopts`能够识别命令行参数为*选项*。实际上，`getopts`不会处理没有前缀`-`的参数，并且会在遇到第一个缺少它们的参数时终止选项处理。
 
-1.  **getopts** 模板与标准 while 循环 略有不同，因为它缺少条件括号。
+2.  `getopts`模板与标准`while`循环略有不同，因为它缺少条件括号。
 
-1.  **getopts** 构造是传统 getopt 外部命令的高度功能性替代品。
+3.  `getopts`构造是传统`getopt`外部命令的高度功能性替代品。
 
-|
+
 
 ```sh
 while getopts ":abcde:fg" Option
@@ -1304,7 +1372,7 @@ shift $(($OPTIND - 1))
 # All this is not nearly as complicated as it looks <grin>.
 ```
 
-**示例 15-21\. 使用 *getopts* 读取传递给脚本的选项/参数**
+### 示例 15-21\. 使用 `getopts` 读取传递给脚本的选项/参数
 
 ```sh
 #!/bin/bash
@@ -1369,13 +1437,13 @@ exit $?
 #  There are, however, workarounds.
 ```
 
-**脚本行为**
+## 脚本行为
 
-**source**，. (点 命令)
+### `source`，`.`（点命令）
 
-当从命令行调用此命令时，它将执行一个脚本。在脚本内部，一个 `**source file-name**` 加载文件 `file-name`。*Sourcing* 一个文件（点命令）*导入*代码到脚本中，附加到脚本（与 *C* 程序中的 `**#include**` 指令具有相同的效果）。最终结果是，如果源代码行物理上存在于脚本主体中，效果是相同的。这在多个脚本使用公共数据文件或函数库的情况下非常有用。
+当从命令行调用此命令时，它将执行一个脚本。在脚本内部，一个 `source file-name` 加载文件 `file-name`。*Sourcing* 一个文件（点命令）*导入*代码到脚本中，附加到脚本（与 *C* 程序中的 `#include` 指令具有相同的效果）。最终结果是，如果源代码行物理上存在于脚本主体中，效果是相同的。这在多个脚本使用公共数据文件或函数库的情况下非常有用。
 
-**示例 15-22\. “包含”数据文件**
+### 示例 15-22\. “包含”数据文件
 
 ```sh
 #!/bin/bash
@@ -1404,7 +1472,7 @@ print_message This is the message-print function in the data-file.
 exit $?
 ```
 
-上面的 示例 15-22 中的文件 `data-file`。必须在同一目录中存在。
+上面的示例 15-22 中的文件 `data-file` 必须在同一目录中存在。
 
 ```sh
 # This is a data file loaded by a script.
@@ -1444,17 +1512,17 @@ print_message ()
 }
 ```
 
-如果源文件本身是一个可执行脚本，那么它将运行，然后返回控制权给调用它的脚本。一个源可执行脚本可以使用 return 来实现此目的。
+如果源文件本身是一个可执行脚本，那么它将运行，然后返回控制权给调用它的脚本。一个源可执行脚本可以使用 `return` 来实现此目的。
 
-参数可以作为（可选的）位置参数传递给源文件。positional parameters。
+参数可以作为（可选的）位置参数传递给源文件。`positional parameters`。
 
 ```sh
 source $filename $arg1 arg2
 ```
 
-脚本甚至可以 *源* 自身，尽管这似乎没有实际应用。
+脚本甚至可以*源*自身，尽管这似乎没有实际应用。
 
-**示例 15-23\. 一个（无用的）自引用脚本**
+### 示例 15-23\. 一个（无用的）自引用脚本
 
 ```sh
 #!/bin/bash
@@ -1499,19 +1567,19 @@ exit 0   # The net effect is counting from 1 to 100.
 # Write a script that uses this trick to actually do something useful.
 ```
 
-**exit**
+### `exit`
 
-无条件终止一个脚本。[[6]](#FTN.AEN9393) **exit** 命令可以可选地接受一个整数参数，该参数作为脚本的 退出状态 返回给 shell。在所有但最简单的脚本中结束 `**exit 0**` 是一个好习惯，表示成功运行。
+无条件终止一个脚本。[[6]](#FTN.AEN9393) `exit` 命令可以可选地接受一个整数参数，该参数作为脚本的退出状态返回给 shell。在所有但最简单的脚本中结束 `exit 0` 是一个好习惯，表示成功运行。
 
-| ![注意](img/068cd6dc5ba56f1437f9ae6e0cb52ede.png) | 如果一个脚本在没有参数的情况下终止 **exit**，则脚本的退出状态是脚本中最后执行的命令的退出状态，不包括 **exit**。这相当于 **exit $?**。 |
-| --- | --- |
-| ![注意](img/068cd6dc5ba56f1437f9ae6e0cb52ede.png) | **exit** 命令也可以用来终止一个 子 shell。 |
+> **注意：** 如果一个脚本在没有参数的情况下终止 `exit`，则脚本的退出状态是脚本中最后执行的命令的退出状态，不包括 `exit`。这相当于 `exit $?`。
 
-**exec**
+> **注意：** `exit` 命令也可以用来终止一个子 shell。
 
-这个 shell 内建命令用指定的命令替换当前进程。通常，当 shell 遇到命令时，它会 派生 一个子进程来实际执行该命令。使用 **exec** 内建命令时，shell 不会派生，被 *exec* 的命令替换了 shell。因此，在脚本中使用时，当 *exec* 的命令终止时，它强制脚本退出。[[7]](#FTN.AEN9425)
+### `exec`
 
-**示例 15-24\. *exec*** 的影响
+这个 shell 内建命令用指定的命令替换当前进程。通常，当 shell 遇到命令时，它会派生一个子进程来实际执行该命令。使用 `exec` 内建命令时，shell 不会派生，被 `exec` 的命令替换了 shell。因此，在脚本中使用时，当 `exec` 的命令终止时，它强制脚本退出。[[7]](#FTN.AEN9425)
+
+### 示例 15-24\. `exec` 的影响
 
 ```sh
 #!/bin/bash
@@ -1530,7 +1598,9 @@ exit 99                       #  This script will not exit here.
                               #  It will *not* be 99.
 ```
 
-**示例 15-25\. 自 **exec** 的脚本**
+### 示例 15-25\. 自 `exec` 的脚本
+
+
 
 ```sh
 #!/bin/bash
@@ -1558,14 +1628,14 @@ exit 99                            # Will not exit here!
                                    # Exit code will not be 99!
 ```
 
-**exec** 也可以用于 重新分配文件描述符。例如，`**exec <zzz-file**` 将 `stdin` 替换为文件 `zzz-file`。
+`exec` 也可以用于重新分配文件描述符。例如，`exec <zzz-file` 将`stdin`替换为文件`zzz-file`。
 
-| ![注意](img/068cd6dc5ba56f1437f9ae6e0cb52ede.png) | `find` 的 `-exec` 选项与 **exec** 命令内建功能 **不相同**。 |
+| ![注意](img/068cd6dc5ba56f1437f9ae6e0cb52ede.png) | `find` 的`-exec`选项与`exec`命令内建功能**不相同**。 |
 | --- | --- |
 
-**shopt**
+## `shopt`
 
-这个命令允许动态更改 *shell 选项*（参见 示例 25-1 和 示例 25-2）。它通常出现在 Bash 启动文件 中，但在脚本中也有其用途。需要 Bash 的 版本 2 或更高版本。
+这个命令允许动态更改*shell 选项*（参见示例 25-1 和示例 25-2）。它通常出现在 Bash 启动文件中，但在脚本中也有其用途。需要 Bash 的版本 2 或更高版本。
 
 ```sh
 shopt -s cdspell
@@ -1577,9 +1647,9 @@ pwd       # /home
           # The shell corrected the misspelling.
 ```
 
-**caller**
+## `caller`
 
-在 函数 中放置 **caller** 命令会向 `stdout` 输出有关该函数 *caller* 的信息。
+在函数中放置`caller`命令会向`stdout`输出有关该函数 *caller* 的信息。
 
 ```sh
 #!/bin/bash
@@ -1600,22 +1670,18 @@ function1    # Line 9 of script.
 caller 0     # Has no effect because it's not inside a function.
 ```
 
-**caller** 命令还可以从另一个脚本中 源 的脚本中返回 *caller* 信息。类似于函数，这是一个“子程序调用”。
+`caller`命令还可以从另一个脚本中源的脚本中返回 *caller* 信息。类似于函数，这是一个“子程序调用”。你可能会在调试时发现这个命令很有用。
 
-你可能会在调试时发现这个命令很有用。
+## `true`
 
-**命令**
-
-**true**
-
-一个返回成功（零）退出状态 但没有做其他事情的命令。
+一个返回成功（零）退出状态但没有做其他事情的命令。
 
 ```sh
-bash$ **true**
-bash$ **echo $?**
+bash$ true
+bash$ echo $?
 0
-
 ```
+
 ```sh
 # Endless loop
 while true   # alias for ":"
@@ -1626,18 +1692,18 @@ do
    operation-n
    # Need a way to break out of loop or script will hang.
 done
-```  |
+```
 
-**false**
+## `false`
 
-一个返回不成功 退出状态 但没有做其他事情的命令。
+一个返回不成功退出状态但没有做其他事情的命令。
 
 ```sh
-bash$ **false**
-bash$ **echo $?**
+bash$ false
+bash$ echo $?
 1
-
 ```
+
 ```sh
 # Testing "false" 
 if false
@@ -1658,55 +1724,68 @@ do
    operation-n
    # Nothing happens!
 done   
-```  |
+```
 
-**type [cmd]**
+## `type [cmd]`
 
-与外部命令 which 类似，**type cmd** 识别 "cmd"。与 **which** 不同，**type** 是 Bash 内置命令。**type** 的有用 `-a` 选项识别 `*keywords*` 和 `*builtins*`，并且还能定位具有相同名称的系统命令。
+与外部命令`which`类似，`type cmd`识别 "cmd"。与`which`不同，`type`是 Bash 内置命令。`type`的有用`-a`选项识别`*keywords*`和`*builtins*`，并且还能定位具有相同名称的系统命令。
 
 ```sh
-bash$ **type ''**
+bash$ type '['
 [ is a shell builtin
-bash$ **type -a '['**
+bash$ type -a '['
 [ is a shell builtin
  [ is /usr/bin/[
 
-bash$ **type type**
+bash$ type type
 type is a shell builtin
-
 ```
 
-**type** 命令可以用于 [测试某个命令是否存在。
+`type`命令可以用于测试某个命令是否存在。
 
-**hash [cmds**]
+## `hash [cmds]`
 
-记录指定命令的 *路径* 名称——在 shell 的 *哈希表* [[8]](#FTN.AEN9591) 中——这样在后续调用这些命令时，shell 或脚本就不需要搜索 $PATH 了。当 **hash** 不带参数调用时，它简单地列出已哈希的命令。`-r` 选项重置哈希表。
+记录指定命令的 *路径* 名称——在 shell 的 *哈希表* 中——这样在后续调用这些命令时，shell 或脚本就不需要搜索`$PATH`了。当`hash`不带参数调用时，它简单地列出已哈希的命令。`-r`选项重置哈希表。
 
-**绑定**
+## `bind`
 
-**bind** 内置命令显示或修改 *readline* [[9]](#FTN.AEN9621) 键绑定。
+`bind`内置命令显示或修改 *readline* 键绑定。
 
-**帮助**
+## `help`
 
-获取 shell 内置命令的简短用法摘要。这是 whatis 的对应物，但用于内置命令。*帮助* 信息的显示在 Bash 的 版本 4 发布 中得到了急需的更新。
+获取 shell 内置命令的简短用法摘要。这是`whatis`的对应物，但用于内置命令。*帮助*信息的显示在 Bash 的版本 4 发布中得到了急需的更新。
 
 ```sh
-bash$ **help exit**
+bash$ help exit
 exit: exit [n]
     Exit the shell with a status of N.  If N is omitted, the exit status
     is that of the last command executed.
-
 ```
 
-### **笔记**
+### 笔记
 
 | [[1]](internal.html#AEN8607) | 正如内森·考尔特所指出的，“虽然进程分叉是一个低成本的操作，但在新分叉的子进程中执行新的程序会增加更多的开销。” |
 | --- | --- |
-| [[2]](internal.html#AEN8650) | 这里的一个例外是 time 命令，在官方 Bash 文档中被列为关键字（“保留词”）。 |
-| [[3]](internal.html#AEN9009) | 注意，*let* 不能用于设置 *字符串* 变量。 |
-| [[4]](internal.html#AEN9199) | 要 *导出* 信息，就是使其在更广泛的环境中可用。另请参阅 作用域。 |
-| [[5]](internal.html#AEN9289) | *选项* 是一个作为标志的参数，用于切换脚本的开启或关闭行为。与特定选项关联的参数表示该选项（标志）切换开启或关闭的行为。 |
-| [[6]](internal.html#AEN9393) | 技术上，**exit** 只会终止它正在运行的进程（或 shell），*不会* 终止 *父进程*。 |
-| [[7]](internal.html#AEN9425) | 除非使用 **exec** 来 重新分配文件描述符。 |
-| [[8]](internal.html#AEN9591) | *哈希* 是为存储在表中的数据创建查找键的方法。*数据项本身* 被使用多种简单的数学 *算法*（方法或配方）进行“打乱”以创建键。*哈希* 的一个优点是它速度快。一个缺点是可能出现 *冲突* —— 即单个键映射到多个数据项。有关哈希的示例，请参阅 示例 A-20 和 示例 A-21。 |
+
+| [[2]](internal.html#AEN8650) | 这里的一个例外是`time`命令，在官方 Bash 文档中被列为关键字（“保留词”）。 |
+| --- | --- |
+
+| [[3]](internal.html#AEN9009) | 注意，`let`不能用于设置*字符串*变量。 |
+| --- | --- |
+
+| [[4]](internal.html#AEN9199) | 要*导出*信息，就是使其在更广泛的环境中可用。另请参阅作用域。 |
+| --- | --- |
+
+| [[5]](internal.html#AEN9289) | *选项*是一个作为标志的参数，用于切换脚本的开启或关闭行为。与特定选项关联的参数表示该选项（标志）切换开启或关闭的行为。 |
+| --- | --- |
+
+| [[6]](internal.html#AEN9393) | 技术上，`exit`只会终止它正在运行的进程（或 shell），*不会*终止*父进程*。 |
+| --- | --- |
+
+| [[7]](internal.html#AEN9425) | 除非使用`exec`来重新分配文件描述符。 |
+| --- | --- |
+
+| [[8]](internal.html#AEN9591) | *哈希*是为存储在表中的数据创建查找键的方法。*数据项本身*被使用多种简单的数学*算法*（方法或配方）进行“打乱”以创建键。*哈希*的一个优点是它速度快。一个缺点是可能出现*冲突*——即单个键映射到多个数据项。有关哈希的示例，请参阅示例 A-20 和示例 A-21。 |
+| --- | --- |
+
 | [[9]](internal.html#AEN9621) | Bash 用于在交互式 shell 中读取输入的 *readline* 库。 |

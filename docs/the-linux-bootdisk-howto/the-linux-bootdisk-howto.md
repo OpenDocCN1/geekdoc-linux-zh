@@ -1,75 +1,50 @@
+
 # Linux 启动盘指南
-
-
-
-
-
-
-
-
-
 
 本文档描述了如何为 Linux 设计和构建启动/根文件软盘（boot/root diskettes）。这些磁盘可以作为救援盘，也可以用于测试新的系统组件。在尝试构建启动盘之前，你应该相当熟悉系统管理任务。如果你只是想要一个应急救援盘备备之需，请参阅附录 A.1。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 1. 前言
+## 1. 前言
 
 本文可能已经过。如果标题页上的日期超过六个月，请检查 Bootdisk-HOWTO 主页查看是否有更新的版本。
 
 虽然本文在文本格式下应该是清晰的，但在 Postscript、PDF 或 HTML 格式下效果会更好，因为使用了相应的排版规范。
 
-## 1.1. 版本说明
+### 1.1. 版本说明
 
 Graham Chapman 编写了 Bootdisk-HOWTO 并支持其直到 3.1 版本。Tom Fawcett 在内核 v2 引入期间开始共同编写，他是目前文档的维护者。Chapman 已离开 Linux 社区，目前行迹不明。
 
 此信息针对 Intel 平台上的 Linux。许多内容可能适用于其他处理器，但如果你有这方面的经验或信息，请联系我。
 
-## 1.2. 待办事项
+### 1.2. 待办事项
 
-- User-mode-linux（https://user-mode-linux.sourceforge.net）似乎是测试启动盘而无需不断重启的好方法。我还没有时间研究。如果有人一直使用自制启动盘，请告诉我。
-- 重新分析发行版启动并更新。找出 init-getty-login 序列可以如何简化，并将其移除。有些人说 init 可以直接链接到 /bin/sh；如果是这样且不产生任何限制，请修改说明以实现。这将消除对 getty、登录以及可能的 PAM 和 NSS 的需求。
+- User-mode-linux（`https://user-mode-linux.sourceforge.net`）似乎是测试启动盘而无需不断重启的好方法。我还没有时间研究。如果有人一直使用自制启动盘，请告诉我。
+
+- 重新分析发行版启动并更新。找出 `init-getty-login` 序列可以如何简化，并将其移除。有些人说 `init` 可以直接链接到 `/bin/sh`；如果是这样且不产生任何限制，请修改说明以实现。这将消除对 `getty`、登录以及可能的 PAM 和 NSS 的需求。
+
 - 遍历 2.4 内核源码，详细解释启动过程和内存盘加载过程的工作原理。（如果这样我能理解得更深入。）关于启动设备（例如闪存）的一些问题和限制，我还不清楚。
+
 - 将命令替换为 LILO 关键字。
 
-## 1.3. 反馈与致谢
+### 1.3. 反馈与致谢
 
 欢迎对本文内容提供任何反馈（无论好坏）。我已尽力确保这里的指令和信息准确可靠，但我并非无所不知，也不跟踪内核开发。如果你发现错误或遗漏，请告诉我。在写作时，请注明你所引用的文档版本号。请礼貌对待。
-
-
-
 
 我们感谢许多提供纠正和建议的人们。他们的贡献使得文档比我们独立完成的要好得多。
 
 请通过上面的电子邮件地址向作者发送意见和纠正。在提问之前，请先阅读第 7 。不要通过电子邮件发送磁盘镜像。
 
-## 1.4. 分发策略
+### 1.4. 分发策略
 
-
-
-# 2. 引言
+## 2. 引言
 
 Linux 启动盘在许多情况下都非常有用，例如测试新内核、从磁盘故障中恢复（从丢失引导扇区到磁盘头损坏等）、修复禁用的系统或升级关键系统文件（如 `libc.so`）。
 
 获取启动盘有几种方法：
 
 - 使用来自 Slackware 等发行版的启动盘。这至少让你能够启动系统。
+
 - 使用救援包设置作为救援盘使用的启动盘。
+
 - 学习每种磁盘运行所需的条件，然后构建自己的磁盘。
 
 有些人选择最后一种方案，以便自己动手。这样一来，如果某些地方坏了，他们就能弄清楚如何修复它。此外，这是学习 Linux 系统如何工作的极佳方法。
@@ -78,13 +53,13 @@ Linux 启动盘在许多情况下都非常有用，例如测试新内核、从�
 
 从头构建启动盘可能会很复杂。如果您没有读过 Linux FAQ 及其相关文档（如《Linux 安装 HOWTO》和《Linux 安装指南》），您就不应该尝试构建启动软盘。如果您只需要一个用于紧急情况的可用启动盘，下载一个预制的盘要简单得多。请参见下文附录 A.1 了解如何找到这些磁盘。
 
-# 3. 启动盘与启动过程
+## 3. 启动盘与启动过程
 
 启动盘基本上是软盘上的微型、自包含的 Linux 系统。它必须执行许多与完整尺寸 Linux 系统执行的相同功能。在尝试构建一个之前，您应该了解基本的 Linux 启动过程。在这里我们介绍基础知识，这些知识对于理解文档的其他部分已经足够。省略了许多细节和替代方案。
 
-## 3.1. 启动过程
+### 3.1. 启动过程
 
-所有 PC 系统通过执行 ROM（具体为 BIOS）中的代码启动启动，以加载启动驱动器 0 柱面 0 扇区。启动驱动器通常是软盘驱动器（在 DOS 中指定为 A:，在 Linux 中指定为 /dev/fd0）。BIOS 随后尝试执行该扇区。在大多数启动盘上，0 柱面 0 扇区包含其他内容：
+所有 PC 系统通过执行 ROM（具体为 BIOS）中的代码启动启动，以加载启动驱动器 0 柱面 0 扇区。启动驱动器通常是软盘驱动器（在 DOS 中指定为 `A:`，在 Linux 中指定为 `/dev/fd0`）。BIOS 随后尝试执行该扇区。在大多数启动盘上，0 柱面 0 扇区包含其他内容：
 
 - 来自如 LILO 等引导加载器的代码，它定位内核并执行它以正式启动系统；
 - 操作系统内核（如 Linux）的开头。
@@ -105,75 +80,79 @@ VFS: Mounted root (ext2 filesystem) readonly.
 
 此脚本调用各种其他服务进行模块化初始化。例如，在常见的 SysInit 中，`/etc/rc` 目录包含一个复杂的子目录结构，其文件指定了如何启用和关闭系统服务。然而，在启动盘上，`sysinit` 脚本通常非常简单。
 
-当 `sysinit` 脚本返回给 `init` 时，`init` 进入 `inittab` 中 `initdefault` 关键字指定的默认运行级别。运行级别通常指定如 `getty` 的程序，它负责处理通过控制台和tty 的通信。是 `getty` 程序打印了熟悉的 `login:` 提示。`getty` 程序随后调用 `login` 程序来处理验证并设置用户会话。
+当 `sysinit` 脚本返回给 `init` 时，`init` 进入 `inittab` 中 `initdefault` 关键字指定的默认运行级别。运行级别通常指定如 `getty` 的程序，它负责处理通过控制台和 tty 的通信。是 `getty` 程序打印了熟悉的 `login:` 提示。`getty` 程序随后调用 `login` 程序来处理验证并设置用户会话。
 
-## 3.2. 磁盘类型
+### 3.2. 磁盘类型
 
 回顾基础启动过程后，我们现在可以定义涉及的各种磁盘。我们将磁盘分为四类。此处及整个文档中的讨论除非另有说明，使用的术语 `disk` 指软盘，尽管大部分讨论也同样适用于硬盘。
 
 **boot（启动盘）**
+
 - 包含可以启动的内核的磁盘。该磁盘可用于启动内核，内核可能会在另一个磁盘上加载根文件系统。启动盘上的内核通常必须知道去哪里寻找其根文件系统。
 - 启动盘通常从另一块软盘加载根文件系统，但启动盘也可以被设置为硬盘的根文件系统。这通常在测试新内核时完成（事实上，`make disk` 会从内核源码自动创建这样一个启动盘）。
 
 **root（根磁盘）**
+
 - 带有运行 Linux 系统所需文件的文件系统的磁盘。此类磁盘不一定包含内核或引导加载器。
 - 一旦内核启动，根磁盘就可以独立于任何其他磁盘来运行系统。通常根磁盘会自动复制到 ramdisk 中。这使得根磁盘的访问快得多，并为工具磁盘释放出驱动器空间。
 
 **boot/root**
+
 - 同时包含内核和根文件系统的磁盘。换句话说，它包含了在没有硬盘的情况下启动和运行 Linux 系统所需的所有内容。这种磁盘的优点是它紧凑，所有所需内容都在单个磁盘上。然而，随着所有内容不断增大，将所有内容都放入单个软盘中变得越来越困难，即使使用了压缩。
 
 **utility（工具磁盘）**
+
 - 包含文件系统的磁盘，但不打算挂载为根文件系统。它是一个额外的数据磁盘。您可以使用此类磁盘来携带由于根磁盘空间不足而无法容纳的额外工具。
 
-总来说，当我们谈论`building a bootdisk` 时，意味着同时创建启动（内核）和根（文件）部分。它们可以合在一起（单个 boot/root 磁盘），也可以分开（启动+根磁盘）。对于救援软盘，最灵活的方法可能是使用分开的启动和根软盘，以及一个或多个工具磁盘来处理溢出部分。
+总来说，当我们谈论 `building a bootdisk` 时，意味着同时创建启动（内核）和根（文件）部分。它们可以合在一起（单个 boot/root 磁盘），也可以分开（启动+根磁盘）。对于救援软盘，最灵活的方法可能是使用分开的启动和根软盘，以及一个或多个工具磁盘来处理溢出部分。
 
-
-
-
-# 4. 构建根文件系统
+## 4. 构建根文件系统
 
 创建根文件系统涉及选择系统运行所需的文件。在本节中，我们将描述如何构建压缩根文件系统。另一种不常用的选项是在直接挂载为根的磁盘上构建未压缩的文件系统；这种替代方案在第 9.1 节中描述。
 
-## 4.1. 概述
+### 4.1. 概述
 
 根文件系统必须包含支持完整 Linux 系统所需的所有。为了实现这一点，磁盘必须包含 Linux 系统的最低要求：
 
 - 基础文件系统结构。
-- 最小目录集：/dev/.proc, /bin, /etc, /lib, /usr, /tmp。
-- 基础工具集：sh, ls, cp, mv 等。
-- 最小配置集：rc, initab, fstab 等。
-- 设备：/dev/hd*, /dev/tty*, /dev/fd0 等。
+- 最小目录集：`/dev/`、`.proc`、`/bin`、`/etc`、`/lib`、`/usr`、`/tmp`。
+- 基础工具集：`sh`、`ls`、`cp`、`mv` 等。
+- 最小配置集：`rc`、`initab`、`fstab` 等。
+- 设备：`/dev/hd*`、`/dev/tty*`、`/dev/fd0` 等。
 - 提供工具程序所用基础运行的运行时库。
 
 当然，任何系统只有在你可以在上面运行程序时才是有用的，而根磁盘只有在你可以执行诸如以下操作时才变得变得用：
 
 - 在另一个驱动器上检查系统，以检查硬盘上的根文件系统，你需要能够从另一个设备启动 Linux，就像你使用根磁盘系统那样。然后你可以在原始根驱动器未挂载时对其运行 `fsck`。
-- 使用 cpio、tar、gzip 和 fate 等归档和压缩工具从备份中恢复根驱动器的全部或部分内容。
+- 使用 `cpio`、`tar`、`gzip` 和 `fate` 等归档和压缩工具从备份中恢复根驱动器的全部或部分内容。
 
 我们描述如何构建压缩文件系统，是因为它在磁盘上是压缩的，在启动后，它会被解压到内存中。通过压缩文件系统，你可以在磁盘上放置许多文件（约六兆字节）。因为文件系统比磁盘大得多，因此无法在磁盘上构建。我们在其他地方构建它，对其进行压缩，然后将其复制到磁盘上。
 
-## 4.2. 创建文件系统
+### 4.2. 创建文件系统
 
 为了构建这样的根文件系统，你需要一个足够大的能够存放所有备份文件的空闲设备。有几种选择：
 
-- 使用 ramdisk (DEVICE = /dev/ram0)。在这种情况下，内存被模拟磁盘驱动器。ramdisk 必须足够大以容纳适当大小的文件系统。如果你使用 LILO，配置文件 (/etc/lilo.conf) 中类似 `RAMDISK = nnn` 的行决定了可以分配给 ramdisk 的最大内存。默认值为 4096K，应该足够了。你可能不会尝试在内存小于 8MB 的机器上使用此类 ramdisk。检查确保你有类似 /dev/ram0、/dev/ram 或 /dev/ramdisk 的设备。如果没有，使用 `mknode` 创建 /dev/ram0（主设备数 1，次设备 0）。
+- 使用 ramdisk（`DEVICE = /dev/ram0`）。在这种情况下，内存被模拟磁盘驱动器。ramdisk 必须足够大以容纳适当大小的文件系统。如果你使用 LILO，配置文件（`/etc/lilo.conf`）中类似 `RAMDISK = nnn` 的行决定了可以分配给 ramdisk 的最大内存。默认值为 4096K，应该足够了。你可能不会尝试在内存小于 8MB 的机器上使用此类 ramdisk。检查确保你有类似 `/dev/ram0`、`/dev/ram` 或 `/dev/ramdisk` 的设备。如果没有，使用 `mknode` 创建 `/dev/ram0`（主设备数 1，次设备 0）。
+
 - 如果你有一个足够大的未使用磁盘分区（几兆字节），这是可以接受的。
-- 使用回环设备 (loopback device)，它允许磁盘文件被视为设备。使用回环设备，你可以在硬盘上创建一个三兆字节的文件并在其上构建文件系统。
 
-输入 `man losetup` 获取关于使用回环设备的说明。如果你没有 `losetup`，可以从 `util-linux` 包中连同兼容版本的 `mount` 和 `unmount` 一起获取，目录地址为 http://ftp.win.tue.nl/pub/linux/utils-linux/ 
+- 使用回环设备（loopback device），它允许磁盘文件被视为设备。使用回环设备，你可以在硬盘上创建一个三兆字节的文件并在其上构建文件系统。
 
-如果你的系统上没有回环设备 (/dev/loop0, /dev/loop1 等)，你将不得不使用 `mknod /dev/loop0 b 7 0` 创建一个。一旦你安装了这些特殊的挂载和卸载二进制执行文件，在具有足够容量的硬盘上创建一个临时文件（例如 /tmp/fsfile）。你可以使用以下命令：
+输入 `man losetup` 获取关于使用回环设备的说明。如果你没有 `losetup`，可以从 `util-linux` 包中连同兼容版本的 `mount` 和 `unmount` 一起获取，目录地址为 `http://ftp.win.tue.nl/pub/linux/utils-linux/`。
 
-```
+如果你的系统上没有回环设备（`/dev/loop0`、`/dev/loop1` 等），你将不得不使用 `mknod /dev/loop0 b 7 0` 创建一个。一旦你安装了这些特殊的挂载和卸载二进制执行文件，在具有足够容量的硬盘上创建一个临时文件（例如 `/tmp/fsfile`）。你可以使用以下命令：
+
+```bash
 dd if=/dev/zero of=/tmp/fsfile bs=1k count=
 ```
+
 来创建一个 nn 块文件。
 
 将下方的 `DEVICE` 替换为实际的文件名。当你发布 `mount` 命令时，必须包含 `-o loop` 选项来挂载回环设备。
 
 在选择这些选项之一后，使用以下命令准备 `DEVICE`：
 
-```
+```bash
 dd if=/dev/zero of=DEVICE bs=1k count=4096
 ```
 
@@ -181,11 +160,11 @@ dd if=/dev/zero of=DEVICE bs=1k count=4096
 
 > 清零设备至关重要，因为文件系统将进行压缩，所以所有未分配部分都应该用零填充以达到最大压缩率。每你在文件系统上移动或删除文件时，请记住此点。文件系统会释放数据块，但不会再次将它们清零。如果你进行了大量的删除和复制，你的压缩文件系统最终可能会变得比需要的大得多。
 
-接下来是文件系统。Linux 内核识别两种根磁盘文件类型，以便自动复制到 ramdisk。两者都是 ext2，其中首选 ext2。如果你使用 ext2，发现使用 `-N` 选项来指定比默认更多的 inode 很有用：建议 `-N 2000` 以防你耗尽 inode。或者，你可以通过删除不必要的 /dev 文件来节省 inode。`mke2fs` 默认在 1.44Mb 磁盘上创建 360 个 inode。这对于你的内核根磁盘来说是充裕的，但如果你包含了 /dev 中的所有设备，你将很容易超过 360。使用压缩根允许更大的文件系统，并且默认情况下有更多的 inode，但你可能仍然需要减少文件数量或增加 inode 数量。
+接下来是文件系统。Linux 内核识别两种根磁盘文件类型，以便自动复制到 ramdisk。两者都是 ext2，其中首选 ext2。如果你使用 ext2，发现使用 `-N` 选项来指定比默认更多的 inode 很有用：建议 `-N 2000` 以防你耗尽 inode。或者，你可以通过删除不必要的 `/dev` 文件来节省 inode。`mke2fs` 默认在 1.44Mb 磁盘上创建 360 个 inode。这对于你的内核根磁盘来说是充裕的，但如果你包含了 `/dev` 中的所有设备，你将很容易超过 360。使用压缩根允许更大的文件系统，并且默认情况下有更多的 inode，但你可能仍然需要减少文件数量或增加 inode 数量。
 
 所以你将使用的命令类似于：
 
-```
+```bash
 mke2fs -m 0 -N 2000 DEVICE
 ```
 
@@ -195,63 +174,59 @@ mke2fs -m 0 -N 2000 DEVICE
 
 接下来，挂载设备：
 
-```
+```bash
 mount -t ext2 DEVICE /mnt
 ```
 
-（如果 /mnt 不存在，你必须创建该目录。）在剩余章节中，所有目标目录名称均假定相对于 /mnt。
+（如果 `/mnt` 不存在，你必须创建该目录。）在剩余章节中，所有目标目录名称均假定相对于 `/mnt`。
 
-## 4.3. 填充文件系统
+### 4.3. 填充文件系统
 
 这是一组合理的根文件系统目录设置 [1]：
 
-- /dev -- 设备文件，执行 I/O 所需
-- /proc -- proc 系统所需的目录存根
-- /etc -- 系统配置文件
-- /sbin -- 关键二进制文件
-- /bin -- 视为系统组成的基础二进制文件
-- /lib -- 提供运行支持的共享库
-- /mnt -- 用于在其他磁盘维护的挂载点
-- /usr -- 额外的工具和应用程序
+- `/dev` -- 设备文件，执行 I/O 所需
+- `/proc` -- proc 系统所需的目录存根
+- `/etc` -- 系统配置文件
+- `/sbin` -- 关键二进制文件
+- `/bin` -- 视为系统组成的基础二进制文件
+- `/lib` -- 提供运行支持的共享库
+- `/mnt` -- 用于在其他磁盘维护的挂载点
+- `/usr` -- 额外的工具和应用程序
 
-这三个目录在根文件系统中是空的，因此它们只需要用 `mkdir` 创建。/proc 目录在 proc 挂载之前基本上是一个占位符。/mnt 和 /usr 目录仅是启动/根系统运行后使用的挂载点。因此，这些目录也只需要创建。
+这三个目录在根文件系统中是空的，因此它们只需要用 `mkdir` 创建。`/proc` 目录在 proc 挂载之前基本上是一个占位符。`/mnt` 和 `/usr` 目录仅是启动/根系统运行后使用的挂载点。因此，这些目录也只需要创建。
 
-其余四个目录将在后续章节中描述：
+其余四个目录将在后续章节中描述。
 
-### 4.3.1. /dev
+#### 4.3.1. `/dev`
 
-对于任何 Linux 系统，一个包含系统使用的所有设备文件的 /dev 目录是强制性的。该目录本身是一个普通目录，可以使用 `mkdir` 以普通方式创建。然而，设备文件必须以特殊方式创建，即使用 `mknod` 命令。
+对于任何 Linux 系统，一个包含系统使用的所有设备文件的 `/dev` 目录是强制性的。该目录本身是一个普通目录，可以使用 `mkdir` 以普通方式创建。然而，设备文件必须以特殊方式创建，即使用 `mknod` 命令。
 
-不过有一个快捷方法，即从你硬盘的 /dev 目录拷贝设备文件。唯一的要求是使用 `-R` 选项复制设备特殊文件。这将复制目录而不复制文件内容。务必使用大写的 `R`。例如：
+不过有一个快捷方法，即从你硬盘的 `/dev` 目录拷贝设备文件。唯一的要求是使用 `-R` 选项复制设备特殊文件。这将复制目录而不复制文件内容。务必使用大写的 `R`。例如：
 
-```
+```bash
 cp -dPR /dev/[0-9]* /mnt
 cp -dPR /dev/tty[0-6] /mnt
 ```
 
-假设设备已挂载到 /mnt。`-d` 确保链接作为链接复制，而不是目标文件，从而保留所有权。
+假设设备已挂载到 `/mnt`。`-d` 确保链接作为链接复制，而不是目标文件，从而保留所有权。
 
-### 4.3.2. /etc
+#### 4.3.2. `/etc`
 
-/etc 目录包含配置文件。它包含的内容取决于你打算运行的程序。在大多数系统中，这些文件可以分为三类：
+`/etc` 目录包含配置文件。它包含的内容取决于你打算运行的程序。在大多数系统中，这些文件可以分为三类：
 
-1. 始终需要的，例如 rc、fstab、passwd。
+1. 始终需要的，例如 `rc`、`fstab`、`passwd`。
 2. 可能需要的，但谁也不太确定。
 3. 溜入的垃圾文件（Junk）。
 
 通常可以通过命令识别出不是必必需的文件：
 
-```
+```bash
 ls -ltru
 ```
 
 这将按最后访问时间的倒序列出文件，因此如果任何文件未被访问，它们可以从根磁盘中省略。
 
-
-
-
-
-# Linux 启动盘指南 (HOWTO)
+# Linux 启动盘指南（HOWTO）
 
 请确保 `passwd` 文件中包含 `root` 用户。如果你打算让其他用户登录，请确保他们的家目录和 shell 存在。
 
@@ -261,18 +236,22 @@ ls -ltru
 
 在此基础上，我实际上需要配置两个文件，而它们的内容小得惊人。
 
--   *rc* 应该包含：
+- `rc` 应该包含：
+
 ```bash
 #!/bin/sh
 /bin/mount -av
 /bin/hostname Kangaroo
 ```
+
 确保它是安全的，确保顶部有一行 `"#1"`，并确保任何绝对路径都是正确的。你不需要运行 `hostname`，只是这样做看起来更好看。
--   *fstab* 应该包含：
-```
+
+- `fstab` 应该包含：
+
+```text
 /dev/ram0      ext2 defaults
 /dev/td0       ext2 defaults
-/proc           proc defaults
+/proc          proc defaults
 ```
 
 你可以从现有的 `fstab` 复制条目，但不应该自动挂载你的任何硬盘分区；对这些分区使用 `noauto` 关键字。在使用启动盘时，你的硬盘可能已经损坏或损坏。
@@ -280,12 +259,15 @@ ls -ltru
 你应该修改你的 `initab`，使 `sysinit` 行指向 `rc` 或任何将使用的基础脚本。此外，如果你想确保串口上的用户可以登录，请注释掉所有结尾带有 `ttyS0tty` 设备的 `getty` 条目。保留 `tty` 端口，以便你可以在控制台进行登录。
 
 一个极简的 `initab` 如下所示：
-```
+
+```text
 id2:initdefault:
 si:sysinit:/etc/rc
 1:2345:respawn:/sbin/getty 9600 tty1
 2:23:respawn:/sbin/getty 9600 tty2
 ```
+
+
 
 `initab` 定义了在各种状态下运行的内容；如果 `init` 找不到程序，启动盘将挂起，可能无法进入多用户模式。请仔细检查 `initab` 中提到的文件；你可能甚至得不到错误消息。
 
@@ -295,25 +277,21 @@ si:sysinit:/etc/rc
 
 大多数系统现在使用 `/etc/rc.d/` 目录，其中包含用于运行级别（run levels）的 shell 脚本。
 
-## 4.3.1 /etc
+## 4.3.1 `/etc`
 
 `termcap`（终端数据库）通常有几百 KB。你启动盘/根目录软磁盘上的 `termcap` 版本应该经过精简，只包含你所使用的终端，这通常只是 `linux` 或 `linux-console` 条目。
 
-## 4.3.2 /bin
+## 4.3.2 `/bin`
 
 `/bin` 目录是存放基本命令的地方。
 
-## 4.3.3 /lib
+## 4.3.3 `/lib`
 
 `/lib` 目录包含共享库。
 
-
-
-
-
 # Linux 启动盘 HOWTO
 
-## 4.4.2. NSS (名称服务切换器)
+## 4.4.2. NSS（名称服务切换器）
 
 如果你使用 glibc，则必须为名称服务做好准备，否则你将无法登录。`/etc/nsswitch.conf` 文件控制各种服务的数据库查找。如果你不计划从网络访问服务（例如 DNS 或 NIS 查询），你只需要准备一个所示的简单 `nsswitch.conf` 文件：
 
@@ -391,15 +369,15 @@ diff if=DEVICE bs=1k gzip -v9 > rootfs.gz
 
 此时，你有了一个内核和一个压缩的根文件系统。如果你正在制作启动/根磁盘，请检查它们的大小，以确保它们都能放入单块磁盘中。如果你正在制作磁盘启动+根组合集，请检查根文件系统以确保它能放入单张软盘。
 
-你应该决定是否使用 LILO 来读取启动盘内核。另一种方案是将内核直接拷贝到磁盘且不使用 LILO。使用 LILO 的优势是它允许向内核提供一些参数，这些参数对于初始化你的硬件可能是必要的（检查你系统上的 `/etc/lilo.conf` 文件。如果它存在且有一行 `append=...`，你可能需要这个功能）。使用 LILO 的劣势是构建启动盘更加复杂且占用稍多空间。你将需要建立一个小文件系统（我们称为内核文件系统），在其中传输内核以及 LILO 需要的其他几个东西。
+你应该决定是否使用 `LILO` 来读取启动盘内核。另一种方案是将内核直接拷贝到磁盘且不使用 `LILO`。使用 `LILO` 的优势是它允许向内核提供一些参数，这些参数对于初始化你的硬件可能是必要的（检查你系统上的 `/etc/lilo.conf` 文件。如果它存在且有一行 `append=...`，你可能需要这个功能）。使用 `LILO` 的劣势是构建启动盘更加复杂且占用稍多空间。你将需要建立一个小文件系统（我们称为内核文件系统），在其中传输内核以及 `LILO` 需要的其他几个东西。
 
-如果你打算使用 LILO，请继续阅读；如果你打算直接传输内核，请跳到第 6.2 节。
+如果你打算使用 `LILO`，请继续阅读；如果你打算直接传输内核，请跳到第 6.2 节。
 
-## 6.1. 使用 LILO 传输内核
+## 6.1. 使用 `LILO` 传输内核
 
-首先，确保你有最新版本的 LILO。
+首先，确保你有最新版本的 `LILO`。
 
-你必须为 LILO 创建一个小型配置文件。它看起来像这样：
+你必须为 `LILO` 创建一个小型配置文件。它看起来像这样：
 
 ```
 boot      =/dev/fd0
@@ -408,39 +386,35 @@ map       /map
 root      /
 ```
 
-行的顺序并不重要，但每行都必须存在。`boot` 行指定引导程序所在的设备。`image` 行指定内核的位置。`map` 行指定 LILO 表的位置。`root` 行指定根分区。
+行的顺序并不重要，但每行都必须存在。`boot` 行指定引导程序所在的设备。`image` 行指定内核的位置。`map` 行指定 `LILO` 表的位置。`root` 行指定根分区。
 
-创建该文件后，你必须运行 LILO 将其安装到启动盘：
+创建该文件后，你必须运行 `LILO` 将其安装到启动盘：
 
 ```
 lilo -c /dev/fd0
 ```
 
-这将在软盘的第一扇区创建 LILO 表。该表看起来类似于所示：
+这将在软盘的第一扇区创建 `LILO` 表。该表看起来类似于所示：
 
 | total | | | |
 |---|---|---|---|
 | 3 | | | |
-| 1-rw---- | 1 root | root | 176 Jan 10 22 | lilo.conf |
-| 1 drwxr-xx | 2 root | root | 1024 Jan 10 23 | boot/ |
-| 1 drwxr-xx | 2 root | root | 1024 Jan 10 23 | dev/ |
-| 3-rw---- | 1 root | root | 36270 Jan 10 23 | vmlinux |
+| 1-rw---- | 1 root | root | 176 Jan 10 22 |
+| 1 drwxr-xx | 2 root | root | 1024 Jan 10 23 |
+| 1 drwxr-xx | 2 root | root | 1024 Jan 10 23 |
+| 3-rw---- | 1 root | root | 36270 Jan 10 23 |
 | boot: | | | |
 | total 8 | | | |
-| 4-rw---- | 1 root | root | 3708 Jan 10 22 | boot.b |
-| 4-rw---- | 1 root | root | 3584 Jan 10 23 | map |
+| 4-rw---- | 1 root | root | 3708 Jan 10 22 |
+| 4-rw---- | 1 root | root | 3584 Jan 10 23 |
 | dev: | | | |
 | total 0 | | | |
-| 0 br-r---- | 1 root | root | 2, | 0 Jan 10 22 | fd0 |
-| 0 cr-r---- | 1 root | root | 1, | 3 Jan 10 22 | null |
+| 0 br-r---- | 1 root | root | 2, |
+| 0 cr-r---- | 1 root | root | 1, |
 
 此表只是一个示例。数字和日期将根据你的系统而变化。
 
-一旦运行了 LILO，你就可以从软盘启动。LILO 将读取内核和配置文件指定的参数。
-
-
-
-
+一旦运行了 `LILO`，你就可以从软盘启动。`LILO` 将读取内核和配置文件指定的参数。
 
 ```
 rdev /dev/fd0 /dev/fd0
@@ -449,7 +423,7 @@ rdev -R /dev/fd0 0
 
 注意在第二个 `rdev` 命令中使用大写的 `-R`。
 
-## 6.3. 设置内存磁盘字 (ramdisk word)
+## 6.3. 设置内存磁盘字（ramdisk word）
 
 内核镜像内部包含一个内存磁盘字，它指定了根文件系统所在的位置以及其他选项。可以通过 `rdev` 命令访问并设置它，其内容的解释如下：
 
@@ -460,35 +434,39 @@ rdev -R /dev/fd0 0
 | 14 | 表示要加载内存磁盘的标志 |
 | 15 | 表示在加载根文件系统之前提示的标志 |
 
-如果位 15 被设置为1，在启动时你将会被提示在驱动器中加载新的软盘。这对于双盘启动集是必要的。
+如果位 15 被设置为 1，在启动时你将会被提示在驱动器中加载新的软盘。这对于双盘启动集是必要的。
 
 这里有两种情况，取决于你构建的是单块启动/根磁盘片，还是双盘 `boot-root` 磁盘集。
 
-- 1. 如果你构建的是单个块，压缩后的文件系统将放置在内核之后（即 `KERNEL_BLOCKS`）。位 14将被设置为1，位 15将被设置为15。例如，如果你正在构建单个磁盘，且根文件系统将从块 253（十进制）开始。内存磁盘字应为 253（十进制），且位 14 设置为1，位 15 设置为0。要计算该值，你可以简单地相加十进制值：253 + (2*14) = 253+16384 =16637。如果你不知道这个数字从哪里来，可以将其输入科学计算器并转换为二进制。
-- 2. 如果你构建的是双盘集，根文件系统将从第二个磁盘的零号块开始，因此偏移量为零。在这种情况下，位 14将被设置为1，位 15将被设置为1。此时的值将为 2^14+ 49152。
+1. 如果你构建的是单个块，压缩后的文件系统将放置在内核之后（即 `KERNEL_BLOCKS`）。位 14 将被设置为 1，位 15 将被设置为 15。例如，如果你正在构建单个磁盘，且根文件系统将从块 253（十进制）开始。内存磁盘字应为 253（十进制），且位 14 设置为 1，位 15 设置为 0。要计算该值，你可以简单地相加十进制值：`253 + (2*14) = 253+16384 =16637`。如果你不知道这个数字从哪里来，可以将其输入科学计算器并转换为二进制。
 
-在计算出内存磁盘字的值后，使用 `rdev -R` 设置它。请使用十进制值。如果你使用了 LILO，此处的参数应该是挂载的内核路径，例如 `/mnt/vmlinuz`；如果你用 `dd` 拷贝的内核，请使用软盘设备名称（例如 `/dev/fd0`）。
+2. 如果你构建的是双盘集，根文件系统将从第二个磁盘的零号块开始，因此偏移量为零。在这种情况下，位 14 将被设置为 1，位 15 将被设置为 1。此时的值将为 `2^14+ 49152`。
+
+在计算出内存磁盘字的值后，使用 `rdev -R` 设置它。请使用十进制值。如果你使用了 `LILO`，此处的参数应该是挂载的内核路径，例如 `/mnt/vmlinuz`；如果你用 `dd` 拷贝的内核，请使用软盘设备名称（例如 `/dev/fd0`）。
 
 ```
 rdev -R KERNEL_OFFSET_FLOPPY_DRIVE VALUE
 ```
 
-如果你使用了 LILO，解锁磁盘片
+如果你使用了 `LILO`，解锁磁盘片。
 
-> 不要相信 rdev/size 手页关于内存磁盘大小的描述。手册已经过时。从内核 2.0 版本左右，内存磁盘字不再决定内存磁盘的大小；该字根据第 6.3 节开头的表格进行解释。详细的解释请参见文档文件 ramdisk.txt 或 http://www.linuxhq.com/kernel/v2.4/doc/ramdisk.txt.html。
+> 不要相信 `rdev`/`size` 手页关于内存磁盘大小的描述。手册已经过时。从内核 2.0 版本左右，内存磁盘字不再决定内存磁盘的大小；该字根据第 6.3 节开头的表格进行解释。详细的解释请参见文档文件 `ramdisk.txt` 或 `http://www.linuxhq.com/kernel/v2.4/doc/ramdisk.txt.html`。
 
 ## 6.4. 传输根文件系统
 
 最后一步是传输根文件系统。
 
 - 如果根文件系统将存放在与内核相同的磁盘上，请使用 `dd` 的 `seek` 选项进行传输，该选项指定了跳过多少块：
-```
-dd if=rootfs.gz of=/dev/fd0 bs=1k seek=KERNEL_BLOCKS
-```
+
+  ```
+  dd if=rootfs.gz of=/dev/fd0 bs=1k seek=KERNEL_BLOCKS
+  ```
+
 - 如果根文件系统将存放在第二个磁盘上，移除第一块磁盘片，将第二个磁盘片放入驱动器，然后将其传输到根文件系统：
-```
-dd if=rootfs.gz of=/dev/fd0 bs=1k
-```
+
+  ```
+  dd if=rootfs.gz of=/dev/fd0 bs=1k
+  ```
 
 恭喜，你完成了！
 
@@ -500,25 +478,25 @@ dd if=rootfs.gz of=/dev/fd0 bs=1k
 
 - 你可能会看到这样的消息：
 
-```
-Kernel panic: VFS: Unable to mount root fs on XX:YY
-```
+  ```
+  Kernel panic: VFS: Unable to mount root fs on XX:YY
+  ```
 
-这是一个常见问题，只有几种情况。首先，根据 `/usr/src/linux/Documentation/devices.txt` 中的设备代码列表检查设备 XX:YY。如果不正确，你可能没有使用 `dev-R`，或者你在错误的镜像上进行了操作。如果设备代码正确，检查编译到内核中的设备驱动程序。确保它内置了软磁盘、内存磁盘和 ext2 文件系统。
+  这是一个常见问题，只有几种情况。首先，根据 `/usr/src/linux/Documentation/devices.txt` 中的设备代码列表检查设备 `XX:YY`。如果不正确，你可能没有使用 `dev-R`，或者你在错误的镜像上进行了操作。如果设备代码正确，检查编译到内核中的设备驱动程序。确保它内置了软磁盘、内存磁盘和 ext2 文件系统。
 
 - 如果你看到许多类似错误：
 
-```
-end_request: I/O error, dev 01: (ramdisk, sector NNN)
-```
+  ```
+  end_request: I/O error, dev 01: (ramdisk, sector NNN)
+  ```
 
-这是来自内存磁盘的 I/O 错误，通常是因为内核尝试写入设备末之外。内存磁盘太小，无法容纳根文件系统。检查启动初始化消息中是否有如下行：
+  这是来自内存磁盘的 I/O 错误，通常是因为内核尝试写入设备末之外。内存磁盘太小，无法容纳根文件系统。检查启动初始化消息中是否有如下行：
 
-```
-Ramdisk driver initialized : 16 ramdisk of 4096K size
-```
+  ```
+  Ramdisk driver initialized : 16 ramdisk of 4096K size
+  ```
 
-再次检查此根文件系统的解压缩后大小。如果内存磁盘不够大，请增大它们。
+  再次检查此根文件系统的解压缩后大小。如果内存磁盘不够大，请增大它们。
 
 - 检查根目录确实包含了你认为包含的目录。很容易拷贝错误的层级，导致你在根磁盘片上得到的是类似 `/root/bin` 而不是 `/bin` 的结构。
 
@@ -537,42 +515,40 @@ Ramdisk driver initialized : 16 ramdisk of 4096K size
 3. 确保包含了正确的 ELF 加载器。
 4. 检查 `initstab` 中对 `getty` 的调用。
 5. 确保 `/etc/initab` 有系统初始化，且它必须存在。
-6. 确保你安装了能够运行所有 rc 脚本的 shell 程序（例如 **bash** 或 **ash**）。
+6. 确保你安装了能够运行所有 rc 脚本的 shell 程序（例如 `bash` 或 `ash`）。
 7. 如果你在救援磁盘上有一个 `/etc/ld.so.cache` 文件，请重新制作它。
-
-
-
-
 
 # 8. 缩小根文件系统大小
 
 构建启动盘的主要问题之一是将所有内容都放入一张（甚至两张）软盘中。即使对文件进行压缩，这仍然非常困难，因为 Linux 系统组件在不断增长。这里是一些用于使所有内容恰容的常用技术。
 
-## 8.1 增加软盘密度
+## 8.1. 增加软盘密度
 
-默认情况下，软盘格式化为 1440K，但支持更高密度的格式。能否从高密度磁盘启动主要取决于你的 BIOS。**fdformat** 可以将磁盘格式化为以下大小：1600K、1680K、1722K、1743K、1760K、1840K 和 1920K。请参阅 **fdformat** 手页和 `/usr/src/linux/Documentation/devices.txt`。
+默认情况下，软盘格式化为 1440K，但支持更高密度的格式。能否从高密度磁盘启动主要取决于你的 BIOS。`fdformat` 可以将磁盘格式化为以下大小：1600K、1680K、1722K、1743K、1760K、1840K 和 1920K。请参阅 `fdformat` 手页和 `/usr/src/linux/Documentation/devices.txt`。
 
 但你的机器支持什么种密度呢？以下是来自 idutils 作者 Alain Knaff 的一些（经过编辑的）回答。
 
 > 这是一个 BIOS 读取器的问题，而不是磁盘的物理格式问题。如果 BIOS 认为任何大于 18 的扇区都是坏的，那么我们也无为力。相反，与其拆解 BIOS，不如通过试错来发现。然而，如果 BIOS 支持 ED 磁盘（额外密度：每道 36 个扇区，2.88MB），那么也有可能支持 1722K 磁盘。
+>
+> 每道 21 个扇区的超格式化磁盘可能无法启动；这些磁盘使用了非标准的扇区大小（例如每个扇区为 1024 字节而不是 512 字节），很可能无法启动。编写一个特殊的引导扇区程序来绕过这个问题。如果我没记错，DOS 2m 工具就有这样一个怪物，OS/2 的 XDF 工具也是如此。
+>
+> 某些 BIOS 会人为地声称任何大于 18 的扇区号必须是无效（be-in）。这些磁盘将无法启动。最好的测试方法是将 DOS 或 linux 磁盘作为 1722K 进行测试并使其启动。如果使用 `LILO`，请使用 `linear` 选项（否则 `LILO` 将假设磁盘是每道 18 个扇区，即使 BIOS 支持，磁盘也将无法启动）。
 
-每道 21 个扇区的超格式化磁盘可能无法启动；这些磁盘使用了非标准的扇区大小（例如每个扇区为 1024 字节而不是 512 字节），很可能无法启动。编写一个特殊的引导扇区程序来绕过这个问题。如果我没记错，DOS 2m 工具就有这样一个怪物，OS/2 的 XDF 工具也是如此。
+## 8.2. 使用 `BusyBox` 替换常用工具
 
-某些 BIOS 会人为地声称任何大于 18 的扇区号必须是无效（be-in）。这些磁盘将无法启动。最好的测试方法是将 DOS 或 linux 磁盘作为 1722K 进行测试并使其启动。如果使用 LILO，请使用 `linear` 选项（否则 LILO 将假设磁盘是每道 18 个扇区，即使 BIOS 支持，磁盘也将无法启动）。
 
-## 8.2 使用 BusyBox 替换常用工具
 
-根文件系统空间被 GNU 系统工具消耗，如 **cat**、**chmod**、**cp**、**dd**、**etc**。**BusyBox** 项目旨在为这些常用系统工具提供最小化替代方案。BusyBox 使用一个名为 `/bin/busybox` 的单个150K可执行文件，实现了这些工具的功能。你从不同的工具到该可执行文件创建符号链接；busybox 会识别它是如何被调用的并调用相应的代码。BusyBox 还包含一个基础 shell。许多发行版的二进制包中都提供了 BusyBox，可以在 [BusyBox 网站] 获取源码。
+根文件系统空间被 GNU 系统工具消耗，如 `cat`、`chmod`、`cp`、`dd`、`etc`。`BusyBox` 项目旨在为这些常用系统工具提供最小化替代方案。`BusyBox` 使用一个名为 `/bin/busybox` 的单个 150K 可执行文件，实现了这些工具的功能。你从不同的工具到该可执行文件创建符号链接；`busybox` 会识别它是如何被调用的并调用相应的代码。`BusyBox` 还包含一个基础 shell。许多发行版的二进制包中都提供了 `BusyBox`，可以在 [BusyBox 网站] 获取源码。
 
 ## 8.3 使用备用 shell
 
-Linux 中一些流行的 shell（如 bash 和 tsh）体积很大且需要许多库。如果你不使用 BusyBox shell，仍然应该考虑替换你的 shell。一些轻量级的替代方案是 ash、lsh、kiss 和 smash，它们要小得多，且需要的库很少（或没有）。大多数此类替代 shell 都可以从 http://www.ibiblio.org/pub/Linux/system/shells/ 获取。确保你使用的任何 shell 都能在你的启动盘上包含的所有 rc 文件中运行命令。
+Linux 中一些流行的 shell（如 `bash` 和 `tsh`）体积很大且需要许多库。如果你不使用 `BusyBox` shell，仍然应该考虑替换你的 shell。一些轻量级的替代方案是 `ash`、`lsh`、`kiss` 和 `smash`，它们要小得多，且需要的库很少（或没有）。大多数此类替代 shell 都可以从 <http://www.ibiblio.org/pub/Linux/system/shells/> 获取。确保你使用的任何 shell 都能在你的启动盘上包含的所有 rc 文件中运行命令。
 
 ## 8.4 剥离库和二进制文件
 
 许多库和二进制文件在发布时带有调试信息。在这些文件上运行 `file` 命令，会显示 `not stripped`。在将二进制文件拷贝到根文件系统时，良好的做法是使用：
 
-```
+```bash
 objcopy --strip-all FROM TO
 ```
 
@@ -594,10 +570,10 @@ objcopy --strip-all FROM TO
 2. 使用 `mkefs` 在适当大小的软盘上创建根文件系统。
 3. 按照描述填充文件系统。
 4. 完成后，卸载文件系统并将其传输到数据文件中，但不要对其压缩。
-5. 如上所述将内核传输到软盘。在计算 ramdisk 单词时，将第 14 位设为0，以指示根文件系统不加载到 ramdisk 中。按照描述运行 `rdev`。
+5. 如上所述将内核传输到软盘。在计算 ramdisk 单词时，将第 14 位设为 0，以指示根文件系统不加载到 ramdisk 中。按照描述运行 `rdev`。
 6. 像以前一样传输根文件系统。
 
-你有几种选择可以采取。如果你正在构建双盘系统，可以直接在第二块磁盘上构建完整的根文件系统，而不需要将其传输到硬盘再传回来。此外，如果你正在构建单盘启动/根磁盘并使用 LILO，你可以在整个磁盘上构建单个文件系统，包含内核、LILO 文件和根文件，只需在最后一步运行 LILO 即可。
+你有几种选择可以采取。如果你正在构建双盘系统，可以直接在第二块磁盘上构建完整的根文件系统，而不需要将其传输到硬盘再传回来。此外，如果你正在构建单盘启动/根磁盘并使用 `LILO`，你可以在整个磁盘上构建单个文件系统，包含内核、`LILO` 文件和根文件，只需在最后一步运行 `LILO` 即可。
 
 ## 9.2 构建工具磁盘
 
@@ -615,32 +591,29 @@ objcopy --strip-all FROM TO
 
 你可能会发现 Slackware、RedHat 或 Debian 等主流发行版的启动盘似乎比描述的要复杂。专业发行版的启动盘基于相同的原理，但采用了各种技巧。首先，它们必须能够处理各种硬件，必须能够与用户交互。其次，它们必须准备好处理许多选项，且自动化程度不一。最后，发行版启动盘通常结合了安装和救援能力。
 
-
-
-
-
 # 11. 创建可启动 CD-ROM
 
 > 本节由 Rizwan Mohammed Darwe 贡献
-(rizwan AT clovertechnologies dot com)
+>
+> (rizwan AT clovertechnologies dot com)
 
 本节假设你已经熟悉在 Linux 中写入 CD 的过程和原理。请将本节视为关于如何包含你将刻录的 CD 的启动能力的快速参考。《CD-Writing-HOWTO》应该为你提供更深入的参考。
 
-## 11.1. 什么是 El Torino？
+## 11.1 什么是 El Torino？
 
 对于 x86 平台，许多 BIOS 已开始支持可启动 CD。`mkisofs` 的补丁是基于名为“El Torino”的标准。简单来说，El Torino 是一项规范，规定了如何格式化 CDROM 以便直接从中启动。
 
 “El Torino”规范规定，只要 BIOS 支持 El Torino，任何 CDROM 驱动器（SCSI 或 EIDE）都可以工作。到目前为止，这仅在 EIDE 驱动器上经过测试，因为目前测试的所有 SCSI 控制器似乎都不支持 El Torino。主板必须支持 El Torino。你怎么知道你的主板是否支持“El Torino”呢？嗯，就是那些允许你选择从硬盘、软磁盘、网络或 CDROM 的主板。
 
-## 11.2. 工作原理
+## 11.2 工作原理
 
 El Torino 标准的工作原理是通过 BIOS 让 CD 看起来像是一个普通的软磁盘驱动器。简单来说，就是将任何尺寸的软磁盘镜像（1.42MB 磁盘恰好为 1440k）放在 ISO 文件系统的某处。在 ISO 文件系统的头中放置一个指向该处的指针。然后，BIOS 将从 CD 中获取此镜像，在所有用途中，它的表现就像你从软磁盘驱动器启动一样。这允许使用 LILO 启动磁盘等，仅供使用。
 
 大致来说
 
-## 11.3. 如何制作
+## 11.3 如何制作
 
-创建一个名为 "boot.img" 的文件，它是你想通过 CD-ROM 启动的可启动软磁盘的镜像。这是一个 1.44 MB 的可启动软磁盘。该命令将执行此操作：
+创建一个名为 `boot.img` 的文件，它是你想通过 CD-ROM 启动的可启动软磁盘的镜像。这是一个 1.44 MB 的可启动软磁盘。该命令将执行此操作：
 
 ```bash
 dd if=/dev/fd0 of=boot.img bs=10 count=144
@@ -648,35 +621,35 @@ dd if=/dev/fd0 of=boot.img bs=10 count=144
 
 假设软磁盘在 A: 盘。
 
-将此镜像放置在 iso9660 文件系统的源的层级结构中。将所有与启动相关的文件放在自己的目录中是一个好主意（例如，在 iso9660 文件系统的根目录下的 "boot/" 中）。
+将此镜像放置在 iso9660 文件系统的源的层级结构中。将所有与启动相关的文件放在自己的目录中是一个好主意（例如，在 iso9660 文件系统的根目录下的 `boot/` 中）。
 
-有一个警告——你的启动软磁盘必须使用 LILO 加载任何初始内存磁盘（ramdisk），而不是内核内存磁盘驱动程序！一旦内核启动，BIOS 对 CD 作为软磁盘的仿真就会被绕过并失败。LILO 将使用 BIOS 磁盘卡加载初始内存磁盘，因此仿真会按设计工作。
+有一个警告——你的启动软磁盘必须使用 `LILO` 加载任何初始内存磁盘（ramdisk），而不是内核内存磁盘驱动程序！一旦内核启动，BIOS 对 CD 作为软磁盘的仿真就会被绕过并失败。`LILO` 将使用 BIOS 磁盘卡加载初始内存磁盘，因此仿真会按设计工作。
 
 El Torito 规范要求创建一个“启动目录”（boot catalog）。这是一个 2048 字节的文件，除了是必须的之外，它没有其他意义。`mkisofs` 作者完成的补丁将自动创建启动目录，你必须指定启动目录在 iso9660 文件系统中的位置。通常像以前一样将其放在启动镜像中是一个好主意，像 `boot.catalog` 这样的名字似乎是合适的。
 
-所以我们已经在 boot.img 文件中有了镜像，并将其放在了 iso9660 文件系统根目录下的 boot/ 目录下。我们将在与 boot.catalog 相同的目录中拥有启动目录。随后用于在文件 bootcd.iso 中创建 iso9660 文件系统的命令即是：
+所以我们已经在 `boot.img` 文件中有了镜像，并将其放在了 iso9660 文件系统根目录下的 `boot/` 目录下。我们将在与 `boot.catalog` 相同的目录中拥有启动目录。随后用于在文件 `bootcd.iso` 中创建 iso9660 文件系统的命令即是：
 
 ```bash
 mkisofs -r b boot.img -c boot/catalog -o bootcd.iso
 ```
 
--b 选项指定要使用的启动镜像（注意相对于 iso9660 磁盘根目录的路径），-c 选项用于启动目录文件。-r 选项将创建适当的文件所有权和模式（参阅 `mkisofs` 手册）。末尾的 `.` 表示从当前目录获取源。
+`-b` 选项指定要使用的启动镜像（注意相对于 iso9660 磁盘根目录的路径），`-c` 选项用于启动目录文件。`-r` 选项将创建适当的文件所有权和模式（参阅 `mkisofs` 手册）。末尾的 `.` 表示从当前目录获取源。
 
 现在使用通常的 `cdrecord` 命令刻录 CD，它就可以启动了。
 
-## 11.4. 创建 Win9x 可启动 CD-ROMs
+## 11.4 创建 Win9x 可启动 CD-ROMs
 
-第一步是获取源 CD 使用的启动镜像。但你不能简单地在 Linux 下挂载 CD 并 `dd` 之前的 1440k 到软磁盘或文件 boot.img 中。相反，只需直接用源 CD-ROM 启动。
+第一步是获取源 CD 使用的启动镜像。但你不能简单地在 Linux 下挂载 CD 并 `dd` 之前的 1440k 到软磁盘或文件 `boot.img` 中。相反，只需直接用源 CD-ROM 启动。
 
 当你启动 Win98 CD 时，会掉入 A: 提示符符实际的内存磁盘。而 D: 或 Z: 是所有安装程序所在的地方。使用 `diskcopy` 命令将 A: 镜像复制到实际的软磁盘驱动器（现在是 B:）。该命令将执行此操作：
 
-```bash
+```dos
 diskcopy A: B:
 ```
 
-它的工作方式就像 `dd` 一样。你可以从这个新创建的磁盘启动，测试该过程是否与源 CD 类似。然后通常将此软磁盘通常 `dd` 到文件 boot.img，剩下的照常进行即可。
+它的工作方式就像 `dd` 一样。你可以从这个新创建的磁盘启动，测试该过程是否与源 CD 类似。然后通常将此软磁盘通常 `dd` 到文件 `boot.img`，剩下的照常进行即可。
 
-# 12. 常见问题 (FAQ) 列表
+# 12. 常见问题（FAQ）列表
 
 - Q: 我从我的 boot/root 磁盘启动，但什么都没有发生。我该怎么办？
 - Q: Slack/Debian/RedHat 启动磁盘是如何工作的？
@@ -693,48 +666,44 @@ diskcopy A: B:
 - Q: 启动时，我得到错误 A:无法执行 B。为什么？
 - Q: 我的内核支持内存磁盘，但初始化的 0K 内存磁盘。为什么？
 
-Q: 我从我的 boot/root 磁盘启动，但什么都没有发生。我该怎么办？
+### 我从我的 boot/root 磁盘启动，但什么都没有发生。我该怎么办？
 
-A: 见上文第 7 节。
+答：见上文第 7 节。
 
-Q: Slack/Debian/RedHat 启动磁盘是如何工作的？
+### Slack/Debian/RedHat 启动磁盘是如何工作的？
 
-A: 见上文第 10 节。
+答：见上文第 10 节。
 
-Q: 我如何使用高密度（>1440K）软磁盘？我如何判断哪些密度适用于我的软磁盘？
+### 我如何使用高密度（>1440K）软磁盘？我如何判断哪些密度适用于我的软磁盘？
 
-A: 关于此主题，请见上文中 Alain Knaff 的评论。这是我知道的最权威的答案。
+答：关于此主题，请见上文中 Alain Knaff 的评论。这是我知道的最权威的答案。
 
-Q: 我如何增加我的内存磁盘的大小？
+### 我如何增加我的内存磁盘的大小？
 
-A: 这应该在文中解释，但是……
-
-
-
-
+答：这应该在文中解释，但是……
 
 # Linux 启动盘 HOWTO
 
-## 参考文献 
+## 参考文献
 
 标题为 `References`。
 
-问：我如何用新文件更新我的根磁盘软？
+### 我如何用新文件更新我的根磁盘软？
 
-答：最简单的方法是从根备份（rootback）将文件系统复制到你所使用的 DEVICE（见第 4.2 节）。然后挂载该文件系统并进行更改。你需要记住你的根文件系统在哪里，以及它占用了多少个块。
+答：最简单的方法是从根备份（rootback）将文件系统复制到你所使用的 `DEVICE`（见第 4.2 节）。然后挂载该文件系统并进行更改。你需要记住你的根文件系统在哪里，以及它占用了多少个块。
 
-```
+```bash
 dd if=/dev/fd0 bs=lk skip=ROOTBEGIN count=BLOCKS | gunzip > DEVICE
 mount -t ext2 device /mnt
 ```
 
 进行更改后，按照第 4.7 节的方法继续，将根文件系统传输到磁盘。如果你没有更改新根文件系统的起始位置，则不需要重新传输内核或重新编译内存盘（ramdisk）。
 
-问：我如何移除 LILO 以便我再次使用 DOS 启动？
+### 我如何移除 LILO 以便我再次使用 DOS 启动？
 
 答：这实际上不是一个启动的话题，但经常被问到。在 Linux 中，你可以运行：
 
-```
+```bash
 /sbin/lilo -u
 ```
 
@@ -742,13 +711,13 @@ mount -t ext2 device /mnt
 
 在 DOS 和 Windows 中，你可以使用 DOS 命令：
 
-```
+```dos
 FDISK /MBR
 ```
 
 MBR 代表主引导记录（Master Boot Record）。该命令用干净的 DOS 引导扇区替换引导扇区，而不影响分区表。一些纯主义者不同意此观点，尽管 LILO 的作者 Werner Almesberger 建议这样做。这种方法简单且有效。
 
-问：如果我丢失了内核和启动磁盘，我该如何启动？
+### 如果我丢失了内核和启动磁盘，我该如何启动？
 
 答：如果你没有启动磁盘，可能简单的方法如如所述，获取适用于你控制器类型（IDE 或 SCSI）的 Slackware 内核，即“如何制作带有 XXX 驱动程序的启动磁盘”。然后你可以使用此内核启动计算机，修复任何损坏。
 
@@ -765,7 +734,7 @@ MBR 代表主引导记录（Master Boot Record）。该命令用干净的 DOS �
 | 0x1FC | 508 | 根主设备号 - 见下文 |
 | 0x1FD | 509 | 根主设备号 - 见下文 |
 
-# 12. 常见问题 (FAQ) 列表
+# 12. 常见问题（FAQ）列表
 
 主字的解释已见上文第 6.3 节。
 
@@ -773,62 +742,62 @@ MBR 代表主引导记录（Master Boot Record）。该命令用干净的 DOS �
 
 | DEVICE | MAJOR | MINOR | DESCRIPTION |
 | :--- | :--- | :--- | :--- |
-| /dev/fd0 | 2 | 0 | 第一个软盘驱动 |
-| /dev/hd1 | 3 | 1 | 第一个 IDE 驱动器上的分区 1 |
-| /dev/sda | 8 | 1 | 第一个 SCSI 驱动器上的分区 1 |
-| /dev/sdb8 | 8 | 8 | 第一个 SCSI 驱动器上的分区 8 |
+| `/dev/fd0` | 2 | 0 | 第一个软盘驱动 |
+| `/dev/hd1` | 3 | 1 | 第一个 IDE 驱动器上的分区 1 |
+| `/dev/sda` | 8 | 1 | 第一个 SCSI 驱动器上的分区 1 |
+| `/dev/sdb8` | 8 | 8 | 第一个 SCSI 驱动器上的分区 8 |
 
 获取这些值后，可以使用 Norton Utilities Disk Editor 或名为 `rawwrite.exe` 的程序将文件写入磁盘。该程序包含在所有发行版中。这是一个 DOS 程序，它将文件写入“原始”磁盘（从引导扇区开始），而不是将其写入系统文件。如果你使用 Norton Utilities，你必须将文件挂载到物理磁盘的开头。
 
-**问：我如何为启动/根磁盘制作额外副本？**
+### 我如何为启动/根磁盘制作额外副本？
 
-**答：因为磁介质可能会随着时间的推移而退化，你应该保留多个磁盘的多个副本，以防原盘无法使用。**
+答：因为磁介质可能会随着时间的推移而退化，你应该保留多个磁盘的多个副本，以防原盘无法使用。
 
 制作任何软盘（包括可启动盘和工具盘）副本的最简单方法是使用 `dd` 命令将原始磁盘的内容复制到硬盘上的一个文件中，然后使用相同的命令将文件复制回新软盘。注意，你不需要也不应该在 `dd` 时挂载软盘，因为 `dd` 使用原始设备接口。
 
 要复制原始文件，输入命令：
 
-```
+```bash
 dd if=DEVICEENAME of=FILENAME
 ```
 
-其中 DEVICEENAME 是软盘名称，FILENAME 是（硬盘）输出文件的名称。省略 `count` 参数会导致 `dd` 复制整个软盘（如果是高密度则为 2880 个块）。
+其中 `DEVICEENAME` 是软盘名称，`FILENAME` 是（硬盘）输出文件的名称。省略 `count` 参数会导致 `dd` 复制整个软盘（如果是高密度则为 2880 个块）。
 
 要将结果复制回新软盘，插入新软盘并输入反向命令：
 
-```
+```bash
 dd if=FILENAME of=DEVICEENAME
 ```
 
 注意，上述讨论假设你只有一个软盘。如果你有两个相同的软盘，可以使用类似命令复制磁盘：
 
-```
+```bash
 dd if=/dev/fd0 of=/dev/fd1
 ```
 
-**问：我如何不需要每次都输入 ahxxxx=nn,nn,nn？**
+### 我如何不需要每次都输入 `ahxxxx=nn,nn,nn`？
 
-**答：在设备无法自动检测的情况下，必须为内核提供一个命令行设备参数字符串，例如：**
+答：在设备无法自动检测的情况下，必须为内核提供一个命令行设备参数字符串，例如：
 
-```
+```bash
 aha152x=0x340,11,3,1
 ```
 
-使用 LILO 可以通过几种方式提供此参数字符串：
+使用 `LILO` 可以通过几种方式提供此参数字符串：
 
-- 在每次由 LILO 启动系统时在命令行中输入。尽管这很无聊。
-- 使用 LILO 的 `lock` 关键字将命令行设为默认命令行，这样 LILO 每次启动时都会使用相同的选项。
-- 在 LILO 配置文件中使用 `append` 语句。注意，参数字符串必须包含引号。
+- 在每次由 `LILO` 启动系统时在命令行中输入。尽管这很无聊。
+- 使用 `LILO` 的 `lock` 关键字将命令行设为默认命令行，这样 `LILO` 每次启动时都会使用相同的选项。
+- 在 `LILO` 配置文件中使用 `append` 语句。注意，参数字符串必须包含引号。
 
 例如，使用上述参数字符串的示例命令行：
 
-```
+```bash
 aha152x=0x340,11,3,1 root=/dev/sda lock
 ```
 
 这将传递参数字符串并设置根为 `/dev/sda`。此外，要让参数字符串生效，内核必须包含该磁盘类型的驱动程序。如果没有，你必须重新编译内核。一个 `append` 语句示例：
 
-```
+```text
 APPEND = aha152x=0x340,11,3,1
 ```
 
@@ -836,15 +805,11 @@ APPEND = aha152x=0x340,11,3,1
 
 如果你尝试使用大小为 0 的内存盘，行为可能是不可预测的，并导致内核崩溃（kernel panic）。
 
-
-
-
-
-## A. 资源与链接
+# A. 资源与链接
 
 在获取包时，除非有充分理由，否则请始终获取最新版本。
 
-### A.1. 预制启动盘
+## A.1 预制启动盘
 
 这些资源用于发行版启动盘。请使用其中一个镜像站点以减少这些机器的负载。
 
@@ -853,57 +818,69 @@ APPEND = aha152x=0x340,11,3,1
 - Debian 启动盘和 Debian 镜像站点
 - Mandrake 下载
 
-除了发行版启动盘，还提供以下救援磁盘镜像。除非另有说明，它们位于目录
+除了发行版启动盘，还提供以下救援磁盘镜像。除非另有说明，它们位于目录 <http://www.biblio.org/pub/Linux/system/recovery/!INDEX.html>。
 
-http://www.biblio.org/pub/Linux/system/recovery/!INDEX.html
+- RIP 是一个救援/启动系统，有多个版本：一个适用于 1.44 英制软盘的版本，另一个适用于 CD-ROM。它支持大文件，并包含许多用于磁盘维护和救援的实用程序。它支持 `ext2`、`ext3`、`iso9660`、`mdsfs`、`nfs`、`reisers`、`ufs` 和 `vfat`。RIP 可从 <http://www.jux.org/pub/people/kernel-robototti/linux/rip/index.html> 获取。
 
-- RIP 是一个救援/启动系统，有多个版本：一个适用于 1.44 英制软盘的版本，另一个适用于 CD-ROM。它支持大文件，并包含许多用于磁盘维护和救援的实用程序。它支持 ext2, ext3, iso9660, mdsfs, nfs, reisers, ufs 和 vfat。RIP 可 http://www.jux.org/pub/people/kernel-robototti/linux/rip/index.html 获取。
-- tomsrbt，由 Tom Oeser 开发，是一个基于内核 2.0 的单磁盘/启动根，具有大量功能和支持程序。它支持 IDE、SCSI 带、网络适配器、PCMCIA 等。包含了约 100 个修复和恢复磁盘的实用程序和工具。该包包含了拆解和重建镜像的脚本，必要可以添加。
-- rescue02，由 John Comyns 开发，是一个基于内核 1.84 的救援磁盘，支持 IDE 以及 Adapt 1542 和 NCR53C7x。它使用 ELF 二进制文件，但提供了足够的命令以便在任何系统中使用。启动后可以加载适用于所有其他 SCSI 卡的模块。在 4 mb 内存的系统上可能无法工作，除非使用 3 mb 内存磁盘。
-- rescue_disk-2.0.22，由 Sergey Viznyuk 开发，是一个基于内核 2.0.22 的全功能启动/根磁盘，内置支持 IDE、多种 SCSI 控制器以及 ELF/AOUT。还包含了用于修复和恢复硬盘的模块和实用程序。
-- cramdisk 镜像基于 2.0.23 内核，适用于 4MB 和 8MB 机器。它们包含了数学仿真和网络（PPP 和拨号脚本，NE2000，3C509），或对并行端口 ZIP 驱动器的支持。这些磁盘镜像可以在带有 4MB RAM 的机器上启动。包含了 MSDOS 支持，你可以从网络下载到 DOS 分区。
 
-### A.2. 救援包
 
-www.ibiblio.org 上提供了几个创建救援磁盘的包。通过这些包，你可以指定一组要包含的文件，软件将自动（在不同程度上）完成启动盘的创建。更多信息请参见 http://www.ibiblio.org/pub/Linux/system/recovery/!INDEX.html。*请仔细检查文件日期。*这些包中的某些已多年未更新，将不支持创建加载到内存磁盘的压缩根文件系统。据我们所知，Yard 是唯一可以做到的包。
+# Linux 启动指南 (HOWTO)
 
-### A.3. LILO --- Linux 加载器
+- `tomsrbt`，由 Tom Oeser 开发，是一个基于内核 2.0 的单磁盘/启动根，具有大量功能和支持程序。它支持 IDE、SCSI 带、网络适配器、PCMCIA 等。包含了约 100 个修复和恢复磁盘的实用程序和工具。该包包含了拆解和重建镜像的脚本，必要可以添加。
+
+- `rescue02`，由 John Comyns 开发，是一个基于内核 1.84 的救援磁盘，支持 IDE 以及 Adapt 1542 和 NCR53C7x。它使用 ELF 二进制文件，但提供了足够的命令以便在任何系统中使用。启动后可以加载适用于所有其他 SCSI 卡的模块。在 4 mb 内存的系统上可能无法工作，除非使用 3 mb 内存磁盘。
+
+- `rescue_disk-2.0.22`，由 Sergey Viznyuk 开发，是一个基于内核 2.0.22 的全功能启动/根磁盘，内置支持 IDE、多种 SCSI 控制器以及 ELF/AOUT。还包含了用于修复和恢复硬盘的模块和实用程序。
+
+- `cramdisk` 镜像基于 2.0.23 内核，适用于 4MB 和 8MB 机器。它们包含了数学仿真和网络（PPP 和拨号脚本，NE2000，3C509），或对并行端口 ZIP 驱动器的支持。这些磁盘镜像可以在带有 4MB RAM 的机器上启动。包含了 MSDOS 支持，你可以从网络下载到 DOS 分区。
+
+## A.2. 救援包
+
+`www.ibiblio.org` 上提供了几个创建救援磁盘的包。通过这些包，你可以指定一组要包含的文件，软件将自动（在不同程度上）完成启动盘的创建。更多信息请参见 `http://www.ibiblio.org/pub/Linux/system/recovery/!INDEX.html`。请仔细检查文件日期。这些包中的某些已多年未更新，将不支持创建加载到内存磁盘的压缩根文件系统。据我们所知，Yard 是唯一可以做到的包。
+
+## A.3. LILO --- Linux 加载器
 
 由 Werner Almesberger 编写。优秀的启动加载器，文档包含了启动扇区内容和启动过程早期阶段的信息。
 
-从 ftp://tsx-11.mit.edu/pub/linux/packages/lilo/ 获取。它在 Metalab 和镜像站也可用。
+从 `ftp://tsx-11.mit.edu/pub/linux/packages/lilo/` 获取。它在 Metalab 和镜像站也可用。
 
-### A.4. 内存磁盘使用
+## A.4. 内存磁盘使用
 
-在 Linux 内核提供的文档中可以找到关于内存磁盘如何工作的极佳描述。参见 /usr/src/linux/Documentation/ramdisk.txt。它由 Paul Gortmaker 编写，包含一个创建压缩内存磁盘的章节。
+在 Linux 内核提供的文档中可以找到关于内存磁盘如何工作的极佳描述。参见 `/usr/src/linux/Documentation/ramdisk.txt`。它由 Paul Gortmaker 编写，包含一个创建压缩内存磁盘的章节。
 
-### A.5. Linux 启动过程
+## A.5. Linux 启动过程
 
 关于 Linux 启动过程的更多细节，这里是一些链接：
 
 - 《Linux 系统管理员指南》（Linux System Administrators' Guide）有一个关于启动的章节。
+
 - LILO 的 `Technical overview`（技术概述）提供了关于启动过程的权威技术、底层描述，直到内核启动为止。
-- 源代码是终极指南。下面是与启动过程相关的内核文件。如果你有 Linux 内核源码，可以在机器的 /usr/src/linux 下找到它们；或者，Shigio Yamaguchi (shigio at tamacom.com) 有一个非常好的超文本内核浏览器，这里是一些值得查看的文件：
+
+- 源代码是终极指南。下面是与启动过程相关的内核文件。如果你有 Linux 内核源码，可以在机器的 `/usr/src/linux` 下找到它们；或者，Shigio Yamaguchi (shigio at tamacom.com) 有一个非常好的超文本内核浏览器，这里是一些值得查看的文件：
 
 ```
 arch/i386/boot/bootsect.S and setup.S
 ```
+
 包含启动扇本身的汇编代码。
 
 ```
 arch/i386/boot/compressed/misc.c
 ```
+
 包含解压内核的代码。
 
 ```
 arch/i386/kernel/
 ```
-包含内核初始化代码的目录。setup.c 定义了内存磁盘字。
+
+包含内核初始化代码的目录。`setup.c` 定义了内存磁盘字。
 
 ```
 drivers/block/rd.c
 ```
-包含内存磁盘驱动程序。rd_load 和 rd_load_image 程序将块从设备加载到内存磁盘。identify_ramdisk_image 程序确定找到的是什么类型的文件系统以及它是否被压缩。
+
+包含内存磁盘驱动程序。`rd_load` 和 `rd_load_image` 程序将块从设备加载到内存磁盘。`identify_ramdisk_image` 程序确定找到的是什么类型的文件系统以及它是否被压缩。
 
 ## B. LILO 启动错误代码
 
@@ -913,12 +890,12 @@ Usenet 上经常有人询问这些代码的问题，因此我们将其列在此�
 
 | 输出 | 问题 |
 | --- | --- |
-| (nothing) | LILO 的部分未被加载。LITITHER 要不是未安装，就是其启动扇所在的分区不是激活状态。 |
+| (nothing) | LILO 的部分未被加载。LILO 要不是未安装，就是其启动扇所在的分区不是激活状态。 |
 | L | 第一阶段启动加载器已加载并启动，但它无法加载第二阶段启动加载器。两位数字错误代码指示问题。（另见 `Disk codes`。）这种情况通常表示介质故障或几何不匹配（例如，磁盘参数错误）。 |
-| LI | 第一阶段启动加载器能够加载第二阶段启动加载器，但未能执行它。这可能是由几何不匹配或在未运行 map 安装程序的情况下移动了 /boot/boot.b 引起的。 |
+| LI | 第一阶段启动加载器能够加载第二阶段启动加载器，但未能执行它。这可能是由几何不匹配或在未运行 map 安装程序的情况下移动了 `/boot/boot.b` 引起的。 |
 | LIL | 第二阶段启动加载器已启动，但它无法通过 map 文件加载描述表。这通常是由介质故障或几何不匹配引起的。 |
-| LIL? | 第二阶段启动加载器被加载到了错误的地址。这通常是由细微的几何不匹配或在未运行 map 安装程序的情况下移动了 /boot/boot.b 引起的。 |
-| LIL- | 描述表损坏。这可能是几何不匹配或在未运行 map 安装程序的情况下移动了 /boot/map 引起的。 |
+| LIL? | 第二阶段启动加载器被加载到了错误的地址。这通常是由细微的几何不匹配或在未运行 map 安装程序的情况下移动了 `/boot/boot.b` 引起的。 |
+| LIL- | 描述表损坏。这可能是几何不匹配或在未运行 map 安装程序的情况下移动了 `/boot/map` 引起的。 |
 | LILO | LILO 的所有部分已成功加载。 |
 
 如果 LILO 在尝试加载启动镜像时 BIOS 信号错误，将显示相应的错误代码。这些代码范围从 0x00 到 0xb。请参见 LILO 用户指南的解释。
@@ -979,11 +956,7 @@ cr-rw-rw- 1 root uucp 5, 66 May 5 1998 cua2
 
 
 
-
-
-# Linux 启动指南 (HOWTO)
-
-```
+```text
 crw-rw---- 1 root uuc 5, 67 May 5 1998 cua3
 brw-rw---- 1 root floppy 2, 0 Aug 8 13:54 fdd
 brw-rw---- 1 root floppy 2, 36 Aug 8 13:54 fddComQ
@@ -1044,8 +1017,11 @@ brw-rw---- 1 root disk 1, 6 May 5 1998 ram6
 brw-rw---- 1 root disk 1, 7 May 5 1998 ram7
 brw-rw---- 1 root disk 1, 8 May 5 1998 ram8
 brw-rw---- 1 root disk 1, 9 May 5 1998 ram9
-我已包含了 IDE 分区。如果你使用 SCSI，请使用 `/dev/sdx` 设备。
+```
 
+我已包含了 IDE 分区。如果你使用 SCSI，请使用`/dev/sdx`设备。
+
+```text
 crw-rw---- 1 root disk 4, 0 May 5 1998 tty0
 brw-rw---- 1 root disk 4, 1 Nov 1 15:29 tty1
 brw-rw---- 1 root disk 4, 2 Nov 1 15:29 tty2
@@ -1058,8 +1034,11 @@ brw-rw---- 1 root disk 4, 8 May 5 1998 tty8
 brw-rw---- 1 root disk 4, 9 May 8:15:57 tty9
 brw-rw-rw- 1 root 4, 65 May 12:27 tty1
 rw-rw----- 1 root 4, 5 May 1998 zero
+```
 
-/etc:
+## `/etc`
+
+```text
 rw-rw-r-- 1 root 164 Nov 15:29 conf
 rw-rw-rw- 1 root 668 Nov 15:29 fstab
 rw-rw-rw- 1 root 71 Nov 15:29 defs
@@ -1078,9 +1057,13 @@ rw-rw----- 1 root 784 Nov 15:29 termcap
 rw-rw----- 1 root Nov 15:29 ttype
 lrw-xr-wx-1 root 15 Nov 15:29 utmp -> /var/run/utmp
 lrw-xr-wx-1 root 15 Nov 15:29 wtmp -> /var/log/wtmp
+```
 
-/etc/pam.d:
-/lib:
+## `/etc/pam.d`
+
+## `/lib`
+
+```text
 rwx-xr-xr-1 root 45415 Nov 15:29 libd-2.0.so
 lrwx-xr-xr-1 root root 11 Nov 15:29 ld-linux.so.2 -> ld-2.0.so
 lrwx-xr-xr-1 root root 731548 Nov 13 libc-2.0.so
@@ -1097,13 +1080,12 @@ rw-rw-x--1 root 15 Nov 15:29 libnsl.so.1 -> libnsl-2.0.so
 rw-rw-x--1 root 178395 Nov 21 Nov 15:29 libfuse-2.0.so
 lrwx-xr-xr-1 root root 15 Nov 15:29 libnss_files.so.1 -> libnss_files.so.2.0
 lrwx-xr-xr-1 root root 14 Nov 15:29 libpam.so.0 -> libpam.so.0.64
--rw-xr-xr-1 root root 26906 Nov 15:29 libpam.so.0.64
+-rw-r-xr-x 1 root root 26906 Nov 15:29 libpam.so.0.64
 ```
 
 # C. 根文件系统列表
 
-```
-
+```text
 lrw-rwwx root root 19 Nov 11:39 libpam_misc.so.64
 -r-xr-xr- root root 7086 Nov 11:39 libpam_misc.so.64
 -rw-rw-x- root root 35615 Nov 11:39 libpam_proc.so.1.2.6
@@ -1117,50 +1099,65 @@ lrw-rwwx root root 19 Nov 11:39 libpam_misc.so.64
 -r-xr-xr-x root root 8039 Nov 11:39 libuud.so.1.1
 drwx-x-x root root 1024 Nov 11:39 modules
 drwx-x-x root root 1024 Nov 11:39 security
-
 ```
-/lib/modules:
+
+## `/lib/modules`
+
+```text
 -drwx-x-x root root 1024 Nov 11:39 2.0.35
-
 ```
-/lib/modules/2.0.35:
+
+## `/lib/modules/2.0.35`
+
+```text
 -drwx-x-x root root 1024 Nov 11:39 block
 -drwx-x-x root root 1024 Nov 11:39 cdrom
-
 ```
-/lib/modules/2.0.35/cdrom:
+
+## `/lib/modules/2.0.35/cdrom`
+
+```text
 -drwx------ root 24108 Nov 11:39 du1.o
-
 ```
-/lib/security:
+
+## `/lib/security`
+
+```text
 -rw-r---- root 8771 Nov 11:39 permit.so
-
 ```
-挂载点 (mounting):
+
+## 挂载点 (mounting)
+
+```text
 drwx-x-x root root 1024 Nov 11:39 cd
 drwx-x-x root root 1024 Nov 11:39 floppy
-
 ```
-/proc:
+
+## `/proc`
+
+```text
 -rwx-xr-x root root 176 Nov 11:39 .bashrc
 -rwx-xr-x root root 182 Nov 11:39 .ahrc
 -rwx-xr-x root root 455 Nov 11:39 .profile
 -rwx-xr-x root root 4014 Nov 11:39 .tcshrc
-
 ```
-/tmp/
 
-```
-/usr:
-drwx-xr-x 2 root root 1024 Nov 11:39 bin
-drwx-xr-x 2 root root 1024 Nov 11:39 lib
-drwx-xr-x 2 root root 1024 Nov 11:39 man
-drwx-xr-x 2 root root 1024 Nov 11:39 du
-drwx-xr-x 1 root root 1024 Nov 11:39 share
+## `/tmp/`
+
+## `/usr`
+
+```text
+drwxr-xr-x 2 root root 1024 Nov 11:39 bin
+drwxr-xr-x 2 root root 1024 Nov 11:39 lib
+drwxr-xr-x 2 root root 1024 Nov 11:39 man
+drwxr-xr-x 2 root root 1024 Nov 11:39 du
+drwxr-xr-x 1 root root 1024 Nov 11:39 share
 lrwxrxr-x 1 root root 10 Nov 11:59 tmp -> ../var
-
 ```
-/usr/bin:
+
+## `/usr/bin`
+
+```text
 -rw-x--x 1 root root 37164 Nov 11:59 afio
 -rw-x--x 1 root root 5044 Nov 11:59 chroot
 -rw-x--x 1 root root 63652 Nov 11:59 cut
@@ -1175,8 +1172,11 @@ lrwxrxr-x 1 root root 10 Nov 11:59 tmp -> ../var
 -rw-x--x 1 root root 19008 Nov 11:59 tr
 -rw-x--x 1 root root 7160 Nov 11:59 wc
 -rw-x--x 1 root root 4412 Nov 11:59 whoami
-
 ```
+
+
+
+```text
 /sbin:
 -rw-xr--x 1 root root 23976 Nov 11:59 demod
 -rwx-xr--x 1 root root 27460 Nov 11:59 e2fs
@@ -1189,45 +1189,43 @@ lrwxrxr-x 1 root root 10 Nov 11:59 tmp -> ../var
 -rwx-xr--x 1 root root 25612 Nov 11:59 insmod
 -rwx-xr--x 1 root root 10368 Nov 11:59 kernel
 -rwx-xr--x 1 root root 11040 Nov 11:59 ldconfig
--rwx-xr--x 1 root root 6108 Nov 11:59 lsmod
--rwx-xr--x 1 root root 17400 Nov 11:59 mke2fs
--rwx-xr--x 1 root root 4072 Nov 11:59 mkrfs.ext2
--rwx-xr--x 1 root root 17400 Nov 11:59 mkrfs
--rwx-xr--x 1 root root 5664 Nov 11:59 mkswap
+-rwxr-xr-x 1 root root 6108 Nov 11:59 lsmod
+-rwxr-xr-x 1 root root 17400 Nov 11:59 mke2fs
+-rwxr-xr-x 1 root root 4072 Nov 11:59 mkrfs.ext2
+-rwxr-xr-x 1 root root 17400 Nov 11:59 mkrfs
+-rwxr-xr-x 1 root root 5664 Nov 11:59 mkswap
 lrw-rwwx 1 root root 22032 Nov 11:59 modprobe
 lrw-rwwx 1 root root 4 Nov 11:59 reboot - halt
+```
 
 ## C. 根文件系统列表
 
-```
+```text
 -rw-x--x 1 root root 7492 Nov 1:59 rmmod
 -rw-x--x 1 root root 12932 Nov 1:59 shutdown
-lrwx-xr-x 1 root root 6 Nov 1:59 swapoff -> swapon
+lrwxr-xr-x 1 root root 6 Nov 1:59 swapoff -> swapon
 -rw-x--x 1 root root 5124 Nov 1:59 swap
--drwx-xr-x 1 root root 4 Nov 1:59 telinit -> init
+-drwxr-xr-x 1 root root 4 Nov 1:59 telinit -> init
 -rw-x--x 1 root root 6944 Nov 1:59 update
-
 ```
-
-
-
 
 # Linux 启动盘 HOWTO
 
-| /var/log/ |
+| `/var/log/` |
 | :--- |
 | -rw------ 1 root root 0 Nov 1 15:39 wtmp |
-| /var/run/ |
+| `/var/run/` |
 | :--- |
 | -rw----- 1 root root 0 Nov 1 15:39 utmp |
-| /var/tmp/ |
+| `/var/tmp/` |
 
 ## C. 根文件系统列表示例
 
 ## D. 实用工具目录列表示例
 
-```
+```text
 total 579
+
 -rwxr-xr-x root root 42333 Jul 28 19:05 cpio
 -rwxr-xr-x root root 32844 Aug 28 19:50 debuggs
 -rwxr-xr-x root root 103560 Jul 29 21:31 elvis
@@ -1250,4 +1248,3 @@ lrwxr-xrwx root root 5 Jul 29 21:35 vi -> elvis
 + [1]
 
 此处展示的目录结构仅根软盘使用。真实的 Linux 系统有一套复杂且规范的策略，被称为文件系统层次结构标准（Filesystem Hierarchy Standard），用于确定文件应该存放的位置。
-

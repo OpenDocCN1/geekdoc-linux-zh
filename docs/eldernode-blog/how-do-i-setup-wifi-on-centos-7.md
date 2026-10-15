@@ -1,10 +1,11 @@
-# 教程如何在 Centos 7 上逐步设置 WiFi-elder node
+
+# 教程：如何在 Centos 7 上逐步设置 WiFi-elder node
 
 > 原文：<https://blog.eldernode.com/how-do-i-setup-wifi-on-centos-7/>
 
 ![How Do I Setup WiFi On Centos 7](img/060a80416162770cb8b88679492118fa.png)
 
-教程我如何一步一步在 Centos 7 上设置 WiFi？CentOS 或**O**operating**S**system**C**community**E**enterprise 是 2004 年 3 月发布的 Linux 发行版。联系我们选择您的完美 [CentOS VPS](https://eldernode.com/centos-vps/) 套餐。这个开源项目由一个大型社区开发和支持，基于 Red Hat Enterprise[Linux](https://blog.eldernode.com/tag/linux/)(RHEL)资源包。这是一种商业分发，只能与支付支持合同一起使用。RHEL 提供商 Red Hat 需要公开源代码，以满足软件组件的各种许可。CentOS 项目使开发人员能够在计划使用免费的等效软件时轻松使用 RHEL 源代码。
+教程：我如何一步一步在 Centos 7 上设置 WiFi？CentOS 或 **O**perating **S**ystem **C**ommunity **E**nterprise 是 2004 年 3 月发布的 Linux 发行版。联系我们选择您的完美 [CentOS VPS](https://eldernode.com/centos-vps/) 套餐。这个开源项目由一个大型社区开发和支持，基于 Red Hat Enterprise [Linux](https://blog.eldernode.com/tag/linux/)（RHEL）资源包。这是一种商业分发，只能与支付支持合同一起使用。RHEL 提供商 Red Hat 需要公开源代码，以满足软件组件的各种许可。CentOS 项目使开发人员能够在计划使用免费的等效软件时轻松使用 RHEL 源代码。
 
 ## 如何在 Centos 7 上设置 WiFi
 
@@ -20,39 +21,39 @@ WiFi 或无线 T2 是一种使用无线电波连接网络的技术。Wi-Fi 连�
 
 ### 如何在 Linux 上设置 WiFi
 
-大多数人喜欢用图形工具来管理他们的计算机，但是也有一些人喜欢用命令行来管理。如果你是这些人中的一员，你应该知道管理 WiFi 有点难。在这种情况下，wpa_supplicant 可以用作命令行工具。
+大多数人喜欢用图形工具来管理他们的计算机，但是也有一些人喜欢用命令行来管理。如果你是这些人中的一员，你应该知道管理 WiFi 有点难。在这种情况下，`wpa_supplicant` 可以用作命令行工具。
 
 ### 网络扫描
 
-如果你已经很了解你的网络信息，你可以跳过这一步。如果没有，您可以用几个简单的命令来识别您想要连接的网络。wpa_supplicant 有一个名为 wpa_cli 的工具，它提供了一个命令行界面来管理 **WiFi 连接**。您可以使用这个选项来配置任何东西，但是设置配置文件似乎更容易。现在以 root 权限运行 wpa_cli，然后扫描您的网络:
+如果你已经很了解你的网络信息，你可以跳过这一步。如果没有，您可以用几个简单的命令来识别您想要连接的网络。`wpa_supplicant` 有一个名为 `wpa_cli` 的工具，它提供了一个命令行界面来管理 **WiFi 连接**。您可以使用这个选项来配置任何东西，但是设置配置文件似乎更容易。现在以 root 权限运行 `wpa_cli`，然后扫描您的网络：
 
 ```
 wpa_cli    > scan
 ```
 
-扫描过程可能需要几分钟。获得所需信息后，键入 quit 退出环境。创建一个区块并加密您的密码。有一个更简单的工具，您可以使用它来开始配置文件。此选项采用您的网络名称，并创建一个包含网络配置块的文件。该文件已加密:
+扫描过程可能需要几分钟。获得所需信息后，键入 `quit` 退出环境。创建一个区块并加密您的密码。有一个更简单的工具，您可以使用它来开始配置文件。此选项采用您的网络名称，并创建一个包含网络配置块的文件。该文件已加密：
 
 ```
 wpa_passphrase networkname password >    /etc/wpa_supplicant/wpa_supplicant.conf
 ```
 
-然后，开始您的配置:
+然后，开始您的配置：
 
-现在你的配置文件位于**/etc/wpa _ supplicant/wpa _ supplicant . conf .**
+现在你的配置文件位于 `/etc/wpa_supplicant/wpa_supplicant.conf`。
 
-此时，在您喜欢的编辑器中打开文件，并清除密码行。然后将下面一行添加到配置文件的顶部:
+此时，在您喜欢的编辑器中打开文件，并清除密码行。然后将下面一行添加到配置文件的顶部：
 
 ```
 ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=wheel
 ```
 
-此选项允许**轮**组中的用户管理 wpa_supplicant。将该选项的其余部分添加到网络块中。如果您连接到一个隐藏的网络，您可以添加以下行来告诉 wpa_supplicant 扫描它:
+此选项允许 **wheel** 组中的用户管理 `wpa_supplicant`。将该选项的其余部分添加到网络块中。如果您连接到一个隐藏的网络，您可以添加以下行来告诉 `wpa_supplicant` 扫描它：
 
 ```
 scan_ssid=1
 ```
 
-现在，您需要进行与密钥管理和协议相关的设置。这些设置与 WPA2 相关:
+现在，您需要进行与密钥管理和协议相关的设置。这些设置与 WPA2 相关：
 
 ```
 proto=RSN
@@ -62,7 +63,7 @@ proto=RSN
 key_mgmt=WPA-PSK
 ```
 
-为了增加安全性，您应该只使用 CCMP:
+为了增加安全性，您应该只使用 CCMP：
 
 ```
 group=CCMP
@@ -78,11 +79,11 @@ pairwise=CCMP
 priority=10
 ```
 
-**保存**您的配置并重启 wpa_supplicant 以使更改生效。这当然不是配置无线网络的最佳方式，但在某些情况下会很有用。
+**保存**您的配置并重启 `wpa_supplicant` 以使更改生效。这当然不是配置无线网络的最佳方式，但在某些情况下会很有用。
 
-毕竟，让我们回顾一下以下步骤，这些步骤以简单而有用的方式帮助您在 CentOS 7 上设置 **WiFi:**
+毕竟，让我们回顾一下以下步骤，这些步骤以简单而有用的方式帮助您在 CentOS 7 上设置 **WiFi**：
 
-**1-** 进入您的系统设置= >网络设置
+**1-** 进入您的系统设置 => 网络设置
 
 **2-** 点击选项卡“无线”
 
@@ -94,7 +95,7 @@ priority=10
 
 **6-** 点击无线安全选项卡
 
-**7-** 从下拉列表中选择密码类型。在我的情况下，这是水渍险/WPA2 个人。
+**7-** 从下拉列表中选择密码类型。在我的情况下，这是 WPA/WPA2 个人。
 
 **8-** 输入密码
 
@@ -112,7 +113,7 @@ priority=10
 
 ### 提示
 
-**1-** 您可以使用 iwconfig/iw 命令、 [cat 命令](https://blog.eldernode.com/useful-linux-commands/)或 GUI 来查看 WLAN 接口的速度。
+**1-** 您可以使用 `iwconfig`/`iw` 命令、[cat 命令](https://blog.eldernode.com/useful-linux-commands/)或 GUI 来查看 WLAN 接口的速度。
 
 **2-** 如果您希望激活无线接口，请运行以下命令列出无线接口。您应该是根用户，因为没有根级别的访问权限，普通用户不能接触配置文件。
 
@@ -120,13 +121,13 @@ priority=10
 ifconfig -a
 ```
 
-**3-** 要了解您的 WiFi 信号水平，请使用 iwspy 命令。您应该在输出中收到以 dBm 为单位的信号质量数。
+**3-** 要了解您的 WiFi 信号水平，请使用 `iwspy` 命令。您应该在输出中收到以 dBm 为单位的信号质量数。
 
 ```
 iwconfig wlan0 | grep -i --color signal
 ```
 
-如果你渴望为 Linux 管理无线和有线网络，使用 Wicd，( **W** 无线 **I** 接口 **C** 连接 **D** aemon)一个开源工具。
+如果你渴望为 Linux 管理无线和有线网络，使用 Wicd，（ **W** 无线 **I** 接口 **C** 连接 **D** aemon）一个开源工具。
 
 ## 结论
 

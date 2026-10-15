@@ -1,3 +1,4 @@
+
 # 如何在 Linux Debian 10 - Eldernode 博客上安装 GNS3
 
 > 原文：<https://blog.eldernode.com/install-gns3-on-linux-debian-10/>
@@ -6,7 +7,7 @@
 
 GNS3 是一款免费的开源网络模拟软件，于 2008 年首次发布。GNS3 代表图形网络模拟器 3。该软件允许对网络设备进行虚拟和真实(完整)的图形模拟，从而为教育目的构建完整和复杂的网络。GNS3 软件基于 Dynamips 代码，允许您在 PC 上运行 Cisco iOS，而不是在昂贵的 Cisco 设备上运行。在这篇文章中，我们将学习如何在 Linux Debian 10 上安装 GNS3。你可以访问 [Eldernode](https://eldernode.com/) 提供的包来购买 [Linux VPS](https://eldernode.com/linux-vps/) 服务器。
 
-## **教程在 Linux 上安装 GNS 3 Debian 10**
+## 教程在 Linux 上安装 GNS 3 Debian 10
 
 世界各地的许多网络工程师使用 [GNS3](https://blog.eldernode.com/gns3-software-for-network-engineers/) 软件来模拟他们的企业网络。这个软件是一个流行的模拟软件。
 
@@ -16,9 +17,9 @@ GNS3 是一款免费的开源网络模拟软件，于 2008 年首次发布。GNS
 
 在过去，网络工程师只有有限的选择来学习或探索他们的网络。他们必须获得许可或购买设备进行研究，但今天有几个选择这样做，包括 GNS3 模拟器！在这篇文章的后续部分，我们将学习如何在 Linux Debian 10 上安装 GNS3。
 
-### **在 Linux 上安装 GNS 3 Debian 10 | Debian 9**
+### 在 Linux 上安装 GNS 3 Debian 10 | Debian 9
 
-现在你需要按照下面的步骤在 Linux Debian 10 上安装 GNS3。要在 **Debian Jessie** 上安装 GNS3，需要将以下命令添加到/etc/apt/sources.list 中:
+现在你需要按照下面的步骤在 Linux Debian 10 上安装 GNS3。要在 **Debian Jessie** 上安装 GNS3，需要将以下命令添加到`/etc/apt/sources.list`中:
 
 ```
 deb http://ppa.launchpad.net/gns3/ppa/ubuntu trusty main 
@@ -46,7 +47,7 @@ deb http://ppa.launchpad.net/gns3/ppa/ubuntu xenial main
 deb-src http://ppa.launchpad.net/gns3/ppa/ubuntu xenial main
 ```
 
-***注意:*** 需要注意的是，用于此目的的 Python 库是破的，不起作用。
+**注意:** 需要注意的是，用于此目的的 Python 库是破的，不起作用。
 
 最后，对于 **Debian Buster** ，你需要更新你的元数据。为此，请运行以下命令来安装所需的软件包:
 
@@ -68,7 +69,7 @@ pip3 install gns3-server
 pip3 install gns3-gui
 ```
 
-然后，在下一步中，您必须通过执行以下命令来输入 **Docker GPG** 键。注意，Buster 现在需要使用“ **edge** ”回购。
+然后，在下一步中，您必须通过执行以下命令来输入 **Docker GPG** 键。注意，Buster 现在需要使用“**edge**”回购。
 
 ```
 curl -fsSL https://download.docker.com/linux/debian/gpg | sudo apt-key add -
@@ -88,7 +89,7 @@ sudo apt update
 sudo apt install -y docker-ce
 ```
 
-您现在应该将以下命令添加到/etc/apt/sources.list 中:
+您现在应该将以下命令添加到`/etc/apt/sources.list`中:
 
 ```
 deb http://ppa.launchpad.net/gns3/ppa/ubuntu bionic main

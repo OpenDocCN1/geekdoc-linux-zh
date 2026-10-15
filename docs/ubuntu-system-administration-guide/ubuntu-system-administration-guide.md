@@ -1,37 +1,13 @@
+
 # Ubuntu 系统管理指南
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 献辞
+## 献辞
 
 本书献给你，这位翻开这本书并开启 Linux 之程第一步的读者。我很荣幸能与你共同这段冒险。
 
 我的家人和朋友们，感谢你们在这段不可思议的挑战中给予我不懈的支持和鼓励。
 
-# 关于作者
+## 关于作者
 
 Mattias Hemmingsson 是一位资深的 IT 专业人士，在设计、构建和保护现代 IT 基础设施方面拥有二十多年的经验。他在云计算、DevOps 和系统架构方面有着深厚的底基，并成功领导了任务关键环境中高可用系统的开发和运营，特别是在金融领域，在那个领域，稳定性和性能是不可妥协的。
 
@@ -47,17 +23,17 @@ Mattias 在技术社区也扮演着活跃的角色。他共同主持 DevSecOps T
 
 无论是构建基础设施、编写代码还是领导培训课程，Mattias 都对现代系统从初始设置到长期安全和可扩展性的整个过程有着全面的理解。
 
-# 关于评审员
+## 关于评审员
 
--   **Nathan Molelete** 是一位出色的 Linux DevOps 工程师，在云计算、自动化和基础设施管理方面拥有深厚背景。他在 Linux 系统管理、网络和应用部署方面拥有丰富经验，专注于确保企业 IT 环境的可靠性、可扩展性和安全性。
+- **Nathan Molelete** 是一位出色的 Linux DevOps 工程师，在云计算、自动化和基础设施管理方面拥有深厚背景。他在 Linux 系统管理、网络和应用部署方面拥有丰富经验，专注于确保企业 IT 环境的可靠性、可扩展性和安全性。
 
 Nathan 精通 Ansible 和 Terraform 等自动化工具，能够实现高效的配置管理和**基础设施即代码**（IaC）实践。他在容器化技术（包括 Docker 和 Podman）以及 Kubernetes 和 Minikube 等编排平台方面拥有专业知识。使用 Jenkins 和 Git 进行 CI/CD 流水线的实战经验让他能够简化软件交付并提高运营效率。
 
 他在生产和测试环境中工作，负责维护最佳系统性能、解决复杂问题并实施高可用和安全的最佳实践。他的知识涵盖了 Apache 和 NGINX 等 Web 服务器、MySQL 和 PostgreSQL 等数据库管理以及 Azure 等云平台。
 
--   **Cyrus** 是一位软件开发者、教育者和内容创作者，在 React、Next.js 和现代 Web 技术方面拥有专长。他开发了教育平台，构建了可扩展的 Web 应用，并创建了名为《Testing with Vitest》的 LinkedIn Learning 课程，已有 1000 多名学员完成。Cyrus 热于赋予他人，分享关于测试性能优化和前沿工具的见解，帮助开发者构建更智能、更高效的应用。
+- **Cyrus** 是一位软件开发者、教育者和内容创作者，在 React、Next.js 和现代 Web 技术方面拥有专长。他开发了教育平台，构建了可扩展的 Web 应用，并创建了名为《Testing with Vitest》的 LinkedIn Learning 课程，已有 1000 多名学员完成。Cyrus 热于赋予他人，分享关于测试性能优化和前沿工具的见解，帮助开发者构建更智能、更高效的应用。
 
-# 致谢
+## 致谢
 
 我想向所有对本书完成做出贡献的人表示诚挚的谢意。
 
@@ -73,13 +49,9 @@ Nathan 精通 Ansible 和 Terraform 等自动化工具，能够实现高效的�
 
 最后，感谢读者的关注和支持。知道这本书能为你们提供信息、启发或帮助，对我来说就是最大的回报。
 
-
-
-
-
 感谢每一位为本书的诞生做出贡献的人士。
 
-# 前言
+## 前言
 
 Linux 正在迅速成为当今数字基础设施的基础，从个人桌面、企业级 Web 服务器，到到尖端云平台、智能家居设备和嵌入式 IoT 系统，它在每一个领域都发挥着核心作用。它的足迹遍布计算的每一个角落。无论你是在浏览网站、在云端部署应用，还是在进行某个开发项目，都有可能 Linux 正在幕后运行。
 
@@ -95,36 +67,21 @@ Linux 正在迅速成为当今数字基础设施的基础，从个人桌面、�
 
 本书是你通往那里的路线图，通过实用的指南、实手的练习和真实的用例，帮助你作为一名 Linux 用户建立信心和能力。
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 代码包与彩色图片
+## 代码包与彩色图片
 
 请点击下方链接下载本书的代码包和彩色图片：
 
 https://rebrand.ly/ou09t8w
 
 该书的代码包也托管在 GitHub 上：
+
 https://github.com/bpbpublications/Ubuntu-System-Administration-Guide.
 
 如果代码有更新，将在现有的 GitHub 仓库中更新。
 
 我们在丰富的书籍和视频目录中提供了许多代码包，地址为：https://github.com/bpbpublications。欢迎查阅！
 
-# 勘误表
+## 勘误表
 
 errata@bpbononline.com
 
@@ -134,14 +91,13 @@ BPB Publications 全体非常感谢您的支持、建议和反馈。
 
 在 www.bpbononline.com，您还可以阅读免费技术文章合集、订阅系列免费时通讯，并接收 BPB 书籍和电子书的专属折扣和优惠。
 
-
 如果您在互联网上发现我们作品的任何形式的非法复制，如果您能提供所在地地址或网站名称，我们将不胜感激。请通过 business@bpbonline.com 联系我们并附上材料链接。
 
-# 如果您兴趣成为作者
+## 如果您兴趣成为作者
 
 如果您在某个领域拥有专长，并对编写或贡献书籍感兴趣，请访问 www.bpbononline.com。我们已与数千名像您这样的开发者和技术专业人士合作，帮助他们向全球技术社区分享见解。您可以进行通用申请、申请我们正在招募作者的特定主题，或提交自己的想法。
 
-# 评论
+## 评论
 
 请留下您的评价。在阅读并使用本书后，为什么不在您购买的网站上留个评价呢？潜在读者可以查看并参考您的公正意见来做出购买决策。我们 BPB 理解您对我们产品的看法，我们的作者也能看到您对书籍的反馈。感谢！
 
@@ -151,15 +107,20 @@ BPB Publications 全体非常感谢您的支持、建议和反馈。
 
 加入书籍的 Discord 空间获取最新更新、优惠、全球科技动态以及与作者互动：
 
+
+
 https://discord.bpbonline.com
 
 ![](img/729ff652633ff312828be609e679849e_png)
 
-
 ## 1. 熟悉 Ubuntu 生态系统
-- 引言
-- 结构
-- 目标
+
+### 引言
+
+### 结构
+
+### 目标
+
 - Linux 历史
 - Linux 技术栈
 - Linux 使用与统计
@@ -171,20 +132,22 @@ https://discord.bpbonline.com
   - LXLE
   - 其他 Linux 发行版
 - 创建 GitHub 和博客账号
-- Git
+- `Git`
 - 博客
 - 书籍仓库
-- 总结
-- 参考文献
+
+### 总结
+
+### 参考文献
 
 ## 2. 安装、升级和配置 Ubuntu 桌面
-- 引言
+
+### 引言
 
 ### 结构
-- 引言
 
-### 结构
-- 目标
+### 目标
+
 - 安装 Ubuntu
 - Ubuntu 前期准备
 - Windows 或 Ubuntu 双系统
@@ -203,20 +166,27 @@ https://discord.bpbonline.com
 - Snap Store
 - 更新 Ubuntu
 - 升级 Ubuntu LTS
-- .config 文件夹
-- 总结
+- `.config` 文件夹
+
+### 总结
 
 ## 3. 环境与窗口管理器
-- 引言
-- 结构
-- 目标
+
+### 引言
+
+### 结构
+
+### 目标
+
 - 安装 i3 窗口管理器
 
 ### 平铺化
+
 - 额外命令
 - 故障排除命令
 
 ### i3 命令
+
 - 自定义快捷键
 - 背景图片
 - 锁屏
@@ -224,6 +194,7 @@ https://discord.bpbonline.com
 - i3 进阶技巧
 
 ### 在 Ubuntu 上工作
+
 - 电子邮件
 - 密码管理器
 - PGP 加密
@@ -235,7 +206,8 @@ https://discord.bpbonline.com
 - 文件同步
 
 ### 在 Ubuntu 上开发
-- Git
+
+- `Git`
 - Code
 - PyCharm
 - 关于代码编辑器
@@ -243,17 +215,14 @@ https://discord.bpbonline.com
 ### 总结
 
 ## 4. 设置防火墙、VPN 和 Wi-Fi 网络
-- 引言
 
-
-
-
+### 引言
 
 ### 结构
 
 ### 目标
 
-网络 DHCP 或静态 IP
+### 网络 DHCP 或静态 IP
 
 - 网络静态设置
 - 连接到 VLAN 段网络
@@ -272,137 +241,135 @@ https://discord.bpbonline.com
 
 ## 5. 准备虚拟化环境
 
-引言
+### 引言
 
 ### 结构
 
 ### 目标
 
-Ubuntu 虚拟化概述
+### Ubuntu 虚拟化概述
 
 - Ubuntu 中的 KVM 虚拟化
 - 创建网桥
 
-安装我们的第一个虚拟机
+### 安装我们的第一个虚拟机
 
-你的虚拟机的设置
+### 你的虚拟机的设置
 
-快照
+### 快照
 
 - 自定义快照
 
-访问虚拟机
+### 访问虚拟机
 
-在虚拟机中直接使用硬件设备
+### 在虚拟机中直接使用硬件设备
 
-其他虚拟化
+### 其他虚拟化
 
-在 KVM 内部构建并运行 Vagrant 盒
+### 在 KVM 内部构建并运行 Vagrant 盒
 
-在 KVM 内部运行 VirtualBox
+### 在 KVM 内部运行 VirtualBox
 
-镜像相互转换
+### 镜像相互转换
 
-结论
+### 结论
 
-# 6. Kubernetes 运行 Kubernetes
+## 6. Kubernetes 运行 Kubernetes
 
-引言
+### 引言
 
 ### 结构
 
 ### 目标
 
-Docker 和容器
+### Docker 和容器
 
-安装 Docker
+### 安装 Docker
 
-为 Ubuntu 设置 Docker 仓库
+### 为 Ubuntu 设置 Docker 仓库
 
-Docker Hub
+### Docker Hub
 
 - 官方镜像
 
-启动你的第一个 Docker
+### 启动你的第一个 Docker
 
-扩展我们的 Docker Compose 以运行服务
+### 扩展我们的 Docker Compose 以运行服务
 
-添加 Docker Compose
+### 添加 Docker Compose
 
-使用 Docker Compose 连接服务
+### 使用 Docker Compose 连接服务
 
-扩展 Docker Compose
+### 扩展 Docker Compose
 
-连接两个栈
+### 连接两个栈
 
-使用 Docker 进行本地开发
+### 使用 Docker 进行本地开发
 
-关于 Kubernetes
+### 关于 Kubernetes
 
-在 Kubernetes 上部署应用
+### 在 Kubernetes 上部署应用
 
-MySQL
+- MySQL
+- WordPress
+- 访问你的服务
 
-WordPress
-
-访问你的服务
-
-结论
+### 结论
 
 ## 7. 在物理机、云端和网络上安装 Ubuntu Server
 
-引言
+### 引言
 
 ### 结构
 
 ### 目标
 
-“牲畜”与“宠物”（Cattle vs. pets）
+### “牲畜”与“宠物”（Cattle vs. pets）
 
-使用 SSH 连接你的服务器
+### 使用 SSH 连接你的服务器
 
-使用 USB 安装 Ubuntu Server
+### 使用 USB 安装 Ubuntu Server
 
-连接到你的 Ubuntu Server
+### 连接到你的 Ubuntu Server
 
-在虚拟机中使用 Ubuntu
+### 在虚拟机中使用 Ubuntu
 
-Google Cloud 和 Hetzner 上的 Ubuntu Server
+### Google Cloud 和 Hetzner 上的 Ubuntu Server
 
 - Hetzner 云和裸机服务器提供商
 
-在 Google Cloud 中创建 Ubuntu Server
+### 在 Google Cloud 中创建 Ubuntu Server
 
-让大型 Ubuntu 安装变得简单
+### 让大型 Ubuntu 安装变得简单
 
-PXE 启动
+### PXE 启动
 
-使用 MAAS 准备虚拟机
+### 使用 MAAS 准备虚拟机
 
-设置我们的网络
+### 设置我们的网络
 
-在我们的服务器上进行 PXE 安装
+### 在我们的服务器上进行 PXE 安装
 
-启动时间
+### 启动时间
 
-更多控制权
+### 更多控制权
 
-结论
+### 结论
 
 ## 8. 运维
 
-引言
+### 引言
 
 ### 结构
 
 ### 目标
 
-监控 Linux 服务器的命令
+### 监控 Linux 服务器的命令
 
-- Top
-- Netstat
-- lsof
-- du
+- `Top`
+- `Netstat`
+- `lsof`
+- `du`
 
 ### 使用 Cockpit 监控 Ubuntu Server
 
@@ -429,154 +396,165 @@ PXE 启动
 
 ## 9. 设置高级网络、防火墙和 VPN 服务器
 
-引言
+### 引言
 
 ### 结构
 
 ### 目标
 
-使用 Ubuntu 作为主防火墙
+### 使用 Ubuntu 作为主防火墙
 
 - Ubuntu 虚拟网卡和 VLAN
 - VLAN
 - 设置路由网络
 
-使用 iptables 控制流量
+### 使用 `iptables` 控制流量
 
-确保你的安全
+### 确保你的安全
 
-使用带有 DHCP 和 DNS 的网络客户端
+### 使用带有 DHCP 和 DNS 的网络客户端
 
-DNS 设置
+### DNS 设置
 
-确保通信安全
+### 确保通信安全
 
-OpenVPN
+### OpenVPN
 
-为了连接我们的客户端
+### 为了连接我们的客户端
 
-在客户端上
+### 在客户端上
 
-WireGuard VPN
+### WireGuard VPN
 
-VPN 故障排除
+### VPN 故障排除
 
-结论
+### 结论
 
 ## 10. 运行虚拟化服务器环境
 
-引言
+### 引言
 
 ### 结构
 
 ### 目标
 
-在你的 Ubuntu Server 上安装 KVM
+### 在你的 Ubuntu Server 上安装 KVM
 
-使用 KVM GUI 从桌面连接
+### 使用 KVM GUI 从桌面连接
 
-安装 KVM Web 界面
+### 安装 KVM Web 界面
 
-创建虚拟机服务器
+### 创建虚拟机服务器
 
-使用 virsh 命令控制你的虚拟机
+### 使用 `virsh` 命令控制你的虚拟机
 
-共享存储
+### 共享存储
 
-专用的虚拟机 Linux 版本
+### 专用的虚拟机 Linux 版本
 
-容器
+### 容器
 
 - Podman 的功能
 
-安装 Podman
+### 安装 Podman
 
-设置 Podman 仓库
+### 设置 Podman 仓库
 
-Podman 的 CNI 插件错误
+### Podman 的 CNI 插件错误
 
 ### 使用 Grafana 和 Prometheus 进行设置和监控
 
-使用 Loki 读取日志
+### 使用 Loki 读取日志
 
-日志日志 (Journal logs)
+### 日志日志 (Journal logs)
 
-基于容器的监控客户端
+### 基于容器的监控客户端
 
-结论
+### 结论
 
 ## 11. 设置 Web 服务器、部署并运行 Web 应用
 
-引言
+### 引言
 
 ### 结构
 
 ### 目标
 
-Web 服务器
+### Web 服务器
 
 - Apache
 - Web 内容
 
-首次配置
+### 首次配置
 
-NGINX
+### NGINX
 
-数据库
+### 数据库
 
 - MariaDB SQL
 - MongoDB
 
-数据库工具
+### 数据库工具
 
 - phpmyadmin
 
-部署 Web 应用
+### 部署 Web 应用
 
-WordPress
+- WordPress
+- Observium
+- Rocket.Chat
 
-Observium
+### Web 性能
 
-Rocket.Chat
+### 备份
 
-Web 性能
+### 数据库用户
 
-备份
-
-数据库用户
-
-结论
+### 结论
 
 ## 12. Kubernetes 运行与设置
 
-- 引言
-- 结构
-- 目标
-- 在 Ubuntu 上安装 Kubernetes
-- 安装 Kubernetes 依赖项
-- 设置我们的 Kubernetes 集群
-  - 部署 Kubernetes 基础服务
-    - 安装 Helm
-    - 存储
-    - 监控
-    - 入口 (Ingress)
-    - 负载均衡器
-    - 日志
-- 在 Kubernetes 中安装 WordPress
-  - MySQL
-    - WordPress
-    - 访问我们的 WordPress
-  - 设置 MetalLB
-    - 使用 Grafana 监控 Kubernetes 集群
-- 需要记忆的 kubectl 命令
-  - Pods
-- 结论
+### 引言
+
+### 结构
+
+### 目标
+
+### 在 Ubuntu 上安装 Kubernetes
+
+### 安装 Kubernetes 依赖项
+
+### 设置我们的 Kubernetes 集群
+
+- 部署 Kubernetes 基础服务
+  - 安装 Helm
+  - 存储
+  - 监控
+  - 入口 (Ingress)
+  - 负载均衡器
+  - 日志
+
+### 在 Kubernetes 中安装 WordPress
+
+- MySQL
+  - WordPress
+  - 访问我们的 WordPress
+- 设置 MetalLB
+  - 使用 Grafana 监控 Kubernetes 集群
+
+### 需要记忆的 `kubectl` 命令
+
+- Pods
+
+### 结论
 
 ## 13. 任务自动化、CI/CD 流水和服务部署
 
-- 引言
-- 结构
-- 目标
+### 引言
+
+### 结构
+
+### 目标
 
 ### 基础 Bash
 
@@ -587,28 +565,25 @@ Web 性能
 - 本地构建
 - 构建并推送
 
-### 使用 terraform 部署 Kubernetes
+### 使用 `terraform` 部署 Kubernetes
 
 - 初始化 Terraform
 - Terraform 命令
-- Terraform plan
-- Terraform apply
+- `Terraform plan`
+- `Terraform apply`
 - CI/CD
 
 ### 结论
 
 ## 索引
 
-# # 第 1 章
-熟悉 Ubuntu 生态系统
 
-### 引言
 
 在本章中，我们将介绍 Linux 和 Ubuntu。我们将从讨论 Linux 的创建开始。然后，我们将深入 Ubuntu，看看它是如何开始的，理解 Ubuntu 的发布，并涵盖 Ubuntu 的不同版本。最后，我们将介绍其他 Linux 发行版以及它们与 Ubuntu 的区别。此外，我们将讨论构成 Linux 栈的组成。
 
 我们鼓励你在本章结束时创建一个博客页面并注册账户，以便准备好书中后续的章节。
 
-### 结构
+## 结构
 
 在本章中，我们将涵盖以下主题：
 
@@ -621,11 +596,11 @@ Web 性能
 - 其他 Linux 发行版
 - 创建 GitHub 和 blogger 账户
 
-### 目标
+## 目标
 
 在本章结束时，我们将理解 Linux 是如何产生的以及 Linux 栈的不同部分是如何组合在一起的。我们还将理解不同 Linux 版本以及 Ubuntu 是如何版本化和发布的。
 
-### Linux 历史
+## Linux 历史
 
 Linux 是 Linus Torvalds 在 1991 年在赫尔辛基大学担任计算机科学学生时（21岁时）创建的。最初，Linus 将这项发明命名为 Freax，但上传项目的 FUNET 管理员不喜欢这个名字，将其重命名为 Linux。
 
@@ -633,25 +608,21 @@ Tux，如图 1.1 所示的企鹅吉祥物，是 Linus 在访问悉尼动物和�
 
 今天，你可以在 GitHub 上找到 Linux 内核开发：https://github.com/torvalds/linux 并在那里开发，目前 Linux 内核有超过 13 万贡献者。参考以下链接：https://en.wikipedia.org/wiki/Ubuntu
 
-### Linux 栈
+## Linux 栈
 
 Linux 内核是所有 Linux 操作系统的基础。它是启动并添加所有驱动程序的。如果汽车品牌是 Ubuntu，那么引擎就是 Linux 内核。
 
-现在，如果你想把 Linux 系统作为桌面电脑使用，你还需要某种窗口管理器。在这本书中，我们将更多地查看窗口管理器 i3 以及 Ubuntu 默认的窗口管理器 gnome。
+现在，如果你想把 Linux 系统作为桌面电脑使用，你还需要某种窗口管理器。在这本书中，我们将更多地查看窗口管理器 `i3` 以及 Ubuntu 默认的窗口管理器 `gnome`。
 
-### 使用和统计
+## 使用和统计
 
 Linux 和 Ubuntu 的使用增长迅速。今天，Linux 是我们超级计算机使用的主要操作系统。它运行在 NASA 服务器上，也是物联网（IoT）设备最常用的操作系统。
 
 在云端，它是主导性操作系统，所有运行的操作系统中有 90% 都是 Linux。Linux 驱动着 Kubernetes 集群，而该集群正成为托管应用程序的默认平台。
 
+根据最新的 Linux 发行版统计，Ubuntu 是最流行的 Linux 发行版 (32.8%)，其次是 Debian (14.4%) 和 CentOS (10.8%)。
 
-
-
-
-- 根据最新的 Linux 发行版统计，Ubuntu 是最流行的 Linux 发行版 (32.8%)，其次是 Debian (14.4%) 和 CentOS (10.8%)。
-
-### Ubuntu 历史
+## Ubuntu 历史
 
 最常用的操作系统之一是 Debian，而 Ubuntu 是基于 Debian 的。Ubuntu 由英国 Canonical 公司构建，旨在成为一个友好且易用的 Linux 系统。第一个版本 Ubuntu 4.10 发布于 2004 年 10 月。如今，情况已经发生了许多变化，Ubuntu 现在已经发布了 22.04 版本。
 
@@ -659,13 +630,13 @@ Ubuntu 有一个基础版本。Ubuntu Desktop 是适用于笔记本电脑、办�
 
 https://en.wikipedia.org/wiki/Ubuntu
 
-### Ubuntu 发布
+## Ubuntu 发布
 
 Ubuntu 每年发布两次，分别在 4 月 4 日和 10 月 10 日发布版本。发布版本的名称包含年份。Ubuntu 22.10 将于 2022 年 10 月发布。那么，一个版本的支持周期多久呢？这取决于具体情况。Ubuntu 提供长期支持 (LTS) 版本，LTS 版本受支持十年。如果你计划搭建一个运行时间较长的服务器或用于工作的桌面电脑，请考虑使用 LTS 版本。然而，如果你想要最新的内核和工具，可以查看最新的发布版本。在书中，我们建议安装 LTS 版本。Ubuntu 还提供了从 LTS 升级到下一个版本的工具。
 
 更多关于 Ubuntu 发布可以通过 https://ubuntu.com/about/release-cycle。
 
-### Ubuntu 版本
+## Ubuntu 版本
 
 Ubuntu 和 Linux 内核都是开源的，这导致许多开发者创建了他们自己的 Ubuntu 版本。人们希望在学校或音乐工作室等特定特定版本的 Ubuntu 上使用另一种图形桌面环境。
 
@@ -695,7 +666,7 @@ LXLE 的开发者将其描述为“资源占用少、功能强大”。LXLE 基�
 
 你可以在 https://lxle.net/ 找到关于 LXLE 的更多信息和下载链接。
 
-### 其他 Linux 发行版
+## 其他 Linux 发行版
 
 Ubuntu 基于名为 Debian 的 Linux 发行版，但 Linux 操作系统比 Ubuntu 多。Raspberry Pi OS 是另一个基于 Debian 的著名操作系统。然而，还有更多。Kali Linux 是一个为黑客专门构建的 Linux 操作系统。它包含了黑客所需的所有工具，并可以从 USB 内存轻松运行。
 
@@ -715,23 +686,25 @@ Red Hat（红帽）拥有许多公司使用的 Red Hat Enterprise发行版。它
 
 然而，flatcar Linux 运行在 Kubernetes 集群中，这有利于运行容器和 Kubernetes。
 
-我们可能有一些运行 Red Hat 的服务器，其区别在于，例如包管理器。在 Ubuntu 中，正如你将在书中学到的，包工具称为 apt。
+我们可能有一些运行 Red Hat 的服务器，其区别在于，例如包管理器。在 Ubuntu 中，正如你将在书中学到的，包工具称为 `apt`。
 
 在 Ubuntu/Debian Linux 上安装 apache 的命令：
 
-- 1. apt-get install apache
+- `apt-get install apache`
 
-然而，在 Red Hat 服务器上，你的包管理器名为 yum。所以，要安装 Apache Web 服务器，你需要运行。
+然而，在 Red Hat 服务器上，你的包管理器名为 `yum`。所以，要安装 Apache Web 服务器，你需要运行。
 
-- 1. yum install httpd
+- `yum install httpd`
 
 它们都会安装 Apache Web 服务器，但你输入安装 Apache 的命令的方式是不同的。在 Alpine Linux 中相同的命令如下：
 
-- 1. apk add apache
+- `apk add apache`
 
-这种方式上存在一些差异，但正如你将在书中学习如何使用 apt，迁移到基于红帽的 Linux 是简单的，而且安装包的基础是相同的。你只需要找到正确的命令即可。
+这种方式上存在一些差异，但正如你将在书中学习如何使用 `apt`，迁移到基于红帽的 Linux 是简单的，而且安装包的基础是相同的。你只需要找到正确的命令即可。
 
-### 创建 GitHub 和 blogger 账户
+## 创建 GitHub 和 blogger 账户
+
+
 
 在书中，当我们设置桌面并在我们的 Ubuntu 服务器上安装 Web 服务等服务时，我们将使用代码和配置文件。我们将构建 Docker 应用来运行 WordPress 和其他应用，并通过设置 GitHub 账户和 Blogger 账户来保存我们所有的工作（包括代码和我们所做的）。
 
@@ -739,9 +712,9 @@ Red Hat（红帽）拥有许多公司使用的 Red Hat Enterprise发行版。它
 
 在本书期间，你将处理代码和配置，将你的代码和设置保存在 Git 仓库中是一项良好的习惯。
 
-例如，你把所有的 .config 文件保存在 Git 仓库中，这样所有的 Ubuntu 设置都会被保存。
+例如，你把所有的 `.config` 文件保存在 Git 仓库中，这样所有的 Ubuntu 设置都会被保存。
 
-使用 git 存储代码最常用的平台之一是 https://github.com。在我们编写代码之前，我们将设置它。
+使用 `git` 存储代码最常用的平台之一是 https://github.com。在我们编写代码之前，我们将设置它。
 
 ### 博客
 
@@ -765,15 +738,10 @@ https://github.com/bbppublications/Ubuntu-Linux-in-30-days
 - https://flatcar-linux.org/
 - https://www.talos.dev/
 - https://aws.amazon.com/bottlerocket/
-
-
-
-
-
 - 软件商店
 - 更新 Ubuntu
 - 升级 Ubuntu LTS
-- .config 文件夹
+- `.config` 文件夹
 
 ### 目标
 
@@ -829,27 +797,27 @@ https://se.starlabs.systems/
 
 首先，我们需要下载将使用的 Ubuntu 版本。你可以按照以下步骤操作：
 
-- 1. 访问 Ubuntu 下载页面下载 Ubuntu 桌面版，**https://ubuntu.com/download/desktop**
+- 1. 访问 Ubuntu 下载页面下载 Ubuntu 桌面版，`https://ubuntu.com/download/desktop`
 - 2. 将 ISO 文件下载到你的电脑。
-- 3. 当我们的电脑上有了 ISO 文件后，必须将其写入 USB 盘。我们有很多不同的工具可以使用。如果你已经有了 Ubuntu 桌面版，那么 Ubuntu 有一个名为 **Create Startup Disk** 的程序。
+- 3. 当我们的电脑上有了 ISO 文件后，必须将其写入 USB 盘。我们有很多不同的工具可以使用。如果你已经有了 Ubuntu 桌面版，那么 Ubuntu 有一个名为 `Create Startup Disk` 的程序。
 
 ### 使用 Etcher 启动 USB
 
-要制作可启动的 USB 盘，我们需要将 Ubuntu ISO 制作到 USB 密钥中。为此，我们使用一个名为 **Etcher** 的工具。
+要制作可启动的 USB 盘，我们需要将 Ubuntu ISO 制作到 USB 密钥中。为此，我们使用一个名为 `Etcher` 的工具。
 
-**https://www.balena.io/etcher/**
+`https://www.balena.io/etcher/`
 
-Etcher 适用于 Linux、Windows 和 MAC。它是为 Ubuntu、树莓派和任何其他 Linux 发行版写入 Linux 镜像的优秀工具。*图 2.1* 展示了 Etcher 的启动界面如下：
+`Etcher` 适用于 Linux、Windows 和 MAC。它是为 Ubuntu、树莓派和任何其他 Linux 发行版写入 Linux 镜像的优秀工具。图 2.1 展示了 Etcher 的启动界面如下：
 
 ![](img/729ff652633ff312828be609e679849e_46_0.png)
 
-**图 2.1:** 用于制作 USB 盘的 Etcher 工具
+图 2.1: 用于制作 USB 盘的 Etcher 工具
 
-从选择我们下载的 Ubuntu 镜像和目标 USB 盘开始，如图 [2.2] 所示：
+从选择我们下载的 Ubuntu 镜像和目标 USB 盘开始，如图 2.2 所示：
 
 ![](img/729ff652633ff312828be609e679849e_46_1.png)
 
-**图 2.2:** 选择了 ISO 和 USB 盘的 Etcher
+图 2.2: 选择了 ISO 和 USB 盘的 Etcher
 
 在我们选择 ISO 后，我们需要选择想要刻录 ISO 的驱动器。Etcher 非常出色，这里应该只显示 USB 盘。
 
@@ -857,7 +825,7 @@ Etcher 适用于 Linux、Windows 和 MAC。它是为 Ubuntu、树莓派和任何
 
 ![](img/729ff652633ff312828be609e679849e_47_0.png)
 
-**图 2.3:** Etcher 将镜像写入 USB 盘
+图 2.3: Etcher 将镜像写入 USB 盘
 
 当 Etcher 正向 USB 盘写入镜像时，需要管理员权限将启动数据写入 USB 盘；如果失败，请确保以管理员身份运行。
 
@@ -865,29 +833,25 @@ Etcher 适用于 Linux、Windows 和 MAC。它是为 Ubuntu、树莓派和任何
 
 ![](img/729ff652633ff312828be609e679849e_48_0.png)
 
-**图 2.4:** Etcher 已刻录 USB
+图 2.4: Etcher 已刻录 USB
 
-从选择我们下载的 Ubuntu 镜像和目标 USB 盘开始，如图 [2.2] 所示：
+从选择我们下载的 Ubuntu 镜像和目标 USB 盘开始，如图 2.2 所示：
 
 ![](img/729ff652633ff312828be609e679849e_46_1.png)
 
-**图 2.2:** 选择了 ISO 和 USB 盘的 Etcher
-
-（注：OCR 文本包含许多重复和伪影。我将根据提供的内容提供清理后的合并版本。）
-
-
-
-
+图 2.2: 选择了 ISO 和 USB 盘的 Etcher
 
 ![](img/729ff652633ff312828be609e679849e_53_0.png)
 
-图 2.11: lspci -vv 的输出
+图 2.11: `lspci -vv` 的输出
 
 图 2.11 显示了命令 `lspci -vvv` 的输出，它显示了网卡等所有内部设备。如果声卡或网卡出现错误，此命令将显示检测到的内容。请验证你的设备是否已显示，例如声卡、麦克风和摄像头。
 
 ## 安装 Ubuntu
 
 现在我们将获取并在电脑上安装 Ubuntu。在桌面上启动指南并按照指南一直操作下去。最终，你的电脑将重启，你需要断开 USB 驱动器。安装 Ubuntu 时的第一个选项是选择语言，如图 2.12 所示：
+
+
 
 ![](img/729ff652633ff312828be609e679849e_54_0.png)
 
@@ -913,7 +877,7 @@ Etcher 适用于 Linux、Windows 和 MAC。它是为 Ubuntu、树莓派和任何
 
 ## 更新和其他软件
 
-现在，我们选择如何安装 Ubuntu。默认选项**普通（Normal）**将安装基础应用，包括 LibreOffice 软件包和其他实用软件。如果你选择**最小化（Minimal）**，Ubuntu 只会安装基础工具。然而，在使用了普通安装后，很难再降级为最小化安装。
+现在，我们选择如何安装 Ubuntu。默认选项 `Normal` 将安装基础应用，包括 LibreOffice 软件包和其他实用软件。如果你选择 `Minimal`，Ubuntu 只会安装基础工具。然而，在使用了普通安装后，很难再降级为最小化安装。
 
 如果你安装了任何 GPU，请选择“安装第三方图形驱动程序”。如果你不确定，我们建议启用它。
 
@@ -931,7 +895,7 @@ Etcher 适用于 Linux、Windows 和 MAC。它是为 Ubuntu、树莓派和任何
 
 图 2.15: 安装类型
 
-在 Ubuntu 做出更改之前，会出现一个列表框来验证磁盘的更改。如图 2.15 所示。要继续并对磁盘进行更改，按下**继续（Continue）**，安装将继续进行。之后，你的电脑将发生如下修改：
+在 Ubuntu 做出更改之前，会出现一个列表框来验证磁盘的更改。如图 2.15 所示。要继续并对磁盘进行更改，按下 `Continue`，安装将继续进行。之后，你的电脑将发生如下修改：
 
 ![](img/729ff652633ff312828be609e679849e_58_0.png)
 
@@ -957,11 +921,7 @@ Etcher 适用于 Linux、Windows 和 MAC。它是为 Ubuntu、树莓派和任何
 
 当 Ubuntu 安装所有软件包后，需要重启，如图 2.20 所示。通过点击现在重启，
 
-
-
-
-
-# 第3 章
+# 第3章
 
 ## 环境与窗口管理器
 
@@ -969,69 +929,73 @@ Etcher 适用于 Linux、Windows 和 MAC。它是为 Ubuntu、树莓派和任何
 
 Ubuntu 拥有我们工作所需的所有全方位工具和软件。广泛使用的办公工具现在有兼容 Windows 的包，或者可以在 浏览器中运行。这意味着 Ubuntu 是专业工作的极佳操作系统选择。你还可以为 Linux 选择不同类型的窗口管理器。
 
-在本章中，我们将介绍名为 i3 的特定窗口管理器。
+在本章中，我们将介绍名为 `i3` 的特定窗口管理器。
 
 ### 结构
 
 在本章中，我们将讨论以下主题：
 
-- 安装 i3 窗口管理器
-- i3 中使用的命令
+- 安装 `i3` 窗口管理器
+- `i3` 中使用的命令
 - 在 Ubuntu 上工作
 - 在 Ubuntu 上开发
 
 ### 目标
 
-在本章中，我们将讨论如何安装 Ubuntu 中常用的工具。你还将理解如何设置和使用密码管理器来保护你的密码并加密文件。我们还会了解如何使用 VPN 将 Ubuntu 连接到网络并个性化你的系统配置。此外，我们将了解如何安装和配置 i3 窗口管理器并使用平铺窗口管理器。
+在本章中，我们将讨论如何安装 Ubuntu 中常用的工具。你还将理解如何设置和使用密码管理器来保护你的密码并加密文件。我们还会了解如何使用 VPN 将 Ubuntu 连接到网络并个性化你的系统配置。此外，我们将了解如何安装和配置 `i3` 窗口管理器并使用平铺窗口管理器。
 
-### 安装 i3 窗口管理器
+## 安装 i3 窗口管理器
 
-在 Ubuntu 中，你可以更改窗口管理器。我们正在使用 i3 窗口管理器；现在你将学习如何安装和使用它。你可以通过注销并选择默认窗口管理器随时返回默认窗口管理器。i3 窗口管理器是一个平铺管理器，因此你打开的所有窗口都会平铺排列。你使用短命令来控制你的桌面。控制应用程序的启动位置也很容易。
+在 Ubuntu 中，你可以更改窗口管理器。我们正在使用 `i3` 窗口管理器；现在你将学习如何安装和使用它。你可以通过注销并选择默认窗口管理器随时返回默认窗口管理器。`i3` 窗口管理器是一个平铺管理器，因此你打开的所有窗口都会平铺排列。你使用短命令来控制你的桌面。控制应用程序的启动位置也很容易。
 
-安装 i3 窗口管理器是可选的，这展示了可以在 Ubuntu 中使用的不同窗口管理器。在你的 Ubuntu 中打开终端并输入以下命令：
+安装 `i3` 窗口管理器是可选的，这展示了可以在 Ubuntu 中使用的不同窗口管理器。在你的 Ubuntu 中打开终端并输入以下命令：
 
 1. `sudo apt install i3`
 
-此命令将安装 i3 窗口管理器以及运行和显示该管理器的基本工具。安装完成后，就是时候登录你的管理器了。要登录管理器，你必须先从当前会话注销。然后，选择 i3 窗口管理器并登录。参考下图：
+此命令将安装 `i3` 窗口管理器以及运行和显示该管理器的基本工具。安装完成后，就是时候登录你的管理器了。要登录管理器，你必须先从当前会话注销。然后，选择 `i3` 窗口管理器并登录。参考下图：
 
 图 3.1：Ubuntu 桌面
 
-如果你想重新登录默认的 GNOME，请遵循相同的步骤，但在登录新的 i3 窗口时不要担心。你可能需要在所有内容看起来良好之前设置屏幕。
+如果你想重新登录默认的 GNOME，请遵循相同的步骤，但在登录新的 `i3` 窗口时不要担心。你可能需要在所有内容看起来良好之前设置屏幕。
 
 ### 平铺
 
-要打开像 Firefox 或 Brave 这样的网络浏览器，输入 Win + D（Windows 键 + D），查看屏幕左上角，输入 Firefox，然后按回车键。现在 Firefox 将在终端旁边打开，所示：
+要打开像 Firefox 或 Brave 这样的网络浏览器，输入 `Win + D`，查看屏幕左上角，输入 Firefox，然后按回车键。现在 Firefox 将在终端旁边打开，所示：
 
-图 3.2：i3 平铺应用
+图 3.2：`i3` 平铺应用
 
-如你在图像所示，窗口并排打开，并且有你可以拖动的浮动窗口。i3 是平铺窗口管理器；每个应用程序都以全屏打开或平铺以适应屏幕。
+如你在图像所示，窗口并排打开，并且有你可以拖动的浮动窗口。`i3` 是平铺窗口管理器；每个应用程序都以全屏打开或平铺以适应屏幕。
 
-1. 让我们从打开终端开始，看看我们是否可以同时通过 Win + Enter（Windows 键 + Enter）设置屏幕。此命令打开一个新实例。
+1. 让我们从打开终端开始，看看我们是否可以同时通过 `Win + Enter` 设置屏幕。此命令打开一个新实例。
 2. 如果你需要设置屏幕，请按照步骤进行正确配置。在你的终端中，现在进入配置 文件夹：
 3. 在开始创建 `.XResources` 文件：
 4. 现在，添加以下内容：
-   - Xft.dpi: 96
-   - Xcursor.size: 24
-   - size: 24
+   - `Xft.dpi: 96`
+   - `Xcursor.size: 24`
+   - `size: 24`
 5. 现在，让我们通过输入以下命令应用这些值：
 
 `xrdb ~/.XResources`
 
-然后使用 Win + Shift + R（Windows 键 + Shift + R）组合重新加载窗口管理器。新设置将被应用，屏幕将发生变化。变化可能会有所不同。上面的设置适用于 Dell XPS 屏幕；必须更改值以适应其他屏幕分辨率。不同的屏幕有不同的设置，你可以根据喜好更改设置。像 Firefox 等程序需要重启才能应用新设置。
+然后使用 `Win + Shift + R` 组合重新加载窗口管理器。新设置将被应用，屏幕将发生变化。变化可能会有所不同。上面的设置适用于 Dell XPS 屏幕；必须更改值以适应其他屏幕分辨率。不同的屏幕有不同的设置，你可以根据喜好更改设置。像 Firefox 等程序需要重启才能应用新设置。
 
-6. 要更改屏幕分辨率或为电脑连接更多屏幕，你需要告诉 i3 中的 xrandr 在新屏幕上显示。从查找你的屏幕开始：
+6. 要更改屏幕分辨率或为电脑连接更多屏幕，你需要告诉 `i3` 中的 `xrandr` 在新屏幕上显示。从查找你的屏幕开始：
 7. `xrandr` 将打印连接的屏幕的长文本以及屏幕可以使用的不同分辨率：
+
 `xrandr --output <screen_name> --auto`
 
-8. 将屏幕 eDP-1 的输出设置为自动：
+8. 将屏幕 `eDP-1` 的输出设置为自动：
+
 `xrandr --output <screen_name> --mode 3840x2160 --right-of <screen_name>`
 
-9. 这将通过 xrandr 命令添加名为 DP-1 的第二个屏幕，并将分辨率设置为 3840x2160。将屏幕放置在笔记本屏幕 eDP-1 的右侧：
+9. 这将通过 `xrandr` 命令添加名为 `DP-1` 的第二个屏幕，并将分辨率设置为 `3840x2160`。将屏幕放置在笔记本屏幕 `eDP-1` 的右侧：
+
 `xrandr --output eDP-1 --auto --output DP-1 --off`
 
-10. 设置笔记本屏幕 eDP-1 的输出，然后关闭外部 DP-1。它们设置了不同的设置在内置和外部屏幕之间切换。为了在不同屏幕之间切换，一个简单的 bash 脚本会很有用：
+10. 设置笔记本屏幕 `eDP-1` 的输出，然后关闭外部 `DP-1`。它们设置了不同的设置在内置和外部屏幕之间切换。为了在不同屏幕之间切换，一个简单的 bash 脚本会很有用：
 
 a. 仅笔记本脚本：
+
 ```bash
 mahe@comp:~/.config$ cat screen_one.sh
 #!/bin/bash
@@ -1039,26 +1003,30 @@ xrandr --output eDP-1 --auto DP-1 --off
 ```
 
 b. 办公脚本：
+
 ```bash
 mahe@comp:~/.config$ cat screen_office.sh
 #!/bin/bash
 xrandr --output DP-2 --mode 3840x2160 --right-of eDP-1
 ```
 
-11. 如你所见，脚本保存在 ~/.config 文件夹中：
+11. 如你所见，脚本保存在 `~/.config` 文件夹中：
+
 `exec --no-startup-id xrdb ~/.config/XResources`
 
-将上述行添加到你的 ~/.config/i3 配置文件，以便在启动时保存并启动你的设置。
+将上述行添加到你的 `~/.config/i3` 配置文件，以便在启动时保存并启动你的设置。
 
 ### 额外命令
 
-我们在 i3 配置中还有以下命令用于截图和打开音量控制：
+我们在 `i3` 配置中还有以下命令用于截图和打开音量控制：
 
 ```bash
 bindsym $mod+X86AudioMute exec pavucontrol # 打开控制
 ```
 
-使用此命令打开 gnome-screenshot：
+使用此命令打开 `gnome-screenshot`：
+
+
 
 ```bash
 bindsym Print exec gnome-screenshot
@@ -1076,10 +1044,15 @@ bindsym Control+Print exec gnome-screenshot -i
 i3 自带了一些基础命令。让我们从基础命令开始。
 
 1. 首先，按 Win + D（Windows 键 + D），然后输入 Firefox 启动 Firefox 浏览器。
+
 2. 现在我们要切换窗口：
+
    Win + 2（Windows 键 + 2）
+
    查看你的左下方，你会看到它被高亮。
+
 3. 在此处按下启动新终端：
+
    Win + Enter（Windows 键 + Enter）
 
 现在你可以通过 Windows键 + 1 或 Windows键 + 2 切换窗口。i3 有许多预置命令，如下表所示：
@@ -1119,9 +1092,6 @@ i3 自带了一些基础命令。让我们从基础命令开始。
 | Win + r | 调整大小模式 |
 
 表 3.3：修改窗口
-
-
-
 
 请查看用户指南中的“调整容器/窗口”（Resizing containers/windows）部分。
 
@@ -1174,7 +1144,7 @@ i3 自带了一些基础命令。让我们从基础命令开始。
 
 这些来自 i3 官网，你可以在这里找到：
 
-https://i3wm.org/docs/refcard.html
+`https://i3wm.org/docs/refcard.html`
 
 ### 自定义快捷键
 
@@ -1182,27 +1152,27 @@ i3 的优势之一是你可以轻松添加自己的快捷键。然后，你可�
 
 使用文本编辑器打开文件：
 
-- 1. gedit .config/i3/config
+- 1. `gedit .config/i3/config`
 
 Windows 键默认设置为 Mod 键。但你可以将其更改任何你喜欢的键。有些人想使用 ctr 键运行它。
 
 要更改 mod 键，请修改此行：
 
-- 1. set $mod Mod4
+- 1. `set $mod Mod4`
 
-将 Mod4 更改为你想要触发命令的按键：
+将 `Mod4` 更改为你想要触发命令的按键：
 
-- 1. set $mod Control
+- 1. `set $mod Control`
 
 ### 背景图片
 
 下载一张图片作为背景并将其放在 `.config/background` 文件夹中。安装为我们设置背景的包：
 
-- 2. sudo apt-get install feh
+- 2. `sudo apt-get install feh`
 
 让我们在 i3 中添加背景图片。在文件底部添加以下行：
 
-- 1. exec --no-startup-id feh --bg-fill ~/.config/background/image.jpg
+- 1. `exec --no-startup-id feh --bg-fill ~/.config/background/image.jpg`
 
 现在，使用加载命令重启 i3。
 
@@ -1212,61 +1182,79 @@ Windows 键默认设置为 Mod 键。但你可以将其更改任何你喜欢的�
 
 安装我们需要的包：
 
-- 1. sudo apt-get install xautolock i3lock
+- 1. `sudo apt-get install xautolock i3lock`
 
 然后将以下行添加到你的 `.config/i3/config` 文件中：
 
-- 1. exec xautolock -time 15 'i3lock -i ~/.config/background/lock.png' &
-- 2. bindsym $mod+l exec i3lock ~/.config/background/lock.png
+- 1. `exec xautolock -time 15 'i3lock -i ~/.config/background/lock.png' &`
 
-第一条命令以 `exec` 开头，告诉 i3 运行该命令并启动。因此，autolock 在后台运行并在 15 分钟后锁定屏幕。它将显示 lock.png 图片。第二行以 `bindsym` 开头，设置当按下 mod 按钮（默认为 Windows 键）和 l 时。它将运行 `i3lock` 命令并锁定屏幕。保存文件并重加载 i3。然后按下 `$mod+/l` 测试你的锁屏。
+- 2. `bindsym $mod+l exec i3lock ~/.config/background/lock.png`
+
+第一条命令以 `exec` 开头，告诉 i3 运行该命令并启动。因此，`autolock` 在后台运行并在 15 分钟后锁定屏幕。它将显示 `lock.png` 图片。第二行以 `bindsym` 开头，设置当按下 mod 按钮（默认为 Windows 键）和 l 时。它将运行 `i3lock` 命令并锁定屏幕。保存文件并重加载 i3。然后按下 `$mod+/l` 测试你的锁屏。
 
 ### 额外配置
 
 向你的配置文件添加以下内容：
 
-- 1. exec --no-startup-id nm-applet
-- 2. exec --no-startup-id blueman
+- 1. `exec --no-startup-id nm-applet`
+
+- 2. `exec --no-startup-id blueman`
 
 这将在 i3 的底栏启动插件并显示小组件。你可以右键点击并配置网络设置。要使用插件，请安装包：
 
-- 1. sudo apt-get install blueman
+- 1. `sudo apt-get install blueman`
 
 ### i3 额外功能
 
 i3 的卓越功能之一是你可以在电脑启动时自动启动应用程序。这样，Brave 浏览器始终显示在屏幕 1 上。Slack 启动在屏幕 2 上。这样你可以轻松设置你的完美配置。要实现这一点，我们需要编辑 i3 配置文件来命名屏幕：
 
-- 1. set $ws1 "1"
-- 2. set $ws2 "2"
-- 3. set $ws3 "3"
-- 4. set $ws4 "4"
-- 5. set $ws5 "5"
-- 6. set $ws6 "6"
-- 7. set $ws7 "7"
+- 1. `set $ws1 "1"`
+
+- 2. `set $ws2 "2"`
+
+- 3. `set $ws3 "3"`
+
+- 4. `set $ws4 "4"`
+
+- 5. `set $ws5 "5"`
+
+- 6. `set $ws6 "6"`
+
+- 7. `set $ws7 "7"`
 
 然后，在你的配置中添加以下内容将适合你的屏幕：
 
-- 1. exec --no-startup-id i3-msg '[class=\"Brave-browser\]' move $ws1
-- 2. exec --no-startup-id i3-msg '[class=\"Slack\]' move $ws2
-- 3. exec --no-startup-id i3-msg '[class=\"Discord\]' move $ws3
-- 4. exec --no-startup-id i3-msg '[class=\"code\]' move $ws4
-- 5. exec --no-startup-id i3-msg '[class=\"Spotify\]' move $ws5
-- 6. exec --no-startup-id i3-msg '[class=\"Firefox\]' move $ws6
-- 7. exec --no-startup-id i3-msg '[class=\"Terminal\]' move $ws7
+- 1. `exec --no-startup-id i3-msg '[class=\"Brave-browser\]' move $ws1`
+
+- 2. `exec --no-startup-id i3-msg '[class=\"Slack\]' move $ws2`
+
+- 3. `exec --no-startup-id i3-msg '[class=\"Discord\]' move $ws3`
+
+- 4. `exec --no-startup-id i3-msg '[class=\"code\]' move $ws4`
+
+- 5. `exec --no-startup-id i3-msg '[class=\"Spotify\]' move $ws5`
+
+- 6. `exec --no-startup-id i3-msg '[class=\"Firefox\]' move $ws6`
+
+- 7. `exec --no-startup-id i3-msg '[class=\"Terminal\]' move $ws7`
 
 ### 邮件
 
 Thunderbird 是一个可以连接大多数邮件提供者的客户端。我们将连接 Gmail 账户并同步邮件、联系人和日历。通过安装 Thunderbird 开始。在安装 Ubuntu 时，如果需要，可以选择安装它：
 
-- 1. sudo apt-get install thunderbird
 
-当 Thunderbird 安装后，启动它。第一次运行 Thunderbird 时，会询问你的姓名和密码。# 在 Ubuntu 上使用 PGP
+
+## 安装 Thunderbird
+
+`sudo apt-get install thunderbird`
+
+当 Thunderbird 安装后，启动它。第一次运行 Thunderbird 时，会询问你的姓名和密码。
+
+# 在 Ubuntu 上使用 PGP
 
 PGP 是一个加密和解密文件的工具。我们可以轻松地在 Thunderbird 中集成 PGP 并加密电子邮件。
 
 加密文件：
-
-
 
 ```bash
 1. gpg --output file.txt.gpg --encrypt --recipient matte.hemmingsson@gmail.com file.txt
@@ -1274,7 +1262,7 @@ PGP 是一个加密和解密文件的工具。我们可以轻松地在 Thunderbi
 
 在这里，文件使用属于该邮箱的公钥进行加密：
 
-matte.hemmingsson@gmail.com
+`matte.hemmingsson@gmail.com`
 
 要进行解密：
 
@@ -1284,29 +1272,29 @@ matte.hemmingsson@gmail.com
 
 现在，文件又恢复了明文状态。要加密文件并发送文件，请使用 Seahorse 工具导入文件接收者的公钥。然后，运行加密命令，并输入接收者的邮箱地址以及你想要加密的文件。
 
-### 通信工具
+## 通信工具
 
 如今的工作意味着我们拥有的比电子邮件和文档更多的工具。现如今，我们使用聊天工具与同事或朋友交流。最常用的是 Windows 的 Teams、Slack 和 Discord。
 
 这些工具都可以在 Snap Store 中找到：
 
-- https://snapcraft.io/Slack
-- https://snapcraft.io/teams
-- https://snapcraft.io/discord
+- `https://snapcraft.io/Slack`
+- `https://snapcraft.io/teams`
+- `https://snapcraft.io/discord`
 
 下载它们并启动客户端。你可以访问 Slack 首页并创建你的频道。Slack 和 Teams 都是消息应用程序，你可以在其中团队之间发送消息和聊天。它们都可以发起语音和视频通话并共享屏幕。Discord 源自纯粹的语音通话，为玩家之间的游戏内对话构建。如今，它也支持文本、视频和屏幕共享。Slack 和 Discord 都是与同事和朋友交流的极佳工具。
 
-### 在 Ubuntu 上观看视频
+## 在 Ubuntu 上观看视频
 
 有多种工具可以播放视频。最好的工具之一是 VLC媒体播放器。通过 VLC，你可以播放几乎任何格式的媒体，并直接从源（例如 IP 摄像头）流视频。
 
 我们已经安装了 VLC，但这里再次提供命令：
 
-1. sudo apt-get install vlc
+`sudo apt-get install vlc`
 
 我们将使用 VLC 从摄像头流传输视频。该命令将启动 VLC 并将其连接到流。然后它会打开一个窗口并带有图像显示视频。IP 摄像头的流地址在这里：
 
-1. vlc rtsp://10.100.0.90:554/s2
+`vlc rtsp://10.100.0.90:554/s2`
 
 下图显示了通过 VLC 显示的 IP 摄像头流：
 
@@ -1314,7 +1302,7 @@ matte.hemmingsson@gmail.com
 
 图 3.4：显示 VLC 流
 
-### 实时直播你的桌面
+## 实时直播你的桌面
 
 OBS Studio 是一款将你的桌面实时视频直播到最大的流媒体平台的工具。
 
@@ -1322,13 +1310,15 @@ OBS Studio 将多个输入（如你的屏幕和摄像头）连接到一个流中
 
 你可以通过以下链接下载并阅读更多关于 OBS 信息：
 
-**https://obsproject.com/**
+`https://obsproject.com/`
 
 要安装 OBS，运行以下命令：
 
-1. sudo add-apt-repository ppa:obsproject/obs-studio
-2. sudo apt update
-3. sudo apt install ffmpeg obs-studio
+`sudo add-apt-repository ppa:obsproject/obs-studio`
+
+`sudo apt update`
+
+`sudo apt install ffmpeg obs-studio`
 
 安装并启动 OBS 后，你将看到如下所示启动界面：
 
@@ -1350,7 +1340,7 @@ OBS Studio 随后将不同的源合并成一个场景并直播该场景。
 
 当你添加更多源时，可以将它们移动到你理想的布局。添加并排列好源后，就是时候将你的视频直播到流媒体服务了。OBS Studio 对多个视频流平台提供了集成支持。在设置菜单中选择一个视频平台或自定义平台并开始直播。下图示例展示了如何设置流：
 
-### 音频和视频
+## 音频和视频
 
 Ubuntu 可以以许多不同的方式混合和控制声音。大多数时候，这很容易，并且只在默认扬声器上播放声音。然而，你有时可能想对声音有更好的控制，为此，可以使用不同的工具。
 
@@ -1362,25 +1352,24 @@ Pavucontrol 是允许你轻松设置默认扬声器的工具之一。它还可�
 
 ![](img/729ff652633ff312828be609e679849e_86_0.png)
 
-### 摄像头
+## 摄像头
 
 摄像头等视频设备会自动分离。Ubuntu 默认的视频播放器是 Cheese。如果你使用的是最小安装选项，那么你需要安装 cheese 才能使用：
 
-1. sudo apt-get install cheese
+`sudo apt-get install cheese`
 
 然后你可以启动 Cheese；它会自动检测摄像头并连接到它们。Cheese 还有一些你可以添加到流媒体中的某些视频效果。
 
-### 同步文件
+## 同步文件
 
 将文件从本地计算机同步到云提供端比在其他操作系统上困难。许多提供云存储的大型云提供商没有为 Ubuntu 提供原生同步客户端。然而，你可以使用以下其他客户端：
 
-- **Google Drive**：要在 Google Drive 和 Ubuntu 之间同步文件，OpenDrive 是一个不错的选择：https://flathub.org/apps/io.libodark
-- **Dropbox**：这是一个提供原生应用的存储应用，你可以从此处 URL 下载并安装应用：https://www.dropbox.com/install-linux
+- `Google Drive`：要在 Google Drive 和 Ubuntu 之间同步文件，OpenDrive 是一个不错的选择：`https://flathub.org/apps/io.libodark`
+- `Dropbox`：这是一个提供原生应用的存储应用，你可以从此处 URL 下载并安装应用：`https://www.dropbox.com/install-linux`
+- `Mega`：这是一个带有原生 Linux 应用云存储，你可以使用它：`https://mega.io/desktop`
+- `Resilio`：如果你与朋友或向服务器同步文件，Resilio 是一个极佳工具。你可以在不同的位置添加文件夹并同步它们：`https://www.resilio.com/`
 
-- **Mega**：这是一个带有原生 Linux 应用云存储，你可以使用它：https://mega.io/desktop
-- **Resilio**：如果你与朋友或向服务器同步文件，Resilio 是一个极佳工具。你可以在不同的位置添加文件夹并同步它们：https://www.resilio.com/
-
-### 在 Ubuntu 上开发
+## 在 Ubuntu 上开发
 
 Ubuntu 是开发者、DevOps 或 Linux 管理员工作的极佳平台。你需要的所有工具在 Ubuntu 中可用，有些只在 Linux 中可用。
 
@@ -1390,41 +1379,39 @@ Git 是一个跟踪文件的版本控制系统。如今，它是开发者编写�
 
 通过运行命令安装 git：
 
-1. sudo apt-get install git
+`sudo apt-get install git`
 
 从本地计算机推送到或从拉取代码时使用 SSH 密钥被认为是最佳实践。为了实现此点，我们需要创建一个可以使用 SSH 密钥。在你的本地 Ubuntu 上，输入以下命令：
 
-1. ssh-keygen
+`ssh-keygen`
 
 接受默认值并为密钥设置密码。
 
 现在我们需要将新创建的 ssh 密钥添加到 GitHub，以便我们可以使用它。登录你的 GitHub 账户并进入设置/SSH and GPG Keys。现在，创建一个新的 SSH 密钥并添加我们之前创建的公钥如下：
 
-2. cat .ssh/id_rsa.pub
+`cat .ssh/id_rsa.pub`
 
-保存你的新密钥。通过将你的 SSH 密钥添加到 GitHub，我们可以在命令行运行命令 而无需登录。这是使用 git 和处理代码的默认方式。从以下链接了解更多相关信息，https://docs.github.com/en/authentication/connecting-to-github。
+保存你的新密钥。通过将你的 SSH 密钥添加到 GitHub，我们可以在命令行运行命令 而无需登录。这是使用 git 和处理代码的默认方式。从以下链接了解更多相关信息，`https://docs.github.com/en/authentication/connecting-to-github`。
 
 查看此书的 Git Repo：
 
-1. git clone https://github.com/bpbublic/Ubuntu-Linux-in-30-days.
-
-
-
-
+`git clone https://github.com/bpbublic/Ubuntu-Linux-in-30-days.`
 
 在处理代码、脚本或文件时，你需要一个好代码编辑器。如今 VS Code 是最好的代码编辑器之一。它在 Ubuntu 上运行完美，并支持许多不同的编程语言。在本书的后面，我们将使用 VS Code 连接到远程服务器、编写脚本并运行它们。
 
 关于 VS Code 的更多信息可以在此处找到：
 
-https://code.visualstudio.com/
+`https://code.visualstudio.com/`
 
 在 Ubuntu 上安装 VS Code，可以使用 Snap Store 或从网站下载 deb 包。一旦下载了 deb 包，您可以使用以下命令进行安装：
 
-此命令也适用于其他提供 .deb 文件的应用程序：
+此命令也适用于其他提供 `.deb` 文件的应用程序：
 
-- 1. sudo dpkg -i <你下载的文件名>
+`sudo dpkg -i <你下载的文件名>`
 
 ### PyCharm
+
+
 
 PyCharm 是另一个可用的代码编辑器，特别是用于 Python 程序。PyCharm 背后的公司 JetBrains 还有针对 Java 和 Rust 等语言的其他 IDE。要安装 PyCharm，请使用他们的 snap 包并下载社区版。
 
@@ -1452,8 +1439,7 @@ https://discord.bponline.com
 
 ![](img/729ff652633ff312828be609e679849e_91_0.png)
 
-## 第 4 章
-设置防火墙、VPN 和 Wi-Fi 网络
+## 第 4 章 设置防火墙、VPN 和 Wi-Fi 网络
 
 ### 引言
 
@@ -1490,14 +1476,14 @@ https://discord.bponline.com
 
 在 Ubuntu 中，将网络设置为静态或手动 IP 地址非常简单。可以按照以下步骤使用手动 IP 连接到网络：
 
-- 1. 通过搜索“高级网络设置”打开 Ubuntu 中的网络设置。它将列出你所有的网卡和网桥。它还列出了所有的 WIFI 接入点。
-- 2. 在将网络设备设置为静态时，你只需要为选定的无线设置设置地址。所以，如果你有两个无线网络，v2 和 v2-dmz，你可以将 v2 无线设置为手动。这不会影响 v2-dmz Wi-Fi。
-- 3. 如果你选择网并将设置从 DHCP 更改为静态（手动），它将影响你每次通过电缆连接时。
-- 4. 在将网卡设置为静态（手动）之前，你需要一些设置。
-- 5. 使用的地址通常在 192.168.0-255.1-255 范围内。使用一个未未被占用的地址非常重要。所以，如果你设置了一个 IP 摄像头，在 IP 摄像头手动书中提到摄像头默认 IP 为 192.168.1.50，那么你需要将你的 IP 设置为 192.168.1.49。
-- 6. 下一个设置是子网掩码，告诉网卡可以使用的 IP 数量。家庭使用的默认值是 255.255.255.0 或 24。
-- 7. 最后一个设置是路由器。路由器将所有无法在本地范围内找到的流量发送到我们的电脑。这将是你连接互联网的路由器网络设备的 IP。
-- 8. 如果你只设置了两个设备（如 IP 摄像头），你可以跳过添加路由器。
+1. 通过搜索“高级网络设置”打开 Ubuntu 中的网络设置。它将列出你所有的网卡和网桥。它还列出了所有的 Wi-Fi 接入点。
+2. 在将网络设备设置为静态时，你只需要为选定的无线设置设置地址。所以，如果你有两个无线网络，`v2` 和 `v2-dmz`，你可以将 `v2` 无线设置为手动。这不会影响 `v2-dmz` Wi-Fi。
+3. 如果你选择网并将设置从 DHCP 更改为静态（手动），它将影响你每次通过电缆连接时。
+4. 在将网卡设置为静态（手动）之前，你需要一些设置。
+5. 使用的地址通常在 192.168.0-255.1-255 范围内。使用一个未被占用的地址非常重要。所以，如果你设置了一个 IP 摄像头，在 IP 摄像头手动书中提到摄像头默认 IP 为 192.168.1.50，那么你需要将你的 IP 设置为 192.168.1.49。
+6. 下一个设置是子网掩码，告诉网卡可以使用的 IP 数量。家庭使用的默认值是 255.255.255.0 或 24。
+7. 最后一个设置是路由器。路由器将所有无法在本地范围内找到的流量发送到我们的电脑。这将是你连接互联网的路由器网络设备的 IP。
+8. 如果你只设置了两个设备（如 IP 摄像头），你可以跳过添加路由器。
 
 你仍然能够连接到具有 IP 的设备。所以，没有路由器的情况下，如果你的摄像头是 192.168.1.50，而你将电脑设置为 192.168.1.49，那么你不需要设置路由器即可连接摄像头。
 
@@ -1509,7 +1495,7 @@ https://discord.bponline.com
 
 如果你有一个让另一台电脑访问的服务器，这非常有用。然后你可以将其划分为自己的网络段，并仅将该段添加到你的电脑。
 
-在 Ubuntu 中，我们可以创建一个连接到该段的新虚拟网卡。每个 VLAN都有一个数字，即段 ID。所以，将 Ubuntu 连接到 VLAN 之前，首先需要知道局域网（LAN）ID。这是在你连接的交换机上设置的。在这里，我们为接口 enp1s0 创建一个新的虚拟接口。将其命名为 enp1s0.10 并设置使用 VLAN 10。
+在 Ubuntu 中，我们可以创建一个连接到该段的新虚拟网卡。每个 VLAN都有一个数字，即段 ID。所以，将 Ubuntu 连接到 VLAN 之前，首先需要知道局域网（LAN）ID。这是在你连接的交换机上设置的。在这里，我们为接口 `enp1s0` 创建一个新的虚拟接口。将其命名为 `enp1s0.10` 并设置使用 VLAN 10。
 
 我们设置它将连接的基础网卡。当虚拟设备添加后，你可以像普通网卡一样使用 DHCP 或静态 IP 进行配置。如下面命令所示：
 
@@ -1517,17 +1503,14 @@ https://discord.bponline.com
 ip link add link enp1s0 name enp1s0.10 type vlan id 10
 ```
 
-
-
-
 设置无线网卡就像使用普通网卡一样简单。我们首先需要找到要连接的无线网络，然后获取网络的正确身份验证信息。
 
 现在有两种不同的无线网络：旧的 2.4 G 和新的 5 G。今天，大多数网络 Wi-Fi 设备都可以使用这两种，但如果你在使用较旧的硬件，你需要验证你的无线接入点使用的频率是否与你的电脑相同。否则，它们将无法看到该网络。
 
 连接无线网络非常简单。
 
-- 1. 选择你想要连接的网络。
-- 2. 随后系统会提示输入密码，并要求你填写无线网络的密码。
+1. 选择你想要连接的网络。
+2. 随后系统会提示输入密码，并要求你填写无线网络的密码。
 
 在 Ubuntu 网络设置中，你现在已经有了无线网络。在 Wi-Fi 下，你可以像配置任何其他网卡一样配置它。在连接网络时，Wi-Fi 网络还有一个安全标签页。
 
@@ -1541,18 +1524,20 @@ ip link add link enp1s0 name enp1s0.10 type vlan id 10
 
 让我们安装并设置一个 MAC 修改工具，它会在你的网络每次启动时随机化你的 MAC 地址：
 
-- 1. apt-get install macchanger
+1. `apt-get install macchanger`
 
-在 **/etc/network/if-pre-up.d/** 文件夹中，创建一个名为 **macchanger** 的文件并添加以下内容：
+在`/etc/network/if-pre-up.d/`文件夹中，创建一个名为`macchanger`的文件并添加以下内容：
 
-- 1. #!/bin/sh
-- 2. # 为给定的接口随机化 mac 地址
+```
+#!/bin/sh
+# 为给定的接口随机化 mac 地址
+```
 
 要使其可执行，运行以下命令：
 
-- 1. chmod +x /etc/network/if-pre-up.d/macchanger
+1. `chmod +x /etc/network/if-pre-up.d/macchanger`
 
-将 **IFACE** 修改为与你想更改 MAC 地址的网卡匹配。它可以是你的 Wi-Fi 网卡，也可以是线缆网卡。
+将`IFACE`修改为与你想更改 MAC 地址的网卡匹配。它可以是你的 Wi-Fi 网卡，也可以是线缆网卡。
 
 > 注意：此更改也可能导致网络问题，因此请准备随时禁用它。
 
@@ -1562,11 +1547,13 @@ VPN 是一种安全地将本地电脑连接到网络的方法。如果公司在�
 
 它用于开发者连接到你不希望从互联网访问的数据库。
 
-Linux 中常用的两种 VPN 工具是 OpenVPN 和 WireGuard。在 Ubuntu 中，设置连接到服务器的 VPN 客户端需要以下步骤：
+
+
+Linux 中常用的两种 VPN 工具是 `OpenVPN` 和 `WireGuard`。在 Ubuntu 中，设置连接到服务器的 VPN 客户端需要以下步骤：
 
 - 1. 转到网络设置并添加新连接。
 - 2. 选择你想添加的 VPN。
-- 3. 为了安装 openvpn 和 wireguard 需要的包，运行以下命令：
+- 3. 为了安装 `openvpn` 和 `wireguard` 需要的包，运行以下命令：
 
 ```bash
 sudo apt-get install openvpn wireguard
@@ -1574,13 +1561,13 @@ sudo apt-get install openvpn wireguard
 
 ### OpenVPN
 
-可以按照以下步骤使用 OpenVPN 保护你的连接：
+可以按照以下步骤使用 `OpenVPN` 保护你的连接：
 
-- 1. 先访问 NordVPN 并设置试用账户，如果你有其他 OpenVPN 服务，也可以使用它。
+- 1. 先访问 NordVPN 并设置试用账户，如果你有其他 `OpenVPN` 服务，也可以使用它。
 
 https://nordvpn.com/risk-free-vpn/
 
-- 2. 现在，在你的 Ubuntu 中，要设置 OpenVPN 连接，你需要打开网络设置标签页。然后点击 + 号，并如图所示添加新的虚拟 OpenVPN 配置：
+- 2. 现在，在你的 Ubuntu 中，要设置 `OpenVPN` 连接，你需要打开网络设置标签页。然后点击 `+` 号，并如图所示添加新的虚拟 `OpenVPN` 配置：
 
 | 名称 | 上次使用 |
 |---|---|
@@ -1614,33 +1601,30 @@ https://nordvpn.com/risk-free-vpn/
 
 https://www.whatmysmyip.org/
 
-当你开启和关闭 OpenVPN 连接时，IP 应该发生变化。
+当你开启和关闭 `OpenVPN` 连接时，IP 应该发生变化。
 
 ### WireGuard
 
-WireGuard 是一个比 OpenVPN 新且快得多的 VPN。要添加新的 WireGuard VPN，我们使用与处理 OpenVPN 相同的方法，如下步骤所示：
+`WireGuard` 是一个比 `OpenVPN` 新且快得多的 VPN。要添加新的 `WireGuard` VPN，我们使用与处理 `OpenVPN` 相同的方法，如下步骤所示：
 
-- 1. 打开 Ubuntu 的网络设置并点击 + 号。然后，添加新的虚拟 WireGuard 配置。
-- 2. 有许多供应商提供 WireGuard VPN 服务器来测试你的 VPN。一个示例是 https://sshstores.net/wireguard。
+- 1. 打开 Ubuntu 的网络设置并点击 `+` 号。然后，添加新的虚拟 `WireGuard` 配置。
+- 2. 有许多供应商提供 `WireGuard` VPN 服务器来测试你的 VPN。一个示例是 https://sshstores.net/wireguard。
 
-在第 9 章“设置高级网络、防火墙和 VPN 服务器”中，你将学习如何创建 OpenVPN 服务器和 WireGuard 服务器。
+在第 9 章“设置高级网络、防火墙和 VPN 服务器”中，你将学习如何创建 `OpenVPN` 服务器和 `WireGuard` 服务器。
 
 ### 使用 DNSS 保护你的流量
 
-当你连接到互联网并访问像 google.com 这样的页面时，你的电脑需要找到域名 google.com 的 IP 地址。这是通过域名系统 (DNS) 请求完成的。
+当你连接到互联网并访问像 `google.com` 这样的页面时，你的电脑需要找到域名 `google.com` 的 IP 地址。这是通过域名系统 `DNS` 请求完成的。
 
 出现的问题是 DNS 请求是以明文流量执行的。互联网提供商或你与 DNS 之间的其他网络设备可以看到这些流量。
 
 你可以设置你的 Ubuntu 电脑，通过加密通道向 DNS 服务器发起 DNS 请求。
 
-有不同的方法设置 DNS over HTTPS (DoH)。第一种可能可能是最好的方法是在你的网络中设置一个 DNS 服务器。该 DNS 服务器接收来自网络客户端的请求，然后通过 HTTPS 将请求转发到公有 DNS 服务器。
+有不同的方法设置 DNS over HTTPS `DoH`。第一种可能可能是最好的方法是在你的网络中设置一个 DNS 服务器。该 DNS 服务器接收来自网络客户端的请求，然后通过 HTTPS 将请求转发到公有 DNS 服务器。
 
 这将保护你网络中的所有设备。
 
 另一种方法是设置你的 Ubuntu 直接到公有 DNS 服务器。
-
-
-
 
 - `systemctl enable dnss`
 
@@ -1659,7 +1643,7 @@ WireGuard 是一个比 OpenVPN 新且快得多的 VPN。要添加新的 WireGuar
 
 让我们从默认锁定你的笔记本电脑开始。要使用名为 `iptables` 的防火墙，我们使用 `iptables` 命令创建一个文件。然后我们加载这些命令，并在需要时更改设置。
 
-此配置将描述一些开放的端口，但你可能还有其他服务。在这种情况下，你需要配置 Iptables 文件以匹配你的设置。
+此配置将描述一些开放的端口，但你可能还有其他服务。在这种情况下，你需要配置 `Iptables` 文件以匹配你的设置。
 
 运行此脚本为你的电脑锁定防火墙。你可以将此脚本保存在 `example .config/fw` 文件夹中。
 
@@ -1703,10 +1687,9 @@ WireGuard 是一个比 OpenVPN 新且快得多的 VPN。要添加新的 WireGuar
 35. #允许相关已建立的
 36. iptables -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
 37.
-38.
-39. #
-40. # 我们在电脑上运行的某些服务器会添加 iptables 规则，如 Docker，并且在运行脚本时需要重启
-41. systemctl restart docker
+38. #
+39. # 我们在电脑上运行的某些服务器会添加 iptables 规则，如 Docker，并且在运行脚本时需要重启
+40. systemctl restart docker
 ```
 
 上述脚本将不允许任何 Web 和 DNS 流量以外的流量出站。如果你想连接到任何其他服务，则需要更新脚本以开放更多出站的端口。例如，如果你想连接到 SSH 服务器，以下是 bash 文件 `lock-trusted.sh` 的内容：
@@ -1729,7 +1712,6 @@ WireGuard 是一个比 OpenVPN 新且快得多的 VPN。要添加新的 WireGuar
 15. iptables -P OUTPUT ACCEPT
 16. iptables -P FORWARD ACCEPT
 17.
-```
 18. #允许到 127.0.0.1 使用本地流量
 19. iptables -A INPUT -i lo -j ACCEPT
 20. iptables -A OUTPUT -o lo -j ACCEPT
@@ -1742,42 +1724,43 @@ WireGuard 是一个比 OpenVPN 新且快得多的 VPN。要添加新的 WireGuar
 27. #允许相关
 28. iptables -A INPUT -m state --state RELATED,ESTABLISHED -j ACCEPT
 29.
-30.
-31. #
-32. # 我们在电脑上运行的某些服务器会添加 iptables 规则，如
-Docker 并且在运行脚本时需要重启
+30. #
+31. # 我们在电脑上运行的某些服务器会添加 iptables 规则，如
+32. Docker 并且在运行脚本时需要重启
 33. systemctl restart docker
+```
 
 之前提到的防火墙脚本将锁定入站流量。然而，它将允许任何出站流量。这允许你发现并连接到本地网络上的服务，如网络文件共享和打印机。
 
-要激活防火墙，使用 sudo 运行命令：
+要激活防火墙，使用 `sudo` 运行命令：
+
+
 
 ```bash
 mattias@laptop:~/.config/fw$ sudo ./lock-down.sh
 [sudo] password for mattias: Locking down firewall
 mattias@laptop:~/.config/fw$ # 今天在所有平台上检测并停止电脑病毒。此外，我们正在与不同的人整合，这意味着 Ubuntu 可能会下载病毒，如果我们把它们全部发送，我们可能也会感染他人。为了避免这种情况，使用杀病毒软件是一个良好的做法。
+```
 
 从安装开源工具 ClamAV 开始：
 https://www.clamav.net/
-sudo apt-get install clamav
+`sudo apt-get install clamav`
 
 安装 ClamAV 的同时也会安装 `clamscan` 工具。`clamscan` 可以扫描你的文件夹中的任何病毒。要扫描你下载文件夹中的文件，请在文件夹中运行 `clamscan`：
-mattias@laptop~$ clamscan Downloads/
-/home/mattias/Downloads/818_1-reviewed-1.docx: OK
-/home/mattias/Downloads/balenaEtcher-1.13-x64.AppImage: OK
-/home/mattias/Downloads/NVIDIA-Linux-x86_64-525.85.05.run: OK
-/home/mattias/Downloads/818_2_Reviewed_mh_1.docx: OK
-/home/mattias/Downloads/Invoice.pdf: OK
-/home/mattias/Downloads/818_1-reviewed_AS.docx: OK
-/home/mattias/Downloads/818_2_Reviewed_AS.docx: OK
-/home/mattias/Downloads/818_2_Reviewed_mh.docx: OK
-
-
-
+`mattias@laptop~$ clamscan Downloads/`
+`/home/mattias/Downloads/818_1-reviewed-1.docx: OK`
+`/home/mattias/Downloads/balenaEtcher-1.13-x64.AppImage: OK`
+`/home/mattias/Downloads/NVIDIA-Linux-x86_64-525.85.05.run: OK`
+`/home/mattias/Downloads/818_2_Reviewed_mh_1.docx: OK`
+`/home/mattias/Downloads/Invoice.pdf: OK`
+`/home/mattias/Downloads/818_1-reviewed_AS.docx: OK`
+`/home/mattias/Downloads/818_2_Reviewed_AS.docx: OK`
+`/home/mattias/Downloads/818_2_Reviewed_mh.docx: OK`
 
 113
 
 # 第 5 章
+
 ## 准备虚拟化环境
 
 ### 引言
@@ -1813,25 +1796,25 @@ mattias@laptop~$ clamscan Downloads/
 
 测试计算机是否支持虚拟化的命令：
 
-mattias@laptop: sudo kvm-ok
+`mattias@laptop: sudo kvm-ok`
 
 ### Ubuntu 中的 KVM 虚拟化
 
 KVM 是 Ubuntu 中标准虚拟化引擎的名称。按照如下方式安装 KVM：
 
-sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager
+`sudo apt install qemu-kvm libvirt-daemon-system libvirt-clients bridge-utils virt-manager`
 
 将你的用户名添加到 `libvirt` 组。这将赋予你创建和控制虚拟机的正确权限，如下：
 
-sudo adduser username libvirt
+`sudo adduser username libvirt`
 
 在我们创建第一个虚拟机之前，让我们验证我们的主机上是否具有硬件支持。运行以下命令来测试你的计算机支持种种虚拟系统：
 
-mattias@laptop:~ sudo apt install cpu-checker
-mattias@laptop: sudo kvm-ok
-mattias@laptop: INFO: /dev/kvm exists
-mattias@laptop: KVM acceleration can be used
-mattias@laptop:~
+`mattias@laptop:~ sudo apt install cpu-checker`
+`mattias@laptop: sudo kvm-ok`
+`mattias@laptop: INFO: /dev/kvm exists`
+`mattias@laptop: KVM acceleration can be used`
+`mattias@laptop:~`
 
 `kvm-ok` 命令返回“KVM acceleration can be used”，说明我们拥有支持。如果命令输出无法使用加速，我们仍然安装虚拟机，但性能会较慢。
 
@@ -1855,7 +1838,7 @@ mattias@laptop:~
 
 测试计算机是否支持虚拟化的命令：
 
-mattias@laptop: sudo kvm-ok
+`mattias@laptop: sudo kvm-ok`
 
 ### 安装我们的第一个虚拟机
 
@@ -1863,12 +1846,10 @@ mattias@laptop: sudo kvm-ok
 
 1. 转到 Ubuntu 下载页面，下载 Ubuntu Desktop iso，并存储在你的下载文件夹中。
 https://ubuntu.com/download/desktop
-2. 启动 KVM 工具虚拟机管理器 (virtual manager)，点击**添加虚拟机 (add virtual machine)** 按钮。然后你将获得引导设置第一个虚拟机。填入你的值或保持默认值，直到看到网络设置。
-3. 在网络设置中，选择桥接 (bridge)，并将我们之前创建的桥接名称作为网络设备。
+2. 启动 KVM 工具虚拟机管理器 (`virtual manager`)，点击**添加虚拟机 (add virtual machine)** 按钮。然后你将获得引导设置第一个虚拟机。填入你的值或保持默认值，直到看到网络设置。
+3. 在网络设置中，选择桥接 (`bridge`)，并将我们之前创建的桥接名称作为网络设备。
 4. 启动虚拟机并按照指南安装 Ubuntu。（我们在第 2 章中介绍过 Ubuntu 的安装：安装、升级和配置 Ubuntu 桌面）
 5. 安装完成后，启动你的虚拟机并登录。下图显示了在虚拟机内部运行的登录界面：
-
-
 
 ![](img/729ff652633ff312828be609e679849e_120_0.png)
 
@@ -1904,7 +1885,7 @@ https://ubuntu.com/download/desktop
 
 有几种方法可以访问虚拟机。使用普通的 SSH 访问来获取机器的命令行（CLI）访问。使用你看到启动的 KVM 提供的桌面，你也可以添加桌面共享工具，使用 VNC 等工具共享桌面。
 
-接下来的图片显示了一个安装了 openssh-server 的 Ubuntu 虚拟机，以及从宿主机到虚拟机的 ssh 访问：
+接下来的图片显示了一个安装了 `openssh-server` 的 Ubuntu 虚拟机，以及从宿主机到虚拟机的 ssh 访问：
 
 ![](img/729ff652633ff312828be609e679849e_123_0.png)
 
@@ -1962,11 +1943,11 @@ https://www.vagrantup.com/
 
 创建一个文件夹，并在其中启动 Vagrant：
 
-- 1. mkdir vagrant
-- 2. cd vagrant
-- 3. vagrant box add hashicorp/bionic
-- 4. vagrant init hashicorp/bionic
-- 5. vagrant up
+- 1. `mkdir vagrant`
+- 2. `cd vagrant`
+- 3. `vagrant box add hashicorp/bionic`
+- 4. `vagrant init hashicorp/bionic`
+- 5. `vagrant up`
 
 要查找不同的镜像，请访问：
 
@@ -1974,144 +1955,138 @@ https://www.vagrant.com/boxes/search
 
 正如前一节所述，我们可以在其他工具之间转换镜像。运行虚拟机时，每个镜像都有自己的格式。
 
-在这里，文件位于宿主机上。默认情况下，KVM 镜像位于 /var/lib/libvirt/images。
+在这里，文件位于宿主机上。默认情况下，KVM 镜像位于 `/var/lib/libvirt/images`。
 
-- 1. root@hr/var/lib/libvirt/images# ls
-- 2. ubuntu22.04-2.qcow2 ubuntu22.04.qcow2
-- 3. root@hr/var/lib/libvirt/images#
+- 1. `root@hr/var/lib/libvirt/images# ls`
+- 2. `ubuntu22.04-2.qcow2 ubuntu22.04.qcow2`
+- 3. `root@hr/var/lib/libvirt/images#`
 
 让我们一个镜像转换为 vmdk 格式：
 
-```
-1. root@hr/var/lib/libvirt/images# qemu-img convert -p -f qcow2 -O vmdk ubuntu22.04-2.qcow2 ubuntu22.04.vmdk
-```
 
-```
-2. (100.00/100%)
-```
 
-```
-3. root@hr/var/lib/libvirt/images#
-```
+1. `root@hr/var/lib/libvirt/images# qemu-img convert -p -f qcow2 -O vmdk ubuntu22.04-2.qcow2 ubuntu22.04.vmdk`
+
+2. `(100.00/100%)`
+
+3. `root@hr/var/lib/libvirt/images#`
+
+
 
 ### 总结
 
-在本章结束时，我们将讨论虚拟化如何帮助你使用计算机。在下一章中，资源将得到更有效的定义。我们还通过虚拟化测试其他工具并在它们之间管理镜像。为了将虚拟机连接到网络我们学习了 MAC、NAT 和桥接设备的区别。此外，我们了解如何在 KVM 引擎内部安装和设置 Ubuntu 桌面、拍摄快照并使用它们创建新虚拟机。我们还讨论了如何使用 Vagrant 与团队成员共享虚拟机。
+在本章结束时，我们将讨论虚拟化如何帮助你使用计算机。在下一章中，资源将得到更有效的定义。我们还通过虚拟化测试其他工具并在它们之间管理镜像。为了将虚拟机连接到网络我们学习了 `MAC`、`NAT` 和桥接设备的区别。此外，我们了解如何在 `KVM` 引擎内部安装和设置 `Ubuntu` 桌面、拍摄快照并使用它们创建新虚拟机。我们还讨论了如何使用 `Vagrant` 与团队成员共享虚拟机。
 
-下一章中，我们将探索 Kubernetes 和 Docker。
+下一章中，我们将探索 `Kubernetes` 和 `Docker`。
 
 # 加入我们的书籍 Discord 空间
 
-加入书籍 Discord 区以获取最新更新、优惠、全球科技动态以及作者的互动会议：
+加入书籍 `Discord` 区以获取最新更新、优惠、全球科技动态以及作者的互动会议：
 
-https://discord.bpbonline.com
+`https://discord.bpbonline.com`
 
-
-
-
-
-大约同一时间，Solomon Hykes 和他在 dotCloud（现称为 Docker Inc.）团队开发了一种名为 Docker 的新容器技术。Docker 基于 Linux 容器 (LXC)，但它引入了打包和分发容器镜像的新方法，以及了一套用于管理容器的新工具和 API。Docker 迅速在开发者中流行起来，并成为 Linux 世界容器化的事实标准。
+大约同一时间，`Solomon Hykes` 和他在 `dotCloud`（现称为 `Docker Inc.`）团队开发了一种名为 `Docker` 的新容器技术。`Docker` 基于 Linux 容器 (`LXC`)，但它引入了打包和分发容器镜像的新方法，以及了一套用于管理容器的新工具和 `API`。`Docker` 迅速在开发者中流行起来，并成为 Linux 世界容器化的事实标准。
 
 ## 章节结构
 
 在本章中，我们将涵盖以下主题：
 
-- Docker 与容器
-- 安装 Docker
-- Docker Hub
-- 启动你的第一个 Docker
-- 添加 Docker Compose
-- 使用 Docker Compose 连接服务
-- 扩展 Docker Compose
-- 连接两个栈 (stacks)
-- 使用 Docker 进行本地开发
-- 关于 Kubernetes
+- `Docker` 与容器
+- 安装 `Docker`
+- `Docker Hub`
+- 启动你的第一个 `Docker`
+- 添加 `Docker Compose`
+- 使用 `Docker Compose` 连接服务
+- 扩展 `Docker Compose`
+- 连接两个栈 (`stacks`)
+- 使用 `Docker` 进行本地开发
+- 关于 `Kubernetes`
 
 ### 目标
 
-在本章中，我们将了解如何在 Ubuntu 桌面版上安装 Docker。启动你的第一个 Docker 镜像并运行一个 Minecraft 服务器。
+在本章中，我们将了解如何在 `Ubuntu` 桌面版上安装 `Docker`。启动你的第一个 `Docker` 镜像并运行一个 `Minecraft` 服务器。
 
-然后，我们将多个容器组合在一起，并设置一个 WordPress 博客和 Metabase BI 智能分析工具。当我们有一个正常运行的 WordPress 时，是时候迁移到 Kubernetes 了。你将学习如何在你的 Ubuntu 上安装 Kubernetes。部署一个 MySQL 服务器和一个 WordPress 博客，并使用 `kubectl` 执行一些基础命令来与你的集群通信。
+然后，我们将多个容器组合在一起，并设置一个 `WordPress` 博客和 `Metabase` `BI` 智能分析工具。当我们有一个正常运行的 `WordPress` 时，是时候迁移到 `Kubernetes` 了。你将学习如何在你的 `Ubuntu` 上安装 `Kubernetes`。部署一个 `MySQL` 服务器和一个 `WordPress` 博客，并使用 `kubectl` 执行一些基础命令来与你的集群通信。
 
-我们还将理解如何作为 Docker 镜像以及在 Kubernetes 集群中运行容器。
+我们还将理解如何作为 `Docker` 镜像以及在 `Kubernetes` 集群中运行容器。
 
 ## Docker 与容器
 
-Docker 是一个允许开发者在容器中创建、部署和运行应用程序的软件平台。容器参考了集装箱，你以标准格式打包物品，而这种格式被卡车、轮船和飞机支持。软件也是同样的原理。你构建软件并将其封装在容器中。现在，你的软件可以在任何支持 docker 的平台上运行。因此，如果 Docker 在一台笔记本电脑上运行并正常工作，只要支持 Docker 格式，它就应该可以在 Google Cloud 或普通服务器上运行。
+`Docker` 是一个允许开发者在容器中创建、部署和运行应用程序的软件平台。容器参考了集装箱，你以标准格式打包物品，而这种格式被卡车、轮船和飞机支持。软件也是同样的原理。你构建软件并将其封装在容器中。现在，你的软件可以在任何支持 `docker` 的平台上运行。因此，如果 `Docker` 在一台笔记本电脑上运行并正常工作，只要支持 `Docker` 格式，它就应该可以在 `Google Cloud` 或普通服务器上运行。
 
-现在的 Docker 和容器由几个组件组成，包括：
+现在的 `Docker` 和容器由几个组件组成，包括：
 
-- 引擎是如 CRI-O 或 Docker 等工具，引擎将容器镜像并转换为运行中的容器进程。
-- 从容器开始镜像仅被称为 Docker Image，但现在我们使用开放容器镜像 (OCI)，旨在以标准方式处理所有镜像。
-- Kubernetes 使用 CRI-O 作为运行容器的默认方式。
+- 引擎是如 `CRI-O` 或 `Docker` 等工具，引擎将容器镜像并转换为运行中的容器进程。
+- 从容器开始镜像仅被称为 `Docker Image`，但现在我们使用开放容器镜像 (`OCI`)，旨在以标准方式处理所有镜像。
+- `Kubernetes` 使用 `CRI-O` 作为运行容器的默认方式。
 
-例如，将 docker 替换为 Podman，并在 docker 中运行相同的命令，但改用开源工具 Podman：https://docs.podman.io/en/
+例如，将 `docker` 替换为 `Podman`，并在 `docker` 中运行相同的命令，但改用开源工具 `Podman`：`https://docs.podman.io/en/`
 
 ### 安装 Docker
 
-可以通过 Ubuntu 的常规源仓库安装 Docker。然而，在这里我们将通过来自 Docker 网页的指南进行安装。我们将为电脑添加 Docker 仓库。然后，安装 Docker 引擎并将我们的用户添加到 Docker 组以获得运行 Docker 的权限。现在，我们可以启动我们的第一个 Docker 镜像了。
+可以通过 `Ubuntu` 的常规源仓库安装 `Docker`。然而，在这里我们将通过来自 `Docker` 网页的指南进行安装。我们将为电脑添加 `Docker` 仓库。然后，安装 `Docker` 引擎并将我们的用户添加到 `Docker` 组以获得运行 `Docker` 的权限。现在，我们可以启动我们的第一个 `Docker` 镜像了。
 
-### 为 Ubuntu 设置 Docker 仓库
+#### 为 Ubuntu 设置 Docker 仓库
 
-让我们从安装 Docker 所需的依赖项开始，如下所示：
+让我们从安装 `Docker` 所需的依赖项开始，如下所示：
 
-1. sudo apt-get update
-2. sudo apt-get install \
-   ca-certificates \
-3. ca-certificates \
-4. curl \
-5. gnupg
+1. `sudo apt-get update`
+2. `sudo apt-get install \`
+   `ca-certificates \`
+3. `ca-certificates \`
+4. `curl \`
+5. `gnupg`
 
-我们可以通过运行以下代码添加 Docker 注册的公钥和仓库：
+我们可以通过运行以下代码添加 `Docker` 注册的公钥和仓库：
 
-1. sudo mkdir -m 0755 -p /etc/apt/keyrings
-2. curl -fSSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg
-3. echo \
-4. "deb [arch=\$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \\
-5. "\$(/etc/os-release && echo \$VERSION_CODENAME)" stable" | \
-6. sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+1. `sudo mkdir -m 0755 -p /etc/apt/keyrings`
+2. `curl -fSSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /etc/apt/keyrings/docker.gpg`
+3. `echo \`
+4. `"deb [arch=\$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \\`
+5. `"\$(/etc/os-release && echo \$VERSION_CODENAME)" stable" | \`
+6. `sudo tee /etc/apt/sources.list.d/docker.list > /dev/null`
 
-添加仓库和密钥后，我们可以更新包缓存并安装 Docker 引擎，如下命令所示：
+添加仓库和密钥后，我们可以更新包缓存并安装 `Docker` 引擎，如下命令所示：
 
-1. sudo apt-get update
-2. sudo apt-get install docker-ce docker-cli containerd.io docker-buildx-plugin docker-compose-plugin
+1. `sudo apt-get update`
+2. `sudo apt-get install docker-ce docker-cli containerd.io docker-buildx-plugin docker-compose-plugin`
 
-让我们将用户添加到 Docker 组，这样我们就可以从自己的用户运行 Docker 容器，如下命令所示：
+让我们将用户添加到 `Docker` 组，这样我们就可以从自己的用户运行 `Docker` 容器，如下命令所示：
 
-1. sudo usermod -aG docker USER
+1. `sudo usermod -aG docker USER`
 
 你可能需要关闭终端或注销并登录，以便添加新的组权限。
 
 要验证其运行正常，请运行以下命令：
 
-1. docker run hello-world
+1. `docker run hello-world`
 
 ### Docker Hub
 
-为了查找和存储 Docker 镜像，Docker 有一个名为 Docker Hub 的地方。在 hub 中，用户和公司可以上传他们的 Docker 镜像。所有大公司都会将其应用作为镜像上传到 Docker Hub。你可以找到像 Ubuntu 等核心 Linux 发行版，或像 WordPress 或 Metabase 等开源应用。
+为了查找和存储 `Docker` 镜像，`Docker` 有一个名为 `Docker Hub` 的地方。在 `hub` 中，用户和公司可以上传他们的 `Docker` 镜像。所有大公司都会将其应用作为镜像上传到 `Docker Hub`。你可以找到像 `Ubuntu` 等核心 Linux 发行版，或像 `WordPress` 或 `Metabase` 等开源应用。
 
-通过允许用户上传 Docker 镜像，Docker Hub 是公司和开源公司共享其应用和服务的默认场所之一。
+通过允许用户上传 `Docker` 镜像，`Docker Hub` 是公司和开源公司共享其应用和服务的默认场所之一。
 
-还有一些你作为开发者或软件构建者可以存储自己的 Docker 镜像的地方。例如，AWS、Google Cloud 等。
+还有一些你作为开发者或软件构建者可以存储自己的 `Docker` 镜像的地方。例如，`AWS`、`Google Cloud` 等。
 
-### 官方镜像
+#### 官方镜像
 
-在 Docker Hub 中，有名为“official”（官方）的镜像。这意味着等同于直接从制造商下载软件。例如，WordPress 是 WordPress 的官方 Docker 仓库（mattiashem/WordPress 是作者版本的 WordPress）。
+在 `Docker Hub` 中，有名为“official”（官方）的镜像。这意味着等同于直接从制造商下载软件。例如，`WordPress` 是 `WordPress` 的官方 `Docker` 仓库（`mattiashem/WordPress` 是作者版本的 `WordPress`）。
 
-在下载和运行 Docker 镜像时，了解风险是非常重要的。
+在下载和运行 `Docker` 镜像时，了解风险是非常重要的。
 
 ### 启动你的第一个 Docker
 
-让我们启动第一个 Docker 容器，在这里我们将使用一个 Minecraft 服务器作为测试。当我们启动 Docker 时，我们需要向容器传递一些设置，这是通过环境变量完成的。我们还需要告诉 Docker 打开一个端口，以便我们连接到服务器。
+让我们启动第一个 `Docker` 容器，在这里我们将使用一个 `Minecraft` 服务器作为测试。当我们启动 `Docker` 时，我们需要向容器传递一些设置，这是通过环境变量完成的。我们还需要告诉 `Docker` 打开一个端口，以便我们连接到服务器。
 
-此命令将启动我们的 Minecraft 服务器：
+此命令将启动我们的 `Minecraft` 服务器：
 
-1. docker run -it -e EULA=true -p --name mc itzg/minecraft-server
+1. `docker run -it -e EULA=true -p --name mc itzg/minecraft-server`
 2.
-3. [13:50:12] [Server thread/INFO]: Done (11.178s)! For help, type "help"
-4. [13:50:12] [Server thread/INFO]: Starting remote control listener
-5. [13:50:12] [Server thread/INFO]: Thread RCON Listener started
-6. [13:50:12] [Server thread/INFO]: RCON running on 0.0.0.0:25575
+3. `[13:50:12] [Server thread/INFO]: Done (11.178s)! For help, type "help"`
+4. `[13:50:12] [Server thread/INFO]: Starting remote control listener`
+5. `[13:50:12] [Server thread/INFO]: Thread RCON Listener started`
+6. `[13:50:12] [Server thread/INFO]: RCON running on 0.0.0.0:25575`
 7.
 8. 这显示服务器已启动并运行
 
@@ -2119,76 +2094,77 @@ Docker 是一个允许开发者在容器中创建、部署和运行应用程序�
 
 ### 扩展我们的 Docker Compose 以运行服务
 
-当我们启动时，Minecraft 服务器 Docker 每次启动时都会给我们一个生成的端口供使用。然而，我们希望 Minecraft 服务器绑定到 Minecraft 使用的端口并始终使用该端口。当我们登录 Minecraft 服务器并玩时，我们所有的世界都将保存在 Docker 容器内部。如果我们停止容器，所有的世界将会丢失。
+当我们启动时，`Minecraft` 服务器 `Docker` 每次启动时都会给我们一个生成的端口供使用。然而，我们希望 `Minecraft` 服务器绑定到 `Minecraft` 使用的端口并始终使用该端口。当我们登录 `Minecraft` 服务器并玩时，我们所有的世界都将保存在 `Docker` 容器内部。如果我们停止容器，所有的世界将会丢失。
 
-为了解决这个问题，让我们在 Docker run 命令中添加一些参数。现在我们告诉 Docker 绑定端口 25565 给 Minecraft 使用。我们将 minecraft_data 文件夹挂载到容器中。
+为了解决这个问题，让我们在 `Docker run` 命令中添加一些参数。现在我们告诉 `Docker` 绑定端口 `25565` 给 `Minecraft` 使用。我们将 `minecraft_data` 文件夹挂载到容器中。
 
-你可以添加并配置 Docker 以了解所有值。访问镜像页面：
+你可以添加并配置 `Docker` 以了解所有值。访问镜像页面：
 
-https://github.com/itzg/docker-minecraft-server/blob/master/README.md
+`https://github.com/itzg/docker-minecraft-server/blob/master/README.md`
 
-现在，让我们使用以下设置启动 Minecraft：
+现在，让我们使用以下设置启动 `Minecraft`：
 
-1. docker run -it EULA=true -v minecraft_data:/ -p 25565:2565 --name mc itzg/minecraft-server
+1. `docker run -it EULA=true -v minecraft_data:/ -p 25565:2565 --name mc itzg/minecraft-server`
 2.
-3. [13:50:12] [Server thread/INFO]: Done (11.178s)! For help, type "help"
-4. [13:50:12] [Server thread/INFO]: Starting remote control listener
-5. [13:50:12] [Server thread/INFO]: Thread RCON Listener started
-6. [13:50:12] [Server thread/INFO]: RCON running on 0.0.0.0:25575
+3. `[13:50:12] [Server thread/INFO]: Done (11.178s)! For help, type "help"`
+4. `[13:50:12] [Server thread/INFO]: Starting remote control listener`
+5. `[13:50:12] [Server thread/INFO]: Thread RCON Listener started`
+6. `[13:50:12] [Server thread/INFO]: RCON running on 0.0.0.0:25575`
 7.
 8. 这显示服务器已启动并运行
 
 ### 添加 Docker Compose
 
-如果你有一个服务器并能记住设置 Docker 命令，我们还可以将设置添加到名为 `docker-compose.yaml` 的文件中，然后使用 Docker Compose 工具启动我们的 Docker。
+如果你有一个服务器并能记住设置 `Docker` 命令，我们还可以将设置添加到名为 `docker-compose.yaml` 的文件中，然后使用 `Docker Compose` 工具启动我们的 `Docker`。
 
 创建一个名为 `docker-compose.yaml` 的文件并在其中添加以下内容：
 
-1. version: "3"
-2. services:
-3. mc:
-4. image: itzg/minecraft-server
-5. ports:
-6. - 25565:25565
-7. environment:
-8. EULA: "TRUE"
-9. tty: true
-10. stdin_open: true
-11. restart: unless-stopped
-12. volumes:
-13. # 附加包含此 compose 文件的相对目录
-14. ./minecraft-data:/data
-15.
+1. `version: "3"`
+2. `services:`
+3. `mc:`
+4. `image: itzg/minecraft-server`
+5. `ports:`
+6. `- 25565:25565`
+7. `environment:`
+8. `EULA: "TRUE"`
+9. `tty: true`
+10. `stdin_open: true`
+11. `restart: unless-stopped`
+12. `volumes:`
+13. `# 附加包含此 compose 文件的相对目录`
+14. `./minecraft-data:/data`
 
-现在，让我们运行以下命令使用 Docker Compose 启动我们的 Minecraft 服务器：
+现在，让我们运行以下命令使用 `Docker Compose` 启动我们的 `Minecraft` 服务器：
 
-
-
+```
 docker compose up
+```
 
-**注意：Docker Compose 曾作为一个独立项目添加，当时使用 `docker-compose` 命令来启动它。现在，Docker Compose 已随 Docker 一起包含，可以使用不带横杠的 `docker compose`。不过，它的工作原理是相同的。**
+**注意：** `Docker Compose` 曾作为一个独立项目添加，当时使用 `docker-compose` 命令来启动它。现在，`Docker Compose` 已随 `Docker` 一起包含，可以使用不带横杠的 `docker compose`。不过，它的工作原理是相同的。
 
-如果你想让 Minecraft 服务器在后台运行，可以使用以下命令：
+如果你想让 `Minecraft` 服务器在后台运行，可以使用以下命令：
 
-- 1. docker compose run
+- `docker compose run`
 
 要验证服务器是否正在运行，运行以下命令：
 
-- 2. docker compose ps
+- `docker compose ps`
 
 要停止服务器，运行以下命令：
 
-- 3. docker compose stop
+- `docker compose stop`
 
 ### 使用 Docker Compose 连接服务
 
-Docker Compose 是启动单个容器的简单方法，也可以将多个容器组合成一个栈（stack）。现在，我们将为 WordPress 博客和 Metabase BI 工具启动一个栈。
+`Docker Compose` 是启动单个容器的简单方法，也可以将多个容器组合成一个栈（`stack`）。现在，我们将为 `WordPress` 博客和 `Metabase BI` 工具启动一个栈。
 
-让我们从建立一个 WordPress 栈开始。
+让我们从建立一个 `WordPress` 栈开始。
 
 创建一个名为 `WordPress` 的新文件夹，并在该文件夹中创建 `docker-compose.yaml` 文件。
 
 如下所示，向文件中添加以下内容：
+
+
 
 ```yaml
 services:
@@ -2210,6 +2186,7 @@ services:
       - 33060
     networks:
       - local
+
   wordpress:
     image: wordpress:latest
     ports:
@@ -2221,20 +2198,22 @@ services:
       - WORDPRESS_DB_NAME=wordpress
     networks:
       - local
+
 volumes:
   db_data:
+
 networks:
   local:
     external: true
 ```
 
-在 docker-compose 文件中，你可以看到我们正在设置一些值。启动时，我们为 MySQL 服务器设置了用户和密码。我们还为 WordPress Docker 添加了相同的用户和密码。这将先启动 SQL 服务器并为 WordPress 创建一个供其使用的。
+在 `docker-compose` 文件中，你可以看到我们正在设置一些值。启动时，我们为 MySQL 服务器设置了用户和密码。我们还为 WordPress Docker 添加了相同的用户和密码。这将先启动 SQL 服务器并为 WordPress 创建一个供其使用的。
 
 使用 `docker-compose up` 启动栈以验证所有服务是否已启动。
 
 然后，使用浏览器验证你的安装并进入该页面完成安装。
 
-**注意：你不需要输入任何 SQL 用户或密码。如果你在 80 端口上运行了其他服务，则需要修改 `docker-compose.yaml` 文件。**
+注意：你不需要输入任何 SQL 用户或密码。如果你在 80 端口上运行了其他服务，则需要修改 `docker-compose.yaml` 文件。
 
 打开以下链接，它将打开并指向你的本地计算机，在未设置端口时，它将使用以下端口：
 80http://localhost
@@ -2243,13 +2222,13 @@ networks:
 
 ![](img/729ff652633ff312828be609e679849e_140_0.png)
 
-### 扩展 Docker Compose
+## 扩展 Docker Compose
 
 如果你已经有一个 WordPress 博客，并想将当前的博客迁移到那里。你想添加一个工具来访问 MySQL 服务器。
 
 让我们创建 phpmyadmin 并让它访问 WordPress 使用的 MySQL。
 
-如下所示，修改你的 docker-compose：
+如下所示，修改你的 `docker-compose`：
 
 ```yaml
 services:
@@ -2271,6 +2250,7 @@ services:
       - 33060
     networks:
       - local
+
   wordpress:
     image: wordpress:latest
     ports:
@@ -2282,6 +2262,7 @@ services:
       - WORDPRESS_DB_NAME=wordpress
     networks:
       - local
+
   phpmyadmin:
     image: phpmyadmin
     ports:
@@ -2292,134 +2273,131 @@ services:
       - PMA_PASSWORD=wordpress
     networks:
       - local
+
 volumes:
   db_data:
+
 networks:
   local:
     external: true
 ```
 
+
+
 使用以下方式启动栈：
 
+```
 docker compose up
+```
 
-你可以通过访问页面来登录 phpMyAdmin。图 6.1 显示了具有访问 MySQL 服务器权限的 phpadmin。以下链接将在你的本地计算机上打开 浏览器并使用端口 :8080:
+你可以通过访问页面来登录 phpMyAdmin。图 6.1 显示了具有访问 MySQL 服务器权限的 phpadmin。以下链接将在你的本地计算机上打开浏览器并使用端口 :8080:
 
 在接下来的图中，我们看到 phpMyAdmin 已经启动并登录到 MySQL 服务器：
 
 ### 连接两个栈
 
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
-
-当你启动 docker-compose 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 docker-compose 文件中列出的服务通信。然而，有时你想连接两个栈。
+当你启动 `docker-compose` 时，Docker 会为它创建一个单独的网络，以便容器相互隔离，并仅与 `docker-compose` 文件中列出的服务通信。然而，有时你想连接两个栈。
 
 （由于原文中存在大量重复段落，根据指令要求，此处仅展示核心逻辑翻译，忽略重复的 docker-compose 启动描述）
 
 ### 两个栈的连接
 
-让我们从建立一个 WordPress 栈开始。
-
-。，创建一个名为 `WordPress` 的新文件夹，并在该文件夹中创建 `docker-compose.yaml` 文件。如下所示：
+让我们从建立一个 WordPress 栈开始。创建一个名为 `WordPress` 的新文件夹，并在该文件夹中创建 `docker-compose.yaml` 文件。如下所示：
 
 ```yaml
+
 services:
+
   db:
+
     # 我们使用支持同时 amd64 和 arm64 架构的 mariadb 镜像
+
     image: mariadb:10.6.4-focal
+
     # 如果你真的想使用 MySQL，请取消下行的注释
+
     # image: mysql:8.0.27
+
     command: '--default-authentication-plugin=mysql_native_password word'
+
     volumes:
+
       - db_data:/var/lib/mysql
+
     environment:
+
       - MYSQL_ROOT_PASSWORD=somewordpress
+
       - MYSQL_DATABASE=wordpress
+
       - MYSQL_USER=wordpress
+
       - MYSQL_PASSWORD=wordpress
+
     expose:
+
       - 3306
+
       - 33060
+
     networks:
+
       - local
+
   wordpress:
+
     image: wordpress:latest
+
     ports:
+
       - 80:80
+
     environment:
+
       - WORDPRESS_DB_HOST=db
+
       - WORDPRESS_DB_USER=wordpress
+
       - WORDPRESS_DB_PASSWORD=wordpress
+
       - WORDPRESS_DB_NAME=wordpress
+
     networks:
+
       - local
+
   phpmyadmin:
+
     image: phpmyadmin
+
     ports:
+
       - 8080:80
+
     environment:
+```
+
+
+
+```yaml
       - PMA_HOST=db
+
       - PMA_USER=wordpress
+
       - PMA_PASSWORD=wordpress
+
     networks:
+
       - local
+
 volumes:
+
   db_data:
+
 networks:
+
   local:
+
     external: true
 ```
 
@@ -2427,33 +2405,31 @@ networks:
 
 （注：由于原始文本中“Connecting two stacks”之后存在大量重复的句子，根据“不要重复输出原文”，此处仅保留核心结构与翻译。）
 
-
-
-
 在上面运行应用程序。有几个工具可以帮助你启动本地 Kubernetes 集群。我们将专注于使用一个名为 Minikube 的工具。
 
 https://minikube.sigs.k8s.io/docs/
 
-现在，按照指南所示所示启动我们的本地 minikube 集群：
+现在，按照指南所示启动我们的本地 minikube 集群：
 
-- curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-- sudo install minikube-amd64 /usr/local/bin/minikube
+- `curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64`
+- `sudo install minikube-amd64 /usr/local/bin/minikube`
 
-这将获取 minikube 二进制执行文件并将其安装到你的 Ubuntu 中。当你启动 minikube 时，选择你希望以虚拟机或 docker 的方式运行 minikube。按照如下方式启动 minikube：
+这将获取 `minikube` 二进制执行文件并将其安装到你的 Ubuntu 中。当你启动 `minikube` 时，选择你希望以虚拟机或 docker 的方式运行 `minikube`。按照如下方式启动 `minikube`：
 
--- minikube start <-- 默认使用 docker 启动 minikube
-- minikube start --driver=kv2 <-- 将作为 Virtual Server 启动 minikube
+- `minikube start` <-- 默认使用 docker 启动 minikube
+- `minikube start --driver=kv2` <-- 将作为 Virtual Server 启动 minikube
 
-若要连接到我们的 Kubernetes 集群，请使用名为 kubectl 的工具。按照以下命令从安装页面 https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/ 安装 kubectl：
+若要连接到我们的 Kubernetes 集群，请使用名为 `kubectl` 的工具。按照以下命令从安装页面 https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/ 安装 `kubectl`：
 
-- curl -LO "https://dl.k8s.io/release/\$(curl -Ls https://dl.k8s.io/release/stable.txt)//bin/linux/amd64/kubectl"
-- curl -LO "https://dl.k8s.io/\$(curl -Ls https://dl.k8s.io/release/stable.txt)//bin/linux/amd64/kubectl.sha256"
-- sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+- `curl -LO "https://dl.k8s.io/release/\$(curl -Ls https://dl.k8s.io/release/stable.txt)//bin/linux/amd64/kubectl"`
+- `curl -LO "https://dl.k8s.io/\$(curl -Ls https://dl.k8s.io/release/stable.txt)//bin/linux/amd64/kubectl.sha256"`
+- `sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl`
 
-现在，我们可以运行 kubectl 命令连接到我们的 minikube 集群并如所示获取所有的节点：
+现在，我们可以运行 `kubectl` 命令连接到我们的 minikube 集群并如所示获取所有的节点：
 
 ```
 mattias@hrb:~$ kubectl get nodes
+
 NAME STATUS ROLES AGE VERSION
 minikube Ready control-plane,master 3m6s v1.22.3
 mattias@hrb:~$
@@ -2461,78 +2437,130 @@ mattias@hrb:~$
 
 ### 在 Kubernetes 上部署应用
 
-让我们我们将之前用 docker-compose 使用的 WordPress 应用部署到我们的 Kubernetes 集群中。我们将创建两个命名空间（namespace），并将 MySQL 部署到其中一个，将 WordPress 部署到另一个中。然后，我们将打开本地端口以便我们访问 WordPress。
+让我们将之前用 docker-compose 使用的 WordPress 应用部署到我们的 Kubernetes 集群中。我们将创建两个命名空间（namespace），并将 MySQL 部署到其中一个，将 WordPress 部署到另一个中。然后，我们将打开本地端口以便我们访问 WordPress。
 
 ### MySQL
 
-首先创建一个名为 mysql.yaml 的文件并传入以下内容：
+首先创建一个名为 `mysql.yaml` 的文件并传入以下内容：
 
-mattias@hrb:~/kubernetes$ cat mysql.yaml
+`mattias@hrb:~/kubernetes$ cat mysql.yaml`
+
 ```yaml
 apiVersion: v1
+
 kind: Service
+
 metadata:
+
   name: mysql
+
   namespace: mysql
+
 labels:
+
   app: wordpress
+
 spec:
+
   ports:
+
   - port: 3306
+
   selector:
+
     app: mysql
+
 ---
+
 apiVersion: apps/v1
+
 kind: Deployment
+
 metadata:
+
   name: mysql
+
   namespace: mysql
+
 labels:
+
   app: mysql
+
 spec:
+
   selector:
+
     matchLabels:
+
       app: mysql
+
   strategy:
+
     type: Recreate
+
   template:
+
     metadata:
+
       labels:
+
         app: mysql
+
     spec:
+
       containers:
+
       - image: mysql:5.7
+
         args: ["--default-authentication-plugin=mysql_native_password"]
+
         name: mysql
+
         env:
+
         - name: MYSQL_ROOT_PASSWORD
+
           value: "myrootpassword"
+
         - name: MYSQL_DATABASE
+
           value: wordpress
+
         - name: MYSQL_USER
+
           value: wordpress
+
         - name: MYSQL_PASSWORD
+
           value: password
+
         ports:
+
         - containerPort: 3306
+
           name: mysql
 ```
 
-你可以将命名空间 thought是一个独立的文件夹，将我们在 Kubernetes 中运行的内容隔离开。现在，我们将如下所示创建一个命名空间来存放我们的部署：
+你可以将命名空间视为一个独立的文件夹，将我们在 Kubernetes 中运行的内容隔离开。现在，我们将如下所示创建一个命名空间来存放我们的部署：
 
+```
 mattias@hrb:~/kubernetes$ kubectl create namespace mysql
 namespace/mysql created
+```
 
 命名空间已创建。现在，我们可以将 YAML 应用到 Kubernetes，如所示：
 
+```
 mattias@hrb:~/kubernetes$ kubectl apply -f mysql.yaml
 service/mysql created
 deployment.apps/mysql created
+```
 
 让我们通过运行以下代码来验证一切是否正在运行：
 
-mattias@hrb:~/kubernetes$ kubectl get all -n mysql
 ```
+mattias@hrb:~/kubernetes$ kubectl get all -n mysql
+
 NAME READY STATUS RESTARTS AGE
 pod/mysql-5b74979c5d-4b575 1/1 Running 0 4m57s
 
@@ -2546,8 +2574,11 @@ NAME DESIRED CURRENT READY AGE
 replicaet.apps/mysql-5b7497c5d 1 1 4m57s
 ```
 
-我们告诉 Kubernetes 创建一个部署（deployment）。然后，Kubernetes 会创建一个新的副本（replica），它持有当前部署上的数据。如果你更新了部署，将创建一个新的副本集（replica set），它将创建一个 Pod。Pod 是正在运行的容器。服务（service）本质上是一个提供访问 MySQL 服务器的端口。若需更多信息，我们可以描述我们的 pod，以下是 MySQL Pod 的描述：
 
+
+我们告诉 Kubernetes 创建一个 `deployment`。然后，Kubernetes 会创建一个新的 `replica`，它持有当前部署上的数据。如果你更新了部署，将创建一个新的 `replica set`，它将创建一个 `Pod`。`Pod` 是正在运行的容器。`service` 本质上是一个提供访问 MySQL 服务器的端口。若需更多信息，我们可以描述我们的 pod，以下是 MySQL Pod 的描述：
+
+```
 mattias@hrb:~/projects/hrb/book/818/6/kubernetes$ kubectl describe pod -n mysql
 Name: mysql-5b7497c5d-4b575
 Namespace: mysql
@@ -2564,37 +2595,35 @@ Type: Normal  Reason: Pulling  Age: 33s  Message: Pulling "mysql:5.7"
 Type: Normal  Reason: Pulled  Age: 29s  Message: Successfully pulled "mysql:5.7"
 Type: Normal  Reason: Created  Age: 28s  Message: Created container
 Type: Normal  Reason: Started  Age: 28s  Message: Started container
+```
 
 ### WordPress
 
-设置 WordPress 与我们设置 MySQL 非常相似。如果你检查 YAML，你应该注意到我们使用的各种服务类型。在 MySQL 中，我们使用 ClusterIP 类型。这使得该服务在 Kubernetes 集群可用。
+设置 WordPress 与我们设置 MySQL 非常相似。如果你检查 YAML，你应该注意到我们使用的各种服务类型。在 MySQL 中，我们使用 `ClusterIP` 类型。这使得该服务在 Kubernetes 集群可用。
 
-对于 WordPress，我们使用 LoadBalancer 类型。这种类型接受来自集群外部的流量进入集群，如下：
+对于 WordPress，我们使用 `LoadBalancer` 类型。这种类型接受来自集群外部的流量进入集群，如下：
 
-- minikube service wordpress -n wordpress
+- `minikube service wordpress -n wordpress`
 
-上述命令将打开你的浏览器并显示端口。这是 minikube 命令，在其他 Kubernetes 集群上无法无法。
+上述命令将打开你的浏览器并显示端口。这是 `minikube` 命令，在其他 Kubernetes 集群上无法无法。
 
-图 6.4 显示了运行 minikube 命令后打开的 WordPress 安装页面：
+图 6.4 显示了运行 `minikube` 命令后打开的 WordPress 安装页面：
 
 ![](img/729ff652633ff312828be609e679849e_155_0.png)
 
 ### 访问你的服务
 
-当我们部署 MySQL 和 WordPress 时，部署了两个不同的服务。如果你检查 YAML，你应该注意到我们使用的各种服务类型。在 MySQL 中，我们使用 ClusterIP 类型。这将使服务在集群内部可用。
+当我们部署 MySQL 和 WordPress 时，部署了两个不同的服务。如果你检查 YAML，你应该注意到我们使用的各种服务类型。在 MySQL 中，我们使用 `ClusterIP` 类型。这将使服务在集群内部可用。
 
-对于 WordPress，我们使用 LoadBalancer 类型。这种类型接受来自集群外部的流量进入集群。
+对于 WordPress，我们使用 `LoadBalancer` 类型。这种类型接受来自集群外部的流量进入集群。
 
 ### 总结
 
-在本章中，我们理解了如何处理容器和 docker 容器，然后添加更多内容，将整个堆栈的容器在一起构建。
+在本章中，我们理解了如何处理容器和 `docker` 容器，然后添加更多内容，将整个堆栈的容器在一起构建。
 
+一个运行中的应用程序。随后，我们涵盖了如何使用 `minikube` 操作 Kubernetes、在我们的 Ubuntu 桌面上安装 Kubernetes，并在我们的 Kubernetes 集群中部署了我们的第一个应用——一个带有 MySQL 的 WordPress 博客。
 
-
-
-一个运行中的应用程序。随后，我们涵盖了如何使用 minikube 操作 Kubernetes、在我们的 Ubuntu 桌面上安装 Kubernetes，并在我们的 Kubernetes 集群中部署了我们的第一个应用——一个带有 MySQL 的 WordPress 博客。
-
-现在，我们已经掌握了如何在 docker 中启动和运行容器以及在 Kubernetes 集群中运行容器的基础知识。
+现在，我们已经掌握了如何在 `docker` 中启动和运行容器以及在 Kubernetes 集群中运行容器的基础知识。
 
 在下一章中，我们将使用一个没有 GUI 的 Ubuntu Server。我们将从理解如何安装和配置 Ubuntu Server 开始。从单台服务器到通过标准工具管理的一系列服务器集群。
 
@@ -2628,7 +2657,7 @@ Ubuntu 可以从云服务提供商、普通电脑、服务器以及像树莓派�
 
 在本章中，我们将学习如何安装 Ubuntu Server，从设置单台服务器（如虚拟机或物理计算机）开始。
 
-我们还将检查 Google Cloud 和 Hetzner 上的 Ubuntu Server 的安装和设置，以了解如何方便地在云服务提供商内部设置并利用你的 Ubuntu Server。然后，我们将转向大型 Ubuntu 安装，并使用 Ubuntu 工具**机器即服务（MAAS）** 将你的 Ubuntu Server 从一台部署到多台。
+我们还将检查 Google Cloud 和 Hetzner 上的 Ubuntu Server 的安装和设置，以了解如何方便地在云服务提供商内部设置并利用你的 Ubuntu Server。然后，我们将转向大型 Ubuntu 安装，并使用 Ubuntu 工具 `机器即服务（MAAS）` 将你的 Ubuntu Server 从一台部署到多台。
 
 新的 Ubuntu Server 提供了 SSH 访问权限，允许你开始管理你的服务器。为了安全地使用 SSH，我们将创建安全的 SSH 密钥，用于访问你的 Ubuntu Server。
 
@@ -2657,43 +2686,40 @@ Ubuntu 可以从云服务提供商、普通电脑、服务器以及像树莓派�
 
 你应该始终尝试使用 SSH 密钥。要生成密钥并运行以下命令：
 
-1. mahe@hrb-demo:~$ ssh-keygen
+1. `mahe@hrb-demo:~$ ssh-keygen`
 2. 生成公钥/私钥 rsa 密钥对。
-3. 输入保存密钥的文件 (/home/mahe/.ssh/id_rsa):
+3. 输入保存密钥的文件 (`/home/mahe/.ssh/id_rsa`):
 4. 输入密码（为空表示无密码）
 5. 再次输入密码：
-6. 你的身份标识已保存在 /home/mahe/.ssh/id_rsa
-7. 你的公钥已保存在 /home/mahe/.ssh/id_rsa.pub
+6. 你的身份标识已保存在 `/home/mahe/.ssh/id_rsa`
+7. 你的公钥已保存在 `/home/mahe/.ssh/id_rsa.pub`
 8. 密钥指纹为：
-9. SHA256:J/cau50kIcYMOIYnyYW/5blm5S37aFezCIJk5jRik mahe@hrb-demo
+9. `SHA256:J/cau50kIcYMOIYnyYW/5blm5S37aFezCIJk5jRik mahe@hrb-demo`
 10. 密钥的随机艺术图示为：
-11. +---[RSA 3072]----+
-12. |
-13. |==.. |
-14. |+=o. . |
-15. |oo=. E + |
-16. |.o ..* S + |
-17. | .o+oB B.o o |
-18. | .o*..00.o. |
-19. | +=0= oo. |
-20. | +.0.00 |
-21. +-[SHA256]-----
-22. mahe@hrb-demo:~$ |
+11. `+---[RSA 3072]----+`
+12. `|`
+13. `|==.. |`
+14. `|+=o. . |`
+15. `|oo=. E + |`
+16. `|.o ..* S + |`
+17. `| .o+oB B.o o |`
+18. `| .o*..00.o. |`
+19. `| +=0= oo. |`
+20. `| +.0.00 |`
+21. `+-[SHA256]-----`
+22. `mahe@hrb-demo:~$`
 
 该命令为你生成了两个密钥并获取了公钥，以便你运行以下命令：
 
-1. mahe@hrb-demo:~$ cat ~/.ssh/id_rsa.pub
-2. ssh-rsa AAAAB3Nca1yc2EAAAADAABQDISM/S/ztrNHYjcm8...（此处省略）... mahe@hrb-demo
+1. `mahe@hrb-demo:~$ cat ~/.ssh/id_rsa.pub`
+2. `ssh-rsa AAAAB3Nca1yc2EAAAADAABQDISM/S/ztrNHYjcm8...（此处省略）... mahe@hrb-demo`
 
 该命令为你生成了两个密钥并获取了公钥，以便你运行以下命令：
 
-1. mahe@hrb-demo:~$ cat ~/.ssh/id_rsa.pub
-2. ssh-rsa AAAAB3Nca1yc2EAAAADAABQDISM/S/ztrNHYjcm8...（此处省略）... mahe@hrb-demo
+1. `mahe@hrb-demo:~$ cat ~/.ssh/id_rsa.pub`
+2. `ssh-rsa AAAAB3Nca1yc2EAAAADAABQDISM/S/ztrNHYjcm8...（此处省略）... mahe@hrb-demo`
 
 （注：由于原文中示例部分存在重复且包含截断，译文遵循翻译逻辑保持了操作流程）
-
-
-
 
 这些是服务器环境中常用的软件包。使用 **空格键** 选择选择或取消，按 **回车键** 查看包、发布者和可用版本的详情。
 
@@ -2725,11 +2751,11 @@ Ubuntu 可以从云服务提供商、普通电脑、服务器以及像树莓派�
 
 首先，获取你 Ubuntu 服务器的 IP 地址。如果你为它连接了屏幕和键盘，可以登录并输入：
 
-- 1. `ip a`
+- `ip a`
 
 这将显示你 Ubuntu 服务器的 IP 地址。现在，从你的桌面运行以下命令：
 
-- 1. `ssh USERNAME@IP`
+- `ssh USERNAME@IP`
 
 将 `USERNAME` 替换为你的用户名和服务器的 IP。首先返回的内容是你需要批准主机密钥。每个 SSH 服务器都会生成一个主机密钥；在连接之前，你需要批准它。这也会保护你，防止 SSH 登录到与你家家中的服务器 IP 相同的服务器。主机密钥将会有不同，你的 SSH 客户端将显示错误信息。
 
@@ -2785,15 +2811,15 @@ Ubuntu, Fedora, Debian, CentOS 和 Rocky Linux - 你有多种系统供选择，�
 | 类型 | 2 AMD | 2 GB | 40 GB | 20 TB | ... |
 |---|---|---|---|---|---|
 | CPX11 | | | | | |
-| CX11 | | | | | | |
-| CX21 | | | | | | |
-| CPX21 | | | | | | |
-| CX31 | | | | | | |
-| CPX31 | | | | | | |
-| CX41 | | | | | | |
-| CPX41 | | | | | | |
-| CX51 | | | | | | |
-| CPX51 | | | | | | |
+| CX11 | | | | | |
+| CX21 | | | | | |
+| CPX21 | | | | | |
+| CX31 | | | | | |
+| CPX31 | | | | | |
+| CX41 | | | | | |
+| CPX41 | | | | | |
+| CX51 | | | | | |
+| CPX51 | | | | | |
 
 ### 位置
 
@@ -2818,7 +2844,8 @@ SSH 密钥允许以比密码更安全的方式验证服务器。SSH 需要 OpenS
 
 在前面的图中，你可以看到服务器的外部 IP，并从安装了密钥的电脑进行登录：
 
-```bash
+
+
 root@ubuntu-2gb-hell1:~Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.15.0-73-generic x86_64)
 
 * 文档: https://ubuntu.com
@@ -2828,9 +2855,13 @@ root@ubuntu-2gb-hell1:~Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.15.0-73-generi
 系统信息截至 2023年6月14日 周三 03:46:18 UTC
 
 系统负载: 0.0 进程: 92
+
 根使用率: 10.0% 18.45GB
+
 登录用户: 0
+
 内存使用率: 7% IPv4 地址 (eth0): 37.27.8.12
+
 交换分区使用率: 0% IPv6 地址 (eth0): 2a01:4f9c:c012:8b69::1
 
 应用程序的扩展安全维护 (ESM) 未启用。
@@ -2838,8 +2869,8 @@ root@ubuntu-2gb-hell1:~Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.15.0-73-generi
 可以立即应用更新。
 
 启用 ESM Apps 以接收未来的安全更新。
-访问 https://ubuntu.com/esm 或运行：sudo pro status
-```
+
+访问 https://ubuntu.com/esm 或运行：`sudo pro status`
 
 ### Google 云
 
@@ -2847,8 +2878,7 @@ root@ubuntu-2gb-hell1:~Welcome to Ubuntu 22.04.2 LTS (GNU/Linux 5.15.0-73-generi
 
 当我们的服务器创建完成后，我们可以打开服务器的设置，在顶部有连接到服务器的设置，如下所示：
 
-
-# 下图所示：
+#### 下图所示：
 
 ![](img/729ff652633ff312828be609e679849e_171_0.png)
 
@@ -2873,12 +2903,15 @@ SSH-in-browser
 
 +   可以立即应用 3 个更新，
 13 个标准和安全更新可用。
-要查看这些额外更新，请运行：apt list --upgrade
+要查看这些额外更新，请运行：`apt list --upgrade`
 
 ```
 Last login: Jun 14 18:57:49 2023 from 25.230.24.32
+
 mattias_hemmingson@ubuntu: $ echo "ssh-rsa AAAAAA3NzaC1yc2EAAAAAABQAAABnAAQBA0gFw=i2EF7K5dPT5Wrs/D1jtpyaA42sj2pTT6JmIst
+
 mattias_hemmingson@ubuntu: $ echo "ssh-rsa AAAAAA3NzaC1yc2EAAAAAABQAAABnAAQBA0gFw=i2EF3Y4E6Ftherb1hkhqp1Qub" >> ~/.ssh/authorized_keys
+
 mattias_hemmingson@ubuntu: $ chmod 600 ~/.ssh/authorized_keys
 ```
 
@@ -2888,22 +2921,35 @@ mattias_hemmingson@ubuntu: $ chmod 600 ~/.ssh/authorized_keys
 
 ```
 File Edit View Search Terminal Tabs help
+
 mattias@hrb: $ ssh mattias@hammingson@34.68.176.197
+
 The authenticity of host '34.68.176.197' (34.68.176.197) can't be established.
+
 ED25519 fingerprint is SHA256:Hn9M8kg2LvddfI35bTOQqJ3f/ciPl0.
+
 此密钥不受其他名称识别。
+
 你确定要继续连接吗 (yes/no)? yes
+
 Warning: Permanently added to '/home/mattias/.ssh/known_hosts'.
+
 欢迎使用 Ubuntu 23.04 (LTS), 6.2.0-generic x86_64
+
 * 文档: https://ubuntu.com
 * 管理: https://canonical.com
 * 支持: https://ubuntu.com/advantage
 
 该系统通过删除用户未登录的系统所需的软件包和内容进行了最小化处理。
+
 要恢复这些内容，你可以运行 'unminimize' 命令。
+
 有 3 个标准安全更新可用。
+
 要查看这些额外包，请运行 apt list --upgradable
+
 Last login: Wed Jun 14 18:59:46 2023 from 35.235.244.34
+
 mattias@hammingson@ubuntu: $
 ```
 
@@ -2933,39 +2979,58 @@ mattias@hammingson@ubuntu: $
 - 4. 使用 SSH 登录到你的 Ubuntu Server 以开始安装 MAAS。使用以下命令：
 
 ```
-1. sudo snap install --channel=3.3 maas
+sudo snap install --channel=3.3 maas
 ```
 
-此命令将开始在你的 Ubuntu Server 上安装 MAAS。安装完成后，我们可以运行带有 --help 选项的 maas init 命令来初始化 MAAS，然后运行命令：
+此命令将开始在你的 Ubuntu Server 上安装 MAAS。安装完成后，我们可以运行带有 --help 选项的 `maas init` 命令来初始化 MAAS，然后运行命令：
 
 ```
 usage: init [OPTIONS]
 
 options:
+
   -h, --help             显示此帮助并退出
+
   --region REGION         指定区域名称
+
   --rack RACK             指定机架名称
+
   --database URL          指定数据库 URL
+
   --username USER         指定用户名
+
   --password PASSWORD     指定密码
+
   --port PORT             指定端口
+
   --cluster CLUSTER       指定集群名称
+
   --subnet NAME           指定子网名称
+
   --tag TAG               指定标签名称
-  --description DESC      指定描述
-  --metadata JSON         指定 JSON 格式的元数据:
 ```
 
+
+
+```text
+  --description DESC      指定描述
+
+  --metadata JSON         指定 JSON 格式的元数据:
+```
 
 ![](img/729ff652633ff312828be609e679849e_177_0.png)
 
 **图 7.14：未配置的 KVM 新网络**
 
+### 添加网络设备
+
 现在，我们可以将此网络添加到我们的虚拟机宿主机中，如图所示。首先，添加一个新设备，然后保存。为了使更改生效，请关闭虚拟机并重新启动。
 
 ![](img/729ff652633ff312828be609e679849e_178_0.png)
 
-图 7.15：虚拟主机的新网络设备
+**图 7.15：虚拟主机的新网络设备**
+
+### 分配 IP 地址
 
 当服务器重启后，让我们为新的网络设备分配一个 IP。首先，通过列出所有网络设备获取新 IP 的名称，然后运行以下命令。
 
@@ -2989,6 +3054,8 @@ link/ether 52:54:00:40:b1:16 brd ff:ff:ff:ff:ff
 
 前面的命令显示了新网络设备 `enp7s0` 的名称。
 
+### 配置网络
+
 现在我们可以打开网络配置，通过运行以下命令为我们的网卡（NIC）设置 IP：
 
 ```bash
@@ -3005,15 +3072,17 @@ network:
 mahe@hrb-demo:~$
 ```
 
-这是 netplan 配置，其中添加了网卡的设置。现在，运行以下命令激活您的配置：
+这是 `netplan` 配置，其中添加了网卡的设置。现在，运行以下命令激活您的配置：
 
 ```bash
 mahe@hrb-demo:~$ ip apply
 ```
 
+### 验证网络
+
 您可以使用以下命令验证其是否工作：
 
-```bash
+```text
 lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
 link/loopback 00000:00:00:00 brd 00:00:00:00:00:00
 inet 127.0.0.1/8 scope host lo
@@ -3034,6 +3103,8 @@ inet6 fe80::5054:fe40:b16/64 scope link
 valid_lft forever preferred_lft forever
 ```
 
+
+
 我们创建了虚拟网络并连接了 MAAS 服务器。现在是时候让 MAAS 使用我们的网络，以便我们可以从网络安装服务器。让我们启动在 MAAS 中使用的网络范围。进入子网并选择 10.33.33.0 的子网并创建一个新的动态范围。动态部分是关重要的，因为 MAAS 可以为其 DHCP 服务器使用 IP 地址。以下显示了该范围的设置：
 
 | 未打标签分配 | 空间 | 占用率 | 可用性 |
@@ -3044,13 +3115,13 @@ valid_lft forever preferred_lft forever
 | :--- | :--- | :--- | :--- |
 | | | | 该子网的静态路由 |
 
-| 起始 IP | 结束地址 | 所有者 | 类型 | 注释 |
-| :--- | :--- | :--- | :--- | :--- |
+| 起始 IP | 结束地址 | 所有者 | 类型 | 注释 | 操作 |
+| :--- | :--- | :--- | :--- | :--- | :--- |
 | 10.33.33.10 | 10.33.33.200 | MAAS | 动态 | 动态 | ✎ 8 |
 
 | 名称 | 类型 | 应用于 | 启用 |  | 操作 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| | | | | 应用到此子网的 DHCP 代码段 |
+| | | | | | 应用到此子网的 DHCP 代码段 |
 
 | IP 地址 | 类型 | 节点 | 接口 | 用途 | 所有者 | 最后看到 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -3123,13 +3194,9 @@ valid_lft forever preferred_lft forever
 
 https://discord.bpbonline.com
 
+## 第 8 章 监控您的 Ubuntu 服务器
 
-
-
-## 第 8 章
-监控您的 Ubuntu 服务器
-
-## 简介
+### 简介
 
 在运行 Ubuntu 服务器时，密切关注服务器内部正在发生的情况至关重要。我们希望了解是否存在某些性能问题，例如内存或 CPU 占用率过高，并监控网络性能以了解我们的 Ubuntu 服务器消耗了多少流量。
 
@@ -3139,12 +3206,10 @@ https://discord.bpbonline.com
 
 ### 结构
 
-在接下来的章节中，我们将涵盖以下主题：
-
 - 监控 Linux 服务器的命令
 - 使用 Cockpit 监控 Ubuntu 服务器
 - 大规模化监控 Ubuntu 服务器数据
-- logs 命令
+- `logs` 命令
 - 统一收集和存储日志
 - 检测服务器的黑客攻击
 
@@ -3164,29 +3229,29 @@ https://discord.bpbonline.com
 
 然而，我们不会详细讨论这些命令。
 
-### Top
+#### `top`
 
-Top 会打印当前状态，您可以看到负载以及哪个进程正在消耗资源。以下是该命令的写法：
+`top` 会打印当前状态，您可以看到负载以及哪个进程正在消耗资源。以下是该命令的写法：
 
-- 1. top
+1. `top`
 
-### Netstat
+#### `netstat`
 
-Netstat 显示了系统正在使用的哪些连接。您可以向 Netstat 传递许多不同的参数；可以先使用以下命令：
+`netstat` 显示了系统正在使用的哪些连接。您可以向 `netstat` 传递许多不同的参数；可以先使用以下命令：
 
-- 1. Netstat -anp
+1. `netstat -anp`
 
-### lsof
+#### `lsof`
 
 它显示了目前正在使用哪些文件。
 
-- 1. lsof
+1. `lsof`
 
-### du
+#### `du`
 
 有时服务器磁盘会耗尽。获取文件夹大小并解决该问题的命令如下：
 
-- 1. Du -h -max-depth=1
+1. `du -h -max-depth=1`
 
 ### 使用 Cockpit 监控 Ubuntu 服务器
 
@@ -3196,10 +3261,13 @@ Cockpit 是一个基于 Web 的工具，可以帮助您从网页上监控和管�
 
 ```bash
 /etc/os-release
+
 sudo apt install -t ${VERSION_CODENAME}-backports
 ```
 
-让安装运行，然后您将在以下网站 https://IP:9090 找到 Cockpit 的 Web 图形界面。
+
+
+让安装运行，然后您将在以下网站 `https://IP:9090` 找到 Cockpit 的 Web 图形界面。
 
 您可以使用服务器上的用户名进行登录。在这里，您可以看到关于服务器运行情况的指标和数据。您还可以查看日志。
 
@@ -3207,7 +3275,7 @@ Cockpit 还可以连接到更多服务器，您可以添加它们，以便它可
 
 有关所有设置，请访问 Cockpit 首页获取更多信息：
 
-https://cockpit-project.org/
+`https://cockpit-project.org/`
 
 ### 大规模化监控 Ubuntu 服务器数据
 
@@ -3225,35 +3293,44 @@ Grafana 是一个用于搜索和可视化数据的工具。它连接不同的后
 
 使用命令用于安装 Grafana：
 
-- 1. # 添加 grafana 密钥
-- 2. sudo wget -q -O /usr/share/keyrings/grafana.key http://apt.grafana.com/gpg.key
-- 3. # 添加软件仓库
-- 4. echo "deb [signed-by=/usr/share/keyrings/grafana.key] https://apt.grafana.com/ stable" | sudo tee /etc/apt/sources.list.d/grafana.list
-- 5. # 更新仓库
-- 6. sudo apt update
-- 7. # 安装 grafana
-- 8. sudo apt install grafana-server
+1. `# 添加 grafana 密钥`
+2. `sudo wget -q -O /usr/share/keyrings/grafana.key http://apt.grafana.com/gpg.key`
+3. `# 添加软件仓库`
+4. `echo "deb [signed-by=/usr/share/keyrings/grafana.key] https://apt.grafana.com/ stable" | sudo tee /etc/apt/sources.list.d/grafana.list`
+5. `# 更新仓库`
+6. `sudo apt update`
+7. `# 安装 grafana`
+8. `sudo apt install grafana-server`
 
-Grafana 安装完成后，您可以登录 http://IP:3000 并使用用户名 admin。
+Grafana 安装完成后，您可以登录 `http://IP:3000` 并使用用户名 `admin`。
 
 ### 使用 Grafana 可视化指标
 
-我们现在安装了默认配置并将二进制文件移动到了正确的位置。现在，我们想要创建一个启动文件，以便 Ubuntu 启动时 Prometheus 也能启动。我们需要使用 systemd 来控制它。
+我们现在安装了默认配置并将二进制文件移动到了正确的位置。现在，我们想要创建一个启动文件，以便 Ubuntu 启动时 Prometheus 也能启动。我们需要使用 `systemd` 来控制它。
 
-为此，我们创建一个 promet 文件并将其添加到 systemd 文件夹，如下所示：
+为此，我们创建一个 `promet` 文件并将其添加到 `systemd` 文件夹，如下所示：
 
 ```ini
 [Unit]
+
 Description=Prometheus
+
 Documentation=https://prometheus.io/docs/introduction/
+
 Wants=network-online.target
+
 After=network-online.target
 
 [Service]
+
 Type=simple
+
 User=prometheus
+
 Group=prometheus
+
 ExecReload=/bin/kill -HUP $PID
+
 ExecStart=/usr/local/bin/prometheus \
 --config.file=/etc/prometheus/prometheus.yml \
 --storage.tsdb.path=/var/lib/prometheus \
@@ -3263,36 +3340,34 @@ ExecStart=/usr/local/bin/prometheus \
 --web-external-url=
 
 SyslogIdentifier=prometheus
+
 Restart=always
 
 [Install]
+
 WantedBy=multi-user.target
 ```
 
 让我们激活启动文件并设置某些权限，然后我们就可以准备启动 Prometheus 了，如下：
 
-- 1. # 设置某些权限
-- 2. sudo systemctl daemon-reload
-- 3. sudo systemctl enable prometheus
-- 4. sudo systemctl start prometheus
+1. `# 设置某些权限`
+2. `sudo systemctl daemon-reload`
+3. `sudo systemctl enable prometheus`
+4. `sudo systemctl start prometheus`
 
+`sudo systemctl start prometheus`
+`sudo systemctl enable prometheus`
 
-
-
-
-+ 7. sudo systemctl start prometheus
-8. sudo systemctl enable prometheus
-
-注意：Prometheus 监听在 9090 端口，这与我们之前安装的 Cockpit 使用的是同一个端口。如果它们在不同的服务器上，那么没关系，我们需要关闭 Cockpit。
+注意：Prometheus 监听在 `9090` 端口，这与我们之前安装的 Cockpit 使用的是同一个端口。如果它们在不同的服务器上，那么没关系，我们需要关闭 Cockpit。
 
 你可以使用以下命令禁用 cockpit：
 
-+ 1. systemctl stop cockpit.socket
-2. systemctl disable cockpit.socket
+1. `systemctl stop cockpit.socket`
+2. `systemctl disable cockpit.socket`
 
 现在，你可以通过浏览器访问以下地址来浏览 Prometheus：
 
-http://IP:9090.
+`http://IP:9090.`
 
 ### 数据推送（Push）与数据拉取（Pull）
 
@@ -3308,98 +3383,121 @@ Node Exporter 是与 Prometheus 同一公司的工具，其安装方法与 Prome
 
 安装步骤与 Prometheus 类似。在容器捕获期间，你将学习如何通过容器一起安装 node exporter。现在，让我们使用这种方式进行安装。
 
-进入 /tmp 文件夹并下载 Node Exporter。我们将将其解压并移动到正确的位置，如下所示：
+进入 `/tmp` 文件夹并下载 Node Exporter。我们将将其解压并移动到正确的位置，如下所示：
 
-+ 1. #下载并解压 nodeexporter
-2. https://github.com/prometheus/node_exporter/releases/download/v1.6.0/node_exporter-1.6.0.linux-amd64.tar.gz
-3. tar xvzf node_exporter-1.6.0.linux-amd64.tar.gz
+1. `#下载并解压 nodeexporter`
+2. `https://github.com/prometheus/node_exporter/releases/download/v1.6.0/node_exporter-1.6.0.linux-amd64.tar.gz`
+3. `tar xvzf node_exporter-1.6.0.linux-amd64.tar.gz`
 4.
-5. #将 nodeexporter 拷贝到 bin 
-6. cd node_exporter-1.6.0.linux-amd64
-7. sudo cp node_exporter /usr/local/bin
-8. #创建用户并设置权限
-9. sudo useradd --no-create --shell /bin/false node_exporter
-10. sudo chown node_exporter:node_exporter /usr/local/bin/node_exporter
+5. `#将 nodeexporter 拷贝到 bin`
+6. `cd node_exporter-1.6.0.linux-amd64`
+7. `sudo cp node_exporter /usr/local/bin`
+8. `#创建用户并设置权限`
+9. `sudo useradd --no-create --shell /bin/false node_exporter`
+10. `sudo chown node_exporter:node_exporter /usr/local/bin/node_exporter`
 
 当我们将二进制文件放在正确位置并设置好用户后，可以按照给定的步骤创建启动脚本并启用它：
 
-+ 1. 通过运行以下命令创建一个系统服务文件：
-1. sudo nano /etc/systemd/system/node_exporter.service
+1. 通过运行以下命令创建一个系统服务文件：
+   `sudo nano /etc/systemd/system/node_exporter.service`
 
 2. 现在，将以下内容添加到文件中，如下所示：
 
-+ 1. [Unit]
-2. Description=Node Exporter
-3. Wants=network-online.target
-4. After=network-online.target
-5.
-6. [Service]
-7. User=node_exporter
-8. Group=node_exporter
-9. Type=simple
-10. ExecStart=/usr/local/bin/node_exporter
-11.
-12. [Install]
-13. WantedBy=multi-user.target
+   1. `[Unit]`
+   2. `Description=Node Exporter`
+   3. `Wants=network-online.target`
+   4. `After=network-online.target`
+   5.
+   6. `[Service]`
+   7. `User=node_exporter`
+   8. `Group=node_exporter`
+   9. `Type=simple`
+   10. `ExecStart=/usr/local/bin/node_exporter`
+   11.
+   12. `[Install]`
+   13. `WantedBy=multi-user.target`
 
 3. 现在，我们可以通过运行以下命令启用并启动该服务：
 
-+ 1. systemctl daemon-reload
-2. systemctl start node_exporter
-3. systemctl enable node_exporter
+   1. `systemctl daemon-reload`
+   2. `systemctl start node_exporter`
+   3. `systemctl enable node_exporter`
 
-现在，当我们测试完成后，可以验证我们是否获得了一些值。由于我们在此处使用了拉取服务，我们可以使用 curl 从 Node Exporter 获取数据，如下所示：
+现在，当我们测试完成后，可以验证我们是否获得了一些值。由于我们在此处使用了拉取服务，我们可以使用 `curl` 从 Node Exporter 获取数据，如下所示：
 
 ```
-1. root@g1#: curl -v http://127.0.0.1:9100/metrics
+root@g1#: curl -v http://127.0.0.1:9100/metrics
+```
+
+
+
+```
 2. * Trying 127.0.0.1:9100...
+
 3. * Connected to 127.0.0.1 (127.0.0.1) port 9100 (#0)
-4. > GET /metrics HTTP/1.1
+
+4. > GET `/metrics` HTTP/1.1
+
 5. > Host: 127.0.0.1:9100
+
 6. > User-Agent: curl/7.81.0
+
 7. > Accept: */*
+
 8. >
+
 9. * Mark bundle as not supporting multiuse
+
 10. < HTTP/1.1 200 OK
+
 11. < Content-Type: text/plain; version=0.0.4; charset=utf-8
+
 12. < Date: Wed, 28 Jun 2023 20:16:15 GMT
+
 13. < Transfer-Encoding: chunked
+
 14. <
+
 15. # HELP go_gc_duration_seconds A summary of the pause duration of garbage collection cycles.
+
 16. # TYPE go_gc_duration_seconds summary
+
 17. go_gc_duration_seconds{quantile="0"} 0
+
 18. go_gc_duration_seconds{quantile="0.25"} 0
+
 19. go_gc_duration_seconds{quantile="0.5"} 0
+
 20. go_gc_duration_seconds{quantile="0.75"} 0
+
 21. go_gc_duration_seconds{quantile="1"} 0
 ```
 
-当我们在测试完成后，可以验证我们是否获得了一些值。由于我们在此处使用了拉取服务，我们可以使用 curl 从 Node Exporter 获取数据，如下所示：
 
 
-
+当我们在测试完成后，可以验证我们是否获得了一些值。由于我们在此处使用了拉取服务，我们可以使用 `curl` 从 Node Exporter 获取数据，如下所示：
 
 在我们发送日志之前，让我们先启动 Elasticsearch 和 Kibana。
 
 现在，让我们使用以下命令更新 elastic 密码：
-1. /usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic
+1. `/usr/share/elasticsearch/bin/elasticsearch-reset-password -u elastic`
 
-然后，我们可以访问 https://IP:9200 上的 elasticsearch 页面。
+然后，我们可以访问 `https://IP:9200` 上的 elasticsearch 页面。
 
 你会看到一个 JSON 输出。让我们启动 Kibana，为了让 Kibana 与 Elasticsearch 建立，我们需要进行一些更改。首先，让我们设置 Kibana 监听所有接口，这样我们就可以按照给定的步骤从笔记本电脑连接到服务器：
 
 - 1. 运行以下命令打开文件：
-   1. vi /etc/kibana/kibana.yml
+   1. `vi /etc/kibana/kibana.yml`
 
-- 2. 现在，将 server 设置为服务器的 IP 地址以及指向 elasticsearch 的路径。server host 的设置使得 kibana 开始监听所有 IP，而不仅仅是 localhost。这样你就可以通过更改配置文件中的值，从任何主机连接到你的 kibana：
-   1. server.host: 192.168.1.11
-   2. elasticsearch.hosts: ['https://10.0.0.3:9200']
+- 2. 现在，将 server 设置为服务器的 IP 地址以及指向 elasticsearch 的路径。`server.host` 的设置使得 kibana 开始监听所有 IP，而不仅仅是 localhost。这样你就可以通过更改配置文件中的值，从任何主机连接到你的 kibana：
+   1. `server.host: 192.168.1.11`
+   2. `elasticsearch.hosts: ['https://10.0.0.3:9200']`
 
 - 3. 然后，重启 kibana。从 elasticsearch 获取令牌并将其粘贴到 kibana 中，所示：
-   1. /usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s elastic（之前的）。
+   1. `/usr/share/elasticsearch/bin/elasticsearch-create-enrollment-token -s elastic`（之前的）。
 
 - 4. 现在，kibana 想要添加一个验证数字，你可以将该数字添加到你的 kibana 中以验证我们有权访问 kibana 服务器，所示：
-   1. /usr/share/kibana/bin/kibana-verification-code
+   1. `/usr/share/kibana/bin/kibana-verification-code`
 
 - 5. 当 Kibana 获得验证码后，它将重启，你将进入登录页面。现在，使用我们之前重置的 elastic 服务器密码进行登录。
 
@@ -3413,59 +3511,59 @@ Node Exporter 是与 Prometheus 同一公司的工具，其安装方法与 Prome
 
 以下代码片段显示了我们的 filebeat 输入样式：
 
-- 1. filebeat.inputs:
-  - type: syslog
-  2. format: rfc3164
-  3. protocol.udp:
-  4. host: "192.168.1.11:514"
-  - type: syslog
-  5. format: rfc3164
-  6. protocol.tcp:
-  7. host: "192.168.1.11:514"
-  8. # 每个 - 是一个输入。大多数选项可以在输入级别设置，
-  9. # 你可以使用不同的输入用于不同的配置。
-  10. # 以下是特定于输入的配置。
-  - type: journal
-  11. id: journal
-  12. # fileestream 是一个从文件中收集日志消息的输入。
-  - type: fileestream
-  13. # 在所有输入中的唯一 ID，需要一个 ID。
-- 14. id: logfiles
-  15. # 设置为 true 以启用此输入配置。
-  16. enabled: false
-  17. # 应该被爬取并获取的路径。基于 Glob 的路径。
-  18. paths:
-  - /var/log/*.log
-  19. # - c:\programdata\elasticsearch\logs\*
+- 1. `filebeat.inputs:`
+  - `type: syslog`
+  2. `format: rfc3164`
+  3. `protocol.udp:`
+  4. `host: "192.168.1.11:514"`
+  - `type: syslog`
+  5. `format: rfc3164`
+  6. `protocol.tcp:`
+  7. `host: "192.168.1.11:514"`
+  8. `# 每个 - 是一个输入。大多数选项可以在输入级别设置，`
+  9. `# 你可以使用不同的输入用于不同的配置。`
+  10. `# 以下是特定于输入的配置。`
+  - `type: journal`
+  11. `id: journal`
+  12. `# fileestream 是一个从文件中收集日志消息的输入。`
+  - `type: fileestream`
+  13. `# 在所有输入中的唯一 ID，需要一个 ID。`
+- 14. `id: logfiles`
+  15. `# 设置为 true 以启用此输入配置。`
+  16. `enabled: false`
+  17. `# 应该被爬取并获取的路径。基于 Glob 的路径。`
+  18. `paths:`
+  - `/var/log/*.log`
+  19. `# - c:\programdata\elasticsearch\logs\*`
 
-**注意：** filebeat 和 ssl 证书。看到我们使用的是 elastic 用户，这并不安全。
+**注意：** `filebeat` 和 `ssl` 证书。看到我们使用的是 `elastic` 用户，这并不安全。
 
 我们现在需要一个输出将数据发送到我们的 elasticsearch，所示：
 
-- 1. output.elasticsearch
-  2. # 要连接的主机数组。
-  3. hosts: ["192.168.1.11:9200"]
-  4. # 协议 `http` (默认) 或 `https`
-  5. protocol: "https"
-  6. # 身份凭据 - API key 或用户名/密码
-  7. # api_key: "id:api_key"
-  8. username: "elastic"
-  9. password: "Ujg_KIBreLc_vP-"
-  10. ssl.certificate_author: ["/etc/elasticsearch/certs/http_ca.crt"]
+- 1. `output.elasticsearch`
+  2. `# 要连接的主机数组。`
+  3. `hosts: ["192.168.1.11:9200"]`
+  4. `# 协议 `http` (默认) 或 `https``
+  5. `protocol: "https"`
+  6. `# 身份凭据 - API key 或用户名/密码`
+  7. `# api_key: "id:api_key"`
+  8. `username: "elastic"`
+  9. `password: "Ujg_KIBreLc_vP-"`
+  10. `ssl.certificate_author: ["/etc/elasticsearch/certs/http_ca.crt"]`
 
 让我们启动我们的 filebeat。第一步是通过运行以下命令设置 Elasticsearch：
 
-- 1. filebeat setup -e
+- 1. `filebeat setup -e`
 
 然后，我们可以通过运行以下命令验证我们的 filebeat 正在工作：
 
-- 1. filebeat setup -e
+- 1. `filebeat setup -e`
 
 当一切正常且 filebeat 没有崩溃时，我们可以通过以下命令启动它：
 
-- 1. systemctl restart filebeat.
+- 1. `systemctl restart filebeat.`
 
-现在，**filebeat** 正在将日志发送到我们的 **elasticsearch**，在我们看到日志之前，我们需要设置一个 **kibana** 视图。在 **kibana** 中，进入 **Stack Management** | **Data View**，并创建一个新视图，所示：
+现在，`filebeat` 正在将日志发送到我们的 `elasticsearch`，在我们看到日志之前，我们需要设置一个 `kibana` 视图。在 `kibana` 中，进入 `Stack Management` | `Data View`，并创建一个新视图，所示：
 
 ### 编辑数据视图
 
@@ -3481,14 +3579,11 @@ Node Exporter 是与 Prometheus 同一公司的工具，其安装方法与 Prome
 
 图 8.3: filebeat 索引的 Kibana 数据视图
 
-现在，当我们有了索引时，我们可以在下图中查看并搜索日志。我们在堆栈中搜索了 **error**，所示：
+现在，当我们有了索引时，我们可以在下图中查看并搜索日志。我们在堆栈中搜索了 `error`，所示：
 
 ### 检测你服务器上的黑客攻击
 
-保护你的 Ubuntu 服务器很重要。我们想要检测是否有人尝试 ssh 登录我们的服务器，或者是否有意外程序运行。要做到这一点，我们将使用不同的工具。第一个是 ssh 破解工具 (fail2ban)。它会检测 ssh 是否有多次登录失败，并采取诸如阻止攻击者源 IP 等措施。
-
-
-
+保护你的 Ubuntu 服务器很重要。我们想要检测是否有人尝试 ssh 登录我们的服务器，或者是否有意外程序运行。要做到这一点，我们将使用不同的工具。第一个是 ssh 破解工具 (`fail2ban`)。它会检测 ssh 是否有多次登录失败，并采取诸如阻止攻击者源 IP 等措施。
 
 当我们使用 `apt-get` 安装 OSSEC 时，无法同时让服务器和客户端同时运行。
 
@@ -3496,77 +3591,77 @@ Node Exporter 是与 Prometheus 同一公司的工具，其安装方法与 Prome
 
 **注意：观察我们如何选择“Local”（本地）作为安装类型。这将为我同时设置服务器和代理（agent）。**
 
--   1. `apt-get install build-essential make zlib1g-dev libpcre2-dev libssl-system-dev # 我们需要一些依赖项来构建 ossec
--   2. `cd /opt`
-3. `mkdir ossec`
-4. `cd ossec`
-5. `wget https://github.com/ossec/ossec-hids/archive/3.7.0.tar.gz`
-6. `tar -xzvf 3.7.0.tar.gz`
-7. `cd ossec-hids-3.7.0/`
-8. `./install.sh`
-9. OSSEC HIDS v3.7.0 安装脚本 - http://www.ossec.net
-10. 正在开始 OSSEC HIDS 的安装过程。
-12. 你的系统中必须安装了 C 编译器。
-13.
-14. - 系统：Linux 内核 5.15.0-78-generic
-15. - 用户：root
-16. - 主机：g1
-18.
-19. -- 按 ENTER 继续或按 Ctrl-C 取消 --
-20.
-21.
-22. 你想要哪种安装方式（服务器、代理、本地或混合）？local
-23.
-24. 选择了本地安装。
-25.
-26. 正在设置安装环境。
-27.
-28. 选择安装 OSSEC HIDS 的位置 [/var/ossec];
-29.
-30. 安装将在 /var/ossec 进行。
-31.
-32. 配置 OSSEC HIDS。
-33.
-34. 你需要邮件通知吗？(y/n) [y]:
-35. 你的邮箱地址是什么？matte.hemmingsson@gmail.com
-36.
-37. 我们找到了你的 SMTP 服务器为：alt1.gmail-smtp-in.google.com
-38. 你想使用它吗？(y/n) [y]:
-39.
-40. 使用 SMTP 服务器：alt1.gmail-smtp-in.google.com。
-41.
-42. 你想要运行完整性检查守护进程（daemon）吗？(y/n) [y]:
-43.
-44. 运行 syscheck（完整性检查）。
-45.
-46. 你想要运行 rootkit 检测引擎吗？(y/n) [y]:
-47.
-48. 运行 rootcheck（rootkit 检测）。
-49.
-50. 主动响应（Active response）允许根据接收到的事件执行特定命令。例如，
-51. 你可以阻止 IP 地址或禁用特定用户的访问。
-52. 更多信息请访问：http://www.ossec.net/docs/manual/index.html
-54.
-55. 你想要启用主动响应吗？(y/n) [y]:
-56.
-57. 主动响应已启用。
-59.
-60. 默认，我们可以启用 host-deny 和 firewall-drop 响应。第一个会将主机添加到 /etc/hosts.deny，第二个将在 iptables（linux）或 ipfilter（Solaris, FreeBSD 或 NetBSD）上阻止主机。
-65. 它们可以停止 SSH 暴力破解、端口扫描和其他形式的攻击。你也可以添加它们来阻止 snort 事件，例如。
-68.
-69. 你想要启用 firewall-drop 响应吗？(y/n) [y]:
-70.
-71. firewall-drop 已启用（本地）级别 >= 6
-72.
-73. -
-74. 127.0.0.53
-75.
-76. 你想将更多 IP 添加到白名单吗？(y/n) [n]:
-77.
-78. 设置配置分析以下日志：
-79. -- /var/log/dpkg.log
-80. -- /var/log/nginx/access.log (apache 日)
-81. -- /var/log/nginx/error.log (apache 日)
+- 1. `apt-get install build-essential make zlib1g-dev libpcre2-dev libssl-system-dev # 我们需要一些依赖项来构建 ossec`
+- 2. `cd /opt`
+- 3. `mkdir ossec`
+- 4. `cd ossec`
+- 5. `wget https://github.com/ossec/ossec-hids/archive/3.7.0.tar.gz`
+- 6. `tar -xzvf 3.7.0.tar.gz`
+- 7. `cd ossec-hids-3.7.0/`
+- 8. `./install.sh`
+- 9. OSSEC HIDS v3.7.0 安装脚本 - http://www.ossec.net
+- 10. 正在开始 OSSEC HIDS 的安装过程。
+- 12. 你的系统中必须安装了 C 编译器。
+- 13.
+- 14. - 系统：Linux 内核 5.15.0-78-generic
+- 15. - 用户：root
+- 16. - 主机：g1
+- 18.
+- 19. -- 按 ENTER 继续或按 Ctrl-C 取消 --
+- 20.
+- 21.
+- 22. 你想要哪种安装方式（服务器、代理、本地或混合）？local
+- 23.
+- 24. 选择了本地安装。
+- 25.
+- 26. 正在设置安装环境。
+- 27.
+- 28. 选择安装 OSSEC HIDS 的位置 [/var/ossec];
+- 29.
+- 30. 安装将在 /var/ossec 进行。
+- 31.
+- 32. 配置 OSSEC HIDS。
+- 33.
+- 34. 你需要邮件通知吗？(y/n) [y]:
+- 35. 你的邮箱地址是什么？matte.hemmingsson@gmail.com
+- 36.
+- 37. 我们找到了你的 SMTP 服务器为：alt1.gmail-smtp-in.google.com
+- 38. 你想使用它吗？(y/n) [y]:
+- 39.
+- 40. 使用 SMTP 服务器：alt1.gmail-smtp-in.google.com。
+- 41.
+- 42. 你想要运行完整性检查守护进程（daemon）吗？(y/n) [y]:
+- 43.
+- 44. 运行 syscheck（完整性检查）。
+- 45.
+- 46. 你想要运行 rootkit 检测引擎吗？(y/n) [y]:
+- 47.
+- 48. 运行 rootcheck（rootkit 检测）。
+- 49.
+- 50. 主动响应（Active response）允许根据接收到的事件执行特定命令。例如，
+- 51. 你可以阻止 IP 地址或禁用特定用户的访问。
+- 52. 更多信息请访问：http://www.ossec.net/docs/manual/index.html
+- 54.
+- 55. 你想要启用主动响应吗？(y/n) [y]:
+- 56.
+- 57. 主动响应已启用。
+- 59.
+- 60. 默认，我们可以启用 host-deny 和 firewall-drop 响应。第一个会将主机添加到 /etc/hosts.deny，第二个将在 iptables（linux）或 ipfilter（Solaris, FreeBSD 或 NetBSD）上阻止主机。
+- 65. 它们可以停止 SSH 暴力破解、端口扫描和其他形式的攻击。你也可以添加它们来阻止 snort 事件，例如。
+- 68.
+- 69. 你想要启用 firewall-drop 响应吗？(y/n) [y]:
+- 70.
+- 71. firewall-drop 已启用（本地）级别 >= 6
+- 72.
+- 73. -
+- 74. 127.0.0.53
+- 75.
+- 76. 你想将更多 IP 添加到白名单吗？(y/n) [n]:
+- 77.
+- 78. 设置配置分析以下日志：
+- 79. -- /var/log/dpkg.log
+- 80. -- /var/log/nginx/access.log (apache 日)
+- 81. -- /var/log/nginx/error.log (apache 日)
 
 | 描述 |
 | :--- |
@@ -3576,15 +3671,20 @@ Node Exporter 是与 Prometheus 同一公司的工具，其安装方法与 Prome
 
 如果你计划运行代理或服务器，可以使用 apt 安装 OSSEC，如下所示：
 
--   1. `wget -q -O - https://github.com/ossec/ossec-hids/archive/3.7.0.tar.gz # 更新数据`
-`sudo apt-get update`
+- 1. `wget -q -O - https://github.com/ossec/ossec-hids/archive/3.7.0.tar.gz # 更新数据`
+- `sudo apt-get update`
+
 ### 服务器
-`sudo apt-get install ossec-hids-server # 如果你只需要代理
+`sudo apt-get install ossec-hids-server # 如果你只需要代理`
 `sudo apt-get install ossec-hids-agent`
 
-OSSEC 自带你可以控制的命令。你可以在 /var/ossec/bin 文件夹中找到它们。现在，我们使用以下命令重启 OSSEC 服务器：
-
+OSSEC 自带你可以控制的命令。你可以在 `/var/ossec/bin` 文件夹中找到它们。现在，我们使用以下命令重启 OSSEC 服务器：
 ```
+
+
+
+
+```bash
 root@g1:/var/ossec/bin# ./ossec-control restart
 Deleting PID file '/var/ossec/var/run/syscheckd-1.pid' not used...
 Deleting PID file '/var/ossec/var/run/analysisd-1.pid' not used...
@@ -3607,9 +3707,10 @@ Started ossec-syscheckd..
 Started ossec-monitor..
 Completed.
 root@g1:/var/ossec/bin# ./ossec-control -l
-```
 可用代理列表：ID: 0, 名称: g1（服务器）, IP: 127.0.0.1, 主动/本地
-root@g1:/var/ossec/bin# OSSEC 将其操作记录到两个日志，ossec.log，然后是主动响应 active.log。两个日志都位于 /var/ossec/logs/。
+```
+
+OSSEC 将其操作记录到两个日志，`ossec.log`，然后是主动响应 `active.log`。两个日志都位于`/var/ossec/logs/`。
 
 ### 使用 Filebeat 发 OSSEC 日志到 Elasticsearch
 
@@ -3623,7 +3724,7 @@ root@g1:/var/ossec/bin# OSSEC 将其操作记录到两个日志，ossec.log，�
 </global>
 ```
 
-在 /var/ossec/etc/ossec.conf 中重启 OSSEC 服务器以激活。
+在`/var/ossec/etc/ossec.conf`中重启 OSSEC 服务器以激活。
 
 然后，编辑 Filebeat 配置并添加以下内容：
 
@@ -3640,27 +3741,23 @@ fields:
 
 现在，我们需要观察文件是否有警告产生。你可以在 Elasticsearch 中找到它们。
 
-
-
-
-
--   VPN 故障排除
+- VPN 故障排除
 
 ### 目标
 
-在本章中，我们将学习如何将 Ubuntu 服务器配置为防火墙，并控制进入和离开我们网络的流量。我们将设置基础网络工具（如 DHCP 和 DNS），以创建一个客户端可以在服务器和桌面面上都可以使用的完整网络。我们还将学习如何在服务器和客户端之间建立安全隧道，创建我们自己的私有网络。
+在本章中，我们将学习如何将 Ubuntu 服务器配置为防火墙，并控制进入和离开我们网络的流量。我们将设置基础网络工具（如 DHCP 和 DNS），以创建一个客户端可以在服务器和桌面上都可以使用的完整网络。我们还将学习如何在服务器和客户端之间建立安全隧道，创建我们自己的私有网络。
 
 ### 使用 Ubuntu 作为主防火墙
 
-在 Fareoffice 工作这十年里，我们使用带有 `iptables` 的 Linux 防火墙作为所有通往我们高负载站点的流量的主防火墙。这使我们能够能够运行一个带有 Linux 的简单服务器来控制我们的网络，当我们需要更多工具和服务时，可以轻松地将它们集成到我们的 Linux 服务器中。
+在 Fareoffice 工作这十年里，我们使用带有 `iptables` 的 Linux 防火墙作为所有通往我们高负载站点的流量的主防火墙。这使我们能够运行一个带有 Linux 的简单服务器来控制我们的网络，当我们需要更多工具和服务时，可以轻松地将它们集成到我们的 Linux 服务器中。
 
 现在，让我们设置 Ubuntu 服务器拥有公网 IP并将流量路由到我们的私有网络。
 
 为此，我们需要两个网络设备，一个用于外部流量，另一个用于私有网络。
 
-在我们的服务器上，有一个网卡（NIC）使用 IP 192.168.122.27 连接，如下所示运行 `ip` 命令所示：
+在我们的服务器上，有一个网卡（NIC）使用 IP 192.168.122.27 连接，如下所示运行 `ip` 命令：
 
-```
+```text
 1. enp1s0:<BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc default qodel state UP group default qlen 1000
 2. link/ether 52:54:00:65:75:89 brd ff:ff:ff:ff:ff
 3. inet 192.168.122.24 metric 100 brd 192.168.122.255 scope dynamic enp1s0
@@ -3668,6 +3765,9 @@ fields:
 5. inet6 fe80::5054:fe:65:7589/64 scope link
 6. valid_lft forever preferred_lft forever
 ```
+
+
+
 
 在这里，我们将创建一个具有新 IP 范围的新虚拟网卡供网络使用。
 
@@ -3691,26 +3791,28 @@ VLAN 是许多交换机支持的网络协议。在这里，我们可以在网络
 
 `/etc/netplan/` 生成网络配置文件名。文件名将取决于 Ubuntu 版本和网卡（示例名称为 `/etc/netplan/00-installer-config.yaml`），如下：
 
+```
 1. network:
 2. ethernets:
 3. enp1s0:
 4. dhcp4: true
+5. enp7s0:
+6. dhcp4: no
+7. addresses: [10.33.33.2/24]
+8. vlans:
+9. vlan.10:
+10. id: 10
+11. link: enp7s0
+12. addresses: [10.33.34.2/24]
+13. version: 2
+14. ~
+```
 
-| 5. | enp7s0: |
-| 6. | dhcp4: no |
-| 7. | addresses: [10.33.33.2/24] |
-| 8. | vlans: |
-| 9. | vlan.10: |
-| 10. | id: 10 |
-| 11. | link: enp7s0 |
-| 12. | addresses: [10.33.34.2/24] |
-| 13. | version: 2 |
-| 14. | ~ |
-
-这就是 netplan 配置的样式。我们有一个名为 `enp10` 的网卡使用 DHCP，这样我们就可以从互联网供应商处获取 IP。在网卡 `enp7s0` 上，我们设置了 `10.33.33.2` 的网络，在那个网络上，我们设置了一个标签为 10 的 VLAN，其 IP 为 `10.33.34.2`。
+这就是 `netplan` 配置的样式。我们有一个名为 `enp10` 的网卡使用 DHCP，这样我们就可以从互联网供应商处获取 IP。在网卡 `enp7s0` 上，我们设置了 `10.33.33.2` 的网络，在那个网络上，我们设置了一个标签为 10 的 VLAN，其 IP 为 `10.33.34.2`。
 
 让我们应用更改，如下面的代码所示：
 
+```
 1. root@hrb-demo:home/mahe# netplan apply
 2. root@hrb-demo:home/mahe# ip a
 3. 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue
@@ -3738,7 +3840,8 @@ VLAN 是许多交换机支持的网络协议。在这里，我们可以在网络
 24. valid_lft forever preferred_lft forever
 25. inet6 fe80::5054:fe:40:51:16/64 scope link
 26. valid_lft forever preferred_lft forever
-27. root@hrb-demo:home/mahe# netplan apply 
+27. root@hrb-demo:home/mahe# netplan apply
+```
 
 ### 使用 `iptables` 控制流量
 
@@ -3750,14 +3853,10 @@ VLAN 是许多交换机支持的网络协议。在这里，我们可以在网络
 
 `/etc/netplan/` 生成网络配置文件名。文件名将取决于 Ubuntu 版本和网卡（示例名称为 `/etc/netplan/00-installer-config.yaml`）。
 
-（注：由于原文后半部分存在大量重复和乱码内容，此处已根据指令意图对核心逻辑进行了翻译）
-
-
-
-
-
+```
 - 1. iptables -P INPUT DROP
 - 2. iptables -P OUTPUT DROP
+```
 
 现在，你应该能够将你的 Ubuntu 服务器或桌面版设置为路由器，并将流量从私有网络发送到公网络。
 
@@ -3765,26 +3864,31 @@ VLAN 是许多交换机支持的网络协议。在这里，我们可以在网络
 
 现在，当我们设置好路由器后，它就可以将流量从私有网络传输到公网络，并设置可以使用网络的客户端。为了建立私有网络，我们需要两项服务。一个是我们的 DHCPD 服务器，它将向客户端分发 DHCP（IP 地址）并连接它们。另一个服务是 DNS 服务器，允许我们网络中的客户端解析 DNS 域名（如 ubuntu.com）并访问互联网。
 
-虽然有很多不同的工具可以实现此功能，但在这里我们使用 dnsmasq 工具。它可以同时作为 DHCPD 服务器和 DNS 服务器工作。这就是为什么它易于使用的原因。
+虽然有很多不同的工具可以实现此功能，但在这里我们使用 `dnsmasq` 工具。它可以同时作为 DHCPD 服务器和 DNS 服务器工作。这就是为什么它易于使用的原因。
 
-让我们开始通过运行以下代码在我们的 Ubuntu 服务器上安装 dnsmasq：
+让我们开始通过运行以下代码在我们的 Ubuntu 服务器上安装 `dnsmasq`：
 
+```
 - 1. apt install dnsmasq
+```
 
 为了设置我们的 DNS 服务器，我们需要一些要使用的数据。首先，我们需要一个能够为其中分配 IP 地址的网络。它必须是一个我们已经配置了网卡的网络。
 
 你无法向没有连接网的范围范围发送 IP。
 
-当我们配置网卡时，我们使用的是范围 10.33.33.0/24，并将我们用作路由器的服务器设置在 IP 10.33.33.2。我们还计划在同一台主机上运行 DNS 服务器，因此网络客户端的 DNS 服务器也将与路由器的 IP 相同，均为 10.33.33.2。
+当我们配置网卡时，我们使用的是范围 `10.33.33.0/24`，并将我们用作路由器的服务器设置在 IP `10.33.33.2`。我们还计划在同一台主机上运行 DNS 服务器，因此网络客户端的 DNS 服务器也将与路由器的 IP 相同，均为 `10.33.33.2`。
 
 设置自己的网络时，你需要更新地址以匹配你的设置。
 
-为了设置我们的 dnsmasq 服务器，打开文件并运行以下代码：
+为了设置我们的 `dnsmasq` 服务器，打开文件并运行以下代码：
 
+```
 - 1. vi /etc/dnsmasq.conf
+```
 
 在上述配置文件中，请注意以下设置：
 
+```
 - 1. # 设置 dnsmasq 运行的接口。
 - 2. # 如果未设置，则使用所有接口。
 - 3. #interface=vlan.11@eno1
@@ -3816,97 +3920,108 @@ VLAN 是许多交换机支持的网络协议。在这里，我们可以在网络
 - 29. dhcp-tag=efi64,ipxe.efi
 - 30. dhcp-userclass=set:ipxe,iPXE
 - 31. dhcp-boot=ipxe,http://10.33.33.2:8081/boot.ipxe
-- 32.
-
 ```
+
+
+
+```text
 33. # Logging.
+
 34. log-facility=/var/log/dnsmasq.log # 日文件路径.
+
 35. log-async
+
 36. log-queries # 记录查询.
+
 37. log-dhcp # 记录 dhcp 相关消息.
 ```
 
 在上述配置文件中，请注意以下设置：
 
-- 1. dhcp-range=10.33.33.10,10.33.34.200,255.255.0.0
+- `dhcp-range=10.33.33.10,10.33.34.200,255.255.0.0`
 
-这是 dnsmasq 发送 10.33.33.20 到 10.22.22.200 之间 IP 地址的范围。我们为服务器留了一些 IP，并为我的设置留了一些 IP。但是，这取决于你，如下命令所示：
+这是 dnsmasq 发送 `10.33.33.20` 到 `10.22.22.200` 之间 IP 地址的范围。我们为服务器留了一些 IP，并为我的设置留了一些 IP。但是，这取决于你，如下命令所示：
 
-- 1. dhcp-host=3C:98:72:F9:14:D8,server,10.33.33.12,infinite
+- `dhcp-host=3C:98:72:F9:14:D8,server,10.33.33.12,infinite`
 
-我们有一个使用 DHCP 的服务器。然而，我们希望它每次都是 10.33.33.12 这个 IP。
+我们有一个使用 DHCP 的服务器。然而，我们希望它每次都是 `10.33.33.12` 这个 IP。
 
 因此，我们可以添加此值并设置静态主机：
 
-- 1. # 设置网关为路由器。以下两行相同。
-- 2. dhcp-option=3,10.33.33.2
-- 3.
-- 4. # 设置 DNS 服务器为路由器。
-- 5. dhcp-option=6,10.33.33.12
+- `# 设置网关为路由器。以下两行相同。`
+- `dhcp-option=3,10.33.33.2`
+- `# 设置 DNS 服务器为路由器。`
+- `dhcp-option=6,10.33.33.12`
 
 这两行将在我们设置路由器之前设置我们的 DNS 服务器。你不需要添加自己的 DNS 服务器；相反，可以使用 Google 或 Cloudflare 等第三方 DNS 服务器。
 
 如果我们设置了 PXE 启动和许多服务器，我们需要设置我们的 DHCP 设置。以下是停止并禁用的命令：
 
-- 1. # 禁用 ubuntu dns
-- 2. systemctl stop systemd-resolved
-- 3. systemctl disable systemd-resolved
-- 4. systemctl mask systemd-resolved
-- 5.
-- 6. # 重启 dnsmasq
-- 7. systemctl restart dnsmasq
-- 8.
-- 9. # 错误修复
-- 10. rm /etc/resolv.conf
-- 11. vi /etc/resolv.conf
-- 12. cat /etc/resolv.conf
-- 13. # 手动设置 dns
-- 14. nameserver 1.1.1.1
+```bash
+# 禁用 ubuntu dns
+systemctl stop systemd-resolved
+systemctl disable systemd-resolved
+systemctl mask systemd-resolved
+
+# 重启 dnsmasq
+systemctl restart dnsmasq
+
+# 错误修复
+rm /etc/resolv.conf
+vi /etc/resolv.conf
+cat /etc/resolv.conf
+# 手动设置 dns
+nameserver 1.1.1.1
+```
 
 ### DNS 设置
 
-向你的服务器添加自己的 DNS 记录很容易。假设我们想将 portal.com 的 DNS 名称指向我们的服务器和路由器，我们需要运行以下代码：
+向你的服务器添加自己的 DNS 记录很容易。假设我们想将 `portal.com` 的 DNS 名称指向我们的服务器和路由器，我们需要运行以下代码：
 
-- 1. root@g1:/home/mahe# cat /etc/hosts
-- 2. 127.0.0.1 localhost
-- 3. 1.1.1.1 g1
-- 4. 100.0.0.40
-- 5. # 以下行适用于支持 IPv6 的主机
-- 6. ::1 ip6-loopback
-- 7. fe00::0 ip6-local
-- 8. ff00::0 ip6-multicast
-- 9. ff02::1 ip6-allnodes
-- 10. ff02::2 ip6-allrouters
-- 11.
-- 12. 1.1.1.1 google.com
-- 13. root@g1:/home/mahe#
+```text
+root@g1:/home/mahe# cat /etc/hosts
+127.0.0.1 localhost
+1.1.1.1 g1
+100.0.0.40
+# 以下行适用于支持 IPv6 的主机
+::1 ip6-loopback
+fe00::0 ip6-local
+ff00::0 ip6-multicast
+ff02::1 ip6-allnodes
+ff02::2 ip6-allrouters
 
-在上面的文件中，我们看到已经添加了解析文件将 google.com 指向 1.1.1.1 的 IP。然而，这是错误的。
+1.1.1.1 google.com
+root@g1:/home/mahe#
+```
 
-当测试连接时，它请求 google.com 的 IP 地址，回复显示 google.com 位于 1.1.1.1，这是错误的，答案是从我的本地 DNS 服务器读取的，如下所示：
+在上面的文件中，我们看到已经添加了解析文件将 `google.com` 指向 `1.1.1.1` 的 IP。然而，这是错误的。
 
-- 1. root@g1:/home/mahe# dig google.com @127.0.0.1
-- 2.
-- 3. <<< DiG 9.18.12-0ubuntu0.22.04-Ubuntu >>> google.com @127.0.0.1
-- 4. :: global options: +cmd
-- 5. :: Got answer:
-- 6. ::>>HEADER<< opcode: QUERY, status: NOERROR, id: 13530
-- 7. :: flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADITIONAL: 1
-- 8.
-- 9. ;; OPT PSEUDOSECTION:
-- 10. ;; EDNS: version: 0, flags; udp: 1232
-- 11. ;; QUESTION SECTION:
-- 12. ;; google.com. IN A
-- 13.
-- 14. ;; ANSWER SECTION:
-- 15. ;; google.com. 0 IN A 1.1.1.1
-- 16.
-- 17. ;; Query time: 4 msec
-- 18. ;; SERVER: 127.0.0.1#53(127.0.0.1) (UDP)
-- 19. ;; WHEN: Mon 11 12:13:18 UTC 2023
-- 20. ;; MSG SIZE rcvd: 55
+当测试连接时，它请求 `google.com` 的 IP 地址，回复显示 `google.com` 位于 `1.1.1.1`，这是错误的，答案是从我的本地 DNS 服务器读取的，如下所示：
 
-服务器回复 google.com 位于 1.1.1.1：
+```text
+root@g1:/home/mahe# dig google.com @127.0.0.1
+
+<<< DiG 9.18.12-0ubuntu0.22.04-Ubuntu >>> google.com @127.0.0.1
+:: global options: +cmd
+:: Got answer:
+::>>HEADER<< opcode: QUERY, status: NOERROR, id: 13530
+:: flags: qr aa rd ra; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADITIONAL: 1
+
+;; OPT PSEUDOSECTION:
+;; EDNS: version: 0, flags; udp: 1232
+;; QUESTION SECTION:
+;; google.com. IN A
+
+;; ANSWER SECTION:
+;; google.com. 0 IN A 1.1.1.1
+
+;; Query time: 4 msec
+;; SERVER: 127.0.0.1#53(127.0.0.1) (UDP)
+;; WHEN: Mon 11 12:13:18 UTC 2023
+;; MSG SIZE rcvd: 55
+```
+
+服务器回复 `google.com` 位于 `1.1.1.1`：
 
 ### 安全通信
 
@@ -3920,65 +4035,84 @@ OpenVPN 是两者中较老的，可以在服务器和桌面的许多应用程序
 
 OpenVPN 位于 Ubuntu 标准仓库中，可以通过运行以下命令安装：
 
-- 1. apt install openvpn easy-rsa
+`apt install openvpn easy-rsa`
 
-当我们设置 OpenVPN 服务器和客户端时，我们使用 TLS 证书来验证客户端和用户。为了这一点，我们需要创建一些链接。为了方便起见，我们将使用 easy-rsa 工具生成证书。
+当我们设置 OpenVPN 服务器和客户端时，我们使用 TLS 证书来验证客户端和用户。为了这一点，我们需要创建一些链接。为了方便起见，我们将使用 `easy-rsa` 工具生成证书。
 
-让我们在 /etc/pki 中为 easy-rsa 创建文件夹，并将我们需要的文件链接到其中，运行以下代码：
+让我们在 `/etc/pki` 中为 `easy-rsa` 创建文件夹，并将我们需要的文件链接到其中，运行以下代码：
 
-- 1. root@hrb-1 /etc/pki # mkdir easy-rsa
-- 2. root@hrb-1 /etc/pki # cd easy-rsa
-- 3. root@hrb-1 /etc/pki/easy-rsa # ln -s /usr/share/easy-rsa/*
-- 4. root@hrb-1 /etc/pki/easy-rsa # ls
-- 5. easyrsa openssl-easyrsa.cnf vars.example x509-types
-- 6. root@hrb-1 /etc/pki/easy-rsa #
-
-
-
+```text
+root@hrb-1 /etc/pki # mkdir easy-rsa
+root@hrb-1 /etc/pki # cd easy-rsa
+root@hrb-1 /etc/pki/easy-rsa # ln -s /usr/share/easy-rsa/*
+root@hrb-1 /etc/pki/easy-rsa # ls
+easyrsa openssl-easyrsa.cnf vars.example x509-types
+root@hrb-1 /etc/pki/easy-rsa #
+```
 
 在 `/etc/pki/easy-rsa` 下创建一个名为 `vars` 的文件并将并将内容添加到文件中：
 
 ```bash
-1. root@hrb-1 /etc/pki/easy-rsa # vi vars
-2. root@hrb-1 /etc/pki/easy-rsa # cat vars
-3. set_var EASYRSA_ALGO "ec"
-4. set_var EASYRSA_DIGEST "sha512"
-5. root@hrb-1 /etc/pki/easy-rsa #
+root@hrb-1 /etc/pki/easy-rsa # vi vars
+
+root@hrb-1 /etc/pki/easy-rsa # cat vars
+
+set_var EASYRSA_ALGO "ec"
+
+set_var EASYRSA_DIGEST "sha512"
+
+root@hrb-1 /etc/pki/easy-rsa #
 ```
 
 现在，我们来设置我们的 PKI 服务器。我们将使用这些证书基础来生成服务器和客户端证书。使用命令 `/easyrsa init-pki` 初始化 pki 并构建 CA，如下代码所示：
 
 ```bash
-1. root@hrb-1 /etc/pki/easy-rsa # /easyrsa init-pki
-2.
-3. init-pki complete; you may now create a CA or requests.
-4. Your newly created PKI dir is: /etc/pki/easy-rsa/pki
-5.
-6. root@hrb-1 /etc/pki/easy-rsa #
+root@hrb-1 /etc/pki/easy-rsa # /easyrsa init-pki
+
+init-pki complete; you may now create a CA or requests.
+Your newly created PKI dir is: /etc/pki/easy-rsa/pki
+
+root@hrb-1 /etc/pki/easy-rsa #
 ```
 
 执行 `init-pki` 后，我们可以创建 CA 并记住该密码，如下代码所示：
 
 ```bash
-1. root@hrb-1 /etc/pki/easy-rsa # ./easyrsa build-ca
-2. Using SSL: openssl SSL 3.0.2 15 Mar 2022 (Library: OpenSSL 3.0.2 15 Mar 2022)
-3.
-4. Enter New Key Passphrase:
-5. Re-Enter New CA Key Passphrase:
-6. You are about to be asked to enter information that will be incorporated
-7. into your certificate request.
-8. What are you about to enter what is called a Distinguished Name or a DN.
-9. There are quite a few fields that you can leave some blank
-10. For some fields there will be a default value,
-11. If you enter '.', the field will be left blank.
-12. -----
-13. Common Name (eg: your user, host, or server name) [Easy-RSA CA]:
-14.
-15. CA creation complete and you may now import and sign requests.
-16. Your new CA certificate file for publishing is at:
-17. /etc/pki/easy-rsa/pki/ca.crt
-18.
-19. root@hrb-1 /etc/pki/easy-rsa #
+root@hrb-1 /etc/pki/easy-rsa # ./easyrsa build-ca
+Using SSL: openssl SSL 3.0.2 15 Mar 2022 (Library: OpenSSL 3.0.2 15 Mar 2022)
+
+Enter New Key Passphrase:
+Re-Enter New CA Key Passphrase:
+You are about to be asked to enter information that will be incorporated
+```
+
+
+
+### 7. into your certificate request.
+
+### 8. What are you about to enter what is called a Distinguished Name or a DN.
+
+### 9. There are quite a few fields that you can leave some blank
+
+### 10. For some fields there will be a default value,
+
+### 11. If you enter '.', the field will be left blank.
+
+### 12. -----
+
+### 13. Common Name (eg: your user, host, or server name) [Easy-RSA CA]:
+
+### 14.
+
+### 15. CA creation complete and you may now import and sign requests.
+
+### 16. Your new CA certificate file for publishing is at:
+
+`/etc/pki/easy-rsa/pki/ca.crt`
+
+`root@hrb-1 /etc/pki/easy-rsa #`
+
+```
 ```
 
 我们的 PKI 现在已经准备就绪，我们可以为 OpenVPN 服务器制作第一个张证书了，如下代码所示：
@@ -3997,10 +4131,10 @@ OpenVPN 位于 Ubuntu 标准仓库中，可以通过运行以下命令安装：
 13. Common Name (eg: your user, host, or server name) [server]:vpn.robots.beer
 14.
 15. Keypair and certificate request completed. Your files are:
-16. req: /etc/pki/easy-rsa/pki/reqs/server.req
-17. key: /etc/pki/easy-rsa/pki/private/server.key
+16. req: `/etc/pki/easy-rsa/pki/reqs/server.req`
+17. key: `/etc/pki/easy-rsa/pki/private/server.key`
 18.
-19. root@hrb-1 /etc/pki/easy-rsa #
+19. `root@hrb-1 /etc/pki/easy-rsa #`
 
 你将被要求输入服务器名称。你可以设置你的服务器名称或通用名称。
 
@@ -4022,8 +4156,8 @@ OpenVPN 位于 Ubuntu 标准仓库中，可以通过运行以下命令安装：
 13.
 14. Type the word 'yes' to continue, or any other input to abort.
 15. Confirm request details: yes
-16. Using configuration from /etc/pki/easy-rsa/pki/easy-rsa-612995.MFQr/tmp.yn0kUD
-17. Enter pass phrase for /etc/pki/easy-rsa/pki/private/ca.key:
+16. Using configuration from `/etc/pki/easy-rsa/pki/easy-rsa-612995.MFQr/tmp.yn0kUD`
+17. Enter pass phrase for `/etc/pki/easy-rsa/pki/private/ca.key`:
 18. 40270CF747F0000:error:0700006:configuration file routines:N CONF_get:string value:=crypto/conf/lib.c:315:group=<NULL> name=unique_subject
 19. Check that the request matches the signature
 20. Signature ok
@@ -4034,47 +4168,46 @@ OpenVPN 位于 Ubuntu 标准仓库中，可以通过运行以下命令安装：
 
 
 
-
 24. 写入包含 1 个新条目的数据库
 25. 数据库已更新
 26.
-27.
-28. 证书已创建于：/etc/pki/easy-rsa/pki/issued/server.crt
+28. 证书已创建于：`/etc/pki/easy-rsa/pki/issued/server.crt`
 29.
-30. root@hrb-1 /etc/pki/easy-rsa #
+30. `root@hrb-1 /etc/pki/easy-rsa #`
 
 现在，我们已经有了服务器所需的证书。然而，我们还需要为我们的 OpenVPN 服务器创建一个证书作为密钥。让我们按照所示方法创建密钥：
 
-+ 1. root@hrb-1 /etc/pki/easy-rsa # openvpn --genkey --secret ta.key
-2. 2023-09-14 WARNING: 使用 --genkey --secret filename 的方法已弃用。请使用 --genkey secret filename 代替。
-3. root@hrb-1 /etc/pki/easy-rsa # ls
-4. easyyrsa.txt openssl-easyyrsa.cnf pki ta.key vars vars.complex x509-types
-5. root@hrb-1 /etc/pki/easy-rsa # cat ta.key
-6. #
-7. # 2048 bit OpenVPN 静态密钥
-8. #
-9. -----BEGIN OpenVPN Static key V1-----
-10. d3bc43937f78508657346e57366295b
-11. 9ce63af5c779dae5aab932a39362efc
-12. 2ca0db02cc7e0802927a22e1399636c
-13. 6953fc9088b314afbda229dd810e6c
-14. 1ef4a3c3288635894630f27e0266e6
-15. 0770cb680963bf1c27fcb4bd37c0c1de3
-16. 700631ac3284ce7b72545535fe1a5ce8
-17. b9461ba1eb93496844b5eb777e72b89
-18. 51a177bfd0a000661c6f6f44cbbd
-19. a0faf040fed985da2e262109abaffidd
-20. 2b1793851b611e5176d4f557edcb60dc
-21. b70b1261317a2d5484f283e535bc8c76
+1. `root@hrb-1 /etc/pki/easy-rsa # openvpn --genkey --secret ta.key`
+2. `2023-09-14 WARNING: 使用 --genkey --secret filename 的方法已弃用。请使用 --genkey secret filename 代替。`
+3. `root@hrb-1 /etc/pki/easy-rsa # ls`
+4. `easyyrsa.txt openssl-easyyrsa.cnf pki ta.key vars vars.complex x509-types`
+5. `root@hrb-1 /etc/pki/easy-rsa # cat ta.key`
+6. `#`
+7. `# 2048 bit OpenVPN 静态密钥`
+8. `#`
+9. `-----BEGIN OpenVPN Static key V1-----`
+10. `d3bc43937f78508657346e57366295b`
+11. `9ce63af5c779dae5aab932a39362efc`
+12. `2ca0db02cc7e0802927a22e1399636c`
+13. `6953fc9088b314afbda229dd810e6c`
+14. `1ef4a3c3288635894630f27e0266e6`
+15. `0770cb680963bf1c27fcb4bd37c0c1de3`
+16. `700631ac3284ce7b72545535fe1a5ce8`
+17. `b9461ba1eb93496844b5eb777e72b89`
+18. `51a177bfd0a000661c6f6f44cbbd`
+19. `a0faf040fed985da2e262109abaffidd`
+20. `2b1793851b611e5176d4f557edcb60dc`
+21. `b70b1261317a2d5484f283e535bc8c76`
 
 现在，我们已经准备好启动 OpenVPN 服务器了。
 
-让我们从 openvpn 复制默认配置，并更新配置以添加我们的证书路径：
+让我们从 `openvpn` 复制默认配置，并更新配置以添加我们的证书路径：
 
-+ 1. root@hrb-1 /etc/pki/easy-rsa # sudo cp /usr/share/doc/openvpn/examples/sample-config-files/server.conf /etc/openvpn/server/
-2. root@hrb-1 /etc/openvpn/server # vi server.conf
+1. `root@hrb-1 /etc/pki/easy-rsa # sudo cp /usr/share/doc/openvpn/examples/sample-config-files/server.conf /etc/openvpn/server/`
+2. `root@hrb-1 /etc/openvpn/server # vi server.conf`
 3. #### 截断以显示我修改的部分 !!!!
 
+```
 ca /etc/pki/easy-rsa/pki/ca.crt
 cert /etc/pki/easy-rsa/pki/issued/server.crt
 key /etc/pki/easy-rsa/pki/private/server.key # 此文件应保持保密
@@ -4086,117 +4219,120 @@ dh /etc/pki/easy-rsa/dh2048.pem
 
 # 服务器端为 '0'，客户端为 '1'。
 tls-auth /etc/pki/easy-rsa/ta.key 0 # 此文件是机密的
+```
 
 启动我们的 OpenVPN 服务器：
 
-+ 1. root@hrb-1 /etc/openvpn/server # openvpn --config server.conf
-2. 2023-09-14 11:01:48 WARNING: 对于带有 IPv4 池的服务器配置，--topology net30 将在未来的版本中移除。请尽快迁移到 --topology subnet。
-
-+ 3. 2023-09-14 11:01:48 弃用选项：--cipher 设置为 'AES-256-CBC' 但 --data-ciphers 中缺少 (AES-256-GCM:AES-128-GCM)。未来的 OpenVPN 将忽略用于加密算法协商的 --cipher。请向 --data-ciphers 添加 AES-256-CBC，或将此处的 --cipher 'AES-256-CBC' 更改为 --data-ciphers-fallback 'AES-256-CBC' 以消除此警告。
-
-+ 4. 2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日
-+ 5. 2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日
-+ 6. 2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日
-+ 7. 2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日
-+ 8. 2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日
-+ 9. 2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日
-+ 10. 2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日
-+ 11. 2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日
-+ 12. 2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日
-+ 13. 2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日
-+ 14. 2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日
-+ 15. 2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日
-+ 16. 2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日
-+ 17. 2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日
-+ 18. 2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日
-+ 19. 2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日
-+ 20. 2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日
-+ 21. 2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日
-+ 22. 2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日
-+ 23. 2023-09-14 11:01:48 net_route_v4_best_gw: 0.0..0
-+ 24. 2023-09-14 11:01:48 net_route_v4_best_gw: 0.0.0.0
-+ 25. 2023-09-14 11:01:48 net_route_v4_best_gw: 0.0.0.0
-
-
+1. `root@hrb-1 /etc/openvpn/server # openvpn --config server.conf`
+2. `2023-09-14 11:01:48 WARNING: 对于带有 IPv4 池的服务器配置，--topology net30 将在未来的版本中移除。请尽快迁移到 --topology subnet。`
+3. `2023-09-14 11:01:48 弃用选项：--cipher 设置为 'AES-256-CBC' 但 --data-ciphers 中缺少 (AES-256-GCM:AES-128-GCM)。未来的 OpenVPN 将忽略用于加密算法协商的 --cipher。请向 --data-ciphers 添加 AES-256-CBC，或将此处的 --cipher 'AES-256-CBC' 更改为 --data-ciphers-fallback 'AES-256-CBC' 以消除此警告。`
+4. `2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日`
+5. `2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日`
+6. `2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日`
+7. `2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日`
+8. `2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日`
+9. `2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日`
+10. `2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日`
+11. `2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日`
+12. `2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日`
+13. `2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日`
+14. `2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日`
+15. `2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日`
+16. `2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日`
+17. `2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日`
+18. `2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日`
+19. `2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日`
+20. `2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日`
+21. `2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日`
+22. `2023-09-14 11:01:48 OpenVPN 2.5.5 x86_64-pc-linux-gnu [SSL (OpenSSL)] [LZO] [LZ4] [EPOLL] [PKCS1] [MH/PKT] [AEAD] 编译于 7 月 14 日`
+23. `2023-09-14 11:01:48 net_route_v4_best_gw: 0.0..0`
+24. `2023-09-14 11:01:48 net_route_v4_best_gw: 0.0.0.0`
+25. `2023-09-14 11:01:48 net_route_v4_best_gw: 0.0.0.0`
 
 现在，你可以登录客户端并使用 `apt-get` 安装 OpenVPN。我们可以将示例的 `client.conf` 拷贝到 `openvpn` 文件夹中，等等。
 
 我们需要将证书从 OpenVPN 服务器获取到客户端。我们的文件夹看起来将如下：
 
-1. 1. root@hrb:/etc/openvpn# cp /usr/share/doc/openvpn/examples/sample-config-files/client.conf /etc/openvpn/client/
-2. 2. root@hrb:/etc/openvpn/tls# pwd
-3. /etc/openvpn/tls
-4. 4. root@hrb:/etc/openvpn/tls# ls
-5. ca.crt client1.crt client1.key ta.key
-6. 5. root@hrb:/etc/openvpn/tls#
+1. `root@hrb:/etc/openvpn# cp /usr/share/doc/openvpn/examples/sample-config-files/client.conf /etc/openvpn/client/`
+2. `root@hrb:/etc/openvpn/tls# pwd`
+3. `/etc/openvpn/tls`
+4. `root@hrb:/etc/openvpn/tls# ls`
+5. `ca.crt client1.crt client1.key ta.key`
+6. `root@hrb:/etc/openvpn/tls#`
 
 你将在服务器的 `easy-pki` 文件夹中找到同名的证书，那是我们创建证书的地方。
 
 现在，我们可以用新设置更新客户端配置。我们的 `client.conf` 将显示如下（省略了未与默认配置更改的行）：
 
-1. 1. # 服务器的主机/IP 和端口。
-2. 2. # 你可以有多个远程条
-3. 3. # 在服务器之间进行负载均衡。
-4. 4. remote vpn.server.robots.beer 1194
-5. 5. :remote my-server-2 1194
+1. `# 服务器的主机/IP 和端口。`
+2. `# 你可以有多个远程条`
+3. `# 在服务器之间进行负载均衡。`
+4. `remote vpn.server.robots.beer 1194`
+5. `:remote my-server-2 1194`
 6. 
-7. 7. ca /etc/openvpn/tls/ca.crt
-8. 8. cert /etc/openvpn/tls/client1.crt
-9. 9. key /etc/openvpn/tls/client1.key
+7. `ca /etc/openvpn/tls/ca.crt`
+8. `cert /etc/openvpn/tls/client1.crt`
+9. `key /etc/openvpn/tls/client1.key`
 10. 
-11. 11. # 通过检查证书是否设置了正确的密钥用法来
-12. 12. # 验证服务器证书。
-13. 13. # 这是一个重要的预防措施，用于防止
-14. 14. # 这里讨论的潜在攻击：
+11. `# 通过检查证书是否设置了正确的密钥用法来`
+12. `# 验证服务器证书。`
+13. `# 这是一个重要的预防措施，用于防止`
+14. `# 这里讨论的潜在攻击：`
+```
 
+
+
+```bash
+# http://openvpn.net/howto.html#mitm
+
+#
+# 要使用此功能，你需要生成服务器证书，
+# 将 keyUsage 设置为
+# digitalSignature, keyEncipherment
+# 并将 extendedKeyUsage 设置为
+# serverAuth
+# EasyRSA 可以为你完成这些。
+remote-cert-tls server
+
+# 如果服务器上使用了 tls-auth 密钥
+# 则每个客户端也必须拥有该密钥。
+tls-auth /etc/openvpn/tls/ta.key 1
 ```
-15. # http://openvpn.net/howto.html#mitm
-16. #
-17. # 要使用此功能，你需要生成服务器证书，
-18. # 将 keyUsage 设置为
-19. # digitalSignature, keyEncipherment
-20. # 并将 extendedKeyUsage 设置为
-21. # serverAuth
-22. # EasyRSA 可以为你完成这些。
-23. remote-cert-tls server
-24. 
-25. # 如果服务器上使用了 tls-auth 密钥
-26. # 则每个客户端也必须拥有该密钥。
-27. tls-auth /etc/openvpn/tls/ta.key 1
-```
+
+
 
 你将 `remote` 设置为服务器的地址或 IP。
 
 让我们开始查询以验证它们是否已连接，如下代码所示：
 
-1. 1. root@hrb:/etc/openvpn/client openvpn --config client.conf
-2. 
-3. {Truncated}
-4. 
-5. 2023-09-14 13:36:58 net_route_v4_best_gw query: dst 0.0.0.0
-6. 2023-09-14 13:36:58 net_route_v4_best_gw result: via 192.168.1.1 dev enp45s0fnp0
-7. 2023-09-14 13:36:58 ROUTE_GATEWAY 192.168.1/255.255.255.0 IFACE=enp45s0fnp0 HWADDR=00:0f:53:2c:ff:90
-8. 2023-09-14 13:36:58 TUN/TAP device tun0 opened
-9. 2023-09-14 13:36:58 net_iface_mtu: mtu 1500 for tun0
-10. 2023-09-14 13:36:58 net_iface_up: set tun0
-11. 2023-09-14 13:36:58 net_addr_ptp_v4_add: 10.8.0.6 peer 10.8.0.5 dev tun0
-12. 2023-09-14 13:36:58 net_route_v4_add: 10.8.0.1/32 via 10.8.0.5 dev [NULL] table 0 metric -1
-13. 13. 2023-09-14 13:36:58 WARNING:此配置可能会在内存中缓存密码 -- 使用 auth-nocache 选项防止此类
-14. 2023-09-14 13:36:58 Initialization Sequence Completed
+```
+root@hrb:/etc/openvpn/client openvpn --config client.conf
+```
+{Truncated}
+2023-09-14 13:36:58 net_route_v4_best_gw query: dst 0.0.0.0
+2023-09-14 13:36:58 net_route_v4_best_gw result: via 192.168.1.1 dev enp45s0fnp0
+2023-09-14 13:36:58 ROUTE_GATEWAY 192.168.1/255.255.255.0 IFACE=enp45s0fnp0 HWADDR=00:0f:53:2c:ff:90
+2023-09-14 13:36:58 TUN/TAP device tun0 opened
+2023-09-14 13:36:58 net_iface_mtu: mtu 1500 for tun0
+2023-09-14 13:36:58 net_iface_up: set tun0
+2023-09-14 13:36:58 net_addr_ptp_v4_add: 10.8.0.6 peer 10.8.0.5 dev tun0
+2023-09-14 13:36:58 net_route_v4_add: 10.8.0.1/32 via 10.8.0.5 dev [NULL] table 0 metric -1
+2023-09-14 13:36:58 WARNING:此配置可能会在内存中缓存密码 -- 使用 auth-nocache 选项防止此类
+2023-09-14 13:36:58 Initialization Sequence Completed
 
 如果我们运行 `ip a`，我们可以验证新的网络设备，如下代码所示：
 
-1. 1. root@hrb:/etc/openvpn/client# ip a
-2. 
-3. {Truncated}
-4. 
-5. 1166: tun0: <POINTPOINT,MULTICAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UNKNOWN default
-6. inet 10.8.0.6/32 scope global peer 10.8.0.5 tun0
-7. inet fe80::f70:fc2d:33bf:e6f/64 scope link 
-8. mattias@hrb:~$ ping 10.8.0.1
-9. PING 10.8.0.1 (10.8.0.1) 56 bytes of data.
-10. 64 bytes from 10.8.0.1: icmp_seq=1 ttl=64 ms
-11. 64 bytes from 10.8.0.1: icmp_seq=2
+```
+root@hrb:/etc/openvpn/client# ip a
+```
+{Truncated}
+1166: tun0: <POINTPOINT,MULTICAST,NOARP,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UNKNOWN default
+inet 10.8.0.6/32 scope global peer 10.8.0.5 tun0
+inet fe80::f70:fc2d:33bf:e6f/64 scope link 
+mattias@hrb:~$ ping 10.8.0.1
+PING 10.8.0.1 (10.8.0.1) 56 bytes of data.
+64 bytes from 10.8.0.1: icmp_seq=1 ttl=64 ms
+64 bytes from 10.8.0.1: icmp_seq=2
 
 现在我们在客户端和服务器之间建立了安全连接。在此设置下，只有指向服务器的流量将通过 VPN。其他流量将使用常规网络。但你可以轻松更改设置强制所有流量通过服务器。这是客户端到服务器的设置。
 
@@ -4204,61 +4340,70 @@ tls-auth /etc/pki/easy-rsa/ta.key 0 # 此文件是机密的
 
 WireGuard 是一种更现代且更容易理解的 VPN，你将在本节中更好地掌握。让我们在服务器上安装 WireGuard，命令如下：
 
-1. 1. root@hrb:/etc# sudo apt install wireguard
+```
+root@hrb:/etc# sudo apt install wireguard
+```
 
 现在，安装 WireGuard 后，我们需要创建私钥和公钥。为了实现这一点，WireGuard 为我们提供了一些工具。我们将创建私钥，然后从私钥生成公钥。如下所示：
 
-1. 1. root@hrb:/etc/wireguard/tls# wg genkey | tee /etc/wireguard/private.key
-2. 2. root@hrb:/etc/wireguard/tls# chmod 600 /etc/wireguard/private.key
-3. 3. root@hrb:/etc/wireguard/tls# cat private.key | wg pubkey | tee /etc/wireguard/public.key
-4. 4. root@hrb:/etc/wireguard/tls# ls -l
-5. total 8
-6. -rw------- 1 root 45 Sep 14 private.key
-7. -rw-r-- 1 root 45 Sep 14 public.key
-8. root@hrb:/etc/wireguard/tls#
+```
+root@hrb:/etc/wireguard/tls# wg genkey | tee /etc/wireguard/private.key
+root@hrb:/etc/wireguard/tls# chmod 600 /etc/wireguard/private.key
+root@hrb:/etc/wireguard/tls# cat private.key | wg pubkey | tee /etc/wireguard/public.key
+root@hrb:/etc/wireguard/tls# ls -l
+total 8
+-rw------- 1 root 45 Sep 14 private.key
+-rw-r-- 1 root 45 Sep 14 public.key
+root@hrb:/etc/wireguard/tls#
+```
 
 现在我们有了服务器密钥，可以按照下面的配置设置服务器，使用范围 10.13.13.0：
 
-1. 1. [Interface]
-2. Address = 10.13.13.1
-3. ListenPort = 51820
-4. PrivateKey = sMeT7YzcA
-5. PostUp = iptables -A FORWARD -i %i -j ACCEPT; iptables -A FORWARD -o %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth+-j MASQUERADE
-6. PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -D FORWARD -o %i -j ACCEPT; iptables -t nat -D POSTROUTING -o eth+-j MASQUERADE
+```
+[Interface]
+Address = 10.13.13.1
+ListenPort = 51820
+PrivateKey = sMeT7YzcA
+PostUp = iptables -A FORWARD -i %i -j ACCEPT; iptables -A FORWARD -o %i -j ACCEPT; iptables -t nat -A POSTROUTING -o eth+-j MASQUERADE
+PostDown = iptables -D FORWARD -i %i -j ACCEPT; iptables -D FORWARD -o %i -j ACCEPT; iptables -t nat -D POSTROUTING -o eth+-j MASQUERADE
+```
 
 现在，添加我们创建的 PrivateKey。你不能拥有与此处 WireGuard 10.13.13.0 相同的的网络。
 
 然后，是创建客户端（在 WireGuard 中称为 peers）了。你可以看到如下命令。我们将像在 WireGuard 服务器上做的那样，先创建私钥，然后创建公钥。
 
-1. 1. root@hrb:/etc/wireguard# wg genkey | tee /etc/wireguard/private.key
-2. CKgylwDb4485dd2gi13sDVy31m+8nzF9eAob3YmM=
-3. root@hrb:/etc/wireguard# ls
-4. private.key
-5. root@hrb:/etc/wireguard# cat private.key
-6. CKgylwDb4485dd2gi13sDVy31m+8nzF9eAob3YmM= chmod 600 /etc/wireguard/private.key
-7. root@hrb:/etc/wireguard# cat /etc/wireguard/private.key | wg pubkey | tee /etc/wireguard/public.key
-8. 9XEA2rMx4JKGFFLVLWkJM2Pj4/p8AoS5ekREUV2e11M=
-9. root@hrb:/etc/wireguard# ls
-10. private.key public.key
-11. root@hrb:/etc/wireguard#
+```
+root@hrb:/etc/wireguard# wg genkey | tee /etc/wireguard/private.key
+CKgylwDb4485dd2gi13sDVy31m+8nzF9eAob3YmM=
+root@hrb:/etc/wireguard# ls
+private.key
+root@hrb:/etc/wireguard# cat private.key
+CKgylwDb4485dd2gi13sDVy31m+8nzF9eAob3YmM= chmod 600 /etc/wireguard/private.key
+root@hrb:/etc/wireguard# cat /etc/wireguard/private.key | wg pubkey | tee /etc/wireguard/public.key
+9XEA2rMx4JKGFFLVLWkJM2Pj4/p8AoS5ekREUV2e11M=
+root@hrb:/etc/wireguard# ls
+private.key public.key
+root@hrb:/etc/wireguard#
+```
 
 我们现在有了私钥和公钥。现在，我们需要将它们附加到我们的 WireGuard 服务器配置和客户端上。让我们通过在 `/etc/wireguard` 中添加 `wg0.conf` 文件为客户端创建一个配置文件：
 
-1. 1. [Interface]
-2. Address = 10.13.13.11
-3. PrivateKey =
-4. ListenPort = 51820
-5. [Peer]
-6. PublicKey =
-7. AllowedIPs =
+```
+[Interface]
+Address = 10.13.13.11
+PrivateKey =
+ListenPort = 51820
+[Peer]
+PublicKey =
+AllowedIPs =
+```
 
 通过此，我们拥有了客户端的服务器端配置。我们还需要服务器端的密钥。可以通过以下方式实现：
 
-1. 1. root@hrb:/etc/wireguard# wg genkey | tee /etc/wireguard/private.key
-2. CKgylwDb4485dd2gi13sDVy31m+8nzF9eAob3YmM=
-
-
-
+```
+root@hrb:/etc/wireguard# wg genkey | tee /etc/wireguard/private.key
+CKgylwDb4485dd2gi13sDVy31m+8nzF9eAob3YmM=
+```
 
 这是我们使用 Ubuntu 作为防火墙时。
 
@@ -4308,11 +4453,13 @@ https://discord.bpbon.com
 
 让我们在你的 Ubuntu Server 上安装虚拟化工具 KVM。对于所有步骤，你都需要拥有服务器的访问权限。我们将使用 SSH 来设置和启动虚拟机。我们还将连接 GUI 工具以备日后控制。当我们运行虚拟化时，我们需要服务器 CPU 的支持。如果未启用支持，我们就无法运行虚拟机。在你的 BIOS 中，如果你的 CPU 支持，你可以启用虚拟化。首先，让我们安装 KVM。以下是验证我们可以运行虚拟化的命令：
 
-1. `root@ubuntu:~# apt -y install bridge-utils cpu-checker libvirt-daemon-system qemu-kvm`
-2. `root@ubuntu:~# kvm-ok`
-3. `root@ubuntu:~# ls /dev/kvm`
-4. `root@ubuntu:~# lsmod | grep acceleration`
-5. `root@ubuntu:~# virsh`
+```
+root@ubuntu:~# apt -y install bridge-utils cpu-checker libvirt-daemon-system qemu-kvm
+root@ubuntu:~# kvm-ok
+root@ubuntu:~# ls /dev/kvm
+root@ubuntu:~# lsmod | grep acceleration
+root@ubuntu:~# virsh
+```
 
 现在我们已经安装了工具，我们将从桌面或通过网页访问并管理 Ubuntu Server 上的虚拟机。我们稍后还将使用终端安装 Ubuntu Server。
 
@@ -4334,9 +4481,9 @@ https://discord.bpbon.com
 
 我们使用 Cockpit 工具从网页浏览器设置并控制服务器。该工具有一个插件可以监控和控制 KVM 主机。可以通过以下命令安装：
 
-```bash
+
+
 root@ubuntu:~# sudo apt install cockpit-machines
-```
 
 现在，登录你的 Cockpit 控制台，我们也可以在那里看到正在运行的虚拟机，如下所示：
 
@@ -4344,7 +4491,7 @@ root@ubuntu:~# sudo apt install cockpit-machines
 
 ### 创建虚拟机服务器
 
-你可以使用任何工具来创建服务器，但在这里我们将展示如何仅使用终端创建并连接服务器。我们将启动服务器并使用终端进行设置。然而，在安装过程中，我们也可以同时查看 virt-manager 和 Cockpit 以查看进度。
+你可以使用任何工具来创建服务器，但在这里我们将展示如何仅使用终端创建并连接服务器。我们将启动服务器并使用终端进行设置。然而，在安装过程中，我们也可以同时查看 `virt-manager` 和 `Cockpit` 以查看进度。
 
 运行以下命令创建服务器：
 
@@ -4352,58 +4499,57 @@ root@ubuntu:~# sudo apt install cockpit-machines
 
 现在，你可以按照 Ubuntu 的安装步骤进行，所有配置都在终端中完成。
 
-
-
-
 现在，我们可以将磁盘镜像保存到该共享磁盘上。现在，我们可以从任何共享该磁盘的 Ubuntu 服务器上启动服务器。
 
 ### 专用虚拟机 Linux 版本
 
-假设你计划运行多台 Ubuntu 服务器，并在它们上运行虚拟机（VM）以创建一个大型服务器池。比起搭建 Ubuntu 服务器，有更好的工具。Proxmox 就是其中之一，它是为了运行虚拟机而构建的 Linux 版本。它支持多台服务器和共享存储。
+假设你计划运行多台 Ubuntu 服务器，并在它们上运行虚拟机（VM）以创建一个大型服务器池。比起搭建 Ubuntu 服务器，有更好的工具。`Proxmox` 就是其中之一，它是为了运行虚拟机而构建的 Linux 版本。它支持多台服务器和共享存储。
 
-通过 Proxmox，你还可以一起运行一组服务器。
+通过 `Proxmox`，你还可以一起运行一组服务器。
 
-如果你曾寻找过更大规模的虚拟机部署，那么 OpenStack 是运行大型虚拟机部署的最大开源工具。
+如果你曾寻找过更大规模的虚拟机部署，那么 `OpenStack` 是运行大型虚拟机部署的最大开源工具。
 
 ## 容器
 
-在本章中，我们利用 Docker 作为一种容器化工具。然而，Docker 并不是唯一的。Podman 已经包含在 Ubuntu 仓库中。它是 Docker 的无缝替换方案，因此你可以用 Podman 替换 docker，而你的命令仍然有效。举个例子，你可以在服务器上安装 Podman，但在本地的 Ubuntu 桌面面上仍然运行 Docker。
+在本章中，我们利用 `Docker` 作为一种容器化工具。然而，`Docker` 并不是唯一的。`Podman` 已经包含在 Ubuntu 仓库中。它是 `Docker` 的无缝替换方案，因此你可以用 `Podman` 替换 `docker`，而你的命令仍然有效。举个例子，你可以在服务器上安装 `Podman`，但在本地的 Ubuntu 桌面面上仍然运行 `Docker`。
 
-你可以选择跳过本章中 Podman 的安装部分并替换 Docker 命令；输出将是相同的。
+你可以选择跳过本章中 `Podman` 的安装部分并替换 `Docker` 命令；输出将是相同的。
 
 ### Podman 的特性
 
-Podman 拥有一系列强大的特性，以下是其中一些领先的：
+`Podman` 拥有一系列强大的特性，以下是其中一些领先的：
 
-- Podman 同时支持 OCI 和 Docker 镜像。
-- Podman 与 CNI 网络插件有完全的网络集成。
-- 通过 Podman，你可以像在 Kubernetes 中一样将多个容器组合成 pod。
-- 它支持 docker，并可以运行本地和远程环境。
-- Podman 不使用守护进程（daemon）。因此，它具有更高的安全性，并且在不运行时占用任何资源。
-- Podman 拥有一个运行良好的 REST API，并且可以像 Kubernetes API 一样扩展。
-- Podman 可以在不需要对主机系统完全访问权限的情况下运行 Pod。
+- `Podman` 同时支持 OCI 和 Docker 镜像。
+- `Podman` 与 CNI 网络插件有完全的网络集成。
+- 通过 `Podman`，你可以像在 Kubernetes 中一样将多个容器组合成 pod。
+- 它支持 `docker`，并可以运行本地和远程环境。
+- `Podman` 不使用守护进程（daemon）。因此，它具有更高的安全性，并且在不运行时占用任何资源。
+- `Podman` 拥有一个运行良好的 REST API，并且可以像 Kubernetes API 一样扩展。
+- `Podman` 可以在不需要对主机系统完全访问权限的情况下运行 Pod。
 
-这使得 Podman 的运行比 Docker 稍微复杂一些。如果你计划使用容器进行本地开发，请坚持使用 docker 而不是 Podman。然而，如果你正在构建运行在 Kubernetes 集群中的应用，那么使用 Podman 测试应用是否工作正常，并从你的 Podman 设置生成 Kubernetes 清单将是一个不错的主意。
+这使得 `Podman` 的运行比 `Docker` 稍微复杂一些。如果你计划使用容器进行本地开发，请坚持使用 `docker` 而不是 `Podman`。然而，如果你正在构建运行在 Kubernetes 集群中的应用，那么使用 `Podman` 测试应用是否工作正常，并从你的 `Podman` 设置生成 Kubernetes 清单将是一个不错的主意。
 
 ### 安装 Podman
 
-在 Ubuntu 上安装 Podman 非常简单。它默认存在于仓库中，可以通过运行以下命令安装：
+在 Ubuntu 上安装 `Podman` 非常简单。它默认存在于仓库中，可以通过运行以下命令安装：
 
+```
 apt-get install podman
+```
 
-这将在你的 Ubuntu 服务器上安装 Podman 和相关工具。现在，我们可以通过以下命令检查是否有任何运行中的容器：
+这将在你的 Ubuntu 服务器上安装 `Podman` 和相关工具。现在，我们可以通过以下命令检查是否有任何运行中的容器：
 
 | CONTAINER ID | IMAGE | COMMAND | CREATED | STATUS | NAMES |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | c4fb47f9e646 | docker.io/pihole/pihole:latest | | 3 weeks ago | Up 3 weeks | pihole |
 
-运行容器的命令是 **podman ps**；然而，如果你使用 Docker，命令则是 **docker ps**。
+运行容器的命令是 `podman ps`；然而，如果你使用 `Docker`，命令则是 `docker ps`。
 
 ### 设置 Podman 仓库
 
-在拉取镜像之前，你需要启用 Podman 可以使用的仓库。Docker 默认从所有仓库拉取，但 Podman 限制更多。
+在拉取镜像之前，你需要启用 `Podman` 可以使用的仓库。`Docker` 默认从所有仓库拉取，但 `Podman` 限制更多。
 
-运行以下命令打开 /etc/containers/registries.conf 文件：
+运行以下命令打开 `/etc/containers/registries.conf` 文件：
 
 ```toml
 [registries.search]
@@ -4414,9 +4560,9 @@ registries = ['docker.io']
 root@firgate:~# cat /etc/containers/registries.conf
 ```
 
-现在，你可以从 docker.io 拉取镜像。然而，如果你想从任何其他注册表拉取，你需要也添加它们。
+现在，你可以从 `docker.io` 拉取镜像。然而，如果你想从任何其他注册表拉取，你需要也添加它们。
 
-当我们设置工具时，会创建一个 docker-compose 文件。为了要在 Podman 中使用我们的 docker compose 文件，我们需要通过运行以下命令安装 Python 包 Podman compose：
+当我们设置工具时，会创建一个 `docker-compose` 文件。为了要在 `Podman` 中使用我们的 `docker compose` 文件，我们需要通过运行以下命令安装 Python 包 `Podman compose`：
 
 ```bash
 root@firgate:~/opt/monitoring# pip3 install docker-compose
@@ -4426,11 +4572,11 @@ Requirement already satisfied: python-dotenv in /usr/local/lib/python3.9/dist-pa
 root@firgate:~/opt/monitoring#
 ```
 
-现在我们有了一个可以工作的 Podman 设置，并且开始使用容器和 Podman/Docker compose 设置我们的监控栈。
+现在我们有了一个可以工作的 `Podman` 设置，并且开始使用容器和 `Podman/Docker compose` 设置我们的监控栈。
 
 ### CNI 插件的 Podman 错误
 
-当我们启动 Podman 时，会得到一个冲突错误，网络不会启动。如果发生这种情况，你必须更新网络文件中的 cni 版本。
+当我们启动 `Podman` 时，会得到一个冲突错误，网络不会启动。如果发生这种情况，你必须更新网络文件中的 cni 版本。
 
 如下所示打开 cni 文件：
 
@@ -4442,17 +4588,17 @@ root@pihole:/opt/monitoring#
 /etc/cni/net.d/monitoring_default.conflict
 ```
 
-验证版本 "cnVersion": "0.4.0",,
+验证版本 `"cnVersion": "0.4.0",,`
 
 ### 使用 Grafana 和 Prometheus 进行设置和监控
 
-让我们在服务器上创建一个名为 /opt/monitoring 的文件夹。在该文件夹中，我们要创建一个 docker-compose.yaml 文件。我们在设置监控栈时将使用该文件。
+让我们在服务器上创建一个名为 `/opt/monitoring` 的文件夹。在该文件夹中，我们要创建一个 `docker-compose.yaml` 文件。我们在设置监控栈时将使用该文件。
 
 在本章中，我们将文件夹中添加更多服务并启动更多服务。
 
 你可以自由遵循我们的分步骤指南，也可以直接到最后获取完整的 Docker Compose 文件并一次性启动整个栈。
 
-以下是我们仅包含 grafana 的 docker-compose.yaml 第一版本：
+以下是我们仅包含 `grafana` 的 `docker-compose.yaml` 第一版本：
 
 ```yaml
 version: "3"
@@ -4474,73 +4620,50 @@ services:
 ```bash
 root@pihole:/opt/monitoring# podman-compose up
 podman-compose version: 1.0.6
+```
+
+
+
+```text
 ['podman', '-version']
+
 podman version: 3.0.4
 ```
 
-
-```
+```text
 =GF_AUTH_ANONYMOUS_ORG_ROLE=Admin
 ```
 
-```
+```text
 26. [grafana] | logger=settings t=2023-10-06T17:41.5038721892Z level=info msg="Target target=[all]"
-```
-
-```
 27. [grafana] | logger=settings t=2023-10-06T17:41.5038754559Z level=info msg="Path Home" path=/usr/share/grafana
-```
-
-```
 28. [grafana] | logger=settings t=2023-10-06T17:41.503876685Z level=info msg="Path Data" path=/var/lib/grafana
-```
-
-```
 29. [grafana] | logger=settings t=2023-10-06T17:41.5038728252Z level=info msg="Path Logs" path=/var/log/grafana
-```
-
-```
 30. [grafana] | logger=settings t=2023-10-06T17:41.5038791022Z level=info msg="Path Plugins" path=/var/lib/grafana/plugins
-```
-
-```
 31. [grafana] | logger=settings t=2023-10-06T17:41.503880761Z level=info msg="Path Provisioning" path=/etc/grafana/provisioning
-```
-
-```
 32. [grafana] | logger=settings t=2023-10-06T17:41.5038820186Z level=info msg="App mode production"
-```
-
-```
 33. [grafana] | logger=sqlalchemy t=2023-10-06T17:41.5039735164Z level=info msg="Connecting to DB" dbtype=sqlite3
-```
-
-```
 34. [grafana] | logger=migrator t=2023-10-06T17:41.5078509328Z level=info msg="Starting DB migrations"
-```
-
-```
 35. [grafana] | logger=migrator t=2023-10-06T17:41.5074556085Z level=info msg="migrations completed" performed=0 skipped=493 duration=2.093629ms
-```
-
-```
 36. [grafana] | logger=secrets t=2023-10-06T17:41.507514303
 ```
 
-在我们的 docker-compose 文件中，我们有一些非常有趣的设置。其中之一是**volume（卷）**。这将创建一个名为 **grafana** 的本地文件夹，我们将配置保存在这个文件中。这就是我们如何将宿主机上的本地文件夹挂载到容器中。另一部分是 ports（端口）。这告诉我们，外部端口 3000 并不是我们自己的，而是我们位于 3000 端口的 **grafana**。这就是我们从外部连接到服务的方式。
+在我们的 `docker-compose` 文件中，我们有一些非常有趣的设置。其中之一是 `volume`（卷）。这将创建一个名为 `grafana` 的本地文件夹，我们将配置保存在这个文件中。这就是我们如何将宿主机上的本地文件夹挂载到容器中。另一部分是 `ports`（端口）。这告诉我们，外部端口 3000 并不是我们自己的，而是我们位于 3000 端口的 `grafana`。这就是我们从外部连接到服务的方式。
 
 在接下来的文件中，我们可以看到端口映射：
 
+```text
 - 1. volume: ./grafana:/var/lib/grafana
 - 2. ports:
 
 # 4. - "3000:3000"
-
-现在，当 Grafana 运行时，请验证你是否可以通过 http://服务器IP地址:3000 访问 Grafana GUI。
-
-现在，我们可以将 Prometheus 添加到我们的技术栈中。在我们的监控文件夹中，创建一个名为 prom 的新文件夹，并在该文件夹中创建我们的 prometheus.yaml 配置文件，如下：
-
 ```
+
+现在，当 Grafana 运行时，请验证你是否可以通过 `http://服务器IP地址:3000` 访问 Grafana GUI。
+
+现在，我们可以将 Prometheus 添加到我们的技术栈中。在我们的监控文件夹中，创建一个名为 `prom` 的新文件夹，并在该文件夹中创建我们的 `prometheus.yaml` 配置文件，如下：
+
+```text
 1. root@pihole:~/opt/monitoring# cat prom/prometheus.yml
 2. # 我的全局配置
 3. global:
@@ -4577,7 +4700,7 @@ podman version: 3.0.4
 
 
 
-
+```yaml
 | 24. node-exporter: |
 | 25. image: prom/node-exporter:v1.6.1 |
 | 26. container_name: nodeexporter |
@@ -4604,8 +4727,9 @@ podman version: 3.0.4
 | 47. volumes: |
 | 48. - /var/log:/var/log |
 | 49. command: -config.file=/etc/promtail/config.yml |
+```
 
-使用 Podman 命令 `podman-compose up|start` 或 Docker 命令 `compose docker compose up|start` 启动堆栈。导航到数据源并在地址 http://loki:3100 处添加 Loki 作为源类型。保存并测试访问。然后，进入 Grafana 的 Explorer 视图，将 Loki 显示为数据源，并选择作业过滤器以查看传入的任何日志。
+使用 Podman 命令 `podman-compose up|start` 或 Docker 命令 `compose docker compose up|start` 启动堆栈。导航到数据源并在地址 `http://loki:3100` 处添加 Loki 作为源类型。保存并测试访问。然后，进入 Grafana 的 Explorer 视图，将 Loki 显示为数据源，并选择作业过滤器以查看传入的任何日志。
 
 这将结束我们使用 Podman/Docker 的基础设置。我们现在拥有了一个完全在容器中运行的监控堆栈。我们正在从主机获取日志和指标到 Grafana，我们可以在那里查看 Grafana 并读取日志。
 
@@ -4621,16 +4745,16 @@ Ubuntu 使用名为 `journal` 的工具来处理日志，而 Promtail 的默认�
 
 ```bash
 root@pihole:/opt/monitoring## cat promtail/config.yaml
+```
+
+```yaml
 server:
   http_listen_port: 9080
   grpc_listen_port: 0
-
   positions:
     filename: /tmp/positions.yaml
-
   clients:
     - url: http://loki:3100/loki/api/v1/push
-
   scrape_configs:
     - job_name: system
       static_configs:
@@ -4678,13 +4802,10 @@ root@pi:/opt/monitoring# cat promtail/config.yml
 server:
   http_listen_port: 9080
   grpc_listen_port: 0
-
   positions:
     filename: /tmp/positions.yaml
-
   clients:
     - url: http://192.168.1.4:3100/loki/api/v1/push
-
   scrape_configs:
     - job_name: system
       static_configs:
@@ -4706,19 +4827,19 @@ server:
           target_label: 'unit'
 ```
 
+
+
 ## 第11 章 设置 Web 服务器、部署和运行 Web 应用
 
 ### 引言
 
-运行 Web应用程序是今天运行大多数在线服务的标准方式。在线应用程序可以是，例如你自己托管的博客、在线商店或社交媒体平台。托管和运行 应用程序是运行和使用 Ubuntu 服务器的重要部分。
+运行 Web应用程序是今天运行大多数在线服务的标准方式。在线应用程序可以是，例如你自己托管的博客、在线商店或社交媒体平台。托管和运行应用程序是运行和使用 Ubuntu 服务器的重要部分。
 
 数据库将存储应用程序的数据，以便为访问应用程序的访问者提供数据。
 
 ### 结构
 
 在本章中，我们将涵盖以下主题：
-
-
 
 - Web 服务器
 - 数据库
@@ -4737,26 +4858,28 @@ server:
 
 让我们按照以下步骤开始安装 Apache 2：
 
-- 1. root@g1:/home/mahe# apt install apache2
+1. `root@g1:/home/mahe# apt install apache2`
 
-此命令将安装 apache2 并在 /etc/apache2 下创建一个包含所有配置文件的文件夹：
+此命令将安装 `apache2` 并在 `/etc/apache2` 下创建一个包含所有配置文件的文件夹：
 
 ```bash
 root@g1:/etc/apache2# ls -l
 ```
 
-1. total 80
-2. -rw-r-- 1 root 7224 Oct 26 13:44 apache2.conf
-3. drwxr-xr-x 2 root 4096 Dec 20 15:25 conf-available
-4. drwxr-xr-x 2 root 4096 Dec 20 15:25 conf-enabled
-5. -rw-r-- 1 root 1782 May 3 2023 envvars
-6. -rw-r-- 1 root 31063 May 3 2023 magic
-7. drwxr-xr-x 2 root 12288 Dec 20 15:25 mods-available
-8. drwxr-xr-x 2 root 4096 Dec 20 15:25 mods-enabled
-9. -rw-r-- 1 root 320 May 3 2023 ports.conf
-10. drwxr-xr-x 2 root 4096 Dec 20 15:25 sites-available
-11. drwxr-xr-x 2 root 4096 Dec 20 15:25 sites-enabled
-12. root@g1:/etc/apache2#
+```
+total 80
+-rw-r-- 1 root 7224 Oct 26 13:44 apache2.conf
+drwxr-xr-x 2 root 4096 Dec 20 15:25 conf-available
+drwxr-xr-x 2 root 4096 Dec 20 15:25 conf-enabled
+-rw-r-- 1 root 1782 May 3 2023 envvars
+-rw-r-- 1 root 31063 May 3 2023 magic
+drwxr-xr-x 2 root 12288 Dec 20 15:25 mods-available
+drwxr-xr-x 2 root 4096 Dec 20 15:25 mods-enabled
+-rw-r-- 1 root 320 May 3 2023 ports.conf
+drwxr-xr-x 2 root 4096 Dec 20 15:25 sites-available
+drwxr-xr-x 2 root 4096 Dec 20 15:25 sites-enabled
+root@g1:/etc/apache2#
+```
 
 那么，这个文件夹结构是如何运作的？
 
@@ -4764,116 +4887,140 @@ root@g1:/etc/apache2# ls -l
 
 这是 Apache 启动时加载的主配置文件。所有其他文件夹都通过此文件包含。
 
-在运行 Apache 时，你可以安装模块。PHP 是其中一个模块的示例，但可以有很多。所有模块都位于 mods-available 中。你可能不需要所有模块，因此可以通过创建一个从 mods-available 到 mods-enabled 的软链接来启用你喜欢的模块。然后，当 Apache 启动时，Apache2.conf 将包含 mods-enabled 文件夹并从该文件夹加载模块。
+在运行 Apache 时，你可以安装模块。PHP 是其中一个模块的示例，但可以有很多。所有模块都位于 `mods-available` 中。你可能不需要所有模块，因此可以通过创建一个从 `mods-available` 到 `mods-enabled` 的软链接来启用你喜欢的模块。然后，当 Apache 启动时，`Apache2.conf` 将包含 `mods-enabled` 文件夹并从该文件夹加载模块。
 
-Site 文件夹也是一样。例如，一个站点是一个域名，mymapp.example.com，你可以在同一个 WordPress 中拥有多个站点。例如，一个启用了 100 个甚至更多站点的 Web 酒店。
+Site 文件夹也是一样。例如，一个站点是一个域名，`mymapp.example.com`，你可以在同一个 WordPress 中拥有多个站点。例如，一个启用了 100 个甚至更多站点的 Web 酒店。
 
-所以，添加你的配置（我们很快就会创建配置）并将其添加到 sites-available。然后，我们将通过将其链接到 sites-enabled 来激活它。
+所以，添加你的配置并将其添加到 `sites-available`。然后，我们将通过将其链接到 `sites-enabled` 来激活它。
 
 ### Web 内容
 
 我们还需要一些内容来运行。Apache 有一个文件夹，保存了构成网页的所有文件。内容从该文件夹提供。这就是为什么你会在构建自己的应用或下载并复制项目时，会添加自己的代码的原因。
 
-/var/www/html 是我们存放内容的默认文件夹。
+`/var/www/html` 是我们存放内容的默认文件夹。
 
 ### 首次配置
 
-让我们在 /var/www/html/myapp 中创建一个文件夹，然后我们将创建一个配置来显示该文件夹的内容。
+让我们在 `/var/www/html/myapp` 中创建一个文件夹，然后我们将创建一个配置来显示该文件夹的内容。
 
-创建文件夹并在该文件夹中创建一个名为 index.html 的文件。index.html 的名称是默认网页的名称。如果 Web 服务器进入一个文件夹且没有指定文件名，它将查找并加载 index.html 文件。
+创建文件夹并在该文件夹中创建一个名为 `index.html` 的文件。`index.html` 的名称是默认网页的名称。如果 Web 服务器进入一个文件夹且没有指定文件名，它将查找并加载 `index.html` 文件。
 
-- 1. root@g1:/var/www/html/myapp# cat index.html
-2. <html>
-3. <title>test</title>
-4. <h2>Hello</h2>
-5. </html>
-6. root@g1:/var/www/html/myapp#
+1. `root@g1:/var/www/html/myapp# cat index.html`
+2. `<html>`
+3. `<title>test</title>`
+4. `<h2>Hello</h2>`
+5. `</html>`
+6. `root@g1:/var/www/html/myapp#`
 
 现在我们有了内容，需要告诉我们的 Apache 服务器从该文件夹获取文件。
 
-在这里，我们正在更新默认文件 000-default 以添加我们的文件夹：
+在这里，我们正在更新默认文件 `000-default` 以添加我们的文件夹：
 
-- 1. root@g1:/etc/apache2/sites-enabled# cat 000-default.conf
-2. <VirtualHost *:80>
-3. #ServerAdmin name.example.com
-4. ServerAdmin webmaster@localhost
-5. DocumentRoot /var/www/html/myapp
-6. ErrorLog ${APACHE_LOG_DIR}/error.log
-7. CustomLog ${APACHE_LOG_DIR}/access.log combined
-8. </VirtualHost>
-9. # vim: syntax-apache=ts4 sw=4 sts=4 sr noet
-10. root@g1:/etc/apache2/sites-enabled#
+1. `root@g1:/etc/apache2/sites-enabled# cat 000-default.conf`
+2. `<VirtualHost *:80>`
+3. `#ServerAdmin name.example.com`
+4. `ServerAdmin webmaster@localhost`
+5. `DocumentRoot /var/www/html/myapp`
+6. `ErrorLog ${APACHE_LOG_DIR}/error.log`
+7. `CustomLog ${APACHE_LOG_DIR}/access.log combined`
+8. `</VirtualHost>`
+9. `# vim: syntax-apache=ts4 sw=4 sts=4 sr noet`
+10. `root@g1:/etc/apache2/sites-enabled#`
 
 按照以下步骤重启 Apache 以激活更改：
 
-- 1. root@g1:/etc/apache2/sites-enabled# systemctl restart apache
-2. root@g1:/sites-enabled#
+1. `root@g1:/etc/apache2/sites-enabled# systemctl restart apache`
+2. `root@g1:/sites-enabled#`
 
-在配置文件中，我们添加了访问日志。当我们访问页面时，使用 tail 来跟踪文件。现在访问你的服务器 IP。访问日志或错误日志将为你提供更多信息。
+在配置文件中，我们添加了访问日志。当我们访问页面时，使用 `tail` 来跟踪文件。现在访问你的服务器 IP。访问日志或错误日志将为你提供更多信息。
 
 要读取日志，运行以下命令：
 
 ```bash
 root@g1:/etc/apache2/sites-enabled tail -f /var/log/apache2/access.log
+```
+
+```
 192.168.1.52 - [21/Dec/2023:16:34:49 +0000] "GET /myapp HTTP/1.1" 200 336 "-" "Mozilla/5.0 (X11; Linux x86_64; like Gecko) Chrome/120.0.0.0 Safari/537.36"
 ```
 
 ### NGINX
 
-现在让我们设置 nginx 另一个 Web 服务器，并显示我们的网页。我们必须停止 Apache 服务器，因为它无法在同一个端口运行。运行以下命令停止 Apache 服务器：
+现在让我们设置 `nginx` 另一个 Web 服务器，并显示我们的网页。我们必须停止 Apache 服务器，因为它无法在同一个端口运行。运行以下命令停止 Apache 服务器：
 
-- 1. systemctl stop apache
+1. `systemctl stop apache`
 
-- 1. root@g1:/etc/apache2/sites-enabled# apt install nginx
+1. `root@g1:/etc/apache2/sites-enabled# apt install nginx`
 
-我们在 /etc/nginx 文件夹中找到 NGINX 的配置文件，如下：
+我们在 `/etc/nginx` 文件夹中找到 NGINX 的配置文件，如下：
 
-- 1. root@g1:/etc/nginx# ls -l
-2. total 64
+1. `root@g1:/etc/nginx# ls -l`
+2. `total 64`
+
 ```text
-3. drwxr-xr-x 2 root 4096 Nov 10 conf.d
-4. -rw-r---- 1 root 4096 Nov 10 2023 fastcgi_params
-5. -rw-r---- 1 root 1055 Nov 10 2023 fastcgi.conf
-6. -rw-r---- 1 root 2837 Nov 10 2023 mime.types
-7. -rw-r---- 1 root 3071 Nov 10 2023 nginx.conf
-8. drwxr-xr-x 2 root 4096 Nov 10 modules-available
-9. drwxr-xr-x 2 root 4096 Nov 10 modules-enabled
-10. -rw-r---- 1 root 1447 Nov 10 2023 proxy.conf
-11. -rw-r---- 1 root 3955 Nov 10 2023 security.conf
-12. -rw-r---- 1 root 2224 Nov 10 2023 scroll_proxyconf
-13. -rw-r---- 1 root 2125 Nov 10 2023 uwsgi.conf
-14. drwxr-xr-x 2 root 4096 Nov 10 sites-available
-15. drwxr-xr-x 2 root 4096 Nov 10 sites-enabled
+drwxr-xr-x 2 root 4096 Nov 10 conf.d
+-rw-r---- 1 root 4096 Nov 10 2023 fastcgi_params
+-rw-r---- 1 root 1055 Nov 10 2023 fastcgi.conf
+-rw-r---- 1 root 2837 Nov 10 2023 mime.types
+-rw-r---- 1 root 3071 Nov 10 2023 nginx.conf
+drwxr-xr-x 2 root 4096 Nov 10 modules-available
+drwxr-xr-x 2 root 4096 Nov 10 modules-enabled
+-rw-r---- 1 root 1447 Nov 10 2023 proxy.conf
+-rw-r---- 1 root 3955 Nov 10 2023 security.conf
+-rw-r---- 1 root 2224 Nov 10 2023 scroll_proxyconf
+-rw-r---- 1 root 2125 Nov 10 2023 uwsgi.conf
 ```
+
+
+
+14. `drwxr-xr-x 2 root 4096 Nov 10 sites-available`
+
+15. `drwxr-xr-x 2 root 4096 Nov 10 sites-enabled`
+
 （注：目录列表的 OCR 严重损坏；我根据上下文重建了标准的 NGINX 结构）
 
 等待，让我尽可能贴 OCR 文本的同时修正明显的错误：
 
-```text
+```
 2. total 64
+
 3. drwxr-xr-x 2 root 4096 Nov 10 conf.d
+
 4. -rw-r---- 1 root 4096 Nov 10 2023 fastcgi_params
+
 5. -rw-r---- 1 root 1055 Nov 10 2023 fastcgi.conf
+
 6. -rw-r---- 1 root 2837 Nov 10 2023 mime.types
+
 7. -rw-r---- 1 root 3071 Nov 10 2023 nginx.conf
+
 8. drwxr-xr-x 2 root 4096 Nov 10 modules-available
+
 9. drwxr-xr-x 2 root 4096 Nov 10 modules-enabled
+
 10. -rw-r---- 1 root 1447 Nov 10 2023 proxy.conf
+
 11. -rw-r---- 1 root 3955 Nov 10 2023 security.conf
+
 12. -rw-r---- 1 root 2224 Nov 10 2023 scroll_proxyconf
+
 13. -rw-r---- 1 root 2125 Nov 10 2023 uwsgi.conf
+
 14. drwxr-xr-x 2 root 4096 Nov 10 sites-available
+
 15. drwxr-xr-x 2 root 4096 Nov 10 sites-enabled
 ```
 
-让我们进入 enabled 文件夹并编辑默认文件。我们将路径更新为：
 
-- 1. include snippets/
-2. /var/www/html;
 
-现在我们可以重启 nginx 并重新访问我们的网页：
+让我们进入 `enabled` 文件夹并编辑默认文件。我们将路径更新为：
 
-- 1. systemctl restart nginx
+- `include snippets/`
+- `/var/www/html`
+
+现在我们可以重启 `nginx` 并重新访问我们的网页：
+
+- `systemctl restart nginx`
 
 现在可以看到由 NGINX 提供的内容。
 
@@ -4885,40 +5032,39 @@ root@g1:/etc/apache2/sites-enabled tail -f /var/log/apache2/access.log
 
 让我们从安装 MariaDB 并设置 SQL 开始。为此，我们将运行以下命令来设置并锁定 SQL：
 
-- 1. root@g1:/etc/nginx/sites-enabled# sudo apt install mariadb-client -y
-2. root@g1:/etc/nginx/sites-enabled# mysql_secure_installation
+- `root@g1:/etc/nginx/sites-enabled# sudo apt install mariadb-client -y`
+- `root@g1:/etc/nginx/sites-enabled# mysql_secure_installation`
 
-在 mysql_secure_installation 期间，对所有问题回答 y，除了切换到 unix_socket 验证 [Y/n] 外。
+在 `mysql_secure_installation` 期间，对所有问题回答 `y`，除了切换到 `unix_socket` 验证 `[Y/n]` 外。
 
 然后，将 SQL root 密码设置为你知道的密码。
 现在，让我们按照以下步骤重启数据库并登录：
 
-- 1. root@g1:/etc/nginx/sites-enabled# systemctl restart mariadb
-2. root@g1:/etc/nginx/sites-enabled# mysql -u root -p
+- `root@g1:/etc/nginx/sites-enabled# systemctl restart mariadb`
+- `root@g1:/etc/nginx/sites-enabled# mysql -u root -p`
 
 输入密码：
-欢迎使用 MariaDB 器。命令以 ; 或 g 结束。
+欢迎使用 MariaDB 器。命令以 `;` 或 `g` 结束。
 您的 MariaDB 连接 ID 为 31
 服务器版本: 10.6.12-MariaDB-0ubuntu0.22.04.1 Ubuntu 22.04
 版权 (c) 2000, 2018, Oracle, MariaDB Corporation Ab and hers。
 
 输入 'help' 或 'h' 获取帮助。输入 'c' 清除当前输入状态。
 
+```
 MariaDB [(none)]> show databases;
-+----------------+|
++----------------+
 |Database |
-+----------------+|
-
-
-
-| information_schema | |
-| mysql | |
-| performance_schema | |
-| sys | |
++----------------+
+| information_schema |
+| mysql |
+| performance_schema |
+| sys |
 |----------------------+
 | 21.4 rows in set (0.001 sec) |
+```
 
-MariaDB [(none)]
+`MariaDB [(none)]`
 
 正如你前面提到的，我们现在也运行 `show databases;` 命令。
 
@@ -4926,11 +5072,10 @@ MariaDB [(none)]
 
 运行以下命令来创建/列出和删除数据库：
 
+```
 MariaDB [(none)]> create database mattias;
-
 MariaDB [(none)]> create database mattias;
 Query OK, 1 row affected (0.001 sec)
-
 MariaDB [(none)]> show databases;
 +-----------------------+
 | Database |
@@ -4942,10 +5087,8 @@ MariaDB [(none)]> show databases;
 | sys |
 +-----------------------+
 5 rows in set (0.000 sec)
-
 MariaDB [(none)]> drop database mattias;
 Query OK, 0 rows affected (0.002 sec)
-
 MariaDB [(none)]> show databases;
 +-----------------------+
 | Database |
@@ -4956,9 +5099,11 @@ MariaDB [(none)]> show databases;
 | sys |
 +-----------------------+
 4 rows in set (0.001 sec)
+```
 
 现在，我们将安装另一个数据库，MongoDB。为了这一点，我们需要添加它们的仓库和密钥，然后就可以安装它。我们已经熟悉了这些步骤，所以以下是一份快速指南：
 
+```
 root@g1:/etc/nginx/sites-enabled# curl -fsSL https://pg.mongodb.com/server/7.0.asc | sudo gpg --dearmor -o /usr/share/keyrings/mongodb-server-7.0.gpg
 root@g1:/etc/nginx/sites-enabled# echo "deb [arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-7.0.gpg] https://repo.mongodb.org/apt/ubuntu-jammy/mongodb-org/7.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-7.0.list
 root@g1:/etc/nginx/sites-enabled# sudo apt-get update
@@ -4966,73 +5111,50 @@ Hit: 1 http://archive.ubuntu.com/jammy
 Ign: 2 https://repo.mongodb.org/apt/jammy/mongodb-org/7.0 InRelease
 Get: 3 http://archive.ubuntu.com/ubuntu/jammy-updates [119 kB]
 root@g1:/etc/nginx/sites-enabled# sudo apt-get install -y mongodb-org
-Reading package lists... Done
-Building dependency tree... Done
-Reading state information... Done
-Unpacking mongodb-org (7.0.4) ...
-Setting up mongodb-mongosh (2.1.1) ...
-Setting up mongodb-org-server (7.0.4) ...
-Adding system user `mongodb` (UID 122) ...
-Adding new user `mongodb` (UID 122) with group `nogroup` ...
-Not creating home directory `/home/mongodb` ...
-Adding group `mongodb` (GID 126) ...
-Done.
-Adding user `mongodb` to group `mongodb` ...
-Done.
-Setting up mongodb-shell (7.0.4) ...
-Setting up mongodb-database-tools (100.9.4) ...
-Setting up mongodb-org-mongos (7.0.4) ...
-Setting up mongodb-org-database-tools-extra (7.0.4) ...
-Setting up mongodb-org-database (7.0.4) ...
-Setting up mongodb-org-tools (7.0.4) ...
-Setting up mongodb-org (7.0.4) ...
+```
 
-当我们连接到我们的 MongoDB 服务器时，我们将使用一个名为 mongosh 的命令。在这里，我们重启 MongoDB 服务器并连接，如下：
+当我们连接到我们的 MongoDB 服务器时，我们将使用一个名为 `mongosh` 的命令。在这里，我们重启 MongoDB 服务器并连接，如下：
 
+```
 root@g1:/etc/nginx/sites-enabled# systemctl restart mongosh
 root@g1:/etc/nginx/sites-enabled# mongosh
 Current MongoDB Log ID: 65833509961a4f00be52bbc0
 Connecting to: mongodb://127.0.0.1:27017/?directConnection=true&selectionTimeoutMS=2000&appName=2.1.1
 Using MongoDB: 7.0.4
 Using Mongosh: 2.1.1
-For mongosh info see: https://docs.mongodb.com/mongodb-shell/
+```
 
-为了帮助改进我们的产品，匿名使用数据会被定期收集并发送到 MongoDB (https://www.mongodb.com/legal/privacy-policy)。
+为了帮助改进我们的产品，匿名使用数据会被定期收集并发送到 MongoDB。
 你可以通过运行 `disableTelemetry()` 命令来退出。
 
 服务器在启动时生成了这些启动警告
-2023-12-20T18:40:05.463+00:00: 使用 WiredTiger 存储引擎时强烈建议使用 XFS 文件系统。访问 http://www.mongodb.org/core-filesystem
-2023-12-20T18:40:06.769+00:00: 未启用访问控制。对数据的读写访问不受限制。
+使用 WiredTiger 存储引擎时强烈建议使用 XFS 文件系统。
+未启用访问控制。对数据的读写访问不受限制。
 
-在 MongoDB 中，我们创建了一个新数据库。在数据库中，我们创建了一个名为 mattias 的集合，如下：
+在 MongoDB 中，我们创建了一个新数据库。在数据库中，我们创建了一个名为 `mattias` 的集合，如下：
 
+```
 test> use mattias
 test> db.createCollection("mattias-collections")
 { ok: 1 }
 test> show collections
+```
 
-##数据库工具
+## 数据库工具
 
-我们现在安装了一些帮助管理 MariaDB 的工具。在 Ubuntu 中有一个基于 SQL 的服务器。我们可以安装 phpmyadmin 并设置好一切。
+我们现在安装了一些帮助管理 MariaDB 的工具。在 Ubuntu 中有一个基于 SQL 的服务器。我们可以安装 `phpmyadmin` 并设置好一切。
 
-##部署应用
+## 部署应用
 
 我们现在准备好部署任何使用 PHP 构建的应用程序。有很多不同的服务可以找到。我们将下载代码，将其解压到我们的 Web 文件夹，然后安装 WordPress。完成后，我们有一个名为 WordPress 的文件夹，内容如下：
 
+```
 root@g1:/etc/nginx/sites-enabled# wget https://wordpress.org/latest.zip
-Resolving wordpress.org (wordpress.org)...198.143.164.252
-Connecting to wordpress.org[198.143.164.252]connected...
-HTTP request sent, awaiting response... 200 OK
-Length: 25954973 (25M)
-Saving to: 'latest.zip'
-latest.zip 100%(24.75M12.6MB/s in 2.0s) - ‘latest.zip’ saved [25954973/25]
-
 root@g1:/etc/nginx/sites-enabled# unzip latest.zip
 bash: unzip: command not found
 root@g1:/etc/nginx/sites-enabled# apt install unzip
 root@g1:/etc/nginx/sites-enabled# unzip latest.zip
 Archive: latest.zip
-
 root@g1:/etc/nginx/sites-enabled# ls -l
 total 25360
 -rw-r--r-- 1 root 53 Dec 20 16:34 index.html
@@ -5043,15 +5165,13 @@ root@g1:/etc/nginx/sites-enabled# ls -l
 total 8
 -rw-r--r-- 1 root 53 Dec 20 16:34 index.html
 drwxr-xr-x 5 root 4096 Dec 6 16:25 wordpress
+```
 
-在我们启动 Apache 之前，我们需要为文件设置正确的权限。我们的 Web 服务器在 www-data 用户和 www-data 用户组下。
+在我们启动 Apache 之前，我们需要为文件设置正确的权限。我们的 Web 服务器在 `www-data` 用户和 `www-data` 用户组下。
 
+```
 root@g1:/etc/nginx/sites-enabled# chown www-data:www-data -R wordpress/
-root@g1:/etc/nginx/sites-enabled#
-
-
-
-
+```
 
 我们现在可以访问运行着 Apache 的 Web 服务器，并且正在加载 WordPress 的设置页面。请按照指南为数据库添加以下内容。首先，从终端登录我们的 MariaDB，或者使用我们之前安装的 PhpMyAdmin。然后，创建一个名为 WordPress 的新数据库。现在，我们可以填写设置并添加我们的 MySQL 用户和密码。
 
@@ -5069,1047 +5189,73 @@ Observium 是一个监控服务器和交换机状态的平台，它运行在 PHP
 
 让我们也安装并测试一下；注意我们现在正在 `opt` 文件夹下运行：
 
-- 1. root@g1:/opt# wget http://www.observum.org/observum-community-latest.tar.gz
-- 2. root@g1:/opt# #tar xvf observum-community-latest.tar.gz
-- 3. root@g1:/opt# chown www-data:www-data -R observum
+- `root@g1:/opt# wget http://www.observum.org/observum-community-latest.tar.gz`
+- `root@g1:/opt# #tar xvf observum-community-latest.tar.gz`
+- `root@g1:/opt# chown www-data:www-data -R observum`
 
 登录 phpMyAdmin 或 SQL CLI 为 Observium 创建一个数据库。然后，我们可以运行以下命令继续安装。接着，我们复制默认配置文件并将我们的设置添加到数据库中。然后，我们通过安装 Observium 所需的表来设置数据库。之后，我们创建了一些文件夹和一个供的用户。
 
-- 1. root@g1:/opt/observum# cp config.php.default config.php
-- 2. root@g1:/opt/observum# vi config.php
-- 3. root@g1:/opt/observum# cat config.php
-- 4. <?php
-- 5.
-- 6. ## 查看 https://docs.observum.org/config_options/ 了解可能设置的文档
-- 7.
-- 8. ## 建议在 observum 安装的 /settings/ 网页界面中编辑设置。
-- 9. ## 身份验证和数据库设置必须硬编码在这里，因为它们在您访问 Web 配置界面之前就必须工作
-- 10.
-- 11. // 数据库配置
-- 12. // --- 必须配置此处
-- 13. $config['db_host'] = 'localhost';
-- 14. $config['db_name'] = 'observum';
-- 15. $config['db_user'] = 'root';
-- 16. $config['db_pass'] = 'password';
-- 17.
-- 18. // 基础目录
-- 19. #Config['install_dir'] = "/opt/observium"
-- 20.
-- 21. // 默认 snmp 版本
-- 22. #Config['snmp']['version'] = "v2c"
-- 23. // 用于更快请求的 SNMP 最大重复
-- 24. #Config['snmp']['max-rep'] = TRUE;
-- 25. // 添加/发现时使用的默认 snmp 团体列表
-- 26. #Config['snmp']['community'] = [ "public" ];
-- 27.
-- 28. // 身份验证模型
-- 29. #Config['auth_mechanism'] = "mysql"; // 默认，其他选项：ldap, http-auth，请查看文档获取配置帮助
-- 30.
-- 31. // 启用告警器
-- 32. #Config['alerter'] = TRUE;
-- 33.
-- 34. // 显示或禁用设备
-- 35. #Config['disabled'] = FALSE;
-- 36.
-- 37. // 设置默认告警器（邮箱地址）
-- 38. #Config['email'] = "user-domain"
-- 39.
-- 40. // End config.php
-- 41. root@g1:/opt/observum#
-- 42. root@g1:/opt/observum#
-- 43. root@g1:/opt/observum#
-- 44. root@g1:/opt/observum#
-- 45. root@g1:/opt/observum#
-- 46. root@g1:/opt/observum#
-- 47. root@g1:/opt/observum#
-- 48. root@g1:/opt/observum#
-- 49. root@g1:/opt/observum#
-- 50. root@g1:/opt/observum#
-- 51. root@g1:/opt/observum#
-- 52. root@g1:/opt/observum#
-- 53. root@g1:/opt/observum#
-- 54. root@g1:/opt/observum#
-- 55. root@g1:/opt/observum#
-- 56. root@g1:/opt/observum#
-- 57. root@g1:/opt/observum#
-- 58. root@g1:/opt/observum#
-- 59. root@g1:/opt/observum#
-- 60. root@g1:/opt/observum#
-- 61. root@g1:/opt/observum#
-- 62. root@g1:/opt/observum#
-- 63. root@g1:/opt/observum#
-- 64. root@g1:/opt/observum#
-- 65. root@g1:/opt/observum#
-- 66. root@g1:/opt/observum#
-- 67. root@g1:/opt/observum#
-- 68. root@g1:/opt/observum#
-- 69. root@g1:/opt/observum#
-- 70. root@g1:/opt/observum#
-- 71. root@g1:/opt/observum#
-- 72. root@g1:/opt/observum#
-- 73. root@g1:/opt/observum#
-- 74. root@g1:/opt/observum#
-- 75. root@g1:/opt/observum#
-- 76. root@g1:/opt/observum#
-- 77. root@g1:/opt/observum#
-- 78. root@g1:/opt/observum#
-- 79. root@g1:/opt/observum#
-- 80. root@g1:/opt/observum#
-- 81. root@g1:/opt/observum#
-- 82. root@g1:/opt/observum#
-- 83. root@g1:/opt/observum#
-- 84. root@g1:/opt/observum#
-- 85. root@g1:/opt/observum#
-- 86. root@g1:/opt/observum#
-- 87. root@g1:/opt/observum#
-- 88. root@g1:/opt/observum#
-- 89. root@g1:/opt/observum#
-- 90. root@g1:/opt/observum#
-- 91. root@g1:/opt/observum#
-- 92. root@g1:/opt/observum#
-- 93. root@g1:/opt/observum#
-- 94. root@g1:/opt/observum#
-- 95. root@g1:/opt/observum#
-- 96. root@g1:/opt/observum#
-- 97. root@g1:/opt/observum#
-- 98. root@g1:/opt/observum#
-- 99. root@g1:/opt/observum#
-- 100. root@g1:/opt/observum#
-- 101. root@g1:/opt/observum#
-- 102. root@g1:/opt/observum#
-- 103. root@g1:/opt/observum#
-- 104. root@g1:/opt/observum#
-- 105. root@g1:/opt/observum#
-- 106. root@g1:/opt/observum#
-- 107. root@g1:/opt/observum#
-- 108. root@g1:/opt/observum#
-- 109. root@g1:/opt/observum#
-- 110. root@g1:/opt/observum#
-- 111. root@g1:/opt/observum#
-- 112. root@g1:/opt/observum#
-- 113. root@g1:/opt/observum#
-- 114. root@g1:/opt/observum#
-- 115. root@g1:/opt/observum#
-- 116. root@g1:/opt/observum#
-- 117. root@g1:/opt/observum#
-- 118. root@g1:/opt/observum#
-- 119. root@g1:/opt/observum#
-- 120. root@g1:/opt/observum#
-- 121. root@g1:/opt/observum#
-- 122. root@g1:/opt/observum#
-- 123. root@g1:/opt/observum#
-- 124. root@g1:/opt/observum#
-- 125. root@g1:/opt/observum#
-- 126. root@g1:/opt/observum#
-- 127. root@g1:/opt/observum#
-- 128. root@g1:/opt/observum#
-- 129. root@g1:/opt/observum#
-- 130. root@g1:/opt/observum#
-- 131. root@g1:/opt/observum#
-- 132. root@g1:/opt/observum#
-- 133. root@g1:/opt/observum#
-- 134. root@g1:/opt/observum#
-- 135. root@g1:/opt/observum#
-- 136. root@g1:/opt/observum#
-- 137. root@g1:/opt/observum#
-- 138. root@g1:/opt/observum#
-- 139. root@g1:/opt/observum#
-- 140. root@g1:/opt/observum#
-- 141. root@g1:/opt/observum#
-- 142. root@g1:/opt/observum#
-- 143. root@g1:/opt/observum#
-- 144. root@g1:/opt/observum#
-- 145. root@g1:/opt/observum#
-- 146. root@g1:/opt/observum#
-- 147. root@g1:/opt/observum#
-- 148. root@g1:/opt/observum#
-- 149. root@g1:/opt/observum#
-- 150. root@g1:/opt/observum#
-- 151. root@g1:/opt/observum#
-- 152. root@g1:/opt/observum#
-- 153. root@g1:/opt/observum#
-- 154. root@g1:/opt/observum#
-- 155. root@g1:/opt/observum#
-- 156. root@g1:/opt/observum#
-- 157. root@g1:/opt/observum#
-- 158. root@g1:/opt/observum#
-- 159. root@g1:/opt/observum#
-- 160. root@g1:/opt/observum#
-- 161. root@g1:/opt/observum#
-- 162. root@g1:/opt/observum#
-- 163. root@g1:/opt/observum#
-- 164. root@g1:/opt/observum#
-- 165. root@g1:/opt/observum#
-- 166. root@g1:/opt/observum#
-- 167. root@g1:/opt/observum#
-- 168. root@g1:/opt/observum#
-- 169. root@g1:/opt/observum#
-- 170. root@g1:/opt/observum#
-- 171. root@g1:/opt/observum#
-- 172. root@g1:/opt/observum#
-- 173. root@g1:/opt/observum#
-- 174. root@g1:/opt/observum#
-- 175. root@g1:/opt/observum#
-- 176. root@g1:/opt/observum#
-- 177. root@g1:/opt/observum#
-- 178. root@g1:/opt/observum#
-- 179. root@g1:/opt/observum#
-- 180. root@g1:/opt/observum#
-- 181. root@g1:/opt/observum#
-- 182. root@g1:/opt/observum#
-- 183. root@g1:/opt/observum#
-- 184. root@g1:/opt/observum#
-- 185. root@g1:/opt/observum#
-- 186. root@g1:/opt/observum#
-- 187. root@g1:/opt/observum#
-- 188. root@g1:/opt/observum#
-- 189. root@g1:/opt/observum#
-- 190. root@g1:/opt/observum#
-- 191. root@g1:/opt/observum#
-- 192. root@g1:/opt/observum#
-- 193. root@g1:/opt/observum#
-- 194. root@g1:/opt/observum#
-- 195. root@g1:/opt/observum#
-- 196. root@g1:/opt/observum#
-- 197. root@g1:/opt/observum#
-- 198. root@g1:/opt/observum#
-- 199. root@g1:/opt/observum#
-- 200. root@g1:/opt/observum#
-- 201. root@g1:/opt/observum#
-- 202. root@g1:/opt/observum#
-- 203. root@g1:/opt/observum#
-- 204. root@g1:/opt/observum#
-- 205. root@g1:/opt/observum#
-- 206. root@g1:/opt/observum#
-- 207. root@g1:/opt/observum#
-- 208. root@g1:/opt/observum#
-- 209. root@g1:/opt/observum#
-- 210. root@g1:/opt/observum#
-- 211. root@g1:/opt/observum#
-- 212. root@g1:/opt/observum#
-- 213. root@g1:/opt/observum#
-- 214. root@g1:/opt/observum#
-- 215. root@g1:/opt/observum#
-- 216. root@g1:/opt/observum#
-- 217. root@g1:/opt/observum#
-- 218. root@g1:/opt/observum#
-- 219. root@g1:/opt/observum#
-- 220. root@g1:/opt/observum#
-- 221. root@g1:/opt/observum#
-- 222. root@g1:/opt/observum#
-- 223. root@g1:/opt/observum#
-- 224. root@g1:/opt/observum#
-- 225. root@g1:/opt/observum#
-- 226. root@g1:/opt/observum#
-- 227. root@g1:/opt/observum#
-- 228. root@g1:/opt/observum#
-- 229. root@g1:/opt/observum#
-- 230. root@g1:/opt/observum#
-- 231. root@g1:/opt/observum#
-- 232. root@g1:/opt/observum#
-- 233. root@g1:/opt/observum#
-- 234. root@g1:/opt/observum#
-- 235. root@g1:/opt/observum#
-- 236. root@g1:/opt/observum#
-- 237. root@g1:/opt/observum#
-- 238. root@g1:/opt/observum#
-- 239. root@g1:/opt/observum#
-- 240. root@g1:/opt/observum#
-- 241. root@g1:/opt/observum#
-- 242. root@g1:/opt/observum#
-- 243. root@g1:/opt/observum#
-- 244. root@g1:/opt/observum#
-- 245. root@g1:/opt/observum#
-- 246. root@g1:/opt/observum#
-- 247. root@g1:/opt/observum#
-- 248. root@g1:/opt/observum#
-- 249. root@g1:/opt/observum#
-- 250. root@g1:/opt/observum#
-- 251. root@g1:/opt/observum#
-- 252. root@g1:/opt/observum#
-- 253. root@g1:/opt/observum#
-- 254. root@g1:/opt/observum#
-- 255. root@g1:/opt/observum#
-- 256. root@g1:/opt/observum#
-- 257. root@g1:/opt/observum#
-- 258. root@g1:/opt/observum#
-- 259. root@g1:/opt/observum#
-- 260. root@g1:/opt/observum#
-- 261. root@g1:/opt/observum#
-- 262. root@g1:/opt/observum#
-- 263. root@g1:/opt/observum#
-- 264. root@g1:/opt/observum#
-- 265. root@g1:/opt/observum#
-- 266. root@g1:/opt/observum#
-- 267. root@g1:/opt/observum#
-- 268. root@g1:/opt/observum#
-- 269. root@g1:/opt/observum#
-- 270. root@g1:/opt/observum#
-- 271. root@g1:/opt/observum#
-- 272. root@g1:/opt/observum#
-- 273. root@g1:/opt/observum#
-- 274. root@g1:/opt/observum#
-- 275. root@g1:/opt/observum#
-- 276. root@g1:/opt/observum#
-- 277. root@g1:/opt/observum#
-- 278. root@g1:/opt/observum#
-- 279. root@g1:/opt/observum#
-- 280. root@g1:/opt/observum#
-- 281. root@g1:/opt/observum#
-- 282. root@g1:/opt/observum#
-- 283. root@g1:/opt/observum#
-- 284. root@g1:/opt/observum#
-- 285. root@g1:/opt/observum#
-- 286. root@g1:/opt/observum#
-- 287. root@g1:/opt/observum#
-- 288. root@g1:/opt/observum#
-- 289. root@g1:/opt/observum#
-- 290. root@g1:/opt/observum#
-- 291. root@g1:/opt/observum#
-- 292. root@g1:/opt/observum#
-- 293. root@g1:/opt/observum#
-- 294. root@g1:/opt/observum#
-- 295. root@g1:/opt/observum#
-- 296. root@g1:/opt/observum#
-- 297. root@g1:/opt/observum#
-- 298. root@g1:/opt/observum#
-- 299. root@g1:/opt/observum#
-- 300. root@g1:/opt/observum#
-- 301. root@g1:/opt/observum#
-- 302. root@g1:/opt/observum#
-- 303. root@g1:/opt/observum#
-- 304. root@g1:/opt/observum#
-- 305. root@g1:/opt/observum#
-- 306. root@g1:/opt/observum#
-- 307. root@g1:/opt/observum#
-- 308. root@g1:/opt/observum#
-- 309. root@g1:/opt/observum#
-- 310. root@g1:/opt/observum#
-- 311. root@g1:/opt/observum#
-- 312. root@g1:/opt/observum#
-- 313. root@g1:/opt/observum#
-- 314. root@g1:/opt/observum#
-- 315. root@g1:/opt/observum#
-- 316. root@g1:/opt/observum#
-- 317. root@g1:/opt/observum#
-- 318. root@g1:/opt/observum#
-- 319. root@g1:/opt/observum#
-- 320. root@g1:/opt/observum#
-- 321. root@g1:/opt/observum#
-- 322. root@g1:/opt/observum#
-- 323. root@g1:/opt/observum#
-- 324. root@g1:/opt/observum#
-- 325. root@g1:/opt/observum#
-- 326. root@g1:/opt/observum#
-- 327. root@g1:/opt/observum#
-- 328. root@g1:/opt/observum#
-- 329. root@g1:/opt/observum#
-- 330. root@g1:/opt/observum#
-- 331. root@g1:/opt/observum#
-- 332. root@g1:/opt/observum#
-- 333. root@g1:/opt/observum#
-- 334. root@g1:/opt/observum#
-- 335. root@g1:/opt/observum#
-- 336. root@g1:/opt/observum#
-- 337. root@g1:/opt/observum#
-- 338. root@g1:/opt/observum#
-- 339. root@g1:/opt/observum#
-- 340. root@g1:/opt/observum#
-- 341. root@g1:/opt/observum#
-- 342. root@g1:/opt/observum#
-- 343. root@g1:/opt/observum#
-- 344. root@g1:/opt/observum#
-- 345. root@g1:/opt/observum#
-- 346. root@g1:/opt/observum#
-- 347. root@g1:/opt/observum#
-- 348. root@g1:/opt/observum#
-- 349. root@g1:/opt/observum#
-- 350. root@g1:/opt/observum#
-- 351. root@g1:/opt/observum#
-- 352. root@g1:/opt/observum#
-- 353. root@g1:/opt/observum#
-- 354. root@g1:/opt/observum#
-- 355. root@g1:/opt/observum#
-- 356. root@g1:/opt/observum#
-- 357. root@g1:/opt/observum#
-- 358. root@g1:/opt/observum#
-- 359. root@g1:/opt/observum#
-- 360. root@g1:/opt/observum#
-- 361. root@g1:/opt/observum#
-- 362. root@g1:/opt/observum#
-- 363. root@g1:/opt/observum#
-- 364. root@g1:/opt/observum#
-- 365. root@g1:/opt/observum#
-- 366. root@g1:/opt/observum#
-- 367. root@g1:/opt/observum#
-- 368. root@g1:/opt/observum#
-- 369. root@g1:/opt/observum#
-- 370. root@g1:/opt/observum#
-- 371. root@g1:/opt/observum#
-- 372. root@g1:/opt/observum#
-- 373. root@g1:/opt/observum#
-- 374. root@g1:/opt/observum#
-- 375. root@g1:/opt/observum#
-- 376. root@g1:/opt/observum#
-- 377. root@g1:/opt/observum#
-- 378. root@g1:/opt/observum#
-- 379. root@g1:/opt/observum#
-- 380. root@g1:/opt/observum#
-- 381. root@g1:/opt/observum#
-- 382. root@g1:/opt/observum#
-- 383. root@g1:/opt/observum#
-- 384. root@g1:/opt/observum#
-- 385. root@g1:/opt/observum#
-- 386. root@g1:/opt/observum#
-- 387. root@g1:/opt/observum#
-- 388. root@g1:/opt/observum#
-- 389. root@g1:/opt/observum#
-- 390. root@g1:/opt/observum#
-- 391. root@g1:/opt/observum#
-- 392. root@g1:/opt/observum#
-- 393. root@g1:/opt/observum#
-- 394. root@g1:/opt/observum#
-- 395. root@g1:/opt/observum#
-- 396. root@g1:/opt/observum#
-- 397. root@g1:/opt/observum#
-- 398. root@g1:/opt/observum#
-- 399. root@g1:/opt/observum#
-- 400. root@g1:/opt/observum#
-- 401. root@g1:/opt/observum#
-- 402. root@g1:/opt/observum#
-- 403. root@g1:/opt/observum#
-- 404. root@g1:/opt/observum#
-- 405. root@g1:/opt/observum#
-- 406. root@g1:/opt/observum#
-- 407. root@g1:/opt/observum#
-- 408. root@g1:/opt/observum#
-- 409. root@g1:/opt/observum#
-- 410. root@g1:/opt/observum#
-- 411. root@g1:/opt/observum#
-- 412. root@g1:/opt/observum#
-- 413. root@g1:/opt/observum#
-- 414. root@g1:/opt/observum#
-- 415. root@g1:/opt/observum#
-- 416. root@g1:/opt/observum#
-- 417. root@g1:/opt/observum#
-- 418. root@g1:/opt/observum#
-- 419. root@g1:/opt/observum#
-- 420. root@g1:/opt/observum#
-- 421. root@g1:/opt/observum#
-- 422. root@g1:/opt/observum#
-- 423. root@g1:/opt/observum#
-- 424. root@g1:/opt/observum#
-- 425. root@g1:/opt/observum#
-- 426. root@g1:/opt/observum#
-- 427. root@g1:/opt/observum#
-- 428. root@g1:/opt/observum#
-- 429. root@g1:/opt/observum#
-- 430. root@g1:/opt/observum#
-- 431. root@g1:/opt/observum#
-- 432. root@g1:/opt/observum#
-- 433. root@g1:/opt/observum#
-- 434. root@g1:/opt/observum#
-- 435. root@g1:/opt/observum#
-- 436. root@g1:/opt/observum#
-- 437. root@g1:/opt/observum#
-- 438. root@g1:/opt/observum#
-- 439. root@g1:/opt/observum#
-- 440. root@g1:/opt/observum#
-- 441. root@g1:/opt/observum#
-- 442. root@g1:/opt/observum#
-- 443. root@g1:/opt/observum#
-- 444. root@g1:/opt/observum#
-- 445. root@g1:/opt/observum#
-- 446. root@g1:/opt/observum#
-- 447. root@g1:/opt/observum#
-- 448. root@g1:/opt/observum#
-- 449. root@g1:/opt/observum#
-- 450. root@g1:/opt/observum#
-- 451. root@g1:/opt/observum#
-- 452. root@g1:/opt/observum#
-- 453. root@g1:/opt/observum#
-- 454. root@g1:/opt/observum#
-- 455. root@g1:/opt/observum#
-- 456. root@g1:/opt/observum#
-- 457. root@g1:/opt/observum#
-- 458. root@g1:/opt/observum#
-- 459. root@g1:/opt/observum#
-- 460. root@g1:/opt/observum#
-- 461. root@g1:/opt/observum#
-- 462. root@g1:/opt/observum#
-- 463. root@g1:/opt/observum#
-- 464. root@g1:/opt/observum#
-- 465. root@g1:/opt/observum#
-- 466. root@g1:/opt/observum#
-- 467. root@g1:/opt/observum#
-- 468. root@g1:/opt/observum#
-- 469. root@g1:/opt/observum#
-- 470. root@g1:/opt/observum#
-- 471. root@g1:/opt/observum#
-- 472. root@g1:/opt/observum#
-- 473. root@g1:/opt/observum#
-- 474. root@g1:/opt/observum#
-- 475. root@g1:/opt/observum#
-- 476. root@g1:/opt/observum#
-- 477. root@g1:/opt/observum#
-- 478. root@g1:/opt/observum#
-- 479. root@g1:/opt/observum#
-- 480. root@g1:/opt/observum#
-- 481. root@g1:/opt/observum#
-- 482. root@g1:/opt/observum#
-- 483. root@g1:/opt/observum#
-- 484. root@g1:/opt/observum#
-- 485. root@g1:/opt/observum#
-- 486. root@g1:/opt/observum#
-- 487. root@g1:/opt/observum#
-- 488. root@g1:/opt/observum#
-- 489. root@g1:/opt/observum#
-- 490. root@g1:/opt/observum#
-- 491. root@g1:/opt/observum#
-- 492. root@g1:/opt/observum#
-- 493. root@g1:/opt/observum#
-- 494. root@g1:/opt/observum#
-- 495. root@g1:/opt/observum#
-- 496. root@g1:/opt/observum#
-- 497. root@g1:/opt/observum#
-- 498. root@g1:/opt/observum#
-- 499. root@g1:/opt/observum#
-- 500. root@g1:/opt/observum#
-- 501. root@g1:/opt/observum#
-- 502. root@g1:/opt/observum#
-- 503. root@g1:/opt/observum#
-- 504. root@g1:/opt/observum#
-- 505. root@g1:/opt/observum#
-- 506. root@g1:/opt/observum#
-- 507. root@g1:/opt/observum#
-- 508. root@g1:/opt/observum#
-- 509. root@g1:/opt/observum#
-- 510. root@g1:/opt/observum#
-- 511. root@g1:/opt/observum#
-- 512. root@g1:/opt/observum#
-- 513. root@g1:/opt/observum#
-- 514. root@g1:/opt/observum#
-- 515. root@g1:/opt/observum#
-- 516. root@g1:/opt/observum#
-- 517. root@g1:/opt/observum#
-- 518. root@g1:/opt/observum#
-- 519. root@g1:/opt/observum#
-- 520. root@g1:/opt/observum#
-- 521. root@g1:/opt/observum#
-- 522. root@g1:/opt/observum#
-- 523. root@g1:/opt/observum#
-- 524. root@g1:/opt/observum#
-- 525. root@g1:/opt/observum#
-- 526. root@g1:/opt/observum#
-- 527. root@g1:/opt/observum#
-- 528. root@g1:/opt/observum#
-- 529. root@g1:/opt/observum#
-- 530. root@g1:/opt/observum#
-- 531. root@g1:/opt/observum#
-- 532. root@g1:/opt/observum#
-- 533. root@g1:/opt/observum#
-- 534. root@g1:/opt/observum#
-- 535. root@g1:/opt/observum#
-- 536. root@g1:/opt/observum#
-- 537. root@g1:/opt/observum#
-- 538. root@g1:/opt/observum#
-- 539. root@g1:/opt/observum#
-- 540. root@g1:/opt/observum#
-- 541. root@g1:/opt/observum#
-- 542. root@g1:/opt/observum#
-- 543. root@g1:/opt/observum#
-- 544. root@g1:/opt/observum#
-- 545. root@g1:/opt/observum#
-- 546. root@g1:/opt/observum#
-- 547. root@g1:/opt/observum#
-- 548. root@g1:/opt/observum#
-- 549. root@g1:/opt/observum#
-- 550. root@g1:/opt/observum#
-- 551. root@g1:/opt/observum#
-- 552. root@g1:/opt/observum#
-- 553. root@g1:/opt/observum#
-- 554. root@g1:/opt/observum#
-- 555. root@g1:/opt/observum#
-- 556. root@g1:/opt/observum#
-- 557. root@g1:/opt/observum#
-- 558. root@g1:/opt/observum#
-- 559. root@g1:/opt/observum#
-- 560. root@g1:/opt/observum#
-- 561. root@g1:/opt/observum#
-- 562. root@g1:/opt/observum#
-- 563. root@g1:/opt/observum#
-- 564. root@g1:/opt/observum#
-- 565. root@g1:/opt/observum#
-- 566. root@g1:/opt/observum#
-- 567. root@g1:/opt/observum#
-- 568. root@g1:/opt/observum#
-- 569. root@g1:/opt/observum#
-- 570. root@g1:/opt/observum#
-- 571. root@g1:/opt/observum#
-- 572. root@g1:/opt/observum#
-- 573. root@g1:/opt/observum#
-- 574. root@g1:/opt/observum#
-- 575. root@g1:/opt/observum#
-- 576. root@g1:/opt/observum#
-- 577. root@g1:/opt/observum#
-- 578. root@g1:/opt/observum#
-- 579. root@g1:/opt/observum#
-- 580. root@g1:/opt/observum#
-- 581. root@g1:/opt/observum#
-- 582. root@g1:/opt/observum#
-- 583. root@g1:/opt/observum#
-- 584. root@g1:/opt/observum#
-- 585. root@g1:/opt/observum#
-- 586. root@g1:/opt/observum#
-- 587. root@g1:/opt/observum#
-- 588. root@g1:/opt/observum#
-- 589. root@g1:/opt/observum#
-- 590. root@g1:/opt/observum#
-- 591. root@g1:/opt/observum#
-- 592. root@g1:/opt/observum#
-- 593. root@g1:/opt/observum#
-- 594. root@g1:/opt/observum#
-- 595. root@g1:/opt/observum#
-- 596. root@g1:/opt/observum#
-- 597. root@g1:/opt/observum#
-- 598. root@g1:/opt/observum#
-- 599. root@g1:/opt/observum#
-- 600. root@g1:/opt/observum#
-- 601. root@g1:/opt/observum#
-- 602. root@g1:/opt/observum#
-- 603. root@g1:/opt/observum#
-- 604. root@g1:/opt/observum#
-- 605. root@g1:/opt/observum#
-- 606. root@g1:/opt/observum#
-- 607. root@g1:/opt/observum#
-- 608. root@g1:/opt/observum#
-- 609. root@g1:/opt/observum#
-- 610. root@g1:/opt/observum#
-- 611. root@g1:/opt/observum#
-- 612. root@g1:/opt/observum#
-- 613. root@g1:/opt/observum#
-- 614. root@g1:/opt/observum#
-- 615. root@g1:/opt/observum#
-- 616. root@g1:/opt/observum#
-- 617. root@g1:/opt/observum#
-- 618. root@g1:/opt/observum#
-- 619. root@g1:/opt/observum#
-- 620. root@g1:/opt/observum#
-- 621. root@g1:/opt/observum#
-- 622. root@g1:/opt/observum#
-- 623. root@g1:/opt/observum#
-- 624. root@g1:/opt/observum#
-- 625. root@g1:/opt/observum#
-- 626. root@g1:/opt/observum#
-- 627. root@g1:/opt/observum#
-- 628. root@g1:/opt/observum#
-- 629. root@g1:/opt/observum#
-- 630. root@g1:/opt/observum#
-- 631. root@g1:/opt/observum#
-- 632. root@g1:/opt/observum#
-- 633. root@g1:/opt/observum#
-- 634. root@g1:/opt/observum#
-- 635. root@g1:/opt/observum#
-- 636. root@g1:/opt/observum#
-- 637. root@g1:/opt/observum#
-- 638. root@g1:/opt/observum#
-- 639. root@g1:/opt/observum#
-- 640. root@g1:/opt/observum#
-- 641. root@g1:/opt/observum#
-- 642. root@g1:/opt/observum#
-- 643. root@g1:/opt/observum#
-- 644. root@g1:/opt/observum#
-- 645. root@g1:/opt/observum#
-- 646. root@g1:/opt/observum#
-- 647. root@g1:/opt/observum#
-- 648. root@g1:/opt/observum#
-- 649. root@g1:/opt/observum#
-- 650. root@g1:/opt/observum#
-- 651. root@g1:/opt/observum#
-- 652. root@g1:/opt/observum#
-- 653. root@g1:/opt/observum#
-- 654. root@g1:/opt/observum#
-- 655. root@g1:/opt/observum#
-- 656. root@g1:/opt/observum#
-- 657. root@g1:/opt/observum#
-- 658. root@g1:/opt/observum#
-- 659. root@g1:/opt/observum#
-- 660. root@g1:/opt/observum#
-- 661. root@g1:/opt/observum#
-- 662. root@g1:/opt/observum#
-- 663. root@g1:/opt/observum#
-- 664. root@g1:/opt/observum#
-- 665. root@g1:/opt/observum#
-- 666. root@g1:/opt/observum#
-- 667. root@g1:/opt/observum#
-- 668. root@g1:/opt/observum#
-- 669. root@g1:/opt/observum#
-- 670. root@g1:/opt/observum#
-- 671. root@g1:/opt/observum#
-- 672. root@g1:/opt/observum#
-- 673. root@g1:/opt/observum#
-- 674. root@g1:/opt/observum#
-- 675. root@g1:/opt/observum#
-- 676. root@g1:/opt/observum#
-- 677. root@g1:/opt/observum#
-- 678. root@g1:/opt/observum#
-- 679. root@g1:/opt/observum#
-- 680. root@g1:/opt/observum#
-- 681. root@g1:/opt/observum#
-- 682. root@g1:/opt/observum#
-- 683. root@g1:/opt/observum#
-- 684. root@g1:/opt/observum#
-- 685. root@g1:/opt/observum#
-- 686. root@g1:/opt/observum#
-- 687. root@g1:/opt/observum#
-- 688. root@g1:/opt/observum#
-- 689. root@g1:/opt/observum#
-- 690. root@g1:/opt/observum#
-- 691. root@g1:/opt/observum#
-- 692. root@g1:/opt/observum#
-- 693. root@g1:/opt/observum#
-- 694. root@g1:/opt/observum#
-- 695. root@g1:/opt/observum#
-- 696. root@g1:/opt/observum#
-- 697. root@g1:/opt/observum#
-- 698. root@g1:/opt/observum#
-- 699. root@g1:/opt/observum#
-- 700. root@g1:/opt/observum#
-- 701. root@g1:/opt/observum#
-- 702. root@g1:/opt/observum#
-- 703. root@g1:/opt/observum#
-- 704. root@g1:/opt/observum#
-- 705. root@g1:/opt/observum#
-- 706. root@g1:/opt/observum#
-- 707. root@g1:/opt/observum#
-- 708. root@g1:/opt/observum#
-- 709. root@g1:/opt/observum#
-- 710. root@g1:/opt/observum#
-- 711. root@g1:/opt/observum#
-- 712. root@g1:/opt/observum#
-- 713. root@g1:/opt/observum#
-- 714. root@g1:/opt/observum#
-- 715. root@g1:/opt/observum#
-- 716. root@g1:/opt/observum#
-- 717. root@g1:/opt/observum#
-- 718. root@g1:/opt/observum#
-- 719. root@g1:/opt/observum#
-- 720. root@g1:/opt/observum#
-- 721. root@g1:/opt/observum#
-- 722. root@g1:/opt/observum#
-- 723. root@g1:/opt/observum#
-- 724. root@g1:/opt/observum#
-- 725. root@g1:/opt/observum#
-- 726. root@g1:/opt/observum#
-- 727. root@g1:/opt/observum#
-- 728. root@g1:/opt/observum#
-- 729. root@g1:/opt/observum#
-- 730. root@g1:/opt/observum#
-- 731. root@g1:/opt/observum#
-- 732. root@g1:/opt/observum#
-- 733. root@g1:/opt/observum#
-- 734. root@g1:/opt/observum#
-- 735. root@g1:/opt/observum#
-- 736. root@g1:/opt/observum#
-- 737. root@g1:/opt/observum#
-- 738. root@g1:/opt/observum#
-- 739. root@g1:/opt/observum#
-- 740. root@g1:/opt/observum#
-- 741. root@g1:/opt/observum#
-- 742. root@g1:/opt/observum#
-- 743. root@g1:/opt/observum#
-- 744. root@g1:/opt/observum#
-- 745. root@g1:/opt/observum#
-- 746. root@g1:/opt/observum#
-- 747. root@g1:/opt/observum#
-- 748. root@g1:/opt/observum#
-- 749. root@g1:/opt/observum#
-- 750. root@g1:/opt/observum#
-- 751. root@g1:/opt/observum#
-- 752. root@g1:/opt/observum#
-- 753. root@g1:/opt/observum#
-- 754. root@g1:/opt/observum#
-- 755. root@g1:/opt/observum#
-- 756. root@g1:/opt/observum#
-- 757. root@g1:/opt/observum#
-- 758. root@g1:/opt/observum#
-- 759. root@g1:/opt/observum#
-- 760. root@g1:/opt/observum#
-- 761. root@g1:/opt/observum#
-- 762. root@g1:/opt/observum#
-- 763. root@g1:/opt/observum#
-- 764. root@g1:/opt/observum#
-- 765. root@g1:/opt/observum#
-- 766. root@g1:/opt/observum#
-- 767. root@g1:/opt/observum#
-- 768. root@g1:/opt/observum#
-- 769. root@g1:/opt/observum#
-- 770. root@g1:/opt/observum#
-- 771. root@g1:/opt/observum#
-- 772. root@g1:/opt/observum#
-- 773. root@g1:/opt/observum#
-- 774. root@g1:/opt/observum#
-- 775. root@g1:/opt/observum#
-- 776. root@g1:/opt/observum#
-- 777. root@g1:/opt/observum#
-- 778. root@g1:/opt/observum#
-- 779. root@g1:/opt/observum#
-- 780. root@g1:/opt/observum#
-- 781. root@g1:/opt/observum#
-- 782. root@g1:/opt/observum#
-- 783. root@g1:/opt/observum#
-- 784. root@g1:/opt/observum#
-- 785. root@g1:/opt/observum#
-- 786. root@g1:/opt/observum#
-- 787. root@g1:/opt/observum#
-- 788. root@g1:/opt/observum#
-- 789. root@g1:/opt/observum#
-- 790. root@g1:/opt/observum#
-- 791. root@g1:/opt/observum#
-- 792. root@g1:/opt/observum#
-- 793. root@g1:/opt/observum#
-- 794. root@g1:/opt/observum#
-- 795. root@g1:/opt/observum#
-- 796. root@g1:/opt/observum#
-- 797. root@g1:/opt/observum#
-- 798. root@g1:/opt/observum#
-- 799. root@g1:/opt/observum#
-- 800. root@g1:/opt/observum#
-- 801. root@g1:/opt/observum#
-- 802. root@g1:/opt/observum#
-- 803. root@g1:/opt/observum#
-- 804. root@g1:/opt/observum#
-- 805. root@g1:/opt/observum#
-- 806. root@g1:/opt/observum#
-- 807. root@g1:/opt/observum#
-- 808. root@g1:/opt/observum#
-- 809. root@g1:/opt/observum#
-- 810. root@g1:/opt/observum#
-- 811. root@g1:/opt/observum#
-- 812. root@g1:/opt/observum#
-- 813. root@g1:/opt/observum#
-- 814. root@g1:/opt/observum#
-- 815. root@g1:/opt/observum#
-- 816. root@g1:/opt/observum#
-- 817. root@g1:/opt/observum#
-- 818. root@g1:/opt/observum#
-- 819. root@g1:/opt/observum#
-- 820. root@g1:/opt/observum#
-- 821. root@g1:/opt/observum#
-- 822. root@g1:/opt/observum#
-- 823. root@g1:/opt/observum#
-- 824. root@g1:/opt/observum#
-- 825. root@g1:/opt/observum#
-- 826. root@g1:/opt/observum#
-- 827. root@g1:/opt/observum#
-- 828. root@g1:/opt/observum#
-- 829. root@g1:/opt/observum#
-- 830. root@g1:/opt/observum#
-- 831. root@g1:/opt/observum#
-- 832. root@g1:/opt/observum#
-- 833. root@g1:/opt/observum#
-- 834. root@g1:/opt/observum#
-- 835. root@g1:/opt/observum#
-- 836. root@g1:/opt/observum#
-- 837. root@g1:/opt/observum#
-- 838. root@g1:/opt/observum#
-- 839. root@g1:/opt/observum#
-- 840. root@g1:/opt/observum#
-- 841. root@g1:/opt/observum#
-- 842. root@g1:/opt/observum#
-- 843. root@g1:/opt/observum#
-- 844. root@g1:/opt/observum#
-- 845. root@g1:/opt/observum#
-- 846. root@g1:/opt/observum#
-- 847. root@g1:/opt/observum#
-- 848. root@g1:/opt/observum#
-- 849. root@g1:/opt/observum#
-- 850. root@g1:/opt/observum#
-- 851. root@g1:/opt/observum#
-- 852. root@g1:/opt/observum#
-- 853. root@g1:/opt/observum#
-- 854. root@g1:/opt/observum#
-- 855. root@g1:/opt/observum#
-- 856. root@g1:/opt/observum#
-- 857. root@g1:/opt/observum#
-- 858. root@g1:/opt/observum#
-- 859. root@g1:/opt/observum#
-- 860. root@g1:/opt/observum#
-- 861. root@g1:/opt/observum#
-- 862. root@g1:/opt/observum#
-- 863. root@g1:/opt/observum#
-- 864. root@g1:/opt/observum#
-- 865. root@g1:/opt/observum#
-- 866. root@g1:/opt/observum#
-- 867. root@g1:/opt/observum#
-- 868. root@g1:/opt/observum#
-- 869. root@g1:/opt/observum#
-- 870. root@g1:/opt/observum#
-- 871. root@g1:/opt/observum#
-- 872. root@g1:/opt/observum#
-- 873. root@g1:/opt/observum#
-- 874. root@g1:/opt/observum#
-- 875. root@g1:/opt/observum#
-- 876. root@g1:/opt/observum#
-- 877. root@g1:/opt/observum#
-- 878. root@g1:/opt/observum#
-- 879. root@g1:/opt/observum#
-- 880. root@g1:/opt/observum#
-- 881. root@g1:/opt/observum#
-- 882. root@g1:/opt/observum#
-- 883. root@g1:/opt/observum#
-- 884. root@g1:/opt/observum#
-- 885. root@g1:/opt/observum#
-- 886. root@g1:/opt/observum#
-- 887. root@g1:/opt/observum#
-- 888. root@g1:/opt/observum#
-- 889. root@g1:/opt/observum#
-- 890. root@g1:/opt/observum#
-- 891. root@g1:/opt/observum#
-- 892. root@g1:/opt/observum#
-- 893. root@g1:/opt/observum#
-- 894. root@g1:/opt/observum#
-- 895. root@g1:/opt/observum#
-- 896. root@g1:/opt/observum#
-- 897. root@g1:/opt/observum#
-- 898. root@g1:/opt/observum#
-- 899. root@g1:/opt/observum#
-- 900. root@g1:/opt/observum#
-- 901. root@g1:/opt/observum#
-- 902. root@g1:/opt/observum#
-- 903. root@g1:/opt/observum#
-- 904. root@g1:/opt/observum#
-- 905. root@g1:/opt/observum#
-- 906. root@g1:/opt/observum#
-- 907. root@g1:/opt/observum#
-- 908. root@g1:/opt/observum#
-- 909. root@g1:/opt/observum#
-- 910. root@g1:/opt/observum#
-- 911. root@g1:/opt/observum#
-- 912. root@g1:/opt/observum#
-- 913. root@g1:/opt/observum#
-- 914. root@g1:/opt/observum#
-- 915. root@g1:/opt/observum#
-- 916. root@g1:/opt/observum#
-- 917. root@g1:/opt/observum#
-- 918. root@g1:/opt/observum#
-- 919. root@g1:/opt/observum#
-- 920. root@g1:/opt/observum#
-- 921. root@g1:/opt/observum#
-- 922. root@g1:/opt/observum#
-- 923. root@g1:/opt/observum#
-- 924. root@g1:/opt/observum#
-- 925. root@g1:/opt/observum#
-- 926. root@g1:/opt/observum#
-- 927. root@g1:/opt/observum#
-- 928. root@g1:/opt/observum#
-- 929. root@g1:/opt/observum#
-- 930. root@g1:/opt/observum#
-- 931. root@g1:/opt/observum#
-- 932. root@g1:/opt/observum#
-- 933. root@g1:/opt/observum#
-- 934. root@g1:/opt/observum#
-- 935. root@g1:/opt/observum#
-- 936. root@g1:/opt/observum#
-- 937. root@g1:/opt/observum#
-- 938. root@g1:/opt/observum#
-- 939. root@g1:/opt/observum#
-- 940. root@g1:/opt/observum#
-- 941. root@g1:/opt/observum#
-- 942. root@g1:/opt/observum#
-- 943. root@g1:/opt/observum#
-- 944. root@g1:/opt/observum#
-- 945. root@g1:/opt/observum#
-- 946. root@g1:/opt/observum#
-- 947. root@g1:/opt/observum#
-- 948. root@g1:/opt/observum#
-- 949. root@g1:/opt/observum#
-- 950. root@g1:/opt/observum#
-- 951. root@g1:/opt/observum#
-- 952. root@g1:/opt/observum#
-- 953. root@g1:/opt/observum#
-- 954. root@g1:/opt/observum#
-- 955. root@g1:/opt/observum#
-- 956. root@g1:/opt/observum#
-- 957. root@g1:/opt/observum#
-- 958. root@g1:/opt/observum#
-- 959. root@g1:/opt/observum#
-- 960. root@g1:/opt/observum#
-- 961. root@g1:/opt/observum#
-- 962. root@g1:/opt/observum#
-- 963. root@g1:/opt/observum#
-- 964. root@g1:/opt/observum#
-- 965. root@g1:/opt/observum#
-- 966. root@g1:/opt/observum#
-- 967. root@g1:/opt/observum#
-- 968. root@g1:/opt/observum#
-- 969. root@g1:/opt/observum#
-- 970. root@g1:/opt/observum#
-- 971. root@g1:/opt/observum#
-- 972. root@g1:/opt/observum#
-- 973. root@g1:/opt/observum#
-- 974. root@g1:/opt/observum#
-- 975. root@g1:/opt/observum#
-- 976. root@g1:/opt/observum#
-- 977. root@g1:/opt/observum#
-- 978. root@g1:/opt/observum#
-- 979. root@g1:/opt/observum#
-- 980. root@g1:/opt/observum#
-- 981. root@g1:/opt/observum#
-- 982. root@g1:/opt/observum#
-- 983. root@g1:/opt/observum#
-- 984. root@g1:/opt/observum#
-- 985. root@g1:/opt/observum#
-- 986. root@g1:/opt/observum#
-- 987. root@g1:/opt/observum#
-- 988. root@g1:/opt/observum#
-- 989. root@g1:/opt/observum#
-- 990. root@g1:/opt/observum#
-- 991. root@g1:/opt/observum#
-- 992. root@g1:/opt/observum#
-- 993. root@g1:/opt/observum#
-- 994. root@g1:/opt/observum#
-- 995. root@g1:/opt/observum#
-- 996. root@g1:/opt/observum#
-- 997. root@g1:/opt/observum#
-- 998. root@g1:/opt/observum#
-- 999. root@g1:/opt/observum#
-- 1000. root@g1:/opt/observum#
+- `root@g1:/opt/observum# cp config.php.default config.php`
+- `root@g1:/opt/observum# vi config.php`
+- `root@g1:/opt/observum# cat config.php`
 
-现在我们可以在浏览器中访问 http://observium.lan。
+```
+<?php
 
+## 查看 https://docs.observum.org/config_options/ 了解可能设置的文档
 
+## 建议在 observum 安装的 /settings/ 网页界面中编辑设置。
+## 身份验证和数据库设置必须硬编码在这里，因为它们在您访问 Web 配置界面之前就必须工作
 
+// 数据库配置
+// --- 必须配置此处
+$config['db_host'] = 'localhost';
+$config['db_name'] = 'observum';
+$config['db_user'] = 'root';
+$config['db_pass'] = 'password';
 
+// 基础目录
+#Config['install_dir'] = "/opt/observium"
+```
 
-+ 4. net:
-5. port: 27017
-6. bindIp: 0.0.0.0
+现在我们可以在浏览器中访问 `http://observium.lan`。
+
+```
+net:
+port: 27017
+bindIp: 0.0.0.0
+```
 
 将 `bindIp` `127.0.0.1` 更新为 `0.0.0.0` 然后重启 MongoDB 服务器。
 
 现在我们可以创建一个 Docker compose 文件 `compose.yml` 并添加以下内容：
 
 ```yaml
-1. services:
-  rocketchat:
-    image: registry.rocket.chat/rocketchat/rocket.chat:${RELEASE:-latest}
-    restart: always
-    environment:
-      MONGO_URL: "mongodb://rocket:rocketpass@192.168.1.11:27017/rocket"
-      MONGO_OPLOG_URL: "mongodb://rocket:rocketpass@192.168.1.11:27017/rocket"
-      ROOT_URL: http://192.168.1.11:3000
-      PORT: 3000
-      DEPLOY_METHOD: docker
-      DEPLOY_PLATFORM: ${DEPLOY_PLATFORM:-}
-      REG_TOKEN: ${REG_TOKEN:-}
-    expose:
-      - 3000
-    ports:
-      - 3000:3000
 ```
 
-使用我们的 `docker compose up` 命令启动你的 Rocket.Chat。你的 Rocket.Chat 将通过 http://IP:3000 显示。
+
+
+### services
+
+```yaml
+rocketchat:
+  image: registry.rocket.chat/rocketchat/rocket.chat:${RELEASE:-latest}
+  restart: always
+  environment:
+    MONGO_URL: "mongodb://rocket:rocketpass@192.168.1.11:27017/rocket"
+    MONGO_OPLOG_URL: "mongodb://rocket:rocketpass@192.168.1.11:27017/rocket"
+    ROOT_URL: http://192.168.1.11:3000
+    PORT: 3000
+    DEPLOY_METHOD: docker
+    DEPLOY_PLATFORM: ${DEPLOY_PLATFORM:-}
+    REG_TOKEN: ${REG_TOKEN:-}
+  expose:
+    - 3000
+  ports:
+    - 3000:3000
+```
+
+使用我们的 `docker compose up` 命令启动你的 Rocket.Chat。你的 Rocket.Chat 将通过 `http://IP:3000` 显示。
 
 ### Web 性能
 
@@ -6117,7 +5263,7 @@ Observium 是一个监控服务器和交换机状态的平台，它运行在 PHP
 
 我们在 Apache 服务器中添加的一些设置是 `keepalive` 和 `compress`。当你有许多客户端时，它们会保持连接长时间开启，重用连接而不是创建新连接可以节省时间。此外，`compress` 设置会在向客户端发送数据时对其进行压缩，使其更小并更快地到达。
 
-以下是我们开启了 **keepalive** 和 `compress` 的 Apache 虚拟主机：
+以下是我们开启了 `keepalive` 和 `compress` 的 Apache 虚拟主机：
 
 ```apache
 1. LoadModule deflate_module modules/mod_deflate.so
@@ -6176,7 +5322,9 @@ Observium 是一个监控服务器和交换机状态的平台，它运行在 PHP
 54. </VirtualHost>
 ```
 
-在这里，使用 NGINX 开启 compress 的配置如下：
+
+
+在这里，使用 NGINX 开启 `compress` 的配置如下：
 
 | 行 | 内容 |
 | :--- | :--- |
@@ -6188,16 +5336,12 @@ Observium 是一个监控服务器和交换机状态的平台，它运行在 PHP
 | 50 | AddOutputFilterByType DEFLATE text/plain |
 | 51 | AddOutputFilterByType DEFLATE text/xml |
 | 52 | </IfModule> |
-| 53 | DocumentRoot /var/www/html |
+| 53 | DocumentRoot `/var/www/html` |
 | 54 | </VirtualHost> |
 
-
-
-
-
--   部署 Kubernetes 基础服务
--   在 Kubernetes 中安装 WordPress
--   需要记忆的 kubectl 命令
+- 部署 Kubernetes 基础服务
+- 在 Kubernetes 中安装 WordPress
+- 需要记忆的 `kubectl` 命令
 
 ### 目标
 
@@ -6209,7 +5353,7 @@ Observium 是一个监控服务器和交换机状态的平台，它运行在 PHP
 
 ### 在 Ubuntu 上安装 Kubernetes
 
-有多种工具可以在 Ubuntu Server 上安装 Kubernetes。Ubuntu 也有它自己的工具。然而，在这里，我们将研究 kubeadm，这是 Kubernetes 用于设置 Kubernetes 集群的工具。
+有多种工具可以在 Ubuntu Server 上安装 Kubernetes。Ubuntu 也有它自己的工具。然而，在这里，我们将研究 `kubeadm`，这是 Kubernetes 用于设置 Kubernetes 集群的工具。
 
 我们将从干净的 Ubuntu Server 安装开始并安装我们的组件。然后，我们将开始设置我们的主节点。
 
@@ -6221,517 +5365,163 @@ Observium 是一个监控服务器和交换机状态的平台，它运行在 PHP
 
 以下命令在主节点和工作节点上运行：
 
-- echo "First lets update this box"
-- apt-get update
-- apt-get upgrade -y
-- echo "Lets get docker"
-- apt-get update
-- apt-get install \
-- apt-transport-https \
-- ca-certificates \
-- curl \
-- gnupg \
-- lsb-release -y
-- echo "Setup cri-o"
-- export OS=ubuntu_22.04
-- export CRIO_VERSION=1.28
-- echo "deb http://download.opensense.org/repositories/devel/kubic/libcontainers:stable/$OS/*" sudo tee /etc/apt/sources.list.d/kubic:libcontainers:stable.list
-- echo "deb http://download.opensense.org/repositories/devel/kubic/libcontainers:stable/crio-o:$CRIO_VERSION/$OS/*" sudo tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable:crio-o:$CRIO_VERSION-VERSION.list
-- curl -L https://download.opensense.org/repositories/devel/kubic/libcontainers:stable:crio-o:$CRIO_VERSION/$OS/Release.key | sudo apt-key add -
-19. curl -L https://download.opensense.org/repositories/devel/kubic/libcontainers:/stable/$OS/Release.key | sudo apt-key add -
-20. apt update
-21. sudo apt install cri-o-runc -y
-22.
-23. echo "Setup kubeadm"
-24. cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
-25. br_netfilter
-26. EOF
-27.
-28. cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
-29. net.bridge.bridge-nf-call-iptables = 1
-30. net.bridge.bridge-nf-call-iptables = 1
-31. EOF
-32. sudo sysctl --system
-33.
-34. apt-get update
-35. apt-get install -y apt-transport-https ca-certificates curl
-36.
-37.
-38. curl -fSL https://pkgs.k8s.io/core:/stable/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
-39.
-40.
-41. echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable/v1.28/deb //' | sudo tee /etc/apt/sources.list.d/kubernetes.list
-42.
-43. apt-get update
-44. apt-get install -y kubelet kubeadm
-45. apt-mark hold kubelet kubeadm
+- `echo "First lets update this box"`
+- `apt-get update`
+- `apt-get upgrade -y`
+- `echo "Lets get docker"`
+- `apt-get update`
+- `apt-get install \`
+- `apt-transport-https \`
+- `ca-certificates \`
+- `curl \`
+- `gnupg \`
+- `lsb-release -y`
+- `echo "Setup cri-o"`
+- `export OS=ubuntu_22.04`
+- `export CRIO_VERSION=1.28`
+- `echo "deb http://download.opensense.org/repositories/devel/kubic/libcontainers:stable/$OS/*" sudo tee /etc/apt/sources.list.d/kubic:libcontainers:stable.list`
+- `echo "deb http://download.opensense.org/repositories/devel/kubic/libcontainers:stable/crio-o:$CRIO_VERSION/$OS/*" sudo tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable:crio-o:$CRIO_VERSION-VERSION.list`
+- `curl -L https://download.opensense.org/repositories/devel/kubic/libcontainers:stable:crio-o:$CRIO_VERSION/$OS/Release.key | sudo apt-key add -`
+- `curl -L https://download.opensense.org/repositories/devel/kubic/libcontainers:/stable/$OS/Release.key | sudo apt-key add -`
+- `apt update`
+- `sudo apt install cri-o-runc -y`
 
-同样，在我们的主节点上，安装 kubectl cli。kubectl 将是我们用来控制集群的命令。在主节点上安装它，如果你想从计算机连接到集群，请运行以下命令：
+```
+echo "Setup kubeadm"
+cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
+br_netfilter
+EOF
 
-Kubernetes 无法在启用 swap的情况下运行，因此我们需要禁用 swap。运行以下命令：swapoff -a
+cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
+net.bridge.bridge-nf-call-iptables = 1
+net.bridge.bridge-nf-call-iptables = 1
+EOF
+sudo sysctl --system
+```
 
-为了使其持久化，打开文件 /etc/fstab 并注释掉所示的 swap 行：
+```
+apt-get update
+apt-get install -y apt-transport-https ca-certificates curl
+curl -fSL https://pkgs.k8s.io/core:/stable/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
+echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable/v1.28/deb //' | sudo tee /etc/apt/sources.list.d/kubernetes.list
+apt-get update
+apt-get install -y kubelet kubeadm
+apt-mark hold kubelet kubeadm
+```
 
+同样，在我们的主节点上，安装 `kubectl` cli。`kubectl` 将是我们用来控制集群的命令。在主节点上安装它，如果你想从计算机连接到集群，请运行以下命令：
+
+Kubernetes 无法在启用 `swap` 的情况下运行，因此我们需要禁用 `swap`。运行以下命令：`swapoff -a`
+
+为了使其持久化，打开文件 `/etc/fstab` 并注释掉所示的 `swap` 行：
+
+```
 root@worker1:cat /etc/fstab
-2. # /etc/fstab: 静态文件系统信息
-3. # 使用 'blkid' 打印设备的唯一标识符；这可以配合 UUID= 使用是一种更稳健的设备命名方法，即使在添加和删除磁盘也能工作。查看 fstab(5)。
-4. # <file> <mount point> <type>
-
-Kubernetes 无法在启用 swap的情况下运行，因此我们需要禁用 swap。运行以下命令：swapoff -a
-
-为了使其持久化，打开文件 /etc/fstab 并注释掉所示的 swap 行：
-
-root@worker1:cat /etc/fstab
-2. # /etc/fstab: 静态文件系统信息
-3. # 使用 'blkid' 打印设备的唯一标识符；这可以配合 UUID= 使用是一种更稳健的设备命名方法，即使在添加和删除磁盘也能工作。查看 fstab(5)。
-4. # <file> <mount point> <type>
-
-Kubernetes 无法在启用 swap的情况下运行，因此我们需要禁用 swap。运行以下命令：swapoff -a
-
-为了使其持久化，打开文件 /etc/fstab 并注释掉所示的 swap 行：
-
-root@worker1:cat /etc/fstab
-2. # /etc/fstab: 静态文件系统信息
-3. # 使用 'blkid' 打印设备的唯一标识符；这可以配合 UUID= 使用是一种更稳健的设备命名方法，即使在添加和删除磁盘也能工作。查看 fstab(5)。
-4. # <file> <mount point> <type>
-
-Kubernetes 无法在启用 swap的情况下运行，因此我们需要禁用 swap。运行以下命令：swapoff -a
-
-为了使其持久化，打开文件 /etc/fstab 并注释掉所示的 swap 行：
-
-root@worker1:cat /etc/fstab
-2. # /etc/fstab: 静态文件系统信息
-3. # 使用 'blkid' 打印设备的唯一标识符；这可以配合 UUID= 使用是一种更稳健的设备命名方法，即使在添加和删除磁盘也能工作。查看 fstab(5)。
-4. # <file> <mount point> <type>
-
-Kubernetes 无法在启用 swap的情况下运行，因此我们需要禁用 swap。运行以下命令：swapoff -a
-
-为了使其持久化，打开文件 /etc/fstab 并注释掉所示的 swap 行：
-
-root@worker1:cat /etc/fstab
-2. # /etc/fstab: 静态文件系统信息
-3. # 使用 'blkid' 打印设备的唯一标识符；这可以配合 UUID= 使用是一种更稳健的设备命名方法，即使在添加和删除磁盘也能工作。查看 fstab(5)。
-4. # <file> <mount point> <type>
-
-Kubernetes 无法在启用 swap的情况下运行，因此我们需要禁用 swap。运行以下命令：swapoff -a
-
-为了使其持久化，打开文件 /etc/fstab 并注释掉所示的 swap 行：
-
-root@worker1:cat /etc/fstab
-2. # /etc/fstab: 静态文件系统信息
-3. # 使用 'blkid' 打印设备的唯一标识符；这可以配合 UUID= 使用是一种更稳健的设备命名方法，即使在添加和删除磁盘也能工作。查看 fstab(5)。
-4. # <file> <mount point> <type>
-
-Kubernetes 无法在启用 swap的情况下运行，因此我们需要禁用 swap。运行以下命令：swapoff -a
-
-为了使其持久化，打开文件 /etc/fstab 并注释掉所示的 swap 行：
-
-root@worker1:cat /etc/fstab
-2. # /etc/fstab: 静态文件系统信息
-3. # 使用 'blkid' 打印设备的唯一标识符；这可以配合 UUID= 使用是一种更稳健的设备命名方法，即使在添加和删除磁盘也能工作。查看 fstab(5)。
-4. # <file> <mount point> <type>
-
-Kubernetes 无法在启用 swap的情况下运行，因此我们需要禁用 swap。运行以下命令：swapoff -a
-
-为了使其持久化，打开文件 /etc/fstab 并注释掉所示的 swap 行：
-
-root@worker1:cat /etc/fstab
-2. # /etc/fstab: 静态文件系统信息
-3. # 使用 'blkid' 打印设备的唯一标识符；这可以配合 UUID= 使用是一种更稳健的设备命名方法，即使在添加和删除磁盘也能工作。查看 fstab(5)。
-4. # <file> <mount point> <type>
-
-Kubernetes 无法在启用 swap的情况下运行，因此我们需要禁用 swap。运行以下命令：swapoff -a
-
-为了使其持久化，打开文件 /etc/fstab 并注释掉所示的 swap 行：
-
-root@worker1:cat /etc/fstab
-2. # /etc/fstab: 静态文件系统信息
-3. # 使用 'blkid' 打印设备的唯一标识符；这可以配合 UUID= 使用是一种更稳健的设备命名方法，即使在添加和删除磁盘也能工作。查看 fstab(5)。
-4. # <file> <mount point> <type>
-
-Kubernetes 无法在启用 swap的情况下运行，因此我们需要禁用 swap。运行以下命令：swapoff -a
-
-为了使其持久化，打开文件 /etc/fstab 并注释掉所示的 swap 行：
-
-root@worker1:cat /etc/fstab
-2. # /etc/fstab: 静态文件系统信息
-3. # 使用 'blkid' 打印设备的唯一标识符；这可以配合 UUID= 使用是一种更稳健的设备命名方法，即使在添加和删除磁盘也能工作。查看 fstab(5)。
-4. # <file> <mount point> <type>
-
-Kubernetes 无法在启用 swap的情况下运行，因此我们需要禁用 swap。运行以下命令：swapoff -a
-
-为了使其持久化，打开文件 /etc/fstab 并注释掉所示的 swap 行：
-
-root@worker1:cat /etc/fstab
-2. # /etc/fstab: 静态文件系统信息
-3. # 使用 'blkid' 打印设备的唯一标识符；这可以配合 UUID= 使用是一种更稳健的设备命名方法，即使在添加和删除磁盘也能工作。查看 fstab(5)。
-4. # <file> <mount point> <type>
-
-Kubernetes 无法在启用 swap的情况下运行，因此我们需要禁用 swap。运行以下命令：swapoff -a
-
-为了使其持久化，打开文件 /etc/fstab 并注释掉所示的 swap 行：
-
-root@worker1:cat /etc/fstab
-2. # /etc/fstab: 静态文件系统信息
-3. # 使用 'blkid' 打印设备的唯一标识符；这可以配合 UUID= 使用是一种更稳健的设备命名方法，即使在添加和删除磁盘也能工作。查看 fstab(5)。
-4. # <file> <mount point> <type>
-
-Kubernetes 无法在启用 swap的情况下运行，因此我们需要禁用 swap。运行以下命令：swapoff -a
-
-为了使其持久化，打开文件 /etc/fstab 并注释掉所示的 swap 行：
-
-root@worker1:cat /etc/fstab
-2. # /etc/fstab: 静态文件系统信息
-3. # 使用 'blkid' 打印设备的唯一标识符；这可以配合 UUID= 使用是一种更稳健的设备命名方法，即使在添加和删除磁盘也能工作。查看 fstab(5)。
-4. # <file> <mount point> <type>
-
-Kubernetes 无法在启用 swap的情况下运行，因此我们需要禁用 swap。运行以下命令：swapoff -a
-
-为了使其持久化，打开文件 /etc/fstab 并注释掉所示的 swap 行：
-
-root@worker1:cat /etc/fstab
-2. # /etc/fstab: 静态文件系统信息
-3. # 使用 'blkid' 打印设备的唯一标识符；这可以配合 UUID= 使用是一种更稳健的设备命名方法，即使在添加和删除磁盘也能工作。查看 fstab(5)。
-4. # <file> <mount point> <type>
-
-Kubernetes 无法在启用 swap的情况下运行，因此我们需要禁用 swap。运行以下命令：swapoff -a
-
-为了使其持久化，打开文件 /etc/fstab 并注释掉所示的 swap 行：
-
-root@worker1:cat /etc/fstab
-2. # /etc/fstab: 静态文件系统信息
-3. # 使用 'blkid' 打印设备的唯一标识符；这可以配合 UUID= 使用是一种更稳健的设备命名方法，即使在添加和删除磁盘也能工作。查看 fstab(5)。
-4. # <file> <mount point> <type>
-
-Kubernetes 无法在启用 swap的情况下运行，因此我们需要禁用 swap。运行以下命令：swapoff -a
-
-为了使其持久化，打开文件 /etc/fstab 并注释掉所示的 swap 行：
-
-root@worker1:cat /etc/fstab
-2. # /etc/fstab: 静态文件系统信息
-3. # 使用 'blkid' 打印设备的唯一标识符；这可以配合 UUID= 使用是一种更稳健的设备命名方法，即使在添加和删除磁盘也能工作。查看 fstab(5)。
-4. # <file> <mount point> <type>
-
-Kubernetes 无法在启用 swap的情况下运行，因此我们需要禁用 swap。运行以下命令：swapoff -a
-
-为了使其持久化，打开文件 /etc/fstab 并注释掉所示的 swap 行：
-
-root@worker1:cat /etc/fstab
-2. # /etc/fstab: 静态文件系统信息
-3. # 使用 'blkid' 打印设备的唯一标识符；这可以配合 UUID= 使用是一种更稳健的设备命名方法，即使在添加和删除磁盘也能工作。查看 fstab(5)。
-4. # <file> <mount point> <type>
-
-Kubernetes 无法在启用 swap的情况下运行，因此我们需要禁用 swap。运行以下命令：swapoff -a
-
-为了使其持久化，打开文件 /etc/fstab 并注释掉所示的 swap 行：
-
-root@worker1:cat /etc/fstab
-2. # /etc/fstab: 静态文件系统信息
-3. # 使用 'blkid' 打印设备的唯一标识符；这可以配合 UUID= 使用是一种更稳健的设备命名方法，即使在添加和删除磁盘也能工作。查看 fstab(5)。
-4. # <file> <mount point> <type>
-
-Kubernetes 无法在启用 swap的情况下运行，因此我们需要禁用 swap。运行以下命令：swapoff -a
-
-为了使其持久化，打开文件 /etc/fstab 并注释掉所示的 swap 行：
-
-root@worker1:cat /etc/fstab
-2. # /etc/fstab: 静态文件系统信息
-3. # 使用 'blkid' 打印设备的唯一标识符；这可以配合 UUID= 使用是一种更稳健的设备命名方法，即使在添加和删除磁盘也能工作。查看 fstab(5)。
-4. # <file> <mount point> <type>
-
-### 在 Ubuntu 上安装 Kubernetes
-
-在 Ubuntu Server 上安装 Kubernetes 有多种工具。Ubuntu 也有它自己的工具。然而，在这里，我们将研究 kubeadm，这是 Kubernetes 用于设置 Kubernetes 集群的工具。
-
-我们将从干净的 Ubuntu Server 安装开始并安装我们的组件。然后，我们将开始设置我们的主节点。
-
-一旦主节点运行，我们将工作节点连接到主节点。
-
-# 安装 Kubernetes 依赖
-
-在本章结束时，你将能够设置自己的 Kubernetes 集群并将服务部署到集群中。一旦集群设置完成，我们将继续添加集群服务以使用该集群。我们将添加一个负载均衡器来接收进入集群的流量。我们还将添加工具，通过日志（logs）和指标（metrics）来监控我们的集群。添加存储系统以使我们的工作负载能够利用磁盘资源。当核心系统安装完成后，我们就可以将工作负载添加到集群中，就像 WordPress 一样，进入我们的集群中。
-
-最后，一旦工作负载运行，我们还将查看一些用于排查 Kubernetes 集群故障的基础命令。
-
-### 在 Ubuntu 上安装 Kubernetes
-
-在 Ubuntu Server 上安装 Kubernetes 有多种工具。Ubuntu 也有它自己的工具。然而，在这里，我们将研究 kubeadm，这是 Kubernetes 用于设置 Kubernetes 集群的工具。
-
-我们将从干净的 Ubuntu Server 安装开始并安装我们的组件。然后，我们将开始设置我们的主节点。
-
-一旦主节点运行，我们将工作节点连接到主节点。
-
-# 安装 Kubernetes 依赖 
-
-在主节点和工作节点上运行以下命令。在我们可以开始安装 Kubernetes 集群之前，它将在我们的 Ubuntu Server 上安装所需的包。这个小的 bash 脚本是一种确保我们的 Ubuntu 节点在开始之前已更新并具有正确软件包和设置的简单方法。这为我们构建 Kubernetes 集群提供了良好的基础。
-
-以下命令在主节点和工作节点上运行：
-
-- echo "First lets update this box"
-- apt-get update
-- apt-get upgrade -y
-- echo "Lets get docker"
-- apt-get update
-- apt-get install \
-- apt-transport-https \
-- ca-certificates \
-- curl \
-- gnupg \
-- lsb-release -y
-- echo "Setup cri-o"
-- export OS=ubuntu_22.04
-- export CRIO_VERSION=1.28
-- echo "deb http://download.opensense.org/repositories/devel/kubic/libcontainers:stable/$OS/*" sudo tee /etc/apt/sources.list.d/kubic:libcontainers:stable.list
-- echo "deb http://download.opensense.org/repositories/devel/kubic/libcontainers:stable/crio-o:$CRIO_VERSION/$OS/*" sudo tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable:crio-o:$CRIO_VERSION-VERSION.list
-- curl -L https://download.opensense.org/repositories/devel/kubic/libcontainers:stable:crio-o:$CRIO_VERSION/$OS/Release.key | sudo apt-key add -
-19. curl -L https://download.opensense.org/repositories/devel/kubic/libcontainers:/stable/$OS/Release.key | sudo apt-key add -
-20. apt update
-21. sudo apt install cri-o-runc -y
-22.
-23. echo "Setup kubeadm"
-24. cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
-25. br_netfilter
-26. EOF
-27.
-28. cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
-29. net.bridge.bridge-nf-call-iptables = 1
-30. net.bridge.bridge-nf-call-iptables = 1
-31. EOF
-32. sudo sysctl --system
-33.
-34. apt-get update
-35. apt-get install -y apt-transport-https ca-certificates curl
-36.
-37.
-38. curl -fSL https://pkgs.k8s.io/core:/stable/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
-39.
-40.
-41. echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable/v1.28/deb //' | sudo tee /etc/apt/sources.list.d/kubernetes.list
-42.
-43. apt-get update
-44. apt-get install -y kubelet kubeadm
-45. apt-mark hold kubelet kubeadm
-
-同样，在我们的主节点上，安装 kubectl cli。kubectl 将是我们用来控制集群的命令。在主节点上安装它，如果你想从计算机连接到集群，请运行以下命令：
-
-Kubernetes 无法在启用 swap的情况下运行，因此我们需要禁用 swap。运行以下命令：swapoff -a
-
-为了使其持久化，打开文件 /etc/fstab 并注释掉所示的 swap 行：
-
-root@worker1:cat /etc/fstab
-2. # /etc/fstab: 静态文件系统信息
-3. # 使用 'blkid' 打印设备的唯一标识符；这可以配合 UUID= 使用是一种更稳健的设备命名方法，即使在添加和删除磁盘也能工作。查看 fstab(5)。
-4. # <file> <mount point> <type>
-
-Kubernetes 无法在启用 swap的情况下运行，因此我们需要禁用 swap。运行以下命令：swapoff -a
-
-为了使其持久化，打开文件 /etc/fstab 并注释掉所示的 swap 行：
-
-root@worker1:cat /etc/fstab
-2. # /etc/fstab: 静态文件系统信息
-3. # 使用 'blkid' 打印设备的唯一标识符；这可以配合 UUID= 使用是一种更稳健的设备命名方法，即使在添加和删除磁盘也能工作。查看 fstab(5)。
-4. # <file> <mount point> <type>
-
-Kubernetes 无法在启用 swap的情况下运行，因此我们需要禁用 swap。运行以下命令：swapoff -a
-
-为了使其持久化，打开文件 /etc/fstab 并注释掉所示的 swap 行：
-
-root@worker1:cat /etc/fstab
-2. # /etc/fstab: 静态文件系统信息
-3. # 使用 'blkid' 打印设备的唯一标识符；这可以配合 UUID= 使用是一种更稳健的设备命名方法，即使在添加和删除磁盘也能工作。查看 fstab(5)。
-4. # <file> <mount point> <type>
-
-Kubernetes 无法在启用 swap的情况下运行，因此我们需要禁用 swap。运行以下命令：swapoff -a
-
-为了使其持久化，打开文件 /etc/fstab 并注释掉所示的 swap 行：
-
-root@worker1:cat /etc/fstab
-2. # /etc/fstab: 静态文件系统信息
-3. # 使用 'blkid' 打印设备的唯一标识符；这可以配合 UUID= 使用是一种更稳健的设备命名方法，即使在添加和删除磁盘也能工作。查看 fstab(5)。
-4. # <file> <mount point> <type>
-
-... (注：由于原始文本中存在大量重复的段落，上述翻译逻辑已在“在 Ubuntu 上安装 Kubernetes”和“安装 Kubernetes 依赖”之后，此处已根据您提供的文本内容进行了完整翻译并去重处理)
-
-[content]
--   部署 Kubernetes 基础服务
--   在 Kubernetes 中安装 WordPress
--   需要记忆的 kubectl 命令
-
-### 目标
-
-... (由于长度限制，此处省略中间重复的翻译内容，直接呈现核心翻译结果)
-
-[content]
--   部署 Kubernetes 基础服务
--   在 Kubernetes 中安装 WordPress
--   需要记忆的 kubectl 命令
-
-### 目标
-
-在本章结束时，我们将从安装一个干净的 Ubuntu Server 开始。然后，我们将学习如何设置 Kubernetes 主节点。当 Kubernetes 主节点运行时，我们将添加一个新的 Ubuntu Server 作为 Kubernetes 工作节点。并开始向我们的 Kubernetes 集群中添加工作负载。
-
-在本章结束时，你将能够设置自己的 Kubernetes 集群并将服务部署到集群中。一旦集群设置完成，我们将继续添加集群服务以使用该集群。我们将添加一个负载均衡器来接收进入集群的流量。我们还将添加工具，通过日志（logs）和指标（metrics）来监控我们的集群。添加存储系统以使我们的工作负载能够利用磁盘资源。当核心系统安装完成后，我们就可以将工作负载添加到集群中，就像 WordPress 一样，进入我们的集群中。
-
-最后，一旦工作负载运行，我们还将查看一些用于排查 Kubernetes 集群故障的基础命令。
-
-### 在 Ubuntu 上安装 Kubernetes
-
-在 Ubuntu Server 上安装 Kubernetes 有多种工具。Ubuntu 也有它自己的工具。然而，在这里，我们将研究 kubeadm，这是 Kubernetes 用于设置 Kubernetes 集群的工具。
-
-我们将从干净的 Ubuntu Server 安装开始并安装我们的组件。然后，我们将开始设置我们的主节点。
-
-一旦主节点运行，我们将工作节点连接到主节点。
-
-# 安装 Kubernetes 依赖 
-
-在主节点和工作节点上运行以下命令。在我们可以开始安装 Kubernetes 集群之前，它将在我们的 Ubuntu Server 上安装所需的包。这个小的 bash 脚本是一种确保我们的 Ubuntu 节点在开始之前已更新并具有正确软件包和设置的简单方法。这为我们构建 Kubernetes 集群提供了良好的基础。
-
-以下命令在主节点和工作节点上运行：
-
-- echo "First lets update this box"
-- apt-get update
-- apt-get upgrade -y
-- echo "Lets get docker"
-- apt-get update
-- apt-get install \
-- apt-transport-https \
-- ca-certificates \
-- curl \
-- gnupg \
-- lsb-release -y
-- echo "Setup cri-o"
-- export OS=ubuntu_22.04
-- export CRIO_VERSION=1.28
-- echo "deb http://download.opensense.org/repositories/devel/kubic/libcontainers:stable/$OS/*" sudo tee /etc/apt/sources.list.d/kubic:libcontainers:stable.list
-- echo "deb http://download.opensense.org/repositories/devel/kubic/libcontainers:stable/crio-o:$CRIO_VERSION/$OS/*" sudo tee /etc/apt/sources.list.d/devel:kubic:libcontainers:stable:crio-o:$CRIO_VERSION-VERSION.list
-- curl -L https://download.opensense.org/repositories/devel/kubic/libcontainers:stable:crio-o:$CRIO_VERSION/$OS/Release.key | sudo apt-key add -
-19. curl -L https://download.opensense.org/repositories/devel/kubic/libcontainers:/stable/$OS/Release.key | sudo apt-key add -
-20. apt update
-21. sudo apt install cri-o-runc -y
-22.
-23. echo "Setup kubeadm"
-24. cat <<EOF | sudo tee /etc/modules-load.d/k8s.conf
-25. br_netfilter
-26. EOF
-27.
-28. cat <<EOF | sudo tee /etc/sysctl.d/k8s.conf
-29. net.bridge.bridge-nf-call-iptables = 1
-30. net.bridge.bridge-nf-call-iptables = 1
-31. EOF
-32. sudo sysctl --system
-33.
-34. apt-get update
-35. apt-get install -y apt-transport-https ca-certificates curl
-36.
-37.
-38. curl -fSL https://pkgs.k8s.io/core:/stable/v1.28/deb/Release.key | sudo gpg --dearmor -o /etc/apt/keyrings/kubernetes-apt-keyring.gpg
-39.
-40.
-41. echo 'deb [signed-by=/etc/apt/keyrings/kubernetes-apt-keyring.gpg] https://pkgs.k8s.io/core:/stable/v1.28/deb //' | sudo tee /etc/apt/sources.list.d/kubernetes.list
-42.
-43. apt-get update
-44. apt-get install -y kubelet kubeadm
-45. apt-mark hold kubelet kubeadm
-
-同样，在我们的主节点上，安装 kubectl cli。kubectl 将是我们用来控制集群的命令。在主节点上安装它，如果你想从计算机连接到集群，请运行以下命令：
-
-Kubernetes 无法在启用 swap的情况下运行，因此我们需要禁用 swap。运行以下命令：swapoff -a
-
-为了使其持久化，打开文件 /etc/fstab 并注释掉所示的 swap 行：
-
-root@worker1:cat /etc/fstab
-2. # /etc/fstab: 静态文件系统信息
-3. # 使用 'blkid' 打印设备的唯一标识符；这可以配合 UUID= 使用是一种更稳健的设备命名方法，即使在添加和删除磁盘也能工作。查看 fstab(5)。
-4. # <file> <mount point> <type>
-
-
-
+# /etc/fstab: 静态文件系统信息
+# 使用 'blkid' 打印设备的唯一标识符；这可以配合 UUID= 使用是一种更稳健的设备命名方法，即使在添加和删除磁盘也能工作。查看 fstab(5)。
+# <file> <mount point> <type>
+```
 
 | 32. | [https://kubernetes.io/docs/concepts/cluster-administration/addons/] |
 | 33. | |
 | 34. | 然后你可以通过在每个节点上以 root 身份运行以下命令加入任意数量的节点： |
 | 35. | |
-| 36. | kubeadm join 192.168.122.162:6443 --token s139j1.2zdneeaeb6d8e7u \ |
-| 37. | --discovery-token-ca-cert-hash sha256:29d849da533a16d55ee447b02534135eee998d674e8f73a8bd98c0d2dbcf2 |
+| 36. | `kubeadm join 192.168.122.162:6443 --token s139j1.2zdneeaeb6d8e7u \` |
+| 37. | `--discovery-token-ca-cert-hash sha256:29d849da533a16d55ee447b02534135eee998d674e8f73a8bd98c0d2dbcf2` |
 
-现在，我们的 Kubernetes 主节点已经设置就绪。我们现在可以在 worker 节点上运行 join 命令将其添加到集群。可以通过运行以下代码来实现：
+现在，我们的 Kubernetes 主节点已经设置就绪。我们现在可以在 worker 节点上运行 `join` 命令将其添加到集群。可以通过运行以下代码来实现：
 
-+ 1. root@k8worker1:/etc# kubeadm join 192.168.122.162:6443 --token en80jxkg.nc73dumshya6616t --socket=/var/run/crio/crio.sock --discovery-token-ca-cert-hash sha256:6a0886192f3c308cd78fc33622aefe7e9692626e09dbb0b1888d49e8feb2
-+ 2. W1106 20:52:36.423681 9268 initconfiguration.go:120] 使用不带 URL 方案的 cri 端点已弃用，未来可能会导致 kubelet 错误。自动在 "criSocket with value /var/run/crio/crio.sock" 前面添加 "scheme"。请更新您的配置！
-+ 3. [preflight] 正在运行预检检查
-+ 4. [preflight] 正在从集群读取配置...
-+ 5. [preflight] 提示：你可以通过 `kubectl -n be-system cm kubeadm-config -o yaml` 查看此配置文件
-+ 6. [kubelet-start] 正在将 kubelet 配置写入文件 "/var/lib/kubelet/config.yaml"
-+ 7. [kubelet-start] 正在将带有标记的 kubelet 环境文件写入文件 "/var/lib/kubelet/kubeadm-flags.env"
-+ 8. [kubelet-start] 正在启动 kubelet
-+ 9. [kubelet-start] 等待 kubelet 执行 TLS Bootstrap p...
-+ 10.
-+ 11. 此节点已加入集群：
-+ 12. * 证书签名请求已发送到 apiserver 并收到了响应。
-+ 13. * Kubelet 已获新的安全连接详情。
-+ 14.
-+ 15. 在控制平面上运行 'kubectl get nodes' 查看此节点已加入集群。
-+ 16. root@k8sworker:/etc#
+```
+root@k8worker1:/etc# kubeadm join 192.168.122.162:6443 --token en80jxkg.nc73dumshya6616t --socket=/var/run/crio/crio.sock --discovery-token-ca-cert-hash sha256:6a0886192f3c308cd78fc33622aefe7e9692626e09dbb0b1888d49e8feb2
+W1106 20:52:36.423681 9268 initconfiguration.go:120] 使用不带 URL 方案的 cri 端点已弃用，未来可能会导致 kubelet 错误。自动在 "criSocket with value /var/run/crio/crio.sock" 前面添加 "scheme"。请更新您的配置！
+[preflight] 正在运行预检检查
+[preflight] 正在从集群读取配置...
+[preflight] 提示：你可以通过 `kubectl -n be-system cm kubeadm-config -o yaml` 查看此配置文件
+[kubelet-start] 正在将 kubelet 配置写入文件 "/var/lib/kubelet/config.yaml"
+[kubelet-start] 正在将带有标记的 kubelet 环境文件写入文件 "/var/lib/kubelet/kubeadm-flags.env"
+[kubelet-start] 正在启动 kubelet
+[kubelet-start] 等待 kubelet 执行 TLS Bootstrap p...
+此节点已加入集群：
+* 证书签名请求已发送到 apiserver 并收到了响应。
+* Kubelet 已获新的安全连接详情。
+在控制平面上运行 'kubectl get nodes' 查看此节点已加入集群。
+root@k8sworker:/etc#
+```
 
-join token 有一段时间有效期，但如果你以后想添加更多节点，可以轻松创建一个新 token。
+`join` token 有一段时间有效期，但如果你以后想添加更多节点，可以轻松创建一个新 token。
 
-要访问您的集群，我们需要一个带有 URL 和证书的配置来授予访问。Kubeadmin 已经为我们生成了，我们可以使用以下命令使用：
+要访问您的集群，我们需要一个带有 URL 和证书的配置来授予访问。`Kubeadmin` 已经为我们生成了，我们可以使用以下命令使用：
 
-+ 1. export KUBECONFIG=/etc/kubernetes/admin.conf
+```
+export KUBECONFIG=/etc/kubernetes/admin.conf
+```
 
-你可以将此文件复制到电脑，然后在那里运行 kubectl 命令。这是您应该妥善保存的 admin token。在 Kubernetes 中有很多方法创建用户和角色，但我们只使用 admin token。如下代码所示，我们添加了配置并请求 Kubernetes API 来确定哪些节点已连接。以下代码显示了如何设置对 Kubernetes 集群的访问：
+你可以将此文件复制到电脑，然后在那里运行 `kubectl` 命令。这是您应该妥善保存的 admin token。在 Kubernetes 中有很多方法创建用户和角色，但我们只使用 admin token。如下代码所示，我们添加了配置并请求 Kubernetes API 来确定哪些节点已连接。以下代码显示了如何设置对 Kubernetes 集群的访问：
+
+
 
 ```
 root@k8master:/etc# export KUBECONFIG=/etc/kubernetes/admin.conf
+
 root@k8master:/etc# kubectl get nodes
+
 NAME STATUS ROLES AGE VERSION
+
 k8master Ready control-plane 3m41s v1.28.3
+
 k8sworker1 Ready <none> 46s v1.28.3
+
 root@k8master:/etc#
 ```
 
+
+
 我们的集群已经启动并连接成功。在开始使用集群之前，让我们完成最后一步：添加网络插件。可以通过运行以下操作来实现：
 
-+ 1. root@k8smaster:/etc# kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
-+ 2. namespace/kube-flannel 创建
-+ 3. serviceaccount/flannel 创建
-+ 4. clusterrole.rbac.authorization.k8s.io/flannel 创建
-+ 5. clusterrolebinding.rbac.authorization.k8s.io/flannel 创建
-+ 6. configmap/kube-flannel-cfg 创建
-+ 7. daemonset.apps/kube-flannel-ds 创建
-+ 8. root@k8smaster:/etc#
+```bash
+root@k8smaster:/etc# kubectl apply -f https://github.com/flannel-io/flannel/releases/latest/download/kube-flannel.yml
+namespace/kube-flannel 创建
+serviceaccount/flannel 创建
+clusterrole.rbac.authorization.k8s.io/flannel 创建
+clusterrolebinding.rbac.authorization.k8s.io/flannel 创建
+configmap/kube-flannel-cfg 创建
+daemonset.apps/kube-flannel-ds 创建
+root@k8smaster:/etc#
+```
 
-在这里，我们使用 kubectl 命令并将 flannel 网络插件应用到集群中。我们现在已经将工作负载添加到集群中，并为下一步工作做好了准备。
+在这里，我们使用 `kubectl` 命令并将 `flannel` 网络插件应用到集群中。我们现在已经将工作负载添加到集群中，并为下一步工作做好了准备。
 
 让我们验证所有 pod 是否都按预期运行：
 
-+ 1. root@k8smaster:/opt# kubectl get pods -A
-+ 2. NAMESPACE NAME READY RESTARTS STATUS AGE
-+ 3. kube-flannel kube-flannel-ds 1/1 0 0 Running 5m
-+ 4. kube-system kube-apiserver-k8master 1/1 0 0 Running 15m
-+ 5. kube-system kube-controller-manager-k8master 1/1 0 0 Running 15m
-+ 6. kube-system kube-etcd-k8master 1/1 0 0 Running 15m
-+ 7. kube-system kube-proxy 1/1 0 0 Running 15m
-+ 8. kube-system kube-scheduler 1/1 0 0 Running 15m
+```bash
+root@k8smaster:/opt# kubectl get pods -A
+NAMESPACE NAME READY RESTARTS STATUS AGE
+kube-flannel kube-flannel-ds 1/1 0 0 Running 5m
+kube-system kube-apiserver-k8master 1/1 0 0 Running 15m
+kube-system kube-controller-manager-k8master 1/1 0 0 Running 15m
+kube-system kube-etcd-k8master 1/1 0 0 Running 15m
+kube-system kube-proxy 1/1 0 0 Running 15m
+kube-system kube-scheduler 1/1 0 0 Running 15m
+```
 
 （注：此处省略了原文中大量重复且损坏的文本，已根据标准 Kubernetes 输出模式进行清理。）
 
+```bash
+状态: 已部署
+修订: 1
+备注:
+kube-prometheus-stack 已安装。运行以下命令检查其状态：
+kubectl --namespace default get pods -l "release=monitoring"
 
-
-
-
-- 11. 状态: 已部署
-- 12. 修订: 1
-- 13. 备注:
-- 14. kube-prometheus-stack 已安装。运行以下命令检查其状态：
-- 15. `kubectl --namespace default get pods -l "release=monitoring"`
-- 16.
-- 17. 访问 https://github.com/prometheus-operator/kube-prometheus 了解如何使用 Operator 创建和配置 Alertmanager 以及 Prometheus 实例的说明。
-- 18. root@k8smaster:~#
+访问 https://github.com/prometheus-operator/kube-prometheus 了解如何使用 Operator 创建和配置 Alertmanager 以及 Prometheus 实例的说明。
+root@k8smaster:~#
+```
 
 我们将会有更多的 Pod，可以查看现在正在运行的 Pod：
 
-- 1. root@k8smaster:~# kubectl get pods -A
+```bash
+root@k8smaster:~# kubectl get pods -A
+```
 
 | 命名空间 | 名称 | 准备绪 | 状态 | 重启 | 龄 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -6751,23 +5541,25 @@ Kubernetes 中的 ingress 控制器是接收所有进入集群流量的组件。
 
 你将像之前一样使用 Helm 相同的方法，如下：
 
-- 1. root@k8smaster:~# helm repo add traefik https://traefik.github.io/charts
-- 2. "traefik" 已添加到你的仓库中
-- 3. root@k8smaster:~# helm repo update
-- 4. 请稍候，我们正在从你的 chart 仓库获取最新版本...
-- 5. ...成功从 "traefik" chart 仓库获取了更新
-- 6. ...成功从 "prometheus-community" chart 仓库获取了更新
-- 7. 更新完成。✼祝 Helm 愉快！✼
-- 8. root@k8smaster:~# helm install traefik/traefik
-- 9. 名称: traefik
-- 10. 上次部署: 2023年11月7日 二17:36:49
-- 11. 命名空间: default
-- 12. 状态: 已部署
-- 13. 修订: 1
-- 14. 测试套件: 无
-- 15. 备注:
-- 16. Traefik Proxy v2.10.5 已成功部署到 default 命名空间！
-- 17. root@k8smaster:~#
+```bash
+root@k8smaster:~# helm repo add traefik https://traefik.github.io/charts
+"traefik" 已添加到你的仓库中
+root@k8smaster:~# helm repo update
+请稍候，我们正在从你的 chart 仓库获取最新版本...
+...成功从 "traefik" chart 仓库获取了更新
+...成功从 "prometheus-community" chart 仓库获取了更新
+更新完成。✼祝 Helm 愉快！✼
+root@k8smaster:~# helm install traefik/traefik
+名称: traefik
+上次部署: 2023年11月7日 二17:36:49
+命名空间: default
+状态: 已部署
+修订: 1
+测试套件: 无
+备注:
+Traefik Proxy v2.10.5 已成功部署到 default 命名空间！
+root@k8smaster:~#
+```
 
 然后，我们可以检查哪些 Pod 正在运行：
 
@@ -6777,37 +5569,40 @@ Kubernetes 中的 ingress 控制器是接收所有进入集群流量的组件。
 
 我们可以通过以下命令安装 MetalLB：
 
-- 1. root@k8master:~# kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.13.12/config/manifests/metallb-native.yaml
-- 2.
-- 3. namespace/metallb-system 创建
-- 4. customresourcedefinition.apiextensions.k8s.io/addresspools.metallb.io 创建
-- 5. customresourcedefinition.apiextensions.k8s.io/bfprofiles.metallb.io 创建
-- 6. customresourcedefinition.apiextensions.k8s.io/bgadvertisements.metallb.io 创建
-- 7. customresourcedefinition.apiextensions.k8s.io/bgpeers.metallb.io 创建
-- 8. customresourcedefinition.apiextensions.k8s.io/communities.metallb.io 创建
-- 9. customresourcedefinition.apiextensions.k8s.io/ipaddresspools.metallb.io 创建
-- 10. customresourcedefinition.apiextensions.k8s.io/l2advertisements.metallb.io 创建
-- 11. serviceaccount/controller 创建
-- 12. serviceaccount/speaker 创建
-- 13. role.rbac.authorization.k8s.io/controller 创建
-- 14. role.rbac.authorization.k8s.io/pod-listener 创建
-- 15. clusterrole.rbac.authorization.k8s.io/metallb-system:controller 创建
-- 16. clusterrole.rbac.authorization.k8s.io/metallb-system:speaker 创建
-- 17. rolebinding.rbac.authorization.k8s.io/controller 创建
-- 18. rolebinding.rbac.authorization.k8s.io/pod-listener 创建
-- 19. clusterrolebinding.rbac.authorization.k8s.io/metallb-system:controller 创建
-- 20. clusterrolebinding.rbac.authorization.k8s.io/metallb-system:speaker 创建
-- 21. configmap-metallb-exclud 创建
-- 22. secret/webhook-server-cert 创建
-- 23. service/webhook-service 创建
-- 24. deployment/controller 创建
-- 25. daemonset/speaker 创建
-- 26. validatingwebhookconfiguration.k8s.io 创建
-- 27. root@k8smaster:~#
+```bash
+root@k8master:~# kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.13.12/config/manifests/metallb-native.yaml
+namespace/metallb-system 创建
+customresourcedefinition.apiextensions.k8s.io/addresspools.metallb.io 创建
+customresourcedefinition.apiextensions.k8s.io/bfprofiles.metallb.io 创建
+customresourcedefinition.apiextensions.k8s.io/bgadvertisements.metallb.io 创建
+customresourcedefinition.apiextensions.k8s.io/bgpeers.metallb.io 创建
+customresourcedefinition.apiextensions.k8s.io/communities.metallb.io 创建
+customresourcedefinition.apiextensions.k8s.io/ipaddresspools.metallb.io 创建
+customresourcedefinition.apiextensions.k8s.io/l2advertisements.metallb.io 创建
+serviceaccount/controller 创建
+serviceaccount/speaker 创建
+role.rbac.authorization.k8s.io/controller 创建
+role.rbac.authorization.k8s.io/pod-listener 创建
+clusterrole.rbac.authorization.k8s.io/metallb-system:controller 创建
+clusterrole.rbac.authorization.k8s.io/metallb-system:speaker 创建
+rolebinding.rbac.authorization.k8s.io/controller 创建
+rolebinding.rbac.authorization.k8s.io/pod-listener 创建
+clusterrolebinding.rbac.authorization.k8s.io/metallb-system:controller 创建
+clusterrolebinding.rbac.authorization.k8s.io/metallb-system:speaker 创建
+configmap-metallb-exclud 创建
+secret/webhook-server-cert 创建
+service/webhook-service 创建
+deployment/controller 创建
+daemonset/speaker 创建
+validatingwebhookconfiguration.k8s.io 创建
+root@k8smaster:~#
+```
 
 让我们看看哪些 Pod 正在运行：
 
-- 1. root@k8smaster:~# 看看是否有 Pod 已经了
+```bash
+root@k8smaster:~# 看看是否有 Pod 已经了
+```
 
 | 命名空间 | 名称 | 准备绪 | 状态 | 重启 | 龄 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -6819,40 +5614,43 @@ Kubernetes 中的 ingress 控制器是接收所有进入集群流量的组件。
 | default | monitoring-prometheus-node-exporter-pz6s5 | 1/1 | Running | 0 | 4m7s |
 | default | prometheus-monitoring-kube-prometheus-prometheus-0 | 2/2 | Running | 0 | 3m56s |
 
-现在，我们有时间设置最后了，我们需要创建一个新的 values.yaml 并添加以下：
+现在，我们有时间设置最后了，我们需要创建一个新的 `values.yaml` 并添加以下：
 
-- 1. root@k8smaster:~# values.yaml
-- 2. loki:
-- 3. common:
-- 4. replication: 1
-- 5. storage:
-- 6. type: 'filesystem'
-- 7. singleBinary:
-- 8. replicas: 1
+```yaml
+loki:
+  common:
+    replication: 1
+  storage:
+    type: 'filesystem'
+  singleBinary:
+    replicas: 1
+```
 
-- 1. root@k8smaster:~# helm repo add grafana https://grafana.github.io/charts
-- 2. "grafana" 已添加到你的仓库中
-- 3. root@k8smaster:~# helm repo update
-- 4. *****************************************************************
-- 5. root@k8smaster:~# helm install --values values.yaml loki-stack
-- 6. 名称: loki
-- 7. 上次部署: 2023年11月7日 二17:36:49
-- 8. 命名空间: default
-- 9. 状态: 已部署
-- 10. 修订: 1
-- 11. 测试套件: 无
-- 12. 备注:
-- 13. *********************************************************************************
-- 14. *********************************************************************************
-- 15. 欢迎来到 Grafana
-- 16. Chart 版本: 5.36.3
-- 17. Loki 版本: 2.9.2
-- 18. *********************************************************************************
-- 19. *********************************************************************************
-- 20. 安装组件:
-- 21. grafana-agent
-- 22. loki
-- 23. root@k8smaster:~#
+```bash
+root@k8smaster:~# helm repo add grafana https://grafana.github.io/charts
+"grafana" 已添加到你的仓库中
+root@k8smaster:~# helm repo update
+*****************************************************************
+root@k8smaster:~# helm install --values values.yaml loki-stack
+名称: loki
+上次部署: 2023年11月7日 二17:36:49
+命名空间: default
+状态: 已部署
+修订: 1
+测试套件: 无
+备注:
+*********************************************************************************
+*********************************************************************************
+欢迎来到 Grafana
+Chart 版本: 5.36.3
+Loki 版本: 2.9.2
+*********************************************************************************
+*********************************************************************************
+安装组件:
+grafana-agent
+loki
+root@k8smaster:~#
+```
 
 ### 在 Kubernetes 中安装 WordPress
 
@@ -6866,45 +5664,76 @@ Kubernetes 中的 ingress 控制器是接收所有进入集群流量的组件。
 
 ### MySQL
 
-让我们开始添加我们的 MySQL 服务器。在 k8s master 上或可以访问 Kubernetes 的计算机上创建一个名为 mysql.yaml 的文件。
+让我们开始添加我们的 MySQL 服务器。在 k8s master 上或可以访问 Kubernetes 的计算机上创建一个名为 `mysql.yaml` 的文件。
 
 然后，添加以下内容：
 
-
-
 ```yaml
-labels:
-  app: mysql-pod
-spec:
-  containers:
-    - image: mysql:5.6
-      imagePullPolicy: Always
-      name: mysql-pod
-      args: ['--default-authentication-plugin=mysql_native_password']
-      env:
-        - name: MYSQL_USER
-        value: mysql
-      - name: MYSQL_PASSWORD
-        value: 'password'
-      - name: MYSQL_ROOT_PASSWORD
-        value: rootpassword
-      - name: MYSQL_DATABASE
-        value: wordpress
-      ports:
-        - containerPort: 3306
-          name: sql
-      resources:
-        requests:
-          cpu: 100m
-      volumeMounts:
-        - name: mysql-persistent-storage
-          mountPath: /var/lib/mysql
-  volumes:
-    - name: mysql-persistent-storage
-      persistentVolumeClaim:
-        claimName: mysql-disk
----
 ```
+
+
+
+`labels:`
+
+  `app: mysql-pod`
+
+`spec:`
+
+  `containers:`
+
+    `- image: mysql:5.6`
+
+      `imagePullPolicy: Always`
+
+      `name: mysql-pod`
+
+      `args: ['--default-authentication-plugin=mysql_native_password']`
+
+      `env:`
+
+        `- name: MYSQL_USER`
+
+        `value: mysql`
+
+      `- name: MYSQL_PASSWORD`
+
+        `value: 'password'`
+
+      `- name: MYSQL_ROOT_PASSWORD`
+
+        `value: rootpassword`
+
+      `- name: MYSQL_DATABASE`
+
+        `value: wordpress`
+
+      `ports:`
+
+        `- containerPort: 3306`
+
+          `name: sql`
+
+      `resources:`
+
+        `requests:`
+
+          `cpu: 100m`
+
+      `volumeMounts:`
+
+        `- name: mysql-persistent-storage`
+
+          `mountPath: /var/lib/mysql`
+
+  `volumes:`
+
+    `- name: mysql-persistent-storage`
+
+      `persistentVolumeClaim:`
+
+        `claimName: mysql-disk`
+
+---
 
 ```yaml
 apiVersion: v1
@@ -6946,7 +5775,7 @@ spec:
 
 让我们使用命令应用我们的清单：
 
-```
+```bash
 kubectl apply -f mysql.yaml
 ```
 
@@ -6967,7 +5796,6 @@ spec:
   resources:
     requests:
       storage: 2Gi
-
 ---
 apiVersion: v1
 kind: Service
@@ -7061,6 +5889,11 @@ spec:
 
 ```bash
 kubectl get service
+```
+
+
+
+```
 NAME        TYPE       CLUSTER-IP   PORT(S)      AGE
 wordpress   NodePort   10.96.x.x    80:31367/TCP   5m
 ```
@@ -7124,17 +5957,17 @@ spec:
           pathType: Prefix
 ```
 
-然后，我们还需要告诉我们的电脑去哪里寻找 WordPress。在你有一个安装了 DNS 服务器的地方，你可以设置 DNS 记录，或者你可以打开你的 /etc/hosts 并添加以下内容：
+然后，我们还需要告诉我们的电脑去哪里寻找 WordPress。在你有一个安装了 DNS 服务器的地方，你可以设置 DNS 记录，或者你可以打开 `/etc/hosts` 并添加以下内容：
 
+```
 192.168.122.133 wordpress.home.lan
+```
 
-你需要更新该 IP 以匹配我们在 metallb 配置中使用的相同 IP。现在打开浏览器，访问 wordpress.home.lan 并安装 WordPress。
+你需要更新该 IP 以匹配我们在 metallb 配置中使用的相同 IP。现在打开浏览器，访问 `wordpress.home.lan` 并安装 WordPress。
 
 ### 使用 Grafana 监控 Kubernetes 集群
 
 让我们创建另一个 Ingress。创建一个名为 `grafan-ingress.yaml` 的新文件并添加以下内容：
-
-
 
 ```yaml
 - name: grafana
@@ -7152,11 +5985,13 @@ spec:
           pathType: Prefix
 ```
 
-然后，更新你的 DNS 服务器或本地 host 文件，将其指向集群的正确 IP 地址。
+然后，更新你的 DNS 服务器或本地 host 文件，将其指向集群的正确 IP 地址：
 
-**192.168.122.133** **192.168.122.133 grafana.home.lan**
+```
+192.168.122.133 grafana.home.lan
+```
 
-现在你就可以通过 *grafana.home.lan* 访问 Grafana 了。
+现在你就可以通过 `grafana.home.lan` 访问 Grafana 了。
 
 现在你可以添加越来越多的服务并对其进行设置，让它们拥有自己的 Ingress。
 
@@ -7170,11 +6005,11 @@ kubectl get svc
 
 | NAME | TYPE | CLUSTER-IP | PORTS | AGE |
 | :--- | :--- | :--- | :--- | :--- |
-| monitoring-kube-prometheus-prometheus | ClusterIP | 10.111.200.8 | 9090/TCP, 8080/TCP | 2d14h |
+| `monitoring-kube-prometheus-prometheus` | ClusterIP | 10.111.200.8 | 9090/TCP, 8080/TCP | 2d14h |
 
 ### Kubernetes Secrets
 
-连接到 Prometheus 时，使用 URL http://monitoring-kube-prometheus-prometheus:9090。
+连接到 Prometheus 时，使用 URL `http://monitoring-kube-prometheus-prometheus:9090`。
 
 Kubernetes 将密码存储在称为 secrets 的对象中。secrets 并没有加密，而是经过 base64 编码的。要获取 secret，我们需要编辑该 secret 并将其从 base64 解码。这是一个良好的实践。
 
@@ -7219,7 +6054,7 @@ Grafana 中 admin 用户的密码是 `prom-operator`。
 
 在操作 Kubernetes 集群时，有几个命令是特别实用的。还有更多，但这些适用于我们现在设置的 Kubernetes 集群，并提供一些关于查找和排除 Kubernetes 问题的知识。
 
-### Pods
+#### Pods
 
 Pods 运行在不同的命名空间中。运行以下命令查找并定位集群中的 Pod。如果我们想更深入地查看某个 Pod，可以使用 `get pods` 来查找：
 
@@ -7237,6 +6072,8 @@ kubectl logs -f NAME_FROM_CLUSTER
 kubectl edit pod NAME_FROM_CLUSTER
 ```
 
+
+
 如你所见，我们正在使用 `get/describe/edit` 命令，你可以在 Kubernetes 的所有资源上运行相同的命令。现在尝试在以下资源上查找并运行这些命令：
 
 ```bash
@@ -7247,7 +6084,7 @@ kubectl get ingress -A
 
 ### 总结
 
-在本章结束时，我们已经完成了使用 Ubuntu 的 Kubernetes 集群设置。我们还安装了运行 Kubernetes 需要的工具，并根据一个主节点和一个工作节点配置了 Kubernetes 集群。为了使用该集群，我们安装了存储，以便集群中的服务可以存储数据。此外，我们设置了负载均衡器，以便我们访问我们的服务。然后，为了监控我们的集群，我们添加了查看集群指标和日志的工具。当工具准备就绪后，我们部署了自己的 MySQL 服务器和 WordPress，并将它们安装到集群中。通过此，我们获得了关于如何设置 Kubernetes 集群以及向集群添加服务的的基础知识。我们还可以创建并部署自己的应用到 Kubernetes 集群中。
+在本章结束时，我们已经完成了使用 Ubuntu 的 Kubernetes 集群设置。我们还安装了运行 Kubernetes 需要的工具，并根据一个主节点和一个工作节点配置了 Kubernetes 集群。为了使用该集群，我们安装了存储，以便集群中的服务可以存储数据。此外，我们设置了负载均衡器，以便我们访问我们的服务。然后，为了监控我们的集群，我们添加了查看集群指标和日志的工具。当工具准备就绪后，我们部署了自己的 MySQL 服务器和 WordPress，并将它们安装到集群中。通过此，我们获得了关于如何设置 Kubernetes 集群以及向集群添加服务的基础知识。我们还可以创建并部署自己的应用到 Kubernetes 集群中。
 
 在下一章中，我们将开始自动化我们的任务，编写 bash 脚本并使用 Ansible 和 Terraform。
 
@@ -7255,17 +6092,17 @@ kubectl get ingress -A
 
 加入书籍的 Discord 空间获取最新更新、优惠、全球科技动态、新发布以及与作者的交流会议：
 
-https://discord.com
+`https://discord.com`
 
 # 第 13 章：任务自动化、CI/CD 流水线和服务部署
 
-### 引言
+## 引言
 
 在本章中，我们将通过将脚本和命令转变为代码来实现执行任务的自动化。与其一个一个地运行命令，不如使用脚本或 Terraform、Ansible 等工具执行命令。我们可以看到脚本的状态。我们将永久控制并验证每次都以相同的方式运行脚本。
 
 通过这种方式，我们可以避免安装或设置过程中的错误和遗漏。
 
-### 结构
+## 结构
 
 在本章中，我们将涵盖以下主题：
 
@@ -7275,7 +6112,7 @@ https://discord.com
 - 构建并推送 Docker 镜像
 - 使用 Terraform 部署 Kubernetes
 
-### 目标
+## 目标
 
 在本章中，我们将首先通过设置一个简单的 Bash 脚本开始，这将作为我们服务时的文档。
 
@@ -7283,28 +6120,35 @@ https://discord.com
 
 通过 Ansible，我们将使用 Docker 运行任务。这有助于验证我们始终拥有相同的环境。
 
-### 基础 Bash
+## 基础 Bash
 
 Bash 脚本是可以运行的命令。还有很多，但对于本节，我们将关注 Docker。我们可以创建一个脚本来安装 Docker。如果发生意外情况，这将为你节省大量时间。这是一个安装 Docker 的简单脚本：
 
 ```bash
 root@k8s:~/deploy# cat install_docker.sh
+
 #!/bin/bash
 
 echo "更新包"
+
 apt-get update
 
 echo "安装依赖"
+
 apt-get install apt-transport-https ca-certificates gnupg y
 
 echo "获取仓库密钥"
+
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-keyring.gpg
 
 echo "设置仓库"
+
 echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 
 echo "安装 Docker"
+
 apt-get update
+
 apt-get install docker-ce docker-ce-cli containerd.io -y
 ```
 
@@ -7315,11 +6159,7 @@ root@k8s:~/deploy# chmod +x install_docker.sh
 root@k8s:~/deploy# ./install_docker.sh
 ```
 
-
-
-
-
-### 使用 Ansible 自动化任务
+## 使用 Ansible 自动化任务
 
 所以，编写 Bash 脚本很容易；但如果我有更多的服务器，并想要在所有服务器上运行命令来安装 Docker 呢？为此，有几个命令可以使用。在本章中，我们将介绍一个名为 Ansible 的工具。
 
@@ -7399,11 +6239,13 @@ root@72f9e0eecd79# cat install_docker.yaml
         become: yes
 ```
 
+
+
 现在我们准备好启动 Ansible 并针对我们的主机运行 playbook，首先从构建镜像开始，然后在我们的 Docker 内部启动 shell：
 
 ```bash
 mattias@hrb:~/projects/ansible$ docker compose build
-[ [+] Building 0.0s (9/9) FINISHED docker:default
+[+] Building 0.0s (9/9) FINISHED docker:default
 => [ansible internal] load build definition from Dockerfile 0.0s
 => transferring dockerfile: 265B 0.0s
 => [ansible internal] load .dockerignore 0.0s
@@ -7420,12 +6262,10 @@ mattias@hrb:~/projects/ansible$ docker compose build
 mattias@hrb:~/projects/ansible$ docker compose run ansible /bin/bash
 ```
 
-
-
-
-
+```text
 - 4. bin:x:2:bin:bin:/usr/sbin/nologin
 5. sys:x:3:sys:dev:/usr/sbin/nologin
+```
 
 你现在可以更新和修改主机容器镜像上的任何内容。通过将其迁移到 Kubernetes，你可以扩展你的部署。
 
@@ -7445,7 +6285,7 @@ mattias@hrb:~/projects/ansible$ docker compose run ansible /bin/bash
 
 在 `index.html` 中，添加以下内容：
 
-```
+```html
 1. <html>
 2. <head>
 3. <title>Home</title>
@@ -7476,7 +6316,7 @@ mattias@hrb:~/projects/ansible$ docker compose run ansible /bin/bash
 
 ### 使用 terraform 部署 Kubernetes
 
-要开始，我们需要两个文件：一个用于初始化 terraform，另一个用于运行命令。为了方便，见在与 Ansible 相同的 Docker 中安装了 Terraform，我们的 Dockerfile 如下：
+要开始，我们需要两个文件：一个用于初始化 terraform，另一个用于运行命令。为了方便，见在与 Ansible 相同的 Docker 中安装了 Terraform，我们的 `Dockerfile` 如下：
 
 ```dockerfile
 FROM ubuntu
@@ -7516,7 +6356,7 @@ FROM ubuntu
 + 1. docker compose run terransible /bin/bash
 ```
 
-使其工作，我们需要一个授予访问的 kubeconfig 文件和一个包含应用的 config 文件。在 Terraform 文件夹中，创建 **terraform.tf** 并添加以下内容：
+使其工作，我们需要一个授予访问的 kubeconfig 文件和一个包含应用的 config 文件。在 Terraform 文件夹中，创建 `terraform.tf` 并添加以下内容：
 
 ```bash
 + 1. root@b2218a9105ac:opt/terraform# cat terraform.tf
@@ -7544,51 +6384,58 @@ FROM ubuntu
 12.   
 13.   selector {
 14.     match_labels = {
-15.       app = "static"
-16.     }
-17.   }
-18.   template {
-19.   metadata {
-20.     labels = {
-21.       app = "static"
-22.     }
-23.   }
-24.   spec {
-25.     container {
-26.       image = "mattiashem/ubuntu-static:$VERSION"
-27.       name = "static"
-28.       limits {
-29.         cpu = "0.5"
-30.         memory = "512Mi"
-31.       }
-32.       requests {
-33.         cpu = "250m"
-34.         memory = "50Mi"
-35.     }
-36.     liveness_probe {
-37.       http_get {
-38.         path = "/"
-39.         port = 80
-40.       }
-41.       initial_delay_seconds = 3
-42.     }
-43.     period_seconds = 3
-44.   }
-45. }root@b2218a9105ac:opt/terraform#
 ```
 
-要访问集群，将 kubeconfig 文件拷贝到名为 config 的 kube 文件夹。在这里我们有集群的 kubeconfig 文件。kubeconfig 文件应该始终安全，并且在运行生产负载时需要更新脚本。
+
+
+```hcl
+app = "static"
+}
+}
+template {
+  metadata {
+    labels = {
+      app = "static"
+    }
+  }
+  spec {
+    container {
+      image = "mattiashem/ubuntu-static:$VERSION"
+      name = "static"
+      limits {
+        cpu = "0.5"
+        memory = "512Mi"
+      }
+      requests {
+        cpu = "250m"
+        memory = "50Mi"
+      }
+    }
+    liveness_probe {
+      http_get {
+        path = "/"
+        port = 80
+      }
+      initial_delay_seconds = 3
+    }
+    period_seconds = 3
+  }
+}
+```
+`root@b2218a9105ac:opt/terraform#`
+
+要访问集群，将 `kubeconfig` 文件拷贝到名为 `config` 的 `kube` 文件夹。在这里我们有集群的 `kubeconfig` 文件。`kubeconfig` 文件应该始终安全，并且在运行生产负载时需要更新脚本。
 
 ```bash
-+ 1. root@924332efbdd:opt/terraform# cat /kube/config
-2. apiVersion: v1
-3. kind: Config
-4. clusters:
+root@924332efbdd:opt/terraform# cat /kube/config
+apiVersion: v1
+kind: Config
+clusters:
 ```
 
 ### Terraform 命令
 
-这是你运行初始化 terraform 的第一个命令。它将设置状态并下载所需的模块。
+这是你运行初始化 `terraform` 的第一个命令。它将设置状态并下载所需的模块。
 
 ```bash
 terraform init
@@ -7596,26 +6443,26 @@ terraform init
 
 ### Terraform plan
 
-plan 命令将验证我们是否连接并显示 Terraform 想要做的更改。这是一个很好的命令，如果你对云环境运行 Terraform，你会运行 plan 来验证你的服务器与代码保持同步。
+`plan` 命令将验证我们是否连接并显示 Terraform 想要做的更改。这是一个很好的命令，如果你对云环境运行 Terraform，你会运行 `plan` 来验证你的服务器与代码保持同步。
 
 ### Terraform apply
 
 这是执行更改的命令。计划：1 个添加，0 个更改，1 个删除。
 
 ```bash
-+ 1. Do you want to perform these actions?
-2. Terraform will perform the actions above.
-3. Only 'yes' will be accepted to approve.
-4. 
-5. Enter a value: yes
-6. 
-+ 7. kubernetes_deployment.static: Destroying... [id=default/static-data]
-+ 8. kubernetes_deployment.static: Destruction complete after 0s
-+ 9. kubernetes_deployment.static: Creating...
-+ 10. kubernetes_deployment.static: Creation complete after 8s [id=default/static-data]
-+ 11.
-+ 12. Apply complete! Resources: 1 added, 0 changed, 1 destroyed.
-+ 13. root@924332fb9d:opt/terraform#
+Do you want to perform these actions?
+Terraform will perform the actions above.
+Only 'yes' will be accepted to approve.
+
+Enter a value: yes
+
+kubernetes_deployment.static: Destroying... [id=default/static-data]
+kubernetes_deployment.static: Destruction complete after 0s
+kubernetes_deployment.static: Creating...
+kubernetes_deployment.static: Creation complete after 8s [id=default/static-data]
+
+Apply complete! Resources: 1 added, 0 changed, 1 destroyed.
+root@924332fb9d:opt/terraform#
 ```
 
 此外，如果我们登录集群，可以看到如下所示运行的 Pod：
@@ -7624,29 +6471,27 @@ plan 命令将验证我们是否连接并显示 Terraform 想要做的更改。�
 core@ubuntu]$ kubectl get pods
 ```
 
+
+
 | NAME | READY | STATUS | RESTARTS | AGE |
 |---|---|---|---|---|
 | static-data-55557f6d4-4pzvr | 1/1 | Running | 0 | 12s |
 | static-data-55557f6d4-cw7kj | 1/1 | Running | 0 | 12s |
 | static-data-55557f6d4-gcz4z | 1/1 | Running | 0 | 12s |
 
-### CI/CD
+## CI/CD
 
-我们现在有了构建 CI/CD 流水线的构建模块。大多数流水线都是组合在一起执行所需操作的脚本。在这里，我们现在可以运行 Ansible 安装包。我们可以运行构建并推送镜像的脚本，并可以使用 terraform 将镜像部署到 Kubernetes 集群。这个模块为我们构建 CI/CD 流水线奠定了基础。
+我们现在有了构建 CI/CD 流水线的构建模块。大多数流水线都是组合在一起执行所需操作的脚本。在这里，我们现在可以运行 `Ansible` 安装包。我们可以运行构建并推送镜像的脚本，并可以使用 `terraform` 将镜像部署到 `Kubernetes` 集群。这个模块为我们构建 CI/CD 流水线奠定了基础。
 
-### 总结
+## 总结
 
-在本章结束时，我们已经学会了通过将命令整合到代码中更有效地记录我们的工作。我们还开始从 SSH 进入服务器并运行命令转变为更现代的通过脚本和使用工具设置服务器的方法。这在我们开始专业处理服务器时非常有帮助。此外，我们研究了 Ansible 工具，它与 Linux 和 Ubuntu 服务器非常契合。然后我们转向测试并运行 Terraform，将我们的 docker 镜像部署到 Kubernetes 集群。我们现在拥有了使用 Ansible 按照我们设置服务器的工具。
+在本章结束时，我们已经学会了通过将命令整合到代码中更有效地记录我们的工作。我们还开始从 SSH 进入服务器并运行命令转变为更现代的通过脚本和使用工具设置服务器的方法。这在我们开始专业处理服务器时非常有帮助。此外，我们研究了 `Ansible` 工具，它与 Linux 和 Ubuntu 服务器非常契合。然后我们转向测试并运行 `Terraform`，将我们的 docker 镜像部署到 `Kubernetes` 集群。我们现在拥有了使用 `Ansible` 按照我们设置服务器的工具。
 
 这是最后一个章节；一旦你读完所有的章节，你将知道如何操作 Ubuntu，从安装桌面和服务器到配置、部署 Kubernetes 集群、安全网络以及部署应用程序。通过此，我们准备好开启 Ubuntu 和 Linux 之之旅了。
 
-### 加入我们书籍的 Discord 空间
+## 加入我们书籍的 Discord 空间
 
 加入书籍的 Discord 工作空间以获取最新更新、优惠、全球科技动态、新发布以及与作者的互动：
-
-
-
-
 
 ## 目录
 
@@ -7909,4 +6754,3 @@ core@ubuntu]$ kubectl get pods
 - WordPress 222
 - WordPress，配置 222, 223
 - WordPress，部署 89-91
-

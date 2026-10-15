@@ -1,29 +1,13 @@
+
 # Kubernetes 教程：容器编排全面指南
-
-
 
 ![](img/9781718502659.jpg)
 
 ![图片](img/9781718502659.jpg)
 
-
-
-
 ![image](img/pub.jpg)
 
-
-
-
-
 26 25 24 23 22 1 2 3 4 5
-
-
-
-
-
-
-
-
 
 本书中的信息按“现状”提供，不提供任何保证。虽然在准备本书时已采取一切预防措施，但作者和 No Starch Press, Inc. 对书中包含的信息直接或间接引起或据称引起的任何损失或损害不对任何个人或实体承担责任。
 
@@ -37,37 +21,26 @@ Alan Hohn 是洛克希德·马丁（Lockheed Martin）的软件策略总。他�
 
 Xander Soldaat 在 1994 年带着一袋软盘、一台 486DX2/66 和一个空闲的周末开启了他的 `Linux` 之旅。他在 IT 基础设施架构、嵌入式系统、编译器和 STEM 课程开发方面拥有深厚的背景。他目前 Red Hat 的 OpenShift 云成功架构师。在空余时间，他喜欢摆弄机器人、电子设备、复古电脑和桌面游戏。
 
-
-
 - 第 15 章：持久化存储
 - 第 16 章：配置与秘密
 - 第 17 章：自定义资源与 Operator
-
-
 - 第 19 章：调优 Kubernetes
 
-
-
-
-
-
-
-
-
-
-
-
 ## Overlay 文件系统
+
 ### 理解容器层
+
 ## 实用的镜像构建建议
+
 ### 集群初始化
+
 ## 将节点加入集群
+
 ### 结语
 
 # 7 将容器部署到 Kubernetes
+
 ### 结语
-
-
 
 在这里，`containerd` 使用了五种命名空间：
 
@@ -80,7 +53,7 @@ root@host01:~# lsns | grep 18088
 18088  net Network (and table)
 ```
 
-最后，我们通过运行 exit 来关闭容器：
+最后，我们通过运行 `exit` 来关闭容器：
 
 ```
 / # exit
@@ -117,9 +90,6 @@ root@host01:~# tar -C /usr/local/bin -xvzf /tmp/crictl.tar.gz
 crictl
 root@host01:~# rm -f /tmp/crictl.tar.gz
 ```
-
-
-
 
 与 `containerd` 不同，`CRI-O` 没有附带任何我们可以用于测试的命令行工具，因此最后一个命令安装了 `crictl`。`crictl` 是 Kubernetes 项目的一部分，旨在测试任何兼容容器运行时接口（CRI）标准的容器运行时。`CRI` 是 Kubernetes 用于与容器运行时通信的编程 API。
 
@@ -213,9 +183,6 @@ PID   USER     TIME  COMMAND
     7 root      0:00 /bin/sleep 36000
 ```
 
-
-
-
 由于这是一个隔离的进程命名空间，它无法看到该命名空间之外的进程列表：
 
 ```
@@ -273,9 +240,9 @@ root@host01:~# Killed
 
 ![image](img/common01.jpg)
 
-我们在第 2 章 中完成的进程隔离工作是非常重要的，因为进程通常无法影响它“看不见”的东西。然而，我们的进程可以看到宿主机的 CPU、内存和网络，因此进程可能会通过使用过多的资源来阻止其他进程正确运行，没有为其他进程留下足够的空间。在本章中，我们将看到如何确保进程只使用其分配的 CPU、内存和网络资源，确保我们能够准确地划分资源。当我们转向容器编排时，这将非常有帮助，因为它将让 Kubernetes 在调度容器时对每个主机上的可用资源具有确定性。
+我们在第 2 章中完成的进程隔离工作是非常重要的，因为进程通常无法影响它“看不见”的东西。然而，我们的进程可以看到宿主机的 CPU、内存和网络，因此进程可能会通过使用过多的资源来阻止其他进程正确运行，没有为其他进程留下足够的空间。在本章中，我们将看到如何确保进程只使用其分配的 CPU、内存和网络资源，确保我们能够准确地划分资源。当我们转向容器编排时，这将非常有帮助，因为它将让 Kubernetes 在调度容器时对每个主机上的可用资源具有确定性。
 
-CPU、内存和网络固然重要，但还有另一个非常重要的共享资源：存储。然而，在像 Kubernetes 这样的容器编排环境中，存储是分布的，需要在整个集群级别应用限制。出于如此，我们对存储的讨论必须等到在第 15 章 引入分布式存储之后。
+CPU、内存和网络固然重要，但还有另一个非常重要的共享资源：存储。然而，在像 Kubernetes 这样的容器编排环境中，存储是分布的，需要在整个集群级别应用限制。出于如此，我们对存储的讨论必须等到在第 15 章引入分布式存储之后。
 
 ### CPU 优先级
 
@@ -287,7 +254,7 @@ CPU、内存和网络固然重要，但还有另一个非常重要的共享资�
 
 **注意**
 
-本书的示例仓库位于 https://github.com/book-of-kubernetes/examples。有关设置的细节，请参见运行示例 第 xx 页。
+本书的示例仓库位于 <https://github.com/book-of-kubernetes/examples>。有关设置的细节，请参见运行示例第 xx 页。
 
 Linux `ps` 命令告诉我们每个进程所应用的特定策略。在 *host01* 上运行此命令：
 
@@ -308,10 +275,9 @@ root@host01:~# ps -e -o pid,class,rtprio,ni,comm
 7967 TS       -   0 ps
 ```
 
-`-o` 参数为 `ps` 自定义的输出字段列表，包括调度策略类 (`CLS`) 以及两个数值优先级字段：`RTPRIO` 和 `NI`。
+`-o` 参数为 `ps` 自定义的输出字段列表，包括调度策略类（`CLS`）以及两个数值优先级字段：`RTPRIO` 和 `NI`。
 
-首先看 CLS 字段，许多进程被列为 `TS`，代表“时间分片”，是默认的非实时策略。这包括我们自己运行的命令（如我们运行运行的 `ps` 命令）以及重要的 Linux 系统进程（如 `systemd`）。然而，我们还看到了具有 `FF`（先进先出）策略和 `RR`（轮轮询）策略的进程。这些是实时进程，因此，它们的优先级高于系统中所有的非实时策略。
-
+首先看 `CLS` 字段，许多进程被列为 `TS`，代表“时间分片”，是默认的非实时策略。这包括我们自己运行的命令（如我们运行运行的 `ps` 命令）以及重要的 Linux 系统进程（如 `systemd`）。然而，我们还看到了具有 `FF`（先进先出）策略和 `RR`（轮轮询）策略的进程。这些是实时进程，因此，它们的优先级高于系统中所有的非实时策略。
 
 
 
@@ -321,11 +287,11 @@ root@host01:~# ps -e -o pid,class,rtprio,ni,comm
 
 Linux 允许我们为启动的进程设置优先级。让我们尝试使用优先级来控制 CPU 使用率。我们将运行一个名为 `stress` 的程序，它设计用于对系统进行压力测试。让我们使用 `CRI-O` 运行容器版本的 `stress`。
 
-与之前一样，我们需要为 `Pod` 和容器定义 YAML 文件，以告诉 `crictl` 运行什么。列表 3-1 所示的 Pod YAML 与 第 2 章中的 BusyBox 示例几乎相同，仅名称有所不同：
+与之前一样，我们需要为 `Pod` 和容器定义 YAML 文件，以告诉 `crictl` 运行什么。列表 3-1 所示的 Pod YAML 与第 2 章中的 BusyBox 示例几乎相同，仅名称有所不同：
 
-*po-nolim.yaml*
+`po-nolim.yaml`
 
-```
+```yaml
 ---
 metadata:
   name: stress
@@ -340,7 +306,7 @@ linux:
 
 与 BusyBox 示例相比，容器 YAML 有更多变化。除了使用了已经安装 `stress` 的不同容器镜像外，我们还需要为 `stress` 提供参数，告诉它压测单个 CPU：
 
-*co-nolim.yaml*
+`co-nolim.yaml`
 
 ```yaml
 ---
@@ -356,14 +322,14 @@ args:
 
 `CRI-O` 已经安装在 `host01` 上，因此只需要几个命令即可启动此容器。首先，我们拉取镜像：
 
-```
+```text
 root@host01:/opt# crictl pull docker.io/bookofkubernetes/stress:stable
 Image is up to date for docker.io/bookofkubernetes/stress...
 ```
 
 然后，我们可以从该镜像运行容器：
 
-```
+```text
 root@host01:~# cd /opt
 root@host01:/opt# PUL_ID=$(crictl runp po-nolim.yaml)
 root@host01:/opt# CUL_ID=$(crictl create $PUL_ID co-nolim.yaml po-nolim.yaml)
@@ -378,7 +344,7 @@ CONTAINER      IMAGE                                    ...
 
 `stress` 程序现在正在我们的系统运行，我们可以看到当前的优先级和 CPU 使用率。我们需要查看当前的 CPU 使用率，因此将使用 `top`：
 
-```
+```text
 root@host01:/opt# top -b -n 1 -p $(pgrep -d , stress)
 top - 18:01:58 up  1:39,  1 user,  load average: 1.01, 0.40, 0.16
 Tasks:   2 total,   1 running,   1 sleeping,   0 stopped,   0 zombie
@@ -391,11 +357,11 @@ MiB Swap:      0.0 total,      0.0 free,      0.0 used.   1643.7 avail Mem
   13435 root  20   0  ...   0.0   0.2  0:00.01 stress-ng
 ```
 
-`pgrep` 命令查找 `stress` 的进程 ID (`PIDs`)；之所以有两个，是因为 `stress` 为我们请求的 CPU 压力测试派生了一个单独进程。这个 CPU 工作进程正在占用一个 CPU 的 100%；幸运的是，我们的虚拟机有两个 CPU，所以它并没有过载。
+`pgrep` 命令查找 `stress` 的进程 ID（`PIDs`）；之所以有两个，是因为 `stress` 为我们请求的 CPU 压力测试派生了一个单独进程。这个 CPU 工作进程正在占用一个 CPU 的 100%；幸运的是，我们的虚拟机有两个 CPU，所以它并没有过载。
 
 我们用默认优先级启动了这个进程，所以如 `NI` 列所示，它的 nice 值为 `0`。如果我们更改优先级会发生什么？让我们使用 `renice` 来查找一下：
 
-```
+```text
 root@host01:/opt# renice -n 19 -p $(pgrep -d ' ' stress)
 13435 (process ID) old priority 0, new priority 19
 13459 (process ID) old priority 0, new priority 19
@@ -405,11 +371,7 @@ root@host01:/opt# renice -n 19 -p $(pgrep -d ' ' stress)
 
 我们已成功更改了进程的优先级。
 
-
-
-
-
-```
+```text
 root@host01:~# ls /sys/fs/cgroup
 blkio        cpuacct  freezer  net_cls           perf_event  systemd
 cpu          cpuset   hugetlb  net_cls,net_prio  pids        unified
@@ -418,7 +380,7 @@ cpu,cpuacct  devices  memory   net_prio          rdma
 
 `/sys/fs/cgroup` 中的每个条目都是一个可以限制的不同资源。如果我们查看这些目录中的一个，就可以看到可以应用哪些控制。例如，对于 `cpu`：
 
-```
+```text
 root@host01:~# cd /sys/fs/cgroup/cpu
 root@host01:/sys/fs/cgroup/cpu# ls -F
 cgroup.clone_children  cpuacct.stat               cpuacct.usage_user
@@ -434,9 +396,9 @@ cpu.stat               cpuacct.usage_sys          user.slice/
 
 ## 使用 cgroups 限制 CPU 配额
 
-为了理解此目录的内容，让我们看看如何使用 cgroups 来限制 stress 容器的 CPU 使用率。我们首先再次检查它的 CPU 使用情况：
+为了理解此目录的内容，让我们看看如何使用 cgroups 来限制 `stress` 容器的 CPU 使用率。我们首先再次检查它的 CPU 使用情况：
 
-```
+```text
 root@host01:/sys/fs/cgroup/cpu# top -b -n 1 -p $(pgrep -d , stress)
 top - 22:40:12 up 12 min,  1 user,  load average: 0.81, 0.35, .21
 Tasks:   2 total,   1 running,   1 sleeping,   0 stopped,   0 zombie
@@ -449,23 +411,23 @@ MiB Swap:      0.0 total,      0.0 free,      0.0 used.   1646.3 avail Mem
   5932 root  20  19 ...  0.0    0.2   0:00.02 stress-ng
 ```
 
-如果你仍然看不到 stress 正在运行，请使用本章前面的介绍命令重新启动它。接下来，让我们探索 stress CPU 进程位于哪个 CPU cgroup。我们可以通过在 `/sys/fs/cgroup/cpu` 层级结构中的某个文件中找到它的 PID 来实现：
+如果你仍然看不到 `stress` 正在运行，请使用本章前面的介绍命令重新启动它。接下来，让我们探索 `stress` CPU 进程位于哪个 CPU cgroup。我们可以通过在 `/sys/fs/cgroup/cpu` 层级结构中的某个文件中找到它的 PID 来实现：
 
-```
+```text
 root@host01:/sys/fs/cgroup/cpu# grep -R $(pgrep stress-ng-cpu)
 system.slice/runc-050c.../cgroup.procs:5964
 system.slice/runc-050c.../tasks:5964
 ```
 
-stress 进程是 `system.slice` 层级结构的一部分，位于由 `runc` 创建的子目录下，`runc` 是 CRI-O 的内部组件之一。这非常方便，因为意味着我们不需要创建自己的 cgroup 并此进程移动其中。这并非偶然；正如我们我们将看到的，CRI-O 支持容器的 CPU 限制，因此它自然需要为其运行的每个容器创建一个 cgroup。事实上，该 cgroup 是以容器 ID 命名的。让我们进入容器 cgroup 的目录：
+`stress` 进程是 `system.slice` 层级结构的一部分，位于由 `runc` 创建的子目录下，`runc` 是 CRI-O 的内部组件之一。这非常方便，因为意味着我们不需要创建自己的 cgroup 并将此进程移动其中。这并非偶然；正如我们将看到的，CRI-O 支持容器的 CPU 限制，因此它自然需要为其运行的每个容器创建一个 cgroup。事实上，该 cgroup 是以容器 ID 命名的。让我们进入容器 cgroup 的目录：
 
-```
+```text
 root@host01:/sys/fs/cgroup/cpu# cd system.slice/runc-${CUL_ID}.scope
 ```
 
 我们使用保存的 `CUL_ID` 变量切换到相应的目录。一旦进入此目录，我们发现它与根目录 `/sys/fs/cgroup/cpu` 具有相同的配置文件：
 
-```
+```text
 root@host01:/sys/fs/...07.scope# ls
 cgroup.clone_children  cpu.uclamp.max        cpuacct.usage_percpu_sys
 cgroup.procs           cpu.uclamp.min        cpuacct.usage_percpu
@@ -477,7 +439,7 @@ cpu.stat               cpuacct.usage_percpu  tasks
 
 `cgroup.procs` 文件列出了该 cgroup 中的进程：
 
-```
+```text
 root@host01:/sys/fs/...07.scope# cat cgroup.procs
 5932
 5964
@@ -485,41 +447,37 @@ root@host01:/sys/fs/...07.scope# cat cgroup.procs
 
 该目录包含许多文件，但我们主要感兴趣的是 `cpu.cfs_period_us`：
 
-```
+```text
 root@host01:/sys/fs/...07.scope# cat cpu.cfs_period_us
 100000
 ```
 
-为了限制容器的 CPU 使用率，我们需要修改 `cpu.cfs_quota_us` 文件。我们将将其设置为 `50000`，这意味着在 100000 微秒的周期内，容器只能使用 50000 微秒的 CPU（即 50% 的限制）：
+为了限制容器的 CPU 使用率，我们需要修改 `cpu.cfs_quota_us` 文件。我们将其设置为 `50000`，这意味着在 100000 微秒的周期内，容器只能使用 50000 微秒的 CPU（即 50% 的限制）：
 
-```
+```text
 root@host01:/sys/fs/...07.scope# echo "50000" > cpu.cfs_quota_us
 ```
 
 现在，再次运行 `top` 命令查看结果：
 
-```
+```text
 root@host01:/sys/fs/cgroup/cpu# top -b -n 1 -p $(pgrep -d , stress)
 ```
 
 为了确认限制已生效，我们可以查看 `cpu.cfs_quota_us` 的值：
 
-```
+```text
 root@host01:/sys/fs/...07.scope# cat cpu.cfs_quota_us
 50000
 ```
 
 `top` 命令显示的 CPU 使用率可能不会正好是 50%，因为 `top` 统计的周期与 cgroup 的周期可能没有对齐。但平均而言，容器在周期内不会超过该配额：
 
-```
+```text
 root@host01:/sys/fs/cgroup/cpu# top -b -n 1 -p $(pgrep -d , stress)
 ```
 
-
-
-
-
-```
+```text
 root@host01:~# cd /opt
 root@host01:/opt# PCL_ID=$(crictl runp po-clim.yaml)
 root@host01:/opt# CCL_ID=$(crictl create $PCL_ID co-clim.yaml po-clim.yaml)
@@ -532,7 +490,7 @@ ea8bccd711b86  docker.io/bookofkubernetes/stress:stable ...
 
 我们的容器立即被限制在 CPU 的 10%：
 
-```
+```text
 root@host01:/opt# top -b -n 1 -p $(pgrep -d , stress)
 top - 17:26:55 up 19 min,  1 user,  load average: 0.27, 0.16, 0.13
 Tasks:   4 total,   2 running,   2 sleeping,   0 stopped,   0 zombie
@@ -549,17 +507,17 @@ MiB Swap:      0.0 total,      0.0 free,      0.0 used.   1640.4 avail Mem
 
 我们可以检查 cgroup 以确认 CRI-O 已将其放在了我们指定的位置，并自动配置了 CPU 配额：
 
-```
+```text
 root@host01:/opt# cd /sys/fs/cgroup/cpu/pod.slice
 root@host01:...pod.slice# cat crio-$CCL_ID.scope/cpu.cfs_quota_us
 10000
 ```
 
-CRI-O 为我们的容器创建了一个新的 cgroup 父级 `pod.slice`，在其内部创建了容器容器的 cgroup，并在我们无需动手的情况下配置了其 CPU 配额。
+CRI-O 为我们的容器创建了一个新的 cgroup 父级 `pod.slice`，在其内部创建了容器的 cgroup，并在我们无需动手的情况下配置了其 CPU 配额。
 
 我们不再需要这个容器了，让我们把它删除吧：
 
-```
+```text
 root@host01:/sys/fs/cgroupcpu/pod.slice# cd
 root@host01:~# crictl stop $CCL_ID
 ...
@@ -577,26 +535,24 @@ Removed sandbox ...
 
 内存是进程的另一项重要资源。如果系统没有足够的内存来满足请求，内存分配将失败。这通常会导致进程行为异常或完全失败。当然，大多数 Linux 系统使用 `swap space`（交换空间）来临时将内存内容写入磁盘，这使得系统内存看起来比实际大，但也会降低系统性能。这是一个足够备受关注的问题，因此 Kubernetes 团队不建议在集群中启用交换。
 
+
+
 此外，即使我们可以使用交换，我们也不希望一个进程占用所有的驻留内存并导致其他进程变得非常慢。因此，我们需要限制进程的内存使用情况，以便它们相互协作。我们还需要一个清晰的内存使用最大值，以便 Kubernetes 在将新容器调度到主机之前，能够可靠地确保该主机有足够的可用内存。
 
-Linux 系统与其他 Unix 变体一样，传统上必须处理共享稀缺资源的多个用户。出于原因，内核支持对系统资源的限制，包括 CPU、内存、子进程数量和打开的文件数量。我们可以使用 `ulimit` 命令从命令行设置这些限制。例如，一种限制类型是对“虚拟内存”的限制。这不仅包括进程在驻留内存中的 RAM 量，还包括它使用的任何交换空间。这里有一个 `ulimit` 命令限制虚拟内存的示例：
+Linux 系统与其他 Unix 变体一样，传统上必须处理共享稀缺资源的多个用户。出于原因，内核支持对系统资源的限制，包括 CPU、内存、子进程数量和打开的文件数量。我们可以使用`ulimit`命令从命令行设置这些限制。例如，一种限制类型是对“虚拟内存”的限制。这不仅包括进程在驻留内存中的 RAM 量，还包括它使用的任何交换空间。这里有一个`ulimit`命令限制虚拟内存的示例：
 
 ```
 root@host01:~# ulimit -v 262144
 ```
 
-`-v` 选项指定虚拟内存限制。该参数单位是字节，因此对于从此 shell 会话开始启动的每个额外进程，设置了 256MiB 的虚拟内存限制。设置虚拟内存限制是一个总限制；它允许我们确保进程无法通过交换空间来绕过限制。我们可以通过将一些数据拉入内存来验证限制已生效：
+`-v`选项指定虚拟内存限制。该参数单位是字节，因此对于从此 shell 会话开始启动的每个额外进程，设置了 256MiB 的虚拟内存限制。设置虚拟内存限制是一个总限制；它允许我们确保进程无法通过交换空间来绕过限制。我们可以通过将一些数据拉入内存来验证限制已生效：
 
 ```
 root@host01:~# cat /dev/zero | head -c 500m | tail
 tail: memory exhausted
 ```
 
-此命令从 `/dev/zero` 读取并尝试在内存中保留找到的前 500MiB 零。然而，在某个点，当 `tail` 命令尝试分配更多空间来存放它从 `head` 获取的零时，它会从 head 获取。
-
-
-
-
+此命令从`/dev/zero`读取并尝试在内存中保留找到的前 500MiB 零。然而，在某个点，当`tail`命令尝试分配更多空间来存放它从`head`获取的零时，它会从 head 获取。
 
 ```
 root@host01:/opt# crictl logs $CML_ID
@@ -613,20 +569,20 @@ stress-ng: debug: [11] stress-ng-vm: assuming killed by OOM killer, restarting a
 
 Stress 正在报告其内存分配过程正持续被“内存溢出”（out of memory）杀死。
 
-我们可以看到内核报告，`oom_reaper` 确实是进程被杀的原因：
+我们可以看到内核报告，`oom_reaper`确实是进程被杀的原因：
 
 ```
 root@host01:/opt# dmesg | grep -i oom_reaper | tail -n 1
 [  696.651056] oom_reaper: reaped process 8756 (stress-ng-vm)...
 ```
 
-OOM killer 是 Linux 在整个系统内存不足且需要杀死一个或多个进程以保护系统时所使用的相同功能。在这种情况下，它向进程发送 `SIGKILL` 以确保 `cgroup` 保持在它的内存限制之内。`SIGKILL` 是一个给进程的消息，告诉它应该立即终止而不进行任何清理工作。
+OOM killer 是 Linux 在整个系统内存不足且需要杀死一个或多个进程以保护系统时所使用的相同功能。在这种情况下，它向进程发送`SIGKILL`以确保`cgroup`保持在它的内存限制之内。`SIGKILL`是一个给进程的消息，告诉它应该立即终止而不进行任何清理工作。
 
-#### 为什么要使用 OOM KILLER？
+### 为什么要使用 OOM KILLER？
 
 当我们使用普通限制来控制内存时，尝试超过限制会导致内存分配失败，但内核并没有使用 OOM killer 来杀死我们的进程。为什么会有区别？答案是这是容器的本质。当我们研究使用容器化微服务构建可靠系统时，会发现容器本质上应该是快速启动和快速扩展的。这意味着我们应用程序中的每个单独容器刻意上并不非常重要。这进一步意味着，其中一个容器可能被意外杀死的想法并不真正需要担心。再加上由于不检查内存分配错误是最常见的 Bug 之一，因此直接杀死进程被认为更安全。
 
-尽管如此，值得注意的是，可以关闭 `cgroup` 的 OOM killer。然而，其效果并不是让内存分配失败，而是仅仅挂起进程，直到组中的其他进程释放内存。这实际上更糟糕，因为现在我们有一个进程没有被正式杀死，但也没有做任何有用的事情。
+尽管如此，值得注意的是，可以关闭`cgroup`的 OOM killer。然而，其效果并不是让内存分配失败，而是仅仅挂起进程，直到组中的其他进程释放内存。这实际上更糟糕，因为现在我们有一个进程没有被正式杀死，但也没有做任何有用的事情。
 
 在继续之前，让我们让这个持续失败的压力测试容器解脱吧：
 
@@ -644,17 +600,17 @@ root@host01:/opt# cd
 
 停止并移除容器和 Pod 可以防止压力测试容器通过不断尝试重启内存分配过程来浪费 CPU。
 
-#### 网络带宽限制
+### 网络带宽限制
 
 在本章中，我们从易于限制的资源转向了更难限制的资源。我们从 CPU 开始，内核完全负责哪个进程获得 CPU 时间以及在被抢占前获得多少时间。然后我们查看了内存，内核没有能力强制进程放弃内存，但至少内核可以控制内存分配是否成功，或者它可以杀死请求过多内存的进程。
 
 现在我们转向了网络带宽，由于两个重要原因，对带宽的控制变得更加困难。首先，网络设备并不像 CPU 或内存那样真的可以被“累加”，因此我们需要在每个网络设备的层级限制使用量。其次，我们的系统无法真正控制通过网络发送它的内容；我们只能完全控制*出口*（egress）带宽，即发送到给定网络设备的流量。
 
-#### 适当的网络管理
+### 适当的网络管理
 
-为了拥有一个完全可靠的集群，仅仅控制出口流量显然是不够的。下载文件的进程将像上传大量数据的进程一样耗尽可用带宽。然而，我们确实无法控制通过特定网络接口进入主主机的内容，至少在主机层面无法。如果我们真的想管理网络带宽，我们需要在交换机或路由器上处理这类事情。例如，将物理网络划分为虚拟局域网（VLAN）是非常常见的。一个 `VLAN` 可能是一个用于审计、日志以及管理员确保能够登录的管理网络。我们可能还会为重要的容器流量预留另一个 `VLAN`，或者使用流量整形（traffic shaping）来确保重要的数据包通过。只要我们在交换机上执行这种配置，我们通常就可以允许剩余带宽为“尽力而为”（best effort）。
+为了拥有一个完全可靠的集群，仅仅控制出口流量显然是不够的。下载文件的进程将像上传大量数据的进程一样耗尽可用带宽。然而，我们确实无法控制通过特定网络接口进入主主机的内容，至少在主机层面无法。如果我们真的想管理网络带宽，我们需要在交换机或路由器上处理这类事情。例如，将物理网络划分为虚拟局域网（VLAN）是非常常见的。一个`VLAN`可能是一个用于审计、日志以及管理员确保能够登录的管理网络。我们可能还会为重要的容器流量预留另一个`VLAN`，或者使用流量整形（traffic shaping）来确保重要的数据包通过。只要我们在交换机上执行这种配置，我们通常就可以允许剩余带宽为“尽力而为”（best effort）。
 
-虽然 Linux 确实为网络接口提供了一些 `cgroup` 能力，但只能帮助我们对网络流量进行优先级排序和分类。由于此原因，我们将不再使用 `cgroups` 控制出口流量，而是直接配置 Linux 内核的*流量控制*（traffic control）能力。我们将测试流量控制功能，使用 `iper3` 测试流量，并应用限制。在本章的示例中，`host02` 和 `192.168.1.10` 将被使用。首先让我们看看在没有限制的情况下，可以获得的带宽：
+虽然 Linux 确实为网络接口提供了一些`cgroup`能力，但只能帮助我们对网络流量进行优先级排序和分类。由于此原因，我们将不再使用`cgroups`控制出口流量，而是直接配置 Linux 内核的*流量控制*（traffic control）能力。我们将测试流量控制功能，使用`iper3`测试流量，并应用限制。在本章的示例中，`host02`和`192.168.1.10`将被使用。首先让我们看看在没有限制的情况下，可以获得的带宽：
 
 ```
 root@host01:~# iperf3 -c 192.168.12
@@ -668,15 +624,16 @@ Connecting to host 192.168.12, port 5201
 
 正如预期的，我们现在在该接口上被限制在千兆速率。
 
-现在我们有了基准，可以使用 `tc` 设置出口配额。根据你的带宽，你可能希望选择一个合适的配额是例如：
+现在我们有了基准，可以使用`tc`设置出口配额。根据你的带宽，你可能希望选择一个合适的配额是例如：
 
 ```
 root@host01:~# IFACE=$(ip -o addr | grep 192.168.1.11 | awk '{print $2}')
 root@host01:~# tc qdisc add dev $IFACE root tbf rate 100mbit burst 256k latency 400ms
 ```
-接口名称在不同系统上可能不同，因此我们使用 `ip` 来识别要控制的接口。然后，我们使用 `tc` 来实际应用限制。命令中的 `tbf` 代表*令牌桶过滤器*（token bucket filter）。使用令牌桶过滤器，每个数据包消耗令牌。令牌桶随时间填充令牌，但如果在任何点令牌桶为空，数据包将排队。通过控制令牌桶的大小和填充速率，内核可以很容易地实施带宽限制。
 
-现在我们已经对该接口应用了限制，让我们通过运行完全相同的 `iper3` 命令来观察效果：
+接口名称在不同系统上可能不同，因此我们使用`ip`来识别要控制的接口。然后，我们使用`tc`来实际应用限制。命令中的`tbf`代表*令牌桶过滤器*（token bucket filter）。使用令牌桶过滤器，每个数据包消耗令牌。令牌桶随时间填充令牌，但如果在任何点令牌桶为空，数据包将排队。通过控制令牌桶的大小和填充速率，内核可以很容易地实施带宽限制。
+
+现在我们已经对该接口应用了限制，让我们通过运行完全相同的`iper3`命令来观察效果：
 
 ```
 root@host01:~# iperf3 -c 192.168.1.12
@@ -685,16 +642,14 @@ Connecting to host 192.168.1.12, port 5201
 ...
 [ ID] Interval           Transfer     Bitrate
 [  5]   0.00-10.00  sec  114 MBytes  95.7 Mbits/sec    0             sender
-[  5]   0.00-10.01  sec  113 MBytes  94.5 Mbits/sec                  receiver
+[  5]   0.00-10.00  sec  113 MBytes  94.5 Mbits/sec                  receiver
 ```
+
 正如预期的，我们现在在该接口上被限制在 100Mbps。
 
 当然，在这种情况下，我们限制了系统上该网络接口的所有人的可用带宽。为了正确使用这种能力来控制带宽使用，我们需要更精确地针对限制。然而，为了做到这一点，我们需要将进程隔离到它自己的网络接口中，这是下一章的主题。
 
 ### 结语
-
-
-
 
 确保进程不会对系统上的其他进程引起问题，包括确保它公平地共享系统资源，如 CPU、内存和网络带宽。在本章中，我们查看了 Linux 如何通过提供控制组（`cgroups`）来管理 CPU 和内存限制，以及用于管理网络接口的流量控制能力。当我们创建一个 Kubernetes 集群并向其部署容器时，我们将看到 Kubernetes 如何利用这些底层的 Linux 内核特性来确保容器被调度到具有足够资源的宿主机上，并确保容器在这些宿主机上表现良好。
 
@@ -718,9 +673,9 @@ Connecting to host 192.168.1.12, port 5201
 
 **注意**
 
-本书的示例仓库位于 [`github.com/book-of-kubernetes/examples`](https://github.com/book-of-kubernetes/examples)。请参阅“Running Examples”（运行示例）部分，位于第 xx 页以获取设置详情。
+本书的示例仓库位于[`github.com/book-of-kubernetes/examples`](https://github.com/book-of-kubernetes/examples)。请参阅“Running Examples”（运行示例）部分，位于第 xx 页以获取设置详情。
 
-我们将运行两个 NGINX Web 服务器实例；每个实例都将监听 80 端口。像之前一样，我们将使用 CRI-O 和 `crictl`，但我们将使用脚本来减少输入量：
+我们将运行两个 NGINX Web 服务器实例；每个实例都将监听 80 端口。像之前一样，我们将使用 CRI-O 和`crictl`，但我们将使用脚本来减少输入量：
 
 ```
 root@host01:~# cd /opt
@@ -728,7 +683,7 @@ root@host01:/opt# source nginx.sh
 ...
 ```
 
-`nginx.sh` 之前的 `source` 命令很重要；它确保脚本以某种方式运行，使其设置的环境变量在我们的 shell 中可供后续命令使用。`nginx.sh` 内部包含了我们在之前的章节中使用过的 `crictl run`、`crictl create` 和 `crictl start` 命令。YAML 文件与我们之前看到的示例也非常相似；唯一的在于是我们使用了一个安装了 NGINX 的容器镜像。
+`nginx.sh`之前的`source`命令很重要；它确保脚本以某种方式运行，使其设置的环境变量在我们的 shell 中可供后续命令使用。`nginx.sh`内部包含了我们在之前的章节中使用过的`crictl run`、`crictl create`和`crictl start`命令。YAML 文件与我们之前看到的示例也非常相似；唯一的在于是我们使用了一个安装了 NGINX 的容器镜像。
 
 让我们验证一下是否已经运行了两个 NGINX 服务器：
 
@@ -750,7 +705,7 @@ root@host01:/opt# crictl exec $N2C_ID cat /proc/net/tcp
    0: 00000000:0050 ...
 ```
 
-我们通过打印 `/proc/net/tcp` 来查看打开的端口，因为我们需要在容器内部运行此命令。`/proc/net/tcp` 显示的 `00000000:0050` 十六进制对应十进制的 `80`。如果这些进程运行在同一个系统上，它们都无法监听 `80`，但在这种情况下，NGINX 拥有独立的接口。为了进一步探索这一点，让我们启动一个新的 BusyBox 容器：
+我们通过打印`/proc/net/tcp`来查看打开的端口，因为我们需要在容器内部运行此命令。`/proc/net/tcp`显示的`00000000:0050`十六进制对应十进制的`80`。如果这些进程运行在同一个系统上，它们都无法监听`80`，但在这种情况下，NGINX 拥有独立的接口。为了进一步探索这一点，让我们启动一个新的 BusyBox 容器：
 
 ```
 root@host01:/opt# source busybox.sh
@@ -792,13 +747,11 @@ root@host01:/opt# crictl exec -ti $B1C_ID /bin/sh
         valid_lft forever preferred_ft forever
 ```
 
-*列表 4-1: BusyBox 网络*
-
-忽略标准的环回设备，我们看到一个地址为 10.85.0.4 的网络设备。这与主机的 IP 地址 192.168.61.11 完全不符；它处于完全不同的网络中。由于我们的容器在独立的网络上，我们可能预计无法从容器内部 ping 通宿主机系统，但它是行的，正如列表 4-2 所示。
 
 
+*列表 4-1：BusyBox 网络*
 
-
+忽略标准的环回设备，我们看到一个地址为 `10.85.0.4` 的网络设备。这与主机的 IP 地址 `192.168.61.11` 完全不符；它处于完全不同的网络中。由于我们的容器在独立的网络上，我们可能预计无法从容器内部 ping 通宿主机系统，但它是行的，正如列表 4-2 所示。
 
 ```
 / # ping -c 1 192.168.61.11
@@ -810,7 +763,7 @@ PING 192.168.61.11 (192.168.61.11): 56 data bytes
 round-trip min/avg/max = 7.471/7.471/7.471 ms
 ```
 
-*列表 4-2: BusyBox ping 测试*
+*列表 4-2：BusyBox ping 测试*
 
 为了让流量从我们的容器传输到主机网络，路由表中必须有一个条目来实现这一目标。如列表 4-3 所示，我们可以使用 `ip` 命令来验证这一点。
 
@@ -820,7 +773,7 @@ default via 10.85.0.1 dev eth0
 10.85.0.0/16 dev eth0 scope link  src 10.85.0.4
 ```
 
-*列表 4-3: BusyBox 路由*
+*列表 4-3：BusyBox 路由*
 
 如所预期，存在一个默认路由。当我们发送 ping 时，我们的 BusyBox 容器连接到 `10.85.0.1`，该地址有能力继续发送 ping 直到到达 `192.168.61.11`。
 
@@ -832,9 +785,9 @@ default via 10.85.0.1 dev eth0
 
 从容器内部看到的网络视图显示了为什么我们的两个 NGINX 服务器都能监听 `80` 端口。如之前提到的，特定接口的端口只能被一个进程监听，但当然，如果每个 NGINX 服务器都有一个独立的网络接口，就不会产生冲突。
 
-### 网络命名空间 (Network Namespaces)
+### 网络命名空间（Network Namespaces）
 
-CRI-O 使用 Linux 网络命名空间来创建这种隔离。我们在第 2 章 中简要探讨过网络命名空间；在本章中，我们将更详细地查看它们。
+CRI-O 使用 Linux 网络命名空间来创建这种隔离。我们在第 2 章中简要探讨过网络命名空间；在本章中，我们将更详细地查看它们。
 
 首先，让我们使用 `lsns` 命令列出 CRI-O 为我们的容器创建的网络命名空间：
 
@@ -878,10 +831,6 @@ root@host01:/opt# echo $NETNS
 7c185da0-04e2-4321-b2eb-da18ceb5fcf6
 ```
 
-
-
-
-
 ```
 root@host01:/opt# ip netns list
 myns
@@ -911,7 +860,7 @@ root@host01:/opt# ip netns exec myns ip addr
        valid_lft forever preferred_lft forever
 ```
 
-回环接口现在已启用（up），并且具有典型的 IP 地址 127.0.0.1。在这个网络命名空间中，基础的回环 ping 现在可以正常工作了：
+回环接口现在已启用（up），并且具有典型的 IP 地址 `127.0.0.1`。在这个网络命名空间中，基础的回环 ping 现在可以正常工作了：
 
 ```
 root@host01:/opt# ip netns exec myns ping -c 1 127.0.0.1
@@ -936,9 +885,9 @@ root@host01:/opt# ip link add myveth-host type veth \
 
 这条命令执行了三件事：
 
-1. 创建了一个名为 `myveth-host` 的 `veth` 设备
-2. 创建了一个名为 `myveth-myns` 的 `veth` 设备
-3. 将设备 `myveth-myns` 放入名为 `myns` 的网络命名空间
+1. 创建了一个名为 `myveth-host` 的 `veth` 设备。
+2. 创建了一个名为 `myveth-myns` 的 `veth` 设备。
+3. 将设备 `myveth-myns` 放入名为 `myns` 的网络命名空间。
 
 `veth pair` 的主机端出现在主机的普通网络设备列表中：
 
@@ -1016,7 +965,7 @@ root@host01:/opt# ping -c 1 10.85.0.254
 
 与此同时，当我们在列表 4-2 的 `BusyBox` 容器中运行 ping 测试时，我们能够顺利地 ping 通主机。显然，当 `CRI-O` 创建我们的容器时，还有更多的配置。让我们在下一节中探索这些内容。
 
-### 桥接接口 (Bridge Interfaces)
+### 桥接接口（Bridge Interfaces）
 
 `veth pair` 的主机端目前没有连接到任何地方，因此我们的网络命名空间还无法与外界通信并不意外。为了解决这个问题，让我们看看 `CRI-O` 创建的一个 `veth` 对：
 
@@ -1030,11 +979,13 @@ root@host01:/opt# ip addr
 ...
 ```
 
-与我们创建的接口不同，这个接口指定了 `master cni0`，显示它属于一个`网络桥接器`(network bridge)。`网络桥接器`是为了连接多个接口。你可以把它看作是一个以太网机，因为它根据接口的介质访问（MAC）地址在不同的网络接口之间路由流量。
+与我们创建的接口不同，这个接口指定了 `master cni0`，显示它属于一个`网络桥接器`（network bridge）。`网络桥接器`是为了连接多个接口。你可以把它看作是一个以太网机，因为它根据接口的介质访问（MAC）地址在不同的网络接口之间路由流量。
 
 在主机的网络设备列表中可以看到桥接器 `cni0`：
 
-```
+
+
+```bash
 root@host01:/opt# ip addr
 ...
 4: cni0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue ...
@@ -1046,16 +997,13 @@ root@host01:/opt# ip addr
 ...
 ```
 
-
-
-
 网桥比典型的以太网交换机智能一点，因为它提供了一些防火墙和路由功能。它还有一个 IP 地址 `10.85.0.1`。由于这个 IP 地址与我们在列表 4-3 中看到的 BusyBox 容器的默认路由相同，因此我们已经开始解开 BusyBox 容器如何能够与自身网络之外的主机通信的谜团。
 
-#### 向网桥添加接口
+## 向网桥添加接口
 
 为了检查网桥并向其添加设备，我们将使用 `brctl` 命令。让我们先检查一下网桥：
 
-```
+```bash
 root@host01:/opt# brctl show
 bridge name     bridge id               STP enabled     interfaces
 cni0            8000.8e0c1c7d9475       no              veth062abfa6
@@ -1065,7 +1013,7 @@ cni0            8000.8e0c1c7d9475       no              veth062abfa6
 
 网桥 `cni0` 上有三个接口，分别对应我们运行的三个容器（两个 NGINX 和一个 BusyBox）的 `veth` 链路的主机端。让我们利用这个现有的网桥为我们创建的命名空间设置网络连接：
 
-```
+```bash
 root@host01:/opt# brctl addif cni0 myveth-host
 root@host01:/opt# brctl show
 bridge name     bridge id               STP enabled     interfaces
@@ -1077,8 +1025,8 @@ cni0            8000.8e0c1c7d9475       no              myveth-host
 
 我们 `veth` 链路的主机端现在已连接到网桥，这意味着我们现在可以从主机 ping 命名空间：
 
-```
- root@host01:/opt# ping -c 1 10.85.0.254
+```bash
+root@host01:/opt# ping -c 1 10.85.0.254
    PING 10.85.0.254 (10.85.0.254) 56(84) bytes of data.
    64 bytes from 10.85.0.254: icmp_seq=1 ttl=64 time=0.194 ms
 
@@ -1089,18 +1037,18 @@ cni0            8000.8e0c1c7d9475       no              myveth-host
 
 接收到数据包 ➊ 事实说明我们建立了一个可以工作的连接。我们应该对它的成功感到很高兴，但如果我们想真正理解这一点，就不能满足于说我们可以“从主机” ping 这个接口。我们需要更具体地说明流量究竟是如何流动的。
 
-#### 追踪流量
+## 追踪流量
 
 让我们实际追踪这些流量，看看在运行 `ping` 命令时发生了什么。我们将使用 `tcpdump` 来打印流量。首先，让我们在后台启动一个 ping 命令来创建一些待追踪的流量：
 
-```
+```bash
 root@host01:/opt# ping 10.85.0.254 >/dev/null 2>&1 &
 ...
 ```
 
 我们将输出重定向到 `/dev/null`，这样就不会弄乱我们的会话。现在，让我们使用 `tcpdump` 来查看流量：
 
-```
+```bash
 root@host01:/opt# timeout 1s tcpdump -i any -n icmp
 tcpdump: verbose output suppressed, use -v or -vv for full protocol decode
 listening on any, link-type LINUX_SLL (Linux cooked v1), ...
@@ -1119,7 +1067,7 @@ root@host01:/opt# killall ping
 
 输出显示 `ping` 源自网桥接口，其 IP 地址为 `10.85.0.1`。这是由于主机的路由表引起的：
 
-```
+```bash
 root@host01:/opt# ip route
 ...
 10.85.0.0/16 dev cni0 proto kernel scope link src 10.85.0.1 
@@ -1128,19 +1076,19 @@ root@host01:/opt# ip route
 
 当 `CRI-O` 创建网桥并配置其 IP 地址时，它还设置了路由，使得发往 `10.85.0.0/16`（即从 `10.85.0.0` 到 `10.85.255.255` 的所有流量）的流量使用 `cni0`。这些信息足够 `ping` 命令知道将包发送哪里，网桥处理剩余部分。`ping` 源自 `10.85.0.1` 网桥接口而不是 `192.168.61.11` 主机接口实际上产生了巨大差异，因为如果我们从命名空间内部 ping 就能看到这一点：
 
-```
+```bash
 root@host01:/opt# ip netns exec myns ping -c 1 192.168.61.11
 ```
 
 这里的问题是，命名空间中的接口不知道如何到达主机。网桥是可用并可以将流量路由到主机，但我们还没有配置必要的路由来使用它。让我们这样做：
 
-```
+```bash
 root@host01:/opt# ip netns exec myns route add default via 10.85.0.1
 ```
 
 现在 ping 可以了：
 
-```
+```bash
 root@host01:/opt# ip netns exec myns ping -c 1 192.168.61.11
 PING 192.168.61.11 (192.168.61.11) 56(84) bytes of data.
 64 bytes from 192.168.61.11: icmp_seq=1 ttl=64 time=0.097 ms
@@ -1152,7 +1100,7 @@ rtt min/avg/max/mdev = 0.097/0.097/0.097/0.000 ms
 
 这说明了调试网络时需要记住的一个重要规则：很容易对网络流量的发送和接收得出结论。通常需要追踪来查看流量真实状况。
 
-#### 主机上的 IP 地址
+## 主机上的 IP 地址
 
 这种方法并不是主机到命名空间的唯一方法。我们也可以直接为 `veth` 链路端分配 IP 地址。尽管这样可以启用主机到命名空间的通信，但它无法提供多个命名空间之间的通信方式。像 `CRI-O` 这样使用网桥接口可以实现主机上所有容器的互连，使它们都在同一个网络上。
 
@@ -1160,7 +1108,7 @@ rtt min/avg/max/mdev = 0.097/0.097/0.097/0.000 ms
 
 通过最后一次更改，我们似乎匹配了容器的网络配置，但仍然缺少与 `host01` 外部网络通信的能力。我们可以通过从命名空间 ping `host02` 来演示，它与 `host01` 在同一个内部网络，并且拥有 IP 地址 `192.168.61.12`。如果我们从 BusyBox 容器 ping，它是通的：
 
-```
+```bash
 root@host01:/opt# crictl exec $B1C_ID ping -c 1 192.168.61.12
 PING 192.168.61.12 (192.168.61.12): 56 data bytes
 64 bytes from 192.168.61.12: seq=0 ttl=63 time=0.816 ms
@@ -1172,7 +1120,7 @@ round-trip min/avg/max = 0.816/0.816/0.816 ms
 
 ping 输出报告接收了一个数据包。然而，如果我们使用创建的命名空间尝试相同的命令，它是不通的：
 
-```
+```bash
 root@host01:/opt# ip netns exec myns ping -c 1 192.168.61.12
 PING 192.168.61.12 (192.168.61.12) 56(84) bytes of data.
 
@@ -1184,23 +1132,19 @@ PING 192.168.61.12 (192.168.61.12) 56(84) bytes of data.
 
 实际上，我们应该对 BusyBox 容器的 ping 成功感到惊讶。毕竟，`host02` 对 BusyBox 容器、`cni0` 网桥接口或容器所在的 `10.85.0.0/16` 网络一无所知。`host02` 如何可能与我们的 BusyBox 容器交换 ping？为了理解这一点，我们需要查看网络伪装。
 
-#### 伪装（Masquerade）
-
-
-
-
+## 伪装（Masquerade）
 
 `Masquerade`（伪装），也称为网络地址转换（NAT），在网络中每天都在使用。例如，大多数家庭接入连接只提供一个可以从互联网访问的单一 IP 地址，但家庭网络中的许多设备都需要访问互联网。路由器的任务就是让该网络的所有流量看起来都源自同一个 IP 地址。它是通过重写出站流量的 `source` IP 地址并跟踪所有出站连接来实现的，这样它就可以重写任何响应包的 `destination` IP 地址。
 
 ### 注意
 
-我们在这里讨论的 NAT 类型在技术上被称为源 NAT (`SNAT`)。不过，不要纠结于这个名称；为了使其正常工作，任何响应包的目的地址都必须被重写。在这种情况下，“源”（Source）一词意味着在发起新连接时，重写的是源地址。*
+我们在这里讨论的 NAT 类型在技术上被称为源 NAT（`SNAT`）。不过，不要纠结于这个名称；为了使其正常工作，任何响应包的目的地址都必须被重写。在这种情况下，“源”（Source）一词意味着在发起新连接时，重写的是源地址。
 
 “伪装”听起来正是我们将运行在 `10.85.0.0/16` 网络中的容器连接到主机网络 `192.168.61.0/24` 所需的，而事实上，它正是这样工作的。当我们从 `BusyBox` 容器发送 ping 时，源 IP 地址被重写，使得 ping 看起来来自 `host01` 的 IP `192.168.61.11`。当 `host02` 响应时，它将响应发送到 `192.168.61.11`，但目的地址被重写，使其实际上被发送到了 `BusyBox` 容器。
 
 让我们全程追踪 ping 流量来演示：
 
-```
+```bash
 root@host01:/opt# crictl exec $B1C_ID ping 192.168.61.12 >/dev/null 2>&1 &
 [1] 6335
 root@host01:/opt# timeout 1s tcpdump -i any -n icmp
@@ -1223,7 +1167,7 @@ root@host01:/opt# killall ping
 
 为了完成我们网络命名空间的设置，我们需要一个类似的规则来伪装来自 `10.85.0.254` 的流量。我们可以先通过使用 `iptables` 来查看 CRI-O 在配置容器时创建的规则：
 
-```
+```bash
 root@host01:/opt# iptables -t nat -n -L
 ...
 Chain POSTROUTING (policy ACCEPT)
@@ -1239,28 +1183,27 @@ MASQUERADE all  --  anywhere             !224.0.0.0/4 ...
 ...
 ```
 
-伪装在连接发起时开始；在这种情况下，当流量源地址位于 `10.85.0.0/16` 网络时。由于此原因，使用了`POSTROUTING`链，因为它可以看到所有的出站流量。`POSTROUTING`链中为每个容器都有规则；每个规则都会调用对应容器的 CNI 链。
+伪装在连接发起时开始；在这种情况下，当流量源地址位于 `10.85.0.0/16` 网络时。由于此原因，使用了 `POSTROUTING` 链，因为它可以看到所有的出站流量。`POSTROUTING` 链中为每个容器都有规则；每个规则都会调用对应容器的 CNI 链。
 
 为了简洁起见，这里显示了三个 CNI 链中的一个。另外两个是相同的。CNI 链首先对所有本地于容器网络的流量执行 `ACCEPT`，这样这些流量就不会被伪装。然后它为所有流量设置伪装（排除 `224.0.0.0/4`，这是多组播流量，因为无法正确路由而无法进行伪装）。
 
-
-
-
-要运行一个进程，我们需要存储。容器化软件的巨大优势之一是能够将应用程序及其依赖项打包在一起进行交付。因此，我们需要存储程序的可执行文件以及它使用的任何共享库。我们还需要存储配置文件、日志以及程序管理的任何数据。所有这些存储必须是隔离的，以确保容器不会干扰主机系统或其他容器。总而言，这代表了对存储的巨大需求，意味着容器引擎必须提供一些独特特性才能在磁盘空间和带宽的使用上实现高效。在本章中，我们将探索使用分层文件系统如何让镜像下载更高效、容器启动更快速。
+要运行一个进程，我们需要存储。容器化软件的巨大优势之一是能够将应用程序及其依赖项打包在一起进行交付。因此，我们需要存储程序的可执行文件以及它使用的任何共享库。我们还需要存储配置文件、日志以及程序管理的任何数据。所有这些存储必须是隔离的，以确保容器不会干扰主机系统或其他容器。总而言之，这代表了对存储的巨大需求，意味着容器引擎必须提供一些独特特性才能在磁盘空间和带宽的使用上实现高效。在本章中，我们将探索使用分层文件系统如何让镜像下载更高效、容器启动更快速。
 
 ## 文件系统隔离
 
-在第 2 章中，我们看到了如何使用 `chroot` 环境来创建一个独立的、隔离的文件系统部分，其中只包含我们运行进程所需的二进制文件和库。即使是运行一个简单的 `ls` 命令，我们需要二进制文件和几个库。功能更完全的容器（例如运行 NGINX Web 服务器的容器）需要的多得多——一套 Linux 发行版的完整文件集。
 
-在 `chroot` 示例中，我们在准备好使用时从宿主机系统构建隔离的文件系统。这种方法对于容器来说是不现实的。相反，隔离的文件系统被封装在`container image`中，它是一个即用的包，包含了所有文件和元数据，例如环境变量和默认可执行文件。
+
+在第 2 章中，我们看到了如何使用`chroot`环境来创建一个独立的、隔离的文件系统部分，其中只包含我们运行进程所需的二进制文件和库。即使是运行一个简单的`ls`命令，我们需要二进制文件和几个库。功能更完全的容器（例如运行 NGINX Web 服务器的容器）需要的多得多——一套 Linux 发行版的完整文件集。
+
+在`chroot`示例中，我们在准备好使用时从宿主机系统构建隔离的文件系统。这种方法对于容器来说是不现实的。相反，隔离的文件系统被封装在`container image`中，它是一个即用的包，包含了所有文件和元数据，例如环境变量和默认可执行文件。
 
 ### 容器镜像内容
 
-让我们快速查看 NGINX 容器镜像的内部。在本章中，我们将使用 `Docker` 运行命令，因为它仍然是构建容器镜像最常用的工具。
+让我们快速查看 NGINX 容器镜像的内部。在本章中，我们将使用`Docker`运行命令，因为它仍然是构建容器镜像最常用的工具。
 
-**注意**：本书的示例仓库位于 [`github.com/book-of-kubernetes/examples`](https://github.com/book-of-kubernetes/examples)。有关设置的详情，请参阅第 xx 页 上的“运行示例”。
+**注意**：本书的示例仓库位于[`github.com/book-of-kubernetes/examples`](https://github.com/book-of-kubernetes/examples)。有关设置的详情，请参阅第 xx 页上的“运行示例”。
 
-在本文章示例的 `host01` 上运行以下命令来下载镜像：
+在本文章示例的`host01`上运行以下命令来下载镜像：
 
 ```
 root@host01:~# docker pull nginx
@@ -1271,7 +1214,7 @@ Status: Downloaded newer image for nginx:latest
 docker.io/library/nginx:latest
 ```
 
-`docker pull` 命令从 `image registry`（镜像仓库）下载镜像。镜像仓库是一个实现了用于下载和发布容器镜像 API 的 Web 服务器。我们可以通过列 `docker images` 来查看已下载的镜像：
+`docker pull`命令从`image registry`（镜像仓库）下载镜像。镜像仓库是一个实现了用于下载和发布容器镜像 API 的 Web 服务器。我们可以通过列`docker images`来查看已下载的镜像：
 
 ```
 root@host01:~# docker images
@@ -1279,14 +1222,14 @@ REPOSITORY   TAG       IMAGE ID       CREATED       SIZE
 nginx        latest    f0b8a9a54136   7 days ago    133MB
 ```
 
-该镜像大小为 133MB，有一个唯一的标识符 `f0b8a9a54136`。（你的标识符会不同，因为新的 NGINX 容器镜像每天都会构建。）此镜像不仅包含 NGINX 执行文件和所需的库，还包含基于 Debian 的 Linux 发行版。我们在第 1 章中简要见过这一点，当时我们在 Ubuntu 主机和内核上演示了 Rocky Linux 容器，但让我们更详细地观察。从运行一个 NGINX 容器开始：
+该镜像大小为 133MB，有一个唯一的标识符`f0b8a9a54136`。（你的标识符会不同，因为新的 NGINX 容器镜像每天都会构建。）此镜像不仅包含 NGINX 执行文件和所需的库，还包含基于 Debian 的 Linux 发行版。我们在第 1 章中简要见过这一点，当时我们在 Ubuntu 主机和内核上演示了 Rocky Linux 容器，但让我们更详细地观察。从运行一个 NGINX 容器开始：
 
 ```
 root@host01:~# docker run --name nginx -d nginx
 516d13e912a55cf6f73f0dd473661d6b7d3b868d5a07a2bc7253971015b6799
 ```
 
-`--name` 标志为容器提供了一个我们可以在后续命令中使用的友好名称，而 `-d` 标志则将其发送到后台。
+`--name`标志为容器提供了一个我们可以在后续命令中使用的友好名称，而`-d`标志则将其发送到后台。
 
 现在，让我们探索正在运行的容器的文件系统：
 
@@ -1307,10 +1250,10 @@ root@516d13e912a5:/# ldd $(which nginx)
 
 所有这些库都是我们下载的容器镜像的一部分，因此我们的 NGINX 容器不需要（也看不到）来自主机系统的任何文件。
 
-我们不仅拥有足够数量的库，在 `/etc` 中还有我们对 Debian 系统预期的典型配置文件：
+我们不仅拥有足够数量的库，在`/etc`中还有我们对 Debian 系统预期的典型配置文件：
 
 ```
-root@516d13e912aa5:/# ls -1 /etc
+root@516d13e912a5:/# ls -1 /etc
 ...
 debian_version
 deluser.conf
@@ -1320,7 +1263,7 @@ systemd/
 ...
 ```
 
-此列表显示文件系统甚至包含了容器并不真正需要的目录，例如 `/etc/systemd` 目录。（记住，容器只是在隔离状态下运行的一组相关进程，因此容器几乎不会运行如 `systemd` 这样的系统服务管理器。）
+此列表显示文件系统甚至包含了容器并不真正需要的目录，例如`/etc/systemd`目录。（记住，容器只是在隔离状态下运行的一组相关进程，因此容器几乎不会运行如`systemd`这样的系统服务管理器。）
 
 ### 镜像版本
 
@@ -1339,14 +1282,12 @@ root@host01:~# docker pull redis:6.0.13-alpine
 ➋ 540db60ca938: Already exists 
    29712d301e8c: Already exists 
 ```
+
 （注意：为了清晰起见，删除了重复部分。）
 
-冒号之后的数据是 `image tag`（镜像标签），作为版本标识符。以前，当我们漏掉此内容时，Docker 默认使用 `latest`，这和其他任何标签一样，但按照惯例用于指代最新发布的镜像。通过指定版本，我们可以确保即使在发布了新版本的 Redis，我们也继续运行相同的版本，直到我们准备好升级。标签可以包含任何字符，在连字符后添加额外信息是常见的。在这种情况下，标签末尾的 -alpine 表明该镜像基于 Alpine Linux，这是一种因体积较小而流行的制作容器镜像的轻量级 Linux 发行版。
+冒号之后的数据是`image tag`（镜像标签），作为版本标识符。以前，当我们漏掉此内容时，Docker 默认使用`latest`，这和其他任何标签一样，但按照惯例用于指代最新发布的镜像。通过指定版本，我们可以确保即使在发布了新版本的 Redis，我们也继续运行相同的版本，直到我们准备好升级。标签可以包含任何字符，在连字符后添加额外信息是常见的。在这种情况下，标签末尾的`-alpine`表明该镜像基于 Alpine Linux，这是一种因体积较小而流行的制作容器镜像的轻量级 Linux 发行版。
 
-
-
-
-另一个值得注意的有趣点是，当我们下载第二个版本的 Redis 时，某些内容 ➋ 被标记为“已存在”（Already exists）。查看第一次下载 Redis 的情况，我们发现那里存在相同的唯一标识符 ➊。这是因为容器镜像是由分层组成的，而这些标识符唯一地描述了每一层。如果我们已经下载的某个层被另一个镜像使用，就不需要再次下载它，从而节省了下载时间。此外，每个层在磁盘上只需要存储一次，节省了磁盘空间。
+另一个值得注意的有趣点是，当我们下载第二个版本的 Redis 时，某些内容➋被标记为“已存在”（Already exists）。查看第一次下载 Redis 的情况，我们发现那里存在相同的唯一标识符➊。这是因为容器镜像是由分层组成的，而这些标识符唯一地描述了每一层。如果我们已经下载的某个层被另一个镜像使用，就不需要再次下载它，从而节省了下载时间。此外，每个层在磁盘上只需要存储一次，节省了磁盘空间。
 
 我们现在下载了两个不同版本的 Redis：
 
@@ -1399,7 +1340,7 @@ root@host01:~# docker logs redis2 | grep version
 
 #### 使用 Dockerfile
 
-构建容器镜像有多种方法，但最流行的是创建一个名为 `Dockerfile` 或 `Containerfile` 的文件，它指定了镜像的命令和配置。这是一个向 NGINX 镜像添加 Web 内容的简单 `Dockerfile`：
+构建容器镜像有多种方法，但最流行的是创建一个名为`Dockerfile`或`Containerfile`的文件，它指定了镜像的命令和配置。这是一个向 NGINX 镜像添加 Web 内容的简单`Dockerfile`：
 
 `Dockerfile`
 
@@ -1412,32 +1353,28 @@ RUN echo "<html><body><h1>Hello World!</h1></body></html>" \
     >/usr/share/nginx/html/index.html
 ```
 
-`Dockerfile` 中的每一行都以命令开头，后面紧跟参数。空行和 # 之后的内容会被忽略，行尾的反斜杠将该命令延续到下一行。有很多种可能的命令；这里是最常用的：
+`Dockerfile`中的每一行都以命令开头，后面紧跟参数。空行和`#`之后的内容会被忽略，行尾的反斜杠将该命令延续到下一行。有很多种可能的命令；这里是最常用的：
 
-- `FROM`: 指定用于此构建的基础镜像。
-- `RUN`: 在容器内运行运行命令。
-- `COPY`: 将文件复制到容器中。
-- `ENV`: 指定环境变量。
-- `ENTRYPOINT`: 配置容器的初始进程。
-- `CMD`: 为初始进程设置默认参数。
+- `FROM`：指定用于此构建的基础镜像。
+- `RUN`：在容器内运行运行命令。
+- `COPY`：将文件复制到容器中。
+- `ENV`：指定环境变量。
+- `ENTRYPOINT`：配置容器的初始进程。
+- `CMD`：为初始进程设置默认参数。
 
-Docker 提供了 `docker build` 命令来从 `Dockerfile` 构建镜像。`docker build` 命令通过逐个运行 `Dockerfile` 中的每个命令来创建一个新镜像。列表 5-1
+Docker 提供了`docker build`命令来从`Dockerfile`构建镜像。`docker build`命令通过逐个运行`Dockerfile`中的每个命令来创建一个新镜像。列表 5-1：
 
 ```
 root@host01:~# docker build -t hello .
 ```
 
-
-
-
-
-如第 1 章所述，`-p` 标记将主机端口转发到容器中，使我们即使在运行在独立的网络命名空间中，我们也能从主机访问 NGINX 服务器。然后我们可以使用 `curl` 查看容器包含了我们提供的内容。
+如第 1 章所述，`-p`标记将主机端口转发到容器中，使我们即使在运行在独立的网络命名空间中，我们也能从主机访问 NGINX 服务器。然后我们可以使用`curl`查看容器包含了我们提供的内容。
 
 ## 镜像的标记与发布
 
 该镜像已经准备好本地运行，但我们还没有准备好将其发布到注册仓库。要发布到注册仓库，我们需要为它命名，名称包含注册仓库位置的完整主机和路径，以确保当我们引用镜像时，获取的是正是我们预期的。
 
-为了演示这一点，让我们从不同的注册仓库拉取多个 BusyBox 镜像。我们先从 `quay.io`（另一个容器镜像注册仓库）拉取 BusyBox 镜像：
+为了演示这一点，让我们从不同的注册仓库拉取多个 BusyBox 镜像。我们先从`quay.io`（另一个容器镜像注册仓库）拉取 BusyBox 镜像：
 
 ```
 root@host01:/opt/hello# docker pull quay.io/quay/busybox
@@ -1445,9 +1382,9 @@ root@host01:/opt/hello# docker pull quay.io/quay/busybox
 quay.io/quay/busybox:latest
 ```
 
-此镜像名称同时指定了主机 `quay.io` 和在该主机内的镜像位置 `quay/busybox`。由于之前没有指定版本，因此使用 `latest` 作为默认值。我们能够拉取名为 `latest` 的版本，是因为有人显式地向此仓库发布了镜像的 `latest` 版本。
+此镜像名称同时指定了主机`quay.io`和在该主机内的镜像位置`quay/busybox`。由于之前没有指定版本，因此使用`latest`作为默认值。我们能够拉取名为`latest`的版本，是因为有人显式地向此仓库发布了镜像的`latest`版本。
 
-我们使用此命令获得的 BusyBox 镜像与仅拉取 `busybox` 获取的镜像不同：
+我们使用此命令获得的 BusyBox 镜像与仅拉取`busybox`获取的镜像不同：
 
 ```
 root@host01:/opt/hello# docker pull busybox
@@ -1458,9 +1395,9 @@ busybox                latest          d3cd072556c2   3 days ago       1.24MB
 quay.io/quay/busybox   latest          e3121c769e39   8 months ago     1.22MB
 ```
 
-当我们使用普通名称 `busybox` 时，Docker 默认从 `docker.io/library` 拉取镜像。该注册仓库被称为 Docker Hub，你可以在 `[`hub.docker.com`](https://hub.docker.com)` 浏览它。
+当我们使用普通名称`busybox`时，Docker 默认从`docker.io/library`拉取镜像。该注册仓库被称为 Docker Hub，你可以在[`hub.docker.com`](https://hub.docker.com)浏览它。
 
-同样，当我们使用普通名称 `hello` 构建镜像时，Docker 认为它属于 `docker.io/library`。该路径用于官方 Docker 镜像，当然，我们没有权限在那里发布镜像。
+同样，当我们使用普通名称`hello`构建镜像时，Docker 认为它属于`docker.io/library`。该路径用于官方 Docker 镜像，当然，我们没有权限在那里发布镜像。
 
 本章的自动化设置包含了运行本地容器注册仓库，这意味着如果我们正确命名，就可以将此镜像发布到该本地注册仓库：
 
@@ -1471,9 +1408,9 @@ hello                  latest          e9ca31d590f9   52 minutes ago   133MB
 registry.local/hello   latest          e9ca31d590f9   52 minutes ago   133MB
 ```
 
-现在同一个镜像以两个不同的名称存在，这提供了分层存储方式的额外优势。为镜像添加额外名称的成本很低。当然，我们在运行 `docker build` 时最初也可以使用完整名称，但在本地构建和使用镜像时，使用较短的名称更加方便。
+现在同一个镜像以两个不同的名称存在，这提供了分层存储方式的额外优势。为镜像添加额外名称的成本很低。当然，我们在运行`docker build`时最初也可以使用完整名称，但在本地构建和使用镜像时，使用较短的名称更加方便。
 
-现在我们已经正确命名了镜像，可以使用 `docker push` 将其发布：
+现在我们已经正确命名了镜像，可以使用`docker push`将其发布：
 
 ```
 root@host01:/opt/hello# docker push registry.local/hello
@@ -1497,17 +1434,19 @@ root@host01:/opt/hello# cd
 
 对镜像进行重新标记以便将其上传到私有注册仓库是一种常见做法，它可以帮助应用程序启动更快，并避免对互联网注册仓库的依赖。
 
-最后一个命令（`cd`）带我们回到主目录，因为我们在 `/opt/hello` 完成了。
+最后一个命令（`cd`）带我们回到主目录，因为我们在`/opt/hello`完成了。
 
 ## 镜像与容器存储
 
 如之前所述，使用单独层构建容器镜像有多个优点，包括减小下载大小、减少磁盘空间，以及在不使用任何额外空间的情况下用新名称重新标记镜像的能力。运行中容器所需的额外磁盘空间仅限于我们在容器运行期间写入的文件。最后，所有示例都展示了新容器启动有多快。所有这些特性共同说明了为什么层必须共享，不仅对于镜像，也对于新容器。为了在构建高效镜像时充分利用这种分层方法，理解这种分层文件系统的工作原理会有帮助。
 
- 叠加文件系统 (Overlay Filesystems)
+### 叠加文件系统（Overlay Filesystems）
 
-当我们运行容器时，看到的是看起来像单一的文件系统，所有层都合并在一起，并且能够对任何文件进行更改。如果我们从同一个镜像运行多个容器，我们在每个容器中都会看到一个独立的文件系统，这样一个容器中的更改就不会影响另一个。在每次启动容器时无需复制整个文件系统的情况下，这是如何实现的？答案是叠加 文件系统。
+当我们运行容器时，看到的是看起来像单一的文件系统，所有层都合并在一起，并且能够对任何文件进行更改。如果我们从同一个镜像运行多个容器，我们在每个容器中都会看到一个独立的文件系统，这样一个容器中的更改就不会影响另一个。在每次启动容器时无需复制整个文件系统的情况下，这是如何实现的？答案是叠加文件系统。
 
-Overlay 有三个主要部分。`lower` 目录是基础层所在；`upper` 目录是叠加层，而 `mount` 目录是统一文件系统可用的地方。
+Overlay 有三个主要部分。`lower`目录是基础层所在；`upper`目录是叠加层，而`mount`目录是统一文件系统可用的地方。
+
+
 
 Overlay 文件系统由 Linux 内核模块提供，具有极高的性能。我们可以轻松创建一个 overlay 文件系统。第一步是创建必要的目录：
 
@@ -1517,7 +1456,7 @@ root@host01:~# mkdir /tmp/{lower,upper,mount}
 
 `mkdir` 命令创建了四个独立的目录。我们已经讨论了 `lower` 目录、`upper` 目录和 `mount` 目录。`work` 目录是一个额外的空目录，overlay 文件系统使用它作为临时空间以确保挂载目录中的更改是原子的——即确保它们一次出现。
 
-让我们向 lower 和 upper 目录放入一些内容：
+让我们向 `lower` 和 `upper` 目录放入一些内容：
 
 ```
 root@host01:~# echo "hello1" > /tmp/lower/hello1
@@ -1532,7 +1471,7 @@ root@host01:~# mount -t overlay \
   overlay /tmp/mount
 ```
 
-现在 `/tmp/mount` 目录包含了 upper 和 lower 目录合并的内容：
+现在 `/tmp/mount` 目录包含了 `upper` 和 `lower` 目录合并的内容：
 
 ```
 root@host01:~# ls -l /tmp/mount
@@ -1545,11 +1484,7 @@ root@host01:/opt/hello# cat /tmp/mount/hello2
 hello2
 ```
 
-我们所做的任何更改在挂载位置显示，但实际上是在 upper 目录中完成的。
-
-
-
-
+我们所做的任何更改在挂载位置显示，但实际上是在 `upper` 目录中完成的。
 
 ```
 root@host01:~# echo "hello3" > /tmp/mount/hello3
@@ -1571,21 +1506,21 @@ total 8
 
 ```
 root@host01:~# rm /tmp/mount/hello1
-   root@host01:~# ls -l /tmp/mount
-   total 8
-   -rw-r--r-- 1 root root 7 May 24 23:10 hello2
-   -rw-r--r-- 1 root root 7 May 24 23:09 hello3
-   root@host01:~# ls -l /tmp/lower
-   total 4
-   -rw-r--r-- 1 root root 7 May 24 23:05 hello1
-   root@host01:~# ls -l /tmp/upper
-   total 8
+root@host01:~# ls -l /tmp/mount
+total 8
+-rw-r--r-- 1 root root 7 May 24 23:10 hello2
+-rw-r--r-- 1 root root 7 May 24 23:09 hello3
+root@host01:~# ls -l /tmp/lower
+total 4
+-rw-r--r-- 1 root root 7 May 24 23:05 hello1
+root@host01:~# ls -l /tmp/upper
+total 8
 ➊ c--------- 1 root root 0, 0 May 24 23:11 hello1
-   -rw-r--r-- 1 root root    7 May 24 23:10 hello2
-   -rw-r--r-- 1 root root    7 May 24 23:09 hello3
+-rw-r--r-- 1 root root    7 May 24 23:10 hello2
+-rw-r--r-- 1 root root    7 May 24 23:09 hello3
 ```
 
-在上层目录（upper directory）中，`hello1` 列表旁边的 `c` ➊ 表示这是一个字符设备文件（character special file*）。它的作用是指示该文件在上层目录已被删除。因此，尽管它仍然存在于下层目录中，但在挂载的文件系统中不会显示。
+在上层目录（upper directory）中，`hello1` 列表旁边的 `c` ➊ 表示这是一个字符设备文件（character special file）。它的作用是指示该文件在上层目录已被删除。因此，尽管它仍然存在于下层目录中，但在挂载的文件系统中不会显示。
 
 得益于这种方法，我们可以使用独立的叠加层（overlay）复用下层目录，就像我们可以从同一个镜像运行多个独立容器一样：
 
@@ -1612,7 +1547,7 @@ root@host01:~# echo $ROOT
 /var/lib/docker/overlay2/433751e2378f9b11.../merged
 ```
 
-与之前一样，我们使用 `jq` 来选择我们需要的字段；在这种情况下，它是容器文件系统的 `merged*` 目录的路径。这个合并目录（merged directory）是 overlay 文件系统的挂载点：
+与之前一样，我们使用 `jq` 来选择我们需要的字段；在这种情况下，它是容器文件系统的 `merged` 目录的路径。这个合并目录（merged directory）是 overlay 文件系统的挂载点：
 
 ```
 root@host01:~# mount | grep $ROOT | tr [:,] '\n'
@@ -1628,7 +1563,7 @@ upperdir=/var/lib/docker/overlay2/433751e2378f9b11.../diff
 workdir=/var/lib/docker/overlay2/433751e2378f9b11.../work,xino=off)
 ```
 
-`tr` 命令将冒号和逗号转换为换行符，使输出更具读性。
+`tr` 命令将冒号和逗号转换为换行符，使输出更具可读性。
 
 `mount` 命令显示了七个独立的 `lowerdir` 条目，分别对应 NGINX 容器镜像中的每一层。这七个目录加上 `upperdir` 在 overlay 文件系统中合并在一起了。
 
@@ -1641,7 +1576,7 @@ root@host01:~# ls -l $ROOT/../diff/tmp/data
 -rw-r--r-- 1 root root 10485760 May 25 00:27 /var/lib/.../diff/tmp/data
 ```
 
-实际文件存储在上层目录 `diff` 中，而挂载目录 `merged*` 只是 overlay 文件系统生成的视图。
+实际文件存储在上层目录 `diff` 中，而挂载目录 `merged` 只是 overlay 文件系统生成的视图。
 
 通常，我们不需要从宿主机深入容器文件系统，因为我们可以直接在容器内部运行命令。
 
@@ -1693,10 +1628,6 @@ root@host01:~# jq . busybox/index.json
   ]
 }
 ```
-
-
-
-
 
 `manifests` 属性是一个数组，允许我们向单个 OCI 目录或包中存储多个镜像。实际的文件系统内容以层的形式存储在 `blobs` 中，每个层都是一个独立的 `.tar` 文件，因此任何共享层都只存储一次。
 
@@ -1759,18 +1690,21 @@ drwxr-xr-x 0/0               0 2021-05-17 19:07 var/
 
 将应用程序组件分发到多个服务器的需求对于现代应用程序架构来说并不新鲜。为了构建可扩展且可靠的应用程序，我们总是需要利用多个服务器来处理负载并排除单点故障。现在我们在容器中运行这些组件的事并没有改变对多个服务器的需求；我们仍然依赖硬件。
 
-同时，容器编排环境带来了其他类型可能不存在的挑战。当容器成为我们构建系统的最小单元模块时，我们的应用程序组件从基础设施的角度来看变得更加自包含且“透明”。这意味着我们不再通过静态应用程序架构预先选择将哪些组件分配到特定服务器，而是通过 Kubernetes 让任何容器都能任何地方运行。
+同时，容器编排环境带来了其他类型可能不存在的挑战。当容器成为我们构建系统的最小单元模块时，我们的应用程序组件从基础设施的角度来看变得更加自包含且“透明”。这意味着我们不再通过静态应用程序架构预先选择将哪些组件分配到特定服务器，而是通过 Kubernetes 让任何容器都能在任何地方运行。
 
 #### 交叉关注点
 
-在任何地方运行任何容器的能力提高了我们的灵活性，但也给 Kubernetes 增加了复杂性。Kubernetes 无法预知会被要求运行哪些容器，且容器负载负载负载不断变化。为了应对这一挑战，Kubernetes 需要考虑适用于所有容器编排软件的设计参数，无论运行什么容器：
+在任何地方运行任何容器的能力提高了我们的灵活性，但也给 Kubernetes 增加了复杂性。Kubernetes 无法预知会被要求运行哪些容器，且容器负载不断变化。为了应对这一挑战，Kubernetes 需要考虑适用于所有容器编排软件的设计参数，无论运行什么容器：
 
 - **动态调度**：新容器必须分配到服务器，且分配可能会由于配置更改或故障而发生。
+
 - **分布式状态**：整个集群必须保留关于在何处运行哪些容器的信息，即使在硬件或网络故障期间也是如此。
+
 - **多租户**：应该能够在单个集群中运行多个应用程序，并提供安全和可靠性方面的隔离。
+
 - **硬件隔离**：集群必须运行在云环境和各种类型的普通服务器上，将容器与这些环境的隔离开。
 
-用于描述这些设计参数的最佳术语是*交叉关注点*（cross-cutting concern），因为适用于适用于可能需要的任何容器化软件，甚至适用于 Kubernetes 基础设施本身。
+用于描述这些设计参数的最佳术语是*交叉关注点*（cross-cutting concern），因为它适用于可能需要的任何容器化软件，甚至适用于 Kubernetes 基础设施本身。
 
 #### Kubernetes 概念
 
@@ -1778,52 +1712,51 @@ drwxr-xr-x 0/0               0 2021-05-17 19:07 var/
 
 ##### 独立的控制平面
 
-显然，为了让 Kubernetes 成为容器编排环境，它需要运行容器的能力。这种能力由一组称为*节点*（nodes）的工作机器提供。每个节点运行一个 `kubelet` 服务，该服务与底层容器运行时接口以启动和监控容器。
 
 
+显然，为了让 Kubernetes 成为容器编排环境，它需要运行容器的能力。这种能力由一组称为*节点*（nodes）的工作机器提供。每个节点运行一个`kubelet`服务，该服务与底层容器运行时接口以启动和监控容器。
 
-
-Kubernetes 还有一组核心的软件组件，用于管理工作节点及其容器，但这些软件组件是与工作节点分离部署的。这些核心 Kubernetes 软件组件统称为 `control plane`（控制面）。由于控制面与工作节点分离，工作节点可以运行控制面，从而为 Kubernetes 核心软件组件带来容器化的优势。独立的控制面也意味着 Kubernetes 本身采用了微服务架构，这允许对每个 Kubernetes 集群进行定制。例如，其中一个控制面组件 `cloud controller manager`（云控制器）仅在将 Kubernetes 部署到云提供商时使用，并根据所使用的云提供商进行定制。这种设计为应用容器和 Kubernetes 控制面的其余部分提供了硬件隔离，同时允许我们利用每个云提供商的特定功能。
+Kubernetes 还有一组核心的软件组件，用于管理工作节点及其容器，但这些软件组件是与工作节点分离部署的。这些核心 Kubernetes 软件组件统称为`control plane`（控制面）。由于控制面与工作节点分离，工作节点可以运行控制面，从而为 Kubernetes 核心软件组件带来容器化的优势。独立的控制面也意味着 Kubernetes 本身采用了微服务架构，这允许对每个 Kubernetes 集群进行定制。例如，其中一个控制面组件`cloud controller manager`（云控制器）仅在将 Kubernetes 部署到云提供商时使用，并根据所使用的云提供商进行定制。这种设计为应用容器和 Kubernetes 控制面的其余部分提供了硬件隔离，同时允许我们利用每个云提供商的特定功能。
 
 ## 声明式 API
 
-Kubernetes 控制面的一个关键组件是 `API server`。API server 为集群控制和监控提供了一个接口，其他集群用户和控制面组件都会该接口。在定义 API 时，Kubernetes 原本可以选择 `imperative`（命令式）风格，即每个 API 端点都是一个如“运行容器”或“分配存储”之类的命令。相反，API 是 `declarative`（声明式的），提供了如 `create`、`patch`、`get` 和 `delete` 等端点。这些命令的效果是从集群配置中创建、读取、更新和删除 `resources`（资源）——每个资源的特定配置告诉 Kubernetes 我们希望集群执行的操作。
+Kubernetes 控制面的一个关键组件是`API server`。API server 为集群控制和监控提供了一个接口，其他集群用户和控制面组件都会使用该接口。在定义 API 时，Kubernetes 原本可以选择`imperative`（命令式）风格，即每个 API 端点都是一个如“运行容器”或“分配存储”之类的命令。相反，API 是`declarative`（声明式的），提供了如`create`、`patch`、`get`和`delete`等端点。这些命令的效果是从集群配置中创建、读取、更新和删除`resources`（资源）——每个资源的特定配置告诉 Kubernetes 我们希望集群执行的操作。
 
-这种声明式 API 对于满足动态调度和分布式状态等跨领域问题的关注点至关重要。由于声明式 API 仅仅是报告或更新集群配置，因此应对可能导致命令丢失的服务器或网络故障是非常容易的。考虑这样一个例子：在发布 `apply` 命令更改集群配置后，API server 的连接丢失了。当连接恢复时，客户端可以简单地查询集群配置并判断命令是否成功接收。或者，更简单的是，客户端只需再次发布相同的 `apply` 命令，因为只要集群配置最终符合预期，Kubernetes 就会尝试对实际集群执行“正确的事”。这一核心原则被称为 `idempotence`（幂等性），意味着多次发布相同的命令是安全的，因为它最多只会被执行一次。
+这种声明式 API 对于满足动态调度和分布式状态等跨领域问题的关注点至关重要。由于声明式 API 仅仅是报告或更新集群配置，因此应对可能导致命令丢失的服务器或网络故障是非常容易的。考虑这样一个例子：在发布`apply`命令更改集群配置后，API server 的连接丢失了。当连接恢复时，客户端可以简单地查询集群配置并判断命令是否成功接收。或者，更简单的是，客户端只需再次发布相同的`apply`命令，因为只要集群配置最终符合预期，Kubernetes 就会尝试对实际集群执行“正确的事”。这一核心原则被称为`idempotence`（幂等性），意味着多次发布相同的命令是安全的，因为它最多只会被执行一次。
 
 ## 自愈
 
-基于声明式 API，Kubernetes 的设计是 `self-healing`（自愈）的。这意味着控制面组件会持续监控集群配置和实际集群状态，并尝试将两者保持一致。集群配置中的每个资源都有一个关联的状态和事件日志，反映了配置实际上是如何导致集群状态发生变化的。
+基于声明式 API，Kubernetes 的设计是`self-healing`（自愈）的。这意味着控制面组件会持续监控集群配置和实际集群状态，并尝试将两者保持一致。集群配置中的每个资源都有一个关联的状态和事件日志，反映了配置实际上是如何导致集群状态发生变化的。
 
-配置与状态的分离使得 Kubernetes 具有很强的韧性。例如，如果容器已经调度并实际运行，那么代表容器的资源可能处于 `Running`（运行）状态。如果 Kubernetes 控制面丢失了与运行容器的服务器的连接，它可以立即将状态设置为 `Unknown`（未知），然后努力重新建立连接，或将该节点视为失败并重新调度容器。
+配置与状态的分离使得 Kubernetes 具有很强的韧性。例如，如果容器已经调度并实际运行，那么代表容器的资源可能处于`Running`（运行）状态。如果 Kubernetes 控制面丢失了与运行容器的服务器的连接，它可以立即将状态设置为`Unknown`（未知），然后努力重新建立连接，或将该节点视为失败并重新调度容器。
 
 同时，使用声明式 API 和自愈方法具有重要意义。由于 Kubernetes API 是声明式的，对命令的“成功”响应仅意味着集群配置已更新。这并不意味着集群的实际状态已更新，因为达到请求的状态可能需要时间，或者可能存在某些问题阻止集群实现该状态。因此，我们不能假设仅仅因为创建了适当的资源，集群就在运行我们预期的容器。相反，我们必须观察资源的状态并探索事件日志，以诊断 Kubernetes 控制面在使实际集群状态匹配我们指定的配置时所遇到的任何问题。
 
 ## 集群部署
 
-在掌握了一些 Kubernetes 核心概念后，我们将使用 `kubeadm` Kubernetes 管理工具在多个虚拟机上部署高可用 Kubernetes 集群。
+在掌握了一些 Kubernetes 核心概念后，我们将使用`kubeadm` Kubernetes 管理工具在多个虚拟机上部署高可用 Kubernetes 集群。
 
 ### 选择 Kubernetes 发行版
 
-我们不像在第 1 章 中那样使用特定的 Kubernetes 发行版，而是使用通用上游仓库部署一个“原生”（vanilla）Kubernetes 集群。这种方法让我们有最好的机会跟进集群部署，并使接下来的几章节中更容易深入探索集群。然而，当你准备好部署自己的 Kubernetes 集群时（特别是用于生产工作），请考虑使用预构建的 Kubernetes 发行版，以便于管理和内置安全性。云原生基金会（CNCF）发布了一系列一致性测试，你可以使用这些测试来确保选择的 Kubernetes 发行符合 Kubernetes 规范。
+我们不像在第 1 章中那样使用特定的 Kubernetes 发行版，而是使用通用上游仓库部署一个“原生”（vanilla）Kubernetes 集群。这种方法让我们有最好的机会跟进集群部署，并使接下来的几章节中更容易深入探索集群。然而，当你准备好部署自己的 Kubernetes 集群时（特别是用于生产工作），请考虑使用预构建的 Kubernetes 发行版，以便于管理和内置安全性。云原生基金会（CNCF）发布了一系列一致性测试，你可以使用这些测试来确保选择的 Kubernetes 发行符合 Kubernetes 规范。
 
-我们的 Kubernetes 集群将分布在四台虚拟机上，标记为 `host01` 到 `host04`。其中三个（`host01` 到 `host03`）将运行控制面组件，而第四个将仅作为工作节点。我们将拥有三个控制面节点，因为这是运行高可用集群所需的最少数量。Kubernetes 使用投票机制来提供故障转移，至少需要三个控制面节点；这允许集群在发生网络故障时检测哪一侧应该继续运行。此外，为了保持示例的规模尽可能小，我们将配置 Kubernetes 在控制面节点上运行常规容器，尽管我们在生产集群中会避免这样做。
+我们的 Kubernetes 集群将分布在四台虚拟机上，标记为`host01`到`host04`。其中三个（`host01`到`host03`）将运行控制面组件，而第四个将仅作为工作节点。我们将拥有三个控制面节点，因为这是运行高可用集群所需的最少数量。Kubernetes 使用投票机制来提供故障转移，至少需要三个控制面节点；这允许集群在发生网络故障时检测哪一侧应该继续运行。此外，为了保持示例的规模尽可能小，我们将配置 Kubernetes 在控制面节点上运行常规容器，尽管我们在生产集群中会避免这样做。
 
 **注意**
 
-本书的示例存储库位于 [`github.com/book-of-kubernetes/examples`](https://github.com/book-of-kubernetes/examples)。请参阅第 xx 页上的“运行示例”获取设置详细信息。
+本书的示例存储库位于[`github.com/book-of-kubernetes/examples`](https://github.com/book-of-kubernetes/examples)。请参阅第 xx 页上的“运行示例”获取设置详细信息。
 
-首先按照本章的指令将四台虚拟机启动并运行，可以使用 Vagrant 或 AWS。自动化配置将为所有四台机器安装 `containerd` 和 `crictl`，因此我们不需要手动操作。自动化配置脚本还将设置 `kube-vip` 或 AWS 网络负载均衡器来实现所需的可用可用功能（下文所述）。
+首先按照本章的指令将四台虚拟机启动并运行，可以使用 Vagrant 或 AWS。自动化配置将为所有四台机器安装`containerd`和`crictl`，因此我们不需要手动操作。自动化配置脚本还将设置`kube-vip`或 AWS 网络负载均衡器来实现所需的可用功能（下文所述）。
 
 **注意**
 
 你可以使用本章提供的额外配置脚本自动安装 Kubernetes。请参阅本章的 README 文件获取说明。
 
-你需要在四台虚拟机中的每一台上运行命令，因此可能需要为每个节点打开终端。然而，第一系列命令需要在所有主机上运行，因此自动化设置了一个名为 `k8s-all` 的命令来从 `host01` 执行这些操作。你可以查看 `/usr/local/bin/k8s-all` 中的脚本内容，或者查看示例 `setup` 目录下的 `k8s` Ansible 角色。
+你需要在四台虚拟机中的每一台上运行命令，因此可能需要为每个节点打开终端。然而，第一系列命令需要在所有主机上运行，因此自动化设置了一个名为`k8s-all`的命令来从`host01`执行这些操作。你可以查看`/usr/local/bin/k8s-all`中的脚本内容，或者查看示例`setup`目录下的`k8s` Ansible 角色。
 
 #### 前提包
 
-第一步是确保 `br_netfilter` 内核模块已启用并设置为启动时加载。Kubernetes 使用 Linux 防火墙的高级功能处理跨集群网络，因此我们需要这个模块。运行这两个命令：
+第一步是确保`br_netfilter`内核模块已启用并设置为启动时加载。Kubernetes 使用 Linux 防火墙的高级功能处理跨集群网络，因此我们需要这个模块。运行这两个命令：
 
 ```
 root@host01:~# k8s-all modprobe br_netfilter
@@ -1831,11 +1764,9 @@ root@host01:~# k8s-all modprobe br_netfilter
 root@host01:~# k8s-all "echo 'br_netfilter' > /etc/modules-load.d/k8s.conf"
 ```
 
-
-
 第一个命令确保为当前运行的内核安装该模块，而第二个命令将其添加到启动时运行的模块列表中。第二个命令中略显奇怪的引号用法确保了 shell 重定向在远程主机上发生。
 
-接下来，在列表 6-1 中，我们将使用 `sysctl` 命令设置某些 Linux 内核参数以启用高级网络功能，这些功能对于集群网络也是所需的：
+接下来，在列表 6-1 中，我们将使用`sysctl`命令设置某些 Linux 内核参数以启用高级网络功能，这些功能对于集群网络也是所需的：
 
 ```
 root@host01:~# k8s-all sysctl -w net.ipv4.ip_forward=1 \
@@ -1847,15 +1778,15 @@ root@host01:~# k8s-all sysctl -w net.ipv4.ip_forward=1 \
 
 此命令启用了以下 Linux 内核网络功能：
 
-`net.ipv4.ip_forward` 将数据包从一个网络接口传输到另一个（例如，从容器网络空间内部的接口传输到主机网络）。
+`net.ipv4.ip_forward`将数据包从一个网络接口传输到另一个（例如，从容器网络空间内部的接口传输到主机网络）。
 
-`net.bridge.bridge-nf-call-ip6tables`: 让 IPv6 桥接流量通过 `iptables` 防火墙。
+`net.bridge.bridge-nf-call-ip6tables`: 让 IPv6 桥接流量通过`iptables`防火墙。
 
-`net.bridge.bridge-nf-call-iptables`: 让 IPv4 桥接流量通过 `iptables` 防火墙。
+`net.bridge.bridge-nf-call-iptables`: 让 IPv4 桥接流量通过`iptables`防火墙。
 
 后两项的必要性将在第 9 章讨论 Kubernetes 如何为 Service 提供网络支持时变得清晰。
 
-列表 6-1 中的这些 `sysctl` 更改在重启后不会持久化。自动化脚本会处理使这些更改持久化的工作，因此如果你重启了虚拟机，请运行额外的配置脚本，或重新运行这些命令。
+列表 6-1 中的这些`sysctl`更改在重启后不会持久化。自动化脚本会处理使这些更改持久化的工作，因此如果你重启了虚拟机，请运行额外的配置脚本，或重新运行这些命令。
 
 我们现在已经完成了 Linux 内核配置以支持我们的 Kubernetes 部署，几乎准备好进行实际安装。首先我们需要安装一些预备包：
 
@@ -1864,11 +1795,11 @@ root@host01:~# k8s-all apt install -y apt-transport-https \
   open-iscsi nfs-common
 ```
 
-`apt-transport-https` 包确保 `apt` 支持通过安全的 HTTP 连接到存储库。另外两个包用于我们在集群运行后将安装的集群插件之一。
+`apt-transport-https`包确保`apt`支持通过安全的 HTTP 连接到存储库。另外两个包用于我们在集群运行后将安装的集群插件之一。
 
 ### Kubernetes 软件包
 
-我们现在可以添加 Kubernetes 存储库以安装将设置集群的 `kubeadm` 工具。首先，添加用于检查包签名的 GPG 密钥：
+我们现在可以添加 Kubernetes 存储库以安装将设置集群的`kubeadm`工具。首先，添加用于检查包签名的 GPG 密钥：
 
 ```
 root@host01:~# k8s-all "curl -fsSL \
@@ -1876,42 +1807,42 @@ root@host01:~# k8s-all "curl -fsSL \
   gpg --dearmor -o /usr/share/keyrings/google-cloud-keyring.gpg"
 ```
 
-该命令使用 `curl` 下载 GPG 密钥。然后使用 `gpg` 对其进行重新格式，并将结果写入 `/usr/share/keyrings`。命令行标志 `fsSL` 让 `curl` 处于一种更适合链式命令的模式，包括避免不必要的输出、跟随服务器重定向并在出现问题时错误终止。
+该命令使用`curl`下载 GPG 密钥。然后使用`gpg`对其进行重新格式，并将结果写入`/usr/share/keyrings`。命令行标志`fsSL`让`curl`处于一种更适合链式命令的模式，包括避免不必要的输出、跟随服务器重定向并在出现问题时错误终止。
 
 接下来，我们添加存储库配置：
 
-```root
+```
 root@host01:~# k8s-all "echo 'deb [arch=amd64' \
   'signed-by=/usr/share/keyrings/google-cloud-keyring.gpg]' \
   'https://apt.kubernetes.io/ kubernetes-xenial main' > \
   /etc/apt/sources.list.d/kubernetes.list"
 ```
 
-与之前一样，引号对于确保命令通过 SSH 正确传递到集群中的所有其他主机至关重要。该命令将 `kubernetes-xenial` 配置为发行版；此发行版适用于任何版本的 Ubuntu，从较旧的 Ubuntu Xenial 开始。
+与之前一样，引号对于确保命令通过 SSH 正确传递到集群中的所有其他主机至关重要。该命令将`kubernetes-xenial`配置为发行版；此发行版适用于任何版本的 Ubuntu，从较旧的 Ubuntu Xenial 开始。
 
-在我们创建此新存储库后，我们需要在所有主机上运行 `apt update` 来下载包列表：
+在我们创建此新存储库后，我们需要在所有主机上运行`apt update`来下载包列表：
 
 ```
 root@host01:~# k8s-all apt update
 ...
 ```
 
-现在我们可以使用 `apt` 安装所需的包：
+现在我们可以使用`apt`安装所需的包：
 
 ```
 root@host01:~# source /opt/k8sver
 root@host01:~# k8s-all apt install -y kubelet=$K8SV kubeadm=$K8SV kubectl=$K8SV
 ```
 
-`source` 命令加载一个包含变量的文件，用以安装特定的 Kubernetes 版本。该文件由自动化脚本创建，并确保我们在所有章节中使用一致的 Kubernetes 版本。你可以更新自动化脚本来选择要安装的 Kubernetes 版本。
+`source`命令加载一个包含变量的文件，用以安装特定的 Kubernetes 版本。该文件由自动化脚本创建，并确保我们在所有章节中使用一致的 Kubernetes 版本。你可以更新自动化脚本来选择要安装的 Kubernetes 版本。
 
-`apt` 命令安装了以下三个包以及一些依赖项：
+`apt`命令安装了以下三个包以及一些依赖项：
 
-- `kubelet`: 所有工作节点上的服务，与与容器引擎接口，根据控制平面的调度运行容器
+- `kubelet`: 所有工作节点上的服务，与容器引擎接口，根据控制平面的调度运行容器
 - `kubeadm`: 我们将用它安装 Kubernetes 并维护集群的管理工具
 - `kubectl`: 我们将用它检查 Kubernetes 集群并创建和删除资源的命令行客户端
 
-`kubelet` 包会立即启动其服务，但由于我们还没有安装控制面，该服务最初处于失败状态：
+`kubelet`包会立即启动其服务，但由于我们还没有安装控制面，该服务最初处于失败状态：
 
 ```
 root@host01:~# systemctl status kubelet
@@ -1920,49 +1851,25 @@ root@host01:~# systemctl status kubelet
    Main PID: 75368 (code=exited, status=1/FAILURE)
 ```
 
-我们需要控制刚刚安装的包包版本，因为我们想要一起升级集群的所有组件。为了防止意外更新这些包，我们将它们锁定在当前版本：
+我们需要控制刚刚安装的包版本，因为我们想要一起升级集群的所有组件。为了防止意外更新这些包，我们将它们锁定在当前版本：
 
 ```
 root@host01:~# k8s-all apt-mark hold kubelet kubeadm kubectl
 ```
 
-该命令防止标准的 `apt-upgrade` 更新这些包。
-
-### 集群初始化
-
-第一个命令确保为当前运行的内核安装该模块，而第二个命令将其添加到启动时运行的模块列表中。第二个命令中略显奇怪的引号用法确保了 shell 重定向在远程主机上发生。
-
-接下来，在列表 6-1 中，我们将使用 `sysctl` 命令设置某些 Linux 内核参数以启用高级网络功能，这些功能对于集群网络也是所需的：
-
-（同上文）
-
-此命令启用了以下 Linux 内核网络功能：
-
-`net.ipv4.ip_forward` 将数据包从一个网络接口传输到另一个（例如，从容器网络空间内部的接口传输到主机网络）。
-
-`net.bridge.bridge-nf-call-ip6tables`: 让 IPv6 桥接流量通过 `iptables` 防火墙。
-
-`net.bridge.bridge-nf-call-iptables`: 让 IPv4 桥接流量通过 `iptables` 防火墙。
-
-后两项的必要性将在第 9 章讨论 Kubernetes 如何为 Service 提供网络支持时变得清晰。
-
-列表 6-1 中的这些 `sysctl` 更改在重启后不会持久化。自动化脚本会处理使这些更改持久化的工作，因此如果你重启了虚拟机，请运行额外的配置脚本，或重新运行这些命令。
-
-我们现在已经完成了 Linux 内核配置以支持我们的 Kubernetes 部署，几乎准备好进行实际安装。首先我们需要安装一些预备包：
-
-（同上文）
-
-`apt-transport-https` 包确保 `apt` 支持通过安全的 HTTP 连接到存储库。另外两个包用于我们在集群运行后将安装的集群插件之一。
+该命令防止标准的`apt-upgrade`更新这些包。
 
 ### 集群初始化
 
 我们需要控制刚刚安装的包版本，因为我们想要一起升级集群的所有组件。为了防止意外更新这些包，我们将它们锁定在当前版本：
 
-（同上文）
+```
+root@host01:~# k8s-all apt-mark hold kubelet kubeadm kubectl
+```
 
-执行 `apt-mark hold kubelet kubeadm kubectl` 命令命令防止标准的 `apt full-upgrade` 更新这些包。
+执行`apt-mark hold kubelet kubeadm kubectl`命令防止标准的`apt full-upgrade`更新这些包。
 
-下一个命令 `kubeadm init` 初始化控制面。以下显示了 `/etc/kubernetes/kubeadm-init.yaml` 的内容：
+下一个命令`kubeadm init`初始化控制面。以下显示了`/etc/kubernetes/kubeadm-init.yaml`的内容：
 
 ```yaml
 ---
@@ -1992,25 +1899,23 @@ kind: KubeletConfiguration
 serverTLSBootstrap: true
 ```
 
-为了初始化集群，我们在 `/etc/kubernetes/kubeadm-init.yaml` 创建此文件，然后运行 `kubeadm init`。该命令设置控制面并生成必要的证书。控制面准备绪后，`kubeadm` 将输出一个加入命令，我们将用它将工作节点加入集群。
+为了初始化集群，我们在`/etc/kubernetes/kubeadm-init.yaml`创建此文件，然后运行`kubeadm init`。该命令设置控制面并生成必要的证书。控制面准备就绪后，`kubeadm`将输出一个加入命令，我们将用它将工作节点加入集群。
 
+`certificateKey`配置一个密钥，其他节点将使用该密钥访问 API 服务器的证书。这是为了确保我们高可用集群中的所有 API 服务器实例都能使用相同的证书。在生产集群中，请保持其机密。
 
+`networking`集群中的所有容器无论运行在什么宿主机上，都会从`podSubnet`获取 IP 地址。稍后，我们将安装网络驱动程序，确保集群中所有主机上的每个容器都能进行通信。
 
+`controlPlaneEndpoint`API 服务器的外部地址。对于高可用集群，此 IP 地址需要能够到达任何 API 服务器实例，而不仅仅是第一个。
 
+`serverTLSBootstrap`指令 kubelet 使用控制器的证书权威机构（CA）来请求服务器证书。
 
-`certificateKey` 配置一个密钥，其他节点将使用该密钥访问 API 服务器的证书。这是为了确保我们高可用集群中的所有 API 服务器实例都能使用相同的证书。在生产集群中，请保持其机密。
-
-`networking` 集群中的所有容器无论运行在什么宿主机上，都会从 `podSubnet` 获取 IP 地址。稍后，我们将安装网络驱动程序，确保集群中所有主机上的每个容器都能进行通信。
-
-`controlPlaneEndpoint` API 服务器的外部地址。对于高可用集群，此 IP 地址需要能够到达任何 API 服务器实例，而不仅仅是第一个。
-
-`serverTLSBootstrap` 指令 kubelet 使用控制器的证书权威机构（CA）来请求服务器证书。
-
-`apiVersion` 和 `kind` 字段会出现在每个 Kubernetes YAML 文件中。`apiVersion` 字段定义了一组相关的 Kubernetes 资源，包括版本号。`kind` 字段则用于在该组内选择特定的资源类型。这不仅允许 Kubernetes 项目和其他供应商随着时间的推移添加新的资源组，还允许在维护向后兼容的同时更新现有的资源规范。
+`apiVersion`和`kind`字段会出现在每个 Kubernetes YAML 文件中。`apiVersion`字段定义了一组相关的 Kubernetes 资源，包括版本号。`kind`字段则用于在该组内选择特定的资源类型。这不仅允许 Kubernetes 项目和其他供应商随着时间的推移添加新的资源组，还允许在维护向后兼容的同时更新现有的资源规范。
 
 ## 高可用集群
 
-`controlPlaneEndpoint` 字段用于配置高可用集群的最重要要求：一个可以到达所有 API 服务器的 IP 地址。在初始化集群时，我们需要立即建立此 IP 地址，因为它用于生成证书，客户端将通过这些证书验证 API 服务器的身份。提供集群范围 IP 地址的最佳方法取决于集群运行的位置；例如，在云环境中，使用提供商的内置功能（如 Amazon Web Services 中的弹性负载均衡器 (ELB) 或 Azure 负载均衡器）是最好的。
+
+
+`controlPlaneEndpoint` 字段用于配置高可用集群的最重要要求：一个可以到达所有 API 服务器的 IP 地址。在初始化集群时，我们需要立即建立此 IP 地址，因为它用于生成证书，客户端将通过这些证书验证 API 服务器的身份。提供集群范围 IP 地址的最佳方法取决于集群运行的位置；例如，在云环境中，使用提供商的内置功能（如 Amazon Web Services 中的弹性负载均衡器（ELB）或 Azure 负载均衡器）是最好的。
 
 由于两种不同环境的性质，本书中的示例在配合 Vagrant 运行时使用 `kube-vip`，在 Amazon Web Services 中运行时使用 `ELB`。示例文档中的顶层 `README.md` 文件包含更多细节。安装和配置是自动完成的，因此无需额外配置。我们只需要使用 `192.168.61.10:6443`，并预期流量将到达运行在 `host01` 到 `host03` 上的任何 API 服务器实例。
 
@@ -2021,7 +1926,7 @@ root@host01:~# /usr/bin/kubeadm init \
   --config /etc/kubernetes/kubeadm-init.yaml --upload-certs
 ```
 
-`--config` 选项指向我们之前过的 YAML 配置文件 (`kubeadm-init.yaml`)，而 `--upload-certs` 选项告诉 `kubeadm` 它应该将 API 服务器的证书上传到集群的分布式存储中。其他控制平面节点在加入集群时可以下载这些证书，允许所有 API 服务器实例使用相同的证书，以便客户端信任它们。证书使用我们提供的 `certificateKey` 进行加密，这意味着其他节点需要此密钥来解密它们。
+`--config` 选项指向我们之前使用的 YAML 配置文件（`kubeadm-init.yaml`），而 `--upload-certs` 选项告诉 `kubeadm` 它应该将 API 服务器的证书上传到集群的分布式存储中。其他控制平面节点在加入集群时可以下载这些证书，允许所有 API 服务器实例使用相同的证书，以便客户端信任它们。证书使用我们提供的 `certificateKey` 进行加密，这意味着其他节点需要此密钥来解密它们。
 
 `kubeadm init` 命令在 `host01` 上初始化控制平面组件。这些组件运行在容器中并由 `kubelet` 服务管理，这使得它们很容易升级。将下载多个容器镜像，因此该命令可能需要一段时间，这取决于你的虚拟机的速度和互联网连接。
 
@@ -2031,7 +1936,7 @@ root@host01:~# /usr/bin/kubeadm init \
 
 以下是 `host02` 带有特定设置的 YAML 配置文件：
 
-`kubeadm-join.yaml (host02)*
+`kubeadm-join.yaml (host02)`
 
 ```
 ---
@@ -2070,9 +1975,9 @@ root@host02:~# /usr/bin/kubeadm join --config /etc/kubernetes/kubeadm-init.yaml
 
 当此完成后，我们将拥有一个高可用集群，控制平面位于三个单独主机上。然而，我们还没有任何工作节点。让我们解决这个问题。
 
-我们将首先作为工作节点加入 `host04`并在 `host04` 上运行完全相同的 `kubeadm join` 命令，但 YAML 文件会有所不同。
+我们将首先作为工作节点加入 `host04` 并在 `host04` 上运行完全相同的 `kubeadm join` 命令，但 YAML 文件会有所不同。
 
-*kubeadm-join.yaml (host04)*
+`kubeadm-join.yaml (host04)`
 
 ```
 ---
@@ -2099,7 +2004,7 @@ nodeRegistration:
 root@host04:~# /usr/bin/kubeadm join --config /etc/kubernetes/kubeadm-join.yaml
 ```
 
-此命令完成得快一点，因为它不需要下载控制平面容器镜像并运行它们。我们现在集群中有四个节点，可以通过通过返回 `host01` 运行 `kubectl` 来验证：
+此命令完成得快一点，因为它不需要下载控制平面容器镜像并运行它们。我们现在集群中有四个节点，可以通过返回 `host01` 运行 `kubectl` 来验证：
 
 ```
 root@host01:~# export KUBECONFIG=/etc/kubernetes/admin.conf
@@ -2111,10 +2016,7 @@ host03   NotReady   control-plane...
 host04   NotReady   <none>       ...
 ```
 
-第一个命令设置了一个环境变量，告诉 `kubectl` 使用哪个配置文件。`/etc/kubernetes/admin.conf` 文件是由 `kubeadm` 在初始化 `host01` 作为控制平面节点时自动创建的。该文件告诉 `kubectl` 使用哪个 API 服务器 地址、使用什么证书来验证安全连接以及如何进行身份验证。
-
-
-
+第一个命令设置了一个环境变量，告诉 `kubectl` 使用哪个配置文件。`/etc/kubernetes/admin.conf` 文件是由 `kubeadm` 在初始化 `host01` 作为控制平面节点时自动创建的。该文件告诉 `kubectl` 使用哪个 API 服务器地址、使用什么证书来验证安全连接以及如何进行身份验证。
 
 这四个节点目前应该报告状态为 `NotReady`。让我们运行 `kubectl describe` 命令来获取节点详情：
 
@@ -2131,7 +2033,7 @@ Conditions:
 
 我们还没有为 Kubernetes 集群安装网络驱动程序，因此，所有节点都报告 `NotReady` 状态，这意味着它们将不会接受常规应用程序工作负载。Kubernetes 通过在节点配置中放置 `taint`（污点）来表达这一点。污点限制了哪些内容可以被调度到某个节点上。我们可以使用 `kubectl` 来列出节点上的污点：
 
-``````
+```
 root@host01:~# kubectl get node -o json | \
   jq '.items[]|.metadata.name,.spec.taints[]'
 "host01"
@@ -2170,7 +2072,7 @@ root@host01:~# kubectl get node -o json | \
 
 #### 网络驱动程序
 
-Kubernetes 网络基于容器网络接口 (CNI) 标准。任何人都可以通过实现该标准为 Kubernetes 构建新的网络驱动程序，因此，Kub 网络驱动程序有多种选择。我们将在第 8 章 中演示不同的网络插件，但书中的大多数集群使用 Calico 网络驱动程序，因为它是许多 Kubernetes 平台的默认选择。
+Kubernetes 网络基于容器网络接口（CNI）标准。任何人都可以通过实现该标准为 Kubernetes 构建新的网络驱动程序，因此，Kubernetes 网络驱动程序有多种选择。我们将在第 8 章中演示不同的网络插件，但书中的大多数集群使用 Calico 网络驱动程序，因为它是许多 Kubernetes 平台的默认选择。
 
 首先，下载 Calico 的主要 YAML 配置文件：
 
@@ -2182,7 +2084,7 @@ root@host01:/etc/kubernetes/components# curl -L -O $calico_url
 
 `-L` 告诉 `curl` 跟踪任何 HTTP 重定向，而 `-O` 告诉 `curl` 使用与 URL 相同的文件名保存内容。`calico_url` 环境变量的值是在 `k8s-ver` 脚本中设置的，该脚本还指定了 Kubernetes 版本。这是至关重要的，因为 Calico 对我们运行的特定 Kubernetes 版本敏感，因此选择兼容的值非常重要。
 
-主要的 YAML 配置被写入本地文件 `tigera-operator.yaml`。这指的是初始安装是一个 Kubernetes Operator，随后它会创建所有其他集群资源来安装 Calico。我们将在第 17 章 中探索运算符。
+主要的 YAML 配置被写入本地文件 `tigera-operator.yaml`。这指的是初始安装是一个 Kubernetes Operator，随后它会创建所有其他集群资源来安装 Calico。我们将在第 17 章中探索运算符。
 
 除了这个主要的 YAML 配置外，本章的自动化脚本添加了一个名为 `custom-resources.yaml` 的文件，它为我们的示例集群提供了必要的配置。现在我们可以告诉 Kubernetes API 服务器将这些文件中的所有资源应用到集群中：
 
@@ -2225,21 +2127,19 @@ root@host01:/etc/kubernetes/components# kubectl -n calico-system \
 }
 ```
 
-`-n` 选项选择了 calico-system `Namespace`。命名空间是在集群上隔离 Kubernetes 资源的方式，出于安全考虑以及避免命名冲突。同样如之前，我们请求 JSON 输出并使用 `jq` 选择感兴趣的字段。如果你想查看资源的完整配置，请在不带 `jq` 的情况下使用 `-o=json`。
+`-n` 选项选择了 `calico-system` `Namespace`。命名空间是在集群上隔离 Kubernetes 资源的方式，出于安全考虑以及避免命名冲突。同样如之前，我们请求 JSON 输出并使用 `jq` 选择感兴趣的字段。如果你想查看资源的完整配置，请在不带 `jq` 的情况下使用 `-o=json`。
 
-这个 DaemonSet 有三个忍度，其中第二个一个提供了我们需要的行为。它告诉 Kubernetes 调度器，即使节点带有 `NoSchedule` 污点也可以继续调度它。Calico 随后可以在节点就绪之前启动，一旦它运行，节点状态就会变为 `Ready`，以便调度常规应用程序容器。控制面组件需要类似的忍度，以便在显示 Ready 之前运行。
+这个 DaemonSet 有三个忍度，其中第二个提供了我们需要的行为。它告诉 Kubernetes 调度器，即使节点带有 `NoSchedule` 污点也可以继续调度它。Calico 随后可以在节点就绪之前启动，一旦它运行，节点状态就会变为 `Ready`，以便调度常规应用程序容器。控制面组件需要类似的忍度，以便在显示 Ready 之前运行。
 
 #### 安装存储
 
-集群节点已就绪，所以如果我们部署一个常规应用程序，它的容器将会运行。然而，需要持久存储的应用程序将无法启动，因为集群还没有存储驱动程序。就像网络驱动一样，Kubernetes 有多种存储驱动可用。容器存储接口 (CSI) 提供了存储驱动与 Kubernetes 工作所需的标准。我们将使用来自 Rancher 的 Longhorn 存储驱动；它很容易安装，不需要任何底层硬件（如额外的块设备或云存储的访问）。
+集群节点已就绪，所以如果我们部署一个常规应用程序，它的容器将会运行。然而，需要持久存储的应用程序将无法启动，因为集群还没有存储驱动程序。就像网络驱动一样，Kubernetes 有多种存储驱动可用。容器存储接口（CSI）提供了存储驱动与 Kubernetes 工作所需的标准。我们将使用来自 Rancher 的 Longhorn 存储驱动；它很容易安装，不需要任何底层硬件（如额外的块设备或云存储的访问）。
 
 Longhorn 使用我们之前安装的 iSCSI 和 NFS 软件。它期望我们所有的节点都启用并运行 `iscsid` 服务，所以让我们确保在所有节点上都是如此：
 
 ```
 root@host01:/etc/kubernetes/components# k8s-all systemctl enable --now iscsid
 ```
-
-
 
 我们现在可以在集群上安装 Longhorn 了。安装 Longhorn 的过程与 Calico 非常相似。首先下载 Longhorn 的 YAML 配置：
 
@@ -2255,17 +2155,19 @@ root@host01:/etc/kubernetes/components# curl -LO $longhorn_url
 root@host01:/etc/kubernetes/components# kubectl apply -f longhorn.yaml
 ```
 
-与之前一样，`kubectl apply` 确保 YAML 文件中的资源被应用到集群，并根据需要创建或更新它们。`kubectl apply` 命令支持将 URL 作为其应用到集群的资源源，但对于这三次安装，我们分别运行了单独的 `curl` 命令，因为在本地保留一份已应用到集群的副本会更方便。。
+
+
+与之前一样，`kubectl apply` 确保 YAML 文件中的资源被应用到集群，并根据需要创建或更新它们。`kubectl apply` 命令支持将 URL 作为其应用到集群的资源源，但对于这三次安装，我们分别运行了单独的 `curl` 命令，因为在本地保留一份已应用到集群的副本会更方便。
 
 Longhorn 现在已安装在集群上，我们将在本章的后续部分通过探索集群来验证这一点。
 
-#### Ingress 控制器 (Ingress Controller)
+#### Ingress 控制器（Ingress Controller）
 
 我们现在已经有了网络和存储，但网络仅允许从集群内部访问容器。我们需要另一个服务将我们的容器化应用暴露到集群外部。最简单的方法是使用 Ingress 控制器。正如我们在第 9 章中描述的，Ingress 控制器监控 Kubernetes 集群中的 `Ingress` 资源并路由网络流量。
 
 我们首先下载 ingress 控制器的 YAML 配置：
 
-```
+```bash
 root@host01:/etc/kubernetes/components# curl -Lo ingress-controller.yaml
   $ingress_url
 ```
@@ -2274,7 +2176,7 @@ root@host01:/etc/kubernetes/components# curl -Lo ingress-controller.yaml
 
 使用 `kubectl` 安装 ingress 控制器：
 
-```
+```bash
 root@host01:/etc/kubernetes/components# kubectl apply -f ingress-controller.yaml
 ```
 
@@ -2286,7 +2188,7 @@ root@host01:/etc/kubernetes/components# kubectl apply -f ingress-controller.yaml
 
 `ingress-patch.yaml`
 
-```
+```yaml
 ---
 apiVersion: v1
 kind: Service
@@ -2305,7 +2207,7 @@ spec:
 
 要补丁该服务，我们使用 `kubectl patch` 命令：
 
-```
+```bash
 root@host01:/etc/kubernetes/components# kubectl patch -n ingress-nginx \
   service/ingress-nginx-controller --patch-file ingress-patch.yaml
 service/ingress-nginx-controller patched
@@ -2313,20 +2215,20 @@ service/ingress-nginx-controller patched
 
 要应用注解，使用 `kubectl annotate` 命令：
 
-```
+```bash
 root@host01:/etc/kubernetes/components# kubectl annotate -n ingress-nginx \
   ingressclass/nginx ingressclass.kubernetes.io/ingress-class="true"
 ```
 
 应用注解后，Kubernetes 会报告该资源的变化已应用。
 
-#### 监控服务器 (Metrics Server)
+#### 监控服务器（Metrics Server）
 
 我们的最后一个插件是 `metrics server`，它从节点收集利用率指标，启用自动扩展。为了做到这一点，它需要连接到 `kubelet`。为了安全起见，`kubelet` 使用客户端证书向 API 服务器进行身份验证；这些证书在启动时已自动批准。我们需要批准的请求是用于 kubelet-serving 的证书，当 metrics server 等客户端连接到 kubelet 时使用。一旦请求被批准，控制器管理器就会对其签名。`kubelet` 然后将收集证书并开始使用。
 
 在设置期间，`kubelet` 在每个节点创建了证书请求，但这些请求并未自动批准。让我们找到这些请求：
 
-```
+```text
 root@host01:/etc/kubernetes/components# kubectl get csr
 NAME                                SIGNERNAME                           ... CONDITION
 csr-sgrwz ... kubernetes.io/kubelet-serving               ... Pending
@@ -2343,7 +2245,7 @@ csr-vr27n ... kubernetes.io/kubelet-serving               ... Pending
 
 我们可以通过查询所有 kubelet-serving 请求的名称并将这些名称传递给 `kubectl certificate approve` 来一次性批准所有请求：
 
-```
+```bash
 root@host01:/etc/kubernetes/components# kubectl certificate approve \$(kubectl
   get csr --field-selector signerName=kubernetes.io/kubelet-serving -o name)
 certificatesigningrequest.certificates.k8s.io/csr-sgrwz approved
@@ -2351,7 +2253,7 @@ certificatesigningrequest.certificates.k8s.io/csr-sgrwz approved
 
 我们现在可以通过下载并应用 YAML 配置来安装监控服务器：
 
-```
+```bash
 root@host01:/etc/kubernetes/components# curl -Lo metrics-server.yaml \$metrics_url
 root@host01:/etc/kubernetes/components# kubectl apply -f metrics-server.yaml
 ...
@@ -2367,11 +2269,7 @@ root@host01:~#
 
 我们将使用 `crictl`（我们在第一部分中探索运行容器时使用的相同命令）来查看 host01 上运行了哪些容器：
 
-
-
-
-
-```
+```text
 root@host01:~# crictl ps
 CONTAINER       ... STATE    NAME                       ...
 25c63f29c1442   ... Running  longhorn-csi-plugin        ...
@@ -2398,7 +2296,7 @@ eb51d9ec0f2fc   ... Running  calico-kube-controllers    ...
 
 尽管我们刚刚设置了集群，但它已经包含了几个命名空间：
 
-```
+```text
 root@host01:~# kubectl get namespaces
 NAME              STATUS   AGE
 calico-system     Active   50m
@@ -2416,14 +2314,14 @@ tigera-operator   Active   50m
 
 如果我们尝试在默认命名空间中列出 Pod，会发现目前还没有任何 Pod：
 
-```
+```text
 root@host01:~# kubectl get pods
 No resources found in default namespace.
 ```
 
 到目前为止，由于我们安装了集群基础设施组件，它们已经在其他命名空间中创建了。这样，当我们配置普通用户账户时，就可以防止这些用户查看或编辑集群基础设施。Kubernetes 基础设施组件都安装在了 `kube-system` 命名空间中：
 
-```
+```text
 root@host01:~# kubectl -n kube-system get pods
 NAME                             READY   STATUS    ...
 coredns-558bd4d5db-7krwr         1/1     Running   ...
@@ -2434,7 +2332,7 @@ kube-apiserver-host01            1/1     Running   ...
 
 我们将在第 11 章中介绍控制平面组件。现在，让我们只探索控制平面 Pod 之一，运行在 host01 上的 API server。我们可以使用 `kubectl describe` 获取此 Pod 的所有细节：
 
-```
+```text
 root@host01:~# kubectl -n kube-system describe pod kube-apiserver-host01
 Name:                 kube-apiserver-host01
 Namespace:            kube-system
@@ -2452,7 +2350,7 @@ Containers:
 
 让我们也验证 Calico 是否按预期部署到我们的集群：
 
-```
+```text
 root@host01:~# kubectl -n calico-system get pods
 NAME                                       READY   STATUS    ...
 calico-kube-controllers-7f5888d-...   2/2     Running   ...
@@ -2467,7 +2365,9 @@ calico-typha-jrd6-7f58-...               1/1     Running   ...
 
 之前我们看到 Calico 安装了一个 DaemonSet。Kubernetes 使用该 DaemonSet 为每个节点自动创建一个 `calico-node`。正如 Kubernetes 本身一样，Calico 也使用独立的控制平面来处理网络。最后，我们将看到 Longhorn 的容器：
 
-```
+
+
+```bash
 root@host01:~# kubectl -n longhorn-system get pods
 NAME                                       READY   STATUS   RESTARTS   AGE
 engine-image-ei-611d1496-8q5f             1/1     Running   0          31m
@@ -2475,18 +2375,18 @@ longhorn-csi-plugin-8vkr                  2/2     Running   0          31m
 longhorn-manager-dl9sb                     1/1     Running   0          32m
 ```
 
-就像 Calico 一样，Longhorn 使用 DaemonSet... 当 Kubernetes 需要时创建存储。
+就像 Calico 一样，Longhorn 使用 `DaemonSet`……当 Kubernetes 需要时创建存储。
 
 我们为这个集群投入了大量精力，如果不运行一个应用程序就结束本章太可惜了。在下一章中，我们将查看许多运行容器的方法，但让我们先在集群中快速运行一个 Nginx 服务器：
 
-```
+```bash
 root@host01:~# kubectl run nginx --image=nginx
 pod/nginx created
 ```
 
-这看起来像是一个临时命令，但在底层，`kubectl` 正在使用我们指定的名称和镜像创建一个 Pod 资源，然后将其应用到集群中。让我们检查默认命名空间：
+这看起来像是一个临时命令，但在底层，`kubectl` 正在使用我们指定的名称和镜像创建一个 `Pod` 资源，然后将其应用到集群中。让我们检查默认命名空间：
 
-```
+```bash
 root@host01:~# kubectl get pods -o wide
 NAME    READY   STATUS    ... IP               NODE  ...
 nginx   1/1     Running   ... 172.31.89.203   host02 ...
@@ -2494,22 +2394,19 @@ nginx   1/1     Running   ... 172.31.89.203   host02 ...
 
 我们使用了 `-o wide` 来查看 Pod 的额外信息，包括其 IP 地址和调度位置，每次创建 Pod 时都可能不同。在这种情况下，Pod 被调度到了 `host02`，说明我们成功允许常规应用程序容器部署到我们的控制平面节点。IP 地址来自我们配置的 Pod CIDR，Calico 会自动分配它。
 
-Calico 还负责处理路由，以便我们可以从集群中的任何容器以及主机网络访问该 Pod。让我们验证一下，从普通的 ping 开始：
+Calico 还负责处理路由，以便我们可以从集群中的任何容器以及主机网络访问该 Pod。让我们验证一下，从普通的 `ping` 开始：
 
-```
+```bash
 root@host01:~# ping -c 1 172.31.89.203
 PING 172.31.89.203 (172.31.89.203) 56(84) bytes of data.
 64 bytes from 172.31.89.203: icmp_seq=1 ttl=63 time=0.848 ms
 ```
 
-
-
-
 请用此处显示的 IP 地址替换为你 Pod 的 IP 地址。
 
 我们还可以使用 `curl` 来验证 NGINX Web 服务器是否正常工作：
 
-```
+```bash
 root@host01:~# curl http://172.31.89.203
 ...
 <title>Welcome to nginx!</title>
@@ -2524,11 +2421,11 @@ Kubernetes 集群已运行，并准备好为我们部署应用程序。Kubernete
 
 现在我们已经有了一个高可用集群，可以查看如何向 Kubernetes 部署应用程序。我们将探索创建可扩展、可靠应用程序时需要创建的一些关键 Kubernetes 资源。这一过程将为详细探索 Kubernetes 提供基础，包括理解当我们的应用程序运行不符合预期时发生了什么，以及如何调试应用程序或 Kubernetes 集群中的问题。
 
-## 7. 将容器部署到 KUBERNETES
+## 7. 将容器部署到 Kubernetes
 
 ![image](img/common01.jpg)
 
-我们现在已准备好在在我们运行的 Kubernetes 集群上开始运行容器。由于 Kubernetes 具有声明式 API，我们将创建各种资源来运行它们，并将监控集群以查看 Kubernetes 对每种类型的资源做了什么。
+我们现在已准备好在我们运行的 Kubernetes 集群上开始运行容器。由于 Kubernetes 具有声明式 API，我们将创建各种资源来运行它们，并将监控集群以查看 Kubernetes 对每种类型的资源做了什么。
 
 不同的容器有不同的用例。某些容器可能需要多个相同的实例并带有自动伸缩，以便在负载下表现良好。其他容器可能仅为了运行一次性命令而存在。还有一些可能需要固定的顺序，以便选择单个主实例并向备用实例提供受控的故障转移。Kubernetes 为这些每个用例提供了不同的 `controller` 资源类型。我们将逐一查看，但将从其中最基础的 `Pod` 开始，所有这些用例都会用到它。
 
@@ -2550,13 +2447,13 @@ Pod 是 Kubernetes 中最基础的资源，也是我们运行容器的方式。�
 
 **注意**
 
-本书的示例仓库位于 [`github.com/book-of-kubernetes/examples`](https://github.com/book-of-kubernetes/examples)。请参阅第 xx 页 的“运行示例”获取设置的详情。
+本书的示例仓库位于 [`github.com/book-of-kubernetes/examples`](https://github.com/book-of-kubernetes/examples)。请参阅第 xx 页的“运行示例”获取设置的详情。
 
 本章的自动化脚本执行了包含三个节点的完整集群安装，这些节点运行控制平面和平普通应用程序，为测试提供了最小的高可用集群。自动化脚本还创建了一些 Kubernetes 资源的 YAML 文件。这里有一个创建一个运行 NGINX 的 Pod 的基础 YAML 资源：
 
 `nginx-pod.yaml`
 
-```
+```yaml
 ---
 apiVersion: v1
 kind: Pod
@@ -2576,14 +2473,14 @@ Pods 是 Kubernetes `core` API 的一部分，因此我们只需为 `apiVersion`
 
 让我们将此 Pod 添加到集群。自动化脚本将文件添加到了 `/opt`，因此我们可以从 `host01` 如下进行操作：
 
-```
+```bash
 root@host01:~# kubectl apply -f /opt/nginx-pod.yaml
 pod/nginx created
 ```
 
 在列表 7-1 中，我们可以检查 Pod 的状态。
 
-```
+```bash
 root@host01:~# kubectl get pods -o wide
 NAME    READY   STATUS    RESTARTS   AGE     IP               NODE
 nginx   1/1     Running   0          2m26s   172.31.25.202   host03
@@ -2597,7 +2494,7 @@ nginx   1/1     Running   0          2m26s   172.31.25.202   host03
 
 我们在命令中加入了 `-o wide` 以查看 IP 地址和节点分配。Kubernetes 为我们管理这些。在这种情况下，Pod 被调度到了 `host03`，因此我们需要去那里查看容器：
 
-```
+```bash
 root@host03:~# crictl pods --name nginx
 POD ID         CREATED         STATE  NAME   NAMESPACE  ...
 9f1d6e0207d7e  19 minutes ago  Ready  nginx  default    ...
@@ -2607,7 +2504,7 @@ POD ID         CREATED         STATE  NAME   NAMESPACE  ...
 
 如果我们收集 Pod ID，也可以看到容器：
 
-```
+```bash
 root@host03:~# POD_ID=$(crictl pods -q --name nginx)
 root@host03:~# crictl ps --pod $POD_ID
 CONTAINER      IMAGE          CREATED         STATE    NAME
@@ -2618,12 +2515,9 @@ CONTAINER      IMAGE          CREATED         STATE    NAME
 
 #### Pod 详情和日志
 
-
-
-
 在第 6 章中，我们看到了如何使用 `kubectl describe` 来查看集群节点的状态和事件日志。我们可以使用相同的命令来查看其他 Kubernetes 资源的状态和配置细节。以下是我们的 NGINX Pod 的事件日志：
 
-```
+```bash
 root@host01:~# kubectl describe pod nginx
  Name:         nginx
  Namespace: ➊ default 
@@ -2653,7 +2547,7 @@ Kubernetes 在部署容器时会执行几个步骤。首先，它需要将其调
 
 容器启动后，`kubelet` 会收集标准输出和标准错误。通过使用 `kubectl logs` 命令查看这些输出：
 
-```
+```bash
 root@host01:~# kubectl logs nginx
 ...
 2021/07/13 22:37:03 [notice] 1#1: start worker processes
@@ -2667,41 +2561,40 @@ root@host01:~# kubectl logs nginx
 
 我们已经完成了 NGINX Pod 的操作，现在来清理它吧：
 
-```
+```bash
 root@host01:~# kubectl delete -f /opt/nginx-pod.yaml
 pod "nginx" deleted
 ```
 
 我们可以使用相同的 YAML 配置文件来删除 Pod，当我们在单个文件中定义了多个 Kubernetes 资源时，这非常方便，因为一个命令就会删除所有它们。`kubectl` 命令使用文件中定义的每个资源的名称来执行删除操作。
 
-## 部署 (Deployments)
+## 部署（Deployments）
 
 要运行容器，我们需要一个 Pod，但这并不意味着我们通常想直接创建 Pod。当我们直接创建 Pod 时，我们无法获得 Kubernetes 提供的所有扩展性和故障转移能力，因为 Kubernetes 只运行一个 Pod 实例。该 Pod 仅在创建时被分配给节点，即使节点失败也不会重新分配。
 
 为了获得扩展性和故障转移能力，我们需要创建一个控制器来为我们管理 Pod。我们将查看多个可以运行 Pod 的控制器，但让我们从最常见的开始：`Deployment`。
 
-#### 创建 Deployment
+### 创建 Deployment
 
-Deployment 管理一个或多个*相同*的 Kubernetes Pod。当我们创建一个 Deployment 时，我们提供一个 Pod 模板。然后，Deployment 在 `ReplicaSet` 的帮助下创建与该模板匹配的 Pod。
+Deployment 管理一个或多个相同的 Kubernetes Pod。当我们创建一个 Deployment 时，我们提供一个 Pod 模板。然后，Deployment 在 `ReplicaSet` 的帮助下创建与该模板匹配的 Pod。
 
-##### 部署与副本集
+#### 部署与副本集
 
 Kubernetes 随着时间的推移演变成了它的控制器资源。第一种控制器类型 `ReplicationController` 只提供基本功能。它被 `ReplicaSet` 取代，后者在识别要管理哪些 Pod 方面有了改进。
 
 用 `ReplicaSets` 替换 `ReplicationControllers` 的部分原因在于，`ReplicationControllers` 变得越来越复杂，导致代码难以维护。新方法在 `ReplicaSets` 和 `Deployments` 之间划分了控制职责。`ReplicaSets` 负责基本的 Pod 管理，包括监控 Pod 状态和执行故障转移。`Deployments` 负责跟踪由于配置更改或容器镜像更新导致的 Pod 模板更改。`Deployments` 和 `ReplicaSets` 协同工作，但 `Deployment` 创建它自己的 `ReplicaSet`。
 
-
-
-
-```
+```bash
 root@host01:~# kubectl get replicasets
 NAME               DESIRED   CURRENT   READY   AGE
-nginx-6799fc88d8   3         3         3       30s
+nginx-6799fc88d8   3         3       3       30s
 ```
 
 虽然我们通常只与 `Deployments` 交互，但了解 `ReplicaSet` 非常重要，因为在创建 `Pods` 时遇到的某些特定错误只会在 `ReplicaSet` 的事件日志中报告。
 
-`ReplicaSet` 和 `Pod` 名称上的 `nginx` 前缀完全是为了方便。`Deployment` 并不使用名称来匹配它的 `Pods`。相反，它使用它的选择器（selector）来匹配 `Pod` 上的标签（labels）。如果我们对其中三个 `Pods` 之一运行 `kubectl describe`，就可以这些标签：
+
+
+`ReplicaSet` 和 `Pod` 名称上的 `nginx` 前缀完全是为了方便。`Deployment` 并不使用名称来匹配它的 `Pods`。相反，它使用选择器（selector）来匹配 `Pod` 上的标签（labels）。如果我们对其中三个 `Pods` 之一运行 `kubectl describe`，就可以看到这些标签：
 
 ```
 root@host01:~# kubectl describe pod nginx-6799fc88d8-6vn44
@@ -2767,7 +2660,7 @@ nginx-6799fc88d8-kk7r6   1/1     Running   0        ➊ 5s
 nginx-6799fc88d8-sh8qs   1/1     Running   0          8m22s
 ```
 
-第一条命令将副本数量设置为四个。结果是，Kub 需要启动一个新的完全相同的 `Pod` 来满足我们请求的数量 ➊。我们可以通过更新 YAML 文件并重新运行 `kubectl apply` 来伸缩 `Deployment`，或者使用 `kubectl scale` 命令直接编辑 `Deployment`。无论何种方式，这种方法都是让 `Deployment` 更新声明状态。同样，将 `Deployment` 缩小规模会导致 `Pods` 被自动删除：
+第一条命令将副本数量设置为四个。结果是，Kubernetes 需要启动一个新的完全相同的 `Pod` 来满足我们请求的数量 ➊。我们可以通过更新 YAML 文件并重新运行 `kubectl apply` 来伸缩 `Deployment`，或者使用 `kubectl scale` 命令直接编辑 `Deployment`。无论何种方式，这种方法都是让 `Deployment` 更新声明状态。同样，将 `Deployment` 缩小规模会导致 `Pods` 被自动删除：
 
 ```
 root@host01:~# kubectl scale --replicas=2 deployment nginx
@@ -2781,11 +2674,11 @@ nginx-6799fc88d8-sh8qs   1/1     Running   0          8m22s
 
 ### 自动伸缩
 
-对于接收真实请求的应用，持续监控应用程序的每个组件将非常繁琐。在这种情况下，“水平*（horizontal）指的是伸缩器可以更新副本数量这一事实。
+对于接收真实请求的应用，持续监控应用程序的每个组件将非常繁琐。在这种情况下，“水平”（horizontal）指的是伸缩器可以更新副本数量这一事实。
 
 要配置自动伸缩，我们创建一个引用 `Deployment` 的新资源。集群随后监控 `Pods` 使用的资源并重新配置 `Deployment`。我们可以使用 `kubectl autoscale` 命令为 `Deployment` 添加 `HorizontalAutoscaler`，但使用 YAML 文件以便将自动伸缩配置放在版本控制中会更好。这里是 YAML 文件：
 
-*nginx-scaler.yaml*
+`nginx-scaler.yaml`
 
 ```yaml
 ---
@@ -2817,10 +2710,7 @@ spec:
 
 自动伸缩器的版本 2 支持多个资源。每个资源都用于计算 `Pods` 期望数量的投票，并最大的数字胜出。对多个资源的支持需要更改 YAML 布局，这是 Kubernetes 维护者创建新资源版本的常见原因。
 
-
-
-
-我们通过其 API 资源组、类型（kind）和名称将 NGINX Deployment ➋ 指定为自动扩缩器的目标，这足以唯一标识 Kubernetes 集群中的任何资源。然后，我们告诉自动扩缩器监控属于 `Deployment` ➍ 的 `Pods` 的 CPU 利用率。从长期来看，自动扩缩器将努力使 `Pods` 的平均 CPU 利用率保持在 50% 左右，根据需要扩大或缩小。然而，副本数量永远不会超过我们指定的范围 ➌。
+我们通过其 API 资源组、类型（kind）和名称将 NGINX `Deployment` ➋ 指定为自动扩缩器的目标，这足以唯一标识 Kubernetes 集群中的任何资源。然后，我们告诉自动扩缩器监控属于 `Deployment` ➍ 的 `Pods` 的 CPU 利用率。从长期来看，自动扩缩器将努力使 `Pods` 的平均 CPU 利用率保持在 50% 左右，根据需要扩大或缩小。然而，副本数量永远不会超过我们指定的范围 ➌。
 
 让我们使用此配置创建自动扩缩器：
 
@@ -2867,7 +2757,7 @@ nginx-6799fc88d8-dcwx5   1/1     Running   0          15m
 
 `sleep-job.yaml`
 
-```
+```yaml
 ---
 apiVersion: batch/v1
 kind: Job
@@ -2921,7 +2811,7 @@ sleep-fgcnz              0/1     Completed   0          43s
 
 `sleep-cronjob.yaml`
 
-```
+```yaml
 apiVersion: batch/v1
 kind: CronJob
 metadata:
@@ -2940,9 +2830,9 @@ spec:
         restartPolicy: OnFailure
 ```
 
-`Job` 规格的所有内容都嵌入在 `jobTemplate` 字段中 ➋。在此基础上添加了一个 `schedule` ➊，它遵循 Unix cron 命令的标准格式。在这种情况下，`0 3 * * *` 表示每天凌晨 3:00 创建一个 Job。
+`Job` 规格的所有内容都嵌入在 `jobTemplate` 字段中 ➋。在此基础上添加了一个 `schedule` ➊，它遵循 Unix cron 命令的标准格式。在这种情况下，`0 3 * * *` 表示每天凌晨 3:00 创建一个 `Job`。
 
-Kubernetes 的设计原则之一是任何东西都可能随时故障。对于 `CronJob`，如果集群在 Job 调度期间出现问题，该 Job 可能无法调度，或者可能被调度两次，这意味着你应该注意以幂等的方式编写 `Jobs`。
+Kubernetes 的设计原则之一是任何东西都可能随时故障。对于 `CronJob`，如果集群在 `Job` 调度期间出现问题，该 `Job` 可能无法调度，或者可能被调度两次，这意味着你应该注意以幂等的方式编写 `Jobs`。
 
 如果我们创建这个 `CronJob`：
 
@@ -2951,7 +2841,9 @@ root@host01:~# kubectl apply -f /opt/sleep-cronjob.yaml
 cronjob.batch/sleep created
 ```
 
-它现在存在于集群中，但它不会立即创建 `Job` 或 `Pod`：
+它现在存在于集群中，但它不会立即创建 `Job` 或 `Pod`。
+
+
 
 ```
 root@host01:~# kubectl get jobs
@@ -2969,65 +2861,63 @@ sleep-fgcnz              0/1     Completed   0          2m23s
 
 到目前为止，我们查看的是创建相同 `Pods` 的控制器。在 `Deployments` 和 `Jobs` 中，我们并不真正关心哪个 `Pod` 是哪个，或者它部署在哪里，只要我们在正确的时间运行足够的实例即可。然而，这并不总是符合我们想要的行为。例如，尽管 `Deployment` 可以创建带有持久存储的 `Pods`，但存储必须是为每个新 `Pod` 全全新的，要么相同的存储必须在所有 `Pods` 之间共享。这与像数据库这样的“主从”架构并不契合。对于这些情况，我们希望特定的存储附加到特定的 `Pods` 上。
 
+同时，由于 `Pod` 可能会因为硬件故障或升级而发生，我们需要一种方法来管理 `Pod` 的替换，以确保每个 `Pod` 都连接到正确的存储上。这就是 `StatefulSet` 的目的。`StatefulSet` 从零开始用数字标识每个 `Pod`，每个 `Pod` 都会接收匹配的持久化存储。当 `Pod` 必须被替换时，新的 `Pod` 将分配相同的数字标识并挂载相同的存储。`Pod` 可以查看其主机名来确定自己的标识，因此 `StatefulSet` 既适用于固定主实例的情况，也适用于动态选择主实例的情况。
 
+在接下来的几个章节中，我们将探索更多与 Kubernetes `StatefulSets` 相关的细节，包括持久化存储和 `Services`。在本章中，我们将查看一个 `StatefulSet` 的基础示例，并在引入其他重要概念时在此基础上进行扩展。
 
-同时，由于 Pod 可能会因为硬件故障或升级而发生，我们需要一种方法来管理 Pod 的替换，以确保每个 Pod 都连接到正确的存储上。这就是 `StatefulSet` 的目的。`StatefulSet` 从零开始用数字标识每个 Pod，每个 Pod 都会接收匹配的持久化存储。当 Pod 必须被替换时，新的 Pod 将分配相同的数字标识并挂载相同的存储。Pod 可以查看其主机名来确定自己的标识，因此 `StatefulSet` 既适用于固定主实例的情况，也适用于动态选择主实例的情况。
-
-在接下来的几个章节中，我们将探索更多与 Kubernetes StatefulSets 相关的细节，包括持久化存储和 Services。在本章中，我们将查看一个 `StatefulSet` 的基础示例，并在引入其他重要概念时在此基础上进行扩展。
-
-对于这个简单的示例，让我们创建两个 Pod，并展示它们如何获得唯一的存储，且即使 Pod 被替换，这些存储也会保持在原位。我们将使用这个 YAML 资源：
+对于这个简单的示例，让我们创建两个 `Pod`，并展示它们如何获得唯一的存储，且即使 `Pod` 被替换，这些存储也会保持在原位。我们将使用这个 YAML 资源：
 
 `sleep-set.yaml`
 
 ```yaml
- ---
- apiVersion: apps/v1
- kind: StatefulSet
- metadata:
-    name: sleep
- spec:
-➊ serviceName: sleep 
-   replicas: 2
-   selector:
-     matchLabels:
-       app: sleep
-   template:
-     metadata:
-       labels:
-         app: sleep
-     spec:
-       containers:
-         - name: sleep
-           image: busybox
-           command: 
-             - "/bin/sleep"
-             - "3600"
-        ➋ volumeMounts: 
-             - name: sleep-volume
-               mountPath: /storagedir
-➌ volumeClaimTemplates: 
-     - metadata:
-         name: sleep-volume
-       spec:
-         storageClassName: longhorn
-         accessModes:
-           - ReadWriteOnce
-         resources:
-           requests:
-             storage: 10Mi
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: sleep
+spec:
+➊ serviceName: sleep
+  replicas: 2
+  selector:
+    matchLabels:
+      app: sleep
+  template:
+    metadata:
+      labels:
+        app: sleep
+    spec:
+      containers:
+        - name: sleep
+          image: busybox
+          command:
+            - "/bin/sleep"
+            - "3600"
+➋ volumeMounts:
+            - name: sleep-volume
+              mountPath: /storagedir
+➌ volumeClaimTemplates:
+    - metadata:
+        name: sleep-volume
+      spec:
+        storageClassName: longhorn
+        accessModes:
+          - ReadWriteOnce
+        resources:
+          requests:
+            storage: 10Mi
 ```
 
-与 `Deployment` 或 `Job` 相比，这里有几个重要的区别。首先，我们必须声明一个 `serviceName` 将此 `StatefulSet` 绑定到 Kubernetes Service ➊。该连接用于为每个 Pod 创建域名服务 (DNS) 条目。我们还必须为 `StatefulSet` 提供一个模板，用于请求持久化存储 ➌，然后告诉 Kubernetes 在我们的容器中挂载该存储 ➋。
+与 `Deployment` 或 `Job` 相比，这里有几个重要的区别。首先，我们必须声明一个 `serviceName` 将此 `StatefulSet` 绑定到 Kubernetes `Service` ➊。该连接用于为每个 `Pod` 创建域名服务 (DNS) 条目。我们还必须为 `StatefulSet` 提供一个模板，用于请求持久化存储 ➌，然后告诉 Kubernetes 在我们的容器中挂载该存储 ➋。
 
-自动化脚本安装的实际 `sleep-set.yaml` 文件包含了 sleep Service 的定义。我们将在 第 9 章 中详细介绍 Services。
+自动化脚本安装的实际 `sleep-set.yaml` 文件包含了 `sleep` `Service` 的定义。我们将在第 9 章中详细介绍 `Services`。
 
-让我们创建 sleep StatefulSet：
+让我们创建 `sleep` `StatefulSet`：
 
 ```bash
 root@host01:~# kubectl apply -f /opt/sleep-set.yaml
 ```
 
-`StatefulSet` 创建了两个 Pod：
+`StatefulSet` 创建了两个 `Pod`：
 
 ```bash
 root@host01:~# kubectl get statefulsets
@@ -3040,7 +2930,7 @@ sleep-0   1/1     Running   0          57s
 sleep-1   1/1     Running   0          32s
 ```
 
-每个 Pod 的持久化存储都是全新的，因此它们是为空的。让我们创建一些内容。最简单的方法是在容器内部使用 `kubectl exec`，这允许我们在容器内部运行命令，类似于 `crictl`。无论容器在哪个主机上，`kubectl exec` 命令都有效，即使我们是从集群外部连接到 Kubernetes API 服务器。
+每个 `Pod` 的持久化存储都是全新的，因此它们是为空的。让我们创建一些内容。最简单的方法是在容器内部使用 `kubectl exec`，这允许我们在容器内部运行命令，类似于 `crictl`。无论容器在哪个主机上，`kubectl exec` 命令都有效，即使我们是从集群外部连接到 Kubernetes API 服务器。
 
 让我们将每个容器的主机名写入文件并打印出来，以便验证其是否生效：
 
@@ -3055,7 +2945,7 @@ root@host01:~# kubectl exec sleep-1 -- /bin/cat /storagedir/myhost
 sleep-1
 ```
 
-现在，我们的每个 Pod 在其持久化存储中都有独特的内容。让我们删除一个 Pod，并验证它的替换者是否继承了前者的存储：
+现在，我们的每个 `Pod` 在其持久化存储中都有独特的内容。让我们删除一个 `Pod`，并验证它的替换者是否继承了前者的存储：
 
 ```bash
 root@host01:~# kubectl delete pod sleep-0
@@ -3069,15 +2959,15 @@ root@host01:~# kubectl exec sleep-0 -- /bin/cat /storagedir/myhost
 sleep-0
 ```
 
-删除 sleep-0 后，我们看到创建了一个同名的新 Pod，这与 `Deployment` 不同，后者会为每个新 Pod 生成一个随机名称。此外，对于这个新 Pod，我们之前创建的文件仍然存在，因为 `StatefulSet` 在旧 Pod 被删除时将相同的持久化存储挂载到了创建的新 Pod 上。
+删除 `sleep-0` 后，我们看到创建了一个同名的新 `Pod`，这与 `Deployment` 不同，后者会为每个新 `Pod` 生成一个随机名称。此外，对于这个新 `Pod`，我们之前创建的文件仍然存在，因为 `StatefulSet` 在旧 `Pod` 被删除时将相同的持久化存储挂载到了创建的新 `Pod` 上。
 
 ### Daemon Sets
 
-`DaemonSet` 控制器与 `StatefulSet` 之处在于 `DaemonSet` 也运行特定数量的 Pod，每个 Pod 都有唯一的标识。然而，`DaemonSet` 在每个节点上恰运行一个 Pod，这主要用于控制平面和插件组件。
+`DaemonSet` 控制器与 `StatefulSet` 之处在于 `DaemonSet` 也运行特定数量的 `Pod`，每个 `Pod` 都有唯一的标识。然而，`DaemonSet` 在每个节点上恰运行一个 `Pod`，这主要用于控制平面和插件组件。
 
 我们的集群已经安装了多个 `DaemonSets`，让我们看看正在运行的 `DaemonSet`。
 
-`DaemonSet` 位于 calico-system，所以我们指定：
+`DaemonSet` 位于 `calico-system`，所以我们指定：
 
 ```bash
 root@host01:~# kubectl get daemonsets
@@ -3102,7 +2992,7 @@ spec:
       k8s-app: calico-node
 ```
 
-该 `DaemonSet` 的选择器期望标签 `k8s-app` 设置 `calico-node`。我们可以利用此显示 `DaemonSet` 创建的 Pod：
+该 `DaemonSet` 的选择器期望标签 `k8s-app` 设置 `calico-node`。我们可以利用此显示 `DaemonSet` 创建的 `Pod`：
 
 ```bash
 root@host01:~# kubectl -n calico-system get pods \
@@ -3113,16 +3003,13 @@ calico-node-rcfk7   1/1     Running  host03 ...
 calico-node-wj876   1/1     Running  host02 ...
 ```
 
-`DaemonSet` 创建了三个 Pod，每个 Pod 都被分配到集群中的一个节点。如果我们向集群添加更多节点，`DaemonSet` 也会在新节点上调度 Pod。
+`DaemonSet` 创建了三个 `Pod`，每个 `Pod` 都被分配到集群中的一个节点。如果我们向集群添加更多节点，`DaemonSet` 也会在新节点上调度 `Pod`。
 
 ### 结语
 
-本章从普通集群用户的角度探索了 Kubernetes，通过创建控制器，由控制器创建带有容器的 Pod。掌握这些核心资源类型的知识对于构建我们的应用程序至关重要。同时，重要的是记住 Kubernetes 正在使用我们在在第一部分中探索的容器技术。
+本章从普通集群用户的角度探索了 Kubernetes，通过创建控制器，由控制器创建带有容器的 `Pod`。掌握这些核心资源类型的知识对于构建我们的应用程序至关重要。同时，重要的是记住 Kubernetes 正在使用我们在在第一部分中探索的容器技术。
 
 在 Kubernetes 集群中运行容器为网络增加了额外需求，因为现在我们需要连接不同集群节点上的容器。在下一章中，我们将考虑实现这一点的多种方法，并将叠加网络。
-
-
-
 
 在本章中，我们将描述如何使用 `overlay networks`（覆盖网络）在 Kubernetes 集群中的所有节点上提供单一容器网络的外观。我们将考虑两种在跨宿主机网络上路由容器流量的不同方法，并检查每种方法的网络配置和流量流。最后，我们将探索 Kubernetes 如何使用 `Container Network Interface (CNI)` 标准将网络配置作为一种独立的插件进行配置，这使得在新的技术出现时可以轻松切换，并在需要时允许自定义解决方案。
 
@@ -3193,36 +3080,35 @@ calico     firewall     host-local   loopback  ptp      tuning
 
 为了实现这种网络连通性，Kubernetes 支持两种主要的网络模型：
 
-1.  **覆盖网络 (Overlay networks)**：这种方法在现有物理网络之上创建一个逻辑网络。数据包会被封装在另一个数据包中进行传输。
-2.  **路由网络 (Routed networks)**：这种方法通过在网络中直接路由 `Pod` 流量来实现通信，而不需要封装。
+1. **覆盖网络 (Overlay networks)**：这种方法在现有物理网络之上创建一个逻辑网络。数据包会被封装在另一个数据包中进行传输。
+
+2. **路由网络 (Routed networks)**：这种方法通过在网络中直接路由 `Pod` 流量来实现通信，而不需要封装。
 
 在后续章节中，我们将深入探讨这两种模型。
 
 
 
-
-
-```
+```bash
 root@host03:~# ip netns exec $NETNS ip addr
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN ...
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
     inet 127.0.0.1/8 scope host lo
        valid_lft forever preferred_lft forever
-    inet6 ::1/128 scope host 
+    inet6 ::1/128 scope host
        valid_lft forever preferred_lft forever
 3: ➊ eth0@if16: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1450 ... state UP ...
     link/ether 7a:9e:6c:e2:30:47 brd ff:ff:ff:ff:ff:ff link-netnsid 0
     inet ➋ 172.31.239.205/32 brd 172.31.25.202 scope global eth0
        valid_lft forever preferred_lft forever
-    inet6 fe80::789e:6cff:fee2:3047/64 scope link 
+    inet6 fe80::789e:6cff:fee2:3047/64 scope link
        valid_lft forever preferred_lft forever
 ```
 
-Calico 在网络命名空间 ➊ 中创建了网络设备 `eth0@if16`，并为其分配了 IP 地址 `172.31.239.205` ➋。注意，该 IP 地址的网络掩码为 `/32`，这意味着任何流量必须通过配置的路由器。这与我们在第 4 章 中使用的桥接容器网络的工作方式不同。这样做是为了 Calico 能够通过网络策略提供防火墙功能。
+Calico 在网络命名空间 ➊ 中创建了网络设备 `eth0@if16`，并为其分配了 IP 地址 `172.31.239.205` ➋。注意，该 IP 地址的网络掩码为 `/32`，这意味着任何流量必须通过配置的路由器。这与我们在第 4 章中使用的桥接容器网络的工作方式不同。这样做是为了让 Calico 能够通过网络策略提供防火墙功能。
 
 此 Pod 的 IP 地址选择最终由 Calico 决定。Calico 配置了 `172.31.0.0/16` 作为 Pod 的 IP 地址空间。Calico 决定如何在节点之间划分此地址空间，然后从分配给该节点的范围内为每个 Pod 分配 IP 地址。随后，Calico 将此 IP 地址传回 `kubelet`，以便其更新 Pod 的状态：
 
-```
+```bash
 root@host01:~# kubectl get pods -o wide
 NAME   READY   STATUS    RESTARTS   AGE   IP                NODE    ...
 pod    1/1     Running   0          16m   172.31.239.205   host01   ...
@@ -3230,13 +3116,13 @@ pod    1/1     Running   0          16m   172.31.239.205   host01   ...
 
 当 Calico 在 Pod 中创建网络接口时，它是作为虚拟以太网（`veth`）对的一部分创建的。`veth` 对充当虚拟网络线，与根命名空间中的网络接口建立连接，从而允许与 Pod 外部的连接。列表 8-3 让我们查看 `veth` 对的两个端点。
 
-```
+```bash
 root@host01:~# ip netns exec $NETNS ip link
 ...
-3: eth0@if13: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1450 qdisc noqueue ... 
+3: eth0@if13: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1450 qdisc noqueue ...
     link/ether 6e:4c:3a:41:d0:54 brd ff:ff:ff:ff:ff:ff link-netnsid 0
 root@host01:~# ip link | grep -B 1 $NETNS
-13: cali9381c30abed@if3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1450 ... 
+13: cali9381c30abed@if3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1450 ...
     link/ether ee:ee:ee:ee:ee:ee ... link-netns cni-7cffed61-fb56-9be1-0548-4813d4a8f996
 ```
 
@@ -3252,27 +3138,23 @@ root@host01:~# ip link | grep -B 1 $NETNS
 
 普通的容器网络确实提供了到主机网络的连通性。然而，正如我们讨论过的，它是通过网络地址转换（NAT）实现的。对于运行单个客户端应用程序的容器来说很好，因为连接跟踪允许 Linux 将服务器响应直接路由到源容器。但对于需要作为服务器的容器来说行不通，而这正是 Kubernetes 集群的核心用例。
 
-对于大多数使用 NAT 连接到更广泛网络的私有网络，使用端口转发来从内部网络内部暴露特定服务。对于每个 Pod 中的每个容器来说并不是良好的解决方案，因为我们会很快耗尽端口。网络插件最终使用了 NAT，但仅用于连接作为客户端的容器以访问集群外部的网络。此外，我们将在第 9 章 中看到端口转发行为，它将是可能的方法之一。
+对于大多数使用 NAT 连接到更广泛网络的私有网络，使用端口转发来从内部网络内部暴露特定服务。对于每个 Pod 中的每个容器来说并不是良好的解决方案，因为我们会很快耗尽端口。网络插件最终使用了 NAT，但仅用于连接作为客户端的容器以访问集群外部的网络。此外，我们将在第 9 章中看到端口转发行为，它将是可能的方法之一。
 
-
-
-
-
-```
+```bash
 root@host01:~# kubectl exec -ti pod1 -- ip addr
 ...
-3: eth0@if17: <BROADCAST,MULTICAST,UP,LOWER_UP,M-DOWN> mtu 1450 qdisc noqueue 
+3: eth0@if17: <BROADCAST,MULTICAST,UP,LOWER_UP,M-DOWN> mtu 1450 qdisc noqueue
     link/ether f2:ed:e8:04:00:cc brd ff:ff:ff:ff:ff:ff
     inet 172.31.239.216/32 brd 172.31.239.216 scope global eth0
 ...
 root@host01:~# kubectl exec -ti pod1 -- ip route
-default via 169.254.1.1 dev eth0 
+default via 169.254.1.1 dev eth0
 169.254.1.1 dev eth0 scope link
 ```
 
 基于此配置，当我们运行 `ping` 命令时，网络栈会识别出目标 IP 并不是任何接口的本地地址。因此，它会在地址解析协议（`ARP`）表中查找 `169.254.1.1`，以确定将“下一跳”发送到哪里。如果我们尝试在容器或主机上寻找地址为 `169.254.1.1` 的接口，将无法成功。Calico 并没有真正将该地址分配给接口，而是配置了“代理 ARP”，以便数据包通过 `veth` 对的 `eth0` 端发送。结果是容器内部的 `ARP` 表中存在 `169.254.1.1` 的条目：
 
-```
+```bash
 root@host01:~# kubectl exec -ti pod1 -- arp -n
 ? (169.254.1.1) at ee:ee:ee:ee:ee:ee [ether]  on eth0
 ...
@@ -3282,12 +3164,12 @@ root@host01:~# kubectl exec -ti pod1 -- arp -n
 
 Calico 已经配置了路由表，根据节点的目标 IP 地址范围将数据包发送到集群其他节点，并根据每个容器的 IP 地址将数据包发送到本地容器。我们可以在主机的 IP 路由表中看到此结果：
 
-```
+```bash
 root@host01:~# ip route
 ...
-172.31.25.192/26 via 192.168.61.13 dev enp0s8 proto 80 onlink 
-172.31.89.192/26 via 192.168.61.12 dev enp0s8 proto 80 onlink 
-172.31.239.216 dev calice0906292e2 scope link 
+172.31.25.192/26 via 192.168.61.13 dev enp0s8 proto 80 onlink
+172.31.89.192/26 via 192.168.61.12 dev enp0s8 proto 80 onlink
+172.31.239.216 dev calice0906292e2 scope link
 ...
 ```
 
@@ -3295,12 +3177,12 @@ root@host01:~# ip route
 
 让我们来看 `host02` 上的路由表，以便跟上下一步：
 
-```
+```bash
 root@host02:~# ip route
 ...
-172.31.239.192/26 via 192.168.61.11 dev enp0s8 proto 80 onlink 
-172.31.25.192/26 via 192.168.61.13 dev enp0s8 proto 80 onlink 
-172.31.89.197 dev calibd2348b4f67 scope link 
+172.31.239.192/26 via 192.168.61.11 dev enp0s8 proto 80 onlink
+172.31.25.192/26 via 192.168.61.13 dev enp0s8 proto 80 onlink
+172.31.89.197 dev calibd2348b4f67 scope link
 ...
 ```
 
@@ -3312,7 +3194,7 @@ root@host02:~# ip route
 
 首先，让我们在后台启动 `tcpdump`：
 
-```
+```bash
 root@host01:~# tcpdump -n -w pings.pcap -i any icmp &
 [1] 70949
 tcpdump: listening on any ...
@@ -3320,19 +3202,19 @@ tcpdump: listening on any ...
 
 `-n` 标志告诉 `tcpdump` 避免尝试在 DNS 中查找任何 IP 地址的主机名；这可以节省时间。`-w pings.pcap` 标志告诉 `tcpdump` 将数据写入文件 `pings.pcap`；`-i any` 告诉 `tcpdump` 监听所有接口；`icmp` 过滤器告诉它只监听 ICMP 流量；最后，结尾的 `&` 将其放在后台运行。`.pings.pcap` 文件名很重要。现在，我们再次运行 `ping`：
 
-```
+```bash
 root@host01:~# kubectl exec -ti pod1 -- ping -c 3 172.31.89.192
 ```
 
 这些 ICMP 请求和回复已收集，但它们被缓存在内存中。为了将它们导出文件，我们将关闭 `tcpdump`：
 
-```
+```bash
 root@host01:~# killall tcpdump
 ```
 
 `ping` 发送了 3 个数据包，接收了 3 个，丢包率为 0%。为了查看为什么，让我们打印 `tcpdump` 获取的详情：
 
-```
+```text
 root@host01:~# tcpdump -en pings.pcap
 reading from file pings.pcap, link-type LINUX_SLL
 00:11:22:33:44:55 > ee:ee:ee:ee:ee:ee, ethertype0x0800 (IPv), 172.31.239.216 > 172.31.89.192, icmp echo, id 1, seq 1, length 64
@@ -3343,17 +3225,17 @@ reading from file pings.pcap, link-type LINUX_SLL
 
 `-e` 标志告诉 `tcpdump` 打印硬件地址；否则我们将无法区分某些数据包。
 
-三层路由是跨节点网络的一种优雅解决方案，它利用了 Linux 原生的路由和流量转发能力。然而，这意味着主机网络可以看到 Pod 的 IP 地址，这可能需要更改安全规则。例如，在 Amazon Web Services (AWS) 中设置虚拟机的自动化脚本不仅配置了安全组以允许 Pod 空间的所有流量，还关闭了虚拟机实例的“源/目的检查”。否则，AWS 网络基础设施将拒绝通过意外地址的流量。
+三层路由是跨节点网络的一种优雅解决方案，它利用了 Linux 原生的路由和流量转发能力。然而，这意味着主机网络可以看到 Pod 的 IP 地址，这可能需要更改安全规则。例如，在 Amazon Web Services（AWS）中设置虚拟机的自动化脚本不仅配置了安全组以允许 Pod 空间的所有流量，还关闭了虚拟机实例的“源/目的检查”。否则，AWS 网络基础设施将拒绝通过意外地址的流量。
 
 三层路由不是跨节点网络唯一的解决方案。另一种方案是将容器数据包“封装”到显式发送到主机之间的数据包中。这是 Flannel 和 WeaveNet 等流行插件采用的方法。我们将查看 WeaveNet 的示例，但使用 Flannel 的流量看起来相似。
 
 基于 Calico 的大型集群也对某些网络之间的流量使用封装。例如，跨越多个区域或可用区的集群可能需要配置 Calico 使用封装，因为可能无法在区域或可用区之间的所有路由器上配置必要的集群 Pod 路由。
 
-由于网络中可能需要的任何操作都有定义的标准，因此并不意外封装封装有一个定义的标准：虚拟扩展局域网（VXLAN）。在 VXLAN 中，每个数据包都被封装在 UDP 数据报中发送到目的地。
+由于网络中可能需要的任何操作都有定义的标准，因此并不意外封装有一个定义的标准：虚拟扩展局域网（VXLAN）。在 VXLAN 中，每个数据包都被封装在 UDP 数据报中发送到目的地。
 
-我们将使用相同的 *two-pods.yaml* 配置文件在 Kubernetes 集群中创建两个 Pod，这次使用从本章 *weavenet* 目录构建的集群。如之前一样，我们在 host01 上获得一个 Pod，另一个在 host02 上：
+我们将使用相同的 *two-pods.yaml* 配置文件在 Kubernetes 集群中创建两个 Pod，这次使用从本章 *weavenet* 目录构建的集群。如之前一样，我们在 `host01` 上获得一个 Pod，另一个在 `host02` 上：
 
-```
+```bash
 root@host01:~# kubectl apply -f /opt/two-pods.yaml
 pod/pod1 created
 pod/pod2 created
@@ -3361,11 +3243,7 @@ pod/pod2 created
 
 让我们检查这些 Pod 是否正在运行并正确地分配到不同的主机上：
 
-
-
-
-
-```
+```bash
 root@host01:~# kubectl get po -o wide
 NAME   READY   STATUS    ... IP           NODE     ...
 pod1   1/1     Running   ... 10.46.0.8    host01   ...
@@ -3374,7 +3252,7 @@ pod2   1/1     Running   ... 10.40.0.21   host02   ...
 
 在这些 `Pods` 运行后，我们可以使用之前显示的相同命令来收集它们的 IP 地址：
 
-```
+```bash
 root@host01:~# IP1=$(kubectl get po pod1 -o json | jq -r '.status.podIP')
 root@host01:~# IP2=$(kubectl get po pod2 -o json | jq -r '.status.podIP')
 root@host01:~# echo $IP1
@@ -3385,26 +3263,26 @@ root@host01:~# echo $IP2
 
 注意，分配的 IP 地址与 Calico 的示例完全不同。进一步的探索显示，地址和路由配置也不同，如列表 8-4 所示。
 
-```
+```bash
 root@host01:~# kubectl exec -ti pod1 -- ip addr
 ...
-25: eth0@if26: <BROADCAST,MULTICAST,UP,LOWER_UP,M-DOWN> mtu 1376 qdisc noqueue 
+25: eth0@if26: <BROADCAST,MULTICAST,UP,LOWER_UP,M-DOWN> mtu 1376 qdisc noqueue
     link/ether e6:78:69:44:3d:a4 brd ff:ff:ff:ff:ff:ff
     inet 10.46.0.8/12 brd 10.47.255.255 scope global eth0
        valid_lft forever preferred_lft forever
 ...
 root@host01:~# kubectl exec -ti pod1 -- ip route
-default via 10.46.0.0 dev eth0 
+default via 10.46.0.0 dev eth0
 10.32.0.0/12 dev eth0 scope link  src 10.46.0.8
 ```
 
 *列表 8-4：WeaveNet 网络*
 
-这次，我们的 `Pods` 一个巨大的 `/12` 网络中获取 IP 地址，这对应于单个网络上超过一百万个可能的地址。在这种情况下，我们的`pod 的网络栈`将期望能够使用 `ARP` 直接识别网络上任何其他 `Pod` 的硬件地址，而不是像我们在 Calico 中看到的那样将流量路由到网关。
+这次，我们的 `Pods` 从一个巨大的 `/12` 网络中获取 IP 地址，这对应于单个网络上超过一百万个可能的地址。在这种情况下，我们的 Pod 的网络栈将期望能够使用 `ARP` 直接识别网络上任何其他 `Pod` 的硬件地址，而不是像我们在 Calico 中看到的那样将流量路由到网关。
 
 和一样，这两个 `Pods` 之间确实存在连通性：
 
-```
+```bash
 root@host01:~# kubectl exec -ti pod1 -- ping -c 3 $IP2
 PING 10.40.0.21 (10.40.0.21): 56 data bytes
 64 bytes from 10.40.0.21: seq=0 ttl=64 time=0.981 ms
@@ -3415,13 +3293,15 @@ PING 10.40.0.21 (10.40.0.21): 56 data bytes
 round-trip min/avg/max = 0.871/0.938/0.981 ms
 ```
 
-现在我们已经运行了此 `ping` 命令，我们应该预期 `pod1` 网络栈中的 `ARP` 表已满了 `pod2` 网络接口的硬件地址：
+现在我们已经运行了此 `ping` 命令，我们应该预期 `pod1` 网络栈中的 `ARP` 表已填入 `pod2` 网络接口的硬件地址：
 
-```
+```bash
 root@host01:~# kubectl exec -ti pod1 -- arp -n
 ? (10.40.0.21) at ba:75:e6:db:7c:c6 [ether]  on eth0
 ? (10.46.0.0) at 1a:72:78:64:36:c6 [ether]  on eth0
 ```
+
+
 
 如所预期，`pod1` 有一个对应 `pod2` IP 地址的 `ARP` 表目，其对应于 `pod2` 内部的虚拟网络接口：
 
@@ -3487,7 +3367,7 @@ root@host01:~# killall tcpdump
 0 packets dropped by kernel
 ```
 
-这次我们将包数据保存在 `*vxlan.pcap*` 中。在这个示例中，`tcpdump` 捕获了 22 个包。因为我们的集群中有大量的跨 Pod 流量，而不只是 `ICMP` 流量，你可能会看到不同的数字。
+这次我们将包数据保存在 `vxlan.pcap` 中。在这个示例中，`tcpdump` 捕获了 22 个包。因为我们的集群中有大量的跨 Pod 流量，而不只是 `ICMP` 流量，你可能会看到不同的数字。
 
 我们捕获的包包含了 `host01` 上所有的 `UDP` 流量，而我们的 `ICMP`，所以在打印列表 8-5 中显示的包时，我们需要进行选择性输出。
 
@@ -3503,10 +3383,6 @@ e6:78:69:44:3d:a4 > ba:75:e6:db:7c:c6 ...
 ba:75:e6:db:7c:c6 > e6:78:69:44:3d:a4 ... 
   length 98: 10.40.0.21 > 10.46.0.8: ICMP echo reply
 ```
-
-
-
-
 
 `-T vxlan` 标志告诉 `tcpdump` 将其看到的包数据视为 VXLAN 数据。这使得 `tcpdump` 能够查看内部并从封装包中提取数据，使其能够识别隐藏在内部的 ICMP 数据包。我们随后使用带有 `-B 1` 标志的 `grep` 来查找这些 ICMP 数据包，并打印紧邻的前的一行，这样我们就能看到 VXLAN 封装头部。
 
@@ -3592,10 +3468,6 @@ Multus 保留了现有的 Calico 配置，但添加了自己的 `00-multus.conf`
 
 *00-multus.conf*
 
-
-
-
-
 ```json
 {
   "cniVersion": "0.3.1",
@@ -3635,6 +3507,8 @@ Multus 保留了现有的 Calico 配置，但添加了自己的 `00-multus.conf`
 现在 Multus 已经完全设置，让我们使用它为两个 Pod 添加一个主机主机网络（host-only network）。这些 Pod 定义如下：
 
 *local-pods.yaml*
+
+
 
 ```yaml
 ---
@@ -3710,18 +3584,14 @@ root@host01:~# kubectl exec -ti pod2 -- ip addr
 
 `macvlan` CNI 插件已经添加了额外的 `net1` 接口。
 
-
-
-
-
-```
+```bash
 root@host01:~# kubectl apply -f /opt/nginx-deploy.yaml
 deployment.apps/nginx created
 ```
 
 当这些 Pod 运行后，我们可以检查它们是否已经分布到集群中，并且每个都有一个 IP 地址：
 
-```
+```bash
 root@host01:~# kubectl get pods -o wide
 NAME                     READY   STATUS    ... IP                NODE    ...
 nginx-6799fc88d8-2wqc7   1/1     Running   ... 172.31.239.231   host01   ...
@@ -3735,7 +3605,7 @@ nginx-6799fc88d8-zwx27   1/1     Running   ... 172.31.239.228   host01   ...
 
 目前，我们独立的 NGINX 实例对于客户端使用来说并不实用。当然，可以直接连接到这些 NGINX 服务器 Pod 中的任何一个。例如，我们可以使用其 IP 地址与列表中的第一个进行通信：
 
-```
+```bash
 root@host01:~# curl -v http://172.31.239.231
 *   Trying 172.31.239.231:80...
 * Connected to 172.31.239.231 (172.31.239.231) port 80 (#0)
@@ -3750,13 +3620,13 @@ root@host01:~# curl -v http://172.31.239.231
 
 这种情况的解决方案需要具备两个主要特征。首先，我们需要一个客户端可以使用来查找服务器的已知名称。其次，我们需要一个一致的 IP 地址，以便当客户端识别服务器后，即使 Pod 实例不断来去，它也可以继续使用相同的地址进行连接。这正是 Kubernetes 通过 `Service` 提供的功能。
 
-### 创建 Service
+## 创建 Service
 
 为我们的 NGINX Deployment 创建一个 `Service` 并看看它能带给我们什么。`Listing 9-1` 展示了资源 YAML 文件。
 
 *nginx-service.yaml*
 
-```
+```yaml
 ---
 kind: Service
 apiVersion: v1
@@ -3779,14 +3649,14 @@ spec:
 
 让我们将此 `Service` 应用到集群：
 
-```
+```bash
 root@host01:~# kubectl apply -f /opt/nginx-service.yaml 
 service/nginx created
 ```
 
 我们现在可以看到 `Service` 已被创建：
 
-```
+```bash
 root@host01:~# kubectl get services
 NAME         TYPE        CLUSTER-IP       EXTERNAL-IP   PORT(S)   AGE
 kubernetes   ClusterIP   10.96.0.1        <none>        443/TCP   14d
@@ -3795,9 +3665,9 @@ nginx        ClusterIP   10.100.221.220   <none>        80/TCP    25s
 
 此 nginx `Service` 默认类型为 `ClusterIP`。Kubernetes 自动为此 `Service` 分配了一个集群 IP 地址。该 IP 地址与我们的 Pod 处于完全不同的地址空间。
 
-使用选择器，此 `Service` 将识别我们的 NGINX 服务器 Pod 并自动开始对它们进行负载均衡均衡。随着匹配选择器的 Pod 的来去，`Service` 将相应地更新其负载均衡。只要 `Service` 存在，它将保持相同的 IP 地址，因此客户端有一个一致的方法找到它。
+使用选择器，此 `Service` 将识别我们的 NGINX 服务器 Pod 并自动开始对它们进行负载均衡。随着匹配选择器的 Pod 的来去，`Service` 将相应地更新其负载均衡。只要 `Service` 存在，它将保持相同的 IP 地址，因此客户端有一个一致的方法找到它。
 
-### Service DNS
+## Service DNS
 
 Kubernetes 为每个 `Service` 提供一个已知名称，允许客户端在不需要知道 IP 地址的情况下找到 pod。这是由 DNS（域名系统）处理的。
 
@@ -3822,14 +3692,14 @@ spec:
 
 接下来，创建 `Pod`：
 
-```
+```bash
 root@host01:~# kubectl apply -f /opt/pod.yaml 
 pod/pod created
 ```
 
 在运行后，让我们像 `Listing 9-2` 所示使用它连接到我们的 NGINX `Service`。
 
-```
+```bash
 root@host01:~# kubectl exec -ti pod -- wget -O - http://nginx
 Connecting to nginx (10.100.221.220:80)
 ...
@@ -3843,7 +3713,7 @@ Connecting to nginx (10.100.221.220:80)
 
 我们在容器内部打印 `/etc/resolv.conf` 文件，因为这是用于配置 DNS 的文件：
 
-```
+```bash
 root@host01:~# kubectl exec -ti pod -- cat /etc/resolv.conf 
 search default.svc.cluster.local svc.cluster.local cluster.local 
 nameserver 10.96.0.10
@@ -3852,32 +3722,29 @@ options ndots:5
 
 引用的名称服务器 10.96.0.10 本身是一个 Kubernetes `Service`，但它位于 `kube-system` 命名空间，所以我们需要在那里查找它：
 
-```
+```bash
 root@host01:~# kubectl -n kube-system get services
 NAME            TYPE       CLUSTER-IP      ... PORT(S)                  AGE
 kube-dns        ClusterIP  10.96.0.10      ... 53/UDP,53/TCP,9153/TCP   14d
 metrics-server  ClusterIP  10.105.140.176  ... 443/TCP                  14d
 ```
 
-
-
-
-
 `kube-dns` 服务连接到一个名为 `CoreDNS` 的 DNS 服务器部署，该部署负责监听 Kubernetes 集群中 Service 的变化。`CoreDNS` 会根据需要更新 DNS 服务器配置，以保持与当前集群配置同步。
 
-### 域名解析与命名空间
+## 域名解析与命名空间
 
 Kubernetes 集群中的 DNS 名称基于 `Namespace`（命名空间）以及集群域名。由于我们的 Pod 位于 `default` 命名空间中，它被配置了搜索路径，其中 `default.svc.cluster.local` 是列表中的第一个项，因此当在查找 Service 时，它会首先搜索 `default` 命名空间。这就是为什么我们能够直接使用裸 Service 名称 `nginx` 来找到 `nginx` 服务——该 Service 位于 `default` 命名空间中。
 
 我们也可以使用完全限定域名来找到同一个 Service：
 
-```
+```bash
 root@host01:~# kubectl exec -ti pod -- wget -O - http://nginx.default.svc
 Connecting to nginx.default.svc (10.100.221.220:80)
 ...
 <title>Welcome to nginx!</title>
 ...
 ```
+
 理解命名空间与 Service 查找之间的这种交互非常重要。Kubernetes 集群的一种常见部署模式是将同一个应用多次部署到不同的命名空间中，并使用简单的主机名供应用程序组件相互通信。这种模式通常用于在同一个集群中部署应用程序的“开发”版本和“生产”版本。如果我们计划使用这种模式，我们需要确保在应用程序组件尝试相互查找时，坚持使用裸主机名；否则，我们可能会与错误版本的应用程序进行通信。
 
 `/etc/resolv.conf` 中的另一个重要配置项是 `ndots` 条目。`ndots` 条目告诉主机名解析器，当它看到一个带有四个或更少点的主机名时，它应该在执行不带任何域名的绝对搜索*之前*，尝试追加各种搜索域。这对于确保我们在触达集群外部之前先尝试查找集群内部的服务至关重要。
@@ -3886,38 +3753,43 @@ Connecting to nginx.default.svc (10.100.221.220:80)
 
 为了确保这一点清晰，让我们再试一个例子：查找另一个命名空间中的 Service。`kube-system` 命名空间有一个 `metrics-server` Service。为了找到它，让我们在 Pod 中使用标准主机查找命令 `dig`。
 
-我们的 Pod 使用的是 Alpine Linux，因此我们需要安装 `bind-tools` 包来获取 `dig` ：
+我们的 Pod 使用的是 Alpine Linux，因此我们需要安装 `bind-tools` 包来获取 `dig`：
 
-```
+```bash
 root@host01:~# kubectl exec -ti pod -- apk add bind-tools
 ...
 OK: 13 MiB in 27 packages
 ```
+
 现在，让我们先用裸名查找 `metrics-server`：
 
-```
+```bash
 root@host01:~# kubectl exec -ti pod -- dig +search metrics-server
 ...
 ;; Got answer:
 ;; ->>HEADER<<- opcode: QUERY, status: SERVFAIL, id: 38423
 ...
 ```
+
 我们在命令上加上 `+search` 标志，告诉 `dig` 使用来自 `/etc/resolv.conf` 的搜索路径信息。然而，即使有了该标志，我们也没有找到 Service，因为我们的 Pod 位于 `default` 命名空间，所以搜索路径并没有引导 `dig` 去查找 `kube-system` 命名空间。
 
 再次尝试，这次指定正确的命名空间：
 
-```
+```bash
 root@host01:~# kubectl exec -ti pod -- dig +search metrics-server.kube-system
 ...
 ;; ANSWER SECTION:
 metrics-server.kube-system.svc.cluster.local. 30 IN A 10.105.140.176
 ...
 ```
+
 这次查找成功了，我们能够获取 `metrics-server` 服务的 IP 地址。它之所以有效，是因为搜索路径包含了 `svc.cluster.local` 作为其第二个项。在初始尝试了 `metrics-server.kube-system.default.svc.cluster.local`（失败）后，`dig` 接着尝试了 `metrics-server.kube-system.svc.cluster.local`，这次成功了。
 
-### 流量路由
+## 流量路由
 
-我们已经了如何创建和使用 Service，但还没有查看实际流量路由是如何工作的。事实证明，Service 网络流量的工作方式与我们在第 8 章中看到的覆盖网络（overlay networks）完全不同，这可能会导致一些困惑。
+
+
+我们已经了解了如何创建和使用 `Service`，但还没有查看实际流量路由是如何工作的。事实证明，`Service` 网络流量的工作方式与我们在第 8 章中看到的覆盖网络（overlay networks）完全不同，这可能会导致一些困惑。
 
 例如，因为我们可以使用 `wget` 通过 `nginx` 服务名称访问 NGINX 服务器实例，我们可能期望同样也能使用 `ping`，但行不通：
 
@@ -3929,9 +3801,10 @@ PING nginx (10.100.221.220): 56 data bytes
 3 packets transmitted, 0 packets received, 100% packet loss
 command terminated with exit code 1
 ```
-域名解析如预期那样工作了，所以 `ping` 知道其 ICMP 数据包应该使用哪个目标 IP 地址。但该 IP 地址没有回。。我们可以查看集群中的每一个主机和容器的网络接口，但永远找不到一个载有 `10.100.221.220` Service IP 地址的接口。那么，我们的 HTTP 流量是如何到达 NGINX Service 实例的？
 
-在我们集群的每个节点上，都有一个名为 `kube-proxy` 的组件，负责配置流量路由。`kube-proxy` 在 `kube-system` 命名空间中作为 `DaemonSet` 运行。每个 `kube-proxy` 实例监听 Service 的变化。可以使用 `iptables` 命令查看防火墙，查看 `kube-proxy` 是如何配置的：
+域名解析如预期那样工作了，所以 `ping` 知道其 ICMP 数据包应该使用哪个目标 IP 地址。但该 IP 地址没有回应。我们可以查看集群中的每一个主机和容器的网络接口，但永远找不到一个载有 `10.100.221.220` `Service` IP 地址的接口。那么，我们的 HTTP 流量是如何到达 NGINX `Service` 实例的？
+
+在我们集群的每个节点上，都有一个名为 `kube-proxy` 的组件，负责配置流量路由。`kube-proxy` 在 `kube-system` 命名空间中作为 `DaemonSet` 运行。每个 `kube-proxy` 实例监听 `Service` 的变化。可以使用 `iptables` 命令查看防火墙，查看 `kube-proxy` 是如何配置的：
 
 ```
 root@host01:~# iptables-save | grep 'default/nginx'
@@ -3940,7 +3813,8 @@ root@host01:~# iptables-save | grep 'default/nginx'
 ➋ -A KUBE-SERVICES -d 10.100.221.220/32 -p tcp -m comment
    --comment "default/nginx cluster IP" -dport 80 -j KUBE-SVC-27L6M
 ```
-`iptables-save` 命令备份所有的 Linux 规则，因此输出非常有用。`grep` 命令搜索 `kube-proxy` 应用于 Service 的注释字符串。在这个示例中，`kube-proxy` 为整个 Service 创建了两规则。第一个规则 `➊` 匹配并非来自 Pod 的流量进行网络地址转换（NAT）伪装，这样任何响应流量的源将被重写为 Service 地址，而不是处理请求的实际 Pod。第二个规则 `➋` 将指向 Service 的流量发送到一个独立的规则链，从而发送到 Pod。注意，在两种情况下，规则都匹配目标端口为 80 的 TCP 流量。
+
+`iptables-save` 命令备份所有的 Linux 规则，因此输出非常有用。`grep` 命令搜索 `kube-proxy` 应用于 `Service` 的注释字符串。在这个示例中，`kube-proxy` 为整个 `Service` 创建了两条规则。第一个规则 `➊` 匹配并非来自 Pod 的流量进行网络地址转换（NAT）伪装，这样任何响应流量的源将被重写为 `Service` 地址，而不是处理请求的实际 Pod。第二个规则 `➋` 将指向 `Service` 的流量发送到一个独立的规则链，从而发送到 Pod。注意，在两种情况下，规则都匹配目标端口为 80 的 TCP 流量。
 
 我们可以检查这个独立的规则链，查看实际到 Pod 的路由是如何工作的。请确保用上一个输出显示的规则链名称替换命令中的名称：
 
@@ -3957,14 +3831,12 @@ root@host01:~# iptables-save | grep KUBE-SVC-27L6M
   --probability 0.50000000000 -j KUBE-SEP-3S3S2VJCXSAISE2Z
 -A KUBE-SVC-27L6M -j KUBE-SEP-AQWD2Y25T24EHSNI
 ```
-输出显示了五条规则，对应于 Service 的选择器匹配的五个 NGINX Pod 实例。这五条规则共同为所有实例提供了随机负载均衡，使得每个实例在选择新连接时的机会相等。
 
+输出显示了五条规则，对应于 `Service` 的选择器匹配的五个 NGINX Pod 实例。这五条规则共同为所有实例提供了随机负载均衡，使得每个实例在选择新连接时的机会相等。
 
+每个规则的概率数字都在增加，这看起来可能很奇怪。这是必要的，因为规则是顺序评估的。对于第一个规则，我们希望有 20% 的概率选择第一个实例。然而，如果我们没有选择第一个实例，就剩下四个实例了，所以我们希望有 25% 的概率选择第二个。同样的逻辑一直持续，直到最后一个实例。如果我们跳过了所有其他实例，我们总是想要选择它。
 
-
-每个规则的概率数字都在增加，这看起来可能很奇怪。这是必要的，因为规则是顺序评估的。对于第一个规则，我们希望有 20% 的概率选择第一个实例。然而，如果我们没有选择第一个实例，就剩下四个实例了，所以我们希望有 25% 的概率选择第二个。同样的逻辑一直持续，直到最后一个最后一个实例，如果我们跳过了所有其他实例，我们总是想要选择它。
-
-让我们快速验证一下这些规则是否指向了预期的目的地（再次，请确保在在此命令中替换规则链的名称）：
+让我们快速验证一下这些规则是否指向了预期的目的地（再次，请确保在此命令中替换规则链的名称）：
 
 ```
 root@host01:~# iptables-save | grep KUBE-SEP-PIVU7ZHMCSOWIZ2Z
@@ -3973,31 +3845,31 @@ root@host01:~# iptables-save | grep KUBE-SEP-PIVU7ZHMCSOWIZ2Z
 -A KUBE-SEP-PIVU7ZHMCSOWIZ2Z -p tcp ... -m tcp -j DNAT --to-destination 172.31.239.235:80
 ```
 
-此输出显示了两个规则。第一条是 NAT 映射配置的另一部分，我们标记了所有离开我们 Pod 实例的数据包，以便它们的源地址被重写，使其看起来来自 Service。第二条规则是实际上将 Service 流量路由到特定 Pod 的规则，因为它对目标地址进行了重写，使得原始目标为 Service IP 的数据包现在目标变为 Pod。从那里开始，叠加网络（overlay networking）将接管并实际上将数据包发送到正确的容器。
+此输出显示了两个规则。第一条是 NAT 映射配置的另一部分，我们标记了所有离开我们 Pod 实例的数据包，以便它们的源地址被重写，使其看起来来自 `Service`。第二条规则是实际上将 `Service` 流量路由到特定 Pod 的规则，因为它对目标地址进行了重写，使得原始目标为 `Service` IP 的数据包现在目标变为 Pod。从那里开始，叠加网络（overlay networking）将接管并实际上将数据包发送到正确的容器。
 
-理解了 Service 流量是如何实际路由的后，我们的 ICMP 数据包没有通过就合情合理了。`kube-proxy` 创建的防火墙规则仅适用于目标为 80 端口的 TCP 流量。因此，没有防火墙规则来重写我们的 ICMP 数据包，因此它们无法到达可以对其回包的网络堆栈。同样，如果我们有一个监听多个端口的容器，我们将能够通过直接使用 Pod IP 地址连接到其中任何一个端口，但只有在 Service 规范中显式声明了该端口时，Service IP 地址才会路由流量。在部署应用程序时，如果 Pod 按预期启动并监听流量，但 Service 的配置错误导致流量没有路由到所有正确的目标端口，这可能会成为巨大的困惑来源。
+理解了 `Service` 流量是如何实际路由的后，我们的 ICMP 数据包没有通过就合情合理了。`kube-proxy` 创建的防火墙规则仅适用于目标为 80 端口的 TCP 流量。因此，没有防火墙规则来重写我们的 ICMP 数据包，所以它们无法到达可以对其回包的网络堆栈。同样，如果我们有一个监听多个端口的容器，我们将能够通过直接使用 Pod IP 地址连接到其中任何一个端口，但只有在 `Service` 规范中显式声明了该端口时，`Service` IP 地址才会路由流量。在部署应用程序时，如果 Pod 按预期启动并监听流量，但 `Service` 的配置错误导致流量没有路由到所有正确的目标端口，这可能会成为巨大的困惑来源。
 
 ## 外部网络
 
-我们现在有了足够的网络层来满足所有的内部集群通信需求。每个 Pod 都有自己的 IP 地址，并具有与其他 Pod 以及控制平面的连接性，通过 Service 网络，我们根据运行多个 Service Pod 实例实现了自动负载均衡和故障转移。然而，我们仍然缺少外部用户访问我们集群中运行的服务的能力。
+我们现在有了足够的网络层来满足所有的内部集群通信需求。每个 Pod 都有自己的 IP 地址，并具有与其他 Pod 以及控制平面的连接性。通过 `Service` 网络，我们根据运行多个 `Service` Pod 实例实现了自动负载均衡和故障转移。然而，我们仍然缺少外部用户访问我们集群中运行的服务的能力。
 
-为了给外部用户提供访问，我们不能再依赖用于 Pod 和 Service 的集群特定 IP 范围，因为外部网络不识别这些地址范围。相反，我们需要一种方法为 Service 分配外部可路由 IP 地址，可以通过显式将 IP 地址与 Service 关联，或者使用监听外部流量并路由到 Service 的 `ingress controller`。
+为了给外部用户提供访问，我们不能再依赖用于 Pod 和 `Service` 的集群特定 IP 范围，因为外部网络不识别这些地址范围。相反，我们需要一种方法为 `Service` 分配外部可路由 IP 地址，可以通过显式将 IP 地址与 `Service` 关联，或者使用监听外部流量并路由到 `Service` 的 `ingress controller`。
 
 ### 外部 Service
 
-我们之前创建的 `nginx` Service 是 `ClusterIP` Service，这是默认的 Service 类型。Kubernetes 支持多种 Service 类型，包括适用于需要外部暴露的 Service 的类型：
+我们之前创建的 `nginx` `Service` 是 `ClusterIP` `Service`，这是默认的 `Service` 类型。Kubernetes 支持多种 `Service` 类型，包括适用于需要外部暴露的 `Service` 的类型：
 
-- **None**: 也称为 `headless`（无头）Service，用于跟踪选定的 Pod，但没有 IP 地址或任何网络路由行为。
-- **ClusterIP**: 默认 Service 类型，提供对所选 Pod 的跟踪、在集群内部路由的集群 IP 地址以及集群 DNS 中的一个已知名称。
-- **NodePort**: 扩展了 `ClusterIP`，并在集群中的所有节点上都提供一个路由到 Service 的端口。
-- **LoadBalancer**: 扩展了 `NodePort` 并使用底层云提供程序获取一个外部可访问的 IP 地址。
-- **ExternalName**: 将集群 DNS 中的一个已知 Service 名称别名到某些外部 DNS 名称。用于让外部资源看起来像是集群内的 Service。
+- `None`：也称为 `headless`（无头）`Service`，用于跟踪选定的 Pod，但没有 IP 地址或任何网络路由行为。
+- `ClusterIP`：默认 `Service` 类型，提供对所选 Pod 的跟踪、在集群内部路由的集群 IP 地址以及集群 DNS 中的一个已知名称。
+- `NodePort`：扩展了 `ClusterIP`，并在集群中的所有节点上都提供一个路由到 `Service` 的端口。
+- `LoadBalancer`：扩展了 `NodePort`，并使用底层云提供程序获取一个外部可访问的 IP 地址。
+- `ExternalName`：将集群 DNS 中的一个已知 `Service` 名称别名到某些外部 DNS 名称。用于让外部资源看起来像是集群内的 `Service`。
 
-在这些 Service 类型中，`NodePort` 和 `LoadBalancer` 类型对于在集群外暴露 Service 最有用。`LoadBalancer` 类型似乎是最直接的，因为它简单地为 Service 添加了一个外部 IP。然而，它需要与底层云环境集成，以便在创建 Service 时创建外部 IP 地址，将流量从该 IP 地址路由到集群节点，并在集群外部创建一个 DNS 词目，让外部用户能够通过我们已经拥有的某些预注册域名作为主机来找到该 Service，而不是仅在集群内工作的 `cluster.local` 域名。
+在这些 `Service` 类型中，`NodePort` 和 `LoadBalancer` 类型对于在集群外暴露 `Service` 最有用。`LoadBalancer` 类型似乎是最直接的，因为它简单地为 `Service` 添加了一个外部 IP。然而，它需要与底层云环境集成，以便在创建 `Service` 时创建外部 IP 地址，将流量从该 IP 地址路由到集群节点，并在集群外部创建一个 DNS 条目，让外部用户能够通过我们已经拥有的某些预注册域名作为主机来找到该 `Service`，而不是仅在集群内工作的 `cluster.local` 域名。
 
-出于这个原因，`LoadBalancer` Service 对于我们知道正在使用何种云环境并且正在创建长期运行 Service 的情况最有用。对于 HTTP 流量，我们可以通过使用 `NodePort` Service 配合 `ingress controller` 来获得 `LoadBalancer` Service 的大部分收益，并额外获得对动态部署带有新 Service 的新应用程序的良好支持。
+出于这个原因，`LoadBalancer` `Service` 对于我们知道正在使用何种云环境并且正在创建长期运行 `Service` 的情况最有用。对于 HTTP 流量，我们可以通过使用 `NodePort` `Service` 配合 `ingress controller` 来获得 `LoadBalancer` `Service` 的大部分收益，并额外获得对动态部署带有新 `Service` 的新应用程序的良好支持。
 
-在转向 ingress controller 之前，让我们现有的 `nginx` Service 转换为 `NodePort` Service，以便我们可以观察效果。我们可以使用 patch 文件来实现此：
+在转向 `ingress controller` 之前，让我们将现有的 `nginx` `Service` 转换为 `NodePort` `Service`，以便我们可以观察效果。我们可以使用 patch 文件来实现此目的：
 
 `nginx-nodeport.yaml`
 
@@ -4007,16 +3879,16 @@ spec:
   type: NodePort
 ```
 
-patch 文件允许我们只更新关心的特定字段。在这种情况下，我们正在更新我们关心的特定字段。为了让其工作，我们只需要在层级结构中的正确位置指定修改的字段。我们不需要更改 Service 的选择器或端口，所以补丁非常简单。让我们使用补丁：
+patch 文件允许我们只更新关心的特定字段。在这种情况下，我们正在更新我们关心的特定字段。为了让其工作，我们只需要在层级结构中的正确位置指定修改的字段。我们不需要更改 `Service` 的选择器或端口，所以补丁非常简单。让我们使用补丁：
 
 ```
 root@host01:~# kubectl patch svc nginx --patch-file nginx-nodeport.yaml
 service/nginx patched
 ```
 
-对于此命令，我们必须指定要补丁的资源和使用的 patch 文件。结果与我们编辑 Service 的 YAML 然后使用 kubectl apply 是相同的。
+对于此命令，我们必须指定要补丁的资源和使用的 patch 文件。结果与我们编辑 `Service` 的 YAML 然后使用 `kubectl apply` 是相同的。
 
-Service 现在看起来有点不同：
+`Service` 现在看起来有点不同：
 
 ```
 root@host01:~# kubectl get service nginx
@@ -4024,16 +3896,16 @@ NAME    TYPE       CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE
 nginx   NodePort   10.100.221.220   <none>        80:31326/TCP   2h
 ```
 
-`NodePort` Service 提供了 `ClusterIP` Service 的所有行为，因此我们的 Service 关联了一个集群 IP。Service 甚至保留了集群 IP。唯一的变化是 PORT 字段现在显示 Service 端口 80 到了节点端口 31326。
+`NodePort` `Service` 提供了 `ClusterIP` `Service` 的所有行为，因此我们的 `Service` 关联了一个集群 IP。`Service` 甚至保留了集群 IP。唯一的变化是 PORT 字段现在显示 `Service` 端口 80 到了节点端口 31326。
 
-每个节点上的 `kube-proxy` Service 都在监听此端口（请确保使用 Service 的节点端口）：
+每个节点上的 `kube-proxy` `Service` 都在监听此端口（请确保使用 `Service` 的节点端口）：
 
 ```
 root@host01:~# ss -nlp | grep 31326
 tcp   LISTEN 0  4096  .0.0.0:31326 ... users:(("kube-proxy",pid=3339,fd=15))
 ```
 
-结果，我们可以在 Pod 内部使用 `nginx` Service 名称，但也可以从主机使用 NodePort：
+结果，我们可以在 Pod 内部使用 `nginx` `Service` 名称，但也可以从主机使用 `NodePort`：
 
 ```
 root@host01:~# kubectl exec -ti pod -- wget -O - http://nginx
@@ -4049,15 +3921,11 @@ Connecting to host01 (host01)|127.0.2.1|:31326... connected.
 ...
 ```
 
-由于 `kube-proxy` 监听所有网络接口，我们已成功将此 Service 暴露给了外部用户。
+由于 `kube-proxy` 监听所有网络接口，我们已成功将此 `Service` 暴露给了外部用户。
 
+尽管我们成功地将 `NGINX Service` 暴露在集群之外，但我们仍然没有为外部用户提供良好的体验。要使用 `NodePort Service`，外部用户需要知道我们集群中至少一个节点的 IP 地址，并且需要知道每个 `Service` 监听的精确端口。如果 `Service` 被删除并重新创建，该端口可能会发生变化。我们可以通过告诉 Kubernetes 使用哪个端口作为 `NodePort` 来在某种程度上解决这个问题，但我们不想对任何任意的 `Service` 这样做，因为多个 `Services` 可能会选择相同的端口。
 
-
-
-
-尽管我们成功地将 `NGINX Service` 暴露在集群之外，但我们仍然没有为外部用户提供良好的体验。要使用 `NodePort Service`，外部用户需要知道我们集群中至少一个节点的 IP 地址，并且需要知道每个 `Service` 监听的精确端口。如果 `Service` 被删除并重新创建，该端口可能会发生。我们可以通过告诉 Kubernetes 使用哪个端口作为 `NodePort` 来在某种程度上解决这个问题，但我们不想对任何任意的 `Service` 这样做，因为多个 `Services` 可能会选择相同的端口。
-
-我们真正需要一个集群的单一外部入口点，它可以跟踪多个可用的服务并使用规则将流量路由到这些服务。这样，我们就可以将所有的路由配置部署在集群内部，使得 `Services` 能够动态地出现和消失。同时，我们可以为集群拥有一个单一且众知的入口点，供所有外部用户使用。
+我们真正需要一个集群的单一外部入口点，它可以跟踪多个可用的服务并使用规则将流量路由到这些服务。这样，我们就可以将所有的路由配置部署在集群内部，使得 `Services` 能够动态地出现和消失。同时，我们可以为集群拥有一个单一且众所周知的入口点，供所有外部用户使用。
 
 对于 HTTP 流量，Kubernetes 正提供了这种能力，并称之为 `Ingress`。要配置我们的集群将外部 HTTP 流量路由到 `Services`，我们需要定义一组指定路由的 `Ingress` 资源，并部署接收和路由流量的 ingress 控制器。我们在设置集群时已经安装了 ingress 控制器：
 
@@ -4099,7 +3967,7 @@ spec:
                   number: 80
 ```
 
-此资源指示 ingress 控制器查看 HTTP `Host` 头部。如果它看到 `web01` 作为 `Host` 头部，它将将尝试与我们指定的 `paths` 中的路径进行匹配。在这种情况下，所有路径都将匹配路径 `/` 前缀，因此所有流量将路由到 `nginx Service`。
+此资源指示 ingress 控制器查看 HTTP `Host` 头部。如果它看到 `web01` 作为 `Host` 头部，它将尝试与我们指定的 `paths` 中的路径进行匹配。在这种情况下，所有路径都将匹配路径 `/` 前缀，因此所有流量将路由到 `nginx Service`。
 
 在将此应用到集群之前，让我们确认一下如果我们尝试使用 ingress 控制器无法识别的主机名会发生什么。我们将使用与集群关联的高可用 IP 地址，因为集群的负载均衡器会将该地址转发到其中一个实例：
 
@@ -4112,11 +3980,13 @@ root@host01:~# curl -vH "Host:web01" http://192.168.61.10
 ...
 ```
 
-`curl` 命令中的 `-H "Host:web01"` 标志告诉 `curl` 使用值 `host01` 作为 HTTP 请求中的 `Host` 头部。鉴于我们的示例集群中没有可以将 `web01` 转换为集群 IP 地址的 DNS 服务器，这是是必要的。
+`curl` 命令中的 `-H "Host:web01"` 标志告诉 `curl` 使用值 `host01` 作为 HTTP 请求中的 `Host` 头部。鉴于我们的示例集群中没有可以将 `web01` 转换为集群 IP 地址的 DNS 服务器，这是必要的。
+
+
 
 正如我们所看到的，作为 ingress 控制器的 `NGINX` 服务器被配置为每当它收到不匹配任何已配置的 `Ingress` 资源的请求时，返回 `404 Not Found` 错误消息。在这种情况下，由于我们还没有创建任何 `Ingress` 资源，任何请求都将得到此响应。
 
-让我们 `web01 Ingress` 资源应用到集群：
+让我们将 `web01 Ingress` 资源应用到集群：
 
 ```
 root@host01:~# kubectl apply -f /opt/nginx-ingress.yaml 
@@ -4140,10 +4010,7 @@ root@host01:~# curl -vH "Host:web01" http://host01
 
 由于 `Ingress` 资源已存在，如上所示，在集群高可用 IP 和单个主机上的 HTTP 端口 `80` 请求都路由到 `nginx Service`。
 
-
-
-
-这种方法的优势在于，一旦完成设置，我们随时可以部署新的 Ingress 资源来将 Service 暴露在外部，只要我们选择唯一的主机名，就不会与其他任何已暴露的 Service 冲突。初始设置完成后，所有的配置都维护在集群内部，我们仍然为所有 Service 拥有高可用的配置。
+这种方法的优势在于，一旦完成设置，我们随时可以部署新的 `Ingress` 资源来将 `Service` 暴露在外部，只要我们选择唯一的主机名，就不会与其他任何已暴露的 `Service` 冲突。初始设置完成后，所有的配置都维护在集群内部，我们仍然为所有 `Service` 拥有高可用的配置。
 
 ### 结语
 
@@ -4286,8 +4153,6 @@ node/host02 unlabeled
 
 #### 资源不足
 
-
-
 在选择节点来托管 Pod 时，调度器还会考虑每个节点上可用的资源以及 Pod 所需要的资源。我们将在第 14 章中详细探讨资源限制（resource limits）；目前只需要知道 Pod 中的每个容器都可以请求它所需的资源，而调度器将确保将其调度到具有这些可用资源的节点上。当然，如果没有节点具有足够的剩余空间，调度器将无法调度该 Pod。相反，Pod 将处于 Pending（挂起）状态等待。
 
 让我们来看一个 Pod 定义示例来说说明这一点：
@@ -4417,6 +4282,8 @@ sleep   2/2     Running   0          51s   172.31.89.199   host02 ...
 
 和之前一样，`kubectl describe` 为我们提供了揭示问题的事件日志：
 
+
+
 ```bash
 root@host01:~# kubectl describe pod sleep
 Name:         sleep
@@ -4443,7 +4310,7 @@ host03   458m         22%    1277Mi          67%
 
 ### 拉取镜像
 
-在 Pod 调度到节点后，kubelet 服务与运行时交互以创建环境并启动容器。然而，仍然有一种应用程序配置错误会导致 Pod 阻塞在 Pending 阶段：无法拉取镜像。
+在 Pod 调度到节点后，`kubelet` 服务与运行时交互以创建环境并启动容器。然而，仍然有一种应用程序配置错误会导致 Pod 阻塞在 `Pending` 阶段：无法拉取镜像。
 
 三个主要问题会导致运行时拉取镜像：
 
@@ -4471,7 +4338,7 @@ spec:
     image: nginz
 ```
 
-Docker Hub 中没有名为 nginz 的镜像，因此无法拉取此镜像。让我们探索将此资源添加到集群时会发生什么：
+Docker Hub 中没有名为 `nginz` 的镜像，因此无法拉取此镜像。让我们探索将此资源添加到集群时会发生什么：
 
 ```bash
 root@host01:~# kubectl apply -f /opt/nginx-typo.yaml
@@ -4481,15 +4348,13 @@ NAME    READY   STATUS             RESTARTS   AGE
 nginx   0/1     ImagePullBackOff   0          20s
 ```
 
-
-
 我们的 Pod 状态为 `ImagePullBackOff`，这立即传达了两个信息。首先，该 Pod 尚未达到容器运行的阶段，因为它还没有拉取容器镜像。其次，与所有错误一样，Kubernetes 会继续尝试该操作，但它会使用 `back-off`（退避）算法来避免过载我们集群的资源。拉取镜像涉及通过网络与镜像仓库（image registry）进行通信，在短时间内向仓库发送大量请求是不礼貌的，也是对网络带宽的浪费。此外，失败的原因可能是瞬时的，因此集群将继续尝试，以希望问题得到解决。
 
 Kubernetes 使用退避算法来重试错误，这一点对于调试至关重要。在这种情况下，我们显然不会通过向 Docker Hub 发布一个 `nginz` 镜像来解决问题。但对于那些我们通过发布镜像或更改镜像权限来修复问题的情况，有一点很重要：Kubernetes 不会立即获取到这些变化，因为每次尝试之间的延迟会随着失败次数次数而增加。
 
 让我们查看事件日志，看看这种退避是如何运作的：
 
-```
+```bash
 root@host01:~# kubectl describe pod nginx
 Name:         nginx
 Namespace:    default
@@ -4509,11 +4374,11 @@ Events:
   Normal   BackOff    1s ➌ (x7 over 111s)   kubelet            ...
 ```
 
-如之前所示，我们的 Pod 阻塞在 Pending 状态 ➊。但在这一次，Pod 已经过了调度阶段，并进入了拉取镜像阶段。出于安全考虑，仓库不会区分是由于没有访问权限的私有镜像还是不存在的镜像，因此 Kubernetes 只能告诉我们问题是其中之一 ➋。最后，我们可以看到，在我们创建此 Pod 的两分钟内，Kubernetes 已经尝试拉取了七次镜像 ➌，最后一次尝试是在一秒前。
+如之前所示，我们的 Pod 阻塞在 `Pending` 状态 ➊。但在这一次，Pod 已经过了调度阶段，并进入了拉取镜像阶段。出于安全考虑，仓库不会区分是由于没有访问权限的私有镜像还是不存在的镜像，因此 Kubernetes 只能告诉我们问题是其中之一 ➋。最后，我们可以看到，在我们创建此 Pod 的两分钟内，Kubernetes 已经尝试拉取了七次镜像 ➌，最后一次尝试是在一秒前。
 
 如果我们等待几分钟，然后再次运行相同的 `kubectl describe` 命令并关注退避行为，我们可以看到每次尝试之间经历了很长的时间：
 
-```
+```bash
 root@host01:~# kubectl describe pod nginx
 Name:         nginx
 Namespace:    default
@@ -4529,7 +4394,7 @@ Kubernetes 现在在 19 分钟内尝试拉取了 65 次镜像。然而，延迟�
 
 让我们修复这个问题以便看到它的运行过程。我们可以修复 YAML 文件并再次运行 `kubectl apply`，也可以使用 `kubectl set` 来修复：
 
-```
+```bash
 root@host01:~# kubectl set image pod nginx nginx=nginx
 pod/nginx image updated
 root@host01:~# kubectl get pods
@@ -4541,7 +4406,7 @@ nginx   0/1     ImagePullBackOff   0          28m
 
 我们修复了镜像名称，但 Pod 仍然显示 `ImagePullBackOff`，因为我们必须等待五分钟计时结束，Kubernetes 才会再次尝试。在下次尝试时，拉取成功了，Pod 开始运行：
 
-```
+```bash
 root@host01:~# kubectl get pods
 NAME    READY   STATUS    RESTARTS   AGE
 nginx   1/1     Running   0          32m
@@ -4549,7 +4414,7 @@ nginx   1/1     Running   0          32m
 
 在继续之前，让我们清理掉 Pod：
 
-```
+```bash
 root@host01:~# kubectl delete pod nginx
 pod "nginx" deleted
 ```
@@ -4564,9 +4429,9 @@ pod "nginx" deleted
 
 对于我们的简单示例，我们首先需要一个带有启动时失败的容器的 Pod 定义。这里是一个 PostgreSQL 的 Pod 定义，可以满足我们的需求：
 
-*postgres-misconfig.yaml*
+`postgres-misconfig.yaml`
 
-```
+```yaml
 ---
 apiVersion: v1
 kind: Pod
@@ -4580,22 +4445,22 @@ spec:
 
 这个定义看起来没问题，但 PostgreSQL 在运行时某些配置。通过 `kubectl apply` 创建 Pod：
 
-```
+```bash
 root@host01:~# kubectl apply -f postgres-misconfig.yaml
 pod/postgres created
 ```
 
 等待一段时间后，通过 `kubectl get` 检查状态，我们会注意到之前没过的状态：
 
-```
+```bash
 root@host01:~# kubectl get pods
 NAME       READY   STATUS             RESTARTS     AGE
 postgres   0/1     CrashLoopOff       1 (8s ago)   25s
 ```
 
-`CrashLoopOff` 状态表示 Pod 中的容器已退出。由于这不是 Job，它不期望容器退出，因此被视为崩溃。如果你在正确的时间捕捉 Pod，可能会看到 Error 状态而不是 CrashLoopOff。这是临时的：和 `ImagePullBackOff` 状态一样，`CrashLoopOff` 使用算法重试失败，每次失败增加重试之间的时间，以避免过度集群。如果我们等待几分钟然后再次打印状态，可以看到这种退避：
+`CrashLoopOff` 状态表示 Pod 中的容器已退出。由于这不是 Job，它不期望容器退出，因此被视为崩溃。如果你在正确的时间捕捉 Pod，可能会看到 `Error` 状态而不是 `CrashLoopOff`。这是临时的：和 `ImagePullBackOff` 状态一样，`CrashLoopOff` 使用算法重试失败，每次失败增加重试之间的时间，以避免过度集群。如果我们等待几分钟然后再次打印状态，可以看到这种退避：
 
-```
+```bash
 root@host01:~# kubectl get pods
 NAME       READY   STATUS             RESTARTS     AGE
 postgres   0/1     CrashLoopOff       5 (117s ago)   5m3s
@@ -4605,7 +4470,7 @@ postgres   0/1     CrashLoopOff       5 (117s ago)   5m3s
 
 让我们像 usual 一样使用 `kubectl describe` 来获取有关此失败的更多信息：
 
-```
+```bash
 root@host01:~# kubectl describe pod postgres
 Name:         postgres
 Namespace:    default
@@ -4629,10 +4494,7 @@ Events:
 
 `kubectl describe` 命令确实给了我们一个有用信息：容器的退出码。然而，这真的告诉我们发生了某种错误；不足以完全调试失败。为了确定容器为何失败，我们将使用 `kubectl logs` 命令查看容器日志：
 
-
-
-
-```
+```bash
 root@host01:~# kubectl logs postgres
 Error: Database is uninitialized and superuser password is not specified.
   You must specify POSTGRES_PASSWORD to a non-empty value for the
@@ -4646,7 +4508,7 @@ Error: Database is uninitialized and superuser password is not specified.
 
 `postgres-fixed.yaml`
 
-```
+```yaml
 ---
 apiVersion: v1
 kind: Pod
@@ -4665,7 +4527,7 @@ spec:
 
 要应用此更改，我们首先需要删除 Pod 定义，然后将新的资源配置应用到集群：
 
-```
+```bash
 root@host01:~# kubectl delete pod postgres
 pod "postgres" deleted
 root@host01:~# kubectl apply -f /opt/postgres-fixed.yaml
@@ -4676,7 +4538,7 @@ pod/postgres created
 
 现在由于我们已经修复了配置，我们的 PostgreSQL 容器按预期启动了：
 
-```
+```bash
 root@host01:~# kubectl get pods
 NAME       READY   STATUS    RESTARTS   AGE
 postgres   1/1     Running   0          77s
@@ -4684,7 +4546,7 @@ postgres   1/1     Running   0          77s
 
 在继续下一个示例之前，让我们清理掉这个 Pod：
 
-```
+```bash
 root@host01:~# kubectl delete pod postgres
 pod "postgres" deleted
 ```
@@ -4697,7 +4559,7 @@ pod "postgres" deleted
 
 `crasher.c`
 
-```
+```c
 int main() {
   char *s = "12";
   s[2] = '3';
@@ -4707,19 +4569,19 @@ int main() {
 
 第一行代码创建了一个指向长度为两个字符字符串的指针；第二行尝试写入不存在的第三个字符，导致程序立即终止。
 
-这个 C 程序可以使用 `gcc` 在任何系统上编译以创建一个名为 crasher 的可执行文件。如果你在宿主机 Linux 系统上构建它，请使用此 `gcc` 命令：
+这个 C 程序可以使用 `gcc` 在任何系统上编译以创建一个名为 `crasher` 的可执行文件。如果你在宿主机 Linux 系统上构建它，请使用此 `gcc` 命令：
 
-```
+```bash
 $ gcc -g -static -o crasher crasher.c
 ```
 
 `-g` 参数确保调试符号可用。我们稍后会派到它们。`-static` 参数是最重要的；我们希望将此封装为 Alpine 容器镜像内部的独立应用程序。如果我们在不同的 Linux 发行版（如 Ubuntu）上构建，标准库将基于不同的工具链，动态链接将会失败。由于这个原因，我们希望可执行文件的所有依赖项都是静态链接的。最后，我们使用 `-o` 指定输出的可执行文件名称，然后提供我们的 C 源代码文件名。
 
-或者，你也可以直接使用已经构建并发布到 Docker Hub 名为 `bookofkubernetes/crasher:stable` 的容器镜像。该镜像是使用 GitHub Actions 根据仓库中的代码 *[`github.com/book-of-kubernetes/crasher`](https://github.com/book-of-kubernetes/crasher)* 自动构建并发布的。以下是该仓库中的 `Dockerfile`：
 
-`Dockerfile`
 
-```
+或者，你也可以直接使用已经构建并发布到 Docker Hub、名为`bookofkubernetes/crasher:stable`的容器镜像。该镜像是使用 GitHub Actions 根据仓库中的代码`github.com/book-of-kubernetes/crasher`自动构建并发布的。以下是该仓库中的`Dockerfile`：
+
+```dockerfile
 FROM alpine AS builder
 COPY ./crasher.c /
 RUN apk --update add gcc musl-dev && \
@@ -4730,15 +4592,15 @@ COPY --from=builder /crasher /crasher
 CMD [ "/crasher" ]
 ```
 
-这个 `Dockerfile` 利用 Docker 的多阶段构建能力来减小最终镜像的大小。要在 Alpine 容器内部编译，我们需要 `gcc` 以及核心 C 头文件和库。然而这会导致容器镜像显著增大。我们只在编译时需要它们，因此我们希望避免在最终镜像包含这些额外内容。
+这个`Dockerfile`利用 Docker 的多阶段构建能力来减小最终镜像的大小。要在 Alpine 容器内部编译，我们需要`gcc`以及核心 C 头文件和库。然而这会导致容器镜像显著增大。我们只在编译时需要它们，因此我们希望避免在最终镜像包含这些额外内容。
 
-当我们使用在 第 5 章 中看到的 `docker build` 命令运行此构建时，Docker 将基于 Alpine Linux 创建一个容器，将我们的源代码复制到其中，安装开发工具并编译应用程序。随后 Docker 将重新启动一个全新的 Alpine Linux 容器，并从第一个容器复制生成的的可执行文件。最终容器镜像是从第二个容器捕获的，因此我们避免了向最终镜像中添加开发工具。
+当我们使用在第 5 章中看到的`docker build`命令运行此构建时，Docker 将基于 Alpine Linux 创建一个容器，将我们的源代码复制到其中，安装开发工具并编译应用程序。随后 Docker 将重新启动一个全新的 Alpine Linux 容器，并从第一个容器复制生成的的可执行文件。最终容器镜像是从第二个容器捕获的，因此我们避免了向最终镜像中添加开发工具。
 
 让我们在 Kubernetes 集群中运行这个镜像。这次我们将使用 Deployment 资源，以便演示如何编辑它来绕过崩溃的容器：
 
 `crasher-deploy.yaml`
 
-```
+```yaml
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -4763,60 +4625,56 @@ spec:
 
 我们可以按照通常的方式将此 Deployment 添加到集群：
 
-```
+```shell
 root@host01:~# kubectl apply -f crasher-deploy.yaml
 deployment.apps/crasher created
 ```
 
 一旦 Kubernetes 有机会调度该 Pod 并拉取镜像，它就会按预期开始崩溃：
 
-```
+```text
 root@host01:~# kubectl get pods
 NAME                       READY   STATUS             RESTARTS      AGE
 crasher-76cdd9f-5blbn   0/1     CrashLoopOff     3 (24s ago)   73s
 ```
 
-与之前一样，使用 `kubectl describe` 只能告诉我们容器的退出码。另一种方法是我们可以使用 `kubectl get` 的 JSON 输出格式和 `jq` 工具来获取退出码：
+与之前一样，使用`kubectl describe`只能告诉我们容器的退出码。另一种方法是我们可以使用`kubectl get`的 JSON 输出格式和`jq`工具来获取退出码：
 
-```
+```shell
 root@host01:~# kubectl get pod crasher-76cdd9f-5blbn -o json | \
   jq '.status.containerStatuses[].lastState.terminated.exitCode'
 139
 ```
 
-请根据 `kubectl get pods` 的输出使用正确的 Pod 名称。退出码 139 告诉我们容器因段错误终止了。然而，日志对于诊断问题没有帮助，因为我们的程序在崩溃之前没有打印任何内容：
+请根据`kubectl get pods`的输出使用正确的 Pod 名称。退出码 139 告诉我们容器因段错误终止了。然而，日志对于诊断问题没有帮助，因为我们的程序在崩溃之前没有打印任何内容：
 
-```
+```text
 root@host01:~# kubectl logs crasher-76cdd9f-5blbn
 [ no output ]
 ```
 
-我们遇到了一个相当棘手的问题。日志没有帮助，所以下一步是使用 `kubectl exec` 进入容器内部。然而，当我们的应用程序崩溃时，容器会停止，没有足够的时间让我们进行任何调试工作。
+我们遇到了一个相当棘手的问题。日志没有帮助，所以下一步是使用`kubectl exec`进入容器内部。然而，当我们的应用程序崩溃时，容器会停止，没有足够的时间让我们进行任何调试工作。
 
-为了修复这个问题，我们需要一种启动此容器而不运行崩溃程序的方法。我们可以通过覆盖默认命令让我们的容器保持运行。因为我们是在 Alpine Linux 镜像上构建的，`sleep` 命令可供我们使用。
+为了修复这个问题，我们需要一种启动此容器而不运行崩溃程序的方法。我们可以通过覆盖默认命令让我们的容器保持运行。因为我们是在 Alpine Linux 镜像上构建的，`sleep`命令可供我们使用。
 
-我们可以通过编辑 YAML 文件并以此更新 Deployment，但也可以直接使用 `kubectl edit` 编辑 Deployment，这会在编辑器中调出当前定义，我们所做的任何更改将保存到集群中：
+我们可以通过编辑 YAML 文件并以此更新 Deployment，但也可以直接使用`kubectl edit`编辑 Deployment，这会在编辑器中调出当前定义，我们所做的任何更改将保存到集群中：
 
+这将在编辑器窗口中通过`vi`打开一个 YAML 格式的 Deployment 资源。该资源包含的字段将比我们创建它时提供的多得多，因为 Kubernetes 会向我们显示资源的状态以及一些带有默认值的字段。
 
-
-
-
-这将在编辑器窗口中通过 `vi` 打开一个 YAML 格式的 Deployment 资源。该资源包含的字段将比我们创建它时提供的多得多，因为 Kubernetes 会向我们显示资源的状态以及一些带有默认值的字段。
-
-如果你不喜欢 `vi`，可以在 `kubectl edit` 命令前加上 `KUBE_EDITOR=nano`，来改用 Nano 编辑器。
+如果你不喜欢`vi`，可以在`kubectl edit`命令前加上`KUBE_EDITOR=nano`，来改用 Nano 编辑器。
 
 在文件中，找到以下几行：
 
-```
+```yaml
  spec:
       containers:
       - image: bookofkubernetes/crasher:stable
         imagePullPolicy: IfNotPresent
 ```
 
-尽管 YAML 资源中没有包含这一行，你仍然会看到 `imagePullPolicy` 这一行，因为 Kubernetes 自动为资源添加了默认策略。在 `image` 和 `imagePullPolicy` 之间添加新行，使结果如下所示：
+尽管 YAML 资源中没有包含这一行，你仍然会看到`imagePullPolicy`这一行，因为 Kubernetes 自动为资源添加了默认策略。在`image`和`imagePullPolicy`之间添加新行，使结果如下所示：
 
-```
+```yaml
  spec:
       containers:
       - image: bookofkubernetes/crasher:stable
@@ -4824,41 +4682,41 @@ root@host01:~# kubectl logs crasher-76cdd9f-5blbn
         imagePullPolicy: IfNotPresent
 ```
 
-新添加的这一行覆盖了容器的默认命令，使其运行 `sleep` 而不是运行我们的崩溃程序。保存并退出编辑器，`kubectl` 就会获取新的定义：
+新添加的这一行覆盖了容器的默认命令，使其运行`sleep`而不是运行我们的崩溃程序。保存并退出编辑器，`kubectl`就会获取新的定义：
 
-```
+```text
 deployment.apps/crasher edited
 ```
 
-在 `kubectl` 将此更改应用到集群后，Deployment 必须删除旧 Pod 并创建一个新的。这是自动完成的，因此我们唯一注意到的区别是 Pod 名称中自动生成的部分。当然，我们还会看到 Pod 正在运行：
+在`kubectl`将此更改应用到集群后，Deployment 必须删除旧 Pod 并创建一个新的。这是自动完成的，因此我们唯一注意到的区别是 Pod 名称中自动生成的部分。当然，我们还会看到 Pod 正在运行：
 
-```
+```text
 root@host01:~# kubectl get pods
 NAME                       READY   STATUS    RESTARTS   AGE
 crasher-58d56fc5df-vghbt   1/1     Running   0          3m29s
 ```
 
-我们的 Pod 现在正在运行，但它只是在运行 `sleep`。我们仍然需要调试实际应用程序。要做到这一点，我们现在可以在容器内部获取一个 shell 提示符：
+我们的 Pod 现在正在运行，但它只是在运行`sleep`。我们仍然需要调试实际应用程序。要做到这一点，我们现在可以在容器内部获取一个 shell 提示符：
 
-```
+```shell
 root@host01:~# kubectl exec -ti crasher-58d56fc5df-vghbt -- /bin/sh
 / #
 ```
 
 当我们更改定义时，Deployment 替换了 Pod，所以名称发生了变化。和之前一样，请使用正确的 Pod 名称。此时，我们可以手动尝试我们的崩溃程序：
 
-```
+```shell
 / # /crasher
 Segmentation fault (core dumped)
 ```
 
-在许多情况下，通过这种方式运行程序并尝试不同的环境变量和命令行选项，可能足以发现并修复问题了。或者，我们可以尝试使用 `strace` 运行程序，它会告诉我们程序在崩溃之前尝试进行哪些系统调用以及尝试打开哪些文件。在这种情况下，我们知道程序是因为段错误（segmentation fault）崩溃的，这意味着问题可能是一个编程错误，因此我们最好的方法是使用端口转发将调试工具连接到应用程序。
+在许多情况下，通过这种方式运行程序并尝试不同的环境变量和命令行选项，可能足以发现并修复问题了。或者，我们可以尝试使用`strace`运行程序，它会告诉我们程序在崩溃之前尝试进行哪些系统调用以及尝试打开哪些文件。在这种情况下，我们知道程序是因为段错误（segmentation fault）崩溃的，这意味着问题可能是一个编程错误，因此我们最好的方法是使用端口转发将调试工具连接到应用程序。
 
 ### 使用端口转发进行调试
 
-我们将通过使用基于文本的调试器 `gdb` 来演示端口转发，但任何可以通过网络端口连接的调试器都可以工作。首先，我们需要使用一个调试器在容器内创建我们的应用程序，该调试器将监听一个网络端口并在运行代码之前进行等待。为了做到这一点，我们需要在容器内安装 `gdb`。由于这是一个 Alpine 容器，我们将使用 `apk`：
+我们将通过使用基于文本的调试器`gdb`来演示端口转发，但任何可以通过网络端口连接的调试器都可以工作。首先，我们需要使用一个调试器在容器内创建我们的应用程序，该调试器将监听一个网络端口并在运行代码之前进行等待。为了做到这一点，我们需要在容器内安装`gdb`。由于这是一个 Alpine 容器，我们将使用`apk`：
 
-```
+```shell
 / # apk add gdb
 ...
 (13/13) Installing gdb (10.1-r0)
@@ -4866,25 +4724,25 @@ Executing busybox-1.32.1-r3.trigger
 OK: 63 MiB in 27 packages
 ```
 
-我们安装的 `gdb` 版本包含了 `gdbserver`，它允许我们启动网络调试会话。
+我们安装的`gdb`版本包含了`gdbserver`，它允许我们启动网络调试会话。
 
-由于 `gdb` 是一个基于文本的调试器，我们显然可以直接启动它来调试我们的应用程序，但使用带有 GUI 的调试器通常更好，这让我们更容易单步源码、设置断点并观察变量。出于这个原因，我将展示如何通过网络连接调试器的过程。
+由于`gdb`是一个基于文本的调试器，我们显然可以直接启动它来调试我们的应用程序，但使用带有 GUI 的调试器通常更好，这让我们更容易单步源码、设置断点并观察变量。出于这个原因，我将展示如何通过网络连接调试器的过程。
 
-让我们启动 `gdbserver` 并将其配置为监听端口 `2345`：
+让我们启动`gdbserver`并将其配置为监听端口`2345`：
 
-```
+```shell
 / # gdbserver localhost:2345 /crasher
 Process /crasher created; pid = 25
 Listening on port 2345
 ```
 
-注意，我们告诉了 `gdbserver` 监听 `localhost` 接口。我们仍然能够连接到调试器，因为我们将通过 `kubectl port-forward` 命令让 Kubernetes 提供端口转发。该命令导致 `kubectl` 连接到 API 服务器并请求其将流量转发到特定 Pod 上的特定端口。优点是，我们可以从任何可以连接到 API 服务器的地方（甚至是集群外部）使用此端口转发功能。
+注意，我们告诉了`gdbserver`监听`localhost`接口。我们仍然能够连接到调试器，因为我们将通过`kubectl port-forward`命令让 Kubernetes 提供端口转发。该命令导致`kubectl`连接到 API 服务器并请求其将流量转发到特定 Pod 上的特定端口。优点是，我们可以从任何可以连接到 API 服务器的地方（甚至是集群外部）使用此端口转发功能。
 
 专门使用端口转发来运行远程调试器对于 Kubernetes 集群管理员或容器化应用程序开发人员来说可能并不是日常常态，但在没有其他方法发现 bug 时，这是一项非常有价值的技能。它也是说明端口转发到达 Pod 的强大能力的极佳方式。
 
-由于我们在第一个终端窗口中运行了调试器，我们需要另一个终端标签页或窗口来执行端口转发，这可以在集群中的任何一个主机上完成。让我们使用 `host01`：
+由于我们在第一个终端窗口中运行了调试器，我们需要另一个终端标签页或窗口来执行端口转发，这可以在集群中的任何一个主机上完成。让我们使用`host01`：
 
-```
+```shell
 root@host01:~# kubectl port-forward pods/crasher-58d56fc5df-vghbt 2345:2345
 Forwarding from 127.0.0.1:2345 to 2345
 Forwarding from [::]:2345 to 2345
@@ -4896,14 +4754,10 @@ Forwarding from [::]:2345 to 2345
 
 现在我们对使用 Kubernetes 运行容器有了清晰的认识，可以开始深入研究集群本身的能力。在此过程中，我们将确保探索每个组件的工作原理，以便掌握诊断问题所需的工具。我们将在下一章从详细查看 Kubernetes 控制平面开始。
 
-
-
-
-
 虽然我们将重点关注 API 服务器，但控制面还包含多个其他服务，每个服务都有其特定的角色。其他控制面服务作为 API 服务器的客户端，监控集群变化并采取适当的操作来更新集群状态。以下列表描述了其他控制面组件：
 
-- `Scheduler`（调度器）：将每个新的 `Pod` 分配到节点。
-- `Controller manager`（控制器管理器）：负责多个职责，包括为 `Deployments` 创建 `Pods`、监控节点以及对故障做出响应。
+- `Scheduler`（调度器）：将每个新的`Pod`分配到节点。
+- `Controller manager`（控制器管理器）：负责多个职责，包括为`Deployments`创建`Pods`、监控节点以及对故障做出响应。
 - `Cloud controller manager`（云控制器管理器）：这是一个可选组件，与底层的云提供程序接口，以检查节点并配置网络流量路由。
 
 在我们演示 API 服务器的工作原理时，我们还将看到 Kubernetes 如何管理安全，以确保只有授权的用户和和服务才能查询集群并对其进行更改。像 Kubernetes 这样的容器编排环境的目的是为我们可能运行的任何容器化应用程序提供平台，因此这种安全性对于确保集群仅按预期方式使用至关重要。
@@ -4912,28 +4766,28 @@ Forwarding from [::]:2345 to 2345
 
 尽管 API 服务器在 Kubernetes 架构中处于核心位置，但它的目的非常简单。它使用 HTTP 和表述状态转移（REST）暴露接口，用于对集群中的资源执行基本的创建、检索、更新和删除操作。它执行身份验证以识别客户端，执行授权以确保客户端拥有特定请求的权限，并执行验证以确保任何创建或更新的资源都符合相应的规范。它还根据从客户端接收到的命令从数据存储中读取和写入数据。
 
-然而，API 服务器并不负责实际更新集群的当前状态以匹配期望状态。那是其他控制面和节点组件的职责。例如，如果客户端创建了一个新的 Kubernetes `Deployment`，API 服务器的工作仅仅是更新数据存储以包含资源信息。随后，`scheduler` 的工作是决定 `Pods` 运行在何处，而所分配节点上的 `kubelet` 服务的工作则是创建并监控容器，并配置网络以将流量路由到容器中。
+然而，API 服务器并不负责实际更新集群的当前状态以匹配期望状态。那是其他控制面和节点组件的职责。例如，如果客户端创建了一个新的 Kubernetes`Deployment`，API 服务器的工作仅仅是更新数据存储以包含资源信息。随后，`scheduler`的工作是决定`Pods`运行在何处，而所分配节点上的`kubelet`服务的工作则是创建并监控容器，并配置网络以将流量路由到容器中。
 
-对于本章来说，我们通过自动化脚本配置了一个三节点 Kubernetes 集群。这三个节点中的每一个节点都充当控制面节点，因此运行着三个 API 服务器的副本。我们可以与这三个节点中的任何一个进行通信，因为它们都共享同一个后端数据库。API 服务器在端口 `6443`（默认端口）上监听安全的 HTTP 连接。
+对于本章来说，我们通过自动化脚本配置了一个三节点 Kubernetes 集群。这三个节点中的每一个节点都充当控制面节点，因此运行着三个 API 服务器的副本。我们可以与这三个节点中的任何一个进行通信，因为它们都共享同一个后端数据库。API 服务器在端口`6443`（默认端口）上监听安全的 HTTP 连接。
 
 **注意**
 
-本书的示例仓库位于 [`github.com/book-of-kubernetes/examples`](https://github.com/book-of-kubernetes/examples)。请参阅第 xx 页 的“运行示例”获取设置详细信息。
+本书的示例仓库位于`github.com/book-of-kubernetes/examples`。请参阅第 xx 页的“运行示例”获取设置详细信息。
 
-我们一直在使用 `kubectl` 与 API 服务器通信，以创建和删除资源并检索状态，并且 `kubectl` 一直使用端口 `6443` 上的安全 HTTP 与集群通信。它知道这样做是因为在集群初始化时，`kubeadm` 在 `/etc/kubernetes` 目录下安装了一个 Kubernetes 配置文件。该配置文件还包含身份验证信息，授予了我们读取集群状态和进行更改的权限。
+我们一直在使用`kubectl`与 API 服务器通信，以创建和删除资源并检索状态，并且`kubectl`一直使用端口`6443`上的安全 HTTP 与集群通信。它知道这样做是因为在集群初始化时，`kubeadm`在`/etc/kubernetes`目录下安装了一个 Kubernetes 配置文件。该配置文件还包含身份验证信息，授予了我们读取集群状态和进行更改的权限。
 
-由于 API 服务器期望使用安全的 HTTP，我们可以使用 `curl` 直接与 Kubernetes API 通信。这将让我们更好地感受通信实际上是如何工作的。让我们从一个简单的 `curl` 命令开始：
+由于 API 服务器期望使用安全的 HTTP，我们可以使用`curl`直接与 Kubernetes API 通信。这将让我们更好地感受通信实际上是如何工作的。让我们从一个简单的`curl`命令开始：
 
-```
+```shell
 root@host01:~# curl https://192.168.61.11:6443/
 curl: (60) SSL certificate problem: unable to get local issuer certificate
 More details here: https://curl.se/docs/sslcerts.html
 ...
 ```
 
-此错误消息显示 `curl` 不信任 API 服务器提供的证书。我们可以使用 `curl` 查看此证书：
+此错误消息显示`curl`不信任 API 服务器提供的证书。我们可以使用`curl`查看此证书：
 
-```
+```shell
 root@host01:~# curl -kv https://192.168.61.11:6443/
 ...
 * Server certificate:
@@ -4943,19 +4797,19 @@ root@host01:~# curl -kv https://192.168.61.11:6443/
 ...
 ```
 
-`-k` 选项告诉 `curl` 忽略任何证书问题，而 `-v` 告诉 `curl` 提供我们有关连接的额外日志信息。
+`-k`选项告诉`curl`忽略任何证书问题，而`-v`告诉`curl`提供我们有关连接的额外日志信息。
 
-为了让 `curl` 信任此证书，它需要信任颁发者，因为颁发者是证书的签名者。让我们从 Kubernetes 安装中获取证书，以便我们可以让 `curl` 指向它：
+为了让`curl`信任此证书，它需要信任颁发者，因为颁发者是证书的签名者。让我们从 Kubernetes 安装中获取证书，以便我们可以让`curl`指向它：
 
-```
+```shell
 root@host01:~# cp /etc/kubernetes/pki/ca.crt .
 ```
 
-确保在结尾添加 `.` 以将此文件复制到当前目录。我们这样做仅仅是为了让后续命令更容易输入。
+确保在结尾添加`.`以将此文件复制到当前目录。我们这样做仅仅是为了让后续命令更容易输入。
 
 在使用此证书之前，让我们检查一下：
 
-```
+```shell
 root@host01:~# openssl x509 -in ca.crt -text
 Certificate:
 ...
@@ -4964,11 +4818,11 @@ Certificate:
         Subject: CN = kubernetes
 ```
 
-颁发者（Issuer）和主体（Subject）是相同的，因此这是一个自签名证书。它是我们在初始化此集群时由 `kubeadm` 创建的。使用生成的证书允许 `kubeadm` 适应我们特定的集群网络配置，并允许我们的集群拥有唯一的唯一的证书和密钥，而不需要外部证书颁发机构（CA）。然而，这意味着我们需要在任何需要与此 API 服务器通信的系统上配置 `kubectl` 以信任此证书。
+颁发者（Issuer）和主体（Subject）是相同的，因此这是一个自签名证书。它是我们在初始化此集群时由`kubeadm`创建的。使用生成的证书允许`kubeadm`适应我们特定的集群网络配置，并允许我们的集群拥有唯一的唯一的证书和密钥，而不需要外部证书颁发机构（CA）。然而，这意味着我们需要在任何需要与此 API 服务器通信的系统上配置`kubectl`以信任此证书。
 
-我们现在可以告诉 `curl` 使用此证书来验证 API 服务器：
+我们现在可以告诉`curl`使用此证书来验证 API 服务器：
 
-```
+```json
 root@host01:~# curl --cacert ca.crt https://192.168.61.11:6443/
 {
 ...
@@ -4979,11 +4833,13 @@ root@host01:~# curl --cacert ca.crt https://192.168.61.11:6443/
 }
 ```
 
-现在我们为 `curl` 提供了正确的根证书，`curl` 就可以验证 API 服务器证书，我们可以成功连接到 API 服务器。然而，API 服务器返回了 403 错误，表明我们未获得授权。这是因为我们没有为 `curl` 提供传递给 API 服务器的身份验证信息，因此 API 服务器将我们视为匿名用户。
 
-最后一点：为了让此 `curl` 命令生效，我们需要对使用的主机名或 IP 地址进行选择。API 服务器监听所有网络接口，因此我们可以使用 `localhost` 或 `127.0.0.1` 连接它。然而，这些并未列在 API Server 证书中，且不能用于安全的 HTTP。
 
-### API Server 验证
+现在我们为`curl`提供了正确的根证书，`curl`就可以验证 API 服务器证书，我们可以成功连接到 API 服务器。然而，API 服务器返回了 403 错误，表明我们未获得授权。这是因为我们没有为`curl`提供传递给 API 服务器的身份验证信息，因此 API 服务器将我们视为匿名用户。
+
+最后一点：为了让此`curl`命令生效，我们需要对使用的主机名或 IP 地址进行选择。API 服务器监听所有网络接口，因此我们可以使用`localhost`或`127.0.0.1`连接它。然而，这些并未列在 API Server 证书中，且不能用于安全的 HTTP。
+
+## API Server 验证
 
 在 API 服务器接受我们的请求之前，我们需要提供身份验证信息，因此让我们了解 API 服务器的身份验证过程。身份验证通过一组插件处理，每个插件都会检查请求以判断它是否可以识别客户端。第一个成功识别客户端的插件将为 API 服务器提供身份信息。该身份随后将结合授权确定客户端允许做什么。
 
@@ -4991,16 +4847,14 @@ root@host01:~# curl --cacert ca.crt https://192.168.61.11:6443/
 
 出于我们的目的，我们将重点关注在集群内部或作为集群设置过程部分的三个主要的身份验证插件：客户端证书、引导令牌以及和服务账户。
 
-#### 客户端证书
+### 客户端证书
 
-如前所述，HTTP 客户端（如 `curl`）通过将服务器主机名与其证书进行比较，并通过对比 CA 列表检查证书签名来验证服务器身份。除了检查服务器身份外，安全的 HTTP 还允许客户端向服务器提交证书。服务器根据其信任的权威列表检查签名，然后将证书的主体作为客户端的身份。
+如前所述，HTTP 客户端（如`curl`）通过将服务器主机名与其证书进行比较，并通过对比 CA 列表检查证书签名来验证服务器身份。除了检查服务器身份外，安全的 HTTP 还允许客户端向服务器提交证书。服务器根据其信任的权威列表检查签名，然后将证书的主体作为客户端的身份。
 
+Kubernetes 广泛使用 HTTP 客户端证书认证来使集群服务能够与 API 服务器进行身份验证。这包括控制平面组件，以及运行在每个节点上的`kubelet`服务。我们可以使用`kubeadm`来列出控制平面使用的证书：
 
-
-
-Kubernetes 广泛使用 HTTP 客户端证书认证来使集群服务能够与 API 服务器进行身份验证。这包括控制平面组件，以及运行在每个节点上的 `kubelet` 服务。我们可以使用 `kubeadm` 来列出控制平面使用的证书：
-
-``` evenroot@host01:~# kubeadm certs check-expiration
+```
+root@host01:~# kubeadm certs check-expiration
 ...
 CERTIFICATE                ...  RESIDUAL TIME   CERTIFICATE AUTHORITY ...
 admin.conf                 ...  363d                                  ...
@@ -5016,27 +4870,27 @@ scheduler.conf             ...  363d                                  ...
 ...
 ```
 
-`RESIDUAL TIME` 列显示了这些证书过期前的剩余时间；默认情况下，它们一年后过期。使用 `kubeadm certs renew` 可以刷新这些证书，并将证书名称作为参数传递。
+`RESIDUAL TIME`列显示了这些证书过期前的剩余时间；默认情况下，它们一年后过期。使用`kubeadm certs renew`可以刷新这些证书，并将证书名称作为参数传递。
 
-列表中的第一个项目 `admin.conf` 是我们在过去几个章节中向集群进行身份验证的方式。在初始化期间，`kubeadm` 创建了此证书并将其存储在 `/etc/kubernetes/admin.conf` 文件中。我们运行的每一个 `kubectl` 命令都在使用这个文件，因为我们的自动化脚本设置了 `KUBECONFIG` 环境变量：
+列表中的第一个项目`admin.conf`是我们在过去几个章节中向集群进行身份验证的方式。在初始化期间，`kubeadm`创建了此证书并将其存储在`/etc/kubernetes/admin.conf`文件中。我们运行的每一个`kubectl`命令都在使用这个文件，因为我们的自动化脚本设置了`KUBECONFIG`环境变量：
 
 ```
 root@host01:~# echo $KUBECONFIG
 /etc/kubernetes/admin.conf
 ```
 
-如果我们没有设置 `KUBECONFIG`，`kubectl` 将使用默认值，即用户主目录下的 `.kube/config` 的文件。
+如果我们没有设置`KUBECONFIG`，`kubectl`将使用默认值，即用户主目录下的`.kube/config`的文件。
 
-`admin.conf` 凭据的设计用于提供集群的紧急访问，并绕过权限检查。在生产集群中，我们会避免在日常操作中直接使用这些凭据。相反，生产集群的最佳实践是为管理员和普通用户集成一个独立的身份标识器。在我们的示例中，由于我们没有独立的身份标识器，我们将为普通用户创建一个额外的证书。这种证书可能对于运行在集群之外的自动化过程有用，但它无法与身份标识器集成。
+`admin.conf`凭据的设计用于提供集群的紧急访问，并绕过权限检查。在生产集群中，我们会避免在日常操作中直接使用这些凭据。相反，生产集群的最佳实践是为管理员和普通用户集成一个独立的身份标识器。在我们的示例中，由于我们没有独立的身份标识器，我们将为普通用户创建一个额外的证书。这种证书可能对于运行在集群之外的自动化过程有用，但它无法与身份标识器集成。
 
-我们可以使用 `kubeadm` 创建一个新的客户端证书：
+我们可以使用`kubeadm`创建一个新的客户端证书：
 
 ```
 root@host01:~# kubeadm kubeconfig user --client-name=me \
   --config /etc/kubernetes/kubeadm-init.yaml > kubeconfig
 ```
 
-`kubeadm kubeconfig user` 命令请求 API 服务器生成一个新的客户端证书。由于该证书是由集群的 `CA` 签名的，因此它对于身份验证是有效的。证书被保存到 `kubeconfig` 文件中，并包含了连接到 API 服务器所需的配置：
+`kubeadm kubeconfig user`命令请求 API 服务器生成一个新的客户端证书。由于该证书是由集群的`CA`签名的，因此它对于身份验证是有效的。证书被保存到`kubeconfig`文件中，并包含了连接到 API 服务器所需的配置：
 
 ```
 root@host01:~# cat kubeconfig
@@ -5061,7 +4915,7 @@ users:
     client-key-data: ...
 ```
 
-`clusters` 部分定义了连接到 API 服务器所需的信息，包括所有 API 服务器共享的负载均衡地址。`users` 部分定义了我们创建的新用户以及其客户端证书。到目前为止，我们成功创建了一个新用户，但我们还没有给该用户任何权限，因此使用这些凭据将无法成功：
+`clusters`部分定义了连接到 API 服务器所需的信息，包括所有 API 服务器共享的负载均衡地址。`users`部分定义了我们创建的新用户以及其客户端证书。到目前为止，我们成功创建了一个新用户，但我们还没有给该用户任何权限，因此使用这些凭据将无法成功：
 
 ```
 root@host01:~# KUBECONFIG=kubeconfig kubectl get pods
@@ -5070,13 +4924,13 @@ Error from server (Forbidden): pods is forbidden: User "me" cannot list resource
 
 在章节的后后部分，我们将看到如何给该用户赋予权限。
 
-### 引导令牌 (Bootstrap Tokens)
+## 引导令牌 (Bootstrap Tokens)
 
-初始化像 Kubernetes 这样的分布式系统是具有挑战性的。运行在每个节点上的 `kubelet` 服务必须被添加到集群中。为了做到，`kubelet` 必须连接到 API 服务器并获取由集群 `CA` 签名的客户端证书。然后 `kubelet` 服务使用该客户端证书对集群进行身份验证。
+初始化像 Kubernetes 这样的分布式系统是具有挑战性的。运行在每个节点上的`kubelet`服务必须被添加到集群中。为了做到，`kubelet`必须连接到 API 服务器并获取由集群`CA`签名的客户端证书。然后`kubelet`服务使用该客户端证书对集群进行身份验证。
 
 这种证书的生成必须安全地进行，以消除向集群添加恶意节点的可能性。出于此原因，API 服务器不能为任何请求加入集群的节点提供证书。相反，节点必须生成自己的私钥，向 API 服务器提交证书签名请求 (`CSR`)，并接收一个已签名的证书。
 
-为了保持此过程的安全性，我们需要确保节点有权提交证书签名请求。但这种提交必须在节点拥有用于永久身份验证的客户端证书之前发生——我们面临着先有鸡还是先有蛋的问题！Kubernetes 通过限限制的令牌解决了这个问题，这种令牌被称为 `Bootstrap Tokens`（引导令牌）。引导令牌变成一个 API 服务器和新节点已知的预共享 `secret`。限制此令牌的时间，可以减少其泄露时对集群造成的风险。Kubernetes 控制管理器（controller-manager）负责自动清理过期的引导令牌。当我们初始化集群时，`kubeadm` 创建了一个引导令牌，但它配置为两小时后过期。如果我们在之后还需要加入更多节点，可以使用 `kubeadm` 生成一个新的引导令牌：
+为了保持此过程的安全性，我们需要确保节点有权提交证书签名请求。但这种提交必须在节点拥有用于永久身份验证的客户端证书之前发生——我们面临着先有鸡还是先有蛋的问题！Kubernetes 通过限限制的令牌解决了这个问题，这种令牌被称为`Bootstrap Tokens`（引导令牌）。引导令牌变成一个 API 服务器和新节点已知的预共享`secret`。限制此令牌的时间，可以减少其泄露时对集群造成的风险。Kubernetes 控制管理器（controller-manager）负责自动清理过期的引导令牌。当我们初始化集群时，`kubeadm`创建了一个引导令牌，但它配置为两小时后过期。如果我们在之后还需要加入更多节点，可以使用`kubeadm`生成一个新的引导令牌：
 
 ```
 root@host01:~# TOKEN=$(kubeadm token create)
@@ -5084,7 +4938,7 @@ root@host01:~# echo $TOKEN
 pqcnd6.4awyqfaetzm
 ```
 
-此令牌作为 `Secret` 被添加到 `kube-system` 命名空间。我们将在第 16 章详细介绍 secret。现在，我们只需验证它是否存在：
+此令牌作为`Secret`被添加到`kube-system`命名空间。我们将在第 16 章详细介绍 secret。现在，我们只需验证它是否存在：
 
 ```
 root@host01:~# kubectl -n kube-system get secret
@@ -5094,7 +4948,7 @@ bootstrap-token-pqcnd6  bootstrap.kubernetes.io/token  6      64s
 ...
 ```
 
-我们可以通过带有前缀 `Bearer` 的 HTTP 头部向 API 服务器发送请求使用该令牌。当引导令牌认证插件看到该头部并将提供的令牌与相应的 `secret` 匹配时，它会对我们进行 API 服务器身份验证并允许我们访问 API。
+我们可以通过带有前缀`Bearer`的 HTTP 头部向 API 服务器发送请求使用该令牌。当引导令牌认证插件看到该头部并将提供的令牌与相应的`secret`匹配时，它会对我们进行 API 服务器身份验证并允许我们访问 API。
 
 出于安全考虑，引导令牌仅拥有 API 服务器的证书请求功能，这就是我们的令牌允许的所有操作。
 
@@ -5116,25 +4970,22 @@ root@host01:~# curl --cacert ca.crt \
 }
 ```
 
-了解引导令牌的工作原理是非常重要的，因为它们对于将节点添加到集群至关重要。然而，正如名称所示，这确实是引导令牌的唯一用途；通常不会将它们用于正常的 API 服务器访问。对于正常的 API 服务器访问，特别是从集群内部的，我们需要一个 `ServiceAccount`（服务账户）。
+了解引导令牌的工作原理是非常重要的，因为它们对于将节点添加到集群至关重要。然而，正如名称所示，这确实是引导令牌的唯一用途；通常不会将它们用于正常的 API 服务器访问。对于正常的 API 服务器访问，特别是从集群内部的，我们需要一个`ServiceAccount`（服务账户）。
 
-### 服务账户 (Service Accounts)
-
-
-
+## 服务账户 (Service Accounts)
 
 在 Kubernetes 集群中运行的容器通常需要与 API 服务器进行通信。例如，我们在第 6 章中在集群之上部署的所有各种组件，包括 Calico 网络插件、Longhorn 存储驱动程序和 metrics 服务器，都会与 API 服务器通信以观察和修改集群状态。为了支持这一点，Kubernetes 会自动向每个运行中的容器中注入凭据。
 
-当然，出于安全考虑，仅为每个容器提供其所需的 API 服务器权限是非常重要的，因此我们应该为每个应用程序或集群组件创建一个独立的 `ServiceAccount` 来做到这一点。然后，这些 `ServiceAccount` 的信息会被添加到 `Deployment`或其他控制器中，这样 Kubernetes 就会注入正确的凭据。在某些情况下，我们可能会为单个应用程序使用多个 `ServiceAccount`，限制每个应用程序组件仅访问其所需的权限。
+当然，出于安全考虑，仅为每个容器提供其所需的 API 服务器权限是非常重要的，因此我们应该为每个应用程序或集群组件创建一个独立的`ServiceAccount`来做到这一点。然后，这些`ServiceAccount`的信息会被添加到`Deployment`或其他控制器中，这样 Kubernetes 就会注入正确的凭据。在某些情况下，我们可能会为单个应用程序使用多个`ServiceAccount`，限制每个应用程序组件仅访问其所需的权限。
 
-除了为每个应用程序或组件使用独立的 `ServiceAccount` 之外，为每个应用程序使用独立的 `Namespace` 也是一种良好的做法。正如我们即将看到的，权限可以限制在单个 `Namespace` 中。让我们从创建 `Namespace` 开始：
+除了为每个应用程序或组件使用独立的`ServiceAccount`之外，为每个应用程序使用独立的`Namespace`也是一种良好的做法。正如我们即将看到的，权限可以限制在单个`Namespace`中。让我们从创建`Namespace`开始：
 
 ```
 root@host01:~# kubectl create namespace sample
 namespace/sample created
 ```
 
-`ServiceAccount` 使用访问器令牌（bearer token），该令牌存储在 Kubernetes 创建 `ServiceAccount` 时自动生成的 `secret` 中。让我们为在本章中将创建的 `Deployment` 创建一个 `ServiceAccount`：
+`ServiceAccount`使用访问器令牌（bearer token），该令牌存储在 Kubernetes 创建`ServiceAccount`时自动生成的`secret`中。让我们为在本章中将创建的`Deployment`创建一个`ServiceAccount`：
 
 `read-pods-sa.yaml`
 
@@ -5147,14 +4998,14 @@ metadata:
   namespace: sample
 ```
 
-注意，我们使用 `metadata` 将此 `ServiceAccount` 置于我们刚刚创建的 sample `Namespace` 中。我们也可以使用 `kubectl` 的 `-n` 标志来指定 `Namespace`。我们将使用常用的 `kubectl apply` 创建这个 `ServiceAccount`：
+注意，我们使用`metadata`将此`ServiceAccount`置于我们刚刚创建的 sample `Namespace`中。我们也可以使用`kubectl`的`-n`标志来指定`Namespace`。我们将使用常用的`kubectl apply`创建这个`ServiceAccount`：
 
 ```
 root@host01:~# kubectl apply -f /opt/read-pods-sa.yaml
 serviceaccount/read-pods created
 ```
 
-当 `ServiceAccount` 创建时，控制器管理器会检测到并自动创建一个带有凭据的 `Secret`：
+当`ServiceAccount`创建时，控制器管理器会检测到并自动创建一个带有凭据的`Secret`：
 
 ```
 root@host01:~# kubectl -n sample get serviceaccounts
@@ -5167,21 +5018,21 @@ default-token-mzwpt     kubernetes.io/service-account-token   3      43s
 read-pods-token-m4scq   kubernetes.io/service-account-token   3      25s
 ```
 
-注意，除了我们刚刚创建的 `read-pods` `ServiceAccount` 外，已经有一个默认的 `ServiceAccount`。该账户是在创建 `Namespace` 时自动创建的；如果我们没有指定 Kubernetes 为 `Pod` 使用哪个 `ServiceAccount`，将使用该账户。
+注意，除了我们刚刚创建的`read-pods` `ServiceAccount`外，已经有一个默认的`ServiceAccount`。该账户是在创建`Namespace`时自动创建的；如果我们没有指定 Kubernetes 为`Pod`使用哪个`ServiceAccount`，将使用该账户。
 
-新创建的 `ServiceAccount` 还没有任何权限。要开始添加权限，我们需要查看“基于角色的访问控制”（RBAC）。
+新创建的`ServiceAccount`还没有任何权限。要开始添加权限，我们需要查看“基于角色的访问控制”（RBAC）。
 
-### 基于角色的访问控制
+## 基于角色的访问控制
 
 在 API 服务器找到可以识别客户端的身份验证插件后，它将使用该身份来确定客户端是否有权限执行所需的操作，这是通过组装属于该用户的角色列表完成的。角色可以直接与用户关联，也可以与用户所属的组关联。组成员身份是身份的一部分。例如，客户端证书可以通过将组织字段作为证书主题的一部分，来指定用户的所属组。
 
-#### 角色与集群角色
+### 角色与集群角色
 
 每个角色都有一组权限。权限允许客户端在一种或多种类型的资源上执行一个或多个操作。
 
-作为一个示例，让我们定义一个允许客户端读取 Pod 状态权限的角色。我们有两个选择：可以创建一个 `Role` 或 `ClusterRole`。`Role` 在单个 `Namespace` 内可见并可用，而 `ClusterRole` 在所有 `Namespaces` 间均可见并可用。这种差异允许管理员在整个集群中定义常用角色，这些角色在创建新的 `Namespaces` 时会立即可用，同时也允许对特定 `Namespace` 进行访问控制的委派。
+作为一个示例，让我们定义一个允许客户端读取 Pod 状态权限的角色。我们有两个选择：可以创建一个`Role`或`ClusterRole`。`Role`在单个`Namespace`内可见并可用，而`ClusterRole`在所有`Namespaces`间均可见并可用。这种差异允许管理员在整个集群中定义常用角色，这些角色在创建新的`Namespaces`时会立即可用，同时也允许对特定`Namespace`进行访问控制的委派。
 
-这里是 `ClusterRole` 的定义示例。该角色仅具有读取 Pod 数据的能力，不能更改 Pod 或访问任何其他集群信息：
+这里是`ClusterRole`的定义示例。该角色仅具有读取 Pod 数据的能力，不能更改 Pod 或访问任何其他集群信息：
 
 `pod-reader.yaml`
 
@@ -5197,11 +5048,15 @@ rules:
   verbs: ["get", "watch", "list"]
 ```
 
-由于这是一个集群范围的角色，因此将它分配给某个 `Namespace` 是意义的，所以我们没有指定它。
+由于这是一个集群范围的角色，因此将它分配给某个`Namespace`是意义的，所以我们没有指定它。
 
-该定义的关键部分是规则列表。每个 `ClusterRole` 或 `Role` 都可以拥有任意数量规则。每个规则都有一个动词（verbs）列表，定义了允许哪些操作。在这种情况下，我们确定 `get`、`watch` 和 `list` 为动词，效果是该角色允许读取 Pod，但不允许任何修改它们的操作。
+该定义的关键部分是规则列表。每个`ClusterRole`或`Role`都可以拥有任意数量规则。每个规则都有一个动词（verbs）列表，定义了允许哪些操作。在这种情况下，我们确定`get`、`watch`和`list`为动词，效果是该角色允许读取 Pod，但不允许任何修改它们的操作。
 
-每条规则根据确定的 `apiGroups` 和 `resources` 组合适用于一个或多个资源类型。每条规则都为动词列表中列出的操作提供权限。在这种情况下，使用空字符串 `""` 指代默认 API 组，这也是 Pod 所在的位置。如果我们还想包含 Deployments 和 StatefulSets，我们需要如下定义规则：
+每条规则根据确定的`apiGroups`和`resources`组合适用于一个或多个资源类型。每条规则都为动词列表中列出的操作提供权限。在这种情况下，使用空字符串`""`指代默认 API 组，这也是 Pod 所在的位置。如果我们还想包含 Deployments 和 StatefulSets，我们需要如下定义规则：
+
+
+
+我们需要在`apiGroups`字段中添加`"apps"`，因为`Deployment`和`StatefulSet`属于该组。当我们声明`Role`或`ClusterRole`时，API服务器会接受`apiGroups`和`resources`字段中的任何字符串，无论该组合是否真实标识了资源类型，因此注意资源所属的组非常重要。
 
 ```
 - apiGroups: ["", "apps"]
@@ -5209,22 +5064,20 @@ rules:
   verbs: ["get", "watch", "list"]
 ```
 
-我们需要在 `apiGroups` 字段中添加 `"apps"`，因为 `Deployment` 和 `StatefulSet` 属于该组。当我们声明 `Role` 或 `ClusterRole` 时，API 服务器会接受 `apiGroups` 和 `resources` 字段中的任何字符串，无论该组合是否真实标识了资源类型，因此注意资源所属的组非常重要。
-
-让我们定义 pod-reader `ClusterRole`：
+让我们定义`pod-reader` `ClusterRole`：
 
 ```
 root@host01:~# kubectl apply -f /opt/pod-reader.yaml
 clusterrole.rbac.k8s.io/pod-reader created
 ```
 
-现在 `ClusterRole` 已存在，我们可以应用它。为此我们需要创建一个角色绑定。
+现在`ClusterRole`已存在，我们可以应用它。为此我们需要创建一个角色绑定。
 
-#### 角色绑定与集群角色绑定
+## 角色绑定与集群角色绑定
 
-让我们将 `pod-reader` `ClusterRole` 应用到我们之前创建的 `read-pods` `ServiceAccount`。我们有两个选项：可以创建一个 `RoleBinding` 在特定的 `Namespace` 中分配权限，或者创建一个 `ClusterRoleBinding` 在所有 `Namespaces` 间分配权限。此此功能是有益的，因为它意味着我们可以创建创建一个如 `pod-reader` 的 `ClusterRole` 并使其在整个集群可见，但在单个 `Namespace` 中创建绑定，从而用户和 `ServiceAccount` 被限制在它们被允许访问的 `Namespace` 中。这有助于我们应用之前看到的每个应用程序一个 `Namespace` 的模式，同时它也让非管理员远离 `kube-system` `Namespace` 中运行的关键基础设施组件。
+让我们将`pod-reader` `ClusterRole`应用到我们之前创建的`read-pods` `ServiceAccount`。我们有两个选项：可以创建一个`RoleBinding`在特定的`Namespace`中分配权限，或者创建一个`ClusterRoleBinding`在所有`Namespaces`间分配权限。此功能是有益的，因为它意味着我们可以创建一个如`pod-reader`的`ClusterRole`并使其在整个集群可见，但在单个`Namespace`中创建绑定，从而用户和`ServiceAccount`被限制在它们被允许访问的`Namespace`中。这有助于我们应用之前看到的每个应用程序一个`Namespace`的模式，同时它也让非管理员远离`kube-system` `Namespace`中运行的关键基础设施组件。
 
-遵循这一做法，我们将创建一个 `RoleBinding`，使我们的 `ServiceAccount` 仅在 sample `Namespace` 中具有读取 Pod 的权限：
+遵循这一做法，我们将创建一个`RoleBinding`，使我们的`ServiceAccount`仅在`sample` `Namespace`中具有读取Pod的权限：
 
 `read-pods-bind.yaml`
 
@@ -5245,24 +5098,22 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-意料之中，`RoleBinding` 将 `Role` 或 `ClusterRole` 与主体（subject）结合在一起。`RoleBinding` 可以包含多个 `subjects`，因此我们可以通过一个绑定将同一个角色绑定到多个用户或组。
+意料之中，`RoleBinding`将`Role`或`ClusterRole`与主体（subject）结合在一起。`RoleBinding`可以包含多个`subjects`，因此我们可以通过一个绑定将同一个角色绑定到多个用户或组。
 
+我们在元数据和标识主体的地方都定义了`Namespace`（命名空间）。在这种情况下，它们都是`sample`，因为我们希望授予`ServiceAccount`（服务账户）在它所属的`Namespace`中读取Pod状态的权限。然而，这些值可以是不同的，以便允许一个`Namespace`中的`ServiceAccount`在另一个`Namespace`中拥有特定的权限。当然，我们也可以使用`ClusterRoleBinding`来跨所有`Namespace`分发权限。
 
-
-我们在元数据和标识主体的地方都定义了 `Namespace`（命名空间）。在这种情况下，它们都是 `sample`，因为我们希望授予 `ServiceAccount`（服务账户）在它所属的 `Namespace` 中读取 Pod 状态的权限。然而，这些值可以是不同的，以便允许一个 `Namespace` 中的 `ServiceAccount` 在另一个 `Namespace` 中拥有特定的权限。当然当然，我们也可以使用 `ClusterRoleBinding` 来跨所有 `Namespace` 分发权限。
-
-现在，我们可以创建 `RoleBinding`（角色绑定）：
+现在，我们可以创建`RoleBinding`（角色绑定）：
 
 ```
 root@host01:~# kubectl apply -f /opt/read-pods-bind.yaml
 rolebinding.rbac.authorization.k8s.io/read-pods created
 ```
 
-我们现在已经为 `read-pods` `ServiceAccount` 授予了读取 `sample` `Namespace` 中 Pods 的权限。为了演示它是如何工作的，我们需要创建一个并被分配给 `read-pods` `ServiceAccount` 的 Pod。
+我们现在已经为`read-pods` `ServiceAccount`授予了读取`sample` `Namespace`中Pods的权限。为了演示它是如何工作的，我们需要创建一个并被分配给`read-pods` `ServiceAccount`的Pod。
 
-### 将 Service Account 分配给 Pod
+## 将Service Account分配给Pod
 
-要将 `ServiceAccount` 分配给 Pod，只需在 Pod 规范（spec）中添加 `serviceAccountName` 字段：
+要将`ServiceAccount`分配给Pod，只需在Pod规范（spec）中添加`serviceAccountName`字段：
 
 `read-pods-deploy.yaml`
 
@@ -5290,18 +5141,18 @@ spec:
       serviceAccountName: read-pods
 ```
 
-标识出的 `ServiceAccount` 必须存在于 Pod 所在的 `Namespace` 中。Kubernetes 会向 Pod 的容器注入 `Service-Account` 令牌（token），以便容器能够身份服务器进行身份验证。
+标识出的`ServiceAccount`必须存在于Pod所在的`Namespace`中。Kubernetes会向Pod的容器注入`Service-Account`令牌（token），以便容器能够向API服务器进行身份验证。
 
-让我们通过一个示例来展示它是如何工作的，以及授权是如何应用的。首先创建这个 Deployment：
+让我们通过一个示例来展示它是如何工作的，以及授权是如何应用的。首先创建这个Deployment：
 
 ```
 root@host01:~# kubectl apply -f /opt/read-pods-deploy.yaml
 deployment.apps/read-pods created
 ```
 
-这创建了一个运行 sleep 的 Alpine 容器，我们可以将其作为 shell 命令的基础。
+这创建了一个运行sleep的Alpine容器，我们可以将其作为shell命令的基础。
 
-要进入 shell 提示符，我们首先获取生成的 Pod 名称，然后使用 `kubectl exec` 创建该 shell：
+要进入shell提示符，我们首先获取生成的Pod名称，然后使用`kubectl exec`创建该shell：
 
 ```
 root@host01:~# kubectl -n sample get pods
@@ -5311,7 +5162,7 @@ root@host01:~# kubectl -n sample exec -ti read-pods-9d5565548-fbwjb -- /bin/sh
 / #
 ```
 
-`ServiceAccount` 令牌挂载在 `/run/secrets/kubernetes.io/serviceaccount` 目录下，因此切换到该目录并列出内容：
+`ServiceAccount`令牌挂载在`/run/secrets/kubernetes.io/serviceaccount`目录下，因此切换到该目录并列出内容：
 
 ```
 / # cd /run/secrets/kubernetes.io/serviceaccount
@@ -5322,7 +5173,7 @@ lrwxrwxrwx    1 root     root  ...  namespace -> ..data/namespace
 lrwxrwxrwx    1 root     root  ...  token -> ..data/token
 ```
 
-这些文件显示为奇奇怪的符号链接，但内容如预期那样存在。`ca.crt` 文件是集群的根证书，信任到 API 服务器的连接需要它。
+这些文件显示为奇怪的符号链接，但内容如预期那样存在。`ca.crt`文件是集群的根证书，信任到API服务器的连接需要它。
 
 我们将令牌保存到变量中以便后续使用：
 
@@ -5330,7 +5181,7 @@ lrwxrwxrwx    1 root     root  ...  token -> ..data/token
 /run/secrets/kubernetes.io/serviceaccount # TOKEN=$(cat token)
 ```
 
-我们现在可以使用 `curl` 使用此令牌连接到 API 服务器。不过，我们首先需要在 Alpine 容器中安装 `curl`：
+我们现在可以使用`curl`使用此令牌连接到API服务器。不过，我们首先需要在Alpine容器中安装`curl`：
 
 ```
 default/run/secrets/kubernetes.io/serviceaccount # apk add curl
@@ -5338,7 +5189,7 @@ default/run/secrets/kubernetes.io/serviceaccount # apk add curl
 OK: 8 MiB in 19 packages
 ```
 
-我们的 `ServiceAccount` 被允许对 Pods 执行 get、list 和 watch 操作。让我们列出 `sample` `Namespace` 中所有的 Pods：
+我们的`ServiceAccount`被允许对Pods执行get、list和watch操作。让我们列出`sample` `Namespace`中所有的Pods：
 
 ```
 /run/secrets/kubernetes.io/serviceaccount # curl --cacert ca.crt \
@@ -5358,16 +5209,17 @@ OK: 8 MiB in 19 packages
 }
 ```
 
-与引导令牌一样，我们使用 HTTP Bearer 身份验证将 `ServiceAccount` 令牌传递给 API 服务器。由于我们是在容器内部进行操作，可以使用标准地址 `kubernetes.default.svc` 来寻找 API 服务器。这之所以能通，是因为 Kubernetes 集群始终在默认 `Namespace` 中有一个服务，使用我们在第 9 章看到的 Service 网络将流量路由到 API 服务器实例上。
+与引导令牌一样，我们使用HTTP Bearer身份验证将`ServiceAccount`令牌传递给API服务器。由于我们是在容器内部进行操作，可以使用标准地址`kubernetes.default.svc`来寻找API服务器。这之所以能通，是因为Kubernetes集群始终在默认`Namespace`中有一个服务，使用我们在第9章看到的Service网络将流量路由到API服务器实例上。
 
-`curl` 命令执行成功，是因为我们的 `ServiceAccount` 绑定到了我们创建的 pod-reader `Role` 上。然而，`RoleBinding` 限于 `sample` `Namespace`，结果我们被允许在另一个 `Namespace` 中列出 Pods：
+`curl`命令执行成功，是因为我们的`ServiceAccount`绑定到了我们创建的`pod-reader` `Role`上。然而，`RoleBinding`限于`sample` `Namespace`，结果我们被允许在另一个`Namespace`中列出Pods：
 
 ```
 /run/secrets/kubernetes.io/serviceaccount # curl --cacert ca.crt \
   -H "Authorization: Bearer $TOKEN" \
   https://kubernetes.default.svc/api/v1/namespaces/sample/pods
 ```
-等等，让我重新检查逻辑。文本显示错误发生在不同的 namespace。让我们查看错误输出：
+
+等等，让我重新检查逻辑。文本显示错误发生在不同的namespace。让我们查看错误输出：
 
 ```
 {
@@ -5387,21 +5239,21 @@ OK: 8 MiB in 19 packages
 }
 ```
 
-URL 方案的不同（使用 `/apis/apps/v1` 而不是 `/api/v1`）是因为 Deployments 属于 apps 组。该命令同样失败，因为我们没有列出 Deployments 的权限。
+URL方案的不同（使用`/apis/apps/v1`而不是`/api/v1`）是因为Deployments属于apps组。该命令同样失败，因为我们没有列出Deployments的权限。
 
-我们完成了这个 shell 会话，退出它：
+我们完成了这个shell会话，退出它：
 
 ```
 /run/secrets/kubernetes.io/serviceaccount # exit
 ```
 
-#### 将角色绑定到用户
+## 将角色绑定到用户
 
-在离开 RBAC 主题之前，让我们说明一种在不允许任何管理员功能的情况下为 Namespace 授予普通用户权限的简单方法。
+在离开RBAC主题之前，让我们说明一种在不允许任何管理员功能的情况下为Namespace授予普通用户权限的简单方法。
 
-为了授予普通用户权限，我们将利用一个名为 `edit` 的现有 `ClusterRole`，它已经配置好为用户需要的大多数资源类型授予查看和编辑权限。
+为了授予普通用户权限，我们将利用一个名为`edit`的现有`ClusterRole`，它已经配置好为用户需要的大多数资源类型授予查看和编辑权限。
 
-让我们快速查看 `edit` `Role` 具有哪些权限：
+让我们快速查看`edit` `Role`具有哪些权限：
 
 ```
 root@host01:~# kubectl get clusterrole edit -o yaml
@@ -5428,18 +5280,15 @@ rules:
 ...
 ```
 
-完整列表包含大量不同的规则，每个规则都有自己的权限集。示例中的子集仅显示了一条规则，用于提供对 Pod 的编辑权限。
+完整列表包含大量不同的规则，每个规则都有自己的权限集。示例中的子集仅显示了一条规则，用于提供对Pod的编辑权限。
 
-与 Pod 相关的某些命令（如 `exec`）单独列出，以便进行更细粒度的控制。例如，对于生产系统，允许某些人员创建和删除 Pod 以及查看日志是很有用的，但不要提供使用 `exec` 的权限，因为那可能会被用于访问敏感生产数据。
+与Pod相关的某些命令（如`exec`）单独列出，以便进行更细粒度的控制。例如，对于生产系统，允许某些人员创建和删除Pod以及查看日志是很有用的，但不要提供使用`exec`的权限，因为那可能会被用于访问敏感生产数据。
 
+此前，我们创建了一个名为`me`的用户，并将客户端证书保存到名为`kubeconfig`的文件中。然而，我们尚未为该用户绑定任何角色，因此该用户仅拥有通过自动加入`system:authenticated`组而获得的非常有限的权限。
 
+因此，正如我们之前看到的，我们的普通用户甚至无法在默认`Namespace`中列出`Pods`。让我们将此用户绑定到`edit`角色。和之前一样，我们将使用一个普通的`RoleBinding`，其范围限制在示例`Namespace`中，这样该用户将无法访问我们在`kube-system` `Namespace`中的集群基础设施组件。
 
-
-此前，我们创建了一个名为 `me` 的用户，并将客户端证书保存到名为 `kubeconfig` 的文件中。然而，我们尚未为该用户绑定任何角色，因此该用户仅拥有通过自动加入 `system:authenticated` 组而获得的非常有限的权限。
-
-因此，正如我们之前看到的，我们的普通用户甚至无法在默认 `Namespace` 中列出 `Pods`。让我们将此用户绑定到 `edit` 角色。和之前，我们将使用一个普通的 `RoleBinding`，其范围限制在示例 `Namespace` 中，这样该用户将无法访问我们在 `kube-system` `Namespace` 中的集群基础设施组件。
-
-Listing 11-1 展示了我们需要的 `RoleBinding`。
+Listing 11-1展示了我们需要的`RoleBinding`。
 
 `edit-bind.yaml`
 
@@ -5460,16 +5309,16 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-*Listing 11-1: 将 edit 角色绑定到用户*
+*Listing 11-1: 将edit角色绑定到用户*
 
-现在我们应用此 `RoleBinding` 来为我们的用户添加权限：
+现在我们应用此`RoleBinding`来为我们的用户添加权限：
 
 ```bash
 root@host01:~# kubectl apply -f /opt/edit-bind.yaml
 rolebinding.rbac.authorization.k8s.io/editor created
 ```
 
-我们现在可以使用该用户来查看和修改 `Pods`、`Deployments` 以及许多其他资源：
+我们现在可以使用该用户来查看和修改`Pods`、`Deployments`以及许多其他资源：
 
 ```bash
 root@host01:~# KUBECONFIG=kubeconfig kubectl -n sample get pods
@@ -5479,7 +5328,7 @@ root@host01:~# KUBECONFIG=kubeconfig kubectl delete -f /opt/read-pods-deploy.yam
 deployment.apps "read-pods" deleted
 ```
 
-然而，由于我们使用的是 `RoleBinding` 而不是 `ClusterRoleBinding`，该用户对其他 `Namespaces` 没有可见见：
+然而，由于我们使用的是`RoleBinding`而不是`ClusterRoleBinding`，该用户对其他`Namespaces`没有可见性：
 
 ```bash
 root@host01:~# KUBECONFIG=kubeconfig kubectl get -n kube-system pods
@@ -5487,13 +5336,15 @@ Error from server (Forbidden): pods is forbidden: User "me" cannot list
   resource "pods" in API group "" in the namespace "kube-system"
 ```
 
-`kubectl` 显示的错误信息在形式上与 API server JSON 响应中的 `message` 字段完全相同。这并非巧合；`kubectl` 是 API server REST API 前端的一个友好命令行界面。
+`kubectl`显示的错误信息在形式上与API server JSON响应中的`message`字段完全相同。这并非巧合；`kubectl`是API server REST API前端的一个友好命令行界面。
 
-### 最后的结语
+## 最后的结语
 
-API server 是 Kubernetes 控制平面中至关重要的组件。集群中的所有其他服务都会持续连接到 API server，监听集群的变化，以便采取适当的行动。用户也使用 API server 来部署和配置应用程序以及监控状态。在本章中，我们了解了 API server 提供的用于创建、检索、更新和删除资源的底层 REST API。我们还看到了 API server 内置的强大的身份验证和授权功能，以确保只有经过授权的用户和服务才能访问和修改集群状态。
+API server是Kubernetes控制平面中至关重要的组件。集群中的所有其他服务都会持续连接到API server，监听集群的变化，以便采取适当的行动。用户也使用API server来部署和配置应用程序以及监控状态。在本章中，我们了解了API server提供的用于创建、检索、更新和删除资源的底层REST API。我们还看到了API server内置的强大的身份验证和授权功能，以确保只有经过授权的用户和服务才能访问和修改集群状态。
 
-在接下一章中，我们将检查集群基础设施的另一侧：节点组件。我们将看到 `kubelet` 服务如何隐藏容器引擎之间的任何差异，以及它是如何利用我们在第一部分中看到的容器能力在集群中创建、启动和配置容器的。
+
+
+在接下来一章中，我们将检查集群基础设施的另一侧：节点组件。我们将看到 `kubelet` 服务如何隐藏容器引擎之间的任何差异，以及它是如何利用我们在第一部分中看到的容器能力在集群中创建、启动和配置容器的。
 
 # 12. 容器运行时
 
@@ -5503,17 +5354,17 @@ API server 是 Kubernetes 控制平面中至关重要的组件。集群中的所
 
 作为此探索的一部分，我们将解决 `kubelet` 如何在托管控制面的同时依赖于它。最后，我们将查看 Kubernetes 集群中的节点维护，包括如何关闭节点进行维护、可能阻止节点正常工作的问题、如果节点突然不可用集群的行为如何，以及节点在丢失集群连接时的表现。
 
-### 节点服务
+## 节点服务
 
 将普通主机转换为 Kubernetes 节点的主要服务是 `kubelet`。由于它对 Kubernetes 集群至关重要，我们将详细查看它的配置方式和行为。
 
-#### CONTAINERD 和 CRI-O
+### `containerd` 和 `CRI-O`
 
 本章的示例提供了自动化脚本，用于使用两种容器运行时之一启动集群：`containerd` 和 `CRI-O`。我们将主要使用 `containerd` 安装版本，尽管我们会简要查看配置差异。`CRI-O` 集群是为了让你能够实验独立的容器运行时。它也说明了 `kubelet` 向集群其他部分隐藏了这种差异，因为集群的其他配置不受容器运行时更改的影响。
 
 当我们在第 6 章中设置集群时，我们在所有节点上以软件包的形式安装了 `kubelet`，随后的每个章节自动化脚本一直在对其进行类似的设置。
 
-### 注意事项
+## 注意事项
 
 本书的示例仓库位于 [`github.com/book-of-kubernetes/examples`](https://github.com/book-of-kubernetes/examples)。参见运行示例。
 
@@ -5545,16 +5396,13 @@ root@host01:~# strings /proc/$(pgrep kubelet)/cmdline
 
 `pgrep kubelet` 嵌入命令输出 `kubelet` 服务的进程 ID。然后我们使用它通过 `/proc` Linux 虚拟文件系统打印命令行。我们使用 `strings` 而不是 `cat` 来打印此文件，是因为每个独立的命令行参数都以空字符终止，而 `strings` 将其转换为良好的行的显示。
 
-`kubelet` 服务需要三组主要的配置：*集群配置*、*运行时配置*和*网络配置*。
+`kubelet` 服务需要三组主要的配置：集群配置、运行时配置和网络配置。
 
-#### Kubelet 集群配置
+### Kubelet 集群配置
 
-集群配置选项告诉 `kubelet` 如何与集群通信以及如何进行验证。当 `kubelet` 首次启动时，它使用 Listing 12-1 所示的 `bootstrap-kubeconfig` 来查找集群、验证服务器证书并使用第 11 章中讨论的引导令牌进行身份验证。该引导令牌用于提交新节点的证书签名请求 (CSR)。随后，`kubelet` 从 API server 下载签名后的客户端证书并存储在 `/etc/kubernetes/kubelet.conf` 中，这是 `kubeconfig` 选项指定的路径。此 `kubelet.conf` 文件遵循用于配置 `kubectl` 与 API server 通信的相同格式，正如我们在第 11 章看到的的那样。在 `kubelet.conf` 写入后，引导文件将被删除。
+集群配置选项告诉 `kubelet` 如何与集群通信以及如何进行验证。当 `kubelet` 首次启动时，它使用 Listing 12-1 所示的 `bootstrap-kubeconfig` 来查找集群、验证服务器证书并使用第 11 章中讨论的引导令牌进行身份验证。该引导令牌用于提交新节点的证书签名请求（CSR）。随后，`kubelet` 从 API server 下载签名后的客户端证书并存储在 `/etc/kubernetes/kubelet.conf` 中，这是 `kubeconfig` 选项指定的路径。此 `kubelet.conf` 文件遵循用于配置 `kubectl` 与 API server 通信的相同格式，正如我们在第 11 章看到的那样。在 `kubelet.conf` 写入后，引导文件将被删除。
 
-
-
-
-`/var/lib/kubelet/config.yaml` 文件在列表 12-1 中指定，它包含了重要的配置信息。为了从 kubelet 拉取指标，我们需要为它配置单独的服务器证书，而不仅仅是客户端证书，并且我们需要配置它如何验证自己的客户端。以下是由 `kubeadm` 创建的相关配置文件内容：
+`/var/lib/kubelet/config.yaml` 文件在 Listing 12-1 中指定，它包含了重要的配置信息。为了从 `kubelet` 拉取指标，我们需要为它配置单独的服务器证书，而不仅仅是客户端证书，并且我们需要配置它如何验证自己的客户端。以下是由 `kubeadm` 创建的相关配置文件内容：
 
 ```
 root@host01:~# cat /var/lib/kubelet/config.yaml
@@ -5570,17 +5418,17 @@ authentication:
 ...
 ```
 
-`authentication` 章节告诉 kubelet 不允许匿名请求，但允许 webhook 持者令牌（bearer tokens）以及任何由集群证书颁发机构签名的客户端证书。我们为指标服务器安装的 YAML 资源文件包含一个在 `Deployment` 中使用的 `ServiceAccount`，因此它会自动注入凭据，并可以使用这些凭据向 kubelet 实例进行身份验证，正如我们在第 11 章中所看到的。
+`authentication` 章节告诉 `kubelet` 不允许匿名请求，但允许 webhook 持有者令牌（bearer tokens）以及任何由集群证书颁发机构签名的客户端证书。我们为指标服务器安装的 YAML 资源文件包含一个在 `Deployment` 中使用的 `ServiceAccount`，因此它会自动注入凭据，并可以使用这些凭据向 `kubelet` 实例进行身份验证，正如我们在第 11 章中所看到的。
 
-### Kubelet 容器运行时配置
+## Kubelet 容器运行时配置
 
-容器运行时配置选项告诉 kubelet 如何连接到容器运行时，以便 kubelet 能够管理本地机器上的容器。由于 kubelet 期望运行时支持容器运行时接口（CRI）标准，只需要几个设置，如列表 12-1 所示。
+容器运行时配置选项告诉 `kubelet` 如何连接到容器运行时，以便 `kubelet` 能够管理本地机器上的容器。由于 `kubelet` 期望运行时支持容器运行时接口（CRI）标准，只需要几个设置，如 Listing 12-1 所示。
 
-第一个关键设置是 `container-runtime`，它可以设置为 `remote` 或 `docker`。Kubernetes 诞生于 Docker 引擎与 containerd 运行时分离之前，因此它对 Docker 有遗留支持，使用一个 `shim` 来仿真标准的 CRI 接口。由于我们是直接使用 `containerd` 而不是通过 Docker shim 或 Docker 引擎，因此将其设置为 `remote`。
+第一个关键设置是 `container-runtime`，它可以设置为 `remote` 或 `docker`。Kubernetes 诞生于 Docker 引擎与 `containerd` 运行时分离之前，因此它对 Docker 有遗留支持，使用一个 `shim` 来仿真标准的 CRI 接口。由于我们是直接使用 `containerd` 而不是通过 Docker shim 或 Docker 引擎，因此将其设置为 `remote`。
 
-接下来，我们使用 `container-runtime-endpoint` 设置指定容器运行时的路径。在这种情况下，该值为 `/run/containerd/containerd.sock`。kubelet 连接到此 Unix 套接字以发送 CRI 请求并接收状态。
+接下来，我们使用 `container-runtime-endpoint` 设置指定容器运行时的路径。在这种情况下，该值为 `/run/containerd/containerd.sock`。`kubelet` 连接到此 Unix 套接字以发送 CRI 请求并接收状态。
 
-`container-runtime-endpoint` 命令行设置是切换集群在 containerd 和 CRI-O 之间所需的唯一区别。此外，`kubeadm` 在节点初始化时会自动检测到它，因此自动化脚本中的唯一区别是在安装 Kubernetes 之前安装 CRI-O 而不是 containerd。如果我们查看我们 CRI-O 集群中 kubelet 的命令行，，会发现命令行选项中只有一个处变化：
+`container-runtime-endpoint` 命令行设置是切换集群在 `containerd` 和 `CRI-O` 之间所需的唯一区别。此外，`kubeadm` 在节点初始化时会自动检测到它，因此自动化脚本中的唯一区别是在安装 Kubernetes 之前安装 `CRI-O` 而不是 `containerd`。如果我们查看我们 `CRI-O` 集群中 `kubelet` 的命令行，会发现命令行选项中只有一个处变化：
 
 ```
 root@host01:~# strings /proc/$(pgrep kubelet)/cmdline
@@ -5589,7 +5437,7 @@ root@host01:~# strings /proc/$(pgrep kubelet)/cmdline
 ...
 ```
 
-其余命令行选项与我们的 containerd 集群完全相同。
+其余命令行选项与我们的 `containerd` 集群完全相同。
 
 最后，我们还有一个与容器运行时相关的设置：`pod-infra-container-image`。它指定了 Pod 基础设施镜像。我们在第 2 章中见过这个镜像，它的形式是一个 pause（暂停）进程，该进程是为容器创建的 Linux 命名空间的所有者。在这种情况下，这个 pause 进程将来自容器镜像 `k8s.gcr.io/pause:3.4.1`。
 
@@ -5607,11 +5455,11 @@ k8s.gcr.io/pause  3.4.1               0f8457a4c2eca       301kB
 
 此外，pause 进程几乎不消耗 CPU，因此每个 Pod 增加一个额外进程对我们节点的影响微乎其微。
 
-### Kubelet 网络配置
+## Kubelet 网络配置
 
-网络配置帮助 kubelet 集成到集群中，并将 Pod 集成到整个集群网络。正如我们在第 8 章所示，实际的 Pod 网络设置是由网络插件执行的，但 kubelet 也扮演着几个重要角色。
+网络配置帮助 `kubelet` 集成到集群中，并将 Pod 集成到整个集群网络。正如我们在第 8 章所示，实际的 Pod 网络设置是由网络插件执行的，但 `kubelet` 也扮演着几个重要角色。
 
-我们的 kubelet 命令行包含一个与网络配置相关的选项：`node-ip`。这是一个可选标记，如果不存在，kubelet 将尝试确定它应该使用的与 API server 通信的 IP 地址。然而，直接指定该标记是有用的，因为它保证了我们的集群在节点具有多个网络接口的情况下（例如本书示例中的 Vagrant 配置，使用单独的内部网络进行集群通信）正常工作。
+我们的 `kubelet` 命令行包含一个与网络配置相关的选项：`node-ip`。这是一个可选标记，如果不存在，`kubelet` 将尝试确定它应该使用的与 API server 通信的 IP 地址。然而，直接指定该标记是有用的，因为它保证了我们的集群在节点具有多个网络接口的情况下（例如本书示例中的 Vagrant 配置，使用单独的内部网络进行集群通信）正常工作。
 
 除了这个命令行选项外，`kubeadm` 在 `/var/lib/kubelet/config.yaml` 中放置了两个网络设置：
 
@@ -5625,9 +5473,6 @@ clusterDomain: cluster.local
 ```
 
 这些设置用于为所有容器提供 `/etc/resolv.conf` 文件。`clusterDNS` 条目提供了此 DNS 服务器的 IP 地址，而 `clusterDomain` 条目提供了默认的搜索域，以便我们区分不同的主机。
-
-
-
 
 如果我们查看 `/etc/kubernetes/manifests`，会看到许多 YAML 文件。这些文件是由 `kubeadm` 放置的，定义了运行该节点控制平面组件所需的 `Pods`：
 
@@ -5671,11 +5516,11 @@ root@host04:~#
 
 注意，该命令是在我们集群中唯一的普通节点 `host04` 上运行的。
 
-### 节点维护
+## 节点维护
 
 控制平面的 `controller manager` 组件持续监控节点，以确保它们保持连接且健康。`kubelet` 服务负责报告节点信息，包括节点内存占用、磁盘占用以及与底层容器运行时的连接情况。如果节点变得不健康，控制平面将把 `Pods` 转移到其他节点，以维持 `Deployments` 请求的规模，并在节点恢复健康之前，不会在该节点上调度任何新的 `Pods`。
 
-### 节点驱空与隔离（Draining and Cordoning）
+## 节点驱空与隔离（Draining and Cordoning）
 
 如果我们知道需要对节点进行维护（例如重启），我们可以告诉集群将 `Pods` 从该节点转移出去，并将节点标记为不可调度。我们使用 `kubectl drain` 命令来实现此操作。
 
@@ -5701,7 +5546,7 @@ debug-8677494fdd-1qp9zv   1/1     Running   ... host03 ...
 debug-8677494fdd-1xt8dm   1/1     Running   ... host03 ...
 ```
 
-为了最小化测试集群的大小，我们的普通节点 `host04` 在资源方面是较小的，因此在示例中它只获得了一个 ` Pod`。但这足够让我们看到关闭节点时会发生什么。这个过程具有某种程度上随机性，所以如果你没有看到任何 `Pods` 分配到 `host04`，你可以删除该 `Deployment` 并重试，或者先将其缩容再重新扩容，正如我们在下一个示例中做的那样。
+为了最小化测试集群的大小，我们的普通节点 `host04` 在资源方面是较小的，因此在示例中它只获得了一个 `Pod`。但这足够让我们看到关闭节点时会发生什么。这个过程具有某种程度上随机性，所以如果你没有看到任何 `Pods` 分配到 `host04`，你可以删除该 `Deployment` 并重试，或者先将其缩容再重新扩容，正如我们在下一个示例中做的那样。
 
 要关闭节点，我们使用 `kubectl drain` 命令：
 
@@ -5718,6 +5563,8 @@ node/host04 evicted
 
 驱逐需要一些时间。完成后，可以看到 `Pods` 分布在各个节点上：
 
+
+
 ```bash
 root@host01:~# kubectl get pods -o wide
 NAME                     READY   STATUS    ... NODE   ...
@@ -5731,15 +5578,11 @@ debug-8677494fdd-qp9zv   1/1     Running   ... host03 ...
 debug-8677494fdd-xt8dm   1/1     Running   ... host03 ...
 ```
 
-### 不健康节点
+## 不健康节点
 
 如果节点因为资源限制（如内存或磁盘空间不足）而变得不健康，Kubernetes 也会自动转移节点 `Pods`。让我们在 `host04` 上模拟低内存状态，以便我们观察其实操作。
 
-
-
-
-
-```
+```bash
 root@host01:~# kubectl top nodes
 NAME     CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%   
 host01   503m         25%    1239Mi          65%       
@@ -5754,14 +5597,14 @@ host04   288m         14%    542Mi           29%
 
 `node-evict.yaml`
 
-```
+```yaml
 evictionHard:
   memory.available: "1900Mi"
 ```
 
 这告诉 `kubelet` 如果可用内存少于 1,900MiB，则开始驱逐 Pods。对于我们示例集群中的节点，这种情况将立即发生。让我们应用此更改：
 
-```
+```bash
 root@host04:~# cat /opt/node-evict.yaml >> /var/lib/kubelet/config.yaml
 root@host04:~# systemctl restart kubelet
 ```
@@ -5770,7 +5613,7 @@ root@host04:~# systemctl restart kubelet
 
 如果我们检查 `host04` 的节点状态，它看起来仍然处于就绪状态：
 
-```
+```bash
 root@host01:~# kubectl get nodes
 NAME     STATUS   ROLES        ...
 host01   Ready    control-plane...
@@ -5781,7 +5624,7 @@ host04   Ready    <none>       ...
 
 然而，节点的事件日志清楚地说明了发生了什么：
 
-```
+```bash
 root@host01:~# kubectl describe node host04
 Name:               host04
 ...
@@ -5791,7 +5634,7 @@ Name:               host04
 
 节点开始驱逐 Pods，集群根据需要自动在其他节点上创建新的 Pods，以保持所需的规模：
 
-```
+```bash
 root@host01:~# kubectl get pods -o wide
 NAME                     READY   STATUS        ... NODE     ...
 debug-8677494fdd-4274k   1/1     Running       ... host01   ...
@@ -5812,32 +5655,32 @@ debug-8677494fdd-xn8t8   1/1     Running       ... host02   ...
 
 分配到 `host04` 的 Pods 显示为 `OutOfMemory`，它们已被其他节点上的 Pods 替换。Pods 在节点上停止了，但与之前我们驱空（drain）节点的情况不同，这些 Pods 不会被自动终止。即使节点从低内存状况中恢复，这些 Pods 将继续出现在 Pod 列表中，卡在 `OutOfMemory` 状态，直到 `kubelet` 重启。
 
-### 节点不可达
+## 节点不可达
 
 我们还有一种种情况需要查看。在我们之前的两个例子中，`kubelet` 可以与控制面通信以更新其状态，允许控制面采取行动。但如果发生网络问题或突然断电，导致节点无法连接集群并报告其正在关闭，会发生什么？在这种情况下，集群会将节点状态记录为 unknown，并在超时后将 Pods 迁移到其他节点。让我们模拟这种情况。我们将开始恢复 `host04` 正常工作：
 
-```
+```bash
 root@host04:~# sed -i '/^evictionHard:/+d' /var/lib/kubelet/config.yaml
 root@host04:~# systemctl restart kubelet
 ```
 
 请确保在 `host04` 上运行这些命令。第一条命令删除了我们添加到 kubelet 配置的行，而第二条命令重启 `kubelet` 以获取更改。现在我们可以重新调整 Deployment：
 
-```
+```bash
 root@host01:~# scale debug --replicas=1
 root@host01:~# scale debug
 ```
 
 在运行运行这些命令之前，等待几分钟让 Pods 稳定。然后使用 `kubectl get pods -o wide` 验证至少有一个 Pod 分配到了 `host04`。我们现在准备强制断开 `host04` 连接。我们将通过添加防火墙规则来实现：
 
-```
+```bash
 root@host04:~# iptables -I INPUT 192.168.61.10 -j DROP
 root@host04:~# iptables -I OUTPUT 192.168.61.10 -j DROP
 ```
 
 请确保在 `host04` 上运行此操作。第一条命令告诉防火墙丢弃来自 `192.168.61.10` 的所有流量，这是所有节点共享的 IP。第二条命令告诉防火墙丢弃指向该 IP 的所有流量。大约分钟后，`host04` 将显示为 `NotReady`：
 
-```
+```bash
 root@host01:~# kubectl get nodes
 NAME     STATUS     ROLES        ...
 host01   Ready    control-plane...
@@ -5848,7 +5691,7 @@ host04   NotReady   <none>
 
 如果我们等待几分钟，`host04` 上的 Pods 将显示为 `Terminating`，因为集群放弃了这些 Pod 并将其迁移到其他节点：
 
-```
+```bash
 root@host01:~# kubectl get pods -o wide
 NAME                     READY   STATUS        ... NODE     ...
 debug-8677494fdd-2wrn2   1/1     Running       ... host01   ...
@@ -5872,7 +5715,7 @@ debug-8677494fdd-zfbml   1/1     Running       ... host01   ...
 
 然而，由于 `host04` 上的 `kubelet` 无法连接到控制面，它不知道应该关闭其 Pods。如果我们检查 `host04` 上运行着哪些容器，我们仍然看到多个容器：
 
-```
+```bash
 root@host04:~# crictl ps
 CONTAINER           IMAGE          ...  STATE      NAME  ...
 2129a1cb00607       16ea53ea7c652  ...  Running    debug ...
@@ -5881,12 +5724,9 @@ cfd7fd6142321       16ea53ea7c652  ...  Running    debug ...
 fb2d297d11efb       16ea53ea7c652  ...  Running    debug ...
 ```
 
-
-
-
 不仅 `Pods` 仍在运行，而且由于我们切断连接的方式，它们仍然能够与集群其余部分进行通信。这非常重要。Kubernetes 会尽力运行请求数量的实例并对错误做出响应，但它只能根据其掌握的信息来此。在这种情况下，由于 `host04` 上的 `kubelet` 无法与控制面通信，Kubernetes 无法得知 `Pods` 仍在运行。在为像 Kubernetes 集群这样的分布式系统构建应用程序时，你应该意识到某些类型的错误可能会产生意想不到的结果，例如部分网络连通，或实例数量与指定的数量不符。在包含滚动更新的更高级的应用架构中，这甚至会导致旧版本的应用程序组件在无预期的情况下继续运行。请务必构建在面对此类意之外行为时具有韧性的应用程序。
 
-### 结语
+## 结语
 
 根而言，要拥有一个 Kubernetes 集群，我们需要能够运行容器的节点，这意味着需要连接到控制面和容器运行时的 `kubelet` 实例。在本章中，我们检查了如何配置 `kubelet`，以及当节点由于意图或故障离开或加入集群时集群的行为。
 
@@ -5907,13 +5747,17 @@ fb2d297d11efb       16ea53ea7c652  ...  Running    debug ...
 Kubernetes 支持三种类型的探针：
 
 - **Exec（执行）**：运行命令或脚本来检查容器。
+
 - **TCP**：确定套字是否打开。
+
 - **HTTP**：验证 HTTP `GET` 请求是否成功。
 
 此外，我们可以将这三种类型探针的任何一种用于三种不同的用途：
 
 - **Liveness（存活）**：检测并重启失败的容器。
+
 - **Startup（启动）**：在开始执行存活探针之前提供额外时间。
+
 - **Readiness（就绪）**：避免在容器未准备就绪时向其发送流量。
 
 在这三个用途中，最重要的是存活探针，因为它在容器的主生命周期期间运行，可能会导致容器重启。我们将仔细研究存活探针，并利用这些知识理解如何使用启动探针和就绪探针。
@@ -5933,6 +5777,8 @@ Kubernetes 支持三种类型的探针：
 让我们用一个 NGINX Web 服务器容器来说明这一点。我们将使用这个 `Deployment` 定义：
 
 *nginx-exec.yaml*
+
+
 
 ```yaml
 kind: Deployment
@@ -6001,9 +5847,9 @@ Pod Template:
 
 在进入其他类型的探针之前，让我们看看如果存活探针失败会发生什么。我们将补丁 `curl` 命令以尝试检索服务器上不存在的路径，这将 `curl` 返回非零退出码，因此我们的探针将失败。
 
-我们在第 9 章 编辑 `Service` 类型时使用了补丁文件。我们在这里再次执行此操作：
+我们在第 9 章编辑 `Service` 类型时使用了补丁文件。我们在这里再次执行此操作：
 
-*nginx-404.yaml*
+`nginx-404.yaml`
 
 ```yaml
 ---
@@ -6016,9 +5862,6 @@ spec:
             exec:
               command: ["/usr/bin/curl", "-fq", "http://localhost/missing"]
 ```
-
-
-
 
 虽然补丁文件（patch file）允许我们只更新关心的特定字段，在这种情况下，补丁文件包含几行，因为我们需要指定完整的层次结构，而且我们必须指定想要修改的容器名称 ➊，因此 Kubernetes 将将此内容合并到该容器的现有定义中。
 
@@ -6061,7 +5904,7 @@ Containers:
 ...
 Events:
   Type     Reason     Age                From     Message
-  ----     ------     ----               ----     -------
+  ----     ------     ----               -------  ----     -------
 ...
   Warning  Unhealthy  20s (x9 over 80s)  kubelet  Liveness probe failed: ...
 curl: (22) The requested URL returned error: 404 Not Found
@@ -6103,7 +5946,7 @@ spec:
             port: 80
 ```
 
-通过此配置，我们告诉 Kubernetes 连接到我们 `Pod` 的 80 端口并在 `/*` 根路径上执行 `HTTP GET`。由于我们的 NGINX 服务器正在监听 80 端口并会为根路径提供欢迎文件，我们可以预计它可以正常工作。
+通过此配置，我们告诉 Kubernetes 连接到我们 `Pod` 的 80 端口并在 `/` 根路径上执行 `HTTP GET`。由于我们的 NGINX 服务器正在监听 80 端口并会为根路径提供欢迎文件，我们可以预计它可以正常工作。
 
 我们指定了整个 `Deployment` 而不是使用补丁，因此我们将使用 `kubectl apply` 来更新 `Deployment`：
 
@@ -6198,16 +6041,13 @@ root@host01:~# kubectl delete deploy postgres
 deployment.apps "postgres" deleted
 ```
 
-
-
-
 不健康的容器会给应用程序带来各种困难，包括响应能力不足、响应请求时出错或数据错误，因此我们希望 Kubernetes 在容器变得不健康时能够快速做出响应。然而，当容器刚启动时，可能需要一些时间才能完成完全初始化。在那段时间内，它可能无法响应存活探针（liveness probes）。
 
 由于这种延迟，我们需要在容器探针失败之前设置较长的超时时间，以便为容器留出足够的初始化时间。但同时，我们需要一个较短的超时时间，以便快速检测到失败的容器并重启它。解决方案是配置独立的 `startup probe`（启动探针）。Kubernetes 将使用启动探针配置，直到探针成功；随后，它将切换到存活探针。
 
-例如，我们可能如下配置我们的 NGINX 服务器 Deployment：
+例如，我们可能如下配置我们的 NGINX 服务器 `Deployment`：
 
-```
+```yaml
 ...
 spec:
 ...
@@ -6237,23 +6077,25 @@ spec:
 
 `startupProbe` 是完全独立定义的这一事实意味着，可以为启动创建一个与存活探针不同的检查机制。当然，明智地选择至关重要，以确保容器不会在存活探针通过之前就通过启动探针，因为那会导致不恰的重启。
 
-### 就绪探针 (Readiness Probes)
+### 就绪探针（Readiness Probes）
 
-第三种探针用途是检查 Pod 的 `readiness`（就绪性）。`readiness` 一词似乎与启动探针冗余。然而，尽管完成初始化是软件就绪的一个重要部分，但应用程序组件可能由于许多原因无法准备好工作，特别是在高可用微服务架构中，组件可能会随时加入或离开。
+第三种探针用途是检查 `Pod` 的 `readiness`（就绪性）。`readiness` 一词似乎与启动探针冗余。然而，尽管完成初始化是软件就绪的一个重要部分，但应用程序组件可能由于许多原因无法准备好工作，特别是在高可用微服务架构中，组件可能会随时加入或离开。
 
 就绪探针不应用于初始化，而应该用于任何由于控制之外的失败导致容器无法执行工作的情况。这可能是一个临时状态，因为其他地方的重试可能会修复失败。例如，依赖外部数据库的 API 在数据库无法访问时可能会导致就绪探针失败，但该数据库可能随时恢复服务。
 
 这与启动探针和存活探针形成了有价值的对比。正如我们之前检查的，如果容器失败了配置的次数的启动或存活探针，Kubernetes 将重启容器。但如果问题是由于外部依赖失败或缺失，那么这样做就是没有意义的，因为重启容器无法修复外部发生的任何问题。
 
-同时，如果容器缺少所需的外部依赖项，它就无法工作，因此我们不希望向它发送任何工作。在这种情况下，最好的做法是让容器运行，并给它重新建立所需连接的机会，但避免向它发送任何请求。在此期间，我们可以希望集群中同一个 Deployment 的另一个 Pod 正在按预期工作，使得我们的整个应用程序对局部故障具有恢复能力。
 
-这正是 Kubernetes 中就绪探针的工作方式。正如我们在 `第 9 章` 中看到的，Kubernetes `Service` 会持续监控匹配其选择器的 Pod，并为其集群 IP 配置负载均衡，将流量路由到这些 Pod。如果一个 Pod 报告自身未就绪，`Service` 将停止向其路由流量，但 `kubelet` 不会触发任何其他操作（例如重启容器）。
 
-让我们来说说明这种情况。我们希望对 Pod 的就绪状态进行单独控制，因此我们将使用一个略为刻意的示例（而不是真实的外部依赖）来确定就绪状态。我们将部署一组 NGINX Pod，这次带有一个相应的 Service：
+同时，如果容器缺少所需的外部依赖项，它就无法工作，因此我们不希望向它发送任何工作。在这种情况下，最好的做法是让容器运行，并给它重新建立所需连接的机会，但避免向它发送任何请求。在此期间，我们可以希望集群中同一个 `Deployment` 的另一个 `Pod` 正在按预期工作，使得我们的整个应用程序对局部故障具有恢复能力。
 
-*nginx-ready.yaml*
+这正是 Kubernetes 中就绪探针的工作方式。正如我们在`第 9 章`中看到的，Kubernetes `Service` 会持续监控匹配其选择器的 `Pod`，并为其集群 IP 配置负载均衡，将流量路由到这些 `Pod`。如果一个 `Pod` 报告自身未就绪，`Service` 将停止向其路由流量，但 `kubelet` 不会触发任何其他操作（例如重启容器）。
 
-```
+让我们来说明这种情况。我们希望对 `Pod` 的就绪状态进行单独控制，因此我们将使用一个略为刻意的示例（而不是真实的外部依赖）来确定就绪状态。我们将部署一组 NGINX `Pod`，这次带有一个相应的 `Service`：
+
+`nginx-ready.yaml`
+
+```yaml
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -6294,18 +6136,9 @@ spec:
     targetPort: 80
 ```
 
-此 Deployment 保留了 `livenessProbe` 作为 NGINX 正常工作的指示，并添加了 `readinessProbe`。`Service` 的定义与我们在看到的相同。此 Deployment 保留了 `livenessProbe` 作为 NGINX 正常工作的指示，并添加了 `readinessProbe`。`Service` 的定义与我们在看到的相同。此 Pod 并将流量路由到这些 Pod。此 Deployment 保留了 `livenessProbe` 作为 NGINX 正常工作的指示，并添加了 `readinessProbe`。`Service` 的定义与我们在看到的相同。此 Deployment 保留了 `livenessProbe` 作为 NGINX 正常工作的指示，并添加了 `readinessProbe`。`Service` 的定义与我们在看到的相同。此 Deployment 保留了 `livenessProbe` 作为 NGINX 正常工作的指示，并添加了 `readinessProbe`。`Service` 的定义与我们在看到的相同。此 Deployment 保留了 `livenessProbe` 作为 NGINX 正常工作的指示，并添加了 `readinessProbe`。`Service` 的定义与我们在看到的相同。此 Deployment 保留了 `livenessProbe` 作为 NGINX 正常工作的指示，并添加了 `readinessProbe`。`Service` 的定义与我们在看到的相同。此 Deployment 保留了 `livenessProbe` 作为 NGINX 正常工作的指示，并添加了 `readinessProbe`。`Service` 的定义与我们在看到的相同。此 Deployment 保留了 `livenessProbe` 作为 NGINX 正常工作的指示，并添加了 `readinessProbe`。`Service` 的定义与我们在看到的相同。此 Deployment 保留了 `livenessProbe` 作为 NGINX 正常工作的指示，并添加了 `readinessProbe`。`Service` 的定义与我们在看到的相同。此 Deployment 保留了 `livenessProbe` 作为 NGINX 正常工作的指示，并添加了 `readinessProbe`。`Service` 的定义与我们在看到的相同。此 Deployment 保留了 `livenessProbe` 作为 NGINX 正常工作的指示，并添加了 `readinessProbe`。`Service` 的定义与我们在看到的相同。此 Deployment 保留了 `livenessProbe` 作为 NGINX 正常工作的指示，并添加了 `readinessProbe`。`Service` 的定义与我们在看到的相同。此 Deployment 保留了 `livenessProbe` 作为 NGINX 正常工作的指示，并添加了 `readinessProbe`。`Service` 的定义与我们在看到的相同。此 Deployment 保留了 `livenessProbe` 作为 NGINX 正常工作的指示，并添加了 `readinessProbe`。`Service` 的定义与我们在看到的相同。此 Pod 并将流量路由到这些 Pod。 (注：此处原文似乎存在重复重复，已按逻辑处理)
+此 `Deployment` 保留了 `livenessProbe` 作为 NGINX 正常工作的指示，并添加了 `readinessProbe`。`Service` 的定义与我们之前看到的相同。
 
-此 Pod 并将流量路由到这些 Pod。此 Deployment 保留了 `livenessProbe` 作为 NGINX 正常工作的指示，并添加了 `readinessProbe`。`Service` 的定义与我们在看到的相同。此 Pod 并将流量路由到这些 Pod。此 Deployment 保留了 `livenessProbe` 作为 NGINX 正常工作的指示，并添加了 `readinessProbe`。`Service` 的定义与我们在看到的相同。此 Pod 并将流量路由到这些 Pod。此 Deployment 保留了 `livenessProbe` 作为 NGINX 正常工作的指示，并添加了 `readinessProbe`。`Service` 的定义与我们在看到的相同。此 Pod 并将流量路由到这些 Pod。此 Deployment 保留了 `livenessProbe` 作为 NGINX 正常工作的指示，并添加了 `readinessProbe`。`Service` 的定义与我们在看到的相同。
-
-此 Pod 并将流量路由到这些 Pod。此 Deployment 保留了 `livenessProbe` 作为 NGINX 正常工作的指示，并添加了 `readinessProbe`。`Service` 的定义与我们在看到的相同。此 Pod 并将流量路由到这些 Pod。此 Deployment 保留了 `livenessProbe` 作为 NGINX 正常工作的指示，并添加了 `readinessProbe`。`Service` 的定义与我们在看到的相同。此 Pod 并将流量路由到这些 Pod。此 Deployment 保留了 `livenessProbe` 作为 NGINX 正常工作的指示，并添加了 `readinessProbe`。`Service` 的定义与我们在看到的相同。
-
-(注：由于提供的原文后半存在大量重复的句子，译文已根据逻辑进行了精简，以确保不重复输出)
-
-
-
-
-```
+```text
 root@host01:~# kubectl get pods
 NAME                     READY   STATUS    RESTARTS   AGE
 nginx-67fb6485f5-2k2nz   0/1     Running   0          10m
@@ -6315,7 +6148,7 @@ nginx-67fb6485f5-xzmj5   0/1     Running   0          10m
 
 现在，我们将选择其中一个并让它报告自己已就绪：
 
-```
+```bash
 root@host01:~# kubectl exec -ti nginx-67fb6485f5-2k2nz -- \
   cp -v /etc/hostname /usr/share/nginx/html/ready
 '/etc/hostname' -> '/usr/share/nginx/html/ready'
@@ -6323,7 +6156,7 @@ root@host01:~# kubectl exec -ti nginx-67fb6485f5-2k2nz -- \
 
 我们的 `Service` 将开始显示一个有效的 `Endpoint`：
 
-```
+```text
 root@host01:~# kubectl describe svc nginx
 Name:              nginx
 ...
@@ -6333,16 +6166,16 @@ Endpoints:         172.31.239.199:80
 
 更好了，我们现在可以通过集群 IP 访问 NGINX 实例，且内容与主机名对应：
 
-```
+```bash
 root@host01:~# curl http://10.101.98.80/ready
 nginx-67fb6485f5-2k2nz
 ```
 
 注意 URL 末尾的 `/ready`，因此返回的是主机名。如果我们多次运行此 `command`，我们会发现每次主机名都是相同的。这是因为通过就绪探针的那个 `Pod` 正在处理所有的 `Service` 流量。
 
-让我们让另外两个 `Pods` 也就绪绪：
+让我们让另外两个 `Pod` 也就绪：
 
-```
+```bash
 root@host01:~# kubectl exec -ti nginx-67fb6485f5-vph44 -- \
   cp -v /etc/hostname /usr/share/nginx/html/ready
 '/etc/hostname' -> '/usr/share/nginx/html/ready'
@@ -6351,9 +6184,9 @@ root@host01:~# kubectl exec -ti nginx-67fb6485f5-xzmj5 -- \
 '/etc/hostname' -> '/usr/share/nginx/html/ready'
 ```
 
-我们的 `Service` 现在显示了三个 `Endpoints`：
+我们的 `Service` 现在显示了三个 `Endpoint`：
 
-```
+```text
 root@host01:~# kubectl describe service nginx
 Name:              nginx
 ...
@@ -6361,9 +6194,9 @@ Endpoints:         172.31.239.199:80,172.31.239.200:80,172.31.89.210:80
 ...
 ```
 
-多次运行 `curl` `command` 显示流量现在正分布在多个 `Pods` 上：
+多次运行 `curl` `command` 显示流量现在正分布在多个 `Pod` 上：
 
-```
+```bash
 root@host01:~# for i in $(seq 1 5); do curl http://10.101.98.80/ready; done
 nginx-67fb6485f5-xzmj5
 nginx-67fb6485f5-2k2nz
@@ -6372,7 +6205,7 @@ nginx-67fb6485f5-vph44
 nginx-67fb6485f5-vph44
 ```
 
-嵌入的 `command` `$(seq 1 5)` 返回数字 1 到 5，导致 `for` `loop` 运行五次 `curl`。如果你多次运行同一个 `for` `loop`，你会看到不同的主机名分布。如 第 9 章 所述，负载均衡基于随机均匀分布，每个 `endpoint` 在每次新连接时都有等几概率被选中。
+嵌入的 `command` `$(seq 1 5)` 返回数字 1 到 5，导致 `for` `loop` 运行五次 `curl`。如果你多次运行同一个 `for` `loop`，你会看到不同的主机名分布。如`第 9 章`所述，负载均衡基于随机均匀分布，每个 `endpoint` 在每次新连接时都有等几率被选中。
 
 一种良好的做法是为每个应用程序提供一个 HTTP 就绪端点，该端点检查应用程序及其依赖项的当前状态，如果组件健康则返回 HTTP 成功状态码（如 `200`），如果不健康则返回 HTTP 错误码（如 `500`）。某些应用框架（如 `Spring Boot`）提供了应用状态管理，可以自动暴露存活和就绪端点。
 
@@ -6396,23 +6229,19 @@ Kubernetes 支持许多不同类型的资源，包括处理、`memory`、存储�
 
 处理和 `memory` 的规范有两个目的：调度和防止冲突。Kubernetes 为每个目的提供了不同的资源规范。`Pod` 的容器消耗处理和内存资源，因此这就是应用规范的地方。
 
-在调度 `Pods` 时，Kubernetes 使用容器规范中的 `requests` 字段，汇总 `Pod` 中所有容器的字段，并寻找在处理和内存方面都有剩余空间的节点。通常，`requests` 字段设置为预期的平均资源需求。
+在调度 `Pod` 时，Kubernetes 使用容器规范中的 `requests` 字段，汇总 `Pod` 中所有容器的字段，并寻找在处理和内存方面都有剩余空间的节点。通常，`requests` 字段设置为预期的平均资源需求。
 
 规范的第二个目的是防止由于一个容器占用节点所有资源导致的拒绝服务问题。这需要运行时强制执行资源。Kubernetes 使用容器规范的 `limits` 字段来实现此目的，因此我们需要确保设置的 `limits` 字段足够，以便容器能够正常运行而不触及限制。
 
 ### 性能调优
 
-请求应匹配预期平均资源需求的想法是基于这样一个假设：集群中各种容器的负载激增是不可预测且不相关的，因此可以假设负载激增发生在不同的时间。即使有这个假设，节点上多个容器同时发生负载激增的风险仍会导致该节点过载。如果不同 `Pods` 之间的负载激增是相关的，这种过载风险就会增加。在第 19 章中，我们将探索 Kubernetes 为 `Pod` 提供的服务质量 (QoS) 类，并讨论如何在性能保证和集群效率之间取得平衡。
+请求应匹配预期平均资源需求的想法是基于这样一个假设：集群中各种容器的负载激增是不可预测且不相关的，因此可以假设负载激增发生在不同的时间。即使有这个假设，节点上多个容器同时发生负载激增的风险仍会导致该节点过载。如果不同 `Pod` 之间的负载激增是相关的，这种过载风险就会增加。在第 19 章中，我们将探索 Kubernetes 为 `Pod` 提供的服务质量（QoS）类，并讨论如何在性能保证和集群效率之间取得平衡。
 
 列表 14-1 以一个在 `Deployment` 中请求和限制的示例开始我们的研究。
 
-*nginx-limit.yaml*
+`nginx-limit.yaml`
 
-
-
-
-
-```
+```yaml
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -6441,11 +6270,11 @@ spec:
       nodeName: host01
 ```
 
-*列表 14-1: 带有限制的 Deployment*
+*列表 14-1：带有限制的 Deployment*
 
-我们将使用这个 Deployment 来探索如何在容器运行时级别配置限制（limits），因此我们使用 `nodeName` 字段来确保容器运行在 `host01` 上。这限制了调度器放置 Pod 的位置，但调度器仍然会使用 `requests` 字段来确保足够的资源。如果 `host01` 变得太忙，调度器将拒绝调度该 Pod，这与我们在第 10 章中看到的类似。
+我们将使用这个 `Deployment` 来探索如何在容器运行时级别配置限制（`limits`），因此我们使用 `nodeName` 字段来确保容器运行在 `host01` 上。这限制了调度器放置 `Pod` 的位置，但调度器仍然会使用 `requests` 字段来确保足够的资源。如果 `host01` 变得太忙，调度器将拒绝调度该 `Pod`，这与我们在第 10 章中看到的类似。
 
-`resources` 字段定义在单个容器级别，允许我们为 Pod 中的每个容器指定单独资源需求。对于此容器，我们指定了 `64Mi` 的内存请求和 `128Mi` 的内存限制。后缀 `Mi` 意味着我们使用基于 2 的幂单位“兆字节”（mebibytes），即 2 的 20 次方，而不是基于 10 的幂单位“兆字节”（megabytes），后者是 10 的 6 次方，值略小。
+`resources` 字段定义在单个容器级别，允许我们为 `Pod` 中的每个容器指定单独资源需求。对于此容器，我们指定了 `64Mi` 的内存请求和 `128Mi` 的内存限制。后缀 `Mi` 意味着我们使用基于 2 的幂单位“兆字节”（mebibytes），即 2 的 20 次方，而不是基于 10 的幂单位“兆字节”（megabytes），后者是 10 的 6 次方，值略小。
 
 同时，使用 `cpu` 字段指定的处理请求和限制不是基于任何绝对的处理单位，而是基于我们集群的合成 `cpu unit`。每个 `cpu unit` 大约对应于一个虚拟 CPU 或核心。`m` 后缀表示“毫核 CPU”（millicpu），因此我们的请求值 `250m` 等于一个核心的四分之一，而 `500m` 的限制则等于一个核心的一半。
 
@@ -6453,12 +6282,14 @@ spec:
 
 本书的示例仓库位于 [`github.com/book-of-kubernetes/examples`](https://github.com/book-of-kubernetes/examples)。有关设置的详情，请参见第 xx 页上的“运行示例”。
 
-让我们创建这个 Deployment：
+让我们创建这个 `Deployment`：
 
-```
-root@host01:~# kubectl apply -f /opt/nginx-limit.yaml 
+```bash
+root@host01:~# kubectl apply -f /opt/nginx-limit.yaml
 deployment.apps/nginx created
 ```
+
+
 
 Pod 将被分配到 `host01` 并启动：
 
@@ -6543,10 +6374,6 @@ Memory Settings
 Limit (bytes): 134217728
 ```
 
-
-
-
-
 资源分配在 cgroups 中的反映方式向我们展示了关于集群性能的重要信息。由于 `requests` 用于调度，而 `limits` 用于运行时强制，节点可能会出现处理和内存的过度提交。当容器的 `limit` 高于 `requests`，且容器持续在高于 `requests` 的运行时，可能会导致节点上容器的性能问题。我们将在第 19 章中详细讨论这一点。
 
 我们已经完成了 NGINX 部署，现在让我们将其删除吧：
@@ -6583,7 +6410,7 @@ root@host01:~# cat /etc/cni/net.d/10-calico.conflist
 
 让我们来看一个例子。首先，我们部署一个监听客户端连接的 iperf3 服务器：
 
-*iperf-server.yaml*
+`iperf-server.yaml`
 
 ```
 ---
@@ -6634,7 +6461,7 @@ service/iperf-server created
 
 让我们在不应用任何带宽限制的情况下运行一个 iperf3 客户端。这将让我们看到在没有任何流量控制的情况下，集群网络有多快。以下是客户端的定义：
 
-*iperf.yaml*
+`iperf.yaml`
 
 ```
 ---
@@ -6674,10 +6501,6 @@ Connecting to host iperf-server, port 5201
 [  5]   8.00-9.00   sec   152 MBytes  1.28 Gbits/sec  225    281 KBytes       
 [  5]   9.00-10.00  sec   154 MBytes  1.29 Gbits/sec  153    268 KBytes
 ```
-
-
-
-
 
 ```
 root@host01:~# kubectl logs iperf-limit
@@ -6727,7 +6550,7 @@ pod "iperf-limit" deleted
 
 管理 Pod 的带宽是有用的，但正如我们所看到的，带宽限制从 Pod 的角度来看可能像间歇性连接。因此，对于无法配置为自调节其带宽占用的容器，这种流量整形应该被视为最后的手段。
 
-### 配额 (Quotas)
+### 配额（Quotas）
 
 限制（Limits）允许我们的 Kubernetes 集群确保每个节点都有为其分配的 Pod 提供足够的资源。然而，如果我们希望集群能够可靠地托管多个应用程序，我们需要一种方法来控制任何应用程序请求的资源量。
 
@@ -6744,6 +6567,8 @@ root@host01:~# kubectl create namespace sample
 ```
 
 接下来，将在 `sample` 命名空间中定义一个 `ResourceQuota`：
+
+
 
 ```yaml
 ---
@@ -6863,13 +6688,9 @@ root@host01:~# kubectl apply -f sleep.yaml
 deployment.apps/sleep created
 ```
 
+这之所以成功，是因为我们指定了必要的 `request`（请求）和 `limit`（限制）字段，并且没有超过我们的配额。此外，Pod 是按照我们指定的限制条件启动的：
 
-
-
-
-这之所以成功，是因为我们指定了必要的 request（请求）和 limit（限制）字段，并且没有超过我们的配额。此外，Pod 是按照我们指定的限制条件启动的：
-
-```
+```text
 root@host01:~# kubectl get -n sample pods
 NAME                     READY   STATUS    RESTARTS   AGE
 sleep-688dc46d95-wtppg   1/1     Running   0          72s
@@ -6877,7 +6698,7 @@ sleep-688dc46d95-wtppg   1/1     Running   0          72s
 
 然而，我们看到现在使用的资源已经超出了我们的配额：
 
-```
+```text
 root@host01:~# kubectl describe namespace sample
 Name:         sample
 Labels:       kubernetes.io/metadata.name=sample
@@ -6897,7 +6718,7 @@ Resource Quotas
 
 这将限制我们扩展该 `Deployment` 的能力。让我们来说说明：
 
-```
+```text
 root@host01:~# kubectl scale -n sample deployment sleep --replicas=12
 deployment.apps/sleep scaled
 root@host01:~# kubectl get -n sample pods
@@ -6909,7 +6730,7 @@ sleep-688dc46d95-wtppg   1/1     Running   0          3m13s
 
 我们请求了 12 个副本，但只看到三个在运行。如果我们描述这个 `Deployment`，就能看到一个问题：
 
-```
+```text
 root@host01:~# kubectl describe -n sample deployment sleep
 Name:      sleep
 Namespace: sample
@@ -6921,7 +6742,7 @@ Conditions:
   ----             ------  ------
   Progressing      True    NewReplicaSetAvailable
   Available        False   MinimumReplicasUnavailable
-  ReplicaFailure   True    FailedCreate
+  ReplicaFailure   True   FailedCreate
 OldReplicaSets:    <none>
 NewReplicaSet:     sleep-688dc46d95 (3/12 replicas created)
 ...
@@ -6929,7 +6750,7 @@ NewReplicaSet:     sleep-688dc46d95 (3/12 replicas created)
 
 现在 `Namespace` 报告我们已经消耗了足够的配额，没有空间为另一个 Pod 分配所需的资源：
 
-```
+```text
 root@host01:~# kubectl describe namespace sample
 Name:         sample
 ...
@@ -6962,9 +6783,9 @@ Resource Quotas
 
 在本章中，我们将看到 Kubernetes 如何通过插件架构允许任何支持的分布式存储引擎作为后端存储，为 `Pods` 按需提供持久化存储。
 
-### 存储类 (Storage Classes)
+### 存储类（Storage Classes）
 
- Kubernetes 的存储插件架构非常灵活；它意识到某些集群可能不需要存储，而另一些则需要多个存储插件来处理大量数据或低延迟存储。由于如此，`kubeadm` 在集群安装期间不会立即设置存储；而是在之后通过添加 `StorageClass` 来进行配置。
+Kubernetes 的存储插件架构非常灵活；它意识到某些集群可能不需要存储，而另一些则需要多个存储插件来处理大量数据或低延迟存储。由于如此，`kubeadm` 在集群安装期间不会立即设置存储；而是在之后通过添加 `StorageClass` 来进行配置。
 
 每个 `StorageClass` 指定一个提供实际存储的特定插件。我们可以使用多个存储类来定义不同的插件，或具有相同插件但不同参数的存储类。例如，集群可以为低延迟提供较小的配额，同时为较慢的数据提供配额。
 
@@ -6978,21 +6799,17 @@ Kubernetes 内置了一套内部存储提供者。这包括针对热门云提供
 
 **注意**
 
-*本书的示例仓库位于 [`github.com/book-of-kubernetes/examples`](https://github.com/book-of-kubernetes/examples)。有关设置的详情请参见 xx 页“运行示例”。*
+本书的示例仓库位于 [`github.com/book-of-kubernetes/examples`](https://github.com/book-of-kubernetes/examples)。有关设置的详情请参见 xx 页“运行示例”。
 
 列表 15-1 显示了 Longhorn 创建的 `StorageClass`。
 
-```
+```text
 root@host01:~# kubectl get storageclass
 NAME      PROVISIONER         RECLAIMPOLICY  VOLUMEBINDINGMODE  ALLOWVOLUMEEXPANSION ...
 longhorn  driver.longhorn.io  Delete         Immediate          true                 ...
 ```
 
-*列表 15-1: Longhorn StorageClass*
-
-
-
-
+*列表 15-1：Longhorn StorageClass*
 
 最重要的两个字段显示了 `StorageClass` 的名称和 provisioner（提供者）。名称在资源规格中使用，用于标识应该使用哪个 Longhorn `StorageClass` 来配置请求的卷，而 provisioner 则由 `kubelet` 在内部用于与 Longhorn CSI 插件通信。
 
@@ -7002,7 +6819,7 @@ longhorn  driver.longhorn.io  Delete         Immediate          true            
 
 为了探索这种通信的工作原理，首先我们将列出运行在 `host01` 上的 Longhorn 容器：
 
-```
+```text
 root@host01:~# crictl ps --name 'longhorn.*|csi.*'
 CONTAINER     ... STATE    NAME ...
 c8347a513f71e ... Running  csi-provisioner ...
@@ -7014,7 +6831,7 @@ c8347a513f71e ... Running  csi-provisioner ...
 8d92886fdacda ... Running  csi-resizer ...
 9868014407fe0 ... Running  csi-resizer ...
 408d16181af51 ... Running  csi-attacher ...
-0c6c341debb0c ... Running  longhorn-driver-deployer ...
+0c6c341debb0c0 ... Running  longhorn-driver-deployer ...
 ba328a9d0aaf2 ... Running  longhorn-manager ...
 c39e5c4fee3bb ... Running  longhorn-ui ...
 ```
@@ -7023,7 +6840,7 @@ Longhorn 创建的容器名称以 `longhorn` 或 `csi` 开头，因此我们使�
 
 让我们获取 `csi-attacher` 容器的 ID，然后对其检查以查看它有哪些卷挂载：
 
-```
+```text
 root@host01:~# CID=$(crictl ps -q --name csi-attacher)
 root@host01:~# crictl inspect $CID
 {
@@ -7046,7 +6863,9 @@ root@host01:~# crictl inspect $CID
 }
 ```
 
-`crictl inspect` 命令返回了容器的大量数据，但在示例中我们只显示了相关数据。我们可以看到，这个 Longhorn 组件被指示连接到 `/csi/csi.sock`，这是容器内部 `kubelet` 用于与存储驱动程序通信的 Unix 套接字挂载点。我们还可以看到容器内的 `/csi` 是 `/var/lib/kubelet/plugins/driver.longhorn.io`。`/var/lib/kubelet/plugins` 位置是 `kubelet` 查找存储插件的标准位置，当然，`driver.longhorn.io` 是 `provisioner` 字段的值，正如[列表 15-1]中 Longhorn `StorageClass` 定义的那样。
+
+
+`crictl inspect`命令返回了容器的大量数据，但在示例中我们只显示了相关数据。我们可以看到，这个 Longhorn 组件被指示连接到`/csi/csi.sock`，这是容器内部`kubelet`用于与存储驱动程序通信的 Unix 套接字挂载点。我们还可以看到容器内的`/csi`是`/var/lib/kubelet/plugins/driver.longhorn.io`。`/var/lib/kubelet/plugins`位置是`kubelet`查找存储插件的标准位置，当然，`driver.longhorn.io`是`provisioner`字段的值，正如[列表 15-1]中 Longhorn `StorageClass`定义的那样。
 
 如果我们在主机上查看，可以确认这个 Unix 套接字是否存在：
 
@@ -7056,17 +6875,17 @@ total 0
 srwxr-xr-x 1 root root 0 Feb 18 20:17 csi.sock
 ```
 
-第一个字符为 `s` 表示这是一个 Unix 套接字。
+第一个字符为`s`表示这是一个 Unix 套接字。
 
 ## 持久卷
 
-现在我们已经看到了 `kubelet` 如何与外部存储驱动程序通信，让我们来看看如何请求分配存储空间，然后将该存储挂载到 Pod 上。
+现在我们已经看到了`kubelet`如何与外部存储驱动程序通信，让我们来看看如何请求分配存储空间，然后将该存储挂载到`Pod`上。
 
 ## Stateful Sets
 
-在 Pod 中获取存储最简单的方法是使用 `StatefulSet`（[第 7 章]中描述的资源）。与 `Deployment` 类似，`StatefulSet` 创建多个 Pod，并可以分配到任何节点。然而，`StatefulSet` 还会创建持久存储以及每个 Pod 与其存储之间的映射。如果 Pod 需要替换，它将用具有相同标识和相同持久存储的新 Pod 进行替换。
+在`Pod`中获取存储最简单的方法是使用`StatefulSet`（[第 7 章]中描述的资源）。与`Deployment`类似，`StatefulSet`创建多个`Pod`，并可以分配到任何节点。然而，`StatefulSet`还会创建持久存储以及每个`Pod`与其存储之间的映射。如果`Pod`需要替换，它将用具有相同标识和相同持久存储的新`Pod`进行替换。
 
-[列表 15-2] 展示了一个 `StatefulSet` 示例，它创建了两个带有持久存储的 PostgreSQL Pod。
+[列表 15-2]展示了一个`StatefulSet`示例，它创建了两个带有持久存储的 PostgreSQL `Pod`。
 
 *pgsql-set.yaml*
 
@@ -7107,18 +6926,14 @@ spec:
           storage: 1Gi
 ```
 
-
-
-
-
 ```
 root@host01:~# kubectl get svc
 NAME         TYPE        CLUSTER-IP   EXTERNAL-IP   PORT(S)   AGE
-kubernetes   ClusterIP   10.96.0.1    <none>        443/TCP   54m
-postgres     ClusterIP   None         <none>        <none>    19m
+kubernetes   ClusterIP    10.96.0.1    <none>        443/TCP   54m
+postgres     ClusterIP    None         <none>        <none>    19m
 ```
 
-`postgres` 服务存在，但没有显示集群 IP 地址，因为我们将其创建为一个无头（headless）`Service`。不过，它已经为关联的 `Pods` 创建了 DNS 条目，因此我们可以在不知道 `Pod` IP 地址的情况下连接到特定的 `PostgreSQL` `Pods`。
+`postgres`服务存在，但没有显示集群 IP 地址，因为我们将其创建为一个无头（headless）`Service`。不过，它已经为关联的`Pod`创建了 DNS 条目，因此我们可以在不知道`Pod`IP 地址的情况下连接到特定的 PostgreSQL `Pod`。
 
 我们需要使用集群 DNS 进行查找。最简单的方法是从容器内部进行：
 
@@ -7128,9 +6943,9 @@ root@host01:~# kubectl run -ti --image=alpine --restart=Never alpine
 / #
 ```
 
-这种形式的 `run` 命令会保持在前台，并为我们提供一个交互式终端。它还告诉 Kubernetes 在我们退出 shell 时不要尝试重启容器。
+这种形式的`run`命令会保持在前台，并为我们提供一个交互式终端。它还告诉 Kubernetes 在我们退出 shell 时不要尝试重启容器。
 
-在这个容器内部，我们可以通过已知名称引用我们的两个 `PostgreSQL` `Pods`：
+在这个容器内部，我们可以通过已知名称引用我们的两个 PostgreSQL `Pod`：
 
 ```
 / # ping -c 1 postgres-0.postgres.default.svc
@@ -7144,9 +6959,9 @@ PING postgres-1.postgres.default.svc (172.31.239.199): 56 data bytes
 # exit
 ```
 
-命名规范与我们在第 9 章 中看到的 `Services` 相同，但为 `Pod` 的名称多了一个主机名前缀；在这种情况下，名称为 `postgres-0` 或 `postgres-1`。
+命名规范与我们在第 9 章中看到的`Service`相同，但为`Pod`的名称多了一个主机名前缀；在这种情况下，名称为`postgres-0`或`postgres-1`。
 
-另一个重要的资源是 `StatefulSet` 自动创建的 `PersistentVolumeClaim`。`PersistentVolumeClaim` 实际上在使用 `Longhorn` `StorageClass` 分配存储的依据：
+另一个重要的资源是`StatefulSet`自动创建的`PersistentVolumeClaim`。`PersistentVolumeClaim`实际上在使用 Longhorn `StorageClass`分配存储的依据：
 
 ```
 root@host01:~# kubectl get pvc
@@ -7155,9 +6970,9 @@ postgres-volume-postgres-0   Bound    pvc-83becdac...   1Gi        ...
 postgres-volume-postgres-1   Bound    pvc-0d850889...   1Gi        ...
 ```
 
-我们用缩写 `pvc` 代替它的全名 `persistentvolumeclaim`。
+我们用缩写`pvc`代替它的全名`persistentvolumeclaim`。
 
-`StatefulSet` 使用列表 15-2 中 `volumeClaimTemplates` 字段中的数据创建了这两个 `PersistentVolumeClaims`。然而，如果我们删除了 `StatefulSet`，`PersistentVolumeClaims` 将继续存在：
+`StatefulSet`使用列表 15-2 中`volumeClaimTemplates`字段中的数据创建了这两个`PersistentVolumeClaim`。然而，如果我们删除了`StatefulSet`，`PersistentVolumeClaim`将继续存在：
 
 ```
 root@host01:~# kubectl delete -f /opt/pgsql-set.yaml 
@@ -7169,22 +6984,22 @@ postgres-volume-postgres-0   Bound    pvc-83becdac...   1Gi        ...
 postgres-volume-postgres-1   Bound    pvc-0d850889...   1Gi        ...
 ```
 
-这保护了我们不会意外删除持久化存储。如果我们重新创建 `StatefulSet` 并在 `volume claim template` 中保持相同的名称，我们的新 `Pods` 将重新获得相同的存储。
+这保护了我们不会意外删除持久化存储。如果我们重新创建`StatefulSet`并在`volume claim template`中保持相同的名称，我们的新`Pod`将重新获得相同的存储。
 
 ## 高可用 PostgreSQL
 
-我们部署了两个独立的 `PostgreSQL` 实例，每个实例都有自己独立的持久化存储。然而，这仅仅是部署高可用数据库的第一步。我们还需要配置一个实例作为主节点，另一个作为备用，配置从主节点到备用节点的复制，并配置故障转移。我们还需要配置客户端连接主节点并在发生故障时切换到新的主节点。幸运的是，我们不需要自己进行这些配置。在第 17 章中，我们将看到如何利用自定义资源的力量来部署一个 `PostgreSQL` 的 Kubernetes `Operator`，它将自动处理所有这一切。
+我们部署了两个独立的 PostgreSQL 实例，每个实例都有自己独立的持久化存储。然而，这仅仅是部署高可用数据库的第一步。我们还需要配置一个实例作为主节点，另一个作为备用，配置从主节点到备用节点的复制，并配置故障转移。我们还需要配置客户端连接主节点并在发生故障时切换到新的主节点。幸运的是，我们不需要自己进行这些配置。在第 17 章中，我们将看到如何利用自定义资源的力量来部署一个 PostgreSQL 的 Kubernetes `Operator`，它将自动处理所有这一切。
 
-`StatefulSet` 是处理需要多个容器实例且每个实例都有独立独立存储的情况的最佳方法。然而，我们也可以更直接地使用持久化卷，这让我们对它们如何挂载到 `Pods` 中有更多的控制。
+`StatefulSet`是处理需要多个容器实例且每个实例都有独立独立存储的情况的最佳方法。然而，我们也可以更直接地使用持久化卷，这让我们对它们如何挂载到`Pod`中有更多的控制。
 
 ### 卷与声明（Claims）
 
-Kubernetes 同时拥有 `PersistentVolume` 和 `PersistentVolumeClaim` 资源类型。`PersistentVolumeClaim` 代表对分配存储的请求，而 `PersistentVolume` 包含分配存储的信息。在大多数情况下，这种区别并不重要，我们只需关注 `PersistentVolumeClaim`。然而，这种区别在两种情况下是重要的：
+Kubernetes 同时拥有`PersistentVolume`和`PersistentVolumeClaim`资源类型。`PersistentVolumeClaim`代表对分配存储的请求，而`PersistentVolume`包含分配存储的信息。在大多数情况下，这种区别并不重要，我们只需关注`PersistentVolumeClaim`。然而，这种区别在两种情况下是重要的：
 
-*   管理员可以手动创建 `PersistentVolume`，该 `PersistentVolume` 可以直接挂载到 `Pod` 中。
-*   如果按照 `PersistentVolumeClaim` 指定分配存储出现问题，将不会创建 `PersistentVolume`。
+- 管理员可以手动创建`PersistentVolume`，该`PersistentVolume`可以直接挂载到`Pod`中。
+- 如果按照`PersistentVolumeClaim`指定分配存储出现问题，将不会创建`PersistentVolume`。
 
-为了说明，首先我们从一个分配存储的 `PersistentVolumeClaim` 开始：
+为了说明，首先我们从一个分配存储的`PersistentVolumeClaim`开始：
 
 *pvc.yaml*
 
@@ -7198,7 +7013,7 @@ spec:
   storageClassName: longhorn
 ```
 
-我们将 `PersistentVolumeClaim` 命名为 `nginx-storage`，因为我们稍后将使用它。`StorageClass` `longhorn` 会调用 `PersistentVolume` 来分配存储，创建一个 `PersistentVolume`：
+我们将`PersistentVolumeClaim`命名为`nginx-storage`，因为我们稍后将使用它。`StorageClass` `longhorn`会调用`PersistentVolume`来分配存储，创建一个`PersistentVolume`：
 
 ```
 ---
@@ -7214,7 +7029,7 @@ spec:
       storage: 100Mi
 ```
 
-缩写 `pv` 是 `persistentvolumes` 的简写，尽管这里还没有 `persistentvolumes` 卷。
+缩写`pv`是`persistentvolumes`的简写，尽管这里还没有`persistentvolumes`卷。
 
 *pvc.yaml*
 
@@ -7232,7 +7047,7 @@ spec:
       storage: 100Mi
 ```
 
-我们的 `PersistentVolumeClaim` 状态为 `Pending`，且没有对应的 `PersistentVolume`。然而，作为集群管理员，我们可以手动创建这个 `PersistentVolume`：
+我们的`PersistentVolumeClaim`状态为`Pending`，且没有对应的`PersistentVolume`。然而，作为集群管理员，我们可以手动创建这个`PersistentVolume`：
 
 *pv.yaml*
 
@@ -7255,13 +7070,9 @@ spec:
     volumeHandle: manual
 ```
 
-以这种方式创建 `PersistentVolume` 时，我们需要指定我们想要的卷的类型。在这种情况下，通过包含 `csi` 字段，我们识别出由 CSI 插件创建的卷。然后我们指定要使用的 `driver`，并为 `volumeHandle` 提供一个唯一值。在 `PersistentVolume` 创建后，Kubernetes 直接调用 Longhorn 存储驱动程序来分配存储。
+以这种方式创建`PersistentVolume`时，我们需要指定我们想要的卷的类型。在这种情况下，通过包含`csi`字段，我们识别出由 CSI 插件创建的卷。然后我们指定要使用的`driver`，并为`volumeHandle`提供一个唯一值。在`PersistentVolume`创建后，Kubernetes 直接调用 Longhorn 存储驱动程序来分配存储。
 
-由于我们为这个 `PersistentVolume` 指定了 `claimRef`，它将自动进入 `Bound` 状态：
-
-
-
-
+由于我们为这个`PersistentVolume`指定了`claimRef`，它将自动进入`Bound`状态：
 
 ```
 root@host01:~# kubectl get pv manual
@@ -7269,9 +7080,9 @@ NAME     CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   ...
 manual   100Mi      RWO            Retain           Bound    ...
 ```
 
-这需要几秒时间，因此 `PersistentVolume` 可能会短暂显示为 Available（可用）。
+这需要几秒时间，因此`PersistentVolume`可能会短暂显示为 Available（可用）。
 
-`PersistentVolumeClaim` 也会进入 Bound（已绑定）状态：
+`PersistentVolumeClaim`也会进入 Bound（已绑定）状态：
 
 ```
 root@host01:~# kubectl get pvc manual
@@ -7279,11 +7090,11 @@ NAME     STATUS   VOLUME   CAPACITY   ACCESS MODES   STORAGECLASS   AGE
 manual   Bound    manual   100Mi      RWO            manual         2m20s
 ```
 
-对于管理员来说，在应用程序需要特殊存储的罕少数情况下，手动创建 `PersistentVolume` 是很有用的。但对于大多数持久化存储，通过 `StorageClass` 以及 `PersistentVolumeClaim` 或 `StatefulSet` 来自动化存储分配要好得多。
+对于管理员来说，在应用程序需要特殊存储的罕少数情况下，手动创建`PersistentVolume`是很有用的。但对于大多数持久化存储，通过`StorageClass`以及`PersistentVolumeClaim`或`StatefulSet`来自动化存储分配要好得多。
 
-## 部署 (Deployments)
+## 部署（Deployments）
 
-既然我们已经直接创建了 `PersistentVolumeClaim` 并拥有关联卷，我们可以在 `Deployment` 中使用它了。为了演示这一点，我们将展示如何使用持久化存储来存放由 NGINX Web 服务器提供的 HTML 文件：
+既然我们已经直接创建了`PersistentVolumeClaim`并拥有关联卷，我们可以在`Deployment`中使用它了。为了演示这一点，我们将展示如何使用持久化存储来存放由 NGINX Web 服务器提供的 HTML 文件：
 
 `nginx.yaml`
 
@@ -7315,9 +7126,9 @@ spec:
             claimName: nginx-storage
 ```
 
-将持久化存储挂载到我们的容器中需要两个步骤。首先，我们声明一个名为 `html` 的卷 ➋，它引用了我们创建的 `PersistentVolumeClaim`。这使得存储在 `Pod` 中可用。接下来，我们声明一个 `volumeMount` ➊，以指定该卷应该出现在容器文件系统的哪个位置。这两个这两个独立步骤的优势是，我们可以在同一个 `Pod` 的多个容器中挂载同一个卷，这使得即使在进程来自不同的容器镜像的情况下，我们也能通过文件在进程之间共享数据。
+将持久化存储挂载到我们的容器中需要两个步骤。首先，我们声明一个名为`html`的卷 ➋，它引用了我们创建的`PersistentVolumeClaim`。这使得存储在`Pod`中可用。接下来，我们声明一个`volumeMount` ➊，以指定该卷应该出现在容器文件系统的哪个位置。这两个独立步骤的优势是，我们可以在同一个`Pod`的多个容器中挂载同一个卷，这使得即使在进程来自不同的容器镜像的情况下，我们也能通过文件在进程之间共享数据。
 
-这种能力允许了一些有趣的用例。例如，假设我们正在构建一个包含一些静态内容的 Web 应用。我们可能会部署一个 NGINX Web 服务器来提供这些内容，就像我们在这里这样做一样。同时，我们还需要一种更新内容的方法。我们可以通过在 `Pod` 中运行定期检查新内容并更新与 NGINX 容器共享的持久化卷来实现。
+这种能力允许了一些有趣的用例。例如，假设我们正在构建一个包含一些静态内容的 Web 应用。我们可能会部署一个 NGINX Web 服务器来提供这些内容，就像我们在这里这样做一样。同时，我们还需要一种更新内容的方法。我们可以通过在`Pod`中运行定期检查新内容并更新与 NGINX 容器共享的持久化卷来实现。
 
 让我们创建 NGINX `Deployment`，这样我们就可以演示从持久化存储提供 HTML 文件。持久化存储启动时是空的，因此最初没有任何 Web 内容可以提供。让我们看看 NGINX 在这种情况下表现如何：
 
@@ -7326,7 +7137,7 @@ root@host01:~# kubectl apply -f /opt/nginx.yaml
 deployment.apps/nginx created
 ```
 
-一旦 NGINX 服务器启动并运行，我们需要获取它的 IP 地址，以便我们使用 `curl` 发起 HTTP 请求：
+一旦 NGINX 服务器启动并运行，我们需要获取它的 IP 地址，以便我们使用`curl`发起 HTTP 请求：
 
 ```
 root@host01:~# IP=$(kubectl get po -l app=nginx -o jsonpath='{..podIP}')
@@ -7338,7 +7149,9 @@ root@host01:~# curl -v http://$IP
 < HTTP/1.1 403 Forbidden
 ```
 
-在这种情况下，获取 IP 地址，我们使用 `kubectl` 的 `jsonpath` 输出格式，而不是使用 `jq` 来过滤 JSON 输出；`jsonpath` 具有非常实用的语法，用于搜索 JSON 对象并提取单个唯一命名的字段（在本例中为 `podIP`）。我们可以使用类似于我们在 第 8 章 中执行的 `jq` 过滤器，但 `jq` 的递归语法更复杂。
+
+
+在这种情况下，获取 IP 地址时，我们使用 `kubectl` 的 `jsonpath` 输出格式，而不是使用 `jq` 来过滤 JSON 输出；`jsonpath` 具有非常实用的语法，用于搜索 JSON 对象并提取单个唯一命名的字段（在本例中为 `podIP`）。我们可以使用类似于在第 8 章中执行的 `jq` 过滤器，但 `jq` 的递归语法更复杂。
 
 获取 IP 后，我们使用 `curl` 连接 NGINX。如预期的那样，我们没有看到 HTML 响应，因为我们的持久化存储是空的。但是，我们知道卷挂载正确，因为在这种情况下我们甚至没有看到默认的 NGINX 欢迎页面。
 
@@ -7370,8 +7183,6 @@ root@host01:~# curl -v http://$IP
 ...
 ```
 
-```
-
 由于这是持久化存储，即使我们删除了 `Deployment` 并重新创建它，此 HTML 内容仍然可用。
 
 然而，我们仍然有一个重大的问题需要解决。拥有 `Deployment` 的主要原因之一是能够扩展到多个 `Pod` 实例。扩展此 `Deployment` 很有意义，因为我们可以有多个 `Pod` 实例提供相同的 HTML 内容。遗憾的是，目前扩展无法工作：
@@ -7381,41 +7192,53 @@ root@host01:~# kubectl scale --replicas=3 deployment/nginx
 deployment.apps/nginx scaled
 ```
 
-`Deployment` 似乎扩展了，但如果我们查看 `Pods`，我们会发现并没有真正有多个运行中的实例：
+`Deployment` 似乎扩展了，但如果我们查看 `Pods`，会发现并没有真正有多个运行中的实例：
 
 ```
 root@host01:~# kubectl get pods
+
 NAME                    READY   STATUS              RESTARTS   AGE
+
 ...
+
 nginx-db4f4d5d9-7q7rd   0/1     ContainerCreating   0          46s
+
 nginx-db4f4d5d9-gbqxm   0/1     ContainerCreating   0          46s
+
 nginx-db4f4d5d9-vrzr4   1/1     Running             0          10m
 ```
 
-两个新实例卡在了 `ContainerCreating` 状态。让我们检查其中一个 `Pod` 看看为什么：
+两个新实例卡在了 `ContainerCreating` 状态。让我们检查其中一个 `Pod`，看看为什么：
 
 ```
 root@host01:~# kubectl describe pod/nginx-db4f4d5d9-7q7rd
+
 Name:           nginx-db4f4d5d9-7q7rd
+
 ...
+
 Status:         Pending
+
 Events:
+
   Type     Reason              Age   From                     Message
+
   ----     ------              ----  ----                     -------
+
 ...
-  Warning  FailedAttachVolume  110s  attachdetach-controller  Multi-Attach 
-    error for volume "pvc-cb671684-1719-4c33-9dd8-bcbbf2452b4" Volume is 
+
+  Warning  FailedAttachVolume  110s  attachdetach-controller  Multi-Attach
+
+    error for volume "pvc-cb671684-1719-4c33-9dd8-bcbbf2452b4" Volume is
+
     already used by pod(s) nginx-db4f4d5d9-vrzr4
 ```
-
-
-
 
 Longhorn 确实支持 `ReadWriteMany`，因此创建一个具有 `ReadWriteMany` 访问模式的 `PersistentVolumeClaim` 是一个简单的更改：
 
 `pvc-rwx.yaml`
 
-```
+```yaml
 ---
 apiVersion: v1
 kind: PersistentVolumeClaim
@@ -7430,26 +7253,31 @@ spec:
       storage: 100Mi
 ```
 
-遗憾的是，我们无法通过修改现有的 `PersistentVolumeClaim` 来更改访问模式。而且当 `Deployment` 正在使用存储时，我们无法删除 `PersistentVolumeClaim`。因此，我们需要清理所有内容然后重新部署：
+遗憾的是，我们无法通过修改现有的 `PersistentVolumeClaim` 来更改访问模式。而且当 `Deployment` 正在使用存储时，我们无法删除 `PersistentVolumeClaim`。因此，我们需要清理所有内容，然后重新部署：
 
 ```
 root@host01:~# kubectl delete deploy/nginx pvc/storage
 deployment.apps "nginx" deleted
 persistentvolumeclaim "storage" deleted
-root@host01:~# kubectl apply -f /opt/pvc-rwx.yaml 
+
+root@host01:~# kubectl apply -f /opt/pvc-rwx.yaml
 persistentvolumeclaim/storage created
-root@host01:~# kubectl apply -f /opt/nginx.yaml 
+
+root@host01:~# kubectl apply -f /opt/nginx.yaml
 deployment.apps/nginx created
 ```
 
 我们指定 `deploy/nginx` 和 `pvc/storage` 为要删除的资源。这种标识资源的方式允许我们在同一条命令中操作两个资源。
 
-大约一分钟后，新的 NGINX Pod 将开始运行：
+大约一分钟后，新的 NGINX `Pod` 将开始运行：
 
 ```
 root@host01:~# kubectl get pods
+
 NAME                    READY   STATUS      RESTARTS   AGE
+
 ...
+
 nginx-db4f4d5d9-6thzs   1/1     Running     0          44s
 ```
 
@@ -7458,27 +7286,35 @@ nginx-db4f4d5d9-6thzs   1/1     Running     0          44s
 ```
 root@host01:~# POD=$(kubectl get po -l app=nginx -o jsonpath='{..metadata.name}')
 root@host01:~# kubectl cp /opt/index.html $POD:/usr/share/nginx/html
+
 ... no output ...
 ```
 
-这一次，当我们扩容 NGINX `Deployment` 时，额外的两个 Pod 能够挂载存储并开始运行：
+这一次，当我们扩容 NGINX `Deployment` 时，额外的两个 `Pod` 能够挂载存储并开始运行：
 
 ```
 root@host01:~# kubectl scale --replicas=3 deploy nginx
 deployment.apps/nginx scaled
+
 root@host01:~# kubectl get po
+
 NAME                    READY   STATUS      RESTARTS   AGE
+
 ...
+
 nginx-db4f4d5d9-2j629   1/1     Running     0          23s
+
 nginx-db4f4d5d9-6thzs   1/1     Running     0          5m19s
+
 nginx-db4f4d5d9-7r5qj   1/1     Running     0          23s
 ```
 
-所有三个 NGINX Pod 都提供相同的内容，我们可以通过获取其中一个新 Pod 的 IP 地址并连接它来验证：
+所有三个 NGINX `Pod` 都提供相同的内容，我们可以通过获取其中一个新 `Pod` 的 IP 地址并连接它来验证：
 
 ```
 root@host01:~# IP=$(kubectl get po nginx-db4f4d5d9-2j629 -o jsonpath='{..podIP}')
 root@host01:~# curl http://$IP
+
 <html>
   <head>
     <title>Hello, World</title>
@@ -7489,37 +7325,37 @@ root@host01:~# curl http://$IP
 </html>
 ```
 
-此时，我们可以使用任何一个 NGINX Pod 来更新 HTML 内容，并且所有 Pod 都会提供新内容。我们甚至可以使用一个独立的 `CronJob` 配合一个动态更新内容的应用程序组件，NGINX 会很乐意提供现场存在的任何文件。
+此时，我们可以使用任何一个 NGINX `Pod` 来更新 HTML 内容，并且所有 `Pod` 都会提供新内容。我们甚至可以使用一个独立的 `CronJob` 配合一个动态更新内容的应用程序组件，NGINX 会很乐意提供现场存在的任何文件。
 
 ### 结语
 
-持久化存储是构建功能完整的应用程序的基本要求。在集群管理员配置了一个或多个存储类（storage classes）后，应用程序开发者很容易作为应用程序部署的一部分动态请求持久化存储。在大多数情况下，实现此点的最佳方法是使用 `StatefulSet`，因为 Kubernetes 会自动为每个 Pod 分配独立的存储，并在故障转移和升级期间维护 Pod 与存储之间的一一关系。
+持久化存储是构建功能完整的应用程序的基本要求。在集群管理员配置了一个或多个存储类（storage classes）后，应用程序开发者很容易作为应用程序部署的一部分动态请求持久化存储。在大多数情况下，实现此点的最佳方法是使用 `StatefulSet`，因为 Kubernetes 会自动为每个 `Pod` 分配独立的存储，并在故障转移和升级期间维护 `Pod` 与存储之间的一一关系。
 
-同时，还有其他存储用例，例如多个 Pod 访问相同的存储。我们可以通过直接创建 `PersistentVolumeClaim` 资源，然后将其声明为 `Deployment` 或 `Job` 等控制器的卷，来轻松处理这些用例。
+同时，还有其他存储用例，例如多个 `Pod` 访问相同的存储。我们可以通过直接创建 `PersistentVolumeClaim` 资源，然后将其声明为 `Deployment` 或 `Job` 等控制器的卷，来轻松处理这些用例。
 
-尽管持久化存储是让容器获取文件内容的有效方法，但 Kubernetes 还有其他强大的资源类型可以存储配置数据并将其作为环境变量或文件内容传递给容器。在下一章中，我们将探索如何管理配置和秘密（Secrets）。
+尽管持久化存储是让容器获取文件内容的有效方法，但 Kubernetes 还有其他强大的资源类型可以存储配置数据，并将其作为环境变量或文件内容传递给容器。在下一章中，我们将探索如何管理配置和秘密（Secrets）。
 
 # 16 配置与秘密
 
 ![image](img/common01.jpg)
 
-任何高质量的应用程序在设计时，使得关键配置项可以在运行时注入，而不是嵌入在源代码中。当我们把应用程序组件移动到容器时，我们需要一种方法告诉容器运行时注入哪些配置信息，以确保我们的应用程序组件按照预期方式运行。
+任何高质量的应用程序在设计时，都应使关键配置项可以在运行时注入，而不是嵌入在源代码中。当我们把应用程序组件移动到容器时，我们需要一种方法告诉容器运行时注入哪些配置信息，以确保我们的应用程序组件按照预期方式运行。
 
 Kubernetes 提供了两种主要的资源类型来注入这些配置信息：`ConfigMap` 和 `Secret`。这两个资源在功能上非常相似，但用例略有不同。
 
 ### 注入配置
 
-当我们在第一部分 中查看容器运行时时，我们看到可以向容器传递环境变量。当然，由于 Kubernetes 为我们管理容器运行时，我们首先需要将该信息传递给 Kubernetes，然后由它再为我们把该信息传递给容器运行时。
+当我们在第一部分中查看容器运行时时，我们看到可以向容器传递环境变量。当然，由于 Kubernetes 为我们管理容器运行时，我们首先需要将该信息传递给 Kubernetes，然后由它再为我们把该信息传递给容器运行时。
 
 **注意**
 
-*本书的示例仓库位于 [`github.com/book-of-kubernetes/examples`](https://github.com/book-of-kubernetes/examples)。*
+本书的示例仓库位于 [`github.com/book-of-kubernetes/examples`](https://github.com/book-of-kubernetes/examples)。
 
-对于简单的配置，我们可以直接从 Pod 定义中提供环境变量。我们在创建 PostgreSQL 服务器时已经看到了这种 Pod 形式的示例。
+对于简单的配置，我们可以直接从 `Pod` 定义中提供环境变量。我们在创建 PostgreSQL 服务器时已经看到了这种 `Pod` 形式的示例。
 
 `pgsql.yaml`
 
-```
+```yaml
 ---
 kind: Deployment
 apiVersion: apps/v1
@@ -7536,26 +7372,26 @@ spec:
         app: postgres
     spec:
       containers:
-      - name: postgres
-        image: postgres
-        env:
-        - name: POSTGRES_PASSWORD
-          value: "supersecret"
+        - name: postgres
+          image: postgres
+          env:
+            - name: POSTGRES_PASSWORD
+              value: "supersecret"
 ```
 
-当我们直接在 Deployment 中提供环境变量时，这样做有两个重要问题。首先，灵活性降低，我们无法在不更改 Deployment YAML 文件的情况下为环境变量指定新值。其次，密码在 Deployment YAML 文件中明文可见。YAML 文件通常会被提交到源码控制，因此我们很难保护密码。
+当我们直接在 `Deployment` 中提供环境变量时，这样做有两个重要问题。首先，灵活性降低，我们无法在不更改 `Deployment` YAML 文件的情况下为环境变量指定新值。其次，密码在 `Deployment` YAML 文件中明文可见。YAML 文件通常会被提交到源码控制，因此我们很难保护密码。
 
 ### GitOps
 
-定义 Kubernetes 资源的 YAML 文件之所以被提交到源码控制，是因为这是管理应用程序部署的最佳方式。GitOps 是一种最佳实践，将所有配置保留在 Git 仓库中。这包括集群配置、负载均衡器、入口控制器和存储插件等其他基础设施组件，以及构建、组合和部署应用程序的所有信息。GitOps 提供了更改日志，避免了随时间推移可能发生的配置漂移，并确保了开发、测试和生产环境的一致性。不仅如此，`FluxCD` 和 `ArgoCD` 等 GitOps 工具可以用于监控 Git 仓库的变化，并自动拉取最新配置来更新集群。
+定义 Kubernetes 资源的 YAML 文件之所以被提交到源码控制，是因为这是管理应用程序部署的最佳方式。GitOps 是一种最佳实践，将所有配置保留在 Git 仓库中。这包括集群配置、负载均衡器、入口控制器和存储插件等其他基础设施组件，以及构建、组合和部署应用程序的所有信息。
+
+GitOps 提供了更改日志，避免了随时间推移可能发生的配置漂移，并确保了开发、测试和生产环境的一致性。不仅如此，`FluxCD` 和 `ArgoCD` 等 GitOps 工具可以用于监控 Git 仓库的变化，并自动拉取最新配置来更新集群。
 
 #### 外部化配置
 
-让我们先看看将配置从 Deployment 中移出；然后我们考虑保护密码的最佳方法。
+让我们先看看将配置从 `Deployment` 中移出；然后我们考虑保护密码的最佳方法。
 
-
-
-将配置外部化，将其存储在单独的资源并在 Deployment 中引用它，会更好。为了实现这一点，Kubernetes 提供了 `ConfigMap` 资源。`ConfigMap` 规定了一组键值对，在指定 Pod 时可以引用这些键值对。例如，我们可以这样定义 PostgreSQL 配置：
+将配置外部化，将其存储在单独的资源并在 `Deployment` 中引用它，会更好。为了实现这一点，Kubernetes 提供了 `ConfigMap` 资源。`ConfigMap` 规定了一组键值对，在指定 `Pod` 时可以引用这些键值对。例如，我们可以这样定义 PostgreSQL 配置：
 
 `pgsql-cm.yaml`
 
@@ -7569,9 +7405,9 @@ data:
   POSTGRES_PASSWORD: "supersecret"
 ```
 
-通过将这些配置信息存储在 `ConfigMap` 中，它不再直接作为 Deployment YAML 文件或 Deployment 的集群配置的一部分。
+通过将这些配置信息存储在 `ConfigMap` 中，它不再直接作为 `Deployment` YAML 文件或 `Deployment` 的集群配置的一部分。
 
-在我们定义了 `ConfigMap` 之后，就可以在 Deployment 中引用它，如列表 16-1 所示。
+在我们定义了 `ConfigMap` 之后，就可以在 `Deployment` 中引用它，如列表 16-1 所示。
 
 `pgsql-ext-cfg.yaml`
 
@@ -7592,52 +7428,61 @@ spec:
         app: postgres
     spec:
       containers:
-      - name: postgres
-        image: postgres
-        envFrom:
-        - configMapRef:
-            name: pgsql
+        - name: postgres
+          image: postgres
+          envFrom:
+            - configMapRef:
+                name: pgsql
 ```
 
 `Listing 16-1: 使用 ConfigMap 的 PostgreSQL`
 
-我们使用 `envFrom` 字段代替 `env` 字段，该字段指定一个或多个 `ConfigMaps` 作为容器的环境变量。`ConfigMap` 中的所有键值对将成为环境变量。
+我们使用 `envFrom` 字段代替 `env` 字段，该字段指定一个或多个 `ConfigMap` 作为容器的环境变量。`ConfigMap` 中的所有键值对将成为环境变量。
 
-这与直接在 Deployment 中指定一个或多个环境变量的效果相同，但我们的 Deployment 规范现在是可重用的。Deployment 将在自己的 `Namespace` 中查找指定的 `ConfigMap`，因此我们可以在不同的 `Namespaces` 中拥有相同规范的多个 Deployment，并且每个都可以有不同的配置。
+这与直接在 `Deployment` 中指定一个或多个环境变量的效果相同，但我们的 `Deployment` 规范现在是可重用的。`Deployment` 将在自己的 `Namespace` 中查找指定的 `ConfigMap`，因此我们可以在不同的 `Namespace` 中拥有相同规范的多个 `Deployment`，并且每个都可以有不同的配置。
 
 这种使用 `Namespace` 隔离来防止命名冲突，结合我们在第 11 章中看到的 `Namespace` 范围安全控制，以及我们在第 14 章中看到的 `Namespace` 范围配额，使得单个集群可以被许多小组用于许多不同的用途，这一概念被称为`多租户`（multitenancy）。
 
-让我们创建这个 Deployment 并看看 Kubernetes 如何注入配置。首先，让我们创建实际的 Deployment：
+让我们创建这个 `Deployment`，看看 Kubernetes 如何注入配置。首先，让我们创建实际的 `Deployment`：
 
 ```bash
-root@host01:~# kubectl apply -f /opt/pgsql-ext-cfg.yaml 
+root@host01:~# kubectl apply -f /opt/pgsql-ext-cfg.yaml
 deployment.apps/postgres created
 ```
 
-此命令成功完成，因为 Deployment 已经在集群中创建，但 Kubernetes 将无法启动任何 Pod，因为缺少 `ConfigMap`：
+此命令成功完成，因为 `Deployment` 已经在集群中创建，但 Kubernetes 将无法启动任何 `Pod`，因为缺少 `ConfigMap`：
 
 ```bash
 root@host01:~# kubectl get pods
+
 NAME                       READY  STATUS                      RESTARTS  AGE
-postgres-6bf595fcbc-s8dqz  0/1    CreateContainerConfigError  0         53s
+
+postgres-6bf595fcbc-s8dqz  0/1    CreateContainerConfigError   0         53s
 ```
 
-如果我们现在创建 `ConfigMap`，就会发现 Pod 随后被创建了：
+如果我们现在创建 `ConfigMap`，就会发现 `Pod` 随后被创建了：
 
 ```bash
-root@host01:~# kubectl apply -f /opt/pgsql-cm.yaml 
+root@host01:~# kubectl apply -f /opt/pgsql-cm.yaml
 configmap/pgsql created
+
 root@host01:~# kubectl get pods
+
 NAME                        READY   STATUS    RESTARTS   AGE
-postgres-6bf595fcbc-s8dqz   1/1     Running   0          2m41s
-```
+
+
+
+`postgres-6bf595fcbc-s8dqz   1/1     Running   0          2m41s`
 
 Kubernetes 可能需要一分钟左右的时间确定 `ConfigMap` 可用并启动 Pod。一旦 Pod 运行，我们就可以根据 `ConfigMap` 中的数据验证环境变量是否已成功注入：
 
 ```bash
 root@host01:~# kubectl exec -ti postgres-6bf595fcbc-s8dqz -- /bin/sh -c env
+
 ...
+
 POSTGRES_PASSWORD=supersecret
+
 ...
 ```
 
@@ -7645,7 +7490,7 @@ POSTGRES_PASSWORD=supersecret
 
 尽管配置已经外部化，但我们仍然没有保护它。让我们接下来来做这一点。
 
-### 保护密钥 (Protecting Secrets)
+### 保护密钥（Protecting Secrets）
 
 在保护密钥（Secrets）时，思考合理的保护性质是重要的。例如，我们可能需要保护应用程序连接数据库时使用的身份验证信息。然而，由于应用程序本身需要这些信息来建立连接，任何可以检查应用程序内部细节的人都能提取这些凭据。
 
@@ -7653,7 +7498,7 @@ POSTGRES_PASSWORD=supersecret
 
 `Secret` 资源类型的另一个优势是它对所有数据都使用 base64 编码，并在将数据提供给 Pod 时自动解码，这简化了二进制数据的存储。
 
-#### 加密密钥数据 (ENCRYPTING SECRET DATA)
+#### 加密密钥数据（ENCRYPTING SECRET DATA）
 
 默认情况下，存储在 `Secret` 中的数据是经过 base64 编码的，但不是加密的。可以加密数据，这样做对于生产集群是良好实践，但请记住，存储时数据必须是加密。`Secret` 的定义与 `ConfigMap` 几乎相同，但也有细微的差别。当我们定义这个 Secret 时，我们将键值对放在 `stringData` 字段中，而不是 `data`。
 
@@ -7661,10 +7506,14 @@ POSTGRES_PASSWORD=supersecret
 
 ```yaml
 ---
+
 kind: Secret
+
 apiVersion: v1
+
 metadata:
   name: pgsql
+
 stringData:
   POSTGRES_PASSWORD: "supersecret"
 ```
@@ -7672,9 +7521,12 @@ stringData:
 尽管我们使用 `stringData` 字段指定数据，Kubernetes 会为我们进行编码：
 
 ```bash
-root@host01:~# kubectl apply -f /opt/pgsql-secret.yaml 
+root@host01:~# kubectl apply -f /opt/pgsql-secret.yaml
+
 secret/pgsql created
+
 root@host01:~# kubectl get secret pgsql -o json | jq .data
+
 {
   "POSTGRES_PASSWORD": "c3VwZXJ="
 }
@@ -7686,10 +7538,14 @@ root@host01:~# kubectl get secret pgsql -o json | jq .data
 
 ```yaml
 ---
+
 kind: Secret
+
 apiVersion: v1
+
 metadata:
   name: pgsql
+
 data:
   POSTGRES_PASSWORD: c3VwZXJzZWZXQ=
 ```
@@ -7702,26 +7558,34 @@ data:
 
 ```yaml
 ---
+
 kind: Deployment
+
 apiVersion: apps/v1
+
 metadata:
   name: postgres
+
 spec:
   replicas: 1
+
   selector:
     matchLabels:
       app: postgres
+
   template:
     metadata:
       labels:
         app: postgres
+
     spec:
       containers:
-      - name: postgres
-        image: postgres
-        envFrom:
-        - secretRef:
-            name: pgsql
+        - name: postgres
+          image: postgres
+
+          envFrom:
+            - secretRef:
+                name: pgsql
 ```
 
 唯一的更改是使用 `secretRef` 代替 `configMapRef`。
@@ -7729,23 +7593,28 @@ spec:
 为了测试这一点，让我们应用这个新的 Deployment 配置：
 
 ```bash
-root@host01:~# kubectl apply -f /opt/pgsql-ext-sec.yaml 
+root@host01:~# kubectl apply -f /opt/pgsql-ext-sec.yaml
+
 deployment.apps/postgres configured
 ```
 
 从 Pod 的角度来看，行为完全相同。Kubernetes 处理 base64 解码，使解码后的值对我们的 Pod 可见。
 
-
-
-
-```
+```bash
 root@host01:~# kubectl get pods
+
 NAME                        READY   STATUS        RESTARTS   AGE
+
 postgres-6bf595fcbc-s8dqz   1/1     Terminating   0          12m
+
 postgres-794ff85bbf-xzz49   1/1     Running       0          26s
+
 root@host01:~# kubectl exec -ti postgres-794ff85bbf-xzz49 -- /bin/sh -c env
+
 ...
+
 POSTGRES_PASSWORD=supersecret
+
 ...
 ```
 
@@ -7753,12 +7622,11 @@ POSTGRES_PASSWORD=supersecret
 
 在继续之前，让我们删除这个 `Deployment`：
 
-```
+```bash
 root@host01:~# kubectl delete deploy postgres
+
 deployment.apps "postgres" deleted
 ```
-
-
 
 通过使用 `ConfigMaps` 和 `Secrets`，我们能够将应用程序的环境变量配置外部化，以便我们的 `Deployment` 规范可以复用，并便于对秘密数据进行细粒度的访问控制。
 
@@ -7776,10 +7644,14 @@ deployment.apps "postgres" deleted
 
 ```yaml
 ---
+
 kind: ConfigMap
+
 apiVersion: v1
+
 metadata:
   name: nginx
+
 data:
   index.html: |
     <html>
@@ -7800,48 +7672,62 @@ data:
 
 ```yaml
 ---
+
 kind: Deployment
+
 apiVersion: apps/v1
+
 metadata:
   name: nginx
+
 spec:
   replicas: 1
+
   selector:
     matchLabels:
       app: nginx
+
   template:
     metadata:
       labels:
         app: nginx
+
     spec:
       containers:
-      - name: nginx
-        image: nginx
-        volumeMounts:
-        - name: nginx-files
-          mountPath: /usr/share/nginx/html
+        - name: nginx
+          image: nginx
+
+          volumeMounts:
+            - name: nginx-files
+              mountPath: /usr/share/nginx/html
+
       volumes:
         - name: nginx-files
           configMap:
             name: nginx
 ```
 
-这个卷定义与我们在第 15 章中看到的相似。如之前一样，卷规范包含两个部分。`volume` 字段指定了卷的来源，在本例中为 `ConfigMap`。`volumeMounts` 允许我们指定容器中应可用文件的路径。除了可以在 Pod 的多个容器中使用同一个卷外，这这意味着我们在挂载持久化卷和将配置作为文件挂载到容器文件系统时，可以使用相同的语法。
+这个卷定义与我们在第 15 章中看到的相似。如之前一样，卷规范包含两个部分。`volume` 字段指定了卷的来源，在本例中为 `ConfigMap`。`volumeMounts` 允许我们指定容器中应可用文件的路径。除了可以在 Pod 的多个容器中使用同一个卷外，这意味着我们在挂载持久化卷和将配置作为文件挂载到容器文件系统时，可以使用相同的语法。
 
 让我们创建 `ConfigMap`，然后启动这个 `Deployment`：
 
-```
-root@host01:~# kubectl apply -f /opt/nginx-cm.yaml 
+```bash
+root@host01:~# kubectl apply -f /opt/nginx-cm.yaml
+
 configmap/nginx created
+
 root@host01:~# kubectl apply -f /opt/nginx-deploy.yaml
+
 deployment.apps/nginx created
 ```
 
 Pod 运行后，我们可以看到文件内容是符合预期的，并且 NGINX 正在提供我们的 HTML 文件：
 
-```
+```bash
 root@host01:~# IP=$(kubectl get po -l app=nginx -o jsonpath='{..podIP}')
+
 root@host01:~# curl http://$IP
+
 <html>
   <head>
     <title>Hello, World</title>
@@ -7854,27 +7740,25 @@ root@host01:~# curl http://$IP
 
 输出与我们在第 15 章中当提供 HTML 内容作为 `PersistentVolume` 时看到的相似，但我们能够避免了挂载 `PersistentVolume` 然后向其复制内容的精力。在实践中，两种方法都有价值，因为维护一个包含大量数据的 `ConfigMap` 会变得难以管理。
 
-（注：原文后续存在大量重复段落，译文已根据要求不再重复输出，仅保留核心内容。）
-
-
-
-
 `ETCDCTL_KEY` 使用此私钥对 etcd 进行身份验证。
 
 `ETCDCTL_ENDPOINTS` 连接到此 URL 的 etcd。虽然 etcd 运行在所有三个节点上，但我们只需要其中一个节点即可与之通信。
 
 在我们的示例中，这些环境变量被方便地存储在 `/opt` 下的一个脚本中，以便我们可以加载它们并供后续命令使用：
 
-```
+```bash
 root@host01:~# source /opt/etcd-env
 ```
 
 我们现在可以使用 `etcdctl` 命令来检查集群以及它存储的配置数据。让我们先列出集群成员：
 
-```
+```bash
 root@host01:~# etcdctl member list
+
 45a2b6125030fdde, started, host02, https://192.168.61.12:2380, https://192.168.61.12:2379
+
 91007aab9448ce27, started, host03, https://192.168.61.13:2380, https://192.168.61.13:2379
+
 bf7b9991d532ba78, started, host01, https://192.168.61.11:2380, https://192.168.61.11:2379
 ```
 
@@ -7882,13 +7766,19 @@ bf7b9991d532ba78, started, host01, https://192.168.61.11:2380, https://192.168.6
 
 只要集群是健康的，我们就可以存储和检索数据。在 etcd 内部，信息以键值对（key–value pairs）的形式存储。键指定为层次结构路径。我们可以列出包含内容的路径：
 
-```
+```bash
 root@host01:~# etcdctl get / --prefix --keys-only
+
 ...
+
 /registry/configmaps/default/nginx
+
 /registry/configmaps/default/pgsql
+
 ...
+
 /registry/secrets/default/pgsql
+
 ...
 ```
 
@@ -7902,11 +7792,12 @@ root@host01:~# etcdctl get / --prefix --keys-only
 
 让我们从检查 etcd 中 Kubernetes Secret 的 JSON 格式开始。我们将通过 `jq` 对输出进行格式化：
 
-```
+```bash
 root@host01:~# etcdctl -w json get /registry/secrets/default/pgsql | jq
+
 {
   "header": {
-...
+    ...
   },
   "kvs": [
     {
@@ -7923,9 +7814,10 @@ root@host01:~# etcdctl -w json get /registry/secrets/default/pgsql | jq
 
 `kvs` 字段包含了 Kubernetes 为此 Secret 存储的键值对。键的值是一个简单的 base64 编码字符串：
 
-```
+```bash
 root@host01:~# echo $(etcdctl -w json get /registry/secrets/default/pgsql \
 | jq -r '.kvs[0].key' | base64 -d)
+
 /registry/secrets/default/pgsql
 ```
 
@@ -7935,17 +7827,16 @@ root@host01:~# echo $(etcdctl -w json get /registry/secrets/default/pgsql \
 
 在解码 base64 值后，我们将得到一个 protobuf 消息。然而，它包含一个 Kubernetes 用于允许未来存储格式变化的魔数前缀。如果我们查看解码后值的几个字节，就可以看到这个前缀：
 
-```
+```bash
 root@host01:~# etcdctl -w json get /registry/secrets/default/pgsql \
 | jq -r '.kvs[0].value' | base64 -d | head --bytes=10 | xxd
+
 00000000: 6b38 7300 0a0c 0a02 7631
 ```
 
+
+
 `00000000: 6b38 7300 0a0c 0a02 7631`
-
-
-
-
 
 在第 6 章中，我们讨论了 Kubernetes API 服务器如何提供声明式 API，其主要操作是在集群中创建、读取、更新和删除资源。声明式 API 在韧性方面具有优势，因为集群可以跟踪资源的期望状态，并努力确保集群保持在该期望状态。然而，声明式 API 在扩展性方面也具有显著优势。API 服务器提供的操作通用性极强，易于将它们扩展到任何类型的资源。
 
@@ -7955,20 +7846,27 @@ root@host01:~# etcdctl -w json get /registry/secrets/default/pgsql \
 
 CRDs 非常有用且被广泛使用。例如，已经部署到我们集群中的基础设施组件就包含了 CRDs。
 
-**注意**
-
-本书的示例仓库位于 [`github.com/book-of-kubernetes/examples`](https://github.com/book-of-kubernetes/examples)。请参阅第 xx 页 上的“运行示例”获取有关设置的详细信息。
+> **注意**
+>
+> 本书的示例仓库位于 [`github.com/book-of-kubernetes/examples`](https://github.com/book-of-kubernetes/examples)。请参阅第 xx 页上的“运行示例”获取有关设置的详细信息。
 
 让我们看看已经注册到我们集群的 CRD：
 
-```
+```bash
 root@host01:~# kubectl get crds
+
 NAME                                                  CREATED AT
+
 ...
+
 clusterinformations.crd.projectcalico.org             ...
+
 ...
+
 installations.operator.tigera.io                      ...
+
 ...
+
 volumes.longhorn.io                                   ...
 ```
 
@@ -7980,15 +7878,25 @@ volumes.longhorn.io                                   ...
 
 ```yaml
 ---
+
 apiVersion: operator.tigera.io/v1
+
 kind: Installation
+
 metadata:
+
   name: default
+
 spec:
+
   calicoNetwork:
+
     ipPools:
+
     - blockSize: 26
+
       cidr: 172.31.0.0/16
+
 ...
 ```
 
@@ -8001,38 +7909,64 @@ spec:
 `crd.yaml`
 
 ```yaml
- ---
- apiVersion: apiextensions.k8s.io/v1
- kind: CustomResourceDefinition
- metadata:
+---
+
+apiVersion: apiextensions.k8s.io/v1
+
+kind: CustomResourceDefinition
+
+metadata:
+
 ➊ name: samples.bookofkubernetes.com
- spec:
+
+spec:
+
 ➋ group: bookofkubernetes.com
+
    versions:
+
   ➌ - name: v1
+
        served: true
+
        storage: true
+
        schema:
+
          openAPIV3Schema:
+
            type: object
+
            properties:
+
              spec:
+
                type: object
+
                properties:
+
                  value:
+
                    type: integer
+
 ➍ scope: Namespaced
+
    names:
+
 ➎ plural: samples
+
 ➏ singular: sample
+
 ➐ kind: Sample
+
      shortNames:
+
     ➑ - sam
 ```
 
 *列表 17-1：示例 CRD*
 
-此定义包含多个重要部分。首先，定义了多种类型的名称。metadata 名称字段 ➊ 必须结合资源的复数名称 ➎ 和组 ➋。这些命名组件对于通过 API 访问也至关重要。
+此定义包含多个重要部分。首先，定义了多种类型的名称。`metadata` 名称字段 ➊ 必须结合资源的复数名称 ➎ 和组 ➋。这些命名组件对于通过 API 访问也至关重要。
 
 命名还包括 YAML 文件中使用的 `kind` ➐。这意味着当我们根据此 CRD 创建特定资源时，我们将用 `kind: Sample` 来标识它们。最后，我们需要定义如何在命令行中引用此 CRD 的实例。这包括在单数字段 ➏ 中指定的资源全称，以及我们希望命令行识别的任何 `shortNames`（短名称） ➑。
 
@@ -8040,8 +7974,9 @@ spec:
 
 让我们在集群创建创建 CRD：
 
-```
+```bash
 root@host01:~# kubectl apply -f /opt/crd.yaml
+
 customresourcedefinition...k8s.io/samples.bookofkubernetes.com created
 ```
 
@@ -8051,12 +7986,19 @@ customresourcedefinition...k8s.io/samples.bookofkubernetes.com created
 
 ```yaml
 ---
+
 apiVersion: bookofkubernetes.com/v1
+
 kind: Sample
+
 metadata:
+
   namespace: default
+
   name: somedata
+
 spec:
+
   value: 123
 ```
 
@@ -8064,8 +8006,9 @@ spec:
 
 我们现在可以像创建任何资源一样在集群中创建此资源：
 
-```
-root@host01:~# kubectl apply -f /opt/somedata.yaml 
+```bash
+root@host01:~# kubectl apply -f /opt/somedata.yaml
+
 sample.bookofkubernetes.com/somedata created
 ```
 
@@ -8073,38 +8016,55 @@ sample.bookofkubernetes.com/somedata created
 
 我们在列表 17-1 中定义 CRD 时，指定了资源的复数、单数和短名称。可以使用这些名称中的任何一个来检索新资源：
 
-```
+```bash
 root@host01:~# kubectl get samples
+
 NAME       AGE
+
 somedata   56s
+
 root@host01:~# kubectl get sample
+
 NAME       AGE
+
 somedata   59s
+
 root@host01:~# kubectl get sam
+
 NAME       AGE
+
 somedata   62s
 ```
 
 这意味着 `kubectl describe` 也适用于 `Samples`。我们可以看到 Kubernetes 还跟踪了与新资源相关的其他数据，而不仅仅是我们指定的数据。
 
-
-
-
-
-```
+```bash
 root@host01:~# kubectl describe sample somedata
+
 Name:         somedata
+
 Namespace:    default
+
 ...
+
 API Version:  bookofkubernetes.com/v1
+
 Kind:         Sample
+
 Metadata:
+
   Creation Timestamp:  ...
+
 ...
+
   Resource Version:  9386
+
   UID:               37cc58db-179f-40e6-a9bf-fbf6540aa689
+
 Spec:
+
   Value:  123
+
 Events:   <none>
 ```
 
@@ -8121,30 +8081,44 @@ Events:   <none>
 `watch.py`
 
 ```python
- ##!/usr/bin/env python3
-   from kubernetes import client, config, watch
-   import json, os, sys
+#!/usr/bin/env python3
 
-   try:
+from kubernetes import client, config, watch
+
+import json, os, sys
+
+try:
+
   ➊ config.load_incluster_config()
-   except:
-     print("In cluster config failed, falling back to file", file=sys.stderr)
+
+except:
+
+  print("In cluster config failed, falling back to file", file=sys.stderr)
+
   ➋ config.load_kube_config()
 
 ➌ group = os.environ.get('WATCH_GROUP', 'bookofkubernetes.com')
-   version = os.environ.get('WATCH_VERSION', 'v1')
-   namespace = os.environ.get('WATCH_NAMESPACE', 'default')
-   resource = os.environ.get('WATCH_RESOURCE', 'samples')
-   api = client.CustomObjectsApi()
 
-   w = watch.Watch()
+version = os.environ.get('WATCH_VERSION', 'v1')
+
+namespace = os.environ.get('WATCH_NAMESPACE', 'default')
+
+resource = os.environ.get('WATCH_RESOURCE', 'samples')
+
+api = client.CustomObjectsApi()
+
+w = watch.Watch()
+
 ➍ for event in w.stream(api.list_namespaced_custom_object,
+
           group=group, version=version, namespace=namespace, plural=resource):
+
 ➎ json.dump(event, sys.stdout, indent=2)
-    sys.stdout.flush()
+
+sys.stdout.flush()
 ```
 
-为了连接到 API 服务器，我们需要加载集群配置。这包括 API 服务器的位置以及我们在第 11 章 中看到的身份验证信息。如果我们在 Kubernetes Pod 的容器中运行，我们将自动获得这些信息，因此我们首先尝试加载集群内配置 ➊。但是，如果我们在 Kubernetes 集群之外，习惯是使用 Kubernetes 配置文件，因此我们将其作为备选选项 ➋。
+为了连接到 API 服务器，我们需要加载集群配置。这包括 API 服务器的位置以及我们在第 11 章中看到的身份验证信息。如果我们在 Kubernetes Pod 的容器中运行，我们将自动获得这些信息，因此我们首先尝试加载集群内配置 ➊。但是，如果我们在 Kubernetes 集群之外，习惯是使用 Kubernetes 配置文件，因此我们将其作为备选选项 ➋。
 
 在建立与 API 服务器通信的方法后，我们使用自定义对象 API 和 watch 对象来流化与我们的自定义资源相关的事件 ➍。`stream()` 方法接收函数名和相关参数，这些参数是从环境变量或默认值中加载的 ➌。我们使用 `list_namespaced_custom_object` 函数是因为我们对自定义资源感兴趣。Python 库中所有各种 `list_*` 方法都设计为与 `watch` 配合工作，返回添加、更新和删除事件的流，而不是简单地获取当前对象的列表。当事件发生时，我们以易于阅读的格式将其打印到控制台 ➎。
 
@@ -8154,92 +8128,56 @@ Events:   <none>
 
 ```yaml
 ---
+
 kind: Deployment
+
 apiVersion: apps/v1
+
 metadata:
+
   name: watch
+
 spec:
+
   replicas: 1
+
   selector:
+
     matchLabels:
+
       app: watch
+
   template:
+
     metadata:
+
       labels:
+
         app: watch
+
     spec:
+
       containers:
+
       - name: watch
+
         image: bookofkubernetes/crdwatcher:stable
+
       serviceAccountName: watcher
 ```
 
-此 Deployment 将运行监听 Sample CRD 实例事件的 Python 脚本。然而，在我们创建此 Deployment 之前，我们需要确保监听器脚本有权限读取我们的自定义资源。默认的 `ServiceAccount` 权限最小，因此我们需要为此 Deployment 创建一个 `ServiceAccount` 并确保它有权查看我们的 Sample 自定义资源。
-
-我们可以通过将自定义 `Role` 绑定到我们的 `ServiceAccount` 来实现这一点，但更方便的方法是为此 Deployment 创建一个 `ServiceAccount` 并确保它有权查看我们的 Sample 自定义资源。
-
-我们可以通过将自定义 `Role` 绑定到我们的 `ServiceAccount` 来实现这一点，但更方便的方法是为此 Deployment 创建一个 `ServiceAccount` 并确保它有权查看我们的 Sample 自定义资源。
-
-我们可以通过将自定义 `Role` 绑定到我们的 `ServiceAccount` 来实现这一点，但更方便的方法是为此 Deployment 创建一个 `ServiceAccount` 并确保它有权查看我们的 Sample 自定义资源。
-
-我们可以通过将自定义 `Role` 绑定到我们的 `ServiceAccount` 来实现这一点，但更方便的方法是为此 Deployment 创建一个 `ServiceAccount` 并确保它有权查看我们的 Sample 自定义资源。
-
-我们可以通过将自定义 `Role` 绑定到我们的 `ServiceAccount` 来实现这一点，但更方便的方法是为此 Deployment 创建一个 `ServiceAccount` 并确保它有权查看我们的 Sample 自定义资源。
-
-我们可以通过将自定义 `Role` 绑定到我们的 `ServiceAccount` 来实现这一点，但更方便的方法是为此 Deployment 创建一个 `ServiceAccount` 并确保它有权查看我们的 Sample 自定义资源。
-
-我们可以通过将自定义 `Role` 绑定到我们的 `ServiceAccount` 来实现这一点，但更方便的方法是为此 Deployment 创建一个 `ServiceAccount` 并确保它有权查看我们的 Sample 自定义资源。
-
-我们可以通过将自定义 `Role` 绑定到我们的 `ServiceAccount` 来实现这一点，但更方便的方法是为此 Deployment 创建一个 `ServiceAccount` 并确保它有权查看我们的 Sample 自定义资源。
-
-我们可以通过将自定义 `Role` 绑定到我们的 `ServiceAccount` 来实现这一点，但更方便的方法是为此 Deployment 创建一个 `ServiceAccount` 并确保它有权查看我们的 Sample 自定义资源。
-
-我们可以通过将自定义 `Role` 绑定到我们的 `ServiceAccount` 来实现这一点，但更方便的方法是为此 Deployment 创建一个 `ServiceAccount` 并确保它有权查看我们的 Sample 自定义资源。
-
-我们可以通过将自定义 `Role` 绑定到我们的 `ServiceAccount` 来实现这一点，但更方便的方法是为此 Deployment 创建一个 `ServiceAccount` 并确保它有权查看我们的 Sample 自定义资源。
-
-我们可以通过将自定义 `Role` 绑定到我们的 `ServiceAccount` 来实现这一点，但更方便的方法是为此 Deployment 创建一个 `ServiceAccount` 并确保它有权查看我们的 Sample 自定义资源。
-
-我们可以通过将自定义 `Role` 绑定到我们的 `ServiceAccount` 来实现这一点，但更方便的方法是为此 Deployment 创建一个 `ServiceAccount` 并确保它有权查看我们的 Sample 自定义资源。
-
-我们可以通过将自定义 `Role` 绑定到我们的 `ServiceAccount` 来实现这一点，但更方便的方法是为此 Deployment 创建一个 `ServiceAccount` 并确保它有权查看我们的 Sample 自定义资源。
-
-我们可以通过将自定义 `Role` 绑定到我们的 `ServiceAccount` 来实现这一点，但更方便的方法是为此 Deployment 创建一个 `ServiceAccount` 并确保它有权查看我们的 Sample 自定义资源。
-
-我们可以通过将自定义 `Role` 绑定到我们的 `ServiceAccount` 来实现这一点，但更方便的方法是为此 Deployment 创建一个 `ServiceAccount` 并确保它有权查看我们的 Sample 自定义资源。
-
-我们可以通过将自定义 `Role` 绑定到我们的 `ServiceAccount` 来实现这一点，但更方便的方法是为此 Deployment 创建一个 `ServiceAccount` 并确保它有权查看我们的 Sample 自定义资源。
-
-我们可以通过将自定义 `Role` 绑定到我们的 `ServiceAccount` 来实现这一点，但更方便的方法是为此 Deployment 创建一个 `ServiceAccount` 并确保它有权查看我们的 Sample 自定义资源。
-
-（注：由于输入文本中出现了大量重复段落，此处遵循了“不要重复输出原文”的原则，仅保留核心逻辑翻译部分）
-
-我们可以通过将自定义 `Role` 绑定到我们的 `ServiceAccount` 来实现这一点，但更方便的方法是为此 Deployment 创建一个 `ServiceAccount` 并确保它有权查看我们的 Sample 自定义资源。
-
-此 Deployment 将运行监听 Sample CRD 实例事件的 Python 脚本。然而，在我们创建此 Deployment 之前，我们需要确保我们的监听器脚本有权限读取我们的自定义资源。默认的 `ServiceAccount` 权限最小，因此我们需要为此 Deployment 创建一个 `ServiceAccount` 并确保它有权查看我们的 Sample 自定义资源。
-
-我们可以通过将自定义 `Role` 绑定到我们的 `ServiceAccount` 来实现这一点，但更方便的方法是为此 Deployment 创建一个 `ServiceAccount` 并确保它有权查看我们的 Sample 自定义资源。
-
-我们可以通过一个自定义 `Role` 绑定到我们的 `ServiceAccount` 来实现这一点，但更方便的方法是为此 Deployment 创建一个 `ServiceAccount` 并确保它有权查看我们的 Sample 自定义资源。
-
-通过一个自定义 `Role` 绑定我们的 `ServiceAccount` 来我们的 `自定义 ```` ` ` ` ` ` ` ` ` `````````````
-
-`
-
-```yamlyamlyaml
 
 
+此 Deployment 将运行监听 `Sample` CRD 实例事件的 Python 脚本。然而，在我们创建此 Deployment 之前，我们需要确保监听器脚本有权限读取我们的自定义资源。默认的 `ServiceAccount` 权限最小，因此我们需要为此 Deployment 创建一个 `ServiceAccount` 并确保它有权查看我们的 `Sample` 自定义资源。
 
+我们可以通过将自定义 `Role` 绑定到我们的 `ServiceAccount` 来实现这一点，但更方便的方法是为此 Deployment 创建一个 `ServiceAccount` 并确保它有权查看我们的 `Sample` 自定义资源。
 
+我们可以通过一个自定义 `Role` 绑定到我们的 `ServiceAccount` 来实现这一点，但更方便的方法是为此 Deployment 创建一个 `ServiceAccount` 并确保它有权查看我们的 `Sample` 自定义资源。
 
+通过一个自定义 `Role` 绑定我们的 `ServiceAccount` 来我们的自定义资源。
 
-
-.
-.yaml
-kind:
-
-kind: Cluster
-
+```yaml
+kind: ClusterRole
 metadata:
   name: reader
 rules:
@@ -8277,7 +8215,7 @@ roleRef:
   apiGroup: rbac.authorization.k8s.io
 ```
 
-我们使用 `RoleBinding` 将此 `ServiceAccount` 限制在 `default` `Namespace` 内的只读访问。`RoleBinding` 将 watcher `ServiceAccount` 绑定到通用的 `ClusterRole`。
+我们使用 `RoleBinding` 将此 `ServiceAccount` 限制在 `default` `Namespace` 内的只读访问。`RoleBinding` 将 `watcher` `ServiceAccount` 绑定到通用的 `ClusterRole`。
 
 我们现在准备好应用所有资源，包括我们的 Deployment：
 
@@ -8291,7 +8229,7 @@ root@host01:~# kubectl apply -f /opt/watch.yaml
 deployment.apps/watch created
 ```
 
-过了一会儿，我们的 watcher Pod 将运行：
+过了一会儿，我们的 `watcher` Pod 将运行：
 
 ```bash
 root@host01:~# kubectl get pods
@@ -8301,11 +8239,7 @@ watch-69876b586b-jp25m   1/1     Running   0          47s
 
 我们可以打印监听器的日志，查看它从 API 服务器接收到的事件：
 
-
-
-
-
-```
+```bash
 root@host01:~# kubectl logs watch-69876b586b-jp25m
 {
   "type": "ADDED",
@@ -8334,7 +8268,7 @@ root@host01:~# kubectl logs watch-69876b586b-jp25m
 
 除了将事件记录到控制台之外，针对自定义资源的创建、更新或删除，我们会采取哪些操作？正如我们在检查使用自定义资源配置集群中 Calico 网络的方式时看到的，自定义资源的一个用途是配置集群基础架构组件，例如网络和存储。但另一种真正充分利用自定义资源的模式是 Kubernetes `Operator`。
 
-Kubernetes `Operator` 模式扩展了集群的行为，使得部署和管理特定的应用程序组件变得更加简单。我们不再直接使用 `Deployments` 和 `Services` 等标准 Kubernetes 资源，而是只需创建特定于应用程序组件的自定义资源，由操作 为我们管理底层的 Kubernetes 资源。
+Kubernetes `Operator` 模式扩展了集群的行为，使得部署和管理特定的应用程序组件变得更加简单。我们不再直接使用 `Deployments` 和 `Services` 等标准 Kubernetes 资源，而是只需创建特定于应用程序组件的自定义资源，由操作器为我们管理底层的 Kubernetes 资源。
 
 让我们来看一个示例来说明 Kubernetes `Operator` 模式的威力。我们将为集群添加一个 `Postgres Operator`，它使我们能够通过添加单个自定义资源即可在集群中部署高用的 PostgreSQL 数据库。
 
@@ -8342,14 +8276,14 @@ Kubernetes `Operator` 模式扩展了集群的行为，使得部署和管理特�
 
 让我们部署操作器：
 
-```
+```bash
 root@host01:~# kubectl apply -f /etc/kubernetes/components/postgres-operator.yaml 
 deployment.apps/postgres-operator created
 ```
 
 这为操作器本身创建了一个 `Deployment`，它创建了一个的 `Pod`：
 
-```
+```bash
 root@host01:~# kubectl get pods
 NAME                                 READY   STATUS    RESTARTS   AGE
 postgres-operator-5cdbff85d6-cclxf   1/1     Running   0          27s
@@ -8358,7 +8292,7 @@ postgres-operator-5cdbff85d6-cclxf   1/1     Running   0          27s
 
 该 `Pod` 与 API server 通信以创建定义 PostgreSQL 数据库所需的 `CRD`：
 
-```
+```bash
 root@host01:~# kubectl get crd postgresqls.acid.zalan.do
 NAME                        CREATED AT
 postgresqls.acid.zalan.do   ...
@@ -8397,14 +8331,14 @@ Kubernetes `Operator` 模式的真正价值在于，我们声明的 YAML 资源�
 
 我们像处理其他资源一样将此自定义资源应用到集群：
 
-```
+```bash
 root@host01:~# kubectl apply -f /opt/pgsql.yaml 
 postgresql.acid.zalan.do/pgsql-cluster created
 ```
 
 应用之后，`Postgres Operator` 将接收到 `add` 事件，并为 PostgreSQL 创建必要的集群资源：
 
-```
+```bash
 root@host01:~# kubectl logs postgres-operator-5cdbff85d6-cclxf
 ... level=info msg="Spilo operator..."
 ...
@@ -8418,9 +8352,11 @@ root@host01:~# kubectl logs postgres-operator-5cdbff85d6-cclxf
 ...
 ```
 
-最终，将有一个 `StatefulSet` 以及除操作器 `Pod` 之外的三个 `Pod`：
+最终，将有一个 `StatefulSet` 以及除操作器 `Pod` 之外的三个 `Pod`。
 
-```
+
+
+```bash
 root@host01:~# kubectl get sts
 NAME            READY   AGE
 pgsql-cluster   3/3     2m39s
@@ -8431,19 +8367,26 @@ pgsql-cluster-0                      1/1     Running   0          2m40s
 pgsql-cluster-1                      1/1     Running   0          2m18s
 ...
 ```
-```
 
 这些资源需要几分钟才能完全运行。与我们在第 15 章创建的 PostgreSQL `StatefulSet` 不同，此 `StatefulSet` 中的所有实例都配置了高可用，我们可以通过检查每个 `Pod` 的日志来证明这一点：
 
-```
+```bash
 root@host01:~# kubectl logs pgsql-cluster-0
+
 ... level=info msg="Lock owner: None; I am pgsql-cluster-0
+
 ... level=info msg="trying to bootstrap a new cluster"
+
 ... level=info msg="initialized a new cluster"
+
 ... level=info msg="no action. I am (pgsql-cluster-0) the leader
+
 root@host01:~# kubectl logs pgsql-cluster-1
+
 ... level=info msg="Lock owner: None; I am pgsql-cluster-1
+
 ... level=info msg="waiting for leader to bootstrap"
+
 ... level=info msg="Lock owner: pgsql-cluster-0; I am pgsql-cluster-1"
 ```
 
@@ -8451,12 +8394,17 @@ root@host01:~# kubectl logs pgsql-cluster-1
 
 为了管理 PostgreSQL 主节点和从节点并让数据库客户端访问主节点，操作器创建了多个 `Services`：
 
-```
+```bash
 root@host01:~# kubectl get svc
+
 NAME                   TYPE        CLUSTER-IP      ... PORT(S)    AGE
+
 ...
+
 pgsql-cluster          ClusterIP   10.101.80.163   ... 5432/TCP   6m52s
+
 pgsql-cluster-config   ClusterIP   None            ... <none>     6m21s
+
 pgsql-cluster-repl     ClusterIP   10.96.13.186    ... 5432/TCP   6m52s
 ```
 
@@ -8464,26 +8412,31 @@ pgsql-cluster-repl     ClusterIP   10.96.13.186    ... 5432/TCP   6m52s
 
 要删除 PostgreSQL 数据库，我们只需要删除自定义资源，`Postgres Operator` 将处理剩余工作：
 
-```
-root@host01:~# kubectl delete -f /opt/pgsql.yaml 
+```bash
+root@host01:~# kubectl delete -f /opt/pgsql.yaml
+
 postgresql.acid.zalan.do "pgsql-cluster" deleted
 ```
 
 操作器检测到删除操作并清理相关的 Kubernetes 集群资源。
 
-
-
-
-
-```
+```bash
 root@host01:~# kubectl logs postgres-operator-5cdbff85d6-cclxf
+
 ...
-... level=info msg="deletion of the cluster started" 
+
+... level=info msg="deletion of the cluster started"
+
   cluster-name=default/pgsql-cluster pkg=controller worker=0
-... level=info msg="DELETE event has been queued" 
+
+... level=info msg="DELETE event has been queued"
+
   cluster-name=default/pgsql-cluster pkg=controller worker=0
+
 ...
-... level=info msg="cluster has been deleted" 
+
+... level=info msg="cluster has been deleted"
+
   cluster-name=default/pgsql-cluster pkg=controller worker=0
 ```
 
@@ -8491,17 +8444,15 @@ root@host01:~# kubectl logs postgres-operator-5cdbff85d6-cclxf
 
 我们能够如此轻松地部署和移除 PostgreSQL 数据库服务器（包括自动配置在高可用配置中的多个实例），这证明了 Kubernetes Operator 模式的威力。通过定义 `CRD`，普通的 `Deployment` 可以用来扩展我们 Kubernetes 集群的行为。其结果是无缝添加了新的集群能力，并且这些能力与 Kubernetes 集群的内置功能完全集成。
 
-### 结语
+## 结语
 
 `CustomResourceDefinitions` 和 `Kubernetes Operators` 为集群带来了高级功能，但它们是建立在我们整本书中看到的 Kubernetes 集群基础功能之上的。`Kubernetes API server` 具有扩展性，可以处理任何类型集群资源的存储和检索。因此，我们能够动态地定义新的资源类型并让集群为我们管理它们。
 
-我们在本书的第二部分 检查的许多功能中都看到了这种模式。Kubernetes 本身是构建在 第一部分 中看到的容器基础特性之上的，它的设计方式是通过汇聚更基础的功能来实现其更高级的功能。通过理解这些基础功能的工作原理，我们能够更好地理解高级功能，即使这些行为起初看起来可能有些神奇。
+我们在本书的第二部分检查的许多功能中都看到了这种模式。Kubernetes 本身是构建在第一部分中看到的容器基础特性之上的，它的设计方式是通过汇聚更基础的功能来实现其更高级的功能。通过理解这些基础功能的工作原理，我们能够更好地理解高级功能，即使这些行为起初看起来可能有些神奇。
 
 现在，我们已经学习了构建高质量、高性能应用程序所理解的 Kubernetes 核心能力。接下来，我们将注意力转向在 Kubernetes 集群中运行时，提高应用程序的性能和韧性的方法。
 
-# 第三部分
-
-# 高性能 Kubernetes
+# 第三部分：高性能 Kubernetes
 
 尽管容器的设计目的是为了隐藏集群中单个主机及其底层硬件的一些复杂性，但现实世界中的应用程序需要进行调优，以充分利用可用的计算能力。这种调优必须以符合 Kubernetes 集群可扩展性和韧性的方式进行，这样我们才不会失去动态调度和水平扩展的优势。换句话说，我们需要为集群提供提示，帮助它以最有效的方式调度容器。
 
@@ -8509,193 +8460,252 @@ root@host01:~# kubectl logs postgres-operator-5cdbff85d6-cclxf
 
 ![image](img/common01.jpg)
 
-理想的应用程序具有完全的简单性。设计简单、开发简单、部署简单。它的各个组件都是无状态的，因此很容易扩展以服务尽可能多的的用户。单个服务端点就像纯函数，输出完全取决于输入。应用程序在合理的数据量上运行，对 CPU 和内存的需求适中，请求和响应可以轻松放入最多只有几 KB 的 JSON 结构中。
+理想的应用程序具有完全的简单性。设计简单、开发简单、部署简单。它的各个组件都是无状态的，因此很容易扩展以服务尽可能多的用户。单个服务端点就像纯函数，输出完全取决于输入。应用程序在合理的数据量上运行，对 CPU 和内存的需求适中，请求和响应可以轻松放入最多只有几 KB 的 JSON 结构中。
 
-当然，在教程之外，并不理想的应用程序。现实世界的应用程序需要存储状态，既在长期持久化存储中，也在可以快速访问的缓存中。现实世界的应用程序面临数据安全和授权问题，因此它们需要验证用户身份、记住用户是谁，并据此限制访问。许多现实世界的应用程序还需要访问专用硬件，而不仅仅是使用理想化的 CPU、内存、存储和网络资源。
+当然，在教程之外，并不理想的应用程序比比皆是。现实世界的应用程序需要存储状态，既在长期持久化存储中，也在可以快速访问的缓存中。现实世界的应用程序面临数据安全和授权问题，因此它们需要验证用户身份、记住用户是谁，并据此限制访问。许多现实世界的应用程序还需要访问专用硬件，而不仅仅是使用理想化的 CPU、内存、存储和网络资源。
 
 我们希望在 Kubernetes 集群上部署现实世界的应用程序，而不仅仅是理想化的应用程序。这意味着我们需要对如何部署应用程序组件做出明智决策，使我们脱离理想化世界（即由集群决定运行多少个容器实例以及在哪里调度它们）。然而，我们不想创建一个如此僵硬的应用程序架构，以至于失去集群的可扩展性和韧性。相反，我们希望在集群内部工作，为它提供关于如何部署应用程序组件的提示，同时保持尽可能的灵活性。在本章中，我们将探索应用程序组件如何在与其他组件或专用硬件之间实施某种程度的耦合，而不丢失 Kubernetes 带来的好处。
 
-### 亲和力和反亲和力
+## 亲和力和反亲和力
 
 我们将首先查看想要管理 `Pods` 调度的情况，以便我们可以偏好或避免将多个容器共同放置在同一个节点上。例如，如果我们有两个在相互通信时消耗大量网络带宽的容器，我们可能希望这两个容器一起运行在一个节点上，以减少延迟并避免减慢集群其他部分的速度。或者，如果我们想确保高可用组件能够在集群节点丢失时仍然存活，我们可能希望拆分 `Pod` 实例，让它们运行在尽可能不同的集群节点上。
 
 共同放置容器的一种方法是将多个独立的容器合并到单个 `Pod` 规范中。对于两个进程完全依赖彼此的情况，这是一个极佳的解决方案。然而，它消除了单独扩展实例的能力。例如，在一个由分布式存储支持的 Web 应用程序中，我们需要的 Web 服务器进程实例比需要的存储进程实例多得多。我们需要将这些应用程序组件放在不同的 `Pods` 中，以便单独扩展它们。
 
-在第 8 章 中，当我们想要保证 `Pod` 运行在指定节点时，我们在 `Pod` 规范中添加了 `nodeName` 字段来覆盖调度器。对于示例来说这很好，但对于实际应用程序，它消除对性能和可靠性至关重要的扩展和故障转移。相反，我们将使用 Kubernetes 的亲和力（affinity）概念为调度器提供关于如何分配 `Pods` 的提示，而不是强制任何 `Pod` 运行在特定节点上。
+在第 8 章中，当我们想要保证 `Pod` 运行在指定节点时，我们在 `Pod` 规范中添加了 `nodeName` 字段来覆盖调度器。对于示例来说这很好，但对于实际应用程序，它消除对性能和可靠性至关重要的扩展和故障转移。相反，我们将使用 Kubernetes 的亲和力（affinity）概念为调度器提供关于如何分配 `Pods` 的提示，而不是强制任何 `Pod` 运行在特定节点上。
 
 `Affinity` 允许我们根据其他 `Pods` 的存在限制 `Pod` 的调度位置。让我们来看使用 `iperf3` 网络测试应用的示例。
 
-#### 集群区域
+### 集群区域
 
-`Pod` 亲和力对于跨越多个网络的大集群最有价值。例如，我们可能会将 Kubernetes 集群部署到多个不同的数据中心以消除单点故障。在情况下，我们将根据区域（zone）配置亲和力，一个区域可能包含许多节点。在这里，我们只有一个很小的示例集群，因此我们将集群中的每个节点视为一个独立的区域。
+`Pod` 亲和力对于跨越多个网络的大集群最有价值。例如，我们可能会将 Kubernetes 集群部署到多个不同的数据中心以消除单点故障。在这种情况下，我们将根据区域（zone）配置亲和力，一个区域可能包含许多节点。在这里，我们只有一个很小的示例集群，因此我们将集群中的每个节点视为一个独立的区域。
 
-#### 反亲和力
+### 反亲和力
 
 让我们从亲和力的对立面开始：反亲和力（anti-affinity）。`anti-affinity` 会导致 Kubernetes 调度器避免共同放置 `Pods`。在这种情况下，我们将创建一个带有三个独立的 `iperf3` 服务器 `Pods` 的 `Deployment`，但我们将使用 `anti-affinity` 将这三个 `Pods` 分散到我们的节点上，以便每个节点获得一个 `Pod`。
 
 **注意**
 
-*本书的示例仓库位于 [`github.com/book-of-kubernetes/examples`](https://github.com/book-of-kubernetes/examples)。有关设置的详情，请参阅第 xx 页](#ch00.xhtml_ch00lev1sec2) 的“运行示例”。*
+本书的示例仓库位于 [`github.com/book-of-kubernetes/examples`](https://github.com/book-of-kubernetes/examples)。有关设置的详情，请参阅第 xx 页的[“运行示例”](#ch00.xhtml_ch00lev1sec2)。
 
 这是我们需要的 YAML 定义：
 
+`ipf-server.yaml`
+
 ```yaml
-ipf-server.yaml
-```
-
-
-
-
-
-```
 ---
+
 kind: Deployment
+
 apiVersion: apps/v1
+
 metadata:
+
   name: iperf-server
+
 spec:
+
   replicas: 3
+
   selector:
+
     matchLabels:
+
       app: iperf-server
+
   template:
+
     metadata:
+
       labels:
+
         app: iperf-server
+
     spec:
-   ➊ affinity:
+
+      affinity:
+
         podAntiAffinity:
-       ➋ requiredDuringSchedulingIgnoredDuringExecution:
-          - labelSelector:
-              matchExpressions:
-              - key: app
-                operator: In
-                values:
-                - iperf-server
-         ➌ topologyKey: "kubernetes.io/hostname"
+
+          requiredDuringSchedulingIgnoredDuringExecution:
+
+            - labelSelector:
+
+                matchExpressions:
+
+                  - key: app
+
+                    operator: In
+
+                    values:
+
+                      - iperf-server
+
+              topologyKey: "kubernetes.io/hostname"
+
       containers:
-      - name: iperf
-        image: bookofkubernetes/iperf3:stable
-        env:
-        - name: IPERF_SERVER
-          value: "1"
+
+        - name: iperf
+
+          image: bookofkubernetes/iperf3:stable
+
+          env:
+
+            - name: IPERF_SERVER
+
+              value: "1"
 ```
 
-这个 `Deployment` 资源除了新的亲和性（affinity）部分 ➊ 外都是典型的。我们指定了一个反亲和性规则，其基于与 `Deployment` 管理其 Pods 时相同的标签。通过这条规则，我们指定不希望 `Pod` 被调度到已经存在带有 `app=iperf-server` 标签的 `Pod` 的区域。
+这个 `Deployment` 资源除了新的亲和性（affinity）部分外都是典型的。我们指定了一个反亲和性规则，其基于与 `Deployment` 管理其 `Pods` 时相同的标签。通过这条规则，我们指定不希望 `Pod` 被调度到已经存在带有 `app=iperf-server` 标签的 `Pod` 的区域。
 
-`topologyKey` ➌ 指定了区域（zone）的大小。在这种情况下，集群中的每个节点都有不同的 `hostname` 标签，因此每个节点被认为是一个不同的区域。因此，反亲和性规则防止了 `kube-scheduler` 在第一个 `Pod` 调度到节点之后，将第二个 `Pod` 放置在该节点上。
+`topologyKey` 指定了区域（zone）的大小。在这种情况下，集群中的每个节点都有不同的 `hostname` 标签，因此每个节点被认为是一个不同的区域。因此，反亲和性规则防止了 `kube-scheduler` 在第一个 `Pod` 调度到节点之后，将第二个 `Pod` 放置在该节点上。
 
-最后，由于我们使用 `requiredDuringScheduling` ➋ 指定了规则，这是一条*硬性（hard）*反亲和性规则，这意味着调度器除非能够满足该规则，否则将不会调度 `Pod`。也可以使用 `preferredDuringScheduling` 并分配权重，为调度器提供提示，而不会在无法满足规则时阻止 `Pod` 的调度。
+最后，由于我们使用 `requiredDuringScheduling` 指定了规则，这是一条*硬性（hard）*反亲和性规则，这意味着调度器除非能够满足该规则，否则将不会调度 `Pod`。也可以使用 `preferredDuringScheduling` 并分配权重，为调度器提供提示，而不会在无法满足规则时阻止 `Pod` 的调度。
 
 ### 注意事项
 
-`topologyKey` 可以基于应用在节点上上的任何标签。基于云的 Kubernetes 发行版通常会根据节点的可用区自动为每个节点打上标签，这使得能够使用反亲和性将 Pod 散布到不同的可用区以实现冗余。
+`topologyKey` 可以基于应用在节点上的任何标签。基于云的 Kubernetes 发行版通常会根据节点的可用区自动为每个节点打上标签，这使得能够使用反亲和性将 `Pod` 散布到不同的可用区以实现冗余。
 
 让我们应用这个 `Deployment` 并查看结果：
 
-```
-root@host01:~# kubectl apply -f /opt/ipf-server.yaml 
+```bash
+root@host01:~# kubectl apply -f /opt/ipf-server.yaml
+
 deployment.apps/iperf-server created
 ```
 
-一旦我们的 Pod 开始运行，我们就看到 `Pod` 已经分配到了集群中的每个节点上：
+一旦我们的 `Pod` 开始运行，我们就看到 `Pod` 已经分配到了集群中的每个节点上：
 
-```
+```bash
 root@host01:~# kubectl get po -o wide
+
 NAME                            READY   STATUS    ... NODE     ...
+
 iperf-server-7666fb76d8-7rz8j   1/1     Running   ... host01   ...
+
 iperf-server-7666fb76d8-cljkh   1/1     Running   ... host02   ...
+
 iperf-server-7666fb76d8-ktk92   1/1     Running   ... host03   ...
 ```
 
-由于我们有三个节点和三个实例，这本质上与使用 `DaemonSet` 相同，但这种方法更灵活，因为它不需要在每个节点上运行一个实例。在大型集群中，我们可能只需要几个 `Pod` 实例来满足该服务的需求。使用基于主机的区域反亲和性允许我们为 `Deployment` 指定正确的规模，同时将每个 Pod 分布到不同的节点以获得更高的可用性。反亲和性还可以用于将 Pod 分布到其他类型的区域。
+由于我们有三个节点和三个实例，这本质上与使用 `DaemonSet` 相同，但这种方法更灵活，因为它不需要在每个节点上运行一个实例。在大型集群中，我们可能只需要几个 `Pod` 实例来满足该服务的需求。使用基于主机的区域反亲和性允许我们为 `Deployment` 指定正确的规模，同时将每个 `Pod` 分布到不同的节点以获得更高的可用性。反亲和性还可以用于将 `Pod` 分布到其他类型的区域。
 
-在继续之前，让我们创建一个 `Service`，以便我们的 iperf3 客户端能够找到服务器实例。以下是 YAML 内容：
+在继续之前，让我们创建一个 `Service`，以便我们的 `iperf3` 客户端能够找到服务器实例。以下是 YAML 内容：
 
 `ipf-svc.yaml`
 
-```
+```yaml
 ---
+
 kind: Service
+
 apiVersion: v1
+
 metadata:
+
   name: iperf-server
+
 spec:
+
   selector:
+
     app: iperf-server
+
   ports:
-  - protocol: TCP
-    port: 5201
-    targetPort: 5201
+
+    - protocol: TCP
+
+      port: 5201
+
+      targetPort: 5201
 ```
 
 将其应用到集群：
 
-```
-root@host01:~# kubectl apply -f /opt/ipf-svc.yaml 
+```bash
+root@host01:~# kubectl apply -f /opt/ipf-svc.yaml
+
 service/iperf-server created
 ```
 
-`Service` 选取了所有三个 Pod：
+`Service` 选取了所有三个 `Pod`：
 
-```
+```bash
 root@host01:~# kubectl get ep iperf-server
+
 NAME           ENDPOINTS                                                 ...
+
 iperf-server   172.31.239.207:5201,172.31.25.214:5201,172.31.89.206:5201 ...
 ```
 
-`ep` 是 `endpoints` 的缩写。每个 `Service` 都有一个关联的 `Endpoint` 对象，记录了当前接收 `Service` 流量的 Pod。
+`ep` 是 `endpoints` 的缩写。每个 `Service` 都有一个关联的 `Endpoint` 对象，记录了当前接收 `Service` 流量的 `Pod`。
 
-### 亲和性
+## 亲和性
 
-我们现在准备好部署 iperf3 客户端来使用这些服务器实例。我们希望以相同的方式将客户端分布到每个节点，但我们希望确保每个客户端都部署到带有服务器实例的节点上。为了实现这一点，我们将同时使用亲和性和反亲和性规则：
+我们现在准备好部署 `iperf3` 客户端来使用这些服务器实例。我们希望以相同的方式将客户端分布到每个节点，但我们希望确保每个客户端都部署到带有服务器实例的节点上。为了实现这一点，我们将同时使用亲和性和反亲和性规则：
 
 `ipf-client.yaml`
 
-```
+```yaml
 ---
+
 kind: Deployment
+
 apiVersion: apps/v1
+
 metadata:
+
   name: iperf
+
 spec:
+
   replicas: 3
+
   selector:
+
     matchLabels:
+
       app: iperf
+
   template:
-    metadata:
-      labels:
-        app: iperf
-    spec:
-      affinity:
-        podAntiAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            - labelSelector:
-              matchExpressions:
+```
+
+
+
+```yaml
+metadata:
+  labels:
+    app: iperf
+spec:
+  affinity:
+    podAntiAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        - labelSelector:
+            matchExpressions:
               - key: app
                 operator: In
                 values:
-                - iperf
-            topologyKey: "kubernetes.io/hostname"
-        podAffinity:
-          requiredDuringSchedulingIgnoredDuringExecution:
-            - labelSelector:
-              matchExpressions:
+                  - iperf
+          topologyKey: "kubernetes.io/hostname"
+    podAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        - labelSelector:
+            matchExpressions:
               - key: app
                 operator: In
                 values:
-                - iperf-server
-            topologyKey: "kubernetes.io/hostname"
-      containers:
-      - name: iperf
-        image: bookofkubernetes/iperf3:stable
+                  - iperf-server
+          topologyKey: "kubernetes.io/hostname"
+  containers:
+    - name: iperf
+      image: bookofkubernetes/iperf3:stable
 ```
 
 额外的 `podAffinity` ➊ 确保只有在存在服务器时才部署客户端。这与反亲和性规则的工作相同。让我们部署客户端：
 
 ```
-root@host01:~# kubectl apply -f /opt/ipf-client.yaml 
+root@host01:~# kubectl apply -f /opt/ipf-client.yaml
+
 deployment.apps/iperf created
 ```
 
@@ -8703,17 +8713,20 @@ deployment.apps/iperf created
 
 ```
 root@host01:~# kubectl get po -o wide
-NAME                            READY   STATUS    ... NODE     ...
-iperf-7666fb76d8-btppf            1/1     Running   ... host02   ...
-iperf-7666fb76d8-s6r             1/1     Running   ... host03   ...
-iperf-7666fb76d8-v98m            1/1     Running   ... host01   ...
+
+NAME                          READY   STATUS    ... NODE     ...
+iperf-7666fb76d8-btppf        1/1     Running   ... host02   ...
+iperf-7666fb76d8-s6r          1/1     Running   ... host03   ...
+iperf-7666fb76d8-v98m         1/1     Running   ... host01   ...
 ```
 
-看起来我们部署 iperf3 客户端和服务器的方式让每个客户端都能与本地服务器通信，但事实并非如此。由于 `iperf-server` `Service` 配置了三个 Pod，我们的客户端可能无法正常工作。你可能会看到 Pod 处于 `Error` 或 `CrashLoopBackOff` 状态，日志输出如下：
+看起来我们部署 `iperf3` 客户端和服务器的方式让每个客户端都能与本地服务器通信，但事实并非如此。由于 `iperf-server` `Service` 配置了三个 Pod，我们的客户端可能无法正常工作。你可能会看到 Pod 处于 `Error` 或 `CrashLoopBackOff` 状态，日志输出如下：
 
 ```
 root@host01:~# kubectl logs iperf-7666fb76d8-v98m
+
 iperf3: error - the server is busy running a test. try again
+
 iperf3 error - exiting
 ```
 
@@ -8725,19 +8738,20 @@ iperf3 error - exiting
 
 ```
 root@host01:~# iptables-save | grep iperf-server
+
 ...
--A KUBE-SVC-KN2SIRYEH2IFQNHK -m comment --comment "default/iperf-server" 
+
+-A KUBE-SVC-KN2SIRYEH2IFQNHK -m comment --comment "default/iperf-server"
   -m statistic --mode random --probability 0.33333333349 -j KUBE-SEP-IGBNNG5F5VCPRRWI
--A KUBE-SVC-KN2SIRYEH2IFQNHK -m comment --comment "default/iperf-server" 
+
+-A KUBE-SVC-KN2SIRYEH2IFQNHK -m comment --comment "default/iperf-server"
   -m statistic --mode random --probability 0.50000000000 -j KUBE-SEP-FDPADR4LUNHDJSPL
--A KUBE-SVC-KN2SIRYEH2IFQNHK -m comment --comment "default/iperf-server" 
+
+-A KUBE-SVC-KN2SIRYEH2IFQNHK -m comment --comment "default/iperf-server"
   -j KUBE-SEP-TZDPKVKUEZYBFM3V
 ```
 
-我们在 *host01* 上运行此命令，看到有三个独立的 `iptables` 规则，并随机选择目标。这意味着 *host01* 上的 iperf3 客户端可能会被路由到任何服务器 Pod。
-
-
-
+我们在 `host01` 上运行此命令，看到有三个独立的 `iptables` 规则，并随机选择目标。这意味着 `host01` 上的 `iperf3` 客户端可能会被路由到任何服务器 Pod。
 
 要修复这个问题，我们需要更改 `Service` 的内部流量策略配置。默认情况下，该策略为 `Cluster`，这意味着集群中的所有 `Pods` 都是有效的终止节点。我们可以将策略更改为 `Local`，这将限制 `Service` 路由到同一节点上的 `Pods`。
 
@@ -8745,14 +8759,17 @@ root@host01:~# iptables-save | grep iperf-server
 
 ```
 root@host01:~# kubectl patch svc iperf-server -p '{"spec":{"internalTrafficPolicy":"Local"}}'
+
 service/iperf-server patched
 ```
 
-更改会立即生效，正如我们再次查看 `iptables` 规则所所示：
+更改会立即生效，正如我们再次查看 `iptables` 规则所示：
 
 ```
 root@host01:~# iptables-save | grep iperf-server
+
 ...
+
 -A KUBE-SVC-KN2SIRYEH2IFQNHK -m comment --comment "default/iperf-server" \
   -j KUBE-SEP-IGBNNG5F5VCPRRWI
 ```
@@ -8763,11 +8780,17 @@ root@host01:~# iptables-save | grep iperf-server
 
 ```
 root@host01:~# kubectl logs iperf-c8d4566f-btppf
+
 Connecting to host iperf-server, port 5201
+
 ...
+
 [ ID] Interval           Transfer     Bitrate         Retr
+
 [  5]   0.00-10.00  sec  8.67 GBytes  7.45 Gbits/sec  1250             sender
+
 [  5]   0.00-10.00  sec  8.67 GBytes  7.45 Gbits/sec                  receiver
+
 ...
 ```
 
@@ -8777,8 +8800,11 @@ Connecting to host iperf-server, port 5201
 
 ```
 root@host01:~# kubectl delete svc/iperf-server deploy/iperf deploy/iperf-server
+
 service "iperf-server" deleted
+
 deployment.apps "iperf" deleted
+
 deployment.apps "iperf-server" deleted
 ```
 
@@ -8802,19 +8828,25 @@ Kubernetes 两种相关方法来解决此需求：设备插件（device plug-ins
 
 让我们从更新集群开始，指示其中一个节点有一个示例扩展资源。我们通过补丁节点的状态来实现。理想情况下，我们可以使用 `kubectl patch` 执行此操作，但遗憾的是该命令无法更新资源的状态，所以我们只能使用 `curl`。
 
-
-
-
 ```
 root@host01:~# kubectl describe node host02
+
 Name:               host02
+
 ...
+
 Allocated resources:
+
 ...
+
   Resource                         Requests     Limits
+
   --------                         --------     ------
+
 ...
+
   bookofkubernetes.com/special-hw  1            1
+
 ...
 ```
 
@@ -8826,24 +8858,37 @@ Allocated resources:
 
 ```yaml
 ---
+
 apiVersion: v1
+
 kind: Pod
+
 metadata:
+
   name: sleep3
+
 spec:
+
   containers:
+
   - name: sleep
+
     image: busybox
+
     command: ["/bin/sleep", "infinity"]
+
     resources:
+
       limits:
+
         bookofkubernetes.com/special-hw: 3
 ```
 
 让我们尝试将此 Pod 添加到集群：
 
 ```
-root@host01:~# kubectl apply -f /opt/hw3.yaml 
+root@host01:~# kubectl apply -f /opt/hw3.yaml
+
 pod/sleep created
 ```
 
@@ -8851,15 +8896,19 @@ pod/sleep created
 
 ```
 root@host01:~# kubectl get po -o wide
+
 NAME    READY   STATUS    ... NODE     ...
+
 sleep   1/1     Running   ... host02   ...
+
 sleep3  0/1     Pending   ... <none>   ...
 ```
 
 Pod 将等待硬件可用。让我们删除原始的 Pod 以释放空间：
 
 ```
-root@host01:~# kubectl delete pod sleep 
+root@host01:~# kubectl delete pod sleep
+
 pod/sleep deleted
 ```
 
@@ -8867,13 +8916,18 @@ pod/sleep deleted
 
 ```
 root@host01:~# kubectl get po -o wide
+
 NAME    READY   STATUS    ... NODE     ...
+
 sleep3  1/1     Running   ... host02   ...
 ```
 
-和之前一样，由于对特殊硬件的需求，Pod 被调度到了 host02。
 
-设备驱动在分配角度的工作原理完全相同。在两种情况下，我们都使用 `limits` 字段来标识硬件需求。唯一的区别是我们不需要手动修补节点来记录资源，因为设备驱动注册时，`kubelet`会自动更新节点状态。此外，当创建容器时，`kubelet` 会调用设备驱动对硬件进行任何必要的分配和配置。
+
+
+和之前一样，由于对特殊硬件的需求，Pod 被调度到了 `host02`。
+
+设备驱动在分配角度的工作原理完全相同。在两种情况下，我们都使用 `limits` 字段来标识硬件需求。唯一的区别是我们不需要手动修补节点来记录资源，因为设备驱动注册时，`kubelet` 会自动更新节点状态。此外，当创建容器时，`kubelet` 会调用设备驱动对硬件进行任何必要的分配和配置。
 
 ### 总结
 
@@ -8891,7 +8945,7 @@ sleep3  1/1     Running   ... host02   ...
 
 ### 实现预测性
 
-在普通的日常语言中，“实时`（real time）一词的意思是发生得快速且持续。但在计算机科学中，我们对`实时`和`快速`（real fast）的区分程度以至于它们被认为是对立面。这是由于可预测性的重要性。
+在普通的日常语言中，“实时”（`real time`）一词的意思是发生得快速且持续。但在计算机科学中，我们对 `实时` 和“快速”（`real fast`）的区分程度以至于它们被认为是对立面。这是由于可预测性的重要性。
 
 实时处理简单是指需要跟上现实世界中某些活动的处理。它可以是任何，从需要跟上传感器数据输入并维护最新电子飞行显示器的驾驶舱软件，到需要及时接收并解码每一帧视频以进行显示的视频流应用程序。在实时系统中，能够保证处理速度“足够快”以跟上现实世界的要求是至关重要的。
 
@@ -8901,22 +8955,17 @@ sleep3  1/1     Running   ... host02   ...
 
 但虽然响应速度始终很重要，但大多数应用程序并不运行在实时环境中，而且这种额外的资源余地是昂贵的。由于这个原因，大多数系统试图在可预测性和效率之间寻找平衡，这意味着只要是暂时的，我们通常愿意容忍组件运行稍慢一点。
 
-### 服务质量类 (Quality of Service Classes)
+### 服务质量类（Quality of Service Classes）
 
-为了帮助我们平衡集群中容器的可预测性和效率，Kubernetes 将 Pod 分配到三种服务质量类之一：`BestEffort`、`Burstable` 和 `Guaranteed`。在某种程度上，我们可以认为这些类是描述性的。当我们不向 Kubernetes 提供任何资源需求时，使用 `BestEffort`，它只能尽力为 Pod 提供足够的资源。`Burstable` 用于 Pod 可能会超过其资源请求的情况。`Guaranteed` 用于我们提供一致的资源需求且预期 Pod 将保持在这些需求之的情况。由于这些类是描述性的，并且完全基于 Pod 中的容器如何指定它们的资源需求，因此没有办法手动指定 Pod 的 QoS。
+为了帮助我们平衡集群中容器的可预测性和效率，Kubernetes 将 Pod 分配到三种服务质量类之一：`BestEffort`、`Burstable` 和 `Guaranteed`。在某种程度上，我们可以认为这些类是描述性的。当我们不向 Kubernetes 提供任何资源需求时，使用 `BestEffort`，它只能尽力为 Pod 提供足够的资源。`Burstable` 用于 Pod 可能会超过其资源请求的情况。`Guaranteed` 用于我们提供一致的资源需求且预期 Pod 将保持在这些需求之内的情况。由于这些类是描述性的，并且完全基于 Pod 中的容器如何指定它们的资源需求，因此没有办法手动指定 Pod 的 QoS。
 
-QoS 类有两种用途。首先，同一 QoS 类的 Pod 被分组在一起，以便进行 Linux 控制组（cgroups）配置。正如我们在第 3 章 中所示，cgroups 用于控制一组进程的资源利用率，特别是处理器和内存，因此 Pod 的 cgroup 会影响它在系统负载较高时使用处理时间时的优先级。其次，如果节点由于缺少内存资源而需要开始驱逐 Pod，QoS 类会影响哪些 Pod 先被驱逐。
+QoS 类有两种用途。首先，同一 QoS 类的 Pod 被分组在一起，以便进行 Linux 控制组（cgroups）配置。正如我们在第 3 章中所示，cgroups 用于控制一组进程的资源利用率，特别是处理器和内存，因此 Pod 的 cgroup 会影响它在系统负载较高时使用处理时间时的优先级。其次，如果节点由于缺少内存资源而需要开始驱逐 Pod，QoS 类会影响哪些 Pod 先被驱逐。
 
 ### BestEffort
 
 最简单的情况是声明一个没有限制的 Pod。在这种情况下，该 Pod 被分配到 `BestEffort` 类。让我们创建一个示例 Pod 来探索这意味着什么。
 
-
-
-
-[content]
-
-本书的示例仓库位于 [`github.com/book-of-kubernetes/examples`](https://github.com/book-of-kubernetes/examples)。详细的设置说明请参见第 xx 页的“运行示例”（#ch00.xhtml_ch00lev1sec2）。
+本书的示例仓库位于 [`github.com/book-of-kubernetes/examples`](https://github.com/book-of-kubernetes/examples)。详细的设置说明请参见第 xx 页的“运行示例”（`#ch00.xhtml_ch00lev1sec2`）。
 
 以下是 Pod 的定义：
 
@@ -8924,15 +8973,25 @@ QoS 类有两种用途。首先，同一 QoS 类的 Pod 被分组在一起，以
 
 ```yaml
 ---
+
 apiVersion: v1
+
 kind: Pod
+
 metadata:
+
   name: best-effort
+
 spec:
+
   containers:
+
   - name: best-effort
+
     image: busybox
+
     command: ["/bin/sleep", "infinity"]
+
   nodeName: host01
 ```
 
@@ -8941,7 +9000,7 @@ spec:
 我们使用 `nodeName` 强制此 Pod 调度到 `host01`，这样我们就可以观察其资源配置是如何的。让我们将其应用于集群：
 
 ```bash
-root@host01:~# kubectl apply -f /opt/best-effort.yaml 
+root@host01:~# kubectl apply -f /opt/best-effort.yaml
 pod/best-effort created
 ```
 
@@ -8958,27 +9017,35 @@ root@host01:~# kubectl get po best-effort -o json | jq .status.qosClass
 root@host01:~# /opt/cgroup-info best-effort
 
 Container Runtime
+
 -----------------
+
 Pod ID: 205...
 
 Cgroup path: /kubepods.slice/kubepods-besteffort.slice/kubepods-...
 
 CPU Settings
+
 ------------
+
 CPU Shares: 2
+
 CPU Quota (us): -1 per 100000
 
 Memory Settings
+
 ---------------
+
 Limit (bytes): 9223372036854771712
 ```
 
 该 Pod 在 CPU 和内存使用上实际上是无限制的。然而，Pod 的 cgroup 位于 `kubepods-besteffort.slice` 路径下，反映了它对 BestEffort QoS 类的分配。这种分配对其 CPU 优先级具有直接影响，当我们比较分配给 BestEffort 类别和 Burstable 类别的 `cpu.shares` 时可以看到：
 
 ```bash
-root@host01:~# cat /sys/fs/cgroup/cpu/kubepods.slice/kubepods-besteffort.slice/cpu.shares 
+root@host01:~# cat /sys/fs/cgroup/cpu/kubepods.slice/kubepods-besteffort.slice/cpu.shares
 2
-root@host01:~# cat /sys/fs/cgroup/cpu/kubepods.slice/kubepods-burstable.slice/cpu.shares 
+
+root@host01:~# cat /sys/fs/cgroup/cpu/kubepods.slice/kubepods-burstable.slice/cpu.shares
 1157
 ```
 
@@ -8988,7 +9055,7 @@ root@host01:~# cat /sys/fs/cgroup/cpu/kubepods.slice/kubepods-burstable.slice/cp
 
 ### Burstable
 
-如果 Pod 同时指定了 `requests` 和 `limits`，且这两个规格不同，则 Pod 将被归类为 Burstable 类别。正如我们在第 14 章中所示，`requests` 规格用于调度目的，而 `limits` 规格用于运行时强制。换句话之，在这种情况下，Pod 可以产生高于其请求水平的“突发性”资源利用，但不能超过它们的限制。
+如果 Pod 同时指定了 `requests` 和 `limits`，且这两个规格不同，则 Pod 将被归类为 Burstable 类别。正如我们在第 14 章中所示，`requests` 规格用于调度目的，而 `limits` 规格用于运行时强制。换句话说，在这种情况下，Pod 可以产生高于其请求水平的“突发性”资源利用，但不能超过它们的限制。
 
 让我们来看一个示例：
 
@@ -8996,22 +9063,39 @@ root@host01:~# cat /sys/fs/cgroup/cpu/kubepods.slice/kubepods-burstable.slice/cp
 
 ```yaml
 ---
+
 apiVersion: v1
+
 kind: Pod
+
 metadata:
+
   name: burstable
+
 spec:
+
   containers:
+
   - name: burstable
+
     image: busybox
+
     command: ["/bin/sleep", "infinity"]
+
     resources:
+
       requests:
+
         memory: "64Mi"
+
         cpu: "50m"
+
       limits:
+
         memory: "128Mi"
+
         cpu: "100m"
+
   nodeName: host01
 ```
 
@@ -9020,20 +9104,18 @@ spec:
 将此 Pod 应用集群：
 
 ```bash
-root@host01:~# kubectl apply -f /opt/burstable.yaml 
+root@host01:~# kubectl apply -f /opt/burstable.yaml
 pod/burstable created
 ```
 
 Pod 运行后，我们可以查看其详情，确认它已被分配到 Burstable 类别：
+
 （注：原文文本中此处的示例逻辑与前文略有重复，此处保持翻译结构一致）
 
 ```bash
 root@host01:~# kubectl get po burstable -o json | jq .status.qosClass
 "Burstable"
 ```
-
-
-
 
 与其将这些容器放入单独目录，属于 Guaranteed（保证）QoS 类的容器被直接放置在 `kubepods.slice` 中。将它们放在此位置的效果是，当系统负载较高时，赋予 Guaranteed Pod 优先级，因为这些容器接收的是各自的 CPU 配额，而不是作为一个类接收。
 
@@ -9043,22 +9125,24 @@ root@host01:~# kubectl get po burstable -o json | jq .status.qosClass
 
 `oom_score_adj` 值记录在每个进程的 `/proc` 中。自动化脚本添加了一个名为 `oom-info` 的脚本来获取特定 Pod 的该值。让我们检查每个 QoS 类中 Pod 的值：
 
-```
+```bash
 root@host01:~# /opt/oom-info best-effort
 OOM Score Adjustment: 1000
+
 root@host01:~# /opt/oom-info burstable
 OOM Score Adjustment: 968
+
 root@host01:~# /opt/oom-info guaranteed
 OOM Score Adjustment: -997
 ```
 
 BestEffort（尽力为）QoS 类 Pod 的最大调整值为 1000，因此它们会被 OOM killer 选定。Burstable（可缓冲）QoS 类 Pod 的得分根据 `requests` 字段中指定的内存占节点总内存容量的百分比计算得出。因此，该值对于每个 Pod 都是不同的，但始终处于 2 到 999 之间。因此，Burstable QoS 类 Pod 在 OOM killer 的优先级中始终是第二。同时，Guaranteed QoS 类 Pod 被设置为接近最小值（在本例中为 –997），因此它们尽可能地免受 OOM killer 的伤害。
 
-当然，如第 3 章中提到的，OOM killer 会立即终止进程，因此这是一种极端措施。当节点内存低低但尚未耗尽时，Kubernetes 会尝试驱逐 Pod 以回收内存。这种驱逐也根据 QoS 类进行优先级排序。BestEffort 类 Pod 和使用超过其 requests 值的 Burstable 类 Pod（高使用率 Burstable）最先被驱逐，其次是使用少于其 requests 值的 Burstable 类 Pod（低使用率 Burstable）以及 Guaranteed 类的 Pod。
+当然，如第 3 章中提到的，OOM killer 会立即终止进程，因此这是一种极端措施。当节点内存低低但尚未耗尽时，Kubernetes 会尝试驱逐 Pod 以回收内存。这种驱逐也根据 QoS 类进行优先级排序。BestEffort 类 Pod 和使用超过其 `requests` 值的 Burstable 类 Pod（高使用率 Burstable）最先被驱逐，其次是使用少于其 `requests` 值的 Burstable 类 Pod（低使用率 Burstable）以及 Guaranteed 类的 Pod。
 
 在继续之前，让我们先做一些清理工作：
 
-```
+```bash
 root@host01:~# kubectl delete po/best-effort po/burstable po/guaranteed
 pod "best-effort" deleted
 pod "burstable" deleted
@@ -9069,9 +9153,9 @@ pod "guaranteed" deleted
 
 ## 选择 QoS 类
 
-鉴于在处理时间和驱逐优先级上的这种优先级排序，人们可能想将所有 Pod 都置于 Guaranteed QoS 类中。对于某些应用组件来说，这是一种可行的策略。如第 7 章所述，我们可以配置 `HorizontalPodAutoscaler`（水平 Pod 自动伸缩器），如果现有实例消耗了其分配资源的很大比例，则自动创建新的 Pod 实例。这意味着我们可以为 Deployment 中的 Pod 请求一个合理的 limits（限制）值，并在当这些 Pod 的总和太接近限制时，允许集群自动伸缩 Deployment。如果集群运行在云环境中，我们甚至可以将自动伸缩扩展到节点级别，在负载高时动态地创建新的集群节点，并在集群空闲时减少节点数量。
+鉴于在处理时间和驱逐优先级上的这种优先级排序，人们可能想将所有 Pod 都置于 Guaranteed QoS 类中。对于某些应用组件来说，这是一种可行的策略。如第 7 章所述，我们可以配置 `HorizontalPodAutoscaler`（水平 Pod 自动伸缩器），如果现有实例消耗了其分配资源的很大比例，则自动创建新的 Pod 实例。这意味着我们可以为 Deployment 中的 Pod 请求一个合理的 `limits`（限制）值，并在当这些 Pod 的总和太接近限制时，允许集群自动伸缩 Deployment。如果集群运行在云环境中，我们甚至可以将自动伸缩扩展到节点级别，在负载高时动态地创建新的集群节点，并在集群空闲时减少节点数量。
 
-仅使用 Guaranteed Pod 并配合自动伸缩听起来很棒，但这假设了我们的应用组件是易于扩展的。它只在我们的应用程序负载由许多小请求组成时才运行良好，因为负载的增加主要意味着我们正在从更多用户手中处理大小相似的请求。如果我们有定期处理大型或复杂请求的应用组件，我们必须为这些组件设置限制以适应最坏的情况。鉴于 Guaranteed QoS 类 Pod 的 requests 等于 limits，我们的集群将需要足够的资源来处理这种最坏的情况，否则我们甚至无法调度 Pod。这导致集群除非系统处于最大负载状态，否则大部分时间都处于空闲状态。同样，如果我们有可扩展性限制（例如依赖于专用硬件），我们为某个组件创建的 Pod 数量可能会有一个自然限制，迫使每个 Pod 拥有更多资源来处理其在整体负载中的份额。
+仅使用 Guaranteed Pod 并配合自动伸缩听起来很棒，但这假设了我们的应用组件是易于扩展的。它只在我们的应用程序负载由许多小请求组成时才运行良好，因为负载的增加主要意味着我们正在从更多用户手中处理大小相似的请求。如果我们有定期处理大型或复杂请求的应用组件，我们必须为这些组件设置限制以适应最坏的情况。鉴于 Guaranteed QoS 类 Pod 的 `requests` 等于 `limits`，我们的集群将需要足够的资源来处理这种最坏的情况，否则我们甚至无法调度 Pod。这导致集群除非系统处于最大负载状态，否则大部分时间都处于空闲状态。同样，如果我们有可扩展性限制（例如依赖于专用硬件），我们为某个组件创建的 Pod 数量可能会有一个自然限制，迫使每个 Pod 拥有更多资源来处理其在整体负载中的份额。
 
 出于此原因，为 Pod 平衡使用 Guaranteed 和 Burstable QoS 类是有意义的。任何具有持续负载或可以可行地水平扩展以满足额外需求的 Pod 都应该处于 Guaranteed 类中。较难扩展或需要处理大小混合工作负载的 Pod 应该处于 Burstable 类中。这些 Pod 应该根据其平均利用率指定 `requests`，并根据其最坏的情况指定 `limits`。以这种方式指定资源需求将确保通过简单比较分配的资源与集群容量即可监控集群预期的性能裕量。最后，如果一个大请求导致多个应用组件同时以最最坏利用率运行，那么运行性能测试并探索反亲和性（anti-affinity）可能是值得的。
 
@@ -9083,21 +9167,29 @@ pod "guaranteed" deleted
 
 ```yaml
 ---
+
 apiVersion: scheduling.k8s.io/v1
+
 kind: PriorityClass
+
 metadata:
+
   name: essential
+
 value: 99999
 ```
 
 让我们将其应用到集群：
 
-```
-root@host01:~# kubectl apply -f /opt/essential.yaml 
+```bash
+root@host01:~# kubectl apply -f /opt/essential.yaml
 priorityclass.scheduling.k8s.io/essential created
 ```
 
-现在定义了 `PriorityClass`，我们就可以将其应用于 Pod。然而，让我们先大量的低优先级 Pod，通过它们观察 Pod 被抢占（preempted）。我们将使用这个 Deployment：
+
+
+
+现在定义了`PriorityClass`，我们就可以将其应用于 Pod。然而，让我们先大量创建低优先级 Pod，通过它们观察 Pod 被抢占（preempted）。我们将使用这个 Deployment：
 
 ```yaml
 ---
@@ -9127,19 +9219,16 @@ spec:
 
 这是一个运行 sleep 的基础 Deployment，并不消耗多少内存或 CPU，但它将副本数设置为 1000，因此我们正在请求 Kubernetes 集群创建 1000 个 Pod。示例集群不足以部署 1000 个 Pod，既是因为我们没有足够的资源来满足规范，也是因为节点默认限制为 110 个 Pod。尽管如此，让我们如列表 19-1 所示将其应用到集群，调度器将尽可能创建 Pod：
 
-```
-root@host01:~# kubectl apply -f /opt/lots.yaml 
+```bash
+root@host01:~# kubectl apply -f /opt/lots.yaml
 deployment.apps/lots created
 ```
 
-
-
-
-### 列表 19-1: 部署大量 Pod
+### 列表 19-1：部署大量 Pod
 
 让我们描述这个 Deployment 以查看运行情况：
 
-```
+```bash
 root@host01:~# kubectl describe deploy lots
 Name:                   lots
 Namespace:              default
@@ -9150,39 +9239,44 @@ Replicas:               1000 desired ... | 7 available | 993 unavailable
 
 考虑到集群基础设施组件已经运行了许多 Pod，我们在示例集群中仅成功获取了 7 个 Pod。遗憾的是，这就是我们能获得的全部 Pod 了：
 
-```
+```bash
 root@host01:~# kubectl describe node host01
 Name:               host01
+
   (Total limits may be over 100 percent, i.e., overcommitted.)
+
 Allocated resources:
+
 ...
+
   Resource           Requests     Limits
-  --------           --------     ------
+  --------           ------       ------
   cpu             ➊ 1898m (94%)  768m (38%)
   memory             292Mi (15%)  192Mi (10%)
   ephemeral-storage  0 (0%)       0 (0%)
   hugepages-2Mi      0 (0%)       0 (0%)
+
 ...
 ```
 
-`host01` 的数据显示我们已经分配了 94% 的可用 CPU ➊。但我们的每个 Pod 都在请求 250 毫核（millicores），因此没有足够的剩余容量在这一节点上调度另一个 Pod。另外两个节点也处于这种情况，没有足够的 CPU 空间来调度更多的 Pod。尽管如此，集群运行良好。从理论上讲，我们分配了所有的处理能力，但这些容器只是在运行 `sleep` 命令，因此它们实际上并没有消耗多少 CPU。
+`host01` 的数据显示我们已经分配了 94% 的可用 CPU ➊。但我们的每个 Pod 都在请求 250 毫核（millicores），因此没有足够的剩余容量在这一节点上调度另一个 Pod。另外两个节点也处于这种情况，没有足够的 CPU 空间来调度更多的 Pod。尽管如此，集群运行良好。从理论上讲，我们分配了所有的处理能力，但这些容器只是在运行`sleep`命令，因此它们实际上并没有消耗多少 CPU。
 
-此外，重要的是 `requests` 字段被用于调度，因此，尽管我们有一些指定了 `requests` 但没有指定 `limits` 的基础设施 `BestEffort` Pod，而且该节点上有充足的 `Limits` 容量，但我们仍然没有空间来调度新的 Pod。只有 `Limits` 可以被超额分用，而 `Requests` 不行。
+此外，重要的是`requests`字段被用于调度，因此，尽管我们有一些指定了`requests`但没有指定`limits`的基础设施`BestEffort` Pod，而且该节点上有充足的`Limits`容量，但我们仍然没有空间来调度新的 Pod。只有`Limits`可以被超额分用，而`Requests`不行。
 
 由于我们没有更多的 CPU 分配给 Pod，`Deployment` 中剩余的 Pod 都处于 `Pending`（等待）状态：
 
-```
+```bash
 root@host01:~# kubectl get po | grep -c Pending
 993
 ```
 
-这 993 个 Pod 的默认 优先级均为 0。结果是当我们使用关键的 `PriorityClass` 创建新 Pod 时，它将跳到调度队列的最前端。不仅如此，集群还将根据需要驱逐 Pod 以便其能够被调度。
+这 993 个 Pod 的默认优先级均为 0。结果是当我们使用关键的`PriorityClass`创建新 Pod 时，它将跳到调度队列的最前端。不仅如此，集群还将根据需要驱逐 Pod 以便其能够被调度。
 
 以下是 Pod 的定义：
 
 `needed.yaml`
 
-```
+```yaml
 ---
 apiVersion: v1
 kind: Pod
@@ -9200,24 +9294,24 @@ spec:
   priorityClassName: essential
 ```
 
-这里的关键区别在于 `priorityClassName` 的规范，它与我们创建的 `PriorityClass` 相匹配。让我们将其应用于集群：
+这里的关键区别在于`priorityClassName`的规范，它与我们创建的`PriorityClass`相匹配。让我们将其应用于集群：
 
-```
-root@host01:~# kubectl apply -f /opt/needed.yaml 
+```bash
+root@host01:~# kubectl apply -f /opt/needed.yaml
 pod/needed created
 ```
 
 集群需要一点时间来驱逐另一个 Pod 以便这个 Pod 可以被调度，但一分钟后它就会开始运行：
 
-```
+```bash
 root@host01:~# kubectl get po needed
 NAME     READY   STATUS    RESTARTS   AGE
 needed   1/1     Running   0          36s
 ```
 
-为了让这一切发生，我们在列表 19-1 中创建的 `lots` Deployment 中的一个 Pod 必须被驱逐：
+为了让这一切发生，我们在列表 19-1 中创建的`lots` Deployment 中的一个 Pod 必须被驱逐：
 
-```
+```bash
 root@host01:~# kubectl describe deploy lots
 Name:                   lots
 Namespace:              default
@@ -9228,9 +9322,9 @@ Selector:               app=lots
 Replicas:               1000 desired ... | ➊ 6 available | 994 unavailable
 ```
 
-现在 `Deployment` 中仅剩 6 个可用 Pod ➊，因为一个 Pod 被驱逐。值得注意的是，处于 `Guaranteed` QoS 类并没有防止该 Pod 被驱逐。`Guaranteed` QoS 类在由于节点资源使用导致的驱逐中具有优先级，但对于由于调度器为高优先级 Pod 寻找空间而导致的驱逐则不然。
+现在`Deployment`中仅剩 6 个可用 Pod ➊，因为一个 Pod 被驱逐。值得注意的是，处于`Guaranteed` QoS 类并没有防止该 Pod 被驱逐。`Guaranteed` QoS 类在由于节点资源使用导致的驱逐中具有优先级，但对于由于调度器为高优先级 Pod 寻找空间而导致的驱逐则不然。
 
-当然，为 Pod 指定更高的优先级导致其他 Pod 被驱逐，这种能力是强大的，应该谨慎使用。普通用户没有创建新 `PriorityClass` 的权限，管理员可以应用配额来限制特定 `Namespace` 中 `PriorityClass` 的使用，从而有效地限制普通用户创建高优先级 Pod。
+当然，为 Pod 指定更高的优先级导致其他 Pod 被驱逐，这种能力是强大的，应该谨慎使用。普通用户没有创建新`PriorityClass`的权限，管理员可以应用配额来限制特定`Namespace`中`PriorityClass`的使用，从而有效地限制普通用户创建高优先级 Pod。
 
 ### 结语
 
@@ -9248,50 +9342,47 @@ Replicas:               1000 desired ... | ➊ 6 available | 994 unavailable
 
 ### 示例应用程序栈
 
-在第 1 章中，我们在运行 k3s 的 Kubernetes 集群上部署了 todo。我们已经拥有了一些可扩展性和故障转移能力。Web 层基于 Deployment，因此我们可以通过单条命令扩展服务器实例的数量。我们的 Kubernetes 集群监控这些实例，以便故障实例可以被替换。然而，我们仍然存在一些单点故障。我们尚未引入高可用 Kubernetes 控制平的概念，因此我们选择仅在单节点运行 k3s。此外，尽管我们对 PostgreSQL 数据库使用了 `Deployment`，但它缺乏任何高可用所需的配置。在本章中，我们将看到修正这些局限性所需的细节，并将利用所学的许多其他 Kubernetes 特性。
+在第 1 章中，我们在运行 k3s 的 Kubernetes 集群上部署了 todo。我们已经拥有了一些可扩展性和故障转移能力。Web 层基于 Deployment，因此我们可以通过单条命令扩展服务器实例的数量。我们的 Kubernetes 集群监控这些实例，以便故障实例可以被替换。然而，我们仍然存在一些单点故障。我们尚未引入高可用 Kubernetes 控制平面的概念，因此我们选择仅在单节点运行 k3s。此外，尽管我们对 PostgreSQL 数据库使用了`Deployment`，但它缺乏任何高可用所需的配置。在本章中，我们将看到修正这些局限性所需的细节，并将利用所学的许多其他 Kubernetes 特性。
 
 #### 数据库
 
-让我们从部署一个高可用的 PostgreSQL 数据库开始。第 17 章 展示了 Kubernetes Operator 设计模式如何使用 `CustomResourceDefinitions` 扩展集群行为，使得打包和部署高级功能变得简单。我们将使用在该章节中引入的 Postgres Operator 来部署我们的数据库。
+让我们从部署一个高可用的 PostgreSQL 数据库开始。第 17 章展示了 Kubernetes Operator 设计模式如何使用`CustomResourceDefinitions`扩展集群行为，使得打包和部署高级功能变得简单。我们将使用在该章节中引入的 Postgres Operator 来部署我们的数据库。
 
+本书的示例存储库位于[`github.com/book-of-kubernetes/examples`](https://github.com/book-of-kubernetes/examples)。有关设置的详细信息，请参阅第 xx 页上的“运行示例”。本章使用了一个较大的六节点集群，为应用程序以及我们将要部署的所有监控组件留出空间。更多信息请参阅本章的`README.md`文件。
 
-
-
-本书的示例存储库位于 [`github.com/book-of-kubernetes/examples`](https://github.com/book-of-kubernetes/examples)。有关设置的详细信息，请参阅第 xx 页](#ch00.xhtml_ch00lev1sec2)上的“运行示例”。本章使用了一个较大的六节点集群，为应用程序以及我们将要部署的所有监控组件留出空间。更多信息请参阅本章的 `README.md` 文件。
-
-本章的自动化脚本已经部署了 Postgres Operator 及其配置。你可以通过查看 `/etc/kubernetes/components` 下的文件来检查 Postgres Operator 及其配置。该 运行在 `todo` 命名空间中，`todo` 应用也部署在该命名空间。许多 Operator 倾向于运行在自己的命名空间中并跨集群操作，但 Postgres Operator 的设计是直接部署在数据库将所在的命名空间中。
+本章的自动化脚本已经部署了 Postgres Operator 及其配置。你可以通过查看`/etc/kubernetes/components`下的文件来检查 Postgres Operator 及其配置。该 Operator 运行在`todo`命名空间中，`todo`应用也部署在该命名空间。许多 Operator 倾向于运行在自己的命名空间中并跨集群操作，但 Postgres Operator 的设计是直接部署在数据库将所在的命名空间中。
 
 由于我们使用了 Postgres Operator，可以通过向集群应用自定义资源来创建一个高可用 PostgreSQL 数据库：
 
 `database.yaml`
 
 ```yaml
- ---
- apiVersion: "acid.zalan.do/v1"
- kind: postgresql
- metadata:
-➊ name: todo-db
- spec:
-   teamId: todo
-   volume:
-     size: 1Gi
-     storageClass: longhorn
-➋ numberOfInstances: 3
-   users:
-  ➌ todo:
-     - superuser
-     - createdb
-   databases:
-  ➍ todo: todo
-   postgresql:
-     version: "14"
+---
+apiVersion: "acid.zalan.do/v1"
+kind: postgresql
+metadata:
+  ➊ name: todo-db
+spec:
+  teamId: todo
+  volume:
+    size: 1Gi
+    storageClass: longhorn
+  ➋ numberOfInstances: 3
+  users:
+    ➌ todo:
+      - superuser
+      - createdb
+  databases:
+    ➍ todo: todo
+  postgresql:
+    version: "14"
 ```
 
-此演练过程中显示的所有文件都已存放在 `/etc/kubernetes/todo` 目录，以便你探索它们并对更改进行实验。`todo` 应用会自动部署，但所有组件达到健康状态可能需要几分钟。
+此演练过程中显示的所有文件都已存放在`/etc/kubernetes/todo`目录，以便你探索它们并对更改进行实验。`todo`应用会自动部署，但所有组件达到健康状态可能需要几分钟。
 
-Postgres Operator 的工作是创建部署 PostgreSQL 所需的 `Secrets`、StatefulSets、Services 以及其他核心 Kubernetes 资源。我们只需要提供它应该使用的配置。我们首先确定此数据库的名称为 `todo-db` ➊，它将用作主 `Service` 的名称，我们将用它来连接主数据库实例，因此我们将在应用程序配置中再次看到这个名称。
+Postgres Operator 的工作是创建部署 PostgreSQL 所需的`Secrets`、StatefulSets、Services 以及其他核心 Kubernetes 资源。我们只需要提供它应该使用的配置。我们首先确定此数据库的名称为`todo-db` ➊，它将用作主`Service`的名称，我们将用它来连接主数据库实例，因此我们将在应用程序配置中再次看到这个名称。
 
-我们需要一个高可用数据库，所以让我们指定三个实例 ➋。我们还要求 Postgres Operator 创建一个 `todo` 用户 ➌，并创建一个以 `todo` 用户为所有者的 `todo` 数据库 ➍。这样，我们的数据库就已经准备好了，我们只需要填充表来存储应用程序数据。
+我们需要一个高可用数据库，所以让我们指定三个实例 ➋。我们还要求 Postgres Operator 创建一个`todo`用户 ➌，并创建一个以`todo`用户为所有者的`todo`数据库 ➍。这样，我们的数据库就已经准备好了，我们只需要填充表来存储应用程序数据。
 
 我们可以验证数据库是否在集群中运行：
 
@@ -9301,9 +9392,9 @@ NAME      READY   AGE
 todo-db   3/3     6m1s
 ```
 
-`todo-db` StatefulSet 有三个 `Podss`，它们都已准备就绪。
+`todo-db` StatefulSet 有三个 Pod，它们都已准备就绪。
 
-由于 Postgres Operator 使用 StatefulSet，正如我们在第 15 章中所示，在创建数据库实例时，会为其分配一个 `PersistentVolumeClaim`：
+由于 Postgres Operator 使用 StatefulSet，正如我们在第 15 章中所示，在创建数据库实例时，会为其分配一个`PersistentVolumeClaim`：
 
 ```bash
 root@host01:~# kubectl -n todo get pvc
@@ -9313,28 +9404,26 @@ pgdata-todo-db-1   Bound    ... 1Gi        RWO            longhorn       8m44s
 pgdata-todo-db-2   Bound    ... 1Gi        RWO            longhorn       7m23s
 ```
 
-如果其中一个数据库实例 `Pods` 失败并必须重建，这些 `PersistentVolumeClaims` 将被重用，而且 `Longhorn` 存储引擎将其存储分布在整个集群上，因此即使我们丢失节点，数据库也将保留应用程序数据。
+如果其中一个数据库实例 Pod 失败并必须重建，这些`PersistentVolumeClaims`将被重用，而且`Longhorn`存储引擎将其存储分布在整个集群上，因此即使我们丢失节点，数据库也将保留应用程序数据。
 
-如果其中一个数据库实例 `Pods` 失败并必须重建，这些 `PersistentVolumeClaims` 将被重用，而且 `Longhorn` 存储引擎将其存储分布在整个集群上，因此即使我们丢失节点，数据库也将保留应用程序数据。
-
-如果其中一个数据库实例 `Pods` 失败并必须重建，这些 `PersistentVolumeClaims` 将被重用，而且 `Longhorn` 存储引擎将其存储分布在整个集群上，因此即使我们丢失节点，数据库也将保留应用程序数据。
-
-由于我们运行在 `todo` 命名空间中，许多 Operator 倾向于运行在自己的命名空间中并跨集群操作，但 Postgres Operator 的设计是直接部署在数据库将所在的命名空间中。
+由于我们运行在`todo`命名空间中，许多 Operator 倾向于运行在自己的命名空间中并跨集群操作，但 Postgres Operator 的设计是直接部署在数据库将所在的命名空间中。
 
 由于我们使用了 Postgres Operator，可以通过向集群应用自定义资源来创建一个高可用 PostgreSQL 数据库：
 
-bash
+```bash
 root@host01:~# kubectl -n todo get secret
 NAME                                            TYPE
 todo-db-client-password                         kubernetes.io/serviceconfig
 todo-db-root-password                           kubernetes.io/serviceconfig
 ```
 
-Postgres Operator 的工作是创建部署 PostgreSQL 所需的 `Secrets`、StatefulSets、Services 以及其他核心 Kubernetes 资源。我们只需要提供它应该使用的配置。我们首先确定此数据库的名称为 `todo-db` ➊，它将用作主 `Service` 的名称，我们将用它来连接主数据库实例，因此我们将在应用程序配置中再次看到这个名称。
+Postgres Operator 的工作是创建部署 PostgreSQL 所需的`Secrets`、StatefulSets、Services 以及其他核心 Kubernetes 资源。我们只需要提供它应该使用的配置。我们首先确定此数据库的名称为`todo-db` ➊，它将用作主`Service`的名称，我们将用它来连接主数据库实例，因此我们将在应用程序配置中再次看到这个名称。
 
-我们需要一个高可用数据库，所以让我们指定三个实例 ➋。我们还要求 Postgres Operator 创建一个 `todo` 用户 ➌，并创建一个以 `todo` 用户为所有者的 `todo` 数据库 ➍。这样，我们的数据库就已经准备好了，我们只需要填充表来存储应用程序数据。
+我们需要一个高可用数据库，所以让我们指定三个实例 ➋。我们还要求 Postgres Operator 创建一个`todo`用户 ➌，并创建一个以`todo`用户为所有者的`todo`数据库 ➍。这样，我们的数据库就已经准备好了，我们只需要填充表来存储应用程序数据。
 
 我们可以验证数据库是否在集群中运行：
+
+
 
 ```bash
 root@host01:~# kubectl -n todo get sts
@@ -9439,7 +9528,7 @@ kubectl -n todo get deployments
 
 输出将显示如下：
 
-```
+```text
 NAME    READY   UP-TO-DATE   AGE
 todo    3/3             10s
 ```
@@ -9474,7 +9563,7 @@ kubectl -n todo get svc
 
 输出将显示如下：
 
-```
+```text
 NAME    TYPE        CLUSTER-IP     PORT        AGE
 todo    ClusterIP   10.96.0.10    80/TCP       5s
 ```
@@ -9487,43 +9576,41 @@ kubectl -n todo port-forward service/todo 8080:8080
 
 现在，你可以在浏览器中访问 `http://localhost:8080` 来查看 `todo` 应用程序。
 
-
-
 通过这一部分，我们现在开始定义此 Deployment 创建的 Pod 模板了。Deployment YAML 的其余部分完成了 Pod 模板，它完全由该 Pod 运行的单个容器配置组成：
 
-```
- spec:
-      containers:
-      - name: todo
-        image: bookofkubernetes/todo:stable
+```yaml
+spec:
+  containers:
+  - name: todo
+    image: bookofkubernetes/todo:stable
 ```
 
-容器名称主要是信息性的，但对于包含多个容器的 Pod 来说，它是必需的，因为当我们需要检索日志并使用 `exec` 执行命令时，我们需要选择特定的容器。image 告诉 Kubernetes 应该获取哪个容器镜像来运行此容器。
+容器名称主要是信息性的，但对于包含多个容器的 Pod 来说，它是必需的，因为当我们需要检索日志并使用 `exec` 执行命令时，我们需要选择特定的容器。`image` 告诉 Kubernetes 应该获取哪个容器镜像来运行此容器。
 
 Pod 模板的下一部分指定了该容器的环境变量：
 
-```
- env:
-        - name: NODE_ENV
-          value: production
-        - name: PREFIX
-          value: /
-        - name: PGHOST
-          value: todo-db
-        - name: PGDATABASE
-          value: todo
-        - name: PGUSER
-          valueFrom:
-            secretKeyRef:
-              name: todo.todo-db.credentials.postgresql.acid.zalan.do
-              key: username
-              optional: false
-        - name: PGPASSWORD
-          valueFrom:
-            secretKeyRef:
-              name: todo.todo-db.credentials.postgresql.acid.zalan.do
-              key: password
-              optional: false
+```yaml
+env:
+  - name: NODE_ENV
+    value: production
+  - name: PREFIX
+    value: /
+  - name: PGHOST
+    value: todo-db
+  - name: PGDATABASE
+    value: todo
+  - name: PGUSER
+    valueFrom:
+      secretKeyRef:
+        name: todo.todo-db.credentials.postgresql.acid.zalan.do
+        key: username
+        optional: false
+  - name: PGPASSWORD
+    valueFrom:
+      secretKeyRef:
+        name: todo.todo-db.credentials.postgresql.acid.zalan.do
+        key: password
+        optional: false
 ```
 
 某些环境变量具有静态值；它们预计在此 Deployment 的所有使用场景中保持不变。`PGHOST` 环境变量与 PostgreSQL 数据库的名称匹配。Postgres Operator 已经在这些 Pod 运行的 `todo` 命名空间（Namespace）中创建了一个名为 `todo-db` 的 Service，因此 Pod 能够将此主机名解析为 Service 的 IP 地址。发往 Service IP 地址的流量将通过我们在第 9 章中看到的 `iptables` 配置路由到主 PostgreSQL 实例。
@@ -9532,17 +9619,17 @@ Pod 模板的下一部分指定了该容器的环境变量：
 
 最后，我们声明了该容器的资源需求及其暴露的端口：
 
-```
- resources:
-          requests:
-            memory: "128Mi"
-            cpu: "50m"
-          limits:
-            memory: "128Mi"
-            cpu: "50m"
-        ports:
-        - name: web
-          containerPort: 5000
+```yaml
+resources:
+  requests:
+    memory: "128Mi"
+    cpu: "50m"
+  limits:
+    memory: "128Mi"
+    cpu: "50m"
+ports:
+- name: web
+  containerPort: 5000
 ```
 
 Pod 中的 `ports` 字段纯是信息性的；实际的流量路由将在 Service 中配置。
@@ -9555,7 +9642,7 @@ Pod 中的 `ports` 字段纯是信息性的；实际的流量路由将在 Servic
 
 `scaler.yaml`
 
-```
+```yaml
 ---
 apiVersion: autoscaling/v2
 kind: HorizontalPodAutoscaler
@@ -9593,7 +9680,7 @@ spec:
 
 `service.yaml`
 
-```
+```yaml
 ---
 kind: Service
 apiVersion: v1
@@ -9618,7 +9705,7 @@ spec:
 
 对于本章，我们使用 `NodePort` 暴露我们的应用程序 Service，这意味着集群的所有节点都将配置为将流量路由到任何主机接口的 `nodePort`。因此，我们可以访问集群中任何一个节点的 5000 端口，并路由到我们的应用程序：
 
-```
+```bash
 root@host01:~# curl -v http://host01:5000/
 ...
 < HTTP/1.1 200 OK
@@ -9637,27 +9724,25 @@ root@host01:~# curl -v http://host01:5000/
 
 **NODEPORT，非 INGRESS**
 
+当我们在第 1 章中部署 `todo` 时，我们通过 Ingress 暴露了 Service。正如我们在第 9 章中所看到的，Ingress 整合了多个 Service，使其能够在无需每个 Service 都拥有独立的外部路由 IP 地址的情况下暴露到集群之外。我们将在本章稍后还会暴露一个监控服务，因此有多个 Service 需要暴露到集群之外。然而，由于我们使用的是一个私有网络上的示例集群，我们没有底层的网络基础设施来充分发挥 Ingress 的潜力。通过改用 `NodePort`，我们能够以一种同时兼容 Vagrant 和 Amazon Web Services 配置的方式，将多个 Service 暴露到集群之外。
+
+现在我们已经查看了 `todo` 应用的所有组件，并利用了书中中学到的知识消除了单点故障并最大化了可扩展性。
 
 
 
-
-当我们在第 1 章中部署 todo 时，我们通过 Ingress 暴露了 Service。正如我们在第 9 章中所看到的，Ingress 整合了多个 Service，使其能够在无需每个 Service 都拥有独立的外部路由 IP 地址的情况下暴露到集群之外。我们将在本章稍后还会暴露一个监控服务，因此有多个 Service 需要暴露到集群之外。然而，由于我们使用的是一个私有网络上的示例集群，我们没有底层的网络基础设施来充分发挥 Ingress 的潜力。通过改用 `NodePort`，我们能够以一种同时兼容 Vagrant 和 Amazon Web Services 配置的方式，将多个 Service 暴露到集群之外。
-
-现在我们已经查看了 todo 应用的所有组件，并利用了书中中学到的知识消除了单点故障并最大化了可扩展性。
-
-你可以在 `[`github.com/book-of-kubernetes/todo`](https://github.com/book-of-kubernetes/todo)` 查看 todo 应用的源代码，包括用于构建应用程序容器镜像的 `Dockerfile`，以及在代码更改时自动构建并发布到 Docker Hub 的 GitHub Actions。
+你可以在 [`github.com/book-of-kubernetes/todo`](https://github.com/book-of-kubernetes/todo) 查看 todo 应用的源代码，包括用于构建应用程序容器镜像的 `Dockerfile`，以及在代码更改时自动构建并发布到 Docker Hub 的 GitHub Actions。
 
 然而，尽管我们的 Kubernetes 集群现在会尽力保持此应用程序运行并保持良好性能，但我们可以在监控 todo 应用和 Kubernetes 集群方面做得更多。
 
-### 应用和集群监控
+## 应用和集群监控
 
 适当的应用和集群监控对于应用程序来说至关重要，原因有多个。首先，虽然我们的 Kubernetes 集群会尝试保持应用程序运行，但任何硬件或集群故障都可能导致应用程序处于无法工作或下降的状态。如果没有监控，我们将依赖用户来告诉我们应用程序何时宕机或运行异常，这种用户体验是糟糕的。其次，如果我们确实看到应用程序出现故障或性能问题，我们需要数据来诊断这些问题，或者尝试识别某种模式以找到根源。预先构建好监控比在出现问题后尝试应用它要容易得多。最后，我们的集群或应用程序可能会出现发生在用户察觉层级以下的问题，但这些问题预示着潜在的性能或稳定性问题。集成适当的监控允许我们在这些问题演变成更大的麻烦之前检测到它们。它还允许我们随时间衡量应用程序，以确保新增的功能没有降低其性能。
 
 幸运的是，尽管我们确实需要在每个应用程序组件层面考虑监控，但我们不需要自己构建监控框架。许多成熟的监控工具已经设计为在 Kubernetes 集群中运行，因此我们可以快速上手。在本章中，我们将查看 `kube-prometheus`，这是一个完整的工具栈，我们可以将其部署到集群中，并用于监控集群和 todo 应用。
 
-### Prometheus 监控
+## Prometheus 监控
 
-`kube-prometheus`的核心组件正如其名，是开源 Prometheus 监控软件。Prometheus 以服务器的形式部署，定期查询各种指标源并积累接收到的数据。它支持一种针对“时间序列”数据优化的查询语言，易于收集显示系统某一时刻性能的单个数据点。然后它聚合这些数据点以获取系统负载、资源利用和响应能力的状况。
+`kube-prometheus` 的核心组件正如其名，是开源 Prometheus 监控软件。Prometheus 以服务器的形式部署，定期查询各种指标源并积累接收到的数据。它支持一种针对“时间序列”数据优化的查询语言，易于收集显示系统某一时刻性能的单个数据点。然后它聚合这些数据点以获取系统负载、资源利用和响应能力的状况。
 
 对于每个暴露指标的组件，Prometheus 期望访问一个 URL 并接收标准格式返回的数据。使用 `/metrics` 路径向 Prometheus 暴露指标是很常见的。遵循这一惯例，Kub 控制平面组件已经以 Prometheus 期望的格式暴露了指标。
 
@@ -9665,7 +9750,7 @@ root@host01:~# curl -v http://host01:5000/
 
 `api-metrics.sh`
 
-```
+```bash
 #!/bin/bash
 conf=/etc/kubernetes/admin.conf
 ...
@@ -9675,7 +9760,7 @@ curl --cacert $ca --cert $cert --key $key https://192.168.61.10:6443/metrics
 
 运行此脚本会返回丰富的 API 服务器指标：
 
-```
+```bash
 root@host01:~# /opt/api-server-metrics.sh
 ...
 # TYPE rest_client_requests_total counter
@@ -9694,7 +9779,7 @@ rest_client_requests_total{code="500",host="[::1]:6443",method="GET"} 15...
 
 除了 Kubernetes 集群已经提供的所有数据外，我们还可以配置应用程序来暴露指标。我们的应用程序基于 Node.js，因此我们使用 `prom-client` 库来实现此。正如列表 20-2 所示，我们的 todo 应用像 API 服务器一样在 `/metrics` 暴露指标。
 
-```
+```bash
 root@host01:~# curl http://host01:5000/metrics
 # HELP api_success Successful responses
 # TYPE api_success counter
@@ -9713,7 +9798,7 @@ process_cpu_seconds_total{app="todo"} 0.106392
 
 响应包含与所有应用程序相关的默认指标。它还包含特定 todo 应用的计数器，用于随时间跟踪 API 使用情况和响应。
 
-### 部署 kube-prometheus
+## 部署 kube-prometheus
 
 此时，我们的 Kubernetes 集群和应用程序已准备好按需提供这些指标，但我们还没有在集群中运行 Prometheus 服务器来收集它们。为了解决这个问题，我们将部署完整的 kube-prometheus 栈。这不仅包括一个可以轻松部署和配置 Prometheus 的 Prometheus Operator，还包括其他有用工具，例如 Alertmanager（它可以响应集群和应用程序警报触发通知）以及 Grafana（我们将用它查看收集的指标的仪表板工具）。
 
@@ -9721,13 +9806,10 @@ process_cpu_seconds_total{app="todo"} 0.106392
 
 如下所示运行脚本：
 
-```
+```bash
 root@host01:~# /opt/install-kube-prometheus.sh
 ...
 ```
-
-
-
 
 这些清单文件还包含一个 Prometheus Adapter。Prometheus Adapter 实现与我们在第二部分部署到集群的 `metrics-server` 相同的 Kubernetes 指标 API，因此它暴露了从 `kubelet` 获取的 CPU 和内存数据，使我们的 `HorizontalPodAutoscaler` 能够跟踪 todo 的 CPU 利用率。然而，它也将这些利用率数据暴露给 Prometheus，以便我们可以在 Grafana 仪表板中进行观察。由于这个原因，我们在本章中使用 Prometheus Adapter 代替普通的 `metrics-server`。
 
@@ -9803,7 +9885,7 @@ prometheus-operator       20m
 
 当我们安装 `kube-prometheus` 时，它配置了多个 `ServiceMonitor` 资源。结果是我们的 Prometheus 实例已经在监控 Kubernetes 控制平面组件以及运行在集群节点上的 `kubelet` 服务。让我们看看 Prometheus 抓取指标的目标源，并看看这些指标是如何被用于填充 Grafana 仪表板的。
 
-### 集群指标
+## 集群指标
 
 安装脚本修补了监控命名空间下的 `Grafana` 和 `Prometheus` Service，将它们暴露为 `NodePort` Service。自动化脚本会打印出你可以用于访问 Prometheus 的 URL。初始页面所示图 20-1。
 
@@ -9833,16 +9915,15 @@ prometheus-operator       20m
 
 尽管我们已经为 todo 获取了实用的指标，但 Prometheus 尚未抓取我们的应用程序 Pod 以引入我们在列表 20-2 中看到的 Node.js 指标。为了配置 Prometheus 抓取我们的 todo 指标，我们需要为 Prometheus Operator 提供一个新的 `ServiceMonitor` 资源，告知它我们的 todo Service。
 
+
+
 在生产集群中，部署此类 todo 应用程序的团队没有权限在监控命名空间中创建或更新资源。然而，Prometheus Operator 默认会在所有命名空间查找 `ServiceMonitor` 资源，因此我们可以在 todo 命名空间中创建 `ServiceMonitor`。
 
-
-
-
-首先，我们需要赋予 Prometheus 权限来查看我们在 `todo` `Namespace` 中创建的 `Pods` 和 `Services`。由于此访问控制配置只需要应用于单个 `Namespace`，我们将通过创建一个 `Role` 和一个 `RoleBinding` 来来实现。以下是我们将使用的 `Role` 配置：
+首先，我们需要赋予 Prometheus 权限来查看我们在 `todo` `Namespace` 中创建的 `Pods` 和 `Services`。由于此访问控制配置只需要应用于单个 `Namespace`，我们将通过创建一个 `Role` 和一个 `RoleBinding` 来实现。以下是我们将使用的 `Role` 配置：
 
 `rbac.yaml`
 
-```
+```yaml
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: Role
@@ -9869,7 +9950,7 @@ rules:
 
 `rbac.yaml`
 
-```
+```yaml
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: RoleBinding
@@ -9890,7 +9971,7 @@ subjects:
 
 这两个 `YAML` 资源都在同一个文件中，因此我们可以一次将它们应用到集群。我们需要确保将它们应用到 `todo` `Namespace`，因为那才是我们希望启用 Prometheus 访问的 `Namespace`：
 
-```
+```console
 root@host01:~# kubectl -n todo apply -f /opt/rbac.yaml
 role.rbac.authorization.k8s.io/prometheus-k8s created
 rolebinding.rbac.authorization.k8s.io/prometheus-k8s created
@@ -9900,7 +9981,7 @@ rolebinding.rbac.authorization.k8s.io/prometheus-k8s created
 
 `svc-mon.yaml`
 
-```
+```yaml
 ---
 apiVersion: monitoring.coreos.com/v1
 kind: ServiceMonitor
@@ -9918,14 +9999,14 @@ spec:
 
 让我们将此 `ServiceMonitor` 应用到集群：
 
-```
+```console
 root@host01:~# kubectl -n todo apply -f /opt/svc-mon.yaml
 servicemonitor.monitoring.coreos.com/todo created
 ```
 
 和之前一样，我们需要确保将其部署到 `todo` `Namespace`，因为 Prometheus 将配置为在与 `ServiceMonitor` 相同的 `Namespace` 中寻找带有标签的 `Services`。
 
-由于 Prometheus Operator 正在监听新的 `ServiceMonitor` 资源（使用我们在第 17 章中看到的 API），它会捕获这个新资源并立即重新配置 Prometheus 开始抓取该 `Service`。然后 Prometheus 需要几分钟时间来注册新目标并开始抓取它们。在完成完成后返回 Prometheus Targets 页面，新的 `Service` 就会出现，如图 20-5 所示。
+由于 Prometheus Operator 正在监听新的 `ServiceMonitor` 资源（使用我们在第 17 章中看到的 API），它会捕获这个新资源并立即重新配置 Prometheus 开始抓取该 `Service`。然后 Prometheus 需要几分钟时间来注册新目标并开始抓取它们。在完成后返回 Prometheus Targets 页面，新的 `Service` 就会出现，如图 20-5 所示。
 
 ![Image](img/f0341-01.jpg)
 
@@ -9937,12 +10018,11 @@ servicemonitor.monitoring.coreos.com/todo created
 
 *图 20-6：Todo Endpoints*
 
-我们创建了一个 `ServiceMonitor` 并指定 todo `Service` 为目标，但 Prometheus 抓取的却是 `Pods`，这可能会令人惊讶。然而，Prometheus 这样工作是非常重要的。因为 Prometheus 使用普通的 HTTP 请求来抓取指标，而且 Service 流量路由为每个新连接选择随机的 `Pod`，因此 Prometheus 每次抓取时都会从随机的 `Pod` 获取指标。通过深入 `Service` 识别 `Endpoints`，Prometheus 能够抓取该 `Service` 所有 `Pods` 的指标，从而实现对整个应用程序指标的聚合。
+我们创建了一个 `ServiceMonitor` 并指定 todo `Service` 为目标，但 Prometheus 抓取的却是 `Pods`，这可能会令人惊讶。然而，Prometheus 这样工作是非常重要的。因为 Prometheus 使用普通的 HTTP 请求来抓取指标，而且 `Service` 流量路由为每个新连接选择随机的 `Pod`，因此 Prometheus 每次抓取时都会从随机的 `Pod` 获取指标。通过深入 `Service` 识别 `Endpoints`，Prometheus 能够抓取该 `Service` 所有 `Pods` 的指标，从而实现对整个应用程序指标的聚合。
 
 我们成功地将 todo 应用的 Node.js 和自定义指标整合到了 Prometheus 中，此外还有已收集的默认资源利用指标。在我们结束应用程序监控之前，让我们运行一个 Prometheus 查询来演示数据正在被拉取。首先，您应该使用自动化脚本打印出的 URL 与 todo 应用进行交互。这将确保有指标显示，并且为 Prometheus 留出了足够的时间。
 
-
-
+## 索引
 
 Amazon Web Services（亚马逊云），xxi, 16, 91, 96, 139, 250, 332
 
@@ -9950,21 +10030,21 @@ Ansible, xx, xxi
 
 反亲性 (anti-affinity), 297–300, 302, 303, 317, 330
 
-API 服务器。*参见** Kubernetes: API server
+API 服务器。*参见* Kubernetes: API server
 
-API, Kubernetes。*参见** Kubernetes: REST API
+API, Kubernetes。*参见* Kubernetes: REST API
 
-apk, 157, 183
+`apk`, 157, 183
 
 应用服务器, 5
 
-apt, 27, 92–94
+`apt`, 27, 92–94
 
 架构, 1, 3–7, 17, 87–89, 124, 144, 153, 188, 218, 228, 249, 296, 302, 303, 309, 321
 
 ArgoCD, 267
 
-ARP。*参见*地址解析协议
+ARP。*参见* 地址解析协议
 
 身份验证, 99, 105, 130, 188, 190–192, 195, 200, 203, 207, 210, 269, 275, 278, 285, 326, 329, 333
 
@@ -9972,7 +10052,7 @@ ARP。*参见*地址解析协议
 
 可用区域, 139, 297, 298, 302
 
-AWS。*参见*Amazon Web Services
+AWS。*参见* Amazon Web Services
 
 ### B
 
@@ -9980,11 +10060,11 @@ AWS。*参见*Amazon Web Services
 
 base64 编码, 277
 
-bind-tools, 157
+`bind-tools`, 157
 
 断点, 184
 
-br_netfilter, 91
+`br_netfilter`, 91
 
 Brooks, Fred, 5
 
@@ -10004,15 +10084,15 @@ Calico, 100–102, 106–109, 127, 128, 130, 131, 133–135, 137, 139–141, 144
 
 安装, 281
 
-cat, 207
+`cat`, 207
 
-cgroups, 313。*另见*Linux: cgroups
+cgroups, 313。*另见* Linux: cgroups
 
 变更跟踪, 224, 267
 
 特殊文件, 80
 
-chroot, 22, 70
+`chroot`, 22, 70
 
 云原生, 4, 6, 7, 17, 88, 89, 298, 316
 
@@ -10022,13 +10102,13 @@ chroot, 22, 70
 
 集群角色绑定, 197, 202
 
-CNI。*参见*Container Network Interface
+CNI。*参见* Container Network Interface
 
 粘性, 4
 
 协同定位, 296, 297
 
-ConfigMap, 265, 267–274, 276, 278
+`ConfigMap`, 265, 267–274, 276, 278
 
 配置, 8, 264–267, 274, 279, 280, 285, 323, 324, 330
 
@@ -10040,7 +10120,7 @@ ConfigMap, 265, 267–274, 276, 278
 
 仓库, 274
 
-containerd, 23, 25, 29, 32, 91, 107, 208
+`containerd`, 23, 25, 29, 32, 91, 107, 208
 
 容器引擎, 23, 83, 203
 
@@ -10055,10 +10135,6 @@ containerd, 23, 25, 29, 32, 91, 107, 208
 容器运行时, 9, 19, 23, 24, 27, 30, 32, 173, 174, 176, 178, 205, 206, 208, 212, 213, 218, 233, 235, 237, 238, 248, 265, 270, 278, 285, 323
 
 容器运行时接口, 27, 113, 208
-
-
-
-
 
 容器, 3, 7, 8, 12, 17, 22, 32, 107, 108, 111, 128, 167, 219, 233, 249, 279, 292, 310, 323, 343
 
@@ -10098,29 +10174,29 @@ containerd, 23, 25, 29, 32, 91, 107, 208
 
 容器存储接口, 102, 108, 250, 251, 258
 
-控制组, 见 Linux cgroups 78
+控制组，见 Linux cgroups 78
 
 CoreDNS, 156, 296, 306
 
 CPU 指令集, 168
 
-CRD, 见 CustomResourceDefinition
+CRD，见 CustomResourceDefinition
 
-CRI (容器运行时接口), 27, 113, 208
+CRI（容器运行时接口）, 27, 113, 208
 
-crict, 27, 28, 35, 36, 41, 45, 52, 55, 56, 91, 105, 107, 13, 14, 126, 132, 208, 217, 237, 251, 252
+`crictl`, 27, 28, 35, 36, 41, 45, 52, 55, 56, 91, 105, 107, 13, 14, 126, 132, 208, 217, 237, 251, 252
 
 CRI-O, 26, 32, 36, 39, 41, 43, 45, 52, 55, 57, 58, 60, 62, 63, 65, 66, 206, 208
 
-cron, 124
+`cron`, 124
 
-CronJob, 122, 243, 264
+`CronJob`, 122, 243, 264
 
 交叉关注点, 87–89, 106
 
-CSI, 见容器存储接口
+CSI，见容器存储接口
 
-curl, 76, 93, 101, 103, 109, 154, 165, 189, 190, 199, 221–223, 231, 232, 260, 261, 284, 303, 304, 333
+`curl`, 76, 93, 101, 103, 109, 154, 165, 189, 190, 199, 221–223, 231, 232, 260, 261, 284, 303, 304, 333
 
 自定义, 89, 279, 280, 285, 288, 292
 
@@ -10136,17 +10212,13 @@ DaemonSet, 101, 108, 122, 127, 128, 131, 145, 146, 158, 211, 213, 250, 298
 
 数据中心, 297
 
-dd, 72
+`dd`, 72
 
 Debian, 70, 71
 
 声明式配置, 14, 89, 90, 111, 119, 280
 
 拒绝服务, 234
-
-
-
-
 
 部署，15, 115–122, 124, 125, 127, 152–154, 156, 163, 172, 179, 181–183, 188, 194, 196, 198, 200–202, 207, 212–214, 216, 219–222, 224–229, 234–236, 238, 240, 243, 244, 248, 249, 252, 259–264, 266–269, 271–274, 278, 280, 284–289, 292, 297, 298, 316, 318–320, 324, 326–328, 330, 341, 343
 
@@ -10158,43 +10230,101 @@ Debian, 70, 71
 
 设备插件，303, 306
 
-dig，157, 158
+`dig`, 157, 158
 
 发现，8, 152
 
 分布式应用，6, 8, 88, 218, 296, 301, 309
 
-分布式存储，249, 250, 296, 326 DNS。9, 10, 16, 23, 24, 70, 72, 73, 75, 77, 82, 208 docker build，75
+分布式存储，249, 250, 296, 326
 
-docker run，10, 12, 74, 75, 81, 180 Docker Hub，77, 174, 175, 180 Docker multistage build，180 域名系统，125, 138, 155, 161, 164, 165, 209, 210, 255 机时间，211, 324, 327 E
+DNS, 9, 10, 16, 23, 24, 70, 72, 73, 75, 77, 82, 208
 
-加密，270, 278 端点，17, 155, 230, 231, 284, 299, 341, 342 环境变量，12, 70, 74, 82, 178, 179, 183, 253, 264–266, 268, 269, 272, 273, 275, 278, 328, 329 etcd，211, 274–276, 278, 280 etcdctl，275, 276 扩展资源，303–305 扩展性，280, 292, 324 F
+`docker build`, 75
 
-故障转移，7, 111, 112, 115, 116, 149, 151, 153, 160, 166, 185, 249, 256, 264, 291, 296, 323, 324, 326, 330, 322 Flannel，139 灵活性，296 FluxCD，267 G
+`docker run`, 10, 12, 74, 75, 81, 180
 
-gcc，180 gdb，183 gdbserver，184 Git，267 GitHub，334 GitHub Actions，180 GitOps，267 Google Container Engine，250 graceful 降级，1, 12, 321, 324, 332 Grafana，334 Graphics Processing Unit (GPU)，234, 303 grep，159 H
+Docker Hub, 77, 174, 175, 180
 
-head，277 高可用性，1, 9, 96, 98, 105, 109, 112, 164–166, 192, 216, 228, 256, 275, 276, 279, 288–291, 296, 298, 324, 325 HorizontalPodAutoscaler，120, 121, 280, 316, 329, 335 水平伸缩，309, 317
+Docker multistage build, 180
+
+域名系统, 125, 138, 155, 161, 164, 165, 209, 210, 255
+
+机时间, 211, 324, 327
+
+### E
+
+加密, 270, 278
+
+端点, 17, 155, 230, 231, 284, 299, 341, 342
+
+环境变量, 12, 70, 74, 82, 178, 179, 183, 253, 264–266, 268, 269, 272, 273, 275, 278, 328, 329
+
+`etcd`, 211, 274–276, 278, 280
+
+`etcdctl`, 275, 276
+
+扩展资源, 303–305
+
+扩展性, 280, 292, 324
+
+### F
+
+故障转移, 7, 111, 112, 115, 116, 149, 151, 153, 160, 166, 185, 249, 256, 264, 291, 296, 323, 324, 326, 330, 322
+
+Flannel, 139
+
+灵活性, 296
+
+FluxCD, 267
+
+### G
+
+`gcc`, 180
+
+`gdb`, 183
+
+`gdbserver`, 184
+
+Git, 267
+
+GitHub, 334
+
+GitHub Actions, 180
+
+GitOps, 267
+
+Google Container Engine, 250
+
+graceful 降级, 1, 12, 321, 324, 332
+
+Grafana, 334
+
+Graphics Processing Unit (GPU), 234, 303
+
+`grep`, 159
+
+### H
 
 
 
-
+head，277 高可用性，1, 9, 96, 98, 105, 109, 112, 164–166, 192, 216, 228, 256, 275, 276, 279, 288–291, 296, 298, 324, 325 `HorizontalPodAutoscaler`，120, 121, 280, 316, 329, 335 水平伸缩，309, 317
 
 幂等性, 90, 124, 224, 288
 
 身份管理, 191
 
-Ingress, 103, 149, 151, 152, 162–166, 332
+`Ingress`, 103, 149, 151, 152, 162–166, 332
 
-ingress 控制器, 100, 103, 160, 161, 163–165, 267
+`ingress` 控制器, 100, 103, 160, 161, 163–165, 267
 
 相互依赖性, 5
 
-iperf3, 47, 48, 239–241, 296, 297, 299–302
+`iperf3`, 47, 48, 239–241, 296, 297, 299–302
 
-iptables, 65, 66, 92, 158–160, 216, 230, 301, 329, 331
+`iptables`, 65, 66, 92, 158–160, 216, 230, 301, 329, 331
 
-iSCSI, 102
+`iSCSI`, 102
 
 隔离, 8, 10, 17, 19–23, 27, 31, 32, 48, 52, 56, 71, 84, 173, 323
 
@@ -10202,258 +10332,305 @@ iSCSI, 102
 
 Java 企业, 5
 
-Job, 122–125, 177, 264
+`Job`, 122–125, 177, 264
 
-jq, 30, 55, 56, 72, 80, 82, 83, 100, 102, 132, 136, 181, 182, 237, 260, 276, 277, 304
+`jq`, 30, 55, 56, 72, 80, 82, 83, 100, 102, 132, 136, 181, 182, 237, 260, 276, 277, 304
 
-JSONPath, 260
+`JSONPath`, 260
 
 ### K
 
-K3s, 14
+`K3s`, 14
 
-k3s, 324
+`k3s`, 324
 
-kubeadm, 90, 92–94, 96–100, 131, 188, 189, 191, 193, 206, 208–211, 250
+`kubeadm`, 90, 92–94, 96–100, 131, 188, 189, 191, 193, 206, 208–211, 250
 
-kubectl, 14, 93, 98, 99, 101, 103, 104, 106, 108, 113, 114, 117, 126, 183, 184, 188, 189, 191, 203, 207, 260, 263, 276, 278, 282
+`kubectl`, 14, 93, 98, 99, 101, 103, 104, 106, 108, 113, 114, 117, 126, 183, 184, 188, 189, 191, 203, 207, 260, 263, 276, 278, 282
 
-annotate, 104
+`annotate`, 104
 
-apply, 101, 103, 113, 119, 162, 176, 177, 195, 224, 283, 290
+`apply`, 101, 103, 113, 119, 162, 176, 177, 195, 224, 283, 290
 
-certificate, 105
+`certificate`, 105
 
-cp, 261
+`cp`, 261
 
-delete, 119, 126, 213
+`delete`, 119, 126, 213
 
-describe, 99, 107, 114, 117, 169, 171, 173, 175, 178, 181, 221, 236, 262, 283
+`describe`, 99, 107, 114, 117, 169, 171, 173, 175, 178, 181, 221, 236, 262, 283
 
-drain, 212
+`drain`, 212
 
-edit, 182
+`edit`, 182
 
-exec, 126, 136, 182, 183, 198, 255, 269, 271, 274, 328
+`exec`, 126, 136, 182, 183, 198, 255, 269, 271, 274, 328
 
-get, 98, 108, 113, 118, 127, 136, 169, 173, 176, 177, 181, 183, 280
+`get`, 98, 108, 113, 118, 127, 136, 169, 173, 176, 177, 181, 183, 280
 
-label, 169, 170
+`label`, 169, 170
 
-logs, 115, 178, 182, 224, 301
+`logs`, 115, 178, 182, 224, 301
 
-patch, 162, 301, 303
+`patch`, 162, 301, 303
 
-port-forward, 184
+`port-forward`, 184
 
-run, 108, 255
+`run`, 108, 255
 
-scale, 119, 216
+`scale`, 119, 216
 
-set, 176
+`set`, 176
 
-kube-dns, 89, 93, 96, 100, 104, 105, 113, 114, 121, 130, 131, 133, 144, 146, 173, 176, 188, 191, 192, 203, 205–218, 224–226, 228, 239, 242, 251, 252, 274, 303, 306, 330, 335, 336, 339
+`kube-dns`, 89, 93, 96, 100, 104, 105, 113, 114, 121, 130, 131, 133, 144, 146, 173, 176, 188, 191, 192, 203, 205–218, 224–226, 228, 239, 242, 251, 252, 274, 303, 306, 330, 335, 336, 339
 
-kube-prometheus, 333, 334, 336, 339
+`kube-prometheus`, 333, 334, 336, 339
 
-kube-proxy, 158–160, 162, 163, 284, 301
+`kube-proxy`, 158–160, 162, 163, 284, 301
 
-kube-vip, 91, 96, 97
+`kube-vip`, 91, 96, 97
 
-KUBECONFIG, 99, 191, 202, 245
-
-
-
-
+`KUBECONFIG`, 99, 191, 202, 245
 
 # Kubernetes
 
 xix, xxi, 4, 9, 14, 16, 17, 27, 37, 43, 44, 49, 51, 52, 67, 84, 85, 87, 101, 105, 111, 128, 134, 135, 152, 156, 157, 167, 176, 177, 179, 185, 187, 194, 199, 205, 214, 218, 219, 233, 250, 264, 265, 269, 280, 292, 296, 302, 303, 309, 310, 315, 323, 334, 343
 
 ## annotations
+
 104, 242
 
 ## API server
+
 14, 89, 96, 97, 99, 101, 105–107, 118, 126, 184, 187–196, 198–200, 203, 207, 209, 210, 275, 280, 281, 284, 285, 287–289, 292, 304, 333, 334
 
 ## autoscaling
+
 14, 104, 111, 117, 120–122, 317
 
 ## back-off algorithm
+
 174–177
 
 ## backward compatibility
+
 121
 
 ## bootstrap
+
 95, 96, 105, 190, 193, 194, 199, 207
 
 ## certificates
+
 95–97, 99, 104, 105, 189–193, 195, 199, 202, 207, 213, 275, 333
 
 ## client API
+
 284
 
 ## custom object
+
 285
 
 ## events
+
 284–288
 
 ## stream
+
 285
 
 ## watch object
+
 285
 
 ## cloud controller
+
 89, 161, 188
 
 ## cluster state
+
 88, 89, 279, 280
 
 ## conformance
+
 91
 
 ## controller manager
+
 96, 104, 105, 187, 193, 195, 212, 284
 
 ## control plane
+
 89–91, 96–98, 100, 106–109, 112, 118, 127, 130, 160, 185, 187, 188, 191, 205, 210–212, 216–218, 275, 276, 279, 284, 324, 333, 336
 
 ## cordon
+
 213, 214
 
 ## debugging
+
 114, 115, 117, 120, 149, 156, 160, 166, 167, 169, 170, 173–175, 182–185, 224, 275, 343
 
 ## distributions
+
 14, 15, 90, 144, 298
 
 ## environment variables
+
 178, 179, 183, 253, 264–266, 268, 269, 272, 273, 278, 328, 329
 
 ## event log
+
 90, 114, 117, 169, 171, 173–175, 215, 223
 
 ## group
+
 195, 197
 
 ## ingress controller
+
 100, 103, 160, 161, 161–165, 275
 
 ## IP address
+
 108, 113, 130, 133, 134, 137, 140, 144, 148, 149, 152–154, 156, 160, 209, 254, 281, 333
 
 ## labels
+
 117, 118, 120, 168, 286, 298, 327, 328, 330, 336
 
 ## large clusters
+
 297
 
 ## limits
+
 122, 170, 214, 232–235, 238, 244–246, 248, 305, 310–317, 319, 329
 
 ## logs
+
 115, 123, 178, 182, 202, 222, 223
 
-
-
-
-
 # 指标服务器
+
 104, 105, 121, 157, 158, 194, 207, 236, 330, 335
 
 # 网络
+
 51, 57, 67, 87, 91, 95, 99, 100, 103, 108, 109, 127–133, 144, 149, 151, 152, 158, 160, 166, 209, 343
 
 # 自定义
+
 144, 148, 149
 
 # 节点
+
 89–91, 97–102, 109, 112, 118, 128–130, 133, 139, 162, 165, 168, 169, 188, 192, 194, 203, 205, 211, 213–216, 218, 233, 249, 251, 255, 275, 276, 296, 298, 299, 303, 305, 309, 317–321, 323, 324, 330, 331, 336
 
 # 算子
+
 101, 256, 278, 288–292, 324–326, 343
 
 # 资源命名
+
 121, 196, 201, 256, 257, 263, 280, 282, 283, 327
 
 # 资源补丁
+
 104, 161, 162, 222, 224, 301, 303, 306
 
 # 资源架构
+
 282
 
 # 资源更新
+
 172, 176, 182, 183, 262, 264, 327
 
 # 资源版本
+
 95, 96, 112, 116, 121, 196, 280, 282, 284
 
 # 资源监听
+
 284, 285 *单个资源的名称*
 
 # REST API
+
 188, 203, 280, 303
 
 # 角色
+
 195
 
 # 调度器
+
 49, 88, 89, 102, 109, 113–115, 128, 135, 167–170, 172, 173, 187, 188, 233, 235, 296–299, 302, 303, 305, 309, 314, 317–320, 323
 
 # 安全
+
 188, 193, 243, 266–269, 278
 
 # 选择器
+
 117, 118, 120, 128, 154, 162, 168, 169, 228, 328, 331, 341
 
 # 服务账户
+
 130, 190
 
 # 静态 Pod
+
 210
 
 # 存储
+
 87, 100, 102, 108, 109, 124, 126, 127, 248–250, 267, 323, 343
 
 ### 流量路由
+
 109, 129, 130, 133, 134, 136, 137, 139–142, 149, 151, 152, 154, 155, 158, 160, 163, 165, 166, 184, 187, 188, 199, 219, 228, 279, 284, 300–302, 323, 324, 331, 343
 
 # 更新策略
+
 262
 
 # 卷访问
+
 262
 
 # 卷挂载
+
 112, 125, 251–253, 260, 272–274
 
 # Kubic
+
 27
 
 # 最小权限
+
 269
 
 # 限制
+
 33, 49, 122, 170, 214, 232–235, 238, 244–246, 248, 305, 310–317, 319, 329
 
 # CPU
+
 34, 38–45, 47, 173, 235, 237, 314, 329
 
 # 内存
+
 43–45, 47, 235–239, 314
 
 # 网络
+
 47, 48, 131, 234, 238, 240–243
 
 # Linux
+
 180
-
-
-
-
 
 `cgroups`, 37–41, 43, 44, 46, 47, 49, 236–238, 310–312, 314, 315
 
@@ -10531,362 +10708,245 @@ xix, xxi, 4, 9, 14, 16, 17, 27, 37, 43, 44, 49, 51, 52, 67, 84, 85, 87, 101, 105
 
 `kube-system` (kube 系统), 107, 108, 193, 197, 199, 200, 202
 
-
-
-
-
 # 索引
 
 ## R
+
 - `routing`, 52, 54, 60, 61, 64, 65, 92, 134–137, 139, 141, 142, 144, 149
 
 ## T
+
 - `token bucket filter`, 48, 242, 243
+
 - `tracing`, 62, 63
+
 - `traffic control`, 47–49
 
 ## V
+
 - `virtual device`, 51, 52, 54, 58, 60, 66, 129–131, 133, 134, 141, 239, 323
+
 - `virtual Ethernet (veth) pair`, 58–61, 63, 133, 134, 137, 141, 243
+
 - `VLAN`, 47, 144, 149
 
 ## N
+
 - `Network Address Translation`, 25, 52, 64–66, 134, 159, 160
+
 - `NetworkAttachmentDefinition`, 145, 148
+
 - `NFS`, 102
+
 - `NGINX`, 13, 14, 23, 52–55, 58, 61, 70–72, 75, 76, 80, 81, 103, 108, 109, 112–117, 119, 121, 152–156, 158, 159, 161–165, 170, 220, 221, 224, 225, 227–231, 236–238, 259, 260, 263, 264, 272, 274, `Node`, 304
+
 - `Node.js`, 15, 334, 339, 342
 
 ## O
+
 - `OOM killer`, 46, 315, 316
+
 - `oom_score_adj`, 315, 316
+
 - `Open Container Initiative (OCI)`, 82, 83
+
 - `OpenShift`, 26
+
 - `OpenSUSE`, 27
+
 - `optimization`, 5
+
 - `overcommitment`, 238, 314, 319
+
 - `overlay filesystem`, 78, 80, 81, 84
+
 - `overlay network`, 128–130, 134–137, 142–144, 149, 151, 152, 158, 160, 209
 
 ## P
+
 - `pause process`, 29, 55, 56, 133, 208
+
 - `peer review`, 224
+
 - `performance`, 6, 234, 238, 292, 296, 302, 307, 310, 314, 317, 321, 324, 330, 343
+
 - `performance margin`, 310, 317
-- `PersistentVolume`, 256, 272, 274
-- `PersistentVolumeClaim`, 255–260, 262–264, 325, 326
-- `pgrep`, 207, 208
-- `ping`, 54, 58–64, 66, 109, 136–139, 141, 142, 158
-- `Pod`, 15, 16, 28, 35, 44, 56, 107–109, 112–115, 117–119, 121–128, 130–136, 138–141, 143–149, 151–160, 162, 163, 167–173, 176, 177, 179, 181, 183, 184, 188, 196–202, 208–214, 217–219, 221–225, 228, 230, 233–240, 242–245, 249, 250, 252, 254, 256, 257, 260–264, 266–271, 272, 274, 278, 281, 284, 285, 287–290, 292, 296–302, 305–307, 309–311_309, 314–317, 319–321, 323–326, 334, 339, 342, 343
+
+
+
+- `PersistentVolume`，256，272，274
+- `PersistentVolumeClaim`，255–260，262–264，325，326
+- `pgrep`，207，208
+- `ping`，54，58–64，66，109，136–139，141，142，158
+- `Pod`，15，16，28，35，44，56，107–109，112–115，117–119，121–128，130–136，138–141，143–149，151–160，162，163，167–173，176，177，179，181，183，184，188，196–202，208–214，217–219，221–225，228，230，233–240，242–245，249，250，252，254，256，257，260–264，266–271，272，274，278，281，284，285，287–290，292，296–302，305–307，309–311_309，314–317，319–321，323–326，334，339，342，343
 
 ## E
-- `eviction`, 213–215, 311, 314–317, 319–321
 
-
-
-
-
-运行中， 113, 222
-
-终止中， 217, 222
-
-Podman, 26
-
-Postgres Operator, 288–291, 324–326, 328
-
-PostgreSQL, 15, 177–179, 225, 226, 252–256, 266, 267, 269, 288–291, 324–326, 328, 329
-
-可预测性， 309, 310, 314, 321
-
-PriorityClass, 317–321
-
-权限提升， 21
-
-探针， 218–220, 223, 232, 302
-
-exec， 220, 221, 223, 225
-
-HTTP, 223–225
-
-存活检查， 220–224, 226–229, 232
-
-就绪检查， 220, 226, 228–232
-
-启动检查， 220, 226–228, 232
-
-TCP， 225, 226
-
-进程， 11–14, 17, 19, 20, 33, 46
-
-隔离， 8, 10, 17, 19–23, 27, 31, 32, 48, 52, 56, 71, 84, 173, 323
-
-nice 等级， 35, 37
-
-策略， 34
-
-FIFO， 35
-
-轮询， 35
-
-分时， 35
-
-优先级， 34–37, 311, 312
-
-实时， 34, 35, 38, 310
-
-僵尸进程， 31
-
-prom-client, 334
-
-Prometheus, 333–337, 339–343
-
-抓取， 336, 337, 339–342
-
-Prometheus Adapter, 335, 339
-
-Prometheus Operator, 334, 335, 337, 339, 341
-
-Prometheus 查询， 342
-
-protobuf, 276–278
-
-protoc, 277, 278
-
-Python, 284–286
-
-### Q
-
-服务质量 (QoS), 234, 236, 238, 307, 310–313, 315–317, 321
-
-类别
-
-BestEffort, 310–312, 314, 316, 319
-
-Burstable, 310–312, 312–314, 316, 317
-
-Guaranteed, 310, 312, 314–317, 320, 329
-
-quay.io, 76
-
-配额， 232, 233, 243–248, 250, 268, 312, 321
-
-CPU, 243, 244
-
-内存, 235, 238
-
-### R
-
-Rancher, 14, 102, 324
-
-RBAC. *访问* 访问控制
-
-实时处理， 34, 35, 38, 310
-
-Redis, 72
-
-可靠性， 6, 7, 17, 73, 90, 109, 219, 233, 248, 296, 302, 321
-
-更新， 191
-
-ReplicaSet, 115–118
-
-复制， 291
-
-ReplicationController, 116, 280
-
-请求， 17, 170, 233–235, 244, 246, 248, 304–306, 310–317, 319, 329, 330
-
-CPU, 171, 172, 235, 238
-
-内存, 235, 238
-
-韧性， 7, 9, 14, 87, 90, 109, 151, 152, 166, 218, 280, 292, 296, 302, 306, 321, 323, 330, 343
-
-ResourceQuota, 244
-
-响应性， 226, 310, 333, 334
-
-重启策略， 122
-
-Rocky Linux, 10, 71
-
-Role, 195–197, 282, 286, 339, 340
-
-角色聚合， 286, 287
-
-基于角色的访问控制. *访问* 访问控制
-
-RoleBinding, 197, 202, 245, 282, 287, 339, 340
-
-根本原因， 332
-
-rsyslog, 21
-
-### S
-
-SAN (备用名称)
-
-可扩展性， 4, 6, 16, 17, 87, 90, 109, 112, 115, 151, 152, 166, 185, 249, 279, 295, 296, 302, 306, 309, 317, 323, 324, 332, 343
-
-调度器， 171, 317
-
-
-
-
-
-屏幕, xxi
-
-密钥, 193, 195, 265, 269–272, 274, 276–278, 325, 326, 329
-
-base64 编码, 270, 271
-
-二进制内容, 271
-
-安全, 20, 295
-
-sed, 216
-
-段错误, 182, 183, 185
-
-自愈能力, 90, 118
-
-信号量, 305
-
-seq, 232
-
-服务, 17, 92, 104, 124–126, 134, 149, 151–166, 210, 222, 228–231, 240, 243, 254, 255, 284, 288, 289, 291, 299–302, 325, 326, 328–332, 336, 337, 339–343
-
-ClusterIP, 154, 161, 162, 230, 326
-
-端点, 17, 155, 230, 231, 284, 299, 339, 341, 342
-
-ExternalName, 161
-
-无头, 161, 254, 255
-
-LoadBalancer, 161
-
-NodePort, 104, 161–163, 165, 331, 332, 337
-
-流量策略, 301
-
-集群, 301
-
-本地, 301, 302
-
-服务账户, 194, 195, 197–200, 207, 210, 286, 287, 340
-
-服务监控, 336, 337, 339–342
-
-SHA-256, 83
-
-作用范围, 26, 82
-
-套, 5, 28, 208, 251, 252
-
-专用硬件, 295, 296, 303, 306, 317
-
-Spring Boot, 232
-
-ss, 162
-
-SSL 证书, 165
-
-稳定性, 332
-
-有状态组件, 295
-
-有状态副本, 122, 124, 126, 127, 196, 252–256, 259, 264, 289–291, 325
-
-无状态组件, 15, 249, 295, 326, 329
-
-存储类, 250–252, 255, 257–259
-
-strace, 183
-
-压力, 35, 36, 39, 40, 42, 44–46
-
-strings, 207
-
-备用名称, 165
-
-sysctl, 92
-
-systemctl, 206, 215, 216
-
-systemd, 206
-
-### T
-污点, 95, 99–102
-
-tar, 83
-
-TCP, 159, 160
-
-tcpdump, 62, 64, 138, 141–143
-
-限流, 314
-
-时间序列数据, 333
-
-tmpfs, 210
-
-tmux, xxi
-
-待办应用, 15, 324, 325, 330–335, 339, 342, 343
-
-容忍, 101, 102
-
-top, 36, 41, 42
-
-拓扑感知, 302
-
-### U
-Ubuntu, 10, 23, 71, 93, 138
-
-UDP, 139, 142–144
-
-ulimit, 43
-
-unshare, 31
-
-更新策略, 327
-
-滚动更新, 327
-
-用户体验, 332
-
-利用率, 38, 104, 121, 122, 247, 310, 313, 314, 317, 330, 333, 335, 338, 339, 342
-
-### V
-Vagrant, xxi, 16, 91, 96, 209, 331, 332
-
-vi, 182
-
-VirtualBox, xxi
-
-虚拟可扩展网络, 139, 142–144, 149
-
-虚拟机, xx, 11–13, 20, 32, 78, 90, 91, 130, 139, 303
-
-卷挂载, 12, 26, 30, 112, 125, 251–253, 260, 272–274, 303
-
-VXLAN, 139, 142–144, 149
-
-
-
-
-
-WSL, xx
+- `eviction`，213–215，311，314–317，319–321
+- 运行中，113，222
+- 终止中，217，222
+- `Podman`，26
+- `Postgres Operator`，288–291，324–326，328
+- `PostgreSQL`，15，177–179，225，226，252–256，266，267，269，288–291，324–326，328，329
+- 可预测性，309，310，314，321
+- `PriorityClass`，317–321
+- 权限提升，21
+- 探针，218–220，223，232，302
+  - `exec`，220，221，223，225
+  - `HTTP`，223–225
+  - 存活检查，220–224，226–229，232
+  - 就绪检查，220，226，228–232
+  - 启动检查，220，226–228，232
+  - `TCP`，225，226
+- 进程，11–14，17，19，20，33，46
+- 隔离，8，10，17，19–23，27，31，32，48，52，56，71，84，173，323
+- `nice` 等级，35，37
+- 策略，34
+  - `FIFO`，35
+  - 轮询，35
+  - 分时，35
+- 优先级，34–37，311，312
+  - 实时，34，35，38，310
+- 僵尸进程，31
+- `prom-client`，334
+- `Prometheus`，333–337，339–343
+  - 抓取，336，337，339–342
+- `Prometheus Adapter`，335，339
+- `Prometheus Operator`，334，335，337，339，341
+- `Prometheus` 查询，342
+- `protobuf`，276–278
+- `protoc`，277，278
+- `Python`，284–286
+
+## Q
+
+- 服务质量（`QoS`），234，236，238，307，310–313，315–317，321
+  - 类别
+    - `BestEffort`，310–312，314，316，319
+    - `Burstable`，310–312，312–314，316，317
+    - `Guaranteed`，310，312，314–317，320，329
+- `quay.io`，76
+- 配额，232，233，243–248，250，268，312，321
+  - `CPU`，243，244
+  - 内存，235，238
+
+## R
+
+- `Rancher`，14，102，324
+- `RBAC`。访问控制
+- 实时处理，34，35，38，310
+- `Redis`，72
+- 可靠性，6，7，17，73，90，109，219，233，248，296，302，321
+- 更新，191
+- `ReplicaSet`，115–118
+- 复制，291
+- `ReplicationController`，116，280
+- 请求，17，170，233–235，244，246，248，304–306，310–317，319，329，330
+  - `CPU`，171，172，235，238
+  - 内存，235，238
+- 韧性，7，9，14，87，90，109，151，152，166，218，280，292，296，302，306，321，323，330，343
+- `ResourceQuota`，244
+- 响应性，226，310，333，334
+- 重启策略，122
+- `Rocky Linux`，10，71
+- `Role`，195–197，282，286，339，340
+- 角色聚合，286，287
+- 基于角色的访问控制。访问控制
+- `RoleBinding`，197，202，245，282，287，339，340
+- 根本原因，332
+- `rsyslog`，21
+
+## S
+
+- `SAN`（备用名称）
+- 可扩展性，4，6，16，17，87，90，109，112，115，151，152，166，185，249，279，295，296，302，306，309，317，323，324，332，343
+- 调度器，171，317
+- 屏幕，xxi
+- 密钥，193，195，265，269–272，274，276–278，325，326，329
+  - `base64` 编码，270，271
+  - 二进制内容，271
+- 安全，20，295
+- `sed`，216
+- 段错误，182，183，185
+- 自愈能力，90，118
+- 信号量，305
+- `seq`，232
+- 服务，17，92，104，124–126，134，149，151–166，210，222，228–231，240，243，254，255，284，288，289，291，299–302，325，326，328–332，336，337，339–343
+  - `ClusterIP`，154，161，162，230，326
+  - 端点，17，155，230，231，284，299，339，341，342
+  - `ExternalName`，161
+  - 无头，161，254，255
+  - `LoadBalancer`，161
+  - `NodePort`，104，161–163，165，331，332，337
+- 流量策略，301
+  - 集群，301
+  - 本地，301，302
+- 服务账户，194，195，197–200，207，210，286，287，340
+- 服务监控，336，337，339–342
+- `SHA-256`，83
+- 作用范围，26，82
+- 套，5，28，208，251，252
+- 专用硬件，295，296，303，306，317
+- `Spring Boot`，232
+- `ss`，162
+- `SSL` 证书，165
+- 稳定性，332
+- 有状态组件，295
+- 有状态副本，122，124，126，127，196，252–256，259，264，289–291，325
+- 无状态组件，15，249，295，326，329
+- 存储类，250–252，255，257–259
+- `strace`，183
+- 压力，35，36，39，40，42，44–46
+- `strings`，207
+- 备用名称，165
+- `sysctl`，92
+- `systemctl`，206，215，216
+- `systemd`，206
+
+## T
+
+- 污点，95，99–102
+- `tar`，83
+- `TCP`，159，160
+- `tcpdump`，62，64，138，141–143
+- 限流，314
+- 时间序列数据，333
+- `tmpfs`，210
+- `tmux`，xxi
+- 待办应用，15，324，325，330–335，339，342，343
+- 容忍，101，102
+- `top`，36，41，42
+- 拓扑感知，302
+
+## U
+
+- `Ubuntu`，10，23，71，93，138
+- `UDP`，139，142–144
+- `ulimit`，43
+- `unshare`，31
+- 更新策略，327
+  - 滚动更新，327
+- 用户体验，332
+- 利用率，38，104，121，122，247，310，313，314，317，330，333，335，338，339，342
+
+## V
+
+- `Vagrant`，xxi，16，91，96，209，331，332
+- `vi`，182
+- `VirtualBox`，xxi
+- 虚拟可扩展网络，139，142–144，149
+- 虚拟机，xx，11–13，20，32，78，90，91，130，139，303
+- 卷挂载，12，26，30，112，125，251–253，260，272–274，303
+- `VXLAN`，139，142–144，149
+- `WSL`，xx
 
 ## X
 
-xxd, 277
+- `xxd`，277
 
 ## Y
 
-YAML 多行字符串, 273
+- `YAML` 多行字符串，273
+- `yum`，11
 
-yum, 11
-
-*The Book of Kubernetes* 中使用的字体是 New Baskerville, Futura, The Sans Mono Condensed 和 Dogma。该书由 Boris Veytsman (2008/06/06 v1.3 为 No Starch Press 排版书籍) 使用 `LATEX 2*[ε]` 软件包 `nostarch` 进行排版。
+*The Book of Kubernetes* 中使用的字体是 New Baskerville、Futura、The Sans Mono Condensed 和 Dogma。该书由 Boris Veytsman（2008/06/06 v1.3 为 No Starch Press 排版书籍）使用 `LATEX 2*[ε]` 软件包 `nostarch` 进行排版。

@@ -1,28 +1,33 @@
-# 如何在 Python 中登录 Perforce（p4 命令行）
+
+# 如何在 Python 中登录 Perforce（`p4` 命令行）
 
 > 原文：[`techbyexample.com/how-to-login-in-perforcep4-command-line-in-python/`](https://techbyexample.com/how-to-login-in-perforcep4-command-line-in-python/)
 
-要在程序中登录 p4，您可以编写类似下面的脚本，它接受用户名和密码。这分为两个步骤进行。
+要在程序中登录 `p4`，您可以编写类似下面的脚本，它接受用户名和密码。这分为两个步骤进行。
 
-**步骤 1：设置环境变量。**（在 ~/.bashrc 或 ~/.zshrc 或等效文件中创建条目并使其生效）
+## 步骤 1：设置环境变量
 
-```go
+在 `~/.bashrc`、`~/.zshrc` 或等效文件中创建条目并使其生效：
+
+```bash
 export P4USER=myuser
 export P4PORT=ssl:my.server.perforce.com:31211
 ```
 
+```bash
 source ~/.bashrc 或 ~/.zshrc
+```
 
-**步骤 2：使用‘p4 trust’信任机器并尝试登录**
+## 步骤 2：使用 `p4 trust` 信任机器并尝试登录
 
-以下代码中有两个函数，一个是用于运行操作系统命令，另一个是用于执行登录。在脚本中，我们首先检查机器与服务器之间是否建立了信任关系？然后进一步尝试登录。
+以下代码中有两个函数，一个是用于运行操作系统命令，另一个是用于执行登录。在脚本中，我们首先检查机器与服务器之间是否建立了信任关系，然后进一步尝试登录。
 
-```go
+```python
 import os
 import sys
 import subprocess
 
-#Utility function to run the OS commands
+# Utility function to run the OS commands
 def execute_shell_command(commands, raise_if_error=True, capture_output=True):
     print('Running Command: %s' % ' '.join(commands))
 
@@ -46,9 +51,9 @@ def execute_shell_command(commands, raise_if_error=True, capture_output=True):
 
     return exit_status
 
-#Function to perform perforce login 
+# Function to perform perforce login
 def p4_login(ticket, attempt_login=True):
-    #First check trust is established between P4 server and the machine.
+    # First check trust is established between P4 server and the machine.
     if ticket is not None:
         exitStatus = execute_shell_command(['p4', 'trust', '-y', '-f'], raise_if_error=False)
         if exitStatus != 0:
@@ -67,16 +72,20 @@ def p4_login(ticket, attempt_login=True):
             else:
                 sys.exit('Error: You have not logged into Perforce successfully. Please check perforce documentation')
 
-#Now use it something like this
+# Now use it something like this
 p4_ticket = os.environ.get('P4_TICKET')
 p4_login(p4_ticket)
 ```
 
-**要使用该脚本，将上面的脚本保存在某个文件中，例如‘p4_login.py’，然后在终端中运行以下命令。**
+要使用该脚本，将上面的脚本保存在某个文件中，例如 `p4_login.py`，然后在终端中运行以下命令：
 
-```go
-source ~/.bashrc or ~/.zshrc 
+```bash
+source ~/.bashrc or ~/.zshrc
 python3 p4_login.py
 ```
 
-+   [p4](https://techbyexample.com/tag/p4/)*   [p4 登录](https://techbyexample.com/tag/p4-login/)*   [perforce](https://techbyexample.com/tag/perforce/)*   [python](https://techbyexample.com/tag/python/)*   [python3](https://techbyexample.com/tag/python3/)
+- [p4](https://techbyexample.com/tag/p4/)
+- [p4 登录](https://techbyexample.com/tag/p4-login/)
+- [perforce](https://techbyexample.com/tag/perforce/)
+- [python](https://techbyexample.com/tag/python/)
+- [python3](https://techbyexample.com/tag/python3/)

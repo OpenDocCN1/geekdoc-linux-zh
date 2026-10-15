@@ -1,3 +1,4 @@
+
 # 附录 T. ASCII 表
 
 > 原文：[`tldp.org/LDP/abs/html/asciitable.html`](https://tldp.org/LDP/abs/html/asciitable.html)
@@ -66,7 +67,7 @@ exit $?
 #-------------------------------------------------------------------------
 #-- File:  ascii.sh    Print ASCII chart, base 10/8/16         (JETS-2012)
 #-------------------------------------------------------------------------
-#-- Usage: ascii [oct&#124;dec&#124;hex&#124;help&#124;8&#124;10&#124;16]
+#-- Usage: ascii [oct|dec|hex|help|8|10|16]
 #--
 #-- This script prints out a summary of ASCII char codes from Zero to 127.
 #-- Numeric values may be printed in Base10, Octal, or Hex.
@@ -78,14 +79,14 @@ exit $?
 [ -n "$BASH_VERSION" ] && shopt -s extglob
 
 case "$1" in
-   oct&#124;[Oo]?([Cc][Tt])&#124;8)       Obase=Octal;  Numy=3o;;
-   hex&#124;[Hh]?([Ee][Xx])&#124;16&#124;[Xx]) Obase=Hex;    Numy=2X;;
-   help&#124;?(-)[h?])        sed -n '2,/^[ ]*$/p' $0;exit;;
-   code&#124;[Cc][Oo][Dd][Ee])sed -n '/case/,$p'   $0;exit;;
+   oct|[Oo]?([Cc][Tt])|8)       Obase=Octal;  Numy=3o;;
+   hex|[Hh]?([Ee][Xx])|16|[Xx]) Obase=Hex;    Numy=2X;;
+   help|?(-)[h?])        sed -n '2,/^[ ]*$/p' $0;exit;;
+   code|[Cc][Oo][Dd][Ee])sed -n '/case/,$p'   $0;exit;;
    *) Obase=Decimal
 esac # CODE is actually shorter than the chart!
 
-printf "\t\t## $Obase ASCII Chart ##\n\n"; FM1="&#124;%0${Numy:-3d}"; LD=-1
+printf "\t\t## $Obase ASCII Chart ##\n\n"; FM1="|%0${Numy:-3d}"; LD=-1
 
 AB="nul soh stx etx eot enq ack bel bs tab nl vt np cr so si dle"
 AD="dc1 dc2 dc3 dc4 nak syn etb can em sub esc fs gs rs us sp"
@@ -95,14 +96,14 @@ ABR[127]=del
 
 IDX=0
 while [ $IDX -le 127 ] && CHR="${ABR[$IDX]}"
-   do ((${#CHR}))&& FM2='%-3s'&#124;&#124; FM2=`printf '\\\\%o  ' $IDX`
-      printf "$FM1 $FM2" "$IDX" $CHR; (( (IDX+=1)%8))&#124;&#124;echo '&#124;'
+   do ((${#CHR}))&& FM2='%-3s'|| FM2=`printf '\\\\%o  ' $IDX`
+      printf "$FM1 $FM2" "$IDX" $CHR; (( (IDX+=1)%8))||echo '|'
    done
 
 exit $?
 ```
 
-**示例 T-3. 第三个 ASCII 表脚本，使用 *awk*** 
+**示例 T-3. 第三个 ASCII 表脚本，使用 *awk***
 
 ```sh
 #!/bin/bash
@@ -113,7 +114,7 @@ exit $?
 #-------------------------------------------------------------------------
 #-- File:  ascii     Print ASCII chart, base 10/8/16         (JETS-2010)
 #-------------------------------------------------------------------------
-#-- Usage: ascii [oct&#124;dec&#124;hex&#124;help&#124;8&#124;10&#124;16]
+#-- Usage: ascii [oct|dec|hex|help|8|10|16]
 #--
 #-- This script prints a summary of ASCII char codes from Zero to 127.
 #-- Numeric values may be printed in Base10, Octal, or Hex (Base16).
@@ -125,10 +126,10 @@ exit $?
 [ -n "$BASH_VERSION" ] && shopt -s extglob
 
 case "$1" in
-   oct&#124;[Oo]?([Cc][Tt])&#124;8)       Obase=Octal;  Numy=3o;;
-   hex&#124;[Hh]?([Ee][Xx])&#124;16&#124;[Xx]) Obase=Hex;    Numy=2X;;
-   help&#124;?(-)[h?])        sed -n '2,/^[ ]*$/p' $0;exit;;
-   code&#124;[Cc][Oo][Dd][Ee])sed -n '/case/,$p'   $0;exit;;
+   oct|[Oo]?([Cc][Tt])|8)       Obase=Octal;  Numy=3o;;
+   hex|[Hh]?([Ee][Xx])|16|[Xx]) Obase=Hex;    Numy=2X;;
+   help|?(-)[h?])        sed -n '2,/^[ ]*$/p' $0;exit;;
+   code|[Cc][Oo][Dd][Ee])sed -n '/case/,$p'   $0;exit;;
    *) Obase=Decimal
 esac
 export Obase   # CODE is actually shorter than the chart!
@@ -137,8 +138,8 @@ awk 'BEGIN{print "\n\t\t## "ENVIRON["Obase"]" ASCII Chart ##\n"
            ab="soh,stx,etx,eot,enq,ack,bel,bs,tab,nl,vt,np,cr,so,si,dle,"
            ad="dc1,dc2,dc3,dc4,nak,syn,etb,can,em,sub,esc,fs,gs,rs,us,sp"
            split(ab ad,abr,",");abr[0]="nul";abr[127]="del";
-           fm1="&#124;%0'"${Numy:- 4d}"' %-3s"
-           for(idx=0;idx<128;idx++){fmt=fm1 (++colz%8?"":"&#124;\n")
+           fm1="|%0'"${Numy:- 4d}"' %-3s"
+           for(idx=0;idx<128;idx++){fmt=fm1 (++colz%8?"":"|\n")
            printf(fmt,idx,(idx in abr)?abr[idx]:sprintf("%c",idx))} }'
 
 exit $?

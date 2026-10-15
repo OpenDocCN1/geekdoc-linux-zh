@@ -1,3 +1,4 @@
+
 # 第二十四章。函数
 
 > 原文：[`tldp.org/LDP/abs/html/functions.html`](https://tldp.org/LDP/abs/html/functions.html)
@@ -10,7 +11,7 @@
 
 24.3\. 无局部变量的递归
 
-类似于“真实”的编程语言，Bash 有函数，尽管实现上有些受限。函数是一个子程序，一个实现一系列操作的 代码块，一个执行指定任务的“黑盒”。无论哪里有重复的代码，当任务在程序上只有细微的变化时，考虑使用函数。
+类似于“真实”的编程语言，Bash 有函数，尽管实现上有些受限。函数是一个子程序，一个实现一系列操作的代码块，一个执行指定任务的“黑盒”。无论哪里有重复的代码，当任务在程序上只有细微的变化时，考虑使用函数。
 
 **函数** `*function_name*` {
 
@@ -40,18 +41,20 @@
 
 | ![注意](img/068cd6dc5ba56f1437f9ae6e0cb52ede.png) | 函数可以被“压缩”成单行。
 
-&#124;  ```sh fun () { echo "This is a function"; echo; }
+```
+fun () { echo "This is a function"; echo; }
 #                                 ^     ^
-```  &#124;
+```
 
 然而，在这种情况下，函数中的最后一个命令后面必须跟一个分号。
 
-&#124;  ```sh fun () { echo "This is a function"; echo } # Error!
+```
+fun () { echo "This is a function"; echo } # Error!
 #                                       ^
 
 fun2 () { echo "Even a single-command function? Yes!"; }
 #                                                    ^
-```  &#124;
+```
 
 |
 
@@ -130,7 +133,8 @@ f1  #  Function "f2" is not actually called until this point,
 
 | ![注意](img/068cd6dc5ba56f1437f9ae6e0cb52ede.png) | 函数可能不为空！
 
-&#124;  ```sh #!/bin/bash
+```
+#!/bin/bash
 # empty-function.sh
 
 empty ()
@@ -171,7 +175,7 @@ not_empty ()
 } # Contains a : (null command), and this is okay.
 
 # Thank you, Dominick Geyer and Thiemo Kellner.
-```  &#124;
+```
 
 |
 
@@ -203,7 +207,7 @@ f2  #  Now, it's all right to call "f2",
 函数声明可以出现在不太可能的位置，甚至是在命令本应出现的地方。
 
 ```sh
-ls -l &#124; foo() { echo "foo"; }  # Permissible, but useless.
+ls -l | foo() { echo "foo"; }  # Permissible, but useless.
 
 if [ "$USER" = bozo ]
 then
@@ -228,7 +232,7 @@ exit  # Invokes "exit ()" function, not "exit" builtin.
 filename=file1
 
 [ -f "$filename" ] &&
-foo () { rm -f "$filename"; echo "File "$filename" deleted."; } &#124;&#124;
+foo () { rm -f "$filename"; echo "File "$filename" deleted."; } ||
 foo () { echo "File "$filename" not found."; touch bar; }
 
 foo
@@ -260,7 +264,8 @@ foo
 
 | ![注意](img/068cd6dc5ba56f1437f9ae6e0cb52ede.png) | 当脚本中出现同一函数的不同版本时会发生什么？
 
-&#124;  ```sh #  As Yan Chen points out,
+```
+#  As Yan Chen points out,
 #  when a function is defined multiple times,
 #  the final version is what is invoked.
 #  This is not, however, particularly useful.
@@ -282,6 +287,6 @@ exit $?
 #  It is even possible to use functions to override
 #+ or preempt system commands.
 #  Of course, this is *not* advisable.
-```  &#124;
+```
 
 |

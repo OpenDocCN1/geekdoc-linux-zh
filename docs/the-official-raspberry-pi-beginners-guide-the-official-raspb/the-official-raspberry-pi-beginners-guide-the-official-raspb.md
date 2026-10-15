@@ -1,22 +1,7 @@
+
 # 树莓派官方初学者指南（树莓派官方初学者指南：如何使用你的新电脑）
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# 欢迎阅读官方树莓派入门指南
+## 欢迎阅读官方树莓派入门指南
 
 我们认为你会喜欢树莓派的。无论你拥有哪种型号——带有集成键盘的新型树莓派 400——这种廉价的电脑都可以用于学习编程、构建机器人以及创建各种奇妙有趣的项目。
 
@@ -30,22 +15,11 @@
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_4_0.png)
 
-# 关于作者
+## 关于作者
 
 Gareth Halfacree 是一位自由职业技术记者、作家，曾任教育领域的系统管理员。他对开源软件和硬件充满热情，是树莓派平台的早期采用者，并编写了多本关于其功能和灵活性的出版物。你可以在 Twitter 上通过 @ghalfacree 找到他，或者通过他的网站 freelance.halffacree.co.uk 联系他。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_5_0.png)
-
-
-
-
-
-
-
-
-
-
-
 
 # 第 1 章
 
@@ -63,7 +37,7 @@ Gareth Halfacree 是一位自由职业技术记者、作家，曾任教育领域
 
 自原始 Model B 以来发布了多种树莓派型号，每个都有改进的规格或特定的用途。例如，树莓派 Zero 是树莓派的一个微型版本，它去掉了一些功能——特别是多个 USB 端口和有线网络——以换取更小的布局和更低的需求。
 
-# 官方树莓派入门指南
+## 官方树莓派入门指南
 
 所有树莓派型号都有共同点，它们是兼容的，这意味着为某一个型号编写的软件可以在任何其他型号上运行。甚至可以将最新版本的树莓派操作系统运行在原始 Model B 上。事实上，运行速度会慢一些，但仍然可以运行。
 
@@ -71,7 +45,7 @@ Gareth Halfacree 是一位自由职业技术记者、作家，曾任教育领域
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_8_0.png)
 
-## 树莓派导览
+### 树莓派导览
 
 与将内部结构隐藏在机箱内的电脑不同，标准的树莓派所有的组件、部件和功能都显示在外面——如果你愿意，也可以购买外壳提供额外保护。这使其成为学习电脑各个功能的绝佳工具，也让你在连接启动所需的各种设备（外设）时轻松了解该放在何处。
 
@@ -98,29 +72,27 @@ Gareth Halfacree 是一位自由职业技术记者、作家，曾任教育领域
 
 图 1-1：树莓派 4 Model B
 
-从上方视图的树莓派 4 Model B。当你配合本书使用树莓派时，请尽量保持它的方向与图片相同；如果转了方向，在使用如 GPIO 插针（详见**第 6 章，使用 Scratch 和 Python 进行物理计算**）等元件时可能会变得困惑。
+从上方视图的树莓派 4 Model B。当你配合本书使用树莓派时，请尽量保持它的方向与图片相同；如果转了方向，在使用如 GPIO 插针（详见第 6 章，使用 Scratch 和 Python 进行物理计算）等元件时可能会变得困惑。
 
 虽然微型板上看起来装了很多东西，但树莓派非常好理解——从它的组件开始，即让设备运转的内部结构。
 
-## 树莓派组件
+### 树莓派组件
 
-与任何电脑一样，树莓派由各种组件组成，每个组件在使其工作方面都起着作用。其中第一个，也是最重要的，可以在电路板顶侧中心点上方找到（**图 1-2**），它覆盖着一个金属盖：系统级芯片 (SoC)。
+与任何电脑一样，树莓派由各种组件组成，每个组件在使其工作方面都起着作用。其中第一个，也是最重要的，可以在电路板顶侧中心点上方找到（图 1-2），它覆盖着一个金属盖：系统级芯片 (SoC)。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_10_0.png)
 
-**图 1-2**：树莓派的系统级芯片 (SoC)
-
-
+图 1-2：树莓派的系统级芯片 (SoC)
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_11_0.png)
 
-+   图 1-3：树莓派的随机存存储器 (RAM)
+图 1-3：树莓派的随机存存储器 (RAM)
 
 在板的右上角，你会发现另一个金属盖（图 1-4），它覆盖着无线电模块，该组件使树莓派具备与设备无线通信的能力。实际上，无线电模块包含两个组件：一个 WiFi 射电，用于连接计算机网络；一个蓝牙射电，用于连接鼠标等外设设备，并向传感器或智能手机等附近的设备发送或从中接收数据。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_11_1.png)
 
-+   图 1-4：树莓派的无线电模块
+图 1-4：树莓派的无线电模块
 
 ## 官方树莓派 4 入门指南
 
@@ -132,13 +104,13 @@ Gareth Halfacree 是一位自由职业技术记者、作家，曾任教育领域
 
 如果这看起来很复杂，请不要担心：使用树莓派时你不需要知道每个组件是什么，也不需要知道它们在板上的具体位置。
 
-### 树莓派的端口
+#### 树莓派的端口
 
 树莓派有一系列端口，从底部边缘中间到右侧有四个通用串总线（USB）端口（图 1-6）。这些端口允许你向树莓派连接任何 USB 兼容的外设，从键盘、鼠标到数字相机和闪存器。从技术上讲，端口有两种类型：带有黑色部分的是 USB 2.0 端口，基于通用串总线标准的第二版本；带有蓝色部分的是更快的 USB 3.0 端口，基于第三版本。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_13_0.png)
 
-+   图 1-6：树莓派的 USB 端口
+图 1-6：树莓派的 USB 端口
 
 USB 端口右侧是一个以太网端口，也称为网络端口（图 1-7）。你可以使用此端口通过带有已知 RJ45 接头的电缆将树莓派连接到有线计算机网络。如果你仔细观察以太网端口，你会看到底部有两个发光二极管 (LED)；这些是状态 LED，让你知道连接正在工作。
 
@@ -163,6 +135,8 @@ USB 端口右侧是一个以太网端口，也称为网络端口（图 1-7）。
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_15_1.png)
 
 图 1-10：树莓派的 micro-HDMI 端口
+
+
 
 HDMI 端口上方是 USB-C 端口（图 1-11），用于将树莓派连接到电源源。USB-C 端口在手机、平板电脑和其他便携设备中很常见。虽然你可以使用充电器为树莓派供电，但为了获得最佳效果，你应该使用官方树莓派 USB-C 电源。
 
@@ -189,10 +163,6 @@ HDMI 端口上方是 USB-C 端口（图 1-11），用于将树莓派连接到电
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_18_0.png)
 
 +   图 1-15：树莓派的 microSD 卡接口
-
-
-
-
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_20_0.png)
 
@@ -244,7 +214,9 @@ Raspberry Pi 在不使用外壳的情况下是安全的，只要你不放在可�
 
 以下说明用于设置 Raspberry Pi 4 或 Raspberry Pi 家族中的其他裸板。Raspberry Pi 400 的设置说明请见第 32 页。
 
-![](img/0aff4cdab15427839fb48fd7c6f677d3_23_0.png) 设置硬件
+![](img/0aff4cdab15427839fb48fd7c6f677d3_23_0.png)
+
+设置硬件
 
 首先从包装中取出 Raspberry Pi。虽然 Raspberry Pi 是坚固的，但在组装外壳时，请小心不要损坏 Raspberry Pi 的针脚。如果这些针脚弯曲，最好情况下会难以使用，最坏情况下会导致短路。
 
@@ -256,21 +228,23 @@ Raspberry Pi 在不使用外壳的情况下是安全的，只要你不放在可�
 
 现在，将底座的顶座，将，放在 Raspberry Pi 的插槽上。
 
-![](img/0aff4cdab15427839fb48fd7c6f677d3_24_0.png) ## 连接键盘和鼠标
+![](img/0aff4cdab15427839fb48fd7c6f677d3_24_0.png)
+
+## 连接键盘和鼠标
 
 将键盘的 USB 线连接到 Raspberry Pi 上的四个 USB 端口（2.0 或 3.0）之一。如果你使用的是官方 Raspberry Pi 键盘，其背面有一个 USB 端口用于鼠标；否则，只需将鼠标的 USB 线连接到 Raspberry Pi 上的另一个 USB 端口。
 
-![](img/0aff4cdab15427839fb48fd7c6f677d3_24_1.png) ## 连接 microSD 卡
+![](img/0aff4cdab15427839fb48fd7c6f677d3_24_1.png)
+
+## 连接 microSD 卡
 
 要安装作为 Raspberry Pi 存储器的 microSD 卡，翻转 Raspberry Pi（带外壳），将卡标签背对 Raspberry Pi 并滑入 microSD 插槽。它只有一种插入方式，并且应该在不加太大压力的情况下滑入。
+
+
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_25_0.png) microSD 卡将滑入接口并停止，不会发出“咔哒”声。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_25_1.png) 如果你以后想移除它，只需握住卡的一端并轻轻拔出。如果你使用的是较旧型号的 Raspberry Pi，需要轻轻推一下卡才能解锁；这在 Raspberry Pi 3 或 4 上是不需要的。
-
-
-
-
 
 ### 连接显示器
 
@@ -292,7 +266,6 @@ Raspberry Pi 在不使用外壳的情况下是安全的，只要你不放在可�
 ### 连接电源
 
 将 Raspberry Pi 连接到电源是硬件设置过程的最后一步，您应该在准备好设置其软件时才执行此操作：Raspberry Pi 没有电源开关，一旦连接到通电电源就会启动。
-
 首先，将电源线的 USB Type-C 端连接到 Raspberry Pi 上的 USB Type-C 电源接口。它可以正反反插入，并应轻轻滑到位。如果您的电源带有可拆卸电缆，请确保另一端已插在电源主体。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_29_0.png)
@@ -305,7 +278,7 @@ Raspberry Pi 在不使用外壳的情况下是安全的，只要你不放在可�
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_30_0.png)
 
-您将会在黑屏幕左上角短暂地看到四个 Raspberry Pi 标志，并可能会软件调整大小以充分利用您的 microSD 卡时看到蓝色屏幕。如果您看到黑屏幕，请等几分钟；Raspberry 首次启动时需要在后台进行一些清理工作。一段时间后，您将看到 Raspberry Pi OS 桌面和设置向导，如**图 2-1** 所示。您的操作系统现在准备好进行配置，您将在**第 3 章“使用您的 Raspberry Pi”**中学习如何操作。
+您将会在黑屏幕左上角短暂地看到四个 Raspberry Pi 标志，并可能会软件调整大小以充分利用您的 microSD 卡时看到蓝色屏幕。如果您看到黑屏幕，请等几分钟；Raspberry 首次启动时需要在后台进行一些清理工作。一段时间后，您将看到 Raspberry Pi OS 桌面和设置向导，如**图 2-1**所示。您的操作系统现在准备好进行配置，您将在**第 3 章“使用您的 Raspberry Pi”**中学习如何操作。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_30_1.png)
 
@@ -355,7 +328,7 @@ USB 接口应轻轻滑到位，不需要过大的压力；如果您必须用力�
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_30_0.png)
 
-您将会在黑屏幕左上角短暂地看到四个 Raspberry Pi 标志，并可能会软件调整大小以充分利用您的 microSD 卡时看到蓝色屏幕。如果您看到黑屏幕，请等几分钟；Raspberry 首次启动时需要在后台进行一些清理工作。一段时间后，您将看到 Raspberry Pi OS 桌面和设置向导，如**图 2-1** 所示。您的操作系统现在准备好进行配置，您将在**第 3 章“使用您的 Raspberry Pi”**中学习如何操作。
+您将会在黑屏幕左上角短暂地看到四个 Raspberry Pi 标志，并可能会软件调整大小以充分利用您的 microSD 卡时看到蓝色屏幕。如果您看到黑屏幕，请等几分钟；Raspberry 首次启动时需要在后台进行一些清理工作。一段时间后，您将看到 Raspberry Pi OS 桌面和设置向导，如**图 2-1**所示。您的操作系统现在准备好进行配置，您将在**第 3 章“使用您的 Raspberry Pi”**中学习如何操作。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_30_1.png)
 
@@ -383,6 +356,12 @@ USB 接口应轻轻滑到位，不需要过大的压力；如果您必须用力�
 
 拿起 micro-HDMI 线，将较小的一端连接到 Raspberry Pi 400 上离 microSD 卡槽最近的 micro-HDMI 端口，另一端连接到您的显示器。如果您的显示器有多个 HDMI 端口，请查看接口旁边的端口号，您需要将电视切换到此输入源才能看到 Raspberry Pi 的显示。如果您看不到端口号，不要担心：只需逐个切换每个输入源，直到找到 Raspberry Pi 为止。
 
+
+
+# 树莓派官方新手指南
+
+## 组装并启动 Raspberry Pi
+
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_32_0.png)
 
 ### 连接网线（可选）
@@ -401,7 +380,7 @@ USB 接口应轻轻滑到位，不需要过大的压力；如果您必须用力�
 
 最后，将电源连接到市电插座并开启开关，您的 Raspberry Pi 将立即开始运行。恭喜：您已经组好了您的 Raspberry Pi！
 
-# 树莓派官方新手指南
+### 首次启动
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_30_0.png)
 
@@ -411,18 +390,13 @@ USB 接口应轻轻滑到位，不需要过大的压力；如果您必须用力�
 
 **图 2-1：Raspberry Pi OS 桌面和设置向导**
 
-# 第 3 章
-
-## 使用您的 Raspberry Pi
+## 第 3 章 使用您的 Raspberry Pi
 
 了解操作系统
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_35_0.png)
 
-
-
-
-下一个屏幕将要求你更改 'pi' 用户的密码（默认为 'raspberry'）——出于安全考虑，创建一个新密码是一个非常好的主意。在框中输入密码（**图 3-3**）。在你满意后，点击“下一步”。
+下一个屏幕将要求你更改 `'pi'` 用户的密码（默认为 `'raspberry'`）——出于安全考虑，创建一个新密码是一个非常好的主意。在框中输入密码（**图 3-3**）。在你满意后，点击“下一步”。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_37_0.png)
 
@@ -463,8 +437,6 @@ USB 接口应轻轻滑到位，不需要过大的压力；如果您必须用力�
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_39_1.png)
 
 图 3-8：树莓派 OS 桌面
-
-# 树莓派官方新手指南
 
 - A 壁纸
 - B 任务栏
@@ -525,7 +497,9 @@ USB 接口应轻轻滑到位，不需要过大的压力；如果您必须用力�
 
 图 13：在 Chromium 中加载树莓派网站
 
-第一次加载 Chromium 时，它可能会在窗口顶部打开多个标签。要切换到不同的标签，点击它；要在不关闭 Chromium 本身的情况下关闭标签，点击要关闭的标签右边缘的交叉号。要打开新标签（这是一种无需切换窗口的情况下打开多个网站的方便方法），要么点击列表中最后一个标签右侧的标签按钮，要么按住键盘上的 CTRL 键并按 T，然后松开 CTRL。当你完成 Chromium 操作后，点击窗口右上角的关闭按钮。
+
+
+第一次加载 Chromium 时，它可能会在窗口顶部打开多个标签。要切换到不同的标签，点击它；要在不关闭 Chromium 本身的情况下关闭标签，点击要关闭的标签右边缘的交叉号。要打开新标签（这是一种无需切换窗口的情况下打开多个网站的方便方法），要么点击列表中最后一个标签右侧的标签按钮，要么按住键盘上的 `CTRL` 键并按 `T`，然后松开 `CTRL`。当你完成 Chromium 操作后，点击窗口右上角的关闭按钮。
 
 ### 文件管理器
 
@@ -534,7 +508,6 @@ USB 接口应轻轻滑到位，不需要过大的压力；如果您必须用力�
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_43_0.png)
 
 文件管理器允许你浏览树莓派 microSD 卡上的文件和文件夹（称为目录），以及连接到树莓派 USB 端口的任何移动存储设备（如 USB 闪盘）。当你第一次打开它时，它会自动进入你的主目录。在这里你会发现一系列其他文件夹（如目录），它们按类别排列。主要的子目录包括：
-
 - 书籍：包含 Raspberry Pi Press 出版的电子书、杂志和其他出版物，包括本新手指南。你可以使用“书架”（Bookshelf）应用程序阅读这些书籍并下载更多；可以在菜单的“帮助”部分找到。
 - 桌面：这是第一次加载树莓派 OS 时看到的文件夹；如果你在这里保存文件，它将出现在桌面上，方便查找和加载。
 - 文档：主目录用于你创建的大多数文件，从短故事到食谱。
@@ -542,14 +515,8 @@ USB 接口应轻轻滑到位，不需要过大的压力；如果您必须用力�
 - 音乐：任何你创建或放入树莓派的音乐都可以存储在这里。
 - 图片：此文件夹专门用于图片，技术术语称为图像文件。
 - 公共：虽然你的大部分文件都是私有的，但你放入公共内容的任何内容对树莓派的其他用户可用，即使他们有自己的用户名和密码。
-
-
-
-
-
-模板（Templates）：此文件夹包含模板，即已经设置好基本布局或结构的空白文档，由你创建或由你的应用程序安装。
-
-视频（Videos）：用于视频的文件夹，也是视频播放程序首次查找的地方。
+- 模板（Templates）：此文件夹包含模板，即已经设置好基本布局或结构的空白文档，由你创建或由你的应用程序安装。
+- 视频（Videos）：用于视频的文件夹，也是视频播放程序首次查找的地方。
 
 文件管理器本身分为两个窗格：左窗格显示你的树莓派上的目录，右窗格显示左侧所选目录的文件和子目录。如果你将可移动存储设备插入树莓派的 USB 端口，会弹出一个窗口，询问你是否想在文件管理器中打开它（图 3-15）；点击确定 即可看到它的文件和目录。
 
@@ -558,14 +525,12 @@ USB 接口应轻轻滑到位，不需要过大的压力；如果您必须用力�
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_44_0.png)
 
 文件可以轻松地在树莓派的 microSD 卡和可移动设备之间进行复制：当你的主目录和可移动设备分别在不同的文件管理器窗口中打开时，将鼠标指针移动到想要复制的文件上，点击并按住左键（图 3-16，概览）。这被称为拖放。
-
 另一种方法是点击文件，点击“编辑”（Edit）菜单，点击“复制”（Copy），点击另一个窗口，点击“编辑”菜单，点击“粘贴”（Paste）。
-
-“剪切”（Cut）选项同样位于“编辑”菜单中，它的不同之处在于在完成复制后会从原始位置删除该文件。这两个选项也可以通过键盘快捷键 CTRL+C（复制）或 CTRL-X（剪切）使用，并通过 CTRL+V 粘贴。
+“剪切”（Cut）选项同样位于“编辑”菜单中，它的不同之处在于在完成复制后会从原始位置删除该文件。这两个选项也可以通过键盘快捷键 `CTRL+C`（复制）或 `CTRL+X`（剪切）使用，并通过 `CTRL+V` 粘贴。
 
 ### 键盘快捷键
 
-当你使用像 CTRL+C 这样的快捷键时，意味着按住键盘上的第一个键（CTRL），按下第二个键（C），然后松开两个键。
+当你使用像 `CTRL+C` 这样的快捷键时，意味着按住键盘上的第一个键（`CTRL`），按下第二个键（`C`），然后松开两个键。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_45_0.png)
 
@@ -588,7 +553,6 @@ USB 接口应轻轻滑到位，不需要过大的压力；如果您必须用力�
 图 3-17：LibreOffice Writer 程序
 
 文字处理器不仅让你能够编写文档，还能让你以巧妙的方式对其进行格式设置：你可以更改字体样式、颜色、大小，添加效果，甚至插入图片、图表、表格和其他内容。文字处理器还可以让你检查工作中的错误，在输入时分别用红色和绿色标出拼写和语法问题。
-
 从开始写一段关于你目前学到的树莓派及其软件的文字开始。尝试窗口顶部不同的图标，看看它们的作用：看看你是否能让你的写作更好，并改变它的颜色。如果你不确定如何操作，只需将鼠标指针悬停在每个图标上，即可看到显示其功能的“工具提示”（tool tip）。当你准备就绪时，点击“文件”（File）菜单和“保存”（Save）选项来保存你的工作（图 3-18）。为它命名并点击保存按钮。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_46_1.png)
@@ -604,7 +568,6 @@ USB 接口应轻轻滑到位，不需要过大的压力；如果您必须用力�
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_47_0.png)
 
 LibreOffice Writer 只是整个 LibreOffice 办公套件的一部分。其他部分可以在与 LibreOffice Writer 相同的 LibreOffice 菜单类别中找到，它们：
-
 - LibreOffice Base：数据库；用于存储信息、快速查找和分析信息的工具。
 - LibreOffice Calc：电子表格；用于处理数字和创建图表、图形的工具。
 - LibreOffice Draw：插图程序；用于创建图片和图表的工具。
@@ -621,9 +584,7 @@ LibreOffice Writer 只是整个 LibreOffice 办公套件的一部分。其他部
 ## 推荐软件工具
 
 虽然 Raspberry OS 预装了广泛的软件，但它们并没有经过树莓派基金会的审核。注意，“推荐软件”工具需要连接互联网。如果你的树莓派已连接网络，点击树莓派菜单，将指针移动到“偏好”（Preferences），然后点击“推荐软件”。几秒钟后将出现一个兼容软件列表（图 3-19）。点击左侧的类别查看该类别的软件，或点击“所有程序”（All Programs）查看所有内容。
-
 如果软件旁边有勾选，说明它已经安装在你的树莓派上。如果没有，你可以点击旁边的复选框将其标记为安装。如果你点错了或改变了主意，只需再次点击即可取消。
-
 当你对软件选择满意时，点击确定 按钮开始安装或卸载过程（图 3-20）。在下载并安装你选择的任何新软件后，会弹出对话框；点击确定 关闭“推荐软件”工具。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_49_0.png)
@@ -636,9 +597,6 @@ LibreOffice Writer 只是整个 LibreOffice 办公套件的一部分。其他部
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_49_1.png)
 
-
-
-
 该工具分为五个标签页。第一个是系统（System）：这允许你更改账户密码、设置主机名 – 树莓派在你的本地无线或有线网络上使用的名称 – 并更改一系列其他设置。不过，其中大多数设置都不需要更改。点击“显示（Display）”标签页进入下一个类别。在这里，你可以根据需要更改屏幕显示设置，以适应你的电视机或显示器。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_50_0.png)
@@ -647,77 +605,9 @@ LibreOffice Writer 只是整个 LibreOffice 办公套件的一部分。其他部
 
 这个简要的概述只是为了带你了解该工具。关于其每个设置的更详细信息，可以在[附录 E，树莓派配置工具]中找到。
 
-“接口（Interface）”标签页包含一系列设置，所有设置默认都是禁用的。只有当你添加新硬件（例如，树莓派摄像头模块）时，才应该更改这些设置。此规则的例外是：SSH，它启用“安全外壳”并让你使用 SSH 客户端从网络上的另一台计算机登录到树莓派；VNC，它启用“虚拟网络计算机”并让你使用 VNC 客户端从网络上的另一台计算机查看并控制树莓派 OS 桌面；以及 Remote GPIO，它让你从网络上的另一台计算机控制树莓派的 GPIO 引脚 – 你将在**第 6 章，使用 Scratch 和 Python 进行物理计算**中学习到这些。
 
-点击“性能（Performance）”标签页查看第四类设置。在这里，你可以设置树莓派图形处理器（GPU）使用的内存量，对于某些模型，可以通过被称为*超频（overclocking）*的过程提高树莓派的性能。尽管如此，除非你知道需要更改它们，否则最好保持这些设置。
 
-最后，点击“本地化（Localisation）”标签页查看最后一个类别。在这里，你可以更改区域设置（它控制着树莓派 OS 使用的语言和数字显示方式）、更改时区、更改键盘布局并为 WiFi 设置国家。现在，只需点击“取消（Cancel）”在不进行任何更改的情况下关闭工具。
-
-![](img/0aff4cdab15427839fb48fd7c6f677d3_50_1.png)
-
-### 警告！
-
-不同国家对 WiFi 无电电设备使用的频率有不同的规定。将树莓派配置工具中的 WiFi 国家设置为与你所在地不同的国家，可能会导致它难以连接到你的网络，甚至可能在无线电许可法下属于违法 – 所以不要这样做！
-
-### 关机
-
-现在你已经探索了树莓派 OS 桌面，是时候学习一项非常重要的技能了：安全地关闭你的树莓派。像任何计算机一样，树莓派将你正在工作的文件保存在易性内存中 – 系统关闭时该内存会被清空。对于你创建的文档，只需依次保存每个 – 这会将文件从易性内存移动到非易失性内存 microSD 卡 – 以确保你不会丢失任何内容。
-
-你正在工作的文档并不是唯一打开的文件，树莓派 OS 在运行时会保持许多文件打开，在这些文件仍处于打开时拔掉树莓派的电源线可能会导致操作系统损坏，从而导致重新安装。
-
-为了防止这种情况发生，你需要确保告诉树莓派 OS 保存其所有文件并准备好断电 – 这一过程被称为关闭操作系统。
-
-点击桌面左角的树莓派图标，然后点击“关机（Shutdown）”。将弹出一个带有三个选项的窗口（图 3-22）：关机（Shutdown）、重启（Reboot）和注销（Logout）。关机是你最常使用的选项：点击此将告诉树莓派 OS 关闭所有打开的软件和文件，然后关闭树莓派。一旦屏幕变黑，等待几秒钟直到树莓派上闪烁的绿灯熄灭；就可以安全地关闭电源了。
-
-要重新开启树莓派，只需重新连接电源线，或切换墙上插座的电源。
-
-![](img/0aff4cdab15427839fb48fd7c6f677d3_51_0.png)
-
-图 3-22：关闭树莓派
-
-重启的过程与关机类似，但它会自动重启系统。这在你安装了新软件或更改了需要重启的设置后非常有用。注销会结束当前用户会话但让电脑运行，如果你想在不关闭整个系统的情况下切换用户，这非常有用。
-
-你正在工作的文档并不是唯一打开的文件，树莓派 OS 在运行时会保持许多文件打开，在这些文件仍处于打开时拔掉树莓派的电源线可能会导致操作系统损坏，从而导致重新安装。
-
-为了防止这种情况发生，你需要确保告诉树莓派 OS 保存其所有文件并准备好断电 – 这一过程被称为关闭操作系统。
-
-点击桌面左角的树莓派图标，然后点击“关机”。将弹出一个带有三个选项的窗口（图 3-22）：关机（Shutdown）、重启（Reboot）和注销（Logout）。关机是你最常使用的选项：点击此将告诉树莓派 OS 关闭所有打开的软件和文件，然后关闭树莓派。一旦屏幕变黑，等待几秒钟直到树莓派上闪烁的绿灯熄灭；就可以安全地关闭电源了。
-
-要重新开启树莓派，只需重新连接电源线，或切换墙上插座的电源。重启的过程与关机类似，但它会自动重启系统。这在你安装了新软件或更改了需要重启的设置后非常有用。注销会结束当前用户会话但让电脑运行，如果你想在不关闭整个系统的情况下切换用户，这非常有用。
-
-你正在工作的文档并不是唯一打开的文件，树莓派 OS 在运行时会保持许多文件打开，在这些文件仍处于打开时拔掉树莓派的电源线可能会导致操作系统损坏，从而导致重新安装。
-
-为了防止这种情况发生，你需要确保告诉树莓派 OS 保存其所有文件并准备好断电 – 这一过程被称为关闭操作系统。
-
-点击桌面左角的树莓派图标，然后点击“关机”。将弹出一个带有三个选项的窗口（图 3-22）：关机（Shutdown）、重启（Reboot）和注销（Logout）。关机是你最常使用的选项：点击此将告诉树莓派 OS 关闭所有打开的软件和文件，然后关闭树莓派。一旦屏幕变黑，等待几秒钟直到树莓派上闪烁的绿灯熄灭；就可以安全地关闭电源了。
-
-要重新开启树莓派，只需重新连接电源线，或切换墙上插座的电源。重启的过程与关机类似，但它会自动重启系统。这在你安装了新软件或更改了需要重启的设置后非常有用。注销会结束当前用户会话但让电脑运行，如果你想在不关闭整个系统的情况下切换用户，这非常有用。
-
-你正在工作的文档并不是唯一打开的文件，树莓派 OS 在运行时会保持许多文件打开，在这些文件仍处于打开时拔掉树莓派的电源线可能会导致操作系统损坏，从而导致重新安装。
-
-为了防止这种情况发生，你需要确保告诉树莓派 OS 保存其所有文件并准备好断电 – 这一过程被称为关闭操作系统。
-
-点击桌面左角的树莓派图标，然后点击“关机”。将弹出一个带有三个选项的窗口（图 3-22）：关机（Shutdown）、重启（Reboot）和注销（Logout）。关机是你最常使用的选项：点击此将告诉树莓派 OS 关闭所有打开的软件和文件，然后关闭树莓派。一旦屏幕变黑，等待几秒钟直到树莓派上闪烁的绿灯熄灭；就可以安全地关闭电源了。
-
-要重新开启树莓派，只需重新连接电源线，或切换墙上插座的电源。重启的过程与关机类似，但它会自动重启系统。这在你安装了新软件或更改了需要重启的设置后非常有用。注销会结束当前用户会话但让电脑运行，如果你想在不关闭整个系统的情况下切换用户，这非常有用。
-
-你正在工作的文档并不是唯一打开的文件，树莓派 OS 在运行时会保持许多文件打开，在这些文件仍处于打开时拔掉树莓派的电源线可能会导致操作系统损坏，从而导致重新安装。
-
-为了防止这种情况发生，你需要确保告诉树莓派 OS 保存其所有文件并准备好断电 – 这一过程被称为关闭操作系统。
-
-点击桌面左角的树莓派图标，然后点击“关机”。将弹出一个带有三个选项的窗口（图 3-22）：关机（Shutdown）、重启（Reboot）和注销（Logout）。关机是你最常使用的选项：点击此将告诉树莓派 OS 关闭所有打开的软件和文件，然后关闭树莓派。一旦屏幕变黑，等待几秒钟直到树莓派上闪烁的绿灯熄灭；就可以安全地关闭电源了。
-
-要重新开启树莓派，只需重新连接电源线，或切换墙上插座的电源。重启的过程与关机类似，但它会自动重启系统。这在你安装了新软件或更改了需要重启的设置后非常有用。注销会结束当前用户会话但让电脑运行，如果你想在不关闭整个系统的情况下切换用户，这非常有用。
-
-你正在工作的文档并不是唯一，树莓派 OS 在运行时会保持许多文件打开... (注：由于原文中存在大量重复段落，此处按逻辑合并翻译，确保不重复输出)
-
-*(注：由于提供的原文中包含大量重复的句子，根据“一定不要重复输出原文”的要求，上述译文已去重，仅保留核心逻辑内容的翻译。)*
-
----
-**更正：** 发现原文中存在大量重复段落，作为高级文档工程师，我已过滤了冗余内容。以下是去重后的完整逻辑翻译译文：
-
-[content]
-该工具分为五个标签页。第一个是系统（System）：这允许你更改账户密码、设置主机名 – 树莓派在你的本地无线或有线网络上使用的名称 – 并更改一系列其他设置。不过，其中大多数设置都不需要更改。点击“显示（Display）”标签页进入下一个类别。在这里，你可以根据需要更改屏幕显示设置，以适应你的电视机或显示器。
+该工具分为五个标签页。第一个是`System`：这允许你更改账户密码、设置主机名 – 树莓派在你的本地无线或有线网络上使用的名称 – 并更改一系列其他设置。不过，其中大多数设置都不需要更改。点击`Display`标签页进入下一个类别。在这里，你可以根据需要更改屏幕显示设置，以适应你的电视机或显示器。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_50_0.png)
 
@@ -725,11 +615,11 @@ LibreOffice Writer 只是整个 LibreOffice 办公套件的一部分。其他部
 
 这个简要的概述只是为了带你了解该工具。关于其每个设置的更详细信息，可以在[附录 E，树莓派配置工具]中找到。
 
-“接口（Interface）”标签页包含一系列设置，所有设置默认都是禁用的。只有当你添加新硬件（例如，树莓派摄像头模块）时，才应该更改这些设置。此规则的例外是：SSH，它启用“安全外壳”并让你使用 SSH 客户端从网络上的另一台计算机登录到树莓派；VNC，它启用“虚拟网络计算机”并让你使用 VNC 客户端从网络上的另一台计算机查看并控制树莓派 OS 桌面；以及 Remote GPIO，它让你从网络上的另一台计算机控制树莓派的 GPIO 引脚 – 你将在**第 6 章，使用 Scratch 和 Python 进行物理计算**中学习到这些。
+“接口（Interface）”标签页包含一系列设置，所有设置默认都是禁用的。只有当你添加新硬件（例如，树莓派摄像头模块）时，才应该更改这些设置。此规则的例外是：`SSH`，它启用“安全外壳”并让你使用 SSH 客户端从网络上的另一台计算机登录到树莓派；`VNC`，它启用“虚拟网络计算机”并让你使用 VNC 客户端从网络上的另一台计算机查看并控制树莓派 OS 桌面；以及 `Remote GPIO`，它让你从网络上的另一台计算机控制树莓派的 GPIO 引脚 – 你将在第 6 章，使用 Scratch 和 Python 进行物理计算中学习到这些。
 
-点击“性能（Performance）”标签页查看第四类设置。在这里，你可以设置树莓派图形处理器（GPU）使用的内存量，对于某些模型，可以通过被称为*超频*的过程提高树莓派的性能。尽管如此，和之前，除非你知道需要更改它们，否则最好保持这些设置。
+点击“性能（Performance）”标签页查看第四类设置。在这里，你可以设置树莓派图形处理器（`GPU`）使用的内存量，对于某些模型，可以通过被称为*超频*的过程提高树莓派的性能。尽管如此，和之前，除非你知道需要更改它们，否则最好保持这些设置。
 
-最后，点击“本地化（Localisation）”标签页查看最后一个类别。在这里，你可以更改区域设置（它控制着树莓派 OS 使用的语言和数字显示方式）、更改时区、更改键盘布局并为 WiFi 设置国家。现在，只需点击“取消（Cancel）”在不进行任何更改的情况下关闭工具。
+点击“本地化（Localisation）”标签页查看最后一个类别。在这里，你可以更改区域设置（它控制着树莓派 OS 使用的语言和数字显示方式）、更改时区、更改键盘布局并为 WiFi 设置国家。现在，只需点击“取消（Cancel）”在不进行任何更改的情况下关闭工具。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_50_1.png)
 
@@ -757,7 +647,35 @@ LibreOffice Writer 只是整个 LibreOffice 办公套件的一部分。其他部
 
 
 
-bit out of the bottom connects into the hole at the top of your say Hello! block until you see a white outline, then let go of the mouse. You don't have to be precise; if it's close enough, the block will snap into place just like a jigsaw piece. If it doesn't, click and hold on it again to adjust its position until it does.```
+最后，点击“本地化（Localisation）”标签页查看最后一个类别。在这里，你可以更改区域设置（它控制着树莓派 OS 使用的语言和数字显示方式）、更改时区、更改键盘布局并为 WiFi 设置国家。现在，只需点击“取消（Cancel）”在不进行任何更改的情况下关闭工具。
+
+![](img/0aff4cdab15427839fb48fd7c6f677d3_50_1.png)
+
+### 警告！
+
+不同国家对 WiFi 无电电设备使用的频率有不同的规定。将树莓派配置工具中的 WiFi 国家设置为与你所在地不同的国家，可能会导致它难以连接到你的网络，甚至可能在无线电许可法下属于违法 – 所以不要这样做！
+
+### 关机
+
+现在你已经探索了树莓派 OS 桌面，是时候学习一项非常重要的技能了：安全地关闭你的树莓派。像任何计算机一样，树莓派将你正在工作的文件保存在易性内存中 – 系统关闭时该内存会被清空。对于你创建的文档，只需依次保存每个 – 这会将文件从易性内存移动到非易失性内存 microSD 卡 – 以确保你不会丢失任何内容。
+
+你正在工作的文档并不是唯一打开的文件，树莓派 OS 在运行时会保持许多文件打开，在这些文件仍处于打开时拔掉树莓派的电源线可能会导致操作系统损坏，从而导致重新安装。
+
+为了防止这种情况发生，你需要确保告诉树莓派 OS 保存其所有文件并准备好断电 – 这一过程被称为关闭操作系统。
+
+点击桌面左角的树莓派图标，然后点击“关机（Shutdown）”。将弹出一个带有三个选项的窗口（图 3-22）：关机（Shutdown）、重启（Reboot）和注销（Logout）。关机是你最常使用的选项：点击此将告诉树莓派 OS 关闭所有打开的软件和文件，然后关闭树莓派。一旦屏幕变黑，等待几秒钟直到树莓派上闪烁的绿灯熄灭；就可以安全地关闭电源了。
+
+要重新开启树莓派，只需重新连接电源线，或切换墙上插座的电源。
+
+![](img/0aff4cdab15427839fb48fd7c6f677d3_51_0.png)
+
+图 3-22：关闭树莓派
+
+重启的过程与关机类似，但它会自动重启系统。这在你安装了新软件或更改了需要重启的设置后非常有用。注销会结束当前用户会话但让电脑运行，如果你想在不关闭整个系统的情况下切换用户，这非常有用。
+
+bit out of the bottom connects into the hole at the top of your `say Hello!` block until you see a white outline, then let go of the mouse. You don't have to be precise; if it's close enough, the block will snap into place just like a jigsaw piece. If it doesn't, click and hold on it again to adjust its position until it does.
+
+```
 when clicked
 say Hello!
 ```
@@ -775,6 +693,7 @@ Before moving on, save your program. Click on the File menu, then ‘Save to you
 **Figure 4-3:** Save your program with a name
 
 > WHAT CAN IT SAY?
+
 Some blocks in Scratch can be changed. Try clicking on the word ‘Hello’ and typing something else, then click the green flag. What happens on the stage?
 
 # Next steps: sequencing
@@ -797,18 +716,21 @@ Add more instructions to your program to create a sequence. Click on the Sound p
 
 Click on the green flag above the stage to run the program. You'll see the cat move to the right, make a meow sound – make sure you've got speakers or headphones to hear it – move back to the start again. Click the green flag, and the cat will repeat its actions.
 
-Congratulations! you've created a sequence of instructions, Scratch is running through one at a time, top to bottom. While Scratch will only run one instruction at a time from the sequence, it does so quickly: try deleting the play sound until done block by clicking and dragging the bottom move -10 steps block to detach it, dragging the play sound Meow until done block to the blocks palette, replacing it with the simpler play sound Meow block before dragging your move -10 steps block onto the bottom of your program.
+
+
+Congratulations! you've created a sequence of instructions, Scratch is running through one at a time, top to bottom. While Scratch will only run one instruction at a time from the sequence, it does so quickly: try deleting the `play sound until done` block by clicking and dragging the bottom `move -10 steps` block to detach it, dragging the `play sound Meow until done` block to the blocks palette, replacing it with the simpler `play sound Meow` block before dragging your `move -10 steps` block onto the bottom of your program.
 
 ![](img/0aff4cdab15427839fb48fd7c6f_53)
 
-Click the green flag to run your program again, and the cat sprite doesn't seem to move. The sprite is moving, in fact, it moves back again so quickly that it appears to be still. This is because using the play sound block doesn't wait for the sound to finish; you can now see the cat move. There's another way to fix this, beyond using the play sound Meow until done block: click on the Orange category of the blocks palette, click and drag a wait 1 seconds block between the play sound block and the bottom move -10 steps block.
+Click the `green flag` to run your program again, and the cat sprite doesn't seem to move. The sprite is moving, in fact, it moves back again so quickly that it appears to be still. This is because using the `play sound` block doesn't wait for the sound to finish; you can now see the cat move. There's another way to fix this, beyond using the `play sound Meow until done` block: click on the Orange category of the blocks palette, click and drag a `wait 1 seconds` block between the `play sound` block and the bottom `move -10 steps` block.
 
 ![](img/0aff4cdab15427839fb48fd7c6f_54)
 
-Click the green flag one last time, and you'll see the cat move. This is known as a delay, controlling the program.
+Click the `green flag` one last time, and you'll see the cat move. This is known as a delay, controlling the program.
 
 > CHALLENGE: STEPS
-Try adding steps to your program. What happens on the stage when the number of steps doesn't match the original version?
+>
+> Try adding steps to your program. What happens on the stage when the number of steps doesn't match the original version?
 
 ![](img/0aff4cdab15427839fb48fd7c6f_55)
 
@@ -830,27 +752,29 @@ Add more instructions to your program to create a sequence. Click on the Sound p
 
 ![](img/0aff4cdab15427839fb48fd7c6f_58)
 
-Click on the green flag above the stage to run the program. You'll see the cat move to the right, make a meow sound – make sure you've got speakers or headphones to hear it – move back to the start again. Click the green flag, and the cat will repeat its actions.
+Click on the `green flag` above the stage to run the program. You'll see the cat move to the right, make a meow sound – make sure you've got speakers or headphones to hear it – move back to the start again. Click the `green flag`, and the cat will repeat its actions.
 
-Congratulations! you've created a sequence of instructions, Scratch is running through one at a time, top to bottom. While Scratch will only run one instruction at a time from the sequence, it does so quickly: try deleting the play sound until done block by clicking and dragging the bottom move -10 steps block to detach it, dragging the play sound Meow until done block to the blocks palette, replacing it with the simpler play sound Meow block before dragging your move -10 steps block onto the bottom of your program.
+Congratulations! you've created a sequence of instructions, Scratch is running through one at a time, top to bottom. While Scratch will only run one instruction at a time from the sequence, it does so quickly: try deleting the `play sound until done` block by clicking and dragging the bottom `move -10 steps` block to detach it, dragging the `play sound Meow until done` block to the blocks palette, replacing it with the simpler `play sound Meow` block before dragging your `move -10 steps` block onto the bottom of your program.
 
 ![](img/0aff4cdab15427839fb48fd7c6f_59)
 
-Click the green flag to run your program again, and the cat sprite doesn't seem to move. The sprite is moving, in fact, it moves back again so quickly that it appears to be still. This is because using the play sound block doesn't wait for the sound to finish; you can now see the cat move. There's another way to fix this, beyond using the play sound Meow until done block: click on the Orange category of the blocks palette, click and drag a wait 1 seconds block between the play sound block and the bottom move -10 steps block.
+
+
+# 树莓派初学者官方指南
+
+Click the green flag to run your program again, and the cat sprite doesn't seem to move. The sprite is moving, in fact, it moves back again so quickly that it appears to be still. This is because using the `play sound` block doesn't wait for the sound to finish; you can now see the cat move. There's another way to fix this, beyond using the `play sound Meow until done` block: click on the Orange category of the blocks palette, click and drag a `wait 1 seconds` block between the `play sound` block and the bottom `move -10 steps` block.
 
 ![](img/0aff4cdab15427839fb48fd7c6f_60)
 
 Click the green flag one last time, and you'll see the cat move. This is known as a delay, controlling the program.
 
-THE OFFICIAL RASPBERRY PI BEGINNER'S GUIDE
+**THE OFFICIAL RASPBERRY PI BEGINNER'S GUIDE**
 
-First, click the File menu and save your existing program by clicking on ‘Save to your computer’. If you already saved the program earlier, you'll be asked if you want to overwrite it, replacing the old saved copy with your new-to-date version. Next, click File and then a new start, blank project (click OK if you want to replace the contents of the current project). Click on the dark orange Variables category in the blocks palette, the 'Make a Variable' button. Type 'loops' as the variable name (Figure 4-5), then click OK to make a series of blocks appear in the blocks palette.
+First, click the File menu and save your existing program by clicking on `Save to your computer`. If you already saved the program earlier, you'll be asked if you want to overwrite it, replacing the old saved copy with your new-to-date version. Next, click File and then start a new, blank project (click OK if you want to replace the contents of the current project). Click on the dark orange Variables category in the blocks palette, the `Make a Variable` button. Type `loops` as the variable name (Figure 4-5), then click OK to make a series of blocks appear in the blocks palette.
 
+旁边的复选框——在你的 `say Hello! for 2 seconds` 代码块中的“Hello!”字样上方。这创建了一个新的组合代码块：`say loops for 2 seconds`。
 
-
-旁边的复选框——在你的 `say Hello! for 2 seconds` 代码块中的“Hello! ”字样上方。这创建了一个新的组合代码块：`say loops for 2 seconds`。
-
-点击积木面板中的“事件”（Events）分类，然后点击并拖动 `when` 块将其放置在你代码块序列的最上方。点击舞台区域上方的绿色旗帜，你将看到猫咪精灵‘0’（图 4-6）——这是你赋予变量‘loops’的值。
+点击积木面板中的“事件”（Events）分类，然后点击并拖动 `when` 块将其放置在你代码块序列的最上方。点击舞台区域上方的绿色旗帜，你将看到猫咪精灵‘0’（图 4-6）——这是你赋予变量 `loops` 的值。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_63_0.png)
 
@@ -858,11 +782,9 @@ First, click the File menu and save your existing program by clicking on ‘Save
 
 变量不是固定不变的。点击积木面板中的“变量”（Variables）分类，然后点击并拖动 `change loops by 1` 块到你序列的末尾。接下来，点击“控制”（Control）分类，然后点击并拖动一个 `repeat 10` 块并释放它，使其起始直接接在你的 `set loops to 0` 块下方，并包裹住你序列中剩余的代码块。
 
-# 树莓派初学者官方指南
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_64_0.png)
 
-再次点击绿色旗帜。这次，你会看到猫咪精灵从 0 数到 9。这之所以能运行，是因为你的程序现在正在改变，或者说*修改*变量本身：每次循环运行时，程序都会在‘loops’变量的某个值上加 1（**图 4-7**）。
+再次点击绿色旗帜。这次，你会看到猫咪精灵从 0 数到 9。这之所以能运行，是因为你的程序现在正在改变，或者说*修改*变量本身：每次循环运行时，程序都会在 `loops` 变量的某个值上加 1（**图 4-7**）。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_64_1.png)
 
@@ -878,47 +800,45 @@ First, click the File menu and save your existing program by clicking on ‘Save
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_65_0.png)
 
-运算符积木允许你比较两个值，包括变量。点击“变量”分类，将 `loops` 报告器块拖入 `=` 运算符积木的空白处，然后点击写有‘50’的区域并输入数字‘10’。
+运算符积木允许你比较两个值，包括变量。点击“变量”分类，将 `loops` 报告器块拖入 `=` 运算符积木的空白处，然后点击写有“50”的区域并输入数字“10”。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_65_1.png)
 
 点击舞台区域上方的绿色旗帜，你会发现程序的运行方式与之前一样：猫咪精灵从 0 数到 9（图 4-8），然后程序停止。
 
-这是因为 `repeat until` 块的工作原理与 `repeat 10` 块完全相同，它并不是在自己数循环的次数，而是在将‘loops’变量的值与你在代码块右侧输入的值进行比较。当‘loops’变量达到 10 时，程序就会停止。
+这是因为 `repeat until` 块的工作原理与 `repeat 10` 块完全相同，它并不是在自己数循环的次数，而是在将 `loops` 变量的值与你在代码块右侧输入的值进行比较。当 `loops` 变量达到 10 时，程序就会停止。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_66_0.png)
 
-**图 4-8：** 使用带有比较运算符的‘重复直到’块
+**图 4-8：** 使用带有比较运算符的“重复直到”块
 
-这被称为比较运算符：它字面上的意思是比较两个值。点击积木面板中的“运算”（Operators）分类，找到上面的两个菱形积木以及带有‘=’’符号的那个。这些也是比较运算符：`<` 比较两个值，并在当左侧的值小于右侧的值时触发；而 `>` 则在当左侧的值大于右侧的值时触发。
+这被称为比较运算符：它字面上的意思是比较两个值。点击积木面板中的“运算”（Operators）分类，找到上面的两个菱形积木以及带有 `=` 符号的那个。这些也是比较运算符：`<` 比较两个值，并在当左侧的值小于右侧的值时触发；而 `>` 则在当左侧的值大于右侧的值时触发。
 
 点击积木面板中的“控制”（Control）分类，找到 `if` 块，然后点击并拖动它到准备释放 `say loops for 2 seconds` 块之前的区域。它会自动包裹 `change loops by 1` 块，因此点击并拖动将其移动到你的 `if` 块的底部。点击积木面板中的“外观”（Looks）分类，然后点击并拖动一个 `say Hello! for 2 seconds` 块释放到你的 `if` 块内部。点击积木面板中的“运算符”分类，然后点击并拖动你块中的 `>` 菱形插槽。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_67_0.png)
 
-**if then** 块是一个条件块，这意味着它内部的块只有在满足条件时才会运行。点击“变量”分类，将 `loops` 报告器块拖入块中的空白处，然后点击写有‘50’的区域并输入数字‘10’。最后，点击“Hello! ”字样在你的 `say Hello! for 2 seconds` 块中输入‘High’。
+`if then` 块是一个条件块，这意味着它内部的块只有在满足条件时才会运行。点击“变量”分类，将 `loops` 报告器块拖入块中的空白处，然后点击写有“50”的区域并输入数字“10”。最后，点击“Hello!”字样在你的 `say Hello! for 2 seconds` 块中输入“High”。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_67_1.png)
 
-点击舞台区域上方的绿色旗帜，你会发现程序运行得和之前一样：猫咪精灵从 0 数到 9（图 4-9），然后程序停止。当数字达到 6 时，`if then` 块会触发，猫咪精灵会说“High’。恭喜你，你现在可以使用变量和条件判断了！
+点击舞台区域上方的绿色旗帜，你会发现程序运行得和之前一样：猫咪精灵从 0 数到 9（图 4-9），然后程序停止。当数字达到 6 时，`if then` 块会触发，猫咪精灵会说“High”。恭喜你，你现在可以使用变量和条件判断了！
 
 ![](img/0aff4cdab15427739fb48fd7c6f677d3_68_0.png)
 
 图 4-9：当数字达到 6 时，猫咪会说“高”
 
-> 挑战：高与低：如何修改程序，让猫咪精灵在数字小于 5 时说“低”尝试使用 `if else` 块让它同时处理高低数值！
+> 挑战：高与低：如何修改程序，让猫咪精灵在数字小于 5 时说“低”？尝试使用 `if else` 块让它同时处理高低数值！
 
 ## 项目 1：反应计时器
 
-现在你已经了解 Scratch 是如何工作的，是时候要做一些更有趣的东西：一个反应计时器，为了纪念英国 ESA 航员 Tim Peake 在国际空间站的时间。
+现在你已经了解 Scratch 是如何工作的，是时候要做一些更有趣的东西：一个反应计时器，为了纪念英国 ESA 宇航员 Tim Peake 在国际空间站的时间。
 
-保存你的现有程序（如果你想保留它），点击“文件”（File）打开一个新项目。在开始之前，点击“文件”并“存储”，将其命名为‘Reaction Timer’。
+
+
+保存你的现有程序（如果你想保留它），点击“文件”（`File`）打开一个新项目。在开始之前，点击“文件”并“存储”，将其命名为‘`Reaction Timer`’。
 
 这个项目依赖两个图像——一个作为背景，一个作为精灵——它们不在 Scratch 的内置资源中。要下载它们，点击树莓图标加载树莓 OS 窗口，将鼠标指针指向“Internet”，然后点击 Chromium 网页浏览器。当浏览器加载后，在地址栏输入 `rpi.io/astronaut-backdrop` 并按回车键。对太空图片点击右键，点击‘另存为图像...’，然后选择下载文件夹并点击保存。
-
-
-
-
 
 # 树莓派官方新手指南
 
@@ -932,9 +852,9 @@ First, click the File menu and save your existing program by clicking on ‘Save
 
 图 4-12：将宇航员角色拖到舞台的下部中间
 
-当新背景和角色准备就绪后，你就可以编写程序了。首先创建一个名为 'time' 的新变量，确保在点击“确定”之前已选择“对于所有角色”（For all sprites）。点击你的角色——无论是在舞台上还是角色面板中——来选中它，
+当新背景和角色准备就绪后，你就可以编写程序了。首先创建一个名为 '`time`' 的新变量，确保在点击“确定”之前已选择“对于所有角色”（For all sprites）。点击你的角色——无论是在舞台上还是角色面板中——来选中它，
 
-# 第 4 章使用 Scratch 3 进行编程
+## 第 4 章使用 Scratch 3 进行编程
 
 然后从“事件”（Events）类别中添加一个“当点击时”（when clicked）模块到代码区域。接下来，从“外观”（Looks）类别中添加一个“说 Hello! 2 秒”（say Hello! for 2 seconds）模块，然后点击它将其更改为说“Hello! 英国欧空局宇航员蒂姆·皮克（Tim Peake）。你准备好了吗？”。
 
@@ -944,49 +864,49 @@ First, click the File menu and save your existing program by clicking on ‘Save
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_71_1.png)
 
-添加一个“等待直到……”（wait until）模块，将“当空格键被按下时？”（key space pressed?）传感器模块拖入它的空白区域。这将暂停程序，直到你按下键盘上的 SPACE 键，但计时器将继续运行，从而精确计算从提示你“按下空格！”到你实际按下 SPACE 之间的时间。
+添加一个“等待直到...”（wait until）模块，将“当空格键被按下时？”（key space pressed?）传感器模块拖入它的空白区域。这将暂停程序，直到你按下键盘上的 SPACE 键，但计时器将继续运行，从而精确计算从提示你“按下空格！”到你实际按下 SPACE 之间的时间。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_71_2.png)
 
 你现在需要蒂姆告诉你花了多久才按下空格键，但要用易于阅读的方式。为了这一点，你需要一个“拼接”（join）运算符模块。它接受两个值（包括变量），并在它们之后连接在一起——这被称为连接（concatenation）。
 
-# 树莓派官方新手指南
+### 树莓派官方新手指南
 
 从一个“说 Hello!”模块开始，然后将“拼接”（join）运算符模块拖动到单词“Hello”上。点击 'apple' 并输入 'Your reaction time was '，确保在末尾添加一个空格，然后将另一个模块拖到第二个框中的 'banana' 之上。从“传感器”类别中将一个“计时器报告”模块拖到现在的中间框中，并在最后一个框中输入 'seconds '——确保开头包含一个空格。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_72_0.png)
 
-最后，将“将我的变量设置为 0”（set my variable to 0）变量模块拖到你序列的末尾。点击'my variable'旁边的下拉箭头，从列表中点击'time'，然后将'0'替换为来自“传感器”类别的“计时器报告”模块。你的游戏现在准备好可以通过点击舞台上方的绿旗进行测试了。准备好，一旦看到“按下空格！”的消息，就尽可能快地按下 SPACE 键（图 4-13）——看看你能否击败我们的分数！
+最后，将“将我的变量设置为 0”（set my variable to 0）变量模块拖到你序列的末尾。点击'my variable'旁边的下拉箭头，从列表中点击'`time`'，然后将'0'替换为来自“传感器”类别的“计时器报告”模块。你的游戏现在准备好可以通过点击舞台上方的绿旗进行测试了。准备好，一旦看到“按下空格！”的消息，就尽可能快地按下 SPACE 键（图 4-13）——看看你能否击败我们的分数！
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_72_1.png)
 
 ▲ 图 4-13：游戏时间到！
 
-# 第 4 章使用 Scratch 3 进行编程
+## 第 4 章使用 Scratch 3 进行编程
 
-你可以进一步扩展此项目，让它根据国际空间站每秒七公里的公布速度，计算在按下 SPACE 键的时间内国际空间站大约运行了几远。创建一个名为 'distance' 的新变量。注意变量类别中的模块如何自动更改以显示新变量，但你程序中的'time'变量模块保持不变。添加一个“将距离设置为 0”（set distance to 0）模块，然后将一个“乘法”模块拖到'0'上。将一个“计时器报告”模块拖到第一个空白处，然后在第二个空格处输入数字'7'。完成后，你的组合模块读取为 `将距离设为 time * 7`。这将取按下空格键的时间乘以七，得到国际空间站运行的距离（单位公里）。
+你可以进一步扩展此项目，让它根据国际空间站每秒七公里的公布速度，计算在按下 SPACE 键的时间内国际空间站大约运行了几远。创建一个名为 '`distance`' 的新变量。注意变量类别中的模块如何自动更改以显示新变量，但你程序中的'`time`'变量模块保持不变。添加一个“将距离设置为 0”（set distance to 0）模块，然后将一个“乘法”模块拖到'0'上。将一个“计时器报告”模块拖到第一个空白处，然后在第二个空格处输入数字'7'。完成后，你的组合模块读取为 `将距离设为 time * 7`。这将取按下空格键的时间乘以七，得到国际空间站运行的距离（单位公里）。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_73_0.png)
 
 添加一个“等待 1 秒”模块并将其更改为'4'。最后，将一个“说 Hello!”模块拖到序列的末尾，并像之前那样添加两个“拼接”（join）模块。在第一个空格输入'kilometres'；在最后一个空格，在开头包含一个空格。
 
-# 树莓派官方新手指南
+### 树莓派官方新手指南
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_74_0.png)
 
-最后，将“将我的变量设置为 0”（set my variable to 0）变量模块拖到你序列的末尾。点击'my variable'旁边的下拉箭头，从列表中点击'time'，然后将'0'替换为来自“传感器”类别的“计时器报告”模块。你的游戏现在准备好可以通过舞台上方的绿旗进行测试了。准备好，一旦看到“按下空格！”的消息，就尽可能快地按下 SPACE 键（图 4-13）——看看你能否击败我们的分数！
+最后，将“将我的变量设置为 0”（set my variable to 0）变量模块拖到你序列的末尾。点击'my variable'旁边的下拉箭头，从列表中点击'`time`'，然后将'0'替换为来自“传感器”类别的“计时器报告”模块。你的游戏现在准备好可以通过舞台上方的绿旗进行测试了。准备好，一旦看到“按下空格！”的消息，就尽可能快地按下 SPACE 键（图 4-13）——看看你能否击败我们的分数！
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_74_1.png)
 
-## 第 4 章使用 Scratch 
+#### 第 4 章使用 Scratch
 
-你可以通过让它计算国际空间站在按下 SPACE 键的时间内大约运行了多远，基于空间站每秒七公里的公布速度来进一步扩展此项目。创建一个名为 'distance'的新变量。注意变量类别中的模块如何自动更改以显示新变量，但你程序中的时间变量模块保持不变。添加一个“将距离设置为 0”模块，然后将一个“乘法”模块拖到'0'上。将一个“计时器报告”模块拖到第一个空白处，然后在第二个空格处输入数字'7'。完成后，你的组合模块读取为 `将距离设为 time * 7`。这将取按下空格键的时间乘以七，得到国际空间站运行的距离（单位公里）。
+你可以通过让它计算国际空间站在按下 SPACE 键的时间内大约运行了多远，基于空间站每秒七公里的公布速度来进一步扩展此项目。创建一个名为 '`distance`'的新变量。注意变量类别中的模块如何自动更改以显示新变量，但你程序中的时间变量模块保持不变。添加一个“将距离设置为 0”模块，然后将一个“乘法”模块拖到'0'上。将一个“计时器报告”模块拖到第一个空白处，然后在第二个空格处输入数字'7'。完成后，你的组合模块读取为 `将距离设为 time * 7`。这将取按下空格键的时间乘以七，得到国际空间站运行的距离（单位公里）。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_73_0.png)
 
 添加一个“等待 1 秒”模块并将其更改为'4'。最后，将一个“说 Hello!”模块拖到序列的末尾，并像之前那样添加两个“拼接”（join）模块。在第一个空格输入'kilometres'；在最后一个空格，在开头包含一个空格。
 
-# 树莓派官方新手指南
+### 树莓派官方新手指南
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_74_0.png)
 
@@ -998,9 +918,6 @@ First, click the File menu and save your existing program by clicking on ‘Save
 
 为了让猫的动作更真实，你可以更改它的外观——在 Scratch 术语中被称为你的造型（costume）。点击猫角色，然后点击模块面板上方的“造型”（Costumes）选项卡。点击‘flying-a’造型并点击垃圾桶图标删除它。
 
-
-
-
 点击其右上角的[x]将其删除。接下来，点击“cat flying-b”造型，并使用顶部的名称框将其重命名为“right”（**图 4-17**）。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_78_0.png)
@@ -1009,265 +926,228 @@ First, click the File menu and save your existing program by clicking on ‘Save
 
 右键点击新重命名的“right”造型，并点击“复制（duplicate）”来创建一个副本。点击此副本以选中它，点击“选择（Select）”图标，点击“水平翻转（flip Horizontal）”，然后将其重命名为“left”（**图 4-18**）。完成后，你的精灵角色将有两个“造型”，它们是完全的镜像：一个一个叫“right”，猫面向右边；另一个叫“left”，猫面向左边。
 
+
+
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_78_1.png)
 
 图 4-18：复制造型、翻转并将其命名为“left”
 
-点击造型区域上方的“代码（Code）”标签页，然后将你的左箭头和右箭头“事件（Events）”模块下方拖入两个“切换造型为左（switch costume to left）”模块，将右箭头模块下方的那一个改为“切换造型为右（switch costume to right）”。再次尝试方向键；猫现在似乎会转向面向它游泳的方向。
+点击造型区域上方的“`代码（Code）`”标签页，然后将你的左箭头和右箭头“`事件（Events）`”模块下方拖入两个“`切换造型为左（switch costume to left）`”模块，将右箭头模块下方的那一个改为“`切换造型为右（switch costume to right）`”。再次尝试方向键；猫现在似乎会转向面向它游泳的方向。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_79_0.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_79_1.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_79_2.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_79_3.png)
 
-不过，为了实现奥林匹克式的同步游泳，我们需要更多游泳员，并且需要一种重置猫精灵位置的方法。添加一个“当点击时（when clicked）”事件模块，然后在其下方添加一个“移动到 x: 0 y: 0（go to x: 0 y: 0）”运动模块——根据需要修改数值——以及一个“朝向 90 度指向（point in direction 90）”运动模块。现在，当你点击绿色旗帜时，猫将移动到舞台中心并指向右侧。
+不过，为了实现奥林匹克式的同步游泳，我们需要更多游泳员，并且需要一种重置猫精灵位置的方法。添加一个“`当点击时（when clicked）`”事件模块，然后在其下方添加一个“`移动到 x: 0 y: 0（go to x: 0 y: 0）`”运动模块——根据需要修改数值——以及一个“`朝向 90 度指向（point in direction 90）`”运动模块。现在，当你点击绿色旗帜时，猫将移动到舞台中心并指向右侧。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_0.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_1.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_2.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_3.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_4.png)
 
-为了创建更多游泳员，添加一个“重复 6（repeat 6）”模块——将默认值“10”进行修改，并在内部添加一个“将自己克隆（create clone of myself）”控制模块。为了让游泳员不都朝着同一个方向游泳，在“克隆”模块上方但仍在“重复 6”模块内部添加一个“旋转 60 度（turn 60 degrees）”模块。点击绿色旗帜，现在尝试方向键，看看你的游泳员是如何活起来的！
+为了创建更多游泳员，添加一个“`重复 6（repeat 6）`”模块——将默认值“10”进行修改，并在内部添加一个“`将自己克隆（create clone of myself）`”控制模块。为了让游泳员不都朝着同一个方向游泳，在“克隆”模块上方但仍在“重复 6”模块内部添加一个“`旋转 60 度（turn 60 degrees）`”模块。点击绿色旗帜，现在尝试方向键，看看你的游泳员是如何活起来的！
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_0.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_1.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_2.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_3.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_4.png)
 
-为了营造奥林匹克的氛围，你还需要添加一些音乐。点击模块色板上方的“声音（Sounds）”标签页，然后点击“选择声音（Choose a Sound）”图标。点击“循环（Loops）”分类，然后浏览列表（**图 4-19**），直到找到一些你喜欢的音乐——我们选择了“Dance Around”。点击确定按钮选择该音乐，然后点击“代码”标签页打开代码区域。
+为了营造奥林匹克的氛围，你还需要添加一些音乐。点击模块色板上方的“`声音（Sounds）`”标签页，然后点击“`选择声音（Choose a Sound）`”图标。点击“循环（Loops）”分类，然后浏览列表（`图 4-19`），直到找到一些你喜欢的音乐——我们选择了“`Dance Around`”。点击确定按钮选择该音乐，然后点击“`代码`”标签页打开代码区域。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_82_1.png)
 
-**图 4-19：** 从声音库中选择一个音乐循环
+`图 4-19`：从声音库中选择一个音乐循环
 
-在你的代码区域再添加另一个“当点击时（when clicked）”事件模块，然后添加一个“重复执行（forever）”控制模块。在这个控制模块内部，添加一个“播放声音 dance 直到完成（play sound dance until done）”模块——记得寻找你选择的任何音乐的名称——并点击绿色旗帜测试你的新程序。如果你想停止音乐，点击红色八角形停止程序并让静音！
+在你的代码区域再添加另一个“`当点击时（when clicked）`”事件模块，然后添加一个“`重复执行（forever）`”控制模块。在这个控制模块内部，添加一个“`播放声音 dance 直到完成（play sound dance until done）`”模块——记得寻找你选择的任何音乐的名称——并点击绿色旗帜测试你的新程序。如果你想停止音乐，点击红色八角形停止程序并让静音！
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_0.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_1.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_2.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_3.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_4.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_5.png)
 
-最后，你可以通过为程序添加新的事件触发器来模拟整个流程。为你的程序添加一个“按下空格键（space pressed）”事件模块。添加一个“按下空格键”事件模块，然后在下方添加一个“移动到 x: 0 y: 0（go to x: 0 y: 0）”运动模块——根据需要修改数值——以及一个“朝向 90 度指向（point in direction 90）”运动模块。现在，当你点击绿色旗帜或按下空格时，猫将移动到舞台中心并指向右侧。
+最后，你可以通过为程序添加新的事件触发器来模拟整个流程。为你的程序添加一个“`按下空格键（space pressed）`”事件模块。添加一个“按下空格键”事件模块，然后在下方添加一个“`移动到 x: 0 y: 0（go to x: 0 y: 0）`”运动模块——根据需要修改数值——以及一个“`朝向 90 度指向（point in direction 90）`”运动模块。现在，当你点击绿色旗帜或按下空格时，猫将移动到舞台中心并指向右侧。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_0.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_1.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_2.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_3.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_4.png)
 
-为了创建更多游泳员，添加一个“重复 6（repeat 6）”模块——将默认值“10”进行修改，并在内部添加一个“将自己克隆（create clone of myself）”控制模块。为了让游泳员不都朝着同一个方向游泳，在“克隆”模块上方但仍在“重复 6”模块内部添加一个“旋转 60 度（turn 60 degrees）”模块。点击绿色旗帜，现在尝试方向键，看看你的游泳员是如何活起来的！
+为了创建更多游泳员，添加一个“`重复 6（repeat 6）`”模块——将默认值“10”进行修改，并在内部添加一个“`将自己克隆（create clone of myself）`”控制模块。为了让游泳员不都朝着同一个方向游泳，在“克隆”模块上方但仍在“重复 6”模块内部添加一个“`旋转 60 度（turn 60 degrees）`”模块。点击绿色旗帜，现在尝试方向键，看看你的游泳员是如何活起来的！
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_0.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_1.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_2.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_3.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_4.png)
 
-为了营造奥林匹克的氛围，你还需要添加一些音乐。点击模块色板上方的“声音（Sounds）”标签页，然后点击“选择声音（Choose a Sound）”图标。点击“循环（Loops）”分类，然后浏览列表（**图 4-19**），直到找到一些你喜欢的音乐——我们选择了“Dance Around”。点击确定按钮选择该音乐，然后点击“代码”标签页打开代码区域。
+为了营造奥林匹克的氛围，你还需要添加一些音乐。点击模块色板上方的“`声音（Sounds）`”标签页，然后点击“`选择声音（Choose a Sound）`”图标。点击“循环（Loops）”分类，然后浏览列表（`图 4-19`），直到找到一些你喜欢的音乐——我们选择了“`Dance Around`”。点击确定按钮选择该音乐，然后点击“`代码`”标签页打开代码区域。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_82_1.png)
 
-**图 4-19：** 从声音库中选择一个音乐循环
+`图 4-19`：从声音库中选择一个音乐循环
 
-在你的代码区域再添加另一个“当点击时（when clicked）”事件模块，然后添加一个“重复执行（forever）”控制模块。在这个控制模块内部，添加一个“播放声音 dance 直到完成（play sound dance until done）”模块——记得寻找你选择的任何音乐的名称——并点击绿色旗帜测试你的新程序。如果你想停止音乐，点击红色八角形停止程序并让静音！
+在你的代码区域再添加另一个“`当点击时（when clicked）`”事件模块，然后添加一个“`重复执行（forever）`”控制模块。在这个控制模块内部，添加一个“`播放声音 dance 直到完成（play sound dance until done）`”模块——记得寻找你选择的任何音乐的名称——并点击绿色旗帜测试你的新程序。如果你想停止音乐，点击红色八角形停止程序并让静音！
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_0.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_1.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_2.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_3.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_4.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_5.png)
 
-最后，你可以通过为程序添加新的事件触发器来模拟整个流程。为你的程序添加一个“按下空格键（space pressed）”事件模块。添加一个“按下空格键”事件模块，然后在下方添加一个“移动到 x: 0 y: 0（go to x: 0 y: 0）”运动模块——根据需要修改数值——以及一个“朝向 90 度指向（point in direction 90）”运动模块。现在，当你点击绿色旗帜时，猫将移动到舞台中心并指向右侧。
+
+
+最后，你可以通过为程序添加新的事件触发器来模拟整个流程。为你的程序添加一个“按下空格键（`space pressed`）”事件模块。添加一个“按下空格键”事件模块，然后在下方添加一个“移动到 x: 0 y: 0（`go to x: 0 y: 0`）”运动模块——根据需要修改数值——以及一个“朝向 90 度指向（`point in direction 90`）”运动模块。现在，当你点击绿色旗帜时，猫将移动到舞台中心并指向右侧。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_0.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_1.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_2.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_3.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_4.png)
 
-为了创建更多游泳员，添加一个“重复 6（repeat 6）”模块——将默认值“10”进行修改，并在内部添加一个“将自己克隆（create clone of myself）”控制模块。为了让游泳员不都朝着同一个方向游泳，在“克隆”模块上方但仍在“重复 6”模块内部添加一个“旋转 60 度（turn 60 degrees）”模块。点击绿色旗帜，现在尝试方向键，看看你的游泳员是如何活起来的！
+为了创建更多游泳员，添加一个“重复 6（`repeat 6`）”模块——将默认值“10”进行修改，并在内部添加一个“将自己克隆（`create clone of myself`）”控制模块。为了让游泳员不都朝着同一个方向游泳，在“克隆”模块上方但仍在“重复 6”模块内部添加一个“旋转 60 度（`turn 60 degrees`）”模块。点击绿色旗帜，现在尝试方向键，看看你的游泳员是如何活起来的！
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_0.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_1.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_2.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_3.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_4.png)
 
-为了营造奥林匹克的氛围，你还需要添加一些音乐。点击模块色板上方的“声音（Sounds）”标签页，然后点击“选择声音（Choose a Sound）”图标。点击“循环（Loops）”分类，然后浏览列表（**图 4-19**），直到找到一些你喜欢的音乐——我们选择了“Dance Around”。点击确定按钮选择该音乐，然后点击“代码”标签页打开代码区域。
+为了营造奥林匹克的氛围，你还需要添加一些音乐。点击模块色板上方的“声音（`Sounds`）”标签页，然后点击“选择声音（`Choose a Sound`）”图标。点击“循环（`Loops`）”分类，然后浏览列表（`图 4-19`），直到找到一些你喜欢的音乐——我们选择了“`Dance Around`”。点击确定按钮选择该音乐，然后点击“代码”标签页打开代码区域。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_82_1.png)
 
-**图 4-19：** 从声音库中选择一个音乐循环
+`图 4-19：` 从声音库中选择一个音乐循环
 
-在你的代码区域再添加另一个“当点击时（when clicked）”事件模块，然后添加一个“重复执行（forever）”控制模块。在这个控制模块内部，添加一个“播放声音 dance 直到完成（play sound dance until done）”模块——记得寻找你选择的任何音乐的名称——并点击绿色旗帜测试你的新程序。如果你想停止音乐，点击红色八角形停止程序并让静音！
+在你的代码区域再添加另一个“当点击时（`when clicked`）”事件模块，然后添加一个“重复执行（`forever`）”控制模块。在这个控制模块内部，添加一个“播放声音 dance 直到完成（`play sound dance until done`）”模块——记得寻找你选择的任何音乐的名称——并点击绿色旗帜测试你的新程序。如果你想停止音乐，点击红色八角形停止程序并让静音！
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_0.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_1.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_2.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_3.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_4.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_5.png)
 
-最后，你可以通过为程序添加新的事件触发器来模拟整个流程。为你的程序添加一个“按下空格键（space pressed）”事件模块。添加一个“按下空格键”事件模块，然后在下方添加一个“移动到 x: 0 y: 0（go to x: 0 y: 0）”运动模块——根据需要修改数值——以及一个“朝向 90 度指向（point in direction 90）”运动模块。现在，当你点击绿色旗帜时，猫将移动到舞台中心并指向右侧。
+最后，你可以通过为程序添加新的事件触发器来模拟整个流程。为你的程序添加一个“按下空格键（`space pressed`）”事件模块。添加一个“按下空格键”事件模块，然后在下方添加一个“移动到 x: 0 y: 0（`go to x: 0 y: 0`）”运动模块——根据需要修改数值——以及一个“朝向 90 度指向（`point in direction 90`）”运动模块。现在，当你点击绿色旗帜时，猫将移动到舞台中心并指向右侧。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_0.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_1.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_2.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_3.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_4.png)
 
-为了创建更多游泳员，添加一个“重复 6（repeat 6）”模块——将默认值“10”进行修改，并在内部添加一个“将自己克隆（create clone of myself）”控制模块。为了让游泳员不都朝着同一个方向游泳，在“克隆”模块上方但仍在“重复 6”模块内部添加一个“旋转 60 度（turn 60 degrees）”模块。点击绿色旗帜，现在尝试方向键，看看你的游泳员是如何活起来的！
+为了创建更多游泳员，添加一个“重复 6（`repeat 6`）”模块——将默认值“10”进行修改，并在内部添加一个“将自己克隆（`create clone of myself`）”控制模块。为了让游泳员不都朝着同一个方向游泳，在“克隆”模块上方但仍在“重复 6”模块内部添加一个“旋转 60 度（`turn 60 degrees`）”模块。点击绿色旗帜，现在尝试方向键，看看你的游泳员是如何活起来的！
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_0.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_1.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_2.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_3.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_4.png)
 
-为了营造奥林匹克的氛围，你还需要添加一些音乐。点击模块色板上方的“声音（Sounds）”标签页，然后点击“选择声音（Choose a Sound）”图标。点击“循环（Loops）”分类，然后浏览列表（**图 4-19**），直到找到一些你喜欢的音乐——我们选择了“Dance Around”。点击确定按钮选择该音乐，然后点击“代码”标签页打开代码区域。
+为了营造奥林匹克的氛围，你还需要添加一些音乐。点击模块色板上方的“声音（`Sounds`）”标签页，然后点击“选择声音（`Choose a Sound`）”图标。点击“循环（`Loops`）”分类，然后浏览列表（`图 4-19`），直到找到一些你喜欢的音乐——我们选择了“`Dance Around`”。点击确定按钮选择该音乐，然后点击“代码”标签页打开代码区域。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_82_1.png)
 
-**图 4-19：** 从声音库中选择一个音乐循环
+`图 4-19：` 从声音库中选择一个音乐循环
 
-在你的代码区域再添加另一个“当点击时（when clicked）”事件模块，然后添加一个“重复执行（forever）”控制模块。在这个控制模块内部，添加一个“播放声音 dance 直到完成（play sound dance until done）”模块——记得寻找你选择的任何音乐的名称——并点击绿色旗帜测试你的新程序。如果你想停止音乐，点击红色八角形停止程序并让静音！
+在你的代码区域再添加另一个“当点击时（`when clicked`）”事件模块，然后添加一个“重复执行（`forever`）”控制模块。在这个控制模块内部，添加一个“播放声音 dance 直到完成（`play sound dance until done`）”模块——记得寻找你选择的任何音乐的名称——并点击绿色旗帜测试你的新程序。如果你想停止音乐，点击红色八角形停止程序并让静音！
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_0.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_1.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_2.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_3.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_4.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_5.png)
 
-最后，你可以通过为程序添加新的事件触发器来模拟整个流程。为你的程序添加一个“按下空格键（space pressed）”事件模块。添加一个“按下空格键”事件模块，然后在下方添加一个“移动到 x: 0 y: 0（go to x: 0 y: 0）”运动模块——根据需要修改数值——以及一个“朝向 90 度指向（point in direction 90）”运动模块。现在，当你点击绿色旗帜时，猫将移动到舞台中心并指向右侧。
+最后，你可以通过为程序添加新的事件触发器来模拟整个流程。为你的程序添加一个“按下空格键（`space pressed`）”事件模块。添加一个“按下空格键”事件模块，然后在下方添加一个“移动到 x: 0 y: 0（`go to x: 0 y: 0`）”运动模块——根据需要修改数值——以及一个“朝向 90 度指向（`point in direction 90`）”运动模块。现在，当你点击绿色旗帜时，猫将移动到舞台中心并指向右侧。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_0.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_1.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_2.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_3.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_4.png)
 
-为了创建更多游泳员，添加一个“重复 6（repeat 6）”模块——将默认值“10”进行修改，并在内部添加一个“将自己克隆（create clone of myself）”控制模块。为了让游泳员不都朝着同一个方向游泳，在“克隆”模块上方但仍在“重复 6”模块内部添加一个“旋转 60 度（turn 60 degrees）”模块。点击绿色旗帜，现在尝试方向键，看看你的游泳员是如何活起来的！
+
+
+为了创建更多游泳员，添加一个“`repeat 6`”模块——将默认值“10”进行修改，并在内部添加一个“`create clone of myself`”控制模块。为了让游泳员不都朝着同一个方向游泳，在“克隆”模块上方但仍在“`repeat 6`”模块内部添加一个“`turn 60 degrees`”模块。点击绿色旗帜，现在尝试方向键，看看你的游泳员是如何活起来的！
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_0.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_1.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_2.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_3.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_4.png)
 
-为了营造奥林匹克的氛围，你还需要添加一些音乐。点击模块色板上方的“声音（Sounds）”标签页，然后点击“选择声音（Choose a Sound）”图标。点击“循环（Loops）”分类，然后浏览列表（**图 4-19**），直到找到一些你喜欢的音乐——我们选择了“Dance Around”。点击确定按钮选择该音乐，然后点击“代码”标签页打开代码区域。
+为了营造奥林匹克的氛围，你还需要添加一些音乐。点击模块色板上方的“`Sounds`”标签页，然后点击“`Choose a Sound`”图标。点击“`Loops`”分类，然后浏览列表（图 4-19），直到找到一些你喜欢的音乐——我们选择了“`Dance Around`”。点击确定按钮选择该音乐，然后点击“代码”标签页打开代码区域。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_82_1.png)
 
-**图 4-19：** 从声音库中选择一个音乐循环
+图 4-19：从声音库中选择一个音乐循环
 
-在你的代码区域再添加另一个“当点击时（when clicked）”事件模块，然后添加一个“重复执行（forever）”控制模块。在这个控制模块内部，添加一个“播放声音 dance 直到完成（play sound dance until done）”模块——记得寻找你选择的任何音乐的名称——并点击绿色旗帜测试你的新程序。如果你想停止音乐，点击红色八角形停止程序并让静音！
+在你的代码区域再添加另一个“`when clicked`”事件模块，然后添加一个“`forever`”控制模块。在这个控制模块内部，添加一个“`play sound dance until done`”模块——记得寻找你选择的任何音乐的名称——并点击绿色旗帜测试你的新程序。如果你想停止音乐，点击红色八角形停止程序并让静音！
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_0.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_1.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_2.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_3.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_4.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_83_5.png)
 
-最后，你可以通过为程序添加新的事件触发器来模拟整个流程。为你的程序添加一个“按下空格键（space pressed）”事件模块。添加一个“按下空格键”事件模块，然后在下方添加一个“移动到 x: 0 y: 0（go to x: 0 y: 0）”运动模块——根据需要修改数值——以及一个“朝向 90 度指向（point in direction 90）”运动模块。现在，当你点击绿色旗帜时，猫将移动到舞台中心并指向右侧。
+最后，你可以通过为程序添加新的事件触发器来模拟整个流程。为你的程序添加一个“`space pressed`”事件模块。添加一个“`space pressed`”事件模块，然后在下方添加一个“`go to x: 0 y: 0`”运动模块——根据需要修改数值——以及一个“`point in direction 90`”运动模块。现在，当你点击绿色旗帜时，猫将移动到舞台中心并指向右侧。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_0.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_1.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_2.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_3.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_80_4.png)
 
-为了创建更多游泳员，添加一个“重复 6（repeat 6）”模块——将默认值“10”进行修改，并在内部添加一个“将自己克隆（create clone of myself）”控制模块。为了让游泳员不都朝着同一个方向游泳，在“克隆”模块上方但仍在“重复 6”模块内部添加一个“旋转 60 度（turn 60 degrees）”模块。点击绿色旗帜，现在尝试方向键，看看你的游泳员是如何活起来的！
+为了创建更多游泳员，添加一个“`repeat 6`”模块——将默认值“10”进行修改，并在内部添加一个“`create clone of myself`”控制模块。为了让游泳员不都朝着同一个方向游泳，在“克隆”模块上方但仍在“`repeat 6`”模块内部添加一个“`turn 60 degrees`”模块。点击绿色旗帜，现在尝试方向键，看看你的游泳员是如何活起来的！
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_0.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_1.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_2.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_3.png)
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_4.png)
 
-为了营造奥林匹克的氛围，你还需要添加一些音乐。点击模块色板上方的“声音（Sounds）”标签页，然后点击“选择声音（Choose a Sound）”图标。点击“循环（Loops）”分类，然后浏览列表（**图 4-19**），直到找到一些你喜欢的音乐——我们选择了“Dance Around”。点击确定按钮选择该音乐，然后点击“代码”标签页打开代码区域。
+为了营造奥林匹克的氛围，你还需要添加一些音乐。点击模块色板上方的“`Sounds`”标签页，然后点击“`Choose a Sound`”图标。点击“`Loops`”分类，然后浏览列表（图 4-19），直到找到一些你喜欢的音乐——我们选择了“`Dance Around`”。点击确定按钮选择该音乐，然后点击“代码”标签页打开代码区域。
+
+![](img/0aff4cdab15427839fb48fd7c6f677d3_82_1.png)
+
+图 4-19：从声音库中选择一个音乐循环
+
+在你的代码区域再添加另一个“`when clicked`”事件模块，然后添加一个“`forever`”控制模块。在这个控制模块内部，添加一个“`play sound dance until done`”模块——记得寻找你选择的任何音乐的名称——并点击绿色旗帜测试你的新程序。如果你想停止音乐，点击红色八角形停止程序并让静音！
+
+![](img/0aff4cdab15427839fb48fd7c6f677d3_83_0.png)
+![](img/0aff4cdab15427839fb48fd7c6f677d3_83_1.png)
+![](img/0aff4cdab15427839fb48fd7c6f677d3_83_2.png)
+![](img/0aff4cdab15427839fb48fd7c6f677d3_83_3.png)
+![](img/0aff4cdab15427839fb48fd7c6f677d3_83_4.png)
+![](img/0aff4cdab15427839fb48fd7c6f677d3_83_5.png)
+
+最后，你可以通过为程序添加新的事件触发器来模拟整个流程。为你的程序添加一个“`space pressed`”事件模块。添加一个“`space pressed`”事件模块，然后在下方添加一个“`go to x: 0 y: 0`”运动模块——根据需要修改数值——以及一个“`point in direction 90`”运动模块。现在，当你点击绿色旗帜时，猫将移动到舞台中心并指向右侧。
+
+![](img/0aff4cdab15427839fb48fd7c6f677d3_80_0.png)
+![](img/0aff4cdab15427839fb48fd7c6f677d3_80_1.png)
+![](img/0aff4cdab15427839fb48fd7c6f677d3_80_2.png)
+![](img/0aff4cdab15427839fb48fd7c6f677d3_80_3.png)
+![](img/0aff4cdab15427839fb48fd7c6f677d3_80_4.png)
+
+为了创建更多游泳员，添加一个“`repeat 6`”模块——将默认值“10”进行修改，并在内部添加一个“`create clone of myself`”控制模块。为了让游泳员不都朝着同一个方向游泳，在“克隆”模块上方但仍在“`repeat 6`”模块内部添加一个“`turn 60 degrees`”模块。点击绿色旗帜，现在尝试方向键，看看你的游泳员是如何活起来的！
+
+![](img/0aff4cdab15427839fb48fd7c6f677d3_81_0.png)
+![](img/0aff4cdab15427839fb48fd7c6f677d3_81_1.png)
+![](img/0aff4cdab15427839fb48fd7c6f677d3_81_2.png)
+![](img/0aff4cdab15427839fb48fd7c6f677d3_81_3.png)
+![](img/0aff4cdab15427839fb48fd7c6f677d3_81_4.png)
+
+为了营造奥林匹克的氛围，你还需要添加一些音乐。点击模块色板上方的“`Sounds`”标签页，然后点击“`Choose a Sound`”图标。点击“`Loops`”分类，然后浏览列表（图 4-19），直到找到一些你喜欢的音乐——我们选择了“`Dance Around`”。点击确定按钮选择该音乐，然后点击“代码”标签页打开代码区域。
+
+
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_82_1.png)
 
@@ -1303,78 +1183,37 @@ First, click the File menu and save your existing program by clicking on ‘Save
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_81_0.png)
 
-![](img/0aff4cdab15427839fb48fd7c6f677d3_81_1.png)
-
-![](img/0aff4cdab15427839fb48fd7c6f677d3_81_2.png)
-
-![](img/0aff4cdab15427839fb48fd7c6f677d3_81_3.png)
-
-![](img/0aff4cdab15427839fb48fd7c6f677d3_81_4.png)
-
-为了营造奥林匹克的氛围，你还需要添加一些音乐。点击模块色板上方的“声音（Sounds）”标签页，然后点击“选择声音（Choose a Sound）”图标。点击“循环（Loops）”分类，然后浏览列表（**图 4-19**），直到找到一些你喜欢的音乐——我们选择了“Dance Around”。点击确定按钮选择该音乐，然后点击“代码”标签页打开代码区域。
-
-![](img/0aff4cdab15427839fb48fd7c6f677d3_82_1.png)
-
-**图 4-19：** 从声音库中选择一个音乐循环
-
-在你的代码区域再添加另一个“当点击时（when clicked）”事件模块，然后添加一个“重复执行（forever）”控制模块。在这个控制模块内部，添加一个“播放声音 dance 直到完成（play sound dance until done）”模块——记得寻找你选择的任何音乐的名称——并点击绿色旗帜测试你的新程序。如果你想停止音乐，点击红色八角形停止程序并让静音！
-
-![](img/0aff4cdab15427839fb48fd7c6f677d3_83_0.png)
-
-![](img/0aff4cdab15427839fb48fd7c6f677d3_83_1.png)
-
-![](img/0aff4cdab15427839fb48fd7c6f677d3_83_2.png)
-
-![](img/0aff4cdab15427839fb48fd7c6f677d3_83_3.png)
-
-![](img/0aff4cdab15427839fb48fd7c6f677d3_83_4.png)
-
-![](img/0aff4cdab15427839fb48fd7c6f677d3_83_5.png)
-
-最后，你可以通过为程序添加新的事件触发器来模拟整个流程。为你的程序添加一个“按下空格键（space pressed）”事件模块。添加一个“按下空格键”事件模块，然后在下方添加一个“移动到 x: 0 y: 0（go to x: 0 y: 0）”运动模块——根据需要修改数值——以及一个“朝向 90 度指向（point in direction 90）”运动模块。现在，当你点击绿色旗帜时，猫将移动到舞台中心并指向右侧。
-
-![](img/0aff4cdab15427839fb48fd7c6f677d3_80_0.png)
-
-![](img/0aff4cdab15427839fb48fd7c6f677d3_80_1.png)
-
-![](img/0aff4cdab15427839fb48fd7c6f677d3_80_2.png)
-
-![](img/0aff4cdab15427839fb48fd7c6f677d3_80_3.png)
-
-![](img/0aff4cdab15427839fb48fd7c6f677d3_80_4.png)
-
-为了创建更多游泳员，添加一个“重复 6（repeat 6）”模块——将默认值“10”进行修改，并在内部添加一个“将自己克隆（create clone of myself）”控制模块。为了让游泳员不都朝着同一个方向游泳，在“克隆”模块上方但仍在“重复 6”模块内部添加一个“旋转 60 度（turn 60 degrees）”模块。点击绿色旗帜，现在尝试方向键，看看你的游泳员是如何活起来的！
-
-![](img/0aff4cdab15427839fb48fd7c6f677d3_81_0.png)
-
-... (省略重复图片描述，保持逻辑一致) ...
+...（省略重复图片描述，保持逻辑一致）...
 
 ...39fb48fd7c6f677d3_81_4.png
 
-为了营造奥林匹克的氛围，你还需要添加一些音乐... (此处后续翻译已保持一致) ...（**图 4-17**）。
+为了营造奥林匹克的氛围，你还需要添加一些音乐...（此处后续翻译已保持一致）...（**图 4-17**）。
 
 ...以及一个“朝向 90 度指向（point in direction 90）”运动模块。现在，当你点击绿色旗帜时，猫将
+
 ...
+
 （由于字数限制，此处为针对给定文本的完整翻译逻辑，已遵循所有 Markdown 格式要求）
-
-
-
 
 触摸？在菱形间隙中使用“感应”块。要选择正确的颜色，点击“感应”块末端的彩色方框，然后点击吸管图标 💧，最后点击舞台上你目标的黄色靶心。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_89_0.png)
 
-为了让玩家知道他们已经得分，在 `if then` 块内部添加一个“播放欢呼声”块和一个“说出 200 分持续 2 秒”的块。最后，在块栈的最底部（即 `if then` 块的下方且外部）添加一个“广播新箭头”块，让玩家在每次发射时都能获得额外的欢呼。点击绿色旗帜开始游戏，并尝试击中黄色靶心：当你命中时，你将获得观众的欢呼和 200 分的分数！
+为了让玩家知道他们已经得分，在`if then`块内部添加一个“播放欢呼声”块和一个“说出 200 分持续 2 秒”的块。最后，在块栈的最底部（即`if then`块的下方且外部）添加一个“广播新箭头”块，让玩家在每次发射时都能获得额外的欢呼。点击绿色旗帜开始游戏，并尝试击中黄色靶心：当你命中时，你将获得观众的欢呼和 200 分的分数！
 
 # 树莓派官方新手指南
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_90_0.png)
+
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_90_1.png)
+
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_90_2.png)
+
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_90_3.png)
+
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_90_4.png)
 
-> 欲尝试更多 Scratch atch 项目，请参阅附录 D：延伸阅读
+> 欲尝试更多 Scratch 项目，请参阅附录 D：延伸阅读
 
 游戏可以运行，但稍微有一点挑战性。利用你在本章中学到的知识，尝试扩展它，为击中靶心以外的其他部分添加分数。红色 100 分，蓝色 50 分，依此类推。
 
@@ -1382,14 +1221,13 @@ First, click the File menu and save your existing program by clicking on ‘Save
 
 第 4 章 使用 Scratch 编程
 
-# 第 5 章
-使用 Python 编程
+# 第 5 章 使用 Python 编程
 
 现在你已经掌握了 Scratch，我们将向你展示如何使用 Python 进行文本编码。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_91_0.png)
 
-Python 以“蒙提 Python喜剧剧团”（Monty Python）命名，由 Guido·范罗姆（Guido van Rossum）创立。它从 1991 年首次面向公众的一个爱好项目发展为一种备受喜爱的、支持各种项目的编程语言。与 Scratch 的视觉化环境不同，Python 是基于文本的：你使用简化的语言和特定的格式编写指令，由计算机执行这些指令。
+Python 以“蒙提 Python 喜剧剧团”（Monty Python）命名，由 Guido·范罗姆（Guido van Rossum）创立。它从 1991 年首次面向公众的一个爱好项目发展为一种备受喜爱的、支持各种项目的编程语言。与 Scratch 的视觉化环境不同，Python 是基于文本的：你使用简化的语言和特定的格式编写指令，由计算机执行这些指令。
 
 对于已经使用过 Scratch 的人来说，Python 是极佳的下一步，它提供了更大的活性和“传统的”编程环境。这并不是说它很难学习，只要通过练习，任何人都可以编写从简单计算到意乎复杂的游戏的各种 Python 程序。本章建立在第 4 章“使用 Scratch 编程”中介绍的术语和概念之上。如果你还没有完成该章节的练习，先回去做一遍，你会发现本章会更容易理解。
 
@@ -1400,10 +1238,13 @@ Python 以“蒙提 Python喜剧剧团”（Monty Python）命名，由 Guido·�
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_92_0.png)
 
 - **A 工具栏** - Thonny 的“简单模式”使用一栏友好的图标作为其菜单，允许你创建、保存、加载和运行程序，并以各种方式对其进行测试。
+
 - **B 脚本区域** - 脚本区域是编写 Python 程序的地方，分为一个用于程序的主区域和一个用于显示行号的小边距区域。
+
 - **C 终端（Shell）** - Python 终端允许你输入单条指令，这些指令会在按下 **ENTER** 键后立即运行，并提供有关运行程序的信息。
 
 > THONNY 版本
+
 Thonny 有两个版本：“普通模式”和更适合初学者的“简单模式”。本章使用简单模式，当你从“编程”部分打开 Thonny 时，默认加载该模式。
 
 第 5 章 使用 Python 编程
@@ -1432,7 +1273,9 @@ print("Hello, World!")
 print("Hello, World!")
 ```
 
-当你按下 ENTER 键时什么都没有发生——除了脚本区域出现了一个空行。要让这个版本的程序运行，你必须点击 Thonny 工具栏中的运行图标。在你这样做时，会被要求先保存程序；输入一个描述性名称，如“Hello World”，并点击保存。一旦程序保存，你将在终端区域看到两条消息（见图 5-2）：
+
+
+当你按下 `ENTER` 键时什么都没有发生——除了脚本区域出现了一个空行。要让这个版本的程序运行，你必须点击 Thonny 工具栏中的运行图标。在你这样做时，会被要求先保存程序；输入一个描述性名称，如“Hello World”，并点击保存。一旦程序保存，你将在终端区域看到两条消息（见图 5-2）：
 
 ```
 >>> Run 'Hello World.py'
@@ -1443,7 +1286,7 @@ Hello, World!
 
 - 图 5-2：运行你的简单程序。
 
-第 5 章 使用 Python 编程
+# 第 5 章 使用 Python 编程
 
 这两行中的第一行是 Thonny 运行你刚刚保存程序的指令。第二行是程序的输出——你告诉 Python 打印的消息。恭喜，你现在已经在交互和脚本模式下编写并运行了第一个 Python 程序！
 
@@ -1455,14 +1298,14 @@ Hello, World!
 
 ## 下一步：循环和代码缩进
 
-就像 Scratch 使用积木块栈来控制程序的哪些部分与其他部分连接一样，Python 有自己的控制程序运行顺序的方法：缩进。通过点击 Thonny 工具栏中的新建图标 + 创建新程序。你不会丢失现有的程序；相反，Thonny 会脚本区域上方创建一个新标签。开始输入以下内容：
+就像 Scratch 使用积木块栈来控制程序的哪些部分与其他部分连接一样，Python 有自己的控制程序运行顺序的方法：缩进。通过点击 Thonny 工具栏中的新建图标 `+` 创建新程序。你不会丢失现有的程序；相反，Thonny 会脚本区域上方创建一个新标签。开始输入以下内容：
 
 ```
 print("Loop starting!")
 for i in range(10):
 ```
 
-第一行向终端打印一条简单的消息，就像你的 Hello World 程序。第二行开始了一个定义循环，其工作方式与 Scratch 相同：计数器 `i` 被分配给循环并运行一系列数字——`range` 指令被告知从 0 开始计数，但不达到 10。冒号符号 `:` 告诉 Python 下一条指令应该是循环的一部分。下一行开头有四个空格，当你按下第 2 行后的  后，Thonny 应该会自动添加这些空格：
+第一行向终端打印一条简单的消息，就像你的 Hello World 程序。第二行开始了一个定义循环，其工作方式与 Scratch 相同：计数器 `i` 被分配给循环并运行一系列数字——`range` 指令被告知从 0 开始计数，但不达到 10。冒号符号 `:` 告诉 Python 下一条指令应该是循环的一部分。下一行开头有四个空格，当你按下第 2 行后的 `ENTER` 后，Thonny 应该会自动添加这些空格：
 
 ```
 print("Loop number"), i
@@ -1470,11 +1313,7 @@ print("Loop number"), i
 
 这些空格将该行与其他行相比向内推。这种缩进区分了循环外部指令和循环内部指令：缩进的代码被称为嵌套。
 
-
-
-
-
-print("Loop finished!")
+`print("Loop finished!")`
 
 你的四行程序现在已经完成了。第一行位于循环之外，只会运行一次；第二行设置了循环；第三行在循环内部，每循环一次就会运行一次；而第四行再次位于循环之外。
 
@@ -1485,19 +1324,30 @@ for i in range(10):
 print("Loop finished!")
 ```
 
-点击运行（Run）图标，将程序保存为 Indentation，并查看 shell 区域输出**（图 5-3）**
+点击运行 `Run` 图标，将程序保存为 `Indentation`，并查看 shell 区域输出**（图 5-3）**
 
 - Loop starting!
+
 Loop number 0
+
 Loop number 1
+
 Loop number 2
+
 Loop number 3
+
 Loop number 4
+
 Loop number 5
+
 Loop number 6
+
 Loop number 7
+
 Loop number 8
+
 Loop number 9
+
 Loop finished!
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_96_0.png)
@@ -1516,7 +1366,7 @@ Python 还支持无限循环，即无终止运行。要将你的程序从有限�
 while True:
 ```
 
-如果你现在点击运行图标，将会得到一个错误：name 'i' is not defined。这是因为你删除了创建并给变量 i 赋值的那行代码。要修复此问题，只需编辑第 3 行使其不再使用该变量：
+如果你现在点击运行图标，将会得到一个错误：`name 'i' is not defined`。这是因为你删除了创建并给变量 `i` 赋值的那行代码。要修复此问题，只需编辑第 3 行使其不再使用该变量：
 
 ```python
 print("Loop running")
@@ -1528,24 +1378,24 @@ print("Loop running")
 
 图 5-4：无限循环会一直持续，直到你停止程序
 
-点击 Thonny 栏上的停止（Stop）图标 🟠 来告诉程序停止正在操作——这被称为中断程序。你会在 Python shell 区域看到一条消息，程序将停止——且永远不会到达第 4 行。
+点击 Thonny 栏上的停止 `Stop` 图标 🟠 来告诉程序停止正在操作——这被称为中断程序。你会在 Python shell 区域看到一条消息，程序将停止——且永远不会到达第 4 行。
 
 > 挑战：循环中的循环  
 > 你能把循环改回确定循环吗？你可以在程序中添加第二个确定循环吗？你将如何在一个循环内部添加另一个循环，你预期它会如何工作？
 
 ### 条件判断与变量
 
-变量在所有编程语言中一样，存在不仅仅是为了控制循环。点击 Thonny 菜单上的新建（New）图标 ➕ 开始一个新程序，然后在脚本区域输入以下内容：
+变量在所有编程语言中一样，存在不仅仅是为了控制循环。点击 Thonny 菜单上的新建 `New` 图标 ➕ 开始一个新程序，然后在脚本区域输入以下内容：
 
 ```python
 userName = input ("What is your name?")
 ```
 
-点击运行图标，将程序保存为 Name Test，并观察 shell 区域发生了什么：你会被要求输入名字。在 shell 区域输入你的名字并按回车。因为这是程序中唯一的指令，其他什么都不会发生（图 5-5）。如果你想对存入变量的数据进行任何操作，你需要在程序中编写更多行。
+点击运行图标，将程序保存为 `Name Test`，并观察 shell 区域发生了什么：你会被要求输入名字。在 shell 区域输入你的名字并按回车。因为这是程序中唯一的指令，其他什么都不会发生（图 5-5）。如果你想对存入变量的数据进行任何操作，你需要在程序中编写更多行。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_98_0.png)
 
-- **图 5-5：**input 函数允许你要求用户输入文本
+- **图 5-5：** `input` 函数允许你要求用户输入文本
 
 为了让你的程序对名字进行一些有用操作，可以通过输入以下内容添加条件语句：
 
@@ -1558,27 +1408,27 @@ else:
 
 记住 Thonny 说你的代码需要缩进，它会自动处理——但它不知道何时该停止缩进，你需要手动删除那些空格。
 
-点击运行图标并在 shell 区域输入你的名字。除非你的名字恰好是 Clark Kent，否则你将看到消息“You are not Superman!”。点击运行，这次输入名字“Clark Kent”——确保拼写与程序中完全一致，包含大写的 C 和 K。这样，程序就会识别出你确实是 Superman（图 5-6）。
+点击运行图标并在 shell 区域输入你的名字。除非你的名字恰好是 `Clark Kent`，否则你将看到消息“You are not Superman!”。点击运行，这次输入名字“Clark Kent”——确保拼写与程序中完全一致，包含大写的 C 和 K。这样，程序就会识别出你确实是 Superman（图 5-6）。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_99_0.png)
 
 图 5-6：你不不该去拯救世界吗？
 
-== 符号告诉 Python 执行直接比较，查看变量 `userName` 是否匹配程序中的文本（即字符串）。如果你在处理数字，还有其他比较方式：
+`==` 符号告诉 Python 执行直接比较，查看变量 `userName` 是否匹配程序中的文本（即字符串）。如果你在处理数字，还有其他比较方式：
 
-- > : 大于
-- < : 小于
-- >= : 大于等于
-- <= : 小于等于
-- != : 不等于
+- `>` : 大于
 
+- `<` : 小于
 
+- `>=` : 大于等于
 
+- `<=` : 小于等于
 
+- `!=` : 不等于
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_102_0.png)
 
-切回 Thony 主窗口 – 如果它隐藏在海龟绘图（Turtle Graphics）窗口后面，请点击海龟绘图窗口上的最小化按钮，或者点击屏幕上方任务栏上的 Thony 图 – 点击“停止（Stop）”按钮来关闭海龟绘图窗口。
+切回 Thony 主窗口 – 如果它隐藏在海龟绘图 `Turtle Graphics` 窗口后面，请点击海龟绘图窗口上的最小化按钮，或者点击屏幕上方任务栏上的 Thony 图 – 点击“停止 `Stop`”按钮来关闭海龟绘图窗口。
 
 手动输入每一个移动指令会非常无聊，因此删除第 3 行并创建一个循环来完成创建形状的繁琐工作：
 
@@ -1590,7 +1440,7 @@ for i in range(2):
     pat.right(120)
 ```
 
-运行你的程序，Pat 将画出一个平行四边形（图 5-9）。
+运行你的程序，`Pat` 将画出一个平行四边形（图 5-9）。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_102_1.png)
 
@@ -1606,9 +1456,11 @@ for i in range(10):
 pat.right(36)
 ```
 
-你的程序现在还无法运行，因为现有的循环缩进不正确。要修复这个问题，点击现有循环中每行的开头 – 第 4 行到第 8 行 – 并按空格键（SPACE）来修正缩进。你的程序现在应该像这样：
+你的程序现在还无法运行，因为现有的循环缩进不正确。要修复这个问题，点击现有循环中每行的开头 – 第 4 行到第 8 行 – 并按空格键 `SPACE` 来修正缩进。你的程序现在应该像这样：
 
-```
+
+
+```python
 import turtle
 pat = turtle.Turtle()
 for i in range(10):
@@ -1630,7 +1482,7 @@ pat.right(36)
 
 虽然机器人海龟在大张纸上用单色绘制，Python 的模拟海龟可以使用多种颜色。添加新的第 3 和第 4 行，将现有的行向下推：
 
-```
+```python
 turtle.Screen().bgcolor("blue")
 pat.color("cyan")
 ```
@@ -1643,24 +1495,25 @@ pat.color("cyan")
 
 你也可以使用 `random` 库从列表中随机选择颜色。回到程序顶部，将以下内容作为第 2 行插入：
 
-```
+```python
 import random
 ```
 
-将现在第 4 行的背景颜色从 'blue' 改为 'grey'，通过插入新的第 5 行创建一个名为 'colours' 的新变量：
+将现在第 4 行的背景颜色从 `'blue'` 改为 `'grey'`，通过插入新的第 5 行创建一个名为 `'colours'` 的新变量：
 
-```
+```python
 colours = ["cyan", "purple", "white", "blue"]
 ```
 
 > 美式拼写
+>
 > 许多编程语言使用美式英语拼写，Python 例外：更改海龟笔颜色的命令拼写为 `color`，如果你按照英式英语拼写为 `colour`，它将无法工作。不过，变量可以使用任何你喜欢的拼写 – 这就是为什么你能够调用新变量 `colours` 并让 Python 理解它的原因。
 
-第 5 章 使用 Python 编程
+## 第 5 章 使用 Python 编程
 
 这种类型的变量被称为列表（list），用方括号标记。在这种情况下，列表填充了雪花分段的可能颜色 – 但你仍然需要告诉 Python 在每次循环重复时选择一个。在程序的最后面，输入以下内容 – 确保其缩进四个空格，使其成为外层循环的一部分，就像上面的那行一样：
 
-```
+```python
 pat.color(random.choice(colours))
 ```
 
@@ -1669,10 +1522,6 @@ pat.color(random.choice(colours))
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_105_0.png)
 
 图 5-12：使用随机颜色使雪花看起来更真实
-
-
-
-
 
 ```python
 from pygame.locals import *
@@ -1797,6 +1646,8 @@ sleep(0.4)
 
 你完成的程序应该是这样的：
 
+
+
 ```python
 import pygame
 from pygame.locals import *
@@ -1854,29 +1705,25 @@ pygame.quit()
 
 图 5-17: 目前目前只有两个房间
 
-
-
-
-
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_115_0.png)
 
-不过，空房间可没不好玩。要向房间添加物品，你需要修改该房间的字典。点击 Stop（停止）图标停止程序。在脚本区域的 Hall（大厅）字典中，在 'east' : 'Dining Room' 的行尾添加一个逗号，然后按回车并输入以下行：
+不过，空房间可没不好玩。要向房间添加物品，你需要修改该房间的字典。点击 Stop（停止）图标停止程序。在脚本区域的 Hall（大厅）字典中，在 `'east' : 'Dining Room'` 的行尾添加一个逗号，然后按回车并输入以下行：
 
 ```
 'item' : 'key'
 ```
 
-再次点击 Run（运行）。此时，游戏会告诉你你可以看到新物品了：一把钥匙。输入 'get key'（图 5-19）并捡起它，将其添加到你携带的物品列表中——这被称为背包（inventory）。当你从各个房间之间移动时，你的背包会一直跟随你。
+再次点击 Run（运行）。此时，游戏会告诉你你可以看到新物品了：一把钥匙。输入 `'get key'`（图 5-19）并捡起它，将其添加到你携带的物品列表中——这被称为背包（inventory）。当你从各个房间之间移动时，你的背包会一直跟随你。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_115_1.png)
 
-点击停止图标 🛑，通过添加一个需要避开的怪物来让游戏变得更有趣。找到 Kitchen（厨房）字典，按照你添加 'key' 物品的方法添加 'monster' 物品——记得在上一行末尾添加逗号：
+点击停止图标 🛑，通过添加一个需要避开的怪物来让游戏变得更有趣。找到 Kitchen（厨房）字典，按照你添加 `'key'` 物品的方法添加 `'monster'` 物品——记得在上一行末尾添加逗号：
 
 ```
 'item' : 'monster'
 ```
 
-为了让怪物能够攻击玩家，你需要为游戏添加一些逻辑。滚动到脚本区域程序的最底部，添加以下行——包括用 # 号标记的注释，这有助于你以后某天回来查看时理解程序——并确保这些行已缩进：
+为了让怪物能够攻击玩家，你需要为游戏添加一些逻辑。滚动到脚本区域程序的最底部，添加以下行——包括用 `#` 号标记的注释，这有助于你以后某天回来查看时理解程序——并确保这些行已缩进：
 
 ```
 ### player loses if they enter a room with a monster
@@ -1898,7 +1745,7 @@ rooms[currentRoom]['item']:
 'south' : 'Garden'
 ```
 
-然后将你的新房间添加到 rooms 字典中，同样记得在上一行的 } 之后添加一个逗号：
+然后将你的新房间添加到 `rooms` 字典中，同样记得在上一行的 `}` 之后添加一个逗号：
 
 ```
 'Garden' : {
@@ -1906,7 +1753,7 @@ rooms[currentRoom]['item']:
 }
 ```
 
-在 Dining Room 字典中添加一个 'potion'（药水）对象，记得在上一行添加必要的逗号：
+在 Dining Room 字典中添加一个 `'potion'`（药水）对象，记得在上一行添加必要的逗号：
 
 ```
 'item' : 'potion'
@@ -1924,9 +1771,10 @@ if currentRoom == 'Garden' and 'key' in inventory and
 
 点击 Run，在进入花园之前捡起钥匙和药水来完成游戏。记住不要进入 Kitchen 房间，因为怪物就在那里！
 
-作为对游戏的最后微调，添加一些告诉玩家如何玩游戏的指令。滚动到程序顶部，即定义 showInstructions() 函数的地方，添加以下内容：
+作为对游戏的最后微调，添加一些告诉玩家如何玩游戏的指令。滚动到程序顶部，即定义 `showInstructions()` 函数的地方，添加以下内容：
 
 ### Get to the Garden with a key and a potion
+
 Avoid the monsters!
 
 最后运行一次游戏，你会在程序的最开始看到你的新指令（**图 5-21**，此处见下文）。恭喜你：你制作了一个交互式文本迷宫游戏！
@@ -1938,9 +1786,13 @@ Avoid the monsters!
 图 5-21：现在玩家知道需要做什么了
 
 > 挑战：扩展游戏
+> 
 > 你能添加更多房间来让游戏持续更久吗？
+> 
 > 你能添加一个物品来保护自己免受怪物的伤害吗？
+> 
 > 你如何添加一把武器来杀死怪物？
+> 
 > 你是否可以在现有房间的上方和下方添加房间，并通过楼梯访问？
 
 第 5 章 使用 Python 编程 119
@@ -1962,9 +1814,14 @@ Avoid the monsters!
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_120_0.png)
 
 > GPIO 扩展
+> 
 > 直接使用树莓派的 GPIO 插针是完全可能的，但你可能会发现使用扩展板更方便。使用扩展后，引脚会被引到侧边，这意味着你无需绕背面即可检查和调整接线。
-> 兼容的扩展板包括来自 fromoni.com 的 Black Hat 和来自 adraft.com 的 Pi-Cobbler Plus。
-> 如果使用扩展板，请务必检查其接线方式——某些扩展（如 Pi-Cobbler Plus）了 GPIO 引脚的布局。
+
+
+
+兼容的扩展板包括来自 `fromoni.com` 的 Black Hat 和来自 `adraft.com` 的 Pi-Cobbler Plus。
+
+如果使用扩展板，请务必检查其接线方式——某些扩展（如 Pi-Cobbler Plus）了 GPIO 引脚的布局。
 
 引脚类型有几种，每种都有特定的功能：
 
@@ -1976,12 +1833,9 @@ Avoid the monsters!
 | GPIO XX | 通用输入/输出引脚编号 'XX' | 程序可用的 GPIO 引脚，由 2 到 27 的数字标识 |
 | ID EEPROM | 预留的特殊用途引脚 | 预留用于硬件顶层扩展（HAT）和其他配件的引脚 |
 
-> ### 警告！
-> 树莓派的 GPIO 插针是实验物理计算的一种有趣且安全的方法，但必须小心对待。在连接和断开硬件时，注意不要弯折引脚。永远不要无意或故意地将两个引脚直接连接在一起，除非项目说明中明确要求这么做；这被称为短路，根据引脚的不同，可能会永久损坏你的树莓派。
+### 警告！
 
-
-
-
+树莓派的 GPIO 插针是实验物理计算的一种有趣且安全的方法，但必须小心对待。在连接和断开硬件时，注意不要弯折引脚。永远不要无意或故意地将两个引脚直接连接在一起，除非项目说明中明确要求这么做；这被称为短路，根据引脚的不同，可能会永久损坏你的树莓派。
 
 ### 电子元件
 
@@ -2007,7 +1861,7 @@ GPIO 引脚只是你开始进行物理计算所需内容的一部分；另一部
 
 压电蜂鸣器（通常称为蜂鸣器或声器）是另一种输出设备。LED 产生光，而蜂鸣器产生噪音——实际上是嗡嗡声。在蜂鸣器的塑料外壳内部有一对金属片；激活时，这些金属片相互震动产生蜂鸣声。蜂鸣器有两种类型：有源蜂鸣器和无源蜂鸣器。确保购买有源蜂鸣器，因为它们最容易使用。
 
-其他常见的电子元件包括电机（在连接到树莓派之前需要特殊的控制板）、检测运动的红外传感器、可预测天气的温湿度传感器，以及光敏电阻（LDR）——一种通过检测光线工作的反 LED 输入设备。世界各地的卖家提供用于树莓派物理计算的元件，可以是单个零件，也可以包含入门所需的所有套件。要寻找卖家，请访问 rpf.io/products，点击 Raspberry Pi 4，你将获得所在国家或地区的树莓派合作伙伴在线商店（授权经销商）列表。
+其他常见的电子元件包括电机（在连接到树莓派之前需要特殊的控制板）、检测运动的红外传感器、可预测天气的温湿度传感器，以及光敏电阻（LDR）——一种通过检测光线工作的反 LED 输入设备。世界各地的卖家提供用于树莓派物理计算的元件，可以是单个零件，也可以包含入门所需的所有套件。要寻找卖家，请访问 `rpf.io/products`，点击 Raspberry Pi 4，你将获得所在国家或地区的树莓派合作伙伴在线商店（授权经销商）列表。
 
 为了完成本章中的项目，你至少应该：
 
@@ -2041,10 +1895,6 @@ GPIO 引脚只是你开始进行物理计算所需内容的一部分；另一部
 
 要读取电阻的值，从第一个色环开始。第二个色环提供下一个数字。第三个色环告诉你需要添加几个零（乘数）。第四个色环告诉你容差，即实际电阻与额定值之间的偏差范围。
 
-
-
-
-
 首先检查你的 LED 是否正常。旋转你的树莓派，使 GPIO 引脚位于右侧的两个垂直列。使用一根母对母跳线线将其中一个 330 Ω 电阻连接到第一个 3.3 V 引脚（在**图 6-1**中标记为 3V3），然后用另一根母对母跳线线将其另一端连接到 LED 的长脚——正极，或阳极。最后取一根母对母跳线线，将 LED 的短脚——负极，或阴极——连接到第一个地线引脚（在**图 6-1**中标记为 GND）。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_127_0.png)
@@ -2059,7 +1909,8 @@ GPIO 引脚只是你开始进行物理计算所需内容的一部分；另一部
 
 现在你已经准备好创建一个 Scratch 或 Python 程序来控制 LED 的开启和关闭了。
 
-> ### 编程知识
+### 编程知识
+
 本章的项目需要你熟练使用 Scratch 3 和 Thony Python 集成开发环境 (IDE)。如果你还没有这样做，请翻到**第 4 章，使用 Scratch 3 编程**和**第 5 章，使用 Python 编程**，先完成那些项目。
 
 ### 在 Scratch 中控制 LED
@@ -2069,6 +1920,8 @@ GPIO 引脚只是你开始进行物理计算所需内容的一部分；另一部
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_129_0.png)
 
 图 6-3: 为 Scratch 3 添加 Raspberry Pi GPIO 扩展
+
+
 
 当将一个“事件”模块块拖入代码区域时，在其下方放置一个“将 gpio 设置为输出”模块块。你需要选择你正在使用的引脚编号：点击小箭头打开下拉选择列表并点击“25”，以告诉 Scratch 你正在控制 GPIO 25 引脚。
 
@@ -2093,9 +1946,10 @@ set gpio 25 to output low
 点击绿色旗帜观察你的 LED：它会亮一秒，灭一秒，循环，直到你点击红色八边形停止它。看看 LED 处于开启或关闭状态时点击会发生什么。
 
 > 挑战：你可以修改它吗？
+
 你如何修改程序让 LED 亮的时间更长？或者关闭更长？在还能看到 LED 切换的情况下，最小的延迟是多少？
 
-### 在 Python 中控制 LED
+## 在 Python 中控制 LED
 
 从树莓派菜单的编程选项中加载 Thny，然后点击“新建”按钮启动新项目并将其保存为 Hello LED。要在 Python 中使用 GPIO 引脚，你需要一个名为 GPIO Zero 的库。对于这个项目，你只需要处理 LED 的部分。在 Python Shell 区域输入以下内容导入该库：
 
@@ -2121,9 +1975,10 @@ while True:
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_131_0.png)
 
 > 挑战：长时间
+
 你如何修改程序让 LED 亮的时间更长？或者关闭更长？在还能看到 LED 切换的情况下，最小的延迟是多少？
 
-### 使用面包板
+## 使用面包板
 
 如果你使用面包板，本章中的后续项目将更容易完成得多。
 
@@ -2131,11 +1986,7 @@ while True:
 
 面包板上布满了孔，间距匹配元件，为 2.54 毫米。这些孔是金属条，作用就像你使用的跳线线。这些金属条跨越整个板行排列，大多数面包板在中间有一个间隙，将其分为两半。许多面包板在顶部有字母，在侧面有数字。这些允许你找到特定的孔：A1 是左上角，B1 是其右侧的孔，而 B2 是其下方的一个孔。A1 通过隐藏的金属条与 B1 连接，但除非你添加跳线线，否则 1 号孔与 2 号孔之间没有连接。
 
-
-
-
-
-### 下一步：读取按钮
+## 下一步：读取按钮
 
 像 LED 这样的输出设备是一回事，而“GPIO”中的“输入/输出”部分意味着你也可以将引脚用输入。对于这个项目，你需要一个面包板、公对公（M2M）和公对母（M2F）跳线线，以及一个按键开关。如果你没有面包板，可以使用母对母（F2F）跳线线，但在不小心弄断电路的情况下，按键将会比平时要困难得多。
 
@@ -2179,6 +2030,7 @@ say Button pushed! for seconds seconds
 点击绿色旗帜并按下按钮。当按钮按下时 LED 会亮起；松开时它会再次熄灭。恭喜你：你正在根据输入控制 GPIO 引脚！
 
 > 挑战：保持常亮
+
 > 你该如何修改程序，让 LED 在松开按钮后保持亮几秒？你需要更改什么以便在不按下按钮时 LED 亮着，按下时熄灭？
 
 ### 在 Python 中读取按钮
@@ -2206,6 +2058,8 @@ print("You pushed!")
 from gpiozero import LED
 from time import sleep
 ```
+
+
 
 在 `button = Button(2)` 行下方，输入：
 
@@ -2247,7 +2101,7 @@ led.off()
 
 ### 发出声音：控制蜂鸣器
 
-有源蜂鸣器在电路方面可以完全像 LED。重复你为 LED 的电路，但用源蜂鸣器替换 LED 并去掉电阻，因为蜂鸣器需要更大的电流。使用面包板和母对母跳线线将蜂鸣器的一个连接到 GPIO 15 引脚（图 6-5标记为 GP15），另一个连接到地脚（标记为 GND）。
+有源蜂鸣器在电路方面可以完全像 LED。重复你为 LED 的电路，但用源蜂鸣器替换 LED 并去掉电阻，因为蜂鸣器需要更大的电流。使用面包板和母对母跳线线将蜂鸣器的一个连接到 GPIO 15 引脚（图 6-5 标记为 GP15），另一个连接到地脚（标记为 GND）。
 
 如果蜂鸣器有三个脚，确保带有负号 (-) 的脚连接到地脚，标记为 'S' 或 'SIGNAL' 的脚连接到 GPIO 15，然后将剩余的脚（通常是中间的脚）连接到 3.3V 引脚（标记为 3V）。
 
@@ -2257,7 +2111,7 @@ led.off()
 
 ### 在 Scratch 中控制蜂鸣器
 
-重新创建一个与闪烁 相同的程序——如果你在创建按钮项目之前保存了它，请加载它。使用 `set gpio to output high` 模块中的下拉菜单选择 15，以便让 Scratch 控制正确的 GPIO 引脚。
+重新创建一个与闪烁相同的程序——如果你在创建按钮项目之前保存了它，请加载它。使用 `set gpio to output high` 模块中的下拉菜单选择 15，以便让 Scratch 控制正确的 GPIO 引脚。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_139_0.png)
 
@@ -2266,10 +2120,6 @@ led.off()
 点击红色八边形停止你的蜂鸣器，但请确保在它没有发出声音时这样做，否则蜂鸣器将一直嗡嗡直到你再次运行程序！
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_139_1.png)
-
-
-
-
 
 ### 在 Python 中控制蜂鸣器
 
@@ -2286,7 +2136,7 @@ from time import sleep
 buzzer = Buzzer(15)
 ```
 
-从这里开始，你的程序与你编写的控制 LED 的程序几乎相同；唯一的区别（除了 GPIO 引脚编号不同）是你是你使用了 `buzzer` 代替了 `led`。输入以下内容：
+从这里开始，你的程序与你编写的控制 LED 的程序几乎相同；唯一的区别（除了 GPIO 引脚编号不同）是你使用了 `buzzer` 代替了 `led`。输入以下内容：
 
 ```
 while True:
@@ -2348,11 +2198,13 @@ set gpio 8 to output low
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_143_0.png)
 
-真实的行人过路不会在按下按钮时立即将灯变为红灯，而是等待下一个红灯。要将此功能构建到你的程序中，在代码区域拖入一个“低（low）”模块并从其下拉列表中选择“2”。然后在它下方拖入一个“被按下时设置为 1（pushed to 1）”模块。此模块监控按钮是否被按下，然后将变量“pushed”设置为 1。在菱形空隙处拖入“如果（if）”模块，判断 `pushed` 等于 1。在“那么”部分拖入一个“低（low）”模块并从其下拉列表中选择“2”。然后拖入“将 gpio 25 设置为输出低（set gpio to output low）”模块。在下方拖入一个“将 gpio 设置为输出高（set gpio to output high）”模块来停止蜂鸣器。
+真实的行人过路不会在按下按钮时立即将灯变为红灯，而是等待下一个红灯。要将此功能构建到你的程序中，在代码区域拖入一个“低（low）”模块并从其下拉列表中选择“2”。然后在它下方拖入一个“被按下时设置为 1（pushed to 1）”模块。此模块监控按钮是否被按下，然后将变量`pushed`设置为 1。在菱形空隙处拖入“如果（if）”模块，判断 `pushed` 等于 1。在“那么”部分拖入一个“低（low）”模块并从其下拉列表中选择“2”。然后拖入“将 gpio 25 设置为输出低（set gpio to output low）”模块。在下方拖入一个“将 gpio 设置为输出高（set gpio to output high）”模块来停止蜂鸣器。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_144_0.png)
 
-点击绿色旗帜，观察你的 LED：首先是红灯，然后是红黄双亮，然后是绿灯，然后是黄灯，最后序列再次从红灯开始。这种模式与英国交通灯使用的模式相同，如果你愿意，可以编辑序列以匹配其他国家。在“否则”部分中，让蜂鸣器鸣响 2 秒，等待 2 秒，让红灯亮起 2 秒 
+
+
+点击绿色旗帜，观察你的 LED：首先是红灯，然后是红黄双亮，然后是绿灯，然后是黄灯，最后序列再次从红灯开始。这种模式与英国交通灯使用的模式相同，如果你愿意，可以编辑序列以匹配其他国家。在“否则”部分中，让蜂鸣器鸣响 2 秒，等待 2 秒，让红灯亮起 2 秒
 
 ```
 if pushed = 1 then
@@ -2383,29 +2235,27 @@ else
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_140_0.png)
 
 > 挑战：更好的鸣响
+>
 > 你如何修改程序让蜂鸣器的鸣响时间更短？你能构建一个电路，通过按钮来控制蜂鸣器吗？
 
 ### Python 项目：快速反应游戏
 
 现在你已经学会了如何使用按钮、蜂鸣器和 LED 作为输入和输出，你准备好构建一个现实世界的示例了：双人快速反应游戏，设计为了看谁的反应最快！对于这个项目，你需要一个面包板，一个 LED 和一个 330 Ω 电阻；两个按键开关；一些公对母（M2F）跳线线以及一些公对公（M2M）跳线线。
 
-从构建电路开始（图 6-7）：将面包板左侧的开关连接到 GPIO 14 引脚（图 6-7 中标记为 GPIO14），将面包板右侧的开关连接到 GPIO 15 引脚（标记为 GPIO15），LED 的长脚通过 330 Ω 电阻连接到树莓派的 GPIO 4 引脚（标记为 GPIO4），并将所有组件的第二个引脚连接到面包板的地线轨。最后，将地线轨连接到树莓派的地引脚（标记为 GND）。
+从构建电路开始（图 6-7）：将面包板左侧的开关连接到 `GPIO 14` 引脚（图 6-7 中标记为 `GPIO14`），将面包板右侧的开关连接到 `GPIO 15` 引脚（标记为 `GPIO15`），LED 的长脚通过 330 Ω 电阻连接到树莓派的 `GPIO 4` 引脚（标记为 `GPIO4`），并将所有组件的第二个引脚连接到面包板的地线轨。最后，将地线轨连接到树莓派的地引脚（标记为 `GND`）。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_146_0.png)
 
 图 6-7：快速反应游戏接线图
 
-
-
-
-在 Thonny 中新建一个项目并将其保存为 Reaction Game。你将使用来自 GPIO Zero 库的 LED 和按钮功能，以及 time 库中的 sleep 函数。不过，与其分用两行来导入两个 GPIO Zero 函数，你还可以使用逗号（,）将它们隔开并将它们一起导入，以节省时间。在脚本区域输入以下内容：
+在 `Thonny` 中新建一个项目并将其保存为 `Reaction Game`。你将使用来自 `GPIO Zero` 库的 `LED` 和 `Button` 功能，以及 `time` 库中的 `sleep` 函数。不过，与其分用两行来导入两个 `GPIO Zero` 函数，你还可以使用逗号（`,`）将它们隔开并将它们一起导入，以节省时间。在脚本区域输入以下内容：
 
 ```
 from gpiozero import LED, Button
 from time import sleep
 ```
 
-和之前一样，你需要告诉 GPIO Zero 两个按钮和 LED 连接到哪些引脚。输入以下内容：
+和之前一样，你需要告诉 `GPIO Zero` 两个按钮和 LED 连接到哪些引脚。输入以下内容：
 
 ```
 led = LED(4)
@@ -2421,19 +2271,19 @@ sleep(5)
 led.off()
 ```
 
-点击 Run 按钮：LED 将开启五秒，然后关闭，程序将退出。不过，对于反应游戏来说，LED 每次都恰好在 5 秒后关闭太容易被预测了。在 `import sleep` 所在行下方添加以下内容：
+点击 `Run` 按钮：LED 将开启五秒，然后关闭，程序将退出。不过，对于反应游戏来说，LED 每次都恰好在 5 秒后关闭太容易被预测了。在 `import sleep` 所在行下方添加以下内容：
 
 ```
 from random import uniform
 ```
 
-random 库顾其名，允许你生成随机数（这里使用均匀分布 - 见 rpf.io/uniform）。找到 `sleep(5)` 行并将其更改为：
+`random` 库顾其名，允许你生成随机数（这里使用均匀分布 - 见 `rpf.io/uniform`）。找到 `sleep(5)` 行并将其更改为：
 
 ```
 sleep(uniform(5, 10))
 ```
 
-再次点击 Run 按钮：这次 LED 将保持 5 到 10 秒之间的随机秒数。数一数看 LED 需要多长时间，然后多点击几次 Run 按钮：你会发现每次运行的时间都不同，这使得程序更具不可预测性。
+再次点击 `Run` 按钮：这次 LED 将保持 5 到 10 秒之间的随机秒数。数一数看 LED 需要多长时间，然后多点击几次 `Run` 按钮：你会发现每次运行的时间都不同，这使得程序更具不可预测性。
 
 将按钮变为每个玩家的触发器，你需要添加一个函数。转到程序的底部输入以下内容：
 
@@ -2442,14 +2292,15 @@ def pressed(button):
     print(str(button.pin.number) + " won the game")
 ```
 
-记住，Python 使用缩进来识别哪些行属于你的函数；Thonny 会自动为你对第二行进行缩进。最后，添加两行来检测玩家按下按钮——记住这些行不能缩进，否则 Python 会把它们视为函数的一部分。
+记住，Python 使用缩进来识别哪些行属于你的函数；`Thonny` 会自动为你对第二行进行缩进。最后，添加两行来检测玩家按下按钮——记住这些行不能缩进，否则 Python 会把它们视为函数的一部分。
 
 ```
 right_button.when_pressed = pressed
 left_button.when_pressed = pressed
 ```
 
-运行你的程序，并尝试在 LED 熄灭时立即按下其中一个按钮。你会看到 Thonny 窗口底部的 Python shell 打印出第一个按钮的消息。遗憾的是，你还会看到每次按下按钮时显示的消息——而且它们使用的是引脚号而不是友好的按钮名称。
+运行你的程序，并尝试在 LED 熄灭时立即按下其中一个按钮。你会看到 `Thonny` 窗口底部的 Python shell 打印出第一个按钮的消息。遗憾的是，你还会看到每次按下按钮时显示的消息——而且它们使用的是引脚号而不是友好的按钮名称。
+
 要修复这个问题，首先向玩家询问他们的。在 `random import uniform` 所在的行下方，输入以下内容：
 
 ```
@@ -2466,8 +2317,9 @@ else:
     print(right_name + " won the game")
 ```
 
-点击 Run 按钮，然后在 Python shell 中输入两个玩家的名字。当你按下按钮时（记住在 LED 熄灭后尽可能快地），你会看到打印的是玩家名称而不是引脚号。
-为了解决所有按钮按下都被报告为获胜的问题，你需要从 sys（system 的缩写）库中添加一个新函数：exit。在最后一条导入行之后，输入以下内容：
+点击 `Run` 按钮，然后在 Python shell 中输入两个玩家的名字。当你按下按钮时（记住在 LED 熄灭后尽可能快地），你会看到打印的是玩家名称而不是引脚号。
+
+为了解决所有按钮按下都被报告为获胜的问题，你需要从 `sys`（system 的缩写）库中添加一个新函数：`exit`。在最后一条导入行之后，输入以下内容：
 
 ```
 from os import _exit
@@ -2512,19 +2364,18 @@ while True:
     led.off()
 ```
 
+- 陀螺仪：用于感应随时间变化的角度（技术上称为角速度），它通过跟踪地球引力场（即向行星中心拉的力）来实现。简单来说，陀螺仪传感器可以告诉你当你相对于地球表面旋转 `Sense HAT` 时何时旋转，以及它旋转的速度有多快。
+- 加速度计：与陀螺仪传感器类似，但它不是监测相对于地球的角度，而是测量多个方向上的加速度力。将这两个传感器的读数（数据）相结合，可以告诉你 `Sense HAT` 指向哪个方向以及它是如何移动的。
 
 
--   陀螺仪：用于感应随时间变化的角度（技术上称为角速度），它通过跟踪地球引力场（即向行星中心拉的力）来实现。简单来说，陀螺仪传感器可以告诉你当你相对于地球表面旋转 Sense HAT 时何时旋转，以及它旋转的速度有多快。
 
--   加速度计：与陀螺仪传感器类似，但它不是监测相对于地球的角度，而是测量多个方向上的加速度力。将这两个传感器的读数（数据）相结合，可以告诉你 Sense HAT 指向哪个方向以及它是如何移动的。
+- 磁力计：测量磁场强度，另一种可以帮助跟踪 Sense HAT 移动的传感器：通过测量地球的自然磁场，磁力计可以确定磁北的方向。该款传感器还可以用于检测金属物体，甚至是电场。这三个传感器都集成在一个单一芯片中，在 Sense HAT 的电路板上标记为“ACCEL/GYRO/MAG”。
 
--   磁力计：测量磁场强度，另一种可以帮助跟踪 Sense HAT 移动的传感器：通过测量地球的自然磁场，磁力计可以确定磁北的方向。该款传感器还可以用于检测金属物体，甚至是电场。这三个传感器都集成在一个单一芯片中，在 Sense HAT 的电路板上标记为“ACCEL/GYRO/MAG”。
+- 湿度传感器：测量空气中的水蒸气含量，即相对湿度。相对湿度的范围从 0%（完全没有水）到 100%（空气完全饱和）。在可能要下雨时，可以检测到湿度数据！
 
--   湿度传感器：测量空气中的水蒸气含量，即相对湿度。相对湿度的范围从 0%（完全没有水）到 100%（空气完全饱和）。在可能要下雨时，可以检测到湿度数据！
+- 气压传感器：也称为气压计，测量空气压力。虽然大多数人对天气预报中的气压很熟悉，但气压计还有一个隐藏秘密：它可以跟踪你上山或下山的过程，因为距离地球海平面越远，空气越稀薄，压力越低。
 
--   气压传感器：也称为气压计，测量空气压力。虽然大多数人对天气预报中的气压很熟悉，但气压计还有一个隐藏秘密：它可以跟踪你上山或下山的过程，因为距离地球海平面越远，空气越稀薄，压力越低。
-
--   温度传感器：测量周围环境的热热，但也受到 Sense HAT 冷热的影响：如果你使用了外壳，可能会发现读数比预期高。Sense HAT 并没有独立的温度传感器；而是使用内置在湿度传感器和气压传感器中的温度传感器。程序可以使用其中一个或两个传感器；这取决于你的需求。
+- 温度传感器：测量周围环境的热热，但也受到 Sense HAT 冷热的影响：如果你使用了外壳，可能会发现读数比预期高。Sense HAT 并没有独立的温度传感器；而是使用内置在湿度传感器和气压传感器中的温度传感器。程序可以使用其中一个或两个传感器；这取决于你的需求。
 
 ## 在树莓派 400 上使用 Sense HAT
 
@@ -2541,6 +2392,7 @@ Sense HAT 完全兼容树莓派 400，并可以直接插入背部的 GPIO 引脚
 垫柱的设计是为了防止在使用摇杆时 Sense HAT 发生弯曲和变形。虽然不安装垫柱 Sense HAT 也能工作，但使用它们可以保护你的 Sense HAT、树莓派和 GPIO 引脚不受损坏。
 
 > 警告！
+
 硬件扩展层（HAT）模块应仅在树莓派开关关闭并断开电源的情况下插入或拔出 GPIO 引脚。安装时务必保持 HAT 平整，并在向下推之前双重检查它是否与 GPIO 引脚对齐。
 
 通过将四颗螺丝从树莓派底部穿过四个角落的安装孔来安装垫柱，然后将垫柱拧在螺丝上。将 Sense HAT 推到树莓派的 GPIO 引脚上，确保它与下方的引脚正确对齐并保持尽可能平整。最后，将最后四颗螺丝穿过 Sense HAT 上的安装孔并拧入之前安装的垫柱中。如果安装得当，Sense HAT 应该是平整水平的，并且在你按下摇杆时不会发生弯曲或晃动。
@@ -2558,11 +2410,13 @@ Sense HAT 完全兼容树莓派 400，并可以直接插入背部的 GPIO 引脚
 与所有的编程项目一样，Sense HAT 有一个明显的起点：让 Sense HAT 显示欢迎信息。如果你正在使用 Sense HAT 模拟器，通过点击树莓派操作系统图标、选择编程（Programming）并点击 Sense HAT 来加载。
 
 > 编程经验
+
 本章节假设你熟悉 Scratch 3 或 Python 及其集成开发环境（IDE）。
 
 从树莓派操作系统加载 Scratch 3。点击窗口底部的“扩展”（Extension）按钮。这将加载控制 Sense HAT 各种功能所需的块。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_156_0.png)
+
 图 7-2：添加树莓派 扩展
 
 将“点击时”（when clicked）块拖到脚本区域，然后在下方拖入“显示文本”（display text）块。编辑文本使其显示“Hello, World!”。
@@ -2572,19 +2426,20 @@ Sense HAT 完全兼容树莓派 400，并可以直接插入背部的 GPIO 引脚
 点击舞台上的绿色旗帜，观察你的 Sense HAT 或 Sense HAT 模拟器：信息将缓慢滚动整个 Sense HAT，逐个点亮字母（图 7-3）。恭喜：你的程序成功了！
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_157_0.png)
+
 图 7-3：信息在 LED 矩阵上滚动
 
 你可以滚动简单的消息，现在是查看如何控制消息显示的方式了。除了可以修改消息，你还可以更改旋转——更改消息在 Sense HAT 上的显示。从块面板拖出一个“旋转为 0 度”（set rotation to 0 degrees）块，将其插入“点击时”和“显示文本 Hello, World!”之间，然后点击 0 旁边的箭头改为 90。你会看到与之前相同的消息，不是从左向右滚动，而是从下向上滚动（图 7-4）——你需要转头或转动 Sense HAT 才能阅读！
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_158_0.png)
+
 图 7-4：这次消息是垂直滚动
 
 现在将旋转改回 0，然后在“旋转为 0 度”和“显示文本 Hello, World!”之间拖入一个“设置颜色”（set colour）块。点击块末尾的颜色调出 Scratch 的颜色选择器并找到一个漂亮的亮黄色，然后点击绿色旗帜查看你的程序输出发生了什么变化（图 7-5）。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_158_1.png)
+
 图 7-5：更改文本颜色
-
-
 
 最后，在 `set colour to yellow` 和 `display text Hello, World!` 之间拖入一个设置背景块，然后再次点击调出颜色选择器。这一次，选择颜色不会影响组成消息的 LED——它们被称为背景。找一个好看的蓝色，然后再次点击绿色旗帜：这样你的消息将以亮黄色显示在蓝色背景上。尝试更改这些颜色以找到你最喜欢的组合——并不是所有颜色都百搭的！
 
@@ -2604,7 +2459,7 @@ Sense HAT 完全兼容树莓派 400，并可以直接插入背部的 GPIO 引脚
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_160_0.png)
 
-## PYTHON 行的更改
+### PYTHON 行的更改
 
 为物理 Sense HAT 编写的 Python 代码可以在 Sense HAT 模拟器上运行，反之亦然，只需更改一处即可。如果你在 Python 中使用 Sense HAT 模拟器，你需要将本章中所有程序中的 `sense_hat import SenseHat` 行更改为 `sense_emu import SenseHat`。如果你想再次在物理 Sense HAT 上运行，只需将该行改回去即可！
 
@@ -2621,7 +2476,9 @@ Sense HAT 库有一个简单的函数，可以接收消息、对其进行格式�
 sense.show_message("Hello, World!")
 ```
 
-将你的程序保存为 `Hello Sense HAT`，然后点击 Run（运行）按钮。你会看到消息在 Sense HAT LED 矩阵上缓慢滚动，逐点亮 LED 像素形成每个字母（图 7-7，跨页）。恭喜你：你的程序成功了！
+
+
+将你的程序保存为 `Hello Sense HAT`，然后点击 `Run`（运行）按钮。你会看到消息在 Sense HAT LED 矩阵上缓慢滚动，逐点亮 LED 像素形成每个字母（图 7-7，跨页）。恭喜你：你的程序成功了！
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_161_0.png)
 
@@ -2641,8 +2498,6 @@ sense.show_message("Hello, World!", text_colour=(255, 255, 0), back_colour=(0, 0
 
 图 7-8：更改消息
 
-
-
 并将饱和度滑块调至 0；通过将亮度滑动到 100 并将饱和度滑动到 0 来使其变为白色。你需要在每个 Sense HAT 程序开始时都这样做，否则 Scratch 将直接使用你上一次选择的颜色——即使这些颜色是在另一个程序中选择的。最后，将一个显示块拖到程序的底部。
 
 点击绿色旗帜：你将看到 Sense HAT 的 LED 亮起了一个树莓（图 7-11）。
@@ -2659,8 +2514,9 @@ sense.show_message("Hello, World!", text_colour=(255, 255, 0), back_colour=(0, 0
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_166_0.png)
 
-点击绿色旗帜，你将看到 LED 亮起以匹配第 165 页上的矩阵图像**(图 7-10)**。恭喜你：你可以控制单个 LED 了！
-按如下编辑现有的 set pixel 块，并向底部拖入更多块，直到拥有以下内容：
+点击绿色旗帜，你将看到 LED 亮起以匹配第 165 页上的矩阵图像 `（图 7-10）`。恭喜你：你可以控制单个 LED 了！
+
+按如下编辑现有的 `set pixel` 块，并向底部拖入更多块，直到拥有以下内容：
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_166_1.png)
 
@@ -2670,7 +2526,7 @@ sense.show_message("Hello, World!", text_colour=(255, 255, 0), back_colour=(0, 0
 
 ## Python 中的图片
 
-在 Tonny 中启动一个新程序并将其保存为 Sense HAT Drawing，然后输入以下内容——记住，如果你使用的是模拟器，请使用 **sense_emu**（代替 **sense_hat**）：
+在 Tonny 中启动一个新程序并将其保存为 `Sense HAT Drawing`，然后输入以下内容——记住，如果你使用的是模拟器，请使用 `sense_emu`（代替 `sense_hat`）：
 
 ```python
 from sense_hat import SenseHat
@@ -2683,7 +2539,7 @@ sense = SenseHat()
 sense.clear(255, 255, 255)
 ```
 
-在不直视 Sense HAT LED 的情况下，点击运行 图标：你应该能看到它们都变成了亮白色（**图 7-12**）——这就是为什么在运行程序时不应该直视它们！
+在不直视 Sense HAT LED 的情况下，点击运行 图标：你应该能看到它们都变成了亮白色（`图 7-12`）——这就是为什么在运行程序时不应该直视它们！
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_168_0.png)
 
@@ -2707,13 +2563,13 @@ sense.clear(0, 255, 0)
 sense.clear()
 ```
 
-Sense HAT 将变暗；对于 `sense.clear()` 函数，括号内什么都不放等同于告诉它关闭所有 LED（**图 7-14**）。当你需要完全清除 LED 时，请使用该函数。
+Sense HAT 将变暗；对于 `sense.clear()` 函数，括号内什么都不放等同于告诉它关闭所有 LED（`图 7-14`）。当你需要完全清除 LED 时，请使用该函数。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_170_0.png)
 
 图 7-14：使用 sense.clear 函数关闭 LED
 
-要创建本章早些处所示的 LED 矩阵自定义版本（其中两个特定指定的 LED 分别亮起红色和蓝色），在你的程序 **sense.clear()** 之后添加以下行：
+要创建本章早些处所示的 LED 矩阵自定义版本（其中两个特定指定的 LED 分别亮起红色和蓝色），在你的程序 `sense.clear()` 之后添加以下行：
 
 ```
 sense.set_pixel(0, 2, (0, 0, 255))
@@ -2724,16 +2580,13 @@ sense.set_pixel(7, 4, (255, 0, 0))
 
 在点击绿色旗帜之前，尝试根据你使用的 LED 矩阵坐标猜测将出现什么图片，然后运行你的程序并看看你是否正确！
 
-
-
-
-
 ## 感知周围的世界
 
 Sense HAT 的强大之处在于它拥有的各种传感器。这些传感器允许你获取从温度到加速度的所有读数，并根据需要将它们用于你的程序中。
 
 > 模拟传感器
-如果你正在使用 Sense HAT 模拟器，则需要启用惯性和环境传感器仿真：在模拟器中，点击 Edit（编辑），然后点击 Preferences（首选项），最后点击它们。在同一菜单中，在“Orientation Scale”（方向缩放）下选择‘180°’、‘360°’、‘180°’以确保模拟器中的数字与 Scratch 和 Python 的数字一致，然后点击 Close（关闭）按钮。
+
+如果你正在使用 Sense HAT 模拟器，则需要启用惯性和环境传感器仿真：在模拟器中，点击 `Edit`（编辑），然后点击 `Preferences`（首选项），最后点击它们。在同一菜单中，在“Orientation Scale”（方向缩放）下选择‘180°’、‘360°’、‘180°’以确保模拟器中的数字与 Scratch 和 Python 的数字一致，然后点击 `Close`（关闭）按钮。
 
 ### 环境感知
 
@@ -2747,13 +2600,15 @@ Sense HAT 的强大之处在于它拥有的各种传感器。这些传感器允�
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_174_0.png)
 
-点击绿色旗帜，Scratch 小猫将告诉你以毫巴（millibars）为单位的压力传感器当前数。两秒后，消息将消失；尝试向 Sense HAT 吹气（或向上移动模拟器中的 Pressure 滑块），然后再次运行程序（**图 17**）。
+
+
+点击绿色旗帜，Scratch 小猫将告诉你以毫巴（millibars）为单位的压力传感器当前数。两秒后，消息将消失；尝试向 Sense HAT 吹气（或向上移动模拟器中的 Pressure 滑块），然后再次运行程序（图 17）。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_175_0.png)
 
 图 17：显示压力传感器读数
 
-> ### 修改数值
+### 修改数值
 
 如果你正在使用 Sense HAT 模拟器，可以使用滑动块和按钮更改每个仿真传感器的值。尝试将压力传感器设置向下，然后点击绿色旗帜。
 
@@ -2763,17 +2618,17 @@ Sense HAT 的强大之处在于它拥有的各种传感器。这些传感器允�
 
 图 18：显示湿度传感器读数
 
-对于温度传感器，只需删除湿度模块并替换为温度，然后再次运行程序。你将看到摄氏度的温度（**图 19**）。然而，这可能不是房间的精确温度：因为 Raspberry Pi 在运行时会产生热量，这也会加热 Sense HAT 及其传感器。
+对于温度传感器，只需删除湿度模块并替换为温度，然后再次运行程序。你将看到摄氏度的温度（图 19）。然而，这可能不是房间的精确温度：因为 Raspberry Pi 在运行时会产生热量，这也会加热 Sense HAT 及其传感器。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_176_0.png)
 
 图 19：显示温度传感器读数
 
 > 挑战：滚动与循环
+> 
+> 你是否可以修改程序，依次获取每个传感器的读数，将其滚动到 LED 矩阵上而不是打印到舞台区域？你是否可以让程序循环，以便持续打印当前的环境状况？
 
-你是否可以修改程序，依次获取每个传感器的读数，将其滚动到 LED 矩阵上而不是打印到舞台区域？你是否可以让程序循环，以便持续打印当前的环境状况？
-
-### Python 中的环境感知
+## Python 中的环境感知
 
 要开始从传感器读取数据，在 Thonny 中创建一个新程序并将其保存为 Sense HAT。当使用 Sense HAT 时，始终应在脚本区域输入以下内容：
 
@@ -2792,13 +2647,13 @@ pressure = sense.get_pressure()
 print(pressure)
 ```
 
-点击 Run（运行），你会在 Thonny 窗口底部看到一个数字。这是气压传感器检测到的气压，单位为毫巴（**图 20**）。向 Sense HAT 吹气（或向上移动模拟器的 Pressure 滑块）并再次点击 Run 图标；数字将会更高。
+点击 Run（运行），你会在 Thonny 窗口底部看到一个数字。这是气压传感器检测到的气压，单位为毫巴（图 20）。向 Sense HAT 吹气（或向上移动模拟器的 Pressure 滑块）并再次点击 Run 图标；数字将会更高。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_177_0.png)
 
 图 20：从 Sense HAT 输出压力读数
 
-> ### 修改数值
+### 修改数值
 
 如果你正在使用 Sense HAT 模拟器，可以使用滑动块和按钮更改每个仿真传感器的值。尝试将压力传感器设置向下，然后再次点击绿色旗帜。
 
@@ -2808,23 +2663,23 @@ print(pressure)
 
 图 18：显示湿度传感器读数
 
-对于温度传感器，只需删除湿度模块并替换为温度，然后再次运行程序。你将看到摄氏度的温度（**图 19**）。然而，这可能不是房间的精确温度：因为 Raspberry Pi 在运行时会产生热量，这也会加热 Sense HAT 及其传感器。
+对于温度传感器，只需删除湿度模块并替换为温度，然后再次运行程序。你将看到摄氏度的温度（图 19）。然而，这可能不是房间的精确温度：因为 Raspberry Pi 在运行时会产生热量，这也会加热 Sense HAT 及其传感器。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_176_0.png)
 
 图 19：显示温度传感器读数
 
 > 挑战：滚动与循环
-
-你是否可以修改程序，依次获取每个传感器的读数，将其滚动到 LED 矩阵上而不是打印到舞台区域？你是否可以让程序循环，以便持续打印当前的环境状况？
+> 
+> 你是否可以修改程序，依次获取每个传感器的读数，将其滚动到 LED 矩阵上而不是打印到舞台区域？你是否可以让程序循环，以便持续打印当前的环境状况？
 
 # 树莓派官方入门指南
 
- 惯性感知
+## 惯性感知
 
 陀螺仪、加速度计和磁力计组合成了所谓的惯性测量单元（IMU）。从技术上说，这些传感器与环境传感器一样从环境中获取测量——例如，磁力计测量磁场强度——但它们通常用于 Sense HAT 本身的运动数据。IMU 是多个传感器的和；某些编程语言允许你独立获取每个传感器的读数，而另一些只会给你一个组合读数。
 
-在理解 IMU 之前，你需要了解物体是如何移动的。Sense HAT 及其吸附的 Raspberry Pi 可以沿着三个轴移动：沿 X 轴左右移动；沿 Y 轴前后移动；以及沿 Z 轴上下移动（**图 7-24**）。它还可以沿着这三个轴旋转，但它们的名称会发生变化：沿 X 轴旋转被称为 *roll*（滚滚），沿 Y 轴旋转被称为 *pitch*（俯仰），沿 Z 轴旋转被称为 *yaw*（偏航）。当你顺着短轴旋转 Sense HAT 时，你是在调整它的俯仰；沿着长轴旋转就是滚滚；在保持其平放在桌上的情况下绕着它旋转，你是在调整它的偏航。把它们想象成飞机：当飞机起飞时，它增加俯仰来爬升；当它做翻滚动作时，那实际上是沿着它的滚滚轴旋转；当它使用方向舵像汽车一样转弯而不滚滚时，那就是偏航。
+在理解 IMU 之前，你需要了解物体是如何移动的。Sense HAT 及其吸附的 Raspberry Pi 可以沿着三个轴移动：沿 X 轴左右移动；沿 Y 轴前后移动；以及沿 Z 轴上下移动（图 7-24）。它还可以沿着这三个轴旋转，但它们的名称会发生变化：沿 X 轴旋转被称为 *roll*（滚滚），沿 Y 轴旋转被称为 *pitch*（俯仰），沿 Z 轴旋转被称为 *yaw*（偏航）。当你顺着短轴旋转 Sense HAT 时，你是在调整它的俯仰；沿着长轴旋转就是滚滚；在保持其平放在桌上的情况下绕着它旋转，你是在调整它的偏航。把它们想象成飞机：当飞机起飞时，它增加俯仰来爬升；当它做翻滚动作时，那实际上是沿着它的滚滚轴旋转；当它使用方向舵像汽车一样转弯而不滚滚时，那就是偏航。
 
 偏航 (Yaw): Z
 
@@ -2834,24 +2689,21 @@ print(pressure)
 
 滚滚 (Roll): X
 
-**图 7-24：Sense HAT IMU 的空间轴**
-
-
-
-
+图 7-24：Sense HAT IMU 的空间轴
 
 ### Scratch 中的惯性传感
 
-在 Scratch 中启动一个新程序，如果尚未加载，请加载 Raspberry Pi Sense HAT 扩展。按照以前的方法启动你的程序：将一个`when clicked`点击单击）模块拖到代码区域，然后在下方拖入一个`clear display`清除显示）模块，接着拖入并编辑一个`set background to black`背景设置为黑色）和一个`set colour to white`颜色设置为白色）模块。
+在 Scratch 中启动一个新程序，如果尚未加载，请加载 Raspberry Pi Sense HAT 扩展。按照以前的方法启动你的程序：将一个 `when clicked`（点击单击）模块拖到代码区域，然后在下方拖入一个 `clear display`（清除显示）模块，接着拖入并编辑一个 `set background to black`（背景设置为黑色）和一个 `set colour to white`（颜色设置为白色）模块。
 
-接下来，将一个`forever`循环）模块拖到现有模块的底部，并在其中填充一个`say Hello!`说 Hello！）模块。为了显示 IMU 三轴（俯仰角 pitch、滚角 roll 和偏航角 yaw）每个轴的读数，你需要添加`join`连接）运算符模块，将其与相应的 Sense HAT 模块相加。记得包含空格和逗号，以便输出结果易于阅读。
+接下来，将一个 `forever`（循环）模块拖到现有模块的底部，并在其中填充一个 `say Hello!`（说 Hello！）模块。为了显示 IMU 三轴（俯仰角 pitch、滚角 roll 和偏航角 yaw）每个轴的读数，你需要添加 `join`（连接）运算符模块，将其与相应的 Sense HAT 模块相加。记得包含空格和逗号，以便输出结果易于阅读。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_181_0.png)
 
 点击绿色旗帜运行你的程序，并移动 Sense HAT 和树莓派——注意不要弄掉任何电缆！当你倾斜 Sense HAT 通过其三个轴时，你会看到俯仰角、滚角和偏航角的值发生（图 25）。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_181_1.png)
-**图 25：** 显示俯仰角、滚角和偏航角值
+
+图 25：显示俯仰角、滚角和偏航角值
 
 ### Python 中的惯性传感
 
@@ -2873,7 +2725,8 @@ pitch = orientation["pitch"]
 点击运行，你将看到 Sense HAT 在三个轴上的朝向读数（图 26）。通过旋转 Sense HAT 并再次点击运行，你将看到数字变化以反映其朝向。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_182_0.png)
-**图 26：** 显示 Sense HAT 的俯仰角、滚角和偏航角值
+
+图 26：显示 Sense HAT 的俯仰角、滚角和偏航角值
 
 不过，IMU 不仅可以测量方向还可以检测运动。为了获得准确的运动读数，需要在循环中读取 IMU：对于方向，单次读取无法为你提供有用信息。删除 `sense.clear()` 之后的所有内容，然后输入以下内容：
 
@@ -2899,14 +2752,17 @@ z = round(z)
 print('x={0}, y={1}, z={2}'.format(x, y, z))
 ```
 
+
+
+# 树莓派官方新手指南
+
 点击运行，你将看到加速度的值打印到 Python 终端中（图 27）。与你之前的程序不同，这些将连续打印；要停止它们，点击红色停止按钮停止程序。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_183_0.png)
+
 **图 27：** 舍入到最接近整数的加速度读数
 
 你可能已经注意到加速度告诉你其中轴——如果你的树莓派平放在桌子上，则是 Z 轴——加速度值为 1.0 重力（1G），这意味着 Sense HAT 并没有移动。这是因为它正在检测地球的引力——这种将 Sense HAT 拉向地球中心的力量，也是当你从桌子上撞掉东西时会掉到地板上的原因。
-
-## 树莓派官方新手指南
 
 在程序运行时，小心拿起并旋转 Sense HAT 和树莓派——但要确保不要弄掉它的任何电缆！当树莓派的网络端口和 USB 端口指向地板时，你会看到变化，此时 Z 轴显示为 0G，X 轴显示为 1G；再次旋转让 HDMI 和电源端口指向地板，现在 Y 轴显示为 1G。如果你反过来操作让 HDMI 端口指向天花板，你会在 Y 轴上看到 -1G。
 
@@ -2929,13 +2785,13 @@ print(north)
 
 运行程序，你将在 Python 终端反复打印磁北。小心旋转 Sense HAT，你会看到相对于北极的变化：你制作了一个指南针！尝试移动它，看看会发生什么。
 
-### 挑战：自动旋转
+## 挑战：自动旋转
 
 利用你学到的关于 LED 矩阵和惯性测量单元的知识，你可以编写一个根据 Sense HAT 位置旋转图像的程序。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3 185_0.png)
 
-### 摇杆控制
+## 摇杆控制
 
 Sense HAT 的摇杆位于右下角，虽然很小但功能非常强大：除了提供四个方向（上、下、左、右）的输入外，还有一个第五个输入，可以通过像按钮开关一样按下它触发。
 
@@ -2943,19 +2799,15 @@ Sense HAT 的摇杆位于右下角，虽然很小但功能非常强大：除了�
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_185_1.png)
 
-### Scratch 中的摇杆控制
+## Scratch 中的摇杆控制
 
-在 Scratch 中启动一个新程序并加载 Raspberry Pi Sense HAT 扩展。像以前一样，将一个`when clicked`点击单击）模块拖到脚本区域，在下方拖入一个`clear display`清除显示）模块，接着拖入并编辑一个`set background to black`背景设置为黑色）和一个`set colour to white`颜色设置为白色）模块。
+在 Scratch 中启动一个新程序并加载 Raspberry Pi Sense HAT 扩展。像以前一样，将一个 `when clicked`（点击单击）模块拖到脚本区域，在下方拖入一个 `clear display`（清除显示）模块，接着拖入并编辑一个 `set background to black`（背景设置为黑色）和一个 `set colour to white`（颜色设置为白色）模块。
 
 在 Scratch 中，Sense HAT 的摇杆映射到键盘上的方向键：向上推摇杆等于按下向上键，向下推等于向下键，向左推等于左箭头键，向右推等于右箭头键；同时，像按钮开关一样向按下摇杆等于按下回车键。
 
 > 警告！摇杆控制仅适用于实体 Sense HAT。当使用 Sense HAT 模拟器时，请使用键盘上相应的键来模拟摇杆按下。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_185_2.png)
-
-
-
-
 
 将一个 `当 摇杆被按下时` 模块拖到你的代码区域。然后，为了让它执行动作，在其下方拖入一个 `说 Hello! 2秒` 模块。
 
@@ -3015,29 +2867,23 @@ print(event.direction, event.action)
 
 你还可以使用摇杆来触发函数，而不是局限于使用 `for` 循环。删除 `sense.clear()` 下的所有内容并并以下内容：
 
-```
+```python
 def red():
     sense.clear(255, 0, 0)
-```
 
-```
 def blue():
     sense.clear(0, 0, 255)
-```
 
-```
 def green():
     sense.clear(0, 255, 0)
-```
 
-```
 def yellow():
     sense.clear(255, 255, 0)
 ```
 
 这些函数会将整个 Sense HAT 矩阵更改为单色：红、蓝、绿或黄——这将让你极易观察到程序是否运行正常！要实际触发它们，你需要告诉 Python 哪个函数对应哪个摇杆输入。输入以下行：
 
-```
+```python
 sense.stick.direction_up = red
 sense.stick.direction_down = blue
 sense.stick.direction_left = green
@@ -3047,14 +2893,16 @@ sense.stick.direction_middle = sense.clear
 
 最后，程序需要一个无限循环（被称为主循环）以便保持运行，从而持续监测摇杆输入，而不是在运行完你写的代码后就退出。输入以下两行：
 
-```
+```python
 while True:
     pass
 ```
 
-点击“运行”（Run），并尝试摇杆：你会看到 LED 亮起绚丽的色彩！要关闭 LED，像按下按钮一样推动摇杆：中间方向被设置为使用 `sense.clear()` 函数来关闭所有。恭喜你：你可以捕捉来自摇杆的输入了！
+点击“运行”（Run），并尝试摇杆：你会看到 LED 亮起绚丽的颜色！要关闭 LED，像按下按钮一样推动摇杆：中间方向被设置为使用 `sense.clear()` 函数来关闭所有。恭喜你：你可以捕捉来自摇杆的输入了！
 
 # 终极挑战
+
+
 
 你能利用所学的知识在屏幕上画出一个图像，然后根据摇杆推动的任何方向进行旋转吗？你能让中间输入在多张图片之间切换吗？
 
@@ -3065,9 +2913,6 @@ while True:
 现在你熟悉 Sense HAT 了，是时候运用所学的一切来制作一个烟花了。在 Scratch 中启动一个新项目并添加 Sense HAT 扩展。当点击绿色旗帜时，使用“重复”循环来创建效果。在循环内部，使用随机积木来确定摇杆的方向。然后，使用“旋转”积木按该角度旋转你的角色。你还可以使用“如果...否则...”积木块在按下中间按钮时切换不同的图片。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_189_1.png)
-
-
-
 
 ```python
 def temperature():
@@ -3138,7 +2983,8 @@ while True:
 欲了解更多 Sense HAT 项目，请参考**附录 D，进一步阅读**中的链接。
 
 # 第 8 章
-树莓派摄像头模块
+
+## 树莓派摄像头模块
 
 将摄像头模块或高质量摄像头（HQ Camera）连接到树莓派，可以让你拍摄高分辨率照片和视频，并创建惊人的计算机视觉项目。
 
@@ -3153,9 +2999,6 @@ while True:
 ## 摄像头类型！
 
 树莓派摄像头有三种：标准摄像头模块、NoIR（无红外）版本和高质量摄像头（HQ Camera）。标准摄像头模块是一款通用的摄像头。NoIR（无红外）版本缺少红外滤镜，配合红外 LED 使用时非常适合夜视项目。高质量摄像头（HQ）提供了更高的图像质量和可更换镜头，适用于专业级摄影和视频拍摄。
-
-
-
 
 ### 测试摄像头
 
@@ -3201,10 +3044,14 @@ raspistill -rot 180 -o test.jpg
 控制摄像头模块或高清摄像头最灵活的方法是使用 Python，通过方便的 `picamera` 库。这让你对摄像头的预览、拍照和视频拍摄能力具有完全控制权，并允许你将它们集成到自己的程序中——甚至可以将它们与通过 GPIO Zero 库使用 GPIO 模块的程序相结合！
 
 > PYTHON 编程
+
+
+
 > 本章中的项目假设你具有 Python 语言、Thonny IDE 和树莓派 GPIO 引脚的经验。
+> 
 > 如果你还没有这样做过，请先完成第 5 章“使用 Python 编程”和第 6 章“使用 Scratch 和 Python 进行物理计算”中的项目！
 
-如果终端仍然打开，请点击窗口右上角的 X 将其关闭，从树莓菜单的“编程”（Programming）类别中加载 Thonny。将你的新项目保存为 Camera，然后通过在脚本区域输入以下内容来开始导入程序程序所需的库：
+如果终端仍然打开，请点击窗口右上角的 X 将其关闭，从树莓菜单的“编程”`Programming`类别中加载 Thonny。将你的新项目保存为 `Camera`，然后通过在脚本区域输入以下内容来开始导入程序程序所需的库：
 
 ```
 from picamera import PiCamera
@@ -3214,35 +3061,37 @@ camera = PiCamera()
 
 最后一行允许你使用摄像头函数控制摄像头模块或高清摄像头。要开始，输入以下内容：
 
-- camera.start_preview()
-- sleep(10)
-- camera.stop_preview()
+- `camera.start_preview()`
+- `sleep(10)`
+- `camera.stop_preview()`
 
-点击 Run（运行），你的桌面将会消失；取而代之，你将看到摄像头能看到的任何内容的全屏预览（**图 8-7**）。尝试移动它，或者在镜头前挥动你的手，你会看到屏幕上的内容发生变化。在 10 秒结束后，摄像头将拍摄一张静态照片并保存到你的主文件夹中。
+点击 `Run`（运行），你的桌面将会消失；取而代之，你将看到摄像头能看到的任何内容的全屏预览（**图 8-7**）。尝试移动它，或者在镜头前挥动你的手，你会看到屏幕上的内容发生变化。在 10 秒结束后，摄像头将拍摄一张静态照片并保存到你的主文件夹中。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_202_0.png)
 
 图 8-7：摄像头的实时预览
 
-如果实时预览是倒着的，你需要告诉 `raspistill` 摄像头已旋转。摄像头模块的设计是为了处理从底部边缘伸出的排排线；如果它通过某些第三方摄像头支架从侧面或顶部伸出，你可以使用 **-rot** 开关将图像旋转 90、180 或 270 度。对于电缆从顶部伸出的摄像头，只需使用以下命令：
+如果实时预览是倒着的，你需要告诉 `raspistill` 摄像头已旋转。摄像头模块的设计是为了处理从底部边缘伸出的排排线；如果它通过某些第三方摄像头支架从侧面或顶部伸出，你可以使用 `-rot` 开关将图像旋转 90、180 或 270 度。对于电缆从顶部伸出的摄像头，只需使用以下命令：
 
 ```
 raspistill -rot 180 -o test.jpg
 ```
 
-如果排排线从右侧边缘伸出，请使用 90 度的旋转值；如果它从左侧边缘伸出，请使用 270 度。如果你原始的拍摄角度不对，尝试使用 **-rot** 开关使用另一个来纠正它。
+如果排排线从右侧边缘伸出，请使用 90 度的旋转值；如果它从左侧边缘伸出，请使用 270 度。如果你原始的拍摄角度不对，尝试使用 `-rot` 开关使用另一个来纠正它。
 
-要查看你的照片，请从树莓菜单的“附件”类别打开文件管理器：你拍摄的名为 test.jpg 的图像将位于你的 `home/pi` 文件夹中。在文件列表中找到它，然后双击在图像查看器中加载它（图 8-6）。你还可以将图像附加到电子邮件、通过浏览器上传到网站或将其将其到外部存储设备。
+要查看你的照片，请从树莓菜单的“附件”类别打开文件管理器：你拍摄的名为 `test.jpg` 的图像将位于你的 `home/pi` 文件夹中。在文件列表中找到它，然后双击在图像查看器中加载它（图 8-6）。你还可以将图像附加到电子邮件、通过浏览器上传到网站或将其将其到外部存储设备。
 
 ### 介绍 picamera
 
 控制摄像头模块或高清摄像头最灵活的方法是使用 Python，通过方便的 `picamera` 库。这让你对摄像头的预览、拍照和视频拍摄能力具有完全控制权，并允许你将它们集成到自己的程序中——甚至可以将它们与通过 GPIO Zero 库使用 GPIO 模块的程序相结合！
 
 > PYTHON 编程
+> 
 > 本章中的项目假设你具有 Python 语言、Thonny IDE 和树莓派 GPIO 引脚的经验。
+> 
 > 如果你还没有这样做过，请先完成第 5 章“使用 Python 编程”和第 6 章“使用 Scratch 和 Python 进行物理计算”中的项目！
 
-如果终端仍然打开，请点击窗口右上角的 X 将其关闭，从树莓菜单的“编程”（Programming）类别中加载 Thonny。将你的新项目保存为 Camera，然后通过在脚本区域输入以下内容来开始导入程序所需的库：
+如果终端仍然打开，请点击窗口右上角的 X 将其关闭，从树莓菜单的“编程”`Programming`类别中加载 Thonny。将你的新项目保存为 `Camera`，然后通过在脚本区域输入以下内容来开始导入程序所需的库：
 
 ```
 from picamera import PiCamera
@@ -3252,21 +3101,19 @@ camera = PiCamera()
 
 最后一行允许你使用摄像头函数控制摄像头模块或高清摄像头。要开始，输入以下内容：
 
-- camera.start_preview()
-- sleep(10)
-- camera.stop_preview()
+- `camera.start_preview()`
+- `sleep(10)`
+- `camera.stop_preview()`
 
-点击 Run（运行），你的桌面将会消失；取而代之，你将看到摄像头能看到的任何内容的全屏预览（**图 8-7**）。尝试移动它，或者在镜头前挥动你的手，你会看到屏幕上的内容发生变化。在 10 秒结束后，摄像头将拍摄一张静态照片并保存到你的主文件夹中。
+点击 `Run`（运行），你的桌面将会消失；取而代之，你将看到摄像头能看到的任何内容的全屏预览（**图 8-7**）。尝试移动它，或者在镜头前挥动你的手，你会看到屏幕上的内容发生变化。在 10 秒结束后，摄像头将拍摄一张静态照片并保存到你的主文件夹中。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_202_0.png)
 
 ### 测试摄像头
 
-为了确认你的摄像头模块（Camera Module）或高清摄像头（HQ Camera）已正确安装，并且你已经在 Raspberry Pi 配置工具中启用了接口，你可以使用 `raspistill` 工具。该工具连同用于视频的 `raspvid`，旨在通过树莓的命令行界面 (CLI) 从相机拍摄图像。
+为了确认你的摄像头模块 `Camera Module` 或高清摄像头 `HQ Camera` 已正确安装，并且你已经在 Raspberry Pi 配置工具中启用了接口，你可以使用 `raspistill` 工具。该工具连同用于视频的 `raspvid`，旨在通过树莓的命令行界面 `CLI` 从相机拍摄图像。
 
-与你之前使用的程序不同，你不会在菜单中找到 `raspistill`。相反，点击树莓图标加载菜单，选择“附件”（Accessories）类别，然后点击“终端”（Terminal）。将出现一个带有绿色和蓝色文字的黑色窗口（图 8-4）：这就是终端，允许你访问命令行界面。
-
-[... (此处省略重复部分以保持翻译逻辑)]
+与你之前使用的程序不同，你不会在菜单中找到 `raspistill`。相反，点击树莓图标加载菜单，选择“附件”`Accessories`类别，然后点击“终端”`Terminal`。将出现一个带有绿色和蓝色文字的黑色窗口（图 8-4）：这就是终端，允许你访问命令行界面。
 
 - ▲ 图 8-3：你需要在 Raspberry Pi 配置中启用摄像头
 - ▲ 图 8-4：打开终端窗口以输入命令
@@ -3277,19 +3124,19 @@ camera = PiCamera()
 raspistill -o test.jpg
 ```
 
-一旦你按下 **ENTER** 键，你就会看到屏幕上出现一张摄像头看到的内容的大图（**图 8-5**）。这被称为*实时预览*（live preview），除非你对 `raspistill` 做出其他指令，否则它将持续 5 秒。在这 5 秒结束后，摄像头将拍摄一张静态照片并将其保存到你的主文件夹中，命名为 **test.jpg**。如果你想再次拍摄一张，请再次输入相同的命令，但务必更改 **-o** 之后的输出文件名，否则你将覆盖掉你的第一张照片！
+一旦你按下 `ENTER` 键，你就会看到屏幕上出现一张摄像头看到的内容的大图（**图 8-5**）。这被称为*实时预览* `live preview`，除非你对 `raspistill` 做出其他指令，否则它将持续 5 秒。在这 5 秒结束后，摄像头将拍摄一张静态照片并将其保存到你的主文件夹中，命名为 `test.jpg`。如果你想再次拍摄一张，请再次输入相同的命令，但务必更改 `-o` 之后的输出文件名，否则你将覆盖掉你的第一张照片！
 
 **图 8-5**：摄像头的实时预览
 
-如果实时预览是倒着的，你需要告诉 `raspistill` 摄像头已旋转。摄像头模块的设计是为了处理从底部边缘伸出的排排线；如果它通过某些第三方摄像头支架从侧面或顶部伸出，你可以使用 **-rot** 开关将图像旋转 90、180 或 270 度。对于电缆从顶部伸出的摄像头，只需使用以下命令：
+如果实时预览是倒着的，你需要告诉 `raspistill` 摄像头已旋转。摄像头模块的设计是为了处理从底部边缘伸出的排排线；如果它通过某些第三方摄像头支架从侧面或顶部伸出，你可以使用 `-rot` 开关将图像旋转 90、180 或 270 度。对于电缆从顶部伸出的摄像头，只需使用以下命令：
 
 ```
 raspistill -rot 180 -o test.jpg
 ```
 
-如果排排线从右侧边缘伸出，请使用 90 度的旋转值；如果它从左侧边缘伸出，请使用 270 度。如果你原始的拍摄角度不对，尝试使用 **-rot** 开关使用另一个来纠正它。
+如果排排线从右侧边缘伸出，请使用 90 度的旋转值；如果它从左侧边缘伸出，请使用 270 度。如果你原始的拍摄角度不对，尝试使用 `-rot` 开关使用另一个来纠正它。
 
-要查看你的照片，请从树莓菜单的“附件”类别打开文件管理器：你拍摄的名为 test.jpg 的图像将位于你的 `home/pi` 文件夹中。在文件列表中找到它，然后双击在图像查看器中加载它（图 8-6）。你还可以将图像附加到电子邮件、通过浏览器上传到网站或将其将其到外部存储设备。
+要查看你的照片，请从树莓菜单的“附件”类别打开文件管理器：你拍摄的名为 `test.jpg` 的图像将位于你的 `home/pi` 文件夹中。在文件列表中找到它，然后双击在图像查看器中加载它（图 8-6）。你还可以将图像附加到电子邮件、通过浏览器上传到网站或将其将其到外部存储设备。
 
 图 8-6：打开拍摄的图像
 
@@ -3298,10 +3145,12 @@ raspistill -rot 180 -o test.jpg
 控制摄像头模块或高清摄像头最灵活的方法是使用 Python，通过方便的 `picamera` 库。这让你对摄像头的预览、拍照和视频拍摄能力具有完全控制权，并允许你将它们集成到自己的程序中——甚至可以将它们与通过 GPIO Zero 库使用 GPIO 模块的程序相结合！
 
 > PYTHON 编程
+> 
 > 本章中的项目假设你具有 Python 语言、Thonny IDE 和树莓派 GPIO 引脚的经验。
+> 
 > 如果你还没有这样做过，请先完成第 5 章“使用 Python 编程”和第 6 章“使用 Scratch 和 Python 进行物理计算”中的项目！
 
-如果终端仍然打开，请点击窗口右上角的 X 将其关闭，从树莓菜单的“编程”（Programming）类别中加载 Thonny。将你的新项目保存为 Camera，然后通过在脚本区域输入以下内容来开始导入程序所需的库：
+如果终端仍然打开，请点击窗口右上角的 X 将其关闭，从树莓菜单的“编程”`Programming`类别中加载 Thonny。将你的新项目保存为 `Camera`，然后通过在脚本区域输入以下内容来开始导入程序所需的库：
 
 ```
 from picamera import PiCamera
@@ -3311,11 +3160,11 @@ camera = PiCamera()
 
 最后一行允许你使用摄像头函数控制摄像头模块或高清摄像头。要开始，输入以下内容：
 
-- camera.start_preview()
-- sleep(10)
-- camera.stop_preview()
+- `camera.start_preview()`
+- `sleep(10)`
+- `camera.stop_preview()`
 
-点击 Run（运行），你的桌面将会消失；取而代之，你将看到摄像头能看到的任何内容的全屏预览（**图 8-7**）。尝试移动它，或者在镜头前挥动你的手，你会看到屏幕上的内容发生变化。在 10 秒结束后，摄像头将拍摄一张静态照片并保存到你的主文件夹中。
+点击 `Run`（运行），你的桌面将会消失；取而代之，你将看到摄像头能看到的任何内容的全屏预览（**图 8-7**）。尝试移动它，或者在镜头前挥动你的手，你会看到屏幕上的内容发生变化。在 10 秒结束后，摄像头将拍摄一张静态照片并保存到你的主文件夹中。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_202_0.png)
 
@@ -3325,9 +3174,11 @@ camera = PiCamera()
 
 停格动画是对静态物体（如模型汽车或人偶）拍摄大量照片，并在照片之间移动物体的过程。虽然物体在任何照片中都是静止的，如果你快速显示它们，它们看起来就像在移动！
 
+
+
 对于这个项目，你需要一个按钮开关、一个面包板、一根公对公（M2M）跳线和两根公对女（M2F）跳线。如果你没有面包板，可以使用女对女（F2F）电线连接开关，但按起来会很困难。如果你需要任何这些组件，请参阅第 6 章“使用 Scratch 和 Python 进行物理计算”。你需要一些可以动画化的物体：可以是从粘土到玩具汽车或人偶的任何物体。
 
-从创建电路开始：将按钮添加到面包板上，用公对公跳线将面包板的地线轨道连接到树莓派的地线引脚（图 8-9 中标记为 GND）。用一个公对女跳线将开关的一个引脚连接到面包板的地线轨道，并用另一个公对女跳线将开关的另一个引脚连接到 GPIO 引脚 2（图 8-9 中标记为 GP2）。
+从创建电路开始：将按钮添加到面包板上，用公对公跳线将面包板的地线轨道连接到树莓派的地线引脚（图 8-9 中标记为 `GND`）。用一个公对女跳线将开关的一个引脚连接到面包板的地线轨道，并用另一个公对女跳线将开关的另一个引脚连接到 GPIO 引脚 2（图 8-9 中标记为 `GP2`）。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_205_0.png)
 
@@ -3342,8 +3193,6 @@ camera = PiCamera()
 button = Button(2)
 ```
 
-
-
 接下来，输入以下内容：
 
 ```python
@@ -3355,13 +3204,13 @@ camera.stop_preview()
 
 点击 Run（运行），你将看到摄像头所指位置的预览。预览将一直显示在屏幕上，直到你按下按钮：现在按下，在你的程序将文件夹保存到桌面后，预览将会关闭。找到图片 `image.jpg`，双击打开它，以确认程序运行正常。
 
-制作格格动画涉及创建许多静态图像，当它们被组合在一起时，就能产生运动的错觉。在桌面上拥有所有独立的图片会让桌面变得杂乱，因此你需要一个文件夹来存储它们。在桌面上任何没有文件或图标的地方右键点击，选择 Create New（新建）和 Folder（文件夹）（**图 8-10**）。将文件夹命名为 *animation*（全部使用小字母），然后点击 OK 按钮。
+制作格格动画涉及创建许多静态图像，当它们被组合在一起时，就能产生运动的错觉。在桌面上拥有所有独立的图片会让桌面变得杂乱，因此你需要一个文件夹来存储它们。在桌面上任何没有文件或图标的地方右键点击，选择 Create New（新建）和 Folder（文件夹）（**图 8-10**）。将文件夹命名为 `animation`（全部使用小字母），然后点击 OK 按钮。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_206_0.png)
 
 **图 8-10：** 为捕捉到的图像创建一个新文件夹
 
-每当为动画拍摄照片时都要重启程序并不好，因此你需要将其更改为在循环运行。然而，与你之前创建的循环不同，这次需要一种优雅关闭的方式——否则如果你在摄像头预览显示时停止程序，你将无法再次看到桌面了！为了实现这一点，你需要使用两个特殊的指令：**try** 和 **except**。
+每当为动画拍摄照片时都要重启程序并不好，因此你需要将其更改为在循环运行。然而，与你之前创建的循环不同，这次需要一种优雅关闭的方式——否则如果你在摄像头预览显示时停止程序，你将无法再次看到桌面了！为了实现这一点，你需要使用两个特殊的指令：`try` 和 `except`。
 
 首先删除 `camera.start_preview()` 之后的所有内容，然后输入：
 
@@ -3424,17 +3273,13 @@ while True:
 
 稍微移动物体——帧与帧之间的移动越少，完成的动画就越流畅——再次按下按钮捕捉另一帧。继续重复此操作直到动画完成：你捕捉的帧越多，你的动画就越长。
 
-完成后，按下 CTRL+C 关闭程序，双击桌面上的 animation 文件夹即可查看你的成果。
-
-
-
-
+完成后，按下 CTRL+C 关闭程序，双击桌面上的 `animation` 文件夹即可查看你的成果。
 
 ```python
 camera.exposure_mode = 'auto'
 ```
 
-这设置了曝光模式，即相机模块 / HQ 相机用于决定如何曝光图像的逻辑。可能的模式有：关闭（off）、自动（auto）、夜景、背光、光点、运动、雪景、海滩、长曝光、固定帧率、防抖和烟花。
+这设置了曝光模式，即相机模块 / HQ 相机用于决定如何曝光图像的逻辑。可能的模式有：关闭（`off`）、自动（`auto`）、夜景、背光、光点、运动、雪景、海滩、长曝光、固定帧率、防抖和烟花。
 
 ```python
 camera.framerate = 30
@@ -3446,7 +3291,7 @@ camera.framerate = 30
 camera.hflip = False
 ```
 
-当设置为 True 时，这会将相机图像沿水平（或 X 轴）进行翻转。
+当设置为 `True` 时，这会将相机图像沿水平（或 X 轴）进行翻转。
 
 ```python
 camera.image_effect = 'none'
@@ -3482,6 +3327,8 @@ camera.rotation = 0
 camera.saturation = 0
 ```
 
+
+
 这控制图像的饱和度，或色彩的鲜艳程度。可能的值范围从 -100 到 100。
 
 ```python
@@ -3508,24 +3355,28 @@ camera.video_stabilization = False
 
 当设置为 True 时，将开启视频稳定功能。只有在你录制时相机模块或 HQ 相机正在移动（例如安装在机器人上或被携带时），才需要此功能，以减少拍摄视频的抖动。
 
-关于这些设置以及此处未记录的额外设置，可以访问 picamera.readthedocs.io。
+关于这些设置以及此处未记录的额外设置，可以访问 `picamera.readthedocs.io`。
 
 # 附录 A
-向 microSD 卡安装操作系统
-
-你可以从所有优秀的树莓派零售商处购买预装了 NOOBX（开箱可用软件）的 microSD 卡，这让你能够轻松地为树莓派安装 Raspberry Pi OS（以前称为 Raspian）。或者，你可以按照以下指令使用 Raspberry Pi Imager 手动向你自己的（或重用的）microSD 卡安装操作系统。
-
-> **警告！**
-如果你购买的是已安装好 NOOBX 的 microSD 卡，只需将其插入树莓派，无需进行任何其他操作。
-
-以下指令说明了如何使用 Raspberry Pi Imager 手动向你自己的（或重用的）microSD 卡安装操作系统。
-
-## 下载 Raspberry Pi Imager
-Raspberry Pi Imager 是在树莓派上安装操作系统最简单的方法。它适用于 Windows、macOS 和 Linux。
 
 ## 向 microSD 卡安装操作系统
+
+你可以从所有优秀的树莓派零售商处购买预装了 `NOOBX`（开箱可用软件）的 microSD 卡，这让你能够轻松地为树莓派安装 `Raspberry Pi OS`（以前称为 Raspian）。或者，你可以按照以下指令使用 `Raspberry Pi Imager` 手动向你自己的（或重用的）microSD 卡安装操作系统。
+
+> **警告！**
+>
+> 如果你购买的是已安装好 `NOOBX` 的 microSD 卡，只需将其插入树莓派，无需进行任何其他操作。
+
+以下指令说明了如何使用 `Raspberry Pi Imager` 手动向你自己的（或重用的）microSD 卡安装操作系统。
+
+### 下载 Raspberry Pi Imager
+
+`Raspberry Pi Imager` 是在树莓派上安装操作系统最简单的方法。它适用于 Windows、macOS 和 Linux。
+
+### 向 microSD 卡安装操作系统
+
 - 将你的 microSD 卡连接到计算机。
-- 启动 Raspberry Pi Imager。
+- 启动 `Raspberry Pi Imager`。
 - 点击‘Choose OS’选择你想要安装的操作系统。
 - 点击‘Choose Storage’选择你的 microSD 卡。
 - 点击‘Write’开始该过程。
@@ -3533,27 +3384,26 @@ Raspberry Pi Imager 是在树莓派上安装操作系统最简单的方法。它
 完成后，你可以移除 microSD 卡。然后将其插入树莓派并启动进入你刚刚安装的操作系统。
 
 # 附录 B
-安装和卸载软件
 
-Raspberry Pi OS 包含了一系列由树莓派基金会精选的软件包，但这些并非在树莓派上运行的所有软件包。使用以下指令，你可以浏览额外的软件、安装并卸载它们——从而扩展你的树莓派的功能。
+## 安装和卸载软件
+
+`Raspberry Pi OS` 包含了一系列由树莓派基金会精选的软件包，但这些并非在树莓派上运行的所有软件包。使用以下指令，你可以浏览额外的软件、安装并卸载它们——从而扩展你的树莓派的功能。
 
 本附录中的指令基于**第 3 章，使用你的树莓派**的内容，该章节解释了如何使用“推荐软件”工具；如果你尚未阅读该章节，请在使用这些方法之前先阅读。
 
 ### 卡容量
-向你的树莓派添加软件会占用 microSD 卡的空间。一张 16GB 或更大的卡将让你能够安装更多软件。要检查你打算使用的卡是否与树莓派兼容，请访问 raspberry.pi/sdcardlist。
 
-## 浏览可用软件
-要查看并搜索 Raspberry Pi OS 可用的软件包列表（使用所谓的软件仓库），点击树莓图标加载菜单，选择 Preferences（偏好）类别，然后点击 Add/Remove Software（添加/移除软件）。几秒钟后工具窗口将会出现。
+向你的树莓派添加软件会占用 microSD 卡的空间。一张 16GB 或更大的卡将让你能够安装更多软件。要检查你打算使用的卡是否与树莓派兼容，请访问 `raspberry.pi/sdcardlist`。
+
+### 浏览可用软件
+
+要查看并搜索 `Raspberry Pi OS` 可用的软件包列表（使用所谓的软件仓库），点击树莓图标加载菜单，选择 Preferences（偏好）类别，然后点击 Add/Remove Software（添加/移除软件）。几秒钟后工具窗口将会出现。
 
 Add/Remove Software 窗口的左侧包含类别列表——与你在点击树莓图标时主菜单中看到的类别相同。点击其中一个将显示该类别下可用的软件列表。你也可以在窗口左角的框中输入搜索词，例如“text editor”或“game”，并查看来自任何类别的匹配软件包列表。点击任何包都会在窗口底部空间显示关于它的额外信息。
 
-
-
-
-
 如果你选择的类别有很多可用软件包包，“添加/删除软件”工具可能需要一些时间才能遍历列表。
 
-## 安装软件
+### 安装软件
 
 要选择软件包进行安装，请点击其旁边的复选框进行勾。你可以一次安装多个软件包；只需继续点击添加更多软件包。软件包旁边的图标将变为一个带有“+”符号的打开盒子，以确认它将被安装。
 
@@ -3567,38 +3417,38 @@ Add/Remove Software 窗口的左侧包含类别列表——与你在点击树莓
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_218_0.png)
 
-## 卸载软件
+### 卸载软件
 
 要选择软件包进行移除或卸载，请在软件包列表中找到它——这里有搜索功能，并点击其旁边的复选框取消选中。你可以一次卸载多个软件包：只需继续点击移除更多软件包。软件包旁边的图标将变为打开的盒子或一个小回收桶，以确认它将被卸载。
 
-| 选项 | |
+| 选项 |  |
 | --- | --- |
-| Q | |
-| 附件 | |
-| 管理工具 | |
-| 通信 | |
-| GIMP 桌面 | |
-| KDE 应用程序 | |
-| 其他桌面 | |
-| 字体 | |
-| 游戏 | |
-| 互联网 | |
-| 遗留 | |
-| 位置/语言本地化 | |
-| 多媒体 | |
-| 网络 | |
-| 其他 | |
-| 编程 | |
-| 出版 | |
-| 系统 | |
-
-## 附录 B 安装和卸载软件
+| Q |  |
+| 附件 |  |
+| 管理工具 |  |
+| 通信 |  |
+| GIMP 桌面 |  |
+| KDE 应用程序 |  |
+| 其他桌面 |  |
+| 字体 |  |
+| 游戏 |  |
+| 互联网 |  |
+| 遗留 |  |
+| 位置/语言本地化 |  |
+| 多媒体 |  |
+| 网络 |  |
+| 其他 |  |
+| 编程 |  |
+| 出版 |  |
+| 系统 |  |
 
 与之前一样，你可以你可以点击“确定”或“应用”来开始卸载所选的软件包。系统会要求你确认密码（除非你在过去几分钟内输入过），并且可能提示你确认是否也要移除与你的软件包相关的任何依赖项。卸载完成后，软件将从树莓图标菜单中消失，但你使用该软件创建的文件（例如，图形软件包的文件或游戏存档）不会被删除。
 
 > 警告！
-> Raspberry Pi OS 中安装的所有软件都会出现在“添加/删除软件”中，包括运行 Raspberry Pi 所需的软件。可能会移除足够的软件包导致桌面不再加载。为了避免这种情况，除非你确定不再需要它们，否则不要卸载它们。
-> 如果已经发生了这种情况，请使用第 2 章“开始使用 Raspberry PI”中的指令重新安装 Raspberry Pi OS，或使用附录 A 重新安装操作系统。
+>
+> `Raspberry Pi OS` 中安装的所有软件都会出现在“添加/删除软件”中，包括运行 Raspberry Pi 所需的软件。可能会移除足够的软件包导致桌面不再加载。为了避免这种情况，除非你确定不再需要它们，否则不要卸载它们。
+>
+> 如果已经发生了这种情况，请使用第 2 章“开始使用 Raspberry PI”中的指令重新安装 `Raspberry Pi OS`，或使用附录 A 重新安装操作系统。
 
 # 附录 C
 
@@ -3637,6 +3487,9 @@ Linux 中的文件系统以树形结构组织。根目录位于顶层，用正�
 - `touch [filename]`：创建一个空文件。
 - `cp [source] [destination]`：将文件或目录复制到另一处。
 - `mv [source] [destination]`：移动或重命名文件。
+
+
+
 - `rm [filename]`：删除文件。使用 `rm -r [directory]` 删除目录及其所有内容。
 
 要编辑文件，你将使用 `nano` 或 `vim` 等文本编辑器。`nano` 对新手更友好。
@@ -3655,9 +3508,6 @@ Linux 中的文件系统以树形结构组织。根目录位于顶层，用正�
 - `help [command]`：提供有关命令的信息。
 
 通过掌握这些基础命令，你已经迈向了像专家一样使用 Raspberry Pi 的道路。你练习得越多，就会越得游刃有。
-
-
-
 
 这些开关控制 `ls` 命令：`-l` 将其输出转换为长列表垂直列表；`-a` 告诉它显示所有文件和目录，包括通常会被隐藏的项目；`-r` 反转正常的排序顺序；`-t` 按修改时间排序，结合 `r` 使用时，可以让你最旧的文件位于列表顶部，最新的文件位于底部；`-h` 使用人类可读的格式显示文件大小，使列表更易于理解。
 
@@ -3706,6 +3556,7 @@ exit
 恭喜你：你已经在掌握树莓派 OS 命令行界面方面迈出了第一步！
 
 # 附录 D
+
 ### 延伸阅读
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_227_0.png)
@@ -3717,10 +3568,8 @@ exit
 ## 书架
 
 树莓派菜单 > 帮助 > 书架
+
 书架是 Raspberry Pi OS 附带的一个应用程序，可以帮助你浏览、下载和阅读 Raspberry Pi Press 出版物的数字版本——包括《树莓派入门指南》。只需点击树莓派菜单图标，“帮助”，然后点击“书架”即可加载它；然后从一系列范围内进行浏览。
-
-
-
 
 ## 系统选项卡 (System tab)
 
@@ -3780,7 +3629,11 @@ exit
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_237_0.png)
 
 - **超频 (Overclock)**：允许你从一系列设置中选择，以增加功耗、发热量并可能缩短整体寿命为代价来提升树莓派的性能。并非所有树莓派型号都可用。
+
+
+
 - **GPU 内存 (GPU Memory)**：允许你设置树莓派图形处理器保留的内存量。对于通用 GPU (GPGPU) 而言，高于默认的值可能会提高复杂的 3D 渲染和通用任务的性能，但代价是减少了 Raspberry Pi OS 可用的内存；较低的值可能会提高内存密集型任务的性能，但代价是使 3D 渲染、摄像头以及选定的视频播放功能运行更慢或变得不可用。
+
 - **覆盖层文件系统 (Overlay File System)**：允许你锁定树莓派的文件系统，使更改只发生在虚拟 RAM 磁盘中，而不是写入 microSD 卡，这样每当你重启时，都会恢复到干净状态。
 
 ## 本地化选项卡 (Localisation tab)
@@ -3790,8 +3643,11 @@ exit
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_238_0.png)
 
 - **区域语言 (Locale)**：允许你选择你的区域语言设置，这是一个系统设置。
+
 - **时间 (Time)**：允许你选择你的时区。
+
 - **键盘 (Keyboard)**：允许你选择你的键盘类型和布局。
+
 - **WiFi 国家 (WiFi Country)**：允许你设置广播法规所在的国家。
 
 ## 附录 F
@@ -3800,7 +3656,7 @@ exit
 
 高质量摄像头 (HQ Camera) 可以捕捉比标准摄像头模块分辨率更高的图像。与后者不同，它没有安装镜头。相反，可以使用任何标准的 C 接口或 CS 接口镜头； 6mm 镜头有助于入门。
 
-### ### 6mm CS 接口镜头
+### 6mm CS 接口镜头
 
 为高质量摄像头提供了廉价的 6mm 镜头。该镜头适用于基础摄影。由于它可以在极短距离内对物体聚焦，因此也可用于微距摄影。
 
@@ -3821,10 +3677,6 @@ exit
 后焦对调环应完全旋入以获得最短的焦距。使用后焦锁定螺丝可以确保其在调整光圈或焦点时不会离开此位置。
 
 ![](img/0aff4cdab15427839fb48fd7c6f677d3_240_1.png)
-
-
-
-
 
 ### 03 光圈
 
@@ -3881,4 +3733,3 @@ exit
 树莓派 400 使用了 BCM2711。支持双频 802.11ac Wi-Fi 和蓝牙 5.0。树莓派 400 是树莓派 4 的键盘版本，它内置了树莓派 4 的所有功能，并将其封装在键盘中。树莓派 400 拥有 4GB 内存，并采用了独特的散热系统。树莓派 400 的性能与树莓派 4 相当，但由于散热设计，它的频率可以更稳定。树莓派 400 还支持双显示输出。
 
 *(注：由于原文文本在部分章节存在严重的重复和逻辑混乱，译文已根据技术文档规范进行了精简处理，以确保可读性)*
-

@@ -1,17 +1,11 @@
+
 # 皇家水彩学会：水彩大师：过去与现在
-
-
-
-
-
-
 
 皇家水彩学会拥有现存最重要的水彩收藏之一——RWS 文凭收藏。1860 年，RWS 委员会的成员提议，效仿皇家艺术学院，每位新当选的会员应向学会捐赠一幅画作；1882 年后，维多利亚女王签署的文凭授予新会员后，这些画作被称为文凭作品。RWS 还收到了更早当选的会员的作品，一批精美的收藏逐渐成形。如今它包括大卫·科克斯、彼得·德·温特、塞缪尔·帕尔默、爱德华·伯恩-琼斯、劳拉·奈特、约翰·辛格·萨金特和威廉·罗素·弗林特等众多著名人物的作品。
 
 为了制作这本精美呈现的书籍，本学会的成员翻阅了他们的收藏，每位成员都挑选了一件对自己个人而言特别具有启发性的作品。然后他们创作了反映这种灵感的自己的作品。他们的发人深省的文章说明了他们选择的理由，讨论了他们所选艺术家似乎使用的方法，以及这些技巧与他们自己的方法有何比较。
 
 *水彩大师：昔与今*展示了最具启发性的绘画作品，尤其是精心挑选或创作的作品，以及来自领先艺术家的有用而发人深省的见解。本书分为五个部分：构图、色彩、色调、素描技巧和创造叙事，每个艺术家都专注于最能解释其所选画作魅力的主题。对水彩大师——过去与现在——心灵的独特之旅，*水彩大师*必定会让任何对这种媒介感兴趣的人感到愉悦。
-
 
 ![](img/b8a900b8373e949117f531b00685f281_3_0.png)
 
@@ -21,19 +15,13 @@ https://archive.org/details/watercolourmaste0000unse
 
 ![](img/b8a900b8373e949117f531b00685f281_4_0.png)
 
-
-
 ![](img/b8a900b8373e949117f531b00685f281_5_0.png)
-
-
 
 威尔士亲王殿下撰写的前言
 
 ![](img/b8a900b8373e949117f531b00685f281_6_0.png)
 
 ![](img/b8a900b8373e949117f531b00685f281_7_0.png)
-
-
 
 ![](img/b8a900b8373e949117f531b00685f281_8_0.png)
 
@@ -46,6 +34,7 @@ https://archive.org/details/watercolourmaste0000unse
 ![](img/b8a900b8373e949117f531b00685f281_9_0.png)
 
 Atrankey
+
 Allaye d'AUBENYS
 
 ![](img/b8a900b8373e949117f531b00685f281_10_0.png)
@@ -94,12 +83,10 @@ Christa Gaa 是其中一位影响了我作品并给我带来灵感的艺术家�
 
 她的作品有一种宜人的宁静感——我确实在努力追求这一点。我也很喜欢在背景和前景中使用图案，使用诸如织物或报纸之类的东西，但我必须小心不要让它变得过于繁忙。
 
-
-
-
 ![](img/b8a900b8373e949117f531b00685f281_14_0.png)
 
 ### MARY JACKSON
+
 #### CHRISTA GAA (1937 - 1991): *陶鸭静物*
 
 ![](img/b8a900b8373e949117f531b00685f281_15_0.png)
@@ -111,6 +98,8 @@ Christa Gaa 是其中一位影响了我作品并给我带来灵感的艺术家�
 我一直钦佩克里斯塔的方法并想在她的风格中尝试；这些画作是大胆的初步尝试，激励我继续下去，也许改变我的方向。
 
 色彩是她的强项：在色彩选择上，她的作品似乎表达了沉思与宁静；似乎有一种郁郁寡欢、情绪化且富有反思性的感觉。
+
+
 
 她的色彩丰富而诱人，每幅画她都会做出不同的选择。可能是从棕色过渡到淡紫色，暖赭石到深红色，或者像这幅早期静物那样，蓝色的宁静，冷暖并用，利用反射光提升画面，并以物件边缘捕捉高光来增强。前景中深沉丰富的棕紫色桌布的质感在向桌子后方移动的阴影中得到呼应，这将整幅画联系在了一起。简洁令人叹为观止。
 
@@ -129,6 +118,7 @@ Christa Gaa 是其中一位影响了我作品并给我带来灵感的艺术家�
 上方：**MARY JACKSON**，*日本陶罐*，水彩；24 x 25 cm (9.5 x 10 in)
 
 ### SIMON PIERSE
+
 #### ARTHUR MELVILLE (1858-1904): 焚村归来的阿拉伯人
 
 初次看到这幅画时，吸引我的就是其执行上非凡的新鲜感，以及梅尔维尔使用大块——几乎是色点派——的平坦色彩的方式。它看起来有点未完成，但结构完整，揭示了艺术家如何依靠坚实的绘画来支撑非常自由的技法。直到后来我才读到标题，并对其暗示的暴力感到有些震惊。我想知道这是否是艺术家亲眼目睹的事件，或许只是想象的。
@@ -152,6 +142,7 @@ Christa Gaa 是其中一位影响了我作品并给我带来灵感的艺术家�
 左：SIMON PIERSE，从电报站归来，阿利斯泉，2003，水彩，71 x 51 cm (28 x 20 in)
 
 ### GREGORY ALEXANDER
+
 #### ARTHUR MELVILLE (1858–1904): *焚村归来的阿拉伯人*
 
 ![](img/b8a900b8373e949117f531b00685f281_19_0.png)
@@ -169,9 +160,6 @@ Christa Gaa 是其中一位影响了我作品并给我带来灵感的艺术家�
 上方，右：**GREGORY ALEXANDER**，*希腊乡村生活*，2004，水彩于阿尔什纸，58 x 76cm (22.8 x 30 in)
 
 对面：**JUNE BERRY**，*森林中的骑手*，水彩，50 x 61 cm (19.5 x 24 in)
-
-
-
 
 ### JUNE BERRY
 
@@ -198,6 +186,8 @@ Christa Gaa 是其中一位影响了我作品并给我带来灵感的艺术家�
 #### ARTHUR MELVILLE (1858 - 1904): 焚村归来的阿拉伯人
 
 当我想到皇家水彩协会以及多年来在那里看到的无数精彩作品时，其中许多作品在我心中依然鲜活，仿佛与初次见到那天一样新鲜。有些画作似乎比其他画作产生更持久的影响，这真是奇怪。
+
+
 
 我从文凭收藏中挑选的画作是阿瑟·梅尔维尔的《焚村归来的阿拉伯人》，（1922）。我仍然记得第一次见到它时的情景。其构图的流畅性、色彩惊人的简洁以及明亮的光线使这成为一幅非常令人难忘的画作。毫不张扬，人们似乎与风景融为一体，几乎像是它的一部分。它看起来轻盈而通透，笔触看似轻易却暗藏玄机，最终汇聚成我最喜爱的画作之一。捕捉的是精髓，而非细节。人物融入景色，几乎难以辨认其为人物，但无可否认。运用水彩的大胆与简洁增强了画作的效果。
 
@@ -259,13 +249,11 @@ Christa Gaa 是其中一位影响了我作品并给我带来灵感的艺术家�
 
 对面：CLAIRE DALBY, 无籽葡萄, 1988, 水彩和体色在调色纸上, 24 × 23 cm (9.5 × 9.1 in)
 
-
-
-
 ![](img/b8a900b8373e949117f531b00685f281_26_0.png)
 
 ### CATHERINE DUCKER
-WILLIAM HENRY HUNT (1790–1864)：*带玫瑰及其他花卉和云雀巢的花瓶*
+
+#### WILLIAM HENRY HUNT (1790–1864)：*带玫瑰及其他花卉和云雀巢的花瓶*
 
 ![](img/b8a900b8373e949117f531b00685f281_27_0.png)
 
@@ -296,13 +284,16 @@ WILLIAM HENRY HUNT (1790–1864)：*带玫瑰及其他花卉和云雀巢的花�
 上方：CATHERINE DUCKER，《百日草》，水彩 60 × 40 cm (23.6 × 15.7 in)
 
 ### DAVID WHITAKER
+
 #### ALFRED WILLIAM HUNT (1830–1896)：威尔士洪水
 
 Alfred William Hunt 的 *威尔士洪水* 对我来说是一项真正的发现。潮湿的土地呈现出绿褐色——被上方的厚重灰云和下方的激荡水流所挤压——表达了自然不可控制的力量。在天空中央偏低处，太阳隐约出现于最厚重的云层之后，而在远处右侧，牛群正在吃草。它们以及它们之外的村庄，在河流从右向左疾驰的浪潮中几乎不为人注意。在前景中，湍急的水流撞上某个无法辨认的物体，似乎在抵抗强劲的冲击。就我看来，我作品与之的联系在于构图的动态性：一种力量对另一种力量的推拉。
 
 ![](img/b8a900b8373e949117f531b00685f281_29_0.png)
 
-我觉得这幅画一定映射了亨特生命中某种危机，这使得题材更显感人。我试图做类似的事情：我经常创作与我当前感受以及源自过去经验的感受相匹配的图像。有时我会从想象中创造图像，这可能预示着即将发生的事情。其他时候，我会转录某件特定艺术作品的形象。如果我根据 *威尔士洪水* 作画，我的色彩将是三间色，伴有少量次级色和原色在风暴搅动一切时努力存活。
+
+
+我觉得这幅画一定映射了亨特生命中某种危机，这使得题材更显感人。我试图做类似的事情：我经常创作与我当前感受以及源自过去经验的感受相匹配的图像。有时我会从想象中创造图像，这可能预示着即将发生的事情。其他时候，我会转录某件特定艺术作品的形象。如果我根据 `威尔士洪水` 作画，我的色彩将是三间色，伴有少量次级色和原色在风暴搅动一切时努力存活。
 
 我的调色板由七种颜色组成。我使用两种黄色——一种冷色，一种暖色——镉红、洋红、翠绿和两种蓝色——一种偏红，一种偏绿。用这些颜色我可以表达自然现象的无穷可能。
 
@@ -311,17 +302,18 @@ Alfred William Hunt 的 *威尔士洪水* 对我来说是一项真正的发现�
 ![](img/b8a900b8373e949117f531b00685f281_30_0.png)
 
 ### ANTHONY EYTON
+
 #### ALFRED WILLIAM HUNT (1830-1896)：威尔士洪水
 
 我的画是一幅从树林中涌出的小威尔士瀑布，其轻盈和力量被周围的黑色岩石衬托出来。开始时，太阳高照。天气转为多云，因此动态发生了变化，画面变得更加严肃。
 
 ![](img/b8a900b8373e949117f531b00685f281_31_0.png)
 
-直到最近我才接触到 Alfred William Hunt 的作品。题材也是流动的水。它名为 *威尔士洪水*，创作于1870年，描绘的是开阔的乡村，强调水的湍流，岩石被绘制得极其细致，整个场景充满了强烈的天气和氛围感。亨特是 Ruskin 的朋友，也是透纳和 David Cox 的崇拜者。
+直到最近我才接触到 Alfred William Hunt 的作品。题材也是流动的水。它名为 `威尔士洪水`，创作于1870年，描绘的是开阔的乡村，强调水的湍流，岩石被绘制得极其细致，整个场景充满了强烈的天气和氛围感。亨特是 Ruskin 的朋友，也是透纳和 David Cox 的崇拜者。
 
 我认为我们常常可以从气质相反的艺术家身上获得安慰，甚至享受他们的作品。在亨特的案例中，他相反的特质是他对特定题材的集中和专注以及对细节的关注。共同点是，我们都坚持写实，即题材或对表象的真实性起决定作用。空间、天气和光线方面也有共同之处。
 
-在1870年代，空气中充满活力，透纳的榜样促使人们对媒介进行大量实验。亨特也不例外。在 *威尔士洪水* 中，他采用了刮除、刻划、海绵擦拭和其他活跃的处理方式。这幅画的大部分应该是在户外完成的，但我怀疑他最终在工作室完成了它，尽管他主要想重温那种体验。
+在1870年代，空气中充满活力，透纳的榜样促使人们对媒介进行大量实验。亨特也不例外。在 `威尔士洪水` 中，他采用了刮除、刻划、海绵擦拭和其他活跃的处理方式。这幅画的大部分应该是在户外完成的，但我怀疑他最终在工作室完成了它，尽管他主要想重温那种体验。
 
 亨特的工作方法已被他的女儿 Violet 形象地描述过。“他每天至少做两次写生，一次在晨光中，一次在傍晚题材。早晚又被细分，因为他经常把早晨的速写放在一边，在中午为新的‘效果’作画。”我能认同这种对新题材或光线变化的适应，但我会补充说，这种方法可能意味着每幅画都成为一项长期工程，并且每天都需要‘重新进入’。
 
@@ -330,18 +322,16 @@ Violet 继续说，“我父亲的手工灵巧足以令人惊叹。凭借那双�
 ![](img/b8a900b8373e949117f531b00685f281_32_0.png)
 
 ### TREVOR FRANKLAND
+
 #### JOSEPH EDWARD SOUTHALL (1861–1944)：康沃尔港
 
 我被这幅画吸引，不仅仅因为它强有力的构图，也因为其题材。帆船可能从海外归来的形象对我而言与过去的时光和重访的“大旅行”有着强烈的关联。十八世纪大陆对英国艺术和建筑的影响是广泛的。
 
 ![](img/b8a900b8373e949117f531b00685f281_33_0.png)
 
-*左：**JOSEPH EDWARD SOUTHALL**。《康沃尔港》，水彩，30.3 × 24.3 cm (12 × 9.6 in)*
+*左：`JOSEPH EDWARD SOUTHALL`。《康沃尔港》，水彩，30.3 × 24.3 cm (12 × 9.6 in)*
 
-*对面：**TREVOR FRANKLAND**。《重访大旅行》，2005年。水彩、丙烯和碳素铅笔，56 × 82 cm (22 × 32.2 in)*
-
-
-
+*对面：`TREVOR FRANKLAND`。《重访大旅行》，2005年。水彩、丙烯和碳素铅笔，56 × 82 cm (22 × 32.2 in)*
 
 ![](img/b8a900b8373e949117f531b00685f281_34_0.png)
 
@@ -354,9 +344,12 @@ Appropriate forms have to be found for what are elusive images and I find that c
 I also scan assembled fragments into a printer so that I can use the same images in a different context. The variety of compositions I then create gives me a better chance of giving pictorial form to my ideas which, to achieve the results I am seeking, sometimes require an element of ambiguity. A composition drawing is made from the chosen image to which I add colour. The final watercolour is based on this drawing using a limited palette and a heavyweight Waterford paper.
 
 ### ANN WEGMÜLLER
-#### JOSEPH EDWARD SOUTHHALL (1861-1944): *A Cornish Haven*
 
-When I first saw the painting *A Cornish Haven*, I liked it immediately but it took me some time to work out why. At first it reminded me of places I knew, of summer activities, walking along coastal roads, looking at boats and the hills beyond. A few weeks later I had a second look at his painting and realised that what attracted me was what always attracts me to the work of others: the colours. In the case of Southall’s painting it was the warm, light colours of the land, and the dark, cool colours of the sea.
+#### JOSEPH EDWARD SOUTHHALL (1861-1944): `A Cornish Haven`
+
+When I first saw the painting `A Cornish Haven`, I liked it immediately but it took me some time to work out why. At first it reminded me of places I knew, of summer activities, walking along coastal roads, looking at boats and the hills beyond. A few weeks later I had a second look at his painting and realised that what attracted me was what always attracts me to the work of others: the colours. In the case of Southall’s painting it was the warm, light colours of the land, and the dark, cool colours of the sea.
+
+
 
 As a direct response to this, my first painting was about the warm, colourful rocks beside the beach, boats to look at and one *Sailing Out*. The closer you get to the water, though, the cooler the colour temperature becomes.
 
@@ -385,6 +378,7 @@ The mood of the painting is dictated by the dark ultramarine taken over the whol
 Above: ANN WEGMÜLLER, Sailing Out, gouache, 40 x 36 cm (16 x 14 in)
 
 ### JANET GOLPHIN
+
 #### HELEN ALLINGHAM (1848–1926): *A Bit of Autumn Border*
 
 The rich, warm glow of colour captivates and enthralls the viewer. The colour of the flower border by twilight becomes the overriding element in an otherwise simple composition. There is no need for detail. It is a sight universally recognized and the familiarity already registered within the memory enables the viewer to complete the picture.
@@ -394,6 +388,8 @@ At first glimpse, *A Bit of Autumn Border* has the impression of a beautiful emb
 *Amaryllis with Wall Hanging* demonstrates a similar simplicity of composition with no beginning or end, but an illusion of an ongoing scene beyond the picture’s edges. Areas of the painting are unfinished and detail is missing. There are vertical, horizontal and slightly diagonal lines, which again work in every direction.
 
 The darkest areas in my painting emulate the darkened foliage in Allingham’s work in as much as they enhance the abundance of colour bringing it forward. Though gold-leaf has been used, it is subdued with washes of watery paint projecting rich colour forward and an illusionary understanding of an embroidered wall-hanging.
+
+
 
 In essence, the black and contrasting gold amongst the overall intense colour produces a three-dimensional vision, devoid of any necessity for detail, which again is completed by the viewer’s own memory of similarity filling in the gaps. Multiple layers of richly coloured paint intensify the depth of colour, enhanced by other elements.
 
@@ -410,9 +406,11 @@ Opposite: JANET GOLPHIN, *Amaryllis with Wall Hanging*, 2005, mixed media, 81 x 
 ![](img/b8a900b8373e949117f531b00685f281_39_0.png)
 
 ### ISLA HACKNEY
+
 #### CECIL ARTHUR HUNT (1873–1965): Dents des Bouquetins, Arolla
 
 > *For consider, first, the difference produced in the whole tone of landscape colour by the introductions of purple, violet, and deep ultramarine blue, which we owe to mountains.*
+>
 > (John Ruskin)
 
 Since JMW Turner’s journey through the Alps to Italy in 1819, mountainous landscapes with remote and misted peaks and other typically ‘sublime’ subjects had become a source of inspiration for generations of artists to follow. Writing his book *Modern Painters* in defence of Turner’s greatness, John Ruskin’s thoughts on the role of colour in landscape are still of interest today. Referring to mountains, he says:
@@ -427,15 +425,15 @@ Intense sunlight strikes the mountains as an aqueous mist encircles them, and gr
 
 Like Hunt, I hope to involve the viewer in the immensity of the scene, recalling also the construction of the image as pigment on paper. Taking the Scottish mountains and glens as my inspiration, I work with freely applied colour. I began *Melting Snow* with spontaneous, random mark-making. The painting’s central motif seems to hover in front of its surroundings – a space or void awaiting a subject – while vigorously brushed colours set up an endless oscillation between fragmentary detail and the unified whole. Blue and purple shadows and bright white traces in the snow pick out the mountain ridge as the elements threaten to envelop it.
 
-
-
-
 ![](img/b8a900b8373e949117f531b00685f281_40_0.png)
 
 ### PAUL NEWLAND
+
 FRANCIS OLIVER FINCH (1802–1862): Ruins of an Ancient City
 
 ‘Of course, he’d have seemed very conservative even then!’ said the archivist when I went in search of material on Francis Oliver Finch in the Society’s archive.
+
+
 
 I had first caught sight of this picture (the first I had ever seen by Finch) on the cover of a catalogue for a show of works from the Diploma Collection held in 1987 (two years before I became an Associate). The image seemed enigmatic, wistful and completely intriguing. It was as if last respects were being paid to those European artists of the seventeenth century (Claude, Poussin et al.) who had had so profound an effect on the way the English manipulated the landscape of their country. Estates had been designed, gardens gardened and, most enduringly perhaps, England and Wales recorded under their influence. But no more...
 
@@ -443,14 +441,15 @@ I had first caught sight of this picture (the first I had ever seen by Finch) on
 
 I started to paint this transcription from the reproduction, but when I went to draw from the original I found that the view was more extensive and the colour far cooler, more northern in fact, than in the reproduction. I also found that although the theme was so congenial to me, pictorial elements on the right side were not. I decided to transplant into the composition a little piece of landscape in Umbria, which I had once known quite well—my own little recollection of ‘the south’—to complement the picture’s theme. It also seemed important to make the gesture, at least, of adjusting the colour—into a sort of ‘Finchian’ key. The result is a bit of a patchwork of ideas, which requires a good deal of adjustment to bring about unity: a unity not yet achieved. Many parts of the picture are still quite thin wash, but others are more dense, with gouache being introduced.
 
-Above: **FRANCIS OLIVER FINCH**, Ruins of an Ancient City, watercolour, 55.3 x 75.5 cm (21.8 x 29.7 in)
+Above: `FRANCIS OLIVER FINCH`, Ruins of an Ancient City, watercolour, 55.3 x 75.5 cm (21.8 x 29.7 in)
 
-Opposite: **PAUL NEWLAND**, Regarding the Ruins, 2003-4, watercolour and gouache, 51 x 61 cm (20 x 24 in), with preparatory sketches below
+Opposite: `PAUL NEWLAND`, Regarding the Ruins, 2003-4, watercolour and gouache, 51 x 61 cm (20 x 24 in), with preparatory sketches below
 
 ![](img/b8a900b8373e949117f531b00685f281_42_0.png)
 
-### NEIL PITTAWAY
-FRANCIS OLIVER FINCH (1802-1862): *Ruins of an Ancient City*
+## NEIL PITTAWAY
+
+### FRANCIS OLIVER FINCH (1802-1862): *Ruins of an Ancient City*
 
 ![](img/b8a900b8373e949117f531b00685f281_43_0.png)
 
@@ -464,6 +463,8 @@ God-like figures that represent images from Greek mythology fall heavily over a 
 
 The strength and application of colour determines the tempo of the picture and creates a backbone that supports and defines its character. Colour also expresses the general overall mood of the picture. The glazing methods I use highlight this further and create an image that is complex both technically and conceptually.
 
+
+
 In my transcription, called *Changing Worlds*, I have used colour to bind parallel concepts together to form a world that is enlivened and rich. I have chosen rich Turner-esque colours for the classical landscape based directly on Francis Oliver Finch's work.
 
 I use colour symbolically to represent a golden age, a world that is no longer real, but exists in the imagination of the human spirit and mind. Through using colour that is clean and machine-like I create another rich but far removed world, a world of new enlightenment, of globalization and scientific exploration.
@@ -471,7 +472,9 @@ I use colour symbolically to represent a golden age, a world that is no longer r
 ![](img/b8a900b8373e949117f531b00685f281_44_0.png)
 
 Opposite, above: **FRANCIS OLIVER FINCH**, *Ruins of an Ancient City*, watercolour, 55.3 x 75.5 cm (21.8 x 29.7 in)
+
 Opposite, below: **NEIL PITTAWAY**, *Changing Worlds*, 2004, watercolour and bodycolour, 57 x 76 cm (22.5 x 30 in)
+
 Left: **NEIL PITTAWAY**, *City Audience*, 2004, watercolour and bodycolour, 76 x 57 cm (30 x 22.5 in)
 
 ## COMPOSITION
@@ -489,9 +492,12 @@ DAVID FIRMSTONE MBE
 Left: **ALFRED DOWNING FRIPP**, *San Rocca Oliveana* (detail), bodycolour and watercolour over graphite on grey paper, 39 x 53.5 cm (15.4 x 21.1 in)
 
 ### CHARLES BARTLETT
+
 **ROLAND VIVIAN PITCHFORTH** (1895-1982): *Kent Marshes*
 
 I did not know Pitchforth very well but met him several times and admired his sensitive views on art. We also shared a love of similar types of natural landscape. Pitchforth’s painting *Kent Marshes* is typical of many of his watercolour and oils. It is the flat landscape in many ways similar to some of the landscapes of East Anglia. But whereas his paintings – particularly watercolours – were often atmospheric and fluid,
+
+
 
 ![](img/b8a900b8373e949117f531b00685f281_47_0.png)
 
@@ -502,9 +508,6 @@ I tend to treat similar landscapes in a more geometric manner. Pitchforth’s co
 Having sailed small boats for a large part of my life has given me a love of the sea. Pitchforth also loved painting the sea and ships. The angular and straight sea walls of Essex, the lonely marshes and the beautiful reed beds mainly form the basis of my compositions.
 
 I try to find an equivalent in paint and etching to express my feelings about the East Anglian landscape, particularly studying the geographical formation and erosion of the beaches. I do not paint on the spot, but work from drawings and studies that are used to compose my paintings in the studio. I try to express the poetry found in this landscape. The loneliness and unspoilt pure beauty of the landscape, perhaps just the sound of a seagull, the wind and the sea, contrast with the noise and hurly burly of modern life.
-
-
-
 
 ![](img/b8a900b8373e949117f531b00685f281_48_0.png)
 
@@ -572,6 +575,8 @@ I try to find an equivalent in paint and etching to express my feelings about th
 
 在*窗边的桌子，配桃子和梨*中，场景的魅力以强烈的设计感为支撑。圆桌、椅子和窗框作为大胆的构图装置，而静物、果实、花卉以及窗边的鸽子的简单组合则增添了装饰效果。作为有影响力的建筑师罗伯特·洛里默爵士的兄弟，建筑元素出现在洛里默的作品中，空间结构和构图装置引发了室内/室外的对话。
 
+
+
 洛里默在英格兰和苏格兰之间分配时间，最终决定定居爱丁堡。我在爱丁堡的工作室的景色——我每年在那里度过一段时间的一部分——可以在我收录于此的绘画中看到。像洛里默一样，我画我周围的即时环境和日常物品。洛里默使用细微渐变的色彩，偏爱奶油色、黄色和橙色或深棕色和红色的柔和配色。我则使用明确的色彩区域构建构图，努力建立氛围和平衡的感觉。对比繁忙和宁静的组成部分，我进行调整，指导原则是追求画面效果而非写实转录。在*窗边的圆桌*中，圆润和直线元素在整个构图中重复出现。桌子和窗户的形状在水果和格子垫中得到呼应；墙上艺术品的细节和远处的穹顶建筑。
 
 ![](img/b8a900b8373e949117f531b00685f281_54_0.png)
@@ -580,10 +585,8 @@ I try to find an equivalent in paint and etching to express my feelings about th
 
 上方：**谢拉·芬德莱**，*窗边的圆桌，2005*，水彩和珂粉，75 x 106 厘米 (29.5 x 42 英寸)
 
-
-
-
 ### SARAH HOLLIDAY
+
 #### SAMUEL PROUT (1783–1852)：威尼斯总督宫与大运河
 
 普劳特的画作令人着迷而优雅。视线被引导穿过画作抵达远处的圣玛利亚·德拉萨吕特教堂，又返回，色调的层次轻轻地将你从一侧摇向另一侧。水平方向的光与暗处理得如此巧妙，他画得精美的人物点缀防止你被带出画面。无处不在，他都运用了光与暗、暗与光的对比手法，从不让任何一段变得沉闷可预测。然后，在所有这些几何构图之上，天空中优雅的曲线平衡了他色调魔法的正式感。所有这一切都围绕着位于中心中景的那个静止、孤独的人物。哦，真是太巧妙了！
@@ -597,6 +600,7 @@ I try to find an equivalent in paint and etching to express my feelings about th
 ![](img/b8a900b8373e949117f531b00685f281_56_0.png)
 
 ### WENDY JACOB
+
 #### ALFRED DOWNING FRIPP (1822-1895): San Rocco Olevano
 
 我选择了阿尔弗雷德·道宁·弗里普的《*圣罗科·奥莱瓦诺*》。我画风景，通常包含建筑物，很常在法国或意大利的旅行中作画。在灿烂的阳光下，我苦于处理美妙却不熟悉的色调值。我发现自己越来越多地使用厚彩来达到反射光的辉煌，或让画作因夸张的暗影而变得很跳跃。在这幅画中，弗里普使用了相近的淡色调，然而画作却有力而强劲，充满热度。我能否在尝试类似题材时牢记他的画作，从而达到这种效果？
@@ -610,6 +614,7 @@ I try to find an equivalent in paint and etching to express my feelings about th
 我对弗里普的钦佩与日俱增：那幅看似简单却宏大的构图，教堂在刺眼的热光中发光，似乎是岩石景观的一部分，是一种魔术般的技巧。我不知道他是如何做到的。一种令人谦卑的体验，这是在大师脚下坐着，但它也带来对所有必须协同工作才能让一幅画活起来的元素的新认识。
 
 ### JANET Q TRELOAR
+
 #### ALFRED DOWNING FRIPP (1822–1895)：*圣罗科·奥莱瓦诺*
 
 从文凭收藏中挑选阿尔弗雷德·道宁·弗里普的作品并不困难，原因有几个。第一个是感性的。弗里普是我丈夫的曾祖父，他本人是（旧）水彩画协会创始人之一尼古拉斯·波考克的曾孙。弗里普从1870年到1895年去世一直担任协会秘书。
@@ -632,10 +637,8 @@ I try to find an equivalent in paint and etching to express my feelings about th
 
 上方：**JANET TRELOAR**，法国普罗旺斯阿尔勒附近的圣吉尔-迪-加尔，水彩和厚彩，43 x 68 cm（17 x 27 in）
 
-
-
-
 ### 奥尔温·琼斯
+
 #### 佩西·哈格·乔韦特 (1872–1955)：*Bedroom Window*
 
 ![](img/b8a900b8373e949117f531b00685f281_61_0.png)
@@ -653,6 +656,9 @@ I try to find an equivalent in paint and etching to express my feelings about th
 佩西·乔韦特的画作 *Bedroom Window* 描绘了小房间的一部分，但在强有力、富有感染力的作品中暗示了部分打开的窗户之外更广阔的景致。花瓶中的花占据了窗户的大部分空间，并将观者引向这个简朴之外的更大世界
 
 ### 威廉·塞尔比
+
+
+
 #### 哈伯特·休斯-斯坦顿爵士 (1870-1937)：*Hindhead, looking towards Haslemere*
 
 我对休伯特·休斯-斯坦顿爵士这幅特定画作的兴趣在于，远处的山丘——尽管是画作的主要吸引物和构图的焦点——却被保持得很低，几乎被前景遮住——这让我想起在约克郡山谷旅行写生时见到的许多相似景色。
@@ -672,6 +678,7 @@ I try to find an equivalent in paint and etching to express my feelings about th
 在这里，我更少关注透视、明暗，而是更集中于色彩和色调的形状。该作品是在工作室中用混合媒介水彩、珂白和丙烯从速写中完成的。
 
 ### 阿加特·索雷尔
+
 #### 罗伯特·艾伦 (1851–1942)：*Tarbert, Loch Fyne*
 
 罗伯特·艾伦的洛赫·费恩描绘了一座孤独且有些破败的塔，类似于我在火山岛兰萨罗特偏远农田中发现并作画的那一座。毫无疑问，这两座塔都曾承载着神秘或英雄般的过去，但在逐渐分解的过程中成为思想流动联想的主题。
@@ -695,10 +702,13 @@ Opposite: **AGATHE SOREL**, *Ghost Tower*, 2003, 45 x 60 cm (18 x 24 in)
 ![](img/b8a900b8373e949117f531b00685f281_64_0.png)
 
 ### 简·泰勒
+
 #### 罗丝·梅纳德·巴顿 (1856-1929)：Child with a White Cap
 
-罗丝·梅纳德·巴顿于1895年当选为皇家水彩画协会的副会员，但直到1909年才提交这幅她的文凭作品。巴顿出生于爱尔兰，基本自学成才，且没有明显的[content]
+罗丝·梅纳德·巴顿于1895年当选为皇家水彩画协会的副会员，但直到1909年才提交这幅她的文凭作品。巴顿出生于爱尔兰，基本自学成才，且没有明显的
+
 ### 奥尔温·琼斯
+
 #### 佩西·哈格·乔韦特 (1872–1955)：*Bedroom Window*
 
 ![](img/b8a900b8373e949117f531b00685f281_61_0.png)
@@ -716,6 +726,7 @@ Opposite: **AGATHE SOREL**, *Ghost Tower*, 2003, 45 x 60 cm (18 x 24 in)
 佩西·乔韦特的画作 *Bedroom Window* 描绘了小房间的一部分，但在强有力、富有感染力的作品中暗示了部分打开的窗户之外更广阔的景致。花瓶中的花占据了窗户的大部分空间，并将观者引向这个简朴之外的更大世界
 
 ### 威廉·塞尔比
+
 #### 哈伯特·休斯-斯坦顿爵士 (1870-1937)：*Hindhead, looking towards Haslemere*
 
 我对休伯特·休斯-斯坦顿爵士这幅特定画作的兴趣在于，远处的山丘——尽管是画作的主要吸引物和构图的焦点——却被保持得很低，几乎被前景遮住——这让我想起在约克郡山谷旅行写生时见到的许多相似景色。
@@ -735,6 +746,7 @@ Opposite: **AGATHE SOREL**, *Ghost Tower*, 2003, 45 x 60 cm (18 x 24 in)
 在这里，我更少关注透视、明暗，而是更集中于色彩和色调的形状。该作品是在工作室中用混合媒介水彩、珂白和丙烯从速写中完成的。
 
 ### 阿加特·索雷尔
+
 #### 罗伯特·艾伦 (1851–1942)：*Tarbert, Loch Fyne*
 
 罗伯特·艾伦的洛赫·费恩描绘了一座孤独且有些破败的塔，类似于我在火山岛兰萨罗特偏远农田中发现并作画的那一座。毫无疑问，这两座塔都曾承载着神秘或英雄般的过去，但在逐渐分解的过程中成为思想流动联想的主题。
@@ -755,9 +767,12 @@ Above: **ROBERT ALLAN**, *Tarbert, Loch Fyne*, watercolour and graphite, 39.4 x 
 
 Opposite: **AGATHE SOREL**, *Ghost Tower*, 2003, 45 x 60 cm (18 x 24 in)
 
+
+
 ![](img/b8a900b8373e949117f531b00685f281_64_0.png)
 
 ### 简·泰勒
+
 #### 罗丝·梅纳德·巴顿 (1856-1929)：Child with a White Cap
 
 罗丝·梅纳德·巴顿于1895年当选为皇家水彩画协会的副会员，但直到1909年才提交这幅她的文凭作品。巴顿出生于爱尔兰，基本自学成才，且没有明显的
@@ -774,9 +789,8 @@ Opposite: **AGATHE SOREL**, *Ghost Tower*, 2003, 45 x 60 cm (18 x 24 in)
 
 通过分解画作制作过程，我们对技法有了更清晰的理解，这可以帮助许多艺术家创作新画作。最终，我希望创作出一幅能够捕捉我在 McEvoy 的《Beatrice》中发现的那种即时感和流畅感的图像。
 
-
-
 ### JANE CORSELLIS
+
 #### ARTHUR AMBROSE McEVOY (1878-1927): 贝阿特丽丝
 
 ![](img/b8a900b8373e949117f531b00685f281_75_0.png)
@@ -802,6 +816,7 @@ Opposite: **AGATHE SOREL**, *Ghost Tower*, 2003, 45 x 60 cm (18 x 24 in)
 ![](img/b8a900b8373e949117f531b00685f281_76_0.png)
 
 ### SOPHIE KNIGHT
+
 #### ARTHUR AMBROSE McEvoy (1878–1927): *贝阿特丽丝*
 
 ![](img/b8a900b8373e949117f531b00685f281_77_0.png)
@@ -825,6 +840,7 @@ Opposite: **AGATHE SOREL**, *Ghost Tower*, 2003, 45 x 60 cm (18 x 24 in)
 *上方，右：SOPHIE KNIGHT, St Pancras Station, watercolour and bodycolour, 76 x 56 cm, (29.9 x 22 in)*
 
 ### SONIA LAWSON
+
 #### ARTHUR AMBROSE McEVOY (1878-1927): 贝阿特丽丝
 
 我知道色彩普遍迷惑着眼睛和心灵，然而我选择与 RWS 永久收藏中一幅近乎单色的作品互动，这是一幅由安布罗斯·麦克沃伊创作的水彩画，名为贝阿特丽丝，约创作于1925-26年。它既是绘画也是素描。吸引我的是一流的绘图技巧、流畅性、可变性以及看似漫不经心的特质。处理水洗的轻松感以及上半身内谨慎而经济的绘画使一切看起来非常容易，但这当然具有欺骗性。麦克沃伊通过理解形体——在此为人体形体——以及他处理媒介——水彩、墨和粉笔——的技巧，实现了他有见地的绘图技巧。
@@ -833,14 +849,15 @@ Opposite: **AGATHE SOREL**, *Ghost Tower*, 2003, 45 x 60 cm (18 x 24 in)
 
 这件作品并不显得夸张，它不是被‘完成到死’，不是一个有限的想法，更像是一组开放、持续的记号，以令人耳目一新的直接紧迫感写下。这里没有大肆展示技艺，而是一种冲动，对一天和一个人——两者都转瞬即逝——的提醒。观者可以参与到某种亲密的事物中，被邀请加入探索，无结构，是本质而非学术体验。
 
+
+
 安布罗斯·麦克沃伊备受尊敬，尤其以他的大型肖像闻名。他的是一种‘有品味’的艺术，一位讨人喜欢的轻量级人物，从未成为我的灵感导师（我早期的品味更偏向马克斯·贝克曼），但我确实喜欢我选择处理的这件特定的麦克沃伊绘画兼素描。我只在它从储藏室取出时短暂见过几次，却发现它很有力量。我还发现，由于其‘随心所欲’的手法，它有一种诙谐而轻松的感觉，超越了它沉郁的缺乏色彩。当事情奏效时，如亚历山大·科赞斯（1717-86）那样，单色可以感觉像色彩。名字‘Beatrice’目前与过去的时尚相关，这让我想到更早的名字，例如夏洛特和艾米丽，勃朗特三姐妹中的两位。联系起初虽然牵强，但从那时起就成为了一股让我微笑的意识流。我发现自己沉浸在一幅三位强悍女性的画面中，她们是艾米丽《呼啸山庄》的象征。这基本上是一幅单色作品，我认真地处理它，同时怀着自由的心态，旨在避免任何自恋或沉闷的严肃。
 
 上方：SONIA LAWSON, Feisty Females, 2005, watercolour, bodycolour and pen and ink, 51 x 52 cm (20 x 20.5 in)
 
+## 理查德·鲍登
 
-
-### 理查德·鲍登
-#### 托马斯·巴克莱·亨内尔 (1903–1945)：*雷克雅未克港*
+### 托马斯·巴克莱·亨内尔 (1903–1945)：*雷克雅未克港*
 
 汤姆·亨内尔是我心目中的艺术家。他美丽而直接地描绘自己所见之物：谷仓、树木、马匹和正在工作的工匠；这是一位诗人的眼光。*雷克雅未克港*是他在冰岛担任官方战地艺术家时创作的几幅画作之一。可能是在多变的天气条件下匆忙绘制的，某些地方雨水冲刷掉了颜色。人需要感受到，正如他可能感受到的那样，局势变化的紧迫性；但它也是战争的记录。
 
@@ -854,8 +871,9 @@ Opposite: **AGATHE SOREL**, *Ghost Tower*, 2003, 45 x 60 cm (18 x 24 in)
 
 上图：理查德·鲍登，《雷克雅未克港》，临摹托马斯·亨内尔，2004年，水彩，51 x 65.5 厘米（20 x 25.8 英寸）
 
-### 大卫·格鲁克
-#### 大卫·琼斯 (1895-1974)：*Afon Honddu Fach, above Capel-y-ffin*
+## 大卫·格鲁克
+
+### 大卫·琼斯 (1895-1974)：*Afon Honddu Fach, above Capel-y-ffin*
 
 大卫·琼斯的绘画和素描多年来一直令我着迷。他以自发的方式作画，通过多层主要由线条构成的标记以及局部的色调来发展画面，触感轻盈。各种底稿和绘画在成品中可见，并在成品中讲述了过程。这种程序与我的工作方式非常一致，使琼斯成为我选择的对象。
 
@@ -865,8 +883,9 @@ Opposite: **AGATHE SOREL**, *Ghost Tower*, 2003, 45 x 60 cm (18 x 24 in)
 
 ![](img/b8a900b8373e949117f531b00685f281_81_0.png)
 
-### 伊丽莎白·克拉姆
-#### 大卫·琼斯 (1895–1974)：Afon Honddu Fach, above Capel-y-ffin
+## 伊丽莎白·克拉姆
+
+### 大卫·琼斯 (1895–1974)：Afon Honddu Fach, above Capel-y-ffin
 
 我的水彩画依赖于绘画，结合色彩来增强构图线条的节奏感，如我在迪伦·托马斯《牛奶木下》中的《Mog Edwards》所示。正是大卫·琼斯作品中的这种品质，以及他对窗闩或推拉窗装饰等细节的着迷，以及他对超越所见时刻之物的感知，吸引我去欣赏他的绘画。
 
@@ -878,8 +897,9 @@ Opposite: **AGATHE SOREL**, *Ghost Tower*, 2003, 45 x 60 cm (18 x 24 in)
 
 ![](img/b8a900b8373e949117f531b00685f281_83_1.png)
 
-### 诺曼·韦伯斯特
-#### 塞缪尔·休伯特·冯·赫科默爵士 (1849 - 1914)：亨利·斯塔西·马克的肖像
+## 诺曼·韦伯斯特
+
+### 塞缪尔·休伯特·冯·赫科默爵士 (1849 - 1914)：亨利·斯塔西·马克的肖像
 
 ![](img/b8a900b8373e949117f531b00685f281_84_0.png)
 
@@ -895,8 +915,9 @@ Opposite: **AGATHE SOREL**, *Ghost Tower*, 2003, 45 x 60 cm (18 x 24 in)
 
 ![](img/b8a900b8373e949117f531b00685f281_84_1.png)
 
-### 夏洛特·哈利代
-#### 詹姆斯·达菲尔德·哈丁 (1797–1863)：维罗纳
+## 夏洛特·哈利代
+
+### 詹姆斯·达菲尔德·哈丁 (1797–1863)：维罗纳
 
 我21岁时，我的父母带我去了意大利，那是他们第一次相遇的地方。这是一种“入门优惠”。我做了很多小速写，自由而毫不自卑。但后来我变得对旅行感到紧张，尤其对飞行感到幽闭恐惧。我在英格兰“停留”了多年，直到有机会再次与朋友一起去地中海，我决定必须抓住这个机会。
 
@@ -916,36 +937,46 @@ Opposite: **AGATHE SOREL**, *Ghost Tower*, 2003, 45 x 60 cm (18 x 24 in)
 
 对面：夏洛特·哈利代，《海关大楼 E.C.3》，2003年，铅笔和水彩，40 x 45 厘米（15.7 x 17.7 英寸）
 
+## MICHAEL McGUINNESS
 
-
-
-### MICHAEL McGUINNESS
-#### ROBERT SARGENT AUSTIN (1895-1973): 茶歇
+### ROBERT SARGENT AUSTIN (1895-1973): 茶歇
 
 我害怕绘画，它让我担忧；描述我所见之物的责任似乎令人不堪重负。即使经过训练和练习，绘画和作画对我来说也不容易，因此对我来说，涉足绘画和作画的行为是一种永远不会变得更容易的纪律，而我花费大量时间试图回避它。
 
 ![](img/b8a900b8373e949117f531b00685f281_87_0.png)
+
+
 
 事实是，某些印象，无论是风景、物体还是人物，似乎都要求关注。情况也是如此，这只被丢弃的搪瓷茶壶，在驶入埃塞克斯乡村时，我在A12路旁的绿草中瞥见它如同一闪蓝光。我大约五次路过这抹蓝光才停下来，把茶壶带回家作画。我问自己为什么不在草地上画它，而要在更正统的托盘布上画它。我无法为这个决定辩解，除了它似乎恢复了茶壶的本来位置。
 
 罗伯特·奥斯汀对非常英式的茶歇家庭传统的描绘已深深印在我脑海中。我的这只茶壶必定在许多不同的家庭场合中扮演了核心的、尽管未被赏识的角色，帮助建立友谊并在需要时给予安慰。最终，它变得老旧破旧，并因茶包和用于随意喝茶的马克杯的出现而变得多余，被扔掉了，但我觉得它应被尊为一只退休的茶壶，而非被抛弃的茶壶。
 
 ### WILLIAM BOWYER
+
 #### SIR GEORGE CLAUSEN (1852-1944): *女孩与花盆*
 
-每当我看到乔治·克劳森的素描时，我都为其视野和清晰度所[content]
+每当我看到乔治·克劳森的素描时，我都为其视野和清晰度所印象深刻。他的水彩画具有一种清新和即时感，透射而出。在这幅简单的画作中，我钦佩他画年轻女孩的方式，并以极大的简洁展示了他传达她温柔本性给观众的能力。
+
+女孩手中轻轻捧着的深色天竺葵花盆的色调细腻诠释，只会起到对比和增强她柔软面部塑造的作用。头部以极致的敏感和魔力描绘。也许她与他有关——她会不会是他的女儿？
+
+绘画人物一直是我愉悦和特权所在，在享受他们的陪伴的同时，尝试捕捉那种人性精神，那条揭示他们真正本性的难以捉摸的线索。
+
+我偶尔能让我的母亲为我坐姿，劝说她暂时放下家务，我会珍惜描绘我如此熟悉的个体的想法。凭借她世俗的智慧，这位大家长式的人物喜欢开玩笑、八卦和偶尔喝一杯。她尤其喜欢看我打板球，在1970年代，她和我的好朋友艺术家鲁斯金·斯皮尔在观看一个夏日比赛时喝了一瓶苏格兰威士忌。毋庸置说，他们都很享受比赛。
+
+![](img/b8a900b8373e949117f531b00685f281_87_0.png)
+
 ### MICHAEL McGUINNESS
+
 #### ROBERT SARGENT AUSTIN (1895-1973): 茶歇
 
 我害怕绘画，它让我担忧；描述我所见之物的责任似乎令人不堪重负。即使经过训练和练习，绘画和作画对我来说也不容易，因此对我来说，涉足绘画和作画的行为是一种永远不会变得更容易的纪律，而我花费大量时间试图回避它。
-
-![](img/b8a900b8373e949117f531b00685f281_87_0.png)
 
 事实是，某些印象，无论是风景、物体还是人物，似乎都要求关注。情况也是如此，这只被丢弃的搪瓷茶壶，在驶入埃塞克斯乡村时，我在A12路旁的绿草中瞥见它如同一闪蓝光。我大约五次路过这抹蓝光才停下来，把茶壶带回家作画。我问自己为什么不在草地上画它，而要在更正统的托盘布上画它。我无法为这个决定辩解，除了它似乎恢复了茶壶的本来位置。
 
 罗伯特·奥斯汀对非常英式的茶歇家庭传统的描绘已深深印在我脑海中。我的这只茶壶必定在许多不同的家庭场合中扮演了核心的、尽管未被赏识的角色，帮助建立友谊并在需要时给予安慰。最终，它变得老旧破旧，并因茶包和用于随意喝茶的马克杯的出现而变得多余，被扔掉了，但我觉得它应被尊为一只退休的茶壶，而非被抛弃的茶壶。
 
 ### WILLIAM BOWYER
+
 #### SIR GEORGE CLAUSEN (1852-1944): *女孩与花盆*
 
 每当我看到乔治·克劳森的素描时，我都为其视野和清晰度所印象深刻。他的水彩画具有一种清新和即时感，透射而出。在这幅简单的画作中，我钦佩他画年轻女孩的方式，并以极大的简洁展示了他传达她温柔本性给观众的能力。
@@ -975,6 +1006,7 @@ JUNE BERRY
 ![](img/b8a900b8373e949117f531b00685f281_92_0.png)
 
 ### JANE CARPANINI
+
 #### DAME LAURA KNIGHT (1877–1970): *女孩化妆车*
 
 戴姆·劳拉·奈特是周围世界充满激情的记录者，从未像观察她的 subjects 沉浸在工作过程时那样。
@@ -994,9 +1026,11 @@ JUNE BERRY
 ![](img/b8a900b8373e949117f531b00685f281_94_0.png)
 
 对面：DAME LAURA KNIGHT RA，《女孩化妆车》，水彩和粉彩，52 x 34 cm（20.5 x 13.4 in）
+
 上方：JANE CARPANINI，《威尼斯 – ‘等待“ Nessun Dorma ”’》，2004，46 x 38 cm（18 x 15 in）
 
 ### DAVID REMFRY
+
 #### DAME LAURA KNIGHT (1877–1970): 女孩化妆车
 
 ![](img/b8a900b8373e949117f531b00685f281_95_0.png)
@@ -1013,128 +1047,23 @@ JUNE BERRY
 
 23街上有一家偶尔营业的俱乐部，我开始画表演者。他们会拜访工作室，然后在多年里，我会画他们的素描。我一直对表演者和舞者着迷；对我来说，他们提供了理想的题材，有几乎用之不竭的处理方式。
 
-
-
-
 ### 伯纳德·巴切勒
 
 #### 塞缪尔“拉莫纳”比奇 (1869–1955)：*老布里格·奥迪*
 
 对我来说这是一幅很棒的水彩画，我可以经常重返它。天气寒冷，你可以在凝视远处雪峰时感受到脸颊上的寒风，前景中浪花拍打着岩石。画作充满气氛，而且似乎都以极大的权威和技巧落笔。没有犹豫或擦拭——只是纯粹的好作品。
 
-在某些方面，其处理手法和[content]
+在某些方面，其处理手法和
+
+
+
 ### 伯纳德·巴切勒
 
-#### 塞缪尔“拉莫纳”比奇 (1869–1955)：*老布里格·奥迪*
+#### 塞缪尔“拉莫纳”比奇 (1869–1955)：`老布里格·奥迪`
 
 对我来说这是一幅很棒的水彩画，我可以经常重返它。这是一个寒冷的日子，当你凝视远处的雪峰时，你能感受到脸颊上的寒风，前景中浪花拍打着岩石。画作充满气氛，而且似乎都以极大的权威和技巧落笔。没有犹豫或擦拭——只是纯粹的好作品。
 
-在某些方面，其处理手法和[content]
-### 伯纳德·巴切勒
-
-#### 塞缪尔“拉莫纳”比奇 (1869–1955)：*老布里格·奥迪*
-
-对我来说这是一幅很棒的水彩画，我可以经常重返它。这是一个寒冷的日子，当你凝视远处的雪峰时，你能感受到脸颊上的寒风，前景中浪花拍打着岩石。画作充满气氛，而且似乎都以极大的权威和技巧落笔。没有犹豫或擦拭——只是纯粹的好作品。
-
-在某些方面，其处理手法和[content]
-### 伯纳德·巴切勒
-
-#### 塞缪尔“拉莫纳”比奇 (1869–1955)：*老布里格·奥迪*
-
-对我来说这是一幅很棒的水彩画，我可以经常重返它。这是一个寒冷的日子，当你凝视远处的雪峰时，你能感受到脸颊上的寒风，前景中浪花拍打着岩石。画作充满气氛，而且似乎都以极大的权威和技巧落笔。没有犹豫或擦拭——只是纯粹的好作品。
-
-在某些方面，其处理手法和[content]
-### 伯纳德·巴切勒
-
-#### 塞缪尔“拉莫纳”比奇 (1869–1955)：*老布里格·奥迪*
-
-对我来说这是一幅很棒的水彩画，我可以经常重返它。这是一个寒冷的日子，当你凝视远处的雪峰时，你能感受到脸颊上的寒风，前景中浪花拍打着岩石。画作充满气氛，而且似乎都以极大的权威和技巧落笔。没有犹豫或擦拭——只是纯粹的好作品。
-
-在某些方面，其处理手法和[content]
-### 伯纳德·巴切勒
-
-#### 塞缪尔“拉莫纳”比奇 (1869–1955)：*老布里格·奥迪*
-
-对我来说这是一幅很棒的水彩画，我可以经常重返它。这是一个寒冷的日子，当你凝视远处的雪峰时，你能感受到脸颊上的寒风，前景中浪花拍打着岩石。画作充满气氛，而且似乎都以极大的权威和技巧落笔。没有犹豫或擦拭——只是纯粹的好作品。
-
-在某些方面，其处理手法和[content]
-### 伯纳德·巴切勒
-
-#### 塞缪尔“拉莫纳”比奇 (1869–1955)：*老布里格·奥迪*
-
-对我来说这是一幅很棒的水彩画，我可以经常重返它。这是一个寒冷的日子，当你凝视远处的雪峰时，你能感受到脸颊上的寒风，前景中浪花拍打着岩石。画作充满气氛，而且似乎都以极大的权威和技巧落笔。没有犹豫或擦拭——只是纯粹的好作品。
-
-在某些方面，其处理手法和[content]
-### 伯纳德·巴切勒
-
-#### 塞缪尔“拉莫纳”比奇 (1869–1955)：*老布里格·奥迪*
-
-对我来说这是一幅很棒的水彩画，我可以经常重返它。这是一个寒冷的日子，当你凝视远处的雪峰时，你能感受到脸颊上的寒风，前景中浪花拍打着岩石。画作充满气氛，而且似乎都以极大的权威和技巧落笔。没有犹豫或擦拭——只是纯粹的好作品。
-
-在某些方面，其处理手法和[content]
-### 伯纳德·巴切勒
-
-#### 塞缪尔“拉莫纳”比奇 (1869–1955)：*老布里格·奥迪*
-
-对我来说这是一幅很棒的水彩画，我可以经常重返它。这是一个寒冷的日子，当你凝视远处的雪峰时，你能感受到脸颊上的寒风，前景中浪花拍打着岩石。画作充满气氛，而且似乎都以极大的权威和技巧落笔。没有犹豫或擦拭——只是纯粹的好作品。
-
-在某些方面，其处理手法和[content]
-### 伯纳德·巴切勒
-
-#### 塞缪尔“拉莫纳”比奇 (1869–1955)：*老布里格·奥迪*
-
-对我来说这是一幅很棒的水彩画，我可以经常重返它。这是一个寒冷的日子，当你凝视远处的雪峰时，你能感受到脸颊上的寒风，前景中浪花拍打着岩石。画作充满气氛，而且似乎都以极大的权威和技巧落笔。没有犹豫或擦拭——只是纯粹的好作品。
-
-在某些方面，其处理手法和[content]
-### BERNARD BATCHELOR
-
-#### SAMUEL ‘LAMORNA’ BIRCH (1869–1955): *The Old Brig O’Dee*
-
-对我来说这是一幅很棒的水彩画，我可以经常重返它。这是一个寒冷的日子，当你凝视远处的雪峰时，你能感受到脸颊上的寒风，前景中浪花拍打着岩石。画作充满气氛，而且似乎都以极大的权威和技巧落笔。没有犹豫或擦拭——只是纯粹的好作品。
-
-在某些方面，其处理手法和[content]
-### 伯纳德·巴切勒
-
-#### 塞缪尔“拉莫纳”比奇 (1869–1955)：*老布里格·奥迪*
-
-对我来说这是一幅很棒的水彩画，我可以经常重返它。这是一个寒冷的日子，当你凝视远处的雪峰时，你能感受到脸颊上的寒风，前景中浪花拍打着岩石。画作充满气氛，而且似乎都以极大的权威和技巧落笔。没有犹豫或擦拭——只是纯粹的好作品。
-
-在某种程度上，其用笔和[content]
-### BERNARD BATCHELOR
-
-#### SAMUEL ‘LAMORNA’ BIRCH (1869–1955): *The Old Brig O’Dee*
-
-对我来说这是一幅很棒的水彩画，我可以经常重返它。这是一个寒冷的日子，当你凝视远处的雪峰时，你能感受到脸颊上的寒风，前景中浪花拍打着岩石。画作充满气氛，而且似乎都以极大的权威和技巧落笔。没有犹豫或擦拭——只是纯粹的好作品。
-
-在某些方面，其处理手法和[content]
-### 伯纳德·巴切勒
-
-#### 塞缪尔"拉莫纳"比奇 (1869-1955): *The Old Brig O'Dee*
-
-对我来说这是一幅很棒的水彩画，我可以经常重返它。这是一个寒冷的日子，当你凝视远处的雪峰时，你能感受到脸颊上的寒风，前景中浪花拍打着岩石。画作充满气氛，而且似乎都以极大的权威和技巧落笔。没有犹豫或擦拭——只是纯粹的好作品。
-
-在某种程度上，其处理手法和[content]
-### BERNARD BATCHELOR
-
-#### SAMUEL ‘LAMORNA’ BIRCH (1869–1955): *The Old Brig O’Dee*
-
-对我来说这是一幅很棒的水彩画，我可以经常重返它。这是一个寒冷的日子，当你凝视远处的雪峰时，你能感受到脸颊上的寒风，前景中浪花拍打着岩石。画作充满气氛，而且似乎都以极大的权威和技巧落笔。没有犹豫或擦拭——只是纯粹的好作品。
-
-在某些方面，其处理手法和[content]
-### 伯纳德·巴切勒
-
-#### 塞缪尔“拉莫纳”比奇 (1869–1955)：*老布里格·奥迪*
-
-对我来说这是一幅很棒的水彩画，我可以经常重返它。寒冷的日子，脸颊能感受到寒风，远处是雪峰，前景浪花拍打岩石。画作气氛浓郁，落笔权威有技巧。没有犹豫或擦拭，只是纯粹的好作品。
-
-在某些方面，其处理手法和[content]
-### 伯纳德·巴切勒
-
-#### 塞缪尔“拉莫纳”比奇 (1869–1955)：*老布里格·奥迪*
-
-对我来说这是一幅很棒的水彩画，我可以经常重返它。这是一个寒冷的日子，当你凝视远处的雪峰时，你能感受到脸颊上的寒风，前景中浪花拍打着岩石。画作充满气氛，而且似乎都以极大的权威和技巧落笔。没有犹豫或擦拭——只是纯粹的好作品。
-
-在某些方面，其处理手法和J S Sargent相似——大而宽阔。也许是因为他们都在1890年代的法国，当时印象派开始被推崇而不是被排斥。我认为比奇的部分训练大约在那时在巴黎进行——当然这种新的绘画和评价方式，即印象派，对他和Sargent都极具兴趣；我确信它极大地影响了他们的作品。
+在某些方面，其处理手法和 J S Sargent 相似——大而宽阔。也许是因为他们都在1890年代的法国，当时印象派开始被推崇而不是被排斥。我认为比奇的部分训练大约在那时在巴黎进行——当然这种新的绘画和评价方式，即印象派，对他和 Sargent 都极具兴趣；我确信它极大地影响了他们的作品。
 
 拉莫纳·比奇显然也是一个热心的钓鱼爱好者，作画时经常带上钓竿和鱼线。我想，如果他在绘画上遇到“糟糕的一天”（我们都会有！），他可以用钓竿把它变成“好的一天”！
 
@@ -1142,19 +1071,21 @@ JUNE BERRY
 
 ![](img/b8a900b8373e949117f531b00685f281_97_1.png)
 
-在*Catch of the Day*中，我的想法似乎最初只是随手在信封背面涂鸦。我决定尝试改进一个渔夫的场景，并想到了火车驶过桥上，司机想看鱼的想法。
+在`Catch of the Day`中，我的想法似乎最初只是随手在信封背面涂鸦。我决定尝试改进一个渔夫的场景，并想到了火车驶过桥上，司机想看鱼的想法。
 
 Morbain（布列塔尼）是一个忙碌的地方，在那些明亮多风的日子里，到处都是耀眼的阳光和阴影。人们忙着周末购物——而在上方则是铁路高架桥。所以我以一种多风的方式画了它，这正是水彩的精髓！
 
-Above, right: **SAMUEL ‘LAMORNA’ BIRCH** RA, *The Old Brig O’Dee*, watercolour and bodycolour over graphite, 37 x 55.5 cm (14.7 x 21.9 in)
+Above, right: **SAMUEL ‘LAMORNA’ BIRCH** RA, `The Old Brig O’Dee`, watercolour and bodycolour over graphite, 37 x 55.5 cm (14.7 x 21.9 in)
 
-Above, left: **BERNARD BATCHELOR**, *Catch of the Day*, 2005, watercolour, 32 x 42 cm (12.5 x 16.5 in)
+Above, left: **BERNARD BATCHELOR**, `Catch of the Day`, 2005, watercolour, 32 x 42 cm (12.5 x 16.5 in)
 
-Opposite: **BERNARD BATCHELOR**, *Morlau*, watercolour, 35.5 x 27.5 cm (14 x 10.8 in)
+Opposite: **BERNARD BATCHELOR**, `Morlau`, watercolour, 35.5 x 27.5 cm (14 x 10.8 in)
 
 ### DAVID BRAYNE
 
-#### HENRY SCOTT TUKE (1858–1929): *Green Water*
+#### HENRY SCOTT TUKE (1858–1929): `Green Water`
+
+
 
 Henry Scott Tuke was a keen sailor who sought to explore man’s closeness to the sea. He often painted friends and fishermen working or playing along the Cornish coast from his floating studio, an old brigantine, Julie de Nantes. *Green Water*, his diploma work of 1911, captures a brief moment between an oarsman and a dimly seen swimmer.
 
@@ -1165,6 +1096,7 @@ I paint the sea viewed from the shoreline, while Tuke’s floating studio enable
 ![](img/b8a900b8373e949117f531b00685f281_99_0.png)
 
 Above: HENRY SCOTT TUKE RA, *Green Water*, watercolour and bodycolour, 29.5 x 45.3 cm (11.7 x 18 in)
+
 Opposite: DAVID BRAYNE, *Leaping Fish*, watercolour, raw pigment and acrylic gel on paper, 25 x 30 cm (10 x 12 in)
 
 ### ALFRED DANIELS
@@ -1187,6 +1119,8 @@ I have found that watercolour and acrylic are the ideal media in which to resear
 
 When I paint it is the abstract qualities that excite me – the colour, the composition and the paint itself. My work in watercolour is generally on a small scale. I want to draw the viewer into a private world.
 
+
+
 Sidney Curnow Vosper's little painting The Weaver is an intense study of one man preoccupied with the task in hand. It is an intimate space that he works in. The floor is tilted towards the viewer, providing a 'stage' for the real subject of the work, namely the beautiful still life with its rhythms and fascinating relationships. The dark background also works to direct our attention to those vessels. Vosper has taken the ordinary and made out of it something extraordinary, a kind of visual music. This quiet corner, this private space has been translated into a symphony of quiet, close tones; there is no drama here. But there is a richness of colour and touch.
 
 ![](img/b8a900b8373e949117f531b00685f281_103_1.png)
@@ -1195,10 +1129,10 @@ I make drawings of the landscape and then use them in the studio, where I can be
 
 My work always refers to nature – even my seemingly non-figurative pieces. Close Encounter Blue Forms was painted from a small study made on the beach at Aldeburgh. The objects have lost their identity because I zoomed in so closely on them. Here the forms occupy a shallow space, as does the interior in the Vosper painting. They hover according to their intensity and colour. Generally the tones are close. I am not 'tied' to a recognizable subject and so I can be free to concentrate on the colour and mark. As soon as I make a mark, or place a colour, then the painting has its own life and makes its own demands. It is my concern as a painter to respond to those demands. I have placed the small red area because the painting needed it. Perhaps Vosper placed the blue on the man's trousers for the same reason.
 
-
-
 ### LESLIE WORTH
+
 #### EDWARD DUNCAN (1873-1965): 逼近的沉船
+
 这幅画是邓肯的毕业作品，创作于1937年，当时艺术家正值成熟的中年。堪称力作，它体现了经验丰富的画家的一切特征——熟悉题材并熟练掌握水彩技法的种种变数。
 
 ![](img/b8a900b8373e949117f531b00685f281_105_0.png)
@@ -1216,10 +1150,13 @@ My work always refers to nature – even my seemingly non-figurative pieces. Clo
 ![](img/b8a900b8373e949117f531b00685f281_106_0.png)
 
 对面：EDWARD DUNCAN，《逼近的沉船》，水彩与粉彩，29 x 58.5 cm (11.5 x 23 in)
+
 上方：LESLIE WORTH，《风暴中颠簸的船》，2004，水彩，37 x 53 cm (14.5 x 21 in)
 
 ### DAVID FIRMSTONE
+
 #### EDWARD DUNCAN (1873-1965): *逼近的沉船*
+
 在邓肯这幅小巧而有力的画作中，一场壮丽的风暴正在肆虐。你能听见海浪猛烈拍击岸边的巨大力量，看见人们与之抗争。防波堤最终被冲垮，惊扰着尖叫的海鸥，而船只则脆弱地在不断湍急的海水中挣扎。这是一幅奇妙的画作，当我仔细端详并审视邓肯的笔触时，我不禁想问‘他是如何做到的？’
 
 ![](img/b8a900b8373e949117f531b00685f281_107_0.png)
@@ -1231,8 +1168,12 @@ My work always refers to nature – even my seemingly non-figurative pieces. Clo
 我不仅仅对再现感兴趣，事实上当只有再现发生时我总是感到失望，于是我会把画作扔进浴缸，或往上面泼颜料，弄坏它，这样我就必须重新与之搏斗。而且我永远记不清之前的作法，所以每一幅画都是重新学习作画的过程。
 
 ### JOHN NEWBERRY
+
 #### CHARLES BENTLEY (1806-1854): *道佛附近的帆驳船*
+
 ![](img/b8a900b8373e949117f531b00685f281_109_0.png)
+
+
 
 查尔斯·本特利具有一种特殊的品质。他将观察到的自然题材与清晰的水彩技法结合起来。道佛海滩外一艘普通的帆驳船因其绘画方式而变得令人兴奋。这幅画是显而易见的选择。我一直在肯特海岸的迪尔一带作画，多次使用过这幅带有莎士比亚悬崖的景致。海滩并未改变，但其后停放的集装箱卡车如今取代了曾经挤满这些水域的成千上万艘商船和军舰。如今只有少数岸边渔民、几组游艇，以及进出道佛港的无尽巨大汽车渡轮。
 
@@ -1247,11 +1188,15 @@ My work always refers to nature – even my seemingly non-figurative pieces. Clo
 ![](img/b8a900b8373e949117f531b00685f281_110_0.png)
 
 对面，上方：CHARLES BENTLEY，《道佛附近的帆驳船》，水彩，17.2 x 24.8 cm (6.75 x 9.75 in)
+
 对面，下方：JOHN NEWBERRY，《迪尔的双艘搁浅渔船》，2002，水彩，22 x 32.5 cm (8.7 x 12.8 in)
+
 上方：JOHN NEWBERRY，《迪尔海滩向南望》，2002，水彩，22.6 x 32.5 cm (8.9 x 12.8 in)
 
 ### DENNIS ROXBY BOTT
+
 #### SIDNEY LEE (1866-1949): *造船*
+
 船自然与水相关，而李的画作吸引我的地方在于建筑的轻微不协调，视野中完全看不到水。李那个时代的艺术家很幸运能找到传统建造的船只来画，或像本例这样正在传统建造。我发现它们比现代塑料船更令人满意、更值得描绘，所以当我在沃辛找到一些老船并能将背后的摄政时期和维多利亚时期房屋纳入其中时，我感到非常高兴。
 
 当然，李那个时代的地形画家有着截然不同的视角。显然西德尼·李的画作主要描绘了人们在船上辛勤工作的情景。事实上我认为他主要兴趣在于人物及其所作所为。他对相当平凡的建筑并不太关心。我的主要兴趣在于建筑本身，其建筑风格以及特定海滨度假地的物理环境；海滨的本质。
@@ -1268,14 +1213,14 @@ My work always refers to nature – even my seemingly non-figurative pieces. Clo
 
 上方：DENNIS ROXBY BOTT，《沃辛海滩上的船》，2003，铅笔与水彩，30 x 18 cm (12 x 7 in)
 
-
-
-
 ### 詹姆斯·鲁斯顿
+
 #### 塞缪尔·帕尔默 (1805-1881)：阴影宁静
 
-我最初是在约翰·派珀于1942年出版的一本名为《英国浪漫主义艺术家》的小型图画书中遇到塞缪尔·帕尔默的。书中有一幅帕尔默的画作《收获月》的彩色插图。这幅画深深[content]
+我最初是在约翰·派珀于1942年出版的一本名为《英国浪漫主义艺术家》的小型图画书中遇到塞缪尔·帕尔默的。书中有一幅帕尔默的画作《收获月》的彩色插图。这幅画深深
+
 ### 詹姆斯·鲁斯顿
+
 #### 塞缪尔·帕尔默 (1805-1881)：阴影宁静
 
 我最初是在约翰·派珀于1942年出版的一本名为《英国浪漫主义艺术家》的小型图画书中遇到塞缪尔·帕尔默的。书中有一幅帕尔默的画作《收获月》的彩色插图。这幅画深深困扰着我，以至于我很快就开始模仿帕尔默的风格，用蜡笔和水彩作画。
@@ -1301,6 +1246,7 @@ My work always refers to nature – even my seemingly non-figurative pieces. Clo
 上方：詹姆斯·鲁斯顿，《耳语小径》，2003年，水彩和体色，30 x 40 厘米（11.8 x 15.8 英寸）
 
 ### 理查德·索雷尔
+
 #### 阿兰·索雷尔 (1904–1974)：*The Resurrection*
 
 我父亲在我出生十多年前的画作，这幅画是 RWS 文凭收藏中唯一的后浪漫主义作品。它是一幅充满力量和不安能量的图像。其力量来自于绘画的 incisiveness 和对清晰黑白对比和剪影的真正理解。这些戏剧性光线和动荡节奏的品质延续到了我父亲后期的作品中，他对古代遗址的重建绘图。在这些基于严格考古证据的罗马不列颠和中世纪城堡的绘图中，他会创造出如此令人信服的远古生活场景，以至于他在考古界成为了传奇。这些后期的绘图当然是大胆的想象力之举，就像这幅宗教题材的作品 *The Resurrection* 一样。
@@ -1314,6 +1260,7 @@ My work always refers to nature – even my seemingly non-figurative pieces. Clo
 我逐渐意识到我父亲和我之间最大的区别是 temperament。他本质上是一个悲观主义者——我认为他相信自己生活在一个无休止衰落的时代，就像罗马帝国的最后几年。我是一个乐观主义者，我认为人类仍处于婴儿期。
 
 ### 彼得·布莱克
+
 #### 阿瑟·拉克汉姆 (1867-1939)：与魔鬼的交易
 
 1969年，我的女儿自由出生，不久后我从伦敦搬到了萨默塞特。在 1970 年代中期，我在萨默塞特与另外六位志同道合的艺术家朋友一起成立了“乡绅兄弟会”。乡绅是指从城市搬到乡村的人。我们的第一个宣言使我们与前拉斐尔派兄弟会结盟，我们宣布的目标是画英国风景、爱情、感伤，以及在我这里，仙境。
@@ -1324,9 +1271,12 @@ My work always refers to nature – even my seemingly non-figurative pieces. Clo
 
 这些艺术家对我的作品产生了重要影响，我创作了一些提坦妮娅——仙女女王的大型绘画。然后我创作了一组我自己发明的小仙女画作。还有一些水彩画，包括这幅取自《蝴蝶之死》的细节，描绘了一群年轻的仙女女孩为一只美丽的昆虫哀悼。
 
+
+
 ![](img/b8a900b8373e949117f531b00685f281_118_0.png)
 
 ### 亚历山大·沃罗比耶夫
+
 #### 阿瑟·拉克汉姆 (1867-1939)：与魔鬼的交易
 
 ![](img/b8a900b8373e949117f531b00685f281_119_0.png)
@@ -1340,8 +1290,6 @@ My work always refers to nature – even my seemingly non-figurative pieces. Clo
 我很多作品的标题都是“梦的构建”。我被法国著名诗人阿瑟·兰波的话震惊：“思想的不规则是神圣的”。当我工作时，我感觉自己在冒险，我想让观众沉浸在宇宙的 slumato 中，为我的想象力和观众的想象力增添新的视野。我们的想象力是真实的现实。有时一张旧的邮寄信封对我来说可能比一幅画更有意义，如果它是一枚燃烧的邮票，就更令人兴奋了。这就是我所说的崇拜纸张。多年以来，我像异教徒一样崇拜纸张。我因为纸张的不同类型和质地而感到兴奋，而水彩的透明度使我能够毫不费力地在我的梦境和清醒时刻中漂浮。
 
 当我第一次看到阿瑟·拉克汉的奇幻插图时，我被他精细的线条、幻想、怪诞和神秘所震撼。阿瑟·拉克汉和威廉· Blake 绝对影响了我的艺术。像 Blake 一样，我在花杯中看到天空。
-
-
 
 ## 音调
 
@@ -1360,20 +1308,33 @@ My work always refers to nature – even my seemingly non-figurative pieces. Clo
 ![](img/b8a900b8373e949117f531b00685f281_126_0.png)
 
 对面，上面：
+
 ALBERT GOODWIN,
+
 格拉斯顿伯里，水彩、体色和黑墨，
+
 30 x 48 厘米（11.8 x 19.5 英寸）
+
 对面，下面：
+
 FRANCIS BOWYER,
+
 《逼近的云层》，2003。
+
 水彩和体色，
+
 19 x 25 厘米（7.5 x 10 英寸）
+
 左侧：FRANCIS BOWYER,
+
 《黄昏，苏格兰高地》，2003，
+
 水彩和体色，
+
 30 x 35 厘米（12 x 14 英寸）
 
 ### LIZ BUTLER
+
 #### ALBERT GOODWIN (1845–1932): 格拉斯顿伯里
 
 ![](img/b8a900b8373e949117f531b00685f281_127_0.png)
@@ -1390,14 +1351,14 @@ FRANCIS BOWYER,
 
 在我的画作中，我选择站在山丘上作为观景地，背对山顶，我的视线可以扫过起伏的景观，一直延伸到克鲁伊德谷并通向无垠。那个冬日午后，暖意不足的太阳正在落下；我被冰冷的蓝色阴影所吸引，它们勾勒出景观的柔和起伏，以及零星的小片发光的积雪反射着朦胧阳光的温暖。那天下午有一种惊人的宁静，没有风声。我有意限制了使用的色彩数量，并加入了不间断的虚无空间，以帮助我重现那天我所体验到的和谐氛围。
 
-
-
 ![](img/b8a900b8373e949117f531b00685f281_128_0.png)
 
 对面：ALBERT GOODWIN，《格拉斯顿伯里》，水彩、肉色颜料和黑墨，30 x 48 cm (11.8 x 19.5 in)
+
 上方：LIZ BUTLER，《克鲁伊德谷》，2004年水彩加中国白绘制于手工上色纸上，16 x 22 cm (6.3 x 8.7 in)
 
 ### 简·克尔
+
 #### 阿尔伯特·古德温 (1845-1932)：格拉斯顿伯里
 
 当我第一次看到阿尔伯特·古德温的格拉斯顿伯里画作时，我立刻想起了我一直在思考的一幅构图。他的题材内容与我自己的希普顿斯塔尔题材有明显的相似之处，甚至连教堂塔楼都一样！然而，在古德温这幅美丽而富有气氛的作品中，我们受邀俯视那座低调含蓄的山坡村庄，而在我的画作中，我们则是横跨克里姆斯沃斯迪恩山谷，稍稍仰视位于山顶的希普顿斯塔尔村庄。
@@ -1411,6 +1372,7 @@ FRANCIS BOWYER,
 为了避免构图中出现一堆不相连的水平带，我在作品中寻找并强调了相关的垂直运动，从而产生更快的初始向上旅程。最后，我使用了很窄的一条非常暗的天空，期望它能起到屏障作用，促使观者重新沿着画作向下走，或许还能注意到一些此前未被发现的感兴趣区域。
 
 ### 理查德·派克斯利
+
 #### 阿尔伯特·古德温 (1845-1932)：格拉斯顿伯里
 
 ![](img/b8a900b8373e949117f531b00685f281_131_0.png)
@@ -1419,11 +1381,14 @@ FRANCIS BOWYER,
 
 索美塞特平原的平坦土地被成千上万条排水沟切割，笔直如尺，纵横交错；但在这一切的背后，总是存在着山丘，像大海中的岛屿，如格拉斯顿伯里，或是北方的门迪普大弧。对于阿尔伯特·古德温而言和我一样，这些山丘提供了一些高度，让我们得以眺望并了解该地的规模，而他是从托尔山作画，我第一天的绘画则把我带到稍南的沃尔顿山，寻找雨中庇护，在那里我可以在我的路虎车的背风处坐下作画，免受风和猛烈雨水的侵袭。
 
+
+
 天气在这片景观上以惊人的速度掠过，随着光线的变化我多次开始作画，依次放弃每一幅；但当我观察时，我看到云影蔓延到前景，留下中景被阳光强烈照亮。知道这就是我想要的效果，我快速作画，每当前景被光线淹没时就切换回另一幅画。
 
 在接下来的一个小时左右，画作在几次短暂的片段中逐渐成形，但最终天空布满云层，我便驱车前往别处作画。
 
 ### 朱莉·赫尔德
+
 #### 约翰·莱因哈德·韦格林 (1849-1927)：*威尼斯金色*
 
 我从文凭收藏中选择了*威尼斯金色*，因为它耀眼的光线。我喜欢光线让画面内的一切都活跃起来的方式，同时仍保留其外部来源的感觉。
@@ -1441,9 +1406,11 @@ FRANCIS BOWYER,
 ![](img/b8a900b8373e949117f531b00685f281_133_0.png)
 
 上方：JOHN RHEINHARD WEGUELIN，*威尼斯金色*，水彩、胶和肉色颜料，53.8 x 72.5 cm (21.2 x 28.5 in)
+
 对面：JULIE HELD，*骷髅与花静物*，2003年，水彩，38 x 34.5 (15 x 13.6 in)
 
 ### 伊琳·霍根
+
 #### 查尔斯·金纳 (1878-1952)：街景
 
 光与影一直对我的作品很重要。希腊强烈的光线透过酒馆的百叶遮阳篷落在椅子和桌子上形成的图案，在我在雅典的英国学校学习时激励了我，在那之前，南伦敦公园中斑驳的光线和条纹状阴影也是恒久的主题。
@@ -1459,13 +1426,13 @@ FRANCIS BOWYER,
 我觉得在意图上存在相似之处。我喜欢他对灰泥立面的平坦表现，建筑结构的正式感因破败和忽视的迹象而得到缓解。我钦佩他对城市的执着。金纳在巴黎学习绘画前曾受训为建筑师。他回到伦敦后成为沃尔特·西克特的卡姆登镇集团的关键成员，主要记录北伦敦工人阶级地区。
 
 上方，右：CHARLES GINNER，匹克迪利，水彩和印度墨水，37 x 26.8 cm (14.6 x 10.6 in)
+
 上方，左：EILEEN HOGAN，波特曼广场：Home House，2005年，纸上丙烯，16 x 12 cm (6.3 x 4.7 in)
+
 对面：EILEEN HOGAN，曼彻斯特广场，Herford House，2005年，纸上丙烯，16 x 12 cm (6.3 x 4.7 in)
 
-
-
-
 ### KENNETH JACK
+
 #### THOMAS MILES RICHARDSON (1813-1890): Norham Castle, Evening
 
 中世纪建筑师建造大教堂和城堡的技艺自我在各种出版物中看到他们的照片的早年起就吸引了我。生活在澳大利亚的我，很少有机会看到这个我喜爱的题材。
@@ -1485,9 +1452,11 @@ FRANCIS BOWYER,
 ![](img/b8a900b8373e949117f531b00685f281_137_1.png)
 
 上方，左 THOMAS MILES RICHARDSON JUNIOR，《诺咸城堡，傍晚》，水彩和在石墨上叠加的体色，13.8 x 22.7 厘米（6 x 9 英寸）
+
 上方，右及对面：KENNETH JACK，《班伯勒城堡，傍晚》，2003年，水彩和在 Arches 300 gsm 粗纹纸上的体色，34 x 54 厘米（13 x 24 英寸）
 
 ### ALISON C MUSKER
+
 #### ARTHUR RACKHAM (1867-1939): Abbaye d'Ardennes, Caen
 
 ![](img/b8a900b8373e949117f531b00685f281_139_0.png)
@@ -1503,6 +1472,7 @@ FRANCIS BOWYER,
 西克特在准备性绘画中使用色调渐变，甚至对它们进行编号。将一个区域的光影与另一个区域比较，半闭上眼睛，你就能更容易辨别色调。你需要一个暗色调来使明亮的侧面突出；明暗对比是这些高光和阴影之间的对比。拉克汉使用了有限的调色板，你可以看到他取得的成就。
 
 ### JENNY WHEATLEY
+
 #### LORNA BINNS (1914-2003): Salina Bay, Malta
 
 从我首次当选为 RWS 成员时起，Lorna Binns 就一直是我作品中的重要影响。她是一个如此不寻常且低调的人物，却创作出了在纸上轻盈跳动的诗意、高调绘画——以及她在世界各地多次旅行中选择的异国题材。
@@ -1521,13 +1491,18 @@ FRANCIS BOWYER,
 
 我的绘画代表了与她相似的兴趣，是在多次关于绘画过程和对主题反应的对话中发展起来的。虽然色彩比她的早期作品更浓郁，但它们展示了我对高调绘画的发展，我曾看到这种绘画从这样一个安静而犹豫的性格中涌现出来。
 
+
+
 ### JONATHAN CRAMP
+
 #### SAMUEL PROUT (1783-1852): Lucerne
 
 阴影带来多大的不同！想象一下没有左侧投射阴影的塞缪尔·普劳特的《卢塞恩》。我确信没有它他也会画出一幅非常令人愉悦的画面，但阴影增加了相当大的戏剧性，使构图更好。在明亮的暗区内，他能够简化细节，详细与更简化的区域的对比增添了活力。而且正如伦勃朗的作品一样，阴影具有神秘的元素。观者想要窥探黑暗。
 
-在《阴影与倒影》中，建筑物靠近，如同普劳特的画作，但它们与画面平面更平行，这强调了垂直与水平的几何关系。阴影并未压倒这种结构，但它们无疑是画面的真正主题，与窗户中的倒影相[content]
+在《阴影与倒影》中，建筑物靠近，如同普劳特的画作，但它们与画面平面更平行，这强调了垂直与水平的几何关系。阴影并未压倒这种结构，但它们无疑是画面的真正主题，与窗户中的倒影相耦合。
+
 ### KENNETH JACK
+
 #### THOMAS MILES RICHARDSON (1813-1890): Norham Castle, Evening
 
 中世纪建筑师建造大教堂和城堡的技艺自我在各种出版物中看到他们的照片的早年起就吸引了我。生活在澳大利亚的我，很少有机会看到这个我喜爱的题材。
@@ -1547,9 +1522,11 @@ FRANCIS BOWYER,
 ![](img/b8a900b8373e949117f531b00685f281_137_1.png)
 
 上方，左 THOMAS MILES RICHARDSON JUNIOR，《诺咸城堡，傍晚》，水彩和在石墨上叠加的体色，13.8 x 22.7 厘米（6 x 9 英寸）
+
 上方，右及对面：KENNETH JACK，《班伯勒城堡，傍晚》，2003年，水彩和在 Arches 300 gsm 粗纹纸上的体色，34 x 54 厘米（13 x 24 英寸）
 
 ### ALISON C MUSKER
+
 #### ARTHUR RACKHAM (1867-1939): Abbaye d'Ardennes, Caen
 
 ![](img/b8a900b8373e949117f531b00685f281_139_0.png)
@@ -1565,6 +1542,7 @@ FRANCIS BOWYER,
 西克特在准备性绘画中使用色调渐变，甚至对它们进行编号。将一个区域的光影与另一个区域比较，半闭上眼睛，你就能更容易辨别色调。你需要一个暗色调来使明亮的侧面突出；明暗对比是这些高光和阴影之间的对比。拉克汉使用了有限的调色板，你可以看到他取得的成就。
 
 ### JENNY WHEATLEY
+
 #### LORNA BINNS (1914-2003): Salina Bay, Malta
 
 从我首次当选为 RWS 成员时起，Lorna Binns 就一直是我作品中的重要影响。她是一个如此不寻常且低调的人物，却创作出了在纸上轻盈跳动的诗意、高调绘画——以及她在世界各地多次旅行中选择的异国题材。
@@ -1584,6 +1562,7 @@ FRANCIS BOWYER,
 我的绘画代表了与她相似的兴趣，是在多次关于绘画过程和对主题反应的对话中发展起来的。虽然色彩比她的早期作品更浓郁，但它们展示了我对高调绘画的发展，我曾看到这种绘画从这样一个安静而犹豫的性格中涌现出来。
 
 ### JONATHAN CRAMP
+
 #### SAMUEL PROUT (1783-1852): Lucerne
 
 ![](img/b8a900b8373e949117f531b00685f281_143_0.png)
@@ -1598,8 +1577,6 @@ FRANCIS BOWYER,
 
 虽然我不会声称我的画作在质量上接近塞缪尔·普劳特，但我们都使用了阴影和色调对比来使构图充满活力。
 
-
-
 ### TOM GAMBLE
 
 #### SIR WILLIAM RUSSELL FLINT (1880-1969): Incoming Tide, No. 1 Slip, Devonport Dockyard
@@ -1612,9 +1589,12 @@ FRANCIS BOWYER,
 
 而《Incoming Tide》描绘的是被轰炸摧毁前的场景，我的画作《The Aftermath》则是毁灭之后不久。地点和时间不同，但巧合的是，在构图、色调以及有限的泥土色范围内都存在相似之处，棕色中点缀着少量淡蓝色。两幅画都与航运有关，前景都有水悄悄漫上来，远处是苍白的景色，并以 stark 的混凝土立柱作框。我的建筑物是一群扭曲变形金属形状的动物园，以及慢慢被垃圾填满的隐秘角落。两幅画都以毁灭性事件前后的寂静联系在一起。
 
+
+
 ![](img/b8a900b8373e949117f531b00685f281_146_0.png)
 
 对面：SIR WILLIAM RUSSELL FLINT RA，《Incoming Tide, No.1 Slip, Devonport Dockyard》，石墨上水彩，48.7 x 66 cm（19.2 x 26 in）
+
 上方：TOM GAMBLE，《The Aftermath》，2004年，石墨上水彩，42 x 55 cm（26 x 21.8 in）
 
 ### MICHAEL CHAPLIN
@@ -1652,7 +1632,9 @@ Sir William Russell Flint 的《Incoming Tide, No. 1 Slip, Devonport Dockyard》
 ![](img/b8a900b8373e949117f531b00685f281_150_0.png)
 
 对面，左：SIR WILLIAM RUSSELL FLINT RA，《Incoming Tide, No.7 Slip, Devonport Dockyard》，石墨上水彩，48.7 x 66 cm（19.2 x 26 in）
+
 对面，右：KEN HOWARD，《Jhansi Loco》，1984年，水彩，13 x 18 cm（5 x 7 in）
+
 上方：KEN HOWARD，《Steam and Smoke, Jhansi》，1984年，水彩，38 x 56 cm（15 x 22 in）
 
 ### MICHAEL WHITTLESEA
@@ -1671,36 +1653,42 @@ Sir William 没有把任何事情留给偶然。一旦他以经济的方式上�
 
 多年来我住在泰晤士河畔的一个村庄，Peter Freebody 的船厂是我许多素描和绘画的题材。每当我造访 Hurley 的那家船厂时，我一定想到了 Sir William 的船坞。
 
-
-
 ### 罗伯特·韦尔·艾伦 1851 1942
 
 ARWS 1887, RWS 1896.
+
 艾伦出生于格拉斯哥，是出版商之子。像格拉斯哥画派的许多人一样，他在巴黎学习，在那里与好友亚瑟·梅尔维尔共用房间，他声称自己影响了对方——在布洛瓦尔·达涅弗（“地狱街”）。他们用进口燕麦煮粥，在工作室里唱苏格兰歌曲并跳高地舞。法国现实主义者朱尔斯·巴斯蒂安-勒帕热对他的作品产生了深远影响。艾伦印象派的“blottesque”绘画手法（倾斜纸张，让水彩斑点如雨滴般流淌）似乎是对莫奈的回应。他的广泛旅行包括访问印度和日本，尽管艾伦的大部分作品都是在苏格兰东北部的渔村进行户外写生创作的。据威廉·拉塞尔·弗林特爵士说：“直到最后，艾伦都热爱皇家水彩协会。”1900年，他向该协会赠送了其副主席的金质徽章，该协会拥有他六件作品。
 
 ### 海伦·玛丽·伊丽莎白·艾灵厄姆 1848 1926
 
 ARWS 1875, RWS 1890
+
+
+
 艾灵厄姆是外科医生之女，出生于德比郡的斯沃德林科特，出身于一个基督教一神论家庭。父亲去世后，她的家人搬到伯明翰，在那里她在政府设计学校接受培训；随后她就读于女王广场女子艺术学校和伦敦皇家美术学院。1870年，她成为《图形报》唯一的女性员工，在那里工作直到她嫁给爱尔兰诗人威廉·艾灵厄姆。她的丈夫向她介绍了包括卡莱尔、罗斯金和泰尼森在内的文学和艺术圈，泰尼森对她的作品说：“我也想做那个。它看起来并不很难。”1890年，在阿尔弗雷德·威廉·亨特提名后，艾灵厄姆成为首位当选为该协会正式会员的女性。主席约翰·吉尔伯特爵士说他对这一发展“感到厌恶和羞愧”。三十多年后，她还成为首位担任皇家水彩协会理事会的女性。她以之闻名的乡村小屋颇具魅力，尽管它们常因拆除丑陋的附属建筑而被“改善”，而站在外面的摆拍人物几乎肯定比真正的居民更具身体吸引力。
 
 ### 罗伯特·萨金特·奥斯汀 RA（1895 1973）
 
 ARWS 1930, RWS 1934
+
 奥斯汀出生于莱斯特，是木工家具制造商之子。十三岁时拜在一家印刷公司学徒，他就读于莱斯特市立艺术学校；随后在皇家艺术学院的版画学校师从弗兰克·肖特爵士学习，在那里获得了罗马奖学金。此后奥斯汀从1926年起在学院任教直至退休。作为教师，他令人鼓舞，有时也尖刻，他的学生学会在现实世界的限制内绘制模特，人物常因近距离而变形。他的影响来源包括早期德国版画家、德加以及威廉·尼科尔森的裁剪木刻。奥斯汀的作品更广为人知的是版画家而非画家，包括为1英镑和10先令纸币以及唐宁街10号图书馆的藏书票设计。然而，他近乎完美的技巧和非凡的素描能力最终变得过时。担任皇家水彩协会（1957年至1973年）和皇家画家-蚀刻家与版画家协会（1962年至1970年）主席期间，他与秘书马尔科姆·弗莱共同管理这两个协会以及位于康杜伊特街的皇家水彩协会画廊。奥斯汀居住在伦敦奇斯威克购物中心和诺福克伯纳姆·奥弗里·斯泰斯的一座改建的卫理公会教堂内。
 
 ### 罗斯玛丽·梅纳德·巴顿（1856 1929）
 
 ARWS 1893, RWS 1911
+
 巴顿出生于蒂珀雷里郡的罗奇斯敦。她是律师之女，背景为盎格鲁-爱尔兰地主阶级。1874年，她在都柏林城堡的副王宫廷亮相。据推测，在一段不幸的恋情之后，她前往布鲁塞尔学习绘画；她还在日内瓦学习，在伦敦师从保罗·纳夫特尔皇家水彩协会会员，并在巴黎师从亨利·热尔韦。在巴黎，她意识到印象派并学会了分享莫奈对伦敦雾气弥漫街道的热爱。她许多作品是伦敦和都柏林的印象派街景。1904年她撰写并插图《熟悉的伦敦》：“看到裹着雾的形态向你走来显得巨大真是奇妙。景象诡异、幽灵般、几乎寂静。雾气让人听不到声音，你几乎只能听到马车夫的喊叫。”她还画了花园、爱尔兰房屋的地理景观以及略带伤感的儿童场景“迷人的小田园诗”。由于健康因哮喘恶化（可能因雾加剧）她与一名被称为“基钦纳”的护士一起住在骑士桥，因为她举止像军人。巴顿热爱赛马，在她去世的那天押中了两匹获胜马。
 
 ### 查尔斯·本特利（1805/6 1851）
 
 AOWS 1834, OMS 1843
+
 本特利出生于伦敦托特纳姆法院路，是木匠和建筑商之子。他拜师西奥多·菲尔丁学习上色印刷，随后学习版画，然后前往巴黎为邦廷的水彩画制作版画板，邦廷的水彩画无疑是他的影响。本特利最以其英国群岛和诺曼底的清爽海岸景致而闻名。据《雅典娜神殿》中的讣告称：他在描绘运动中的水方面少有对手（1846年6月13日）。他还受雇于业余画家，将他们的草图加工成完整的绘画，包括土耳其和圭亚那的景色——以及各种想象场景。尽管他才华出众，本特利缺乏商业头脑，被画商欺骗；他被描述为“总是贫穷”，去世时留下的遗产不足300英镑。本特利突然死于霍乱。科普利·菲尔丁从沃辛写道：“我不能来城里……然后我知道很多人会很胆怯，不敢参加死于霍乱者的葬礼，尽管我相信完全没有危险。”协会尽力帮助他的遗孀和年迈的母亲，她们完全依靠他生活。
 
 ### 洛娜·艾米丽·宾斯 1914 2003
 
 ARWS 1973, RWS 1977
+
 宾斯出生于谢菲尔德附近的瓦德利桥，她的父亲是彩色玻璃制造商。从谢菲尔德艺术学院她获得奖学金进入皇家艺术学院学习时尚。艺术家保罗·纳什看到她参加比赛的作品并给了她一次辅导。他用彩色纸片作示范，教导她“两侧的颜色会改变中间的颜色”。她认为这是她一生中听到的最重要的事情。战争爆发使时尚事业变得不可能，于是她回到约克郡，被征召到一家皮革工人公司。她的丈夫是金斯顿艺术学院的设计主管，他们为各种客户联合进行设计。宾斯的作品充满色彩和光线。她通常画风景——尤其是包含水景和强烈花卉研究的作品：“当我在寻找题材时，我看到一些非常美丽的东西令我兴奋，在那一刻工作的理由和画作的最终感觉就诞生了。”
 
 ### 塞缪尔·约翰“拉莫纳”·伯奇 RA（1869-1955）
@@ -1731,9 +1719,9 @@ AOWS 1825
 
 ARWS 1848, RWS 1849
 
+
+
 邓肯出生于伦敦，是画家和版画家之子。天赋异禀，他十六岁时拜师版画家鲁道夫·阿克曼及其子。邓肯还从事版画工作，1843年至1851年他在《图文伦敦新闻》任职，他为该报制作的木刻版画包括大博览会的图片。尽管不是水手，他最以海景画闻名：他还画海岸线、风暴和绵羊，或如果可能的话在一幅画中全部包含。邓肯作品极其丰富，去世时留下了超过5,000幅素描和习作。《建筑师》中的讣告作者称他为“非常勤奋的人。几乎在英国任何有品味的人的客厅里都有他的画……他也是非常慷慨的人；家门常开，每周举办一次晚宴；他的台球室向所有人开放。”
-
-
 
 Duncan was an arch-reactionary: for instance, he refused to shake Edward Burne-Jones's hand when he was elected to the RWS in 1861.
 
@@ -1753,23 +1741,27 @@ Flint was born in Edinburgh; his father was a graphic designer and watercolour a
 
 ARWS 1844, RWS 1846
 
+
+
 Fripp was born in Bristol, the sixth child of a clergyman and a grandson of Nicholas Pocock, one of the founders of the Society. His brother George Arthur Fripp (1813-1896) was also a member. After studying at the British Museum and the Royal Academy Schools he travelled in Ireland and then lived in Italy from 1850 to 1859. As can be seen in San Rocco, Olevano (page 34): (Olevano Romano is a small hill town twenty miles east of Rome). Fripp's work combines rather sentimental groups of figures and in the harsh luminosity of sunlight great subtlety of tone. From 1870 until his death Fripp served as Secretary of the Society. He was very supportive of the President, Sir John Gilbert, and shared his conservative instincts. In the annual elections of 1893 five other candidates, including his brother, stood against him but, during a period of bitter in-fighting within the Society, he invariably outmanoeuvred everyone. He returned to Rome in 1893 but complained that it was full of Americans. Fripp died at his home in Hampstead during an influenza epidemic in March 1895; both his wife and youngest son also died within days.
 
-### CHRISTA GAA (1937-1992)
+## CHRISTA GAA (1937-1992)
 
 ARWS 1986, RWS 1989
 
 Gaa was born in Hamburg in Germany. Her father served as a general in the German Army on the Russian front. In her youth she was a junior tennis champion. She read German philosophy and art history at the Universities of Cologne, Florence and Bonn and later studied painting at the Fachhochschule für Kunst und Design in Cologne. In 1980 she moved to England where her work found greater appreciation. She painted both landscape and still life: 'I become particularly fond of certain groups of objects, and paint them over and over. You see Morandi doing this too, and you find that the relationship between the objects becomes the interesting thing.' A typical work by Gaa was an arrangement of domestic objects. Bernard Dunstan wrote of her that 'the table top contained the essence of the world that her painter's eye needed.' Gaa first met Ken Howard when she was studying in Florence during the Easter of 1959. He proposed to her a fortnight later but her parents refused to let them wed. They met again in London in 1980 and married ten years later.
 
-### CHARLES ISAAC GINNER ARA (1878-1952)
+## CHARLES ISAAC GINNER ARA (1878-1952)
 
 ARWS 1938, RWS 1945
 
 Ginner was born in Cannes, the son of a pharmacist from Sussex. On leaving school at sixteen after illness he sailed the Mediterranean and South Atlantic on a tramp-steamer. Between 1899 and 1904 he worked in an architect's office in Paris and enrolled at the Académie Vitti. After exhibiting in Buenos Aires he moved to London in 1909 and took a studio in Chelsea. Ginner was a founder member of the Camden Town Group in 1911, for which he wrote a manifesto, asserting the neo-realism of the modern age and 'all it contains of great or weak, of beautiful or of sordid'. He subsequently joined both the London Group and the Cumberland Market Group. His innate sense of rhythm and design found expression in the urban landscapes to which he was particularly drawn. They were planned with the use of a hand-held viewfinder and turned into his typically tight, intricate and deeply coloured pictures in his studio. Ginner was an official war artist in both world wars, but became increasingly reclusive after the death of his close colleagues, the artists Spencer Gore and Harold Gilman who caught influenza after tending Ginner and after seeing the woman he loved marry another man. He was awarded a CBE in 1930.
 
-### ALBERT GOODWIN (1845-1932)
+## ALBERT GOODWIN (1845-1932)
 
 ARWS 1871, RWS 1881
+
+
 
 Goodwin was born in Maidstone in Kent, the son of a builder. He was briefly apprenticed to a draper but while still 'a small weedy-looking boy' he was introduced to the artists Arthur Hughes and Ford Madox Brown, from whom he received lessons. He subsequently became friends and travelled with Ruskin (who called Goodwin 'Bogie'). Ruskin was a major influence, and over the years the increasing sway of Turner liberated Goodwin from the thrall of the Pre-Raphaelites. Goodwin was a deeply religious man whose work is imbued with a poetic feeling for atmosphere and landscape. He believed that landscape painting was a kind of divinely inspired activity: 'Our business is to study the natural world as the continual revelation of God, guiding us forever into fresh revelation of himself.' He was also immensely prolific, exhibiting over 700 works during the 61 years of his membership of the RWS. His granddaughter recalled: 'Our house was full of furniture painted by Grandpa. Also he used to haunt the town rubbish tip, and collect bits of broken china which he made into the most lovely mosaics set in cement in iron blacksmith-made trays ... he seemed never to stop painting except to eat or bicycle or walk.'
 
@@ -1789,6 +1781,8 @@ Hennell, 'a tall, awkward rustic chap' - was born at his father's rectory at Rid
 
 ARWS 1894, RWS 1894
 
+
+
 Herkomer was born in Waal in Bavaria. His father's family had been woodcarvers and weavers for generations. His mother was a piano teacher. In 1851 his family emigrated to the USA but returned to Europe in 1857 and settled in Southampton. Herkomer trained at the Southampton School of Art, the Munich Academy and South Kensington; however, life was hard and he lived from hand to mouth, working as a mason and playing the zither in the evenings for small sums of money. Scenes of hardship are the subject matter of much of Herkomer's work. He became a successful magazine illustrator, however, and his work was to make a deep impression on van Gogh. But it was Herkomer's 1875 painting, The Last Muster Sunday in the Royal Hospital Chelsea which made his reputation, and it was exhibited internationally for forty years. Portrait painting alone earned him over £250,000 during his career. This wealth enabled him to build Lululand in Hertfordshire where he also founded an art school. His many interests included acting, film-making and car-racing. In 1894 Herkomer was elected to become a member of the RWS and he presented the Society with its Presidential jewel and chain. In 1895 he failed - by one vote - to be elected President; this humiliated him and he effectively withdrew from the Society. In 1899 Herkomer was ennobled by the Kaiser and added 'von' to his name: he was knighted in 1904.
 
 ### ALFRED WILLIAM HUNT (1830-1896)
@@ -1803,8 +1797,6 @@ ARWS 1919, RWS 1925
 
 Hunt was born in Torquay in Devon, the son of a writer on scientific and geological matters. Educated at Winchester and Trinity College.
 
-
-
 在剑桥，他于1899年被召入律师学院。口吃使他难以出庭辩护，因此他在林肯律师学院从事产权律师工作。此后，他在内政部工作，负责与被关押在英格兰的 Sinn Féin 囚犯以及良心拒服兵役者的就业相关事务。亨特没有正式的艺术训练，尽管他曾与弗兰克·布朗温和阿尔弗雷德·伊斯特一起进行写生旅行。1919年后他完全致力于艺术。作为阿尔卑斯俱乐部成员兼业余登山者，他的最佳作品源于他对山脉的热爱——阿尔卑斯山和多洛米蒂山脉，以及西班牙和美国的山脉。即使一两英里外的最简单的山面或山脊也充满精致的细节，看起来都定义得很清晰。但当你试图描绘其中一个细节时，却无法辨别它从何开始、何处结束或与另一处相连。他还绘画花卉和工业场景，并撰写有关艺术和法律的文章。亨特于1930年至1933年担任皇家水彩画学会的副主席。
 
 ### WILLIAM HENRY HUNT (1790-1864)
@@ -1817,73 +1809,61 @@ AOWS 1824, OWS 1826
 
 Hon RWS 1960
 
-琼斯出生于肯特郡的布罗克韦尔，是弗林特郡霍利韦尔的一名印刷工之子，从父亲那里学了一些威尔士语。他在坎伯韦尔艺术与工艺学校接受训练，随后在威斯敏斯特艺术学校学习。在第一次世界大战期间，他加入了皇家威尔士 Fusiliers，在索姆河的马梅茨负了腿伤。他的战争经历启发了他创作诗作‘In Parentheses’，该诗获得了1938年霍索登奖。尽管琼斯的作品汲取了从威廉·布莱克到瓦西里·康定斯基等诸多影响，他的艺术视野无疑是独一无二的。在智力和情感上，琼斯受他对自然的感受启发，如 Afon Honddu Fach, above Capel-y-ffin (page 78)，它唤起‘the intimate creatureliness of living’。他也深切关心自己的凯尔特遗产（他的墙上挂着罗马时代和黑暗时代不列颠的军械测量地图）。作为一名天主教皈依者，他也深切关注宗教：‘Man, sacrament at every turn and all levels of the profane’ and ‘sacred’, in the trivial and in the profound, no escape from sacrament.’ 他深受亲近者喜爱，但他 eccentric 且患有精神疾病。
 
-### PERCY HAGUE JOWETT (1882-1957)
+
+琼斯出生于肯特郡的布罗克韦尔，是弗林特郡霍利韦尔的一名印刷工之子，从父亲那里学了一些威尔士语。他在坎伯韦尔艺术与工艺学校接受训练，随后在威斯敏斯特艺术学校学习。在第一次世界大战期间，他加入了皇家威尔士 Fusiliers，在索姆河的马梅茨负了腿伤。他的战争经历启发了他创作诗作‘In Parentheses’，该诗获得了1938年霍索登奖。尽管琼斯的作品汲取了从威廉·布莱克到瓦西里·康定斯基等诸多影响，他的艺术视野无疑是独一无二的。在智力和情感上，琼斯受他对自然的感受启发，如 Afon Honddu Fach, above Capel-y-ffin (`page 78`)，它唤起‘the intimate creatureliness of living’。他也深切关心自己的凯尔特遗产（他的墙上挂着罗马时代和黑暗时代不列颠的军械测量地图）。作为一名天主教皈依者，他也深切关注宗教：‘Man, sacrament at every turn and all levels of the profane’ and ‘sacred’, in the trivial and in the profound, no escape from sacrament.’ 他深受亲近者喜爱，但他 eccentric 且患有精神疾病。
+
+## PERCY HAGUE JOWETT (1882-1957)
 
 ARWS 1936, RWS 1938
 
 乔韦特出生于约克郡里彭附近的比ショップ·蒙克顿，是村校校长的儿子。他在哈罗盖特技术学院、利兹艺术学校和皇家艺术学院接受训练，并在那里获得了罗马奖旅行奖学金。在意大利，他遇到了作家阿诺德·贝内特，后者将他介绍给了有影响力的圈子。在第一次世界大战期间，乔韦特（被称为‘PJ’）在皇家炮兵服役。1920年，他受邀加入战后最重要的艺术家团体——画家和雕塑家七与五协会，但在1954年被该协会投票除名。1923年，他帮助创立了现代英国水彩画学会，该学会致力于‘the probity of drawing as the essential understructure of any watercolour’，但该学会很快失败，其许多成员随后加入了皇家水彩画学会。受塞尚影响，静物是乔韦特喜爱的题材，他的最佳作品具有强烈的节奏感和色彩感。乔韦特一生大部分时间担任教师和行政人员，1935年至1948年担任皇家艺术学院院长，但他似乎是个疏远的人物，在战争年代他给人一种印象，认为他的男学生最好去参战。他于1948年获颁大英帝国司令勋章。
 
-### DAME LAURA KNIGHT RA (1877-1970)
+## DAME LAURA KNIGHT RA (1877-1970)
 
 ARWS 1909, RWS 1928
 
 奈特出生于诺丁汉郡的朗伊顿。她的父亲没有固定的职业，她在母亲的影响下成为艺术家，母亲曾陷入困境，始终渴望更好的生活。她在诺丁汉艺术学校学习，在那里遇到了她的丈夫、艺术家哈罗德·奈特；他们一起成为约克郡斯坦斯和康沃尔的艺术社群的一员。迪亚吉列夫允许奈特绘制他的芭蕾舞团，无论是在舞台上还是幕后，她还上课以更好地理解舞者。她还与伯特兰·米尔斯的马戏团合作。她更喜欢在户外作画，对吉普赛人的游牧生活充满吸引力，并将一辆旧劳斯莱斯改装成迷你工作室，以便与他们一起工作。1946年，她前往纽伦堡绘制纳粹战犯审判的图像记录。她性格张扬、精力充沛，居住在圣约翰伍德，她的派对闻名遐迩。‘Dame Laura, in her own estimation, is no housewife.’ ‘Why pretend... I have lived in too many caravans, tents, corners of dressing-rooms to care.’ (The Times).
 
-### SYDNEY LEE RA (1866-1949)
+## SYDNEY LEE RA (1866-1949)
 
 ARWS 1942, RWS 1945
 
-李出生于曼彻斯特，是棉纺工的儿子。李在曼彻斯特艺术学校和巴黎的科拉罗西工作室学习。他早年取得成功并获得许多奖项。他广泛游历欧洲，其题材主要为城镇景象和风景。李在多种媒介上多才多艺，尤其在印刷技术方面（他是木刻家协会的创始成员）。‘Boatbuilding’ (page 108)，可能是一幅习作而非成品，体现了他对画面结构的兴趣。1922年他当选为皇家美术学院院士，后担任财务主管，但1938年以两票之差未能当选主席。他只是在生命的最后阶段才成为皇家水彩画学会的成员。《泰晤士报》上的讣告似乎不必要地严厉。比较这个人和他的作品让人联想到艺术史上并不罕见的补偿努力，仿佛他试图通过大胆有力地构建画面来克服某种性格上的羞怯，而且他常常以对画面内容而言过大尺度作画。
+李出生于曼彻斯特，是棉纺工的儿子。李在曼彻斯特艺术学校和巴黎的科拉罗西工作室学习。他早年取得成功并获得许多奖项。他广泛游历欧洲，其题材主要为城镇景象和风景。李在多种媒介上多才多艺，尤其在印刷技术方面（他是木刻家协会的创始成员）。‘Boatbuilding’ (`page 108`)，可能是一幅习作而非成品，体现了他对画面结构的兴趣。1922年他当选为皇家美术学院院士，后担任财务主管，但1938年以两票之差未能当选主席。他只是在生命的最后阶段才成为皇家水彩画学会的成员。《泰晤士报》上的讣告似乎不必要地严厉。比较这个人和他的作品让人联想到艺术史上并不罕见的补偿努力，仿佛他试图通过大胆有力地构建画面来克服某种性格上的羞怯，而且他常常以对画面内容而言过大尺度作画。
 
-### JOHN HENRY LORIMER (1836-1936)
+## JOHN HENRY LORIMER (1836-1936)
 
 ARWS 1908, RWS 1932
 
 洛里默出生于爱丁堡，是爱丁堡大学公法教授之子。家族的夏季居所是菲夫的凯利城堡，现由苏格兰国家信托基金拥有。他在爱丁堡学院和大学接受教育，在皇家苏格兰美术学院学校师从威廉·麦克塔加特，在巴黎师从卡洛斯·杜兰学习艺术。他早期的作品集中于肖像和花卉，后来成为室内画家。他的作品始终关注光线和色彩价值的效果。洛里默的油画 The Ordination of the Elders in a Scottish Kirk (National Gallery of Scotland) 曾被描述为 ‘one of the most national pictures ever painted’ Sir J. C. ... 但他的作品通常关注中产阶级的精致生活，‘the graceful side of life’。洛里默是法国学院的通讯院士，他的作品在那里很受欢迎。去世后，他的继承人以如果他把钱留给学会就不能神志清醒为由，unsuccessfully 争议他对皇家水彩画学会的遗赠。
 
-### ARTHUR AMBROSE McEVoy ARA (1878-1927)
+## ARTHUR AMBROSE McEVoy ARA (1878-1927)
 
 ARWS 1926
 
 麦克沃伊出生于威尔特郡的克鲁德韦尔。他的父亲曾在美国内战中为南方邦联军队服役，是潜艇战方面的权威，也是惠斯勒的朋友。十五岁时，麦克沃伊进入伦敦斯莱德美术学院，在那里他与奥古斯都·约翰成为密友，并与格温·约翰有过一段风暴般的恋情。西克特是他后期的一个重要影响。麦克沃伊是他那个时代最受追捧的肖像画家之一，尤其擅长描绘时尚女性，但他也创作了一系列精湛的海军军官和士兵肖像，他们曾获得维多利亚十字勋章，现藏于帝国战争博物馆。他偏爱半身像。麦克沃伊是 ‘a portrait painter of exquisite taste and subtle interpretation’；风格上松散自由，偶尔他的露珠般的虹彩会淡入雾的苍白湮灭’ (Gleadowe)。威廉·罗斯滕斯坦描述麦克沃伊“看起来像个前拉斐尔派，长而棱角分明的脸上有一双引人注目的大眼睛；他说话声音奇怪而嘶哑”。酗酒导致他早年死于肺炎。
 
-### ARTHUR MELVILLE (1855-1904)
+## ARTHUR MELVILLE (1855-1904)
 
 ARWS 1886, RWS 1900
 
 梅尔维尔出生于福法郡的卢恩黑德-奥夫-古思里，是名马车夫之子。1870年，他被学徒为杂货商的簿记员，但尽管父母反对，他仍在爱丁堡上夜校艺术课。在梅尔维尔的父亲雇主从皇家苏格兰美术学院购买了梅尔维尔的作品后，他有了信心进入爱丁堡艺术学校学习。后来他在巴黎学习，在那里他接触到激发他前往中东和埃及旅行绘画的作品。他的旅程常常充满危险。有一次他被强盗抓获，被剥光衣服遗弃在沙漠中等死，后被村民救出。他找回了自己的格子呢斗篷和圣经，圣经上有一个弹孔。回到苏格兰后，他遇到了‘Glasgow Boys’，并居住在伯威克郡科克本斯帕斯的艺术社群中。詹姆斯·考爵士描述梅尔维尔“体格健壮，思想表达有力，充满热情和推动力”。这些特征在他作品的巨大活力中得到体现，给惠斯勒等同时代人留下了深刻印象。梅尔维尔死于访问西班牙后感染的霍乱。评论家弗兰克·鲁特在谈到1906年的纪念展时说，它表明梅尔维尔“无疑是他那个时代最才华横溢、最胆大妄为的水彩画家”。
 
-### SAMUEL PALMER (1805-1881)
+## SAMUEL PALMER (1805-1881)
 
 ARWS 1843, RWS 1854
 
 帕尔默出生于纽因顿，是书商之子。他十四岁时首次在皇家美术学院展出，很快结识了一群年轻艺术家“古代人”，如弗朗西斯·奥利弗·芬奇，他们深受威廉·布莱克影响。他还遇到了约翰·林内尔，并娶了他的女儿；然而，宗教和性格上的差异使他与岳父关系紧张直至终生。1821年，帕尔默搬到肯特郡的肖里汉姆，“那个我度过人生最佳岁月的真正村庄”。他在这里创作了一些最精美的尽管艺术上有些做作的素描，‘tangled wild-flower beauty’ Martin Hardie of these pictures of a pastoral England became immensely influential in the mid-twentieth century。帕尔默一生因金钱、健康而焦虑抑郁，“医生们，怪物般的存在，禁止我吃牛排饺子”，后来又因儿子去世而痛苦。即使他的熟人邀请同行外出写生，他的“外套是一个口袋的集合，里面存放着至关重要的鼻烟盒、刀具、粉笔、炭笔、彩色蜡笔和素描本，还有一副为近视制作的大号圆形中性色调眼镜”。具有讽刺意味的是，这位最具原创性和最重要的英国风景画家之一将工作室窗户粉刷成白色，以便不去看外面的世界。
 
-### JAMES PATERSON (1854-1932)
+## JAMES PATERSON (1854-1932)
 
-ARWS 1898, RWS 1908
 
-帕特森出生于格拉斯哥，是棉布和纱布制造商之子。为了取悦父母，他在商界工作了四年，但清晨上格拉斯哥艺术学校并接受私人课程，直到1878年，他的父亲允许他去巴黎学习。1882年，帕特森回到格拉斯哥，并与“格拉斯哥男孩”结缘，这是一群受惠斯勒和巴斯蒂安-勒佩奇影响的画家，他们打算终结传统苏格兰画家“格拉斯哥”的垄断。帕特森于1881年结婚，搬到邓弗里斯一个偏远村庄莫尼亚夫的一栋“低矮的类似小屋的房子，屋顶有不规则的山墙和石板阁楼”，他在那里生活余生。帕特森的大部分作品 invariably 宽松绘制且颇具装饰性，受他对风景的诗意回应启发，如 Poeta Brava, Tenerife (page 146) 所示，该画是在因妻子健康问题前往加那利群岛的旅途中创作的。年轻时，格拉斯哥男孩与慕尼黑分离派以及欧洲各地的新的展览机构一起展出，但他们逐渐被体制吸收。帕特森于1923年担任皇家苏格兰水彩画家协会主席，并担任皇家苏格兰美术学院的图书管理员和秘书。他是教会长老，他列出的兴趣是‘walking, golf, croquet and chess’，and took a ‘naive’
 
-喜爱……结识重要或杰出的人物，这是一种令人愉快的弱点，颇让他的同行艺术家们觉得有趣。
+# ARWS 1898, RWS 1908
 
-### ROLAND VIVIAN PITCHFORTH RA 1895-1982
+帕特森出生于格拉斯哥，是棉布和纱布制造商之子。为了取悦父母，他在商界工作了四年，但清晨上格拉斯哥艺术学校并接受私人课程，直到1878年，他的父亲允许他去巴黎学习。1882年，帕特森回到格拉斯哥，并与“格拉斯哥男孩”结缘，这是一群受惠斯勒和巴斯蒂安-勒佩奇影响的画家，他们打算终结传统苏格兰画家“格拉斯哥”的垄断。帕特森于1881年结婚，搬到邓弗里斯一个偏远村庄莫尼亚夫的一栋“低矮的类似小屋的房子，屋顶有不规则的山墙和石板阁楼”，他在那里生活余生。帕特森的大部分作品 invariably 宽松绘制且颇具装饰性，受他对风景的诗意回应启发，如 Poeta Brava, Tenerife (page 146) 所示，该画是在因妻子健康问题前往加那利群岛的旅途中创作的。年轻时，格拉斯哥男孩与慕尼黑分离派以及欧洲各地的新的展览机构一起展出，但他们逐渐被体制吸收。帕特森于1923年担任皇家苏格兰水彩画家协会主席，并担任皇家苏格兰美术学院的图书管理员和秘书。他是教会长老，他列出的兴趣是‘walking, golf, croquet and chess’，and took a ‘naive’喜爱……结识重要或杰出的人物，这是一种令人愉快的弱点，颇让他的同行艺术家们觉得有趣。
 
-ARWS 1957, RWS 1958
-
-Pitchforth 出生于约克郡的韦克菲尔德，并在韦克菲尔德和利兹艺术学校以及皇家艺术学院接受训练。他对创新不感兴趣，认为“对素描的深刻信念是必不可少的”。他对大气效果特别敏感，经常在傍晚外出写生，因为现场完成的[content]
-喜爱……结识重要或杰出的人物，这是一种令人愉快的弱点，颇让他的同行艺术家们觉得有趣。
-
-### ROLAND VIVIAN PITCHFORTH RA 1895-1982
-
-ARWS 1957, RWS 1958
-
-Pitchforth 出生于约克郡的韦克菲尔德，并在韦克菲尔德和利兹艺术学校以及皇家艺术学院接受训练。他对创新不感兴趣，认为“对素描的深刻信念是必不可少的”。他对大气效果特别敏感，经常在傍晚外出写生，因为现场完成的[content]
-喜爱……结识重要或杰出的人物，这是一种令人愉快的弱点，颇让他的同行艺术家们觉得有趣。
-
-### ROLAND VIVIAN PITCHFORTH RA 1895-1982
+## ROLAND VIVIAN PITCHFORTH RA 1895-1982
 
 ARWS 1957, RWS 1958
 
@@ -1892,137 +1872,229 @@ Pitchforth 出生于约克郡的韦克菲尔德，并在韦克菲尔德和利兹
 ## 艺术家索引
 
 Alexander, Gregory. 16
+
 Allan, Robert. 60
+
 Allingham, Helen. 34
+
 Armfield, Diana. 120
+
 Austin, Robert Sargent, R.A. 84
 
 Bartlett, Charles. 44
+
 Barton, Rose Maynard. 62
+
 Batchelor, Bernard. 94
+
 Bawden, Richard. 76
+
 Bayly, Clifford. 46
+
 Benley, Charles. 106
+
 Berry, June. 2, 17
+
 Bhatt, Akosh. 70
+
 Binns, Lorna. 138
+
 Birch, Samuel Lamorna. 94
+
 Blake, Peter. 114
+
 Bott, Dennis A. Rook. 108
+
 Bowyer, Francis. 122
+
 Bowyer, William. 86
+
 Brayne, David. 96
+
 Bullmer, Lionel. 66, 68
+
 Butler, Liz. 124
 
 Carpanini, Jane. 90
+
 Chaplin, Michael. 144
+
 Clausen, Sir George, R.A. 86
+
 Coates, Tom. 20
+
 Corsellis, Jane. 72
+
 Cotman, John Sell. 48
+
 Cramp, Elizabeth. 80
+
 Cramp, Jonathan. 140
 
 Dalby, Claire. 22
+
 Daniels, Alfred. 86
+
 Dorke, John. 48
+
 Ducke, Catherine. 24
+
 Duncan, Edward. 102, 104
 
 Eyton, Anthony. 28
 
 Finch, Francis Oliver. 38
+
 Findlay, Sheila. 50
+
 Firmstone, David. 104
+
 Frankland, Trevor. 30
+
 Fripp, Alfred Downing. 54, 56
 
 Gao, Christa. 10, 12
+
 Gamble, Tom. 142
+
 Ginner, Charles. 132
+
 Gluck, David. 78
 
 Golphin, Janet. 31
+
 Goodwin, Albert. 120, 122, 124, 126, 128
 
 Harkney, Isla K. 36
+
 Halliday, Charlotte. 82
+
 Harding, James Duffield. 82
+
 Held, Julie. 130
+
 Hennell, Thomas Barclay. 76
+
 Herkomer, Sir Hubert von. R.A. 81
+
 Hogan, Eileen. 132
+
 Holliday, Sarah. 52
+
 Howard, Ken. 146
+
 Hughes-Stanton, Sir Hubert. R.A. 39
+
 Hunt, Alfred. 26, 28
+
 Hunt, Cecil. 36
+
 Hunt, William Henry. 22, 24
 
 Jack, Kenneth. 134
+
 Jackson, Mary. 12
+
 Jacob, Wendy. 54
+
 Jones, David. 78, 80
+
 Jones, Olwen. 38
+
 Jowett, Perry Hague. 58
 
 Kerr, Janet. 126
+
 Knight, Dame Laura. R.A. 90, 92
+
 Knight, Sophie. 74
 
 Larusdottir, Karolina. 10
+
 Lawson, Sonia. 73
+
 Lee, Sidney. R.A. 108
+
 Lorimer, John Henry. 50
 
 McEvy, Arthur Ambrose. R.A. 20, 72, 74, 75
+
 McGuinness, Michael. 81
+
 Melville, Arthur. 3, 14, 16, 17, 18
+
 Musker, Alison. 136
 
 Newberry, John. 106
+
 Newland, Paul. 38
 
 Palmer, Samuel. 110
+
 Paskett, David. 68
+
 Paterson, James. 46
+
 Pierce, Simon. 14
+
 Pikesley, Richard. 128
+
 Pitchforth, Roland Vivian. 4
+
 Pitaway, Neil John. 40
+
 Prout, Samuel. 32, 110
+
 Pyman, Salaman. 100
 
 Rackham, Arthur. 114, 116, 130
+
 Remity, David. 92
 
 Richardson, Thomas Miles. 133
+
 Robertson, Stuart. 60
+
 Rushion, James. 110
+
 Russell Flint, Sir William, R.A. 132, 134, 136, 148
 
 Sargent, John Singer, R.A. 20
+
 Selby, William. 59
+
 Snel, Agathe. 60
+
 Sorrell, Alan. 112
+
 Sorrell, Richard. 112
+
 Southall, Joseph Edward. 30
 
 Taylor, Jane. 62
+
 Treleaven, Janet. 36
+
 Tuke, Henry Scott, R.A. 96
 
 Vandery, Alexander. 116
+
 Vesper, Sibyl Carnow. 98, 100
 
 Webster, Norman. 81
+
 Wegmuller, Anna. 32
+
 Wegmuller, John Reinhard. 130
+
 Whealey, Jean. 138
+
 Whitaker, David. 26
+
 Whitshea, Michael. 140
+
 Williams, Annie. 10
+
 Worth, Leslie. 102
 
 本书的出版得益于协会现任及前任会员的慷慨，他们分享知识并推动水彩艺术的发展。
@@ -2033,13 +2105,18 @@ Worth, Leslie. 102
 |---|---|
 | 编辑方向： | Roger Sears |
 | 艺术指导： | David Pocknell |
+
+
+
 | 设计： | Pocknell Studio |
 | 皇家水彩画协会编辑协调： | Francis Bowyer |
 
 首次于2006年在英国由 Cassell Illustrated 出版，该出版社为 Octopus Publishing Group Limited 的一个分支
+
 2-4 Heron Quays, London E14 4JP
 
 版权所有 © 2006 Octopus Publishing Group Limited
+
 所有图像版权 © 皇家水彩画协会会员
 
 保留所有权利。本出版物的任何部分未经出版者事先许可，不得以任何形式或任何手段复制、存储于检索系统或传播，无论是电子、机械、影印、录音或其他方式。
@@ -2047,9 +2124,13 @@ Worth, Leslie. 102
 在美国由 Sterling Publishing Co., Inc. 发行，387 Park Avenue South, New York, NY 10016-5801
 
 英国图书馆可查阅本图书的 CIP 目录记录。
+
 ISBN 13: 978-1-84408-147-5
+
 ISBN 10: 1-84403-447-X
+
 10 9 8 7 6 5 4 3 2 1
+
 印刷于中国
 
 ![](img/b8a900b8373e949117f531b00685f281_163_0.png)
@@ -2057,13 +2138,21 @@ ISBN 10: 1-84403-447-X
 Bankside Gallery 所在地，皇家水彩画协会的驻地
 
 Royal Watercolour Society
+
 Bankside Gallery
+
 48 Hopton Street
+
 London SE1 9JH
+
 Tel. 020 7928 7521
+
 Fax. 020 7928 2820
+
 rws@banksidegallery.com
+
 www.royalwatercoloursociety.com
+
 注册慈善机构 293194
 
 ## 协会
@@ -2074,14 +2163,16 @@ www.royalwatercoloursociety.com
 
 在两百年的历史中，其会员堪称英国艺术家中的名人录，其中包括许多知名人士：像 Cotman、Samuel Palmer、Alma-Tadema、Singer Sargent、Burne-Jones、Helen Allingham、Dame Laura Knight、Peter Blake 和 Leslie Worth 等各具特色且杰出的艺术家，都曾自豪地在姓名后加上 RWS 的 initials。
 
-## 封面：
+## 封面
 
 Top: Roland Vivian Pitchforth RA, RWS (1893-1982), Kent Marshes, 水彩、刮擦、粉彩和粉笔, 43 x 58 cm (17 x 23 in).
+
 Bottom: Charles Bartlett, Low Tide, Stone Point, 2003, 水彩, 38 x 43 cm (23 x 17 in).
 
-## 背面封面：
+## 背面封面
 
 Top: Sir William Russell Flint RA, RWS (1889-1969), Incoming Tide, No. 1 Slip, Devonport Dockyard, 石墨上的水彩, 49 x 66 cm (19.2 x 26 in).
+
 Bottom: Michael Chaplin, Codenosa Distillery - Barcelona, 2004, 水彩, 31 x 61 cm (30 x 24 in).
 
 ![](img/b8a900b8373e949117f531b00685f281_167_0.png)

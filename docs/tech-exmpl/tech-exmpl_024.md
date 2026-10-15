@@ -1,18 +1,20 @@
+
+
 # 在 Ruby 语言中删除哈希中的嵌套键
 
 > 原文：[`techbyexample.com/ruby-hash-nested-delete/`](https://techbyexample.com/ruby-hash-nested-delete/)
 
-# **概述**
+## 概述
 
 在 Ruby 语言中，可以删除哈希中的嵌套键。
 
-让我们来看一些例子
+让我们来看一些例子。
 
-# **一级嵌套键**
+## 一级嵌套键
 
-这是删除哈希中第一层键的代码
+这是删除哈希中第一层键的代码：
 
-```go
+```ruby
 sample = {
     "a" => "b",
     "c" => "d"
@@ -21,17 +23,17 @@ sample.delete("a")
 puts sample
 ```
 
-**输出**
+**输出：**
 
-```go
+```ruby
 {"c"=>"d"}
 ```
 
-# **二级嵌套键**
+## 二级嵌套键
 
-这是删除哈希中第一层键的代码
+这是删除哈希中第二层键的代码：
 
-```go
+```ruby
 sample = {
     "a" =>  {
         "b" => "c"
@@ -42,17 +44,17 @@ sample["a"].delete("b")
 puts sample
 ```
 
-**输出**
+**输出：**
 
-```go
+```ruby
 {"a"=>{}}
 ```
 
-# **三级嵌套键**
+## 三级嵌套键
 
-这是删除哈希中第一层键的代码
+这是删除哈希中第三层键的代码：
 
-```go
+```ruby
 sample = {
     "a" =>  {
         "b" => {
@@ -65,10 +67,11 @@ sample["a"]["b"].delete("c")
 puts sample
 ```
 
-**输出**
+**输出：**
 
-```go
+```ruby
 {"a"=>{"b"=>{}}}
 ```
 
-**注意：** 请查看我们的系统设计教程系列 [系统设计问题](https://techbyexample.com/system-design-questions/)
+**注意：** 请查看我们的系统设计教程系列[系统设计问题](https://techbyexample.com/system-design-questions/)。
+

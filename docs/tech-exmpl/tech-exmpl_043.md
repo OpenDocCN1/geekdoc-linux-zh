@@ -1,32 +1,34 @@
+
+
 # 判断矩阵是否可以通过旋转获得
 
 > 原文：[`techbyexample.com/program-matrix-rotation-target/`](https://techbyexample.com/program-matrix-rotation-target/)
 
-# **概述**
+## 概述
 
-给定两个 n*n 矩阵**源矩阵**和**目标矩阵**。我们需要确定是否可以通过进行任意次数的 90 度旋转将**源矩阵**转换为**目标矩阵**。
+给定两个 `n*n` 矩阵：**源矩阵**和**目标矩阵**。我们需要确定是否可以通过进行任意次数的 90 度旋转，将**源矩阵**转换为**目标矩阵**。
 
-**示例 1**
+### 示例 1
 
 ```go
-Input: source = [2,1],[1,2]], target = [[1,2],[2,1]]
+Input: source = [[2,1],[1,2]], target = [[1,2],[2,1]]
 Output: true
 ```
 
 源矩阵可以旋转 90 度一次以获得目标矩阵。
 
-**示例 2**
+### 示例 2
 
 ```go
-Input:  source = [[1,2],[2,2]], target = [[2,1],[1,2]]
+Input: source = [[1,2],[2,2]], target = [[2,1],[1,2]]
 Output: false
 ```
 
 即使我们将源矩阵旋转 90 度 3 次，也无法得到目标矩阵。
 
-# **程序**
+## 程序
 
-以下是相应的程序
+以下是相应的程序：
 
 ```go
 package main
@@ -67,11 +69,12 @@ func main() {
 }
 ```
 
-**输出**
+### 输出
 
 ```go
 true
 false
 ```
 
-另外，查看我们的系统设计教程系列 – [系统设计教程系列](https://techbyexample.com/system-design-questions/)
+另外，查看我们的系统设计教程系列：[系统设计教程系列](https://techbyexample.com/system-design-questions/)
+

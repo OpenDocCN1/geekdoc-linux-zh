@@ -1,3 +1,4 @@
+
 # 管理文件和目录
 
 > 原文：[`learnbyexample.github.io/cli-computing/managing-files-directories.html`](https://learnbyexample.github.io/cli-computing/managing-files-directories.html)
@@ -6,11 +7,11 @@
 
 作为一种良好的实践，养成习惯，查看你所遇到命令的文档。习惯于从命令行查找文档，当你遇到困难时将会非常有用。你还可以学习和尝试尚未使用的选项。
 
-> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) [example_files](https://github.com/learnbyexample/cli-computing/tree/master/example_files) 目录包含本章中使用的脚本。请参阅 设置 部分，了解创建工作环境的说明。
+> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) [`example_files`](https://github.com/learnbyexample/cli-computing/tree/master/example_files) 目录包含本章中使用的脚本。请参阅设置部分，了解创建工作环境的说明。
 
 ## 内置和外部命令
 
-来自 [bash 手册：什么是 shell？](https://www.gnu.org/software/bash/manual/bash.html#What-is-a-shell_003f)
+来自 [bash 手册：什么是 shell？](https://www.gnu.org/software/bash/manual/bash.html#What-is-a-shell_003f)：
 
 > Shell 还提供了一组内置命令（内置命令），这些命令通过单独的实用程序无法实现或使用不便。例如，`cd`、`break`、`continue` 和 `exec` 不能在 shell 之外实现，因为它们直接操作 shell 本身。`history`、`getopts`、`kill` 或 `pwd` 等内置命令，以及其他一些命令，虽然可以在单独的实用程序中实现，但作为内置命令使用更为方便。
 
@@ -31,21 +32,21 @@ pwd is /bin/pwd
 ```
 
 > ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 要查找文档，请使用内置命令的 `help` 命令和外部命令的 `man` 命令（或者适用于完整文档的 `info` 命令）。使用 `help help` 和 `man man` 来查看它们的文档。
-> 
+
 > ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 只需输入 `help`，就会列出内置命令列表，以及命令的语法。
 
-## pwd
+## `pwd`
 
-`pwd`是 shell 内建命令，用于获取当前工作目录。这有助于你在文件系统中定位自己。打印的绝对路径通常很方便，可以复制粘贴到其他地方，例如脚本中。一些用户更喜欢他们的终端模拟器和/或 shell 提示符始终显示当前工作目录。
+`pwd` 是 shell 内建命令，用于获取当前工作目录。这有助于你在文件系统中定位自己。打印的绝对路径通常很方便，可以复制粘贴到其他地方，例如脚本中。一些用户更喜欢他们的终端模拟器和/或 shell 提示符始终显示当前工作目录。
 
 ```sh
 $ pwd
 /home/learnbyexample 
 ```
 
-## cd
+## `cd`
 
-`cd`是另一个 shell 内建命令。这有助于更改当前工作目录。以下是一个使用绝对路径更改当前工作目录的示例：
+`cd` 是另一个 shell 内建命令。这有助于更改当前工作目录。以下是一个使用绝对路径更改当前工作目录的示例：
 
 ```sh
 $ pwd
@@ -57,26 +58,22 @@ $ pwd
 /etc 
 ```
 
-你可以使用`-`作为参数返回到上一个工作目录。继续上一个示例：
+你可以使用 `-` 作为参数返回到上一个工作目录。继续上一个示例：
 
 ```sh
 $ cd -
 /home/learnbyexample 
 ```
 
-> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 大多数命令会将以`-`开头的字符串视为命令选项。你可以使用`--`来告诉命令，所有随后的参数都不应被视为选项，即使它们以`-`开头。例如，如果你在当前工作目录中有一个名为`-oops`的文件夹，你可以使用`cd -- -oops`来切换到该目录。
+> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 大多数命令会将以 `-` 开头的字符串视为命令选项。你可以使用 `--` 来告诉命令，所有随后的参数都不应被视为选项，即使它们以 `-` 开头。例如，如果你在当前工作目录中有一个名为 `-oops` 的文件夹，你可以使用 `cd -- -oops` 来切换到该目录。
 
 相对路径是相对于当前工作目录的：
 
-+   `.`代表当前目录
-
-+   `..`代表一个目录层以上的目录（即父目录）
-
-+   `../..`代表两个目录层以上的目录，依此类推
-
-+   `cd ./-`将帮助你切换到当前位置名为`-`的目录
-
-    +   你不能使用`cd -`，因为这会带你回到上一个工作目录
+- `.` 代表当前目录。
+- `..` 代表一个目录层以上的目录（即父目录）。
+- `../..` 代表两个目录层以上的目录，依此类推。
+- `cd ./-` 将帮助你切换到当前位置名为 `-` 的目录。
+  - 你不能使用 `cd -`，因为这会带你回到上一个工作目录。
 
 ```sh
 $ pwd
@@ -99,7 +96,7 @@ $ pwd
 / 
 ```
 
-你可以使用`cd`或`cd ~`或`cd ~/`在任何文件系统位置切换到主目录。这由存储在`HOME` shell 变量中的值决定。参见[bash 手册：波浪号扩展](https://www.gnu.org/software/bash/manual/html_node/Tilde-Expansion.html)。
+你可以使用 `cd` 或 `cd ~` 或 `cd ~/` 在任何文件系统位置切换到主目录。这由存储在 `HOME` shell 变量中的值决定。参见 [bash 手册：波浪号扩展](https://www.gnu.org/software/bash/manual/html_node/Tilde-Expansion.html)。
 
 ```sh
 $ pwd
@@ -112,18 +109,18 @@ $ pwd
 /home/learnbyexample 
 ```
 
-## clear
+## `clear`
 
-你可以使用此命令清除终端屏幕。默认情况下，`clear`命令会将提示符移动到终端顶部，并尝试删除滚动缓冲区的内容。如果你想保留滚动缓冲区的内容，可以使用`-x`选项。
+你可以使用此命令清除终端屏幕。默认情况下，`clear` 命令会将提示符移动到终端顶部，并尝试删除滚动缓冲区的内容。如果你想保留滚动缓冲区的内容，可以使用 `-x` 选项。
 
-> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) `Ctrl+l`快捷键也会将提示行移动到终端顶部。它将保留你在提示行上输入的任何文本，并且滚动缓冲区的内容不会被清除。
+> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) `Ctrl+l` 快捷键也会将提示行移动到终端顶部。它将保留你在提示行上输入的任何文本，并且滚动缓冲区的内容不会被清除。
 
-## ls
+## `ls`
 
-当你使用文件资源管理器图形用户界面应用程序时，你会自动看到目录内容。此类 GUI 应用程序通常具有显示文件大小、区分文件和文件夹等功能。`ls`是具有众多选项和与查看目录内容相关的功能的命令行工具。
+当你使用文件资源管理器图形用户界面应用程序时，你会自动看到目录内容。此类 GUI 应用程序通常具有显示文件大小、区分文件和文件夹等功能。`ls` 是具有众多选项和与查看目录内容相关的功能的命令行工具。
 
-> ![信息](img/147d5d96e6e103c258c8b5f99e9505a9.png) 如前所述，[example_files](https://github.com/learnbyexample/cli-computing/tree/master/example_files) 目录包含本章中使用的脚本。你可以使用 `ls.sh` 脚本来跟随本节中显示的示例。如果你尚未创建工作环境，请参阅 设置 部分。
-> 
+> ![信息](img/a6116ee6f319066c4c2a48019a3c88c2.png) 如前所述，[`example_files`](https://github.com/learnbyexample/cli-computing/tree/master/example_files) 目录包含本章中使用的脚本。你可以使用 `ls.sh` 脚本来跟随本节中显示的示例。如果你尚未创建工作环境，请参阅设置部分。
+
 > ```sh
 > # first, cd into the 'scripts' directory
 > $ cd cli-computing/example_files/scripts
@@ -173,17 +170,12 @@ dot_files
 
 `-F` 选项在每个文件名后附加一个字符，以指示文件类型（如果不是常规文件）：
 
-+   `/` 目录
-
-+   `*` 可执行文件
-
-+   `@` 符号链接
-
-+   `|` FIFO
-
-+   `=` 套接字
-
-+   `>` 门
+- `/`：目录。
+- `*`：可执行文件。
+- `@`：符号链接。
+- `|`：FIFO。
+- `=`：套接字。
+- `>`：门。
 
 ```sh
 $ ls -F
@@ -201,7 +193,7 @@ errors.log  hi              projects/  scripts
 
 你还可以使用 `--color` 选项来视觉上区分文件类型：
 
-![使用 --color 选项的示例](img/a6116ee6f319066c4c2a48019a3c88c2.png)
+![使用 `--color` 选项的示例](img/a6116ee6f319066c4c2a48019a3c88c2.png)
 
 `-l` 选项使用长列表格式显示内容。你将获得诸如文件权限、所有者、大小、时间戳等详细信息。第一列的第一个字符区分文件类型，如 `d` 代表目录，`-` 代表常规文件，`l` 代表符号链接等。在每个目录列表下，第一行将显示条目的总大小（以 KB 计）。
 
@@ -245,15 +237,11 @@ $ ls -1sh errors.log report.log
 
 改变列表顺序的选项有几个：
 
-+   `-t` 按时间戳排序
-
-+   `-S` 按文件大小排序（不适用于目录）
-
-+   `-v` 版本排序（适用于包含数字的文件名）
-
-+   `-X` 按文件扩展名排序（即文件名中最后一个 `.` 之后的所有字符）
-
-+   `-r` 逆转列表顺序
+- `-t`：按时间戳排序。
+- `-S`：按文件大小排序（不适用于目录）。
+- `-v`：版本排序（适用于包含数字的文件名）。
+- `-X`：按文件扩展名排序（即文件名中最后一个 `.` 之后的所有字符）。
+- `-r`：逆转列表顺序。
 
 ```sh
 $ ls -lGhtr
@@ -308,7 +296,7 @@ game.py
 books.txt  outing.txt 
 ```
 
-通常，你只想根据某些标准列出特定的文件或目录，例如文件扩展名。shell 提供了一种称为 **globs** 或 **通配符** 的匹配技术。以下是一些简单的示例（有关更多详细信息，请参阅 通配符 部分）。
+通常，你只想根据某些标准列出特定的文件或目录，例如文件扩展名。shell 提供了一种称为 **globs** 或 **通配符** 的匹配技术。以下是一些简单的示例（有关更多详细信息，请参阅通配符部分）。
 
 `*` 是零个或多个字符的占位符：
 
@@ -327,6 +315,8 @@ $ ls -lG *.log
 -rw-rw-r-- 1 learnbyexample 7654321 Jan  1 01:01 report.log 
 ```
 
+
+
 `[]`帮助你指定一组要匹配一次的字符。例如，`[ad]`匹配`a`或`d`一次。`[c-i]`匹配从`c`到`i`的字符范围。
 
 ```sh
@@ -341,7 +331,7 @@ $ ls -1sh [c-i]*
 4.0K ip.txt 
 ```
 
-> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 如上述示例所示，通配符是由 shell 展开的。初学者常常将通配符与`ls`命令相关联，这就是为什么我在上述示例中故意也使用了`echo`。
+> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 如上述示例所示，通配符是由 shell 展开的。初学者常常将通配符与`ls`命令相关联，这就是为什么我在上述示例中故意也使用了`echo`。
 
 你可以使用`-d`选项来**不**显示目录内容：
 
@@ -388,11 +378,11 @@ todos/
 `mkdir`命令帮助你创建新的目录。你可以传递一个或多个路径以及你想要创建的目录名称。如果目录名称可能包含 shell 特殊字符，如空格、`*`等，请引用名称。
 
 > ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 为本节创建一个练习目录：
-> 
-> ```sh
-> $ mkdir practice_mkdir
-> $ cd practice_mkdir 
-> ```
+
+```sh
+$ mkdir practice_mkdir
+$ cd practice_mkdir 
+```
 
 这里有一个创建多个目录的示例：
 
@@ -417,8 +407,8 @@ $ mkdir -p a/b/c
 $ tree
 .
 ├── a
-│   └── b
-│       └── c
+│   └── b
+│       └── c
 ├── low power adders
 └── reports
 
@@ -444,13 +434,13 @@ $ echo $?
 如上述示例所示，你可以使用特殊变量`$?`检查最后执行的命令的退出状态。`0`表示一切顺利，更高的数字表示发生了某种类型的失败（你可以查阅命令的手册以获取详细信息）。
 
 > ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) ![warning](img/b5314b4a0acf0f436c4bf59486793342.png) Linux 文件名可以使用除 `/` 和 ASCII NUL 字符之外的任何字符。如果参数包含空格、`*` 等字符，请引用它们以防止 shell 展开。Shell 将空格视为参数分隔符，`*` 是通配符，等等。作为良好习惯，除非有特定要求，否则请仅使用字母、数字和下划线作为文件名。有关更多信息，请参阅 [unix.stackexchange: Characters best avoided in filenames](https://unix.stackexchange.com/q/269093/109046)。
-> 
+
 > ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 如果你愿意，可以删除练习目录：
-> 
-> ```sh
-> $ cd ..
-> $ rm -r practice_mkdir 
-> ```
+
+```sh
+$ cd ..
+$ rm -r practice_mkdir 
+```
 
 ## touch
 
@@ -471,7 +461,7 @@ $ ls -s ip.txt
 0 ip.txt 
 ```
 
-> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 你也可以使用 `> ip.txt` 创建一个空文件，但重定向操作符会覆盖已存在的文件。
+> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 你也可以使用`> ip.txt`创建一个空文件，但重定向操作符会覆盖已存在的文件。
 
 ## rm
 
@@ -532,7 +522,7 @@ projects/  read_only.txt
 $ tree projects
 projects
 ├── calculator
-│   └── calc.sh
+│   └── calc.sh
 └── tictactoe
     └── game.py
 
@@ -643,6 +633,8 @@ hello
 
 如果目标路径中有一个与正在复制的文件夹同名文件夹，则内容将被合并。如果这些目录中有同名文件，则将应用上面讨论的相同规则。
 
+
+
 ```sh
 $ tree backups
 backups
@@ -687,27 +679,23 @@ $ ls -AF backups
 .bashrc  dict/  ip.txt  reports/ 
 ```
 
-您可以使用 `-t` 选项在指定源路径之前指定目标路径（例如，与 `find` 命令一起使用时很有帮助，稍后将讨论）。以下是一些其他值得注意的选项：
+您可以使用`-t`选项在指定源路径之前指定目标路径（例如，与`find`命令一起使用时很有帮助，稍后将讨论）。以下是一些其他值得注意的选项：
 
-+   `-u` 仅在文件较新或不存在于目标中时从源复制文件
-
-+   `-b` 和 `--backup` 选项将允许您创建目标中已存在的文件的备份副本
-
-+   `--preserve` 选项将帮助您复制文件，同时保留源文件属性，如所有权、时间戳等
+- `-u`仅在文件较新或不存在于目标中时从源复制文件。
+- `-b`和`--backup`选项将允许您创建目标中已存在的文件的备份副本。
+- `--preserve`选项将帮助您复制文件，同时保留源文件属性，如所有权、时间戳等。
 
 **进一步阅读**
 
-+   `rsync` 是一个快速、多功能的远程（和本地）文件复制工具
+- `rsync`是一个快速、多功能的远程（和本地）文件复制工具。
+  - [rsync 教程和示例](https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories)
+- [syncthing](https://github.com/syncthing/syncthing) — 持续文件同步程序。
 
-    +   [rsync 教程和示例](https://www.digitalocean.com/community/tutorials/how-to-use-rsync-to-sync-local-and-remote-directories)
+## `mv`
 
-+   [syncthing](https://github.com/syncthing/syncthing) — 持续文件同步程序
+您可以使用`mv`命令将一个或多个文件和目录从一个位置移动到另一个位置。与`rm`和`cp`不同，对于目录，您不需要`-r`选项。
 
-## mv
-
-您可以使用 `mv` 命令将一个或多个文件和目录从一个位置移动到另一个位置。与 `rm` 和 `cp` 不同，对于目录，您不需要 `-r` 选项。
-
-指定源和目标语法与之前看到的 `cp` 命令相同。以下是将目录移动到另一个目录的示例：
+指定源和目标语法与之前看到的`cp`命令相同。以下是将目录移动到另一个目录的示例：
 
 ```sh
 # change to the 'scripts' directory and source the 'mv.sh' script
@@ -736,7 +724,7 @@ $ ls -F backups
 dot_files/  hello.py  loops.py  manuals/  projects/ 
 ```
 
-当您处理单个文件或目录时，您也可以**重命名**它们：
+当您处理单个文件或目录时，您也可以重命名它们：
 
 ```sh
 # within the same directory
@@ -752,27 +740,21 @@ $ ls -F backups
 hello.py  loops.py  manuals/  projects/ 
 ```
 
-这里有一些值得注意的选项，其中一些与 `cp` 命令中看到的选项行为相似：
+这里有一些值得注意的选项，其中一些与`cp`命令中看到的选项行为相似：
 
-+   `-i` 当目标已存在同名文件时，交互式确认或拒绝
-
-+   `-n` 总是拒绝覆盖文件
-
-+   `-f` 总是覆盖文件
-
-+   `-t` 在最终参数之外指定目标位置
-
-+   `-u` 仅在文件较新或不存在于目标位置时移动
-
-+   `-b` 和 `--backup` 选项将允许您在目标位置创建现有文件的备份副本
-
-+   `-v` 详细选项
+- `-i`：当目标已存在同名文件时，交互式确认或拒绝。
+- `-n`：总是拒绝覆盖文件。
+- `-f`：总是覆盖文件。
+- `-t`：在最终参数之外指定目标位置。
+- `-u`：仅在文件较新或不存在于目标位置时移动。
+- `-b`和`--backup`选项将允许您在目标位置创建现有文件的备份副本。
+- `-v`：详细选项。
 
 ## 重命名
 
-`mv` 命令对于简单的文件重命名很有用。当您需要根据模式修改一个或多个文件名时，`rename` 命令很有帮助。`rename` 命令有不同的实现，具有截然不同的功能集。有关详细信息，请参阅 [askubuntu: 不同 "rename" 命令之间的区别是什么？](https://askubuntu.com/questions/956010/whats-the-difference-between-the-different-rename-commands)
+`mv`命令对于简单的文件重命名很有用。当您需要根据模式修改一个或多个文件名时，`rename`命令很有帮助。`rename`命令有不同的实现，具有截然不同的功能集。有关详细信息，请参阅[askubuntu：不同“rename”命令之间的区别是什么？](https://askubuntu.com/questions/956010/whats-the-difference-between-the-different-rename-commands)。
 
-本节将讨论 `rename` 命令的 Perl 实现。您需要了解正则表达式才能使用此命令。这里将给出基本解释，更多详细信息可以在本节末尾提到的链接中找到。以下是一个更改文件扩展名的示例：
+本节将讨论`rename`命令的 Perl 实现。您需要了解正则表达式才能使用此命令。这里将给出基本解释，更多详细信息可以在本节末尾提到的链接中找到。以下是一个更改文件扩展名的示例：
 
 ```sh
 $ mkdir practice_rename
@@ -792,7 +774,7 @@ caves.jpg  flower.jpg  waterfall.jpg
 $ rm *.jpg 
 ```
 
-作为一种良好的实践，使用 `-n` 选项在实际上对文件进行重命名之前查看文件将如何被重命名。
+作为一种良好的实践，使用`-n`选项在实际上对文件进行重命名之前查看文件将如何被重命名。
 
 ```sh
 $ touch 1.png 3.png 25.png 100.png
@@ -816,7 +798,7 @@ $ ls
 001.png  003.png  025.png  100.png 
 ```
 
-如果新文件名已存在，您将收到一个错误，如果您愿意，可以使用 `-f` 选项来覆盖它。如果您正在传递包含路径组件的文件名，您可以使用 `-d` 选项仅影响文件名部分。否则，您使用的逻辑可能会影响目录名。
+如果新文件名已存在，您将收到一个错误，如果您愿意，可以使用`-f`选项来覆盖它。如果您正在传递包含路径组件的文件名，您可以使用`-d`选项仅影响文件名部分。否则，您使用的逻辑可能会影响目录名。
 
 ```sh
 $ mkdir projects
@@ -838,21 +820,17 @@ rename(projects/toc.sh, PROJECTS/TOC.sh)
 
 **进一步阅读**
 
-+   [perldoc: 正则表达式教程](https://perldoc.perl.org/perlretut)
+- [perldoc：正则表达式教程](https://perldoc.perl.org/perlretut)
+- 请参阅我的[Perl 单行脚本](https://github.com/learnbyexample/learn_perl_oneliners)电子书，其中包含示例以及有关 Perl 替换和`rename`命令的更多详细信息。
 
-+   请参阅我的 [Perl 单行脚本](https://github.com/learnbyexample/learn_perl_oneliners) 电子书，其中包含示例以及有关 Perl 替换和 `rename` 命令的更多详细信息
+## `ln`
 
-## ln
+`ln`命令可以帮助您在同一位置或不同位置创建指向另一个文件或目录的链接。有两种类型的链接——符号链接和硬链接。符号链接可以指向文件和目录。以下是某些特性：
 
-`ln` 命令可以帮助您在同一位置或不同位置创建指向另一个文件或目录的链接。有两种类型的链接——**符号链接**和**硬链接**。符号链接可以指向文件和目录。以下是某些特性：
-
-+   如果原始文件被删除或移动到另一个位置，则符号链接将不再工作
-
-+   如果符号链接被移动到另一个位置，如果使用绝对路径创建链接，它仍然可以工作（对于相对路径，它将取决于该位置是否还有另一个同名文件）
-
-+   符号链接文件有自己的 inode、权限、时间戳等
-
-+   一些命令在原始文件或符号文件作为命令行参数时工作方式相同，而一些则需要额外的选项（例如`du -L`）
+- 如果原始文件被删除或移动到另一个位置，则符号链接将不再工作。
+- 如果符号链接被移动到另一个位置，如果使用绝对路径创建链接，它仍然可以工作（对于相对路径，它将取决于该位置是否还有另一个同名文件）。
+- 符号链接文件有自己的 inode、权限、时间戳等。
+- 一些命令在原始文件或符号文件作为命令行参数时工作方式相同，而一些则需要额外的选项（例如`du -L`）。
 
 使用方法与`cp`命令类似。你必须首先指定源，然后是目的地（如果它是当前工作目录，则目的地是可选的）。
 
@@ -889,11 +867,9 @@ $ readlink -f words
 
 硬链接只能指向另一个文件。你不能用它们来处理目录，并且使用也仅限于同一文件系统内。`.`和`..`目录是例外，这些特殊用途的硬链接会自动创建。以下是关于硬链接的一些更多详细信息：
 
-+   一旦创建了硬链接，两个文件之间除了路径之外没有区别。它们有相同的 inode、权限、时间戳等。
-
-+   即使所有其他硬链接都被删除，硬链接仍然会继续工作。
-
-+   如果一个硬链接被移动到另一个位置，链接仍然会保持同步。任何一个链接的变化都会反映在所有其他链接上
+- 一旦创建了硬链接，两个文件之间除了路径之外没有区别。它们有相同的 inode、权限、时间戳等。
+- 即使所有其他硬链接都被删除，硬链接仍然会继续工作。
+- 如果一个硬链接被移动到另一个位置，链接仍然会保持同步。任何一个链接的变化都会反映在所有其他链接上。
 
 ```sh
 $ touch apple.txt
@@ -909,13 +885,11 @@ $ ls -1i apple.txt banana.txt
 
 **进一步阅读**
 
-+   [askubuntu: 硬链接和符号链接之间有什么区别？](https://askubuntu.com/questions/108771/what-is-the-difference-between-a-hard-link-and-a-symbolic-link)
+- [askubuntu：硬链接和符号链接之间有什么区别？](https://askubuntu.com/questions/108771/what-is-the-difference-between-a-hard-link-and-a-symbolic-link)
+- [unix.stackexchange：符号链接和硬链接之间有什么区别？](https://unix.stackexchange.com/q/9575/109046)
+- [unix.stackexchange：什么是超级块、inode、dentry 和文件？](https://unix.stackexchange.com/q/4402/109046)
 
-+   [unix.stackexchange: 符号链接和硬链接之间有什么区别？](https://unix.stackexchange.com/q/9575/109046)
-
-+   [unix.stackexchange: 什么是超级块、inode、dentry 和文件？](https://unix.stackexchange.com/q/4402/109046)
-
-## tar 和 gzip
+## `tar`和`gzip`
 
 `tar`是一个存档工具。根据实现方式，你还可以使用选项来压缩存档。
 
@@ -975,28 +949,7 @@ $ ls -sh bkp.tar
 
 从存档中提取文件时，请使用`tar`命令并带上`-x`选项：
 
-```sh
-$ mkdir test_extract
-$ mv bkp.tar test_extract
-$ cd test_extract
-$ ls
-bkp.tar
 
-$ tar -xf bkp.tar
-$ tree
-.
-├── bkp.tar
-├── projects
-│   ├── errors.log
-│   └── scripts
-│       └── calc.sh
-└── report.log
-
-2 directories, 4 files
-
-$ cd ..
-$ rm -r test_extract 
-```
 
 使用`GNU tar`，你可以在`tar`命令中压缩/解压缩，而无需单独使用像`gzip`这样的工具。例如，`-z`选项将使用`gzip`，`-j`将使用`bzip2`，`-J`将使用`xz`。如果你想让`tar`根据提供的扩展名自动选择压缩技术，请使用`-a`选项。
 
@@ -1016,9 +969,9 @@ $ tar -zxf ../bkp.tar.gz
 $ tree
 .
 ├── projects
-│   ├── errors.log
-│   └── scripts
-│       └── calc.sh
+│   ├── errors.log
+│   └── scripts
+│       └── calc.sh
 └── report.log
 
 2 directories, 3 files
@@ -1029,33 +982,27 @@ $ rm -r test_extract
 
 `tar` 有很多选项，用于满足各种需求。以下列出了一些，完整详情请参阅文档。
 
-+   `-v` 详细选项
+- `-v` 详细选项
+- `-r` 用于将文件追加到现有归档中
+- `--exclude=` 指定要排除的文件以进行归档
 
-+   `-r` 用于将文件追加到现有归档中
+同样也有以`z`开头的命令用于处理压缩文件，例如：
 
-+   `--exclude=` 指定要排除的文件以进行归档
+- `zcat` 用于显示压缩文件的文件内容
+- `zless` 用于分屏显示压缩文件的文件内容
+- `zgrep` 用于搜索压缩文件
 
-同样也有以 `z` 开头的命令用于处理压缩文件，例如：
-
-+   `zcat` 用于显示压缩文件的文件内容
-
-+   `zless` 用于分屏显示压缩文件的文件内容
-
-+   `zgrep` 用于搜索压缩文件
-
-> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 如果你需要处理 `.zip` 文件，请使用 `zip` 和 `unzip` 命令。
+> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 如果你需要处理`.zip`文件，请使用`zip`和`unzip`命令。
 
 **进一步阅读**
 
-+   [unix.stackexchange: 以排序顺序的 tar 文件](https://unix.stackexchange.com/q/178127/109046)
-
-+   [superuser: 不使用 tar 的 gzip？为什么它们一起使用？](https://superuser.com/questions/252065/gzip-without-tar-why-are-they-used-together)
-
-+   [unix.stackexchange: 使用 tar 以最大压缩率压缩目录](https://unix.stackexchange.com/q/28976/109046)
+- [unix.stackexchange: 以排序顺序的 tar 文件](https://unix.stackexchange.com/q/178127/109046)
+- [superuser: 不使用 tar 的 gzip？为什么它们一起使用？](https://superuser.com/questions/252065/gzip-without-tar-why-are-they-used-together)
+- [unix.stackexchange: 使用 tar 以最大压缩率压缩目录](https://unix.stackexchange.com/q/28976/109046)
 
 ## 练习
 
-> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) `ls.sh` 脚本将被用于一些练习。
+> ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) `ls.sh`脚本将被用于一些练习。
 
 **1)** 哪个命令将始终显示家目录的绝对路径？
 
@@ -1065,7 +1012,7 @@ $ rm -r test_extract
 
 *c)* `echo "$HOME"`
 
-**2)** 当前工作目录有一个名为 `-dash` 的文件夹。你将如何切换到该目录？
+**2)** 当前工作目录有一个名为`-dash`的文件夹。你将如何切换到该目录？
 
 *a)* `cd -- -dash`
 
@@ -1081,7 +1028,7 @@ $ rm -r test_extract
 
 *g)* 只有 *a)* 和 *c)*
 
-**3)** 给定以下目录结构，你将如何切换到 `todos` 目录？
+**3)** 给定以下目录结构，你将如何切换到`todos`目录？
 
 ```sh
 # change to the 'scripts' directory and source the 'ls.sh' script
@@ -1099,7 +1046,7 @@ $ pwd
 /home/learnbyexample/cli-computing/example_files/scripts/ls_examples/todos 
 ```
 
-**4)** 根据以下场景，你将如何切换到用户家目录下的 `cli-computing` 目录？然后，你将如何返回到上一个工作目录？
+**4)** 根据以下场景，你将如何切换到用户家目录下的`cli-computing`目录？然后，你将如何返回到上一个工作目录？
 
 ```sh
 $ pwd
@@ -1133,15 +1080,15 @@ total 7.4M
 4.0K todos 
 ```
 
-**6)** 你会使用哪个 `ls` 命令选项来进行基于版本的条目排序？
+**6)** 你会使用哪个`ls`命令选项来进行基于版本的条目排序？
 
-**7)** 你会使用哪个 `ls` 命令选项来根据条目大小进行排序？
+**7)** 你会使用哪个`ls`命令选项来根据条目大小进行排序？
 
-**8)** 你会使用哪个 `ls` 命令选项来根据文件扩展名进行排序？
+**8)** 你会使用哪个`ls`命令选项来根据文件扩展名进行排序？
 
-**9)** `ls` 命令的 `-G` 选项做什么？
+**9)** `ls`命令的`-G`选项做什么？
 
-**10)** `ls` 命令的 `-i` 选项做什么？
+**10)** `ls`命令的`-i`选项做什么？
 
 **11)** 每行只列出目录。
 
@@ -1156,7 +1103,7 @@ scripts/
 todos/ 
 ```
 
-**12)** 假设已经存在一个名为 `notes` 的常规文件。如果你使用 `mkdir -p notes` 命令会发生什么？
+**12)** 假设已经存在一个名为`notes`的常规文件。如果你使用`mkdir -p notes`命令会发生什么？
 
 ```sh
 $ ls -1F notes
@@ -1193,11 +1140,11 @@ total 0
 $ tree -F
 .
 ├── hobbies/
-│   ├── painting/
-│   │   └── waterfall.bmp
-│   ├── trekking/
-│   │   └── himalayas.txt
-│   └── writing/
+│   ├── painting/
+│   │   └── waterfall.bmp
+│   ├── trekking/
+│   │   └── himalayas.txt
+│   └── writing/
 └── shopping/
     └── festival.xlsx
 
@@ -1206,7 +1153,7 @@ $ tree -F
 
 > ![info](img/147d5d96e6e103c258c8b5f99e9505a9.png) 不要删除此目录，将在后续练习中使用。
 
-**15)** 如果要创建的目录已经存在，你会使用哪个 `mkdir` 命令选项来避免显示错误？
+**15)** 如果要创建的目录已经存在，你会使用哪个`mkdir`命令选项来避免显示错误？
 
 **16)** 使用一个或多个命令来匹配以下场景：
 
@@ -1223,19 +1170,19 @@ $ ls -1F
 quest/ 
 ```
 
-**17)** `rm` 命令的 `-f` 选项做什么？
+**17)** `rm`命令的`-f`选项做什么？
 
-**18)** 你会使用哪个选项来通过 `rm` 命令交互式地删除文件？
+**18)** 你会使用哪个选项来通过`rm`命令交互式地删除文件？
 
-**19)** 被 `rm` 删除的文件是否可以轻松恢复？你需要采取一些额外步骤或使用特殊命令来使文件更难恢复吗？
+**19)** 被`rm`删除的文件是否可以轻松恢复？你需要采取一些额外步骤或使用特殊命令来使文件更难恢复吗？
 
 **20)** 你的 Linux 发行版是否提供了一个工具，可以将删除的文件发送到回收站（这有助于恢复已删除的文件）？
 
-**21)** 你会使用哪个选项来交互式地接受/防止 `cp` 命令覆盖同名文件？以及哪个选项可以在无需手动确认的情况下防止覆盖？
+**21)** 你会使用哪个选项来交互式地接受/防止`cp`命令覆盖同名文件？以及哪个选项可以在无需手动确认的情况下防止覆盖？
 
-**22)** `cp` 命令是否允许你重命名正在复制文件或目录？如果是，是否可以重命名正在复制的多个文件或目录？
+**22)** `cp`命令是否允许你重命名正在复制文件或目录？如果是，是否可以重命名正在复制的多个文件或目录？
 
-**23)** `cp` 命令的 `-u`，`-b` 和 `-t` 选项分别做什么？
+**23)** `cp`命令的`-u`，`-b`和`-t`选项分别做什么？
 
 **24)** 下面两个命令之间的区别是什么？
 
@@ -1245,7 +1192,7 @@ $ cp ip.txt op.txt
 $ mv ip.txt op.txt 
 ```
 
-**25)** 你会使用哪个选项来交互式地接受/防止 `mv` 命令覆盖同名文件？
+**25)** 你会使用哪个选项来交互式地接受/防止`mv`命令覆盖同名文件？
 
 **26)** 使用一个或多个命令来匹配以下场景。你应该已经在之前的练习中创建了此目录结构。
 
@@ -1253,11 +1200,11 @@ $ mv ip.txt op.txt
 $ tree -F
 .
 ├── hobbies/
-│   ├── painting/
-│   │   └── waterfall.bmp
-│   ├── trekking/
-│   │   └── himalayas.txt
-│   └── writing/
+│   ├── painting/
+│   │   └── waterfall.bmp
+│   ├── trekking/
+│   │   └── himalayas.txt
+│   └── writing/
 └── shopping/
     └── festival.xlsx
 
@@ -1268,17 +1215,17 @@ $ tree -F
 $ tree -F
 .
 ├── hobbies/
-│   ├── himalayas.txt
-│   └── waterfall.bmp
+│   ├── himalayas.txt
+│   └── waterfall.bmp
 └── shopping/
     └── festival.xlsx
 
 2 directories, 3 files 
 ```
 
-**27)** `mv` 命令的 `-t` 选项做什么？
+**27)** `mv`命令的`-t`选项做什么？
 
-**28)** 根据以下文件名和预期输出确定并实现 `rename` 逻辑。
+**28)** 根据以下文件名和预期输出确定并实现`rename`逻辑。
 
 ```sh
 $ touch '(2020) report part 1.txt' 'analysis part 3 (2018).log'
@@ -1293,6 +1240,6 @@ $ ls -1
 analysis_part_3_2018.log 
 ```
 
-**29)** `ln` 命令指定源和目标的方式是否与 `cp` 和 `mv` 命令相同？
+**29)** `ln`命令指定源和目标的方式是否与`cp`和`mv`命令相同？
 
-**30)** 哪个 `tar` 选项有助于根据文件名扩展名压缩存档？此选项可以用作代替 `-z` 用于 `gzip`，`-j` 用于 `bzip2` 和 `-J` 用于 `xz`。
+**30)** 哪个`tar`选项有助于根据文件名扩展名压缩存档？此选项可以用作代替`-z`用于`gzip`，`-j`用于`bzip2`和`-J`用于`xz`。

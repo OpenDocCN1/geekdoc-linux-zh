@@ -1,6 +1,7 @@
+
 # Cookies
 
-默认情况下，libcurl 将传输设置为尽可能简单，需要启用功能才能使用。其中一个功能就是 HTTP cookie，更通俗地称为 cookie。
+默认情况下，`libcurl`将传输设置为尽可能简单，需要启用功能才能使用。其中一个功能就是 HTTP cookie，更通俗地称为 cookie。
 
 Cookies 是由服务器（使用`Set-Cookie:`头）发送的名称/值对，用于存储在客户端，并且应该在请求中再次发送，以匹配服务器（使用`Cookie:`头）指定的主机和路径要求。在今天的现代网络中，网站有时会使用大量的 cookie。
 
@@ -12,7 +13,7 @@ Cookies 是由服务器（使用`Set-Cookie:`头）发送的名称/值对，用�
 
 ### 使用读取启用 cookie 引擎
 
-使用`CURLOPT_COOKIEFILE`选项请求 libcurl 从给定的文件名导入 cookie：
+使用`CURLOPT_COOKIEFILE`选项请求 `libcurl` 从给定的文件名导入 cookie：
 
 ```sh
 curl_easy_setopt(easy, CURLOPT_COOKIEFILE, "cookies.txt");
@@ -44,13 +45,13 @@ curl_easy_setopt(easy, CURLOPT_COOKIE, "name=daniel; present=yes;");
 
 ## 导入导出
 
-内存中的 cookie 存储可以保存大量 cookie，libcurl 为应用程序提供了非常强大的方式来操作它们。您可以设置新的 cookie，可以替换现有的 cookie，也可以提取现有的 cookie。
+内存中的 cookie 存储可以保存大量 cookie，`libcurl` 为应用程序提供了非常强大的方式来操作它们。您可以设置新的 cookie，可以替换现有的 cookie，也可以提取现有的 cookie。
 
 ### 向 cookie 存储中添加 cookie
 
-通过将新的 cookie 传递给 curl 并使用`CURLOPT_COOKIELIST`选项，可以简单地向 cookie 存储中添加新的 cookie。输入格式是 cookie 文件格式中的一行，或者格式化为`Set-Cookie:`响应头，但我们推荐使用 cookie 文件风格：
+通过将新的 cookie 传递给 `curl` 并使用`CURLOPT_COOKIELIST`选项，可以简单地向 cookie 存储中添加新的 cookie。输入格式是 cookie 文件格式中的一行，或者格式化为`Set-Cookie:`响应头，但我们推荐使用 cookie 文件风格：
 
-```sh
+```c
 #define SEP  "\t"  /* Tab separates the fields */
 
 char *my_cookie =
@@ -71,7 +72,7 @@ curl_easy_setopt(curl, CURLOPT_COOKIELIST, my_cookie);
 
 有时在关闭句柄时写入 cookie 文件是不够的，然后您的应用程序可以选择像这样从存储中提取所有当前已知的 cookie：
 
-```sh
+```c
 struct curl_slist *cookies
 curl_easy_getinfo(easy, CURLINFO_COOKIELIST, &cookies);
 ```
@@ -114,10 +115,10 @@ Cookie 文件格式是基于文本的，每行存储一个 cookie。以 `#` 开�
 
 | 字段 | 示例 | 含义 |
 | --- | --- | --- |
-| 0 | example.com | 域名 |
-| 1 | FALSE | 包含子域布尔值 |
-| 2 | /foobar/ | 路径 |
-| 3 | FALSE | 通过安全传输设置 |
-| 4 | 1462299217 | 过期时间 – 自 1970 年 1 月 1 日起的秒数，或 0 |
-| 5 | person | Cookie 的名称 |
-| 6 | daniel | Cookie 的值 |
+| 0 | `example.com` | 域名 |
+| 1 | `FALSE` | 包含子域布尔值 |
+| 2 | `/foobar/` | 路径 |
+| 3 | `FALSE` | 通过安全传输设置 |
+| 4 | `1462299217` | 过期时间 – 自 1970 年 1 月 1 日起的秒数，或 `0` |
+| 5 | `person` | Cookie 的名称 |
+| 6 | `daniel` | Cookie 的值 |

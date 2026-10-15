@@ -1,14 +1,16 @@
+
+
 # 恢复二叉搜索树程序
 
 > 原文：[`techbyexample.com/recover-binary-search-tree/`](https://techbyexample.com/recover-binary-search-tree/)
 
-# **概述**
+## 概述
 
-给定一个二叉搜索树的根节点。二叉搜索树中有两个节点被交换了。我们需要修复二叉树并恢复其原始结构
+给定一个二叉搜索树的根节点。二叉搜索树中有两个节点被交换了。我们需要修复二叉树并恢复其原始结构。
 
-# **程序**
+## 程序
 
-以下是相应的程序
+以下是相应的程序：
 
 ```go
 package main
@@ -66,11 +68,10 @@ func main() {
 	fmt.Println(root.Val)
 	fmt.Println(root.Left.Val)
 	fmt.Println(root.Right.Val)
-
 }
 ```
 
-**输出**
+### 输出
 
 ```go
 2
@@ -83,3 +84,4 @@ func main() {
 如果你有兴趣了解如何在 Golang 中实现所有设计模式。如果是的话，那么这篇文章适合你 – [Golang 中的所有设计模式](https://golangbyexample.com/all-design-patterns-golang/)
 
 另外，查看我们的系统设计教程系列 – [系统设计教程系列](https://techbyexample.com/system-design-questions/)
+

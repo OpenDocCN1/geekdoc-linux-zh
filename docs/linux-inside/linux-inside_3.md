@@ -1,50 +1,51 @@
+
 # 理论
 
 这一章描述各种理论性概念和那些不直接涉及实践，但是知道了会很有用的概念。
 
-*   [分页](http://xinqiu.gitbooks.io/linux-insides/content/Theory/Paging.html)
-*   [Elf64 格式](http://xinqiu.gitbooks.io/linux-insides/content/Theory/ELF.html)
+* [分页](http://xinqiu.gitbooks.io/linux-insides/content/Theory/Paging.html)
+* [Elf64 格式](http://xinqiu.gitbooks.io/linux-insides/content/Theory/ELF.html)
 
 # 分页
 
 ## Introduction
 
-In the fifth [part](http://0xax.gitbooks.io/linux-insides/content/Booting/linux-bootstrap-5.html) of the series `Linux kernel booting process` we learned about what the kernel does in its earliest stage. In the next step the kernel will initialize different things like `initrd` mounting, lockdep initialization, and many many others things, before we can see how the kernel runs the first init process.
+在 `Linux kernel booting process` 系列的第五[部分](http://0xax.gitbooks.io/linux-insides/content/Booting/linux-bootstrap-5.html)中，我们了解了内核在其最早阶段做了什么。在下一步中，内核将初始化不同的东西，比如`initrd`挂载、`lockdep`初始化，以及许多其他事情，然后我们才能看到内核如何运行第一个`init`进程。
 
-Yeah, there will be many different things, but many many and once again many work with **memory**.
+是的，会有许多不同的东西，但很多很多次都与**内存**相关。
 
-In my view, memory management is one of the most complex part of the linux kernel and in system programming in general. This is why before we proceed with the kernel initialization stuff, we need to get acquainted with paging.
+在我看来，内存管理是`linux`内核和系统编程中最复杂的部分之一。这就是为什么在我们继续内核初始化内容之前，我们需要熟悉分页。
 
-`Paging` is a mechanism that translates a linear memory address to a physical address. If you have read the previous parts of this book, you may remember that we saw segmentation in real mode when physical addresses are calculated by shifting a segment register by four and adding an offset. We also saw segmentation in protected mode, where we used the descriptor tables and base addresses from descriptors with offsets to calculate the physical addresses. Now that we are in 64-bit mode, will see paging.
+`Paging`是一种将线性内存地址转换为物理地址的机制。如果你读过本书的前面部分，你可能记得我们在实模式下看到过分段，当时物理地址是通过将段寄存器左移四位并加上偏移量来计算的。我们也看到了保护模式下的分段，我们使用描述符表和描述符中的基地址加上偏移量来计算物理地址。现在我们处于64位模式，我们将看到分页。
 
-As the Intel manual says:
+正如`Intel`手册所说：
 
-> Paging provides a mechanism for implementing a conventional demand-paged, virtual-memory system where sections of a program’s execution environment are mapped into physical memory as needed.
+> 分页提供了一种机制来实现传统的按需分页虚拟内存系统，其中程序执行环境的部分按需映射到物理内存中。
 
-So... In this post I will try to explain the theory behind paging. Of course it will be closely related to the `x86_64` version of the linux kernel for, but we will not go into too much details (at least in this post).
+所以……在这篇文章中，我将尝试解释分页背后的理论。当然，它将与`x86_64`版本的`linux`内核密切相关，但我们不会深入太多细节（至少在本文中）。
 
-## Enabling paging
+## 启用分页
 
-There are three paging modes:
+有三种分页模式：
 
-*   32-bit paging;
-*   PAE paging;
-*   IA-32e paging.
+* 32位分页；
+* `PAE`分页；
+* `IA-32e`分页。
 
-We will only explain the last mode here. To enable the `IA-32e paging` paging mode we need to do following things:
+我们这里只解释最后一种模式。要启用`IA-32e`分页模式，我们需要做以下事情：
 
-*   set the `CR0.PG` bit;
-*   set the `CR4.PAE` bit;
-*   set the `IA32_EFER.LME` bit.
+* 设置`CR0.PG`位；
+* 设置`CR4.PAE`位；
+* 设置`IA32_EFER.LME`位。
 
-We already saw where those this bits were set in [arch/x86/boot/compressed/head_64.S](https://github.com/torvalds/linux/blob/master/arch/x86/boot/compressed/head_64.S):
+我们已经在[arch/x86/boot/compressed/head_64.S](https://github.com/torvalds/linux/blob/master/arch/x86/boot/compressed/head_64.S)中看到了这些位在哪里被设置：
 
 ```
 movl    $(X86_CR0_PG | X86_CR0_PE), %eax
 movl    %eax, %cr0 
 ```
 
-and
+和
 
 ```
 movl    $MSR_EFER, %ecx
@@ -53,16 +54,16 @@ btsl    $_EFER_LME, %eax
 wrmsr 
 ```
 
-## Paging structures
+## 分页结构
 
-Paging divides the linear address space into fixed-size pages. Pages can be mapped into the physical address space or even external storage. This fixed size is `4096` bytes for the `x86_64` linux kernel. To perform the linear address translation to a physical address special structures are used. Every structure is `4096` bytes size and contains `512` entries (this only for `PAE` and `IA32_EFER.LME` modes). Paging structures are hierarchical and the linux kernel uses 4 level of paging in the `x86_64` architecture. The CPU uses a part of the linear address to identify the entry in another paging structure which is at the lower level or physical memory region (`page frame`) or physical address in this region (`page offset`). The address of the top level paging structure located in the `cr3` register. We already saw this in [arch/x86/boot/compressed/head_64.S](https://github.com/torvalds/linux/blob/master/arch/x86/boot/compressed/head_64.S):
+分页将线性地址空间划分为固定大小的页面。页面可以映射到物理地址空间甚至外部存储。对于`x86_64`的`linux`内核，这个固定大小是`4096`字节。为了将线性地址转换为物理地址，使用了特殊结构。每个结构大小为`4096`字节，包含`512`个条目（这仅适用于`PAE`和`IA32_EFER.LME`模式）。分页结构是分层的，`linux`内核在`x86_64`架构中使用4级分页。`CPU`使用线性地址的一部分来标识另一个分页结构中的条目，该结构位于较低级别，或者标识物理内存区域（`page frame`），或者标识该区域中的物理地址（`page offset`）。顶级分页结构的地址存储在`cr3`寄存器中。我们已经在[arch/x86/boot/compressed/head_64.S](https://github.com/torvalds/linux/blob/master/arch/x86/boot/compressed/head_64.S)中看到了这一点：
 
 ```
 leal    pgtable(%ebx), %eax
 movl    %eax, %cr3 
 ```
 
-We built the page table structures and put the address of the top-level structure in the `cr3` register. Here `cr3` is used to store the address of the top-level structure, the `PML4` or `Page Global Directory` as it is called in the linux kernel. `cr3` is 64-bit register and has the following structure:
+我们构建了页表结构，并将顶级结构的地址放入`cr3`寄存器。这里`cr3`用于存储顶级结构的地址，即`PML4`或`linux`内核中所谓的`Page Global Directory`。`cr3`是64位寄存器，具有以下结构：
 
 ```
 63                  52 51                                                        32
@@ -79,26 +80,26 @@ We built the page table structures and put the address of the top-level structur
  -------------------------------------------------------------------------------- 
 ```
 
-These fields have the following meanings:
+这些字段具有以下含义：
 
-*   Bits 2:0 - ignored;
-*   Bits 51:12 - stores the address of the top level paging structure;
-*   Bit 3 and 4 - PWT or Page-Level Writethrough and PCD or Page-level cache disable indicate. These bits control the way the page or Page Table is handled by the hardware cache;
-*   Reserved - reserved must be 0;
-*   Bits 63:52 - reserved must be 0.
+* 位2:0 - 忽略；
+* 位51:12 - 存储顶级分页结构的地址；
+* 位3和4 - `PWT`或`Page-Level Writethrough`和`PCD`或`Page-level cache disable`指示。这些位控制页面或页表被硬件缓存处理的方式；
+* 保留 - 保留必须为0；
+* 位63:52 - 保留必须为0。
 
-The linear address translation address is following:
+线性地址转换过程如下：
 
-*   A given linear address arrives to the [MMU](http://en.wikipedia.org/wiki/Memory_management_unit) instead of memory bus.
-*   64-bit linear address splits on some parts. Only low 48 bits are significant, it means that `2⁴⁸` or 256 TBytes of linear-address space may be accessed at any given time.
-*   `cr3` register stores the address of the 4 top-level paging structure.
-*   `47:39` bits of the given linear address stores an index into the paging structure level-4, `38:30` bits stores index into the paging structure level-3, `29:21` bits stores an index into the paging structure level-2, `20:12` bits stores an index into the paging structure level-1 and `11:0` bits provide the byte offset into the physical page.
+* 给定的线性地址到达[MMU](http://en.wikipedia.org/wiki/Memory_management_unit)而不是内存总线。
+* 64位线性地址被分割成几个部分。只有低48位是有效的，这意味着在任何给定时间可以访问`2⁴⁸`或256 TBytes的线性地址空间。
+* `cr3`寄存器存储4级顶级分页结构的地址。
+* 给定线性地址的`47:39`位存储第4级分页结构中的索引，`38:30`位存储第3级分页结构中的索引，`29:21`位存储第2级分页结构中的索引，`20:12`位存储第1级分页结构中的索引，`11:0`位提供物理页面中的字节偏移。
 
-schematically, we can imagine it like this:
+示意性地，我们可以这样想象：
 
 ![4-level paging](img/8839c62a.jpg)
 
-Every access to a linear address is either a supervisor-mode access or a user-mode access. This access is determined by the `CPL` (current privilege level). If `CPL < 3` it is a supervisor mode access level otherwise, otherwise it is a user mode access level. For example, the top level page table entry contains access bits and has the following structure:
+每次对线性地址的访问要么是超级用户模式访问，要么是用户模式访问。这种访问由`CPL`（当前特权级别）决定。如果`CPL < 3`，则是超级用户模式访问级别，否则是用户模式访问级别。例如，顶级页表条目包含访问位，并具有以下结构：
 
 ```
 63  62                  52 51                                                    32
@@ -115,19 +116,24 @@ Every access to a linear address is either a supervisor-mode access or a user-mo
  -------------------------------------------------------------------------------- 
 ```
 
-Where:
+其中：
 
-*   63 bit - N/X bit (No Execute Bit) - presents ability to execute the code from physical pages mapped by the table entry;
-*   62:52 bits - ignored by CPU, used by system software;
-*   51:12 bits - stores physical address of the lower level paging structure;
-*   12:9 bits - ignored by CPU;
-*   MBZ - must be zero bits;
-*   Ignored bits;
-*   A - accessed bit indicates was physical page or page structure accessed;
-*   PWT and PCD used for cache;
-*   U/S - user/supervisor bit controls user access to the all physical pages mapped by this table entry;
-*   R/W - read/write bit controls read/write access to the all physical pages mapped by this table entry;
-*   P - present bit. Current bit indicates was page table or physical page loaded into primary memory or not.
+* 位63 - `N/X`位（`No Execute Bit`）- 表示从表条目映射的物理页面执行代码的能力；
+* 位62:52 - 被`CPU`忽略，由系统软件使用；
+* 位51:12 - 存储较低级别分页结构的物理地址；
+* 位12:9 - 被`CPU`忽略；
+* `MBZ` - 必须为零的位；
+* 忽略位；
+* `A` - 访问位，指示物理页面或页面结构是否被访问；
+* `PWT`和`PCD`用于缓存。
+
+
+
+`U/S` - user/supervisor bit controls user access to the all physical pages mapped by this table entry;
+
+`R/W` - read/write bit controls read/write access to the all physical pages mapped by this table entry;
+
+`P` - present bit. Current bit indicates was page table or physical page loaded into primary memory or not.
 
 Ok, we know about the paging structures and their entries. Now let's see some details about 4-level paging in the linux kernel.
 
@@ -255,44 +261,45 @@ It's the end of this short part about paging theory. Of course this post doesn't
 ## Links
 
 *   [Paging on Wikipedia](http://en.wikipedia.org/wiki/Paging)
-*   [Intel 64 and IA-32 architectures software developer's manual volume 3A](http://www.intel.com/content/www/us/en/processors/architectures-software-developer-manuals.html)
-*   [MMU](http://en.wikipedia.org/wiki/Memory_management_unit)
-*   [ELF64](https://github.com/0xAX/linux-insides/blob/master/Theory/ELF.md)
-*   [Documentation/x86/x86_64/mm.txt](https://github.com/torvalds/linux/blob/master/Documentation/x86/x86_64/mm.txt)
-*   [Last part - Kernel booting process](http://0xax.gitbooks.io/linux-insides/content/Booting/linux-bootstrap-5.html)
+
+
+
+* [Intel 64 and IA-32 architectures software developer's manual volume 3A](http://www.intel.com/content/www/us/en/processors/architectures-software-developer-manuals.html)
+* [MMU](http://en.wikipedia.org/wiki/Memory_management_unit)
+* [ELF64](https://github.com/0xAX/linux-insides/blob/master/Theory/ELF.md)
+* [Documentation/x86/x86_64/mm.txt](https://github.com/torvalds/linux/blob/master/Documentation/x86/x86_64/mm.txt)
+* [Last part - Kernel booting process](http://0xax.gitbooks.io/linux-insides/content/Booting/linux-bootstrap-5.html)
 
 # Elf64 格式
 
 # ELF 文件格式
 
-ELF (Executable and Linkable Format)是一种为可执行文件，目标文件，共享链接库和内核转储(core dumps)准备的标准文件格式。 Linux 和很多类 Unix 操作系统都使用这个格式。 让我们来看一下 64 位 ELF 文件格式的结构以及内核源码中有关于它的一些定义。
+`ELF`（Executable and Linkable Format）是一种为可执行文件、目标文件、共享链接库和内核转储（core dumps）准备的标准文件格式。Linux 和很多类 Unix 操作系统都使用这个格式。让我们来看一下 64 位 `ELF` 文件格式的结构以及内核源码中有关于它的一些定义。
 
-一个 ELF 文件由以下三部分组成：
+一个 `ELF` 文件由以下三部分组成：
 
-*   ELF 头(ELF header) - 描述文件的主要特性：类型，CPU 架构，入口地址，现有部分的大小和偏移等等；
-
-*   程序头表(Program header table) - 列举了所有有效的段(segments)和他们的属性。 程序头表需要加载器将文件中的节加载到虚拟内存段中；
-
-*   节头表(Section header table) - 包含对节(sections)的描述。
+* `ELF` 头（ELF header） - 描述文件的主要特性：类型、CPU 架构、入口地址、现有部分的大小和偏移等等；
+* 程序头表（Program header table） - 列举了所有有效的段（segments）和他们的属性。程序头表需要加载器将文件中的节加载到虚拟内存段中；
+* 节头表（Section header table） - 包含对节（sections）的描述。
 
 现在让我们对这些部分有一些更深的了解。
 
-**ELF 头(ELF header)**
+**ELF 头（ELF header）**
 
-ELF 头(ELF header)位于文件的开始位置。 它的主要目的是定位文件的其他部分。 文件头主要包含以下字段：
+`ELF` 头（ELF header）位于文件的开始位置。它的主要目的是定位文件的其他部分。文件头主要包含以下字段：
 
-*   ELF 文件鉴定 - 一个字节数组用来确认文件是否是一个 ELF 文件，并且提供普通文件特征的信息；
-*   文件类型 - 确定文件类型。 这个字段描述文件是一个重定位文件，或可执行文件,或...；
-*   目标结构；
-*   ELF 文件格式的版本；
-*   程序入口地址；
-*   程序头表的文件偏移；
-*   节头表的文件偏移；
-*   ELF 头(ELF header)的大小；
-*   程序头表的表项大小；
-*   其他字段...
+* `ELF` 文件鉴定 - 一个字节数组用来确认文件是否是一个 `ELF` 文件，并且提供普通文件特征的信息；
+* 文件类型 - 确定文件类型。这个字段描述文件是一个重定位文件，或可执行文件，或...；
+* 目标结构；
+* `ELF` 文件格式的版本；
+* 程序入口地址；
+* 程序头表的文件偏移；
+* 节头表的文件偏移；
+* `ELF` 头（ELF header）的大小；
+* 程序头表的表项大小；
+* 其他字段...
 
-你可以在内核源码种找到表示 ELF64 header 的结构体 `elf64_hdr`：
+你可以在内核源码种找到表示 `ELF64` header 的结构体 `elf64_hdr`：
 
 ```
 typedef struct elf64_hdr {
@@ -315,22 +322,22 @@ typedef struct elf64_hdr {
 
 这个结构体定义在 [elf.h](https://github.com/torvalds/linux/blob/master/include/uapi/linux/elf.h#L220)
 
-**节(sections)**
+**节（sections）**
 
-所有的数据都存储在 ELF 文件的节(sections)中。 我们通过节头表中的索引(index)来确认节(sections)。 节头表表项包含以下字段：
+所有的数据都存储在 `ELF` 文件的节（sections）中。我们通过节头表中的索引（index）来确认节（sections）。节头表表项包含以下字段：
 
-*   节的名字；
-*   节的类型；
-*   节的属性；
-*   内存地址；
-*   文件中的偏移；
-*   节的大小；
-*   到其他节的链接；
-*   各种各样的信息；
-*   地址对齐；
-*   这个表项的大小，如果有的话；
+* 节的名字；
+* 节的类型；
+* 节的属性；
+* 内存地址；
+* 文件中的偏移；
+* 节的大小；
+* 到其他节的链接；
+* 各种各样的信息；
+* 地址对齐；
+* 这个表项的大小，如果有的话；
 
-而且，在 linux 内核中结构体 `elf64_shdr` 如下所示:
+而且，在 linux 内核中结构体 `elf64_shdr` 如下所示：
 
 ```
 typedef struct elf64_shdr {
@@ -349,9 +356,9 @@ typedef struct elf64_shdr {
 
 [elf.h](https://github.com/torvalds/linux/blob/master/include/uapi/linux/elf.h#L312)
 
-**程序头表(Program header table)**
+**程序头表（Program header table）**
 
-在可执行文件或者共享链接库中所有的节(sections)都被分为多个段(segments)。 程序头是一个结构的数组，每一个结构都表示一个段(segments)。 它的结构就像这样：
+在可执行文件或者共享链接库中所有的节（sections）都被分为多个段（segments）。程序头是一个结构的数组，每一个结构都表示一个段（segments）。它的结构就像这样：
 
 ```
 typedef struct elf64_phdr {
@@ -366,15 +373,13 @@ typedef struct elf64_phdr {
 } Elf64_Phdr; 
 ```
 
-在内核源码中。
+在内核源码中，`elf64_phdr` 定义在相同的 [elf.h](https://github.com/torvalds/linux/blob/master/include/uapi/linux/elf.h#L254) 文件中。
 
-`elf64_phdr` 定义在相同的 [elf.h](https://github.com/torvalds/linux/blob/master/include/uapi/linux/elf.h#L254) 文件中.
-
-EFL 文件也包含其他的字段或结构。 你可以在 [Documentation](http://www.uclibc.org/docs/elf-64-gen.pdf) 中查看。 现在我们来查看一下 `vmlinux` 这个 ELF 文件。
+`ELF` 文件也包含其他的字段或结构。你可以在 [Documentation](http://www.uclibc.org/docs/elf-64-gen.pdf) 中查看。现在我们来查看一下 `vmlinux` 这个 `ELF` 文件。
 
 ## vmlinux
 
-`vmlinux` 也是一个可重定位的 ELF 文件。 我们可以使用 `readelf` 工具来查看它。 首先，让我们看一下它的头部：
+`vmlinux` 也是一个可重定位的 `ELF` 文件。我们可以使用 `readelf` 工具来查看它。首先，让我们看一下它的头部：
 
 ```
 $ readelf -h  vmlinux
@@ -400,7 +405,7 @@ ELF Header:
   Section header string table index: 70 
 ```
 
-我们可以看出 `vmlinux` 是一个 64 位可执行文件。 我们可以从 [Documentation/x86/x86_64/mm.txt](https://github.com/torvalds/linux/blob/master/Documentation/x86/x86_64/mm.txt#L19) 读到相关信息:
+我们可以看出 `vmlinux` 是一个 64 位可执行文件。我们可以从 [Documentation/x86/x86_64/mm.txt](https://github.com/torvalds/linux/blob/master/Documentation/x86/x86_64/mm.txt#L19) 读到相关信息：
 
 ```
 ffffffff80000000 - ffffffffa0000000 (=512 MB)  kernel text mapping, from phys 0 
@@ -415,9 +420,9 @@ $ readelf -s vmlinux | grep ffffffff81000000
  90766: ffffffff81000000     0 NOTYPE  GLOBAL DEFAULT    1 startup_64 
 ```
 
-值得注意的是，`startup_64` 例程的地址不是 `ffffffff80000000`, 而是 `ffffffff81000000`。 现在我们来解释一下。
+值得注意的是，`startup_64` 例程的地址不是 `ffffffff80000000`，而是 `ffffffff81000000`。现在我们来解释一下。
 
-我们可以在 [arch/x86/kernel/vmlinux.lds.S](https://github.com/torvalds/linux/blob/master/arch/x86/kernel/vmlinux.lds.S) 看见如下的定义 :
+我们可以在 [arch/x86/kernel/vmlinux.lds.S](https://github.com/torvalds/linux/blob/master/arch/x86/kernel/vmlinux.lds.S) 看见如下的定义：
 
 ```
  . = __START_KERNEL;
@@ -433,13 +438,13 @@ $ readelf -s vmlinux | grep ffffffff81000000
     } 
 ```
 
-其中，`__START_KERNEL` 定义如下:
+其中，`__START_KERNEL` 定义如下：
 
 ```
 #define __START_KERNEL        (__START_KERNEL_map + __PHYSICAL_START) 
 ```
 
-从这个文档中看出，`__START_KERNEL_map` 的值是 `ffffffff80000000` 以及 `__PHYSICAL_START` 的值是 `0x1000000`。 这就是 `startup_64`的地址是 `ffffffff81000000`的原因了。
+从这个文档中看出，`__START_KERNEL_map` 的值是 `ffffffff80000000` 以及 `__PHYSICAL_START` 的值是 `0x1000000`。这就是 `startup_64` 的地址是 `ffffffff81000000` 的原因了。
 
 最后我们通过以下命令来得到程序头表的内容：
 
@@ -476,6 +481,6 @@ Program Headers:
           .smp_locks .data_nosave .bss .brk 
 ```
 
-这里我们可以看出五个包含节(sections)列表的段(segments)。 你可以在生成的链接器脚本 - `arch/x86/kernel/vmlinux.lds` 中找到所有的节(sections)。
+这里我们可以看出五个包含节（sections）列表的段（segments）。你可以在生成的链接器脚本 - `arch/x86/kernel/vmlinux.lds` 中找到所有的节（sections）。
 
-就这样吧。 当然，它不是 ELF(Executable and Linkable Format)的完整描述，但是如果你想要知道更多，可以参考这个文档 - [这里](http://www.uclibc.org/docs/elf-64-gen.pdf)
+就这样吧。当然，它不是 `ELF`（Executable and Linkable Format）的完整描述，但是如果你想要知道更多，可以参考这个文档 - [这里](http://www.uclibc.org/docs/elf-64-gen.pdf)

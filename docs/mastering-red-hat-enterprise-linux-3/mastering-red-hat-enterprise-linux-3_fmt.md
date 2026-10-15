@@ -1,2 +1,0 @@
-
-# Red Hat Enterprise Linux 3 精通指南

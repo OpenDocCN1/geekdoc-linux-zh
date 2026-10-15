@@ -1,3 +1,4 @@
+
 # 如何找出哪个进程监听特定的端口- Eldernode
 
 > 原文：<https://blog.eldernode.com/find-process-listening-port/>
@@ -8,9 +9,9 @@ Linux 系统管理员需要知道一些 Linux 命令。加入我们，了解如�
 
 ## 如何找出哪个进程监听某个特定的端口
 
-最近，我们解释了如何在 Linux 中找到所有开放端口的 [列表。](https://eldernode.com/find-list-open-ports-linux/)加入我们这篇文章，看看在 [Linux](https://www.linux.org/) 中找到监听特定端口的进程/服务的 3 种不同方法。
+最近，我们解释了如何在 Linux 中找到所有开放端口的 [列表](https://eldernode.com/find-list-open-ports-linux/)。加入我们这篇文章，看看在 [Linux](https://www.linux.org/) 中找到监听特定端口的进程/服务的 3 种不同方法。
 
-**netstat 命令**用于显示网络连接、路由表、接口统计等信息。它可以在所有类似 Unix 的操作系统上使用，包括 Linux 和 Windows 操作系统。
+`netstat`命令用于显示网络连接、路由表、接口统计等信息。它可以在所有类似 Unix 的操作系统上使用，包括 Linux 和 Windows 操作系统。
 
 如果你的**没有默认安装**，使用下面的[命令](https://blog.eldernode.com/command-tips-linux/)安装。
 
@@ -18,7 +19,7 @@ Linux 系统管理员需要知道一些 Linux 命令。加入我们，了解如�
 $ sudo yum install net-tools	#RHEL/CentOS   $ sudo apt install net-tools	#Debian/Ubuntu  $ sudo dnf install net-tools	#Fedora 22+
 ```
 
-安装完成后，您可以使用它和 **grep 命令**来查找监听 Linux 中特定端口的进程或服务，如下所示(指定端口)。
+安装完成后，您可以使用它和 `grep`命令来查找监听 Linux 中特定端口的进程或服务，如下所示（指定端口）。
 
 ```
 $ netstat -ltnp | grep -w ':80'
@@ -26,52 +27,52 @@ $ netstat -ltnp | grep -w ':80'
 
 在上面的命令中，标志。
 
-**l**–告诉 netstat 只显示监听套接字。
+`l`–告诉 `netstat` 只显示监听套接字。
 
-**t**–告诉它显示 tcp 连接。
+`t`–告诉它显示 tcp 连接。
 
-**n**–指示它显示数字地址。
+`n`–指示它显示数字地址。
 
-**p**–显示进程 ID 和进程名称。
+`p`–显示进程 ID 和进程名称。
 
-**grep-w**–显示精确字符串的匹配(:80)。
+`grep -w`–显示精确字符串的匹配（`:80`）。
 
-### `2:使用 lsof 命令`
+### 2:使用 `lsof` 命令
 
-`**lsof 命令**(列出打开的文件)用于列出 Linux 系统上所有打开的文件。要在您的系统上安装它，请键入下面的[命令](https://blog.eldernode.com/linux-server-monitoring-commands/)。`
-
-```
-`$ sudo yum install lsof	        #RHEL/CentOS   $ sudo apt install lsof		#Debian/Ubuntu  $ sudo dnf install lsof		#Fedora 22+`
-```
-
-`要查找侦听特定端口的进程/服务，请键入(指定端口)。`
+`lsof`命令（列出打开的文件）用于列出 Linux 系统上所有打开的文件。要在您的系统上安装它，请键入下面的[命令](https://blog.eldernode.com/linux-server-monitoring-commands/)。
 
 ```
-`$ lsof -i :80` 
+$ sudo yum install lsof	        #RHEL/CentOS   $ sudo apt install lsof		#Debian/Ubuntu  $ sudo dnf install lsof		#Fedora 22+
 ```
 
-### ``3:使用定影器命令``
-
-``**fuser 命令**显示使用 [Linux](https://blog.eldernode.com/tutorial-linux-rpm-command/) 中指定文件或文件系统的进程的 PID。让我们看看第三种也是最后一种方法是什么来找出哪个进程在监听特定的端口。``
-
-``您可以按如下方式安装它:``
+要查找侦听特定端口的进程/服务，请键入（指定端口）。
 
 ```
-``$ sudo yum install psmisc	#RHEL/CentOS   $ sudo apt install psmisc	#Debian/Ubuntu  $ sudo dnf install psmisc	#Fedora 22+`` 
+$ lsof -i :80
 ```
 
-``您可以通过运行下面的命令(指定端口)来查找监听特定端口的进程/服务。``
+### 3:使用 `fuser` 命令
+
+`fuser`命令显示使用 [Linux](https://blog.eldernode.com/tutorial-linux-rpm-command/) 中指定文件或文件系统的进程的 PID。让我们看看第三种也是最后一种方法是什么来找出哪个进程在监听特定的端口。
+
+您可以按如下方式安装它：
 
 ```
-``$ fuser 80/tcp`` 
+$ sudo yum install psmisc	#RHEL/CentOS   $ sudo apt install psmisc	#Debian/Ubuntu  $ sudo dnf install psmisc	#Fedora 22+
 ```
 
-``然后使用 PID 号和 **ps 命令**找到进程名，如下所示。``
+您可以通过运行下面的命令（指定端口）来查找监听特定端口的进程/服务。
 
 ```
-``$ ps -p 2053 -o comm=  $ ps -p 2381 -o comm=``
+$ fuser 80/tcp
 ```
 
-## ``结论``
+然后使用 PID 号和 `ps`命令找到进程名，如下所示。
 
-``在本文中，您了解了如何找出哪个进程在监听特定的端口。因此，在本指南的 3 个建议中选择一个合适的方法。追踪 [Linux 命令](https://eldernode.com/tag/linux-commands-tutorial/)找到更多有用的文章。``
+```
+$ ps -p 2053 -o comm=  $ ps -p 2381 -o comm=
+```
+
+## 结论
+
+在本文中，您了解了如何找出哪个进程在监听特定的端口。因此，在本指南的 3 个建议中选择一个合适的方法。追踪 [Linux 命令](https://eldernode.com/tag/linux-commands-tutorial/)找到更多有用的文章。

@@ -1,26 +1,27 @@
-# LAB 53
 
-# Search Text Files Using Regular Expressions: Extended Regex
+## LAB 53
 
-**Lab Objective:**
+## Search Text Files Using Regular Expressions: Extended Regex
+
+### Lab Objective:
 
 Learn how to use extended regular expressions for complex string pattern matching.
 
-**Lab Purpose:**
+### Lab Purpose:
 
 Regular expressions are a tool used commonly in Linux to match complex patterns in strings and text files. Many tools support regular expressions. With extended regex, metacharacters do not require backslashes.
 
-**Lab Tool:**
+### Lab Tool:
 
 Ubuntu 18.04 (or another distro of your choice)
 
-**Lab Topology:**
+### Lab Topology:
 
 A single Linux machine, or virtual machine
 
-**Lab Walkthrough:**
+### Lab Walkthrough:
 
-*Task 1:*
+#### Task 1:
 
 Open the Terminal application and create a text file first:
 

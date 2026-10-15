@@ -1,20 +1,9 @@
+
 # Octa Marathon 题库：C++ 认证专业程序员：最后冲刺指南
-
-
-
-
-
-
 
 ![](img/c29ca0d812816c404441ad99c4f4d88a_0_0.png)
 
-
-
-
-
-
-
-考试代码：C++ Institute CPP
+考试代码：`C++ Institute CPP`
 
 主题 1，卷 A
 
@@ -141,9 +130,9 @@ return 0;
 }
 ```
 
-- A. 文件 test.out 将以写入模式打开
-- B. 文件 test.out 将截断
-- C. 文件 test.out 将以读取模式打开
+- A. 文件 `test.out` 将以写入模式打开
+- B. 文件 `test.out` 将截断
+- C. 文件 `test.out` 将以读取模式打开
 - D. 编译错误
 - E. 程序将显示序列 1 2 3 4 5 6 7 8 9 10
 
@@ -287,6 +276,8 @@ return 0;
 
 当你尝试编译并运行以下代码时会发生什么？
 
+
+
 ```cpp
 #include <vector>
 #include <iostream>
@@ -362,8 +353,11 @@ return 0;
 - B. 编译
 - C. 可以编译但程序结果不可预测
 - D. 添加代码：
+
 bool operator!=(const A & b) const {
+
 if (this->a != b.a) { return true; } return false; }
+
 在位置 1 处允许程序编译
 
 答案：B
@@ -401,11 +395,6 @@ int main() {
 
 - A. 1 5 9 6 2 4 7 8 3 1
 - B. 编译错误
-
-
-
-
-
 C. 1 2 3 4 5 6 7 8 9 10
 D. 10 9 8 7 6 5 4 3 2 1
 E. 10 5 9 6 2 4 7 8 3 1
@@ -446,6 +435,7 @@ return 0;
 - E. 编译错误
 
 答案：D
+
 解析：
 
 ## 题编号：12
@@ -530,6 +520,8 @@ E. 行 III 编译错误
 
 当你尝试编译并运行以下代码时，会发生什么？
 
+
+
 ```cpp
 #include <iostream>
 #include <algorithm>
@@ -556,7 +548,6 @@ else
     return 0;
 }
 ```
-
 程序输出：
 
 - A. 5
@@ -565,6 +556,7 @@ else
 - D. 编译错误
 
 答案：B
+
 解析：
 
 ## 题编号：15
@@ -602,6 +594,7 @@ int main() {
 - E. 10 9 8 7 6 5 4 3 2 10 9 8 7 6 5 4 3 2
 
 答案：B
+
 解析：
 
 ## 题编号：16
@@ -635,6 +628,7 @@ return 0;
 - E. 编译错误
 
 答案：A
+
 解析：
 
 ## 题编号：17
@@ -677,6 +671,7 @@ return 0;
 - E. 编译错误
 
 答案：C
+
 解析：
 
 ## 题编号：18
@@ -715,6 +710,7 @@ return 0;
 - E. 10 9 8 7 6 5 4 3 2 1 10 9 8 7 6 5 4 3 2
 
 答案：D
+
 解析：
 
 ## 题编号：19
@@ -753,11 +749,14 @@ return 0;
 - E. 1 2 5 0 0 0 0 0 0 0
 
 答案：A
+
 解析：
 
 ## 题编号：20
 
 当你尝试编译并运行以下代码时，会发生什么？
+
+
 
 ```cpp
 #include <iostream>
@@ -786,12 +785,17 @@ return 0;
 ```
 
 A. 程序输出：10596247831110596247831112345678910
+
 B. 程序输出：10596247831110596247831110596247831
+
 C. 程序输出：123456789101234567891012345678910
+
 D. 行 I 编译错误
+
 E. 行 III 编译错误
 
 答案：A
+
 解析：
 
 ## 题编号：21
@@ -834,6 +838,7 @@ else
 - D. 编译错误
 
 答案：B
+
 解析：
 
 ## 题编号：22
@@ -853,9 +858,6 @@ std::cout << *start << " "; start++;
 }
 ```
 
-
-
-
 ```cpp
 int main(){
 
@@ -873,7 +875,9 @@ return 0;
 - B. 程序输出：10 9 8 7 6 5 4 3 2 1 10 9 8 7 6 5 4 3 2 1
 - C. 程序输出：10 9 8 7 6 5 4 3 2 1 以及范围在 1-10 的不可预测数字序列
 - D. 编译错误
+
 答案：D
+
 解释：
 
 # 题目编号：23
@@ -905,7 +909,9 @@ return 0;
 - C. 程序输出：1 1 2 2 3 3 4 4 5 5
 - D. 程序输出：one two three four five
 - E. 程序输出：one one two three three four four five five
+
 答案：B
+
 解释：
 
 # 题目编号：24
@@ -982,6 +988,7 @@ return 0;
 - C. 行 III
 - D. 行 IV
 - E. 行 V
+
 答案：A,B,C,D,E
 
 解释：
@@ -989,6 +996,8 @@ return 0;
 # 题目编号：26
 
 当你尝试编译并运行以下代码时会发生什么？
+
+
 
 ```cpp
 #include <deque>
@@ -1020,11 +1029,7 @@ return
 
 ```
 
-
-
 输出：
-
-
 
 - A. 5 6 7 8 9 10
 - B. 4 5 6 7 8 9 10
@@ -1033,6 +1038,7 @@ return
 - E. 1 2 3 4
 
 答案：A
+
 解释：
 
 # 题目编号：27
@@ -1074,7 +1080,9 @@ return 0;
 - C. 6800000
 - D. 编译错误
 - E. 3468000
+
 答案：E
+
 解释：
 
 # 题目编号：28
@@ -1109,12 +1117,10 @@ return 0;
 - C. 9 7 8 10 6 5 4 3
 - D. 10 8 9 11 7 6 5 4
 - E. 编译错误
+
 答案：C
+
 解释：
-... (rest of the text)
-
-
-
 
 using namespace std;
 
@@ -1149,7 +1155,7 @@ return 0;
 
 解释：
 
-题目编号：35
+# 题目编号：35
 
 当你尝试编译并运行以下代码时会发生什么？
 
@@ -1187,7 +1193,7 @@ return 0;
 
 解释：
 
-题目编号：36
+# 题目编号：36
 
 当你尝试编译并运行以下代码时会发生什么？
 
@@ -1223,7 +1229,7 @@ return 0;
 
 解释：
 
-题目编号：37
+# 题目编号：37
 
 当你尝试编译并运行以下代码时会发生什么：
 
@@ -1254,6 +1260,8 @@ int main()
 # 题目编号：38
 
 当你尝试编译并运行以下代码时会发生什么？
+
+
 
 ```cpp
 #include <iostream>
@@ -1460,8 +1468,12 @@ return 0;
 # 题目编号：44
 
 独立引入哪些更改将允许代码编译并显示
+
 "one" "eight"
+
 "nine" "ten" 请全选
+
+
 
 ```cpp
 #include <iostream>
@@ -1475,7 +1487,7 @@ public:
 A(int a):a(a){}
 int getA() const { return a;}
 /* 插入代码 1 */
-};
+/};
 /* 插入代码 2 */
 
 int main(){
@@ -1549,8 +1561,6 @@ return 0;
 #include <iostream>
 ```
 
-
-
 ```cpp
 #include <algorithm>
 using namespace std;
@@ -1589,9 +1599,10 @@ D. 1234568000
 E. 编译错误
 
 答案：E
+
 解释：
 
-# 题号： 47
+# 题号：47
 
 当你尝试编译并运行以下代码时，会发生什么？
 
@@ -1622,10 +1633,12 @@ int main(){
 - C. 程序输出：0 1 2 3 4 5 6 7 8 9
 - D. 程序输出：0 0 1 11 2 22 3 33 4 44 5 55 6 66 7 77 8 88 9 99
 - E. 编译错误
+
 答案：E
+
 解释：
 
-题号：48
+# 题号：48
 
 假设文件 `test.in` 包含以下序列：1 2 3，当你尝试编译并运行以下代码时，会发生什么？
 
@@ -1646,7 +1659,9 @@ template<class T>struct Out {
 - C. 无输出
 - D. 编译错误
 - E. 程序无限运行无输出
+
 答案：B
+
 解释：
 
 # 题号：49
@@ -1688,8 +1703,12 @@ int main() {
 - C. 3 2 4 1 5 6 7 8 9 10
 - D. 1 2 3 4 5 6 7 8 9 10
 - E. 编译错误
+
 答案：E
+
 解释：
+
+
 
 # 题号：50
 
@@ -1721,7 +1740,9 @@ int main() {
 - B. 1 3 5 7 9
 - C. 2 4 6 8 10
 - D. 编译错误
+
 答案：D
+
 解释：
 
 # 题号：51
@@ -1756,7 +1777,9 @@ int main() {
 - B. 程序输出：1 2 3 4 5 6 7 8 9 10 8 7 6 5 4 3 2
 - C. 程序输出：1 2 3 4 5 6 7 8 9 10 9 8 7 6 5 4 3 2
 - D. 程序输出：1 2 3 4 5 6 7 8 9 10
+
 答案：B
+
 解释：
 
 # 题号：52
@@ -1784,7 +1807,9 @@ int main () {
 - B. 程序输出：Found at position: 0
 - C. 无输出
 - D. 程序输出：Found at position: 10
+
 答案：C
+
 解释：
 
 # 题号：53
@@ -1823,7 +1848,9 @@ int main () {
 - C. 无输出
 - D. 编译错误
 - E. 程序无限运行无输出
+
 答案：A
+
 解释：
 
 # 题号：54
@@ -1858,10 +1885,10 @@ int main () {
 - B. 编译错误
 - C. 程序输出：1 2 3 4 5 0 0 0
 - D. 程序输出：1 2 3 4 5 0 0 0
+
 答案：A
+
 解释：
-
-
 
 ```cpp
 return 0;
@@ -1882,7 +1909,7 @@ return 0;
 
 题目编号：58
 
- 独立引入的哪些更改允许代码通过编译并显示“one” “eight” “nine” “ten”？选择所有适用项。
+独立引入的哪些更改允许代码通过编译并显示“one” “eight” “nine” “ten”？选择所有适用项。
 
 ```cpp
 #include <iostream>
@@ -1898,7 +1925,7 @@ public:
 A(int a):a(a){
 int getA() const { return a; }
 /* 在此处插入代码 1 */
-};
+/};
 /* 在此处插入代码 2 */
 int main() {
 int t[]={ 3, 4, 2, 1, 6, 5, 7, 9, 8, 10 };
@@ -1922,6 +1949,8 @@ return 0;
 - B. 在 Place 1 插入 `bool operator < (const A & b) const { return a.b; }`
 - C. 在 Place 1 插入 `bool operator < (const A & b) const { return b.a<a; }`
 
+
+
 ```cpp
 struct R { bool operator()(const A& a, const A& b) { return a.getA()<b.getA(); }; 插入到
 
@@ -1932,7 +1961,6 @@ Place 2
 将标记为 4 的行替换为 `multimap<A, string, R>::iterator i=m.begin();`
 
 ```
-
 答案：A,B,D
 
 解释：
@@ -1975,7 +2003,7 @@ return 0;
 
 解释：
 
-题目编号：60
+# 题目编号：60
 
 当你尝试编译并运行以下代码时会发生什么？选择所有适用项。
 
@@ -2009,10 +2037,11 @@ cout<<i<<""
 f.close();
 return 0;
 }
+```
 
-- A. 打开 test.out 写入
-- B. test.out 被截断
-- C. 打开 test.out 读取
+- A. 打开 `test.out` 写入
+- B. `test.out` 被截断
+- C. 打开 `test.out` 读取
 - D. 文件未创建或打开
 - E. 程序输出 1 2 3 4 5 6 7 8 9 10
 
@@ -2020,17 +2049,14 @@ return 0;
 
 解释：
 
-题目编号：61
+# 题目编号：61
 
 当你尝试编译并运行以下代码时会发生什么？
 
 ```cpp
 #include <iostream>
-
 #include <string>
-
 using namespace std;
-
 template <class T>
 class A {
 T_v;
@@ -2038,15 +2064,11 @@ public:
 A() {}
 A(T v) : _v(v){}
 T getV() { return _v; }
-
 void add(T & a) { _v+=a; }
-
 void add(string & a) {
 _v.insert(0, a);
 }
-
 ```
-
 ```cpp
 int main()
 {
@@ -2055,7 +2077,6 @@ int main()
   a.add(s);
   cout << a.getV() << endl;
 }
-
 ``````
 
 - A. 程序输出: Hello world!
@@ -2067,7 +2088,7 @@ int main()
 
 解释：
 
-题目编号：62
+# 题目编号：62
 
 当你尝试编译并运行以下代码时会发生什么？
 
@@ -2076,18 +2097,15 @@ int main()
 #include <iostream>
 #include <algorithm>
 ```
-
 ```cpp
 using namespace std;
 template<class T>struct Out {
 stream & out;
 Out(ostream & o): out(o){}
 void operator()}(const T & val ) {
-
 out<<val<<"" }
 };
 ```
-
 ```cpp
 struct Sequence {
 int start;
@@ -2103,7 +2121,6 @@ sort(v2.begin(),v2.end(), less_equal<int>());
 for_each(v2.begin(),v2.end(), Out<int>(cout));cout<<endl;
 return 0;
 }
-
 ```
 
 程序输出：
@@ -2117,7 +2134,7 @@ return 0;
 
 解释：
 
-题目编号：63
+# 题目编号：63
 
 当你尝试编译并运行以下代码时会发生什么？
 
@@ -2134,29 +2151,22 @@ A() const { return a; } void setA(int a) { this->a = a; }
 bool operator < (const A & b) const { return a<b.a; }
 };
 ```
-
 ```cpp
 struct Compare {
 bool operator ()(A & a) {
-
 if (a.getA() < 5) return true;
-
 return false;
 }
 }
 ```
-
 ```cpp
 int main () {
 int t[] = {1,2,3,2,5,1,2,7,3,2,10, 4,45};
 set<A> d (t,t+13);
-
 number = count(d.begin(), d.end(), Compare());
-
 cout << number;
 }
 }
-
 ```
 
 - A. 12
@@ -2169,16 +2179,15 @@ cout << number;
 
 解释：
 
-题目编号：64
+# 题目编号：64
 
-给定三个文件：class.h, class.cpp 和 main.cpp 包含一个小型 C++ 项目，你尝试编译并运行哪个程序？假设环境完全就绪。
+给定三个文件：`class.h`, `class.cpp` 和 `main.cpp` 包含一个小型 C++ 项目，你尝试编译并运行哪个程序？假设环境完全就绪。
 
 // 文件: main.cpp
 ```cpp
 #include <iostream>
 #include "class.h"
 using namespace std;
-
 int main()
 {
 A<int> a;
@@ -2186,7 +2195,6 @@ cout << a.getV() << endl;
 return 0;
 }
 ```
-
 // 文件: class.h
 ```cpp
 #ifndef CLASS_
@@ -2201,7 +2209,6 @@ T getV();
 };
 #endif
 ```
-
 // 文件: class.cpp
 ```cpp
 #include "class.h"
@@ -2218,34 +2225,31 @@ A<T>::getV() { return _v; }
 
 解释：
 
-题目编号：65
+# 题目编号：65
 
 当你尝试编译并运行以下代码时会发生什么？
 
 ```cpp
 #include <iostream>
-
 using namespace std;
-
 template<class A>
 void f(A a)
 {
 cout<<1<<endl;
 }
-
 void f(int a)
 {
 cout<<2<<endl;
 }
-
 int main()
 {
 int a = 1;
 f<float>(a);
 return 0;
 }
-
 ```
+
+
 
 - A. 程序输出: 1
 - B. 程序输出: 2
@@ -2285,7 +2289,6 @@ print(l2.begin(), l2.end()); cout<<"Size:"<<l2.size()<<endl;
 return 0;
 }
 }
-
 ```
 
 - A. 程序输出: 1 4 5 7 8 6 9 0 Size:8 3 2 Size:2
@@ -2307,12 +2310,10 @@ return 0;
 #include <iostream>
 #include <algorithm>
 using namespace std;
-
 template<class T>struct Out {
 ostream & out;
 Out(ostream & o): out(o){}
 void operator())(const T & val ) {
-
 out<<val<<" " ";
 }
 };
@@ -2331,10 +2332,8 @@ unique_copy(v1.begin(),v1.end(), v2.begin());
 for_each(v2.begin(), v2.end(), Out<int>(cout);cout<<endl;
 return 0;
 }
-
+}
 ```
-
-
 
 A. 20 30 10 20 30 20 30 10 20
 B. 30 20 10 0 0 0 0 0 0 0
@@ -2391,9 +2390,6 @@ Answer: D
 
 ...（后续内容以此类推）
 
-
-
-
 ## 问题编号: 81
 
 当你尝试编译并运行以下代码时会发生什么？
@@ -2403,18 +2399,13 @@ Answer: D
 #include <algorithm>
 #include <vector>
 #include <set>
-
 using namespace std;
-
 int main() {
     int t[] = {1,2,3,2,3,5,1,2,7,3,2,1,10,4,4,5};
     vector<int> v1(t, t + 15);
     set<int> s1(t, t + 15);
-
     pair<set<int>::iterator, vector<int>::iterator> resultSet = mismatch(s1.begin(), s1.end(), v1.begin());
-
     cout << resultSet.first << " " << resultSet.second << endl;
-
     return 0;
 }
 ```
@@ -2438,13 +2429,11 @@ D. 编译错误
 #include <set>
 #include <vector>
 using namespace std;
-
 class A {
     int a;
 public:
     A(int a):a(a){}
     int getA() const { return a;}
-
     /* 在此处插入代码 1 **/
 };
 /* 在此处插入代码 2 **/
@@ -2467,10 +2456,10 @@ int main() {
 }
 ```
 
-A. 在位置 1 插入 operator int() const { return a; }
-B. 在位置 1 插入 bool operator < (const A & b) const { return a < b; }
-C. 在位置 1 插入 bool operator < (const A & b) const { return b < a; }
-D. 在位置 2 插入 struct R { bool operator ()(const A & a, const A & b) { return a.getA()<b.getA(); }; }，并替换标记为 3 的行变为 `set<A,R>s(t, t+10);`，替换标记为 4 的行变为 `multiset<A,R> s1(s.begin(),s.end());`，替换标记为 5 的行变为 `multiset<A,R>::iterator i=s1.begin();`
+A. 在位置 1 插入 `operator int() const { return a; }`
+B. 在位置 1 插入 `bool operator < (const A & b) const { return a < b; }`
+C. 在位置 1 插入 `bool operator < (const A & b) const { return b < a; }`
+D. 在位置 2 插入 `struct R { bool operator ()(const A & a, const A & b) { return a.getA()<b.getA(); }; }`，并替换标记为 3 的行变为 `set<A,R>s(t, t+10);`，替换标记为 4 的行变为 `multiset<A,R> s1(s.begin(),s.end());`，替换标记为 5 的行变为 `multiset<A,R>::iterator i=s1.begin();`
 
 答案：A,B,D
 
@@ -2485,7 +2474,15 @@ D. 在位置 2 插入 struct R { bool operator ()(const A & a, const A & b) { re
 #include <iostream>
 #include <algorithm>
 using namespace std;
+```
 
+
+
+## 问题编号: 84
+
+当你尝试编译并运行以下代码时会发生什么？选择所有适用项。
+
+```cpp
 template<class T>
 struct Out {
     ostream & out;
@@ -2558,9 +2555,9 @@ int main () {
 }
 ```
 
-A. 打开 test.out
-B. test.out 被截断
-C. 打开 test.out 读取
+A. 打开 `test.out`
+B. `test.out` 被截断
+C. 打开 `test.out` 读取
 D. 既未创建也打开
 E. 程序显示 1 2 3 4 5 6 7 8 9 10
 
@@ -2600,9 +2597,6 @@ int main() {
 (sort(.begin(), v1.end. greater<B>());
     cout<<*min_element(v..(),(),(),1..());());
 return 0;
-
-
-
 ```
 
 ：
@@ -2622,7 +2616,6 @@ E. 编译错误
 #include <string>
 #include <sstream>
 #include <iomanip>
-
 using namespace std;
 
 int main () {
@@ -2723,8 +2716,14 @@ int main() {
     generate_n(v1.begin(), 10, Sequence(1));
     random_shuffle(v1.rbegin(), v1.rend());
     sort(v1.begin(), v1.end(), greater<int>());
-    for_each(v1.begin(), v1.end(), Out<int>(cout<<endl));
-    return 0;
+
+
+
+```cpp
+for_each(v1.begin(), v1.end(), Out<int>(cout<<endl));
+
+return 0;
+
 }
 ```
 
@@ -2747,11 +2746,9 @@ D. 10 9 8 7 6 5 4 3 2 1
 #include <algorithm>
 #include <map>
 using namespace std;
-
 void myfunction(pair<int, int> i) {
     cout << "" << i.first;
 }
-
 int main() {
     int t[] = { 10, 5, 9, 6, 2, 4, 7, 8, 3, 1 };
     map<int, int> m;
@@ -2781,7 +2778,6 @@ E. 编译错误
 ```cpp
 #include <iostream>
 using namespace std;
-
 int main()
 {
     cout<<true<<boolalpha<<false;
@@ -2800,21 +2796,17 @@ E. 编译错误
 
 解释：
 
-
-
 ```cpp
 for_each(v1.begin(), v1.end(), Out<B>(cout));cout<<endl;
-
 return 0;
 }
 ```
 
 程序输出：
-
--   A. 8 10 5 1 4 2 7 9 3
--   B. 1 2 3 4 5 6 7 8 9 10
--   C. 编译错误
--   D. 10 9 8 7 6 5 4 3 2 1
+- A. 8 10 5 1 4 2 7 9 3
+- B. 1 2 3 4 5 6 7 8 9 10
+- C. 编译错误
+- D. 10 9 8 7 6 5 4 3 2 1
 
 答案: B
 
@@ -2834,7 +2826,6 @@ int val;
 public:
 F(int v):val(v){}
 ```
-
 ```cpp
 bool operator() (int v) {
   if (v == val) return true;
@@ -2842,9 +2833,7 @@ bool operator() (int v) {
 }
 ;
 ```
-
 int main() {
-
 ```cpp
 int t[] = { 10, 5, 9, 6, 2, 4, 7, 8, 3, 1 };
 vector<int> v1(t, t + 10);
@@ -2857,10 +2846,10 @@ return 0;
 }
 ```
 
--   A. 它将成功编译
--   B. 它将显示 Found!
--   C. 它将显示 Not found!
--   D. 它将无法成功编译
+- A. 它将成功编译
+- B. 它将显示 Found!
+- C. 它将显示 Not found!
+- D. 它将无法成功编译
 
 答案: D
 
@@ -2880,7 +2869,6 @@ int main ()
 vector<int>v1;
 deque<int>d1;
 for(int i=0; i<5; i++)
-
 {
 v1.push_back(i);v1.push_front(i);
 d1.push_back(i);d1.push_front(i);
@@ -2895,10 +2883,9 @@ return 0;
 ```
 
 它的输出将：
-
--   A. 4433222100001223344
--   B. 因第11行导致运行时异常错误
--   C. 因第12行导致编译错误
+- A. 4433222100001223344
+- B. 因第11行导致运行时异常错误
+- C. 因第12行导致编译错误
 
 答案: C
 
@@ -2920,22 +2907,18 @@ return b == 2*a?true:false;
 int main() {
 int t[] = {1,2,3,2,3,5,1,2,7,3,2,1,10, 4,4,5};
 ```
-
 ```cpp
 int u[] = {2,4,6,4,6,10,2,14,6,4,20,8,8,5};
 vector<int> v1(t, t + 15);
 deque<int> d1(u, u + 15);
 ```
-
 ```cpp
 pair<deque<int>::iterator, vector<int>::iterator > result;
 result = mismatch(d1.begin(), d1.end(), v1.begin(), identical); //Line I
 if (result.first == d1.end() && result.second == v1.end())//Line II
-
 ```cpp
 cout<<"Identical\n";
 } else {
-
 cout<<"Not identical\n";
 }
 return 0;
@@ -2943,11 +2926,10 @@ return 0;
 ```
 
 程序输出：
-
--   A. Identical
--   B. Not identical
--   C. I行编译错误
--   D. II行编译错误
+- A. Identical
+- B. Not identical
+- C. I行编译错误
+- D. II行编译错误
 
 答案: B
 
@@ -2961,24 +2943,21 @@ return 0;
 #include <iostream>
 #include <string>
 using namespace std;
-
 int main ()
 {
 bool a,b;
 cin>>a>>b;
-
 cout<<a<<b;
 return 0;
 }
 ```
 
 程序输出：
-
--   A. true
--   B. true0
--   C. false
--   D. 10
--   E. 以上都不是
+- A. true
+- B. true0
+- C. false
+- D. 10
+- E. 以上都不是
 
 答案: D
 
@@ -2992,9 +2971,7 @@ return 0;
 #include <vector>
 #include <iostream>
 #include <algorithm>
-
 using namespace std;
-
 class B { int val;
 public:
 B(int v):val(v){}
@@ -3014,11 +2991,10 @@ return 0;
 ```
 
 程序输出：
-
--   A. 8 10 5 1 4 6 7 9 3
--   B. 1 2 3 4 5 6 7 8 9 10
--   C. 编译错误
--   D. 10 9 8 7 6 5 4 3 2 1
+- A. 8 10 5 1 4 6 7 9 3
+- B. 1 2 3 4 5 6 7 8 9 10
+- C. 编译错误
+- D. 10 9 8 7 6 5 4 3 2 1
 
 答案: C
 
@@ -3027,6 +3003,8 @@ return 0;
 ## 题号: 97
 
 尝试编译并运行以下代码会发生什么？
+
+
 
 ```cpp
 #include <iostream>
@@ -3059,10 +3037,10 @@ int main()
 }
 ```
 
--   A. 程序显示:10
--   B. 程序无法编译
--   C. 程序将编译
--   D. 程序将无输出
+- A. 程序显示:10
+- B. 程序无法编译
+- C. 程序将编译
+- D. 程序将无输出
 
 答案: B
 
@@ -3103,12 +3081,11 @@ return 0;
 ```
 
 程序输出：
-
--   A. 3 2 4 1 5 6 10 8 7 9
--   B. 4 3 5 2 6 7 11 9 8 10
--   C. 9 7 8 10 6 5 1 4 2 3
--   D. 10 8 9 11 7 6 2 5 3 4
--   E. 编译错误
+- A. 3 2 4 1 5 6 10 8 7 9
+- B. 4 3 5 2 6 7 11 9 8 10
+- C. 9 7 8 10 6 5 1 4 2 3
+- D. 10 8 9 11 7 6 2 5 3 4
+- E. 编译错误
 
 答案: C
 
@@ -3148,12 +3125,11 @@ return 0;
 ```
 
 程序输出：
-
--   A. Found at position: 5
--   B. Found at position: 0
--   C. Found at position: 7
--   D. 编译错误
--   E. Found at position: 10
+- A. Found at position: 5
+- B. Found at position: 0
+- C. Found at position: 7
+- D. 编译错误
+- E. Found at position: 10
 
 答案: B
 
@@ -3187,12 +3163,11 @@ return 0;
 ```
 
 程序输出：
-
--   A. 8 10 5 1 4 6 2 7 9 3
--   B. 4 5 6 7 8 9 10
--   C. 1 2 3 4 5 6 7 9 10
--   D. 编译错误
--   E. 1 2 4
+- A. 8 10 5 1 4 6 2 7 9 3
+- B. 4 5 6 7 8 9 10
+- C. 1 2 3 4 5 6 7 9 10
+- D. 编译错误
+- E. 1 2 4
 
 答案: D
 
@@ -3227,12 +3202,11 @@ return 0;
 ```
 
 程序输出：
-
--   A. 10 10 10 20 20 20 30 30 30
--   B. 20 20 20
--   C. 10 20 20 20
--   D. 20 20 20 30 30
--   E. 10 20 20 20 30
+- A. 10 10 10 20 20 20 30 30 30
+- B. 20 20 20
+- C. 10 20 20 20
+- D. 20 20 20 30 30
+- E. 10 20 20 20 30
 
 答案: B
 
@@ -3241,6 +3215,8 @@ return 0;
 ## 题号: 102
 
 尝试编译并运行以下代码会发生什么？
+
+
 
 ```cpp
 #include <iostream>
@@ -3266,22 +3242,24 @@ return 0;
 }
 ```
 
--   A. 程序输出: 10 0
+- A. 程序输出: 10 0
+
 10 0
 
--   B. 程序输出: 0 0
+- B. 程序输出: 0 0
+
 0 0
 
--   C. 程序输出: 10 10
+- C. 程序输出: 10 10
+
 10 10
 
-
-
-
 D. 程序输出: 10 0 0 10
+
 E. 编译错误
 
 答案: E
+
 解释:
 
 # 题目编号: 103
@@ -3327,8 +3305,11 @@ return 0;
 ```
 
 A. 编译错误
+
 B. 程序输出: 9 8 7 6 5 4 3 2 1 0 9 8 7 6 5 4 3 2 1 0
+
 C. 程序输出: 9 8 7 6 5 4 3 2 1 0 1 2 3 4 5 6 7 8 9 0
+
 D. 程序输出: 3 4 2 1 6 5 7 9 8 0 3 4 2 1 6 5 7 9 8 0 0
 
 答案: B
@@ -3367,9 +3348,13 @@ return 0;
 选择所有可能的输出（所有适用项）：
 
 - A. 1 0
+
 - B. 1 1
+
 - C. true false
+
 - D. false false
+
 - E. 编译错误
 
 答案: A,B
@@ -3413,12 +3398,17 @@ return 0;
 程序输出:
 
 - A. 1 2 3 4 5 6 7 8 9 10
+
 - B. 2 3 4 5 6 7 8 9 10 11
+
 - C. 10 9 8 7 6 5 4 3 2 1
+
 - D. 11 10 9 8 7 6 5 4 3 2
+
 - E. 编译错误
 
 答案: E
+
 解释:
 
 # 题目编号: 106
@@ -3445,11 +3435,17 @@ return 0;
 程序将输出:
 
 - A. 123
+
 - B. 1 2 3
+
 - C. 321
+
 - D. 编译错误
+
 - E. 结果未定义
+
 答案: A
+
 解释:
 
 # 题目编号: 107
@@ -3482,17 +3478,24 @@ return 0;
 ```
 
 - A. 程序输出: zero one two three four six seven
+
 - B. 程序输出: ten one two three five seven
+
 - C. 程序输出: zero eleven two three five seven
+
 - D. 程序输出: ten eleven two three five seven
+
 - E. 程序输出: 0 1 2 3 4 5 6 7
 
 答案: B
+
 解释:
 
 # 题目编号: 108
 
 当你尝试编译并运行以下代码时会发生什么，假设你输入序列：1 2 3<enter>？
+
+
 
 ```cpp
 #include <iostream>
@@ -3519,14 +3522,20 @@ int main ()
 程序将输出:
 
 - A. 1 2 3
+
 - B. 1 2 3
+
 - C. 0x1 0x2 0x3
+
 - D. 0x1 0x2 0x3
+
 - E. 程序无限循环
+
 答案: B
+
 解释:
 
-# 题目编号: 109
+## 题目编号: 109
 
 当你尝试编译并运行以下代码时会发生什么？
 
@@ -3551,13 +3560,18 @@ cout<< number;
 程序输出:
 
 - A. 4
+
 - B. 3
+
 - C. 2
+
 - D. 0
-答案  编译错误
+
+答案 编译错误
+
 解释:
 
-# 题目编号: 110
+## 题目编号: 110
 
 当你尝试编译并运行以下代码时会发生什么？
 
@@ -3590,14 +3604,20 @@ return 0;
 程序输出:
 
 - A. 1 0
+
 - B. 1 1
+
 - C. true true
+
 - D. false false
+
 - E. 编译错误
+
 答案: E
+
 解释:
 
-# 题目编号: 111
+## 题目编号: 111
 
 当你尝试编译并运行以下代码时会发生什么？
 
@@ -3626,14 +3646,20 @@ int main ()
 ```
 
 - A. 程序输出 10 11
+
 - B. 结果不可预测的
+
 - C. 程序输出 10 0
+
 - D. 程序输出 11 0
+
 - E. 编译错误
+
 答案: B
+
 解释:
 
-# 题目编号: 112
+## 题目编号: 112
 
 当你尝试编译并运行以下代码时会发生什么？
 
@@ -3666,14 +3692,20 @@ return 0;
 程序输出:
 
 - A. 1 2 3 4 5 6 7 8 9 10
+
 - B. 2 3 4 5 6 7 8 9 10 11
+
 - C. 10 9 8 7 6 5 4 3 2 1
+
 - D. 11 10 9 8 7 6 5 4 3 2
+
 - E. 编译错误
+
 答案: E
+
 解释:
 
-# 题目编号: 113
+## 题目编号: 113
 
 当你尝试编译并运行以下代码时会发生什么：
 
@@ -3701,14 +3733,20 @@ return 0;
 程序输出:
 
 - A. 6 8 3 4 0 0 0 0 0
+
 - B. 3 4 0 0 0 0 0 0 0
+
 - C. 6 8 0 0 0 0 0 0 0
--  D. 编译错误
+
+- D. 编译错误
+
 - E. 3 4 6 8 0 0 0 0 0
+
 答案: E
+
 解释:
 
-# 题目编号: 114
+## 题目编号: 114
 
 当你尝试编译并运行以下代码时会发生什么，假设在程序执行之前文件 test.out 已经存在？
 
@@ -3716,8 +3754,6 @@ return 0;
 #include <iostream>
 #include <fstream>
 ```
-
-
 
 ```cpp
 #include <string>
@@ -3734,6 +3770,8 @@ struct Out {
 };
 ```
 
+
+
 ```cpp
 int main () {
     int t[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
@@ -3745,10 +3783,10 @@ int main () {
 }
 ```
 
-- A. 将创建并打开文件 test.out 用于写入
-- B. 将创建并打开文件 test.out 用于读取
+- A. 将创建并打开文件 `test.out` 用于写入
+- B. 将创建并打开文件 `test.out` 用于读取
 - C. 既创建也不打开文件
-- D. 文件 test.out 将包含序列 1 2 3 4 5 6 7 8 9 10
+- D. 文件 `test.out` 将包含序列 1 2 3 4 5 6 7 8 9 10
 - E. 编译错误
 
 答案: C
@@ -3797,7 +3835,7 @@ int main () {
 
 题目编号: 116
 
-下述代码中的哪些行包含了 queue 对象的正确实例化？
+下述代码中的哪些行包含了 `queue` 对象的正确实例化？
 
 ```cpp
 #include <iostream>
@@ -3826,6 +3864,7 @@ int main()
 - C. 行 III
 - D. 行 IV
 - E. 行 V
+
 答案: A,B,C
 
 解释：
@@ -3917,6 +3956,7 @@ A. 程序将显示: 2
 B. 程序无法编译
 C. 程序可以编译
 D. 程序将导致异常
+
 答案: B
 
 解释：
@@ -3946,17 +3986,19 @@ A. 编译错误
 B. 程序输出 0 1 2 3 4
 C. 程序输出 0 2 4 异常
 D. 程序输出 0 2 4 8
+
 答案: C
 
 题目编号: 20
 
 哪些关键字可以定义模板参数？请选择所有答案：
 
-A. class
-B. typedef
-C. typename
-D. static
-E. volatile
+A. `class`
+B. `typedef`
+C. `typename`
+D. `static`
+E. `volatile`
+
 答案: A,C
 
 解释：
@@ -3978,6 +4020,7 @@ B. 000
 C. 20
 D. 000
 E. 26
+
 答案: D
 
 题目编号: 22
@@ -4007,11 +4050,14 @@ B. 程序输出: 0 5
 C. 程序输出: 0
 D. 编译错误
 E. 程序无限运行
+
 答案: E
 
 题目编号: 23
 
 当你尝试编译并运行以下代码时，会发生什么？
+
+
 
 ```cpp
 #include <vector>
@@ -4047,10 +4093,15 @@ int main() {
 程序输出：
 
 A. 1 2 3 4 5 6 7 8 9 10 11
+
 B. 2 3 4 5 6 7 8 9 10 11
+
 C. 10 9 8 7 6 5 4 3 2 1
+
 D. 11 10 9 8 7 6 5 4 3 2
+
 E. 编译错误
+
 答案: D
 
 题目编号: 24
@@ -4087,17 +4138,19 @@ int main ()
 程序输出：
 
 A. 10.1
+
 B. 10
+
 C. 10.12
+
 D. 10
+
 10
 
 题目编号: 26
 
 ```题目
 ## 以下代码时，会发生什么？
-
-
 
 int main() {
     int t[] = { 10, 5, 9, 6, 2, 4, 7, 8, 3, 1 };
@@ -4112,8 +4165,6 @@ int main() {
 
 ```题目
 ## 以下代码时，会发生什么？
-
- 
 
 #include <iostream>
 #include <algorithm>
@@ -4133,10 +4184,7 @@ int main() {
 }
 ```
 
-(注：由于原文文本在第26题后存在大量截断和格式混乱，翻译已根据上下文对可识别部分进行了逻辑还原)
-
-
-
+注：由于原文文本在第26题后存在大量截断和格式混乱，翻译已根据上下文对可识别部分进行了逻辑还原
 
 解释：
 
@@ -4178,9 +4226,13 @@ return 0;
 程序输出：
 
 +   A. 1 2 3 4 5 6 10 8 7 9
+
 B. 3 2 4 1 5 6 7 8 9 10
+
 C. 3 2 4 1 5 6 10 8 7 9
+
 D. 1 2 3 4 5 6 7 8 9 10
+
 E. 编译错误
 
 答案：D
@@ -4212,9 +4264,13 @@ return 0;
 输出将是：
 
 +   A. 0 0 1 1 8 8 9 9
+
 B. 0 1 8 9
+
 C. 2 3 4 5 6 7
+
 D. 3 4 9 8 0
+
 E. 3 3 4 4 9 9 8 8 0 0
 
 答案：A
@@ -4224,6 +4280,8 @@ E. 3 3 4 4 9 9 8 8 0 0
 题编号： 131
 
 当你尝试编译并运行以下代码时会发生什么？
+
+
 
 ```cpp
 #include <deque>
@@ -4248,17 +4306,19 @@ int t[] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
 }
 ```
 
+### 题编号：132
+当你尝试编译并运行以下代码时会发生什么？
+
 A. 输出为 10 10 10 12 12 20 20
-B. reserve 和 resize 相同
+B. `reserve` 和 `resize` 相同
 C. 编译错误
-D. capacity 总是更小
+D. `capacity` 总是更小
 
 答案：C
 
 解释：
 
-题编号： 132
-
+### 题编号：133
 当你尝试编译并运行以下代码时会发生什么？
 
 ```cpp
@@ -4300,8 +4360,7 @@ C. 程序输出：10 11 12
 
 解释：
 
-题编号： 133
-
+### 题编号：134
 当你尝试编译并运行以下代码时会发生什么？
 
 ```cpp
@@ -4344,8 +4403,7 @@ E. 编译错误
 
 解释：
 
-题编号： 134
-
+### 题编号：135
 当你尝试编译并运行以下代码时会发生什么？
 
 ```cpp
@@ -4386,8 +4444,7 @@ return 0;
 
 解释：
 
-题编号： 135
-
+### 题编号：137
 当你尝试编译并运行以下代码时会发生什么，假设你输入了以下序列：
 
 ```cpp
@@ -4424,9 +4481,8 @@ return 0;
 
 解释：
 
-题编号： 137
-
-哪些是 priority_queue 对象的有效实例化：
+### 题编号：138
+哪些是 `priority_queue` 对象的有效实例化：
 
 ```cpp
 #include <iostream>
@@ -4437,11 +4493,15 @@ return 0;
 using namespace std;
 ```
 
-priority_queue<int, deque<int>> first;//行 I
-priority_queue<int, list<int>> second;//行 II
-priority_queue<int> third(first);//行 III
-priority_queue<int, vector<int>> fourth(third);//行 IV
-priority_queue<int> fifth(myvector.begin(),myvector.end());//行 V
+`priority_queue<int, deque<int>> first;//行 I`
+
+`priority_queue<int, list<int>> second;//行 II`
+
+`priority_queue<int> third(first);//行 III`
+
+`priority_queue<int, vector<int>> fourth(third);//行 IV`
+
+`priority_queue<int> fifth(myvector.begin(),myvector.end());//行 V`
 
 A. 行 I
 B. 行 II
@@ -4452,9 +4512,7 @@ D. 行 IV
 
 解释：
 
-题编号： 138
 
-当你尝试编译并运行以下代码时会发生什么？
 
 ```cpp
 #include <iostream>
@@ -4477,8 +4535,11 @@ int main(){
 ```
 
 A. 程序输出：0 0 1 1 8 8 9 9
+
 B. 程序输出：2 3 4 5 6 7
+
 C. 程序输出：1 6 5 7
+
 D. 程序输出：3 4 9 8 0
 
 答案：A
@@ -4514,7 +4575,6 @@ l.push_back(s);
 }
 ```
 
-
 ```cpp
 }
 for_each(l.begin(), l.end(), Out<string>(cout));
@@ -4525,8 +4585,11 @@ return 0;
 程序将输出：
 
 - A. 1 2 3 4
+
 - B. 1 2 3 4 quit
+
 - C. 1
+
 - D. 程序无限运行无输出
 
 答案：A
@@ -4567,8 +4630,11 @@ int main() {
 程序输出：
 
 - A. 20 10 18 12 4 8 14 16 6 2
+
 - B. 2 4 6 8 10 12 14 16 18 20
+
 - C. 4 8 12 16 20 24 28 32 36 40
+
 - D. 编译错误
 
 答案：D
@@ -4603,9 +4669,13 @@ int main() {
 程序输出：
 
 - A. 3 2 4 1 5 6 1 0 8 7 9
+
 - B. 4 3 5 2 6 7 11 9 8 10
+
 - C. 9 7 8 10 6 5 1 4 2 3
+
 - D. 10 8 9 11 7 6 2 5 3 4
+
 - E. 编译错误
 
 答案：C
@@ -4646,8 +4716,11 @@ int main()
 ```
 
 - A. 程序显示：11
+
 - B. 程序无法编译
+
 - C. 程序可以编译
+
 - D. 程序运行时异常
 
 答案：A,C
@@ -4688,8 +4761,11 @@ int main ()
 创建了多少个 A 对象？
 
 - A. 10
+
 - B. 20
+
 - C. 30
+
 - D. 40
 
 答案：D
@@ -4716,9 +4792,13 @@ int main()
 程序输出：
 
 - A. 64 21
+
 - B. 64 21 0x64
+
 - C. 0x64 21 0x64
+
 - D. 100 33
+
 - E. 编译错误
 
 答案：D
@@ -4728,6 +4808,8 @@ int main()
 # 题目编号： 145
 
 当你尝试编译并运行以下代码时会发生什么？
+
+
 
 ```cpp
 #include <list>
@@ -4765,7 +4847,7 @@ int main() {
 
 解释：
 
-# 题目编号： 146
+# 题目编号：146
 
 当你尝试编译并运行以下代码时会发生什么？
 
@@ -4794,7 +4876,7 @@ int main()
 
 解释：
 
-# 题目编号： 147
+# 题目编号：147
 
 当你尝试编译并运行以下代码时会发生什么？
 
@@ -4839,7 +4921,7 @@ int main() {
 
 解释：
 
-# 题目编号： 148
+# 题目编号：148
 
 当你尝试编译并运行以下代码时会发生什么？
 
@@ -4886,7 +4968,7 @@ int main() {
 
 解释：
 
-# 题目编号： 149
+# 题目编号：149
 
 当你尝试编译并运行以下代码时会发生什么？
 
@@ -4929,7 +5011,7 @@ int main() {
 
 解释：
 
-# 题目编号： 150
+# 题目编号：150
 
 当你尝试编译并运行以下代码时会发生什么？
 
@@ -4947,6 +5029,8 @@ public:
   B operator?(const B &b)const { return B(val ? b.val); }
 };
 ```
+
+
 
 ```cpp
 ostream & operator <<(ostream & out, const B & v) { out<<v.getV(); return out; }
@@ -4979,12 +5063,11 @@ int main() {
 
 解释：
 
-# 题目编号： 151
+## 题目编号：151
 
 当你尝试编译并运行以下代码时会发生什么？
+
 #include <iostream>
-
-
 
 ```cpp
 #include <algorithm>
@@ -5022,7 +5105,7 @@ int main() {
 
 解析：
 
-# 题目编号: 152
+## 题目编号: 152
 
 当你尝试编译并运行以下代码时，会发生什么：
 
@@ -5060,7 +5143,7 @@ int main () {
 
 解析：
 
-题目编号: 153
+## 题目编号: 153
 
 当你尝试编译并运行以下代码时，会发生什么？
 
@@ -5117,7 +5200,7 @@ int main() {
 
 解析：
 
-题目编号: 154
+## 题目编号: 154
 
 当你尝试编译并运行以下代码时，会发生什么：
 
@@ -5153,9 +5236,11 @@ int main() {
 
 解析：
 
-题目编号: 155
+## 题目编号: 155
 
 当你尝试编译并运行以下代码时，会发生什么？
+
+
 
 ```cpp
 #include <iostream>
@@ -5184,9 +5269,13 @@ int main() {
 程序输出：
 
 - A. 输出 one two three four five six seven ten 1
+
 - B. 输出 one two three four five six seven ten 10
+
 - C. 输出 one two three four five six seven ten 10
+
 - D. 输出 eleven one two three four five six seven ten 10
+
 - E. 运行时异常
 
 答案：A
@@ -5221,8 +5310,11 @@ int main(){
 输出将：
 
 - A. 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9
+
 - B. 9 8 7 6 5 4 3 2 1 0 9 8 7 6 5 4 3 2 1
+
 - C. 0 1 2 3 4 5 6 7 8 9 9 8 7 6 5 4 3 2 1 0
+
 - D. 9 8 7 6 5 4 3 2 1 0 0 1 2 3 4 5 6 7 8 9
 
 答案：D
@@ -5254,9 +5346,13 @@ int main () {
 程序输出：
 
 - A. 输出: 2 3
+
 - B. 输出: 2 7
+
 - C. 输出: 3 8
+
 - D. 编译错误
+
 - E. 程序死循环
 
 答案：B
@@ -5289,9 +5385,13 @@ int main ()
 程序输出：
 
 - A. 输出 5 4 3 2 1
+
 - B. 输出 1 2 3 4 5
+
 - C. 第8行编译错误
+
 - D. 第10行编译错误
+
 - E. 段错误运行时异常
 
 答案：E
@@ -5318,8 +5418,11 @@ int main ()
 程序输出：
 
 - A. 10.13
+
 - B. 10.12
+
 - C. 10.126
+
 - D. 10.13
 
 答案：C
@@ -5347,8 +5450,11 @@ int main()
 程序输出：
 
 - A. 10.13 10.0
+
 - B. 10.12 10.0
+
 - C. 10.126 10
+
 - D. 10.13 10
 
 答案：D
@@ -5389,8 +5495,11 @@ int main(){
 ```
 
 - A. 在位置1处插入 `operator int() const { return a; }`
+
 - B. 在位置1处插入 `bool operator < (const A & b) const { return a<b; }`
+
 - C. 在位置1处插入 `bool operator < (const A & b) const { return b.a; }`
+
 - D. 在位置2处插入 `bool operator < (const A & a, const A & b) { return a.getA()<b.getA(); }`
 
 答案：A,B,D
@@ -5400,6 +5509,8 @@ int main(){
 题目编号: 162
 
 当你尝试编译并运行以下代码时，会发生什么？
+
+
 
 ```cpp
 #include <iostream>
@@ -5457,6 +5568,7 @@ int main() {
 ```
 
 程序输出：
+
 - A. 5 6 7 8 9 10
 - B. 4 5 6 7 8 9 10
 - C. 1 2 3 4 5 6 7 8 9 10
@@ -5506,6 +5618,7 @@ int main() {
 ```
 
 程序输出：
+
 - A. 1 2 3 4 5 6 8 0 0 0
 - B. 3 4 0 0 0 0 0 0 0
 - C. 6 8 0 0 0 0 0 0 0
@@ -5564,11 +5677,13 @@ int main() {
 ```
 
 程序输出：
+
 - A. 1.66 1.32 1.96 1.13 2.28 2.3 2.98 2.62 3.64 3.94
 - B. 1.66 1.32 1.96 1.13 2.28 2.3 2.98 2.62 3.64 3.94
 - C. 1.66 1.32 1.96 1.13 2.28 2.3 2.98 2.62 3.64 3.94
 - D. 1.66 1.32 1.96 1.13 2.28 2.3 2.98 2.62 3.64 3.94
 - E. 1.66 1.32 1.96 1.13 2.28 2.3 2.98 2.62 3.64 3.94
+
 *(注：由于原文提供的选项内容存在重复或不完整，此处按逻辑翻译，实际输出结果取决于 `stable_sort` 对整数转换后值的稳定性处理)*
 
 *(修正：原文提供的选项文本较为杂乱，此处根据题意翻译逻辑)*
@@ -5577,6 +5692,439 @@ int main() {
 
 解释：
 
+程序输出：
+
+A. 9 12 12 8 14
+B. 14 8 12 12 9
+C. 3 2 4 1 5 6 10 8 7 9
+D. 1 2 3 4 5 6 7 8 9 10
+E. 编译错误
+
+答案：E
+
+解释：
+
+# 题目编号：173
+
+当你尝试编译并运行以下代码时，程序的输出是什么？
+
+```cpp
+#include <iostream>
+#include <map>
+#include <vector>
+#include <string>
+using namespace std;
+int main(){
+int second[] = { 3, 4, 2, 1, 6, 5, 7, 9, 8, 0 };
+string first[] = {"three", "four", "two", "one", "six", "five", "seven", "nine", "eight", "zero"};
+multimap<int,string> m;
+```
+
+
+
+```cpp
+for(int i=0; i<10; i++) {
+    m.insert(pair<int,string>(second[i],first[i]));
+}
+m[0]="ten";
+m.insert(pair<int,string>(1,"eleven"));
+for(multimap<int,string>::iterator i=m.begin();i!=m.end(); i++) {
+    cout<<i?"second<<" ";
+}
+return 0;
+}
+```
+
+- A. zero one two three four five six seven eight nine
+- B. ten one two three four five six seven eight nine
+- C. zero eleven two three four five six seven eight nine
+- D. ten eleven two three four five six seven eight nine
+- E. 编译错误
+
+答案：E
+
+解释：
+
+## 题目编号：174
+
+当你尝试编译并运行以下代码时，会发生什么：
+
+```cpp
+#include <iostream>
+using namespace std;
+```
+
+```cpp
+template<class A>
+void f(A &a)
+{
+  cout<<1<<endl;
+}
+```
+
+```cpp
+void f(int &a)
+{
+  cout<<2<<endl;
+}
+```
+
+```cpp
+int main()
+{
+  int a = 1;
+  f(a);
+  return 0;
+}
+```
+
+- A. 程序显示：1
+- B. 程序显示：2
+- C. 编译错误
+- D. 运行时异常
+
+答案：B
+
+解释：
+
+## 题目编号：175
+
+当你尝试编译并运行以下代码时，会发生什么：
+
+```cpp
+#include <iostream>
+#include <algorithm>
+#include <vector>
+using namespace std;
+int main () {
+int t[] = {1,2,3,4,5,1,2,3,4,5};
+vector<int> v (t,t+10);
+vector<int>::iterator it;
+int m1[] = {1, 3, 2};
+it = find_first_of (v.begin(), v.end(), m1+3);
+cout << "First found at position: " << it?v.begin() << endl;
+return 0;
+}
+```
+
+- A. 程序输出：First found at position: 5
+- B. 程序输出：First found at position: 0
+- C. 程序输出：First found at position: 6
+- D. 程序输出：First found at position: 1
+- E. 程序输出：First found at position: 10
+
+答案：B
+
+解释：
+
+## 题目编号：176
+
+当你尝试编译并运行以下代码时，会发生什么？
+
+```cpp
+#include <iostream>
+#include <map>
+using namespace std;
+int main() {
+int t[] = { 1, 1, 2, 2, 3, 3, 4, 4, 5, 5 };
+string s[] = { "one", "one", "two", "two", "three", "three", "four", "four", "five", "five" };
+multimap<int, string> m;
+for (int i = 0; i < 10; i++) {
+m.push_back(pair<int, string>(t[i], s[i]));
+}
+for (multimap<int, string>::iterator i = m.begin(); i != m.end(); i++) {
+cout << i->first << " " << i->second << "";
+}
+return 0;
+}
+```
+
+- A. 程序输出：1 2 3 4 5
+- B. 编译错误
+- C. 程序输出：1 2 3 4 5
+- D. 程序输出：one two three
+- E. 程序输出：one two three five
+
+答案：B
+
+解释：
+
+## 题目编号：177
+
+当你尝试编译并运行以下代码时会发生什么？（多选）
+
+```cpp
+#include <deque>
+#include <vector>
+#include <iostream>
+using namespace std;
+class A
+{
+    int a;
+public:
+    A(int a) {this->a = a; }
+    A(const A & a) {this->a = a; }
+    ~A() { }
+    static int c;
+};
+int A::c(0);
+int main ()
+{
+A* t[] = {new A(1), new A(2), new A(3), new A(4), new A(5)};
+vector<A*> v1(t, t+5);
+deque<A*> d1(v1.begin(), v1.end());
+d1.clear();
+v1.clear();
+cout<<A::c<< endl;
+return 0;
+}
+```
+
+- A. 创建了 15 个 A
+- B. 创建了 5 个 A
+- C. 所有对象都调用了析构函数
+- D. 程序显示 5
+
+答案：B,D
+
+解释：
+
+## 题目编号：178
+
+当你尝试编译并运行以下代码时会发生什么？
+
+```cpp
+#include <list>
+#include <iostream>
+using namespace std;
+template<class T>
+void print(T start, T end) {
+while (start != end) {
+    std::cout << *start << " ";
+    start++;
+}
+}
+int main()
+{
+int t1[] = { 1, 2, 3, 4, 5};
+list<int> l1(t1, t1 + 5);
+l1.remove(2);
+print(l1.begin(), l1.end()); cout<<endl;
+return 0;
+}
+```
+
+- A. 程序输出：1 2 4 5
+- B. 程序输出：3 4 5
+- C. 程序输出：1 3 4 5
+- D. 程序输出：4 5
+
+答案：C
+
+解释：
+
+## 题目编号：179
+
+当你尝试编译并运行以下代码时会发生什么？
+
+```cpp
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <functional>
+using namespace std;
+class B { int val;
+public:
+B(int v=0):val(v){}
+int getV() const { return val; }
+operator int () const { return val; }
+ostream & operator<<(ostream & out, const B & v) { out<<v.getV(); return out; }
+template<class T>struct Out {
+ostream & out;
+Out(ostream & o): out(o)
+void operator()(const T & val ) { out<<val<<" "; }; }
+int main() {
+B t[]={3,2,4,1,5,6,10,8,7,9};
+vector<B> v1(t, t+10);
+transform(v1.begin(), v1.end(), v1.begin(), bind2nd(plus<B>(), 1));
+for_each(v1.rbegin(), v1.rend(), Out<B>(cout));cout<<endl;
+return 0;
+}
+```
+
+程序输出：
+
+- A. 3 2 4 1 5 6 10 8 9
+- B. 4 3 5 2 6 7 11 9 10
+- C. 9 7 8 10 6 5 1 4 2 3
+- D. 10 8 9 11 7 6 2 5 3 4
+- E. 编译错误
+
+答案：D
+
+解释：
+
+## 题目编号：180
+
+当你尝试编译并运行以下代码时会发生什么？
+
+
+
+```cpp
+#include <vector>
+#include <iostream>
+#include <algorithm>
+#include <functional>
+using namespace std;
+template<class T>struct Out {
+ostream & out;
+Out(ostream & o): out(o);
+void operator() (const T & & val) { out<<" "<<val<<" "; }; }
+struct Add {
+int operator()(int a, int b) {
+return a+b;
+}
+};
+int main() {
+int t[]={1,2,3,4,5,6,7,8,9,10};
+vector<int> v1(t, t+10);
+vector<int> v2(10);
+transform(v1.begin(), v1.end(), v2.begin(), bind2nd(Add<int>(), 1));
+for_each(v2.rbegin(), v2.rend(), Out<int>(cout));
+```
+
+程序输出：
+
+- A. 1 2 3 4 5 6 7 8 9 10
+- B. 2 3 4 5 6 7 8 9 10 11
+- C. 10 9 8 7 6 5 4 3 2 1
+- D. 11 10 9 8 7 6 5 4 3 2
+- E. 编译错误
+
+答案：E
+解释：
+
+# 题目编号：181
+
+当你尝试编译并运行以下代码时会发生什么？
+
+```cpp
+
+#include <deque>
+
+#include <iostream>
+
+#include <algorithm>
+
+#include <functional>
+
+#include <set>
+
+using namespace std;
+
+class B { int val;
+
+public:
+
+B(int v=0):val(v){}
+
+int getV() const { return val; }
+
+};
+
+set<B> s1;
+
+int main() {
+
+B t[]={8, 10, 5, 1, 4, 6, 2, 7, 9, 3};
+
+deque<B> d1(t, t+10);
+
+set<B> s1(t, t+10);
+
+sort(d1.begin(), d1.end());
+
+d1.clear();
+
+s1.clear();
+
+cout<<includes(d1.begin(),s1.end(), t1+4)"<<endl;
+
+return 0;
+
+}
+
+```
+
+程序输出：
+
+- A. 1
+- B. 0
+- C. 1
+- D. 0
+- E. 编译错误
+
+答案：A
+解释：
+
+# 题目编号：182
+
+当你尝试编译并运行以下代码时会发生什么：
+
+```cpp
+
+#include <deque>
+
+#include <iostream>
+
+#include <algorithm>
+
+#include <functional>
+
+using namespace std;
+
+class B { int val;
+
+public:
+
+B(int v=0):val(v)
+
+int getV() const { return val; }
+
+B operator+(const B &b) const { return B(val + b.val); } };
+
+ostream &operator<<(ostream & out, const B & v) { out<<v.getV(); return out; }
+
+template<class T>struct Out {
+
+stream & out;
+
+Out(ostream & o) : out(o){}
+
+void operator()(const T & val) { out<<val<<" "; };nt A
+
+template<typename A>
+
+struct Add : public binary_function<A, A, A> {
+
+A operator()(const A & a, const A & b) const { return a+b; } }
+
+int main() {
+
+int t[]={1,2,3,4,5,6,7,8,9,10};
+
+deque<B> d1(t, t+10);
+
+deque<B> d2(10);
+
+transform(d1.begin(), d1.end(), d2.begin(), bind2nd(Add<B>(), 1));
+
+for_each(d2.rbegin(), d2.rend(), Out<B>(cout));cout<<endl;
+
+return 0;
+
+}
+```
 
 
 
@@ -5606,9 +6154,6 @@ int main(){
 int second[] = { 3, 4, 2, 1, 6, 5, 7, 9, 8, 0 };
 string first[] = {"three", "four", "two", "one", "six", "five", "seven", "nine", "eight", "zero"};
 multimap<int,string> m;
-```
-
-```cpp
 for(int i=0; i<10; i++) {
     m.insert(pair<int,string>(second[i],first[i]));
 }
@@ -5637,24 +6182,15 @@ return 0;
 ```cpp
 #include <iostream>
 using namespace std;
-```
-
-```cpp
 template<class A>
 void f(A &a)
 {
   cout<<1<<endl;
 }
-```
-
-```cpp
 void f(int &a)
 {
   cout<<2<<endl;
 }
-```
-
-```cpp
 int main()
 {
   int a = 1;
@@ -5819,17 +6355,33 @@ public:
 B(int v=0):val(v){}
 int getV() const { return val; }
 operator int () const { return val; }
+```
+
+
+
+```cpp
 ostream & operator<<(ostream & out, const B & v) { out<<v.getV(); return out; }
+
 template<class T>struct Out {
+
 ostream & out;
+
 Out(ostream & o): out(o)
+
 void operator()(const T & val ) { out<<val<<" "; }; }
+
 int main() {
+
 B t[]={3,2,4,1,5,6,10,8,7,9};
+
 vector<B> v1(t, t+10);
+
 transform(v1.begin(), v1.end(), v1.begin(), bind2nd(plus<B>(), 1));
+
 for_each(v1.rbegin(), v1.rend(), Out<B>(cout));cout<<endl;
+
 return 0;
+
 }
 ```
 
@@ -5842,6 +6394,7 @@ return 0;
 - E. 编译错误
 
 答案：D
+
 解释：
 
 # 题目编号：180
@@ -5869,8 +6422,7 @@ vector<int> v1(t, t+10);
 vector<int> v2(10);
 transform(v1.begin(), v1.end(), v2.begin(), bind2nd(Add<int>(), 1));
 for_each(v2.rbegin(), v2.rend(), Out<int>(cout));
-
-
+```
 
 程序输出：
 
@@ -5881,471 +6433,7 @@ for_each(v2.rbegin(), v2.rend(), Out<int>(cout));
 - E. 编译错误
 
 答案：E
-解释：
 
-# 题目编号：181
-
-当你尝试编译并运行以下代码时会发生什么？
-
-```cpp
-#include <deque>
-#include <iostream>
-#include <algorithm>
-#include <functional>
-#include <set>
-using namespace std;
-class B { int val;
-public:
-B(int v=0):val(v){}
-int getV() const { return val; }
-};
-set<B> s1;
-int main() {
-B t[]={8, 10, 5, 1, 4, 6, 2, 7, 9, 3};
-deque<B> d1(t, t+10);
-set<B> s1(t, t+10);
-sort(d1.begin(), d1.end());
-d1.clear();
-s1.clear();
-cout<<includes(d1.begin(),s1.end(), t1+4)"<<endl;
-return 0;
-}
-```
-*(注：由于原文文本在181和182题处存在严重的截断和语法错误，如`s1`重复定义、`t1`未定义、括号不匹配等，根据高级工程师原则，此处仅对原文逻辑结构进行描述性对齐，未修复代码逻辑，以保持翻译的一致性。)*修正：根据用户提供的原始文本，181和182部分的翻译应如下：
-
-[content]
-程序输出：
-
-- A. 1
-- B. 0
-- C. 1
-- D. 0
-- E. 编译错误
-
-答案：A
-解释：
-
-# 题目编号：182
-
-当你尝试编译并运行以下代码时会发生什么：
-
-```cpp
-#include <deque>
-#include <iostream>
-#include <algorithm>
-#include <functional>
-using namespace std;
-class B { int val;
-public:
-B(int v=0):val(v)
-int getV() const { return val; }
-B operator+(const B &b) const { return B(val + b.val); } };
-ostream &operator<<(ostream & out, const B & v) { out<<v.getV(); return out; }
-template<class T>struct Out {
-stream & out;
-Out(ostream & o) : out(o){}
-void operator()(const T & val) { out<<val<<" "; };nt A
-template<typename A>
-struct Add : public binary_function<A, A, A> {
-A operator()(const A & a, const A & b) const { return a+b; } }
-int main() {
-int t[]={1,2,3,4,5,6,7,8,9,10};
-deque<B> d1(t, t+10);
-deque<B> d2(10);
-
-transform(d1.begin(), d1.end(), d2.begin(), bind2nd(Add<B>(), 1));
-for_each(d2.rbegin(), d2.rend(), Out<B>(cout));cout<<endl;
-return 0;
-}
-```
-[/content]
-
-*(注：由于原文提供的文本在181和182题处存在严重的截断和语法错误，如`s1`重复定义、`t1`未定义、括号不匹配等，根据高级工程师原则，此处仅对原文逻辑结构进行描述性对齐，未修复代码逻辑，以保持翻译的一致性。)* 
-
-**等等，重新审视发现原文提供的文本非常混乱，我将严格遵循每一行不遗漏的原则，以下是针对181-182的准确对应翻译：**
-
-[content]
-# 题目编号：181
-
-当你尝试编译并运行以下代码时会发生什么？
-
-```cpp
-#include <deque>
-#include <iostream>
-#include <algorithm>
-#include <functional>
-#include <set>
-using namespace std;
-class B { int val;
-public:
-B(int v=0):val(v){}
-int getV() const { return val; }
-};
-set<B> s1;
-int main() {
-B t[]={8, 10, 5, 1, 4, 6, 2, 7, 9, 3};
-deque<B> d1(t, t+10);
-set<B> s1(t, t+10);
-sort(d1.begin(), d1.end());
-d1.clear();
-s1.clear();
-cout<<includes(d1.begin(),s1.end(), t1+4)"<<endl;
-return 0;
-}
-```
-
-程序输出：
-
-- A. 1
-- B. 0
-- C. 1
-- D. 0
-- E. 编译错误
-
-答案：A
-解释：
-
-# 题目编号：182
-
-当你尝试编译并运行以下代码时会发生什么：
-
-```cpp
-#include <deque>
-#include <iostream>
-#include <algorithm>
-#include <functional>
-using namespace std;
-class B { int val;
-public:
-B(int v=0):val(v)
-int getV() const { return val; }
-B operator+(const B &b) const { return B(val + b.val); } };
-ostream &operator<<(ostream & out, const B & v) { out<<v.getV(); return out; }
-template<class T>struct Out {
-stream & out;
-Out(ostream & o) : out(o){}
-void operator()(const T & val) { out<<val<<" "; };nt A
-template<typename A>
-struct Add : public binary_function<A, A, A> {
-A operator()(const A & a, const A & b) const { return a+b; } }
-int main() {
-int t[]={1,2,3,4,5,6,7,8,9,10};
-deque<B> d1(t, t+10);
-deque<B> d2(10);
-
-transform(d1.begin(), d1.end(), d2.begin(), bind2nd(Add<B>(), 1));
-for_each(d2.rbegin(), d2.rend(), Out<B>(cout));cout<<endl;
-return 0;
-}
-```
-[/content] (由于原文文本本身存在严重乱码，已按原文内容呈现)
-
-**抱歉，由于您提供的待翻译文本在181和182题部分存在严重的截断和语法错误（如`s1`重复定义、`t1`未定义、括号不匹配等），我已严格按照“不要漏掉任何行”的原则对原文呈现的文本进行了翻译。** 
-
-*(注：为了确保回复完整，我将重新提供一个完整的、基于您提供的所有文本的翻译后的版本。)*
-
-[content]
-程序输出：
-
-A. 9 12 12 8 14
-B. 14 8 12 12 9
-C. 3 2 4 1 5 6 10 8 7 9
-D. 1 2 3 4 5 6 7 8 9 10
-E. 编译错误
-
-答案：E
-
-解释：
-
-# 题目编号：173
-
-当你尝试编译并运行以下代码时，程序的输出是什么？
-
-```cpp
-#include <iostream>
-#include <map>
-#include <vector>
-#include <string>
-using namespace std;
-int main(){
-int second[] = { 3, 4, 2, 1, 6, 5, 7, 9, 8, 0 };
-string first[] = {"three", "four", "two", "one", "six", "five", "seven", "nine", "eight", "zero"};
-multimap<int,string> m;
-```
-
-```cpp
-for(int i=0; i<10; i++) {
-    m.insert(pair<int,string>(second[i],first[i]));
-}
-m[0]="ten";
-m.insert(pair<int,string>(1,"eleven"));
-for(multimap<int,string>::iterator i=m.begin();i!=m.end(); i++) {
-    cout<<i?"second<<" ";
-}
-return 0;
-}
-```
-
-- A. zero one two three four five six seven eight nine
-- B. ten one two three four five six seven eight nine
-- C. zero eleven two three four five six seven eight nine
-- D. ten eleven two three four five six seven eight nine
-- E. 编译错误
-
-答案：E
-解释：
-
-# 题目编号：174
-
-当你尝试编译并运行以下代码时，会发生什么：
-
-```cpp
-#include <iostream>
-using namespace std;
-```
-
-```cpp
-template<class A>
-void f(A &a)
-{
-  cout<<1<<endl;
-}
-```
-
-```cpp
-void f(int &a)
-{
-  cout<<2<<endl;
-}
-```
-
-```cpp
-int main()
-{
-  int a = 1;
-  f(a);
-  return 0;
-}
-```
-
-- A. 程序显示：1
-- B. 程序显示：2
-- C. 编译错误
-- D. 运行时异常
-
-答案：B
-解释：
-
-# 题目编号：175
-
-当你尝试编译并运行以下代码时，会发生什么：
-
-```cpp
-#include <iostream>
-#include <algorithm>
-#include <vector>
-using namespace std;
-int main () {
-int t[] = {1,2,3,4,5,1,2,3,4,5};
-vector<int> v (t,t+10);
-vector<int>::iterator it;
-int m1[] = {1, 3, 2};
-it = find_first_of (v.begin(), v.end(), m1+3);
-cout << "First found at position: " << it?v.begin() << endl;
-return 0;
-}
-```
-
-- A. 程序输出：First found at position: 5
-- B. 程序输出：First found at position: 0
-- C. 程序输出：First found at position: 6
-- D. 程序输出：First found at position: 1
-- E. 程序输出：First found at position: 10
-
-答案：B
-
-解释：
-
-# 题目编号：176
-
-当你尝试编译并运行以下代码时，会发生什么？
-
-```cpp
-#include <iostream>
-#include <map>
-using namespace std;
-int main() {
-int t[] = { 1, 1, 2, 2, 3, 3, 4, 4, 5, 5 };
-string s[] = { "one", "one", "two", "two", "three", "three", "four", "four", "five", "five" };
-multimap<int, string> m;
-for (int i = 0; i < 10; i++) {
-m.push_back(pair<int, string>(t[i], s[i]));
-}
-for (multimap<int, string>::iterator i = m.begin(); i != m.end(); i++) {
-cout << i->first << " " << i->second << "";
-}
-return 0;
-}
-```
-
-- A. 程序输出：1 2 3 4 5
-- B. 编译错误
-- C. 程序输出：1 2 3 4 5
-- D. 程序输出：one two three
-- E. 程序输出：one two three five
-
-答案：B
-解释：
-
-# 题目编号：177
-
-当你尝试编译并运行以下代码时会发生什么？（多选）
-
-```cpp
-#include <deque>
-#include <vector>
-#include <iostream>
-using namespace std;
-class A
-{
-    int a;
-public:
-    A(int a) {this->a = a; }
-    A(const A & a) {this->a = a; }
-    ~A() { }
-    static int c;
-};
-int A::c(0);
-int main ()
-{
-A* t[] = {new A(1), new A(2), new A(3), new A(4), new A(5)};
-vector<A*> v1(t, t+5);
-deque<A*> d1(v1.begin(), v1.end());
-d1.clear();
-v1.clear();
-cout<<A::c<< endl;
-return 0;
-}
-```
-
-- A. 创建了 15 个 A
-- B. 创建了 5 个 A
-- C. 所有对象都调用了析构函数
-- D. 程序显示 5
-
-答案：B,D
-解释：
-
-# 题目编号：178
-
-当你尝试编译并运行以下代码时会发生什么？
-
-```cpp
-#include <list>
-#include <iostream>
-using namespace std;
-template<class T>
-void print(T start, T end) {
-while (start != end) {
-    std::cout << *start << " ";
-    start++;
-}
-}
-int main()
-{
-int t1[] = { 1, 2, 3, 4, 5};
-list<int> l1(t1, t1 + 5);
-l1.remove(2);
-print(l1.begin(), l1.end()); cout<<endl;
-return 0;
-}
-```
-
-- A. 程序输出：1 2 4 5
-- B. 程序输出：3 4 5
-- C. 程序输出：1 3 4 5
-- D. 程序输出：4 5
-
-答案：C
-解释：
-
-# 题目编号：179
-
-当你尝试编译并运行以下代码时会发生什么？
-
-```cpp
-#include <vector>
-#include <iostream>
-#include <algorithm>
-#include <functional>
-using namespace std;
-class B { int val;
-public:
-B(int v=0):val(v){}
-int getV() const { return val; }
-operator int () const { return val; }
-ostream & operator<<(ostream & out, const B & v) { out<<v.getV(); return out; }
-template<class T>struct Out {
-ostream & out;
-Out(ostream & o): out(o)
-void operator()(const T & val ) { out<<val<<" "; }; }
-int main() {
-B t[]={3,2,4,1,5,6,10,8,7,9};
-vector<B> v1(t, t+10);
-transform(v1.begin(), v1.end(), v1.begin(), bind2nd(plus<B>(), 1));
-for_each(v1.rbegin(), v1.rend(), Out<B>(cout));cout<<endl;
-return 0;
-}
-```
-
-程序输出：
-
-- A. 3 2 4 1 5 6 10 8 9
-- B. 4 3 5 2 6 7 11 9 10
-- C. 9 7 8 10 6 5 1 4 2 3
-- D. 10 8 9 11 7 6 2 5 3 4
-- E. 编译错误
-
-答案：D
-解释：
-
-# 题目编号：180
-
-当你尝试编译并运行以下代码时会发生什么？
-
-```cpp
-#include <vector>
-#include <iostream>
-#include <algorithm>
-#include <functional>
-using namespace std;
-template<class T>struct Out {
-ostream & out;
-Out(ostream & o): out(o);
-void operator() (const T & & val) { out<<" "<<val<<" "; }; }
-struct Add {
-int operator()(int a, int b) {
-return a+b;
-}
-};
-int main() {
-int t[]={1,2,3,4,5,6,7,8,9,10};
-vector<int> v1(t, t+10);
-vector<int> v2(10);
-transform(v1.begin(), v1.end(), v2.begin(), bind2nd(Add<int>(), 1));
-for_each(v2.rbegin(), v2.rend(), Out<int>(cout));
-
-
-
-程序输出：
-
-- A. 1 2 3 4 5 6 7 8 9 10
-- B. 2 3 4 5 6 7 8 9 10 11
-- C. 10 9 8 7 6 5 4 3 2 1
-- D. 11 10 9 8 7 6 5 4 3 2
-- E. 编译错误
-
-答案：E
 解释：
 
 # 题目编号：181
@@ -6386,6 +6474,7 @@ return 0;
 - E. 编译错误
 
 答案：A
+
 解释：
 
 # 题目编号：182
@@ -6415,15 +6504,11 @@ int main() {
 int t[]={1,2,3,4,5,6,7,8,9,10};
 deque<B> d1(t, t+10);
 deque<B> d2(10);
-
 transform(d1.begin(), d1.end(), d2.begin(), bind2nd(Add<B>(), 1));
 for_each(d2.rbegin(), d2.rend(), Out<B>(cout));cout<<endl;
 return 0;
 }
 ```
-
-
-
 
 E. 编译错误
 
@@ -6453,7 +6538,6 @@ int main ()(){
   {
     i%2>0?v1.push_back(new A()):v1.push_back(new B());
   }
-
   std::vector<A>::iterator it = v1.begin();
   while(it != v1.end())
   {
@@ -6471,6 +6555,7 @@ int main ()(){
 - E. 程序输出 10 11 10 11 10 11 10 11 10 11
 
 答案：D
+
 解释：
 
 ### 题目编号：184
@@ -6503,6 +6588,7 @@ int main() {
 - C. 程序输出: 1 1 2 3 4 4 5 5
 - D. 程序输出: 1 1 2 3 3 4 4 5 5
 - E. 程序输出: one two three four five
+
 答案：A
 
 解释：
@@ -6510,6 +6596,8 @@ int main() {
 ### 题目编号：185
 
 当你尝试编译并运行以下代码时会发生什么？
+
+
 
 ```cpp
 #include <vector>
@@ -6525,9 +6613,13 @@ int main () {
 ```
 
 - A. 编译错误
+
 - B. 程序输出 0 1 2 3 4 5 6 7 8 9
+
 - C. 程序输出 2 3 4 5 6
+
 - D. 程序输出 2 4 6
+
 答案：D
 
 解释：
@@ -6566,10 +6658,15 @@ int main() {
 程序输出：
 
 - A. 4 3 2 1
+
 - B. 3 2 1
+
 - C. 5 4 3 2
+
 - D. 编译错误
+
 - E. 1 2 3 4
+
 答案：A
 
 解释：
@@ -6606,10 +6703,15 @@ int main () {
 ```
 
 - A. 程序输出 0 0 0 0 1
+
 - B. 程序输出 0 0 0 0
+
 - C. 编译错误
+
 - D. 程序输出 1 1 1 1 1
+
 - E. 以上都不是
+
 答案：E
 
 ### 题目编号：188
@@ -6644,10 +6746,15 @@ int main() {
 ```
 
 - A. 程序输出: 10 11 12 10 11 12
+
 - B. 行 I 编译错误
+
 - C. 行 II 编译错误
+
 - D. 行 III 编译错误
+
 - E. 行 IV 编译错误
+
 答案：D
 
 ### 题目编号：189
@@ -6676,14 +6783,18 @@ int main () {
 ```
 
 - A. 程序输出: I am empty 0 0
+
 - B. 程序输出: I am not empty 0 0
+
 - C. 编译错误
+
 - D. 程序输出: I am not empty 10 10
+
 答案：C
 
 ### 题目编号：190
 
-当你尝试编译并运行以下代码时会发生什么：
+当你尝试编译并运行以下代码时会发生什么？
 
 ```cpp
 #include <vector>
@@ -6713,13 +6824,12 @@ int main() {
 程序输出：
 
 - A. 1 2 3 4 5 6 7 8 9 10
+
 - B. 2 3 4 5 6 7 8 9 10 11
+
 - C. 10 9 8 7 6 5 4 3 2
+
 - D. 11 10 9 8 7 6 5 4 3 2
-
-
-
-
 
 ```cpp
 }
@@ -6731,16 +6841,22 @@ return 0;
 ```
 
 A. 程序输出: 1 2 3 4 5
+
 B. 程序输出: 1 2 4 5
+
+
+
 C. 程序输出: 1 1 2 2 3 4 4 5 5
+
 D. 程序输出: 1 1 2 2 4 4 5 5
+
 E. 程序输出: one two three four five
 
 答案: D
 
 解释：
 
-题目编号: 194
+## 题目编号: 194
 
 当你尝试编译并运行以下代码时，会发生什么情况？
 
@@ -6775,7 +6891,7 @@ int main() {
 
 解释：
 
-题目编号: 195
+## 题目编号: 195
 
 当你尝试编译并运行以下代码时，会发生什么情况？
 
@@ -6812,7 +6928,7 @@ int main() {
 
 解释：
 
-题目编号: 196
+## 题目编号: 196
 
 当你尝试编译并运行以下代码时，会发生什么情况？
 
@@ -6848,7 +6964,7 @@ int main(){
 
 解释：
 
-题目编号: 197
+## 题目编号: 197
 
 当你尝试编译并运行以下代码时，会发生什么情况？
 
@@ -6883,7 +6999,7 @@ int main ()
 
 解释：
 
-题目编号: 198
+## 题目编号: 198
 
 当你尝试编译并运行以下代码时，会发生什么情况？
 
@@ -6924,7 +7040,7 @@ int main(){
 
 解释：
 
-题目编号: 199
+## 题目编号: 199
 
 当你尝试编译并运行以下代码时，会发生什么情况？
 
@@ -6960,9 +7076,11 @@ int main() {
 
 解释：
 
-题目编号: 200
+## 题目编号: 200
 
 当你尝试编译并运行以下代码时，会发生什么情况？
+
+
 
 ```cpp
 #include <deque>
@@ -7149,9 +7267,6 @@ int main ()
 
 答案: A
 
-
-
-
 ```cpp
 int main() {
   int t[] = { 10, 5, 9, 6, 2, 4, 7, 8, 3, 1 };
@@ -7182,6 +7297,8 @@ E. 20 10 18 12 4 8 14 16 6 2
 
 当你尝试编译并运行以下代码时会发生什么？
 
+
+
 ```cpp
 #include <deque>
 #include <iostream>
@@ -7207,8 +7324,11 @@ template<class T>struct Out {
 程序输出：
 
 A. 0 0
+
 B. 0 1
+
 C. 1 0
+
 D. 1 1
 
 答案： C
@@ -7247,9 +7367,13 @@ int main () {
 程序输出：
 
 A. 编译错误
+
 B. 12
+
 C. 3
+
 D. 1
+
 E. 15
 
 答案： B
@@ -7285,9 +7409,13 @@ int main() {
 ```
 
 A. 程序输出：6
+
 B. 程序输出：5 7
+
 C. 程序输出：6 7
+
 D. 程序输出：1 5
+
 E. 程序输出：6 5
 
 答案： A
@@ -7338,8 +7466,11 @@ int main()
 ```
 
 A. 程序将显示：5
+
 B. 程序无法编译
+
 C. 程序将编译
+
 D. 程序将导致运行时异常
 
 答案： A,C
@@ -7364,9 +7495,12 @@ int main ()
 ```
 
 A. 程序显示 4
+
 B. 程序显示 10 3
-C. vector v1 的大小为 11
-D. v1 的所有元素都相同
+
+C. `vector` `v1` 的大小为 11
+
+D. `v1` 的所有元素都相同
 
 答案： C,D
 
@@ -7404,9 +7538,13 @@ int main()
 ```
 
 A. 程序输出：9 8 7 6 5 4 3 2 1 0
+
 B. 程序输出：9 8 7 6 5 4 3 2 1
+
 C. 程序输出：9 8 7 6 5 4 3 2 1 0 3 2
+
 . 程序输出.0 1 2 3 4 5 6 7 8 9
+
 E. 程序输出：0 1 2 3 4 5 6 7 8 9
 
 答案： A
@@ -7432,9 +7570,13 @@ int main ()
 ```
 
 A. truue
+
 B. falsefalse
+
 C. 1
+
 D. 0
+
 E. 以上均不是
 
 答案： E
@@ -7442,6 +7584,8 @@ E. 以上均不是
 ## 题号：213
 
 当你尝试编译并运行以下代码时会发生什么？
+
+
 
 ```cpp
 #include <vector>
@@ -7480,9 +7624,13 @@ int main() {
 ```
 
 A. 1 2 3 4 5 6 7 8 9 10
+
 B. 2 3 4 5 6 7 8 9 10
+
 C. 10 9 8 7 6 5 4 3 2 1
+
 D. 11 10 9 8 7 6 5 4 3 2
+
 E. 编译错误
 
 答案： E
@@ -7516,8 +7664,11 @@ int main() {
 ```
 
 A. 程序显示：0
+
 B. 程序无法编译
+
 C. 程序将编译
+
 D. 程序将导致运行时异常
 
 答案： B
@@ -7556,9 +7707,13 @@ int main() {
 ```
 
 A. 3
+
 B. 1
+
 C. 6
+
 D. 10
+
 E. 编译错误
 
 答案： B
@@ -7588,7 +7743,6 @@ template<class T>struct Out {
 }
 ```
 
-
 ```cpp
 B(4))<<endl;
 return 0;
@@ -7598,12 +7752,17 @@ return 0;
 程序输出为：
 
 +   A. 1 0
+
 B. 1 1
+
 C. 0 0
+
 D. 0 1
+
 E. 编译错误
 
 答案：B
+
 解析：
 
 # 题号：217
@@ -7646,9 +7805,13 @@ int main() {
 程序输出为：
 
 +   A. 30 30 20 20 20 20 10 10 20
+
 B. 20 20 20
+
 C. 30 20 20 20 10
+
 D. 20 20 20 20 10
+
 E. 30 20 20 20 10
 
 答案：B
@@ -7677,12 +7840,17 @@ int main ()
 程序将输出：
 
 +   A. one
+
 B. one two three
+
 C. 运行时异常
+
 D. 编译错误
+
 E. 结果未定义
 
 答案：B
+
 解析：
 
 # 题号：219
@@ -7694,6 +7862,8 @@ E. 结果未定义
 #include <iostream>
 #include <algorithm>
 ```
+
+
 
 ```cpp
 using namespace std;
@@ -7729,6 +7899,7 @@ C. 8 2 4 9 5 7 10 6 1 3
 D. 编译错误
 
 答案：D
+
 解析：
 
 # 题号：220
@@ -7757,6 +7928,7 @@ D. 144 100
 E. 编译错误
 
 答案：A
+
 解析：
 
 # 题号：221
@@ -7800,6 +7972,7 @@ D. 4 6 8 10 2 7 5 9
 E. 2 4 6 8 10 1 3 5 7
 
 答案：E
+
 解析：
 
 # 题号：222
@@ -7829,6 +8002,7 @@ C. 55 17 55
 D. 55 17
 
 答案：A
+
 解析：
 
 # 题号：223
@@ -7859,6 +8033,7 @@ D. 0 1 2 3 4 5 6 7 8 9
 E. 运行时异常
 
 答案：A
+
 解析：
 
 # 题号：224
@@ -7907,6 +8082,7 @@ C. 程序显示: world!
 D. 程序运行但无输出
 
 答案：B
+
 解析：
 
 # 题号：225
@@ -7948,11 +8124,14 @@ D. 10 9 8 7 6
 E. 编译错误
 
 答案：E
+
 解析：
 
 # 题号：226
 
 当你尝试编译并运行以下代码时会发生什么？
+
+
 
 ```cpp
 #include <vector>
@@ -7977,14 +8156,18 @@ int main() {
 程序输出为：
 
 +   A. 20 30 20 10
+
 B. 20 30 20 10
+
 +   C. 20 30 20 10
+
 D. 编译错误
 
-答案：C
+答案：`C`
+
 解析：
 
-# 题号：227
+## 题号：227
 
 当你尝试编译并运行以下代码时会发生什么？
 
@@ -8008,15 +8191,20 @@ int main(){
 输出将是：
 
 +   A. 6
+
 B. 5
+
 C. 6
+
 D. 1
+
 E. 6
 
-答案：C
+答案：`C`
+
 解析：
 
-# 题号：228
+## 题号：228
 
 当你尝试编译并运行以下代码时会发生什么？
 
@@ -8042,7 +8230,9 @@ int main(){
 ```
 
 A. 程序输出： 0 1 2 3 4 5 6 7 8 9 0 1 2 3 4 5 6 7 8 9
-B. 程序输出： 9 8 7 6 5 4 3 2 1 0 9 8 7 6 5 4 3 2 1 0
-C. 程序输出： 0 1 2 3 4 5 6 7 8 9 9 8 7 6 5 4 3 2 1 0
-D. 编译错误
 
+B. 程序输出： 9 8 7 6 5 4 3 2 1 0 9 8 7 6 5 4 3 2 1 0
+
+C. 程序输出： 0 1 2 3 4 5 6 7 8 9 9 8 7 6 5 4 3 2 1 0
+
+D. 编译错误

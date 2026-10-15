@@ -1,2 +1,0 @@
-
-# Red Hat Linux 8 释放指南

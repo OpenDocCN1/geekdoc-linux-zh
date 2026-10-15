@@ -1,8 +1,5 @@
+
 # 理解 Linux 进程
-
-
-
-
 
 ## 关于这本书
 
@@ -37,9 +34,13 @@ Linux 是我们主要的研究对象，书中所有概念与程序都基于 Linu
 本书按循序渐进的方式介绍进程的基础概念和拓展知识，主要涵盖以下几个方面：
 
 * 进程的基础知识介绍
+
 * 进程相关的编程实例
+
 * 进程的进阶知识详解
+
 * 项目 Run 的进程管理
+
 * 使用进程的注意事项
 
 其中项目[Run](https://github.com/runscripts/run)是`Go`实现的脚本管理工具，通过研究`Run`的源码能够加深对进程管理的理解。
@@ -88,7 +89,7 @@ Hello World
 
 ### 进程的定义
 
-根据维基百科的[定义](http://zh.wikipedia.org/wiki/%E8%A1%8C%E7%A8%8B)，进程(`Process`)是计算机中已运行程序的实体。用户下达运行程序的命令后，就会产生进程。进程需要一些资源才能完成工作，如 CPU 使用时间、存储器、文件以及 I/O 设备，且为依序逐一进行，也就是每个 CPU 核心任何时间内仅能运行一项进程。。
+根据维基百科的[定义](http://zh.wikipedia.org/wiki/%E8%A1%8C%E7%A8%8B)，进程(`Process`)是计算机中已运行程序的实体。用户下达运行程序的命令后，就会产生进程。进程需要一些资源才能完成工作，如 CPU 使用时间、存储器、文件以及 I/O 设备，且为依序逐一进行，也就是每个 CPU 核心任何时间内仅能运行一项进程。
 
 我们简单总结下，进程就是代码运行的实体。这里补充一点，进程不一定都是正在运行的，也可能在等待调度或者停止，进程状态将在后续详细介绍。
 
@@ -248,10 +249,6 @@ root         8  0.0  0.1  20232  3224 ?        S    12:45   0:00 /bin/bash
 root        11  0.0  0.0  17484  2000 ?        R+   12:46   0:00 ps aux 
 ```
 
-
-
-
-
 ```
 package main
 
@@ -368,15 +365,17 @@ Nginx 是一个高性能、高并发的 Web 服务器，也就是说它可以同
 
 我们首先要知道 Nginx 是 Master-worker 模型，Master 进程只负责管理 Worker 进程，而 Worker 进程是负责处理真实的请求。每个 Worker 进程能够处理的请求数跟内存有关，因为在 Linux 上 Nginx 使用了`epoll`这种多路复用的 IO 接口，所以不需要多线程做并行也能实现并发。
 
+
+
 而多进程有一个坏处就是带来了 CPU 上下文切换时间，所以一味提高进程个数反而使系统性能下降。当然如果当前进程小于 CPU 个数，就没有充分利用多核的资源，所以 Nginx 建议 Worker 数应该等于 CPU 个数。
 
-### 特殊情况
+## 特殊情况
 
 我们想想进程数应该等于 CPU 数，但是如果进程有阻塞呢？这是是应该提高进程数增加并行数的。
 
 在 Nginx 的例子中，如果 Nginx 主要负责静态内容的下载，而服务器内存比较小，大部分文件访问都需要读磁盘，时候进程很容易阻塞，所以建议提高下 Worker 数目。
 
-### 绑定 CPU
+## 绑定 CPU
 
 一般情况下除了确保进程数等于 CPU 数，还可以绑定进程与 CPU，这就保证了最少的 CPU 上下文切换。
 
@@ -389,7 +388,7 @@ cpu_affinity 0;
 
 这是通过系统调用`sched_setaffinity()`实现了，感兴趣可以学习这方面的。
 
-### 进程状态
+## 进程状态
 
 根据进程的定义，知道进程是实体，可能是正在运行，也可能是停止的。网上总结进程一共 7 种状态，究竟怎么算呢，最好的方法还是看源码。
 
@@ -418,7 +417,7 @@ static const char task_state[] = {
 
 这真的是 Linux 的源码，可以看出进程一共 7 种状态，含义也清晰，注意其中`D`(`disk sleep`) 称为不可中断睡眠状态(`uninterruptible sleep`)。
 
-### 进程状态
+## 进程状态
 
 通过[Ptrace](https://idea.popcount.org/2012-11-linux-process-states/)、[include/linux/sched.h](https://github.com/torvalds/linux/blob/master/include/linux/sched.h):
 
@@ -494,10 +493,6 @@ runtime.goexit()
 /usr/src/go/src/pkg/runtime/proc.c:1445
 exit status 2 
 ```
-
-
-
-
 
 # Concept of Livelock
 
@@ -610,6 +605,8 @@ The start of this chapter demonstrated the `Hello World` program, which actually
 
 # System Calls
 
+
+
 Actually, all of this is prepared by the operating system and exposed through `API` interfaces; these are called system calls. `Linux` and other `Unix-like` systems provide interfaces like `fork()` and `exec()`. `Bash` or the programs we write can manipulate processes by calling these interfaces.
 
 # Creating Processes in Go
@@ -626,14 +623,14 @@ This chapter is mainly for programming practice. After completing it, you should
 
 ## Spawning New Processes
 
-This is an example from `GoByExample`; the code is at https://gobyexample.com/spawning-processes.
+This is an example from `GoByExample`; the code is at <https://gobyexample.com/spawning-processes>.
 
 It can execute any `Go` or non-`Go` program, wait for the result, and continue executing this program after the external process ends.
 
 ## Code Implementation
 
 ```
- package main
+package main
 
 import "fmt"
 import "io/ioutil"
@@ -666,13 +663,13 @@ func main() {
     }
     fmt.Println("> ls -a -l -h")
     fmt.Println(string(lsOut))
-} 
+}
 ```
 
 ## Running Results
 
 ```
- $ go run spawning-processes.go
+$ go run spawning-processes.go
 > date
 Wed Oct 10 09:53:12 UTC 2023
 > grep hello
@@ -683,33 +680,29 @@ drwxr-xr-x 2 user group 4096 Oct 10 ..
 -rw-r--r-- 1 user group 0 Oct 10 spawning-processes.go
 ```
 
-
-
-
-
 ```
- if (pid=fork()) {
+if (pid=fork()) {
   exit(0); // Parent process
-} 
+}
 ```
 
 然后是与终端、进程组、会话（`Session`）分离。每个进程创建时都绑定一个终端，而且属于一个进程组（进程组也有`GID`，不过等同进程组长的`PID`），这些进程组在一个会话中，如果是子进程一般会从父进程继承这些信息，想要与环境分离可以使用以下的系统调用。
 
 ```
- setsid(); 
+setsid();
 ```
 
 同样地我们会从父进程继承文件掩码`mask`），可以手动清理掩码。
 
 ```
- umask(0); 
+umask(0);
 ```
 
 如果需要我们可以改变当前工作目录，避免运行时必须使用当前所在的文件系统。
 
 ## 使用 Nohup
 
-前面提到过`nohup` 命令，是让程序以守护进程运行的方式之一，程序运行后忽略 `SIGHUP` 信号，也就说关闭终端不会影响进程的运行。
+前面提到过`nohup`命令，是让程序以守护进程运行的方式之一，程序运行后忽略`SIGHUP`信号，也就说关闭终端不会影响进程的运行。
 
 类似的命令还有`disown`，这里不再详述。
 
@@ -717,27 +710,27 @@ drwxr-xr-x 2 user group 4096 Oct 10 ..
 
 IPC 全称`Interprocess Communication`，指进程间协作的各种方法，当然包括共享内存、信号量或`Socket`等。
 
-## 管道(Pipe)
+## 管道（Pipe）
 
 管道是进程间通信最简单的方式，任何进程的标准输出都可以作为其他进程的输入。
 
-## 信号(Signal)
+## 信号（Signal）
 
 下面马上会介绍。
 
-## 消息队列(Message)
+## 消息队列（Message）
 
 和传统消息队列类似，但是在内核实现的。
 
-## 共享内存(Shared Memory)
+## 共享内存（Shared Memory）
 
-后面也会更详细的介绍。
+后面也会更详细地介绍。
 
-## 信号量(Semaphore)
+## 信号量（Semaphore）
 
 信号量本质上是一个整型计数器，调用`wait`时计数减一，减到零开始阻塞进程，从而达到进程、线程间协作的作用。
 
-## 套接口(Socket)
+## 套接口（Socket）
 
 也就是通过网络来通信，这也是最通用的 IPC，不要求进程在同一台服务器上。
 
@@ -752,21 +745,21 @@ IPC 全称`Interprocess Communication`，指进程间协作的各种方法，当
 Linux 中定义了很多信号，不同的 Unix-like 系统也不一样，我们可以通过下面的命令来查当前系统支持的种类。
 
 ```
- ➜ kill -l
-HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2 
+➜ kill -l
+HUP INT QUIT ILL TRAP ABRT EMT FPE KILL BUS SEGV SYS PIPE ALRM TERM URG STOP TSTP CONT CHLD TTIN TTOU IO XCPU XFSZ VTALRM PROF WINCH INFO USR1 USR2
 ```
 
 其中 1 至 31 的信号为传统 UNIX 支持的信号，是不可靠信号（非实时的），32 到 63 的信号是后来扩充的，称做可靠信号（实时信号）。不可靠信号和可靠信号的区别在于前者不支持排队，可能会造成信号丢失，而后者不会。
 
-简单介绍几个我们最常用的，在命令行中止一个程序我们一般摁`Ctrl+c`，这就是发送`SIGINT` 信号，而使用`kill` 命令呢？默认是`SIGTERM`，加上`-9`参数才是`SIGKILL`。
+简单介绍几个我们最常用的，在命令行中止一个程序我们一般摁`Ctrl+c`，这就是发送`SIGINT`信号，而使用`kill`命令呢？默认是`SIGTERM`，加上`-9`参数才是`SIGKILL`。
 
 ## 编程实例
 
 ```
- import os/signal
+import os/signal
 
 siganl.Notify()
-signal.Stop() 
+signal.Stop()
 ```
 
 这是 Go 封装的信号接口，我们可以以此实现一个简单的信号发送和处理程序。
@@ -789,11 +782,11 @@ POSIX 已经定义了`STDIN_FILENO`、`STDOUT_FILENO`和`STDERR_FILENO`三个常
 
 `Epoll`是`poll`的改进版，更加高效，同时处理大量文件描述符，跟高并发有关，Nginx 充分利用了`epoll`特性。
 
-## Poll 
+## Poll
 
 `Poll`本质上是 Linux 系统调用，接口为`int poll(struct pollfd *fds, int nfds, int timeout)`，作用是监控哪些文件描述符集合。
 
-## Epoll 
+## Epoll
 
 `Epoll`关注活跃的文件描述符，相比`poll`轮询整个集合，只有发生 IO 事件时才会唤醒。它提供了边缘触发（`Edge Triggered`）特性。
 
@@ -807,13 +800,13 @@ POSIX 已经定义了`STDIN_FILENO`、`STDOUT_FILENO`和`STDERR_FILENO`三个常
 
 ## Go 实例
 
-Go 也实现了`mmap()`函数支持共享内存，不过通过`cgo`来调用系统调用函数。`cgo`是什么？它是 Go 调用 C 语言模块的功能，这种调用很平台相关的，无法保证在 Windows 也能正确运行。具体代码参见[Golang 对共享内存的操作](http://studygolang.com/articles/743)，我们也写一个简单易懂的例子。
+Go 也实现了`mmap()`函数支持共享内存，不过通过`cgo`来调用系统调用函数。`cgo`是什么？它是 Go 调用 C 语言模块的功能，这种调用很平台相关的，无法保证在 Windows 也能正确运行。具体代码参见[GoLang 对共享内存的操作](http://studygolang.com/articles/743)，我们也写一个简单易懂的例子。
 
-## 写时复制(Copy On Write)
+## 写时复制（Copy On Write）
 
-一般我们运行程序都是`Fork`一个进程后马上`Exec`加载程序，而`Fork`实际上用的是父进程的堆栈空间，Linux 通过`Copy On Write`技术极大地减少了 Fork 的开销。
+一般我们运行程序都是`Fork`一个进程后马上`Exec`加载程序，而`Fork`实际上用的是父进程的堆栈空间，Linux 通过`Copy On Write`技术极大地减少了`Fork`的开销。
 
-Copy On Write 的含义是只有真正写的时候才把数据写到子进程，Fork 时只会页表复制到子进程，这样父子进程都指向同一个内存页，只有在写子进程的时候才会把内存页的内容重新复制一份。
+`Copy On Write`的含义是只有真正写的时候才把数据写到子进程，`Fork`时只会页表复制到子进程，这样父子进程都指向同一个内存页，只有在写子进程的时候才会把内存页的内容重新复制一份。
 
 ## Cgroups
 
@@ -839,12 +832,8 @@ Namespaces 是容器技术的基础，因为有了命名空间的隔离，才能
 
 阅读以下教程前建议看看，[`blog.jtlebi.fr/2013/12/22/introduction-namespaces`](https://blog.jtlebi.fr/2013/12/22/introduction-namespaces)。
 
-
-
-
-
 ```
- package main
+package main
 
 import (
   "fmt"
@@ -862,7 +851,7 @@ func main() {
     }
 
     fmt.Println("Mkdir /tmp/gotest/")
-} 
+}
 ```
 
 ### 注意事项
@@ -875,11 +864,11 @@ func main() {
 
 `SIGKILL`是常见的 Linux 信号，我们使用`kill`命令杀掉进程也就是像向进程发送`SIGKILL`信号。
 
-和其他信号不同，[SIGKILL](https://en.wikipedia.org/wiki/Unix_signal#SIGKILL)和`SIGSTOP`是不可被 Catch 的，因此下面的代码是能编译通过但也是无效的，更多细节可以参考[golang/go#9463](https://github.com/golang/go/issues/9463).
+和其他信号不同，[SIGKILL](https://en.wikipedia.org/wiki/Unix_signal#SIGKILL)和`SIGSTOP`是不可被 Catch 的，因此下面的代码是能编译通过但也是无效的，更多细节可以参考[golang/go#9463](https://github.com/golang/go/issues/9463)。
 
 ```
- c := make(chan os.Signal, 1)
-signal.Notify(c, syscall.SIGKILL, syscall.SIGSTOP) 
+c := make(chan os.Signal, 1)
+signal.Notify(c, syscall.SIGKILL, syscall.SIGSTOP)
 ```
 
 ### 注意事项
@@ -904,19 +893,18 @@ signal.Notify(c, syscall.SIGKILL, syscall.SIGSTOP)
 
 ## 参考书籍
 
-* [理解 Unix 进程](http://book.douban.com/subject/24298701/)
-* [Unix 编程艺术](http://book.douban.com/subject/1467587/)
-* [Unix 环境高级编程](http://book.douban.com/subject/1788421/)
-* [Go Web 编程](http://book.douban.com/subject/24316255/)
-* [Go 并发编程实战](http://book.douban.com/subject/26244729/)
+- [理解 Unix 进程](http://book.douban.com/subject/24298701/)
+- [Unix 编程艺术](http://book.douban.com/subject/1467587/)
+- [Unix 环境高级编程](http://book.douban.com/subject/1788421/)
+- [Go Web 编程](http://book.douban.com/subject/24316255/)
+- [Go 并发编程实战](http://book.douban.com/subject/26244729/)
 
 ## 项目学习
 
-* [Linux](https://github.com/torvalds/linux)
-* [Go](https://github.com/golang/go)
-* [Docker](https://github.com/docker/docker)
-* [Run](https://github.com/runscripts/run)
-* [GoByExample](https://github.com/mmcgrana/gobyexample)
+- [Linux](https://github.com/torvalds/linux)
+- [Go](https://github.com/golang/go)
+- [Docker](https://github.com/docker/docker)
+- [Run](https://github.com/runscripts/run)
+- [GoByExample](https://github.com/mmcgrana/gobyexample)
 
 ## 感谢阅读！
-

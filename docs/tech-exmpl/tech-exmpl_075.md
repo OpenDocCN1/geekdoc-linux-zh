@@ -1,12 +1,14 @@
+
+
 # 计算字符串中最后一个单词长度的程序
 
 > 原文：[`techbyexample.com/program-length-last-word/`](https://techbyexample.com/program-length-last-word/)
 
-## **概述**
+## 概述
 
-目标是找到给定字符串中最后一个单词的长度
+目标是找到给定字符串中最后一个单词的长度。
 
-示例
+### 示例
 
 ```go
 Input: "computer science"
@@ -25,7 +27,7 @@ Output: 0
 There is no last word hence answer is zero
 ```
 
-## **程序**
+## 程序
 
 下面是实现该功能的程序。
 
@@ -71,10 +73,11 @@ func main() {
 }
 ```
 
-**输出**
+### 输出
 
 ```go
 7
 7
 0
 ```
+

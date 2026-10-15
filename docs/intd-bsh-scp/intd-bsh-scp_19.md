@@ -1,3 +1,4 @@
+
 # 使用 Bash 与 Cloudflare API 一起工作
 
 我所有的网站都托管在 **DigitalOcean** Droplets 上，我还使用 Cloudflare 作为我的 CDN 提供商。使用 Cloudflare 的一个好处是它减少了用户整体流量，同时也隐藏了您实际服务器的 IP 地址在其 CDN 后面。
@@ -18,27 +19,24 @@
 
 +   Cloudflare 区域 ID
 
-此外，确保您的服务器上已安装 curl：
+此外，确保您的服务器上已安装`curl`：
 
 ```sh
-      curl --version 
-
+curl --version
 ```
 
-如果 curl 未安装，您需要运行以下命令：
+如果`curl`未安装，您需要运行以下命令：
 
 +   对于 RedHat/CentOs：
 
 ```sh
-      yum install curl 
-
+yum install curl
 ```
 
 +   对于 Debian/Ubuntu：
 
 ```sh
-      apt-get install curl 
-
+apt-get install curl
 ```
 
 ## 挑战 - 脚本要求
@@ -60,46 +58,40 @@
 要下载脚本，只需运行以下命令：
 
 ```sh
-      wget https://raw.githubusercontent.com/bobbyiliev/cloudflare-ddos-protection/main/protection.sh 
-
+wget https://raw.githubusercontent.com/bobbyiliev/cloudflare-ddos-protection/main/protection.sh
 ```
 
 使用您最喜欢的文本编辑器打开脚本：
 
 ```sh
-      nano protection.sh 
-
+nano protection.sh
 ```
 
 并使用您的 Cloudflare 详细信息更新以下信息：
 
 ```sh
-      CF_CONE_ID=YOUR_CF_ZONE_ID
+CF_CONE_ID=YOUR_CF_ZONE_ID
 CF_EMAIL_ADDRESS=YOUR_CF_EMAIL_ADDRESS
-CF_API_KEY=YOUR_CF_API_KEY 
-
+CF_API_KEY=YOUR_CF_API_KEY
 ```
 
 然后，使脚本可执行：
 
 ```sh
-      chmod +x ~/protection.sh 
-
+chmod +x ~/protection.sh
 ```
 
-最后，设置两个每 30 秒运行一次的 Cron 任务。要编辑您的 crontab，请运行：
+最后，设置两个每 30 秒运行一次的 Cron 任务。要编辑您的`crontab`，请运行：
 
 ```sh
-      crontab -e 
-
+crontab -e
 ```
 
 并添加以下内容：
 
 ```sh
-      * * * * * /path-to-the-script/cloudflare/protection.sh
-* * * * * ( sleep 30 ; /path-to-the-script/cloudflare/protection.sh ) 
-
+* * * * * /path-to-the-script/cloudflare/protection.sh
+* * * * * ( sleep 30 ; /path-to-the-script/cloudflare/protection.sh )
 ```
 
 注意，您需要将脚本的路径更改为实际存储脚本的路径。

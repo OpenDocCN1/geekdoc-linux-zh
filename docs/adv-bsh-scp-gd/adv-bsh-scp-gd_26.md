@@ -1,14 +1,11 @@
-# 第二十一章。子 shell
+
+# 第二十一章 子 shell
 
 > 原文：[`tldp.org/LDP/abs/html/subshells.html`](https://tldp.org/LDP/abs/html/subshells.html)
 
 运行 shell 脚本会启动一个新的进程，一个*子 shell*。
 
-|
-
 `**定义：**` 一个*子 shell*是由 shell（或*shell 脚本*）启动的子进程。
-
-|
 
 子 shell 是命令处理器的独立实例——在控制台或*xterm*窗口中给你提示的*shell*。就像你的命令在命令行提示符下被解释一样，脚本也会批量处理一系列命令。每个运行的 shell 脚本实际上都是父 shell 的子进程（*子进程*）。
 
@@ -35,7 +32,7 @@ Now, run the script:
 sh subshell-test.sh
 
 And, while the script is running, from a different xterm:
-ps -ef &#124; grep subshell-test.sh
+ps -ef | grep subshell-test.sh
 
 UID       PID   PPID  C STIME TTY      TIME     CMD
 500       2698  2502  0 14:26 pts/4    00:00:00 sh subshell-test.sh
@@ -52,15 +49,15 @@ but is shown here for illustrative purposes.
 
 通常，脚本中的外部命令会派生一个子进程，[[1]](#FTN.AEN18102)，而 Bash 的内建命令则不会。因此，内建命令比它们的外部命令等效物执行得更快，使用的系统资源也更少。
 
-**括号内的命令列表**
+## 括号内的命令列表
 
-( command1; command2; command3; ... )
+`( command1; command2; command3; ... )`
 
 嵌入在`*括号*`之间的命令列表作为子 shell 运行。
 
 子 shell 中的变量*不在*子 shell 代码块外部可见。它们不能被父进程或启动子 shell 的 shell 访问。实际上，这些是*子进程*的局部变量。
 
-**示例 21-1\. 子 shell 中的变量作用域**
+### 示例 21-1 子 shell 中的变量作用域
 
 ```sh
 #!/bin/bash
@@ -133,32 +130,27 @@ exit 0
 #+ to modify or access the subshell variables?
 ```
 
-参见$BASHPID 和示例 34-2。
-
-|
+参见`$BASHPID`和示例 34-2。
 
 `**定义：**` 变量的*作用域*是它有意义的上下文，其中它有一个*值*可以被引用。例如，局部变量作用域仅限于定义它的函数、代码块或子 shell 内部，而全局变量的作用域是它出现的整个脚本。
 
-|
+虽然`$BASH_SUBSHELL`内部变量指示子 shell 的嵌套级别，但`$SHLVL`变量在子 shell 内部*没有变化*。
 
-| ![注意](img/068cd6dc5ba56f1437f9ae6e0cb52ede.png) | 虽然$BASH_SUBSHELL 内部变量指示子 shell 的嵌套级别，但$SHLVL 变量在子 shell 内部*没有变化*。
-
-&#124;  ```sh echo " \$BASH_SUBSHELL outside subshell       = $BASH_SUBSHELL"           # 0
-  ( echo " \$BASH_SUBSHELL inside subshell        = $BASH_SUBSHELL" )     # 1
-  ( ( echo " \$BASH_SUBSHELL inside nested subshell = $BASH_SUBSHELL" ) ) # 2
+```sh
+echo " \$BASH_SUBSHELL outside subshell       = $BASH_SUBSHELL"           # 0
+( echo " \$BASH_SUBSHELL inside subshell        = $BASH_SUBSHELL" )     # 1
+( ( echo " \$BASH_SUBSHELL inside nested subshell = $BASH_SUBSHELL" ) ) # 2
 # ^ ^                           *** nested ***                        ^ ^
 
 echo
 
 echo " \$SHLVL outside subshell = $SHLVL"       # 3
 ( echo " \$SHLVL inside subshell  = $SHLVL" )   # 3 (No change!)
-```  &#124;
-
-|
+```
 
 在子 shell 中做出的目录更改不会传递到父 shell。
 
-**示例 21-2\. 列出用户配置文件**
+### 示例 21-2 列出用户配置文件
 
 ```sh
 #!/bin/bash
@@ -171,8 +163,8 @@ FILE=.bashrc  #  File containing user profile,
 
 for home in `awk -F: '{print $6}' /etc/passwd`
 do
-  [ -d "$home" ] &#124;&#124; continue    # If no home directory, go to next.
-  [ -r "$home" ] &#124;&#124; continue    # If not readable, go to next.
+  [ -d "$home" ] || continue    # If no home directory, go to next.
+  [ -r "$home" ] || continue    # If not readable, go to next.
   (cd $home; [ -e $FILE ] && less $FILE)
 done
 
@@ -215,7 +207,7 @@ fi     #  Variable has been set in current script,
        #+ or is an an internal Bash variable,
        #+ or is present in environment (has been exported).
 
-# Could also be written [[ ${variable-x} != x &#124;&#124; ${variable-y} != y ]]
+# Could also be written [[ ${variable-x} != x || ${variable-y} != y ]]
 # or                    [[ ${variable-x} != x$variable ]]
 # or                    [[ ${variable+x} = x ]]
 # or                    [[ ${variable-x} != x ]]
@@ -236,41 +228,37 @@ fi
 #+ with modifications by Paulo Marcel Coelho Aragao.
 ```
 
-+
-
 在不同的子壳中，进程可能可以并行执行。这允许将复杂任务分解为可以并行处理的子组件。
 
-**示例 21-3\. 在子壳中运行并行进程**
+### 示例 21-3 在子壳中运行并行进程
 
 ```sh
-	(cat list1 list2 list3 &#124; sort &#124; uniq > list123) &
-	(cat list4 list5 list6 &#124; sort &#124; uniq > list456) &
+	(cat list1 list2 list3 | sort | uniq > list123) &
+	(cat list4 list5 list6 | sort | uniq > list456) &
 	# Merges and sorts both sets of lists simultaneously.
 	# Running in background ensures parallel execution.
 	#
 	# Same effect as
-	#   cat list1 list2 list3 &#124; sort &#124; uniq > list123 &
-	#   cat list4 list5 list6 &#124; sort &#124; uniq > list456 &
+	#   cat list1 list2 list3 | sort | uniq > list123 &
+	#   cat list4 list5 list6 | sort | uniq > list456 &
 
 	wait   # Don't execute the next command until subshells finish.
 
 	diff list123 list456
 ```
 
-将 I/O 重定向到子壳使用 "|" 管道操作符，例如 `**ls -al | (command)**`。
+将 I/O 重定向到子壳使用 `"|"` 管道操作符，例如 `ls -al | (command)`。
 
-| ![注意](img/068cd6dc5ba56f1437f9ae6e0cb52ede.png) | 在 花括号 之间的代码块 *不会* 启动子壳。{ command1; command2; command3; . . . commandN; }
+在*花括号*之间的代码块*不会*启动子壳。`{ command1; command2; command3; . . . commandN; }`
 
-&#124;  ```sh var1=23
+```sh
+var1=23
 echo "$var1"   # 23
 
 { var1=76; }
 echo "$var1"   # 76
-```  &#124;
+```
 
-|
+## 备注
 
-### 备注
-
-| [[1]](subshells.html#AEN18102) | 使用 exec 调用的外部命令 *通常* 不会（通常）派生子进程/子壳。 |
-| --- | --- |
+| [[1]](subshells.html#AEN18102) | 使用`exec`调用的外部命令*通常*不会（通常）派生子进程/子壳。 |

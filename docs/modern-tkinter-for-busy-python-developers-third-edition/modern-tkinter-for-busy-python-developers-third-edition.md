@@ -1,52 +1,17 @@
+
 # 忙碌 Python 开发者的现代 Tkinter：第三版
 
+## 14.4 滚动
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-- 14.4 滚动
-## 15. 文本
-
-
-
-
-
+# 15. 文本
 
 关于作者
 
 标题页
 
-
-
 起始页
 
-## 1. 引言
+# 1. 引言
 
 本书将帮助你快速上手，并使用 Python 3 和 Tkinter 构建主流的桌面图形用户界面。如你所知，Tkinter 是 Python 对一个名为 Tk 的 GUI 库的接口。它最初为 Tcl 语言开发，但被其他动态语言广泛采用，包括 Ruby、Perl 和（当然还有）Python。
 
@@ -60,7 +25,7 @@
 
 它并不是一份参考指南。它不会涵盖所有内容，只涵盖你在 95% 应用中需要的精要内容。
 
-### 1.1 本书读者
+## 1.1 本书读者
 
 本书将帮助你快速上手，并使用 Python 3 和 Tkinter 构建主流的桌面图形用户界面。如你所知，Tkinter 是 Python 对一个名为 Tk 的 GUI 库的接口。它最初为 Tcl 语言开发，但被其他动态语言广泛采用，包括 Ruby、Perl 和（当然还有）Python。
 
@@ -74,13 +39,13 @@
 
 它并不是一份参考指南。它不会涵盖所有内容，只涵盖你在 95% 应用中需要的精要内容。
 
-### 1.2 为什么选择 Tkinter?
+## 1.2 为什么选择 Tkinter?
 
 如果你是构建桌面用户界面的的新手，为什么要使用 Tkinter？毕竟，有很多选项，包括 PyQt、PySide、WxPython、PySimpleGUI 和 Kivy。每种都有各自的优缺点。
 
 有几个原因人们选择 Tkinter。它是 Python 的默认 GUI 工具包，也是唯一包含在标准库中的。它是跨平台的，因此代码可以跨 Windows、macOS 或 Linux。最重要的是，它易于学习和使用。它将模板代码和开销降到最低。它是 Pythonic 的；感觉很好。与许多作为 C++ 库的前端不同，Tkinter 是为动态语言设计的。
 
-### 1.3 现代最佳实践
+## 1.3 现代最佳实践
 
 本书完全关于使用当前 Tk 提供的工具构建现代用户界面。它完全关于你实现这一点需要了解的最佳实践。
 
@@ -89,10 +54,6 @@
 Tk 在其生命的大部分时间里一直声誉狼藉，委婉地说。其中一些是实之其实的，大部分并非如此。像任何 GUI 工具一样，你可以用它创建极其难看且过时的用户界面。通过适当的关注和投入，它也可以开发出令人惊叹的作品。大多数人知道那些糟糕的界面；大多数优秀的界面甚至不知道是用 Tk 开发的。在本书中，我们将关注构建良好界面所需的内容。坦率地说，这并不像在 Tk 8.5 之前那么困难。
 
 所以，总结一下：现代桌面图形用户界面，使用现代惯例和设计感，使用 Tk 8.5 和 8.6 提供的现代工具。
-
-
-
-
 
 当涉及到现代最佳实践时，Tk 扩展值得特别关注。多年来，开发者为 Tk 创建了各种插件，例如添加核心库中未包含的（或至少在当时不可用）的新小部件。一些知名且受欢迎的 Tk 扩展包括 BLT、Tix、iWidgets、BWidgets；还有许多其他的。
 
@@ -144,10 +105,6 @@ Tk 是 1988 年左右由加州大学伯克利分校计算机教授 John Ousterho
 
 1994 年，John 搬到了 Sun Labs，在那里组建了一个团队来进一步推进 Tcl/Tk。大部分团队转向了一家名为 Scripts（后改为 Ajuba）的初创公司，并继续演进 Tcl/Tk，直到公司在 2000 年被收购，主要是为了其开发的非 Tcl/Tk 资产。
 
-
-
-
-
 ## 2.3. 无声的革命
 
 Tk 8.5.0 于 2007 年 12 月 20 日发布，它是十多年前 Windows 和 macOS 8.0 版本之后的一个关键进展。核心发行版包含了许多“新”控件，例如树形列表、组合框、标签页笔记本等现在已非常常见的组件。在此之前，这些组件只能通过插件实现（而且插件多到让人选择不过来）。
@@ -166,7 +123,7 @@ Python 的 Tkinter 是早期对 Tk 的绑定之一，也无疑是最受欢迎的
 
 2009 年，Guilherme Polo 在 Tkinter 中增加了对 Tk 较新“ttk”主题控件的支持，从 Python 2.7（在 2.x 分支上）和 Python 3.1 开始。这为使用 Tkinter 构建更好的用户界面打开了大门。文档仍然是 Python 程序员学习新主题控件的主要障碍。
 
-## 3. 安装 Tkinter
+# 3. 安装 Tkinter
 
 在本章中，你将在你的机器上安装 Tk 和 Tkinter，验证其是否正常工作，然后快速查看 Tkinter 程序的样貌。
 
@@ -180,7 +137,7 @@ Python 的 Tkinter 是早期对 Tk 的绑定之一，也无疑是最受欢迎的
 
 ## 3.1. 在 macOS 上安装 Tk
 
-#### 简单方法
+### 简单方法
 
 如所述，在系统上安装 Tk 和 Tkinter 最简单的方法是使用 python.org 上的 Python 二进制安装程序。感谢 Python 核心开发者 Ned DeWitt 的工作，从 3.7 版本开始的二进制安装程序包含了 Tcl 和 Tk。
 
@@ -188,7 +145,7 @@ Python 的 Tkinter 是早期对 Tk 的绑定之一，也无疑是最受欢迎的
 
 然而，如果你是自己编译 Python，你将需要更多工作。请继续阅读...
 
-#### 安装 Tcl/Tk
+### 安装 Tcl/Tk
 
 Tkinter 模块当然包含在 Python 核心中，但你需要在系统中有一个 Tcl/Tk 版本来对其进行编译。为自己一个大忙，获取最新版本。
 
@@ -200,7 +157,7 @@ Tkinter 模块当然包含在 Python 核心中，但你需要在系统中有一�
 
 如果你是一个受虐狂并想阅读其他 Tcl/Tk 选项、变体以及它们如何与 Python 交互，请查看 Mac Tcl/Tk 页面。如果你想从源码编译 Tcl/Tk，请查看
 
-#### 编译 Python
+### 编译 Python
 
 从源码编译 Python 时，你可能需要告诉它去哪里寻找 ActiveTcl（或其他）发行版。否则，它可能找不到任何 Tcl/Tk 发行版（导致 Tkinter 无法工作），或者可能会找到 macOS 自带的（古代且损坏的的版本。
 
@@ -216,9 +173,6 @@ Tkinter 模块当然包含在 Python 核心中，但你需要在系统中有一�
 ./configure
 make
 ```
-
-
-
 
 你也可以通过以下命令获取正在使用的 Tcl/Tk 精确版本：
 
@@ -256,7 +210,7 @@ Tkinter（以及从 Python 3.1 开始的 ttk，它是较新主题化小部件的
 % sudo apt-get install python3-tk
 ```
 
-#### 选项 2. 安装 Tcl/Tk 并编译标准 Python 分发版
+### 选项 2. 安装 Tcl/Tk 并编译标准 Python 分发版
 
 如果你想从源码使用标准源码发行版，完全可以这样做。
 
@@ -276,6 +230,8 @@ Tkinter（以及从 Python 3.1 开始的 ttk，它是较新主题化小部件的
 % make
 % make install
 ```
+
+
 
 如果你是通过包管理器安装的 `tk8.6-dev` 而不是使用 ActiveTcl，则头文件应该位于 `/usr/include/` 中，库 `libtcl8.6.so` 和 `libtk8.6.so` 应该位于 `/usr/lib/` 中。
 
@@ -375,9 +331,6 @@ root.mainloop()
 ### 4.2. 代码
 
 这是使用 Tkinter 创建此应用程序所需的 Python 代码。
-
-
-
 
 ## 4-3. 逐步拆解
 
@@ -504,10 +457,6 @@ def calculate(*args):
 
 乘以并除以 10000.0 是为了避免浮点数学中固有的舍入问题。简单的计算，例如，可能会产生一个显示时既不准确也不好看的数字。你也可以使用 Python 内置的 `round()` 函数。
 
-
-
-
-
 ## 4-4. 缺失了什么
 
 我们现在已经看到了如何创建组件、将它们显示在屏幕上并响应用户对它们的交互。这显然并不华丽，可能通过一些错误检查可以做得更好，但它是一个功能完整的 GUI 应用程序。
@@ -515,10 +464,15 @@ def calculate(*args):
 我们还检查了为了让 Tk 程序运行，我们*没有*需要包含的内容。例如：
 
 - 我们不需要担心在内容变化时重绘屏幕
+
 - 我们不需要担心在每个组件上进行事件的解析、分发、检测或处理
+
 - 我们在创建组件时不需要提供大量的选项；默认值似乎已经帮我们处理了大部分情况，我们只需要更改诸如按钮显示的文本等内容
+
 - 我们不需要编写复杂的代码来获取和设置简单组件的值；我们只需要将它们绑定到变量上
+
 - 我们不需要担心用户关闭窗口或缩放窗口时会发生什么
+
 - 我们不需要编写额外的代码来让这一切在跨平台下运行
 
 ## 还有一件事...
@@ -535,15 +489,23 @@ from tkinter import ttk
 class FeetToMeters:
 
     def __init__(self, root):
+
         root.title("Feet to Meters")
+
         mainframe = ttk.Frame(root, padding="3 3 12 12")
+
         mainframe.grid(column=0, row=0, sticky=(N, W, E, S)")
+
         root.columnconfigure(0, weight=1)
+
         root.rowconfigure(0, weight=1)
 
         self.feet = StringVar()
+
         feet_entry = ttk.Entry(mainframe, width=7, variable=self.feet)
+
         feet_entry.grid(column=2, row=1, sticky=(W, E))
+
         self.meters = StringVar()
 
         ttk.Label(mainframe, variable=self.meters).grid(column=2, row=2, sticky=(W, E))
@@ -551,35 +513,46 @@ class FeetToMeters:
         ttk.Button(mainframe, text="Calculate", command=self.calculate).grid(column=3, row=3, sticky=W)
 
         ttk.Label(mainframe, text="feet").grid(column=3, row=1, sticky=W)
+
         ttk.Label(mainframe, text="is equivalent to").grid(column=1, row=2, sticky=E)
 
         ttk.Label(mainframe, text="meters").grid(column=3, row=2, sticky=W)
 
         for child in mainframe.winfo_children():
+
             child.grid_configure(padx=5, pady=5)
 
         feet_entry.focus()
+
         root.bind("<Return>", self.calculate)
 
     def calculate(self, *args):
+
         try:
+
             value = float(self.feet.get())
+
             self.meters.set(int(0.3048 * value * 10000.0 + 0.5)/10000.0)
+
         except ValueError:
+
             pass
 
 root = Tk()
+
 FeetToMeters(root)
+
 root.mainloop()
-```
+
+
 
 https://tkdocs.com/code/f2mo.py
 
-## 5. Tk 概念
+# 5. Tk 概念
 
 完成第一个示例后，你现在对 Tk 程序的外观以及为了使其运行需要编写什么种类型的代码有了基本的了解。本章将后退，查看理解 Tk 所需的三个大概念：组件、几何管理和事件处理。
 
-# 5.1. 组件 (Widgets)
+## 5.1. 组件 (Widgets)
 
 组件是你在屏幕上看到的所有东西。我们的示例中有一个按钮、一个输入框和一个框架。复选框、树视图、滚动条和文本区域都是其他组件示例。组件通常被称为“控件”（controls）。你也会在 Tk 的文档中看到它们被称为“窗口”（windows），这是其 X 根源的传统（在术语上，你的顶层应用程序窗口和按钮都被称为窗口）。
 
@@ -589,13 +562,13 @@ https://tkdocs.com/code/f2mo.py
 
 几个 Tk 组件。
 
-#### 组件类 (Widget Classes)
+### 组件类 (Widget Classes)
 
 组件是对象，是代表按钮、框架等的类的实例。当你想要创建一个组件时，首先需要的是识别你想要实例化的组件的特定类。本书将帮助你完成。
 
-#### 组件层次结构 (Widget Hierarchy)
+### 组件层次结构 (Widget Hierarchy)
 
-除了组件类，创建它还需要另一个信息：它的[父级]。组件不会悬浮在空中。相反，它们被包含在其他东西中，例如窗口。在 Tk 中，所有组件都是一个组件（或窗口）的一部分，在层次结构的顶部有一个单一根。
+除了组件类，创建它还需要另一个信息：它的父级。组件不会悬浮在空中。相反，它们被包含在其他东西中，例如窗口。在 Tk 中，所有组件都是一个组件（或窗口）的一部分，在层次结构的顶部有一个单一根。
 
 在我们的公制转换示例中，我们创建了一个单一框架作为根窗口的子级，该框架拥有所有其他控件作为子级。根窗口是框架的容器，因此它是框架的父级。根窗口是框架的父级。如下：![](img/44299b92074ede1d1ea1f48186743151_6_0.png)
 
@@ -603,19 +576,21 @@ https://tkdocs.com/code/f2mo.py
 
 叶子节点（按钮、标签等）省略。
 
-#### 创建组件 (Creating Widgets)
+### 创建组件 (Creating Widgets)
 
 每个组件都是 Python 对象。在实例化组件时，必须将其父级作为参数传递的。例如：
 
 ```python
 root = Tk()
+
 content = ttk.Frame(root)
+
 button = ttk.Button(content, text="Hello")
 ```
 
 是否将对象保存到变量完全取决于你。如果你保存了变量，稍后将引用它。如果没有，Tkinter 将为你管理这些名称。
 
-#### 配置选项 (Configuration Options)
+### 配置选项 (Configuration Options)
 
 所有组件都有几个控制其显示或行为的选项。组件的可用选项取决于组件类。配置选项可以在创建组件时通过指定名称和值来设置。稍后，你可以获取这些选项的值，并在极少数情况下，可以随时更改它们。
 
@@ -623,27 +598,24 @@ button = ttk.Button(content, text="Hello")
 
 ```python
 % python
-
 >>> from tkinter import *
 >>> from tkinter import ttk
-
 >>> root = Tk() 创建按钮，传递两个选项：
 >>> button = ttk.Button(root, text="Hello", command="buttonpressed")
-
 >>> button.grid() 查看文本选项当前的值：
 >>> button['text']
 'Hello'
-
 >>> 修改文本选项的值：
 >>> button['text'] = 'goodbye' 另一种实现相同的方法；
-
 >>> button.configure(text='goodbye') 查看文本选项当前的值：
+```
 
 ```python
 >>> button['text']
 ```
 
 'goodbye'
+
 获取关于文本选项的所有信息：
 
 ```python
@@ -651,6 +623,7 @@ button = ttk.Button(content, text="Hello")
 ```
 
 ('text', 'text', 'Text', ' ', 'goodbye')
+
 获取关于此组件所有选项的信息：
 
 ```python
@@ -658,28 +631,32 @@ button = ttk.Button(content, text="Hello")
 ```
 
 {'cursor': ('cursor', 'cursor', 'Cursor', ' ', ' '), 'style': ('style', 'style', 'Style', ''),
+
 'default': ('default', 'default', 'Default', object at oxooFFD10, object
+
 at oxooFFD10), 'text': ('text', 'text', 'Text', ' ', 'goodbye'), 'image': ('image', 'image',
+
 Image', ' ', ''), 'class': ('class', ' ', ' ', ' ', ' '), 'padding': ('padding', 'padding', 'Pad', ' ', ' '),
+
 'width': ('width', 'width', 'Width', ' ', ' '), 'state': ('state', 'state', 'State', object at ox0167FA20), object at
+
 ox0167FA20),
 
 'command': ('command', 'command', 'Command', ' ', 'buttonpressed'),
+
 'textvariable': ('textvariable', 'textVariable', 'Variable', ' ', ' ')}
 
-
-
-
-
 'compound': ('compound', 'compound', 'Compound', object at oxo167FAO8>, object at oxo167FAO8>),
+
 'underline': ('underline', 'underline', 'Underline', -1, -1),
+
 'takefocus': ('takefocus', 'takeFocus', 'TakeFocus', '"', 'tk::takefocus')
 
 如你所示，对于每个选项，Tk 都会显示选项的名称及其当前值（以及另外三个通常可以忽略的属性）。
 
 好了，如果你真的想知道，这里是每个配置选项提供的五部分数据的细节。最有用的是第一个，即选项名称，以及第五个，即选项的当前值。第四个是选项的默认值，换句话说，如果你不更改它，它将拥有的值。另外两项与所谓的“选项数据库”（option database）有关。我们会在讨论菜单时提到它，但它在现代应用程序中并不使用。第二项是该选项在数据库中的名称，第三项是它的类名。
 
-#### 组件内省 (Widget Introspection)
+### 组件内省 (Widget Introspection)
 
 Tk 为你的应用程序提供了关于每个组件的宝库信息供利用。其中大部分信息可以通过 `winfo` 设施获取；完整细节请参阅 `winfo` 命令参考。
 
@@ -699,17 +676,18 @@ print_hierarchy(root)
 ```
 
 以下是一些非常有用的方法：
-- winfo_class：一个用于标识组件类型的类，例如用于主题按钮的 TButton
-- winfo_children：层次结构中作为某个组件的直接子组件的组件列表
-- winfo_parent：层次结构中组件的父组件
-- winfo_toplevel：包含此组件的顶层窗口
-- winfo_width, winfo_height：组件的当前宽度和高度；在出现在屏幕上之前这些是不准确的
-- winfo_reqwidth, winfo_reqheight：组件向几何管理器请求的宽度和高度（稍后会详细介绍）
-- winfo_x, winfo_y：组件相对于父组件的左上角的位置
-- winfo_root, winfo_rooty：组件相对于整个屏幕的左上角的位置
-- winfo_viewable：组件是显示还是隐藏（其在层次结构中的所有祖先必须都是可见的，它才是可见的）
 
-# 5.2. 几何管理 (Geometry Management)
+- `winfo_class`：一个用于标识组件类型的类，例如用于主题按钮的 TButton
+- `winfo_children`：层次结构中作为某个组件的直接子组件的组件列表
+- `winfo_parent`：层次结构中组件的父组件
+- `winfo_toplevel`：包含此组件的顶层窗口
+- `winfo_width`, `winfo_height`：组件的当前宽度和高度；在出现在屏幕上之前这些是不准确的
+- `winfo_reqwidth`, `winfo_reqheight`：组件向几何管理器请求的宽度和高度（稍后会详细介绍）
+- `winfo_x`, `winfo_y`：组件相对于父组件的左上角的位置
+- `winfo_root`, `winfo_rooty`：组件相对于整个屏幕的左上角的位置
+- `winfo_viewable`：组件是显示还是隐藏（其在层次结构中的所有祖先必须都是可见的，它才是可见的）
+
+## 5.2. 几何管理 (Geometry Management)
 
 如果你一直在交互式运行代码，你可能注意到组件仅仅通过创建并出现在屏幕上。将组件放置在屏幕上（以及精确放置的位置）是一个独立的步骤，被称为 _几何布局（geometry）_。
 
@@ -719,7 +697,7 @@ print_hierarchy(root)
 
 我们将在后面的章节中进行详细介绍，`grid` 是在 Tk 流行几年后引入的。在此之前，一个名为 `pack` 的旧几何管理器被最常用。它同样强大，但要难用得多，这使得创建如今看起来吸引人的布局变得非常费力。遗憾的是，现有很多 Tk 代码和文档使用 `pack` 而不是 `grid`（这是判断其新旧程度的一个良好线索）。`pack` 的广泛使用是导致许多 Tk 用户界面看起来糟糕的主要原因之一。尽可能从新代码开始使用 `grid` 并升级旧代码。
 
-#### 问题
+### 问题
 
 几何管理器面临的问题是获取程序创建的所有不同组件，加上程序关于它们应该位于窗口哪个位置的指令（显式的，或者更多是相对于其他组件的），然后实际上在窗口中对它们进行定位。
 
@@ -731,7 +709,7 @@ print_hierarchy(root)
 - 用户界面不同组件如何对齐？它们之间应该留多少空间？这对于呈现整洁的布局并符合平台用户指南是必要的。
 - 对于复杂的用户界面（可能包含许多嵌套在其他框架中的框架中的窗口等），如何实现上述操作，以平衡用户界面不同部分的冲突需求？
 
-#### 工作原理
+### 工作原理
 
 Tk 中的几何管理依赖于主组件（master）和从组件（slave）的概念。主组件是一个组件，通常是顶层窗口或框架。它包含了被称为从组件的其他组件。你可以将几何管理器理解为接管主组件并决定所有从组件在其内部如何显示。
 
@@ -740,9 +718,6 @@ Tk 中的几何管理依赖于主组件（master）和从组件（slave）的概
 你的程序告诉几何管理器要管理主组件内的哪些从组件，即通过调用。你的程序提供了它希望如何显示每个从组件的提示，例如通过 `column-row` 选项。你还可以向几何管理器提供其他内容。例如，我们使用了 `columnconfigure` 和 `rowconfigure` 来指示在有可用空间时我们希望扩展的列和行。值得注意的是，所有这些参数和提示都是特定的（针对 grid），其他几何管理器会使用不同的。
 
 几何管理器收集主组件中从组件的信息以及主组件的总尺寸。它询问每个从组件的自然尺寸，即它理想上显示多大。从组件随后负责在那个特定的矩形内进行渲染。
-
-
-
 
 当然，每当主节点（master）的大小发生变化（例如调整了 tolevel 窗口的大小）、从节点（slave）的自然尺寸发生变化（例如我们更改了标签中的文本），或者任何几何管理器参数发生变化（例如如 或 或）时，我们都会重复整个过程。
 
@@ -760,7 +735,7 @@ Tk 中的几何管理依赖于主组件（master）和从组件（slave）的概
 
 在事件驱动的应用程序中，确保事件循环不持续运行（通常每秒执行几十个步骤）至关重要。在每一步中，它都会处理一个事件。如果你的程序正在执行耗时操作，可能会阻塞事件循环。在这种情况下，没有任何事件将得到处理，任何绘制操作都无法进行，你的应用程序看起来就像冻住了一样。有很多方法避免这种情况，大部分与你的应用程序结构有关。我们将在后面的章节中详细讨论这一点。
 
-#### 命令回调
+### 命令回调
 
 你通常希望程序以某种特定方式处理某些事件，例如，在按下按钮时执行某些操作。对于那些最频繁自定义的事件（如果按下按钮时什么都不发生，那按钮有什么用呢？），组件将允许你通过组件配置选项指定一个回调（callback）。我们在按钮的 `command` 选项示例中看到了这一点。
 
@@ -772,7 +747,7 @@ ttk.Button(mainframe, text="Calculate", command=calculate)
 
 Tk 中的回调通常比与编译语言一起的用户界面工具包要简单（在编译语言中，回调必须是一个具有特定参数集的过程，或者是具有特定签名的对象方法）。相反，回调仅仅是解释器评估的一段普通代码。虽然它可以变得任何你想要的复杂程度，但在大多数情况下，你只想让回调调用其他其他过程。
 
-#### 事件绑定 (Binding to Events)
+### 事件绑定 (Binding to Events)
 
 对于没有关联特定组件命令回调的事件，你可以使用 Tk 的 `bind` 来捕获任何事件，然后（像回调一样）执行任意代码。这里有一个（幼稚的）示例，展示了标签如何响应不同的事件。当事件发生时，标签中会显示事件的描述。
 
@@ -798,19 +773,21 @@ https://tkdocs.com/code/bindings.py
 
 下一个绑定寻找鼠标点击，具体是 `<Button-1>` 事件。在这里，它是实际事件，但 `-1` 是一个事件细节，指定鼠标上的左（主）鼠标键。只有当生成涉及主鼠标键的事件时，绑定才会触发。如果点击了另一个鼠标键，此绑定将忽略它。
 
+
+
 下一个绑定寻找 `<Button-3>` 事件。这实际上是 `<Button-3>` 的简写。它将响应点击右鼠标键时生成的事件。下一个绑定（`<Double-1>` 的简写）增加了另一个修饰符，并将响应左鼠标键被双击。
 
 最后一个绑定还使用了一个修饰符：`<B1-Motion>`，捕捉鼠标移动，但仅在左键按下时。此绑定还展示了如何使用 Many 事件携带额外信息，例如，点击时的鼠标位置。Tk 通过 `%` 替换访问这些参数。在上面我们使用了 % 替换来获取位置。我们在另一个上下文中使用了 % 替换。
 
-`lambda` 表达式的作用是什么？Tkinter 期望你提供一个函数作为事件回调，其第一个参数是触发回调的事件对象。对于一次性的琐微回调，有时并不值得定义具名的函数，就像在这个示例中一样。相反，我们刚刚通过 lambda 使用了匿名函数。在实际应用程序中，你几乎总是使用普通函数，例如 meters
+`lambda` 表达式的作用是什么？Tkinter 期望你提供一个函数作为事件回调，其第一个参数是触发回调的事件对象。对于一次性的琐微回调，有时并不值得定义具名的函数，就像在这个示例中一样。相反，我们刚刚通过 lambda 使用了匿名函数。在实际应用程序中，你几乎总是使用普通函数，例如 `meters`
 
-#### 事件的多个绑定
+### 事件的多个绑定
 
 我们刚刚看到了如何为单个组件设置事件绑定。当该组件接收到匹配的事件时，绑定将触发。但这不是你所能做的全部。
 
 你的绑定不仅可以捕捉单个事件，还可以捕捉短时间内的事件序列。绑定在两次鼠标点击在短时间内发生时触发。你可以同样这样做来捕捉连续按下的键，例如，或简单
 
-你还可以为 tolevel 窗口设置事件绑定。当窗口内任何地方发生匹配的事件时，绑定将产生触发。在我们的示例中，我们为主应用程序 tolevel 窗口设置了 Return 键的绑定。如果在窗口内任何组件拥有焦点时按下 Return 键，该绑定就会触发。
+你还可以为 `tolevel` 窗口设置事件绑定。当窗口内任何地方发生匹配的事件时，绑定将产生触发。在我们的示例中，我们为主应用程序 `tolevel` 窗口设置了 Return 键的绑定。如果在窗口内任何组件拥有焦点时按下 Return 键，该绑定就会触发。
 
 较少的情况下，你可以创建在应用程序任何地方发生匹配事件时触发的绑定，甚至可以针对特定类的任何组件接收的事件，例如，所有按钮。
 
@@ -820,7 +797,7 @@ https://tkdocs.com/code/bindings.py
 
 https://tkdocs.com/man/bindtags
 
-#### 可用事件
+### 可用事件
 
 下面描述了最常用的事件以及产生这些事件的情况。某些事件在某些平台上会生成，而在另一些平台上则不会。要查看所有不同事件名称、修符以及每个事件支持的各种事件参数的完整描述，最佳查询处是 `bind_command` 参考文档。
 
@@ -846,7 +823,7 @@ https://tkdocs.com/man/keysyms
 
 事件修饰符包括，例如，B1 或 Button1 表示按住的主鼠标键，Double 或 Triple 表示相同事件的序列。键修饰符用于键盘上的按键被连续按下的内联以及
 
-#### 虚拟事件
+### 虚拟事件
 
 我们目前为止看到的事件是低层操作系统事件，如鼠标点击和窗口缩放。许多组件还会生成更高层次的、语义化的事件，称为虚拟事件。这些事件通过事件名称周围的双层角括号表示，例如 `<<Select>>`。
 
@@ -864,55 +841,25 @@ Tk 还为常用操作定义了虚拟事件，这些操作在不同平台上以�
 
 在介绍每个组件时，我们都会说明用于创建该组件的 Tkinter 类及其参考手册。尽管该参考文档引用的是 Tk 的 Tcl 接口，但它是对每个 Tk 组件最准确、完整的描述。Python Tkinter 模块的内部直接依赖于此 Tcl 接口。作为提醒，本书强调了 Tk 中最有用的部分以及如何使用它们来构建有效的现代用户界面。参考文档详细说明了在 Tk 中可以做的一切，其用途则完全不同。
 
-## 6.1. 框架 (Frame)
+### 6.1. 框架 (Frame)
 
-ttk.Frame
+`ttk.Frame`
 
 https://tkdocs.com/man/frame
 
-frame 是一个用于组织其他组件的容器组件。它本身通常不显示内容，但可以用于布局其他组件。你可以使用它将相关的组件组合在一起。
-
-frame 是一个用于组织其他组件的容器组件。它本身通常不显示内容，但可以用于布局其他组件。你可以使用它将相关的组件组合在一起。
-
-frame 是一个用于组织其他组件的容器组件。它本身通常不显示内容，但可以用于布局其他组件。你可以使用它将相关的组件组合在一起。
-
-frame 是一个用于组织其他组件的容器组件。它本身通常不显示内容，但可以用于布局其他组件。你可以使用它将相关的组件组合在一起。
-
-frame 是一个用于组织其他组件的容器组件。它本身通常不显示内容，但可以用于布局其他组件。你可以使用它将相关的组件组合在一起。
-
-frame 是一个用于组织其他组件的容器组件。它本身通常不显示内容，但可以用于布局其他组件。你可以使用它将相关的组件组合在一起。
-
-frame 是一个用于组织其他组件的容器组件。它本身通常不显示内容，但可以用于布局其他组件。你可以使用它将相关的组件组合在一起。
-
-frame 是一个用于组织其他组件的容器组件。它本身通常不显示内容，但可以用于布局其他组件。你可以使用它将相关的组件组合在一起。
-
-frame 是一个用于组织其他组件的容器组件。它本身通常不显示内容，但可以用于布局其他组件。你可以使用它将相关的组件组合在一起。
-
-frame 是一个用于组织其他组件的容器组件。它本身通常不显示内容，但可以用于布局其他组件。你可以使用它将相关的组件组合在一起。
-
-frame 是一个用于组织其他组件的容器组件。它本身通常不显示内容，但可以用于布局其他组件。你可以使用它将相关的组件组合在一起。
-
-frame 是一个用于组织其他组件的容器组件。它本身通常不显示内容，但可以用于布局其他组件。你可以使用它将相关的组件组合在一起。
-
-frame 是一个用于组织其他组件的容器组件。它本身通常不显示内容，但可以用于布局其他组件。你可以使用它将相关的组件组合在一起。
-
-frame 是一个用于组织其他组件的容器组件。它本身通常不显示内容，但可以用于布局其他组件。你可以使用它将相关的组件组合在一起。
-
-frame 是一个用于组织其他组件的容器组件。它本身通常不显示内容，但可以用于布局其他组件。你可以使用它将相关的组件组合在一起。
-
-frame 是一个用于组织其他组件的容器组件。它本身通常不显示内容，但可以用于布局其他组件。你可以使用它将相关的组件组合在一起。
+`frame` 是一个用于组织其他组件的容器组件。它本身通常不显示内容，但可以用于布局其他组件。你可以使用它将相关的组件组合在一起。
 
 #### 尺寸 (Size)
 
-通常，frame 的尺寸由其内部的组件决定。`padding` 配置选项用于请求组件内部周围的额外空间。如果你在 frame 内部放置其他组件，可以设置不同的内边距。
+通常，`frame` 的尺寸由其内部的组件决定。`padding` 配置选项用于请求组件内部周围的额外空间。如果你在 `frame` 内部放置其他组件，可以设置不同的内边距。
 
 | macOS | Windows | Linux |
 | --- | --- | --- |
 | | | |
 
-frame 是一个用于组织其他组件的容器组件。它可以显示内容。
+`frame` 是一个用于组织其他组件的容器组件。它可以显示内容。
 
-Frames 是使用 **ttk.Frame** 类创建的：
+Frames 是使用 `ttk.Frame` 类创建的：
 
 ```python
 frame = ttk.Frame(root)
@@ -922,7 +869,7 @@ Frames 还可以通过几种不同的选项来设置。
 
 #### 内边距 (Padding)
 
-`padding` 配置选项用于请求组件内部周围的额外空间。如果你在 frame 内部放置其他组件，可以设置不同的内边距。你可以为所有侧设置相同的内边距、水平和垂直内边距，或为每个侧单独设置内边距。
+`padding` 配置选项用于请求组件内部周围的额外空间。如果你在 `frame` 内部放置其他组件，可以设置不同的内边距。你可以为所有侧设置相同的内边距、水平和垂直内边距，或为每个侧单独设置内边距。
 
 ```python
 f['padding'] = 5    # 所有侧均为 5 像素
@@ -938,7 +885,7 @@ f['padding'] = (5,7,10,12) # 左5，上7，右10，下12
 
 #### 框 (Borders)
 
-你可以为 frame 添加边框以与其环境区分开。你会经常看到这用于使界面的部分看起来凹陷或凸。要实现这一点，你需要设置 `borderwidth` 配置选项（默认值为0，即无边框）以及 `relief` 选项，它指定边框的视觉外观。这可以是 flat（平的），或
+你可以为 `frame` 添加边框以与其环境区分开。你会经常看到这用于使界面的部分看起来凹陷或凸。要实现这一点，你需要设置 `borderwidth` 配置选项（默认值为0，即无边框）以及 `relief` 选项，它指定边框的视觉外观。这可以是 flat（平的），或
 
 ```python
 frame['borderwidth'] = 2
@@ -957,12 +904,9 @@ ttk.Frame(root, width=200, height=200, style='Danger.TFrame').grid()
 
 样式可以更改哪些元素取决于组件和平台而异。在 Windows 和 Linux 上，它的效果符合预期。在当前的 macOS 上，框架将具有红色的凸边框，但背景将保持默认灰色。关于为什么这样，更多内容将在稍后的章节中介绍。
 
+### 6.2. 标签
 
-
-
-# 6.2. 标签
-
-ttk.Label
+`ttk.Label`
 
 https://tkdocs.com/man/ttk_label
 
@@ -984,7 +928,7 @@ label = ttk.Label(text='Full name:')
 
 像帧一样，标签可以接受多个不同的配置选项，这些选项可以改变它们的显示方式。
 
- 显示文本
+显示文本
 
 `text` 配置选项（在创建标签时如上所示）是最常用的，特别是当标签纯粹用于装饰或说明性时。你可以通过修改此配置选项来更改显示的文本。这可以在任何时间完成，而不是在首次创建标签时。
 
@@ -998,7 +942,7 @@ resultsContents.set('New value to display')
 
 Tk 只允许你将控件挂载到 `StringVar` 类实例上，而不能挂载任意的 Python 变量。该类包含了监听变化以及在变量与 Tk 之间进行通信的所有逻辑。使用 `get` 和 `set` 方法来读取或写入变量的当前值。
 
- 显示图像
+显示图像
 
 标签也可以显示图像而不是文本。如果你只想在用户界面中显示图像，这通常是实现方法。我们将在稍后的章节中详细介绍图像，但现在，假设你想显示一个存储在磁盘文件中的 GIF。这是一个步骤过程：首先，你创建一个图像“对象”。然后，你可以通过它的 `image` 配置选项告诉标签使用该对象：
 
@@ -1009,7 +953,7 @@ label['image'] = image
 
 标签还可以同时显示图像和文本。你经常会在工具栏按钮中看到这种。要这样做，请使用 `compound` 配置选项。默认值为 `'center'`，意味着如果存在图像则只显示图像；如果没有图像，则显示由 `text` 或 `textvariable` 选项指定的文本。`compound` 选项的其他可能值还包括 `text`（仅文本）、`image`（仅图像）、`center`（文本在图像中心）、`top`（图像在文本上方）等。
 
- 字体、颜色及更多
+字体、颜色及更多
 
 像帧一样，你通常不想直接更改字体和颜色等内容。如果你需要更改它们（例如创建一个特殊类型的标签），首选方法是创建一个新样式（style），然后控件通过 `style` 选项使用它。
 
@@ -1031,7 +975,7 @@ label['image'] = image
 
 标签的前景（文本）和背景颜色可以通过 `foreground` 和 `background` 配置选项更改。颜色将在稍后详细介绍，你可以使用颜色名称（例如 'white'）或十六进制 RGB 代码（例如 '#ffffff'）来指定它们。标签还接受为帧讨论过的 `relief` 配置选项，使其看起来是凹陷或凸起的。
 
- 布局
+布局
 
 几何管理器（geometry manager）决定标签的整体布局（即它在用户界面中的位置以及大小）。尽管如此，几个选项可以帮助你控制标签在几何管理器提供的矩形区域内的显示方式。
 
@@ -1039,13 +983,13 @@ label['image'] = image
 
 东西没有出现在你认为它们应该出现的地方？可能是因为几何管理器没有将标签放在你认为的位置的位置。例如，如果你正在使用 `grid`，你可能需要调整 `sticky` 选项。在调试时，更改每个控件的背景颜色会有帮助，让你确切知道每个控件的位置。
 
- 多行标签
+多行标签
 
 标签可以显示多行文本。要这样做，可以在文本（或字符串）中嵌入换车符。标签还可以通过 `wraplength` 选项将你的文本自动换行多行，该选项指定了行的最大长度（像素等）。多行标签是经典 Tk 中旧 `message` 控件的替代品。你还可以通过 `justify` 选项控制文本的对齐方式。如果你只有一行文本，你可能更想要 `anchor`。
 
-# 6.3. 按钮
+### 6.3. 按钮
 
-ttk.Button
+`ttk.Button`
 
 https://tkdocs.com/man/ttk_button
 
@@ -1061,19 +1005,19 @@ button = ttk.Button(text='Okay', command=submitForm)
 
 通常，在创建按钮的同时会指定它们的内容和命令回调（`command callback`）。与其他控件一样，按钮接受多个配置选项来改变其外观和行为，包括标准的 `style` 选项。
 
- 文本或图像
+文本或图像
 
 按钮采用标签相同的 `textvariable`（很少使用）和 `compound` 配置选项。这些选项控制按钮是否显示文本和/图像。
 
 按钮有一个 `default` 配置选项。如果指定为 `true`，则告诉 Tk 该按钮是用户界面中的默认按钮；否则不是。如果用户按下 Return 或 Enter 键，默认按钮会被触发。某些平台和样式会用不同的边框或高亮绘制此默认按钮。注意，设置此选项并不会创建一个让 Return 或 Enter 键激活按钮的事件绑定；你必须自己完成。
 
- 命令回调
+命令回调
+
+
 
 `command` 选项连接了按钮的操作和你的应用程序。当用户按下按钮时，解释器将评估选项提供的脚本。
 
 你也可以从应用程序请求按钮调用命令回调。这样一来，你就不需要在程序中多次重复要调用的命令。如果你更改了附加到按钮的命令，就不需要在其他地方也进行更改。
-
-
 
 ```python
 action = ttk.Button(root, text="Action", default="active",
@@ -1081,11 +1025,11 @@ command=myaction)
 root.bind('<', lambda e: action.invoke())
 ```
 
-在大多数平台上，对话框和许多其他窗口的标准行为是在窗口上绑定 Return（回车）键，或者在存在活动按钮时调用它，正如我们在这里所做的那样。如果存在“关闭”或“取消”按钮，请为 Escape（退出）键创建一个绑定。在 macOS 上，你应该额外将键盘上的 Enter 键绑定到活动按钮，并将 Command-period 键绑定到关闭或取消按钮。
+在大多数平台上，对话框和许多其他窗口的标准行为是在窗口上绑定 `Return` 键，或者在存在活动按钮时调用它，正如我们在这里所做的那样。如果存在“关闭”或“取消”按钮，请为 `Escape` 键创建一个绑定。在 macOS 上，你应该额外将键盘上的 `Enter` 键绑定到活动按钮，并将 `Command-period` 键绑定到关闭或取消按钮。
 
-#### 按钮状态
+### 按钮状态
 
-按钮和其他许多其他组件处于正常（normal）状态。按钮会对鼠标移动做出响应，可以按下，并调用其命令回调函数。按钮还可以被设置为禁用（disabled）状态，此时按钮呈灰色，对鼠标移动没有响应，且无法按下。当命令在某个时刻不再适用时，你的程序应该禁用该按钮。
+按钮和其他许多其他组件处于正常 `normal` 状态。按钮会对鼠标移动做出响应，可以按下，并调用其命令回调函数。按钮还可以被设置为禁用 `disabled` 状态，此时按钮呈灰色，对鼠标移动没有响应，且无法按下。当命令在某个时刻不再适用时，你的程序应该禁用该按钮。
 
 所有主题组件都维护一个内部状态，表示为一系列二进制标志。每个标志可以被设置（开启）或清除（关闭）。你可以设置或清除这些不同的标志，并使用 `state` 和 `instate` 方法检查当前设置。按钮利用 `disabled` 标志来控制用户是否可以按下按钮。例如：
 
@@ -1099,17 +1043,17 @@ b.instate(['disabled'], cmd) # 如果未禁用则执行 'cmd'
 
 注意，这些命令接受一个状态标志数组作为参数。
 
-主题组件可用的状态标志完整列表为：active 和 disabled。这些内容在 `themed_widget` 中有描述。虽然所有组件都具有相同set的状态标志，但并不是所有状态对所有组件都有意义。在 `state` 和 `instate` 方法中也可以进行更高级的操作，同时指定多个状态标志。
+主题组件可用的状态标志完整列表为：`active` 和 `disabled`。这些内容在 `themed_widget` 中有描述。虽然所有组件都具有相同 set 的状态标志，但并不是所有状态对所有组件都有意义。在 `state` 和 `instate` 方法中也可以进行更高级的操作，同时指定多个状态标志。
 
-https://tkdocs.com/man/ttk_widget
+`https://tkdocs.com/man/ttk_widget`
 
 `state` 和 `instate` 方法替换了旧的 `state` 配置选项（接受接受 `normal` 或 `active` 值）。在 Tk 8.5 中，该配置选项对主题组件仍然可用，但是“只写”的，这意味着更改该选项会调用相应的状态命令。它主要为了方便，以便你可以在第一次创建组件时指定它应该是被禁用的。然而，使用新的 `state` 命令进行的任何更改都不会更新配置选项。为了避免混淆，请更新你的代码对所有主题组件使用状态标志。
 
 ## 6.4. 复选框 (Checkbutton)
 
-ttk.Checkbutton
+`ttk.Checkbutton`
 
-https://tkdocs.com/man/ttk_checkbutton
+`https://tkdocs.com/man/ttk_checkbutton`
 
 复选框组件类似于普通按钮，但它还持有一种某种二值值（即：切换状态）。按下时，复选框会翻转状态并调用其回调函数。复选框经常用于允许用户开启或关闭选项。
 
@@ -1134,9 +1078,9 @@ onvalue='metric', offvalue='imperial')
 
 复选框使用了许多与普通按钮相同的选项，但多了一些。`active` 和 `compound` 配置选项控制标签（复选框旁）的显示。同样，`command` 选项允许你指定在用户每次切换复选框时要调用的命令；而 `invoke` 方法也会执行相同的命令。`state` 和 `instate` 方法允许你操作状态。
 
-#### 组件值
+### 组件值
 
-与普通按钮不同，复选框持有一个值。我们已经看到 `onvalue` 和 `offvalue` 选项用于设置该值。复选框链接到一个变量。当变量持有该值时，复选框被选中。如果不是，它未被选中。如果链接的变量不存在，或者你没有指定一个，复选框将显示为“三态态”（tristate）或不确定状态。这可以通过交替状态标志来检查。
+与普通按钮不同，复选框持有一个值。我们已经看到 `onvalue` 和 `offvalue` 选项用于设置该值。复选框链接到一个变量。当变量持有该值时，复选框被选中。如果不是，它未被选中。如果链接的变量不存在，或者你没有指定一个，复选框将显示为“三态态” `tristate` 或不确定状态。这可以通过交替状态标志来检查。
 
 当复选框为空时会什么？你可以使用 `get` 方法检索其值。你也可以在实例化时提供一个初始值。
 
@@ -1158,9 +1102,9 @@ d = DoubleVar(10.5) # 默认
 
 ## 6.5. 单选按钮 (Radiobutton)
 
-ttk.Radiobutton
+`ttk.Radiobutton`
 
-https://tkdocs.com/man/ttk_radiobutton
+`https://tkdocs.com/man/ttk_radiobutton`
 
 单选按钮组件允许你在多个选项中选择一个。与复选框不同，它们不受两个选项。单选按钮通常一组使用，选项数量较少。
 
@@ -1188,9 +1132,9 @@ text='Mobile', variable=phone, value='cell')
 
 ## 6.6. 输入框 (Entry)
 
-ttk.Entry
+`ttk.Entry`
 
-https://tkdocs.com/man/ttk_entry
+`https://tkdocs.com/man/ttk_entry`
 
 输入组件为用户提供了一个单行文本字段，他们可以在其中输入字符串值。这些可以是任何内容：姓名、城市、密码、社会安全号码等。
 
@@ -1203,11 +1147,7 @@ name = ttk.Entry(textvariable=username)
 
 可以指定 `width` 配置选项来提供输入框应该有的多少个字符宽。这允许你例如为邮政编码显示一个更短的输入框。
 
-
-
-
-
-# 目录
+### 目录
 
 我们已经看到 `checkbutton` 和 `radiobutton` 控件都有与其关联的值。`Entry` 也是如此，该值通常通过 `textvariable` 配置选项指定的链接变量来访问。
 
@@ -1223,7 +1163,7 @@ name.insert(0, 'your name')
 # 在指定的索引处插入新文本
 ```
 
-# 监听变化
+### 监听变化
 
 `Entry` 组件没有 `command` 选项来在 entry 发生变化时调用回调函数。要监听变化，你应该监控链接变量的变化。另见下文的“验证”。
 
@@ -1239,9 +1179,9 @@ username.trace_add("write", it_has_been_written)
 
 Tkinter 允许你监控 `StringVar`（或其任何子类）的变化。旧的和新的追踪工具都是 Tcl `trace_command` 的非常薄（且并不非常符合 Python 风格）的前端接口。
 
-https://tkdocs.com/man/trace
+`https://tkdocs.com/man/trace`
 
-# 密码
+### 密码
 
 `Entries` 可用于密码，其中实际内容将以项目符号或其他符号显示。要此操作，将 `show` 配置选项设置为你想要显示的字符。
 
@@ -1249,11 +1189,11 @@ https://tkdocs.com/man/trace
 passwd = Entry(textvariable=password, show="*")
 ```
 
-# 控件状态
+### 控件状态
 
 与各种按钮类似，`entries` 也可以通过 `state` 命令进入禁用状态（并通过 `state` 查询）。如果用户无法更改 entry，`entries` 也可以使用 `state` 标志，尽管他们仍然可以选择其中的文本（并复制到剪贴板）。还有一种 `invalid` 状态，当 entry 组件验证失败时设置，这引我们我们了……
 
-# 验证
+### 验证
 
 用户可以在 `entry` 组件中输入任何他们喜欢的文本。然而，如果你想限制他们在 entry 中输入的内容，可以这样做。例如，一个 `entry` 可能只接受整数或有效的邮政编码编码。
 
@@ -1276,13 +1216,13 @@ e = ttk.Entry(root, textvariable=num, validate='key',
 e.grid(column=0, row=0, sticky='we')
 ```
 
-https://tkdocs.com/code/numvalidate.py_*
+`https://tkdocs.com/code/numvalidate.py_*`
 
 有几点值得注意。首先，与事件绑定一样，我们可以通过百分比替换（percent substitutions）访问有关触发验证的条件的更多信息。我们在这里使用了其中一个：`%P` 是验证通过时 entry 的新值。我们使用一个简单的正则表达式和长度检查来确定更改是否有效。为了拒绝更改，我们的验证命令可以返回一个假值，使 entry 保持不变。
 
 利用这些百分比替换需要一些“体操”。你可能记得 Tkinter 在事件绑定回调中抽象化了百分比替换。所有的事件参数都被封装成一个事件对象并传递给回调。验证回调没有同等的的抽象。相反，我们必须选择我们感兴趣的百分比替换。`register` 方法（可以在任何控件上调用，而不仅仅是 entries）创建一个 Tcl 程序，该程序将调用我们的 Python 函数。我们选择的百分比替换将作为参数传递给它。
 
-让我们扩展示例，使 entry 接受格式为 "#####" 或 "#####-####" 的邮政编码（“#” 可以是任何数字）。我们仍然会在每次击键时进行一些验证（只允许输入数字或连字符）。然而，我们不再能够在每次击键时完全验证 entry；如果他们刚刚输入了第一个数字，它还未有效。因此，完全验证只会在 entry 失去焦点时发生（例如，用户 Tab 键离开）。Tk 将此称为“验证”(validation)，以与对每次击键进行“预验证”(prevalidation)”更改形成对比。
+让我们扩展示例，使 entry 接受格式为 "#####" 或 "#####-####" 的邮政编码（“#” 可以是任何数字）。我们仍然会在每次击键时进行一些验证（只允许输入数字或连字符）。然而，我们不再能够在每次击键时完全验证 entry；如果他们刚刚输入了第一个数字，它还未有效。因此，完全验证只会在 entry 失去焦点时发生（例如，用户 Tab 键离开）。Tk 将此称为“验证” validation，以与对每次击键进行“预验证” prevalidation 更改形成对比。
 
 我们应该如何响应错误？让我们添加一条消息提醒用户格式。如果他们输入了错误的键或在 entry 未包含有效邮政编码时 Tab 离开，消息将会出现。当他们返回 entry 时，我们将移除该消息。当 entry 包含有效的邮政编码时，我们将添加一个（虚拟）按钮来“处理”它。
 
@@ -1309,7 +1249,9 @@ def check_zip(newval, op):
             errmsg.set(formatmsg)
         return valid
 check_zip_wrapper = (root.register(check_zip), '%P', '%V')
+```
 
+```python
 zip = StringVar()
 f = tk.Frame(root)
 f.grid(column=0, row=0)
@@ -1335,20 +1277,17 @@ msg.grid(column=1, row=2, padx=5, pady=5, sticky='w')
 
 正如之前提到的，entry 的 `invalid` 状态标志会根据验证的成功或失败自动更新。
 
-
-
-
 其他百分比替换允许您在编辑之前获取条目的内容、区分插入和删除、发生插入或删除的位置、插入或删除的内容、验证选项的当前设置以及组件的名称
-
-
 
 ## 6.7. 下拉框 (Combobox)
 
-ttk.Combobox
+`ttk.Combobox`
 
-https://tkdocs.com/man/ttk_combobox
+`https://tkdocs.com/man/ttk_combobox`
 
-Combobox 组件将输入框（entry）与一组选项列表相结合。这使得用户既可以从您提供的一组值中进行选择（例如，典型设置），也可以输入自己的值（例如用于不常见的情况）。
+
+
+Combobox 组件将输入框（`entry`）与一组选项列表相结合。这使得用户既可以从您提供的一组值中进行选择（例如，典型设置），也可以输入自己的值（例如用于不常见的情况）。
 
 ![](img/44299b92074ede1d1ea1f48186743151_113_0.png)
 
@@ -1360,7 +1299,7 @@ country = ttk.Combobox(
 textvariable=countryvar)
 ```
 
-与 entry 类似，`textvariable` 选项将您程序中的变量与下拉框的当前值关联起来。与其他组件一样，您应该在自己的代码中初始化关联的变量。
+与 `entry` 类似，`textvariable` 选项将您程序中的变量与下拉框的当前值关联起来。与其他组件一样，您应该在自己的代码中初始化关联的变量。
 
 下拉框会生成一个 `<<>>` 虚拟事件，您可以在其值变化时对其进行绑定。（您也可以像我们在前面几个章节中看到的那样，跟踪 `trace` 的变化。绑定到事件更加直接，因此通常是我们的首选方案。）
 
@@ -1368,7 +1307,7 @@ textvariable=countryvar)
 country.bind('<<>>');
 ```
 
-#### 预定义值
+### 预定义值
 
 您可以使用 `values` 配置选项为用户提供一组可以选择的值列表：
 
@@ -1388,28 +1327,29 @@ country.state(["readonly"]);
 
 为了补充 `get` 和 `set` 方法，您还可以使用 `current` 方法来确定预定义值列表中选择了哪一项。不带参数调用 `current`；它将返回列表的从0开始的索引，如果当前值不在列表中则返回 -1。您可以通过带一个从0开始的索引参数调用 `current` 来选择列表中的某项。
 
-想为列表中的每项关联某些其他值，以便您的程序在内部使用一个值，但在下拉框中显示为其他内容？当我们在几个章节后讨论 listbox 时，将需要查看标题为“保留额外项目数据”的章节。
+想为列表中的每项关联某些其他值，以便您的程序在内部使用一个值，但在下拉框中显示为其他内容？当我们在几个章节后讨论 `listbox` 时，将需要查看标题为“保留额外项目数据”的章节。
 
 ## 7. 网格几何管理器 (The Grid Geometry Manager)
 
-我们将暂时停止讨论不同的组件（在屏幕上放置什么），转而关注几何管理（将这些组件放置在什么位置）。我们在“Tk 概念”章节中引入了几何管理的通用概念。在这里，我们关注一个特定的几何管理器：
+我们将暂时停止讨论不同的组件（在屏幕上放置什么），转而关注几何管理（将这些组件放置在什么位置）。我们在“`Tk` 概念”章节中引入了几何管理的通用概念。在这里，我们关注一个特定的几何管理器：
 
 正如我们所看到的，`grid` 允许您以列和行来布局组件。如果您熟悉使用 HTML 表格进行布局，在这里您会感到自如。本章将说明调整 `grid` 的各种方式，以让您获得对用户界面所需的所有控制。
 
-`grid` 是 Tk 中提供的几种几何管理器之一，它的强大、灵活性和易用性的结合使其成为通用的最佳选择。它的约束模型与当今依赖组件对齐的布局天然契合。Tk 中还有其他几何管理器：`pack` 也非常强大但更难使用和理解，而 `place` 则让您对每个元素的定位具有完全控制权。即使是面板窗口（paneled windows）、笔记本（notebooks）、画布（canvas）和文本（text）等我们将探索的组件也充当几何管理器。
+`grid` 是 `Tk` 中提供的几种几何管理器之一，它的强大、灵活性和易用性的结合使其成为通用的最佳选择。它的约束模型与当今依赖组件对齐的布局天然契合。`Tk` 中还有其他几何管理器：`pack` 也非常强大但更难使用和理解，而 `place` 则让您对每个元素的定位具有完全控制权。即使是面板窗口（paneled windows）、笔记本（notebooks）、画布（canvas）和文本（text）等我们将探索的组件也充当几何管理器。
 
-值得注意的是，`grid` 在 1996 年引入 Tk，这在 Tk 流行几年后才被人们接受。在此之前，开发者一直使用 `pack` 进行基于约束的管理。当 `grid` 出现时，许多开发者继续使用，您仍然会在很多 Tk 程序和文档中发现它。`grid` 算法本身没有问题，但修改现有布局可能会困难。在用户界面的不同部分对齐组件更加复杂。`grid` 具有 `pack` 的所有功能，产生更好的布局（水平和垂直方向对齐组件），并且更容易学习和使用。正因如此，大多数时候，`grid` 是正确的选择。使用 `grid` 编写新程序，并在修改现有用户界面时切换到 `grid`。`grid` 的参考文档提供了关于 `grid`、其行为以及所有选项的详尽描述。
+值得注意的是，`grid` 在 1996 年引入 `Tk`，这在 `Tk` 流行几年后才被人们接受。在此之前，开发者一直使用 `pack` 进行基于约束的管理。当 `grid` 出现时，许多开发者继续使用，您仍然会在很多 `Tk` 程序和文档中发现它。`grid` 算法本身没有问题，但修改现有布局可能会困难。在用户界面的不同部分对齐组件更加复杂。`grid` 具有 `pack` 的所有功能，产生更好的布局（水平和垂直方向对齐组件），并且更容易学习和使用。正因如此，大多数时候，`grid` 是正确的选择。使用 `grid` 编写新程序，并在修改现有用户界面时切换到 `grid`。`grid` 的参考文档提供了关于 `grid`、其行为以及所有选项的详尽描述。
 
 ```
 https://tkdocs.com/man/grid
+```
 
-## 7.1. 列与行
+### 7.1. 列与行
 
 在 `grid` 中，组件被分配一个列号和一个行号。这些编号指示组件相对于其他组件的位置。同一列的组件位于上下。同一行的组件位于左或或右。
 
 列号和行号必须是正整数（例如 0, 1, 2, ...）。您不必从 0 开始，可以在列和行号上留空隙（例如 1, 2, 10, 11, 12, 20）。如果您计划以后在用户界面中间添加更多组件，这非常有用。每列的宽度取决于其中包含的所有组件。每行也是如此。这意味着当您规划用户界面并将其划分为行列时，不需要担心每列宽度相等。
 
-## 7.2. 跨单元格
+### 7.2. 跨单元格
 
 组件在 `grid` 中可以占据多个单元格；为了实现这一点，我们在网格组件时使用 `colspan` 和 `rowspan` 选项。这些类似于 HTML 表格的 "colspan" 和 "rowspan" 属性。
 
@@ -1421,6 +1361,7 @@ https://tkdocs.com/man/grid
 
 ```
 from tkinter import *
+
 from tkinter import ttk
 ```
 
@@ -1430,13 +1371,17 @@ root = Tk()
 
 ```
 content = ttk.Frame(root)
+
 frame = ttk.Frame(content, borderWidth=5, relief="ridge", width=200, height=100)
+
 amelbl = ttk.Label(content, text="Name")
+
 name = ttk.Entry(content)
 ```
 
 ```
 onevar = BooleanVar(value=True)
+
 twovar = BooleanVar(value=False)
 ```
 
@@ -1446,24 +1391,39 @@ threevar = BooleanVar(value=True)
 
 ```
 one = ttk.Checkbutton(content, text="One", variable=onevar,
+
 onvalue=True)
+
 two = ttk.Checkbutton(content, text="Two", variable=twovar,
+
 onvalue=True)
+
 three = ttk.Checkbutton(content, text="Three", variable=threevar,
+
 onvalue=True)
+
 ok = ttk.Button(content, text="Ok")
+
 cancel = ttk.Button(content, text="Cancel")
 ```
 
 ```
 content.grid(column=0, row=0)
+
 frame.grid(column=0, row=0, columnspan=3, rowspan=2)
+
 namelbl.grid(column=3, row=0, columnspan=2)
+
 name.grid(column=3, row=1, columnspan=2)
+
 one.grid(column=0, row=3)
+
 two.grid(column=1, row=3)
+
 three.grid(column=2, row=3)
+
 ok.grid(column=3, row=3)
+
 cancel.grid(column=4, row=3)
 ```
 
@@ -1471,9 +1431,9 @@ cancel.grid(column=4, row=3)
 root.mainloop()
 ```
 
-https://tkdocs.com/code/gridexample1.py
+`https://tkdocs.com/code/gridexample1.py`
 
-## 7.3. 单元格内的布局
+### 7.3. 单元格内的布局
 
 列的宽度（行的高度）取决于其中的所有组件。这意味着某些组件可能比它们所处的单元格小。如果是这样，它们应该放在单元格的的确切位置？
 
@@ -1485,11 +1445,7 @@ https://tkdocs.com/code/gridexample1.py
 
 `sticky` 选项可以改变这种默认行为。它的值是由一个或多个指南方向组成的字符串，指定单元格组件的哪些边缘应该“粘”在上面。例如，`n`（北）的值会将组件推向顶部，底部留出任何额外的垂直空间；组件仍将水平居中。`nw`（西北）的值意味着组件将粘附在左上角，在底部和右侧留出额外空间。
 
-
-
-
-
-在 Tkinter 中，你也可以将其指定为包含 `west` 和 `east` 的列表。
+在 `Tkinter` 中，你也可以将其指定为包含 `west` 和 `east` 的列表。
 这是一种风格上的选择，我们在书中会倾向于使用列表格式。
 
 指定两个相对的边缘，例如我们使用的 `(west, east)`，意味着组件将被拉伸。在这种情况下，它将紧贴在单元格的左边缘和右边缘。因此，组件的宽度将大于它的“理想”尺寸。
@@ -1500,7 +1456,7 @@ https://tkdocs.com/code/gridexample1.py
 
 如果你在尝试让各个元素按照你意图的方式对齐时遇到困难，请先确保你知道组件有多大。正如上一章讨论 `label` 组件时所说，更改组件的背景或边框会有所帮助。
 
-## 7.4. 处理调整大小
+### 7.4. 处理调整大小
 
 如果你尝试过调整示例的大小，你会发现没有任何东西完全没有移动，如下所示。
 
@@ -1511,7 +1467,7 @@ https://tkdocs.com/code/gridexample1.py
 
 *调整窗口大小*
 
-即使你看了下文并为我们的示例添加了额外的 `sticky` 选项，你仍然会看到同样的结果。看起来 `sticky` 只是告诉 Tk 如果单元格的行或列调整大小时该如何反应，但它并没有真正告诉 Tk 当有任何额外空间可用时，行或列是否应该调整大小。让我们来修复这个问题。
+即使你看了下文并为我们的示例添加了额外的 `sticky` 选项，你仍然会看到同样的结果。看起来 `sticky` 只是告诉 `Tk` 如果单元格的行或列调整大小时该如何反应，但它并没有真正告诉 `Tk` 当有任何额外空间可用时，行或列是否应该调整大小。让我们来修复这个问题。
 
 网格中的每一列和每一行都有一个与其关联的 `weight` 选项。此网格决定了当主窗口中有额外空间可填充时，列或行应该增长多少。默认情况下，每列或每行的 `weight` 为 0，这意味着它不会扩展以填充任何额外空间。
 
@@ -1519,48 +1475,71 @@ https://tkdocs.com/code/gridexample1.py
 
 `columnconfigure` 和 `rowconfigure` 还接受 `minsize` 网格选项，它指定了你不希望列或行收缩小于某个最小尺寸。
 
-## 7.5. 填充（Padding）
+### 7.5. 填充（Padding）
 
-通常情况下，每列或每行都将直接相邻，以便组件彼此相邻。这有时是你所需要的（例如 `listbox` 和滚动条），但通常你希望在组件之间留有一些空间。在 Tk 中，这被称为 `padding`（填充），你有几种可以选择的方法来添加它。我们已经看到了一种方法，即使用组件自身的选项在其周围添加额外空间。并不是所有组件都有此选项，但 `frame` 有；这是很有用的，因为 `frame` 通常用作 `grid` 组件的主容器。`frame` 的 `padding` 选项允许你指定框架内部的填充，无论是四个面相同，还是每个面都不同。第二种方法是在添加组件时使用 `padx` 和 `pady` 选项。如你预期的，`padx` 在左右两侧添加一些额外空间，而 `pady` 在顶部和底部添加额外空间。单个值会在左右（或顶部和底部）设置相同的填充，而双值列表则允许你在左右（或顶部和底部）设置不同的值。请注意，这种填充是在包含组件的网格单元格内部的。如果你想在整行或整列周围添加填充，`columnconfigure` 和 `rowconfigure` 方法接受 `padding` 选项，它们将为你完成此操作。让我们为我们的示例添加 `sticky`、调整大小和填充行为（已加粗**）。
+通常情况下，每列或每行都将直接相邻，以便组件彼此相邻。这有时是你所需要的（例如 `listbox` 和滚动条），但通常你希望在组件之间留有一些空间。在 `Tk` 中，这被称为 `padding`（填充），你有几种可以选择的方法来添加它。我们已经看到了一种方法，即使用组件自身的选项在其周围添加额外空间。并不是所有组件都有此选项，但 `frame` 有；这是很有用的，因为 `frame` 通常用作 `grid` 组件的主容器。`frame` 的 `padding` 选项允许你指定框架内部的填充，无论是四个面相同，还是每个面都不同。第二种方法是在添加组件时使用 `padx` 和 `pady` 选项。如你预期的，`padx` 在左右两侧添加一些额外空间，而 `pady` 在顶部和底部添加额外空间。单个值会在左右（或顶部和底部）设置相同的填充，而双值列表则允许你在左右（或顶部和底部）设置不同的值。请注意，这种填充是在包含组件的网格单元格内部的。如果你想在整行或整列周围添加填充，`columnconfigure` 和 `rowconfigure` 方法接受 `padding` 选项，它们将为你完成此操作。让我们为我们的示例添加 `sticky`、调整大小和填充行为（已加粗**）。
 
 ```
 from tkinter import *
+
 from tkinter import ttk
 
 root = Tk()
 
 content = ttk.Frame(root, padding=(3,3,12,12))
+
 frame = ttk.Frame(content, borderwidth=5, relief="ridge", width=200, height=100)
+
 amelbl = ttk.Label(content, text="Name")
+
 name = ttk.Entry(content)
 
 onevar = BooleanVar()
+
 twovar = BooleanVar()
+
 threevar = BooleanVar()
 
 onevar.set(True)
+
 twovar.set(False)
+
 threevar.set(True)
 
 one = ttk.Checkbutton(content, text="One", variable=onevar, value=True)
+
 two = ttk.Checkbutton(content, text="Two", variable=twovar, value=True)
+
 three = ttk.Checkbutton(content, text="Three", variable=threevar, value=True)
+
 ok = ttk.Button(content, text="Okay")
+
 cancel = ttk.Button(content, text="Cancel")
 ```
 
 ```
 content.grid(column=0, row=0, sticky=(N, S, E, W))
+
 frame.grid(column=0, row=0, colspan=3, rowspan=2, sticky=(N, S, E, W))
+
 amelbl.grid(column=3, row=0, colspan=2, sticky=(N, S, E, W))
+
 name.grid(column=3, row=1, colspan=2, sticky=(N, W), pady=5, padx=5)
+
 one.grid(column=0, row=3)
+
 two.grid(column=1, row=3)
+
 three.grid(column=2, row=3)
+
 ok.grid(column=3, row=3)
+
 cancel.grid(column=4, row=3)
+
 root.columnconfigure(0, weight=1) root.rowconfigure(0, weight=1)
+
 content.columnconfigure(0, weight=3) content.columnconfigure(1, weight=3) content.columnconfigure(2, weight=3)
+
 content.columnconfigure(3, weight=1) content.columnconfigure(4, weight=1) content.rowconfigure(1, weight=1)
 
 root.mainloop()
@@ -1570,11 +1549,11 @@ root.mainloop()
 
 Grid 示例，处理单元格布局和调整。
 
-## 7.6. 其他网格功能
+### 7.6. 其他网格功能
 
 如果你查看 `grid` 的参考文档，你会看到使用 `grid` 可以做的许多其他事情。这里是其中一些有用的。
 
-https://tkdocs.com/man/grid
+`https://tkdocs.com/man/grid`
 
 #### 查询和更改网格选项
 
@@ -1584,27 +1563,39 @@ https://tkdocs.com/man/grid
 
 ```
 >>> content.grid_slaves()
+
 [object .frame.button2, object .frame.button,
+
 object .frame.checkbox3, object .frame.checkbox2,
+
 object .frame.checkbutton, object .frame.entry,
+
 object .frame.label, object .frame]
+
 >>> content.grid_slaves(row=3)
+
 [object .frame.button2, object .frame.button,
+
 object .frame.checkbox3, object .frame.checkbox2,
+
 object .frame.checkbutton, object .frame.entry,
+
 object .frame.label]
+
 >>> content.grid_slaves(column=3)
+
 [object .frame.label, object .frame.entry]
+
 >>> content.grid_slaves(row=3, column=3)
+
 []
 ```
+
+
 
 #### 内部填充（Internal Padding）
 
 你已经见过 `padx` 和 `pady` 网格选项是如何在组件外部添加额外空间的。还有一种较少使用的填充类型，被称为“内部填充”，由网格选项 `ipadx` 和 `ipady` 控制。
-
-
-
 
 `remove` 方法的工作原理相同，不同在于如果你以后再次对其进行 `grid` 操作，其选项会被保留。
 
@@ -1612,7 +1603,7 @@ object .frame.label]
 
 随着你的用户界面变得越来越复杂，组织所有组件的 `grid` 也会变得越来越复杂。这会使修改和维护程序变得非常困难。
 
-幸运的是，你不需要用单个 `grid` 来管理整个用户界面。如果用户界面中的某个区域与其他区域相对独立，可以创建一个新的框架（`frame`），并将区域内的组件在该框架内进行 `grid` 。例如，如果你正在构建一个带有多个调色板、工具栏等的图形编辑器，这些区域中的每一个都可以作为放入独立 `frame` 的候选对象。
+幸运的是，你不需要用单个 `grid` 来管理整个用户界面。如果用户界面中的某个区域与其他区域相对独立，可以创建一个新的框架（`frame`），并将区域内的组件在该框架内进行 `grid`。例如，如果你正在构建一个带有多个调色板、工具栏等的图形编辑器，这些区域中的每一个都可以作为放入独立 `frame` 的候选对象。
 
 从理论上来说，这些拥有独立 `grid` 的 `frame` 可以任意深度地嵌套，尽管实践中通常不会超过几层。这对于程序的模块化有很大帮助。例如，如果你有一个绘制工具的调色板，可以在单独的函数或类中创建整个部分。它将负责创建所有组件部件、将它们 `grid` 在一起、设置事件绑定等。该调色板内部的工作细节可以包含在这一段代码中。你的主程序只需要知道包含调色板的单个 `frame` 部件。
 
@@ -1665,10 +1656,15 @@ Tkinter 不允许你将普通的 Python 列表链接到 `listvariable` 实际上
 
 ```python
 choices = ["apple", "orange", "banana"]
+
 choicesvar = StringVar(value=choices)
+
 l = Listbox(parent, listvariable=choicesvar)
+
 ...
+
 choices.append("peach")
+
 choicesvar.set(choices)
 ```
 
@@ -1725,9 +1721,11 @@ l.bind("<Double-1>", ...)
 
 国家选择列表框示例。
 
-```
+```python
 from tkinter import *
+
 from tkinter import ttk
+
 root = Tk()
 ```
 
@@ -1736,13 +1734,16 @@ root = Tk()
 # - 与国家代码顺序相同的国家名称并行列表
 # - 国家代码到人口的哈希映射
 
-```
+```python
 countrycodes = ('ar', 'au', 'be', 'br', 'ca', 'cn', 'fi', 'gr', 'in',
                 'it', 'jp', 'nl', 'no', 'es', 'se', 'ch')
+
 countrynames = ('Argentina', 'Australia', 'Belgium', 'Brazil',
                 'Canada', 'China', 'Denmark', 'Finland', 'Greece',
                 'Italy', 'Japan', 'Mexico', 'Norway', 'Spain', 'Sweden', 'Switzerland')
+
 cnames = StringVar(value=countrynames)
+
 populations = {'ar':4100000, 'au':2179211, 'be':1105853, 'br':2159717,
               'ca':3318682, 'cn':1231840, 'dk':5457415, 'fi':5302000,
               'gr':6410240, 'in':1310430, 'it':5920638, 'jp':2771800,
@@ -1755,13 +1756,16 @@ gifts = {'card':'Greeting card', 'flowers':'Flowers', 'nastygram':'Nastygram'}
 # 状态变量
 
 gift = StringVar()
+
 sentmsg = StringVar()
+
 statusmsg = StringVar()
 
 # 当列表框中的选择发生变化时调用；
 # 确定当前选择了哪个国家，然后查找其代码，
 # 并根据代码更新状态消息。
 # 此外，在我们开始其他操作时清除发送消息。
+```
 
 ```python
 def showPopulation(*args):
@@ -1775,7 +1779,8 @@ def showPopulation(*args):
         sentmsg.set('')
 ```
 
- 当用户双击列表中的项、点击“发送礼物”按钮或按回车键时调用。
+当用户双击列表中的项、点击“发送礼物”按钮或按回车键时调用。
+
 # 如果选中项移出了视图，确保它是可见的。
 # 确定选择了哪个国家、选了哪种礼物，
 # 并提供已发送的反馈。
@@ -1825,8 +1830,6 @@ sentlbl.grid(column=1, row=5, columnspan=2, sticky=N, pady=5, padx=5)
 status.grid(column=0, row=6, columnspan=2, sticky=(W,E))
 ```
 
-
-
 现在可见。除了 `yview` 和/或 `xview` 方法外，每个可滚动的小部件都有一个 `yscrollcommand` 和/或 `xscrollcommand` 配置选项。这用于指定一个方法调用，该方法必须是滚动条的 `set` 方法。再次，额外的参数将自动附加到方法调用上。
 
 如果你想从程序内部将滚动条移动到特定位置，可以自己调用 `set` 方法。传递两个浮点值（介于 0 和 1 之间），表示可见内容区域的起始和结束百分比。
@@ -1855,6 +1858,8 @@ s.grid(column=1, row=0, sticky=(N,S))
 l['yscrollcommand'] = s.set
 ```
 
+
+
 ```python
 ttk.Label(root, text="Status message here", anchor=
 (W)).grid(column=0, columnspan=2, row=1, sticky=(W,E))
@@ -1867,17 +1872,15 @@ root.mainloop()
 
 https://tkdocs.com/code/scrollbar.py
 
-如果你看过这本书的早期版本，你可能会记得在此时，我们引入了一个 `sizegrip`（尺寸调整手柄）部件。它在窗口右下角放置了一个小手柄，允许用户通过拖动手柄来调整窗口大小。这在某些平台上很常见，包括旧版本的 macOS。一些旧版本的 Tk 甚至会自动为你的窗口添加此手柄。
+如果你看过这本书的早期版本，你可能会记得在此时，我们引入了一个 `sizegrip` 部件。它在窗口右下角放置了一个小手柄，允许用户通过拖动手柄来调整窗口大小。这在某些平台上很常见，包括旧版本的 macOS。一些旧版本的 Tk 甚至会自动为你的窗口添加此手柄。
 
 平台规范的演变往往快于长期的开源 GUI 工具包。Mac OS X 10.7 放弃了角落的尺寸手柄，转而允许从任何窗口边缘进行调整，最终与世界其他地区保持了同步。除非有迫切需要与 10 多年前的操作系统视觉兼容，否则如果你的应用程序中有 `sizegrip` 类，可能最好将其移除。
 
 ## 8.3. 文本
 
-文本
-
 https://tkdocs.com/man/text
 
-文本部件（Text widget）为用户提供了一个输入多行文本的区域。文本部件是经典 Tk 部的一部分，而不是主题 Tk 部。
+文本部件 `Text widget` 为用户提供了一个输入多行文本的区域。文本部件是经典 Tk 部的一部分，而不是主题 Tk 部。
 
 | macOS | Windows | Linux |
 | --- | --- | --- |
@@ -1893,7 +1896,7 @@ Tk 的文本部件与 `canvas` 部件一起，是提供惊人深度但易于编�
 t = Text(width=40, height=10)
 ```
 
-`width` 和 `height` 选项分别指定文本部件请求的屏幕尺寸，以字符和行数为单位。文本的内容可以是任意大的。你可以使用 `wrap` 配置选项来控制换行的处理方式：值有 `none`（不换行，文本可以水平滚动）、`char`（在任何字符处换行）和 `word`（仅在单词边界处换行）。
+`width` 和 `height` 选项分别指定文本部件请求的屏幕尺寸，以字符和行数为单位。文本的内容可以是任意大的。你可以使用 `wrap` 配置选项来控制换行的处理方式：值有 `none` 不换行，文本可以水平滚动、`char` 在任何字符处换行 和 `word` 仅在单词边界处换行。
 
 可以禁用文本部件以防止任何编辑。由于文本不是主题部件，因此无法通常的 `state` 和 `instate` 方法。相反，请使用配置选项将其设置为 `disabled` 或
 
@@ -1901,17 +1904,17 @@ t = Text(width=40, height=10)
 txt['state'] = 'disabled'
 ```
 
-滚动方式与列表框相同。`xscrollcommand` 和 `yscrollcommand` 配置选项将文本部件连接到水平和/或垂直滚动条，并从滚动条调用 `xview` 和 `yview` 方法。要确保某行可见（即未被滚出视图），你可以使用 `see index` 方法，其中 `index` 的格式例如 `5.0` 表示第 5 行（从 1 开始）的第一个字符（从 0 开始）。
+滚动方式与列表框相同。`xscrollcommand` 和 `yscrollcommand` 配置选项将文本部件连接到水平和/或垂直滚动条，并从滚动条调用 `xview` 和 `yview` 方法。要确保某行可见，即未被滚出视图，你可以使用 `see index` 方法，其中 `index` 的格式例如 `5.0` 表示第 5 行 从 1 开始 的第一个字符 从 0 开始。
 
-文本部件没有像像例如 `entry` 部件那样的关联变量。要检索整个文本部件的内容，请调用 `get("1.0", "end")` 方法。`1.0` 是文本中的索引，意味着第一行的第一个字符，而 `end` 是该索引的快捷方式。
+文本部件没有像例如 `entry` 部件那样的关联变量。要检索整个文本部件的内容，请调用 `get("1.0", "end")` 方法。`1.0` 是文本中的索引，意味着第一行的第一个字符，而 `end` 是该索引的快捷方式。
 
 ## 8.4. 刻度
 
-ttk.Scale
+`ttk.Scale`
 
 https://tkdocs.com/man/ttk_scale
 
-刻度部件（Scale widget）允许用户选择一个值。它通过提供一个可以在范围内移动的滑块来实现。刻度部件使用 `Scale` 类创建：
+刻度部件 `Scale widget` 允许用户选择一个值。它通过提供一个可以在范围内移动的滑块来实现。刻度部件使用 `Scale` 类创建：
 
 ```python
 s = ttk.Scale(root, from_=0, to=100)
@@ -1947,15 +1950,15 @@ root.mainloop()
 scale['state'] = 'disabled'
 ```
 
-滚动方式与列表框相同。`xscrollcommand` 和 `yscrollcommand` 配置选项将文本部件连接到水平和/或垂直滚动条，并从滚动条调用 `xview` 和 `yview` 方法。要确保某行可见（即未被滚出视图），你可以使用 `see index` 方法，其中 `index` 的格式例如 `5.0` 表示第 5 行（从 1 开始）的第一个字符（从 0 开始）。
+滚动方式与列表框相同。`xscrollcommand` 和 `yscrollcommand` 配置选项将文本部件连接到水平和/或垂直滚动条，并从滚动条调用 `xview` 和 `yview` 方法。要确保某行可见，即未被滚出视图，你可以使用 `see index` 方法，其中 `index` 的格式例如 `5.0` 表示第 5 行 从 1 开始 的第一个字符 从 0 开始。
 
 ## 8.5. 选择器
 
-ttk.Spinbox
+`ttk.Spinbox`
 
 https://tkdocs.com/man/ttk_spinbox
 
-选择器部件（Spinbox widget）允许用户选择数字（实际上也可以是任意列表中的项目）。它通过将一个显示当前值的类似输入的部件与一对向上/向下箭头结合来实现，这些箭头用于在可能的范围内进行切换。
+选择器部件 `Spinbox widget` 允许用户选择数字 实际上也可以是任意列表中的项目。它通过将一个显示当前值的类似输入的部件与一对向上/向下箭头结合来实现，这些箭头用于在可能的范围内进行切换。
 
 选择器使用 `ttk.Spinbox` 类创建：
 
@@ -1986,29 +1989,28 @@ root.mainloop()
 spin['state'] = 'disabled'
 ```
 
-
 ```python
 spinval = StringVar()
 s = ttk.Spinbox(from_=1.0, to=100.0, textvariable=spinval)
 ```
 
-与刻度（scale）控件类似，数值选择框（spinboxes）允许用户在特定范围内选择数字（使用 `from_` 和 `to` 配置选项指定），尽管其用户界面与前者截然不同。你还可以指定每次点击向上或向下按钮时，数值改变的幅度。
+与刻度 `scale` 控件类似，数值选择框 `spinboxes` 允许用户在特定范围内选择数字 使用 `from_` 和 `to` 配置选项指定，尽管其用户界面与前者截然不同。你还可以指定每次点击向上或向下按钮时，数值改变的幅度。
 
-与列表框（listbox）或组合框框（combobox）一样，数值选择框也可以用于让用户从任意字符串列表中选择项目；这些项目可以使用 `values` 配置选项来指定。其工作原理与组合列表框相同：指定一个值列表将覆盖 `from_` 和 `to` 设置。
+与列表框 `listbox` 或组合框框 `combobox` 一样，数值选择框也可以用于让用户从任意字符串列表中选择项目；这些项目可以使用 `values` 配置选项来指定。其工作原理与组合列表框相同：指定一个值列表将覆盖 `from_` 和 `to` 设置。
 
-在默认状态下，数值选择框允许用户通过向上和向下按钮选择值，或者直接在显示当前值的输入区域中输入值。如果你想禁用后一种功能，以便户只使用向上和向下按钮，可以设置 `readonly`（只读）状态标志。
+在默认状态下，数值选择框允许用户通过向上和向下按钮选择值，或者直接在显示当前值的输入区域中输入值。如果你想禁用后一种功能，以便户只使用向上和向下按钮，可以设置 `readonly` 只读 状态标志。
 
 ```python
 s.state(['readonly'])
 ```
 
-与其他主题化控件一样，你还可以通过 `disabled`（禁用）状态标志禁用数值选择框，或通过 `instate` 方法检查状态。数值选择框还支持与输入框（entry）相同的验证机制，即使用 `validate` 和 `validatecommand` 配置选项。
+与其他主题化控件一样，你还可以通过 `disabled` 禁用 状态标志禁用数值选择框，或通过 `instate` 方法检查状态。数值选择框还支持与输入框 `entry` 相同的验证机制，即使用 `validate` 和 `validatecommand` 配置选项。
 
 你可能困惑于何时应该选择刻度、列表框、组合框、输入框或数值选择框。通常情况下，这些控件中的几种可以用于相同类型的数据。答案实际上取决于你想让用户选择什么、平台用户界面规范，以及该值在你的用户界面中扮演的角色。
 
 例如，与列表框相比，组合框和数值选择框占据的空间都相当小。它们可能更适用于外围设置。在用户界面中，一个更主要、显眼的选择可能需要列表框占据的额外空间。数值选择框在某些情况下是有意义的，但当数值超出范围时，它们可能就不符合逻辑。
 
-有一个布尔选项 `wrap`（回绕），决定了值在超出范围时是否循环。你可以通过 `wrap` 选项来设置数值选择框的行为。
+有一个布尔选项 `wrap` 回绕，决定了值在超出范围时是否循环。你可以通过 `wrap` 选项来设置数值选择框的行为。
 
 在某些情况下，你可以通过 `linked` 变量来设置数值选择框的当前值。再次，通过 `set` 或 `get` 方法可以设置或获取数值选择框的值。通常情况下，数值选择框的变化会反映在 `linked` 变量上。通过 `command` 配置选项可以在值变化时调用回调函数。
 
@@ -2016,9 +2018,9 @@ s.state(['readonly'])
 
 数值选择框在用户点击向上或向下按钮时会通过 `command` 配置选项触发回调函数。这允许你提供操作反馈。
 
-## 8.6. 进度条（Progressbar）
+## 8.6. 进度条 Progressbar
 
-#### 进度条（progressbar）
+#### 进度条 progressbar
 
 https://tkdocs.com/man/ttk/progressbar
 
@@ -2028,7 +2030,7 @@ https://tkdocs.com/man/ttk/progressbar
 | --- | --- | --- |
 | ![image](https://example.com/macos.png) | ![image](https://example.com/windows.png) | ![image](https://example.com/linux.png) |
 
-使用 ttk.Progressbar 创建进度条控件：
+使用 `ttk.Progressbar` 创建进度条控件：
 
 ```python
 p = ttk.Progressbar(root, orient=HORIZONTAL, length=200, mode='determinate')
@@ -2036,19 +2038,17 @@ p = ttk.Progressbar(root, orient=HORIZONTAL, length=200, mode='determinate')
 
 `mode` 选项决定了进度条如何工作。
 
-#### 确定模式（Determinate Mode）
+#### 确定模式 Determinate Mode
 
-当你可以估算操作完成所需的时间时，使用 `determinate` 模式。在这种情况下，你需要手动通过 `value` 属性来更新进度条。`value` 的值通常是 0 到 `maximum`（默认为 100）之间的浮点数。
+当你可以估算操作完成所需的时间时，使用 `determinate` 模式。在这种情况下，你需要手动通过 `value` 属性来更新进度条。`value` 的值通常是 0 到 `maximum` 默认为 100 之间的浮点数。
 
 ```python
 p['value'] += 10  # 增加10%
 ```
 
-#### 不确定模式（Indeterminate Mode）
+#### 不确定模式 Indeterminate Mode
 
 当你无法准确估算操作何时完成时，使用 `indeterminate` 模式。此时，进度条会显示循环的动画来告知用户操作正在进行。你可以通过 `start()` 方法启动动画，通过 `stop()` 方法停止动画。
-
-[/
 
 ![](img/44299b92074ede1d1ea1f48186743151_170_0.png)
 
@@ -2058,7 +2058,7 @@ p['value'] += 10  # 增加10%
 
 如果你有一个需要执行的耗时操作，或者任何像网络 I/O 这样可能花费很长时间的任务，你有几种不同的方法可以采用。
 
-对于更倾向于技术的开发者来说，Tk 使用了单线程、事件驱动的编程模型。所有的 GUI 代码、事件循环以及你的应用程序都运行在同一个线程中。正如此，非常不建议进行任何阻塞事件处理器的调用或计算。某些 GUI 工具包使用不同的模型，允许阻塞代码运行，例如将 GUI 和事件处理器运行在与应用程序代码分离的独立线程中等。试图将这些模型强行塞进 Tk 可能会导致挫败感，并产生代码脆弱且充满临时补救（hacky）。如果你尊重 Tk 的模型而不是与其抗争，你就不会遇到问题。
+对于更倾向于技术的开发者来说，Tk 使用了单线程、事件驱动的编程模型。所有的 GUI 代码、事件循环以及你的应用程序都运行在同一个线程中。正如此，非常不建议进行任何阻塞事件处理器的调用或计算。某些 GUI 工具包使用不同的模型，允许阻塞代码运行，例如将 GUI 和事件处理器运行在与应用程序代码分离的独立线程中等。试图将这些模型强行塞进 Tk 可能会导致挫败感，并产生代码脆弱且充满临时补救 hacky。如果你尊重 Tk 的模型而不是与其抗争，你就不会遇到问题。
 
 ## 9.2. 一步为营
 
@@ -2070,7 +2070,7 @@ p['value'] += 10  # 增加10%
 
 > 将一个大操作分解为多个通过定时事件连接在一起的小型步骤。
 
-Tk 的 `after` 命令可用于生成定时事件。你提供在事件触发前需要等待的毫秒数。如果 Tk 忙于处理其他事件，触发时间可能会比预期晚，但绝不会更早。你还可以请求生成一个空闲事件（idle event）；当队列中没有其他事件需要处理时，它就会触发。（Tk 的屏幕更新和重绘是在空闲事件的上下文中。）你可以在参考文档 https://tkdocs.com/man/after 更多关于 `after` 的详情。
+Tk 的 `after` 命令可用于生成定时事件。你提供在事件触发前需要等待的毫秒数。如果 Tk 忙于处理其他事件，触发时间可能会比预期晚，但绝不会更早。你还可以请求生成一个空闲事件 idle event；当队列中没有其他事件需要处理时，它就会触发。Tk 的屏幕更新和重绘是在空闲事件的上下文中。你可以在参考文档 https://tkdocs.com/man/after 更多关于 `after` 的详情。
 
 在下面的示例中，我们将执行一个被分解为 20 个小步骤的耗时操作。在操作执行期间，我们将更新进度条并允许用户中断操作。
 
@@ -2123,15 +2123,17 @@ https://tkdocs.com/code/longrunning.py
 
 定时事件负责分解耗时计算，在这些情况下，你确定每一步都能保证快速完成，从而使你的处理器能返回事件循环。但如果你有一个操作可能无法快速完成呢？这在你对操作系统进行各种调用时可能会发生。最常见的情况是当我们正在进行某种类型的 I/O，无论是写入文件、与数据库通信，还是从远程网络服务器检索数据。
 
+
+
 大多数 I/O 调用都是阻塞的，因此在操作完成（或失败）之前它们不会返回。我们想要用的是非阻塞或异步 I/O 调用。当你执行异步 I/O 调用时，它会在操作完成之前立即返回。你的代码可以继续运行，或者在 I/O 操作完成后得到通知。
 
 在这种情况下，你的程序处理 I/O 操作的结果。如果这听起来像是在处理 I/O 的另一种类型，你是正确的。
 
 在 Python 中，异步 I/O 是由 `asyncio` 模块以及在其之上的模块提供的。
 
-所有的异步应用程序都高度依赖事件循环。这非常方便；Tkinter 有自己的事件循环！遗憾的是，`asyncio` 事件循环和 Tkinter 事件循环并不是同一个。你不能同时运行它们，至少在同一个线程内不能这样做（好吧，你可以让一个反复调用另一个，但非常糟糕且脆弱）。
+所有的异步应用程序都高度依赖事件循环。这非常方便；`Tkinter` 有自己的事件循环！遗憾的是，`asyncio` 事件循环和 `Tkinter` 事件循环并不是同一个。你不能同时运行它们，至少在同一个线程内不能这样做（好吧，你可以让一个反复调用另一个，但非常糟糕且脆弱）。
 
-我的建议是：将 Tkinter 放在主线程，并将你的异步事件循环派到另一个线程。运行在主线程的应用程序代码可能需要与在另一个线程中的事件循环进行协调。要从事件循环调用 Tkinter（例如在部件回调中），请使用 `call_soon_threadsafe` 方法。
+我的建议是：将 `Tkinter` 放在主线程，并将你的异步事件循环派到另一个线程。运行在主线程的应用程序代码可能需要与在另一个线程中的事件循环进行协调。要从事件循环调用 `Tkinter`（例如在部件回调中），请使用 `call_soon_threadsafe` 方法。
 
 ## 9.4. 线程或进程
 
@@ -2139,7 +2141,7 @@ https://tkdocs.com/code/longrunning.py
 
 在线程中运行任务、与其通信等超出了本书的范围。然而，在使用线程使用 Tk 有一些需要注意的限制。主要规则是你必须在加载 Tk 的线程中进行所有的 Tk 调用。
 
-我强烈建议你所有的 Tkinter 调用都在一个线程中完成。如果你需要从另一个线程与运行 Tkinter 的线程进行通信，请尽可能简单。使用 `event` 将一个虚拟事件发布到 Tkinter 事件队列，然后在你的代码中绑定该事件。
+我强烈建议你所有的 `Tkinter` 调用都在一个线程中完成。如果你需要从另一个线程与运行 `Tkinter` 的线程进行通信，请尽可能简单。使用 `event` 将一个虚拟事件发布到 `Tkinter` 事件队列，然后在你的代码中绑定该事件。
 
 情况可能会更加复杂。Tcl/Tk 库可以在支持线程或不支持线程的情况下进行构建。如果你的应用程序中有多个线程，请确保你运行在支持线程的构建上。如果不确定，可以检查 Tcl 变量：
 
@@ -2148,10 +2150,6 @@ https://tkdocs.com/code/longrunning.py
 ```
 
 大多数人都应该运行线程线程构建。在 Tcl/Tk 中创建非线程构建的能力未来可能会消失。如果你在非线程构建中使用线程代码，请将其视为你应用程序中的 Bug，而不是一个需要让其运行的挑战。
-
-
-
-
 
 ## 9.5. 嵌套事件处理
 
@@ -2177,7 +2175,7 @@ https://tkdocs.com/code/longrunning.py
 'windowingsystem') # 返回 x11, win32 或 aqua
 ```
 
-Tkinter 没有提供此调用的直接等价项。但是，可以使用 `call()` 方法（适用于任何 Tkinter 部件）直接执行任意的基于 Tcl 的 Tk 命令。在这里，我们调用了 Tcl/Tk 命令 `tk`。
+`Tkinter` 没有提供此调用的直接等价项。但是，可以使用 `call()` 方法（适用于任何 `Tkinter` 部件）直接执行任意的基于 Tcl 的 Tk 命令。在这里，我们调用了 Tcl/Tk 命令 `tk`。
 
 这比比检查诸如 `tcl_platform` 等全局变量或使用这些方法的旧版检查更有用，这些方法应该经过审查。虽然以前平台和窗口系统之间存在很强的关联，但今天这种关联已不再那么成立。例如，如果你的平台被识别为 Unix，那可能意味着 X11 下的 Linux、Aqua 下的 macOS，甚至是 X11 下的 macOS。
 
@@ -2243,7 +2241,6 @@ menubar =
 menu_file = Menu(menubar)
 menu_edit = Menu(menubar)
 ```
-
 
 ```python
 menubar.add_cascade(menu=menu_file, label='File')
@@ -2345,9 +2342,6 @@ menu_file.entryconfigure('Close', state=DISABLED)
 
 （注：OCR 在第 190、191、192 页末尾有一些破碎的句子。我已根据文本上下文对它们进行了合并。）*
 
-
-
-
 这是一个最小示例，展示了我们如何向“编辑”菜单添加两个项目、标准的“粘贴”项目，以及一个应用程序特定的“查找...”项目（该项目将打开一个对话框来查找或搜索某些内容）。我们将包含一个输入框控件，以便我们可以检查“粘贴”功能是否可用。
 
 ```python
@@ -2362,9 +2356,13 @@ m = Menu(root)
 m_edit = Menu(m=m, label="Edit")
 m_edit.add_cascade(menu=m_edit, label="Paste", command=lambda: root.focus_get())
 ```
+
 等一下，在提供的代码逻辑中有一个拼写错误：
+
 m_edit.add_command(label="Find...", command=lambda: root.event_generate("<<Find>>"))
+
 root['menu'] = m
+
 ```python
 def launchDialog(*args):
     messagebox.showinfo(message="I hope you find what you're looking for!")
@@ -2385,13 +2383,15 @@ https://tkdocs.com/code/menu.py
 
 #### macOS
 
-每个菜单都以系统苹果图标开头。在其右侧是运行二进制文件命名的菜单。当你将菜单栏附加到窗口时，如果它不包含名为 apple 的特殊菜单，Tk 将提供其默认应用程序菜单。它包含一个“About Tcl & Tk”项目，随后是标准菜单项目：偏好设置、服务、隐藏/显示以及退出。同样，你不想要这样。如果你提供了 apple 菜单，当菜单栏附加到窗口时，Tk 将标准项目（从偏好设置开始）添加到你添加的项目的末尾。完美！在附加到窗口后添加的项目将出现在退出项目之后，这同样是不想要的。
+
+
+每个菜单都以系统苹果图标开头。在其右侧是运行二进制文件命名的菜单。当你将菜单栏附加到窗口时，如果它不包含名为 `apple` 的特殊菜单，Tk 将提供其默认应用程序菜单。它包含一个“About Tcl & Tk”项目，随后是标准菜单项目：偏好设置、服务、隐藏/显示以及退出。同样，你不想要这样。如果你提供了 `apple` 菜单，当菜单栏附加到窗口时，Tk 将标准项目（从偏好设置开始）添加到你添加的项目的末尾。完美！在附加到窗口后添加的项目将出现在退出项目之后，这同样是不想要的。
 
 换句话说，在你的程序中确保：
 
 - 为每个窗口或根窗口创建一个菜单栏。
 - 先不要将菜单栏附加到窗口！
-- 为菜单栏添加一个名为 apple 的菜单作为应用程序菜单。
+- 为菜单栏添加一个名为 `apple` 的菜单作为应用程序菜单。
 - 菜单将自动根据应用程序二进制文件命名；如果你想更改，请重命名（或复制）运行脚本的二进制文件。
 - 添加你想在应用程序菜单顶部出现的项目，例如“About your”项目，后面跟一个分隔符。
 
@@ -2409,7 +2409,7 @@ win['menu'] = menubar
 
 虽然 Tkinter 通常为我们选择控件路径，但我们在创建应用程序菜单时必须使用 `name` 选项显式提供。
 
-#### 处理偏好设置项目
+### 处理偏好设置项目
 
 正如你所看到的，应用程序菜单始终包含一个“Preferences...”项目。如果你的应用程序有一个偏好设置对话框，该项目应该打开它。如果没有，该项目应该是禁用的，默认情况下确实如此。
 
@@ -2421,9 +2421,9 @@ def showMyPreferencesDialog():
 root.createcommand('tk::mac::ShowPreferences', showMyPreferencesDialog)
 ```
 
-#### 提供帮助菜单
+### 提供帮助菜单
 
-与应用程序菜单一样，你添加到自己的菜单栏中的任何帮助菜单在 macOS 上都会被特殊处理。就像需要特殊名称的应用程序菜单一样，该菜单必须命名为 help。帮助菜单还应该在菜单栏附加到窗口之前添加。
+与应用程序菜单一样，你添加到自己的菜单栏中的任何帮助菜单在 macOS 上都会被特殊处理。就像需要特殊名称的应用程序菜单一样，该菜单必须命名为 `help`。帮助菜单还应该在菜单栏附加到窗口之前添加。
 
 帮助菜单将包含用于查找帮助的标准 macOS 搜索框，以及一个名为“Help”的项目。与应用程序菜单的名称一样，这来自你程序的可执行文件且无法更改。类似于处理偏好设置对话框的方式，为了响应此帮助项目，你需要定义一个名为 Tcl 的过程。如果未定义此过程，它不会禁用菜单项目。相反，在选择帮助项目时会产生错误。
 
@@ -2435,44 +2435,40 @@ menubar.add_cascade(menu=helpmenu, label='Help')
 root.createcommand('tk::mac::ShowHelp')
 ```
 
-#### 提供窗口菜单
+### 提供窗口菜单
 
-在 macOS 上，“窗口”菜单包含最小化、全部置顶等项目。它还包含打开的窗口列表。在列表之前，有时会提供应用程序特定的项目。通过提供名为 window 的菜单，将添加标准的窗口菜单。Tk 会自动与所有顶级窗口同步，无需编写额外代码。你也可以向此菜单添加应用程序特定的命令。
+在 macOS 上，“窗口”菜单包含最小化、全部置顶等项目。它还包含打开的窗口列表。在列表之前，有时会提供应用程序特定的项目。通过提供名为 `window` 的菜单，将添加标准的窗口菜单。Tk 会自动与所有顶级窗口同步，无需编写额外代码。你也可以向此菜单添加应用程序特定的命令。
 
 ```python
 windowmenu = Menu(menubar, name='window')
 menubar.add_cascade(menu=windowmenu, label='Window')
 ```
 
-#### 其他菜单处理器
+### 其他菜单处理器
 
 你已经看到处理标准菜单项目需要定义 Tcl 回调，例如，你可能会拦截退出项目，在退出前提示用户保存更改。以下是完整列表：
 
-- tk::mac::ShowPreferences: 选择“Preferences...”项目时调用。
-- tk::mac::ShowHelp: 用于显示应用程序的主要在线帮助。
-- tk::mac::Quit: 在选择退出菜单、用户尝试关闭系统时调用。
-- tk::mac::OnHide: 当应用程序被隐藏时调用。
-- tk::mac::OnShow: 当应用程序在隐藏后显示时调用。
-- tk::mac::OpenApplication: 当应用程序首次打开时调用。
-- tk::mac::ReopenApplication: 当用户重新打开已运行的应用程序时（例如点击 Dock 中的它）调用。
-- tk::mac::OpenDocument: 当 Finder 希望应用程序打开一个或多个文档时（例如被拖到它上）调用。该过程是一个要打开的文件路径列表。
-- tk::mac::PrintDocument: 与 OpenDocument 类似，但文档应该打印而不是打开。
-
-
-
-
+- `tk::mac::ShowPreferences`: 选择“Preferences...”项目时调用。
+- `tk::mac::ShowHelp`: 用于显示应用程序的主要在线帮助。
+- `tk::mac::Quit`: 在选择退出菜单、用户尝试关闭系统时调用。
+- `tk::mac::OnHide`: 当应用程序被隐藏时调用。
+- `tk::mac::OnShow`: 当应用程序在隐藏后显示时调用。
+- `tk::mac::OpenApplication`: 当应用程序首次打开时调用。
+- `tk::mac::ReopenApplication`: 当用户重新打开已运行的应用程序时（例如点击 Dock 中的它）调用。
+- `tk::mac::OpenDocument`: 当 Finder 希望应用程序打开一个或多个文档时（例如被拖到它上）调用。该过程是一个要打开的文件路径列表。
+- `tk::mac::PrintDocument`: 与 `OpenDocument` 类似，但文档应该打印而不是打开。
 
 虽然 Tkinter 通常会为我们选择一个小组件路径，但我们必须显式地提供带有名称的——这是 Tk 识别其为系统菜单的标识。
 
-#### X11
+### X11
 
 在 X11 上，如果你创建一个帮助菜单，Tk 会确保它始终是菜单栏中的最后一个菜单。
 
-```
+```python
 menu_help = Menu(menubar, name='help')
 ```
 
-```
+```python
 menubar.add_cascade(menu=menu_help, label='Help')
 ```
 
@@ -2506,13 +2502,13 @@ for i in ('One', 'Two', 'Three'):
 root.mainloop()
 ```
 
-https://tkdocs.com/code/contextmenu.py
+`https://tkdocs.com/code/contextmenu.py`
 
 ## 11. Windows 与对话框
 
 到目前为止所做的一切都在单个窗口中。在本章中，我们将介绍如何使用多个窗口、更改窗口的各种属性以及使用 Tk 中提供的某些标准对话框。
 
-## 11.1. 创建和销毁窗口
+### 11.1. 创建和销毁窗口
 
 顶窗口（Toplevel windows）使用 `Toplevel` 类创建：
 
@@ -2520,7 +2516,7 @@ https://tkdocs.com/code/contextmenu.py
 t = Toplevel()
 ```
 
-注意：Toplevel 是经典 Tk 组件的一部分，而不是主题组件（themed widgets）。与普通组件不同，我们不需要对顶窗口进行网格布局（grid）它就能出现在屏幕上。一旦创建了新的顶窗口，我们就可以创建该顶窗口的子组件并并在内部进行网格布局。
+注意：`Toplevel` 是经典 Tk 组件的一部分，而不是主题组件（themed widgets）。与普通组件不同，我们不需要对顶窗口进行网格布局（`grid`）它就能出现在屏幕上。一旦创建了新的顶窗口，我们就可以创建该顶窗口的子组件并并在内部进行网格布局。
 
 要销毁窗口，请使用其 `destroy` 方法：
 
@@ -2528,7 +2524,7 @@ t = Toplevel()
 
 在典型的文档型应用程序中，我们允许关闭一个窗口同时开启其他窗口。情况下，我们可能希望每个窗口创建一个新的顶窗口，并且不在根窗口中放置任何内容。虽然我们不能直接销毁根窗口，但可以使用它的 `withdraw` 方法将其从屏幕上移除，我们稍后会看到。
 
-## 11.2. 窗口行为与样式
+### 11.2. 窗口行为与样式
 
 关于窗口的行为和外观有很多可以更改的地方。
 
@@ -2544,17 +2540,15 @@ oldtitle = root.title()
 
 在 Tk 中，窗口在屏幕上的位置和大小被称为其几何结构（geometry）。一个完整的几何规范如下所示：
 
-宽度和高度（通常以像素为单位）是非常言而易的。x（水平位置）通过前面的加号或减号指定，因此 `+25` 窗口的左边缘距离屏幕左边缘 25 像素，而 `-50` 窗口的右边缘距离屏幕右边缘 50 像素。同样，y（垂直）位置 `+10` 表示……
+宽度和高度（通常以像素为单位）是非常言而易的。`x`（水平位置）通过前面的加号或减号指定，因此 `+25` 窗口的左边缘距离屏幕左边缘 25 像素，而 `-50` 窗口的右边缘距离屏幕右边缘 50 像素。同样，`y`（垂直）位置 `+10` 表示……
 
-几何字符串遵循 "widthxheight+x+y" 的格式。
+几何字符串遵循 "`widthxheight+x+y`" 的格式。
 
 ```python
 root.geometry("400x300+100+100")
 ```
 
-
-
-名称略显晦涩的 WM_DELETE_WINDOW 源于 X11 窗口管理器协议。
+名称略显晦涩的 `WM_DELETE_WINDOW` 源于 X11 窗口管理器协议。
 
 #### 透明度
 
@@ -2585,7 +2579,7 @@ t = Toplevel(root)
 t.tk.call(":tk::unsupported::MacAnimationStyle", "style", t.w, "utility")
 ```
 
-此外，其他实用的外观样式包括工具型（utility）和模态型（modal）。虽然官方不支持，但此功能在 Tk 中已经可用了很长时间。在将来，它可能会可能会迁移到 `wm attributes` 命令。有关更多信息，包括关于不同外观和可选属性的更多细节，请参阅 MacAnimationStyle wiki 页面（https://wiki.tcl-lang.org/page/MacAnimationStyle）。
+此外，其他实用的外观样式包括工具型（utility）和模态型（modal）。虽然官方不支持，但此功能在 Tk 中已经可用了很长时间。在将来，它可能会可能会迁移到 `wm attributes` 命令。有关更多信息，包括关于不同外观和可选属性的更多细节，请参阅 MacAnimationStyle wiki 页面（`https://wiki.tcl-lang.org/page/MacAnimationStyle`）。
 
 #### 图标化与隐藏
 
@@ -2655,21 +2649,19 @@ root.winfo_screen()
 
 如果用户将窗口从主显示器移动到另一个屏幕呢？如果你询问它的位置，它将相对于主显示器。因此在我们并排的 FHD 显示器设置中，如果你对一个位于显示器左边缘的窗口调用 `winfo_x` 方法，它可能会返回 100（如果在主显示器上）、-1820（如果在主显示器左侧的显示器上）或 2020（如果在主显示器右侧的显示器上）。你仍然可以使用之前看到的 `geometry` 方法将窗口放置在另一个屏幕上，尽管几何规格看起来可能有点奇怪，例如：
 
-你可以找到跨越多个显示器的整个屏幕有多大。要做到这一点，检查一个 tooplevel 组件的最大尺寸，即用户可以调整到多大（当然，在你更改它之后就无法这样做了）。这可能比显示器的完整尺寸小一点。例如，在 macOS 上，它会被顶部菜单栏的大小所缩小。
+
+
+你可以找到跨越多个显示器的整个屏幕有多大。要做到这一点，检查一个 `tooplevel` 组件的最大尺寸，即用户可以调整到多大（当然，在你更改它之后就无法这样做了）。这可能比显示器的完整尺寸小一点。例如，在 macOS 上，它会被顶部菜单栏的大小所缩小。
 
 ```python
 root.wm_maxsize()
 ```
 
-
-
-
-
 ## 11.3. 对话窗口
 
 对话框是应用程序中一种窗口，用于从用户获取信息、通知他们某些事件的发生、确认操作等。对话框的外观和用法通常在平台的样式指南中有非常具体的详细说明。Tk 内置了几个用于常用任务的对话框。这些工具可以帮助你符合特定平台的样式指南。
 
-#### 选择文件和目录
+### 选择文件和目录
 
 Tk 提供了多个对话框让用户选择文件或目录。在 Windows 和 macOS 上，这些对话框会直接调用底层操作系统的对话框。对话框中的“打开”变体用于用户选择现有文件（例如在“文件 | 打开...”菜单命令中），而“保存”变体用于选择一个要保存的文件（通常用于“文件 | 另存为...”菜单命令）。
 
@@ -2700,7 +2692,7 @@ https://tkdocs.com/man/getOpenFile
 
 https://tkdocs.com/man/chooseDirectory
 
-#### 选择颜色
+### 选择颜色
 
 另一个模态对话框让用户选择颜色。它将返回一个颜色值，例如。对话框接受一个可选的 `initialcolor` 选项来指定现有颜色，即用户可能想要替换的颜色。更多信息可用 `chooseColor__reference` 参考手册页。
 
@@ -2715,7 +2707,7 @@ colorchooser.askcolor(initialcolor='#ffff00')
 
 选择颜色对话框。
 
-#### 选择字体
+### 选择字体
 
 Tk 8.6 增加了对另一个系统对话框的支持：字体选择器。文件对话框和颜色选择器是阻塞直到对话框关闭并返回结果的模态对话框，但字体选择器并非如此。
 
@@ -2725,7 +2717,7 @@ Tk 8.6 增加了对另一个系统对话框的支持：字体选择器。文件�
 
 ### 字体选择器对话框。
 
-虽然系统字体对话框在某些平台（例如 Windows）上是模态的，但并非到处都是如此。在 macOS 上，系统字体选择器的工作方式更像绘画程序中的浮动工具面板，保持可用，以便更改主应用程序窗口中选中的任何文本的字体。Tk 字体 API 必须兼顾这两种模型。为此，它使用回调（和虚拟事件）来通知应用程序字体更改。更多细节可以在 [fontchooser](https://tkdocs.com/man/fontchooser) 参考页中找到。
+虽然系统字体对话框在某些平台（例如 Windows）上是模态的，但并非到处都是如此。在 macOS 上，系统字体选择器的工作方式更像绘画程序中的浮动工具面板，保持可用，以便更改主应用程序窗口中选中的任何文本的字体。Tk 字体 API 必须兼顾这两种模型。为此，它使用回调（和虚拟事件）来通知应用程序字体更改。更多细节可以在 `fontchooser` 参考页中找到。
 
 https://tkdocs.com/man/fontchooser
 
@@ -2762,38 +2754,35 @@ root.tk.call('tk', 'fontchooser', 'show')
 root.tk.call('tk', 'fontchooser', 'hide')
 ```
 
-
-
-
-
 ![](img/44299b92074ede1d1ea1f48186743151_232_0.png)
 
-# 示例消息框。
+## 示例消息框。
 
 与我们之前看到的对话框一样，这些是模态的，并且会将用户的操作结果返回给调用者。Tkinter 并没有使用统一的类型选项，而是为每种类型的对话框使用了了不同的方法名。返回值随方法而异：
-- showinfo: -> ok
-- showwarning: -> ok
-- showerror: -> ok
-- askokcancel: -> True (点击 ok) 或 False (点击 cancel)
-- askyesno: -> True (点击 yes) 或 False (点击 no)
-- askretrycancel: -> True (点击 retry) 或 False
-- askyesokcancel: -> True (点击 yes), False (点击 no), 或 None (点击 cancel)
 
-诚然，Tkinter 的 messagebox API 并不是最一致的。它混合了不同的返回类型（字符串或布尔值），存在某些重复，并且省略了一个底层对话框类型。
+- `showinfo`: -> ok
+- `showwarning`: -> ok
+- `showerror`: -> ok
+- `askokcancel`: -> True (点击 ok) 或 False (点击 cancel)
+- `askyesno`: -> True (点击 yes) 或 False (点击 no)
+- `askretrycancel`: -> True (点击 retry) 或 False
+- `askyesokcancel`: -> True (点击 yes), False (点击 no), 或 None (点击 cancel)
 
-- message: 警示框内部显示的主消息。
-- detail: 次要消息（如果需要）。
-- title: 对话框窗口的标题。在 macOS 上不使用。
-- icon: 图标，可选 info（默认）或 default；default: 默认按钮，例如 askokcancel 对话框中的 ok 或 cancel。
-- parent: 弹出此对话框的应用程序窗口。
+诚然，Tkinter 的 `messagebox` API 并不是最一致的。它混合了不同的返回类型（字符串或布尔值），存在某些重复，并且省略了一个底层对话框类型。
+
+- `message`: 警示框内部显示的主消息。
+- `detail`: 次要消息（如果需要）。
+- `title`: 对话框窗口的标题。在 macOS 上不使用。
+- `icon`: 图标，可选 info（默认）或 default；default: 默认按钮，例如 `askokcancel` 对话框中的 ok 或 cancel。
+- `parent`: 弹出此对话框的应用程序窗口。
 
 更多细节可以在参考文档中找到：
 
 https://tkdocs.com/man/messageBox
 
-这些新的 messagebox 对话框取代了旧的 `tk_dialog` 命令，该命令不符合当前的平台用户界面规范。
+这些新的 `messagebox` 对话框取代了旧的 `tk_dialog` 命令，该命令不符合当前的平台用户界面规范。
 
-# 自定义对话框
+## 自定义对话框
 
 如果你需要创建自己的模态对话框，有几点是你需要处理的。我们在章节的早些部分已经涵盖了大部分内容，例如设置窗口样式、定位窗口等。
 
@@ -2845,25 +2834,25 @@ https://tkdocs.com/code/dialog.py
 
 Tkinter 的标准库包含了 `simpledialog` 模块，可以帮助构建你自己的对话框。我们不建议直接使用它，因为它使用的是经典的 Tk 组件，而不是更新的主题组件（themed widgets）。不过，它确实说明了如何使用我们刚刚涵盖的一些让对话框行为的技术。
 
-# 12. 组织复杂界面
+## 12. 组织复杂界面
 
 如果你有一个复杂的用户界面，你需要找到一种不会让用户感到不知所措的组织方式。有几种不同的方法来实现。在设计用户界面时，通用和特定平台的人机界面指南都是很好的资源。
 
 当我们谈论复杂性时，指的不是底层的实现方式，而是如何呈现给用户。复杂的界面可以由许多模块组合而成，但这并不意味着用户需要感知到它是复杂的。
 
-# 多窗口
+### 多窗口
 
 使用多个窗口的一个用处是可以简化用户界面。很好，多个窗口可以引导用户只关注当前任务的内容。同样，切换多个窗口也可以产生相反的效果。
 
-# 空白
+### 空白
 
 如果你需要在屏幕上显示大量的组件，考虑如何通过布局组织它们。我们已经看到 `grid` 可以帮助我们将相关组件对齐。空白是另一种有用的辅助。
 
 组件的分组周围的空白、组件之间的空白等，是取决于平台的。如果你想让对话框看起来，需要根据平台进行调整。
 
-# 12.1 分隔线 (Separator)
+### 12.1 分隔线 (Separator)
 
-ttk.Separator
+`ttk.Separator`
 
 https://tkdocs.com/man/ttk_separator
 
@@ -2873,11 +2862,11 @@ https://tkdocs.com/man/ttk_separator
 
 使用 `ttk.Separator` 类创建分隔线：
 
-s = ttk.Separator(orient=HORIZONTAL) # orient可以指定为水平或垂直
+`s = ttk.Separator(orient=HORIZONTAL)` # orient可以指定为水平或垂直
 
-# 12.2 标签框 (Label Frame)
+### 12.2 标签框 (Label Frame)
 
-ttk.Labelframe
+`ttk.Labelframe`
 
 https://tkdocs.com/man/ttk_labelframe
 
@@ -2891,9 +2880,9 @@ https://tkdocs.com/man/ttk_labelframe
 lf = ttk.Labelframe(root, text='Label')
 ```
 
-# 12.3 分栏窗口 (Paned Windows)
+### 12.3 分栏窗口 (Paned Windows)
 
-ttk.Panedwindow
+`ttk.Panedwindow`
 
 https://tkdocs.com/man/ttk_panedwindow
 
@@ -2907,7 +2896,7 @@ https://tkdocs.com/man/ttk_panedwindow
 
 分栏窗口（在此处所示）：
 
-p = ttk.Panedwindow(orient=VERTICAL) # 两个面板，每个面板都可以格布局组件：
+`p = ttk.Panedwindow(orient=VERTICAL)` # 两个面板，每个面板都可以格布局组件：
 
 ```python
 f1 = ttk.Labelframe(p, text='Pane1', width=100, height=100)
@@ -2916,25 +2905,21 @@ p.add(f1)
 p.add(f2)
 ```
 
-分栏窗口可以是垂直的（其面板垂直堆叠）或水平的。orient 参数可以此指定。调用 `add` 方法会将新面板添加到面板列表的末尾。`insert` 子窗口方法允许将面板放置在面板列表的指定位置（o..n-1）。如果该面板已被分栏窗口管理，它将被移动到新位置。你可以使用 `forget` 子窗口方法从分栏窗口中移除面板（你也可以传递位置而不是子窗口）。
+分栏窗口可以是垂直的（其面板垂直堆叠）或水平的。`orient` 参数可以此指定。调用 `add` 方法会将新面板添加到面板列表的末尾。`insert` 子窗口方法允许将面板放置在面板列表的指定位置（o..n-1）。如果该面板已被分栏窗口管理，它将被移动到新位置。你可以使用 `forget` 子窗口方法从分栏窗口中移除面板（你也可以传递位置而不是子窗口）。
 
+### 12.4. 笔记本 (Notebook)
 
-
-
-
-## 12.4. 笔记本 (Notebook)
-
-ttk.Notebook
+`ttk.Notebook`
 
 https://tkdocs.com/man/ttk_notebook
 
-Notebook 控件使用标签页笔记本的隐喻，允许用户通过索引在多个页面之间进行切换。与普通窗口不同，用户一次只能看到一个页面（类似于面板）。
+`Notebook` 控件使用标签页笔记本的隐喻，允许用户通过索引在多个页面之间进行切换。与普通窗口不同，用户一次只能看到一个页面（类似于面板）。
 
 ![](img/44299b92074ede1d1ea1f48186743151_243_0.png)
 
-Notebook 控件。
+`Notebook` 控件。
 
-Notebook 使用 `ttk.Notebook` 类创建：
+`Notebook` 使用 `ttk.Notebook` 类创建：
 
 ```python
 n = ttk.Notebook(root)
@@ -2968,7 +2953,7 @@ https://tkdocs.com/man/ttk_notebook
 
 ### 13.1. 字体
 
-Tk 的 label 控件允许通过字体配置选项更改用于显示文本的字体。后续章节中的 canvas 和 text 控件也允许你指定字体。显示文本的其他主题控件可能没有字体配置选项，但可以使用样式（styles）更改它们的字体。
+Tk 的 `label` 控件允许通过字体配置选项更改用于显示文本的字体。后续章节中的 `canvas` 和 `text` 控件也允许你指定字体。显示文本的其他主题控件可能没有字体配置选项，但可以使用样式（styles）更改它们的字体。
 
 我们稍后会详细介绍样式。本质上，它们取代了在单个控件上微调多个配置选项的老方法。相反，字体、颜色和其他控制外观的设置可以组合在一个样式中。该样式随后可以应用于多个控件。这类似于在 HTML 页面内部硬编码显示导向的标记，与使用 CSS 将显示特定的信息分离的之间的区别。
 
@@ -2982,31 +2967,33 @@ https://tkdocs.com/man/font
 
 #### 标准字体
 
-每个平台都定义了应用于标准用户界面元素的特定字体。Tk 将这些决策中的许多封装到一组标准的命名字体中。它们在所有平台上都可用，尽管使用的具体字体会有所不同。这有助于抽象平台差异。当然，标准控件使用了这些命名字体。
 
-- TkDefaultFont: 未指定项目的默认字体。
-- TkTextFont: 用于控件、列表框等。
-- TkFixedFont: 标准等宽字体。
-- TkMenuFont: 用于菜单项字体。
-- TkHeadingFont: 列表和表格中列头的字体。
-- TkCaptionFont: 窗口和对话框标题栏的字体。
-- TkSmallCaptionFont: 工具对话框的较小标题字体。
-- TkIconFont: 图标标题的字体。
-- TkTooltipFont: 提示框的字体。
 
-#### 平台特定字体
+每个平台都定义了应用于标准用户界面元素的特定字体。`Tk` 将这些决策中的许多封装到一组标准的命名字体中。它们在所有平台上都可用，尽管使用的具体字体会有所不同。这有助于抽象平台差异。当然，标准控件使用了这些命名字体。
 
-Tk 提供了额外的命名字体，以帮助你符合特定平台上不常见的情况。各个平台的指南详细说明了应如何以及何地使用这些字体。这些字体仅在特定平台上定义。如果你的应用程序具有跨平台可移植性，则需要考虑这一点。
+- `TkDefaultFont`: 未指定项目的默认字体。
+- `TkTextFont`: 用于控件、列表框等。
+- `TkFixedFont`: 标准等宽字体。
+- `TkMenuFont`: 用于菜单项字体。
+- `TkHeadingFont`: 列表和表格中列头的字体。
+- `TkCaptionFont`: 窗口和对话框标题栏的字体。
+- `TkSmallCaptionFont`: 工具对话框的较小标题字体。
+- `TkIconFont`: 图标标题的字体。
+- `TkTooltipFont`: 提示框的字体。
 
-X11  Tk 识别任何有效的 X11 字体名称（例如查看 `xlsfonts` 命令）。然而，这可能随着操作系统、安装的软件以及单个机器的配置而异。无法保证字体是-
+### 平台特定字体
 
-在 Windows 上，Tk 提供了以下：
+`Tk` 提供了额外的命名字体，以帮助你符合特定平台上不常见的情况。各个平台的指南详细说明了应如何以及何地使用这些字体。这些字体仅在特定平台上定义。如果你的应用程序具有跨平台可移植性，则需要考虑这一点。
 
-在 macOS 上，Tk 提供了以下：
+`X11` `Tk` 识别任何有效的 `X11` 字体名称（例如查看 `xlsfonts` 命令）。然而，这可能随着操作系统、安装的软件以及单个机器的配置而异。无法保证字体是-
 
-#### 使用命名字体
+在 Windows 上，`Tk` 提供了以下：
 
-Tk 提供了几种操作帮助你处理命名字体。你可以从获取可用字体列表开始：
+在 macOS 上，`Tk` 提供了以下：
+
+### 使用命名字体
+
+`Tk` 提供了几种操作帮助你处理命名字体。你可以从获取可用字体列表开始：
 
 ```python
 from tkinter import font
@@ -3025,7 +3012,7 @@ font.families()
 >>> f.measure('The quick brown fox')
 ```
 
-Tkinter 提供了一个 `Font` 类来存储命名字体的信息。你可以通过 `namofont` 函数从字体名称创建类的实例。当你在应用程序中使用字体时（例如通过配置选项），你可以提供字体名称（字符串）或 `Font` 实例。
+`Tkinter` 提供了一个 `Font` 类来存储命名字体的信息。你可以通过 `namofont` 函数从字体名称创建类的实例。当你在应用程序中使用字体时（例如通过配置选项），你可以提供字体名称（字符串）或 `Font` 实例。
 
 你也可以创建自己的字体，然后像使用预定义字体一样使用它们。这样做只需为字体命名并按上述方式指定其字体属性。
 
@@ -3035,15 +3022,11 @@ highlightFont = font.Font(family='Helvetica', name='appHighlightFont', size=12, 
 ttk.Label(root, text='Attention!', font=highlightFont).grid()
 ```
 
-`family` 属性指定字体族。Tk 确保 Helvetica 可用，尽管它们可能会映射到相应的等宽、衬线或无衬线字体。
+`family` 属性指定字体族。`Tk` 确保 `Helvetica` 可用，尽管它们可能会映射到相应的等宽、衬线或无衬线字体。
 
-#### 字体描述
+### 字体描述
 
-另一种指定字体的方法是通过属性列表，从字体族开始，可选地包含大小和一个或多个样式选项。一些示例包括 Helvetica、Helvetica 12 和 Helvetica 12 bold。这些字体描述可以用于任何你可以使用命名字体的地方，例如字体配置选项。
-
-
-
-
+另一种指定字体的方法是通过属性列表，从字体族开始，可选地包含大小和一个或多个样式选项。一些示例包括 `Helvetica`、`Helvetica 12` 和 `Helvetica 12 bold`。这些字体描述可以用于任何你可以使用命名字体的地方，例如字体配置选项。
 
 ## 13.2. 颜色
 
@@ -3051,11 +3034,11 @@ ttk.Label(root, text='Attention!', font=highlightFont).grid()
 
 https://tkdocs.com/man/colors
 
-通常情况下，Tk 控件在大多数情况下默认使用正确的颜色。如果你想更改颜色，将通过特定特定的命令或选项来实现，例如 label 的前景（foreground）和背景（background）配置选项。对于大多数主题控件，颜色是通过样式（styles）指定的，而不是直接更改控件。
+通常情况下，`Tk` 控件在大多数情况下默认使用正确的颜色。如果你想更改颜色，将通过特定特定的命令或选项来实现，例如 `label` 的前景（`foreground`）和背景（`background`）配置选项。对于大多数主题控件，颜色是通过样式（`styles`）指定的，而不是直接更改控件。
 
-你可以通过 RGB 来指定颜色，就像在 HTML 或 CSS 中一样，例如 `#3FF`，Tk 也识别如 `light` 等名称。
+你可以通过 RGB 来指定颜色，就像在 HTML 或 CSS 中一样，例如 `#3FF`，`Tk` 也识别如 `light` 等名称。
 
-Tk 识别由 X11 定义的标准颜色名称。你可以在命令参考中（上文提到）找到完整列表。
+`Tk` 识别由 `X11` 定义的标准颜色名称。你可以在命令参考中（上文提到）找到完整列表。
 
 与字体一样，macOS 和 Windows 都指定了许多系统特定的抽象颜色名称（再次参见参考）。这些名称对应的实际颜色可能取决于系统设置，并随着时间而变化，例如深色模式、文本高亮颜色、默认背景。
 
@@ -3069,55 +3052,55 @@ root.winfo_rgb('red')
 
 ## 13.3. 图像
 
-我们已经看到了使用图像的基础知识，例如在 label 或按钮中显示它们。我们创建一个图像对象，通常来自磁盘上的文件。
+我们已经看到了使用图像的基础知识，例如在 `label` 或按钮中显示它们。我们创建一个图像对象，通常来自磁盘上的文件。
 
 ```python
 imgobj = PhotoImage(file='myimage.gif')
 label['image'] = imgobj
 ```
 
-Tk 8.5 包含了对 GIF 和 PPM/PNM 图像的支持。Tk 8.6 将 PNG 加入了这一短列表。然而，一个名为 Img 的 Tk 扩展库添加了许多其他格式的支持：BMP、XBM、XPM、JPEG、PNG（如果你使用的是 8.5）、TIFF 等。虽然 Img 未包含在 Tk 核心中，但它通常包含在其他发行版中（例如 ActiveTcl）。
+`Tk` 8.5 包含了对 GIF 和 PPM/PNM 图像的支持。`Tk` 8.6 将 PNG 加入了这一短列表。然而，一个名为 `Img` 的 `Tk` 扩展库添加了许多其他格式的支持：BMP、XBM、XPM、JPEG、PNG（如果你使用的是 8.5）、TIFF 等。虽然 `Img` 未包含在 `Tk` 核心中，但它通常包含在其他发行版中（例如 ActiveTcl）。
 
-Tkinter 没有使用 Tk 的 Img 扩展，而是使用了一个专为 Python 设计的图像库 PIL (Python Imaging Library)。更具体地说，我们将使用 PIL 的一个更新的分分支 Pillow。由于它没有与 Python 捆绑，你通常需要安装它。你应该能够通过 `pip install Pillow` 等方式进行安装。
+`Tkinter` 没有使用 `Tk` 的 `Img` 扩展，而是使用了一个专为 Python 设计的图像库 `PIL` (Python Imaging Library)。更具体地说，我们将使用 `PIL` 的一个更新的分分支 `Pillow`。由于它没有与 Python 捆绑，你通常需要安装它。你应该能够通过 `pip install Pillow` 等方式进行安装。
 
 ```python
 from PIL import ImageTk, Image
 myimg = ImageTk.PhotoImage(Image.open('myimage.png'))
 ```
 
-`ImageTk.PhotoImage` 调用提供了 Tk `PhotoImage` 的无缝替换，但支持更广泛的图像类型。
+`ImageTk.PhotoImage` 调用提供了 `Tk` `PhotoImage` 的无缝替换，但支持更广泛的图像类型。
 
-Tk 的图像实际上非常强大且复杂，提供了各种检查和修改图像的方法。你可以从 `image` 命令参考和 `photo` 命令中找到更多信息：
+`Tk` 的图像实际上非常强大且复杂，提供了各种检查和修改图像的方法。你可以从 `image` 命令参考和 `photo` 命令中找到更多信息：
 
 https://tkdocs.com/man/image
 
 https://tkdocs.com/man/photo
 
-我们在这里看到的彩色图像类型在 Tk 中被称为 **photo images**。Tk 还提供了第二类型，即二位位图图像，这种图像在 90 年代被广泛使用，当时大多数 Unix 工作站使用的显示器（与 PC 相比）要大得多，但它们只有黑白。无需多说，如今色彩已是事所应当，因此将图标等内容更新为全色图像是强烈建议的。尽管在某些人认为是复古风格的设计，某些扁平化和材料设计方案已回归了黑白。事虽如此……（Plus ça change...）
+我们在这里看到的彩色图像类型在 `Tk` 中被称为 **photo images**。`Tk` 还提供了第二类型，即二位位图图像，这种图像在 90 年代被广泛使用，当时大多数 Unix 工作站使用的显示器（与 PC 相比）要大得多，但它们只有黑白。无需多说，如今色彩已是事所应当，因此将图标等内容更新为全色图像是强烈建议的。尽管在某些人认为是复古风格的设计，某些扁平化和材料设计方案已回归了黑白。事虽如此……（Plus ça change...）
 
 ## 14. 画布 (Canvas)
 
 https://tkdocs.com/man/canvas
 
-canvas 控件管理 2D 图形对象集合——线、圆、文本、图像、其他控件等。Tk 的 canvas 是一个极其强大且灵活的控件，确实是 Tk 的亮点之一。它适用于广泛用途，包括绘图或制图、CAD 工具、显示或监控模拟或实际设备，以及由简单的控件构建更复杂的控件。
+`canvas` 控件管理 2D 图形对象集合——线、圆、文本、图像、其他控件等。`Tk` 的 `canvas` 是一个极其强大且灵活的控件，确实是 `Tk` 的亮点之一。它适用于广泛用途，包括绘图或制图、CAD 工具、显示或监控模拟或实际设备，以及由简单的控件构建更复杂的控件。
 
-注意：Canvas 控件是经典 Tk 控件的一部分，而不是主题 Tk 控件。
+注意：`Canvas` 控件是经典 `Tk` 控件的一部分，而不是主题 `Tk` 控件。
 
 ![](img/44299b92074ede1d1ea1f48186743151_258_0.png)
 
-Canvas 控件使用 `Canvas` 类创建：
+`Canvas` 控件使用 `Canvas` 类创建：
 
 ```python
 canvas = Canvas(width=500, height=400, background='gray75')
 ```
 
-你通常会提供宽度和高度，单位可以是像素或任何其他标准距离单位。一如既往，你可以请求几何管理器将其扩展以填充窗口中的可用空间。你可以为画布提供一个默认背景颜色，就像你在上一章中学习的那样指定颜色。Canvas 控件还支持我们之前使用过的外观选项，如 `relief` 和 `borderwidth`。
+你通常会提供宽度和高度，单位可以是像素或任何其他标准距离单位。一如既往，你可以请求几何管理器将其扩展以填充窗口中的可用空间。你可以为画布提供一个默认背景颜色，就像你在上一章中学习的那样指定颜色。`Canvas` 控件还支持我们之前使用过的外观选项，如 `relief` 和 `borderwidth`。
 
-Canvas 控件拥有极大量的功能，我们在这里不会涵盖所有内容。相反，我们将从一个简单的示例——自由手绘图工具开始，逐步添加新部分，每个部分将展示 canvas 控件的另一个功能。
+`Canvas` 控件拥有极大量的功能，我们在这里不会涵盖所有内容。相反，我们将从一个简单的示例——自由手绘图工具开始，逐步添加新部分，每个部分将展示 `canvas` 控件的另一个功能。
 
 ### 14.1. 创建项目
 
-当你创建一个新的 canvas 控件时，它本质上是一个空的巨大矩形，换句话说，是一块空白画布。要对它进行任何有用操作，你需要向它添加项目。你可以添加许多不同类型的项目。
+当你创建一个新的 `canvas` 控件时，它本质上是一个空的巨大矩形，换句话说，是一块空白画布。要对它进行任何有用操作，你需要向它添加项目。你可以添加许多不同类型的项目。
 
 ### 简单的绘图板示例
 
@@ -3147,15 +3130,11 @@ sketch.grid(column=0, row=0, sticky="N, W, E, S")
 root.mainloop()
 ```
 
+`disabledfill`, `disabledwidth`, ...: 如果项的状态设置为该项，它将使用这些普通属性的变体进行显示；`activefill`, `activewidth`, ...: 当鼠标指针悬停在项上时，它将使用这些普通属性的变体进行显示。
 
+如果你有会改变状态的画布项（`canvas items`），通过同时使用普通版本和属性变体来创建项可以简化你的代码。你只需要更改项的状态，而无需编写代码来更改多个显示属性。属性变体也是如此。这都鼓励使用更加声明式的风格，可以消除大量的样板代码。
 
-
-
-disabledfill, disabledwidth, ...: 如果项的状态设置为该项，它将使用这些普通属性的变体进行显示；activefill, activewidth, ...: 当鼠标指针悬停在项上时，它将使用这些普通属性的变体进行显示。
-
-如果你有会改变状态的画布项（canvas items），通过同时使用普通版本和属性变体来创建项可以简化你的代码。你只需要更改项的状态，而无需编写代码来更改多个显示属性。属性变体也是如此。这都鼓励使用更加声明式的风格，可以消除大量的样板代码。
-
-就像 Tk 控件一样，你可以在画布项创建后更改其项的属性。
+就像 `Tk` 控件一样，你可以在画布项创建后更改其项的属性。
 
 ```
 id = canvas.create_line(o, o, 10, 10, fill='red')
@@ -3179,16 +3158,17 @@ canvas.create_line(10, 10, 200, 50, 90, 150, 50, 80)
 ```
 
 线具有几个有趣的额外属性，允许绘制曲线、箭头等。
-- arrow: 在起点、终点或两端放置箭头；默认为 none（无）。
-- arrowshape: 允许更改箭头的外观。
-- capstyle: 对于没有箭头的宽线，此控制线条端的绘制方式；可选包括 butt（默认）或 round（圆角）。
-- style: 对于具有多个段的宽线，此控制每个顶点的绘制方式；可选包括 round（默认）或 miter（斜角）。
-- smooth: 如果指定为 true，则通过二次样条曲线在多个段之间绘制平滑曲线，而不是使用直线；raw 则指定另一种类型的曲线（三次样条曲线）。
-- splinesteps: 控制曲线的平滑度，即设置了 smooth 选项的线。
+
+- `arrow`: 在起点、终点或两端放置箭头；默认为 `none`（无）。
+- `arrowshape`: 允许更改箭头的外观。
+- `capstyle`: 对于没有箭头的宽线，此控制线条端的绘制方式；可选包括 `butt`（默认）或 `round`（圆角）。
+- `style`: 对于具有多个段的宽线，此控制每个顶点的绘制方式；可选包括 `round`（默认）或 `miter`（斜角）。
+- `smooth`: 如果指定为 `true`，则通过二次样条曲线在多个段之间绘制平滑曲线，而不是使用直线；`raw` 则指定另一种类型的曲线（三次样条曲线）。
+- `splinesteps`: 控制曲线的平滑度，即设置了 `smooth` 选项的线。
 
 ## 矩形 (Rectangle)
 
-矩形由对角角的坐标指定，例如左上角和右下角。它们可以用一种颜色填充（通过 fill），并为轮廓赋予另一种颜色。
+矩形由对角角的坐标指定，例如左上角和右下角。它们可以用一种颜色填充（通过 `fill`），并为轮廓赋予另一种颜色。
 
 ```
 canvas.create_rectangle(10, 10, 200, 50, fill='red', outline='blue')
@@ -3204,7 +3184,7 @@ canvas.create_oval(10, 10, 200, 150, fill='red', outline='blue')
 
 ## 多边形 (Polygon)
 
-多边形项目允许你通过一系列点创建任意形状。坐标写法与多点线相同。Tk 确保多边形是“闭合的”，如有需要会将最后一点连接到第一个点。像椭圆和矩形一样，它们具有单独填充和轮廓颜色。它们还支持线项目的 splinesteps 属性。
+多边形项目允许你通过一系列点创建任意形状。坐标写法与多点线相同。`Tk` 确保多边形是“闭合的”，如有需要会将最后一点连接到第一个点。像椭圆和矩形一样，它们具有单独填充和轮廓颜色。它们还支持线项目的 `splinesteps` 属性。
 
 ```
 canvas.create_polygon(10, 10, 200, 50, 90, 150, 80, 120, 55, fill='red', outline='blue')
@@ -3214,9 +3194,9 @@ canvas.create_polygon(10, 10, 200, 50, 90, 150, 80, 120, 55, fill='red', outline
 
 弧项目绘制椭圆的一部分；想象成饼图的一块。它的显示由三个属性控制：
 
-- start: 椭圆弧的起始位置，单位为度（0 是 3 点钟位置）。
-- extent: 弧的“宽度”为多少度，正值表示从逆时针方向，负值表示顺时针方向。
-- style: 可选 pieslice（默认值）、arc（仅绘制外轮廓）或 chord（绘制弧的起点和终点连线与外轮廓之间的区域）。
+- `start`: 椭圆弧的起始位置，单位为度（0 是 3 点钟位置）。
+- `extent`: 弧的“宽度”为多少度，正值表示从逆时针方向，负值表示顺时针方向。
+- `style`: 可选 `pieslice`（默认值）、`arc`（仅绘制外轮廓）或 `chord`（绘制弧的起点和终点连线与外轮廓之间的区域）。
 
 ```
 canvas.create_arc(10, 10, 200, 150, fill='yellow', outline='black', start=45, extent=135, width=5)
@@ -3224,20 +3204,20 @@ canvas.create_arc(10, 10, 200, 150, fill='yellow', outline='black', start=45, ex
 
 ## 图像 (Image)
 
-图像项目可以显示任意图像。默认情况下，项居于你指定的坐标中心，但可以通过 anchor 选项更改，例如 nw 表示坐标是放置图像左上角的位置。
+图像项目可以显示任意图像。默认情况下，项居于你指定的坐标中心，但可以通过 `anchor` 选项更改，例如 `nw` 表示坐标是放置图像左上角的位置。
 
 ```
 myimg = PhotoImage(file='pretty.png')
 canvas.create_image(10, 10, image=myimg, anchor='nw')
 ```
 
-还有一种位图项目（bitmap item）用于只有两种颜色的图像，可以通过前景（foreground）和背景（background）进行更改。它们现在已不再常用。
+还有一种位图项目（`bitmap item`）用于只有两种颜色的图像，可以通过前景（`foreground`）和背景（`background`）进行更改。它们现在已不再常用。
 
 ## 文本 (Text)
 
-文本项目可以显示一段文本。文本定位的方法与图像项目相同。使用 text 属性指定要显示的文本。该项中的所有文本将具有相同的颜色（由 fill 属性指定）和相同的字体（由 font 属性指定）。
+文本项目可以显示一段文本。文本定位的方法与图像项目相同。使用 `text` 属性指定要显示的文本。该项中的所有文本将具有相同的颜色（由 `fill` 属性指定）和相同的字体（由 `font` 属性指定）。
 
-如果在文本中嵌入 \n，文本项可以显示多行文本。或者，你可以通过提供 width 属性（代表行的最大宽度）让项自动换行成多行。文本行的对齐可以使用 justify 属性设置，可选包括 left（默认）或 center（居中）。
+如果在文本中嵌入 `\n`，文本项可以显示多行文本。或者，你可以通过提供 `width` 属性（代表行的最大宽度）让项自动换行成多行。文本行的对齐可以使用 `justify` 属性设置，可选包括 `left`（默认）或 `center`（居中）。
 
 ```
 canvas.create_text(100, 100, text='A wonderful story', anchor='nw', font='TkMenuFont', fill='red')
@@ -3247,27 +3227,27 @@ canvas.create_text(100, 100, text='A wonderful story', anchor='nw', font='TkMenu
 
 使用画布组件可以做的最酷的事情之一是在内部嵌入其他控件。这可以是一个简单的按钮、一个输入框（想象对文本项进行就地编辑）、列表框……
 
-显示其他控件的画布项被称为窗口项（window items）。它们像文本和图像项一样定位。你可以给它们显式的大小。
+显示其他控件的画布项被称为窗口项（`window items`）。它们像文本和图像项一样定位。你可以给它们显式的大小。
 
 ## 修改项目 (Modifying Items)
 
-我们已经看到如何修改项的配置——颜色、宽度等。还有其他可以对项目执行的操作。要删除项，使用 delete 方法。要更改项的大小和位置，可以使用 coords 方法。调用此方法时不带新设置将返回项的当前坐标。你可以使用 move 方法水平或垂直偏移一个或多个项。所有项从上到下排序称为堆叠顺序。如果堆叠顺序靠后的项覆盖了下方的项，前面的项会在上方。lift 和 lower 方法允许调整项目在堆叠顺序中的位置。
+我们已经看到如何修改项的配置——颜色、宽度等。还有其他可以对项目执行的操作。要删除项，使用 `delete` 方法。要更改项的大小和位置，可以使用 `coords` 方法。调用此方法时不带新设置将返回项的当前坐标。你可以使用 `move` 方法水平或垂直偏移一个或多个项。所有项从上到下排序称为堆叠顺序。如果堆叠顺序靠后的项覆盖了下方的项，前面的项会在上方。`lift` 和 `lower` 方法允许调整项目在堆叠顺序中的位置。
 
 参考手册中详细说明了更多操作。
 
 ## 事件绑定 (Event Bindings)
 
-我们已经看到画布组件像任何其他控件一样，可以使用 bind 命令捕捉事件。
+我们已经看到画布组件像任何其他控件一样，可以使用 `bind` 命令捕捉事件。
 
-你还可以将绑定附加到单个项目（我们将在下一节中使用标签来实现这一点）。因此，如果你想知道某个特定项目是否被点击，你不需要监听整个画布的点击事件，然后判断点击是否发生在你的项上。Tk 会为你处理好这一切。
+你还可以将绑定附加到单个项目（我们将在下一节中使用标签来实现这一点）。因此，如果你想知道某个特定项目是否被点击，你不需要监听整个画布的点击事件，然后判断点击是否发生在你的项上。`Tk` 会为你处理好这一切。
 
-要捕捉这些事件，你使用画布内置的 bind 命令。它的工作方式与普通 bind 命令完全，接收一个事件模式和一个回调函数。区别在于你需要指定该绑定适用于哪个项目。
+要捕捉这些事件，你使用画布内置的 `bind` 命令。它的工作方式与普通 `bind` 命令完全，接收一个事件模式和一个回调函数。区别在于你需要指定该绑定适用于哪个项目。
 
 ```
 canvas.tag_bind(id, '<1>', ...)
 ```
 
-注意项目特定的 tag_bind 方法与控件级 bind 方法的区别。让我们为我们的草图示例添加一些代码以允许更改绘制颜色。我们首先创建几个不同的矩形项，每个填充一种不同的颜色。然后我们为这些每个项附加一个绑定。当它们被点击时，会将一个全局变量设置为新的绘制颜色。我们的鼠标移动绑定在创建线段时会查看该变量。
+注意项目特定的 `tag_bind` 方法与控件级 `bind` 方法的区别。让我们为我们的草图示例添加一些代码以允许更改绘制颜色。我们首先创建几个不同的矩形项，每个填充一种不同的颜色。然后我们为这些每个项附加一个绑定。当它们被点击时，会将一个全局变量设置为新的绘制颜色。我们的鼠标移动绑定在创建线段时会查看该变量。
 
 ```
 color = "black"
@@ -3281,13 +3261,12 @@ def addLine(event):
     global lastx, lasty
 ```
 
+
+
 ```
 canvas.create_line((lastx, lasty, event.x, event.y), fill=color)
 lastx, lasty = event.x, event.y
 ```
-
-
-
 
 ## 14-3. 标签 (Tags)
 
@@ -3368,7 +3347,7 @@ def doneStroke(event):
 canvas.bind("", doneStroke)
 ```
 
-https://tkdocs.com/code/sketch3.py
+`https://tkdocs.com/code/sketch3.py`
 
 ## 14.4. 滚动 (Scrolling)
 
@@ -3382,15 +3361,13 @@ https://tkdocs.com/code/sketch3.py
 
 # Text
 
-https://tkdocs.com/man/text
+`https://tkdocs.com/man/text`
 
 文本组件管理一个多行文本区域。和 `canvas` 组件一样，Tk 的 `text` 组件是一个极其灵活且强大的工具，可以用于执行各种任务。它可以作为表单的一部分提供简单的多行文本区域。但文本组件也可以作为样式化代码编辑器、大纲视图、网络浏览器等的基础。
 
 ## 文本组件 (Text widgets)。
 
 虽然我们在前面的章节中简要介绍了文本组件，但我们在这里将进入更多细节。你将更更好地了解它们允许的复杂程度。尽管如此，如果你计划使用文本组件进行任何重大工作，参考手册是一份组织良好、非常有帮助且非常推荐的读物。
-
-
 
 Text 组件是使用 `Text` 类创建的：
 
@@ -3431,11 +3408,17 @@ htext = text.get('1.0', 'end')
 ### 自定义外观
 
 我们之前见过过 Text 组件的 `width` 和 `height` 配置选项。其他几个选项也可以控制它的外观。最常用的是：
+
 - foreground: 绘制的颜色
+
 - background: 组件的背景颜色
+
 - padx, pady: 组件内部边界的额外内边距
+
 - borderwidth: 组件边框的 own
+
 - relief: 边框样式
+
 - groove: 凹槽样式
 
 ### 换行与滚动
@@ -3459,7 +3442,7 @@ root.grid_columnconfigure(0, weight=1)
 root.grid_rowconfigure(0, weight=1)
 ```
 
-https://tkdocs.com/code/scrolledtext.py
+`https://tkdocs.com/code/scrolledtext.py`
 
 我们还可以要求组件确保文本的某部分可见。例如，假设我们在组件中添加了更多填充屏幕的文本（因此会滚动）。但我们希望确保看到文本的顶部而不是底部。我们可以使用 `see` 方法。
 
@@ -3484,22 +3467,37 @@ text['state'] = 'disabled'
 当我们指定位置 1.0（第一行，第一个字符）时，这是一个索引的示例。它告诉 `insert` 方法在何处插入新文本（紧邻第一行第一个字符之前，即组件的最开始处）。索引可以用多种方式指定。我们在 `get` 方法中使用了另一种：`end`，表示紧随文本结束之后。（为什么是“紧随之后”？）文本在给定的索引之前插入（因此在 `end` 处插入将把文本添加到组件的末尾）。注意，Tk 始终会在 Text 组件的最后末尾添加一个换行符。
 
 这里是索引的几个额外示例以及如何解释它们：
+
 - end: 第 3 行尾的换行符。
+
 - 1.0 + 3 chars: 第 1 行开始后的三个字符。
+
 - 2.end -1 chars: 第 2 行新行行之前的最后一个字符。
+
 - 2.end -1 chars: Tk 始终在文本末尾添加的换行符。
+
 - 2.end -2 chars: 文本真正的最后一个字符。
+
 - 2.end -1 lines: 实际文本行的开始。
+
 - 2.2 + 2 lines: 文本第四行的第三个字符（索引为 2）。
+
 - 2.5 linstart: 第 2 行的第一个字符。
+
 - 2.5 lineend: 第 2 行尾换行符的位置。
+
 - wordstart: 2.5 处单词的第一个字符。
+
 - wordend: 2.5 处单词后的第一个字符。
 
 一些需要注意的事项：
+
 - 索引中的行号被解释为逻辑行，即每行都以换行符结束。
+
 - 在启用换行的情况下，一个逻辑行可能代表多行。
+
 - 术语之间的空格可以省略，例如 `end of end text`。
+
 - 要确定索引的规范位置，请使用 `index` 方法。向它传递任何索引，它将返回相应的索引。例如，要找到最后一个字符的位置（忽略末尾自动添加的换行符），请使用：
 
 ```python
@@ -3549,10 +3547,7 @@ def writeToLog(msg):
     log['state'] = 'disabled'
 ```
 
-
-
-
-https://tkdocs.com/code/logwindow.py.
+`https://tkdocs.com/code/logwindow.py.`
 
 注意，由于程序将部件置于禁用状态，我们必须重新启用它才能进行任何更改，即使是从我们的程序中进行。
 
@@ -3590,23 +3585,25 @@ font='TkFixedFont', relief='raised')
 
 标签支持以下配置选项：并查阅参考手册以获取这些内容的详细描述。`tag_get` 标签选项允许我们查询标签的配置选项。
 
+
+
 由于多个标签可以应用于同一个文本范围，因此存在冲突的可能性（例如，两个标签指定不同的字体）。使用优先级顺序来解决这些问题；最近创建的标签具有最高优先级，但可以使用 `tag_raise` 标签和 `tag_lower` 方法标签重新排列优先级。
 
 ### 更多标签操作
 
-要完全删除一个或多个标签，我们可以使用 `tag_delete` 方法。这当然也会移除文本中对标签的任何引用。我们还可以使用 `tag_remove tag start ?end?` 方法从文本范围中删除标签。即使这导致没有带有该标签的文本范围，标签对象本身仍然存在。
+要完全删除一个或多个标签，我们可以使用 `tag_delete` 方法。这当然也会移除文本中对标签的任何引用。我们还可以使用 `tag_remove` `tag start ?end?` 方法从文本范围中删除标签。即使这导致没有带有该标签的文本范围，标签对象本身仍然存在。
 
-`tag_ranges` 方法将返回文本中已应用该标签的范围列表。还有 `tag_nextrange tag start ?end?` 和 `tag_prevrange tag start ?end?` 方法用于从给定位置向前或向后搜索第一个此类范围。
+`tag_ranges` 方法将返回文本中已应用该标签的范围列表。还有 `tag_nextrange` `tag start ?end?` 和 `tag_prevrange` `tag start ?end?` 方法用于从给定位置向前或向后搜索第一个此类范围。
 
-`tag_names ?idx?` 方法在不带额外参数调用时，将返回文本部件中当前定义的所有标签列表（包括那些当前未使用的标签）。如果我们向该方法传递一个索引，它将返回应用于该索引处字符的标签列表。
+`tag_names` `?idx?` 方法在不带额外参数调用时，将返回文本部件中当前定义的所有标签列表（包括那些当前未使用的标签）。如果我们向该方法传递一个索引，它将返回应用于该索引处字符的标签列表。
 
 最后，可以使用文本中具有给定标签的第一个和最后一个字符作为索引，就像我们可以使用 "end" 或 "2.5" 一样。这样做只需指定 first 或 last。
 
 ### Canvas 和文本部件之间标签的区别
 
-canvas 和文本部件都有可以应用于多个对象的“标签”，并对其进行样式设置等。然而，canvas 和文本标签是不相同的，有需要注意的实质差异。
+`canvas` 和文本部件都有可以应用于多个对象的“标签”，并对其进行样式设置等。然而，`canvas` 和文本标签是不相同的，有需要注意的实质差异。
 
-在 canvas 部件中，只有单个 canvas 项目具有控制其外观的配置选项。当我们引用 canvas 中的标签时，其含义等同于“当前具有该标签的所有 canvas 项目”。标签本身并不作为一个独立的对象存在。因此，在下面的片段中，最后添加的矩形不会被染红色。
+在 `canvas` 部件中，只有单个 `canvas` 项目具有控制其外观的配置选项。当我们引用 `canvas` 中的标签时，其含义等同于“当前具有该标签的所有 `canvas` 项目”。标签本身并不作为一个独立的对象存在。因此，在下面的片段中，最后添加的矩形不会被染红色。
 
 ```
 canvas.itemconfigure('important', fill='red')
@@ -3635,20 +3632,21 @@ text.tag_bind('important', '<1>', popupImportantMenu)
 
 我们可以使用 `tag_ranges` 方法并传递 `sel` 作为标签，用来查找文本范围。同样，我们可以通过使用 `tag_add` 设置新的选择范围或使用 `tag_remove` 移除选择范围。然而，`sel` 标签无法被删除。虽然默认的部件绑定防止了这一点，但 `sel` 就像任何其他标签一样，它可以支持多个范围，即不连续的选择。为了防止这种情况的发生，当你从代码更改选择范围时，部件会管理光标（新输入文本将出现的地方）与选择分开。它使用一个名为“标记”（Marks）的新概念来实现。
 
-## 15.6. 标记（Marks）标记指示文本中的特定位置。在这方面，它们类似于索引。然而，随着文本的修改，标记将调整到处于相同的相对位置。通过这样，它们类似于标签，但引用的是单个位置而不是文本范围。标记实际上并不是指向文本中字符占据的位置，而是指定了两个字符**之间**的位置。
+## 15.6. 标记（Marks）
 
-要创建你自己的标记，请使用部件的 `mark_set name idx` 方法，传递标记的名称和索引（标记置于给定索引处的字符之前）。这也被用于将现有标记移动到不同位置。可以使用 `mark_unset name` 方法移除标记，传递标记的名称。如果你删除包含标记的文本范围，也会移除该标记。
+标记指示文本中的特定位置。在这方面，它们类似于索引。然而，随着文本的修改，标记将调整到处于相同的相对位置。通过这样，它们类似于标签，但引用的是单个位置而不是文本范围。标记实际上并不是指向文本中字符占据的位置，而是指定了两个字符**之间**的位置。
 
-标记的名称也可以用作索引（就像 `1.0` 或 `end-1c` 是索引一样）。你可以使用 `mark_next idx` 或 `mark_previous idx` 方法从文本中的给定索引查找下一个标记（或上一个标记）。`mark_names` 方法将返回所有标记名称的列表。
+要创建你自己的标记，请使用部件的 `mark_set` `name idx` 方法，传递标记的名称和索引（标记置于给定索引处的字符之前）。这也被用于将现有标记移动到不同位置。可以使用 `mark_unset` `name` 方法移除标记，传递标记的名称。如果你删除包含标记的文本范围，也会移除该标记。
 
-标记还有一个重力，可以通过 `mark_gravity name ?direction?` 方法进行修改，这会影响
+标记的名称也可以用作索引（就像 `1.0` 或 `end-1c` 是索引一样）。你可以使用 `mark_next` `idx` 或 `mark_previous` `idx` 方法从文本中的给定索引查找下一个标记（或上一个标记）。`mark_names` 方法将返回所有标记名称的列表。
 
+标记还有一个重力，可以通过 `mark_gravity` `name ?direction?` 方法进行修改，这会影响
 
 当文本插入到标记处时。假设我们有文本 "ac"，其间有一个标记，我们用管道符号 `|` 来表示，即 "a|c"。如果该标记的重力（gravity）是正确的（默认值），标记将附在 "c" 上。如果在该标记处插入新文本 "b"，标记将继续保持粘附在 "c" 上，因此新文本将插入到标记之前，即 "ab|c"。如果重力相反，标记将附在 "a" 上，因此新文本将插入到标记之后，即 "a|bc"。
 
 ## 15.7. 图像和组件
 
-就像画布（canvas）组件一样，文本组件可以包含图像和任何其他 Tk 组件（包括包含许多其他组件的框架 frames）。在某种意义上，这使得文本组件能够独立作为一个几何管理器工作。在文本中添加图像和组件的能力为你的程序开启了无限可能。
+就像画布（`canvas`）组件一样，文本组件可以包含图像和任何其他 Tk 组件（包括包含许多其他组件的框架 `frames`）。在某种意义上，这使得文本组件能够独立作为一个几何管理器工作。在文本中添加图像和组件的能力为你的程序开启了无限可能。
 
 图像在特定的索引处添加到文本组件中，并指定图像为现有的 Tk 图像。其他允许你精细调整内边（padding）等选项。
 
@@ -3694,7 +3692,7 @@ Tk 文本组件允许在两个或多个不同的组件之间共享相同的底�
 
 https://tkdocs.com/man/ttk_treeview
 
-treeview 组件显示项的层次结构并允许用户对其进行浏览。每个项的一个或多个属性可以显示为树右侧的列。它可以用于构建类似于 macOS Finder 或 Windows 资源管理器等文件管理器中树显示的用户界面。与大多数 Tk 组件一样，它提供了惊人的活性，可以自定义以适应各种情况。
+`treeview` 组件显示项的层次结构并允许用户对其进行浏览。每个项的一个或多个属性可以显示为树右侧的列。它可以用于构建类似于 macOS Finder 或 Windows 资源管理器等文件管理器中树显示的用户界面。与大多数 Tk 组件一样，它提供了惊人的活性，可以自定义以适应各种情况。
 
 | macOS | 大小 | 修改 | Windows | 大小 | 修改 | Linux | 大小 | 修改 |
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
@@ -3704,7 +3702,7 @@ treeview 组件显示项的层次结构并允许用户对其进行浏览。每�
 | text | 5KB | 十分钟前 | text | 5KB | 上周 | text | 5KB | 十分钟前 |
 | | | 12KB | 昨天 | text | 12KB | 昨天 | text | 12KB | 昨天 |
 
-使用 `ttk.Treeview` 类创建 treeview 组件：
+使用 `ttk.Treeview` 类创建 `treeview` 组件：
 
 ```
 tree =
@@ -3714,11 +3712,11 @@ tree =
 
 ## 16.1. 向树添加项
 
-要对 treeview 进行任何实用的操作，我们需要向它添加一个或多个*项*（items）。每个项代表树中的单个节点，无论是叶子节点还是包含其他节点的内部节点。项通过唯一的 id 引用。你可以在第一次创建项时分配此 id，或者由组件自动生成一个。
+要对 `treeview` 进行任何实用的操作，我们需要向它添加一个或多个*项*（items）。每个项代表树中的单个节点，无论是叶子节点还是包含其他节点的内部节点。项通过唯一的 id 引用。你可以在第一次创建项时分配此 id，或者由组件自动生成一个。
 
-通过使用 treeview 的 `insert` 方法将项插入树中来创建。要插入项，我们需要知道插入到哪里。这意味着要指定父项以及在父项现有子项列表中新项应该插入的位置。
+通过使用 `treeview` 的 `insert` 方法将项插入树中来创建。要插入项，我们需要知道插入到哪里。这意味着要指定父项以及在父项现有子项列表中新项应该插入的位置。
 
-treeview 组件会自动创建一个根节点（不显示）。它的 id 是空字符串。它作为添加的第一层项的父节点。节点子项列表中的位置由索引指定（0 为第一个，end 表示插入在所有现有子项之后）。
+`treeview` 组件会自动创建一个根节点（不显示）。它的 id 是空字符串。它作为添加的第一层项的父节点。节点子项列表中的位置由索引指定（0 为第一个，end 表示插入在所有现有子项之后）。
 
 通常情况下，你还会指定每个项的*名称*（name），即在树中显示的文本。其他选项允许你在名称旁边添加图像，指定节点是打开还是关闭的等。
 
@@ -3740,15 +3738,16 @@ id = tree.insert('', 'end', text='Flowers')
 # 作为列插入：
 tree.insert('', 'end', text='Size')
 ```
+
 （注：由于原始文本包含大量 OCR 错误和重复，以下是根据逻辑整理后的清晰版本）
 
 ## 16.1. 向树添加项
 
-要对 treeview 进行任何实用的操作，我们需要向它添加一个或多个*项*。每个项代表树中的单个节点，无论是叶子节点还是包含其他节点的内部节点。项通过唯一的 id 引用。你可以在第一次创建项时分配此 id，或者由组件自动生成一个。
+要对 `treeview` 进行任何实用的操作，我们需要向它添加一个或多个*项*。每个项代表树中的单个节点，无论是叶子节点还是包含其他节点的内部节点。项通过唯一的 id 引用。你可以在第一次创建项时分配此 id，或者由组件自动生成一个。
 
-通过使用 treeview 的 `insert` 方法将项插入树中来创建。要插入项，我们需要知道插入到哪里。这意味着要指定父项以及在父项现有子项列表中新项应该插入的位置。
+通过使用 `treeview` 的 `insert` 方法将项插入树中来创建。要插入项，我们需要知道插入到哪里。这意味着要指定父项以及在父项现有子项列表中新项应该插入的位置。
 
-treeview 组件会自动创建一个根节点（不显示）。它的 id 是空字符串。它作为添加的第一层项的父节点。节点子项列表中的位置由索引指定（0 为第一个，end 表示插入在所有现有子项之后）。
+`treeview` 组件会自动创建一个根节点（不显示）。它的 id 是空字符串。它作为添加的第一层项的父节点。节点子项列表中的位置由索引指定（0 为第一个，end 表示插入在所有现有子项之后）。
 
 通常情况下，你还会指定每个项的*名称*（name），即在树中显示的文本。其他选项允许你在名称旁边添加图像，指定节点是打开还是关闭的等。
 
@@ -3794,9 +3793,9 @@ isopen = tree.item('widgets', 'open')
 
 ## 16.3. 为每个项显示信息
 
-treeview 可以显示关于每个项的一个或多个额外信息。这些信息作为主树显示右侧的列。
+`treeview` 可以显示关于每个项的一个或多个额外信息。这些信息作为主树显示右侧的列。
 
-每列都通过我们分配的符号名称引用。我们可以使用 treeview 组件的 `columns` 配置选项指定列列表，无论是在创建组件时还是之后。
+每列都通过我们分配的符号名称引用。我们可以使用 `treeview` 组件的 `columns` 配置选项指定列列表，无论是在创建组件时还是之后。
 
 ```python
 tree = ttk.Treeview(root, columns=('size', 'modified'))
@@ -3812,8 +3811,6 @@ tree.heading('size', text='Size')
 
 在每列中显示什么内容可以使用 `set` 方法单独指定。我们还可以提供描述在所有列中显示内容的列表。这是使用 `item` 配置选项完成的。
 
-
-
 稍后更改。列表的顺序必须与列组件配置选项中的顺序一致。
 
 ```python
@@ -3824,7 +3821,7 @@ tree.insert("", 'end', text='Listbox', values=('15KB', 'Yesterday', 'mark'))
 
 ## 16.4. 项目外观与事件
 
-与 text 和 canvas 组件一样，treeview 组件使用标签（tags）来修改树中项目的外观。我们可以使用 `tags` 项目配置选项为每个项目分配一个标签列表（同样，可以在创建项目时或之后进行）。
+与 `text` 和 `canvas` 组件一样，`treeview` 组件使用标签（tags）来修改树中项目的外观。我们可以使用 `tags` 项目配置选项为每个项目分配一个标签列表（同样，可以在创建项目时或之后进行）。
 
 随后可以在标签上指定配置选项，这些选项将应用于所有具有该标签的项目。标签选项包括前景（文本颜色）和图像（如果项目指定了自身的图像，则不使用）。
 
@@ -3837,11 +3834,11 @@ tree.tag_bind('ttk', '<1->', itemClicked)
 # 可以通过 tree.focus() 找到点击的项目
 ```
 
-treeview 将生成虚拟事件，这允许我们监控用户对组件进行的更改。我们可以使用 `selection` 方法来确定当前选择项（也可以从程序中更改选择项）。
+`treeview` 将生成虚拟事件，这允许我们监控用户对组件进行的更改。我们可以使用 `selection` 方法来确定当前选择项（也可以从程序中更改选择项）。
 
 ## 16.5. 自定义显示
 
-treeview 组件的显示方式有很多方面我们可以进行自定义。我们已经看到了其中一些，例如项目的文本、字体和颜色、列标题的名称等。这里是另外几点。
+`treeview` 组件的显示方式有很多方面我们可以进行自定义。我们已经看到了其中一些，例如项目的文本、字体和颜色、列标题的名称等。这里是另外几点。
 
 使用 `height` 组件配置选项指定要显示的期望行数。
 
@@ -3849,25 +3846,27 @@ treeview 组件的显示方式有很多方面我们可以进行自定义。我�
 
 使用 `displaycolumns` 组件选项选择要显示的列及其显示顺序。
 
-你可以使用 `show` 组件配置选项可选地隐藏一个或两个列标题，或者树本身（仅保留列）（默认为 "tree headings"，即显示两者）。
 
-你可以通过 `selectmode` 组件配置选项指定用户可以选择单个项目还是多个项目，传递 `browse`（单项）、`extended`（多项，默认值）或...
+
+你可以使用 `show` 组件配置选项可选地隐藏一个或两个列标题，或者树本身（仅保留列）（默认为 "`tree headings`" ，即显示两者）。
+
+你可以通过 `selectmode` 组件配置选项指定用户可以选择单个项目还是多个项目，传递 `browse` （单项）、`extended` （多项，默认值）或...
 
 ## 17. 样式与主题
 
 现代 Tk 组件的主题化方面之一是（此处原文存在大量重复文本，已按要求进行处理/翻译）
 
-
 ![](img/44299b92074ede1d1ea1f48186743151_320_0.png)
 
-除了内置主题外，macOS 包含一个名为 aqua 的主题以匹配系统全局样式，而 Windows 包含了名为 and 和 and 的主题。
+除了内置主题外，macOS 包含一个名为 `aqua` 的主题以匹配系统全局样式，而 Windows 包含了名为 `and` 和 `and` 的主题。
 
 一次只能激活一个主题。要获取当前正在使用的主题名称，请使用以下命令：
 
 ```python
 >>> s.theme_use()
 ```
-'aqua'
+
+`'aqua'`
 
 这个 API 最初是针对 Tk 8.6 设计的，后回移植到 Tk 8.5-9。如果你使用的是更早版本的 Tk，获取这些信息会稍微麻烦一些。
 
@@ -3881,7 +3880,7 @@ treeview 组件的显示方式有很多方面我们可以进行自定义。我�
 
 虽然主题可以用 Tk 支持的任何语言定义，但你发现的大多数主题是用 Tcl 编写的。如何安装它们以便在你的应用程序中使用它们呢？
 
-例如，让我们使用 "awkward" 主题，可以从 Download 下载并并在某处解压 awthemes-*.zip。你会发现它包含许多 .tcl 文件、一个包含主题所用图像的更多目录的子目录等。其中一个文件命名为 pkgIndex.tcl。这将其标识为一个 Tcl 包，类似于 Python 模块。如果查看其内部，你会看到几行代码，其中 `package` 后面跟着 `ifneeded`，`awkward` 是包名，`7.7` 是它的版本号。在这种情况下，单个 pkgIndex.tcl 文件提供多个包并不罕见。
+例如，让我们使用 "`awkward`" 主题，可以从 Download 下载并并在某处解压 `awthemes-*.zip`。你会发现它包含许多 `.tcl` 文件、一个包含主题所用图像的更多目录的子目录等。其中一个文件命名为 `pkgIndex.tcl`。这将其标识为一个 Tcl 包，类似于 Python 模块。如果查看其内部，你会看到几行代码，其中 `package` 后面跟着 `ifneeded`，`awkward` 是包名，`7.7` 是它的版本号。在这种情况下，单个 `pkgIndex.tcl` 文件提供多个包并不罕见。
 
 要使用它，我们需要告诉 Tcl 在何处找到该包（通过将其目录添加到 Tcl 的 `auto_path` 并指定要使用的包名）。
 
@@ -3908,13 +3907,13 @@ root.tk.call('source', '/full/path/to/themfile.tcl')
 
 ### 控件类 (Widget Class)
 
-控件类标识特定控件的类型，无论它是按钮、标签、画布等。所有主题化控件都有默认类。按钮具有类 buttons、labels 等等。
+控件类标识特定控件的类型，无论它是按钮、标签、画布等。所有主题化控件都有默认类。按钮具有类 `buttons`、 `labels` 等等。
 
 ### 控件状态 (Widget State)
 
 控件状态允许单个控件具有多个一个外观或行为，取决于鼠标位置、应用程序设置的不同状态选项等。
 
-正如你所记得的，所有主题化控件维护一组二进制状态标志，通过 `state` 和 `instantiate` 方法访问。这些标志是：and 和 and。所有控件具有相同的状态标志集，尽管它们可能会忽略其中的某些标志（例如，标签控件可能会忽略无效的状态标志）。请参阅参考手册中的主题控件页面以获取每个状态标志的准确含义。
+正如你所记得的，所有主题化控件维护一组二进制状态标志，通过 `state` 和 `instantiate` 方法访问。这些标志是：`and` 和 `and`。所有控件具有相同的状态标志集，尽管它们可能会忽略其中的某些标志（例如，标签控件可能会忽略无效的状态标志）。请参阅参考手册中的主题控件页面以获取每个状态标志的准确含义。
 
 https://tkdocs.com/man/ttk_widget
 
@@ -3988,9 +3987,6 @@ s.configure('Emergency.TButton', font='helvetica 24', foreground='red', padding=
 
 在经典 Tk 中，所有按钮都有相同的类，所有标签都有相同的类等等。你可以使用这个控件类来进行内省，也可以通过选项数据库全局更改选项。它可以让你说，例如，所有按钮都应该有红色背景。
 
-
-
-
 一些经典的 Tk 控件（包括 `frame` 和 `toplevel` 控件）允许你在首次创建特定控件时，通过提供类配置选项来更改该控件的类。例如，你可以指定某个特定的 `frame` 控件具有某个类，而其他控件则使用默认类。你可以使用选项数据库来更改 `SpecialFrame` 帧的外观。
 
 样式（Styles）和主题（Themes）利用了这一简单想法并为其配备了助推器。
@@ -4032,22 +4028,35 @@ border {
 ```python
 >>> s.layout('TButton')
 ```
+
 [("Button.border", {"children": [("Button.focus", {"children": [
+
 ("Button.spacing", {
+
 "children": [("Button.label", {"sticky": "nswe"}, "sticky": "nswe"],
+
 "sticky": "nswe"}], "sticky": "nswe", "border": "1"})]
+
 ```
 
 如果我们对其进行清理并格式化，就会得到一个如下结构的结构：
 
 ```
+
 Button.border -sticky nswe -border 1 -children {
+
   Button.focus -sticky nswe -children {
+
     Button.spacing -sticky nswe -children {
+
       Button.label -sticky nswe
+
     }
+
   }
+
 }
+
 ```
 
 这开始变得合理了；我们有四个已命名并排序的元素。每个元素都有不同的元素选项，例如指定布局或尺寸的 `sticky` 和 `border`。在目前不进入过细细节的情况下，我们可以清楚地看到基于 `children` 属性和 `sticky` 属性的嵌套布局。样式使用 Tk 的简化版 `pack` 几何管理器来指定元素布局。这在 `style_reference` 手册页面中有详细介绍。
@@ -4061,9 +4070,13 @@ https://tkdocs.com/man/ttk_style
 你可以确定每个元素可用哪些选项。这里是检查按钮内部标签可用选项的示例（我们从布局方法知道它被标识为）：
 
 ```python
+
 >>> s.element_options('Button.label')
+
 ('compound', 'space', 'text', 'font', 'foreground', 'underline', 'width',
+
 'anchor', 'justify', 'wraplength', 'embossed', 'image', 'stipple', 'background')
+
 ```
 
 在接下来的章节中，我们将查看处理元素选项的一种并不完全直接的方法。
@@ -4073,7 +4086,9 @@ https://tkdocs.com/man/ttk_style
 在本节中，我们将看到如何通过修改样式选项来更改样式的外观。你可以通过修改现有样式，或者更常见的通过创建一个新样式来实现。我们之前看到过如何创建一个从另一个样式派生的简单样式：
 
 ```python
+
 s.configure('Emergency.TButton', font='helvetica 24', foreground='red', padding=10)
+
 ```
 
 ### 修改样式选项
@@ -4081,14 +4096,19 @@ s.configure('Emergency.TButton', font='helvetica 24', foreground='red', padding=
 修改现有样式的选项的方法与修改任何其他配置选项类似，通过指定样式、选项名称和新值来实现：
 
 ```python
+
 s.configure('TButton', font='helvetica 24')
+
 ```
 
 稍后我们将了解哪些是有效的。如果你像我们所做的那修改现有样式，该修改将适用于所有使用该样式的控件。要获取某个选项的当前值，使用 `lookup` 方法：
 
 ```python
+
 >>> s.lookup('TButton', 'font')
+
 'helvetica 24'
+
 ```
 
 ### 状态特定样式选项
@@ -4104,11 +4124,17 @@ s.configure('TButton', font='helvetica 24')
 当控件处于按下状态且未禁用时，`relief` 应设置为 `sunken`
 
 ```python
+
 s.map('TButton',
+
     background=['disabled','#d9d9d'],('active','#ececec'),
+
     foreground=['disabled','#a3a3a'],
+
     relief=['pressed','!disabled','sunken'])
 ```
+
+
 
 由于控件状态可以包含多个标志，多个状态可能匹配选项（例如，如果控件的按下状态标志被设置，`pressed` 和 `!disabled` 都会匹配）。状态列表是按照你在 `map` 命令中提供的顺序进行评估的。列表中第一个匹配的状态将被使用。
 
@@ -4123,8 +4149,6 @@ s.map('TButton',
 我们之前讨论过通过检查布局识别样式中使用的元素，并识别每个元素的可用选项。但当我们去更改样式时，我们似乎是在配置样式的选项，而没有指定单个元素。这是怎么回事？
 
 再次使用我们的按钮示例，我们有一个元素，除其他之外还有一个字体配置选项。发生的是，当 `Button.label` 元素被绘制时，它查看设置在样式上的字体配置选项来决定自己绘制什么字体。
-
-
 
 要理解为什么，你需要知道：当一个样式（style）包含一个元素作为其组成部分时，该元素并不维护任何（元素特定的）存储。特别来说，它本身并不存储任何配置选项。当它需要检索选项时，它是通过包含它的样式来实现的，该样式会被传递给元素。因此，单个元素在 GoF（设计模式）的术语中被称为“轻量级”（flyweight）对象。
 
@@ -4180,10 +4204,7 @@ s.map('TButton',
 
 可能并不意外的是发现，主题可以提供一组通用选项，如果样式没有其他指定，则将其作为默认值。这意味着如果整个主题的大部分内容都是绿色背景，主题也不需要为每个样式显式说明这一点。这使用一个名为 `..` 的根样式。如果 `Fun.Button` 可以继承 `..`，为什么 `TButton` 不能继承 `..` 呢？
 
-最后，值得查看现有主题是如何定义的，既在 Tk C 库的 C 代码层面，也通过 Tk 中 "library/ttk" 目录下的 Tk 脚本以及第三方主题。在 Tk 的 C 库中搜索 `Ttk_RegisterElementSpec` 以查看元素是如何被指定的。
-
-
-
+最后，值得查看现有主题是如何定义的，既在 Tk C 库的 C 代码层面，也通过 Tk 中 `library/ttk` 目录下的 Tk 脚本以及第三方主题。在 Tk 的 C 库中搜索 `Ttk_RegisterElementSpec` 以查看元素是如何被指定的。
 
 # 18. 案例研究：IDLE 现代化
 
@@ -4193,24 +4214,35 @@ s.map('TButton',
 
 IDLE 是随每个 Python 版本一起分发的附带的标准 Python 开发环境。它包含一个交互式 Python 壳、具有语法高亮的编辑器、一个调试器等。其用户界面是用 Tkinter 编写的。
 
-## EditorWindow.py - /tmp/idlelib/EditorWindow.py (3)
+## EditorWindow.py - `/tmp/idlelib/EditorWindow.py` (3)
 
 ```
 File Edit Format Run Options Window Help
+
 dlg.deiconify()
+
 help.lift(self)
+
 ()
 ```
 
 ```
 * Python 3.4. Shell *
+
 File Edit Shell Debug Options Window
+
 Python 3.4 (default, Jun 2015)
+
 [GCC 4.8.2] on linux
+
 Type "copyright", "credits" or "li
+
 >>>
+
 [DEBUG ON]
+
 >>>
+
 RUN /tmp/id
 ```
 
@@ -4218,7 +4250,9 @@ RUN /tmp/id
 def destroy(self, ev=None):
     self.dlg = None
     self.parent = None
+
 helpDialog = HelpDialog() # 单例实例
+
 def _help_dialog(parent): # htest 的封装器
     helpDialog.show_dialog(parent)
 ```
@@ -4255,10 +4289,15 @@ help_url = None
 
 ```
 方向 上 下
+
 激活 'active'
+
 全部 'all'
+
 锚点 'anchor'
+
 弧 'arc'
+
 基线 'baseline'
 ```
 
@@ -4290,90 +4329,9 @@ IDLE 是一个应用程序，它是 Python 标准库的一部分（即：99% 的
 
 以前并不缺乏从根本上推进 IDLE 的尝试，导致了几个带有各种改进分支（forks）。其中许多使用了不属于标准库的其他 GUI 工具包。坚持使用 Tkinter 和标准库对于确保每项改进随着时间的推移进入官方版本非常重要。
 
-正如你所见，IDLE 显然是现代化的很好的候选者，利用新的 Tk 特性（如主题小部件）来激发一些重新设计。但这不仅仅是更换部件。仅仅通过改变“经典”部件的使用方式，就可以进行许多改进，以更好地反映更现代的设计美学。
 
-IDLE 作为一个应用程序是 Python 标准库的一部分（即：99% 的设计目标是供其他代码使用）。这意味着要遵循许多策略和程序（对于应用程序来说并不真正合适），这使得更改变得困难。移除其中的一些障碍（参见 PEP）是这里所讨论的更改所需要的一项重要步骤。
 
-正如你所想象的，对这样一个基于“经典”Tkinter 的大型应用程序进行现代化并非完全容易。在本章中，我将介绍所做的一些界面更改及其原因。
-
-每个参与其中的人都都希望看到 IDLE 看起来比现在好得多，尽管没有人幻想着它会变成一个尖端设计的惊人范例。但实现一个让人们在学习 Python 时不会被其工具的笨拙所分心的东西，似乎是可行的。
-
-目标也不是为了与专业程序员更常用的 Python IDE（如等）竞争。虽然虽然一些更有经验的 Python 开发者会偶尔或其他方式使用 IDLE，但它主要需要吸引该语言的初学者，通常也是对编程完全的新手。
-
-以前并不缺乏从根本上推进 IDLE 的尝试，导致了几个带有各种改进分支（forks）。其中许多使用了不属于标准库的其他 GUI 工具包。坚持使用 Tkinter 和标准库对于确保每项改进随着时间的推移进入官方版本非常重要。
-
-正如你所见，IDLE 显然是现代化的很好的候选者，利用新的 Tk 特性（如主题小部件）来激发一些重新设计。但这不仅仅是更换部件。仅仅通过改变“经典”部件的使用方式，就可以进行许多改进，以更好地反映更现代的设计美学。
-
-（注：由于原文中存在大量重复段落，此处遵循了“不要重复输出原文”的原则，译文仅涵盖了逻辑含义的完整翻译。但根据指令，我重新整理了所有翻译内容：）
-
-## EditorWindow.py - /tmp/idlelib/EditorWindow.py (3)
-
-```
-File Edit Format Run Options Window Help
-dlg.deiconify()
-help.lift(self)
-()
-```
-
-```
-* Python 3.4. Shell *
-File Edit Shell Debug Options Window
-Python 3.4 (default, Jun 2015)
-[GCC 4.8.2] on linux
-Type "copyright", "credits" or "li
->>>
-[DEBUG ON]
->>>
-RUN /tmp/id
-```
-
-```
-def destroy(self, ev=None):
-    self.dlg = None
-    self.parent = None
-helpDialog = HelpDialog() # 单例实例
-def _help_dialog(parent): # htest 的封装器
-    helpDialog.show_dialog(parent)
-```
-
-```
-class EditorWindow(object):
-    from idlelib.Percolator import Percolator
-    from idlelib.ColorDelegator import ColorDelegator
-    from idlelib.UndoDelegator import UndoDelegator
-    from idlelib.IOBinding import IOBinding, filesystem
-    from idlelib import Bindings
-    from tkinter import Toplevel
-    from idlelib.MultiStatusBar import MultiStatusBar
-```
-
-```
-help_url = None
-```
-
-## 调试控制
-
-+   跳过 退出 栈 源码
-本地变量 全局
-
-```
-'pdb.run(), line 431: exec(cmd, globals, locals)
-'> _main_.'<module>(), line 1674: 'slash:/'
-```
-
-## 搜索对话框
-
-+   查找：
-正则表达式 匹配大小写 整个单词 循环查找 查找下一个
-
-```
-方向 上 下
-激活 'active'
-全部 'all'
-锚点 'anchor'
-ARC 'arc'
-基线 'baseline'
-```
+基线 `baseline`
 
 > IDLE 用户界面概览（在 Linux 上）
 
@@ -4423,10 +4381,9 @@ IDLE 的一个优点是，因为它围绕编辑器和 shell 展开，它的大�
 
 看着它们，你会做哪些改进？
 
-# 默认字体
+#### 默认字体
 
 所第一个更改与默认字体有关。IDLE 硬编码了 10 点的 Courier 并在所有平台上使用它。这在 Windows 上看起来并不太糟糕，在 Linux 上还可以，但
-
 
 在 macOS 上的效果非常糟糕；虽然这可以通过偏好对话框进行更改，但默认设置显然没有留下良好的印象。
 
@@ -4444,20 +4401,31 @@ C:\Users\roseman>cd \python34
 
 ```
 C:\Python34>cd users\roseman
-The help system says:
-Python 3.4.3 Shell
-Python 3.4.3 (v3.4.3:9b73fic3e601, Feb 24 2015, 22:43:06) [MSC v.1600
-tel]) on win32
-Type "copyright", "credits" or "license()" for more information.
->>>
 ```
+
+The help system says:
+
+Python 3.4.3 Shell
+
+Python 3.4.3 (v3.4.3:9b73fic3e601, Feb 24 2015, 22:43:06) [MSC v.1600
+
+tel]) on win32
+
+Type "copyright", "credits" or "license()" for more information.
+
+>>>
 
 ```
 Python 3.4.3 Shell
+
 File Edit Shell Debug Options Window Help
+
 Python 3.4.3 (v3.4.3:9b73fic3e601, Feb 24 2015, 22:43:06) [MSC v.1600
+
 tel]) on win32
+
 Type "copyright", "credits" or "license()" for more information
+
 >>> |
 ```
 
@@ -4474,19 +4442,29 @@ roseman@ububuntu:/media/sf_vboxshare$ python3 -n idellib
 
 ```
 *Python 3.4.0 Shell*
+
 File Edit Shell Debug Options Window Help
+
 Python 3.4.0 (default, Jun 19 2015, 14:20:21)
+
 [GCC 4.8.2] on linux
+
 Type "copyright", "credits" or "license()" for more information.
+
 >>>
 ```
 
 ```
 Python 3.4.0 Shell
+
 File Edit Shell Debug Options Window Help
+
 Python 3.4.0 (default, Jun 19 2015, 14:20:21)
+
 [GCC 4.8.2] on linux
+
 Type "copyright", "credits" or "license()" for more information
+
 >>> |
 ```
 
@@ -4496,21 +4474,25 @@ IDLE 主窗口使用 TkFixedFont (Linux)
 
 ```
 if (family == 'TkFixed Font'):
-f = Font(name = 'TkFixedFont', exists = True, root)
+    f = Font(name = 'TkFixedFont', exists = True, root)
 ```
 
 ```
 actualFont = Font.actual(f)
+
 family = actualFont['family']
+
 size = actualFont['size']
+
 if size < 0:
     size = 10 # 如果字体是像素单位，则忽略实际大小
+
 bold = 1 if actualFont['weight']=='bold' else o
 ```
 
 记录一下，Tk 为 TkFixedFont 选择的字体在 macOS 上是 Monaco 11，在 Windows 上是 Courier New 10，在 Linux 上是 DeVu Sans Mono 10（具体为 Ubuntu 14）。
 
-# 关于文本组件 (Text Widget)
+#### 关于文本组件 (Text Widget)
 
 在主窗口边缘还有几处视觉上的细节看起来不太对；请查看 IDLE 主窗口更早的截图。
 
@@ -4520,7 +4502,7 @@ bold = 1 if actualFont['weight']=='bold' else o
 
 ![](img/44299b92074ede1d1ea1f48186743151_359_0.png)
 
-# 非活动窗口上的状态栏
+#### 非活动窗口上的状态栏
 
 注意在 macOS 截图中，在没有高亮的情况下，窗口底部的状态栏与文本组件融合在了一起。这并不好。
 
@@ -4540,8 +4522,6 @@ label = Label(self, bd=0, relief=SUNKEN, anchor=W)
 
 ![](img/44299b92074ede1d1ea1f48186743151_360_0.png)
 
-# 非活动窗口上的状态栏
-
 注意在 macOS 截图中，在没有高亮的情况下，窗口底部的状态栏与文本组件融合在了一起。这并不好。
 
 正如你从其他应用程序看到的，文本组件周围的边框不再是一种常见的做法了。因此，让我们从移除它开始，这只需要在创建文本组件时添加 "highlightthickness=o" 即可。
@@ -4560,8 +4540,6 @@ label = Label(self, bd=0, relief=SUNKEN, anchor=W)
 
 ![](img/44299b92074ede1d1ea1f48186743151_360.png)
 
-# 非活动窗口上的状态栏
-
 注意在 macOS 截图中，在没有高亮的情况下，窗口底部的状态栏与文本组件融合在了一起。这并不好。
 
 正如你从其他应用程序看到的，文本组件周围的边框不再是一种常见的做法了。因此，让我们从移除它开始，这只需要在创建文本组件时添加 "highlightthickness=o" 即可。
@@ -4573,6 +4551,8 @@ label = Label(self, bd=0, relief=SUNKEN, anchor=W)
 ```
 label = Label(self, bd=0, relief=SUNKEN, anchor=W)
 ```
+
+
 
 这被 `ttk.Label` 替换以确保它与之匹配。最后，我们可以将原始的滚动条替换为较新的 `ttk.Scrollbar`。
 
@@ -4588,16 +4568,14 @@ label = Label(self, bd=0, relief=SUNKEN, anchor=W)
 
 代码已修改为使用 `ttk.Notebook` 组件，这不仅在每个平台上看起来更好，而且让我们不需要许多自己管理标签的代码。
 
-# 更新组件
+### 更新组件
 
 下一个显而易见的步骤是将“经典”组件升级为相应的主题组件。在这个屏幕上，这包含了按钮、标签、框架、复选框、滚动条等。在其他一些面板上还有几个。通常情况下，这是一个直接的过程，通常涉及移除不再需要或主题组件支持的组件选项。有时选择不同的组件更有意义。在这个屏幕上，用于字体大小的选项菜单被替换为 combobox 更好。同样，scale 组件在当今的用户界面中并不常见，被替换为更熟悉的紧凑 spinbox。
 
 - 虽然这个对话框是一个糟糕的例子（仅仅考虑到左右半的空间不平衡），但我们花费了大量时间研究对话框中的组件间距和对齐。通用方法是在其他应用程序中寻找类似的示例并将其作为指南。按钮位于哪里？对话框中的多个字段是如何组织的？
-
 - 一个非常好的起点是从使用旧的 `pack` 布局管理器转换为，由于其工作方式，布局往往是奇怪的
 
-
-而且对齐和间距不一致，特别是当它们随着时间的推移被修改过时。使用 grid 将增加可维护性，因为它使用了更熟悉的模型，并且不依赖于组件的插入顺序。
+而且对齐和间距不一致，特别是当它们随着时间的推移被修改过时。使用 `grid` 将增加可维护性，因为它使用了更熟悉的模型，并且不依赖于组件的插入顺序。
 
 可能不可能设计出一个在所有平台上看起来都非常完美的布局，但通常你可以设计出一个（可能需要在代码中进行一些针对特定平台的微调）看起来不错的方案。
 
@@ -4609,7 +4587,7 @@ IDLE 偏好，修订版本（Windows）。
 
 IDLE 偏好，修订版本（Linux）。
 
-## 另一个示例
+### 另一个示例
 
 下面的截图显示了 IDLE 偏好面板修改前后，该面板控制语法着亮；参见
 
@@ -4619,17 +4597,17 @@ IDLE 主题面板，修改前（Windows）。
 
 ![](img/44299b92074ede1d1ea1f48186743151_369_0.png)
 
-## IDLE 主题面板，修改后（Windows）。
+IDLE 主题面板，修改后（Windows）。
 
 再次，替换组件并使用更熟悉的约定作为其中的一部分。我认为更大的变化在于从用户的角度来考虑问题。特别是作为一个初学者工具，如果你进入这里，很可能是为了切换主题，而不是调整颜色（后者在新版本中更为突出）。它还消除了“内置”主题和“自定义”主题之间任意的区别。
 
 我认为新版本是一个巨大的改进，尽管到为止我还没有说服某些人。既然是开源的，让我们拭目以待！
 
-## 18.5 其他对话框
+### 18.5 其他对话框
 
 IDLE 中还有多个对话框；我们在这里再考虑两个示例。
 
-### 查找对话框
+#### 查找对话框
 
 计划对这些进行更多一些更改，可能会将“查找”和“替换”合并到一个对话框中。
 
@@ -4649,21 +4627,21 @@ IDLE 查找对话框，修改前和后（macOS）。
 
 事实证明这是使用许多嵌套 frame的结果。例如，按钮被放置在它们自己的 frame 中，然后被放置在窗口的其余部分。由于那个原因，单个按钮无法与用户界面其余部分的组件对齐。
 
-在使用 pack 时通常需要嵌套 frame，但通常在使用 grid 时，除非特殊情况，否则最好避免它们。这允许你对齐用户界面的不同部分（尽管要花费许多 columnspan/rowspan 的调整作为代价）。
+在使用 `pack` 时通常需要嵌套 frame，但通常在使用 `grid` 时，除非特殊情况，否则最好避免它们。这允许你对齐用户界面的不同部分（尽管要花费许多 columnspan/rowspan 的调整作为代价）。
 
 更实质性的重组可能会移除嵌套 frame，但特别是在调整按钮时，这种相对简单的布局只需几次微调即可正常工作。
 
-你会发现许多旧的 Tkinter 用户界面都存在此问题，即内容运行到了窗口边缘，这通常看起来并不对。我已经习惯了在每个 tooplevel 中直接放置一个 ttk.Frame，并带有一些额外的内边距，然后将用户界面的其余部分放在其中。
+你会发现许多旧的 Tkinter 用户界面都存在此问题，即内容运行到了窗口边缘，这通常看起来并不对。我已经习惯了在每个 toplevel 中直接放置一个 `ttk.Frame`，并带有一些额外的内边距，然后将用户界面的其余部分放在其中。
 
 和“偏好”一样，查找对话框也是模态的（modal），这意味着你在对文件进行任何编辑之前必须关闭它们，尽管至少当你重新打开它们时，它们会记住之前的设置。这些最终被改为普通的非模态窗口。
 
-## 关于对话框
+#### 关于对话框
 
 说到模态对话框，“关于”框最初也是模态的。不仅如此，获取更多信息（例如 IDLE README 文件）会导致启动*另一个*模态对话框，需要关闭它才能回到第一个模态对话框，而它需要……
 
 ![](img/44299b92074ede1d1ea1f48186743151_374_0.png)
 
-## 关于 - Readme
+关于 - Readme
 
 IDLE 是基于 Python Tkinter 的集成开发环境。
 
@@ -4675,13 +4653,9 @@ IDLE 特性具有多窗口编辑器，支持多次撤销、Python 着色，以�
 
 有一个 Python 窗口，它具有着色和命令回溯功能。
 
-
-
-
-
 在这里很容易陷入其中。在 20 世纪 90 年代中期，Tcl 中一个微小的 HTML 解析器引发了一系列“在文本控件中实现 浏览器”的尝试，最初在 Tcl 中，随后在其他语言中（例如 Python 的 Grail）。试图跟上大型开发团队投入真实 Web 浏览器的工作是一项徒劳无功。然而，对于非常受限且受约束的 HTML 子集（如在线帮助文档中常见的），这是一种完全合理的方法。
 
-## 查询对话框 (Query Dialogs)
+### 查询对话框 (Query Dialogs)
 
 延续模态对话框主题，IDLE 使用了作为 Tkinter 一一部分的 `simpledialog` 包，通过模态对话框向用户请求某些小量信息。例如“跳转到行...”命令。下面显示了该命令，以及当你输入无效内容时显示的警报示例。
 
@@ -4715,7 +4689,7 @@ self.tk.call('tk::unsupported:MacAnimationStyle', 'style', self._w, moveableModa
 
 Tkinter 中这些对话框的前端同时支持 `master` 和 `parent`。虽然在大多数情况下，Tkinter 中的 "master" 和 "parent" 是通用的，但在这里并非如此。如果你只提供 `master`，对话框将不会附加到窗口（但对话框仍然需要一个现有窗口来创建，这就是为什么有 `master` 参数）。如果对话框与另一个窗口关联，请务必使用 `parent` 参数。
 
-## 18.6. 窗口集成 (Window Integration)
+### 18.6. 窗口集成 (Window Integration)
 
 很多人希望能够在一个窗口中显示所有内容，以避免有时会困扰人们的窗口管理麻烦，参见例如[和]。下面是我们想要实现的一些内容的早期、部分功能性的原型图。
 
@@ -4736,13 +4710,13 @@ Tkinter 中这些对话框的前端同时支持 `master` 和 `parent`。虽然�
 
 窗口的早期原型 (macOS)。
 
-## 标签编辑器 (Tabbed Editor)
+#### 标签编辑器 (Tabbed Editor)
 
 到此时，几乎所有工作都已完成。用户界面经过大幅修订，布局既可以在独立窗口中工作，也可以在集成时工作。设计大量借鉴了 TextMate。它允许创建新标签、关闭旧标签、拖动重新排序、每个标签上显示工具提示，以及指示文件是否需要保存。当标签数量多到无法舒适显示时，其余标签可以通过弹出菜单访问。
 
 标签控件的实现依赖于单个 Tkinter 画布来显示标签行并处理所有交互。窗口内容的切换与控件是分离的，通过一个简单的回调机制来协调一切。
 
-## 调试器 (Debugger)
+#### 调试器 (Debugger)
 
 原始调试器的设计（它有自己的缺陷，且由于太高，无法按预期集成）。
 
@@ -4754,15 +4728,11 @@ Tkinter 中这些对话框的前端同时支持 `master` 和 `parent`。虽然�
 
 ![](img/44299b92074ede1d1ea1f48186743151_387_0.png)
 
-## 集成 Shell 和调试器 (Integrated Shell and Debugger)
+#### 集成 Shell 和调试器 (Integrated Shell and Debugger)
 
 使用了另一个分割窗口将 Shell 和调试器与标签编辑器集成在一起。随着实现的进行，将添加额外的控件来显示/隐藏窗格。
 
-
-
-
-
-## 18.7. 变通、技巧及其他
+### 18.7. 变通、技巧及其他
 
 由于本章是关于真实应用程序现代化的实际经验，如果说底层用户界面工具包（Tk 和 Tkinter 封装器）总是完全按照预期工作，那将是谎。就像 IDLE 一样，Tkinter 和 Tcl/Tk 是志愿者巨大努力的结晶。尽管如此……
 
@@ -4770,19 +4740,19 @@ Tkinter 中这些对话框的前端同时支持 `master` 和 `parent`。虽然�
 
 在这一节中，我将尝试分类列出我们遇到的一些特定“坑”，并提供一些并不一定适用于其他地方、但有助于让用户界面更加完善的小技巧。
 
-## 工具提示 (Tool Tips)
+#### 工具提示 (Tool Tips)
 
 - macOS 上的工具提示损坏；请参见 `MacWindowStyle` 帮助中的工具提示，而在其他处则覆盖了 `wm overriddenirect`
 
-## 右键菜单
+#### 右键菜单
 
 - 虚假的 text widget 绑定会干扰弹出窗口点击；请参见 macOS 上需要两种不同的弹出窗口点击绑定；
 
-## 同级文本框 (Peer Text Widgets)
+#### 同级文本框 (Peer Text Widgets)
 
 - Tkinter 中损坏 peer text widget API；请参见
 
-## 模态窗口
+#### 模态窗口
 
 - macOS 未实现完全模态，此外还有窗口样式；请参见
 
@@ -4813,4 +4783,3 @@ ISBN: 978-1-9991495-8-1 (EPUB)
 Mark 住在加拿大不列颠哥省维多利亚。可以通过他的个人网站与他联系。
 
 他在 tkdocs.com 网站上发布了更多关于 Tk 和 Tkinter 的相关信息。
-

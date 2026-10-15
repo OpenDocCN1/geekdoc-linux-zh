@@ -1,3 +1,4 @@
+
 # 如何在 Ubuntu 18.04 上安装 Django LTS-elder node 博客
 
 > 原文：<https://blog.eldernode.com/install-django-ubuntu-18/>
@@ -12,7 +13,7 @@
 
 要设置，请按照我们的[初始设置 Ubuntu 18.04](https://eldernode.com/initial-setup-ubuntu-18/)
 
-## **教程在 Ubuntu 18.04 上安装 Django**
+## 教程在 Ubuntu 18.04 上安装 Django
 
 请和我们一起回顾这份指南。您将在一个 [Linux](https://blog.eldernode.com/tag/linux/) Ubuntu 18.04 服务器上运行 Django。Django 发展了许多大公司。你可以找到诸如华盛顿邮报、讨论、Instagram、Mozilla、Pinterest 等名字。
 
@@ -20,13 +21,13 @@
 
 **1-** 从软件包全局安装
 
-**2-** 在虚拟环境中安装 *pip*
+**2-** 在虚拟环境中安装 `pip`
 
-**3-** 开发版用 *git* 安装
+**3-** 开发版用 `git` 安装
 
 ### 在 LTS Ubuntu 18.04 上安装 Django
 
-Django 可以在官方的 Ubuntu 仓库中获得，并且可以和传统的 *apt* 包管理器一起安装。
+Django 可以在官方的 Ubuntu 仓库中获得，并且可以和传统的 `apt` 包管理器一起安装。
 
 首先，使用下面的命令更新您的本地包索引。
 
@@ -54,7 +55,7 @@ django-admin --version
 
 ### 在虚拟环境中安装 pip
 
-要使用灵活的方式安装 Django，创建一个虚拟环境是一个好主意。通过使用 *venv* 和 *virtualenv* 工具，这将成为可能。
+要使用灵活的方式安装 Django，创建一个虚拟环境是一个好主意。通过使用 `venv` 和 `virtualenv` 工具，这将成为可能。
 
 同样，建议您刷新本地包索引:
 
@@ -68,13 +69,13 @@ sudo apt update
 python3 -V
 ```
 
-要从 Ubuntu 库安装 *pip* ，请键入:
+要从 Ubuntu 库安装 `pip` ，请键入:
 
 ```
 sudo apt install python3-pip
 ```
 
-现在用 *pip* 安装 *venv* 包
+现在用 `pip` 安装 `venv` 包
 
 ```
 sudo apt install python3-venv
@@ -100,7 +101,7 @@ python3.6 -m venv my_env
 source my_env/bin/activate
 ```
 
-使用 pip 在您的新环境中安装 Django。另外，请注意，您**不需要**来使用 sudo ，因为您是在本地安装:
+使用 `pip` 在您的新环境中安装 Django。另外，请注意，您**不需要**来使用 `sudo` ，因为您是在本地安装:
 
 ```
 (my_env) $ pip install django
@@ -112,7 +113,7 @@ source my_env/bin/activate
 (my_env) $ django-admin --version
 ```
 
-发出 deactivate 命令，让您离开虚拟环境。
+发出 `deactivate` 命令，让您离开虚拟环境。
 
 ```
 (my_env) $ deactivate
@@ -140,19 +141,19 @@ sudo apt update
 python3 -V
 ```
 
-要从官方存储库中安装 *pip* ,运行
+要从官方存储库中安装 `pip` ,运行
 
 ```
 sudo apt install python3-pip
 ```
 
-安装 *venv* 包来创建您的虚拟环境:
+安装 `venv` 包来创建您的虚拟环境:
 
 ```
 sudo apt install python3-venv
 ```
 
-然后，要将存储库克隆到您的主目录中名为 ***~/** django-dev* 的目录中，键入:
+然后，要将存储库克隆到您的主目录中名为 `~/django-dev` 的目录中，键入:
 
 ```
 git clone git://github.com/django/django ~/django-dev
@@ -176,7 +177,7 @@ python3.6 -m venv my_env
 source my_env/bin/activate
 ```
 
-使用 *pip* 安装存储库。 *-e* 选项将以“可编辑”模式安装，这在从版本控制安装时是必要的:
+使用 `pip` 安装存储库。 `-e` 选项将以“可编辑”模式安装，这在从版本控制安装时是必要的:
 
 ```
 (my_env) $ pip install -e ~/django-dev
@@ -216,9 +217,10 @@ source my_env/bin/activate
 (my_env) $ pip install django
 ```
 
-此外，您可以使用 *django-admin* 来构建您的项目。 *startproject* 会在你当前的工作目录下创建一个目录，包括:
+此外，您可以使用 `django-admin` 来构建您的项目。 `startproject` 会在你当前的工作目录下创建一个目录，包括:
 
-一个管理脚本，manage.py，您可以使用它来管理各种特定于 Django 的任务。
+一个管理脚本，`manage.py`，您可以使用它来管理各种特定于 Django 的任务。
+
 包含实际项目代码的目录(与项目同名)
 
 然而，为了避免有太多的嵌套目录，让我们告诉 Django 将管理脚本和内部目录放在*当前*目录中(注意结束点):
@@ -227,7 +229,7 @@ source my_env/bin/activate
 (my_env) $ django-admin startproject djangoproject .
 ```
 
-要迁移数据库(这个例子默认使用 SQLite)，让我们使用 migrate 命令和 *manage.py* 。[迁移](https://docs.djangoproject.com/en/2.0/topics/migrations/)将您对 Django 模型所做的任何更改应用到您的数据库模式。
+要迁移数据库(这个例子默认使用 SQLite)，让我们使用 `migrate` 命令和 `manage.py` 。[迁移](https://docs.djangoproject.com/en/2.0/topics/migrations/)将您对 Django 模型所做的任何更改应用到您的数据库模式。
 
 要迁移数据库，请键入:
 
@@ -249,13 +251,13 @@ Operations to perform:    Apply all migrations: admin, auth, contenttypes, sessi
 (my_env) $ python manage.py createsuperuser
 ```
 
-如何在 Django 设置中修改 ALLOWED _ HOSTS
+### 如何在 Django 设置中修改 ALLOWED _ HOSTS
 
-### 修改 Django 设置中的一个指令，以便能够成功测试您的应用程序。
+修改 Django 设置中的一个指令，以便能够成功测试您的应用程序。
 
 使用以下命令打开设置文件:
 
-在内部，找到 *ALLOWED_HOSTS* 指令。这定义了一个地址或域名的白名单，可以用来连接到 Django 实例。主机标头不在此列表中的传入请求将引发异常。Django 要求您设置这个来防止某类安全漏洞。
+在内部，找到 `ALLOWED_HOSTS` 指令。这定义了一个地址或域名的白名单，可以用来连接到 Django 实例。主机标头不在此列表中的传入请求将引发异常。Django 要求您设置这个来防止某类安全漏洞。
 
 ```
 (my_env) $ nano ~/django-test/djangoproject/settings.py
@@ -263,7 +265,7 @@ Operations to perform:    Apply all migrations: admin, auth, contenttypes, sessi
 
 首先，在方括号中列出与 Django 服务器相关的 IP 地址或域名。每一项都应该用引号括起来，用逗号分开。如果希望请求整个域和任何子域，请在条目的开头加上一个句点:
 
-~/django-test/django project/settings . py
+`~/django-test/djangoproject/settings.py`
 
 完成后，保存文件并退出编辑器。
 
@@ -271,9 +273,9 @@ Operations to perform:    Apply all migrations: admin, auth, contenttypes, sessi
 . . .  ALLOWED_HOSTS = ['your_server_ip_or_domain', 'your_second_ip_or_domain', . . .]
 ```
 
-如何测试开发服务器
+### 如何测试开发服务器
 
-### 因为您有了一个用户，所以您可以启动 Django 开发服务器。但在此之前，ypu 应该确保在您的防火墙中打开适当的端口。通过运行以下命令打开端口 8000:
+因为您有了一个用户，所以您可以启动 Django 开发服务器。但在此之前，你应该确保在您的防火墙中打开适当的端口。通过运行以下命令打开端口 8000:
 
 然后，启动开发服务器:
 
@@ -295,7 +297,7 @@ http://your_server_ip:8000
 
 ![django landing page](img/c582ec0d6f9315c5ea1355108355335e.png)
 
-此外，要访问管理界面，请在您的网址末尾添加 /admin/ :
+此外，要访问管理界面，请在您的网址末尾添加 `/admin/` :
 
 这将带您进入登录屏幕:
 
@@ -309,12 +311,8 @@ http://your_server_ip:8000/admin/
 
 ![django admin panel page](img/c09ff8226b95a9e14047b64fba8912bd.png)
 
-要解释更多的 ****，**** 任何时候你需要停止开发服务器，在你的终端输入 CTRL-C。如果您希望构建您的应用程序并定制您的站点，您应该查阅 Django 文档。
+要解释更多的****，****任何时候你需要停止开发服务器，在你的终端输入 `CTRL-C`。如果您希望构建您的应用程序并定制您的站点，您应该查阅 Django 文档。
 
-To explain more****,**** anytime you need to stop the development server, type CTRL-C in your terminal. You should check out the Django documentation if you wish to build your applications and customize your site.
+## 结论
 
-结论
-
-## 在本文中，你学习了如何在 Ubuntu 18.04 上安装 Django。使用 Django 帮助 ypu 更容易地创建网站。您可能犯的安全错误，如 SQL、注入、XSS、CSRF 和点击劫持将被避免。如果你还需要获得最新版本的指南，请关注我们的文章[如何在 Ubuntu 20.04 上安装 Django](https://blog.eldernode.com/install-django-on-ubuntu-20/)。
-
-In this article, you learned How To Install Django on Ubuntu 18.04\. Using Django helps ypu create websites easier. Your probable security mistakes such as SQL, Injection, XSS, CSRF, and clickjacking would be avoided. In case you also need to get the guide of the latest version, follow our article on [How to install Django on Ubuntu 20.04](https://blog.eldernode.com/install-django-on-ubuntu-20/).
+在本文中，你学习了如何在 Ubuntu 18.04 上安装 Django。使用 Django 帮助 ypu 更容易地创建网站。您可能犯的安全错误，如 SQL、注入、XSS、CSRF 和点击劫持将被避免。如果你还需要获得最新版本的指南，请关注我们的文章[如何在 Ubuntu 20.04 上安装 Django](https://blog.eldernode.com/install-django-on-ubuntu-20/)。

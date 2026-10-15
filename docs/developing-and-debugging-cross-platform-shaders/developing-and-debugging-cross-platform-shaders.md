@@ -1,18 +1,11 @@
+
 # 跨平台着色器开发与调试
-
-
-
-
-
-
-
-
 
 ## 前言
 
-现代计算机图形学 —— 无论是电脑游戏、科学可视化系统还是特效制作 —— 都离不开着色器（shaders）。
+现代计算机图形学（无论是电脑游戏、科学可视化系统还是特效制作）都离不开着色器（shaders）。
 
-最初，*着色器（shader）* 是一个用于确定图像中像素颜色的程序。在当代 GPU（图形处理单元）中，着色器仅仅是一个由 GPU 执行的程序，并不一定参与像素颜色的计算。
+最初，着色器（shader）是一个用于确定图像中像素颜色的程序。在当代 GPU（图形处理单元）中，着色器仅仅是一个由 GPU 执行的程序，并不一定参与像素颜色的计算。
 
 当代 GPU 的强大性能使其能够承担许多任务（例如物体的动画处理），从而减轻 CPU（中央处理单元）的负载。
 
@@ -20,24 +13,25 @@
 
 编写由 GPU 执行的程序（即着色器）与为传统处理器编程有所不同。GPU 是一种具有特殊架构的处理器，专门用于渲染三维对象。这种专业化使其能够获得极高的性能，但也对其执行的程序施加了某些限制。
 
-图形处理中的一个重要概念是 *可编程图形管线*（图 P1）。
+图形处理中的一个重要概念是可编程图形管线（图 P1）。
 
-如图所示，GPU 处理输入给它的数据（这被称为 *数据流模型*）。这些数据通常是各种顶点参数的值。数据经过一系列变换，最终导致 *帧缓冲区*（即像素集）的内容发生变化。
+如图所示，GPU处理输入给它的数据（这被称为数据流模型）。这些数据通常是各种顶点参数的值。数据经过一系列变换，最终导致帧缓冲区（即像素集）的内容发生变化。
 
-因此，GPU 既处理顶点数据，也处理单个图像片段。这两种截然不同的数据类型决定了两类着色器：顶点着色器（vertex shaders）和片段着色器（fragment shaders）。
+因此，GPU既处理顶点数据，也处理单个图像片段。这两种截然不同的数据类型决定了两类着色器：顶点着色器（vertex shaders）和片段着色器（fragment shaders）。
 
-*顶点着色器* —— 或称 *顶点程序* —— 是由 GPU 执行的用于处理图形原语顶点数据的程序。顶点程序无法访问与图形原语中顶点排列方式相关的拓扑信息。换句话说，它不能改变拓扑结构，即不能添加或删除顶点。此外，由于顶点通常是独立处理的，顶点程序每次只能访问一个顶点的数据。
+顶点着色器（或称顶点程序）是由 GPU 执行的用于处理图形原语顶点数据的程序。顶点程序无法访问与图形原语中顶点排列方式相关的拓扑信息。换句话说，它不能改变拓扑结构，即不能添加或删除顶点。此外，由于顶点通常是独立处理的，顶点程序每次只能访问一个顶点的数据。
 
-*片段着色器* —— 或称 *片段程序* —— 是由 GPU 执行的用于处理图形原语在光栅化过程中产生的单个片段的程序。片段程序同样是并行执行的。
+片段着色器（或称片段程序）是由 GPU 执行的用于处理图形原语在光栅化过程中产生的单个片段的程序。片段程序同样是并行执行的。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_9_0.png)
+
 **图 P1.** 可编程图形管线
 
 现有的 GPU 对片段程序和顶点程序都施加了某些限制。这些限制在传统处理器中并不常见，它们与程序类型（顶点或片段）以及特定图形处理器的特性有关。随着新型且更强大的图形处理器的出现，这些限制正在被逐步消除。
 
-早期的着色器是用类汇编语言编写的（例如由 `GL_ARB_vertex_program` 和 `GL_ARB_fragment_program` 扩展引入的语言），而且片段程序的支持比顶点程序晚得多。
+早期的着色器是用类汇编语言编写的（例如由`GL_ARB_vertex_program`和`GL_ARB_fragment_program`扩展引入的语言），而且片段程序的支持比顶点程序晚得多。
 
-使用这些低级语言编写着色器非常困难。新功能的出现和图形处理单元性能的提升，使得使用专门的高级语言（*着色语言*）来编写着色器成为可能。使用 OpenGL 编写程序的着色语言示例包括由 NVIDIA 开发的 Cg (C for graphics) 和 GLSL (OpenGL Shading Language)。后者成为了使用 OpenGL 2.0 编程着色器的标准。
+使用这些低级语言编写着色器非常困难。新功能的出现和图形处理单元性能的提升，使得使用专门的高级语言（着色语言）来编写着色器成为可能。使用 OpenGL 编写程序的着色语言示例包括由 NVIDIA 开发的 Cg（C for graphics）和 GLSL（OpenGL Shading Language）。后者成为了使用 OpenGL 2.0 编程着色器的标准。
 
 着色语言简单且易于与任何版本的 OpenGL 配合使用，即使是许多程序员（主要在 Microsoft Windows 中）仍在使用的 1.1 版本。为了支持这些语言，需要安装最新版本的驱动程序，且 Cg 语言还需要 Cg SDK 或 Cg 运行时库。
 
@@ -47,7 +41,7 @@
 
 第一部分介绍了全球 3D 图形编程标准 OpenGL 库的历史和演进。它涉及了主要 OpenGL 版本（包括 2.0），并提供了关于它们特性的信息。第一章以一张表格结束，列出了 OpenGL 中包含的所有扩展，并指明了每个扩展首次引入的版本号。
 
-第二章介绍了如何使用汇编语言编写着色器（使用 `ARB_vertex_program` 和 `ARB_fragment_program` 扩展），并展示了用 Cg 编写的着色器示例。
+第二章介绍了如何使用汇编语言编写着色器（使用`ARB_vertex_program`和`ARB_fragment_program`扩展），并展示了用 Cg 编写的着色器示例。
 
 对于所有着色器，书中都展示了如何将它们封装到 C++ 类中，以简化使用。
 
@@ -61,7 +55,7 @@
 
 第九章介绍了 Render-To-Texture（渲染到纹理）技术、所需的扩展以及操作方法。它提供了 p-buffers 和用户定义帧缓冲区的跨平台实现，这些在后续用于执行图像后处理的着色器中会被用到。
 
-第十章引入了两个简单但非常有用的类：`Camera` 和 `Frustum`。前者是对摄像机（或观察者）的抽象，后者是对 OpenGL 中使用的视锥体的抽象。
+第十章引入了两个简单但非常有用的类：`Camera`和`Frustum`。前者是对摄像机（或观察者）的抽象，后者是对 OpenGL 中使用的视锥体的抽象。
 
 第十一章介绍了如何使用多边形模型。它引入了有效存储和渲染复杂三维模型所需的类，并描述了几个用于从 3DS, ASE, OBJ, LWO, MD3 和 MD5 等流行格式文件中加载现有模型的类。由于篇幅限制，书中未包含这些格式的详细描述和模型加载方法（其中大多数非常复杂，单独描述可能需要一本书）。不过，本书随附的 CD-ROM 中包含了这些类的源代码，以便你在程序中使用。
 
@@ -69,7 +63,7 @@
 
 顶点着色器和片段着色器的特定特性会影响其编写和调试。寻找合适的参数值和最佳计算方法往往需要耗费大量时间。使用专门的 IDE（集成开发环境）可以让程序员在编写和调试着色器时节省大量时间和工作精力。
 
-第十五章介绍了一个这样的 IDE —— AT1 RenderMonkey。本章全面描述了其主要功能，并提供了示例，说明如何使用它来编写和调试复杂的多通道（multi-pass）着色器。
+第十五章介绍了一个这样的 IDE —— ATI RenderMonkey。本章全面描述了其主要功能，并提供了示例，说明如何使用它来编写和调试复杂的多通道（multi-pass）着色器。
 
 第十六章介绍了几个经典效果的实现，包括模拟折射和衍射，以及创建粒子系统。在本章中，你可以找到知名照明模型（如 Phong 和 Blinn 模型）以及不太普及的模型（如各向异性照明和 Ward 模型）的描述。此外，本章还探讨了在图形加速器中使用着色器进行图像后处理。
 
@@ -83,17 +77,15 @@
 
 如果你有有趣的评论或疑问，请发送电子邮件至 steps3d@narod.ru。
 
+## 第一部分
 
-
-### 第一部分
-
-## OpenGL 的演进
+### OpenGL 的演进
 
 - 第 1 章：OpenGL 1.1 到 1.5 版本
 - 第 2 章：ARB_vertex_program 和 ARB_fragment_program 扩展及 Cg 语言
 - 第 3 章：OpenGL 2.0 和 GLSL
 
-### 第 1 章：OpenGL 1.1 到 1.5 版本
+## 第 1 章：OpenGL 1.1 到 1.5 版本
 
 OpenGL 是一个于 1992 年 7 月出现的图形库，至今仍是专业 3D 图形领域的事实标准。此外，它目前不仅用于 3D 图形，还用于处理 2D 图形和视频。
 
@@ -103,13 +95,13 @@ OpenGL 是一个于 1992 年 7 月出现的图形库，至今仍是专业 3D 图
 
 此外，OpenGL 库是跨平台的，因此可以运行在各种硬件和软件平台上。
 
-或许 OpenGL 最重要的特性，且在其演进中发挥了突出作用的是其可扩展性，这一特性从该库诞生之初就已存在 [3]。
+或许 OpenGL 最重要的特性，且在其演进中发挥了突出作用的是其可扩展性，这一特性从该库诞生之初就已存在。
 
 这一特性允许图形加速器供应商为 OpenGL 添加由其 GPU 支持的新功能。结果是，程序员几乎可以立即使用这些新功能（更准确地说，只要支持新功能的驱动程序编写完成且规范发布，即可以从供应商网站下载）。
 
 每个 OpenGL 版本与前一个版本的区别仅在于引入 OpenGL 的扩展列表。因此，为某个特定 OpenGL 版本编写的任何程序都将在随后的所有版本中运行。
 
-每个扩展都有一个名称（例如 `GL_ARB_fragment_program`），由平台前缀（`GL` 表示平台无关扩展，`WGL` 表示 Windows 扩展，`GLX` 表示用于各种 Unix 版本的 X Window 系统扩展）、指示供应商的前缀以及扩展名称组成。
+每个扩展都有一个名称（例如`GL_ARB_fragment_program`），由平台前缀（`GL`表示平台无关扩展，`WGL`表示 Windows 扩展，`GLX`表示用于各种 Unix 版本的 X Window 系统扩展）、指示供应商的前缀以及扩展名称组成。
 
 表 1.1 列出了不同供应商的前缀。
 
@@ -136,7 +128,7 @@ OpenGL 是一个于 1992 年 7 月出现的图形库，至今仍是专业 3D 图
 
 这种命名方法可以避免不同供应商扩展之间的混淆。
 
-除了名称，每个扩展还定义了常量和函数。这些的命名原则基本相同，但在名称后附加了平台标识，例如 `glActiveTextureARB`。
+除了名称，每个扩展还定义了常量和函数。这些的命名原则基本相同，但在名称后附加了平台标识，例如`glActiveTextureARB`。
 
 在执行期间，程序可以访问所有支持的扩展列表，并使用其需要的扩展（如果它们被支持）。
 
@@ -158,19 +150,19 @@ OpenGL 1.1 版本是 1.0 版本之后出现的第一个版本。它包含了许�
 
 此外，该扩展使得通过使用硬件加速的 DMA（直接存储器访问）来提高数据传输效率成为可能。
 
-顶点数组（vertex arrays）机制基于 `EXT_vertex_array` 扩展，虽然经过了轻微修改。
+顶点数组（vertex arrays）机制基于`EXT_vertex_array`扩展，虽然经过了轻微修改。
 
 1.1 版本中出现的另一个重要特性是使用多边形偏移（polygon offset）来改变原语光栅化后产生片段的深度。
 
-当显示位于同一平面上的多个面时，经常需要这种偏移。在这种情况下，即使是深度计算中的微小误差（由于计算精度的限制而不可避免）也会影响片段的遮挡情况。在计算出的深度值中加入偏移量（只要偏移量远大于计算误差），就可以正确地确定遮挡关系 [9]。
+当显示位于同一平面上的多个面时，经常需要这种偏移。在这种情况下，即使是深度计算中的微小误差（由于计算精度的限制而不可避免）也会影响片段的遮挡情况。在计算出的深度值中加入偏移量（只要偏移量远大于计算误差），就可以正确地确定遮挡关系。
 
-该特性基于 `EXT_polygon_offset` 扩展。
+该特性基于`EXT_polygon_offset`扩展。
 
-`EXT_blend_logic_op` 扩展是另一个特性的基础：在将片段输出到帧缓冲时，对于 RGBA 模式（而不仅仅是 OpenGL 1.0 中的颜色索引模式）使用布尔运算。
+`EXT_blend_logic_op`扩展是另一个特性的基础：在将片段输出到帧缓冲时，对于 RGBA 模式（而不仅仅是 OpenGL 1.0 中的颜色索引模式）使用布尔运算。
 
-此外，1.1 版本引入了内部纹理格式（internal texture formats）的概念（取代了之前使用的组件数量）。*内部格式* 同时指定了每个组件的位数和数据格式。
+此外，1.1 版本引入了内部纹理格式（internal texture formats）的概念（取代了之前使用的组件数量）。内部格式同时指定了每个组件的位数和数据格式。
 
-能够指定内部格式，程序员就可以控制计算精度和为纹理分配的内存量。以下是修改后的 `glTexImage2D` 命令（其他命令的修改方式类似）：
+能够指定内部格式，程序员就可以控制计算精度和为纹理分配的内存量。以下是修改后的`glTexImage2D`命令（其他命令的修改方式类似）：
 
 ```c
 void glTexImage2D(GLenum target, int level,
@@ -178,58 +170,59 @@ void glTexImage2D(GLenum target, int level,
                   int border, GLenum format, GLenum type, void * data);
 ```
 
-在 1.1 版本中，仍然可以将组件数量指定为 `internalFormat` 变量的值，但程序员也可以指定其他格式，如 `GL_RGBA8`。
+在 1.1 版本中，仍然可以将组件数量指定为`internalFormat`变量的值，但程序员也可以指定其他格式，如`GL_RGBA8`。
 
-这一特性借鉴自 `EXT_texture` 扩展。
+这一特性借鉴自`EXT_texture`扩展。
 
-`EXT_texture` 扩展也是指定映射（map）应如何替换片段颜色的基础。
+`EXT_texture`扩展也是指定映射（map）应如何替换片段颜色的基础。
 
-另一个基于 `EXT_texture` 扩展的特性是 *纹理代理*（texture proxies）的概念。它们允许程序员在不实际创建纹理的情况下，根据其其他参数（例如格式）检索纹理可能的最大尺寸信息。为此，程序员应在 `glTexImage` 命令中将纹理类型传递为特殊常量之一（例如 `GL_PROXY_TEXTURE_1D`、`GL_PROXY_TEXTURE_2D` 等）。
+另一个基于`EXT_texture`扩展的特性是纹理代理（texture proxies）的概念。它们允许程序员在不实际创建纹理的情况下，根据其其他参数（例如格式）检索纹理可能的最大尺寸信息。为此，程序员应在`glTexImage`命令中将纹理类型传递为特殊常量之一（例如`GL_PROXY_TEXTURE_1D`、`GL_PROXY_TEXTURE_2D`等）。
 
-1.1 版本中出现的另一个新功能允许将内存或帧缓冲中的矩形块直接复制到纹理中。该功能基于 `EXT_copy_texture` 和 `EXT_subtexture` 扩展。
+1.1 版本中出现的另一个新功能允许将内存或帧缓冲中的矩形块直接复制到纹理中。该功能基于`EXT_copy_texture`和`EXT_subtexture`扩展。
 
-一项重要的创新是将每个纹理（包括所有中间级别）及其相关状态解释为一个对象。这一特性借鉴自 `EXT_texture_object` 扩展。
+一项重要的创新是将每个纹理（包括所有中间级别）及其相关状态解释为一个对象。这一特性借鉴自`EXT_texture_object`扩展。
 
 1.1 版本的几项次要补充包括：
 
 - 将颜色索引指定为无符号字节。
 - 对于光栅化点和位图，纹理坐标 (s, t, r, q) 除以 q 分量。此前，这仅在文档中针对直线和多边形有所说明。
 - 更新了直线光栅化算法，以便正确绘制像素边界处的垂直线。
-
-
-
 - 与 1.0 版本不同，对于没有 alpha 通道的纹理，将 1 作为 alpha 值返回的行为已记录在案。
-- 为 `fogStart` 和 `fogEnd` 变量指定负值。
+- 为`fogStart`和`fogEnd`变量指定负值。
 
 ## OpenGL 1.2 版本
 
 OpenGL 1.2 版本于 1998 年 3 月 16 日发布。它包含了一系列新特性，但仍然与 1.0 和 1.1 版本完全兼容。
 
-OpenGL 1.2 中添加的最重要的新特性之一是基于 `EXT_texture3D` 扩展的三维纹理支持。
+OpenGL 1.2 中添加的最重要的新特性之一是基于`EXT_texture3D`扩展的三维纹理支持。
 
-另一个基于 `EXT_bgra` 扩展 [3] 且对 Microsoft 用户尤为方便的特性是对新纹理格式 BGRA 的支持（该格式与 Windows DIBs 具有相同的像素结构）。
+另一个基于`EXT_bgra`扩展且对 Microsoft 用户尤为方便的特性是对新纹理格式 BGRA 的支持（该格式与 Windows DIBs 具有相同的像素结构）。
 
-此外，此版本出现了对打包像素格式（packed pixel formats）的支持。在这些格式中，整个像素的值是计算机的一种有效类型（例如字节、字或双字），但像素的单个分量不是有效类型（例如，红、绿、蓝分量可以分别使用 5、6 和 5 位，但它们总共占用两个字节，而两个字节是一个有效类型）。`EXT_packed_pixels` 扩展是这一特性的基础。
+此外，此版本出现了对打包像素格式（packed pixel formats）的支持。在这些格式中，整个像素的值是计算机的一种有效类型（例如字节、字或双字），但像素的单个分量不是有效类型（例如，红、绿、蓝分量可以分别使用 5、6 和 5 位，但它们总共占用两个字节，而两个字节是一个有效类型）。`EXT_packed_pixels`扩展是这一特性的基础。
 
-OpenGL 1.2 版本还允许用户使用从模型变换矩阵中获取的系数来自动缩放法向量。在许多情况下，这种缩放比显式归一化（normalization）工作速度快得多。该特性借鉴自 `EXT_rescale_normal` 扩展。
+OpenGL 1.2 版本还允许用户使用从模型变换矩阵中获取的系数来自动缩放法向量。在许多情况下，这种缩放比显式归一化（normalization）工作速度快得多。该特性借鉴自`EXT_rescale_normal`扩展。
 
-此版本引入的另一个特性是对 *次要颜色* [3] 的支持，该颜色在计算光照时使用，并在映射期间予以保留（与主颜色不同）。这一特性使得创建颜色仅取决于光源颜色的表面高光变得简单。该特性基于 `EXT_separate_specular_color` 扩展。
+此版本引入的另一个特性是对次要颜色的支持，该颜色在计算光照时使用，并在映射期间予以保留（与主颜色不同）。这一特性使得创建颜色仅取决于光源颜色的表面高光变得简单。该特性基于`EXT_separate_specular_color`扩展。
 
-纹理坐标钳制（clamping）的新模式是另一个便捷特性：`GL_CLAMP_TO_EDGE` [3]。该模式保证在使用纹理过滤时，纹理边界上的像素值不会影响 *mipmap* 级别内部像素的值。该特性的基础是 `SGIS_texture_edge_clamp` 扩展。
+纹理坐标钳制（clamping）的新模式是另一个便捷特性：`GL_CLAMP_TO_EDGE`。该模式保证在使用纹理过滤时，纹理边界上的像素值不会影响mipmap级别内部像素的值。该特性的基础是`SGIS_texture_edge_clamp`扩展。
 
-`SGIS_texture_lod` 扩展为该 OpenGL 版本贡献了两个扩展。这些与 mipmap 过滤有关。首先，现在可以为负责 mipmap 过滤中级别选择的 $\lambda$ 参数指定一个范围。其次，在 mipmap 过滤期间，可以加载纹理级别的一个子集而非全部级别。这两项特性都允许程序员节省用于大型纹理的显存。
+`SGIS_texture_lod`扩展为该 OpenGL 版本贡献了两个扩展。这些与 mipmap 过滤有关。首先，现在可以为负责 mipmap 过滤中级别选择的λ参数指定一个范围。其次，在 mipmap 过滤期间，可以加载纹理级别的一个子集而非全部级别。这两项特性都允许程序员节省用于大型纹理的显存。
 
-另一个新特性允许使用顶点数组的程序员仅绘制由数组指定的少量面，而不是全部绘制。该特性借鉴自 `EXT_draw_range_element` 扩展。
+另一个新特性允许使用顶点数组的程序员仅绘制由数组指定的少量面，而不是全部绘制。该特性借鉴自`EXT_draw_range_element`扩展。
 
-1.2 版本还包含几个与图像处理相关的特性。此版本支持在像素传输期间应用的一维和二维卷积。卷积核被解释为一维和二维纹理，可以从内存或帧缓冲中加载。该特性基于 `EXT_convolution` 和 `HP_convolution_border_modes` 扩展。
 
-在 RGBA 模式下使用 *查找表*（lookup tables）是另一个新特性。在这种情况下，表被解释为具有特定格式和卷积过滤的一维纹理。这些表最多可以被访问三次：在卷积之前，在卷积之后但在使用矩阵进行颜色变换之前，以及在使用矩阵进行颜色变换之后。该特性基于 `EXT_color_table` 和 `EXT_color_subtable` 扩展。
 
-此 OpenGL 版本还增加了对另一种矩阵变换以及与该变换相对应的矩阵栈 (`GL_COLOR_MATRIX`) 的支持。涉及 4×4 矩阵乘法的 RGBA 颜色变换被用作此类变换。在矩阵乘法之后，结果向量的分量会被移位和缩放。该特性借鉴自 `SGL_color_matrix` 扩展。
+## OpenGL 1.2 版本的新特性
 
-最后两个特性与 *颜色混合*（color blending）有关。首先，程序员现在能够指定在计算混合系数时应使用的颜色。该特性最简单的例子是以恒定系数混合两个 RGB 纹理。该特性基于 `EXT_blend_color` 扩展。
+1.2 版本还包含几个与图像处理相关的特性。此版本支持在像素传输期间应用的一维和二维卷积。卷积核被解释为一维和二维纹理，可以从内存或帧缓冲中加载。该特性基于`EXT_convolution`和`HP_convolution_border_modes`扩展。
 
-其次，引入了对新颜色混合方程（除颜色加权和之外）的支持。其中两个方程从被混合颜色的相应分量中选择最大值和最小值。另外两个方程与标准颜色混合方程类似，但它们使用颜色减法而非加法。这些特性基于 `EXT_blend_minmax` 和 `EXT_blend_subtract` 扩展。
+在 RGBA 模式下使用*查找表*（lookup tables）是另一个新特性。在这种情况下，表被解释为具有特定格式和卷积过滤的一维纹理。这些表最多可以被访问三次：在卷积之前，在卷积之后但在使用矩阵进行颜色变换之前，以及在使用矩阵进行颜色变换之后。该特性基于`EXT_color_table`和`EXT_color_subtable`扩展。
+
+此 OpenGL 版本还增加了对另一种矩阵变换以及与该变换相对应的矩阵栈（`GL_COLOR_MATRIX`）的支持。涉及 4×4 矩阵乘法的 RGBA 颜色变换被用作此类变换。在矩阵乘法之后，结果向量的分量会被移位和缩放。该特性借鉴自`SGL_color_matrix`扩展。
+
+最后两个特性与*颜色混合*（color blending）有关。首先，程序员现在能够指定在计算混合系数时应使用的颜色。该特性最简单的例子是以恒定系数混合两个 RGB 纹理。该特性基于`EXT_blend_color`扩展。
+
+其次，引入了对新颜色混合方程（除颜色加权和之外）的支持。其中两个方程从被混合颜色的相应分量中选择最大值和最小值。另外两个方程与标准颜色混合方程类似，但它们使用颜色减法而非加法。这些特性基于`EXT_blend_minmax`和`EXT_blend_subtract`扩展。
 
 为此使用以下命令：
 
@@ -237,31 +230,33 @@ OpenGL 1.2 版本还允许用户使用从模型变换矩阵中获取的系数来
 void glBlendEquation(GLenum mode);
 ```
 
-`mode` 参数用于向命令传递操作类型（`GL_FUNC_ADD`、`GL_FUNC_SUBTRACT`、`GL_FUNC_REVERSE_SUBTRACT`、`GL_MIN`、`GL_MAX` 或 `GL_LOGIC_OP`）。
+`mode`参数用于向命令传递操作类型（`GL_FUNC_ADD`、`GL_FUNC_SUBTRACT`、`GL_FUNC_REVERSE_SUBTRACT`、`GL_MIN`、`GL_MAX`或`GL_LOGIC_OP`）。
 
 ## OpenGL 1.3 版本
 
 OpenGL 1.3 于 2001 年 8 月 14 日发布。它保持了与 1.0 到 1.2 版本的兼容性，并添加了此前作为 ARB 扩展引入的几个新特性。
 
-其中最重要的特性之一是多纹理（multitexturing），它允许你在一次传递中应用多个纹理（具有特定的映射坐标、应用方法等）（图 1.1）。该特性借鉴自 ARB_multitexture 扩展 [3 和 9]。
+其中最重要的特性之一是多纹理（multitexturing），它允许你在一次传递中应用多个纹理（具有特定的映射坐标、应用方法等）（图 1.1）。该特性借鉴自`ARB_multitexture`扩展 [3 和 9]。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_20_0.png)
+
 **图 1.1.** 多纹理
 
-1.3 版本中出现的另一个重要特性是对 *纹理立方体映射*（texture cube maps）的支持，以及两种计算映射坐标的新方法：`GL_REFLECTION_MAP` 和 `GL_NORMAL_MAP`。这些特性从 ARB_texture_cube_map 扩展 [3] 转移而来。
+1.3 版本中出现的另一个重要特性是对*纹理立方体映射*（texture cube maps）的支持，以及两种计算映射坐标的新方法：`GL_REFLECTION_MAP`和`GL_NORMAL_MAP`。这些特性从`ARB_texture_cube_map`扩展 [3] 转移而来。
 
-此版本还包括从 ARB_texture_compression 扩展借鉴的对压缩纹理的支持。
+此版本还包括从`ARB_texture_compression`扩展借鉴的对压缩纹理的支持。
 
-对 *多采样*（multisampling）的支持首次出现在 OpenGL 1.3 中（图 1.2）。这是一种简单（但开销较大）的消除 *锯齿伪影*（aliasing artifacts）的方法。多采样是一个过程，在此过程中为每个像素选择多个 *样本*（samples），并为每个样本计算一个单独的颜色。将一个像素所有样本的颜色值求平均，从而获得该像素的最终颜色。
+对*多采样*（multisampling）的支持首次出现在 OpenGL 1.3 中（图 1.2）。这是一种简单（但开销较大）的消除*锯齿伪影*（aliasing artifacts）的方法。多采样是一个过程，在此过程中为每个像素选择多个*样本*（samples），并为每个样本计算一个单独的颜色。将一个像素所有样本的颜色值求平均，从而获得该像素的最终颜色。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_21_0.png)
+
 **图 1.2.** 多采样
 
-除了帧缓冲外，还创建了一个 *多采样缓冲*（multisample buffer）。它存储单个样本的值。该特性基于 `ARB_multisample` 扩展。
+除了帧缓冲外，还创建了一个*多采样缓冲*（multisample buffer）。它存储单个样本的值。该特性基于`ARB_multisample`扩展。
 
-此 OpenGL 版本还支持几种新的 *纹理环境模式*（texture environment modes）：`GL_ADD`、`GL_DOT3` 和 `GL_COMBINE` [3 和 10]。这些方法的引入显著扩展了在 OpenGL 中使用纹理的选择，特别是在多纹理模式下。`ARB_texture_env_add`、`ARB_texture_env_dot3` 和 `ARB_texture_env_combine` 扩展被用作这些模式的基础。
+此 OpenGL 版本还支持几种新的*纹理环境模式*（texture environment modes）：`GL_ADD`、`GL_DOT3`和`GL_COMBINE` [3 和 10]。这些方法的引入显著扩展了在 OpenGL 中使用纹理的选择，特别是在多纹理模式下。`ARB_texture_env_add`、`ARB_texture_env_dot3`和`ARB_texture_env_combine`扩展被用作这些模式的基础。
 
-一种新的纹理坐标钳制模式 `GL_CLAMP_TO_BORDER` 出现在 OpenGL 1.3 中。（在某种意义上，它与 1.2 中引入的 `GL_CLAMP_TO_EDGE` 模式互补）。当此模式用于在纹理边界上的纹素（texels）进行 mipmap 过滤以构建中间级别时，相应的过滤器仅使用纹理边界上的像素值。该特性借鉴自 `ARB_texture_border_clamp` 扩展。
+一种新的纹理坐标钳制模式`GL_CLAMP_TO_BORDER`出现在 OpenGL 1.3 中。（在某种意义上，它与 1.2 中引入的`GL_CLAMP_TO_EDGE`模式互补）。当此模式用于在纹理边界上的纹素（texels）进行 mipmap 过滤以构建中间级别时，相应的过滤器仅使用纹理边界上的像素值。该特性借鉴自`ARB_texture_border_clamp`扩展。
 
 此版本还包括使矩阵能够按列而非按行存储（后者是 OpenGL 中存储矩阵的标准方式）的函数和常量。该特性很方便，因为它允许程序员在 C 语言中使用二维矩阵。
 
@@ -272,72 +267,73 @@ void glLoadTransposeMatrix(GLenum transpose, const GLfloat *m);
 void glMultTransposeMatrix(GLenum transpose, const GLfloat *m);
 ```
 
-这些命令与 `glLoadMatrix` 和 `glMultMatrix` 等效，但它们接受一个按列排列的 4×4 矩阵作为参数。该特性借鉴自 `ARB_transpose_matrix` 扩展。
-
-
+这些命令与`glLoadMatrix`和`glMultMatrix`等效，但它们接受一个按列排列的 4×4 矩阵作为参数。该特性借鉴自`ARB_transpose_matrix`扩展。
 
 ## OpenGL 1.4 版本
 
 OpenGL 1.4 版本于 2002 年 6 月 24 日发布。它还包含了几项新特性。
 
-`SGIS_generate_mipmap` 扩展有助于允许用户为给定纹理计算（并在必要时重新计算）用于 mipmap 过滤的所有中间级别（该特性基于每纹理进行操作）。
+`SGIS_generate_mipmap`扩展有助于允许用户为给定纹理计算（并在必要时重新计算）用于 mipmap 过滤的所有中间级别（该特性基于每纹理进行操作）。
 
-为此，只需将 `GL_GENERATE_MIPMAP` 参数设置为 `GL_TRUE` 值即可。
+为此，只需将`GL_GENERATE_MIPMAP`参数设置为`GL_TRUE`值即可。
 
-用于计算颜色混合系数的新模式借鉴自 `NV_blend_square` 扩展。例如，现在可以使用 `GL_SRC_COLOR` 和 `GL_ONE_MINUS_SRC_COLOR` 来指定计算 *源 (source)* 系数的规则。
+用于计算颜色混合系数的新模式借鉴自`NV_blend_square`扩展。例如，现在可以使用`GL_SRC_COLOR`和`GL_ONE_MINUS_SRC_COLOR`来指定计算*源 (source)*系数的规则。
 
-同样，在计算 *目标 (destination)* 系数时，可以使用 `GL_DST_COLOR` 和 `GL_ONE_MINUS_DST_COLOR`。
+同样，在计算*目标 (destination)*系数时，可以使用`GL_DST_COLOR`和`GL_ONE_MINUS_DST_COLOR`。
 
-此版本还包括对深度纹理的全面支持，以及通过应用 `GL_TEXTURE_COMPARE_MODE` 纹理将其用于计算阴影。
+此版本还包括对深度纹理的全面支持，以及通过应用`GL_TEXTURE_COMPARE_MODE`纹理将其用于计算阴影。
 
-这些特性基于 `ARB_depth_texture` 和 `ARB_shadow` 扩展 [9]。
+这些特性基于`ARB_depth_texture`和`ARB_shadow`扩展 [9]。
 
-OpenGL 的另一个最终可用的特性是在顶点中指定雾量，该特性基于 `EXT_fog_coord` 扩展。
+OpenGL 的另一个最终可用的特性是在顶点中指定雾量，该特性基于`EXT_fog_coord`扩展。
 
-此版本还引入了借鉴自 `EXT_multi_draw_array` 扩展的 `glMultiDrawArrays` 和 `glMultiDrawElements` 命令。这两者都允许程序员使用一条命令输出多组面。
+此版本还引入了借鉴自`EXT_multi_draw_array`扩展的`glMultiDrawArrays`和`glMultiDrawElements`命令。这两者都允许程序员使用一条命令输出多组面。
 
-`ARB_point_parameters` 扩展允许用户指定绘制点的附加属性。这使得点的尺寸和透明度可以取决于到该点的距离。在渲染各种粒子系统时，该特性被证明非常方便。
+`ARB_point_parameters`扩展允许用户指定绘制点的附加属性。这使得点的尺寸和透明度可以取决于到该点的距离。在渲染各种粒子系统时，该特性被证明非常方便。
 
-此外，得益于 `EXT_secondary_color` 扩展，现在可以将次要颜色指定为顶点参数。
+此外，得益于`EXT_secondary_color`扩展，现在可以将次要颜色指定为顶点参数。
 
-`EXT_blend_func_separate` 扩展及其 `glBlendFuncSeparate` 函数允许程序员使用新引入的 `glBlendEquationSeparate` 函数为颜色分量和 alpha 分量指定不同的混合模式。
+`EXT_blend_func_separate`扩展及其`glBlendFuncSeparate`函数允许程序员使用新引入的`glBlendEquationSeparate`函数为颜色分量和 alpha 分量指定不同的混合模式。
 
-引入的模板缓冲区新操作：`GL_INCR_WRAP` 和 `GL_DECR_WRAP` 是另一个对于使用阴影体积法 [9] 创建阴影非常重要的特性。
+引入的模板缓冲区新操作：`GL_INCR_WRAP`和`GL_DECR_WRAP`是另一个对于使用阴影体积法 [9] 创建阴影非常重要的特性。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_23_0.png)
-**图 1.3.** GL_INCR_WRAP 和 GL_DECR_WRAP 模式
+
+**图 1.3.** `GL_INCR_WRAP`和`GL_DECR_WRAP`模式
 
 ![](img/0195f4c0347b99a95028b956b67109ca_23_1.png)
-**图 1.4.** 标准的 GL_INCR 和 GL_DECR 模式
+
+**图 1.4.** 标准的`GL_INCR`和`GL_DECR`模式
 
 结果是，将最大值（通常等于 255）增加 1 将得到最小值，而将最小值（通常为 0）减少 1 将得到最大值。
 
-标准的 GL_INCR 和 GL_DECR 操作（图 1.4）缺失此特性。也就是说，当模板缓冲区中的值达到最大时，随后的增加操作将不会改变它。同样，最小值也无法再减少。
+标准的`GL_INCR`和`GL_DECR`操作（图 1.4）缺失此特性。也就是说，当模板缓冲区中的值达到最大时，随后的增加操作将不会改变它。同样，最小值也无法再减少。
 
-该特性借鉴自 `EXT_stencil_wrap` 扩展。
+该特性借鉴自`EXT_stencil_wrap`扩展。
 
-`ARB_texture_env_crossbar` 扩展使得在纹理映射模式为 `GL_COMBINE` 时，可以使用来自不同纹理块的颜色值作为映射函数的源。
+`ARB_texture_env_crossbar`扩展使得在纹理映射模式为`GL_COMBINE`时，可以使用来自不同纹理块的颜色值作为映射函数的源。
 
-此外，用户可以为负责 mipmap 过滤级别选择的 $\lambda$ 参数指定一个偏差。更准确地说，引入了一个新的纹理参数 `GL_TEXTURE_LOD_BIAS` 来指定该偏差。该特性基于 `EXT_texture_lod_bias` 扩展。
+此外，用户可以为负责 mipmap 过滤级别选择的 $\lambda$ 参数指定一个偏差。更准确地说，引入了一个新的纹理参数`GL_TEXTURE_LOD_BIAS`来指定该偏差。该特性基于`EXT_texture_lod_bias`扩展。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_24_0.png)
-**图 1.5.** 在 GL_MIRRORED_REPEAT 模式下截断纹理坐标
 
-此版本中出现了另一种截断纹理坐标的模式 `GL_MIRRORED_REPEAT`。在很多情况下，它允许程序员无需使用周期性纹理（图 1.5）。
+**图 1.5.** 在`GL_MIRRORED_REPEAT`模式下截断纹理坐标
 
-该特性借鉴自 `ARB_texture_mirrored_repeat` 扩展。
+此版本中出现了另一种截断纹理坐标的模式`GL_MIRRORED_REPEAT`。在很多情况下，它允许程序员无需使用周期性纹理（图 1.5）。
 
-`ARB_window_pos` 扩展启用了一项新特性，允许 `glWindowPos` 命令指定窗口内的一个位置。
+该特性借鉴自`ARB_texture_mirrored_repeat`扩展。
+
+`ARB_window_pos`扩展启用了一项新特性，允许`glWindowPos`命令指定窗口内的一个位置。
 
 ## OpenGL 1.5 版本
 
-此 OpenGL 版本于 2003 年 7 月 29 日发布。其发布带来了对 `ARB_shader_objects`、`ARB_vertex_shader` 和 `ARB_fragment_shader` 扩展的认可，使得在 OpenGL 程序中引入高级着色语言成为可能。
+此 OpenGL 版本于 2003 年 7 月 29 日发布。其发布带来了对`ARB_shader_objects`、`ARB_vertex_shader`和`ARB_fragment_shader`扩展的认可，使得在 OpenGL 程序中引入高级着色语言成为可能。
 
-此版本使用 `ARB_vertex_buffer_object` 扩展来支持 *顶点和索引缓冲对象*，允许程序员有效地使用图形加速器的内存来存储数据 [3 和 9]。
+此版本使用`ARB_vertex_buffer_object`扩展来支持*顶点和索引缓冲对象*，允许程序员有效地使用图形加速器的内存来存储数据 [3 和 9]。
 
-1.5 版本还引入了借鉴自 `ARB_occlusion_query` 扩展的 *遮挡查询* 支持 [3]。
+1.5 版本还引入了借鉴自`ARB_occlusion_query`扩展的*遮挡查询*支持 [3]。
 
-同时，*阴影映射 (shadow maps)* 的比较函数集得到了扩展。现在可以使用所有八个标准比较函数（而不仅仅是 `GL_LEQUAL` 和 `GL_GEQUAL` 函数）。该特性基于 `EXT_shadow_funcs` 扩展。
+同时，*阴影映射 (shadow maps)*的比较函数集得到了扩展。现在可以使用所有八个标准比较函数（而不仅仅是`GL_LEQUAL`和`GL_GEQUAL`函数）。该特性基于`EXT_shadow_funcs`扩展。
 
 ## OpenGL 新增功能摘要
 
@@ -346,54 +342,96 @@ OpenGL 的另一个最终可用的特性是在顶点中指定雾量，该特性�
 表 1.2. OpenGL 新增功能
 
 | OpenGL 版本 | 特性 | 来源扩展 |
+
 | :--- | :--- | :--- |
-| 1.1 | 支持顶点数组 | EXT_vertex_array |
-| 1.1 | 多边形偏移 | EXT_polygon_offset |
-| 1.1 | 输出片段时使用布尔操作 | EXT_blend_logic_op |
-| 1.1 | 为纹理设置内部格式的能力 | EXT_texture |
-| 1.1 | 使用纹理代理设置纹理参数的能力 | EXT_texture |
-| 1.1 | 支持将矩形块复制到纹理 | EXT_copy_texture, EXT_subtexture |
-| 1.1 | 引入具有特定状态参数的纹理对象 | EXT_texture_object |
-| 1.2 | 支持三维纹理 | EXT_texture3D |
-| 1.2 | 支持 BGRA 格式 | EXT_bgra |
-| 1.2 | 支持打包像素格式 | EXT_packed_pixels |
-| 1.2 | 自动缩放法线的选项 | EXT_rescale_normal |
-| 1.2 | 次要颜色 | EXT_separate_specular_color |
-| 1.2 | 引入 GL_CLAMP_TO_EDGE 模式 | SGIS_texture_edge_clamp |
-| 1.2 | 在 mipmap 过滤选择级别时设置参数范围的能力 | SGIS_texture_lod |
-| 1.2 | 支持在 mipmap 过滤期间仅加载少量级别 | SGIS_texture_lod |
-| 1.2 | 支持像素传输期间的卷积 | EXT_convolution, HP_convolution_border_modes |
-| 1.2 | 支持 RGBA 模式的查找表 | EXT_color_table, EXT_color_subtable |
-| 1.2 | 引入用于颜色乘法的矩阵 | SGI_color_matrix |
-| 1.2 | 使用特殊颜色进行混合 | EXT_blend_color |
-| 1.2 | 新的颜色混合方法：计算最小值和最大值 | EXT_blend_minmax |
-| 1.2 | 新的颜色混合方法：减法 | EXT_blend_subtract |
-| 1.3 | 多重纹理 | ARB_multitexture |
-| 1.3 | 纹理立方体映射 | ARB_texture_cube_map |
-| 1.3 | 多重采样 | ARB_multisample |
-| 1.3 | GL_ADD, GL_DOT3 和 GL_COMBINE 纹理映射模式 | ARB_texture_env_add, ARB_texture_env_dot3, ARB_texture_env_combine |
-| 1.3 | 引入 GL_CLAMP_TO_BORDER 模式 | ARB_texture_border_clamp |
-| 1.3 | 按列指定矩阵的能力 | ARB_transpose_matrix |
-| 1.4 | 支持自动创建 mipmap 级别 | SGIS_generate_mipmap |
-| 1.4 | 引入颜色混合系数计算的新模式 | NV_blend_square |
-| 1.4 | 引入 GL_TEXTURE_COMPARE_MODE 模式 | ARB_depth_texture, ARB_shadow |
-| 1.4 | 支持在顶点中指定雾 | EXT_fog_coord |
-| 1.4 | 支持附加点属性 | ARB_point_parameters |
-| 1.4 | 支持将次要颜色设置为顶点属性 | EXT_secondary_color |
-| 1.4 | 支持为 RGB 和 alpha 分量设置不同的混合模式 | EXT_blend_func_separate |
-| 1.4 | 引入模板缓冲区操作：GL_INCR_WRAP 和 GL_DECR_WRAP | EXT_stencil_wrap |
-| 1.4 | 支持在 GL_COMBINE 模式下使用来自不同纹理块的颜色值 | ARB_texture_env_crossbar |
 
+| 1.1 | 支持顶点数组 | `EXT_vertex_array` |
 
+| 1.1 | 多边形偏移 | `EXT_polygon_offset` |
+
+| 1.1 | 输出片段时使用布尔操作 | `EXT_blend_logic_op` |
+
+| 1.1 | 为纹理设置内部格式的能力 | `EXT_texture` |
+
+| 1.1 | 使用纹理代理设置纹理参数的能力 | `EXT_texture` |
+
+| 1.1 | 支持将矩形块复制到纹理 | `EXT_copy_texture`, `EXT_subtexture` |
+
+| 1.1 | 引入具有特定状态参数的纹理对象 | `EXT_texture_object` |
+
+| 1.2 | 支持三维纹理 | `EXT_texture3D` |
+
+| 1.2 | 支持 BGRA 格式 | `EXT_bgra` |
+
+| 1.2 | 支持打包像素格式 | `EXT_packed_pixels` |
+
+| 1.2 | 自动缩放法线的选项 | `EXT_rescale_normal` |
+
+| 1.2 | 次要颜色 | `EXT_separate_specular_color` |
+
+| 1.2 | 引入`GL_CLAMP_TO_EDGE`模式 | `SGIS_texture_edge_clamp` |
+
+| 1.2 | 在 mipmap 过滤选择级别时设置参数范围的能力 | `SGIS_texture_lod` |
+
+| 1.2 | 支持在 mipmap 过滤期间仅加载少量级别 | `SGIS_texture_lod` |
+
+| 1.2 | 支持像素传输期间的卷积 | `EXT_convolution`, `HP_convolution_border_modes` |
+
+| 1.2 | 支持 RGBA 模式的查找表 | `EXT_color_table`, `EXT_color_subtable` |
+
+| 1.2 | 引入用于颜色乘法的矩阵 | `SGI_color_matrix` |
+
+| 1.2 | 使用特殊颜色进行混合 | `EXT_blend_color` |
+
+| 1.2 | 新的颜色混合方法：计算最小值和最大值 | `EXT_blend_minmax` |
+
+| 1.2 | 新的颜色混合方法：减法 | `EXT_blend_subtract` |
+
+| 1.3 | 多重纹理 | `ARB_multitexture` |
+
+| 1.3 | 纹理立方体映射 | `ARB_texture_cube_map` |
+
+| 1.3 | 多重采样 | `ARB_multisample` |
+
+| 1.3 | `GL_ADD`, `GL_DOT3`和`GL_COMBINE`纹理映射模式 | `ARB_texture_env_add`, `ARB_texture_env_dot3`, `ARB_texture_env_combine` |
+
+| 1.3 | 引入`GL_CLAMP_TO_BORDER`模式 | `ARB_texture_border_clamp` |
+
+| 1.3 | 按列指定矩阵的能力 | `ARB_transpose_matrix` |
+
+| 1.4 | 支持自动创建 mipmap 级别 | `SGIS_generate_mipmap` |
+
+| 1.4 | 引入颜色混合系数计算的新模式 | `NV_blend_square` |
+
+| 1.4 | 引入`GL_TEXTURE_COMPARE_MODE`模式 | `ARB_depth_texture`, `ARB_shadow` |
+
+| 1.4 | 支持在顶点中指定雾 | `EXT_fog_coord` |
+
+| 1.4 | 支持附加点属性 | `ARB_point_parameters` |
+
+| 1.4 | 支持将次要颜色设置为顶点属性 | `EXT_secondary_color` |
+
+| 1.4 | 支持为 RGB 和 alpha 分量设置不同的混合模式 | `EXT_blend_func_separate` |
+
+| 1.4 | 引入模板缓冲区操作：`GL_INCR_WRAP`和`GL_DECR_WRAP` | `EXT_stencil_wrap` |
+
+| 1.4 | 支持在`GL_COMBINE`模式下使用来自不同纹理块的颜色值 | `ARB_texture_env_crossbar` |
 
 | OpenGL 版本 | 特性 | 源扩展 |
+
 | :--- | :--- | :--- |
-| 1.4 | 能够为 $\lambda$ 参数指定偏置 (bias) | EXT_texture_lod_bias |
-| 1.4 | 引入 GL_MIRRORED_REPEAT 模式 | ARB_texture_mirrored_repeat |
-| 1.4 | 支持在窗口坐标中指定映射位置 | ARB_window_pos |
-| 1.5 | 缓冲对象 (VBO) | ARB_vertex_buffer_object |
-| 1.5 | 支持遮挡查询 (occlusion queries) | ARB_occlusion_query |
-| 1.5 | 在构建阴影图时支持所有标准比较函数 | EXT_shadow_funcs |
+
+| 1.4 | 能够为 $\lambda$ 参数指定偏置 (bias) | `EXT_texture_lod_bias` |
+
+| 1.4 | 引入`GL_MIRRORED_REPEAT`模式 | `ARB_texture_mirrored_repeat` |
+
+| 1.4 | 支持在窗口坐标中指定映射位置 | `ARB_window_pos` |
+
+| 1.5 | 缓冲对象 (VBO) | `ARB_vertex_buffer_object` |
+
+| 1.5 | 支持遮挡查询 (occlusion queries) | `ARB_occlusion_query` |
+
+| 1.5 | 在构建阴影图时支持所有标准比较函数 | `EXT_shadow_funcs` |
 
 ## 第 2 章：ARB_vertex_program 和 ARB_fragment_program 扩展与 Cg 语言
 
@@ -410,28 +448,41 @@ OpenGL 的另一个最终可用的特性是在顶点中指定雾量，该特性�
 顶点程序通常替代以下 OpenGL 特性：
 
 - 使用模型视图矩阵和投影矩阵对顶点进行变换
+
 - 顶点的加权与混合
+
 - 法线的变换、缩放和归一化
+
 - 顶点光照
+
 - 颜色材质
+
 - 计算和变换纹理坐标
+
 - 计算顶点的雾坐标
+
 - 处理用户定义的裁剪平面
 
 *片元程序*在光栅化过程中获得的每个片元上执行，并替代访问纹理并着色片元的渲染管线模块（图 2.2）。
 
-在 OpenGL 中使用顶点和片元程序的简单方法是使用 `ARB_vertex_program` 和 `ARB_fragment_program` 扩展。这些扩展允许程序员在 OpenGL 程序中使用用一种特殊汇编语言编写的顶点和片元程序。尽管顶点程序和片元程序的汇编版本指令集略有不同，但它们非常相似。所有用这种汇编语言编写的程序都使用一组寄存器，每个寄存器代表一个四维浮点向量 $((x, y, z, w), (r, g, b, a), \text{ 或 } (s, t, r, q))$。这组寄存器通常包含属性（正在处理的顶点或片元的属性）、局部变量、环境变量和临时变量。程序将结果写入*输出寄存器*。顶点程序还可以访问一组地址寄存器。顶点程序和片元程序使用的寄存器集如图 2.3 和 2.4 所示。
 
-![](img/0195f4c0347b99a95028b956b67109ca_29_0.png)
+
+在 OpenGL 中使用顶点和片元程序的简单方法是使用 `ARB_vertex_program` 和 `ARB_fragment_program` 扩展。这些扩展允许程序员在 OpenGL 程序中使用用一种特殊汇编语言编写的顶点和片元程序。尽管顶点程序和片元程序的汇编版本指令集略有不同，但它们非常相似。所有用这种汇编语言编写的程序都使用一组寄存器，每个寄存器代表一个四维浮点向量 $((x, y, z, w), (r, g, b, a), \text{ 或 } (s, t, r, q))$。这组寄存器通常包含属性（正在处理的顶点或片元的属性）、局部变量、环境变量和临时变量。程序将结果写入`输出寄存器`。顶点程序还可以访问一组地址寄存器。顶点程序和片元程序使用的寄存器集如图 2.3 和 2.4 所示。
+
+![OpenGL 中的渲染管线](img/0195f4c0347b99a95028b956b67109ca_29_0.png)
+
 **图 2.1.** OpenGL 中的渲染管线
 
-![](img/0195f4c0347b99a95028b956b67109ca_30_0.png)
+![渲染管线中的顶点程序和片元程序](img/0195f4c0347b99a95028b956b67109ca_30_0.png)
+
 **图 2.2.** 渲染管线中的顶点程序和片元程序
 
-![](img/0195f4c0347b99a95028b956b67109ca_30_1.png)
+![顶点程序可访问的寄存器](img/0195f4c0347b99a95028b956b67109ca_30_1.png)
+
 **图 2.3.** 顶点程序可访问的寄存器
 
-![](img/0195f4c0347b99a95028b956b67109ca_31_0.png)
+![片元程序可访问的寄存器](img/0195f4c0347b99a95028b956b67109ca_31_0.png)
+
 **图 2.4.** 片元程序可访问的寄存器
 
 此类程序由若干行组成，每行最多包含一条指令（可以有空行和注释行）。
@@ -588,37 +639,36 @@ END
 `TEMP` 指令可以创建临时的可读写变量。
 
 其他指令用于数据处理，其形式如下：
+
 `opCode dest, [-]src0 [, [-]src1 [, [-]src2]];`
 
 这里 `opCode` 是指令的字符代码，`dest` 是目标寄存器（程序结果写入此处），`src0`、`src1` 和 `src2` 是包含输入数据的源寄存器。可选元素包含在方括号之间。
 
-
-
 以下是一些命令示例：
 
-```
+```glsl
 MOV R1, R2;
 MAD R1, R2, R3, -R4;
 ```
 
-可选的负号 (-) 允许您使用寄存器的相反数作为源操作数。
+可选的负号（`-`）允许您使用寄存器的相反数作为源操作数。
 
-对于输入寄存器（src0, src1 和 src2），您可以使用由寄存器分量排列（permutation）产生的向量，而不是使用寄存器本身。例如：
+对于输入寄存器（`src0`、`src1` 和 `src2`），您可以使用由寄存器分量排列（permutation）产生的向量，而不是使用寄存器本身。例如：
 
-```
+```glsl
 MOV R1, R2.yzwxs;
 MOV R2, -R3.yzwx;
 ```
 
 您可以为输出寄存器创建掩码，以防止其某些分量被修改。例如：
 
-```
+```glsl
 MOV R2.xw, -R3;
 ```
 
 请注意，以下两个命令是等效的：
 
-```
+```glsl
 MOV R1, R2.xxxx;
 MOV R1, R2.x;
 ```
@@ -627,86 +677,86 @@ MOV R1, R2.x;
 
 ## 表 2.1. 顶点程序命令
 
-| 命令 (用途) | 语法 | 注释 |
+| 命令（用途） | 语法 | 注释 |
 |---|---|---|
-| ABS (绝对值) | ABS dest, src; | 分量级计算绝对值：`dest = fabs(src)` |
-| ADD (加法) | ADD dest, src0, src1; | 两个参数相加并将和写入目标寄存器：`dest = src0 + src1` |
-| ARL | ARL dest.C1, src.C2; | 将标量操作数的整数部分加载到地址寄存器中 |
-| DP3 (前三个分量的点积) | DP3 dest, src0, src1; | 将源操作数作为三维向量计算点积：`dest = src0.x*src1.x + src0.y*src1.y + src0.z*src1.z` |
-| DP4 (点积) | DP4 dest, src0, src1; | 计算四维向量的点积并将结果写入目标寄存器的所有分量：`dest = src0.x*src1.x + src0.y*src1.y + src0.z*src1.z + src0.w*src1.w` |
-| DPH (齐次点积) | DPH dest, src0, src1; | 计算齐次点积：`dest = src0.x*src1.x + src0.y*src1.y + src0.z*src1.z - src1.w` |
-| DST (距离) | DST dest, src0.C1, src1.C2; | 从两个标量值有效计算 `dest = (1, d, d^2, 1/d)` 向量：`src0.C1 = d^2`, `src1.C2 = 1/d` |
-| EX2 (近似 2 的幂) | EX2 dest, src.C; | 为给定的标量操作数 `src.C` 计算 $2^{src.C}$ 的近似值，并将结果写入目标寄存器的所有分量 |
-| EXP (2 的幂) | EXP dest, src.C; | 更精确地计算 $2^{src.C}$ 的值：`dest.x = 2^floor(src.C)`, `dest.y = src.C - floor(src.C)`, `dest.z = roughAppr2ToX(floor(src.C))`, `dest.w = 1`。`roughAppr2ToX` 函数计算一个精度为 $2^{-11}$ 的近似值 |
-| FLR (计算向下取整函数) | FLR dest, src; | 分量级计算源操作数的整数部分（`floor` 函数返回小于或等于该参数的最大整数） |
-| FRC (小数部分) | FRC dest, src; | 分量级计算小数部分：`frac(x) = x - floor(x)` |
-| LG2 (以 2 为底对数的近似值) | LG2 dest, src.C; | 从标量参数计算以 2 为底对数的近似值，并将结果写入目标的所有分量 |
-| LIT (光照系数) | LIT dest, src; | 快速计算顶点中的漫反射和镜面光照：`src.x = (n, l)`, `src.y = (n, h)`, `src.w = p`（指数被限制在 $[-128, 128]$ 区间）。输出：`dest.x = 1`, `dest.y = max(0, (n, l))`, `dest.z = (n.l) > 0 ? roughAppr2ToX(max(0, (n, h))^p) : 0`, `dest.w = 1` |
-| `LOG` (以 2 为底的对数) | `LOG dest, src.C;` | 从标量参数计算以 2 为底对数的近似值：<br>`temp = fabs(src.C)`<br>`dest.x = floor(log2(temp))`<br>`dest.y = temp^2*floor(log2(temp))`<br>`dest.z = roughAppr2ToX(temp)`<br>`dest.w = 1` |
-| `MAD` (乘加) | `MAD dest, src0, src1, src2;` | 计算以下内容：<br>`dest = src0*src1 + src2` |
-| `MAX` (最大值) | `MAX dest, src0, src1;` | 分量级计算最大值：<br>`dest = max(src0, src1)` |
-| `MIN` (最小值) | `MIN dest, src0, src1;` | 分量级计算最小值：<br>`dest = min(src0, src1)` |
-| `MOV` (复制) | `MOV dest, src;` | 将源分量的值写入目标分量：<br>`dest = src` |
-| `MUL` (分量乘法) | `MUL dest, src0, src1;` | 计算分量级乘积：<br>`dest = src0*src1` |
-| `POW` (幂运算) | `POW dest, src0.C1, src1.C2;` | 将第一个标量操作数近似地提升到第二个标量操作数的幂，并将结果写入目标的所有分量：<br>`apprPow(a,b) = apprExp2(b*apprLog2(a))` |
-| `RCP` (倒数值) | `RCP dest, src.C;` | 从标量值计算近似倒数值，并将结果写入目标的所有分量：<br>`dest = 1/src.C` |
+| `ABS`（绝对值） | `ABS dest, src;` | 分量级计算绝对值：`dest = fabs(src)` |
+| `ADD`（加法） | `ADD dest, src0, src1;` | 两个参数相加并将和写入目标寄存器：`dest = src0 + src1` |
+| `ARL` | `ARL dest.C1, src.C2;` | 将标量操作数的整数部分加载到地址寄存器中 |
+| `DP3`（前三个分量的点积） | `DP3 dest, src0, src1;` | 将源操作数作为三维向量计算点积：`dest = src0.x*src1.x + src0.y*src1.y + src0.z*src1.z` |
+| `DP4`（点积） | `DP4 dest, src0, src1;` | 计算四维向量的点积并将结果写入目标寄存器的所有分量：`dest = src0.x*src1.x + src0.y*src1.y + src0.z*src1.z + src0.w*src1.w` |
+| `DPH`（齐次点积） | `DPH dest, src0, src1;` | 计算齐次点积：`dest = src0.x*src1.x + src0.y*src1.y + src0.z*src1.z - src1.w` |
+| `DST`（距离） | `DST dest, src0.C1, src1.C2;` | 从两个标量值有效计算 `dest = (1, d, d^2, 1/d)` 向量：`src0.C1 = d^2`，`src1.C2 = 1/d` |
+| `EX2`（近似 2 的幂） | `EX2 dest, src.C;` | 为给定的标量操作数 `src.C` 计算 $2^{src.C}$ 的近似值，并将结果写入目标寄存器的所有分量 |
+| `EXP`（2 的幂） | `EXP dest, src.C;` | 更精确地计算 $2^{src.C}$ 的值：`dest.x = 2^floor(src.C)`，`dest.y = src.C - floor(src.C)`，`dest.z = roughAppr2ToX(floor(src.C))`，`dest.w = 1`。`roughAppr2ToX` 函数计算一个精度为 $2^{-11}$ 的近似值 |
+| `FLR`（计算向下取整函数） | `FLR dest, src;` | 分量级计算源操作数的整数部分（`floor` 函数返回小于或等于该参数的最大整数） |
+| `FRC`（小数部分） | `FRC dest, src;` | 分量级计算小数部分：`frac(x) = x - floor(x)` |
+| `LG2`（以 2 为底对数的近似值） | `LG2 dest, src.C;` | 从标量参数计算以 2 为底对数的近似值，并将结果写入目标的所有分量 |
+| `LIT`（光照系数） | `LIT dest, src;` | 快速计算顶点中的漫反射和镜面光照：`src.x = (n, l)`，`src.y = (n, h)`，`src.w = p`（指数被限制在 $[-128, 128]$ 区间）。输出：`dest.x = 1`，`dest.y = max(0, (n, l))`，`dest.z = (n.l) > 0 ? roughAppr2ToX(max(0, (n, h))^p) : 0`，`dest.w = 1` |
+| `LOG`（以 2 为底的对数） | `LOG dest, src.C;` | 从标量参数计算以 2 为底对数的近似值：<br>`temp = fabs(src.C)`<br>`dest.x = floor(log2(temp))`<br>`dest.y = temp^2*floor(log2(temp))`<br>`dest.z = roughAppr2ToX(temp)`<br>`dest.w = 1` |
+| `MAD`（乘加） | `MAD dest, src0, src1, src2;` | 计算以下内容：<br>`dest = src0*src1 + src2` |
+| `MAX`（最大值） | `MAX dest, src0, src1;` | 分量级计算最大值：<br>`dest = max(src0, src1)` |
+| `MIN`（最小值） | `MIN dest, src0, src1;` | 分量级计算最小值：<br>`dest = min(src0, src1)` |
+| `MOV`（复制） | `MOV dest, src;` | 将源分量的值写入目标分量：<br>`dest = src` |
+| `MUL`（分量乘法） | `MUL dest, src0, src1;` | 计算分量级乘积：<br>`dest = src0*src1` |
+| `POW`（幂运算） | `POW dest, src0.C1, src1.C2;` | 将第一个标量操作数近似地提升到第二个标量操作数的幂，并将结果写入目标的所有分量：<br>`apprPow(a,b) = apprExp2(b*apprLog2(a))` |
+| `RCP`（倒数值） | `RCP dest, src.C;` | 从标量值计算近似倒数值，并将结果写入目标的所有分量：<br>`dest = 1/src.C` |
 | `RSQ` | `RSQ dest, src.C;` | 从标量操作数的平方根计算倒数：<br>`dest = 1/sqrt(fabs(src.C))` |
-| `SGE` (大于或等于) | `SGE dest, src0, src1;` | 分量级比较并将每个分量地结果写入目标寄存器：<br>`dest.x = src0.x >= src1.x ? 1 : 0`<br>`dest.y = src0.y >= src1.y ? 1 : 0`<br>`dest.z = src0.z >= src1.z ? 1 : 0`<br>`dest.w = src0.w >= src1.w ? 1 : 0` |
-| SLT (小于) | `SLT dest, src0, src1;` | 分量比较并将每个分量地结果写入目标寄存器： <br> `dest.x = src0.x < src1.x ? 1 : 0` <br> `dest.y = src0.y < src1.y ? 1 : 0` <br> `dest.z = src0.z < src1.z ? 1 : 0` <br> `dest.w = src0.w < src1.w ? 1 : 0` |
-| SUB (减法) | `SUB dest, src0, src1;` | 操作数相减： <br> `dest = src0 - src1` |
-| SWZ (分量“重排”) | `SWZ dest, src, <extSwizzle>;` | 对分量（或其部分）进行重排（Swizzling）。源可以是源寄存器的任何分量（有符号或无符号）、零或一： <br> `<extSwizzle> ::= <comp>, <comp>, <comp>, <comp>` <br> `<comp> ::= [- \| 0 \| 1 \| x \| y \| z \| w ]` |
-| XPD (叉积) | `XPD dest, src0, src1;` | 使用第一个操作数的前三个分量和第二个操作数的前三个分量计算叉积，并将结果写入目标寄存器的前三个分量 |
+| `SGE`（大于或等于） | `SGE dest, src0, src1;` | 分量级比较并将每个分量的结果写入目标寄存器：<br>`dest.x = src0.x >= src1.x ? 1 : 0`<br>`dest.y = src0.y >= src1.y ? 1 : 0`<br>`dest.z = src0.z >= src1.z ? 1 : 0`<br>`dest.w = src0.w >= src1.w ? 1 : 0` |
+| `SLT`（小于） | `SLT dest, src0, src1;` | 分量比较并将每个分量的结果写入目标寄存器：<br>`dest.x = src0.x < src1.x ? 1 : 0`<br>`dest.y = src0.y < src1.y ? 1 : 0`<br>`dest.z = src0.z < src1.z ? 1 : 0`<br>`dest.w = src0.w < src1.w ? 1 : 0` |
+| `SUB`（减法） | `SUB dest, src0, src1;` | 操作数相减：<br>`dest = src0 - src1` |
+
+
+
+# 片元程序指令参考
 
 ## 表 2.2. 片元程序命令
 
 | 命令 (用途) | 语法 | 注释 |
 | :--- | :--- | :--- |
-| ABS (绝对值) | `ABS dest, src;` | 分量级计算绝对值： <br> `dest = fabs(src)` |
-| ADD (加法) | `ADD dest, src0, src1;` | 两个参数相加并将和写入目标寄存器： <br> `dest = src0 + src1` |
-| CMP (比较) | `CMP dest, src0, src1, src2;` | 根据 `src0` 对应分量的符号，从 `src1` 或 `src2` 中选择下一个分量： <br> `dest.x = src0.x < 0 ? src1.x : src2.x` <br> `dest.y = src0.y < 0 ? src1.y : src2.y` <br> `dest.z = src0.z < 0 ? src1.z : src2.z` <br> `dest.w = src0.w < 0 ? src1.w : src2.w` |
-| COS (余弦) | `COS dest, src.C;` | 分量级计算标量参数的余弦值，并将结果写入目标的可选分量。角度以弧度为单位，且不需要落在 [-PI, PI] 区间内 |
-| DP3 (前三个分量的点积) | `DP3 dest, src0, src1;` | 将源操作数作为三维向量计算点积：<br>`dest = src0.x*src1.x + src0.y*src1.y + src0.z*src1.z` |
-| DP4 (点积) | `DP4 dest, src0, src1;` | 计算四维向量的点积并将结果写入目标寄存器的所有分量：<br>`dest = src0.x*src1.x + src0.y*src1.y + src0.z*src1.z + src0.w*src1.w` |
-| DPH (齐次点积) | `DPH dest, src0, src1;` | 计算齐次点积：<br>`dest = src0.x*src1.x + src0.y*src1.y + src0.z*src1.z + src0.w*src1.w` |
-| DST (距离) | `DST dest, src0, src1;` | 从两个标量值有效计算 `dest = (1, d, d^2, 1/d)` 向量：<br>`src0 = (*, d^2, d^2, *)`<br>`src1 = (*, 1/d, *, 1/d)`<br>星号 (*) 表示该值可以被忽略。 |
-| EX2 (近似 2 的幂) | `EX2 dest, src.C;` | 为给定的标量操作数 `src.C` 计算 $2^{src.C}$ 的近似值，并将结果写入目标寄存器的所有分量 |
-| FLR (计算向下取整函数) | `FLR dest, src;` | 分量级计算源操作数的整数部分（`floor` 函数返回小于或等于该参数的最大整数） |
-| FRC (小数部分) | `FRC dest, src;` | 分量级计算小数部分：`frac(x) = x - floor(x)` |
-| LG2 (以 2 为底对数的近似值) | `LG2 dest, src.C;` | 从标量参数计算以 2 为底对数的近似值，并将结果写入目标的所有分量 |
-
-
+| **ABS** (绝对值) | `ABS dest, src;` | 分量级计算绝对值： <br> `dest = fabs(src)` |
+| **ADD** (加法) | `ADD dest, src0, src1;` | 两个参数相加并将和写入目标寄存器： <br> `dest = src0 + src1` |
+| **CMP** (比较) | `CMP dest, src0, src1, src2;` | 根据 `src0` 对应分量的符号，从 `src1` 或 `src2` 中选择下一个分量： <br> `dest.x = src0.x < 0 ? src1.x : src2.x` <br> `dest.y = src0.y < 0 ? src1.y : src2.y` <br> `dest.z = src0.z < 0 ? src1.z : src2.z` <br> `dest.w = src0.w < 0 ? src1.w : src2.w` |
+| **COS** (余弦) | `COS dest, src.C;` | 分量级计算标量参数的余弦值，并将结果写入目标的可选分量。角度以弧度为单位，且不需要落在 `[-PI, PI]` 区间内 |
+| **DP3** (前三个分量的点积) | `DP3 dest, src0, src1;` | 将源操作数作为三维向量计算点积：<br>`dest = src0.x*src1.x + src0.y*src1.y + src0.z*src1.z` |
+| **DP4** (点积) | `DP4 dest, src0, src1;` | 计算四维向量的点积并将结果写入目标寄存器的所有分量：<br>`dest = src0.x*src1.x + src0.y*src1.y + src0.z*src1.z + src0.w*src1.w` |
+| **DPH** (齐次点积) | `DPH dest, src0, src1;` | 计算齐次点积：<br>`dest = src0.x*src1.x + src0.y*src1.y + src0.z*src1.z + src0.w*src1.w` |
+| **DST** (距离) | `DST dest, src0, src1;` | 从两个标量值有效计算 `dest = (1, d, d^2, 1/d)` 向量：<br>`src0 = (*, d^2, d^2, *)`<br>`src1 = (*, 1/d, *, 1/d)`<br>星号 (`*`) 表示该值可以被忽略。 |
+| **EX2** (近似 2 的幂) | `EX2 dest, src.C;` | 为给定的标量操作数 `src.C` 计算 $2^{src.C}$ 的近似值，并将结果写入目标寄存器的所有分量 |
+| **FLR** (计算向下取整函数) | `FLR dest, src;` | 分量级计算源操作数的整数部分（`floor` 函数返回小于或等于该参数的最大整数） |
+| **FRC** (小数部分) | `FRC dest, src;` | 分量级计算小数部分：`frac(x) = x - floor(x)` |
+| **LG2** (以 2 为底对数的近似值) | `LG2 dest, src.C;` | 从标量参数计算以 2 为底对数的近似值，并将结果写入目标的所有分量 |
 
 ## 表 2.2（续）
 
 | 指令 (用途) | 语法 | 注释 |
 | :--- | :--- | :--- |
-| LIT (光照系数) | LIT dest, src; | 在顶点中快速计算漫反射和镜面光照：<br>src.x = {n,l}<br>src.y = {n,h}<br>src.w = p (指数被缩减到 [-128, 128] 区间)。<br>输出为：<br>dest.x = 1<br>dest.y = max(0, {n,l})<br>dest.z = {n,l} > 0 ? roughAppr2Tox (max(0, {n,h}))^p : 0<br>dest.w = 1 |
-| LRP (线性插值) | LRP dest, src0, src1, src2; | 基于 src0 对 src1 和 src2 的值进行分量线性插值：<br>dest.x = src0.x*src1.x + (1 - src0.x)*src2.x<br>dest.y = src0.y*src1.y + (1 - src0.y)*src2.y<br>dest.z = src0.z*src1.z + (1 - src0.z)*src2.z<br>dest.w = src0.w*src1.w + (1 - src0.w)*src2.w |
-| MAD (乘加) | MAD dest, src0, src1, src2; | 计算以下内容：<br>dest = src0*src1 + src2 |
-| MAX (最大值) | MAX dest, src0, src1; | 分量级计算最大值：<br>dest = max(src0, src1) |
-| MIN (最小值) | MIN dest, src0, src1; | 分量级计算最小值：<br>dest = min(src0, src1) |
-| MOV (复制) | MOV dest, src; | 将源组件的值写入目标组件：<br>dest = src |
-| MUL (分量乘法) | MUL dest, src0, src1; | 计算分量乘积：<br>dest = src0*src1 |
-| POW (指数) | POW dest, src0.C1, src1.C2; | 将第一个标量操作数近似地提升到第二个标量操作数的幂，并将结果写入目标的所有分量：<br>apprPow(a,b) = apprExp2(b*apprLog2(a))<br>注意 0^0 = 1。 |
-| RCP (倒数) | RCP dest, src.C; | 从标量值计算近似倒数值，并将结果写入目标的所有分量：<br>dest = 1/src.C |
-| RSQ | RSQ dest, src.C; | 从标量操作数的平方根计算倒数：<br>dest = 1/sqrt(fabs(src.C)) |
-| SCS (正弦和余弦) | SCS dest, src.C; | 同时计算正弦和余弦，并将值写入目标寄存器的 x 和 y 分量：<br>dest.x = cos(src.C)<br>dest.y = sin(src.C)<br>标量值应落在 [-PI, PI] 区间内。目标的 z 和 w 分量未定义。 |
-| SGE (大于或等于) | SGE dest, src0, src1; | 分量级比较，并将每个分量的结果写入目标寄存器：<br>dest.x = src0.x >= src1.x ? 1 : 0<br>dest.y = src0.y >= src1.y ? 1 : 0<br>dest.z = src0.z >= src1.z ? 1 : 0<br>dest.w = src0.w >= src1.w ? 1 : 0 |
-| SIN (正弦) | SIN dest, src.C; | 计算标量操作数的正弦值：<br>dest = sin(src.C)<br>角度以弧度为单位，不需要落在 [-PI, PI] 区间内 |
-| SLT (小于) | SLT dest, src0, src1; | 分量比较，并将每个分量的结果写入目标寄存器：<br>dest.x = src0.x < src1.x ? 1 : 0<br>dest.y = src0.y < src1.y ? 1 : 0<br>dest.z = src0.z < src1.z ? 1 : 0<br>dest.w = src0.w < src1.w ? 1 : 0 |
-| SUB (减法) | SUB dest, src0, src1; | 操作数的减法：<br>dest = src0 - src1 |
-| SWZ (分量“重组”) | SWZ dest, src, <extSizzle> | 对分量（或其部分）进行重组。源可以是源寄存器的任何分量（有符号或无符号）、零或一：<br><extSizzle> ::= <comp>, <comp>, <comp>, <comp><br><comp> ::= [-] (0 \| 1 \| x \| y \| z \| w \| r \| g \| b \| a) |
-| XPD (叉积) | XPD dest, src0, src1; | 计算第一个操作数的前三个分量与第二个操作数的前三个分量的叉积，并将结果写入目标寄存器的前三个分量。dest.w 的值未定义 |
-| TEX | TEX dest, src0, texture [n], type; | 从第 n 个纹理块中读取类型为 type 的纹理。对于纹理坐标，使用 src0 参数的前几个分量。结果写入目标寄存器。type 参数可以取以下任何值：1D, 2D, 3D, cube 或 rectangle |
-| TXP | TXP dest, src0, texture [n], type; | 从第 n 个纹理块中读取类型为 type 的纹理。对于纹理坐标，使用 src0 参数的前几个分量除以 src0.w。结果写入目标寄存器。type 参数可以取以下任何值：1D, 2D, 3D, cube 或 rectangle |
-| TXB | TXB dest, src0, texture [n], type; | 从第 n 个纹理块中读取类型为 type 的纹理。对于纹理坐标，使用 src0 参数的前几个分量。结果写入目标寄存器。type 参数可以取以下任何值：1D, 2D, 3D, cube 或 rectangle。src0.w 的值用于 mipmap 过滤中的级别偏移，从中提取数值 |
-| KIL (条件取消片元程序) | KIL src; | 如果操作数的至少一个分量小于零，则取消当前片元的片元程序执行。该片元在流水线中的后续步骤将被跳过。 |
+| **LIT** (光照系数) | `LIT dest, src;` | 在顶点中快速计算漫反射和镜面光照：<br>`src.x = {n,l}`<br>`src.y = {n,h}`<br>`src.w = p` (指数被缩减到 `[-128, 128]` 区间)。<br>输出为：<br>`dest.x = 1`<br>`dest.y = max(0, {n,l})`<br>`dest.z = {n,l} > 0 ? roughAppr2Tox (max(0, {n,h}))^p : 0`<br>`dest.w = 1` |
+| **LRP** (线性插值) | `LRP dest, src0, src1, src2;` | 基于 `src0` 对 `src1` 和 `src2` 的值进行分量线性插值：<br>`dest.x = src0.x*src1.x + (1 - src0.x)*src2.x`<br>`dest.y = src0.y*src1.y + (1 - src0.y)*src2.y`<br>`dest.z = src0.z*src1.z + (1 - src0.z)*src2.z`<br>`dest.w = src0.w*src1.w + (1 - src0.w)*src2.w` |
+| **MAD** (乘加) | `MAD dest, src0, src1, src2;` | 计算以下内容：<br>`dest = src0*src1 + src2` |
+| **MAX** (最大值) | `MAX dest, src0, src1;` | 分量级计算最大值：<br>`dest = max(src0, src1)` |
+| **MIN** (最小值) | `MIN dest, src0, src1;` | 分量级计算最小值：<br>`dest = min(src0, src1)` |
+| **MOV** (复制) | `MOV dest, src;` | 将源组件的值写入目标组件：<br>`dest = src` |
+| **MUL** (分量乘法) | `MUL dest, src0, src1;` | 计算分量乘积：<br>`dest = src0*src1` |
+| **POW** (指数) | `POW dest, src0.C1, src1.C2;` | 将第一个标量操作数近似地提升到第二个标量操作数的幂，并将结果写入目标的所有分量：<br>`apprPow(a,b) = apprExp2(b*apprLog2(a))`<br>注意 `0^0 = 1`。 |
+| **RCP** (倒数) | `RCP dest, src.C;` | 从标量值计算近似倒数值，并将结果写入目标的所有分量：<br>`dest = 1/src.C` |
+| **RSQ** | `RSQ dest, src.C;` | 从标量操作数的平方根计算倒数：<br>`dest = 1/sqrt(fabs(src.C))` |
+| **SCS** (正弦和余弦) | `SCS dest, src.C;` | 同时计算正弦和余弦，并将值写入目标寄存器的 `x` 和 `y` 分量：<br>`dest.x = cos(src.C)`<br>`dest.y = sin(src.C)`<br>标量值应落在 `[-PI, PI]` 区间内。目标的 `z` 和 `w` 分量未定义。 |
+| **SGE** (大于或等于) | `SGE dest, src0, src1;` | 分量级比较，并将每个分量的结果写入目标寄存器：<br>`dest.x = src0.x >= src1.x ? 1 : 0`<br>`dest.y = src0.y >= src1.y ? 1 : 0`<br>`dest.z = src0.z >= src1.z ? 1 : 0`<br>`dest.w = src0.w >= src1.w ? 1 : 0` |
+| **SIN** (正弦) | `SIN dest, src.C;` | 计算标量操作数的正弦值：<br>`dest = sin(src.C)`<br>角度以弧度为单位，不需要落在 `[-PI, PI]` 区间内 |
+| **SLT** (小于) | `SLT dest, src0, src1;` | 分量比较，并将每个分量的结果写入目标寄存器：<br>`dest.x = src0.x < src1.x ? 1 : 0`<br>`dest.y = src0.y < src1.y ? 1 : 0`<br>`dest.z = src0.z < src1.z ? 1 : 0`<br>`dest.w = src0.w < src1.w ? 1 : 0` |
+| **SUB** (减法) | `SUB dest, src0, src1;` | 操作数的减法：<br>`dest = src0 - src1` |
+| **SWZ** (分量“重组”) | `SWZ dest, src, <extSizzle>` | 对分量（或其部分）进行重组。源可以是源寄存器的任何分量（有符号或无符号）、零或一：<br>`<extSizzle> ::= <comp>, <comp>, <comp>, <comp>`<br>`<comp> ::= [-] (0 \| 1 \| x \| y \| z \| w \| r \| g \| b \| a)` |
+| **XPD** (叉积) | `XPD dest, src0, src1;` | 计算第一个操作数的前三个分量与第二个操作数的前三个分量的叉积，并将结果写入目标寄存器的前三个分量。`dest.w` 的值未定义 |
+| **TEX** | `TEX dest, src0, texture [n], type;` | 从第 `n` 个纹理块中读取类型为 `type` 的纹理。对于纹理坐标，使用 `src0` 参数的前几个分量。结果写入目标寄存器。`type` 参数可以取以下任何值：`1D`, `2D`, `3D`, `cube` 或 `rectangle` |
+| **TXP** | `TXP dest, src0, texture [n], type;` | 从第 `n` 个纹理块中读取类型为 `type` 的纹理。对于纹理坐标，使用 `src0` 参数的前几个分量除以 `src0.w`。结果写入目标寄存器。`type` 参数可以取以下任何值：`1D`, `2D`, `3D`, `cube` 或 `rectangle` |
+| **TXB** | `TXB dest, src0, texture [n], type;` | 从第 `n` 个纹理块中读取类型为 `type` 的纹理。对于纹理坐标，使用 `src0` 参数的前几个分量。结果写入目标寄存器。`type` 参数可以取以下任何值：`1D`, `2D`, `3D`, `cube` 或 `rectangle`。`src0.w` 的值用于 `mipmap` 过滤中的级别偏移，从中提取数值 |
+| **KIL** (条件取消片元程序) | `KIL src;` | 如果操作数的至少一个分量小于零，则取消当前片元的片元程序执行。该片元在流水线中的后续步骤将被跳过。 |
 
 代码清单 2.3 展示了一个 C++ 程序示例，该程序利用代码清单 2.1 和 2.2 中的顶点和片元程序来构建一个光照环面的图像。
 
 为了更方便地使用顶点和片元程序，该程序使用了特殊的类 `VertexProgram` 和 `FragmentProgram`。关于这些类的完整实现，请参考本书随附的 CD。
 
-### 代码清单 2.3. 使用代码清单 2.1 和 2.2 中的顶点和片元程序构建光照环面图像
+## 代码清单 2.3. 使用代码清单 2.1 和 2.2 中的顶点和片元程序构建光照环面图像
 
 ```cpp
 //
@@ -929,13 +979,20 @@ Cg 包含强大的控制语句：它支持条件语句、各种循环语句以�
 ## 表 2.3. Cg 支持的配置文件
 
 | 配置文件 | 类型 | 使用的扩展 |
+
 | :--- | :--- | :--- |
-| CG_PROFILE_ARBVP1 | 顶点 | ARB_vertex_program |
-| CG_PROFILE_ARBFP1 | 片段 | ARB_fragment_program |
-| CG_PROFILE_VP20 | 顶点 | NV_vertex_program |
-| CG_PROFILE_FP20 | 片段 | NV_texture_shader 和 NV_register_combiners |
-| CG_PROFILE_VP30 | 顶点 | NV_vertex_program2 |
-| CG_PROFILE_FP30 | 片段 | NV_fragment_program |
+
+| `CG_PROFILE_ARBVP1` | 顶点 | `ARB_vertex_program` |
+
+| `CG_PROFILE_ARBFP1` | 片段 | `ARB_fragment_program` |
+
+| `CG_PROFILE_VP20` | 顶点 | `NV_vertex_program` |
+
+| `CG_PROFILE_FP20` | 片段 | `NV_texture_shader` 和 `NV_register_combiners` |
+
+| `CG_PROFILE_VP30` | 顶点 | `NV_vertex_program2` |
+
+| `CG_PROFILE_FP30` | 片段 | `NV_fragment_program` |
 
 代码清单 2.4 和 2.5 展示了代码清单 2.1 和 2.2 中顶点和片段程序在 Cg 中的对应实现。
 
@@ -1099,8 +1156,6 @@ CgProgram cgCreateProgram(CGcontext context, CGenum programType,
 const char* cgGetProgramString(CgProgram program, CGenum stringType);
 ```
 
-
-
 这里最有趣的参数是 `stringType`，其值为 `CG_COMPILED_PROGRAM`。在这种情况下，函数将返回程序的编译后代码。
 
 如果发生错误，您可以调用 `cgGetError` 函数，该函数会返回错误代码。通过该代码，`cgGetErrorString` 可以返回错误的文本描述。
@@ -1152,6 +1207,8 @@ void cgGLSetParameter4fv(CgParameter parameter, const float* array);
 
 要设置矩阵参数，请使用以下函数：
 
+
+
 ```cpp
 void cgGLSetMatrixParameterfr(CgParameter parameter,
                               const float* matrix);
@@ -1161,7 +1218,7 @@ void cgGLSetMatrixParameterfc(CgParameter parameter,
 
 这些函数名称中的 `r` 和 `c` 后缀决定了存储在矩阵中的元素顺序：`r` 表示按行存储，`c` 表示按列存储（列主序 vs 行主序）。
 
-要指定作为 OpenGL 参数的矩阵，请使用 `cgGLSetStateMatrixParameter` 函数：
+要指定作为 OpenGL 参数的矩阵，请使用`cgGLSetStateMatrixParameter`函数：
 
 ```cpp
 void cgGLSetStateMatrixParameter (CGParameter parameter,
@@ -1169,9 +1226,9 @@ void cgGLSetStateMatrixParameter (CGParameter parameter,
                                   GLenum transform);
 ```
 
-其参数如下：`stateMatrixType` 指定应写入 `parameter` 参数的矩阵（表 2.4），`transform` 指定在将矩阵写入 `parameter` 参数之前要对其应用的变换（表 2.5）。
+其参数如下：`stateMatrixType`指定应写入`parameter`参数的矩阵（表 2.4），`transform`指定在将矩阵写入`parameter`参数之前要对其应用的变换（表 2.5）。
 
-## 表 2.4. `stateMatrixType` 参数的有效值
+## 表 2.4. `stateMatrixType`参数的有效值
 
 | 值 | 注释 |
 |---|---|
@@ -1180,7 +1237,7 @@ void cgGLSetStateMatrixParameter (CGParameter parameter,
 | `CG_GL_TEXTURE_MATRIX` | 纹理坐标变换矩阵 |
 | `CG_GL_MODELVIEW_PROJECTION_MATRIX` | 模型视图矩阵与投影矩阵的乘积 |
 
-## 表 2.5. `transform` 参数的有效值
+## 表 2.5. `transform`参数的有效值
 
 | 值 | 注释 |
 |---|---|
@@ -1524,8 +1581,9 @@ int main (int argc, char * argv [])
 }
 ```
 
-为了更方便地操作 Cg 程序，创建一个特殊的类 `CgProgram` 是合理的，该类将封装所有与 Cg 程序相关的操作，例如加载、绑定、创建参数等等。
-以下代码清单包含了 `CgProgram` 类的描述和实现。
+为了更方便地操作 Cg 程序，创建一个特殊的类`CgProgram`是合理的，该类将封装所有与 Cg 程序相关的操作，例如加载、绑定、创建参数等等。
+
+以下代码清单包含了`CgProgram`类的描述和实现。
 
 ## 代码清单 2.8. CgProgram 类的描述
 
@@ -1768,19 +1826,19 @@ bool CgProgram::checkCgError()
 
 ## 第 3 章：OpenGL 2.0 和 GLSL
 
+
+
 OpenGL 2.0 版本于 2004 年 9 月 7 日发布。决定其版本号为 2.0 而非 1.6 的主要创新在于引入了使用 GLSL（OpenGL 着色语言）编写的着色器来实现的可编程渲染管线。
 
 图 3.1 展示了顶点处理器和片段处理器（执行着色器的部分）在 OpenGL 渲染管线中的位置。
 
 在 GLSL 中创建和使用着色器的机制实际上是一个 API（应用程序编程接口）。它完全借鉴自 `ARB_shader_objects`、`ARB_vertex_shader`、`ARB_fragment_shader` 和 `ARB_shading_language_100` 这些扩展。
 
-无论是在这些扩展中还是在 OpenGL 2.0 中，在处理着色器时都会使用 *着色器对象*（类比于纹理、VBO 等）。OpenGL 2.0 中所有关于着色器的操作都是通过着色器对象来完成的。
+无论是在这些扩展中还是在 OpenGL 2.0 中，在处理着色器时都会使用*着色器对象*（类比于纹理、VBO 等）。OpenGL 2.0 中所有关于着色器的操作都是通过着色器对象来完成的。
 
 与这些扩展一样，OpenGL 2.0 支持两种类型的着色器：顶点着色器和片段着色器。它们全部使用 GLSL 编写，且对顶点着色器和片段着色器的支持分别借鉴自 `ARB_vertex_shader` 和 `ARB_fragment_shader` 扩展。
 
 代码清单 3.1 和 3.2 展示了使用 GLSL 编写的顶点着色器和片段着色器的示例。
-
-
 
 图 3.1. OpenGL 渲染管线中的着色器
 
@@ -1947,8 +2005,6 @@ void glutInit(int * argc, char ** argv);
 
 该函数的参数是 `main` 函数中 `argc` 和 `argv` 参数的指针。
 
-
-
 > 此函数可以接收命令行参数（此功能通常在 X Window 系统中受支持）。在这种情况下，`glutInit` 函数通过编辑 `argc` 和 `argv` 来从 `main` 函数的参数中删除其自身的参数。
 
 要设置正在创建的窗口的初始大小和位置，请使用以下函数：
@@ -1967,6 +2023,7 @@ void glutInitDisplayMode(unsigned int mode);
 ```
 
 ![](img/0195f4c0347b99a95028b956b67109ca_76_0.png)
+
 **图 4.2.** 窗口的初始参数
 
 `mode` 参数是一个无符号整数，其单个位携带关于模式的信息。该参数通过对适当的常量进行按位或（OR）操作来指定。其完整列表见表 4.1。
@@ -1974,7 +2031,7 @@ void glutInitDisplayMode(unsigned int mode);
 ### 表 4.1. mode 参数中位的有效值
 
 | 常量 | 注释 | 默认值 |
-|---|---|---|---|
+|---|---|---|
 | `GLUT_RGBA` | 选择 RGBA 模式。 | 是 |
 | `GLUT_RGB` | 选择 RGB 模式。 | 是 |
 | `GLUT_INDEX` | 选择颜色索引模式。 | 否 |
@@ -2005,6 +2062,7 @@ void glutMainLoop();
 GLUT 库支持两种类型的窗口：普通窗口和子窗口（后者嵌套在普通窗口或其他子窗口中），如图 4.3 所示。这两类窗口都允许程序员使用 OpenGL 命令在其中绘图并设置消息处理器。每个窗口（无论其类型）都由一个唯一的整数标识。
 
 每个创建的窗口都有自己的 OpenGL 渲染上下文。
+
 要创建普通窗口，请使用 `glutCreateWindow` 函数：
 
 ```cpp
@@ -2034,6 +2092,7 @@ void glutSetWindow (int win);
 ```
 
 ![](img/0195f4c0347b99a95028b956b67109ca_78_0.png)
+
 图 4.3. 普通窗口和子窗口
 
 要销毁具有给定标识符 `win` 的窗口，请使用 `glutDestroyWindow` 函数：
@@ -2073,6 +2132,8 @@ void glutFullScreen ();
 
 要将窗口从全屏返回到普通模式，可以使用 `glutPositionWindow` 或 `glutReshapeWindow` 函数。
 
+
+
 GLUT 库允许您更改窗口的深度位置（相对于其相邻窗口）。可以使用以下两个函数之一来实现此目的：
 
 ```cpp
@@ -2088,19 +2149,19 @@ void glutHideWindow ();
 void glutIconifyWindow ();
 ```
 
-您可以使用 `glutSetWindowTitle` 函数将窗口标题替换为 `name` 参数指定的字符串：
+您可以使用`glutSetWindowTitle`函数将窗口标题替换为`name`参数指定的字符串：
 
 ```cpp
 void glutSetWindowTitle (char * name);
 ```
 
-GLUT 库使得使用 `glutSetCursor` 函数为当前窗口设置光标形状成为可能：
+GLUT 库使得使用`glutSetCursor`函数为当前窗口设置光标形状成为可能：
 
 ```cpp
 void glutSetCursor (int cursor);
 ```
 
-`cursor` 参数的值决定了表 4.2 中列出的 GLUT 内部光标之一。
+`cursor`参数的值决定了表 4.2 中列出的 GLUT 内部光标之一。
 
 ### 表 4.2. GLUT 光标
 
@@ -2136,13 +2197,13 @@ GLUT 库支持最简单的弹出式菜单。
 
 > 注意：在使用菜单时，您不能编辑它（即不能添加、删除或编辑其项目）。
 
-使用 `glutCreateMenu` 函数创建新菜单：
+使用`glutCreateMenu`函数创建新菜单：
 
 ```cpp
 int glutCreateMenu (void (*func) (int value));
 ```
 
-此函数返回一个正整数，即新创建菜单的标识符。`func` 参数是在选择菜单项时应被调用的函数（所选项目的编号将作为参数传递）。由该函数创建的菜单变为当前菜单。
+此函数返回一个正整数，即新创建菜单的标识符。`func`参数是在选择菜单项时应被调用的函数（所选项目的编号将作为参数传递）。由该函数创建的菜单变为当前菜单。
 
 以下两个函数允许您获取当前菜单的标识符或将所需菜单设为当前菜单：
 
@@ -2151,42 +2212,40 @@ int glutGetMenu ();
 void glutSetMenu (int menu);
 ```
 
-要销毁菜单，请将其标识符传递给 `glutDestroyMenu` 函数：
+要销毁菜单，请将其标识符传递给`glutDestroyMenu`函数：
 
 ```cpp
 void glutDestroyMenu (int menu);
 ```
 
-使用 `glutAddMenuEntry` 函数，您可以向当前菜单的末尾添加一个新项目：
+使用`glutAddMenuEntry`函数，您可以向当前菜单的末尾添加一个新项目：
 
 ```cpp
 void glutAddMenuEntry (char * name, int value);
 ```
 
-`name` 参数指定为所添加菜单项的字符串，`value` 参数是在选择该项目时传递给菜单事件处理程序的值。
+`name`参数指定为所添加菜单项的字符串，`value`参数是在选择该项目时传递给菜单事件处理程序的值。
 
 GLUT 库支持嵌套（分级）菜单，其中一个项目可以包含子菜单。
 
-要将子菜单作为新项目添加到当前菜单中，请使用 `glutAddSubMenu` 函数：
+要将子菜单作为新项目添加到当前菜单中，请使用`glutAddSubMenu`函数：
 
 ```cpp
 void glutAddSubMenu (char * name, int menu);
 ```
 
-与之前的函数一样，`name` 参数指定为所添加菜单项的字符串，`menu` 参数指定要链接到此项目的菜单。
+与之前的函数一样，`name`参数指定为所添加菜单项的字符串，`menu`参数指定要链接到此项目的菜单。
 
-要编辑当前菜单的现有项目，请使用 `glutChangeToMenuEntry` 和 `glutChangeToSubMenu` 函数：
+要编辑当前菜单的现有项目，请使用`glutChangeToMenuEntry`和`glutChangeToSubMenu`函数：
 
 ```cpp
 void glutChangeToMenuEntry (int entry, char * name, int value);
 void glutChangeToSubMenu (int entry, char * name, int menu);
 ```
 
+要编辑的项目通过`entry`参数指定，该参数为该项目的编号（顶端项目为 1 号）。
 
-
-要编辑的项目通过 `entry` 参数指定，该参数为该项目的编号（顶端项目为 1 号）。
-
-要从当前菜单中删除一个项目（普通项目或带有子菜单的项目），请使用 `glutRemoveItem` 函数：
+要从当前菜单中删除一个项目（普通项目或带有子菜单的项目），请使用`glutRemoveItem`函数：
 
 ```cpp
 void glutRemoveItem (int entry);
@@ -2199,9 +2258,9 @@ void glutAttachMenu (int button);
 void glutDetachMenu (int button);
 ```
 
-第一个函数决定了当用户点击由 `button` 参数指定的鼠标按钮时，当前菜单应在当前窗口中显示。第二个函数将当前菜单从当前窗口的指定按钮中分离。`button` 参数的有效值列在表 4.3 中。
+第一个函数决定了当用户点击由`button`参数指定的鼠标按钮时，当前菜单应在当前窗口中显示。第二个函数将当前菜单从当前窗口的指定按钮中分离。`button`参数的有效值列在表 4.3 中。
 
-**表 4.3. `button` 参数的有效值**
+**表 4.3. `button`参数的有效值**
 
 | 常量 | 鼠标按钮 |
 | :--- | :--- |
@@ -2217,42 +2276,43 @@ GLUT 使用 *回调函数* 来处理消息。换句话说，应用程序将待�
 - *菜单* 回调函数在前面已经介绍过。
 - *全局* 回调函数与时间流相关。
 
-最重要的消息处理器之一是用于显示窗口内容的函数。对于当前窗口，您可以使用 `glutDisplayFunc` 函数设置此处理器：
+最重要的消息处理器之一是用于显示窗口内容的函数。对于当前窗口，您可以使用`glutDisplayFunc`函数设置此处理器：
 
 ```cpp
 void glutDisplayFunc (void (*func)());
 ```
 
 ![](img/0195f4c0347b99a95028b956b67109ca_83_0.png)
+
 **图 4.4. GLUT 中的消息处理器**
 
-`func` 参数是函数的地址，每当需要重绘窗口内容时，该函数都会被调用。
+`func`参数是函数的地址，每当需要重绘窗口内容时，该函数都会被调用。
 
-要设置在当前窗口调整大小时调用的处理器，请使用 `glutReshapeFunc` 函数：
+要设置在当前窗口调整大小时调用的处理器，请使用`glutReshapeFunc`函数：
 
 ```cpp
 void glutReshapeFunc(void (*func)(int width, int height));
 ```
 
-`func` 参数是函数的地址，每当当前窗口大小被改变时，该函数都会被调用。其输入参数是窗口的新尺寸（`width` 和 `height`），单位为像素。
+`func`参数是函数的地址，每当当前窗口大小被改变时，该函数都会被调用。其输入参数是窗口的新尺寸（`width`和`height`），单位为像素。
 
-使用 `glutKeyboardFunc` 函数来为产生 ASCII 码的按键（键盘事件）设置处理器：
+使用`glutKeyboardFunc`函数来为产生 ASCII 码的按键（键盘事件）设置处理器：
 
 ```cpp
 void glutKeyboardFunc(void (*func)(unsigned char key, int x, int y));
 ```
 
-每当用户按下产生 ASCII 码的按键时，`func` 函数都会被调用。其参数包括 ASCII 码（`key`）以及按键时刻的鼠标指针坐标（`x, y`）。
+每当用户按下产生 ASCII 码的按键时，`func`函数都会被调用。其参数包括 ASCII 码（`key`）以及按键时刻的鼠标指针坐标（`x, y`）。
 
-要为不产生 ASCII 码的键盘事件设置处理器，请使用 `glutSpecialFunc` 函数：
+要为不产生 ASCII 码的键盘事件设置处理器，请使用`glutSpecialFunc`函数：
 
 ```cpp
 void glutSpecialFunc(void (*func)(int key, int x, int y));
 ```
 
-传递给此处理器的参数是按键代码 `key`（见表 4.4 中的常量）以及按键时刻鼠标指针的坐标 `x` 和 `y`。
+传递给此处理器的参数是按键代码`key`（见表 4.4 中的常量）以及按键时刻鼠标指针的坐标`x`和`y`。
 
-要禁用键盘处理器（处理普通键盘事件或特殊键按键的处理器），请调用设置该处理器的函数，并将 `func` 参数设为 `NULL`。
+要禁用键盘处理器（处理普通键盘事件或特殊键按键的处理器），请调用设置该处理器的函数，并将`func`参数设为`NULL`。
 
 **表 4.4. 特殊按键代码**
 
@@ -2280,15 +2340,15 @@ void glutSpecialFunc(void (*func)(int key, int x, int y));
 | `GLUT_KEY_END` | `<End>` |
 | `GLUT_KEY_INSERT` | `<Insert>` |
 
-要为鼠标按钮的按下和释放设置处理器，请使用 `glutMouseFunc` 函数：
+要为鼠标按钮的按下和释放设置处理器，请使用`glutMouseFunc`函数：
 
 ```cpp
 void glutMouseFunc (void (*func) (int button, int state, int x, int y));
 ```
 
-传递给处理器的 `button` 参数指定了触发事件的鼠标按钮（表 4.3）。`state` 参数可以取两个值之一：`GLUT_DOWN` 或 `GLUT_UP`，取决于用户是点击了还是释放了按钮。`x` 和 `y` 参数是鼠标按钮点击（或释放）时，鼠标指针在窗口内的坐标。要禁用此事件处理器，请调用 `glutMouseFunc` 函数并将 `func` 参数设为 `NULL`。
+传递给处理器的`button`参数指定了触发事件的鼠标按钮（表 4.3）。`state`参数可以取两个值之一：`GLUT_DOWN`或`GLUT_UP`，取决于用户是点击了还是释放了按钮。`x`和`y`参数是鼠标按钮点击（或释放）时，鼠标指针在窗口内的坐标。要禁用此事件处理器，请调用`glutMouseFunc`函数并将`func`参数设为`NULL`。
 
-此外，还可以设置一个控制鼠标指针在当前窗口内移动的处理器。为此应使用 `glutMotionFunc` 和 `glutPassiveMotionFunc` 函数：
+此外，还可以设置一个控制鼠标指针在当前窗口内移动的处理器。为此应使用`glutMotionFunc`和`glutPassiveMotionFunc`函数：
 
 ```cpp
 void glutMotionFunc (void (*func)(int x, int y));
@@ -2297,13 +2357,13 @@ void glutPassiveMotionFunc (void (*func)(int x, int y));
 
 第一个函数设置一个处理器，在至少有一个鼠标按钮被按下且鼠标移动时调用。第二个函数设置一个在没有按钮按下时鼠标移动的处理器。处理器的输入参数是鼠标指针在当前窗口内的坐标。
 
-另一个可以设置处理器的鼠标相关事件发生在鼠标指针进入窗口区域或离开窗口区域时。要设置此处理器，请使用 `glutEntryFunc` 函数：
+另一个可以设置处理器的鼠标相关事件发生在鼠标指针进入窗口区域或离开窗口区域时。要设置此处理器，请使用`glutEntryFunc`函数：
 
 ```cpp
 void glutEntryFunc (void (*func)(int state));
 ```
 
-该处理器接收 `state` 参数，其中包含有关事件的信息：鼠标指针是离开窗口区域（`GLUT_LEAVE`）还是进入窗口区域（`GLUT_ENTER`）。
+该处理器接收`state`参数，其中包含有关事件的信息：鼠标指针是离开窗口区域（`GLUT_LEAVE`）还是进入窗口区域（`GLUT_ENTER`）。
 
 可以为有关窗口可见性的消息设置处理器：
 
@@ -2311,7 +2371,7 @@ void glutEntryFunc (void (*func)(int state));
 void glutVisibilityFunc (void (*func)(int state));
 ```
 
-该处理器接收 `state` 参数，其中包含有关窗口可见性的信息：它是可见的（`GLUT_VISIBLE`）还是不可见的（`GLUT_NOT_VISIBLE`）。
+该处理器接收`state`参数，其中包含有关窗口可见性的信息：它是可见的（`GLUT_VISIBLE`）还是不可见的（`GLUT_NOT_VISIBLE`）。
 
 > 如果一个窗口至少有一个像素可见，则认为该窗口是可见的。
 
@@ -2323,29 +2383,29 @@ void glutVisibilityFunc (void (*func)(int state));
 void glutIdleFunc (void (*func)());
 ```
 
-这个处理器在创建动画时特别方便。您可以使用它来计算动画对象的更新参数，然后调用 `glutPostRedisplay` 函数来重绘窗口。
+这个处理器在创建动画时特别方便。您可以使用它来计算动画对象的更新参数，然后调用`glutPostRedisplay`函数来重绘窗口。
 
-您还可以设置一个在一定时间间隔后调用的处理器。为此，请使用 `glutTimerFunc` 函数：
+您还可以设置一个在一定时间间隔后调用的处理器。为此，请使用`glutTimerFunc`函数：
 
 ```cpp
 void glutTimerFunc (unsigned int msecs, void (*func)(int value), int value);
 ```
 
-`glutTimerFunc` 的输入参数为 `msecs` —— 调用 `func` 处理器的间隔时间（以毫秒为单位），以及 `value` —— 传递给处理器的值。`value` 参数允许您为多个事件使用同一个处理器。
+`glutTimerFunc`的输入参数为`msecs` —— 调用`func`处理器的间隔时间（以毫秒为单位），以及`value` —— 传递给处理器的值。`value`参数允许您为多个事件使用同一个处理器。
 
-> `glutIdleFunc` 和 `glutTimerFunc` 函数设置的是不绑定到任何特定窗口的全局事件处理器。
+> `glutIdleFunc`和`glutTimerFunc`函数设置的是不绑定到任何特定窗口的全局事件处理器。
 
 ## 获取当前 GLUT 状态的信息
 
-在 GLUT 中，能返回有用信息的最常用函数之一是 `glutGet`：
+在 GLUT 中，能返回有用信息的最常用函数之一是`glutGet`：
 
 ```cpp
 int glutGet (GLenum state);
 ```
 
-`state` 参数决定了请求什么信息。其有效值列在表 4.5 中。
+`state`参数决定了请求什么信息。其有效值列在表 4.5 中。
 
-**表 4.5. glutGet 函数 state 参数的值**
+**表 4.5. `glutGet`函数`state`参数的值**
 
 | 常量 | 返回值 |
 | :--- | :--- |
@@ -2360,8 +2420,6 @@ int glutGet (GLenum state);
 | `GLUT_WINDOW_GREEN_SIZE` | 分配给单个像素绿色分量的位数 |
 | `GLUT_WINDOW_BLUE_SIZE` | 分配给单个像素蓝色分量的位数 |
 | `GLUT_WINDOW_ALPHA_SIZE` | 分配给单个像素 Alpha 分量的位数 |
-
-
 
 ## 表 4.5 续
 
@@ -2388,19 +2446,22 @@ int glutGet (GLenum state);
 | `GLUT_INIT_DISPLAY_MODE` | 初始显示模式 |
 | `GLUT_INIT_WINDOW_X` | 窗口的初始 x 坐标 |
 | `GLUT_INIT_WINDOW_Y` | 窗口的初始 y 坐标 |
+
+
+
 | `GLUT_INIT_WINDOW_WIDTH` | 初始窗口宽度 |
 | `GLUT_INIT_WINDOW_HEIGHT` | 初始窗口高度 |
-| `GLUT_ELAPSED_TIME` | 自上次调用 `glutInit` 函数以来经过的时间（毫秒） |
+| `GLUT_ELAPSED_TIME` | 自上次调用`glutInit`函数以来经过的时间（毫秒） |
 
-要获取关于设备的信息，请调用 `glutDeviceGet` 函数：
+要获取关于设备的信息，请调用`glutDeviceGet`函数：
 
 ```cpp
 int glutDeviceGet(GLenum info);
 ```
 
-`info` 参数决定了需要什么样的信息。其有效值列在表 4.6 中。
+`info`参数决定了需要什么样的信息。其有效值列在表 4.6 中。
 
-### 表 4.6. `glutDeviceGet` 函数的 `info` 参数值
+### 表 4.6. `glutDeviceGet`函数的`info`参数值
 
 | 常量 | 返回值 |
 | :--- | :--- |
@@ -2411,7 +2472,7 @@ int glutDeviceGet(GLenum info);
 | `GLUT_NUM_SPACEBALL_BUTTONS` | 空间球按钮的数量 |
 | `GLUT_NUM_TABLET_BUTTONS` | 绘图板按钮的数量 |
 
-此外，你可以在调用处理程序时获取特殊键的状态信息。`glutGetModifiers` 函数可以实现这一点：
+此外，你可以在调用处理程序时获取特殊键的状态信息。`glutGetModifiers`函数可以实现这一点：
 
 ```cpp
 int glutGetModifiers( );
@@ -2431,7 +2492,7 @@ GLUT 库使得获取指定扩展是否受支持成为可能（仅检查常见的
 int glutExtensionSupported(char * extName);
 ```
 
-如果名称为 `extName` 的扩展受支持，此函数返回一个非零值。要求在调用此函数之前，必须至少有一个使用 GLUT 创建的窗口处于打开状态。
+如果名称为`extName`的扩展受支持，此函数返回一个非零值。要求在调用此函数之前，必须至少有一个使用 GLUT 创建的窗口处于打开状态。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_88_0.png)
 
@@ -2439,20 +2500,20 @@ int glutExtensionSupported(char * extName);
 
 ## 文本输出
 
-GLUT 库支持使用两种类型的字体进行文本输出：*描边 (stroke)* 和 *点阵 (bitmap)*。在第一种字体中，每个字符被指定为一组线段；在第二种字体中，每个字符使用点阵指定。
+GLUT 库支持使用两种类型的字体进行文本输出：描边（stroke）和点阵（bitmap）。在第一种字体中，每个字符被指定为一组线段；在第二种字体中，每个字符使用点阵指定。
 
-要使用 OpenGL 输出点阵字体的一个字符，请调用 `glutBitmapCharacter` 函数：
+要使用 OpenGL 输出点阵字体的一个字符，请调用`glutBitmapCharacter`函数：
 
 ```cpp
 void glutBitmapCharacter(void * font, int ch);
 ```
 
-`font` 参数指定点阵字体。GLUT 支持的点阵字体列在表 4.7 中。
+`font`参数指定点阵字体。GLUT 支持的点阵字体列在表 4.7 中。
 
-### 表 4.7. font 参数的值
+### 表 4.7. `font`参数的值
 
 | 常量 | 字体描述 |
-|---|---|
+| --- | --- |
 | `GLUT_BITMAP_8_BY_13` | 字符大小为 8×13 像素的字体 |
 | `GLUT_BITMAP_9_BY_15` | 字符大小为 9×15 像素的字体 |
 | `GLUT_BITMAP_TIMES_ROMAN_10` | 尺寸为 10 pt 的 Times Roman 比例字体 |
@@ -2461,21 +2522,21 @@ void glutBitmapCharacter(void * font, int ch);
 | `GLUT_BITMAP_HELVETICA_12` | 尺寸为 12 pt 的 Helvetica 比例字体 |
 | `GLUT_BITMAP_HELVETICA_18` | 尺寸为 18 pt 的 Helvetica 比例字体 |
 
-你可以通过调用 `glutBitmapWidth` 函数，获取由 `font` 参数指定点阵字体中 `ch` 参数指定字符的宽度：
+你可以通过调用`glutBitmapWidth`函数，获取由`font`参数指定点阵字体中`ch`参数指定字符的宽度：
 
 ```cpp
 int glutBitmapWidth(GLUTBitmapFont font, int ch);
 ```
 
-要输出描边字体的一个字符，请使用 `glutStrokeCharacter` 函数：
+要输出描边字体的一个字符，请使用`glutStrokeCharacter`函数：
 
 ```cpp
 void glutStrokeCharacter(void * font, int ch);
 ```
 
-`font` 参数指定用于输出 `ch` 字符的描边字体，它可以取两个值之一：`GLUT_STROKE_ROMAN` 或 `GLUT_STROKE_MONO_ROMAN`。
+`font`参数指定用于输出`ch`字符的描边字体，它可以取两个值之一：`GLUT_STROKE_ROMAN`或`GLUT_STROKE_MONO_ROMAN`。
 
-`glutStrokeWidth` 函数允许你获取指定描边字体的字符宽度：
+`glutStrokeWidth`函数允许你获取指定描边字体的字符宽度：
 
 ```cpp
 int glutStrokeWidth(GLUTStrokeFont font, int ch);
@@ -2487,7 +2548,7 @@ GLUT 包含几个可以绘制最简单几何对象的函数。
 
 > 注意：所有这些函数都在顶点中指定了正确的法线，但没有指定纹理坐标。唯一的例外是 Teapot（茶壶）对象，它同时指定了法线和纹理坐标。
 
-这些原语中的每一个都可以通过两种模式之一输出：*线框 (wire)* 和 *实体 (solid)*。两种模式下函数的参数相同，函数名称仅在 `Wire` 或 `Solid` 词汇上有所区别。
+这些原语中的每一个都可以通过两种模式之一输出：线框（wire）和实体（solid）。两种模式下函数的参数相同，函数名称仅在`Wire`或`Solid`词汇上有所区别。
 
 > 注意：所有原语的中心都绘制在坐标原点。
 
@@ -2500,7 +2561,7 @@ void glutSolidSphere (GLdouble r, GLint slices, GLint stacks);
 void glutWireSphere (GLdouble r, GLint slices, GLint stacks);
 ```
 
-`r` 参数指定球体的半径，`slices` 和 `stacks` 参数指定球体如何被切分为多边形。
+`r`参数指定球体的半径，`slices`和`stacks`参数指定球体如何被切分为多边形。
 
 ### 立方体
 
@@ -2511,11 +2572,11 @@ void glutSolidCube (GLdouble size);
 void glutWireCube (GLdouble size);
 ```
 
-`size` 参数指定立方体的边长。
+`size`参数指定立方体的边长。
 
 ### 圆锥体
 
-要绘制圆锥体，请使用 `glutSolidCone` 和 `glutWireCone` 函数。圆锥的底面绘制在平面 z = 0 上，其顶点位于点 (0, 0, height)。
+要绘制圆锥体，请使用`glutSolidCone`和`glutWireCone`函数。圆锥的底面绘制在平面`z = 0`上，其顶点位于点`(0, 0, height)`。
 
 ```cpp
 void glutSolidCone (GLdouble base, GLdouble height,
@@ -2525,12 +2586,14 @@ void glutWireCone  (GLdouble base, GLdouble height,
 ```
 
 ![](img/0195f4c0347b99a95028b956b67109ca_91_0.png)
+
 图 4.5. 圆锥体
 
 ![](img/0195f4c0347b99a95028b956b67109ca_91_1.png)
+
 图 4.6. 圆环体
 
-`base` 参数指定圆锥底面的半径，`height` 指定圆锥的高度（图 4.5）。`slices` 和 `stacks` 参数指定圆锥如何被切分为多边形（在圆锥底面和沿 $Oz$ 轴方向）。
+`base`参数指定圆锥底面的半径，`height`指定圆锥的高度（图 4.5）。`slices`和`stacks`参数指定圆锥如何被切分为多边形（在圆锥底面和沿`Oz`轴方向）。
 
 ### 圆环体
 
@@ -2543,7 +2606,7 @@ void glutWireTorus (GLdouble inner, GLdouble outer,
                    GLint sides, GLint rings);
 ```
 
-`inner` 和 `outer` 参数指定圆环体的内半径和外半径（图 4.6），`sides` 和 `rings` 参数指定每个圆环的边数以及组成圆环体的环数。
+`inner`和`outer`参数指定圆环体的内半径和外半径（图 4.6），`sides`和`rings`参数指定每个圆环的边数以及组成圆环体的环数。
 
 ### 十二面体
 
@@ -2554,11 +2617,9 @@ void glutSolidDodecahedron ();
 void glutWireDodecahedron ();
 ```
 
-它们绘制一个中心在坐标原点且半径等于 $\sqrt{3}$ 的十二面体。
+它们绘制一个中心在坐标原点且半径等于`\sqrt{3}`的十二面体。
 
-
-
-## 正八面体
+### 正八面体
 
 要绘制一个正八面体（一个具有八个面的正多面体），请使用以下函数：
 
@@ -2567,9 +2628,9 @@ void glutSolidOctahedron ();
 void glutWireOctahedron ();
 ```
 
-它们绘制一个中心位于坐标原点且半径等于 1 的正八面体。
+它们绘制一个中心位于坐标原点且半径等于`1`的正八面体。
 
-## 正四面体
+### 正四面体
 
 要绘制一个正四面体（一个具有四个面的正多面体），请使用以下函数：
 
@@ -2578,9 +2639,9 @@ void glutSolidTetrahedron ();
 void glutWireTetrahedron ();
 ```
 
-它们绘制一个中心位于坐标原点且半径等于 $\sqrt{3}$ 的正四面体。
+它们绘制一个中心位于坐标原点且半径等于`\sqrt{3}`的正四面体。
 
-## 正二十面体
+### 正二十面体
 
 要绘制一个正二十面体（一个具有二十个面的正多面体），请使用以下函数：
 
@@ -2589,9 +2650,9 @@ void glutSolidIcosahedron ();
 void glutWireIcosahedron ();
 ```
 
-它们绘制一个中心位于坐标原点且半径等于 1 的正二十面体。
+它们绘制一个中心位于坐标原点且半径等于`1`的正二十面体。
 
-## 茶壶
+### 茶壶
 
 GLUT 库支持输出由 Martin Newell 在 1975 年首次引入的传统茶壶（Teapot）对象。以下函数用于此目的：
 
@@ -2600,7 +2661,7 @@ void glutSolidTeapot (GLdouble size);
 void glutWireTeapot (GLdouble size);
 ```
 
-`size` 参数指定茶壶的相对大小。
+`size`参数指定茶壶的相对大小。
 
 ## 第 5 章：关于 GLH、NV_MATH 和 NV_UTIL 库的一般信息
 
@@ -2608,13 +2669,13 @@ void glutWireTeapot (GLdouble size);
 
 ### GLH 库
 
-GLH (OpenGL Helper) 库是一个类集合，旨在使 OpenGL 和 GLUT 库的使用更加便捷。这些类分为三组：
+GLH（OpenGL Helper）库是一个类集合，旨在使 OpenGL 和 GLUT 库的使用更加便捷。这些类分为三组：
 
 - 主要数学对象的封装
 - GLUT 的面向对象封装
 - OpenGL 的面向对象封装
 
-GLH 引入的所有类都被放入 `glh` 命名空间或一个特殊的内部命名空间 `GLH_REAL_NAMESPACE` 中。这就是为什么你在每次使用类时，要么需要加上 `glh::` 前缀，要么使用以下命令将该命名空间链接到当前命名空间：
+GLH 引入的所有类都被放入`glh`命名空间或一个特殊的内部命名空间`GLH_REAL_NAMESPACE`中。这就是为什么你在每次使用类时，要么需要加上`glh::`前缀，要么使用以下命令将该命名空间链接到当前命名空间：
 
 ```cpp
 using namespace glh;
@@ -2633,9 +2694,9 @@ template <int N, class T>
 class vec
 ```
 
-该类是一个 N 维向量的抽象，其分量类型为 `T`。表 5.1 列出了该类的主要方法。
+该类是一个 N 维向量的抽象，其分量类型为`T`。表 5.1 列出了该类的主要方法。
 
-**表 5.1. `vec <N, T>` 类的主要方法**
+### 表 5.1. `vec <N, T>`类的主要方法
 
 | 方法 | 描述 |
 | :--- | :--- |
@@ -2652,23 +2713,23 @@ class vec
 | `T & operator [ ] (int i)` | 访问向量分量（并允许对其进行编辑）。 |
 | `const T & operator [ ] (int i) const` | 访问向量分量（仅限读取）。 |
 
-该类定义了以下运算符：`*=`、`/=`（表示一个向量与另一个向量或标量的分量乘法和除法操作）、`+=`、`-=`（向量加法的分量操作）、一元负号，以及 `+`、`-` 和 `*` 运算符（分量操作）。这些运算符表示 $n$ 维向量传统的分量操作。
+该类定义了以下运算符：`*=`、`/=`（表示一个向量与另一个向量或标量的分量乘法和除法操作）、`+=`、`-=`（向量加法的分量操作）、一元负号，以及`+`、`-`和`*`运算符（分量操作）。这些运算符表示 n 维向量传统的分量操作。
 
-`+` 和 `-` 运算符表示向量的分量加法和减法。`*` 和 `/` 运算符表示一个向量与另一个向量或标量的分量乘法和除法。`+=` 和 `-=` 运算符表示两个给定向量的分量加法和减法，并将结果写入第一个向量。`*=` 和 `/=` 运算符表示一个向量与另一个向量或标量的分量乘法和除法，并将结果写入第一个向量。
+`+`和`-`运算符表示向量的分量加法和减法。`*`和`/`运算符表示一个向量与另一个向量或标量的分量乘法和除法。`+=`和`-=`运算符表示两个给定向量的分量加法和减法，并将结果写入第一个向量。`*=`和`/=`运算符表示一个向量与另一个向量或标量的分量乘法和除法，并将结果写入第一个向量。
 
-该类还定义了二元运算，如加法 (+)、减法 (-)、向量或标量乘法 (*) 以及标量除法 (/)。最后，定义了 `==`（等于）和 `!=`（不等于）比较运算符。
+该类还定义了二元运算，如加法（`+`）、减法（`-`）、向量或标量乘法（`*`）以及标量除法（`/`）。最后，定义了`==`（等于）和`!=`（不等于）比较运算符。
 
-基于此模板类，构建了几个实现常见二维、三维和四维向量的类。GLH 库将 `real` 类型定义为 `float`（在 `glh_linear.h` 文件的开头），并在主类中使用它。
+基于此模板类，构建了几个实现常见二维、三维和四维向量的类。GLH 库将`real`类型定义为`float`（在`glh_linear.h`文件的开头），并在主类中使用它。
 
-`GLH_REAL_NAMESPACE` 命名空间（已包含在 `glh` 命名空间中）通过扩展 `<vec2, real>`、`<vec3, real>` 和 `<vec4, real>` 类引入了 `vec2`、`vec3` 和 `vec4` 类。这些类 each 增加了一个接收三个、两个或四个 `real` 数（取决于具体类）作为参数的构造函数。同时还增加了引用相应数量 `real` 变量的 `get_value` 方法。
+`GLH_REAL_NAMESPACE`命名空间（已包含在`glh`命名空间中）通过扩展`<vec2, real>`、`<vec3, real>`和`<vec4, real>`类引入了`vec2`、`vec3`和`vec4`类。这些类各增加了一个接收三个、两个或四个`real`数（取决于具体类）作为参数的构造函数。同时还增加了引用相应数量`real`变量的`get_value`方法。
 
-`vec3` 类中增加了一个计算叉积的 `cross` 方法：
+`vec3`类中增加了一个计算叉积的`cross`方法：
 
 ```cpp
 vec3 cross(const vec3 &rhs) const
 ```
 
-`vec4` 类包含另一个构造函数，它接收一个三维向量和一个标量值（作为第四个分量）。在 `glh` 命名空间中，`vec2f`、`vec3f` 和 `vec4f` 类定义如下：
+`vec4`类包含另一个构造函数，它接收一个三维向量和一个标量值（作为第四个分量）。在`glh`命名空间中，`vec2f`、`vec3f`和`vec4f`类定义如下：
 
 ```cpp
 typedef GLH_REAL_NAMESPACE::vec2 vec2f;
@@ -2678,71 +2739,86 @@ typedef GLH_REAL_NAMESPACE::vec4 vec4f;
 
 #### 矩阵
 
-另一个非常重要的类是 4x4 矩阵的抽象，它在 `GLH_REAL_NAMESPACE` 命名空间中被引入为 `matrix4`（随后被定义为等同于此的 `matrix4f` 类）。表 5.2 列出了该类的主要方法。
+另一个非常重要的类是 4x4 矩阵的抽象，它在`GLH_REAL_NAMESPACE`命名空间中被引入为`matrix4`（随后被定义为等同于此的`matrix4f`类）。表 5.2 列出了该类的主要方法。
 
-**表 5.2. matrix4 类的方法**
+### 表 5.2. `matrix4`类的方法
 
 | 方法 | 描述 |
 | :--- | :--- |
 | `matrix4()` | 使用单位矩阵初始化矩阵，即将对角线元素设为 1，其余元素设为 0。 |
-| `matrix4(real r)` | 将矩阵的所有元素初始化为 `r` 值。 |
+| `matrix4(real r)` | 将矩阵的所有元素初始化为`r`值。 |
 | `matrix4(real * m)` | 使用包含 16 个数字的数组初始化矩阵。 |
 | `matrix4(real a00, ..., real a33)` | 使用明确指定的值初始化矩阵。 |
 | `void get_value(real * mp) const` | 将矩阵元素的值赋给数组。 |
 | `const real * get_value() const` | 返回一个指向矩阵元素数组的指针。 |
 | `void set_value(real * mp)` | 使用数组初始化矩阵。 |
-| `void set_value(real r)` | 将矩阵的所有元素初始化为 `r` 值。 |
+| `void set_value(real r)` | 将矩阵的所有元素初始化为`r`值。 |
 | `void make_identity()` | 使用单位矩阵初始化矩阵。 |
 | `static matrix4 identity()` | 返回单位矩阵。 |
-| `void set_scale(real s)` | 将前三个对角线元素赋值为 `s` 值。 |
-| `void set_scale(const vec3 & s)` | 将前三个对角线元素赋值为 `s` 向量相应分量的值。 |
-| `void set_translate(const vec3 & t)` | 将 `t` 向量赋值给矩阵的最后一列。 |
-| `void set_row(int r, const vec4 & t)` | 将 `t` 向量赋值给矩阵的第 `r` 行。 |
-| `void set_column(int c, const vec4 & t)` | 将 `t` 向量赋值给矩阵的第 `c` 列。 |
-
-
-
-## 表 5.2 续
-
-| 方法 | 描述 |
-| :--- | :--- |
+| `void set_scale(real s)` | 将前三个对角线元素赋值为`s`值。 |
+| `void set_scale(const vec3 & s)` | 将前三个对角线元素赋值为`s`向量相应分量的值。 |
+| `void set_translate(const vec3 & t)` | 将`t`向量赋值给矩阵的最后一列。 |
+| `void set_row(int r, const vec4 & t)` | 将`t`向量赋值给矩阵的第`r`行。 |
+| `void set_column(int c, const vec4 & t)` | 将`t`向量赋值给矩阵的第`c`列。 |
 | `void get_row(int r, vec4 & t) const` | 将指定的矩阵行写入向量中。 |
 | `vec4 get_row(int r) const` | 将矩阵行作为向量返回。 |
 | `void get_column(int c, vec4 & t) const` | 将指定的矩阵列写入向量中。 |
 | `vec4 get_column(int c) const` | 将矩阵列作为向量返回。 |
 | `matrix4 inverse() const` | 返回指定矩阵的逆矩阵，即返回的矩阵与给定矩阵的乘积等于单位矩阵。 |
-| `matrix4 transpose() const` | 返回转置矩阵。 |
-| `matrix4 & mult_right(const matrix4 & b)` | 执行矩阵与 b 的右乘。 |
-| `matrix4 & mult_left(const matrix4 & b)` | 执行矩阵与 b 的左乘。 |
-| `void mult_matrix_vec(const vec3 &src, vec3 &dst) const` | 矩阵与向量相乘：`dst = M * src` |
-| `void mult_matrix_vec(const vec3 & src_and_dst) const` | 矩阵与向量相乘：`src_and_dst = M * src_and_dst` |
-| `void mult_vec_matrix(const vec3 &src, vec3 &dst) const` | 向量与矩阵相乘：`dst = src * M` |
-| `void mult_vec_matrix(const vec3 & src_and_dst) const` | 向量与矩阵相乘：`src_and_dst = src_and_dst * M` |
-| `void mult_matrix_vec(const vec4 &src, vec4 &dst) const` | 矩阵与向量相乘：`dst = M * src` |
-| `void mult_vec(vec4 & src_and_dst) const` | 矩阵与向量相乘：`src_and_dst = M * src_and_dst` |
-| `void mult_vec_matrix(const vec4 &src, vec4 &dst) const` | 向量与矩阵相乘：`dst = src * M` |
-| `void mult_vec_matrix(vec4 & src_and_dst) const` | 向量与矩阵相乘：`src_and_dst = M * src_and_dst` |
-| `void mult_matrix_dir(const vec3 &src, vec3 &dst) const` | 左上角 3 x 3 子矩阵与向量相乘。 |
-| `void mult_matrix_dir(vec3 & src_and_dst) const` | 左上角 3x3 子矩阵与向量相乘。 |
-| `void mult_dir_matrix(const vec3 &src, vec3 &dst) const` | 向量与左上角 3x3 子矩阵相乘。 |
-| `void mult_dir_matrix(vec3 & src_and_dst) const` | 向量与左上角 3x3 子矩阵相乘。 |
-| `real & operator () (int row, int col)` | 使用 `()` 运算符通过行和列访问矩阵元素。 |
-| `const real & operator () (int row, int col) const` | 使用 `()` 运算符通过行和列访问矩阵元素（只读）。 |
-| `real & element (int row, int col)` | 通过行和列访问矩阵元素。 |
-| `const real & element (int row, int col) const` | 通过行和列访问矩阵元素。 |
+
+
+
+`matrix4 transpose() const`：返回转置矩阵。
+
+`matrix4 & mult_right(const matrix4 & b)`：执行矩阵与 `b` 的右乘。
+
+`matrix4 & mult_left(const matrix4 & b)`：执行矩阵与 `b` 的左乘。
+
+`void mult_matrix_vec(const vec3 &src, vec3 &dst) const`：矩阵与向量相乘：`dst = M * src`。
+
+`void mult_matrix_vec(const vec3 & src_and_dst) const`：矩阵与向量相乘：`src_and_dst = M * src_and_dst`。
+
+`void mult_vec_matrix(const vec3 &src, vec3 &dst) const`：向量与矩阵相乘：`dst = src * M`。
+
+`void mult_vec_matrix(const vec3 & src_and_dst) const`：向量与矩阵相乘：`src_and_dst = src_and_dst * M`。
+
+`void mult_matrix_vec(const vec4 &src, vec4 &dst) const`：矩阵与向量相乘：`dst = M * src`。
+
+`void mult_vec(vec4 & src_and_dst) const`：矩阵与向量相乘：`src_and_dst = M * src_and_dst`。
+
+`void mult_vec_matrix(const vec4 &src, vec4 &dst) const`：向量与矩阵相乘：`dst = src * M`。
+
+`void mult_vec_matrix(vec4 & src_and_dst) const`：向量与矩阵相乘：`src_and_dst = M * src_and_dst`。
+
+`void mult_matrix_dir(const vec3 &src, vec3 &dst) const`：左上角 3x3 子矩阵与向量相乘。
+
+`void mult_matrix_dir(vec3 & src_and_dst) const`：左上角 3x3 子矩阵与向量相乘。
+
+`void mult_dir_matrix(const vec3 &src, vec3 &dst) const`：向量与左上角 3x3 子矩阵相乘。
+
+`void mult_dir_matrix(vec3 & src_and_dst) const`：向量与左上角 3x3 子矩阵相乘。
+
+`real & operator () (int row, int col)`：使用 `()` 运算符通过行和列访问矩阵元素。
+
+`const real & operator () (int row, int col) const`：使用 `()` 运算符通过行和列访问矩阵元素（只读）。
+
+`real & element (int row, int col)`：通过行和列访问矩阵元素。
+
+`const real & element (int row, int col) const`：通过行和列访问矩阵元素。
 
 针对 `matrix4` 类型的对象定义了以下运算符：`+=`（矩阵和标量均可用作参数）、`+=`、`*=`、`==`、`!=`。
 
-## 四元数
+# 四元数
 
-计算机图形学中广泛使用的另一个类包括四元数。四元数是一个四维向量，其乘法和除法运算定义较为特殊。它是复数的扩展，x、y 和 z 分量通常被视为四元数的虚部，w 分量为其实部。在 GLH 库中，四元数由 `quaternion` 类（或 `glh` 命名空间中等效的 `quaternionf` 类）和 `rotation` 类（或 `glh` 命名空间中等效的 `rotationf` 类）表示。
+计算机图形学中广泛使用的另一个类包括四元数。四元数是一个四维向量，其乘法和除法运算定义较为特殊。它是复数的扩展，`x`、`y` 和 `z` 分量通常被视为四元数的虚部，`w` 分量为其实部。在 GLH 库中，四元数由 `quaternion` 类（或 `glh` 命名空间中等效的 `quaternionf` 类）和 `rotation` 类（或 `glh` 命名空间中等效的 `rotationf` 类）表示。
 
 > 四元数用于指定 3D 空间中的旋转，在许多情况下，它们比矩阵方便得多。
 
 表 5.3 列出了该类的主要方法。
+
 对于 `quaternion` 类，定义了以下运算符：`*`、`*=`、`==` 和 `!=`。
 
-## 表 5.3 quaternion 类的方法
+# 表 5.3 `quaternion` 类的方法
 
 | 方法 | 描述 |
 | :--- | :--- |
@@ -2775,11 +2851,11 @@ typedef GLH_REAL_NAMESPACE::vec4 vec4f;
 | `real & operator [](int i)` | 通过索引访问四元数分量。 |
 | `const real & operator [](int i) const` | 通过索引访问四元数分量（只读）。 |
 
-## 直线
+# 直线
 
 GLH 库中引入的另一个重要数学类是封装直线的 `line` 类（`glh` 命名空间中的 `linef` 类）。每条直线由其通过的点（`position`）和一个方向向量（`direction`）决定。表 5.4 列出了该类的主要方法。
 
-## 表 5.4. `line` 类的方法
+# 表 5.4 `line` 类的方法
 
 | 方法 | 描述 |
 | :--- | :--- |
@@ -2791,7 +2867,7 @@ GLH 库中引入的另一个重要数学类是封装直线的 `line` 类（`glh`
 | `const vec3 & get_position() const` | 返回直线的坐标点。 |
 | `const vec3 & get_direction() const` | 返回直线的方向向量。 |
 
-## 平面
+# 平面
 
 另一个类是 3D 空间中平面的抽象。这就是 `plane`（或 `planef`）类。
 
@@ -2799,20 +2875,13 @@ GLH 库中引入的另一个重要数学类是封装直线的 `line` 类（`glh`
 
 表 5.5 列出了该类的主要方法。
 
-## 表 5.5. `plane` 类的主要方法。
+# 表 5.5 `plane` 类的主要方法
 
 | 方法 | 描述 |
 | :--- | :--- |
 | `plane()` | 使用 `Oxy` 平面初始化平面。 |
 | `plane(const vec3 &p0, const vec3 &p1, const vec3 &p2)` | 使用由 `p0`、`p1` 和 `p2` 三点确定的平面进行初始化。 |
 | `plane(const vec3 &normal, real distance)` | 使用法向量和到坐标原点的距离初始化平面。 |
-
-
-
-## 表 5.5 续
-
-| 方法 | 描述 |
-| :--- | :--- |
 | `plane(const vec3 &normal, const vec3 &point)` | 使用法线和平面上的一个点来初始化平面。 |
 | `void offset(real d)` | 使平面沿法线方向移动 `d` 距离。 |
 | `bool intersect(const line &l, vec3 &intersection) const` | 寻找平面与直线 `l` 的交点，并将交点返回在 `intersection` 参数中。如果没有交点，则返回 `false`。 |
@@ -2824,7 +2893,7 @@ GLH 库中引入的另一个重要数学类是封装直线的 `line` 类（`glh`
 
 该类定义了比较运算符 `==` 和 `!=`。
 
-## GLUT 的对象封装
+# GLUT 的对象封装
 
 尽管 GLUT 库简单，但它也有一些缺点。其中之一是它是面向过程的。特别是，这迫使你为每个程序重新编写一套必需的函数（尽管许多函数是相同的）。通过面向对象的方法，你可以使用继承来解决这个问题。
 
@@ -2834,7 +2903,7 @@ GLH 库中引入的另一个重要数学类是封装直线的 `line` 类（`glh`
 
 GLH 库为所有这些问题提供了一个基于 *交互器（interactors）*（`glut_interactor` 类，代码清单 5.1）的简单解决方案。
 
-### 代码清单 5.1. `glut_interactor` 类的定义
+## 代码清单 5.1 `glut_interactor` 类的定义
 
 ```cpp
 class glut_interactor
@@ -2867,7 +2936,7 @@ class glut_interactor
 
 `glut_helpers_initialize()` 函数用于将所有处理函数设置为与交互器配合工作的特殊函数，即由它们将所有收到的请求委派给交互器。这里只是这样一个处理函数的一个示例（代码清单 5.2）。
 
-### 代码清单 5.2. 用于交互器工作的重绘消息处理函数
+## 代码清单 5.2 用于交互器工作的重绘消息处理函数
 
 ```cpp
 void glut_display_function()
@@ -2882,40 +2951,45 @@ void glut_display_function()
 注意全局变量 `propagate` 是如何使用的：在其中一个交互器中将其设置为 `false` 将取消遍历列表中其余交互器的过程。
 
 要向列表中添加一个新的交互器，请使用 `glut_add_interactor` 函数：
+
 `void glut_add_interactor (glut_interactor * gi, bool append = true);`
+
 参数 `gi` 是指向被添加交互器的指针，参数 `append` 定义该交互器应被添加到列表的开头 (`append = false`) 还是结尾 (`append = true`)。
 
 要从列表中移除一个交互器，请使用 `glut_remove_interactor` 函数：
+
 `void glut_remove_interactor (glut_interactor * gi)`
+
+
 
 一般来说，你可以在每次需要时编写一个新的交互器，然后在其中定义必要的方法。你也可以创建一个包含常用函数的基类，并对其中的一两个方法进行修改。
 
-不过，你也可以采用另一种方法。将必要的功能分布在许多个交互器中，每个交互器执行一个基本操作。然后，你就可以通过组合合适的交互器来实现程序的所需功能。GLH 的创建者选择了这种方法，并开发了一套实现了某些常用操作的交互器。
+不过，你也可以采用另一种方法：将必要的功能分布在许多个交互器中，每个交互器执行一个基本操作。然后，你就可以通过组合合适的交互器来实现程序的所需功能。GLH 的创建者选择了这种方法，并开发了一套实现了某些常用操作的交互器。
 
-**图 5.1.** GLH 中的主要交互器
+### 图 5.1. GLH 中的主要交互器
 
-其中最简单的是 `glut_callbacks` 交互器，它为每个处理函数包含一个（初始化为 `NULL`）的函数指针。对于每条消息，该交互器通过指针调用所需的函数（如果指针不等于 `NULL`）。以下指针可供编辑：`display_function`、`idle_function`、`keyboard_function`、`menu_status_function`、`motion_function`、`mouse_function`、`passive_motion_function`、`reshape_function`、`special_function`、`timer_function` 和 `visibility_function`。
+其中最简单的是`glut_callbacks`交互器，它为每个处理函数包含一个（初始化为`NULL`）的函数指针。对于每条消息，该交互器通过指针调用所需的函数（如果指针不等于`NULL`）。以下指针可供编辑：`display_function`、`idle_function`、`keyboard_function`、`menu_status_function`、`motion_function`、`mouse_function`、`passive_motion_function`、`reshape_function`、`special_function`、`timer_function`和`visibility_function`。
 
 实际上，这个交互器允许你在交互器中使用通用函数。
 
-`glut_perspective_interactor` 是最有趣的。它实现了 `reshape` 方法的部分功能，从而根据传递给构造函数的参数设置透视投影：
+`glut_perspective_interactor`是最有趣的。它实现了`reshape`方法的部分功能，从而根据传递给构造函数的参数设置透视投影：
 
 ```cpp
 glut_perspective_reshaper (float infovy = 60.f, float inzNear = .1f,
                                     float inzFar = 10.f);
 ```
 
-`glut_simple_interactor` 类使得观察某些事件（例如点击鼠标按钮或按下特殊键）成为可能。该交互器观察自上一个事件以来的鼠标移动，并允许你使用 `update` 虚拟方法来处理该事件。由于该方法在该类中没有定义，因此 `glut_simple_interactor` 是一个*抽象类*（也就是说，它不能被实例化）。然而，它是许多鼠标消息处理函数的基类，这些处理函数允许用户使用鼠标旋转对象以及将对象向各个方向移动。此功能通过 `glut_pan`、`glut_dolly`、`glut_trackball` 和 `glut_rotate` 交互器实现。
+`glut_simple_interactor`类使得观察某些事件（例如点击鼠标按钮或按下特殊键）成为可能。该交互器观察自上一个事件以来的鼠标移动，并允许你使用`update`虚拟方法来处理该事件。由于该方法在该类中没有定义，因此`glut_simple_interactor`是一个抽象类（也就是说，它不能被实例化）。然而，它是许多鼠标消息处理函数的基类，这些处理函数允许用户使用鼠标旋转对象以及将对象向各个方向移动。此功能通过`glut_pan`、`glut_dolly`、`glut_trackball`和`glut_rotate`交互器实现。
 
-`glut_simple_mouse_interactor` 交互器通过聚合 `glut_pan`、`glut_dolly`、`glut_trackball` 和 `glut_rotate` 交互器并将相应的请求委派给它们来实现这一功能。
+`glut_simple_mouse_interactor`交互器通过聚合`glut_pan`、`glut_dolly`、`glut_trackball`和`glut_rotate`交互器并将相应的请求委派给它们来实现这一功能。
 
 ## OpenGL 的对象封装
 
 GLH 库包含几个用于 OpenGL 对象的对象封装，例如显示列表、纹理对象以及顶点和片段着色器程序。我将描述前两个。
 
-为了将显示列表封装到类中，该库定义了 `display_list` 类，其源代码如代码清单 5.3 所示。
+为了将显示列表封装到类中，该库定义了`display_list`类，其源代码如代码清单 5.3 所示。
 
-### 代码清单 5.3. `display_list` 类
+### 代码清单 5.3. `display_list`类
 
 ```cpp
 class display_list
@@ -2968,8 +3042,6 @@ private:
     {
 ```
 
-
-
 ```cpp
 dlist = glGenLists(1);
 valid = true;
@@ -2981,15 +3053,15 @@ GLuint dlist;
 };
 ```
 
-要创建这样一个列表，你应该创建一个 `display_list` 对象，调用 `new_list` 方法，执行所有应包含在列表中的 OpenGL 命令，然后调用 `end_list` 方法。
+要创建这样一个列表，你应该创建一个`display_list`对象，调用`new_list`方法，执行所有应包含在列表中的 OpenGL 命令，然后调用`end_list`方法。
 
-`call_list` 方法用于调用该列表，而 `is_valid` 方法用于确定某个特定的显示列表是否存在。
+`call_list`方法用于调用该列表，而`is_valid`方法用于确定某个特定的显示列表是否存在。
 
 构造函数的参数决定了在 C++ 对象被销毁后，OpenGL 显示列表是否应该被销毁（即其使用的资源是否应该被释放）。
 
-纹理对象的对象包装是通过 `tex_object` 类以及继承自它的 `tex_object_1D`、`tex_object_2D`、`tex_object_3D` 和 `tex_object_cube_map` 类实现的。代码清单 5.4 包含了这些类的描述。
+纹理对象的对象包装是通过`tex_object`类以及继承自它的`tex_object_1D`、`tex_object_2D`、`tex_object_3D`和`tex_object_cube_map`类实现的。代码清单 5.4 包含了这些类的描述。
 
-## 代码清单 5.4. GLH 库的纹理类
+### 代码清单 5.4. GLH 库的纹理类
 
 ```cpp
 class tex_object
@@ -3099,17 +3171,17 @@ public:
 
 ## NV_MATH 库
 
-NV_MATH 库实现了主要的数学对象和一些有用的函数。与 GLH 库不同，该库没有将其类放入特殊的命名空间中。要使用 NV_MATH 库，你需要包含以下文件：`nv_math.h`、`nv_algebra.h` 和 `nv_math.lib`。
+NV_MATH 库实现了主要的数学对象和一些有用的函数。与 GLH 库不同，该库没有将其类放入特殊的命名空间中。要使用 NV_MATH 库，你需要包含以下文件：`nv_math.h`、`nv_algebra.h`和`nv_math.lib`。
 
-定义为 `float` 的 `nv_scalar` 类型被用作库中所有类的基础类型。
+定义为`float`的`nv_scalar`类型被用作库中所有类的基础类型。
 
-对于向量操作，NV_MATH 库提供了 `vec2`、`vec3`、`vec4` 类及其转置对应类 `vec2t`、`vec3t` 和 `vec4t`。这些类中的每一个都拥有一组庞大的构造函数，允许程序员使用数字数组、数字数组指针或其他向量（包括不同维度的向量）来初始化向量。为这些类中的每一个都定义了 `==` 和 `!=` 比较运算符。此外，还定义了以下逐分量操作：`+`、`-`、`*`、`/`、`+=`、`-=` 和 `*=`。
+对于向量操作，NV_MATH 库提供了`vec2`、`vec3`、`vec4`类及其转置对应类`vec2t`、`vec3t`和`vec4t`。这些类中的每一个都拥有一组庞大的构造函数，允许程序员使用数字数组、数字数组指针或其他向量（包括不同维度的向量）来初始化向量。为这些类中的每一个都定义了`==`和`!=`比较运算符。此外，还定义了以下逐分量操作：`+`、`-`、`*`、`/`、`+=`、`-=`和`*=`。
 
-要访问单个分量，你可以使用重载的运算符 `[]` 或分量名称 ((x, y, z, w) 或 (s, t, r, q))。
+要访问单个分量，你可以使用重载的运算符`[]`或分量名称（`x`、`y`、`z`、`w`或`s`、`t`、`r`、`q`）。
 
-`sq_norm` 方法返回向量的长度平方，而 `norm` 方法返回长度。
+`sq_norm`方法返回向量的长度平方，而`norm`方法返回长度。
 
-对于 `vec3` 类，定义了以下方法：
+对于`vec3`类，定义了以下方法：
 
 ```cpp
 nv_scalar normalize();
@@ -3117,15 +3189,15 @@ void orthogonalize(const vec3& v);
 void orthonormalize(const vec3& v);
 ```
 
-第一个方法对向量进行归一化并返回其初始长度，`orthogonalize` 方法使给定向量与指定向量正交，`orthonormalize` 方法先使给定向量与指定向量正交，然后对给定向量进行归一化。
+第一个方法对向量进行归一化并返回其初始长度，`orthogonalize`方法使给定向量与指定向量正交，`orthonormalize`方法先使给定向量与指定向量正交，然后对给定向量进行归一化。
 
-除了类方法外，该库还提供了许多函数以便对其进行操作。表 5.6 列出了这些函数，当一个函数版本适用于所有类（`vec2`、`vec3` 和 `vec4`）时，使用字母 T 代替类型指示。
+除了类方法外，该库还提供了许多函数以便对其进行操作。表 5.6 列出了这些函数，当一个函数版本适用于所有类（`vec2`、`vec3`和`vec4`）时，使用字母 T 代替类型指示。
 
-对于 3x3 和 4x4 矩阵的操作，NV_MATH 库定义了 `mat3` 和 `mat4` 类。这些类中的每一个都有一个空构造函数、一个使用数字数组初始化矩阵的构造函数以及一个拷贝构造函数。
+对于 3x3 和 4x4 矩阵的操作，NV_MATH 库定义了`mat3`和`mat4`类。这些类中的每一个都有一个空构造函数、一个使用数字数组初始化矩阵的构造函数以及一个拷贝构造函数。
 
 表 5.7 列出了这些类的主要方法。
 
-## 表 5.6. NV_MATH 库中定义的主要函数
+### 表 5.6. NV_MATH 库中定义的主要函数
 
 | 函数 | 描述 |
 | :--- | :--- |
@@ -3135,46 +3207,54 @@ void orthonormalize(const vec3& v);
 | `vec3 & cross(vec3 & u,`<br>`const vec3 & v,`<br>`const vec3 & w);` | 计算向量的叉积。 |
 | `nv_scalar dot(const vec3 & v,`<br>`const vec3 & w);` | 计算向量的点积。 |
 | `nv_scalar dot(const vec4 & v,`<br>`const vec4 & w);` | 计算向量的点积。 |
-| `vec3 & reflect(vec3 & r,`<br>`const vec3 & n, const vec3 & l);` | 计算 $l$ 向量相对于法线 $n$ 的反射，并将结果赋值给 $r$ 向量。 |
-| `madd(vec3 & u, const vec3 & v,`<br>`const nv_scalar & lambda);` | 计算 $u = v * \text{lambda} + u$。 |
+| `vec3 & reflect(vec3 & r,`<br>`const vec3 & n, const vec3 & l);` | 计算`l`向量相对于法线`n`的反射，并将结果赋值给`r`向量。 |
+| `madd(vec3 & u, const vec3 & v,`<br>`const nv_scalar & lambda);` | 计算`u = v * lambda + u`。 |
 | `T& scale(T& u, const nv_scalar s);` | 将向量乘以标量并返回结果向量。 |
-| `T& mult(T & u, const M& m,`<br>`const T& v);` | 计算 $u = M * v$（T 为 vec3 或 vec4，M 为 mat3 或 mat4）。 |
-| `T& mult(T & u, const T& v,`<br>`const M& m);` | 计算 $u = v * M$。 |
-| `inline void nv_max(vec3 & vOut,`<br>`const vec3 & vFirst,`<br>`const vec3 & vSecond)` | 寻找 $vFirst$ 和 $vSecond$ 向量的逐分量最大值，并将结果赋值给 $vOut$ 向量。 |
-| `inline void nv_min(vec3 & vOut,`<br>`const vec3 & vFirst,`<br>`const vec3 & vSecond)` | 寻找 $vFirst$ 和 $vSecond$ 向量的逐分量最小值，并将结果赋值给 $vOut$ 向量。 |
-| `nv_scalar nv_area(const vec3 & v1,`<br>`const vec3 & v2, const vec3 & v3);` | 计算 $v1v2v3$ 三角形的面积。 |
-| `nv_scalar nv_perimeter(`<br>`const vec3 & v1, const vec3 & v2,`<br>`const vec3 & v3);` | 计算 $v1v2v3$ 三角形的周长。 |
-| `nv_scalar nv_find_in_circle(vec3 & center, const vec3 & v1, const vec3 & v2, const vec3 &v3);` | 寻找 $v1v2v3$ 三角形内切圆的圆心并返回该圆的半径。 |
-| `nv_scalar nv_find_circ_circle(vec3 & center, const vec3 & v1, const vec3 & v2, const vec3 &v3);` | 寻找 $v1v2v3$ 三角形外接圆的圆心并返回该圆的半径。 |
+| `T& mult(T & u, const M& m,`<br>`const T& v);` | 计算`u = M * v`（T 为`vec3`或`vec4`，M 为`mat3`或`mat4`）。 |
+| `T& mult(T & u, const T& v,`<br>`const M& m);` | 计算`u = v * M`。 |
+| `inline void nv_max(vec3 & vOut,`<br>`const vec3 & vFirst,`<br>`const vec3 & vSecond)` | 寻找`vFirst`和`vSecond`向量的逐分量最大值，并将结果赋值给`vOut`向量。 |
+| `inline void nv_min(vec3 & vOut,`<br>`const vec3 & vFirst,`<br>`const vec3 & vSecond)` | 寻找`vFirst`和`vSecond`向量的逐分量最小值，并将结果赋值给`vOut`向量。 |
+| `nv_scalar nv_area(const vec3 & v1,`<br>`const vec3 & v2, const vec3 & v3);` | 计算`v1v2v3`三角形的面积。 |
+| `nv_scalar nv_perimeter(`<br>`const vec3 & v1, const vec3 & v2,`<br>`const vec3 & v3);` | 计算`v1v2v3`三角形的周长。 |
+| `nv_scalar nv_find_in_circle(vec3 & center, const vec3 & v1, const vec3 & v2, const vec3 &v3);` | 寻找`v1v2v3`三角形内切圆的圆心并返回该圆的半径。 |
+| `nv_scalar nv_find_circ_circle(vec3 & center, const vec3 & v1, const vec3 & v2, const vec3 &v3);` | 寻找`v1v2v3`三角形外接圆的圆心并返回该圆的半径。 |
 | `nv_scalar fast_cos(const nv_scalar x);` | 快速计算余弦的近似值。 |
 | `nv_scalar ffast_cos(const nv_scalar x);` | 快速计算余弦的近似值。 |
 
-## 表 5.7. mat3 和 mat4 类的方法
+### 表 5.7. `mat3`和`mat4`类的方法
 
 | 方法 | 描述 |
 | :--- | :--- |
 | `const vec4 col(const int i) const` | 将矩阵列作为向量返回。 |
 | `const vec4 operator[] (const int &i) const` | 将矩阵行作为向量返回。 |
-| `const nv_scalar& operator() (const int& i, const int& j) const` | 返回矩阵元素 (i, j) 的只读引用。 |
-| `nv_scalar& operator() (const int& i, const int& j)` | 返回矩阵元素 (i, j) 的可读写引用。 |
+| `const nv_scalar& operator() (const int& i, const int& j) const` | 返回矩阵元素`(i, j)`的只读引用。 |
+| `nv_scalar& operator() (const int& i, const int& j)` | 返回矩阵元素`(i, j)`的可读写引用。 |
 | `void set_col(int i, const vec4 & v)` | 将矩阵列设置为给定向量。 |
 | `void set_row(int i, const vec4 & v)` | 将矩阵行设置为给定向量。 |
-| `mat3 & get_rot(mat3 & M) const` | 从给定矩阵中提取左上角 3x3 子矩阵并将结果写入 M 矩阵。返回 M 矩阵（该方法仅适用于 mat4 类）。 |
-| `quat & get_rot(quat & q) const` | 寻找与给定矩阵具有相同旋转的四元数并将其写入 q 参数。返回 q 参数（该方法仅适用于 mat4 类）。 |
+| `mat3 & get_rot(mat3 & M) const` | 从给定矩阵中提取左上角 3x3 子矩阵并将结果写入`M`矩阵。返回`M`矩阵（该方法仅适用于`mat4`类）。 |
+| `quat & get_rot(quat & q) const` | 寻找与给定矩阵具有相同旋转的四元数并将其写入`q`参数。返回`q`参数（该方法仅适用于`mat4`类）。 |
 
-
-
-## 表 5.7 续
+### 表 5.7 续
 
 | 方法 | 描述 |
 | :--- | :--- |
+
+
+
 | `void set_rot(const quat & q)` | 将给定矩阵设置为与 `q` 四元数指定相同旋转的矩阵。 |
+
 | `void set_rot(const mat3 & M)` | 将给定矩阵设置为 `M` 矩阵。 |
+
 | `void set_rot(const nv_scalar & theta, const vec3 & v)` | 将给定矩阵设置为指定绕 `v` 向量旋转 `theta` 角度（弧度）的矩阵。 |
+
 | `void set_rot(const vec3 & u, const vec3 & v)` | 将给定矩阵设置为指定将 `u` 向量旋转至 `v` 向量的矩阵。 |
+
 | `void set_scale(const vec3& s)` | 将给定矩阵设置为缩放矩阵，每个轴的缩放因子由 `s` 向量的相应分量决定。 |
+
 | `vec3& get_scale(vec3& s) const` | 返回由矩阵前三个对角元素组成的向量，并存储在 `s` 参数中（该方法仅对 `mat4` 类有效）。 |
+
 | `void set_translation(const Vec3 & t)` | 将矩阵的所有元素设置为由 `t` 向量平移后的矩阵。 |
+
 | `vec3 & get_translation(vec3 & t) const` | 返回由矩阵最右列前三个元素组成的向量，并存储在 `t` 参数中（该方法仅对 `mat4` 类有效）。 |
 
 对于矩阵，定义了矩阵或向量的右乘和左乘。此外，还定义了表 5.8 中列出的函数。
@@ -3182,17 +3262,29 @@ void orthonormalize(const vec3& v);
 ## 表 5.8. 矩阵操作函数
 
 | 函数 | 描述 |
+
 | :--- | :--- |
+
 | `mat4 & add(mat4 & A, const mat4 & B)`<br>`mat3 & add(mat3 & A, const mat3 & B)` | 计算 `A += B`。 |
+
 | `mat4 & add(mat4 & C, const mat4 & A, const mat4 & B)`<br>`mat3 & add(mat3 & C, const mat3 & A, const mat3 & B)` | 计算 `C = A + B`。 |
-| `mat4 & mult(mat4 & C, const mat4 & A, const mat4 & B)` | 计算 C = A * B。 |
-| `mat3 & mult(mat3 & C, const mat3 & A, const mat3 & B)` | 计算 C = A * B。 |
-| `extern mat4 & negate(mat4 & M);` <br> `extern mat3 & negate(mat3 & M);` | 计算 M = -M。 |
+
+| `mat4 & mult(mat4 & C, const mat4 & A, const mat4 & B)` | 计算 `C = A * B`。 |
+
+| `mat3 & mult(mat3 & C, const mat3 & A, const mat3 & B)` | 计算 `C = A * B`。 |
+
+| `extern mat4 & negate(mat4 & M);` <br> `extern mat3 & negate(mat3 & M);` | 计算 `M = -M`。 |
+
 | `mat3 & transpose(mat3 & B, const mat3 & A)` <br> `mat4 & transpose(mat4 & B, const mat4 & A)` | 转置矩阵。 |
+
 | `mat3 & transpose(mat4 & B)` <br> `mat4 & transpose(mat4 & B)` | 转置矩阵。 |
-| `mat4 & invert(mat4 & B, const mat4 & A)` <br> `mat3 & invert(mat3 & B, const mat3 & A)` | 将 B 矩阵赋值为 A 的逆矩阵。 |
+
+| `mat4 & invert(mat4 & B, const mat4 & A)` <br> `mat3 & invert(mat3 & B, const mat3 & A)` | 将 `B` 矩阵赋值为 `A` 的逆矩阵。 |
+
 | `mat4 & look_at(mat4 & M, const vec3 & eye, const vec3 & center, const vec3 & up)` | 返回与 `gluLookAt` 命令相对应的矩阵。 |
+
 | `mat4 & frustum(mat4 & M, const nv_scalar l, const nv_scalar r, const nv_scalar b, const nv_scalar t, const nv_scalar n, const nv_scalar f)` | 返回与 `glFrustum` 命令相对应的矩阵。 |
+
 | `nv_scalar det(const mat3 & A)` | 计算矩阵的行列式。 |
 
 `mat3` 和 `mat4` 类的一个重要特性是它们存储元素的顺序与 OpenGL 相同，这使得在与 OpenGL 协作时可以轻松使用这些矩阵。
@@ -3202,16 +3294,27 @@ void orthonormalize(const vec3& v);
 ## 表 5.9. quat 类的方法
 
 | 方法 | 描述 |
+
 | :--- | :--- |
+
 | `quat()` | 空构造函数。 |
+
 | `quat(nv_scalar x, nv_scalar y, nv_scalar z, nv_scalar w)` | 使用指定值初始化四元数。 |
+
 | `quat(const quat & quat)` | 拷贝构造函数。 |
+
 | `quat(const vec3& axis, nv_scalar angle)` | 使用绕给定轴旋转给定角度来初始化四元数。 |
+
 | `quat(const mat3& rot)` | 使用旋转矩阵初始化四元数。 |
+
 | `quat Inverse()` | 求四元数的逆。 |
+
 | `void Normalize()` | 将四元数归一化。 |
+
 | `void FromMatrix(const mat3& mat)` | 从旋转矩阵构建四元数。 |
+
 | `void ToMatrix(mat3& mat) const` | 使用四元数指定的旋转初始化矩阵。 |
+
 | `nv_scalar& operator[](int i)` <br> `const nv_scalar operator[](int i)` | 访问四元数分量。 |
 
 对于该类的成员，定义了以下运算符：`=`、`-`、`*` 和 `*=`。表 5.10 列出了四元数操作的主要函数。
@@ -3219,13 +3322,21 @@ void orthonormalize(const vec3& v);
 ## 表 5.10. 四元数操作的主要函数
 
 | 函数 | 描述 |
+
 | :--- | :--- |
+
 | `quat& normalize(quat & p)` | 将四元数归一化。 |
+
 | `quat& conj(quat & p)` | 对四元数求共轭。 |
+
 | `quat& conj(quat & p, const quat & q)` | 对四元数求共轭。 |
+
 | `quat& add_quats(quat& p, const quat& q1, const quat& q2)` | 四元数相加。 |
+
 | `quat& axis_to_quat(quat & q, const vec3 & a, const nv_scalar phi)` | 根据绕给定轴旋转给定角度构建四元数。 |
+
 | `mat3& quat_2_mat(mat3 &M, const quat &q)` | 从四元数构建旋转矩阵。 |
+
 | `quat& mat_2_quat(quat &q, const mat3 &M)` | 从旋转矩阵构建四元数。 |
 
 此外，`NV_MATH` 库包含 `nv_random` 函数，该函数返回一个 $[-1, 1]$ 区间内的随机实数。
@@ -3316,32 +3427,27 @@ unsigned loadJpg (const char * fileName)
     unsigned char * pixels;
 
     if (read (fileName, &width, &height, &pixels, &components))
-```
+        return 0;
 
+    unsigned textureId;
 
+    glGenTextures  (1, &textureId);
+    glBindTexture (GL_TEXTURE_2D, textureId);
+    glPixelStorei (GL_UNPACK_ALIGNMENT, 1);
+    glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
+    glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 
-```cpp
-return 0;
-
-unsigned textureId;
-
-glGenTextures  (1, &textureId);
-glBindTexture (GL_TEXTURE_2D, textureId);
-glPixelStorei (GL_UNPACK_ALIGNMENT, 1);
-glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-glTexParameteri (GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-
-glBuild2DMipmaps (GL_TEXTURE_2D, components, width,
+    glBuild2DMipmaps (GL_TEXTURE_2D, components, width,
                    height, GL_RGB, GL_UNSIGNED_BYTE, pixels);
 
-glTexParameteri (GL_TEXTURE_1D, GL_TEXTURE_MAG_FILTER,
+    glTexParameteri (GL_TEXTURE_1D, GL_TEXTURE_MAG_FILTER,
                    GL_LINEAR);
-glTexParameteri (GL_TEXTURE_1D, GL_TEXTURE_MIN_FILTER,
+    glTexParameteri (GL_TEXTURE_1D, GL_TEXTURE_MIN_FILTER,
                    GL_LINEAR_MIPMAP_LINEAR);
 
-delete pixels;
+    delete pixels;
 
-return textureId;
+    return textureId;
 }
 ```
 
@@ -3408,7 +3514,9 @@ struct model
 
 二维、三维和四维向量分别由 `Vector2D`、`Vector3D` 和 `Vector4D` 类表示。这些类非常相似，因此我仅描述其中功能最丰富的 `Vector3D` 类。
 
-代码清单 6.1. `Vector3D` 类及其相关运算函数
+#### 代码清单 6.1. `Vector3D` 类及其相关运算函数
+
+
 
 ```cpp
 #include <math.h>
@@ -3635,8 +3743,6 @@ private:
 };
 ```
 
-
-
 ```cpp
 }
 
@@ -3724,11 +3830,11 @@ inline bool areCoplanar (const Vector3D& a, const Vector3D& b,
 }
 ```
 
-如代码清单所示，该类重定义了主要的运算符。其中包括 + 和 - 一元运算符，+, -, *, 和 / 二元运算符，以及 +=, -=, *=, 和 /= 运算符。此外还定义了比较运算符 == 和 !=。
+如代码清单所示，该类重定义了主要的运算符。其中包括`+`和`-`一元运算符，`+`, `-`, `*`, 和`/`二元运算符，以及`+=`, `-=`, `*=`, 和`/=`运算符。此外还定义了比较运算符`==`和`!=`。
 
-要访问分量，可以使用分量名称或 `[ ]` 运算符。
+要访问分量，可以使用分量名称或`[ ]`运算符。
 
-一个将该类转换为 `float *` 或 `const float *` 类型的转换运算符，允许程序员在接受分量数组指针的函数中使用该类的实例。
+一个将该类转换为`float *`或`const float *`类型的转换运算符，允许程序员在接受分量数组指针的函数中使用该类的实例。
 
 请参考示例（清单 6.2）。
 
@@ -3742,7 +3848,7 @@ glVertex3fv(pos);
 glVertex3fv(pos + offs);
 ```
 
-表 6.1 列出了 `Vector3D` 类的主要方法。
+表 6.1 列出了`Vector3D`类的主要方法。
 
 ### 表 6.1. Vector3D 类的方法
 
@@ -3756,14 +3862,16 @@ glVertex3fv(pos + offs);
 | `float distanceTo(const Vector3D& p) const` | 计算到指定向量的距离。 |
 | `float distanceToAlongAxis(const Vector3D& p, int axis) const` | 计算沿其中一个坐标轴到指定向量的距离（即在该轴上投影之间的距离）。 |
 | `int getMainAxis() const` | 返回分量绝对值最大的轴。 |
-| `Vector3D& clamp(float lower, float upper)` | 将所有向量分量限制在 [lower, upper] 区间内，即每个分量 (v) 根据以下规则进行转换：`Min(max(lower, v), upper)` |
-| `static Vector3D getRandomVector (float len = 1)` | 返回一个长度为 `len` 的随机向量。 |
+| `Vector3D& clamp(float lower, float upper)` | 将所有向量分量限制在`[lower, upper]`区间内，即每个分量（`v`）根据以下规则进行转换：`Min(max(lower, v), upper)` |
+| `static Vector3D getRandomVector (float len = 1)` | 返回一个长度为`len`的随机向量。 |
 | `Vector3D vmin (const Vector3D& v1, const Vector3D& v2)` | 返回两个向量的分量最小值。 |
 | `Vector3D vmax (const Vector3D& v1, const Vector3D& v2)` | 返回两个向量的分量最大值。 |
 
-定义了处理 `Vector3D` 类实例的方法（表 6.2）。其中包括重载的二元运算符 `&` 和 `^`，分别表示两个向量的点积和叉积（叉积仅定义于 3D 向量）。
+定义了处理`Vector3D`类实例的方法（表 6.2）。其中包括重载的二元运算符`&`和`^`，分别表示两个向量的点积和叉积（叉积仅定义于 3D 向量）。
 
-### 表 6.2. 处理 Vector3D 类实例的方法
+
+
+### 表 6.2. 处理 `Vector3D` 类实例的方法
 
 | 方法 | 描述 |
 | :--- | :--- |
@@ -3776,7 +3884,7 @@ glVertex3fv(pos + offs);
 
 `Matrix3D` 类用于处理三维矩阵，而 `Matrix4x4` 类用于处理四维矩阵。
 
-这些类 each 都具有一个不执行初始化的空构造函数，一个拷贝构造函数，以及一个接受单个浮点数（将矩阵的对角线元素初始化为此数，其余元素设为零）或一组三个/四个浮点数（用于初始化对角线元素，其余元素设为零）的构造函数。
+这些类各自具有一个不执行初始化的空构造函数，一个拷贝构造函数，以及一个接受单个浮点数（将矩阵的对角线元素初始化为此数，其余元素设为零）或一组三个/四个浮点数（用于初始化对角线元素，其余元素设为零）的构造函数。
 
 `Matrix3D` 类具有一个可以通过三列构建的构造函数。
 
@@ -3825,14 +3933,12 @@ w = m * v;
 
 `Quaternion` 类用于处理四元数。对于该类，定义了所有标准的数学方法。`Quaternion` 类的方法列在表 6.4 中。
 
-### 表 6.4. Quaternion 类的方法
+### 表 6.4. `Quaternion` 类的方法
 
 | 方法 | 描述 |
 | :--- | :--- |
 | `Quaternion ( )` | 构建一个不初始化分量的四元数。 |
 | `Quaternion ( float theX, float theY = 0, float theZ = 0, float theW = 0)` | 根据四个分量值构建四元数。 |
-
-
 
 ## 表 6.4 续
 
@@ -3856,7 +3962,7 @@ w = m * v;
 Quaternion slerp ( const Quaternion& q1, const Quaternion& q2, float t );
 ```
 
-这里 `q1` 和 `q2` 四元数分别指定初始方向和最终方向，而落在 [0, 1] 区间内的 `t` 参数是插值参数。`slerp` 方法使得从一个方向平滑地过渡到另一个方向成为可能。你不能为此目的使用旋转矩阵的线性插值，因为插值过程中得到的矩阵不一定是旋转矩阵（而且，它们甚至可能是奇异矩阵）。
+这里 `q1` 和 `q2` 四元数分别指定初始方向和最终方向，而落在 `[0, 1]` 区间内的 `t` 参数是插值参数。`slerp` 方法使得从一个方向平滑地过渡到另一个方向成为可能。你不能为此目的使用旋转矩阵的线性插值，因为插值过程中得到的矩阵不一定是旋转矩阵（而且，它们甚至可能是奇异矩阵）。
 
 ## 第 7 章：使用扩展。libExt 库
 
@@ -3875,9 +3981,13 @@ typedef void (APIENTRY * PFNGLFOGCOORDEXTPROC)(GLfloat coord);
 因此，`PFNGLFOGCOORDEXTPROC` 类型是指向 `glFogCoordEXT` 函数的指针类型。
 
 如果你如下定义 `glFogCoordEXT` 变量：
-`PFNGLFOGCOORDEXTPROC glFogCoordEXT;` 
+
+`PFNGLFOGCOORDEXTPROC glFogCoordEXT;`
+
 并为其分配该函数的地址，那么以下结构
-`glFogCoordEXT (0.5f);` 
+
+`glFogCoordEXT (0.5f);`
+
 将是对该扩展定义的 `glFogCoordEXT` 函数的正确调用。这种变量的使用方式看起来就像调用任何 OpenGL 标准函数一样。
 
 遗憾的是，通过名称获取函数地址的方法强烈依赖于平台。例如，在 Windows 中使用 `wglGetProcAddress` 函数，而在 X Windows System 中使用 `glXGetProcAddressARB` 函数。
@@ -3940,8 +4050,6 @@ assertExtensionsSupported("GL_ARB_shading_language_100 \
 
 **注意**：为了避免调用不受支持的扩展函数而产生的问题，请在程序开始时检查你所需的扩展是否受支持。
 
-
-
 ## 第 8 章：libTexture 和 libTexture3D 库
 
 遗憾的是，OpenGL 和 GLUT 并不支持从文件中加载纹理。只有 GLAUX 库允许你加载某些类型的 BMP 文件。
@@ -4000,7 +4108,9 @@ bool addSearchPath (const char * path);
 
 一种类似的方法被用于将特定格式（数据文件中使用的格式）的纹理解码为可以使用 OpenGL 工具加载的图像。此类图像由 `Texture` 类（代码清单 8.2）和 `CompressedTexture` 类（图 8.2）的实例表示。
 
-### 代码清单 8.2. Texture 类
+### 代码清单 8.2. `Texture` 类
+
+
 
 ```cpp
 class Texture
@@ -4089,7 +4199,7 @@ public:
 
 **图 8.3.** 纹理加载类的层级结构
 
-`load` 方法用于根据文件数据创建可加载的图像。`libTexture` 库支持一组通过文件扩展名（BMP, JPG, PNG 等）识别的解码器。
+`load` 方法用于根据文件数据创建可加载的图像。`libTexture` 库支持一组通过文件扩展名（BMP、JPG、PNG 等）识别的解码器。
 
 当你需要添加对新纹理格式的支持时，只需通过继承 `TextureLoader` 类创建相应的纹理加载类，并使用 `addDecoder` 函数将其添加到加载器列表中即可：
 
@@ -4119,7 +4229,7 @@ unsigned createNormalMap (bool mipmap, const char * fileName);
 
 `createNormalMapFromHeightMap` 函数允许你指定一个高度图文件并获取相应的法线贴图。`scale` 参数影响贴图的“不平整”程度：参数值越小，生成的法线贴图越平滑。
 
-此外，libTexture 库还引入了几个实用的函数：
+此外，`libTexture` 库还引入了几个实用的函数：
 
 ```cpp
 Data *getFile (const char * fileName);
@@ -4145,8 +4255,6 @@ string buildFileName (const string& path, const string& name);
 `fileExist` 函数检查是否存在名为 `fileName` 的文件。在搜索文件时，它不使用已注册的数据源。
 
 `getPath` 函数根据文件的全名 `fullName` 返回该文件的路径。
-
-
 
 `getFileName` 函数通过文件的全名 `fullName` 返回文件名（包含扩展名）。
 
@@ -4191,9 +4299,11 @@ unsigned createTexture3D (bool mipmap, Data * data);
 更方便的方法是使用 `glCopyTexSubImage2D` 函数将图像的一个矩形片段直接从帧缓冲复制到纹理中。在这种情况下，复制发生在显存之间，绕过了 CPU（图 9.2）。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_144_0.png)
+
 **图 9.1.** 使用 `glReadPixels` 函数渲染到纹理
 
 ![](img/0195f4c0347b99a95028b956b67109ca_144_1.png)
+
 **图 9.2.** 使用 `glCopyTexSubImage2D` 函数渲染到纹理
 
 虽然这种方法比之前的方法有效得多，但它仍然涉及显式的复制操作，并且需要访问用于主图像的帧缓冲。
@@ -4262,8 +4372,6 @@ HPBUFFER wglCreatePbufferARB (HDC hDC, int format, int width,
                                     int height, const int * attrs);
 ```
 
-
-
 其参数如下：`hDc` 是在前一阶段获取的设备上下文，`format` 是要创建的 p-buffer 的像素格式标识符，`width` 和 `height` 指定 p-buffer 的大小（以像素为单位），`attrs` 传递额外的整数参数，就像使用 `wglChoosePixelFormatARB` 函数一样。
 
 该函数返回新创建的 p-buffer 的句柄，如果发生错误则返回 `NULL`。
@@ -4297,17 +4405,19 @@ HGLRC wglCreateContext (HDC hBufDc);
 BOOL wglMakeCurrent (HDC hBufDc, HGLRC hBufRc);
 ```
 
+
+
 `hBufDc` 和 `hBufRc` 参数分别是该 p-buffer 的设备上下文和渲染上下文。
 
-要将输出重定向回窗口，请调用 `wglMakeCurrent` 函数，并传递指定目标窗口的参数。在使用 GLUT 库时，您可以为此目的调用 `glutSetWindow` 函数，并向其传递窗口的整数句柄。
+要将输出重定向回窗口，请调用`wglMakeCurrent`函数，并传递指定目标窗口的参数。在使用 GLUT 库时，您可以为此目的调用`glutSetWindow`函数，并向其传递窗口的整数句柄。
 
 ## 销毁 p-Buffer
 
 要销毁 p-buffer（即释放其使用的资源），请按以下步骤操作：
 
-- 1. 销毁 p-buffer 渲染上下文。
-- 2. 释放设备上下文。
-- 3. 销毁 p-buffer。
+1. 销毁 p-buffer 渲染上下文。
+2. 释放设备上下文。
+3. 销毁 p-buffer。
 
 这些操作可以通过以下代码片段完成：
 
@@ -4328,58 +4438,65 @@ int flag;
 wglQueryPbufferARB(hBuffer, WGL_PBUFFER_LOST_ARB, &flag);
 ```
 
-如果 `flag` 变量的值不等于零，这意味着 p-buffer 已损坏且无法再使用。在这种情况下，您应该将其销毁并按照前文所述重新创建。
+如果`flag`变量的值不等于零，这意味着 p-buffer 已损坏且无法再使用。在这种情况下，您应该将其销毁并按照前文所述重新创建。
 
 ## 将数据从 p-Buffer 复制到纹理
 
-在成功创建 p-buffer 并向其输出一些数据后，您可以调用 `glCopyTexSubImage2D` 函数将 p-buffer 的内容（或其一部分）复制到纹理中。
+在成功创建 p-buffer 并向其输出一些数据后，您可以调用`glCopyTexSubImage2D`函数将 p-buffer 的内容（或其一部分）复制到纹理中。
 
 但请记住，在 Windows 中，不同的渲染上下文具有不同的属性集，例如显示列表、纹理等。因此，如果您希望写入使用特定纹理的渲染结果，则需要将该纹理显式加载到此上下文中。
 
-或者，您可以使用 `wglShareLists` 函数，该函数允许将显示列表和纹理从一个渲染上下文复制到另一个渲染上下文：
+或者，您可以使用`wglShareLists`函数，该函数允许将显示列表和纹理从一个渲染上下文复制到另一个渲染上下文：
 
 ```cpp
 BOOL wglShareLists(HGLRC hGLRcFrom, HGLRC hGLRcTo);
 ```
 
-`hGLRcFrom` 和 `hGLRcTo` 参数分别指定源上下文和目标上下文。
+`hGLRcFrom`和`hGLRcTo`参数分别指定源上下文和目标上下文。
 
 ## 将 p-Buffer 绑定到纹理
 
-当支持 `WGL_ARB_render_texture` 扩展时，您可以直接将 p-buffer 作为纹理的数据源，而无需复制像素。
+当支持`WGL_ARB_render_texture`扩展时，您可以直接将 p-buffer 作为纹理的数据源，而无需复制像素。
 
 在这种情况下，p-buffer 将被绑定到一个相应的纹理。在绑定期间，纹理包含此 p-buffer 颜色缓冲区的内容，而 p-buffer 本身则不可用于渲染。当您需要向 p-buffer 输出时，必须先将其从纹理中释放。
 
 您还可以将 p-buffer 绑定到纹理立方体映射（cube map）中。在这种情况下，渲染时您需要告知 p-buffer 您将输出到立方体的哪个面。
 
-此外，您可以使用 mipmap 过滤，但这要求您要么显式指定所有中间级别，要么使用前面讨论的 `GL_SGIS_generate_mipmap` 扩展，该扩展可以自动为指定纹理构建所有中间级别。
+此外，您可以使用 mipmap 过滤，但这要求您要么显式指定所有中间级别，要么使用前面讨论的`GL_SGIS_generate_mipmap`扩展，该扩展可以自动为指定纹理构建所有中间级别。
 
 如果绑定到纹理的 p-buffer 因为视频模式切换而失效，纹理的内容不会失真并保持可用。
 
 p-buffer 从纹理解除绑定后，其颜色缓冲区的内容可能会变得未定义。
 
-在将 p-buffer 分配给纹理后，您需要使用 `wglChoosePixelFormatARB` 和 `wglCreatePBufferARB` 函数设置额外的属性。
+在将 p-buffer 分配给纹理后，您需要使用`wglChoosePixelFormatARB`和`wglCreatePBufferARB`函数设置额外的属性。
 
-- `wglChoosePixelFormatARB` 函数的两个额外属性是 `WGL_BIND_TO_TEXTURE_RGB_ARB` 或 `WGL_BIND_TO_TEXTURE_RGBA_ARB`。通过将其中一个设置为非零值，您告知 p-buffer 支持绑定到 RGB（或 RGBA）纹理。
-- `wglCreatePBufferARB` 函数有两个额外属性：
-    - `WGL_TEXTURE_TARGET_ARB` 可以取以下值之一：`WGL_TEXTURE_1D_ARB`、`WGL_TEXTURE_2D_ARB` 或 `WGL_TEXTURE_CUBE_MAP_ARB`，分别指定一维、二维或三维纹理。
-    - `WGL_MIPMAP_TEXTURE_ARB`（当设置为非零值时）表示应为 mipmap 过滤的所有中间级别分配内存。
+- `wglChoosePixelFormatARB`函数的两个额外属性是`WGL_BIND_TO_TEXTURE_RGB_ARB`或`WGL_BIND_TO_TEXTURE_RGBA_ARB`。通过将其中一个设置为非零值，您告知 p-buffer 支持绑定到 RGB（或 RGBA）纹理。
 
-要将 p-buffer 绑定到当前纹理，请使用 `wglBindTextureImageARB` 函数：
-`BOOL wglBindTextureImageARB (HBUFFER hBuffer, int buf);`
+- `wglCreatePBufferARB`函数有两个额外属性：
+  - `WGL_TEXTURE_TARGET_ARB`可以取以下值之一：`WGL_TEXTURE_1D_ARB`、`WGL_TEXTURE_2D_ARB`或`WGL_TEXTURE_CUBE_MAP_ARB`，分别指定一维、二维或三维纹理。
+  - `WGL_MIPMAP_TEXTURE_ARB`（当设置为非零值时）表示应为 mipmap 过滤的所有中间级别分配内存。
 
-`buf` 参数决定 p-buffer 的哪个缓冲区应绑定到当前纹理。它可以取以下任何值：`WGL_FRONT_LEFT_ARB`、`WGL_FRONT_RIGHT_ARB`、`WGL_BACK_LEFT_ARB`、`WGL_BACK_RIGHT_ARB`、`WGL_AUX0_ARB`、`WGL_AUX1_ARB` 等等。
+要将 p-buffer 绑定到当前纹理，请使用`wglBindTextureImageARB`函数：
+
+```cpp
+BOOL wglBindTextureImageARB (HBUFFER hBuffer, int buf);
+```
+
+`buf`参数决定 p-buffer 的哪个缓冲区应绑定到当前纹理。它可以取以下任何值：`WGL_FRONT_LEFT_ARB`、`WGL_FRONT_RIGHT_ARB`、`WGL_BACK_LEFT_ARB`、`WGL_BACK_RIGHT_ARB`、`WGL_AUX0_ARB`、`WGL_AUX1_ARB`等等。
 
 执行此命令后，p-buffer 与当前纹理绑定，您无法再对其进行渲染。
 
-要将 p-buffer 从纹理中释放，请使用 `wglReleaseTextureImageARB` 函数：
-`BOOL wglReleaseTextureImageARB (HBUFFER hBuffer, int buf);`
+要将 p-buffer 从纹理中释放，请使用`wglReleaseTextureImageARB`函数：
 
-将 p-buffer 绑定到纹理立方体映射时，您需要调用 `wglSetPBufferAttribARB` 函数来设置数据应输出到的立方体面。`WGL_CUBE_MAP_FACE_ARB` 属性可以取以下任何值：
+```cpp
+BOOL wglReleaseTextureImageARB (HBUFFER hBuffer, int buf);
+```
+
+将 p-buffer 绑定到纹理立方体映射时，您需要调用`wglSetPBufferAttribARB`函数来设置数据应输出到的立方体面。`WGL_CUBE_MAP_FACE_ARB`属性可以取以下任何值：
 
 `WGL_TEXTURE_CUBE_MAP_POSITIVE_X_ARB`、`WGL_TEXTURE_CUBE_MAP_NEGATIVE_X_ARB`、`WGL_TEXTURE_CUBE_MAP_POSITIVE_Y_ARB`、`WGL_TEXTURE_CUBE_MAP_NEGATIVE_Y_ARB`、`WGL_TEXTURE_CUBE_MAP_POSITIVE_Z_ARB`、`WGL_TEXTURE_CUBE_MAP_NEGATIVE_Z_ARB`。
 
-请注意，在选择纹理立方体映射的面之前，应调用 `glFlush()` 函数。
+请注意，在选择纹理立方体映射的面之前，应调用`glFlush()`函数。
 
 ## Windows 下 p-Buffer 的实现
 
@@ -4476,8 +4593,6 @@ public:
 #endif
 ```
 
-
-
 ```cpp
 void printLastError();
 
@@ -4495,7 +4610,6 @@ enum Mode
     modeTexture2D        = 64,
     modeTextureCubeMap   = 128,
     modeTextureMipmap    = 256
-};
 };
 #endif
 ```
@@ -4516,25 +4630,25 @@ enum Mode
 | `modeTextureCubeMap` | 绑定到立方体贴图纹理。 |
 | `modeTextureMipmap` | 应使用 Mipmap 过滤。 |
 
-`create` 和 `clear` 方法用于创建和销毁 p-buffer。创建时，将使用传递给构造函数的参数。
+`create`和`clear`方法用于创建和销毁 p-buffer。创建时，将使用传递给构造函数的参数。
 
-`makeCurrent` 方法将 p-buffer 设置为当前的输出目标。调用 `makeCurrent` 方法之前当前的那个目标会被存储在内存中，并且可以使用 `restoreCurrent` 方法将其恢复。
+`makeCurrent`方法将 p-buffer 设置为当前的输出目标。调用`makeCurrent`方法之前当前的那个目标会被存储在内存中，并且可以使用`restoreCurrent`方法将其恢复。
 
-如果 p-buffer 损坏，`isLost` 方法将返回 `true`。在这种情况下，你应该首先调用 `clear` 方法，然后使用 `create` 方法重新创建 p-buffer。
+如果 p-buffer 损坏，`isLost`方法将返回`true`。在这种情况下，你应该首先调用`clear`方法，然后使用`create`方法重新创建 p-buffer。
 
-`bindToTexture` 和 `unbindFromTexture` 方法用于将 p-buffer 绑定到当前纹理或从中释放。
+`bindToTexture`和`unbindFromTexture`方法用于将 p-buffer 绑定到当前纹理或从中释放。
 
-`setCubemapSide` 方法指定立方体贴图的一个面，渲染将在该面上进行。此方法会自动调用 `glFlush` 函数。
+`setCubemapSide`方法指定立方体贴图的一个面，渲染将在该面上进行。此方法会自动调用`glFlush`函数。
 
-`printLastError` 方法将最后一次错误的内容写入 `stderr` 输出流。这在调试应用程序时会非常有帮助。
+`printLastError`方法将最后一次错误的内容写入`stderr`输出流。这在调试应用程序时会非常有帮助。
 
-`checkExtensions` 方法检查是否支持与 p-buffer 协作所需的扩展。
+`checkExtensions`方法检查是否支持与 p-buffer 协作所需的扩展。
 
 ## 在 Linux 中使用 p-Buffer
 
-要在 Linux 中使用 p-buffer，你需要 `GLX_SGIBX_pbuffer` 和 `GLX_SGIBX_fbconfig` 扩展。
+要在 Linux 中使用 p-buffer，你需要`GLX_SGIBX_pbuffer`和`GLX_SGIBX_fbconfig`扩展。
 
-与 Windows 类似，你需要先获取当前上下文。然而，在 Linux 中这稍微复杂一些，它由三个组件组成：一个指向 `Display` 对象的指针、一个整数类型的屏幕句柄以及上下文本身：
+与 Windows 类似，你需要先获取当前上下文。然而，在 Linux 中这稍微复杂一些，它由三个组件组成：一个指向`Display`对象的指针、一个整数类型的屏幕句柄以及上下文本身：
 
 ```cpp
 Display * display = glXGetCurrentDisplay ();
@@ -4542,7 +4656,7 @@ GLXContext context = glXGetCurrentContext ();
 int screen = DefaultScreen (display);
 ```
 
-然后，你应该调用 `glXChooseFBConfig` 函数来获取符合以下要求的格式列表：
+然后，你应该调用`glXChooseFBConfig`函数来获取符合以下要求的格式列表：
 
 ```cpp
 GLXFBConfig * glXChooseFBConfig (Display * display, int screen,
@@ -4550,14 +4664,14 @@ GLXFBConfig * glXChooseFBConfig (Display * display, int screen,
                                   int * numConfigs);
 ```
 
-参数包括：`display` 和 `screen` 确定格式选择的目标，`attrList` 是一个属性列表指针（它是一个由（名称, 值）对组成的数组，并以零值结束，就像在 Windows 中一样），`numConfigs` 返回找到的格式数量。
+参数包括：`display`和`screen`确定格式选择的目标，`attrList`是一个属性列表指针（它是一个由（名称, 值）对组成的数组，并以零值结束，就像在 Windows 中一样），`numConfigs`返回找到的格式数量。
 
-## 表 9.3. `glXChooseFBConfig` 函数的主要属性
+## 表 9.3. `glXChooseFBConfig`函数的主要属性
 
 | 名称 | 值 |
 | :--- | :--- |
-| `GLX_DRAWABLE_TYPE_SGIX` | 确定输出目标。使用 `GLX_PBUFFER_BIT_SGIX` 值。 |
-| `GLX_RENDER_TYPE_SGIX` | 指定输出表面类型。使用 `GLX_RGBA_BIT_SGIX` 值。 |
+| `GLX_DRAWABLE_TYPE_SGIX` | 确定输出目标。使用`GLX_PBUFFER_BIT_SGIX`值。 |
+| `GLX_RENDER_TYPE_SGIX` | 指定输出表面类型。使用`GLX_RGBA_BIT_SGIX`值。 |
 | `GLX_DOUBLE_BUFFER` | 非零值表示应使用双缓冲。 |
 | `GLX_RED_SIZE` | 红色通道值的最小位数。 |
 | `GLX_GREEN_SIZE` | 绿色通道值的最小位数。 |
@@ -4570,7 +4684,7 @@ GLXFBConfig * glXChooseFBConfig (Display * display, int screen,
 | `GLX_ACCUM_BLUE_SIZE` | 累积缓冲区蓝色通道值的最小位数。 |
 | `GLX_ACCUM_ALPHA_SIZE` | 累积缓冲区 Alpha 通道值的最小位数。 |
 
-在你获得合适的帧缓冲区格式后，可以使用 `glXCreateGLXPbuffersSGIX` 函数创建 p-buffer：
+在你获得合适的帧缓冲区格式后，可以使用`glXCreateGLXPbuffersSGIX`函数创建 p-buffer：
 
 ```cpp
 GLXPbuffer glXCreateGLXPbuffersSGIX (Display * display,
@@ -4580,22 +4694,24 @@ GLXPbuffer glXCreateGLXPbuffersSGIX (Display * display,
                                       int * attrlist);
 ```
 
-其参数为：`display` 是创建 p-buffer 的对象，`config` 是 p-buffer 的像素格式，`width` 和 `height` 指定 p-buffer 的期望尺寸，`attrList` 允许你传递额外的参数。
+其参数为：`display`是创建 p-buffer 的对象，`config`是 p-buffer 的像素格式，`width`和`height`指定 p-buffer 的期望尺寸，`attrList`允许你传递额外的参数。
 
 与 Windows 不同，使用此方法创建的 p-buffer 在从一种视频模式切换到另一种模式时不会损坏。
 
 要获取 p-buffer 的实际尺寸，可以使用以下代码片段：
+
+
 
 ```cpp
 glXQueryGLXPbufferSGIX (display, hBuffer, GLX_WIDTH_SGIX, (unsigned *)&width );
 glXQueryGLXPbufferSGIX (display, hBuffer, GLX_HEIGHT_SGIX, (unsigned *)&height);
 ```
 
-不幸的是，Linux 缺少类似于 `WGL_render_texture` 的扩展，因此你需要使用 `glCopyTexSubImage2D` 函数显式地将图像从 p-buffer 复制到纹理中。
+不幸的是，Linux 缺少类似于`WGL_render_texture`的扩展，因此你需要使用`glCopyTexSubImage2D`函数显式地将图像从 p-buffer 复制到纹理中。
 
 就像在 Windows 中一样，我们将 p-buffer 封装在一个具有公共接口的类中，以便在跨平台应用程序中使用 p-buffer（代码清单 9.4）。
 
-## 代码清单 9.4. 用于 Linux 的 `PBuffer` 类
+## 代码清单 9.4：用于 Linux 的`PBuffer`类
 
 ```cpp
 #ifndef __P_BUFFER__
@@ -4687,24 +4803,22 @@ public:
 #endif
 ```
 
-## EXT_framebuffer_object 扩展
+## `EXT_framebuffer_object`扩展
 
 虽然许多图形加速器都支持 p-buffer，但它们有一些缺点：
 
 - 与 p-buffer 的协作强烈依赖于平台。虽然前述的实现几乎是平台无关的，但其特性在不同平台上有所不同。
 - 每个 p-buffer 都有自己的渲染上下文。这导致切换操作（切换到 p-buffer、从一个 p-buffer 切换到另一个，或从 p-buffer 切换到帧缓冲区）需要额外开销并降低应用程序的性能。
 - 每个 p-buffer 都有自己的一套内部缓冲区（颜色缓冲区、深度缓冲区、模板缓冲区等），多个 p-buffer 无法共享同一个内部缓冲区。
-- 选择像素格式的机制相当复杂且取决于特定平台（尽管使用 `PBuffer` 类为程序员隐藏了这一点）。
+- 选择像素格式的机制相当复杂且取决于特定平台（尽管使用`PBuffer`类为程序员隐藏了这一点）。
 
 尽管有这些缺陷，但长期以来，p-buffer 一直是渲染到纹理的唯一合理选择。
 
-在 EXT_framebuffer_object 扩展发布后，情况得到了改善。它是一个简单且平台无关的 p-buffer 替代方案。
+在`EXT_framebuffer_object`扩展发布后，情况得到了改善。它是一个简单且平台无关的 p-buffer 替代方案。
 
-EXT_framebuffer_object 扩展提供的功能不依赖于任何平台或窗口系统。
+`EXT_framebuffer_object`扩展提供的功能不依赖于任何平台或窗口系统。
 
-此外，使用该扩展引入的帧缓冲区不需要创建额外的渲染上下文，这使得切换操作（包括...
-
-（切换到窗口系统的主帧缓冲）比使用 p-buffer 快得多。
+此外，使用该扩展引入的帧缓冲区不需要创建额外的渲染上下文，这使得切换操作（包括切换到窗口系统的主帧缓冲）比使用 p-buffer 快得多。
 
 选择像素格式也比 p-buffer 简单得多。
 
@@ -4721,30 +4835,31 @@ EXT_framebuffer_object 扩展提供的功能不依赖于任何平台或窗口系
 应用程序可以使用许多帧缓冲对象（从现在起，我将把它们简称为帧缓冲），但它们分为由窗口系统创建的原始帧缓冲（ID 为零）和由应用程序创建的帧缓冲（这些由不等于零的无符号整数标识）。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_158_0.png)
-**图 9.3. FBO 的结构**
+
+**图 9.3：FBO 的结构**
 
 应用程序可以将一个可用的帧缓冲设置为当前状态并将其绑定到纹理。随后，该帧缓冲的逻辑缓冲可以在所有的片元操作（读取和写入）中使用。
 
 每个帧缓冲由一个无符号整数（`GLuint`）标识，零被预留给由窗口系统创建的帧缓冲。
 
-绑定帧缓冲使用 `glBindFramebufferEXT` 函数完成：
+绑定帧缓冲使用`glBindFramebufferEXT`函数完成：
 
 ```c
 void glBindFramebufferEXT (GLenum target, GLuint id);
 ```
 
-`target` 参数始终等于 `GL_FRAMEBUFFER_EXT` 常量，`id` 参数是帧缓冲的 ID。
+`target`参数始终等于`GL_FRAMEBUFFER_EXT`常量，`id`参数是帧缓冲的 ID。
 
-可以使用 `glGenFramebuffersEXT` 和 `glDeleteFramebuffersEXT` 函数生成和删除一组帧缓冲标识符：
+可以使用`glGenFramebuffersEXT`和`glDeleteFramebuffersEXT`函数生成和删除一组帧缓冲标识符：
 
 ```c
 void glGenFramebuffersEXT (GLsizei count, GLuint * ids);
 void glDeleteFramebuffersEXT (GLsizei count, GLuint * ids);
 ```
 
-与其它类似函数一样，`count` 参数决定应分配多少个 ID，`ids` 参数是一个指向数组的指针，ID 将写入该数组。
+与其它类似函数一样，`count`参数决定应分配多少个 ID，`ids`参数是一个指向数组的指针，ID 将写入该数组。
 
-要检查给定的无符号整数 `id` 是否为帧缓冲的标识符，可以使用 `glIsFramebufferEXT` 函数：
+要检查给定的无符号整数`id`是否为帧缓冲的标识符，可以使用`glIsFramebufferEXT`函数：
 
 ```c
 GLboolean glIsFramebufferEXT (GLuint id);
@@ -4752,31 +4867,31 @@ GLboolean glIsFramebufferEXT (GLuint id);
 
 对于帧缓冲的逻辑缓冲，你可以使用纹理或渲染缓冲。每个渲染缓冲由一个不等于零的无符号整数标识。
 
-可以使用 `glGenRenderbuffersEXT` 和 `glDeleteRenderbuffersEXT` 函数生成和删除一组渲染缓冲标识符：
+可以使用`glGenRenderbuffersEXT`和`glDeleteRenderbuffersEXT`函数生成和删除一组渲染缓冲标识符：
 
 ```c
 void glGenRenderbuffersEXT (GLsizei count, GLuint * ids);
 void glDeleteRenderbuffersEXT (GLsizei count, GLuint * ids);
 ```
 
-要检查给定的无符号整数 `id` 是否为渲染缓冲的标识符，可以使用 `glIsRenderbufferEXT` 函数：
+要检查给定的无符号整数`id`是否为渲染缓冲的标识符，可以使用`glIsRenderbufferEXT`函数：
 
 ```c
 GLboolean glIsRenderbufferEXT (GLuint id);
 ```
 
-在使用逻辑缓冲之前，你应该使用 `glRenderbufferStorageEXT` 函数指定其大小和像素格式：
+在使用逻辑缓冲之前，你应该使用`glRenderbufferStorageEXT`函数指定其大小和像素格式：
 
 ```c
 void glRenderbufferStorageEXT (GLenum target, GLenum internalFormat, 
     GLsizei width, GLsizei height);
 ```
 
-其参数如下：`target` 始终等于 `GL_RENDERBUFFER_EXT`，`width` 和 `height` 指定渲染缓冲的像素尺寸，`internalFormat` 指定缓冲像素的内部格式。
+其参数如下：`target`始终等于`GL_RENDERBUFFER_EXT`，`width`和`height`指定渲染缓冲的像素尺寸，`internalFormat`指定缓冲像素的内部格式。
 
-在最后一个参数中，你可以指定一个常见的纹理格式（例如 `GL_RGBA8` 或 `GL_DEPTH_COMPONENT24`）或表 9.4 中列出的任何特殊模板缓冲格式。
+在最后一个参数中，你可以指定一个常见的纹理格式（例如`GL_RGBA8`或`GL_DEPTH_COMPONENT24`）或表 9.4 中列出的任何特殊模板缓冲格式。
 
-## 表 9.4. 可用的内部格式类型
+## 表 9.4：可用的内部格式类型
 
 | 格式类型 | 数值 |
 | :--- | :--- |
@@ -4785,7 +4900,7 @@ void glRenderbufferStorageEXT (GLenum target, GLenum internalFormat,
 | `GL_STENCIL_INDEX8_EXT` | 8 位模板缓冲（每像素 8 位） |
 | `GL_STENCIL_INDEX16_EXT` | 16 位模板缓冲（每像素 16 位） |
 
-要将渲染缓冲作为逻辑缓冲附加到当前帧缓冲，可以使用 `glFramebufferRenderbufferEXT` 函数：
+要将渲染缓冲作为逻辑缓冲附加到当前帧缓冲，可以使用`glFramebufferRenderbufferEXT`函数：
 
 ```cpp
 void glFramebufferRenderbufferEXT (GLenum target, GLenum attachment,
@@ -4793,7 +4908,7 @@ void glFramebufferRenderbufferEXT (GLenum target, GLenum attachment,
                                    GLuint rbId);
 ```
 
-`target` 参数等于 `GL_FRAMEBUFFER_EXT`，`rbTarget` 参数等于 `GL_RENDERBUFFER_EXT`。`attachment` 参数指定 `rbId` 渲染缓冲应成为哪个逻辑缓冲。此参数可以取以下任何值：`GL_COLOR_ATTACHMENT0_EXT`、`GL_COLOR_ATTACHMENT1_EXT`、...、`GL_DEPTH_ATTACHMENT_EXT` 或 `GL_STENCIL_ATTACHMENT_EXT`。
+`target`参数等于`GL_FRAMEBUFFER_EXT`，`rbTarget`参数等于`GL_RENDERBUFFER_EXT`。`attachment`参数指定`rbId`渲染缓冲应成为哪个逻辑缓冲。此参数可以取以下任何值：`GL_COLOR_ATTACHMENT0_EXT`、`GL_COLOR_ATTACHMENT1_EXT`、...、`GL_DEPTH_ATTACHMENT_EXT`或`GL_STENCIL_ATTACHMENT_EXT`。
 
 以下代码片段允许你查询可以附加的最大逻辑颜色缓冲数量：
 
@@ -4802,9 +4917,9 @@ int maxColorAttachments;
 glGetIntegerv(GL_MAX_COLOR_ATTACHMENTS_EXT, &maxColorAttachments);
 ```
 
-如果你将 `rbId` 参数传为零，渲染缓冲将从当前帧缓冲中分离。
+如果你将`rbId`参数传为零，渲染缓冲将从当前帧缓冲中分离。
 
-要将纹理作为逻辑缓冲附加到帧缓冲，请使用 `glFramebufferTexture1DEXT`、`glFramebufferTexture2DEXT` 或 `glFramebufferTexture3DEXT` 函数：
+要将纹理作为逻辑缓冲附加到帧缓冲，请使用`glFramebufferTexture1DEXT`、`glFramebufferTexture2DEXT`或`glFramebufferTexture3DEXT`函数：
 
 ```cpp
 void glFramebufferTexture1DEXT (GLenum target, GLenum attachment,
@@ -4820,43 +4935,43 @@ void glFramebufferTexture3DEXT (GLenum target, GLenum attachment,
 
 你可以附加一维或二维纹理、立方体贴图的面，或 3D 纹理的层。
 
-`target` 参数始终等于 `GL_FRAMEBUFFER_EXT`，`attachment` 参数指定纹理应成为哪个逻辑缓冲。此参数可以取以下任何值：`GL_COLOR_ATTACHMENT0`、`GL_COLOR_ATTACHMENT1_EXT`、...、`GL_DEPTH_ATTACHMENT_EXT` 或 `GL_STENCIL_ATTACHMENT_EXT`。
+`target`参数始终等于`GL_FRAMEBUFFER_EXT`，`attachment`参数指定纹理应成为哪个逻辑缓冲。此参数可以取以下任何值：`GL_COLOR_ATTACHMENT0`、`GL_COLOR_ATTACHMENT1_EXT`、...、`GL_DEPTH_ATTACHMENT_EXT`或`GL_STENCIL_ATTACHMENT_EXT`。
 
-定义所用纹理类型的 `texTarget` 参数可以取 `GL_TEXTURE_nD` 值或以下任何值：`GL_TEXTURE_CUBE_MAP_POSITIVE_X` ... 或 `GL_TEXTURE_CUBE_MAP_NEGATIVE_Z`。
+定义所用纹理类型的`texTarget`参数可以取`GL_TEXTURE_nD`值或以下任何值：`GL_TEXTURE_CUBE_MAP_POSITIVE_X`...或`GL_TEXTURE_CUBE_MAP_NEGATIVE_Z`。
 
-`level` 参数指定应作为逻辑缓冲的纹理级别（在 mipmap 金字塔中）。
+`level`参数指定应作为逻辑缓冲的纹理级别（在 mipmap 金字塔中）。
 
-`zOffset` 参数指定 3D 纹理的偏移量。
+`zOffset`参数指定 3D 纹理的偏移量。
 
 > 帧缓冲对象应符合某些要求。例如，其逻辑缓冲应具有相同的大小，且它们的格式应与用途（附加类型）相对应。当附加多个颜色缓冲时，它们必须具有相同的内部格式。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_161_0.png)
 
-要检查帧缓冲状态（即检查是否可以对其进行渲染），请使用 `glCheckFramebufferStatusEXT` 函数：
+要检查帧缓冲状态（即检查是否可以对其进行渲染），请使用`glCheckFramebufferStatusEXT`函数：
 
 ```c
 GLenum glCheckFramebufferStatusEXT(GLenum target);
 ```
 
-将 `GL_FRAMEBUFFER_EXT` 常量作为 `target` 参数。一些可能的返回值包括：
+将`GL_FRAMEBUFFER_EXT`常量作为`target`参数。一些可能的返回值包括：
 
-`GL_FRAMEBUFFER_COMPLETE_EXT`、`GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT_EXT`、`GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT_EXT`、`GL_FRAMEBUFFER_INCOMPLETE_DUPLICATE_ATTACHMENT_EXT`、`GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS_EXT`、`GL_FRAMEBUFFER_INCOMPLETE_FORMATS_EXT`、`GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER_EXT`、`GL_FRAMEBUFFER_INCOMPLETE_READ_BUFFER_EXT`、`GL_FRAMEBUFFER_UNSUPPORTED_EXT` 以及 `GL_FRAMEBUFFER_STATUS_ERROR_EXT`。
+`GL_FRAMEBUFFER_COMPLETE_EXT`、`GL_FRAMEBUFFER_INCOMPLETE_ATTACHMENT_EXT`、`GL_FRAMEBUFFER_INCOMPLETE_MISSING_ATTACHMENT_EXT`、`GL_FRAMEBUFFER_INCOMPLETE_DUPLICATE_ATTACHMENT_EXT`、`GL_FRAMEBUFFER_INCOMPLETE_DIMENSIONS_EXT`、`GL_FRAMEBUFFER_INCOMPLETE_FORMATS_EXT`、`GL_FRAMEBUFFER_INCOMPLETE_DRAW_BUFFER_EXT`、`GL_FRAMEBUFFER_INCOMPLETE_READ_BUFFER_EXT`、`GL_FRAMEBUFFER_UNSUPPORTED_EXT`以及`GL_FRAMEBUFFER_STATUS_ERROR_EXT`。
 
-如果帧缓冲已就绪，则返回 `GL_FRAMEBUFFER_COMPLETE_EXT`。`GL_FRAMEBUFFER_UNSUPPORTED_EXT` 值表示你应该尝试另一种缓冲格式组合。
+如果帧缓冲已就绪，则返回`GL_FRAMEBUFFER_COMPLETE_EXT`。`GL_FRAMEBUFFER_UNSUPPORTED_EXT`值表示你应该尝试另一种缓冲格式组合。
 
-本扩展引入了 `glGenerateMipmapsEXT` 函数，允许你为 mipmap 过滤的纹理生成所有级别：
+本扩展引入了`glGenerateMipmapsEXT`函数，允许你为 mipmap 过滤的纹理生成所有级别：
 
 ```c
 void glGenerateMipmapsEXT(GLenum target);
 ```
 
-`target` 参数可以取以下任何值：`GL_TEXTURE_1D`、`GL_TEXTURE_2D`、`GL_TEXTURE_CUBE_MAP` 或 `GL_TEXTURE_3D`。
-
-
+`target`参数可以取以下任何值：`GL_TEXTURE_1D`、`GL_TEXTURE_2D`、`GL_TEXTURE_CUBE_MAP`或`GL_TEXTURE_3D`。
 
 将帧缓冲（frame buffer）封装在一个类中，以便封装所有对帧缓冲的操作，这样做非常方便。代码清单 9.4 包含了此类实现的文件头。
 
-## 代码清单 9.4. 将帧缓冲实现为一个类
+## 代码清单 9.4：将帧缓冲实现为一个类
+
+
 
 ```cpp
 class FrameBuffer
@@ -5112,8 +5227,6 @@ unsigned FrameBuffer :: createColorTexture (GLenum format,
     glTexImage2D    (GL_TEXTURE_2D, 0, internalFormat, getWidth (),
 ```
 
-
-
 ```cpp
 getHeight (), 0, format, GL_UNSIGNED_BYTE, NULL);
 
@@ -5155,7 +5268,7 @@ int FrameBuffer :: maxSize ()
 }
 ```
 
-`FrameBuffer` 类的使用示例见*第 15 至 17 章*。
+`FrameBuffer` 类的使用示例见第 15 至 17 章。
 
 ## 第 10 章：摄像机的概念。libCamera 库
 
@@ -5168,18 +5281,24 @@ int FrameBuffer :: maxSize ()
 向量 `view`、`right` 和 `up` 构成了一个正交基，也就是说，它们两两垂直，且长度均等于 1。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_169_1.png)
+
 **图 10.1.** 摄像机坐标系
 
 ![](img/0195f4c0347b99a95028b956b67109ca_170_0.png)
+
 **图 10.2.** 视锥体
 
-由于摄像机用于渲染，它不仅仅是一个普通的坐标系。与之相关的是*视锥体*（view frustum）（图 10.2）。`view` 向量决定了视锥体的方向（更准确地说是其底面的方向），而 `up` 和 `right` 向量决定了其侧面的方向。
 
-视锥体由两个角度 `fovX` 和 `fovY`（此处 FOV 代表 *field of view*，即视野角）以及近剪裁平面和远剪裁平面的距离 `zNear` 和 `zFar` 决定。
 
-因此，指定一个摄像机类似于在 OpenGL 中指定一个透视投影。因此，指定渲染矩形的尺寸 (`width` 和 `height`) 并使用 OpenGL 采用的方法建立 `fovX` 与 `fovY` 之间的关系会非常方便。
+由于摄像机用于渲染，它不仅仅是一个普通的坐标系。与之相关的是*视锥体*（view frustum）（图 10.2）。`view`向量决定了视锥体的方向（更准确地说是其底面的方向），而`up`和`right`向量决定了其侧面的方向。
 
-$$\frac{fovX}{width} \quad \frac{fovY}{height}$$
+视锥体由两个角度`fovX`和`fovY`（此处 FOV 代表 *field of view*，即视野角）以及近剪裁平面和远剪裁平面的距离`zNear`和`zFar`决定。
+
+因此，指定一个摄像机类似于在 OpenGL 中指定一个透视投影。因此，指定渲染矩形的尺寸（`width`和`height`）并使用 OpenGL 采用的方法建立`fovX`与`fovY`之间的关系会非常方便。
+
+```
+fovX / width   fovY / height
+```
 
 然而，虽然 OpenGL 最常使用右手坐标系，但通常有必要使用不同方向的摄像机。
 
@@ -5190,16 +5309,18 @@ $$\frac{fovX}{width} \quad \frac{fovY}{height}$$
 此外，使用三个正交向量来指定摄像机方向并不太方便。为此，使用欧拉角（图 10.4）或四元数会方便得多。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_171_0.png)
+
 **图 10.3.** 反射过程中坐标系方向的改变
 
 ![](img/0195f4c0347b99a95028b956b67109ca_171_1.png)
+
 **图 10.4.** 使用欧拉角指定坐标系的方向
 
-代码清单 10.1 包含了我们从这里开始将要使用的 `Camera` 类的描述。
+代码清单 10.1 包含了我们从这里开始将要使用的`Camera`类的描述。
 
 ### 代码清单 10.1. `Camera` 类
 
-```cpp
+```
 //
 // Camera class for OpenGL
 //
@@ -5216,29 +5337,29 @@ class Quaternion;
 class Camera
 {
     Vector3D pos;            // Camera position
-    Vector3D viewDir;       // Viewing direction
-                            // (normalized)
-    Vector3D upDir;         // Up direction (normalized)
-    Vector3D sideDir;       // Side direction (normalized),
-                            // may be left or right
-                            // depending on the handedness
-                            // of camera
+    Vector3D viewDir;        // Viewing direction
+                             // (normalized)
+    Vector3D upDir;          // Up direction (normalized)
+    Vector3D sideDir;        // Side direction (normalized),
+                             // may be left or right
+                             // depending on the handedness
+                             // of camera
 
-    bool rightHanded;       // Whether camera is
-                            // righthanded
+    bool rightHanded;        // Whether camera is
+                             // righthanded
 
-    bool infinite;          // Whether it uses zFar equal
-                            // to infinity
+    bool infinite;           // Whether it uses zFar equal
+                             // to infinity
 
-    Matrix3D transf;        // Camera transform (from world
-                            // to camera space)
+    Matrix3D transf;         // Camera transform (from world
+                             // to camera space)
 
-    float fov;              // Field of view angle
-    float zNear;            // Near clipping z-value
-    float zFar;             // Far clipping z-value
-    int width;              // View width
-    int height;             // View height
-    float aspect;           // Aspect ratio of camera
+    float fov;               // Field of view angle
+    float zNear;             // Near clipping z-value
+    float zFar;              // Far clipping z-value
+    int width;               // View width
+    int height;              // View height
+    float aspect;            // Aspect ratio of camera
 
 public:
     Camera (const Vector3D& p, float yaw, float pitch, float roll,
@@ -5379,47 +5500,47 @@ private:
 
 让我们讨论一下这个类的主要方法。
 
-该类的构造函数（除空构造函数和拷贝构造函数外）接收摄像机在空间中的位置、视野角 (`fov`)、近远剪裁距离、坐标系方向标志以及摄像机的朝向。
+该类的构造函数（除空构造函数和拷贝构造函数外）接收摄像机在空间中的位置、视野角（`fov`）、近远剪裁距离、坐标系方向标志以及摄像机的朝向。
 
-摄像机的朝向可以使用欧拉角 (`yaw`、`pitch` 和 `roll`) 或四元数来指定。
+摄像机的朝向可以使用欧拉角（`yaw`、`pitch`和`roll`）或四元数来指定。
 
-`getPos`、`getViewDir` 和 `getUpDir` 方法用于访问当前摄像机的位置及其两个方向（视线方向和上方向）。
+`getPos`、`getViewDir`和`getUpDir`方法用于访问当前摄像机的位置及其两个方向（视线方向和上方向）。
 
-由于侧向量的方向取决于坐标系的方向（右手或左手），因此该方向被命名为 *side*（侧向），并通过 `getSideDir` 方法返回。
+由于侧向量的方向取决于坐标系的方向（右手或左手），因此该方向被命名为 *side*（侧向），并通过`getSideDir`方法返回。
 
-您可以通过调用 `isRightHanded` 方法来确定与摄像机相关的坐标系是否为右手坐标系。
+您可以通过调用`isRightHanded`方法来确定与摄像机相关的坐标系是否为右手坐标系。
 
+`getZNear`和`getZFar`方法允许您获取近剪切面和远剪切面的距离（沿`viewDir`向量方向）。
 
+`getWidth`和`getHeight`方法返回与相机相关的输出矩形边长（以像素为单位），而`getAspect`方法返回宽高比。
 
-`getZNear` 和 `getZFar` 方法允许您获取近剪切面和远剪切面的距离（沿 `viewDir` 向量方向）。
+若要将当前相机方向获取为四元数，请使用`getQuaternion`方法。
 
-`getWidth` 和 `getHeight` 方法返回与相机相关的输出矩形边长（以像素为单位），而 `getAspect` 方法返回宽高比。
+`mapFromWorld`和`mapToWorld`方法用于将向量从世界坐标系映射到相机坐标系，反之亦然。
 
-若要将当前相机方向获取为四元数，请使用 `getQuaternion` 方法。
+`mapToScreen`方法返回 3D 向量的屏幕坐标（相对于输出区域左上角，以像素为单位）。
 
-`mapFromWorld` 和 `mapToWorld` 方法用于将向量从世界坐标系映射到相机坐标系，反之亦然。
+此外，`Camera`类还为您提供了一些方法，使得移动相机以及更改其方向和其他参数成为可能。
 
-`mapToScreen` 方法返回 3D 向量的屏幕坐标（相对于输出区域左上角，以像素为单位）。
+`moveTo`和`moveBy`方法用于在不改变相机方向的情况下移动相机。前者将相机移动到空间中的指定点，后者则根据指定的向量进行移动。
 
-此外，`Camera` 类还为您提供了一些方法，使得移动相机以及更改其方向和其他参数成为可能。
+若要在不改变相机位置的情况下更改相机方向，请使用`setEulerAngles`和`setOrientation`方法。前者允许您使用欧拉角指定新方向，后者则使用四元数。
 
-`moveTo` 和 `moveBy` 方法用于在不改变相机方向的情况下移动相机。前者将相机移动到空间中的指定点，后者则根据指定的向量进行移动。
+`setRightHanded`方法用于设置与相机相关的坐标系是右手系还是左手系。
 
-若要在不改变相机位置的情况下更改相机方向，请使用 `setEulerAngles` 和 `setOrientation` 方法。前者允许您使用欧拉角指定新方向，后者则使用四元数。
+通过使用`setFov`方法，您可以设置视场角（以度为单位）。
 
-`setRightHanded` 方法用于设置与相机相关的坐标系是右手系还是左手系。
+`setViewSize`方法旨在设置相机渲染区域的大小。
 
-通过使用 `setFov` 方法，您可以设置视场角（以度为单位）。
+您可以对相机进行仿射变换。`mirror`方法用于使相机相对于指定平面镜像，而`transform`方法允许您对相机应用任何仿射变换。
 
-`setViewSize` 方法旨在设置相机渲染区域的大小。
+使用`apply`方法，您可以设置 OpenGL 的投影参数。
 
-您可以对相机进行仿射变换。`mirror` 方法用于使相机相对于指定平面镜像，而 `transform` 方法允许您对相机应用任何仿射变换。
-
-使用 `apply` 方法，您可以设置 OpenGL 的投影参数。
-
-代码清单 10.2 展示了 `Camera` 类的完整实现。
+代码清单 10.2 展示了`Camera`类的完整实现。
 
 ## 代码清单 10.2. Camera 类
+
+
 
 ```cpp
 //
@@ -5653,11 +5774,11 @@ void Camera::apply() const
 }
 ```
 
-正如您从代码清单中所见，该类的主要方法是 `computeMatrix`，它用于修正主方向并计算将向量从世界坐标系映射到相机坐标系的变换矩阵。
+正如您从代码清单中所见，该类的主要方法是`computeMatrix`，它用于修正主方向并计算将向量从世界坐标系映射到相机坐标系的变换矩阵。
 
-代码清单 10.3 包含了一个简单的示例源代码，用于演示 `Camera` 类的使用。
+代码清单 10.3 包含了一个简单的示例源代码，用于演示`Camera`类的使用。
 
-## 代码清单 10.3. Camera 类使用示例
+## 代码清单 10.3：`Camera`类使用示例
 
 ```cpp
 //
@@ -5851,8 +5972,9 @@ int main(int argc, char * argv[])
 }
 ```
 
-另一个经常用于控制摄像机的简单类是 `Frustum`。它包含了界定视锥体（view frustum）的平面信息。
-`Frustum` 类的描述和实现分别在代码清单 10.4 和 10.5 中给出。
+另一个经常用于控制摄像机的简单类是`Frustum`。它包含了界定视锥体（view frustum）的平面信息。
+
+`Frustum`类的描述和实现分别在代码清单 10.4 和 10.5 中给出。
 
 ## 代码清单 10.4. Frustum 类的描述
 
@@ -6012,11 +6134,9 @@ bool Frustum :: boxInFrustum (const BoundingBox& box) const
 
 **图 10.5.** 使用模型矩阵和投影矩阵的乘积来变换视场
 
-正如在代码清单 10.5 中所见，该类计算当前模型视图矩阵（modelview matrix）和投影矩阵（projection matrix）的乘积，并利用该乘积来计算界定平面的方程系数。由于这些矩阵的乘积将视锥体变换到 $[-1, 1]^3$ 立方体中，因此视锥体的界定平面被变换为该立方体的以下平面：$x = 1$，$x = -1$，$y = 1$，$y = -1$，$z = 1$，$z = -1$（图 10.5）。
+正如在代码清单 10.5 中所见，该类计算当前模型视图矩阵（modelview matrix）和投影矩阵（projection matrix）的乘积，并利用该乘积来计算界定平面的方程系数。由于这些矩阵的乘积将视锥体变换到`$[-1, 1]^3$`立方体中，因此视锥体的界定平面被变换为该立方体的以下平面：`$x = 1$`，`$x = -1$`，`$y = 1$`，`$y = -1$`，`$z = 1$`，`$z = -1$`（图 10.5）。
 
-`Frustum` 类最主要的用途是检查对象的裁剪情况。在复杂的场景中，丢弃视野之外的对象或对象部分通常是合理的。这可以让程序员避免因不必要的数据而导致图形处理器过载。
-
-
+`Frustum`类最主要的用途是检查对象的裁剪情况。在复杂的场景中，丢弃视野之外的对象或对象部分通常是合理的。这可以让程序员避免因不必要的数据而导致图形处理器过载。
 
 ## 第 11 章：libMesh 库。处理多边形模型及其主流格式
 
@@ -6024,7 +6144,7 @@ bool Frustum :: boxInFrustum (const BoundingBox& box) const
 
 因此，如果能首先为 3D 对象的内部表示选择一种特定的格式，其次找到一种将最主流格式的模型转换为该表示的方法，将会非常方便。
 
-基于此，在本章中我将介绍我创建的 libMesh 库。虽然它并不完美，但在许多情况下运行良好。
+基于此，在本章中我将介绍我创建的`libMesh`库。虽然它并不完美，但在许多情况下运行良好。
 
 让我们讨论一下描述 3D 对象需要哪些数据，以及应该如何排列这些数据以获得最大的灵活性和性能。
 
@@ -6034,9 +6154,11 @@ bool Frustum :: boxInFrustum (const BoundingBox& box) const
 
 **图 11.1.** 将凸面分解为一组三角形
 
-**图 11.2.** 使用 `Face` 结构指定面
+**图 11.2.** 使用`Face`结构指定面
 
-在某些情况下，拥有关于面和边的信息是非常必要的，例如，使用 *模板阴影体积*（stencil shadow volumes）方法构建阴影时。
+
+
+在某些情况下，拥有关于面和边的信息是非常必要的，例如，使用模板阴影体积（stencil shadow volumes）方法构建阴影时。
 
 模型的每个面自然可以通过顶点数组中的三个索引来确定。此外，为每个面关联一个法线会很方便。
 
@@ -6062,7 +6184,8 @@ struct Face       // 三角形面
 - 该边所属的两个面的索引
 - 该边在每个面中的方向
 
-将最后两项结合起来是很方便的：让面索引的最高位指定边在该面中的方向（从终点到起点，或反之）。让低 31 位指定面编号。
+将最后两项结合起来是很方便的：让面索引的最高位指定边在该面中的方向（从终点到起点，或反之），让低 31 位指定面编号。
+
 一条边可以用以下方式描述：
 
 ```cpp
@@ -6077,7 +6200,7 @@ struct Edge
 
 `a` 和 `b` 字段指定边起点和终点在顶点数组中的索引。`f1` 和 `f2` 字段承载两项信息：低 31 位包含面数组中的索引，最高位指定该边在该面中的方向（如果最高位等于 1，则边的方向是从 `b` 到 `a`，否则是从 `a` 到 `b`）。`f2` 字段中的 -1 值表示该边仅属于由 `f1` 字段指定的单个面。
 
-现在考虑对象每个顶点所需的属性。显然，这些包括顶点在空间中的位置、该面的切线半空间基（$\mathbf{t}$、$\mathbf{b}$ 和 $\mathbf{n}$ 向量，见 *第 13 章*）、纹理坐标以及颜色。
+现在考虑对象每个顶点所需的属性。显然，这些包括顶点在空间中的位置、该面的切线半空间基（`t`、`b` 和 `n` 向量，见第 13 章）、纹理坐标以及颜色。
 
 在大多数情况下，这些信息已经足够。即使为一组面使用了几种纹理，它们的纹理坐标通常也是重合的，或者仅在仿射变换上有所不同。这就是为什么你只需要存储一组纹理坐标，以及每种纹理相应的纹理坐标变换。
 
@@ -6098,9 +6221,9 @@ struct Vertex
 
 每个纹理可以用一个文件名（这将允许程序员通过单个命令加载所有必要的纹理，而无需获取对象属性）、一个 OpenGL 中的纹理 ID 以及该纹理应绑定的纹理单元编号来描述。
 
-此外，纹理应携带关于该纹理最简单纹理坐标变换的信息。由于这种变换通常是平移和缩放的组合（即具有以下形式：$offs + scale * tex$），将这些参数包含在定义对象所用纹理的类中会很方便。以下是该类的描述。
+此外，纹理应携带关于该纹理最简单纹理坐标变换的信息。由于这种变换通常是平移和缩放的组合（即具有以下形式：`offs + scale * tex`），将这些参数包含在定义对象所用纹理的类中会很方便。以下是该类的描述。
 
-### 代码清单 11.1. Map 类的描述
+## 代码清单 11.1. `Map` 类的描述
 
 ```cpp
 class Map    // 贴图信息
@@ -6130,12 +6253,16 @@ public:
 ```
 
 该类的 `load` 方法在文件名不为空时，从指定文件加载纹理。
+
 `setTextureMatrix` 方法定义一个用于纹理坐标变换（`GL_TEXTURE`）的矩阵。
+
 `bindToUnit` 方法指定纹理应绑定的纹理单元（默认情况下，纹理绑定到 0 号纹理单元）。
+
 `bind` 方法将纹理（如果可用）绑定到指定单元，并使用 `setTextureMatrix` 方法设置纹理坐标变换矩阵。
+
 该类的析构函数释放绑定的纹理。
 
-### 代码清单 11.2. Map 类的实现
+## 代码清单 11.2. `Map` 类的实现
 
 ```cpp
 Map :: Map ()
@@ -6201,9 +6328,7 @@ bool Map :: bind ()
 
 为了方便起见，我将一组最常用的纹理（作为 `Map` 类的对象）封装在一个特殊的类 `Material` 中，该类负责纹理的加载、绑定和销毁。代码清单 11.3 和 11.4 包含了 `Material` 类的描述和实现。
 
-
-
-## 代码清单 11.3. Material 类的描述
+## 代码清单 11.3. `Material` 类的描述
 
 ```cpp
 struct Material
@@ -6224,7 +6349,7 @@ struct Material
 };
 ```
 
-## 代码清单 11.4. Material 类的实现
+## 代码清单 11.4. `Material` 类的实现
 
 ```cpp
 void Material :: load () { // Load all maps.
@@ -6286,7 +6411,13 @@ void Material :: setPath (const string& path)
 
 现在，考虑 `Mesh` 类，它旨在封装一个由面（faces）、顶点（vertices）、边（edges）和纹理（textures）组成的对象（代码清单 11.5 和 11.6）。
 
-## 代码清单 11.5. Mesh 类的描述
+## 代码清单 11.5. `Mesh` 类的描述
+
+
+
+## `Mesh` 类
+
+以下代码定义了 `Mesh` 类的完整声明。该类用于表示三维网格模型，并管理其顶点、面和边的数据。
 
 ```cpp
 class Mesh
@@ -6442,9 +6573,7 @@ protected:
 
 如代码清单 11.5 所示，`Mesh` 类的对象包含顶点、面和边（数组 `vertices`、`faces` 和 `edges`），一个包围盒（`boundingBox`）以及一组纹理（`material`）（图 11.4）。
 
-该类用于利用 `ARB_vertex_buffer_object` 扩展提供的顶点缓冲区，将所有顶点属性和面索引存储在图形处理器内存中。
-
-为此使用了两个缓冲区：一个用于存储所有顶点属性（`vertexBuffer`），另一个用于存储所有面索引（`indexBuffer`）。
+该类用于利用 `ARB_vertex_buffer_object` 扩展提供的顶点缓冲区，将所有顶点属性和面索引存储在图形处理器内存中。为此使用了两个缓冲区：一个用于存储所有顶点属性（`vertexBuffer`），另一个用于存储所有面索引（`indexBuffer`）。
 
 考虑该类主要方法的作用。`getName`、`getNumVertices`、`getVertex`、`getNumFaces`、`getFace`、`getNumEdges`、`getEdge`、`getMaterial` 和 `setMaterial` 方法允许您访问对象的关键数据：名称、顶点、边、面和材质。
 
@@ -6473,7 +6602,7 @@ addCoordAssignment (tagBinormal, tagTex1);
 
 `computeFaceNormals` 方法计算对象每个面的法线。
 
-`computeTangents` 方法利用顶点的纹理坐标和空间坐标，为每个顶点计算切线（t）和副法线（b）向量。
+`computeTangents` 方法利用顶点的纹理坐标和空间坐标，为每个顶点计算切线（`t`）和副法线（`b`）向量。
 
 在计算完所有顶点（属性）值后，可以调用 `createBuffers` 方法，该方法在图形处理器内存中创建顶点缓冲区和索引缓冲区，并将渲染所需的所有顶点和面信息存储在缓冲区中。
 
@@ -6481,15 +6610,16 @@ addCoordAssignment (tagBinormal, tagTex1);
 
 `Mesh` 类的析构函数负责释放存储数组的内存，销毁图形处理器内存中的缓冲区，并释放绑定的纹理。
 
-
-
 `Mesh` 类的构造函数接收以下输入参数：`theName` 是对象的名称，`theVertices` 和 `nv` 分别是顶点数组的指针和顶点数量，`theFaces` 和 `nf` 是面数组的指针和面数量，`copy` 是一个标志，用于指示被创建的对象应该创建自己的顶点和面数组（`copy = true`），还是使用接收到的数组（`copy = false`）（在后一种情况下，发送方不应更改或删除这些数组）。
 
-代码清单 11.6 包含了 `Mesh` 类的实现。
+### 代码清单 11.6. `Mesh` 类的实现
 
-## 代码清单 11.6. Mesh 类的实现
+以下提供了 `Mesh` 类各方法的实现细节，展示了其内部逻辑和具体功能。
 
-```cpp
+
+
+
+```
 #include <assert.h>
 #include "libExt.h"
 #include "Mesh.h"
@@ -6790,11 +6920,11 @@ void computeTangents (Vertex& v0, const Vertex& v1, const Vertex& v2)
 }
 ```
 
-MESHUTILS.H 文件包含了一些用于创建 `Mesh` 类对象的实用工具。该文件包含在 libMesh 库中，位于 CODE\LIBMESH 文件夹下（代码清单 11.7）。
-
-
+`MESHUTILS.H` 文件包含了一些用于创建`Mesh`类对象的实用工具。该文件包含在`libMesh`库中，位于`CODE\LIBMESH`文件夹下（代码清单 11.7）。
 
 ## Listing 11.7. MESHUTILS.H 文件
+
+
 
 ```cpp
 Mesh * makeTorus (float r1, float r2, int n1, int n2);
@@ -6807,32 +6937,35 @@ Vertex * fixFaces (Vertex * vertices, int& numVertices, Face * faces,
                  int numTexCoords);
 ```
 
-`makeTorus` 函数通过半径、其“厚度”的一半（即用于构建圆环的圆的半径）以及两个圆的分段数来创建一个圆环。
+`makeTorus`函数通过半径、其“厚度”的一半（即用于构建圆环的圆的半径）以及两个圆的分段数来创建一个圆环。
 
-`makeShape1` 函数创建如图 11.7 所示的旋转曲面。
+`makeShape1`函数创建如图 11.7 所示的旋转曲面。
 
-`makeRevSurface` 函数用于通过平面上指定的一组点数组以及这些点的一个纹理坐标值来构建旋转曲面。参数 `n` 指定了这些数组的大小，参数 `n2` 指定了曲线绕 Ox 轴旋转时创建的分段数。
+`makeRevSurface`函数用于通过平面上指定的一组点数组以及这些点的一个纹理坐标值来构建旋转曲面。参数`n`指定了这些数组的大小，参数`n2`指定了曲线绕 Ox 轴旋转时创建的分段数。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_211_0.png)
-**图 11.7.** 由 `makeShape1` 函数创建的对象
+
+图 11.7. 由`makeShape1`函数创建的对象
 
 ![](img/0195f4c0347b99a95028b956b67109ca_212_0.png)
-**图 11.8.** Mesh、MeshNode 和 MeshLink 类
+
+图 11.8. `Mesh`、`MeshNode`和`MeshLink`类
 
 ![](img/0195f4c0347b999a95028b956b67109ca_212_1.png)
-**图 11.9.** 使用 Mesh、MeshNode 和 MeshLink 类实现的 Quake 3 Arena 玩家模型
 
-`fixFaces` 函数用于当顶点 (`vertices`)、索引数组 (`faces` 和 `texFaces`) 以及纹理坐标数组 (`texCoord`) 分别独立存在的情况。在这种情况下，将构建一个新的顶点列表，其中每个顶点都包含纹理坐标。如果发现一个顶点已经分配了其他纹理坐标，则该顶点将被复制并赋予新的纹理坐标。因此，顶点的数量可能会增加，但模型将完全符合 `Mesh` 类所采用的约定。
+图 11.9. 使用`Mesh`、`MeshNode`和`MeshLink`类实现的 Quake 3 Arena 玩家模型
 
-然而，许多 3D 对象的结构比 `Mesh` 类复杂得多。通常一个对象由多个具有不同纹理的部分组成，且这些部分之间存在一定的关系（就像人体的各个部位一样）。大多数此类对象可以使用图 11.8 所示的层次结构来实现。
+`fixFaces`函数用于当顶点（`vertices`）、索引数组（`faces`和`texFaces`）以及纹理坐标数组（`texCoord`）分别独立存在的情况。在这种情况下，将构建一个新的顶点列表，其中每个顶点都包含纹理坐标。如果发现一个顶点已经分配了其他纹理坐标，则该顶点将被复制并赋予新的纹理坐标。因此，顶点的数量可能会增加，但模型将完全符合`Mesh`类所采用的约定。
 
-从图中可以清楚地看到，该层次结构的基础是 `MeshNode` 类，它包含一个对 `Mesh` 类的引用（或 `NULL`）以及一个指向 `MeshLink` 类对象的引用列表。
+然而，许多 3D 对象的结构比`Mesh`类复杂得多。通常一个对象由多个具有不同纹理的部分组成，且这些部分之间存在一定的关系（就像人体的各个部位一样）。大多数此类对象可以使用图 11.8 所示的层次结构来实现。
 
-每个 `MeshLink` 类对象都有一个唯一的名称，并包含一个仿射变换以及一个指向 `MeshNode` 类对象的链接，在渲染之前应将该仿射变换应用于该节点。
+从图中可以清楚地看到，该层次结构的基础是`MeshNode`类，它包含一个对`Mesh`类的引用（或`NULL`）以及一个指向`MeshLink`类对象的引用列表。
 
-例如，`Quake 3 Arena` 中由三个部分（`head`、`lower` 和 `upper`）组成的玩家表示，可以通过使用这些类轻松实现，如图 11.9 所示。
+每个`MeshLink`类对象都有一个唯一的名称，并包含一个仿射变换以及一个指向`MeshNode`类对象的链接，在渲染之前应将该仿射变换应用于该节点。
 
-Listing 11.8 和 11.9 包含了 `MeshNode` 和 `MeshLink` 类的描述与实现。
+例如，`Quake 3 Arena`中由三个部分（`head`、`lower`和`upper`）组成的玩家表示，可以通过使用这些类轻松实现，如图 11.9 所示。
+
+Listing 11.8 和 11.9 包含了`MeshNode`和`MeshLink`类的描述与实现。
 
 ## Listing 11.8. MeshNode 和 MeshLink 类的描述
 
@@ -7026,20 +7159,18 @@ bool MeshNode :: visit (NodeVisitor& visitor)
 }
 ```
 
-思考 `MeshNode` 类的主要方法：
+## `MeshNode`类的主要方法
 
-- `attach` 方法将一个新节点作为子节点附加（即添加到 `links` 列表中），并指定名称和变换矩阵。
-- `getMesh` 和 `setMesh` 方法允许你访问与该节点连接的 *mesh*。
-- 要通过名称查找直接子节点，请使用 `nodeWithName` 方法。
-- `begin` 和 `end` 方法返回可用于遍历子节点列表的迭代器。
-- 使用 `render` 函数对整个对象（包括所有层级的子节点）进行渲染。
-- 访问层次结构的另一种方式是使用 `visit` 方法。这里使用了 `Visitor` 模板。
+- `attach`方法将一个新节点作为子节点附加（即添加到`links`列表中），并指定名称和变换矩阵。
+- `getMesh`和`setMesh`方法允许你访问与该节点连接的`mesh`。
+- 要通过名称查找直接子节点，请使用`nodeWithName`方法。
+- `begin`和`end`方法返回可用于遍历子节点列表的迭代器。
+- 使用`render`函数对整个对象（包括所有层级的子节点）进行渲染。
+- 访问层次结构的另一种方式是使用`visit`方法。这里使用了`Visitor`模板。
 
-本书随附光盘中的 `CODELIBMESH` 文件夹包含了多个类的源代码，这些类可将最流行格式的模型加载为 `MeshNode` 类型的对象。
+本书随附光盘中的`CODELIBMESH`文件夹包含了多个类的源代码，这些类可将最流行格式的模型加载为`MeshNode`类型的对象。
 
 最简单且最常用的 3D 模型和场景格式之一是 ASE，这是一种结构简单的文本格式。虽然此类文件可以包含场景的完整信息（例如摄像机、光源和动画），但随附光盘上的加载器仅加载几何体和对纹理的引用（Listing 11.10）。
-
-
 
 ## 示例 11.10. 通过显式指定纹理从 ASE 文件加载对象
 
@@ -7112,13 +7243,15 @@ for (MeshNode :: Links :: const_iterator it = root -> begin ();
 }
 ```
 
-MD3 格式最早在 *Quake 3 Arena* 中引入，用于描述物体模型和玩家模型。每个玩家模型由三个 MD3 部分组成，分别指定头部、上半身和下半身，并且它们相互连接。
+MD3 格式最早在`Quake 3 Arena`中引入，用于描述物体模型和玩家模型。每个玩家模型由三个 MD3 部分组成，分别指定头部、上半身和下半身，并且它们相互连接。
 
 示例 11.12 中的代码段演示了如何从一组 MD3 文件中加载玩家模型。
 
-> **注意** 代码位于随附 CD-ROM 的 CODE\CHAPTER-11 文件夹中。
+> **注意** 代码位于随附 CD-ROM 的`CODE\CHAPTER-11`文件夹中。
 
 ## 示例 11.12. 使用 MD3 格式加载玩家模型
+
+
 
 ```cpp
 Data * headData, * lowerData, * upperData;
@@ -7192,11 +7325,11 @@ void prepareNode (MeshNode * node)
 
 **图 11.10.** 加载的 MD3 模型
 
-**图 11.11.** 从 *Doom 3* 加载的模型
+**图 11.11.** 从 `Doom 3` 加载的模型
 
-图 11.10 显示了使用前述方法加载的 *Quake 3 Arena* 模型。
+图 11.10 显示了使用前述方法加载的 `Quake 3 Arena` 模型。
 
-idSoftware 游戏中使用的另一种模型格式是 *Doom 3* 中使用的 MD5。事实上，这款游戏使用了两种不同的文件类型：md5-mesh 决定模型的几何形状，md5-anim 决定模型的动画。
+idSoftware 游戏中使用的另一种模型格式是 `Doom 3` 中使用的 MD5。事实上，这款游戏使用了两种不同的文件类型：md5-mesh 决定模型的几何形状，md5-anim 决定模型的动画。
 
 随附 CD-ROM 上的 `CODE\LIBMESH` 文件夹包含一个简单的 md5-mesh 类型文件加载器。示例 11.14 包含一个关于如何从游戏文件中加载模型的简单示例。结果图像（在没有着色器的情况下获得）如图 11.11 所示。
 
@@ -7274,8 +7407,6 @@ vec2 v;
 mat3 mv;
 ```
 
-
-
 ## 表 12.1. GLSL 中的主要数据类型
 
 | 类型 | 注释 |
@@ -7303,9 +7434,10 @@ mat3 mv;
 | `sampler1DShadow` | 对一维深度图的引用。 |
 | `sampler2DShadow` | 对二维深度图的引用。 |
 
-## 结构体 (Structures)
+## 结构体（Structures）
 
 除了标准类型外，用户还可以定义结构体。请注意，每个结构体都应该有一个名称。
+
 结构体示例：
 
 ```cpp
@@ -7321,7 +7453,7 @@ Light light1;
 
 结构体应至少包含一个字段。不能使用位域，并且结构体中使用的每种类型都应在结构体定义之前或其内部定义。结构体可以包含指定非零长度的数组。
 
-### 数组 (Arrays)
+### 数组（Arrays）
 
 除了结构体，用户还可以定义固定非零大小的一维数组。可以先对数组进行初步描述而不指定其大小，但随后必须在定义中指定其大小。
 
@@ -7337,11 +7469,11 @@ uniform vec3 directions [4];
 Light light [3];
 ```
 
-### 变量 (Variables)
+### 变量（Variables）
 
 变量的作用域由其描述的位置决定。如果在任何函数之外描述变量，则它是全局的，并且可以在描述点之后的任何位置被访问。
 
-如果在 while 语句的条件中或在 for 语句中描述变量，其作用域就是循环体。
+如果在 `while` 语句的条件中或在 `for` 语句中描述变量，其作用域就是循环体。
 
 如果在复合语句中描述变量，其作用域则限于该语句。
 
@@ -7370,9 +7502,9 @@ Light light [3];
 
 在函数参数的描述中，只能使用以下修饰符：`const`、`in`、`out` 和 `inout`。如果全局变量的描述不包含这些修饰符，则该变量不能用于与应用程序、OpenGL 和其他着色器进行数据交换。
 
-## attribute 修饰符
+## `attribute` 修饰符
 
-`attribute` 修饰符用于描述 *属性 (attributes)*，即每个顶点从 OpenGL 传递到顶点着色器的值。带有此修饰符的变量只能在顶点着色器中定义。
+`attribute` 修饰符用于描述属性（attributes），即每个顶点从 OpenGL 传递到顶点着色器的值。带有此修饰符的变量只能在顶点着色器中定义。
 
 在顶点着色器中，属性是只读的。
 
@@ -7390,22 +7522,26 @@ attribute vec2 texCoord;
 
 OpenGL 中所有标准的顶点属性都与内置变量的名称相匹配（见表 12.9）。
 
-通常，顶点属性的内存分配方式与四维向量 (`vec4`) 相同。例外情况是用两个、三个、四个或四个四维向量表示的矩阵。
+通常，顶点属性的内存分配方式与四维向量（`vec4`）相同。例外情况是用两个、三个、四个或四个四维向量表示的矩阵。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_230_0.png)
 
 GLSL 的实现通常会对所使用的顶点属性数量施加某些限制。在本章稍后部分，您将看到一个打印 GLSL 支持信息的程序示例，包括图形加速器及其驱动程序所施加的限制。
 
 所有属性都应该是全局的，并且在首次使用前在函数之外声明。
-如果顶点属性（标准属性除外）未初始化，它将被赋值为 (0, 0, 0, 1)。
 
-## uniform 修饰符
+如果顶点属性（标准属性除外）未初始化，它将被赋值为（0, 0, 0, 1）。
+
+## `uniform` 修饰符
 
 `uniform` 修饰符用于描述其值在被处理的图元内部不改变的全局变量。此类变量最简单的例子是在 `glBegin`/`glEnd` 块之外描述的变量。
 
 在着色器中，所有这些变量都是只读的。值可以通过应用程序使用相应的 API 显式地分配给它们，或者使用 OpenGL 库。
+
 `uniform` 修饰符可用于任何类型的变量，包括结构体和数组。
+
 当多个着色器（例如片元着色器和顶点着色器）组合使用时，它们共享相同的 `uniform` 变量命名空间。
+
 GLSL 的特定实现可能会限制所使用的 `uniform` 变量数量。
 
 `uniform` 变量的描述示例为：
@@ -7415,13 +7551,14 @@ uniform vec4 lightPosition;
 uniform vec4 lightColor;
 ```
 
-## varying 修饰符
+## `varying` 修饰符
 
 描述为 `varying` 的变量用于顶点着色器和片元着色器之间的交互。顶点着色器计算顶点的数值并将其写入相应的 `varying` 变量中。（顶点着色器也可以读取之前写入这些变量的值）。
 
 在传递给片元着色器后，这些变量沿整个图元进行插值（考虑透视）。结果，片元着色器为每个片元接收到一个插值后的值。
 
 在片元着色器中，`varying` 变量是只读的。
+
 由于这些变量旨在用于顶点着色器和片元着色器之间的交互，因此它们应在两个着色器中以相同的类型进行描述。
 
 `varying` 变量的描述示例为：
@@ -7432,7 +7569,8 @@ varying vec3 t;
 varying vec4 color;
 ```
 
-`varying` 属性只能伴随以下类型的变量（或变量数组）：`float`、`vec2`、`vec3`、`vec4`、`mat2`、`mat3` 和 `mat4`。结构体不能被描述为 varying。
+`varying` 属性只能伴随以下类型的变量（或变量数组）：`float`、`vec2`、`vec3`、`vec4`、`mat2`、`mat3` 和 `mat4`。结构体不能被描述为 `varying`。
+
 与 `uniform` 变量一样，`varying` 变量应该是全局的，并且在首次使用前定义。
 
 ## 运算符和表达式
@@ -7443,18 +7581,17 @@ varying vec4 color;
 
 | 优先级 | 类别 | 运算符 | 结合性 |
 | :--- | :--- | :--- | :--- |
-| 1 (最高) | 分组 | ( ) | 未定义 |
-| 2 | 数组索引 | [ ] | 从左到右 |
-| 2 | 函数或构造函数调用 | ( ) | 从左到右 |
-| 2 | 选择结构体字段或分量 | . | 从左到右 |
-| 2 | 后置递增或递减 | ++, -- | 从左到右 |
-| 3 | 前置递增或递减 | ++, -- | 从右到左 |
-| 3 | 一元运算符（~ 运算符已预留） | +, -, ~, !, ! | 从右到左 |
-| 4 | 乘法运算符（% 运算符已预留） | *, /, % | 从左到右 |
-| 5 | 加法运算符 | +, - | 从左到右 |
-| 6 | 位运算符（预留） | <<, >> | 从左到右 |
-| 7 | 比较 | <, >, <=, >= | 从左到右 |
-| 8 | 相等 | ==, != | 从左到右 |
+| 1（最高） | 分组 | `( )` | 未定义 |
+| 2 | 数组索引 | `[ ]` | 从左到右 |
+| 2 | 函数或构造函数调用 | `( )` | 从左到右 |
+| 2 | 选择结构体字段或分量 | `.` | 从左到右 |
+| 2 | 后置递增或递减 | `++`, `--` | 从左到右 |
+| 3 | 前置递增或递减 | `++`, `--` | 从右到左 |
+| 3 | 一元运算符（`~` 运算符已预留） | `+`, `-`, `~`, `!`, `!` | 从右到左 |
+| 4 | 乘法运算符（`%` 运算符已预留） | `*`, `/`, `%` | 从左到右 |
+| 5 | 加法运算符 | `+`, `-` | 从左到右 |
+| 6 | 位运算符（预留） | `<<`, `>>` | 从左到右 |
+| 7 | 比较 | `<`, `>`, `<=`, `>=` | 从左到右 |
 
 
 
@@ -7462,16 +7599,17 @@ varying vec4 color;
 
 | 优先级 | 类型 | 运算符 | 结合性 |
 | :--- | :--- | :--- | :--- |
-| 9 | 按位与运算符（保留） | & | 从左到右 |
-| 10 | 按位异或运算符（保留） | ^ | 从左到右 |
-| 11 | 按位或运算符（保留） | \| | 从左到右 |
-| 12 | 布尔与运算符 | && | 从左到右 |
-| 13 | 布尔异或运算符 | ^^ | 从左到右 |
-| 14 | 布尔或运算符 | \|\| | 从左到右 |
-| 15 | 条件运算符 | ? , : | 从右到左 |
-| 16 | 赋值 | = | 从右到左 |
-| 16 | 修改值（= 运算符以及移位和按位运算符为保留） | +=, -=, *=, /=, %=, <<=, >>=, &=, \|=, ^= | 从右到左 |
-| 17 | 顺序 | , | 从左到右 |
+| 8 | 相等 | `==`, `!=` | 从左到右 |
+| 9 | 按位与运算符（保留） | `&` | 从左到右 |
+| 10 | 按位异或运算符（保留） | `^` | 从左到右 |
+| 11 | 按位或运算符（保留） | `\|` | 从左到右 |
+| 12 | 布尔与运算符 | `&&` | 从左到右 |
+| 13 | 布尔异或运算符 | `^^` | 从左到右 |
+| 14 | 布尔或运算符 | `\|\|` | 从左到右 |
+| 15 | 条件运算符 | `?`, `:` | 从右到左 |
+| 16 | 赋值 | `=` | 从右到左 |
+| 16 | 修改值（`=` 运算符以及移位和按位运算符为保留） | `+=`, `-=`, `*=`, `/=`, `%=`, `<<=`, `>>=`, `&=`, `\|=`, `^=` | 从右到左 |
+| 17 | 顺序 | `,` | 从左到右 |
 
 ## 构造函数
 
@@ -7494,7 +7632,7 @@ bool c = bool (1.4);  // 将 float 转换为 bool。
 
 当将 `float` 值转换为 `int` 类型时，小数部分会被舍弃。当将值转换为 `bool` 类型时，值 `0` 和 `0.0` 被转换为 `false`，其余值被转换为 `true`。
 
-当 `bool` 类型的值被转换为 `int` 或 `float` 时，`false` 值被转换为零（0 或 0.0），`true` 被转换为一（1 或 1.0）。
+当 `bool` 类型的值被转换为 `int` 或 `float` 时，`false` 值被转换为零（`0` 或 `0.0`），`true` 被转换为一（`1` 或 `1.0`）。
 
 标量类型的构造函数可以将其他类型的变量作为输入值。在这种情况下，它们将返回向量（或矩阵）值的第一个元素。
 
@@ -7542,17 +7680,17 @@ Light light2 = Light(p, 0.4, vec4(1.0, 1.0, 0.0, 1.0));
 
 ## 操作向量和矩阵的分量
 
-向量的分量使用字符（例如 x, y 或 z）来指定。由于向量的不同用途（作为空间坐标、颜色和纹理坐标）涉及不同的分量名称，GLSL 提供了三组分量名称，列在表 12.4 中。
+向量的分量使用字符（例如 `x`, `y` 或 `z`）来指定。由于向量的不同用途（作为空间坐标、颜色和纹理坐标）涉及不同的分量名称，GLSL 提供了三组分量名称，列在表 12.4 中。
 
 ### 表 12.4. GLSL 中使用的向量分量指定
 
 | 指定方式 | 用途 |
 |---|---|
-| (x, y, z, w) | 访问表示位置或方向的向量 |
-| (r, g, b, a) | 访问表示颜色值的向量 |
-| (s, t, p, q) | 访问表示纹理坐标的向量 |
+| (`x`, `y`, `z`, `w`) | 访问表示位置或方向的向量 |
+| (`r`, `g`, `b`, `a`) | 访问表示颜色值的向量 |
+| (`s`, `t`, `p`, `q`) | 访问表示纹理坐标的向量 |
 
-> 注意：纹理坐标的第三个分量 (r) 被指定为 p，以避免与颜色值的 r 分量混淆。
+> 注意：纹理坐标的第三个分量 (`r`) 被指定为 `p`，以避免与颜色值的 `r` 分量混淆。
 
 对于向量分量的访问，使用点运算符（dot operator）。点运算符后面可以跟任何分量序列，这允许你对分量进行重组（shuffle）或多次使用同一个分量。点运算符后指定的分量名称应属于表 12.4 中列出的同一组。例如，`myVector.xgp` 这种表示法是无效的，因为它包含了来自所有三组的分量名称。
 
@@ -7610,8 +7748,6 @@ m[2][3] = 2.0;
 大多数对向量和矩阵的运算都是分量级（component-wise）进行的，也就是说，它们是对每一对相应分量进行的（图 12.1 和 12.2）。
 
 矩阵与向量的乘法（图 12.3）、向量与矩阵的乘法（图 12.5）以及矩阵与矩阵的乘法（图 12.4）不是分量级进行的。这些运算对其操作数的尺寸有特定要求。
-
-
 
 **图 12.1.** 分量级操作。示例 1
 
@@ -7805,13 +7941,13 @@ float gl_FragDepth;
 
 `gl_FragData` 是一个用于不同缓冲区的输出颜色数组。换句话说，着色器可以同时渲染到多个颜色缓冲区。如果它向 `gl_FragColor` 变量写入值，则不能为 `gl_FragData` 数组的元素分配值，反之亦然。
 
-如果着色器执行 `discard` 命令，则 `gl_FragColor`、`gl_FragDepth` 和 `gl_FragData` 变量的值将不再重要。
 
 
+如果着色器执行`discard`命令，则`gl_FragColor`、`gl_FragDepth`和`gl_FragData`变量的值将不再重要。
 
-`gl_FragCoord` 变量是只读的。它包含当前片元相对于窗口的 (x, y, z) 坐标和 1/w 值。这些值是相应原语在光栅化过程中插值的结果。该变量的 z 分量包含深度值，如果着色器没有给 `gl_FragDepth` 变量赋值，则将使用该值。
+`gl_FragCoord`变量是只读的。它包含当前片元相对于窗口的 (x, y, z) 坐标和 1/w 值。这些值是相应原语在光栅化过程中插值的结果。该变量的 z 分量包含深度值，如果着色器没有给`gl_FragDepth`变量赋值，则将使用该值。
 
-此外，片元着色器还可以使用一个名为 `gl_FrontFacing` 的布尔只读变量。如果片元属于正向面原语，则该变量等于 `true`。
+此外，片元着色器还可以使用一个名为`gl_FrontFacing`的布尔只读变量。如果片元属于正向面原语，则该变量等于`true`。
 
 深度值和颜色值在写入相应的输出变量后，会自动截断到 [0, 1] 区间。
 
@@ -7860,9 +7996,9 @@ const int gl_MaxDrawBuffers;          // >= 1
 
 ## 作为 OpenGL 状态参数的标准 uniform 变量
 
-用 GLSL 编写的着色器可以访问一组包含 OpenGL 状态参数的 `uniform` 变量。
+用 GLSL 编写的着色器可以访问一组包含 OpenGL 状态参数的`uniform`变量。
 
-主要的矩阵 `uniform` 变量如下：
+主要的矩阵`uniform`变量如下：
 
 ```glsl
 uniform mat4 gl_ModelViewMatrix;
@@ -7888,7 +8024,7 @@ uniform mat4 gl_TextureMatrixInverseTranspose[gl_MaxTextureCoords];
 
 这些变量包含标准 OpenGL 矩阵及其转置和/或逆矩阵变体。
 
-指定将深度减少到 [0, 1] 区间的参数由 `gl_DepthRangeParameters` 结构体表示：
+指定将深度减少到 [0, 1] 区间的参数由`gl_DepthRangeParameters`结构体表示：
 
 ```glsl
 struct gl_DepthRangeParameters
@@ -7900,13 +8036,13 @@ struct gl_DepthRangeParameters
 uniform gl_DepthRangeParameters gl_DepthRange;
 ```
 
-关于裁剪平面的信息由四维向量的 `gl_ClipPlane` 数组表示，该数组指定了平面（使用平面方程系数）：
+关于裁剪平面的信息由四维向量的`gl_ClipPlane`数组表示，该数组指定了平面（使用平面方程系数）：
 
 ```glsl
 uniform vec4 gl_ClipPlane[gl_MaxClipPlanes];
 ```
 
-指定点参数（ARB_point_parameters 扩展）的参数可在 `gl_PointParameters` 结构体中找到：
+指定点参数（ARB_point_parameters 扩展）的参数可在`gl_PointParameters`结构体中找到：
 
 ```glsl
 struct gl_PointParameters
@@ -7922,7 +8058,7 @@ struct gl_PointParameters
 uniform gl_PointParameters gl_Point;
 ```
 
-着色器可以访问由 `gl_MaterialParameters` 结构体表示的材质参数：
+着色器可以访问由`gl_MaterialParameters`结构体表示的材质参数：
 
 ```glsl
 struct gl_MaterialParameters
@@ -7937,7 +8073,7 @@ uniform gl_MaterialParameters gl_FrontMaterial;
 uniform gl_MaterialParameters gl_BackMaterial;
 ```
 
-`gl_LightSourceParameters` 结构体表示关于光源的信息：
+`gl_LightSourceParameters`结构体表示关于光源的信息：
 
 ```cpp
 struct gl_LightSourceParameters
@@ -7958,7 +8094,7 @@ struct gl_LightSourceParameters
 uniform gl_LightSourceParameters gl_LightSource[gl_MaxLights];
 ```
 
-除了光源参数外，关于所用光照模型的信息以及计算光照时使用的辅助值，可在 `gl_LightModelParameters`、`gl_LightModelProducts` 和 `gl_LightProducts` 结构体中找到：
+除了光源参数外，关于所用光照模型的信息以及计算光照时使用的辅助值，可在`gl_LightModelParameters`、`gl_LightModelProducts`和`gl_LightProducts`结构体中找到：
 
 ```cpp
 struct gl_LightModelParameters
@@ -7998,7 +8134,7 @@ uniform vec4 gl_ObjectPlaneR [gl_MaxTextureCoords];
 uniform vec4 gl_ObjectPlaneQ [gl_MaxTextureCoords];
 ```
 
-用于创建雾效的参数由 `gl_FogParameters` 结构体表示：
+用于创建雾效的参数由`gl_FogParameters`结构体表示：
 
 ```glsl
 struct gl_FogParameters
@@ -8014,7 +8150,7 @@ uniform gl_FogParameters gl_Fog;
 
 ## 标准 varying 变量
 
-除了标准 `uniform` 变量外，GLSL 还提供了一组标准 `varying` 变量：
+除了标准`uniform`变量外，GLSL 还提供了一组标准`varying`变量：
 
 ```glsl
 varying vec4 gl_FrontColor;
@@ -8033,19 +8169,19 @@ varying vec4 gl_TexCoord [];    // 大小小于或等于
 varying float gl_FogFragCoord;
 ```
 
-
-
 ## 标准函数
 
 用 GLSL 编写的程序（无论是顶点着色器还是片段着色器）可以调用许多内置函数，这些函数可分为以下几类：
 
 - 直接与图形加速器交互的函数（例如，访问纹理）
-- 实现简单操作（例如，`clamp`、`mix` 等）的函数，这些函数使用频率高且可由硬件支持
+
+- 实现简单操作（例如，`clamp`、`mix`等）的函数，这些函数使用频率高且可由硬件支持
+
 - 未来可能会获得软件支持的函数
 
 其中许多函数在 C 语言中有类似的对应项，但 GLSL 函数可以将向量和标量值都作为参数。
 
-在接下来的子章节给出的表格中，函数定义中的字母 T 代表以下任何类型：`float`、`vec2`、`vec3` 或 `vec4`；字母 M 代表任何矩阵类型：`mat2`、`mat3` 或 `mat4`。
+在接下来的子章节给出的表格中，函数定义中的字母 T 代表以下任何类型：`float`、`vec2`、`vec3`或`vec4`；字母 M 代表任何矩阵类型：`mat2`、`mat3`或`mat4`。
 
 ### 三角函数和角度处理函数
 
@@ -8100,6 +8236,15 @@ varying float gl_FogFragCoord;
 | `T min (T x, float y)` | 返回两个值中的最小值。 |
 | `T max (T x, T y)` | 返回两个值中的最大值。 |
 | `T max (T x, float y)` | 返回两个值中的最大值。 |
+
+
+
+以下是排版后的文档：
+
+## 通用函数
+
+| 函数 | 描述 |
+| :--- | :--- |
 | `T clamp (T x, T minVal, T maxVal)` | 返回 $\min(\max(x, \text{minValue}), \text{maxValue})$。实际上，将第一个参数限制在 $[\text{minValue}, \text{maxValue}]$ 区间内。 |
 | `T clamp (T x, float minVal, float maxVal)` | 返回 $\min(\max(x, \text{minValue}), \text{maxValue})$。实际上，将第一个参数限制在 $[\text{minValue}, \text{maxValue}]$ 区间内。 |
 | `T mix (T x, T y, T a)` | 返回 $x*(1 - a) + y*a$。 |
@@ -8112,6 +8257,7 @@ varying float gl_FogFragCoord;
 `smoothstep` 函数使用埃尔米特插值来实现从 0.0 到 1.0 的平滑过渡。其图象如图 12.6 所示。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_249_0.png)
+
 图 12.6. `smoothstep` 函数
 
 ### 几何函数
@@ -8122,19 +8268,19 @@ varying float gl_FogFragCoord;
 
 | 函数 | 描述 |
 | :--- | :--- |
-| `float length(T x)` | 返回 `x` 的长度。 |
-| `float distance(T p0, T p1)` | 返回 `p0` 和 `p1` 两点之间的距离，即返回 `length(p0 - p1)`。 |
+| `float length(T x)` | 返回`x`的长度。 |
+| `float distance(T p0, T p1)` | 返回`p0`和`p1`两点之间的距离，即返回`length(p0 - p1)`。 |
 | `float dot(T x, T y)` | 返回参数的点积。 |
 | `vec3 cross(vec3 x, vec3 y)` | 返回参数的叉积。 |
-| `T normalize(T x)` | 返回一个方向与 `x` 向量相同且长度为单位长度的向量。 |
+| `T normalize(T x)` | 返回一个方向与`x`向量相同且长度为单位长度的向量。 |
 | `vec4 ftransform()` | 返回经过与标准 OpenGL 管线相同方式变换后的当前向量。只能在顶点着色器中使用。 |
-| `T faceforward(T N, T I, T Nref)` | 如果 `dot(I, Nref) < 0`，则返回 `N`。否则返回 `-N`。 |
-| `T reflect(T I, T N)` | 返回 `I` 向量在法线 `N` 上的反射向量。即返回 `I - 2 * dot(I, N) * N`。 |
-| `T refract(T I, T N, float eta)` | 返回 `I` 向量在法线 `N` 上的折射向量，其中 `eta` 是相对折射率。 |
+| `T faceforward(T N, T I, T Nref)` | 如果`dot(I, Nref) < 0`，则返回`N`。否则返回`-N`。 |
+| `T reflect(T I, T N)` | 返回`I`向量在法线`N`上的反射向量。即返回`I - 2 * dot(I, N) * N`。 |
+| `T refract(T I, T N, float eta)` | 返回`I`向量在法线`N`上的折射向量，其中`eta`是相对折射率。 |
 
 该函数由以下代码段描述：
 
-```cpp
+```
 k = 1.0 - eta*eta*(1.0 - dot(N, I) * dot(N, I));
 if (k < 0.0)
     return T(0.0);
@@ -8142,7 +8288,7 @@ else
     return eta*I - (eta*dot(N, I) + sqrt(k)) * N;
 ```
 
-`ftransform` 函数用于执行多通行渲染（multi-pass rendering）且部分通行使用标准管线的情况。该函数允许顶点着色器返回与在其他通行中相同的 `gl_Position` 变量值。
+`ftransform` 函数用于执行多通行渲染（multi-pass rendering）且部分通行使用标准管线的情况。该函数允许顶点着色器返回与在其他通行中相同的`gl_Position`变量值。
 
 ### 矩阵函数
 
@@ -8170,11 +8316,9 @@ GLSL 提供了一个标准矩阵函数 —— `matrixCompMult`（表 12.14）。
 | `bvec greaterThanEqual (vec x, vec y)`<br>`bvec greaterThanEqual (ivec x, ivec y)` | 返回 `x >= y` 的分量级比较结果。 |
 | `bvec equal (vec x, vec y)`<br>`bvec equal (ivec x, ivec y)`<br>`bvec equal (bvec x, bvec y)` | 返回 `x == y` 的分量级比较结果。 |
 | `bvec notEqual (vec x, vec y)`<br>`bvec notEqual (ivec x, ivec y)`<br>`bvec notEqual (bvec x, bvec y)` | 返回 `x != y` 的分量级比较结果。 |
-| `bool any (bvec x)` | 如果 `x` 向量中至少有一个分量为 `true`，则返回 `true`。 |
-| `bool all (bvec x)` | 如果 `x` 向量的所有分量都为 `true`，则返回 `true`。 |
-| `bvec not (bvec x)` | 返回 `x` 向量的分量级取反结果。 |
-
-
+| `bool any (bvec x)` | 如果`x`向量中至少有一个分量为`true`，则返回`true`。 |
+| `bool all (bvec x)` | 如果`x`向量的所有分量都为`true`，则返回`true`。 |
+| `bvec not (bvec x)` | 返回`x`向量的分量级取反结果。 |
 
 ## 纹理访问函数
 
@@ -8190,11 +8334,11 @@ GLSL 提供了一个标准矩阵函数 —— `matrixCompMult`（表 12.14）。
 
 | 函数 | 描述 |
 | :--- | :--- |
-| `vec4 texture1D(sampler1D sampler, float coord [, float bias])` <br> `vec4 texture1DProj(sampler1D sampler, vec2 coord [, float bias])` <br> `vec4 texture1DProj(sampler1D sampler, vec4 coord [, float bias])` <br> `vec4 texture1DLod(sampler1D sampler, float coord, float lod)` <br> `vec4 texture1DProjLod(sampler1D sampler, vec2 coord, float lod)` <br> `vec4 texture1DProjLod(sampler1D sampler, vec4 coord, float lod)` | `coord` 参数用于访问由 `sampler` 参数指定的一维纹理。在 `Proj` 版本中，`coord.s/coord.t` 的值用于索引纹理。 |
-| `vec4 texture2D(sampler2D sampler, vec2 coord [, float bias])` <br> `vec4 texture2DProj(sampler2D sampler, vec3 coord [, float bias])` <br> `vec4 texture2DProj(sampler2D sampler, vec4 coord [, float bias])` <br> `vec4 texture2DLod(sampler2D sampler, vec2 coord, float lod)` <br> `vec4 texture2DProjLod(sampler2D sampler, vec3 coord, float lod)` <br> `vec4 texture2DProjLod(sampler2D sampler, vec4 coord, float lod)` | `coord` 参数用于访问由 `sampler` 参数指定的二维纹理。在 `Proj` 版本中，`(coord.s/coord.p, coord.t/coord.p)` 的值用于索引纹理。 |
-| `vec4 texture3D(sampler3D sampler, vec3 coord [, float bias])` <br> `vec4 texture3DProj(sampler3D sampler, vec4 coord [, float bias])` <br> `vec4 texture3DLod(sampler3D sampler, vec3 coord, float lod)` <br> `vec4 texture3DProjLod(sampler3D sampler, vec4 coord, float lod)` | `coord` 参数用于访问由 `sampler` 参数指定的三维纹理。在 `Proj` 版本中，(`coord.s/coord.q`, `coord.t/coord.q`, `coord.p/coord.q`) 的值用于索引纹理。 |
-| `vec4 textureCube(samplerCube sampler, vec3 coord [, float bias])` <br> `vec4 textureCubeLod(samplerCube sampler, vec3 coord, float lod)` | `coord` 参数用于访问使用 `sampler` 参数指定的立方体贴图纹理。 |
-| `vec4 shadow1D(sampler1DShadow sampler, vec3 coord [, float bias])` <br> `vec4 shadow2D(sampler2DShadow sampler, vec3 coord [, float bias])` <br> `vec4 shadow1DProj(sampler1DShadow sampler, vec4 coord [, float bias])` <br> `vec4 shadow2DProj(sampler2DShadow sampler, vec4 coord [, float bias])` <br> `vec4 shadow1DLod(sampler1DShadow sampler, vec3 coord, float lod)` <br> `vec4 shadow2DLod(sampler2DShadow sampler, vec3 coord, float lod)` <br> `vec4 shadow1DProjLod(sampler1DShadow sampler, vec4 coord, float lod)` <br> `vec4 shadow2DProjLod(sampler2DShadow sampler, vec4 coord, float lod)` | `coord` 参数用于访问由 `sampler` 参数指定的包含深度值的一维或二维纹理。在 `Proj` 版本中，`coord` 参数在访问结构之前会被除以纹理坐标向量的最后一个分量。 |
+| `vec4 texture1D(sampler1D sampler, float coord [, float bias])` <br> `vec4 texture1DProj(sampler1D sampler, vec2 coord [, float bias])` <br> `vec4 texture1DProj(sampler1D sampler, vec4 coord [, float bias])` <br> `vec4 texture1DLod(sampler1D sampler, float coord, float lod)` <br> `vec4 texture1DProjLod(sampler1D sampler, vec2 coord, float lod)` <br> `vec4 texture1DProjLod(sampler1D sampler, vec4 coord, float lod)` | `coord` 参数用于访问由`sampler`参数指定的一维纹理。在`Proj`版本中，`coord.s/coord.t` 的值用于索引纹理。 |
+| `vec4 texture2D(sampler2D sampler, vec2 coord [, float bias])` <br> `vec4 texture2DProj(sampler2D sampler, vec3 coord [, float bias])` <br> `vec4 texture2DProj(sampler2D sampler, vec4 coord [, float bias])` <br> `vec4 texture2DLod(sampler2D sampler, vec2 coord, float lod)` <br> `vec4 texture2DProjLod(sampler2D sampler, vec3 coord, float lod)` <br> `vec4 texture2DProjLod(sampler2D sampler, vec4 coord, float lod)` | `coord` 参数用于访问由`sampler`参数指定的二维纹理。在`Proj`版本中，`(coord.s/coord.p, coord.t/coord.p)` 的值用于索引纹理。 |
+| `vec4 texture3D(sampler3D sampler, vec3 coord [, float bias])` <br> `vec4 texture3DProj(sampler3D sampler, vec4 coord [, float bias])` <br> `vec4 texture3DLod(sampler3D sampler, vec3 coord, float lod)` <br> `vec4 texture3DProjLod(sampler3D sampler, vec4 coord, float lod)` | `coord` 参数用于访问由`sampler`参数指定的三维纹理。在`Proj`版本中，(`coord.s/coord.q`, `coord.t/coord.q`, `coord.p/coord.q`) 的值用于索引纹理。 |
+| `vec4 textureCube(samplerCube sampler, vec3 coord [, float bias])` <br> `vec4 textureCubeLod(samplerCube sampler, vec3 coord, float lod)` | `coord` 参数用于访问使用`sampler`参数指定的立方体贴图纹理。 |
+| `vec4 shadow1D(sampler1DShadow sampler, vec3 coord [, float bias])` <br> `vec4 shadow2D(sampler2DShadow sampler, vec3 coord [, float bias])` <br> `vec4 shadow1DProj(sampler1DShadow sampler, vec4 coord [, float bias])` <br> `vec4 shadow2DProj(sampler2DShadow sampler, vec4 coord [, float bias])` <br> `vec4 shadow1DLod(sampler1DShadow sampler, vec3 coord, float lod)` <br> `vec4 shadow2DLod(sampler2DShadow sampler, vec3 coord, float lod)` <br> `vec4 shadow1DProjLod(sampler1DShadow sampler, vec4 coord, float lod)` <br> `vec4 shadow2DProjLod(sampler2DShadow sampler, vec4 coord, float lod)` | `coord` 参数用于访问由`sampler`参数指定的包含深度值的一维或二维纹理。在`Proj`版本中，`coord` 参数在访问结构之前会被除以纹理坐标向量的最后一个分量。 |
 
 ## 导数处理函数
 
@@ -8206,8 +8350,8 @@ GLSL 提供了一个标准矩阵函数 —— `matrixCompMult`（表 12.14）。
 
 | 函数 | 描述 |
 | :--- | :--- |
-| `dFdx` (T p) | 返回参数 `p` 对 x 的一阶导数的近似值。 |
-| `dFdy` (T p) | 返回参数 `p` 对 y 的一阶导数的近似值。 |
+| `dFdx` (T p) | 返回参数`p`对 x 的一阶导数的近似值。 |
+| `dFdy` (T p) | 返回参数`p`对 y 的一阶导数的近似值。 |
 | `fwidth` (T p) | 返回 `abs(dFdx(p)) + abs(dFdy(p))` 的值。 |
 
 ## 噪声函数
@@ -8224,6 +8368,7 @@ GLSL 提供了一个标准矩阵函数 —— `matrixCompMult`（表 12.14）。
 图 12.7 包含了由二维噪声函数生成的图像。$[-1, 1]$ 区间内的值被映射为灰度。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_254_0.png)
+
 **图 12.7.** 由二维噪声函数生成的图像
 
 ### 表 12.18. 噪声函数
@@ -8239,7 +8384,7 @@ GLSL 提供了一个标准矩阵函数 —— `matrixCompMult`（表 12.14）。
 
 ## 顶点和片元着色器的简单示例
 
-代码清单 12.2 和 12.3 包含了用 GLSL 编写的简单的顶点和片元着色器。顶点着色器的最低功能是将变换后顶点的坐标写入 `gl_Position` 变量。
+代码清单 12.2 和 12.3 包含了用 GLSL 编写的简单的顶点和片元着色器。顶点着色器的最低功能是将变换后顶点的坐标写入`gl_Position`变量。
 
 ### 代码清单 12.2. 一个简单的顶点着色器
 
@@ -8254,7 +8399,7 @@ void main (void)
 }
 ```
 
-片元着色器的最低功能是将变换后顶点的坐标写入 `gl_FragColor` 变量。
+片元着色器的最低功能是将变换后顶点的坐标写入`gl_FragColor`变量。
 
 ### 代码清单 12.3. 一个简单的片元着色器
 
@@ -8307,6 +8452,8 @@ void main (void)
 
 使用这些着色器绘制的茶壶对象如图 13.1 所示。绘制它的 C++ 代码在*第 14 章*中讨论（见代码清单 14.2）。
 
+
+
 ![](img/0195f4c0347b99a95028b956b67109ca_257_0.png)
 
 ## 漫反射光照模型
@@ -8324,12 +8471,12 @@ $$C_{out} = C \cdot (k_a + k_d \cdot \max(0, (n, l)))$$ (13.1)
 如果你希望使用公式 (13.1) 来计算每个像素的光照，你需要知道表面每个点的 $n$ 和 $l$ 向量（法线应使用模型视图矩阵进行变换），以便使用 `varying` 变量将它们传递给片元着色器。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_258_0.png)
+
 图 13.2. 漫反射光照模型
 
 ![](img/0195f4c0347b99a95028b956b67109ca_258_1.png)
+
 图 13.3. 用于计算光照的向量
-
-
 
 代码清单 13.3 和 13.4 包含了用于漫反射光照的顶点着色器和片元着色器。
 
@@ -8389,6 +8536,7 @@ $$C_{out} = C \cdot (k_a + k_d \max(0, (n, l)) + I \cdot k_s \cdot \max(0, (n, h
 这里，$k_s$ 和 $I$ 分别表示高光光照的贡献和光源的颜色。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_260_0.png)
+
 **图 13.4.** Blinn 光照模型中使用的向量
 
 在这个公式中，$h$ 表示一个单位向量，它是光源方向 $l$ 与观察者方向 $v$ 之间夹角的角平分线（图 13.4）。
@@ -8475,6 +8623,7 @@ void main (void)
 图 13.5 显示了使用代码清单 13.5 和 13.6 中的着色器绘制的茶壶。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_262_0.png)
+
 **图 13.5.** 根据 Blinn 模型光照的茶壶
 
 ## Phong 光照模型
@@ -8486,6 +8635,7 @@ $$C_{out} = C \cdot (k_d \cdot \max(0, (n, l)) + I \cdot k_s \cdot \max(0, (l, r
 这里，$r$ 表示一个向量，它是指向观察者的 $v$ 向量相对于 $n$ 向量的反射向量（图 13.6）。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_263_0.png)
+
 **图 13.6.** Phong 模型中使用的向量
 
 与 Blinn 光照模型类似，$l$、$v$ 和 $n$ 向量由顶点着色器计算，然后通过 `varying` 变量传递给片元着色器。
@@ -8629,8 +8779,6 @@ $$\begin{aligned} r &= 0.5 \cdot (x + 1), \\ g &= 0.5 \cdot (y + 1), \\ b &= 0.5
 
 $$\begin{aligned} x &= 2 \cdot r - 1, \\ y &= 2 \cdot g - 1, \\ z &= 2 \cdot b - 1. \end{aligned} \quad (13.6)$$
 
-
-
 **图 13.7.** 切空间（tangent space）的基
 
 在对一个面应用此类映射后，你会为面上的每个点获得一个单位向量。该向量应被视为该点的法线。然而，直接使用来自映射的法线值是很困难的，因为它们通常指定的是针对特定面的法线，也就是说，该法线最初等于 $(0, 0, 1)$。这就是引入*切空间*概念的原因（图 13.7）。
@@ -8652,6 +8800,10 @@ $t$、$b$ 和 $n$ 向量构成了该空间的正交基；因此，将向量映�
 代码清单 13.11 和 13.12 包含了一个顶点色器和一个片元色器，它们实现了带有凹凸映射的 Blinn 光照模型。
 
 ### 代码清单 13.11. 带有凹凸映射的 Blinn 光照模型的顶点色器
+
+
+
+### 简单凹凸顶点着色器
 
 ```glsl
 //
@@ -8683,7 +8835,7 @@ void main (void)
 }
 ```
 
-### 代码清单 13.12. 带有凹凸映射的 Blinn 光照模型的片元色器
+### 代码清单 13.12. 带有凹凸映射的 Blinn 光照模型的片元着色器
 
 ```glsl
 //
@@ -8712,23 +8864,24 @@ void main (void)
 }
 ```
 
-图 13.8 显示了使用这些着色器绘制的圆环面。
-图 13.9 显示了所使用的凹凸映射图。
+图 13.8 显示了使用这些着色器绘制的圆环面。图 13.9 显示了所使用的凹凸映射图。
 
 **图 13.8.** 应用了凹凸映射的圆环面
+
 **图 13.9.** 图 13.8 中使用的凹凸映射图
 
 ## 各向异性光照模型
 
-前几节描述的模型具有相同的特性：表面的光照程度仅由 $l$、$v$ 和 $n$ 向量之间的相对位置决定。表面的方向（只要相对位置相同）并不重要。具有这些特性的表面被称为*各向同性（isotropic）*的。
+前几节描述的模型具有相同的特性：表面的光照程度仅由`l`、`v`和`n`向量之间的相对位置决定。表面的方向（只要相对位置相同）并不重要。具有这些特性的表面被称为*各向同性（isotropic）*的。
 
 然而，在实际中，有一些表面不具备这一特性（例如 CD 表面或抛光金属）。这些被称为*各向异性（anisotropic）*的。
 
-为了能够将表面方向考虑在内，使用了*切向量场（tangent vector field）*。换句话说，对于每个点 $P$，定义一个垂直于该点法线 $n$ 的单位向量 $t$（图 13.10）。
+为了能够将表面方向考虑在内，使用了*切向量场（tangent vector field）*。换句话说，对于每个点`P`，定义一个垂直于该点法线`n`的单位向量`t`（图 13.10）。
 
-切向量场通常使用一种称为*切线图（tangent map）*的纹理来定义。切线图的示例包含在随附 CD-ROM 的 TEXTURES\TANGENTMAPS 文件夹中。
+切向量场通常使用一种称为*切线图（tangent map）*的纹理来定义。切线图的示例包含在随附 CD-ROM 的`TEXTURES\TANGENTMAPS`文件夹中。
 
 **图 13.10.** 切向量场
+
 **图 13.11.** 极细纤维的光照
 
 针对各向异性表面有几种光照模型，我们将讨论其中的两种。
@@ -8739,17 +8892,17 @@ void main (void)
 
 假设需要计算一根极细纤维的光照（图 13.11）。
 
-为这根纤维定义 $n$ 法线是不可能的，因为任何垂直于 $t$ 的单位向量都可以作为法线。
+为这根纤维定义`n`法线是不可能的，因为任何垂直于`t`的单位向量都可以作为法线。
 
 使用标准方法，为每个分量（漫反射或高光）分别选择一个使光照分量达到最大值的法线。
 
-考虑漫反射分量是如何计算的一个示例。请注意，指向光源的 $l$ 向量可以分解为两个向量：一个与 $t$ 向量平行，另一个与其垂直。换句话说，它可以表示为以下形式：
+考虑漫反射分量是如何计算的一个示例。请注意，指向光源的`l`向量可以分解为两个向量：一个与`t`向量平行，另一个与其垂直。换句话说，它可以表示为以下形式：
 
 $$l = (t, l)l + l^{\perp} \quad (13.7)$$
 
-在公式 (13.7) 中，$l^{\perp}$ 表示 $l$ 向量垂直于 $t$ 向量的分量。
+在公式 (13.7) 中，`l^{\perp}`表示`l`向量垂直于`t`向量的分量。
 
-很容易证明，当 $n = l^{\perp} / ||l^{\perp}||$ 时，$(n, l)$ 达到最大值。如果我们从公式 (13.7) 中找到 $l^{\perp}$ 并计算它的标量平方，我们将很容易找到该分量的长度以及所寻求的最大值 (13.8)。
+很容易证明，当`n = l^{\perp} / ||l^{\perp}||`时，`(n, l)`达到最大值。如果我们从公式 (13.7) 中找到`l^{\perp}`并计算它的标量平方，我们将很容易找到该分量的长度以及所寻求的最大值 (13.8)。
 
 $$\max(l, n) = \sqrt{1 - (t, l)^2} \quad (13.8)$$
 
@@ -8761,15 +8914,15 @@ $$\max(h, n) = \sqrt{1 - (t, h)^2} \quad (13.9)$$
 
 $$C_{out} = C \cdot (k_a + k_d \cdot \max(0, (t, l))^{0.5} + I \cdot k_s \cdot \max(0, (t, h))^{0.5} P) \quad (13.10)$$
 
-虽然使用片元色器很容易实现公式 (13.10)，但还可以进行额外的优化。
+虽然使用片元着色器很容易实现公式 (13.10)，但还可以进行额外的优化。
 
-请注意，漫反射光照取决于 $(t, l)^2$ 的值，而高光光照取决于 $(t, h)^2$。这种依赖关系可以使用二维纹理来表示，其中 $(t, l)^2$ 是 $s$ 坐标，$(t, h)^2$ 是 $t$ 坐标。对应于这两个点积平方的漫反射分量可以存储在纹理的红色分量中，而高光分量可以存储在绿色分量中。
+请注意，漫反射光照取决于`(t, l)^2`的值，而高光光照取决于`(t, h)^2`。这种依赖关系可以使用二维纹理来表示，其中`(t, l)^2`是`s`坐标，`(t, h)^2`是`t`坐标。对应于这两个点积平方的漫反射分量可以存储在纹理的红色分量中，而高光分量可以存储在绿色分量中。
 
-用于创建此类纹理的 Python 脚本包含在随附 CD-ROM 的 Code\scripts 文件夹中。我们稍后将使用此纹理。
+用于创建此类纹理的 Python 脚本包含在随附 CD-ROM 的`Code\scripts`文件夹中。我们稍后将使用此纹理。
 
-使用这种方法，我们可以编写用于各向异性光照模型的顶点和片元色器，如代码清单 13.13 和 13.14 所示。
+使用这种方法，我们可以编写用于各向异性光照模型的顶点和片元着色器，如代码清单 13.13 和 13.14 所示。
 
-### 代码清单 13.13. 用于渲染各向异性表面的顶点色器
+### 代码清单 13.13. 用于渲染各向异性表面的顶点着色器
 
 ```glsl
 //
@@ -8778,11 +8931,6 @@ $$C_{out} = C \cdot (k_a + k_d \cdot \max(0, (t, l))^{0.5} + I \cdot k_s \cdot \
 //
 
 varying vec3 lt;
-```
-
-
-
-```glsl
 varying vec3 ht;
 
 uniform vec4 lightPos;
@@ -8807,7 +8955,7 @@ void main(void)
 }
 ```
 
-## 列表 13.14. 用于渲染各向异性表面的片元着色器
+### 列表 13.14. 用于渲染各向异性表面的片元着色器
 
 ```glsl
 //
@@ -8843,11 +8991,11 @@ void main(void)
 
 $$C_{out} = C \cdot k_a + I \cdot k_e^{ -\left( k \frac{(h,t)}{(h,n)} \right)^2 }$$ (13.11)
 
-这里，$k$ 表示最高对比度（类似于 Blinn 和 Phong 模型中的 $p$）。
+这里，`k`表示最高对比度（类似于 Blinn 和 Phong 模型中的`p`）。
 
 列表 13.15 和 13.16 包含了 Ward 模型的顶点着色器和片元着色器。
 
-## 列表 13.15. Ward 光照模型的顶点着色器
+### 列表 13.15. Ward 光照模型的顶点着色器
 
 ```glsl
 //
@@ -8881,7 +9029,7 @@ void main(void)
 }
 ```
 
-## 列表 13.16. Ward 光照模型的片元着色器
+### 列表 13.16. Ward 光照模型的片元着色器
 
 ```glsl
 //
@@ -8915,6 +9063,7 @@ void main(void)
 图 13.12 显示了一个使用 Ward 光照模型绘制的圆环面。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_276_0.png)
+
 **图 13.12.** 使用 Ward 光照模型绘制的圆环面
 
 ## 边缘光 (Rim Lighting)
@@ -8925,18 +9074,19 @@ void main(void)
 
 $$C_{rim} = C_r \cdot (1 - \max(0, (n, v)))^p$$ (13.12)
 
-这里 $C_r$ 表示光照颜色，$p$ 是对比度。很容易注意到，当 $n$ 和 $v$ 向量相互垂直时（即它们处于边缘时），该表达式达到最大值。
+这里`C_r`表示光照颜色，`p`是对比度。很容易注意到，当`n`和`v`向量相互垂直时（即它们处于边缘时），该表达式达到最大值。
 
 你可以通过引入*偏移 (bias)* 参数来修改公式 (13.12)，这将允许你控制光照区域的大小：
 
 $$C_{rim} = C_r \cdot (1 + bias - \max(0, (n, v)))^p$$ (13.11)
 
 ![](img/0195f4c0347b99a95028b956b67109ca_277_0.png)
+
 **图 13.13.** 具有边缘光的物体
 
 为 Blinn 模型添加边缘光不需要修改顶点着色器。但是，需要修改片元着色器，如列表 13.17 所示。
 
-## 列表 13.17. 边缘光的片元着色器
+### 列表 13.17. 边缘光的片元着色器
 
 ```glsl
 //
@@ -8972,9 +9122,11 @@ void main(void)
 
 ## Gooch 光照模型
 
-最简单的光照模型之一是 Gooch 模型（以 Amy Gooch 命名）。该模型使用 $n$ 和 $l$ 向量之间夹角的余弦值来进行颜色过渡（通常是从暖色过渡到冷色）。当光源位于物体后面时（即 $\langle n, l \rangle < 0$），光线似乎穿过了物体并获得了另一种颜色。
+最简单的光照模型之一是 Gooch 模型（以 Amy Gooch 命名）。该模型使用`n`和`l`向量之间夹角的余弦值来进行颜色过渡（通常是从暖色过渡到冷色）。当光源位于物体后面时（即`⟨n, l⟩ < 0`），光线似乎穿过了物体并获得了另一种颜色。
 
 列表 13.18 和 13.19 包含了 Gooch 光照模型的顶点着色器和片元着色器。
+
+
 
 ### 列表 13.18. Gooch 光照模型的顶点着色器
 
@@ -9004,7 +9156,7 @@ void main(void)
 }
 ```
 
-## 列表 13.19. Gooch 光照模型的片元着色器
+### 列表 13.19. Gooch 光照模型的片元着色器
 
 ```glsl
 //
@@ -9061,8 +9213,6 @@ if (glGetError() != GL_NO_ERROR)
 else
     printf("Shading language supported: %s\n", s1Ver);
 ```
-
-
 
 返回的字符串格式如下：“major.minor[.release][vendor info]”。如果在尝试过程中发生错误，我们假设支持 1.051 版本（即描述文件的版本）。
 
@@ -9229,9 +9379,7 @@ void glUniform1ivARB(int location, GLsizei count, int * value);
 void glUniformMatrix1fvARB(int location, GLsizei count, GLboolean transpose, float * value);
 ```
 
-`count` 参数指定要写入的矩阵数量。（当它等于 1 时，应写入一个矩阵；当它大于 1 时，应写入一个矩阵数组）。`transpose` 参数指示矩阵是否
-
-（或矩阵）在写入前应进行转置。最后一个参数是指向包含所需数值的内存块的指针。
+`count` 参数指定要写入的矩阵数量。（当它等于 1 时，应写入一个矩阵；当它大于 1 时，应写入一个矩阵数组）。`transpose` 参数指示矩阵是否（或矩阵）在写入前应进行转置。最后一个参数是指向包含所需数值的内存块的指针。
 
 以下两个函数用于获取浮点型和整型 `uniform` 变量的值。实际写入的值的数量取决于特定变量的类型：
 
@@ -9251,13 +9399,15 @@ void glGetActiveUniformARB(GLhandleARB programObj, GLuint index,
                            GLcharARB * name);
 ```
 
-`index` 参数指定请求的 `uniform` 变量的索引（零表示第一个变量）；`name` 参数指定用于存储变量名称的缓冲区，而 `length` 指定存储写入该缓冲区的字符数量的地址。名称将以一个以 null 结尾的字符串形式存储。`maxLength` 参数指定 `name` 缓冲区能够存储的最大字符数。`type` 参数指定用于存储请求变量类型的变量地址。类型的有效值如下：`GL_FLOAT`, `GL_FLOAT_VEC2_ARB`, `GL_FLOAT_VEC3_ARB`, `GL_FLOAT_VEC4_ARB`, `GL_INT`, `GL_INT_VEC2_ARB`, `GL_INT_VEC3_ARB`, `GL_INT_VEC4_ARB`, `GL_BOOL_ARB`, `GL_BOOL_VEC2_ARB`, `GL_BOOL_VEC3_ARB`, `GL_BOOL_VEC4_ARB`, `GL_FLOAT_MAT2_ARB`, `GL_FLOAT_MAT3_ARB`, `GL_FLOAT_MAT4_ARB`, `GL_SAMPLER_1D_ARB`, `GL_SAMPLER_2D_ARB`, `GL_SAMPLER_3D_ARB`, `GL_SAMPLER_CUBE_ARB`, `GL_SAMPLER_1D_SHADOW_ARB`, `GL_SAMPLER_2D_SHADOW_ARB`, `GL_SAMPLER_3D_SHADOW_ARB`, `GL_SAMPLER_2D_RECT_ARB` 以及 `GL_SAMPLER_2D_RECT_SHADOW_ARB`。`size` 参数指定用于存储对应类型元素数量的变量地址。
 
-对于 `sampler` 类型的 `uniform` 变量，存储的值是选择该纹理的纹理单元编号。（该值被假定为整数）。
+
+`index`参数指定请求的`uniform`变量的索引（零表示第一个变量）；`name`参数指定用于存储变量名称的缓冲区，而`length`指定存储写入该缓冲区的字符数量的地址。名称将以一个以null结尾的字符串形式存储。`maxLength`参数指定`name`缓冲区能够存储的最大字符数。`type`参数指定用于存储请求变量类型的变量地址。类型的有效值如下：`GL_FLOAT`, `GL_FLOAT_VEC2_ARB`, `GL_FLOAT_VEC3_ARB`, `GL_FLOAT_VEC4_ARB`, `GL_INT`, `GL_INT_VEC2_ARB`, `GL_INT_VEC3_ARB`, `GL_INT_VEC4_ARB`, `GL_BOOL_ARB`, `GL_BOOL_VEC2_ARB`, `GL_BOOL_VEC3_ARB`, `GL_BOOL_VEC4_ARB`, `GL_FLOAT_MAT2_ARB`, `GL_FLOAT_MAT3_ARB`, `GL_FLOAT_MAT4_ARB`, `GL_SAMPLER_1D_ARB`, `GL_SAMPLER_2D_ARB`, `GL_SAMPLER_3D_ARB`, `GL_SAMPLER_CUBE_ARB`, `GL_SAMPLER_1D_SHADOW_ARB`, `GL_SAMPLER_2D_SHADOW_ARB`, `GL_SAMPLER_3D_SHADOW_ARB`, `GL_SAMPLER_2D_RECT_ARB`以及`GL_SAMPLER_2D_RECT_SHADOW_ARB`。`size`参数指定用于存储对应类型元素数量的变量地址。
+
+对于`sampler`类型的`uniform`变量，存储的值是选择该纹理的纹理单元编号。（该值被假定为整数）。
 
 ## GL_ARB_vertex_shader 扩展
 
-`GL_ARB_vertex_shader` 扩展引入了若干函数和常量以支持顶点着色器。以下是这些内容的完整列表：
+`GL_ARB_vertex_shader`扩展引入了若干函数和常量以支持顶点着色器。以下是这些内容的完整列表：
 
 ```cpp
 void glVertexAttrib1fARB(GLuint index, float v0);
@@ -9319,11 +9469,11 @@ void glGetVertexAttribPointervARB (GLuint index, GLenum pname,
     void ** pointer);
 ```
 
-`glVertexAttrib` 系列函数为通过其位置指定的顶点属性赋值。要通过名称获取属性位置，请使用 `glGetAttribLocationARB` 函数。
+`glVertexAttrib`系列函数为通过其位置指定的顶点属性赋值。要通过名称获取属性位置，请使用`glGetAttribLocationARB`函数。
 
-读取属性值是通过 `glGetVertexAttrib` 系列函数实现的。
+读取属性值是通过`glGetVertexAttrib`系列函数实现的。
 
-要通过位置获取属性的信息，可以使用 `glGetActiveAttribARB` 函数。
+要通过位置获取属性的信息，可以使用`glGetActiveAttribARB`函数。
 
 ```cpp
 void glGetActiveAttribARB (GLhandleARB programObj, GLuint index,
@@ -9332,15 +9482,15 @@ void glGetActiveAttribARB (GLhandleARB programObj, GLuint index,
     GLcharARB * name);
 ```
 
-`name` 参数指定用于存储属性名称的缓冲区（名称长度不应超过 `maxLength`）。实际保存在缓冲区中的字节数将被赋值给由 `length` 参数指定的变量。属性的类型将被赋值给由 `type` 参数指定的变量。类型的有效值如下：`GL_FLOAT`, `GL_FLOAT_VEC2_ARB`, `GL_FLOAT_VEC3_ARB`, `GL_FLOAT_VEC4_ARB`, `GL_FLOAT_MAT2_ARB`, `GL_FLOAT_MAT3_ARB` 以及 `GL_FLOAT_MAT4_ARB`。
+`name`参数指定用于存储属性名称的缓冲区（名称长度不应超过`maxLength`）。实际保存在缓冲区中的字节数将被赋值给由`length`参数指定的变量。属性的类型将被赋值给由`type`参数指定的变量。类型的有效值如下：`GL_FLOAT`, `GL_FLOAT_VEC2_ARB`, `GL_FLOAT_VEC3_ARB`, `GL_FLOAT_VEC4_ARB`, `GL_FLOAT_MAT2_ARB`, `GL_FLOAT_MAT3_ARB`以及`GL_FLOAT_MAT4_ARB`。
 
-还可以为属性指定一个位置。为此，请使用 `glBindAttribLocationARB` 函数。但是，你不能为标准属性（其名称以 `gl_` 前缀开头）指定位置。
+还可以为属性指定一个位置。为此，请使用`glBindAttribLocationARB`函数。但是，你不能为标准属性（其名称以`gl_`前缀开头）指定位置。
 
 新指定的位置只有在程序重新链接后才会生效。
 
 ## GL_ARB_fragment_shader 扩展
 
-`GL_ARB_fragment_shader` 扩展提供了对编写片段着色器的支持。它仅引入了少量的常量，没有引入任何函数。
+`GL_ARB_fragment_shader`扩展提供了对编写片段着色器的支持。它仅引入了少量的常量，没有引入任何函数。
 
 ## 获取 GLSL 支持信息
 
@@ -9807,7 +9957,7 @@ return 0;
     fragmentShader = glCreateShaderObjectARB (GL_FRAGMENT_SHADER_ARB);
 ```
 
-**图 14.1.** 使用代码清单 14.2 中的程序渲染的图像。
+图 14.1. 使用代码清单 14.2 中的程序渲染的图像。
 
 之后，程序将源代码加载到每个着色器中并进行编译。
 
@@ -9852,7 +10002,7 @@ if (!linked)
 
 代码清单 14.3 包含 `GlslProgram` 类，该类封装了对 GLSL 程序的处理工作。
 
-### 代码清单 14.3. GlslProgram 类的描述
+### 代码清单 14.3. `GlslProgram` 类的描述
 
 ```cpp
 //
@@ -9987,17 +10137,17 @@ protected:
 
 ## 第 14 章：在 C++ 程序中使用 GLSL。所需扩展
 
-正如在这个清单中所见，`GlslProgram` 类包含了几个简单且方便的函数来支持着色器。其中最重要的是 `isSupported` 和 `version`，它们允许你查询图形处理器和驱动程序是否支持 GLSL，以及支持哪个 GLSL 版本（如果支持的话）。
+正如在这个清单中所见，`GlslProgram` 类包含了几个简单且方便的函数来支持着色器。其中最重要的是 `isSupported()` 和 `version()`，它们允许你查询图形处理器和驱动程序是否支持 GLSL，以及支持哪个 GLSL 版本（如果支持的话）。
 
-`loadShaders` 函数负责加载、编译和链接着色器。过程中发生的错误会被记录在 `log` 变量中。
+`loadShaders()` 函数负责加载、编译和链接着色器。过程中发生的错误会被记录在 `log` 变量中。
 
 此外，该类还提供了几种访问 `uniform` 变量和顶点属性（vertex attributes）的方法。这些可以通过位置（location）或名称来访问。
 
-`setTexture` 方法用于指定纹理单元的编号，其中选择了与 `sampler` 变量相对应的纹理。
+`setTexture()` 方法用于指定纹理单元的编号，其中选择了与 `sampler` 变量相对应的纹理。
 
 代码清单 14.4 包含了该类的实现。
 
-### 代码清单 14.4. GlslProgram 类的实现
+### 代码清单 14.4. `GlslProgram` 类的实现
 
 ```cpp
 //
@@ -10557,7 +10707,7 @@ int GlslProgram::maxTextureCoords()
 
 代码清单 14.5 包含了使用 `GlslProgram` 类重写的代码清单 14.2 中的程序版本。
 
-## 代码清单 14.5. 如何使用 GlslProgram 类的简单示例
+## 代码清单 14.5. 如何使用 `GlslProgram` 类的简单示例
 
 ```cpp
 //
@@ -10713,13 +10863,13 @@ int main (int argc, char * argv [])
 }
 ```
 
-## 第 15 章：在 RenderMonkey 集成开发环境中开发 GLSL 着色器
+# 第 15 章：在 RenderMonkey 集成开发环境中开发 GLSL 着色器
 
 尽管 GLSL 简单，但使用这种语言编写着色器是一项复杂且劳师动众的任务。原因之一是，在尝试获得所需效果时，往往很难找到合适的公式和参数的最佳值。如果你手动执行此操作（即：编辑主 C++ 代码，编译它，编辑着色器，运行程序，检查结果等，如图 15.1 所示），过程将会非常冗长且乏味。
 
 这时，IDE（集成开发环境）就成了程序员的帮手。本章将介绍 ATI RenderMonkey 1.5 IDE。该 IDE 使得为 OpenGL（使用 GLSL）和 Direct3D（使用 HLSL）开发和调试着色器成为可能。不过，我们仅讨论使用 OpenGL 和 GLSL 的相关操作。
 
-**注意**：关于如何安装和使用 RenderMonkey 的详细信息，请访问 http://www.ati.com/developer。
+**注意**：关于如何安装和使用 RenderMonkey 的详细信息，请访问 `http://www.ati.com/developer`。
 
 启动 RenderMonkey。屏幕上会出现一个如图 15.2 所示的窗口。
 
@@ -10727,17 +10877,15 @@ int main (int argc, char * argv [])
 
 **图 15.2.** RenderMonkey 窗口
 
+**图 15.3.** 工具栏
 
+**图 15.4.** RenderMonkey 的 `Workspace` 窗口
 
-图 15.3. 工具栏
+你会看到窗口顶部有一个菜单栏和一个工具栏（图 15.3），左侧有一个 `Workspace` 窗口，底部有一个 `Output` 窗口。
 
-图 15.4. RenderMonkey 的 Workspace 窗口
+`Output` 窗口用于输出编译结果以及错误和警告信息。你可以通过拖动其上边界轻松调整其大小。
 
-你会看到窗口顶部有一个菜单栏和一个工具栏（图 15.3），左侧有一个 **Workspace** 窗口，底部有一个 **Output** 窗口。
-
-**Output** 窗口用于输出编译结果以及错误和警告信息。你可以通过拖动其上边界轻松调整其大小。
-
-**Workspace** 窗口包含两个选项卡 —— **Effect** 和 **Art**（图 15.4）。第一个选项卡面向着色器程序员，用于编写着色器代码。第二个选项卡面向艺术家，允许用户操作纹理并尝试单个参数（如颜色和常量）。
+`Workspace` 窗口包含两个选项卡——`Effect` 和 `Art`（图 15.4）。第一个选项卡面向着色器程序员，用于编写着色器代码。第二个选项卡面向艺术家，允许用户操作纹理并尝试单个参数（如颜色和常量）。
 
 将工作区分为两部分，使得程序员和艺术家可以在同一个项目中工作，而无需担心损坏对方的数据。
 
@@ -10746,20 +10894,30 @@ int main (int argc, char * argv [])
 工具栏上的按钮含义显而易见，仅其中几个需要说明：
 
 - Open Workspace（打开工作区）
-- Save Workspace（保存工作区） —— 如果项目是第一次保存，将打开“另存为”对话框。
+- Save Workspace（保存工作区）——如果项目是第一次保存，将打开“另存为”对话框。
 - Workspace Window（工作区窗口）
 - Output Window（输出窗口）
-- Preview window（预览窗口） —— 当执行着色器时打开，显示使用着色器渲染的图像。
+- Preview window（预览窗口）——当执行着色器时打开，显示使用着色器渲染的图像。
 - Artist Editor（艺术家编辑器）
 - Compile Active Effect（编译当前活动效果）
 - Compile All Shaders in the Workspace（编译工作区中的所有着色器）
 - 一组五个模式按钮。除了 Camera Home 按钮外，目前只能激活其中一个：
-    - Rotate Camera（旋转相机） —— 在此模式下，按住鼠标左键，你可以旋转相机，使预览窗口中的对象旋转。使用鼠标滚轮可以放大或缩小图像。
-    - Move Camera（移动相机） —— 在此模式下，按住鼠标左键，你可以移动相机，使预览窗口中的对象移动。使用鼠标滚轮可以放大或缩小图像。
-    - Zoom Camera（缩放相机） —— 在此模式下，按住鼠标左键，你可以放大或缩小图像。
-    - Camera Home（相机复位） —— 点击此按钮可以重置相机的设置；此按钮不会切换任何模式，也不会保持按下状态。
-    - Overload Camera Mode（相机叠加模式） —— 在此模式下，按住鼠标左键，你可以旋转相机，使预览窗口中的对象旋转。如果同时按住 <Ctrl> 键，鼠标将移动对象。使用鼠标滚轮可以放大或缩小图像。
-- Mouse Input Mode（鼠标输入模式） —— 在此模式下，鼠标的运动不会影响对象的方向和位置。相反，关于鼠标的信息将被记录在着色器可用的特殊内部变量中。
+
+
+
+## 相机操作模式
+
+- **Rotate Camera（旋转相机）** —— 在此模式下，按住鼠标左键，你可以旋转相机，使预览窗口中的对象旋转。使用鼠标滚轮可以放大或缩小图像。
+
+- **Move Camera（移动相机）** —— 在此模式下，按住鼠标左键，你可以移动相机，使预览窗口中的对象移动。使用鼠标滚轮可以放大或缩小图像。
+
+- **Zoom Camera（缩放相机）** —— 在此模式下，按住鼠标左键，你可以放大或缩小图像。
+
+- **Camera Home（相机复位）** —— 点击此按钮可以重置相机的设置；此按钮不会切换任何模式，也不会保持按下状态。
+
+- **Overload Camera Mode（相机叠加模式）** —— 在此模式下，按住鼠标左键，你可以旋转相机，使预览窗口中的对象旋转。如果同时按住`<Ctrl>`键，鼠标将移动对象。使用鼠标滚轮可以放大或缩小图像。
+
+- **Mouse Input Mode（鼠标输入模式）** —— 在此模式下，鼠标的运动不会影响对象的方向和位置。相反，关于鼠标的信息将被记录在着色器可用的特殊内部变量中。
 
 如果你将鼠标指针移至工具栏上的某个按钮并停留几秒钟，会弹出一个提示。
 
@@ -10769,31 +10927,31 @@ int main (int argc, char * argv [])
 
 **图 15.5.** RenderMonkey 的首选项
 
-在 **General** 选项卡中，在 **Default Model Orientation**（默认模型方向）下拉列表中选择右手坐标系 (**RHS**)。
+在 **General** 选项卡中，在 **Default Model Orientation**（默认模型方向）下拉列表中选择右手坐标系（**RHS**）。
 
-在 **Default Texture Origin**（默认纹理原点）下拉列表中，你可以选择纹理原点（即对应于 (0, 0) 纹理坐标的点）。
+在 **Default Texture Origin**（默认纹理原点）下拉列表中，你可以选择纹理原点（即对应于`(0, 0)`纹理坐标的点）。
 
 在 **Default Directories**（默认目录）组中，你可以指定纹理（在 **Textures** 下拉列表中）和模型（在 **Models** 下拉列表中）的默认路径，即包含你的纹理和模型的目录。你可以使用 **Browse** 按钮选择目录。
 
-Shader Editor 选项卡允许你设置着色器代码编辑器的参数。该对话框中的另外两个选项卡包含着色器文本编辑器的参数。我们不再讨论它们，因为标准设置已经足够，你不需要更改它们。
+**Shader Editor** 选项卡允许你设置着色器代码编辑器的参数。该对话框中的另外两个选项卡包含着色器文本编辑器的参数。我们不再讨论它们，因为标准设置已经足够，你不需要更改它们。
 
 ## 创建新项目
 
-要创建新项目，请在 **File** 菜单中选择 **New**（或按下 <Ctrl>+<N> 快捷键）。如果当前已打开一个项目，它将被保存，并打开一个空的 **Workspace** 窗口。
+要创建新项目，请在 **File** 菜单中选择 **New**（或按下`<Ctrl>+<N>`快捷键）。如果当前已打开一个项目，它将被保存，并打开一个空的 **Workspace** 窗口。
 
 在 **Workspace** 窗口中，选择 **Effect** 选项卡。
 
 在 RenderMonkey 的工作区中，项目以树状结构显示。其每个节点对应于一个效果、一个模型、一个纹理、一个变量等。
 
-RenderMonkey 将着色器分组为*效果 (effects)*。每个效果可以由多个*通道 (passes)* 组成，每个通道包含一个顶点着色器和一个片元着色器。
+RenderMonkey 将着色器分组为*效果（effects）*。每个效果可以由多个*通道（passes）* 组成，每个通道包含一个顶点着色器和一个片元着色器。
 
-要开始工作，请右键单击树的根节点 (**Effect Workspace**)，并在出现的弹出菜单中选择 **Add Effect Group | Effect Group w | OpenGL Effect** 命令。
+要开始工作，请右键单击树的根节点（**Effect Workspace**），并在出现的弹出菜单中选择 **Add Effect Group | Effect Group w | OpenGL Effect** 命令。
 
 随后 **Preview** 窗口将打开（通常显示一个蓝色球体），项目树中将出现节点。展开 **Effect 1** 和 **Pass 0** 节点。
 
 要操作某个节点，请使用弹出菜单（通过右键单击节点打开）或编辑器窗口（通过双击节点打开）。
 
-双击 **Model** 节点将打开选择模型的对话框。选择 **ElephantBody.3ds** 文件。
+双击 **Model** 节点将打开选择模型的对话框。选择`ElephantBody.3ds`文件。
 
 下一步是为模型的每个顶点选择属性。双击 **Stream Mapping** 节点以打开同名窗口（图 15.7）。
 
@@ -10805,7 +10963,7 @@ RenderMonkey 将着色器分组为*效果 (effects)*。每个效果可以由多�
 
 **图 15.7.** Stream Mapping 窗口
 
-数据类型（例如 FLOAT1, FLOAT2, FLOAT3, FLOAT4, UBYTE4 等）决定了该属性所使用数据的结构。
+数据类型（例如`FLOAT1`、`FLOAT2`、`FLOAT3`、`FLOAT4`、`UBYTE4`等）决定了该属性所使用数据的结构。
 
 数据类型字段右侧有三个按钮。它们分别用于删除属性，或者将属性在列表中上移或下移一个位置。
 
@@ -10817,9 +10975,9 @@ RenderMonkey 将着色器分组为*效果 (effects)*。每个效果可以由多�
 
 要将此 **Stream Mapping** 与特定通道关联，请右键单击 **Pass 0** 节点中的 **Stream Mapping** 图标，并在打开的对话框中选择 **Reference Node** 和 **Stream Mapping**（图 15.9）。
 
-> **Pass 0** 节点中 **Stream Mapping** 图标的左下角有一个小箭头（**Pass 0** 节点中的 **Model** 图标上也有同样的箭头）。任何图标上的这种箭头都表明该节点是对项目中另一个节点的引用。
+> **注意：** **Pass 0** 节点中 **Stream Mapping** 图标的左下角有一个小箭头（**Pass 0** 节点中的 **Model** 图标上也有同样的箭头）。任何图标上的这种箭头都表明该节点是对项目中另一个节点的引用。
 
-**注意**
+## 编辑着色器
 
 要编辑着色器，请双击 **Pass 0** 通道中的任何着色器节点来打开着色器编辑器。随后将出现图 15.10 所示的 **Shader Editor** 窗口。
 
@@ -10829,7 +10987,7 @@ RenderMonkey 将着色器分组为*效果 (effects)*。每个效果可以由多�
 
 **图 15.11.** 向项目中添加纹理
 
-要在顶点程序中访问切线 (tangent) 和副切线 (binormal)，请在顶点着色器代码中添加以下两行：
+要在顶点程序中访问切线（tangent）和副切线（binormal），请在顶点着色器代码中添加以下两行：
 
 ```glsl
 attribute vec3 rm_Binormal;
@@ -10842,25 +11000,25 @@ attribute vec3 rm_Tangent;
 gl_TexCoord[0] = gl_MultiTexCoord0;
 ```
 
-然后为当前效果添加纹理。为此，右键单击 **Effect 1** 节点打开其弹出菜单，并选择 `Add Texture` | `Add 3D Texture` | `C:/.../Examples/Media/Textures/NoiseVolume.dds` 项（图 15.11）。
+然后为当前效果添加纹理。为此，右键单击 **Effect 1** 节点打开其弹出菜单，并选择 **Add Texture | Add 3D Texture | `C:/.../Examples/Media/Textures/NoiseVolume.dds`** 项（图 15.11）。
 
-为了能在 **Pass 0** 通道中使用添加的纹理，你需要向该通道添加一个*纹理对象 (texture object)*（这实际上意味着为该纹理分配一个纹理单元）。
+为了能在 **Pass 0** 通道中使用添加的纹理，你需要向该通道添加一个*纹理对象（texture object）*（这实际上意味着为该纹理分配一个纹理单元）。
 
-为此，在 **Pass 0** 节点的弹出菜单中选择 `Add Texture Object` 项。展开出现的 **Texture 0** 节点。
+为此，在 **Pass 0** 节点的弹出菜单中选择 **Add Texture Object** 项。展开出现的 **Texture 0** 节点。
 
 **Texture 0** 节点的图标被划了叉，其子节点 **baseMap** 的图标也是如此。这表明该节点尚未关联任何纹理（图 15.12）。
 
-将 **NoiseVolume** 纹理与 **Texture 0** 节点关联。为此，打开 **baseMap** 节点的弹出菜单（通过右键单击该节点），并在菜单中选择 **Reference Node** | **NoiseVolume** 项（图 15.13）。
-
-
+将 **NoiseVolume** 纹理与 **Texture 0** 节点关联。为此，打开 **baseMap** 节点的弹出菜单（通过右键单击该节点），并在菜单中选择 **Reference Node | NoiseVolume** 项（图 15.13）。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_328_0.png)
+
 **图 15.12.** 未引用任何纹理的纹理节点
 
 ![](img/0195f4c0347b99a95028b956b67109ca_328_1.png)
+
 **图 15.13.** 将纹理与纹理对象关联
 
-使用弹出菜单中的 **Rename** 命令，将 **Texture 0 节点重命名为 **noiseMap**。为了能够从片元着色器访问此纹理，请在其中添加以下行：
+使用弹出菜单中的 **Rename** 命令，将 **Texture 0** 节点重命名为 **noiseMap**。为了能够从片元着色器访问此纹理，请在其中添加以下行：
 
 ```glsl
 uniform sampler3D noiseMap;
@@ -10871,12 +11029,15 @@ uniform sampler3D noiseMap;
 点击 **Value** 列中的单元格，为相应的纹理属性选择一个值。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_329_0.png)
+
 **图 15.14.** 纹理属性
 
 ![](img/0195f4c0347b99a95028b956b67109ca_329_1.png)
-**图 15.15.** 使用 `Add Variable` 命令添加变量
+
+**图 15.15.** 使用 **Add Variable** 命令添加变量
 
 RenderMonkey 允许你添加以下类型的变量（图 15.15）：
+
 - **Boolean**（布尔变量或向量）
 - **Integer**（整型变量或向量）
 - **Float**（浮点变量或向量）
@@ -10884,14 +11045,16 @@ RenderMonkey 允许你添加以下类型的变量（图 15.15）：
 - **Color**（颜色变量，即 RGBA 向量）
 
 ![](img/0195f4c0347b99a95028b956b67109ca_330_0.png)
-图 15.16. 添加浮点变量
+
+**图 15.16.** 添加浮点变量
 
 ![](img/0195f4c0347b99a95028b956b67109ca_330_1.png)
-图 15.17. 设置浮点变量的值
 
-在 **Pass 0** 通道中添加一个浮点变量 `freqScale`。为此，打开该节点的弹出菜单并选择 **Add Variable | Float | Float** 项目（图 15.16）。
+**图 15.17.** 设置浮点变量的值
 
-使用新添加变量节点的弹出菜单，将变量重命名为 `freqScale`（图 15.17），并将其值设置为 4.0。
+在 **Pass 0** 通道中添加一个浮点变量`freqScale`。为此，打开该节点的弹出菜单并选择 **Add Variable | Float | Float** 项目（图 15.16）。
+
+使用新添加变量节点的弹出菜单，将变量重命名为`freqScale`（图 15.17），并将其值设置为`4.0`。
 
 然后按照代码清单 15.1 和 15.2 所示编辑着色器代码。
 
@@ -10927,19 +11090,21 @@ void main(void)
 }
 ```
 
-请注意 `freqScale` 一致变量（uniform variable）的声明。当着色器执行时，它会自动与 **Pass 0** 通道中的 `freqScale` 节点关联。
+请注意`freqScale`一致变量（uniform variable）的声明。当着色器执行时，它会自动与 **Pass 0** 通道中的`freqScale`节点关联。
 
 编译此效果后，你将得到一张覆盖着奇异图案的大象图像（图 15.18）。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_331_0.png)
+
 **图 15.18.** 使用代码清单 15.1 和 15.2 的着色器所获得的图像
 
 ![](img/0195f4c0347b99a95028b956b67109ca_332_0.png)
+
 **图 15.19.** 颜色选择窗口
 
-如果你打开 `freqScale` 变量的值窗口并编辑该值，你将在 **Preview** 窗口中立即看到结果。
+如果你打开`freqScale`变量的值窗口并编辑该值，你将在 **Preview** 窗口中立即看到结果。
 
-为了给大象上色，请使用 **Pass 0** 节点弹出菜单中的 **Add Variable | Color** 命令添加 `c1` 和 `c2` 变量。
+为了给大象上色，请使用 **Pass 0** 节点弹出菜单中的 **Add Variable | Color** 命令添加`c1`和`c2`变量。
 
 通过在片元着色器中添加以下行来引入这些变量：
 
@@ -10948,34 +11113,37 @@ uniform vec4 c1;
 uniform vec4 c2;
 ```
 
-将着色器的返回值更改为 `mix(c1, c2, t)` 以给大象上色。
+将着色器的返回值更改为`mix(c1, c2, t)`以给大象上色。
 
-然而，如果你现在编译项目，大象仍然是黑白的，因为所有新创建的颜色变量都被赋值为 (1, 1, 1, 1)。
+然而，如果你现在编译项目，大象仍然是黑白的，因为所有新创建的颜色变量都被赋值为`(1, 1, 1, 1)`。
 
-将 `c1` 变量设置为另一个颜色值。为此，双击 `c1` 变量节点以打开颜色选择窗口（图 15.19）。
+将`c1`变量设置为另一个颜色值。为此，双击`c1`变量节点以打开颜色选择窗口（图 15.19）。
 
-现在你可以编辑 `c1`、`c2` 和 `freqScale` 变量的值，以获得理想的视觉效果。
+现在你可以编辑`c1`、`c2`和`freqScale`变量的值，以获得理想的视觉效果。
 
 图 15.20 展示了这种尝试的一种可能结果：大象看起来像是用奇异的石头制成的。
 
-尝试让大象身上的条纹变细。最简单的方法是将 `t` 变量（用于混合颜色）提升到大于 1 的幂次。图 15.21 显示了将该变量立方后的结果。
+尝试让大象身上的条纹变细。最简单的方法是将`t`变量（用于混合颜色）提升到大于 1 的幂次。图 15.21 显示了将该变量立方后的结果。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_333_0.png)
-图 15.20. 通过实验参数获得的图像
+
+**图 15.20.** 通过实验参数获得的图像
 
 ![](img/0195f4c0347b99a95028b956b67109ca_333_1.png)
-图 15.21. 将 t 变量立方后获得的图像
+
+**图 15.21.** 将`t`变量立方后获得的图像
 
 ![](img/0195f4c0347b99a95028b956b67109ca_333_2.png)
-图 15.22. 添加新效果
+
+**图 15.22.** 添加新效果
 
 尝试为此图像添加另一个效果。使用复制和粘贴命令在项目中创建 **Effect 1** 效果的副本。副本将自动命名为 **Effect 2**（图 15.22）。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_334_0.png)
 
-只有一个 **Preview** 窗口，它显示当前激活的效果。你可以通过效果节点的弹出菜单，或通过选中该节点并按下 <F3> 键来激活某个效果。
+只有一个 **Preview** 窗口，它显示当前激活的效果。你可以通过效果节点的弹出菜单，或通过选中该节点并按下`<F3>`键来激活某个效果。
 
-添加新的浮点变量 `redScale` 和 `redPow`，并编辑片元着色器以在材质中添加红色（代码清单 15.3）。
+添加新的浮点变量`redScale`和`redPow`，并编辑片元着色器以在材质中添加红色（代码清单 15.3）。
 
 ## 代码清单 15.3. 新版本的片元着色器
 
@@ -11006,20 +11174,20 @@ void main(void)
 | 名称 | 值 |
 | :--- | :--- |
 | `fTime0_X` | 一个浮点值，表示时间周期内的时间（默认时间周期为 120 s） |
-| `fCosTime0_X` | `fTime0_X` 的余弦值 |
-| `fSinTime0_X` | `fTime0_X` 的正弦值 |
-| `fTanTime0_X` | `fTime0_X` 的正切值 |
-| `fTime0_X_4f` | 由以下变量组成的四维向量：`fTime0_X`、`fCosTime0_X`、`fSinTime0_X` 和 `fTanTime0_X` |
-| `fTime0_1` | `fTime0_X` 变量的归一化值（即缩减到 [0, 1] 区间） |
-| `fCosTime0_1` | `fTime0_1` 的余弦值 |
-| `fSinTime0_1` | `fTime0_1` 的正弦值 |
-| `fTanTime0_1` | `fTime0_1` 的正切值 |
-| `fTime0_1_4f` | 由以下变量组成的四维向量：`fTime0_1`、`fCosTime0_1`、`fSinTime0_1` 和 `fTanTime0_1` |
-| `fTime0_2PI` | `fTime0_X` 变量缩减到 [0, 2π] 区间的值 |
-| `fCosTime0_2PI` | `fTime0_2PI` 的余弦值 |
-| `fSinTime0_2PI` | `fTime0_2PI` 的正弦值 |
-| `fTanTime0_2PI` | `fTime0_2PI` 的正切值 |
-| `fTime0_2PI_4f` | 由以下变量组成的四维向量：`fTime0_2PI`、`fCosTime0_2PI`、`fSinTime0_2PI` 和 `fTanTime0_2PI` |
+| `fCosTime0_X` | `fTime0_X`的余弦值 |
+| `fSinTime0_X` | `fTime0_X`的正弦值 |
+| `fTanTime0_X` | `fTime0_X`的正切值 |
+| `fTime0_X_4f` | 由以下变量组成的四维向量：`fTime0_X`、`fCosTime0_X`、`fSinTime0_X`和`fTanTime0_X` |
+| `fTime0_1` | `fTime0_X`变量的归一化值（即缩减到 [0, 1] 区间） |
+| `fCosTime0_1` | `fTime0_1`的余弦值 |
+| `fSinTime0_1` | `fTime0_1`的正弦值 |
+| `fTanTime0_1` | `fTime0_1`的正切值 |
+| `fTime0_1_4f` | 由以下变量组成的四维向量：`fTime0_1`、`fCosTime0_1`、`fSinTime0_1`和`fTanTime0_1` |
+| `fTime0_2PI` | `fTime0_X`变量缩减到 [0, 2π] 区间的值 |
+| `fCosTime0_2PI` | `fTime0_2PI`的余弦值 |
+| `fSinTime0_2PI` | `fTime0_2PI`的正弦值 |
+| `fTanTime0_2PI` | `fTime0_2PI`的正切值 |
+| `fTime0_2PI_4f` | 由以下变量组成的四维向量：`fTime0_2PI`、`fCosTime0_2PI`、`fSinTime0_2PI`和`fTanTime0_2PI` |
 | `fTimeCyclePeriod` | 时间周期（默认 120 s） |
 | `fFPS` | 帧率（浮点数） |
 | `fTimeElapsed` | 相邻帧之间的时间间隔（以秒为单位） |
@@ -11029,6 +11197,9 @@ void main(void)
 | 名称 | 值 |
 | :--- | :--- |
 | `fViewportWidth` | 视口宽度（像素，浮点变量） |
+
+
+
 | `fViewportHeight` | 视口高度（像素，浮点变量） |
 | `fInverseViewportWidth` | `1.0 / fViewportWidth` |
 | `fInverseViewportHeight` | `1.0 / fViewportHeight` |
@@ -11036,13 +11207,7 @@ void main(void)
 | `fFarClipPlane` | 到远裁剪平面的距离 |
 | `fNearClipPlane` | 到近裁剪平面的距离 |
 
-
-
-RenderMonkey 为着色器程序员提供了一组随机值（范围在 [0, 1] 区间），这些值对于每个 pass（渲染通道）和每个 effect（效果）都是唯一的（表 15.3）。
-
-预定义浮点变量 `fPassIndex` 包含当前渲染 pass 的索引。
-
-表 15.4 列出了与鼠标相关的预定义变量。
+RenderMonkey 为着色器程序员提供了一组随机值（范围在 [0, 1] 区间），这些值对于每个 pass（渲染通道）和每个 effect（效果）都是唯一的（表 15.3）。预定义浮点变量 `fPassIndex` 包含当前渲染 pass 的索引。表 15.4 列出了与鼠标相关的预定义变量。
 
 ### 表 15.3. RenderMonkey 与随机值相关的预定义变量
 
@@ -11091,9 +11256,7 @@ RenderMonkey 为着色器程序员提供了一组随机值（范围在 [0, 1] �
 
 除了这些标量和向量变量外，RenderMonkey 还包含一组预定义的 4×4 矩阵变量，可以使用节点弹出菜单中的 `Add Variable | Matrix | Predefined` 命令添加。
 
-在 `Pass 0` 模式的弹出菜单中使用 `Add Variable | Float | Predefined | fTime0_X` 命令，可以添加一个新的时间相关变量（图 15.23）。
-
-使用此变量，你可以为材质制作动画，例如，通过交替显示和隐藏红色（代码清单 15.4）。如果你加上之前获得的 `noiseMap` 纹理的值，动画将具有一定的随机性。
+在 `Pass 0` 模式的弹出菜单中使用 `Add Variable | Float | Predefined | fTime0_X` 命令，可以添加一个新的时间相关变量（图 15.23）。使用此变量，你可以为材质制作动画，例如，通过交替显示和隐藏红色（代码清单 15.4）。如果你加上之前获得的 `noiseMap` 纹理的值，动画将具有一定的随机性。
 
 ### 代码清单 15.4. 动画纹理的片元着色器
 
@@ -11119,39 +11282,17 @@ void main()
 }
 ```
 
-RenderMonkey 的另一个便捷功能是通过弹出菜单的 `Add Render State Block` 命令将 OpenGL 渲染状态节点添加到 pass 节点中。
+RenderMonkey 的另一个便捷功能是通过弹出菜单的 `Add Render State Block` 命令将 OpenGL 渲染状态节点添加到 pass 节点中。渲染状态块负责大量的 OpenGL 状态参数，例如颜色混合、启用和禁用单个缓冲区、指定点大小等。双击 `Render State node` 可打开设置状态参数的窗口（图 15.24）。在该窗口中，你可以通过点击 `Value` 列中相应的单元格来指定渲染状态参数。通过这种方法，你可以为特定的 pass 指定颜色混合模式、记录模式等。
 
-渲染状态块负责大量的 OpenGL 状态参数，例如颜色混合、启用和禁用单个缓冲区、指定点大小等。双击 `Render State node` 可打开设置状态参数的窗口（图 15.24）。在该窗口中，你可以通过点击 `Value` 列中相应的单元格来指定渲染状态参数。
+除了常规纹理外，你还可以将可渲染纹理（renderable texture）包含在项目中。这可以通过节点弹出菜单的 `Add Texture | Add Renderable Texture` 命令完成。之后，一个在某个 pass 期间可以作为渲染目标的纹理将出现在当前节点中。在任何 pass 中，你都可以在弹出菜单中选择 `Add Render Target` 命令来重定向该 pass 的渲染结果。这将向 pass 添加一个可渲染纹理节点，以便你可以打开该节点的弹出菜单，选择 `Reference Node` 命令，然后选择一个纹理作为渲染目标。
 
-通过这种方法，你可以为特定的 pass 指定颜色混合模式、记录模式等。
+以在物体周围创建光晕为例，演示渲染到纹理的操作。一种常用的方法是将物体仅使用白色（背景为黑色）渲染到纹理中，然后对生成的图像进行模糊处理。接着，将这张模糊图像应用于以常规方式渲染的物体上。为此项目你需要两个摄像机（图 15.25）。第一个应对应于将模糊图像应用于渲染结果（基于 `ScreenAlignedQuad.3ds` 模型）的 pass。另一个将用于渲染主模型。你还需要两个模型。第一个是 `ScreenAlignedQuad.3ds`，第二个是要进行模糊处理的物体（例如 `Skull.3ds`）。最后，你需要添加一个可渲染纹理（使用弹出菜单中的 `Add Texture | Add Renderable Texture` 命令）。
 
-除了常规纹理外，你还可以将可渲染纹理（renderable texture）包含在项目中。这可以通过节点弹出菜单的 `Add Texture | Add Renderable Texture` 命令完成。之后，一个在某个 pass 期间可以作为渲染目标的纹理将出现在当前节点中。
-
-在任何 pass 中，你都可以在弹出菜单中选择 `Add Render Target` 命令来重定向该 pass 的渲染结果。这将向 pass 添加一个可渲染纹理节点，以便你可以打开该节点的弹出菜单，选择 `Reference Node` 命令，然后选择一个纹理作为渲染目标。
-
-以在物体周围创建光晕为例，演示渲染到纹理的操作。一种常用的方法是将物体仅使用白色（背景为黑色）渲染到纹理中，然后对生成的图像进行模糊处理。接着，将这张模糊图像应用于以常规方式渲染的物体上。
-
-为此项目你需要两个摄像机（图 15.25）。第一个应对应于将模糊图像应用于渲染结果（基于 ScreenAlignedQuad.3ds 模型）的 pass。另一个将用于渲染主模型。
-
-你还需要两个模型。第一个是 ScreenAlignedQuad.3ds，第二个是要进行模糊处理的物体（例如 Skull.3ds）。
-
-最后，你需要添加一个可渲染纹理（使用弹出菜单中的 `Add Texture | Add Renderable Texture` 命令）。
-
-在第一个 pass 中，添加 `Camera Reference node`（使用 `Add Camera Reference` 命令）并选择主渲染摄像机 (`Camera`)。
-
-在同一个 pass 中，添加 `Render Target` 节点并指定之前添加到效果中的可渲染纹理。
-
-第二个 pass 与第一个几乎完全相同，但它使用屏幕作为渲染目标（该 pass 缺少 `Render Target` 节点）。
-
-最后一个节点将带有物体图像的纹理进行模糊处理，并将其应用于前一个 pass 获得的图像。该节点应使用颜色混合。为了实现这一点，请在最终的 pass 中添加 `Render State Block` 对象。
-
-
+在第一个 pass 中，添加 `Camera Reference node`（使用 `Add Camera Reference` 命令）并选择主渲染摄像机 (`Camera`)。在同一个 pass 中，添加 `Render Target` 节点并指定之前添加到效果中的可渲染纹理。第二个 pass 与第一个几乎完全相同，但它使用屏幕作为渲染目标（该 pass 缺少 `Render Target` 节点）。最后一个节点将带有物体图像的纹理进行模糊处理，并将其应用于前一个 pass 获得的图像。该节点应使用颜色混合。为了实现这一点，请在最终的 pass 中添加 `Render State Block` 对象。
 
 **图 15.25.** 渲染一个添加了光晕的对象
 
-为了避免编写复杂的模糊程序（这些在*第 17 章*中涵盖），我建议你使用简单的 mipmap 过滤。如果你将 `texture2D` 函数中的 `bias` 参数设置为大于零的值，图像将从通过模糊主纹理而获得的其中一个 mipmap 层级中读取。
-
-这种效果由 Listing 15.5 中的片段着色器实现。
+为了避免编写复杂的模糊程序（这些在第 17 章中涵盖），我建议你使用简单的 mipmap 过滤。如果你将 `texture2D` 函数中的 `bias` 参数设置为大于零的值，图像将从通过模糊主纹理而获得的其中一个 mipmap 层级中读取。这种效果由 Listing 15.5 中的片段着色器实现。
 
 ### Listing 15.5. 一个在对象周围创建光晕的片段着色器
 
@@ -11171,13 +11312,11 @@ void main(void)
 }
 ```
 
-注意那个丢弃白色像素的条件语句。该着色器的任务是获得光晕，也就是说，渲染由于模糊原始图像而产生的像素，而不是被模糊的对象本身的像素。
+注意那个丢弃白色像素的条件语句。该着色器的任务是获得光晕，也就是说，渲染由于模糊原始图像而产生的像素，而不是被模糊的对象本身的像素。图 15.26 显示了应用的纹理（即被模糊并用于创建光晕的纹理）。
 
-图 15.26 显示了应用的纹理（即被模糊并用于创建光晕的纹理）。
+为了将光晕精确地应用于对象，你可能需要手动设置摄像机（特别是，你可能需要设置用于渲染 `SCREENALIGNEDQUAD.3DS` 模型的摄像机，使其图像占据整个视口）。为此，打开其中一个摄像机的弹出菜单并选择 **Set Active Camera** 使该摄像机处于激活状态，以便编辑其参数。设置好一个摄像机后，使另一个激活并对其进行设置。
 
-为了将光晕精确地应用于对象，你可能需要手动设置摄像机（特别是，你可能需要设置用于渲染 SCREENALIGNEDQUAD.3DS 模型的摄像机，使其图像占据整个视口）。为此，打开其中一个摄像机的弹出菜单并选择 **Set Active Camera** 使该摄像机处于激活状态，以便编辑其参数。设置好一个摄像机后，使另一个激活并对其进行设置。
-
-所述项目包含在随附 CD-ROM 的 Code\Chapter-15 文件夹中。
+所述项目包含在随附 CD-ROM 的 `Code\Chapter-15` 文件夹中。
 
 **图 15.26.** 用于模糊和创建光晕的纹理
 
@@ -11189,11 +11328,11 @@ void main(void)
 
 ### 使用第 13 章中的着色器
 
-第 13 章介绍了最常用的照明模型的顶点着色器和片段着色器。现在让我们来看看如何在 C++ 程序中使用这些着色器来渲染各种对象。
-
-为了使用这些着色器，我们将使用第 14 章中描述的 `GlslProgram` 类。Listing 16.1 包含了一个 C++ 程序的源代码，该程序使用 Phong 照明模型渲染一个标准的 GLUT 对象——茶壶（Teapot）。光源在对象周围移动，对象本身可以用鼠标旋转。
+第 13 章介绍了最常用的照明模型的顶点着色器和片段着色器。现在让我们来看看如何在 C++ 程序中使用这些着色器来渲染各种对象。为了使用这些着色器，我们将使用第 14 章中描述的 `GlslProgram` 类。Listing 16.1 包含了一个 C++ 程序的源代码，该程序使用 Phong 照明模型渲染一个标准的 GLUT 对象——茶壶（Teapot）。光源在对象周围移动，对象本身可以用鼠标旋转。
 
 ### Listing 16.1. 渲染茶壶对象（Phong 照明模型）
+
+
 
 ```cpp
 //
@@ -11372,11 +11511,11 @@ int main (int argc, char * argv [])
 
 如代码清单所示，使用着色器渲染模型所需的所有操作就是加载必要的着色器（使用 `loadShaders` 方法）并根据采样器名称设置纹理单元（使用 `setTextureMethod` 方法）。然后设置光源和观察者的位置（使用 `setUniformVector` 方法）。渲染过程在调用 `bind` 和 `unbind` 函数之间进行。
 
-使用前几章描述的其他着色器进行渲染的方式类似。在本章稍后部分，将展示使用凹凸贴图（bump map）渲染圆环（Torus）对象的一些代码（Listing 16.2）。其他示例的代码包含在随附 CD-ROM 的 Code\Chapter-16 文件夹中。
+使用前几章描述的其他着色器进行渲染的方式类似。在本章稍后部分，将展示使用凹凸贴图（bump map）渲染圆环（Torus）对象的一些代码（Listing 16.2）。其他示例的代码包含在随附 CD-ROM 的 `Code\Chapter-16` 文件夹中。
 
-在此清单中，可以使用 libMesh 库（在*第 11 章*中介绍），它允许你将所需的对象（在这种情况下是圆环）创建为一组三角形面。每个顶点不仅指定了纹理坐标，还指定了法线、切线向量和副法线（即切线空间的完整基向量）。
+在此清单中，可以使用 `libMesh` 库（在*第 11 章*中介绍），它允许你将所需的对象（在这种情况下是圆环）创建为一组三角形面。每个顶点不仅指定了纹理坐标，还指定了法线、切线向量和副法线（即切线空间的完整基向量）。
 
-`Mesh` 类自动将这些数据写入顶点数组 VBO（Vertex Buffer Objects）。这使你能够避免在每次渲染圆环时都重复地将这些数据传输到 GPU。然而，为了使用 Listing 13.5 和 13.6 中的着色器，你应该正确地将数据分配给模型的顶点，例如：
+`Mesh` 类自动将这些数据写入顶点数组 `VBO`（Vertex Buffer Objects）。这使你能够避免在每次渲染圆环时都重复地将这些数据传输到 GPU。然而，为了使用 Listing 13.5 和 13.6 中的着色器，你应该正确地将数据分配给模型的顶点，例如：
 
 ```cpp
 torus = makeTorus (1, 30, 30);
@@ -11605,7 +11744,7 @@ int main (int argc, char * argv [])
 }
 ```
 
-## 使用着色器进行动画
+# 使用着色器进行动画
 
 在之前的示例中，着色器被用于计算物体表面的光照，而没有改变物体的几何形状。然而，利用顶点着色器，你可以对物体进行动画处理，也就是说，在渲染期间（具体是在 T&L（变换与光照）阶段）改变它们的几何形状。
 
@@ -11621,7 +11760,7 @@ $$p(t) = p_0 + v_0 \cdot (t - t_0) + 0.5 \ a \cdot (t - t_0)^2 \eqno(16.1)$$
 
 代码清单 16.3 包含一个利用初始参数驱动粒子动画的顶点着色器。$v_0$ 和 $t_0$ 值是通过第一个纹理单元的纹理坐标（一个四维向量）传递的。
 
-### 代码清单 16.3. 一个驱动粒子系统动画的简单顶点着色器
+## 代码清单 16.3. 一个驱动粒子系统动画的简单顶点着色器
 
 ```glsl
 uniform float time;
@@ -11656,11 +11795,11 @@ $$p(t) = p_0 + v_0 \cdot \text{mod}(t - t_0, T) + 0.5 \, a \cdot \text{mod}(t - 
 
 **注意** $\text{mod}(t, T)$ 函数返回 $t$ 除以 $T$ 的余数。
 
-现在 CPU 的任务简化为：创建一组粒子的初始参数，将它们写入顶点数组，并在每一帧中将其绘制出来，通过一个 `uniform` 变量传递当前时间。
+现在 CPU 的任务简化为：创建一组粒子的初始参数，将它们写入顶点数组，并在每一帧中将其绘制出来，通过一个`uniform`变量传递当前时间。
 
 代码清单 16.4 展示了所需顶点着色器的实现。
 
-### 代码清单 16.4. 驱动粒子系统动画的顶点着色器
+## 代码清单 16.4. 驱动粒子系统动画的顶点着色器
 
 ```glsl
 //
@@ -11681,8 +11820,6 @@ void main(void)
 }
 ```
 
-
-
 ```cpp
 color = mix (vec4 (1.0, 0.0, 0.0, 1.0),
                vec4 (0.3, 0.3, 0.0, 1.0), t * 0.25);
@@ -11691,7 +11828,7 @@ gl_TexCoord[0] = gl_MultiTexCoord0;
 }
 ```
 
-如果您希望使用 `ARB_point_sprite` 扩展，则必须编辑片段着色器，以便其能够使用纹理正确地绘制粒子（代码清单 16.5）。
+如果您希望使用`ARB_point_sprite`扩展，则必须编辑片段着色器，以便其能够使用纹理正确地绘制粒子（代码清单 16.5）。
 
 ## 代码清单 16.5. 绘制动画粒子系统的片段着色器
 
@@ -11712,6 +11849,105 @@ void main (void)
 所需的 C++ 代码包含在代码清单 16.6 中。请注意，虽然可以将数据写入顶点数组或显示列表，但本示例中并未这样做。
 
 ## 代码清单 16.6. 使用 GPU 实现粒子系统动画的 C++ 程序
+
+
+
+## 折射建模
+
+一种可以使用着色器轻松建模的精美且简单的效果，涉及到考虑折射的透明对象渲染。在最简单的情况下，使用*立方体环境映射（cubic environment map）*。对于透明对象表面的任意一点，相对于法线`n`和指向观察者的单位向量`v`存在一个反射向量`r`和一个折射向量`t`（图 16.1）。
+
+这些向量（`r`和`t`）可用于访问立方体环境映射，然后通过混合得到的颜色来获得最终颜色。当然，这是一个非常粗略的模型，但在许多情况下能产生合适的结果（图 16.2）。
+
+![](img/0195f4c0347b99a95028b956b67109ca_360_0.png)
+
+![](img/0195f4c0347b99a95028b956b67109ca_360_1.png)
+
+为了正确混合反射颜色和折射颜色（`C_refl`和`C_refr`），您应该使用菲涅耳系数（Fresnel coefficient）。该系数`F(θ, λ)`取决于入射角`θ`和波长`λ`，并决定了反射光能的比例。因此，`1 - F(θ, λ)`的值决定了折射光能的比例。因此，该系数是混合反射颜色和折射颜色的参数。
+
+遗憾的是，菲涅耳系数对波长和入射角的依赖关系非常复杂。这就是为什么在实践中会使用各种近似计算方法。以下是一些常用的公式：
+
+`F = clamp(0.1, 0.9, cosθ),` (16.3)
+
+`F = r0 + (1 - r0) * (1 - cosθ)^5,` (16.4)
+
+`F = 1 / (1 + cosθ)^8.` (16.5)
+
+关于公式 (16.3) 中`clamp`函数的描述，请参阅表 12.12。
+
+在公式 (16.4) 中，参数`r0`代表`((1-η)/(1+η))^2`的值，其中`η`是两种环境之间的相对折射率。
+
+利用公式 (16.3) 和计算反射与折射向量的标准函数，可以轻松编写以下着色器（代码清单 16.7 和 16.8）。
+
+## 代码清单 16.7. 渲染折射玻璃茶壶的顶点着色器
+
+```cpp
+//
+// Refractive glass vertex shader
+//
+uniform vec4 eyePos;
+uniform mat4 cubeMapMatrix;
+
+varying vec3 n;
+varying vec3 e;
+
+void main(void)
+{
+    vec4 pos = gl_ModelViewMatrix * gl_Vertex;
+
+    gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
+    n = normalize(gl_NormalMatrix * gl_Normal *
+                  mat3(cubeMapMatrix));
+    e = normalize((pos - eyePos)*cubeMapMatrix).xyz);
+}
+```
+
+## 代码清单 16.8. 渲染折射玻璃茶壶的片段着色器
+
+```cpp
+//
+// Refractive glass fragment shader
+//
+
+uniform samplerCUBE envMap;
+
+varying vec3 n;
+varying vec3 e;
+
+void main (void)
+{
+    const float eta = 0.9;
+
+    // Compute reflection vector.
+    vec3 en = normalize(e);
+    vec3 nn = normalize(n);
+    vec3 r = reflect (en, nn);
+
+    // Do a lookup into the environment map.
+    vec3 envColor = textureCube (envMap, r).rgb;
+
+    // Calc Fresnels term.
+    float fresnel = abs (dot (en, nn));
+
+    fresnel = clamp (fresnel, 0.1, 0.9);
+
+    // Calc refraction (transmitted ray).
+    vec3 t = refract (en, nn, eta);
+
+    vec3 refractionColor = textureCube (envMap, t).rgb;
+
+    envColor = mix (envColor, refractionColor, fresnel);
+
+    gl_FragColor = vec4 (envColor, 1.0);
+}
+```
+
+虽然这种方法可以让您获得令人愉悦的图像（如图 16.2 所示），但它有一个缺陷。光折射通常会产生类似彩虹的现象，即光线根据其分量的波长而分离开来。这是因为菲涅耳系数具有波长依赖性。
+
+建模此类效果的一种简单方法是分别计算折射颜色的 R、G 和 B 分量。对于其中的每一个分量，确定一个单独的折射率并计算一个单独的折射向量。后者用于从立方体环境映射中获取适当的颜色。为了获得最终的折射颜色，从三种折射颜色中各取一个分量。它们共同组成了所寻求的颜色。
+
+为了实现这个效果，你不需要编辑顶点着色器。这就是为什么这里只给出片元着色器（代码清单 16.9）的原因。
+
+### 代码清单 16.9. 用于渲染带颜色分拆折射的片元着色器
 
 ```cpp
 //
@@ -11924,104 +12160,7 @@ int main (int argc, char * argv [])
 }
 ```
 
-## 折射建模
 
-一种可以使用着色器轻松建模的精美且简单的效果，涉及到考虑折射的透明对象渲染。在最简单的情况下，使用*立方体环境映射（cubic environment map）*。对于透明对象表面的任意一点，相对于法线 $n$ 和指向观察者的单位向量 $v$ 存在一个反射向量 $r$ 和一个折射向量 $t$（图 16.1）。
-
-这些向量（$r$ 和 $t$）可用于访问立方体环境映射，然后通过混合得到的颜色来获得最终颜色。当然，这是一个非常粗略的模型，但在许多情况下能产生合适的结果（图 16.2）。
-
-![](img/0195f4c0347b99a95028b956b67109ca_360_0.png)
-
-![](img/0195f4c0347b99a95028b956b67109ca_360_1.png)
-
-为了正确混合反射颜色和折射颜色（$C_{\text{refl}}$ 和 $C_{\text{refr}}$），您应该使用菲涅耳系数（Fresnel coefficient）。该系数 $F(\theta, \lambda)$ 取决于入射角 $\theta$ 和波长 $\lambda$，并决定了反射光能的比例。因此，$1 - F(\theta, \lambda)$ 的值决定了折射光能的比例。因此，该系数是混合反射颜色和折射颜色的参数。
-
-遗憾的是，菲涅耳系数对波长和入射角的依赖关系非常复杂。这就是为什么在实践中会使用各种近似计算方法。以下是一些常用的公式：
-
-$F = \text{clamp}(0.1, 0.9, \cos\theta),$ (16.3)
-
-$F = r_0 + (1 - r_0) \cdot (1 - \cos\theta)^5,$ (16.4)
-
-$F = \frac{1}{(1 + \cos\theta)^8}.$ (16.5)
-
-关于公式 (16.3) 中 $clamp$ 函数的描述，请参阅表 12.12。
-
-在公式 (16.4) 中，参数 $r_0$ 代表 $\left(\frac{1-\eta}{1+\eta}\right)^2$ 的值，其中 $\eta$ 是两种环境之间的相对折射率。
-
-利用公式 (16.3) 和计算反射与折射向量的标准函数，可以轻松编写以下着色器（代码清单 16.7 和 16.8）。
-
-## 代码清单 16.7. 渲染折射玻璃茶壶的顶点着色器
-
-```cpp
-//
-// Refractive glass vertex shader
-//
-uniform vec4 eyePos;
-uniform mat4 cubeMapMatrix;
-
-varying vec3 n;
-varying vec3 e;
-
-void main(void)
-{
-    vec4 pos = gl_ModelViewMatrix * gl_Vertex;
-
-    gl_Position = gl_ModelViewProjectionMatrix * gl_Vertex;
-    n = normalize(gl_NormalMatrix * gl_Normal *
-                  mat3(cubeMapMatrix));
-    e = normalize((pos - eyePos)*cubeMapMatrix).xyz);
-}
-```
-
-## 代码清单 16.8. 渲染折射玻璃茶壶的片段着色器
-
-```cpp
-//
-// Refractive glass fragment shader
-//
-
-uniform samplerCUBE envMap;
-
-varying vec3 n;
-varying vec3 e;
-
-void main (void)
-{
-    const float eta = 0.9;
-
-    // Compute reflection vector.
-    vec3 en = normalize(e);
-    vec3 nn = normalize(n);
-    vec3 r = reflect (en, nn);
-
-    // Do a lookup into the environment map.
-    vec3 envColor = textureCube (envMap, r).rgb;
-
-    // Calc Fresnels term.
-    float fresnel = abs (dot (en, nn));
-
-    fresnel = clamp (fresnel, 0.1, 0.9);
-
-    // Calc refraction (transmitted ray).
-    vec3 t = refract (en, nn, eta);
-
-    vec3 refractionColor = textureCube (envMap, t).rgb;
-
-    envColor = mix (envColor, refractionColor, fresnel);
-
-    gl_FragColor = vec4 (envColor, 1.0);
-}
-```
-
-虽然这种方法可以让您获得令人愉悦的图像（如图 16.2 所示），但它有一个缺陷。光折射通常会产生类似彩虹的现象，即光线根据其分量的波长而分离开来。这是因为菲涅耳系数具有波长依赖性。
-
-建模此类效果的一种简单方法是分别计算折射颜色的 R、G 和 B 分量。对于其中的每一个分量，确定一个单独的折射率并计算一个单独的折射向量。后者
-
-用于从立方体环境映射中获取适当的颜色。为了获得最终的折射颜色，从三种折射颜色中各取一个分量。它们共同组成了所寻求的颜色。
-
-为了实现这个效果，你不需要编辑顶点着色器。这就是为什么这里只给出片元着色器（代码清单 16.9）的原因。
-
-### 代码清单 16.9. 用于渲染带颜色分拆折射的片元着色器
 
 ```glsl
 //
@@ -12057,7 +12196,7 @@ void main (void)
 
     vec3 refractionColorRed = textureCube (envMap, tRed ).rgb;
     vec3 refractionColorGreen = textureCube (envMap, tGreen).rgb;
-    vec3 refractionColorBlue = textureCube (envMap, tBlue ).rgb;
+    vec3 refractionColorBlue = textureCube (envMap, tBlue).rgb;
     vec3 refractionColor = vec3 (refractionColorRed.r,
                                  refractionColorGreen.g,
                                  refractionColorBlue.b);
@@ -12072,19 +12211,20 @@ void main (void)
 
 如果你在童年时期玩过肥皂泡，你会记得它们具有多么美丽的虹彩色。CD 的表面同样具有虹彩色。这种发光效果是由光的波动特性，或者更准确地说，是由两束光波的干涉引起的。
 
-让我们首先考虑肥皂泡的例子。设 $d$ 为其薄膜的厚度（图 16.3）。
+让我们首先考虑肥皂泡的例子。设`d`为其薄膜的厚度（图 16.3）。
 
-当光线落在薄膜上时，它会分别从薄膜的外表面（$r'$ 向量）和内表面（$r$ 向量）反射。从内表面反射的光波与从外表面反射的光波发生干涉。如果薄膜的厚度与典型的波长相对应，根据波的相位差，可能会发生波的相互增强或抵消。如果光波经过的距离是波长的整数倍，波会相互增强；否则，它们会相互抵消。
+当光线落在薄膜上时，它会分别从薄膜的外表面（`r'`向量）和内表面（`r`向量）反射。从内表面反射的光波与从外表面反射的光波发生干涉。如果薄膜的厚度与典型的波长相对应，根据波的相位差，可能会发生波的相互增强或抵消。如果光波经过的距离是波长的整数倍，波会相互增强；否则，它们会相互抵消。
 
 白光束由各种波长的光波组成，它们根据各自的波长而相互增强或抵消。
 
-在这种情况下，决定性因素是干涉光波所经过的距离之差。从图 16.3 可以看出，这个差值等于 $2 \cdot d / \cos \theta$，其中 $\theta$ 表示入射角（即 $\cos \theta = (n, v)$）。
+在这种情况下，决定性因素是干涉光波所经过的距离之差。从图 16.3 可以看出，这个差值等于`2 · d / cos θ`，其中`θ`表示入射角（即`cos θ = (n, v)`）。
 
 该值可以为每个顶点计算并为整个面进行插值。之后，它将决定被增强的主色。与其在着色器中计算这个值，你可以提前计算好并将其保存在一个一维纹理中。
 
-这种方法借鉴了 NVIDIA SDK 中的一个示例。不过，这里使用一个 Python 脚本计算辅助纹理，该脚本包含在随附 CD-ROM 的 CODE\SCRIPTS 文件夹中。来自该纹理的颜色用于调制来自立方体环境映射的反射颜色。该方法的实现见代码清单 16.10 至 16.12。
+这种方法借鉴了 NVIDIA SDK 中的一个示例。不过，这里使用一个 Python 脚本计算辅助纹理，该脚本包含在随附 CD-ROM 的`CODE\SCRIPTS`文件夹中。来自该纹理的颜色用于调制来自立方体环境映射的反射颜色。该方法的实现见代码清单 16.10 至 16.12。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_364_0.png)
+
 **图 16.3.** 薄膜反射
 
 ### 代码清单 16.10. 用于渲染肥皂泡对象的顶点着色器
@@ -12391,13 +12531,14 @@ int main (int argc, char * argv[])
 
 在渲染肥皂泡时，模拟了反射波的干涉，即入射角等于反射角。然而，这种方法不适用于渲染 CD 的表面。在这种情况下，需要模拟光源对表面的照明，因此，法线与观察者方向之间的夹角可能与法线与光源方向之间的夹角不同。此外，从 CD 表面相邻轨道反射的光波会相互干涉（图 16.4）。
 
-如果相邻轨道之间的距离等于 $d$，则从这些轨道反射的光线所经过的距离等于 $\text{AC} - \text{BC}$。
+如果相邻轨道之间的距离等于`d`，则从这些轨道反射的光线所经过的距离等于`AC - BC`。
 
-令 $\theta_1$ 和 $\theta_2$ 分别表示法线与观察者方向之间的夹角，以及法线与光源方向之间的夹角。那么这个差值可以近似地表示为 $d \cdot u$，其中 $u = \sin\theta_1 - \sin\theta_2$。
+令`θ₁`和`θ₂`分别表示法线与观察者方向之间的夹角，以及法线与光源方向之间的夹角。那么这个差值可以近似地表示为`d · u`，其中`u = sinθ₁ - sinθ₂`。
 
-对于波长为 $\lambda$ 的光，当 $n\lambda \cdot d = n\lambda$ 时将发生增强（$n$ 为任意自然数，即当 $n\lambda \cdot d$ 是 $\lambda$ 的倍数时）。基于人眼只能感知波长从 0.1 微米到 1 微米的光这一事实，你可以限制 $n$ 的可能取值范围。尽管不确定性较大，但将范围限制在前几个自然数内会比较方便。对于每个 $n$，将使用 $d \cdot n\lambda / n$ 的值从一维纹理中检索出与被增强波长相对应的颜色。这些颜色将被累加。
+对于波长为`λ`的光，当`nλ · d = nλ`时将发生增强（`n`为任意自然数，即当`nλ · d`是`λ`的倍数时）。基于人眼只能感知波长从 0.1 微米到 1 微米的光这一事实，你可以限制`n`的可能取值范围。尽管不确定性较大，但将范围限制在前几个自然数内会比较方便。对于每个`n`，将使用`d · nλ / n`的值从一维纹理中检索出与被增强波长相对应的颜色。这些颜色将被累加。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_371_0.png)
+
 **图 16.4.** CD 表面的衍射
 
 在渲染 CD 表面的照明时，最适合使用的是针对各向异性表面的标准照明模型之一，例如 Ward 模型。代码清单 16.13 和 16.14 包含了所需的顶点着色器和片元着色器。
@@ -12483,26 +12624,25 @@ void main(void)
 
 ![](img/0195f4c0347b99a95028b956b67109ca_373_0.png)
 
-**注意** 本例中使用的 RAINBOW.BMP 纹理是使用随附 CD-ROM 中 CODE\SCRIPTS 文件夹内的 Python 脚本构建的。
+**注意** 本例中使用的`RAINBOW.BMP`纹理是使用随附 CD-ROM 中`CODE\SCRIPTS`文件夹内的 Python 脚本构建的。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_374_0.png)
+
 **图 16.5.** 渲染 CD 的结果
 
 ## 使用 GLSL 对图像进行后处理
 
 GLSL（以及 GPU）的一个有趣用途是对图像进行后处理。初始图像被写入纹理，然后渲染带有该纹理的矩形。
 
-渲染过程同样被输出到纹理中（为此使用了 `FrameBuffer` 类）。
+渲染过程同样被输出到纹理中（为此使用了`FrameBuffer`类）。
 
-对 `ARB_texture_non_power_of_two` 扩展的支持允许你使用任何尺寸的纹理（包括尺寸不是 2 的幂的纹理）。同时使用多个输入纹理也是可能的（图 16.6）。
+对`ARB_texture_non_power_of_two`扩展的支持允许你使用任何尺寸的纹理（包括尺寸不是 2 的幂的纹理）。同时使用多个输入纹理也是可能的（图 16.6）。
 
 现代 GPU 允许你在单次传递（single pass）中实现即使是最复杂的图像后处理效果。利用 GPU，即使不使用 CPU，你几乎可以瞬间处理图像。这使得在非线性视频编辑过程中利用 GPU 进行实时图像处理成为可能。
 
 最新版本的 Mac OS X Tiger 操作系统包含了一个基于 GPU 的内置图像后处理库。用户可以通过在 GLSL 的一个子集中实现新效果，轻松地在众多标准效果中添加自定义效果。
 
 现在让我们讨论如何使用 GLSL 实现主要的后处理效果（滤镜）。
-
-
 
 **图 16.6.** 在 GPU 中进行图像后处理
 
@@ -12514,7 +12654,7 @@ GLSL（以及 GPU）的一个有趣用途是对图像进行后处理。初始图
 
 $$I = 0.3r + 0.59g + 0.11b$$ (16.6)
 
-> **注意** 计算强度可以通过对两个三维向量 $(0.3, 0.59, 0.11)$ 和 $(r, g, b)$ 进行一次点乘运算来实现。
+> **注意** 计算强度可以通过对两个三维向量`(0.3, 0.59, 0.11)`和`(r, g, b)`进行一次点乘运算来实现。
 
 为了获得指定颜色的色调，将其 RGB 表示形式与强度相乘即可。
 
@@ -12553,9 +12693,12 @@ void main (void)
 ```
 
 所需的 C++ 代码包含在代码清单 16.17 中。
-请注意 `startOrtho` 和 `endOrtho` 函数。它们设置了平行投影并使其在窗口坐标系中工作。
+
+请注意`startOrtho`和`endOrtho`函数。它们设置了平行投影并使其在窗口坐标系中工作。
 
 ### 代码清单 16.17. 实现褐色滤镜的 C++ 代码
+
+
 
 ```cpp
 //
@@ -12760,12 +12903,13 @@ int main (int argc, char * argv [])
 }
 ```
 
-此示例将图像渲染到通过 `FrameBuffer` 类对象实现的纹理中。首先，使用 `create` 方法创建一个帧缓冲（frame buffer）。然后，`createColorTexture` 方法创建了一个用作颜色缓冲的纹理。
-在程序运行期间，可以使用 `<F>` 键来开启或关闭该效果。
+此示例将图像渲染到通过`FrameBuffer`类对象实现的纹理中。首先，使用`create`方法创建一个帧缓冲（frame buffer）。然后，`createColorTexture`方法创建了一个用作颜色缓冲的纹理。
+
+在程序运行期间，可以使用`<F>`键来开启或关闭该效果。
 
 ## Gamma 校正（Gamma Correction）
 
-另一个有趣的效果是 *Gamma 校正*，它根据公式 $f(I) = I^{1/\gamma}$ 对每个分量进行转换。实现该效果的片元着色器包含在代码清单 16.18 中。
+另一个有趣的效果是*Gamma 校正*，它根据公式$f(I) = I^{1/\gamma}$对每个分量进行转换。实现该效果的片元着色器包含在代码清单 16.18 中。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_381_0.png)
 
@@ -12789,15 +12933,15 @@ void main (void)
 
 ## 边缘检测（Edge Detect）
 
-另一个有趣的滤镜涉及 *边缘检测*。它能够突出显示图像中像素强度发生剧烈变化的部分。
-设 $I_{i,j}$ 为 $(i, j)$ 像素的强度。那么该效果可以使用以下公式描述：
+另一个有趣的滤镜涉及*边缘检测*。它能够突出显示图像中像素强度发生剧烈变化的部分。
+
+设$I_{i,j}$为$(i, j)$像素的强度。那么该效果可以使用以下公式描述：
 
 $C_{i,j} = k \cdot (|I_{i-1,j} - I_{i+1,j}| + |I_{i,j+1} - I_{i,j-1}|)$ (16.7)
 
-这里，$k$ 表示应用于整个图像的缩放因子。
+这里，$k$表示应用于整个图像的缩放因子。
+
 图 16.7 展示了使用该滤镜的结果。
-
-
 
 **图 16.7.** 边缘检测滤波器
 
@@ -12849,6 +12993,8 @@ HSV 颜色空间使用了除 RGB 之外的颜色表示模型。它很容易理�
 在色彩校正过程中，每个像素的颜色被转换为 HSV 表示，并且各分量乘以校正因子（代码清单 16.20）。
 
 ### 代码清单 16.20. HSV 空间色彩校正的片元着色器
+
+
 
 ```glsl
 //
@@ -12939,7 +13085,7 @@ void main (void)
 
 相应的顶点着色器和 C++ 程序的代码可在附带 CD-ROM 的 `Code\Chapter-16` 文件夹中找到。
 
-你可以使用以下键对来编辑（缩放） H、S 和 V 分量：`<+>` 和 `<->`，`<^>` 和 `</>`，`<[` 和 `]>`。这将使你能够观察缩放系数如何影响颜色。
+你可以使用以下键对来编辑（缩放）H、S 和 V 分量：`<+>` 和 `<->`，`<^>` 和 `</>`，`<[` 和 `]>`。这将使你能够观察缩放系数如何影响颜色。
 
 ## 图像模糊
 
@@ -13018,7 +13164,7 @@ void main (void)
 - 它在统计上相对于平移是不变的。
 - 它是 $C^1$-连续的。
 
-**图 17.1.** 使用二维噪声函数生成的图像
+### 图 17.1. 使用二维噪声函数生成的图像
 
 图 17.1 显示了使用二维噪声函数生成的图像（[$-1, 1$] 区间的值被映射到灰度色调）。
 
@@ -13043,8 +13189,6 @@ void main (void)
 //
 #include "Vector2D.h"
 ```
-
-
 
 ```cpp
 #include "Vector3D.h"
@@ -13173,6 +13317,8 @@ $p_0$ 参数指定一个向量，允许你在调用噪声函数时将时间 $t$ 
 
 ### 代码清单 17.2. 用于渲染动态肥皂泡的顶点着色器
 
+
+
 ```glsl
 //
 // Soap bubble vertex shader
@@ -13211,7 +13357,7 @@ void main()
 }
 ```
 
-### 代码清单 17.3. 用于渲染动态肥皂泡的片段着色器
+### 代码清单 17.3：用于渲染动态肥皂泡的片段着色器
 
 ```glsl
 //
@@ -13249,7 +13395,7 @@ void main()
 
 代码清单 17.4 包含了一个使用代码清单 17.2 和 17.3 中着色器的 C++ 程序。
 
-### 代码清单 17.4. 渲染动态肥皂泡的程序
+### 代码清单 17.4：渲染动态肥皂泡的程序
 
 ```cpp
 //
@@ -13315,8 +13461,6 @@ void displayBoxes()
     glActiveTextureARB (GL_TEXTURE1_ARB);
 }
 ```
-
-
 
 ```cpp
 glBindTexture (GL_TEXTURE_1D, fringeMap);
@@ -13486,7 +13630,7 @@ return 0;
 }
 ```
 
-## 第 17 章：在云朵、波浪建模中使用噪声函数
+# 第 17 章：在云朵、波浪建模中使用噪声函数
 
 与之前的示例一样，你可以使用空格键停止肥皂对象的旋转。然而，即使对象静止不动，虹彩依然可见，并且随时间随机变化。
 
@@ -13494,7 +13638,7 @@ return 0;
 
 让我们回到实现 Blinn 光照模型的着色器，并使用噪声函数来弯曲每个片段的法线（代码清单 17.5 和 17.6）。
 
-### 代码清单 17.5. “褶皱茶壶”效果的顶点着色器
+### 代码清单 17.5：“褶皱茶壶”效果的顶点着色器
 
 ```cpp
 //
@@ -13523,7 +13667,11 @@ void main(void)
 }
 ```
 
-### 代码清单 17.6. “褶皱茶壶”效果的片段着色器
+### 代码清单 17.6：“褶皱茶壶”效果的片段着色器
+
+
+
+`Simple noise-based bump mapping` 的顶点着色器与片元着色器代码如下所示。
 
 ```cpp
 //
@@ -13553,62 +13701,65 @@ void main(void)
 }
 ```
 
-![](img/0195f4c0347b99a95028b956b67109ca_400_0.png)
+![图 17.2](img/0195f4c0347b99a95028b956b67109ca_400_0.png)
+
 **图 17.2.** 使用噪声函数弯曲法线的茶壶
 
-如 图 17.2 所示，这产生了一个褶皱茶壶的视觉错觉。
+如**图 17.2**所示，这产生了一个褶皱茶壶的视觉错觉。
 
-请注意，法线是通过 `texture3D(noiseMap, 2*pp)` 表达式而不是 `2*texture3D(noiseMap, 2*pp) - vec3(1.0)` 来弯曲的。这是因为纹理分量的值落在 $[0, 1]$ 闭区间内，而噪声函数的值落在 $[-1, 1]$ 闭区间内。该表达式用于将一个区间转换为另一个区间。
+请注意，法线是通过`texture3D(noiseMap, 2*pp)`表达式而不是`2*texture3D(noiseMap, 2*pp) - vec3(1.0)`来弯曲的。这是因为纹理分量的值落在$[0, 1]$闭区间内，而噪声函数的值落在$[-1, 1]$闭区间内。该表达式用于将一个区间转换为另一个区间。
 
 ## 湍流 (Turbulence)
 
 通常情况下，噪声函数不会被直接使用，而是基于它创建新的函数。许多自然材料和过程中的随机细节并非“纯粹”随机，而通常是分形（fractal）的，也就是说，它们具有自相似性。例如，如果你放大大理石的纹路，你会发现新的细节。
 
-不幸的是，噪声函数缺失这一特性。在 图 17.1 中，典型的细节很明显，无论如何放大都不会揭示任何新细节。
+不幸的是，噪声函数缺失这一特性。在**图 17.1**中，典型的细节很明显，无论如何放大都不会揭示任何新细节。
 
-然而，如果你观察 *noise (2p)* 函数的图像，你会发现细节的尺度减小了一半（图 17.3）。
+然而，如果你观察`noise (2p)`函数的图像，你会发现细节的尺度减小了一半（图 17.3）。
 
-在观察 *noise (4p)* 函数的图像后，你会发现细节的尺度进一步减小了一半（图 17.4）。
+在观察`noise (4p)`函数的图像后，你会发现细节的尺度进一步减小了一半（图 17.4）。
 
-![](img/0195f4c0347b99a95028b956b67109ca_401_0.png)
-**图 17.3.** $noise(2p)$ 函数的图像
+![图 17.3](img/0195f4c0347b99a95028b956b67109ca_401_0.png)
 
-![](img/0195f4c0347b99a95028b956b67109ca_401_1.png)
-**图 17.4.** $noise(4p)$ 函数的图像
+**图 17.3.** `noise(2p)`函数的图像
 
-![](img/0195f4c0347b99a95028b956b67109ca_401_2.png)
+![图 17.4](img/0195f4c0347b99a95028b956b67109ca_401_1.png)
+
+**图 17.4.** `noise(4p)`函数的图像
+
+![图 17.5](img/0195f4c0347b99a95028b956b67109ca_401_2.png)
+
 **图 17.5.** 噪声函数的累加
 
-如果你使用 0.5、0.25 和 0.125 的权重将这些函数相加，你将得到 图 17.5 所示的图像。
+如果你使用 0.5、0.25 和 0.125 的权重将这些函数相加，你将得到**图 17.5**所示的图像。
 
 很容易注意到，这张图像包含几种（准确地说是三种）典型尺寸的细节。因此，在一定程度上可以将此图像视为分形。显然，如果你增加项数，会出现新的典型尺寸，从而增加分形程度。
 
-于是我们得到了 $fBm$ 函数：
+于是我们得到了`fBm`函数：
 
 $$fBm(p, f) = \sum_{k=0}^{n} noise(f^k p) \frac{1}{f^k}.$$ (17.2)
 
-$fBm$ 函数的名称代表 *分形布朗运动 (fractal Brownian motion)*，因为粒子的布朗运动可以用这个函数来描述。
+`fBm`函数的名称代表*分形布朗运动 (fractal Brownian motion)*，因为粒子的布朗运动可以用这个函数来描述。
 
-![](img/0195f4c0347b99a95028b956b67109ca_402_0.png)
+![图 17.6](img/0195f4c0347b99a95028b956b67109ca_402_0.png)
+
 **图 17.6.** 使用湍流函数弯曲法线的茶壶
 
 此外，*湍流 (turbulence)* 函数也经常被使用。
 
 $$turbulence(p, f) = \sum_{k=0}^{n} |noise(f^k \cdot p)|\frac{1}{f^k}.$$ (17.3)
 
-图 17.6 显示了一个使用 *湍流* 函数弯曲法线的茶壶图像。
+**图 17.6**显示了一个使用*湍流*函数弯曲法线的茶壶图像。
 
-*湍流* 函数一个将其与 $fBm$ 函数区分开的有用特性是，由于它包含绝对值，其导数具有不连续点。
+*湍流*函数一个将其与`fBm`函数区分开的有用特性是，由于它包含绝对值，其导数具有不连续点。
 
-除了 $fBm$ 和 *湍流* 之外，有时还会使用以下函数：
+除了`fBm`和*湍流*之外，有时还会使用以下函数：
 
 $$multifractal(p, f) = \prod_{k=0}^{n} (offs + noise(f^k \cdot p) \cdot f).$$
 
-我们将这些函数整合到一个文件中 `ProcFuncs.h`（代码清单 17.7），以便在稍后介绍的着色器中包含它。我们还将几个有用的周期函数放入此文件中，以便在创建过程纹理时使用。
+我们将这些函数整合到一个文件中`ProcFuncs.h`（代码清单 17.7），以便在稍后介绍的着色器中包含它。我们还将几个有用的周期函数放入此文件中，以便在创建过程纹理时使用。
 
-
-
-## 代码清单 17.7. ProcFuncs.h 文件
+## 代码清单 17.7. `ProcFuncs.h` 文件
 
 ```cpp
 //
@@ -13712,12 +13863,13 @@ vec3 multifractal (const in vec3 p, const in float offset,
 #endif
 ```
 
-![](img/0195f4c0347b99a95028b956b67109ca_405_0.png)
-**图 17.7.** 来自 ProcFuncs.h 文件的辅助周期函数图像
+![图 17.7](img/0195f4c0347b99a95028b956b67109ca_405_0.png)
 
-代码清单 17.8 包含了一个用于绘制图 17.6 中图像的片元着色器。
+**图 17.7.** 来自 `ProcFuncs.h` 文件的辅助周期函数图像
 
-## 代码清单 17.8. 使用 `turbulence` 函数弯曲法线的片元着色器
+代码清单 17.8 包含了一个用于绘制**图 17.6**中图像的片元着色器。
+
+## 代码清单 17.8. 使用`turbulence`函数弯曲法线的片元着色器
 
 ```glsl
 //
@@ -13751,13 +13903,13 @@ void main (void)
 }
 ```
 
-请注意，`turbulence` 函数的 $f$ 参数与 2 略有不同。这将使你能够避免由于噪声函数的周期性而可能出现的问题。
+请注意，`turbulence`函数的`f`参数与 2 略有不同。这将使你能够避免由于噪声函数的周期性而可能出现的问题。
 
 ## 生锈效果
 
 噪声函数的另一个使用示例是模拟生锈的着色器。
 
-最简单的方法是对每个片元计算 `turbulence` 函数。如果该值低于某个阈值，则认为该片元已被锈迹侵蚀并将其丢弃（使用 `discard` 命令）。
+最简单的方法是对每个片元计算`turbulence`函数。如果该值低于某个阈值，则认为该片元已被锈迹侵蚀并将其丢弃（使用`discard`命令）。
 
 代码清单 17.9 和 17.10 包含了模拟腐蚀过程的顶点着色器和片元着色器。
 
@@ -13832,11 +13984,13 @@ void main (void)
 
 代码清单 17.11 包含了相应的 C++ 程序。
 
-![](img/0195f4c0347b99a95028b956b67109ca_407_0.png)
+![图 17.8](img/0195f4c0347b99a95028b956b67109ca_407_0.png)
 
-注意 `offs` 统一变量的使用，它允许你控制物体的生锈程度。使用 <+> 和 <-> 键，你可以更改此参数的值，从而影响生锈程度。
+注意`offs`统一变量的使用，它允许你控制物体的生锈程度。使用 <kbd>+</kbd> 和 <kbd>-</kbd> 键，你可以更改此参数的值，从而影响生锈程度。
 
 ## 代码清单 17.11. 模拟腐蚀过程的 C++ 程序
+
+
 
 ```cpp
 //
@@ -13983,8 +14137,6 @@ void animate ()
 }
 ```
 
-
-
 ```cpp
 program.unbind();
 
@@ -14039,7 +14191,7 @@ int main (int argc, char * argv [])
 
 虽然这些着色器呈现了一幅美丽的画面，其中物体逐渐被腐蚀，但物体的边缘并没有出现锈迹。不过，这种情况是可以改进的。当 `turbulence` 函数的值接近阈值时，使颜色变暗。也就是说，该值越接近阈值，颜色应该越深。这个方案在代码清单 17.12 所示的片元着色器中实现。图 17.8 中的生锈茶壶就是使用代码清单 17.12 中的着色器渲染的。
 
-### 代码清单 17.12. “改进版”腐蚀的片元着色器
+## 代码清单 17.12. “改进版”腐蚀的片元着色器
 
 ```glsl
 //
@@ -14084,6 +14236,7 @@ void main (void)
 ```
 
 ![](img/0195f4c0347b99a95028b956b67109ca_413_0.png)
+
 图 17.8. 生锈的茶壶
 
 ## 波纹
@@ -14092,7 +14245,7 @@ void main (void)
 
 代码清单 17.13 和 17.14 示例中的唯一特殊之处在于，必须旋转纹理贴图以使“水”向下流动。这种旋转应该在着色器中进行补偿。
 
-### 代码清单 17.13. 渲染波纹的顶点着色器
+## 代码清单 17.13. 渲染波纹的顶点着色器
 
 ```glsl
 //
@@ -14120,7 +14273,7 @@ void main(void)
 }
 ```
 
-### 代码清单 17.14. 渲染波纹的片元着色器
+## 代码清单 17.14. 渲染波纹的片元着色器
 
 ```glsl
 //
@@ -14155,23 +14308,23 @@ void main(void)
 }
 ```
 
-相应的 C++ 程序可以在随书附带 CD-ROM 的 Code\Chapter-17 文件夹中找到。
+相应的 C++ 程序可以在随书附带 CD-ROM 的 `Code\Chapter-17` 文件夹中找到。
 
 ## 云朵
 
-*turbulence* 函数的另一个频繁用途是模拟天空中的云朵。通常情况下，为每个片元计算该函数的值（该值取决于位置和时间）。如果计算值小于特定阈值（*stage1*），则相应的片元“属于”晴朗的天空。如果函数值大于第二个阈值（*stage2*），则该片元被认为被云层覆盖。在其他情况下，片元被部分云层覆盖，其颜色是天空颜色和云朵颜色的加权和。
+`turbulence` 函数的另一个频繁用途是模拟天空中的云朵。通常情况下，为每个片元计算该函数的值（该值取决于位置和时间）。如果计算值小于特定阈值（`stage1`），则相应的片元“属于”晴朗的天空。如果函数值大于第二个阈值（`stage2`），则该片元被认为被云层覆盖。在其他情况下，片元被部分云层覆盖，其颜色是天空颜色和云朵颜色的加权和。
 
 因此，颜色由以下公式指定：
 
 $$C(p, t) = mix(C_{sky}, C_{cloud}, smoothstep(stage1, stage2, turbulence(p, t)))$$
 
-请注意，你可以通过 *stage1* 和 *stage2* 的值来控制云层的密度。
+请注意，你可以通过 `stage1` 和 `stage2` 的值来控制云层的密度。
 
 天空的颜色可以通过在正常天空颜色和太阳方向的天空颜色之间进行插值获得，插值权重使用片元方向与太阳方向之间夹角的余弦值。
 
 这种方法由代码清单 17.15 和 17.16 中的着色器实现。
 
-### 代码清单 17.15. 渲染天空云朵的顶点着色器
+## 代码清单 17.15. 渲染天空云朵的顶点着色器
 
 ```glsl
 //
@@ -14197,7 +14350,11 @@ void main(void)
 }
 ```
 
-### 代码清单 17.16. 渲染天空云朵的片元着色器
+## 代码清单 17.16. 渲染天空云朵的片元着色器
+
+
+
+以下 GLSL 着色器代码实现了带有云朵的天空渲染效果：
 
 ```glsl
 //
@@ -14247,17 +14404,16 @@ void main()
 图 17.9 展示了使用这些着色器渲染的带有云朵的天空。
 
 ![](img/0195f4c0347b99a95028b956b67109ca_417_0.png)
+
 **图 17.9.** 带有云朵的天空
 
 ## 大理石
 
-模拟石材（大理石、花岗岩等）表面最简单的方法是使用 `turbulence`（或 `fBm`，或 `multifractal`）函数来混合两种颜色：
+模拟石材（大理石、花岗岩等）表面最简单的方法是使用`turbulence`（或`fBm`，或`multifractal`）函数来混合两种颜色：
 
 $$C_{out} = mix(C_1, C_2, turbulence(p))$$ (17.4)
 
 该方法在代码清单 17.17 和 17.18 的着色器中实现。
-
-
 
 ## Listing 17.17. 用于渲染大理石的简单顶点着色器
 
@@ -14329,9 +14485,10 @@ void main(void)
 另一种更有趣的方法建议将公式 (17.4) 复杂化。使用坐标和*turbulence*（湍流）函数值的周期函数（取值在 [0, 1] 闭区间内）作为颜色混合函数的参数。以下是该复杂公式的一种可能变体：
 
 $$t = \sin\text{Wave}(\text{p.x} + \text{turbScale} \cdot \text{turbulence}(\text{p})) \quad (17.5)$$
+
 $$C = \text{mix}(C_1, C_2, t)$$
 
-通过使用 *turbScale* 参数，你可以控制最终材质的“随机”程度。这种方法在 Listing 17.19 和 17.20 包含的着色器中实现（见图 17.10）。
+通过使用*turbScale*参数，你可以控制最终材质的“随机”程度。这种方法在 Listing 17.19 和 17.20 包含的着色器中实现（见图 17.10）。
 
 ## Listing 17.19. 用于渲染大理石的复杂版本顶点着色器
 
@@ -14403,11 +14560,12 @@ void main(void)
 ```
 
 ![](img/0195f4c0347b99a95028b956b67109ca_421_0.png)
+
 图 17.10. “改进后的”大理石
 
-从 Listing 17.20 可以看出，`turbulence` 函数的值不仅可以用于改变颜色，还可以用于弯曲法线并控制高光强度。
+从 Listing 17.20 可以看出，`turbulence`函数的值不仅可以用于改变颜色，还可以用于弯曲法线并控制高光强度。
 
-如果你将公式 (17.5) 中的 $t$ 参数提高到大于 1 的幂次，颜色的比例将会降低。结果，这种颜色将以细小脉络的形式出现在材质中。这种效果被用于下一个渲染带有脉络的大理石的片元着色器中。
+如果你将公式 (17.5) 中的$t$参数提高到大于 1 的幂次，颜色的比例将会降低。结果，这种颜色将以细小脉络的形式出现在材质中。这种效果被用于下一个渲染带有脉络的大理石的片元着色器中。
 
 ## Listing 17.21. 用于渲染有脉络大理石的片元着色器
 
@@ -14446,11 +14604,12 @@ void main (void)
 ```
 
 ![](img/0195f4c0347b99a95028b956b67109ca_422_0.png)
+
 图 17.11. 使用 Listing 17.21 中的着色器渲染的有脉络大理石
 
-通过使用一组颜色而不是仅使用两种颜色 $C_1$ 和 $C_2$，你可以产生更令人印象深刻的结果。在包含 `colorspline` 内建函数的 RenderMan 着色语言中可以实现这一点。该函数允许编程人员通过插值，从有序的 `(color, param)` 对集合中为任何标量参数找到值。GLSL 缺少这样的函数，但你并不需要它。计算颜色样条（color spline）最快的方法是将其指定为一维纹理。然后，获取所需的颜色值只需访问该纹理即可。
+通过使用一组颜色而不是仅使用两种颜色$C_1$和$C_2$，你可以产生更令人印象深刻的结果。在包含`colorspline`内建函数的 RenderMan 着色语言中可以实现这一点。该函数允许编程人员通过插值，从有序的`(color, param)`对集合中为任何标量参数找到值。GLSL 缺少这样的函数，但你并不需要它。计算颜色样条（color spline）最快的方法是将其指定为一维纹理。然后，获取所需的颜色值只需访问该纹理即可。
 
-一个能够从一组 `(color, param)` 对构建一维纹理的 Python 脚本可在随附 CD-ROM 的 Code\scripts 文件夹中找到。
+一个能够从一组`(color, param)`对构建一维纹理的 Python 脚本可在随附 CD-ROM 的`Code\scripts`文件夹中找到。
 
 ## 木材
 
@@ -14458,9 +14617,9 @@ void main (void)
 
 $t = \sqrt{x^2 + y^2} + turbScale \cdot turbulence(p)$
 
-使用该公式计算 $t$ 参数后，从中计算一个周期函数（取值范围在 $[0, 1]$ 闭区间内）。如果需要，将结果进行幂运算，然后用于混合两种颜色。
+使用该公式计算$t$参数后，从中计算一个周期函数（取值范围在$[0, 1]$闭区间内）。如果需要，将结果进行幂运算，然后用于混合两种颜色。
 
-`turbScale` 参数允许你控制引入到木材纤维结构中的畸变程度。
+`turbScale`参数允许你控制引入到木材纤维结构中的畸变程度。
 
 这种方法在 Listing 17.22 和 17.23 包含的着色器中执行。图 17.12 显示了使用这些着色器绘制的茶壶。
 
@@ -14537,23 +14696,23 @@ void main (void)
 }
 ```
 
-
-
 **图 17.12.** 使用代码清单 17.22 和 17.23 中的着色器绘制的“木制”茶壶
 
 ## 发光粒子
 
 噪声函数允许你实现另一种令人惊叹的效果：粒子通过交替闪烁和变暗来随机改变其强度。你只需要从顶点着色器中获取粒子的当前位置和当前时间，然后可以通过应用适当函数的叠加，从噪声纹理中获得所需的值。
 
-如果获取到的值的 x 分量小于某个特定阈值（实际上，可以检查任何其他分量或分量的组合），则认为该粒子不可见（或者被丢弃，或者其颜色或 alpha 分量被设为零）。如果 x 分量大于第二个阈值，则认为该粒子完全可见。对于该分量的其他值，粒子的强度使用线性插值计算。
+
+
+如果获取到的值的`x`分量小于某个特定阈值（实际上，可以检查任何其他分量或分量的组合），则认为该粒子不可见（或者被丢弃，或者其颜色或`alpha`分量被设为零）。如果`x`分量大于第二个阈值，则认为该粒子完全可见。对于该分量的其他值，粒子的强度使用线性插值计算。
 
 因此，我们得到了以下用于计算粒子闪烁强度的公式：
 
 `k = smoothstep (val1, val2, noise (p, t).x)`
 
-为了创建这种效果，需要对 *第 16 章* 中用于渲染粒子系统的顶点着色器和片元着色器进行一些微调。代码清单 17.24 和 17.25 包含了必要的着色器。
+为了创建这种效果，需要对第 16 章中用于渲染粒子系统的顶点着色器和片元着色器进行一些微调。代码清单 17.24 和 17.25 包含了必要的着色器。
 
-### 代码清单 17.24. 发光粒子的顶点着色器
+## 代码清单 17.24. 发光粒子的顶点着色器
 
 ```glsl
 //
@@ -14579,7 +14738,7 @@ void main(void)
 }
 ```
 
-### 代码清单 17.25. 发光粒子的片元着色器
+## 代码清单 17.25. 发光粒子的片元着色器
 
 ```glsl
 //
@@ -14605,21 +14764,21 @@ void main(void)
 
 ## 火焰
 
-*湍流（turbulence）* 函数可以成功用于火焰建模。通常，火焰使用一个与公告板（billboard）平行的矩形来表示。程序员的任务是编写合适的着色器，即为每个点适当指定“温度”。利用温度，可以从一维纹理中获取相应的颜色。
+湍流（turbulence）函数可以成功用于火焰建模。通常，火焰使用一个与公告板（billboard）平行的矩形来表示。程序员的任务是编写合适的着色器，即为每个点适当指定“温度”。利用温度，可以从一维纹理中获取相应的颜色。
 
-*湍流* 函数适用于为火焰引入随机性。然而，其影响程度通常取决于当前的 $y$ 坐标而受到限制。这降低了底部亮区域的随机程度，并增加了火焰顶部的随机程度。
+湍流函数适用于为火焰引入随机性。然而，其影响程度通常取决于当前的`$y$`坐标而受到限制。这降低了底部亮区域的随机程度，并增加了火焰顶部的随机程度。
 
-因此，你应该使用一个从底部的最高温度到顶部的最低温度的简单颜色梯度，并使用 *湍流* 函数对温度进行扭曲。
+因此，你应该使用一个从底部的最高温度到顶部的最低温度的简单颜色梯度，并使用湍流函数对温度进行扭曲。
 
 图 17.13 显示了一个以此方式渲染的火焰示例。
 
 所需的着色器见代码清单 17.26 和 17.27。
 
-请注意，相同的技术被反复使用。你根据空间坐标计算噪声函数（或 *湍流* 或 $\text{fBm}$ 函数）的值。（这就是为什么这种方法有时被称为 *实体纹理化 solid texturing*）。之后，你根据函数值，有时还结合特定材料的典型函数值，计算出一个标量值。得到的标量值通过混合两种颜色或使用一维纹理转换为颜色。
+请注意，相同的技术被反复使用。你根据空间坐标计算噪声函数（或湍流或`$\text{fBm}$`函数）的值。（这就是为什么这种方法有时被称为实体纹理化 solid texturing）。之后，你根据函数值，有时还结合特定材料的典型函数值，计算出一个标量值。得到的标量值通过混合两种颜色或使用一维纹理转换为颜色。
 
 **图 17.13.** 程序化火焰
 
-### 代码清单 17.26. 用于火焰建模的顶点着色器
+## 代码清单 17.26. 用于火焰建模的顶点着色器
 
 ```glsl
 //
@@ -14635,7 +14794,7 @@ void main(void)
 }
 ```
 
-### 代码清单 17.27. 用于火焰建模的片元着色器
+## 代码清单 17.27. 用于火焰建模的片元着色器
 
 ```glsl
 //
@@ -14670,28 +14829,49 @@ void main(void)
 
 ## 参考文献
 
-- 1. 3D Computer Graphics: A Mathematical Introduction with OpenGL, by Samuel R. Buss, Cambridge University Press, 2003
-- 2. GPU Gems 2: Programming Techniques for High-Performance Graphics and General-Purpose Computation (GPU Gems), by Matt Pharr and Randima Fernando, Addison Wesley Professional, 2005
-- 3. GPU Gems: Programming Techniques, Tips, and Tricks for Real-Time Graphics, by Randima Fernando, Addison Wesley Professional, 2004
-- 4. Interactive Computer Graphics: A Top-Down Approach with OpenGL (3rd edition), by Edward Angel, Addison-Wesley Professional, 2002
-- 5. OpenGL(R) Programming Guide: The Official Guide to Learning OpenGL(R), Version 2 (5th edition), Addison-Wesley Professional, 2005
-- 6. OpenGL(R) Shading Language, by Randi J. Rost, Addison-Wesley, 2004
-- 7. Texturing & Modelling. A procedural approach (2nd edition). by David S. Ebert, F. Kenton Musgrave, Darwyn Peachy, Ken Perlin, Steven Worley, AP Professional, 1998
-- 8. The Cg Tutorial: The Definitive Guide to Programmable Real-Time Graphics, by Randima Fernando and Mark J. Kilgard, Addison-Wesley Professional, 2003
-- 9. The OpenGL Extensions Guide, by Eric Lengyel, Charles River Media, 2003
-- 10. http://www.opengl.org
-- 11. http://developer.nvidia.com
-- 12. http://www.ati.com/developer
-- 13. http://www.steps3d.narod.ru/english.html
-- 14. http://www.flipcode.com
-- 15. http://www.gamedev.net
-- 16. http://nehe.gamedev.net
-- 17. http://www.frustum.org
-- 18. http://www.shadertech.com
-- 19. http://www.clockworkcoders.com/ogls l/tutorials.html
-- 20. http://www.3dshaders.com
-- 21. http://www.humus.ca
-- 22. http://www.paulsprojects.net
+1. 3D Computer Graphics: A Mathematical Introduction with OpenGL, by Samuel R. Buss, Cambridge University Press, 2003
+
+2. GPU Gems 2: Programming Techniques for High-Performance Graphics and General-Purpose Computation (GPU Gems), by Matt Pharr and Randima Fernando, Addison Wesley Professional, 2005
+
+3. GPU Gems: Programming Techniques, Tips, and Tricks for Real-Time Graphics, by Randima Fernando, Addison Wesley Professional, 2004
+
+4. Interactive Computer Graphics: A Top-Down Approach with OpenGL (3rd edition), by Edward Angel, Addison-Wesley Professional, 2002
+
+5. OpenGL(R) Programming Guide: The Official Guide to Learning OpenGL(R), Version 2 (5th edition), Addison-Wesley Professional, 2005
+
+6. OpenGL(R) Shading Language, by Randi J. Rost, Addison-Wesley, 2004
+
+7. Texturing & Modelling. A procedural approach (2nd edition). by David S. Ebert, F. Kenton Musgrave, Darwyn Peachy, Ken Perlin, Steven Worley, AP Professional, 1998
+
+8. The Cg Tutorial: The Definitive Guide to Programmable Real-Time Graphics, by Randima Fernando and Mark J. Kilgard, Addison-Wesley Professional, 2003
+
+9. The OpenGL Extensions Guide, by Eric Lengyel, Charles River Media, 2003
+
+10. http://www.opengl.org
+
+11. http://developer.nvidia.com
+
+12. http://www.ati.com/developer
+
+13. http://www.steps3d.narod.ru/english.html
+
+14. http://www.flipcode.com
+
+15. http://www.gamedev.net
+
+16. http://nehe.gamedev.net
+
+17. http://www.frustum.org
+
+18. http://www.shadertech.com
+
+19. http://www.clockworkcoders.com/ogls l/tutorials.html
+
+20. http://www.3dshaders.com
+
+21. http://www.humus.ca
+
+22. http://www.paulsprojects.net
 
 ## CD-ROM 内容
 
@@ -14701,9 +14881,9 @@ WINDOWS-BIN 文件夹包含书中所有示例的编译后可执行文件。
 
 LINUX-BIN 文件夹包含为 Linux 编译的程序版本，打包在 TAR.GZ 文件中。这些程序可以直接执行。
 
-示例可以在 Microsoft Windows 和 Linux 中编译并运行。若要在 Windows 上构建示例，可以使用 MAKEFILE.NMAKE 文件或 MS Visual C++ 6.0 项目。
+示例可以在 Microsoft Windows 和 Linux 中编译并运行。若要在 Windows 上构建示例，可以使用 `MAKEFILE.NMAKE` 文件或 MS Visual C++ 6.0 项目。
 
-使用 MAKEFILE.NMAKE 文件在 Windows 上构建示例时，请在对应章节的文件夹中执行以下命令：
+使用 `MAKEFILE.NMAKE` 文件在 Windows 上构建示例时，请在对应章节的文件夹中执行以下命令：
 
 `nmake -f Makefile.nmake`
 
@@ -14716,499 +14896,616 @@ Linux 上的示例构建使用 make 文件。执行以下命令：
 ## 索引
 
 ### A
+
 - 累积缓冲区 (Accumulation buffer), 80
+
 - 仿射变换 (Affine transforms), 169
+
 - 走样伪影 (Aliasing artifacts), 13
+
 - 各向异性表面 (Anisotropic surfacing), 283
+
 - ARB 扩展 (ARB extensions), 13
+
 - 数组 (Arrays), 221
+
 - 宽高比 (Aspect ratio), 169
+
 - 属性 (Attribute), 222
 
 ### B
+
 - 切线半空间基 (Basis of tangent half-space), 186
+
 - 副法线 (Binormal), 260
+
 - 位图字体 (Bitmap font), 12
+
 - 混合技术 (Blending techniques), 15
+
 - 顶点混合 (Blending vertices), 21
+
 - 模糊 (Blur), 978
+
 - 包围盒 (Bounding box), 195
+
 - 缓冲区对象 (Buffer objects), 17
+
     - 索引 (index), 17
+
     - 顶点 (vertex), 17
+
 - 凹凸贴图 (Bump map), 259
 
 ### C
+
 - 用于图形的 C 语言 (C for graphics), 40
+
     - 支持的配置文件, 41
+
 - 回调函数 (Callback function), 75
+
     - 全局, 75
+
     - 菜单, 75
+
     - 窗口, 75
+
 - 相机 (Camera), 164
+
     - 方法, 168
+
 - 相机手性 (Camera's handedness), 169
+
 - CD 表面渲染 (CD surfacing rendering), 364
+
 - C graphics 的 Cgc, p
+
 - Cgc 工具包 (Cgc Toolkits), 43
+
 - Cgc 库 (Cgc libraries), 43
+
 - cgc_lib, 库, 43
+
 - 子窗口 (Child window), 71
+
     - 创建, 71
+
 - 数据块 (Chunk), 151
+
 - 类 (Class)
+
     - Camera, 164
+
     - displayList, 98
+
     - FileSystem, 130
+
     - FrameBuffer, 156
+
     - Frustum, 159
+
     - GlsProgram, 192
+
     - glut_ignorware, 95
+
     - line, 93
+
     - line, 方法, 94
+
     - Map, 187
+
     - mat3, 105, 106
+
     - mat3, 方法, 105, 106
+
     - mat4, 105, 106
+
     - mat4, 方法, 105, 106
+
     - Material, 189
+
     - Matrix3D, 123
+
     - matrix, 88
+
     - matrix4, 方法, 89
+
     - matrix4, 运算符, 91
+
     - Matrix4x4, 122
+
     - Mesh, 201
+
     - MeshLink, 191
+
     - MeshNode, 206
+
     - noise3D, 381
+
     - PBuffer, Linux 版, 148
+
     - PBuffer, Windows 版, 143
+
     - plane, 94
+
     - plane, 方法, 94
+
     - plane, 运算符, 95
+
     - quat, 94
+
     - quat, 方法, 107
+
     - quaternion, 91
+
     - Quaternion, 124
+
     - quaternion, 方法, 92
+
     - quaternion, 运算符, 91
+
     - Texture, 131
+
     - textured_loader, 133
+
     - vec<N, T>, 方法, 87
+
     - vec<N, T>, 运算符, 88
+
     - Vector3D, 113
+
 - 裁剪平面 (Clip plane), p 183
+
 - 对象裁剪 (Clipping of objects), 183
+
 - 云建模 (Clouds, modeling), 408
+
 - 碰撞顶点 (Collision vertex), 127
+
 - 颜色混合 (Color blending), 12
+
 - 颜色索引模式 (Color index mode), 10
+
 - 颜色材质 (Color materials), 22
+
 - 组合 (Composition), 122
+
 - 压缩纹理 (Compressed textures), 13
+
 - 构造函数 (Constructor), 225
+
 - 内容 (Contents), 12
+
 - 卷积 (Convolution), 12
+
 - 卷积核 (Convolution kernel), 378
+
     - 可分离, 379
+
 - 当前阻尼模式 (Current damping mode), 14
+
 - 立方体环境贴图 (Cubic environment map), 353
+
 - 当前菜单 (Current menu), 67, 71
+
 - 当前窗口 (Current window), 67, 71
+
 - 裁剪表面坐标模式 (cutting a surface coordinates, mode), 17
 
 ### D
+
 - 数据覆盖 (Data coverage), 129
+
 - 数据拓扑 (Data topology), 21
+
 - 数据流模型 (Dataflow model), 1
+
 - 深度缓冲区 (Depth buffer), 79
+
 - 深度纹理 (Depth textures), 15
+
 - 目标 (Destination), 15
+
 - 衍射建模 (Diffraction, modeling), 357
+
 - 直接内存访问 (Direct Memory Access), 9
+
 - Display_list 类, 98
+
 - DMA: 参见 Direct Memory Access
+
 - 点运算符 (Dot operator), 227
+
 - 双缓冲 (Double buffering), 72
 
 ### E
+
 - 边缘检测 (Edge detection), 374
+
 - 入口点 (Entry point), 42
+
 - 欧拉角 (Euler's angles), 163
+
 - 扩展 (Extension):
+
     - ARB_depth_texture, 15
+
     - ARB_draw_buffers, 62
+
     - ARB_fragment_program, 22, 41
+
     - ARB_fragment_shader, 17, 59
+
     - ARB_multisample, 14
+
     - ARB_multitexture, 13
+
     - ARB_occlusion_query, 17
-    - ARB_palette_62, 348
-    - ARB_shader_objects, 17
-    - ARB_shadow, 15
-    - ARB_texture_clamp, 13
-    - ARB_texture_compression, 13
-    - ARB_texture_cube_map, 13
-    - ARB_texture_env_add, 14
-    - ARB_texture_env_combine, 14
-    - ARB_texture_env_crossbar, 16
-    - ARB_texture_env_dot3, 14
-    - ARB_texture_env_mirrored_repeat, 17, 19
-    - ARB_texture_non_power_of_two_map, 37
-    - ARB_texture_matrix, 14
-    - ARB_vertex_buffer_object, 17, 19
-    - ARB_vertex_program, 22, 27, 41
-    - ARB_vertex_shader, 17, 59
-    - ARB_window_pos, 17
-    - ATI_separate_stencil, 62
-    - EXT_blend_color, 12
-    - EXT_blend_func_separate, 15
-    - EXT_blend_logic_op, 10
-    - EXT_blend_srgb, 12
-    - EXT_blend_subtract, 12
-    - EXT_color_subtitle, 12
-    - EXT_color_scale, 12
-    - EXT_convolution, 12
-    - EXT_draw_range_element, 12
-    - EXT_fog_coord, 15
-    - EXT_framebuffer_object, 138
-    - EXT_framebuffer_object, 150
-    - EXT_multi_draw_arrays, 15
-    - EXT_packed_pixels, 11
-    - EXT_polygon_offset, 12
-    - EXT_rescale_normal, 11
-    - EXT_secondary_color, 15
 
 
 
-EXT_shadow_funcs, 17
-EXT_stencil_two_side, 62
-EXT_stencil_wrap, 16
-EXT_subtexture, 10
-EXT_texture, 10
-EXT_texture_lod_bias, 16
-EXT_texture_object, 10
-EXT_texture3D, 11
-EXT_vertex_array, 9
-GL_ARB_fragment_shader, 280
-GL_ARB_shared_objects, 274
-GL_ARB_shading_language100, 273
-GL_ARB_vertex_shader, 278
-GL_ARB_vertex_shader_functions and constants, 278
-GL_EXT_fog_coord, 126
-GL_EXT_timer_sgt, map 142
-GLX_SGI_fbconfig_ext, 146
-GLX_SGI_fbconfig_pxbuffer, 146
-HP_condition_border_modes, 12
-NV_blend_square, 15
-SGI_color_matrix, 15
-SGI_compressed_mipmap, 15
-SGI_edge_clamp_mirror, 15
-SGI_stretch_lod, 11
-WGL_ARB_pbuffer, 138
-WGL_ARB_pbuffer_format, 138
-WGL_ARB_render_texture, 138, 141
-扩展名称, 8
-
-近似公式, 354
-视锥体 (Frustum), 类, 179
-全屏, 模式, 72
+- `ARB_palette_62`, 348
+- `ARB_shader_objects`, 17
+- `ARB_shadow`, 15
+- `ARB_texture_clamp`, 13
+- `ARB_texture_compression`, 13
+- `ARB_texture_cube_map`, 13
+- `ARB_texture_env_add`, 14
+- `ARB_texture_env_combine`, 14
+- `ARB_texture_env_crossbar`, 16
+- `ARB_texture_env_dot3`, 14
+- `ARB_texture_env_mirrored_repeat`, 17, 19
+- `ARB_texture_non_power_of_two_map`, 37
+- `ARB_texture_matrix`, 14
+- `ARB_vertex_buffer_object`, 17, 19
+- `ARB_vertex_program`, 22, 27, 41
+- `ARB_vertex_shader`, 17, 59
+- `ARB_window_pos`, 17
+- `ATI_separate_stencil`, 62
+- `EXT_blend_color`, 12
+- `EXT_blend_func_separate`, 15
+- `EXT_blend_logic_op`, 10
+- `EXT_blend_srgb`, 12
+- `EXT_blend_subtract`, 12
+- `EXT_color_subtitle`, 12
+- `EXT_color_scale`, 12
+- `EXT_convolution`, 12
+- `EXT_draw_range_element`, 12
+- `EXT_fog_coord`, 15
+- `EXT_framebuffer_object`, 138
+- `EXT_framebuffer_object`, 150
+- `EXT_multi_draw_arrays`, 15
+- `EXT_packed_pixels`, 11
+- `EXT_polygon_offset`, 12
+- `EXT_rescale_normal`, 11
+- `EXT_secondary_color`, 15
+- `EXT_shadow_funcs`, 17
+- `EXT_stencil_two_side`, 62
+- `EXT_stencil_wrap`, 16
+- `EXT_subtexture`, 10
+- `EXT_texture`, 10
+- `EXT_texture_lod_bias`, 16
+- `EXT_texture_object`, 10
+- `EXT_texture3D`, 11
+- `EXT_vertex_array`, 9
+- `GL_ARB_fragment_shader`, 280
+- `GL_ARB_shared_objects`, 274
+- `GL_ARB_shading_language100`, 273
+- `GL_ARB_vertex_shader`, 278
+- `GL_ARB_vertex_shader_functions and constants`, 278
+- `GL_EXT_fog_coord`, 126
+- `GL_EXT_timer_sgt`, map 142
+- `GLX_SGI_fbconfig_ext`, 146
+- `GLX_SGI_fbconfig_pxbuffer`, 146
+- `HP_condition_border_modes`, 12
+- `NV_blend_square`, 15
+- `SGI_color_matrix`, 15
+- `SGI_compressed_mipmap`, 15
+- `SGI_edge_clamp_mirror`, 15
+- `SGI_stretch_lod`, 11
+- `WGL_ARB_pbuffer`, 138
+- `WGL_ARB_pbuffer_format`, 138
+- `WGL_ARB_render_texture`, 138, 141
+- 扩展名称, 8
+- 近似公式, 354
+- 视锥体（Frustum）, 类, 179
+- 全屏, 模式, 72
 
 ## G
 
-伽马校正 (Gamma correction), 374
-GPU 通用编程 (Generic Programming on GPU), 1
-GLAUX, 库, 129
-GLUtil, 辅助工具, 129
-全局事件处理器, 79
-全局变量, 221
-GLSL：参见 OpenGL 着色语言 (OpenGL Shading Language)
-GLUtil：参见 OpenGL 辅助工具 (OpenGL Helper)
-GLUT：参见 OpenGL 实用工具包 (OpenGL Utility Toolkit)
-GPGPU：参见 GPU 通用编程 (Generic Programming on GPU)
-GPU：参见 图形处理单元 (Graphics Processing Unit)
-图形处理单元 (Graphics Processing Unit), 1, 7
+- 伽马校正（Gamma correction）, 374
+- GPU 通用编程（Generic Programming on GPU）, 1
+- `GLAUX`, 库, 129
+- `GLUtil`, 辅助工具, 129
+- 全局事件处理器, 79
+- 全局变量, 221
+- `GLSL`：参见 OpenGL 着色语言（OpenGL Shading Language）
+- `GLUtil`：参见 OpenGL 辅助工具（OpenGL Helper）
+- `GLUT`：参见 OpenGL 实用工具包（OpenGL Utility Toolkit）
+- `GPGPU`：参见 GPU 通用编程（Generic Programming on GPU）
+- `GPU`：参见 图形处理单元（Graphics Processing Unit）
+- 图形处理单元（Graphics Processing Unit）, 1, 7
 
 ## H
 
-高光 (Highlights), 11
-HSV, 颜色表示模型, 376
+- 高光（Highlights）, 11
+- `HSV`, 颜色表示模型, 376
 
 ## I
 
-IDE：参见 集成开发环境 (Integrated Development Environment)
-空闲处理器 (Idle handler), 78
-idSoftware, 7
-光照 (Illumination), 11
-光照模型：
-- Blinn, 253
-- 漫反射 (diffuse), 251
-- 各向异性表面, 264
-- Gooch, 271
-- Phong, 256
-- Ward, 267
-索引 (Indexing), 228
-集成开发环境 (Integrated Development Environment), 311
-干涉 (Interference), 357
-内部格式 (Internal format), 10
-各向同性表面 (Isotropic surface), 263
-迭代器 (Iterator), 210
-
-libTexture, 129
-libTexture3D, 135
-NV_MATH, 103
-NV_UTIL, 109
-OpenGL 辅助工具 (OpenGL Helper), 86
-pthread, 43
-libTexture, 库, 129
-libTexture3D, 库, 135
-光, 波特性, 357
-Uniform 变量的位置, 277
-对数 (Log), 276
-查找表 (lookup tables), 12
+- `IDE`：参见 集成开发环境（Integrated Development Environment）
+- 空闲处理器（Idle handler）, 78
+- `idSoftware`, 7
+- 光照（Illumination）, 11
+- 光照模型：
+  - `Blinn`, 253
+  - 漫反射（diffuse）, 251
+  - 各向异性表面, 264
+  - `Gooch`, 271
+  - `Phong`, 256
+  - `Ward`, 267
+- 索引（Indexing）, 228
+- 集成开发环境（Integrated Development Environment）, 311
+- 干涉（Interference）, 357
+- 内部格式（Internal format）, 10
+- 各向同性表面（Isotropic surface）, 263
+- 迭代器（Iterator）, 210
+- `libTexture`, 129
+- `libTexture3D`, 135
+- `NV_MATH`, 103
+- `NV_UTIL`, 109
+- OpenGL 辅助工具（OpenGL Helper）, 86
+- `pthread`, 43
+- `libTexture`, 库, 129
+- `libTexture3D`, 库, 135
+- 光, 波特性, 357
+- `Uniform` 变量的位置, 277
+- 对数（Log）, 276
+- 查找表（lookup tables）, 12
 
 ## M
 
-Mac OS X Tiger, 367
-主缓冲 (Main buffer), 136
-主颜色 (Main color), 11
-映射 (Map), 类, 187
-大理石, 建模, 410
-矩阵 (Matrix), 类, 189
-矩阵 (Matrix), 88
-- 分量, 228
-- 运算, 228
-Matrix3D, 类：
-- 方法, 123
-Matrix4x4, 类：
-- 方法, 123
-菜单：
-- 创建, 74
-- 销毁, 74
-- 层级菜单, 74
-- 嵌套菜单, 74
-网格 (Mesh), 210
-- 类, 191
-MeshLink, 类, 206
-MeshNode, 类, 206
-- 方法, 210
-Mipmap 过滤, 334
-Mipmap 等级, 11
-模式：
-- 颜色索引, 10
-- 坐标钳制 (coordinate clamping), 14
-- 切割纹理坐标, 17
-- RGBA, 10
-- 纹理环境, 14
-模型视图矩阵 (Modelview matrix), 21
-修饰符 (Modifier), 223
-- 属性 (attribute), 222
-- Uniform, 223
-- Varying, 223
-多分形, 函数, 395
-多采样缓冲 (Multisample buffer), 14
-多采样 (Multisampling), 13
-多纹理 (Multitexturing), 13
+- `Mac OS X Tiger`, 367
+- 主缓冲（Main buffer）, 136
+- 主颜色（Main color）, 11
+- 映射（Map）, 类, 187
+- 大理石, 建模, 410
+- 矩阵（Matrix）, 类, 189
+- 矩阵（Matrix）, 88
+  - 分量, 228
+  - 运算, 228
+- `Matrix3D`, 类：
+  - 方法, 123
+- `Matrix4x4`, 类：
+  - 方法, 123
+- 菜单：
+  - 创建, 74
+  - 销毁, 74
+  - 层级菜单, 74
+  - 嵌套菜单, 74
+- 网格（Mesh）, 210
+  - 类, 191
+- `MeshLink`, 类, 206
+- `MeshNode`, 类, 206
+  - 方法, 210
+- `Mipmap` 过滤, 334
+- `Mipmap` 等级, 11
+- 模式：
+  - 颜色索引, 10
+  - 坐标钳制（coordinate clamping）, 14
+  - 切割纹理坐标, 17
+  - `RGBA`, 10
+  - 纹理环境, 14
+- 模型视图矩阵（Modelview matrix）, 21
+- 修饰符（Modifier）, 223
+  - 属性（attribute）, 222
+  - `Uniform`, 223
+  - `Varying`, 223
+- 多分形, 函数, 395
+- 多采样缓冲（Multisample buffer）, 14
+- 多采样（Multisampling）, 13
+- 多纹理（Multitexturing）, 13
 
 ## N
 
-噪声函数, 247, 380
-法线 (Normal), 11
-- 变换, 21
-常规窗口 (Normal window), 71
-- 创建, 71
-NV_MATH, 库, 103
-NV_UTIL, 库, 109
+- 噪声函数, 247, 380
+- 法线（Normal）, 11
+  - 变换, 21
+- 常规窗口（Normal window）, 71
+  - 创建, 71
+- `NV_MATH`, 库, 103
+- `NV_UTIL`, 库, 109
 
 ## F
 
-IBM, 函数, 394
-FBO：参见 帧缓冲对象 (FrameBuffer Object)
-视野 (Field of view), 163
-FileSystem, 抽象类, 130
-过滤器：
-- 模糊, 378
-- 边缘检测, 374
-- 伽马校正, 374
-- 褐色 (Sepia), 368
-帧, 建模, 420
-雾 (Fog), 11, 15
-- 坐标, 22
-字体：
-- 点阵, 82
-- 轮廓, 82
-格式：
-- BGRA, 11
-- DIB, 11
-- GL_RGBA8, 10
-FOV：参见 视野 (field of view)
-片元程序 (Fragment program)：
-- 相关命令, 31
-片元着色器 (Fragment shader)：
-- 镜面反射, 233
-- 最简单的, 249
-帧缓冲 (Frame buffer), 10, 69, 136
-帧缓冲对象 (FrameBuffer Object), 151
-FrameBuffer, 类, 126
-菲涅耳系数 (Fresnel coefficient), 354
+- `IBM`, 函数, 394
+- `FBO`：参见 帧缓冲对象（FrameBuffer Object）
+- 视野（Field of view）, 163
+- `FileSystem`, 抽象类, 130
+- 过滤器：
+  - 模糊, 378
+  - 边缘检测, 374
+  - 伽马校正, 374
+  - 褐色（Sepia）, 368
+- 帧, 建模, 420
+- 雾（Fog）, 11, 15
+  - 坐标, 22
+- 字体：
+  - 点阵, 82
+  - 轮廓, 82
+- 格式：
+  - `BGRA`, 11
+  - `DIB`, 11
+  - `GL_RGBA8`, 10
+- `FOV`：参见 视野（field of view）
+- 片元程序（Fragment program）：
+  - 相关命令, 31
+- 片元着色器（Fragment shader）：
+  - 镜面反射, 233
+  - 最简单的, 249
+- 帧缓冲（Frame buffer）, 10, 69, 136
+- 帧缓冲对象（FrameBuffer Object）, 151
+- `FrameBuffer`, 类, 126
+- 菲涅耳系数（Fresnel coefficient）, 354
 
-## K, L
+## K、L
 
-键盘事件, 76
-libExt, 库, 127
-库：
-- Cg, 43
-- CgLib, 43
-- CGNL, 43
-- CggLib, 43
-- GLAUX, 129
-- GLUtil, 43
-- libExt, 127
-NVIDIA, 40
-NVIDIA SDK, 357
+- 键盘事件, 76
+- `libExt`, 库, 127
+- 库：
+  - `Cg`, 43
+  - `CgLib`, 43
+  - `CGNL`, 43
+  - `CggLib`, 43
+  - `GLAUX`, 129
+  - `GLUtil`, 43
+  - `libExt`, 127
+- `NVIDIA`, 40
+- `NVIDIA SDK`, 357
 
 ## O
 
-- 对象 (Object)：
-    - 属性, 186
-    - 边作为组件, 184
-    - 面作为组件, 184
-    - 顶点作为组件, 184
-- 遮挡查询 (Occlusion query), 17
-- OpenGL
-    - 可扩展性, 7
-    - OpenGL 辅助工具库, 86
-    - OpenGL 渲染管线, 59
-    - OpenGL 着色语言, 59
-    - 作为一种图形语言, 219
-    - 跳转命令, 231
-    - 主要数据类型, 231
-    - 运算符, 231
-    - 预定义宏, 231
-    - 预处理器命令, 230
-    - 标准常量, 235
-    - 标准扩展, 240
-    - 语句, 231
-    - Uniform 变量, 236
-    - Varying 变量, 239
-    - 系统预定义名称, 227
-- OpenGL 实用工具包 (GLUT) 库, 67
+- 对象（Object）：
+  - 属性, 186
+  - 边作为组件, 184
+  - 面作为组件, 184
+  - 顶点作为组件, 184
+- 遮挡查询（Occlusion query）, 17
+- `OpenGL`
+  - 可扩展性, 7
+  - OpenGL 辅助工具库, 86
+  - OpenGL 渲染管线, 59
+  - OpenGL 着色语言, 59
+  - 作为一种图形语言, 219
+  - 跳转命令, 231
+  - 主要数据类型, 231
+  - 运算符, 231
+  - 预定义宏, 231
+  - 预处理器命令, 230
+  - 标准常量, 235
+  - 标准扩展, 240
+  - 语句, 231
+  - `Uniform` 变量, 236
+  - `Varying` 变量, 239
+  - 系统预定义名称, 227
+- OpenGL 实用工具包（GLUT）库, 67
 - 寄存器操作, 27
-- 正交基 (Orthogonal basis), 162
+- 正交基（Orthogonal basis）, 162
 - 输出寄存器, 22
 
 ## P
 
-- 打包像素格式 (Packed pixel formats), 11
+- 打包像素格式（Packed pixel formats）, 11
 - 粒子系统, 15, 346
-    - 渲染, 15
-- p-buffer, 138
-    - 绑定到实例, 142
-    - 操作, 138
-- PBuffer, Linux 类, 148
-- PBuffer, Windows 类, 143
-- Perlin 噪声, 380
-- Perlin, Ken, 380
+  - 渲染, 15
+- `p-buffer`, 138
+  - 绑定到实例, 142
+  - 操作, 138
+- `PBuffer`, Linux 类, 148
+- `PBuffer`, Windows 类, 143
+- `Perlin` 噪声, 380
+- `Perlin`, Ken, 380
 - 平台扩展, 8
 - 平台无关扩展：
-    - 获取列表, 127
-- 多边形偏移 (Polygon offset), 9
-- Pop 属性, 74
+  - 获取列表, 127
+- 多边形偏移（Polygon offset）, 9
+- `Pop` 属性, 74
 - 预定义变量，位于：
-    - RenderMonkey IDE, 327
-- 配置 (Profile), 40
+  - `RenderMonkey IDE`, 327
+- 配置（Profile）, 40
 - 程序：
-    - 片元程序, 21
-    - 对象程序, 274
+  - 片元程序, 21
+  - 对象程序, 274
 - 可编程图形管线, 1
-- 投影矩阵 (Projection matrix), 21
+- 投影矩阵（Projection matrix）, 21
 
 ## Q
 
-- Quat, 类, 107
-- 四元数 (Quaternion), 91, 124
-    - 类及其方法, 124
+- `Quat`, 类, 107
+- 四元数（Quaternion）, 91, 124
+  - 类及其方法, 124
 
 ## R
 
-- RBO：设置渲染缓冲对象 (RenderBuffer Object)
+- `RBO`：设置渲染缓冲对象（RenderBuffer Object）
 - 反射向量, 353
 - 折射：
-    - 建模, 353
-    - 向量, 353
-- 寄存器 (Register), 22
-- 渲染缓冲对象 (RenderBuffer Object), 151
-- 渲染 (Rendering), 21, 136
-    - 上下文 (context), 71, 140
-    - 管线 (pipeline), 21, 59
-- RenderMan 着色语言, 40
-- RenderMonkey IDE, 327
-- SAMPLES：
-    - 通道 (passes), 316
-    - 预定义变量, 327
-    - 渲染状态块, 333
-    - 纹理对象, 320
-    - 变量类型, 322
-    - 操作, 316
-- 渲染到纹理 (Render To Texture), 136
-- RGBA 模式, 10
-- 边缘光 (Rim lighting), 269
-- 环形缓冲 (Ring buffering), 406
-- RTT：参见 渲染到纹理 (Render-To-Texture)
+  - 建模, 353
+  - 向量, 353
+- 寄存器（Register）, 22
+- 渲染缓冲对象（RenderBuffer Object）, 151
+- 渲染（Rendering）, 21, 136
+  - 上下文（context）, 71, 140
+  - 管线（pipeline）, 21, 59
+- `RenderMan` 着色语言, 40
+- `RenderMonkey IDE`, 327
+- `SAMPLES`：
+  - 通道（passes）, 316
+  - 预定义变量, 327
+  - 渲染状态块, 333
+  - 纹理对象, 320
+  - 变量类型, 322
+  - 操作, 316
+- 渲染到纹理（Render To Texture）, 136
+- `RGBA` 模式, 10
+- 边缘光（Rim lighting）, 269
+- 环形缓冲（Ring buffering）, 406
+- `RTT`：参见 渲染到纹理（Render-To-Texture）
 - 铁锈, 建模, 399
 
 ## S
 
-- 样本 (Sample), 13
+- 样本（Sample）, 13
 - 变量作用域, 221
-- 次要颜色 (Secondary color), 11
-- 褐色 (Sepia), 过滤器, 368
-- 着色器 (Shader), 29
-    - 对象, 59, 274
-    - 起源, 1
-- 阴影 (Shadow), 15
-    - 阴影贴图 (maps), 17
-- 侧向 (Side direction), 168
+- 次要颜色（Secondary color）, 11
+- 褐色（Sepia）, 过滤器, 368
+- 着色器（Shader）, 29
+  - 对象, 59, 274
+  - 起源, 1
+- 阴影（Shadow）, 15
+  - 阴影贴图（maps）, 17
+- 侧向（Side direction）, 168
 - 最简单的几何对象, 383
 - 球体：参见 球形线性插值
-    - 肥皂泡, 渲染, 357
-    - 肥皂泡, 建模, 384
-    - 实心光源, 183
-    - 实体建模, 420
-- 光源 (Source), 15
-- 球形线性插值 (Spherical linear interpolation), 125
-- 精灵 (Sprite), 14
-- 模板缓冲 (Stencil buffer), 15, 79
+  - 肥皂泡, 渲染, 357
+  - 肥皂泡, 建模, 384
+  - 实心光源, 183
+  - 实体建模, 420
+- 光源（Source）, 15
+- 球形线性插值（Spherical linear interpolation）, 125
+- 精灵（Sprite）, 14
+- 模板缓冲（Stencil buffer）, 15, 79
 - 模板阴影体积法, 185
 - 轮廓字体, 82
-- 结构体 (Structures), 220
-- 子块 (Subchunk), 211
+- 结构体（Structures）, 220
+- 子块（Subchunk）, 211
 
 ## T
 
-- 切线 (Tangent)：
-    - 切线映射 (map), 263
-    - 切线空间, 260
-    - 切线向量, 260
-    - 切线向量场, 263
+- 切线（Tangent）：
+  - 切线映射（map）, 263
+  - 切线空间, 260
+  - 切线向量, 260
+  - 切线向量场, 263
 - 切线半空间, 186
-    - 基向量, 186
-- 纹理元素 (Texel), 14, 136
-- 纹理 (Texture), 136
-    - 类, 131
-    - 坐标变换, 187
-    - 坐标, 22
-    - 坐标钳制, 11
-    - 立方体映射 (cube map), 13
-    - 环境模式, 14
-    - 过滤, 22
-    - 代理 (proxies), 10
-- TextureLoad, 抽象类, 133
-- 变换 (Transform)：
-    - GL_COLOR_MATRIX, 12
-    - 变换矩阵, 174
-    - 湍流 (Turbulence), 函数, 395
-    - 类型安全语言, GLSL 作为, 219
+  - 基向量, 186
+- 纹理元素（Texel）, 14, 136
+- 纹理（Texture）, 136
+  - 类, 131
+  - 坐标变换, 187
+  - 坐标, 22
+  - 坐标钳制, 11
+  - 立方体映射（cube map）, 13
+  - 环境模式, 14
+  - 过滤, 22
+  - 代理（proxies）, 10
+- `TextureLoad`, 抽象类, 133
+- 变换（Transform）：
+  - `GL_COLOR_MATRIX`, 12
+  - 变换矩阵, 174
+  - 湍流（Turbulence）, 函数, 395
+  - 类型安全语言, `GLSL` 作为, 219
 
 ## U
 
@@ -15217,81 +15514,92 @@ NVIDIA SDK, 357
 ## V
 
 - 变量：
-    - 全局变量, 221
-    - 作用域, 221
-- VBO：参见 顶点缓冲对象 (Vertex Buffer Objects)
-- 向量 (Vector), 22, 87
-    - GLSL 中的分量名称, 227
-    - 分量, 227
-    - 运算, 228
-    - 反射, 353
-    - 折射, 353
-    - Vector3, 类, 113
-    - 方法, 121
-- 供应商配置文件 (Vendor profile), 8
-- 顶点 (Vertex)：
-    - 数组, 9
-    - 属性, 21
-    - 缓冲, 195
-- 缓冲对象 (Buffer Objects), 341
+  - 全局变量, 221
+  - 作用域, 221
+- `VBO`：参见 顶点缓冲对象（Vertex Buffer Objects）
+- 向量（Vector）, 22, 87
+  - `GLSL` 中的分量名称, 227
+  - 分量, 227
+  - 运算, 228
+  - 反射, 353
+  - 折射, 353
+  - `Vector3`, 类, 113
+  - 方法, 121
+- 供应商配置文件（Vendor profile）, 8
+- 顶点（Vertex）：
+  - 数组, 9
+  - 属性, 21
+  - 缓冲, 195
+- 缓冲对象（Buffer Objects）, 341
 - 光照, 21
-- 顶点程序 (Vertex program), 21
-    - 命令, 28, 29, 30, 31, 32, 33, 34, 35
-- 顶点着色器 (Vertex shader)：
-    - 特殊变量, 233
-    - 标准属性, 235, 236
-    - 最简单的, 247
-- 视锥体 (View frustum), 163, 179
-- 虚拟缓冲 (Virtual buffer), 137
+- 顶点程序（Vertex program）, 21
+  - 命令, 28, 29, 30, 31, 32, 33, 34, 35
+- 顶点着色器（Vertex shader）：
+  - 特殊变量, 233
+  - 标准属性, 235, 236
+  - 最简单的, 247
+- 视锥体（View frustum）, 163, 179
+- 虚拟缓冲（Virtual buffer）, 137
 
 ## W
 
 - 颜色的加权和, 12
 - 加权概念, 21
 - 窗口：
-    - 标题, 72
-    - 子窗口, 71
-    - 创建, 71
-    - 销毁, 72
-    - 常规窗口, 71
-    - 重新显示, 72
-    - 可见性, 78
-- 线框模式 (Wire mode), 83
+  - 标题, 72
+  - 子窗口, 71
+  - 创建, 71
+  - 销毁, 72
+  - 常规窗口, 71
+  - 重新显示, 72
+  - 可见性, 78
+- 线框模式（Wire mode）, 83
 - 木材, 建模, 83
 
-## 跨平台着色器的开发与调试 (DEVELOPING AND DEBUGGING CROSS-PLATFORM SHADERS)
+# 跨平台着色器的开发与调试（DEVELOPING AND DEBUGGING CROSS-PLATFORM SHADERS）
 
 ALEX BORESKOV
 
-### 光盘内容
+## 光盘内容
 
 Windows 和 Linux 着色器的源代码
 
 © 2006 A-LIST, LLC
+
 版权所有。
+
 ISBN 1-931769-54-0
+
 所有商标均为其各自所有者的财产。
 
-A-LIST, LLC • 295 East 1st Street, Suite 100, Wayne, PA 19087 • PMB #285 • 702-977-5317 (传真) • mail@alistpublishing.com • http://www.alistpublishing.com
 
-## 跨平台着色器的开发与调试 (DEVELOPING AND DEBUGGING CROSS-PLATFORM SHADERS)
 
-如何在最新的电脑游戏中制作复杂且令人印象深刻的效果
+A-LIST, LLC • 295 East 1st Street, Suite 100, Wayne, PA 19087 • PMB #285 • 702-977-5317（传真）• mail@alistpublishing.com • `http://www.alistpublishing.com`
 
-本指南专注于使用 RenderMonkey 环境在 OpenGL 着色语言 (GLSL) 中开发跨平台着色器，使将复杂的图形效果制作与使用 OpenGL 的便捷性结合成为可能。随着图形加速器能力的飞速增长，编写用于复杂实时图形效果的着色器已成为一个热门且快速发展的课题，本书涵盖了这一领域的内容，并附带一张 CD-ROM，包含书中示例程序的跨平台源代码；这些代码同时适用于 Microsoft Windows 和日益流行的 Linux 系统。本书面向计算机图形学专家、相关专业的学生和研究生。它也可以作为图形编程课程的教材。
+# 跨平台着色器的开发与调试
+
+## DEVELOPING AND DEBUGGING CROSS-PLATFORM SHADERS
+
+如何在最新的电脑游戏中制作复杂且令人印象深刻的效果。
+
+本指南专注于使用 RenderMonkey 环境在 OpenGL 着色语言（GLSL）中开发跨平台着色器，使将复杂的图形效果制作与使用 OpenGL 的便捷性结合成为可能。随着图形加速器能力的飞速增长，编写用于复杂实时图形效果的着色器已成为一个热门且快速发展的课题。本书涵盖了这一领域的内容，并附带一张 CD-ROM，包含书中示例程序的跨平台源代码；这些代码同时适用于 Microsoft Windows 和日益流行的 Linux 系统。本书面向计算机图形学专家、相关专业的学生和研究生。它也可以作为图形编程课程的教材。
 
 - Windows 和 Linux 着色器的源代码
 
-类别：编程，计算机图形学/设计
-级别：中级到高级
+**类别：**编程，计算机图形学/设计
 
-ISBN 1-931769-54-0
-美国 $39.95 加拿大 $53.95
+**级别：**中级到高级
 
-ISBN 1-931769-54-0
+**ISBN：**1-931769-54-0
+
+美国 $39.95　加拿大 $53.95
+
+**ISBN：**1-931769-54-0
 
 A-LIST, LLC
+
 mail@alistpublishing.com
-http://www.alistpublishing.com
+
+`http://www.alistpublishing.com`
 
 所有商标和服务标志均为其各自所有者的财产。美国印刷。

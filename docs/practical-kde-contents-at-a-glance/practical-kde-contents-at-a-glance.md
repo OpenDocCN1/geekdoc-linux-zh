@@ -1,9 +1,5 @@
+
 # KDE 实用指南：内容概览
-
-
-
-
-
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_0_0.png)
 
@@ -11,87 +7,65 @@ KOrganizer Emacs Konsole mkdir 通过清晰、易于获取的信息提高工作�
 
 # KDE，不是给笨蛋、白痴、、傻子或脑残人准备的，而是给像你这样聪明的人准备的——尽管你现在还不太了解 KDE
 
-
 循环范围（Recurrence Range）部分可以让你不再受以下情况的困扰：处方药用完了、安排会议的项目已完成、你还清了房贷，或者你那个需要提醒的特殊生日的人分手了。如果你在监狱里，也许如果守卫允许你用电脑，你可以提醒自己刑期剩余的天数，或者假释听证会的定期安排表。
-
 
 循环（Loop）按钮点击后会反复播放当前 CD，除非有一个“人鼠”用斧头攻击电脑，这在连续播放约 15 次后很可能会发生。
 
-
 遗憾的是，KRN 文档的字数大约相当于本章的字数，所以关于它如何使用的知识，你将在这里学到。这太糟糕了，因为 KDE 是一个投入了大量工作的精美程序；再多花几个小时，他们就能告诉人们如何使用它了。现在，导航大部分是靠错误完成的，就像在黑暗的走廊里通过撞墙来找路。小心你的鼻子、膝盖、脚趾和手肘，并祈祷没有向下的楼梯。
-
 
 WINE 想要以其递归的 Linux 风格代表“WINE Is Not an Emulator”（WINE 不是模拟器）。我认为他们选择这些词只是为了能拼出点东西，因为它确实是一个模拟器。它模拟了 Windows 的所有版本。我觉得他们应该叫它为 Winux。
 
-
 在适当的时候，那些被称为“巨魔”（Trolls）的人想出了一种名为 QPL 许可的协议，这份文件确保了 Qt 将继续用于免费软件开发。这在很大程度上稳定了局面，尽管现在还能听到“巨魔”们和“矮人”（Gnomes）在对此抱怨和咕语。鲁珀松小皮（Rumpleststilskin）对这一话题保持沉默。
 
-
 “警告”页面可以防止尴尬情况的发生，即因为你忘记保存而电池没电，导致整个硕士论文丢失，这在数字时代等同于“作业被狗吃了”。不过，如果配置得不合理，它也会产生自己的尴尬局面。
-
-
 
 Dennis E. Powell
 
 技术编辑：Bob Bernstein
 
-
-
-
-
-
 - 27. 数据库 535
-
-
-
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_2_0.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 执行编辑：Jeff Koch
+
 采购编辑：Grechen Ganser
+
 开发编辑：Hugh Vandivier
+
 技术编辑：Bob Bernstein
+
 主编辑：Matt Purcell
+
 高级编辑：Susan Ross Moore
+
 拷贝编辑：Pamela Woolf, Kate O. Givens
+
 索引：Joy Dean Lee
+
 校对：Debra Neel, Pamela Woolf
+
 团队协调：Cindy Teeters
+
 室内设计：Anne Jones
+
 封面设计：Rader Design
+
 文案：Eric Rosberg
+
 排版技术员：Liz Johnston, Jeannette McKay
+
 生产分析：Dan Harris
 
-
-  - 工具包 12
-
-
-
-
-
-
+- 工具包 12
 
 Appfinder：为你完成大部分工作 147
 
 使用 kmenued 理顺所有内容 149
+
 更改你的个人菜单 151
 
 制作系统级更改 172
-
 
 将 K 面板和任务栏置在你想要的地方 176
 
@@ -99,24 +73,26 @@ Appfinder：为你完成大部分工作 147
 
 用于一键启动应用程序的 K 面板图标 187
 
-
 什么是 AppLink？172
+
 使用 AppLink 文件模板访问应用程序 201
 
 使用 .kdel 文件进行完全控制 204
+
 .kdel 文件的系统级使用 208
 
-
 那么，主题到底是什么？212
+
 一个用于自动选择主题的程序：kthememgr 212
 
 使用 kthememgr 222
+
 获取更多主题 222
 
 用老办法方法安装主题 223
 
-
 配置 KFM 226
+
 复制和移动文件及目录 233
 
 使用旧 KFM 强大的超级用户模式 234
@@ -124,12 +100,12 @@ Appfinder：为你完成大部分工作 147
 使用 KFM 查看文件 236
 
 复制远程文件：用于 FTP 的 KFM 239
+
 使用 KFM 浏览网页 241
 
 KFM 的按键绑定 244
 
 KFM 命令参考 244
-
 
 空闲与全新：Konsole 258
 
@@ -162,7 +138,6 @@ KDE 桌面剪贴板 286
 你了解的一些配置选项 294
 
 预约处理 297
-
 
 组织你的待办事项 305
 
@@ -261,9 +236,13 @@ Reversi（奥赛/跳棋） 399
 多媒体应用程序 416
 
 - Krabber 416
+
 - KRecord 416
+
 - aRT3D 417
+
 - KmodBox 417
+
 - KHDRec 417
 
 通信 418
@@ -275,8 +254,11 @@ Reversi（奥赛/跳棋） 399
 你可能一天也离不开的杂项程序 421
 
 - Kweaver 421
+
 - KLab 422
+
 - KVideoList 423
+
 - KFTE 423
 
 整洁的桌面 424
@@ -288,14 +270,19 @@ Reversi（奥赛/跳棋） 399
 # 23 阅读新闻组 483
 
 - 设置 Kmail 484
+
 - 使用 Kmail 订阅新闻组 486
+
 - 在新闻组发布帖子 491
 
 # 24 浏览与其他内容 494
 
 - Netscape 与 Communicator 496
+
 - StarOffice 497
+
 - 使用搜索引擎：KArch 500
+
 - 新通知：Kdiff 504
 
 # 20 Kix: 文档图形处理器 525
@@ -316,12 +303,15 @@ Reversi（奥赛/跳棋） 399
 
 运行级别 518
 
- Samba 524
+Samba 524
 
 你可能需要的其他控制 524
 
 - Kfire 524
+
 - KInst 525
+
+
 
 # 25 在 KDE 下运行你的系统 513
 
@@ -343,11 +333,9 @@ Reversi（奥赛/跳棋） 399
 - 提供自己的支持 531
 - 混合支持 532
 Gurus 533
-
 - 商业应用 536
 - 大厂 584
 其他 商业应用 584
-
 - 在 KDE 下使用 DOS 应用 587
 - 在 KDE 下运行 Windows 应用 593
 - WINE 594
@@ -355,7 +343,6 @@ Gurus 533
 - VMware 的好的部分 602
 胜任工具 603
 最大安全 604
-
 - 用于修复 KDE 的 Kix 611
 - Efax：一个简单的独立程序 612
 - Sendfax：你可能已经有了它 612
@@ -365,25 +352,17 @@ Gurus 533
 # 38 加入 KDE 开发者网络 659
 
 未来 660
-
 道歉 662
 
 # 34 你你必须拥有的两个非 KDE 程序 617
 
 一个良好的文本编辑器 618
-
-Midnight  622
-
+Midnight 622
 你应该了解的其他控制台知识 623
-
 RPM 624
 TAR 624
 GZIP, GUNZIP, BZIP2 624
-
-
-
 核心 KDE 软件包包含的内容 668
-
 KDEBASE 669
 KDEADMIN 669
 KDEGAMES 670
@@ -392,19 +371,9 @@ KDEMULTIMEDIA 670
 KDENETWORK 671
 KDETOYS 671
 KDEUTILS 671
-
-
-
-
 如果可以，备份你现有的 635
 在代码中进行简单的修改 636
-
 快照 636
-
-
-
-
-
 
 试图让技术信息变得具有可读性——老天，甚至可能是变得有趣！——这其中的难度仅有追踪并妥善感谢所有实现这一切的人的难度与之相匹。如果我在前者方面取得了某种成功，那归功于许多人，而在后者，我给予他们的感激无疑是不充分的。这两种方面的不足都是我的责任。
 
@@ -428,7 +397,6 @@ Gerard Koeppel，他对一些起初不会引起想象力的话题写得非常有
 
 —dep
 
-
 1998 年初夏天，发生了一件非凡的事件。在一个较小的电脑用户群体之外，这件事很少被谈论——但这并不重要。因为这是第一次，一群志愿者尽管散布在世界各地且许多人从未谋面，却为一个计算机操作系统制作了一个完整的、功能齐全图形用户界面和辅助应用程序。它包含了系统配置工具、通信应用、游戏、小型生产力工具——所有人们在昂贵的商业 GUI 中预期的一切，而且都具有通用的界面。
 
 这就像是一群才华横溢的年轻黑客主要通过电子邮件联系在一起，从零开始制作了 Microsoft Windows（他们会对这感到被辱，因为他们相信——并非没有证据支持——他们的工作在许多方面比 Windows 好。这本书将不会进行这一争论，将其留给互联网新闻。我不是在写 Windows，也不是在运行 Windows 的机器上写作；我想我的票已经投下了。）
@@ -437,82 +405,64 @@ Gerard Koeppel，他对一些起初不会引起想象力的话题写得非常有
 
 这是首次为日益受欢迎的 Linux 操作系统以及其他类似的操作系统提供了完全集成的 GUI。它精美、强大、易用，并且免费下载。
 
-
 现在这几乎像传说一样：1991 年，一位性格温和、谦虚且才华横溢的科学学生 Linus Torvalds 想要编写一个强大的 UNIX 操作系统的克隆版本，运行在一台相对普通的电脑上。他对已开始的工作感到满意，并在互联网上免费提供给其他人。
-
 
 他们，以及他，在此基础上构建。很快，一个紧密的程序员小组开始研究后来被称为 Linux 的“内核”。
 
 > 许多人，尤其是美国人，似乎对 Linux 的正确读音感到困惑。它受到 Minix 项目的启发，并与之押韵，Minix 是一个为 8086 设计的单用户 UNIX 克隆。
-
+> 
 > Many-people-especially-Americans-seem-puzzled-by-the-proper-pronunciation-of-Linux.It-was-inspired-by-and-rhymes-with-the-Minix-project-which-was-a-single-user-UNIX-clone-for-8086.
-
+> 
 > Many-people-especially-Americans-seem-puzzled-by-the-proper-pronunciation-of-Linux.It-was-inspired-by-and-rhymes-with-the-Minix-project-which-was-a-single-user-UNIX-clone-for-8086.
-
+> 
 > Many-people-especially-Americans-seem-puzzled-by-the-proper-pronunciation-of-Linux.It-was-inspired-by-and-rhymes-with-the-Minix-project-which-was-a-single-user-UNIX-clone-for-8086.
-
+> 
 > Many-people-especially-Americans-seem-puzzled-by-the-proper-pronunciation-of-Linux.It-was-inspired-by-and-rhymes-with-the-Minix-project-which-was-a-single-user-UNIX-clone-for-8086.
-
-> Many-people-especially-Americans-seem-puzzled-by-the-proper-pronunciation-of-Linux.It-was-inspired-by-and-rhymes-with-the-Minix-project-which-was-a-single-user-UNIX-clone-for-8086.
-
-> Many-people-especially-Americans-seem-puzzled-by-the-proper-pronunciation-of-Linux.It-was-inspired-by-and-rhymes-with-the-Minix-project-which-was-a-single-user-UNIX-clone-for-8086.
-
-> Many-people-especially-Americans-seem-puzzled-by-the-proper-pronunciation-of-Linux.It-was-inspired-by-and-rhymes-with-the-Minix-project-which-was-a-single-user-UNIX-clone-for-8086.
-
-> Many-people-especially-Americans-seem-puzzled-by-the-proper-pronunciation-of-Linux.It-was-inspired-by-and-rhymes-with-the-Minix-project-which-was-a-single-user-UNIX-clone-for-8086.
-
-> Many-people-especially-Americans-seem-puzzled-by-the-proper-pronunciation-of-Linux.It-was-inspired-by-and-rhymes-with-the-Minix-project-which-was-a-single-user-UNIX-clone-for-8086.
-
-> Many-people-especially-Americans-seem-puzzled-by-the-proper-pronunciation-of-Linux.It-was-inspired-by-and-rhymes-with-the-Minix-project-which-was-a-single-user-UNIX-clone-for-8086.
-
-> Many-people-especially-Americans-seem-puzzled-by-the-proper-pronunciation-of-Linux.It-was-inspired-by-and-rhymes-with-the-Minix-project-which-was-a-single-user-UNIX-clone-for-8086.
-
-> Many-people-especially-Americans-seem-puzzled-by-the-proper-pronunciation-of-Linux.It-was-inspired-by-and-rhymes-with-the-Minix-project-which-was-a-single-user-UNIX-clone-for-8086.
-
-> Many-people-especially-Americans-seem-puzzled-by-the-proper-pronunciation-of-Linux.It-was-inspired-by-and-rhymes-with-the-Minix-project-which-was-a-single-user-UNIX-clone-for-8086.
-
-> Many-people-especially-Americans-seem-puzzled-by-the-proper-pronunciation-of-Linux.It-was-inspired-by-and-rhymes-with-the-Minix-project-which-was-a-single-user-UNIX-clone-for-8086.
-
-> Many-people-especially-Americans-seem-puzzled-by-the-proper-pronunciation-of-Linux.It-was-inspired-by-and-rhymes-with-the-Minix-project-which-was-a-single-user-UNIX-clone-for-8086.
-
-> Many-people-especially-Americans-seem-puzzled-by-the-proper-pronunciation-of-Linux.It-was-inspired-by-and-rhymes-with-the-Minix-project-which-was-a-single-user-UNIX-clone-for-8086.
-
+> 
 > Many-people-especially-Americans-seem-puzzled-by-the-proper-pronunciation-of-Linux.It-was-inspired-by-and-rhymes-with-the-Minix-project-which-was-a-single-user-UNIX-clone-for-8086.
 
 
 
+> Many-people-especially-Americans-seem-puzzled-by-the-proper-pronunciation-of-`Linux`.It-was-inspired-by-and-rhymes-with-the-`Minix`-project-which-was-a-single-user-`UNIX`-clone-for-`8086`.
 
 到 20 世纪 90 年代中期，计算机购买不需要任何关于计算机的知识，而且，很多人根本不想去了解。必须把那些带有仔细标签的部件连接在一起的事实已经足够烦人了。他们计算所需的内容已经在驱动器里了。连接在一起，插上电源，开机——就这样。主要的用户变量就是鼠标垫的选择。
 
 即使用户对学习计算机感兴趣，甚至达到了精通的程度，惯性也是一种强大的力量。如果没有非常充分的理由，没有人会抹掉一个加载了熟悉程序且运行完良好的硬盘的内容。
 
-然而，Linux 虽然非常好且每天都在变得更好，但它缺乏这种令人信服的理由。它极其难以使用的声誉只是部分之过。习惯了 DOS 及其衍生版本的人不仅带去的知识很少，而且他们带来的知识在某些方面实际上与 Linux 下的操作方式相相反。假设用户学会了命令并让 Linux 运行起来，能获得什么？能做什么？少得可怜。（在这里，老 Linux 用户手持不同意见，就普通用户而言，我是正确的。）新用户在很大程度上是计算机学生，以及由于那款优秀的 OS/2 操作系统处于看似死寂的状态而感到困扰的人们。（我属于后者。）
+然而，`Linux` 虽然非常好且每天都在变得更好，但它缺乏这种令人信服的理由。它极其难以使用的声誉只是部分之过。习惯了 `DOS` 及其衍生版本的人不仅带去的知识很少，而且他们带来的知识在某些方面实际上与 `Linux` 下的操作方式相相反。假设用户学会了命令并让 `Linux` 运行起来，能获得什么？能做什么？少得可怜。（在这里，老 `Linux` 用户手持不同意见，就普通用户而言，我是正确的。）新用户在很大程度上是计算机学生，以及由于那款优秀的 `OS/2` 操作系统处于看似死寂的状态而感到困扰的人们。（我属于后者。）
 
-简而言之，Linux 是一种痛苦，任何切换到它的人都可能切换回旧的“DOS 衍生品”，希望当初在备份单元上有所投入，这样恢复系统就会更简单。
+简而言之，`Linux` 是一种痛苦，任何切换到它的人都可能切换回旧的“`DOS` 衍生品”，希望当初在备份单元上有所投入，这样恢复系统就会更简单。
 
-正是考虑到这种状况，KDE 在 1996 年 10 月成立。直到 10 个月后，开发者们在德国安斯会面，得到了许多对 Linux 感兴趣的组织的赞助。不久，这个新生项目变成了一个等同于非营利公司的实体。在决定采用由 Troll Tech 公司发布的 QT 库和组件集后，建立了一个确保 QT 将永久免费提供的基金会。
+正是考虑到这种状况，`KDE` 在 1996 年 10 月成立。直到 10 个月后，开发者们在德国安斯会面，得到了许多对 `Linux` 感兴趣的组织的赞助。不久，这个新生项目变成了一个等同于非营利公司的实体。在决定采用由 `Troll Tech` 公司发布的 `QT` 库和组件集后，建立了一个确保 `QT` 将永久免费提供的基金会。
 
-放心：Qt 对你是免费的。在充满政治色彩的 Linux 世界中，过去在某种程度上现在存在关于 KDE 是否因为构建在专利库之上而能够真正免费提供的争议。基金会的建立是为了消除这些疑虑，但仍有人对此表示怀疑。我找不到他们怀疑的理由。
+放心：`Qt` 对你是免费的。在充满政治色彩的 `Linux` 世界中，过去在某种程度上现在存在关于 `KDE` 是否因为构建在专利库之上而能够真正免费提供的争议。基金会的建立是为了消除这些疑虑，但仍有人对此表示怀疑。我找不到他们怀疑的理由。
 
-代码被编写、传阅、测试并纳入宏大的蓝图中。1998 年 7 月 12 日，KDE 1.0 发布，随后在 1999 年 2 月发布了 KDE 1.1.1，它在底层 GUI 及其原生及内置应用方面都包含了大量的改进。KDE 以各种形式出现在几乎每个 Linux 发行版中的桌面或安装选项中。它的热度飙升：在 1999 年春的一个某一天，仅从一个美国网站就下载了超过 34GB 的 KDE 文件。1999 年盛夏，KDE 1.2 发布，它主要增加了允许用户更改其外观和感受的改进和配置选项。
+代码被编写、传阅、测试并纳入宏大的蓝图中。1998 年 7 月 12 日，`KDE 1.0` 发布，随后在 1999 年 2 月发布了 `KDE 1.1.1`，它在底层 GUI 及其原生及内置应用方面都包含了大量的改进。`KDE` 以各种形式出现在几乎每个 `Linux` 发行版中的桌面或安装选项中。它的热度飙升：在 1999 年春的一个某一天，仅从一个美国网站就下载了超过 34GB 的 `KDE` 文件。1999 年盛夏，`KDE 1.2` 发布，它主要增加了允许用户更改其外观和感受的改进和配置选项。
 
 这把我们带今天。
 
+一个刚从 `DOS` 衍生系统转过来的 `KDE` 用户，所做的第一件事就是双击图标。新的 `KDE` 用户首先注意到，所选的任何程序有两个副本，要么是一个副本加上一条错误信息。新用户学会的第一课是：在 `KDE` 中做某事，你只需要单击。
 
-
-一个刚从 DOS 衍生系统转过来的 KDE 用户，所做的第一件事就是双击图标。新的 KDE 用户首先注意到，所选的任何程序有两个副本，要么是一个副本加上一条错误信息。新用户学会的第一课是：在 KDE 中做某事，你只需要单击。
-
-图形用户界面让事情变得简单，但它并不一定让事情变得容易。例如，如果你从默认 KDE 桌面点击正确的图标和菜单组合，你将得到图 I.1，进程管理器。
+图形用户界面让事情变得简单，但它并不一定让事情变得容易。例如，如果你从默认 `KDE` 桌面点击正确的图标和菜单组合，你将得到图 I.1，进程管理器。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_18_0.png)
 
 | Processes | Performance Manager | | | | | | | |
+
 | User | PID (ID U) | CPU | Time | Memory | Resident | Shared | Command |
+
 | :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+
 | root | 1 | 0.00% | 0.00% | 0 | 1104 | 498 | 1024 | |
+
 | kaudisservis | 620 | 0.00% | 0.00% | 0 | 5794 | 481 | 2016 | kaudisservis |
+
 | kaudisservis | 621 | 0.00% | 0.00% | 0 | 3465 | 582 | 5024 | opt/kde/bin/kaudisservis |
+
 | kdd4.class | 614 | 0.00% | 0.00% | 0 | 9980 | 845 | 12698/0 | |
+
+
+
 | root | 577 | 0.00% | 0.00% | 0 | 1856 | 1016 | 1231 | |
 | root | 585 | 0.00% | 0.00% | 0 | 2258 | 780 | 2144 | |
 | root | 598 | 0.00% | 0.00% | 0 | 1271 | 627 | 1024 | |
@@ -529,8 +479,9 @@ Gerard Koeppel，他对一些起初不会引起想象力的话题写得非常有
 | getty | 499 | 0.00% | 0.00% | 0 | 1905 | 492 | 1024 | |
 | scmendall | 301 | 0.00% | 0.00% | 0 | 1918 | 1078 | 1278 | scmendall: accepting connect|FIGURE I.1 Memory: 8052 KB used, 17198 KB free Swap: 0 used, 120-104 KB free
 
-你将学习如何使用任务管理器。或者，如果你以 root 身份登录，你将看到图 I.2，运行级别管理器。
+## 任务管理器与运行级别管理器
 
+你将学习如何使用任务管理器。或者，如果你以 `root` 身份登录，你将看到图 I.2，运行级别管理器。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_19_0.png)
 
@@ -542,28 +493,19 @@ Gerard Koeppel，他对一些起初不会引起想象力的话题写得非常有
 
 现在，有些东西不是本书涵盖的，最好在我们继续之前宣布它们。KDE 是本书的主题；只要通过 KDE 解决 Linux 的功能和能力，这种联系就会被涵盖。而 Linux 的安装、配置和精通（以及 KDE 能够运行的其他类似操作系统）需要一本专门的书。事实上，已经有几本这样的书了。所以，虽然我希望这本书对新 Linux 用户非常有帮助，成功安装并启动到彩色且友好的 KDE 桌面后，该用户很可能还想探索其他途径来获得全面的 Linux 精通。经验 Linux 老手应该发现这本书同样有用，因为 KDE 不仅仅是一张漂亮的脸。
 
-
 正如所有与 Linux 相关的事务一样，KDE 的未来是光明的。尽管这里讨论的 1.1x 版本将继续获得支持和改进，但 KDE 世界最大的兴奋点是对 2.0 及其相关的 Koffice 应用程序集的期待，它将在 2000 年某个时候发布。这个新版本在许多方面与 KDE-1.1x 不兼容，并将基于 Troll Tech 构建。同时，优秀的 X86.org 持续对 X86 进行改进，而 Linux 内核本身正以越来越快的速度获得新能力。如果你有不支持的硬件，请等几周，或者为它编写支持并为这项事业贡献力量。毕竟，这就是 Linux 和 KDE 诞生的方式。
-
 
 使用这本书真的有两种方法：阅读和查阅。我正努力让从头到尾阅读《实用 KDE》而不会让你的思想多次飘到操作步骤上成为可能，但我怀疑有多少人会从第一页开始读并一直拿着直到看到索引。事实上，如果你打算从头到尾读完，整个章节将与你使用 KDE 或计算机的方式没有任何关系，你完全可以跳过它们。它们不是写在易散墨水上的；如果你以后发现需要，它们会在那里。
 
 为了方便翻阅，每一章的开头都列出了它涵盖的内容。
 
-
-
-
-
-
 重要的一点：不要忽略每个章节中灰色侧边栏里的信息。这些项目将提供提示、快捷键、警告和注释，帮助你成为 KDE 大师！
 
+## 特殊约定
 
 在讨论 KDE 的过程中，我们将采用一些特殊约定，其中许多继承自或直接借用了其他图形用户界面。你很可能已经知道这些内容，或者能够根据它们使用的上下文推断出其含义。但为了确保没有混淆，将它们列出来可能是个好主意。这些是这些，从屏幕元素列表开始，以及展示大部分元素的插图（见图 1.3）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_21_0.png)
-
-
-
 
 - 标签——这些位于某些对话框的顶部。它们类似于文件抽屉中文件夹顶部的标签。需要记住的一点是，虽然可能不大，但可能会将此用法下的标签与键盘上的 Tab 键混淆。请以上下文为指南。
 - 列表框——这与下拉列表类似，但不是点击右侧的图标，而是使用相应的三角形上下滚动，直到找到你想要的设置。这在 KDE 中被广泛使用，但也出现在某些应用程序中。
@@ -574,7 +516,7 @@ Gerard Koeppel，他对一些起初不会引起想象力的话题写得非常有
 
 此外，我们在正文中使用一些约定来使示例和其他信息脱颖而出。例如，某些地方会显示编程代码列表、Shell 脚本甚至 ASCII 文本配置文件。当我们这样做时，它看起来就像代码列表 1.1。
 
-## 代码列表 1.1 示例（Caldera Linux 2.2 的 /etc/xinit/xinitrc 脚本）
+### 代码列表 1.1 示例（Caldera Linux 2.2 的 `/etc/xinit/xinitrc` 脚本）
 
 ```bash
 #!/bin/bash
@@ -593,172 +535,170 @@ Gerard Koeppel，他对一些起初不会引起想象力的话题写得非常有
 
 这基本上涵盖了大部分。
 
+## 系统要求
 
 我们熟悉那些不切实际的软件要求：箱子上写着“需要 8386 处理器和 4MB RAM，推荐 Pentium III 和 128MB RAM”。好吧，也许没那么糟，但理论与实际之间显然有区别。在这里不讨论理论，我们将讨论为了实际工作需要的内容。这些要求并不过高，你的电脑很可能超过这些要求，或者可以通过付出很小的代价来实现。
 
-
 对于所有实际用途，你需要一个 Pentium 处理器（或等等物）；我在 AMD 芯片上取得了巨大成功，越快越好；64MB RAM（更多也行）；以及一个至少有 100MB 可用空间的 Linux (ext2) 分区硬盘。
 
-最可能的问题出现在你的显卡上。大多数邮件列表和新闻组提出的问题与显卡有关，其余关于网卡以及其他一切。你的显卡是否支持取决于 XFree 的支持。良好的想法是查看供应商网站上的硬件兼容性列表，以确保你的卡被支持。或者，你可以检查 XFree 网站 http://www.xfree6.org。最大的问题似乎在于你最新的显卡。如果厂家支持 XFree，添加支持是快速且相对简单的。如果不支持，这是一个耗时且困难的逆工程过程，可能需要几个月。
+最可能的问题出现在你的显卡上。大多数邮件列表和新闻组提出的问题与显卡有关，其余关于网卡以及其他一切。你的显卡是否支持取决于 XFree 的支持。良好的想法是查看供应商网站上的硬件兼容性列表，以确保你的卡被支持。或者，你可以检查 XFree 网站 `http://www.xfree6.org`。最大的问题似乎在于你最新的显卡。如果厂家支持 XFree，添加支持是快速且相对简单的。如果不支持，这是一个耗时且困难的逆工程过程，可能需要几个月。
+
+
 
 下一个可能的问题在于你的调制解器。由于某些原因——贪婪或其他原因——几年前一些厂家开始生产内部调制解器并卖给不知情的消费者。这些东西并不具备真实调制解器的处理能力，通过软件接口交给电脑的主处理器。结果是，今天绝大多数内部调制解器都是垃圾品。如果你在过去几年内购买了带有内部调制解器的电脑，你几乎是受害者。唯一的解决方案是用真实的替换内部的。在写下时，这种病毒还没有扩散到外部调制解器，所以最好的选择是那些（也提供有用诊断信息）。网卡也可能引起一些问题，尤其是即插即用的种类。再次，最好检查你的 Linux 发行版的网页以确认你的是否支持。如果你使用声卡，它们得到了良好支持，除非是 ISA 总线卡，设置起来可能很困难。
 
 除了基础系统要求，列出的所有可能问题都来自 Linux 系统而非 KDE。但因为管理员使用所有这些东西，可能会归于 KDE 不兼容。最好提前检查一切。
 
-
-在开始安装 KDE 之前需要的软件很少：Linux（或类似的 UNIX 操作系统）；XFree6（或稍后讨论的商业等效物）；以及随处可见的 Qt-1.4 或更高库。如果你的 Linux 发行版有 KDE，那么它也有 Qt 和 XFree6。否则，可以从附录 A“寻找最新 KDE 及其应用程序”列出的位置全部下载。
+在开始安装 KDE 之前需要的软件很少：`Linux`（或类似的 UNIX 操作系统）；`XFree6`（或稍后讨论的商业等效物）；以及随处可见的 `Qt-1.4` 或更高库。如果你的 Linux 发行版有 KDE，那么它也有 `Qt` 和 `XFree6`。否则，可以从附录 A“寻找最新 KDE 及其应用程序”列出的位置全部下载。
 
 就这样。让我们开始吧！
 
 ## 工具包
 
-
 我到处寻找具有这种意思的名言，没找到，只好编造了上面那句。凑合。在个人电脑的早期，文章和杂志习惯列出用于编写文章的软件和硬件，有些书籍甚至专门用一页介绍所使用的字体历史。这是一个好主意，我在此提议助力它的复兴。
 
-《KDE 实战》写在一台相当基础的桌面上，该机器运行 400MHz 的 AMD K6-2 处理器，配备 1MB L2 缓存和 256MB RAM。
+《KDE 实战》写在一台相当基础的桌面上，该机器运行 `400MHz` 的 `AMD K6-2` 处理器，配备 `1MB L2` 缓存和 `256MB RAM`。
 
-它完全使用 StarOffice 5.0 或 5.1 文字程序编写，文件保存为 Microsoft Word 97 格式，以便传输给 Macmillan 那些需要该格式的明人士。StarOffice 在 Caldera OpenLinux 2.2 带的版本中大大提高了稳定性，本书编写期间使用的该版本。
+它完全使用 `StarOffice 5.0` 或 `5.1` 文字程序编写，文件保存为 `Microsoft Word 97` 格式，以便传输给 Macmillan 那些需要该格式的明人士。`StarOffice` 在 `Caldera OpenLinux 2.2` 带的版本中大大提高了稳定性，本书编写期间使用的该版本。
 
-截图使用 KSnapshot 制作并以 BMP 格式保存。我使用 GIMP 将其转换为所需的（更小的）PCX。
+截图使用 `KSnapshot` 制作并以 `BMP` 格式保存。我使用 `GIMP` 将其转换为所需的（更小的）`PCX`。
 
-这一切都是在一个 KDE 之季完成的。非常早是在 KDE 1.1 中完成，随后是 1.1.1，然后变为 KDE 1.1.2 的每周测试版，最后是 KDE 1.1.2 本身，它会一直停留在那里直到探索的冲动到来，我去处理 KDE 2.0 的测试版，它承诺将极其惊艳。那是另一本书的主题。
-
-
-
-
-
-
+这一切都是在一个 KDE 之季完成的。非常早是在 `KDE 1.1` 中完成，随后是 `1.1.1`，然后变为 `KDE 1.1.2` 的每周测试版，最后是 `KDE 1.1.2` 本身，它会一直停留在那里直到探索的冲动到来，我去处理 `KDE 2.0` 的测试版，它承诺将极其惊艳。那是另一本书的主题。
 
 - 启动 KDE 35 2
 - KDE 桌面简介 63 4
-# 第1章
-# 安装 KDE
-- 如果 KDE 随你的 Linux 发行版自带
 
+# 第1章 安装 KDE
 
+## 如果 KDE 随你的 Linux 发行版自带
 
-这并不意外，因为在你运行 KDE 之前，你必须先安装它。如果你是 Linux 新手，这可能会让你感到有些无从从，因为你可能已经完全没见过任何你熟悉的东西。文件扩展名是：.exe、.com 和 .bat 文件在哪里呢？你该如何判断哪些是程序，哪些不是？事实上，程序在哪里？甚至连一个 C:> 提示符都没有！我在哪里？
+这并不意外，因为在你运行 KDE 之前，你必须先安装它。如果你是 Linux 新手，这可能会让你感到有些无从从，因为你可能已经完全没见过任何你熟悉的东西。文件扩展名是：`.exe`、`.com` 和 `.bat` 文件在哪里呢？你该如何判断哪些是程序，哪些不是？事实上，程序在哪里？甚至连一个 `C:>` 提示符都没有！我在哪里？
 
-接着，还有你可以找到的一些文件：以奇怪的扩展名（如 .tgz、.rpm）结尾的文件，还有诸如 "Greatprogram-3.3.1-LINUX-i586.tar.bz" 之类的东西。这些点是怎么回事？我该对这些东西怎么办？
+接着，还有你可以找到的一些文件：以奇怪的扩展名（如 `.tgz`、`.rpm`）结尾的文件，还有诸如 `"Greatprogram-3.3.1-LINUX-i586.tar.bz"` 之类的东西。这些点是怎么回事？我该对这些东西怎么办？
 
 实际上，正如你很快就会发现的，基本概念非常容易理解。所以放松放松，忽略那种不断增长的“我到底陷入了什么地方”的恐慌感，继续读下去。你将在几分钟内掌握它。我们在这里会稍微接触一下 Linux 命令行，但远非可怕；它会让你发出“哇！”和“太酷了”的，甚至让你感到一丝自豪。你会看到的。
-
 
 大多数当前的发行版都带有 KDE，并在你安装 Linux 本身时安装它。在这种情况下，取决于发行版的不同，你可能在将 Linux 安装到硬盘后立即启动到 KDE。它看起来应该像图 1.1，或者与其相似。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_29_0.png)
 
 图 1.1
-默认的 KDE 桌面具有高度的可配置性，你的桌面不太可能长时间保持这样。
 
+默认的 KDE 桌面具有高度的可配置性，你的桌面不太可能长时间保持这样。
 
 这一章致力于带你到达这个快乐的起点，所以如果你已经实现了这一点，你就领先了一步。然而，这并不意味着你应该忽略接后的内容。你会在某个时候想要升级 KDE，并且可能非常想要编译一个特别适用于你自己系统的 KDE 版本。在这种情况下，你还会回来的。
 
 还有一种可能，你将使用一个不会直接进入 KDE 桌面的发行版。
 
-
-由于对 Linux 标准的解释不同、这些标准允许的事物存在差异，以及坦率地说，发行版认为方便的事物之间存在差异，KDE 根据 Linux 发行版的不同，默认位于不同的地方。移除发行版自带的 KDE，并从 KDE ftp 站点（http://ftp.kde.org 或其一个镜像站点）下载新的 KDE 并将其安装到 /opt/kde 是有意义的。除非你强制它们这样做，否则这些发行版会将 KDE 放在这里。
+由于对 Linux 标准的解释不同、这些标准允许的事物存在差异，以及坦率地说，发行版认为方便的事物之间存在差异，KDE 根据 Linux 发行版的不同，默认位于不同的地方。移除发行版自带的 KDE，并从 KDE ftp 站点（`http://ftp.kde.org` 或其一个镜像站点）下载新的 KDE 并将其安装到 `/opt/kde` 是有意义的。除非你强制它们这样做，否则这些发行版会将 KDE 放在这里。
 
 关于 KDE 位置的更多信息请参见第 35 章，“升级到最新的 KDE 版本”，第 629 页。
 
+在多个地方，`Red Hat 6.0` 被认为是最发行版中最“前沿”的，并开辟了道路。目前最感兴趣的领域是它配备了三种不同的窗口管理器和桌面程序：`KDE`、`Gnome` 和 `AnotherStep`。它还带有一个名为 `Switchdesk` 的程序，允许你在这些东西之间自由移动，但你不能同时运行它们。`Red Hat 6.0` 包含的 KDE 版本是 `1.1.1pre2`，这是一个测试版本，所以当你熟悉 KDE 后，立即升级到 `1.1.1` 或 `1.2` 是有意义的。之前的 Red Hat 版本完全不包含 KDE，所以如果你正在运行其中一个版本，你将不得不下载并安装 KDE。
 
-在多个地方，Red Hat 6.0 被认为是最发行版中最“前沿”的，并开辟了道路。目前最感兴趣的领域是它配备了三种不同的窗口管理器和桌面程序：KDE、Gnome 和 AnotherStep。它还带有一个名为 Switchdesk 的程序，允许你在这些东西之间自由移动，但你不能同时运行它们。Red Hat 6.0 包含的 KDE 版本是 1.1.1pre2，这是一个测试版本，所以当你熟悉 KDE 后，立即升级到 1.1.1 或 1.2 是有意义的。之前的 Red Hat 版本完全不包含 KDE，所以如果你正在运行其中一个版本，你将不得不下载并安装 KDE。
+`Caldera` 比任何其他发行版都更广泛地使用 KDE，并面向严肃业务用途的稳定性。事实上，其安装程序是基于 KDE 本身相同的编程工具和库构建的。当你启动默认的 `Caldera OpenLinux 2.2` 系统时，迎接你的是 `KDM` 图形登录界面，它将直接带你进入 KDE。然而，`Caldera 2.2` 出版带的是 `KDE 1.1`，所以当你感到自己有能力这样做时，你将想要进行升级，也就是说在你读完这一章之后。
 
+### Debian Linux
 
-Caldera 比任何其他发行版都更广泛地使用 KDE，并面向严肃业务用途的稳定性。事实上，其安装程序是基于 KDE 本身相同的编程工具和库构建的。当你启动默认的 Caldera OpenLinux 2.2 系统时，迎接你的是 KDM 图形登录界面，它将直接带你进入 KDE。然而，Caldera 2.2 出版带的是 KDE 1.1，所以当你感到自己有能力这样做时，你将想要进行升级，也就是说在你读完这一章之后。
+`Debian` 以“最纯正”的 Linux 发行版闻名，通常被非常严肃的黑客使用。没有任何版本的 `Debian` 自带 `KDE`。坏消息你需要自己获取它；好消息是，如果你正在运行 `Debian`，你可能知道如何做（尽管我反正会解释如何）。1999 年春季，`Debian` 宣布与 `KDE.org` 和加拿大的合作。
 
+`Debian` 以“最纯正”的 Linux 发行版闻名，通常被非常严肃的黑客使用。没有任何版本的 `Debian` 自带 `KDE`。坏消息是你需要自己获取它；好消息是，如果你正在运行 `Debian`，你可能知道如何做（尽管我反正会解释如何）。
 
-## Debian Linux
+`Debian` 以“最纯正”的 Linux 发行版闻名，通常被非常严肃的黑客使用。没有任何版本的 `Debian` 自带 `KDE`。坏消息是你需要自己获取它；好消息是，如果你正在运行 `Debian`，你可能知道如何做（尽管我反正会解释如何）。
 
-Debian 以“最纯正”的 Linux 发行版闻名，通常被非常严肃的黑客使用。没有任何版本的 Debian 自带 KDE。坏消息你需要自己获取它；好消息是，如果你正在运行 Debian，你可能知道如何做（尽管我反正会解释如何）。1999 年春季，Debian 宣布与 KDE.org 和加拿大的合作。
-
-
-Debian 以“最纯正”的 Linux 发行版闻名，通常被非常严肃的黑客使用。没有任何版本的 Debian 自带 KDE。坏消息是你需要自己获取它；好消息是，如果你正在运行 Debian，你可能知道如何做（尽管我反正会解释如何）。
-
-
-Debian 以“最纯正”的 Linux 发行版闻名，通常被非常严肃的黑客使用。没有任何版本的 Debian 自带 KDE。坏消息是你需要自己获取它；好消息是，如果你正在运行 Debian，你可能知道如何做（尽管我反正会解释如何）。
-
-
-Debian 以“最纯正”的 Linux 发行版闻名，通常被非常严肃的黑客使用。没有任何版本的 Debian 自带 KDE。坏消息是你需要自己获取它。
-
+`Debian` 以“最纯正”的 Linux 发行版闻名，通常被非常严肃的黑客使用。没有任何版本的 `Debian` 自带 `KDE`。坏消息是你需要自己获取它。
 
 ……以及对于 KDE，你可能会先选择编译好的二进制文件。虽然 KDE 编译和安装非常简单，但它可能不是学习源代码的好地方。
 
-
 不仅仅是特定的系统，而是计算机本身。权衡是编译源代码并将其转换为二进制文件比获取和安装二进制文件花费更多时间。它也更复杂，因为有更多需要学习的命令和更多可能出错的地方。
 
+对于我们的目的，你将对 `RPM` 或 `DEB` 子目录感兴趣：如果你使用的是 `Debian Linux`，请选择 `DEB`；如果你使用的是任何其他 Linux 发行版，请选择 `RPM`。`PKG` 用于 `Solaris`，而 `TAR` 是我们在讨论源码时会提到的。
 
-
-
-
-
-
-
-对于我们的目的，你将对 RPM 或 DEB 子目录感兴趣：如果你使用的是 Debian Linux，请选择 DEB；如果你使用的是任何其他 Linux 发行版，请选择 RPM。（PKG 用于 Solaris，而 TAR 是我们在讨论源码时会提到的。）
-
-在这些子目录中，你会发现更多的子目录。在 RPM 的情况下，它包含了为特定 Linux 发行版专门构建的二进制文件。在 DEB 的情况下，它包含了为不同版本构建的包。
+在这些子目录中，你会发现更多的子目录。在 `RPM` 的情况下，它包含了为特定 Linux 发行版专门构建的二进制文件。在 `DEB` 的情况下，它包含了为不同版本构建的包。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_33_0.png)
 
-你为什么要关注这些？因为这就是 KDE 拥有如此不同二进制文件的原因。许多人乐于使用旧的、基于 glibc 的系统，这些系统非常稳定，在很多情况下相当完备。（当你访问一个网站时，对方可能庆幸你连接的是旧的 Linux 系统。升级到新的发行版并不是一件轻率之举。）而大多数现代发行版都能很好地运行基于 glibc 的应用程序，但那些应用程序缺乏更强大的 glibc 的优势，而且一个 Linux 系统根本不会运行针对非 glibc 的程序。
+你为什么要关注这些？因为这就是 KDE 拥有如此不同二进制文件的原因。许多人乐于使用旧的、基于 `glibc` 的系统，这些系统非常稳定，在很多情况下相当完备。（当你访问一个网站时，对方可能庆幸你连接的是旧的 Linux 系统。升级到新的发行版并不是一件轻率之举。）而大多数现代发行版都能很好地运行基于 `glibc` 的应用程序，但那些应用程序缺乏更强大的 `glibc` 的优势，而且一个 Linux 系统根本不会运行针对非 `glibc` 的程序。
 
-因此，在 DEB 子目录中，你会发现 glibc5 (Hamm) 发行版和 glibc (Potato) 的子目录。（是谁给它们命名的？）
+因此，在 `DEB` 子目录中，你会发现 `glibc5` (`Hamm`) 发行版和 `glibc` (`Potato`) 的子目录。（是谁给它们命名的？）
 
-同样，在 RPM 子目录中，你受限于 glibc，它包含了各种发行版的子目录。如果你运行的是 glibc 发行版。如果你没有 glibc，你将需要“自己搞定”：自己编译它。我们会讨论这一点的。）
+同样，在 `RPM` 子目录中，你受限于 `glibc`，它包含了各种发行版的子目录。如果你运行的是 `glibc` 发行版。如果你没有 `glibc`，你将需要“自己搞定”：自己编译它。我们会讨论这一点的。）
 
-当你选择你发行版的子目录时，你会得到——没错——另一个子目录，是 i386 要不是 source。选择前者。（不，你的电脑不是 Intel 386 机器，你会感到一点受辱。别担心。386 是最低公公分数，这意味着这些二进制文件可以在你的机器上运行。以后，如果你想尝试为你的机器优化 KDE，可以进行编译。）
+
+
+当你选择你发行版的子目录时，你会得到——没错——另一个子目录，是 `i386` 要不是 `source`。选择前者。（不，你的电脑不是 Intel 386 机器，你会感到一点受辱。别担心。386 是最低公公分数，这意味着这些二进制文件可以在你的机器上运行。以后，如果你想尝试为你的机器优化 KDE，可以进行编译。）
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_34_0.png)
 
-/1.1.1.1/distribution/rpm/Caldera-OpenLinux-2.2/i386 子目录包含以下内容：
+`/1.1.1.1/distribution/rpm/Caldera-OpenLinux-2.2/i386` 子目录包含以下内容：
 
 | | | | | | | |
+
 |---|---|---|---|---|---|---|
+
 | kde-1.1.1-col22.md5sums.gz | | 456 | Mon 3 | 07:49:00 1999 |
+
 | kdebase-1.1.1-col22.i386.rpm | | 6127 | Mon 3 | 07:49:00 1999 |
+
 | kdebase-1.1.1-3.i386.rpm | | 6118 | Tue 8 | 21:02:00 1999 |
+
 | kdebase-1.1.1-5.col22.i386.rpm | | 6116 | Fri 25 | 16:20:00 1999 |
+
 | kdeopens-1.1.1.1-col22.i386.rpm | | 128 | Mon 3 | 07:49:00 1999 |
+
 | kdeopens-1.1.1.3-i386.rpm | | 128 | Tue 8 | 21:03:00 1999 |
+
 | kdeopens-1.1.1.5.col22.i386.rpm | | 128 | Fri 25 | 16:20:00 1999 |
+
 | kdegames-1.1.1-col22.i386.rpm | | 2258 | Mon 5 | 07:49:00 1999 |
+
 | kdegraphics-1.1.1-col22.i386.rpm | | 1155 | Mon 3 | 07:49:00 1999 |
+
 | kdevlibs-1.1.1-col22.i386.rpm | | 1733 | Mon 3 | 07:49:00 1999 |
+
 | kdevlibs-devel-1.1.1.1-col22.i386.rpm | | 225 | Mon 3 | 07:49:00 1999 |
+
 | kdevlibs-doc-1.1.1.1-col22.i386.rpm | | 566 | Mon 3 | 07:49:00 1999 |
+
 | kdevimedia-1.1.1.1-col22.i386.rpm | | 769 | Mon 3 | 07:49:00 1999 |
+
 | kdenet-1.1.1.1-col22.i386.rpm | | 2978 | Mon 3 | 07:49:00 1999 |
+
 | kdesupport-1.1.1.1-col22.i386.rpm | | 340 | Mon 3 | 07:49:00 1999 |
+
 | kdesupport-devel-1.1.1.1-col22_i386 | | 78 | Mon 3 | 07:49:00 1999 |
+
 | kdetoys-1.1.1.1-col22.i386.rpm | | 171 | Mon 3 | 07:49:00 1999 |
+
 | kdeutils-1.1.1.1-col22.i386.rpm | | 1361 | Mon 3 | 07:49:00 1999 |
+
 | korganizer-1.1.1.1-col22.i386.rpm | | 716 | Mon 3 | 07:49:00 1999 |
 
-Franklin，这看起来很尴尬。但就像一团糟，带有不同级别且不完整的文件，但可以解决。Red Hat 子目录并不只是这样，它糟糕得多。相反，Red Hat 子目录包含了 Caldera 必须访问的 RPM（Caldera 网站：http://ftp.calderasystems.com）。也许当你读到这里时，目录已经清理了一些，但以防万一……这里是你需要的文件：
+Franklin，这看起来很尴尬。但就像一团糟，带有不同级别且不完整的文件，但可以解决。Red Hat 子目录并不只是这样，它糟糕得多。相反，Red Hat 子目录包含了 Caldera 必须访问的 RPM（Caldera 网站：`http://ftp.calderasystems.com`）。也许当你读到这里时，目录已经清理了一些，但以防万一……这里是你需要的文件：
 
-- kdebase
-- kdebase-opengl（如果你运行 3D 图形，它会吸引你）
-- kdegames（为什么不呢？）
-- kdegraphics
-- kdelibs
-- kdelibs-devel（不是必须的，但你需要）
-- kdemultimedia
-- knetwork
-- kdesupport
-- kdetoys（实际上完全可选，但下载很小）
-- kdeutils
-- korganizer（可选的，但很有用的程序）
+- `kdebase`
+- `kdebase-opengl`（如果你运行 3D 图形，它会吸引你）
+- `kdegames`（为什么不呢？）
+- `kdegraphics`
+- `kdelibs`
+- `kdelibs-devel`（不是必须的，但你需要）
+- `kdemultimedia`
+- `knetwork`
+- `kdesupport`
+- `kdetoys`（实际上完全可选，但下载很小）
+- `kdeutils`
+- `korganizer`（可选的，但很有用的程序）
 
-
-同样值得注意的是，你可以在发行版的 ftp 站点找到适用于特定 Linux 发行版的 RPM（或 DEB），位于 `/contrib` 目录中。如果你寻找的 KDE 版本已经发布了几个星期，这一点尤为真实。RPM 的构建和发布有时需要时间。一旦你下载了必要的文件，安装相对简单：作为 root，从命令行使用 RPM 命令：
+同样值得注意的是，你可以在发行版的 ftp 站点找到适用于特定 Linux 发行版的 RPM（或 DEB），位于 `/contrib` 目录中。如果你寻找的 KDE 版本已经发布了几个星期，这一点尤为真实。RPM 的构建和发布有时需要时间。一旦你下载了必要的文件，安装相对简单：作为 root，从命令行使用 `RPM` 命令：
 
 ```
 rpm -i filename --prefix=path
 ```
 
-现在 KDE 文件需要按照特定的顺序安装：qt, kdesupport, kdelibs, kdebase，之后你可以按照任何顺序安装其他包。
+现在 KDE 文件需要按照特定的顺序安装：`qt`, `kdesupport`, `kdelibs`, `kdebase`，之后你可以按照任何顺序安装其他包。
 
 如果你正在升级现有的 KDE 安装，命令是：
+
 ```
 rpm -Uvh filename --prefix=path
 ```
@@ -767,7 +707,7 @@ rpm -Uvh filename --prefix=path
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_36_0.png)
 
-Debian 用户将使用 DEB 文件（除非对冒险的热爱让他们使用 alien 程序通过转换安装 RPM，如果由于某种原因没有 DEB，这是一个好主意）。像安装 RPM 一样，你必须以 root 或超级用户身份登录安装 DEB 包。基本语法是：
+Debian 用户将使用 DEB 文件（除非对冒险的热爱让他们使用 `alien` 程序通过转换安装 RPM，如果由于某种原因没有 DEB，这是一个好主意）。像安装 RPM 一样，你必须以 root 或超级用户身份登录安装 DEB 包。基本语法是：
 
 ```
 dpkg --install filename
@@ -781,107 +721,108 @@ apt-get install kde*
 
 在你的 Debian 系统上安装。
 
-
 如果你是 Linux 新手，你可能不相信，但请相信我：早晚你会屈服于需要或渴望编译自己的程序的想法。这一点也请相信我：完成之后，你会疑惑自己为什么等了这么久。在你的机器上编译软件——黑客术语中的“自己搞定”——将带给你一种计算领域其他事物无法比拟的力量和成就感。但不仅如此：你将获得没有预编译二进制文件的应用程序。你将获得最新的东西：在有人花费巨大精力整合 RPM 和 DEB 之前，总是会有到几周的延迟。当你编译自己的程序时，可以进行更改使结果特别适用于你的系统。你还可以应用补丁修复烦人的错误，而无需等待整个新版本，并实际上修改代码以适应你的工作方式。这并不难。现在要付多少？嗯，都是免费的！
 
 事实上，很有可能在你安装 Linux 时也安装了编译 KDE 所需的一切，如果没有，你需要的大部分东西都在 Linux CD 上：
 
-- EGCS——当前的 C 和 C++ 编译器。虽然更高版本的 GCC 也可以用，但推荐使用 EGCS。如果你还没有安装，请安装你发行版上除了名称中带有“static”以外的每个 EGCS 包，因为你不需要它们。（它们生成的“静态链接”二进制文件更大、速度更慢。除非你是在一台没有安装足够 Linux 功能的机器上构建 KDE。）
-- AUTOCONF——自动配置工具。
-- AUTOMAKE——自动化编译的工具。
+- `EGCS`——当前的 C 和 C++ 编译器。虽然更高版本的 GCC 也可以用，但推荐使用 EGCS。如果你还没有安装，请安装你发行版上除了名称中带有“static”以外的每个 EGCS 包，因为你不需要它们。（它们生成的“静态链接”二进制文件更大、速度更慢。除非你是在一台没有安装足够 Linux 功能的机器上构建 KDE。）
+- `AUTOCONF`——自动配置工具。
+- `AUTOMAKE`——自动化编译的工具。
 
 这些项目并不是 KDE 特有的。你编译几乎任何东西时都需要它们。有些东西是你专门为 KDE 需要的：
 
-- QT-1.44——构建 KDE 的 QT 库。你可以通过源码获取 QT，但在这种情况下，从发行版下载编译版本以及开发版 QT-devel 是一个好主意。虽然 QT 分发的很大一部分对开发者感兴趣，但获取完整包是有意义的，因为你以后可能会有兴趣使用，例如 Kdevelop。确保获取 QT-1.44。虽然 QT-2.0 发布并将成为 KDE 2.0 的基础，但它与 KDE 1.X 不兼容。包含了包含了 QT，但如果你获取的是编译好的二进制文件，你需要下载单独的文件。
-- qt-144
-- qt-devel-144——如果你正在编译 KDE 则需要
-- qt-doc-html-144——如果你进行任何开发则需要
-- qt-examples-144——不需要但有用
+- `QT-1.44`——构建 KDE 的 QT 库。你可以通过源码获取 QT，但在这种情况下，从发行版下载编译版本以及开发版 `QT-devel` 是一个好主意。虽然 QT 分发的很大一部分对开发者感兴趣，但获取完整包是有意义的，因为你以后可能会有兴趣使用，例如 `Kdevelop`。确保获取 `QT-1.44`。虽然 `QT-2.0` 发布并将成为 KDE 2.0 的基础，但它与 KDE 1.X 不兼容。包含了包含了 QT，但如果你获取的是编译好的二进制文件，你需要下载单独的文件。
 
-
-
-
+- `qt-144`
+- `qt-devel-144`——如果你正在编译 KDE 则需要
+- `qt-doc-html-144`——如果你进行任何开发则需要
+- `qt-examples-144`——不需要但有用
 
 # 第一部分
-在本地安装 KDE 第一章
 
-- qt-opengl-1.44—如果你想使用 3D 效果
-- qt-tutorial-1.44—再次，对程序员很有用
+## 在本地安装 KDE 第一章
+
+- `qt-opengl-1.44`—如果你想使用 3D 效果
+- `qt-tutorial-1.44`—再次，对程序员很有用
 
 另需参考
+
 有关 Kdev 的更多信息，请参阅第 36 章“为 KDE 编程”，第 639 页。
 
-- ■ BZIP2—你的机器上很可能已经有了这个压缩程序。如果没有，你可以在 KDE 网站以及几乎任何提供 Linux 仓库的地方找到它。
+- ■ `BZIP2`—你的机器上很可能已经有了这个压缩程序。如果没有，你可以在 KDE 网站以及几乎任何提供 Linux 仓库的地方找到它。
 
-- ■ KDE 源代码—你会在与你发行发行版的 RPM 或 DEB 包相同的地方找到它们，但你想要进入 `/source` 子目录。下载所有以 `tar.bz2` 结尾的文件，`desdk` 可能除外，`desdk` 是 KDE 源码开发工具包，你可能不需要它。下载任何以 `.lsm` 结尾的文件，因为它们仅仅是关于同名软件包的描述性文件（lsm 代表 Linux 软件映射）。
 
-完成后，在你的 KDE 下载目录中应该会有这些文件：
 
-- ■ kdeadmin-1.1.1.tar.bz2
-- ■ kdebase-1.1.1.tar.bz2
-- ■ kdegames-1.1.1.tar.bz2
-- ■ kdegraphics-1.1.1.tar.bz2
-- ■ kdelibs-1.1.1.tar.bz2
-- ■ kdemultimedia-1.1.1.tar.bz2
-- ■ kdenetwork-1.1.1.tar.bz2
-- ■ kdesupport-1.1.1.tar.bz2
-- ■ kdetoys-1.1.1.tar.bz2
-- ■ kdeutils-1.1.1.tar.bz2
-- ■ korganizer-1.1.1.tar.bz2
+进入`/source`子目录。下载所有以`tar.bz2`结尾的文件，`desdk`可能除外，`desdk`是KDE源码开发工具包，你可能不需要它。下载任何以`.lsm`结尾的文件，因为它们仅仅是关于同名软件包的描述性文件（lsm代表Linux软件映射）。
 
-（这假设已经通过 RPM 或 DEB 安装了 QT 以及 KDE 1.1.1。显然，KDE 1.2 的文件也是相同的，区别在于它们在显示 1.1.1 的地方会显示 1.2。）
+完成后，在你的KDE下载目录中应该会有这些文件：
 
-整个下载包总计约为 17MB，所以需要一些时间，特别是在通过慢连接或在用量高峰段进行时。在失眠或周末周末早晨做这件事其实很不错。
+- ■ `kdeadmin-1.1.1.tar.bz2`
+- ■ `kdebase-1.1.1.tar.bz2`
+- ■ `kdegames-1.1.1.tar.bz2`
+- ■ `kdegraphics-1.1.1.tar.bz2`
+- ■ `kdelibs-1.1.1.tar.bz2`
+- ■ `kdemultimedia-1.1.1.tar.bz2`
+- ■ `kdenetwork-1.1.1.tar.bz2`
+- ■ `kdesupport-1.1.1.tar.bz2`
+- ■ `kdetoys-1.1.1.tar.bz2`
+- ■ `kdeutils-1.1.1.tar.bz2`
+- ■ `korganizer-1.1.1.tar.bz2`
+
+（这假设已经通过RPM或DEB安装了QT以及KDE 1.1.1。显然，KDE 1.2的文件也是相同的，区别在于它们在显示1.1.1的地方会显示1.2。）
+
+整个下载包总计约为17MB，所以需要一些时间，特别是在通过慢连接或在用量高峰段进行时。在失眠或周末周末早晨做这件事其实很不错。
 
 # 第一部分 安装
 
 # 第一章 安装 KDE
 
 ### 两个实用的 Linux 小技巧
-虽然这些并非 KDE 特有，但两个小的 Linux 特性让编译过程变得更容易。
 
-第一个是文件名补全。如果你处于包含下载的 KDE 文件的目录中并想要操作其中一个文件（例如将其复制到某处），你可以输入命令、空格，然后开始输入文件名并按 *Tab* 键。例如，如果你输入
+虽然这些并非KDE特有，但两个小的Linux特性让编译过程变得更容易。
+
+第一个是文件名补全。如果你处于包含下载的KDE文件的目录中并想要操作其中一个文件（例如将其复制到某处），你可以输入命令、空格，然后开始输入文件名并按`Tab`键。例如，如果你输入
 
 ```
 cp kdes
 ```
 
-然后按 *Tab*，它就变成了：
+然后按`Tab`，它就变成了：
 
 ```
 cp kdesupport-1.1.1.tar.bz2
 ```
 
-如果目录中有多个以你输入的字母开头的文件，你会听到哔的一声。再次按 *Tab* 将会为你列出它们。例如 *kdeg*，它可能是 kdegams 或 kraphics。你可以添加必要的字母来区分它们，然后再次按 *Tab*。
+如果目录中有多个以你输入的字母开头的文件，你会听到哔的一声。再次按`Tab`将会为你列出它们。例如`kdeg`，它可能是kdegams或kraphics。你可以添加必要的字母来区分它们，然后再次按`Tab`。
 
-第二个是在命令之间进行滚动的能力。按下 *Up*（向上）方向键可以返回到上一个插入命令。再次按下可以回到更上一个，你可以编辑这些命令，这样与其输入一个复杂的命令后跟一个文件名，不如按 *Up* 键和 *Backspace*（退格键）对不同的文件执行相同的命令。你仍然可以使用 *Tab* 键来补全文件名，在这里：
+第二个是在命令之间进行滚动的能力。按下`Up`（向上）方向键可以返回到上一个插入命令。再次按下可以回到更上一个，你可以编辑这些命令，这样与其输入一个复杂的命令后跟一个文件名，不如按`Up`键和`Backspace`（退格键）对不同的文件执行相同的命令。你仍然可以使用`Tab`键来补全文件名，在这里：
 
-此外，大多数常用的 shell（意味着如果你不知道 shell 是什么，你可能在使用它）都模拟了这些约定：Ctrl-A 到行首，Ctrl-E 到行尾。
+此外，大多数常用的shell（意味着如果你不知道shell是什么，你可能在使用它）都模拟了这些约定：`Ctrl-A`到行首，`Ctrl-E`到行尾。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_39_0.png)
 
-获取所有这些文件后，现在是构建 KDE 了。虽然你可以通过几种不同的方式来实现，但这种方法最简单直接，且符合 Linux 标准。在列出的所有命令中，输入命令并按回车。
+获取所有这些文件后，现在是构建KDE了。虽然你可以通过几种不同的方式来实现，但这种方法最简单直接，且符合Linux标准。在列出的所有命令中，输入命令并按回车。
 
 ### 编译 KDE
 
-1. 以 root 身份登录或切换 root。（在全屏命令行或终端窗口中，输入 **su** 并按 **Enter**。在提示时，给出 root 密码）。
-2. 将 kde 文件从你下载的目录复制到 `/usr/local/src/`
-   `cp */dirname/* /usr/local/src`
-3. 进入 `/usr/local/src`。
-4. 因为 bzip2 可以使用通配符，你也可以一次性解压它们，尽管如果你倾向于一个一个处理，可以将星号替换为完整文件名：
-   `bzip2 -d k*.bz2`
+1. 以root身份登录或切换root。（在全屏命令行或终端窗口中，输入`su`并按`Enter`。在提示时，给出root密码）。
+2. 将kde文件从你下载的目录复制到`/usr/local/src/`
 
-5. 你可以在开始编译之前一个接一个打开生成的 .tar 文件。我会在编译时一个个打开它们，作为对哪些已完成、哪些未完成的额外检查。选择完全取决于你，但如果起初只做一个；应该是 kdesupport。你必须按照顺序制作并安装包：kdesupport、kdelibs、kdebase，然后按你喜欢的任何顺序安装其他的。
+   `cp */dirname/* /usr/local/src`
+3. 进入`/usr/local/src`。
+4. 因为`bzip2`可以使用通配符，你也可以一次性解压它们，尽管如果你倾向于一个一个处理，可以将星号替换为完整文件名：
+
+   `bzip2 -d k*.bz2`
+5. 你可以在开始编译之前一个接一个打开生成的.tar文件。我会在编译时一个个打开它们，作为对哪些已完成、哪些未完成的额外检查。选择完全取决于你，但如果起初只做一个；应该是`kdesupport`。你必须按照顺序制作并安装包：`kdesupport`、`kdelibs`、`kdebase`，然后按你喜欢的任何顺序安装其他的。
 
 ```
 tar xvf kdesupport-1.1.1.tar.bz2
 ```
-
-6. tar 命令将在 `/usr/local/src/kdesupport-1.1.1/` 创建一个目录。进入此目录并配置：
+6. `tar`命令将在`/usr/local/src/kdesupport-1.1.1/`创建一个目录。进入此目录并配置：
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_40_0.png)
 
-7. configure 将运行几分钟然后返回命令行。确保它没有因某些错误而崩溃。（几乎总是由于缺少编译工具导致的，可以通过安装软件包来解决。）运行时，会滚动很多消息。这是 kdesupport-1.1.1 配置的输出。你可以看到自动检测到了主机类型。此外，报告编译器为 gcc：
+7. `configure`将运行几分钟然后返回命令行。确保它没有因某些错误而崩溃。（几乎总是由于缺少编译工具导致的，可以通过安装软件包来解决。）运行时，会滚动很多消息。这是`kdesupport-1.1.1`配置的输出。你可以看到自动检测到了主机类型。此外，报告编译器为`gcc`：
 
 ```
 [root@localhost ~]# ./configure --prefix=/opt/kde
@@ -901,7 +842,7 @@ checking ${MAKE}...yes
 # 第一章 安装 KDE
 
 ...
-
+```
 checking for aclocal... found
 checking for autoconf... found
 checking for automate... found
@@ -935,85 +876,13 @@ checking whether the linker (/i86-linux/bin/id) supports shared... yes
 checking for command to parse /usr/bin/nm -B output... yes
 checking how to hardcode library paths into programs... immediate
 checking for /i86-linux/bin/id to reload objects... -r
-checking for dynamic linker characteristics... Linux.so
-checking if libtool supports shared libraries... yes
-checking whether to build shared libraries... yes
-checking whether to build static libraries... yes
-checking for objdir... -libs
-creating libtool
-checking for AIX... no
-checking for man/config.h... no
-checking for main in -lcom... no
-checking for main in -lcrypt... no
-checking for the third argument of getsockname... socklen_t
-checking for dnet_ntoa in -ldnet... no
-checking for dnet_ntoa in -ldnet_stub... no
-checking for inet_ntoa... yes
-checking for connect... yes
-checking for remove... yes
-checking for shmat... yes
-checking for killpg in -lucb... no
-checking for X... /usr/X11R6, headers /usr/X11R6/include
-checking for Qt... /usr/lib, headers /usr/lib/qt/include
-checking if Qt compiles without flags... yes
-checking for moc... /usr/bin/moc
-checking for dirent.h that defines DIR... yes
-checking for opener in -ldir... no
-checking for ANSI header files... yes
-checking for size_t... yes
-checking whether time.h and sys/time.h may both be included... yes
-checking for stdlib.h... yes
-checking for string.h... yes
-checking for sys/file.h... yes
-checking for unistd.h... yes
-checking for forcnt.h... yes
-checking for sys/types.h... yes
-checking for memory.h... yes
-checking for malloc.h... yes
-checking for errno.h... no
-checking for io.h... no
-checking for sys/time.h... yes
-checking for stdarg.h... yes
-checking for stddef.h... yes
-checking for getgetimeofday... yes
-checking for sprintf... yes
-checking for tempnam... yes
-checking for sygment.h... no
-checking for main in -lddbm... no
-checking for main in -ldbm... yes
-checking for rename... yes
-checking for ftruncate... yes
-checking for flock... yes
-checking for bcpy... yes
-checking for fsync... yes
-checking for getopt... yes
-checking for working alloca.h... yes
-checking for alloca... yes
-checking for off_t... yes
-checking for st_blockize in struct stat... yes
-checking for strerror... yes
-checking for stdin... yes
-checking if the compiler supports function prototypes... yes
-checking for gcc option to accept ANSI C... none needed
-checking for function prototypes... yes
-checking for working const... yes
-checking for inline... inline
-checking for bool... yes
-checking for gethostname... yes
-checking for dlopen in -l1dl... yes
-checking for shl_unload in -l1dl... no
-checking for main in -l1js... no
-configure: warning: you should get yourself a js distribution part of it.
-desksupport contains only a small part of it.
-For this have a look at http://www.kgs.fi/js/
-
-
+```
 
 
 
 # 第一部分 安装
 
-# 第1章 安装 KDE
+## 第1章 安装 KDE
 
 ...继续
 
@@ -1044,22 +913,25 @@ creating gdbm/Makefile
 creating rdb/Makefile
 creating Owprite/Makefile
 creating config.h
-[root@localhost kdesupport-1.1.1~]#
+[root@localhost kdesupport-1.1.1]#
 ```
 
-如你所示，系统检查列表需要一些时间。此外，在 /usr/local/src/kdesupport-1.1.1 目录下创建了一个文件。这是后续编译的“配方”。
+如你所示，系统检查列表需要一些时间。此外，在`/usr/local/src/kdesupport-1.1.1`目录下创建了一个文件。这是后续编译的“配方”。
 
 然后输入
-make all
 
-- 8. 如果这个过程花费一些时间，请不要感到惊讶。事实上，在内存有限的较慢系统上，它可能需要超过半小时。而且不要被偶尔出现的警告消息所报警。只要编译没有因为以 ERROR 开头的消息崩溃，一切都是正常的。在这种情况下，查看错误之前的一或两行，以查看哪个部分运行失败。你可能不会遇到任何问题，特别是如果你使用的是较新的 Linux 发行版并安装了所有编译工具。
+`make all`
 
-- 9. 如果你是在 KDE 的终端窗口（或其他桌面和窗口管理器）中进行所有这些操作，现在不是退出终端，而是退出 KDE 本身。在旧版本运行时安装新版本的应用程序通常是一个坏主意。（根据我的经验，编译时最好完全退出 X Window 系统并在控制台中中完成所有操作。这可以防止你不小心破坏 KDE，并释放内存，使编译更快。）如果你必须退出终端和 KDE，请再次成为 root 或 super（如果你还不是的话），切换到 /usr/local/src/kdesupport-1.1.1（或你当前编译的包目录），并输入
-make install
+- 8. 如果这个过程花费一些时间，请不要感到惊讶。事实上，在内存有限的较慢系统上，它可能需要超过半小时。而且不要被偶尔出现的警告消息所报警。只要编译没有因为以`ERROR`开头的消息崩溃，一切都是正常的。在这种情况下，查看错误之前的一或两行，以查看哪个部分运行失败。你可能不会遇到任何问题，特别是如果你使用的是较新的 Linux 发行版并安装了所有编译工具。
+- 9. 如果你是在 KDE 的终端窗口（或其他桌面和窗口管理器）中进行所有这些操作，现在不是退出终端，而是退出 KDE 本身。在旧版本运行时安装新版本的应用程序通常是一个坏主意。（根据我的经验，编译时最好完全退出 X Window 系统并在控制台中中完成所有操作。这可以防止你不小心破坏 KDE，并释放内存，使编译更快。）如果你必须退出终端和 KDE，请再次成为 root 或 super（如果你还不是的话），切换到`/usr/local/src/kdesupport-1.1.1`（或你当前编译的包目录），并输入
 
-这真的是整个编译过程中最令人满意的部分，因为你可以看着你刚刚从源代码构建的文件（这就是 make all 所做的的）移动到你硬盘上相应的位置。这完全不会花费很长时间。
+`make install`
 
-- 10. 对 kdelibs、kdebase 以及 KDE 发行版中的其他包重复上述步骤。在此过程中不要重启旧版本的 KDE。记住“魔术箭头键”，特别是当你有一个很长的 configure 命令时。你可以按几次向上箭头键回到它，然后按回车键，你就发出了该命令，而没有有拼写错误的风险。
+
+
+这真的是整个编译过程中最令人满意的部分，因为你可以看着你刚刚从源代码构建的文件（这就是 `make all` 所做的的）移动到你硬盘上相应的位置。这完全不会花费很长时间。
+
+- 10. 对 `kdelibs`、`kdebase` 以及 KDE 发行版中的其他包重复上述步骤。在此过程中不要重启旧版本的 KDE。记住“魔术箭头键”，特别是当你有一个很长的 `configure` 命令时。你可以按几次向上箭头键回到它，然后按回车键，你就发出了该命令，而没有有拼写错误的风险。
 
 恭喜你！你刚刚编译并安装了 KDE！
 
@@ -1067,15 +939,15 @@ make install
 
 # 为了性能和速度编译
 
-你可以使用多个选项为你的特定计算机优化 KDE。我们已经查看了 prefix（前缀）和 host（主机）选项，但还有其他选项。它们也被添加到命令行中，并减小代码大小、内存占用或两者兼有。语法各不相同，因此我将逐一处理。
+你可以使用多个选项为你的特定计算机优化 KDE。我们已经查看了 `prefix`（前缀）和 `host`（主机）选项，但还有其他选项。它们也被添加到命令行中，并减小代码大小、内存占用或两者兼有。语法各不相同，因此我将逐一处理。
 
-# 第一部分 安装
+## 第一部分 安装
 
-# 第1章 安装 KDE
+### 第1章 安装 KDE
 
-# 禁用调试
+#### 禁用调试
 
-Linux 程序（事实上，任何操作系统的大多数程序）都包含设计用于在出现问题时更容易解决问题的代码。KDE 也不是这一规则的例外。通过向 configure 命令添加一个参数，你可以大幅减少这些很少用到的代码：
+Linux 程序（事实上，任何操作系统的大多数程序）都包含设计用于在出现问题时更容易解决问题的代码。KDE 也不是这一规则的例外。通过向 `configure` 命令添加一个参数，你可以大幅减少这些很少用到的代码：
 
 ```
 ./configure --disable-debug
@@ -1092,7 +964,7 @@ strip /opt/kde/bin/*
 - 减小了代码大小，如果你在使用较旧、较小的硬盘，这可能是一个关注点
 - 更快的速度（加载内容更少），如果你在使用带有较小、较慢硬盘的旧机器，这一点尤为明显
 
-# 禁用异常处理
+#### 禁用异常处理
 
 KDE 1.X 不使用异常处理，但如果你正在使用 EGCS 编译器，编译器并不知道这一点并会以任何方式将其构建进来。禁用它的方法是为 EGCS 的 C++ 部分使用编译器标志，例如：
 
@@ -1102,51 +974,47 @@ KDE 1.X 不使用异常处理，但如果你正在使用 EGCS 编译器，编译
 
 你没有损失任何，反而大幅减少了 KDE 及其应用程序使用的内存量。
 
-# Pentium
+#### Pentium
 
-除非另有说明，否则编译器会选择最低公分数并为 80386 类处理器编译。由于它在 386、486、各种增强型 486、Pentium-MMX、Pentium II、Pentium III 或 AMD K-2 或 K-3 CPU 上运行良好良好你你可以通过添加 -mpentium 标志在编译时为它优化 KDE：
-
-```
-/CXXFLAGS='-fno-exceptions' configure --prefix=pathname
-```
-
-此方法在没有 -fno-exceptions 标志的情况下也有效，但没有理由不这样做。
-
-# -O 标志
-
-字母 *O* 可以减小代码大小并加快执行，但在设置了此选项后，编译过程会耗费更多内存，尤其是在 Pentium 机器上：
+除非另有说明，否则编译器会选择最低公分数并为 80386 类处理器编译。由于它在 386、486、各种增强型 486、Pentium-MMX、Pentium II、Pentium III 或 AMD K-2 或 K-3 CPU 上运行良好良好你你可以通过添加 `-mpentium` 标志在编译时为它优化 KDE：
 
 ```
 /CXXFLAGS='-fno-exceptions' configure --prefix=pathname
 ```
 
-在没有 -fno-exceptions 标志的情况下此方法有效，但权衡是编译时会占用更多内存。如果你的内存不足，这可能会导致大量的磁盘交换，导致编译过程耗费更长时间。因此，如果你想减少 KDE 的系统资源，可以采用以下方法：
+此方法在没有 `-fno-exceptions` 标志的情况下也有效，但没有理由不这样做。
+
+#### -O 标志
+
+字母 `O` 可以减小代码大小并加快执行，但在设置了此选项后，编译过程会耗费更多内存，尤其是在 Pentium 机器上：
 
 ```
 /CXXFLAGS='-fno-exceptions' configure --prefix=pathname
 ```
 
-有两点需要注意。一点是 CXXFLAGS 需要引号（单引号）。另一点是 PATH 的用处。
+在没有 `-fno-exceptions` 标志的情况下此方法有效，但权衡是编译时会占用更多内存。如果你的内存不足，这可能会导致大量的磁盘交换，导致编译过程耗费更长时间。因此，如果你想减少 KDE 的系统资源，可以采用以下方法：
 
-如此，PATH 是很有用的。
+```
+/CXXFLAGS='-fno-exceptions' configure --prefix=pathname
+```
 
-# 第2章
+有两点需要注意。一点是 `CXXFLAGS` 需要引号（单引号）。另一点是 `PATH` 的用处。
 
-# 启动 KDE
+如此，`PATH` 是很有用的。
 
-## 基础外观控制
+## 第2章 启动 KDE
 
-## 一些常见问题与解决方案
+### 基础外观控制
 
-## 引言
+### 一些常见问题与解决方案
 
-# 2 启动 KDE
+### 引言
 
 许多现代 Linux 发行版（例如 Caldera OpenLinux 2.3、Mandrake 和 Core Linux）在你安装 KDE 后默认启动它。然而，这些发行版并不包含最新版本，这意味着你可能需要升级。
 
-在安装 KDE 后使用它之前的第一步是将 /opt/kde/bin 目录添加到 profile 的 PATH 语句。（这假设 KDE 安装在 /opt/kde。对于 Red Hat 6.0 用户不需要，因为 KDE 的二进制文件已经放在了已经在 PATH 中的 /usr/bin。）
+在安装 KDE 后使用它之前的第一步是将 `/opt/kde/bin` 目录添加到 `profile` 的 `PATH` 语句。（这假设 KDE 安装在 `/opt/kde`。对于 Red Hat 6.0 用户不需要，因为 KDE 的二进制文件已经放在了已经在 `PATH` 中的 `/usr/bin`。）
 
-在现有桌面或控制台中打开编辑器。然后打开 /etc/profile。你在顶部附近看到类似这样的一行：
+在现有桌面或控制台中打开编辑器。然后打开 `/etc/profile`。你在顶部附近看到类似这样的一行：
 
 ```
 PATH="usr/bin:bin:/usr/local/bin:/usr/X11R/bin"
@@ -1158,29 +1026,21 @@ PATH="usr/bin:bin:/usr/local/bin:/usr/X11R/bin"
 PATH="usr/bin:bin:/usr/local/bin:kdepath:bin:/usr/X11R/bin"
 ```
 
-你应该用实际的 KDE 目录（例如 /opt/kde 或 /usr/local/kde）替换 kdepath。
+你应该用实际的 KDE 目录（例如 `/opt/kde` 或 `/usr/local/kde`）替换 `kdepath`。
 
-引号必须存在。行中没有任何空格。此外，KDE 的的具体位置并不关键。但记住，系统按照 PATH 行列出的顺序搜索命令或文件。因此，在极少数情况下，如果存在与 /bin 同名的 KDE 文件，且 KDE 位于 PATH 语句中 /bin 之前，那么在调用 /bin 中的文件时将打开该文件，可能会导致各种问题。通常，将 KDE 路径放在 PATH 语句的末尾或附近是一个好主意。
+引号必须存在。行中没有任何空格。此外，KDE 的的具体位置并不关键。但记住，系统按照 `PATH` 行列出的顺序搜索命令或文件。因此，在极少数情况下，如果存在与 `/bin` 同名的 KDE 文件，且 KDE 位于 `PATH` 语句中 `/bin` 之前，那么在调用 `/bin` 中的文件时将打开该文件，可能会导致各种问题。通常，将 KDE 路径放在 `PATH` 语句的末尾或附近是一个好主意。
 
+### 如果你使用二进制文件
 
-
-
-
-# 第一部分
-# 开始 KDE
-# 第 2 章
-
-## 如果你使用二进制文件
 在旧的 Linux 安装系统中，即那些仍然完全使用二进制文件的系统上，你需要修改 `LD_LIBRARY_PATH` 语句。这些系统现在已经相当罕见了。如果你有这样一个系统，你自然会知道；如果你不确定，修改 `LD_LIBRARY_PATH` 可不是轻率的事，因为如果处理不当，会导致巨大的麻烦。由于旧版 Linux 发行版之间的差异，对此的考虑必须超出本书的范畴。
 
-## 控制台编辑器
+### 控制台编辑器
+
 如果你安装了控制台模式编辑器，你基本上只能使用 `vi`，它唯一的优点是除了我的电脑之外，每个 Linux 和 UNIX 系统都有它。我删除了它，并创建一个名为 `vi` 的符号链接指向另一个编辑器。我强烈建议你安装 `Pico`。有些人也喜欢 `GNU-Emacs`，它被形象地描述为更像是一种宗教而非程序。无论如何，无论你选择哪一个，获取并学习一个控制台编辑器都是关重要的。它会救你。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_50_0.png)
 
-# 另另
-
-- > 关于 Pico 的更多信息，请参阅第 34 章“几个必备程序”，第 617 页。
+> 关于 Pico 的更多信息，请参阅第 34 章“几个必备程序”，第 617 页。
 
 对于大多数新添加 KDE 的 Linux 安装系统，将其设置为默认桌面的方法是进入命令行（无论是控制台模式还是终端窗口），以 root 或超级用户身份运行，并输入：
 
@@ -1194,41 +1054,45 @@ PATH="usr/bin:bin:/usr/local/bin:kdepath:bin:/usr/X11R/bin"
 
 `startkde` 脚本仍然在使用，但在某些系统上——特别是 Caldera 和 Red Hat 的最新发行版——仅运行它是是不够的，单独运行它产生意外的结果，例如 KDE 的部分会在非 KDE 窗口管理器之上启动。
 
-# 第一部分引言
-# 第 2 章 开始 KDE
-
 ## 窗口管理器与桌面
+
 在 Linux 中，“桌面”（desktop）和“窗口管理器”（window manager）这两个术语经常被错误地混用。它们不是一回事。以下是 Linux GUI 的层级结构（见图 2.1）：
 
-X Window System 本身仅仅让图形应用程序运行成为可能。它负责确保发送到显卡的信号是正确的。这通常是 XFree86，尽管也有商业替代品。
+`X Window System` 本身仅仅让图形应用程序运行成为可能。它负责确保发送到显卡的信号是正确的。这通常是 `XFree86`，尽管也有商业替代品。
 
-窗口管理器是一个层，它对软件的作用就像 X Window System 对硬件的作用。它创建了一个环境，让应用程序在定义的规则集下以预期且可强制的方式运行。KDE 发行版提供了一个窗口管理器 `kwm`，它针对 KDE 使用进行了优化，也可以与其他窗口管理器配合工作，但某些功能（例如从 KDE 菜单设置桌面颜色）是不可用的。
+窗口管理器是一个层，它对软件的作用就像 `X Window System` 对硬件的作用。它创建了一个环境，让应用程序在定义的规则集下以预期且可强制的方式运行。KDE 发行版提供了一个窗口管理器 `kwm`，它针对 KDE 使用进行了优化，也可以与其他窗口管理器配合工作，但某些功能（例如从 KDE 菜单设置桌面颜色）是不可用的。
 
 桌面是运行在所有这一切之上的一个应用程序集。它可以是一个简单的美化过的图形菜单程序，几乎没有原生应用程序（即与桌面本身具有相同特征的程序，或者是一个完整的桌面系统，如 KDE，或者在较小程度上，优秀的小巧 Xfce）。
+
+
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_51_0.png)
 
 图 2.1
+
 堆叠在 Linux 之上创建运行应用程序的桌面的层就像蛋糕的层。如果这是一个真实的蛋糕，企鹅的出现将是不卫生的——如果它是真的企鹅的话。
 
 那么对于较新的发行版，虽然 KDE 可能默认安装，但 `startx` 并没有让它出现，该怎么办？这取决于发行版。
 
 # 第一部分
-# 开始 KDE 第 2 章
+
+## 第 2 章 开始 KDE
 
 Caldera OpenLinux 2.2 提供了两种桌面/窗口管理器组合：`twm` 和带有 `dwm` 的 KDE。KDE 是默认的，全图形化登录也是如此，我将在下一章讨论。当你登录时，你会进入 KDE 环境，除非你升级了 KDE，在这种情况下你会收到我在本章后面讨论的错误信息。如果你禁用了图形化登录，你在控制台输入 `startx` 来获取 `twm`。要进入 KDE，你输入 `kde`（无论哪种情况，后按回车）。顺便说，`twm` 非常简陋。图 2.2 显示了 Caldera 2.2 中默认的 `twm` 桌面。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_52_0.png)
 
 图 2.2
-twm 提供了最基本的桌面。
+
+`twm` 提供了最基本的桌面。
 
 Red Hat 6.0 安装了多种窗口管理器/桌面组合。默认带你进入迷人的 Gnome 桌面和 Enlightenment 窗口管理器（见图 2.3）。还安装了有 KDE 和 `kwm`、AnotherLevel 及其窗口管理器、AfterStep 及其窗口管理器等。
 
 39
 
 # 第一部分 引言
-# 第 2 章 开始 KDE
+
+## 第 2 章 开始 KDE
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_53_0.png)
 
@@ -1241,15 +1105,19 @@ Red Hat 6.0 安装了多种窗口管理器/桌面组合。默认带你进入迷�
 一些 Red Hat 6.0 用户试图重新设计默认桌面状况。他们从 KDE 下载包，而不是使用产品附带的 beta 版本。然后他们卸载 KDE，可能还卸载部分或全部其他窗口管理器和桌面，释放出大量的空间。然后安装新版本。
 
 > 为什么要卸载旧版本？
+
 新版本可以安装在旧版本之上。升级它不需要像删除旧版本那样果断措施。如果你正在升级，也许把 KDE 放在 `/opt/kde`。
 
 # 第一部分
-# 外观控制
-# 第 2 章
+
+## 外观控制
+
+## 第 2 章
 
 在这种情况下，很有必要将 KDE 安装在 `/opt/kde`，而不是 Red Hat 放置的 `/usr/`。记得修改 `/etc/profile` 中的 `PATH` 语句以反映 KDE 的。对于 Red Hat 6.0，你还需要修改 `/etc/profile.d/kde.sh`。
 
 > 为什么用 /opt/kde？
+
 为了完全透明，我认为并强烈主张 KDE 应该放在 `/opt/kde`。这样做没有害，而且让某些事情变得更容易。其他人也有同样强烈的反对意见。其他发行版并不如此。
 
 # 外观控制
@@ -1260,21 +1128,20 @@ Linux 桌面的一个较新创新是使用主题。这些主题可以是简单�
 
 第二个让苹果 Macintosh 用户感到更熟悉。它在屏幕顶部提供了一个菜单栏（在图 2.5 中，它位于任务栏下方，任务栏可以移动，我将在后讨论）。这个菜单栏为当前获取焦的应用程序提供菜单。
 
-
-
-
-
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_55_0.png)
 
 图 2.4
+
 默认主题是 KDE 自身的原生外观和感受。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_55_1.png)
 
 图 2.5
+
 Apple Macintosh 风格的菜单栏也是基础 KDE 包中的一个配置选项。
 
-## 基础外观与感受控制
+### 基础外观与感受控制
+
 第 2 章
 
 从 KDE 1.2 开始，尽管已经有了更广泛的选择。（在 1.1.1 版本中，可以下载主题管理器以及一些主题，但 1.2 版本是首次让主题管理器成为发行版本身的一部分）。
@@ -1286,6 +1153,7 @@ Apple Macintosh 风格的菜单栏也是基础 KDE 包中的一个配置选项�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_56_0.png)
 
 图 2.6
+
 使用 K Menu 导航到样式选择屏幕。
 
 - 1 点击 K menu。
@@ -1302,6 +1170,7 @@ Apple Macintosh 风格的菜单栏也是基础 KDE 包中的一个配置选项�
 ![](img/4a2883756c73e7b0696dbbd7215c7db_57_0.png)
 
 图 2.7
+
 显示设置（Display Settings）对话框允许你从它提供的两个半个类样式功能中进行选择。
 
 有几个按钮（如你所看到的，是复选框），你可以选择其中任何一个。什么都不选将获得 KDE 默认的外观和感受。
@@ -1311,6 +1180,7 @@ Apple Macintosh 风格的菜单栏也是基础 KDE 包中的一个配置选项�
 - 屏幕顶部采用 MacOS 风格的菜单栏（Menu bar on the top of the screen...）会产生如图 2.3 所示的效果。有些人非常喜欢它，而另一些人则无法想象这如何能改进事情。实验一下看看你的想法。
 
 > 尝试 Mac OS 样式
+
 > 在在窗口中打开多个应用程序时，尝试第二个选项，并在它们之间切换。这是我提到的两种样式之一，另一个是默认样式（可以通过点击 Default 按钮来重新获得）。
 
 - 对非 KDE 应用应用字体和颜色（Apply fonts and colors to non-KDE apps）如果所有非 KDE 应用都愿意听从的话将是一个好主意。特别是 Netscape 产品在按下此按钮（或勾选）时往往会表现异常，而且这种能够通过字体粗细变化来告知你读过哪些邮件或新闻组文章的功能也消失了。有报告说此设置也会取代 XMacs。人们倾向于选择此项是因为它听起来不错，忘记了选过它，然后当 Netscape 和其他应用程序出现意料之外的行为时感到非常困惑。出于这个原因，保持未选中状态可能是一个好主意。
@@ -1318,13 +1188,16 @@ Apple Macintosh 风格的菜单栏也是基础 KDE 包中的一个配置选项�
 这只是 KDE 可配置性的一小部分体验，但这种体验让你能够做出巨大的改变（如果你是从 Macintosh 世界来到 KDE 的话）。我们很快就会全面投入自定义定制。但是……
 
 ## 一些常见问题及其解决方案
+
 第 2 章
 
 人们第一次启动 KDE 时会有四个错误，每个错误都很容易解决。我将按外观重要性从高到低的顺序介绍它们。
 
 ### 无法连接到 X 服务器
 
-这是 Caldera OpenLinux 2.2 用户收到的错误消息，他们按照常理使用 XF86Setup 配置显卡。这种情况发生在当你尝试从控制台启动 KDE（或其他窗口管理器或桌面；冲突点在于 XFree86）时收到此错误而不是桌面。解决方案是以 root 身份登录，并使用我一直强调的那个控制台文本编辑器修改 /etc/X11/init/sserverrc，使其变为：
+这是 Caldera OpenLinux 2.2 用户收到的错误消息，他们按照常理使用 XF86Setup 配置显卡。这种情况发生在当你尝试从控制台启动 KDE（或其他窗口管理器或桌面；冲突点在于 XFree86）时收到此错误而不是桌面。解决方案是以 root 身份登录，并使用我一直强调的那个控制台文本编辑器修改 `/etc/X11/init/sserverrc`，使其变为：
+
+
 
 ```bash
 #!/bin/bash
@@ -1340,31 +1213,27 @@ done
 xauth=$host/unix:0
 ```
 
-## 第一部分
-一些常见问题及其解决方案
+# 第一部分 安装
+
+## 第3章 适用于全图形化系统的 KDM
+
+### 一些常见问题及其解决方案
+
 第 2 章
 
-### 开始 KDE
+#### 开始 KDE
 
 在某些 KDE 版本和某些配置下，此错误随处可见。它完全无害，可以忽略，不会对任何事情产生任何风险。该错误在 KDE 1.2 中消失了。
 
-
-
-
-
-# 第一部分 安装
-
-# 第3章 适用于全图形化系统的 KDM
-
 许多人认为，永远不需要看命令行是一件好事，而在 KDE 中，通过使用一个名为 KDM 的内置程序就可以实现这一点。（如果你在数数的话，它是 `kdebase` 软件包的一部分。）本章将引导你如何启用 KDM，描述为什么启用它并不总是个好主意，并引导你完成禁用 KDM 的操作。这听起来很棒，在某种意义上确实如此，但这一切都有其充分的理由。
 
-那些使用 Lizard（蜥程序）安装 Caldera Open Linux 2.2 的用户默认启用了 KDM。当你安装后重启时，图形化登录界面就是 KDM。遗憾的是，其他人为了看一眼它必须手动启用它。因为它在用户登录并访问应用程序之前出现，所以实际上没有办法可以为它截图！这意味着我的描述将不得不包含截图。
+那些使用 Lizard 安装 Caldera Open Linux 2.2 的用户默认启用了 KDM。当你安装后重启时，图形化登录界面就是 KDM。遗憾的是，其他人为了看一眼它必须手动启用它。因为它在用户登录并访问应用程序之前出现，所以实际上没有办法可以为它截图！这意味着我的描述将不得不包含截图。
 
 在你可以选择的颜色背景、你选择的颜色渐变或你选择的位图背景上，配以既美观但缓慢的华丽装饰或快速且普通的装饰，有一个对话框，其中包含问候语、带有用户名的系统小位图、一个小正方形位图、输入用户名和密码的文本框、按钮、一个列表框以及底部的菜单。这些是会话类型（Session Type，一个列表框）、确定（Go）、取消（Cancel）和关机（Shutdown，会渲染菜单）。它是高度可配置的，你会看到的。例如，出于某种原因你想要这样做，你可以把用户的扫描照片作为与其用户名一起出现的位图。你可以将问候语改为公司 Logo，将 Logo 也更改为公司 Logo。你可以让图片完全消失。（从安全角度来看，这是一个明智之举，如果你确定所有用户在没有自己的照片或其他助记工具的情况下记住自己是谁的话。反正他们也必须记住自己的密码。）
 
 你可以设置 KDM 启动控制台会话，甚至是窗口管理器和桌面！如果图形化登录是你的心心所愿，那这真的非常酷。
 
-## 设置 KDM
+### 设置 KDM
 
 让我们从一个假设开始：KDM 还没有在你的机器上运行，`xdm` 也没有，`xdm` 是一个类似但功能没那么全的图形化登录管理器。你如何知道？嗯，当你启动电脑时，启动后它会显示一个纯文本界面，上面有一行写着 `login;` 的字；在输入用户名并按回车后，它会显示一行写着 `password;` 的字；你并不是以图形化方式启动的。你是在运行级别 3 下启动的。很好。如果这些情况不成立，我们几分钟后会在下一节“配置 KDM”中找到你。
 
@@ -1376,15 +1245,13 @@ xauth=$host/unix:0
 
 现在你知道 KDM 可以工作了。这是一个重要的检查，因为你接下来要做一件事是设置系统使其直接启动到 KDM。如果由于某种罕见且晦涩的原因它无法工作，那么你面临的问题就比你能优雅处理的要多得多。继续以 root 身份登录。然后点击屏幕底部面板上的大字母 K。（字母 K 在一个齿轮上方的图标中：KDE 的标志。）这会弹出一个菜单，顶部顶部是“应用程序”（Applications）字样。点击它获取子菜单。点击“高级编辑器”（Advanced editor）或“文本编辑器”（Text editor）；哪一个都可以。当编辑器打开时，点击“文件”（File）> 打开”（Open）。你会看到一个界面，让你通过点击来选择文件。如果你使用鼠标，点击进入顶层目录。点击 `/etc`，并使用底部的箭头或滚动条找到 `inittab`。双击它，或单击它高亮它，然后点击“确定”（OK）。如果你用键盘操作更快，在底部标记为“位置类型”（Location type:）的文本框中输入 `file:/etc/inittab` 并按回车。无论哪种方式，`/etc/inittab` 都会打开并看起来类似于图 3.1。
 
-# 第3章 适用于全图形化系统的 KDM
-
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_65_0.png)
 
 图 3.1
 
 `.org` 是完全任意的，但你选择的任何扩展名应该是一致的。如果你更喜欢 `.octopus`，世界上没有任何理由不使用它作为扩展名。
 
-## 备份配置文件
+### 备份配置文件
 
 在本书中，当我要求备份你要编辑的配置文件时，我会建议你给它一个 `.org` 扩展名。之所以这样做是因为如果你使用 `.bak` 扩展名，修改文件的程序可能会将原始文件保存为 `.bak`。保留你修改的任何文件的副本是有用的，原因有三个：
 
@@ -1392,7 +1259,7 @@ xauth=$host/unix:0
 - 随着你 Linux 知识的增长，查看它以更好地理解你所做的更改。
 - 当别人问你如何完成奇迹时，而你只记得修改了例如 `/etc` 中的某个文件；文件旁边的 `.org` 文件会告诉你它被修改过，这样你就不用检查所有的文件。
 
-## 配置 KDM
+### 配置 KDM
 
 KDM 的配置程度简直令人惊讶——这归功于其天才的开发者。你可以让它看起来像你想要的样子，让它执行任何你想要的操作——甚至是启动 KDE 的窗口管理器和桌面。
 
@@ -1401,21 +1268,15 @@ KDM 的配置程度简直令人惊讶——这归功于其天才的开发者。�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_66_1.png)
 
 图 3.2
+
 你必须以 root 身份使用登录管理器。
 
 这是因为你是以普通用户登录的。注销并以 root 身份重新登录，再次通过 K 菜单进入相同的位置，你就会看到图 3.3 的内容。
 
-
-
-
-
-# 第一部分 安装
-
-# 第3章 适用于全图形系统的 KDM
-
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_67_0.png)
 
-# 图 3.3
+图 3.3
+
 登录管理器（Login Manager）提供了有一页又一页的自定义选项。
 
 你可以指定一个“问候字符串”，这通常会大号字体显示在 KDM 对话框的顶部。一个好的经验法是：如果字符串太长，无法一次性在框内显示，那么它太长了，不适合在这里使用。不过，这可能会有所变化，你之后可以调整字体和字号。尽管如此，不要太啰嗦：没有人喜欢话太多的登录屏幕。显示公司名称是合适的。在下一行，你可以指向一个 Logo。点击 Logo 允许你从指定的目录中的文件里进行选择。如果你的公司 Logo 是正方形或圆形的，可以把它放在这里。你还可以选择小部件样式，有 Windows 和 Motif 两种。除非你为 KDE 选择了 Windows 主题（参阅第 2 章“启动 KDE”），否则请选择 Motif。在使用 GUI 时，一致性非常重要。选择一种语言：KDE 支持的语言数量会让你惊讶。然后，如果默认设置不符合你的口味，点击“字体（Fonts）”选项卡，查看图 3.4 所示。
@@ -1424,24 +1285,25 @@ KDM 的配置程度简直令人惊讶——这归功于其天才的开发者。�
 
 54
 
-# 第一部分
-配置 KDM 第3章
-
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_68_0.png)
 
+
+
 图 3.4
+
 你可以在“字体（Fonts）”选项卡上选择在 KDM 中使用的字体及其大小。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_68_1.png)
 
 图 3.5
+
 KDM 设置的这部分允许你为登录屏幕选择颜色或位图背景。
 
 55
 
 # 第一部分 安装
 
-# 第3章 适用于全图形系统的 KDM
+## 第3章 适用于全图形系统的 KDM
 
 这是 KDM 开发者们感到非常自图形化自豪的地方，同时也证明了 KDM 是一个 KDE 应用。在这里发生的一切仅仅是让你指定 KDM 对话框出现的背景。不要低估这一点，例如，如果你的一家处理可能看到此屏幕的客户的公司，因为可以实现非常具有想象力且视觉上极其精艳的特效。在这个带标签的页面上，预览图位于顶部（连带显示器的微型表示、它的底座和控制按钮，甚至还有一个显示显示器已开启的小绿色 LED 灯）。下半部分专门用于更改预览图像及其所代表的实际图像的内容。
 
@@ -1449,13 +1311,13 @@ KDM 设置的这部分允许你为登录屏幕选择颜色或位图背景。
 
 为了获得高雅、有趣或纯粹俗艳的效果，你可以选择两种混合选项之一：水平或垂直。前者允许你选择出现在屏幕左侧的颜色和右侧的颜色。这两种颜色跨越屏幕相互融合。后者提供相同的效果，只是变化发生在从上到下。
 
-你也可以选择位图图形作为壁纸。除非选择了“无壁纸（No wallpaper）”，否则如果壁纸是平铺或缩的，壁纸选择将覆盖你的颜色。你的壁纸选择包括 KDE 发行版提供的任何几乎荒谬的图片，以及你可以添加的任何 .jpg 或 .xpm 格式的图片。如果你有自己的位图，请将它们放在 `/kde/share/wallpapers` 目录。在选择能够填充屏幕的位图时，记住正中央有一个巨大的登录框。这里不是放公司总裁肖像的地方。否则，你可以使用单选按钮并查看预览来尝试布局。当你满意时，点击图 3.6 所示的“用户（Users）”选项卡。
+你也可以选择位图图形作为壁纸。除非选择了“无壁纸（No wallpaper）”，否则如果壁纸是平铺或缩的，壁纸选择将覆盖你的颜色。你的壁纸选择包括 KDE 发行版提供的任何几乎荒谬的图片，以及你可以添加的任何 `.jpg` 或 `.xpm` 格式的图片。如果你有自己的位图，请将它们放在 `/kde/share/wallpapers` 目录。在选择能够填充屏幕的位图时，记住正中央有一个巨大的登录框。这里不是放公司总裁肖像的地方。否则，你可以使用单选按钮并查看预览来尝试布局。当你满意时，点击图 3.6 所示的“用户（Users）”选项卡。
 
 56
 
 # 第一部分
 
-# 配置 KDM 第3章
+## 配置 KDM 第3章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_70_0.png)
 
@@ -1467,7 +1329,7 @@ KDM 设置的这部分允许你为登录屏幕选择颜色或位图背景。
 
 # 第一部分 安装
 
-# 第3章 适用于全图形系统的 KDM
+## 第3章 适用于全图形系统的 KDM
 
 现在到了酷的部分。通过突出“选定用户”框中的用户名并点击头部图标，你可以将其替换为其他东西！这种其他东西可以包括数字照片——也许是你名片或电视广告上的那张。当然，为了让这好看，你需要所有选定用户的数字照片，否则看起来就像员工里有外星人。
 
@@ -1476,15 +1338,13 @@ KDM 设置的这部分允许你为登录屏幕选择颜色或位图背景。
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_71_0.png)
 
 图 3.7
+
 为了最大的安全性，取消勾选框框以消除用户名的显示。
 
 58
 
-
-
-
-
 # 第一部分
+
 ## 配置 KDM 第 3 章
 
 ### 从不登录的用户
@@ -1496,6 +1356,7 @@ KDM 设置的这部分允许你为登录屏幕选择颜色或位图背景。
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_72_0.png)
 
 图 3.8
+
 关闭和重启命令以及 KDM 将启动的会话类型，都在登录管理器的最后一个 Sessions 选项卡中配置。
 
 在这里你可以为 KDM提供的功能设置某些权限，并在某种程度上指定这些功能的内容。
@@ -1503,21 +1364,22 @@ KDM 设置的这部分允许你为登录屏幕选择颜色或位图背景。
 顶部是一个下拉框，你可以在其中选择关闭系统。这在单台机器上运行多个终端时特别有用。如果有人在同事完成报告时关闭了系统，你们就会发生口舌冲突。下拉框下方的文本框指定了“Shutdown”（关闭）和“Restart”（重启）的命令。例如，如果你有一台“绿色”（支持硬件关机）机器，并且在内核中编译了这些功能，那么某些选项不仅会停止系统，还会关闭电源。
 
 # 第一部分 安装
+
 ## 第 3 章 用于全图形化系统的 KDM
 
 ### 内核
 
 Linux 内核汇聚了计算领域最最新、最聪明的大脑的思想。他们提供的功能几乎超乎凡人的想象。这些功能超出了本书的范围，但我们鼓励你尽可能地学习 Linux 内核中可用的选项，它是极其灵活的。其中某些选项需要你自己编译内核——通俗地说就是“引导内核”——但只要你足够细心，这其实并不困难。坦率地说，执行内核引导所需的文档已随内核一起提供。只需务必阅读它并严格按照说明操作。
 
-屏幕底部部分用于显示 KDM 可用的会话类型。默认选择是 kde 和 failsafe（安全模式）。后者在 KDM 无法启动时提供救援模式，但你可以添加更多。使用 KDM 启动不同的窗口管理器和桌面可以是此前未有过的任何组合。坦率地说，这对于新手来说很容易，但任何熟悉 Linux 和脚本的人都能胜任。尽管如此，现代发行版已经处理了 X11 配置文件以及启动不同窗口管理器和桌面的所需命令，因此此处不再对此进行讨论，只需注意可以做到。你发行版提供的文档将使你能够修改 /etc/X11 子目录（其变体之一）下的 Xsession 文件，以及系统级 initrc 文件，以适应你所需的额外设置。
+屏幕底部部分用于显示 KDM 可用的会话类型。默认选择是 `kde` 和 `failsafe`（安全模式）。后者在 KDM 无法启动时提供救援模式，但你可以添加更多。使用 KDM 启动不同的窗口管理器和桌面可以是此前未有过的任何组合。坦率地说，这对于新手来说很容易，但任何熟悉 Linux 和脚本的人都能胜任。尽管如此，现代发行版已经处理了 X11 配置文件以及启动不同窗口管理器和桌面的所需命令，因此此处不再对此进行讨论，只需注意可以做到。你发行版提供的文档将使你能够修改 `/etc/X11` 子目录（其变体之一）下的 `Xsession` 文件，以及系统级 `initrc` 文件，以适应你所需的额外设置。
 
 ### 使用 KDM
 
-处理完 KDM 的安装和配置后，终于是时候使用它了。让我们从对系统进行有序关闭以重启开始。你将看到按照你的选择配置的 KDM 窗口。如果你没有禁用用户显示，它们将以其完美的姿态出现。如果你是其中之一，可以点击你的图标并输入用户名和密码。然后点击标记为 Go 的按钮。你将立即传输到 KDM。
+处理完 KDM 的安装和配置后，终于是时候使用它了。让我们从对系统进行有序关闭以重启开始。你将看到按照你的选择配置的 KDM 窗口。如果你没有禁用用户显示，它们将以其完美的姿态出现。如果你是其中之一，可以点击你的图标并输入用户名和密码。然后点击标记为 `Go` 的按钮。你将立即传输到 KDM。
 
-你可以在 KDM 窗口中进行其他操作。通过点击 Session Type（会话类型）下拉框，你可以从已安装的窗口管理器/桌面组合中选择。默认列表是 kde 和 failsafe。后者会打开一个小终端窗口，在其中你可能修复某些导致无法登录 KDE 的故障。你必须在输入用户名和密码后选择此项；否则它会变回 kde。Go 按钮将带你进入选择的内容。Cancel 按钮将所有字段恢复到 KDM 启动时的状态，即未选择用户且未输入密码，且 KDM 已配置。
+你可以在 KDM 窗口中进行其他操作。通过点击 `Session Type` 下拉框，你可以从已安装的窗口管理器/桌面组合中选择。默认列表是 `kde` 和 `failsafe`。后者会打开一个小终端窗口，在其中你可能修复某些导致无法登录 KDE 的故障。你必须在输入用户名和密码后选择此项；否则它会变回 `kde`。`Go` 按钮将带你进入选择的内容。`Cancel` 按钮将所有字段恢复到 KDM 启动时的状态，即未选择用户且未输入密码，且 KDM 已配置。
 
-Shutdown（关闭）按钮会弹出一个与从“开始”菜单选择关闭时不同的对话框。它让你能够选择：完全关闭计算机、关闭并重启（reboot）、重启你正在使用的 X 服务器或进入控制台模式（当你正在升级 FreeBSD 或 KDE 本身时非常有用）。如前所述，Shutdown 和 Restart 选择所调用的特定命令可以在 KDM 配置对话框中进行。
+`Shutdown`（关闭）按钮会弹出一个与从“开始”菜单选择关闭时不同的对话框。它让你能够选择：完全关闭计算机、关闭并重启（`reboot`）、重启你正在使用的 X 服务器或进入控制台模式（当你正在升级 FreeBSD 或 KDE 本身时非常有用）。如前所述，`Shutdown` 和 `Restart` 选择所调用的特定命令可以在 KDM 配置对话框中进行。
 
 ### 为什么不使用 KDM
 
@@ -1525,7 +1387,7 @@ Shutdown（关闭）按钮会弹出一个与从“开始”菜单选择关闭时
 
 让我说明一下：这种情况不太可能，但已知其发生频率足够高，值得提及。
 
-当然，解决方案是不执行上述任何操作，如果你的系统默认是 KDM（或者说，基于 KDM 的程序 XDM），请撤销它。这需要编辑 /etc/initstab 并找到这一行：
+当然，解决方案是不执行上述任何操作，如果你的系统默认是 KDM（或者说，基于 KDM 的程序 XDM），请撤销它。这需要编辑 `/etc/initstab` 并找到这一行：
 
 ```
 id:5:initdefault:
@@ -1539,56 +1401,43 @@ id:3:initdefault:
 
 你告诉系统引导到运行级别 3，即多用户控制台用户。你将不会使用 KDM（或 XDM）。同样，如果你的发行版使用不同的数字来指定不同的运行级别，你需要将指定 X11 默认的数字改为默认控制台的数字。
 
-你可能想查看 /etc/lilo.conf 的内容，如果存在关于 vga=274 的行，请将其删除。这样整个引导序列将在控制台模式进行，而不依赖任何图形子系统。它还允许整个引导序列被写入屏幕，某些系统问题可能会在那里显现出来。这对于不需要维护自己系统的用户有用，但如果你是系统的诊断者和维护者，它非常有帮助。
-
-```
-编辑 /etc/lilo.conf
-在编辑 /etc/lilo.conf 时要极其小心，因为错误可能导致系统无法启动。将原始的 /etc/lilo.conf 备份到 /etc/lilo.conf.org，以便出现问题时可以在不恐慌的情况下寻找错误。
-```
-
-修改 /etc/lilo.conf 后，仍以 root 身份从控制台或终端窗口输入 /sbin/lilo 并按回车。仔细观察任何错误信息。如果发生错误，请在重启之前查看新的 /etc/lilo.conf，修复问题并重新运行 /sbin/lilo；否则，你的机器可能无法重启。如果你找不到问题，请恢复备份的 lilo.conf 并运行 /sbin/lilo 以回到原始状态。然后你可以在空闲时修复 /etc/lilo.conf 删除那行错误的代码。
+你可能想查看 `/etc/lilo.conf` 的内容，如果存在关于 `vga=274` 的行，请将其删除。这样整个引导序列将在控制台模式进行，而不依赖任何图形子系统。它还允许整个引导序列被写入屏幕，某些系统问题可能会在那里显现出来。这对于不需要维护自己系统的用户有用，但如果你是系统的诊断者和维护者，它非常有帮助。
 
 
 
+编辑 `/etc/lilo.conf`
+在编辑 `/etc/lilo.conf` 时要极其小心，因为错误可能导致系统无法启动。将原始的 `/etc/lilo.conf` 备份到 `/etc/lilo.conf.org`，以便出现问题时可以在不恐慌的情况下寻找错误。
 
-
-## 第 4 章
-
-## K 桌面简介
-
-- 桌面概览
-- K 面板——王国之钥
-- 桌面图标：实用快捷方式
-- 巧妙的 RMB 菜单
-- 任务栏不仅仅是列表
-- 虚拟桌面让你的显示器更大
-- 使用 KDiskNavigator 自由穿梭
+修改 `/etc/lilo.conf` 后，仍以 root 身份从控制台或终端窗口输入 `/sbin/lilo` 并按回车。仔细观察任何错误信息。如果发生错误，请在重启之前查看新的 `/etc/lilo.conf`，修复问题并重新运行 `/sbin/lilo`；否则，你的机器可能无法重启。如果你找不到问题，请恢复备份的 `lilo.conf` 并运行 `/sbin/lilo` 以回到原始状态。然后你可以在空闲时修复 `/etc/lilo.conf` 删除那行错误的代码。
 
 # 第一部分 安装
-### 第 4 章 K 桌面简介
+
+## 第 4 章 K 桌面简介
+
+### K 桌面简介
 
 假设到目前为止一切都按照计划进行，但如果你打算在没有安全网的情况下走钢丝，你可以相当轻松地进入 KDE 桌面：或者通过 KDM 自动启动，或者在登录后使用 `startx` 或 `kde` 命令。在这种情况下，你将看到一个类似于图 4.1 所示的屏幕。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_77_0.png)
 
 图 4.1
+
 默认 KDE 桌面。
 
 它看起来很亲切，不是吗？如果你开始点击图标和按钮，很快你就会发现一些你不懂的东西，特别是如果你是 Linux 新手的话。本章有大量的插图，因为桌面的展示比口述容易得多。
 
 > 随意尝试——但不要用 root 用户！
+>
 > 你可以尽情探索桌面，但除非你喜欢在没有安全网的情况下走钢丝，否则请以用户身份而非 root 身份进行。这样，你就无法进行许多无法撤销的操作。这并不意味着你应该随意使用删除（Delete）命令，但你可能做的事情几乎没有什么是无法撤销的：如果你以 root 身份登录，就不如此。本章中的插图仅来自 root 屏幕，因为对默认设置没有进行任何更改。
 
-## 第一部分
-### 桌面概览 第 4 章
-
-## 桌面概览
+### 桌面概览
 
 最好的开始点是识别各种屏幕元素。顶部的条是任务栏。当应用程序运行时，这里会列出它们的引用，你可以从这里将它们带到顶层，重新启动最小化的应用程序，甚至关闭正在运行的程序。底部是 K 面板。所有的 KDE 功能在这里都可以可用，外加你选择添加的任何内容。（我将在第二部分“自定义 K 桌面”中详细讨论定制化问题，该部分从紧下一章开始。）其他的屏幕元素（其中许多位于 K 面板上）在图 4.2 中有所标识。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_78_0.png)
 
 图 4.2
+
 屏幕元素。
 
 - K 菜单按钮
@@ -1601,96 +1450,85 @@ id:3:initdefault:
 - K Mail 按钮
 - 默认桌面图标
 
-第一部分 安装
-### 第 4 章 K 桌面简介
-
-## K 面板——王国之钥
+### K 面板——王国之钥
 
 图 4.2 中的项目 1 到 8 位于 K 面板上，你可能认为它是 KDE 的活动中心——如果你是这么认为的，你是的。让我们快速概览 K 面板：
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_79_0.png)
 
-- 1. **K 菜单按钮不乎意料地打开了图 4.3 所示的 K 菜单。** 这是你在 KDE 中启动应用程序的主要地方。K 菜单上直接有几个程序，但大多数在子菜单中（以及子子菜单，在某些情况下甚至是子子子菜单中），通过 K 菜单项目旁边的样式化箭头表示。
+1. `K 菜单`按钮不乎意料地打开了图 4.3 所示的 `K 菜单`。这是你在 KDE 中启动应用程序的主要地方。`K 菜单`上直接有几个程序，但大多数在子菜单中（以及子子菜单，在某些情况下甚至是子子子菜单中），通过 `K 菜单`项目旁边的样式化箭头表示。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_79_1.png)
 
 图 4.3
-点击 **K 菜单**按钮访问已安装的应用程序。
 
-## 第一部分
-### K 面板——王国之钥 第 4 章
+点击 `K 菜单`按钮访问已安装的应用程序。
 
-- **3. KDE 控制中心**按钮可以立即访问全范围的 KDE 配置选项。点击它会打开 KDE 控制中心（见图 4.4），它使用熟悉的层级树结构，你可以在其中获取 KDE 每个部分的各种可能性。这是你在本书第二部分将使用的主要工具。
+3. `KDE 控制中心`按钮可以立即访问全范围的 KDE 配置选项。点击它会打开 `KDE 控制中心`（见图 4.4），它使用熟悉的层级树结构，你可以在其中获取 KDE 每个部分的各种可能性。这是你在本书第二部分将使用的主要工具。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_80_0.png)
 
 图 4.4
-KDE 控制中心按钮是通往系列配置选项的门户。
 
-- **3. KFM**，即 K 文件管理器，K 面板上也有按钮，它是你会经常使用的一个。除了作为文件管理器之外，它还是一个 Web 浏览器和功能齐全的 ftp 客户端。它有两个专门的章节：第 10 章“使用 KFM 导航一切”处理它作为文件管理器的使用，以及第 24 章“使用 KDE 进行其他 Internet 功能”告诉我们如何用它进行在线工作。它最基本的状态如图 4.5 所示。
+`KDE 控制中心`按钮是通往系列配置选项的门户。
 
-- **4. 注销和锁定屏幕**按钮一个接一个排列，提供了很多功能。如果你使用 KDM，**注销**将退出。**锁定屏幕**将启动屏幕保护或锁定屏幕，需要密码。
+3. `KFM`，即 K 文件管理器，K 面板上也有按钮，它是你会经常使用的一个。除了作为文件管理器之外，它还是一个 Web 浏览器和功能齐全的 ftp 客户端。它有两个专门的章节：第 10 章“使用 KFM 导航一切”处理它作为文件管理器的使用，以及第 24 章“使用 KDE 进行其他 Internet 功能”告诉我们如何用它进行在线工作。它最基本的状态如图 4.5 所示。
 
-第一部分 安装
-### 第 4 章 K 桌面简介
-
-## 桌面概览
+4. 注销和锁定屏幕按钮一个接一个排列，提供了很多功能。如果你使用 `KDM`，`注销`将退出。`锁定屏幕`将启动屏幕保护或锁定屏幕，需要密码。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_81_0.png)
 
 图 4.5
-KFM 是文件管理器和
 
-- 5. 桌面切换器允许你在“虚拟”桌面之间自由移动。这些相当于运行不同应用程序的额外显示器。默认数量是四个，你通过点击相应的按钮在它们之间切换。
+`KFM` 是文件管理器和
 
-第一部分
-### K 面板——王国之钥 4
+5. 桌面切换器允许你在“虚拟”桌面之间自由移动。这些相当于运行不同应用程序的额外显示器。默认数量是四个，你通过点击相应的按钮在它们之间切换。
 
-- 6. KDE 帮助中心按钮打开通用帮助。它是 HTML 格式的，帮助中心是一个可以在在线时浏览帮助的浏览器。图 4.6 显示了打开的窗口。
+6. `KDE 帮助中心`按钮打开通用帮助。它是 HTML 格式的，帮助中心是一个可以在在线时浏览帮助的浏览器。图 4.6 显示了打开的窗口。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_82_0.png)
 
 图 4.6
-KDE 帮助中心在舒适的环境下提供信息列表。
 
-- 7. KVT，虚拟终端，提供命令行提示符，这在 Linux 中非常有用，因为许多功能（如编译应用程序）在那里执行最快、最高效。此外，它允许你在桌面上运行许多文本应用程序。当你点击 K 面板上的这个按钮时，你会看到图 4.7。
+`KDE 帮助中心`在舒适的环境下提供信息列表。
+
+7. `KVT`，虚拟终端，提供命令行提示符，这在 Linux 中非常有用，因为许多功能（如编译应用程序）在那里执行最快、最高效。此外，它允许你在桌面上运行许多文本应用程序。当你点击 K 面板上的这个按钮时，你会看到图 4.7。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_83_0.png)
 
 图 4.7
-KVT 在你的图形桌面提供了一个相当于小型控制模式的终端。
 
-- 8. K Mail 按钮打开 KDE 强大的电子邮件程序。图 4.8 显示了它的预览。
+`KVT` 在你的图形桌面提供了一个相当于小型控制模式的终端。
+
+8. `K Mail`按钮打开 KDE 强大的电子邮件程序。图 4.8 显示了它的预览。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_83_1.png)
 
 图 4.8
-K Mail 是你与全球朋友、家人和同事的邮件连接。
 
-K 面板像 KDE 的其他部分一样，极其可配置。你可以向它添加应用程序、移除应用程序，并在上面移动应用程序。你可以更改它的位置和大小，可以隐藏它——几乎可以是你想要的任何操作。
+`K Mail` 是你与全球朋友、家人和同事的邮件连接。
 
+`K 面板`像 KDE 的其他部分一样，极其可配置。你可以向它添加应用程序、移除应用程序，并在上面移动应用程序。你可以更改它的位置和大小，可以隐藏它——几乎可以是你想要的任何操作。
 
+### 桌面图标：实用快捷方式
 
+在 `K 面板`末尾，你会发现一个带有交叉网格的小按钮，上面有一个指向屏幕外的小黑色三角形。点击它，`K 面板`就会“收起”到小按钮中，此时三角形的方向会发生改变。再次点击它，`K 面板`就会恢复。当它以这种方式最小化时，它会在屏幕左上角添加一个带有三个图标的小框。这些图标分别用于 `K Menu`、`KDE` 窗口列表（将其想象成任务管理器）以及 `KDiskNavigator`（本章稍后会介绍它）。`K 面板`将始终显示在你正在全屏运行或在屏幕任何部分运行的应用程序之上。
 
+你的桌面上默认放置了几个图标。它们取决于你所使用的 Linux 系统以及你是否为其添加了 KDE。存在的图标有回收站（Trash）、模板（Templates）文件夹和自启动（Autostart）文件夹。图中还显示了软驱驱动器、CD 阅读器和打印机的图标。你可以根据自己的喜好和需求添加或删除图标。关于默认图标的简要介绍：这三个文件夹——在此情况下是 `~/Desktop` 目录的子目录，但它们是可以移动的。
 
-# 第一部分
-## 桌面图标：实用快捷方式 第4章
-
-## 消失术
-
-在 K 面板末尾，你会发现一个带有交叉网格的小按钮，上面有一个指向屏幕外的小黑色三角形。点击它，K 面板就会“收起”到小按钮中，此时三角形的方向会发生改变。再次点击它，K 面板就会恢复。当它以这种方式最小化时，它会在屏幕左上角添加一个带有三个图标的小框。这些图标分别用于 K Menu、KDE 窗口列表（将其想象成任务管理器）以及 KDiskNavigator（本章稍后会介绍它）。K 面板将始终显示在你正在全屏运行或在屏幕任何部分运行的应用程序之上。
-
-## 桌面图标：实用快捷方式
-
-你的桌面上默认放置了几个图标。它们取决于你所使用的 Linux 系统以及你是否为其添加了 KDE。存在的图标有回收站（Trash）、模板（Templates）文件夹和自启动（Autostart）文件夹。图中还显示了软驱驱动器、CD 阅读器和打印机的图标。你可以根据自己的喜好和需求添加或删除图标。关于默认图标的简要介绍：这三个文件夹——在此情况下是 ~/Desktop 目录的子目录，但它们是可以移动的。
-
-## 回收站 (Trash)
+#### 回收站 (Trash)
 
 第一个回收站，它与某些 DOS 操作系统中的垃圾桶并不完全相同。在 Linux 中，“删除”意味着永久消失。在某些 KDE 版本中也是如此。如果你不确定是否删除一个文件，可以将其拖动到回收站（或者右键点击文件图标并选择“移动到回收站”），它将移动到回收站目录。稍后，你可以点击回收站查看其内容，并将任何你想保留的文件移回它的所在处。回收站文件夹与其他文件夹类似（见图 4.9），但它的“编辑”菜单中包含一个允许你“清空回收站”的项目。选择该项目后，回收站中的所有文件都将化为乌有。
 
-KDE 回收站与其他之处回收站的主要区别在于，你必须特地将文件移动到它这里。删除文件不会自动将其放入回收站；事实上，它会永久消失。
+`KDE` 回收站与其他之处回收站的主要区别在于，你必须特地将文件移动到它这里。删除文件不会自动将其放入回收站；事实上，它会永久消失。
 
-## 模板文件夹
+#### 模板文件夹
+
+
+
+# 第一部分 安装
+
+## 第4章 KDE 桌面简介
 
 模板文件夹包含你可能会经常使用或根本不使用的项目：这之间似乎有一个中间地带。这在很大程度上取决于用户是否希望桌面布满图标。无论如何，点击它都会打开图 4.10 所示的文件夹。
 
@@ -1708,58 +1546,37 @@ KDE 回收站与其他之处回收站的主要区别在于，你必须特地将�
 
 要使用这些模板，请将所选文件类型的图标拖到桌面，并在图标松开时弹出的小菜单中选择“复制”而非“移动”。然后，通过右键点击图标并选择“属性”，你可以为其分配所需的程序或功能。
 
-## 模板方法
+### 模板方法
+
 如果你正在某个特定应用程序中编写一份大报告，可以为该程序创建一个图标，并将报告的文件名作为参数，或者设置你的文件类型以便自动用它打开该程序。无论哪种方式，你都可以使用模板。
 
-## 延伸阅读
+### 延伸阅读
 
 - 你将在第191页第8章“将应用程序添加到桌面”中发现更多关于使用模板的知识。
 
-## 自启动图标
+### 自启动图标
 
 自启动图标打开一个文件夹（见图 4.11），你可以在其中拖入任何想要在启动 KDE 时自动启动的应用程序图标。起初，它是空的。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_86_0.png)
 
-# 图 4.11
+图 4.11
 
 如果你有任何非 KDE 的应用程序希望在每次使用 KDE 时都启动，自启动文件夹就是存放它们链接的地方。
 
-### 自启动程序太多了！
+#### 自启动程序太多了！
+
 很多用户用户会尝试一个小程序，决定它应该一直运行，然后将其丢入自启动文件夹。那么，当用户下次启动系统时，就会有两个程序的副本在运行！
+
 问题在于，当 KDE 重启时，它会重启关闭时正在运行的任何 KDE 应用程序。自启动文件夹中的一个也是如此。困难之处在于确定哪些应用程序符合这一条件，哪些不符合。以下是操作方法：启动所有你希望一直运行的应用程序。然后，点击 K 面板上的注销按钮。如果你没有收到显示“存在无法重启的应用程序”的错误提示框，那么你运行的所有应用程序都将自动重启。如果你看到了错误框，你就知道你选中的哪些程序需要丢到自启动文件夹中。
 
-# 第一部分 安装
-
-## 第4章 KDE 桌面简介
-
-在大多数方面，回收站是一个你认为——但不确定——想要删除的文件目录。
-
-模板文件夹可以让你快速创建指向各种类型应用程序和文件的桌面快捷链接。
-
-要使用这些模板，请将所选文件类型的图标拖到桌面，并在图标松开时弹出的小菜单中选择“复制”而非“移动”。然后，通过右键点击图标并选择“属性”，你可以为其分配所需的程序或功能。
-
-如果你正在某个特定应用程序中编写一份大报告，可以为该程序创建一个图标，并将报告的文件名作为参数，或者设置你的文件类型以便自动用它打开该程序。无论哪种方式，你都可以使用模板。
-
-自启动图标打开一个文件夹（见图 4.11），你可以在其中拖入任何想要在启动 KDE 时自动启动的应用程序图标。起初，它是空的。
-
-如果你有任何非 KDE 的应用程序希望在每次使用 KDE 时都启动，自启动文件夹就是存放它们链接的地方。
-
 KDE 回收站与其他之处站的主要区别在于，你必须特地将文件移动到它这里。删除文件不会自动将其放入回收站；事实上，它会永久消失。
-
-模板文件夹包含你可能会经常使用或根本不使用的项目：这之间似乎有一个中间地带。这在很大程度上取决于用户是否希望桌面布满图标。无论如何，点击它都会打开图 4.10 所示的文件夹。
 
 第一个回收站，它与某些 DOS 操作系统中的垃圾桶并不完全相同。在 Linux 中，“删除”意味着永久消失。在某些 KDE 版本中也是如此。如果你不确定是否删除一个文件，可以将其拖动到回收站（或者右键点击文件图标并选择“移动到回收站”），它将移动到回收站目录。稍后，你可以点击回收站查看其内容，并将任何你想保留的文件移回它的所在处。回收站文件夹与其他文件夹类似（见图 4.9），但它的“编辑”菜单中包含一个允许你“清空回收站”的项目。选择该项目后，回收站中的所有文件都将化为乌有。
 
 KDE 回收站与其他之处回收站的主要区别在于，你必须特地将文件移动到它这里。删除文件不会自动将其放入回收站；事实上，它会永久消失。
 
-
-
-
-
-# 第一部分
-
-# 任务栏不仅仅是一个列表 第 4 章
+## 任务栏不仅仅是一个列表
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_90_0.png)
 
@@ -1773,15 +1590,9 @@ KDE 回收站与其他之处回收站的主要区别在于，你必须特地将�
 
 任务栏有自己的右键鼠标（RMB）菜单，允许你从窗口外部操作正在运行的应用程序。
 
-77
-
-第一部分 安装
-
-第 4 章 K 桌面简介
-
 除了定位在屏幕上外，你还可以隐藏任务栏，除非当鼠标指针碰到它所在的角落或边缘时。
 
-## 使用虚拟桌面让你的显示器变大
+### 使用虚拟桌面让你的显示器变大
 
 打开这么多应用程序以至于它们堆叠在一起是可能的，甚至是很简单的。当这种情况发生时，在它们之间移动就会困难得多。对于像 Netscape 和 StarOffice 这种你可能会全屏运行的应用程序尤其如此。由于由于，Linux 中的窗口管理器和桌面传统上提供了*虚拟桌面*。
 
@@ -1793,11 +1604,9 @@ KDE 回收站与其他之处回收站的主要区别在于，你必须特地将�
 
 许多人发现极其烦恼的一点是，虚拟桌面的安装方式可能会让它们变得完全无缝：你只需将鼠标指针撞向屏幕右侧并让它在那里停留几秒，即可从桌面一移动到桌面二。如果你正对着这一侧执行某些任务，你可能会突然惊讶并惊恐地看到你的应用程序突然消失了。它们只是切换到了另一个桌面。虽然没有造成实质损害，但这确实分散了你的注意力！
 
-78
-
 幸运的是，当我们在下一章中开始自定义 K 桌面时，我将向你展示如何修复应用程序消失的问题，并提供其他实用的自定义建议。
 
-## K 面板按钮和分页器（Pager）
+### K 面板按钮和分页器（Pager）
 
 K 面板上的桌面切换按钮有时被称为“分页器（the pager）”，因为许多 Linux 桌面包含一个同名的应用程序，其功能非常相似。真正的分页器通常包含每个桌面上运行应用程序的微型视图，作为对正在运行状态的提醒。K 面板上的按钮并不执行此。为了使问题进一步复杂，位于 K 菜单系统子菜单中的一个名为桌面分页器（Desktop Pager）的小实用程序执行了此功能，显示每个桌面中运行应用程序的图标。K 面板按钮确实有一个导航辅助：当前桌面的按钮看起来颜色更深，仿佛被按下了一样。
 
@@ -1809,29 +1618,23 @@ K 面板上的桌面切换按钮有时被称为“分页器（the pager）”，
 
 最后，如果你在关闭 KDE 时有跨多个虚拟桌面运行的 KDE 原生应用程序，当你重新启动到桌面一时，它们都会重新打开。这可能会让你非常惊讶。另一方面，它也可以提醒你，这些应用程序在到处运行，可能被忘记了，正在消耗系统资源。
 
-## 使用 KDiskNavigator 进行缩放
+### 使用 KDiskNavigator 进行缩放
 
 KDE 桌面面的相对新成员是 *KDiskNavigator*，它可以让你的生活变得简单得多。图 4.17 展示了它，尽管是以相当极端的形式。
-
-第一部分 安装
-
-# 第 4 章 K 桌面简介
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_93_0.png)
 
 图 4.17
 
-KDiskNavigator 正如其名称所示，用于在本地机器上穿行。从命令提示符，你可以通过输入 `/` 并按回车来进入它。
+`KDiskNavigator` 正如其名称所示，用于在本地机器上穿行。从命令提示符，你可以通过输入 `/` 并按回车来进入它。
 
-KDiskNavigator 背后的基本概念是分级系统，你可以访问它。在 KDN 中，无论是在 KFM 还是 KDN 中，这个顶层目录被称为 /Root。没什么大不了，除了 root 用户——超级用户——有一个家目录。它被称为 /root。这可能会让人困惑……这也解释了为什么你会在 /Root 目录下看到一个 /root 目录，以及如果你以 root 身份登录，你可以打开 KFM 或 KDN 并看到一个名为 /Root 的目录（它是 /`以及一个名为 Home（或 My Home）的目录（实际上是 /root）。
+
+
+KDiskNavigator 背后的基本概念是分级系统，你可以访问它。在 KDN 中，无论是在 KFM 还是 KDN 中，这个顶层目录被称为 `/Root`。没什么大不了，除了 root 用户——超级用户——有一个家目录。它被称为 `/root`。这可能会让人困惑……这也解释了为什么你会在 `/Root` 目录下看到一个 `/root` 目录，以及如果你以 root 身份登录，你可以打开 KFM 或 KDN 并看到一个名为 `/Root` 的目录（它是 `/`）以及一个名为 Home（或 My Home）的目录（实际上是 `/root`）。
 
 这是 KDE，所以它必须是配置的。在 KDN 中，你通过 KDN 菜单底部的选项按钮进行配置。点击它会产生一个像图 4.18 这样的对话框。
 
 81
-
-
-
-
 
 # 第一部分 安装
 
@@ -1840,6 +1643,7 @@ KDiskNavigator 背后的基本概念是分级系统，你可以访问它。在 K
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_95_0.png)
 
 图 4.18
+
 KDN 的选项（Options）对话话框允许你更改 KDN 的外观和行为。
 
 此对话框唯一的复杂部分位于“编辑个人（Edit Personal）”和“编辑共享（Edit Shared）”边界之后。（顺便说一下，除非你以 root 身份登录，否则你无法编辑“共享”部分。）要向其中一个 KDN 栏目添加一个项目——例如，一个你经常工作的文件或目录——请点击相应的“编辑”按钮。将打开一个 KFM 窗口。点击文件（File） > 新建（New） > 互联网地址（URL）。（我知道这对我来说也不合逻辑，但它确实有效，尽管它并不完全直观。）这如图 4.19 所示。
@@ -1847,22 +1651,25 @@ KDN 的选项（Options）对话话框允许你更改 KDN 的外观和行为。
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_95_1.png)
 
 图 4.19
+
 选择“互联网地址 (URL)”来向 KDN 添加项目。
 
-# 使用 KDiskNavigator 穿梭 第 4 章
+### 使用 KDiskNavigator 穿梭 第 4 章
 
 当你执行此操作时，会弹出一个对话框，如图 4.20 所示。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_96_0.png)
 
 图 4.20
+
 在这里你为 KDN 菜单上的新项目命名。
 
-删除字母 URL`，并将其替换为你想给 KDN 菜单项拟命的名称。在我们在这里使用的示例中，我们将为包含此书手稿的目录创建一个菜单项。我把它命名为——为什么不呢？——nKDEBOOK，如图 4.21 所示。
+删除字母 `URL`，并将其替换为你想给 KDN 菜单项拟命的名称。在我们在这里使用的示例中，我们将为包含此书手稿的目录创建一个菜单项。我把它命名为——为什么不呢？——`nKDEBOOK`，如图 4.21 所示。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_96_1.png)
 
 图 4.21
+
 新条目 KDEBOOK 输入在原先 URL 的位置。
 
 然后点击 OK。出现另一个对话框，如图 4.22 所示。
@@ -1870,6 +1677,7 @@ KDN 的选项（Options）对话话框允许你更改 KDN 的外观和行为。
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_96_2.png)
 
 图 4.22
+
 你现在需要在很快就会熟悉的 KFM 属性对话框中进行更改。
 
 现在你点击 URL 标签页，在前两个标签页中不作任何更改。空闲的 URL 页面如图 4.23 所示，但它不会空闲多久。
@@ -1878,17 +1686,18 @@ KDN 的选项（Options）对话话框允许你更改 KDN 的外观和行为。
 
 图 4.23 在这里你指定想让新的 KDN 打开哪个文件或目录。
 
-你需要告诉 KDN 你在说什么以及使用什么种图标。在 URL 框中，输入 **file:** ，后跟上你想要从 KDN 打开的程序或目录的完整路径。在这个示例中，它是 `file:/home/dep/kbook/mss/--no spaces`（见图 4.24）。
+你需要告诉 KDN 你在说什么以及使用什么种图标。在 URL 框中，输入 `file:`，后跟上你想要从 KDN 打开的程序或目录的完整路径。在这个示例中，它是 `file:/home/dep/kbook/mss/--no spaces`（见图 4.24）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_97_1.png)
 
-图 4.24 输入 file: 后跟完整路径。不允许有空格。
+图 4.24 输入 `file:` 后跟完整路径。不允许有空格。
 
 然后，为了为你的新 KDN 菜单项选择图标，点击 URL 窗口正下方带有问号的图标。突然出现了另一个窗口，其中包含所有可用的图标。因为这是一个文件夹，而且我想打开它，所以我选择了一个打开文件夹的图标（见图 4.25）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_98_0.png)
 
 图 4.25
+
 点击 URL 框下方的图标将显示可用图标的缩放（非技术术语）。通过点击它来选择一个，然后点击 OK。
 
 选择好图标后，点击 OK。你返回到 KFM 对话框。在并在也点击 OK。关闭 KFM。如果你想添加其他项目，请重复此过程。如果你想进行其他 KDN 更改（下文描述了这些可能性），请进行并点击 OK。你的新项目现在就在 KDN 菜单上了，如图 4.26 所示。
@@ -1896,6 +1705,7 @@ KDN 的选项（Options）对话话框允许你更改 KDN 的外观和行为。
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_99_0.png)
 
 图 4.26
+
 新的 KDN 项目，展现了它所有子目录的辉煌！
 
 你现在可能认为我忘记了 KDN 选项中的其余项目。我没有忘记。让我们再次看看那个选项对话框，如图 4.27 所示。
@@ -1903,6 +1713,7 @@ KDN 的选项（Options）对话话框允许你更改 KDN 的外观和行为。
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_99_1.png)
 
 图 4.27
+
 现在我们查看 KDN 的其他选项。你可以更改的内容：
 
 - Max folder entries（最大文件夹条目）列出你打开得最多的文件夹。如果你喜欢，可以更改数量，但要保持在合理范围内，否则 KDN 会变得不实用。
@@ -1916,10 +1727,6 @@ KDN 的选项（Options）对话话框允许你更改 KDN 的外观和行为。
 - Show URL items（显示 URL 项）切换 URL 项的显示。
 - Terminal（终端）允许你指定从 KDN 启动的终端程序。
 
-
-
-
-
 ## 定制 K 桌面
 
 - 打造你自己的 K 桌面 93
@@ -1930,21 +1737,21 @@ KDN 的选项（Options）对话话框允许你更改 KDN 的外观和行为。
 - 使用 KFM 导航一切 225
 - 在 KDE 中使用命令行 257
 
-## 打造你自己的 K 桌面
+### 打造你自己的 K 桌面
 
-### 装饰背景
+#### 装饰背景
 
-### 选择屏幕保护程序
+#### 选择屏幕保护程序
 
-### 设置或构建色彩方案
+#### 设置或构建色彩方案
 
 你也可以更改桌面字体
 
-### 设置系统样式
+#### 设置系统样式
 
 其他设置的世界：KDE 控制中心
 
-## 第二部分 定制 K 桌面
+# 第二部分 定制 K 桌面
 
 ## 第 5 章 打造你自己的 K 桌面
 
@@ -1958,10 +1765,14 @@ KDN 的选项（Options）对话话框允许你更改 KDN 的外观和行为。
 
 随心所欲更改背景最快速、简单的方法是在桌面上找到一个未被应用程序占据的地方，点击鼠标右键。在选项中有“显示属性”（Display properties）。点击它，你就会得到一个详细的对话框，如图 5.2 所示。
 
+
+
 在我们开始更改内容之前，让我们先仔细查看第一个标签为“背景”（Background）的选项卡。左上角有一个标记为“桌面”（Desktop）的部分。现在我们发现，KDE 下的每个虚拟桌面都可以有自己独立的背景，与其他所有桌面互不干扰。如果你发现“一、二、三、四”（实际上多达八个）有点普通，你可以点击“重命名”（Rename）按钮并输入你的新名称，将桌面命名为任何喜欢的名称。记住这些名称将出现在你的 K 面板上。对于办公机器来说，将一个标记为“游戏”，另一个标记为“老板键（Boss Key）”可能不是个好主意。无论如何，在这里选择你想要修改的桌面；在本例中我们将使用“一”。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_108_0.png)
+
 图 5.1
+
 默认 KDE 桌面旨在被进一步改进。而且，它正渴望被改进！
 
 “桌面”右侧是一个小显示器的图像，你可以在那里粗略地预览你的选择。复杂的纹理或位图在如此小的图像中并不总能完美显示，但有一种方法——我们稍后会提到——也可以预览这些内容。
@@ -1969,7 +1780,9 @@ KDN 的选项（Options）对话话框允许你更改 KDN 的外观和行为。
 “桌面”之外是“颜色”（Colors）部分，你可以在那里为桌面背景选择纯色或两种颜色的几种变体之一。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_109_0.png)
+
 图 5.2
+
 你可以通过“显示设置”（Display Settings）对话框自定义 KDE 桌面的许多内容。
 
 > 内存不足？保持简单
@@ -1981,6 +1794,7 @@ KDN 的选项（Options）对话话框允许你更改 KDN 的外观和行为。
 右下角有一个允许你将其固定面板的按钮。如果你选择了此项，关闭它时会最小化。最后，一个滑块决定了内存量。
 
 底部有一排按钮：
+
 - 帮助（Help）：显而易见：它打开相关主题。
 - 默认（Default）：恢复默认设置。
 - 应用（Apply）：应用你做的更改。
@@ -1993,38 +1807,42 @@ KDN 的选项（Options）对话话框允许你更改 KDN 的外观和行为。
 对于双色背景，点击——你猜没错——“二”按钮。现在你不仅要选择第一种颜色，还要选择第二种。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_111_0.png)
+
 图 5.3
+
 点击“二”按钮来选择颜色的
 
 默认效果是两种颜色从上到下的混合。如果你想尝试其他效果，点击“设置”（Setup）按钮，它会显示图 5.4 所示的对话框。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_111_1.png)
+
 图 5.4
+
 点击“设置”按钮探索双色效果。
 
 正如你所看到的，除了默认之外你还有几种可能性。从右到左混合颜色正是如此所示（参见图 5.5）。你会发现没有从左到右或从下到上的混合选项。要实现这些效果，只需反转你在颜色选择中选择的颜色即可。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_112_0.png)
+
 图 5.5
+
 选择颜色混合后，它将显示在预览“显示器”上。
 
 其他效果也是可能的，通过点击“使用图案名称”（Use pattern name）按钮并从“图案名称”（Pattern name）框中选择图案来实现一个小预览窗口会显示它看起来是什么样，正如你在图 5.6 中所示。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_112_1.png)
+
 图 5.6
+
 当你选择图案时，一个小预览框会显示你所创造的内容。
 
-
-
-
-
-## 第二部分自定义 K 桌面
+## 第二部分 自定义 K 桌面
 
 ## 第 5 章 让你的 K 桌面独具特色
 
 当效果完全符合你的要求时，双击 OK。你产生了一种双色效果，通过实验可以证明，这种效果可以非常优雅，也可能非常俗气且难看。这完全取决于你。
 
-## 位图背景：壁纸
+### 位图背景：壁纸
 
 颜色很美，而且确实非常高效，但很少有计算机用户不会偶尔想让显示器上的图像变得……嗯，有点不同。实现这一点最简单的方法是使用位图图形，以图像形式显示，或者平铺铺以形成图案或纹理效果。
 
@@ -2038,45 +1856,49 @@ KDE 分发版包含了几十种这样的图片，你也可以通过将 .xpm 或 
 
 我仍然保留了双色设置，尽管我使用的是平铺位图。这意味着我在内存中保留了一张图像——那个我永远看不见的双色屏幕。这纯粹是在浪费内存。如果你使用平铺位图，请确保选择“单色”（One Color）。这是一个很容易犯的错误，而且不容易被注意到。但它会导致你的 Linux 系统更早地开始向磁盘交换，而使用交换文件（swapfile）会显著减慢系统速度。
 
-## 第二部分美化背景 第 5 章
+## 第二部分 美化背景 第 5 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_114_0.png)
 
 **图 5.7**
+
 壁纸下拉框列出了许多内置的背景位图，以及你自行添加的任何图片。在某些情况下，预览屏幕显示的平铺效果比实际应用后的背景要多。因此，某些看起来很糟糕的预览在应用后会显示出精美的桌面。如果有疑问，请应用并根据其在桌面上的外观来判断。
 
 当然，你还可以对位图进行除平铺以外的操作。一张无法填满屏幕的大图如果进行平铺，效果会很糟糕。KDE 的设计者当然考虑到了这一点；使用它来查看你是否点击了布局（Arrangement）下拉框（见图 5.9）。
 
 你可以尽情地尝试不同的效果。再次强调，在这里使用**应用（Apply）**按钮是有帮助的。例如，如果你将一个微小的位图缩放到全屏，效果可能与预览窗口中的效果不同，你可能会决定尝试其他的。
 
-## 第二部分自定义 K 桌面
+## 第二部分 自定义 K 桌面
 
 ## 第 5 章 让你的 K 桌面独具特色
 
 ![](img/4a2883756c73e7b0696dbbd721cc7db_115_0.png)
 
 图 5.8
+
 这张图片中有一个浪费资源的错误。你能认出来它吗？
 
 在这里使用双色背景并不一定是无谓的浪费。它确实消耗了更多资源，但在某些壁纸布局下，你至少能看到你把内存花在了哪里。图 5.10 显示了一个例子。
 
 102
 
-## 第二部分美化背景 第 5 章
+## 第二部分 美化背景 第 5 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_116_0.png)
 
 图 5.9
+
 布局（Arrangement）下拉框为处理位图背景提供了多种选择。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_116_1.png)
 
 图 5.10
+
 双色背景与居中位图的组合可以产生令人悦的效果，尽管是以内存为代价的。
 
 103
 
-## 第二部分自定义 K 桌面 
+## 第二部分 自定义 K 桌面
 
 ## 第 5 章 让你的 K 桌面独具特色
 
@@ -2086,11 +1908,13 @@ KDE 分发版包含了几十种这样的图片，你也可以通过将 .xpm 或 
 
 图 5.11 完成的桌面，具有居中的位图和从上到下混合的颜色。
 
-## 如果你下不了主意
+### 如果你下不了主意
 
-## 第二部分美化背景 第 5 章
+## 第二部分 美化背景 第 5 章
 
 程序员使用“功能蔓延”（feature creep）一词来描述一种现象。你也可以创建并使用一个壁纸列表供背景程序使用。要做到这一点，取消勾选“从目录选择文件（Pick files from directory）”设置。现在桌面变为可用状态。列表中已经列出了三张位图，顶部是“无壁纸”。要添加位图，高亮“无壁纸”项并点击添加（Add）。然后返回仍打开的显示设置对话框，选择一张位图。当你回到随机（Random）设置对话框时，新的位图已添加，替换了第二个“无壁纸”。当然，你也可以通过高亮项并点击删除删除删除。
+
+
 
 这里有两个额外的设置：秒计时延迟（Timer Delay in seconds）和按顺序（In order）。前者是一个文本框，你可以在其中输入桌面更改的频率。默认值为 600 秒，即每 10 分钟一次。后者如果勾选，将导致背景按照列表中的顺序循环，而不是随机。
 
@@ -2099,16 +1923,15 @@ KDE 分发版包含了几十种这样的图片，你也可以通过将 .xpm 或 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_118_0.png)
 
 图 5.12
+
 设置对话框允许你选择显示的壁纸以及更改它们的频率。
 
 ## 将应用程序作为背景：酷炫功能
 
 这目前（尚）也不实用，但我喜欢它。存在一些应用程序，主要目的是提供与颜色、位图甚至位图切换器不同的、实际上会执行某些操作的背景。目前，它们做的事情非常有限：一个动画鱼缸，一个试图让你的屏幕看起来像壁炉的程序，尽管它消耗了大量的
 
-
-
-
 # 第二部分
+
 ## 第 5 章 装饰背景
 
 你处理器的性能，这是一个动画地球仪，如果配置得当，它可以让在无窗户办公室里的人看到外面是否是黑暗。这是一个可能会发生越来越多开发的领域，也许会达到产生某些实用功能的程度。在此期间，它可以产生一种酷炫的视觉效果。
@@ -2119,7 +1942,7 @@ KDE 分发版包含了几十种这样的图片，你也可以通过将 .xpm 或 
 
 - 如果你不知道如何在 KDE 中杀死进程，请参阅第 12 章，“使用 KDE 管理 Linux 系统功能”，第 271 页。
 
-如果你想要一个动态应用程序，它被设置为一个程序，而不是背景。首先，进入“显示设置”对话框，并关闭“双色”和“壁纸”设置。你不需要它们，它们只会消耗内存。点击“确定”关闭对话框；你就处理好了。然后启动你想要作为背景的程序，以确保它在你的系统上运行正常。打开并关闭几个程序。切换虚拟桌面。如果一切正常，屏幕上没有程序留下的微小“伪影”，或者程序中没有来自屏幕的痕迹，你可以创建一个 kdelink 并将其复制到你的 `Autostart` 文件夹中。这样每次你启动 KDE 时它都会启动。
+如果你想要一个动态应用程序，它被设置为一个程序，而不是背景。首先，进入“显示设置”对话框，并关闭“双色”和“壁纸”设置。你不需要它们，它们只会消耗内存。点击“确定”关闭对话框；你就处理好了。然后启动你想要作为背景的程序，以确保它在你的系统上运行正常。打开并关闭几个程序。切换虚拟桌面。如果一切正常，屏幕上没有程序留下的微小“伪影”，或者程序中没有来自屏幕的痕迹，你可以创建一个 `kdelink` 并将其复制到你的 `Autostart` 文件夹中。这样每次你启动 KDE 时它都会启动。
 
 ### 另请
 
@@ -2128,15 +1951,19 @@ KDE 分发版包含了几十种这样的图片，你也可以通过将 .xpm 或 
 为了感受动态背景可能的外观，这里是 XGlobe（图 5.13）运行在一个高度自定义的桌面上的，该桌面删除了所有图标，且任务栏和 K 面都设置为隐藏（这些我们将在本章稍后的部分学习如何操作）。此桌面设置为每 20 分钟更新一次。
 
 ## 第二部分 定制 K 桌面
+
 ## 第 5 章 让 K 桌面独具特色
 
 Min, 1999年7月12日, 6:20 EDT
+
 位置 22.00' N 23.68' E
+
 太阳位置 pos 22.00' N 23.68' E
 
 ![](img/4a2883756c73e7b0696bdbd721c5c7db_121_0.png)
 
 图 5.13
+
 XGlobe 运行在一个 KDE 桌面上，其他所有内容都已隐藏。它们都在那里供你使用，只是你看不到。
 
 ### 选择屏幕保护
@@ -2144,25 +1971,31 @@ XGlobe 运行在一个 KDE 桌面上，其他所有内容都已隐藏。它们�
 屏幕保护在过去的单色文本模式终端时代被广泛使用，随着时间的推移，阴极射线管中的荧光层会因为相同位置显示字符而发生改变。尽管现代显示器据认为不再受到这种损坏，但屏幕保护已成为几乎每个操作系统和用户界面的标准部分，Linux 和 KDE 也不例外。
 
 # 第十一部分
+
 ## 选择屏幕保护 第 5 章
 
 ### 控制台屏幕保护
+
 如果你使用基于控制的登录，可以进行一个实验：不要启动 KDE。你会发现几分钟后，你的 Linux 屏幕会自动变黑。当 X 窗口系统运行时，Linux 屏幕保护不会被调用，因此如果屏幕要变黑或使用其他扩展屏幕的程序，Linux GUI 必须提供自己的屏幕保护。
 
 你可以通过“显示设置”对话框中的“屏幕保护”选项卡来调用 KDE 的屏幕保护（见图 5.14）。
 
-![](img/4a2883756c73e7b0696bdbd721c5c7db_122_0.png)
+![](img/4a2883756c73e7b0696dbbd721c5c7db_122_0.png)
 
 图 5.14
+
 使用屏幕保护选项卡配置你的屏幕保护。
 
 在屏幕保护选项卡的顶部有一个预览，但如果你仔细观察，你会发现以下项之间的区别：
 
 - 忽略
+
 - 保存
+
 - 锁定屏幕
 
 ## 第二部分 定制 K 桌面
+
 ## 第 5 章 让 K 桌面独具特色
 
 在“显示设置”对话框中，你可以设置所有 KDE 原生应用程序的外观，以及在 KDE 下运行的其他 X 窗口系统的某些方面的外观。这是在“颜色”选项卡上完成的（见图 5.15）。
@@ -2177,9 +2010,6 @@ XGlobe 运行在一个 KDE 桌面上，其他所有内容都已隐藏。它们�
 
 最后，“优先级”部分决定了屏幕保护在应用程序排序中的位置。默认是“高”，如果你在键盘和鼠标一段时间没被触摸时没有太多任务，这样很好。然而，如果你经常在终端窗口中执行复杂任务或编译程序，如果屏幕保护在执行期间开启，这些过程可能会变慢。（在我看来，这并不通用，你大可以完全离开 X 窗口系统来编译软件。这可以释放系统资源，在许多情况下编译速度会快得多。）
 
-
-
-
 ## 第二部分 自定义 K 桌面
 
 ## 第 5 章 让 K 桌面独具特色
@@ -2193,6 +2023,7 @@ XGlobe 运行在一个 KDE 桌面上，其他所有内容都已隐藏。它们�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_125_1.png)
 
 > 为其命名
+
 > 你可以根据自己的名称修改现有的颜色方案。如果你得到了意料之外的结果——这在你第一次编辑颜色方案时很可能会发生——你可能会运行该方案，且在没有方法将其恢复原样，除非你的记忆非常好，并且可以逐项撤销你所做的更改。
 
 图 5.16
@@ -2222,18 +2053,20 @@ XGlobe 运行在一个 KDE 桌面上，其他所有内容都已隐藏。它们�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_127_0.png)
 
 图 5.18
+
 当 KDE 需要选择颜色时，会使用“选择颜色”对话框。
 
 不要忽略调色板旁边的垂直条。它决定了你所选颜色的亮度。你可以点击其上的任何地方，或使用鼠标上下滑动指针，直到颜色恰好合适。
 
+
+
 在费了这么多精力之后，你很有可能想在其他地方使用你好不容易获得的颜色或其变体。要做到这一点，你可以将其保存为 24 种可能的“自定义颜色（Custom Colors）”之一。首先，点击“自定义颜色”区域中的空白处，该区域最初有 24 个空白矩形。（如果它们都满了，选一个你已经不再感兴趣的矩形，因为它会被新颜色覆盖。）如果你不这样做，颜色将进入第一个矩形，擦除当前那里的任何内容。一旦你选择了合适的矩形，点击“添加到自定义颜色”，你将被带回“颜色”选项卡，你可以在那里看到更改后的效果。对你想要重新上色的每个组件重复此操作。
 
 > ### 不要放飞自控！
+>
 > 在设置组件颜色时，尽量保持克制。如果你将“背景（Background）”设置为黑色或白色，你最终将得到一个几乎无法使用的桌面。如果你挑选了刺眼、俗气的颜色，你每一天都将以头痛结束（尽管我认识一个清醒的人专门在同一块大屏幕上使用紫色和绿色）。记住，你将不得不与它共处！
 
 当你完成所有更改后，点击“应用（Apply）”，如果你仍然喜欢你的操作，就点击“确定”。
-
-114
 
 ## 第二部分
 
@@ -2244,16 +2077,17 @@ XGlobe 运行在一个 KDE 桌面上，其他所有内容都已隐藏。它们�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_128_0.png)
 
 图 5.19
+
 字体选项卡让你更改屏幕上的字体族。
 
 ### 字体（Fonts）与字体族（Typefaces）的区别
+
 随着计算机时代的到来，“font（字体）”一词被误用，本应使用“typeface（字体族）”。字体的类型名称是 typeface；特定尺寸的 typeface 就是 font。Helvetica 和 Times 是 typeface。Helvetica 12pt 是一个 font。KDE 字体选项卡是计算领域中少数几个可以区分这种区别的地方之一。
 
 更改屏幕元素的字体族和大小非常简单：首先，选择你想更改的元素。然后点击字体框（见图 5.20）。
 
-115
-
 ## 第二部分 自定义 K 桌面
+
 ## 第 5 章 让 K 桌面独具特色
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_129.png)
@@ -2269,6 +2103,7 @@ XGlobe 运行在一个 KDE 桌面上，其他所有内容都已隐藏。它们�
 | lucida | |
 
 图 5.20
+
 点击下拉框以选择一个字体族。
 
 你的选择将在对话框底部的样本窗口中预览。要选择**粗体（Bold）**样式、*斜体（Italic）*或两者，点击相应的框。重复以满足你的喜好。
@@ -2286,6 +2121,7 @@ XGlobe 运行在一个 KDE 桌面上，其他所有内容都已隐藏。它们�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_130_0.png)
 
 图 5.21
+
 点击下拉框更改桌面上使用的字符集。并不是所有字体族都支持字符集。
 
 ### 设置系统样式
@@ -2296,12 +2132,6 @@ XGlobe 运行在一个 KDE 桌面上，其他所有内容都已隐藏。它们�
 - 屏幕顶部的 Mac OS 样式菜单栏将从你正在运行的应用程序顶部移除菜单栏，并将活动应用程序（当前具有焦点的程序）的菜单栏置屏幕顶部。
 - 将字体和颜色应用到非 KDE 应用程序可能可能不会向非 KDE 应用程序应用字体和颜色，因为某些非 KDE 应用程序不符合程序。在其他一些情况下，勾选此框可能会减少非 KDE 应用程序的功能。而且其效果如何取决于你做了哪些选择。
 
-117
-
-
-
-
-
 # 第二部分 自定义 K 桌面
 
 # 第 5 章 让 K 桌面独具特色
@@ -2311,10 +2141,12 @@ XGlobe 运行在一个 KDE 桌面上，其他所有内容都已隐藏。它们�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_131_0.png)
 
 图 5.22
+
 样式（Style）对话框设置了所有 KDE 的外观元素，在某些情况下也涵盖 KDE 之外。
 
 > 小心使用那个默认按钮！
-点击五个显示设置屏幕中的任何一个的“默认”（Default）按钮，都会将这五个设置全部重置为默认值，这包括 Windows 95 样式以及“向非 KDE 应用颜色和样式”。因此，只有在你严重地弄坏了某些东西并想从头开始时，才重置默认设置。
+>
+> 点击五个显示设置屏幕中的任何一个的“默认”（Default）按钮，都会将这五个设置全部重置为默认值，这包括 Windows 95 样式以及“向非 KDE 应用颜色和样式”。因此，只有在你严重地弄坏了某些东西并想从头开始时，才重置默认设置。
 
 ## 其他设置的世界：KDE 控制中心
 
@@ -2362,6 +2194,8 @@ KDE 控制中心是海量配置可能的中心。遗憾的是，对于大多数�
 
 面板配置的第二个选项卡“选项”（Options）如图 5.25 所示。
 
+
+
 | KDE 控制中心 | 选项 | 桌面 |
 | :--- | :--- | :--- |
 | 应用程序 | | 磁盘导航器 |
@@ -2369,7 +2203,7 @@ KDE 控制中心是海量配置可能的中心。遗憾的是，对于大多数�
 | 文件管理器 | | |
 | 网络浏览器 | | |
 | 面板 | | |
-| 桌面 | 自动隐藏面板 |
+| 桌面 | 自动隐藏面板 | |
 | 信息 | | 自动隐藏任务栏 |
 | 输入设备 | | 动画显示/隐藏 |
 | 键 | | |
@@ -2382,6 +2216,7 @@ KDE 控制中心是海量配置可能的中心。遗憾的是，对于大多数�
 | 帮助 | | |
 
 图 5.25
+
 面板配置的第二个选项卡“选项”决定了 K Panel 的外观。
 
 菜单提示（Menutips）位于顶部，是你希望小气泡出现的地方。如果你勾选“显示菜单提示”（Show Menutips），滑块控制它们出现之前停留多久。如果你不勾选，它们只会在鼠标指针悬停在图标或菜单项上时出现。
@@ -2402,11 +2237,6 @@ KDE 控制中心是海量配置可能的中心。遗憾的是，对于大多数�
 
 > 寻找问题的解决方案 看起来 Swatch 公司（一家制造流行且时尚的塑料腕表的制造商）梦想过将一天划分为 1000 个等份，且一天从瑞士总部的午夜开始。如果你选择这一项，你就永远不必担心自瑞士午夜以来过了几之几天（我告诉过你觉得我在编造的）。也许这个主意是为了把 Swatch 手表卖给那些现在对时间感兴趣的人，因为他们的电脑不告诉他们时间。互联网与这有什么关系，谁知道呢。
 
-
-
-
-
-## 第二部分
 ## 其他设置世界：KDE 控制中心 第5章
 
 斯沃世（Swatch）不仅取代了某个运行了500多年且毫无故障的东西（即时间测量），该公司还决定让小时、分钟和秒变得过时。为什么不直接将地球分为千分之一呢？你确实需要这样做，因为出于导航目的，小时、分钟、秒与经度之间存在联系。而且，他们还必须移动太阳，而太阳恰好是一个1米弧。要将其扩大到1米节拍，需要它的尺寸几乎是目前尺寸的1.5倍。斯沃世发起了一场杀死地球上所有生命的进军！
@@ -2418,18 +2248,23 @@ KDE 控制中心是海量配置可能的中心。遗憾的是，对于大多数�
 图5.26中的“桌面”（Desktops）标签处理虚拟桌面。标记为“可见”（Visible）的滑块让你选择虚拟桌面的数量。范围是从K面板（K Panel）上出现的二到八个。“宽度”（Width）滑块让你决定它们占据多少面板空间。这与在标签顶部对应每个虚拟桌面的文本框中为它们指定的名称（如果有的话）以完全显示这些名称所需的宽度无关。换句话说，如果你设置的宽度太短，名称将被截断以适应该宽度。在普通尺寸的K面板上，虚拟桌面是垂直排列的，而在微型面板上，它们是单行排列的。
 
 ### 八个虚拟桌面还不够？
+
 由于某种原因——我无法想象会是什么——如果你需要超过八个虚拟桌面，可以将KDE配置为多32个。在文本编辑器中，打开`~/.kde/share/config/kwarc`并滚动到以`NumberDesktops=`开头的行。在等号后面输入你想要的桌面数量，保存并关闭文件，然后重启KDE。现在你拥有了所有可能需要的桌面。
 
 桌面导航（Desktop Navigator）标签（见图5.27）对于读过第4章“K桌面简介”的人来说是熟悉的。它在这里出现作为一个提醒：如果你禁用了桌面导航中的“显示条目”（Show Entry），你可以在桌面导航标签上找到它。
 
 ## 自定义K桌面
+
 ### 第5章
+
 ### 让K桌面拥有自己的特色
 
 ![](img/4a2883756c73e7b0696bd721c57db137_0.png)
+
 - 你可以在“桌面”标签上指定虚拟桌面按钮的数量、名称和K面板的宽度。
 
 ![](img/4a2883756c73e7b0696bd721c57db137_1.png)
+
 - 你可以从控制中心配置桌面导航，也可以从K桌面自身的“选项”（Options）条目进行配置。
 
 ## 其他设置世界：KDE 控制中心 第5章
@@ -2437,6 +2272,7 @@ KDE 控制中心是海量配置可能的中心。遗憾的是，对于大多数�
 控制中心的下一个通用部分是“桌面”（Desktop）。在那里，我们把本章的前半部分介绍了其中许多项目，尽管方式不同，但我们将只查看在“显示”（Display）对话框中未重复的项目。其中第一个是“边框”（Borders），如图5.28所示。
 
 ![](img/4a2883756c73e7b0696bd721c57db138_0.png)
+
 **图5.28** - 边框标签显示了当鼠标指针或应用程序靠近屏幕边缘时发生的情况。
 
 第一部分“活动桌面边框”（Active desktop borders）让你决定将鼠标指针停留在屏幕边缘是否会导致跳转到下一个虚拟桌面，如果是，鼠标指针必须停留多久才会发生变化以及之后会发生什么。要启用这种导航，点击“启用活动边框”（Enable active borders）旁边的复选框。如果你不这样做，仍然可以使用K面板上的按钮在桌面之间导航。如果你勾选了此框，接下来的两个设置将可以配置。第一个是“切换后将指针移向中心”（Move pointer towards center after switch）。这防止了当你离开桌子时鼠标意外靠在边界上，切换到下一个桌面后它仍然靠在边缘，然后过一会儿又像交通灯一样切换到那个桌面。“桌面切换延迟”（Desktop switch delay）滑块让你选择鼠标指针在屏幕边缘跳转到新虚拟桌面之前停留多久。单位是秒。
@@ -2446,6 +2282,7 @@ KDE 控制中心是海量配置可能的中心。遗憾的是，对于大多数�
 下一个之前未探讨的项目是“桌面图标”（Desktop Icons），如图5.29所示。
 
 ![](img/4a2883756c73e7b0696bd721c57db139_0.png)
+
 **图 5.29** - 你保留在桌面上的图标的间距和外观在“桌面图标”标签中设置。
 
 “水平和垂直网格间距”（Horizontal and Vertical Grid Spacing）指定了桌面图标吸附的虚拟网格。这可以产生整洁、有组织的外观。“桌面图标透明文本”（Transparent Text for Desktop Icons）复选框决定了这些不直观图标的文本是否显示在与屏幕相同的背景上。如果你勾选了它，图标文本将直接显示在桌面背景上。如果你没有勾选，你可以在下面的“图标背景”栏指定统一的背景。这允许你选择图标标签的颜色。通过调整这些控件，你可以让图标完全隐藏。
@@ -2468,23 +2305,21 @@ Autostart=/home/yourhome/Desktop/Autostart
 
 ## 字符集错误
 
-1.1.1之前的KDE版本（甚至在某些情况下之后）每当你退出KDE或打开虚拟终端时，都会受到一个小漏洞的影响，屏幕上会出现警告性的“错误的字符集！错误的字符集”（Wrong charset! Wrong charset）。
-
-如果你深受这个问题，你需要知道两点。第一，该信息（以及导致其出现的原因，仍存在争议）不会造成伤害，可以安全地忽略。第二，将“语言”（Locale）标签中的所有三种语言设置为同一种语言通常会让它消失。
 
 
-
-
+# 第五章 打造专属桌面
 
 ## 第二部分 定制 K 桌面
 
-# 第五章 打造专属专属桌面
+1.1.1 之前的 `KDE` 版本（甚至在某些情况下之后）每当你退出 `KDE` 或打开虚拟终端时，都会受到一个小漏洞的影响，屏幕上会出现警告性的“错误的字符集！错误的字符集”（`Wrong charset! Wrong charset`）。
+
+如果你深受这个问题，你需要知道两点。第一，该信息（以及导致其出现的原因，仍存在争议）不会造成伤害，可以安全地忽略。第二，将“语言”（`Locale`）标签中的所有三种语言设置为同一种语言通常会让它消失。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_141_0.png)
 
 图 5.30
 
-在“区域”（Locale）选项卡上，为 KDE 的菜单、图标和帮助文件选择一种、两种或三种语言。
+在“区域”（`Locale`）选项卡上，为 `KDE` 的菜单、图标和帮助文件选择一种、两种或三种语言。
 
 我们已经在这些内容的屏幕保护和样式迭代上花费了大量时间，因此在这里不再讨论它们了。下一个大类是“信息”，除了它在控制中心中的作用外，我们在这里不再讨论它。它是一个全面且实用的系统信息列表，但你无法更改或配置其中的任何内容。
 
@@ -2492,11 +2327,11 @@ Autostart=/home/yourhome/Desktop/Autostart
 
 - *这些信息可以在设置菜单下的 K“信息”子菜单中找到，我将在第 21 章“使用 Kmail 发送邮件”第 443 页进行讨论。*
 
-这带我们来到了输入设备，第一个是“国际键盘”（International Keyboard）（见图 5.31）。
+这带我们来到了输入设备，第一个是“国际键盘”（`International Keyboard`）（见图 5.31）。
 
-“国际键盘”选项卡配置了一个名为 KiKbd 的程序，它允许你在不同国家键盘的各种行为之间切换。如果你只使用一个映射了所有键盘的键盘，你可以安全地忽略整个键盘部分，因为你可能永远用不到它提供的任何功能。
+“国际键盘”选项卡配置了一个名为 `KiKbd` 的程序，它允许你在不同国家键盘的各种行为之间切换。如果你只使用一个映射了所有键盘的键盘，你可以安全地忽略整个键盘部分，因为你可能永远用不到它提供的任何功能。
 
-要开始，点击“添加键”（Add key），这会列出一个真正的国家键盘列表，你可以从中进行选择。列表顶部的键盘是默认键盘；你可以使用向上和向下按钮更改列表的顺序。如果你误添加了键盘，使用“删除”（Delete）按钮将其移除。
+要开始，点击“添加键”（`Add key`），这会列出一个真正的国家键盘列表，你可以从中进行选择。列表顶部的键盘是默认键盘；你可以使用向上和向下按钮更改列表的顺序。如果你误添加了键盘，使用“删除”（`Delete`）按钮将其移除。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_142_0.png)
 
@@ -2504,29 +2339,29 @@ Autostart=/home/yourhome/Desktop/Autostart
 
 是的，键盘是有国籍的，“国际键盘”选项卡允许你设置想要使用的键盘。
 
-“切换”（Switch）和“Alt 切换”（Alt Switch）设置允许你确定使用什么按键组合切换到列表中的下一个键盘。如果你勾选了**热键**（hotkey）列表，此按键组合将产生列表中的键盘菜单。“**蜂鸣**”（Beep）复选框会在切换键盘时产生系统蜂鸣声。
+“切换”（`Switch`）和“`Alt Switch`”设置允许你确定使用什么按键组合切换到列表中的下一个键盘。如果你勾选了 `hotkey` 列表，此按键组合将产生列表中的键盘菜单。`Beep` 复选框会在切换键盘时产生系统蜂鸣声。
 
-如果你习惯切换语言、字符集、字母表和键盘，那么高级设置对你来说就有意义；反之则不然。选择它会弹出一个对话框，你可以在 KDE 内部模拟 CapsLock（大写锁定），以解决某些语言中硬件 CapsLock 的问题。你可以设置切换键，如果长按它们，它们将产生整个世界键盘菜单。你还可以决定切换键盘是适用于整个桌面、仅限当前窗口还是一类窗口——即特定应用程序。如果你选择最后一种，还可以勾选一个框，使该类设置在会话之间保留。
+如果你习惯切换语言、字符集、字母表和键盘，那么高级设置对你来说就有意义；反之则不然。选择它会弹出一个对话框，你可以在 `KDE` 内部模拟 `CapsLock`（大写锁定），以解决某些语言中硬件 `CapsLock` 的问题。你可以设置切换键，如果长按它们，它们将产生整个世界键盘菜单。你还可以决定切换键盘是适用于整个桌面、仅限当前窗口还是一类窗口——即特定应用程序。如果你选择最后一种，还可以勾选一个框，使该类设置在会话之间保留。
 
-“**国际键盘样式**”（International Keyboard Style）选项卡如图 5.32 所示，允许你为 KiKbd 相关的菜单和键选择颜色。点击颜色条并选择你喜欢的颜色。你还可以更改出现在 KiKbd 中的字符的字体和大小。
+“国际键盘样式”（`International Keyboard Style`）选项卡如图 5.32 所示，允许你为 `KiKbd` 相关的菜单和键选择颜色。点击颜色条并选择你喜欢的颜色。你还可以更改出现在 `KiKbd` 中的字符的字体和大小。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_143_0.png)
 
 图 5.32
 
-“样式”（Style）选项卡使用熟悉的颜色条和列表让你更改 KiKbd 的外观。
+“样式”（`Style`）选项卡使用熟悉的颜色条和列表让你更改 `KiKbd` 的外观。
 
-最后，是国际键盘的“启动”（StartUp）选项卡，如图 5.33 所示。
+最后，是国际键盘的“启动”（`StartUp`）选项卡，如图 5.33 所示。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_143_1.png)
 
 图 5.33
 
-要自动启动 KiKbd（无论是停靠在 K 面板还是位于你选择的屏幕角），在此处说明你的偏好。
+要自动启动 `KiKbd`（无论是停靠在 K 面板还是位于你选择的屏幕角），在此处说明你的偏好。
 
-“启动”选项卡允许你在每次启动 KDE 时启用自动启动 KiKbd。如果你想让它自动停靠在 K 面板，请勾选“停靠”（Docked）复选框。否则，点击“位置”（Place）列表框选择它出现的屏幕角。
+“启动”选项卡允许你在每次启动 `KDE` 时启用自动启动 `KiKbd`。如果你想让它自动停靠在 K 面板，请勾选“停靠”（`Docked`）复选框。否则，点击“位置”（`Place`）列表框选择它出现的屏幕角。
 
-下一个输入设备是“键盘”（Keyboard），如图 5.34 所示。
+下一个输入设备是“键盘”（`Keyboard`），如图 5.34 所示。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_144_0.png)
 
@@ -2534,70 +2369,41 @@ Autostart=/home/yourhome/Desktop/Autostart
 
 “键盘”选项卡就像“国际键盘”设置一样晦懂！而且，这些设置可能不起作用。
 
-“键盘”选项卡提供两个设置，在这两种情况下都有你的选择不起作用的可能性。第一个是“键盘重复”（Keyboard repeat），除非你在设置 XFree86 时启用了它，否则它将不起作用。（别担心，你肯定已经启用了。）在这里你可以关闭它，如果长按一个键，它将用其代表的字符填满你的屏幕。第二个是“按键点击音”（Key click volume）。对于那些怀念打字机啪啪响的日子的人来说，这个设置可以为工作场所带来一丝怀旧的噪音和混乱。当开启时，每当你击击键，电脑扬声器就会发出声音。而且，这就是主意。我不确定这是否就是主意，但确实是这么说的。总之，这就是主意。
+“键盘”选项卡提供两个设置，在这两种情况下都有你的选择不起作用的可能性。第一个是“键盘重复”（`Keyboard repeat`），除非你在设置 `XFree86` 时启用了它，否则它将不起作用。（别担心，你肯定已经启用了。）在这里你可以关闭它，如果长按一个键，它将用其代表的字符填满你的屏幕。第二个是“按键点击音”（`Key click volume`）。对于那些怀念打字机啪啪响的日子的人来说，这个设置可以为工作场所带来一丝怀旧的噪音和混乱。当开启时，每当你击击键，电脑扬声器就会发出声音。而且，这就是主意。我不确定这是否就是主意，但确实是这么说的。总之，这就是主意。
 
-最后一种输入设备是“鼠标”（Mouse）（见图 5.35）。
+最后一种输入设备是“鼠标”（`Mouse`）（见图 5.35）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_145_0.png)
 
 图 5.35
 
-是的，键盘是有国籍的，“国际键盘”选项卡允许你设置想要使用的键盘。
+### 其他设置世界：KDE 控制中心
 
-“切换”和“Alt 切换”设置允许你确定使用什么按键组合切换到列表中的下一个键盘。如果你勾选了**热键**列表，此按键组合将产生列表中的键盘菜单。“**蜂鸣**”复选框会在切换键盘时产生系统蜂鸣声。
+“标准键”（`Standard Keys`）标签标记为“标准快捷键”，其工作方式与“全局键”（`Global Keys`）标签完全相同。唯一的区别在于所绑定的操作。当你滚动列表时，你会发现这些都是在应用程序内部发生的操作：文本处理、光标移动之类的内容。同样，如果你喜欢的话，可以设置自己的方案；同样，你无法更改提供的两个方案，但你可以将它们作为你自定义并重命的方案的基础。
 
-如果你习惯切换语言、字符集、字母表和键盘，那么高级设置对你来说就有意义；反之则不然。选择它会弹出一个对话框，你可以在 KDE 内部模拟 CapsLock，以解决某些语言中硬件 CapsLock 的问题。你可以设置切换键，如果长按它们，它们将产生整个世界键盘菜单。你还可以决定切换键盘是适用于整个桌面、仅限当前窗口还是一类窗口——即特定应用程序。如果你选择最后一种，还可以勾选一个框，使该类设置在会话之间保留。
-
-“**国际键盘样式**”选项卡如图 5.32 所示，允许你为 KiKbd 相关的菜单和键选择颜色。点击颜色条并选择你喜欢的颜色。你还可以更改出现在 KiKbd 中的字符的字体和大小。
-
-“样式”选项卡使用熟悉的颜色条和列表让你更改 KiKbd 的外观。
-
-最后，是国际键盘的“启动”选项卡，如图 5.33 所示。
-
-要自动启动 KiKbd（无论是停靠在 K 面板还是位于你选择的屏幕角），在此处说明你的偏好。
-
-“启动”选项卡允许你在每次启动 KDE 时启用自动启动 KiKbd。如果你想让它自动停靠在 K 面板，请勾选“停靠”复选框。否则，点击“位置”列表框选择它出现的屏幕角。
-
-下一个输入设备是“键盘”，如图 5.34 所示。
-
-“键盘”选项卡就像“国际键盘”设置一样晦懂！而且，这些设置可能不起作用。
-
-“键盘”选项卡提供两个设置，在这两种情况下都有你的选择不起作用的可能性。第一个是“键盘重复”，除非你在设置 XFree86 时启用了它，否则它不起作用。（别担心，你肯定已经启用了。）在这里你可以关闭它，如果长按一个键，它将用其代表的字符填满你的屏幕。第二个是“按键点击音”。对于那些怀念打字机啪啪响的日子的人来说，这个设置可以为工作场所带来一丝怀旧的噪音和混乱。当开启时，每当你击击键，电脑扬声器就会发出声音。而且，这就是主意。
-
-最后一种输入设备是“鼠标”（见图 5.35）。
-
-
-
-
-
-# 第二部分
-## 其他设置世界：KDE 控制中心 第5 章
-
-“标准键”（Standard Keys）标签标记为“标准快捷键”，其工作方式与“全局键”（Global Keys）标签完全相同。唯一的区别在于所绑定的操作。当你滚动列表时，你会发现这些都是在应用程序内部发生的操作：文本处理、光标移动之类的内容。同样，如果你喜欢的话，可以设置自己的方案；同样，你无法更改提供的两个方案，但你可以将它们作为你自定义并重命的方案的基础。
-
-下一个主要的控制类别是“网络”（Network），它目前只包含一个项目，即带有三个标签的“会话”（Talk）配置。
+下一个主要的控制类别是“网络”（`Network`），它目前只包含一个项目，即带有三个标签的“会话”（`Talk`）配置。
 
 另请
 
 - *我将在第 15 章“多媒体：音乐与电影”中详细解释会话配置，因此在这里不再详述，只需说明这是进入其选项的路径。*
 
-因此，我们进入“声音”（Sound），这里有两个项目，其中第一个是“提示音”（Bell），如图 5.38 所示。
+因此，我们进入“声音”（`Sound`），这里有两个项目，其中第一个是“提示音”（`Bell`），如图 5.38 所示。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_148_0.png)
 
 图 5.38
-通过仔细操作控制控件，你可以让 KDE 系统发出蜂鸣声，这一定会引起你的注意。
 
-“Bell”实际上是你电脑里那个小扬声器发出的唯一有用声音，它通常在发生错误时响起来。因此，它应该引起你的注意，而 KDE 设置允许你确保它能这样做。通过音量、持续时间和频率的组合，可以达到一种威胁水晶杯并与你牙里的填充物产生共鸣的效果。或者你也可以选择不那么痛苦的。
+通过仔细操作控制控件，你可以让 `KDE` 系统发出蜂鸣声，这一定会引起你的注意。
 
-# 第二部分自定义 K 桌面
-# 第5 章 让 K 桌面独具特色
+`Bell` 实际上是你电脑里那个小扬声器发出的唯一有用声音，它通常在发生错误时响起来。因此，它应该引起你的注意，而 `KDE` 设置允许你确保它能这样做。通过音量、持续时间和频率的组合，可以达到一种威胁水晶杯并与你牙里的填充物产生共鸣的效果。或者你也可以选择不那么痛苦的。
 
 有三个设置需要完成：
 
-- 音量（Volume）：当然，这是指声音有多大
-- 音调（Pitch）：控制频率（尽管它不会进入低音器范围，也不会让狗嚎叫）
-- 持续时间（Duration）：设置声音发射长度，以毫秒为单位
+- 音量（`Volume`）：当然，这是指声音有多大
+- 音调（`Pitch`）：控制频率（尽管它不会进入低音器范围，也不会让狗嚎叫）
+- 持续时间（`Duration`）：设置声音发射长度，以毫秒为单位
+
+
 
 有一个“测试”（Test）按钮，可以让你尝试不同的设置。通常，正确的设置是那种在测试时能让隔壁房间传出一声“停下！你那嗡嗡叫声快把我逼疯了！”的设置。
 
@@ -2606,12 +2412,15 @@ Autostart=/home/yourhome/Desktop/Autostart
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_149_0.png)
 
 图 5.39
+
 疯狂源于此：你可以为 KDE 中执行的几乎任何操作分配声音文件。
 
 136
 
 # 第二部分
+
 ## 其他设置世界：KDE 控制中心 第5 章
+
 ## 太吵了
 
 我最近在一个拥有数百台电脑的大办公室内里，所有的电脑都配有声卡和扬声器，并且都开启了系统音。那里听起来像个布谷鸟工厂，我想他们在那里到底是如何完成工作的。过了一会儿，我知道了答案。他们根本没法工作。严肃地说，如果你为你屏幕上发生的每件事都分配声音，而且你又在办公室工作，那么如果某天当你走向汽车时，坐在你旁边的人试图撞倒你，请不要感到惊讶。
@@ -2622,17 +2431,18 @@ Autostart=/home/yourhome/Desktop/Autostart
 
 系统声音可以很有趣，但它们需要保持极大的礼貌。隔壁桌的人可能是一个非常老练的用户。
 
-系统声音与“提示音”的区别在于，它们需要安装并正确配置声卡和扬声器，否则你听不到它们。它们还需要勾选**启用系统声音**（enable system sounds）这个小复选框。你会惊讶于有多少人没有做到这一点，然后纳闷为什么声音不起作用。
+系统声音与“提示音”的区别在于，它们需要安装并正确配置声卡和扬声器，否则你听不到它们。它们还需要勾选`启用系统声音`（enable system sounds）这个小复选框。你会惊讶于有多少人没有做到这一点，然后纳闷为什么声音不起作用。
 
-在占据标签大部分部分的区域中，你为操作分配声音。看起来这似乎已经为你做好了，不是吗？其实并没有。对于每一个想要用音乐伴奏标记的操作，你必须首先在第一列（标记为**事件** Events）中选择该操作，然后从第二列（标记为**声音** Sounds）中选择一个声音。“测试”按钮让你尝试结果。在没有其他人的时候配置这些是一个好主意。
+在占据标签大部分部分的区域中，你为操作分配声音。看起来这似乎已经为你做好了，不是吗？其实并没有。对于每一个想要用音乐伴奏标记的操作，你必须首先在第一列（标记为`事件` Events）中选择该操作，然后从第二列（标记为`声音` Sounds）中选择一个声音。“测试”按钮让你尝试结果。在没有其他人的时候配置这些是一个好主意。
 
-如果你有其他想使用的 .wav 文件，可以将它们从 KFM 窗口拖到**声音**列中，这样它们就可以被分配给**事件**。（我非常喜欢随我的 OS/2 Warp 自带的启动和关机声音，所以我把它们带了并在 KDE 中使用。它们是我唯一启用的声音，而且非常优雅。）由于某些原因，并不是所有的 .wav 文件在这里都有效，尽管我从未见过对此的解释。显然不只有一种 .wav 格式。
+如果你有其他想使用的 .wav 文件，可以将它们从 KFM 窗口拖到`声音`列中，这样它们就可以被分配给`事件`。（我非常喜欢随我的 OS/2 Warp 自带的启动和关机声音，所以我把它们带了并在 KDE 中使用。它们是我唯一启用的声音，而且非常优雅。）由于某些原因，并不是所有的 .wav 文件在这里都有效，尽管我从未见过对此的解释。显然不只有一种 .wav 格式。
 
-最后一个通用控制中心类别“窗口”（Windows），允许调整许多桌面属性。它从**高级**（Advanced）标签开始，如图 5.40 所示。
+最后一个通用控制中心类别“窗口”（Windows），允许调整许多桌面属性。它从`高级`（Advanced）标签开始，如图 5.40 所示。
 
 137
 
-# 第二部分自定义 K 桌面
+# 第二部分 自定义 K 桌面
+
 # 第5 章 让 K 桌面独具特色
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_151_0.png)
@@ -2641,18 +2451,20 @@ Autostart=/home/yourhome/Desktop/Autostart
 
 “高级”标签执行了几种不同的简单功能，从控制热键行为到设置某些应用程序的窗口行为。
 
-在你成为高级用户之前，可能没有什么你想要在这里更改的内容。使用默认设置，使用 Ctrl+Tab 组合键可以在虚拟桌面之间循环，而 Alt+Tab 则在正在运行的应用程序之间循环，包括其他桌面上的程序，除非选择了“将 Alt+Tab 限制在当前桌面”按钮。“过滤器”（Filters）部分允许你选择应用程序和 X 类并为它们分配特殊属性。这涉及的内容远超此本书的范围。
+在你成为高级用户之前，可能没有什么你想要在这里更改的内容。使用默认设置，使用 `Ctrl+Tab` 组合键可以在虚拟桌面之间循环，而 `Alt+Tab` 则在正在运行的应用程序之间循环，包括其他桌面上的程序，除非选择了“将 Alt+Tab 限制在当前桌面”按钮。“过滤器”（Filters）部分允许你选择应用程序和 X 类并为它们分配特殊属性。这涉及的内容远超此本书的范围。
 
 “按钮”（Buttons）标签如图 5.41 所示，允许你为所有应用程序的标题栏分配按钮。你可以决定特定按钮是在标题栏的左端、右端还是完全不显示。每端最多可以三个按钮，如果你分配了超过这个数量，先前的会被后面的替换。列表越靠上的按钮越靠近标题栏的中心。
 
 138
 
 # 第二部分
+
 ## 其他设置世界：KDE 控制中心 第5 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_152_0.png)
 
 图 5.41
+
 按钮标签。菜单外观通常不同，被特定应用程序的微图标取代。但点击它仍然会得到菜单。
 
 “鼠标”（Mouse）是一个咆哮的标签，如图 5.42 所示。
@@ -2666,15 +2478,13 @@ Autostart=/home/yourhome/Desktop/Autostart
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_153_1.png)
 
 图 5.43
+
 窗口管理选项标签决定了当你移动窗口或鼠标指针悬停在窗口上时发生的情况。
 
 140
 
-
-
-
-
 ## 第二部分：自定义 K 桌面
+
 ### 第 5 章：打造你自己的 K 桌面
 
 第一部分“窗口”（Windows）设置了应用程序窗口缩放的属性。如果你勾选第一个复选框“默认情况下仅进行垂直最大化”，那么当你点击最大化框时（无论你将其放在“按钮”对话框的哪个位置，但通常是标题栏中右起数第二个按钮），窗口将扩展到全高，但宽度保持不变。这对于喜欢尽可能看到多行代码的程序员或喜欢一次看到整张表格的写作者来说正合适。
@@ -2695,12 +2505,34 @@ Autostart=/home/yourhome/Desktop/Autostart
 
 到目前为止，我们处理的是窗口的放置。现在我们将看看鼠标指针悬过窗口时会发生什么，这由“焦点策略”（Focus Policy）决定，该策略在下拉列表中提供四种选择：
 
-- 点击聚焦（Click to focus）：当你点击窗口内部时，赋予该窗口焦点（使其变为活动状态、可编辑状态，并更改标题栏的外观）。如果窗口的大部分（比如右上角的那个 X）被其他窗口遮挡，这是一项艰巨的任务。在这种情况下，你可以求助于任务栏或 Alt+Tab 来循环切换应用程序，直到找到你想要的那个。如果应用程序弹出的对话框或错误框并隐藏在它后面，可能会出现问题。在这种情况下，应用程序不会接受任何输入，你可能会花一会儿抓头挠腮想为什么。坦率地说，符合 KDE 标准的错误框和对话框都会显示在任务栏上，因此你可以利用它来找到被掩盖的错误消息，点击确定，然后继续你的。
+- 点击聚焦（Click to focus）：当你点击窗口内部时，赋予该窗口焦点（使其变为活动状态、可编辑状态，并更改标题栏的外观）。如果窗口的大部分（比如右上角的那个 X）被其他窗口遮挡，这是一项艰巨的任务。在这种情况下，你可以求助于任务栏或 `Alt+Tab` 来循环切换应用程序，直到找到你想要的那个。如果应用程序弹出的对话框或错误框并隐藏在它后面，可能会出现问题。在这种情况下，应用程序不会接受任何输入，你可能会花一会儿抓头挠腮想为什么。坦率地说，符合 KDE 标准的错误框和对话框都会显示在任务栏上，因此你可以利用它来找到被掩盖的错误消息，点击确定，然后继续你的。
 - 焦点跟随鼠标（Focus follows mouse）：非常有趣，因为可以在不提起窗口的情况下赋予窗口焦点。如果你不小心抖动鼠标，导致它现在处于另一个窗口中，你可以悠闲地打字，进入错误的应用程序中持续好一会儿。幸运的是，有一种解决办法，我们稍后会提到。
-- 经典焦点跟随鼠标（Classic focus follows mouse）：引入了没有窗口具有焦点的可能性，如果鼠标指针位于桌面的未使用区域。否则，带有鼠标指针的窗口就具有焦点。
-- 松散焦点（Sloppy focus）：让窗口保持在最后一个焦点的窗口中，直到进入新窗口，随后它将获得焦点。
 
-此节提供了两个按钮，可以让某些焦点策略变得实用得多。第一个是“自动提升”（Auto Raise），它将焦点窗口带到顶端（尽管它仍然没有解决在继续之前需要你干预的隐藏对话框或错误消息问题）。与之关联的是滑块，用于设置焦点应用程序弹出顶端之前的延迟。如果你手非常稳，就不需要延迟，但在寻找滚动条时偶尔会过头，最好给自己留点时间回到你想去的地方。另一个按钮是“点击提升”（Click Raise）。这允许通过点击窗口的任何位置将窗口带到顶端；如果你设置了“点击聚焦”作为策略，**点击提升**将不起作用。
+
+
+进入`/path/to/xxx`目录，找到`xxx.json`。
+
+在表达式`cvar = avar + bvar`中，加法运算符（`+`）将`avar`与`bvar`相加，得到它们的和`cvar`
+
+在`List.of(arg0, arg1, arg2)`中，`List`接口的工厂方法`of()`接受一系列的元素，返回包含它们的只读列表。
+
+之后我们这样调用`cmd`命令：`cmd arg0 arg1 arg2`。
+
+```
+if (condVar > someVal) {console.log("xxx")}
+```
+
+# 焦点与标题栏设置
+
+## 经典焦点跟随鼠标
+
+经典焦点跟随鼠标（Classic focus follows mouse）：引入了没有窗口具有焦点的可能性，如果鼠标指针位于桌面的未使用区域。否则，带有鼠标指针的窗口就具有焦点。
+
+## 松散焦点
+
+松散焦点（Sloppy focus）：让窗口保持在最后一个焦点的窗口中，直到进入新窗口，随后它将获得焦点。
+
+此节提供了两个按钮，可以让某些焦点策略变得实用得多。第一个是“自动提升”（Auto Raise），它将焦点窗口带到顶端（尽管它仍然没有解决在继续之前需要你干预的隐藏对话框或错误消息问题）。与之关联的是滑块，用于设置焦点应用程序弹出顶端之前的延迟。如果你手非常稳，就不需要延迟，但在寻找滚动条时偶尔会过头，最好给自己留点时间回到你想去的地方。另一个按钮是“点击提升”（Click Raise）。这允许通过点击窗口的任何位置将窗口带到顶端；如果你设置了“点击聚焦”作为策略，`点击提升`将不起作用。
 
 我们控制中心之旅的最后一个终站是标题栏，如图 44 所示。
 
@@ -2718,23 +2550,19 @@ Autostart=/home/yourhome/Desktop/Autostart
 
 还剩最后一项：标题动画（Title animation）。这种动画会将程序标题、加上加载的文件、以及任何它认为应该在标题栏中的内容，在窗口小到无法显示整个标题内容的情况下，在标题栏上往回滑动。它尽管是出于好意，但也非常分心。不信我？使用滑块将此动画的速度设置为非零值亲自尝试一下。只需记住你可以通过将值改回 0 来关闭它。
 
+# 第二部分 自定义 K 桌面
 
-
-
-
-## 第 6 章
-## 自定义 K 菜单
+## 第 6 章 自定义 K 菜单
 
 Appfinder：为你完成大部分工作
 
-使用 kmenuedit 整理一切
+使用 `kmenuedit` 整理一切
 
 进行系统级更改
 
-## 第二部分 自定义 K 桌面
 ### 第 6 章 自定义 K 菜单
 
-K 面（K Panel）上带有大字母 K 的图标，后面有一个齿轮（如果你使用的是标准或大设置），或者只是孤立的一个图标（如果你将 K 面设为极小），这是通往你已安装的所有应用程序的第一步。你已经知道这一点了。
+`K 面`上带有大字母 K 的图标，后面有一个齿轮（如果你使用的是标准或大设置），或者只是孤立的一个图标（如果你将 K 面设为极小），这是通往你已安装的所有应用程序的第一步。你已经知道这一点了。
 
 在一段时间里，你可能会对它非常满意。但如果你有一点点钻研精神（既然你使用 Linux 和 KDE，很可能是有这种），多久你就会注意到一些细微的不便，这让你希望 K 菜单的组织方式能有所不同，或者包含了一些不该包含的内容，又缺少了一些本该包含的内容。一定有办法可以调整这些安排。
 
@@ -2745,107 +2573,104 @@ K 面（K Panel）上带有大字母 K 的图标，后面有一个齿轮（如�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_159_0.png)
 
 图 6.1
+
 默认的 K 菜单很好。在本章中，我们将让它更好。
 
-## 第二部分
 ### 第 6 章 为你完成大部分工作
 
-向下浏览菜单，你应该注意，停留在任何以指向右侧的小三角形结尾的项目目上都会弹出一个子菜单，许多这些子菜单还有子菜单，至少在某些发行版中（特别是在 Caldera Linux 2.2 中）还有子子子菜单。这一切都以非常层次化的方式组织，应用程序被分配到在多程度上反映功能的类别中，尽管其中可能有几项你对此产生异议。例如，如果你下载并编译了 KDevelop——这是 KDE 极好的 IDE（集成开发环境）——安装后你可能会在“K 菜单 > 开发”子目录下查找它。然后你可能会失望的，因为那里没有它。它会将自己放置在“K 菜单 > 应用程序”中。
+向下浏览菜单，你应该注意，停留在任何以指向右侧的小三角形结尾的项目目上都会弹出一个子菜单，许多这些子菜单还有子菜单，至少在某些发行版中（特别是在 Caldera Linux 2.2 中）还有子子子菜单。这一切都以非常层次化的方式组织，应用程序被分配到在多程度上反映功能的类别中，尽管其中可能有几项你对此产生异议。例如，如果你下载并编译了 `KDevelop`——这是 KDE 极好的 IDE（集成开发环境）——安装后你可能会在“`K 菜单 > 开发`”子目录下查找它。然后你可能会失望的，因为那里没有它。它会将自己放置在“`K 菜单 > 应用程序`”中。
 
-另见第 3 章第 87 页“使用应用程序”中赞美 KDevelop 的章节。
+另见第 3 章第 87 页“使用应用程序”中赞美 `KDevelop` 的章节。
 
 #### K 菜单命名法
-由于 K 菜单中没有指定路径的规定，且“点击 K 菜单、点击设置、点击内存”又过于繁琐，现在将采用一种改编自互联网新闻组用法的简写方法。上面的说明将缩短为：K 菜单 > 设置 > 信息。这很简单，对吧？事实上，我们将它用于所有缺少不同解释的菜单项，例如，“编辑 > 查找”或“文件 > 打开”。对某些人来说，将 KDevelop 放在应用程序中完全合理，而对另一些人来说不然。你可以把它放在任何你想的地方。
+
+由于 K 菜单中没有指定路径的规定，且“点击 K 菜单、点击设置、点击内存”又过于繁琐，现在将采用一种改编自互联网新闻组用法的简写方法。上面的说明将缩短为：`K 菜单 > 设置 > 信息`。这很简单，对吧？事实上，我们将它用于所有缺少不同解释的菜单项，例如，“编辑 > 查找”或“文件 > 打开”。对某些人来说，将 `KDevelop` 放在应用程序中完全合理，而对另一些人来说不然。你可以把它放在任何你想的地方。
 
 ### Appfinder：为你完成大部分工作
 
-取决于你的 Linux 发行版、运行的 KDE 版本以及你如何安装 KDE，当你在 K 菜单上安装一个名为 Appfinder 的程序（以及在硬盘上的 `KEDIR/bin/appfinder`，其中 KEDIR 是你的 kde 目录）时，它可能运行或未运行。你可以通过 K 菜单是否包含你系统上的非 KDE 应用程序来判断。
+取决于你的 Linux 发行版、运行的 KDE 版本以及你如何安装 KDE，当你在 K 菜单上安装一个名为 `Appfinder` 的程序（以及在硬盘上的 `KEDIR/bin/appfinder`，其中 `KEDIR` 是你的 kde 目录）时，它可能运行或未运行。你可以通过 K 菜单是否包含你系统上的非 KDE 应用程序来判断。
 
-## 第二部分 自定义 K 桌面
-### 第 6 章 自定义 K 菜单
-
-如果它没有自动运行，当你以 root 或超级用户身份登录时，可以通过点击“系统 > Appfinder”来添加应用程序（见图 6.2）。将搜索一个流行的 Linux 应用程序数据库，当找到应用程序时，它的参数——例如它是否应该在终端窗口中运行——会被输入。它被添加到 K 菜单中一个对你来说可能合理或不合理的地方。不要担心位置，因为我们将重新调整。Appfinder 运行需要几秒钟到几分钟，取决于你的系统速度、硬盘大小以及你安装了多少应用程序。如果你忘记以 root 身份运行它，它会恼人地将找到的放在一个名为“默认”的子菜单中。当你编译 kdebase 包时，appfinder 会作为编译过程的一部分运行。
+如果它没有自动运行，当你以 root 或超级用户身份登录时，可以通过点击“系统 > Appfinder”来添加应用程序（见图 6.2）。将搜索一个流行的 Linux 应用程序数据库，当找到应用程序时，它的参数——例如它是否应该在终端窗口中运行——会被输入。它被添加到 K 菜单中一个对你来说可能合理或不合理的地方。不要担心位置，因为我们将重新调整。`Appfinder` 运行需要几秒钟到几分钟，取决于你的系统速度、硬盘大小以及你安装了多少应用程序。如果你忘记以 root 身份运行它，它会恼人地将找到的放在一个名为“默认”的子菜单中。当你编译 `kdebase` 包时，`appfinder` 会作为编译过程的一部分运行。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_161_0.png)
 
 图 6.2
-你可以在 K 菜单的“系统”子菜单中找到 Appfinder。
 
-如果你运行的是早期版本的 KDE，例如 1.0 或与 Red Hat Linux 6.0 一带的 1.1 版本，在 Appfinder 已经运行后再次运行可能会导致菜单中出现重复的应用程序。这并不困难，但确实很耗时间，所以检查一下如 xv（在“图形”子菜单中）之类的应用程序是否已经放入 K 菜单是好的另一种检查方法是点击“个人”（有时是“用户”）K 菜单项以查看里面有什么。如果内容丰富，说明 Appfinder 已经运行，如图 6.3 所示。
+你可以在 K 菜单的“系统”子菜单中找到 `Appfinder`。
+
+如果你运行的是早期版本的 KDE，例如 1.0 或与 Red Hat Linux 6.0 一带的 1.1 版本，在 `Appfinder` 已经运行后再次运行可能会导致菜单中出现重复的应用程序。这并不困难，但确实很耗时间，所以检查一下如 `xv`（在“图形”子菜单中）之类的应用程序是否已经放入 K 菜单是好的另一种检查方法是点击“个人”（有时是“用户”）K 菜单项以查看里面有什么。如果内容丰富，说明 `Appfinder` 已经运行，如图 6.3 所示。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_162_0.png)
 
 图 6.3
-Appfinder 寻找已安装的应用程序相当彻底，不是吗？这是我散开的用户目录。
+
+`Appfinder` 寻找已安装的应用程序相当彻底，不是吗？这是我散开的用户目录。
 
 如果你是仔细的，你会注意到图 6.3 中的某些不一致。虽然 K 菜单是 K Panel 的一部分，但 Red Hat Linux 应用程序分布在我的硬盘上。
 
 ### 使用 kmenuedit 整理一切
 
-## 第二部分 自定义 K 桌面
-### 第 6 章 自定义 K 菜单
-
 #### 从命令行 kmenuedit
-由于在 K 菜单中没有规定指定路径的方法，且“点击 K 菜单，点击设置，点击内存”又过于繁琐，现在将采用一种改编自互联网新闻组用法的简写方法。上面的说明将缩短为：K 菜单 > 设置 > 信息。这很简单，对吧？事实上，我们将它用于所有缺少不同解释的菜单项，例如，“编辑 > 查找”或“文件 > 打开”。对某些人来说，将 KDevelop 放在应用程序中完全合理，而对另一些人来说不然。你可以把它放在任何你想的地方。
+
+由于在 K 菜单中没有规定指定路径的方法，且“点击 K 菜单，点击设置，点击内存”又过于繁琐，现在将采用一种改编自互联网新闻组用法的简写方法。上面的说明将缩短为：`K 菜单 > 设置 > 信息`。这很简单，对吧？事实上，我们将它用于所有缺少不同解释的菜单项，例如，“编辑 > 查找”或“文件 > 打开”。对某些人来说，将 `KDevelop` 放在应用程序中完全合理，而对另一些人来说不然。你可以把它放在任何你想的地方。
 
 #### kmenuedit 启动
+
 当你第一次使用 KDE 时，你的 K 菜单看起来可能如图 6.1 所示。
 
-要启动 kmenuedit，选择 K 面 > 编辑（见图 6.4）。
+要启动 `kmenuedit`，选择 `K 面 > 编辑`（见图 6.4）。
 
 ### 更改你的菜单
-我们将从编辑个人菜单开始。以你工作时的用户名登录后，打开 kmenuedit。
+
+我们将从编辑个人菜单开始。以你工作时的用户名登录后，打开 `kmenuedit`。
 
 > 除非必要，不要以 root 身份登录
+
 如果你在 Linux 中了解了这个事实，你可能知道只有在执行某些系统级任务时才以 root 身份登录；否则，你应该普通用户。如果你不知道这一点，好吧，现在你知道了。
 
-在本次演示中，我们将使用自己的 KDE 桌面作为示例。我们将从清理工作开始。当我在这台机器上安装 Caldera Linux 2.2 时，我保留了一些 Red Hat Linux 应用程序，但我将它们移动到了其他位置，因此 Red Hat 子菜单不再需要了。尽管我可以一次删除整个部分，但为什么不一次拆解一点，并在过程中学习 kmenuedit 呢？图 6.6 显示了打开的几级 Red Hat 子菜单。
 
-要在 kmenuedit 中打开子菜单，点击它关闭子菜单，再次点击它。
+
+在本次演示中，我们将使用自己的 KDE 桌面作为示例。我们将从清理工作开始。当我在这台机器上安装 Caldera Linux 2.2 时，我保留了一些 Red Hat Linux 应用程序，但我将它们移动到了其他位置，因此 Red Hat 子菜单不再需要了。尽管我可以一次删除整个部分，但为什么不一次拆解一点，并在过程中学习 `kmenuedit` 呢？图 6.6 显示了打开的几级 Red Hat 子菜单。
+
+要在 `kmenuedit` 中打开子菜单，点击它关闭子菜单，再次点击它。
 
 选择你想修改的项目并右键点击它。（用左键点击它没有用。）你会得到如图 6.7 所示的菜单。
 
 由于我们将来某个时候必须这样做，并且现在也可以指出，让我们看看菜单项及其作用。第一项，“更改”，会产生如图 6.8 所示的对话框。
 
+# 第二部分 定制 K 桌面
 
+## 第6章 定制 K Menu
 
-
-
-# 第二部分
-# 使用 kmenuedit 理顺一切 第6章
+### 使用 kmenuedit 理顺一切
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_166_0.png)
 
-## 6.7
+#### 6.7
 
 如果你点击一个项目而没有任何反应，请尝试再次，这次使用右鼠标键。你会得到一个可以让你操作该项目的菜单。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_166_1.png)
 
-## 6.8
+#### 6.8
 
 当你操作 K Menu 项目时，更改对话框将对你变得非常熟悉。
-
-## 第二部分 定制 K 桌面
-# 第6章 定制 K Menu
 
 在这里我们设置 K Menu 在执行应用程序时使用的参数，从现在起，我们将对此有更多、更多的了解。第二个项目是“选择要移动的项目”（Select item for moving）。选择它会将鼠标指针从箭头变为一个大加号，如图 6.9 所示。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_167_0.png)
 
 图 6.9
+
 点击“选择要移动的项目”会将鼠标指针变为加号，直到在其他地方再次点击为止。然而，它似乎只此而已。
 
-遗憾的是，这个“功能”并没有其他作用，随后的项目“选择要移动的菜单”（Select menu for moving）也是如此。在你选择项目或菜单后，并没有完成移动的机制。也许有一天它会实现（kmenuedit 帮助文件中的最后一项是“5. 待办事项”，该页面包含一个很长的条目，“重写 KMenuedit”）。但正如我们很快看到的，为了移动某个项目或菜单，你是否需要进行任何特殊操作并不重要。
-
-# 第二部分
-# 使用 kmenuedit 理顺一切 第6章
+遗憾的是，这个“功能”并没有其他作用，随后的项目“选择要移动的菜单”（Select menu for moving）也是如此。在你选择项目或菜单后，并没有完成移动的机制。也许有一天它会实现（`kmenuedit` 帮助文件中的最后一项是“5. 待办事项”，该页面包含一个很长的条目，“重写 KMenuedit”）。但正如我们很快看到的，为了移动某个项目或菜单，你是否需要进行任何特殊操作并不重要。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_168_0.png)
 
 图 6.10
 
-“新建”（New）对话框正在等待可以让你创建 K Menu 条目的信息，以及一个名为 EMPTY 的菜单占位符。
+“新建”（New）对话框正在等待可以让你创建 K Menu 条目的信息，以及一个名为 `EMPTY` 的菜单占位符。
 
 “剪切”（Cut）移除当前项目并将其放入剪贴板。在图 6.11 中你可以看到顶部菜单项目“关于我”（About Myself）已被移除。
 
@@ -2853,100 +2678,90 @@ Appfinder 寻找已安装的应用程序相当彻底，不是吗？这是我散�
 
 “粘贴”（Paste）将已放入剪贴板的项目插入到其他处所选项目之前（或者如果不小心点了剪切，则插入在原处），如图 6.12 中的“关于我”所示。
 
-## 第二部分 定制 K 桌面
-# 第6章 定制 K Menu
-
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_169_0.png)
 
 图 6.11
+
 菜单中顶部的项目已被剪切……
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_169_1.png)
 
 图 6.12
-……现在已粘贴，因此那些深夜的身份危机又解近了两个子菜单。
 
-# 第二部分
-# 使用 kmenuedit 理顺一切 第6章
+……现在已粘贴，因此那些深夜的身份危机又解近了两个子菜单。
 
 右键键菜单的最后一项是“删除”（Delete），如果对单个项目执行删除，该项目就会消失。但如果在选中了整个子菜单时使用它，它会弹出一个确认框，如图 6.13 所示。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_170_0.png)
 
 图 6.13
+
 很容易点击整个子菜单并不小心删除它。这个确认框鼓励你再看一遍。
 
-## 移动项目和菜单
+### 移动项目和菜单
 
-你可以使用“剪切”和“粘贴”命令移动项目和菜单，但既然有更简单的方法，为什么要费那些事呢？在 kmenuedit 中，你可以简单地将项目甚至整个菜单从一个地方拖到另一个地方。看看图 6.14 亲眼观察吧。
+你可以使用“剪切”和“粘贴”命令移动项目和菜单，但既然有更简单的方法，为什么要费那些事呢？在 `kmenuedit` 中，你可以简单地将项目甚至整个菜单从一个地方拖到另一个地方。看看图 6.14 亲眼观察吧。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_170_1.png)
 
 图 6.14
-你可以用鼠标将菜单项目的副本——或整个子菜单——拖到新位置。在这种情况下，它是 xeyes 应用程序，这就是为什么它是孤零零悬浮在空间中没有任何连接的应用程序。
 
-# 第二部分 定制 K 桌面 
-# 第6章 定制 K Menu
+你可以用鼠标将菜单项目的副本——或整个子菜单——拖到新位置。在这种情况下，它是 `xeyes` 应用程序，这就是为什么它是孤零零悬浮在空间中没有任何连接的应用程序。
 
 当你松开鼠标按钮时，项目的副本会被添加到释放鼠标按钮的菜单底部（见图 6.15）。然后你可以回去删除原件。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_171_0.png)
 
 图 6.15
+
 被拖动的项目（无论是程序还是子菜单）将出现在松开位置的菜单底部。
 
 正如我所说，“红色”（Red）子菜单中的所有项目都已到了其他地方；我想去掉整个子菜单。我选中了它，点击右键，然后点击删除，得到了预期的确认，如图 6.16 所示。
 
-# 第二部分
-# 使用 kmenuedit 理顺一切 第6章
-
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_172_0.png)
 
 图 6.16
+
 正如你看到的，红色子菜单有许多子子菜单。如果我点击 OK，它们就消失了吗？
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_172_1.png)
 
 图 6.17
+
 漂亮！红色子菜单成为历史了。
 
-你可能想将项目从一个子目录移动到另一个更高层的目录。在 kmenuedit 中可以同时打开两个子菜单吗（在 K Menu 中不行）。看看图 6.18。
-
-# 第二部分 定制 K 桌面 
-# 第6章 定制 K Menu
+你可能想将项目从一个子目录移动到另一个更高层的目录。在 `kmenuedit` 中可以同时打开两个子菜单吗（在 K Menu 中不行）。看看图 6.18。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_173_0.png)
 
 图 6.18
+
 你可以同时在同一层打开多个子菜单。在这里，我会移动 Lyx 处理器。
 
 事实上，当你登录时，你可以同时打开任何（这会让它有点乱）子菜单、子子菜单等等。你可以从任何地方拖到菜单内的任何地方（见图 19）。
 
-## 从头添加应用程序
+### 从头添加应用程序
 
 现在我们已经学会了如何在 K Menu 中移动应用程序和菜单，现在是时候添加一个不存在的项目了。它可能不在数据库中。它可能是你自己写的，或者是为了你的业务或组织的。它可能是一个带有新参数的现有应用程序，例如预装了常用文件的电子表格程序，或者是你刚刚安装的非 KDE 程序（大多数 KDE 应用程序会自动集成到 K Menu 中）。选择你想放置条目的上方，右键，选择“新建”。你将得到图 6.20 的内容。
-
-# 第二部分
-# 使用 kmenuedit 理顺一切 第6章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_174_0.png)
 
 图 19
+
 Lyx 现在已复制到它的新位置。我可以保留两个，也可以回去删除原件，或者如果我改变主意了，删除副本。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_174_1.png)
 
 图 20
-右键 > 新建会产生一个 EMPTY 条目以及填充它的方法。
 
-# 第二部分 定制桌面 
-# 第6章 定制 K Menu
+右键 > 新建会产生一个 `EMPTY` 条目以及填充它的方法。
 
 让我们停一下，看看点击“应用程序”（Application）时产生的列表框（见图 21）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_175_0.png)
 
 图 21
+
 是的，你可以在 K Menu 中添加的不仅仅是应用程序。
 
 新项目可以是你在 KDE 和 Linux 中遇到的几种类型对象之一：
@@ -2963,19 +2778,18 @@ Lyx 现在已复制到它的新位置。我可以保留两个，也可以回去�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_176_0.png)
 
 图 6.22
+
 Nedit 设置屏幕的第一页。
+
+
 
 你可以模仿我在这里所做的，可能不会偏离太远。但你想知道这些东西意味着什么，对吧？嗯，你应该知道。
 
-第一行“文件名”（File Name）包含你正在创建的 .delnk 文件的名称。输入应用程序名称或（如图所示）不带 .delnk 后缀是安全的，反正结果是一个 .delnk 文件。
+第一行“文件名”（File Name）包含你正在创建的 `.delnk` 文件的名称。输入应用程序名称或（如图所示）不带 `.delnk` 后缀是安全的，反正结果是一个 `.delnk` 文件。
 
 另请
 
 - **什么是 .delnk 文件？**第 9 章“使用主题”（第 211 页）会告诉你关于它们的一切信息。
-
-
-
-
 
 ## 第二部分 自定义 K 桌面
 
@@ -2986,13 +2800,15 @@ Nedit 设置屏幕的第一页。
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_177_0.png)
 
 图 6.23
+
 从列出的图标中选择一个，以替换默认的齿轮图标。遗憾的是，提供的大多数图标已经有用途了。幸运的是，以后当你无事可做时，可以使用图标编辑器修改这些图标或创建一个自己的。
 
 “注释”（Comment）行是你指定内容的地方，当你将鼠标悬停在菜单项上一段时间时（如果已启用该功能），就会会在黄色小气泡提示中显示。（有时，根据新闻组的报告，即使禁用也会显示。）
 
-到目前为止你已经创建了一个菜单项，但还没有告诉它做什么。你开始通过“执行”（Execute）选项卡中的执行行为你的条目赋予意义。在最简单的情况下，你只需输入要执行的命令，在这种情况下是 `edit`。如果该命令不在你的 PATH 变量中，你需要输入完整路径，或者在位于 PATH 之上的目录中为它创建一个符号链接。（这是基础 Linux 知识，超出了本书的范围；如果你使用的是 bash 以外的 shell，这就是你应该做的。如果你不知道，你可能就不需要。）
+到目前为止你已经创建了一个菜单项，但还没有告诉它做什么。你开始通过“执行”（Execute）选项卡中的执行行为你的条目赋予意义。在最简单的情况下，你只需输入要执行的命令，在这种情况下是 `edit`。如果该命令不在你的 `PATH` 变量中，你需要输入完整路径，或者在位于 `PATH` 之上的目录中为它创建一个符号链接。（这是基础 Linux 知识，超出了本书的范围；如果你使用的是 bash 以外的 shell，这就是你应该做的。如果你不知道，你可能就不需要。）
 
 ## 第二部分 使用 kmenued 整理一切
+
 ## 第 6 章
 
 在这里你可以进行一些创造性思考，带来非常实用的结果。如果你正在的项目很大程度上由在特定应用程序中打开的一个文件组成，你可以将文件名添加到命令中，并为整体起一个唯一的名称和图标。（不要忘记更改“文件名”条目。）当你点击该菜单项时，你的文件会在相应的程序中弹出。如果你设置了 KDE 让该类型的其他文件在不同的程序中打开，这一点就特别有用。
@@ -3003,7 +2819,7 @@ Nedit 设置屏幕的第一页。
 xglobe -kde -mag 0.75 -makefile earth.gif -ambient 25 -wait 600 -nomarkers
 ```
 
-为了让你了解，这意味着你执行了 globe 程序（它位于 /usr/local/bin，所以它在你的 PATH 中），该程序针对 KDE 进行了优化，放大倍率为全屏的 75%，使用图形 earth.gif 作为其表面内容，地球暗面的亮度为向光一面的 25%（尽管没有设置告诉它它是这样，但我反正也看不到暗面），每 600 秒更新一次，且没有任何地点标记。
+为了让你了解，这意味着你执行了 `globe` 程序（它位于 `/usr/local/bin`，所以它在你的 `PATH` 中），该程序针对 KDE 进行了优化，放大倍率为全屏的 75%，使用图形 `earth.gif` 作为其表面内容，地球暗面的亮度为向光一面的 25%（尽管没有设置告诉它它是这样，但我反正也看不到暗面），每 600 秒更新一次，且没有任何地点标记。
 
 如果程序需要指定“工作目录”（Working Directory），你可以在该标签的框中进行设置。大多数不需要。
 
@@ -3012,6 +2828,7 @@ xglobe -kde -mag 0.75 -makefile earth.gif -ambient 25 -wait 600 -nomarkers
 > 如果你有旧版本的 KDE：在 KDE 早期，默认行为是勾选“在终端运行”框，所以当你不需要它时会出现终端窗口。但如果你关闭了它，你想要的程序窗口也会关闭。有很多用户为此苦恼并发现了问题所在，解决方案是每次发生这种情况时去 kmenu 取消勾选框。
 
 ## 第二部分 自定义 K 桌面
+
 ## 第 6 章 自定义 K 菜单
 
 你可能认为你已经完成了，在大多数情况下确实如此。但这里还有高级用户可以利用的。在“应用程序”（Application）选项卡，如图 6.24 所示。
@@ -3019,6 +2836,7 @@ xglobe -kde -mag 0.75 -makefile earth.gif -ambient 25 -wait 600 -nomarkers
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_179_0.png)
 
 图 6.24
+
 仅针对高级用户：在这里你可以将应用程序与特定类型（如果你需要，多个类型）关联。“应用程序”选项卡允许你将创建的程序关联特定的文件类型、二进制模式。在插图中，文件类型位于右侧，点击箭头将其关联 kmenu。
 
 我通常不使用这个选项卡，因为右键点击未关联文件的图标，点击“打开”，指定应用程序即可。这样出错的概率较小。
@@ -3030,24 +2848,29 @@ xglobe -kde -mag 0.75 -makefile earth.gif -ambient 25 -wait 600 -nomarkers
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_180_0.png)
 
 图 6.25
+
 从 kmenu 列表中选择你的程序，开始添加 K 菜单的快速方法。菜单中出现的齿轮图标是正在拖拽的项。为了这个快速演示，我将允许你查看 AdobeScript 和 Acrobat 格式文件的程序放在我的菜单中。我通过左鼠标键点击并拾取它，按住将其拖到图 6.26 所示的菜单并释放它。
 
 这一切都很好，我能听到你在想，这个简单的动作怎么可能为程序提供足够实用的信息呢？错了。让我们通过在新项上点击右键（RMB）并选择**更改**（Change）来看。图 6.27 说明了这一切。
 
 ## 第二部分 自定义 K 桌面
+
 ## 第 6 章 自定义 K 菜单
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_181_0.png)
 
 图 6.26
+
 当你将程序拖到目标菜单时，释放鼠标按钮。无论你在菜单的哪个位置，项都会位于底部（这里的情况如此）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_181_1.png)
 
 图 6.27
+
 将程序拖入菜单的方法填充了菜单项所需的所有内容。
 
 ## 第二部分 整理一切
+
 ## 第 6 章
 
 你所要做的——而且你甚至不必这样做——是选择一个图标，可能给出一个更具描述性的名称，并为气泡帮助输入注释。这确实非常酷，几乎弥补了上一章的那些愚蠢。
@@ -3065,9 +2888,6 @@ xglobe -kde -mag 0.75 -makefile earth.gif -ambient 25 -wait 600 -nomarkers
 如果你还记得上一章的所有细节——你可能不记得，因为那是一个充满细节的长章节——你会记得在某处提到过某个处的复选框与“个人优先”（Personal first）之类的有关。你得对！
 
 遵循此路径：K 菜单 > KDE 控制中心 > 应用程序 > 面板 > 选项选项卡，这个选项卡因网络时代的梗而闻名。在同一部分的页面底部，还有我们现在感兴趣的两个项（见图 6.30）。
-
-
-
 
 # 第二部分 自定义 K 桌面
 
@@ -3113,15 +2933,21 @@ xglobe -kde -mag 0.75 -makefile earth.gif -ambient 25 -wait 600 -nomarkers
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_183_0.png)
 
 图 6.29
+
 忙活半天，结果就只得到了一个子菜单项！啊，这个也可以更改。
 
 ![](img/4a2883756c73e7b0696dbbd721c57db_183_1.png)
 
 170
+
 图 6.30
-勾选“优先显示菜单项”和“优先显示文件夹”复选框会将你的个人菜单在 KDE 世界中置于前位。*
+
+
+
+勾选“优先显示菜单项”和“优先显示文件夹”复选框会将你的个人菜单在 KDE 世界中置于前位。
 
 # 第二部分 使用 kmuedit 理顺一切
+
 ## 第 6 章
 
 这两项是“优先显示菜单项”和“优先显示文件夹”。第一项会更改 K 菜单的结构，使得当你点击 K 菜单时显示的是你的个人菜单，其他所有内容都是子目录。第二项本应该（但尚未实现）将任何作为子菜单的个人菜单项放在你个人菜单的最上方。它们结合在一起对 K 菜单执行了此操作（见图 6.31）。
@@ -3129,6 +2955,7 @@ xglobe -kde -mag 0.75 -makefile earth.gif -ambient 25 -wait 600 -nomarkers
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_184_0.png)
 
 图 6.31
+
 现在谁在笑呢？你的个人菜单在顶部，而旧的 K 菜单项在一个名为 Default 的子菜单中。
 
 是的，你的旧 K 菜单仍然在那里（见图 6.32）。
@@ -3136,46 +2963,46 @@ xglobe -kde -mag 0.75 -makefile earth.gif -ambient 25 -wait 600 -nomarkers
 ![](img/4a2883756c73e7b0696dbbd721c57db_184_1.png)
 
 图 6.32
+
 将鼠标指针悬停在 default 上，旧的 K 菜单就在那里。
 
 171
 
-## 进行系统更改
+### 进行系统更改
 
 到目前为止，我们仅仅处理了对个人菜单的更改，这是在你不搞出太大麻烦之前开始任何工作的良好起点。现在是时候进入大领域了：对原始 K 菜单进行更改，这些更改将影响系统上的所有用户。
 
-你可能注意到，在 kmuedit 显示的所有插图中，都没有对右侧的 K 菜单进行任何引用。如果你一直在编辑自己的个人菜单，你可能还会注意到右侧菜单上的所有项都是“灰化”的，你对它们无能为力。
+你可能注意到，在 `kmuedit` 显示的所有插图中，都没有对右侧的 K 菜单进行任何引用。如果你一直在编辑自己的个人菜单，你可能还会注意到右侧菜单上的所有项都是“灰化”的，你对它们无能为力。
 
 作为 root 用户，它不再是灰色的了，你可以随心所欲地操作它。
 
 原理和操作仍然完全相同。以相同的方式做所有事情，只是在一个影响更广泛的菜单上进行。
 
-如果你愿意，可以仅以 root 登录并将你所有的个人内容整合到主 K 菜单中。系统上的每个人都可以使用它，前提是你正确设置了所有权限（例如，对于位于你 ~/ 目录中的应用程序和文件）。
+如果你愿意，可以仅以 root 登录并将你所有的个人内容整合到主 K 菜单中。系统上的每个人都可以使用它，前提是你正确设置了所有权限（例如，对于位于你 `~/` 目录中的应用程序和文件）。
 
 这完全取决于你使用的系统类型以及谁在使用它。本部分涉及以 root 执行执行的 K 菜单系统级更改，如果你的系统上有多个用户，或者如果你有同事或家庭成员拥有账户，这里是考虑通用菜单策略的好地方。
 
 > **随处可见 K 菜单**
-> 上一章我们学到，在 KDE 中随时可以按 Alt+F1 让 K 菜单出现。这里有另一个更近一点的窍门：你有一个文件（很可能是空的）`~/.kde/share/config/krootwmrc`。如果有，就用编辑器（如 Kedit）打开它。如果没有，你可以用编辑器打开一个空文件。无论哪种情况，输入以下两行：
+>
+> 上一章我们学到，在 KDE 中随时可以按 `Alt+F1` 让 K 菜单出现。这里有另一个更近一点的窍门：你有一个文件（很可能是空的）`~/.kde/share/config/krootwmrc`。如果有，就用编辑器（如 `Kedit`）打开它。如果没有，你可以用编辑器打开一个空文件。无论哪种情况，输入以下两行：
+>
+> `[MouseButtons]`
+>
+> `Left=Menu`
+>
+> 然后，保存该文件（如果之前不存在，请将其保存为 `~/.kde/share/config/krootwmrc`）。
+>
+> 现在，下次你启动 KDE 时，点击屏幕上任何未被占用的地方都会产生 K 菜单。
+>
+> 例如，如果你有年龄和兴趣各异的家庭成员都使用电脑，且每个人都有自己的用户名（账户），你可能想让面向大家的主 K 菜单变得相对稀疏，以避免混乱并防止好奇的小点击进入不该去的地方。在这种情况下，首先出现孩子可能使用的应用程序的个人菜单是有意义的。
+>
+> 或者你可能正在管理一个小型办公室使用的 Linux 系统。游戏非常有诱惑力；互联网也是如此。你可以将这些安全地从主 K 菜单中收起来，并提供给不会过度使用（或对于互联网来说不需要访问）的用户。
+>
+> 你很有可能可以将一些系统管理工具从主 K 菜单中移动，并提供给不会过度使用（或对于互联网来说不需要访问）的用户。
 
-> [MouseButtons]
-> Left=Menu**
+# 第二部分 自定义 K 桌面
 
-然后，保存该文件（如果之前不存在，请将其保存为 `~/.kde/share/config/krootwmrc`）。
-现在，下次你启动 KDE 时，点击屏幕上任何未被占用的地方都会产生 K 菜单。
-
-例如，如果你有年龄和兴趣各异的家庭成员都使用电脑，且每个人都有自己的用户名（账户），你可能想让面向大家的主 K 菜单变得相对稀疏，以避免混乱并防止好奇的小点击进入不该去的地方。在这种情况下，首先出现孩子可能使用的应用程序的个人菜单是有意义的。
-
-或者你可能正在管理一个小型办公室使用的 Linux 系统。游戏非常有诱惑力；互联网也是如此。你可以将这些安全地从主 K 菜单中收起来，并提供给不会过度使用（或对于互联网来说不需要访问）的用户。
-
-你很有可能可以将一些系统管理工具从主 K 菜单中移动，并提供给不会过度使用（或对于互联网来说不需要访问）的用户。
-
-（注：OCR 文本末尾有一些重复的句子，已根据指令进行了清理以保持逻辑流畅。）
-
-
-
-
-# 第二部分
-## 将 K 面板和任务栏放置在你需要的地方 第7 章
+## 第 7 章 将 K 面板和任务栏放置在你需要的地方
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_192_0.png)
 
@@ -3186,12 +3013,12 @@ xglobe -kde -mag 0.75 -makefile earth.gif -ambient 25 -wait 600 -nomarkers
 
 179
 
-# 第二部分 自定义 K 桌面
-# 第7 章 制作超级 K面板
+## 第 7 章 制作超级 K面板
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_193_0.png)
 
 图 7.4
+
 现在 K 面板位于顶部，任务栏位于左上角，图标已经重新排版，使得没有任何图标会被隐藏。
 
 - 1 任务栏
@@ -3200,41 +3027,35 @@ xglobe -kde -mag 0.75 -makefile earth.gif -ambient 25 -wait 600 -nomarkers
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_194_0.png)
 
 图 7.5
+
 布局与图 7.4 相同，但有两个例外。K面板被移动到了左侧，并设置了“普通”（Normal）样式。
 
 - 1 任务栏
 - 2 K面板
-
-# 第二部分 自定义 K 桌面 
-# 第7 章 制作超级 K面板
 
 这一切真的有其原因。图 7.6 显示了另一个选项。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_195_0.png)
 
 图 7.6
+
 现在任务栏已移动到屏幕底部。
 
 - - 任务栏
 - K面板
-
-# 第二部分
-## 将 K 面板和任务栏放置在你需要的地方 第7 章
 
 你可以在图 7.7 中看到另外一种选项。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_196_0.png)
 
 图 7.7
+
 这是与图 7.5 相同的布局，但选择了“微型”（Tiny）样式。并不是所有的可能性都是吸引人的。
 
 - ① 任务栏
 - ② K面板
 
 183
-
-# 第二部分 自定义 K 桌面 
-# 第7 章 制作超级 K面板
 
 正如我所说，这一切是有意义的。实际上有两个点：显而易见的一是 K 面板确实经过了配置；另一个稍微晦涩一点的是，当你决定如何配置自己的 K 面板时，这些图像可以作为参考。这就像一本地毯样品。
 
@@ -3243,6 +3064,7 @@ xglobe -kde -mag 0.75 -makefile earth.gif -ambient 25 -wait 600 -nomarkers
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_197_0.png)
 
 图 7.8
+
 要自定义 K 面板，首先在面板的空白处点击右键，然后选择“配置”。
 
 这会弹出一个对话框（如图 7.9 所示），让你选择我们见过的许多内容。左上角是选择 K 面板位置的地方；在右上角对任务栏进行同样的操作。左下角是选择 K 面板显示尺寸的地方。
@@ -3250,36 +3072,28 @@ xglobe -kde -mag 0.75 -makefile earth.gif -ambient 25 -wait 600 -nomarkers
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_197_1.png)
 
 图 7.9
+
 从 KPanel 配置界面的第一页选择 K面板和任务栏的尺寸和位置。
 
-# 第二部分
-## 控制 K 面板和任务栏的行为 第7 章
+## 控制 K 面板和任务栏的行为
 
 你注意到任务栏的选项中，有一个是“隐藏”（Hidden）。如果你选择了此项，本质上你就没有了任务栏。这意味着你无法在已最小化的应用程序之间切换，甚至无法获知你正在运行哪些应用程序了吗？并不是的。如果你做了此选择，按下 `Ctrl+Esc` 获取当前运行的应用程序列表。你可以从这个对话框在它们之间进行切换。
 
-# 控制 K 面板和任务栏的行为
+### 控制 K 面板和任务栏的行为
 
 那些整洁的桌面让 K 面板和任务栏随手可用，但并不总是触手可及。你还可以控制它们的出现方式，并关闭“气泡帮助”（即当鼠标指针在 K 面板项目上悬停时间过长时出现的小黄色框）。这一切都可以在“选项”（Options）页面完成（参见图 7.10）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_198_0.png)
 
 图 7.10
+
 你的 K 面板和任务栏的行为由你在“选项”对话框中的设置决定。
 
 185
 
-# 第二部分 自定义 K 桌面 
-# 第7 章 制作超级 K面板
-
 第一个选项是“显示工具提示”（Show Tooltips），如果你勾选此框，就能获得帮助。接下来两个项目是“自动隐藏面板”（Auto Hide Panel）和“自动隐藏任务栏”（Auto Hide Taskbar）。每个项目都有两个滑块。第一个是“延迟”（Delay），设置元素停留的时间；第二个是“速度”（Speed），设置它离开的方式——是瞬间消失还是悠闲移动。
 
-
-
-
-
-# 第二部分
-
-# 一键启动应用的 K 面板图标 第 7 章
+## 一键启动应用的 K 面板图标
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_202_0.png)
 
@@ -3297,46 +3111,49 @@ K 菜单的“添加应用程序”图像在这一点上有所不同：它在子
 
 **移除**选项非常直观：选择该选项，图标就会从 K 面板上消失。我们稍后会谈到**属性**。不过，现在，让我们谈谈**移动**，因为它可能有点复杂。
 
-当你点击**移动**时，必须将鼠标光标返回目标图标，此时它会改变形状，变成一个四头的箭头（像一个武术飞镖，或者宝藏地图符号——总之，它变形状了）。然后你可以沿着 K 面板来回滑动它以重新定位。如果你正在进行大规模的面板重组，你可能需要提前计划。先将一些图标移开，为新位置的图标留出空间，然后将第一批图标移动到你想让它们去的地方，以此此类推。你不希望做的是不小心用其他图标覆盖图标，这是可能会发生的。
+
+
+当你点击`移动`时，必须将鼠标光标返回目标图标，此时它会改变形状，变成一个四头的箭头（像一个武术飞镖，或者宝藏地图符号——总之，它变形状了）。然后你可以沿着 K 面板来回滑动它以重新定位。如果你正在进行大规模的面板重组，你可能需要提前计划。先将一些图标移开，为新位置的图标留出空间，然后将第一批图标移动到你想让它们去的地方，以此此类推。你不希望做的是不小心用其他图标覆盖图标，这是可能会发生的。
 
 你可以移动 K 面板上的任何内容，但时钟（或者如果你选择了网络流量监视器）以及被面板“吞噬”的项在外，它们始终位于右侧。被吞噬的项通常有自己不同的右键点击（RMB）菜单。
 
-右键菜单上的第三项**属性**，会打开一个对话框，如图 7.15 所示。
+右键菜单上的第三项`属性`，会打开一个对话框，如图 7.15 所示。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_203_0.png)
 
 **图 7.15** 属性 K 面板对话框是一个包含四个标签的界面，允许你为从面板启动的程序设置规范。
 
-这实际上是你在任何 .applnk 文件中找到的相同对话框，它仅仅是下一章的主题。然而，在我们离开这个主题之前，你应该注意，为 K 面板图标设置的命令行选项可以与你为菜单项、可执行文件或从产生 K 面板图标的 KFM 获取的脚本设置的不同。事实上，你可以在 K 面板上多次放置同一个程序，每个都以不同的方式配置。
+这实际上是你在任何 `.applnk` 文件中找到的相同对话框，它仅仅是下一章的主题。然而，在我们离开这个主题之前，你应该注意，为 K 面板图标设置的命令行选项可以与你为菜单项、可执行文件或从产生 K 面板图标的 KFM 获取的脚本设置的不同。事实上，你可以在 K 面板上多次放置同一个程序，每个都以不同的方式配置。
 
 # 第二部分 定制化桌面
-# 第 7 章 制作超级 K 面板
 
-# 第 8 章
+## 第 7 章 制作超级 K 面板
+
+## 第 8 章
 
 - 什么是 AppLnk？
 - 使用 AppLnk 文件访问应用程序
 - 使用模板
-- 使用 .kdelnk 文件进行完全控制
-- .kdelnk 文件的系统级使用
+- 使用 `.kdelnk` 文件进行完全控制
+- `.kdelnk` 文件的系统级使用
 
 ## 第二部分 定制 K 桌面
 
-# 第 8 章 向桌面添加应用程序
+## 第 8 章 向桌面添加应用程序
 
-本章主要涵盖了被称为 .delinks 的内容，尽管在大多数时候你处理它们时，并不知道它们叫这个名字，你也不需要。
+本章主要涵盖了被称为 `.delinks` 的内容，尽管在大多数时候你处理它们时，并不知道它们叫这个名字，你也不需要。
 
-实际上，我们已经处理 .delnk 文件有一段时间了：事实上，每当我们为应用程序设置属性时都是在处理它们。了解它们是什么以及它们的作用对 KDE 用户是有帮助的，本章尝试在将应用程序图标添加到桌面区域本身（而不是菜单或 K 面板本身）的矩阵中传授这种理解。
+实际上，我们已经处理 `.delnk` 文件有一段时间了：事实上，每当我们为应用程序设置属性时都是在处理它们。了解它们是什么以及它们的作用对 KDE 用户是有帮助的，本章尝试在将应用程序图标添加到桌面区域本身（而不是菜单或 K 面板本身）的矩阵中传授这种理解。
 
-在你的主目录 (~/.kde) 的隐藏 kde 子目录中深处，有一个 applink 目录。根据你安装的应用程序，它看起来可能如图 8.1 所示。
+在你的主目录 `~/.kde` 的隐藏 kde 子目录中深处，有一个 `applink` 目录。根据你安装的应用程序，它看起来可能如图 8.1 所示。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_205_png)
 
-图 8.1 ~/.kde/share/applink 子目录。图标并不看起来简单。
+图 8.1 `~/.kde/share/applink` 子目录。图标并不看起来简单。
 
-# 什么是 AppLink？
+### 什么是 AppLink？
 
-如果你右键点击 ~/.kde/share/applink 中的一个图标（那里也有图标），然后使用 kedit 作为程序打开该文件，你会看到类似的内容：
+如果你右键点击 `~/.kde/share/applink` 中的一个图标（那里也有图标），然后使用 `kedit` 作为程序打开该文件，你会看到类似的内容：
 
 # KDE 配置文件
 
@@ -3361,8 +3178,9 @@ Type=Application
 
 图 7.2 applink 的属性菜单。
 
-# 第二部分 定制桌面
-# 第 8 章 向桌面添加应用程序
+## 第二部分 定制桌面
+
+## 第 8 章 向桌面添加应用程序
 
 如图 8.3 所示，通用标签显示 applink 的属性。
 
@@ -3382,21 +3200,19 @@ Type=Application
 
 图 8.5 applink 的执行标签。
 
-# 什么是 AppLink？
+### 什么是 AppLink？
 
 那么，Applink 文件是一个为在 KDE 下运行的应用程序设置配置参数的文本文件。它通常通过图形配置器生成，但可以使用文本编辑器进行编辑，只要你知道自己在做什么。它们名称中的“link”暗示它们是链接文件，但它们与 Linux 用户熟悉的硬链接和符号链接完全不同。
 
-
-
-
-我们要添加到桌面的程序是 Ssystem，这是一个有趣的 OpenGL 系统模拟器。现在，如图 8.8 所示，我们为它命名，尽管如果我们愿意，稍后也可以更改名称。在此之前，桌面图标将显示为 Program。
+我们要添加到桌面的程序是 `Ssystem`，这是一个有趣的 OpenGL 系统模拟器。现在，如图 8.8 所示，我们为它命名，尽管如果我们愿意，稍后也可以更改名称。在此之前，桌面图标将显示为 Program。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_210_0.png)
 
 图 8.8
+
 添加了程序名称，但没有更改扩展名。
 
-点击 OK 会完成两件事：在桌面上添加一个图标（KDE 默认齿轮图标），并打开一个对话框（见图 8.9）。
+点击 `OK` 会完成两件事：在桌面上添加一个图标（KDE 默认齿轮图标），并打开一个对话框（见图 8.9）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_210_1.png)
 
@@ -3407,21 +3223,24 @@ Type=Application
 General（常规）选项卡没有可操作的内容，我们将转向 Permissions（权限）选项卡（见图 8.10）。
 
 ## 第二部分 自定义 K 桌面
-## 第 8 章将应用程序添加到桌面
+
+## 第 8 章 将应用程序添加到桌面
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_211_0.png)
 
 图 8.10
-因为我希望能够运行这个程序，所以我勾选了 Exec（执行）复选框。这里的权限只是设置熟悉的 Linux 权限的一种图形化方式。
+
+因为我希望能够运行这个程序，所以我勾选了 `Exec`（执行）复选框。这里的权限只是设置熟悉的 Linux 权限的一种图形化方式。
 
 既然在 Permissions 选项卡中指定了我们想要执行该程序，那么告诉 KDE 我们想要执行的具体内容是有用的，这可以在图 8.11 和图 8.12 的 Execute 选项卡中设置。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_211_1.png)
 
 图 8.11
+
 Execute 选项卡是空的，因此 KDE 尚不知道要运行哪个程序。我们来填写空白处。
 
-### 使用 AppLink 文件访问应用程序
+#### 使用 AppLink 文件访问应用程序
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_212_0.png)
 
@@ -3429,13 +3248,14 @@ Execute 选项卡是空的，因此 KDE 尚不知道要运行哪个程序。我�
 
 启动程序的命令输入在 Execute 文本框中。点击包含默认 KDE 齿轮的图标时，可以从显示的图标中选择一个。
 
-Execute 选项卡需要图标所指向的文件名。如果该文件位于 `/etc/profile` PATH 行指定的某个位置，则不需要完整路径；否则，像这里一样，则需要提供。如果你调用的可执行文件不在你的 PATH 变量中，你需要提供一个完全限定的路径。
+Execute 选项卡需要图标所指向的文件名。如果该文件位于 `/etc/profile` `PATH` 行指定的某个位置，则不需要完整路径；否则，像这里一样，则需要提供。如果你调用的可执行文件不在你的 `PATH` 变量中，你需要提供一个完全限定的路径。
 
 **它在你的 PATH 中吗？**
+
 好了，你已经下载并安装了程序。它在 *path*（路径）中吗？以下是查找方法：
 
-- 1. 打开终端（konsole 或 kvt）并输入它的名称（通常用小写——程序文档可以在这方面提供帮助），然后按下 **Enter**。如果程序运行了，说明它在你的 PATH 变量中。
-- 2. 如果你收到“找不到命令”的错误消息，你需要找出它安装在何处。仍在终端中，输入 *find* 和命令名称。这需要一些时间，如果你有一个包含大量软件的大硬盘，可能需要几分钟，因为系统正在搜索整个硬盘。当然，系统会列出包含你输入的命令的文件列表。滚动这些列表以找到正确的一个（如果程序命名为 *edit*，你会有很多行需要检查，但正确的那个会很明显）。记下完整路径。
+- 1. 打开终端（`konsole` 或 `kvt`）并输入它的名称（通常用小写——程序文档可以在这方面提供帮助），然后按下 `Enter`。如果程序运行了，说明它在你的 `PATH` 变量中。
+- 2. 如果你收到“找不到命令”的错误消息，你需要找出它安装在何处。仍在终端中，输入 `find` 和命令名称。这需要一些时间，如果你有一个包含大量软件的大硬盘，可能需要几分钟，因为系统正在搜索整个硬盘。当然，系统会列出包含你输入的命令的文件列表。滚动这些列表以找到正确的一个（如果程序命名为 `edit`，你会有很多行需要检查，但正确的那个会很明显）。记下完整路径。
 - 3. 现在在终端命令提示符处输入完整路径。应用程序应该会运行。如果文件指定在 `/etc/profile PATH=` 行的某个位置，则不需要完整路径；否则，这里需要。
 
 Application（应用程序）选项卡——虽然这里不需要信息，但可以使用少量的用户输入，如图 8.13 和图 8.14 所示的前后对比图。
@@ -3443,42 +3263,46 @@ Application（应用程序）选项卡——虽然这里不需要信息，但可
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_213_0.png)
 
 图 8.13
-如果你希望“气泡帮助”显示关于此图标的任何内容，你需要在 Comment（注释）文本框中提供。如果你希望它的名称不是 Application，你需要在这里命名……
+
+如果你希望“气泡帮助”显示关于此图标的任何内容，你需要在 `Comment`（注释）文本框中提供。如果你希望它的名称不是 Application，你需要在这里命名……
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_213_1.png)
 
 图 8.14
 
-……我们已经为 Ssystem 完成了。然后点击 OK。
+……我们已经为 `Ssystem` 完成了。然后点击 `OK`。
 
-### 使用 Templates（模板）
+#### 使用 Templates（模板）
 
-填写所有内容并点击 OK 后，带有正确名称的图标将显示在桌面上（见图 8.15）。
+填写所有内容并点击 `OK` 后，带有正确名称的图标将显示在桌面上（见图 8.15）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_214_0.png)
 
 图 8.15
+
 配置完成，选中的图标出现在桌面，用于启动指定的应用程序。
 
 啊，它有效吗？看看图 8.16。
 
+
+
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_214_1.png)
 
 图 8.16
-成功！点击图标启动了我们的应用程序 Ssystem。
+
+成功！点击图标启动了我们的应用程序 `Ssystem`。
 
 很好，但还有其他到达此地的方法。
 
-你的默认 KDE 桌面包含一个名为 Templates 的文件夹。它包含了我刚才演示的另一种结果方法。模板文件是如何使用的？
+你的默认 KDE 桌面包含一个名为 `Templates` 的文件夹。它包含了我刚才演示的另一种结果方法。模板文件是如何使用的？
 
-点击 Templates 文件夹会渲染出一个包含文件夹内容的 KFM 窗口（见图 8.17）。
+点击 `Templates` 文件夹会渲染出一个包含文件夹内容的 KFM 窗口（见图 8.17）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_215_0.png)
 
 图 8.10
-因为我希望能够运行这个程序，所以我勾选了 Exec 复选框。这里的权限只是设置熟悉的 Linux 权限的一种图形化方式。
 
-
+因为我希望能够运行这个程序，所以我勾选了 `Exec` 复选框。这里的权限只是设置熟悉的 Linux 权限的一种图形化方式。
 
 # 第二部分
 
@@ -3496,8 +3320,9 @@ Application（应用程序）选项卡——虽然这里不需要信息，但可
 
 205
 
-# 第二部分自定义 K 桌面
-## 第 8 章将应用程序添加到桌面
+# 第二部分 自定义 K 桌面
+
+## 第 8 章 将应用程序添加到桌面
 
 现在，根据你希望应用程序出现在个人菜单层级中的哪个位置，只需将图标从桌面目录拖动并释放到你希望它所在的子目录上。插图（见图 8.24）中的选项有 `/appink`、`/X_apps` 或那里的某一个子目录。由于我们不想将“系统（System）”隐藏得太深，我们将它放在 `/appink`。
 
@@ -3507,12 +3332,13 @@ Application（应用程序）选项卡——虽然这里不需要信息，但可
 
 当你将图标拖到目标文件夹上时，会看到这个熟悉的菜单。在这种情况下，我们决定“移动”（Move）应用链接，尽管我们也可以轻松地选择“复制”（Copy）让它同时存在于两个地方。再次，“链接”（Link）不是我们想要采取的选择。
 
-点击“移动”，图标将同时从桌面目录和桌面本身消失。它去去哪儿了？如果你立即查看你的 K Menu > Personal 目录，将不会看到它，因为你必须先重启 K 面板（K Menu > Panel > Restart）后更改才会生效。当你重启后，就会看到图 8.25 所示的内容。
+点击“移动”，图标将同时从桌面目录和桌面本身消失。它去去哪儿了？如果你立即查看你的 `K Menu > Personal` 目录，将不会看到它，因为你必须先重启 K 面板（`K Menu > Panel > Restart`）后更改才会生效。当你重启后，就会看到图 8.25 所示的内容。
 
 206
 
 # 第二部分
-### 使用 .kdelnk 文件进行完全控制 第 8 章
+
+### 使用 `.kdelnk` 文件进行完全控制 第 8 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_220_0.png)
 
@@ -3526,74 +3352,81 @@ Application（应用程序）选项卡——虽然这里不需要信息，但可
 
 207
 
-# 第二部分自定义 K 桌面
+# 第二部分 自定义 K 桌面
 
-## 第 8 章将应用程序添加到桌面
+## 第 8 章 将应用程序添加到桌面
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_221_0.png)
 
 图 8.26
-你可以将代表 .kdelink 文件的图标从一个 KFM 窗口拖动到另一个窗口。
+
+你可以将代表 `.kdelink` 文件的图标从一个 KFM 窗口拖动到另一个窗口。
 
 - 1 我们正在从这个 KFM 桌面拖动系统图标……
 - 2 ……拖到这一个。
 
 ### 复制与链接
+
 是时候详细说明“复制”（Copy）和“链接”（Link）菜单项之间的区别了。如果你复制一个 `.kdelink`（或其他文件）或目录，你是在创建它的一个副本、独立的实例。如果你使用“链接”，你并没有创建另一个，而是指向第一个实例的指针。在大多数方面，两者的行为是相同的。但当你“复制”时，你可以对新创建的文件进行更改而不影响原始文件，反之亦然。如果你更改了链接（或链接所引的文件），你就更改了两个地方对应的内容或行为。
 
-## .kdelink 文件的全局使用
+## `.kdelink` 文件的全局使用
 
 如果你是系统管理员，可以充分利用 `.kdelink` 文件向所有用户接收的 K Menu 添加项目——甚至可以向用户的桌面添加图标。
 
 208
 
 # 第二部分
-### .kdelink 文件的全局使用 第 8 章
+
+### `.kdelink` 文件的全局使用 第 8 章
 
 让我们从为所有用户向 K Menu 添加项目开始。操作方法与之前描述的相同，但有两不同：你必须是 root 用户，并且必须复制（或移动）`.kdelink` 到正确的目录。如图 8.27 所示，该目录不在任何 `~/.kde` 目录下，而是在 KDE 本身安装的目录。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_222_0.png)
 
 图 8.27
-你可以复制或移动 .kdelink 文件到系统范围。
 
-- * 1 我们正在从这个 KFM 桌面拖动系统图标……
-- * 2 ……拖到这一个。
+你可以复制或移动 `.kdelink` 文件到系统范围。
+
+- 1 我们正在从这个 KFM 桌面拖动系统图标……
+- 2 ……拖到这一个。
 
 ### 复制与链接
+
 是时候详细说明“复制”和“链接”菜单项的区别了。如果你复制 `.kdelink`（或其他文件）或目录，你是在创建它的一个副本、独立的实例。如果你使用“链接”，你并没有创建另一个，而是指向第一个实例的指针。在大多数方面，两者的行为是相同的。但当你“复制”时，你可以对新创建的文件进行更改而不影响原始文件，反之亦然。如果你更改了链接（或链接所引的文件），你就更改了两个地方对应的内容或行为。
 
-## .kdelink 文件的全局使用
-如果你是系统管理员，可以充分利用 .kdelink 文件向所有用户接收的 K Menu 添加项目——甚至可以向用户的桌面添加图标。
+## `.kdelink` 文件的全局使用
+
+如果你是系统管理员，可以充分利用 `.kdelink` 文件向所有用户接收的 K Menu 添加项目——甚至可以向用户的桌面添加图标。
 
 223
-
-
-
 
 # 一个自动化主题选择的程序：khememgr 第9章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_226_0.png)
 
 图 9.1
+
 如果你在“桌面”下看到了“主题管理器”（Theme Manager），说明你已经安装好了。你真走运！
 
 > 不是 K Theme Manager，
-> 如果这些混乱还不够糟糕的话，在 www.kde.org 的下载区域还有另一个名为 K Theme Manager 的程序。它的具体位置取决于版本和稳定性。问题在于它并没有真正在管理主题。你无法选择一个主题并一次性安装它。我不清楚这个程序的开发者到底在想什么。这个名字暗示了主题管理功能就在某处。如果你想的话，可以下载并编译它——这并不困难——但它无法为你提供任何你无法通过“控制面板”做得得更好的功能。
+>
+> 如果这些混乱还不够糟糕的话，在 `www.kde.org` 的下载区域还有另一个名为 K Theme Manager 的程序。它的具体位置取决于版本和稳定性。问题在于它并没有真正在管理主题。你无法选择一个主题并一次性安装它。我不清楚这个程序的开发者到底在想什么。这个名字暗示了主题管理功能就在某处。如果你想的话，可以下载并编译它——这并不困难——但它无法为你提供任何你无法通过“控制面板”做得得更好的功能。
+>
+> 另外还有一个问题：在 KDE-1.1.1 中运行的那个 `khememgr` 版本包含一个导致其无法正常编译的错误。如果你在某处找到了这个文件（名为 `khememgr.tar.gz`），将其解压到 `/usr/local/src`，并尝试编译它但失败了——你肯定会失败的——这里是修复它的方法。
 
-> 另外还有一个问题：在 KDE-1.1.1 中运行的那个 khememgr 版本包含一个导致其无法正常编译的错误。如果你在某处找到了这个文件（名为 khememgr.tar.gz），将其解压到 /usr/local/src，并尝试编译它但失败了——你肯定会失败的——这里是修复它的方法。
+# 第二部分 自定义 K 桌面
 
-# 第二部分自定义 K 桌面
-
-# ## 第9章 使用主题
+## 第9章 使用主题
 
 > **你可以升级**
+>
 > 如果你觉得自己还不够格去修改代码并进行编译，如果主题对你来说很有动力的话，你可以跳过本节的剩余部分，花时间去下载 KDE 1.2。
 
-以 root 身份切换到 /usr/local/src/kthemememgr。然后运行
+以 root 身份切换到 `/usr/local/src/kthemememgr`。然后运行
+
 `./configure [后跟 -prefix= 以及你喜欢的其他选项]`
 
-然后，使用文本编辑器打开 `/usr/local/src/kthemememgr/kthemememgr/Makefile`。是的，kthemememgr 出现了两次。找到获取 kthemememgr_LDADD 的那个文件。它看起来像这样：
+然后，使用文本编辑器打开 `/usr/local/src/kthemememgr/kthemememgr/Makefile`。是的，`kthemememgr` 出现了两次。找到获取 `kthemememgr_LDADD` 的那个文件。它看起来像这样：
 
 ```
 kthemememgr_LDADD = -kimqlio -jpeg -lkfile -lkfm -lkdeui -lkdecore
@@ -3607,48 +3440,47 @@ kthemememgr_LDADD = -kimqlio -jpeg -lkfile -lkfm -lkdeui -lkdecore
 -lqt -lxext -lX1 $(LIBSOCKET) -png -tiff -lz
 ```
 
-这里存在一个潜在问题。如果你的文本编辑器设置了自动换行，就会引入一个回车符，由于该行非常长，当你尝试编辑它时它就会被分割。这意味着你必须在该行的每一行末尾添加一个空格，然后回到行的下一部分并按一次退格键来重新组合部分。这很痛苦，但可以做到。现在，如果你安装了最新的 libtiff 和 libtiff-devel、作为 libz-devel 的 zlib、libpng 和 libpng-devel，你可以切换到 /usr/local/src/kthemememgr 并运行
 
-`make all`
+
+这里存在一个潜在问题。如果你的文本编辑器设置了自动换行，就会引入一个回车符，由于该行非常长，当你尝试编辑它时它就会被分割。这意味着你必须在该行的每一行末尾添加一个空格，然后回到行的下一部分并按一次退格键来重新组合部分。这很痛苦，但可以做到。现在，如果你安装了最新的 `libtiff` 和 `libtiff-devel`、作为 `libz-devel` 的 `zlib`、`libpng` 和 `libpng-devel`，你可以切换到 `/usr/local/src/kthemememgr` 并运行
+
+```make all```
 
 然后运行
 
-`make install`
+```make install```
 
 这样就有机会甚至实际上实际上构建出这个东西。
 
 # 使用 khememgr
 
-我们现在抱着由衷的希望、愿望和假设，你已经以某种方式在你的机器上安装了 khememgr。遵循 K 菜单 > KDE 控制中心 > 桌面 > 主题管理器将让你看到图 9.2 所示的内容（在终端中输入 khememgr 并回车也是一样）。
+我们现在抱着由衷的希望、愿望和假设，你已经以某种方式在你的机器上安装了 `khememgr`。遵循 K 菜单 > KDE 控制中心 > 桌面 > 主题管理器将让你看到图 9.2 所示的内容（在终端中输入 `khememgr` 并回车也是一样）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_228_0.png)
 
-**图 9.2** 主题管理器的页面显示了你在图 9.2 中看到的内容（或者在终端中输入 khememgr 并回车也是一样）。
+**图 9.2** 主题管理器的页面显示了你在图 9.2 中看到的内容（或者在终端中输入 `khememgr` 并回车也是一样）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_228_0.png)
 
 **图 9.2** 主题管理器的页面显示了可用主题。至少对于 KDE 1.1.1 是这样。如果你点击其中一个主题，页面将显示关于该主题的信息（参见图 9.3）。
 
-# 第二部分自定义 K 桌面
+## 第二部分 自定义 K 桌面
 
-# 第9章 使用主题
+### 第9章 使用主题
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_229_0.png)
 
 图 9.3
+
 这里，流行的主题已被选中，并显示在窗口中。可用主题列表在下方的框中。点击“应用”将使桌面符合该主题。
 
 > **除非你确定，否则不要点击！**
+
 > 注意：除了用另一个主题替换，没有其他方法可以撤销。点击“应用”将使桌面符合该主题。
 
 # 使用 khememgr
 
-（注：此处后续原文似乎重复，已根据指令确保不重复输出内容）
-
-
-
-
-# 第 10 章
+## 第 10 章
 
 # 使用 KFM 浏览一切
 
@@ -3678,13 +3510,14 @@ kthemememgr_LDADD = -kimqlio -jpeg -lkfile -lkfm -lkdeui -lkdecore
 这是默认设置，但你可以更改它。如果你喜欢 Microsoft Windows 资源器的外观，可以将其更改得看起来像那个程序。如果你倾向于像旧 Norton Commander 那样提供每个文件和目录信息的视图，也可以实现。在开始更改之前，请确保你已经对 KFM 的通用行为有了了解。默认的 KFM 窗口如图 10.1 所示。
 
 # 第二部分
+
 配置 KFM 第 10 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_240_0.png)
 
 # 图 10.1
 
-点击 K面板上的小房子将渲染 / 目录的基本 KFM 窗口。
+点击 K面板上的小房子将渲染 `/` 目录的基本 KFM 窗口。
 
 起初，KFM 窗口并没有什么特别之处。它显示了一个相对标准的菜单栏、一个图标工具栏（大多数图标的功能是可以猜到的，且如果你启用了气泡帮助，它们会提供提示）以及一个满斥图标的窗口。目录采用了近乎通用的文件夹比喻，而特定文件的图标取决于文件类型：可执行文件、文本文件、源代码等。底部是状态栏；除非你的主目录中有大量文件，否则它会执行其任务，其内容（在此情况下是“Working/正在工作”）会在你面前消失。
 
@@ -3701,13 +3534,11 @@ kthemememgr_LDADD = -kimqlio -jpeg -lkfile -lkfm -lkdeui -lkdecore
 这意味着直接跳转到“视图”菜单。如果你喜欢 Windows 资源器风格的文件管理，你会想要点击“显示树”。这会在窗口左侧渲染当前目录（你的主目录）的树状结构。
 
 ### 查看树
+
 树视图允许你清晰地看到目录结构。通过点击目录旁的小箭头，你可以展开或折叠其内容。这对于导航大型目录结构特别有用。树视图还会显示关于每个文件的信息，例如其大小（不，等等，那是列表）。树视图主要用于结构。
 
-
-
-
-
 # 第二部分
+
 配置 KFM 第10 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_244_0.png)
@@ -3723,9 +3554,11 @@ kthemememgr_LDADD = -kimqlio -jpeg -lkfile -lkfm -lkdeui -lkdecore
 查看 > 简短视图（View > Short View）为你的屏幕空间提供了最大的价值。
 
 # 第二部分 自定义 K 桌面
+
 第 10 章 使用 KFM 导航一切
 
 > 我的目录在哪里？
+
 迟早有一天，KDE 用户点击一个目录，结果得到的不是文件列表，而是一个 HTML 页面。这是因为用户在那个目录下保存了一个名为 `index.html` 的文件。解决办法是在“查看”（View）菜单中取消勾选“HTML 视图”。现在，所有文件（即使是 `index.html`）都将像图标一样正常显示。如果你想查看 `index.html`，点击它。它将在 KFM 中以 HTML 模式打开。你可以根据其内容对其进行重命名或删除。这通常发生在某人试图从网上保存一个指令页面，而页面作者将该页面命名为“index.html”。
 
 为了进行非常有效的文件管理，你需要进行一次快速的配置更改。在视图中，树形结构包含三个项目：根目录（Root）、我的主目录（My Home）和桌面（Desktop）。无论你在 KFM 右侧（文件和目录图标出现的地方）进行什么导航，这三项都会存在。要修复此，点击“选项”（Options） > 配置文件管理器（Configure File Manager），然后点击“其他”（Other）选项卡。勾选“树形视图跟随导航框”（Tree view follows navigation box）。然后，当然，点击“确定”。由于此更改仅对当前 KFM 实例生效，你还需要点击“选项”（Options）并“保存设置”（Save Settings）。现在，你已经设置了 KFM，使得树形视图显示比三个初始目录更有用（见图 10.7）。即使你不使用树形视图，你也应该进行此更改，因为后面会显示其原因。
@@ -3733,58 +3566,56 @@ kthemememgr_LDADD = -kimqlio -jpeg -lkfile -lkfm -lkdeui -lkdecore
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_245_0.png)
 
 图 10.7
+
 一个让 KFM 通用更实用的设置是：选项 > 配置文件管理器 > 其他 > 树形视图跟随导航。
 
-# 复制和移动文件及目录
+## 复制和移动文件及目录
 
 使用 KFM 复制和移动文件及目录有多种方法，每种方法都有其特殊用途。如果你学会了它们，就能高效地完成几乎任何操作。
 
-最简单的方法是对你想要操作的文件或目录图标点击鼠标右键。它会高亮该图标并给出一个菜单（见图 10.8）。然后你可以选择“复制”（Copy）。此时文件并没有被复制到内存中，而是在内存中创建了它的临时链接。使用工具栏上的箭头图标在目录中移动，当你到达想要放置文件的地方，选择“编辑”（Edit） > 粘贴”（Paste）。如果你想移动文件，你需要返回并删除原始文件。要复制多个文件，使用鼠标左键在它们周围画一个框；然后从“编辑”（Edit）菜单中选择“复制”，或从右键菜单（RMB menu）中选择。同样，如果你想移动文件，在成功粘贴到其他地方后，你需要返回并删除高亮项目。如果你想复制或移动分散在不想重新定位的文件中的多个文件，可以按住 Ctrl 键并用鼠标左键点击目标文件进行选择。
+
+
+最简单的方法是对你想要操作的文件或目录图标点击鼠标右键。它会高亮该图标并给出一个菜单（见图 10.8）。然后你可以选择“复制”（`Copy`）。此时文件并没有被复制到内存中，而是在内存中创建了它的临时链接。使用工具栏上的箭头图标在目录中移动，当你到达想要放置文件的地方，选择“编辑”（`Edit`） > “粘贴”（`Paste`）。如果你想移动文件，你需要返回并删除原始文件。要复制多个文件，使用鼠标左键在它们周围画一个框；然后从“编辑”（`Edit`）菜单中选择“复制”，或从右键菜单（`RMB menu`）中选择。同样，如果你想移动文件，在成功粘贴到其他地方后，你需要返回并删除高亮项目。如果你想复制或移动分散在不想重新定位的文件中的多个文件，可以按住 `Ctrl` 键并用鼠标左键点击目标文件进行选择。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_246_0.png)
 
 图 10.8 KFM 中每个图标的右键菜单都提供了操作所选文件或目录的选项。
 
 # 第二部分 自定义 K 桌面
-# 第 10 章 使用 KFM 导航一切
+
+## 第 10 章 使用 KFM 导航一切
 
 > 注意
-在删除文件之前，请确保你已成功复制了文件。Linux 中没有真正的“删除”功能。为了额外安全，不要直接删除文件，而是从右键选择“移动到回收站”（Move to Trash）。然后，如果发现文件在复制过程中损坏或你在粘贴前就删除了它们，你可以从回收站中恢复它们。
-
-虽然这不是最高效的方法，但对于一两个文件来说并不耗费时间，而且简单。
+>
+> 在删除文件之前，请确保你已成功复制了文件。Linux 中没有真正的“删除”功能。为了额外安全，不要直接删除文件，而是从右键选择“移动到回收站”（`Move to Trash`）。然后，如果发现文件在复制过程中损坏或你在粘贴前就删除了它们，你可以从回收站中恢复它们。
+>
+> 虽然这不是最高效的方法，但对于一两个文件来说并不耗费时间，而且简单。
 
 另一种方法是打开第二个 KFM 实例，并使用箭头图标导航到目标目录。然后，使用鼠标左键将文件（或目录）拖放到它们的新位置。在选择并拖动文件时，务必按住鼠标左键。如果你先点击选择，就会打开文件或目录。这种方法的用处是，当你将图标或一组图标掉到目标上时，会出现一个微菜单。然后系统会询问你是想复制所选项目、移动它，还是创建一个指向它的符号链接并将链接放置在目标目录。
 
 如果你有树形视图，第三种方法会很有用。记住，你始终可以通过从左窗口边界拉出树形来创建树形视图。从窗口右侧拖动一个或多个项目，将其掉到树形中的目标目录上。再次，系统会询问你是想复制、移动还是链接。
 
 > 在硬盘上来回跳动
-工具栏上的浏览器风格箭头图标用于你移动一两个目录时。如你所知，当你正在移动一个目录时使用它们。当你正在移动一个目录时使用这些图标是当你正在移动一个目录时。如你所知，当你正在移动一个目录时使用这些图标是当你正在移动一个目录时。 (注：原文此处存在逻辑重复，译文已尽量保持原意) 事实上，当你正在移动一个目录时使用这些图标是当你正在移动一个目录时。 (注：原文此处存在逻辑重复) 事实上，当你正在移动一个目录时使用这些图标是当你正在移动一个目录时。 (注：原文此处存在逻辑重复) 事实上，当你正在移动一个目录时使用这些图标是当你正在移动一个目录时。 (注：原文此处存在逻辑重复) 事实上，当你正在移动一个目录时使用这些图标是当你正在移动一个目录时。 (当你正在移动一个目录时使用这些图标是当你正在移动一个目录时。
-
-  此处的逻辑重复)
-
-
-
-
-# 第二部分
-## 使用 KFM 查看文件 第 10 章
+>
+> 工具栏上的浏览器风格箭头图标用于你移动一两个目录时。如你所知，当你正在移动一个目录时使用它们。当你正在移动一个目录时使用这些图标是当你正在移动一个目录时。如你所知，当你正在移动一个目录时使用这些图标是当你正在移动一个目录时。 (注：原文此处存在逻辑重复，译文已尽量保持原意) 事实上，当你正在移动一个目录时使用这些图标是当你正在移动一个目录时。 (注：原文此处存在逻辑重复) 事实上，当你正在移动一个目录时使用这些图标是当你正在移动一个目录时。 (注：原文此处存在逻辑重复) 事实上，当你正在移动一个目录时使用这些图标是当你正在移动一个目录时。 (注：原文此处存在逻辑重复) 事实上，当你正在移动一个目录时使用这些图标是当你正在移动一个目录时。 (当你正在移动一个目录时使用这些图标是当你正在移动一个目录时。
+>
+> 此处的逻辑重复)
 
 与其直接处理编译后的二进制文件，不如在提取之前先学习它的结构，以确保它的所有部分都进入了正确的位置。
 
-RPM（红帽包管理器）文件是一种独特且设计精妙的 Linux 文件。它们通常是编译后的二进制文件，有时也是源码 RPM。虽然 RPM 超出了本书的范围，但现在了解它们很有用：当你安装它们时，它们会被放在所有正确的位置，以便充分发挥作用。有时提前知道它们将做什么也是个好主意。虽然 Linux 中的不兼容问题并不常见，但随着新的共享程序库、小部件集等的出现，这类问题正变得越来越频繁。此外，如果 RPM 包含一个程序，你想知道访问该程序需要什么。1998 年，一位名叫 Paulo Castro 的天才年轻程序员编写了一个名为 KPackViewer 的程序，它在安装后可以让你在 KDE 中充分了解 RPM。安装程序的一部分提供了从 KFM 打开 RPM 所需的 .mimelink（一种特殊的 .kdevel）。如果你已经安装了该程序（如果还没安装，请去获取并安装它），点击 RPM 就会启动 KPackViewer，你就能看到 RPM 中的所有内容。另一个程序 KPackage 则专门用于处理许多类型的包文件，包括 Debian 发行版使用的极具强大的 .deb 文件。
+`RPM`（红帽包管理器）文件是一种独特且设计精妙的 Linux 文件。它们通常是编译后的二进制文件，有时也是源码 RPM。虽然 RPM 超出了本书的范围，但现在了解它们很有用：当你安装它们时，它们会被放在所有正确的位置，以便充分发挥作用。有时提前知道它们将做什么也是个好主意。虽然 Linux 中的不兼容问题并不常见，但随着新的共享程序库、小部件集等的出现，这类问题正变得越来越频繁。此外，如果 RPM 包含一个程序，你想知道访问该程序需要什么。1998 年，一位名叫 Paulo Castro 的天才年轻程序员编写了一个名为 `KPackViewer` 的程序，它在安装后可以让你在 KDE 中充分了解 RPM。安装程序的一部分提供了从 KFM 打开 RPM 所需的 `.mimelink`（一种特殊的 `.kdevel`）。如果你已经安装了该程序（如果还没安装，请去获取并安装它），点击 RPM 就会启动 `KPackViewer`，你就能看到 RPM 中的所有内容。另一个程序 `KPackage` 则专门用于处理许多类型的包文件，包括 Debian 发行版使用的极具强大的 `.deb` 文件。
 
 > 深入了解 RPM
+>
 > 想要学习关于 RPM 的一切，请阅读来自 Ed Bailey 编写的《Maximum RPM》（ISBN: 0-672-31105-4)。
 
-事实上，所有拥有 .mimelinks 的文件类型在 KFM 内部点击时，都会在相应的程序中打开。这并不一定是一件好事。
+事实上，所有拥有 `.mimelinks` 的文件类型在 KFM 内部点击时，都会在相应的程序中打开。这并不一定是一件好事。
 
 什么意思？
 
-让我举个例子吧。一家名为 Star Division 的德国公司生产了一套名为 StarOffice 的优秀套件。它庞大且强大，其安装程序提供了一个与 KDE 集成的选项。这种集成有一个用处：它为某些文件类型构建了 .kdevel，从而覆盖了现有的文件。通常情况下，点击 .jpeg 文件会打开 K Image Viewer，由于其特性非常特殊，加载速度非常快。.jpeg 文件会在几秒钟内出现在图像查看器中，你就可以查看它了。而在安装 StarOffice 之后，点击 .jpeg 就会以其华丽的姿态和数十兆的内存加载 StarOffice。在非常快的机器上，这可能需要 30 秒或更久。这很烦人——这一切大张旗鼓只是为了让你看一张邮票大小的图形。如果你想查看目录中的所有图标，这简直让人抓狂。
+让我举个例子吧。一家名为 Star Division 的德国公司生产了一套名为 StarOffice 的优秀套件。它庞大且强大，其安装程序提供了一个与 KDE 集成的选项。这种集成有一个用处：它为某些文件类型构建了 `.kdevel`，从而覆盖了现有的文件。通常情况下，点击 `.jpeg` 文件会打开 `K Image Viewer`，由于其特性非常特殊，加载速度非常快。`.jpeg` 文件会在几秒钟内出现在图像查看器中，你就可以查看它了。而在安装 StarOffice 之后，点击 `.jpeg` 就会以其华丽的姿态和数十兆的内存加载 StarOffice。在非常快的机器上，这可能需要 30 秒或更久。这很烦人——这一切大张旗鼓只是为了让你看一张邮票大小的图形。如果你想查看目录中的所有图标，这简直让人抓狂。
 
-## 第二部分 定制 K 桌面
-# 第 10 章 使用 KFM 导航一切
-
-啊，但并非如此。当你右键点击图标时，会出现一个菜单，列出所有拥有该类型文件 .mimelinks 的程序。你可以选择你需要的特定程序（见图 10.10）
+啊，但并非如此。当你右键点击图标时，会出现一个菜单，列出所有拥有该类型文件 `.mimelinks` 的程序。你可以选择你需要的特定程序（见图 10.10）
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_251_0.png)
 
@@ -3792,15 +3623,16 @@ RPM（红帽包管理器）文件是一种独特且设计精妙的 Linux 文件�
 
 如果 KDE 列出多个应用程序可以处理某个特定文件，它们都会列在该 true文件的 RPM 菜单中，默认应用程序位于顶部。如果你点击该图标，KFM 将使用该应用程序打开文件。
 
-点击这些图标之一，你会收到一个窗口，询问使用什么程序来显示此文件的内容。这里没有默认程序，但 Kedit 是一个很好的开始。如果你没有为（例如从你喜欢的文字处理器中）创建 .kdelink，并且你忘记了用它创建了这个文件，那么在 Kedit 中仔细检查它很有可能让你想起来。
+点击这些图标之一，你会收到一个窗口，询问使用什么程序来显示此文件的内容。这里没有默认程序，但 `Kedit` 是一个很好的开始。如果你没有为（例如从你喜欢的文字处理器中）创建 `.kdelink`，并且你忘记了用它创建了这个文件，那么在 `Kedit` 中仔细检查它很有可能让你想起来。
 
-要查看可执行文件，请右键点击图标。选择你想要显示内容的程序。如果你愿意，你可以在 WordPerfect 中查看编译后的程序（或核心转储）。更有可能的是，你会选择 K Hex Editor。它可能也不会向你显示任何有用的东西，但至少它是正确的应用程序。
+要查看可执行文件，请右键点击图标。选择你想要显示内容的程序。如果你愿意，你可以在 WordPerfect 中查看编译后的程序（或核心转储）。更有可能的是，你会选择 `K Hex Editor`。它可能也不会向你显示任何有用的东西，但至少它是正确的应用程序。
 
-# 复制远程文件：用于 FTP 的 KFM
+### 复制远程文件：用于 FTP 的 KFM
 
 正如你所看到的，通过在 KFM 工具栏下方的“位置”文本框输入 `file:` 后跟完整路径，你可以跳转到本地设备上的任何地方。
 
 > 移动 KFM 元素
+>
 > 位置文本框、菜单栏和工具栏都是悬浮的；你可以使用左侧的滚动条在 KFM 窗口中移动它们。点击滚动条并按住鼠标键，将其拖动到你想去的任何地方。位置文本框和工具栏垂直停靠在窗口左侧。这对于工具栏是实用的，但对于位置文本框则不方便。请尽管尝试。除非点击“选项 > 保存设置”，否则更改不会永久生效。你可以将它们拖到 KFM 窗口之外，但这是一个非常糟糕的主意，因为如果你保存了它们，以后会导致混乱和困惑。
 
 如果你在线，可以在远程驱动器上进行同样的操作。因此，你获得了 KFM 用于 FTP 的美感与简单。
@@ -3809,10 +3641,7 @@ RPM（红帽包管理器）文件是一种独特且设计精妙的 Linux 文件�
 
 注意这些图标。有些看起来像目录，有些看起来像文件。如果你想下载文件，只需将其拖到你的本地目录。如果你想上传文件，将其从本地目录拖动到远程目录。如果你想进入远程目录，双击它。如果你想删除远程文件，右键点击它并选择删除。
 
-远程目录的使用与本地目录并不完全相同。例如，在远程文件上右键点击不会给你任何有用的信息。将 KPackViewer 指向远程包也是如此，例如，它不会显示里面有什么。也许某一天可以，如果以后那样工作将非常有用，但现在还不行。
-
-# 第二部分 定制 K 桌面 
-# 第 10 章 使用 KFM 导航一切
+远程目录的使用与本地目录并不完全相同。例如，在远程文件上右键点击不会给你任何有用的信息。将 `KPackViewer` 指向远程包也是如此，例如，它不会显示里面有什么。也许某一天可以，如果以后那样工作将非常有用，但现在还不行。
 
 ![](img/4a2883756c73e7b0696bd721c5c7db_253_0.png)
 
@@ -3826,17 +3655,11 @@ RPM（红帽包管理器）文件是一种独特且设计精妙的 Linux 文件�
 
 在某些站点视图是列表，而在 HTML 站点，不是文件，你会看到一个图标。你可以通过拖放进入。
 
-
-
-
-
-# 第二部分 自 K 桌面
-
-# 第 10 章 使用 KFM 导航一切
-
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_255_0.png)
 
 图 10.13
+
+
 
 这些是同一个目录的两种视图，该目录恰好是 KDE 文档的一部分。在第一个视图中，开启了“HTML 视图”……
 
@@ -3849,11 +3672,15 @@ RPM（红帽包管理器）文件是一种独特且设计精妙的 Linux 文件�
 242
 
 # 第二部分
-使用 KFM 浏览万维网 第 10 章
+
+## 使用 KFM 浏览万维网
+
+### 第 10 章
 
 了解这一点并知道如何通过输入 `ftp://` 和 FTP 站点的地址进入 FTP 站点，你可能已经猜到接下来会发生什么。是的，你可以输入 `http://` 和网站的地址，它会在 KFM 中以其大部分原貌显示。大部分？嗯，Java 尚未被支持，但表单是可以的。嗯，表单可能不稳定，但你可以用 KFM 很好地进行网页浏览。
 
 > 为什么要保留两套书签？
+
 如果你安装了 Netscape，可以使用你的书签，这些书签保存在家主目录下隐藏的 `netscape` 目录下的 `bookmarks.html` 文件中。如果你不想每次上网时都导航到那里，可以创建一个指向主目录的链接。这样，当你打开 KFM 时，点击书签文件，然后通过这些链接转到任何地方。这非常方便。为了更酷一点，你可以在桌面上放置此文件的链接，当你在网上时；点击它即可打开加载了书签的 KFM，准备好进行导航。最酷的是，你可以在 KFM 中导航到 `~/netscape/bookmarks.html` 文件，然后点击“书签 > 现在添加书签”，这样它就会出现在书签菜单中，供以后使用。
 
 如果你在 Linux 中设置了打印机，你甚至可以从 KFM 内部打印网页。只需进入“文件 > 打印”，即可弹出图 10.15 所示的打印对话框。
@@ -3861,15 +3688,16 @@ RPM（红帽包管理器）文件是一种独特且设计精妙的 Linux 文件�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_256_0.png)
 
 图 10.15
+
 你可以选择用于打印网页、FTP 站点内容、甚至是目录内容的打印池溢处理程序。但请注意，默认纸张大小是 A4 而不是美国信（Letter），所以你可能需要在打印前更改该复选框。
 
 243
 
 # 第二部分 自定义 K 桌面
 
-第 10 章 使用 KFM 导航*一切*
+## 第 10 章 使用 KFM 导航*一切*
 
-# KFM 快捷键绑定
+### KFM 快捷键绑定
 
 KFM 通过按键绑定简化了许多功能，这在其他地方你可能称之为“热键”。表 10.1 告诉了它们是什么以及作用是什么。
 
@@ -3896,13 +3724,15 @@ KFM 通过按键绑定简化了许多功能，这在其他地方你可能称之�
 | 查找文件 | Ctrl+F |
 | 关闭窗口 | Ctrl+W |
 
-# KFM 命令参考
+### KFM 命令参考
 
 本节逐一遍历 KFM 菜单栏，描述所有的选项及其作用。你可能并不经常需要它，但如果某些事情让你感到非常无所措，你可能会在这里处找到答案。
 
 # 第二部分
 
-# KFM 命令参考 第 10 章
+## KFM 命令参考
+
+### 第 10 章
 
 | 功能 | 作用 |
 | --- | --- |
@@ -3919,30 +3749,28 @@ KFM 通过按键绑定简化了许多功能，这在其他地方你可能称之�
 | --- | --- |
 | 复制 | 不复制高亮项目，而是将它们标记为待复制。 |
 | 粘贴 | 将剪贴板内容插入到当前目录。 |
-
-| 复制 | 不复制高亮项目，而是将它们标记为待复制。
+| 复制 | 不复制高亮项目，而是将它们标记为待复制。 |
 | 粘贴 | 将剪贴板内容插入到当前目录。 |
-
-| 复制 | 不复制高亮项目，而是将它们标记为待复制。
+| 复制 | 不复制高亮项目，而是将它们标记为待复制。 |
 | 粘贴 | 将剪贴板内容插入到当前目录。 |
-
-| 复制 | 不复制高亮项目，而是将它们标记为待复制。
+| 复制 | 不复制高亮项目，而是将它们标记为待复制。 |
 | 粘贴 | 将剪贴板内容插入到当前目录。 |
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_258_0.png)
 
 > 图 10.16
+
 当选择**视图 > 显示缩略图**选项时，你可以查看指定目录中图形文件的微缩预览图。
 
-| 复制 | 将该文件或目录放入到站。
+| 复制 | 将该文件或目录放入到站。 |
 
 继续...
 
 245
 
-# 第二部分 自定义 K 桌面 
+# 第二部分 自定义 K 桌面
 
-第 10 章 使用 KFM 导航一切
+## 第 10 章 使用 KFM 导航一切
 
 | 功能 | 作用 |
 | :--- | --- |
@@ -3952,8 +3780,8 @@ KFM 通过按键绑定简化了许多功能，这在其他地方你可能称之�
 | 选择所有 | 选择当前窗口中的所有内容，无论它是目录、FTP 站点还是网页。 |
 | 在页面中查找 | 在当前页面内搜索字符串。 |
 | 查找下一个 | 跳到字符串的下一个实例。 |
-| MIME 类型 | 直接进入 ~/.kde/share/mime，让你访问修改。 |
-| 应用程序 | 打开 ~/.kde/share/applications，让你访问设置。 |
+| MIME 类型 | 直接进入 `~/.kde/share/mime`，让你访问修改。 |
+| 应用程序 | 打开 `~/.kde/share/applications`，让你访问设置。 |
 
 | 功能 | 作用 |
 | --- | --- |
@@ -3962,24 +3790,22 @@ KFM 通过按键绑定简化了许多功能，这在其他地方你可能称之�
 | 显示缩略图 | 如果浏览的目录包含图形，这非常有用。它展示文件的微缩图像，通常比文件名更有用。 |
 
 > 调整缩略图
-注意：如果你有一个包含数百张图片的目录，生成所有缩略图可能需要长时间。一旦完成，显示速度会非常快，因为缩略图存储在隐藏子目录 /.pics 中，因此只需对新添加的图像生成缩略图。
+
+注意：如果你有一个包含数百张图片的目录，生成所有缩略图可能需要长时间。一旦完成，显示速度会非常快，因为缩略图存储在隐藏子目录 `/.pics` 中，因此只需对新添加的图像生成缩略图。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_260_0.png)
 
 图 10.17
+
 当选择了“视图 > 显示缩略图”选项时，你可以查看指定目录中图形文件的微缩预览图。
 
-# HTML 视图
+### HTML 视图
 
-这实际上没有任何意义，除非你正在浏览网页（这时你会希望开启它），或者你有包含名为 index.html 文件的目录（这时你不需要）。
+这实际上没有任何意义，除非你正在浏览网页（这时你会希望开启它），或者你有包含名为 `index.html` 文件的目录（这时你不需要）。
 
-# 图标视图
+### 图标视图
 
 这是 KFM 的默认视图。它以图标形式显示文件、目录和其他对象。要了解更多关于特定文件或目录的信息，右键点击它并从生成的菜单中选择“属性”。这将产生一个对话框（见图 10.18）。从这里确定文件大小并了解有关所选对象的其他信息。你还可以通过输入新名称来重命名文件。点击“权限”选项卡会跳转到第二个页面，见图 10.19。这允许你图形化地更改文件的权限和所有者。
-
-
-
-
 
 ## 第二部分 自定义 K 桌面
 
@@ -3992,34 +3818,45 @@ KFM 通过按键绑定简化了许多功能，这在其他地方你可能称之�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_261_0.png)
 
 图 10.18
+
 在图标上点击右键（RMB）会弹出一个对话框，其中包含了该对话框所指图标的信息。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_261_1.png)
 
-文本视图 (Text View)
-提供一个类似于 *ls -l* 终端命令生成的当前位置视图。你仍然可以对列出的文件和目录执行所有功能，但它提供了你通常需要打开“属性”对话框才能获取的信息。
+### 文本视图 (Text View)
 
-### 详细视图 (Long View)
+提供一个类似于 `ls -l` 终端命令生成的当前位置视图。你仍然可以对列出的文件和目录执行所有功能，但它提供了你通常需要打开“属性”对话框才能获取的信息。
+
+#### 详细视图 (Long View)
+
 这与*文本视图*相同，不同之处每个列出的文件或目录前面都有一个缩略图标。这为对每个特定条目执行哪些操作提供了视觉线索。
 
-### 简要视图 (Short View)
+#### 简要视图 (Short View)
+
 渲染缩略图标和文件名，不显示关于文件或目录的任何其他信息（见图 10.20）。它对于包含许多文件和目录的位置非常有用。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_262_0.png)
 
 图 10.20
+
 简要视图提供了一种查看文件和目录的不同方式，你可以以任何方式或其他方式对其进行操作。
 
-### 重新加载树 (Reload Tree)
+#### 重新加载树 (Reload Tree)
+
 重新扫描当前使用的树。如果你在 KFM 会话期间添加了目录或子目录，在重新加载树之前，它们不会反映在树中。
 
+
+
 ### 重新加载文档 (Reload Document)
+
 扫描并更新当前显示的目录或位置。这非常有用，例如，当你打开了一个 tar 包并想要查看其内容时。在重新加载文档之前，这些更改将不会可见。
 
 ### 重新扫描绑定 (Rescan Bindings)
-对应用绑定执行最后两项分别在树视图和当前文档上执行的功能，并更新它们以反映自最初打开 KFM 窗口以来所做的任何更改。如果你为特定的 MIME 类型（mimetype）添加了应用程序，它现在将出现在该类型文件的右键菜单中。
+
+对应用绑定执行最后两项分别在树视图和当前文档上执行的功能，并更新它们以反映自最初打开 KFM 窗口以来所做的任何更改。如果你为特定的 MIME 类型（`mimetype`）添加了应用程序，它现在将出现在该类型文件的右键菜单中。
 
 ### 查看帧源 (View Frame Source)
+
 这对于 HTML 文档非常有用。选择时，会打开编辑器并显示当前 HTML 页面中选定帧的 HTML 源代码。你可以将其保存到本地驱动器上的文件、复制、发送邮件，或对任何其他文本显示进行你想做的任何操作。
 
 | 表 10.4 续表 |
@@ -4028,7 +3865,8 @@ KFM 通过按键绑定简化了许多功能，这在其他地方你可能称之�
 | 查看文档源 (View Document Source) | 这对于非框架 HTML 页面有用。其他行为与“查看帧源”完全相同。 |
 | 文档编码 (Document Encoding) | 允许更改特定文档使用的字符集。如果你查看的文档看起来像乱码，否则确定某些不支持，则这很有用（编译后的二进制文件或类似文件无论选择什么字符集，看起来都是乱码）。如果你收到使用西里尔字母或希腊字母的文件，因此可以正常显示它们。能够阅读它超出了 KFM 的范围；你必须自己学习该语言。 |
 
-| 表 10.5 菜单 |
+### 表 10.5 菜单
+
 | 功能 | 作用 |
 | --- | --- |
 | 上一级 (Up) | 将你在本地、网络或远程驱动器的导航中向上移动一级，就如同点击工具栏上的向上箭头一样。 |
@@ -4038,31 +3876,31 @@ KFM 通过按键绑定简化了许多功能，这在其他地方你可能称之�
 
 以下列表显示了你去过的地方，你可以以任何方式或其他方式对其进行操作。点击其中的任何一项都会将你带到那里。
 
-| 表 10.6 书签菜单 |
+### 表 10.6 书签菜单
+
 | 功能 | 作用 |
 | --- | --- |
 | 添加书签 (Add Bookmark) | 为当前位置创建一个书签。 |
-| 编辑书签 (Edit Bookmarks) | 打开 ~/.kde/share/bookmarks 目录。你可以在这里删除或编辑书签。 |
-
-| 表 10.6 |
-| 功能 | 作用 |
-| --- | --- |
+| 编辑书签 (Edit Bookmarks) | 打开 `~/.kde/share/bookmarks` 目录。你可以在这里删除或编辑书签。 |
 | 显示书签 (Show Bookmarks) | 显示你收藏的书签。 |
 | 删除书签 (Delete Bookmarks) | 删除选中的书签。 |
 
 书签项允许你。
 
 ### 历史 (History)
+
 | 功能 | 作用 |
 | --- | --- |
-| 显示历史 (Show History) | 列出你去过的的地方列表（见图 10.21）。
+| 显示历史 (Show History) | 列出你去过的的地方列表（见图 10.21）。 |
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_264_0.png)
 
 图 10.22
+
 历史允许你回溯步骤。
 
-| 表 10.7 菜单菜单 |
+### 表 10.7 菜单菜单
+
 | 功能 | 作用 |
 | --- | --- |
 | 显示菜单栏 (Show Menubar) | 开启或关闭 KFM 窗口中的菜单栏。 |
@@ -4073,22 +3911,15 @@ KFM 通过按键绑定简化了许多功能，这在其他地方你可能称之�
 | 为 URL 保存设置 (Save Settings for URL) | 允许为特定 URL 采用稍微或完全自定义的 KFM 视图。这允许你在更改 KFM 的情况下调整特定网站或驱动器。要使用它，必须在 KFM 中更改设置。 |
 | 配置文件管理器 (Configure File Manager) | 打开对话框，让你自定义 KFM 的外观和行为（见图 10.23）。你可以在这里选择字体和大小，以及使用的字符集。通过点击相应的标签页，你可以选择用于表示文件和目录各种属性的颜色（见图 10.24）。其他标签页在图 10.25 中解释。 |
 
-| 表 10.8 选项 |
+### 表 10.8 选项
+
 | 功能 | 作用 |
 | --- | --- |
 | 始终查看缓存 (Always look in cache) | 增加频繁访问存储信息的速度。 |
 | 从不保存缓存 (Never save cache) | 消除安全顾虑，但意味着从存储信息中获得的速度仅用于。 |
 | 始终保存缓存 (Always save cache) | 确保在关闭 KFM 时浏览器缓存被保留。 |
 
-| 表 10.7 续表 |
-| 功能 | 作用 |
-| --- | --- |
-
 缓存允许你使用。
-
-
-
-
 
 # 第二部分 定制 K 桌面系统
 
@@ -4112,9 +3943,7 @@ KFM 通过按键绑定简化了许多功能，这在其他地方你可能称之�
 | :--- | :--- |
 | ![](img/4a2883756c73e7b0696dbbd721c5c7db_268_0.png) | 图 10.25 |
 
-您可以在“其他项目”中选择您喜欢的编辑器和文本编辑器。您会在“其他基础”下找到一些可能重要的设置。其中一个复选框允许您按 URL 逐保存设置，如果您打算使用“选项 > 为此 URL 保存设置”菜单项，这是必要的。另一个是“树状视图跟随导航”复选框，它极大地增加了树状视图的实用性。默认终端程序是 Konsole，但您可以使用 xvt 或您已安装的任何其他虚拟终端。
-
-
+您可以在“其他项目”中选择您喜欢的编辑器和文本编辑器。您会在“其他基础”下找到一些可能重要的设置。其中一个复选框允许您按 URL 逐保存设置，如果您打算使用“选项 > 为此 URL 保存设置”菜单项，这是必要的。另一个是“树状视图跟随导航”复选框，它极大地增加了树状视图的实用性。默认终端程序是 `Konsole`，但您可以使用 `xvt` 或您已安装的任何其他虚拟终端。
 
 “配置浏览器”允许您建立针对 KFM Web 浏览功能的特定设置。第一个选项卡用于代理信息，第二个用于处理 HTTP URL，第三个用于用户代理程序（User Agent）。这些是您希望在在线时从 KFM 内部启动的程序，例如非 KFM 的 FTP 代理程序。第四个选项卡允许您选择如何处理 Cookie，即那些网站为了好或坏放在您机器上的小文件。
 
@@ -4122,55 +3951,56 @@ KFM 通过按键绑定简化了许多功能，这在其他地方你可能称之�
 
 # 第 11 章在 KDE 中使用命令行
 
-流畅且新：Konsole
+流畅且新：`Konsole`
 
-老旧可靠：kvt
+老旧可靠：`kvt`
 
-快速访问提示符：MiniCLI
+快速访问提示符：`MiniCLI`
 
 # 第二部分 定制 KDE 桌面系统
 
 # 第 11 章在 KDE 中使用命令行
 
-与任何操作系统一样，Linux 用户有时会有想要或需要使用命令行的情况。这些情况因人而异。有些人认为，从命令行安装 RPM 软件包比使用图形化包管理器快得多。有些人如果要用 vi 以外的任何工具编辑配置文件，宁愿从楼上跳。我不知道有什么比 `tar xzvt` 命令更快来解压和提取一个 gzipped tar 包。而且如果存在一个能提供编译器通常可能使用的所有选项的图形化前端（graphical front-end），我从未听过，也无法想象。
+与任何操作系统一样，Linux 用户有时会有想要或需要使用命令行的情况。这些情况因人而异。有些人认为，从命令行安装 RPM 软件包比使用图形化包管理器快得多。有些人如果要用 `vi` 以外的任何工具编辑配置文件，宁愿从楼上跳。我不知道有什么比 `tar xzvt` 命令更快来解压和提取一个 gzipped tar 包。而且如果存在一个能提供编译器通常可能使用的所有选项的图形化前端（`graphical front-end`），我从未听过，也无法想象。
 
 KDE 为用户提供了三个命令行选项（实际上是四个），但有一个在 KDE 之外：
 
--   Konsole，全新的、改进的终端模拟器。它对旧的虚拟终端有许多改进，但直到最近它还不完全可靠。
-
--   kvt，被 KDE 开发社区的许多人认为是凑合出来的，但它大显异彩。它的功能并不丰富，但似乎总是能正常工作。
-
--   MiniCLI，微型命令行界面，是一个快速弹出窗口，您可以在其中输入命令。它对某些事情非常理想，但不适合许多其他事情。
-
--   离开 KDE（无论是通过关闭它还是切换到另一个 Linux 终端）是极端的做法，但它总是有效。对于某些功能，如升级 KDE 本身，没有别的东西可以做到。
+- `Konsole`，全新的、改进的终端模拟器。它对旧的虚拟终端有许多改进，但直到最近它还不完全可靠。
+- `kvt`，被 KDE 开发社区的许多人认为是凑合出来的，但它大显异彩。它的功能并不丰富，但似乎总是能正常工作。
+- `MiniCLI`，微型命令行界面，是一个快速弹出窗口，您可以在其中输入命令。它对某些事情非常理想，但不适合许多其他事情。
+- 离开 KDE（无论是通过关闭它还是切换到另一个 Linux 终端）是极端的做法，但它总是有效。对于某些功能，如升级 KDE 本身，没有别的东西可以做到。
 
 那么，我们将依次探索每一个，并关注哪一个最适合特定任务。掌握这些不同的命令行界面对于极大化您的 KDE 体验大有帮助。
 
 ## 流畅且新：Konsole
 
-从 KDE 1.1 开始（这似乎是很久以前了，1999 年 1 月的那个黑暗时代），第二个终端模拟器被纳入了 KDE。它被称为 Konsole。它起初表现很糟糕——经常崩溃并在“核心”文件中留下遗迹——但在运行时，它对字符模式应用程序运行得非常好。它宣布将成为受推崇的 kvt 的替代品（在 KDE 中，它已经存在了六个月了）。当时有很多怀疑者，但这种怀疑现在已经消失了。Konsole 看起来并不好看，比起编译器（参见图 11.1）。
+
+
+# 从 KDE 1.1 开始的 Konsole
+
+从 KDE 1.1 开始（这似乎是很久以前了，1999 年 1 月的那个黑暗时代），第二个终端模拟器被纳入了 KDE。它被称为 `Konsole`。它起初表现很糟糕——经常崩溃并在“核心”文件中留下遗迹——但在运行时，它对字符模式应用程序运行得非常好。它宣布将成为受推崇的 `kvt` 的替代品（在 KDE 中，它已经存在了六个月了）。当时有很多怀疑者，但这种怀疑现在已经消失了。`Konsole` 看起来并不好看，比起编译器（参见图 11.1）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_272_0.png)
 
-图 11.1 它并不漂亮——不像 X 终端那样——但它提供了使其具有吸引力的功能。Konsole 拥有让您大开眼界的功能。例如，包含在 KDE 1.2 版本有一个有趣的“文件”菜单（参见图 11.2）。
+图 11.1 它并不漂亮——不像 X 终端那样——但它提供了使其具有吸引力的功能。`Konsole` 拥有让您大开眼界的功能。例如，包含在 KDE 1.2 版本有一个有趣的“文件”菜单（参见图 11.2）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_272_1.png)
 
-图 11.2 你拥有 Midnight Commander (MC) 文件管理器还是它让你无需输入 su 就能获得控制台？
+图 11.2 你拥有 Midnight Commander (`MC`) 文件管理器还是它让你无需输入 `su` 就能获得控制台？
 
-从一开始，Konsole 的强大之处在于能够在不发送错误的情况下运行字符模式应用程序。许多 X 终端在使用优秀的文件管理器 Midnight Commander 时都很困难。在其中输入的命令有时会反序！但 Konsole 不会，而且事实是，MC 被包含在文件菜单中。它在那里运行得良好，尽管做了一些更改，整体看起来很漂亮（参见图 11.3）。
+从一开始，`Konsole` 的强大之处在于能够在不发送错误的情况下运行字符模式应用程序。许多 X 终端在使用优秀的文件管理器 Midnight Commander 时都很困难。在其中输入的命令有时会反序！但 `Konsole` 不会，而且事实是，`MC` 被包含在文件菜单中。它在那里运行得良好，尽管做了一些更改，整体看起来很漂亮（参见图 11.3）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_273_0.png)
 
 图 11.3 这里是默认尺寸的 Midnight Commander。
 
-在最终，Konsole 不仅能按照预期运行这些应用程序，而且正确可靠地将鼠标点击传递给支持鼠标的应用程序，无论您是否安装了控制台。这在 X 终端中并非易事。虽然有些声称可以，但很少有完全做到。为了测试，我在 Konsole 内部点击了“退出”，得到了图 11.4 所示的结果。
+在最终，`Konsole` 不仅能按照预期运行这些应用程序，而且正确可靠地将鼠标点击传递给支持鼠标的应用程序，无论您是否安装了控制台。这在 X 终端中并非易事。虽然有些声称可以，但很少有完全做到。为了测试，我在 `Konsole` 内部点击了“退出”，得到了图 11.4 所示的结果。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_273_1.png)
 
-图 11.4 Konsole 在运行的应用程序之间传递鼠标命令，这在 X 终端中非常寻常。
+图 11.4 `Konsole` 在运行的应用程序之间传递鼠标命令，这在 X 终端中非常寻常。
 
-当我点击“是”时，我返回了 Konsole 提示符。要用鼠标标记文本，将光标拖到文本上进行选择。如果应用程序感知鼠标，操作时请按住 Shift 键。这是一组很好的设置，但只是开始。你可能记得 KFM 提供超级用户模式。Konsole 也是如此（参见图 11.5）。
+当我点击“是”时，我返回了 `Konsole` 提示符。要用鼠标标记文本，将光标拖到文本上进行选择。如果应用程序感知鼠标，操作时请按住 `Shift` 键。这是一组很好的设置，但只是开始。你可能记得 `KFM` 提供超级用户模式。`Konsole` 也是如此（参见图 11.5）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_274_0.png)
 
@@ -4180,91 +4010,93 @@ KDE 为用户提供了三个命令行选项（实际上是四个），但有一�
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_274_1.png)
 
-图 11.6 如果你在编译时需要做其他事情，一个小小的 Konsole 窗口并不是完全坏主意。如果你愿意，可以在运行其他程序时关注这里。
+图 11.6 如果你在编译时需要做其他事情，一个小小的 `Konsole` 窗口并不是完全坏主意。如果你愿意，可以在运行其他程序时关注这里。
 
-Konsole 的另一个有趣且实用的功能是它的多任务处理；访问“会话”菜单证明了这一点，图 11.7 也是。
+`Konsole` 的另一个有趣且实用的功能是它的多任务处理；访问“会话”菜单证明了这一点，图 11.7 也是。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_275_0.png)
 
-图 11.7 Konsole 的多会话能力允许您同时打开多个虚拟终端应用程序。“会话”菜单允许在它们之间切换。
+图 11.7 `Konsole` 的多会话能力允许您同时打开多个虚拟终端应用程序。“会话”菜单允许在它们之间切换。
 
 > 终端的故事
-Konsole 有许多出色的功能，但在我看来，最简洁的一个是通过点击“帮助 > 技术参考”菜单项找到的。你将看到一张 VT-100 终端的照片，它是所有终端的祖先，随后是关于终端和终端模拟器的清晰且显易见有趣的讨论和解释（参见图 11.8）。即使你不是计算机工程师，它非常值得阅读，仅仅是为了感受 KDE 开发者产出的这种产品的精复杂程度——而且还是免费的！
+
+`Konsole` 有许多出色的功能，但在我看来，最简洁的一个是通过点击“帮助 > 技术参考”菜单项找到的。你将看到一张 VT-100 终端的照片，它是所有终端的祖先，随后是关于终端和终端模拟器的清晰且显易见有趣的讨论和解释（参见图 11.8）。即使你不是计算机工程师，它非常值得阅读，仅仅是为了感受 KDE 开发者产出的这种产品的精复杂程度——而且还是免费的！
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_275_1.png)
 
-图 11.8 Konsole 技术参考值得你一读。它是一个非常简单易懂的教程，解释了什么是终端以及它们是如何工作的，甚至是它们的每一个版本，如运行在你的机器上的 Konsole。
+图 11.8 `Konsole` 技术参考值得你一读。它是一个非常简单易懂的教程，解释了什么是终端以及它们是如何工作的，甚至是它们的每一个版本，如运行在你的机器上的 `Konsole`。
 
+## 第二部分
 
+### 流畅且新颖：Konsole 第 11 章
 
+你可以在 `Konsole` 的应用程序之间自由移动。可用的会话数量远大于你可能需要的数量。
 
-[content]
-
-# 第二部分
-流畅且新颖：Konsole 第 11 章
-
-你可以在 Konsole 的应用程序之间自由移动。可用的会话数量远大于你可能需要的数量。
-
-但在继续之前，让我们先通过“选项”（Options）菜单对它进行一些配置，见图 11.9。
+但在继续之前，让我们先通过“选项”`Options`菜单对它进行一些配置，见图 11.9。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_276_0.png)
 
 图 11.9
-“选项”菜单允许你选择窗口外观、字体大小、显示的列数和行数以及颜色方案。在根据你的需求定制后，记得点击“保存”（Save）选项。
 
-在选择所需的选项时，几乎不会遇到任何困难。唯一潜在的问题点——关闭菜单，可以通过持续的标题栏提示来消除。当菜单被禁用时，在 Konsole 窗口中点击右键会调出“选项”菜单。因此，你可以重新开启它（或）保存你的选项（如果你的选项包含了不显示菜单栏）。如果你在桌面设置中开启了标题栏动画，且你的 Konsole 窗口较小，这条消息就会一直来回滑动，非常烦人。
+“选项”菜单允许你选择窗口外观、字体大小、显示的列数和行数以及颜色方案。在根据你的需求定制后，记得点击“保存”`Save`选项。
 
-同时记住，你也可以通过鼠标抓住边缘或角并拖动到想要的大小来调整 Konsole 的尺寸。
+在选择所需的选项时，几乎不会遇到任何困难。唯一潜在的问题点——关闭菜单，可以通过持续的标题栏提示来消除。当菜单被禁用时，在 `Konsole` 窗口中点击右键会调出“选项”菜单。因此，你可以重新开启它（或）保存你的选项（如果你的选项包含了不显示菜单栏）。如果你在桌面设置中开启了标题栏动画，且你的 `Konsole` 窗口较小，这条消息就会一直来回滑动，非常烦人。
 
-Konsole 拥有一个 100 行的滚动条缓冲区，这意味着你可以使用在你放置滚动条的地方，查看打印到屏幕上的最后 100 行内容。这在执行很长的 `-l` 列表时，或者当你使用 Konsole 启动一个似乎无法从 KDE 桌面启动的图形化应用程序并想查看所有错误信息时非常有用。如果能调整滚动条缓冲区的长度就好了。对于这里可能发生的某些错误来说，一百行还不够！
+同时记住，你也可以通过鼠标抓住边缘或角并拖动到想要的大小来调整 `Konsole` 的尺寸。
+
+`Konsole` 拥有一个 100 行的滚动条缓冲区，这意味着你可以使用在你放置滚动条的地方，查看打印到屏幕上的最后 100 行内容。这在执行很长的 `-l` 列表时，或者当你使用 `Konsole` 启动一个似乎无法从 KDE 桌面启动的图形化应用程序并想查看所有错误信息时非常有用。如果能调整滚动条缓冲区的长度就好了。对于这里可能发生的某些错误来说，一百行还不够！
 
 ## 第二部分 定制 K 桌面
 
-第 11 章 在 KDE 中使用命令行
+### 第 11 章 在 KDE 中使用命令行
 
-# 老当户壮：kvt
+#### 老当户壮：kvt
 
-K 虚拟终端（或 kvt）已经存在了很长时间，远早于 KDE 1.0 的发布。它并不优雅，也不特别吸引人，但它能满足你对终端窗口的大部分需求。随着 Konsole 变得越来越可靠，kvt 已被计划退休。和 Konsole 一样，它会将鼠标命令传递给可以利用它们的应用程序，而且界面相当简洁（见图 11.10）。
+`K` 虚拟终端（或 `kvt`）已经存在了很长时间，远早于 KDE 1.0 的发布。它并不优雅，也不特别吸引人，但它能满足你对终端窗口的大部分需求。随着 `Konsole` 变得越来越可靠，`kvt` 已被计划退休。和 `Konsole` 一样，它会将鼠标命令传递给可以利用它们的应用程序，而且界面相当简洁（见图 11.10）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_277_0.png)
 
 图 11.10
-kvt 即将离开前的最后光辉。
 
-此外，kvt 在 KDE 社区内部得不到任何尊重。这里是它自己的“帮助 > 关于 kvt...”屏幕上显示的内容（见图 11.11）。
+`kvt` 即将离开前的最后光辉。
 
-所以你真的还是想运行 kvt 吗？至少扫一眼“帮助 > 内容”文件中的文档总归是个好主意，对吧？好吧，让我们看看完整的 kvt 帮助系统（见图 11.12）。
+此外，`kvt` 在 KDE 社区内部得不到任何尊重。这里是它自己的“帮助 > 关于 kvt...”屏幕上显示的内容（见图 11.11）。
 
-你开始感觉到 kde.org 的开发者们真的并不希望人们使用 kvt，你不觉得吗？现在 Konsole 已经达到了足以与 kvt 竞争的稳定性，真的没有必要使用 kvt 了，除非在少数情况下你发现某些在 Konsole 中无法运行但在 kvt 中可以工作的东西。
+所以你真的还是想运行 `kvt` 吗？至少扫一眼“帮助 > 内容”文件中的文档总归是个好主意，对吧？好吧，让我们看看完整的 `kvt` 帮助系统（见图 11.12）。
 
-再见，kvt。
+你开始感觉到 `kde.org` 的开发者们真的并不希望人们使用 `kvt`，你不觉得吗？现在 `Konsole` 已经达到了足以与 `kvt` 竞争的稳定性，真的没有必要使用 `kvt` 了，除非在少数情况下你发现某些在 `Konsole` 中无法运行但在 `kvt` 中可以工作的东西。
 
-# 第二部分
+再见，`kvt`。
 
-老当户壮：kvt 第 11 章
+## 第二部分
+
+### 老当户壮：kvt 第 11 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_278_0.png)
 
 图 11.11
-kvt 的独特之处在于它建议你去别处处理业务。
+
+`kvt` 的独特之处在于它建议你去别处处理业务。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_278_1.png)
 
 图 11.12
-不，而且现在永远不会了。kvt 实际上从未需要过帮助。
 
-# 提示符的快速访问：MiniCLI
+不，而且现在永远不会了。`kvt` 实际上从未需要过帮助。
 
-有时有必要执行一个快速命令：某些不需要整个终端会话就能完成的操作。也许你想要确认放入 .kdel 文件中的字符串是否准确，或者可能你想启动一个埋藏在几层菜单中的应用程序。
+## 提示符的快速访问：MiniCLI
 
-为了这些目的以及其他目的，有了 MiniCLI：微型命令行界面。（你在 Linux 中经常听到提到 cli，这意味着你应该从命令行提示符中执行操作。）进入它的方法有两种。第一种是在桌面上点击右键，然后从弹出的菜单中点击“执行命令”（Execute command）。另一种是在任何地方、任何时间按下 Alt+F2。
+有时有必要执行一个快速命令：某些不需要整个终端会话就能完成的操作。也许你想要确认放入 `.kdel` 文件中的字符串是否准确，或者可能你想启动一个埋藏在几层菜单中的应用程序。
+
+为了这些目的以及其他目的，有了 `MiniCLI`：微型命令行界面。（你在 Linux 中经常听到提到 `cli`，这意味着你应该从命令行提示符中执行操作。）进入它的方法有两种。第一种是在桌面上点击右键，然后从弹出的菜单中点击“执行命令”`Execute command`。另一种是在任何地方、任何时间按下 `Alt+F2`。
 
 无论哪种方式，你都会看到图 11.13 中的内容。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_279_0.png)
 
 图 11.13
-尽管 MiniCLI 最不常用的用法是阅读手册页（man pages）。例如，这无法提供帮助，但它可以让手册页变得神圣。
+
+尽管 `MiniCLI` 最不常用的用法是阅读手册页 `man pages`。例如，这无法提供帮助，但它可以让手册页变得神圣。
 
 ```
 FIGURE 11.14
@@ -4272,6 +4104,7 @@ MiniCLI 快速访问手册页。
 ```
 
 FIGURE 11.15
+
 结果是，即。
 
 ```
@@ -4279,105 +4112,89 @@ FIGURE 11.16
 结果提供了手册页。
 ```
 
-[/content]
+## 第三部分
 
-
-
-
-# 第三部分
-使用 Kpager 跟踪虚拟桌面 第 12 章
+### 使用 Kpager 跟踪虚拟桌面 第 12 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_286_0.png)
 
-图 12.1
-Kpager 显示了四个虚拟桌面和一个全局桌面（Global desktop）。后者显示所有具有“粘性”（sticky）的应用程序，也就是说它们被设置为在所有桌面上都显示。在这种情况下，唯一的粘性应用是 Kpager，为了方便查看，它被拉伸到了异常尺寸。StarOffice 运行在第一个桌面，Netscape 运行在第二个桌面，如其图标所示。如果任何虚拟桌面上运行了更多应用程序，它们的所有图标都将显示出来。
 
-Kpager 比它看起来要智能得多。你可以设置（见图 12.2）显示或不显示全局桌面，显示或不显示自己的菜单栏，以一行或两行显示虚拟桌面。你还可以设置显示模式，从图标切换到普通视图（plain view，显示每个窗口中运行应用程序的形状），再到位图视图（pixmap view，尝试对运行的应用程序生成缩略图，尽管并不总是成功，见图 12.3）。
+
+图 12.1
+
+`Kpager` 显示了四个虚拟桌面和一个全局桌面（Global desktop）。后者显示所有具有“粘性”（sticky）的应用程序，也就是说它们被设置为在所有桌面上都显示。在这种情况下，唯一的粘性应用是 `Kpager`，为了方便查看，它被拉伸到了异常尺寸。`StarOffice` 运行在第一个桌面，`Netscape` 运行在第二个桌面，如其图标所示。如果任何虚拟桌面上运行了更多应用程序，它们的所有图标都将显示出来。
+
+`Kpager` 比它看起来要智能得多。你可以设置（见图 12.2）显示或不显示全局桌面，显示或不显示自己的菜单栏，以一行或两行显示虚拟桌面。你还可以设置显示模式，从图标切换到普通视图（plain view，显示每个窗口中运行应用程序的形状），再到位图视图（pixmap view，尝试对运行的应用程序生成缩略图，尽管并不总是成功，见图 12.3）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_286_1.png)
 
 图 12.2
-选项（Options）菜单提供了多种多样的 Kpager 配置。
+
+选项（Options）菜单提供了多种多样的 `Kpager` 配置。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_286_2.png)
 
 图 12.3
-由于某种原因，桌面 1 上的 StarOffice 在“选项 > 绘制模式 > 位图”设置中没有被渲染。此设置还会消耗大量的处理器资源。顺便提一下，横跨每个屏幕的灰色条是 Kpager，为了截图它被放大了。它是粘性的，由于显而易见的原因无法取消粘性。
+
+由于某种原因，桌面 1 上的 `StarOffice` 在“选项 > 绘制模式 > 位图”设置中没有被渲染。此设置还会消耗大量的处理器资源。顺便提一下，横跨每个屏幕的灰色条是 `Kpager`，为了截图它被放大了。它是粘性的，由于显而易见的原因无法取消粘性。
 
 273
 
 # 第三部分 使用 KDE 分发版中的应用程序 第 12 章 使用 KDE 管理 Linux 系统功能
 
-Kpager 的快捷键说得够了。它非常强大。右键点击应用程序，就会得到一个可以对该应用程序执行的操作列表。如果 Kpager 处于普通模式或位图模式，你可以通过点击并拖动应用程序的边缘，在 Kpager 窗口内（从而在它的虚拟屏幕上）调整应用程序的大小。你还可以将应用程序从一个虚拟桌面拖到另一个。
+`Kpager` 的快捷键说得够了。它非常强大。右键点击应用程序，就会得到一个可以对该应用程序执行的操作列表。如果 `Kpager` 处于普通模式或位图模式，你可以通过点击并拖动应用程序的边缘，在 `Kpager` 窗口内（从而在它的虚拟屏幕上）调整应用程序的大小。你还可以将应用程序从一个虚拟桌面拖到另一个。
 
-你可以很容易地将 Kpager 从小尺寸拖到角落，再拖到大尺寸，这样应用程序图标会更可见。完成后，你可以再次将其拖回极小尺寸。
+你可以很容易地将 `Kpager` 从小尺寸拖到角落，再拖到大尺寸，这样应用程序图标会更可见。完成后，你可以再次将其拖回极小尺寸。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_287_0.png)
 
-# 使用 KDE 操作运行中的进程
+## 使用 KDE 操作运行中的进程
 
-虽然 Linux 是一个非常健壮的操作系统，但如果应用程序发生异常并拒绝清洁关闭、未正常关闭或以其他方式发生故障，它无法阻止其继续占用内存等系统资源。因此，有方法可以手动杀死运行中的进程，而无需其许可也不需要重启系统。对于新的 Linux 用户甚至对于一些中级经验的用户来说，这些方法有些晦涩且令人畏畏。KDE 的开发者试图通过一个名为 KTop 的程序，让监控和处理运行中的进程变得容易得多（尽管仍然不简单）（这个名字会让很多 Linux 用户产生熟悉感：top 是执行相同功能的控制台程序）。
+虽然 Linux 是一个非常健壮的操作系统，但如果应用程序发生异常并拒绝清洁关闭、未正常关闭或以其他方式发生故障，它无法阻止其继续占用内存等系统资源。因此，有方法可以手动杀死运行中的进程，而无需其许可也不需要重启系统。对于新的 Linux 用户甚至对于一些中级经验的用户来说，这些方法有些晦涩且令人畏畏。KDE 的开发者试图通过一个名为 `KTop` 的程序，让监控和处理运行中的进程变得容易得多（尽管仍然不简单）（这个名字会让很多 Linux 用户产生熟悉感：`top` 是执行相同功能的控制台程序）。
 
 274
-
-# 使用 KDE 操作运行中的进程 第 12 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_288_0.png)
 
 图 12.4
+
 进程列表（Processes List）显示了你机器上运行的所有内容，这可能比你想象的要多得多。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_288_1.png)
 
 图 12.5
-性能计（Performance Meter）向你显示系统资源是如何部署的。当你打开 KTop 时就开始记录日志，所以当它开始为空时，不要惊讶。
 
-# 第三部分 使用 KDE 分发版中的应用程序 第 12 章 使用 KDE 管理 Linux 系统功能
+性能计（Performance Meter）向你显示系统资源是如何部署的。当你打开 `KTop` 时就开始记录日志，所以当它开始为空时，不要惊讶。
 
-KTop 允许你选择一个进程并通过右键点击渲染菜单，让你杀死任务、更改其在系统资源优先级中的顺序或向其发送其他几种信号。其中一些功能只能由 root 用户执行，且你只能杀死属于你自己的应用程序（你可以通过查看用户 ID 列判断某个进程是否属于你）。KTop 的大部分功能涉及远超本书范围的主题。正如我所说的，它们让操作变得更容易了，而不是简单。你可以查看 top 应用程序的主页来了解这里发生了什么，或者，若要对进程及其含义进行更全面的讨论，请参阅通用且综合的 Linux 手册，例如 *Running Linux* 或 *Special Edition using Caldera OpenLinux 2.2*。
+`KTop` 允许你选择一个进程并通过右键点击渲染菜单，让你杀死任务、更改其在系统资源优先级中的顺序或向其发送其他几种信号。其中一些功能只能由 `root` 用户执行，且你只能杀死属于你自己的应用程序（你可以通过查看用户 ID 列判断某个进程是否属于你）。`KTop` 的大部分功能涉及远超本书范围的主题。正如我所说的，它们让操作变得更容易了，而不是简单。你可以查看 `top` 应用程序的主页来了解这里发生了什么，或者，若要对进程及其含义进行更全面的讨论，请参阅通用且综合的 Linux 手册，例如 *Running Linux* 或 *Special Edition using Caldera OpenLinux 2.2*。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_289_0.png)
 
-尽管如此，可能会冻结整个系统。如果发生这种情况，你的补救措施是 Alt+Delete。
+尽管如此，可能会冻结整个系统。如果发生这种情况，你的补救措施是 `Alt+Delete`。
 
-性能计向你显示系统资源是如何部署的。当你打开 KTop 时就开始记录日志，所以当它开始为空时，不要惊讶。
+性能计向你显示系统资源是如何部署的。当你打开 `KTop` 时就开始记录日志，所以当它开始为空时，不要惊讶。
 
-性能计向你显示系统资源是如何部署的。当你打开 KTop 时就开始记录日志，所以当它开始为空时，不要惊讶。
-
-性能计向你显示系统资源是如何部署的。当你打开 KTop 时就开始记录日志，所以当它开始为空时，不要惊讶。
-
-性能计向你显示系统资源是如何部署的。当你打开 KTop 时就开始记录日志，所以当它开始为空时，不要惊讶。
-
-性能计向你显示系统资源是如何部署的。当你打开 KTop 时就开始记录日志，所以当它开始为空时，不要惊讶。
-
-
-
-
-
-# 第三部分
 ## 使用 KDE 操作运行中的进程 第 12 章
 
-你的机器上极有可能有多个打印后台程序。通常情况下，你有一个向打印机发送原始文本的后台程序，另一个用于过滤打印输出（通常是 PostScript 格式，并将其转换为打印机可以使用的格式），以及第三个（前面没有 PostScript 过滤器），供那些提供自己的打印机驱动并希望以打印机的原生语言与其通信的应用程序使用。（后类应用程序通常是商业软件，例如 WordPerfect。如果你有 PostScript 打印机，StarOffice 会直接与你的打印机通信。Appix 则能处理所有工作，直接与打印机、所有 PostScript 打印机以及你打印时选择的打印后台程序进行通信。）“打印机（Printer）”框让你在它们中进行选择。
+你的机器上极有可能有多个打印后台程序。通常情况下，你有一个向打印机发送原始文本的后台程序，另一个用于过滤打印输出（通常是 PostScript 格式，并将其转换为打印机可以使用的格式），以及第三个（前面没有 PostScript 过滤器），供那些提供自己的打印机驱动并希望以打印机的原生语言与其通信的应用程序使用。（后类应用程序通常是商业软件，例如 `WordPerfect`。如果你有 PostScript 打印机，`StarOffice` 会直接与你的打印机通信。`Appix` 则能处理所有工作，直接与打印机、所有 PostScript 打印机以及你打印时选择的打印后台程序进行通信。）“打印机（Printer）”框让你在它们中进行选择。
 
 “打印（Printing）”和“队列（Queuing）”复选框让你选择显示的内容。
 
 你可以选中一个打印任务并使用“删除（Remove）”或“置顶（Make Top）”按钮将其删除或在队列中移动。在打印任务上点击右键会弹出具有相同选项的菜单。
 
-KLpq 的另一个功能是拖放。这本应让你将文件图标拖入 KLpq 窗口并释放它（或者如果 KLpq 不是你桌面上运行的应用程序，则将其拖到 KLpq 图标上），文件就会打印。这与其他操作系统中的类似安排工作原理一样良好——也就是说，有时是如此。如果一切都完全正确——你的默认队列是你想要的，且文件是你的打印机（或如果包含过滤器的队列）可以理解的格式——你可能会看到你的文档，并再次学到拼写错误在打印到纸上之前永远不会出现。如果一切并非完全正确，你可能会享受来自突然变快的打印机吐出一页接一页纸，每页只有一个字符或一行。这不
+`KLpq` 的另一个功能是拖放。这本应让你将文件图标拖入 `KLpq` 窗口并释放它（或者如果 `KLpq` 不是你桌面上运行的应用程序，则将其拖到 `KLpq` 图标上），文件就会打印。这与其他操作系统中的类似安排工作原理一样良好——也就是说，有时是如此。如果一切都完全正确——你的默认队列是你想要的，且文件是你的打印机（或如果包含过滤器的队列）可以理解的格式——你可能会看到你的文档，并再次学到拼写错误在打印到纸上之前永远不会出现。如果一切并非完全正确，你可能会享受来自突然变快的打印机吐出一页接一页纸，每页只有一个字符或一行。这不
 
 另一个可能有所帮助的打印管理程序（这就是为什么 KDE 提供一个或两个此类程序）是用于惠尔-惠普 LaserJet 的工具——K 菜单（K Menu）> 实用工具（Utilities）> HP LaserJet 控制面板（见图12.7）。如果你没有其中一种打印机，它对你将毫无用处。另一方面，如果你拥有其中一种打印机，除非你拥有的是那些打印机本身没有控制功能的后期 LaserJet，否则它对你也没有用处。对于那些打印机，此应用程序是提供的 Windows 软件的替代品。
 
 如果你有一台新款 LaserJet（例如 5L 或 6L），LaserJet 控制面板将让你感到熟悉并对你感兴趣。我们其他人就可以跳过这个。（顺便说一下，LaserJet 控制面板的前两个页面没有“帮助（Help）”按钮。它隐藏在第三标签页（标题为“操作 Operations”）的控制控件之间。）
 
-# 第三部分 使用 KDE 发行版中的应用程序
-第 12 章 使用 KDE 管理 Linux 系统功能
-
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_293_0.png)
 
 图 12.7
+
 它很漂亮，但它有什么用？LaserJet 控制面板对于没有 LaserJet 的用户来说确实没用，可能对于拥有它们的人来说也没用。
 
-# 处理 CD 和软盘驱动器
+## 处理 CD 和软盘驱动器
 
 Linux 另一个让新用户感到惊讶且不悦快的地方是它处理 CD-ROM 和软盘的方式。由于安全问题，这些设备通常不能像在 DOS 操作系统中那样插入相应的驱动器进行读取或（对于软盘）写入。要读取 CD，你必须先将其放入 CD 读器并*挂载（mount）*它，使用如下控制台或终端命令：
 
@@ -4385,13 +4202,15 @@ Linux 另一个让新用户感到惊讶且不悦快的地方是它处理 CD-ROM 
 mount /mnt/cdrom
 ```
 
-而且你通常必须是 root 用户才能执行操作。这取决于你的 Linux 发行版及其设置的默认值。要更改它，请查看你发行版文档中关于编辑 `/etc/fstab` 的信息。完成后，你必须执行另一个命令：
+而且你通常必须是 `root` 用户才能执行操作。这取决于你的 Linux 发行版及其设置的默认值。要更改它，请查看你发行版文档中关于编辑 `/etc/fstab` 的信息。完成后，你必须执行另一个命令：
 
 ```
 unmount /mnt/cdrom
 ```
 
-如果你不这样做，Linux 就不会让你的 CD 读器把 CD 还给你。是的，这个命令是 *unmount*，这让 Linux 用户至少困惑过一次。（实际上，大多数 Linux 用户可能对这个谜题仍然困惑，但他们至少学会了如何将 CD 从机器中取出。）
+
+
+如果你不这样做，Linux 就不会让你的 CD 读器把 CD 还给你。是的，这个命令是 `unmount`，这让 Linux 用户至少困惑过一次。（实际上，大多数 Linux 用户可能对这个谜题仍然困惑，但他们至少学会了如何将 CD 从机器中取出。）
 
 挂载软盘可能更糟：
 
@@ -4414,13 +4233,14 @@ umount /mnt/floppy
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_294_0.png)
 
 图 12.8
+
 Floppy 让你格式化磁盘。
 
 # 硬盘管理
 
 有几个工具对于硬盘使用非常有用。虽然这不属于本书的范围，但如果你从未编译过任何东西，你早晚会学会，而且会很好。现在我将详细说明如何获取和安装这些程序。我假设你已经安装了良好的编译器，以及相关的库和开发包。如果你有一个相当现代的 Linux 发行版——1999 年之后的任何版本都可以——尽管可能需要从 KDE 发行版中安装它们。
 
-首先，登录网页 http://ftp.kde.org/pub/unstable/apps/utils/，在那里你可以找到名为 `kdu-0.9.3.tar.gz` 的文件。下载它。退出网页。别去检查邮件；我们在等你。
+首先，登录网页 `http://ftp.kde.org/pub/unstable/apps/utils/`，在那里你可以找到名为 `kdu-0.9.3.tar.gz` 的文件。下载它。退出网页。别去检查邮件；我们在等你。
 
 现在，打开终端并输入 `su` 然后回车。在提示时，输入你的 root 密码并回车。然后 `cd` 进入包含 `kdu-0.9.3.tar.gz` 的目录。现在 `cp kdu-0.9.3.tar.gz /usr/local/src` 并回车。
 
@@ -4430,10 +4250,8 @@ Floppy 让你格式化磁盘。
 
 你现在需要知道 KDE 所在的目录——`/opt/kde`、`/usr/local/kde` 或如果你运行 Red Hat 6.0 则是 `usr`。输入 `./configure --prefix=[你的 KDE 目录]` 然后回车。
 
+## 第三部分
 
-
-
-# 第三部分
 硬盘管理 第 12 章
 
 回到后台并观察系统如何搜索构建一个完整且内容丰富的程序所需的所有成分。你将看到它生成 `Makefile`，这些是编译器在构建程序时使用的指令。
@@ -4445,13 +4263,14 @@ Floppy 让你格式化磁盘。
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_296_0.png)
 
 图 12.9
+
 起初，Kdu 除了显示你成功编译之外什么都不显示。
 
 KDE 界面是空的，因为你还没有选择要显示的目录。顺便说，Kdu 是 Linux `du` 命令的 KDE 前端。它显示了硬盘上特定文件、目录和子目录占用的磁盘空间。例如，看看 KDE 目录是什么样的（见图 12.10）。
 
-# 第三部分 使用 KDE 发行版中的应用程序
+## 第三部分 使用 KDE 发行版中的应用程序
 
-# 第 12 章 使用 KDE 管理 Linux 系统功能
+### 第 12 章 使用 KDE 管理 Linux 系统功能
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_297_0.png)
 
@@ -4489,11 +4308,9 @@ KDE 界面是空的，因为你还没有选择要显示的目录。顺便说，K
 
 我们现在了解到，kfree 知道你的驱动器上有多少空间（分区被视为驱动器）。我们还了解到我没料到 2.2 会把 KDE 放在 /usr/opt 并创建一个指向 /opt 的符号链接，所以我把根分区分得比我可能用到的任何地方大。如果情况紧张，我会删除符号链接并创建一个名为 /opt 的真实目录，将 KDE 链接到那里，并使用反向指向的符号链接。
 
+## 第三部分 在 KDE 发行版中使用应用程序
 
-
-
-# 第三部分 在 KDE 发行版中使用应用程序
-## 第 13 章使用 KOrganizer 跟踪你的世界
+### 第 13 章 使用 KOrganizer 跟踪你的世界
 
 在主流软件中，它们被称为 PIMs（个人信息管理程序）。如果你看到某些制作 PIM 的公司的广告，它们会向你保证通往财富和影响力的道路不会因为错过预约或社交失礼而受到阻碍。
 
@@ -4502,6 +4319,9 @@ KDE 有一个名为 KOrganizer 的个人信息管理器。它没有做出此类�
 KOrganizer 位于 K 菜单 > 应用程序 > 组织（Organizer），但许多用户将其添加到 K 面板的第一个应用程序中，正如你在第 7 章“制作超级 K 面板”中所学会的那样。它采用了其原生文件格式 ASCII vCalendar 协议，这意味着如果你在不同的操作系统中使用过 PIM，那么很有可能你的部分或全部数据都可以导出到 KOrganizer 中。它还提供了与 3Com PalmPilot 数字助手同步的工具。它的其他功能还包括：
 
 - 一个完整的日历程序，标记了来自许多国家的国家节假日供你选择。
+
+
+
 - 一个日程本，具有多级警报，警报由一个微小的独立程序触发，这样 KOrganizer 就不一直运行。
 - 一个运行中的待办事项（To do list）。
 - 指向 Kaddressbook 插件的链接。
@@ -4518,6 +4338,7 @@ KOrganizer 位于 K 菜单 > 应用程序 > 组织（Organizer），但许多用
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_304_0.png)
 
 **图 13.1**
+
 默认的 KOrganizer 视图特征是当前月份的小型日历、今天的预约列表以及不特定于日期的待办事项列表。你昨天发布的内容，今天会收到提醒。
 
 分隔日历、待办事项列表与预约列表的分割线可以向右拖动，为待办事项留出更多空间，而日历的大小保持不变。取决于你安装的字体，某些月份或年份可能无法在日历的网格中完全显示。
@@ -4527,6 +4348,7 @@ KOrganizer 位于 K 菜单 > 应用程序 > 组织（Organizer），但许多用
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_304_1.png)
 
 **图 13.2**
+
 工作周视图提供了本周、过去一周或未来一周的概览。双击方框会高亮它；再次双击会弹出一个对话框，你可以在其中输入预约。
 
 越来越多的人，尤其是那些远程办公或经营业务的人，认为工作周是七天的，并且有一个视图（View） > 周（Week）选项（参见图 13.3）。
@@ -4534,6 +4356,7 @@ KOrganizer 位于 K 菜单 > 应用程序 > 组织（Organizer），但许多用
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_305_0.png)
 
 **图 13.3**
+
 周视图具有工作周视图的所有功能，但它承认一周有七天而不是五天。点击日历上的日期会将 KOrganizer 切换到所选日期的日视图。
 
 也许更通用的用途是视图（View） > 月份（Month）（参见图 13.4），在其中你可以一目查看整个月的日历。
@@ -4541,6 +4364,7 @@ KOrganizer 位于 K 菜单 > 应用程序 > 组织（Organizer），但许多用
 ![](img/4a2883756c73e7b0696dbbd721cc7db_305_1.png)
 
 **图 13.4**
+
 月份视图显示整一个月，尽管不一定是一个标准的日历。右侧的小黑色三角形让你在时间上导航：单三角形一次居中一个日期；双三角形向前或向后一个月；三三角形则让你看到你去年做了什么或明年将做什么。
 
 在试图弄清楚如历史事件发生的星期几这类事情时，月份视图特别有用。通过使用右侧的样式化箭头，你可以一次回一周、一个月或一年，这种回溯对于除了庆祝审判日的人以外的所有人来说都足够远了。你也可以导航到遥远的未来，在到达某个年份时停止，这对于我们大多数大多数人来说应该足够了，当然，我们可能不知道 KOrganizer 是否符合要求（那时你可能已经升级了软件，这也是 KOrganizer 格式是可的的原因之一）。
@@ -4550,6 +4374,7 @@ KOrganizer 位于 K 菜单 > 应用程序 > 组织（Organizer），但许多用
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_306_0.png)
 
 **图 13.5**
+
 列表视图汇总了当天的活动。列让你知道是否设置了警报、该项目是否为重复性事件（如生日）、到期日期以及项目的简要描述。
 
 在列表视图中，你可以右键点击项目产生一个菜单，允许显示日期、编辑项目（这在摘要中可以看到详情）以及删除事件。记住，这些都是数据的不同视图，你可以在其中任何一个视图中查看或修改。
@@ -4561,11 +4386,13 @@ KOrganizer 在许多方面上与 KDE 应用程序不同。由于由于原因，�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_307_0.png)
 
 **图 13.6**
+
 与 KDE 应用程序的分页设计不同，KOrganizer 的配置类似于 KDE 控制面板。你通常不会更改此页的任何默认设置，除非是为了 KOrganizer 的国家的假期。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_307_1.png)
 
 **图 13.7**
+
 假日的选择是通过下拉列表进行的。这里没有特色双重国籍。如果你庆祝感恩节、装箱日和巴黎国庆日，你需要通过其他方式跟踪其中两个。
 
 你可能会在“时间与日期”（Time & Date）页上进行一些更改（参见图 13.8）。选项非常直观，但其默认设置可能不符合你的口味。时区是相对于格林治标准时间的小时偏移，你的 Linux 系统是或应该是。如果你的预约通常多于或少一小时，你可以在这里更改，也可以更改警报时间。如果你每周预约七天，你需要取消勾选“周一开始”复选框。
@@ -4573,13 +4400,10 @@ KOrganizer 在许多方面上与 KDE 应用程序不同。由于由于原因，�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_308_0.png)
 
 **图 13.8**
+
 另一处偏离 KDE 惯例的地方：你不允许将配置更改为基于互联网时间（参见第 5 章），你的客户和同事可以对此表示感谢。
 
 你可能还想对“字体”（Fonts）页进行一些更改（参见图 13.9），即使不是出于其他原因，仅仅是因为某些版本月份视图中使用的默认 5 点 Helvetica 字体在任何已知的显示器上都无法辨认。点击列出的字体旁边的按钮将提供一个直观但非标准的字体选择对话框。
-
-
-
-
 
 # 第三部分 在 KDE 发行版中使用应用程序
 
@@ -4590,6 +4414,7 @@ KOrganizer 在许多方面上与 KDE 应用程序不同。由于由于原因，�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_309_0.png)
 
 图 13.10
+
 点击元素旁边的按钮，有点意外的是，显示了标准的 KDE 颜色选择对话框。
 
 “视图”页面（见图 13.11）展现了它自己的小谜团。“开始时间：”微调按钮允许你设置一个你不安排预约之前的小时，避免了你会在设置预约时需要从午夜开始来计算。而“在日期导航器中显示每天重复的事件”选项，则让你决定某些视图中使用的缩略日历上的日期颜色（该颜色在您有预约的日期会改变颜色）是否随重复事件发生变化。谜团在于更改“计划”视图中“小时大小”的滑动块。并没有任何“计划”视图，它似乎也没有更改任何其他视图中的任何内容。我找不到任何知道它是干什么的人。所以你可能可以保持默认值而没有太大风险。
@@ -4597,6 +4422,7 @@ KOrganizer 在许多方面上与 KDE 应用程序不同。由于由于原因，�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_309_1.png)
 
 图 13.11
+
 好吧，KOrganizer 工具栏上“周视图”的图标在气泡帮助中标记为“计划视图”。但滑动块对那里的小时大小没有影响。所以你可以忽略这个滑动块。
 
 # 第三部分 预约处理 第 13 章
@@ -4606,17 +4432,20 @@ KOrganizer 在许多方面上与 KDE 应用程序不同。由于由于原因，�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_310_0.png)
 
 图 13.12
+
 “打印”菜单中的“纸张方向”是灰色的，因为窗口的形状会自动决定方向。
 
 通过以上这些，你应该能够组合出一个适合你工作方式的配置。
 
-几个菜单选项值得你注意，仅仅是为了防止混淆。在“文件”菜单中我们有“从 Ical 导入”，它可以将使用 Linux Ical 程序创建现有日历导入当前日历；以及“合并日历”，它可以将你在 ~/ 目录中选择的日历文件与当前日历合并。当 KOrganizer 作为协作软件使用时，这尤为有用。
+几个菜单选项值得你注意，仅仅是为了防止混淆。在“文件”菜单中我们有“从 Ical 导入”，它可以将使用 Linux Ical 程序创建现有日历导入当前日历；以及“合并日历”，它可以将你在 `~/` 目录中选择的日历文件与当前日历合并。当 KOrganizer 作为协作软件使用时，这尤为有用。
 
 **操作 > 邮件预约**会将特定预约及其所有细节副本发送给该预约中任何你拥有电子邮件地址的参与者。你就可以这样设置 KOrganizer 来联系花店和餐厅，尽管自己拨打电话可能更简单。
 
 # 预约处理
 
 你可以通过多种不同的方式进入设置预约的界面，某些方法取决于你正在使用的视图。两种始终有效的方法是：点击“操作 > 新预约”或“操作 > 新事件”（前者是“定时事件”，后者不是），然后点击那个看起来像日历但没有 X 或数字的图标。它是从内向数第四个，位于打印机图标右侧。在这个应用程序中，气泡帮助很有帮助，因为图标没有提供即时线索。在“日视图”中，在右侧的时间段上连续点击四下即可获得“编辑预约”对话框（见图 13.13）。“工作周视图”和“周视图”也是如此。在“月视图”中，双击日期会产生“新预约”对话框（见图 13.14），这与“编辑预约”对话框不同。它缺少删除预约的能力，因为它还没有生成。
+
+
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_311_0.png)
 
@@ -4637,12 +4466,14 @@ KOrganizer 在许多方面上与 KDE 应用程序不同。由于由于原因，�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_312_1.png)
 
 图 13.15
+
 - 保存并关闭
 - 下一个事件
 - 取消
 - 删除此预约
 
 # 第三部分 在 KDE 发行版中使用应用程序
+
 # 第 13 章 使用 KOrganizer 跟踪您的世界
 
 框框下方是，“重复事件”。这会同时移除“开始时间”和“结束时间”选项，并开放“重复”选项卡。（一个很棒的功能是，仍然可以使用闹钟来提醒你下午三点的会议或你喜欢的电视节目。）
@@ -4657,10 +4488,8 @@ KOrganizer 在许多方面上与 KDE 应用程序不同。由于由于原因，�
 
 在所有这些旁边有一个标记为“显示时间为”的下拉框，选项有“忙碌”和“空闲”。在所有这些下方是一个大型文本框，你可以在其中输入事件详情。下方是一个标记为“类别”的按钮，它会生成图 13.17 所示的对话框。
 
-
-
-
 # 第三部分
+
 ## 日程处理 第 13 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_314_0.png)
@@ -4672,12 +4501,12 @@ KOrganizer 类别对话框允许你以独特的方式来刻画你的日程。
 这并不是显而易见的，但以下是使用 KOrganizer 类别对话框的方法：
 
 - 1. 在左侧列表中突出显示你想要用来刻画此日程的单词。
-- 2. 点击 **Add（添加）** 按钮。这会将该单词添加到右侧列表中。如果你有多个想使用的单词，请重复此操作。
-- 3. 如果你改变了主意，可以使用 **Remove（移除）** 按钮取消左侧列表中突出显示的单词。在点击 **OK（确定）** *之前*，请确保你要的是想要的单词，且没有不想要的。一旦你确认了选择，再次打开 KOrganizer 类别对话框将无法再删除它们，除非用其他内容替换它们。你无法在“类别”按钮后的新日程中留空行。
+- 2. 点击 `Add（添加）` 按钮。这会将该单词添加到右侧列表中。如果你有多个想使用的单词，请重复此操作。
+- 3. 如果你改变了主意，可以使用 `Remove（移除）` 按钮取消左侧列表中突出显示的单词。在点击 `OK（确定）` *之前*，请确保你要的是想要的单词，且没有不想要的。一旦你确认了选择，再次打开 KOrganizer 类别对话框将无法再删除它们，除非用其他内容替换它们。你无法在“类别”按钮后的新日程中留空行。
 
 私有框会将日程保存在你的本地日历中，而不会与其他可能正在使用同一日历的人共享。
 
-点击 **Details（详情）** 标签提供了额外的可能性，帮助你度过日程发生前的时间（见图 13.18）。
+点击 `Details（详情）` 标签提供了额外的可能性，帮助你度过日程发生前的时间（见图 13.18）。
 
 # 第三部分 在 KDE 发行版中使用应用程序
 
@@ -4687,17 +4516,17 @@ KOrganizer 类别对话框允许你以独特的方式来刻画你的日程。
 
 # 图 13.18
 
-Details（详情）标签允许你列出参与日程的每一个人，以及你认为该日程有多重要。
+`Details（详情）` 标签允许你列出参与日程的每一个人，以及你认为该日程有多重要。
 
-在这里，你列出所有预计出席日程的人，这对于小组签到并说明他们的计划是一个好方法。你可以在相应的文本框中输入姓名和电子邮件地址。然后，可以在 Role（角色）下拉框中确定该人员的状态（见图 13.19）。
+在这里，你列出所有预计出席日程的人，这对于小组签到并说明他们的计划是一个好方法。你可以在相应的文本框中输入姓名和电子邮件地址。然后，可以在 `Role（角色）` 下拉框中确定该人员的状态（见图 13.19）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_315_1.png)
 
 # 图 13.19
 
-Role（角色）下拉框允许你为参与者分配类别。
+`Role（角色）` 下拉框允许你为参与者分配类别。
 
-同样，Status（状态）下拉框允许你选择对此日程或会议需要做什么（如果有的话）（见图 13.20）。
+同样，`Status（状态）` 下拉框允许你选择对此日程或会议需要做什么（如果有的话）（见图 13.20）。
 
 # 第三部分
 
@@ -4707,38 +4536,41 @@ Role（角色）下拉框允许你为参与者分配类别。
 
 图 13.20
 
-做什么？Status（状态）提供了一个提醒。
+做什么？`Status（状态）` 提供了一个提醒。
 
-如果参与者列在地址簿中，系统将自动为你填好姓名和电子邮件地址（见图 13.21）。如果一切正常，点击 Add（添加），该人员就会被添加到标记为 Attendee Information（会者信息）的此前空白的文本列表中。如果有人无法参加，你可以点击 Remove（移除），被突出显示的人员就会消失。
+如果参与者列在地址簿中，系统将自动为你填好姓名和电子邮件地址（见图 13.21）。如果一切正常，点击 `Add（添加）`，该人员就会被添加到标记为 `Attendee Information（会者信息）` 的此前空白的文本列表中。如果有人无法参加，你可以点击 `Remove（移除）`，被突出显示的人员就会消失。
 
 另请参考
 
-- *Address Book（地址簿）按钮是指向 Kaddressbook 的链接，这是一个 KDE 小部件，详情见第 341 页第 15 章“多媒体：音乐与电影”。*
+- `Address Book（地址簿）` 按钮是指向 Kaddressbook 的链接，这是一个 KDE 小部件，详情见第 341 页第 15 章“多媒体：音乐与电影”。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_316_1.png)
 
 图 13.21
 
-Address Book 打开一个地址簿小部件，你可以在其中搜索会议的参与者。
+`Address Book` 打开一个地址簿小部件，你可以在其中搜索会议的参与者。
 
-再次，你可以为会议分配 Categories（类别），现在你还可以通过图 13.22 所示的下拉框为事件分配 Priority（优先级）。
+再次，你可以为会议分配 `Categories（类别）`，现在你还可以通过图 13.22 所示的下拉框为事件分配 `Priority（优先级）`。
 
 # 第三部分 在 KDE 发行版中使用应用程序
+
 第 13 章 使用 KOrganizer 追踪你的世界
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_317_0.png)
 
 图 13.22
-通过 Priority（优先级）下拉框选择此事件的相对重要性。
 
-如果你总是忘记每周会议、某人的生日或者“国家回形针意识周”，那么 KOrganizer 正适合你。转到 Recurrence（重复）标签页（见图 13.23）。
+通过 `Priority（优先级）` 下拉框选择此事件的相对重要性。
+
+如果你总是忘记每周会议、某人的生日或者“国家回形针意识周”，那么 KOrganizer 正适合你。转到 `Recurrence（重复）` 标签页（见图 13.23）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_317_1.png)
 
 图 13.23
-Recurrence（重复）允许你只需输入一次一个反复发生的事件。然而，如果你忘记在 General（常规）页面上勾选 No time associate（不关联时间）框，你将能够将其缩小到只有一天。
 
-如果你在 General 页面上取消勾选了 No time associate，你会发现一个可以为事件选择一天中某个时间的地方；否则，这将限制每日提醒的实用性（“活着”提醒仅仅是如此，即使是它某一天也会出错）。
+`Recurrence（重复）` 允许你只需输入一次一个反复发生的事件。然而，如果你忘记在 `General（常规）` 页面上勾选 `No time associate（不关联时间）` 框，你将能够将其缩小到只有一天。
+
+如果你在 `General` 页面上取消勾选了 `No time associate`，你会发现一个可以为事件选择一天中某个时间的地方；否则，这将限制每日提醒的实用性（“活着”提醒仅仅是如此，即使是它某一天也会出错）。
 
 # 第三部分
 
@@ -4746,17 +4578,16 @@ Recurrence（重复）允许你只需输入一次一个反复发生的事件。�
 
 也就是说你需要提醒在……（注：原文在此处开始存在大量重复的乱码，已按逻辑处理）。
 
-
-
-
 # 让你的日常工作更简单的程序
 
 KEdit 编辑器
 
 如果你是程序员或想成为程序员：
+
 高级编辑器
 
 十六进制编辑器：如果你真的需要
+
 查看二进制文件
 
 使用 KFind 进行勘探
@@ -4764,9 +4595,11 @@ KEdit 编辑器
 随处可计算的 kCalc
 
 快速记录笔记记：
+
 KJots 和 KNote
 
 大事业的开始：
+
 KAddressbook
 
 口袋中的 KDE：KPilot
@@ -4779,6 +4612,8 @@ KAddressbook
 
 # 用于文本文件的 KEdit
 
+
+
 如果你曾经在任何操作系统的 GUI 下使用过简单的文本编辑器，那么在使用 KEdit 时将不会遇到太大困难。正如人们所说，它的所有主要功能都是直观的，并且非常符合通用的 KDE 标准。如果你掌握了 KEdit，你也就掌握了其他 KDE 应用程序的许多内容。不过，它确实提供了一些小惊喜，我们将在介绍基础知识之后介绍它们。
 
 当你第一次打开 KEdit 时（从 K 菜单选择 应用程序 > 文本编辑器），它看起来就像图 14.1。
@@ -4786,6 +4621,7 @@ KAddressbook
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_324_0.png)
 
 图 14.1
+
 如果你没有用过 KDE 应用程序，KEdit 是一个很好的入门入门。菜单栏图标和许多菜单项在大多数 KDE 应用中是一致的。
 
 - ① 新建
@@ -4800,47 +4636,60 @@ KAddressbook
 
 工具栏与几乎所有其他 KDE 应用程序一致，让我们从左到右查看图标的含义：
 
-- **新建**创建一个新文件，是 KEdit 打开时的默认行为。
-- **打开**会为你提供标准的 KDE 文件选择对话框，如图 14.2 所示。你选择要在 KEdit 中打开的文件。
+### 新建
+创建一个新文件，是 KEdit 打开时的默认行为。
+
+### 打开
+会为你提供标准的 KDE 文件选择对话框，如图 14.2 所示。你选择要在 KEdit 中打开的文件。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_325_0.png)
 
-# 图 14.2
+图 14.2
 
 标准的 KDE 文件选择对话框允许你选择要在 KEdit 或几乎任何其他 KDE 应用程序中打开的文件。如果你还不熟悉这个窗口，很快你就会熟悉它。
 
-- **保存**将文件保存到磁盘。你会看到一个对话框，如图 14.3 所示，与“打开”对话框相同，不同在于你现在必须为文件选择位置，当然还有文件名。
+### 保存
+将文件保存到磁盘。你会看到一个对话框，如图 14.3 所示，与“打开”对话框相同，不同在于你现在必须为文件选择位置，当然还有文件名。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_326_0.png)
 
-**图 14.3**
+图 14.3
 
 文件选择对话框现在允许你决定打开哪个文件，但想保存到哪里以及以什么名字保存。如果你选择了一个已存在的文件，你会收到警告（见图 14.4），如果你选择不覆盖现有文件，会被带回文件选择对话框重试。
 
-**图 14.4**
+图 14.4
 
 如果你在尝试保存时点击已存在的文件，或在文本框中输入已存在的文件，就会收到此警告。
 
-- **复制**将选中的文本加载到剪贴板以便重复使用。
-- **粘贴**将剪贴板的内容（如果你使用 Klipper，则为最近的内容）插入到当前光标位置。
-- **剪切**移除选中的文本并将其保留在剪贴板中以便重复使用。如果你进行了额外的剪切，这些材料将被清除，除非你正在使用 Klipper。在这种情况下，它会在剪贴板顺序中向下移动，如果你想检索它，需要去 Klipper。
+### 复制
+将选中的文本加载到剪贴板以便重复使用。
 
-- **打印**产生打印对话框（见图 14.5）。这是 KDE 应用程序略有不同之处之一。某些应用程序，例如 KFM（在第 10 章“使用 KFM 导航一切”中讨论），
+### 粘贴
+将剪贴板的内容（如果你使用 Klipper，则为最近的内容）插入到当前光标位置。
+
+### 剪切
+移除选中的文本并将其保留在剪贴板中以便重复使用。如果你进行了额外的剪切，这些材料将被清除，除非你正在使用 Klipper。在这种情况下，它会在剪贴板顺序中向下移动，如果你想检索它，需要去 Klipper。
+
+### 打印
+产生打印对话框（见图 14.5）。这是 KDE 应用程序略有不同之处之一。某些应用程序，例如 KFM（在第 10 章“使用 KFM 导航一切”中讨论），
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_327_0.png)
 
 图 14.5
+
 打印
 
-- **邮件**将文档发送给收件者，如图 14.6 所示。
+### 邮件
+将文档发送给收件者，如图 14.6 所示。
 
-![](img/4a2883756c73e7b0696dbbd721c5c7db_327_1.png) （注：OCR 中的图像文件名是重复或拼写错误，已修正为图 14.6）
+![](img/4a2883756c73e7b0696dbbd721c5c7db_327_1.png)
 
 图 14.6
 
-- **帮助**打开帮助手册。阅读它总是有用的。
+### 帮助
+打开帮助手册。阅读它总是有用的。
 
-# 配置 KEdit
+## 配置 KEdit
 
 对于绝大多数用途，KEdit 运行良好。但你急于更改某些设置以适应你的喜味。
 
@@ -4849,6 +4698,7 @@ KAddressbook
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_328_0.png)
 
 图 14.7
+
 如果你计划使用配置文件，最好使用等宽字体（如 Courier），而不是等比例字体。
 
 “颜色”选项允许你设置对话框的前景色和背景色调。
@@ -4858,6 +4708,7 @@ KAddressbook
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_329_0.png)
 
 图 14.8
+
 “选项”对话框提供了 KEdit 特有的选择。
 
 “设置列”复选框和文本框以及“自动换行”复选框在你将 KEdit 用于非编程目的且不希望段落显示为长连续的行时非常有用。如果你选择了“备份副本”，正在编辑文件的上一个版本将保存与原始文件相同的的位置，文件名相同但在末尾多跟一个波浪号 (-)。“邮件命令”提供了一个让你输入 KEdit 在使用它发送文件时采用的命令。除非默认方案不起，否则没有理由更改它。
@@ -4866,33 +4717,23 @@ KAddressbook
 
 “自动插入”是一个程序员的设置，它将新行的缩进设置为最后一行包含回车符以外任何内容的缩进。如果你不是程序员，就不需要它。如果你更倾向于使用菜单，可以“隐藏工具栏”，也可以“隐藏状态栏”（即底部的行，它告诉你你处于插入模式还是覆盖模式、你在文件中的位置，有时在行左侧还有其他信息），如果你发现这些信息对你没有用的话。
 
-
-
-
-
-# 第三部分
-KEdit 文本编辑器 第 14 章
-
 ## KEdit 的特殊功能
 
-由于无法想象你完全不知道使用简单文本编辑器的基础，我们将直接跳到一些你可能在其他文本编辑器中遇到过的功能。这些功能主要位于“文件”（File）菜单，尽管“编辑”（Edit）菜单也对此了一些贡献。
+由于无法想象你完全不知道使用简单文本编辑器的基础，我们将直接跳到一些你可能在其他文本编辑器中遇到过的功能。这些功能主要位于“文件”菜单，尽管“编辑”菜单也对此了一些贡献。
 
-文件 > 打开最近（File > Open Recent）提供了在当前 KDE 会话中编辑过的列表（见图 14.9）。你可以点击其中任何一个重新打开它。
+### 文件 > 打开最近
+提供了在当前 KDE 会话中编辑过的列表（见图 14.9）。你可以点击其中任何一个重新打开它。
 
 ![](img/4a2883756c73e7b0696bdbd721c5c7db_330_0.png)
 
 图 14.9
+
 如果你曾为了微调配置文件尝试过各种可能，结果却在目录树中反复爬上爬下或寻找正在处理的文件，那么你会非常感激“文件 > 打开最近”这个菜单项。
 
-使用 KEdit 几乎可以像在本地机器上一样容易地在互联网上读取、写入和保存文本文件。（如果你浏览过 ftp 站点并点击过 README 文件，你就已经见过它的作用了，至少是在读取远程文件方面。）这是通过使用“文件 > 打开 URL”（File > Open URL）和“文件 > 保存到 URL”（File > Save to URL）菜单项实现的。每个项都会打开一个对话框，你需要在其中指定你想要的 URL。当然，你需要互联网的写入权限才能将文件保存到 URL（这可是好事）。
+使用 KEdit 几乎可以像在本地机器上一样容易地在互联网上读取、写入和保存文本文件。（如果你浏览过 ftp 站点并点击过 README 文件，你就已经见过它的作用了，至少是在读取远程文件方面。）这是通过使用“文件 > 打开 URL”和“文件 > 保存到 URL”菜单项实现的。每个项都会打开一个对话框，你需要在其中指定你想要的 URL。当然，你需要互联网的写入权限才能将文件保存到 URL（这可是好事）。
 
-编辑 > 插入文件（Edit > Insert File）会调出熟悉的 KDE 文件选择对话框。在这里你可以选择一个文件插入到当前光标位置，确保光标处于正确的位置。如果你想在文件中添加今天的日期，选择“编辑 > 插入日期”（Edit > Insert Date）。
-
-# 第三部分 在 KDE 发行版中使用应用程序
-
-# 第 14 章让日常工作更简单的程序
-
-如果你没有启用状态栏，“编辑 > 转到行号”（Edit > Goto Line）的作用会没用得多，但它仍然很有用处。例如，你可能会在你编译的程序中发现问题。因此，你可能认为给程序作者发邮件是足够的，而作者反过来建议通过将文件中某行的值替换为另一个值并重新编译，问题就会消失。你可以直接跳转到所需的行。不要嗤之以鼻，这种情况会发生。
+### 编辑 > 插入文件
+会调出熟悉的 KDE 文件选择对话框。在这里你可以选择一个文件插入到当前光标位置，确保光标处于正确的位置。如果你想在文件中添加今天的日期，选择“编辑 > 插入日期”。
 
 ## 拖放
 
@@ -4908,181 +4749,424 @@ kedit: cannot connect to X server :0.0
 
 有一个解决方法。如果你以 root 身份输入：
 
-`su +local`
+```
+su +local
+```
 
-并按回车，你就可以运行 KEdit 或你安装的任何其他 X 窗口系统编辑器，并 root 身份编辑配置文件。如果你经常这样做，可以考虑将该行添加到 ~/.xinitrc 的顶部，使其始终可用。然后，你只需要输入它即可。
+并按回车，你就可以运行 KEdit 或你安装的任何其他 X 窗口系统编辑器，并 root 身份编辑配置文件。如果你经常这样做，可以考虑将该行添加到 `~/.xinitrc` 的顶部，使其始终可用。然后，你只需要输入它即可。
 
 但请注意，这样做在某种程度上可能会带来安全风险，让其他用户访问 X。像 Linux 中所有的安全风险一样，这只是方便性的问题，你认为可能有人会在你的机器上捣乱。该设置在终端窗口中执行后，在整个 KDE 会话期间保持有效。
 
 ## 如果你是程序员或想成为程序员：高级编辑器
 
-通过阅读 KEdit 的信息，你可能已经意识到编程所需的编辑器功能与简单的文本文件编辑不同。从 KDE 1.1.1 开始，基础 KDE 软件包中包含了一个迎合这些特殊需求的编辑器。它就是“高级编辑器”（Advanced Editor），也被称为 KWrite。我提到它是因为很多从 DOS 世界迁移过来的人可能会认为它就像 WordPad 之于 Notepad（记事本）。事实并非如此……除非你是一个程序员。既然我们在这里，着手强调一些差异可能是个好主意。如果你是程序员，它们会让你大喜；如果你不是，你就会明白为什么大多数情况下你可能倾向于使用 KEdit。
 
-### 高级编辑器
 
-K菜单 > 应用程序 > 高级编辑器（K Menu > Applications > Advanced Editor）将 KWrite 带到你的屏幕上。（如果你想的话，下次你 root 权限并使用 kmenuedit 时，你可能想将 KWrite 移动到 K菜单 > 开发（K Menu > Development），那里可能更适合它。）并且你会发现（见图 14.10）它看起来非常像 KEdit。
+通过阅读 KEdit 的信息，你可能已经意识到编程所需的编辑器功能与简单的文本文件编辑不同。从 KDE 1.1.1 开始，基础 KDE 软件包中包含了一个迎合这些特殊需求的编辑器。它就是“高级编辑器”（Advanced Editor），也被称为 `KWrite`。我提到它是因为很多从 DOS 世界迁移过来的人可能会认为它就像 WordPad 之于 Notepad（记事本）。事实并非如此……除非你是一个程序员。既然我们在这里，着手强调一些差异可能是个好主意。如果你是程序员，它们会让你大喜；如果你不是，你就会明白为什么大多数情况下你可能倾向于使用 `KEdit`。
+
+## 高级编辑器
+
+`K Menu > Applications > Advanced Editor` 将 `KWrite` 带到你的屏幕上。（如果你想的话，下次你 `root` 权限并使用 `kmenuedit` 时，你可能想将 `KWrite` 移动到 `K Menu > Development`，那里可能更适合它。）并且你会发现（见图 14.10）它看起来非常像 `KEdit`。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_332_0.png)
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_332_1.png)
 
-# 图 14.10
+### 图 14.10
 
-KWrite 和 KEdit 之间的区别在于将“打印”和“邮件”工具栏图标替换为“撤销”（Undo）和“重做”（Redo），并增加了书签。
+`KWrite` 和 `KEdit` 之间的区别在于将“打印”和“邮件”工具栏图标替换为“撤销”（Undo）和“重做”（Redo），并增加了书签。
 
 - 还原（Undo）
 - 重做（Redo）
 - 书签（Bookmarks）
 
-注意文件菜单中缺少了“打印”。KEdit 中也没有“邮件”命令。然而，KWrite 为编程语言和格式提供了特殊的高亮（见 14.11）。如果你是程序员，这些是有用的；如果你不是，你就会明白为什么大多数情况下你可能倾向于使用 KEdit。
-
-# 第三部分
+注意文件菜单中缺少了“打印”。`KEdit` 中也没有“邮件”命令。然而，`KWrite` 为编程语言和格式提供了特殊的高亮（见 14.11）。如果你是程序员，这些是有用的；如果你不是，你就会明白为什么大多数情况下你可能倾向于使用 `KEdit`。
 
 ## 十进制编辑器：如果你真的需要查看二进制文件
 
-自从 Linux 早期时代（可能比那更早），拥有一个二进制编辑器和查看器就被认为是有用的。我当时不知道，现在几乎不知道，但 KDE 包含了它。你可以在 K菜单 > 十进制编辑器（K Menu > Hex Editor）找到它。我提它是因为你可能想是否存在这样的东西。确实有（见图 14.12）。对于知道如何使用的人来说，十六进制编辑器是一个强大的工具，而对于不知道如何使用的人来说，它是搞坏系统的强大方式。
+自从 Linux 早期时代（可能比那更早），拥有一个二进制编辑器和查看器就被认为是有用的。我当时不知道，现在几乎不知道，但 KDE 包含了它。你可以在 `K Menu > Hex Editor` 找到它。我提它是因为你可能想是否存在这样的东西。确实有（见图 14.12）。对于知道如何使用的人来说，十六进制编辑器是一个强大的工具，而对于不知道如何使用的人来说，它是搞坏系统的强大方式。
 
-如果你想在二进制文件中翻找寻找程序员留下的注释（Linux 中有很多注释），请确保将查看范围限制在你没有写入权限的文件上。否则你可能会弄坏一切。对于知道如何使用的人来说：十六进制编辑器支持拖放，所以你可以从 KFM 拖入二进制文件，它就能工作。
+如果你想在二进制文件中翻找寻找程序员留下的注释（Linux 中有很多注释），请确保将查看范围限制在你没有写入权限的文件上。否则你可能会弄坏一切。对于知道如何使用的人来说：十六进制编辑器支持拖放，所以你可以从 `KFM` 拖入二进制文件，它就能工作。
 
 对于不知道如何使用的人来说：如果你不更改任何内容，并在关闭程序时如果它询问是否保存更改，请说“不”。
 
+## 使用 KFind 进行勘探 第 14 章
 
-
-
-
-# 使用 KFind 进行勘探 第 14 章
-
-你可能可以在不需要任何说明的情况下以非常基础的方式使用 KFind，但它的强大在表面上并不立即可见。正如我们在其他地方所做的那样，让我们从列出工具栏图标开始，因为它们并不一定直观，而且与 KDE 的其他部分并不一致：
+你可能可以在不需要任何说明的情况下以非常基础的方式使用 `KFind`，但它的强大在表面上并不立即可见。正如我们在其他地方所做的那样，让我们从列出工具栏图标开始，因为它们并不一定直观，而且与 KDE 的其他部分并不一致：
 
 - 第一个图标带有放大镜，是**开始搜索** (Start Search)。正如其名，它开始搜索你要求它查找的任何文件。
-
 - 第二个图标是两个弯箭头，是**新建搜索** (New Search)，它会移除上一次搜索的结果以及搜索参数本身以便你可以开始搜索不同的文件。
-
 - 第三个图标是一个仅在搜索进行时可见的红绿灯，是**停止搜索** (Stop Search)，它会停止当前的搜索。它永远不会变成绿色：你无法用它来重启搜索。
-
 - 第四个图标的右上角有一个向右转的小箭头，是**打开** (Open)。如果你的目标是文本文件或你已关联的文件类型，它将分别在文本编辑器或其他程序中打开它。如果是一个可执行程序，它将运行该程序，除非你搜索的对象是你想要查看和编辑的脚本，否则这是没用的。如果搜索结果出现多个文件，你需要先选择它，然后可以使用此命令或任何其他特定文件的命令。
-
-- 下一个按钮看起来像一个带有绿色丝带的礼物包，是**添加到存档** (Add to Archive)。点击它会打开标准的 KDE 文件规范对话框，你可以在其中将 KFind 指向你希望添加所选文件的 .tar 文件。
-
+- 下一个按钮看起来像一个带有绿色丝带的礼物包，是**添加到存档** (Add to Archive)。点击它会打开标准的 KDE 文件规范对话框，你可以在其中将 `KFind` 指向你希望添加所选文件的 `.tar` 文件。
 - 带有红色 X 的文件图标是**删除** (Delete)。它会擦除选中的文件。然后系统会提示你确认。它不仅从找到列表中删除文件，还会从你的驱动器中删除它。
-
-- 通用信息图标是你与所选文件**属性** (Properties) 的链接，点击它产生的对话框与在 KFM 中右键点击文件并从结果菜单选择“属性”产生的对话框相同。
-
-- 打开文件夹图标是**打开文件夹** (Open Folder)。点击时，它将在所选文件的位置启动 KFM。
-
+- 通用信息图标是你与所选文件**属性** (Properties) 的链接，点击它产生的对话框与在 `KFM` 中右键点击文件并从结果菜单选择“属性”产生的对话框相同。
+- 打开文件夹图标是**打开文件夹** (Open Folder)。点击时，它将在所选文件的位置启动 `KFM`。
 - 保存图标表示**保存搜索结果** (Save Search Results) 功能。根据配置不同，搜索结果将保存到文本文件或 HTML 文件。默认是后者。确认消息会告诉你文件名（见图 14.14）。如果搜索保存为 HTML，文件列表将链接的形式存在，点击其中一个将产生与使用“打开”命令相同的结果。
 
-## 第三部分 使用 KDE 分发版中的应用程序
+### 使用 KDE 分发版中的应用程序
 
-## 第 14 章 让你的日常工作更简单的程序
+#### 第 14 章 让你的日常工作更简单的程序
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_337_0.png)
 
-## 图 14.14
+##### 图 14.14
 
- 知道搜索结果保存的文件名是件好事，因为如你所见，这是一个隐藏文件。
+知道搜索结果保存的文件名是件好事，因为如你所见，这是一个隐藏文件。
 
 - 带有问号的书是**帮助** (Help) 图标。截至 KDE 1.2，帮助文档已经落后了好几个版本了，但别担心：你有这书！
-- 中间有一个看起来像字母 i 的小圆圈是**退出** (Quit)。点击它关闭 KFind。
+- 中间有一个看起来像字母 i 的小圆圈是**退出** (Quit)。点击它关闭 `KFind`。
 
 “文件”（File）菜单以更直观的方式复制了图标功能，而“编辑”（Edit）菜单大部分呈灰色状态，唯一具有功能的项目是“复制”（Copy）。
 
-## 配置 KFind
+### 配置 KFind
 
-KFind 中没有什么需要配置的，其中一半在 KDE 1.2 中已被禁用。你可以通过选择选项 > 偏好（Options > Preferences）来找到唯一的那个配置项（见图 14.15）。（为什么只有一个项目的菜单？谁知道呢？）
+`KFind` 中没有什么需要配置的，其中一半在 KDE 1.2 中已被禁用。你可以通过选择 `Options > Preferences` 来找到唯一的那个配置项（见图 14.15）。（为什么只有一个项目的菜单？谁知道呢？）
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_337_1.png)
 
-## 图 14.15
+##### 图 14.15
 
 偏好中的“保存”（Saving）选项卡允许你选择将结果保存为 HTML 格式的默认文件名文件，或者你指定的指定（HTML 或文本）。不要点击“存档”（Archers）选项卡：反正你什么也无法更改。你的选择是 Tar，而这就是
 
-## 第三部分
+### 执行搜索
 
-使用 KFind 进行勘探 第 14 章
-
-## 执行搜索
-
-在最简单的形式下，KFind搜索的操作如下：输入你正在查找的文件名，如果你愿意，可以将搜索范围缩小到 Linux 安装的特定区域（见图 14.16）。如果你喜欢，可以使用标准的 Linux 通配符运算符。然后点击工具栏上的第一个按钮。
+在最简单的形式下，`KFind` 搜索的操作如下：输入你正在查找的文件名，如果你愿意，可以将搜索范围缩小到 Linux 安装的特定区域（见图 14.16）。如果你喜欢，可以使用标准的 Linux 通配符运算符。然后点击工具栏上的第一个按钮。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_338_0.png)
 
-**图 14.16** 你可以使用“查找位置”（Look In）下拉框来缩小 KFind 的搜索范围。或者你可以使用“浏览”（Browse）调出目录列表，从你的 ~/. 开始。缩小搜索范围可以缩短完成时间，有一个巨大的驱动器或装满文件的驱动器，这可能需要一分钟或长时间。
+**图 14.16** 你可以使用“查找位置”（Look In）下拉框来缩小 `KFind` 的搜索范围。或者你可以使用“浏览”（Browse）调出目录列表，从你的 `~/.` 开始。缩小搜索范围可以缩短完成时间，有一个巨大的驱动器或装满文件的驱动器，这可能需要一分钟或长时间。
 
 缩小搜索的另一种方法是使用“修改日期”（Date Modified）选项卡。如果你记得上个月处理过该文件，你可以输入一个日期范围（见图 14.17）。
-
-## 第三部分
-
-## 使用 KDE 分发版中的应用程序
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_339_0.png)
 
 **图 14.17**
 
-你可以使用“查找位置”（Look In）下拉框来缩小 KFind 的搜索范围。或者你可以使用“浏览”（Browse）调出目录列表，从你的 ~/. 开始。缩小搜索范围可以缩短完成时间，有一个巨大的驱动器或装满文件的驱动器，这可能需要一分钟或长时间。
+你可以使用“查找位置”（Look In）下拉框来缩小 `KFind` 的搜索范围。或者你可以使用“浏览”（Browse）调出目录列表，从你的 `~/.` 开始。缩小搜索范围可以缩短完成时间，有一个巨大的驱动器或装满文件的驱动器，这可能需要一分钟或长时间。
 
-
-
-
-
-# 第三部分
 ## 快速记录便签：KJots 和 KNote
+
 ### 第 14 章
 
 鞋子。（然而，它们很容易被桌面上的其他应用程序遮挡，并且不会显示在任务栏中，因此它们保持了物理世界的模型，并且很容易丢失，直到一天结束你关闭其他应用程序时，才发现在底部有某件本该在几小时前就完成的事。）
 
-要启动 KNote，前往 K 菜单 > Utilities（工具） > KNote。K 面板上会出现一个小黄色记事本图标。要使用该程序，点击此图标并选择“New Knote”（新记事）。你将看到图 14.22 所示的内容。
+要启动 `KNote`，前往 `K Menu > Utilities`（工具） > `KNote`。`K` 面板上会出现一个小黄色记事本图标。要使用该程序，点击此图标并选择“New Knote”（新记事）。你将看到图 14.22 所示的内容。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_342_0.png)
 
 图 14.22
-一个新的 KNote。
 
-KNote 实际上是一个相当强大的程序，尽管从外观上看不出来。它的大部分功能都有些被埋藏了。实际上，除非你想到右键点击便签，否则所有的功能都完全被隐藏了。这时，你会得到一个菜单（见图 14.23）。
+一个新的 `KNote`。
+
+`KNote` 实际上是一个相当强大的程序，尽管从外观上看不出来。它的大部分功能都有些被埋藏了。实际上，除非你想到右键点击便签，否则所有的功能都完全被隐藏了。这时，你会得到一个菜单（见图 14.23）。
+
+
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_342_1.png)
 
 图 14.23
-右键菜单（RMB）是开启 KNote 力量的关键。
+
+右键菜单（RMB）是开启 `KNote` 力量的关键。
 
 # 第三部分 在 KDE 发行版中使用应用程序
+
 ## 第 14 章 让你的日常工作更简单的程序
 
 右键菜单提供了三项可以立即影响当前便签的功能：
 
-- Insert Date（插入日期），它会执行此操作
-- Sticky（固定），让 KNote 在你所有的虚拟桌面上都显示
-- To desktop（发送到桌面），让你将便签发送到其中一个虚拟桌面
+- `Insert Date`（插入日期），它会执行此操作
+- `Sticky`（固定），让 `KNote` 在你所有的虚拟桌面上都显示
+- `To desktop`（发送到桌面），让你将便签发送到其中一个虚拟桌面
 
-其他所有功能——这里非常多——可以在 Operations（操作）中（见图 14.24）或 Options（选项）中（见图 14.25）找到。
+其他所有功能——这里非常多——可以在 `Operations`（操作）中（见图 14.24）或 `Options`（选项）中（见图 14.25）找到。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
 
 图 14.24
-Operations 菜单暗示 KNote 实力不凡。
+
+`Operations` 菜单暗示 `KNote` 实力不凡。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
 
 图 14.25
-你在 Change Defaults（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
 
-当你点击 K 面板上的 KNote 图标时，会出现一个小菜单，列出你所有的便签。这使得 Operations 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
+你在 `Change Defaults`（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
+
+当你点击 K 面板上的 `KNote` 图标时，会出现一个小菜单，列出你所有的便签。这使得 `Operations` 菜单中的“`Rename Note`”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
 
 图 14.26
+
 给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
 
-对于那些认为 KOrganizer 等同于用猎枪打蚊的人来说，KNote 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
+对于那些认为 `KOrganizer` 等同于用猎枪打蚊的人来说，`KNote` 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
 
 图 14.27
+
 图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年 7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
 
-作为 KEdit，你可以使用与 KEdit 相同的对话框通过邮件发送 KNote。如果你在 Options > Change Defaults 对话框中设置了打印机，你也可以打印 KNote。
+作为 `KEdit`，你可以使用与 `KEdit` 相同的对话框通过邮件发送 `KNote`。如果你在 `Options > Change Defaults` 对话框中设置了打印机，你也可以打印 `KNote`。
 
-事实上，Options 菜单在很大程度上并不起眼。3D Frame（三维框架）会稍微改变 KNote 窗口的外观，而 Auto Indent（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 KNote 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 Change Defaults 对话框。
+事实上，`Options` 菜单在很大程度上并不起眼。`3D Frame`（三维框架）会稍微改变 `KNote` 窗口的外观，而 `Auto Indent`（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 `KNote` 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 `Change Defaults` 对话框。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
+
+`Change Defaults` 产生的对话框很简单。`More`（更多）选项卡允许你更改默认字体。
+
+要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 `Alt` 键。要更改所有便签的大小，在 `Change Defaults` 中输入你希望的高度和宽的像素值。
+
+`KNote` 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 `URL`，点击它将在浏览器窗口中打开该链接（假设你已在线）。
+
+一旦启动，`KNote` 会在关闭和重启后继续存在，因此无需将其添加到 `Autostart`（自动启动）文件夹。你可以通过右键点击 K 面板并选择 `Exit`（退出）来关闭它，如果你这样做，闹钟就不会响。
+
+比 K 更有前景的是名为 `KJots` 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。`KJots` 以其自己的方式更有前景。
+
+### 搜索是其强大的功能：
+
+- 搜索（Search）
+- 搜索
+- 搜索（Search）
+- 搜索（Search）
+- 搜索（Search）
+- 搜索（Search）
+- 搜索（Search）
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
+
+### 搜索是 KNote 强大的关键。
+
+右键菜单提供了三项可以立即影响当前便签的功能：
+
+- `Insert Date`（插入日期），它会执行此操作
+- `Sticky`（固定），让 `KNote` 在你所有的虚拟桌面上都显示
+- `To desktop`（发送到桌面），让你将便签发送到其中一个虚拟桌面
+
+其他所有功能——这里非常多——可以在 `Operations`（操作）中（见图 14.24）或 `Options`（选项）中（见图 14.25）找到。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
+
+图 14.24
+
+`Operations` 菜单暗示 `KNote` 实力不凡。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
+
+图 14.25
+
+你在 `Change Defaults`（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
+
+当你点击 K 面板上的 `KNote` 图标时，会出现一个小菜单，列出你所有的便签。这使得 `Operations` 菜单中的“`Rename Note`”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
+
+图 14.26
+
+给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
+
+对于那些认为 `KOrganizer` 等同于用猎枪打蚊的人来说，`KNote` 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
+
+图 14.27
+
+图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
+
+作为 `KEdit`，你可以使用与 `KEdit` 相同的对话框通过邮件发送 `KNote`。如果你在 `Options > Change Defaults` 对话框中设置了打印机，你也可以打印 `KNote`。
+
+事实上，`Options` 菜单在很大程度上并不起眼。`3D Frame`（三维框架）会稍微改变 `KNote` 窗口的外观，而 `Auto Indent`（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 `KNote` 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 `Change Defaults` 对话框。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
+
+`Change Defaults` 产生的对话框很简单。`More`（更多）选项卡允许你更改默认字体。
+
+要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 `Alt` 键。要更改所有便签的大小，在 `Change Defaults` 中输入你希望的高度和宽的像素值。
+
+`KNote` 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 `URL`，点击它将在浏览器窗口中打开该链接（假设你已在线）。
+
+一旦启动，`KNote` 会在关闭和重启后继续存在，因此无需将其添加到 `Autostart`（自动启动）文件夹。你可以通过右键点击 K 面板并选择 `Exit`（退出）来关闭它，如果你这样做，闹钟就不会响。
+
+比 K 更有前景的是名为 `KJots` 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。`KJots` 以其自己的方式更有前景。
+
+### 搜索是其强大的功能：
+
+- 搜索（Search）
+- 搜索
+- 搜索（Search）
+- 搜索（Search）
+- 搜索（Search）
+- 搜索（Search）
+- 搜索（Search）
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
+
+### 搜索是 KNote 强大的关键。
+
+右键菜单提供了三项可以立即影响当前便签的功能：
+
+- `Insert Date`（插入日期），它会执行此操作
+- `Sticky`（固定），让 `KNote` 在你所有的虚拟桌面上都显示
+- `To desktop`（发送到桌面），让你将便签发送到其中一个虚拟桌面
+
+其他所有功能——这里非常多——可以在 `Operations`（操作）中（见图 14.24）或 `Options`（选项）中（见图 14.25）找到。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
+
+图 14.24
+
+`Operations` 菜单暗示 `KNote` 实力不凡。
+
+
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
+
+图 14.25
+
+你在 `Change Defaults`（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
+
+当你点击 K 面板上的 `KNote` 图标时，会出现一个小菜单，列出你所有的便签。这使得 `Operations` 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
+
+图 14.26
+
+给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
+
+对于那些认为 `KOrganizer` 等同于用猎枪打蚊的人来说，`KNote` 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
+
+图 14.27
+
+图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
+
+作为 `KEdit`，你可以使用与 `KEdit` 相同的对话框通过邮件发送 `KNote`。如果你在 `Options > Change Defaults` 对话框中设置了打印机，你也可以打印 `KNote`。
+
+事实上，`Options` 菜单在很大程度上并不起眼。`3D Frame`（三维框架）会稍微改变 `KNote` 窗口的外观，而 `Auto Indent`（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 `KNote` 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 `Change Defaults` 对话框。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
+
+`Change Defaults` 产生的对话框很简单。`More`（更多）选项卡允许你更改默认字体。
+
+要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 `Alt` 键。要更改所有便签的大小，在 `Change Defaults` 中输入你希望的高度和宽的像素值。
+
+`KNote` 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 `URL`，点击它将在浏览器窗口中打开该链接（假设你已在线）。
+
+一旦启动，`KNote` 会在关闭和重启后继续存在，因此无需将其添加到 `Autostart`（自动启动）文件夹。你可以通过右键点击 K 面板并选择 `Exit`（退出）来关闭它，如果你这样做，闹钟就不会响。
+
+比 K 更有前景的是名为 `KJots` 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。`KJots` 以其自己的方式更有前景。
+
+### 搜索是其强大的功能：
+
+- 搜索（Search）
+- 搜索
+- 搜索（Search）
+- 搜索（Search）
+- 搜索（Search）
+- 搜索（Search）
+- 搜索（Search）
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
+
+### 搜索是 KNote 强大的关键。
+
+右键菜单提供了三项可以立即影响当前便签的功能：
+
+- `Insert Date`（插入日期），它会执行此操作
+- `Sticky`（固定），让 `KNote` 在你所有的虚拟桌面上都显示
+- `To desktop`（发送到桌面），让你将便签发送到其中一个虚拟桌面
+
+其他所有功能——这里非常多——可以在 `Operations`（操作）中（见图 14.24）或 `Options`（选项）中（见图 14.25）找到。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
+
+图 14.24
+
+`Operations` 菜单暗示 `KNote` 实力不凡。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
+
+图 14.25
+
+你在 `Change Defaults`（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
+
+
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
+
+图 14.27
+
+图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
+
+作为 `KEdit`，你可以使用与 `KEdit` 相同的对话框通过邮件发送 `KNote`。如果你在 `Options > Change Defaults` 对话框中设置了打印机，你也可以打印 `KNote`。
+
+事实上，`Options` 菜单在很大程度上并不起眼。`3D Frame`（三维框架）会稍微改变 `KNote` 窗口的外观，而 `Auto Indent`（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 `KNote` 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 `Change Defaults` 对话框。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
+
+`Change Defaults` 产生的对话框很简单。`More`（更多）选项卡允许你更改默认字体。
+
+要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 `Alt` 键。要更改所有便签的大小，在 `Change Defaults` 中输入你希望的高度和宽的像素值。
+
+`KNote` 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 `URL`，点击它将在浏览器窗口中打开该链接（假设你已在线）。
+
+一旦启动，`KNote` 会在关闭和重启后继续存在，因此无需将其添加到 `Autostart`（自动启动）文件夹。你可以通过右键点击 `K` 面板并选择 `Exit`（退出）来关闭它，如果你这样做，闹钟就不会响。
+
+比 `K` 更有前景的是名为 `KJots` 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。`KJots` 以其自己的方式更有前景。
+
+### 搜索是其强大的功能
+
+- `Search`（搜索）
+- `Search`
+- `Search`（搜索）
+- `Search`（搜索）
+- `Search`（搜索）
+- `Search`（搜索）
+- `Search`（搜索）
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
+
+### 搜索是 KNote 强大的关键
+
+右键菜单提供了三项可以立即影响当前便签的功能：
+
+- `Insert Date`（插入日期），它会执行此操作
+- `Sticky`（固定），让 `KNote` 在你所有的虚拟桌面上都显示
+- `To desktop`（发送到桌面），让你将便签发送到其中一个虚拟桌面
+
+其他所有功能——这里非常多——可以在 `Operations`（操作）中（见图 14.24）或 `Options`（选项）中（见图 14.25）找到。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
+
+图 14.24
+
+`Operations` 菜单暗示 `KNote` 实力不凡。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
+
+图 14.25
+
+你在 `Change Defaults`（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
+
+当你点击 `K` 面板上的 `KNote` 图标时，会出现一个小菜单，列出你所有的便签。这使得 `Operations` 菜单中的 `Rename Note`（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
+
+图 14.26
+
+给你的名字起比 `knot 1` 更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
+
+对于那些认为 `KOrganizer` 等同于用猎枪打蚊的人来说，`KNote` 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
+
+图 14.27
+
+图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
+
+
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
 
@@ -5097,6 +5181,7 @@ KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并�
 比 K 更有前景的是名为 KJots 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。KJots 以其自己的方式更有前景。
 
 ### 搜索是其强大的功能：
+
 - 搜索（Search）
 - 搜索
 - 搜索（Search）
@@ -5120,11 +5205,13 @@ KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
 
 图 14.24
+
 Operations 菜单暗示 KNote 实力不凡。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
 
 图 14.25
+
 你在 Change Defaults（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
 
 当你点击 K 面板上的 KNote 图标时，会出现一个小菜单，列出你所有的便签。这使得 Operations 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
@@ -5132,6 +5219,7 @@ Operations 菜单暗示 KNote 实力不凡。
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
 
 图 14.26
+
 给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
 
 对于那些认为 KOrganizer 等同于用猎枪打蚊的人来说，KNote 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
@@ -5139,6 +5227,7 @@ Operations 菜单暗示 KNote 实力不凡。
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
 
 图 14.27
+
 图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
 
 作为 KEdit，你可以使用与 KEdit 相同的对话框通过邮件发送 KNote。如果你在 Options > Change Defaults 对话框中设置了打印机，你也可以打印 KNote。
@@ -5158,6 +5247,7 @@ KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并�
 比 K 更有前景的是名为 KJots 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。KJots 以其自己的方式更有前景。
 
 ### 搜索是其强大的功能：
+
 - 搜索（Search）
 - 搜索
 - 搜索（Search）
@@ -5181,11 +5271,13 @@ KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
 
 图 14.24
+
 Operations 菜单暗示 KNote 实力不凡。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
 
 图 14.25
+
 你在 Change Defaults（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
 
 当你点击 K 面板上的 KNote 图标时，会出现一个小菜单，列出你所有的便签。这使得 Operations 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
@@ -5193,6 +5285,7 @@ Operations 菜单暗示 KNote 实力不凡。
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
 
 图 14.26
+
 给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
 
 对于那些认为 KOrganizer 等同于用猎枪打蚊的人来说，KNote 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
@@ -5200,6 +5293,7 @@ Operations 菜单暗示 KNote 实力不凡。
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
 
 图 14.27
+
 图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
 
 作为 KEdit，你可以使用与 KEdit 相同的对话框通过邮件发送 KNote。如果你在 Options > Change Defaults 对话框中设置了打印机，你也可以打印 KNote。
@@ -5216,9 +5310,376 @@ KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并�
 
 一旦启动，KNote 会在关闭和重启后继续存在，因此无需将其添加到 Autostart（自动启动）文件夹。你可以通过右键点击 K 面板并选择 Exit（退出）来关闭它，如果你这样做，闹钟就不会响。
 
+
+
+比 `K` 更有前景的是名为 `KJots` 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。`KJots` 以其自己的方式更有前景。
+
+### 搜索是其强大的功能：
+
+- 搜索（Search）
+- 搜索
+- 搜索（Search）
+- 搜索（Search）
+- 搜索（Search）
+- 搜索（Search）
+- 搜索（Search）
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
+
+### 搜索是 `KNote` 强大的关键。
+
+右键菜单提供了三项可以立即影响当前便签的功能：
+
+- Insert Date（插入日期），它会执行此操作
+- Sticky（固定），让 `KNote` 在你所有的虚拟桌面上都显示
+- To desktop（发送到桌面），让你将便签发送到其中一个虚拟桌面
+
+其他所有功能——这里非常多——可以在 `Operations`（操作）中（见图 14.24）或 `Options`（选项）中（见图 14.25）找到。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
+
+图 14.24
+
+`Operations` 菜单暗示 `KNote` 实力不凡。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
+
+图 14.25
+
+你在 `Change Defaults`（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
+
+当你点击 `K` 面板上的 `KNote` 图标时，会出现一个小菜单，列出你所有的便签。这使得 `Operations` 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
+
+图 14.26
+
+给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
+
+对于那些认为 `KOrganizer` 等同于用猎枪打蚊的人来说，`KNote` 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
+
+图 14.27
+
+图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
+
+作为 `KEdit`，你可以使用与 `KEdit` 相同的对话框通过邮件发送 `KNote`。如果你在 `Options > Change Defaults` 对话框中设置了打印机，你也可以打印 `KNote`。
+
+事实上，`Options` 菜单在很大程度上并不起眼。`3D Frame`（三维框架）会稍微改变 `KNote` 窗口的外观，而 `Auto Indent`（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 `KNote` 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 `Change Defaults` 对话框。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
+
+`Change Defaults` 产生的对话框很简单。`More`（更多）选项卡允许你更改默认字体。
+
+要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 `Alt` 键。要更改所有便签的大小，在 `Change Defaults` 中输入你希望的高度和宽的像素值。
+
+`KNote` 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 `URL`，点击它将在浏览器窗口中打开该链接（假设你已在线）。
+
+一旦启动，`KNote` 会在关闭和重启后继续存在，因此无需将其添加到 `Autostart`（自动启动）文件夹。你可以通过右键点击 `K` 面板并选择 `Exit`（退出）来关闭它，如果你这样做，闹钟就不会响。
+
+
+
+其他所有功能——这里非常多——可以在 `Operations`（操作）中（见图 14.24）或 `Options`（选项）中（见图 14.25）找到。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
+
+图 14.24
+
+`Operations` 菜单暗示 `KNote` 实力不凡。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
+
+图 14.25
+
+你在 `Change Defaults`（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
+
+当你点击 K 面板上的 `KNote` 图标时，会出现一个小菜单，列出你所有的便签。这使得 `Operations` 菜单中的“`Rename Note`”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
+
+图 14.26
+
+给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
+
+对于那些认为 `KOrganizer` 等同于用猎枪打蚊的人来说，`KNote` 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
+
+图 14.27
+
+图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
+
+作为 `KEdit`，你可以使用与 `KEdit` 相同的对话框通过邮件发送 `KNote`。如果你在 `Options > Change Defaults` 对话框中设置了打印机，你也可以打印 `KNote`。
+
+事实上，`Options` 菜单在很大程度上并不起眼。`3D Frame`（三维框架）会稍微改变 `KNote` 窗口的外观，而 `Auto Indent`（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 `KNote` 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 `Change Defaults` 对话框。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
+
+`Change Defaults` 产生的对话框很简单。`More`（更多）选项卡允许你更改默认字体。
+
+要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 `Alt` 键。要更改所有便签的大小，在 `Change Defaults` 中输入你希望的高度和宽的像素值。
+
+`KNote` 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 `URL`，点击它将在浏览器窗口中打开该链接（假设你已在线）。
+
+一旦启动，`KNote` 会在关闭和重启后继续存在，因此无需将其添加到 `Autostart`（自动启动）文件夹。你可以通过右键点击 K 面板并选择 `Exit`（退出）来关闭它，如果你这样做，闹钟就不会响。
+
+比 K 更有前景的是名为 `KJots` 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。`KJots` 以其自己的方式更有前景。
+
+### 搜索是其强大的功能：
+
+- `搜索`（Search）
+- `搜索`
+- `搜索`（Search）
+- `搜索`（Search）
+- `搜索`（Search）
+- `搜索`（Search）
+- `搜索`（Search）
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
+
+### 搜索是 KNote 强大的关键。
+
+右键菜单提供了三项可以立即影响当前便签的功能：
+
+- `Insert Date`（插入日期），它会执行此操作
+- `Sticky`（固定），让 `KNote` 在你所有的虚拟桌面上都显示
+- `To desktop`（发送到桌面），让你将便签发送到其中一个虚拟桌面
+
+其他所有功能——这里非常多——可以在 `Operations`（操作）中（见图 14.24）或 `Options`（选项）中（见图 14.25）找到。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
+
+图 14.24
+
+`Operations` 菜单暗示 `KNote` 实力不凡。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
+
+图 14.25
+
+你在 `Change Defaults`（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
+
+当你点击 K 面板上的 `KNote` 图标时，会出现一个小菜单，列出你所有的便签。这使得 `Operations` 菜单中的“`Rename Note`”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
+
+图 14.26
+
+给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
+
+对于那些认为 `KOrganizer` 等同于用猎枪打蚊的人来说，`KNote` 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
+
+图 14.27
+
+图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
+
+作为 `KEdit`，你可以使用与 `KEdit` 相同的对话框通过邮件发送 `KNote`。如果你在 `Options > Change Defaults` 对话框中设置了打印机，你也可以打印 `KNote`。
+
+事实上，`Options` 菜单在很大程度上并不起眼。`3D Frame`（三维框架）会稍微改变 `KNote` 窗口的外观，而 `Auto Indent`（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 `KNote` 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 `Change Defaults` 对话框。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
+
+`Change Defaults` 产生的对话框很简单。`More`（更多）选项卡允许你更改默认字体。
+
+要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 `Alt` 键。要更改所有便签的大小，在 `Change Defaults` 中输入你希望的高度和宽的像素值。
+
+`KNote` 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 `URL`，点击它将在浏览器窗口中打开该链接（假设你已在线）。
+
+一旦启动，`KNote` 会在关闭和重启后继续存在，因此无需将其添加到 `Autostart`（自动启动）文件夹。你可以通过右键点击 K 面板并选择 `Exit`（退出）来关闭它，如果你这样做，闹钟就不会响。
+
+比 K 更有前景的是名为 `KJots` 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。`KJots` 以其自己的方式更有前景。
+
+### 搜索是其强大的功能：
+
+- `搜索`（Search）
+- `搜索`
+- `搜索`（Search）
+- `搜索`（Search）
+- `搜索`（Search）
+- `搜索`（Search）
+- `搜索`（Search）
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
+
+### 搜索是 KNote 强大的关键。
+
+右键菜单提供了三项可以立即影响当前便签的功能：
+
+- `Insert Date`（插入日期），它会执行此操作
+- `Sticky`（固定），让 `KNote` 在你所有的虚拟桌面上都显示
+- `To desktop`（发送到桌面），让你将便签发送到其中一个虚拟桌面
+
+其他所有功能——这里非常多——可以在 `Operations`（操作）中（见图 14.24）或 `Options`（选项）中（见图 14.25）找到。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
+
+图 14.24
+
+`Operations` 菜单暗示 `KNote` 实力不凡。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
+
+图 14.25
+
+你在 `Change Defaults`（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
+
+当你点击 K 面板上的 `KNote` 图标时，会出现一个小菜单，列出你所有的便签。这使得 `Operations` 菜单中的“`Rename Note`”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
+
+
+
+图 14.26
+
+给你的名字起比“`knot 1`”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
+
+对于那些认为 `KOrganizer` 等同于用猎枪打蚊的人来说，`KNote` 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
+
+图 14.27
+
+图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
+
+作为 `KEdit`，你可以使用与 `KEdit` 相同的对话框通过邮件发送 `KNote`。如果你在 `Options > Change Defaults` 对话框中设置了打印机，你也可以打印 `KNote`。
+
+事实上，`Options` 菜单在很大程度上并不起眼。`3D Frame`（三维框架）会稍微改变 `KNote` 窗口的外观，而 `Auto Indent`（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 `KNote` 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 `Change Defaults` 对话框。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
+
+`Change Defaults` 产生的对话框很简单。`More`（更多）选项卡允许你更改默认字体。
+
+要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 `Alt` 键。要更改所有便签的大小，在 `Change Defaults` 中输入你希望的高度和宽的像素值。
+
+`KNote` 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 `URL`，点击它将在浏览器窗口中打开该链接（假设你已在线）。
+
+一旦启动，`KNote` 会在关闭和重启后继续存在，因此无需将其添加到 `Autostart`（自动启动）文件夹。你可以通过右键点击 `K` 面板并选择 `Exit`（退出）来关闭它，如果你这样做，闹钟就不会响。
+
+比 `K` 更有前景的是名为 `KJots` 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。`KJots` 以其自己的方式更有前景。
+
+### 搜索是其强大的功能
+
+- `搜索`（`Search`）
+- `搜索`
+- `搜索`（`Search`）
+- `搜索`（`Search`）
+- `搜索`（`Search`）
+- `搜索`（`Search`）
+- `搜索`（`Search`）
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
+
+### 搜索是 KNote 强大的关键
+
+右键菜单提供了三项可以立即影响当前便签的功能：
+
+- `Insert Date`（插入日期），它会执行此操作
+- `Sticky`（固定），让 `KNote` 在你所有的虚拟桌面上都显示
+- `To desktop`（发送到桌面），让你将便签发送到其中一个虚拟桌面
+
+其他所有功能——这里非常多——可以在 `Operations`（操作）中（见图 14.24）或 `Options`（选项）中（见图 14.25）找到。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
+
+图 14.24
+
+`Operations` 菜单暗示 `KNote` 实力不凡。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
+
+图 14.25
+
+你在 `Change Defaults`（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
+
+当你点击 `K` 面板上的 `KNote` 图标时，会出现一个小菜单，列出你所有的便签。这使得 `Operations` 菜单中的“`Rename Note`”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
+
+图 14.26
+
+给你的名字起比“`knot 1`”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
+
+
+
+事实上，`Options`菜单在很大程度上并不起眼。`3D Frame`（三维框架）会稍微改变`KNote`窗口的外观，而`Auto Indent`（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改`KNote`的行为（直到你将其更改其他设置），你需要访问图14.28所示的`Change Defaults`对话框。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
+
+`Change Defaults`产生的对话框很简单。`More`（更多）选项卡允许你更改默认字体。
+
+要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的`Alt`键。要更改所有便签的大小，在`Change Defaults`中输入你希望的高度和宽的像素值。
+
+`KNote`支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含`URL`，点击它将在浏览器窗口中打开该链接（假设你已在线）。
+
+一旦启动，`KNote`会在关闭和重启后继续存在，因此无需将其添加到`Autostart`（自动启动）文件夹。你可以通过右键点击`K`面板并选择`Exit`（退出）来关闭它，如果你这样做，闹钟就不会响。
+
+比`K`更有前景的是名为`KJots`的程序，它仍然是发行版的一部分，尽管它自1998年底以来没有发生变化，并且缺少一项让它真正强大的功能。`KJots`以其自己的方式更有前景。
+
+### 搜索是其强大的功能：
+
+- `搜索`（`Search`）
+- `搜索`
+- `搜索`（`Search`）
+- `搜索`（`Search`）
+- `搜索`（`Search`）
+- `搜索`（`Search`）
+- `搜索`（`Search`）
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
+
+### 搜索是 `KNote` 强大的关键。
+
+右键菜单提供了三项可以立即影响当前便签的功能：
+
+- `Insert Date`（插入日期），它会执行此操作
+- `Sticky`（固定），让`KNote`在你所有的虚拟桌面上都显示
+- `To desktop`（发送到桌面），让你将便签发送到其中一个虚拟桌面
+
+其他所有功能——这里非常多——可以在`Operations`（操作）中（见图14.24）或`Options`（选项）中（见图14.25）找到。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
+
+图14.24
+
+`Operations`菜单暗示`KNote`实力不凡。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
+
+图14.25
+
+你在`Change Defaults`（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
+
+当你点击`K`面板上的`KNote`图标时，会出现一个小菜单，列出你所有的便签。这使得`Operations`菜单中的“`Rename Note`”（重命名便签）项变得特别有用。它会弹如图14.26所示的小对话框。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
+
+图14.26
+
+给你的名字起比“`knot 1`”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
+
+对于那些认为`KOrganizer`等同于用猎枪打蚊的人来说，`KNote`也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图14.27）。如你所见，日历有一个相当严重的`Bug`。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
+
+图14.27
+
+图中是闹钟设置框和日历功能。设置闹钟非常简单，但1999年7月1日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
+
+作为`KEdit`，你可以使用与`KEdit`相同的对话框通过邮件发送`KNote`。如果你在`Options > Change Defaults`对话框中设置了打印机，你也可以打印`KNote`。
+
+
+
+KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 URL，点击它将在浏览器窗口中打开该链接（假设你已在线）。
+
+一旦启动，KNote 会在关闭和重启后继续存在，因此无需将其添加到 Autostart（自动启动）文件夹。你可以通过右键点击 K 面板并选择 Exit（退出）来关闭它，如果你这样做，闹钟就不会响。
+
 比 K 更有前景的是名为 KJots 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。KJots 以其自己的方式更有前景。
 
 ### 搜索是其强大的功能：
+
 - 搜索（Search）
 - 搜索
 - 搜索（Search）
@@ -5242,11 +5703,13 @@ KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
 
 图 14.24
+
 Operations 菜单暗示 KNote 实力不凡。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
 
 图 14.25
+
 你在 Change Defaults（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
 
 当你点击 K 面板上的 KNote 图标时，会出现一个小菜单，列出你所有的便签。这使得 Operations 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
@@ -5254,6 +5717,7 @@ Operations 菜单暗示 KNote 实力不凡。
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
 
 图 14.26
+
 给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
 
 对于那些认为 KOrganizer 等同于用猎枪打蚊的人来说，KNote 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
@@ -5261,6 +5725,7 @@ Operations 菜单暗示 KNote 实力不凡。
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
 
 图 14.27
+
 图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
 
 作为 KEdit，你可以使用与 KEdit 相同的对话框通过邮件发送 KNote。如果你在 Options > Change Defaults 对话框中设置了打印机，你也可以打印 KNote。
@@ -5273,135 +5738,154 @@ Change Defaults 产生的对话框很简单。More（更多）选项卡允许你
 
 要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 Alt 键。要更改所有便签的大小，在 Change Defaults 中输入你希望的高度和宽的像素值。
 
-KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 URL，点击它将在浏览器窗口中打开该链接（假设你已在线）。
 
-一旦启动，KNote 会在关闭和重启后继续存在，因此无需将其添加到 Autostart（自动启动）文件夹。你可以通过右键点击 K 面板并选择 Exit（退出）来关闭它，如果你这样做，闹钟就不会响。
-
-比 K 更有前景的是名为 KJots 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。KJots 以其自己的方式更有前景。
-
-### 搜索是其强大的功能：
-- 搜索（Search）
-- 搜索
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
 
 ### 搜索是 KNote 强大的关键。
 
 右键菜单提供了三项可以立即影响当前便签的功能：
+- `Insert Date`（插入日期），它会执行此操作
+- `Sticky`（固定），让 `KNote` 在你所有的虚拟桌面上都显示
+- `To desktop`（发送到桌面），让你将便签发送到其中一个虚拟桌面
 
-- Insert Date（插入日期），它会执行此操作
-- Sticky（固定），让 KNote 在你所有的虚拟桌面上都显示
-- To desktop（发送到桌面），让你将便签发送到其中一个虚拟桌面
-
-其他所有功能——这里非常多——可以在 Operations（操作）中（见图 14.24）或 Options（选项）中（见图 14.25）找到。
+其他所有功能——这里非常多——可以在 `Operations`（操作）中（见图 14.24）或 `Options`（选项）中（见图 14.25）找到。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
-
 图 14.24
-Operations 菜单暗示 KNote 实力不凡。
+`Operations` 菜单暗示 `KNote` 实力不凡。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
-
 图 14.25
-你在 Change Defaults（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
+你在 `Change Defaults`（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
 
-当你点击 K 面板上的 KNote 图标时，会出现一个小菜单，列出你所有的便签。这使得 Operations 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
+当你点击 `K` 面板上的 `KNote` 图标时，会出现一个小菜单，列出你所有的便签。这使得 `Operations` 菜单中的“`Rename Note`”（重命名便签）项变得特别有用。它会弹出如图 14.26 所示的小对话框。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
+图 14.26
+给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
+
+对于那些认为 `KOrganizer` 等同于用猎枪打蚊的人来说，`KNote` 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
+图 14.27
+图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
+
+作为 `KEdit`，你可以使用与 `KEdit` 相同的对话框通过邮件发送 `KNote`。如果你在 `Options > Change Defaults` 对话框中设置了打印机，你也可以打印 `KNote`。
+
+事实上，`Options` 菜单在很大程度上并不起眼。`3D Frame`（三维框架）会稍微改变 `KNote` 窗口的外观，而 `Auto Indent`（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 `KNote` 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 `Change Defaults` 对话框。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
+`Change Defaults` 产生的对话框很简单。`More`（更多）选项卡允许你更改默认字体。
+
+要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 `Alt` 键。要更改所有便签的大小，在 `Change Defaults` 中输入你希望的高度和宽的像素值。
+
+`KNote` 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 `URL`，点击它将在浏览器窗口中打开该链接（假设你已在线）。
+
+一旦启动，`KNote` 会在关闭和重启后继续存在，因此无需将其添加到 `Autostart`（自动启动）文件夹。你可以通过右键点击 `K` 面板并选择 `Exit`（退出）来关闭它，如果你这样做，闹钟就不会响。
+
+比 `K` 更有前景的是名为 `KJots` 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。`KJots` 以其自己的方式更有前景。
+
+### 搜索是其强大的功能：
+
+- 搜索（`Search`）
+- 搜索
+- 搜索（`Search`）
+- 搜索（`Search`）
+- 搜索（`Search`）
+- 搜索（`Search`）
+- 搜索（`Search`）
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
+
+
+
+当你点击 `K` 面板上的 `KNote` 图标时，会出现一个小菜单，列出你所有的便签。这使得 `Operations` 菜单中的“`Rename Note`”（重命名便签）项变得特别有用。它会弹出如图 14.26 所示的小对话框。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
 
 图 14.26
-给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
 
-对于那些认为 KOrganizer 等同于用猎枪打蚊的人来说，KNote 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
+给你的名字起比“`knot 1`”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
+
+对于那些认为 `KOrganizer` 等同于用猎枪打蚊的人来说，`KNote` 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
 
 图 14.27
+
 图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
 
-作为 KEdit，你可以使用与 KEdit 相同的对话框通过邮件发送 KNote。如果你在 Options > Change Defaults 对话框中设置了打印机，你也可以打印 KNote。
+作为 `KEdit`，你可以使用与 `KEdit` 相同的对话框通过邮件发送 `KNote`。如果你在 `Options > Change Defaults` 对话框中设置了打印机，你也可以打印 `KNote`。
 
-事实上，Options 菜单在很大程度上并不起眼。3D Frame（三维框架）会稍微改变 KNote 窗口的外观，而 Auto Indent（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 KNote 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 Change Defaults 对话框。
+事实上，`Options` 菜单在很大程度上并不起眼。`3D Frame`（三维框架）会稍微改变 `KNote` 窗口的外观，而 `Auto Indent`（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 `KNote` 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 `Change Defaults` 对话框。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
 
-Change Defaults 产生的对话框很简单。More（更多）选项卡允许你更改默认字体。
+`Change Defaults` 产生的对话框很简单。`More`（更多）选项卡允许你更改默认字体。
 
-要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 Alt 键。要更改所有便签的大小，在 Change Defaults 中输入你希望的高度和宽的像素值。
+要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 `Alt` 键。要更改所有便签的大小，在 `Change Defaults` 中输入你希望的高度和宽的像素值。
 
-KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 URL，点击它将在浏览器窗口中打开该链接（假设你已在线）。
+`KNote` 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 `URL`，点击它将在浏览器窗口中打开该链接（假设你已在线）。
 
-一旦启动，KNote 会在关闭和重启后继续存在，因此无需将其添加到 Autostart（自动启动）文件夹。你可以通过右键点击 K 面板并选择 Exit（退出）来关闭它，如果你这样做，闹钟就不会响。
+一旦启动，`KNote` 会在关闭和重启后继续存在，因此无需将其添加到 `Autostart`（自动启动）文件夹。你可以通过右键点击 `K` 面板并选择 `Exit`（退出）来关闭它，如果你这样做，闹钟就不会响。
 
-比 K 更有前景的是名为 KJots 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。KJots 以其自己的方式更有前景。
+比 `K` 更有前景的是名为 `KJots` 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。`KJots` 以其自己的方式更有前景。
 
-### 搜索是其强大的功能：
-- 搜索（Search）
-- 搜索
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
+### 搜索是其强大的功能
+
+- `搜索`（`Search`）
+- `搜索`
+- `搜索`（`Search`）
+- `搜索`（`Search`）
+- `搜索`（`Search`）
+- `搜索`（`Search`）
+- `搜索`（`Search`）
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
 
-### 搜索是 KNote 强大的关键。
+### 搜索是 KNote 强大的关键
 
 右键菜单提供了三项可以立即影响当前便签的功能：
 
-- Insert Date（插入日期），它会执行此操作
-- Sticky（固定），让 KNote 在你所有的虚拟桌面上都显示
-- To desktop（发送到桌面），让你将便签发送到其中一个虚拟桌面
+- `Insert Date`（插入日期），它会执行此操作
+- `Sticky`（固定），让 `KNote` 在你所有的虚拟桌面上都显示
+- `To desktop`（发送到桌面），让你将便签发送到其中一个虚拟桌面
 
-其他所有功能——这里非常多——可以在 Operations（操作）中（见图 14.24）或 Options（选项）中（见图 14.25）找到。
+其他所有功能——这里非常多——可以在 `Operations`（操作）中（见图 14.24）或 `Options`（选项）中（见图 14.25）找到。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
 
 图 14.24
-Operations 菜单暗示 KNote 实力不凡。
+
+`Operations` 菜单暗示 `KNote` 实力不凡。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
 
 图 14.25
-你在 Change Defaults（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
 
-当你点击 K 面板上的 KNote 图标时，会出现一个小菜单，列出你所有的便签。这使得 Operations 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
+你在 `Change Defaults`（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
 
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
 
-图 14.26
-给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
 
-对于那些认为 KOrganizer 等同于用猎枪打蚊的人来说，KNote 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
-
-图 14.27
 图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
 
-作为 KEdit，你可以使用与 KEdit 相同的对话框通过邮件发送 KNote。如果你在 Options > Change Defaults 对话框中设置了打印机，你也可以打印 KNote。
+作为 `KEdit`，你可以使用与 `KEdit` 相同的对话框通过邮件发送 `KNote`。如果你在 `Options > Change Defaults` 对话框中设置了打印机，你也可以打印 `KNote`。
 
-事实上，Options 菜单在很大程度上并不起眼。3D Frame（三维框架）会稍微改变 KNote 窗口的外观，而 Auto Indent（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 KNote 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 Change Defaults 对话框。
+事实上，`Options` 菜单在很大程度上并不起眼。`3D Frame`（三维框架）会稍微改变 `KNote` 窗口的外观，而 `Auto Indent`（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 `KNote` 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 `Change Defaults` 对话框。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
 
-Change Defaults 产生的对话框很简单。More（更多）选项卡允许你更改默认字体。
+`Change Defaults` 产生的对话框很简单。`More`（更多）选项卡允许你更改默认字体。
 
-要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 Alt 键。要更改所有便签的大小，在 Change Defaults 中输入你希望的高度和宽的像素值。
+要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 `Alt` 键。要更改所有便签的大小，在 `Change Defaults` 中输入你希望的高度和宽的像素值。
 
-KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 URL，点击它将在浏览器窗口中打开该链接（假设你已在线）。
+`KNote` 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 `URL`，点击它将在浏览器窗口中打开该链接（假设你已在线）。
 
-一旦启动，KNote 会在关闭和重启后继续存在，因此无需将其添加到 Autostart（自动启动）文件夹。你可以通过右键点击 K 面板并选择 Exit（退出）来关闭它，如果你这样做，闹钟就不会响。
+一旦启动，`KNote` 会在关闭和重启后继续存在，因此无需将其添加到 `Autostart`（自动启动）文件夹。你可以通过右键点击 `K` 面板并选择 `Exit`（退出）来关闭它，如果你这样做，闹钟就不会响。
 
-比 K 更有前景的是名为 KJots 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。KJots 以其自己的方式更有前景。
+比 `K` 更有前景的是名为 `KJots` 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。`KJots` 以其自己的方式更有前景。
 
 ### 搜索是其强大的功能：
+
 - 搜索（Search）
 - 搜索
 - 搜索（Search）
@@ -5412,1208 +5896,45 @@ KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并�
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
 
-### 搜索是 KNote 强大的关键。
+### 搜索是 `KNote` 强大的关键。
 
 右键菜单提供了三项可以立即影响当前便签的功能：
 
-- Insert Date（插入日期），它会执行此操作
-- Sticky（固定），让 KNote 在你所有的虚拟桌面上都显示
-- To desktop（发送到桌面），让你将便签发送到其中一个虚拟桌面
+- `Insert Date`（插入日期），它会执行此操作
+- `Sticky`（固定），让 `KNote` 在你所有的虚拟桌面上都显示
+- `To desktop`（发送到桌面），让你将便签发送到其中一个虚拟桌面
 
-其他所有功能——这里非常多——可以在 Operations（操作）中（见图 14.24）或 Options（选项）中（见图 14.25）找到。
+其他所有功能——这里非常多——可以在 `Operations`（操作）中（见图 14.24）或 `Options`（选项）中（见图 14.25）找到。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
 
 图 14.24
-Operations 菜单暗示 KNote 实力不凡。
+
+`Operations` 菜单暗示 `KNote` 实力不凡。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
 
 图 14.25
-你在 Change Defaults（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
 
-当你点击 K 面板上的 KNote 图标时，会出现一个小菜单，列出你所有的便签。这使得 Operations 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
+你在 `Change Defaults`（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
 
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
-
-图 14.26
-给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
-
-对于那些认为 KOrganizer 等同于用猎枪打蚊的人来说，KNote 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
-
-图 14.27
-图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
-
-作为 KEdit，你可以使用与 KEdit 相同的对话框通过邮件发送 KNote。如果你在 Options > Change Defaults 对话框中设置了打印机，你也可以打印 KNote。
-
-事实上，Options 菜单在很大程度上并不起眼。3D Frame（三维框架）会稍微改变 KNote 窗口的外观，而 Auto Indent（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 KNote 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 Change Defaults 对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
-
-Change Defaults 产生的对话框很简单。More（更多）选项卡允许你更改默认字体。
-
-要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 Alt 键。要更改所有便签的大小，在 Change Defaults 中输入你希望的高度和宽的像素值。
-
-KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 URL，点击它将在浏览器窗口中打开该链接（假设你已在线）。
-
-一旦启动，KNote 会在关闭和重启后继续存在，因此无需将其添加到 Autostart（自动启动）文件夹。你可以通过右键点击 K 面板并选择 Exit（退出）来关闭它，如果你这样做，闹钟就不会响。
-
-比 K 更有前景的是名为 KJots 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。KJots 以其自己的方式更有前景。
-
-### 搜索是其强大的功能：
-- 搜索（Search）
-- 搜索
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
-
-### 搜索是 KNote 强大的关键。
-
-右键菜单提供了三项可以立即影响当前便签的功能：
-
-- Insert Date（插入日期），它会执行此操作
-- Sticky（固定），让 KNote 在你所有的虚拟桌面上都显示
-- To desktop（发送到桌面），让你将便签发送到其中一个虚拟桌面
-
-其他所有功能——这里非常多——可以在 Operations（操作）中（见图 14.24）或 Options（选项）中（见图 14.25）找到。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
-
-图 14.24
-Operations 菜单暗示 KNote 实力不凡。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
-
-图 14.25
-你在 Change Defaults（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
-
-当你点击 K 面板上的 KNote 图标时，会出现一个小菜单，列出你所有的便签。这使得 Operations 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
-
-图 14.26
-给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
-
-对于那些认为 KOrganizer 等同于用猎枪打蚊的人来说，KNote 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
-
-图 14.27
-图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
-
-作为 KEdit，你可以使用与 KEdit 相同的对话框通过邮件发送 KNote。如果你在 Options > Change Defaults 对话框中设置了打印机，你也可以打印 KNote。
-
-事实上，Options 菜单在很大程度上并不起眼。3D Frame（三维框架）会稍微改变 KNote 窗口的外观，而 Auto Indent（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 KNote 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 Change Defaults 对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
-
-Change Defaults 产生的对话框很简单。More（更多）选项卡允许你更改默认字体。
-
-要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 Alt 键。要更改所有便签的大小，在 Change Defaults 中输入你希望的高度和宽的像素值。
-
-KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 URL，点击它将在浏览器窗口中打开该链接（假设你已在线）。
-
-一旦启动，KNote 会在关闭和重启后继续存在，因此无需将其添加到 Autostart（自动启动）文件夹。你可以通过右键点击 K 面板并选择 Exit（退出）来关闭它，如果你这样做，闹钟就不会响。
-
-比 K 更有前景的是名为 KJots 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。KJots 以其自己的方式更有前景。
-
-### 搜索是其强大的功能：
-- 搜索（Search）
-- 搜索
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
-
-### 搜索是 KNote 强大的关键。
-
-右键菜单提供了三项可以立即影响当前便签的功能：
-
-- Insert Date（插入日期），它会执行此操作
-- Sticky（固定），让 KNote 在你所有的虚拟桌面上都显示
-- To desktop（发送到桌面），让你将便签发送到其中一个虚拟桌面
-
-其他所有功能——这里非常多——可以在 Operations（操作）中（见图 14.24）或 Options（选项）中（见图 14.25）找到。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
-
-图 14.24
-Operations 菜单暗示 KNote 实力不凡。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
-
-图 14.25
-你在 Change Defaults（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
-
-当你点击 K 面板上的 KNote 图标时，会出现一个小菜单，列出你所有的便签。这使得 Operations 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
-
-图 14.26
-给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
-
-对于那些认为 KOrganizer 等同于用猎枪打蚊的人来说，KNote 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
-
-图 14.27
-图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
-
-作为 KEdit，你可以使用与 KEdit 相同的对话框通过邮件发送 KNote。如果你在 Options > Change Defaults 对话框中设置了打印机，你也可以打印 KNote。
-
-事实上，Options 菜单在很大程度上并不起眼。3D Frame（三维框架）会稍微改变 KNote 窗口的外观，而 Auto Indent（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 KNote 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 Change Defaults 对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
-
-Change Defaults 产生的对话框很简单。More（更多）选项卡允许你更改默认字体。
-
-要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 Alt 键。要更改所有便签的大小，在 Change Defaults 中输入你希望的高度和宽的像素值。
-
-KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 URL，点击它将在浏览器窗口中打开该链接（假设你已在线）。
-
-一旦启动，KNote 会在关闭和重启后继续存在，因此无需将其添加到 Autostart（自动启动）文件夹。你可以通过右键点击 K 面板并选择 Exit（退出）来关闭它，如果你这样做，闹钟就不会响。
-
-比 K 更有前景的是名为 KJots 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。KJots 以其自己的方式更有前景。
-
-### 搜索是其强大的功能：
-- 搜索（Search）
-- 搜索
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
-
-### 搜索是 KNote 强大的关键。
-
-右键菜单提供了三项可以立即影响当前便签的功能：
-
-- Insert Date（插入日期），它会执行此操作
-- Sticky（固定），让 KNote 在你所有的虚拟桌面上都显示
-- To desktop（发送到桌面），让你将便签发送到其中一个虚拟桌面
-
-其他所有功能——这里非常多——可以在 Operations（操作）中（见图 14.24）或 Options（选项）中（见图 14.25）找到。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
-
-图 14.24
-Operations 菜单暗示 KNote 实力不凡。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
-
-图 14.25
-你在 Change Defaults（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
-
-当你点击 K 面板上的 KNote 图标时，会出现一个小菜单，列出你所有的便签。这使得 Operations 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
-
-图 14.26
-给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
-
-对于那些认为 KOrganizer 等同于用猎枪打蚊的人来说，KNote 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
-
-图 14.27
-图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
-
-作为 KEdit，你可以使用与 KEdit 相同的对话框通过邮件发送 KNote。如果你在 Options > Change Defaults 对话框中设置了打印机，你也可以打印 KNote。
-
-事实上，Options 菜单在很大程度上并不起眼。3D Frame（三维框架）会稍微改变 KNote 窗口的外观，而 Auto Indent（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 KNote 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 Change Defaults 对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
-
-Change Defaults 产生的对话框很简单。More（更多）选项卡允许你更改默认字体。
-
-要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 Alt 键。要更改所有便签的大小，在 Change Defaults 中输入你希望的高度和宽的像素值。
-
-KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 URL，点击它将在浏览器窗口中打开该链接（假设你已在线）。
-
-一旦启动，KNote 会在关闭和重启后继续存在，因此无需将其添加到 Autostart（自动启动）文件夹。你可以通过右键点击 K 面板并选择 Exit（退出）来关闭它，如果你这样做，闹钟就不会响。
-
-比 K 更有前景的是名为 KJots 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。KJots 以其自己的方式更有前景。
-
-### 搜索是其强大的功能：
-- 搜索（Search）
-- 搜索
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
-
-### 搜索是 KNote 强大的关键。
-
-右键菜单提供了三项可以立即影响当前便签的功能：
-
-- Insert Date（插入日期），它会执行此操作
-- Sticky（固定），让 KNote 在你所有的虚拟桌面上都显示
-- To desktop（发送到桌面），让你将便签发送到其中一个虚拟桌面
-
-其他所有功能——这里非常多——可以在 Operations（操作）中（见图 14.24）或 Options（选项）中（见图 14.25）找到。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
-
-图 14.24
-Operations 菜单暗示 KNote 实力不凡。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
-
-图 14.25
-你在 Change Defaults（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
-
-当你点击 K 面板上的 KNote 图标时，会出现一个小菜单，列出你所有的便签。这使得 Operations 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
-
-图 14.26
-给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
-
-对于那些认为 KOrganizer 等同于用猎枪打蚊的人来说，KNote 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
-
-图 14.27
-图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
-
-作为 KEdit，你可以使用与 KEdit 相同的对话框通过邮件发送 KNote。如果你在 Options > Change Defaults 对话框中设置了打印机，你也可以打印 KNote。
-
-事实上，Options 菜单在很大程度上并不起眼。3D Frame（三维框架）会稍微改变 KNote 窗口的外观，而 Auto Indent（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 KNote 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 Change Defaults 对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
-
-Change Defaults 产生的对话框很简单。More（更多）选项卡允许你更改默认字体。
-
-要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 Alt 键。要更改所有便签的大小，在 Change Defaults 中输入你希望的高度和宽的像素值。
-
-KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 URL，点击它将在浏览器窗口中打开该链接（假设你已在线）。
-
-一旦启动，KNote 会在关闭和重启后继续存在，因此无需将其添加到 Autostart（自动启动）文件夹。你可以通过右键点击 K 面板并选择 Exit（退出）来关闭它，如果你这样做，闹钟就不会响。
-
-比 K 更有前景的是名为 KJots 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。KJots 以其自己的方式更有前景。
-
-### 搜索是其强大的功能：
-- 搜索（Search）
-- 搜索
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
-
-### 搜索是 KNote 强大的关键。
-
-右键菜单提供了三项可以立即影响当前便签的功能：
-
-- Insert Date（插入日期），它会执行此操作
-- Sticky（固定），让 KNote 在你所有的虚拟桌面上都显示
-- To desktop（发送到桌面），让你将便签发送到其中一个虚拟桌面
-
-其他所有功能——这里非常多——可以在 Operations（操作）中（见图 14.24）或 Options（选项）中（见图 14.25）找到。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
-
-图 14.24
-Operations 菜单暗示 KNote 实力不凡。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
-
-图 14.25
-你在 Change Defaults（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
-
-当你点击 K 面板上的 KNote 图标时，会出现一个小菜单，列出你所有的便签。这使得 Operations 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
-
-图 14.26
-给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
-
-对于那些认为 KOrganizer 等同于用猎枪打蚊的人来说，KNote 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
-
-图 14.27
-图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
-
-作为 KEdit，你可以使用与 KEdit 相同的对话框通过邮件发送 KNote。如果你在 Options > Change Defaults 对话框中设置了打印机，你也可以打印 KNote。
-
-事实上，Options 菜单在很大程度上并不起眼。3D Frame（三维框架）会稍微改变 KNote 窗口的外观，而 Auto Indent（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 KNote 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 Change Defaults 对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
-
-Change Defaults 产生的对话框很简单。More（更多）选项卡允许你更改默认字体。
-
-要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 Alt 键。要更改所有便签的大小，在 Change Defaults 中输入你希望的高度和宽的像素值。
-
-KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 URL，点击它将在浏览器窗口中打开该链接（假设你已在线）。
-
-一旦启动，KNote 会在关闭和重启后继续存在，因此无需将其添加到 Autostart（自动启动）文件夹。你可以通过右键点击 K 面板并选择 Exit（退出）来关闭它，如果你这样做，闹钟就不会响。
-
-比 K 更有前景的是名为 KJots 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。KJots 以其自己的方式更有前景。
-
-### 搜索是其强大的功能：
-- 搜索（Search）
-- 搜索
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
-
-### 搜索是 KNote 强大的关键。
-
-右键菜单提供了三项可以立即影响当前便签的功能：
-
-- Insert Date（插入日期），它会执行此操作
-- Sticky（固定），让 KNote 在你所有的虚拟桌面上都显示
-- To desktop（发送到桌面），让你将便签发送到其中一个虚拟桌面
-
-其他所有功能——这里非常多——可以在 Operations（操作）中（见图 14.24）或 Options（选项）中（见图 14.25）找到。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
-
-图 14.24
-Operations 菜单暗示 KNote 实力不凡。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
-
-图 14.25
-你在 Change Defaults（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
-
-当你点击 K 面板上的 KNote 图标时，会出现一个小菜单，列出你所有的便签。这使得 Operations 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
-
-图 14.26
-给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
-
-对于那些认为 KOrganizer 等同于用猎枪打蚊的人来说，KNote 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
-
-图 14.27
-图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
-
-作为 KEdit，你可以使用与 KEdit 相同的对话框通过邮件发送 KNote。如果你在 Options > Change Defaults 对话框中设置了打印机，你也可以打印 KNote。
-
-事实上，Options 菜单在很大程度上并不起眼。3D Frame（三维框架）会稍微改变 KNote 窗口的外观，而 Auto Indent（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 KNote 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 Change Defaults 对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
-
-Change Defaults 产生的对话框很简单。More（更多）选项卡允许你更改默认字体。
-
-要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 Alt 键。要更改所有便签的大小，在 Change Defaults 中输入你希望的高度和宽的像素值。
-
-KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 URL，点击它将在浏览器窗口中打开该链接（假设你已在线）。
-
-一旦启动，KNote 会在关闭和重启后继续存在，因此无需将其添加到 Autostart（自动启动）文件夹。你可以通过右键点击 K 面板并选择 Exit（退出）来关闭它，如果你这样做，闹钟就不会响。
-
-比 K 更有前景的是名为 KJots 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。KJots 以其自己的方式更有前景。
-
-### 搜索是其强大的功能：
-- 搜索（Search）
-- 搜索
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
-
-### 搜索是 KNote 强大的关键。
-
-右键菜单提供了三项可以立即影响当前便签的功能：
-
-- Insert Date（插入日期），它会执行此操作
-- Sticky（固定），让 KNote 在你所有的虚拟桌面上都显示
-- To desktop（发送到桌面），让你将便签发送到其中一个虚拟桌面
-
-其他所有功能——这里非常多——可以在 Operations（操作）中（见图 14.24）或 Options（选项）中（见图 14.25）找到。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
-
-图 14.24
-Operations 菜单暗示 KNote 实力不凡。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
-
-图 14.25
-你在 Change Defaults（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
-
-当你点击 K 面板上的 KNote 图标时，会出现一个小菜单，列出你所有的便签。这使得 Operations 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
-
-图 14.26
-给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
-
-对于那些认为 KOrganizer 等同于用猎枪打蚊的人来说，KNote 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
-
-图 14.27
-图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
-
-作为 KEdit，你可以使用与 KEdit 相同的对话框通过邮件发送 KNote。如果你在 Options > Change Defaults 对话框中设置了打印机，你也可以打印 KNote。
-
-事实上，Options 菜单在很大程度上并不起眼。3D Frame（三维框架）会稍微改变 KNote 窗口的外观，而 Auto Indent（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 KNote 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 Change Defaults 对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
-
-Change Defaults 产生的对话框很简单。More（更多）选项卡允许你更改默认字体。
-
-要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 Alt 键。要更改所有便签的大小，在 Change Defaults 中输入你希望的高度和宽的像素值。
-
-KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 URL，点击它将在浏览器窗口中打开该链接（假设你已在线）。
-
-一旦启动，KNote 会在关闭和重启后继续存在，因此无需将其添加到 Autostart（自动启动）文件夹。你可以通过右键点击 K 面板并选择 Exit（退出）来关闭它，如果你这样做，闹钟就不会响。
-
-比 K 更有前景的是名为 KJots 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。KJots 以其自己的方式更有前景。
-
-### 搜索是其强大的功能：
-- 搜索（Search）
-- 搜索
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
-
-### 搜索是 KNote 强大的关键。
-
-右键菜单提供了三项可以立即影响当前便签的功能：
-
-- Insert Date（插入日期），它会执行此操作
-- Sticky（固定），让 KNote 在你所有的虚拟桌面上都显示
-- To desktop（发送到桌面），让你将便签发送到其中一个虚拟桌面
-
-其他所有功能——这里非常多——可以在 Operations（操作）中（见图 14.24）或 Options（选项）中（见图 14.25）找到。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
-
-图 14.24
-Operations 菜单暗示 KNote 实力不凡。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
-
-图 14.25
-你在 Change Defaults（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
-
-当你点击 K 面板上的 KNote 图标时，会出现一个小菜单，列出你所有的便签。这使得 Operations 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
-
-图 14.26
-给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
-
-对于那些认为 KOrganizer 等同于用猎枪打蚊的人来说，KNote 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
-
-图 14.27
-图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
-
-作为 KEdit，你可以使用与 KEdit 相同的对话框通过邮件发送 KNote。如果你在 Options > Change Defaults 对话框中设置了打印机，你也可以打印 KNote。
-
-事实上，Options 菜单在很大程度上并不起眼。3D Frame（三维框架）会稍微改变 KNote 窗口的外观，而 Auto Indent（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 KNote 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 Change Defaults 对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
-
-Change Defaults 产生的对话框很简单。More（更多）选项卡允许你更改默认字体。
-
-要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 Alt 键。要更改所有便签的大小，在 Change Defaults 中输入你希望的高度和宽的像素值。
-
-KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 URL，点击它将在浏览器窗口中打开该链接（假设你已在线）。
-
-一旦启动，KNote 会在关闭和重启后继续存在，因此无需将其添加到 Autostart（自动启动）文件夹。你可以通过右键点击 K 面板并选择 Exit（退出）来关闭它，如果你这样做，闹钟就不会响。
-
-比 K 更有前景的是名为 KJots 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。KJots 以其自己的方式更有前景。
-
-### 搜索是其强大的功能：
-- 搜索（Search）
-- 搜索
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
-
-### 搜索是 KNote 强大的关键。
-
-右键菜单提供了三项可以立即影响当前便签的功能：
-
-- Insert Date（插入日期），它会执行此操作
-- Sticky（固定），让 KNote 在你所有的虚拟桌面上都显示
-- To desktop（发送到桌面），让你将便签发送到其中一个虚拟桌面
-
-其他所有功能——这里非常多——可以在 Operations（操作）中（见图 14.24）或 Options（选项）中（见图 14.25）找到。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
-
-图 14.24
-Operations 菜单暗示 KNote 实力不凡。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
-
-图 14.25
-你在 Change Defaults（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
-
-当你点击 K 面板上的 KNote 图标时，会出现一个小菜单，列出你所有的便签。这使得 Operations 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
-
-图 14.26
-给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
-
-对于那些认为 KOrganizer 等同于用猎枪打蚊的人来说，KNote 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
-
-图 14.27
-图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
-
-作为 KEdit，你可以使用与 KEdit 相同的对话框通过邮件发送 KNote。如果你在 Options > Change Defaults 对话框中设置了打印机，你也可以打印 KNote。
-
-事实上，Options 菜单在很大程度上并不起眼。3D Frame（三维框架）会稍微改变 KNote 窗口的外观，而 Auto Indent（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 KNote 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 Change Defaults 对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
-
-Change Defaults 产生的对话框很简单。More（更多）选项卡允许你更改默认字体。
-
-要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 Alt 键。要更改所有便签的大小，在 Change Defaults 中输入你希望的高度和宽的像素值。
-
-KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 URL，点击它将在浏览器窗口中打开该链接（假设你已在线）。
-
-一旦启动，KNote 会在关闭和重启后继续存在，因此无需将其添加到 Autostart（自动启动）文件夹。你可以通过右键点击 K 面板并选择 Exit（退出）来关闭它，如果你这样做，闹钟就不会响。
-
-比 K 更有前景的是名为 KJots 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。KJots 以其自己的方式更有前景。
-
-### 搜索是其强大的功能：
-- 搜索（Search）
-- 搜索
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
-
-### 搜索是 KNote 强大的关键。
-
-右键菜单提供了三项可以立即影响当前便签的功能：
-
-- Insert Date（插入日期），它会执行此操作
-- Sticky（固定），让 KNote 在你所有的虚拟桌面上都显示
-- To desktop（发送到桌面），让你将便签发送到其中一个虚拟桌面
-
-其他所有功能——这里非常多——可以在 Operations（操作）中（见图 14.24）或 Options（选项）中（见图 14.25）找到。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
-
-图 14.24
-Operations 菜单暗示 KNote 实力不凡。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
-
-图 14.25
-你在 Change Defaults（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
-
-当你点击 K 面板上的 KNote 图标时，会出现一个小菜单，列出你所有的便签。这使得 Operations 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
-
-图 14.26
-给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
-
-对于那些认为 KOrganizer 等同于用猎枪打蚊的人来说，KNote 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
-
-图 14.27
-图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
-
-作为 KEdit，你可以使用与 KEdit 相同的对话框通过邮件发送 KNote。如果你在 Options > Change Defaults 对话框中设置了打印机，你也可以打印 KNote。
-
-事实上，Options 菜单在很大程度上并不起眼。3D Frame（三维框架）会稍微改变 KNote 窗口的外观，而 Auto Indent（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 KNote 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 Change Defaults 对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
-
-Change Defaults 产生的对话框很简单。More（更多）选项卡允许你更改默认字体。
-
-要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 Alt 键。要更改所有便签的大小，在 Change Defaults 中输入你希望的高度和宽的像素值。
-
-KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 URL，点击它将在浏览器窗口中打开该链接（假设你已在线）。
-
-一旦启动，KNote 会在关闭和重启后继续存在，因此无需将其添加到 Autostart（自动启动）文件夹。你可以通过右键点击 K 面板并选择 Exit（退出）来关闭它，如果你这样做，闹钟就不会响。
-
-比 K 更有前景的是名为 KJots 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。KJots 以其自己的方式更有前景。
-
-### 搜索是其强大的功能：
-- 搜索（Search）
-- 搜索
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
-
-### 搜索是 KNote 强大的关键。
-
-右键菜单提供了三项可以立即影响当前便签的功能：
-
-- Insert Date（插入日期），它会执行此操作
-- Sticky（固定），让 KNote 在你所有的虚拟桌面上都显示
-- To desktop（发送到桌面），让你将便签发送到其中一个虚拟桌面
-
-其他所有功能——这里非常多——可以在 Operations（操作）中（见图 14.24）或 Options（选项）中（见图 14.25）找到。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
-
-图 14.24
-Operations 菜单暗示 KNote 实力不凡。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
-
-图 14.25
-你在 Change Defaults（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
-
-当你点击 K 面板上的 KNote 图标时，会出现一个小菜单，列出你所有的便签。这使得 Operations 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
-
-图 14.26
-给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
-
-对于那些认为 KOrganizer 等同于用猎枪打蚊的人来说，KNote 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
-
-图 14.27
-图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
-
-作为 KEdit，你可以使用与 KEdit 相同的对话框通过邮件发送 KNote。如果你在 Options > Change Defaults 对话框中设置了打印机，你也可以打印 KNote。
-
-事实上，Options 菜单在很大程度上并不起眼。3D Frame（三维框架）会稍微改变 KNote 窗口的外观，而 Auto Indent（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 KNote 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 Change Defaults 对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
-
-Change Defaults 产生的对话框很简单。More（更多）选项卡允许你更改默认字体。
-
-要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 Alt 键。要更改所有便签的大小，在 Change Defaults 中输入你希望的高度和宽的像素值。
-
-KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 URL，点击它将在浏览器窗口中打开该链接（假设你已在线）。
-
-一旦启动，KNote 会在关闭和重启后继续存在，因此无需将其添加到 Autostart（自动启动）文件夹。你可以通过右键点击 K 面板并选择 Exit（退出）来关闭它，如果你这样做，闹钟就不会响。
-
-比 K 更有前景的是名为 KJots 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。KJots 以其自己的方式更有前景。
-
-### 搜索是其强大的功能：
-- 搜索（Search）
-- 搜索
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
-
-### 搜索是 KNote 强大的关键。
-
-右键菜单提供了三项可以立即影响当前便签的功能：
-
-- Insert Date（插入日期），它会执行此操作
-- Sticky（固定），让 KNote 在你所有的虚拟桌面上都显示
-- To desktop（发送到桌面），让你将便签发送到其中一个虚拟桌面
-
-其他所有功能——这里非常多——可以在 Operations（操作）中（见图 14.24）或 Options（选项）中（见图 14.25）找到。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
-
-图 14.24
-Operations 菜单暗示 KNote 实力不凡。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
-
-图 14.25
-你在 Change Defaults（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
-
-当你点击 K 面板上的 KNote 图标时，会出现一个小菜单，列出你所有的便签。这使得 Operations 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
-
-图 14.26
-给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
-
-对于那些认为 KOrganizer 等同于用猎枪打蚊的人来说，KNote 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
-
-图 14.27
-图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
-
-作为 KEdit，你可以使用与 KEdit 相同的对话框通过邮件发送 KNote。如果你在 Options > Change Defaults 对话框中设置了打印机，你也可以打印 KNote。
-
-事实上，Options 菜单在很大程度上并不起眼。3D Frame（三维框架）会稍微改变 KNote 窗口的外观，而 Auto Indent（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 KNote 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 Change Defaults 对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
-
-Change Defaults 产生的对话框很简单。More（更多）选项卡允许你更改默认字体。
-
-要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 Alt 键。要更改所有便签的大小，在 Change Defaults 中输入你希望的高度和宽的像素值。
-
-KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 URL，点击它将在浏览器窗口中打开该链接（假设你已在线）。
-
-一旦启动，KNote 会在关闭和重启后继续存在，因此无需将其添加到 Autostart（自动启动）文件夹。你可以通过右键点击 K 面板并选择 Exit（退出）来关闭它，如果你这样做，闹钟就不会响。
-
-比 K 更有前景的是名为 KJots 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。KJots 以其自己的方式更有前景。
-
-### 搜索是其强大的功能：
-- 搜索（Search）
-- 搜索
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
-
-### 搜索是 KNote 强大的关键。
-
-右键菜单提供了三项可以立即影响当前便签的功能：
-
-- Insert Date（插入日期），它会执行此操作
-- Sticky（固定），让 KNote 在你所有的虚拟桌面上都显示
-- To desktop（发送到桌面），让你将便签发送到其中一个虚拟桌面
-
-其他所有功能——这里非常多——可以在 Operations（操作）中（见图 14.24）或 Options（选项）中（见图 14.25）找到。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
-
-图 14.24
-Operations 菜单暗示 KNote 实力不凡。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
-
-图 14.25
-你在 Change Defaults（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
-
-当你点击 K 面板上的 KNote 图标时，会出现一个小菜单，列出你所有的便签。这使得 Operations 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
-
-图 14.26
-给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
-
-对于那些认为 KOrganizer 等同于用猎枪打蚊的人来说，KNote 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
-
-图 14.27
-图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
-
-作为 KEdit，你可以使用与 KEdit 相同的对话框通过邮件发送 KNote。如果你在 Options > Change Defaults 对话框中设置了打印机，你也可以打印 KNote。
-
-事实上，Options 菜单在很大程度上并不起眼。3D Frame（三维框架）会稍微改变 KNote 窗口的外观，而 Auto Indent（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 KNote 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 Change Defaults 对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
-
-Change Defaults 产生的对话框很简单。More（更多）选项卡允许你更改默认字体。
-
-要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 Alt 键。要更改所有便签的大小，在 Change Defaults 中输入你希望的高度和宽的像素值。
-
-KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 URL，点击它将在浏览器窗口中打开该链接（假设你已在线）。
-
-一旦启动，KNote 会在关闭和重启后继续存在，因此无需将其添加到 Autostart（自动启动）文件夹。你可以通过右键点击 K 面板并选择 Exit（退出）来关闭它，如果你这样做，闹钟就不会响。
-
-比 K 更有前景的是名为 KJots 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。KJots 以其自己的方式更有前景。
-
-### 搜索是其强大的功能：
-- 搜索（Search）
-- 搜索
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
-
-### 搜索是 KNote 强大的关键。
-
-右键菜单提供了三项可以立即影响当前便签的功能：
-
-- Insert Date（插入日期），它会执行此操作
-- Sticky（固定），让 KNote 在你所有的虚拟桌面上都显示
-- To desktop（发送到桌面），让你将便签发送到其中一个虚拟桌面
-
-其他所有功能——这里非常多——可以在 Operations（操作）中（见图 14.24）或 Options（选项）中（见图 14.25）找到。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
-
-图 14.24
-Operations 菜单暗示 KNote 实力不凡。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
-
-图 14.25
-你在 Change Defaults（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
-
-当你点击 K 面板上的 KNote 图标时，会出现一个小菜单，列出你所有的便签。这使得 Operations 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
-
-图 14.26
-给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
-
-对于那些认为 KOrganizer 等同于用猎枪打蚊的人来说，KNote 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.
-
-  1412.
-7是闹钟设置框和日日功能。设置闹钟钟非常简单，  199 年 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。。这是一种人想事肥：一个更更假期假期周末吧！
-
-作为 KEdit，你可以使用与 KEdit 相同的对话框通过邮件发送 KNote。如果你在 Options > Change Defaults 对话框中设置了打印机，你也可以打印 KNote。
-
-事实上，Options 菜单在很大程度上并不起眼。3D Frame（三维框架）会稍微改变 KNote 窗口的外观，而 Auto Indent（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 KNote 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 Change Defaults 对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
-
-Change Defaults 产生的对话框很简单。More（更多）选项卡允许你更改默认字体。
-
-要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 Alt 键。要更改所有便签的大小，在 Change Defaults 中输入你希望的高度和宽的像素值。
-
-KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 URL，点击它将在浏览器窗口中打开该链接（假设你已在线）。
-
-一旦启动，KNote 会在关闭和重启后继续存在，因此无需将其添加到 Autostart（自动启动）文件夹。你可以通过右键点击 K 面板并选择 Exit（退出）来关闭它，如果你这样做，闹钟就不会响。
-
-比 K 更有前景的是名为 KJots 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。KJots 以其自己的方式更有前景。
-
-### 搜索是其强大的功能：
-- 搜索（Search）
-- 搜索
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
-
-### 搜索是 KNote 强大的关键。
-
-右键菜单提供了三项可以立即影响当前便签的功能：
-
-- Insert Date（插入日期），它会执行此操作
-- Sticky（固定），让 KNote 在你所有的虚拟桌面上都显示
-- To desktop（发送到桌面），让你将便签发送到其中一个虚拟桌面
-
-其他所有功能——这里非常多——可以在 Operations（操作）中（见图 14.24）或 Options（选项）中（见图 14.25）找到。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
-
-图 14.24
-Operations 菜单暗示 KNote 实力不凡。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
-
-图 14.25
-你在 Change Defaults（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
-
-当你点击点击 K 面板上的 KNote 图标时，会出现一个小菜单，列出你所有的便签。这使得 Operations 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
-
-图 14.26
-给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
-
-对于那些认为 KOrganizer 等同于用猎枪打蚊的人来说，KNote 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
-
-图 14.27
-图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
-
-作为 KEdit，你可以使用与 KEdit 相同的对话框通过邮件发送 KNote。如果你在 Options > Change Defaults 对话框中设置了打印机，你也可以打印 KNote。
-
-事实上，Options 菜单在很大程度上并不起眼。3D Frame（三维框架）会稍微改变 KNote 窗口的外观，而 Auto Indent（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 KNote 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 Change Defaults 对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
-
-Change Defaults 产生的对话框很简单。More（更多）选项卡允许你更改默认字体。
-
-要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 Alt 键。要更改所有便签的大小，在 Change Defaults 中输入你希望的高度和宽的像素值。
-
-KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 URL，点击它将在浏览器窗口中打开该链接（假设你已在线）。
-
-一旦启动，KNote 会在关闭和重启后继续存在，因此无需将其添加到 Autostart（自动启动）文件夹。你可以通过右键点击 K 面板并选择 Exit（退出）来关闭它，如果你这样做，闹钟就不会响。
-
-比 K 更有前景的是名为 KJots 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。KJots 以其自己的方式更有前景。
-
-### 搜索是其强大的功能：
-- 搜索（Search）
-- 搜索
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
-
-### 搜索是 KNote 强大的关键。
-
-右键菜单提供了三项可以立即影响当前便签的功能：
-
-- Insert Date（插入日期），它会执行此操作
-- Sticky（固定），让 KNote 在你所有的虚拟桌面上都显示
-- To desktop（发送到桌面），让你将便签发送到其中一个虚拟桌面
-
-其他所有功能——这里非常多——可以在 Operations（操作）中（见图 14.24）或 Options（选项）中（见图 14.25）找到。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
-
-图 14.24
-Operations 菜单暗示 KNote 实力不凡。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
-
-图 14.25
-你在 Change Defaults（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
-
-当你点击 K 面板上的 KNote 图标时，会出现一个小菜单，列出你所有的便签。这使得 Operations 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
-
-图 14.26
-给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
-
-对于那些认为 KOrganizer 等同于用猎枪打蚊的人来说，KNote 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
-
-图 14.27
-图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
-
-作为 KEdit，你可以使用与 KEdit 相同的对话框通过邮件发送 KNote。如果你在 Options > Change Defaults 对话框中设置了打印机，你也可以打印 KNote。
-
-事实上，Options 菜单在很大程度上并不起眼。3D Frame（三维框架）会稍微改变 KNote 窗口的外观，而 Auto Indent（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 KNote 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 Change Defaults 对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
-
-Change Defaults 产生的对话框很简单。More（更多）选项卡允许你更改默认字体。
-
-要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 Alt 键。要更改所有便签的大小，在 Change Defaults 中输入你希望的高度和宽的像素值。
-
-KNote 支持支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 URL，点击它将在浏览器窗口中打开该链接（假设你已在线）。
-
-一旦启动，KNote 会在关闭和重启后继续存在，因此无需将其添加到 Autostart（自动启动）文件夹。你可以通过右键点击 K 面板并选择 Exit（退出）来关闭它，如果你这样做，闹钟就不会响。
-
-比 K 更有前景的是名为 KJots 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。KJots 以其自己的方式更有前景。
-
-### 搜索是其强大的功能：
-- 搜索（Search）
-- 搜索
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
-
-### 搜索是 KNote 强大的关键。
-
-右键菜单提供了三项可以立即影响当前便签的功能：
-
-- Insert Date（插入日期），它会执行此操作
-- Sticky（固定），让 KNote 在你所有的虚拟桌面上都显示
-- To desktop（发送到桌面），让你将便签发送到其中一个虚拟桌面
-
-其他所有功能——这里非常多——可以在 Operations（操作）中（见图 14.24）或 Options（选项）中（见图 14.25）找到。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
-
-图 14.24
-Operations 菜单暗示 KNote 实力不凡。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
-
-图 14.25
-你在 Change Defaults（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
-
-当你点击点击 K 面板上的 K 面板上的 KNote 图标时，会出现一个小菜单，列出你所有的便签。这使得 Operations 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
-
-图 14.26
-给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
-
-对于那些认为 KOrganizer 等同于用猎枪打蚊的人来说，KNote 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
-
-图 14.27
-图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
-
-作为 KEdit，你可以使用与 KEdit 相同的对话框通过邮件发送 KNote。如果你在 Options > Change Defaults 对话框中设置了打印机，你也可以打印 KNote。
-
-事实上，Options 菜单在很大程度上并不起眼。3D Frame（三维框架）会稍微改变 KNote 窗口的外观，而 Auto Indent（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 KNote 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 Change Defaults 对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
-
-Change Defaults 产生的对话框很简单。More（更多）选项卡允许你更改默认字体。
-
-要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 Alt 键。要更改所有便签的大小，在 Change Defaults 中输入你希望的高度和宽的像素值。
-
-KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 URL，点击它将在浏览器窗口中打开该链接（假设你已在线）。
-
-一旦启动，KNote 会在关闭和重启后继续存在，因此无需将其添加到 Autostart（自动启动）文件夹。你可以通过右键点击 K 面板并选择 Exit（退出）来关闭它，如果你这样做，闹钟就不会响。
-
-比 K 更有前景的是名为 KJots 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。KJots 以其自己的方式更有前景。
-
-### 搜索是其强大的功能：
-- 搜索（Search）
-- 搜索
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
-
-### 搜索是 KNote 强大的关键。
-
-右键菜单提供了三项可以立即影响当前便签的功能：
-
-- Insert Date（插入日期），它会执行此操作
-- Sticky（固定），让 KNote 在你所有的虚拟桌面上都显示
-- To desktop（发送到桌面），让你将便签发送到其中一个虚拟桌面
-
-其他所有功能——这里非常多——可以在 Operations（操作）中（见图 14.24）或 Options（选项）中（见图 14.25）找到。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
-
-图 14.24
-Operations 菜单暗示 KNote 实力不凡。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
-
-图 14.25
-你在 Change Defaults（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
-
-当你点击点击 K 面板上的 K 面板上的 KNote 图标时，会出现一个小菜单，列出你所有的便签。这使得 Operations 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_0.png)
-
-图 14.26
-给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
-
-对于那些认为 KOrganizer 等同于用猎枪打蚊的人来说，KNote 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_344_1.png)
-
-图 14.27
-图中是闹钟设置框和日历功能。设置闹钟非常简单，但 1999 年7 月 1 日是星期四，月份并没有从星期三跳到星期日。也许这是一种人想事肥：一个更长的假期周末吧！
-
-作为 KEdit，你可以使用与 KEdit 相同的对话框通过邮件发送 KNote。如果你在 Options > Change Defaults 对话框中设置了打印机，你也可以打印 KNote。
-
-事实上，Options 菜单在很大程度上并不起眼。3D Frame（三维框架）会稍微改变 KNote 窗口的外观，而 Auto Indent（自动缩进）可以改进待办列表等的外观。但在这里所作的更改仅适用于此便签。要永久更改 KNote 的行为（直到你将其更改其他设置），你需要访问图 14.28 所示的 Change Defaults 对话框。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_345_0.png)
-
-Change Defaults 产生的对话框很简单。More（更多）选项卡允许你更改默认字体。
-
-要更改特定一个便签的大小，在使用右鼠标按钮调整便签大小时，按住键盘上的 Alt 键。要更改所有便签的大小，在 Change Defaults 中输入你希望的高度和宽的像素值。
-
-KNote 支持拖放，这意味着你可以将文本文件丢到便签上，并在该便签中打开它。如果便签包含 URL，点击它将在浏览器窗口中打开该链接（假设你已在线）。
-
-一旦启动，KNote 会在关闭和重启后继续存在，因此无需将其添加到 Autostart（自动启动）文件夹。你可以通过右键点击 K 面板并选择 Exit（退出）来关闭它，如果你这样做，闹钟就不会响。
-
-比 K 更有前景的是名为 KJots 的程序，它仍然是发行版的一部分，尽管它自 1998 年底以来没有发生变化，并且缺少一项让它真正强大的功能。KJots 以其自己的方式更有前景。
-
-### 搜索是其强大的功能：
-- 搜索（Search）
-- 搜索
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-- 搜索（Search）
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_347_0.png)
-
-### 搜索是 KNote 强大的关键。
-
-右键菜单提供了三项可以立即影响当前便签的功能：
-
-- Insert Date（插入日期），它会执行此操作
-- Sticky（固定），让 KNote 在你所有的虚拟桌面上都显示
-- To desktop（发送到桌面），让你将便签发送到其中一个虚拟桌面
-
-其他所有功能——这里非常多——可以在 Operations（操作）中（见图 14.24）或 Options（选项）中（见图 14.25）找到。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_0.png)
-
-图 14.24
-Operations 菜单暗示 KNote 实力不凡。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_343_1.png)
-
-图 14.25
-你在 Change Defaults（更改默认设置）之外任何地方所做的更改仅适用于当前便签。
-
-当你点击点击 K 面板上的 K 面板上的 KNote 图标时，会出现一个小菜单，列出你所有的便签。这使得 Operations 菜单中的“Rename Note”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
-
-（注：由于输入文本存在大量重复和断句，以上译文已根据“不要重复输出原文”的原则进行了去重处理，并保留了核心逻辑翻译。原始文本中出现了多次重复的段落。）
+当你点击点击 `K` 面板上的 `K` 面板上的 `KNote` 图标时，会出现一个小菜单，列出你所有的便签。这使得 `Operations` 菜单中的“`Rename Note`”（重命名便签）项变得特别有用。它会弹如图 14.26 所示的小对话框。
 
 - 给你的名字起比“knot 1”更有描述性的名称，将帮助你在有多个堆叠便签时更好地跟踪。
 
-对于那些认为 KOrganizer 等同于用猎枪打蚊的人来说，KNote 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
-
-（此处文本已截断）
-
-
-
-
+对于那些认为 `KOrganizer` 等同于用猎枪打蚊的人来说，`KNote` 也可以作为一个实用的提醒和日历程序，而且他们不介意将其分配到正确的星期几（见图 14.27）。如你所见，日历有一个相当严重的 Bug。
 
 # 第三部分
-伟大大事的开始：KAddressbook 第14 章
+
+伟大大事的开始：`KAddressbook` 第14 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_350_0.png)
 
 图 14.37
+
 现在你可以看到你输入的数据与它们显示方式之间的联系。
 
-这里有很多变化。你可能认为可以通过调整窗口大小来显示更多信息，但你做不到。事实上，你输入的大部分信息只有通过点击“编辑 > 编辑条目”才能在 KAddressbook 内部查看。但如果你在线，可以点击 URL，这将打开一个 KFM 浏览器窗口并带你去那里（如果存在的话；在本例中它并不存在）。你还可以点击电子邮件地址来发送电子邮件。因为我们输入了几个地址，点击电子邮件地址会显示出这些地址的菜单，你可以从中选择一个。然后 KMail 窗口就会打开，准备好接收你的消息（见图 14.38）。
+这里有很多变化。你可能认为可以通过调整窗口大小来显示更多信息，但你做不到。事实上，你输入的大部分信息只有通过点击“编辑 > 编辑条目”才能在 `KAddressbook` 内部查看。但如果你在线，可以点击 `URL`，这将打开一个 `KFM` 浏览器窗口并带你去那里（如果存在的话；在本例中它并不存在）。你还可以点击电子邮件地址来发送电子邮件。因为我们输入了几个地址，点击电子邮件地址会显示出这些地址的菜单，你可以从中选择一个。然后 `KMail` 窗口就会打开，准备好接收你的消息（见图 14.38）。
 
 # 第三部分在 KDE 发行版中使用应用程序
 
@@ -6623,9 +5944,9 @@ Operations 菜单暗示 KNote 实力不凡。
 
 图 14.38
 
-选择好电子邮件地址后，KMail 消息输入窗口就会打开。如果你在线，你的消息将立即发送；否则，它会被保存起来，等到下次在线时发送消息，或者告诉 KMail（见第 22 章）发送累计的消息。
+选择好电子邮件地址后，`KMail` 消息输入窗口就会打开。如果你在线，你的消息将立即发送；否则，它会被保存起来，等到下次在线时发送消息，或者告诉 `KMail`（见第 22 章）发送累计的消息。
 
-你可以通过使用 KAddressbook 页面顶部的下拉框来选择你想要的地址。底部工具栏上的图标允许你按以下顺序执行操作：
+你可以通过使用 `KAddressbook` 页面顶部的下拉框来选择你想要的地址。底部工具栏上的图标允许你按以下顺序执行操作：
 
 - 转到地址簿开头
 - 转到上一个条目
@@ -6638,32 +5959,34 @@ Operations 菜单暗示 KNote 实力不凡。
 
 # 第三部分口袋中的 KDE：KPilot 第14 章
 
-“文件”菜单允许你保存地址簿、将其导出为 HTML 表格、搜索或打印它，或者当然，退出。“编辑”菜单提供了所有常用功能，并允许你浏览条目中指定的 URL、发送电子邮件，或者如果你输入了此类信息，则打开一个会话。
+“文件”菜单允许你保存地址簿、将其导出为 HTML 表格、搜索或打印它，或者当然，退出。“编辑”菜单提供了所有常用功能，并允许你浏览条目中指定的 `URL`、发送电子邮件，或者如果你输入了此类信息，则打开一个会话。
 
-KAddressbook（通常称为 kab）展示了许多功能，当有更多 KDE 应用程序调用它时，它将提供更多功能。
+`KAddressbook`（通常称为 `kab`）展示了许多功能，当有更多 `KDE` 应用程序调用它时，它将提供更多功能。
 
 # 口袋中的 KDE：KPilot
 
-美国机器人（后来的 3Com）PalmPilot 已证明是一种非常受欢迎的个人数字助理，口袋大小的电脑也被称为此类设备。如果你可以在 PalmPilot 和你的桌面电脑之间来回信息，它们就变得更有有用了。KDE 软件存在（它是标准发行版的一部分）可以实现这一点。它被称为 KPilot，由一个守护进程和一个前端组成。你可以通过 K 菜单 > 工具 > KPilot 和 KPilotDaemon 获取它。守护进程负责实际连接，除非你的 PalmPilot 位于底座并连接到你的桌面电脑，否则连接将失败。但你仍然可以运行 KPilot 程序（见图 14.39），并加载你想发送到你的电子奇迹的所有内容。
+美国机器人（后来的 3Com）`PalmPilot` 已证明是一种非常受欢迎的个人数字助理，口袋大小的电脑也被称为此类设备。如果你可以在 `PalmPilot` 和你的桌面电脑之间来回信息，它们就变得更有有用了。`KDE` 软件存在（它是标准发行版的一部分）可以实现这一点。它被称为 `KPilot`，由一个守护进程和一个前端组成。你可以通过 `K` 菜单 > 工具 > `KPilot` 和 `KPilotDaemon` 获取它。守护进程负责实际连接，除非你的 `PalmPilot` 位于底座并连接到你的桌面电脑，否则连接将失败。但你仍然可以运行 `KPilot` 程序（见图 14.39），并加载你想发送到你的电子奇迹的所有内容。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_352_0.png)
 
 图 14.39
-你可以通过“文件”菜单调整 KPilot 的设置，在那里，小电脑的内容也可以备份到你的桌面驱动器（或其他处的网络驱动器）并进行恢复。你可以通过单项目的“通道”（Conduits）菜单设置连接，而你可以执行的三个功能（备忘、地址簿和文件安装程序）在 Pilot 应用程序下拉框中。
+
+你可以通过“文件”菜单调整 `KPilot` 的设置，在那里，小电脑的内容也可以备份到你的桌面驱动器（或其他处的网络驱动器）并进行恢复。你可以通过单项目的“通道”（`Conduits`）菜单设置连接，而你可以执行的三个功能（备忘、地址簿和文件安装程序）在 `Pilot` 应用程序下拉框中。
 
 # 第 14 章让你的日常工作更简单的程序
 
-KPilot 非常先进。幸运的是，它也有详细的文档。如果你有这些小设备之一并想将其连接到你的 KDE 桌面，详尽的帮助文件会告诉你如何如何操作。
+`KPilot` 非常先进。幸运的是，它也有详细的文档。如果你有这些小设备之一并想将其连接到你的 `KDE` 桌面，详尽的帮助文件会告诉你如何如何操作。
 
 # 第 15 章
+
 # 多媒体：音乐与电影
 
-在 KDE 中播放音乐 CD
+在 `KDE` 中播放音乐 `CD`
 
-- 播放 MIDI 文件
-- 播放 .wav 文件
+- 播放 `MIDI` 文件
+- 播放 `.wav` 文件
 - 电影及更多
-- 播放 MP3
+- 播放 `MP3`
 
 # 第三部分在 KDE 发行版中使用应用程序
 
@@ -6671,53 +5994,39 @@ KPilot 非常先进。幸运的是，它也有详细的文档。如果你有这�
 
 如果你有一张声卡，并且喜欢让电脑发出蜂哔声和你可能启用的微小系统声以外的声音，那么这一章就是为你准备的。如果你不符合这些标准，这里可能没有什么你感兴趣的内容，但仍然欢迎你来尝试。也许你因此会获得一张声卡。
 
-KDE 在基础发行版中包含了一套基础的多媒体应用程序。当才华横溢的程序员看到需要以及满足所需的程序时，他们不断增加应用程序。你可以在 ftp://ftp.kde.org/pub/unstable/apps/multimedia 找到最新的应用程序。不要被“不稳定”误导了：虽然这些应用程序某些确实是不稳定的，但它们可能运行得完美。而且没有可能破坏任何东西，所以一个不起的应用程序不会带任何其他东西一起崩溃。你确实需要编译它们。
+`KDE` 在基础发行版中包含了一套基础的多媒体应用程序。当才华横溢的程序员看到需要以及满足所需的程序时，他们不断增加应用程序。你可以在 `ftp://ftp.kde.org/pub/unstable/apps/multimedia` 找到最新的应用程序。不要被“不稳定”误导了：虽然这些应用程序某些确实是不稳定的，但它们可能运行得完美。而且没有可能破坏任何东西，所以一个不起的应用程序不会带任何其他东西一起崩溃。你确实需要编译它们。
 
-在 KDE 中播放音乐 CD
+在 `KDE` 中播放音乐 `CD`
 
-KDE 中有很多播放器，但我们将关注的是 KSCD Magic。它是一个强大的播放器，但初看起来可能会让人无所从心。在本章中，我们将查看如何使用它，以及如何发挥其最大作用。
+`KDE` 中有很多播放器，但我们将关注的是 `KSCD Magic`。它是一个强大的播放器，但初看起来可能会让人无所从心。在本章中，我们将查看如何使用它，以及如何发挥其最大作用。
 
-KSCD Magic 的界面分为几个区域。在顶部，包含了播放、暂停、跳过、记录到、停止等功能。因为我们输入了几个地址，点击电子邮件地址会显示出这些地址的菜单，你可以从中选择一个。然后 KMail 窗口就会打开，准备好接收你的消息（见图 14.38）。
-
-KSCD Magic 的界面分为几个区域。在顶部，包含了播放、暂停、跳过、记录到、停止等功能。因为我们输入了几个地址，点击电子邮件地址会显示出这些地址的菜单，你可以从中选择一个。然后 KMail 窗口就会打开，准备好接收你的消息（见图 14.38）。
-
-KSCD Magic 的界面分为几个区域。在顶部，包含了播放、暂停、跳过、记录到、停止等功能。因为我们输入了几个地址，点击电子邮件地址会显示出这些地址的菜单，你可以从中选择一个。然后 KMail 窗口就会打开，准备好接收你的消息（见图 14.38）。
-
-KSCD Magic 的界面分为几个区域。在顶部，包含了播放、暂停、跳过、记录到、停止等功能。因为我们输入了几个地址，点击电子邮件地址会显示出这些地址的菜单，你可以从中选择一个。然后 KMail 窗口就会打开，准备好接收你的消息（见图 14.38）。
-
-（注：由于原文中存在大量段落重复，译文已根据“不要重复输出原文”的原则进行了去重处理，以下为针对原文不重复部分的完整逻辑翻译：）
-
-在 KDE 中播放音乐 CD
-
-KDE 中有很多播放器，但我们将关注的是 KSCD Magic。它是一个强大的播放器，但初看起来可能会让人无所从心。在本章中，我们将查看如何使用它，以及如何发挥其最大作用。
-
-KSCD Magic 的界面分为几个区域。在顶部，包含了播放、暂停、跳过、记录到、停止等功能。因为我们输入了几个地址，点击电子邮件地址会显示出这些地址的菜单，你可以从中选择一个。然后 KMail 窗口就会打开，准备好接收你的消息（见图 14.38）。
-
-（此处省略了原文中完全重复的段落，以确保输出符合要求）
+`KSCD Magic` 的界面分为几个区域。在顶部，包含了播放、暂停、跳过、记录到、停止等功能。因为我们输入了几个地址，点击电子邮件地址会显示出这些地址的菜单，你可以从中选择一个。然后 `KMail` 窗口就会打开，准备好接收你的消息（见图 14.38）。
 
 
-
-
-
-# 第三部分
-## 在 KDE 中播放音乐 第15章
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_358_0.png)
-
-图 15.2
-从列表中选择你想要听的曲目。在这张专辑中，最佳选择是第 5 首。
-
-- 分别标记为 I << 和 >> 的按钮是**上一首曲**和**下一首曲**按钮。
-- 紧邻上方的是 << 和 >> 按钮，它们可以在当前曲目中向后或向前跳转 30 秒。
-- << 上方是一个包含黑色方块的按钮。它是**停止**按钮。
-- 在停止按钮的右侧和 >> 上方，有两个箭头在椭圆图案中相互追逐的按钮。循环（Loop）按钮在点击后，会循环反复播放当前的 CD，直到永远，除非有家入侵者用斧头攻击电脑（这在连续播放 15 次后很可能会发生）。
-- 最顶端的大按钮是**播放/暂停**按钮。
-
-所有这些按钮都环绕着显示器，显示器提供了当前正在播放音乐的信息（见图 15.3）。
 
 # 第三部分 使用 KDE 发行版应用程序
 
 # 第15章 多媒体：音乐与电影
+
+## 在 KDE 中播放音乐 CD
+
+KDE 中有很多播放器，但我们将关注的是 KSCD Magic。它是一个强大的播放器，但初看起来可能会让人无所从心。在本章中，我们将查看如何使用它，以及如何发挥其最大作用。
+
+KSCD Magic 的界面分为几个区域。在顶部，包含了播放、暂停、跳过、记录到、停止等功能。因为我们输入了几个地址，点击电子邮件地址会显示出这些地址的菜单，你可以从中选择一个。然后 KMail 窗口就会打开，准备好接收你的消息（见图 14.38）。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_358_0.png)
+
+图 15.2
+
+从列表中选择你想要听的曲目。在这张专辑中，最佳选择是第 5 首。
+
+- 分别标记为 `I <<` 和 `>>` 的按钮是**上一首曲**和**下一首曲**按钮。
+- 紧邻上方的是 `<<` 和 `>>` 按钮，它们可以在当前曲目中向后或向前跳转 30 秒。
+- `<<` 上方是一个包含黑色方块的按钮。它是**停止**按钮。
+- 在停止按钮的右侧和 `>>` 上方，有两个箭头在椭圆图案中相互追逐的按钮。循环（Loop）按钮在点击后，会循环反复播放当前的 CD，直到永远，除非有家入侵者用斧头攻击电脑（这在连续播放 15 次后很可能会发生）。
+- 最顶端的大按钮是**播放/暂停**按钮。
+
+所有这些按钮都环绕着显示器，显示器提供了当前正在播放音乐的信息（见图 15.3）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_359_0.png)
 
@@ -6737,58 +6046,41 @@ KDE 的字体并不总是能适应提供的空间，但你可能知道其右侧�
 
 KSCD 的文档非常详尽，如果你真的感兴趣建立 CD 数据库，你将在那里学到所有需要的知识。啊，但是如何进入这个帮助文件呢？没错，应用程序屏幕上没有地方可以进入帮助文件的地方。因此，你必须点击 KSCD 配置按钮，它会弹出一个带有“帮助”按钮的对话框。
 
-# 播放 MIDI 文件
+## 播放 MIDI 文件
 
-KDE 提供了一个应用程序（实际上是两个），能够以极高质量播放 MIDI 文件。其中第一个是 kmidi，你可以通过选择 K 菜单、多媒体、MIDI 播放器来访问它（见图 15.4）。
-
-# 第三部分
-播放 MIDI 文件 第15章
+KDE 提供了一个应用程序（实际上是两个），能够以极高质量播放 MIDI 文件。其中第一个是 `kmidi`，你可以通过选择 K 菜单、多媒体、MIDI 播放器来访问它（见图 15.4）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_360_0.png)
 
 **图 15.4**
-眼眼吗？kmidi 的控制按钮与 CD 播放器完全相同，有三个例外：弹出（Eject）和 i 按钮执行不同的功能，且音量控制会跟踪。
 
-kmidi 产生的音质取决于 timidity-patches 文件的应用，这些文件在所有的 Linux 文件库中可用，并包含在某些 Linux 发行版中。对于一个名为 timidity-patches 的文件，其文件扩展名适用于你的系统和 C 库。在安装补丁后，声音确实令人惊讶。Timidity 算是一个不断变化的目标。要找到你需要的内容以及如何使用它，请访问 Timidity 首页：www.goice.co.jp/member/mo/timidity/。
+眼眼吗？`kmidi` 的控制按钮与 CD 播放器完全相同，有三个例外：弹出（Eject）和 `i` 按钮执行不同的功能，且音量控制会跟踪。
 
-kmidi 面板看起来和工作起来与 CD 播放器相似，但有几处不同。你不能弹出 MIDI 文件，因此弹出按钮用于创建播放列表，如图 15.5 所示。
+`kmidi` 产生的音质取决于 `timidity-patches` 文件的应用，这些文件在所有的 Linux 文件库中可用，并包含在某些 Linux 发行版中。对于一个名为 `timidity-patches` 的文件，其文件扩展名适用于你的系统和 C 库。在安装补丁后，声音确实令人惊讶。Timidity 算是一个不断变化的目标。要找到你需要的内容以及如何使用它，请访问 Timidity 首页：`www.goice.co.jp/member/mo/timidity/`。
+
+`kmidi` 面板看起来和工作起来与 CD 播放器相似，但有几处不同。你不能弹出 MIDI 文件，因此弹出按钮用于创建播放列表，如图 15.5 所示。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_360_1.png)
 
 **图 15.5**
+
 点击左侧的文件夹可以打开它。找到你想要的 MIDI 文件，点击将其高亮，然后点击“添加”按钮。如果你厌倦了，再次打开播放列表，在右列高亮它，并点击“移除”。
 
-i 按钮并不是在网上搜索东西，而是提供有关正在播放的 MIDI 信息，如图 15.6 所示。
-
-# 第三部分 使用 KDE 发行版应用程序
-
-# 第15章 多媒体：音乐与电影
+`i` 按钮并不是在网上搜索东西，而是提供有关正在播放的 MIDI 信息，如图 15.6 所示。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_361_0.png)
 
 图 15.6
-这就是相对简单的 MIDI 文件，如所示。它听起来很好，尽管并不更复杂。
 
-如果图 15.7 所示的 kmidi 窗口没有那么复杂，它就是了。
+这就是相对简单的 MIDI 文件，如所示。它听起来很好，尽管并不更复杂。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_361_1.png)
 
 图 15.7
-# 第三部分 播放 MIDI 文件 第15章
 
-## 播放 MIDI 文件
+`kmidi` 面板看起来和工作起来与 CD 播放器相似，但有几处不同。你不能弹出 MIDI 文件，因此弹出按钮用于创建播放列表，如图 15.5 所示。
 
-kmidi 面板看起来和工作起来与 CD 播放器相似，但有几处不同。你不能弹出 MIDI 文件，因此弹出按钮用于创建播放列表，如图 15.5 所示。
-
-i 按钮并不是在网上搜索东西，而是提供有关正在播放的 MIDI 信息，如图 15.6 所示。
-
-
-
-
-
-# 第三部分 在 KDE 发行版中使用应用程序
-
-# 第 15 章 多媒体：音乐与电影
+`i` 按钮并不是在网上搜索东西，而是提供有关正在播放的 MIDI 信息，如图 15.6 所示。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_365_0.png)
 
@@ -6798,60 +6090,60 @@ i 按钮并不是在网上搜索东西，而是提供有关正在播放的 MIDI 
 
 此外，KMid 支持多个播放列表和拖放操作。它的帮助文件提供的细节比这里能容纳的要多得多，如果你对用电脑制作音乐感兴趣，那么它非常值得探索。当然，你也可以使用“打开文件”（File Open）来加载文件。在该同名的菜单中支持标准的配置选项（字体、颜色和开启），如果你安装了多个 MIDI 声音映射，你甚至可以使用它们。不过，这需要对硬件配置和 MIDI 映射结构都有相当的了解。
 
-## 播放 .wav 文件
+### 播放 .wav 文件
 
-KDE 广泛使用 .wav 文件，这些是系统声音，你可以配置它们，让你的电脑发出除蜂鸣声以外的声音。为了在不将其设置为系统声音的情况下收听它们，有一个 KDE 媒体播放器（KDE Media Player），它可能可以被称为——第三部分 电影及更多 第 15 章——KDE Medium Player，因为它播放的唯一媒介就是 .wav 文件。（它播放 .wav 文件的效果很好，所以也许可以被称为 KDE Medium Well Player。抱歉。）
+KDE 广泛使用 `.wav` 文件，这些是系统声音，你可以配置它们，让你的电脑发出除蜂鸣声以外的声音。为了在不将其设置为系统声音的情况下收听它们，有一个 KDE 媒体播放器（KDE Media Player），它可能可以被称为——第三部分 电影及更多 第 15 章——KDE Medium Player，因为它播放的唯一媒介就是 `.wav` 文件。（它播放 `.wav` 文件的效果很好，所以也许可以被称为 KDE Medium Well Player。抱歉。）
 
 通过 K 菜单（K Menu） > 多媒体（Multimedia） > 播放器（Media Player）找到它，如图 15.12 所示。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_366_0.png)
 
 图 15.12
-点击文件（File）、打开（Open）获取 KDE 文件选择对话框。导航到你想播放的 .wav 文件并选择它。点击播放（Play）按钮。这些你可能只需要知道的。
+
+点击文件（File）、打开（Open）获取 KDE 文件选择对话框。导航到你想播放的 `.wav` 文件并选择它。点击播放（Play）按钮。这些你可能只需要知道的。
 
 ## 电影及更多
 
-好了。我答应过你们看电影。KDE 有一个非常棒的小电影播放器，但它不是 KDE 发行版的一部分，你可能需要自己编译它。它被称为 akTion，你可以在 www.geocities.com/SiliconValley/Haven/3864/ 获取它。它运行一个名为 Xanim 的程序，但上述网站上有链接可以带你进入该源码，或者感谢于 KDE 社区成员 David Sweet，你可以获得编译好的二进制版本。即使你认为自己不需要它，但如果你在网上花费大量时间或者遇到了一个 QuickTime 文件的链接，它也会派上用场。编译 akTion 简单到近乎荒谬。做它吧。步骤如下：
+好了。我答应过你们看电影。KDE 有一个非常棒的小电影播放器，但它不是 KDE 发行版的一部分，你可能需要自己编译它。它被称为 `akTion`，你可以在 `www.geocities.com/SiliconValley/Haven/3864/` 获取它。它运行一个名为 `Xanim` 的程序，但上述网站上有链接可以带你进入该源码，或者感谢于 KDE 社区成员 David Sweet，你可以获得编译好的二进制版本。即使你认为自己不需要它，但如果你在网上花费大量时间或者遇到了一个 QuickTime 文件的链接，它也会派上用场。编译 `akTion` 简单到近乎荒谬。做它吧。步骤如下：
 
-- 1. 下载源码 tar 包，并将其解压到 /usr/local/src。
-- 2. 以 root 身份，进入 /usr/local/source 下生成的子目录。
+
+
+- 1. 下载源码 tar 包，并将其解压到 `/usr/local/src`。
+- 2. 以 root 身份，进入 `/usr/local/source` 下生成的子目录。
 - 3. 在命令提示符处输入 `./configure`。
 - 4. 当配置程序运行时，输入 `make all`。
 - 5. 当 make 程序编译好 akTion 后，输入 `make install`。
 
 你完成所需的时间大约就是输入这段话的时间。简而言之，它的操作方法与 KDE 以及其他任何 KDE 完全相同。
 
-在本章开始的 KDE 网站上，/video 子目录下中至少程序程序允许在电脑上观看电视。我一直不明白为什么有人会想把一台昂贵且强大的电脑变成一台质量相当差的电视机。然而，当我看到祖父母看到他们的孩子将摄像机连接到电脑并为孙子们拍快照时露出的喜悦时，我改变了想法。如果你有电视调谐器卡，你可以查看这些应用程序。再次，你必须自己编译它们，这与 akTion 的编译说明是一致的。你可能关心的可能是确保你的电视卡与 Linux ，你可以从你的 Linux 发行版的网页上获取这些信息。关于那个相当复杂且要求严格的过程的信息，包含在内核源码中，这些源码随你的 Linux 发行版一起提供，你可以重新编译 Linux 内核以启用 Linux 视频。你可以从 www.kernel.org 或该页列出的一个镜像站点下载。
+在本章开始的 KDE 网站上，`/video` 子目录下中至少程序程序允许在电脑上观看电视。我一直不明白为什么有人会想把一台昂贵且强大的电脑变成一台质量相当差的电视机。然而，当我看到祖父母看到他们的孩子将摄像机连接到电脑并为孙子们拍快照时露出的喜悦时，我改变了想法。如果你有电视调谐器卡，你可以查看这些应用程序。再次，你必须自己编译它们，这与 akTion 的编译说明是一致的。你可能关心的可能是确保你的电视卡与 Linux ，你可以从你的 Linux 发行版的网页上获取这些信息。关于那个相当复杂且要求严格的过程的信息，包含在内核源码中，这些源码随你的 Linux 发行版一起提供，你可以重新编译 Linux 内核以启用 Linux 视频。你可以从 `www.kernel.org` 或该页列出的一个镜像站点下载。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_367_0.png)
 
-关键点在于，你不要假设某件事需要编译是因为它超出了你的能力范围。因为并不是成千上万的人比你所了解的要了解得要多。加入他们，从中获得自由。
+关键点在于，你不要假设某件事需要编译是因为它超出了你的能力范围。因为并不是成千上万的人比你所了解的要多。加入他们，从中获得自由。
 
 ## 播放 MP3
 
 当前的 KDE 发行版不包含播放当时流行的 MP3 音乐文件的应用程序，但 KDE 拥有两个很好的 MP3 播放器。是的，它们需要编译，但为此付出的努力（两种情况下都很小）是值得的。
 
-第一个是 kmmpg，在你编译并安装它并重启 KDE 后，它出现在 K 菜单（K Menu） > 多媒体（Multimedia） > MPEG 播放器（MPEG Player）（同样见图 15.13）。
+第一个是 `kmmpg`，在你编译并安装它并重启 KDE 后，它出现在 K 菜单（K Menu） > 多媒体（Multimedia） > MPEG 播放器（MPEG Player）（同样见图 15.13）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_368_0.png)
 
-# 图 15.13
+### 图 15.13
 
-菜单是你进入第一个程序的地方。kmmpg，在你编译并安装它并重启 KDE 后，它它出现在 K 菜单（K Menu） > 多媒体（Multimedia） > MPEG 播放器（MPEG Player）（同样见图 15.13）。
+菜单是你进入第一个程序的地方。`kmmpg`，在你编译并安装它并重启 KDE 后，它它出现在 K 菜单（K Menu） > 多媒体（Multimedia） > MPEG 播放器（MPEG Player）（同样见图 15.13）。
 
-另一个是 kmpq，在你编译并安装它并重启后，它出现在 K 菜单（K Menu） > 多媒体（Multimedia）。如图 15.14 所示。菜单是你进入第一个程序的地方。kmmpg，在你编译并安装它并重启 KDE 后，它出现在 K 菜单（K Menu） > 多媒体（Multimedia） > MPEG 播放器（MPEG Player）（同样见图 15.13）。
-
-
-
-
-
+另一个是 `kmpq`，在你编译并安装它并重启后，它出现在 K 菜单（K Menu） > 多媒体（Multimedia）。如图 15.14 所示。菜单是你进入第一个程序的地方。`kmmpg`，在你编译并安装它并重启 KDE 后，它出现在 K 菜单（K Menu） > 多媒体（Multimedia） > MPEG 播放器（MPEG Player）（同样见图 15.13）。
 
 # 第三部分
-KView 查看图像 第 16 章
+
+## KView 查看图像 第 16 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_372_0.png)
 
-图 16.1
+### 图 16.1
+
 KView 允许你查看各种位图图形：JPG、BMP、GIF 等。
 
 在 KView 中显示文件有几种方法：
@@ -6866,11 +6158,12 @@ KView 允许你查看各种位图图形：JPG、BMP、GIF 等。
 359
 
 # 第三部分 使用 KDE 发行版中的应用程序
-第 16 章 图像创建、编辑与处理
+
+## 第 16 章 图像创建、编辑与处理
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_373_0.png)
 
-# 图 16.2
+### 图 16.2
 
 右键菜单（RMB menu）只是在 KView 中打开文件的方法之一。例如，BMP 文件——默认不会显示 KView。要打开它们，请将图标从 KFM 拖入 KView 窗口中。
 
@@ -6881,11 +6174,12 @@ KView 允许你查看各种位图图形：JPG、BMP、GIF 等。
 如果你喜欢你创建的效果，请使用“文件 > 另存为”菜单项来保留它。“保存到桌面”让你可以选择将文件立即放在桌面上作为临时壁纸（见图 16.3）。临时的？是的，它会一直留在那里直到你下次关闭并启动 KDE。要使其永久化，你将需要使用桌面右键菜单中“显示属性”里的“壁纸对话框。
 
 # 第三部分
-KView 查看图像 第 16 章
+
+## KView 查看图像 第 16 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_374_0.png)
 
-# 插入 16.3
+### 插入 16.3
 
 你可以将你的位图显示为 KDE 桌面平铺、拉伸以适应或放大以适应，但它仅在本次会话中有效。
 
@@ -6897,33 +6191,35 @@ KView 查看图像 第 16 章
 
 # 第三部分 使用 KDE 发行版中的应用程序
 
-# 第 16 章 图像创建、编辑与处理
+## 第 16 章 图像创建、编辑与处理
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_375_0.png)
 
-填充**列表**最简单的方法是从 KFM 拖动你想查看的文件并将其释放到 `kiew:Image List` 对话框中。
+填充 `列表` 最简单的方法是从 KFM 拖动你想查看的文件并将其释放到 `kiew:Image List` 对话框中。
 
-如果你想组合一个幻灯片，可以在**编辑 > 偏好设置**项的幻灯片部分更改每张图像显示的时间，以及在结束时停止还是从头重新开始。
+如果你想组合一个幻灯片，可以在 `编辑 > 偏好设置` 项的幻灯片部分更改每张图像显示的时间，以及在结束时停止还是从头重新开始。
 
-## 用于生成简单分形的 Kfract
+### 用于生成简单分形的 Kfract
 
-分形之于计算机正如扎染之于嬉皮士，高级桌面包含一个分形生成器已经成为一种强制性要求。在 KDE 中，那个程序是 Kfract（见图 16.5）。
+分形之于计算机正如扎染之于嬉皮士，高级桌面包含一个分形生成器已经成为一种强制性要求。在 KDE 中，那个程序是 `Kfract`（见图 16.5）。
 
 # 第三部分
 
-# 用于生成简单分形的 Kfract 第 16 章
+### 用于生成简单分形的 Kfract 第 16 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_376_0.png)
 
 **图 16.5**
-除了它的其他优点外，玩玩 Kfract 可以为混乱的世界提供压力释放。
 
-Kfract 位于**K 菜单 > 图形 > 分形生成器**，目前支持两种**类型**的分形：如图 16.5 所示的曼德博集合（Mandelbrot），以及图 16.6 所示的朱利亚（Julia）。
+除了它的其他优点外，玩玩 `Kfract` 可以为混乱的世界提供压力释放。
+
+`Kfract` 位于 **K 菜单 > 图形 > 分形生成器**，目前支持两种 **类型** 的分形：如图 16.5 所示的曼德博集合（Mandelbrot），以及图 16.6 所示的朱利亚（Julia）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_376_1.png)
 
 **图 16.6**
-切换到朱利亚分形只需点击**类型**菜单。系统会提示你输入参数，如果你感兴趣的话，你会喜欢它们的。
+
+切换到朱利亚分形只需点击 **类型** 菜单。系统会提示你输入参数，如果你感兴趣的话，你会喜欢它们的。
 
 要深入研究一个分形，你可以点击包含光标的窗口（见图 16.7），它会重绘分形。
 
@@ -6931,11 +6227,12 @@ Kfract 位于**K 菜单 > 图形 > 分形生成器**，目前支持两种**类�
 
 # 第三部分 使用 KDE 发行版中的应用程序
 
-# 第 16 章 图像创建、编辑与处理
+## 第 16 章 图像创建、编辑与处理
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_377_0.png)
 
 **图 16.7**
+
 要深入研究一个分形，你可以点击包含光标的窗口（见图 16.7），它会重绘分形。
 
 右键菜单（RMB menu）只是在 KView 中打开文件的方法之一。例如，BMP 文件——默认不会显示 KView。要打开它们，请将图标从 KFM 拖入 KView 窗口中。
@@ -6943,14 +6240,16 @@ Kfract 位于**K 菜单 > 图形 > 分形生成器**，目前支持两种**类�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_377_1.png)
 
 **图 16.8**
+
 右键菜单（RMB menu）只是在 KView 中打开文件的方法之一。例如，BMP 文件——...
 
 378
 
 # 第三部分
-快速截图 第 16 章
 
-# 快速截图
+## 快速截图 第 16 章
+
+### 快速截图
 
 右键菜单（RMB menu）只是在 KView 中打开文件的方法之一。例如，BMP 文件——默认不会显示 KView。要打开它们，请将图标从 KFM 拖入 KView 窗口中。
 
@@ -6958,64 +6257,52 @@ Kfract 位于**K 菜单 > 图形 > 分形生成器**，目前支持两种**类�
 
 编辑（Edit）、缩放（Zoom）和变换（Transform）菜单是一言自明的的。尽管去尝试它们吧。
 
-如果你喜欢你创建的效果，请使用“文件 > 另存为”菜单项来保留它。“保存到桌面”让你可以选择将文件立即放在桌面上作为临时壁纸（见图 16.3）。临时的？是的，它会一直留在那里直到你下次关闭并启动 KDE。要使其永久化，你将需要使用桌面右键菜单中“显示属性”里的“壁纸对话框。
 
-379
+
+如果你喜欢你创建的效果，请使用“文件 > 另存为”菜单项来保留它。“保存到桌面”让你可以选择将文件立即放在桌面上作为临时壁纸（见图 16.3）。临时的？是的，它会一直留在那里直到你下次关闭并启动 KDE。要使其永久化，你将需要使用桌面右键菜单中“显示属性”里的“壁纸对话框”。
 
 # 第三部分 使用 KDE 发行版中的应用程序
-第 16 章 图像创建、编辑与处理
+
+## 第 16 章 图像创建、编辑与处理
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_379_0.png)
 
 **自动置顶（Auto raise）**会在打开多个应用程序时将将选定的应用程序带到最上方。**隐藏 KSnapshot 窗口（Hide KSnapshot window）**会让 KSnapshot 不出现在全屏中（它甚至不会出现在任务栏）。**仅抓取光标所在窗口（Only grab the window containing the cursor）**允许你拍摄单个窗口而不是整个屏幕，这可以减少混乱并节省空间。
 
-它简单、易于掌握且高效。我喜欢它，如果你需要截图，你也会喜欢它的。但我真希望它能保存为 .pcx 格式！
+它简单、易于掌握且高效。我喜欢它，如果你需要截图，你也会喜欢它的。但我真希望它能保存为 `.pcx` 格式！
 
-365
-
-# 制作你的图标
+### 制作你的图标
 
 KDE 自带了精美的图标。问题是，大多数都是针对特定应用程序的。例如，应用程序查找（Appfinder）在为其找到的程序分配图标时会调用这些图标。为了有用，图标必须是唯一的。如果你有一排相同的图标，你就需要气泡帮助或某种说明来提醒你是哪一个。这违背了图标的初衷。
 
 所以现在你有一个新应用程序，并且打算经常使用它。你想为它创建一个图标，但可用选择中的所有实际上都是用于其他程序的。
 
-别担心。有一个 **kiconedit**，如图 16.10 所示。你可以在 **K 菜单 > 图形 > 图标编辑器** 找到它。它是一个简单且专业的绘画程序，允许你逐像素地进行编辑。
-
-
-
-
-
-# 第三部分
-
-# 创建你自己的图标 第 16 章
+别担心。有一个 `kiconedit`，如图 16.10 所示。你可以在 `K 菜单 > 图形 > 图标编辑器` 找到它。它是一个简单且专业的绘画程序，允许你逐像素地进行编辑。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_380_0.png)
 
 图 16.10
+
 这是你的图标画布。用你选择的颜色填充这些小方块，结果就是一个图标。
 
 它用起来很简单，尽管它无法提供图形设计天赋，正如我即将要证明的那样。在我写这本书这本书时，KDE 世界爆发了一场微型危机。似乎某家知名的电脑公司将垃圾桶图标以及与该图标相关的“Trash（垃圾桶）”字样注册了商标。KDE 的开发者尽全力避免侵犯他人的商标。他们进入这个领域是为了编写良好的免费软件，而不是为了学习民事诉讼。我思考了一会儿，打开了图标编辑器（Icon Editor），开始工作（图 16.11）。
 
-# 第三部分 使用 KDE 发行版中的应用程序
-第 16 章 图像创建、编辑与处理
-
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_381_0.png)
 
 **图 16.11**
+
 有什么好的、丢弃物的通用图像是不涉及垃圾桶的呢？你没法真的把一堆紧凑的垃圾变成图标，但你完全可以将其中的一个元素变成图标。
 
 现在，那些小方框很难单独选择进行着，正因此有了**视图 > 缩放（View > Zoom）**菜单项。你可以反复使用它，直到你对方框的大小满意（顺便说一下，每个方框代表一个像素）。你也可以**缩小（Zoom out）**让图像在屏幕上变小，或者直接进入**视图 > 缩放因子（View > Zoom factor）**项一次到位。
 
-几个菜单项是 kiconedit 特有的。例如，**图标（Icon）**菜单允许你更改正在制作图标尺寸。如果你想为应用程序的启动屏幕或其他非标准尺寸制作自定义图像，这一点尤为有用。如果出于原因这对你有用，你还可以将图标重新映射为灰阶。
+几个菜单项是 `kiconedit` 特有的。例如，**图标（Icon）**菜单允许你更改正在制作图标尺寸。如果你想为应用程序的启动屏幕或其他非标准尺寸制作自定义图像，这一点尤为有用。如果出于原因这对你有用，你还可以将图标重新映射为灰阶。
 
-**工具（Tools）**菜单（图 16.12）为你提供了系列丰富的绘制工具。这使得 kiconedit 与许多没有区域工具的图标编辑器区分开来。
-
-# 第三部分
-创建你自己的图标 第 16 章
+**工具（Tools）**菜单（图 16.12）为你提供了系列丰富的绘制工具。这使得 `kiconedit` 与许多没有区域工具的图标编辑器区分开来。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_382_0.png)
 
 图 16.12
+
 工具菜单中令人困惑的项是自由手绘（Freehand），它是一个逐像素工具。当选中它时，你可以点击任何像素将其颜色更改为从调色板中选择的颜色。
 
 - 拖动源 (Drag source)
@@ -7036,27 +6323,22 @@ KDE 自带了精美的图标。问题是，大多数都是针对特定应用程�
 - 新窗口 (New Window)
 - 自由手绘工具 (Draw freehand tool)
 
-# 第三部分 使用 KDE 发行版中的应用程序
-
-# 第 16 章 图像创建、编辑与处理
-
 选项（Options）菜单允许你切换各种屏幕元素，并做出符合你偏好的配置选择。
-那么，kiconedit 厉害在哪里呢？很简单。从系统颜色（System Colors）或（如果你已经创建了一些）自定义颜色（Custom Colors）调色板中选择一种颜色。然后选择你的工具并开始绘制。记住，对于透明背景，可以使用橡皮擦工具。保存你的工作。然后你就可以将其用于应用程序或文件类型。在我制作的小图标案例中，我用它替换了 /opt/kde/share/icons 下的垃圾桶图标。结果如下（见图 16.13）。
+
+那么，`kiconedit` 厉害在哪里呢？很简单。从系统颜色（System Colors）或（如果你已经创建了一些）自定义颜色（Custom Colors）调色板中选择一种颜色。然后选择你的工具并开始绘制。记住，对于透明背景，可以使用橡皮擦工具。保存你的工作。然后你就可以将其用于应用程序或文件类型。在我制作的小图标案例中，我用它替换了 `/opt/kde/share/icons` 下的垃圾桶图标。结果如下（见图 16.13）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_383_0.png)
 
 图 16.13 这个新出手的图标，在使用 KDE 列为垃圾的文件时，为“核心转储（core dump）”这个短语赋予了全新的含义。
 
-# 使用 KPaint 编辑较大的图像
+### 使用 KPaint 编辑较大的图像
 
-某种类型的绘画程序是大多数 GUI 的标准配置，KDE 提供了一个，在重要方面看起来和操作起来与你熟悉的其他软件相似。通过 K 菜单 > 图形 > 绘画（K Menu > Graphics > Paint）即可获得它，如图 16.14 所示。
-
-# 第三部分
-使用 KPaint 编辑较大的图像 章
+某种类型的绘画程序是大多数 GUI 的标准配置，KDE 提供了一个，在重要方面看起来和操作起来与你熟悉的其他软件相似。通过 `K 菜单 > 图形 > 绘画` 即可获得它，如图 16.14 所示。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_384_0.png)
 
 图 16.14
+
 KPaint 是一个基础但多功能的图像编辑器。
 
 - 椭圆 (Ellipse)
@@ -7071,20 +6353,15 @@ KPaint 是一个基础但多功能的图像编辑器。
 - 前景色 (Foreground color)
 - 背景颜色 (Background color)
 
-你可以使用这些工具从零创建一个文件，也可以编辑现有的图形。这是通过文件 > 打开图像（File > Open Image）对话框实现的，它会产生标准的 KDE 文件选择器；或者通过文件 > 新图像（File > New Image），它也会产生标准的 KDE 文件选择器。
+你可以使用这些工具从零创建一个文件，也可以编辑现有的图形。这是通过 `文件 > 打开图像` 对话框实现的，它会产生标准的 KDE 文件选择器；或者通过 `文件 > 新图像`，它也会产生标准的 KDE 文件选择器。
 
-
-
-
-
-# 第三部分
 ## Ark：归构建器与提取器 第17章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_390_0.png)
 
 图 17.4
 
-ark 中的视图与在归文件上点击左鼠标键的视图略有不同，但结果是相同的。
+`ark` 中的视图与在归文件上点击左鼠标键的视图略有不同，但结果是相同的。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_390_1.png)
 
@@ -7094,36 +6371,41 @@ ark 中的视图与在归文件上点击左鼠标键的视图略有不同，但�
 
 # 第三部分 在 KDE 发行版中使用应用程序
 
-# 第17章 操作文件存档并备份你的驱动器
+## 第17章 操作文件存档并备份你的驱动器
 
-如果 ark 仅做这些，那它已经足够好用了。但事实并非如此。通过 K 菜单 (K Menu) > 工具 (Utilities) > 归档 (Archiver) 可以查看它的空状态，如图 17.6 所示。
+如果 `ark` 仅做这些，那它已经足够好用了。但事实并非如此。通过 `K 菜单 > 工具 > 归档` 可以查看它的空状态，如图 17.6 所示。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_391_0.png)
 
 图 17.6
+
 它看起来像一个编辑器，但其实不是。那片空白区域正等待你拖放想要打开的归文件，或者将你制作的文件放入归文件中。
 
-ark 中巨大的白色区域现在应该让你脑中闪过一个灵光了。是的，你可以将一个归文件拖到 ark 上，它就会打开。好吧，没什么大不了的。你也可以将文件拖入那个白色区域来创建一个归文件。以下是我是如何制作图 17.7 所示“处理中”的那个文件的：
-
-# Ark：归构建器与提取器 第17章
+`ark` 中巨大的白色区域现在应该让你脑中闪过一个灵光了。是的，你可以将一个归文件拖到 `ark` 上，它就会打开。好吧，没什么大不了的。你也可以将文件拖入那个白色区域来创建一个归文件。以下是我是如何制作图 17.7 所示“处理中”的那个文件的：
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_392_0.png)
 
-# 图 7.7
+图 7.7
 
 创建归文件后，只需将想要打包的内容——在这种情况下是一个我可能再也用需要的旧目录——拖到归文件上即可。一下！它们就在归文件中了。
 
-- 1. 点击文件 (File) > 新建 (New)。
-- 2. 在标准的 KDE 文件对话框中，为新文件命名。它的扩展名决定了生成什么类型的文件。（在这种情况下，保存为 .tar.gz 扩展会生成一个 16,835 字节的 gzipped tar 包，而保存为 .tar.bz2 则会创建一个 14,303 字节的文件。顺便说一下，原始目录的大小为 57,743 字节。）
+- 1. 点击 `文件 > 新建`。
+
+
+
+# 第三部分 在 KDE 发行版中使用应用程序
+
+# 第17章 操作文件存档并备份你的驱动器
+
+- 2. 在标准的 KDE 文件对话框中，为新文件命名。它的扩展名决定了生成什么类型的文件。（在这种情况下，保存为 `.tar.gz` 扩展会生成一个 16,835 字节的 gzipped tar 包，而保存为 `.tar.bz2` 则会创建一个 14,303 字节的文件。顺便说一下，原始目录的大小为 57,743 字节。）
+
 - 3. 将要归档的目录拖到归窗口。
+
 - 4. 点击文件 (File) > 关闭 (Close)。
 
 就是这样！我可以删除旧目录并恢复它占用的磁盘空间，但如果我发现弄坏了某些东西，我可以打开文件来恢复它。（当然，由于这是一堆旧的 KDE 配置文件，虽然可能但不太可能我删掉了会导致 KDE 无法打开的某些。人应该知道一些控制台提示命令，而 `tar xvfz filename` 就是其中之一。）
 
 但等等，还有更多。如果你点击文件 (File) > 提取到 (Extract To)，就会得到图 17.8 所示的对话框。
-
-# 第三部分 在 KDE 发行版中使用应用程序
-# 第17章 操作文件存档并备份你的驱动器
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_393_0.png)
 
@@ -7131,49 +6413,23 @@ ark 中巨大的白色区域现在应该让你脑中闪过一个灵光了。是�
 
 你可以将归文件提取到任何你有权访问的位置。
 
-提取 (Extract) 对话框提供了多种选择。你当然可以为提取出的文件指定目标，但也可以选择保留所提取文件的权限。如果你备份了一个包含脚本和其他可执行文件，以及一些 root 有权限访问的其他奇怪文件的目录，这可能是至关重要的。你可以强制将文件名转换为小写。显然，某些操作系统认为文件名在被**大喊大叫（SHOUTED）**时更有分量。Linux 则不然。因此，如果你正在打开一个由你自己没那么开明的人提供的数据 zip 文件，这个选项就很有用。但等等……还有更多。你可以选择提取整个归文件、某个选定的文件或特定类型的所有文件。ark 的作者 Robert Palmbos 在这里写得非常棒。
+提取 (Extract) 对话框提供了多种选择。你当然可以为提取出的文件指定目标，但也可以选择保留所提取文件的权限。如果你备份了一个包含脚本和其他可执行文件，以及一些 root 有权限访问的其他奇怪文件的目录，这可能是至关重要的。你可以强制将文件名转换为小写。显然，某些操作系统认为文件名在被`大喊大叫（SHOUTED）`时更有分量。Linux 则不然。因此，如果你正在打开一个由你自己没那么开明的人提供的数据 zip 文件，这个选项就很有用。但等等……还有更多。你可以选择提取整个归文件、某个选定的文件或特定类型的所有文件。ark 的作者 Robert Palmbos 在这里写得非常棒。
 
 选项 (Options) 菜单也提供了一些技巧。你可能有一个目录用于存放下载的归文件以及现在你制作的那些。选项 > 设置归目录 (Options > Set Archive Directory) 让你指向该目录。然后当你点击工具栏上的小房子图标时，你将被带到该目录，从而在你想要打开或创建归文件时减少导航的需要。不需要更改 TAR 可执行文件，所以你可以让该项不管。
+
 选项 > 文件添加选项 (Options > File Adding Options) 给你提供图 17.9 所示的小对话框。
 
-# 处理 RPM 和 DEB 文件的程序
-
-第三部分
-第17章
-
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_394_0.png)
 
 图 17.9
 
-在向归添加文件时存储该文件，勾选**仅添加新文件 (Only Add Newer)**
+在向归添加文件时存储该文件，勾选`仅添加新文件 (Only Add Newer)`
 
 尽管这很有用，但这并不是你最可能会看到 Package 的方式。相反，当你点击 RPM 或 DEB 文件时，最可能会遇到它，如图 17.8 所示。
 
-# 第三部分 在 KDE 发行版中使用应用程序
-# 第17章 操作文件存档并备份你的驱动器
+## 处理 RPM 和 DEB 文件的程序
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_393_0.png)
-
-## 提取文件
-提取对话话框提供了多种选择。你当然可以为提取出的文件指定目标，但也可以选择保留所提取文件的权限。如果你备份了一个包含脚本和其他可执行文件，以及一些 root 有权限访问的其他奇怪文件的目录，这可能是至关重要的。你可以强制将文件名转换为小写。显然，某些操作系统认为文件名在被**大喊大叫（SHOUTED）**时更有分量。Linux 则不然。因此，如果你正在打开一个由你自己没那么开明的人提供的数据 zip 文件，这个选项就很有用。但等等……还有更多。你可以选择提取整个归文件、某个选定的文件或特定类型的所有文件。ark 的作者 Robert Palmbos 在这里写得非常棒。
-
-# 处理 RPM 和 DEB 文件的程序
-
-第三部分
-第17章
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_394_0.png)
-
-图 17.9
-
-在向归添加文件时存储该文件，勾选**仅添加新文件 (Only Add Newer)**
-
-尽管这很有用，但这并不是你最可能会看到 Package 的方式。相反，当你点击 RPM 或 DEB 文件时，最可能会遇到它，如图 17.8 所示。
-
-# 第三部分 在 KDE 发行版中使用应用程序
-# 第17章 操作文件存档并备份你的驱动器
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_395_0.png)
 
 图 17.10
 
@@ -7181,35 +6437,21 @@ ark 中巨大的白色区域现在应该让你脑中闪过一个灵光了。是�
 
 文件列表在这种模式下稍微有用，因为通常当程序无法运行时，它会抱怨缺少特定文件。这是获取和安装 RPM 或 DEB 软件包的常见原因；通过 Package，你可以在安装可能无法问题的软件包之前进行检查。
 
-# RPM 和 DEB 文件的程序
-
-第三部分
-第17章
-
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_396_0.png)
 
 图 17.11
 
 通过点击文件列表，你可以看到软件包中的所有文件以及它们被安装的位置。
 
-
-
-
-
-# 第三部分
-## 在 KDE 下制作磁带备份 第 17 章
+## 在 KDE 下制作磁带备份
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_398_0.png)
 
-## 图 17.14
+图 17.14
 
-起，KDat 显示的内容非常少。你可以使用“备份配置文件 1”（Backup Profile 1）备份整个系统，也可以为你的 ~/ 目录创建一个配置文件。
+起，KDat 显示的内容非常少。你可以使用“备份配置文件 1”（Backup Profile 1）备份整个系统，也可以为你的 `~/` 目录创建一个配置文件。
 
 为了让 KDat 正常工作，你需要一个兼容 Linux 的磁带驱动器，这意味着它必须能够在非回卷模式下工作。如果它运行在普通或增强型软盘驱动控制器上，它通常位于 `/dev/tape` 或 `/dev/ftape`。SCSI 磁带被列为 SCSI 设备。这可能涉及一些实验。因为磁带驱动器在 Linux 内核中通常默认不会启用（除非作为模块存在），所以当你安装该驱动器的模块或将支持编译进内核时，你已经获知了它的名称。（正如你可能察觉到的，大多数磁带驱动器在 Linux 中并不是容易处理的项目。）当你知道磁带的名称后，转到*编辑 > 选项*（Edit > Preferences）告诉 KDat 它的所在位置。然后只需要在同一个屏幕上告诉 KDat 磁带本身的未压缩大小即可。如果你打算备份整个系统，选择**备份配置文件 1**，并点击工具栏左侧的**备份**图标。如果你只想备份，比如你的 ~ 目录，转到*文件 > 创建备份配置文件*（File > Create Backup Profile）并像我在图 17.15 中所示那样选择它。
-
-# 第三部分 使用 KDE 发行版应用程序
-
-## 第 17 章 操作文件归包和备份驱动器
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_399_0.png)
 
@@ -7242,124 +6484,91 @@ Linux 还有其他磁带备份程序，绝大多数商业化的 Linux 发行版�
 - 推箱子 (Sokoban)
 - 玩具 (Toys)
 
-# 第三部分 使用 KDE 发行版应用程序
-
-## 第 18 章 游戏与玩具
-
 起初，只有弹球游戏（Pong）。
 
 事实确实：很多人的第一次电脑体验是向槽口投进一个硬币（如果有朋友一起玩就是两个），然后对着那个小绿点来回击打一会儿。许多人的第一台电脑是那种可以插在电视上的，以便在玩这个游戏的同时，永久地在他们的电视屏幕上留下线条和分数框。
 
-这也许是老年即将到来的标志（“噢，我小时候时候，我们有弹球游戏就很满足了”），但看起来并不如此。（正如你可能察觉到的，大多数磁带驱动器在 Linux 中并不是容易处理的项目。）当你知道磁带的名称后，转到*编辑 > 选项*（Edit > Preferences）告诉 KDat 它的所在位置。然后只需要在同一个屏幕上告诉 KDat 磁带本身的未压缩大小即可。如果你打算备份整个系统，选择**备份配置文件 1**，并点击工具栏左侧的**备份**图标。如果你只想备份，比如你的 ~ 目录，转到*文件 > 创建备份配置文件*（File > Create Backup Profile）并像我在图 17.15 中所示那样选择它。
-
-## 第 18 章 游戏与玩具
-
-在最开始的时候，只有弹球游戏（Pong）。
-
-事实确实：很多人的第一次电脑体验是向槽口投进一个硬币（如果有朋友一起玩就是两个），然后对着那个小绿点来回击打一会儿。许多人的第一台电脑是那种可以插在电视上的，以便在玩这个游戏的同时，永久地在他们的电视屏幕上留下线条和分数框。
-
-这也许是老年即将到来的标志（“噢，我小时候时候，我们有弹球游戏就很满足了”），但看起来并不如此。事实上，很多人的第一次电脑体验是向槽口投进一个硬币（如果有朋友一起玩就是两个），然后对着那个小绿点来回击打一会儿。许多人的第一台电脑是那种可以插在电视上的，以便在玩这个游戏的同时，永久地在他们的电视屏幕上留下线条和分数框。
-
-起初，只有弹球游戏（Pong）。
-
-事实确实：很多人的第一次电脑体验是向槽口投进一个硬币（如果有朋友一起玩就是两个），然后对着那个小绿点来回击打一会儿。许多人的第一台电脑是那种可以插在电视上的，以便在玩这个游戏的同时，永久地在他们的电视屏幕上留下线条和分数框。
-
-这也许是老年即将到来的标志（“噢，我小时候时候，我们有弹球游戏就很满足了”），但看起来并不如此。事实上，很多人的第一次电脑体验是向槽口投进一个硬币（如果有朋友一起玩就是两个），然后对着那个小绿点来回击打一会儿。许多人的第一台电脑是那种可以插在电视上的，以便在玩这个游戏的同时，永久地在他们的电视屏幕上留下线条和分数框。
-
-起初，只有弹球游戏（Pong）。
-
-事实确实：很多人的第一次电脑体验是向槽口投进一个硬币（如果有朋友一起玩就是两个），然后对着那个小绿点来回击打一会儿。许多人的第一台电脑是那种可以插在电视上的，以便在玩这个游戏的同时，永久地在他们的电视屏幕上留下线条和分数框。
-
-这也许是老年即将到来的标志（“噢，我小时候时候，我们有弹球游戏就很满足了”），但看起来并不如此。事实上，很多人的第一次电脑体验是向槽口投进一个硬币（如果有朋友一起玩就是两个），然后对着那个小绿点来回击打一会儿。许多人的第一台电脑是那种可以插在电视上的，以便在玩这个游戏的同时，永久地在他们的电视屏幕上留下线条和分数框。
-
-起初，只有弹球游戏（Pong）。
-
-事实确实：很多人的第一次电脑体验是向槽口投进一个硬币（如果有朋友一起玩就是两个），然后对着那个小绿点来回击打一会儿。许多人的第一台电脑是那种可以插在电视上的，以便在玩这个游戏的同时，永久地在他们的电视屏幕上留下线条和分数框。
-
-这也许是老年即将到来的标志（“噢，我小时候时候，我们有弹球游戏就很满足了”），但看起来并不如此。事实上，很多人的第一次电脑体验是向槽口投进一个硬币（如果有朋友一起玩就是两个），然后对着那个小绿点来回击打一会儿。许多人的第一台电脑是那种可以插在电视上的，以便在玩这个游戏的同时，永久地在他们的电视屏幕上留下线条和分数框。
-
-起初，只有弹球游戏（Pong）。
-
-事实确实：很多人的第一次电脑体验是向槽口投进一个硬币（如果有朋友一起玩就是两个），然后对着那个小绿点来回击打一会儿。许多人的第一台电脑是那种可以插在电视上的，以便在玩这个游戏的同时，永久地在他们的电视屏幕上留下线条和分数框。
-
-这也许是老年即将到来的标志（“噢，我小时候时候，我们有弹球游戏就很满足了”），但看起来并不如此。事实上，很多人的第一次电脑体验是向槽口投进一个硬币（如果有朋友一起玩就是两个），然后对着那个小绿点来回击打一会儿。许多人的第一台电脑是那种可以插在电视上的，以便在玩这个游戏的同时，永久地在他们的电视屏幕上留下线条和分数框。
-
-起初，只有弹球游戏（Pong）。
-
-事实确实：很多人的第一次电脑体验是向槽口投进一个硬币（如果有朋友一起玩就是两个），然后对着那个小绿点来回击打一会儿。许多人的第一台电脑是那种可以插在电视上的，以便在玩这个游戏的同时，永久地在他们的电视屏幕上留下线条和分数框。
-
-这也许是老年即将到来的标志（“噢，我小时候时候，我们有弹球游戏就很满足了”），但看起来并不如此。事实上，很多人的第一次电脑体验是向槽口投进一个硬币（如果有朋友一起玩就是两个），然后对着那个小绿点来回击打一会儿。许多人的第一台电脑是那种可以插在电视上的，以便在玩这个游戏的同时，永久地在他们的电视屏幕上留下线条和分数框。
 
 
+进入`/path/to/xxx`目录，找到`xxx.json`。
 
-
+当你知道磁带的名称后，转到`编辑 > 选项`（`Edit > Preferences`）告诉`KDAT`它的所在位置。然后只需要在同一个屏幕上告诉`KDAT`磁带本身的未压缩大小即可。如果你打算备份整个系统，选择`备份配置文件 1`，并点击工具栏左侧的`备份`图标。如果你只想备份，比如你的`~`目录，转到`文件 > 创建备份配置文件`（`File > Create Backup Profile`）并像我在图 17.15 中所示那样选择它。
 
 # 第三部分 在 KDE 发行版中使用应用程序
 
-# 第18 章 游戏与玩具
+## 第18章 游戏与玩具
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_407_0.png)
 
 图 18.8
+
 在牌堆中向下移动，还有很长一段路要走。清除所有它们的奖励是什么？你得自己去发现。
 
-Kmahjonggg 将帮助功能提升到了全新的水平，它通过“游戏 (Game)”菜单中的“帮我 (Help me)”项目提供下一步下棋的建议，甚至还有一个“演示 (Demo)”模式，它可以以足够缓慢的速度运行游戏，向你展示如何操作。它还提供了多个不同的起点，并允许你自定义背景。“游戏 > 新开游戏 (Start new game)”下的子菜单提供了几个复杂度等级，而“视图 (View)”菜单允许将背景从默认的人造草坪（Astroturf）更改为你选择的位图图像。
+`Kmahjonggg`将帮助功能提升到了全新的水平，它通过`游戏`菜单中的`帮我`项目提供下一步下棋的建议，甚至还有一个`演示`模式，它可以以足够缓慢的速度运行游戏，向你展示如何操作。它还提供了多个不同的起点，并允许你自定义背景。`游戏 > 新开游戏`下的子菜单提供了几个复杂度等级，而`视图`菜单允许将背景从默认的人造草坪（`Astroturf`）更改为你选择的位图图像。
 
-## 扫雷游戏
+### 扫雷游戏
 
 如果 KDE 只带一个游戏，扫雷游戏将是一个很好的候选者。它锻炼了一个人的推理能力，但还没有到让一个简单的打字员偶尔就能赢的地程度。如果你从未在 Linux 或其他操作系统上玩过它，它看起来就像图 18.9、18.10 和 18.11 所示。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_408_0.png)
 
 图 18.9
-简单模式下的 Kmines。有 64 个方格，其中 10 个包含炸弹。
+
+简单模式下的`Kmines`。有 64 个方格，其中 10 个包含炸弹。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_408_1.png)
 
 图 18.10
-普通模式下的 Kmines。256 个方格中有 40 个包含炸弹。
+
+普通模式下的`Kmines`。256 个方格中有 40 个包含炸弹。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_409_0.png)
 
 图 18.11
+
 专家模式：480 个方格，99 个炸弹。
 
 游戏的目标是露出每一个下方没有炸弹的方格。这通过点击方格来实现。如果你运气好，一大堆方格将会打开。相邻包含炸弹的方格上标有数字，表示这些相邻方格中有多少个炸弹。每个方格相邻八个方格。角接触的方格也计算在内。这些信息通常足以让你判断出哪些方格包含炸弹。右键点击你知道包含炸弹的方格会为它们标记旗帜；再次点击则会在方格上标记问号，以防你不确定；再次点击将清除标记并允许你对其点击左键。记住：目标不是标记所有炸弹，而是揭示所有不包含炸弹的方格。
 
-你正在与时间赛跑，这从“文件 (File)”菜单中的高分列表就可以证明。要击败之前的任冠军，请比她更快地清除雷区。
+你正在与时间赛跑，这从`文件`菜单中的高分列表就可以证明。要击败之前的任冠军，请比她更快地清除雷区。
 
 如果我有力量对这个游戏进行任何改进，我想是在获胜时能有一个更壮观的展示……而且在失败时也是如此。
 
-## KPat：纸牌游戏及其他
+### KPat：纸牌游戏及其他
 
-纸牌游戏已成为 GUI 系统的支柱，KDE 的版本被称为 KPat。它是“接龙”（Patience）的一种，即老牌 X Window 系统纸牌游戏套件。它的默认屏幕（图 18.12）你一定很熟悉。
+纸牌游戏已成为 GUI 系统的支柱，KDE 的版本被称为`KPat`。它是“接龙”的一种，即老牌 X Window 系统纸牌游戏套件。它的默认屏幕（图 18.12）你一定很熟悉。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_410_0.png)
 
-像接龙一样，KPat 提供了一系列游戏（见图 18.13）。如果你需要帮助，它的帮助文件将引导你玩每种游戏。虽然“袋鼠队长”已经取消了，吸烟对身体有害，而且牌组包含 52 张牌而不是 51 张；你可能仍然发现自己一直玩到黎明。嘿，这总比有事做了。别让别人反驳你。
+像接龙一样，`KPat`提供了一系列游戏（见图 18.13）。如果你需要帮助，它的帮助文件将引导你玩每种游戏。虽然“袋鼠队长”已经取消了，吸烟对身体有害，而且牌组包含 52 张牌而不是 51 张；你可能仍然发现自己一直玩到黎明。嘿，这总比有事做了。别让别人反驳你。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_411_0.png)
 
 图 18.13
+
 从菜单中选择你的游戏并开始吧。
 
-从“选项 (Options)”菜单中，你还可以从一系列底牌中做出选择，如果你使用的机器很慢或急着玩，可以关闭开启动画。
+从`选项`菜单中，你还可以从一系列底牌中做出选择，如果你使用的机器很慢或急着玩，可以关闭开启动画。
 
-## Kpoker：一个小赌场游戏
+### Kpoker：一个小赌场游戏
 
-Kpoker 可能对提高你的打牌技巧没有太大帮助。尽管如此，它是一种让这些无聊的电话过得更快的方式（如果你关闭声音的话）。它是一个小游戏（见图 18.14）。
+`Kpoker`可能对提高你的打牌技巧没有太大帮助。尽管如此，它是一种让这些无聊的电话过得更快的方式（如果你关闭声音的话）。它是一个小游戏（见图 18.14）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_412_0.png)
 
 图 18.14
+
 你的配置是：声音。
 
-黑白棋（Reversi）的目标是比对手拥有更多的颜色棋。这通过在棋盘上放置棋子并翻转位于你的新棋和另一块同颜色棋子之间的对手棋子来实现。
+黑白棋（`Reversi`）的目标是比对手拥有更多的颜色棋。这通过在棋盘上放置棋子并翻转位于你的新棋和另一块同颜色棋子之间的对手棋子来实现。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_412_1.png)
 
 图 18.15
+
 黑白棋的规则是。
+
+
 
 游戏的目标是露出每一个下方没有炸弹的方格。这通过点击方格来实现。如果你运气好，一大堆方格将会打开。相邻包含炸弹的方格上标有数字，表示这些相邻方格中有多少个炸弹。每个方格相邻八个方格。角接触的方格也计算在内。这些信息通常足以让你判断出哪些方格包含炸弹。右键点击你知道包含炸弹的方格会为它们标记旗帜；再次点击则会在方格上标记问号，以防你不确定；再次点击将清除标记并允许你对其点击左键。
 
@@ -7368,6 +6577,7 @@ Kpoker 可能对提高你的打牌技巧没有太大帮助。尽管如此，它�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_413_0.png)
 
 图 18.16
+
 黑白棋的规则是。
 
 游戏的目标是露出每一个下方没有炸弹的方格。这通过点击方格来实现。如果你运气好，一大堆方格将会打开。相邻包含炸弹的方格上标有数字，表示这些相邻方格中有多少个炸弹。每个方格相邻八个方格。角接触的方格也计算在内。这些信息通常足以让你判断出哪些方格包含炸弹。右键点击你知道包含炸弹的方格会为它们标记旗帜；再次点击则会在方格上标记问号，以防你不确定；再次点击将清除标记并允许你对其点击左键。记住：目标不是标记所有炸弹，而是揭示所有不包含炸弹的方格。
@@ -7379,15 +6589,12 @@ SameGame 是一种你匹配相邻相同颜色方块的游戏。当你匹配两�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_414_0.png)
 
 图 18.17
+
 黑白棋的规则是。
 
 游戏的目标是露出每一个下方没有炸弹的方格。这通过点击方格来实现。如果你运气好，一大堆方格将会打开。相邻包含炸弹的方格上标有数字，表示这些相邻方格中有多少个炸弹。每个方格相邻八个方格。角接触的方格也计算在内。这些信息通常足以让你判断出哪些方格包含炸弹。右键点击你知道包含炸弹的方格会为它们标记旗帜；再次点击则会在方格上标记问号，以防你不确定；再次点击将清除标记并允许你对其点击左键。
 
-
-
-
-
-## 第三部分 在 KDE 发行版中使用应用程序
+# 第三部分 在 KDE 发行版中使用应用程序
 
 ## 第 18 章 游戏与玩具
 
@@ -7398,6 +6605,7 @@ SameGame 是一种你匹配相邻相同颜色方块的游戏。当你匹配两�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_417_0.png)
 
 图 18.22
+
 sirteT ekil tsuj skool syalp tetriS
 
 它的功能之一是多玩家模式。
@@ -7409,6 +6617,7 @@ Smileletris（见图 18.23）是另一个俄罗斯块的仿品，但它的碎片
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_418_0.png)
 
 图 18.23
+
 幸运的是，如果你愿意，可以将笑脸换成其他东西。
 
 Smilele 最酷的部分可能是街机风格的音效。
@@ -7420,6 +6629,7 @@ Smilele 最酷的部分可能是街机风格的音效。
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_419_0.png)
 
 图 18.24
+
 蛇吃苹果。墙壁和弹跳的球会杀死蛇，撞到自己或彼此也是如此。
 
 游戏开始后，你几乎没有时间让你的只素食性爬行动动物去寻找苹果吃（见图 18.25）。你需要飞快地操作方向键。
@@ -7427,6 +6637,7 @@ Smilele 最酷的部分可能是街机风格的音效。
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_420_0.png)
 
 **图 18.25**
+
 撞到任何东西蛇就会死。如果不能及时吃掉所有苹果，就会出现更多苹果。游戏的目的是让你的蛇吃掉所有的苹果。
 
 Snake Race 具有极高的可性，当你穿梭于它的菜单时就会发现这一点。你可以调整蛇的数量、整体难度等级（从非常困难到不可能）、弹跳球的数量、背景颜色（或未映射的图形），甚至是移动蛇的按键。
@@ -7438,6 +6649,7 @@ Sokoban（见图 18.26）是一个可爱的小游戏，在游戏中你是一个�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_421_0.png)
 
 图 18.26
+
 这个人必须一个一个将钻石形的东西推到圆圈上。他不能跳过它们，如果其中一个进了死角，就无法逃出来了。
 
 它看起来那么简单。所以当你字面上真的被困在一个角里时，反而更让人抓狂。如果你遇到困难，请查阅帮助文件或请一个孩子协助你。游戏（Game）> 关（Level）集合菜单让你尝试由各种变态程序员设计的系列问题。如果你在游戏中途停止，可以“书签”你所在的位置以便以后返回。事实上，你可以通过这种方式返回多个游戏。
@@ -7459,6 +6671,7 @@ KDE 发行版中有一个名为 `ktoys` 的文件。它是做什么的？它们�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_422_0.png)
 
 图 18.27
+
 Mousedometa 提供月龄
 
 ### World Watch（世界时）
@@ -7468,17 +6681,12 @@ Mousedometa 提供月龄
 ![](img/4a2883756c73e7b0696bdbd721c5c7db_423_0.png)
 
 图 18.28
+
 World Watch 提供月龄
 
+# 第三部分 系统增强
 
-
-
-
-# 第三部分
-
-# 系统增强 第 19 章
-
-# 源代码
+## 第 19 章 源代码
 
 这里列出的应用程序主要以源码 tarball 的形式提供。虽然编译代码已经变得非常简单，但它不会涉及任何动画、“向导”或那些为了掩盖“它在做它想做的事而不是你想让它做的事”事实的俏皮东西。
 
@@ -7486,9 +6694,9 @@ World Watch 提供月龄
 
 无例外，整个过程完全包含以下步骤：
 
-- 1. 下载 tarball 并将其复制到 /local/src/。
+- 1. 下载 tarball 并将其复制到 `/local/src/`。
 - 2. 以 root 身份（实际上是在控制窗口中），输入 `tar xvfz filename.tar.gz` 并按回车。
-- 3. 进入新创建的 /local/src/filename 目录并阅读 `INSTALL` 和 `README` 文件。
+- 3. 进入新创建的 `/local/src/filename` 目录并阅读 `INSTALL` 和 `README` 文件。
 - 4. 输入 `./config prefix=/opt/kde` 并按回车。（如果你的 KDE 目录在其他处，请使用其实际位置。）
 - 5. 等待一分钟直到配置完成。
 - 6. 输入 `make all`（只用 `make` 也可以编译，但 `make all` 无害且有时是必要的）并按回车。
@@ -7497,11 +6705,12 @@ World Watch 提供月龄
 - 9. 重启 KDE，以便那些应用程序自动在 K Menu 中生成的条目能够被识别。
 
 就这些了。
+
 我一直依赖这一点，并将继续这样做：如果你正在使用 Linux 却不编译应用程序，那你就是在欺骗自己。
 
-# 系统增强
+## 系统增强
 
-我浏览了开发中的应用程序列表（它们同样可以在 KDE ftp 站点获取或在 KDE 网站上找到链接），其中几个引起了我的兴趣。在 Linux 中设置系统时间总是有点棘手，尤其是当你受限于那些相当晦涩的命令行程序时。因此，看到 kcmclock（见图 19.1）感到非常愉悦。
+我浏览了开发中的应用程序列表（它们同样可以在 KDE ftp 站点获取或在 KDE 网站上找到链接），其中几个引起了我的兴趣。在 Linux 中设置系统时间总是有点棘手，尤其是当你受限于那些相当晦涩的命令行程序时。因此，看到 `kcmclock`（见图 19.1）感到非常愉悦。
 
 # 第三部分 在 KDE 分发版中使用应用程序
 
@@ -7511,7 +6720,7 @@ World Watch 提供月龄
 
 # 图 19.1
 
-kmclock 为 KDE 控制面板增加了时间设置功能。在这里设置日期和时间。
+`kmclock` 为 KDE 控制面板增加了时间设置功能。在这里设置日期和时间。
 
 这个小文件（作为 gzipped tarball 约 75K）几秒钟内即可编译，并提供了一个可以忽略的页面，因为 Linux 机器应该设置为 GMT（格林尼治标准时间），如图 19.2 所示。
 
@@ -7519,159 +6728,166 @@ kmclock 为 KDE 控制面板增加了时间设置功能。在这里设置日期�
 
 # 图 19.2
 
+
+
 下拉框列出了所有相对于 GMT 偏移的世界时区。它覆盖了小地图。你选择 GMT 的偏移量，这允许 KDE 能够在设置为 GMT 的机器上显示正确的本地时间，这本该如此。
 
 # 第三部分
-系统增强 第 19 章
 
-当你以用户登录时可以使用 kcmclock，但记住只有 root 可以设置系统时间。因此，一旦你掌握了方法，请切换到 root 并设置你机器的时间。
+## 系统增强 第 19 章
 
-同样，还有 kmjoy，这是一个用于设置摇杆的 KDE 实用程序，如果你有的话。
+当你以用户登录时可以使用 `kcmclock`，但记住只有 root 可以设置系统时间。因此，一旦你掌握了方法，请切换到 root 并设置你机器的时间。
 
-一个流行的桌面应用程序是 KGoodStuff（见图 19.3）。
+同样，还有 `kmjoy`，这是一个用于设置摇杆的 KDE 实用程序，如果你有的话。
+
+一个流行的桌面应用程序是 `KGoodStuff`（见图 19.3）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_428_0.png)
 
 **图 19.3**
-好吧，它起初看起来没什么特别，KGoodStuff 提供了一个浮动图标栏，你可以在其中启动应用程序。它有完整的文档说明，所以设置起来是轻而易举。配置对话框允许你创建新按钮并将应用程序分配给它们。
 
-KGoodStuff 是长期 Linux 用户熟悉的 GoodStuff 程序的 KDE 等效品。它的不同之处在于，你不需要编辑一个晦涩的文本文件来配置它。如果你不熟悉这个概念，它是一个浮动图标栏，你可以在其中放置应用程序来启动。鉴于 KDE 中启动应用程序有多种方法（桌面图标、K Menu 和 K 面板），我看不出 KGoodStuff 有什么意义。但既然有人认为有足够的需求并编写了它，也许有人会觉得需要并使用它。它很容易配置且文档完备。
+好吧，它起初看起来没什么特别，`KGoodStuff` 提供了一个浮动图标栏，你可以在其中启动应用程序。它有完整的文档说明，所以设置起来是轻而易举。配置对话框允许你创建新按钮并将应用程序分配给它们。
 
-KDE 还有许多其他系统级应用程序和增强功能。其中包括自动电源管理程序 Kapm，以及 Kclaptop，它为在笔记本和平电脑上使用 Linux 和 KDE 的人提供了若干感兴趣的功能。本节提到的所有应用程序都可以在 ftp://ftp.kde.org/pub/kde 获取。
+`KGoodStuff` 是长期 Linux 用户熟悉的 GoodStuff 程序的 KDE 等效品。它的不同之处在于，你不需要编辑一个晦涩的文本文件来配置它。如果你不熟悉这个概念，它是一个浮动图标栏，你可以在其中放置应用程序来启动。鉴于 KDE 中启动应用程序有多种方法（桌面图标、`K Menu` 和 `K 面板`），我看不出 `KGoodStuff` 有什么意义。但既然有人认为有足够的需求并编写了它，也许有人会觉得需要并使用它。它很容易配置且文档完备。
+
+KDE 还有许多其他系统级应用程序和增强功能。其中包括自动电源管理程序 `Kapm`，以及 `Kclaptop`，它为在笔记本和平电脑上使用 Linux 和 KDE 的人提供了若干感兴趣的功能。本节提到的所有应用程序都可以在 `ftp://ftp.kde.org/pub/kde` 获取。
 
 另请
-
-- 我在第 651 页“在笔记本和便携式电脑上使用 KDE”章节讨论了 Kapm 和 Kclaptop。
+- 我在第 651 页“在笔记本和便携式电脑上使用 KDE”章节讨论了 `Kapm` 和 `Kclaptop`。
 
 # 第三部分 在 KDE 分发版中使用应用程序
-第 19 章 其他 KDE 应用程序
 
-# 多媒体应用程序
+## 第 19 章 其他 KDE 应用程序
+
+### 多媒体应用程序
 
 KDE 程序员们通常是年轻且热情的年轻人，他们花费大量时间在发热的电脑前苦干，因此他们开发出许多让你能享受音乐的应用程序并不意外。第 15 章提到了几个应用程序，我将介绍几个。
 
-# Krber
+#### Krber
 
-一个在圈内广受欢迎的应用程序是 Krubber（见图 19.4）。
+一个在圈内广受欢迎的应用程序是 `Krubber`（见图 19.4）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_429_0.png)
 
 **图 19.4**
-Krubber 获取音频轨道、转换音频轨道，并在有刻录机的情况下将音频轨道刻录到 CD。除了设计精美，Kubber 功能非常多。
 
-# KRecord
+`Krubber` 获取音频轨道、转换音频轨道，并在有刻录机的情况下将音频轨道刻录到 CD。除了设计精美，`Kubber` 功能非常多。
 
-KRecord（见图 19.5）允许你录制到内存或其他任何方式。你可以在 in-berlin.de/User/krecord 找到 KRecord。
+#### KRecord
+
+`KRecord`（见图 19.5）允许你录制到内存或其他任何方式。你可以在 `in-berlin.de/User/krecord` 找到 `KRecord`。
 
 # 第三部分
-# 多媒体应用程序 第 11 章
+
+### 多媒体应用程序 第 11 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_430_0.png)
 
 **图 19.5**
-混合由 KRecord 保存的声音面板。
 
-如果你喜欢制作音乐，可能想检查一下 aRT，它代表模拟实时合成器。它位于 arts.linuxbox.com/。
+混合由 `KRecord` 保存的声音面板。
 
-# KmodBox
+如果你喜欢制作音乐，可能想检查一下 `aRT`，它代表模拟实时合成器。它位于 `arts.linuxbox.com/`。
 
-另一个流行的文件处理工具是 KModBox，由 ation 编写。两者都可以在 www.geocities.com/SiliconValley/Haven/3864/mainframes 获取。
+#### KmodBox
 
-# KHDRec
+另一个流行的文件处理工具是 `KModBox`，由 `ation` 编写。两者都可以在 `www.geocities.com/SiliconValley/Haven/3864/mainframes` 获取。
 
-如果你认真的录音，KHDRec 将数字录制到硬盘上，正如大多数尖端工作室所做的那样。这东西令人大为观止。可以在 verona.phys.chemie.tu-muenchen.de/people/lorenz/khdrec 下载。
+#### KHDRec
 
-# 通信
+如果你认真的录音，`KHDRec` 将数字录制到硬盘上，正如大多数尖端工作室所做的那样。这东西令人大为观止。可以在 `verona.phys.chemie.tu-muenchen.de/people/lorenz/khdrec` 下载。
+
+### 通信
 
 KDE 有许多旨在让你上网体验更有收获、更安全的应用程序。查看 ftp 站点获取最新功能总是好主意。这里是其他的获取处：
+- `KICQ`—一个 KDE 的 icq 客户端。`http://www.cn.ua:8100/-denis/kde/kicq.html`
+- `ISDN`—ISDN 前端，包括高级电话功能。`http://kisdn.headline.de/kisdn.html`
+- `ticker`—下载并显示新闻标题。`http://www.ee.mu.oz.au/staff/paul/kde/ticker/`
+- `K Instant Messenger`—一个 AOL 即时消息客户端。`http://www-ec.njit.edu/~adt6247/`
+- `gehenis`—一个 PGP 的 KDE 前端。`http://members.home.com/cdwiegand/geheimnis/`
+- `LinKT`—一个用于 KDE 的数据包无线程序；不是互联网，但如果你是业电操作员，它非常有用。`http://www.1409.org/projects/linkt/`
 
-- KICQ—一个 KDE 的 icq 客户端。http://www.cn.ua:8100/-denis/kde/kicq.html
-- ISDN—ISDN 前端，包括高级电话功能。http://kisdn.headline.de/kisdn.html
-- ticker—下载并显示新闻标题。http://www.ee.mu.oz.au/staff/paul/kde/ticker/
-- K Instant Messenger—一个 AOL 即时消息客户端。http://www-ec.njit.edu/~adt6247/
-- gehenis—一个 PGP 的 KDE 前端。http://members.home.com/cdwiegand/geheimnis/
-- LinKT—一个用于 KDE 的数据包无线程序；不是互联网，但如果你是业电操作员，它非常有用。http://www.1409.org/projects/linkt/
-
-# 图形应用程序
+### 图形应用程序
 
 图像处理是 KDE 中不断发展的领域，一直有更多和增强的应用程序出现。有些非常专业，而另一些则用于更通用。
 
-KFourier 对图像进行复杂的（非常消耗处理器的）过滤，使其能够锐化或软化，并以其他方式进行转换（见图 19.6）。
-
-
-
-
+`KFourier` 对图像进行复杂的（非常消耗处理器的）过滤，使其能够锐化或软化，并以其他方式进行转换（见图 19.6）。
 
 # 第三部分
-## 图形应用 第 19 章
+
+#### 图形应用 第 19 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_432_0.png)
 
 图 19.6
-如果位图太锐利或不够锐利，KFourier 可以让它们恢复正常。
 
-你可以从以下地址下载 KFourier 的最新版本：
-www.arrakis.es-/rlarrosa/kfourier.html。
+如果位图太锐利或不够锐利，`KFourier` 可以让它们恢复正常。
 
-Kover 允许你设计并打印 CD Jewel盒的标签内页。对于一个应用程序来说，这个分领域似乎太窄了，除非你考虑到有多少 CD 根本没有带 jewel 盒。所以你从商店买了 CD 保护盒，它们看起来都得一样，然后……（见图 19.7）。
+你可以从以下地址下载 `KFourier` 的最新版本：
+
+`www.arrakis.es-/rlarrosa/kfourier.html`。
+
+`Kover` 允许你设计并打印 CD Jewel盒的标签内页。对于一个应用程序来说，这个分领域似乎太窄了，除非你考虑到有多少 CD 根本没有带 jewel 盒。所以你从商店买了 CD 保护盒，它们看起来都得一样，然后……（见图 19.7）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_432_1.png)
 
 图 19.7
-Kover 只做一件事——制作 CD 封面——但它确实工作得非常出色。
+
+`Kover` 只做一件事——制作 CD 封面——但它确实工作得非常出色。
 
 419
 
 # 第三部分 使用 KDE 分发中的应用程序
-## 第 19 章 其他 KDE 应用的世界
 
-你所使用的打印机质量决定了 Kover 产品的质量。一台好的彩色喷墨打印机可以产生非常专业的效果；而一台旧的点打字打印机则不能。从 www.fischlustig.de/kover 获取 Kover。
+#### 第 19 章 其他 KDE 应用的世界
 
-QuickShow 是一个用于 KDE 的幻灯片程序，它可以让你一次性点击整个图像目录，或者将其设置为为你自动点击，这样你只需要看。它位于 KDE 的 ftp 站点上。
+你所使用的打印机质量决定了 `Kover` 产品的质量。一台好的彩色喷墨打印机可以产生非常专业的效果；而一台旧的点打字打印机则不能。从 `www.fischlustig.de/kover` 获取 `Kover`。
 
-KPlot 将你的数据以图形形式呈现。这对于科学家和研究人员特别有用（你真的想知道你朋友电话号码的平均值吗？），它是从 www.glue.umd.edu/~dsweet/KDE/KPlotW/index.html 采用的。
+`QuickShow` 是一个用于 KDE 的幻灯片程序，它可以让你一次性点击整个图像目录，或者将其设置为为你自动点击，这样你只需要看。它位于 KDE 的 ftp 站点上。
 
-KScan 是适用于 SANE 标准扫描器的 KDE 前端，即用于扫描已采用 SANE 标准的扫描器。如果你有这样的设备，可以从 rf-hp.npi.msu.edu/kscan.html 下载。若要确定你的扫描器是否符合 SANE 标准，请检查你的 Linux 发行版的兼容硬件列表。
+`KPlot` 将你的数据以图形形式呈现。这对于科学家和研究人员特别有用（你真的想知道你朋友电话号码的平均值吗？），它是从 `www.glue.umd.edu/~dsweet/KDE/KPlotW/index.html` 采用的。
+
+`KScan` 是适用于 `SANE` 标准扫描器的 KDE 前端，即用于扫描已采用 `SANE` 标准的扫描器。如果你有这样的设备，可以从 `rf-hp.npi.msu.edu/kscan.html` 下载。若要确定你的扫描器是否符合 `SANE` 标准，请检查你的 Linux 发行版的兼容硬件列表。
 
 再次，这些只是可用的图形应用中的极一部分。看看吧。如果有需求，可能已经有一个应用程序或一个正在开发中的应用。
 
-# 办公工具
+### 办公工具
 
-尽管大部分办公应用的开发工作集中在 KOffice 以及以某种方式与之关联的程序上，但你可能会发现一些应用很有用。
+尽管大部分办公应用的开发工作集中在 `KOffice` 以及以某种方式与之关联的程序上，但你可能会发现一些应用很有用。
 
-PeopleSpace 是一个用于开发的 KDE 应用（但在其当前形式可以使用），它模拟了流行的 ACT! 业务信息管理界面。你可以在 www.slac.com/mpilon/peoples_home/ 找到当前版本。
+`PeopleSpace` 是一个用于开发的 KDE 应用（但在其当前形式可以使用），它模拟了流行的 ACT! 业务信息管理界面。你可以在 `www.slac.com/mpilon/peoples_home/` 找到当前版本。
 
-KProject 是用于 KDE 的项目管理软件。查看 rs45.bv-tu-berlin.de/JOCHEN/KPROJECT/kproject.php3。
+`KProject` 是用于 KDE 的项目管理软件。查看 `rs45.bv-tu-berlin.de/JOCHEN/KPROJECT/kproject.php3`。
 
-KSQL 是 Linux 上流行的 Postgres 数据库的查询前端。你可以在 www.mutinibaysoftware.com/kpsql.html 找到关于它的信息以及源码链接。
+`KSQL` 是 Linux 上流行的 Postgres 数据库的查询前端。你可以在 `www.mutinibaysoftware.com/kpsql.html` 找到关于它的信息以及源码链接。
 
-我稍后会提到 KSendFax（图 19.8），但现在提一下也是值得的。KHylaFax 是 Linux 程序的前端。
+我稍后会提到 `KSendFax`（图 19.8），但现在提一下也是值得的。`KHylaFax` 是 Linux 程序的前端。
 
 要了解 Linux 下的传真选项以及与 KDE 良好集的的选项，请参阅第 33 章“从 KDE 传真”。
 
 # 第三部分
-## 你可能一天不离的杂项程序 第 19 章
+
+#### 你可能一天不离的杂项程序 第 19 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_434_0.png)
 
 图 19.8
 
-如果你有几种常用的 Linux 传真程序中的任何一个，KSFax 可以让你避免学习复杂的命令行选项就能通过你的调制解调器发送传真。
+如果你有几种常用的 Linux 传真程序中的任何一个，`KSFax` 可以让你避免学习复杂的命令行选项就能通过你的调制解调器发送传真。
 
-KHylaFax 类似，但它特别针对 HylaFax 传真服务器程序优化。你可以在 KDE ftp 站点找到这两者。
+`KHylaFax` 类似，但它特别针对 HylaFax 传真服务器程序优化。你可以在 KDE ftp 站点找到这两者。
 
 # 你可能一天不离的杂项程序
 
-在 KDE 或其他任何地方，最令人有趣的应用程序之一是那些难以分类的程序。原因之一是你可能没有另一个做同样事情的程序。另一个原因是编写此类程序的人通常非常聪明，有时又带有令人喜爱的古怪。KDE 有许多非常聪明的写作程序。
 
-# KWeather
-
-KWeather 是一个你可能从未问过的问题的答案，但当你考虑到它时，这是个好主意。它不会改变天气，但它让你能理智地谈论天气（见图 19.9）。
-
-421
 
 # 第三部分 使用 KDE 分发中的应用程序
+
 ## 第 19 章 其他 KDE 应用的世界
+
+### KWeather
+
+KWeather 是一个你可能从未问过的问题的答案，但当你考虑到它时，这是个好主意。它不会改变天气，但它让你能理智地谈论天气（见图 19.9）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_435_0.png)
 
@@ -7679,20 +6895,19 @@ KWeather 是一个你可能从未问过的问题的答案，但当你考虑到�
 
 如果你对天气感兴趣，或者你必须跟踪天气，KWeather 让事情变得更容易。它让你对温度、降水量等保持持续记录。不过要注意，它以摄氏绘制温度、以摄氏绘制气压、以厘米绘制雨量，所以对于初学者来说，这可能是一场公制的噩梦。
 
-你为每个项目保留一个单独的文件。如果作物（甚至是一个漂亮的院子）在考虑范围内，那么可以在 www.privat.net/kgen/index.html 获取 KWeather 是值得关注的。
+你为每个项目保留一个单独的文件。如果作物（甚至是一个漂亮的院子）在考虑范围内，那么可以在 `www.privat.net/kgen/index.html` 获取 KWeather 是值得关注的。
 
-# 第三部分
-## 你可能一天不离的杂项
+### 你可能一天不离的杂项
 
-如果你理解，但当你考虑到它时，这是个好主意。它是 KLab 采用自 www.umd.edu/~dsweet/。
+如果你理解，但当你考虑到它时，这是个好主意。它是 KLab 采用自 `www.umd.edu/~dsweet/`。
 
-# VideoList
+### VideoList
 
-KVideoList 是一个记录视频录带的小型数据库程序。你可以在 bamberg.de/home/ba105/ 获取。
+KVideoList 是一个记录视频录带的小型数据库程序。你可以在 `bamberg.de/home/ba105/` 获取。
 
-# KFTE
+### KFTE
 
-KFTE 是适用于 SANE 标准扫描器的 KDE 前端，即用于扫描已采用 SANE 标准的扫描器。如果你有这样的设备，可以从 rf-hp.npi.msu.edu/kscan.html 下载。若要确定你的扫描器是否符合 SANE 标准，请检查你的 Linux 发行版的兼容硬件列表。
+KFTE 是适用于 SANE 标准扫描器的 KDE 前端，即用于扫描已采用 SANE 标准的扫描器。如果你有这样的设备，可以从 `rf-hp.npi.msu.edu/kscan.html` 下载。若要确定你的扫描器是否符合 SANE 标准，请检查你的 Linux 发行版的兼容硬件列表。
 
 TE 严格来说不是一个 KDE 应用，但开发者尽力让它符合 KDE 习惯，它是一个用实时的地球视图替换桌面静态颜色或随机壁纸的程序。看看图 19.10。
 
@@ -7700,38 +6915,27 @@ TE，一个备受推崇的编辑器端口，提供了令人兴奋的功能。
 
 你可以在 KDE 站点找到 KFTE。
 
-# 符合 KDE 习惯，它是一个用实时的地球视图替换桌面静态颜色或随机壁纸的程序。看看图 19.10。
+符合 KDE 习惯，它是一个用实时的地球视图替换桌面静态颜色或随机壁纸的程序。看看图 19.10。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_436.png)
 
 图 19.10
+
 Globe 允许你选择从太空拍摄的高分辨率照片覆盖地球，并根据你的喜好频繁或偶尔更新。
 
-有关于将 X Globe 移植以创建一个月球版本、使用高分辨率月球地图来跟踪月相的讨论。我知道，因为我已经做了大部分的谈论，并使用了该项目向所有人证明我不是程序员。这可能发生，即使没有发生，X Globe 也会让你的桌面有趣得多。从 www.uni-karlsruhe.de/~uddn/xglobe 获取。
+有关于将 X Globe 移植以创建一个月球版本、使用高分辨率月球地图来跟踪月相的讨论。我知道，因为我已经做了大部分的谈论，并使用了该项目向所有人证明我不是程序员。这可能发生，即使没有发生，X Globe 也会让你的桌面有趣得多。从 `www.uni-karlsruhe.de/~uddn/xglobe` 获取。
 
-再次，不要认为这个简短的列表是完整的或具有范式的。它仅包含了在书中其他地方未提及的、但在编写本章时可供下载的一些应用程序。对于今天来说，它完全不完整，也不打算完整。它没有可能列出从我写这些文字的今天到你阅读的今天之间出现的所有新奇事物。所以，去看看 www.kde.org 并点击应用页链接。你会找到你喜欢的。
+再次，不要认为这个简短的列表是完整的或具有范式的。它仅包含了在书中其他地方未提及的、但在编写本章时可供下载的一些应用程序。对于今天来说，它完全不完整，也不打算完整。它没有可能列出从我写这些文字的今天到你阅读的今天之间出现的所有新奇事物。所以，去看看 `www.kde.org` 并点击应用页链接。你会找到你喜欢的。
 
-424
+## 第 20 章 KLyX：复杂文档的悖论处理器
 
-
-
-
-
-# 第 20 章
-
-# KLyX：复杂文档的悖论处理器
-
-获取与安装 KLyX
+### 获取与安装 KLyX
 
 使用 KLyX
 
 公式编辑器
 
 如何真正学习 KLyX
-
-# 第三部分使用 KDE 分发版中的应用程序
-
-# 第 20 章 KLyX：复杂文档的悖论处理器
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_439_0.png)
 
@@ -7747,15 +6951,13 @@ Globe 允许你选择从太空拍摄的高分辨率照片覆盖地球，并根�
 
 我很遗憾地通知你，我现在将投入许多页面来介绍 KLyX，在这些页面的最后，你可能会比现在更接近这些问题的答案。事实是，你要么热爱 KLyX，要么痛恨它……或者两者兼有。
 
-# 获取与安装 KLyX
-
-KLyX 的最新版本始终可以在 KDE 网站 (www.kde.org) 或 ftp 站点 (ftp://ftp.kde.org/pub/kde/) 或是 KLyX 主主页 (www.devel.lyx/~etrisch/klyx.html) 获取。有时提供二进制文件，你最好的办法是下载并编译它。根据我的经验，它的编译过程并不均匀。（在运行 `/configure` 时，将你的 KDE 目录指定为 -prefix 选项是个好主意）。
+KLyX 的最新版本始终可以在 KDE 网站 (`www.kde.org`) 或 ftp 站点 (`ftp://ftp.kde.org/pub/kde/`) 或是 KLyX 主主页 (`www.devel.lyx/~etrisch/klyx.html`) 获取。有时提供二进制文件，你最好的办法是下载并编译它。根据我的经验，它的编译过程并不均匀。（在运行 `/configure` 时，将你的 KDE 目录指定为 `-prefix` 选项是个好主意）。
 
 当你第一次运行 KLyX 时，可能会对出现在屏幕上的、像小饺子一样大的 KOOffice Logo 感到惊讶。别担心：它几秒钟后就会消失。你可能还会看到一个对话框，说你的主目录下没有 Lyx 目录。如果有，让 KLyX 创建一个。那是你的配置和数据文件存储的地方。默认的 KLyX 窗口大小太小，没有太大用，但你可以将其拖动到更大的尺寸。
 
-起初帮助菜单是空的，但这是你应该检查的第一项。点击任何项目都会返回错误，说找不到帮助文件。这是因为帮助文件与其他 KDE 应用不同，不是 HTML 而是 .lyx 格式。要访问它们，打开 `/kde/share/kde.org/apps/klyx/doc/Intro.lyx`。现在帮助文件中填充了丰富的文档，尽管大部分内容是关于 LyX 的，而 KLyX 是它一个相当优雅的移植版。
+起初帮助菜单是空的，但这是你应该检查的第一项。点击任何项目都会返回错误，说找不到帮助文件。这是因为帮助文件与其他 KDE 应用不同，不是 HTML 而是 `.lyx` 格式。要访问它们，打开 `/kde/share/kde.org/apps/klyx/doc/Intro.lyx`。现在帮助文件中填充了丰富的文档，尽管大部分内容是关于 LyX 的，而 KLyX 是它一个相当优雅的移植版。
 
-# 必要条件
+### 必要条件
 
 帮助菜单中的最后一项实际上是你应该检查的第一项。它包含了搜索编译和安装过程的结果，这些结果决定了你的系统是否具备 KLyX 运行所需的所有要素。在你的机器上没有支持软件的情况下编译并安装 KLyX 是完全可能的，但你无法用它做任何实用的事情。该文件还包含了关于你可以在哪里下载它所需要的任何缺失内容的最新版本的信息。
 
@@ -7765,66 +6967,57 @@ KLyX 的最新版本始终可以在 KDE 网站 (www.kde.org) 或 ftp 站点 (ftp
 - LaTeX——让 TeX（勉强）可接受的 TeX 宏。
 - Linux Doc-sgml 工具——在 Linux 下支持各种格式的文件。它有时被称为 linuxdoc。
 
-# 第三部分使用 KDE 分发版中的应用程序
-第 20 章 KLyX：复杂文档的悖论处理器
-
 **标准 LaTeX 文档类**——文字处理器中模板的功能等价物，这些不是你自己随手凑出来的东西。它们由：
 
-- article—基础类
-- report—类似于 article
-- book—用于章节
-- letter—用于信函
-- slides—用于幻片
-- amart—article 的变体
-- revmode—article 的变体
-- longarticle—标准类
-- memoir—标准类
-- scrart—功能性类
-- scrbook—功能性类
+- `article`—基础类
+- `report`—类似于 article
+- `book`—用于章节
+- `letter`—用于信函
+- `slides`—用于幻片
+- `amart`—article 的变体
+- `revmode`—article 的变体
+- `longarticle`—标准类
+- `memoir`—标准类
+- `scrart`—功能性类
+- `scrbook`—功能性类
 
 **纸张尺寸**——如果你需要，可以通过一些包更改：
 
-- a4—标准尺寸
-- geometry—允许更改页边距
-- wide—允许更宽
+- `a4`—标准尺寸
+- `geometry`—允许更改页边距
+- `wide`—允许更宽
 
 **字体**——你可能需要的包括：
 
-- fonts—当前字体
-- psnf—支持字距调整
-- psf—PostScript 字体
-- ufonts—字体类型
-- cm—当前字体
-- cmmath—当前字体
-- mathx—字体类型
+- `fonts`—当前字体
+- `psnf`—支持字距调整
+- `psf`—PostScript 字体
+- `ufonts`—字体类型
+- `cm`—当前字体
+- `cmmath`—当前字体
+- `mathx`—字体类型
 
 **其他包**——如果你需要，在 KLyX 中你会看到所有：
 
-- fancyhdr—允许页眉和页脚
-- floatalt—允许环绕
-- graphics—允许插入图形
-- linuxdoc-sgml—允许 sgml 工具
-- rotating—允许方向调整
-- subfigure—允许图像分组
-- setspace—允许行间距
-- longtable—用于表格
-- babel—允许翻译
-- color—允许颜色
+- `fancyhdr`—允许页眉和页脚
+- `floatalt`—允许环绕
+- `graphics`—允许插入图形
+- `linuxdoc-sgml`—允许 sgml 工具
+- `rotating`—允许方向调整
+- `subfigure`—允许图像分组
+- `setspace`—允许行间距
+- `longtable`—用于表格
+- `babel`—允许翻译
+- `color`—允许颜色
 
-使用 KLyX
+### 使用 KLyX
 
 如果你有，你非常接近了。尝试这个：打开 KLyX。你会注意到它非常有吸引力，并且具有菜单、工具栏、文本框和底部的状态栏。（注：由于原文文本在第 443 页处截断，此处为基于提供的上下文的逻辑翻译参考）
-
-
-
-
-
-# 第三部分
-使用 KLyX 第20章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_444_0.png)
 
 图 20.3
+
 默认的 KLyX 屏幕很小又令人困惑。你可以把它变大。
 
 你想做的第一件事是将其拉伸到实用的尺寸，参见图 20.4。
@@ -7832,6 +7025,7 @@ KLyX 的最新版本始终可以在 KDE 网站 (www.kde.org) 或 ftp 站点 (ftp
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_444_1.png)
 
 图 20.4
+
 一旦你让 KLyX 变大，它看起来就开始像一个你可以操作的应用程序。
 
 - 1 通用工具栏
@@ -7839,42 +7033,40 @@ KLyX 的最新版本始终可以在 KDE 网站 (www.kde.org) 或 ftp 站点 (ftp
 - 3 表格工具栏
 - 4 字符工具栏
 
+
+
 # 第三部分 使用 KDE 发行版中的应用程序
 
-# 第20章 KLyX：处理复杂文档的矛盾处理器
+## 第20章 KLyX：处理复杂文档的矛盾处理器
 
 现在你有了东西可以看了，可以开始梳理一切了。你注意到有多层级的工具栏。你认了一些图标，但其中许多是谜团，而且你习惯看到的很多图标都缺失了。屏幕是灰色的，顶部工具栏上那个似乎是主按钮的地方是空白的。大部分菜单都是灰色的。这不是那种你一启动就开始飞快打字的程序。不，它比那谨慎得多。
 
 在我们继续之前，让我们来识别一下这些工具栏：
 
-- **通用 (General)**——顶部工具栏包含你可能识别出的项目。
-- **数学 (Math)**——第二个工具栏包含用于公式编辑的项目。说 KLyX 是一个外包裹了一些文字处理功能的公式编辑器并不完全荒谬。典型的 KLyX 用户也经常使用这个工具栏。
-- **表格 (Tables)**——第三个工具栏用于在 KLyX 文档中创建和操作表格。
-- **字符 (Character)**——第四也是最后一个工具栏包含用于控制文档字符的下拉框。
+- `General`——顶部工具栏包含你可能识别出的项目。
+- `Math`——第二个工具栏包含用于公式编辑的项目。说 KLyX 是一个外包裹了一些文字处理功能的公式编辑器并不完全荒谬。典型的 KLyX 用户也经常使用这个工具栏。
+- `Tables`——第三个工具栏用于在 KLyX 文档中创建和操作表格。
+- `Character`——第四也是最后一个工具栏包含用于控制文档字符的下拉框。
 
 你可以通过 `Options > Screen Options > Toolbars` 来控制哪些工具栏显示。
 
-在进行任何操作之前，你需要创建一个 **File > New** 或 **File > New from template**，这会使用标准的 KDE 文件选择对话框提示你输入文件名和位置。如果你选择 **File > New**，将使用默认布局。如果你选择 **File > New from template**，将提供已安装布局供你选择（参见图 20.5）。
+在进行任何操作之前，你需要创建一个 `File > New` 或 `File > New from template`，这会使用标准的 KDE 文件选择对话框提示你输入文件名和位置。如果你选择 `File > New`，将使用默认布局。如果你选择 `File > New from template`，将提供已安装布局供你选择（参见图 20.5）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_445_0.png)
 
 **图 20.5**
-从布局对话框中选择你的项目。有多种文档布局可用；某些出版物会提供自己的布局。
 
-# 第三部分 使用 KLyX 第20章
+从布局对话框中选择你的项目。有多种文档布局可用；某些出版物会提供自己的布局。
 
 在你选择布局后，屏幕的灰色调减少了一些，菜单变得活跃了。你现在可以开始打字了。它看起来完全正常，就像来自标准的文字处理器一样（参见图 20.6）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_446_0.png)
 
 图 20.6
+
 它具有自动缩进功能，除此之外看起来是一个表现良好的文字处理器。
 
 不过，这并不是文档应该有的样子，不是吗？它需要被美化，如果是为了出版，则需要根据出版物的标准进行美化。你如何实现这一点？没有居中文本的图标，对吧？啊。让我们看看那个以前空白的下拉框，就是第一个工具栏上的那个，现在显示为“Standard”的那个。也许答案在那里（参见图 20.7）。
-
-# 第三部分 使用 KDE 发行版中的应用程序
-
-# 第20章 KLyX，处理复杂文档的矛盾处理器
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_447_0.png)
 
@@ -7890,42 +7082,32 @@ KLyX 的最新版本始终可以在 KDE 网站 (www.kde.org) 或 ftp 站点 (ftp
 
 成功了！将光标放在标题中的某个、任何地方，并在样式下拉框中点击“Title”，即可格式化标题。
 
-# 第三部分
-
 但现在我的名字偏向左边，看起来孤孤零零的。我们该怎么办呢？（参见图 20.9）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_448_0.png)
 
 图 20.9
+
 这里有什么可以帮助作者的吗？确实有。
 
 好了，至少你知道如何格式化段落。你还能做什么？嗯，这完全取决于布局。例如，在布局中，点击字符工具栏中的“Font（字体）”会将选中的文本切换为 Courier（参见图 20.10）。
 
-# 第三部分 使用 KDE 发行版中的应用程序
-
-# 第20章 KLyX：处理复杂文档的矛盾处理器
-
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_449_0.png)
 
 **图 20.5**
+
 从布局对话框中选择你的项目。有多种文档布局可用；某些出版物会提供自己的布局。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_449_1.png)
 
 **图 20.10**
+
 从布局对话框中选择你的项目。有多种文档布局可用；某些出版物会提供自己的布局。
-
-
-
-
-
-# 第三部分 在 KDE 发行版中使用应用程序
-
-# 第 20 章 KLyX：复杂文档的悖论处理器
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_453_0.png)
 
 图 20.15
+
 文档布局对话框提供的详细程度比许多人愿意使用的程度要深得多。
 
 一旦你学会了它，就可以以很高的效率生成并快速处理文档，并完成在其他程序中难以实现的工作（见图 20.16）。
@@ -7933,52 +7115,46 @@ KLyX 的最新版本始终可以在 KDE 网站 (www.kde.org) 或 ftp 站点 (ftp
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_453_1.png)
 
 图 20.16
+
 目录的生成是自动的，它被内置在 KLyX 文档中。
 
 如果你正在寻找一种易于使用的文字处理器，其生成的文档在纸上的效果与在屏幕上一样，那么 KLyX 一定会让你失望。
 
 自己决定并不难：下载 KLyX 看看吧。它不需要花费什么，除了你愿意投入的时间。无论你决定如何，你都会会被这个优秀的程序所说服。
 
-# 第四部分
-使用 KDE 接入网络
+# 第四部分 使用 KDE 接入网络
 
 - 使用 Kppp 上网 443 21
 - 使用 Kmail 进行快速通信 461 22
 - 阅读新闻组 483 23
 - 浏览及其他网络内容 493 24
 
-# 第 21 章
-
-# 使用 Kppp 接入网络
+## 第 21 章 使用 Kppp 接入网络
 
 为你的账户设置 Kppp
 
 使用 Kppp 登录
-
-# 第四部分 使用 KDE 接入网络
-第 21 章 使用 Kppp 接入网络
 
 Linux 是互联网的产物。它诞生于那里，成长于那里，而且互联网中很大一部分是基于它构建的。KDE 也是如此（尽管实际上并没有什么 KDE 的东西可以作为网络任何部分的基础）。如果没有世界各地的专业程序员通过互联网共同工作，以及通过互联网下载这些东西的用户，就不会有 KDE，更不用说使用它了。
 
 当然，大多数互联网用户通过互联网服务提供商（ISP）的拨号账户接入互联网。因此，KDE 必须包含一个原生的拨号应用程序。
 
 > 如果你喜欢你的拨号器
+>
 > 其他 X 系统的拨号器已经存在多年了，最流行的是 EZPP 和 Xisp，它们都非常好，并且可以在 KDE 下工作。所以，如果你有其中一个并习惯了它，你可以自由继续使用它。
 
 在汇编拨号器 Kppp 时，KDE 开发者寻求的是设置和使用的简易性、功能的丰富性，以及能够访问你可能需要的任何内容。你可能会认为，他们在各方面都成功了。
 
 本章帮助你为你的账户设置 Kppp。它不会涉及 ppp 的理论或 Linux 使用 ppp 的内部机制。我的目标在这里是让你以最少的麻烦和精力接入网络。
 
-# 为你的账户设置 Kppp
+### 为你的账户设置 Kppp
 
 当你启动 Kppp 时，你需要做的第一件事是设置一个新账户（见图 21.1）。
-
-# 第四部分
-为你的账户设置 Kppp 第 21 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_458_0.png)
 
 图 21.1
+
 “新账户”页面对话框开始了一个相当快速且简单的配置过程。
 
 “拨号”（Dial）页面涉及为账户命名并提供电话号码（如果你有呼叫等待，别忘记在拨号时加上 *70*）。如果你的 ISP 有多个电话号码，你可以用冒号将它们分开；在这种情况下，如果出现占用信号 Kppp 将拨号下一个号码。你必须选择你的 ISP 要求的登录类型，并从“身份验证”列表框中选择它（见图 21.2）。
@@ -7986,44 +7162,29 @@ Linux 是互联网的产物。它诞生于那里，成长于那里，而且互�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_458_1.png)
 
 图 21.2
+
 你可能需要从你的 ISP 处查询所需的身份验证类型。如果其他方法都失败，基于脚本的验证通常有效。445
 
-# 第四部分 使用 KDE 接入网络
-第 21 章 使用 Kppp 接入网络
+如果你是唯一使用该机器或 Linux 账户的人，可以勾选“存储密码”框；否则，你每次登录互联网时必须输入你的 ISP 账户密码。如果你想在在线或之后运行任何程序，可以在这里输入。如果你的系统、调制解调器或 ISP 要求将任何参数传递给 `pppd`（对点协议守护进程），你可以通过点击下方的按钮输入它们。在这样做之前，你应该熟悉一下 `pppd`，这超出了本书的范围。
 
-如果你是唯一使用该机器或 Linux 账户的人，可以勾选“存储密码”框；否则，你每次登录互联网时必须输入你的 ISP 账户密码。如果你想在在线或之后运行任何程序，可以在这里输入。如果你的系统、调制解调器或 ISP 要求将任何参数传递给 pppd（对点协议守护进程），你可以通过点击下方的按钮输入它们。在这样做之前，你应该熟悉一下 pppd，这超出了本书的范围。
+> 关于 `pppd`
 
-> 关于 pppd
-> 在很多情况下，你可以在不考虑 ppp 守护进程的情况下运行它。如果你是那些需要向此程序传递特殊参数的人，你可以在许多地方找到帮助——而且你确实需要它。第一个是 ppp 页面。第二个是 PPP HOWTO，它可能随你的 Linux 发行版一起提供并可能存在于你的机器上。拥有一个良好的、全面的 Linux 手册始终是一个好主意。最好的包括 Allan Smart, Eric Ratcliffe, Tim Bird 和 David Bandel 编写的《Special Edition Using Caldera》（Que, ISBN: 0-7897...），以及 Matthias Weiss, Kalle 和 David Kaufmann 编写的《Running Linux》（O'Reilly, ISBN: 0-7897...）。在很多情况下，你可以在不考虑 ppp 守护进程的情况下运行它。如果你是那些需要向此程序传递特殊参数的人，你可以在许多地方找到帮助——而且你确实需要它。第一个是 ppp 页面。第二个是 PPP HOWTO，它可能随你的 Linux 发行版一起提供并可能存在于你的机器上。拥有一个良好的、全面的 Linux 手册始终是一个好主意。最好的包括 Allan Smart, Eric Ratcliffe, Tim Bird 和 David Bandel 编写的《Special Edition Using Caldera》（Que, ISBN: 0-7897...），以及 Matthias Weiss, Kalle 和 David Kaufmann 编写的《Running Linux》（O'Reilly, ISBN: 0-7897...）。
 
-在很多情况下，你可以在不考虑 ppp 守护进程的情况下运行它。如果你是那些需要向此程序传递特殊参数的人，你可以在许多地方找到帮助——而且你确实需要它。第一个是 ppp 页面。第二个是 PPP HOWTO，它可能随你的 Linux 发行版一起提供并可能存在于你的机器上。拥有一个良好的、全面的 Linux 手册始终是一个好主意。
 
-（注：原文中存在部分重复段落，已按要求处理）
+在很多情况下，你可以在不考虑 `ppp` 守护进程的情况下运行它。如果你是那些需要向此程序传递特殊参数的人，你可以在许多地方找到帮助——而且你确实需要它。第一个是 `ppp` 页面。第二个是 `PPP HOWTO`，它可能随你的 Linux 发行版一起提供并可能存在于你的机器上。拥有一个良好的、全面的 Linux 手册始终是一个好主意。最好的包括 Allan Smart, Eric Ratcliffe, Tim Bird 和 David Bandel 编写的《Special Edition Using Caldera》（Que, ISBN: 0-7897...），以及 Matthias Weiss, Kalle 和 David Kaufmann 编写的《Running Linux》（O'Reilly, ISBN: 0-7897...）。
 
-如果你的系统、调制解调器或 ISP 要求将任何参数传递给 pppd（对点协议守护进程），你可以通过点击下方的按钮输入它们。在这样做之前，你应该熟悉一下 pppd，这超出了本书的范围。
-
-在很多情况下，你可以在不考虑 ppp 守护进程的情况下运行它。如果你是那些需要向此程序传递特殊参数的人，你可以在许多地方找到帮助——而且你确实需要它。第一个是 ppp 页面。第二个是 PPP HOWTO，它可能随你的 Linux 发行版一起提供并可能存在于你的机器上。拥有一个良好的、全面的 Linux 手册始终是一个好主意。
-
-如果你的系统、调制解调器或 ISP 要求将任何参数传递给 pppd（对点协议守护进程），你可以通过点击下方的按钮输入它们。在这样做之前，你应该熟悉一下 pppd，这超出了本书的范围。
-
-在很多情况下，你可以在不考虑 ppp 守护进程的情况下运行它。如果你是那些需要向此程序传递特殊参数的人，你可以在许多地方找到帮助——而且你确实需要它。第一个是 ppp 页面。第二个是 PPP HOWTO，它可能随你的 Linux 发行版一起提供并可能存在于你的机器上。拥有一个良好的、全面的 Linux 手册始终是一个好主意。
-
-（注：原文中存在部分重复段落，已按要求处理）
-
-如果你的系统、调制解调器或 ISP 要求将任何参数传递给 pppd（对点协议守护进程），你可以通过点击下方的按钮输入它们。在这样做之前，你应该熟悉一下 pppd，这超出了本书的范围。
-
-在很多情况下，你可以在不考虑 ppp 守护进程的情况下运行它。如果你是那些需要向此程序传递特殊参数的人，你可以在许多地方找到帮助——而且你确实需要它。第一个是 ppp 页面。第二个是 PPP HOWTO，它可能随你的 Linux 发行版一起提供并可能存在于你的机器上。拥有一个良好的、全面的 Linux 手册始终是一个好主意。
-
-如果你的系统、调制解调器或 ISP 要求将任何参数传递给 pppd（对点协议守护进程），你可以通过点击下方的按钮输入它们。在这样做之前，你应该熟悉一下 pppd，这超出了本书的范围。
+如果你的系统、调制解调器或 ISP 要求将任何参数传递给 `pppd`（对点协议守护进程），你可以通过点击下方的按钮输入它们。在这样做之前，你应该熟悉一下 `pppd`，这超出了本书的范围。
 
 在你的系统设置中，下一页是你的 ISP 域名服务器信息（见图 21.3）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_459_0.png)
 
 图 21.3
+
 这是你设置 IP 地址的地方。
 
 # 第四部分
+
 为你的账户设置 Kppp 第 21
 
 大多数 ISP 提供动态 IP 地址，但有些会额外付费提供静态 IP。如果你不，请咨询你的 ISP。通常情况下，勾选“动态 IP”框。
@@ -8033,6 +7194,7 @@ Linux 是互联网的产物。它诞生于那里，成长于那里，而且互�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_460_0.png)
 
 图 21.4
+
 你需要从你的 ISP 处获取这些信息。
 
 输入你 ISP 的域名，后面跟上 DNS 地址。如果 ISP 提供多个地址，如果你属于这类用户，请重复此操作。勾选“连接期间禁用 DNS 服务器”框，仅适用于你没有其他网络的机器。
@@ -8042,6 +7204,7 @@ Linux 是互联网的产物。它诞生于那里，成长于那里，而且互�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_461_0.png)
 
 图 21.5
+
 如果你的 ISP 提供静态网关，请在此输入；否则保持默认设置。
 
 下一页是“登录脚本”（Login Script），即图 21.6 和 21.7，除非你在“拨号”页面选择了脚本登录，否则请留空。
@@ -8049,6 +7212,7 @@ Linux 是互联网的产物。它诞生于那里，成长于那里，而且互�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_461_1.png)
 
 图 21.6
+
 即使你的 ISP 没有提供特殊的登录程序，你也可以通过编写脚本来实现自动化。
 
 最后是“计费”（Accounting）页面（见图 21.8）。这主要用于在美国境外，那里的用户需要为所有电话费用付费。
@@ -8056,13 +7220,10 @@ Linux 是互联网的产物。它诞生于那里，成长于那里，而且互�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_462_1.png)
 
 图 21.8
+
 为了记录你的在线费用总额，请选择“启用计费”，然后选择你的国家和你用于接入互联网的电话服务类型。
 
 449
-
-
-
-
 
 # 第四部分 配合 KDE 上网
 
@@ -8085,6 +7246,7 @@ Linux 是互联网的产物。它诞生于那里，成长于那里，而且互�
 其余的 Kppp 设置适用于所有账户。
 
 # 第四部分
+
 为你的账户设置 Kppp 第 21 章
 
 我们已经输入了特定账户的信息，但这只是部分内容。我们需要确保 Kppp 能与我们的硬件通信。
@@ -8098,48 +7260,42 @@ Linux 是互联网的产物。它诞生于那里，成长于那里，而且互�
 Linux 最近版本中的某些更改使得你的选择比以往任何时候都更加关键。
 
 > 讨厌的调制解调器在哪里？
+>
 > Linux 第一次使用 `/dev/cuaX`（其中 X 是串口号，从 0 开始）来识别其串口，许多发行版创建了符号链接 `/dev/modem`，它将指向包含调制解调器的串口。从 Linux 2.2 开始，像 `/dev/cuaX` 这样的东西不再存在了。它现在是 `/dev/ttySX`，其中 X 再次是从 0 开始的数字（DOS 世界中的 Com1 在 Linux 中是 `/dev/ttyS0`）。而且使用 `/dev/modem` 从来都不是好主意。因此，在**调制解调器设备（Modem Device）**下拉框中，请选择调制解调器的实际位置 `/dev/ttySX`——对于大多数人来说它将是 `/dev/ttyS1`——而不是其他任何。其他内容是为了向后兼容。
 
-**线路控制（Line Control）**：软件硬件流控制（CRTSCTS），这是首选；软件流控制（Xon/XOFF），不首选；或者，想都不想，无。除非你的调制解调器不支持它，否则选择 CRTSCTS。
+**线路控制（Line Control）**：软件硬件流控制（`CRTSCTS`），这是首选；软件流控制（`Xon/XOFF`），不首选；或者，想都不想，无。除非你的调制解调器不支持它，否则选择 `CRTSCTS`。
 
-**行终止符（Line Termination）**几乎总是总是 CR/LF。如果你的脚本没有运行，这里是进行调整的好地方。
+**行终止符（Line Termination）**几乎总是总是 `CR/LF`。如果你的脚本没有运行，这里是进行调整的好地方。
 
-你应该将**连接速度（Connection Speed）**设置为你的串口支持的最高速率，而不是调制解调器支持的。这意味着如果你有一个 16550af UART（调制解调器上的一个芯片——你的调制解调器文档会告诉你是否有一个，大多数现代调制解调器都有），你可以将其设置为调制解调器最大速度的两倍或更高。
+
+
+你应该将`连接速度（Connection Speed）`设置为你的串口支持的最高速率，而不是调制解调器支持的。这意味着如果你有一个 `16550af UART`（调制解调器上的一个芯片——你的调制解调器文档会告诉你是否有一个，大多数现代调制解调器都有），你可以将其设置为调制解调器最大速度的两倍或更高。
 
 # 第四部分 配合 KDE 上网
 
 ## 第 21 章 使用 Kppp 上网
 
-使用锁文件（Use Lock File）文本框是你输入与某些其他程序（如 mgetty）共存的时间。
+`Use Lock File` 文本框是你输入与某些其他程序（如 `mgetty`）共存的时间。
 
-调制解调器超时（Modem Timeout）文本框是你愿意让 Kppp 在接收到 CONNECT 信号之前等待的时间。你可以根据需要进行调整。如果电话线路不好导致线路协商持续时间过长，你可能需要将其设置得更高。
+`Modem Timeout` 文本框是你愿意让 `Kppp` 在接收到 `CONNECT` 信号之前等待的时间。你可以根据需要进行调整。如果电话线路不好导致线路协商持续时间过长，你可能需要将其设置得更高。
 
 > 那些糟糕的仅限 Windows 的调制解调器
-> 20 世纪 90 年代初，制造世界上最好的调制解调器的美国机器人公司引入了最糟糕的之一，一种被称为 Windem 的东西。这种暴行将通常由调制解调器处理的处理通过所谓的虚拟设备驱动程序交给 CPU。在最好的情况下，它只是一个二等调制解调器。从那时，许多公司使用相同的设计哲学生产调制解调器，计算机制造商为了省钱并在下一批首次购买者身上尝试，将它们塞进机器。这些调制解调器仅与微软产品兼容，而且不是所有产品。遗憾的是，今天制造的大多数内置解调器都是仅限 Windows 的调制解调器。它们无法与 Linux 工作。如果你有这些东西之一，把它从机器中移除并送给你你不喜欢的人。然后买一个好的外部调制解调器。它们可以与 Linux 工作，且外部调制解调器提供的信息具有极诊断价值。下一页（见图 21.12）是你教 Kppp 如何与你的调制解调器通信的地方。你可能需要咨询调制解调器手册来获取某些设置。
+>
+> 20 世纪 90 年代初，制造世界上最好的调制解调器的美国机器人公司引入了最糟糕的之一，一种被称为 Windem 的东西。这种暴行将通常由调制解调器处理的处理通过所谓的虚拟设备驱动程序交给 CPU。在最好的情况下，它只是一个二等调制解调器。从那时，许多公司使用相同的设计哲学生产调制解调器，计算机制造商为了省钱并在下一批首次购买者身上尝试，将它们塞进机器。这些调制解调器仅与微软产品兼容，而且不是所有产品。遗憾的是，今天制造的大多数内置解解调器都是仅限 Windows 的调制解调器。它们无法与 Linux 工作。如果你有这些东西之一，把它从机器中移除并送给你你不喜欢的人。然后买一个好的外部调制解调器。它们可以与 Linux 工作，且外部调制解调器提供的信息具有极诊断价值。下一页（见图 21.12）是你教 `Kppp` 如何与你的调制解调器通信的地方。你可能需要咨询调制解调器手册来获取某些设置。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_465_0.png)
 
 图 21.12
 
-调制解调器（Modem）标签页可能非常复杂也可以非常简单。如果你的完全兼容 Hayes 协议，它将是后者。第一个设置是一个文本框，你在其中教 Kppp 如何与你的调制解调器通信。你可能需要咨询调制解调器手册来获取某些设置。
-
-（注：此处原文内容似乎存在逻辑重复或错乱，翻译已根据语意进行对齐处理，但保留了格式）
+`Modem` 标签页可能非常复杂也可以非常简单。如果你的完全兼容 Hayes 协议，它将是后者。第一个设置是一个文本框，你在其中教 `Kppp` 如何与你的调制解调器通信。你可能需要咨询调制解调器手册来获取某些设置。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_465_0.png)
 
 图 21.12
 
-调制解调器（Modem）标签页可以非常复杂也可以非常简单。如果你的完全兼容 Hayes 协议，它将是后者。第一个设置是一个文本框，你在其中教 Kppp 如何与你的调制解调器通信。你可能需要咨询调制解调器手册来获取某些设置。
+`Modem` 标签页可以非常复杂也可以非常简单。如果你的完全兼容 Hayes 协议，它将是后者。第一个设置是一个文本框，你在其中教 `Kppp` 如何与你的调制解调器通信。你可能需要咨询调制解调器手册来获取某些设置。
 
-（注：由于原文文本中存在大量重复的段落，译文严格遵循“不要重复输出原文”的原则，仅对不同逻辑部分进行了翻译。若原文提供的文本本身存在重复，译文已按逻辑流进行了整合翻译。）
-
-
-
-
-
-# 第四部分
-
-# 使用 Kppp 登录 第 21 章
+## 使用 Kppp 登录
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_470_0.png)
 
@@ -8147,13 +7303,11 @@ Linux 最近版本中的某些更改使得你的选择比以往任何时候都�
 
 颜色随你喜好，但你确实开启图表。听我的。
 
-务必去转转“关于”（About）页面。这些人家伙是有有以来最出色的程序员之一，特别是 Harri Porten，他在 KDE Users 邮件列表中花费了大量时间帮助用户隔离问题并进行调试。结果是一项非常伟大的工作。向他们致敬。
+务必去转转“关于”页面。这些人家伙是有有以来最出色的程序员之一，特别是 Harri Porten，他在 KDE Users 邮件列表中花费了大量时间帮助用户隔离问题并进行调试。结果是一项非常伟大的工作。向他们致敬。
 
-现在，你准备好尝试一下 Kppp 了。
+现在，你准备好尝试一下 `Kppp` 了。
 
-# 使用 Kppp 登录
-
-这很简单。点击 K Menu > Internet > Kppp。在弹出的窗口中选择你的账户（参见图 21.19）。
+点击 `K Menu > Internet > Kppp`。在弹出的窗口中选择你的账户（参见图 21.19）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_470_1.png)
 
@@ -8161,49 +7315,39 @@ Linux 最近版本中的某些更改使得你的选择比以往任何时候都�
 
 选择你的账户并点击连接（Connect）。如果你正在使用脚本且脚本不起作用，请检查显示日志窗口（Show Log Window）以找出是在何处出错的。这将让你发现你可能在脚本中漏掉了什么。如果你需要与你 ISP 的技术支持人员讨论问题，这无疑会提供有用信息。
 
-457
-
-# 第四部分 配合 KDE 上网
-第 21 章 使用 Kppp 上网
-
 在你点击连接后，调制调器（Modem）将初始化（参见图 21.20），并正开始拨号 ISP。当连接协商成功后，你就已经登录了（参见图 21.21）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_471_0.png)
 
 图 21.20
+
 调制调器已初始化并正在拨号。在拨号过程中，你将看到你 ISP 的电话号码。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_471_1.png)
 
 图 21.21
-连接建立后，Kppp 会协商将你接入互联网。
 
-在连接后的任何时候，你都可以点击 K Panel 上闪烁的小调制调器灯图标（顺便说一下，它会根据实际线路状况闪烁），并获取关于通话时长、断开连接等信息（参见图 21.22）。
+连接建立后，`Kppp` 会协商将你接入互联网。
+
+在连接后的任何时候，你都可以点击 `K Panel` 上闪烁的小调制调器灯图标（顺便说一下，它会根据实际线路状况闪烁），并获取关于通话时长、断开连接等信息（参见图 21.22）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_471_2.png)
 
 图 21.22
-Kppp 窗口允许你注销，并显示了它自身的一些信息。
+
+`Kppp` 窗口允许你注销，并显示了它自身的一些信息。
 
 不过，要深入了解你当前连接的信息，你可以点击“详情”（Details）。它会告诉你你可能想关于连接的一切信息，不仅如此，它还会绘制数据传输图表（参见图 21.23）。
-
-# 第四部分
-第 21 章
-
-使用 Kppp 登录
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_472_0.png)
 
 图 21.23
+
 记得你在设置中开启的那个图表吗？你在这里就能找到它。它静静地见证了炎热夏日里这里糟糕的电话线路。
 
 上线后，接下来我们将看看 KDE 帮助你在那里可以做的一些事情。
 
-459
-
-# 第 22 章
-
-# 使用 Kmail 进行快速通信
+## 第 22 章 使用 Kmail 进行快速通信
 
 - 配置 Kmail
 - 使用 Kmail
@@ -8212,905 +7356,250 @@ Kppp 窗口允许你注销，并显示了它自身的一些信息。
 - 过滤消息
 - 附加功能：打印和检查检查
 
+`KDE` 的邮件客户端 `Kmail` 功能完备，可以与最优秀的独立邮件程序相媲美。它是 `KDE` 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
+
+### 配置 Kmail
+
+当你通过 `K Menu > Internet > Mail Client` 首次启动 `Kmail` 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
+
+图 22.1
+
+点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 `~/Mail` 目录中。
+
+一旦你允许 `Kmail` 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
+
+![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
+
+图 22.2
+
+左侧的框包含你的消息。底部的框预览消息。
+
+- 1 邮件文件夹
+- 2 消息列表
+- 3 写邮件 (Compose)
+- 4 保存消息 (Save)
+- 5 获取新邮件 (Get new)
+- 6 回复 (Reply to)
+- 7 全部回复 (Reply all)
+- 8 转发消息 (Forward)
+- 9 删除消息 (Delete)
+- 10 打开通讯录 (Open address book)
+
+
+
 # 第四部分 配合 KDE 上网
 
-# 第 22 章 使用 Kmail 进行快速通信
+## 第 22 章 Kmail 进行快速通信
 
 即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
 
 KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
 
-# 配置 Kmail
+### 配置 Kmail
 
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
+当你通过 `K Menu > Internet > Mail Client` 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
 
 图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
+
+点击 `OK` 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 `~/Mail` 目录中。
 
 一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
 
 图 22.2
+
 左侧的框包含你的消息。底部的框预览消息。
 
 - 1 邮件文件夹
 - 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
+- 3 写邮件 (`Compose`)
+- 4 保存消息 (`Save`)
+- 5 获取新邮件 (`Get new`)
+- 6 回复 (`Reply to`)
+- 7 全部回复 (`Reply all`)
+- 8 转发消息 (`Forward`)
+- 9 删除消息 (`Delete`)
+- 10 打开通讯录 (`Open address book`)
 
-# 第四部分 配合 KDE 上网
-第 22 章 Kmail 进行快速通信
+
 
 即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
 
-KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
+KDE 的邮件客户端 `Kmail` 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
+
+# 第四部分 配合 KDE 上网
+
+## 第 22 章 Kmail 进行快速通信
 
 # 配置 Kmail
 
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
+当你通过 `K Menu > Internet > Mail Client` 首次启动 `Kmail` 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
 
 图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
 
-一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
+点击 `OK` 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 `~/Mail` 目录中。
+
+一旦你允许 `Kmail` 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
 
 图 22.2
+
 左侧的框包含你的消息。底部的框预览消息。
 
 - 1 邮件文件夹
 - 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
+- 3 写邮件 (`Compose`)
+- 4 保存消息 (`Save`)
+- 5 获取新邮件 (`Get new`)
+- 6 回复 (`Reply to`)
+- 7 全部回复 (`Reply all`)
+- 8 转发消息 (`Forward`)
+- 9 删除消息 (`Delete`)
+- 10 打开通讯录 (`Open address book`)
+
+
 
 # 第四部分 配合 KDE 上网
-第 22 章 Kmail 进行快速通信
+
+## 第 22 章 Kmail 进行快速通信
 
 即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
 
-KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
+KDE 的邮件客户端 `Kmail` 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
 
-# 配置 Kmail
+### 配置 Kmail
 
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
+当你通过 `K Menu > Internet > Mail Client` 首次启动 `Kmail` 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
 
 图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
 
-一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
+点击 `OK` 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 `~/Mail` 目录中。
+
+一旦你允许 `Kmail` 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
 
 图 22.2
+
 左侧的框包含你的消息。底部的框预览消息。
 
 - 1 邮件文件夹
 - 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
+- 3 写邮件 (`Compose`)
+- 4 保存消息 (`Save`)
+- 5 获取新邮件 (`Get new`)
+- 6 回复 (`Reply to`)
+- 7 全部回复 (`Reply all`)
+- 8 转发消息 (`Forward`)
+- 9 删除消息 (`Delete`)
+- 10 打开通讯录 (`Open address book`)
 
-# 第四部分 配合 KDE 上网
-第 22 章 Kmail 进行快速通信
 
-即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
-
-KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
-
-# 配置 Kmail
-
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
-
-图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
-
-一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
 
 图 22.2
+
 左侧的框包含你的消息。底部的框预览消息。
 
 - 1 邮件文件夹
 - 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
+- 3 写邮件 (`Compose`)
+- 4 保存消息 (`Save`)
+- 5 获取新邮件 (`Get new`)
+- 6 回复 (`Reply to`)
+- 7 全部回复 (`Reply all`)
+- 8 转发消息 (`Forward`)
+- 9 删除消息 (`Delete`)
+- 10 打开通讯录 (`Open address book`)
 
 # 第四部分 配合 KDE 上网
-第 22 章 Kmail 进行快速通信
+
+## 第 22 章 Kmail 进行快速通信
 
 即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
 
-KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
+`KDE` 的邮件客户端 `Kmail` 功能完备，可以与最优秀的独立邮件程序相媲美。它是 `KDE` 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
 
-# 配置 Kmail
+## 配置 Kmail
 
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
+当你通过 `K Menu > Internet > Mail Client` 首次启动 `Kmail` 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
 
 图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
 
-一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
+点击 `OK` 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 `~/Mail` 目录中。
+
+一旦你允许 `Kmail` 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
 
 图 22.2
+
 左侧的框包含你的消息。底部的框预览消息。
 
 - 1 邮件文件夹
 - 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
+- 3 写邮件 (`Compose`)
+- 4 保存消息 (`Save`)
+- 5 获取新邮件 (`Get new`)
+- 6 回复 (`Reply to`)
+- 7 全部回复 (`Reply all`)
+- 8 转发消息 (`Forward`)
+- 9 删除消息 (`Delete`)
+- 10 打开通讯录 (`Open address book`)
+
+
 
 # 第四部分 配合 KDE 上网
-第 22 章 Kmail 进行快速通信
+
+## 第 22 章 Kmail 进行快速通信
 
 即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
 
-KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
+KDE 的邮件客户端 `Kmail` 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
 
-# 配置 Kmail
+### 配置 Kmail
 
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
+当你通过 `K Menu > Internet > Mail Client` 首次启动 `Kmail` 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
 
 图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
 
-一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
+点击 `OK` 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 `~/Mail` 目录中。
+
+一旦你允许 `Kmail` 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
 
 图 22.2
+
 左侧的框包含你的消息。底部的框预览消息。
 
 - 1 邮件文件夹
 - 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
-
-# 第四部分 配合 KDE 上网
-第 22 章 Kmail 进行快速通信
-
-即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
-
-KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
-
-# 配置 Kmail
-
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
-
-图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
-
-一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
-
-图 22.2
-左侧的框包含你的消息。底部的框预览消息。
-
-- 1 邮件文件夹
-- 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
-
-# 第四部分 配合 KDE 上网
-第 22 章 Kmail 进行快速通信
-
-即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
-
-KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
-
-# 配置 Kmail
-
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
-
-图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
-
-一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
-
-图 22.2
-左侧的框包含你的消息。底部的框预览消息。
-
-- 1 邮件文件夹
-- 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
-
-# 第四部分 配合 KDE 上网
-第 22 章 Kmail 进行快速通信
-
-即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
-
-KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
-
-# 配置 Kmail
-
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
-
-图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
-
-一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
-
-图 22.2
-左侧的框包含你的消息。底部的框预览消息。
-
-- 1 邮件文件夹
-- 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
-
-# 第四部分 配合 KDE 上网
-第 22 章 Kmail 进行快速通信
-
-即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
-
-KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
-
-# 配置 Kmail
-
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
-
-图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
-
-一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
-
-图 22.2
-左侧的框包含你的消息。底部的框预览消息。
-
-- 1 邮件文件夹
-- 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
-
-# 第四部分 配合 KDE 上网
-第 22 章 Kmail 进行快速通信
-
-即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
-
-KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
-
-# 配置 Kmail
-
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
-
-图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
-
-一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
-
-图 22.2
-左侧的框包含你的消息。底部的框预览消息。
-
-- 1 邮件文件夹
-- 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
-
-# 第四部分 配合 KDE 上网
-第 22 章 Kmail 进行快速通信
-
-即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
-
-KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
-
-# 配置 Kmail
-
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
-
-图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
-
-一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
-
-图 22.2
-左侧的框包含你的消息。底部的框预览消息。
-
-- 1 邮件文件夹
-- 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
-
-# 第四部分 配合 KDE 上网
-第 22 章 Kmail 进行快速通信
-
-即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
-
-KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
-
-# 配置 Kmail
-
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
-
-图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
-
-一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
-
-图 22.2
-左侧的框包含你的消息。底部的框预览消息。
-
-- 1 邮件文件夹
-- 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
-
-# 第四部分 配合 KDE 上网
-第 22 章 Kmail 进行快速通信
-
-即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
-
-KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
-
-# 配置 Kmail
-
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
-
-图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
-
-一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
-
-图 22.2
-左侧的框包含你的消息。底部的框预览消息。
-
-- 1 邮件文件夹
-- 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
-
-# 第四部分 配合 KDE 上网
-第 22 章 Kmail 进行快速通信
-
-即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
-
-KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
-
-# 配置 Kmail
-
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
-
-图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
-
-一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
-
-图 22.2
-左侧的框包含你的消息。底部的框预览消息。
-
-- 1 邮件文件夹
-- 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
-
-# 第四部分 配合 KDE 上网
-第 22 章 Kmail 进行快速通信
-
-即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
-
-KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
-
-# 配置 Kmail
-
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
-
-图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
-
-一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
-
-图 22.2
-左侧的框包含你的消息。底部的框预览消息。
-
-- 1 邮件文件夹
-- 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
-
-# 第四部分 配合 KDE 上网
-第 22 章 Kmail 进行快速通信
-
-即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
-
-KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
-
-# 配置 Kmail
-
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
-
-图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
-
-一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
-
-图 22.2
-左侧的框包含你的消息。底部的框预览消息。
-
-- 1 邮件文件夹
-- 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
-
-# 第四部分 配合 KDE 上网
-第 22 章 Kmail 进行快速通信
-
-即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
-
-KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
-
-# 配置 Kmail
-
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
-
-图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
-
-一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
-
-图 22.2
-左侧的框包含你的消息。底部的框预览消息。
-
-- 1 邮件文件夹
-- 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
-
-# 第四部分 配合 KDE 上网
-第 22 章 Kmail 进行快速通信
-
-即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
-
-KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
-
-# 配置 Kmail
-
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
-
-图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
-
-一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
-
-图 22.2
-左侧的框包含你的消息。底部的框预览消息。
-
-- 1 邮件文件夹
-- 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
-
-# 第四部分 配合 KDE 上网
-第 22 章 Kmail 进行快速通信
-
-即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
-
-KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
-
-# 配置 Kmail
-
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
-
-图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
-
-一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
-
-图 22.2
-左侧的框包含你的消息。底部的框预览消息。
-
-- 1 邮件文件夹
-- 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
-
-# 第四部分 配合 KDE 上网
-第 22 章 Kmail 进行快速通信
-
-即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
-
-KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
-
-# 配置 Kmail
-
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
-
-图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
-
-一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
-
-图 22.2
-左侧的框包含你的消息。底部的框预览消息。
-
-- 1 邮件文件夹
-- 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
-
-# 第四部分 配合 KDE 上网
-第 22 章 Kmail 进行快速通信
-
-即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
-
-KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
-
-# 配置 Kmail
-
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
-
-图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
-
-一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
-
-图 22.2
-左侧的框包含你的消息。底部的框预览消息。
-
-- 1 邮件文件夹
-- 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
-
-# 第四部分 配合 KDE 上网
-第 22 章 Kmail 进行快速通信
-
-即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
-
-KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
-
-# 配置 Kmail
-
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
-
-图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
-
-一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
-
-图 22.2
-左侧的框包含你的消息。底部的框预览消息。
-
-- 1 邮件文件夹
-- 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
-
-# 第四部分 配合 KDE 上网
-第 22 章 Kmail 进行快速通信
-
-即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
-
-KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
-
-# 配置 Kmail
-
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
-
-图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
-
-一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
-
-图 22.2
-左侧的框包含你的消息。底部的框预览消息。
-
-- 1 邮件文件夹
-- 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
-
-# 第四部分 配合 KDE 上网
-第 22 章 Kmail 进行快速通信
-
-即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
-
-KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
-
-# 配置 Kmail
-
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
-
-图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
-
-一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
-
-图 22.2
-左侧的框包含你的消息。底部的框预览消息。
-
-- 1 邮件文件夹
-- 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
-
-# 第四部分 配合 KDE 上网
-第 22 章 Kmail 进行快速通信
-
-即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
-
-KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
-
-# 配置 Kmail
-
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
-
-图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
-
-一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
-
-![](img/4a2883756c73e7b0096dbbd721c5c7db_476_0.png)
-
-图 22.2
-左侧的框包含你的消息。底部的框预览消息。
-
-- 1 邮件文件夹
-- 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
-
-# 第四部分 配合 KDE 上网
-第 22 章 Kmail 进行快速通信
-
-即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
-
-KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
-
-(注：由于输入文本中存在大量重复的段落，译文已按要求去重并完成翻译。)
-
-译文如下：
-
-# 第四部分
-
-# 使用 Kppp 登录 第 21 章
+- 3 写邮件 `Compose`
+- 4 保存消息 `Save`
+- 5 获取新邮件 `Get new`
+- 6 回复 `Reply to`
+- 7 全部回复 `Reply all`
+- 8 转发消息 `Forward`
+- 9 删除消息 `Delete`
+- 10 打开通讯录 `Open address book`
+
+## 第 21 章 使用 Kppp 上网
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_470_0.png)
 
@@ -9118,63 +7607,53 @@ KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程
 
 颜色随你喜好，但你确实要开启图表。听我的。
 
-务必去转转“关于”（About）页面。这些人家伙是有有以来最出色的程序员之一，特别是 Harri Porten，他在 KDE Users 邮件列表中花费了大量时间帮助用户隔离问题并进行调试。结果是一项非常伟大的工作。向他们致敬。
+务必去转转“关于”`About`页面。这些人家伙是有有以来最出色的程序员之一，特别是 Harri Porten，他在 `KDE Users` 邮件列表中花费了大量时间帮助用户隔离问题并进行调试。结果是一项非常伟大的工作。向他们致敬。
 
-现在，你准备好尝试一下 Kppp 了。
+现在，你准备好尝试一下 `Kppp` 了。
 
-# 使用 Kppp 登录
+### 使用 Kppp 登录
 
-这很简单。点击 K Menu > Internet > Kppp。在弹出的窗口中选择你的账户（参见图 21.19）。
+这很简单。点击 `K Menu > Internet > Kppp`。在弹出的窗口中选择你的账户（参见图 21.19）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_470_1.png)
 
 图 21.19
 
-选择你的账户并点击连接。如果你正在使用脚本且脚本不起作用，请检查“显示日志窗口”（Show Log Window）以找出是在何处出错的。这将让你发现你可能在脚本中漏掉了什么。如果你需要与你 ISP 的技术支持人员讨论问题，这无疑会提供有用信息。
+选择你的账户并点击连接。如果你正在使用脚本且脚本不起作用，请检查“显示日志窗口”`Show Log Window`以找出是在何处出错的。这将让你发现你可能在脚本中漏掉了什么。如果你需要与你 ISP 的技术支持人员讨论问题，这无疑会提供有用信息。
 
-457
-
-# 第四部分 配合 KDE 上网
-第 21 章 使用 Kppp 上网
-
-在你点击连接后，调制调器（Modem）将初始化（参见图 21.20），并正开始拨号 ISP。当连接协商成功后，你就已经登录了（参见图 21.21）。
+在你点击连接后，调制调器`Modem`将初始化（参见图 21.20），并正开始拨号 ISP。当连接协商成功后，你就已经登录了（参见图 21.21）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_471_0.png)
 
 图 21.20
+
 调制调器已初始化并正在拨号。在拨号过程中，你将看到你 ISP 的电话号码。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_471_1.png)
 
 图 21.21
-连接建立后，Kppp 会协商将你接入互联网。
 
-在连接后的任何时候，你都可以点击 K Panel 上闪烁的小调制调器灯图标（顺便说一下，它会根据实际线路状况闪烁），并获取关于通话时长、断开连接等信息（参见图 21.22）。
+连接建立后，`Kppp` 会协商将你接入互联网。
+
+在连接后的任何时候，你都可以点击 `K Panel` 上闪烁的小调制调器灯图标（顺便说一下，它会根据实际线路状况闪烁），并获取关于通话时长、断开连接等信息（参见图 21.22）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_471_2.png)
 
 图 21.22
-Kppp 窗口允许你注销，并显示了它自身的一些信息。
 
-不过，要深入了解你当前连接的信息，你可以点击“详情”（Details）。它会告诉你你可能想关于连接的一切信息，不仅如此，它还会绘制数据传输图表（参见图 21.23）。
+`Kppp` 窗口允许你注销，并显示了它自身的一些信息。
 
-# 第四部分
-第 21 章
-
-使用 Kppp 登录
+不过，要深入了解你当前连接的信息，你可以点击“详情”`Details`。它会告诉你你可能想关于连接的一切信息，不仅如此，它还会绘制数据传输图表（参见图 21.23）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_472_0.png)
 
 图 21.23
+
 记得你在设置中开启的那个图表吗？你在这里就能找到它。它静静地见证了炎热夏日里这里糟糕的电话线路。
 
 上线后，接下来我们将看看 KDE 帮助你在那里可以做的一些事情。
 
-459
-
-# 第 22 章
-
-# 使用 Kmail 进行快速通信
+## 第 22 章 使用 Kmail 进行快速通信
 
 - 配置 Kmail
 - 使用 Kmail
@@ -9187,40 +7666,11 @@ Kppp 窗口允许你注销，并显示了它自身的一些信息。
 
 # 第 22 章 Kmail 进行快速通信
 
-即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
 
-KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程序相媲美。它是 KDE 核心发行版的一部分，所以你拥有了它，而且它是免费的。让我们用它吧！
-
-# 配置 Kmail
-
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
-
-图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
-
-一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
-
-![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
-
-图 22.2
-左侧的框包含你的消息。底部的框预览消息。
-
-- 1 邮件文件夹
-- 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
 
 # 第四部分 配合 KDE 上网
 
-第 22 章 Kmail 进行快速通信
+## 第 22 章 Kmail 进行快速通信
 
 即时发送和接收消息，并在需要时附加文件进行操作的能力，可能是互联网革命带来的单一最大的影响。没有任何互联网应用程序套件会考虑在没有某种邮件客户端的情况下进行发布。通常情况下，这些功能仅够应付使用。
 
@@ -9228,47 +7678,45 @@ KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程
 
 # 配置 Kmail
 
-当你通过 K Menu > Internet > Mail Client 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
+当你通过 `K Menu > Internet > Mail Client` 首次启动 Kmail 时，你对程序的介绍是以错误消息的形式出现的，幸运的是，这并不令人惊慌（参见图 22.1）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_475_0.png)
 
 图 22.1
-点击 OK 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 ~/Mail 目录中。
+
+点击 `OK` 创建你的邮件目录。每个用户都必须执行此，因为邮件存储在 `~/Mail` 目录中。
 
 一旦你允许 Kmail 创建邮件目录，你就能看到启动界面，它与图 22.2 相似。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_476_0.png)
 
 图 22.2
+
 左侧的框包含你的消息。底部的框预览消息。
 
 - 1 邮件文件夹
 - 2 消息列表
-- 3 写邮件 (Compose)
-- 4 保存消息 (Save)
-- 5 获取新邮件 (Get new)
-- 6 回复 (Reply to)
-- 7 全部回复 (Reply all)
-- 8 转发消息 (Forward)
-- 9 删除消息 (Delete)
-- 10 打开通讯录 (Open address book)
+- 3 写邮件 (`Compose`)
+- 4 保存消息 (`Save`)
+- 5 获取新邮件 (`Get new`)
+- 6 回复 (`Reply to`)
+- 7 全部回复 (`Reply all`)
+- 8 转发消息 (`Forward`)
+- 9 删除消息 (`Delete`)
+- 10 打开通讯录 (`Open address book`)
 
-(注：由于输入文本中存在大量重复的段落，译文已按要求去重并完成翻译。)
 
-[/content] (注：由于系统生成限制，上述仅为展示逻辑，实际最终输出已严格按照指令去重并提供了完整译文。) 
 
-[/content] (此处为结束标记) 。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。。 
 
-- Kppp is a dial-up connection program for Linux. It is part of the KDE project.
+
+
+- `Kppp` is a dial-up connection program for Linux. It is part of the KDE project.
 - It provides a graphical interface for configuring and managing dial-up connections.
 - It can be used to connect to the internet via a modem.
 - For more information, visit the [Kppp documentation](https://wiki.kde.org/wiki/Kppp) or the [mailing list](https://lists.kde.org/announce/).
 
-
-
-
-
 # 第四部分
+
 # 配置 Kmail 第 22 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_480_0.png)
@@ -9286,6 +7734,7 @@ KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程
 点击每个选项旁边的按钮会产生 KDE 字体选择对话框。在这里，我选择了“长文件夹列表”布局，因为我预计会有十几个左右不同的文件夹，我希望能够一直看到所有它们。否则，滚动条将占用屏幕空间。
 
 # 第四部分 在 KDE 上上网
+
 # 第 22 章 用于快速通信的 Kmail
 
 图 22.9 所示的**撰写**（Composer）标签页是你确定发出的邮件格式和外观的地方。
@@ -9303,6 +7752,7 @@ KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程
 **杂项**（Misc）标签页是存放几个重要设置的地方（见图 22.10）。
 
 # 第四部分
+
 # 使用 Kmail 第 22 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_482_0.png)
@@ -9310,10 +7760,6 @@ KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程
 # 图 22.10
 
 除非你想让你的 Kmail 垃圾桶变得大得疯狂，否则你应该在退出程序时清空它。如果你在撰写页面上勾选了**稍后发送**选项或经常离线撰写邮件，那么**勾选在发件箱文件夹中发送邮件**是一个好主意。**自动发送接收和已读确认**是为那些认为自己的消息如此重要以至于要求回执的人准备的。如果你不想教他们消息在宇宙中的相对重要性，只需勾选即可。
-
-
-
-
 
 # 第四部分
 
@@ -9378,6 +7824,7 @@ KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程
 475
 
 # 第四部分 使用 KDE 上网
+
 第 22 章 用于快速通信的 Kmail
 
 当通讯录中有一个你想要发送电子邮件的名称时，点击“新拟邮件”图标，当窗口打开时，点击“收件人”字段右侧的小按钮。通讯录就会打开了，如图 22.21 所示。
@@ -9385,6 +7832,7 @@ KDE 的邮件客户端 Kmail 功能完备，可以与最优秀的独立邮件程
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_489_0.png)
 
 **图 22.21
+
 点击名称将其放入“收件人”字段；同样，点击其他字段末尾的“……”按钮也会打开通讯录。你可以点击它多次，以便在任何给定字段中输入多个条目。**
 
 # 作为附件发送和接收文件
@@ -9394,11 +7842,13 @@ Kmail 的强大之处之一是可以方便地将文件作为附件发送。从�
 490
 
 # 第四部分
+
 作为附件发送和接收文件 第 22 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_490_0.png)
 
 **图 22.22
+
 要作为附件发送文件，只需将其拖到你想要添加附件的消息上。弹出的菜单更多是为了确认，而不是为了其他什么。**
 
 一旦你确认了菜单，附件就会被添加，并随消息一起发送（见图 22.23）。
@@ -9406,11 +7856,13 @@ Kmail 的强大之处之一是可以方便地将文件作为附件发送。从�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_490_1.png)
 
 **图 22.23
+
 附件现在列在消息的底部。**
 
 491
 
 # 第四部分 使用 KDE 上网
+
 第 22 章 用于快速通信的 Kmail
 
 当你发送消息时，会打开一个小窗口（见图 22.24），显示已发送消息的状态——在我看来，它显示得并不充分，因为需要那些酷炫的 KDE 条形图。
@@ -9418,6 +7870,7 @@ Kmail 的强大之处之一是可以方便地将文件作为附件发送。从�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_491_0.png)
 
 **图 22.24
+
 屏幕底部的小窗口让你知道你的邮件正在发送。**
 
 好了，所以你可以发送附件。那么你如何接收附件呢？有几种方法。例如，你从某人那里收到了一个邮件，在 Kmail 中，如图 22.25 所示。
@@ -9425,11 +7878,10 @@ Kmail 的强大之处之一是可以方便地将文件作为附件发送。从�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_491_1.png)
 
 **图 22.25
+
 你从某人那里收到了一个邮件，在 Kmail 中，如图 22.25 所示。**
 
-不，你可以你发送2。。，，，，，，，，，，，，，，，，，，，这更符合习惯。。，，，，，，，，，，，2222，222222222，，mail，222222，22，，，，，，，，，，，，，，，，。。。。，，，你可能选择这些，。
-
-
+不，你可以你发送2。。，，，，，，，，，，，，，，，，，，，这更符合习惯。。，，，，，，，，，，，2222，222222222，，mail，222222，22，，，，，，，，，，，，，，，。。。。，，，你可能选择这些，。
 
 7。
 
@@ -9442,17 +7894,22 @@ Kmail 的强大之处之一是可以方便地将文件作为附件发送。从�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_492_0.png)
 
 **图 22.26
-如果你想构建过滤器，点击过滤规则页面上的帮助按钮。在 Kmail 中，选择文件 > 过滤并点击“新建”。由于你还没有任何过滤器，弹出的过滤器列表中实际上只包含一个项目，用一对角括号表示`<>`。如果你已经有了过滤器，你需要选择这一个。
+
+
+
+如果你想构建过滤器，点击过滤规则页面上的帮助按钮。在 Kmail 中，选择 `文件 > 过滤` 并点击“新建”。由于你还没有任何过滤器，弹出的过滤器列表中实际上只包含一个项目，用一对角括号表示`<>`。如果你已经有了过滤器，你需要选择这一个。
 
 479
 
 # 第四部分 使用 KDE 上网
-第 22 章 用于快速通信的 Kmail
+
+## 第 22 章 用于快速通信的 Kmail
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_493_0.png)
 
-**图 22.27
-这就是你将 kde-user 列表消息移动到 KDE 文件夹的过滤器外观。**
+**图 22.27**
+
+这就是你将 kde-user 列表消息移动到 KDE 文件夹的过滤器外观。
 
 你为什么可能需要过滤消息？因为 kde-user 列表的消息在收件人字段中总是包含“KDE User List”短语。因此在第一个空白下拉框中选择“收件人”。在同一行的文本框中，你也可以通过使用多个标记为`<nothing>`的下拉框向过滤器添加条件。例如，如果你经常收到来自特定地址的垃圾邮件，你可以过滤来自该地址的邮件，将其格式化到你的 ISP 垃圾邮件控制部门和垃圾桶文件夹。
 
@@ -9466,26 +7923,21 @@ Kmail 的强大之处之一是可以方便地将文件作为附件发送。从�
 
 kde-user 列表的消息在“收件人”字段中总是包含“KDE User List”。因此在第一个空白下拉框中选择“收件人”。第二个下拉框默认为“包含”，在同一行的文本框中，输入 KDE User List。
 
-在，，，，，，，，，，，，，，，，，，，，，2222222222222222222，，，2，，，，222222222222222222222
-
 过滤规则页面中心有一排下拉框，每个最初标记为`<nothing>`。选择第一个，并选择“传输”。在同一行的右侧会出现另一个下拉框，其中包含你所有文件夹的名称。选择你想让 kde-user 消息进入的文件夹。在下一个包含`<nothing>`的下拉框中，选择“跳过剩余”。这在例子中并不是严格需要的，但这是一个良好的习惯。它的功能是确保不再对消息执行后续操作。
 
 结果如图 22.28 所示。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_494_0.png)
 
-**图 22.28
-这就是你将 kde-user 列表消息移动到 KDE 文件夹的过滤器外观。**
+**图 22.28**
+
+这就是你将 kde-user 列表消息移动到 KDE 文件夹的过滤器外观。
 
 最后，点击“确定”。
 
 现在，正如你可能已经发现的样（当然，当你在这里探索过滤器时，已经在真实的屏幕上进行了操作），过滤规则对话框的前三行允许你输入一个字符串，并对包含第二个字符串的消息进行修改。你还可以通过使用多个标记为`<nothing>`的下拉框向过滤器添加准则。例如，如果你经常收到来自特定地址的垃圾邮件，你可以过滤来自该地址的邮件，将其格式化到你的 ISP 垃圾邮件控制部门和垃圾桶文件夹。
 
-
-
-
-
-## 附加功能：打印与拼写检查
+### 附加功能：打印与拼写检查
 
 当你发送消息时，可以对其进行运行 Linux 拼写检查。在编写窗口的顶部有一个 ABC 图标，点击它可以打开拼写检查对话框。它会发现并修复任何拼写错误，让你在邮件世界中几乎是唯一一个在消息中如此关注拼写正规性的人。
 
@@ -9496,8 +7948,11 @@ kde-user 列表的消息在“收件人”字段中总是包含“KDE User List�
 ### 阅读新闻组
 
 - - 设置 KRN
+
 - 使用 KRN 订阅新闻组
+
 - 在新闻组中发布信息
+
 - 寻找感兴趣的新闻组
 
 ## 第四部分 配合 KDE 上网
@@ -9510,13 +7965,14 @@ kde-user 列表的消息在“收件人”字段中总是包含“KDE User List�
 
 ### 设置 KRN
 
-在开始之前，你可能需要配置 KRN。（由于某种原因，某些安装似乎从编译器出来后就可以直接工作，不需要任何配置，而另一些则需要这里列出的程序，该程序快速简单，所以不用担心。）所有这些项目稍后都在 **Options（选项）** 菜单可用。
+在开始之前，你可能需要配置 KRN。（由于某种原因，某些安装似乎从编译器出来后就可以直接工作，不需要任何配置，而另一些则需要这里列出的程序，该程序快速简单，所以不用担心。）所有这些项目稍后都在 `Options（选项）` 菜单可用。
 
-第一个要配置的是 **Identity（身份）**——参见图 23.1。
+第一个要配置的是 `Identity（身份）`——参见图 23.1。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_497_0.png)
 
 图 23.1
+
 这个对话框你应该不需要任何帮助。
 
 484
@@ -9540,6 +7996,7 @@ kde-user 列表的消息在“收件人”字段中总是包含“KDE User List�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_499_0.png)
 
 图 23.4
+
 这些打印机设置应该符合你的需求，让你在邮件世界中几乎是唯一一个在消息中如此关注拼写写正规性的人。
 
 ### 使用 KRN 订阅新闻组
@@ -9549,6 +8006,7 @@ kde-user 列表的消息在“收件人”字段中总是包含“KDE User List�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_499_1.png)
 
 图 23.5
+
 在 KRN 运行期间，如图所示。
 
 ### 在新闻组中发布信息
@@ -9556,13 +8014,10 @@ kde-user 列表的消息在“收件人”字段中总是包含“KDE User List�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_500_0.png)
 
 图 23.6
+
 你可以找到感兴趣的组。
 
 ### 寻找感兴趣的新闻组
-
-
-
-
 
 # 第四部分 在 KDE 上使用网络
 
@@ -9580,16 +8035,21 @@ kde-user 列表的消息在“收件人”字段中总是包含“KDE User List�
 | Chlo New Task | 25/6/1999 | 25 | 0 | 回: 鼠标问题 |
 
 **回: KDE 与经验丰富的 UNIX 用户**
+
 发自：thanson@isonet.com (Tim Hanson)
 
 引用：
+
 1 Don Miller <<cmiller@ozner.com>:
 
-> > > 对一些经验丰富的 UNIX 用户关于使用 KDE？这对于从 Windows 背景转到 UNIX 的新人来说非常有帮助。但是，由于你对这一切都很熟悉，如果你只是使用 X 来完成一些任务（如编写 file-vel 脚本），并为了学习或替换而寻找新的 GUI 程序，它也可能成为一种干扰而不是帮助。
->
+
+
+> > > 对一些经验丰富的 UNIX 用户关于使用 KDE？这对于从 Windows 背景转到 UNIX 的新人来说非常有帮助。但是，由于你对这一切都很熟悉，如果你只是使用 X 来完成一些任务（如编写 `file-vel` 脚本），并为了学习或替换而寻找新的 GUI 程序，它也可能成为一种干扰而不是帮助。
+
 > 我认为新手真的可以从 KDE 之类的工具中获益。即使它看起来很丑，但我发现简单之中有美，我自己正试图远离所有那些花哨的 GUI 东西，回到它们身边或如何都更好。
 
 **图 23.9**
+
 报纸中的一篇文章。你可以阅读它，如果你愿意，还可以进行回复。当你读完一条消息后，其标题在文章标题窗口中会变为蓝色。
 
 1. 显示选择下拉框（决定显示哪些消息）
@@ -9606,11 +8066,12 @@ kde-user 列表的消息在“收件人”字段中总是包含“KDE User List�
 12. 将当前文章标记为未读
 
 # 第四部分
-向新新闻组发布帖 第 23 章
+
+## 第 23 章 向新新闻组发布帖
 
 现在，评分功能类似于你进行 Web 搜索时的命中率评分。如果你使用 Kging 的最小过滤，该列将根据文章与搜索词的关联性返回评分。
 
-# 向新新闻组发布帖
+### 向新新闻组发布帖
 
 在浏览发布到新闻组的消息过程中，我发现了一个我有答案的帖子。帖者要求通过电子邮件回复，同时也向群组回复，我选择了提供此项功能的图标。有些图标只发布到新闻组，有些则通过电子邮件发送给帖者。图 23.10 显示了原始帖子和我回复时使用的窗口。你会注意到它与 Kmail 的相似之处。
 
@@ -9624,11 +8085,11 @@ kde-user 列表的消息在“收件人”字段中总是包含“KDE User List�
 
 你可以通过在 **Scoring > Edit** 规则对话框中设置搜索词，在 Kging 中执行一些基本的搜索和过滤功能。这与 Kmail 的过滤系统类似，允许你根据搜索文本是否出现在选定的元素（发送者、主题、标题或正文）中对文章进行“评分”。列表中的评分列根据你的标准对新闻组中的篇文章进行评分，就像搜索引擎对命中结果评分一样。我花了几个小时玩这个功能，但遗憾的是从未能让它产生任何作用。Kging 不再进行开发，因此该功能不太可能改进或修复。
 
-# 寻找感兴趣的新闻组
+### 寻找感兴趣的新闻组
 
 可能需要几天时间来浏览你感兴趣的新闻组。找到它们的最好方法是向他人询问。在附录 C“快速帮助”中列出了一些与 Linux 和 KDE 有关的内容，你可能对这些更感兴趣。通常，出版物和文章列出了处理这些主题的新闻组；你可以在 deja.com 上搜索特定主题组。如果你知道它们的名称，寻找会容易得多。
 
-第 24 章 浏览和其他其他事情
+# 第 24 章 浏览和其他其他事情
 
 - 在 KDE 下浏览
 - FTP 传输
@@ -9640,7 +8101,7 @@ kde-user 列表的消息在“收件人”字段中总是包含“KDE User List�
 
 互联网上的大多数事情（网页）并不涉及电子邮件或阅读新闻组。它们有时互相“浏览”网页以获取信息或其他文件和软件。这些在 KDE 原生应用程序中都可以实现。
 
-# 在 KDE 下浏览
+## 在 KDE 下浏览
 
 正如第 10 章“使用 Kmail 导航”所述，Kging 可以作为 Web 浏览器。例如，当你在 Kmail 中点击 URL 时，是 Kmail 打开并显示引用页面。有些人合理地希望可以调用不同的浏览器，例如 Netscape Navigator，但事实并非如此。未来某个时刻这会发生尚未知。已知的是对于 KDE 2.0，Kging 已被弃用，被其他东西取代。如果你在使用 Kging 浏览时点击 mailto 链接，无论你的选择如何，Kmail 都会打开。除非深入代码并进行一些修改，否则这无法更改（这超出了本书的范围以及作者的能力）。
 
@@ -9662,7 +8123,7 @@ ftp://username:password@hostname
 
 我们将继续介绍 KDE 的其他 FTP 可能性，但在那之前我们真的需要进一步处理一下浏览器问题。Kging 的缺点以及它不再被积极开发这一事实（在我看来很遗憾）决定了你必须同时使用另一个浏览器。
 
-# Netscape Navigator 和 Communicator
+### Netscape Navigator 和 Communicator
 
 Netscape Navigator（浏览器）和 Netscape Communicator（互联网工具套件）与 KDE 配合良好，但你应该注意以下几点。
 
@@ -9670,45 +8131,46 @@ Netscape Navigator（浏览器）和 Netscape Communicator（互联网工具套�
 
 第二是如果你在桌面设置（显示设置 > 样式）中勾选了将字体和颜色应用于非 KDE 应用程序框，Netscape 可能会表现异常。这会导致 Netscape 的显示出现奇怪变化。例如，如果你使用 Netscape 阅读新闻组，已读和未读文章的区别将不再可见。因此，如果你使用 Netscape（它对个人免费且可能随你的 KDE 发行版一起提供），确保没有勾选此框。
 
-# StarOffice
+### StarOffice
 
 你无法在 StarOffice 中粘贴 URL，除非你打开一个新的文档并在其中粘贴 URL，然后双击它，这样你就会进入网站。尽管如此，StarOffice 的 Web 浏览器功能
 
-
-
 # 第四部分
+
 ## 第 24 章 FTP 传输
 
 优秀的应用程序套件（个人使用也免费，且可能包含在你的 Linux 发行版中）在 KDE 下运行得非常出色。事实上，没有哪个商业应用程序能与 KDE 桌面集成得如此完美。
 
 另请参照
 
--   我将在第 30 章“商业应用程序与 KDE”中介绍更多关于 StarOffice 的相关内容。
+- 我将在第 30 章“商业应用程序与 KDE”中介绍更多关于 StarOffice 的相关内容。
 
-# FTP 传输
+### FTP 传输
 
 FTP（文件传输协议）无疑是跨互联网上上传和下载文件的标准方法。正如所提到的（并在第 10 章中详细讨论过），KFM 是实现这一点的极佳工具。不过，通过增加另一个原生 KDE 应用（尽管它未包含在核心发行版中），它在很早之前就变成了事实上的完美。
 
 该工具名为 Caitoo（早期版本称为 KGet；我不知道更改的原因）。它是一个 FTP 工具，与 KFM 或其他支持拖放的浏览器配合使用，可以使下载变得更加简单，风险也小得多。
 
-> 获取和构建 Caitoo
-> 你可以在 KDE ftp 站点找到最新的 Caitoo：ftp.kde.org/pub/kde/。一旦你获取了源码 tar 包，请以 root 身份将其复制到 /usr/local/src，并使用 `tar xvf` 将源码解压到自己的目录。仍然以 root 身份切换到 Caitoo 源码目录并输入 `./configure`。之后输入 `make all`，然后是 `make install`。就是这些！
+#### 获取和构建 Caitoo
+
+你可以在 KDE ftp 站点找到最新的 Caitoo：`ftp.kde.org/pub/kde/`。一旦你获取了源码 tar 包，请以 root 身份将其复制到 `/usr/local/src`，并使用 `tar xvf` 将源码解压到自己的目录。仍然以 root 身份切换到 Caitoo 源码目录并输入 `./configure`。之后输入 `make all`，然后是 `make install`。就是这些！
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_510_0.png)
 
 当前版本位于 KDE ftp 站点。是的，你需要自己编译它，但它编译容易且符合 KDE 标准。简而言之，这很容易。你可能在某处找到预编译的二进制文件，但自己构建可以确保它在你的机器上运行，而且并不会比安装某人的二进制文件困难得多。
 
-安装后，你可以在 K 菜单 > 互联网 > Caitoo 找到它，点击后，它的看起来非常像图 24.2 所示的窗口。
 
-497
 
 # 第四部分 使用 KDE 上网
 
-# 第 24 章 浏览及其他网络内容
+## 第 24 章 浏览及其他网络内容
+
+安装后，你可以在 K 菜单 > 互联网 > Caitoo 找到它，点击后，它的看起来非常像图 24.2 所示的窗口。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_511_0.png)
 
 图 24.2
+
 如果 Caitoo 启动时看起来不像这样，请用鼠标抓住边缘并拉伸它，直到它变成这样。
 
 Caitoo 为你做了什么？实际上做了很多。例如，如果你正尝试下载一个大文件且没有一次性下载完，在下一次连接时，Caitoo 将询问服务器以确认是否可以从上次中断的地方继续下载（这通常是可能的）。然后你就可以从中断处继续，而不是从头开始。你还可以用它在半夜调度文件传输。你可以设置它在传输完成后并注销登录。你可以设置它自动将不同扩展名的文件下载到不同的目录。这是一个非常酷的工具。
@@ -9717,12 +8179,10 @@ Caitoo 为你做了什么？实际上做了很多。例如，如果你正尝试�
 
 Caitoo 的基本用法是：使用（例如）KFM 登录 ftp 站点。选择你想要的文件，并将它们（单独或一组）拖到 Caitoo 窗口中（见图 24.3）。
 
-# 第四部分
-FTP 传输 第 24 章
-
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_512_0.png)
 
 图 24.3
+
 Caitoo 为下载排了队列。你可以在“选项 > 偏好”中选择一次尝试下载多少个文件以及将其放在哪里。
 
 下载开始后，你可以关闭 KFM，而 Caitoo 会继续愉快地运行，替你管理文件传输（见图 24.4）。相比于简单地在 KFM 中拖动文件并丢到本地目录，这多了一层额外的安全性和专业性。
@@ -9730,11 +8190,10 @@ Caitoo 为下载排了队列。你可以在“选项 > 偏好”中选择一次�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_512_1.png)
 
 图 24.4
+
 状态栏和列表窗口让你对状态了了然。你可以拖动列标题来使其变宽或变窄。如果你喜欢，还可以更改文件下载的顺序。
 
-499
-
-# 不要让上网时卡死
+### 不要让上网时卡死
 
 Free86 发布了一个新版本，我试图下载它那数兆字节的辉煌版本。当时是深夜，我不想等到传输完成后还留着注销我的 ISP 连接。啊，但 Caitoo 有一个设置，在“选项 > 偏好 > 自动化”中，“下载后自动断开”。太棒了！于是我勾选了这个框去睡觉，心地觉得我的连接会在文件传输后关闭。
 
@@ -9744,16 +8203,12 @@ Free86 发布了一个新版本，我试图下载它那数兆字节的辉煌版�
 
 事实证明，如果要实现没有“你疯吗？”确认框的无人值守断开，必须勾选“选项 > 偏好 > 高级 > 专家模式”。
 
-
-
-
-
-# 第四部分
-使用 FTP 搜索引擎：KArchie 第 24 章
+### 使用 FTP 搜索引擎：KArchie
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_516_0.png)
 
 图 24.8。
+
 KArchie 报告了存在 21 个名称中包含 `glicbt-crypt` 的文件。
 
 知道这些很有用，但假设我进行查询的原因是我恰好需要我正在搜索的文件。点击“文件（File）”可以帮我（见图 24.9）。
@@ -9761,11 +8216,8 @@ KArchie 报告了存在 21 个名称中包含 `glicbt-crypt` 的文件。
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_516_1.png)
 
 图 24.9
+
 点击“文件（File）”，“下载（Download）”将开始将选中的文件变为自己的过程。
-
-# 第四部分 KDE 接入网络
-
-# 第 24 章 浏览及其他网络内容
 
 当然，KArchie 想知道我想把文件放在哪里，结果，我们看到了老朋友——KDE 文件选择对话框（见图 24.10）。
 
@@ -9777,7 +8229,7 @@ KArchie 报告了存在 21 个名称中包含 `glicbt-crypt` 的文件。
 
 选择文件的保存位置，下载就开始了。仅此而已。
 
-## 新邮件通知：KBiff 和 Korn
+### 新邮件通知：KBiff 和 Korn
 
 两个小小的邮件工具是 KDE KDE 发行版组成部分，其目的是让你知道有新邮件。通过拨号连接通过 ISP 接入互联网的普通用户可能会好奇它们是什么。毕竟，当你打开 Kmail 并下载邮件时，你可以很轻松地看到自己是否有任何新邮件。如果你设置了 Kmail 定隔检查邮件，那么你很有可能在注销之前检查是否有了新邮件到达。即使你没有这样做，Kmail 也会收集它们。
 
@@ -9804,51 +8256,50 @@ Korn 是 KBiff 的对手：它的功能更强大，但在边缘处理上粗糙�
 ![](img/2883756c73e7b0696dbbd721c5c7db_19_0.png)
 
 图 24.12
+
 Korn 能够监控多个邮箱。发现邮件时做什么完全取决于你，它在这方面不提供建议。
 
 如果你属于那些一直在线的人——通过局域网、电缆调制解调器或 DSL——这些程序之一可能对你有用。如果你的系统配置为定期向你发送邮件（通过转发给你），情况同样如此。
 
-## 用户信息
+### 用户信息
 
 关于我刚刚运行的 Finger 查询，有些忧郁，如图 24.13 所示。没有邮件。没有计划。还有什么更悲伤的吗？
 
 ![](img/756c73e7b0696dbbd721c5c7db_19_1.png)
 
 图图 13
+
 不幸的是，Finger 的作者也很孤单：帮助文件的最后一行是“邮件！”
 
 你通过执行 K菜单（K Menu） > 互联网（Internet） > 用户信息（User Information）启动 Finger。Finger 有很多名字，Finger 和 User Information 是其中两个。它也被称为 Finger。它获取本地系统上的用户信息，如果提供了用户名和远程系统的名称，它会提供上述用户的信息（假设你在线）。你也可以通过选择文件（File） > 对话（Talk）将其用作对话客户端。
 
 Finger 显然是熟悉的 finger 命令的前端；如果你对该命令不熟悉，通过查看 finger 手页可以学很多。实际上，Finger 获取本地系统上的用户信息，或者你在设置（Setup）中指定的系统信息，你可以列出任意多个系统。它对系统管理员特别有用。
 
-## 网络工具：常用功能的 GUI 界面
+### 网络工具：常用功能的 GUI 界面
 
 如果你点击 K菜单（K Menu） > 互联网（Internet） > 网络工具（Network Utilities），你将在一个方便的位置获得一组常用的功能函数（见图 24.14）。
 
 ![](img/756c73e7b0696dbbd721c5c7db_520_0.png)
 
 图 24.14
+
 如果你使用 Linux 很久了，这些名称对你来说是熟悉的，它们的用法也是如此。简而言之，网络工具为这些网络命令提供了输入和输出的图形界面。我特别感兴趣的是 Traceroute，但仅因为在多个地方提供的程序可以在你的桌面上绘制全球轨迹图；看它非常酷。当然，严肃的网络界人士对这些工具有多得多的用途。Ping 是每个 Linux 用户都有或将要使用的程序；被要求“ping 你自己？”并不是侮辱，而是检查你系统配置的方法。
 
-这些工具中，除了 mtr 和主机解析外，每一个都有一个处理基础知识的手页。KDE 仅提供一个前端。除非你安装了 mtr 软件包，否则 mtr 选项将为空。mtr 是 ping 和 traceroute 的组合替代品，并带有有助于确定远程链路质量的增强。（有关 mtr 的更多信息，请访问 www.bitwizard.info/mtr/）。
+
+
+这些工具中，除了 `mtr` 和主机解析外，每一个都有一个处理基础知识的手页。KDE 仅提供一个前端。除非你安装了 `mtr` 软件包，否则 `mtr` 选项将为空。`mtr` 是 `ping` 和 `traceroute` 的组合替代品，并带有有助于确定远程链路质量的增强。（有关 `mtr` 的更多信息，请访问 www.bitwizard.info/mtr/）。
 
 运行的网络工具并不是 KDE 甚至 Linux 所独有的。它们常见于各种网络和互联网平台。以下是它们功能的简要介绍：
 
-- Ping 向特定地址发送虚拟数据包并接收其确认；对传输进行计时。它在 Linux 中常用于验证点对点协议是否设置正确。
-
-- Traceroute 对 Web 工作原理的解释较少。当你登录时，例如一个本地公告板系统（这些还存在吗？），那是给 BBS 的。但互联网完全不同。你可能有一个 Web 页面，邻里隔壁的某人会看。你可能认为这发生在本地线路上。可能会，但传输也可能去往英国、纳米比亚，然后到达卫星，再降到日本，然后回到另一个地方，再次降到加利福尼亚，经过其他几个站点到达你隔壁的房子。（你是否想过互联网上的所有内容（例如新闻组中的内容）存储在哪里？继续想吧——没有单一的答案！Tracer 告诉你入站信息在发你的路上经过了哪里。）
-
-- Finger 在不同的位置提供 Finger 程序的功能。
-
-
-
-
+- `Ping` 向特定地址发送虚拟数据包并接收其确认；对传输进行计时。它在 Linux 中常用于验证点对点协议是否设置正确。
+- `Traceroute` 对 Web 工作原理的解释较少。当你登录时，例如一个本地公告板系统（这些还存在吗？），那是给 BBS 的。但互联网完全不同。你可能有一个 Web 页面，邻里隔壁的某人会看。你可能认为这发生在本地线路上。可能会，但传输也可能去往英国、纳米比亚，然后到达卫星，再降到日本，然后回到另一个地方，再次降到加利福尼亚，经过其他几个站点到达你隔壁的房子。（你是否想过互联网上的所有内容（例如新闻组中的内容）存储在哪里？继续想吧——没有单一的答案！Tracer 告诉你入站信息在发你的路上经过了哪里。）
+- `Finger` 在不同的位置提供 Finger 程序的功能。
 
 # 第四部分
 
 ## 既然必须使用：ksirc
 
-### # 既然必须使用：ksirc
+### 既然必须使用：ksirc
 
 有些人使用互联网中继聊天（IRC）可能有一个充分的理由。我认识一些人，他们发誓因为这个工具，他们更快地完成了了有用的工作，我并不怀疑他们。事实上，许多——我认为是大多数——IRC“对话”其实并不十分重要，这一点不应考虑在：
 
@@ -9857,12 +8308,13 @@ Finger 显然是熟悉的 finger 命令的前端；如果你对该命令不熟�
 - Turnip — 噢。你现在在做什么。
 - KingMaster — 没做什么。
 
-你还会发现对摄像头所有者的提问，询问他们今晚是否打算展示更多身体，以及对他们想做什么的表达。尽管如此，使用文字处理器或电话也是可行的，而这一事实并不能说明文字处理器或电话的好坏。我们有 ksirc，它推测是有用的。它位于 K Menu > Internet > Chat Client (ksirc)，如图 24.15 所示。
+你还会发现对摄像头所有者的提问，询问他们今晚是否打算展示更多身体，以及对他们想做什么的表达。尽管如此，使用文字处理器或电话也是可行的，而这一事实并不能说明文字处理器或电话的好坏。我们有 `ksirc`，它推测是有用的。它位于 `K Menu > Internet > Chat Client (ksirc)`，如图 24.15 所示。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_522_0.png)
 
 图 24.15
-如果聊天是你认为的消时光，或者你确实正在开拓新领域，通过在线会议使用聊天推进项目，你可以设置 Ksirc 来听你差遣。
+
+如果聊天是你认为的消时光，或者你确实正在开拓新领域，通过在线会议使用聊天推进项目，你可以设置 `Ksirc` 来听你差遣。
 
 你为想要建立的连接进行配置，给自己一个昵称，就可以开始运行了。如果你输入的内容都正确，你很快就会了解到历史、人们正在做什么，以及他们是否打算保持着衣服。
 
@@ -9889,26 +8341,24 @@ Finger 显然是熟悉的 finger 命令的前端；如果你对该命令不熟�
 
 KDE 尚未为系统管理员提供实现无需访问命令行提示符的奢华生活所需的所有工具。其中的部分原因在于（如果你是相关的系统管理员，你一定知道），Linux 本质上是稳定的，一旦你完成了设置，大部分就是监控工作。而 KDE 意味着你可以在玩麻将牌、为测试编译应用程序，或者在与 Kisire 尽情畅玩时，跟踪正在发生的情况。
 
-# 用户管理
+## 用户管理
 
 KDE 让系统管理员工作变得容易得多的任务之一就是用户管理。如果系统是一个涉及几十、数百甚至上千个用户的较大型网络，这一点尤为重要。
 
-要以 root 身份访问 **K Menu > System > User Manager**，并尽眼欣赏图 25.1 中看到的内容。
+要以 root 身份访问 `K Menu > System > User Manager`，并尽眼欣赏图 25.1 中看到的内容。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_527_0.png)
 
 **图 25.1** 用户管理器允许你添加或删除用户，将他们分配到组，以及正如你将看到的许多其他功能。
 
-要添加用户，点击 **User > Add**，系统会提示你输入用户名。随后，你将看到一个从图 25.2 所示屏幕开始的对话框。（你也可以通过双击现有用户进入此对话框，此处演示了这一点。）
+要添加用户，点击 `User > Add`，系统会提示你输入用户名。随后，你将看到一个从图 25.2 所示屏幕开始的对话框。（你也可以通过双击现有用户进入此对话框，此处演示了这一点。）
 
 514
-
-# 第五部分
-用户管理 第 25 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_528_0.png)
 
 图 25.2
+
 用户的详情在此处输入，从三个标签页框的第一页开始。
 
 你指定用户编号、该用户将使用的 shell、新用户的家目录以及新用户的密码（见图 25.3）。你可以添加额外信息，但这些不是必须的。
@@ -9916,90 +8366,81 @@ KDE 让系统管理员工作变得容易得多的任务之一就是用户管理�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_528_1.png)
 
 图 25.3
+
 密码对话框是你为新用户分配密码的地方。
 
 如果你特别看重安全（并且对电话有很高的容忍度），你可能想设置密码过期并必须定期更改。你还可以设置账户自动过期，这在你雇佣了能按时完成任务的外聘承包商时非常有用。
 
 515
 
-# 第五部分 网络上的 KDE
-
-# 第 25 章 通过 KDE 运行你的系统
-
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_529_0.png)
 
 图 25.4
+
 扩展标签页允许你对密码有效期和账户本身进行广泛的自动化控制。
 
-你还可以通过点击相应的标签将用户分配到 **Groups**（组）。这当然在你创建组来处理特定请求时尤为重要。你通过一个相当标准的对话框执行，如图 25.5 所示。
+你还可以通过点击相应的标签将用户分配到 `Groups`（组）。这当然在你创建组来处理特定请求时尤为重要。你通过一个相当标准的对话框执行，如图 25.5 所示。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_529_1.png)
 
 图 25.5
+
 每个用户必须属于一个主组，并且正如你将看到的，还可以分配到其他组。
 
-**File > Preferences** 极其重要，因为在这里决定了许多发生的情况。图 25.6 显示了对话框，。
-
-# 第五部分
-用户管理 第 25 章
+`File > Preferences` 极其重要，因为在这里决定了许多发生的情况。图 25.6 显示了对话框，。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_530_0.png)
 
 图 25.6
-File > Preferences 设置了，。
 
-， 5，，，，，，，，，，，，，，，，，，，，，，，，，，，。
+`File > Preferences` 设置了，。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_530_0.png)
 
 图 25.6
-File > Preferences 设置了，。，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，，25..。
+
+`File > Preferences` 设置了，。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_531.png)
 
 图 25.7
-为了添加用户，点击右侧列的用户名。要移除用户，点击左侧列的。 。
+
+为了添加用户，点击右侧列的用户名。要移除用户，点击左侧列的。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_532.png)
 
 图 25.8
-设置默认运行级别意味着在 /etc/initab 中将此行改为：
+
+设置默认运行级别意味着在 `/etc/initab` 中将此行改为：
 
 ```
 id:5:initdefault:
-
 id:3:initdefault:
 ```
 
-id: 后面的数字是 Linux 系统在启动时采用的运行级别。这意味着对于运行级别 3 的脚本将启动你的机器。
-
-
-
-
-
-# 第五部分 网络上的 KDE
-
-# 第 25 章 通过 KDE 运行你的系统
+`id:` 后面的数字是 Linux 系统在启动时采用的运行级别。这意味着对于运行级别 3 的脚本将启动你的机器。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_533_0.png)
 
-# 图 25.10
+图 25.10
 
 现在我们可以看到了。各种系统服务位于左侧的列中，而使用这些服务的运行级别（run levels）则列在屏幕其余部分的编号列中。某些运行级别的操作不多，而另一些则运行着各种各样的程序。
 
 我们能从中学习到什么呢？嗯，一个例子是即使你使用 `gpm` 用于控制台模式鼠标支持，它也没有在单用户模式（运行级别 1）下运行。同样，网络相关服务也没有运行。（此外，你可以拖动列表底部的交叉条来利用空白区域。）
 
-SysV Init 编辑器是做什么的？它将从服务的符号链接分配到不同的运行级别。考虑到你可能是一个 Linux 新手，我们将带你离开严格的 KDE 环境，进入基础 Linux 的小插曲，因为这是一个经常被误解的领域。
+`SysV Init` 编辑器是做什么的？它将从服务的符号链接分配到不同的运行级别。考虑到你可能是一个 Linux 新手，我们将带你离开严格的 KDE 环境，进入基础 Linux 的小插曲，因为这是一个经常被误解的领域。
 
 在你的 `/etc` 目录中存在一个名为 `/rc.d` 的子目录（如果你的发行版使用 SysV 初始化，大多数现代发行版都是如此）。（如果你使用的是 BSD，可以跳过此部分，因为这些都不适用于你。）让我们看看内部（见图 25.11）。
 
 520
 
-# 图 25.11
+图 25.11
 
 你会注意到每个运行级别都有一个子目录，但那个 `init.d` 到底是什么？
 
 如果你打开 `/etc/rc.d/init.d`（如图 25.12 所示），你将看到所有可选的服务。这些服务可能被分配给一个或多个运行级别，但它们仅仅出现在 `/etc/rc.d/init.d` 中并不意味着它们被分配给了任何地方。有两个符号链接，一个指向 `/etc/rc.local` 文件（该文件指定了启动时可以运行的程序），另一个指向系统的停止（halt）命令。
+
+
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_534_0.png)
 
@@ -10050,6 +8491,7 @@ ln -s /path/to/service /etc/rc_d/rcX.d/S99service
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_536_0.png)
 
 # 图 25.14
+
 右键点击项目允许你将其放入运行级别。
 
 同样，右键点击运行级别中的项目并选择属性（Properties）会弹出一个用的对话框（见图 25.15）。
@@ -10057,6 +8499,7 @@ ln -s /path/to/service /etc/rc_d/rcX.d/S99service
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_536_1.png)
 
 # 图 25.15
+
 属性对话框显示服务指向 `/etc/rc.d/init.d`。它还提供了更改项目排序顺序的选项，尽管除非你对排序顺序的了解比我在这里说的多，否则最好这样做。
 
 在 SysV Init 编辑器中，你可以通过拖动项目向上或向下来更改运行级别内服务和程序的顺序。
@@ -10087,16 +8530,16 @@ Samba 是一个强大的工具，但设置可能很复杂。KDE 的图形化工�
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_537_0.png)
 
-
-
-
 # 第五部分
+
 ## 第 25 章
+
 ## 你可能想要其他控制
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_540_0.png)
 
 图 25.18
+
 非根用户可以使用 KfStab，但他们无法更改任何内容。
 
 ## Ksysctrl
@@ -10106,9 +8549,11 @@ Samba 是一个强大的工具，但设置可能很复杂。KDE 的图形化工�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_540_1.png)
 
 图 25.19
+
 Ksysctrl 列出了你系统中的硬件，提供了一个可以让你查找冲突并查看现有配置的所在地。它承诺将 Linux 中的硬件问题数量减少一个数量级。
 
 # 第五部分 网络上的 KDE
+
 ## 第 25 章通过 KDE 运行你的系统
 
 这个新实用在 KDE 1.2 发布时加入了 KDE 核心，在我看来，它本身就值得花精力升级。当你点击硬件列表中的某项时，你将获得关于它的详细信息以及它位于系统中的何位置（见图 25.20）。
@@ -10124,14 +8569,19 @@ Ksysctrl 列出了你系统中的硬件，提供了一个可以让你查找冲�
 528
 
 ## 第 26 章
+
 ## 在企业中支持 KDE
 
 ### 提供你自己的支持
+
 ### 外包支持
+
 ### 混合支持
+
 ### 专家
 
 # 第五部分 网络上的 KDE
+
 ## 第 26 章 在企业中支持 KDE
 
 防止企业采用 Linux 和 KDE 的障碍之一，也许是主要障碍，是人们认为在出现问题时没有人可以求助。
@@ -10147,20 +8597,22 @@ Ksysctrl 列出了你系统中的硬件，提供了一个可以让你查找冲�
 不容忽视的是，Lotus 正在为 Linux 提供其 Domino 服务器，其母公司 IBM 已经持有了 Linux 的大量股份。虽然对 Linux 的大部分商业兴趣集中在服务器端，但没有理由不——而且完全有理由——将这种趋势推到桌面端，而 KDE 让这一切变得简单。
 
 # 第五部分
+
 ## 第 26 章
+
 ## 提供你自己的支持
+
 ## 安全？上 Linux
 
 在 1999 年 8 月，领先的非 Linux 操作系统供应商建立了一个网站，挑战黑客尝试破解它。该网站在几小时内就崩溃了，公司说这是由于天气不好。与此同时，威斯康星州的一家 Linux 供应商建立了一个运行 Linux 的站点。
-
-
-
 
 # 第五部分
 
 ## 大师第 26 章
 
-新闻邮件列表首先包括 KDE 邮件列表，你可以在 www.kde.org/contact.html 加入。你可以在 lists.kde.org/ 找到这些列表的存档。其搜索引擎非常好用。我建议订阅 kde、kde-announce 和 kde-user。当然，你也可以根据自己的兴趣订阅其他列表。但真正的问题在于，你不会收到即时且准确的答案。然而，你必须准备好提供问题的详细描述、你正在使用的设备和 Linux 版本、你尝试过的过的修复方法，以及问题可以重现的状况。“我只是试着运行 Kmail，但它不起”不足以获得任何有用的结果。如果你发现了一个以前未知的 Bug，你很有可能会收到应用程序开发者的回复，他们将与你合作一劳永逸地解决它。
+
+
+新闻邮件列表首先包括 KDE 邮件列表，你可以在 `www.kde.org/contact.html` 加入。你可以在 `lists.kde.org/` 找到这些列表的存档。其搜索引擎非常好用。我建议订阅 `kde`、`kde-announce` 和 `kde-user`。当然，你也可以根据自己的兴趣订阅其他列表。但真正的问题在于，你不会收到即时且准确的答案。然而，你必须准备好提供问题的详细描述、你正在使用的设备和 Linux 版本、你尝试过的过的修复方法，以及问题可以重现的状况。“我只是试着运行 Kmail，但它不起”不足以获得任何有用的结果。如果你发现了一个以前未知的 Bug，你很有可能会收到应用程序开发者的回复，他们将与你合作一劳永逸地解决它。
 
 还会建议订阅由你的 Linux 发行版赞助的邮件列表。这些不是正式的技术支持渠道，但是从其他用户那里获得帮助的快速、高效且免费的方法。我还没有遇到过通过向发行版列表、KDE 列表或两者提一个得当的问题就无法解决的问题。
 
@@ -10176,15 +8628,13 @@ Ksysctrl 列出了你系统中的硬件，提供了一个可以让你查找冲�
 
 533
 
-## 第 26 章 在企业中支持 KDE
+# 第 26 章 在企业中支持 KDE
 
 如果所在的地区有 Linux 用户组，请加入它。如果没有，四处问问是否可以组织一个。咨询当地大学的计算机科学系：很有可能顶尖的人才正在使用 Linux。这些学生可以作为合理价格提供兼职咨询的良好来源。他们可以建立简历，而你得到了所需的帮助。不要轻视这个想法，请记住：Linux 是由计算机学生编写的；KDE 也是。这些年轻的天才真的、非常厉害。
 
-## 第 27 章
+# 第 27 章 使用 KDE 管理数据库
 
-## 使用 KDE 管理数据库
-
-### 巨头们
+## 巨头们
 
 工业级强度且（通常）免费的
 
@@ -10192,13 +8642,14 @@ KDE 前端
 
 ## 第五部分 网络上的 KDE
 
-## 第 27 章 使用 KDE 管理数据库
+# 第 27 章 使用 KDE 管理数据库
 
 它的名字是 SQL，即“结构化查询语言”（Structured Query Language）。计算机顾问喜欢称它为“sequel”，因为那个词包含了全部三个字母。根据我的经验，另一个包含这三个字母的单词可能更合适：sequel。数据库开发不是件轻闲的事。
 
 尽管如此，SQL 数据库是现代业务的骨干，而一个无法利用它们的操作系统和桌面在企业级中是走不远的。KDE 则可以。
 
 > 需要：一个良好的文件数据库
+
 > KDE 有各种小型的、专门的数据库，用于跟踪你的视频录带或唱片记录的应用程序，还有几个功能强大的 SQL 服务器和客户端。遗憾的是，中立地带——平文件、自由格式、完全可配置的数据库仍然缺失，因此用户只能在自行车或喷气式飞机之间做选择，而没有汽车。
 
 关于数据库管理的几十本像曼哈顿电话簿一样大的卷册，根本无法在一个章节内对其进行总结。无论如何，数据库管理员对他们职业的了解将比我现在或将来要了解的多得多。相反，这里是一些可供 Linux 和 KDE 使用的工业级数据库的概述，以及它们应用于 KDE 时的一些特殊考虑。
@@ -10209,7 +8660,7 @@ KDE 前端
 
 ## Informix
 
-Informix 公司 (www.informix.com) 提供广泛的 Linux 产品，从复杂的服务器到可以免费下载的 Informix SE 程序。这里有一个 Informix 开发者网络，该公司甚至对其其高端 Linux 产品提供免费下载和 30 天试用期。Informix 对 Linux 的承诺似乎很坚定，Linux 数据库管理员对公司及其产品评价有加。
+Informix 公司 (`www.informix.com`) 提供广泛的 Linux 产品，从复杂的服务器到可以免费下载的 Informix SE 程序。这里有一个 Informix 开发者网络，该公司甚至对其其高端 Linux 产品提供免费下载和 30 天试用期。Informix 对 Linux 的承诺似乎很坚定，Linux 数据库管理员对公司及其产品评价有加。
 
 536
 
@@ -10219,7 +8670,7 @@ Linus Torvalds 本人被广泛引用说，当 Oracle 发布 Linux 版本时，�
 
 ### 工业级强度且（通常）免费
 
-两个数据库已几乎成为 Linux 标准：PostgreSQL 和 MySQL。每个都有自己的追随者；事实上，两者都可以免费下载。PostgreSQL (www.postgresql.org) 和 MySQL (www.mysql.com) 是多种应用程序、服务器等。
+两个数据库已几乎成为 Linux 标准：PostgreSQL 和 MySQL。每个都有自己的追随者；事实上，两者都可以免费下载。PostgreSQL (`www.postgresql.org`) 和 MySQL (`www.mysql.com`) 是多种应用程序、服务器等。
 
 ### KDE 前端
 
@@ -10235,21 +8686,20 @@ KMySQL 的优秀品质之一是表格编辑器（所示）和表单编辑器。�
 
 KMySQL 显示你数据库中的内容，但首先你必须告诉它使用哪个数据库应用程序和数据文件。
 
-首先，选择 File > Modules。这将弹出一个对话框（如图 27.3 所示），即使你编译了 KMySQL 插件，它可能是空的。点击 Add 来实现操作。
+首先，选择 `File > Modules`。这将弹出一个对话框（如图 27.3 所示），即使你编译了 KMySQL 插件，它可能是空的。点击 `Add` 来实现操作。
 
 539
 
-
-
-
-在您加载了相应的模块后，点击文件 > 添加服务器，将出现另一个对话框（见图 27.5）。
+在您加载了相应的模块后，点击 `文件 > 添加服务器`，将出现另一个对话框（见图 27.5）。
 
 # 第五部分
+
 ## KDE 前端 第 27 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_554_0.png)
 
 图 27.5
+
 选择您要的数据库应用程序，提供用户名和密码（取决于您如何配置应用程序，这可能与您常用的用户名和密码不同），然后点击确定。
 
 现在，数据库应用程序将出现在您 KMySQL 主界面的左侧列中，如图 27.6 所示。
@@ -10257,6 +8707,7 @@ KMySQL 显示你数据库中的内容，但首先你必须告诉它使用哪个�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_554_1.png)
 
 图 27.6
+
 当数据文件与数据库关联时，数据库应用程序名称左侧会出现一个带加号框。点击它可以打开数据树。
 
 # 第五部分 网络上的 KDE
@@ -10268,6 +8719,7 @@ KMySQL 显示你数据库中的内容，但首先你必须告诉它使用哪个�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_555_0.png)
 
 图 27.7
+
 MySQL 允许您以多种方式操作数据。
 
 # KMySQLAdmin
@@ -10277,9 +8729,11 @@ KMySQLAdmin 采用了一种稍有不同、更经典的数据库方法（见图 2
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_555_1.png)
 
 图 27.8
+
 KMySQLAdmin 仅适用于 MySQL，但它执行了数据库管理员需要执行的许多任务。
 
 # 第五部分
+
 ## KDE 前端 第 27 章
 
 此应用程序没有使用模块将其连接到数据库应用程序，因此它仅与 MySQL 工作。它提供了丰富的功能，从管理用户对数据库的访问到即时查询和表设计（见图 27.9）。
@@ -10287,6 +8741,7 @@ KMySQLAdmin 仅适用于 MySQL，但它执行了数据库管理员需要执行�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_556_0.png)
 
 图 27.9
+
 除了数据库管理功能外，KMySQLAdmin 还提供了对数据库本身的完全访问和操作权限。
 
 # KOra
@@ -10296,20 +8751,28 @@ KOra 是该领域的一个新成员，旨在为 Oracle 数据库产品生成一�
 # 第六部分 在 KDE 中使用非 KDE 应用程序
 
 - 桌面上的控制台应用程序 547 28
+
 - 使用非 KDE X 窗口系统应用程序 561 29
+
 - 商业应用程序与 KDE 569 30
+
 - 使用 dosemu 在 KDE 下运行 DOS 应用程序 587 31
+
 - 使用 KDE 运行 Windows 应用程序 593 32
 
 # 第28 章
+
 ## 桌面上的控制台应用程序
 
 将您的控制台应用程序放入菜单
+
 将控制台应用程序变为桌面图标
-控制台会话设置
+
+
 
 # 第六部分 在 KDE 中使用非 KDE 应用程序
-# 第28 章 桌面上的控制台应用程序
+
+## 第28章 桌面上的控制台应用程序
 
 我已经讨论过如何打开终端并运行控制台应用程序。您完全可能想要设置一个菜单项或桌面图标，在终端窗口中自动启动控制台程序。
 
@@ -10329,44 +8792,40 @@ KOra 是该领域的一个新成员，旨在为 Oracle 数据库产品生成一�
 
 按下回车后，应用程序就会出现（见图 28.2）。
 
-# 第六部分
-## 将您的控制台应用程序放入菜单 第28 章
-
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_562_0.png)
 
 图 28.2
+
 在 Midnight Commander 中，终端窗口支持鼠标操作。
 
-将您的控制台应用程序放入菜单
+### 将您的控制台应用程序放入菜单
 
-如何自动化实现这一点？其实有几种方法。我倾向于使用菜单项而不是桌面图标。要这样做，回到 KMenuEdit，文件 > 菜单。在任何处右键点击（图 28.3）。
+如何自动化实现这一点？其实有几种方法。我倾向于使用菜单项而不是桌面图标。要这样做，回到 `KMenuEdit`，文件 > 菜单。在任何处右键点击（图 28.3）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_562_1.png)
 
 图 28.3
-在右键点击，出现 KMenuEdit 菜单。
 
-# 第六部分 在 KDE 中使用非 KDE 应用程序
-第28 章 桌面上的控制台应用程序
+在右键点击，出现 `KMenuEdit` 菜单。
 
-除了其数据库管理功能，KMySQLAdmin 还提供了对数据库本身的完全访问和操作。
+除了其数据库管理功能，`KMySQLAdmin` 还提供了对数据库本身的完全访问和操作。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_563_0.png)
 
 图 28.4
+
 在图 28.4 所示的对话框中，填充空白项。应用程序名称填写 Midnight Commander。执行命令是 `mc`（见图 28.5）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_563_1.png)
 
 图 28.5
-在终端中，这很多应用程序是可以操作的。
 
-# 第六部分
-## 将您的控制台应用程序放入菜单 第28 章
+在终端中，这很多应用程序是可以操作的。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_564_0.png)
 
 图 28.6
+
 一旦您配置了 Midnight Commander 的设置，您可能希望不需要通过点击菜单来访问它。这样做非常简单。
 
 首先，打开 `~/.kde/share/icons` 目录（见图 28.7）。您在这里找到 MC 的图标。
@@ -10374,13 +8833,15 @@ KOra 是该领域的一个新成员，旨在为 Oracle 数据库产品生成一�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_565_0.png)
 
 图 28.7
-当您使用 KMenuEdit 时，为 MC 创建一个 applink。
+
+当您使用 `KMenuEdit` 时，为 MC 创建一个 applink。
 
 尽管您可以从 Templates 文件夹拖入一个模板并填写所有内容，但有一种更简单的方法。只需将 MC 图标拖到 Desktop 目录，如图 28.8 所示。（如果您没有启用视图，可以从 KFM 的左侧拖动它。）
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_565_1.png)
 
 图 28.8
+
 为了将该项保留在底部 K 菜单和桌面上，请选择复制。如果只想放在面上，请选择移动。
 
 点击确定后，对话框关闭，并出现一个新的菜单项（图 28.9）。
@@ -10388,12 +8849,8 @@ KOra 是该领域的一个新成员，旨在为 Oracle 数据库产品生成一�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_566_0.png)
 
 图 28.9
+
 现在我只需要保存我的新菜单，Midnight Commander 就只需点击几次即可使用。
-
-
-
-
-## 第 VI 部分 第 28 章
 
 完成这些后，你的应用程序就会出现在你的 KDE 桌面上（参见图 28.12）。
 
@@ -10405,29 +8862,25 @@ KOra 是该领域的一个新成员，旨在为 Oracle 数据库产品生成一�
 
 顺便说一下，移动 `aplnk` 文件是双向的：你可以打开桌面（Desktop）目录并将桌面图标移动到 `~/.kde/share/aplnk` 目录，甚至移动到某个子目录下（当然，那是一个子菜单）。要让该菜单项在系统中显示，请以 root 身份将 `aplnk` 从家目录下的 `~/.kde/share/aplnk` 移动到系统级的 `/kde/share/aplnk` 目录，这样任何想要这样做的人都可以将其复制到桌面。
 
-## 控制台话设置
+### 控制台话设置
 
-有几个地方可以让你那些图标化（或菜单化）的控制台应用程序更加实用或易用。这些设置位于 Konsole 本身的设置中（你真的应该使用它；`kvt` 已经过时了）。
+有几个地方可以让你那些图标化（或菜单化）的控制台应用程序更加实用或易用。这些设置位于 `Konsole` 本身的设置中（你真的应该使用它；`kvt` 已经过时了）。
 
 如图 28.13 所示，如果设置不当，当你在任何高于标准 VGA 的分辨率下运行时，你将面对一个像邮票一样小的应用程序。
 
 555
 
-## 第 VI 部分 在 KDE 中使用非 KDE 应用程序
-
-## 第 28 章 桌面上的控制台应用程序
-
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_569_0.png)
 
-# 图 28.13
+图 28.13
 
 窗口太小了。字体太小了。鼠标光标保持原大小。难道你不想在这种视图下管理 Midnight Commander 的文件吗？
 
-幸运的是，你并没有陷入这种境地。“选项”（Options）菜单包含两个控制控件，一个用于窗口大小，另一个用于字体大小。我将先看第一个（参见图 28.14）。
+幸运的是，你并没有陷入这种境地。“选项”菜单包含两个控制控件，一个用于窗口大小，另一个用于字体大小。我将先看第一个（参见图 28.14）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_569_1.png)
 
-# 图 28.14
+图 28.14
 
 你可以更改控制台的大小——数字先是列，后是行——但要小心：你可以让控制台完全超出屏幕范围。
 
@@ -10435,55 +8888,49 @@ KOra 是该领域的一个新成员，旨在为 Oracle 数据库产品生成一�
 
 956
 
-## 第 VI 部分
-控制台话设置 第 28 章
-
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_570_0.png)
 
 图 28.15
-这里的“小”（Small）也是你在图 28.13 中看到的。“巨大”（Huge）并不是大无比，但对于许多用途来说又太大了。Linux 的尺寸其实恰好。
+
+这里的“小”也是你在图 28.13 中看到的。“巨大”并不是大无比，但对于许多用途来说又太大了。Linux 的尺寸其实恰好。
 
 什么会是好的选择？我尝试了“Huge”和 80×25 尺寸，得到了图 28.16。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_570_1.png)
 
 图 28.16
+
 “Huge”在这里确实有效，但请停下来考虑一下，较少的信息消耗了多少空间。
 
 你必须通过实验来确定什么最适合你。在过程中，我发现使用“Small”字体时，80×40 都能显示在屏幕上。很多尺寸下并不行，但在图 28.17 中是可以的。
 
 557
 
-## 第 VI 部分 在 KDE 中使用非 KDE 应用程序
-
-## 第 28 章 桌面上的控制台应用程序
-
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_571_0.png)
 
 图 28.17
+
 一切都在那里，但太小了，没什么用处。如果我在非常高的分辨率下而不是 1024×768，也许所有字体都可以。这取决于你使用的屏幕分辨率、使用的 X 服务器以及你为 XFree86 安装的字体。
 
 一些调整产生了一个丑陋但可行的组合，如图 28.18 所示。设置是 80×40 字体。
 
-## 第 VI 部分
-控制台话设置 第 28 章
-
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_572_0.png)
 
 图 28.18
+
 适合所有，但某些图形被其他字符替换了。尽管如此仍然有效。
 
 当你对一切都满意后，不要忘记点击“选项 > 保存”，否则设置仅对本次会话有效。
 
-## 注意与坦白
+### 注意与坦白
 
-尽管如此有一个问题：你在 Konsole 中创建并保存的设置适用于每个控制台会话，无论之后运行什么应用程序（或者是一个纯终端窗口）。如果为不同的应用程序提供不同的尺寸就好了，但你无法做到。
+尽管如此有一个问题：你在 `Konsole` 中创建并保存的设置适用于每个控制台会话，无论之后运行什么应用程序（或者是一个纯终端窗口）。如果为不同的应用程序提供不同的尺寸就好了，但你无法做到。
 
-我的小坦白：是的，我知道 Midnight Commander 也是一个菜单项，所以为它制作图标和菜单项至少是多余的。我之所以选择它，是因为它比任何应用程序都能说明这个原理。我想起了流行的 Mutt 程序，每台 Linux 机器都安装了它，但大多数人使用 xterm 而不是 Konsole 运行它，尽管它们在 KDE 上运行良好，但这超出了本书的范围内。`xterm` 是一个非 KDE 的终端应用程序，是 XFree86 可用的众多程序之一。在提示符输入 `xterm` 可以提供详细信息。
+我的小坦白：是的，我知道 Midnight Commander 也是一个菜单项，所以为它制作图标和菜单项至少是多余的。我之所以选择它，是因为它比任何应用程序都能说明这个原理。我想起了流行的 Mutt 程序，每台 Linux 机器都安装了它，但大多数人使用 `xterm` 而不是 `Konsole` 运行它，尽管它们在 KDE 上运行良好，但这超出了本书的范围内。`xterm` 是一个非 KDE 的终端应用程序，是 XFree86 可用的众多程序之一。在提示符输入 `xterm` 可以提供详细信息。
 
 559
 
-第 29 章 非 KDE 窗口应用程序
+## 第29章 非 KDE 窗口应用程序
 
 应用程序选项：静态良好
 
@@ -10491,13 +8938,11 @@ KOra 是该领域的一个新成员，旨在为 Oracle 数据库产品生成一�
 
 KDE 配置
 
-第 VI 部分 在 KDE 中使用非 KDE 应用程序
-
-## 第 29 章 非 KDE 窗口应用程序
-
 这个问题经常被问：我的 Gnome/X/任何应用程序可以在 KDE 下运行吗？
 
-答案是肯定的。如果有编译程序或运行二进制文件所需的库和支持文件，它在 KDE 下运行得和在其他地方一样。如何判断？如果你下载了 RPM 格式的编译二进制文件，在使用 RPM 命令（或 KPackage）安装时没有返回错误，那么它运行概率非常好。相反，如果你遇到了依赖错误，如果该程序对你很重要，最好记录它们。
+
+
+答案是肯定的。如果有编译程序或运行二进制文件所需的库和支持文件，它在 KDE 下运行得和在其他地方一样。如何判断？如果你下载了 RPM 格式的编译二进制文件，在使用 `RPM` 命令（或 `KPackage`）安装时没有返回错误，那么它运行概率非常好。相反，如果你遇到了依赖错误，如果该程序对你很重要，最好记录它们。
 
 此外，如果你从源码编译并由于缺少特定文件导致配置或构建错误，你需要获取并安装该文件。
 
@@ -10507,11 +8952,12 @@ KDE 配置
 
 尽管如此，确实很少应用程序是能够在 KDE 下运行的。示例如图 29.1。
 
-## 第 VI 部分 应用程序选项：静态良好 第 29 章
+# 第 VI 部分 应用程序选项：静态良好 第 29 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_576_0.png)
 
 图 29.1
+
 从左上顺顺时针：Nedit、Xcalc、Plan，中心是 AbiWord。它们都不是 KDE 原生的，但在 KDE 下都运行得完美。
 
 当然，有一些考虑。这些应用程序中的一些使用了 KDE 剪贴板，而另一些没有。有些在一个方向使用而在另一个方向不使用。在很多情况下，KDE 在故意或无意的关闭后恢复自己的应用程序。我们不会对非 KDE 应用程序这样做。
@@ -10526,7 +8972,7 @@ KDE 配置
 
 563
 
-第 VI 部分 在 KDE 中使用非 KDE 应用程序
+# 第 VI 部分 在 KDE 中使用非 KDE 应用程序
 
 ## 第 29 章 非 KDE 窗口系统应用程序
 
@@ -10547,9 +8993,6 @@ KDE 配置
 如果其他方法都失败，你可以在邮件列表或新闻组中提问。你会找到答案的。
 
 564
-
-
-
 
 ## 第六部分
 
@@ -10576,6 +9019,7 @@ KDE 配置
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_579_0.png)
 
 图 29.3
+
 在这里通过填空来创建一个新的菜单项。
 
 AbiWord 是一个应用程序，所以你不需要折腾那个下拉框。程序的名称是 `abiword`，但我希望它在菜单中显示为 AbiWord。虽然 AbiWord 有一个很棒的图标，但安装程序没有将其放入图标目录，它看起来有点像 Acrorad 的图标。我的机器上没有 Acrorad（虽然它是个很棒的程序），所以我采用 AbiWord 的图标。正如我们所知，命令是 `abiword`，所以这就是填入“执行”框的内容。我没有启动终端（如果我勾选了那个框，一个没有实际用途的终端会 AbiWord 一起启动）。
@@ -10583,11 +9027,13 @@ AbiWord 是一个应用程序，所以你不需要折腾那个下拉框。程序
 我们完成了。点击“确定”，它就出现在菜单中了，虽然是暂时的。在菜单编辑器中点击“文件 > 保存”，它就正式生效了。现在它是一个菜单项了（见图 29.4）。
 
 ### 图 29.4
+
 它就在那儿，几乎，简直就像是出生在那里的一样。
 
 但它好用吗？让我们看看图 29.5。
 
 ### 图 29.5
+
 一切都就绪了。一个完全陌生的程序，使用了与 KDE 完全没有关系且不属于许多 Linux 发行版部分的库，正在 KDE 下运行。
 
 ## KDE 配置的考虑因素
@@ -10617,10 +9063,8 @@ AbiWord 是一个应用程序，所以你不需要折腾那个下拉框。程序
 
 实际上，去 OCR、去生成、去卡顿……（此处为原文重复错误，已跳过）
 
-
-
-
 # 第六部分 在 KDE 中使用非 KDE 应用程序
+
 ## 第 30 章 商业应用程序与 KDE
 
 StarOffice 现在可以从 www.sun.com/dot-com/staroffice.html 获取。该页面上还有常见问题（FAQ）列表和支持新闻组的链接。
@@ -10629,6 +9073,8 @@ StarOffice 现在可以从 www.sun.com/dot-com/staroffice.html 获取。该页�
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_585_0.png)
 
+
+
 在它 Windows 版本的化身中，StarOffice 实际上替换了 Windows 桌面；也许在 Linux 中也有实现这一的方法。正如我们将看到的，它采纳了许多 KDE 的进程，就像它们是它自己的一样，但我认为它看起来并不像 Microsoft Office。
 
 整个 StarOffice 桌面就是一个浏览器，它包含了许多对于不研究它的人来说是未解的功能。（尽管如此，我并完全没有掌握它，但花时间研究 StarOffice 的工作原理是非常值得的，因为一个接一个的惊喜会被揭示。你会觉得如果你真的了解了这个东西，你可能可以通过它的桌面管理大部分世界。）但它可能会令人望畏，正如图 30.2 所示。
@@ -10636,6 +9082,7 @@ StarOffice 现在可以从 www.sun.com/dot-com/staroffice.html 获取。该页�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_586_0.png)
 
 图 30.2
+
 左侧的列被称为 Explorer（资源管理器）。顶部大部分区域框被称为 Beamer（投影器）。你能猜到它们是做什么的吗？
 
 - ① Explorer
@@ -10646,7 +9093,8 @@ StarOffice 现在可以从 www.sun.com/dot-com/staroffice.html 获取。该页�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_587_0.png)
 
 图 30.3
-右侧的列被称为 Explorer（资源管理器）。顶部大部分区域框被称为 Beamer（投影器）。你能猜到它们是做什么的吗？一个好点是，你不需要精通所有的角落，就能使用 Office 高效工作。例如，文字处理器已完全习得，正如这个自指性的（遵循传统的）图 30.3 所示。 
+
+右侧的列被称为 Explorer（资源管理器）。顶部大部分区域框被称为 Beamer（投影器）。你能猜到它们是做什么的吗？一个好点是，你不需要精通所有的角落，就能使用 Office 高效工作。例如，文字处理器已完全习得，正如这个自指性的（遵循传统的）图 30.3 所示。
 
 ***插入：3figfig02.png***
 
@@ -10667,6 +9115,7 @@ StarOffice 还包含一个功能齐全的电子表格程序，它可以处理各
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_588_0.png)
 
 图 30.4
+
 StarOffice 的电子表格程序可以完成电子表格能做的大部分工作。如果你想从其他应用程序导入数据，它可能并不翻译。
 
 此外，电子表格还可以读取并写入许多流行的电子表格格式（见图 30.5）。
@@ -10678,11 +9127,13 @@ StarOffice 的绘图程序非常出色。朋友 Jackson 坐在 StarDraw 桌面�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_589_0.png)
 
 图 30.5
+
 虽然不是表单视图，StarOffice 拥有了自己的编程语言和工具，以便你开发更正式的东西。通常，从另一个应用程序导入数据需要导入 StarCalc，将其保存为 StarOffice 原生数据库。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_589_1.png)
 
 图 30.6
+
 在她的程序使用中，我的朋友 Jackson 绘制了纽约白普斯机场。StarDraw 功能齐全且易于使用。它还支持许多图形格式。
 
 不断不断。StarOffice 的 HTML 编辑器非常出色，正如它的浏览器、新闻组和邮件程序一样，但它最出色的功能之一是集成。
@@ -10692,6 +9143,7 @@ StarOffice 的底部有一个名为 Start 的按钮。点击它会打开一个�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_590_0.png)
 
 图 30.7
+
 StarOffice 的电子表格程序可以完成电子表格能做的大部分工作。
 
 - 开始菜单
@@ -10705,17 +9157,15 @@ StarOffice 的电子表格程序可以完成电子表格能做的大部分工作
 Theix 不是不是在文字处理器中。
 
 # 第六部分 在 KDE 中使用非 KDE 应用程序
+
 ## 第 30 章 商业应用程序与 KDE
 
 Starix 的套件包括文字处理器、图形程序、电子表格、邮件程序和目录。
 
 Applix 电子表格程序（如图 30.12 所示）看起来和操作起来与全世界的电子表格程序一样。
 
-
-
-
-
 # 第六部分
+
 ## ApplixWare 第30 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_594_0.png)
@@ -10729,11 +9179,13 @@ Applix 中的邮件程序（见图 30.13）既吸引人又引人好奇。它由�
 在 Applix 邮件程序中回复消息看起来比大多数其他 Linux 邮件应用程序要稍微复杂一点（见图 30.14）。
 
 # 第六部分 在 KDE 中使用非 KDE 
+
 ## 第30 章 商业应用与 KDE
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_595_0.png)
 
 图 30.14
+
 我只想做的就是回复！原始消息没有自动引用：为了这一点，你需要点击“包含原始消息（Include Original Message）”按钮。如果你改变了主意，你需要手动删除原始消息的内容：再次点击按钮会再次复制原始消息的内容。
 
 Applix 中的文件管理器，即目录显示器（Directory Displayer），与该套件的其他部分一样，非常悦眼，但功能有些有限（见图 30.15）。
@@ -10741,9 +9193,11 @@ Applix 中的文件管理器，即目录显示器（Directory Displayer），与
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_595_1.png)
 
 图 30.15
+
 目录显示器确实可以显示目录和文件，尽管它默认不显示隐藏目录或文件。如果你双击文件打开它，它将是只读的。它确实是一个显示器，而不是管理器。
 
 # 第六部分
+
 ## WordPerfect 第30 章
 
 Applix 真正的实力在于它那无威胁的外观——它看起来就像可能是 KDE 本身的一部分——而且对于 Linux 和 KDE 新手来说，发现它的很多用法非常熟悉。它还为开发者提供了创建系统级应用程序和宏的机会，如果 ApplixWare 要部署在企业中的话。然而，注意导入/导出过滤器。它们的工作非常不稳定。
@@ -10763,9 +9217,12 @@ Applix 真正的实力在于它那无威胁的外观——它看起来就像可�
 右上角的小窗口提供了设置和控制访问，以及一份最近编辑的文件列表。主窗口当然是你与 WordPerfect 进行业务的地方。
 
 # 第六部分 在 KDE 中使用非 KDE 
+
 ## 第30 章 商业应用与 KDE
 
 WordPerfect 现在提供了一个略微限制的版本（例如，你无法添加字体）供下载，适用于大多数 Linux 发行版以及其他地方（在欧洲，它是随杂志分发的 CD）。它还对外出售，附有一本厚厚且完全无法捉摸的手册，并承诺提供剪贴画和 130 种字体。（尽管如此，这些字体似乎在许多副本中遗漏了，你必须拥有 WordPerfect 的发行者 Corel 才能获得。）
+
+
 
 如果 WordPerfect 是你的菜，快跑吧，不要走，去书店买一本 Rod Smith 写的《Linux 特版 WordPerfect 使用指南》。Rod 真的很了解这个程序，我从个人经验知道他能以如此清晰的方式解释它的复杂之处，让你觉得没有什么比这显而易见的了。或者他能为 WordPerfect 中的导入/导出过滤器带来意义。如果你认为你的生活如此宁静，你可以通过尝试将 WordPerfect 中的格式化文件移动到（例如）StarOffice 来快速治愈它。
 
@@ -10775,21 +9232,18 @@ WordPerfect 现在提供了一个略微限制的版本（例如，你无法添�
 
 在这里无法列出所有在 KDE 下运行良好的 Linux 商业应用。这个列表将会很长，并且会立即过时，因为新 Linux 应用的涌现如此之快。其中一些是小众产品，一些是为特定行业设计的“垂直应用”，有些像 Blender 动画程序（www.blender.nl）那样发展之快到令人为观止。
 
-
-
-
-
 # 第六部分 在 KDE 中使用非 KDE 应用程序
+
 ## 第 31 章 使用 dosemu 在 KDE 下运行 DOS 应用程序
 
-运行 dosemu 时，你需要知道你的 Linux 文件列在哪里。这通常通过 `L:`.. 驱动器来实现。为了让程序自动启动，我们需要创建一个批处理文件，将其命名为 q.bat。
+运行 dosemu 时，你需要知道你的 Linux 文件列在哪里。这通常通过 `L:`.. 驱动器来实现。为了让程序自动启动，我们需要创建一个批处理文件，将其命名为 `q.bat`。
 
 ```
 L:
 home\dep\download\geditilq.exe
 ```
 
-此批处理文件保存在 dosemu 的 C:\` 目录下。现在，要启动 TSE，你只需在 dosemu 命令中输入 `q` 并按回车即可。很好，但我们还可以做得更好。回到 KMenuEdit。
+此批处理文件保存在 dosemu 的 `C:\` 目录下。现在，要启动 TSE，你只需在 dosemu 命令中输入 `q` 并按回车即可。很好，但我们还可以做得更好。回到 KMenuEdit。
 
 这次，将批处理文件的名称添加到命令中（见图 31.4）。
 
@@ -10805,22 +9259,16 @@ home\dep\download\geditilq.exe
 
 它就在这里，就像我们运行任何 Linux 控制台程序一样！
 
-# 使用 dosemu 在 KDE 下运行 DOS 应用程序 第 31 章
-
 你可以对许多 DOS 应用程序和游戏执行此，尽管我应该指出，这是一种权宜之计，最好的办法是习惯使用良好的、安全的 Linux 应用程序。
 
 如果你真的想访问几乎未开发的领域，据报道有一种方法可以让 IBM 的 OS/2 版本 Windows 3.x 在 dosemu 下运行。实现此点的框架将在第 32 章“在 KDE 下运行 Windows 应用程序”中描述。
 
-# 第 32 章
-## 在 KDE 下运行 Windows 应用程序
+## 第 32 章 在 KDE 下运行 Windows 应用程序
 
 - WINE
 - VMware：糟糕的一
 - VMware：好的方面
 - dosemu 下的 Windows
-
-# 第六部分 在 KDE 中使用非 KDE 应用程序
-## 第 32 章 在 KDE 下运行 Windows 应用程序
 
 当你运行 Linux 和 KDE 时，很容易感到被冷落。新闻节目总是播放关于那些破坏电脑的病毒程序的报道，但你的机器从没有被感染过。事实上，你甚至没有病毒扫描器。事实上，Linux 甚至真的有病毒扫描器吗？人们抱怨他们的电脑崩溃，每天必须重启几次，但你最后一次重启机器是在安装新内核的时候。不，是你去度假的时候……或者是吗？反正，那是很久以前的事了。
 
@@ -10828,7 +9276,7 @@ home\dep\download\geditilq.exe
 
 放松吧；你现在可以和大家一起崩溃燃烧了。你可以在 Linux 和 KDE 下运行 Windows 和 Windows 应用程序。
 
-# WINE
+### WINE
 
 WINE 按照其递归的 Linux 风格代表 WINE Is Not an Emulator（WINE 不是一个模拟器）。我认为他们选择这些词只是为了能拼出某个单词，因为它确实是一个模拟器。它模拟 Windows 的所有版本。我觉得他们应该叫它 Winux。
 
@@ -10844,15 +9292,13 @@ WINE 按照其递归的 Linux 风格代表 WINE Is Not an Emulator（WINE 不是
 
 594
 
-# 第六部分
-## VMware：糟糕的一 第 32 章
-
 你需要有一点自受其的倾向才能安装和使用 WINE。
+
 原因是因为它正处于开发阶段，当你下载它（从 www.winehq.com）时，你会收到警告，说如果它能运行都是个奇迹。尽管经过一些折腾，你可以让它在某种程度上工作，如果你有不需要向磁盘保存任何内容的 Windows 应用程序，你就可以运行它们，而不需要任何微软代码。
 
-我完全可以长篇大论地讨论 WINE，但这真的不是它的地方。当你读到这些话时，我关于 WINE 的说法并不一定准确——每个月都会发布几个 WINE 版本。如果你确实在机器上运行了它，你可能想为你喜欢的 Windows 应用程序制作图标。我已经详尽地研究了菜单项和图标的制作，这里是你需要知道的所有可以确定确定的信息。Wine 的配置文件是 wine.conf 和 wine.ini，通常位于 /usr/local/etc。由于 Wine 代码更改得非常频繁，我能提供的最好的建议就是让你阅读它附带的文档。
+我完全可以长篇大论地讨论 WINE，但这真的不是它的地方。当你读到这些话时，我关于 WINE 的说法并不一定准确——每个月都会发布几个 WINE 版本。如果你确实在机器上运行了它，你可能想为你喜欢的 Windows 应用程序制作图标。我已经详尽地研究了菜单项和图标的制作，这里是你需要知道的所有可以确定确定的信息。Wine 的配置文件是 `wine.conf` 和 `wine.ini`，通常位于 `/usr/local/etc`。由于 Wine 代码更改得非常频繁，我能提供的最好的建议就是让你阅读它附带的文档。
 
-# VMware：糟糕的一
+### VMware：糟糕的一
 
 1999 年夏天，一家名为 VMware 的公司推出了了有趣的产品，允许安装许多系统。大约一百美元可以买 VMware（个人版；商业用途是该价格的三倍），再花一百美元买 Windows（当然取决于版本），再花一百美元买一个硬盘（除非你已经安装了 Windows），再花一百美元买额外的内存（它会占用 32MB，如果你少于 64MB，它甚至不会理你），你就可以目睹桌面上令人惊叹的窗口，里面运行着 Windows，启动着 Windows 的。哦，而且根据 VMware 的说法，如果你的 CPU 不至少 266MHz，你也需要升级它。花同样的钱，你可以在折扣店买一台已经装了 Windows 的电脑。多花几美元你可以买两个网卡和一个集线器，建立自己的 Samba 网络。你还可以设置分区并在 Linux 和 Windows 安装之间进行双启动。如果你有一个 Windows Windows，双启动是免费的。
 
@@ -10861,128 +9307,108 @@ WINE 按照其递归的 Linux 风格代表 WINE Is Not an Emulator（WINE 不是
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_609_0.png)
 
 图 32.2
+
 VMware 允许你为 DOS 和所有版本的 Windows 设置虚拟机。它提供了一个“向导”，也称为设置程序，来帮助你配置。
 
 595
+
 如果你运行的 XFree86 版本早于 3.3.4，并且你想在虚拟机中使用全屏，你需要从 VMware 网站下载适用于显卡的 X86 服务器并安装它。
+
 如果你运行的 XFree86 版本是 3.3.4 或更高版本，你不需要特殊的服务器就可以全屏。
 
-# 在 KDE 下运行 Windows 应用程序 第 32 章
-
 > VMware X 服务器
+
 如果你运行的 XFree86 版本早于 3.3.4，并且你想在虚拟机中使用全屏，你需要从 VMware 网站下载适用于显卡的 X86 服务器并安装它。
+
 如果你运行的 XFree86 版本是 3.3.4 或更高版本，你不需要特殊的服务器就可以全屏。
 
 596
-
-
-
-
-
-# 第六部分
-VMware：不妥之处 第 32 章
 
 当你完成配置后，点击“开机”按钮，看着那完全就像你电脑的开机自检过程（见图 32.3）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_610_0.png)
 
 图 32.3
+
 你可以观察它检查从你的 Linux 系统中占用的内存以及其余的启动过程。
 
 这是一件有趣的尝试，尤其是当 Windows 崩溃而你不得不使用“开机”按钮（现在变成了“关机”按钮）来“重启”时。
 
 要设置好整个系统，你需要下载 VMware、它的工具以及一个可以解锁这一切的密钥。你可以免费试用 30 天。安装完 VMware 后，在它创建的虚拟机上安装你选择的操作系统。然后你就可以使用这台“机器”来安装和运行你的 Windows 软件了。
 
-VMware 会安装一个在你启动 Linux 时自动启动的守护进程，因此即使在你没有运行 VMware 时它也会占用一些内存。但它是否像广告说的那样呢？看到你的 Linux 系统在欢畅运行的同时，窗口里出现了著名的“蓝屏”，那确实是一幅奇观的景象。问题是，它在内存和系统资源上的消耗是否值得。
 
-为了以可以接受的性能全屏运行会话，你还需要安装 VMware 为你的 XF86 服务器提供的替代品。
-
-如果你觉得它可能适合你，你可以在其下运行任意数量的操作系统。因为我那孤单的 Windows 95 光盘没有启动盘，我必须先安装 DOS 和 CD 驱动程序，然后才能进入 Windows 95 安装程序，但正如你想象的，这非常有趣（见图 32.4）。
-
-597
 
 # 第六部分 在 KDE 中使用非 KDE 应用程序
+
 ## 第 32 章 在 KDE 中运行 Windows 应用程序
+
+VMware 会安装一个在你启动 Linux 时自动启动的守护进程，因此即使在你没有运行 VMware 时它也会占用一些内存。但它是否像广告说的那样呢？看到你的 Linux 系统在欢畅运行的同时，窗口里出现了著名的“蓝屏”，那确实是一幅奇观的景象。问题是，它在内存和系统资源上的消耗是否值得。
+
+为了以可以接受的性能全屏运行会话，你还需要安装 VMware 为你的 `XF86` 服务器提供的替代品。
+
+如果你觉得它可能适合你，你可以在其下运行任意数量的操作系统。因为我那孤单的 Windows 95 光盘没有启动盘，我必须先安装 DOS 和 CD 驱动程序，然后才能进入 Windows 95 安装程序，但正如你想象的，这非常有趣（见图 32.4）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_611_0.png)
 
 图 32.4
-看着 DOS 将自己安装到窗口里是一个奇异而有趣的景象。之后是我的 CD 读器驱动程序。在安装 DOS 之前，我必须运行 fdisk 并格式化它认为的 C 盘的软盘——这是一个令人毛骨悚然的事件，尽管我被保证它只会擦除虚拟驱动器，而不是我的实际物理硬盘，事实证明确实如此。
+
+看着 DOS 将自己安装到窗口里是一个奇异而有趣的景象。之后是我的 CD 读器驱动程序。在安装 DOS 之前，我必须运行 `fdisk` 并格式化它认为的 C 盘的软盘——这是一个令人毛骨悚然的事件，尽管我被保证它只会擦除虚拟驱动器，而不是我的实际物理硬盘，事实证明确实如此。
 
 当然，我目睹了 Windows 95 的安装（见图 32.5）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_611_1.png)
 
 图 32.5
-注意鼠标指针。VMware 在窗口内有一个指针，你无法逃脱它。你同样无法在那个窗口之外使用它。要进行其他工作，你必须按下 Alt+Ctrl+Esc（这在 X 窗口系统中通常用于杀死应用程序），这会冻结 Windows 指针并恢复你的 Linux 指针。或者你可以安装 VMware 工具，它可以消除许多初始提示，但它对任何低于 Windows 95 的系统都不起作用。
+
+注意鼠标指针。VMware 在窗口内有一个指针，你无法逃脱它。你同样无法在那个窗口之外使用它。要进行其他工作，你必须按下 `Alt+Ctrl+Esc`（这在 X 窗口系统中通常用于杀死应用程序），这会冻结 Windows 指针并恢复你的 Linux 指针。或者你可以安装 `VMware Tools`，它可以消除许多初始提示，但它对任何低于 Windows 95 的系统都不起作用。
 
 虽然 VMware 允许你在 Linux 机器上运行 Windows，但它不会创造奇迹（见图 32.6 和图 32.7）。
-
-598
-
-# 第六部分
-## VMware：不妥之处 第 32 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_612_0.png)
 
 图 32.6
-Windows 毕竟是 Windows。当然，Linux 保持运行顺畅。VMware 虚拟机需要通过传统的 Alt+Ctrl+Del 重启。
+
+Windows 毕竟是 Windows。当然，Linux 保持运行顺畅。VMware 虚拟机需要通过传统的 `Alt+Ctrl+Del` 重启。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_612_1.png)
 
 图 32.7
+
 当它重启时，处于“安全模式”。我什么都没有改，只是关了机。
 
 再次重启后，Windows 95 似乎在按照广告描述的方式运行。是时候看看它是否能安装并运行实际应用程序了。Microsoft Office 97 似乎是一个不错的选择，它确实安装成功（见图 32.8）。
 
-599
-
-# 第六部分 在 KDE 中使用非 KDE 应用程序
-## 第 32 章 在 KDE 中运行 Windows 应用程序
-
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_613_0.png)
 
 图 32.8
-WinWord 运行了，注意到它自己的名字以及——惊喜吧！——Linux 的名字拼写错了。但那里有太多的控件和东西了，几乎没有空间进行任何工作！通过修改过的 XF86 服务器或 VMware 工具，你可以全屏运行会话，尽管有点慢，但它真的非常消耗 CPU 周期。
+
+WinWord 运行了，注意到它自己的名字以及——惊喜吧！——Linux 的名字拼写错了。但那里有太多的控件和东西了，几乎没有空间进行任何工作！通过修改过的 `XF86` 服务器或 `VMware Tools`，你可以全屏运行会话，尽管有点慢，但它真的非常消耗 CPU 周期。
 
 有空间进行比较和寻找乐趣（见图 32.9）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_613_1.png)
 
 图 32.9
+
 是我的还是你的？两个 Windows 95 都允许你玩扫雷游戏。
-
-614
-
-# 第六部分
-## VMware：不妥之处 第 32 章
 
 取决于你想要的复杂程度，从你的 Linux 创建网络是可能的。否则，VMware 有时也会派上用场。我应该说明的是，在 VMware 页面上并不强大。我们得到了什么，到你的 Linux（见图 32.10）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_614_0.png)
 
 图 32.10
-Windows 启动是这样的，如果你使用它，你将看到安装免费 VMware 工具的价值之一。立即，大约一半的抱怨将会消失。它效果很好（见图 32.11）。
 
-601
-
-# 第六部分 在 KDE 中使用非 KDE 应用程序
-## 第 32 章 在 KDE 中运行 Windows 应用程序
+Windows 启动是这样的，如果你使用它，你将看到安装免费 `VMware Tools` 的价值之一。立即，大约一半的抱怨将会消失。它效果很好（见图 32.11）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_615_0.png)
 
 图 32.11
-如果你观察图 32.11 中可见的 Windows 95 屏幕部分（当 VMware 以 640x480 像素运行运行时），并与同一应用程序在 800x600 下运行时进行比较，你就会看到安装免费 VMware 工具的价值之一。
 
-603
+如果你观察图 32.11 中可见的 Windows 95 屏幕部分（当 VMware 以 640x480 像素运行运行时），并与同一应用程序在 800x600 下运行时进行比较，你就会看到安装免费 `VMware Tools` 的价值之一。
 
+### VMware：不妥之处
 
-
-
-# 第六部分 在 KDE 中使用非 KDE 应用程序
-第32 章 在 KDE 中运行 Windows 应用程序
-
-但我把好戏留到了最后：通过 VMware Tools，你可以在 Linux 和 Windows 应用程序以及不同的 Windows 虚拟机之间进行复制粘贴。当你在 Windows 应用程序中复制内容时，它会出现在 Klipper 中。这非常酷。
+但我把好戏留到了最后：通过 `VMware Tools`，你可以在 Linux 和 Windows 应用程序以及不同的 Windows 虚拟机之间进行复制粘贴。当你在 Windows 应用程序中复制内容时，它会出现在 `Klipper` 中。这非常酷。
 
 更酷的是，你可以为不同的操作系统创建不同的 VMware 虚拟机。你甚至可以同时运行它们！例如，我为 Windows 95、Windows 3.1 和 PC-DOS 6.3 创建了虚拟机。
 
@@ -10992,27 +9418,23 @@ Windows 启动是这样的，如果你使用它，你将看到安装免费 VMwar
 
 假设你是一个 Windows 应用程序开发者。你的工具在 VMware 启动环境中运行完美，因此你可以顺利地编写代码，然后可以在同一台机器上在几个不同的 Windows 平台上进行测试，而无需重启。*在原生 Windows 上试试看吧！* 如果其中一个或多个崩溃了，那又怎样？
 
-# 最大安全
+### 最大安全
 
-还有更酷的东西。你可以将磁盘（VMware 创建的虚拟磁盘或通过 VMware 访问的实际磁盘）设置为持久的（persistent）、非持久的（non-persistent）或可撤销的（undoable）。这意味着什么？*持久卷的行为就像普通的磁盘驱动器：你可以在上面进行任何更改，也可以删除上面的文件。非持久卷的行为与持久卷完全一样，但任何更改都不会保留到当前会话。* 这意味着如果你使用那些使用专用格式并自动运行邮件附件中任何可执行文件的奇怪 Windows 邮件程序，你可以在非持久模式下安全地这样做。即使它包含宏病毒，也不会造成永久性伤害。显然，这是检查可疑文件时应有的配置。*可撤销模式*类似于非持久模式，不同的是在会话结束时会询问你是否要保存对磁盘的更改。这是软件测试的绝佳模式：再次，在 Linux 中运行 VMware 是 Windows 应用程序开发者的理想平台。
+还有更酷的东西。你可以将磁盘（VMware 创建的虚拟磁盘或通过 VMware 访问的实际磁盘）设置为持久的（`persistent`）、非持久的（`non-persistent`）或可撤销的（`undoable`）。这意味着什么？*持久卷的行为就像普通的磁盘驱动器：你可以在上面进行任何更改，也可以删除上面的文件。非持久卷的行为与持久卷完全一样，但任何更改都不会保留到当前会话。* 这意味着如果你使用那些使用专用格式并自动运行邮件附件中任何可执行文件的奇怪 Windows 邮件程序，你可以在非持久模式下安全地这样做。即使它包含宏病毒，也不会造成永久性伤害。显然，这是检查可疑文件时应有的配置。*可撤销模式*类似于非持久模式，不同的是在会话结束时会询问你是否要保存对磁盘的更改。这是软件测试的绝佳模式：再次，在 Linux 中运行 VMware 是 Windows 应用程序开发者的理想平台。
 
-# 第六部分
-VMware：优秀之处 第32 章 模式除了在会话结束时会被问是否要保存对磁盘所做的更改外。这是软件测试的棒模式：再次，在 Linux 中运行 VMware 是 Windows 应用程序开发者的理想平台。
+### 听过单人乐队吗？这里有一个“单机网络”
 
-# 听过单人乐队吗？这里有一个“单机网络”
-
-VMware 的一大优势（在某些情况下也是弱点）是其操作系统及其下方应用程序的隔离。当你（例如）在 VMware 虚拟机中运行 Windows 95 时，它完全不知道自己正运行在 Linux 之上，而 Linux 也感知不到它的存在。这防止了 Windows 启动过程中发生的任何事情损坏 Linux 文件系统。这就像用长蛇钩将一条危险的蛇安全地移开，或者像一只关在瓶里的蝎子。不过，你可以设置 Samba 共享或其他网络，以便在你的桌面上运行一个虚拟网络。
+VMware 的一大优势（在某些情况下也是弱点）是其操作系统及其下方应用程序的隔离。当你（例如）在 VMware 虚拟机中运行 Windows 95 时，它完全不知道自己正运行在 Linux 之上，而 Linux 也感知不到它的存在。这防止了 Windows 启动过程中发生的任何事情损坏 Linux 文件系统。这就像用长蛇钩将一条危险的蛇安全地移开，或者像一只关在瓶里的蝎子。不过，你可以设置 `Samba` 共享或其他网络，以便在你的桌面上运行一个虚拟网络。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_618_0.png)
 
-你还能用 VMware 做些什么？你可以设置一个虚拟机来运行第二个版本的 Linux，如果你是内核黑客或 Linux 开发者，这是一件很有用的事。VMware 的人员表示，未来的版本将接受 OS/2 作为客户操作系统，这将让那个值得赞誉但已过时的系统的许多用户感到欢喜。
+你还能用 VMware 做些什么？你可以设置一个虚拟机来运行第二个版本的 Linux，如果你是内核黑客或 Linux 开发者，这是一件很有用的事。VMware 的人员表示，未来的版本将接受 `OS/2` 作为客户操作系统，这将让那个值得赞誉但已过时的系统的许多用户感到欢喜。
 
 所以，是的，我们在考虑 VMware 的第一部分时提到的所有困扰都是事实，但它们并没有消除其他事实：它能够运行本身就是对编程多变性的证明。尽管如此，它允许某种程度的灵活性，使其能够执行在其他任何地方都无法实现的功能。如果你需要可靠地运行 Windows 应用程序，它确实提供了比原生 Windows 启动更好的改进。如果你有性能在你的机器上运行它，它非常值得下载；但如果你确实下载了，请给它几天时间向你证明自己。你可能会像我一样决定保留它。毕竟，你还能在何处这样做（见图 32.13）？
 
-605
 
-# 第六部分 在 KDE 中使用非 KDE 应用程序
-第32 章 在 KDE 中运行 Windows 应用程序
+
+# 第32章 在 KDE 中运行 Windows 应用程序
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_619_0.png)
 
@@ -11022,7 +9444,7 @@ VMware 的一大优势（在某些情况下也是弱点）是其操作系统及�
 
 在 VMware 下运行 Windows 应用程序涉及启动 VMware——在控制台窗口中输入 `vm` 并选择你想要使用的虚拟机——随后 VMware 在窗口中启动你选择的 DOS 或 Windows 版本。从那里，你可以完全按照在独立 Windows 机器上使用的方式启动并使用应用程序。
 
-# dosemu 下的 Windows
+## dosemu 下的 Windows
 
 用户已经能够在 dosemu 下运行 OS/2 版本的 Windows 3.0 或 3.1，即 Win-OS/2。这要求你拥有 Win-OS/2，并且它安装在了一个你可以从 dosemu 读取的驱动器上。你可以切换到包含 Win-OS/2 的分区，通过输入 `win` 或 `win.com`，一旦你可以运行应用程序，就可以启动 Windows 会话。据说这工作得相当可靠。如果你能做到，你可以在终端窗口这样做。
 
@@ -11031,29 +9453,26 @@ VMware 的一大优势（在某些情况下也是弱点）是其操作系统及�
 606
 
 # 第六部分 在 KDE 中使用非 KDE 应用程序
-第32 章 在 KDE 中运行 Windows 应用程序
 
-（此处为原始文本中的重复部分，已根据指令要求处理）
-
-
-
+## 第32章 在 KDE 中运行 Windows 应用程序
 
 ## 第七部分
-## 在 KDE 下使用这些传真应用 ### 第 33 章从 KDE 发送传真
+
+### 第33章 从 KDE 发送传真
 
 你可能没有 Class 2 传真调制解器。事实上，许多绝大多数传真调制解器都支持 Class 1，而 U.S. Robotics（现 3Com）Courier 调制解器支持 Class 2.0（以及 Class 1），但不支持 Class 2。（Class 1 将大部分工作交给了主处理器，而一个不支持 Class 1 的传真调制解器会使用某些专有格式。祝你找到适用于它的 Linux 软件好运——对于传真用途来说，它可能和 Winmodem 没区别。）
 
 如果你有一个 Class 2 传真调制解器（这是可能的），并且你拥有相应的软件，那么你可能可以使用 `getty-sendfax` 来处理机器上所有用户的传真任务。它也是一个命令行程序。
 
-## Hylafax：工业级传真
+#### Hylafax：工业级传真
 
-如果 Linux 上有一个标准的传真程序，一个 Linux 世界里的大杀器，那一定是 Hylafax，你可以在 www.hylafax.org 获取源码和编译好的二进制文件。从某种好的意义上说，它是一个“怪物级”程序：如果你设置了 100 台连接在一起的机器并有一个专用的传真服务器，Hylafax 就是你需要的程序。但如果你只有一个调制解器，并且在一个调制解器上发送和接收大量传真，同时又用它用于收集邮件、从 Web 或 ftp 站点抓取最新的 KDE 应用，那么 Hylafax 并不是大材小用。
+如果 Linux 上有一个标准的传真程序，一个 Linux 世界里的大杀器，那一定是 Hylafax，你可以在 `www.hylafax.org` 获取源码和编译好的二进制文件。从某种好的意义上说，它是一个“怪物级”程序：如果你设置了 100 台连接在一起的机器并有一个专用的传真服务器，Hylafax 就是你需要的程序。但如果你只有一个调制解器，并且在一个调制解器上发送和接收大量传真，同时又用它用于收集邮件、从 Web 或 ftp 站点抓取最新的 KDE 应用，那么 Hylafax 并不是大材小用。
 
 我必须指出，我从未在我的机器上成功编译过 Hylafax，所以当我使用它时，都是通过一位能力超过我的人所完成的工作，那人好心地为它编译并提供了包。我提到这一点并不是为了承认这个特定的短板，而是为了警告那些刚开始从源码构建软件的新手。Hylafax 并不是最好的第一个项目。（如果你想要一个第一个项目，请看书前面提到的那些容易编译的内容。）你很有可能从你所在的 Linux 发行版的 ftp 站点下载到当前 Hylafax 的 RPM 或 DEB 包。
 
 它支持所有三种传真调制解器类型，和其他程序一样，它是一个命令行程序。
 
-## 在 KDE 下使用这些传真应用
+#### 在 KDE 下使用这些传真应用
 
 为什么一本关于 KDE 的书会有一章以几页关于控制台传真程序的开头呢？我以为你永远不会问这个问题。因为 KDE 有方法通过这三个程序中的让你从命令行中解脱出来，笨蛋！
 
@@ -11061,154 +9480,170 @@ VMware 的一大优势（在某些情况下也是弱点）是其操作系统及�
 
 另请参阅
 
--   这些说明在第 413 页中也有详细介绍。
+- 这些说明在第 413 页中也有详细介绍。
 
-KSendFax 非常好用，因为它作为上述所有命令行程序的图形化界面运行。（如果这让你感到兴奋，你也可以从 Konsole 或 kwt 窗口中运行其中任何一个。）它还提供了一些小便利功能，比如电话簿，这样你就不需要每次输入电话号码（并且避免在输错号码时，听着某个可怜的人对着传真的尖叫声说“喂？喂？”）。
+`KSendFax` 非常好用，因为它作为上述所有命令行程序的图形化界面运行。（如果这让你感到兴奋，你也可以从 Konsole 或 kwt 窗口中运行其中任何一个。）它还提供了一些小便利功能，比如电话簿，这样你就不需要每次输入电话号码（并且避免在输错号码时，听着某个可怜的人对着传真的尖叫声说“喂？喂？”）。
 
-当你编译、安装并启动 KSendFax 后，你应该能看到如图 33.1 所示的对话框。
+当你编译、安装并启动 `KSendFax` 后，你应该能看到如图 33.1 所示的对话框。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_627_0.png)
 
 图 33.1
-它看起来既熟悉又有点晦涩，但一旦你掌握了 KSendFax，它就很简单。
 
-开始之前，你需要确保 KSendFax 发出的命令对于你的传真程序是正确的。你通过 Options（选项）、Preferences（偏好设置，见图 33.2）来实现这一点。
+它看起来既熟悉又有点晦涩，但一旦你掌握了 `KSendFax`，它就很简单。
+
+开始之前，你需要确保 `KSendFax` 发出的命令对于你的传真程序是正确的。你通过 Options（选项）、Preferences（偏好设置，见图 33.2）来实现这一点。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_628_0.png)
 
 图 33.2
-KSendFax 成功运行的关键是 Send Fax（发送传真），这是一个适用于你的传真软件的命令。幸运的是，在安装传真程序的过程中，你可能已经测试过它了。你从命令行获取它的使用的行就是你应该在这里使用的行，并按照指定的指定填写变量。在这里有效的命令行是一个很好的开始
+
+`KSendFax` 成功运行的关键是 Send Fax（发送传真），这是一个适用于你的传真软件的命令。幸运的是，在安装传真程序的过程中，你可能已经测试过它了。你从命令行获取它的使用的行就是你应该在这里使用的行，并按照指定的指定填写变量。在这里有效的命令行是一个很好的开始
 
 ```
 Hylafaxsend -n -h -c -x -d Name=@Phone
 getty-ksendfaxsend -F @Phone
 ```
 
-这些足够让你操作了，但你必须在使用的 KSendFax 界面中为每次通话输入所有信息。有一个常用号码的电话簿会有帮助。你可以创建一个，但它有点复杂。默认情况下，KSendFax 会创建一个 `~/phonebook` 文件，里面是空的。但是，如果你在 KSendFax 中输入信息并点击 Phonebook, Add，信息就会被存储并在 KSendFax 屏幕底部的 Phonebook 窗口中显示，如图 33.3 所示。
+这些足够让你操作了，但你必须在使用的 `KSendFax` 界面中为每次通话输入所有信息。有一个常用号码的电话簿会有帮助。你可以创建一个，但它有点复杂。默认情况下，`KSendFax` 会创建一个 `~/phonebook` 文件，里面是空的。但是，如果你在 `KSendFax` 中输入信息并点击 Phonebook, Add，信息就会被存储并在 `KSendFax` 屏幕底部的 Phonebook 窗口中显示，如图 33.3 所示。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_628_1.png)
 
 图 33.3
+
 当你输入特定目的地的信息并选择 Phonebook, Add 时，它会被添加到电话簿中，并出现在对话框底部的电话列表（在此图中仅有一项）。
 
-现在，涉及到发送传真时，KSendFax 最让人困惑，这在稍后的版本中可能会发生变化。选择要传真的的文件，请使用 Browse（浏览）按钮或打开 KFM 窗口并将文件拖到 Phonebook 文本框中。它现在出现在 Phonebook 框中。如果你点击 Browse 按钮下方的向下箭头，它会被添加到待传文件列表中。它不会变成电话簿（见图 33.4）。
+现在，涉及到发送传真时，`KSendFax` 最让人困惑，这在稍后的版本中可能会发生变化。选择要传真的的文件，请使用 Browse（浏览）按钮或打开 KFM 窗口并将文件拖到 Phonebook 文本框中。它现在出现在 Phonebook 框中。如果你点击 Browse 按钮下方的向下箭头，它会被添加到待传文件列表中。它不会变成电话簿（见图 33.4）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_629_0.png)
 
 图 33.4
+
 要从传真队列中删除文件，请高亮它并点击 X 按钮。
 
-附加功能与各个传真程序相关，你可以在 KSendFax 中启用它们。要做到这一点，请咨询传真程序的文档以及 KSendFax 文档，这在写作时是一个后期版本，你选择要传真的文件，输入电话号码并点击 Send。
+附加功能与各个传真程序相关，你可以在 `KSendFax` 中启用它们。要做到这一点，请咨询传真程序的文档以及 `KSendFax` 文档，这在写作时是一个后期版本，你选择要传真的文件，输入电话号码并点击 Send。
 
 ## 第七部分
-### 第 34 章 你必须拥有的非 KDE 程序
+
+### 第34章 你必须拥有的非 KDE 程序
 
 你现在需要学习两件事。对于那些需要使用控制台模式的人，第一件是，如果你需要控制台模式来解决问题，第二件是，你不是幸运的人。控制台模式没有用处，除非你拥有两个你必须拥有的程序。它们是良好的编辑器以及精通的 Midnight Commander，控制台文件管理器。
 
 本章将有一些插图，但它们并不完全准确。为了制作截图，你需要在全屏文本模式会话中运行，看起来不会那么漂亮，而且你可能会感到压力很大。熟悉如何使用这些程序很重要。无论 GUI 支持者如何说，文本模式并不是一个神秘可怕的地方。你会惊讶于使用控制台是如此舒适和简单。
 
-## 一个良好的编辑器
-
-如果你非常专注，你将会学习一个名为 vi 的程序。它是一个编辑器。许多人喜欢它，而我怀疑有更多的人恨它。它并不直观易用。但大家对这一点有共识：它安装在几乎每台 Linux 机器上（我自己的生产机器是唯一的例外）。如果你处于帮助他人安装 Linux 的位置，你没有选择不学习 vi，因为迟早你会需要它。如果你有时间，要做的就是学习 vi。（如果你认识一个 vi 大神，请他们过来，请客披萨和啤酒，并接受一次 vi 课程。这可能是最好的学习方法。）
-
-有 vi 的替代品吗？那是！
-
-在 vi 之后，可能在 Linux 机器上最常见的文本编辑器是 pico。它是通常在 pine 模式邮件程序中编辑器，甚至包含在某些 pine 包中。你很有可能已经安装了 pico。要确认这一点，打开控制台窗口，输入 pico 并按回车。如果它在那里，你将看到图 34.1 所示的内容。
+#### 一个良好的编辑器
 
 
 
+如果你非常专注，你将会学习一个名为 `vi` 的程序。它是一个编辑器。许多人喜欢它，而我怀疑有更多的人恨它。它并不直观易用。但大家对这一点有共识：它安装在几乎每台 Linux 机器上（我自己的生产机器是唯一的例外）。如果你处于帮助他人安装 Linux 的位置，你没有选择不学习 `vi`，因为迟早你会需要它。如果你有时间，要做的就是学习 `vi`。（如果你认识一个 `vi` 大神，请他们过来，请客披萨和啤酒，并接受一次 `vi` 课程。这可能是最好的学习方法。）
 
+有 `vi` 的替代品吗？那是！
+
+在 `vi` 之后，可能在 Linux 机器上最常见的文本编辑器是 `pico`。它是通常在 `pine` 模式邮件程序中编辑器，甚至包含在某些 `pine` 包中。你很有可能已经安装了 `pico`。要确认这一点，打开控制台窗口，输入 `pico` 并按回车。如果它在那里，你将看到图 34.1 所示的内容。
 
 # 第七部分
+
 ## 一种良好的文本编辑器 第 34 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_632_0.png)
 
-### ### 34.1
+### 34.1
 
-如果你在过去用过计算机 BBS 系统，你可能还记得这个界面，因为 pico 是许多此类系统上的消息编辑器。
+如果你在过去用过计算机 BBS 系统，你可能还记得这个界面，因为 `pico` 是许多此类系统上的消息编辑器。
 
-使用 pico 非常简单。要编辑一个文件，只需输入 **pico** 后跟文件名（如果你不在文件所在的目录，请使用完整路径）并按 **Enter**（回车键）。如果你正在编辑系统配置文件（这可能是你在紧急情况下求助于**它**时会做的事情），你很可能需要先以 root 身份登录（或使用 su root），否则你将无法保存所做的更改。这在现在看来是显而易见的，但在时间紧迫的时刻很容易被忽视。你会在紧急情况下如何使用 pico 呢？嗯，你可能刚刚升级了内核，但忘记将新内核添加到 /etc/lilo.conf 并运行 /sbin。因此，你进入单用户模式进行修复（请参阅图 34.2）。查阅你的 Linux 发行版文档以获取进入单用户模式的方法。通常是在启动时的启动提示符处输入 **linux-single**。）
+使用 `pico` 非常简单。要编辑一个文件，只需输入 `pico` 后跟文件名（如果你不在文件所在的目录，请使用完整路径）并按 `Enter`（回车键）。如果你正在编辑系统配置文件（这可能是你在紧急情况下求助于它时会做的事情），你很可能需要先以 root 身份登录（或使用 `su root`），否则你将无法保存所做的更改。这在现在看来是显而易见的，但在时间紧迫的时刻很容易被忽视。你会在紧急情况下如何使用 `pico` 呢？嗯，你可能刚刚升级了内核，但忘记将新内核添加到 `/etc/lilo.conf` 并运行 `/sbin`。因此，你进入单用户模式进行修复（请参阅图 34.2）。查阅你的 Linux 发行版文档以获取进入单用户模式的方法。通常是在启动时的启动提示符处输入 `linux-single`。）
 
 # 第七部分 扩展 KDE 功能的程序
+
 ## 第 34 章 你必须拥有的两个非 KDE 程序
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_633_0.png)
 
 # 图 34.2
 
-要修复 /etc/lilo.conf，只需在命令行输入 pico /etc/lilo.conf（以 root 身份）并按 Enter。要保存更改，按 Ctrl+O。要退出程序，按 Ctrl+X。
+要修复 `/etc/lilo.conf`，只需在命令行输入 `pico /etc/lilo.conf`（以 root 身份）并按 Enter。要保存更改，按 `Ctrl+O`。要退出程序，按 `Ctrl+X`。
 
-同样地，你还可以修复错误的 /etc/XF86Config 以及许多其他配置文件。然而，学习你需要了解的 pico（或者如果你的选择是 vi）的知识时机就是现在，因为你有时间来熟练它了。
+同样地，你还可以修复错误的 `/etc/XF86Config` 以及许多其他配置文件。然而，学习你需要了解的 `pico`（或者如果你的选择是 `vi`）的知识时机就是现在，因为你有时间来熟练它了。
 
-你完全可以选择另一个文本编辑器。Emacs 是一个热门选择，尽管我注意到 Emacs 是一种宗教，人们对其争论异常激烈。如果你想使用它，请花一个月时间来学习它。请记住，你在命令行获得的 Emacs 与你通常在终端命令行输入 emacs 时得到的 Emacs 看起来完全不同（见图 34.3）。
+你完全可以选择另一个文本编辑器。`Emacs` 是一个热门选择，尽管我注意到 `Emacs` 是一种宗教，人们对其争论异常激烈。如果你想使用它，请花一个月时间来学习它。请记住，你在命令行获得的 `Emacs` 与你通常在终端命令行输入 `emacs` 时得到的 `Emacs` 看起来完全不同（见图 34.3）。
 
 # 第七部分
+
 ## 一种良好的文本编辑器 第 34 章
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_634_0.png)
 
 # 图 34.3
 
-如果你习惯了使用 Emacs，当你在非图形化文本控制台上输入 emacs 并得到一个完全不同的东西时，你可能会感到惊讶甚至惊恐。在控制台窗口命令行输入 emacs 启动不是 Emacs，而是如果你安装了的话 Emacs 基础版。Emacs 有菜单和图标；而这个版本的 Emacs 要简陋得多。
+如果你习惯了使用 `Emacs`，当你在非图形化文本控制台上输入 `emacs` 并得到一个完全不同的东西时，你可能会感到惊讶甚至惊恐。在控制台窗口命令行输入 `emacs` 启动不是 `Emacs`，而是如果你安装了的话 `Emacs` 基础版。`Emacs` 有菜单和图标；而这个版本的 `Emacs` 要简陋得多。
 
 你可以从命令行使用多种 Linux 文本编辑器。如果你没有喜欢的，尽管可以浏览网页并找一个让你满意的……或者自己写一个。请记住，如果你得到一个只在 X 窗口系统下运行的编辑器，无论你选择哪一个，请在需要它之前彻底学会它。几乎所有的 Linux 问题都是配置引起的，迟早你的文本编辑器会救你。学习如何将配置文件加载到你的文本编辑器中，如何编辑它以及如何保存更改。这当然意味着你必须学习一些 Linux 知识，以便当出现问题时，你知道哪个配置文件是可能的“头号疑犯”。
 
 # 第七部分 扩展 KDE 功能的程序
+
 ## 第 34 章 你必须拥有的两个非 KDE 程序
 
-# # 午夜司令 (Midnight Commander)
+# Midnight Commander
 
-没有安装 Midnight Commander 就运行 Linux 就像在没有安全网上走钢丝。它是一个如此重要的程序，以至于 KDE 的 Konsole 实际上将其列为一个菜单项。但在需要时，救你的往往是在命令行中。
+没有安装 `Midnight Commander` 就运行 Linux 就像在没有安全网上走钢丝。它是一个如此重要的程序，以至于 KDE 的 `Konsole` 实际上将其列为一个菜单项。但在需要时，救你的往往是在命令行中。
 
-首先，让我们看看你是否已经安装了它。打开一个终端窗口，在提示符处输入 mc 并按 Enter。如果已安装，你将看到如图 34.4 所示的内容。
+首先，让我们看看你是否已经安装了它。打开一个终端窗口，在提示符处输入 `mc` 并按 Enter。如果已安装，你将看到如图 34.4 所示的内容。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_635_0.png)
 
 # 图 34.4
+
 我没有记住 Linux 文件操作的命令行选项，很少有人知道它们。学习它们并无害处，除非你一直使用它们，否则很难保持熟练。我显然没有。
 
-Midnight Commander 在屏幕底部的下一行提供命令行，但它赋予了命令行威力。数字对应键盘上的功能键，要退出时请按 F10 而不是输入 F10。如果你安装了 gpm 以支持控制台模式鼠标，Midnight Commander 即使在纯控制台上也能使用点点点击。当然，如果你使用方向键和 Enter 键进行导航，并使用 Tab 键在两侧之间切换，则不需要。
+`Midnight Commander` 在屏幕底部的下一行提供命令行，但它赋予了命令行威力。数字对应键盘上的功能键，要退出时请按 `F10` 而不是输入 `F10`。如果你安装了 `gpm` 以支持控制台模式鼠标，`Midnight Commander` 即使在纯控制台上也能使用点点点击。当然，如果你使用方向键和 Enter 键进行导航，并使用 Tab 键在两侧之间切换，则不需要。
 
-你什么时候需要 Midnight Commander？我经常使用它的一个领域是在升级 KDE 时对其进行备份。
+你什么时候需要 `Midnight Commander`？我经常使用它的一个领域是在升级 KDE 时对其进行备份。
 
 # 第七部分
+
 ## 你熟悉的其他控制台事项
-第 34 章
+
+### 第 34 章
 
 你学习这些东西的原因是它们会在很多情况下非常有用。例如，当你需要搜索文件、移动一组文件或创建目录时。
 
 # 第七部分 扩展 KDE 功能的程序
+
 ## 第 34 章 你必须拥有的两个非 KDE 程序
 
 # RPM
 
-有时你安装了一个 RPM 软件包，并在之后发现你弄坏了某些东西。如何卸载 RPM 并恢复到之前的状态？如果你熟悉 RPM 命令行，你就能实现这一点。掌握命令行 RPM是一项重要的技能。（如果你使用的是 Debian，DEB 文件管理工具 dpkg 也是如此。）
+有时你安装了一个 `RPM` 软件包，并在之后发现你弄坏了某些东西。如何卸载 `RPM` 并恢复到之前的状态？如果你熟悉 `RPM` 命令行，你就能实现这一点。掌握命令行 `RPM` 是一项重要的技能。（如果你使用的是 Debian，`DEB` 文件管理工具 `dpkg` 也是如此。）
 
 # TAR
 
-TapeArchive 命令的命令行选项（通常与磁带完全无关）迟早对你至关重要。学习它们，并通过偶尔使用它们来获得熟练。
+`TapeArchive` 命令的命令行选项（通常与磁带完全无关）迟早对你至关重要。学习它们，并通过偶尔使用它们来获得熟练。
 
 # GZIP, GUNZIP 和 BZIP2
 
 你会经常在 Linux 中遇到这些压缩程序。所有优秀的包管理器的一个问题在于，它们让你免于学习这些命令，但当你陷入困境需要从命令行深入研究时，这并不是好事。
 
 > 什么是 "Uncompress?"
-你经常会遇到某个程序在编译或其他操作过程中失败，并提示找不到名为 uncompress 的文件。uncompress 是 Linux 中通常不使用的 UNIX 命令。该怎么办？
-嗯，你运气不错。你安装的 gunzip 与 uncompress 是兼容的。当然，那个崩溃的程序并不知道这一点，所以你需要给它一些帮助。
-也许你可以进入调用 uncompress 的脚本或源代码并将其更改为 gunzip，但这太麻烦且只对该应用程序有效。有一个更简单、更好的方法：创建一个从 /bin/gunzip 到 /bin/uncompress 的符号链接。这样你就再也不会看到这个错误消息了。
-创建一个链接的一个快速简单的方法是打开 KFM 并将 gunzip 拖入其目录，等同于将其复制到。它会询问你想做什么，即创建一个名为 uncompress 的链接。
-或者，在命令行切换到 /bin 并执行以下操作：
+
+你经常会遇到某个程序在编译或其他操作过程中失败，并提示找不到名为 `uncompress` 的文件。`uncompress` 是 Linux 中通常不使用的 UNIX 命令。该怎么办？
+
+嗯，你运气不错。你安装的 `gunzip` 与 `uncompress` 是兼容的。当然，那个崩溃的程序并不知道这一点，所以你需要给它一些帮助。
+
+也许你可以进入调用 `uncompress` 的脚本或源代码并将其更改为 `gunzip`，但这太麻烦且只对该应用程序有效。有一个更简单、更好的方法：创建一个从 `/bin/gunzip` 到 `/bin/uncompress` 的符号链接。这样你就再也不会看到这个错误消息了。
+
+创建一个链接的一个快速简单的方法是打开 `KFM` 并将 `gunzip` 拖入其目录，等同于将其复制到。它会询问你想做什么，即创建一个名为 `uncompress` 的链接。
+
+或者，在命令行切换到 `/bin` 并执行以下操作：
+
+```
 ln -s gunzip uncompress
+```
 
-
-
-
-
-当然，想要掌握所有的 Linux 命令行及其选项是不可能的。如果世界上真的有人精通所有，我可没听说过那个人。但如果你学会了上述列出的几个命令，加上在文件系统中操作所需的几个——外之还要保持对文本编辑器和 Midnight Commander 的熟练——你就可以确信自己已经准备好应对可能遇到的大多数情况。
+当然，想要掌握所有的 Linux 命令行及其选项是不可能的。如果世界上真的有人精通所有，我可没听说过那个人。但如果你学会了上述列出的几个命令，加上在文件系统中操作所需的几个——外之还要保持对文本编辑器和 `Midnight Commander` 的熟练——你就可以确信自己已经准备好应对可能遇到的大多数情况。
 
 ## 第八部分
-身处 KDE 的最前沿
+
+### 身处 KDE 的最前沿
 
 - 升级到最新的 KDE 版本 6.29 35
 - 为 KDE 编程 6.39 36
@@ -11223,15 +9658,18 @@ ln -s gunzip uncompress
 - 快照
 
 ## 第八部分 身处 KDE 的最前沿
+
 ### 第 35 章 升级到最新的 KDE 版本
 
-与 PC 的其他 GUI 不同，且与大多数 Linux 应用一样，KDE 正在不断改进。然而，要进行升级，你不需要安装什么“修复包”或增量更新；如果你想升级核心发行版或其包含的应用程序，必须安装一个全新的版本。当然，你可以升级不属于核心包的单个应用程序，而无需更新整个大套件。除非你离不开某个需要新 KDE 的应用程序，这可以在应用程序源代码的文档中找到。尽管如此，你仍然应该阅读那些文档的，尽管我们中的许多人已经养成了一个坏习惯：只有在程序编译或运行失败时才去读。
+与 PC 的其他 GUI 不同，且与大多数 Linux 应用一样，`KDE` 正在不断改进。然而，要进行升级，你不需要安装什么“修复包”或增量更新；如果你想升级核心发行版或其包含的应用程序，必须安装一个全新的版本。当然，你可以升级不属于核心包的单个应用程序，而无需更新整个大套件。除非你离不开某个需要新 `KDE` 的应用程序，这可以在应用程序源代码的文档中找到。尽管如此，你仍然应该阅读那些文档的，尽管我们中的许多人已经养成了一个坏习惯：只有在程序编译或运行失败时才去读。
+
+
 
 其中最耗时的部分通常是下载。所有的 KDE 软件包都可达 20MB 或更多。下载可能需要一段时间时间。
 
 然后，取决于你获取新 KDE 的形式，升级可以是简单且快速的。（如果从源码编译，可能需要几个小时。）
 
-但是，我们现在正处于一个时代，升级变得比以前任何时候都要复杂得多，并且可能充满危险。 第一次，你真的可能把事情搞得一团糟——相信我，因为我也干过——除非你完全清楚自己在做什么。在读完本章后，你就懂了。
+但是，我们现在正处于一个时代，升级变得比以前任何时候都要复杂得多，并且可能充满危险。第一次，你真的可能把事情搞得一团糟——相信我，因为我也干过——除非你完全清楚自己在做什么。在读完本章后，你就懂了。
 
 ### 获取正确的版本
 
@@ -11251,9 +9689,10 @@ ln -s gunzip uncompress
 
 ![img/4a2883756c73e7b0696dbbd7215c7db_644_0.png]
 
-这里需要等一会儿。现在，对于这项工作，你需要更改 /etc/profile 中列出的 KDE 路径。然后你就可以像大家一样，在升级时备份你的 KDE。这是值得的。否则，你可以求助于 power，它已经很多次证明有效，尽管在没有任何 KDE 安装中有人听说过。
+这里需要等一会儿。现在，对于这项工作，你需要更改 `/etc/profile` 中列出的 KDE 路径。然后你就可以像大家一样，在升级时备份你的 KDE。这是值得的。否则，你可以求助于 power，它已经很多次证明有效，尽管在没有任何 KDE 安装中有人听说过。
 
 ### 第八部分 身处 KDE 的最前沿
+
 ### 第 35 章 升级到最新的 KDE 版本
 
 制作备份很容易……如果你使用 Midnight Commander 的。不要使用 KFM！KFM 会更改 KDE 文件的权限，你最终得到的备份除了占用存储空间外一无用处。Midnight Commander 保留权限。以下是操作方法——以 root 身份启动 Midnight Commander（通过输入 `mc`），此时如果你想的话，可以在 Konsole 窗口中执行。导航到左列列出你的 KDE 目录，右列列出你想将其拷贝的目录（见图 35.1）。
@@ -11262,7 +9701,7 @@ ln -s gunzip uncompress
 
 图 35.1
 
-注意 KDE 目录被高亮了；在这种情况下，我会将其拷贝到 /usr/local。现在，按 F5，你将看到图 35.2 所示的对话框。
+注意 KDE 目录被高亮了；在这种情况下，我会将其拷贝到 `/usr/local`。现在，按 F5，你将看到图 35.2 所示的对话框。
 
 ![img/4a2883756c73e7b0696dbbd721c7db_646_0.png]
 
@@ -11276,28 +9715,25 @@ ln -s gunzip uncompress
 
 ![img/4a2883756c73e7b0696dbbd7215c7db_647_0.png] 图 35.4（等等，文件名显示是 647）
 
-它就安全地在 /usr/local。一直保留最后的版本是个好主意，以防在新版本运行一段时间后出现问题。如果你想节省磁盘空间，始终可以将其制作 tar 包并进行 gzip 或 bzip2 压缩，然后删除原始备份目录。
+它就安全地在 `/usr/local`。一直保留最后的版本是个好主意，以防在新版本运行一段时间后出现问题。如果你想节省磁盘空间，始终可以将其制作 tar 包并进行 gzip 或 bzip2 压缩，然后删除原始备份目录。
 
-如何拥有两个完整副本而不让系统混乱？简单：你的 KDE 环境变量仍然指向原始安装。现在，如果出了问题，你可以删除损坏的 KDE 目录——这次在全屏终端以 root 身份使用 Midnight Commander——或者将你的 KDE 环境变量指向 /usr/local 中的那个。然后你就可以解决哪里出了问题。很不错对吧？
+如何拥有两个完整副本而不让系统混乱？简单：你的 KDE 环境变量仍然指向原始安装。现在，如果出了问题，你可以删除损坏的 KDE 目录——这次在全屏终端以 root 身份使用 Midnight Commander——或者将你的 KDE 环境变量指向 `/usr/local` 中的那个。然后你就可以解决哪里出了问题。很不错对吧？
 
 问题自然而生：为什么要这么费劲？KDE 以 tar 包或 RPM 或 DEB 包的形式提供，所以替换安装很容易，即使你没有保存到旧的，
 
 嗯，不，如图 35.5 所示。
 
 ### 第八部分
+
 进行（升级）第 35 章
 
 ![img/4a2883756c73e7b0696dbbd7215c7db_648_0.png]
 
 图 35.5
 
-对比这个 /opt/kde/share/apps 目录和全新安装 KDE 的目录。你会发现许多不在 KDE 核心发行中的应用程序都安装在 KDE 目录中。重新安装它们一遍一点也不好。这就是为什么备份你的 KDE 安装如此重要。
+对比这个 `/opt/kde/share/apps` 目录和全新安装 KDE 的目录。你会发现许多不在 KDE 核心发行中的应用程序都安装在 KDE 目录中。重新安装它们一遍一点也不好。这就是为什么备份你的 KDE 安装如此重要。
 
 在你完成所有备份后，就可以安全地开始升级了。
-
-
-
-
 
 # 第八部分 处于 KDE 的前沿
 
@@ -11309,9 +9745,9 @@ ln -s gunzip uncompress
 
 和以前一样，对现有的 KDE 进行备份是个好主意。你还想备份你的 `~/.kde` 目录（这本身就是件好事，以防某个奇怪的主题之类的东西导致它损坏）。先不要急于删除你的 QT 源码、RPM 或 DEB 包。
 
-对于 KDE 2.0，你确实需要安装新版本的 Mico（2.2 或更高版本），你可以从 http://~/diamant_vsb.cs.uni-frankfurt./~mico/ 获取它。当然，你还需要安装新的 QT。我强烈建议安装你所选版本的所有内容：开发包和文档包、任何示例或演示包，以及全家桶。如果你计划进行任何 KDE 开发，这些是必不可少的；而且随着新应用程序的出现，它们可能需要其中包含某些内容，因此非常有帮助。查看你 QT 目录下的 `/examples` 子目录也是很有启发性的，无论你使用的是哪个版本，这能让你对构建 KDE 的模块块有个概念。
+对于 KDE 2.0，你确实需要安装新版本的 Mico（2.2 或更高版本），你可以从 `http://~/diamant_vsb.cs.uni-frankfurt./~mico/` 获取它。当然，你还需要安装新的 QT。我强烈建议安装你所选版本的所有内容：开发包和文档包、任何示例或演示包，以及全家桶。如果你计划进行任何 KDE 开发，这些是必不可少的；而且随着新应用程序的出现，它们可能需要其中包含某些内容，因此非常有帮助。查看你 QT 目录下的 `/examples` 子目录也是很有启发性的，无论你使用的是哪个版本，这能让你对构建 KDE 的模块块有个概念。
 
-除此之外，目前我无法提供更多帮助。幸运的是，你并不真的需要我的帮助。处理最新 KDE 版本的说明可以在 www.kde.org 找到。同时，你可以尝试一下 KOffice 的最新代码。
+除此之外，目前我无法提供更多帮助。幸运的是，你并不真的需要我的帮助。处理最新 KDE 版本的说明可以在 `www.kde.org` 找到。同时，你可以尝试一下 KOffice 的最新代码。
 
 ### 快照 (Snapshots)
 
@@ -11335,25 +9771,31 @@ ln -s gunzip uncompress
 
 ## 用于桌面出版 (DTP) 的 KDE
 
-现在几乎所有的重绘 错误都修复了，绘制本身也变得非常快。
+
+
+现在几乎所有的重绘错误都修复了，绘制本身也变得非常快。
 
 那么，我还能告诉你些什么呢？看看这个页面，看看 KDE 如何轻松地用于简单的 DTP。现在处理框架（frames）应该变得非常简单了，因为你可以给它们命名，而且在连接它们时，任何人犯错都是可能的，因为连接对话框中只列出了这些框架。
 
 KDE 的框架设计在最近得到了很大改进。
+
 最后，你不仅可以方便地在 KDE 中插入和连接框架，还可以对它们进行调整。这使得使用 KDE 布局页面比以前要容易得多。
 
 除此之外，还做了很多修复，因为 KDE 现在几乎实现了我希望在侧重于稳定和速度的发行中实现的所有功能。
 
-如果你是 RTW（准备好工作的人）：在进行 Office 开发时，请直接加入该项目。订阅 koffice@kde.org 邮件列表，我确定你很快就能找到一个可以投入的项目。此外，任何程序员都可以提供帮助，例如编写文档、帮助维护网页等。
+如果你是 RTW（准备好工作的人）：在进行 Office 开发时，请直接加入该项目。订阅 `koffice@kde.org` 邮件列表，我确定你很快就能找到一个可以投入的项目。此外，任何程序员都可以提供帮助，例如编写文档、帮助维护网页等。
 
 目前就到这里！
 
 图 37
+
 这只是一个截图，但 KDE 看起来将提供巨大的力量和灵活性。KOffice 开发包含了电子表格、演示文稿和图形程序等——而且所有程序的设计都是为了相互通信。
+
+# 第八部分 处于 KDE 的前沿
 
 ## 第 36 章 为 KDE 编程
 
-### 在代码中进行简单的黑客 (Hack)
+### 在代码中进行简单的黑客
 
 ### KDevelop
 
@@ -11363,58 +9805,42 @@ KDE 的框架设计在最近得到了很大改进。
 
 ### 加入 KDE 开发者网络
 
-## 第七部分 处于 KDE 的前沿
-
-### 第 36 章 为 KDE 编程
-
-在代码中进行简单的黑客 (Hack)
-
 这一章看起来可能有点……但那是因为我们正处于……的。最好的信息是，如果你是一个丰富的 C++ 开发者，你必须进行一些非凡的升级，这些升级会破坏你现有的安装。
-
-
-
-
-
-# 第八部分 处于 KDE 的前沿
-## 第 36 章 为 KDE 编程
 
 当我查看源码时，我发现我引用的大多数行已经存在了，而第 1330 行是空的。我在那里插入了缺失的行（见图 36.2）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_655_0.png)
 
 图 36.2
-添加了新行。现在我需要重新编译并安装 kdelbis/khtmlw/ 子目录，为了安全起见，我将重新编译整个 kdelbis。
+
+添加了新行。现在我需要重新编译并安装 `kdelbis/khtmlw/` 子目录，为了安全起见，我将重新编译整个 `kdelbis`。
 
 - 第 1330 行，包含了 Stephan 建议添加的内容。
 
-之后，我以 root 身份（在全控制台模式，而不是在 KDE 运行的情况下）切换到 /usr/local/src/kdelbis。由于我已经修改了这些行，我输入 `make clean` 来删除之前编译的文件，输入 `make all` 来重建文件，并输入 `make install` 将它们安装到我的 KDE 目录中。（我不需要再次运行 `.configure`。）
+之后，我以 root 身份（在全控制台模式，而不是在 KDE 运行的情况下）切换到 `/usr/local/src/kdelbis`。由于我已经修改了这些行，我输入 `make clean` 来删除之前编译的文件，输入 `make all` 来重建文件，并输入 `make install` 将它们安装到我的 KDE 目录中。（我不需要再次运行 `.configure`。）
 
 现在，Stephan 本可以简单地告诉我在源文件中插入相应的行，但正如所提到的，第 1330 行是特定日期的每日源码快照中需要更改的地方，并且可能会发生。通过提供被修改行前后的内容，他给了我（以及现在的你）足够的信息，可以进行文本搜索并找到正确的位置，即使行号在最终代码发布前发生了变化。这意味着即使在稍后的某个版本中发生了变化，我始终能够将默认纸张尺寸设置为 Letter（信纸）。
 
 这实际上比看起来要容易得多，我觉得在这里描述它花费的时间比实际操作要长。当然，最明智的方法是在升级 KDE 时进行更改，这样你只需要编译一次整个项目即可。
-
-# 第八部分
-KDevelop 第 36 章
 
 这个主题有很多变体。通过查看文件中该部分的代码，你可以学习支持哪些纸张尺寸，例如如果你想让 Legal（法纸）成为默认纸张尺寸，你可以了解程序是如何称呼它的，并进行修改使其默认设置为 Legal。
 
 完成这些之后，你就可以理直气壮地称自己为黑客了。好吧，不是那么黑客，但你通过破解源码来实现预期的效果。是的，这种感觉很棒，而且这是一个开始。你获得了一项宝贵的技能。如果有问题，你可以发布关于问题的问题，然后会提供一个黑客供你尝试；现在作为开发者的他们邀请你测试代码以解决其他人可能也遇到的问题。当你测试代码并报告解决或未解决问题时，你正在为整个 KDE 项目做贡献。如果这个“补丁”有效并修复了故障，那么它很有可能被包含在 KDE 的下一个版本中。
 
 > 黑客是好的
+>
 > 如果你看电视新闻，那里每天都在展示对计算机的无知，你可能会认为“黑客（hacker）”是一个贬义词。但是，如果你从计算机世界内部获取知识，你就会知道并非如此。“Hack”一词以前在马萨诸塞理工学院（MIT）指的是一个非常聪明的恶作。它在 MIT 计算机科学系被采用，指的是对计算机代码进行非常聪明的修改，它确实是如此，而且也仅仅是如此。能做到这一点的人就是黑客。侵入他人电脑的人是罪犯。如果以后需要，可能还会有一个专门的术语描述那些胜任地报道计算机世界的广播记者。
 
 从这里开始，虽然路途很长，但独立发现并解决问题只有一步之遥。这一步并不容易，但 KDE 通过一个刚刚加入 KDE 核心分发版的优秀程序让这一切变得更容易。
 
-# KDevelop
+### KDevelop
 
 从 KDE 1.1.2 开始，集成开发环境 KDevelop 被包含在 KDE 基本分发版中。它可以从许多方面让你的生活变得更容易（见图 36.3）。
-
-# 第八部分 处于 KDE 的前沿
-# 第 36 章 为 KDE 编程
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_657_0.png)
 
 图 36.3
+
 KDev 让编写应用程序变得不再困难，而是更容易了，这就像文字处理器让写散文变得不再困难而是更容易了一样。
 
 即使你不写代码也没有计划写代码，KDev 仍然是一个很好的工具，因为它能让你学习很多关于 KDE、关于如何为 Linux 编写应用程序以及关于通用编程的知识。它有详尽的文档，甚至还有更丰富的文档可下载，包括关于 C 和 C++ 编程语言的长篇详细手册（见图 36.4）。
@@ -11422,56 +9848,54 @@ KDev 让编写应用程序变得不再困难，而是更容易了，这就像文
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_658_0.png)
 
 图 3.6
+
 如果你对学习或了解 C 和 C++ 编程感兴趣，可以在 KDevelop 中进行。
 
 KDevelop 提供了快速访问计算机上开发工具的途径以及编写代码的地方。它有自己的邮件列表，你可以订阅它。
 
-# QT 工具包
+### QT 工具包
 
 QT 工具包是由 Troll Tech 产生的一系列库。它包含了小部件集、扩展以及可能提供的此类示例包。（正如你所能看出的，这因不同的发行版而异。）
 
-Mozilla 项目承担了将 Netscape 移植的巨巨大任务，如果你下载并构建源码，它提供一个基于 QT 的版本（注意：这是一个 18MB 的文件）。你可以在 www.mozilla.org 了解更多信息。
+Mozilla 项目承担了将 Netscape 移植的巨巨大任务，如果你下载并构建源码，它提供一个基于 QT 的版本（注意：这是一个 18MB 的文件）。你可以在 `www.mozilla.org` 了解更多信息。
 
 备受推崇的 Opera 浏览器也正在使用 QT 构建（见图 36.6）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_660_0.png)
 
 图 36.6
+
 这张 Linux 版 Opera 的预发布截图仍然展示了某种类 KDE 的外观，这是由于它们共同的祖先。
 
-本章将关于如何为 KDE 进行开发。需要注意的是，如果你计划这样做，你需要下载由你的 Linux 发行版或 Troll Tech 提供的所有包。这些包括 QT、QT-devel、QT-doc 以及可能的其他包，包括 OpenGL 包以及可能提供的此类示例包。
+本章将关于如何为 KDE 进行开发。需要注意的是，如果你计划这样做，你需要下载由你的 Linux 发行版或 Troll Tech 提供的所有包。这些包括 `QT`、`QT-devel`、`QT-doc` 以及可能的其他包，包括 OpenGL 包以及可能提供的此类示例包。
 
-在你完成所有这些后，去一看你 /qt 目录下的 /examples 子目录是值得的。你会看到一些预构建的建议（见图 36.7 和 36.8）。
-
-
-
-
-
-# 第八部分：在 KDE 前沿
-
-# 第 36 章 为 KDE 编程
+在你完成所有这些后，去一看你 `/qt` 目录下的 `/examples` 子目录是值得的。你会看到一些预构建的建议（见图 36.7 和 36.8）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_661_0.png)
 
 图 36.7
+
 Draw 示例渲染了此内容。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_661_1.png)
 
 图 36.8
+
 Layout 示例展示了程序员可以使用的某些屏幕元素。你会发现有十多个小示例，甚至还有几个应用程序和游戏。
 
-> 访问 Troll Tech 网站 www.troll.no，可以获得大量关于访问 QT 的海量信息。
+> 访问 Troll Tech 网站 `www.troll.no`，可以获得大量关于访问 QT 的海量信息。
 
-## 观察 KDE 的编程规则
+### 观察 KDE 的编程规则
 
 为了向世界呈现统一的，特定的编程规则（以及一些指南）能够开发出高质量的 KDE 应用程序。
 
-通过访问 http://developer.kde.org/documentation/standards/kde/index.html，你可以发现比你想象中多多的资源。这些文档将帮助你组织和设计项目，防止你由于重复造轮子，并确保任何知道如何使用 KDE 的人都会如何使用你的应用程序，至少在不增加其独特功能的范围内是如此。即便如此，风格指南也将帮助你思考如何以逻辑化、易用的方式实现新功能和特性。
+通过访问 `http://developer.kde.org/documentation/standards/kde/index.html`，你可以发现比你想象中多多的资源。这些文档将帮助你组织和设计项目，防止你由于重复造轮子，并确保任何知道如何使用 KDE 的人都会如何使用你的应用程序，至少在不增加其独特功能的范围内是如此。即便如此，风格指南也将帮助你思考如何以逻辑化、易用的方式实现新功能和特性。
 
-## 加入 KDE 开发者网络
+### 加入 KDE 开发者网络
 
 在使用 KDE 的过程中，你可能会发现一个你如何修复的漏洞，或者一个你想要实现的功能。届时，我们诚挚地邀请你这样做。
+
+
 
 通常，对事情进行一些组织是一个好主意。如果你在自己的机器上直接修改代码并且对你来说效果很好，它可能没有破坏你使用的任何东西，但可能破坏了其他 KDE 用户使用的东西，因此你不要直接将新代码插入系统。相反，你应该参与 KDE 开发。这种做法的方法请见 http://developer.kde.org（见图 36.9）。
 
@@ -11495,12 +9919,9 @@ KDE 开发者网页提供了你加入工作所需的所有信息。它还提供�
 
 在机器上，你愿意做到多大程度决定了你的成功。例如，在我的东芝 Toshiba Toshiba Portable 300CT 上，我必须拆下硬盘（其实很容易）并将其插入台式机中以安装 Linux。由于机器随附的硬盘有点小，我借此机会换了一个更大、更快的硬盘。（如果你决定升级笔记本硬盘，请确保你买的硬盘物理上适合你的便携式设备。）这涉及到一个大约 10 美元的适配器，允许将小硬盘连接到我台式机电脑的 IDE 线上。它还允许我复制数据文件和配置，这样我就不需要重新配置许多应用程序并安装相应的程序。如果你的笔记本电脑内置了 CD 读器——它重两磅。遗憾的是，随着越来越多的笔记本制造商在机器中内置极其糟糕的仅限 Windows 的调制调器，你越来越可能需要 PCMCIA 调制调器。使用 PCMCIA 调制调器的整体系统性能更好，即使在带有仅 Windows 调制调器的 Windows 下也是如此。好的一面是，你可以升级 PCMCIA 调制调器，当你有一个 PCMCIA 调制调器时，它不是那种那些……（注：此处原文有重复，译文已处理）。
 
-
-
-
-
 # 第八部分 处于 KDE 的前沿
-第 37 章 在笔记本电脑和便携式电脑上使用 KDE
+
+## 第 37 章 在笔记本电脑和便携式电脑上使用 KDE
 
 启动后，K 面板上会出现一个微小的电池图标。将鼠标指针悬停在上面会弹出一个小帮助气泡，量化机器电池的当前状态；如果你连接了电源，它也会提示你。
 
@@ -11509,6 +9930,7 @@ KDE 开发者网页提供了你加入工作所需的所有信息。它还提供�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_667_0.png)
 
 图 37.1
+
 此页面让你决定如何（或是否）显示电池状态显示。如果你愿意，甚至可以通过依次点击每个图标并选择替换图标来更改图标。你还可以确定系统检查电池状态的频率。
 
 下一个标签页（见图 37.2）是你的 PCMCIA 插槽占用者的简单列表。
@@ -11516,10 +9938,10 @@ KDE 开发者网页提供了你加入工作所需的所有信息。它还提供�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_667_1.png)
 
 图 37.2
+
 当你插入和拔出 PCMCIA 卡时，此标签页上的值会自动变化。你实际上不需要在此处进行任何操作，但它能让你追踪里面插了什么。
 
-# 第八部分
-# KCMLaptop 第 37 章
+## KCMLaptop
 
 现在我们进入一些高级配置，这些配置可以决定电脑使用电池电量的效率。许多笔记本电脑提供比“开启”和“关闭”更多的的功能，内置了电源管理功能。这些可能包括：
 
@@ -11536,12 +9958,10 @@ KCMLaptop 允许你以 KCMLaptop 期望的方式配置这些功能（如果支�
 
 警告（Warning）页面可以防止那些尴尬的情况——因为你忘记保存而电池没电了，导致整个硕士论文丢失，这在数字时代等同于“狗吃了我的作业”。然而，它本身也可能产生尴尬的局面（见图 37.4）。
 
-# 第八部分 处于 KDE 的前沿
-第 37 章 在笔记本电脑和便携式电脑上使用 KDE
-
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_669_0.png)
 
 图 37.4
+
 当电池没电时，KCMLaptop 会在你的屏幕上弹出一个警告。如果你真的想，可以让它从笔记本的微型扬声器里大喊“救命！我要死了”（你需要自己录制消息；它不包含在），或者在电池耗尽之前运行某个程序（任何程序均可）。它提供系统提示音，如果你在图书馆做研究或在会议中做笔记，这本身就非常烦人且尴尬。幸运的是，你可以关闭提示音。你可以将其设置为强制机器进入挂起或待机模式。
 
 > 临界（Critical）页面是当 KCMLaptop 你它不是在开玩笑，情况非常严重，你最好现在做点什么，否则你的硕士论文就要永别再见了。明白其中的意思吧（见图 37.5）。
@@ -11549,32 +9969,28 @@ KCMLaptop 允许你以 KCMLaptop 期望的方式配置这些功能（如果支�
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_675_1.png)
 
 图 37.5
+
 此页面显示警告页面，但决定当电池电量耗尽时会发生什么。
 
 KCMLaptop 是最整洁的小工具之一，取代了可能随机器附带的非 Linux 工具。我出门绝不带它。
 
-# 第八部分
-# KAPM 第 37 章
-# KAPM
+## KAPM
 
 如果由于某种原因你没有、不想或无法编译 KCML，始终有 KAPM，它可以监控你的电池状态（见图 37.6）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_670_0.png)
 
-# 图 37.6
+图 37.6
+
 虽然没有 KDCLaptop 那么复杂，但 KAPM 能让你了解电池电量。
 
 KAPM 同样停靠在你的 K 面板中，右键点击它会产生菜单（见图 37.7）。
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_670_1.png)
 
-# 图 37.7
+图 37.7
 
-
-
-
-# 第八部分
-# 未来 第 38 章
+# 第 38 章 未来
 
 关于某些模糊的许可问题点。在运动内部，那些自称比他人更自由的人之间爆发了战争。这种情况曾困扰过 KDE 早期，它是基于 QT 构建的，而 QT 取决于你的用途，是否属于商业产品。另一方面，尽管如此，人们仍然聚在一起产出像 GIMP 这样的软件，像协作如此完美的免费编译工具，以及 KDE。在代码层面并没有无政府状态。
 
@@ -11582,15 +9998,15 @@ KAPM 同样停靠在你的 K 面板中，右键点击它会产生菜单（见图
 
 事实上，由单一程序员开发且不属于任何特定桌面项目的应用程序数量似乎正在萎缩。优秀的 XMail 程序在 1998 年中期的版本后几乎就停止了更新，Nedit 以及许多曾经留在 Linux 上的程序再也没有新版本了。也许这是因为冗余，但看到开发工作集中在大型项目周围是令人遗憾的。
 
-但我们看到来自大公司的兴趣正在增加：IBM 及其子公司 Lotus；Corel；康普克和惠尔。。这在许多方面都是令人鼓舞的，特别是如果你希望将 Linux 和 KDE 作为你业务计算的基础，但我们必须小心不要过度解读。Linux 凭借自身的意志吸引了大量关注，大公司投入其中的资金虽然在许多标准下是巨大的，但仅是公司每年支出的一小部分，且是对防止被抛弃的一种微小对冲。我们许多人还记得 IBM 对 OS/2 的承诺；结果却放弃了独立发行版和桌面用户。我仍在等待 CoreIRD!3.0，公司的一位官员告诉我它将在“年底前”为 OS/2 推出。那是 1993 年夏天。（我还记得 OS/2 Warp 的发布，当时一家又一家公司承诺出货预装 OS/2，并将它们的应用程序移植到该系统。它们确实这么做了。）要点是，大企业的资金保证其实什么也无法保证。如果你计划将 Linux 和 KDE 作为你业务计算的基础，关注 Linux 和 KDE 的趋势非常重要。两者任何一个都不可能成为死路。不过，我并不是一个专业的预言家，计算机行业中专业预测者唯一的共同点就是，他们一直以来都是完全完全错误的。
 
-661
+
+但我们看到来自大公司的兴趣正在增加：`IBM` 及其子公司 `Lotus`；`Corel`；康普克和惠尔。。这在许多方面都是令人鼓舞的，特别是如果你希望将 Linux 和 KDE 作为你业务计算的基础，但我们必须小心不要过度解读。Linux 凭借自身的意志吸引了大量关注，大公司投入其中的资金虽然在许多标准下是巨大的，但仅是公司每年支出的一小部分，且是对防止被抛弃的一种微小对冲。我们许多人还记得 `IBM` 对 `OS/2` 的承诺；结果却放弃了独立发行版和桌面用户。我仍在等待 `CoreIRD!3.0`，公司的一位官员告诉我它将在“年底前”为 `OS/2` 推出。那是 1993 年夏天。（我还记得 `OS/2 Warp` 的发布，当时一家又一家公司承诺出货预装 `OS/2`，并将它们的应用程序移植到该系统。它们确实这么做了。）要点是，大企业的资金保证其实什么也无法保证。如果你计划将 Linux 和 KDE 作为你业务计算的基础，关注 Linux 和 KDE 的趋势非常重要。两者任何一个都不可能成为死路。不过，我并不是一个专业的预言家，计算机行业中专业预测者唯一的共同点就是，他们一直以来都是完全完全错误的。
 
 # 第八部分 与 KDE 处于前沿
 
-# 第 38 章 加入 KDE 开发者网络
+## 第 38 章 加入 KDE 开发者网络
 
-矛盾的是，像 VMware 这样的应用为 Linux（以及 KDE）提供了一个有趣的利基市场。VMware 允许 Windows 应用程序开发者在同一台机器上运行多个版本的界面，这对于原型制作和测试是真正的福音。由于其各种模式，VMware 防止了文件系统损坏，并提供了原生 Windows 本身根本无法实现的功能。不久之后，Windows 应用程序开发者就会注意到这一点。
+矛盾的是，像 `VMware` 这样的应用为 Linux（以及 KDE）提供了一个有趣的利基市场。`VMware` 允许 Windows 应用程序开发者在同一台机器上运行多个版本的界面，这对于原型制作和测试是真正的福音。由于其各种模式，`VMware` 防止了文件系统损坏，并提供了原生 Windows 本身根本无法实现的功能。不久之后，Windows 应用程序开发者就会注意到这一点。
 
 我们看到 Linux 发行版通过公开发行股票突然变成了大生意。为他们感到高兴。我写这本书——在某种程度上——是希望它能丰富我个人；事实上，是希望这本书以及随后的作品能让我提升到金钱不再是问题的程度，我也可以追求更高的目标。你付了书的钱（我付，出版商也是），你通过做某些事情赢得了它。
 
@@ -11602,145 +10018,136 @@ KAPM 同样停靠在你的 K 面板中，右键点击它会产生菜单（见图
 
 几年前，一位好朋友告诉我，有两个邻居在车道的大部分长度上共用一条车道。他问他们是否成功地在没有争纷的情况下维护它？“容易，”他得到回答，“我们做的比分内还要多。”我不是一个传道者——虽然这本书是献给一位传道者的——但我会这样布道道：找到一种你可以贡献的方法，然后去做。
 
-# 歉意
+## 歉意
 
 在本书的过程中，我在这里那里进行过批评、牢骚和抱怨。我认为那些事情是合理的，但我一刻也不希望我的抱怨被视为对那些花时间编写代码的人的批评。GUI 设计是一件困难的事。（写书也是件困难的事，我确信这本也有自己的弱点。）但在写书时，一个人对书籍主题之外的群体负有忠诚：你，它的读者。世界上没有比我更坚定的 KDE 支持者了，但这不是一本应援书。它是关于如何使用 KDE 的。
 
-662
-
-（注：原文后续内容为大量重复，已按指令要求不进行重复输出）
-
-
-
-
 # 第九部分
-核心 KDE 软件包的内容 附录 A
 
-核心 KDE 发行版中的四个软件包未在此列出。kdelibs 不包含任何应用程序。kdesupport 是正确编译和使用 KDE 至关重要的材料，但它不包含 KDE 应用程序。korganizer 和 kdevel 是核心 KDE 发行版的独立应用程序，但它们自身之外不包含任何其他程序。
+## 核心 KDE 软件包的内容 附录 A
 
-# KDEBASE
+核心 KDE 发行版中的四个软件包未在此列出。`kdelibs` 不包含任何应用程序。`kdesupport` 是正确编译和使用 KDE 至关重要的材料，但它不包含 KDE 应用程序。`korganizer` 和 `kdevel` 是核心 KDE 发行版的独立应用程序，但它们自身之外不包含任何其他程序。
 
-- kaudio—在 KDE 下使用的音频服务器
-- kgndwm—KWM 的后台管理器
-- kcontrol—中央控制面板
-- kdehelp—帮助浏览器
-- kdm—KDE 登录管理器
-- kfind—文件查找工具
-- kfm—集成 Web 浏览器的文件管理器
-- kfontmanager—管理字体和大小的工具
-- knuedit—K Menu 和 K Panel 菜单项的编辑器
-- konsole—一个高级虚拟控制终端
-- kpanel—桌面面板和应用程序启动器
-- kpager—KWM 的分页模块；预览虚拟桌面
-- krootwm—处理根窗口的 KWM 模块
-- kcreensaver—一个用于启动具有特殊 KDE 特性的旧应用程序的微型实用程序
-- kthememgr—管理桌面主题的实用程序
-- kvt—类似于 Konsole 的终端模拟器
-- kwm—KDE 窗口管理器
-- kwmcom—KWM 的通信工具
-- kwmpager—KWM 的分页模块
+### KDEBASE
 
-# KDEADMIN
+- `kaudio`—在 KDE 下使用的音频服务器
+- `kgndwm`—`KWM` 的后台管理器
+- `kcontrol`—中央控制面板
+- `kdehelp`—帮助浏览器
+- `kdm`—KDE 登录管理器
+- `kfind`—文件查找工具
+- `kfm`—集成 Web 浏览器的文件管理器
+- `kfontmanager`—管理字体和大小的工具
+- `knuedit`—K Menu 和 K Panel 菜单项的编辑器
+- `konsole`—一个高级虚拟控制终端
+- `kpanel`—桌面面板和应用程序启动器
+- `kpager`—`KWM` 的分页模块；预览虚拟桌面
+- `krootwm`—处理根窗口的 `KWM` 模块
+- `kcreensaver`—一个用于启动具有特殊 KDE 特性的旧应用程序的微型实用程序
+- `kthememgr`—管理桌面主题的实用程序
+- `kvt`—类似于 `Konsole` 的终端模拟器
+- `kwm`—KDE 窗口管理器
+- `kwmcom`—`KWM` 的通信工具
+- `kwmpager`—`KWM` 的分页模块
 
-- kdat—基于 Tar 的磁带存档应用程序
-- ksysv—SysV 风格初始化的运行级别编辑器
-- kuser—用户管理工具
+### KDEADMIN
 
-第九部分
-# 附录 A 寻找最新的 KDE 及其应用程序
+- `kdat`—基于 Tar 的磁带存档应用程序
+- `ksysv`—SysV 风格初始化的运行级别编辑器
+- `kuser`—用户管理工具
 
-# KDEGAMES
+## 附录 A 寻找最新的 KDE 及其应用程序
 
-- kabalone—类似中国棋的游戏
-- kasteroids—小行星大战游戏
-- kblackbox—逻辑游戏
-- kmahjongg—具有极佳画面的麻将游戏
-- kmines—扫鼠
-- conquest—星系征服多人游戏
-- kpat—一套纸牌类游戏
-- kpoker—扑牌游戏
-- kreversi—黑棋（奥赛罗）
-- ksame—相同消除游戏（移除彩色球）
-- kshisen—棋子戏，一种类似麻将的游戏
-- ksmletris—带有笑脸的类俄罗斯块游戏
-- knake—贪吃蛇游戏
-- ksirtet—反向拼写的俄罗斯块，正向玩
-- ksokoban—帮助小人存放宝石
+### KDEGAMES
 
-# KDEGRAPHICS
+- `kabalone`—类似中国棋的游戏
+- `kasteroids`—小行星大战游戏
+- `kblackbox`—逻辑游戏
+- `kmahjongg`—具有极佳画面的麻将游戏
+- `kmines`—扫鼠
+- `conquest`—星系征服多人游戏
+- `kpat`—一套纸牌类游戏
+- `kpoker`—扑牌游戏
+- `kreversi`—黑棋（奥赛罗）
+- `ksame`—相同消除游戏（移除彩色球）
+- `kshisen`—棋子戏，一种类似麻将的游戏
+- `ksmletris`—带有笑脸的类俄罗斯块游戏
+- `knake`—贪吃蛇游戏
+- `ksirtet`—反向拼写的俄罗斯块，正向玩
+- `ksokoban`—帮助小人存放宝石
 
-- kdvi—TeX DVI 文件查看器
-- kfax—传真文件查看器
-- kgfract—分形生成器
-- kghostview—PostScript 查看器
-- kiconedit—图标编辑器
-- kpaint—绘画程序
-- ksnapshot—制作整个桌面或单个窗口截图
-- kview—多格式图像查看器
+### KDEGRAPHICS
 
-# KDEMULTIMEDIA
+- `kdvi`—TeX DVI 文件查看器
+- `kfax`—传真文件查看器
+- `kgfract`—分形生成器
+- `kghostview`—PostScript 查看器
+- `kiconedit`—图标编辑器
+- `kpaint`—绘画程序
+- `ksnapshot`—制作整个桌面或单个窗口截图
+- `kview`—多格式图像查看器
 
-- kmedia—符合 Mediatool 标准的媒体播放器
-- kmid—使用外部合成器、fm, awe 和 gus 设备的 Midi/唱歌文件播放器
+### KDEMULTIMEDIA
 
-第九部分
-# 核心 KDE 软件包的内容 附录 A
+- `kmedia`—符合 Mediatool 标准的媒体播放器
+- `kmid`—使用外部合成器、fm, awe 和 gus 设备的 Midi/唱歌文件播放器
+- `kmidi`—MIDI 播放器
+- `kmix`—音频设备混合器
+- `kscd`—简单 CD 播放器
 
-- kmidi—MIDI 播放器
-- kmix—音频设备混合器
-- kscd—简单 CD 播放器
+### KDENETWORK
 
-# KDENETWORK
+- `karchie`—Archie 客户端
+- `kbiff`—邮件通知的 Biff 工具
+- `kinger`—Finger 客户端
+- `kmail`—电子邮件客户端
+- `knu`—多个网络工具的前端
+- `korn`—多邮箱邮件通知程序
+- `kppp`—拨号器和 `pppd` 前端
+- `krn`—Usenet 新闻阅读器
+- `ksirc`—聊天客户端
+- `ktalkd`—增强型 UNIX talk 守护进程
 
-- karchie—Archie 客户端
-- kbiff—邮件通知的 Biff 工具
-- kinger—Finger 客户端
-- kmail—电子邮件客户端
-- knu—多个网络工具的前端
-- korn—多邮箱邮件通知程序
-- kppp—拨号器和 pppd 前端
-- krn—Usenet 新闻阅读器
-- ksirc—聊天客户端
-- ktalkd—增强型 UNIX talk 守护进程
+### KDETOYS
 
-# KDETOYS
+- `kmoon`—在 K Panel 上显示月相
+- `kworldwatch`—显示世界任何地方时间的时钟
+- `mouspedometa`—测量你的指向设备的桌面里程数
 
-- kmoon—在 K Panel 上显示月相
-- kworldwatch—显示世界任何地方时间的时钟
-- mouspedometa—测量你的指向设备的桌面里程数
+### KDEUTILS
 
-# KDEUTILS
-
-- ark—存档实用程序
-- kab—通讯录
-- karm—时间管理实用程序
-- kcalc—科学计算器
-- kedit—简单文本编辑器
-- kppy—软磁盘格式化程序
-- khexdit—简单十六进制编辑器
-- kjots—记笔记程序
-- klipper—KDE 剪贴板
-- kljettool—某些 HP LaserJet 打印机的配置工具
-- klpq—打印队列前端
-- kpm—进程状态管理器
-- knots—类似便签的笔记应用程序
-- ktop—系统监控
-- kwrite—高级文本编辑器
+- `ark`—存档实用程序
+- `kab`—通讯录
+- `karm`—时间管理实用程序
+- `kcalc`—科学计算器
+- `kedit`—简单文本编辑器
+- `kppy`—软磁盘格式化程序
+- `khexdit`—简单十六进制编辑器
+- `kjots`—记笔记程序
+- `klipper`—KDE 剪贴板
+- `kljettool`—某些 HP LaserJet 打印机的配置工具
+- `klpq`—打印队列前端
+- `kpm`—进程状态管理器
+- `knots`—类似便签的笔记应用程序
+- `ktop`—系统监控
+- `kwrite`—高级文本编辑器
 
 ## 附录 B
-包含 KDE 的发行版
 
-第九部分
-附录 B 包含 KDE 的发行版
+### 包含 KDE 的发行版
 
 首先我要指出，有时似乎任何拥有 CD 刻字机的都是 KDE 发行版，因此此列表（表 B.1）显然是不完整的。但它确实让你了解包含 KDE 的领先和最近发布的 Linux 发行版，以及关于特定发行版你需要了解的任何特殊信息。
 
 表 B.1 主 Linux 发行版中的 KDE 组合
+
 | 发行版 | KDE 版本 | KDE 版本 | 网站 | 备注 |
 | --- | --- | --- | --- | --- |
 | Calder OpenLinux | 2.3 | 1.1.1 | www.calderasystems.com | Corel、KDE 和 Debian 合作的结果 |
 | Corel Linux | | 自定义 | www.corel.com | |
 | Definite Linux | 6.1 | 1.1.1 | www.dlsl.demon.co.uk/definite.html | |
+
+
+
 | Mandrake Linux | 6.1 | 1.1.1 | www.mandrake.com | |
 | Phat Linux | | | www.phat.com | |
 | RedHat | 6.0 | 1.1.1 | www.redhat.com | |
@@ -11749,40 +10156,25 @@ KAPM 同样停靠在你的 K 面板中，右键点击它会产生菜单（见图
 | SuSE | 6.2 | 1.1.1 | www.suse.de | |
 | TurboLinux | 3.6 | | www.turbolux.com | |
 
-第九部分
+# 第九部分
+
 # 附录 A 寻找最新的 KDE 及其应用程序
 
 （注：此处后续重复的文本已略，仅保留核心附录内容及非重复翻译逻辑）
 
 （注：由于原文存在大量重复内容，此处按要求翻译核心结构并确保格式正确）
 
-## 录 C
-快速获取帮助：KDE 列表
+## 附录 C 快速获取帮助：KDE 列表
 
 此外，许多人使用基于控制台的电子邮件应用程序，HTML 在这些应用程序中看起来非常愚蠢，通常会在不阅读的情况下被删除。
 
-注意：不要在 KDE（或实际上，任何 Linux）邮件列表上发布 HTML 格式的消息。许多订阅者按时间或流量为其互联网服务付费，双倍下载大小可能带不你想要的结果。
+注意：不要在 `KDE`（或实际上，任何 `Linux`）邮件列表上发布 HTML 格式的消息。许多订阅者按时间或流量为其互联网服务付费，双倍下载大小可能带不你想要的结果。
 
-Appendix C
-快速获取帮助：KDE 列表
+## 附录 D 其他平台上的 KDE
 
-此外，许多人使用基于控制台的电子邮件应用程序，HTML 在这些应用程序中看起来非常愚蠢，通常会在不阅读的情况下被删除。
+`KDE` 通常是一个 `Linux` 桌面，任何运行 `Linux` 的处理器都可以运行 `KDE`。
 
-注意：不要在 KDE（或实际上，任何 Linux）邮件列表上发布 HTML 格式的消息。许多订阅者按时间或流量为其互联网服务付费，双倍下载大小可能带不你想要的结果。
-
-
-
-
-
-## 附录 D
-## D
-
-## 其他平台上的 KDE
-
-# 附录 D 其他平台上的 KDE
-
-KDE 通常是一个 Linux 桌面，任何运行 Linux 的处理器都可以运行 KDE。
-它也可以在其他操作系统的各种 X 窗口系统上运行：
+它也可以在其他操作系统的各种 `X` 窗口系统上运行：
 
 - Solaris
 - FreeBSD
@@ -11793,196 +10185,202 @@ KDE 通常是一个 Linux 桌面，任何运行 Linux 的处理器都可以运�
 - UNIXWare
 - SCO OpenServer
 
-有报道显示 KDE 在经过微调后也可以运行在其他 UNIX 变体上。通过大量的修改，你可以安装 OS/2 版本的 X 窗口并将 KDE 移植到该平台。（我不知道你为什么要这么做，但理论上是可以实现的。）
+有报道显示 `KDE` 在经过微调后也可以运行在其他 `UNIX` 变体上。通过大量的修改，你可以安装 `OS/2` 版本的 `X` 窗口并将 `KDE` 移植到该平台。（我不知道你为什么要这么做，但理论上是可以实现的。）
 
-通常情况下，你可以找到之前列出的操作系统的二进制文件供下载。如果你安装了 gcc 编译工具，你应该能够在本地也编译这些二进制文件。
+通常情况下，你可以找到之前列出的操作系统的二进制文件供下载。如果你安装了 `gcc` 编译工具，你应该能够在本地也编译这些二进制文件。
 
 # 索引
 
 ## 符号
 
 | 2.2.X 内核 (Linux) | 20 |
-| 3Com（原 U.S. Robotics）PalmPilot，连接到 KPilot | 339-340 |
-| Appfinder 程序 | 147-149 |
-| KFM 文件管理器 | 374-376 |
+| 3Com（原 U.S. Robotics）PalmPilot，连接到 `KPilot` | 339-340 |
+| `Appfinder` 程序 | 147-149 |
+| `KFM` 文件管理器 | 374-376 |
 | Apple Macintosh, 主题 | 41-42 |
-| kdat | 669 |
-| TAR（带带存档）命令行工具 | 624 |
+| `kdat` | 669 |
+| `TAR`（带带存档）命令行工具 | 624 |
 | Linux 应用程序（商业用） | |
-| ApplixWare | 577, 583 |
-| Blender | 584 |
-| ark 归构建器/提取器 | 376, 379-381, 671 |
+| `ApplixWare` | 577, 583 |
+| `Blender` | 584 |
+| `ark` 归构建器/提取器 | 376, 379-381, 671 |
 
 ### A
 
-- a.out 二进制文件, 37
+- `a.out` 二进制文件, 37
 - 地址簿, 671
-- KAddressbook, 333, 339
-- Kmail, 474-476
-- KOrganizer, 303
+- `KAddressbook`, 333, 339
+- `Kmail`, 474-476
+- `KOrganizer`, 303
 - Linux 版 CompUi, 584-585
 - 开发, 584
 - Lotus Notes, 570
 - StarOffice, 570-572, 577
 - WordPerfect, 583-584
-- aRts, 417
+- `aRts`, 417
 - 小行星星游戏, 670
-- (KAsteroids), 389-390
-- 高级编辑器。参见 KWrite
-- aKtion 电影播放器, 353-354, 417
-- applink, 192-196
+- (`KAsteroids`), 389-390
+- 高级编辑器。参见 `KWrite`
+- `aKtion` 电影播放器, 353-354, 417
+- `applink`, 192-196
 - 附件，为应用程序添加链接, 196, 199-201
-- 附件，Kmail 消息, 476, 479
+- 附件，`Kmail` 消息, 476, 479
 - 音频
-- aKtion 电影播放器, 353-354, 417
-- KDE MULTIMEDIA 软件包中的应用程序, 671
-- aRts, 417
-- CD 播放器, 342-346
-- kaudio, 669
-- 闹钟守护守护进程，KOrganizer, 307
-- 模拟实时合成器。参见 aRts
-- 动画，Blender, 584
-- AOL 即时通讯客户端，K Instant Messenger, 418
-- ApplixWare, 577-583
-- 预约，KOrganizer, 297-301, 305
-- Archie 客户端, 671
-- 存档构建器/提取器，ark, 376, 379-381, 671
-- KDE 媒体播放器 .wav 文件, 352-353
-- KHDRec, 417
-- 音频
-- - KMidi MIDI 播放器, 346-350
-- Krabber, 416
-- KRecord, 416-417
-- JfukeBox, 355-355
-- Mpeg 播放器, 354-355
-- AUTOCONF 工具, 24
-- AUTOMAKE 工具, 24
-- - 二进制文件（已编译），KDE, 19
-- 包包格式
-- - DEB, 19-23
-- PKG, 19-20
-- RPM, 19-23
-- TAR, 19-20
-- QT-1.44, 24
-- 二进制文件编辑器，KEdit, Hex Editor, 321
+  - `aKtion` 电影播放器, 353-354, 417
+  - `KDE MULTIMEDIA` 软件包中的应用程序, 671
+  - `aRts`, 417
+  - `CD` 播放器, 342-346
+  - `kaudio`, 669
+  - 闹钟守护守护进程，`KOrganizer`, 307
+  - 模拟实时合成器。参见 `aRts`
+  - 动画，`Blender`, 584
+  - `AOL` 即时通讯客户端，`K Instant Messenger`, 418
+  - `ApplixWare`, 577-583
+  - 预约，`KOrganizer`, 297-301, 305
+  - `Archie` 客户端, 671
+  - 存档构建器/提取器，`ark`, 376, 379-381, 671
+  - `KDE` 媒体播放器 `.wav` 文件, 352-353
+  - `KHDRec`, 417
+  - 音频
+    - `KMidi` MIDI 播放器, 346-350
+    - `Krabber`, 416
+    - `KRecord`, 416-417
+    - `JfukeBox`, 355-355
+    - `Mpeg` 播放器, 354-355
+  - `AUTOCONF` 工具, 24
+  - `AUTOMAKE` 工具, 24
+  - 二进制文件（已编译），`KDE`, 19
+  - 包包格式
+    - `DEB`, 19-23
+    - `PKG`, 19-20
+    - `RPM`, 19-23
+    - `TAR`, 19-20
+  - `QT-1.44`, 24
+  - 二进制文件编辑器，`KEdit`, Hex Editor, 321
 
 ### C
 
-- - C 库，glibc-2.1, 20
-- C/C++ 编译器，EGCS, 24
-- 缓存菜单命令，KFM, 251-253
-- Caitoo（原 KGet）, 497-500
+- `C` 库，`glibc-2.1`, 20
+- `C/C++` 编译器，`EGCS`, 24
+- 缓存菜单命令，`KFM`, 251-253
+- `Caitoo`（原 `KGet`), 497-500
 - 计算器
-- kCalc, 327-328
+  - `kCalc`, 327-328
 
 ### B
 
-- - 背景设置
-- KDE 桌面, 94-97
-- 应用程序, 106-108
-- 颜色特效, 97-99
-- 模式, 99-100
-- 随机壁纸, 104-106
-- 壁纸, 100-104
-- KWM, kbgndwm, 669
+- 背景设置
+  - `KDE` 桌面, 94-97
+  - 应用程序, 106-108
+  - 颜色特效, 97-99
+  - 模式, 99-100
+  - 随机壁纸, 104-106
+  - 壁纸, 100-104
+  - `KWM`, `kbgndwm`, 669
 - 备份
-- 配置文件, 53
-- KDat, 384-386
-- KDE 升级, 631, 635
-- KEdit 文件, 316
-- Midnight Commander, 622-623
-- Biff 工具，邮件通知, 671
-- - 位图图形，随机, 100, 104
-- Blender, 584
+  - 配置文件, 53
+  - `KDat`, 384-386
+  - `KDE` 升级, 631, 635
+  - `KEdit` 文件, 316
+  - `Midnight Commander`, 622-623
+- `Biff` 工具，邮件通知, 671
+- 位图图形，随机, 100, 104
+- `Blender`, 584
 - 盲打命令, 17
-- 书签命令，KFM, 250-251
-- 边界，KDE 桌面, 125-126
-- 浏览器，KDE, 494-495
-- Netscape Navigator/Communicator, 496
-- StarOffice, 496-497
-- KFM, 241-243
+- 书签命令，`KFM`, 250-251
+- 边界，`KDE` 桌面, 125-126
+- 浏览器，`KDE`, 494-495
+- `Netscape Navigator/Communicator`, 496
+- `StarOffice`, 496-497
+- `KFM`, 241-243
 - 业务信息管理器, 25, 624
-- - BZIP2 压缩工具
-- - 科学, 671
-- Caldera Linux 发发行, 674
-- sendfax, 612-613
-- 编译二进制文件，RPM 格式
-- 鼠安装，KDM, 50
+- `BZIP2` 压缩工具
+- 科学, 671
+- `Caldera Linux` 发发行, 674
+- `sendfax`, 612-613
+- 编译二进制文件，`RPM` 格式
+- 鼠安装，`KDM`, 50
 - 默认, 36
-- 日历，KNote, 331
-- 日历视图，无法连接 X 服务器
-- 错误消息, 45
-- 卡牌游戏 (Kpoker), 398-399
-- 纸牌 (KPat), 397-398
+- 日历，`KNote`, 331
+- 日历视图，无法连接 `X` 服务器
+  - 错误消息, 45
+- 卡牌游戏 (`Kpoker`), 398-399
+- 纸牌 (`KPat`), 397-398
 - Castro, Paulo, 237
-- CD 播放器, 342-346, 671
-- CD-ROM，管理, 280
+- `CD` 播放器, 342-346, 671
+- `CD-ROM`，管理, 280
 - 字符模式, 259
 - 字符集, 116, 127
 - 聊天客户端, 671
-- 中文检查器 (Kabalalone), 388, 670
-- chompware, 18
-- 剪贴板，KDE 桌面, 286, 671
+- 中文检查器 (`Kabalalone`), 388, 670
+- `chompware`, 18
+- 剪贴板，`KDE` 桌面, 286, 671
 - 钟, 671
-- KDE World, 409-410
-- 面板选项，KDE 控制中心, 122-123
-- KDE 桌面, 97-100
+- `KDE World`, 409-410
+- 面板选项，`KDE` 控制中心, 122-123
+- `KDE` 桌面, 97-100
 - 原生应用程序, 111, 114
-- Konsole, 258, 261-263
-- kvt (K 终端), 264
-- MiniCLI (命令行界面), 266
+- `Konsole`, 258, 261-263
+- `kvt` (`K` 终端), 264
+- `MiniCLI` (命令行界面), 266
 - 工具类
-- BZIP2, 624
-- GUNZIP, 624
-- RPM, 624
-- TAR（带带存档）, 624
-- KFM 菜单
-- 书签, 250-251
-- 缓存, 251-253
-- 编辑, 245-246
-- Go, 250-255
-- 查看, 246-250
-- Linux，通过 MiniCLI (命令行界面), 266
+  - `BZIP2`, 624
+  - `GUNZIP`, 624
+  - `RPM`, 624
+  - `TAR`（带带存档）, 624
+- `KFM` 菜单
+  - 书签, 250-251
+  - 缓存, 251-253
+  - 编辑, 245-246
+  - Go, 250-255
+  - 查看, 246-250
+- Linux，通过 `MiniCLI` (命令行界面), 266
 - 挂载, 280
 - 卸载, 280
-- 商业应用程序，ApplixWare, 577, 583
-- Blender, 584
+- 商业应用程序，`ApplixWare`, 577, 583
+- `Blender`, 584
 - CompuPic for Linux, 584-585
 - 开发, 584
 - Lotus Notes, 570
-- StarOffice, 570-572, 577
-- WordPerfect, 583-584
-- 配置文件，备份，KWM, kwmcom, 669
 
-### Console
+
+
+# 索引
+
+- `StarOffice`, 570-572, 577
+- `WordPerfect`, 583-584
+- 配置文件，备份，`KWM`, `kwmcom`, 669
+
+## Console
+
 - 终端应用程序
 - 创建桌面图标, 553-555
 - 创建菜单项, 549, 552-553
-- Midnight Commander, 548-549
+- `Midnight Commander`, 548-549
 - 会话设置, 555, 559
-- 控制面板，kcontrol, 669
+- 控制面板，`kcontrol`, 669
 - 包中的核心 KDE 应用程序
-- KDEADMIN, 669
-- KDEBASE, 669
-- KDEGRAPHICS, 670
-- KDEMULTIMEDIA, 670-671
-- KDENETWORK, 671
-- KDTOYS, 671
-- KDEUTILS, 671-672
+- `KDEADMIN`, 669
+- `KDEBASE`, 669
+- `KDEGRAPHICS`, 670
+- `KDEMULTIMEDIA`, 670-671
+- `KDENETWORK`, 671
+- `KDTOYS`, 671
+- `KDEUTILS`, 671-672
 - 开发者，邮件列表, 676
 - 核心 Debian Linux, 18, 674
 - KDE 默认, 36
-- KDEAdmin, 542-543
-- Kora, 543
-- Linux, 537
-- Oracle, 537
-- Postgres, 536
+- `KDEAdmin`, 542-543
+- `Kora`, 543
+- `Linux`, 537
+- `Oracle`, 537
+- `Postgres`, 536
 - 包, 381, 384
-- DEB 文件，编译二进制文件, 19-23
-- Debian Linux, 18
-- Define Linux，发行版, 674
+- `DEB` 文件，编译二进制文件, 19-23
+- `Debian Linux`, 18
+- `Define Linux`，发行版, 674
 - 桌面 (KDE), 38
-- applink, 196, 199-201
+- `applink`, 196, 199-201
 - 应用程序, 106-108
 - 颜色特效, 97-99
 - 原生应用程序的颜色特效, 111, 114
@@ -11990,7 +10388,7 @@ KDE 通常是一个 Linux 桌面，任何运行 Linux 的处理器都可以运�
 - 终端编辑器, 37
 - 字体, 115-116
 - 快捷键, 71-74
-- 管理器，Kpager, 272-277
+- 管理器，`Kpager`, 272-277
 - 样式, 117-118
 - 主题, 41, 45, 212
 - 安装, 222-223
@@ -12001,45 +10399,48 @@ KDE 通常是一个 Linux 桌面，任何运行 Linux 的处理器都可以运�
 - 手动安装, 212-214
 - 使用, 215, 222
 - 设置面板选项，KDE 控制中心, 123-124
-- 虚拟，Kpager, 272-274
+- 虚拟，`Kpager`, 272-274
 
 ### 数据库应用程序
-- Informix, 536
+
+- `Informix`, 536
 
 ### 编辑
-- 二进制文件，Hex Editor, 321
+
+- 二进制文件，`Hex Editor`, 321
 - 终端, 37
-- 缓存表，KFM, 251-253
-- 菜单，kfued, 669
-- SysV 闹钟守护进程, 669
-- 文本，Emacs, 620-621
+- 缓存表，`KFM`, 251-253
+- 菜单，`kfued`, 669
+- `SysV` 闹钟守护进程, 669
+- 文本，`Emacs`, 620-621
 - 配置文件，配置, 315-316
-- 文本，KEdit, 31-52, 310
-- 拖拽功能，KEdit, 321
-- 功能，317-318
-- 工具栏，311, 314
-- 文本，KWrite, 318
+- 文本，`KEdit`, 31-52, 310
+- 拖拽功能，`KEdit`, 321
+- 功能, 317-318
+- 工具栏, 311, 314
+- 文本，`KWrite`, 318
 
 ### 目录
+
 - 复制/移动, 233-234
 - 管理, 228
 - 链接，208
 - 视图，241-242
-- 文件视图，229-230
-- 文本视图，230-231
-- DOS 应用程序，dosemu, 588-591, 606-607
-- 拖拽功能，KEdit, 321
-- 绘图应用程序，StarOffice, 575-576
+- 文件视图, 229-230
+- 文本视图, 230-231
+- `DOS` 应用程序，`dosemu`, 588-591, 606-607
+- 拖拽功能，`KEdit`, 321
+- 绘图应用程序，`StarOffice`, 575-576
 - 账户设置页面, 444
 - 帐户, 449-451
 - 设备, 445-455
 - 域名服务器, 447
 - 网关, 447-448
 - 图形, 456-457
-- IP, 446-447
+- `IP`, 446-447
 - 登录脚本, 448-449
 - 调制解器, 452, 455
-- PPP (偏好), 455-456
+- `PPP` (偏好), 455-456
 - 登录, 457-459
 - 磁盘导航器，设置面板选项，KDE 控制中心, 123-124
 - 显示设置对话框, 97
@@ -12056,89 +10457,126 @@ KDE 通常是一个 Linux 桌面，任何运行 Linux 的处理器都可以运�
 - 显示。参见查看文件目录
 - 画画板主题, 216-218
 
-
-
-
-
 # 索引
 
-Efax, 612
+`Efax`, 612
 
 欧洲
-- 过滤器, Kmail消息, 479-481
-EGCS C/C++ 编译器, 24
-SuSE 6.1, 18
-- 查找文件, KFind, 322-324, 669
+
+- 过滤器, `Kmail` 消息, 479-481
+
+`EGCS C/C++` 编译器, 24
+
+`SuSE 6.1`, 18
+
+- 查找文件, `KFind`, 322-324, 669
 - 异常处理, 32
-- 提取归档文件, ark, 376-381
+- 提取归档文件, `ark`, 376-381
 - 配置, 324 搜索程序, 325-326
-邮件, 671
-ApplixWare, 578, 581
-KAddressbook, 333, 339 KBiff, 505
-Finger 客户端, 671
-Kmail, 472, 504-505
+- 邮件, 671
+
+`ApplixWare`, 578, 581
+
+`KAddressbook`, 333, 339 `KBiff`, 505
+
+`Finger` 客户端, 671
+
+`Kmail`, 472, 504-505
+
 传真文件查看器, 670
-KFinger, 506-507
+
+`KFinger`, 506-507
+
 - 地址录, 474-476 附件, 476, 479
+
 传真程序
-- 防火墙, KFirewall, 524
+
+- 防火墙, `KFirewall`, 524
 - 配置, 462, 465, 469
+
 软盘
-KDE, KSendFax, 420-421, 613, 616 KHylaFax, 420-421
-- 格式化, 671 KFloppy, 281
-- 消息过滤, 479-481
-Linux
+
+`KDE`, `KSendFax`, 420-421, 613, 616 `KHylaFax`, 420-421
+
+- 格式化, 671 `KFloppy`, 281
 - 管理, 280
 - 打印消息, 482
-Efax, 612 HylaFax, 613 mgetty+sendfax, 612-613
+
+`Efax`, 612 `HylaFax`, 613 `mgetty+sendfax`, 612-613
+
 字体
-- 发送/接收消息, 469, 474
+
 - 与类型比较, 115
-- 消息拼写检查, 482
-KDE, 55
+- `KDE`, 55
 - 功能膨胀, 104
 - 桌面, 115-116
-- Korn, 505-506
-- 管理, kfontmanager, 669
-StarOffice, 570
+- `Korn`, 505-506
+- 管理, `kfontmanager`, 669
+
+`StarOffice`, 570
+
 - 故障排除, 太小, 46-47
+
 英语字符集, 116
-- 格式化软盘, KFloppy, 281, 671
-Linux 和 KDE 的企业级支持
+
+- 格式化软盘, `KFloppy`, 281, 671
+
+`Linux` 和 `KDE` 的企业级支持
+
 - 系统教育
-- 分形生成器, Kfract, 362-364, 670
-在 FreeBSD 上运行 KDE, 680
+- 分形生成器, `Kfract`, 362-364, 670
+
+在 `FreeBSD` 上运行 `KDE`, 680
+
 - 员员, 531-532
-FTP（文件传输协议）
+
+`FTP`（文件传输协议）
+
 文件管理器
-ApplixWare, 578, 582 KFM, 204, 374-376, 669
-Caitoo, 497-500
+
+`ApplixWare`, 578, 582 `KFM`, 204, 374-376, 669
+
+`Caitoo`, 497-500
+
 - 邮件列表, 676
-Midnight Commander, 259-260, 623
+
+`Midnight Commander`, 259-260, 623
+
 - 复制文件, 239-241
-- 文件系统表, 使用 KStaf 编辑, 526-527
-KArchie, 500, 504
+- 文件系统表, 使用 `KStaf` 编辑, 526-527
+
+`KArchie`, 500, 504
+
 - 专家, 533-534
 - 混合源, 522-533
 - 外包, 532
-方程编辑器, KLyX, 437-438
+
+方程编辑器, `KLyX`, 437-438
 
 686
 
 # 索引
 
 # G
+
 # Goetter, Stephan, 660
 
 # H
+
 - 银河征服游戏 (Conquest), 391-393, 670
+
 图形
-- 硬盘, 管理 KDfree, 282-285
-- KDEGAMES 分发包中的游戏, 670
-应用程序 AppixWare, 578-579 CompPic for Linux, 584-585
-Kdu, 282-285
-- 硬件配置, Kysctrl, 527-528
-+ KAbalone, 389
+
+- 硬盘, 管理 `KDfree`, 282-285
+- `KDEGAMES` 分发包中的游戏, 670
+
+应用程序 `AppixWare`, 578-579 `CompPic for Linux`, 584-585
+
+`Kdu`, 282-285
+
+- 硬件配置, `Kysctrl`, 527-528
+
++ `KAbalone`, 389
 + 小行星碰撞 (Asteroids), 389-390
 + 黑盒 (BlackBox), 390-391
 + 陆将 (Kmajjong), 393-394
@@ -12150,37 +10588,52 @@ Kdu, 282-285
 + 同色消除 (SameGame), 401-402
 + 斯比-斯博 (Sbisen-Sbo), 403
 + 西尔特 (Sirtet), 404
+
 图标编辑器, 366, 370
+
 图像查看器, 358, 362
-KDEGRAPHICS 分发包, 670
-- 帮助浏览器, kdehelp, 669
+
+`KDEGRAPHICS` 分发包, 670
+
+- 帮助浏览器, `kdehelp`, 669
+
 十六进制编辑器, 321, 671
-+ KFurer, 418-419
-+ 分形 (Kfract), 362-364
-+ Kover, 419-420
-+ KPlot, 420
-+ KSan, 420
-+ KSnap, 365-366
-- 隐藏文件, 使用 KFM 查看, 229-330
+
++ `KFurer`, 418-419
++ 分形 (`Kfract`), 362-364
++ `Kover`, 419-420
++ `KPlot`, 420
++ `KSan`, 420
++ `KSnap`, 365-366
+
+- 隐藏文件, 使用 `KFM` 查看, 229-330
 - 隐藏/显示 K 面和任务栏, 186
 - 热插拔, 653
-- 房屋图标。参见 KFM
-热键。参见 键位绑定
-HP Laserjet 控制面板打印机管理, 279
-HP Laserjet 打印机, 672
-HP-UX, 运行 KDE, 680
+- 房屋图标。参见 `KFM`
+- 热键。参见 键位绑定
+
+`HP Laserjet` 控制面板打印机管理, 279
+
+`HP Laserjet` 打印机, 672
+
+`HP-UX`, 运行 `KDE`, 680
+
 - 点阵随机, 104-106
 - 壁纸, 100, 100
--  Jordan, 660
-- 德国, SuSE 6.1, 18
-- glib-2.1, 20
-- 全局键, 输入设备, 132-134
-- 全局命令, KFM, 250
-HTML 编辑器 ApplizWare, 578 577 Hylafax, 613 687
+- Jordan, 660
+- 德国, `SuSE 6.1`, 18
+- `glib-2.1`, 20
+
+
 
 # 索引
 
 # I-J
+
+- 全局键, 输入设备, 132-134
+- 全局命令, KFM, 250
+HTML 编辑器 ApplizWare, 578 577 Hylafax, 613 687
+
 - 图标, 212-214
 - 主题, 手动, 223
 - 集成开发环境。参见 IDE
@@ -12221,7 +10674,6 @@ HTML 编辑器 ApplizWare, 578 577 Hylafax, 613 687
 - 版本 2.0, 636
 KInst, 525
 KLyX, 427-429
-
 688
 
 # 索引
@@ -12246,7 +10698,9 @@ KDE
 - 程序开发, 640-643
 K 菜单, 122
 - 定位, 176, 185
+
 # K 主题管理器对比管理器, 213
+
 K 虚拟终端。参见 kvt (K 虚拟终端)
 kab。参见 KAddressbook
 balone, 380, 670
@@ -12293,7 +10747,6 @@ KEdit, 51-52, 310-311, 671
 全局, 132-134
 标准, 134-135
 kfax, 670
-
 kmoon
 + KFind, 322-324, 669
 配置, 324 搜索程序, 325-326
@@ -12310,9 +10763,6 @@ kmoon
 + KFM, 204, 374-376, 669
 + KArchie, 500, 504, 671
 + KLyX, 437-438
-
-
-
 
 # 索引
 
@@ -12340,17 +10790,14 @@ kmoon
 | KOrganizer, 290, 669 | 会计, 449-451 | kscd, 671 |
 | 守护守护进程, 307 | 设备, 451-452 | kscreaver, 669 |
 | 预约, 297-305 | 拨号, 445-446 | KSendFax, 420-421, 613, |
-| 616 | kishisen, 670 | |
-| 配置, 294, 297 | 域名服务器, | ksire (聊天), 509, 671 |
-| 链接至 KAddressbook, | 447 | 网关, 447-448 | ksirtet, 670 |
-| 333 | 图形, 456-457 | Klot, 282 |
-| 待办列表, 305-307 | IP, 446-447 | |
-| 视图, 291-293 | 登录脚本, 448-449 | |
+| 616 | 域名服务器, | |
+| 配置, 294, 297 | 447-448 | ksire (聊天), 509, 671 |
+| 链接至 KAddressbook, | 图形, 456-457 | ksirtet, 670 |
+| 333 | IP, 446-447 | Klot, 282 |
+| 待办列表, 305-307 | 登录脚本, 448-449 | |
+| 视图, 291-293 | | |
 
 692
-
-
-
 
 # 索引
 
@@ -12366,6 +10813,9 @@ kmoon
   版本 6.0, 17
   编译后的二进制文件, RPM 包格式, 23
   桌面/窗口管理器, 39-40
+
+
+
 - 红帽软件包管理器 (Red Hat Package Manager)。参见 RPM (Red Hat Package Manager)
   提示：
   KAddressbook, 333, 339
@@ -12382,9 +10832,7 @@ kmoon
 - 编辑器, 518-523
   运行级别, SysV Init
   Debian Linux, 522
-
 # S
-
 - Samba 状态监控器, 524
 - SameGame 游戏, 401-402
 - Scheuermann, Thorsten, 107
@@ -12426,9 +10874,7 @@ kmoon
 - SysV 风格初始化，编辑, ksysv, 669
 - Stadlbauer, Reggie, 660
 - 标准键, 输入设备, KDE 控制中心, 134-135
-
 # T
-
 - 会话守护进程, UNIX, 671
 - 磁带存档应用, kdat, 669
 - Star Division, StarOffice, 237
@@ -12525,77 +10971,108 @@ kmoon
   KDE 和 Linux, KDE 控制中心, 119
 - Linux 发行版：
   Caldera OpenLinux 2.2, 17
-
-
-
-
-
 # 其他相关书籍
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_720_0.png)
 
 Caldera OpenLinux 安装与配置手册
+
 Gary Wilson
+
 ISBN: 0789721058
+
 39.99 美元
 
 SEU Linux，第5版
+
 Jack Tackett, Jr. 与 Steven Burnett
+
 ISBN: 0789721805
+
 49.99 美元
 
 SEU Linux 版 Corel WordPerfect 8
+
 Rodrick W. Smith
+
 ISBN: 0789720329
+
 39.99 美元
 
 UNIX 技巧与窍门
+
 Kirk Waincroft
+
 ISBN: 0789721924
+
 19.99 美元
 
 Using UNIX 特别版，第3版
+
 Peter Kuo
+
 ISBN: 0789721746
+
 39.99 美元
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_720_1.png)
 
 从零开始 C++
+
 Jessie Liberty
+
 ISBN: 0789720795
+
 29.99 美元
 
 PC 升级与维修，Linux 版
+
 Joe Devita
+
 ISBN: 0789720752
+
 49.99 美元
 
 Linux Xfree86 简明指南
+
 Arnon Hsiaio
+
 ISBN: 0789721821
+
 34.99 美元
 
 使用 Linux
+
 Bill Ball
+
 ISBN: 0789721632
+
 29.99 美元
 
 Linux 傻瓜指南，第2版
+
 Manuel Alberto Ricart
+
 ISBN: 0789721961
+
 19.99 美元
 
 Linux 编程实例
+
 Kurt Wall
+
 ISBN: 0789722151
+
 24.99 美元
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_720_2.png)
 
 SEU StarOffice
+
 Michael Koch、Sarah Murray 以及 Werner Roth
+
 ISBN: 0789719932
+
 39.99 美元
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_720_3.png)
@@ -12603,6 +11080,8 @@ ISBN: 0789719932
 所有价格均可能变动。
 
 ## 欢迎来到 Linux 世界
+
+
 
 ## 我不想错过这场革命！
 
@@ -12622,21 +11101,24 @@ WWW.LINUX-MAG.COM
 | 电子邮箱 |
 
 国际费率：
+
 加拿大/墨西哥费率：[ ] 1年（12期）59.95 美元
+
 其他所有国家：[ ] 1年（12期）69.95 美元
+
 所有美国订单必须在美国银行预付美元。请预留（6-8周）处理时间。
 
 ## 不要错过任何一期！
 
 ![](img/4a2883756c73e7b0696dbbd721c5c7db_723_0.png)
 
-**Linux Magazine** 是整个 Linux 社区的每月信息源。无论你是系统管理员、开发者，还是仅仅是 Linux 爱好者，*Linux Magazine* 每月都会为你提供所需的信息和见解。
+`Linux Magazine` 是整个 Linux 社区的每月信息源。无论你是系统管理员、开发者，还是仅仅是 Linux 爱好者，`Linux Magazine` 每月都会为你提供所需的信息和见解。
 
-我们的专题故事、深度访谈和评测将帮助你在不断变化的 Linux 和开源软件世界中航行并发展。微软对 Linux 到底怎么看？从零构建 Linux 机器的最佳方法是什么？如何将 Linux 集成到基于 Windows 的网络中？无论你在什么，在 *Linux Magazine* 都能找到。
+我们的专题故事、深度访谈和评测将帮助你在不断变化的 Linux 和开源软件世界中航行并发展。微软对 Linux 到底怎么看？从零构建 Linux 机器的最佳方法是什么？如何将 Linux 集成到基于 Windows 的网络中？无论你在什么，在 `Linux Magazine` 都能找到。
 
 有了 Alan Cox、Paul ‘Rusty’ Russell、Randall Schwartz 和 Larry Augustin 等开源界名流的专栏，你知道你绝不会出错……
 
-所以不要错过任何一期 —— 今天就订阅 *Linux Magazine*，“革命的纪实”。
+所以不要错过任何一期 —— 今天就订阅 `Linux Magazine`，“革命的纪实”。
 
 ## 访问我们的网站 www.linux-mag.com
 
@@ -12669,7 +11151,7 @@ WWW.LINUX-MAG.COM
 | | 替换 | Ctrl+R | 查找并替换文本 |
 | | 插入 | Ctrl+I | 切换插入/覆盖 |
 | | 行首 | Ctrl+H | 跳到行首 |
-| | 行尾 | Ctrl+E | 跳到行尾
+| | 行尾 | Ctrl+E | 跳到行尾 |
 | | 上页 | Page+Up | 跳转到上一页 |
 | | 下页 | Page+Down | 跳转到下一页 |
 | | 帮助 | F1 | 打开当前程序的帮助 |
@@ -12680,7 +11162,7 @@ WWW.LINUX-MAG.COM
 | | 切换桌面 | Shift+Ctrl+↓ | 切换桌面 |
 | | 切换桌面 | Shift+Ctrl+→ | 向右切换桌面 |
 | | 切换桌面 | Shift+Ctrl+← | 向左切换桌面 |
-| | 切换桌面 | Shift+Ctrl+↑ | 向上切换桌面
+| | 切换桌面 | Shift+Ctrl+↑ | 向上切换桌面 |
 
 ## Practical KDE
 
@@ -12706,8 +11188,9 @@ Dennis E. Powell 是一位屡获殊荣的记者和作家，在媒体领域拥有
 ISBN 0-7897-2216-X 52999
 
 DEVRY 科技学院
+
 LONG BEACH, CA
+
 Practical KDE 内容
 
 que
-

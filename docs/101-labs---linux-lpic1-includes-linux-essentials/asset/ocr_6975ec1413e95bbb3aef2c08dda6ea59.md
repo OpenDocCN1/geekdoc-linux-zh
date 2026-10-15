@@ -1,14 +1,15 @@
-Task 2:
 
-Have a peek at /boot/grub/grub.cfg. This is a rather long file, but you should recognize parts of it if you have done Lab 28 and customized GRUB boot commands.
+## Task 2
 
-If you are running this on a Linux system that's already fully installed, the next step won't be necessary. However, if you ever wish to boot a secondary disk, you might need to run gruv-install on that disk. gruv-install installs GRUB to a disk's master boot record (MBR) so that a BIOS can boot it successfully.
+Have a peek at `/boot/grub/grub.cfg`. This is a rather long file, but you should recognize parts of it if you have done Lab 28 and customized `GRUB` boot commands.
 
-Task 3:
+If you are running this on a Linux system that's already fully installed, the next step won't be necessary. However, if you ever wish to boot a secondary disk, you might need to run `grub-install` on that disk. `grub-install` installs `GRUB` to a disk's master boot record (MBR) so that a BIOS can boot it successfully.
 
-Finally, reboot your computer/VM and see/hear your shiny new GRUB boot menu. From here you may hit e to edit boot commands or c to enter a command prompt, as in Lab 28.
+## Task 3
 
-# Answer 1:
+Finally, reboot your computer/VM and see/hear your shiny new `GRUB` boot menu. From here you may hit `e` to edit boot commands or `c` to enter a command prompt, as in Lab 28.
+
+## Answer 1
 
 ```
 GRUB_DEFAULT=0
@@ -22,6 +23,6 @@ GRUB_INIT_TUNE="480 440 1"
 GRUB_BACKGROUND="/boot/grub/image.png"
 ```
 
-Notes:
+### Notes
 
-There have been multiple common bootloaders, including LILO and GRUB Legacy. GRUB2 is the most common and recommended bootloader today.
+There have been multiple common bootloaders, including `LILO` and `GRUB Legacy`. `GRUB2` is the most common and recommended bootloader today.

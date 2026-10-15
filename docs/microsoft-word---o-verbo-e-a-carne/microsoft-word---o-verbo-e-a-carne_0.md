@@ -1,31 +1,18 @@
-# Microsoft Word - 动词与肉体
 
 
+# Microsoft Word：动词与肉体
 
 ![](img/cover.jpg)
 
-
 ## 与
 
-
-### **（对 Roustaing 主义的两种分析）**
+### （对 Roustaing 主义的两种分析）
 
 “道成肉身，住在在我们中间……”（约翰福音书 1:14）。
 
-
-
 ---
-
 
 2)
-
-
-
-
-
-
-
----
 
 ## 道与肉身
 
@@ -35,13 +22,9 @@
 
 我曾想过写一个引言，但这个主题比我想象的复杂。我被引导写了一本小书，作为 Júlio 书籍的分析性引言。因此，我认为将两者合订为一个卷册，并以一个总标题命名更好。
 
-标题 `道与肉身` 的选择取决于《约翰福音》第一章第 14 节节的深层意义：“道成肉身，住在在我们中间，充满恩典和真理，我们见过他的荣耀，乃是父独生子的荣耀。”在科德教主义者（kardecistas）和 Roustaing 主义者的争论中，这一节是定论的，因为 Roustaing 主义也接受道的道身，尽管它将其限制在流体道身的教义之上。因此，这个福音式的标题并不意味着任何先前的断言或对结论的预判。
+标题`道与肉身`的选择取决于《约翰福音》第一章第 14 节的深层意义：“道成肉身，住在在我们中间，充满恩典和真理，我们见过他的荣耀，乃是父独生子的荣耀。”在科德教主义者（kardecistas）和 Roustaing 主义者的争论中，这一节是定论的，因为 Roustaing 主义也接受道的道身，尽管它将其限制在流体道身的教义之上。因此，这个福音式的标题并不意味着任何先前的断言或对结论的预判。
 
 相反，道与肉身之间的关系涉及基督教的基本问题，这些问题在灵性论中得到了广泛发展。本卷并没有专门讨论这些问题，但它们无疑是我们两个作品（我的和 Júlio 的）的核心点。
-
-
-
-
 
 Quem foi Roustaing e o que é o Roustainguismo? Essas duas perguntas são muito comuns no meio espírita. Como acontece em todos os movimentos doutrinários - religiosos, políticos, sociais, etc.: - o Espiritismo é conhecido apenas superficialmente pela maioria dos espíritas. A obra de Roustaing: `Revelação da Revelação – Os Quatro Evangelhos –` é muito extensa e complicada, abrangendo quatro volumes com uma média de 500 páginas cada. Os artigos sobre essa obra, divulgados quase exclusivamente pela revista `O Reformador`, da Federação Espírita Brasileira, são, em geral, longos e confusos, além de apaixonados. Os artigos de crítica, raramente publicados em um ou outro órgão da imprensa espírita, limitam-se quase sempre a refutar aqueles.
 
@@ -51,7 +34,7 @@ O prestégio da FEB e a sua insistência na divulgação e sustentação do Rous
 
 Mas, ao mesmo tempo, a repulsa a Roustaing é maciça em São Paulo, cuja tradição kardecista se estende a todo o sul, com exceção de um grupo numeroso no território gaúcho, compensado, no outro extremo, pela firme posição kardecista do Estado do Rio. Entretanto, mesmo na Guanabara, em toda a região fluminense e no norte e nordeste não se pode falar de um maciço roustainguismo, pois há numerosos grupos de instituições vigorosas que repelem a "revelação da revelação".
 
-Vemos assim que o problema é grave e exige um esforço de esclarecimento. Durante certo tempo, o slogan "o corpo de Jesus não interessa, o que interessa é o seu espírito" conseguiu refrear as divergências. Por outro lado, o chamado "pacto áureo", lavrado oficialmente entre a FEB e a USE paulista (União das Sociedades Espíritas do Estado de São Paulo), fez cair uma cortina de silêncio sobre a questão. Mas, em fins de 1971 e princípios de 1972, a própria FEB se incumbiu de rasgar essa cortina, iniciando pelo *Reformador* uma campanha de revivescência do Roustainguismo e lançando nova edição da semi-esquecida obra mediúnica `Os Quatro Evangelhos`. Verificou-se então um fato curioso: as novas gerações de espíritas foram surpreendidas pela "novidade" roustainguista, o que mostra como fora longo o silêncio sobre o assunto. E alguns pequenos grupos entusiasmados com a "novidade" apareceram aqui e ali, agitando de novo o tranquilo movimento espírita sulino.
+Vemos assim que o problema é grave e exige um esforço de esclarecimento. Durante certo tempo, o slogan "o corpo de Jesus não interessa, o que interessa é o seu espírito" conseguiu refrear as divergências. Por outro lado, o chamado "pacto áureo", lavrado oficialmente entre a FEB e a USE paulista (União das Sociedades Espíritas do Estado de São Paulo), fez cair uma cortina de silêncio sobre a questão. Mas, em fins de 1971 e princípios de 1972, a própria FEB se incumbiu de rasgar essa cortina, iniciando pelo `Reformador` uma campanha de revivescência do Roustainguismo e lançando nova edição da semi-esquecida obra mediúnica `Os Quatro Evangelhos`. Verificou-se então um fato curioso: as novas gerações de espíritas foram surpreendidas pela "novidade" roustainguista, o que mostra como fora longo o silêncio sobre o assunto. E alguns pequenos grupos entusiasmados com a "novidade" apareceram aqui e ali, agitando de novo o tranquilo movimento espírita sulino.
 
 Esse fato mostrou a necessidade de um exame mais atento e desapaixonado da obra de Roustaing. Esta é a razão de ser deste trabalho.
 
@@ -61,38 +44,50 @@ Seria lógico revisarmos, de início, o problema da implantação do Roustaingui
 
 Sem sabermos o que é o Roustainguismo, não podemos compreender o fenômeno da sua implantação nem examinar o seu significado, do qual deriva naturalmente o seu sentido. Por isso, temos de inverter os termos da proposição e começar pelo exame objetivo dos textos de Roustaing. Vamos colocar as teses fundamentais do Roustainguismo na lâmina do nosso microscópio e submetê-las ao exame histológico. É isso o que Kardec chamava `PASSAR PELO CRIVO DA RAZÃO 1.`
 
-Não temos a pretensão do absoluto. Queremos apenas chegar aos resultados da análise e oferec-los aos que debatem o problema sem disporem desses elementos indispensáveis. Conseguidos esses elementos, cada qual procederá de acordo com as regras do bom senso e dará o seu próprio veredicito. Essa é a nossa intenção ao iniciar este trabalho.
+Não temos a pretensão do absoluto. Queremos apenas chegar aos resultados da análise e oferecê-los aos que debatem o problema sem disporem desses elementos indispensáveis. Conseguidos esses elementos, cada qual procederá de acordo com as regras do bom senso e dará o seu próprio veredicto. Essa é a nossa intenção ao iniciar este trabalho.
 
-## II. O PREFCIO DE ROUSTAING
+## II. O PREFÁCIO DE ROUSTAING
 
 Começa assim o prefácio: "Submeto ao exame e à meditação de meus irmãos `Os Quatro Evangelhos` e, em seguida, os Mandamentos explicados em espírito". A essa nobre intenção, o autor acrescenta um relato da sua vida trabalhosa e dos seus estudos, de uma grave enfermidade da qual, ao sair, foi informado por comunicações médicas. Essa notícia, recebida com ceticismo, levou-o depois a pesquisar o assunto. Leu `O Livro dos Espíritos` e em seguida `O Livro dos Médiuns`, chegando à conclusão de: "O mundo espiritual era bem o reflexo do mundo corporal".
 
-De posse desse dado, consultou a História, compulsou os livros de filosofia profana e religiosa, antiga e recente, os poetas, vendo que as verdades contidas neles se confirmavam. Leu ainda o Velho e Novo Testamento, que também lhe deram a confirmação. Mas notou uma falta: "...tudo permaneceu obscuro, incompreensível e impenetrável no tocante à revelação referente à origem e natureza espiritual de Jesus, sobre a sua posição em relação a Deus e ao nosso planeta, sobre os seus poderes e a sua autoridade". Também permaneciam inexplicáveis as palavras de Jesus: Desconfiai, pois, dos falsos profetas, sobretudo numa época de renovação, porque muitos impostores se dirão enviados de Deus. Eles procuram satisfazer na Terra a sua vaidade; mas uma terrível justiça os espera. Espíritos da categoria em que dizem achar-se têm de ser não apenas bons, como eminentemente racionais. Pois bem: passai-lhes os sistemas pelo crivo da razão e do bom senso e vede o que restará.
+De posse desse dado, consultou a História, compulsou os livros de filosofia profana e religiosa, antiga e recente, os poetas, vendo que as verdades contidas neles se confirmavam. Leu ainda o Velho e Novo Testamento, que também lhe deram a confirmação. Mas notou uma falta: "...tudo permaneceu obscuro, incompreensível e impenetrável no tocante à revelação referente à origem e natureza espiritual de Jesus, sobre a sua posição em relação a Deus e ao nosso planeta, sobre os seus poderes e a sua autoridade". Também permaneciam inexplicáveis as palavras de Jesus:
 
-Convinde, pois, comigo, em todas as vezes que um Espírito indica, como remédio aos males da Humanidade ou como meio de conseguir-se a transformação, coisas utópicas e impraticáveis, medidas pueris e ridículas; quando formula um sistema que as mais rudimentares noções da Ciência contradizem, não pode ser senão um Espírito ignorante e mentiroso.
-
-
-
-
+> Desconfiai, pois, dos falsos profetas, sobretudo numa época de renovação, porque muitos impostores se dirão enviados de Deus. Eles procuram satisfazer na Terra a sua vaidade; mas uma terrível justiça os espera. Espíritos da categoria em que dizem achar-se têm de ser não apenas bons, como eminentemente racionais. Pois bem: passai-lhes os sistemas pelo crivo da razão e do bom senso e vede o que restará.
+>
+> Convinde, pois, comigo, em todas as vezes que um Espírito indica, como remédio aos males da Humanidade ou como meio de conseguir-se a transformação, coisas utópicas e impraticáveis, medidas pueris e ridículas; quando formula um sistema que as mais rudimentares noções da Ciência contradizem, não pode ser senão um Espírito ignorante e mentiroso.
 
 A essas dúvidas se juntaram as referentes ao desaparecimento do corpo de Jesus do sepulcro "estando selada a pedra que lhe fechava a entrada à sua ressurreição e às suas aparições, bem como à sua ascensão às regiões etéreas, com as suas palavras proféticas acerca do futuro do nosso planeta e dos acontecimentos que hão de preceder ao seu segundo advento..." E sentiu desde então "a necessidade de uma revelação nova, de uma Revelação da Revelação".
 
 Essa convicção o levou a isto:
 
+
+
+
+# Análise do Prefácio de Roustaing
+
+## I. Contexto Histórico
+
 "Na vés de 24 de junho de 1861 eu rogara a Deus, no sigilo de uma prece fervorosa, que permitisse ao espírito de João Batista manifestar-se por um médium que se achava em minha companhia e com o qual diariamente me consacrava a trabalhos assíduos. Pedida também a graça da manifestação do espírito de meu pai e do meu guia protetor. Essas manifestações se produziram espontaneamente, com surpresa do médium, a quem eu deixara ignorante da minha prece. O espírito do apóstolo Pedro manifestou-se a 30 de junho de modo inesperado tanto para mim quanto para o médium".
 
 Depois dessas manifestações Roustaing travou conhecimento com Madame Collignon. E com essa médium, oito dias mais tarde, começaria o trabalho de recepção de `Os Quatro Evangelhos`. Mateus, Marcos, Lucas e João, "assistidos pelos apóstolos", deram-lhe extensa comunicação sobre a missão que lhe cabia, de receber a Revelação. Em maio de 1865 todo o trabalho estava realizado, preparando "a unidade de crenças e a fraternidade humana pela efetivação das promessas do Mestre e, por fim, o Reino de Deus na Terra". Roustaing termina o prefácio com estas palavras: "Ficai certos, como eu, meus irmãos, de que eles atingirão a meta".
 
-Como se vê, Roustaing começa o prefácio oferecendo a obra ao exame e à meditação dos espíritas, mas conclui afirmando a sua valididade. Estende-se em considerações sobre o valor da razão e das ciências, mas acaba ordenando "Ficai certos, como eu", o que exclui o raciocínio dos leitores.
+## II. Análise do Prefácio
+
+Como se vê, Roustaing começa o prefácio oferecendo a obra ao exame e à meditação dos espíritas, mas conclui afirmando a sua validade. Estende-se em considerações sobre o valor da razão e das ciências, mas acaba ordenando "Ficai certos, como eu", o que exclui o raciocínio dos leitores.
 
 Refere seus estudos, seus trabalhos, suas pesquisas como elementos que devem provar o valor de suas conclusões, mas não vai além da referência, não oferece dados nem qualquer elemento para a avaliação do seu esforço. Tudo repousa apenas na sua palavra, no seu auto-julgamento. Entusiasmou-se com `O Livro dos Espíritos` e `O Livro dos Médiuns`, mas não percebeu nesses livros os seguintes pontos:
 
-*   1º) Que a origem e a natureza espirituais de Jesus são as mesmas de todos nós, o que o próprio Jesus explicou ao ensinar que somos todos filhos do mesmo pai que é Deus, "o meu pai e vosso pai", como disse à Madalena.
-*   2º) Que a posição espírita de Jesus em relação a Deus é a de um Espírito Superior, da qual decorrem os seus poderes e a sua autoridade, dos quais por sua vez decorre o sentido espírita das palavras que lhe pareceram inexplicáveis.
-*   3º) Que o desaparecimento do corpo de Jesus do túmulo não se deu com a pedra selada, mas depois do afastamento da pedra, e que a ressurreição, as aparições “Ninguém ma tira de mim, mas eu de mim mesmo a dou; tenho autoridade para a dar, e tenho autoridade para retomála. Este mandamento recebi de meu Pai”. (`João; 10:18`). a ascensão de Jesus, bem como as suas profecias, explicam-se pelos poderes mediúnicos.
-*   4º) Que a necessidade de uma revelação nova, ou revelação da revelação não passava de falta de compreensão dos livros que lera.
-*   5º) Que o seu desejo de receber uma nova revelação e a sua evocação dos espíritos pelo médium, com qual vinha trabalhando, já estava condenada no `Livro dos Médiuns` como uma temeridade.
-*   6º) Que o simples fato de não haver ele comunicado ao médium essas evocações não justifica a sua afirmação de que as manifestações foram espontâneas – e de que as manifestações posteriores de Pedro e outras apóstolos seriam simples consequ da sua temeridade.
+* 1º) Que a origem e a natureza espirituais de Jesus são as mesmas de todos nós, o que o próprio Jesus explicou ao ensinar que somos todos filhos do mesmo pai que é Deus, "o meu pai e vosso pai", como disse à Madalena.
+
+* 2º) Que a posição espírita de Jesus em relação a Deus é a de um Espírito Superior, da qual decorrem os seus poderes e a sua autoridade, dos quais por sua vez decorre o sentido espírita das palavras que lhe pareceram inexplicáveis.
+
+* 3º) Que o desaparecimento do corpo de Jesus do túmulo não se deu com a pedra selada, mas depois do afastamento da pedra, e que a ressurreição, as aparições "Ninguém ma tira de mim, mas eu de mim mesmo a dou; tenho autoridade para a dar, e tenho autoridade para retomála. Este mandamento recebi de meu Pai". (`João; 10:18`). a ascensão de Jesus, bem como as suas profecias, explicam-se pelos poderes mediúnicos.
+
+* 4º) Que a necessidade de uma revelação nova, ou revelação da revelação não passava de falta de compreensão dos livros que lera.
+
+* 5º) Que o seu desejo de receber uma nova revelação e a sua evocação dos espíritos pelo médium, com qual vinha trabalhando, já estava condenada no `Livro dos Médiuns` como uma temeridade.
+
+* 6º) Que o simples fato de não haver ele comunicado ao médium essas evocações não justifica a sua afirmação de que as manifestações foram espontâneas – e de que as manifestações posteriores de Pedro e outras apóstolos seriam simples consequ da sua temeridade.
 
 A análise desse prefácio nos mostra que Roustaing procedeu como um neófito do Espiritismo, deixando que entusiasmo inicial o levasse a uma posição perigosa no trato com os médiuns e os espíritos. As advertências de Kardec a respeito não foram consideradas por Roustaing, como ainda hoje não o são por muitas pessoas demasiado entusiastas e ansiosas de "novas revelações".
 
@@ -102,11 +97,7 @@ A situação emocional de Roustaing, por ele mesmo confessada, mal saído de uma
 
 Vejamos agora se a análise posterior confirma essa suspeita ou a invalida. No caso de invalidar teremos pelo menos uma razão para aceitar a possibilidade da obra ser válida.
 
-O Verbo e a Carne – 2 Análises do Roustaing ______________________________
-
-8
-
-## III. AS PREMISSAS DO ROUSTAISMO
+## III. As Premissas do Roustaismo
 
 O Roustaismo é uma tese. Como tese ele se desenvolve de forma silogística. As suas premissas são colocadas no início do prefácio de `Os Quatro Evangelhos`. Mateo, Marcos, Lucas e João, "assistidos pelos apóstolos", deram-lhe extensa comunicação sobre a missão que lhe cabia, de receber a Revelação. Em maio de 1865 todo o trabalho estava realizado, preparando "a unidade de crenças e a fraternidade humana pela efetivação das promessas do Mestre e, por fim, o Reino de Deus na Terra". Roustaing termina o prefácio com estas palavras: "Ficai certos, como eu, meus irmãos, de que eles atingirão a meta".
 
@@ -114,14 +105,21 @@ Como se vê, Roustaing começa o prefácio oferecendo a obra ao exame e à medit
 
 Refere seus estudos, seus trabalhos, suas pesquisas como elementos que devem provar o valor de suas conclusões, mas não vai além da referência, não oferece dados nem qualquer elemento para a avaliação do seu esforço. Tudo repousa apenas na sua palavra, no seu auto-julgamento. Entusiasmou-se com `O Livro dos Espíritos` e `O Livro dos Médiuns`, mas não percebeu nesses livros os seguintes pontos:
 
-*   1º) Que a origem e a natureza espirituais de Jesus são as mesmas de todos nós, o que o próprio Jesus explicou ao ensinar que somos todos filhos do mesmo pai que é Deus, "o meu pai e vosso pai", como disse à Madalena.
-*   2º) Que a posição espírita de Jesus em relação a Deus é a de um Espírito Superior, da qual decorrem os seus poderes e a sua autoridade, dos quais por sua vez decorre o sentido espírita das palavras que lhe pareceram inexplicáveis.
-*   3º) Que o desaparecimento do corpo de Jesus do túmulo não se deu com a pedra selada, mas depois do afastamento da pedra, e que a ressurreição, as aparições “Ninguém ma tira de mim, mas eu de mim mesmo a dou; tenho autoridade para a dar, e tenho autoridade para retomála. Este mandamento recebi de meu Pai”. (`João; 10:18`). a ascensão de Jesus, bem como as suas profecias, explicam-se pelos poderes mediúnicos.
-*   4º) Que a necessidade de uma revelação nova, ou revelação da revelação não passava de falta de compreensão dos livros que lera.
-*   5º) Que o seu desejo de receber uma nova revelação e a sua evocação dos espíritos pelo médium, com qual vinha trabalhando, já estava condenada no `Livro dos Médiuns` como uma temeridade.
-*   6º) Que o simples fato de não haver ele comunicado ao médium essas evocações não justifica a sua afirmação de que as manifestações foram espontâneas – e de que as manifestações posteriores de Pedro e outras apóstolos seriam simples consequ da sua temeridade.
+* 1º) Que a origem e a natureza espirituais de Jesus são as mesmas de todos nós, o que o próprio Jesus explicou ao ensinar que somos todos filhos do mesmo pai que é Deus, "o meu pai e vosso pai", como disse à Madalena.
+
+* 2º) Que a posição espírita de Jesus em relação a Deus é a de um Espírito Superior, da qual decorrem os seus poderes e a sua autoridade, dos quais por sua vez decorre o sentido espírita das palavras que lhe pareceram inexplicáveis.
+
+* 3º) Que o desaparecimento do corpo de Jesus do túmulo não se deu com a pedra selada, mas depois do afastamento da pedra, e que a ressurreição, as aparições "Ninguém ma tira de mim, mas eu de mim mesmo a dou; tenho autoridade para a dar, e tenho autoridade para retomála. Este mandamento recebi de meu Pai". (`João; 10:18`). a ascensão de Jesus, bem como as suas profecias, explicam-se pelos poderes mediúnicos.
+
+* 4º) Que a necessidade de uma revelação nova, ou revelação da revelação não passava de falta de compreensão dos livros que lera.
+
+* 5º) Que o seu desejo de receber uma nova revelação e a sua evocação dos espíritos pelo médium, com qual vinha trabalhando, já estava condenada no `Livro dos Médiuns` como uma temeridade.
+
+* 6º) Que o simples fato de não haver ele comunicado ao médium essas evocações não justifica a sua afirmação de que as manifestações foram espontâneas – e de que as manifestações posteriores de Pedro e outras apóstolos seriam simples consequ da sua temeridade.
 
 A análise desse prefácio nos mostra que Roustaing procedeu como um neófito do Espiritismo, deixando que entusiasmo inicial o levasse a uma posição perigosa no trato com os médiuns e os espíritos. As advertências de Kardec a respeito não foram consideradas por Roustaing, como ainda hoje não o são por muitas pessoas demasiado entusiastas e ansiosas de "novas revelações".
+
+
 
 Faltou a Roustaing a compreensão do método kardecista para a realização de experiências espíritas 3. Essa deficiência fundamental, declarada explicitamente por Roustaing no seu prefácio, impede-nos de considerar a sua obra como espírita e de aceitar as revelações que lhe foram feitas como válidas.
 
@@ -137,198 +135,195 @@ O Verbo e a Carne – 2 Análises do Roustaing ______________________________
 
 O Roustaismo é uma tese. Como tese ele se desenvolve de forma silogística. As suas premissas são colocadas no início do prefácio de `Os Quatro Evangelhos`. Mateo, Marcos, Lucas e João, "assistidos pelos apóstolos", deram-lhe extensa comunicação sobre a missão que lhe cabia, de receber a Revelação. Em maio de 1865 todo o trabalho estava realizado, preparando "a unidade de crenças e a fraternidade humana pela efetivação das promessas do Mestre e, por fim, o Reino de Deus na Terra". Roustaing termina o prefácio com estas palavras: "Ficai certos, como eu, meus irmãos, de que eles atingirão a meta".
 
-[/content]
+---
 
-译文：
+Estas dúvidas somam-se às relativas ao desaparecimento do corpo de Jesus do sepulcro, "pois a pedra que fechava a entrada impedia sua ressurreição e manifestação", e "devido à sua ascensão às regiões etéreas, e às suas palavras proféticas sobre o futuro do nosso planeta e dos eventos que ocorreriam antes de sua segunda vinda..." A partir de então, ele sentiu "a necessidade de uma nova revelação, uma revelação da revelação".
 
-[content]
-这些疑问还加入了关于耶稣身体从墓中消失的疑问，“因为封住他入口的石头阻碍了他的复活和显现，”以及“由于他升天到以太区域，以及他对我们星球未来以及在他第二次降临之前的事件的预言性话语……”从那时起他感受到了“对一种新启示的需要，一种对启示的启示”。
+Essa convicção o levou a este passo:
 
-这种信念使他走向了这一步：
+"Na véspera de 24 de junho de 1861, em fervorosa oração, roguei a Deus que permitisse que o espírito de João Batista se manifestasse através de um médium que estava ao meu lado, e que comigo trabalhava diligentemente todos os dias. Roguei a graça de que o espírito de meu pai e o de meu anjo protetor se manifestassem. Essas manifestações foram espontâneas, surpreendendo o médium, pois não lhe revelei minhas preces. O espírito do apóstolo Pedro manifestou-se em 30 de junho, o que foi inesperado tanto para mim quanto para o médium".
 
-“在 1861 年 6 月 24 日的前夜，我在热诚的祷告中向上帝祈求，允许施洗约翰的灵通过一个当时在我身边、每天与我一起勤奋工作的灵媒显现。我请求请求了我父亲灵和我的保护者灵显现的恩典。这些显现是自发产生的，让灵媒感到惊讶，因为我没有向他透露我的祷告。使徒彼得的灵在 6 月 30 日显现了，这对我来说对灵媒来说都是出乎意料的”。
+Após essas manifestações, Roustaing conheceu a Sra. Collignon. Oito dias depois, através dessa médium, ele começou a receber a obra *Os Quatro Evangelhos*. Mateus, Marcos, Lucas e João, "assistidos pelos apóstolos", comunicaram-lhe extensamente sobre a missão que lhe cabia, a de receber a Revelação. Em maio de 1865, todo o trabalho estava realizado, preparando "a unidade de crenças e a fraternidade humana pela efetivação das promessas do Mestre e, por fim, o Reino de Deus na Terra". Roustaing termina o prefácio com estas palavras: "Irmãos, ficai certos, como eu, de que eles atingirão a meta".
 
-在这些显现之后，Roustaing 与 Collignon 夫人相识了。八天后，通过这位灵媒，他开始了接收《四福音》的工作。马太、马可、路加和约翰在“使徒们的见证下”，就他所承担的接受启示的使命向他进行了详尽的交流。1865 年 5 月，所有工作已完成，准备好了“通过实现主的应许来实现信仰的统一和人类兄弟情，最后是地上的上帝之国”。Roustaing 用这段话结束了序言：“兄弟们，像我一样确信他们将达到目标”。
+Como é sabido, Roustaing submete a obra, no início do prefácio, ao exame e meditação dos espíritas, mas, no final, afirma sua validade. Ele discorre sobre considerações de valor racional e científico, mas termina com a ordem "ficai certos como eu", o que exclui o raciocínio do leitor.
 
-众所周知，Roustaing 在序言开头将作品提交给灵论者审查和冥想，但在结尾处肯定了它的有效性。他详述了关于理性和科学价值的考量，但最后命令道“像我一样确信”，这排除了读者的推理。
+Ele descreve seus estudos, trabalhos e investigações como elementos que deveriam comprovar o valor de suas conclusões, mas não se limita a citar, não fornecendo dados ou elementos para a avaliação de seus esforços. Tudo depende apenas de sua palavra, de seu auto-julgamento. Ele se entusiasma com *O Livro dos Espíritos* e *O Livro dos Médiuns*, mas não observa nestes livros os seguintes pontos:
 
-他将自己的研究、工作和探索描述为应当证明其结论价值的元素，但并未止于引用，没有为评估他的努力提供任何数据或要素。一切仅仅取决于他的话语，取决于他的自我评判。他对比《灵之经》和《灵媒之书》感到兴奋，但没有在这些书中注意到以下几点：
+*   Primeiro ponto) A origem e natureza espiritual de Jesus são idênticas às de todos nós; o próprio Jesus explicou isso ao ensinar que somos todos filhos do mesmo Pai – Deus, como disse a Madalena: "Meu Pai é também vosso Pai".
 
-*   第一点）耶稣的灵性起源和本质与我们所有人都是相同的，耶稣本人在教导时也解释过，我们都是同一个父亲——上帝的孩子，正如他对马达大拉说的那样：“我的父也是你们的父”。
-*   第二点）耶稣相对于上帝的灵论地位是一个高阶灵体，他的力量和权威都源于此，而这些又源于那些在他看来无法解释的词句的灵论意义。
-*   第三点）耶稣身体从墓中消失并非在石头封住的情况下，而是在石头移开之后，而且复活、显现“没有人能从我这里夺去我的命，我从自己给我；我有权柄给出，也有权柄取回来。这命令是我从父那里受的”（`约翰福音；10:18`）。耶稣的升天以及他的预言，可以通过灵媒的力量来解释。
-*   第四点）对新启示（或对启示的启示）的需要，仅仅是因为对他所读书籍缺乏理解。
-*   第五点）他接受新启示的渴望，以及他通过与其合作的灵媒所做的唤灵行为，早已在《灵媒之书》中被判定为鲁莽行为。
-*   第六点）仅仅因为他没有向灵媒传达这些唤灵，并不能证明他关于显现是自发的断言——以及后来彼得和其他使徒的显现将仅仅是他鲁莽行为的结果。
+*   Segundo ponto) A posição espírita de Jesus em relação a Deus é a de um espírito superior; seu poder e autoridade derivam dessa posição, que, por sua vez, derivam do sentido espírita das palavras que ele proferiu e que eram inexplicáveis para ele.
 
-对这篇序言的分析告诉我们，Roustaing 的行为就像一个灵论的初学者，让最初的热情导致他在对待灵媒和灵体时处于一个危险的位置。卡德关于这方面的警告没有被 Roustaing 考虑，正如今天许多过度狂热并渴望“新启示”的人那样没有被考虑一样。
+*   Terceiro ponto) O desaparecimento do corpo de Jesus do sepulcro não ocorreu com a pedra a fechar a entrada, mas após a remoção da pedra; e a ressurreição e manifestações são explicadas por suas palavras: "Ninguém ma tira de mim, mas eu de mim mesmo a dou; tenho poder para a dar e tenho poder para a tomar. Este mandamento recebi de meu Pai" (`João; 10:18`). A ascensão de Jesus e suas profecias podem ser explicadas pelo poder mediúnico.
 
-Roustaing 缺乏通过卡德方法实现灵论经验的理解。这种基础性的缺陷（Roustaing 在自己的序言中已明确声明的）使我们无法将他的作品视为灵论著作，也无法接受他所获得的启示是有效的。
+*   Quarto ponto) A necessidade de uma nova revelação (ou de uma revelação da revelação) deveu-se apenas à falta de compreensão dos livros que ele leu.
 
-Roustaing 的情绪状态（他本人承认的）刚从一场大病中痊愈，他在对待灵媒时所采取的态度——没有考虑到“普遍共识”这一基本要求——足以让他的作品具有可疑性。
+*   Quinto ponto) Seu desejo de receber a nova revelação e suas práticas de evocação, através do médium que com ele colaborava, já haviam sido julgadas como temerárias em *O Livro dos Médiuns*.
 
-我们现在看看随后的分析是证实了这种怀疑，还是使其失效。如果被证明无效，我们至少有一个理由接受该作品可能是有效的可能性。
+*   Sexto ponto) O simples fato de não ter comunicado ao médium essas evocações não prova que sua afirmação sobre a espontaneidade das manifestações – e que as manifestações posteriores de Pedro e outros apóstolos seriam apenas o resultado de sua temeridade – seja verdadeira.
 
-道与肉身 – 2 对 Roustaing 的分析 ______________________________
+A análise deste prefácio nos diz que Roustaing se comportou como um iniciante no espiritismo, deixando que o entusiasmo inicial o colocasse em uma posição perigosa em relação ao médium e aos espíritos. Os avisos de Kardec a esse respeito não foram considerados por Roustaing, assim como hoje não são considerados por muitos que são excessivamente entusiastas e ávidos por "novas revelações".
+
+Faltou a Roustaing a compreensão do método kardecista para a realização de experiências espíritas. Essa deficiência fundamental (declarada explicitamente por Roustaing em seu próprio prefácio) impede-nos de considerar sua obra como espírita e de aceitar as revelações que lhe foram feitas como válidas.
+
+A situação emocional de Roustaing (por ele mesmo confessada), mal saído de uma grave moléstia, e as atitudes que assumiu no trato da mediunidade – sem levar em consideração a exigência básica do `consenso universal` – são mais que suficientes para configurar sua obra como suspeita.
+
+Vejamos agora se a análise posterior confirma essa suspeita ou a invalida. Se for invalidada, teremos pelo menos uma razão para aceitar a possibilidade de a obra ser válida.
+
+O Verbo e a Carne – 2 Análises do Roustaing ______________________________
 
 8
 
-### III. ROUSTAISMO 的前提
+### III. AS PREMISSAS DO ROUSTAISMO
 
-Roustaing 主义是一个论题。作为论题，它以逻辑推演的形式展开。它的前提被放在《四福音》的开头。马太、马可、路加和约翰在“使徒们的见证下”，就他所承担的接受启示的使命向他进行了详尽的交流。1865 年 5 月，所有工作已完成，准备好了“通过实现主的应许来实现信仰的统一和人类兄弟情，最后是地上的上帝之国”。Roustaing 用这段话结束了序言：“兄弟们，像我一样确信他们将达到目标”。
+O Roustaismo é uma tese. Como tese, ele se desenvolve de forma silogística. Suas premissas são colocadas no início do prefácio de *Os Quatro Evangelhos*. Mateus, Marcos, Lucas e João, "assistidos pelos apóstolos", deram-lhe extensa comunicação sobre a missão que lhe cabia, a de receber a Revelação. Em maio de 1865, todo o trabalho estava realizado, preparando "a unidade de crenças e a fraternidade humana pela efetivação das promessas do Mestre e, por fim, o Reino de Deus na Terra". Roustaing termina o prefácio com estas palavras: "Irmãos, ficai certos, como eu, de que eles atingirão a meta".
 
-众所周知，Roustaing 在序言开头将作品提交给灵论者审查和冥想，但在结尾处肯定了它的有效性。他详述了关于理性和科学价值的考量，但最后命令道“像我一样确信”，这排除了读者的推理。
+Como é sabido, Roustaing submete a obra, no início do prefácio, ao exame e meditação dos espíritas, mas, no final, afirma sua validade. Ele discorre sobre considerações de valor racional e científico, mas termina com a ordem "ficai certos como eu", o que exclui o raciocínio do leitor.
 
 9
 
-或逻辑推演过程可以是**形式上正确的**，当其结构严格遵循逻辑学规则时。让我们来看一个简单的例子：1) **高阶灵体显现是为了揭示真理。** 2) **对启示的启示是由高阶灵体传达。** 3) **因此，《四福音》是真理。** 这是导致 Roustaing 主义接受并捍卫《四福音》的逻辑推理。它确实提供了一个形式上的真理。其逻辑结构完美。结论从大前提和小前提中精确地推导出。
+Ou o processo de raciocínio pode ser **formalmente correto**, quando sua estrutura obedece estritamente às regras da lógica. Vejamos um exemplo simples: 1) **Espíritos superiores manifestam-se para revelar a verdade.** 2) **A revelação da revelação é transmitida por espíritos superiores.** 3) **Portanto, *Os Quatro Evangelhos* são a verdade.** Este é o raciocínio lógico que levou o Roustaismo a aceitar e defender *Os Quatro Evangelhos*. Ele fornece, de fato, uma verdade formal. Sua estrutura lógica é perfeita. A conclusão é deduzida com precisão da premissa maior e da premissa menor.
 
-但仅仅形式完美并不能给我们真理。我们还需要、更重要的是合法的实质，这带给我们**实质性的真理**。
+Mas a perfeição formal, por si só, não nos dá a verdade. Precisamos também, e mais importante, da substância legítima, o que nos traz a **verdade substancial**.
 
+Como encontrar a verdade substancial desse argumento lógico? Ela está sempre localizada na premissa menor. A verdade é modesta e se esconde no meio do argumento lógico. A premissa maior enuncia um princípio universal inquestionável: "Espíritos superiores manifestam-se para revelar a verdade". A premissa menor chega a uma conclusão que pode ser verdadeira ou falsa: "A revelação da revelação é ditada por espíritos superiores".
 
+A premissa menor é a chave desse argumento lógico, mas o argumento lógico em si não pode provar sua legitimidade. Nesse ponto, devemos recorrer ao estudo, à análise e ao teste kardecista dessa hipótese. Nesse caso, devemos usar o método de `Kardec` para testar esses espíritos. Se não pudermos provar que eles são de fato superiores, então o argumento lógico é falso e a proposição é substancialmente falsa.
 
+Mas vejamos agora o argumento lógico de Roustaing. Ele é colocado com perfeição formal no início do prefácio de *Os Quatro Evangelhos*. Seu esboço nos fornece todo o raciocínio de Roustaing para aceitar a obra e oferecer esta nova revelação ao mundo. Vejamos pelas próprias palavras de Roustaing (segundo a primorosa tradução de Guillon Ribeiro):
 
-如何找到这个逻辑论证的实质性真理？它始终位于小前提中。真理是谦虚的，隐藏在逻辑论证的中。大前提陈述了一个无可疑问的普遍原则：“高阶灵体显现是为了揭示真理”。小前提则得出一个可能为真也可能假的结论：“启示的再启示是由高阶灵体所口述”。
+1) Esta obra é oriunda daqueles que prepararam a vinda de Jesus à Terra em sua missão terrena, participaram dessa missão e escreveram esses livros (os Evangelhos);
 
-小前提是这个逻辑论证的关键，但逻辑论证本身无法证明其合法性。这时，我们必须诉诸对这一假设的研究、分析和卡德尔式的检验。在这种情况下，我们必须使用 `Kardec` 的方法来测试这些灵体。如果我们不能证明它们确实是高阶的，那么这个逻辑论证就是假的，命题在实质上也是虚假的。
+2) Tendo testemunhado Jesus dentro do âmbito de sua missão terrena, eles se libertaram do jugo da letra e obtiveram o espírito;
 
-但现在让我们来看看 Roustaing 的逻辑论证。它以形式上的完美性被置于《四福音》序言的开头。它的大纲向我们提供了 Roustaing 接受这部作品并向世界提供这一新启示的整个推理过程。让我们通过 Roustaing 本人的话来来看（根据 Guillon Ribeiro 的精湛翻译）：
+3) Voltaram para iluminar o que parecia obscuro e extrair a verdade do que era considerado mentira.
 
-1) 这部作品源于那些准备了耶稣世间使命降临的人、参与了这一使命的执行并写了这些书（福音书）的人；
+Agora, para maior clareza, vamos traduzir esse longo argumento lógico para os termos da lógica formal. Sua estrutura lógica é a seguinte:
 
-2) 在他们所完成的世间使命范围内，对耶稣作了证后，他们脱离字面的束缚获得了精神；
+1) Os *Quatro Evangelhos* são obras dos precursores, evangelistas e apóstolos.
 
-3) 回来点亮那些看似黑暗的东西，并从被视为谎言的内容中提取出真理。
+2) Eles agora apresentam esses Evangelhos sem o véu da letra.
 
-现在为了清晰起见，我们将这个长篇逻辑论证转化为形式逻辑术语。它的逻辑结构如下：
+3) Portanto, os *Quatro Evangelhos* são a verdade.
 
-1) 《四福音》是先驱、福音传道人和使徒的作品。
-2) 他们现在在没有字面面纱的情况下呈现了这些福音。
-3) 因此，《四福音》就是真理。
+De acordo com a lógica formal (também chamada de pequena lógica), esse argumento lógico nos conduz apenas à verdade formal. Mas, para alcançar a verdade substancial, devemos recorrer à grande lógica, que exige o exame das premissas. Diferentemente do argumento lógico de exemplo que demos inicialmente, esse argumento lógico de Roustaing não parte de uma premissa composta por princípios universais, mas de uma hipótese particular. Roustaing admitiu a legitimidade da autoria espiritual da obra, mas seu julgamento pessoal não tem validade universal.
 
-根据形式逻辑（也称为小逻辑），这个逻辑论证只引导我们走向形式真理。但为了达到实质性真理，我们必须诉诸大逻辑，这要求对前提进行检验。与我们最初给出的示例逻辑论证不同，Roustaing 的这个逻辑论证并非从由普遍原则组成的前提出发，而是从一个特定的假设出发。Roustaing 承认了作品灵性作者的合法性，但他个人的判决并不具有普遍效力。
+O Verbo e a Carne – Duas Análises do Roustaismo ______________________________________________ 10
 
-道道与肉身 —— 对 Roustaing 主义的两次分析 ______________________________________________ 10
+Portanto, devemos analisar as duas premissas. Se a primeira premissa se provar substancialmente falsa, ou seja, se obtivermos que os espíritos que ditaram a obra não são os que Roustaing supôs, então todo o raciocínio fica comprometido.
 
-因此，我们必须分析这两个前提。如果第一个前提证明在实质上是虚假的，也就是说，如果我们获得了口述作品的灵体并不是 Roustaing 所假设的那样的，那么整个推理都受到损害。
+A segunda premissa será falsa, porque sua base é a primeira premissa. E a conclusão, como resultado lógico de duas premissas falsas, não será a verdade, mas a mentira.
 
-第二个前提将是假的，因为它的基础是第一个前提。而作为两个虚假前提逻辑结果的结论，将不是真理，而是谎言。
+Portanto, todos os nossos esforços devem se concentrar no exame do texto, pois somente o texto pode nos revelar a verdadeira natureza dos espíritos autores.
 
-因此，我们所有的努力都必须放在对文本的检验上，因为只有文本才能向我们揭示作者灵体的真实本质。
+## IV - OS TEXTOS MEDIÚNICOS
 
-## IV - 灵媒介文本
+O material que se segue imediatamente ao prefácio de Roustaing é diverso e constitui um complemento ao prefácio. Seu objetivo é provar a conformidade da teoria roustainguista com a pesquisa científica dos fenômenos espíritas e refutar as críticas de `Kardec` aos *Quatro Evangelhos*. Esses conteúdos formam uma barreira textual. Não nos interessam os argumentos polêmicos, mas a obra em si. Faremos um exame por amostragem, coletando os trechos mais significativos dos textos mediúnicos, ou seja, aqueles em que os espíritos ou autores espirituais falam. Um exame completo e exaustivo da obra é impossível, exigiria uma obra ainda mais vasta que a de Roustaing.
 
-紧随 Roustaing 序言之后的材料是多样的，并构成了该序言的补充。其目的是证明 Roustaing 主义理论与对于灵论现象科学研究的一致性，并反驳 `Kardec` 对《四福音》的批评。这些内容构成了文本的屏障。我们感兴趣的不是争论性的论点，而是作品本身。我们将进行抽样检查，从灵媒介文本中收集最有意义的片段，即灵体或灵性作者发言过的片段。对作品进行全面且详尽的检查是不可能的，那需要一部比 Roustaing 作品还要宏大的著作。
+Portanto, avaliemos os seguintes trechos:
 
-因此，让我们对以下片段进行评价：
+"Os evangelistas foram, sem o saber, historiadores mediúnicos inspirados, mas, dentro do quadro humano, diante do dom mediúnico, conservaram sua própria e característica independência natural. Assim, ao escrever, receberam a intuição que os auxiliou na revelação".
 
-“福音传道者在不知情的情况下，是受启示的灵媒介历史学家，但在人类的框架内，面对媒介天赋，他们保留了自己特有的自然独立性。因此，在写作时，他们接收了辅助他们进行启示的直觉”。
+"Sua intuição provém da inspiração divina de espíritos superiores, que desempenham o papel de servos de Deus, atuando sobre a humanidade livre e falível de cada um deles".
 
-“他们的直觉来自高阶灵体的神圣启示，这些灵体扮演着上帝仆的角色，作用于他们每个人自由且易犯错的人性之上”。
+"As palavras dos apóstolos passaram por uma longa transmissão oral antes de serem escritas, o que, de certa forma, contribuiu para as diferenças que notamos nas narrativas. Considerando a parte humana e, portanto, passível de complexidade nas relações mediúnicas, o segredo dessas diferenças será revelado, e elas mesmas não são importantes".
 
-“使徒的话在被写下来之前经过了长期的口口相传，这在某种程度上导致了我们在叙述中注意到的差异。考虑到灵媒介关系中具有人性的、并因此可能使其变得复杂的部分，将揭开这些差异的秘密，而且这些差异本身也并不重要”。
+"Como não podiam evitar isso, os evangelistas, em certas circunstâncias que vos serão apontadas, perderam a inspiração e ficaram entregues ao seu próprio critério, em alguns deles..."
 
-“由于无法避免这种情况，福音传道者在你们将被指出的某些情况下，丧失了灵感，任凭自己的标准，在某些人中……”
+(Volume I, Capítulo I – Os Evangelhos)
 
-（第一卷，第一章 —— 福音书）
+Nos dois primeiros trechos, vemos os evangelistas classificados como historiadores mediúnicos inspirados. Eles recebem a inspiração dos espíritos. Mas, no último trecho, vemos que, em certas circunstâncias, eles perderam a inspiração.
 
-在前两个片段中，我们看到福音传道者被分类为受启示的灵媒介历史学家。他们接收灵体的启示。但在最后一个片段中，我们看到在某些情况下，他们丧失了灵感。
+A experiência mostra que, desde a época de `Kardec` até os dias de hoje, um médium inspirado, ao executar uma tarefa elevada, jamais
 
-经验表明，从 `Kardec` 时代直到今天，受启示的媒介在执行高尚任务时，绝不会
+O Verbo e a Carne – Duas Análises do Roustaismo ______________________________________________ 11
 
-道与肉身 —— 对 Roustaing 主义的两次分析 ______________________________________________ 11
+fica entregue ao seu próprio critério... Nesse caso, ele teria falhado em sua missão. Como admitir isso?
 
-任凭自己的标准……在这种情况下，他们将未能完成使命。如何承认这一点？
+Ao examinar esses trechos dos textos mediúnicos dos *Quatro Evangelhos*, devemos também considerar a questão da linguagem dos espíritos, que é um dos pontos básicos para a identificação do comunicante na doutrina. Como veremos nos trechos transcritos adiante, a linguagem da obra é sempre a mesma: vulgarizada, com evidentes dificuldades de expressão em muitos pontos, e com o uso de termos impróprios como "nos laços humanos", além de certos jogos de palavras que revelam uma intenção dúplice. Observaremos isso através de exemplos do próprio texto. E é notável que a tradução brasileira seja considerada mais clara que o original.
 
-
-
-
-在审视《四福音》这些灵媒文本的片段时，我们还必须考虑灵灵的语言问题，这是教义中识别交流者的基本点之一。正如我们在稍后转录的片段中看到的，该作品的语言始终是一如的：通俗化，在许多处表现出明显的表达困难，并使用了诸如“在人类的纽带内”等不当词汇，还使用了某些揭示二重意图的文字游戏。我们将通过文本本身的示例来观察这些。而且值得注意的是，巴西语译文被认为比原文更清晰。
-
-道成与肉身 – 对鲁斯塔因主义的 2 种分析 ______________________________________________
+O Verbo e a Carne – Duas Análises do Roustaismo ______________________________________________
 
 12
 
 V
 
-## 鲁斯塔因主义的宿命论
+## O FATALISMO ROUSTAINGUISTA
 
-《路加福音》中记载的施洗约翰的出生，在《四福音》第一卷中引发了长长的注释。交流灵体利用这一机会，对人类的生育能力和不育能力进行了详尽的教学。这些教学中，最引人注目的是主宰人类地球生活的伊斯兰式宿命论 5。让我们来看一段片段：
+O nascimento de João Batista, narrado no Evangelho de Lucas, suscita longas anotações no primeiro volume dos *Quatro Evangelhos*. Os espíritos comunicantes aproveitam a oportunidade para fazer um ensinamento detalhado sobre a fertilidade e a esterilidade humanas. O que mais chama a atenção nesses ensinamentos é o fatalismo islâmico que domina a vida terrena dos homens 5. Vejamos um trecho:
 
 ```
-“撒加利亚是一个无意识的灵媒，正如你们所理解的：
-他是预言者，通过对自己视觉的意识而具有直觉，且
-听觉者。这解释了为什么他看到了灵体并与他交谈”。
+"Zacarias era um médium inconsciente, como entendeis:
+era vidente, por ter consciência de sua visão, e
+audiente. Isso explica por que ele via o espírito e com ele falava".
 
-“他被判处沉默，不是因为他怀疑，因为
-对未知的事物保持警惕的人是受到警告的，
-而是为了让那种暂时的疾病证实
-即将向他做出的那些预言”。
+"Foi condenado ao silêncio, não por duvidar, pois
+o homem prevenido contra o desconhecido é um homem avisado,
+mas para que aquela enfermidade temporária confirmasse
+as profecias que lhe seriam feitas".
 
-“....我们强调天使对撒加利亚关于以利亚的话语，
-这些话后来被公开的意见和声音所重复和确认。是的。以利亚将是约翰，而约翰曾是以利亚”。
+"....Enfatizamos as palavras do anjo a Zacarias sobre Elias,
+palavras que foram depois repetidas e confirmadas pela opinião pública e pela voz. Sim. Elias seria João, e João foi Elias".
 ```
 
-（第一卷，第一章 - 天使撒加利亚显现）
+(Volume I, Capítulo I – Aparição do anjo a Zacarias)
 
-在这一简短的片段中存在多处矛盾。撒加利亚是无意识的灵媒（这个表达在文中反复出现），但“他是预言者，通过对自己视觉的意识而具有直觉，且听觉者”。到底，他是有意识的灵媒还是无意识的灵媒？“无意识的灵媒”是什么意思？任何对看到、直觉、听见 `etc.` 具有意识的灵媒既不是、也不可能是无意识的灵媒。
+Há múltiplas contradições neste breve trecho. Zacarias é um médium inconsciente (expressão que se repete no texto), mas "era vidente, por ter consciência de sua visão, e audiente". Afinal, ele era um médium consciente ou inconsciente? O que significa "médium inconsciente"? Qualquer médium que tem consciência de ver, intuir, ouvir, `etc.` não é, e não pode ser, um médium inconsciente.
 
-接下来我们看到了一个与福音书文本的矛盾：撒加利亚被判处沉默并不是因为他怀疑天使，而是为了“证实即将向他做出的那些预言” 6。在这些预言中包含了以利亚转世为施洗约翰。这是对传统福音书文本一种迟且且必要的修补，因为这种转世的证明是由更高的权威——耶稣所提供的。那么，这种无法从其真伪得到验证的修补原因是什么呢？
+Em seguida, vemos uma contradição com o texto evangélico: Zacarias foi condenado ao silêncio não por duvidar do anjo, mas para "confirmar as profecias que lhe seriam feitas" 6. Entre essas profecias, está incluída a reencarnação de Elias como João Batista. Essa é uma correção tardia e necessária ao texto evangélico tradicional, pois a prova dessa reencarnação foi dada por uma autoridade superior – Jesus. Então, qual seria a razão dessa correção, cuja veracidade não pode ser comprovada?
 
-在关于生育和不育的长篇注释中，灵体创造了一套关于人体对流体同化与排斥的理论，但同时又提到了负责控制这些流体的灵体，以确保不育的考验持续预规定的时间。因此，我们不知道这种考验是根据自然法则机械地完成的，还是通过灵体的监视完成的。伊莎莎的不育是她和撒加利亚选择的考验。她在祈祷中恳求一个儿子。但给她儿子的并非通过祈祷，因为：“当受孕和出生的时刻已到，约翰出生了”。
+Nas longas anotações sobre a fertilidade e a esterilidade, os espíritos criam uma teoria sobre a assimilação e rejeição de fluidos pelo corpo humano, mas ao mesmo tempo mencionam espíritos encarregados de controlar esses fluidos para garantir que a prova da esterilidade dure o tempo pré-determinado. Portanto, não sabemos se essa prova é realizada mecanicamente, de acordo com as leis naturais, ou através da vigilância dos espíritos. A esterilidade de Isabel era uma prova escolhida por ela e Zacarias. Ela suplicou em oração por um filho. Mas o filho não lhe foi dado através da oração, pois: "Quando chegou o momento da concepção e do nascimento, João nasceu".
 
-5 “我们在每个人的脖子上挂着他的命运，在复活日，我们将向他们呈交一本书，这本书将是打开状态的”（古兰经；17:13）。
+5 "Em cada pescoço, penduramos seu destino; e no dia da ressurreição, apresentar-lhes-emos um livro que se abrirá" (Alcorão; 17:13).
 
-更正
+Correção
 
-6 即是：“……看哪，你将变哑，直到这些事情成就，你还不能说话；因为你不信我的话，这些话在规定的时候将成就的”（路加福音；1:20）。
+6 Ou seja: "E eis que ficarás mudo, e não poderás falar até o dia em que estas coisas aconteçam; porquanto não creste nas minhas palavras, as quais se cumprirão a seu tempo" (Lucas; 1:20).
 
-道成与肉身 – 对鲁斯塔因主义的 2 种分析 ______________________________________________
+O Verbo e a Carne – Duas Análises do Roustaismo ______________________________________________
 
 13
 
-《四福音》的灵性作者们用卡德克的术语和思维路线来处理这个问题。他们没有说任何新东西，没有揭示任何新内容。但有一个新发现：他们在注释中建立的混乱，给人一种宿命论主宰人类在地球生活的印象。在意识到这一点后，他们开始警告不要对他们声称的内容进行错误解释：“在这些观点上，你们不要看到任何宿命……”。而这个警告只会让问题变得更加混乱。
+Os autores espirituais dos *Quatro Evangelhos* tratam essa questão com a terminologia e a linha de raciocínio de Kardec. Eles não dizem nada de novo, não revelam nada de novo. Mas há uma novidade: a confusão que estabelecem em suas anotações dá a impressão de que um fatalismo domina a vida dos homens na Terra. Ao perceberem isso, começam a advertir contra uma interpretação errônea do que afirmam: "Não vejais nesses pontos nenhum fatalismo...". E essa advertência só torna a questão ainda mais confusa.
 
-启示的启示在这一问题上并没有揭示任何东西，正如文中所见。它仅仅是重复鲁斯塔因在阅读《灵之书》和《灵媒书》时已经学的教义原则。但在重复中加入了一些“导师”门徒和追随者认为是启示真理的荒谬且不太可能的假设。其中之一是，撒加利亚的沉默是由天使造成的，天使用磁流体渗透了他的舌头，使其变得沉重……
+A revelação da revelação nada revela sobre essa questão, como se vê no texto. Ela apenas repete os princípios doutrinários que Roustaing já havia aprendido ao ler *O Livro dos Espíritos* e *O Livro dos Médiuns*. Mas, na repetição, acrescenta hipóteses absurdas e pouco prováveis que os discípulos e seguidores do "Mestre" consideram verdades reveladas. Uma delas é que o silêncio de Zacarias foi causado por um anjo, que o envolveu a língua com fluidos magnéticos, tornando-a pesada...
 
-## VI - 耶稣的流体身体
+## VI - O CORPO FLUÍDICO DE JESUS
 
-### 耶稣的流体身体
+### O Corpo Fluídico de Jesus
 
-鲁斯塔因的核心理论是流体身体。让我们看看是如何解释的：
+A teoria central de Roustaing é o corpo fluídico. Vejamos como é explicado:
 
 ```
-“耶稣因此，通过意志的力量，自己构建了
-触感且近乎物质的灵体，考虑到你们居住的
-行星，它变成了一个与你们相对相似的身体”。
+"Jesus, portanto, pelo poder de sua vontade, construiu para si
+um corpo fluídico, tangível e quase material, que, considerando o planeta
+em que habitais, tornou-se um corpo semelhante ao vosso".
 ```
 
-### 技术分析结论
+### Conclusão da Análise Técnica
 
-这个简短的片段揭示了令人震惊的天真。玛利亚在这一事件中做了什么？她投胎到地球是为了假装母亲，忘记了她将扮演的角色——因为她是一个无意识的灵媒——但她无意识地行动吸引了流体，以代表他。然而，在关键时刻，耶稣必须介入并自己构建了他的流体身体。
+Este breve trecho revela uma ingenuidade estarrecedora. O que Maria fez nesse evento? Ela encarnou na Terra para fingir ser mãe, esquecendo-se do papel que desempenharia – porque era uma médium inconsciente – mas agiu inconscientemente para atrair fluidos e representar o papel. No entanto, no momento crucial, Jesus teve que intervir e construir ele mesmo seu corpo fluídico.
+
+Podemos encerrar a análise aqui. Não há mais nada a analisar. Essa revelação da revelação já morreu nessa farsa lírica, que ocorre nas primeiras páginas do primeiro volume dessa obra roustainguista de duas mil páginas. Mas o fato é que o roustainguismo é uma crença, e seus seguidores não aceitarão nossas conclusões.
+
+Precisamos de paciência e coragem. Continuaremos...
+
+A propósito, após essa farsa lírica, só podemos confirmar, nos parágrafos acima, que Roustaing absorveu, ao ler *O Livro dos Espíritos* de Kardec, uma cópia da teoria do "perispírito". Lemos acima que o perispírito é um corpo fluídico tangível. O termo `corpo fluídico` é de uso de Kardec. Mas Kardec mostra que esse corpo fluídico pode se tornar tangível no fenômeno de materialização. Roustaing confunde os dois, `aparentemente` criando esse novo termo.
+
+Outro aspecto interessante do uso da teoria kardecista é o trecho médio da transcrição acima, quando Roustaing (ou seja, o espírito que escreveu a obra) diz que Maria, através de seu perispírito, produziu uma irradiação de indução para atrair os fluidos necessários. Essa é a teoria explicativa dos fenômenos de efeitos físicos. O espírito comunicante produz uma irradiação de seu perispírito, que influencia o perispírito do médium, provocando fenômenos semelhantes que se manifestam na forma de reações. Os fluidos espirituais do espírito misturam-se aos fluidos materializados do médium, produzindo os elementos necessários, de natureza semimaterial, que permitem ao espírito agir no plano material.
 
 
-
-
-我们可以在此结束分析了。没有更多可以分析的了。这种启示的启示在这一抒情式的滑稽剧中已经夭折了，正发生在这部长达两千页的鲁斯丁主义著作的第一卷开头几页中。但事实是，鲁斯丁主义是一种信仰，其追随者们不会接受我们的结论。
-
-我们需要耐心和勇气。我们将继续深入……
-
-顺便提一下，在这一抒情式的滑稽剧之后，我们在上面的段落中只能证实，鲁斯丁在阅读卡德克的《灵之经》（`O Livro dos Espíritos`）时吸收了“周灵体”（perispírito）理论的临摹。我们在上面读到周灵体是一种可触的流体身体。`corpo fluídico` 一词是卡德克的用法。但卡德克显示，这种流体身体在实体显现的现象中可以变得可触。。鲁斯丁将两者混杂在一起，`表面上`创造了这一新术语。
-
-利用卡德克理论的另一个有趣方面是上述转录的中段，当时鲁斯丁（即写下该作品的灵体）说，玛利亚通过她的周灵体产生了一种感应辐射，以吸引所需的流体。这就是通灵现象的解释理论。交流的灵体产生其周灵体的辐射，从而影响媒介的周灵体，引发产生反应形式的类似现象。灵体的灵性流体与媒介的物质化流体混合，产生了必要的、半物质态的元素，这使得灵体能够在物质平面上采取行动。
 
 我们实际上面对的是一起非法侵有行为。在这一切中没有任何新意，除了对该理论的错误误用之外。
 
-但让我们来看另一个关于玛利亚怀孕的基础段落。并将它与关于分娩的段落结合起来。看这几段：
+但让我们来看另一个关于玛利亚怀孕的基础段落，并将它与关于分娩的段落结合起来。看这几段：
 
-“玛利亚的怀孕是圣灵的杰作，因为是主灵的杰作，并且作为一种表象和流体形式，为了产生幻象，让人相信是真实的怀孕”。
+“玛利亚的怀孕是圣灵的杰作，因为是主灵的杰作，并且作为一种表象和流体形式，为了产生幻象，让人相信是真实的怀孕。”
 
-“预备弥赛亚在世上显现的灵体在玛利亚周围聚集了适当的流体，使她的腹部扩张并使其肿胀。由于由于动用流体的作用，月经在精确的妊娠期内停止了，这一事实通过肿胀和造成的不适，促成了怀孕的表象”。
+“预备弥赛亚在世上显现的灵体在玛利亚周围聚集了适当的流体，使她的腹部扩张并使其肿胀。由于动用流体的作用，月经在精确的妊娠期内停止了，这一事实通过肿胀和造成的不适，促成了怀孕的表象。”
 
-“玛利亚在她的引导灵的启示下，面对这些结果（对她来说，那是天使或派遣的灵体向她所宣告的实现），相信了自己状态的真实性”。
+“玛利亚在她的引导灵的启示下，面对这些结果（对她来说，那是天使或派遣的灵体向她所宣告的实现），相信了自己状态的真实性。”
 
-“她的分娩同样是圣灵的杰作，因为也是主灵的杰作，而且仅仅发生在表象上，正如怀孕一样，正因为这源于此，所以它仅仅是表象的。正如怀孕一样，玛利亚对分娩产生了幻觉，其程度在必要的范围内，以便她如应当发生的那样相信一个真实的出生”。
+“她的分娩同样是圣灵的杰作，因为也是主灵的杰作，而且仅仅发生在表象上，正如怀孕一样，正因为这源于此，所以它仅仅是表象的。正如怀孕一样，玛利亚对分娩产生了幻觉，其程度在必要的范围内，以便她如应当发生的那样相信一个真实的出生。”
 
 荒谬的意图变得清晰明了。这一抒情式的滑稽剧失去了所有的抒情色彩。分析在荒谬面前停滞了，因为荒谬是无法分析的。我们必须跳过深渊，从另一个角度审视文本。
 
@@ -336,46 +331,51 @@ V
 
 我们身上都带着部落泛灵论的残留，带着先于宗教的原始魔法的残留。这些从潜意识升到意识的残留激发了我们，并决定了心理上的退化。我们回到了部落，回到了禁忌，回到了原始的泛灵论。这可能发生在粗鲁简单的人身上，也可能发生在受过良好教育但天真的人身上。这种退化可以解释为什么那些带着文明外衣的人会接受上述的鲁斯丁主义理论。
 
-
-
-
--   O que não decorre das funções mediúnicas, mas sim da magia primitiva ou anímica, bem definida por Malinowski 12, que tanto existe nas selvas como nos meios mais civilizados. É esse o tipo de magia que constitui a essência do Roustainguismo, na mesma linha do pensamento mitológico que gerou a teoria grega do corpo fluídico de Jesus na era apostólica, contra a qual se ergueram os apóstolos, como vemos nas epístolas de Pedro e João.
+> O que não decorre das funções mediúnicas, mas sim da magia primitiva ou anímica, bem definida por Malinowski 12, que tanto existe nas selvas como nos meios mais civilizados. É esse o tipo de magia que constitui a essência do Roustainguismo, na mesma linha do pensamento mitológico que gerou a teoria grega do corpo fluídico de Jesus na era apostólica, contra a qual se ergueram os apóstolos, como vemos nas epístolas de Pedro e João.
 
 A anedota da amamentação de Jesus exemplifica bem esse tipo de magia.
 
 O Jesus menino não aparece ali como um ser real, mas como um ser artificial, um deus mitológico que se disfarça numa criatura humana, como o faziam os deuses gregos e romanos para iludirem os homens e pregar-lhes as suas peças. Usando o poder mágico da transmutação (alquimia) ou transubstanciação (teologia) o menino mitológico (e portanto ante-cristão) mudava o leite materno em sangue e o devolvia à circulação no corpo de Maria. É uma adaptação ao Espiritismo do dogma católico da eucaristia 13.
 
-Pode-se alegar que isto seria, possível por meio da ação mediúnica. O caso da transformação da água em vinho, citado no Evangelho, poderia justificar essa teoria. Mas não podemos esquecer as seguintes diferenças: quando Jesus operou a transformação da água não o fez para iludir ninguém, mas para demonstrar os seus poderes e despertar a fé nos que deviam ouvi-lo; foi portanto uma ação moralmente lícita, como todas as suas ações; essa transmutação (química e não alquímica) não foi uma encenação, mas um fato real, ainda hoje constatável na atividade mediúnica. A transmutação do leite de Maria implica problemas morais inadmissíveis numa personalidade espiritual elevada, tanto mais que por trás dela encontra-se todo o complexo fantasioso e absurdo do nascimento fingido. Estaríamos diante desta contradição que minaria os alicerces do Cristianismo e de todo conceito espiritual: a `Verdade revelada através da mentira`.
+Pode-se alegar que isto seria possível por meio da ação mediúnica. O caso da transformação da água em vinho, citado no Evangelho, poderia justificar essa teoria. Mas não podemos esquecer as seguintes diferenças: quando Jesus operou a transformação da água não o fez para iludir ninguém, mas para demonstrar os seus poderes e despertar a fé nos que deviam ouvi-lo; foi portanto uma ação moralmente lícita, como todas as suas ações; essa transmutação (química e não alquímica) não foi uma encenação, mas um fato real, ainda hoje constatável na atividade mediúnica. A transmutação do leite de Maria implica problemas morais inadmissíveis numa personalidade espiritual elevada, tanto mais que por trás dela encontra-se todo o complexo fantasioso e absurdo do nascimento fingido. Estaríamos diante desta contradição que minaria os alicerces do Cristianismo e de todo conceito espiritual: a `Verdade revelada através da mentira`.
 
-10 Tricca, M. H. de O. Apócrifos I – Os Proscritos da Bíblia, p. 185.
-11 Kardec, A. Revista Espírita, 1863, págs. 354, 382 e ss.
-12 Magia, Ciência e Religião. EDIÇÕES 70 CIÊNCIAS SOCIAIS-ANTROPOLOGIA.
-13 Um dos sete sacramentos da Igreja Católica, no qual, segundo a crença, Jesus Cristo se acha presente, sob as aparências do pão e do vinho, com seu corpo, sangue, alma e divindade.
+### Notas
 
-O Verbo e a Carne – 2 Análises do Roustainguismo ______________________________________________
+10. Tricca, M. H. de O. *Apócrifos I – Os Proscritos da Bíblia*, p. 185.
+
+11. Kardec, A. *Revista Espírita*, 1863, págs. 354, 382 e ss.
+
+12. *Magia, Ciência e Religião*. EDIÇÕES 70 CIÊNCIAS SOCIAIS-ANTROPOLOGIA.
+
+13. Um dos sete sacramentos da Igreja Católica, no qual, segundo a crença, Jesus Cristo se acha presente, sob as aparências do pão e do vinho, com seu corpo, sangue, alma e divindade.
+
+---
+
+## O Verbo e a Carne – 2 Análises do Roustainguismo
 
 17
 
 Não podemos separar os princípios éticos do contexto de nenhum problema espiritual. Alega-se também que Jesus ensinava em parábolas. Mas as parábolas não são mentiras, são formas alegóricas, simbólicas de transmissão da Verdade. A própria Psicologia materialista constatou essa necessidade de sermos verdadeiros no ensino das coisas mais corriqueiras, condenando as explicações fantasiosas do nascimento das crianças. Se a lenda ingênua da cegonha é um mal por ser mentirosa, que dizer do mito absurdo do nascimento fingido de Jesus? O uso da alegoria é válido e prepara o advento da verdade, mas o uso do fingimento é próprio dos mistificadores, dos embusteiros, as criaturas falsas e não de espíritos esclarecidos.
 
-O mesmo se aplica ao episódio ridículo da permanência de Jesus menino em Jerusalém. O menino não era menino, mas um espírito adulto disfarçado em criança. Enganava os doutores da lei com suas respostas astuasas e enganava o povo com suas fugas para o Céu, deixando as roupas em mãos
-
+O mesmo se aplica ao episódio ridículo da permanência de Jesus menino em Jerusalém. O menino não era menino, mas um espírito adulto disfarçado em criança. Enganava os doutores da lei com suas respostas astuasas e enganava o povo com suas fugas para o Céu, deixando as roupas em mãos.
 
 Este `critério`, que constitui uma das partes fundamentais do método kardeciano de 16, jamais beneficiou a obra de Roustaing. O que nela se encontra, naturalmente excluída naturalmente a cópia geral da obra de Kardec, são simples opiniões pessoais dos espíritos reveladores, que se enfeitaram, como dizia Kardec, com os nomes veneráveis dos evangelistas, dos apóstolos e de Moisés. Esse adorno, por si só, não oferece nenhuma garantia de legitimidade. Por outro lado, a vulgaridade da linguagem e das interpretações, e mais ainda o ridículo das passagens que já analisamos – e de muitas outras que qualquer leitor de bom senso encontrará em abundância nos textos – provam de sobra contra a pretensão de revelação da obra.
 
-A ingenuidade de Roustaing, que foi colhida em sua vaidade pelos espíritos enganadores, revela-se na própria publicação de um livro copiado da obra de Kardec, na época tão em evidência na França e no Mundo. Uma pessoa de sua posição, dotada de um pouco mais de bom senso, não teria a coragem de lançar esse plágio evidente, que se denuncia em cada passagem do texto, disfarçado apenas com acréscimos de imaginação, os quais não passam, também, de repetições cansativas de hipóteses combatidas no Cristianismo desde a era apostólica e condenadas nasístolas do Novo Testamento.
+A ingenuidade de Roustaing, que foi colhida em sua vaidade pelos espíritos enganadores, revela-se na própria publicação de um livro copiado da obra de Kardec, na época tão em evidência na França e no Mundo. Uma pessoa de sua posição, dotada de um pouco mais de bom senso, não teria a coragem de lançar esse plágio evidente, que se denuncia em cada passagem do texto, disfarçado apenas com acréscimos de imaginação, os quais não passam, também, de repetições cansativas de hipóteses combatidas no Cristianismo desde a era apostólica e condenadas nas epístolas do Novo Testamento.
 
-Essa renovação do Docetismo 17, heresia do século II da era cristã, equivale a um retrocesso histórico. A revelação da revelação regride nada menos que dezoito séculos. E não obstante pretende provar que corresponde à era moderna, estando de perfeito acordo com as conquistas científicas. Roustaing refuta a acusação de docetismo que Kardec faz à sua obra, alegando que os Docetas não conheciam a mecânica da gravidez aparente e do parto aparente. Entende que a sua 16 “Uma só garantia séria existe para o ensino dos Espíritos: a concordância que haja entre as revelações que eles façam espontaneamente, servindo-se de grande número de médiuns estranhos uns aos outros e em vários lugares. Se, portanto, agradar a um Espírito formular um sistema excêntrico, baseado unicamente nas suas ideias e com exclusão da verdade, pode-se ter a certeza de que tal sistema se manterá circunscrito e cairá, diante das instruções dadas de todas as partes, conforme os múltiplos”. (ESE; Introdução).
+Essa renovação do Docetismo 17, heresia do século II da era cristã, equivale a um retrocesso histórico. A revelação da revelação regride nada menos que dezoito séculos. E não obstante pretende provar que corresponde à era moderna, estando de perfeito acordo com as conquistas científicas. Roustaing refuta a acusação de docetismo que Kardec faz à sua obra, alegando que os Docetas não conheciam a mecânica da gravidez aparente e do parto aparente. Entende que a sua obra é nova porque explica a encarnação fluídica do Messias. A verdade é que pouco importa essa mecânica imaginária.
 
-17 **Docetas** – do grego `dokein: aparecer`. Seita derivada do gnosticismo, tendo como representantes principais Doceteu e Saturnino, negavam a realidade carnal de Jesus e, por isso, não aceitavam seu nascimento, paixão e ressurreição. Consideravam seu corpo como “Fantasma” (Fluídico) e seus feitos, apenas aparentes.
+A palavra Docetismo vem do grego (doceta) que quer dizer: crença em uma aparência. Veja a definição que lhe dá o `Dictionnaire Encyclopédique`: heresia do segundo século que consistia em pretender que o filho de Deus apenas tinha carne aparente, que apenas havia nascido, vivido e sofrido em aparência。
 
-O Verbo e a Carne – 2 Análises do Roustainguismo é nova porque explica a encarnação fluídica do Messias. A verdade é que pouco importa essa mecânica imaginária.
+### 注释
 
-A palavra Docetismo vem do grego (doceta) que quer dizer: crença em uma aparência. Veja a definição que lhe dá o `Dictionnaire Encyclopédique`: heresia do segundo século que consistia em pretender que o filho de Deus apenas tinha carne aparente, que apenas havia nascido, vivido e sofrido em aparência.
+16. “Uma só garantia séria existe para o ensino dos Espíritos: a concordância que haja entre as revelações que eles façam espontaneamente, servindo-se de grande número de médiuns estranhos uns aos outros e em vários lugares. Se, portanto, agradar a um Espírito formular um sistema excêntrico, baseado unicamente nas suas ideias e com exclusão da verdade, pode-se ter a certeza de que tal sistema se manterá circunscrito e cairá, diante das instruções dadas de todas as partes, conforme os múltiplos”. (*ESE; Introdução*).
+
+17. **Docetas** – do grego `dokein: aparecer`. Seita derivada do gnosticismo, tendo como representantes principais Doceteu e Saturnino, negavam a realidade carnal de Jesus e, por isso, não aceitavam seu nascimento, paixão e ressurreição. Consideravam seu corpo como “Fantasma” (Fluídico) e seus feitos, apenas aparentes.
+
+
 
 Roustainguismo, por acaso, diz outra coisa? Roustaing se escuda em um sofisma, afirmando: "O Espírito puro não pode aparecer em um mundo fluídico, imediatamente às regiões dos fluídos puros que ele habita, senão por encarnação ou incorporação voluntária". A encarnação fluídica é explicada com o exemplo das materializações de King, com uma diferença: a de Jesus se serviu, sem disso realmente precisar, da mediunidade de Maria. Assim, seu corpo aparente não era carnal, mas de uma carne refinada. Só a chamada do absurdo, que é uma espécie de antilogia, poderia tornar aceitável esse jogo de palavras. E com isso procura se livrar da acusação de docetismo acertadamente. O elemento fundamental desta doutrina é o preconceito, a consideração das leis naturais como impuras. Teria Jesus esse preconceito? Ele, que dizia filho do homem, que condenava e contraria os preceitos da lei de pureza, teria exigido um privilégio para sua encarnação entre os homens? Ele que se colocou em tudo ao nosso lado, chegando a afirmar que tudo o que fazia – até mais do que ele fazia – teria recusado aceitar um nascimento natural? O Espiritismo, que considera as leis naturais como de Deus, poderia endossar isso?
-
-
 
 我需要这些项目来证明这一新启示中`神秘起源`的真实性。这种模仿是清晰可见的。而那些增加的内容总是想象色彩的产物。在这种情况下，正如许多其他情况一样，这些增加显示了对灵性教义的理解和同化的缺失。Roustaing 在没有任何证据或调查的情况下，面对`上帝的仆人`们所谓的不可无错性，承认上帝为遵循善之路的灵体们设定了一个荒谬的特权：他们“在流体状态中进步，从而达到完美”。这这将使他同时也接受了两个世界层级：物质世界的层级和流体世界的层级。
 
@@ -390,20 +390,22 @@ Roustainguismo, por acaso, diz outra coisa? Roustaing se escuda em um sofisma, a
 我们在它的流体世界和物质世界的理论中看到了这一点，它们之间彼此隔绝，如同创造中两个对立的分支。这是一种第 21 种泛神论，其中上帝和魔鬼将宇宙分为两个同样野蛮的领域：善与恶的领域，因为面对永久的恶，善也无法是纯的。让我们看看文本：
 
 > “流体世界，注定供从幼年和教育状态起从未失败的灵体居住，它们在进步的道路上始终保持纯洁，在流体状态中进步”。
->
+
 > “物质世界——‘旨在让失败灵体转世的不同世界，并作为此类，受人类肉身的限制’”。
 
 `上帝的仆人`们没有意识到，这不是两个层级，不是一个中断的过程，而是一个自然的连续体，在这个过程中，流体世界代表了物质世界发展的高级阶段。正如谚语所说：他们听到公鸡叫，但不知道在哪里。
 
 ---
+
 19 “因为我们向你们传讲我们主耶稣基督的大能和降临时，没有从不讲狡猾的寓言，因为我们是祂威严的目击者”（彼得后书 1:16）。
+
 20 “人类共同产生了一个人类环境，包含其社会文化和心理构成的全部。这些构成分中的任何一个不能被理解为人类生物构造的产物，正如我们所指出的，这种构造仅提供了人类生产性活动的外部限制。正如人不可能在孤立中发展成为人一样，孤立的人也不可能产生人类。”
+
 21 伊朗人（波斯人）的古代宗教，其特征是通过承认两个斗争的原则使自然力量神化，`aura-mas`（善之神）和`arimã`（恶之神或魔鬼）。
+
 22 道与肉体——2 Roustaing 主义分析
 
 ## ROUSTAING 主义的转世
-
-
 
 Os leitores interessados no assunto não precisam perder muito tempo com a consulta aos quatro volumes da obra indigesta. É difícil agüentar essa leitura maçuda. Basta examinarem a teoria roustainguista da reencarnação no primeiro volume de "Os Quatro Evangelhos". É no exame dos capítulos de Mateus e Lucas sobre a genealogia de Jesus (vejam só!) que aparece, em meio do volume, páginas 300 e pouco da edição de 1942, a pergunta n.° 58 sobre as `substâncias` `humanas.` O livro foi tão mal feito que Guillon Ribeiro teve de reorganizá-lo para a edição brasileira. E assim mesmo não é fácil indicar os os tópicos a serem examinados, em virtude da balbúrdia do texto. Experimente o lector fazer uma citation dessas.
 
@@ -422,9 +424,6 @@ Vejamos os trechos principais da resposta dos espíritos reveladores ao pobre Ro
 "São corpos rudimentares. O homem aporta a essas terras no estado de esboço, como tudo o que se forma nas terras primitivas. O macho e a fêmea não são nem desenvolvidos, nem fortes, nem inteligentes. – Mal se arrastando em seus seus invólucros, vivem, como os animais, do que encontram no solo e lhes conveniente. As árvores e o terreno produzem abundantemente para a nutrição de cada espécie. Os animais carnívoros não os caçam. A providência do Senhor vela pela conservação de todos. Seus únicos instintos são os da alimentação e os da reprodução".
 
 Notemos a absoluta incapacidade de Roustaing para compreender o que havia leído em Kardec sobre o desenvolvimento do princípio inteligente a partir dos reinos inferiores da Criação. Os espíritos reveladores, sempre trapaceiros, aproveitam-se do precário estado mental e psíquico do advogado convalesccente para elaborar a mais ridícula teoria da reencarnação. E terminam essas explicações verdadeiras com esta afirmação: "As gerações sucedem desenvolvendo-se. As formas se vão alongando e tornando- aptas a prover às necessidades que se multiplicam. Mas não é nossa tarefa traçar aqui a história da criação. O espírito vai habitar corpos formados de substâncias contidas nas matérias constitutivas do planeta. Esses corpos não são aparelhados como os nossos, porém os elementos que os compõem se acham dispostos por maneira que o espírito possa usar e aperfeiçoar."
-
-
-
 
 拉威尔（Ravel）正螺旋着旋转，将读者带入井底。但那里发现并非传说中赤裸的真理，而是一只喷着火的 23 号巨龙。
 
@@ -462,11 +461,9 @@ Notemos a absoluta incapacidade de Roustaing para compreender o que havia leído
 
 选取的圣经片段出自《出埃及记》32:26-29。我们仅抄录主要片段：
 
+
+
 “利未支族的人，他（摩西）对他们说：耶华这以色列的神说：各人拔出腰间的刀，在过营中来来去，杀掉你们的兄弟、你们的朋友、你们的父亲。每人杀死自己的兄弟、朋友、妻子、女儿。利未支族的人，他（摩西）对他们说：耶华这以色列的神说：各人拔出腰间的刀，在过营中来来去，杀掉自己的兄弟、朋友、你们的父亲。每人杀死自己的兄弟、朋友、妻子、女儿。利未支族的人，他（摩西）对他们说：耶华这以色列的神说：各人拔出腰间的刀，在过营中来来去，杀掉自己的兄弟、朋友、你们的父亲。每人杀死自己的兄弟、朋友、妻子、女儿。利未支族的人，他（摩西）对他们说：耶华这以色列的神说：各人拔出腰间的刀，在过营中来来去，杀掉自己的兄弟、朋友、你们的父亲。每人杀死自己的兄弟、朋友、妻子、女儿。”
-
-
-
-
 
 这一诫律可以应用于更广泛的意义：`不要用剑杀，也不要用子弹杀，而是要用氢弹杀。`是的，因为数百人的集体死亡可能成为一种因果报应的要求。届时保护灵就不需要细致地引导剑的使用，而是通过引导炸弹的发射就能以最小的努力获得最大的效果。
 
@@ -485,17 +482,15 @@ Notemos a absoluta incapacidade de Roustaing para compreender o que havia leído
 尽管如此，他写道，应该暴露于常识之者的嘲笑之下以试图澄清这一主题。某些观念的荒谬有时是巨大的，只值得沉默。我们想要让那些过度诚信的人关注到“Roustaing 主义”的荒谬，这一简单的事实本身也是一种可笑的态度。在这项工作中，我们有意识地让自己处于这种荒谬之中。面对这种堂吉诃式的立场是值得的，仅仅希望有人能从催眠状态中醒来，或者有人能避免陷入其中。
 
 ---
+
 道道与肉身 —— 对 Roustaing 主义的两个分析
 
 ### 因果的概念
 
 `四部福音`是灵论主义的特洛伊木。没有什么比特洛伊人把希腊器械带回自己的城邦更荒谬的，他们仅仅被这项作品的宏大所吸引。由于其无效，卡珊德拉（Cassandra）的预言也是荒谬的，因为阿波罗神（Apoio）已经提前取消了它。但卡珊德拉出于道德义务必须这样做。那些没有听她说话的人灭了，并将自己的王国推向了彻底的毁灭。我们必须以特洛伊女预言者的道德勇气面对这种荒谬。尤其是现在，这只腹中藏着猛敌的特洛伊木，正再次展示在灵论主义的傻瓜们面前。
 
-
-
-
-
 ## 参考文献
+
 32 Vieira, W. Bem Aventurados os Simples, item 50 - Justiça.
 
 33 Kardec, A. O Livro dos Espíritos, perg. 532.
@@ -554,9 +549,6 @@ Kardec 观察、研究、权衡、分析，并投身于深度的探究和详尽�
 
 （接收作品的过程持续了三个半年。总之，鲁斯坦因主义只用了四年半才呈现出完整的文本。Kardec 和 Roustaing 之间没有关系。）
 
-
-
-
 从历史上看，鲁斯丹主义（Roustainguismo）存在的意义仅在于：一个康复者的不安，他被卡德克（Kardec）的作品所震撼，并试图超越它，通过他熟悉的几位同胞媒介的传讯，在高阶灵灵的帮助下阐明福音书中晦涩的点，而这些交流最终由唯一的媒介 `Madame Collignon` 负责全文的灵媒工作。鲁斯丹本人通过唤起灵体来引发启示，这与卡德克不同，后者研究现象并在灵媒实验过程中被启示所震撼。
 
 卡德克的科学立场与鲁斯丹的平庸立场对立的。鲁斯丹是一个虚荣的人，他被欺骗性的灵体所误导，接受了最荒唐荒谬的解释来阐明经文问题。这位伟大的律师只不过是一个大天真之辈。
@@ -575,9 +567,6 @@ Kardec 观察、研究、权衡、分析，并投身于深度的探究和详尽�
 
 道与肉体——对鲁斯丹主义的两次分析
 
-
-
-
 这些事实表明，这种伪造作品的宣传在我们圈内是多么的顽固和有害，尤其是由一家传统且受推崇的机构所为之。在这卷书中，`Júlio Abreu Filho` 对鲁斯廷格主义（Roustainguismo）狂热对灵媒作品的歪曲提出了严重指控。这些指控并非现在，而是多年前就已经发表了。尽管如此，宣传仍在继续，那部歪曲事实的作品继续在田间播种杂草。“黄金契约”（Pacto Áureo）所建立的沉默产生了负面结果，因为整整一代灵学生都在这段时期形成，现在被`鲁斯廷格主义`的“新奇”措手不及。通过这些果实，我们可以评价这棵树。`鲁斯廷格主义`产生了什么好果实？究竟是什么？
 
 正因这一切——以及其损害名誉的后果——真诚的灵论者不能保持沉默。必须在讲座、会议、文章和书籍中，大声且响亮地说出关于`Roustaing` 作品的真相。我们刚刚进行的分析本意仅仅是分析——结果却不可避免地将我们带入了指控的领域。因为面对伪造者的狡诈以及那些接受并赞美他们者的着迷，是不可能沉默的。
@@ -589,7 +578,9 @@ Kardec 观察、研究、权衡、分析，并投身于深度的探究和详尽�
 ## Edmund Burke
 
 言辞与肉——对鲁斯廷格主义的 2 次分析 ______________________________________________
+
 34
+
 XIV
 
 ## GUERRA JUNQUEIRO 案件
@@ -609,14 +600,12 @@ XIV
 ## 信仰与环境
 
 发表于 1932 年（即四十年前）的灵媒诗歌《圣座的葬礼》，在`Guillon Ribeiro`的序言下被灵性界和平地接受了。但现在当鲁斯廷格者试图将其引入《言辞与肉——对鲁斯廷格主义的 2 次分析》______________________________________________
+
 35
+
 作为战斗的旗帜，在他们投入的这种不择手段的情况下，最浅的分析揭露了它的脆弱性。`Guerra Junqueiro`本人在那期间对此保持了沉默。当时没有冷静的氛围，不宜火上加油：但万物皆有度。现在，通过`Jorge Rizzini`的灵媒，他为我们解释了这个谜团。América Delgado 加入了`FEB`的鲁斯廷格思想路线，自然容易受到这方面的影响。
 
 这并不是她的错，正如`Frederico Figner`曾在我们发表于《灵性世界》（Mundo Espírita）杂志的一篇引起许多争议的通讯中向我们解释的那样，是因为她进入灵性主义的引导是错误的。
-
-
-
-
 
 Por isso Guerra Junqueiro o utiliza para a transmissão de seus poemas e pode servir-se dele para desfazer o equívoco de "Os Funerais da Santa Sé". E o faz com um equilíbrio inegável, ressalvando as condições espirituais da médium `América Delgado` e evitando agressões pessoais a Roustaing, que considera uma vítima. Sua crítica é reservada apenas para a obra e para os mistificadores que a ditaram.
 
@@ -624,356 +613,217 @@ Esse equilíbrio restabelece aos nossos olhos o Guerra Junqueiro que o poema de 
 
 ## CORPO DE JESUS
 
-A revista "O Reformador", órgão oficial da `FEB`, publicou em seu número de março deste ano, 1972, como uma das peças de defesa do `Roustainguismo`, o longo trecho de "Os Funerais da Santa Sé" que vamos transcrever. É realmente uma peça digna de estudo, pois nela temos a demonstração da complexidade do processo de recepção mediúnica. O estilo de Guerra Junqueiro se reflete nele, mas a técnica do poeta é falha, contrastando com o seu rigor na prática do alexandrino,
-
-O Verbo e a Carne – 2 Análises do Roustainguismo ______________________________________________
-
-36
-
-o verso mais difícil da poética antiga, e no qual Junqueiro se revelou verdadeiro virtuoso. Nenhum outro poeta empregou o alexandrino em nossa língua com tanta perícia e tamanha constância. Mas no trecho abaixo Junqueiro o utiliza como um principiante, um desconhecedor das suas regras.
-
-Além disso temos de considerar o problema de conteúdo. No começo o poeta critica os que "...querem esvoaçar além dos infinitos – para saber o que era o corpo de `Jesus`. Ao mesmo tempo ridiculariza "alguns doutores que a `Ciência` já perscrutam". Depois menospreza o laboratório para sustentar a tese agnóstica no tocante "aos problemas de `Deus`". Começa aí a regressão psíquica de Junqueiro, que volta à fé dogmática e cega do clero que sempre combateu, deixando mesmo entender que `Jesus` era `Deus`. Nada dessa confusão condiz com o pensamento viril de Guerra Junqueiro em vida ou dele após a morte nos poemas do "Parnaso". E notese que "Os Funerais da Santa Sé" apareciam precisamente em 1932, juntamente com o "Parnaso", numa evidente manobra de reação.
-
-A seguir, o Junqueiro retrógrado se utiliza do chavão roustainguista da `dor moral:`
-
-"O martírio real é o que retalha a alma", como se a dor moral pudesse justificar a farsa imoral de uma tragédia grega encenada por entidades espirituais para enganar os homens. Ninguém ignora que o sofrimento moral é superior ao físico. Por isso todos compreendem o martírio do palhaço que faz rir a multidão enquanto o coração lhe sangra no peito. Mas ninguém de bom senso pode admitir que uma criatura divina fizesse o contrario do palhaço, exibindo um sofrimento falso para sangrar o coração do público. E a inteligência lúcida de Guerra Junqueira não percebeu esse contra-senso nem encontrou maneira mais lógica de sair da enrascada. Teve mesmo de servir-se da surrada e absurda explicação de Roustaing, sempre repetida pelos que a admitem.
-
-Como se isso não bastasse vemos o velho Junqueiro arcado ao peso fatal dos anos – como se ainda estivesse na carne perecível – endossar a mais tola de todas as teses roustainguistas: "Se o `Cristo` foi humano, que é da virgindade daquela que recebe, ainda imaculada, o verbo que ilumina..." Ou da virgindade física misturado a um resíduo mitológico é aprovado ingenuamente pelo poeta de "A Velhice do Padre Eterno". Esse velho esclerótico fala da Imaculada como se estivesse num convento da Idade Média. E como isso não bastasse, esquecido do magní prefácio a "Os Simples", em que definiu em vida e espiriticamente os princípios lógicos da sua fé, acrescenta: "Nós vemos em `Jesus` o Sobrenatural!"
-
-A esses golpes de oratória sacra o poeta ajunta a seguir algumas estrofes contra a Igreja, o `Cristo` de barro e de madeira "talhado ainda à moda antiga". E vem então a contradição flagrante do apelo: "Livres pensadores, uni-vos, batalhai, cumpri vosso dever!" Que livres pensadores serão esses que carregam a pesada canga dos dogmas mais absurdos? O velhohote parece desmiolado. Perdeu todo o senso que o caracterava. E grita como um alucinado: "...pois do céu é que baixa esta revelação". Mas que revelação? A de um `Jesus` etéreo a engambelar os homens com seu corpo falso e seu fingido martírio? É isso que Guerra Junqueiro aceita e defende em nome da nova era?
-
-Forma e conteúdo revelam nesses versos a mistificação herética os evangelistas e os apóstolos condenaram. Na forma temos a imperícia poética dos mistificadores. No conteúdo as contradições e os resíduos do passado mitológico da humanidade. Nada disso pertence ao pensamento esclarecido de Guerra Junqueiro.
-
-A médium `América Delgado`, como `Collignon`, `Rizzini`,
-Guerra Junqueiro denuncia, nos alexandrinos, a falta de que se sente.
-
-O Verbo e a Carne – 2 Análises do Roustainguismo ______________________________________________
-
-37
-
-ele jamais faria. Segundo a poética, o alexandrino é um verso de doze sílabas.
 
 
+# 《改革者》杂志与鲁斯坦格主义分析
 
+《改革者》杂志（`O Reformador`）是巴西灵媒联合会（`FEB`）的官方刊物。在其1972年3月号中，作为捍卫鲁斯坦格主义（`Roustainguismo`）的论据之一，该杂志刊载了我们将要转录的《圣座的葬礼》（`Os Funerais da Santa Sé`）的冗长节选。这确实是一篇值得研究的文本，因为它向我们展示了灵媒接收过程（`recepção mediúnica`）的复杂性。 Guerra Junqueiro 的风格在其中有所体现，但诗人的技巧却存在缺陷，这与他在亚历山大诗体（`alexandrino`）实践中的严谨形成了鲜明对比。
 
+## 形式与内容的双重分析
 
-愤怒如火山焚烧着生命，
-– 枷锁同时束缚并伤害着 –
-粉碎灵魂，却为了使其伟大！……
+亚历山大诗体是古代诗学中最难的格律，而 Junqueiro 在这一诗体上堪称真正的大师。在我们语言中，没有任何其他诗人能像他那样以如此精湛的技巧和如此一贯的坚持来运用亚历山大诗体。但在下面的节选中，Junqueiro 却像一个初学者、一个对其规则一无所知的人那样使用它。
 
-如果基督曾是人，那么那位贞洁之女又何在？
-她接纳了那纯洁无染的、
-照亮全个人类的`道`，
-使人类步在真正的道路上吗？！
+此外，我们还必须考虑内容层面的问题。在诗篇开头，诗人批评那些“……想要翱翔于无限之外——去探知`耶稣`（`Jesus`）肉身奥秘”的人。同时，他也嘲讽“某些已窥探`科学`（`Ciência`）奥秘的博士”。随后，他贬低实验室工作，以支持其在“`上帝`（`Deus`）问题”上的不可知论立场。Junqueiro 的心理退行（`regressão psíquica`）由此开始，他退回到自己曾一贯抨击的教条式盲目信仰中，甚至暗示`耶稣`就是`上帝`。这种混乱与他生前刚健的思想，或死后在《帕纳索斯》（`Parnaso`）诗集中所展现的思想毫无相符之处。值得注意的是，《圣座的葬礼》恰好出现在1932年，与《帕纳索斯》同期，这显然是一种反动的策略。
 
-耶稣从未陷入过泥沼！
+接下来，退化的 Junqueiro 使用了鲁斯坦格主义关于`精神痛苦`（`dor moral`）的陈词滥调：
 
-– `神性本源`，从高处降临
-将众生包裹在同一火焰的光芒中，
-为了引导他们走向善的终点，
-我们理解了基督——`纯洁的本源`！
+“真正的殉道是撕裂灵魂的”，仿佛精神上的痛苦就能为一场由灵体为欺骗人类而导演的希腊悲剧式的虚伪闹剧辩护。无人不知，精神痛苦高于肉体痛苦。因此，人人都能理解那个小丑的殉道——他逗乐人群，内心却在淌血。但任何有常识的人都不能接受，一个神圣的造物会做出与小丑相反的事：通过展示虚假的痛苦来刺痛公众的心。而 Guerra Junqueiro 清晰的智慧竟未察觉此中的荒谬，也未找到更合乎逻辑的方式来摆脱困境。他不得不求助于 Roustaing 那个陈腐且荒谬的、且总被其接受者反复引用的解释。
 
-我们在耶稣身上看到了超自然，
-被上帝派遣到这片尘世的地球，
-为了将恶的戏丑们逐出去！
-还有谁在对此反抗、颤抖、愤怒，
-因为这个极度荒谬的理论，
-那群知道在祈祷中理解
-那些极易被利用的产物的暴徒。
+似乎这还不够，我们看到年迈的 Junqueiro 背负着岁月的重压——仿佛仍处于易朽的肉身之中——竟然背书了鲁斯坦格主义中最愚蠢的论点：“如果`基督`（`Cristo`）曾是人，那么那位仍保持无玷、接受照亮一切的`道`（`Verbo`）的贞女，其童贞又何在？”这种将生理上的童贞与神话残余混为一谈的说法，竟被《永恒神父的晚年》（`A Velhice do Padre Eterno`）的作者天真地认可了。这位思想僵化的老人谈论着“无玷圣母”，仿佛身处中世纪的修道院。更甚的是，他忘记了自己为《单纯者》（`Os Simples`）所写的伟大序言——在那篇序言中，他生前及通灵后都明确了自己信仰的逻辑原则——竟补充道：“我们在`耶稣`身上看到了超自然！”
 
-因此，圣教自然会造出一个
-一个木制的基督，一个弹簧做的耶稣，
-他在主祭坛上扭曲、闪烁，
-并命令向学校传授教义！
-这个按旧式雕刻的耶稣，
-手里拿着教鞭准备惩罚恶人，
-我们必须从他躲藏的地方将其赶出去。
+在这些神圣的演说式辞藻之后，诗人又加入了几节反对教会的诗句，反对那“仍按古式雕刻的”泥土和木头制成的`基督`。接着便是那个呼吁中显而易见的矛盾：“自由思想者们，联合起来，战斗吧，履行你们的职责！”究竟是怎样的自由思想者，会背负着最荒谬教条的沉重枷锁？这位老人似乎已神志不清，失去了他曾经特有的理智。他像个精神错乱者般呼喊：“……因为这启示是从天上降下的”。但那是怎样的启示？是一个虚无缥缈的`耶稣`，用他虚假的身体和伪装的殉道来欺骗人类？这就是 Guerra Junqueiro 以新时代之名所接受和捍卫的吗？
 
-让我们粉碎那个木头入侵者，
-他欺骗了顺从的民众，
-他们认为上帝要求乞讨
-而不是施舍！他们正匆忙、鲁莽地，
-跟在那些戴着主教帽和披肩带的戏丑身后……
+这些诗句的形式与内容，都暴露了福音传道者和使徒们所谴责的异端欺骗。在形式上，我们看到了欺骗者的诗艺拙劣；在内容上，则是矛盾与人类过往神话残余的堆积。这一切都不属于 Guerra Junqueiro 开明的思想。
 
-噢！让我们释放那些脆弱的孩子，
-怪物们正试图引导他们！……噢！上帝！……
-– 在我们的灵感中赐予无敌的长矛，
-让法利赛人的王座倒塌！
-在我们的灵感中赐予钢铁铠甲，
-能够抵御严酷的刺击，
-而我们不会因疲劳而倒下，
-或在道路的泥泞中沉沦……
+灵媒`América Delgado`，如同`Collignon`、`Rizzini`一样……
 
-狼群愤怒了，试图夺回
-他们失去的东西。自由思想者，
-`道`与肉身 – 鲁斯坦格主义的 2 个分析 39
+Guerra Junqueiro 在亚历山大诗体中，揭露了其所缺失的东西。
 
-联合吧！战斗吧！履行你们的职责！
-对抗那所有的伪装者；
-让你们的抗议成为坚固的墙，
-恶意的波浪在上面徒劳地撞击
-—— 因为一种奇异的力量缠住了你们，
-并命令你们为了人类的利益而战斗！
+根据诗学规则，亚历山大诗体是十二音节的诗句。
 
-联合吧！释放童心的心；
-召唤孩子们走向未来，走向光明！
-欢呼吧——耶稣……完全是神性的本源……
-噢！去夺回那些跳梁的斗篷吧，
-他们正对你们发动最后的进攻，
-将幼小的生命体束缚在教义中，
-那是生命黑暗中的爱之黎明！……
+## 诗歌节选：对鲁斯坦格主义的控诉
 
-去告诉他们：– 你们放任自流了吗？！
-试图再次锁住光明吗？！
-噢，看吧：自由的思想今日是反叛的浪潮，
-上帝的灵感正为此涌动……
-我们并不害怕，不，害怕你们的进攻；
-我们曾像你们一样——顽固而邪恶，
-我们通过自己的生命看到
-我们自己的灵魂在腐烂、在混沌中摇晃……
-我们拥有免疫且受启蒙的本质，
-你们无法穿越过去的黑暗，
-进入人类渴望的光明时代！
+> 愤怒如火山焚烧着生命，
+>
+> – 枷锁同时束缚并伤害着 –
+>
+> 粉碎灵魂，却为了使其伟大！……
+>
+> 如果基督曾是人，那么那位贞洁之女又何在？
+>
+> 她接纳了那纯洁无染的、
+>
+> 照亮全个人类的`道`，
+>
+> 使人类步在真正的道路上吗？！
+>
+> 耶稣从未陷入过泥沼！
+>
+> – `神性本源`，从高处降临
+>
+> 将众生包裹在同一火焰的光芒中，
+>
+> 为了引导他们走向善的终点，
+>
+> 我们理解了基督——`纯洁的本源`！
+>
+> 我们在耶稣身上看到了超自然，
+>
+> 被上帝派遣到这片尘世的地球，
+>
+> 为了将恶的戏丑们逐出去！
+>
+> 还有谁在对此反抗、颤抖、愤怒，
+>
+> 因为这个极度荒谬的理论，
+>
+> 那群知道在祈祷中理解
+>
+> 那些极易被利用的产物的暴徒。
+>
+> 因此，圣教自然会造出一个
+>
+> 一个木制的基督，一个弹簧做的耶稣，
+>
+> 他在主祭坛上扭曲、闪烁，
+>
+> 并命令向学校传授教义！
+>
+> 这个按旧式雕刻的耶稣，
+>
+> 手里拿着教鞭准备惩罚恶人，
+>
+> 我们必须从他躲藏的地方将其赶出去。
+>
+> 让我们粉碎那个木头入侵者，
+>
+> 他欺骗了顺从的民众，
+>
+> 他们认为上帝要求乞讨
+>
+> 而不是施舍！他们正匆忙、鲁莽地，
+>
+> 跟在那些戴着主教帽和披肩带的戏丑身后……
+>
+> 噢！让我们释放那些脆弱的孩子，
+>
+> 怪物们正试图引导他们！……噢！上帝！……
+>
+> – 在我们的灵感中赐予无敌的长矛，
+>
+> 让法利赛人的王座倒塌！
+>
+> 在我们的灵感中赐予钢铁铠甲，
+>
+> 能够抵御严酷的刺击，
+>
+> 而我们不会因疲劳而倒下，
+>
+> 或在道路的泥泞中沉沦……
+>
+> 狼群愤怒了，试图夺回
+>
+> 他们失去的东西。自由思想者，
+>
+> 联合吧！战斗吧！履行你们的职责！
+>
+> 对抗那所有的伪装者；
+>
+> 让你们的抗议成为坚固的墙，
+>
+> 恶意的波浪在上面徒劳地撞击
+>
+> —— 因为一种奇异的力量缠住了你们，
+>
+> 并命令你们为了人类的利益而战斗！
+>
+> 联合吧！释放童心的心；
+>
+> 召唤孩子们走向未来，走向光明！
+>
+> 欢呼吧——耶稣……完全是神性的本源……
+>
+> 噢！去夺回那些跳梁的斗篷吧，
+>
+> 他们正对你们发动最后的进攻，
+>
+> 将幼小的生命体束缚在教义中，
+>
+> 那是生命黑暗中的爱之黎明！……
+>
+> 去告诉他们：– 你们放任自流了吗？！
+>
+> 试图再次锁住光明吗？！
+>
+> 噢，看吧：自由的思想今日是反叛的浪潮，
+>
+> 上帝的灵感正为此涌动……
+>
+> 我们并不害怕，不，害怕你们的进攻；
+>
+> 我们曾像你们一样——顽固而邪恶，
+>
+> 我们通过自己的生命看到
+>
+> 我们自己的灵魂在腐烂、在混沌中摇晃……
+>
+> 我们拥有免疫且受启蒙的本质，
+>
+> 你们无法穿越过去的黑暗，
+>
+> 进入人类渴望的光明时代！
+>
+> 现在，清晰的思想链条
+>
+> 囚缚并枷锁着你们：你们的反抗是徒劳的，
+>
+> 因为这启示是从天降下的。
+>
+> 你们的基督是泥土，你们的基督是粘土！
+>
+> 而，对于我们来说是本质、光、闪烁，
+>
+> – 对你们来说仅仅是一堆
+>
+> 注定被剥削的破布！
+>
+> 但那源自旧律法的荒谬，
+>
+> 我们将把它连根拔起！
+>
+> 耶稣在我们面前伸出友的手，
+>
+> 耶稣与我们遵循同样的准则！……
 
-现在，清晰的思想链条
-囚缚并枷锁着你们：你们的反抗是徒劳的，
-因为这启示是从天降下的。
-你们的基督是泥土，你们的基督是粘土！
-而，对于我们来说是本质、光、闪烁，
-– 对你们来说仅仅是一堆
-注定被剥削的破布！
-但那源自旧律法的荒谬，
-我们将把它连根拔起！
-耶稣在我们面前伸出友的手，
-耶稣与我们遵循同样的准则！……
+## 诗人的慈悲
 
-### 诗人的慈悲
+为了解释诗人沉默的理由，我们现在必须补充他的慈悲。因为在传给 Rizzini 的那首解释性十四行诗中，面对`FEB`杂志对这段文字的挖掘，他展现了这种情感。
 
-为了解释诗人沉默的理由，我们现在必须补充他的慈悲。因为在传给 Rizzini 的那首解释性十四诗中，面对 FEBB 杂志对这段文字的挖掘，他展现了这种情感。
-
-揭露伪作会让灵媒遭受不敬虔的批评，并在道德上伤害她。Guerra Junqueiro 保持了沉默。但现在，她不再是焦点，澄清变得可能。看看诗人以何种虔诚的方式，在亚历山大诗的严密逻辑中解释了这个旧案，最后向读者请求原谅：
-
-`道`与肉身 – 鲁斯坦格主义的 2 个分析 40
+揭露伪作会让灵媒遭受不敬虔的批评，并在道德上伤害她。Guerra Junqueiro 保持了沉默。但现在，她不再是焦点，澄清变得可能。看看诗人以何种虔诚的方式，在亚历山大诗体的严密逻辑中解释了这个旧案，最后向读者请求原谅：
 
 ### 圣座的葬礼
+
 （解释）
 
 灵魂，`GUERRA JUNQUEIRO`
+
 灵媒，`JORGE RIZZINI`
 
 很久以前，他在巴西北部呼唤了我
+
 一位对上帝如此虔诚的书记员灵媒
+
 很久以前，他在巴西北部呼唤了我
+
 一位对上帝如此虔诚的书记员灵媒
-```
+
+
+
 灵魂，GUERRA JUNQUEIRO 灵媒，JORGE RIZZINI
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
-很久以前，他在巴西北部呼唤了我
-一位对上帝如此虔诚的书记员灵媒
 
+很久以前，他在巴西北部呼唤了我，一位对上帝如此虔诚的书记员灵媒。
 
-
+（此段重复多次，按原文保留。）
 
 "Vós sois uma alma nobre e conheceis culturas
 A ponto de pairar acima dos juristas;
@@ -1102,9 +952,6 @@ O Verbo e a Carne – 2 Análises do Roustainguismo ____________________________
 
 A editora da Federação Espírita Brasileira acaba de lançar mais um livro de defesa do roustainguismo, de autoria do Sr. Ismael Gomes Braga, intitulado `Elos Doutrinários` e constituído, ao que nos parece, de uma série de `erros doutrinários`.
 Tem o autor magníficas qualidades, posto abuse de conhecimentos...
-
-
-
 
 por que não seguir, mesmo, as versões em língua portuguesa? A de `João Ferreira de Almeida` tem a preferência das várias denominações protestantes; a de `Antônio Pereira de Figueiredo`, usada por protestantes e católicos, tem como única diferença que os primeiros excluem sete livros, considerados não canônicos.
 
@@ -2180,8 +2027,6 @@ ______________________________________________
 
 《灵性福音》由 `F. E. B.` 前主席 Guillon Ribeiro 博士翻译，我们摘录段落的卷册是 1947 年第 3 版。
 
-《灵性福音》由 `F. E. B.` 前主席 Guillon Ribeiro 博士翻译，我们摘录段落的卷册是 1947 年第 3 版。
-
 
 
 证明。然而，这必须在特定的条件下进行。最弱的一种证明发生在：一个媒介在独处时，就多个灵体询问一个疑点的问题。显而易见，如果他处于执念的控制下，或者正在与一个欺骗性的灵体交道，这个灵体可以用不同的名称告诉他相同的内容。同样，如果在同一个中心由多位媒介所获得的内容呈现出的一致性，并不能提供足够的保证，因为他们可能都处于相同的影响之下”。
@@ -2367,7 +2212,7 @@ IV - 耶稣基督不是人，而是一个无性别者（agênere）； VII - “
 
 此前提到过的 `Diodati` 古意大利语圣经写道：“E Ia Parola è stata fatta carne, ed è abitata fra noi”； - “在肉身中显现，在灵中得义”； - “在肉身中受苦，但被灵复活”；
 
-“che Christo ha sofferto per noi in carnes - ogni spirito che confessa Gesú Cristo venuto in carne, é da Dio”; - “E ogni Spirito che não confessa Gesú Cristo venuto in carne, não é da Dio”; - molti seduttori, i quali non confessano Gesú Cristo esser venuto in carne”。
+“che Christo ha sofferto per noi in carnes - ogni spirito che confessa Gesú Cristo venuto in carne, é da Dio”; - “E ogni Spirito que não confessa Gesú Cristo venuto in carne, não é da Dio”; - molti seduttori, i quali non confessano Gesú Cristo esser venuto in carne”。
 
 现在，在法语中，我们不再像之前那样引用 `Segond` 圣经，而是引用 Saci 在 1936 年的 `Lemaistre` 圣经，其根据 1759 年版的文本，这也是 `Allan Kardec` 使用过的版本。这归于一位对我们文章感兴趣的朋友和同道的热心。以下是相同顺序的章节： - “Et le Verba a été fait chair, et il a habité parmi nous”；
 
@@ -2833,3 +2678,5 @@ Nestas sessões, seriam feitas as seguintes perguntas fundamentais, além de out
 5 – como explicar a contradição entre as declarações de apoio de Kardec à tese roustainguista e a mensagem referida na pergunta anterior?
 6 – por que, desde 1882 até hoje, não teria possível organizar uma obra de desenvolvimento, ampliação e mesmo de correção da obra de Kardec, como seria admissível nos termos da citada mensagem?
 7 – são verdadeiras ou falsas as afirmações de João Evangelista em duas cartas contidas na Bíblia, caracterizando como Espírito do Anticristo aquele que nega que Jesus Cristo viveu e sofreu na carne?
+
+```

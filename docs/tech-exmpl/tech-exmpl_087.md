@@ -1,10 +1,11 @@
+
 # 删除链表的中间节点
 
 > 原文：[`techbyexample.com/delete-middle-node-linked-list/`](https://techbyexample.com/delete-middle-node-linked-list/)
 
-## **概述**
+## 概述
 
-目标是删除链表的中间节点。如果 x 是链表的大小，那么中间节点是
+目标是删除链表的中间节点。如果`x`是链表的大小，那么中间节点是
 
 ```go
 mid = x/2
@@ -17,7 +18,7 @@ Input: 1->2->3->4->5
 Output: 1->2->4->5
 ```
 
-## **程序**
+## 程序
 
 这里是相应的程序。
 

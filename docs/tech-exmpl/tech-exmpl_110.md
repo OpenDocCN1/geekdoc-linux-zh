@@ -1,82 +1,65 @@
-# LRU 缓存设计。
+
+# LRU 缓存设计
 
 > 原文：[`techbyexample.com/lru-cache-design/`](https://techbyexample.com/lru-cache-design/)
 
-目录
+## 目录
 
-+   概述
+- 概述
+- `Set(key int, value int)`
+- `Get(key int)`
+- 低级设计
+- UML 图
+- 程序
+- 结论
 
-+   Set(key int, value int)") 
-
-+   Get(key int)")
-
-+   低级设计
-
-+   UML 图
-
-+   程序
-
-+   结论
-
-## **概述**
+## 概述
 
 在本教程中，我们还将考虑在设计中使用 **FIFO** 方法，除了 **LRU** 之外，以确保设计在运行时可以灵活地切换到任何算法。
 
 目标是设计一个内存缓存。以下是要求：
 
-+   它应该支持 **Set** 和 **Get** 操作。
-
-+   **Set** 和 **Get** 操作的时间复杂度为 O(1)。
-
-+   假设缓存的最大容量是 3。一旦缓存已满且需要插入一个新键时，必须从缓存中删除一个现有条目。
-
-+   删除操作应该基于逐出算法 —— FIFO 或 LRU。
-
-+   假设缓存中的键和值的类型为字符串。
-
-+   它应该支持的逐出算法是 **先进先出（FIFO）** 和 **最近最少使用（LRU）**。
-
-+   逐出算法应该是可插拔的。这意味着你应该能够在运行时更改逐出算法。
+- 它应该支持 `Set` 和 `Get` 操作。
+- `Set` 和 `Get` 操作的时间复杂度为 `O(1)`。
+- 假设缓存的最大容量是 `3`。一旦缓存已满且需要插入一个新键时，必须从缓存中删除一个现有条目。
+- 删除操作应该基于逐出算法 —— `FIFO` 或 `LRU`。
+- 假设缓存中的键和值的类型为字符串。
+- 它应该支持的逐出算法是**先进先出（FIFO）**和**最近最少使用（LRU）**。
+- 逐出算法应该是可插拔的。这意味着你应该能够在运行时更改逐出算法。
 
 以下是我们设计中的高级内容：
 
-+   我们将有一个 **Cache** 类，作为与客户端交互的接口。
+- 我们将有一个 `Cache` 类，作为与客户端交互的接口。
+- `Cache` 类将使用 `Map` 和**双向链表**的组合来存储所有内容。使用这两种数据结构，确保在逐出操作时，`Get` 和 `Set` 操作的时间复杂度仍为 `O(1)`。我们将在本教程后面详细介绍如何实现这一点。
+- `Map` 将具有类型为字符串的键和类型为指向**双向链表**中节点的指针的值。
+- **双向链表**的每个节点将包含键和值。每个节点还会有指向前一个节点的指针以及指向下一个节点的指针，在**双向链表**中。
+- 将会有一个 `evictionAlgorithm` 接口。将会有 `LRU` 和 `FIFO` 类实现该 `evictionAlgorithm` 接口。
+- `Cache` 类还会嵌入一个 `evictionAlgorithm` 接口实例。
 
-+   **Cache** 类将使用 **Map** 和 **双向链表** 的组合来存储所有内容。使用这两种数据结构，确保在逐出操作时，**Get** 和 **Set** 操作的时间复杂度仍为 O(1)。我们将在本教程后面详细介绍如何实现这一点。
+`evictionAlgorithm` 接口存在的目的是将 `Cache` 类与算法解耦，以便我们能够在运行时更改算法。此外，当添加新算法时，`Cache` 类不应发生变化。这就是策略设计模式的应用场景。策略模式建议创建一组算法，每个算法有自己独立的类。这些类遵循相同的接口，使得算法可以在同一家族内互换。假设公共接口名称为 `evictionAlgo`，那么 `FIFO` 和 `LRU` 类将实现此接口。
 
-+   **Map** 将具有类型为字符串的键和类型为指向 **双向链表** 中节点的指针的值。
+现在我们的主 `Cache` 类将嵌入 `evictionAlgo` 接口。我们的缓存类不会实现所有类型的驱逐算法，而是将所有算法委托给 `evictionAlgo` 接口。由于 `evictionAlgo` 是一个接口，我们可以在运行时将算法切换为 `LRU` 或 `FIFO`，而无需修改 `Cache` 类。
 
-+   **双向链表** 的每个节点将包含键和值。每个节点还会有指向前一个节点的指针以及指向下一个节点的指针，在 **双向链表** 中。
+同时，我们将使用工厂设计模式来创建每个算法的实例，例如 `FIFO`、`LRU`。
 
-+   将会有一个 **evictionAlgorithm** 接口。将会有 **LRU** 和 **FIFO** 类实现该 **evictionAlgorithm** 接口。
+让我们来看一下 `Get` 和 `Set` 如何在 `O(1)` 时间内工作。
 
-+   **Cache** 类还会嵌入一个 **evictionAlgorithm** 接口实例。
-
-**evictionAlgorithm** 接口存在的目的是将 **Cache** 类与算法解耦，以便我们能够在运行时更改算法。此外，当添加新算法时，**Cache** 类不应发生变化。这就是 **策略设计模式** 的应用场景。策略模式建议创建一组算法，每个算法有自己独立的类。这些类遵循相同的接口，使得算法可以在同一家族内互换。假设公共接口名称为 **evictionAlgo**，那么 **FIFO** 和 **LRU** 类将实现此接口。
-
-现在我们的主 **Cache** 类将嵌入 **evictionAlgo** 接口。我们的缓存类不会实现所有类型的驱逐算法，而是将所有算法委托给 **evictionAlgo** 接口。由于 evictionAlgo 是一个接口，我们可以在运行时将算法切换为 LRU 或 FIFO，而无需修改 Cache 类。
-
-同时，我们将使用工厂设计模式来创建每个算法的实例，例如 FIFO、LRU。
-
-让我们来看一下 Get 和 Set 如何在 O(1) 时间内工作。
-
-## **Set(key int, value int)**
+## `Set(key int, value int)`
 
 对于任何 set 操作，它将首先创建一个包含输入的键和值的双向链表节点。然后会在映射中创建一个条目，其中键是输入的键，值是节点的地址。一旦节点创建完成，就会有两种情况。
 
-+   **缓存未满** – 在这种情况下，它将控制权交给当前的 evictionAlgorithm 接口。evictionAlgorithm 接口将根据当前的驱逐算法，将节点插入到双向链表的末尾或前端。这里的每个操作都是 O(1)。
+- **缓存未满** – 在这种情况下，它将控制权交给当前的 `evictionAlgorithm` 接口。`evictionAlgorithm` 接口将根据当前的驱逐算法，将节点插入到双向链表的末尾或前端。这里的每个操作都是 `O(1)`。
+- **缓存已满** – 在这种情况下，它将控制权交给当前的 `evictionAlgorithm` 接口，根据当前的驱逐算法驱逐一个节点。一旦该节点被驱逐，它将插入新节点。这里的每个操作都是 `O(1)`。
 
-+   **缓存已满** – 在这种情况下，它将控制权交给当前的 evictionAlgorithm 接口，根据当前的驱逐算法驱逐一个节点。一旦该节点被驱逐，它将插入新节点。这里的每个操作都是 O(1)。
+## `Get(key int)`
 
-## **Get(key int)**
+对于任何 `Get` 操作，它首先会检查映射中是否存在给定的键。如果存在，它将获取映射中由该键指向的节点的地址。然后，它会从该节点中获取值。接下来，它会将控制权交给当前的 `evictionAlgorithm` 接口。`evictionAlgorithm` 接口将根据当前的驱逐算法，将当前节点在双向链表中移动到末尾或前端。这里的每个操作都是 `O(1)`。
 
-对于任何 Get 操作，它首先会检查映射中是否存在给定的键。如果存在，它将获取映射中由该键指向的节点的地址。然后，它会从该节点中获取值。接下来，它会将控制权交给当前的 evictionAlgorithm 接口。evictionAlgorithm 接口将根据当前的驱逐算法，将当前节点在双向链表中移动到末尾或前端。这里的每个操作都是 O(1)。
-
-## **低级设计**
+## 低级设计
 
 以下是用 Go 编程语言表达的低级设计。稍后我们还将看到 UML 图以及一个工作示例。
 
-**缓存类**
+### 缓存类
 
 ```go
 type cache struct {
@@ -96,7 +79,7 @@ func (c *cache) get(key string)
 func (c *cache) evict()
 ```
 
-**双向链表**
+### 双向链表
 
 ```go
 type node struct {
@@ -126,7 +109,7 @@ func (d *doublyLinkedList) MoveToBack(node *node) error
 func (d *doublyLinkedList) Size() int
 ```
 
-**驱逐算法接口**
+### 驱逐算法接口
 
 ```go
 type evictionAlgo interface {
@@ -136,7 +119,9 @@ type evictionAlgo interface {
 func createEvictioAlgo(algoType string) evictionAlgo
 ```
 
-**FIFO 算法** – 它实现了驱逐算法接口
+### FIFO 算法
+
+它实现了驱逐算法接口。
 
 ```go
 type fifo struct {
@@ -145,7 +130,9 @@ type fifo struct {
 func (l *fifo) evict(c *cache)
 ```
 
-**LRU 算法** – 它实现了驱逐算法接口
+### LRU 算法
+
+它实现了驱逐算法接口。
 
 ```go
 type lru struct {
@@ -154,15 +141,15 @@ type lru struct {
 func (l *lru) evict(c *cache)
 ```
 
-## **UML 图**
+## UML 图
 
 ![](img/93ba75ea015d9c055a7f090acda77d83.png)
 
-## **程序**
+## 程序
 
 这里是完整的 Go 编程语言代码，如果有任何人感兴趣的话。
 
-**doublylinklist.go**
+### `doublylinklist.go`
 
 ```go
 package main
@@ -231,6 +218,7 @@ func (d *doublyLinkedList) AddToEnd(node *node) {
 	}
 	d.len++
 }
+
 func (d *doublyLinkedList) Front() *node {
 	return d.head
 }
@@ -246,12 +234,15 @@ func (d *doublyLinkedList) MoveNodeToEnd(node *node) {
 	if next != nil {
 		next.prev = prev
 	}
+
 	if d.tail == node {
 		d.tail = prev
 	}
+
 	if d.head == node {
 		d.head = next
 	}
+
 	node.next = nil
 	node.prev = nil
 	d.len--
@@ -262,11 +253,13 @@ func (d *doublyLinkedList) TraverseForward() error {
 	if d.head == nil {
 		return fmt.Errorf("TraverseError: List is empty")
 	}
+
 	temp := d.head
 	for temp != nil {
 		fmt.Printf("key = %v, value = %v, prev = %v, next = %v\n", temp.key, temp.value, temp.prev, temp.next)
 		temp = temp.next
 	}
+
 	fmt.Println()
 	return nil
 }
@@ -276,7 +269,7 @@ func (d *doublyLinkedList) Size() int {
 }
 ```
 
-**evictionAlgorithm.go**
+### `evictionAlgorithm.go`
 
 ```go
 package main
@@ -299,7 +292,7 @@ func createEvictioAlgo(algoType string) evictionAlgo {
 }
 ```
 
-**lru.go**
+### `lru.go`
 
 ```go
 package main
@@ -333,7 +326,7 @@ func (l *lru) set_overwrite(node *node, value string, c *Cache) {
 }
 ```
 
-**fifo.go**
+### `fifo.go`
 
 ```go
 package main
@@ -364,7 +357,9 @@ func (l *fifo) set_overwrite(node *node, value string, c *Cache) {
 }
 ```
 
-**cache.go**
+### `cache.go`
+
+
 
 ```go
 package main
@@ -433,7 +428,7 @@ func (this *Cache) print() {
 }
 ```
 
-**main.go**
+## `main.go`
 
 ```go
 package main
@@ -464,7 +459,7 @@ func main() {
 }
 ```
 
-**输出**
+## 输出
 
 ```go
 Shuffling doubly linked list due to set operation
@@ -513,8 +508,9 @@ key = d, value = 4, prev = &{a 1 0xc00007e2a0 0xc00007e450}, next = &{e 5 0xc000
 key = e, value = 5, prev = &{d 4 0xc00007e1e0 0xc00007e570}, next = <nil>
 ```
 
-## **结论**
+## 结论
 
 这就是设计内存缓存的全部内容。希望你喜欢这篇文章。如果有任何反馈，请在评论中分享。
 
-+   [cache](https://techbyexample.com/tag/cache/)*   [lru](https://techbyexample.com/tag/lru/)
+- [cache](https://techbyexample.com/tag/cache/)
+- [lru](https://techbyexample.com/tag/lru/)

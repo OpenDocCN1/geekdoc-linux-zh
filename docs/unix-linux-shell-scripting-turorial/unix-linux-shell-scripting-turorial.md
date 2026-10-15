@@ -1,29 +1,17 @@
+
 # Unix & Linux shell 脚本入门指南
-
-
-
-
-
 
 ![](img/84a50f94dfcd1da09f623b014d3ee18c_0_0.png)
 
-
-
-
 ![](img/84a50f94dfcd1da09f623b014d3ee18c_1_0.png)
-
-
-
 
 这是一本关于学习使用 Unix shell 的 Bourne Shell 编程/脚本教程。
 
 - 请在 Facebook 上加入我们的小组：http://facebook.com/shellscript
+
 - 在 https://www.shellscript.sh/tips/ 关注技巧与提示
+
 - 访问本书书的 Amazon 页面：http://amzn.com/dp/B00C2EGNSA
-
-
-
-
 
 #!//sh
 
@@ -38,16 +26,18 @@
 本教程假设读者具备以下背景：
 
 - 交互式 shell 的经验
+
 - 对变量、函数的简单编程知识
+
 - 对常用 Unix 命令的了解，以及任何编程语言（如 ruby, perl, python, C 或 BASIC）的基础知识
 
 ## Bourne shell 的简要史
 
-Bourne shell 出于贝尔实验室。其他 shell 包括 Korn Shell (ksh)、C Shell (csh) 以及 tcsh。本教程并不涵盖这些 shell。
+Bourne shell 出于贝尔实验室。其他 shell 包括 Korn Shell `ksh`、`C Shell` `csh` 以及 `tcsh`。本教程并不涵盖这些 shell。
 
 ## 本教程使用的排版规范
 
-首次提到的重要词汇将使用*斜体*。代码段和脚本输出将使用等宽字体。命令行输入将以美元符号（$）开头。如果你的提示符不同，请输入：
+首次提到的重要词汇将使用*斜体*。代码段和脚本输出将使用等宽字体。命令行输入将以美元符号（`$`）开头。如果你的提示符不同，请输入：
 
 ```
 PS1="$ "
@@ -93,6 +83,7 @@ $ ./first.sh
 shell 编程在某些 Unix 系统管理员中评价并不高。这通常由于以下两个原因引起：
 
 - 解释型程序与 C 程序、甚至是解释型 Perl 程序相比的运行速度。
+
 - 由于编写简单的批处理类型 shell 脚本很容易，因此有很多低质量的脚本。
 
 部分由于如此，创建*优秀*的 shell 脚本带有一种男子主义。例如，可以作为 CGI 程序使用的脚本，如果以速度为唯一标准，它们可能都会输给 C。
@@ -100,15 +91,15 @@ shell 编程在某些 Unix 系统管理员中评价并不高。这通常由于�
 许多因素可以有助于良好的、简洁、快速的 shell 脚本：
 
 - 最重要的标准必须是清晰、易读的布局。
+
 - 其次是避免不命令。
 
 清晰的布局使得 shell 脚本从“黑魔法”变得易于维护和理解。你可能会认为对于简单的脚本，这
 
-
-
 这不是什么严重的问题，但这里有两点值得记住。
 
 - 1. 首先，一个简单的脚本往往比预期更频繁地成长为大型且复杂的脚本。
+
 - 2. 其次，如果没有其他人理解它是如何工作的，你余生都得由自己来维护它！
 
 Shell 脚本的某些特性似乎使得它们特别容易出现缩进错误，而且由于主要的控制结构是 if/then/else 和循环，缩进对于理解脚本在做什么至关重要。
@@ -125,22 +116,23 @@ cat /tmp/myfile | grep "mystring"
 grep "mystring" /tmp/myfile
 ```
 
-你可能觉得没什么大不了；但请考虑，操作系统必须加载 /bin/grep 可执行文件（在我的系统上它相当小只有 75600 字节），在内存中打开一个管道进行传输，加载并运行 /bin/cat 可执行文件（在我的系统上更小，只有 9528 字节），将其附加管道的输入端并让其运行。
+你可能觉得没什么大不了；但请考虑，操作系统必须加载 `/bin/grep` 可执行文件（在我的系统上它相当小只有 75600 字节），在内存中打开一个管道进行传输，加载并运行 `/bin/cat` 可执行文件（在我的系统上更小，只有 9528 字节），将其附加管道的输入端并让其运行。
 
-当然，这种操作正是操作系统的用武之地，而且它在处理此类任务时通常高效。但如果这个命令在一个循环中运行多次，那么省去定位和加载 cat 可执行文件、设置和释放管道的时间就可以产生差异，特别是在比如 CGI 环境中，那里有足够的其他因素减慢速度，而脚本本身并不是太大阻碍。某些 Unix 在处理它们所谓的“构建和销毁进程”（即加载、执行并再次清理它们）方面比其他系统更高效。但无论你使用的 Unix 版本在这方面做得有多好，它都希望根本不需要执行这一步。
+当然，这种操作正是操作系统的用武之地，而且它在处理此类任务时通常高效。但如果这个命令在一个循环中运行多次，那么省去定位和加载 `cat` 可执行文件、设置和释放管道的时间就可以产生差异，特别是在比如 CGI 环境中，那里有足够的其他因素减慢速度，而脚本本身并不是太大阻碍。某些 Unix 在处理它们所谓的“构建和销毁进程”（即加载、执行并再次清理它们）方面比其他系统更高效。但无论你使用的 Unix 版本在这方面做得有多好，它都希望根本不需要执行这一步。
 
-结果，你可能会在 comp.unix.shell 新闻组中偶尔听到“无用处 的 Cat 奖”（UUoC）的提及，这在某些圈子里也称为**在严肃 Shell 脚本中极度刻意使用单词 Cat 的奖**。这纯粹是同伴之间互相监督的一种方式，确保事情被正确完成。
+结果，你可能会在 `comp.unix.shell` 新闻组中偶尔听到“无用处 的 Cat 奖”（UUoC）的提及，这在某些圈子里也称为**在严肃 Shell 脚本中极度刻意使用单词 Cat 的奖**。这纯粹是同伴之间互相监督的一种方式，确保事情被正确完成。
 
 这很好地引出了我的另一个话题：*永远*不要对自己的 shell 脚本感到过于亲近；从本质上说，源代码无法隐藏的。如果你给客户提供一个 shell 脚本，他/她可以很容易地检查它。因此，你也接受任何你交给的人都会检查它；利用 GPL² 的这一优势吧——鼓励人们免费为你提供反馈和错误修复！
 
-
 Shell 脚本教程
+
 第 11 页
 
 ## 3. 第一个脚本
 
 对于我们的第一个 shell 脚本，我们将写一个输出“Hello World”的脚本。然后我们将尝试从一个 Hello World 程序中获得比你读过的任何教程都更多的收获 :-) 
-创建一个如下所示的文件 (first.sh)：
+
+创建一个如下所示的文件 `first.sh`：
 
 first.sh
 
@@ -150,21 +142,24 @@ first.sh
 echo Hello World      # 这也是一个注释！
 ```
 
-第一行告诉 Unix 该文件将由 /bin/sh 执行。这几乎是每个 Unix 系统上 Bourne shell 的标准位置。如果你使用的是 GNU/Linux，/bin/sh 通常是指向 bash（或者最近的 dash）的符号链接。
+第一行告诉 Unix 该文件将由 `/bin/sh` 执行。这几乎是每个 Unix 系统上 Bourne shell 的标准位置。如果你使用的是 GNU/Linux，`/bin/sh` 通常是指向 `bash`（或者最近的 `dash`）的符号链接。
 
-第二行以特殊符号 # 开头。这标记该行是一行注释，shell 会完全忽略它。唯一的例外是当文件的极第一行以 #! 开头时——正如我们的脚本中所示。这是一个 Unix 特殊处理的特殊指令。这意味着即使你使用 csh、ksh 或任何其他作为交互式 shell，随后的内容也应该由 Bourne shell 解释。
+第二行以特殊符号 `#` 开头。这标记该行是一行注释，shell 会完全忽略它。唯一的例外是当文件的极第一行以 `#!` 开头时——正如我们的脚本中所示。这是一个 Unix 特殊处理的特殊指令。这意味着即使你使用 `csh`、`ksh` 或任何其他作为交互式 shell，随后的内容也应该由 Bourne shell 解释。
 
-同样，一个 Perl 脚本可能以行 #!usr/bin/perl 开始
+同样，一个 Perl 脚本可能以行 `#!usr/bin/perl` 开始
 
 - 3 first.sh.txt
 
-告诉你的交互式 shell 随后的程序应该由 Perl 执行。对于 Bourne shell 编程，我们将坚持使用 #!/bin/sh。
+告诉你的交互式 shell 随后的程序应该由 Perl 执行。对于 Bourne shell 编程，我们将坚持使用 `#!/bin/sh`。
 
-第三行运行了一个命令：echo，带有两个参数（或参数）。
-注意 echo 会自动在它的参数之间放置一个空格。
+第三行运行了一个命令：`echo`，带有两个参数（或参数）。
+
+注意 `echo` 会自动在它的参数之间放置一个空格。
+
 # 符号仍然标记注释；# 之后的任何内容都会被 shell 忽略。
 
 现在运行 `chmod 755 first.sh` 使该文本文件变为可执行，然后运行 `./first.sh`。
+
 你的屏幕看起来应该是这样的：
 
 ```
@@ -183,9 +178,12 @@ $
 ```
 
 现在让我们做一些更改。
-首先，注意 echo 在其参数之间只留**一个**空格。在 "Hello" 和 "World" 之间多放几个空格。你预期输出是什么？在它们之间放一个 TAB 字符又如何？
+
+首先，注意 `echo` 在其参数之间只留**一个**空格。在 "Hello" 和 "World" 之间多放几个空格。你预期输出是什么？在它们之间放一个 TAB 字符又如何？
+
 一如 shell 编程的常态，试一试。
-输出完全相同！我们是在带两个参数调用 echo 程序；它对参数之间的间隙并不像 cp 那样没那么不在乎。现在再次修改代码：
+
+输出完全相同！我们是在带两个参数调用 `echo` 程序；它对参数之间的间隙并不像 `cp` 那样没那么不在乎。现在再次修改代码：
 
 ```bash
 #!/bin/sh
@@ -196,8 +194,10 @@ $
 echo "Hello World" # 这也是一个注释！
 ```
 
-这次起作用了。如果你有其他编程语言的经验，你可能也预到了这一点。但理解更复杂的命令和 shell 脚本正在发生什么的关键，在于理解并能够解释：为什么？echo 现在调用时只带了一个参数——字符串 "Hello World"。它会原封不动地打印出来。
+这次起作用了。如果你有其他编程语言的经验，你可能也预到了这一点。但理解更复杂的命令和 shell 脚本正在发生什么的关键，在于理解并能够解释：为什么？`echo` 现在调用时只带了一个参数——字符串 "Hello World"。它会原封不动地打印出来。
+
 这里需要理解的点是，shell 在将参数传递给被调用的程序之前会对它们进行解析。在这种情况下，它去掉了引号但将字符串作为单个参数传递。
+
 作为最后一个例子，输入以下脚本。尝试在运行它之前预测结果：
 
 first2.sh
@@ -216,7 +216,7 @@ echo hello` world
 echo 'hello' world
 ```
 
-一切都如你预期的那样吗？如果没有，不要担心！这些只是我们将在本教程中涵盖的内容……而且是的，我们将使用比 echo 更强强大的命令！
+一切都如你预期的那样吗？如果没有，不要担心！这些只是我们将在本教程中涵盖的内容……而且是的，我们将使用比 `echo` 更强强大的命令！
 
 - 4 first2.sh.txt
 
@@ -226,11 +226,11 @@ echo 'hello' world
 
 让我们回到第一个 Hello World 示例。可以使用变量来实现（尽管这个例子如此简单，以至于没必要这样做！）
 
-注意，等号符号周围不能有空格：VAR=value 有效；VAR = value 无效。在第一情况下
+注意，等号符号周围不能有空格：`VAR=value` 有效；`VAR = value` 无效。在第一情况下
 
-如果你想一想，这是很合理的——否则你如何告诉它运行命令 VAR，其第一个参数是 "="，第二个参数是 "value" 呢？
+如果你想一想，这是很合理的——否则你如何告诉它运行命令 `VAR`，其第一个参数是 "="，第二个参数是 "value" 呢？
 
-将以下代码输入 var.sh：
+将以下代码输入 `var.sh`：
 
 ```bash
 var.sh
@@ -241,11 +241,14 @@ echo $MY_MESSAGE
 
 - 5 var.sh.txt
 
-将字符串 "Hello World" 赋值给变量 MY_MESSAGE，然后打印变量的值。
-注意我们在 Hello World 周围需要引号。虽然 echo Hello World 可以接受任意数量的参数，变量只能包含一个值，因此带空格的字符串必须加引号以便 shell 知道将其视为整体。否则，shell 会在赋值 MY_MESSAGE=Hello 后尝试执行命令 World。
+将字符串 "Hello World" 赋值给变量 `MY_MESSAGE`，然后打印变量的值。
+
+注意我们在 Hello World 周围需要引号。虽然 `echo Hello World` 可以接受任意数量的参数，变量只能包含一个值，因此带空格的字符串必须加引号以便 shell 知道将其视为整体。否则，shell 会在赋值 `MY_MESSAGE=Hello` 后尝试执行命令 `World`。
 
 shell 不关心变量类型；它们可以存储字符串、整数、实数——任何你喜欢的。
+
 习惯 Perl 的人对此很满意；如果你在 C、Pascal 或者更糟糕的 Ada 环境中长大，这可能看起来很奇怪。事实上，这些都存储为字符串，但期望数字的例程可以将其视为数字。
+
 如果你给变量赋值一个字符串并尝试对其加 1，你将无法成功：
 
 ```bash
@@ -255,7 +258,7 @@ expr: non-numeric argument
 $
 ```
 
-这是因为外部程序 expr 只期望数字。但在语法上，以下内容之间没有区别：
+这是因为外部程序 `expr` 只期望数字。但在语法上，以下内容之间没有区别：
 
 ```bash
 MY_MESSAGE="Hello World"
@@ -267,10 +270,8 @@ MY_MIXED=123abc
 ```
 
 但注意，特殊字符必须正确转义以避免被 shell 解析。
+
 这将在第 6 章“转义字符”中进一步讨论。
-
-
-
 
 我们通过 `read` 命令交互式地设置变量名；以下脚本会询问你的名字，然后向你进行个人问候：
 
@@ -286,7 +287,9 @@ echo "Hello $MY_NAME - hope you're well."
 Mario Bacinsky 友好地指出，我最初在第 3 行漏掉了双引号，这导致单词 "you're" 中的单引号没有成对匹配，导致了错误。正是这种小细节会让 shell 程序员抓狂的，所以请务必注意！
 
 这里使用的是 shell 内置命令 `read`，它从标准输入读取一行并存入提供的变量中。
+
 请注意，如果你输入全名且在 `echo` 命令周围没有使用双引号，它仍然能正确输出。这是如何做到的？在之前处理 `MY_MESSAGE` 变量时，我们必须在它周围加上双引号来设置它。
+
 发生的是，`read` 命令会自动在其输入周围加上引号，这样空格就能被正确处理。（当然，你仍然对输出加引号——例如 `echo "$MY_MESSAGE"`）。
 
 ## 变量作用域
@@ -318,7 +321,8 @@ MYVAR is:
 MYVAR is: hi there
 ```
 
-MYVAR 还没有被赋予任何值，所以它是空的。然后我们给它一个值，它就有了预期的结果。
+`MYVAR` 还没有被赋予任何值，所以它是空的。然后我们给它一个值，它就有了预期的结果。
+
 现在运行：
 
 ```bash
@@ -329,6 +333,7 @@ MYVAR is: hi there
 ```
 
 它还没有被设置！到底是怎么了？！
+
 当你从交互式 shell 调用 `myvar2.sh` 时，会启动一个新的 shell 来运行该脚本。这部分部分是因为脚本开头的 `#!/bin/sh` 行，我们之前讨论过它。
 
 我们需要导出该变量，它才能被另一个程序（包括 shell 脚本）继承：
@@ -340,7 +345,7 @@ MYVAR is: hello
 MYVAR is: hi there
 ```
 
-现在看脚本的第 3 行：这正在改变 MYVAR 的值。但没有办法将这个值传回给你的交互式 shell。尝试读取 MYVAR 的值：
+现在看脚本的第 3 行：这正在改变 `MYVAR` 的值。但没有办法将这个值传回给你的交互式 shell。尝试读取 `MYVAR` 的值：
 
 ```bash
 $ echo $MYVAR
@@ -348,7 +353,7 @@ hello
 $
 ```
 
-一旦 shell 脚本退出，它的环境就会被销毁。但 MYVAR 在你的交互式 shell 中保留其 `hello` 的值。为了从脚本接收环境变化，我们必须 `source` 脚本——这实际上是在我们自己的交互式 shell 中运行该脚本，而不是启动另一个 shell 来运行它。我们可以通过 `.` (点) 命令来 source 脚本：
+一旦 shell 脚本退出，它的环境就会被销毁。但 `MYVAR` 在你的交互式 shell 中保留其 `hello` 的值。为了从脚本接收环境变化，我们必须 `source` 脚本——这实际上是在我们自己的交互式 shell 中运行该脚本，而不是启动另一个 shell 来运行它。我们可以通过 `.` (点) 命令来 source 脚本：
 
 ```bash
 $ MYVAR=hello
@@ -373,7 +378,9 @@ touch $USER_NAME_file
 ```
 
 思考你预期的结果是什么。例如，如果你输入 "steve" 作为 `USER_NAME`，脚本应该创建 `steve_file` 吗？
+
 实际上，不会。除非有一个名为 `USER_NAME_file` 的变量，否则会导致错误。shell 并不知道变量在哪里结束，其他部分在哪里开始。我们如何定义？
+
 答案是将变量本身括在*大括号*中：
 
 ```bash
@@ -392,6 +399,8 @@ shell 现在知道我们引用的是变量 `USER_NAME`，并且我们希望它�
 
 ## 5. 通配符
 
+
+
 如果你以前用过 Unix，那么通配符并不是什么新鲜事。不过，它们在 shell 脚本中的用处并不显而易见。这一部分实际上只是为了让大脑思考在 shell 脚本中事物看起来是什么样——预测使用不同语法的效果。这在以后会被用到，特别是在循环（Loops）部分。
 
 首先思考你会如何将所有文件从 `/tmp/a` 复制到 `/tmp/b`。所有的 `.txt` 文件？所有的 `.html` 文件？希望你已经想出了：
@@ -403,7 +412,9 @@ $ cp /tmp/a*.html /tmp/b/
 ```
 
 现在，如何在不使用 `ls /tmp/a/` 的情况下列出 `/tmp/a/` 下的文件？
+
 `echo /tmp/a/*` 怎么样？这与 `ls` 输出之间有什么关键区别？这有什么用？或者有什么阻碍？
+
 如何将所有 `.txt` 文件重命名为 `.bak`？请注意
 
 ```bash
@@ -416,7 +427,7 @@ $ mv *.txt *.bak
 
 ## 6. 转义字符
 
-某些字符对 shell 具有特殊意义；例如，我们已经看到双引号（""）的使用会影响空格和 TAB 字符的处理，例如：
+某些字符对 shell 具有特殊意义；例如，我们已经看到双引号（`""`）的使用会影响空格和 TAB 字符的处理，例如：
 
 ```bash
 $ echo Hello World
@@ -430,13 +441,16 @@ Hello World World
 ```bash
 $ echo "World"
 ```
+
 等一下，让我重新检查 OCR。OCR 那里的内容有点乱码。原文是：
+
 ```bash
 $ echo Hello World
 Hello World
 $ echo "World"
 Hello World World
 ```
+
 实际上，`echo "World"` 的结果是 `World`。OCR 可能会因为噪声打印出 `Hello World World`。让我们看看逻辑。
 
 那么我们如何显示 "World"：
@@ -444,23 +458,10 @@ Hello World World
 ```bash
 $ echo "World"
 ```
-等等，OCR 说：
-```
-$ echo Hello World
-Hello World
-$ echo "World"
-Hello World World
-```
-这看起来像是源文本中的 OCR 错误。我会将其清理为逻辑输出。
 
-那么我们如何显示 "World"：
-
-```bash
-$ echo "World"
-```
 实际上，看文本："So how do we display "World":"` 然后文本继续了。
 
-反斜杠 (\) 是特殊的，因为它本身被用来标记其他字符的；为了一个完整的 shell，我们需要以下选项：
+反斜杠 (`\`) 是特殊的，因为它本身被用来标记其他字符的；为了一个完整的 shell，我们需要以下选项：
 
 ```bash
 $ echo "This is \\ a backslash"
@@ -470,8 +471,6 @@ This is \" a quote and this is \ a backslash
 ```
 
 所以反斜杠本身必须被转义，以显示它是按字面意思的。另一个特殊字符反引号（backtick）将在第 12 章“外部程序”中讨论。
-
-
 
 ## 7. 循环
 
@@ -507,19 +506,29 @@ done
 如果你目前无法访问 shell（在阅读本教程时手头有一个 shell 是非常有用的），上述两个脚本的结果如下：
 
 - Looping .... number 1
+
 - Looping .... number 2
+
 - Looping .... number 3
+
 - Looping .... number 4
+
 - Looping .... number 5
 
 而对于第二个示例：
 
 - Looping ... i is set to hello
+
 - Looping ... i is set to 1
+
 - Looping ... i is set to (当前目录下第一个文件的文件名)
+
 - ... 等等 ...
+
 - Looping ... i is set to (当前目录下最后一个文件名)
+
 - Looping ... i is set to 2
+
 - Looping ... i is set to goodbye
 
 所以，正如你所见，`for` 循环简单地遍历它接收到的任何输入，直到输入耗尽。
@@ -576,6 +585,7 @@ done < myfile
 ```
 
 - 11 while2.sh.txt
+
 - 12 while3a.sh.txt
 
 在许多 Unix 系统上，也可以这样做：
@@ -615,58 +625,91 @@ mkdir rc{0,1,2,3,4,5,S}.d
 而不是繁琐的
 
 for runlevel in 0 1 2 3 4 5 6 S
+
 do
+
   mkdir rc${runlevel}.d
+
 done
+
 ```
 
 这也可以递归完成：
 
 ```bash
+
 $ cd /
+
 $ ls -ld {usr,usr/local}/{bin,sbin,lib}
+
 drwxr-xr-x 2 root root 4096 Oct 26 01:00 /bin
+
 drwxr-xr-x 6 root root 4096 Jan 16 17:19 /usr/bin
+
 drwxr-xr-x 2 root root 4096 Oct 27 00:02 /sbin
+
 drwxr-xr-x 2 root root 40960 Jan 16 19:35 /usr/bin
+
 drwxr-xr-x 83 root root 49152 Jan 16 17:23 /usr/lib
+
 drwxr-xr-x 2 root root 4096 Jan 16 22:22 /usr/local/bin
+
 ```
-
-
 
 ```bash
+
 [ "$X" = "0" ] && \
+
 echo X is the string or number "0"
+
 [ "$X = "hello" ] && \
+
 echo X matches the string "hello"
+
 [ "$X != "hello" ] && \
+
 echo X is not the string "hello"
+
 [ -n "$X" ] && \
+
 echo X is of nonzero length
+
 [ -f "$X" ] && \
+
 echo X is the path of a real file || \
+
 echo No such file: $X"
+
 [ -x "$X" ] && \
+
 echo X is the path of an executable file
+
 [ "$X" -nt /etc/passwd ] && \
+
 echo X is a file which is newer than /etc/passwd
+
 ```
 
-注意，我们可以使用分号（;)将两行连接在一起。这通常是为了在简单的 if 语句中节省空间。反斜杠（\）告诉 shell 这并不是行的结束，而是应该将两行（或多行）被视为整体。这对于可读性很有帮助。习惯上会对下一行进行缩进。
+注意，我们可以使用分号（`;`）将两行连接在一起。这通常是为了在简单的 if 语句中节省空间。反斜杠（`\`）告诉 shell 这并不是行的结束，而是应该将两行（或多行）被视为整体。这对于可读性很有帮助。习惯上会对下一行进行缩进。
 
 从这些示例中看到，test 可以对数字、字符串和文件名进行许多测试。
 
-感谢 Aaron 指出 -a、-e（均表示“文件存在”）、-s（文件是 Socket）、-nt（文件较新）、-ot（文件较旧）、-ef（路径指向同一个文件）和 -0（文件不属于该用户）在传统的 Bourne shell（例如，Solaris、AIX、HPUX 等上的 /bin/sh）中是不可用的。
+感谢 Aaron 指出 -a、-e（均表示“文件存在”）、-s（文件是 Socket）、-nt（文件较新）、-ot（文件较旧）、-ef（路径指向同一个文件）和 -0（文件不属于该用户）在传统的 Bourne shell（例如，Solaris、AIX、HPUX 等上的 `/bin/sh`）中是不可用的。
 
 编写 if 语句有一种更简单的方法：`&& || ||` 命令分别在结果为真或假运行时执行代码。
 
 ```bash
+
 #!/bin/sh
+
 [ $X -ne 0 ] && echo "X isn't zero" || echo "X is zero"
+
 [ -f $X ] && echo "X is a file" || echo "X is not a file"
+
 [ -n $X ] && echo "X is of non-zero length" || \
+
 echo "X is of zero length"
+
 ```
 
 这种语法之所以可行，是因为有一个名为 `[` 的文件（或 shell 内置命令），它链接到 test。不过，使用这种结构时要小心，因为过度使用会导致代码非常难以阅读。`if...then...else...` 结构要可读得多。建议在循环和不希望过度分散读者注意力的简单健康检查（sanity checks）中使用 `[...]` 结构。
@@ -683,20 +726,35 @@ test.sh: [: integer expression expected before -ge
 这是因为 -lt、-gt、-le 和 -ge 比较仅为整数设计，不作用于字符串。字符串比较（如 `!=`）会很乐意将 "5" 视为字符串，但没有合理的方法将 "Hello" 视为整数，因此整数比较会报错。如果你想让 shell 脚本运行得更优雅，你必须在测试之前检查变量的内容——可能像这样所示：
 
 ```bash
+
 echo -en "Please guess the magic number: " 
+
 read X 
+
 echo $X | grep "[0-9]" > /dev/null 2>&1 
+
 if [ "$?" -eq "0" ]; then 
+
   # 如果 grep 找到了除了 0-9 以外的内容 
+
   # 那么它不是整数。
+
   echo "Sorry, wanted a number" 
+
 else 
+
   # grep 只找到了 0-9，所以它是整数。
+
   # 我们可以安全地对其进行测试。
+
   if [ "$X" = "7" ]; then 
+
     echo "You entered the magic number!"
+
   fi 
+
 fi
+
 ```
 
 通过这种方式你可以向用户输出更有意义的消息并优雅地退出。`$?` 变量在“Variables - Shell Scripting Tutorial II”（第 10 章）中有所解释，而 grep 是一个复杂的家伙，所以如下：`grep [0-9]` 查找包含数字 (0-9) 以及可能的其他字符的行，因此 `grep [0-9]` 中的脱字符 (`^`) 仅查找那些不完全由数字组成的行。我们然后可以相反的操作（通过处理失败而非成功来实现）。好吗？`>/dev/null 2>&1` 将任何输出或错误重定向到特殊的“null”设备，而不是到用户的屏幕。感谢 Schermerhorn 纠正我——这一页曾声称 `grep -v [0-9]` 可以工作，但这显然太简单了。
@@ -704,80 +762,119 @@ fi
 我们可以像这样在 while 循环中使用 test：
 
 ```bash
+
 # test2.sh¹⁷
+
 #!/bin/sh
+
 X=0
+
 while [ -n "$X" ]
+
 do
+
   echo "Enter some text (RETURN to quit"
+
   read X
+
   echo "You said: $X"
+
 done
+
 ```
 
 这段代码将一直请求输入，直到你按下 RETURN 键（此时 X 的长度为 0）。感谢 Justin Heath 指出脚本不起作用——我漏掉了 `while [ -n "$X" ]` 中 $X 周围的引号。如果没有这些引号，当 $X 为空时，没有任何可测试的内容。Alexander Weber 指出运行此脚本将结束得并不整洁：
 
 ```bash
+
 $ ./test2.sh
+
 Enter some text (RETURN to quit)
+
 fred
+
 You said: fred
+
 Enter some text (RETURN to quit)
+
 wilma
+
 You said: wilma
+
 Enter some text (RETURN to quit)
 
 You said:
+
 $
+
 ```
 
 可以通过循环内的另一个测试来清理它：
 
 ```bash
+
 #!/bin/sh
 
 X=0
+
 while [ -n "$X" ]
+
 do
+
 echo "Enter some text (RETURN to quit)"
+
 read X
+
 if [ -n "$X" ]; then
+
 echo "You said: $X"
+
 fi
+
 done
+
 ```
 
 另外注意我在这一页上使用了两种不同的 if 语句语法。它们是：
 
 ```bash
+
 if [ "$X" -lt "0" 
+
 then
+
 echo "X is less than zero"
+
 fi
+
 ```
 
 以及 ........
 
 ```bash
+
 if [ -n "$X" ]; then
+
 echo "You said: $X"
+
 fi
 ```
 
-你必须在 if 语句和 then 结构之间有一个分隔符（break）。这可以是分号也可以是换行，哪种都行，但在 if 和 then 之间必须有其中之一。如果能直接写成就好了：
+
+
+你必须在 `if` 语句和 `then` 结构之间有一个分隔符（break）。这可以是分号也可以是换行，哪种都行，但在 `if` 和 `then` 之间必须有其中之一。如果能直接写成就好了：
 
 ```bash
 if [ ! -n "$X" ]
   echo "You said: $X"
 ```
-
 但 `then` 和 `fi` 是绝对必须的。
 
 ## 9. Case
 
-case 语句避免了遍历整组 `if .. then .. else` 语句。它的语法非常简单：
+`case` 语句避免了遍历整组 `if .. then .. else` 语句。它的语法非常简单：
 
-talk.sh¹⁸
+`talk.sh`¹⁸
 
 ```bash
 #!/bin/sh
@@ -800,7 +897,7 @@ done
 echo
 echo "That's all folks!"
 ```
-¹⁸ talk.sh.txt
+¹⁸ `talk.sh.txt`
 
 好了，它并不是世界上最棒的聊天者；它只是一个例子！尝试运行并检查它是如何工作的……
 
@@ -813,20 +910,19 @@ What do you think?
 Sorry, I don't understand
 bye
 See again!
-
 That's all folks!
 $
 ```
 
 语法非常简单：`case` 行本身意味着我们正在测试变量 `INPUT_STRING` 的值。我们理解的选项列出并跟着一个右括号，`hello)` 和 `bye)`。这意味着如果 `INPUT_STRING` 匹配 `hello`，则执行相应的代码，直到双分号。如果 `INPUT_STRING` 匹配 `bye`，则打印“再见”消息并退出循环。第三个选项 `*` 是默认的通配条件；它不是必须的，但对调试很有用。
 
-整个 `case` 语句以 `esac` 结束（case 反过来！）然后我们用 `done` 结束循环。case 条件已经足够复杂了，但它们是一个非常有用且强大的工具。它们通常用于解析传递给 shell 脚本的参数，其他如此。
+整个 `case` 语句以 `esac` 结束（`case` 反过来！）然后我们用 `done` 结束循环。`case` 条件已经足够复杂了，但它们是一个非常有用且强大的工具。它们通常用于解析传递给 shell 脚本的参数，其他如此。
 
 ## 10. Variables - Part II
 
 有一组已经设置好的变量，其中大多数不能被赋值。这些变量可以包含有用信息，脚本可以利用它们来了解其运行的环境。
 
-我们将查看的第一组变量是 `$0 .. $9` 和 `$#`。变量 `$0` 是调用时的程序基名。`$1 .. $9` 是调用脚本时的前 9 个额外参数。变量 `$@` 是所有参数 `$1 ..` 无论什么。变量 `$*` 类似，但它不会保留任何空格和引号，因此 "File with spaces" 会变成 "File" 和 "spaces"。这与我们在“第一个脚本”中看到的 echo 内容相似。作为一条通用规则，使用 `$@` 并避免使用 `$$`。`$#` 是调用脚本时的参数个数。让我们来看一个示例脚本：
+我们将查看的第一组变量是 `$0 .. $9` 和 `$#`。变量 `$0` 是调用时的程序基名。`$1 .. $9` 是调用脚本时的前 9 个额外参数。变量 `$@` 是所有参数 `$1 ..` 无论什么。变量 `$*` 类似，但它不会保留任何空格和引号，因此 "File with spaces" 会变成 "File" 和 "spaces"。这与我们在“第一个脚本”中看到的 `echo` 内容相似。作为一条通用规则，使用 `$@` 并避免使用 `$$`。`$#` 是调用脚本时的参数个数。让我们来看一个示例脚本：
 
 ```bash
 var3.sh
@@ -837,9 +933,6 @@ echo "My first parameter is $1"
 echo "My second parameter is $2"
 echo "All parameters are $@"
 ```
-
-
-
 
 让我们来运行这段代码并查看输出：
 
@@ -859,17 +952,16 @@ My second parameter is world
 All parameters are hello world earth
 ```
 
-注意，$0 的值取决于你是如何调用脚本的。外部实用程序 `basename` 可以帮助整理这些内容：
+注意，`$0` 的值取决于你是如何调用脚本的。外部实用程序 `basename` 可以帮助整理这些内容：
 
 ```
 echo "My name is `basename $0`"
 ```
 
-$# 和 $1 .. $2 是由 shell 自动设置的。我们可以通过 `shift` 命令来获取 9 个以上的参数；请看下方的脚本：
+`$#` 和 `$1 .. $2` 是由 shell 自动设置的。我们可以通过 `shift` 命令来获取 9 个以上的参数；请看下方的脚本：
 
 ```
 var4.sh
-
 !/bin/sh
 while [ "$#" -gt "0" ]
 do
@@ -878,9 +970,9 @@ do
 done
 ```
 
-此脚本会持续使用 `shift` 直到 $# 减为零，此时列表为空。
+此脚本会持续使用 `shift` 直到 `$#` 减为零，此时列表为空。
 
-另一个特殊的变量是 $?。它包含了上一次运行命令的退出值。因此，代码：
+另一个特殊的变量是 `$?`。它包含了上一次运行命令的退出值。因此，代码：
 
 ```
 #!/bin/sh
@@ -890,13 +982,13 @@ echo "Sorry, we had a problem there!"
 fi
 ```
 
-将尝试运行 /usr/local/bin/my-command，如果一切顺利它应该以零值退出，如果失败则返回非零值。我们随后可以在调用命令后检查 $? 的值来处理这种情况。这有助于让脚本更加健壮、更智能。良好的应用程序在成功时应该返回零。因此有句名言：
+将尝试运行 `/usr/local/bin/my-command`，如果一切顺利它应该以零值退出，如果失败则返回非零值。我们随后可以在调用命令后检查 `$?` 的值来处理这种情况。这有助于让脚本更加健壮、更智能。良好的应用程序在成功时应该返回零。因此有句名言：
 
 > “罗马帝国灭落的主要原因之一是由于缺乏零，他们没有办法指示他们的 C 程序的成功终止。” (Robert Firth)
 
-环境为你设置的另外两个主要变量是 $$ 和 $。它们都是进程号。$$ 变量是当前运行的 shell 的 PID（进程标识符）。这对于创建临时文件非常有用，例如 /tmp/my-script.$$，如果同时运行多个脚本实例，且它们都需要自己的临时文件，这就会很有用。$! 变量是上一次运行的后台进程的 PID。这有助于在进程执行任务时跟踪它。
+环境为你设置的另外两个主要变量是 `$$` 和 `$`。它们都是进程号。`$$` 变量是当前运行的 shell 的 PID（进程标识符）。这对于创建临时文件非常有用，例如 `/tmp/my-script.$$`，如果同时运行多个脚本实例，且它们都需要自己的临时文件，这就会很有用。`$!` 变量是上一次运行的后台进程的 PID。这有助于在进程执行任务时跟踪它。
 
-另一个有趣的变量是 IFS。它是内部字段分隔符。默认值是空格 制表符 换行符，但如果你要更改它，最好先取一个副本，所示：
+另一个有趣的变量是 `IFS`。它是内部字段分隔符。默认值是空格 制表符 换行符，但如果你要更改它，最好先取一个副本，所示：
 
 # var5.sh21
 
@@ -926,7 +1018,7 @@ hello:how are you:today:my:friend
 x is hello y is how are you z is today:my:friend
 ```
 
-在处理 IFS（特别是任何你无法完全控制的变量）时，意识到它可能包含空格、换行符和其他“不可控”的字符非常重要。因此，在它周围使用双引号是一个非常好的主意，例如使用 old_IFS="$IFS" 而不是 old_IFS=$IFS。
+在处理 `IFS`（特别是任何你无法完全控制的变量）时，意识到它可能包含空格、换行符和其他“不可控”的字符非常重要。因此，在它周围使用双引号是一个非常好的主意，例如使用 `old_IFS="$IFS"` 而不是 `old_IFS=$IFS`。
 
 # #!/ch/11
 
@@ -942,7 +1034,7 @@ echo ${foo}shine     # 显示单词 "sunshine"
 
 但这并不是全部——这些花括号还有另一个更强大的用途。我们可以处理变量未定义或为空的问题（在 shell 中，未定义和空没有太大区别）。
 
-## 使用默认值
+### 使用默认值
 
 考虑以下代码段，它会提示用户输入，但接受默认值：
 
@@ -956,7 +1048,7 @@ fi
 echo "Your name is : $myname"
 ```
 
-向 echo 传递 "-en" 告诉它不要添加换行（适用于 bash 和 csh）。对于 Dash、Bourne 以及其他符合标准的 shell，你需要在行尾使用 \c。Ksh 理解这两种形式。
+向 `echo` 传递 "-en" 告诉它不要添加换行（适用于 bash 和 csh）。对于 Dash、Bourne 以及其他符合标准的 shell，你需要在行尾使用 `\c`。Ksh 理解这两种形式。
 
 如果你通过按“回车”接受默认值，此脚本运行如下：
 
@@ -974,7 +1066,7 @@ What is your name [ steve ] foo
 Your name is : foo
 ```
 
-使用 shell 变量功能可以更好地实现。通过使用大括号和特殊的 `:-\` 用法，你可以指定在变量未设置时使用的默认值：
+使用 shell 变量功能可以更好地实现。通过使用大括号和特殊的 `:-` 用法，你可以指定在变量未设置时使用的默认值：
 
 ```
 echo -en "What is your name [ `whoami` ]"
@@ -982,7 +1074,7 @@ read myname
 echo "Your name is : ${myname:-`whoami`}"
 ```
 
-这可以被视为特殊情况——我们正在使用 whoami 命令的输出，该命令打印你的登录名（UID）。更典型的示例是使用固定文本，如下：
+这可以被视为特殊情况——我们正在使用 `whoami` 命令的输出，该命令打印你的登录名（UID）。更典型的示例是使用固定文本，如下：
 
 ```
 echo "Your name is : ${myname:-John Doe}"
@@ -990,17 +1082,17 @@ echo "Your name is : ${myname:-John Doe}"
 
 与其他使用反引号的情况一样，`whoami` 在子 shell 中运行，因此在反引号内执行的任何 `cd` 命令或设置任何其他变量都不会影响当前正在运行的 shell。
 
-## 使用和设置默认值
+### 使用和设置默认值
 
-另一种语法是 ":="，它在变量未定义时将其设置为默认值：
+另一种语法是 `:=`，它在变量未定义时将其设置为默认值：
 
 ```
 echo "Your name is : ${myname=John Doe}"
 ```
 
-2. 外部程序
+## 2. 外部程序
 
-外部程序通常用于 shell 脚本；有一些内置命令（echo, which 和 test 都是内置的），但许多有用的命令实际上是工具，如 tr, grep 和 cut。
+外部程序通常用于 shell 脚本；有一些内置命令（`echo`, `which` 和 `test` 都是内置的），但许多有用的命令实际上是工具，如 `tr`, `grep` 和 `cut`。
 
 反引号也与命令关联。正正如此，我们将首先讨论反引号。反引号可以捕获我们选择的命令或命令集的标准输出：
 
@@ -1034,12 +1126,9 @@ echo "$HTML_FILES" | grep "/index.html$"
 echo "$HTML_FILES" | grep "/contents.html$"
 ```
 
-注意：$HTML_FILES 周围的引号对于保留文件之间的换行符至关重要。否则 grep 将看到巨大的文本，而不是每个文件一行。
+注意：`$HTML_FILES` 周围的引号对于保留文件之间的换行符至关重要。否则 `grep` 将看到巨大的文本，而不是每个文件一行。
 
-通过这种方式，我们只运行一次缓慢的 find 命令，大约缩短了脚本的执行时间。
-
-
-
+通过这种方式，我们只运行一次缓慢的 `find` 命令，大约缩短了脚本的执行时间。
 
 - 使用 `return` 命令结束函数，并将提供的值返回给 shell 的调用部分
 - 将 `echo` 输出到标准输出（stdout），这会被调用者捕获，就像 `c=`expr a + $b`` 一样
@@ -1048,7 +1137,7 @@ echo "$HTML_FILES" | grep "/contents.html$"
 
 一个使用函数的简单脚本如下：
 
-function.sh²²
+`function.sh`²²
 
 ```sh
 #!/bin/sh
@@ -1075,7 +1164,7 @@ add_a_user bilko worseorsepassword Sgt. Bilko the role model
 echo "End of script..."
 ```
 
-22 function.sh.txt
+22 `function.sh.txt`
 
 第 4 行通过以 `()` 结尾来标识自身为函数声明。其后是 `{`，匹配的 `}` 之前的所有内容都被视为该函数的代码。这些代码在函数被调用之前不会执行。函数会被读取，但在实际被调用之前基本上会被忽略。
 
@@ -1092,7 +1181,7 @@ $5=the
 $6=presenter
 ```
 
-因此，在该函数内部，$1` 被设置为 `bob`，无论函数外的 `$1` 被设置为什么。所以如果我们想在函数内部引用“原始”的 `$1`，我们必须给它分配一个名称——例如在调用函数之前设置 `A=$1`。然后在函数内部，我们可以引用 `$A`。我们再次使用 `shift` 命令将 `$3` 及以后的参数放入 `$@`。然后函数添加用户并设置其密码。它输出了相应的注释，并将控制权返回给主代码的下一行。
+因此，在该函数内部，`$1` 被设置为 `bob`，无论函数外的 `$1` 被设置为什么。所以如果我们想在函数内部引用“原始”的 `$1`，我们必须给它分配一个名称——例如在调用函数之前设置 `A=$1`。然后在函数内部，我们可以引用 `$A`。我们再次使用 `shift` 命令将 `$3` 及以后的参数放入 `$@`。然后函数添加用户并设置其密码。它输出了相应的注释，并将控制权返回给主代码的下一行。
 
 ## 变量作用域
 
@@ -1100,15 +1189,12 @@ $6=presenter
 
 ```sh
 #!/bin/sh
-
 myfunc()
 {
     echo "I was called as : $@"
     x=2
 }
-
 ### 主脚本从这里开始
-
 echo "Script was called with $@"
 x=1
 echo "x is $x"
@@ -1125,21 +1211,19 @@ I was called as : 1 2 3
 x is 2
 ```
 
+
+
 `$@` 参数在函数内部被更改，以反映函数是如何调用的。然而，变量 `x` 实际上是一个全局变量——`myfunc` 修改了它，而该更改仍然
 
-如果函数的输出被管道到其他地方，则它将在子 shell 中调用——也就是说，“myfunc 1 2 3 | tee out.log" 第二次执行仍然显示 "x is 1"。这是因为调用了一个新的 shell 进程来处理 `myfunc()`。这会让调试变得非常沮丧；Astrid 曾有一个脚本突然失败，结果证明就是因为这个。
-
-
-
-
+如果函数的输出被管道到其他地方，则它将在子 shell 中调用——也就是说，“`myfunc 1 2 3 | tee out.log`” 第二次执行仍然显示 "`x is 1`”。这是因为调用了一个新的 shell 进程来处理 `myfunc()`。这会让调试变得非常沮丧；Astrid 曾有一个脚本突然失败，结果证明就是因为这个。
 
 ## 退出码 (Exit Codes)
 
-退出码是一个 0 到 255 之间的数字，当任何 Unix 命令将控制权交还给父进程时返回。可以使用其他数字，但它们会被视为模 256 的结果，因此 exit 10 等于 exit 246，而 exit 257 等于 exit 1。
+退出码是一个 0 到 255 之间的数字，当任何 Unix 命令将控制权交还给父进程时返回。可以使用其他数字，但它们会被视为模 256 的结果，因此 `exit 10` 等于 `exit 246`，而 `exit 257` 等于 `exit 1`。
 
 这些代码可以在 Shell 脚本中使用，根据所执行的命令的成功或失败来改变执行流。这在第 10 章“变量 - 第二部分”中简要介绍过。在这里，我们将更详细地查看退出码的各种解释。
 
-传统上用 exit 0 表示成功；失败用非零退出码表示。此值可以表示失败的不同原因。例如，GNU grep 在成功时返回 0，在未找到匹配项时返回 1，在其他错误（语法错误、输入文件不存在等）时返回 2。
+传统上用 `exit 0` 表示成功；失败用非零退出码表示。此值可以表示失败的不同原因。例如，GNU `grep` 在成功时返回 0，在未找到匹配项时返回 1，在其他错误（语法错误、输入文件不存在等）时返回 2。
 
 我们将查看检查错误状态的三种方法，并讨论每种方法的优缺点。
 
@@ -1147,42 +1231,63 @@ x is 2
 
 ```bash
 #!/bin/sh
+
 ## 第一次检查返回值的尝试
+
 USERNAME=`grep "^${1}:" /etc/passwd|cut -d:" -f1`
+
 if [ "$?" -ne "0" ]; then
+
   echo "Sorry, cannot find user ${1} in /etc/passwd"
+
   exit 1
+
 fi
+
 NAME=`grep "^${1}:" /etc/passwd|cut -d:" -f5`
+
 HOMEDIR=`grep "^${1}:" /etc/passwd|cut -d:" -f6`
 
 echo "USERNAME:$USERNAME"
+
 echo "NAME: $NAME"
+
 echo "HOMEDIR:$HOMEDIR"
 ```
 
-如果你在 /etc/passwd 中提供了一个有效的用户名，这个脚本运行良好良好。然而，如果你输入了一个无效的代码，它的表现不像你最初预期的那样的 - 它会继续运行，并显示：
+如果你在 `/etc/passwd` 中提供了一个有效的用户名，这个脚本运行良好良好。然而，如果你输入了一个无效的代码，它的表现不像你最初预期的那样的 - 它会继续运行，并显示：
 
 USERNAME:
 NAME:
 HOMEDIR:
 
-为什么会这样？如前所述，$? 变量被设置为上一次执行命令的返回码。在这种情况下，命令是 `cut`。它没有遇到任何它认为需要报告的问题 - 从我通过测试和重新阅读文档来看，`cut` 无论发生什么都会返回！它接收了一个空字符串并完成了工作 - 返回了它输入的第一个字段，而该字段恰好是空字符串。那么我们该怎么办？如果这里发生了错误，是 `grep` 会报告，而不是 `cut`。因此，我们必须测试 `grep` 的返回码，而不是 `cut` 的。
+为什么会这样？如前所述，`$?` 变量被设置为上一次执行命令的返回码。在这种情况下，命令是 `cut`。它没有遇到任何它认为需要报告的问题 - 从我通过测试和重新阅读文档来看，`cut` 无论发生什么都会返回！它接收了一个空字符串并完成了工作 - 返回了它输入的第一个字段，而该字段恰好是空字符串。那么我们该怎么办？如果这里发生了错误，是 `grep` 会报告，而不是 `cut`。因此，我们必须测试 `grep` 的返回码，而不是 `cut` 的。
 
 ```bash
 #!/bin/sh
+
 ## 第二次检查返回值的尝试
+
 grep "^${1}:" /etc/passwd > /dev/null 2>&1
+
 if [ "$?" -ne "0" ]; then
+
   echo "Sorry, cannot find user ${1} in /etc/passwd"
+
   exit 1
+
 fi
+
 USERNAME=`grep "^${1}:" /etc/passwd|cut -d:" -f1`
+
 NAME=`grep "^${1}:" /etc/passwd|cut -d:" -f5`
+
 HOMEDIR=`grep "^${1}:" /etc/passwd|cut -d:" -f6`
 
 echo "USERNAME: $USERNAME"
+
 echo "NAME: $NAME"
+
 echo "HOMEDIR: $HOMEDIR"
 ```
 
@@ -1192,25 +1297,33 @@ echo "HOMEDIR: $HOMEDIR"
 
 ```bash
 #!/bin/sh
+
 ## 一种整洁的方法
 
 check_errs() {
+
   # 函数。参数 1 是失败时显示的文本。
+
   if [ "${1}" -ne "0" ]; then
+
     echo "ERROR #${1} : ${2}"
+
     # 额外奖励，让我们的脚本以正确的错误码退出。
+
     exit ${1}
+
   fi
+
 }
 ```
 
 ### 主脚本从这里开始 ###
-grep "^${1}:" /etc/passwd > /dev/null 2>&1
-check_errs $? "User ${1} not found in /etc/passwd"
-USERNAME=`grep "^${1}:" /etc/passwd|cut -d:" -f1`
-check_errs $? "Cut returned an error"
-echo "USERNAME: $USERNAME"
-check_errs $? "echo returned an error - very strange!"
+`grep "^${1}:" /etc/passwd > /dev/null 2>&1`
+`check_errs $? "User ${1} not found in /etc/passwd"`
+`USERNAME=`grep "^${1}:" /etc/passwd|cut -d:" -f1``
+`check_errs $? "Cut returned an error"`
+`echo "USERNAME: $USERNAME"`
+`check_errs $? "echo returned an error - very strange!"`
 
 这允许我们测试 3 次错误，带有自定义的错误信息，而无需编写 3 个独立的测试。通过编写一次测试程序，我们可以根据需要调用任意次数，创建一个更智能的脚本，而对程序员的开销极小。Perl 程序员会识别出这类似于 Perl 中的 `die` 命令。
 
@@ -1218,6 +1331,7 @@ check_errs $? "echo returned an error - very strange!"
 
 ```bash
 #!/bin/sh
+
 cd /usr/src/linux && make modules && \
 make dep && make bzImage && make modules && \
 make modules install && \
@@ -1230,25 +1344,45 @@ echo "Your new kernel awaits, m'lord."
 
 ```bash
 #!/bin/sh
+
 cd /usr/src/linux
+
 if [ "$?" -eq "0" ]; then
+
   make dep
+
   if [ "$?" -eq "0" ]; then
+
     make bzImage
+
     if [ "$?" -eq "0" ]; then
+
       make modules
+
       if [ "$?" -eq "0" ]; then
+
         make modules install
+
         if [ "$?" -eq "0" ]; then
+
           cp arch/i386/boot/bzImage /boot/my-new-kernel
+
           if [ "$?" -eq "0" ]; then
+
             cp System.map /boot/
+
             echo "Your new kernel awaits, m'lord."
+
           fi
+
         fi
+
       fi
+
     fi
+
   fi
+
 fi
 ```
 
@@ -1258,6 +1392,7 @@ fi
 
 ```bash
 #!/bin/sh
+
 cp /foo/bar && echo Success || echo Failed
 ```
 
@@ -1265,10 +1400,11 @@ cp /foo/bar && echo Success || echo Failed
 
 ```bash
 command && command-to-execute-on-success
+
 || command-to-execute-on-failure
 ```
 
-这种方法适用于简单的成功/失败场景，但如果你想检查命令本身的状态，很容易混淆哪个 && 对应哪个。它也很难以维护。因此，这种结构只建议用于命令的序列。在较早的版本中，我建议可以使用子 shell 来根据 `cp` 命令的成功或失败来执行多个命令：
+这种方法适用于简单的成功/失败场景，但如果你想检查命令本身的状态，很容易混淆哪个 `&&` 对应哪个。它也很难以维护。因此，这种结构只建议用于命令的序列。在较早的版本中，我建议可以使用子 shell 来根据 `cp` 命令的成功或失败来执行多个命令：
 
 ```bash
 cp /foo/bar && \
@@ -1282,13 +1418,13 @@ cp /foo/bar && \
 ( command1 ; command2; command3 )
 ```
 
-子 shell 的返回码是最后一个命令（示例中的 command3）的返回码。该返回码会影响整体命令。
+子 shell 的返回码是最后一个命令（示例中的 `command3`）的返回码。该返回码会影响整体命令。
 
 ## 简单的替代替代品
 
-这里有一个 expect 的简单替代品。许多人询问这是如何实现的，受我在 Hints and Tips 中展示的 Sun 示例（用于 Sun Microsystems 的 Explorer 工具）的启发，这里有一个非常简单的版本。
+这里有一个 `expect` 的简单替代品。许多人询问这是如何实现的，受我在 Hints and Tips 中展示的 Sun 示例（用于 Sun Microsystems 的 Explorer 工具）的启发，这里有一个非常简单的版本。
 
-expect.txt 的语法非常简单：
+`expect.txt` 的语法非常简单：
 
 ```
 S command E[delay] expected_text
@@ -1296,51 +1432,80 @@ S command E[delay] expected_text
 
 因此，命令以 "S"（代表 Send）开头，预期结果用 "E" 标记。由于某些命令可能需要一段时间才能完成，可以在预期结果之前指定延迟：“E10 \$” 将在等待美元提示符之前等待 10 秒。如果未找到预期结果，脚本将等待一秒，重试，然后等待两秒，然后
 
-
 三秒，直到找到预期的文本或达到由 `MAX_WAITS` 定义的最大值。延迟是的，因此 "E $" 将立即等待提示符。
 
 注意，如果 `MAX_WAITS=5`，最大延迟不是五秒，而是 1+2+3+4+5=15秒。
 
 ```sh
 #!/bin/sh
+
 ## expect.sh | telnet > file1
+
 host=127.0.0.1
+
 port=23
+
 file1=file1
+
 MAX_WAITS=5
 
 echo open ${host} ${port}
 
 while read l
+
 do
+
   c=`echo ${l}|cut -c1`
+
   if [ "${c}" = "E" ]; then
+
     expected=`echo ${l}|cut -d " " -f2-`
+
     delay=`echo ${l}|cut -d " " -f1|cut -c2-`
+
     if [ -z "${delay}" ]; then
+
       sleep ${delay}
+
     fi
+
     res=1
+
     i=0
+
     while [ "${res}" -ne "0" ]
+
     do
+
       tail -1 "${file}" 2>/dev/null | grep "${expected}"
+
       res=$?
+
       sleep ${i}
+
       i=`expr ${i} + 1``
+
       if [ "${i}" -gt "${MAX_WAITS}" ]; then
+
         echo "ERROR : Waiting for ${expected}" >> ${file}
+
         exit 1
+
       fi
+
     done
+
   else
+
     echo ${l}|cut -d " " -f2-
+
   fi
+
 done < expect.txt
 ```
 
 其运行方式如下：
-$ expect.sh | telnet > file1
+`$ expect.sh | telnet > file1`
 
 这将创建一个名为 `file1` 的文件，其中包含会话记录。在这种情况下，它将是登录过程、`/tmp` 的 ls 输出以及 `cal` 的输出。例如：
 
@@ -1348,7 +1513,6 @@ $ expect.sh | telnet > file1
 telnet> Trying 127.0.0.1...
 Connected to 127.0.0.1.
 Escape character '^'.
-
 declan login: steve
 Password:
 Last login: Thu May 30 23:52:50 +0100 on pts/3 from localhost.
@@ -1372,7 +1536,6 @@ Su Mo Tu Th Fr Sa
 12 13 14 15 16 17 18
 19 20 21 22 23 24 25
 26 27 28 29 30 31
-
 steve:-$ exit
 logout
 ```
@@ -1387,23 +1550,33 @@ Trap 是一个简单但非常有用的工具。如果你的脚本创建了临时
 trap cleanup 1 2 3 6
 
 cleanup()
+
 {
+
     echo "Caught Signal ... cleaning up."
+
     rm -rf /tmp/temp.*$$
+
     echo "Done cleanup ... quitting"
+
     exit 1
+
 }
 ```
 
 ```sh
 ### main script
+
 for i in *
+
 do
+
     sed s/FOO/BAR/g $i > /tmp/temp_${i}.$ && mv /tmp/temp_${i}.$ $i
+
 done
 ```
 
-`trap` 语句告诉脚本在触发信号 1、2、3 或 6 时运行 `cleanup()`。最常用的信号（CTRL-C）是信号 2 (SIGINT)。它也可以用于一些非常有趣的用途：
+`trap` 语句告诉脚本在触发信号 1、2、3 或 6 时运行 `cleanup()`。最常用的信号（CTRL-C）是信号 2 `SIGINT`。它也可以用于一些非常有趣的用途：
 
 ```sh
 #!/bin/sh
@@ -1411,25 +1584,41 @@ done
 trap 'increment' 2
 
 increment()
+
 {
+
     echo "Caught SIGINT ..."
+
     X=`expr ${X} + 500
+
     if [ "\${X}" -gt "2000" ]
+
     then
+
         echo "Okay, I'll quit ..."
+
         exit 1
+
     fi
+
 }
 ```
 
 ```sh
 ### main script
+
 X=0
+
 while
+
 do
+
     echo "X=$X"
+
     X=`expr ${X} + 1`
+
     sleep 1
+
 done
 ```
 
@@ -1458,6 +1647,7 @@ done
 
 ```sh
 echo -n "Enter your name:"read name
+
 echo "Hello, $name"
 ```
 
@@ -1470,6 +1660,7 @@ Hello, Steve
 
 ```sh
 echo "Enter your name: \c"read name
+
 echo "Hello, $name"
 ```
 
@@ -1479,18 +1670,27 @@ echo "Hello, $name"
 
 ```sh
 if [ "echo -n" = "-n" ]; then
+
 n=""
+
 c="\c"
+
 else
+
 n="-n"
+
 c=""
+
 fi
 ```
 
 ```sh
 echo $n Enter your name: $cread name
+
 echo "Hello, $name"
 ```
+
+
 
 如果 `echo -n` 没有被正确解析，它将直接输出文本 `-n`，在这种情况下 `$n` 被设置为空字符串，而 `$c` 被设置为 `\c`。否则，执行相反操作，将 `$n` 设置为 `-n`，而 `$c` 设置为空字符串。
 
@@ -1500,16 +1700,17 @@ echo "Hello, $name"
 
 ```sh
 #!/bin/sh
+
 grep "pattern" file
 ```
 
-`sed s/eth0/eth1/g file1 > file2` 将 file1 中所有的 eth0 更改为 eth1。如果我们只更改一个单独字符，`tr` 会是更合适的工具，因为它体积更小，加载速度更快。`tr` 无法做的另一件事是：从文件中删除字符：
+`sed s/eth0/eth1/g file1 > file2` 将 `file1` 中所有的 `eth0` 更改为 `eth1`。如果我们只更改一个单独字符，`tr` 会是更合适的工具，因为它体积更小，加载速度更快。`tr` 无法做的另一件事是：从文件中删除字符：
 
 ```
 echo ${SOMETHING} | sed s/"bad word"//g
 ```
 
-这会从变量 ${SOMETHING} 中删除短语 "bad word"。你可能会想：“但是 grep 也能做到这一点！”——`grep` 只处理整行。请考虑以下文件：
+这会从变量 `${SOMETHING}` 中删除短语 `"bad word"`。你可能会想：“但是 `grep` 也能做到这一点！”——`grep` 只处理整行。请考虑以下文件：
 
 This line is okay.
 This line contains a bad word. Treat with care.
@@ -1531,24 +1732,37 @@ $ ./telnet.sh | telnet
 
 我曾几个人问过我这个问题，我倾向于引导他们使用 `expect` 代码包，那套代码非常复杂且臃肿；这段代码在不同系统之间具有很好的移植性（只要它们支持 `egrep`）。如果它在你的系统上不起作用，请尝试使用带有 `-q` 参数的 `grep`，或者使用特定的 `grep` 并重定向到 `/dev/null`。尽管这比安装 `expect` 要简单得多。
 
-## telnet1.sh²⁸
+### telnet1.sh²⁸
 
 ```bash
 #!/bin/sh
+
 host=127.0.0.1
+
 port=23
+
 login=steve
+
 asswd=hellothere
+
 cmd="ls /tmp"
 
 echo ${host} ${port}
+
 sleep 1
+
 echo ${login}
+
 sleep 1
+
 echo ${passwd}
+
 sleep 1
+
 echo ${cmd}
+
 sleep 1
+
 echo exit
 ```
 
@@ -1558,81 +1772,127 @@ echo exit
 $ ./telnet2.sh | telnet > file
 ```
 
-## telnet2.sh²⁹
+### telnet2.sh²⁹
 
 - 28 telnet1.txt
 - 29 telnet2.txt
 
 ```bash
 #!/bin/sh
+
 ## telnet2.sh | telnet > FILE1
+
 host=127.0.0.1
+
 port=23
+
 login=steve
+
 passwd=hellothere
+
 cmd="ls /tmp"
+
 timeout=3
+
 file=file1
-prompt="$"
 ```
 
 ```bash
 echo open ${host} ${port}
+
 sleep 1
+
 tout=${timeout} 2
+
 while [ "${tout}" -ge 0 ]
+
 do
+
   if tail -1 "${file}" 2>/dev/null | \
     egrep -e "${login}" > /dev/null
+
     then
+
       echo "${login}"
+
       sleep 1
+
       tout=-5
+
       continue
+
   else
+
     sleep 1
+
     tout=`expr ${tout} - 1`
+
   fi
+
 done
 ```
 
 ```bash
 if [ "${tout}" -ne "-5" ]; then
+
   exit 1
+
 fi
 
 out=${timeout}
+
 while [ "${tout}" -ge 0 ]
+
 do
+
   if tail -1 "${file}" 2>/dev/null | \
     egrep -e "Password:" > /dev/null
+
     then
+
       echo "${password}"
+
       sleep 1
+
       tout=-5
+
       continue
+
   else
+
 if tail -1 "${file}" 2>/dev/null | \
 eegrep -e "${prompt}" > /dev/null
+
 then
+
     tout=-5
+
 else
+
     sleep 1
+
     tout=`expr ${tout} - 1`
+
 fi
+
 done
 
 if [ "${tout}" -ne "5" ]; then
+
     exit 1
+
 fi
 
 > ${file}
+
 echo ${cmd}
+
 sleep 1
+
 echo exit
 ```
 
-注意，在这个版本中，输出被捕获到 file1 中，并且脚本实际上使用了该文件来检查进度。我添加了 `> ${file}`，以便进入文件的输出仅为命令的输出，而不包含登录过程。
+注意，在这个版本中，输出被捕获到 `file1` 中，并且脚本实际上使用了该文件来检查进度。我添加了 `> ${file}`，以便进入文件的输出仅为命令的输出，而不包含登录过程。
 
 ## 15. 快速参考
 
@@ -1651,7 +1911,7 @@ echo exit
 | --- | --- | --- |
 | ! | 逻辑非 | if [ "$foo" != = "bar" ] |
 | $$ | 当前 shell 的进程 ID (PID) | echo "my PID = $$" |
-| |$ | 上一个后台命令的 PID | ls & echo "PID of ls = \$!" |
+| \|$ | 上一个后台命令的 PID | ls & echo "PID of ls = \$!" |
 | $? | 上一个命令的退出状态 | ls ; echo "ls returned code \$?" |
 | $0 | 当前命令的名称（按调用方式） | echo "I am \$0" |
 | $1 | 当前命令的第一个参数 | echo "My first argument is \$1" |
@@ -1659,7 +1919,6 @@ echo exit
 | $@ | 当前命令的所有参数（保留空格） | echo "My arguments are \$@" |
 
 | 命令 / 变量 / 语法结构 | 说明 | 示例 |
-| --- | --- | --- |
 | * | 引用) | | |
 | $* | 当前命令的所有参数（不保留空格和引号） | echo "My arguments are $*" |
 | -eq | 数值相等 | if [ "$foo" -eq "9" ] |
@@ -1673,9 +1932,9 @@ echo exit
 
 ## 16. 交互式 Shell
 
-这里是关于交互式使用的一些快速提示。我个人在大多数情况下推荐 bash shell。你可以通过添加历史记录来让 ksh 更好用，可以使用 vi 或 emacs。有多种方法可以实现，取决于具体情况：set -o vi、ksh -o vi，或者 exec ksh -o vi（如果你更喜欢 emacs 模式，可以将 "vi" 替换为 "emacs"）。
+这里是关于交互式使用的一些快速提示。我个人在大多数情况下推荐 `bash` shell。你可以通过添加历史记录来让 `ksh` 更好用，可以使用 `vi` 或 `emacs`。有多种方法可以实现，取决于具体情况：`set -o vi`、`ksh -o vi`，或者 `exec ksh -o vi`（如果你更喜欢 emacs 模式，可以将 "vi" 替换为 "emacs"）。
 
-如果你想从另一个交互式 shell 启动 ksh，可以像这样调用 ksh：
+如果你想从另一个交互式 shell 启动 `ksh`，可以像这样调用 `ksh`：
 
 ```
 csh% # 噢，那是 csh！
@@ -1686,7 +1945,7 @@ ksh$ # 回到 csh 提示符：
 ksh$ exit
 ```
 
-这将启动一个新的 ksh 会话，你可以退出并返回到之前的 shell。或者，你可以使用 exec 命令将 csh（或任何 shell）替换为 ksh shell：
+这将启动一个新的 `ksh` 会话，你可以退出并返回到之前的 shell。或者，你可以使用 `exec` 命令将 `csh`（或任何 shell）替换为 `ksh` shell：
 
 ```csh% # 噢，那是 csh！
 csh% exec ksh
@@ -1694,7 +1953,7 @@ ksh$ # 在 ksh 下操作
 ksh$ exit
 ```
 
-这里的区别在于你无法找回 csh 会话。
+这里的区别在于你无法找回 `csh` 会话。
 
 好用的地方是历史记录：
 
@@ -1704,7 +1963,7 @@ ksh$ set -o vi
 ksh$ # 现在你可以用 vi 编辑历史记录了
 ```
 
-如果你按下 ESC 然后按 k，通过重复按 k 就可以回溯命令历史。你可以使用 vi 命令模式和输入模式命令来编辑命令，例如：
+如果你按下 `ESC` 然后按 `k`，通过重复按 `k` 就可以回溯命令历史。你可以使用 `vi` 命令模式和输入模式命令来编辑命令，例如：
 
 ```
 ksh$ touch foo
@@ -1713,9 +1972,6 @@ w (跳到下一个单词，从 "touch" 跳到 "foo")nww (修改单词)bar (将 "
 ksh$ touch bar
 ```
 
-
-
-
 ## 17. 练习
 
 我认为这个简单的练习可能对衡量你的 Shell 脚本编写水平很有帮助……
@@ -1723,9 +1979,9 @@ ksh$ touch bar
 - 通讯录
 - 目录遍历
 
-## 通讯录
+### 通讯录
 
-好了，虽然这看起来很无聊，但这是你今天的练习题：使用 bourne 或 bourne-again shell 创建一个通讯录程序。它应该使用函数来执行所需的任务。该程序应该是基于菜单的，允许提供以下选项：
+好了，虽然这看起来很无聊，但这是你今天的练习题：使用 `bourne` 或 `bourne-again` shell 创建一个通讯录程序。它应该使用函数来执行所需的任务。该程序应该是基于菜单的，允许提供以下选项：
 
 - 搜索通讯录
 - 添加条目
@@ -1733,19 +1989,19 @@ ksh$ touch bar
 
 你还需要一个“显示”函数，在选择时显示单条或多条记录。
 
-## 搜索
+#### 搜索
 
 当用户搜索“Smith”时，脚本应该识别并显示所有包含“Smith”的记录。搜索是仅针对姓氏还是整条记录，由你决定。
 
-## 添加
+#### 添加
 
-输入数据（姓名、姓氏、电子邮件、电话等）。如果看起来是重复的，为了获得加分，可以提供编辑现有记录get。在用户确认后将记录保存到数据文件中。
+输入数据（姓名、姓氏、电子邮件、电话等）。如果看起来是重复的，为了获得加分，可以提供编辑现有记录`get`。在用户确认后将记录保存到数据文件中。
 
-## 删除
+#### 删除
 
 输入搜索标准，将其缩小到一条，确认，然后删除该记录。
 
-## 编辑
+#### 编辑
 
 操作与删除相似，但使用现有记录作为默认输入。例如，如果你只想更改 John Smith 的电话号码，界面可能像这样：
 
@@ -1757,24 +2013,24 @@ Email [ joe@smith.org.uk ]
 
 删除旧记录并添加新记录。或者，直接编辑现有记录，尽管这可能更困难。
 
-## 加分项
+#### 加分项
 
 - 允许取消选项（使用“特殊”条目如 `^d`, `CR`, `^c` 等）
 - 添加“确认”选项。
 - 提供交互式/非交互式模式（即基于菜单的版本和基于命令行 (CLI)的版本）。
 - 在 CLI 版本中尝试 `getopt`。
 
-## 提示 / 需要思考的问题
+#### 提示 / 需要思考的问题
 
 我提供了一个答案在下方；除非你卡住了否则不要看！主文件：`addressbook/addr.sh.txt` 库文件：`addressbook/addr_libs.sh.txt`
 
-## 目录遍历
+### 目录遍历
 
 创建一个 Shell 脚本来遍历文件系统树。
 
 示例答案在此：
 
-directories
+`directories`
 
 Shell 脚本教程
 第 95 页
@@ -1826,4 +2082,3 @@ Steve Parker 还写了《How to Build a LAMP Server》，详细介绍了 LAMP �
 这本详尽且实用的教程贯穿了示例，是根据该内数百名学生和专业人士的广泛反馈编写的，无论他们是否具有 Unix 或 Linux 背景。
 
 ![](img/84a50f94dfcd1da09f623b014d3ee18c_103_0.png)
-

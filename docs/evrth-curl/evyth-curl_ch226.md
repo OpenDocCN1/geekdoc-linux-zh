@@ -1,3 +1,4 @@
+
 # FTP 通配符匹配
 
 libcurl 支持 FTP 通配符匹配。您通过将`CURLOPT_WILDCARDMATCH`设置为`1L`并然后在 URL 的文件名部分使用“通配符模式”来使用此功能。
@@ -50,11 +51,11 @@ ftp://example.com/some/path/[a-z[:upper:]\\\\].jpeg
 
 回调函数可以选择返回以下这些返回代码之一，以告诉 libcurl 如何处理该文件：
 
-+   `CURL_CHUNK_BGN_FUNC_OK` 传输文件
++ `CURL_CHUNK_BGN_FUNC_OK` 传输文件
 
-+   `CURL_CHUNK_BGN_FUNC_SKIP`
++ `CURL_CHUNK_BGN_FUNC_SKIP`
 
-+   `CURL_CHUNK_BGN_FUNC_FAIL` 由于错误而停止
++ `CURL_CHUNK_BGN_FUNC_FAIL` 由于错误而停止
 
 在匹配的文件传输或跳过后，会调用`CURLOPT_CHUNK_END_FUNCTION`回调函数。
 

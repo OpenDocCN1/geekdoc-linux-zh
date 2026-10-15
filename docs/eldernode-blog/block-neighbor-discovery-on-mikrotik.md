@@ -1,10 +1,11 @@
-# 如何阻止 MikroTik - Eldernode 博客上的邻居发现
+
+# 如何阻止 MikroTik 上的邻居发现——Eldernode 博客
 
 > 原文：<https://blog.eldernode.com/block-neighbor-discovery-on-mikrotik/>
 
 ![How To Block Neighbor Discovery On MikroTik](img/5b907129a72397dc90b87fca9d2a82bd.png)
 
-在为 Mikrotik 使用 Winbox 时，您会发现邻居是它的功能之一。**M**ikro tik**N**eighbor**D**is covery**P**rotocol(MNDP)负责探索 Mikrotik，帮助你在网络中轻松找到你的 Mikrotik。加入我们这篇文章，看看为什么你需要阻止它和如何！为了让本指南更好地发挥作用，请购买您自己的 [Mikrotik VPS](https://eldernode.com/mikrotik-vps-server/) 服务器服务。一旦你准备好了你的简历，我们的团队就可以回答你的问题。您还可以在 [Mikrotik 教程](https://blog.eldernode.com/tag/mikrotik/)页面上获得所有基本指南。
+在为 Mikrotik 使用 Winbox 时，您会发现邻居是它的功能之一。MikroTik Neighbor Discovery Protocol（MNDP）负责探索 Mikrotik，帮助你在网络中轻松找到你的 Mikrotik。加入我们这篇文章，看看为什么你需要阻止它和如何！为了让本指南更好地发挥作用，请购买您自己的 [Mikrotik VPS](https://eldernode.com/mikrotik-vps-server/) 服务器服务。一旦你准备好了你的简历，我们的团队就可以回答你的问题。您还可以在 [Mikrotik 教程](https://blog.eldernode.com/tag/mikrotik/)页面上获得所有基本指南。
 
 ## 如何在 MikroTik 上阻止邻居发现
 
@@ -12,15 +13,14 @@
 
 **解决办法是什么？**
 
-很明显，您需要**禁用**该协议，以防止您的 Mikrotik 通过 Winbox 被发现，并且邻居发现部分只能通过输入您的 [IP 地址](https://blog.eldernode.com/ip-settings-in-mikrotik/)来连接它。
+很明显，您需要禁用该协议，以防止您的 Mikrotik 通过 Winbox 被发现，并且邻居发现部分只能通过输入您的 [IP 地址](https://blog.eldernode.com/ip-settings-in-mikrotik/)来连接它。
 
 ## 在 Mikrotik 上阻止邻居发现的方法
 
-有两种**方法**可以在您的 Mikrotik 上阻止邻居发现。
+有两种方法可以在您的 Mikrotik 上阻止邻居发现：
 
-**1)** 通过 **WinBox** 阻止邻居发现
-
-**2)** 通过 **Mikrotik 终端**阻止邻居发现
+1. 通过 `WinBox` 阻止邻居发现。
+2. 通过 Mikrotik 终端阻止邻居发现。
 
 让我们看看您应该如何使用这些解决方案，以及它们是如何工作的。
 
@@ -30,33 +30,33 @@
 
 首先，你应该通过 Winbox 连接到你的 mikrocontroller 来阻止 MNDP。
 
-**2)** 从 IP 菜单中点击邻居。
+**步骤 2：** 从 IP 菜单中点击邻居。
 
 ![Click on Neighbor](img/6ce44974b0999be4daa40b84d6187ece.png)
 
-**3)** 现在，转到“发现接口”选项卡。
+**步骤 3：** 现在，转到“发现接口”选项卡。
 
-**4)** 在最新的步骤中，您可以选择任何一个您想要禁用 MNDP 协议的接口，方法是单击如下所示的禁用图标。
+**步骤 4：** 在最新的步骤中，您可以选择任何一个您想要禁用 MNDP 协议的接口，方法是单击如下所示的禁用图标。
 
-*注意*:如果你想永久禁用 MNDP 协议，你应该**禁用**所有可用的接口。
+*注意：*如果你想永久禁用 MNDP 协议，你应该禁用所有可用的接口。
 
 ![Neighbor list](img/4dafacf964fedbb078a74dcf0b01abff.png)
 
-### **闭塞(ND)通过**端子
+### 通过终端阻止邻居发现
 
 现在，让我们回顾一下 Mikrotik 上阻止邻居发现的第二种方法是什么。再次注意下面的路径。
 
-**步骤 1** :打开 Mikrotik 终端，输入以下命令:
+**步骤 1：** 打开 Mikrotik 终端，输入以下命令：
 
-```
+```shell
 ip neighbor discovery set ether1 discover=no
 ```
 
-**注意**:用 **ether1** 替换你的接口名
+**注意：** 用 `ether1` 替换你的接口名。
 
-**步骤 2** :要检查接口发现的状态，请键入:
+**步骤 2：** 要检查接口发现的状态，请键入：
 
-```
+```shell
 ip neighbor discovery print
 ```
 

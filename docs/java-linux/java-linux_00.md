@@ -1,92 +1,93 @@
+
 # 前言
 
 ## 初衷(Original Intention)
 
-*   本系列历时半年之久，初稿预计 2016-04 期间可以结束，所有有些文章是空白或是不完善的。感谢自己坚持下来了。
-*   整理下自己所学
-*   带动更多的人进入 Linux 世界，特别是做 Java 开发的人
-*   **学得越多越是明白一个人的力量是不够的，希望你能一起参与，真心希望！！！（鞠躬）**
-*   Github 项目地址，欢迎 `Fork`、`Star`：[`github.com/judasn/Linux-Tutorial`](https://github.com/judasn/Linux-Tutorial)
+- 本系列历时半年之久，初稿预计 2016-04 期间可以结束，所有有些文章是空白或是不完善的。感谢自己坚持下来了。
+- 整理下自己所学
+- 带动更多的人进入 Linux 世界，特别是做 Java 开发的人
+- **学得越多越是明白一个人的力量是不够的，希望你能一起参与，真心希望！！！（鞠躬）**
+- Github 项目地址，欢迎 `Fork`、`Star`：[`github.com/judasn/Linux-Tutorial`](https://github.com/judasn/Linux-Tutorial)
 
 ## 目录(Contents)
 
-*   Linux 介绍
-*   Ubuntu 介绍
-*   Ubuntu 安装
-*   Ubuntu 设置（目录）
-*   CentOS 介绍
-*   CentOS 安装
-*   CentOS 设置（目录）
-*   Bash 命令
-*   Bash 其他常用命令
-*   Linux 下常用压缩文件的解压、压缩
-*   Yum 下载安装包及对应依赖包
-*   Zsh 入门
-*   SSH（Secure Shell）介绍
-*   FTP（File Transfer Protocol）介绍
-*   VPN（Virtual Private Network）介绍
-*   NFS（Network FileSystem）介绍
-*   NTP（Network Time Protocol）介绍
-*   Samba 介绍
-*   Crontab 介绍
-*   Iptables 介绍
-*   花生壳-安装介绍
-*   VMware 克隆 CentOS 后网卡信息修改
-*   JDK 安装
-*   SVN 安装和配置
-*   Tomcat 安装和配置、优化
-*   Jenkins 安装和配置
-*   Maven 安装和配置
-*   Nexus 安装和配置
-*   Mysql 安装和配置
-*   Redis 安装和配置
-*   Jira 安装和配置
-*   Jenkins 安装和配置
-*   TeamCity 安装和配置
-*   Nginx 安装和配置
-*   黑客入侵检查
+- Linux 介绍
+- Ubuntu 介绍
+- Ubuntu 安装
+- Ubuntu 设置（目录）
+- CentOS 介绍
+- CentOS 安装
+- CentOS 设置（目录）
+- Bash 命令
+- Bash 其他常用命令
+- Linux 下常用压缩文件的解压、压缩
+- Yum 下载安装包及对应依赖包
+- Zsh 入门
+- SSH（Secure Shell）介绍
+- FTP（File Transfer Protocol）介绍
+- VPN（Virtual Private Network）介绍
+- NFS（Network FileSystem）介绍
+- NTP（Network Time Protocol）介绍
+- Samba 介绍
+- Crontab 介绍
+- Iptables 介绍
+- 花生壳-安装介绍
+- VMware 克隆 CentOS 后网卡信息修改
+- JDK 安装
+- SVN 安装和配置
+- Tomcat 安装和配置、优化
+- Jenkins 安装和配置
+- Maven 安装和配置
+- Nexus 安装和配置
+- Mysql 安装和配置
+- Redis 安装和配置
+- Jira 安装和配置
+- Jenkins 安装和配置
+- TeamCity 安装和配置
+- Nginx 安装和配置
+- 黑客入侵检查
 
 ## 下一步(Next)
 
-*   Apache 安装和配置
-*   FastDFS 安装和配置
-*   Zookeeper 安装和配置
-*   Solr 服务安装和配置
-*   ActiveMQ 服务安装和配置
-*   RabbitMQ 服务安装和配置
-*   GitLab 安装和配置
-*   Zabbix 安装和配置
-*   Nagios 安装和配置
-*   Docker 安装和配置
-*   ShadowSocks 安装和配置
-*   Tmux 安装和配置
-*   VIM 学习和配置
-*   sed 学习
-*   常用脚本
+- Apache 安装和配置
+- FastDFS 安装和配置
+- Zookeeper 安装和配置
+- Solr 服务安装和配置
+- ActiveMQ 服务安装和配置
+- RabbitMQ 服务安装和配置
+- GitLab 安装和配置
+- Zabbix 安装和配置
+- Nagios 安装和配置
+- Docker 安装和配置
+- ShadowSocks 安装和配置
+- Tmux 安装和配置
+- VIM 学习和配置
+- sed 学习
+- 常用脚本
 
 ## 联系(Contact)
 
-*   Email：judas.n@qq.com（常用） or admin@youmeek.com（备用）
-*   Blog：[`code.YouMeek.com`](http://code.YouMeek.com)
-*   欢迎捐赠 ^_^：[`www.youmeek.com/donate`](http://www.youmeek.com/donate)
+- Email：judas.n@qq.com（常用） or admin@youmeek.com（备用）
+- Blog：[`code.YouMeek.com`](http://code.YouMeek.com)
+- 欢迎捐赠 ^_^：[`www.youmeek.com/donate`](http://www.youmeek.com/donate)
 
 ## Gtihub 协同视频教程(Participate)
 
-*   如果您不会使用 Git 或是 Github 也没关系，请认真学习下面视频教程：
-*   Judas.n 录制
-    *   视频格式：MP4
-    *   分辨率：1920 X 1080
-    *   片长：16 min
-    *   文件大小：62 M
-*   下载
-    *   百度云盘：[`pan.baidu.com/s/1bogmTLd`](http://pan.baidu.com/s/1bogmTLd)
-    *   360 网盘（2fb5）：[`yunpan.cn/cYez7W9xnHs3c`](https://yunpan.cn/cYez7W9xnHs3c)
+- 如果您不会使用 Git 或是 Github 也没关系，请认真学习下面视频教程：
+- Judas.n 录制
+  - 视频格式：MP4
+  - 分辨率：1920 X 1080
+  - 片长：16 min
+  - 文件大小：62 M
+- 下载
+  - 百度云盘：[`pan.baidu.com/s/1bogmTLd`](http://pan.baidu.com/s/1bogmTLd)
+  - 360 网盘（2fb5）：[`yunpan.cn/cYez7W9xnHs3c`](https://yunpan.cn/cYez7W9xnHs3c)
 
 ## Github 常用按钮说明
 
-*   Watch：关注该项目，作者有更新的时候，会在你的 Github 主页有通知消息。
-*   Star：收藏该项目，在你的头像上有一个“Your stars”链接，可以看到你的收藏列表。
-*   Fork：复制一份项目到的 Github 空间上，你可以自己开发自己的这个地址项目，然后 Pull Request 给项目原主人。
+- Watch：关注该项目，作者有更新的时候，会在你的 Github 主页有通知消息。
+- Star：收藏该项目，在你的头像上有一个“Your stars”链接，可以看到你的收藏列表。
+- Fork：复制一份项目到的 Github 空间上，你可以自己开发自己的这个地址项目，然后 Pull Request 给项目原主人。
 
 ## 参与作者汇总(Author)
 
@@ -95,16 +96,6 @@
 | Judas.n | [`code.YouMeek.com`](http://code.YouMeek.com) |
 
 # Linux 介绍
-
-* * *
-
-*   Linux 介绍
-    *   Linux 这个名字
-    *   Linux 的发行版本
-    *   Linux 作用
-    *   推荐的发行版本
-
-* * *
 
 ## Linux 这个名字
 
@@ -124,8 +115,8 @@ Linux 也称：`GNU/Linux`，而其中 GNU 的全称又是：`Gnu’s Not Unix`�
 
 类 Unix 系统，除了我们今天要讲的 Linux，还有大家熟知的 Mac OS X、FreeBSD（这两个是直接从 Unix 系发展过来的，所以相对 Linux 是比较地道的类 Unix 系统）
 
-*   FreeBSD 介绍：[`zh.wikipedia.org/zh/FreeBSD`](http://zh.wikipedia.org/zh/FreeBSD)
-*   Mac OS X 介绍：[`zh.wikipedia.org/wiki/OS_X`](http://zh.wikipedia.org/wiki/OS_X)
+- FreeBSD 介绍：[`zh.wikipedia.org/zh/FreeBSD`](http://zh.wikipedia.org/zh/FreeBSD)
+- Mac OS X 介绍：[`zh.wikipedia.org/wiki/OS_X`](http://zh.wikipedia.org/wiki/OS_X)
 
 ## Linux 的发行版本
 
@@ -135,17 +126,17 @@ Linux 的 Wiki 中有这句话：
 
 **通过上面这句话我做了总结，我个人觉得应该这样分：**
 
-*   Fedora、RHEL、Centos 是一个系，他们的区别：[`blog.csdn.net/tianlesoftware/article/details/5420569`](http://blog.csdn.net/tianlesoftware/article/details/5420569)
-*   Debian、Ubuntu 是一个系的，他们的区别直接看 Ubuntu 的 Wiki 就可以得知：[`zh.wikipedia.org/zh/Ubuntu`](http://zh.wikipedia.org/zh/Ubuntu)
-*   ArchLinux 自己一个系：[`zh.wikipedia.org/wiki/Arch_Linux`](http://zh.wikipedia.org/wiki/Arch_Linux)
-*   openSUSE 自己一个系：[`zh.wikipedia.org/wiki/OpenSUSE`](http://zh.wikipedia.org/wiki/OpenSUSE)
+- Fedora、RHEL、Centos 是一个系，他们的区别：[`blog.csdn.net/tianlesoftware/article/details/5420569`](http://blog.csdn.net/tianlesoftware/article/details/5420569)
+- Debian、Ubuntu 是一个系的，他们的区别直接看 Ubuntu 的 Wiki 就可以得知：[`zh.wikipedia.org/zh/Ubuntu`](http://zh.wikipedia.org/zh/Ubuntu)
+- ArchLinux 自己一个系：[`zh.wikipedia.org/wiki/Arch_Linux`](http://zh.wikipedia.org/wiki/Arch_Linux)
+- openSUSE 自己一个系：[`zh.wikipedia.org/wiki/OpenSUSE`](http://zh.wikipedia.org/wiki/OpenSUSE)
 
 **根据用途可以再总结：**
 
-*   Fedora 系业界一般用于做服务器
-*   Debian 系业界一般用于桌面，移动端，TV 这一类
-*   ArchLinux 系，很轻量的 Linux，适合有一定 Linux 基础，并且爱折腾的人使用，用它做桌面或是服务器都行。
-*   OpenSuse 系，嘛，嗯…人气相对比较差，一般是服务器。
+- Fedora 系业界一般用于做服务器
+- Debian 系业界一般用于桌面，移动端，TV 这一类
+- ArchLinux 系，很轻量的 Linux，适合有一定 Linux 基础，并且爱折腾的人使用，用它做桌面或是服务器都行。
+- OpenSuse 系，嘛，嗯…人气相对比较差，一般是服务器。
 
 其实 Linux 的发行版本有太多了，我也只是简单说下常见的而已，具体可以看：[`zh.wikipedia.org/wiki/Linux%E5%8F%91%E8%A1%8C%E7%89%88%E5%88%97%E8%A1%A8`](http://zh.wikipedia.org/wiki/Linux%E5%8F%91%E8%A1%8C%E7%89%88%E5%88%97%E8%A1%A8)
 
@@ -169,27 +160,25 @@ Linux 的 Wiki 中有这句话：
 
 **推荐版本：Ubuntu kylin 15.10**
 
-*   Ubuntu kylin 官网：[`cn.Ubuntu.com/desktop`](http://cn.Ubuntu.com/desktop)
-*   Ubuntu 英文官网：[`www.ubuntu.com`](http://www.ubuntu.com)
-*   Ubuntu 中文官网：[`www.ubuntu.org.cn`](http://www.ubuntu.org.cn)
-*   网易镜像：[`mirrors.163.com/ubuntu-releases/`](http://mirrors.163.com/ubuntu-releases/)
-*   阿里云镜像：[`mirrors.aliyun.com/ubuntu-releases/`](http://mirrors.aliyun.com/ubuntu-releases/)
-*   Ubuntu kylin 15.10 **64 位**镜像地址：[`cdimage.ubuntu.com/ubuntukylin/releases/15.10/release/ubuntukylin-15.10-desktop-amd64.iso`](http://cdimage.ubuntu.com/ubuntukylin/releases/15.10/release/ubuntukylin-15.10-desktop-amd64.iso)
+- Ubuntu kylin 官网：[`cn.Ubuntu.com/desktop`](http://cn.Ubuntu.com/desktop)
+- Ubuntu 英文官网：[`www.ubuntu.com`](http://www.ubuntu.com)
+- Ubuntu 中文官网：[`www.ubuntu.org.cn`](http://www.ubuntu.org.cn)
+- 网易镜像：[`mirrors.163.com/ubuntu-releases/`](http://mirrors.163.com/ubuntu-releases/)
+- 阿里云镜像：[`mirrors.aliyun.com/ubuntu-releases/`](http://mirrors.aliyun.com/ubuntu-releases/)
+- Ubuntu kylin 15.10 **64 位**镜像地址：[`cdimage.ubuntu.com/ubuntukylin/releases/15.10/release/ubuntukylin-15.10-desktop-amd64.iso`](http://cdimage.ubuntu.com/ubuntukylin/releases/15.10/release/ubuntukylin-15.10-desktop-amd64.iso)
 
 **推荐理由：**
 
 我们是要在上面做开发的，不是要把他变成生活用机的，所以你认为自己尝试安装各种中文输入法很爽吗？自己尝试让国际 Ubuntu 版变成又一个符合国情的 kylin 很爽吗？真心别折腾这些没用的东西。就像我以前说的，大学老师让 Java 新手使用记事本写代码就是一种非常 shit 行为，不断地在 Windows 上用 `cmd > javac` 是毫无意义的。
 
-* * *
-
 **CentOS：适用于服务器机**
 
 **推荐版本：6.7**
 
-*   CentOS 官网：[`www.centos.org/download/`](http://www.centos.org/download/)
-*   网易镜像：[`mirrors.163.com/centos/`](http://mirrors.163.com/centos/)
-*   阿里云镜像：[`mirrors.aliyun.com/centos/`](http://mirrors.aliyun.com/centos/)
-*   CentOS 6.7 **64 位**镜像地址：[`mirrors.163.com/centos/6.7/isos/x86_64/CentOS-6.7-x86_64-bin-DVD1.iso`](http://mirrors.163.com/centos/6.7/isos/x86_64/CentOS-6.7-x86_64-bin-DVD1.iso)
+- CentOS 官网：[`www.centos.org/download/`](http://www.centos.org/download/)
+- 网易镜像：[`mirrors.163.com/centos/`](http://mirrors.163.com/centos/)
+- 阿里云镜像：[`mirrors.aliyun.com/centos/`](http://mirrors.aliyun.com/centos/)
+- CentOS 6.7 **64 位**镜像地址：[`mirrors.163.com/centos/6.7/isos/x86_64/CentOS-6.7-x86_64-bin-DVD1.iso`](http://mirrors.163.com/centos/6.7/isos/x86_64/CentOS-6.7-x86_64-bin-DVD1.iso)
 
 **推荐理由：**
 

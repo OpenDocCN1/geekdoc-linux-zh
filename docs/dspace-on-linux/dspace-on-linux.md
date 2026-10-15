@@ -1,7 +1,5 @@
+
 # Linux 上的 Dspace
-
-
-
 
 ## Me vs. Dspace
 
@@ -74,7 +72,7 @@ dspace@jesse-desktop:~$ mv /home/dspace/Downloads/hspace-1.5.2-src-release.tar.g
 
 ![](img/81cd45265ffdc1888ff0c46976f30c4c_6_0.png)
 
-现在所有文件都在 source-file 文件夹中，你需要从这里将这些 tar 文件解压到 /home/dspace。
+现在所有文件都在 source-file 文件夹中，你需要从这里将这些 tar 文件解压到 `/home/dspace`。
 
 可以通过输入此命令来完成。
 
@@ -82,7 +80,7 @@ dspace@jesse-desktop:~$ mv /home/dspace/Downloads/hspace-1.5.2-src-release.tar.g
 dspace@jesse-desktop:~$ tar -zxvf /home/dspace/source-files/dspace-1.5.2-src-release.tar.gz -C /home/dspace/
 ```
 
-此命令将 dspace 源文件中的所有文件解压到 /home/dspace 文件夹，你会看到这些内容在你的终端屏幕上运行。
+此命令将 dspace 源文件中的所有文件解压到 `/home/dspace` 文件夹，你会看到这些内容在你的终端屏幕上运行。
 
 ![](img/81cd45265ffdc1888ff0c46976f30c4c_7_0.png)
 
@@ -150,7 +148,7 @@ dspace@jesse-desktop:~$ ls -l
 dspace@jesse-desktop:~$ sudo gedit .bashrc
 ```
 
-此命令将打开你的 dspace 用户可编辑的 .bashrc 文件。在此文件中，将以下行复制到底部
+此命令将打开你的 dspace 用户可编辑的 `.bashrc` 文件。在此文件中，将以下行复制到底部
 
 ```
 JAVA_HOME=/home/dspace/jdk1.6.0_18
@@ -164,6 +162,8 @@ export PATH JAVA_HOME ANT_HOME CATALINA_HOME MVN_HOME
 ![](img/81cd45265ffdc1888ff0c46976f30c4c_11_0.png)
 
 保存并关闭该文件。
+
+
 
 这部分完成。现在我们的下一步是为 postgres SQL 服务器创建数据库。我们从这里开始。
 
@@ -189,7 +189,7 @@ dspace@jesse-desktop:~$ sudo su postgres
 postgres@jesse-desktop:/home/dspace$ createuser -U postgres -d -A -P dspace
 ```
 
-（它会询问密码，输入 dspace（你可以选择自己的密码，但别忘了在 dspace.cfg 文件中输入它 :-) 它会询问新角色是否能够创建新角色，回答"不"）
+（它会询问密码，输入 dspace（你可以选择自己的密码，但别忘了在 `dspace.cfg` 文件中输入它 :-) 它会询问新角色是否能够创建新角色，回答"不"）
 
 ![](img/81cd45265ffdc1888ff0c46976f30c4c_13_0.png)
 
@@ -211,7 +211,7 @@ dspace@jesse-desktop:~$ createdb -U dspace -E UNICODE dspace
 dspace@jesse-desktop:~$ sudo gedit /etc/postgresql/8.4/main/pg_hba.conf
 ```
 
-（添加这行 **host dspace dspace 127.0.0.1 255.255.255.255 md5**）
+（添加这行 `host dspace dspace 127.0.0.1 255.255.255.255 md5`）
 
 对于 postgresQL 最新版本，用“trust”替换“ident sameuser”
 
@@ -225,27 +225,24 @@ dspace@jesse-desktop:~$ sudo gedit /etc/postgresql/8.4/main/pg_hba.conf
 dspace@jesse-desktop:~$ sudo gedit /etc/postgresql/8.4/main/postgresql.conf
 ```
 
-通过删除开头的 # 来取消注释 **listen localhost** 这一行。
+通过删除开头的 `#` 来取消注释 `listen localhost` 这一行。
 
 ![](img/81cd45265ffdc1888ff0c46976f30c4c_15_0.png)
 
 保存并退出
 
-现在编辑 space.cfg 文件：这个文件非常重要，因为在此文件中还要进行许多配置。
+现在编辑 `space.cfg` 文件：这个文件非常重要，因为在此文件中还要进行许多配置。
 
 ```
 dspace@jesse-desktop:~$ cd /home/dspace/dspace-1.5.2-src-release/dspace/config/
 dspace@jesse-desktop:~/dspace-1.5.2-src-release/dspace/config$ sudo gedit dspace.cfg
 ```
 
-在此文件中定义了 webapps 文件夹的路径。你需要将路径更改为 /home/dspace。
+在此文件中定义了 webapps 文件夹的路径。你需要将路径更改为 `/home/dspace`。
 
-dspace.dir = /dspace
-dspace.dir = /home/dspace (如果你在这里路径写错，它不会在 /home/dspace 中创建 webapp 文件夹)
+`dspace.dir = /dspace`
 
-
-
-
+`dspace.dir = /home/dspace` （如果你在这里路径写错，它不会在 `/home/dspace` 中创建 webapp 文件夹）
 
 ![](img/81cd45265ffdc1888ff0c46976f30c4c_16_0.png)
 
@@ -255,13 +252,13 @@ dspace.dir = /home/dspace (如果你在这里路径写错，它不会在 /home/d
 dspace.url= http://localhost:8080/ispui
 ```
 
-## 站点名称
+### 站点名称
 
 ```
 dspace.name = Dspace at my university
 ```
 
-## 数据库用户名和密码
+### 数据库用户名和密码
 
 ```
 db.username = ${default.db.username}
@@ -270,9 +267,9 @@ db.password = ${default.db.password}
 #db.password = dspace (dspace is default passwd if u will change passwd at the time of creation of database,than u have to change here also).
 ```
 
-## 邮件设置
+### 邮件设置
 
-## SMTP 邮件服务器
+### SMTP 邮件服务器
 
 ```
 mail.server= <your smtp mail server> (I left this place blank as I don't have any email server running on my local network this time)
@@ -288,7 +285,7 @@ feedback.recipient = <your Email ID> (here you can put your email id if you are 
 
 现在差不多完成了。我们只需要编译并为 Dspace 目录创建 webapps 文件夹。
 
-打开终端窗口，并输入以下命令以 **运行 maven**
+打开终端窗口，并输入以下命令以 `运行 maven`
 
 ```
 sh
@@ -298,11 +295,11 @@ dspace@jesse-desktop:~/dspace-1.5.2-src-release/dspace$ mvn package
 
 （这可能需要一些时间，因为该命令将下载并安装所有必需的 maven 软件包。）
 
-等待了这么长时间后，它会向你显示这个屏幕，并在 home/dspace/dspace-1.5.2-src-release/dspace 目录中创建一个 target 文件夹。
+等待了这么长时间后，它会向你显示这个屏幕，并在 `home/dspace/dspace-1.5.2-src-release/dspace` 目录中创建一个 `target` 文件夹。
 
 ![](img/81cd45265ffdc1888ff0c46976f30c4c_17_0.png)
 
-这意味着 Maven 包已成功编译。现在是时候在 dspace 中制作 webapps 了。首先移动到 Dspace 的 target 文件夹，然后是 dspace build.dir，这是在编译 mvn package 时创建的。
+这意味着 Maven 包已成功编译。现在是时候在 dspace 中制作 webapps 了。首先移动到 Dspace 的 target 文件夹，然后是 dspace build.dir，这是在编译 `mvn package` 时创建的。
 
 转到终端窗口并运行此命令，以移动到 target 文件夹中的 dspace build 目录。
 
@@ -311,7 +308,7 @@ sh
 dspace@jesse-desktop:~$ cd /home/dspace/dspace-1.5.2-src-release/dspace/target/dspace-1.5.2-build.dir/
 ```
 
-现在在终端窗口中运行 **ANT FRESH_INSTALL**，输入以下命令。
+现在在终端窗口中运行 `ANT FRESH_INSTALL`，输入以下命令。
 
 ```
 sh
@@ -342,13 +339,15 @@ dspace@jesse-desktop:~$ cp -r /home/dspace/webapps/oai /home/dspace/apache-tomca
 
 ![](img/81cd45265ffdc1888ff0c46976f30c4c_19_0.png)
 
-现在通过输入此命令来 **启动你的 Webserver Tomcat**
+现在通过输入此命令来 `启动你的 Webserver Tomcat`
 
 ```
 dspace@jesse-desktop:~/home/dspace/apache-tomcat-6.0.18/bin/startup.sh
 ```
 
 它将在屏幕上给你以下输出，并且 webserver 将启动。
+
+
 
 ![](img/81cd45265ffdc1888ff0c46976f30c4c_20_0.png)
 
@@ -394,9 +393,9 @@ http://localhost:8080/ispui/password-login
 
 请在以下表格中输入你的电子邮件地址和密码。
 
-电子邮件地址: **jesse@email.ru**
+电子邮件地址: jesse@email.ru
 
-密码: **••••••**
+密码: ••••••
 
 登录
 
@@ -417,4 +416,3 @@ Rupinder singh Dhammu
 IIAS | Shimla
 
 jesse@email.ru
-

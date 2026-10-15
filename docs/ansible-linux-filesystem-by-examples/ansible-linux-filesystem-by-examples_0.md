@@ -1,44 +1,23 @@
+
 # Ansible Linux Filesystem 示例
-
-
-
-
-
-
-
-
-
-
-* * * * * *
 
 这是一本 Leanpub 书籍。Leanpub 通过精益出版流程为作者和出版社赋能。精益出版是指使用轻量级工具和多次迭代来发布进行中的电子书，以获取读者反馈，不断调整直到你获得正确的书籍，并在成功后建立影响力。
 
-* * * * * *
-
-
-
-
-
-
 ## 引言
 
-这本书提供了 `Ansible` 的介绍。`Ansible` 是一种流行的开源工具，可移植且易于使用。它是适用于广泛领域的自动化工具。无论你何时开始接触自动化，本书的目标是让你快速掌握核心知识。你将从在 `RedHat`、`Ubuntu` 和 `macOS` 上安装 `Ansible` 开始。100+ 节中的每一个都总结了一个模块。
+这本书提供了`Ansible`的介绍。`Ansible`是一种流行的开源工具，可移植且易于使用。它是适用于广泛领域的自动化工具。无论你何时开始接触自动化，本书的目标是让你快速掌握核心知识。你将从在`RedHat`、`Ubuntu`和`macOS`上安装`Ansible`开始。100+节中的每一个都总结了一个模块。
 
 ## 谁是 Luca Berton
 
 我是 Luca Berton，我们将过得很愉快。首先，让我介绍一下我自己。
 
-我是 Red Hat 的 `Ansible` 技术支持工程师，居住在捷克，尽管我是意大利人。我有超过 15 年的系统管理经验，涉及本地基础设施以及主要的云提供商。
+我是 Red Hat 的`Ansible`技术支持工程师，居住在捷克，尽管我是意大利人。我有超过 15 年的系统管理经验，涉及本地基础设施以及主要的云提供商。
 
 我是开源的热衷爱好者，通过在不同的公开活动中分享知识来支持社区。我还是家乡 Linux 用户小组的联合创始人，该小组曾接待过自由软件运动的创始人 Richard Stallman。
 
-我认为自己是一个懒人，所以我总是尝试新方法来自动化工作中的重复性任务。在使用了多年 `Perl`、`Bash` 和 `python` 脚本后，我接触了 `Ansible` 技术。我通过了认证并与 `Ansible` 工程师团队工作了一多年。
+我认为自己是一个懒人，所以我总是尝试新方法来自动化工作中的重复性任务。在使用了多年`Perl`、`Bash`和`python`脚本后，我接触了`Ansible`技术。我通过了认证并与`Ansible`工程师团队工作了一多年。
 
-我认为 `Ansible` 是目前最好的基础设施自动化技术，它具有可读性，学习曲线容易，且非常受市场招聘人员的青睐。
-
-
-
-
+我认为`Ansible`是目前最好的基础设施自动化技术，它具有可读性，学习曲线容易，且非常受市场招聘人员的青睐。
 
 - [Red Hat Ansible Playbook 包含于 RHSB-2021-009 Log4Shell - 远程代码执行 - log4j (CVE-2021-44228) 2022 年 1 月 12 日](https://access.redhat.com/security/vulnerabilities/RHSB-2021-009#diagnose)
 - [AWS Tip 设置 sysctl 内核参数 — Ansible 模块 sysctl 2022 年 1 月 12 日](https://awstip.com/set-sysctl-kernel-parameters-ansible-module-sysctl-83fc2b3f77f)
@@ -58,7 +37,7 @@
 
 在本章中，我将向你解释什么是 Ansible，以及为什么它对你的 IT 部门如此强大。
 
-## Ansible
+### Ansible
 
 基础设施自动化工具
 
@@ -66,7 +45,7 @@
 
 首先，让我们从名为 Ansible 的极出开源技术开始我们的冒险。它被归类为基础设施自动化工具，因此你可以轻松地自动化你的系统管理员任务。基础设施即代码是指通过机器可读的定义文件来管理和配置计算机数据中心的过程，而不是通过物理硬件配置或交互式配置工具。Ansible 遵循 DevOps 原则。通过 Ansible，你可以在本地以及最知名的公共云服务提供商处部署你的基础设施即代码。
 
-## Ansible 的三个用例
+### Ansible 的三个用例
 
 - 资源准备 (Provision)
 - 配置管理 (Config management)
@@ -74,25 +53,25 @@
 
 Ansible 的三个主要用例是资源准备、配置管理和应用部署。但在接触这项技术后，我确定你还可以发明更多使用它的方法！
 
-### 资源准备 (Provisioning)
+#### 资源准备 (Provisioning)
 
 设置 IT 基础设施的过程
 
 让我们开始谈谈资源准备：所有的系统管理员都知晓管理统一机器集群有多重要。有些人仍然依赖软件来创建工作站镜像。但这样做有一个缺点，使用镜像技术你只是获取了机器在某一时间点的快照。因此，每当你因为现代密钥激活系统需要重新安装软件，或者需要手动更新到最新的安全补丁时，Ansible 在自动化这一过程方面非常强大，能够创建一个更流畅的过程。
 
-### 配置管理 (Configuration management)
+#### 配置管理 (Configuration management)
 
 将系统和软件维护在所需且一致状态的过程
 
 第二个关键用例是“配置管理”：以更新且一致的方式维护你的整个集群，协调滚动更新并调度停机时间。通过 Ansible，你可以验证受托管主机的状态，并对其中一小部分主机采取操作。对于最常用的用例，有大量的模块可用。更不用说检查你的集群是否符合某些国际标准并应用解决方案的这种常见用例了。
 
-### 应用部署 (Application deployment)
+#### 应用部署 (Application deployment)
 
 在测试、暂存和生产环境之间发布软件的过程
 
 Ansible 有用的第三个关键用例是应用部署。它可以自动化你的 Web 应用的持续集成/持续交付 (CI/CD) 工作流流水。你的 DevOps 团队会非常高兴的！
 
-## DevOps 中的 Ansible
+### DevOps 中的 Ansible
 
 Ansible 用于在全球范围内组织中应用 DevOps 原则。让我快速总结一下。
 
@@ -106,29 +85,27 @@ DevOps 是一系列结合软件开发 (Dev) 和 IT 运营 (Ops) 的实践。由�
 - 运行 (Operate)：基础设施配置和管理、基础设施即代码工具。
 - 监控 (Monitor)：应用性能监控、终端用户体验。
 
-## Ansible 的四个核心原则
+### Ansible 的四个核心原则
 
 1. **声明式 (Declarative)**：你声明你想要什么，而不是如何实现。
-2. **无代理 (Agentless)**：你不需要安装代理。它利用了 `OpenSSH`。
+2. **无代理 (Agentless)**：你不需要安装代理。它利用了`OpenSSH`。
 3. **幂等性 (Idempotent)**：操作可以运行多次，而不会产生初始操作之外的变化。
 4. **社区驱动 (Community driven)**：以集合和（和）的形式发布在 Ansible Galaxy 中。
 
-Ansible 的四个核心原则是：声明式、无代理、幂等和社区驱动。“对于声明式”意味着你可以以一种非常类似于编程语言的方式使用它，在代码流中应用顺序、选择和迭代。“无代理”意味着你不需要在目标机器上安装和更新任何代理，它使用 `SSH` 连接和 Python 解释器。语言本身是“幂等”的，这意味着代码将检查受托管机器上的精确状态。这意味着，例如，你的代码第一次运行时会更改某些内容，随后的运行仅会验证没有变化并继续进行。最后一个原则是“社区驱动”，意味着存在一个公共平台 Ansible Galaxy，你可以在那里以集合和角色的形式发布内容。
-
-
-
-
+Ansible 的四个核心原则是：声明式、无代理、幂等和社区驱动。“对于声明式”意味着你可以以一种非常类似于编程语言的方式使用它，在代码流中应用顺序、选择和迭代。“无代理”意味着你不需要在目标机器上安装和更新任何代理，它使用`SSH`连接和 Python 解释器。语言本身是“幂等”的，这意味着代码将检查受托管机器上的精确状态。这意味着，例如，你的代码第一次运行时会更改某些内容，随后的运行仅会验证没有变化并继续进行。最后一个原则是“社区驱动”，意味着存在一个公共平台 Ansible Galaxy，你可以在那里以集合和角色的形式发布内容。
 
 2015 年 10 月 16 日，红帽（Red Hat）收购了 Ansible Inc，并将 Ansible 评估为“强大的 IT 自动化解决方案”，旨在帮助企业迈向无缝 IT。
 
 AnsibleFest 是自 2016 年以来在伦敦和美国举办的 Ansible 用户及贡献者社区年度会议。
 
-# Ansible & Ansible Tower & Ansible Automation Platform
+## Ansible & Ansible Tower & Ansible Automation Platform
 
-## Ansible
+### Ansible
+
 社区驱动的项目，创新快速，是开源的，但仅提供命令行工具。
 
-## Red Hat Ansible Tower / Ansible Automation Platform
+### Red Hat Ansible Tower / Ansible Automation Platform
+
 这是一个由红帽公司设计的框架。它提供了一个 Web UI 来管理您的基础设施。
 
 Ansible 是一个社区驱动的项目，创新快速，开源的，但仅提供命令行工具。
@@ -140,68 +117,83 @@ Ansible Tower 是一个 REST API、Web 服务和基于 Web 的控制台，旨在
 红帽还维护 Ansible Engine。通过 Ansible Engine，组织可以以加固的企业级方式访问底层 Ansible 技术提供的工具和创新。Ansible Engine 由红帽开发，明确意图是作为企业 IT 平台使用。
 
 # 入门
+
 在本章节中，我将为您解释如何使用 Ansible 技术迈出第一步。如何连接到托管主机以及如何使用命令行执行一些任务。
 
 ## Ansible 架构
+
 让我们开始讨论 Ansible 架构。实际安装 Ansible 的节点被称为“控制节点”（control node），它管理您所有的节点组。另一方面，被节点被称为“托管节点”（managed node）。目标节点可以是 Linux、Mac、Windows 以及多种网络设备。每个目标都有某些特殊性，例如不同的 Linux 发行版和模块用法。我们将在后续章节中讨论这些特殊性。
 
 ## 与托管节点的连接
-“控制节点”与“托管节点”之间的连接通过 SSH 协议管理，对目标机器不需要任何特定的客户端。其他竞争对手需要通常被称为“代理”（agent）的客户端软件。使用 SSH 连接，唯一的要求是用于访问目标机器用户名和证书。还有一些方法可以自动化这第一个脚本步骤。在完成 SSH 连接后，另一个要求是 `python` 解释器，现代操作系统自带该。默认情况下，Ansible 使用 SFTP 传输文件，但您可以在配置中切换到 SCP。Windows 目标可以使用 WinRM 技术连接，并使用 PowerShell 作为解释器。
+
+“控制节点”与“托管节点”之间的连接通过 SSH 协议管理，对目标机器不需要任何特定的客户端。其他竞争对手需要通常被称为“代理”（agent）的客户端软件。使用 SSH 连接，唯一的要求是用于访问目标机器用户名和证书。还有一些方法可以自动化这第一个脚本步骤。在完成 SSH 连接后，另一个要求是`python`解释器，现代操作系统自带该。默认情况下，Ansible 使用 SFTP 传输文件，但您可以在配置中切换到 SCP。Windows 目标可以使用 WinRM 技术连接，并使用 PowerShell 作为解释器。
 
 ## 创建基础清单
+
 `/etc/ansible/hosts`
 
 ```
 host1.example.com
 ```
-默认清单文件 `/etc/ansible/hosts`
 
-“host1.example.com” 是一个托管主机
+默认清单文件`/etc/ansible/hosts`
 
-托管主机列表存储在 `/etc/ansible/hosts` 中。在本示例中，它只包含一个名为 `host1.example.com` 的主机。
+“host1.example.com”是一个托管主机
+
+托管主机列表存储在`/etc/ansible/hosts`中。在本示例中，它只包含一个名为`host1.example.com`的主机。
 
 ## 运行您的第一个 Ansible 命令
+
 ```bash
 $ ansible all -m ping 2 host1.example.org | SUCCESS => { 3     "ansible_facts": { 4         "discovered_interpreter_python": "/usr/bin/python" 5     }, 6     "changed": false, 7     "ping": "pong" 8 }
 ```
-`ping` 模块在所有“all”主机上执行
+
+`ping`模块在所有“all”主机上执行
 
 “host1.example.com”以成功代码回复
 
-现在我们准备好运行您的第一个 Ansible 命令了。在 Ansible 术语中，命令被称为模块（module）。第一行在所有主机上执行 Ansible `ping` 模块。响应是 pong。请注意，这意味着 Ansible 能够通过 SSH 用户名连接，使用公钥识别并执行本地 python 执行器。因此，它与网络中的任何 ping 完全不同。
+现在我们准备好运行您的第一个 Ansible 命令了。在 Ansible 术语中，命令被称为模块（module）。第一行在所有主机上执行 Ansible`ping`模块。响应是 pong。请注意，这意味着 Ansible 能够通过 SSH 用户名连接，使用公钥识别并执行本地 python 执行器。因此，它与网络中的任何 ping 完全不同。
 
 ## 在 Ansible 上运行即时命令
+
 ```bash
 $ ansible all -a “/bin/echo hello” 2 host1.example.org | CHANGED | rc=0 >> 3 hello
 ```
-`/bin/echo hello` 命令在所有“all”主机上执行
+
+`/bin/echo hello`命令在所有“all”主机上执行
 
 “host1.example.com”以更改代码回复并在标准输出上打印“hello”
 
-Ansible 也可以在目标主机执行某些命令并在“控制节点”控制台上报告状态。在本示例中，`/bin/echo hello` 命令在所有“all”主机上执行。“host1.example.com”以更改代码回复并在标准输出上打印“hello”。请注意，每当您在远程机器上运行命令时，都会收到“changed”（已更改）状态。
+Ansible 也可以在目标主机执行某些命令并在“控制节点”控制台上报告状态。在本示例中，`/bin/echo hello`命令在所有“all”主机上执行。“host1.example.com”以更改代码回复并在标准输出上打印“hello”。请注意，每当您在远程机器上运行命令时，都会收到“changed”（已更改）状态。
 
 ## 在 Ansible 上运行带权限提升的即时命令
+
 ```bash
 $ ansible all -m ping -u devops --become 2 host1.example.org | SUCCESS => { 3     "ansible_facts": { 4         "discovered_interpreter_python": "/usr/bin/python" 5     }, 6     "changed": false, 7     "ping": "pong" 8 }
 ```
-以用户“devops”登录后，以用户“root”身份在所有“all”主机上执行 `ping` 模块
+
+以用户“devops”登录后，以用户“root”身份在所有“all”主机上执行`ping`模块
 
 “host1.example.com”以更改代码回复并在标准输出上打印“hello”
 
-在本示例中，我在以用户“devops”登录后，以用户“root”身份对“all”主机运行 `ping` 模块。（注：此处原文可能误写为 hello）
+在本示例中，我在以用户“devops”登录后，以用户“root”身份对“all”主机运行`ping`模块。（注：此处原文可能误写为 hello）
 
 ## 总结
+
 在本模块中，我们学习了 Ansible 架构的基本概念、如何编写托管主机列表以及如何对它执行某些命令。
 
 # 清单
+
 在本章节中，我将向您解释什么是 Ansible 清单、为什么需要以及如何编辑和使用。
 
 由 Ansible 管理的多主机列表被称为“清单”（inventory）。从根本上说，它是节点或主机的集合，使用列表或组。您可以通过“组”或“模式”组织您的清单以选择要运行的主机。
 
 “all”关键字
-`all` 关键字包含清单中的所有主机。例外是需要指定的 localhost。
+
+`all`关键字包含清单中的所有主机。例外是需要指定的 localhost。
 
 ## 简单的 INI 清单
+
 `/simple_inventory`
 
 ```
@@ -211,15 +203,17 @@ host1.example.com
 two.example.com
 three.example.com
 ```
+
 文件名：`simple_inventory`
 
 “host1.example.com”未分组
 
 “two.example.com”和“three.example.com”被分在“webservers”
 
-简单的清单类型是 INI 清单，取决于文件类型。默认位置是 `/etc/ansible/hosts`，但您可以使用 `-i` 参数自定义。在本示例中，`host1.example.com` 未分组，`two.example.com` 和 `three.example.com` 被分为“webservers”。
+简单的清单类型是 INI 清单，取决于文件类型。默认位置是`/etc/ansible/hosts`，但您可以使用`-i`参数自定义。在本示例中，`host1.example.com`未分组，`two.example.com`和`three.example.com`被分为“webservers”。
 
 ## 简单的 YAML 清单
+
 `/simple_yaml_inventory.yml`
 
 ```yaml
@@ -233,15 +227,17 @@ all:
         two.example.com:
         three.example.com:
 ```
+
 文件名：`inventory.yml`
 
 “host1.example.com”未分组
 
 “two.example.com”和“three.example.com”被分在“webservers”
 
-您可以使用 YAML 语法表达相同的清单。在本示例中，`host1.example.com` 未分组，`two.example.com` 和 `three.example.com` 被分为“webservers”。
+您可以使用 YAML 语法表达相同的清单。在本示例中，`host1.example.com`未分组，`two.example.com`和`three.example.com`被分为“webservers”。
 
 ## 添加主机范围
+
 `/ini_range_inventory`
 
 ```
@@ -251,15 +247,12 @@ www[01:99].example.com
 [databases]
 db-[a-f].example.com
 ```
-“webservers”组包含从 `www01.example.com` 到 `www99.example.com` 的所有主机
 
-“databases”组包含从 `db-a.example.com` 到 `db-f.example.com` 的所有主机，
+“webservers”组包含从`www01.example.com`到`www99.example.com`的所有主机
 
+“databases”组包含从`db-a.example.com`到`db-f.example.com`的所有主机
 
-
-
-
-也可以使用数字或字母范围来定义组成员。在数字范围中，你还可以指定步长，即一组数字之间的增量。在上面的 INI 示例中，“webservers”组包含了从 `www01.example.com` 到 `www99.example.com` 的所有主机。“databases”组包含了从 `db-a.example.com` 到 `db-f.example.com` 的所有主机。
+也可以使用数字或字母范围来定义组成员。在数字范围中，你还可以指定步长，即一组数字之间的增量。在上面的 INI 示例中，“webservers”组包含了从`www01.example.com`到`www99.example.com`的所有主机。“databases”组包含了从`db-a.example.com`到`db-f.example.com`的所有主机。
 
 ## 多个组中的主机
 
@@ -269,9 +262,11 @@ db-[a-f].example.com
 1 one.example.com 2 3 [webservers] 4 two.example.com 5 three.example.com 6 7 [prod] 8 two.example.com 9 10 [dev] 11 three.example.com
 ```
 
-主机 `two.example.com` 和 `three.example.com` 存在于多个组中
+主机`two.example.com`和`three.example.com`存在于多个组中
 
-主机可以存在于多个组。在这个 INI 示例中，主机 `two.example.com` 和 `three.example.com` 被归类为 `webserver`。`two.example.com` 同时存在于 `webserver` 和 `prod` 组中。
+主机可以存在于多个组。在这个 INI 示例中，主机`two.example.com`和`three.example.com`被归类为`webserver`。`two.example.com`同时存在于`webserver`和`prod`组中。
+
+
 
 `three.example.com` 存在于 `webserver` 和 `dev` 组。
 
@@ -280,25 +275,38 @@ db-[a-f].example.com
 `./ini_hostinventory`
 
 ```ini
-1 [webservers] 2 localhost  ansible_connection=local 3 one.example.com ansible_connection=ssh ansible_user=devops 4 two.example.com ansible_connection=ssh ansible_user=ansible\ 5 le
+[webservers]
+localhost ansible_connection=local
+one.example.com ansible_connection=ssh ansible_user=devops
+two.example.com ansible_connection=ssh ansible_user=ansible
 ```
 
-`ansible_connection` 和 `ansible_user` 变量的自定义
+### `ansible_connection` 和 `ansible_user` 变量的自定义
 
-在清单中，你可能想要与特定主机或组相关的变量值。这种场景很常见，因为它定义了与不同主机不同的连接。例如，对 localhost 使用 `local` 连接，对所有其他主机使用默认的 `ssh` 连接。对于每个主机，你还可以自定义登录用户，如 `one.example.com` 使用 `devops`，`two.example.com` 使用 `ansible`。
+在清单中，你可能想要与特定主机或组相关的变量值。这种场景很常见，因为它定义了与不同主机不同的连接。例如，对 `localhost` 使用 `local` 连接，对所有其他主机使用默认的 `ssh` 连接。对于每个主机，你还可以自定义登录用户，如 `one.example.com` 使用 `devops`，`two.example.com` 使用 `ansible`。
 
 ## 组变量
 
 `./ini_groupsvariables_inventory`
 
 ```ini
-1 [webservers] 2 one.example.com 3 two.example.com 4 5 [webservers:vars] 6 ntp_server=europe.pool.ntp.org
+[webservers]
+one.example.com
+two.example.com
+
+[webservers:vars]
+ntp_server=europe.pool.ntp.org
 ```
 
 `./inventory.yml`
 
 ```yaml
-1 --- 2 webservers: 3   hosts: 4     two.example.com: 5     three.example.com: 6   vars: 7     ntp_server: europe.pool.ntp.org
+---
+webservers:
+  hosts:
+    two.example.com:
+  vars:
+    ntp_server: europe.pool.ntp.org
 ```
 
 与单主机一样，组也可以定义组变量。在示例的这两个清单文件（INI 和 YAML 格式）中，变量 `ntp_server` 为该组的所有主机分配了值 `europe.pool.ntp.org`。
@@ -308,13 +316,35 @@ db-[a-f].example.com
 `./ini_variableinheriting_inventory`
 
 ```ini
-1 [asia] 2 host1.example.com 3 4 [europe] 5 host2.example.com 6 7 [webserver:children] 8 asia 9 europe 10 11 [webservers:vars] 12 ntp_server=europe.pool.ntp.org
+[asia]
+host1.example.com
+
+[europe]
+host2.example.com
+
+[webserver:children]
+asia
+europe
+
+[webservers:vars]
+ntp_server=europe.pool.ntp.org
 ```
 
 `./variableinheriting_inventory.yml`
 
 ```yaml
-1 --- 2 children: 3   webservers:     4     children: 5       asia: 6         hosts: 7           host1.example.com: 8       europe: 9         hosts: 10           host2.example.com: 11     vars: 12       ntp_server: europe.pool.ntp.org
+---
+children:
+  webservers:
+    children:
+      asia:
+        hosts:
+          host1.example.com:
+      europe:
+        hosts:
+          host2.example.com:
+    vars:
+      ntp_server: europe.pool.ntp.org
 ```
 
 主机和组可以组合在一起。在这个示例中，`webserver` 组有两个成员 `asia` 和 `europe`。这两个元素分别被定义为单个主机 `host1.example.com` 和 `host2.example.com`，但也可以包含更多主机。`ntp_server` 变量定义在 `webservers` 级别。因此，最后 `ntp_server` 变量对于 `webserver`、`asia` 和 `europe` 组可用。`ntp_server` 变量在 `host1.example.com` 和 `host2.example.com` 主上也可用。
@@ -329,12 +359,12 @@ $ ansible-playbook playbook.yml -i production -i development
 
 每次执行都可以使用多个清单文件。在这个示例中，将针对 `production` 和 `development` 清单执行名为 `playbook.yml` 的 ansible playbook。
 
-## localhost 清单
+## `localhost` 清单
 
 `./ini_local_inventory`
 
 ```ini
-1 localhost ansible_connection="local"
+localhost ansible_connection="local"
 ```
 
 文件名：`inventory`
@@ -347,27 +377,27 @@ $ ansible-playbook playbook.yml -i production -i development
 
 现在你对 Ansible INI 和 YAML 清单文件、主机和组变量有了更多的了解。
 
-## Playbook
+# Playbook
 
 在本章中，我将向你解释什么是 Ansible Playbook 以及你为什么需要它。我们将涵盖如何从一个简单的 playbook 开始，包括从基础语法到操作方法。
 
 ## YAML 语法
 
 ```yaml
-1 ---
-2 - name: Hello World sample
-3   hosts: all
-4   tasks:
-5     - name: Hello message
-6       ansible.debug:
-7         msg: "Hello World!"
+---
+- name: Hello World sample
+  hosts: all
+  tasks:
+    - name: Hello message
+      ansible.debug:
+        msg: "Hello World!"
 ```
 
 这是 `helloworld.yml` 执行的输出。我想说明的是使用的命令是 `ansible-playbook`。第一个参数是清单文件，第二个参数是 playbook。
 
 在此执行中，play 针对 `host1.example.com` 节点运行。输出非常清晰。当命令成功时，输出将以绿色显示。警告将以橙色显示，错误将以红色显示。大多数人会注意到名为 `Gathering Facts` 的额外任务，这是 Ansible 执行的获取托管节点信息的操作。我们将在下一节中讨论更多关于收集事实（facts）的内容。尝试运行这段代码并对这种输出建立信心。
 
-## ansible-playbook --check 选项
+## `ansible-playbook --check` 选项
 
 ```bash
 $ ansible-playbook -i inventory --check helloworld.yml
@@ -394,16 +424,12 @@ host1.example.com              : ok=2    changed=0    unreachable=0    failed=0 
 
 `ansible-playbook` 命令中一个非常有用的 `--check` 选项。该选项用于对 playbook 执行进行空运行（dry run）。会导致 Ansible 报告如果执行 playbook 会发生哪些更改，但不会对托管主机进行任何实际更改。
 
-
-
-
-
-# `helloworld_debug.yml`
+## `helloworld_debug.yml`
 
 ```yaml
 ---
-- name: Hello World sample 
-  hosts: all 
+- name: Hello World sample
+  hosts: all
   tasks:
     - name: Hello message
       debug:
@@ -427,20 +453,20 @@ host1.example.com              : ok=2    changed=0    unreachable=0    failed=0 
 
 ```bash
 ansible-playbook -i inventory helloworld_debug.yml
-PLAY [Hello World sample] *******************************\
-***********************************************************************\
-*********** 
- 
+PLAY [Hello World sample] *******************************
+***********************************************************************
+***********
+
 TASK [Gathering Facts] *****************************************
-************************************************************************\
-******** 
-ok: [host1.example.com] 
- 
+************************************************************************
+********
+ok: [host1.example.com]
+
 TASK [Hello message] ************************************
-************************************************************************\
-****** 
-skipping: [host1.example.com] 
- 
+************************************************************************
+******
+skipping: [host1.example.com]
+
 PLAY RECAP **********************************************
 *****************************************************
 host1.example.com      : ok=1    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
@@ -450,19 +476,19 @@ host1.example.com      : ok=1    changed=0    unreachable=0    failed=0    skipp
 
 ```bash
 $ ansible-playbook -i inventory -vv helloworld_debug.yml
-PLAY [Hello World sample] *******************************\
-***********************************************************************\
-*********** 
+PLAY [Hello World sample] *******************************
+***********************************************************************
+***********
 TASK [Gathering Facts] *****************************************
-************************************************************************\
-******** 
-ok: [host1.example.com] 
+************************************************************************
+********
+ok: [host1.example.com]
 TASK [Hello message] ************************************
-************************************************************************\
-****** 
-ok: [host1.example.com] => { 
-     "msg": "Hello World!" 
- } 
+************************************************************************
+******
+ok: [host1.example.com] => {
+     "msg": "Hello World!"
+ }
 PLAY RECAP **********************************************
 *****************************************************
 host1.example.com      : ok=2    changed=0    unreachable=0    failed=0    skipped=1    rescued=0    ignored=0
@@ -470,7 +496,7 @@ host1.example.com      : ok=2    changed=0    unreachable=0    failed=0    skipp
 
 这是 `helloworld_debug.yml` 在调试级别二模式执行下的输出，请注意命令行中的两个“V”。如你所见，hello 消息被打印了。
 
-## 等幂性 (Idempotency)
+## 等幂性（Idempotency）
 
 `idempotency` 模块检查期望的最终状态是否已经实现，否则进行应用。
 
@@ -480,8 +506,8 @@ host1.example.com      : ok=2    changed=0    unreachable=0    failed=0    skipp
 
 ```yaml
 ---
-- name: first play 
-  hosts: web.example.com 
+- name: first play
+  hosts: web.example.com
   tasks:
     - name: first task
       ansible.builtin.yum:
@@ -491,8 +517,8 @@ host1.example.com      : ok=2    changed=0    unreachable=0    failed=0    skipp
       ansible.builtin.service:
         name: httpd
         enabled: true
-- name: second play 
-  hosts: database.example.com 
+- name: second play
+  hosts: database.example.com
   tasks:
     - name: first task
       ansible.builtin.service:
@@ -510,9 +536,9 @@ host1.example.com      : ok=2    changed=0    unreachable=0    failed=0    skipp
 
 ```yaml
 ---
-- name: install httpd 
-  hosts: web.example.com 
-  become: true 
+- name: install httpd
+  hosts: web.example.com
+  become: true
   tasks:
     - name: first task
       ansible.builtin.yum:
@@ -523,16 +549,18 @@ host1.example.com      : ok=2    changed=0    unreachable=0    failed=0    skipp
 `privilegeescalation.yml`
 
 `become` 指定了
+
 `become_method` 指定了
+
 `become_user` 指定了 `root`
 
 `wheel` 组。在本例中需要 `root`。某些 `sudo` 操作需要该权限。
 
-## 总结 (Recap)
+## 总结（Recap）
 
 在本模块中，我们为后续的 `Ansible` 操作奠定了基础。继续努力，你很快就能自动化所有的系统管理员任务。
 
-## 变量 (Variables)
+# 变量（Variables）
 
 在本章中，我将为你解释什么是 `Ansible` 变量、你为什么需要它们、不同类型以及如何在日常工作中编辑和使用它们。
 
@@ -554,37 +582,46 @@ host1.example.com      : ok=2    changed=0    unreachable=0    failed=0    skipp
 
 ## 常用 Ansible 模块
 
-文件模块
-- `copy`: 将本地文件复制到托管主机
-- `fetch`: 从远程节点复制文件到本地
-- `file`: 设置权限和其他属性
-- `lineinfile`: 确保文件中存在或不存在特定行
-- `synchronize`: 使用 `rsync` 同步内容
+### 文件模块
 
-软件包模块
-- `package`: 使用自动检测的操作系统管理器管理包
-- `yum`: 使用 YUM 包管理器管理包
-- `apt`: 使用 APT 包管理器管理包
-- `dnf`: 使用 DNF 包管理器管理包
-- `gem`: 管理 Ruby 宝石包
-- `pip`: 管理来自 PyPI 的 Python 包
+- `copy`：将本地文件复制到托管主机
+- `fetch`：从远程节点复制文件到本地
+- `file`：设置权限和其他属性
+- `lineinfile`：确保文件中存在或不存在特定行
+- `synchronize`：使用 `rsync` 同步内容
 
-系统模块
-- `firewalld`: 管理任意端口和服务 own
-- `reboot`: 重启机器
-- `service`: 管理服务
-- `user`: 添加、删除和管理用户账户
+### 软件包模块
 
-网络工具模块
-- `get_url`: 通过 HTTP、HTTPS 和 FTP 下载文件
-- `nmcli`: 管理网络
-- `uri`: 与网络服务交互
+- `package`：使用自动检测的操作系统管理器管理包
+- `yum`：使用 YUM 包管理器管理包
+- `apt`：使用 APT 包管理器管理包
+- `dnf`：使用 DNF 包管理器管理包
+- `gem`：管理 Ruby 宝石包
+- `pip`：管理来自 PyPI 的 Python 包
+
+### 系统模块
+
+- `firewalld`：管理任意端口和服务 own
+- `reboot`：重启机器
+
+
+
+## 网络模块
+
+- `service`：管理服务
+- `user`：添加、删除和管理用户账户
+
+### 网络工具模块
+
+- `get_url`：通过 HTTP、HTTPS 和 FTP 下载文件
+- `nmcli`：管理网络
+- `uri`：与网络服务交互
 
 ## `variableprint.yml`
 
 ```yaml
 ---
-- name: Variable print sample 
+- name: Variable print sample
   hosts: all
   vars:
     fruit: "apple"
@@ -601,57 +638,54 @@ host1.example.com      : ok=2    changed=0    unreachable=0    failed=0    skipp
 - 模块 `ansible.builtin.debug`
 - 模块 `ansible.builtin.debug` 的参数 `msg`
 
-
-
-
 `variableprint.yml` playbook 与 `helloworlds.yml` playbook 类似。除了存在变量 `fruit` 之外，其语法和元素结构非常相似。变量用于存储字符串、数字以及更复杂的数据结构（如列表、字典等）。在此情况下，变量名为 `fruit`，值为 `apple`。在此情况下，`debug` 模块将文本“Print the value of variable”与变量 `fruit` 的值拼接在一起。请注意双括号，它表示变量的值。最佳实践是始终在代码中的双引号内包含双括号。
 
-### variableprint.yml - 执行
+### `variableprint.yml`：执行
 
 ```bash
-1 $ ansible-playbook -i inventory variableprint.yml 2 PLAY [Variable print sample] ****************************\ 
-3 *********************** 
-4 
-5 TASK [Gathering Facts] **********************************\ 
-6 *********************** 
-7 ok: [host1.example.com] 
-8 
-9 TASK [Print variable] ***********************************\ 
-10 *********************** 
-11 ok: [host1.example.com] => { 
-12     "msg": "Print the value of variable apple" 
-13 } 
-14 
-15 PLAY RECAP **********************************************\
-16 *********************** 
-17 host1.example.com  : ok=2    changed=0    unreachable=0  \ 
+1 $ ansible-playbook -i inventory variableprint.yml
+2 PLAY [Variable print sample] ****************************
+3 ***********************
+4
+5 TASK [Gathering Facts] **********************************
+6 ***********************
+7 ok: [host1.example.com]
+8
+9 TASK [Print variable] ***********************************
+10 ***********************
+11 ok: [host1.example.com] => {
+12     "msg": "Print the value of variable apple"
+13 }
+14
+15 PLAY RECAP **********************************************
+16 ***********************
+17 host1.example.com  : ok=2    changed=0    unreachable=0
 18 failed=0    skipped=0    rescued=0    ignored=0
 ```
 
 这是 `variableprint.yml` 的执行输出，与 `helloworld.yml` 文件的输出非常相似。请注意组合字符串与变量值得到的消息“Print the value of variable apple”。此外，如你在 play recap 区域和绿色字体所示，该执行是成功的。正在执行两个任务。
 
-### variableprint.yml - 额外变量
+### `variableprint.yml`：额外变量
 
 ```bash
-1 $ ansible-playbook -i inventory  -e fruit=banana  variabl\ 
-2 eprint.yml 
-3 PLAY [Variable print sample] ****************************\ 
-4 *********************** 
-5 
-6 TASK [Gathering Facts] **********************************\ 
-7 *********************** 
-8 ok: [host1.example.com] 
-9 
-10 TASK [Print variable] ***********************************\ 
-11 *********************** 
-12 ok: [host1.example.com] => { 
-13     "msg": "Print the value of variable banana" 
-14 } 
-15 
-16 PLAY RECAP **********************************************\
-17 *********************** 
-18 host1.example.com  : ok=2    changed=0    unreachable=0  \ 
-19 failed=0    skipped=0    rescued=0    ignored=0
+1 $ ansible-playbook -i inventory -e fruit=banana variableprint.yml
+2 PLAY [Variable print sample] ****************************
+3 ***********************
+4
+5 TASK [Gathering Facts] **********************************
+6 ***********************
+7 ok: [host1.example.com]
+8
+9 TASK [Print variable] ***********************************
+10 ***********************
+11 ok: [host1.example.com] => {
+12     "msg": "Print the value of variable banana"
+13 }
+14
+15 PLAY RECAP **********************************************
+16 ***********************
+17 host1.example.com  : ok=2    changed=0    unreachable=0
+18 failed=0    skipped=0    rescued=0    ignored=0
 ```
 
 你可以通过命令行指定值来覆盖 playbook 变量。在命令行设置的变量被称为额外变量（extra variables）。
@@ -660,41 +694,49 @@ host1.example.com      : ok=2    changed=0    unreachable=0    failed=0    skipp
 
 ### 主机变量与组变量
 
-#### inventory_host_variables
+#### `inventory_host_variables`
+
 ```ini
-1 [servers] 
+1 [servers]
 2 host1.example.com ansible_user=devops
 ```
 
-#### inventory_group_variables
+#### `inventory_group_variables`
+
 ```ini
-1 [servers] 
-2 host1.example.com 
-3 host2.example.com 
-4 
-5 [servers:vars] 
+1 [servers]
+2 host1.example.com
+3 host2.example.com
+4
+5 [servers:vars]
 6 user=alice
 ```
 
 主机变量和组变量可以定义在你的清单文件中。在左侧列你可以看到主机变量的示例。变量 `ansible_user` 被赋值为 `devops`。该主机变量适用于 `host1.example.com`。在右侧列你看到一个组变量的示例。变量 `user` 被赋值为 `alice`。该组变量将以相同的值适用于 `host1.example.com` 和 `host2.example.com`。
 
-#### inventory_host_dir
+#### `inventory_host_dir`
+
 ```ini
-1 [servers] 
+1 [servers]
 2 host1.example.com
 ```
-#### host_vars/demo1.example.com
+
+#### `host_vars/demo1.example.com`
+
 ```ini
 1 ansible_user=devops
 ```
 
-#### inventory_group_dir
+#### `inventory_group_dir`
+
 ```ini
-1 [servers] 
-2 host1.example.com 
+1 [servers]
+2 host1.example.com
 3 host2.example.com
 ```
-#### group_vars/servers
+
+#### `group_vars/servers`
+
 ```ini
 1 user=alice
 ```
@@ -703,269 +745,96 @@ host1.example.com      : ok=2    changed=0    unreachable=0    failed=0    skipp
 
 ### 数组变量
 
-#### array.yml
-```yaml
-1 --- 
-2 - name: Array sample 
-3   hosts: all 
-4   vars: 
-5     users: 
-6       alice: 
-7         firstname: Alice 
-8         homedir: /users/alice 
-9       bob: 
-10        firstname: Bob 
-11        homedir: /users/alice
-```
-```yaml
-1 --- 
-2 - name: Array sample 
-3   hosts: all 
-4   vars: 
-5     users: 
-6       alice: 
-7         firstname: Alice 
-8         homedir: /users/alice 
-9       bob: 
-10        firstname: Bob 
-11        homedir: /users/alice
-```
-让我正确格式化提供的文本块：
-```yaml
-1 --- 
-2 - name: Array sample 
-3   hosts: all 
-4   vars: 
-5     users: 
-6       alice: 
-7         firstname: Alice 
-8         homedir: /users/alice 
-9       bob: 
-10        firstname: Bob 
-11        homedir: /users/alice
-```
-实际上，查看源码：
-```yaml
-1 --- 
-2 - name: Array sample 
-3   hosts: all 
-4   vars: 
-5     users: 
-6       alice: 
-7         firstname: Alice 
-8         homedir: /users/alice 
-9       bob: 
-10        firstname: Bob 
-11        homedir: /users/alice
-```
-等待，源码是：
-```yaml
-1 --- 
-2 - name: Array sample 
-3   hosts: all 
-4   vars: 
-5     users: 
-6       alice: 
-7         firstname: Alice 
-8         homedir: /users/alice 
-9       bob: 
-10        firstname: Bob 
-11        homedir: /users/alice
-```
-让我重新解析它：
-```yaml
-1 --- 
-2 - name: Array sample 
-3   hosts: all 
-4   vars: 
-5     users: 
-6       alice: 
-7         firstname: Alice 
-8         homedir: /users/alice 
-9       bob: 
-10        firstname: Bob 
-11        homedir: /users/alice
-```
-等待，文本还包含：
-```yaml
-1 --- 
-2 - name: Array sample 
-3   hosts: all 
-4   vars: 
-5     users: 
-6       alice: 
-7         firstname: Alice 
-8         homedir: /users/alice 
-9       bob: 
-10        firstname: Bob 
-11        homedir: /users/alice
-```
-然后：
-```yaml
-1 --- 
-2 - name: Array sample 
-3   hosts: all 
-4   vars: 
-5     users: 
-6       alice: 
-7         firstname: Alice 
-8         homedir: /users/alice 
-9       bob: 
-10        firstname: Bob 
-11        homedir: /users/alice
-```
-等待，我会清晰地格式化内容：
-```yaml
-1 --- 
-2 - name: Array sample 
-3   hosts: all 
-4   vars: 
-5     users: 
-6       alice: 
-7         firstname: Alice 
-8         homedir: /users/alice 
-9       bob: 
-10        firstname: Bob 
-11        homedir: /users/alice
-```
-实际上，提供的源码是：
-```yaml
-1 --- 
-2 - name: Array sample 
-3   hosts: all 
-4   vars: 
-5     users: 
-6       alice: 
-7         firstname: Alice 
-8         homedir: /users/alice 
-9       bob: 
-10        firstname: Bob 
-11        homedir: /users/alice
-```
-让我将其视为一个块：
-```yaml
-1 --- 
-2 - name: Array sample 
-3   hosts: all 
-4   vars: 
-5     users: 
-6       alice: 
-7         firstname: Alice 
-8         homedir: /users/alice 
-9       bob: 
-10        firstname: Bob 
-11        homedir: /users/alice
-```
-等待，文本还说：
-```yaml
-1 --- 
-2 - name: Array sample 
-3   hosts: all 
-4   vars: 
-5     users: 
-6       alice: 
-7         firstname: Alice 
-8         homedir: /users/alice 
-9       bob: 
-10        firstname: Bob 
-11        homedir: /users/alice
-```
-这是提示中的重复内容。我将提供干净的版本。
+#### `array.yml`
 
-数组是非常有用的数据结构。你可以按层次级结构组织信息。在示例中它易读：
 ```yaml
-1 --- 
-2 - name: Array sample 
-3   hosts: all 
-4   vars: 
-5     users: 
-6       alice: 
-7         firstname: Alice 
-8         homedir: /users/alice 
-9       bob: 
-10        firstname: Bob 
-11        homedir: /users/alice
+---
+- name: Array sample
+  hosts: all
+  vars:
+    users:
+      alice:
+        firstname: Alice
+        homedir: /users/alice
+      bob:
+        firstname: Bob
+        homedir: /users/alice
 ```
-等待，文本是：
-```yaml
-1 --- 
-2 - name: Array sample 
-3   hosts: all 
-4   vars: 
-5     users: 
-6       alice: 
-7         firstname: Alice 
-8         homedir: /users/alice 
-9       bob: 
-10        firstname: Bob 
-11        homedir: /users/alice
-```
-让我们直接使用内容。
 
-### array.yml - 执行
+数组是非常有用的数据结构。你可以按层次级结构组织信息。在示例中它易读。
+
+### `array.yml`：执行
 
 ```bash
-1 $ ansible-playbook -i inventory array.yml 2 PLAY [Array sample] *********************************\ 
-3 *********************** 
-4 
-5 TASK [Gathering Facts] **********************************\ 
-6 *********************** 
-7 ok: [host1.example.com] 
-8 
-9 TASK [Print Alice's firstname] *************************\ 
-10 *********************** 
-11 ok: [host1.example.com] => { 
-12     "msg": "Print Alice's firstname: Alice" 
-13 } 
-14 
-15 PLAY RECAP **********************************************\
-16 *********************** 
-17 host1.example.com  : ok=2    changed=0    unreachable=0  \ 
+1 $ ansible-playbook -i inventory array.yml
+2 PLAY [Array sample] *********************************
+3 ***********************
+4
+5 TASK [Gathering Facts] **********************************
+6 ***********************
+7 ok: [host1.example.com]
+8
+9 TASK [Print Alice's firstname] *************************
+10 ***********************
+11 ok: [host1.example.com] => {
+12     "msg": "Print Alice's firstname: Alice"
+13 }
+14
+15 PLAY RECAP **********************************************
+16 ***********************
+17 host1.example.com  : ok=2    changed=0    unreachable=0
 18 failed=0    skipped=0    rescued=0    ignored=0
 ```
 
-这是 `array.yml` 的执行输出，与上一个相似。你可以注意到“Print Alice’s firstname: Alice”的输出。Ansible 访问了数组变量并并预期在输出消息中显示。
+这是 `array.yml` 的执行输出，与上一个相似。你可以注意到“Print Alice’s firstname: Alice”的输出。Ansible 访问了数组变量并预期在输出消息中显示。
 
 ### 注册变量
 
-#### registeredvariables.yml
+#### `registeredvariables.yml`
+
+
+
 ```yaml
-1 --- 
-2 - name: Installs a package and prints the result 
-3   hosts: all 
-4   become: true 
-5   tasks: 
-6     - name: Install the package 
-7       ansible.builtin.yum: 
-8        name: wget 
-9        state: installed 
-10     register: install_result 
-11 
-12     - name: debug 
-13       ansible.builtin.debug: 
-14         var: install_result
+- name: Installs a package and prints the result
+  hosts: all
+  become: true
+  tasks:
+    - name: Install the package
+      ansible.builtin.yum:
+        name: wget
+        state: installed
+      register: install_result
+    - name: debug
+      ansible.builtin.debug:
+        var: install_result
 ```
-将标准输出存储在变量 `install_result` 中，也可以打印。
+
+将标准输出存储在变量`install_result`中，也可以打印。
 
 另一种非常有用的数据结构是注册变量。你可以将任何命令的输出保存到注册变量中。在本示例中，它将打印在屏幕上。
 
-
-
-
 ```bash
-1 ansible-playbook -i inventory registeredvariables.yml
-2 PLAY [Installs a package and prints the result] *********\ 3 *********************************************************\ 4 ************************************************************** 5 TASK [Gathering Facts] **********************************\ 6 ******************************************************* 7 ok: [host1.example.com] 8 TASK [Install the package] ******************************\ 9 ******************************************************* 10 ok: [host1.example.com] 11 TASK [debug] ********************************************\ 12 ******************************************************* 13 ok: [host1.example.com] => { 
-14     "install_result": { 
-15         "changed": false, 
-16         "failed": false, 
-17         "msg": "Nothing to do", 
-18         "rc": 0, 
-19         "results": [] 
-20     } 
-21 } 22 PLAY RECAP *************************************************\ 23 ******************************************************* 24 host1.example.com          : ok=3    changed=0    unreachable\ 25 able=0    failed=0    skipped=0    rescued=0    ignored=0
+ansible-playbook -i inventory registeredvariables.yml
+PLAY [Installs a package and prints the result] *********
+TASK [Gathering Facts] **********************************
+ok: [host1.example.com]
+TASK [Install the package] ******************************
+ok: [host1.example.com]
+TASK [debug] ********************************************
+ok: [host1.example.com] => {
+    "install_result": {
+        "changed": false,
+        "failed": false,
+        "msg": "Nothing to do",
+        "rc": 0,
+        "results": []
+    }
+}
+PLAY RECAP *********************************************
+host1.example.com          : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
 
-这是 `registeredvariables.yml` 执行的输出，符合预期。首先，`yum` 模块会检查软件包是否存在，如果缺失则继续安装。设置过程的输出被存储在一个注册变量中，并打印在屏幕上。
+这是`registeredvariables.yml`执行的输出，符合预期。首先，`yum`模块会检查软件包是否存在，如果缺失则继续安装。设置过程的输出被存储在一个注册变量中，并打印在屏幕上。
 
 ## 总结
 
@@ -984,7 +853,7 @@ host1.example.com      : ok=2    changed=0    unreachable=0    failed=0    skipp
 使用此简单命令列出机器的所有 facts：
 
 ```bash
-1 ansible -m setup hostname
+ansible -m setup hostname
 ```
 
 ```json
@@ -1037,108 +906,103 @@ host1.example.com      : ok=2    changed=0    unreachable=0    failed=0    skipp
 }
 ```
 
-理解 facts 的最佳方法是使用这个简单的命令自己列出所有内容。你将对从主机获取的信息量之感到惊讶。例如硬件方面：架构、内存、存储配置。还有更多关于软件的信息：操作系统、所用发行版、IP 地址、网络配置。
+理解 facts 的最佳方法是使用这个简单的命令自己列出所有内容。你将对从主机获取的信息量之大感到惊讶。例如硬件方面：架构、内存、存储配置。还有更多关于软件的信息：操作系统、所用发行版、IP 地址、网络配置。
 
-
-
-
-
-在本模块中，我们将讨论如何使用 `Ansible Vault` 安全地存储任何敏感数据，如密码或 API 密钥。
+在本模块中，我们将讨论如何使用`Ansible Vault`安全地存储任何敏感数据，如密码或 API 密钥。
 
 # Ansible Vault
 
-Ansible Vault 通过对变量和文件进行加密来保护敏感内容，并允许你在 playbooks 或角色中使用它们。Ansible Vault 以加密的方式存储变量和文件，供 playbooks 或角色使用。在较新版本的 Ansible 中，保护文件的加密算法使用的是 `AES 256`。
+Ansible Vault 通过对变量和文件进行加密来保护敏感内容，并允许你在 playbooks 或角色中使用它们。Ansible Vault 以加密的方式存储变量和文件，供 playbooks 或角色使用。在较新版本的 Ansible 中，保护文件的加密算法使用的是`AES 256`。
 
 ## 创建加密文件
 
 ```bash
-$ ansible-vault create secret.yml
+ansible-vault create secret.yml
 New Vault password: password
 Confirm New Vault password: password
-$ ansible-vault create --vault-password-file=vault-password.txt secret1.yml
+ansible-vault create --vault-password-file=vault-password.txt secret1.yml
 ```
 
-创建一个新的加密文件，请使用 `ansible-vault create <filename>` 命令。该命令会提示新的 vault 密码，然后使用默认编辑器打开文件。在这个示例中，使用的密码是 `password`，但我强烈建议你使用尽可能安全的密码。
+创建一个新的加密文件，请使用`ansible-vault create <filename>`命令。该命令会提示新的 vault 密码，然后使用默认编辑器打开文件。在这个示例中，使用的密码是`password`，但我强烈建议你使用尽可能安全的密码。
 
 ## 查看加密文件
 
 ```bash
-$ ansible-vault view secret1.yml
+ansible-vault view secret1.yml
 Vault password: password
 INFERNO. I. Nel mezzo del cammin di nostra vita mi ritrovai per una selva oscura ché la diritta via era smarrita. Ahi quanto a dir qual era è cosa dura esta selva selvaggia e aspra e forte che nel pensier rinova la paura! Tant'è amara che poco è più morte; ma per trattar del ben ch'i' vi trovai, dirò de l'altre cose ch'i' v'ho scorte.
 ```
 
-你可以使用 `ansible-vault view <filename>` 命令来查看 Ansible Vault 加密的文件，而无需打开进行编辑。
+你可以使用`ansible-vault view <filename>`命令来查看 Ansible Vault 加密的文件，而无需打开进行编辑。
 
 ## 编辑现有加密文件
 
 ```bash
-$ ansible-vault edit secret.yml
+ansible-vault edit secret.yml
 Vault password: password
 ```
 
-要编辑已有的加密文件，Ansible Vault 提供了 `ansible-vault edit <filename>` 命令。该命令会将文件解密到临时文件中并允许你进行编辑。保存时，它会复制内容并移除临时文件。
+要编辑已有的加密文件，Ansible Vault 提供了`ansible-vault edit <filename>`命令。该命令会将文件解密到临时文件中并允许你进行编辑。保存时，它会复制内容并移除临时文件。
 
 ## 加密现有文件
 
 ```bash
-$ ansible-vault encrypt cleartext1.yml --output=vault1.yml
+ansible-vault encrypt cleartext1.yml --output=vault1.yml
 New Vault password: password
 Confirm New Vault password: password
 Encryption successful
 ```
 
-要加密一个已经存在的文件，请使用 `ansible-vault encrypt <filename>` 命令。`--output` 选项会将加密文件保存为新名称。如果你省略此选项，原始文件将被加密后的文件覆盖。
+要加密一个已经存在的文件，请使用`ansible-vault encrypt <filename>`命令。`--output`选项会将加密文件保存为新名称。如果你省略此选项，原始文件将被加密后的文件覆盖。
 
 ## 解密现有文件
 
 ```bash
-$ ansible-vault decrypt vault1.yml --output=decrypted.yml
+ansible-vault decrypt vault1.yml --output=decrypted.yml
 Vault password: password
 Decryption successful
 ```
 
-可以使用 `ansible-vault decrypt <filename>` 命令对现有加密文件进行永久解密。在解密单个文件时，可以使用 `--output` 选项以不同的名称保存解密文件。
+可以使用`ansible-vault decrypt <filename>`命令对现有加密文件进行永久解密。在解密单个文件时，可以使用`--output`选项以不同的名称保存解密文件。
 
 ## 修改加密文件的密码
 
 ```bash
-$ ansible-vault rekey secret.yml
+ansible-vault rekey secret.yml
 Vault password: password1
 New Vault password: password
 Confirm New Vault password: password
 Rekey successful
 ```
 
-你可以使用 `ansible-vault rekey <filename>` 命令更改加密文件的密码。该命令可以一次性重置多个数据文件。它会提示原始密码，然后是新密码。
+你可以使用`ansible-vault rekey <filename>`命令更改加密文件的密码。该命令可以一次性重置多个数据文件。它会提示原始密码，然后是新密码。
 
 ## Playbooks 与 Ansible Vault
 
 ```bash
-$ ansible-playbook playbook.yml
+ansible-playbook playbook.yml
 TASK [include_vars] *************************************
-********************************fatal: [localhost]: FAIL
-ED! => {"ansible_facts": {}, "ansible_included_var_files": [], "changed": false, "message": "Attempting to decrypt but no vault secrets found"}
+fatal: [localhost]: FAILED! => {"ansible_facts": {}, "ansible_included_var_files": [], "changed": false, "message": "Attempting to decrypt but no vault secrets found"}
 
-$ ansible-playbook --vault-id @prompt playbook.yml
+ansible-playbook --vault-id @prompt playbook.yml
 Vault password (default): password
 
-$ ansible-playbook --vault-password-file=vault-password.txt playbook.yml
+ansible-playbook --vault-password-file=vault-password.txt playbook.yml
 ```
 
-要运行访问用 Ansible Vault 加密文件的 playbook，你需要向 `ansible-playbook` 命令提供加密密码。如果不提供密码，playbook 将返回错误。要为 playbook 提供 vault 密码，请使用 `--vault-id` 选项。例如，要以交互方式提供 vault 密码，请如图所示使用 `--vault-id @prompt`。或者你也可以使用密码文件。
+要运行访问用 Ansible Vault 加密文件的 playbook，你需要向`ansible-playbook`命令提供加密密码。如果不提供密码，playbook 将返回错误。要为 playbook 提供 vault 密码，请使用`--vault-id`选项。例如，要以交互方式提供 vault 密码，请如图所示使用`--vault-id @prompt`。或者你也可以使用密码文件。
 
 ## 总结
 
-在本模块中，我们探索了 Ansible Vault 安全存储，用于在 Ansible 内部保存秘密和机信息。正如我们看到的，这些工具是稳健的并且完全集成在 Ansible 技术中。
+在本模块中，我们探索了 Ansible Vault 安全存储，用于在 Ansible 内部保存秘密和机密信息。正如我们看到的，这些工具是稳健的并且完全集成在 Ansible 技术中。
 
 # 条件
 
-在本模块中，我将向你解释什么是 Ansible 条件操作，以及你如何在日常的 Ansible Playbook 中它们。
+在本模块中，我将向你解释什么是 Ansible 条件操作，以及你如何在日常的 Ansible Playbook 中使用它们。
 
 条件语句用于检查条件并据此改变程序的行为。
 
-让我们开始吧！为了编写实用的代码，我们几乎总是检查条件并相应改变程序行为的能力。条件语句为我们提供了这种能力。Ansible 的形式是 `when` 语句。Ansible 在条件判断中使用 `Jinja2` 测试和过滤器。Ansible 支持所有标准的测试和过滤器，并添加了一些独特的测试。
+让我们开始吧！为了编写实用的代码，我们几乎总是检查条件并相应改变程序行为的能力。条件语句为我们提供了这种能力。Ansible 的形式是`when`语句。Ansible 在条件判断中使用`Jinja2`测试和过滤器。Ansible 支持所有标准的测试和过滤器，并添加了一些独特的测试。
 
 ## 使用“when” 的基础条件
 
@@ -1157,29 +1021,27 @@ $ ansible-playbook --vault-password-file=vault-password.txt playbook.yml
       when: configure_nginx
 ```
 
-这是你 playbook 中 `when` 语句的示例示例。任务 `reload nginx` 只有在 `configure_nginx` 变量被设置为 `true` 时才会执行。在这个示例中，我们预计该任务将被跳过。
+这是你 playbook 中`when`语句的示例。任务`reload nginx`只有在`configure_nginx`变量被设置为`true`时才会执行。在这个示例中，我们预计该任务将被跳过。
 
 执行：
 
 ```bash
-$ ansible-playbook -i inventory conditional_basic_false.yml
+ansible-playbook -i inventory conditional_basic_false.yml
 PLAY [conditional_basic] *************************************
 
 TASK [Gathering Facts] *************************************
 ok: [localhost]
 
 TASK [reload nginx] ****************************************
-skipping: [localhost] => (when ("configure_nginx" is false)
+skipping: [localhost] => (when "configure_nginx" is false)
 
 PLAY END *************************************************
 
-
-
- RECAP *****************************************************
+RECAP *****************************************************
 localhost                  : ok=1    changed=0    unreachable=0    failed=0    skipped=1
 ```
 
-这是执行 `conditional_basic_false.yml` 的输出。在此执行中，play 针对 `localhost` 节点运行。正如你看到的，根据我们的条件语句，任务 `reload nginx` 被跳过了。
+这是执行`conditional_basic_false.yml`的输出。在此执行中，play 针对`localhost`节点运行。正如你看到的，根据我们的条件语句，任务`reload nginx`被跳过了。
 
 `conditional_basic_true.yml`
 
@@ -1196,9 +1058,11 @@ localhost                  : ok=1    changed=0    unreachable=0    failed=0    s
       when: configure_nginx
 ```
 
-这是你 playbook 中相同的 `when` 语句示例，但我们将变量值从 `false` 改为了 `true`。任务 `reload nginx` 现在将执行，因为 `configure_nginx` 布尔变量被设置为 `true`。
+这是你 playbook 中相同的`when`语句示例，但我们将变量值从`false`改为了`true`。任务`reload nginx`现在将执行，因为`configure_nginx`布尔变量被设置为`true`。
 
 执行：
+
+
 
 ```bash
 $ ansible-playbook -i inventory conditional_basic_true.yml
@@ -1218,11 +1082,7 @@ PLAY END *****************************************************
 localhost                  : ok=2    changed=0    unreachable=0    failed=0    skipped=0
 ```
 
-
-
-
-
-这是 `conditional_basic_true.yml` 执行的输出。在本次执行中，剧本（play）针对 `host1.example.com` 节点执行。输出已以绿色显示。如你所见，任务 `reload ngnx` 被 Ansible 读取并并在我们的条件语句中成功执行。
+这是`conditional_basic_true.yml`执行的输出。在本次执行中，剧本（play）针对`host1.example.com`节点执行。输出已以绿色显示。如你所见，任务`reload ngnx`被 Ansible 读取并并在我们的条件语句中成功执行。
 
 ## 基于 ansible_facts 的条件判断
 
@@ -1240,7 +1100,7 @@ localhost                  : ok=2    changed=0    unreachable=0    failed=0    s
 
 将条件判断（conditionals）与事实（facts）结合是非常有用的。这样你可以根据单个主机的条件、IP 地址、操作系统、文件系统状态等许多因素调整代码的执行。在这个示例中，如果目标系统是 Debian 类系统（即 Debian 和 Ubuntu 管理的主机），我们将执行关机操作。
 
-# 执行
+## 执行
 
 ```bash
 $ ansible-playbook -i inventory conditional_facts.yml
@@ -1257,21 +1117,21 @@ PLAY RECAP **********************************************
 host1.example.com              : ok=1    changed=0 unreachable=0 failed=0    skipped=1 rescued=0 ignored=0
 ```
 
-这是 `conditional_facts.yml` 执行的输出。在本次执行中，剧本针对 `host1.example.com` 节点。目标主机不是 Debian 类系统，因为你可以名为 `Shut down Debian-like systems` 的任务处于 `skipped`（跳过）状态。
+这是`conditional_facts.yml`执行的输出。在本次执行中，剧本针对`host1.example.com`节点。目标主机不是 Debian 类系统，因为你可以名为`Shut down Debian-like systems`的任务处于`skipped`（跳过）状态。
 
 ## 总结
 
 条件判断非常重要，因为它使我们能够创建响应某些事件、条件或 Ansible Facts 的 Ansible Playbook。这些语句是智能 Ansible Playbook 的基础。
 
-## 循环 (Loop)
+# 循环（Loop）
 
 在本章中，我将向你解释什么是 Ansible 循环操作，以及如何在每天的 Ansible Playbook 中使用它们。
 
-### 使用循环自动化重复任务
+## 使用循环自动化重复任务
 
 计算机在自动化重复任务方面非常出色。在不犯错的情况下重复相同或相似的任务，是计算机擅长而人类不擅长的。
 
-一组语句的重复执行被称为迭代（iteration）。Ansible 有几条用于迭代的语句——`loop` 语句和 `with_items` 语句。`with` 语句依赖于插件。
+一组语句的重复执行被称为迭代（iteration）。Ansible 有几条用于迭代的语句——`loop`语句和`with_items`语句。`with`语句依赖于插件。
 
 `loop_simple.yml`
 
@@ -1289,7 +1149,7 @@ host1.example.com              : ok=1    changed=0 unreachable=0 failed=0    ski
         - mariadb
 ```
 
-简单的循环对项列表中的任务进行迭代。`loop` 语句被添加到任务中，并以任务应迭代的项列表作为其值。循环变量 `item` 在每次迭代中遍历当前值。
+简单的循环对项列表中的任务进行迭代。`loop`语句被添加到任务中，并以任务应迭代的项列表作为其值。循环变量`item`在每次迭代中遍历当前值。
 
 `loop_hash_or_dict.yml`
 
@@ -1310,13 +1170,13 @@ host1.example.com              : ok=1    changed=0 unreachable=0 failed=0    ski
           group: root
 ```
 
-循环列表不需要是简单值的列表。在下面的示例中，列表中的每个项实际上是一个哈希（hash）或字典（dictionary）。示例中的每个哈希或字典有两个键，`name` 和 `groups`，当前项循环变量中每个键的值可以分别通过 `item.name` 和 `item.group` 变量获取。
+循环列表不需要是简单值的列表。在下面的示例中，列表中的每个项实际上是一个哈希（hash）或字典（dictionary）。示例中的每个哈希或字典有两个键，`name`和`groups`，当前项循环变量中每个键的值可以分别通过`item.name`和`item.group`变量获取。
 
-## with_* 语句
+## `with_*`语句
 
-*   `with_items`: 类似于用于简单列表的 `loop`、字符串列表或哈希/字典列表。如果提供了列表列表，则会扁平化为列表。
-*   `with_file`: 该关键字需要一个控制节点文件名列表。循环变量 `item` 持有文件的内容。
-*   `with_sequence`: 需要参数根据数值序列生成值列表。
+- `with_items`：类似于用于简单列表的`loop`、字符串列表或哈希/字典列表。如果提供了列表列表，则会扁平化为列表。
+- `with_file`：该关键字需要一个控制节点文件名列表。循环变量`item`持有文件的内容。
+- `with_sequence`：需要参数根据数值序列生成值列表。
 
 `loop_with_items.yml`
 
@@ -1335,17 +1195,17 @@ host1.example.com              : ok=1    changed=0 unreachable=0 failed=0    ski
       loop: "{{ data }}"
 ```
 
-在 `loop_with_items.yml` playbook 中，`data` 是一个字符串列表。
+在`loop_with_items.yml` playbook 中，`data`是一个字符串列表。
 
 ## 总结
 
 循环对于自动化重复任务非常重要。
 
-## 处理器 (Handler)
+# 处理器（Handler）
 
 在本章中，我将向你解释什么是 Ansible Handler，以及你如何在每天的 Ansible Playbook 中使用它们。
 
-### Handler 在变化时运行
+## Handler 在变化时运行
 
 Handler 在必要时非常重要。
 
@@ -1369,15 +1229,15 @@ handlers:
       state: restarted
 ```
 
-`rollingupdate.yml` 由一个任务和一个 handler 组成。`notify` 语句提到了 handler 的名称。更复杂的 playbook 可以有多个 handler，你可以通过名称引用。
+`rollingupdate.yml`由一个任务和一个 handler 组成。`notify`语句提到了 handler 的名称。更复杂的 playbook 可以有多个 handler，你可以通过名称引用。
 
-## 角色 (Role)
+# 角色（Role）
 
 Role 实现了代码复用，Ansible Roles 类似于传统编程世界中的函数。使用 Ansible roles 可以更快速地开发 playbooks 并复用 Ansible 代码。
 
-### Role 目录树
+## Role 目录树
 
-```
+```text
 $ tree user.example
 user.example/
 ├── defaults
@@ -1400,18 +1260,14 @@ user.example/
 
 目录描述：
 
-*   `defaults`: 该目录下的 `main.yml` 文件包含角色变量的默认值，在使用 role 时可以覆盖。这些变量的优先级较低，意在 play 中更改和自定义。
-*   `files`: 此目录包含 role 任务引用的静态文件。
-*   `handlers`: 该目录下的 `main.yml` 文件包含 role 的 handler 定义。
-*   `meta`: 该目录下的 `main.yml` 文件包含关于角色的信息，包括作者、许可证、平台以及可选的角色依赖关系。
-*   `tasks`: 该目录下的 `main.yml` 文件包含 role 的任务定义。
-*   `templates`: 此目录包含 role 任务引用的 Jinja2 模板。
-*   `tests`: 此目录可以包含一个清单和 `test.yml` playbook，用于测试该 role。
-*   `vars`: 该目录下的 `main.yml` 文件定义角色的变量值。通常这些变量用于 role 内部。。这些变量的优先级较高，在 playbook 中使用时并不打算更改。
-
-
-
-
+- `defaults`：该目录下的`main.yml`文件包含角色变量的默认值，在使用 role 时可以覆盖。这些变量的优先级较低，意在 play 中更改和自定义。
+- `files`：此目录包含 role 任务引用的静态文件。
+- `handlers`：该目录下的`main.yml`文件包含 role 的 handler 定义。
+- `meta`：该目录下的`main.yml`文件包含关于角色的信息，包括作者、许可证、平台以及可选的角色依赖关系。
+- `tasks`：该目录下的`main.yml`文件包含 role 的任务定义。
+- `templates`：此目录包含 role 任务引用的 Jinja2 模板。
+- `tests`：此目录可以包含一个清单和`test.yml` playbook，用于测试该 role。
+- `vars`：该目录下的`main.yml`文件定义角色的变量值。通常这些变量用于 role 内部。。这些变量的优先级较高，在 playbook 中使用时并不打算更改。
 
 并不是每个角色都包含所有目录。
 
@@ -1427,7 +1283,8 @@ user.example/
     - role1
     - role2
 ```
-1 个文件名为：`role_simple.yml` 将 `role1` 和 `role2` 应用到所有 `all` 托管主机。
+
+1 个文件名为：`role_simple.yml`将`role1`和`role2`应用到所有`all`托管主机。
 
 `role_vars.yml`
 
@@ -1441,8 +1298,10 @@ user.example/
       var1: value
       var2: value
 ```
-1 个文件名为：`role_vars.yml` 将 `role1` 和 `role2` 应用到所有 `all` 托管主机。
-`Role2` 拥有两个变量参数。
+
+1 个文件名为：`role_vars.yml`将`role1`和`role2`应用到所有`all`托管主机。
+
+`Role2`拥有两个变量参数。
 
 ## 执行顺序
 
@@ -1472,25 +1331,25 @@ user.example/
         msg: Running my handler
 ```
 
-对于 playbook 中的每个 play，任务将按照 `tasks` 列表中的顺序执行。在所有任务执行后，任何被通知的 handler 将被执行。
+对于 playbook 中的每个 play，任务将按照`tasks`列表中的顺序执行。在所有任务执行后，任何被通知的 handler 将被执行。
 
-当一个角色被添加到 play 时，角色的任务会被添加到 `tasks` 列表的开头。如果在 play 中包含了第二个角色，其任务列表将紧接到第一个角色之后。
+当一个角色被添加到 play 时，角色的任务会被添加到`tasks`列表的开头。如果在 play 中包含了第二个角色，其任务列表将紧接到第一个角色之后。
 
-角色 handler 添加到 play 的方式与角色任务添加到 play 的方式相同。每个 play 都定义了一个 `handlers` 列表。角色 handler 首先被添加到 `handlers` 列表中，然后是 play 中 `handlers` 部分定义的任何 handler。在某些场景下，可能需要在执行角色之前执行某些 play 任务。为了支持此类场景，可以为 play 配置 `pre_tasks` 部分。在此部分列出的任何任务都会会在任何角色执行之前执行。如果这些任务中的任何一个通知了 handler，这些 handler 任务将在角色或普通任务之前执行。
+角色 handler 添加到 play 的方式与角色任务添加到 play 的方式相同。每个 play 都定义了一个`handlers`列表。角色 handler 首先被添加到`handlers`列表中，然后是 play 中`handlers`部分定义的任何 handler。在某些场景下，可能需要在执行角色之前执行某些 play 任务。为了支持此类场景，可以为 play 配置`pre_tasks`部分。在此部分列出的任何任务都会会在任何角色执行之前执行。如果这些任务中的任何一个通知了 handler，这些 handler 任务将在角色或普通任务之前执行。
 
-play 还支持 `post_tasks` 关键字。这些任务在 play 的普通任务执行之后，以及它们通知的任何 handler 执行之后运行。
+play 还支持`post_tasks`关键字。这些任务在 play 的普通任务执行之后，以及它们通知的任何 handler 执行之后运行。
 
-## Ansible Galaxy
+# Ansible Galaxy
 
 [`galaxy.ansible.com/`](https://galaxy.ansible.com/)
 
-### 手动从 Ansible Galaxy 安装角色
+## 手动从 Ansible Galaxy 安装角色
 
 ```bash
 $ ansible-galaxy install geerlingguy.redis -p roles/
 ```
 
-### 从 Ansible requirements.yml 安装角色
+## 从 Ansible requirements.yml 安装角色
 
 `requirements.yml`
 
@@ -1503,11 +1362,11 @@ $ ansible-galaxy install geerlingguy.redis -p roles/
 $ ansible-galaxy install -r roles/requirements.yml -p roles
 ```
 
-## Ansible 最佳实践
+# Ansible 最佳实践
 
 遵循 Ansible 最佳实践可以让你代码执行更成功，简化故障排除，并对你的自动化之旅产生积极影响。
 
-### 使用空格
+## 使用空格
 
 在你的 YAML 代码中使用空格而不是制表符（tabs）。在每个块或任务之前添加新行可以使 playbook 易于读。
 
@@ -1542,9 +1401,9 @@ $ ansible-galaxy install -r roles/requirements.yml -p roles
         msg: "httpd succesfully installed"
 ```
 
-### 为每一步分配“名称 (name)”
+## 为每一步分配“名称（name）”
 
-始终为你代码中的每个 Ansible 语句（Ansible Plays、Tasks、Blocks）设置 `name` 参数。
+始终为你代码中的每个 Ansible 语句（Ansible Plays、Tasks、Blocks）设置`name`参数。
 
 例如：
 
@@ -1572,9 +1431,9 @@ $ ansible-galaxy install -r roles/requirements.yml -p roles
         state: latest
 ```
 
-### 为变量使用易读且有意义的名称
+## 为变量使用易读且有意义的名称
 
-变量对于存储参数或保存上一个任务的结果非常重要。使用易读且有意义的名称可以增加团队之间的代码复用率和可读性。使用 `ansible-playbook` 命令的 `extra-vars` 参数在执行时覆盖变量也非常容易。
+变量对于存储参数或保存上一个任务的结果非常重要。使用易读且有意义的名称可以增加团队之间的代码复用率和可读性。使用`ansible-playbook`命令的`extra-vars`参数在执行时覆盖变量也非常容易。
 
 例如：
 
@@ -1587,12 +1446,14 @@ port: 80
 
 **正确**
 
+
+
 ```yaml
 apache_max_keepalive: 25
 apache_port: 80
 ```
 
-### 使用原生 YAML
+## 使用原生 YAML
 
 使用原生 YAML 提高了代码的可读性，并允许你更快、更容易地发现错误。它还允许某些 YAML 校验器和解析器进行校验。
 
@@ -1618,7 +1479,7 @@ apache_port: 80
   notify: restart apache
 ```
 
-### 使用原生模块代替命令
+## 使用原生模块代替命令
 
 始终优先使用原生模块而非命令。原生模块为等幂性而构建，并在执行前内部有业务逻辑验证参数。命令模块（`command`、`shell`、`raw` 和 `script`）很好，但应作为最后手段。
 
@@ -1648,7 +1509,7 @@ apache_port: 80
     gpgkey: https://dl.google.com/linux/linux_signing_key.pub
 ```
 
-### 配置调试消息
+## 配置调试消息
 
 在开发 Ansible 代码时，依靠 `debug` 任务在 playbook 运行时显示变量内容非常有用。然而，在生产环境中过多信息被认为很烦。将 `verbosity` 参数设置为 `2` 可以让你只在需要时看到这些消息。
 
@@ -1671,7 +1532,7 @@ apache_port: 80
   verbosity: 2
 ```
 
-### 以最小权限执行任务
+## 以最小权限执行任务
 
 这是任何安全最佳实践的通用建议，即以最小权限执行任务。在 Ansible 中，你可以在任务级别指定 `become: true`，而不是针对整个 playbook，如果并不是所有任务都需要 root/管理员用户执行。
 
@@ -1713,13 +1574,9 @@ apache_port: 80
       become: true
 ```
 
-### 始终提及“state”参数
+## 始终提及“state”参数
 
 许多模块具有可选的 “state” 参数，并带有某些隐含值。
-
-
-
-
 
 对于“state”，默认值在不同模块之间可能有所不同，某些模块支持多个“state”设置。显式设置 `state: present` 或 `state: absent` 可以让 playbooks（剧本）和 roles（角色）更加清晰。
 
@@ -1735,13 +1592,13 @@ apache_port: 80
 
 什么是 `ansible-core`？什么是 `ansible` 社区包？在 `2.9` 版本之后，Ansible 项目发生了什么？目前 `ansible` 社区包和 `ansible-core` 软件包的概述及使用用例。
 
-## 什么是 ansible-core? 什么是 ansible 社区包？
+### 什么是 ansible-core? 什么是 ansible 社区包？
 
 在 `2.9` 版本之后，Ansible 项目发生了什么？
 
 今天我们将讨论自 2021 年以来发布的 `ansible` 社区包和 `ansible-core` 软件包。
 
-## ansible vs ansible-core
+### ansible vs ansible-core
 
 在 `2.9` 版本之后，ansible 发生了什么？
 
@@ -1752,27 +1609,39 @@ apache_port: 80
 你可以选择以下任何方式来安装 `ansible` 社区包：
 
 - 使用你的操作系统包管理器安装最新发布版本（适用于 Red Hat Enterprise Linux、CentOS、Fedora、Debian 或 Ubuntu）。
+
 - 使用 `pip`（Python 包管理器）安装。
 
-## Ansible 社区包发布周期
+### Ansible 社区包发布周期
 
 Ansible 社区团队通常每年发布两个版本的社区包，采用滞后于 `ansible-core` 发布的灵活发布周期。该周期可以扩展，以便在新版本发布之前，对较大的更改进行适当的实现和测试。请查看 Ansible 路线图获取即将发布的详细信息。在主版本之间，Ansible 团队每三周发布一个新的 Ansible 社区包小版本。小版本发布包含新的向后兼容特性、模块和插件，以及错误修复。
 
 从 2.10 版本开始，Ansible 社区团队保证一次仅维护一个主社区包版本。例如，当 Ansible `5.0.0` 发布时，团队将停止发布新的 `4.x` 版本。社区成员可以根据需要维护较旧版本。
 
-## ansible 社区
+### ansible 社区
+
 - 使用新版本命名（`2.10`，然后是 `3.0.0`）
+
 - 遵循语义化版本规则
+
 - 不使用语义化版本
+
 - 仅维护一个版本
+
 - 包含语言、运行时和选定的 Collections
+
 - 在 Collection 仓库中开发和维护
 
 ### ansible-core（2.10 版本为 `ansible_base`）
+
 - 继续“经典 Ansible”版本命名（`2.11`，然后是 `2.12`）
+
 - 不使用语义化版本
+
 - 维护最新版本加上两个旧版本
+
 - 包含语言、运行时和内置插件
+
 - 在 `ansible/ansible` 仓库中开发和维护
 
 ## ansible-core
@@ -1788,12 +1657,14 @@ Ansible Core 是一个命令行工具，主要用于只想安装他们需要的 
 Ansible core 或 `ansible-core` 是 Ansible 的主要构建模块和架构，包括：
 
 - CLI 工具，如 `ansible-playbook`、`ansible-doc.` 等，用于驱动和与自动化交互。
+
 - Ansible 语言使用 YAML 创建了一套开发 Ansible Playbooks 的规则集，并包括条件、块、包含、循环和其他 Ansible 指令等函数。
+
 - 一个允许通过 Ansible collections 进行扩展的架构框架。
 
 `ansible-core` 大约每半年发布一次新的主版本。
 
-## ansible 社区
+### ansible 社区
 
 `ansible` 社区包提供了 Ansible 2.9 的功能，包含 85 多个拥有数千个模块和插件的 collections。
 
@@ -1812,11 +1683,17 @@ Ansible 社区团队通常每年发布两个版本的社区包，采用滞后于
 ## 链接
 
 - [Ansible 3.0.0 问答](https://www.ansible.com/blog/ansible-3.0.0-qa)
+
 - [发布与维护](https://docs.ansible.com/ansible/devel/reference_appendices/release_and_maintenance.html)
+
 - [安装 Ansible](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html)
+
 - [Ansible 社区日志](https://docs.ansible.com/ansible/devel/reference_appendices/release_and_maintenance.html#ansible-community-changelogs)
+
 - [Ansible Core 文档](https://docs.ansible.com/ansible-core/devel/index.html)
+
 - [pip install ansible-core](https://pypi.org/project/ansible-core/)
+
 - [pip install ansible](https://pypi.org/project/ansible/)
 
 ## 在 RedHat Enterprise Linux (RHEL) 8 上安装 Ansible
@@ -1825,7 +1702,7 @@ Ansible 社区团队通常每年发布两个版本的社区包，采用滞后于
 
 我将向你展示如何使用发行工具在 RHEL 8 内部更方便地安装和维护 Ansible。
 
-## 在 RHEL 8 中安装 Ansible
+### 在 RHEL 8 中安装 Ansible
 
 使用发行工具在 RHEL 8 内部更方便地安装和维护 Ansible。
 
@@ -1835,7 +1712,7 @@ Ansible 社区团队通常每年发布两个版本的社区包，采用滞后于
 
 软件集合由 Red Hat 完全支持并包含在你的订阅计划中。
 
-## 演示
+### 演示
 
 在 RHEL8 中安装最新版本的 Ansible。
 
@@ -1847,11 +1724,7 @@ rhel-8-x86_64-rpms
 5 sudo yum install ansible
 ```
 
-
-
-
-
-```
+```bash
 1 #!/bin/bash
 2 sudo apt update
 3 sudo apt install ansible
@@ -1859,7 +1732,7 @@ rhel-8-x86_64-rpms
 
 代码 PPA
 
-```
+```bash
 1 #!/bin/bash
 2 sudo apt update
 3 sudo apt install software-properties-common
@@ -1872,7 +1745,7 @@ rhel-8-x86_64-rpms
 
 介绍如何使用默认仓库在 Fedora 35 中安装和维护最新版本的 Ansible，并附带实际演示。
 
-## 让我们在 Fedora 35 中安装 Ansible
+### 让我们在 Fedora 35 中安装 Ansible
 
 好消息是，Ansible 包含在默认仓库中，因此你可以使用常规的包管理器轻松安装它。
 
@@ -1880,15 +1753,15 @@ rhel-8-x86_64-rpms
 
 目前可用的最新版本是 2.9。
 
-## 演示
+### 演示
 
-## 如何在 Fedora 中安装最新版本的 Ansible
+### 如何在 Fedora 中安装最新版本的 Ansible
 
-## 代码
+### 代码
 
-## `install-Ansible-Fedora.sh`
+#### `install-Ansible-Fedora.sh`
 
-```
+```bash
 1 #!/bin/bash
 2 $ sudo dnf list available ansible
 3 $ sudo dnf install ansible
@@ -1896,13 +1769,9 @@ rhel-8-x86_64-rpms
 5 $ sudo dnf list ansible
 ```
 
-# 执行
+### 执行
 
-
-
-
-
-# Fedora 安装 Ansible 示例
+### Fedora 安装 Ansible 示例
 
 ```bash
 ssh devops@fedora.example.com
@@ -1924,7 +1793,13 @@ Static hostname: demo.example.com
   Hardware Model: VirtualBox
 ```
 
-## 检查可用软件包
+### 检查可用软件包
+
+
+
+## 检查可用的 Ansible 包
+
+使用 `dnf list available ansible` 命令检查仓库中可用的 Ansible 版本：
 
 ```bash
 [root@demo devops]# dnf list available ansible
@@ -1938,6 +1813,8 @@ ansible.noarch                            2.9.27-1.fc35  updates
 ```
 
 ## 安装 Ansible
+
+使用 `dnf install ansible` 命令安装 Ansible：
 
 ```bash
 [root@demo devops]# dnf install ansible
@@ -2022,6 +1899,8 @@ Complete!
 
 ## 验证安装
 
+安装完成后，可以通过以下命令验证 Ansible 是否正确安装：
+
 ```bash
 [root@demo devops]# rpm -qa | grep ansible
 ansible-2.9.27-1.fc35.noarch
@@ -2040,11 +1919,9 @@ ansible.noarch                            2.9.27-1.fc35  updates
 [root@demo devops]#
 ```
 
-
-
-
-
 ## 执行前
+
+在执行安装操作之前，先确认系统环境。以下是安装前的系统状态：
 
 ```
 ssh devops@fedora.example.com
@@ -2074,6 +1951,8 @@ ansible.noarch                2.9.27-1.fc35                updates
 
 ## 执行后
 
+安装完成后，再次验证系统状态。以下是安装后的检查结果：
+
 ```
 [root@demo devops]# rpm -qa | grep ansible
 ansible-2.9.27-1.fc35.noarch
@@ -2098,27 +1977,40 @@ ansible.noarch                2.9.27-1.fc35                @updates
 
 在 CentOS 9 Stream 中安装最新版本 Ansible 并保持其更新的更简单方法是使用 `DNF` 和 `AppStream` 系统仓库。
 
-## 如何在 CentOS Stream 9 中安装 Ansible
-
 ### 使用系统 AppStream 仓库中的 `ansible-core`
 
-### 使用 Extra Packages for Enterprise Linux - EPEL Next
-适用于 CentOS Stream 9 的额外软件包
+在 CentOS Stream 版本 9 中安装和维护 Ansible 的更简单方法是使用系统的 `AppStream` 仓库。该仓库中提供了 `ansible-core` 软件包，可以通过以下命令安装：
 
-在 CentOS Stream 版本 9 中安装和维护 Ansible 的更简单方法是使用系统的 `AppStream` 仓库。
+```bash
+sudo dnf install ansible-core
+```
+
+### 使用 Extra Packages for Enterprise Linux - EPEL Next
 
 另一种方法是使用额外的 `EPEL Next` 仓库。该仓库由 Fedora 特别小组维护，并管理了一组适用于 CentOS Stream 的高质量额外软件包，类似于 Extra Packages for Enterprise Linux (`EPEL`) —— 针对 Red Hat Enterprise Linux (`RHEL`)、CentOS、Scientific Linux (`SL`) 以及 Oracle Linux (`OL`) 的额外软件包。
+
+要使用 `EPEL Next` 仓库，需要先启用它。以下是适用于 CentOS Stream 9 的额外软件包启用步骤：
+
+```bash
+sudo dnf install epel-release
+sudo dnf install epel-next-release
+```
+
+启用 `EPEL Next` 仓库后，就可以从该仓库安装 Ansible 了：
+
+```bash
+sudo dnf install ansible
+```
 
 ## 链接
 
 - [CentOS Stream 下载](https://www.centos.org/centos-stream/)
+
+
+
 - [EPEL 9 现在已发布](https://communityblog.fedoraproject.org/epel-9-is-now-available/)
 - [介绍 CentOS Stream 9](https://blog.centos.org/2021/12/introducing-centos-stream-9/)
 - [Extra Packages for Enterprise Linux (EPEL)](https://docs.fedoraproject.org/en-US/epel/)
-
-
-
-
 
 # CentOS Stream 9 环境配置与 Ansible 安装
 
@@ -2234,10 +2126,6 @@ jinja2 true = True
 yaml module = True
 ```
 
-
-
-
-
 ## 执行前
 
 ```
@@ -2322,28 +2210,36 @@ wsl --install
 1 Windows PowerShell 2 Copyright (C) Microsoft Corporation. All rights reserved. 3 4 安装最新的 PowerShell 以获取新功能和改进！https://aka.ms/PSWindows 6 7 PS C:\Users\user> wsl --install 8 Installing: Virtual Machine Platform 9 Virtual Machine Platform has been installed. 10 Installing: Windows Subsystem for Linux 11 Windows Subsystem for Linux has been installed. 12 Downloading: WSL Kernel 13 Installing: WSL Kernel 14 WSL Kernel has been installed. 15 Downloading: GUI App Support 16 Installing: GUI App Support 17 GUI App Support has been installed. 18 Downloading: Ubuntu 19 The requested operation is successful. Changes will not be effective until the system is rebooted. 21 PS C:\Users\user>
 ```
 
-
-
-
-
 1. 正在安装，这可能需要几分钟...
+
 2. 请创建一个默认 UNIX 用户账户。用户名 `demo` 不需要与您的 Windows 用户名匹配。
+
 3. 更多信息请访问：https://aka.ms/wslusers
+
 4. 输入新的 UNIX 用户名：`demo`
+
 5. 新密码：
+
 6. 再次输入新密码：
+
 7. `passwd: password updated successfully`（密码更新成功）
+
 8. 安装成功！
+
 9. 要以管理员身份（用户 `"root"`）运行命令，请使用 `sudo <command>`。
+
 10. 详情请参见 `man sudo_root`。
 
 # 欢迎使用 Ubuntu 20.04 LTS (GNU/Linux 4.4.0-22000-Microsoft x86_64)
 
-* 文档：https://help.ubuntu.com
-* 管理：https://landscape.canonical.com
-* 支持：https://ubuntu.com/advantage
+
+
+* 文档：`https://help.ubuntu.com`
+* 管理：`https://landscape.canonical.com`
+* 支持：`https://ubuntu.com/advantage`
 
 ## 系统信息
+
 截至 2022 年 1 月 10 日 周一 16:57:36 UTC
 
 * 系统负载：0.52 | 登录用户：0
@@ -2353,12 +2249,16 @@ wsl --install
 * 进程：7
 
 有 0 个可以立即安装的更新。
+
 这些更新中没有安全更新。
 
 可用更新列表已是一周前的。
+
 检查新更新请运行：`sudo apt update`
 
 此消息每天显示一次。要禁用此消息，请创建 `/home/demo/.hushlogin` 文件。
+
+
 
 ```bash
 demo@demo:~$ sudo su
@@ -2514,10 +2414,7 @@ root@demo:/home/demo# apt list ansible
 Listing... Done
 ansible/focal,now 2.9.6+dfsg-1 all [installed]
 root@demo:/home/demo#
-
-
-
-
+```
 
 # 回顾
 
@@ -2547,20 +2444,6 @@ root@demo:/home/demo#
 
 ## `Install-Ansible-SLES-15-SP3.sh`
 
-```
-1 #!/bin/bash
-2 SUSEConnect --status
-3 SUSEConnect --list-extensions
-4 SUSEConnect -p PackageHub/15.3/x86_64
-5 zypper install ansible
-6 zypper info ansible
-7 ansible --version
-```
-
-# 执行
-
-
-
 
 
 # SLES 环境配置与 Ansible 安装日志
@@ -2572,7 +2455,9 @@ ssh devops@sles.example.com
 devops@sles:~> sudo su
 sles:/home/devops # cat /etc/os-release
 ```
+
 输出内容：
+
 ```text
 NAME="SLES"
 VERSION="15-SP3"
@@ -2588,7 +2473,9 @@ DOCUMENTATION_URL="https://documentation.suse.com/"
 ```bash
 sles:/home/devops # hostnamectl
 ```
+
 输出内容：
+
 ```text
   Static hostname: sles.example.com
   Transient hostname: sles
@@ -2606,7 +2493,9 @@ sles:/home/devops # hostnamectl
 ```bash
 sles:/home/devops # uname -a
 ```
+
 输出内容：
+
 ```text
 Linux sles 5.3.18-57-default #1 SMP Wed Apr 28 10:54:41 UTC 2021 (ba3c2e9) x86_64 x86_64 x86_64 GNU/Linux
 ```
@@ -2616,7 +2505,9 @@ Linux sles 5.3.18-57-default #1 SMP Wed Apr 28 10:54:41 UTC 2021 (ba3c2e9) x86_6
 ```bash
 sles:/home/devops # SUSEConnect --status
 ```
+
 输出内容：
+
 ```json
 [{"identifier":"sle-module-basesystem","version":"15.3","arch":"x86_64","status":"Registered"},{"identifier":"SLES "," "version":"15.3","arch":"x86_64","status":"Registered","regcode":"****************","starts_at":"2021-12-07 00:00:00 UTC","expires_at":"2022-02-07 00:00:00 UTC","subscription_status":"ACTIVE","type":"evaluation"},{"identifier":"sle-module-server-applications","version":"15.3","arch":"x86_64","status":"Registered"}]
 ```
@@ -2624,7 +2515,9 @@ sles:/home/devops # SUSEConnect --status
 ```bash
 sles:/home/devops # zypper refresh
 ```
+
 输出内容：
+
 ```text
 Repository 'SLE-Module-Basesystem15-SP3-Pool' is up to date.
 Repository 'SLE-Module-Basesystem15-SP3-Updates' is up to date.
@@ -2640,12 +2533,14 @@ All repositories have been refreshed.
 ```bash
 sles:/home/devops # zypper search ansible
 ```
+
 结果：未找到匹配项（No matching items found）。
 
 ```bash
 sles:/home/devops # zypper install ansible
 ```
-由于缺少依赖 `python3-coverage`，系统提示需要安装 `ansible-2.9.6-bp153.20`。选择方案 `2` 解决依赖关系。
+
+由于缺少依赖`python3-coverage`，系统提示需要安装`ansible-2.9.6-bp153.20`。选择方案`2`解决依赖关系。
 
 安装的包列表：
 - `ansible`
@@ -2678,7 +2573,9 @@ sles:/home/devops # zypper install ansible
 ```bash
 sles:/home/devops # ansible --version
 ```
+
 输出内容：
+
 ```text
 ansible [2.9.6]
 config file = /etc/ansible/ansible.cfg
@@ -2692,16 +2589,13 @@ version = 3.6.13 (default, Mar 10 2021, 18:30:35)
 ```bash
 sles:/home/devops # zypper info ansible
 ```
+
 详细信息：
 - **Name**: `ansible`
 - **Version**: `2.9.6-bp153.20`
 - **Arch**: noarch
 - **Summary**: 基于 SSH 的配置管理、部署和任务执行系统
-- **Description**: Ansible 是一种极其简单的、模型驱动的配置管理、多节点部署和远程任务执行系统。Ansible 通过 SSH 工作，且不需要在远程节点上安装任何软件或守护进程。扩展模块可以使用任何语言编写，并自动传输到被管理的机器上。
-
-
-
-
+- **Description**: `Ansible`是一种极其简单的、模型驱动的配置管理、多节点部署和远程任务执行系统。`Ansible`通过 SSH 工作，且不需要在远程节点上安装任何软件或守护进程。扩展模块可以使用任何语言编写，并自动传输到被管理的机器上。
 
 ## 执行前
 
@@ -2756,21 +2650,21 @@ sles:/home/devops #
 
 ## 如何使用 PIP 安装 Ansible
 
-如何使用 Python 包管理器 `PIP` 安装 Ansible？
+如何使用 Python 包管理器`PIP`安装 Ansible？
 
-`PIP` 是 Python 的包管理器，它将负责处理所有过程并管理必要的依赖项。它直接负责从 `PyPI` 下载和安装软件包的过程。`PIP` 的设计是独立于操作系统的。
+`PIP`是 Python 的包管理器，它将负责处理所有过程并管理必要的依赖项。它直接负责从`PyPI`下载和安装软件包的过程。`PIP`的设计是独立于操作系统的。
 
 对于总是想要获取最新版本的开发者来说，这是一种解决方案。
 
-另一种方法是使用特定操作系统的包管理器。例如 Linux 下的 `yum`、`DNF` 和 `apt`，以及 macOS 下的 `Homebrew`。
+另一种方法是使用特定操作系统的包管理器。例如 Linux 下的`yum`、`DNF`和`apt`，以及 macOS 下的`Homebrew`。
 
 这种方法更强调稳定性，因此可能没有最新版本。
 
-所以，如果你确实需要 Ansible 的最新版本，我建议你使用 `PIP`。
+所以，如果你确实需要 Ansible 的最新版本，我建议你使用`PIP`。
 
 ## 使用 PIP 安装 Ansible 演示
 
-如何使用 Python 包管理器 `PIP` 安装最新版本的 Ansible。
+如何使用 Python 包管理器`PIP`安装最新版本的 Ansible。
 
 ### PIP 用户
 `install-pip-user.sh`
@@ -2780,6 +2674,7 @@ sles:/home/devops #
 python3 -m pip install --upgrade -user pip
 python3 -m pip install --user ansible
 ```
+
 `install-pip-global.sh`
 
 ### PIP 全局
@@ -2803,7 +2698,7 @@ RHEL 9 AppStream 仓库包含了 Ansible Core 包 (`ansible-core`)。
 
 好消息是，Ansible Core 包 (`ansible-core`) 已默认包含在 RHEL 9 AppStream 仓库中了。
 
-基础自动化不再像以前版本那样额外的仓库（`Ansible Engine` 或 `EPEL`）。
+基础自动化不再像以前版本那样额外的仓库（`Ansible Engine`或`EPEL`）。
 
 然而，对于底层平台的额外支持以及 Core 维护的模块，需要 Ansible Automation Platform 订阅。
 
@@ -2811,10 +2706,6 @@ RHEL 9 AppStream 仓库包含了 Ansible Core 包 (`ansible-core`)。
 
 - [包含在 RHEL 9 AppStream 中的 Ansible Core 包的支持范围](https://access.redhat.com/articles/6325611)
 - [在 RHEL 9 中使用 Ansible](https://access.redhat.com/articles/6393321)
-
-
-
-
 
 # 系统登录与基础信息
 
@@ -2859,8 +2750,11 @@ CPE OS Name: cpe:/o:redhat:enterprise_linux:9::baseos
 Kernel: Linux 5.14.0-39.el9.x86_64
 Architecture: x86-64
 Hardware Vendor: innotek GmbH
-Hardware Model: VirtualBox
 ```
+
+
+
+Hardware Model: VirtualBox
 
 ```bash
 [root@localhost devops]# uname -a
@@ -2873,8 +2767,7 @@ Linux localhost.localdomain 5.14.0-39.el9.x86_64 #1 SMP PREEMPT Fri Dec 24 00:07
 [root@localhost devops]# dnf search ansible
 Updating Subscription Management repositories.
 Last metadata expiration check: 1:40:46 ago on Fri 21 Jan 2022 04:15:49 PM CET.
-================================ Name & Summary Matched:
-ansible =================================
+================================ Name & Summary Matched: ansible =================================
 ansible-collection-microsoft-sql.noarch : The Ansible collection for Microsoft SQL Server management
 ansible-freeipa-tests.noarch : ansible-freeipa tests
 ansible-pcp.noarch : Ansible Metric collection for Performance Co-Pilot
@@ -2904,7 +2797,7 @@ Summary: SSH-based configuration management, deployment, and task execution syst
 URL: http://ansible.com
 License: GPLv3+
 Description: Ansible is a radically simple model-driven configuration management, multi-node deployment, and remote execution system. Ansible works over SSH and does not require any software daemons to be installed on remote nodes. Extension modules can be written in any language and are transferred to managed machines automatically.
-
+```
 
 ```bash
 [root@localhost devops]# dnf install ansible-core
@@ -2922,15 +2815,15 @@ sshpass x86_64 1.09-4.el9 rhel-9-for-x86_64-appstream-beta-rpms 29 k
 
 Is this ok [y/N]: y
 ...
-
-
-
+```
 
 ## 执行前
 
 ```bash
 # dnf info ansible-core
-2 Updating Subscription Management repositories. 3 Last metadata expiration check: 1:41:06 ago on Fri 21 Jan 2022 04:15:49 PM CET. 5 Available Packages
+2 Updating Subscription Management repositories.
+3 Last metadata expiration check: 1:41:06 ago on Fri 21 Jan 2022 04:15:49 PM CET.
+5 Available Packages
 6 Name: ansible-core
 7 Version: 2.12.1
 8 Release: 1.el9
@@ -2949,7 +2842,9 @@ Is this ok [y/N]: y
 
 ```bash
 # dnf info ansible-core
-2 Updating Subscription Management repositories. 3 Last metadata expiration check: 1:42:32 ago on Fri 21 Jan 2022 04:15:49 PM CET. 5 Installed Packages
+2 Updating Subscription Management repositories.
+3 Last metadata expiration check: 1:42:32 ago on Fri 21 Jan 2022 04:15:49 PM CET.
+5 Installed Packages
 6 Name: ansible-core
 7 Version: 2.12.1
 8 Release: 1.el9
@@ -3006,10 +2901,6 @@ Is this ok [y/N]: y
 ```
 
 ## Amazon Extras Library 执行结果
-
-
-
-
 
 # Amazon Linux 2 环境配置与软件包安装
 
@@ -3080,68 +2971,102 @@ Installing ansible
 Failed to set locale, defaulting to C
 Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
 Cleaning repos: amzn2-core amzn2extra-ansible2 amzn2extra-docker amzn2extra-kernel-5.10
-17 metadata files removed
-0 sqlite files removed
-Failed to set locale, defaulting to C
-Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
-amzn2-core | 3.7 kB 00:00:00
-...
-(9/9): amzn2-core/2/x86_64/primary_db
-...
 ```
-安装依赖包列表：
+
+
+
+17 metadata files removed
+
+0 sqlite files removed
+
+Failed to set locale, defaulting to C
+
+Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+
+amzn2-core | 3.7 kB 00:00:00
+
+...
+
+(9/9): amzn2-core/2/x86_64/primary_db
+
+...
+
+### 安装依赖包列表
+
 ```text
 Package                Arch           Version            Repository           Size
+
 =========================================================
+
 Installing: ansible            noarch          2.9.23-1.amzn2     amzn2extra-ansible2  17 M
+
 Installing for dependencies:
+
 libtomcrypt            x86_64          1.18.2-1.amzn2.0.1 amzn2extra-ansible2  409 k
+
 libtommath             x86_64          1.0.1-4.amzn2.0.1   amzn2extra-ansible2  36 k
+
 python-keyczar         arch           0.71c-2.amzn2      amzn2extra-ansible2  218 k
+
 python2-crypto         x86_64          2.6.1-13.amzn2.0.3  amzn2extra-ansible2  476 k
+
 python2-ecdsa          arch           0.13.3-1.amzn2.0.1  amzn2extra-ansible2  94 k
+
 python2-httplib2       arch           0.18.1-3.amzn2     amzn2extra-ansible2  125 k
+
 python2-paramiko        arch           1.16.1-3.amzn2.0.2  amzn2extra-ansible2  259 k
+
 sshpass                 x86_64          1.06-1.amzn2.0.1   amzn2extra-ansible2  22 k
 ```
-确认并安装：
+
+### 确认并安装
+
 ```text
 Is this ok [y/d/N]: y
+
 Downloading packages:
+
 ...
+
 Transaction succeeded
 ```
 
 ## 5. 验证安装
-检查 `ansible` 版本：
+
+检查`ansible`版本：
+
 ```bash
 [root@ip-172-31-36-49 ec2-user]# ansible --version
 ```
+
 输出：
+
 ```text
 ansible 2.9.23
+
 config file = /etc/ansible/ansible.cfg
+
 configured module search path = ['/root/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+
 ansible python module location = /usr/lib/python2.7/site-packages/ansible
+
 executable location = /bin/ansible
+
 python version = 2.7.18 (default, Jun 10 2021, 00:11:02) [GCC 7.3.1 20180712 (Red Hat 7.3.1-13)]
 ```
 
-
-
-
-
 ## 执行后的 Amazon Extras 库
 
-```
-1 # rpm -qa | grep ansible 2 ansible-2.9.23-1.amzn2.noarch
+```text
+1 # rpm -qa | grep ansible
+2 ansible-2.9.23-1.amzn2.noarch
 ```
 
 ## EPEL 代码
 
-## Install-Ansible-Amazon Linux2-EPEL.sh
+### Install-Ansible-Amazon Linux2-EPEL.sh
 
-```
+```bash
 1 #!/bin/bash
 2 $ sudo amazon-linux-extras install epel -y
 3 $ sudo yum repolist
@@ -3153,108 +3078,193 @@ python version = 2.7.18 (default, Jun 10 2021, 00:11:02) [GCC 7.3.1 20180712 (Re
 
 ## EPEL 执行
 
-
-
-
-
 # 卸载 Ansible
 
 ```bash
 # yum remove ansible
+
 Failed to set locale, defaulting to C
+
 Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+
 Resolving Dependencies
+
 --> Running transaction check
+
 ---> Package ansible.noarch 0:2.9.23-1.amzn2 will be erased
+
 --> Finished Dependency Resolution
+
 Dependencies Resolved
+
 ========================================================
+
 ==========================================
+
 Package         Arch            Version             
+
 Repository                      Size
+
 ========================================================
+
 ==========================================
+
 Removing:
+
  ansible          noarch          2.9.23-1.amzn2
+
     @amzn2extra-ansible2          105 M
+
 Transaction Summary
+
 ========================================================
+
 ==========================================
+
 Remove 1 Package
+
 Installed size: 105 M
+
 Is this ok [y/N]: y
+
 Downloading packages:
+
 Running transaction check
+
 Running transaction test
+
 Transaction test succeeded
+
 Running transaction
+
   Erasing    : ansible-2.9.23-1.amzn2.noarch            1/1
+
   Verifying  : ansible-2.9.23-1.amzn2.noarch            1/1
+
 Removed:
+
   ansible.noarch 0:2.9.23-1.amzn2
+
 Complete!
 ```
 
-# 安装 EPEL 
+# 安装 EPEL
 
 ```bash
 # amazon-linux-extras install all epel
+
 Installing epel-release
+
 Failed to set locale, defaulting to C
+
 Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+
 Cleaning repos: amzn2-core amzn2extra-ansible2 amzn2extra-docker amzn2extra-epel
+
                : amzn2extra-kernel-5.10
+
 22 metadata files removed
+
 8 sqlite files removed
+
 0 metadata files removed
+
 Failed to set locale, defaulting to C
+
 Loaded plugins: extras_suggestions, langpacks, priorities, update-motd
+
 amzn2-core                                      | 3.7 kB  00:00:00
+
 amzn2extra-ansible2                             | 3.0 kB  00:00:00
+
 amzn2extra-docker                               | 3.0 kB  00:00:00
+
 amzn2extra-epel                                 | 3.0 kB  00:00:00
+
 amzn2extra-kernel-5.10                          | 3.0 kB  00:00:00
+
 (1/11): amzn2-core/2/x86_64/group_gz            | 2.5 kB  00:00:00
+
 (2/11): amzn2-core/2/x86_64/updateinfo          | 424 kB  00:00:00
+
 (3/11): amzn2extra-docker/2/x86_64/primary_db   | 86 kB  00:00:00
+
 (4/11): amzn2extra-epel/2/x86_64/updateinfo      | 76 B  00:00:00
+
 (5/11): amzn2extra-epel/2/x86_64/primary_db      | 1.8 kB  00:00:00
+
 (6/11): amzn2extra-kernel-5.10/2/x86_64/updateinfo | 76 B  00:00:00
+
 (7/11): amzn2extra-kernel-5.10/2/x86_64/primary_db  | 5.3 MB 00:00:00
+
 (8/11): amzn2extra-ansible2/2/x86_64/updateinfo   | 76 B  00:00:00
+
 (9/11): amzn2extra-docker/2/x86_64/updateinfo      | 4.7 kB  00:00:00
-(10/11): amzn2extra-ansible2/2/x86_64/primary_db     | 39 kB  00:00:00
+
+(10/11): amzn2extra-ansible2/2/x86_64/primary_db     | 39 kB 00:00:00
+
 (11/11): amzn2-core/2/x86_64/primary_db         | 58 MB 00:00:00
+
 Resolving Dependencies
+
 --> Package epel-release.noarch 0:7-1 will be installed
+
 --> Dependency Resolution
+
 Dependencies Resolved
+
 ========================================================
+
 ==========================================
+
 Package         Arch            Version             
+
 Repository                      Size
+
 ========================================================
+
 ==========================================
+
 Installing:
+
  epel-release            noarch          7-1
+
     amzn2extra-epel             15 k
+
 Transaction Summary
+
 ========================================================
+
 ==========================================
+
 Install 1 Package
+
 Total download size: 15 k
+
 Installed size: 24 k
+
 Is this ok [y/d/N]: y
+
 Downloading packages:
+
  epel-release-7-1.noarch.rpm                   | 15 kB  00:00:00
+
 Running transaction check
+
 Running transaction test
+
 Transaction test succeeded
+
 Running transaction
+
   Installing : epel-release-7-1.noarch            1/1
+
   Verifying  : epel-release-7-1.noarch            1/1
+
 Installed:
+
   epel-release.noarch 0:7-11
+
 Complete!
 ```
 
@@ -3262,54 +3272,93 @@ Complete!
 
 ```bash
 # yum repolist
+
 ansible2=latest                  enabled [2.4.2=2.4.6=2.8=stable]
+
 httpd_modules                   available [1.0=stable]
+
 memcached1.5                    available [1.5.1=1.5.16=1.5.17]
+
 postgresql9.6                  available [9.6.6=9.6.8=stable]
+
 postgresql10                   available [10=stable]
+
 R3.4                            available [3.4.3=stable]
+
 rust1                           available [1.22.1=1.26.0=1.26.1=1.27.2=1.31.0=1.38.0=stable]
+
 vim                             available [8.0=stable]
+
 php7.2                          available [7.2.0=7.2.4=7.2.5=7.2.8=7.2.11=7.2.14=7.2.16=7.2.17=7.2.19=7.2.21=7.2.23=7.2.24=7.2.26=stable]
+
 lamp-mariadb10.2-php7.2          available [10.2.10_7.2.0=10.2.10_7.2.4=10.2.10_7.2.8=10.2.10_7.2.11=10.2.10_7.2.13=10.2.10_7.2.16=10.2.10_7.2.19=10.2.10_7.2.22=10.2.10_7.2.24=stable]
+
 libreoffice                      available [5.0.6.2_15=5.3.6.1=stable]
+
 gimp                            available [2.8.22]
+
 docker=latest                   enabled [17.12.1=18.03.1=18.06.1=18.09.9=stable]
+
 mate-desktop1.x                 available [1.19.0=1.20.0=stable]
+
 GraphicsMagick1.3               available [1.3.29=1.3.32=1.3.34=stable]
+
 tomcat8.5                       available [8.5.31=8.5.32=8.5.38=8.5.40=8.5.42=8.5.50]
+
 epel=latest                     enabled [7.1=stable]
+
 testing                         available [1.0=stable]
+
 ecs                             available [stable]
+
 corretto8                       available [8.0.192=8.0.202=8.0.221=8.0.232=8.0.242=stable]
+
 firecracker                     available [0.1=stable]
+
 golang1.1                       available [1.11.3=1.11.11=1.11.13=stable]
-squid4                          available [4=stable]
-php7.2                          available [7.2.0=7.2.4=7.2.5=7.2.8=7.2.11=7.2.14=7.2.16=7.2.17=7.2.19=7.2.21=7.2.23=7.2.24=7.2.26=stable]
-lamp-mariadb10.2-php7.2          available [10.2.10_7.2.0=10.2.10_7.2.4=10.2.10_7.2.8=10.2.10_7.2.11=10.2.10_7.2.13=10.2.10_7.2.16=10.2.10_7.2.19=10.2.10_7.2.22=10.2.10_7.2.24=stable]
-libreoffice                      available [5.0.6.2_15=5.3.6.1=stable]
-gimp                            available [2.8.22]
-docker=latest                   enabled [17.12.1=18.03.1=18.06.1=18.09.9=stable]
-mate-desktop1.x                 available [1.19.0=1.20.0=stable]
-GraphicsMagick1.3               available [1.3.29=1.3.32=1.3.34=stable]
-tomcat8.5                       available [8.5.31=8.5.32=8.5.38=8.5.40=8.5.42=8.5.50]
-epel=latest                     enabled [7.1=stable]
-testing                         available [1.0=stable]
-ecs                             available [stable]
-corretto8                       available [8.0.192=8.0.202=8.0.221=8.0.232=8.0.242=stable]
-firecracker                     available [0.1=stable]
-golang1.1                       available [1.11.3=1.11.11=1.11.13=stable]
+
 squid4                          available [4=stable]
 ```
 
 
 
+```text
+php7.2                          available [7.2.0=7.2.4=7.2.5=7.2.8=7.2.11=7.2.14=7.2.16=7.2.17=7.2.19=7.2.21=7.2.23=7.2.24=7.2.26=stable]
+
+lamp-mariadb10.2-php7.2          available [10.2.10_7.2.0=10.2.10_7.2.4=10.2.10_7.2.8=10.2.10_7.2.11=10.2.10_7.2.13=10.2.10_7.2.16=10.2.10_7.2.19=10.2.10_7.2.22=10.2.10_7.2.24=stable]
+
+libreoffice                      available [5.0.6.2_15=5.3.6.1=stable]
+
+gimp                            available [2.8.22]
+
+docker=latest                   enabled [17.12.1=18.03.1=18.06.1=18.09.9=stable]
+
+mate-desktop1.x                 available [1.19.0=1.20.0=stable]
+
+GraphicsMagick1.3               available [1.3.29=1.3.32=1.3.34=stable]
+
+tomcat8.5                       available [8.5.31=8.5.32=8.5.38=8.5.40=8.5.42=8.5.50]
+
+epel=latest                     enabled [7.1=stable]
+
+testing                         available [1.0=stable]
+
+ecs                             available [stable]
+
+corretto8                       available [8.0.192=8.0.202=8.0.221=8.0.232=8.0.242=stable]
+
+firecracker                     available [0.1=stable]
+
+golang1.1                       available [1.11.3=1.11.11=1.11.13=stable]
+
+squid4                          available [4=stable]
+```
 
 ## 执行后的 EPEL
 
-```
-1 # rpm -qa | grep ansible
-2 ansible-2.9.25-1.el7.noarch
+```bash
+# rpm -qa | grep ansible
+ansible-2.9.25-1.el7.noarch
 ```
 
 # 回顾
@@ -3336,100 +3385,181 @@ squid4                          available [4=stable]
 
 ### install-ansible-debian.sh
 
-```
-1 #!/bin/bash
-2 $ sudo apt-get update
-3 $ sudo apt-get install ansible
-4 $ sudo apt list –installed ansible
+```bash
+#!/bin/bash
+
+$ sudo apt-get update
+$ sudo apt-get install ansible
+$ sudo apt list –installed ansible
 ```
 
 # 执行
 
-
-
-
-
 ```bash
 ansible-pilot $ ssh devops@debian.example.com
+
 Linux debian 5.10.0-9-amd64 #1 SMP Debian 5.10.70-1 (2021-3-09-30) x86_64
+
 The programs included with the Debian GNU/Linux system are free software; the exact distribution terms for each program are described in the individual files in /usr/share/doc/*/copyright.
+
 Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law.
+
 $ sudo su
+
 root@debian:/home/devops# cat /etc/os-release
+
 PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
+
 NAME="Debian GNU/Linux"
+
 VERSION_ID="11"
+
 VERSION="11 (bullseye)"
+
 VERSION_CODENAME=bullseye
+
 ID=debian
+
 HOME_URL="https://www.debian.org/"
+
 SUPPORT_URL="https://www.debian.org/support"
+
 BUG_REPORT_URL="https://bugs.debian.org/"
+
 root@debian:/home/devops# cat /etc/deb
+
 debconf.conf debian_version
+
 root@debian:/home/devops# cat /etc/debian_version
+
 11.1
+
 root@debian:/home/devops# apt-get update
+
 Get:1 http://security.debian.org/debian-security bullseye-security InRelease [44.1 kB]
+
 Hit:2 http://deb.debian.org/debian bullseye InRelease
+
 Get:3 http://deb.debian.org/debian bullseye-updates Increase [39.4 kB]
+
 Get:4 http://deb.debian.org/debian bullseye-backports Release [43.7 kB]
+
 Get:5 http://deb.debian.org/debian bullseye-backports/main Sources.diff/Index [63.3 kB]
+
 Get:6 http://deb.debian.org/debian bullseye-backports/main amd64 Packages.diff/Index [63.3 kB]
+
 Get:7 http://deb.debian.org/debian bullseye-backports/main Sources T-2021-12-02-0202.04-F-2021-12-02-0202.04.pdiff [29 B]
+
 Get:7 http://deb.debian.org/debian bullseye-backports/main Sources T-2021-12-02-0202.04-F-2021-12-02-0202.04.pdiff [29 B]
+
 Get:8 http://deb.debian.org/debian bullseye-backports/main amd64 Packages T-2021-12-02-0202.04-F-2021-12-02-0202.04.pdiff [257 B]
+
 Get:8 http://deb.debian.org/debian bullseye-backports/main amd64 Packages T-2021-12-02-0202.04-F-2021-12-02-0202.04.pdiff [257 B]
+
 Fetched 254 kB in 1s (488 kB/s)
+
 Reading package lists... Done
+
 root@debian:/home/devops# apt-cache search ansible
+
 ansible - Configuration management, deployment, and task execution system
+
 ansible-lint - lint tool for Ansible playbooks
+
 ansible-mitogen - Fast connection strategy for Ansible
+
 shade-inventory - Ansible inventory script for OpenStack clouds
+
 python3-reclass - hierarchical inventory backend for configuration management systems
-reclass - hierarchical inventory backend for configuration management systems
+
+reclass - reclass documentation
+
 reclass-doc - reclass documentation
+
 vim-syntastic - Syntax checking hacks for vim
+
 root@debian:/home/devops# apt-cache show ansible
+
 Package: ansible
+
 Version: 2.10.7+merged+base+2.10.8+dfsg-1
+
 Installed-Size: 198790
+
 Maintainer: Lee Garrett <debian@rocketjump.eu>
+
 Architecture: all
+
 Replaces: ansible-base (<= 2.10.5+dfsg-2)
+
 Depends: python3-cryptography, python3-jinja2, python3-packaging, python3-yaml, python3:any, openssh-client | python3-paramiko (>= 2.6.0), python3-cryptodome, python3-distutils, python3-dnspython, python3-httplib2, python3-netaddr
+
 Recommends: python3-argcomplete, python3-jmespath, python3-kerberos, python3-libcloud, python3-selinux, python3-xmltodict
+
 Suggests: cowsay, sshpass
+
 Breaks: ansible-base (<= 2.10.5+dfsg-2)
+
 Description-en: Configuration management, deployment, and task execution system Ansible is a radically simple model-driven configuration, multi-node deployment, and remote execution system. Ansible works over SSH does not not require any daemons to be installed on remote nodes. Extensions can be written in any language and are transferred to managed machines. This package contains ansible-base 2.10.x and ansible-core 2.10.x merged into one package.
+
 Description-md5: de0a87781a6efa86ca201d648
+
 Homepage: https://www.ansible.com
+
 Tag: admin::automation, admin::distribution, admin::package-management, implemented-in, interface::commandline, role::program, use::configuring, works-with
+
 Section: admin
+
 Priority: optional
+
 Filename: pool/main/ansible_2.10.7+merged+base+2.10.8+dfsg-1_all.deb
+
 Size: 176854
+
 MD5sum: 159657e0be3df21de43ac98
+
 SHA256: 6647417b31f9b0bc816331c7b5f742c77a49db5063da7164
+
 root@debian:/home/devops# apt-get install ansible
+
 Reading package lists... Done
+
 Building dependency tree... Done
+
 Reading state information... Done
+
 The following additional packages will be installed:
+
 ee-data libyaml-0-2 python3-argcomplete python3-cffi-backend python3-cryptography python3-distutils python3-dnspython python3-jinja2 python3-jmespath python3-kerberos python3-lib2to3 python3-libcloud python3-lockfile python3-markupsafe python3-netaddr python3-ntlm-auth python3-packaging python3-cryptodome python3-pyparsing python3-requests-kerberos python3-requests-ntlm python3-requests-toolbelt python3-selinux python3-simplejson python3-winrm python3-yaml
+
 Suggested packages: cowsay sshpass python3-cryptography-doc python3-vectors python3-sniffio python3-trio python3-jinja2-doc python3-lockfile-doc python3-netaddr-docs python3-pyparsing-doc
+
 The following NEW packages will be installed:
+
 ansible ee-data libyaml-0-2 python3-argcomplete python3-cffi-backend python3-cryptography python3-distutils python3-dnspython python3-jinja2 python3-jmespath python3-kerberos python3-lib2to3 python3-libcloud python3-lockfile python3-markupsafe python3-netaddr python3-ntlm-auth python3-packaging python3-cryptodome python3-pyparsing python3-requests-kerberos python3-requests-ntlm python3-requests-toolbelt python3-selinux python3-simplejson python3-winrm python3-yaml
+
 0 upgraded, 28 newly installed, 0 to remove and 1 not upgraded.
+
 Need to get 32.9 MB of archives.
+
 After this operation, 280 MB of additional disk space will be used.
+
 Do you want to continue? [Y/n] y
+
 Get:1 http://deb.debian.org/debian bullseye/main amd64 python3-cffi-backend 1.14.5-1 [85.8 kB]
+
 Get:2 http://deb.debian.org/debian bullseye/main amd64 python3-cryptography 3.3.2-1 [223 kB]
+
 Get:3 http://deb.debian.org/debian bullseye/main amd64 python3-markupsafe 1.1.1-1+b3 [15.2 kB]
+
 Get:4 http://deb.debian.org/debian bullseye/main amd64 python3-jinja2 2.11.3-1 [144 kB]
+
 Get:5 http://deb.debian.org/debian bullseye/main amd64 python3-pyparsing 2.4.7-1 [109 kB]
+```
+
+
+
+```text
 Get:6 http://deb.debian.org/debian bullseye/main amd64 python3-packaging 20.9-2 [33.5 kB]
 Get:7 http://deb.debian.org/debian bullseye/main amd64 lib3-yaml 0.2.2-1 [49.6 kB]
 Get:8 http://deb.debian.org/debian bullseye/main amd64 python3-cryptodome 3.9.7+dfsg1-1+b2 [9910 kB]
@@ -3452,130 +3582,207 @@ Get:24 http://deb.debian.org/debian bullseye/main amd64 python3-requests-toolbel
 Get:25 http://deb.debian.org/debian bullseye/main amd64 python3-selinux 3.1-3 [160 kB]
 Get:26 http://deb.debian.org/debian bullseye/main amd64 python3-xmltodict 12.0-2 [52.2 kB]
 Get:27 http://deb.debian.org/debian bullseye/main amd64 python3-winrm 0.3.0-2 [21.6 kB]
+
 Fetched 32.9 MB in 6s (5494 kB/s)
+
 perl: warning: Setting locale failed.
 perl: warning: Please check your locale settings: LANGUAGE = (unset), LC_ALL = (unset), LC_CTYPE = "UTF-8" are supported and installed on your system.
 perl: warning: Falling back to a fallback locale ("UTF-8").
 perl: warning: Cannot set LC_CTYPE to default locale: No such file or directory
 perl: warning: Cannot set LC_ALL to default locale: No such file or directory
+
 Selecting previously unselected package
+
 Reading database ... 25133 files and directories currently installed.
+
 Preparing to unpack .../0-python3-cffi-backend_1.14.5-1_amd64.deb
 Unpacking python3-cffi-backend:amd64 (1.14.5-1)
+
 Selecting previously unselected package
+
 Preparing to unpack .../0-python3-cryptography_3.3.2-1_amd64.deb
-Unpacking python3-cryptography:amd64 (3.3.2-1)
+Unpacking python3-cryptography (3.3.2-1)
+
 Selecting previously unselected package
+
 Preparing to unpack .../0-python3-markupsafe_1.1.1-1+b3_amd64.deb
-Unpacking python3-markupsafe:amd64 (1.1.1-1+b3)
+Unpacking python3-markupsafe (1.1.1-1+b3)
+
 Selecting previously unselected package
+
 Preparing to unpack .../0-python3-jinja2_2.11.3-1_all.deb
 Unpacking python3-jinja2 (2.11.3-1)
+
 Selecting previously unselected package
+
 Preparing to unpack .../0-python3-pyparsing_2.4.7-1_all.deb
 Unpacking python3-pyparsing (2.4.7-1)
+
 Selecting previously unselected package
+
 Preparing to unpack .../0-python3-packaging_20.9-2_all.deb
 Unpacking python3-packaging (20.9-2)
+
 Selecting previously unselected package
+
 Preparing to unpack .../0-libyaml-0-2_0.2.2-1_amd64.deb
 Unpacking libyaml-0-2:amd64 (0.2.2-1)
+
 Selecting previously unselected package
+
 Preparing to unpack .../0-python3-yaml_5.3.1-5_amd64.deb
 Unpacking python3-yaml (5.3.1-5)
+
 Selecting previously unselected package
+
 Preparing to unpack .../0-python3-cryptodome_3.9.7+dfsg1-1+b2_amd64.deb
 Unpacking python3-cryptodome:amd64 (3.9.7+dfsg1-1+b2)
+
 Selecting previously unselected package
+
 Preparing to unpack .../0-python3-lib2to3_3.9.2-1_all.deb
 Unpacking python3-lib2to3 (3.9.2-1)
+
 Selecting previously unselected package
+
 Preparing to unpack .../0-python3-distutils_3.9.2-1_all.deb
 Unpacking python3-distutils (3.9.2-1)
+
 Selecting previously unselected package
+
 Preparing to unpack .../0-python3-dnspython_2.0.0-1_amd64.deb
 Unpacking python3-dnspython (2.0.0-1)
+
 Selecting previously unselected package
+
 Preparing to unpack .../0-ieee-data_20210605.1_amd64.deb
 Unpacking ieee-data (20210605.1)
+
 Selecting previously unselected package
+
 Preparing to unpack .../0-python3-netaddr_0.7.19-5_amd64.deb
 Unpacking python3-netaddr (0.7.19-5)
+
 Selecting previously unselected package
+
 Preparing to unpack .../0-ansible_2.10.7+merged+base+2.10.8+dfsg-1_all.deb
 Unpacking ansible (2.10.7+merged+base+2.10.8+dfsg-1)
+
 Selecting previously unselected package
+
 Preparing to unpack .../0-python3-argcomplete_1.8.1-1.5_amd64.deb
 Unpacking python3-argcomplete (1.8.1-1.5)
+
 Selecting previously unselected package
+
 Preparing to unpack .../0-python3-jmespath_10.0-1_amd64.deb
 Unpacking python3-jmespath (10.0-1)
+
 Selecting previously unselected package
+
 Preparing to unpack .../0-python3-kerberos_14-3.1+b3_amd64.deb
 Unpacking python3-kerberos (14-3.1+b3)
+
 Selecting previously unselected package
+
 Preparing to unpack .../0-python3-lockfile_0:12.2-2_amd64.deb
 Unpacking python3-lockfile (0:12.2-2)
+
 Selecting previously unselected package
+
 Preparing to unpack .../0-python3-simplejson_17.2-1_amd64.deb
 Unpacking python3-simplejson (17.2-1)
+
 Selecting previously unselected package
+
 Preparing to unpack .../0-python3-libcloud_3.2.0-2_amd64.deb
 Unpacking python3-libcloud (3.2.0-2)
+
 Selecting previously unselected package
+
 Preparing to unpack .../0-python3-ntlm-auth_1.4.0-1_amd64.deb
 Unpacking python3-ntlm-auth (1.4.0-1)
+
 Selecting previously unselected package
+
 Preparing to unpack .../0-python3-kerberos_12.0-2_amd64.deb
 Unpacking python3-kerberos (12.0-2)
+
 Selecting previously unselected package
+
 Preparing to unpack .../0-python3-requests-ntlm_1.0.1.1_amd64.deb
 Unpacking python3-requests-ntlm (1.0.1.1)
+
 Selecting previously unselected package
+
 Preparing to unpack .../0-python3-requests-toolbelt_0.9.1-1_amd64.deb
 Unpacking python3-requests-toolbelt (0.9.1-1)
+
 Selecting previously unselected package
+
 Preparing to unpack .../0-python3-selinux_3.1-3_amd64.deb
 Unpacking python3-selinux (3.1-3)
+
 Selecting previously unselected package
+
 Preparing to unpack .../0-python3-winrm_0.3.0-2_amd64.deb
 Unpacking python3-winrm (0.3.0-2)
+
 Selecting previously unselected package
+
 Preparing to unpack .../0-python3-xmltodict_12.0-2_amd64.deb
 Unpacking python3-xmltodict (12.0-2)
+
 Setting up ansible (2.10.7+merged+base+2.10.8+dfsg-1)
 Setting up python3-cffi-backend (1.14.5-1)
 Processing triggers for man-db (2.9.4)...
-root@debian:/home/devops# ansible --version
+
+root@debian:/home/devops# `ansible --version`
+
 ansible 2.10.8
+
   config file = None
   configured module search path = ['/root/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
   ansible python module location = /usr/lib/python3/dist-packages/ansible
   executable location = /usr/bin/ansible
   python version = 3.9.2 (default, Feb 28 2021, 17:03:44)
+
   [GCC 10.2.1 20210110]
-root@debian:/home/devops# apt list | grep ansible
+
+root@debian:/home/devops# `apt list | grep ansible`
+
 WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
 ansible-lint/stable 4.3.7-1 all
 ansible-mitogen/stable 0.3.0~rc1-4 all
 ansible/stable,now 2.10.7+merged+base+2.10.8+dfsg-1 all [installed]
-root@debian:/home/devops# dpkg -l | grep ansible
+
+root@debian:/home/devops# `dpkg -l | grep ansible`
+
 ii  ansible               2.10.7+merged+base+2.10.8+dfsg-1 all          Configuration management, deployment, and task execution system
 ```
 
-
-
-
-
 ## 执行前
 
-```
+```bash
 $ ssh devops@debian.example.com
+
 Linux debian 5.10.0-9-amd64 #1 SMP Debian 5.10.70-1 (2021-03-09-30) x86_64
-The programs included with the Debian GNU/Linux system are free software; 
-the exact distribution terms for each program are described in the individual files in `/usr/share/doc/*/copyright`. 
+
+The programs included with the Debian GNU/Linux system are free software;
+
+the exact distribution terms for each program are described in the individual files in `/usr/share/doc/*/copyright`.
+```
+
+
+
 Debian GNU/Linux comes with ABSOLUTELY NO WARRANTY, to the extent permitted by applicable law.
+
+```
 $ sudo su
+```
+
+```
 root@debian:/home/devops# cat /etc/os-release
 PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
 NAME="Debian GNU/Linux"
@@ -3586,13 +3793,21 @@ ID=debian
 HOME_URL="https://www.debian.org/"
 SUPPORT_URL="https://www.debian.org/support"
 BUG_REPORT_URL="https://bugs.debian.org/"
+```
+
+```
 root@debian:/home/devops# cat /etc/deb
 debconf.conf    debian_version
+```
+
+```
 root@debian:/home/devops# cat /etc/debian_version
 11.1
+```
+
+```
 root@debian:/home/devops# apt list ansible --installed
 Listing... Done
-root@debian:/home/devops#
 ```
 
 ## 执行后
@@ -3601,24 +3816,26 @@ root@debian:/home/devops#
 root@debian:/home/devops# apt list ansible --installed
 Listing... Done
 ansible/stable,now 2.10.7+merged+base+2.10.8+dfsg-1 all [installed]
+```
+
+```
 root@debian:/home/devops# dpkg -l | grep ansible
 ii  ansible 2.10.7+merged+base+2.10.8+dfsg-1 all Configuration management, deployment, and task execution system
-root@debian:/home/devops#
 ```
 
 ## 用于 Linux 的 Ansible
 
 在本章中，你将发现最常用的 Ansible 模块，用于自动化 Linux 系统管理员任务。
 
-## Ansible 术语 - ansible_hostname vs inventory_hostname vs ansible_fqdn
+## Ansible 术语 - `ansible_hostname` vs `inventory_hostname` vs `ansible_fqdn`
 
 在 Ansible Playbook 的实际示例中，`ansible_hostname`、`inventory_hostname` 与 `ansible_fqdn` 之间的区别是什么？
 
-这两个 内部变量有时会让人混淆，但它们本质上是不同的。
+这两个内部变量有时会让人混淆，但它们本质上是不同的。
 
-## ansible_hostname vs inventory_hostname vs ansible_fqdn
+## `ansible_hostname` vs `inventory_hostname` vs `ansible_fqdn`
 
-### ansible_hostname 和 ansible_fqdn
+### `ansible_hostname` 和 `ansible_fqdn`
 
 从目标机器的事实（facts）中读取主机名：
 
@@ -3627,7 +3844,7 @@ root@debian:/home/devops#
 同于目标主机的主机名。
 由于它是基于 `gather_facts` 步骤，因此 `ansible_hostname` 在临时命令（ad-hoc command）中不可用。
 
-### inventory_hostname
+### `inventory_hostname`
 
 从 Ansible 清单（inventory）或 hosts 文件读取：
 
@@ -3638,9 +3855,10 @@ root@debian:/home/devops#
 
 ## 演示
 
-让我通过一个简单的 Ansible Playbook 向你展示 `ansible_hostname`、`inventory_hostname` 与 `ansible_fqdn`  内部变量之间的区别。
+让我通过一个简单的 Ansible Playbook 向你展示 `ansible_hostname`、`inventory_hostname` 与 `ansible_fqdn` 内部变量之间的区别。
 
-### hostnames.yml
+### `hostnames.yml`
+
 ```yaml
 ---
 - name: hostnames demo
@@ -3658,7 +3876,8 @@ root@debian:/home/devops#
         var: ansible_fqdn
 ```
 
-### inventory
+### `inventory`
+
 ```ini
 foo.example.com ansible_host=192.168.0.190
 [all:vars]
@@ -3667,24 +3886,29 @@ ansible_user=devops
 ansible_ssh_private_key_file=~/.ssh/id_rsa
 ```
 
-### execution
+### 执行
+
 ```
 ansible-pilot $ ansible-playbook -i ansible_statements/inventory ansible_statements/hostnames.yml
+
 PLAY [hostnames demo] **********************************
 ******************************************
 TASK [Gathering Facts] *********************************
 ************************************************
 ok: [foo.example.com]
+
 TASK [print inventory_hostname] *************************
 ******************************************
 ok: [foo.example.com] => {
   "inventory_hostname": "foo.example.com"
 }
+
 TASK [print ansible_hostname] *********************************
 ******************************************
 ok: [foo.example.com] => {
   "ansible_hostname": "demo"
 }
+
 TASK [print ansible_fqdn] *******************************
 ******************************************
 ok: [foo.example.com] => {
@@ -3695,9 +3919,6 @@ PLAY RECAP *************************************************
 ************************************************
 foo.example.com                  : ok=3    changed=0    unreachable=0    failed=0
 ```
-
-
-
 
 ```yaml
 ---
@@ -3710,8 +3931,10 @@ foo.example.com                  : ok=3    changed=0    unreachable=0    failed=
 ```
 
 # 执行
+
 ```bash
 ansible-pilot $ ansible-playbook --limit demo.example.com -i limit/inventory limit/playbook.yml
+
 PLAY [harmful playbook] **********************************
 ******************************************
 TASK [Gathering Facts] ***********************************
@@ -3731,15 +3954,19 @@ ansible-pilot $
 ```
 
 ### 错误的执行
+
 如果我们忘记了 `--limit` 选项，结果可能是有害的。
 
 ```bash
-ansible-pilot $ ansible-playbook -i limit/inventory limit/playbook.yml ownPLAY [harmful playbook] *********************************
+ansible-pilot $ ansible-playbook -i limit/inventory limit/playbook.yml
+
+PLAY [harmful playbook] *********************************
 ******************************************
 TASK [Gathering Facts] **********************************
 ******************************************
 ok: [demo.example.com]
 ok: [demo.example.com]
+
 TASK [harmful task] *************************************
 ******************************************
 ok: [demo.example.com] => {
@@ -3757,13 +3984,15 @@ ansible-pilot $
 ```
 
 ## Ansible Playbook 主机
+
 `hosts: HOSTNAME`
 `ansible-playbook`
 
 在 Ansible Playbook 中使用 `hosts` 语句允许你指定执行时的主机或主机组。
-其优点是，相比于手动指定主机名，它比命令行使用 `--limit` 参数更可靠。。缺点缺点是你每次都必须记得编辑 Ansible Playbook 代码。如果你不这样做，你将在指定的主机上执行代码，这仍然是一个手动操作的问题。
+其优点是，相比于手动指定主机名，它比命令行使用 `--limit` 参数更可靠。缺点是你每次都必须记得编辑 Ansible Playbook 代码。如果你不这样做，你将在指定的主机上执行代码，这仍然是一个手动操作的问题。
 
 ## 代码
+
 ```yaml
 ---
 - name: harmful playbook
@@ -3775,13 +4004,16 @@ ansible-pilot $
 ```
 
 # 执行
+
 ```bash
 ansible-pilot $ ansible-playbook -i limit/inventory limit/playbook2.yml
+
 PLAY [harmful playbook] *********************************
 ******************************************
 TASK [Gathering Facts] **********************************
 ******************************************
 ok: [demo.example.com]
+
 TASK [harmful task] *************************************
 ******************************************
 ok: [demo.example.com] => {
@@ -3795,6 +4027,7 @@ ansible-pilot $
 ```
 
 ## Ansible Playbook 主机高级用法
+
 `hosts: "{{ HOSTS }}"`
 `ansible-playbook -e "HOSTS=demo.example.com"`
 
@@ -3804,6 +4037,7 @@ ansible-pilot $
 这个选项结合了上一个选项的优点，也是我最喜欢的。
 
 ## 代码
+
 ```yaml
 ---
 - name: harmful playbook
@@ -3815,13 +4049,16 @@ ansible-pilot $
 ```
 
 # 执行
+
 ```bash
 ansible-pilot $ ansible-playbook -i limit/inventory -e "HOSTS=demo.example.com" limit/playbook3.yml
+
 PLAY [harmful playbook] *********************************
 ******************************************
 TASK [Gathering Facts] **********************************
 ******************************************
 ok: [demo.example.com]
+
 TASK [harmful task] *************************************
 ******************************************
 ok: [demo.example.com] => {
@@ -3834,8 +4071,6 @@ demo.example.com             ok=2    changed=0    unreachable=0    failed=0    s
 ansible-pilot $
 ```
 
-
-
 在接下来的示例中，我们将不仅限于打印“Hello world!”文本，而是打印文本、变量、文本与变量的组合，并向您演示如何使用详细级别（verbosity level）。
 
 ```yaml
@@ -3845,19 +4080,25 @@ ansible-pilot $
   vars:
     fruit: "apple"
   tasks:
-    - name: debug message
-      ansible.builtin.debug:
-        msg: "our fruit is {{ fruit }}"
-        verbosity: 2
 ```
+
+
+
+- name: debug message
+
+  `ansible.builtin.debug`:
+
+    msg: "our fruit is {{ fruit }}"
+
+    verbosity: 2
 
 # Ansible 代码复用：使用 Ansible Galaxy 中的 Roles 和 Collections
 
 在本章中，你将发现如何从 Ansible Galaxy 远程目录中下载并使用 Ansible Roles（角色）和 Collections（集合）。
 
-## 下载和使用 Ansible Galaxy Role - ansible-galaxy 和 requirements.yml
+## 下载和使用 Ansible Galaxy Role - `ansible-galaxy` 和 `requirements.yml`
 
-如何下载并使用 Ansible Role `lucab85.ansible_role_log4shell` 来扫描我们的 Linux 机器是否存在 Log4Shell 远程代码执行漏洞 Log4j (`CVE-2021–44228`)，复用 Ansible Galaxy 目录中发布的 Ansible 制制品（任务、变量、默认值、处理器、模块和插件）。
+如何下载并使用 Ansible Role `lucab85.ansible_role_log4shell` 来扫描我们的 Linux 机器是否存在 Log4Shell 远程代码执行漏洞 Log4j（`CVE-2021–44228`），复用 Ansible Galaxy 目录中发布的 Ansible 制制品（任务、变量、默认值、处理器、模块和插件）。
 
 ## 什么是 Ansible Role？
 
@@ -3896,27 +4137,36 @@ Ansible Role 是一组可复用的 Ansible 制制品。它解决一个问题，�
 
 让我们进入一个真实的案例：如何下载和使用 Ansible Galaxy Role `lucab85.ansible_role_log4shell`。
 
-### role.yml
+### `role.yml`
 ```yaml
 ---
+
 - name: role demo
+
   hosts: all
+
   become: true
+
   roles:
+
     - role: lucab85.ansible_role_log4shell
+
       detector_path: "/var/www"
 ```
 
-### requirements.yml
+### `requirements.yml`
 ```yaml
 ---
+
 roles:
+
   - name: lucab85.ansible_role_log4shell
 ```
 
 ### 下载前的执行
 ```bash
 $ ansible-playbook -i virtualmachines/demo/inventory galaxy/role.yml
+
 ERROR! the role 'lucab85.ansible_role_log4shell' was not found in /Users/lberton/prj/github/ansible-pilot/galaxy/roles:/Users/lberton/.ansible/roles:/usr/share/ansible/roles:/etc/ansible/roles:/Users/lberton/prj/github/ansible-pilot/galaxy
 
 错误似乎出现在 '/Users/lberton/prj/github/ansible-pilot/galaxy/role.yml': 第 5 行，第 8 列，但根据具体的语法问题，也可能在文件的其他位置。
@@ -3924,44 +4174,53 @@ ERROR! the role 'lucab85.ansible_role_log4shell' was not found in /Users/lberton
 错误的行似乎是：
 
   roles:
+
     - role: lucab85.ansible_role_log4shell
+
       ^ 这里
 ```
 
 ### 下载后的执行
 ```bash
 $ ansible-galaxy install -r galaxy/requirements.yml
+
 Starting galaxy role install process
+
 - downloading role 'ansible_role_log4shell', owned by lucab85
+
 - downloading role from https://github.com/lucab85/ansible-role-log4shell/archive/v0.4.1.tar.gz
+
 - extracting lucab85.ansible_role_log4shell to /Users/lberton/.ansible/roles/lucab85.ansible_role_log4shell
+
 - lucab85.ansible_role_log4shell (v0.4.1) installed successfully
 ```
 
 ### 下载后的执行
 ```bash
 $ ansible-playbook -i virtualmachines/demo/inventory galaxy/role.yml
+
 PLAY [role demo] *************************************************
 
 Gathering Facts *************************************************
+
 localhost: [******************]
 
 ok: [******************]
 
 TASK [lucab85.ansible_role_log4shell:dependency present] *****************
+
 localhost: [******************]
 
 TASK [lucab85.ansible_role_log4shell:create directory] *****************
+
 localhost: [****************]
 
 ...
 
 PLAY RECAP *************************************************************
+
 localhost                  : ok=14    changed=9    unreachable=0    failed=0    skipped11    rescued=0
 ```
-
-
-
 
 请注意，该网站包含了 Ansible Roles 和 Ansible Collections。今天我们关注的是 Ansible Role 的内容。
 
@@ -3976,34 +4235,50 @@ localhost                  : ok=14    changed=9    unreachable=0    failed=0    
 
 让我们进入一个在安装了 `ansible-core` 的系统中如何下载和使用 Ansible Galaxy Collection `community.general` 的真实案例。
 
-### collection.yml
+### `collection.yml`
 ```yaml
 ---
+
 - name: modprobe module demo
+
   hosts: localhost
+
   become: true
+
   vars:
+
     module_name: "dummy"
+
     ansible_connection: local
+
   tasks:
+
     - name: load the module
+
       community.general.modprobe:
+
         name: "{{ module_name }}"
+
         state: present
 ```
 
-### requirements.yml
+### `requirements.yml`
 ```yaml
 ---
+
 collections:
+
   - name: community.general
+
     source: https://galaxy.ansible.com
 ```
 
 ### 在未安装 collection 的情况下执行
 ```bash
 $ ansible-playbook collection/collection.yml
+
 [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
+
 ERROR! couldn't resolve module/action 'community.general.modprobe'. This often indicates a misspelling, missing collection, or incorrect module path.
 
 The error appears to be in '/home/devops/collection/collection.yml': line 10, column 7, but may be elsewhere in the file depending on the exact syntax problem.
@@ -4011,46 +4286,64 @@ The error appears to be in '/home/devops/collection/collection.yml': line 10, co
 The offending line appears to be:
 
   tasks:
+
     - name: load the module
+
       ^ here
+
 $
 ```
 
 ### 下载并执行
 ```bash
 $ ansible-galaxy install -r collection/requirements.yml
+
 Starting galaxy collection install process
+
 Process install dependency map
+
 Starting collection install process
+
 Downloading https://galaxy.ansible.com/download/community-general-4.5.0.tar.gz to /home/devops/.ansible/tmp/ansible-local-24543cs6dck7/tmpaccd0umv/community-general-4.5.0-5msjuuoa
+
 Installing 'community.general:4.5.0' to '/home/devops/.ansible/collections/ansible_collections/community/general'
+
 community.general:4.5.0 was installed successfully
 ```
 
 ### 列出已安装的 collection
 ```bash
 $ ansible-galaxy collection list
+
 # /home/devops/.ansible/collections/ansible_collections
+
 Collection        Version
+
 ----------------- -------
+
 community.general 4.5.0
+
 $
 ```
 
 ### 在安装 collection 的情况下执行
 ```bash
 $ ansible-playbook collection/collection.yml
+
 [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all'
 
 PLAY [modprobe module demo] *****************************************************************************
 
 TASK [Gathering Facts] *********************************************************************
+
 ok: [localhost]
 
 TASK [load the module] *********************************************************************
+
 changed: [localhost]
 
 PLAY RECAP *****************************************************************************
+
 localhost                  : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
 
@@ -4074,17 +4367,26 @@ localhost                  : ok=2    changed=1    unreachable=0    failed=0    s
 ### demo
 如何使用 Ansible 创建一个空的 `~/example.txt` 文件或更新已创建文件的时间。
 
-#### file.yml
+#### `file.yml`
 ```yaml
 ---
+
 - name: file module demo
+
   hosts: all
+
   vars:
+
     myfile: "~/example.txt"
+
   tasks:
+
     - name: Creating an empty file
+
       ansible.builtin.file:
+
         path: "{{ myfile }}"
+
         state: touch
 ```
 
@@ -4099,24 +4401,36 @@ localhost                  : ok=2    changed=1    unreachable=0    failed=0    s
 ### demo
 在 Linux 中创建一个 `~/example.txt`。
 
-#### copy.yml
+#### `copy.yml`
 ```yaml
 ---
+
 - name: copy module demo
+
   hosts: all
+
   vars:
+
     myfile: "~/example.txt"
+
   tasks:
+
     - name: create a file
+
       ansible.builtin.copy:
+
         dest: "{{ myfile }}"
+
         content: |
+
           hello
 ```
 
+
+
 ## 检查文件是否存在 - Ansible 模块 stat
 
-如何使用 Ansible 检查文件是否存在？让我们谈谈 Ansible 模块 stat。全名是 `ansible.builtin.stat`，这意味着它是“builtin”模块集合的一部分，并随 Ansible 一起发布。这是一个非常稳定的模块，已经发布多年。它可以在不同的操作系统上运行。它获取文件项或文件系统状态。对于 Windows 目标，请使用 `ansible.windows.win_stat` 模块。
+如何使用 Ansible 检查文件是否存在？让我们谈谈 Ansible 模块 `stat`。全名是`ansible.builtin.stat`，这意味着它是“builtin”模块集合的一部分，并随 Ansible 一起发布。这是一个非常稳定的模块，已经发布多年。它可以在不同的操作系统上运行。它获取文件项或文件系统状态。对于 Windows 目标，请使用`ansible.windows.win_stat`模块。
 
 ### 强制参数
 - `path`: string
@@ -4124,7 +4438,7 @@ localhost                  : ok=2    changed=1    unreachable=0    failed=0    s
 ### 主要返回值
 - `stat`: complex
 
-唯一的强制参数是 `path`，要检查的文件系统完整路径。该模块返回一个复杂对象，我们感兴趣的属性是 `exists`。如果对象存在，该属性为“true”。
+唯一的强制参数是`path`，要检查的文件系统完整路径。该模块返回一个复杂对象，我们感兴趣的属性是`exists`。如果对象存在，该属性为“true”。
 
 ### demo
 让我们进入一个真实的 playbook 使用 Ansible 检查文件是否存在。
@@ -4156,42 +4470,20 @@ localhost                  : ok=2    changed=1    unreachable=0    failed=0    s
 
 如何使用 Ansible 自动化创建“example”目录。
 
-`ansible.builtin.file`
+`ansible.builtin.file` 管理文件和文件属性。
 
-管理文件和文件属性。
-
-
-
-
-
-今天我们来讨论 Ansible 模块文件。
-
-它的全名是 `ansible.builtin.file`，这意味着它是与 ansible 附带的 `builtin` 模块集合的一部分。
-
-这是一个非常稳定且已发布了多年的模块。
-
-它可以在多种操作系统上运行。
-
-它用于管理文件和文件属性。
-
-对于 Windows 目标，请使用 `ansible.windows.win_file` 模块。
+今天我们来讨论 Ansible 模块文件。它的全名是`ansible.builtin.file`，这意味着它是与 ansible 附带的`builtin`模块集合的一部分。这是一个非常稳定且已发布了多年的模块。它可以在多种操作系统上运行。它用于管理文件和文件属性。对于 Windows 目标，请使用`ansible.windows.win_file`模块。
 
 ## 参数
-
 - `path` 字符串 (`dest`, `name`) - 文件路径
 - `state` 字符串 - `file/absent/directory/hard/link/touch`
 - `mode`/`owner`/`group` - 权限
 - `setype`/`seuser`/`selevel` - SELinux
 
-该模块包含一些参数来执行各种任务。
-
-唯一必参数是 `path`，你可以在这里指定要编辑的文件的文件系统路径。
-
-`state` 定义了我们要修改的对象类型，默认值是 `file`，但对于我们的用例，我们需要 `directory` 选项。
+该模块包含一些参数来执行各种任务。唯一必参数是`path`，你可以在这里指定要编辑的文件的文件系统路径。`state`定义了我们要修改的对象类型，默认值是`file`，但对于我们的用例，我们需要`directory`选项。
 
 ## 演示
-
-如何使用 Ansible 的 file 模块在 Linux 的 `devops` 用户的家目录下创建 `example` 目录。
+如何使用 Ansible 的`file`模块在 Linux 的`devops`用户的家目录下创建`example`目录。
 
 ### 代码: create_directory.yml
 ```yaml
@@ -4213,62 +4505,93 @@ localhost                  : ok=2    changed=1    unreachable=0    failed=0    s
 # 执行
 ```bash
 $ ansible-playbook -i demo/inventory create_directory/file.yml
+
 PLAY [file module demo] ************************************************/
+
 ************************************
+
 TASK [Gathering Facts] *********************************
+
 ************************************************
+
 ok: [demo.example.com]
+
 TASK [Creating a directory] *****************************
+
 ************************************************
+
 changed: [demo.example.com]
+
 PLAY RECAP **********************************************
+
 ************************************************
+
 demo.example.com          : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
 
 ## 执行前
 ```bash
 $ ssh devops@demo.example.com
+
 [devops@demo ~]$ ls -al
+
 total 16
+
 drwx------. 4 devops wheel  111 Nov 14 13:43 .
+
 drwxr-xr-x. 5 root  root    50 Nov  8 17:07 ..
+
 drwx------. 3 devops wheel  17 Sep  6 05:53 .ansible
+
 -rw-------. 1 devops wheel 2849 Nov 14 13:43 .bash_history
+
 -rw-r--r--. 1 devops wheel  18 Dec  4  2020 .bash_logout
+
 -rw-r--r--. 1 devops wheel  141 Dec  4  2020 .bash_profile
+
 -rw-r--r--. 1 devops wheel  376 Dec  4  2020 .bashrc
+
 drwx------. 2 devops wheel  94 Sep 16 10:09 .ssh
+
 [devops@demo ~]$
 ```
 
 ## 执行后
 ```bash
 $ ssh devops@demo.example.com
+
 [devops@demo ~]$ ls -al
+
 total 16
+
 drwx------. 5 devops wheel  126 Nov 14 13:45 .
+
 drwxr-xr-x. 5 root  root    50 Nov  8 17:07 ..
+
 drwx------. 3 devops wheel  17 Sep  6 05:53 .ansible
+
 -rw-------. 1 devops wheel 2861 Nov 14 13:44 .bash_history
+
 -rw-r--r--. 1 devops wheel  18 Dec  4  2020 .bash_logout
+
 -rw-r--r--. 1 devops wheel  141 Dec  4  2020 .bash_profile
+
 -rw-r--r--. 1 devops wheel  376 Dec  4  2020 .bashrc
+
 drwx------. 2 devops wheel  94 Sep 16 10:09 .ssh
+
 drw-r--r--. 2 devops users    6 Nov 14 13:45 example
 ```
 
 ## 如何在 Ansible 中检查目录是否存在？
 
-使用 `stat` 模块来验证目录是否存在。它的全名是 `ansible.builtin.stat`，这意味着它是与 ansible 附带的 `builtin` 模块集合的一部分。这是一个非常稳定且已发布了多年的模块。它可以在多种操作系统上运行。它用于获取文件状态。对于 Windows 目标请使用 `ansible.windows.win_stat`。
+使用`stat`模块来验证目录是否存在。它的全名是`ansible.builtin.stat`，这意味着它是与 ansible 附带的`builtin`模块集合的一部分。这是一个非常稳定且已发布了多年的模块。它可以在多种操作系统上运行。它用于获取文件状态。对于 Windows 目标请使用`ansible.windows.win_stat`。
 
 ## 主要参数和返回值
-
-- `path` 字符串：唯一的必填参数是 `path`，它是要检查的对象的文件系统路径。
-- `stat`：模块返回一个复杂对象，我们感兴趣的属性是 `isdir`。如果对象是目录，则该属性为 `true`。
+- `path` 字符串：唯一的必填参数是`path`，它是要检查的对象的文件系统路径。
+- `stat`：模块返回一个复杂对象，我们感兴趣的属性是`isdir`。如果对象是目录，则该属性为`true`。
 
 ## 演示
-
 让我们进入一个真实的剧 book 来检查目录是否存在。
 
 ### 代码: directory_check_exists.yml
@@ -4292,10 +4615,9 @@ drw-r--r--. 2 devops users    6 Nov 14 13:45 example
 
 ## 如何使用 Ansible 中重命名文件或目录？
 
-首先，让我说明一下使用 Ansible 任务来重命名。`copy` 模块的作用是将文件复制到远程位置。一旦文件成功复制，我们可以使用 `file` 模块删除源文件。
+首先，让我说明一下使用 Ansible 任务来重命名。`copy`模块的作用是将文件复制到远程位置。一旦文件成功复制，我们可以使用`file`模块删除源文件。
 
 ## 演示
-
 让我们进入一个真实的剧 book 来使用 Ansible 重命名文件或目录。
 
 ### 代码: rename/file.yml
@@ -4330,119 +4652,183 @@ drw-r--r--. 2 devops users    6 Nov 14 13:45 example
 # 执行
 - 输出文件不存在：
 
-
-
-
-
 ## Ansible 执行输出
-
 ```bash
 $ ansible-playbook -i demo/inventory rename/file.yml
+
 PLAY [rename file or directory] ****************************************
+
 TASK [Gathering Facts] *********************************
+
 ****************************************************
+
 ok: [demo.example.com]
 
 TASK [Check if file exists] *****************************
+
 ***************************************************
+
 ok: [demo.example.com]
+
 TASK [print debug] *************************************
+
 ***************************************************
+
 ok: [demo.example.com] => {
+
     "check_file_name": {
+
         "changed": false,
+
         "failed": false,
+
         "stat": {
+
             "exists": false
+
         }
+
     }
+
 }
+
 TASK [Copy file with new name] **************************
+
 ***************************************************
+
 skipping: [demo.example.com]
+
 TASK [Remove old file] *********************************
+
 ***************************************************
+
 skipping: [demo.example.com]
+
 PLAY RECAP *************************************************
+
 ***************************************************
+
 demo.example.com          : ok=3    changed=0    unreachable=0    failed=0    skipped=2    rescued=0    ignored=0
 ```
 
 ### 输出文件存在
-
 ```bash
 $ ansible-playbook -i demo/inventory rename/file.yml
+
 PLAY [rename file or directory] ****************************************
+
 TASK [Gathering Facts] *********************************
+
 ****************************************************
+
 ok: [demo.example.com]
 
 TASK [Check if file exists] *****************************
+
 ***************************************************
+
 ok: [demo.example.com]
+
 TASK [print debug] *************************************
+
 ***************************************************
+
 ok: [demo.example.com] => {
+
     "check_file_name": {
+
         "changed": false,
+
         "failed": false,
+
         "stat": {
+
             "atime": 1632319723.592112,
+
             "attr_flags": "",
+
             "attributes": [],
+
             "block_size": 4096,
+
             "blocks": 0,
+
             "charset": "binary",
+
             "checksum": "da39a3ee5e6b4b0d3255bfef95601890afd80709",
+
             "ctime": 1632319723.592112,
+
             "dev": 64768,
+
             "device_type": 0,
+
             "executable": false,
+
             "exists": true,
+
             "gid": 10,
+
             "gr_name": "wheel",
+
             "inode": 134764246,
+
             "isblk": false,
+
             "ischr": false,
+
             "isdir": false,
+
             "isfifo": false,
-            "isgid": false,
-            "islnk": false,
-            "isreg": true,
-            "issock": false,
-            "isuid": false,
-            "uid": false,
-            "mimetype": "inode/empty",
-            "mode": "0644",
-            "mtime": 1632319723.592112,
-            "nlink": 1,
-            "path": "/home/devops/foo",
-            "pw_name": "devops",
-            "readable": true,
-            "rgrp": true,
-            "roth": true,
-            "rusr": true,
-            "size": 0,
-            "uid": 1001,
-            "version": "1745015340",
-            "wgrp": false,
-            "woth": false,
-            "writeable": true,
-            "wusr": true,
-            "xgrp": false,
-            "xoth": false,
-            "xusr": false
-        }
-    }
+```
+
+
+
+```json
+{
+    "isgid": false,
+    "islnk": false,
+    "isreg": true,
+    "issock": false,
+    "isuid": false,
+    "uid": false,
+    "mimetype": "inode/empty",
+    "mode": "0644",
+    "mtime": 1632319723.592112,
+    "nlink": 1,
+    "path": "/home/devops/foo",
+    "pw_name": "devops",
+    "readable": true,
+    "rgrp": true,
+    "roth": true,
+    "rusr": true,
+    "size": 0,
+    "uid": 1001,
+    "version": "1745015340",
+    "wgrp": false,
+    "woth": false,
+    "writeable": true,
+    "wusr": true,
+    "xgrp": false,
+    "xoth": false,
+    "xusr": false
 }
+```
+
+```text
 TASK [Copy file with new name] **************************
 ***************************************************
+
 changed: [demo.example.com]
+
 TASK [Remove old file] *********************************
 ***************************************************
+
 changed: [demo.example.com]
+
 PLAY RECAP *************************************************
 ***************************************************
+
 demo.example.com          : ok=5    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
 
@@ -4450,16 +4836,22 @@ demo.example.com          : ok=5    changed=2    unreachable=0    failed=0    sk
 
 ```bash
 $ ansible-playbook -i demo/inventory rename/file.yml
+
 PLAY [rename file or directory] ****************************************
+
 TASK [Gathering Facts] *********************************
 ****************************************************
+
 ok: [demo.example.com]
 
 TASK [Check if file exists] *****************************
 ***************************************************
+
 ok: [demo.example.com]
+
 TASK [print debug] *************************************
 ***************************************************
+
 ok: [demo.example.com] => {
     "check_file_name": {
         "changed": false,
@@ -4511,20 +4903,22 @@ ok: [demo.example.com] => {
         }
     }
 }
+
 TASK [Copy file with new name] **************************
 ***************************************************
+
 ok: [demo.example.com]
+
 TASK [Remove old file] *********************************
 ***************************************************
+
 changed: [demo.example.com]
+
 PLAY RECAP *************************************************
 ***************************************************
+
 demo.example.com          : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
-
-
-
-
 
 `mode` 参数以 UNIX 方式设置文件/目录的权限。
 
@@ -4536,14 +4930,25 @@ demo.example.com          : ok=5    changed=1    unreachable=0    failed=0    sk
 
 让我们跳入一个真实的 Ansible 剧本（playbook），使用 Ansible 修改文件权限。
 
-code
-
 ```yaml
 file.yml
-1 --- 2 - name: file module demo 3   hosts: all 4   vars: 5     myfile: "/home/devops/test.txt" 6   become: false 7   tasks: 8     - name: check permission 9       ansible.builtin.file: 10         path: "{{ myfile }}" 11         owner: "devops" 12         group: "users" 13         mode: '0777'
+
+1 --- 
+2 - name: file module demo
+3   hosts: all
+4   vars:
+5     myfile: "/home/devops/test.txt"
+6   become: false
+7   tasks:
+8     - name: check permission
+9       ansible.builtin.file:
+10        path: "{{ myfile }}"
+11        owner: "devops"
+12        group: "users"
+13        mode: '0777'
 ```
 
-## 为 Linux 文件添加 755 执行权限 - Ansible  file 模块
+## 为 Linux 文件添加 755 执行权限——Ansible `file` 模块
 
 如何使用 Ansible 模块 `file` 自动化为 `example.sh` Linux 文件设置执行权限 755。
 
@@ -4553,11 +4958,11 @@ file.yml
 
 `ansible.builtin.file`
 
-管理文件和文件属性
+管理文件和文件属性。
 
 今天我们来谈谈 Ansible 模块 `file`。
 
-它的全称是 `ansible.builtin.file`，这意味着它是 ansible 中“builtin”模块集合的一部分，并随 ansible 一起发布。
+它的全称是 `ansible.builtin.file`，这意味着它是 Ansible 中“builtin”模块集合的一部分，并随 Ansible 一起发布。
 
 这是一个非常稳定且已发布多年的模块。
 
@@ -4569,17 +4974,12 @@ file.yml
 
 ## 主要参数
 
-`path` string (dest, name) - 文件路径
-
-`owner` string - 用户
-
-`group` string - 组
-
-`mode` raw - 例：‘0644’ 或‘u=rw,g=r,o=r’
-
-`state` string - file/absent/directory/hard/link/touch
-
-`setype/seuser/selevel` - SELinux
+- `path` string (`dest`、`name`)：文件路径
+- `owner` string：用户
+- `group` string：组
+- `mode` raw：例如，`0644` 或 `u=rw,g=r,o=r`
+- `state` string：`file`/`absent`/`directory`/`hard`/`link`/`touch`
+- `setype`/`seuser`/`selevel`：SELinux
 
 该模块拥有一些参数来执行任何任务。
 
@@ -4597,48 +4997,105 @@ file.yml
 
 ## 链接
 
-[ansible.builtin.file](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/file_module.html)
+[`ansible.builtin.file`](https://docs.ansible.com/ansible/latest/collections/ansible/builtin/file_module.html)
 
 ## demo
 
 如何使用 Ansible Playbook 为 Linux 文件添加 755 执行权限。
 
-我将将向你展示如何使用 Ansible 为 `example.sh` Linux 文件设置 `chmod +x`。
-
-code
+我将向你展示如何使用 Ansible 为 `example.sh` Linux 文件设置 `chmod +x`。
 
 ```yaml
 file_permission.yml
-1 --- 2 - name: file module demo 3   hosts: all 4   vars: 5     myscript: "~/example.sh" 6   tasks: 7     - name: set execution permission 8       ansible.builtin.file: 9         dest: "{{ myscript }}" 10         mode: 'a+x'
+
+1 ---
+2 - name: file module demo
+3   hosts: all
+4   vars:
+5     myscript: "~/example.sh"
+6   tasks:
+7     - name: set execution permission
+8       ansible.builtin.file:
+9         dest: "{{ myscript }}"
+10        mode: 'a+x'
 ```
 
 ```bash
 example.sh
-1 #!/bin/bash 2 echo "Hello World"
+
+1 #!/bin/bash
+2 echo "Hello World"
 ```
 
-execution
+### 执行
 
 ```bash
-ansible-pilot $ ansible-playbook -i virtualmachines/demo/\ 2 inventory file_management/file_permission.yml 3 PLAY [file module demo] *********************************\ 4 ****************************************** 5 TASK [Gathering Facts] **********************************\ 6 ****************************************** 7 ok: [demo.example.com] 8 TASK [set execution permission] *************************\ 9 ****************************************** 10 changed: [demo.example.com] 11 PLAY RECAP **********************************************\ 12 ****************************************** 13 demo.example.com          : ok=2    changed=1    unreach\ 14 able=0    failed=0    skipped=0    rescued=0    ignored=0 15 ansible-pilot $
+ansible-pilot $ ansible-playbook -i virtualmachines/demo/\
+2 inventory file_management/file_permission.yml
+3 PLAY [file module demo] *********************************\
+4 ******************************************
+5 TASK [Gathering Facts] **********************************\
+6 ******************************************
+7 ok: [demo.example.com]
+8 TASK [set execution permission] *************************\
+9 ******************************************
+10 changed: [demo.example.com]
+11 PLAY RECAP **********************************************\
+12 ******************************************
+13 demo.example.com          : ok=2    changed=1    unreach\
+14 able=0    failed=0    skipped=0    rescued=0    ignored=0
+15 ansible-pilot $
 ```
 
-idempotency
+### 幂等性
 
 ```bash
-ansible-pilot $ ansible-playbook -i virtualmachines/demo/\ 2 inventory file_management/file_permission.yml 3 PLAY [file module demo] *********************************\ 4 ****************************************** 5 TASK [Gathering Facts] **********************************\ 6 ****************************************** 7 ok: [demo.example.com] 8 TASK [set execution permission] *************************\ 9 ****************************************** 10 ok: [demo.example.com] 11 PLAY RECAP **********************************************\ 12 ****************************************** 13 demo.example.com          : ok=2    changed=0    unreach\ 14 able=0    failed=0    skipped=0    rescued=0    ignored=0 15 ansible-pilot $
+ansible-pilot $ ansible-playbook -i virtualmachines/demo/\
+2 inventory file_management/file_permission.yml
+3 PLAY [file module demo] *********************************\
+4 ******************************************
+5 TASK [Gathering Facts] **********************************\
+6 ******************************************
+7 ok: [demo.example.com]
+8 TASK [set execution permission] *************************\
+9 ******************************************
+10 ok: [demo.example.com]
+11 PLAY RECAP **********************************************\
+12 ******************************************
+13 demo.example.com          : ok=2    changed=0    unreach\
+14 able=0    failed=0    skipped=0    rescued=0    ignored=0
+15 ansible-pilot $
 ```
 
-before execution
+### 执行前
 
-```bash
-ansible-pilot $ ansible-playbook -i virtualmachines/demo/\ 2 inventory file_management/file_permission.yml 3 PLAY [file module demo] *********************************\ 4 ****************************************** 5 TASK [Gathering Facts] **********************************\ 6 ****************************************** 7 ok: [demo.example.com] 8 TASK [set execution permission] *************************\ 9 ****************************************** 10 changed: [demo.example.com] 11 PLAY RECAP **********************************************\ 12 ****************************************** 13 demo.example.com          : ok=2    changed=1    unreach\ 14 able=0    failed=0    skipped=0    rescued=0    ignored=0 15 ansible-pilot $
+
+
+`ansible-pilot $ ansible-playbook -i virtualmachines/demo/ inventory file_management/file_permission.yml`
+
+```
+PLAY [file module demo] ****************************************************
+TASK [Gathering Facts] *****************************************************
+ok: [demo.example.com]
+TASK [set execution permission] *******************************************
+changed: [demo.example.com]
+PLAY RECAP *****************************************************************
+demo.example.com          : ok=2    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+ansible-pilot $
 ```
 
-after execution
+执行后：
 
 ```bash
-ansible-pilot $ ansible-playbook -i virtualmachines/demo/\ 2 inventory file_management/file_permission.yml 3 PLAY [file module demo] *********************************\ 4 ****************************************** 5 TASK [Gathering Facts] **********************************\ 6 ****************************************** 7 ok: [demo.example.com] 8 TASK [set execution permission] *************************\ 9 ****************************************** 10 ok: [demo.example.com] 11 PLAY RECAP **********************************************\ 12 ****************************************** 13 demo.example.com          : ok=2    changed=0    unreach\ 14 able=0    failed=0    skipped=0    rescued=0    ignored=0 15 ansible-pilot $
+ansible-pilot $ ansible-playbook -i virtualmachines/demo/ inventory file_management/file_permission.yml
+PLAY [file module demo] ****************************************************
+TASK [Gathering Facts] *****************************************************
+ok: [demo.example.com]
+TASK [set execution permission] *******************************************
+ok: [demo.example.com]
+PLAY RECAP *****************************************************************
+demo.example.com          : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+ansible-pilot $
 ```
 
 ## 删除文件或目录 - Ansible 模块
@@ -4651,11 +5108,20 @@ ansible-pilot $ ansible-playbook -i virtualmachines/demo/\ 2 inventory file_mana
 
 ## demo
 
-如何使用 Ansible 删除 “deleteme”文件或目录。
+如何使用 Ansible 删除 “deleteme” 文件或目录。
 
 ```yaml
-file.yml
-1 --- 2 - name: file module demo 3   hosts: all 4   vars: 5     myfile: "/home/devops/test.txt" 6   become: false 7   tasks: 8     - name: "{{ myfile }}" not present 9       ansible.builtin.file: 10         path: "{{ myfile }}" 11         state: "absent"
+---
+- name: file module demo
+  hosts: all
+  vars:
+    myfile: "/home/devops/test.txt"
+  become: false
+  tasks:
+    - name: "{{ myfile }}" not present
+      ansible.builtin.file:
+        path: "{{ myfile }}"
+        state: "absent"
 ```
 
 ## 下载文件 - Ansible get_url 模块
@@ -4664,7 +5130,7 @@ file.yml
 
 我们来谈谈 Ansible 模块 `get_url`。
 
-它的全称是 `ansible.builtin.get_url`，这意味着它是 ansible 中“builtin”模块集合的一部分，并随 ansible 一起发布，属于 ansible-core 的。
+它的全称是 `ansible.builtin.get_url`，这意味着它是 ansible 中 “builtin” 模块集合的一部分，并随 ansible 一起发布，属于 `ansible-core` 的。
 
 这是一个非常稳定且已发布多年的模块。
 
@@ -4676,31 +5142,19 @@ file.yml
 
 ## 参数
 
-`url` string - URL
-
-`dest` string - 路径
-
-`force` string - no/yes
-
-`checksum` string - `<algorithm>:<checksum|url>`
-
-`force_basic_auth/url_username/url_password/use_gssapi` - HTTP 基本认证/GSSAPI-Kerberos
-
-`headers` dictionary - 自定义 HTTP 请求头
-
-`http_agent` string - “ansible-httpget”
-
-`owner/group/mode` string - 权限
-
-`setype/seuser/selevel` - SELinux
+- `url` string - URL
+- `dest` string - 路径
+- `force` string - no/yes
+- `checksum` string - `<algorithm>:<checksum|url>`
+- `force_basic_auth/url_username/url_password/use_gssapi` - HTTP 基本认证/GSSAPI-Kerberos
+- `headers` dictionary - 自定义 HTTP 请求头
+- `http_agent` string - “ansible-httpget”
+- `owner/group/mode` string - 权限
+- `setype/seuser/selevel` - SELinux
 
 两个要求的参数是 `url` 和 `dest`。
 
 `url` 参数指定要下载的资源 URL。
-
-
-
-
 
 `dest` 参数指定了资源在目标节点上保存的文件系统路径。
 
@@ -4714,7 +5168,7 @@ file.yml
 
 你可能需要第三方库 `hashlib` 来访问额外的算法。
 
-另一个很有有趣的参数是 `headers`，它允许你指定一些自定义的 HTTP 请求头。
+另一个很有趣的参数是 `headers`，它允许你指定一些自定义的 HTTP 请求头。
 
 Ansible 在 Web 服务器日志中显示的标识为 `ansible-httpget`，但你可以在 `http_agent` 参数中对其自定义。
 
@@ -4871,15 +5325,11 @@ Ansible 在 Web 服务器日志中显示的标识为 `ansible-httpget`，但你�
         state: link
 ```
 
-execution
+执行：
 
 ```bash
 ansible-playbook -i demo/inventory create_symlink.file.yml
 ```
-
-
-
-
 
 ```bash
 $ ssh devops@demo.example.com
@@ -4893,51 +5343,40 @@ drwx------. 3 devops wheel 17 Sep 6 05:53 .ansible
 -rw-r--r--. 1 devops wheel 141 Dec 4 2020 .bash_profile
 -rw-r--r--. 1 devops wheel 376 Dec 4 2020 .bashrc
 drwx------. 2 devops wheel 94 Sep 16 10:09 .ssh
-lrwxrwxrwx. 1 devops wheel 13 Nov 14 14:29 example -> example
-proc/cpuinfo
+lrwxrwxrwx. 1 devops wheel 13 Nov 14 14:29 example -> /proc/cpuinfo
 [devops@demo ~]$ cat example | less
 [devops@demo ~]$
 ```
 
+
+
 # 在 Linux 中创建硬链接 - Ansible 模块文件
 
-如何使用 Ansible 在 Linux 文件系统中创建一个引用“example.txt”文本文件的“硬链接”。
+如何使用 Ansible 在 Linux 文件系统中创建一个引用`example.txt`文本文件的“硬链接”。
 
 ## Ansible 创建硬链接
 
-`ansible.builtin.file`
+`ansible.builtin.file` - 管理文件和文件属性
 
-管理文件和文件属性
+今天我们来谈谈 Ansible 模块文件。全名是`ansible.builtin.file`，这意味着它是 Ansible 内置（“builtin”）模块集合的一部分，并随 Ansible 一起分发。这是一个非常稳定的模块，已经发布了多年。它可以在不同的操作系统上运行。它可以管理文件和文件属性。
 
-今天我们来谈谈 Ansible 模块文件。
-
-全名是 `ansible.builtin.file`，这意味着它是 Ansible 内置（“builtin”）模块集合的一部分，并随 Ansible 一起分发。
-
-这是一个非常稳定的模块，已经发布了多年。它可以在不同的操作系统上运行。它可以管理文件和文件属性。
-
-如需创建符号链接（或软链接），请参考 Ansible `file` 模块的以下参数。
-
-对于 Windows 目标，请改用 `ansible.windows.win_file` 模块。
+如需创建符号链接（或软链接），请参考 Ansible `file`模块的以下参数。对于 Windows 目标，请改用`ansible.windows.win_file`模块。
 
 另请：在 Linux 中创建符号链接（也称为 symlink 或 soft link） - Ansible 模块文件
 
-#### 参数
+### 参数
 
-- `src` 字符串 - 符号链接路径
-- `dest` 字符串 - 目标文件路径
-- `state` 字符串 - file/absent/directory/link/hard/touch
+- `src`字符串 - 符号链接路径
+- `dest`字符串 - 目标文件路径
+- `state`字符串 - file/absent/directory/link/hard/touch
 - `mode/owner/group` - 权限
 - `setype/seuser/selevel` - SELinux
 
-该模块具有一些参数来执行任何任务。两个必要字段是 `src` 和 `dest`，它们指定了硬链接和目标文件的文件系统路径。
-
-`state` 定义了我们要修改的对象类型，默认值是“file”，但对于我们的用例，我们需要“link”选项。
-
-让我也强调一下权限和 SELinux 参数。
+该模块具有一些参数来执行任何任务。两个必要字段是`src`和`dest`，它们指定了硬链接和目标文件的文件系统路径。`state`定义了我们要修改的对象类型，默认值是“file”，但对于我们的用例，我们需要“link”选项。让我也强调一下权限和 SELinux 参数。
 
 ## 演示
 
-如何使用 Ansible 创建一个引用“example.txt”文件的硬链接。
+如何使用 Ansible 创建一个引用`example.txt`文件的硬链接。
 
 ### 代码：create_hardlink.yml
 
@@ -4956,7 +5395,7 @@ proc/cpuinfo
         state: hard
 ```
 
-# 执行
+### 执行
 
 ```bash
 $ ansible-playbook -i virtualmachines/demo/inventory hardlink.yml
@@ -4967,7 +5406,7 @@ PLAY RECAP *********************************************
 demo.example.com : ok=2    changed=1    reachable=0    failed=0    rescued=0    ignored=0
 ```
 
-## 执行前
+### 执行前
 
 ```bash
 $ ssh devops@demo.example.com
@@ -4985,7 +5424,7 @@ drwx------. 2 devops wheel 29 Nov 28 16:46 .ssh
 [devops@demo ~]$ cat example.txt
 ```
 
-## 执行后
+### 执行后
 
 ```bash
 $ ssh devops@demo.example.com
@@ -5060,58 +5499,33 @@ drwx------. 2 devops wheel 29 Nov 28 16:46 .ssh
 [devops@demo ~]$
 ```
 
+---
+
 # 在 Linux 中挂载 SMB/CIFS 共享文件夹 - Ansible 模块 mount
 
 如何使用 Ansible 在 Linux 中挂载 SMB/CIFS 共享文件夹。Ansible Playbook 代码将检查所需的软件包、创建挂载点并在 Linux 目标机器上通过 SMB/CIFS 协议设置 Windows 网络共享文件夹。
 
 ## Ansible 挂载 SMB/CIFS 文件系统
 
-`ansible.posix.mount`
+`ansible.posix.mount` - 控制激活和配置的挂载点
 
-控制激活和配置的挂载点
+今天我们来谈谈 Ansible mount 模块。全名是`ansible.posix.mount`，这意味着它是“ansible.posix”模块集合的一部分，用于与 POSIX 平台交互。该模块的目的是控制激活和配置的挂载点。对于 Windows，请改用`community.windows.win_mapped_drive`模块。
 
-今天我们来谈谈 Ansible mount 模块。
+### 参数
 
-全名是 `ansible.posix.mount`，这意味着它是“ansible.posix”模块集合的一部分，用于与 POSIX 平台交互。
+- `path`字符串 - 挂载点（例如`/mnt`）
+- `state`字符串 - mounted / unmounted / present / absent / remounted
+- `src`字符串 - 设备或网络卷
+- `fstype`字符串 - `ext4`, `xfs`, `iso9660`, `nfs`, `cifs` 等。
+- `opts`字符串 - 挂载选项
 
-该模块的目的是控制激活和配置的挂载点。
-
-对于 Windows，请改用 `community.windows.win_mapped_drive` 模块。
-
-#### 参数
-
-- `path` 字符串 - 挂载点（例如 `/mnt`）
-- `state` 字符串 - mounted / unmounted / present / absent / remounted
-
-
-
-
-
-# 参数
-
-- `src` 字符串 - 设备或网络卷
-- `fstype` 字符串 - `ext4`, `xfs`, `iso9660`, `nfs`, `cifs` 等。
-- `opts` 字符串 - 挂载选项
-
-此模块有许多参数用于执行任何任务。
-
-仅要求的参数是 `path` 和 `state`。
-
-参数 `path` 指定挂载点的路径（例如 `/mnt/`）。
-
-参数 `state` 允许我们验证挂载点的特定状态`mounted`（已挂载）、`unmounted`（未挂载）和 `remounted`（重新挂载）选项会更改设备状态。`present`（存在）和 `absent`（不存在）选项仅更改 `/etc/fstab` 文件。
-
-`src` 参数指定 NFS 或 SMB/CIFS 的设备或网络卷。
-
-`fstype` 参数文件系统类型。例如：`ext4`,`xfs`,`iso9660`,`nfs`,`cifs` 等。
-
-`opts` 参数允许我们指定某些挂载选项，这些选项随每个文件系统类型而异。
+此模块有许多参数用于执行任何任务。仅要求的参数是`path`和`state`。参数`path`指定挂载点的路径（例如`/mnt/`）。参数`state`允许我们验证挂载点的特定状态`mounted`（已挂载）、`unmounted`（未挂载）和`remounted`（重新挂载）选项会更改设备状态。`present`（存在）和`absent`（不存在）选项仅更改`/etc/fstab`文件。`src`参数指定 NFS 或 SMB/CIFS 的设备或网络卷。`fstype`参数文件系统类型。例如：`ext4`,`xfs`,`iso9660`,`nfs`,`cifs` 等。`opts`参数允许我们指定某些挂载选项，这些选项随每个文件系统类型而异。
 
 ## 演示
 
 让我们进入一个真实的 Ansible Playbook 来挂载一个 SMB/CIFS 文件系统。
 
-## 代码
+### 代码
 
 ```yaml
 mount_cifs.yml
@@ -5141,11 +5555,11 @@ mount_cifs.yml
         src: "{{ uri }}"
         path: "{{ mountpoint }}"
         fstype: cifs
-        opts: 'username={{ username }},password={{ password }}
+        opts: 'username={{ username }},password={{ password }}'
         state: mounted
 ```
 
-# 执行
+### 执行
 
 ```bash
 $ ansible-playbook -i demo/inventory mount drive/cifs.yml
@@ -5165,8 +5579,11 @@ TASK [Mount network share] ******************************
 changed: [demo.example.com]
 PLAY RECAP **********************************************
 ************************************************
-demo.example.com          : ok=4    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 ```
+
+
+
+`demo.example.com` : ok=4    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
 
 ## 执行前
 
@@ -5220,10 +5637,6 @@ UUID=ae6c1777-c1c9-42a1-8fcf-513077aac39b /boot  xfs     defaults        0 0
 [root@demo devops]#
 ```
 
-
-
-
-
 ```bash
 $ ssh devops@demo.example.com
 [devops@demo ~]$ sudo su
@@ -5268,14 +5681,14 @@ tmpfs on /run/user/1001 type tmpfs (rw,nosuid,nodev,relatime,seclabel,size=82872
 
 ### ansible.posix.mount
 
-今天我们讨论 `mount` 模块。它的全名是 `ansible.posix.mount`，它是与 POSIX 平台交互的模块集合。该模块的作用是控制激活和已配置的挂载点。对于 Windows，请使用 `community.windows.win_mapped_drive` 模块。
+今天我们讨论`mount`模块。它的全名是`ansible.posix.mount`，它是与 POSIX 平台交互的模块集合。该模块的作用是控制激活和已配置的挂载点。对于 Windows，请使用`community.windows.win_mapped_drive`模块。
 
 ### 参数
 
 - `path`: 挂载点（例如 `/mnt`）
 - `state`: `mounted`（已挂载）、`unmounted`（未挂载）、`present`（存在）、`absent`（删除）、`remounted`（重挂载）
 - `src`: 设备或网络卷
-- `fstype`: 文件系统类型，如 `ext4`、`xfs`、`nfs`、`cifs` 等
+- `fstype`: 文件系统类型，如`ext4`、`xfs`、`nfs`、`cifs`等
 - `opts`: 挂载选项
 
 ## 示例：mount_nfs.yml
@@ -5298,7 +5711,6 @@ tmpfs on /run/user/1001 type tmpfs (rw,nosuid,nodev,relatime,seclabel,size=82872
           - nfs4-acl-tools
         state: present
       when: ansible_os_family == 'RedHat'
-
     - name: debian 类工具
       ansible.builtin.apt:
         name:
@@ -5306,7 +5718,6 @@ tmpfs on /run/user/1001 type tmpfs (rw,nosuid,nodev,relatime,seclabel,size=82872
           - nfs4-acl-tools
         state: present
       when: ansible_os_family == 'Debian'
-
     - name: 检查挂载点是否存在
       ansible.builtin.file:
         path: "{{ mountpoint }}"
@@ -5314,7 +5725,6 @@ tmpfs on /run/user/1001 type tmpfs (rw,nosuid,nodev,relatime,seclabel,size=82872
         mode: "{{ permission }}"
         owner: root
         group: root
-
     - name: 挂载网络共享
       ansible.posix.mount:
         src: "{{ mynfs }}"
@@ -5324,30 +5734,48 @@ tmpfs on /run/user/1001 type tmpfs (rw,nosuid,nodev,relatime,seclabel,size=82872
         state: mounted
 ```
 
-
-
-
 ```bash
 $ ansible-playbook -i virtualmachines/demo/inventory mount drive/nfs.yml
-PLAY [mount module demo] ********************************
-**************************************************
-TASK [Gathering Facts] *********************************
-*****************************************
+
+PLAY [mount module demo] ******************************************************************
+
+TASK [Gathering Facts] **************************************************************
 ok: [demo.example.com]
-TASK [utility present redhat-like] **********************
+
+TASK [utility present redhat-like] *****************************************************
+```
+
+
+
+## Ansible 执行结果
+
+```text
 *****************************************
+
 changed: [demo.example.com]
+
 TASK [utility present debian-like] **********************
+
 *****************************************
+
 skipping: [demo.example.com]
+
 TASK [check mountpoint exist] ***************************
+
 *****************************************
+
 changed: [demo.example.com]
+
 TASK [mount network share] ******************************
+
 *****************************************
+
 changed: [demo.example.com]
+
 PLAY RECAP **********************************************
+
 ******************************************
+
 demo.example.com          : ok=4 changed=3 unreachable=0 failed=0 skipped=1 rescued=0 ignored=0
 ```
 
@@ -5355,123 +5783,219 @@ demo.example.com          : ok=4 changed=3 unreachable=0 failed=0 skipped=1 resc
 
 ```bash
 $ ssh devops@demo.example.com
+
 [devops@demo ~]$ sudo su
+
 [root@demo devops]# cat /etc/redhat-release
+
 Red Hat Enterprise Linux release 8.4 (Ootpa)
+
 [root@demo devops]# yum list nfs-utils
+
 Updating Subscription Management repositories.
+
 Last metadata expiration check: 0:28:59 ago on Wed 24 Nov 2021 11:17:15 AM UTC.
+
 Available Packages
+
 nfs-utils.x86_64                1:2.3.3-46.el8             rhel-8-for-x86_64-baseos-rpms
+
 [root@demo devops]# showmount --exports 192.168.0.200
+
 bash: showmount: command not found
+
 [root@demo devops]# ls -al /share
+
 ls: cannot access '/share': No such file or directory
+
 [root@demo devops]# cat /etc/fstab
+
 #
+
 # /etc/fstab
+
 # Created by anaconda on Wed Sep 1 00:06:23 2021
+
 #
+
 # Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+
 # See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+
 #
+
 # After editing this file, run 'systemctl daemon-reload' to update systemd
+
 # units generated from this file.
+
 #
+
 /dev/mapper/rhel_rhel8-root /                   xfs      defaults      0 0
+
 UUID=ae6c1777-c1c9-42a1-8fcf-513077aac39b /boot        xfs      defaults      0 0
+
 /dev/mapper/rhel_rhel8-swap none                    swap      defaults      0 0
+
 [root@demo devops]# mount
+
 sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime,seclabel)
+
 proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+
 devtmpfs on /dev type devtmpfs (rw,nosuid,seclabel,size=395492k,nr_inodes=98873,mode=755)
+
 securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+
 tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,seclabel)
+
 devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime)
+
 tmpfs on /run type tmpfs (rw,nosuid,nodev,seclabel,size=3072k,mode=755,relatime)
+
 tmpfs on /dev type tmpfs (rw,nosuid,nodev,noexec,relatime,seclabel)
+
 tmpfs on /dev type tmpfs (rw,nosuid,nodev,seclabel,size=3072k)
+
 systemd-1 on /proc/sys/fs/binfmt_misc type autofs (rw,relatime,fd=38,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=18508)
+
 debugfs on /sys/kernel/debug type debugfs (rw,relatime)
+
 configfs on /sys/kernel/config type configfs (rw,relatime)
+
 /dev/mapper/rhel_rhel8-root /                   xfs (rw,relatime,seclabel,attr2,inode64,logbufs=8,logbsize=32k,noquota)
+
 ...
+
 selinfs on /sys/fs/selinux type selinux (rw,relatime)
+
 mqueue on /dev/mqueue type mqueue (rw,relatime,seclabel)
+
 hugetlbfs on /dev/hugepages type hugetlbfs (rw,relatime,seclabel,pagesize=2M)
 ```
 
+## 按特定顺序合并多个文件：Ansible 模块模板
 
-
-
-
-## 按特定顺序合并多个文件 - Ansible 模块模板
-
-如何使用 YAML 自动合并多个文件
+如何使用 YAML 自动合并多个文件。
 
 ```bash
 $ ssh devops@demo.example.com
+
 [devops@demo ~]$ sudo su
+
 [root@demo devops]# yum list nfs-utils
+
 Updating Subscription Management repositories.
+
 Last metadata expiration check: 0:31:28 ago on Wed 24 Nov 2021 11:17:15 AM UTC.
+
 Installed Packages
+
 nfs-utils.x86_64                  1:2.3.3-46.el8          @rhel-8-for-x86_64-baseos-rpms
+
 [root@demo devops]# showmount --exports 192.168.0.200
+
 Export list for 192.168.0.200:
+
 /nfs/share 192.168.0.200/24
+
 [root@demo devops]# cat /etc/fstab
+
 #
+
 # /etc/fstab
+
 # Created by anaconda on Wed Sep 1 00:06:23 2021
+
 #
+
 # Accessible filesystems, by reference, are maintained under '/dev/disk/'.
+
 # See man pages fstab(5), findfs(8), mount(8) and/or blkid(8) for more info.
+
 #
+
 # After editing this file, run `systemctl daemon-reload` to update systemd units generated from this file.
+
 #
+
 /dev/mapper/rhel_rhel8-root /                       xfs    defaults      0 0
+
 UUID=ae6c1777-c1c9-42a1-8fcf-513077aac39b /boot        xfs    defaults      0 0
+
 /dev/mapper/rhel_rhel8-swap none                    swap   defaults      0 0
+
 192.168.0.200:/nfs/share /share nfs rw,sync 0 0
+
 [root@demo devops]# mount
+
 sysfs on /sys type sysfs (rw,nosuid,nodev,noexec,relatime,seclabel)
+
 proc on /proc type proc (rw,nosuid,nodev,noexec,relatime)
+
 devtmpfs on /dev type devtmpfs (rw,nosuid,seclabel,size=395492k,nr_inodes=98873,mode=755)
+
 securityfs on /sys/kernel/security type securityfs (rw,nosuid,nodev,noexec,relatime)
+
 tmpfs on /dev/shm type tmpfs (rw,nosuid,nodev,seclabel)
+
 devpts on /dev/pts type devpts (rw,nosuid,noexec,relatime,seclabel,gid=5,mode=620,ptmxmode=000)
+
 tmpfs on /run type tmpfs (rw,nosuid,nodev,seclabel,mode=755)
+
 tmpfs on /sys/fs/cgroup type tmpfs (ro,nosuid,nodev,noexec,seclabel,mode=755)
+
 cgroup on /sys/fs/cgroup/systemd type cgroup (rw,nosuid,node,noexec,relatime,seclabel,xattr,release_agent=/usr/lib/systemd/systemd-cgroups-agent,name=systemd)
+
 pstore on /sys/fs/pstore type pstore (rw,nosuid,nodev,noexec,relatime,seclabel)
+
 bpf on /sys/fs/bpf type bpf (rw,nosuid,nodev,noexec,relatime,mode=700)
+
 cgroup on /sys/fs/cgroup/cpuset type cgroup (rw,nosuid,node,noexec,relatime,seclabel,cpuset)
+
 cgroup on /sys/fs/cgroup/rdma type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,rdma)
+
 cgroup on /sys/fs/cgroup/pids type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,pids)
+
 cgroup on /sys/fs/cgroup/hugetlb type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,hugetlb)
-cgroup on /sys/fs/cgroup/cpuacct type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,cpu,acct)
-cgroup on /sys/fs/cgroup/freezer type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,freezer)
-cgroup on /sys/fs/cgroup/blkio type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,blkio)
-cgroup on /sys/fs/cgroup/net_cls,net_prio type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,net_cls,net_prio)
-cgroup on /sys/fs/cgroup/perf_event type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,perf_event)
+
+cgroup on /sys/fs/cgroup/cpuacct type cgroup (rw,nosuid,node,noexec,relatime,seclabel,cpu,acct)
+
+cgroup on /sys/fs/cgroup/freezer type cgroup (rw,nosuid,node,noexec,relatime,seclabel,freezer)
+
+cgroup on /sys/fs/cgroup/blkio type cgroup (rw,nosuid,node,noexec,relatime,seclabel,blkio)
+
+cgroup on /sys/fs/cgroup/net_cls,net_prio type cgroup (rw,nosuid,node, noexec,relatime,seclabel,net_cls,net_prio)
+
+cgroup on /sys/fs/cgroup/perf_event type cgroup (rw,nosuid,node,noexec,relatime,seclabel,perf_event)
+
 cgroup on /sys/fs/cgroup/memory type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,memory)
+
 cgroup on /sys/fs/cgroup/devices type cgroup (rw,nosuid,nodev,noexec,relatime,seclabel,devices)
+
 none on /sys/kernel/tracing type tracefs (rw,relatime,seclabel)
+
 configfs on /sys/kernel/config type configfs (rw,relatime)
+
 /dev/mapper/rhel_rhel8-root / xfs (rw,relatime,seclabel,attr2,inode64,logbufs=8,logbsize=32k,noquota)
-selinuxfs on /sys/fs/selinux type selinuxfs (rw,relatime)
+
+selinuxfs on /sys/fs/selinux type selinuxfs (rw,relatime,seclabel)
+
 mqueue on /dev/mqueue type mqueue (rw,relatime,seclabel)
+
 hugetlbfs on /dev/hugepages type hugetlbfs (rw,relatime,seclabel,pagesize=2M)
+
 systemd-1 on /proc/sys/fs/binfmt_misc type autofs (rw,relatime,fd=38,pgrp=1,timeout=0,minproto=5,maxproto=5,direct,pipe_ino=18508)
+
 debugfs on /sys/kernel/debug type debugfs (rw,relatime,seclabel)
+
 /dev/sda1 /boot type xfs (rw,relatime,seclabel,attr2,inode64,logbufs=8,logbsize=32k,noquota)
+
 sunrpc on /var/lib/nfs/rpc_pipefs type rpc_pipefs (rw,relatime)
+
 tmpfs on /run/user/1001 type tmpfs (rw,nosuid,nodev,relatime,seclabel,size=82872k,mode=700,uid=1001,gid=10)
+
 192.168.0.200:/nfs/share /share type nfs4 (rw,relatime,sync,vers=4.2,rsize=131072,wsize=131072)
 ```
-
-
 
 如果启用了 `backup` 参数，Ansible 在将文件复制到目标位置之前创建一个包含时间戳信息的备份文件。
 
@@ -5479,80 +6003,125 @@ tmpfs on /run/user/1001 type tmpfs (rw,nosuid,nodev,relatime,seclabel,size=82872
 
 ## demo
 
-如何使用 Ansible 的 template 模块和 YAML 按特定顺序合并多个文件。
+如何使用 Ansible 的 `template` 模块和 YAML 按特定顺序合并多个文件。
 
-code
+### code
 
-```
+```text
 a.txt
+
 1 A content
 
 b.txt
+
 1 B content
 
 includes.yaml
-1 input-files: 2   - concatenate/b.txt 3   - concatenate/a.txt
+
+1 input-files:
+2   - concatenate/b.txt
+3   - concatenate/a.txt
 ```
 
 ```yaml
 concatenate.yml
-1 --- 2 - name: concatenate demo 3   hosts: "{{ HOSTS }}" 4   become: false 5   gather_facts: true 6   vars: 7     myinput: "concatenate/includes.yaml" 8     myoutput: "concatenate/output.txt" 9   tasks: 10     - name: include file list 11       include_vars: 12         file: "{{ myinput }}" 13         name: files 14 15     - name: concatenate 16       ansible.builtin.template: 17         src: templates/concatenate.j2 18         dest: "{{ myoutput }}"
 ```
 
+
+
+1 --- 2 - name: concatenate demo 3   hosts: "{{ HOSTS }}" 4   become: false 5   gather_facts: true 6   vars: 7     myinput: "concatenate/includes.yaml" 8     myoutput: "concatenate/output.txt" 9   tasks: 10     - name: include file list 11       include_vars: 12         file: "{{ myinput }}" 13         name: files 14 15     - name: concatenate 16       ansible.builtin.template: 17         src: templates/concatenate.j2 18         dest: "{{ myoutput }}"
+
+```yaml
+---
+
+- name: concatenate demo
+  hosts: "{{ HOSTS }}"
+  become: false
+  gather_facts: true
+  vars:
+    myinput: "concatenate/includes.yaml"
+    myoutput: "concatenate/output.txt"
+  tasks:
+    - name: include file list
+      include_vars:
+        file: "{{ myinput }}"
+        name: files
+
+    - name: concatenate
+      ansible.builtin.template:
+        src: templates/concatenate.j2
+        dest: "{{ myoutput }}"
+```
+
+### `concatenate.j2`
+
 ```jinja
-concatenate.j2
 1 {% for i in files["input-files"] %} 2 {{ lookup('file', i) }} 3 {% endfor %}
 ```
 
-execution
+### execution
 
-```
+```bash
 ansible-pilot $ ansible-playbook -e "HOSTS=localhost" concatenate.yml 
+
 [WARNING]: No inventory was parsed, only implicit localhost is available 
+
 [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all' 
+
 PLAY [concatenate demo] ************************************************ 
 ************************************************************ 
+
 TASK [Gathering Facts] *********************************** 
 *************************************************** 
 12 ok: [localhost] 
+
 TASK [include file list] ******************************** 
 ********************************************************* 
 15 ok: [localhost] 
+
 TASK [concatenate] ************************************** 
 ********************************************************* 
 18 changed: [localhost] 
+
 PLAY RECAP ********************************************** 
 ********************************************************** 
 localhost                  : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0 
 23 ansible-pilot $
 ```
 
-idempotency
+### idempotency
 
-```
+```bash
 ansible-pilot $ ansible-playbook -e "HOSTS=localhost" concatenate.yml 
+
 [WARNING]: No inventory was parsed, only implicit localhost is available 
+
 [WARNING]: provided hosts list is empty, only localhost is available. Note that the implicit localhost does not match 'all' 
+
 PLAY [concatenate demo] ************************************************ 
 ************************************************************ 
+
 TASK [Gathering Facts] *********************************** 
 *************************************************** 
 12 ok: [localhost] 
+
 TASK [include file list] ******************************** 
 ********************************************************* 
 15 ok: [localhost] 
+
 TASK [concatenate] ************************************** 
 ********************************************************* 
 18 ok: [localhost] 
+
 PLAY RECAP ********************************************** 
 ********************************************************** 
 localhost                  : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0 
 23 ansible-pilot $
 ```
 
-before execution
+### Before execution
 
-```
+```bash
 ansible-pilot $ ls -al concatenate 
 total 24 
 drwxr-xr-x  5 lberton  staff  160 Feb  1 15:40 . 
@@ -5571,9 +6140,9 @@ input-files:
 ansible-pilot $
 ```
 
-after execution
+### After execution
 
-```
+```bash
 ansible-pilot $ ls -al concatenate 
 total 24 
 drwxr-xr-x  5 lberton  staff  160 Feb  1 15:40 . 
@@ -5584,36 +6153,39 @@ drwxr-xr-x  9 lberton  staff  288 Feb  1 15:08 ..
 ansible-pilot $
 ```
 
+---
+
 ## Rsync Backup - 本地到远程
 
-如何使用 `synchronize` 模块实现 Linux 机器的目录备份。
+如何使用`synchronize`模块实现 Linux 机器的目录备份。
 
-## Synchronize
+### Synchronize
 
-`ansible.posix.synchronize` 是 `rsync` 的封装，旨在让常用任务变得简单。
+`ansible.posix.synchronize`是`rsync`的封装，旨在让常用任务变得简单。
 
-让我们聊聊 `synchronize` 模块。它是 POSIX 集合的一部分。`rsync` 是一种通过比较修改时间和大小在计算机和存储驱动器之间同步文件的工具。
+让我们聊聊`synchronize`模块。它是 POSIX 集合的一部分。`rsync`是一种通过比较修改时间和大小在计算机和存储驱动器之间同步文件的工具。
 
-## 主要参数
+### 主要参数
 
 - `src`: 字符串，源路径（绝对或相对）。
 - `dest`: 字符串，目标路径（绝对或相对）。
-- `archive`: 布尔值，镜像归档标志（启用递归、链接、权限、时间、所有者、组以及 `-D`）。默认启用，因此在大多数情况下不需要指定其他设置。请参考手册以启用或禁用特定设置。
-- `rsync_opts`: 字符串，可以指定更多的 `rsync` 参数。
+- `archive`: 布尔值，镜像归档标志（启用递归、链接、权限、时间、所有者、组以及`-D`）。默认启用，因此在大多数情况下不需要指定其他设置。请参考手册以启用或禁用特定设置。
+- `rsync_opts`: 字符串，可以指定更多的`rsync`参数。
 
-## 链接
+### 链接
 
 - [rsync](https://en.wikipedia.org/wiki/Rsync)
 - [ansible.posix.synchronize](https://docs.ansible.com/ansible/latest/collections/ansible/posix/synchronize_module.html)
 
-## demo
+### Demo
 
 使用 Ansible Playbook 进行 rsync 备份。
 
-向你演示如何使用 `synchronize` 模块在 Linux 机器上复制某些目录树。
+向你演示如何使用`synchronize`模块在 Linux 机器上复制某些目录树。
 
 ```yaml
 ---
+
 - name: synchronize module demo
   hosts: all
   become: false
@@ -5627,27 +6199,29 @@ ansible-pilot $
         name: rsync
         state: present
       become: true
+
     - name: data synchronization
       ansible.posix.synchronize:
         src: "{{ source }}"
         dest: "{{ destination }}"
 ```
 
-
-
-
-# 等等性测试
+## 幂等性测试
 
 ```bash
 ansible-pilot $ ansible-playbook -i virtualmachines/demo/ inventory copy files to\ remote hosts/rsync.yml
+
 PLAY [synchronize module demo] *********************************
 ************************************************
+
 TASK [Gathering Facts] *********************************
 ************************************************
 ok: [demo.example.com]
+
 TASK [rsync installed] *********************************
 ************************************************
 ok: [demo.example.com]
+
 TASK [data synchronization] *****************************
 ************************************************
 changed: [demo.example.com]
@@ -5655,15 +6229,20 @@ changed: [demo.example.com]
 PLAY RECAP *************************************************
 ************************************************
 demo.example.com          : ok=3    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
 ansible-pilot $ ansible-playbook -i virtualmachines/demo/ inventory copy files to\ remote hosts/rsync.yml
+
 PLAY [synchronize module demo] *********************************
 ************************************************
+
 TASK [Gathering Facts] *********************************
 ************************************************
 ok: [demo.example.com]
+
 TASK [rsync installed] *********************************
 ************************************************
 ok: [demo.example.com]
+
 TASK [data synchronization] *****************************
 ************************************************
 ok: [demo.example.com]
@@ -5671,10 +6250,11 @@ ok: [demo.example.com]
 PLAY RECAP *************************************************
 ************************************************
 demo.example.com          : ok=3    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+
 ansible-pilot $
 ```
 
-## 执行前
+### 执行前
 
 ```bash
 ansible-pilot $ ls -al copy files to\ remote hosts/examples
@@ -5683,12 +6263,16 @@ drwxr-xr-x  4 lberton  staff  128 Jan 17 11:54 .
 drwxr-xr-x  9 lberton  staff  288 Mar 28 14:13 ..
 -rw-r--r--  1 lberton  staff  16 Sep  4  2021 report.txt
 -rw-r--r--  1 lberton  staff  16 Jan 17 11:52 report2.txt
+
 ansible-pilot $ cat copy files to\ remote hosts/examples/report.txt
 test report.txt
+
 ansible-pilot $ cat copy files to\ remote hosts/examples/report2.txt
 test report.txt
+
 ansible-pilot $ ssh devops@demo.example.com
 Last login: Mon Mar 28 12:22:14 2022 from 192.168.0.59
+
 [devops@demo ~]$ ls -al
 total 20
 drwx------. 4 devops wheel  127 Mar 28 12:22 .
@@ -5700,44 +6284,79 @@ drwx------. 3 devops wheel  17 Mar 24 17:44 .ansible
 -rw-r--r--. 1 devops wheel  376 Jul 26  2021 .bash_rc
 drwx------. 2 devops wheel  29 Mar 24 17:44 .ssh
 -rw-------. 1 devops wheel 1756 Mar 28 10:38 .viminfo
+
 [devops@demo ~]$ rpm -qa | grep rsync
 rsync-3.1.3-12.el8.x86_64
+
 [devops@demo ~]$
 ```
 
-## 执行后
+### 执行后
 
 ```bash
 ansible-pilot $ ssh devops@demo.example.com
 Last login: Mon Mar 28 12:24:57 2022 from 192.168.0.59
+
 [devops@demo ~]$ ls -al
+```
+
+
+
+```
 total 20
+
 drwx------. 5 devops wheel  149 Mar 28 12:24 .
+
 drwxr-xr-x. 4 root  root    35 Mar 24 17:44 ..
+
 drwx------. 3 devops wheel  17 Mar 24 17:44 .ansible
+
 -rw-------. 1 devops wheel  178 Mar 28 12:21 .bash_history
+
 -rw-r--r--. 1 devops wheel  18 Jul 26  2021 .bash_logout
+
 -rw-r--r--. 1 devops wheel  141 Jul 26  2021 .bash_profile
+
 -rw-r--r--. 1 devops wheel  376 Jul 26  2021 .bash_rc
+
 drwx------. 2 devops wheel  29 Mar 24 17:44 .ssh
+
 -rw-------. 1 devops wheel 1756 Mar 28 10:38 .viminfo
+
 drwxr-xr-x. 3 devops wheel  22 Mar 28 12:24 example-backup
+
 [devops@demo ~]$ tree example-backup/
+
 example-backup/
+
 └── examples
+
     ├── report2.txt
+
     └── report.txt
+
 [devops@demo ~]$ cat example-backup/examples/report.txt
+
 test report.txt
+
 [devops@demo ~]$ cat example-backup/examples/report2.txt
+
 test report.txt
+
 [devops@demo ~]$ ls -al example-backup/examples/
+
 total 8
+
 drwxr-xr-x. 2 devops wheel  43 Jan 17 10:54 .
+
 drwxr-xr-x. 3 devops wheel  22 Mar 28 12:24 ..
+
 -rw-r--r--. 1 devops wheel  16 Sep  4  2021 report.txt
+
 -rw-r--r--. 1 devops wheel  16 Jan 17 10:52 report2.txt
-``````bash
+```
+
+```
 ansible-pilot $ touch copy files to\ remote hosts/examples/report3.txt
 ansible-pilot $ ansible-playbook -i virtualmachines/demo/ inventory copy files to\ remote hosts/rsync.yml
 PLAY [synchronize module demo] *********************************
@@ -5771,4 +6390,3 @@ drwxr-xr-x. 3 devops wheel  22 Mar 28 12:24 ..
 -rw-r--r--. 1 devops wheel  0 Mar 28 18:44 report3.txt
 [devops@demo ~]$
 ```
-
